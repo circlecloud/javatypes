@@ -45,9 +45,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_TYPE: org.bukkit.Material
+                static readonly DEFAULT_TYPE: org.bukkit.Material
                 // @ts-ignore
-                readonly DEFAULT_STATE: org.bukkit.CropState
+                static readonly DEFAULT_STATE: org.bukkit.CropState
                 /**
                  * Gets the current growth state of this crop
                  * For crops with only four growth states such as beetroot, only the values SEEDED, SMALL, TALL and RIPE will be
@@ -55,7 +55,7 @@ declare namespace org {
                  * @return CropState of this crop
                  */
                 // @ts-ignore
-                getState(): org.bukkit.CropState
+                public getState(): org.bukkit.CropState
                 /**
                  * Sets the growth state of this crop
                  * For crops with only four growth states such as beetroot, the 8 CropStates are mapped into four states:
@@ -67,11 +67,11 @@ declare namespace org {
                  * @param state New growth state of this crop
                  */
                 // @ts-ignore
-                setState(state: org.bukkit.CropState): void
+                public setState(state: org.bukkit.CropState): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Crops
+                public clone(): org.bukkit.material.Crops
             }
         }
     }

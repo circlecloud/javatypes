@@ -11,7 +11,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class LayoutStyle extends java.lang.Object {
+        abstract class LayoutStyle extends java.lang.Object {
             /**
              * Creates a new <code>LayoutStyle</code>.  You generally don't
              * create a <code>LayoutStyle</code>.  Instead use the method
@@ -28,7 +28,7 @@ declare namespace javax {
              * @see #getInstance
              */
             // @ts-ignore
-            setInstance(style: javax.swing.LayoutStyle): void
+            public static setInstance(style: javax.swing.LayoutStyle): void
             /**
              * Returns the shared instance of <code>LayoutStyle</code>.  If an instance
              * has not been specified in <code>setInstance</code>, this will return
@@ -37,7 +37,7 @@ declare namespace javax {
              * @return the shared instance of <code>LayoutStyle</code>
              */
             // @ts-ignore
-            getInstance(): javax.swing.LayoutStyle
+            public static getInstance(): javax.swing.LayoutStyle
             /**
              * Returns the amount of space to use between two components.
              * The return value indicates the distance to place
@@ -91,7 +91,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            abstract getPreferredGap(component1: javax.swing.JComponent, component2: javax.swing.JComponent, type: javax.swing.LayoutStyle.ComponentPlacement, position: number /*int*/, parent: java.awt.Container): int
+            public abstract getPreferredGap(component1: javax.swing.JComponent, component2: javax.swing.JComponent, type: javax.swing.LayoutStyle.ComponentPlacement, position: number /*int*/, parent: java.awt.Container): number /*int*/
             /**
              * Returns the amount of space to place between the component and specified
              * edge of its parent.
@@ -113,7 +113,7 @@ declare namespace javax {
              *          <code>SwingConstants.WEST</code>
              */
             // @ts-ignore
-            abstract getContainerGap(component: javax.swing.JComponent, position: number /*int*/, parent: java.awt.Container): int
+            public abstract getContainerGap(component: javax.swing.JComponent, position: number /*int*/, parent: java.awt.Container): number /*int*/
         }
     }
 }

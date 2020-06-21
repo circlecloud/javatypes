@@ -37,7 +37,7 @@ declare namespace org {
                          *      been set already
                          */
                         // @ts-ignore
-                        dataImplementation(dataImplementationClass: java.lang.Class<T>): org.spongepowered.api.data.DataRegistration.Builder<T, I>
+                        dataImplementation(dataImplementationClass: java.lang.Class<any>): org.spongepowered.api.data.DataRegistration.Builder<T, I>
                         /**
                          * Optionally sets a separate implementation class for the
                          * {@link ImmutableDataManipulator}. <strong>THIS MUST BE CALLED AFTER
@@ -49,7 +49,7 @@ declare namespace org {
                          *      class has not been set already
                          */
                         // @ts-ignore
-                        immutableImplementation(immutableImplementationClass: java.lang.Class<I>): org.spongepowered.api.data.DataRegistration.Builder<T, I>
+                        immutableImplementation(immutableImplementationClass: java.lang.Class<any>): org.spongepowered.api.data.DataRegistration.Builder<T, I>
                         /**
                          * Sets the id for the manipulator. The id should be formatted
                          * according to the normal {@link CatalogType} standard:
@@ -67,7 +67,7 @@ declare namespace org {
                          * @deprecated Use {#link #id(String)} instead
                          */
                         // @ts-ignore
-                        manipulatorId(id: string): org.spongepowered.api.data.DataRegistration.Builder<T, I>
+                        manipulatorId(id: java.lang.String | string): org.spongepowered.api.data.DataRegistration.Builder<T, I>
                         /**
                          * Sets a more generalized name to refer to the registered
                          * {@link DataManipulator} as a common name.
@@ -78,7 +78,7 @@ declare namespace org {
                          * @deprecated Use {#link #name(String)} instead
                          */
                         // @ts-ignore
-                        dataName(name: string): org.spongepowered.api.data.DataRegistration.Builder<T, I>
+                        dataName(name: java.lang.String | string): org.spongepowered.api.data.DataRegistration.Builder<T, I>
                         /**
                          * Sets the {@link DataManipulatorBuilder} to be used to generate new
                          * {@link DataManipulator DataManipulators} and

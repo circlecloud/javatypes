@@ -70,7 +70,7 @@ declare namespace javax {
              * @param algorithm the algorithm
              */
             // @ts-ignore
-            constructor(keyGenSpi: javax.crypto.KeyGeneratorSpi, provider: java.security.Provider, algorithm: string)
+            constructor(keyGenSpi: javax.crypto.KeyGeneratorSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns the algorithm name of this <code>KeyGenerator</code> object.
              * <p>This is the same name that was specified in one of the
@@ -79,7 +79,7 @@ declare namespace javax {
              * @return the algorithm name of this <code>KeyGenerator</code> object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns a <code>KeyGenerator</code> object that generates secret keys
              * for the specified algorithm.
@@ -103,7 +103,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): javax.crypto.KeyGenerator
+            public static getInstance(algorithm: java.lang.String | string): javax.crypto.KeyGenerator
             /**
              * Returns a <code>KeyGenerator</code> object that generates secret keys
              * for the specified algorithm.
@@ -131,7 +131,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): javax.crypto.KeyGenerator
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.crypto.KeyGenerator
             /**
              * Returns a <code>KeyGenerator</code> object that generates secret keys
              * for the specified algorithm.
@@ -155,19 +155,19 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): javax.crypto.KeyGenerator
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.crypto.KeyGenerator
             /**
              * Returns the provider of this <code>KeyGenerator</code> object.
              * @return the provider of this <code>KeyGenerator</code> object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Initializes this key generator.
              * @param random the source of randomness for this generator
              */
             // @ts-ignore
-            init(random: java.security.SecureRandom): void
+            public init(random: java.security.SecureRandom): void
             /**
              * Initializes this key generator with the specified parameter set.
              * <p> If this key generator requires any random bytes, it will get them
@@ -182,7 +182,7 @@ declare namespace javax {
              *  are inappropriate for this key generator
              */
             // @ts-ignore
-            init(params: java.security.spec.AlgorithmParameterSpec): void
+            public init(params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Initializes this key generator with the specified parameter
              * set and a user-provided source of randomness.
@@ -192,7 +192,7 @@ declare namespace javax {
              *  inappropriate for this key generator
              */
             // @ts-ignore
-            init(params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
+            public init(params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
             /**
              * Initializes this key generator for a certain keysize.
              * <p> If this key generator requires any random bytes, it will get them
@@ -208,7 +208,7 @@ declare namespace javax {
              *  supported.
              */
             // @ts-ignore
-            init(keysize: number /*int*/): void
+            public init(keysize: number /*int*/): void
             /**
              * Initializes this key generator for a certain keysize, using a
              * user-provided source of randomness.
@@ -219,13 +219,13 @@ declare namespace javax {
              *  supported.
              */
             // @ts-ignore
-            init(keysize: number /*int*/, random: java.security.SecureRandom): void
+            public init(keysize: number /*int*/, random: java.security.SecureRandom): void
             /**
              * Generates a secret key.
              * @return the new key
              */
             // @ts-ignore
-            generateKey(): javax.crypto.SecretKey
+            public generateKey(): javax.crypto.SecretKey
         }
     }
 }

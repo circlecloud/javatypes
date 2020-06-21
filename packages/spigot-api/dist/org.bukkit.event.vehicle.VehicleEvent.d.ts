@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a vehicle-related event.
                  */
                 // @ts-ignore
-                class VehicleEvent extends org.bukkit.event.Event {
+                abstract class VehicleEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(vehicle: org.bukkit.entity.Vehicle)
                     // @ts-ignore
@@ -16,7 +16,7 @@ declare namespace org {
                      * @return the vehicle
                      */
                     // @ts-ignore
-                    getVehicle(): org.bukkit.entity.Vehicle
+                    public getVehicle(): org.bukkit.entity.Vehicle
                 }
             }
         }

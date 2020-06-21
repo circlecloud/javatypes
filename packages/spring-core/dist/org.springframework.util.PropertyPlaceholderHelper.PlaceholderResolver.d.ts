@@ -13,7 +13,7 @@ declare namespace org {
                      * @return the replacement value, or {#code null} if no replacement is to be made
                      */
                     // @ts-ignore
-                    resolvePlaceholder(placeholderName: string): java.lang.String
+                    resolvePlaceholder(placeholderName: java.lang.String | string): string
                 }
             }
         }

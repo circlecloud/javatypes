@@ -87,7 +87,7 @@ declare namespace org {
                          * @return The original "raw" damage
                          */
                         // @ts-ignore
-                        getOriginalDamage(): double
+                        getOriginalDamage(): number /*double*/
                         /**
                          * Gets the original "final" amount of damage after all original
                          * {@link DamageModifier}s are applied to {@link #getOriginalDamage()}.
@@ -96,7 +96,7 @@ declare namespace org {
                          * @return The final amount of damage to originally deal
                          */
                         // @ts-ignore
-                        getOriginalFinalDamage(): double
+                        getOriginalFinalDamage(): number /*double*/
                         /**
                          * Gets an {@link ImmutableMap} of all original {@link DamageModifier}s
                          * and their associated "modified" damage. Note that ordering is not
@@ -104,7 +104,7 @@ declare namespace org {
                          * @return An immutable map of the original modified damages
                          */
                         // @ts-ignore
-                        getOriginalDamages(): java.util.Map<org.spongepowered.api.event.cause.entity.damage.DamageModifier, java.lang.Double>
+                        getOriginalDamages(): java.util.Map<org.spongepowered.api.event.cause.entity.damage.DamageModifier, java.lang.Double | number>
                         /**
                          * Gets the original damage for the provided {@link DamageModifier}. If
                          * the provided {@link DamageModifier} was not included in
@@ -114,14 +114,14 @@ declare namespace org {
                          * @return The original damage change
                          */
                         // @ts-ignore
-                        getOriginalModifierDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): double
+                        getOriginalModifierDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): number /*double*/
                         /**
                          * Gets the original {@link List} of {@link DamageModifier} to
                          * {@link DamageFunction} that was originally passed into the event.
                          * @return The list of damage modifier functions
                          */
                         // @ts-ignore
-                        getOriginalFunctions(): java.util.List<org.spongepowered.api.event.cause.entity.damage.DamageFunction>
+                        getOriginalFunctions(): Array<org.spongepowered.api.event.cause.entity.damage.DamageFunction>
                         /**
                          * Gets the "base" damage to deal to the targeted {@link Entity}. The
                          * "base" damage is the original value before passing along the chain of
@@ -129,7 +129,7 @@ declare namespace org {
                          * @return The base damage
                          */
                         // @ts-ignore
-                        getBaseDamage(): double
+                        getBaseDamage(): number /*double*/
                         /**
                          * Sets the "base" damage to deal to the targeted {@link Entity}. The
                          * "base" damage is the original value before passing along the chain of
@@ -147,7 +147,7 @@ declare namespace org {
                          * @return The final damage to deal
                          */
                         // @ts-ignore
-                        getFinalDamage(): double
+                        getFinalDamage(): number /*double*/
                         /**
                          * Checks whether the provided {@link DamageModifier} is applicable to the
                          * current available {@link DamageModifier}s.
@@ -164,7 +164,7 @@ declare namespace org {
                          * @return The modifier
                          */
                         // @ts-ignore
-                        getDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): double
+                        getDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): number /*double*/
                         /**
                          * Sets the provided {@link DamageFunction} to be used for the given
                          * {@link DamageModifier}. If the {@link DamageModifier} is already
@@ -179,7 +179,7 @@ declare namespace org {
                          * @param function The function to map to the modifier
                          */
                         // @ts-ignore
-                        setDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): void
+                        setDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator): void
                         /**
                          * Adds the provided {@link DamageModifier} and {@link DoubleUnaryOperator} to the
                          * list of modifiers, such that the {@link Set} containing
@@ -191,7 +191,7 @@ declare namespace org {
                          *      the provided modifier
                          */
                         // @ts-ignore
-                        addDamageModifierBefore(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator, before: Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
+                        addDamageModifierBefore(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator, before: java.util.Set<org.spongepowered.api.event.cause.entity.damage.DamageModifierType> | Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
                         /**
                          * Adds the provided {@link DamageModifier} and {@link DoubleUnaryOperator} to the list
                          * of modifiers, such that the modifier will appear in order after any
@@ -202,7 +202,7 @@ declare namespace org {
                          * @param after The set of modifier types to come before the new modifier
                          */
                         // @ts-ignore
-                        addModifierAfter(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator, after: Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
+                        addModifierAfter(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator, after: java.util.Set<org.spongepowered.api.event.cause.entity.damage.DamageModifierType> | Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
                         /**
                          * Gets a list of simple {@link Tuple}s of {@link DamageModifier} keyed to
                          * their representative {@link DamageFunction}s. All {@link DamageModifier}s are
@@ -211,7 +211,7 @@ declare namespace org {
                          * @return A list of damage modifiers to functions
                          */
                         // @ts-ignore
-                        getModifiers(): java.util.List<org.spongepowered.api.event.cause.entity.damage.DamageFunction>
+                        getModifiers(): Array<org.spongepowered.api.event.cause.entity.damage.DamageFunction>
                         /**
                          * Returns whether or not this event will cause the entity to die if the
                          * event is not cancelled. Only supported for living entities, returns false

@@ -25,21 +25,21 @@ declare namespace java {
                  * This defines the point at infinity.
                  */
                 // @ts-ignore
-                readonly POINT_INFINITY: java.security.spec.ECPoint
+                public static readonly POINT_INFINITY: java.security.spec.ECPoint
                 /**
                  * Returns the affine x-coordinate {@code x}.
                  * Note: POINT_INFINITY has a null affine x-coordinate.
                  * @return the affine x-coordinate.
                  */
                 // @ts-ignore
-                getAffineX(): java.math.BigInteger
+                public getAffineX(): java.math.BigInteger
                 /**
                  * Returns the affine y-coordinate {@code y}.
                  * Note: POINT_INFINITY has a null affine y-coordinate.
                  * @return the affine y-coordinate.
                  */
                 // @ts-ignore
-                getAffineY(): java.math.BigInteger
+                public getAffineY(): java.math.BigInteger
                 /**
                  * Compares this elliptic curve point for equality with
                  * the specified object.
@@ -48,13 +48,13 @@ declare namespace java {
                  *  ECPoint and the affine coordinates match, false otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this elliptic curve point.
                  * @return a hash code value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

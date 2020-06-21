@@ -45,12 +45,12 @@ declare namespace javax {
                  * Returns the fromIndex.  Valid for removed or moved events
                  */
                 // @ts-ignore
-                getFromIndex(): int
+                public getFromIndex(): number /*int*/
                 /**
                  * Returns the toIndex.  Valid for add and moved events
                  */
                 // @ts-ignore
-                getToIndex(): int
+                public getToIndex(): number /*int*/
             }
         }
     }

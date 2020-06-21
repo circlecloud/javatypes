@@ -16,23 +16,23 @@ declare namespace org {
                  * {@literal form-data}, or {@code null} if not defined.
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Return the value of the {@literal name} parameter, or {@code null} if not defined.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Return the value of the {@literal filename} parameter (or the value of the
                  * {@literal filename*} one decoded as defined in the RFC 5987), or {@code null} if not defined.
                  */
                 // @ts-ignore
-                getFilename(): java.lang.String
+                public getFilename(): string
                 /**
                  * Return the charset defined in {@literal filename*} parameter, or {@code null} if not defined.
                  */
                 // @ts-ignore
-                getCharset(): java.nio.charset.Charset
+                public getCharset(): java.nio.charset.Charset
                 /**
                  * Return the value of the {@literal size} parameter, or {@code null} if not defined.
                  * @deprecated since 5.2.3 as per
@@ -40,7 +40,7 @@ declare namespace org {
                  *  to be removed in a future release.
                  */
                 // @ts-ignore
-                getSize(): java.lang.Long
+                public getSize(): number
                 /**
                  * Return the value of the {@literal creation-date} parameter, or {@code null} if not defined.
                  * @deprecated since 5.2.3 as per
@@ -48,7 +48,7 @@ declare namespace org {
                  *  to be removed in a future release.
                  */
                 // @ts-ignore
-                getCreationDate(): java.time.ZonedDateTime
+                public getCreationDate(): java.time.ZonedDateTime
                 /**
                  * Return the value of the {@literal modification-date} parameter, or {@code null} if not defined.
                  * @deprecated since 5.2.3 as per
@@ -56,7 +56,7 @@ declare namespace org {
                  *  to be removed in a future release.
                  */
                 // @ts-ignore
-                getModificationDate(): java.time.ZonedDateTime
+                public getModificationDate(): java.time.ZonedDateTime
                 /**
                  * Return the value of the {@literal read-date} parameter, or {@code null} if not defined.
                  * @deprecated since 5.2.3 as per
@@ -64,17 +64,17 @@ declare namespace org {
                  *  to be removed in a future release.
                  */
                 // @ts-ignore
-                getReadDate(): java.time.ZonedDateTime
+                public getReadDate(): java.time.ZonedDateTime
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Return the header value for this content disposition as defined in RFC 6266.
                  * @see #parse(String)
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return a builder for a {@code ContentDisposition}.
                  * @param type the disposition type like for example {#literal inline},
@@ -82,12 +82,12 @@ declare namespace org {
                  * @return the builder
                  */
                 // @ts-ignore
-                builder(type: string): org.springframework.http.ContentDisposition.Builder
+                public static builder(type: java.lang.String | string): org.springframework.http.ContentDisposition.Builder
                 /**
                  * Return an empty content disposition.
                  */
                 // @ts-ignore
-                empty(): org.springframework.http.ContentDisposition
+                public static empty(): org.springframework.http.ContentDisposition
                 /**
                  * Parse a {@literal Content-Disposition} header value as defined in RFC 2183.
                  * @param contentDisposition the {#literal Content-Disposition} header value
@@ -95,7 +95,7 @@ declare namespace org {
                  * @see #toString()
                  */
                 // @ts-ignore
-                parse(contentDisposition: string): org.springframework.http.ContentDisposition
+                public static parse(contentDisposition: java.lang.String | string): org.springframework.http.ContentDisposition
             }
         }
     }

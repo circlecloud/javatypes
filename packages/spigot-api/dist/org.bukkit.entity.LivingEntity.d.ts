@@ -11,7 +11,7 @@ declare namespace org {
                  * @return height of the living entity's eyes above its location
                  */
                 // @ts-ignore
-                getEyeHeight(): double
+                getEyeHeight(): number /*double*/
                 /**
                  * Gets the height of the living entity's eyes above its Location.
                  * @param ignorePose if set to true, the effects of pose changes, eg
@@ -19,7 +19,7 @@ declare namespace org {
                  * @return height of the living entity's eyes above its location
                  */
                 // @ts-ignore
-                getEyeHeight(ignorePose: boolean): double
+                getEyeHeight(ignorePose: boolean): number /*double*/
                 /**
                  * Get a Location detailing the current eye position of the living entity.
                  * @return a location at the eyes of the living entity
@@ -39,7 +39,7 @@ declare namespace org {
                  *      sight
                  */
                 // @ts-ignore
-                getLineOfSight(transparent: Array<org.bukkit.Material>, maxDistance: number /*int*/): java.util.List<org.bukkit.block.Block>
+                getLineOfSight(transparent: java.util.Set<org.bukkit.Material> | Array<org.bukkit.Material>, maxDistance: number /*int*/): Array<org.bukkit.block.Block>
                 /**
                  * Gets the block that the living entity has targeted.
                  * <p>
@@ -53,7 +53,7 @@ declare namespace org {
                  * @return block that the living entity has targeted
                  */
                 // @ts-ignore
-                getTargetBlock(transparent: Array<org.bukkit.Material>, maxDistance: number /*int*/): org.bukkit.block.Block
+                getTargetBlock(transparent: java.util.Set<org.bukkit.Material> | Array<org.bukkit.Material>, maxDistance: number /*int*/): org.bukkit.block.Block
                 /**
                  * Gets the last two blocks along the living entity's line of sight.
                  * <p>
@@ -67,7 +67,7 @@ declare namespace org {
                  *      line of sight
                  */
                 // @ts-ignore
-                getLastTwoTargetBlocks(transparent: Array<org.bukkit.Material>, maxDistance: number /*int*/): java.util.List<org.bukkit.block.Block>
+                getLastTwoTargetBlocks(transparent: java.util.Set<org.bukkit.Material> | Array<org.bukkit.Material>, maxDistance: number /*int*/): Array<org.bukkit.block.Block>
                 /**
                  * Gets the block that the living entity has targeted.
                  * <p>
@@ -132,7 +132,7 @@ declare namespace org {
                  * @return amount of air remaining
                  */
                 // @ts-ignore
-                getRemainingAir(): int
+                getRemainingAir(): number /*int*/
                 /**
                  * Sets the amount of air that the living entity has remaining, in ticks.
                  * @param ticks amount of air remaining
@@ -144,7 +144,7 @@ declare namespace org {
                  * @return maximum amount of air
                  */
                 // @ts-ignore
-                getMaximumAir(): int
+                getMaximumAir(): number /*int*/
                 /**
                  * Sets the maximum amount of air the living entity can have, in ticks.
                  * @param ticks maximum amount of air
@@ -159,7 +159,7 @@ declare namespace org {
                  * @return maximum no damage ticks
                  */
                 // @ts-ignore
-                getMaximumNoDamageTicks(): int
+                getMaximumNoDamageTicks(): number /*int*/
                 /**
                  * Sets the living entity's current maximum no damage ticks.
                  * @param ticks maximum amount of no damage ticks
@@ -175,7 +175,7 @@ declare namespace org {
                  * @return damage taken since the last no damage ticks time period
                  */
                 // @ts-ignore
-                getLastDamage(): double
+                getLastDamage(): number /*double*/
                 /**
                  * Sets the damage dealt within the current no damage ticks time period.
                  * @param damage amount of damage
@@ -187,7 +187,7 @@ declare namespace org {
                  * @return amount of no damage ticks
                  */
                 // @ts-ignore
-                getNoDamageTicks(): int
+                getNoDamageTicks(): number /*int*/
                 /**
                  * Sets the living entity's current no damage ticks.
                  * @param ticks amount of no damage ticks
@@ -229,7 +229,7 @@ declare namespace org {
                  * @return whether all of the effects could be added
                  */
                 // @ts-ignore
-                addPotionEffects(effects: Array<org.bukkit.potion.PotionEffect>): boolean
+                addPotionEffects(effects: java.util.Collection<org.bukkit.potion.PotionEffect> | Array<org.bukkit.potion.PotionEffect>): boolean
                 /**
                  * Returns whether the living entity already has an existing effect of
                  * the given {@link PotionEffectType} applied to it.
@@ -259,7 +259,7 @@ declare namespace org {
                  * @return a collection of {#link PotionEffect}s
                  */
                 // @ts-ignore
-                getActivePotionEffects(): java.util.Collection<org.bukkit.potion.PotionEffect>
+                getActivePotionEffects(): Array<org.bukkit.potion.PotionEffect>
                 /**
                  * Checks whether the living entity has block line of sight to another.
                  * <p>

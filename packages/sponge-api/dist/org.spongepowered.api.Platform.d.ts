@@ -8,7 +8,7 @@ declare namespace org {
             // @ts-ignore
             interface Platform {
                 // @ts-ignore
-                
+                readonly API_ID: java.lang.String | string
                 /**
                  * Retrieves the current {@link Type} this platform is running on.
                  * @return The current type
@@ -65,7 +65,7 @@ declare namespace org {
                  * @return This platform as a map
                  */
                 // @ts-ignore
-                asMap(): java.util.Map<java.lang.String, java.lang.Object>
+                asMap(): java.util.Map<java.lang.String | string, java.lang.Object | any>
             }
         }
     }

@@ -17,7 +17,7 @@ declare namespace org {
                      * @param msg the message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Construct a new instance of {@code RestClientException} with the given message and
                      * exception.
@@ -25,7 +25,7 @@ declare namespace org {
                      * @param ex the exception
                      */
                     // @ts-ignore
-                    constructor(msg: string, ex: Error)
+                    constructor(msg: java.lang.String | string, ex: java.lang.Throwable | Error)
                 }
             }
         }

@@ -10,7 +10,7 @@ declare namespace org {
                      * "default" {@link CatalogType}s.
                      */
                     // @ts-ignore
-                    class RegisterCatalog implements java.lang.annotation.Annotation {
+                    abstract class RegisterCatalog implements java.lang.annotation.Annotation {
                     }
                 }
             }

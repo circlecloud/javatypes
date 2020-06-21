@@ -20,9 +20,9 @@ declare namespace org {
                  * Return an {@link ExtendedBeanInfo} for the given bean class, if applicable.
                  */
                 // @ts-ignore
-                getBeanInfo(beanClass: java.lang.Class<any>): java.beans.BeanInfo
+                public getBeanInfo(beanClass: java.lang.Class<any>): java.beans.BeanInfo
                 // @ts-ignore
-                getOrder(): int
+                public getOrder(): number /*int*/
             }
         }
     }

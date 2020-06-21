@@ -73,7 +73,7 @@ declare namespace java {
                  *  on the proxy instance
                  */
                 // @ts-ignore
-                invoke(proxy: any, method: java.lang.reflect.Method, args: any[]): java.lang.Object
+                public invoke(proxy: java.lang.Object | any, method: java.lang.reflect.Method, args: java.lang.Object[] | any[]): any
             }
         }
     }

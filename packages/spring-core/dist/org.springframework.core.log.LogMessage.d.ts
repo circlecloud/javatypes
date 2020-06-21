@@ -20,28 +20,28 @@ declare namespace org {
                  * @see org.apache.commons.logging.Log#trace(Object)
                  */
                 // @ts-ignore
-                class LogMessage extends java.lang.Object implements java.lang.CharSequence {
+                abstract class LogMessage extends java.lang.Object implements java.lang.CharSequence {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    length(): int
+                    public length(): number /*int*/
                     // @ts-ignore
-                    charAt(index: number /*int*/): char
+                    public charAt(index: number /*int*/): string
                     // @ts-ignore
-                    subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
+                    public subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
                     /**
                      * This will be called by the logging provider, potentially once
                      * per log target (therefore locally caching the result here).
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Build a lazily resolving message from the given supplier.
                      * @param supplier the supplier (typically bound to a Java 8 lambda expression)
                      * @see #toString()
                      */
                     // @ts-ignore
-                    of(supplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): org.springframework.core.log.LogMessage
+                    public static of(supplier: java.util.function$.Supplier<any>): org.springframework.core.log.LogMessage
                     /**
                      * Build a lazily formatted message from the given format string and argument.
                      * @param format the format string (following {#link String#format} rules)
@@ -49,7 +49,7 @@ declare namespace org {
                      * @see String#format(String, Object...)
                      */
                     // @ts-ignore
-                    format(format: string, arg1: any): org.springframework.core.log.LogMessage
+                    public static format(format: java.lang.String | string, arg1: java.lang.Object | any): org.springframework.core.log.LogMessage
                     /**
                      * Build a lazily formatted message from the given format string and arguments.
                      * @param format the format string (following {#link String#format} rules)
@@ -58,7 +58,7 @@ declare namespace org {
                      * @see String#format(String, Object...)
                      */
                     // @ts-ignore
-                    format(format: string, arg1: any, arg2: any): org.springframework.core.log.LogMessage
+                    public static format(format: java.lang.String | string, arg1: java.lang.Object | any, arg2: java.lang.Object | any): org.springframework.core.log.LogMessage
                     /**
                      * Build a lazily formatted message from the given format string and arguments.
                      * @param format the format string (following {#link String#format} rules)
@@ -68,7 +68,7 @@ declare namespace org {
                      * @see String#format(String, Object...)
                      */
                     // @ts-ignore
-                    format(format: string, arg1: any, arg2: any, arg3: any): org.springframework.core.log.LogMessage
+                    public static format(format: java.lang.String | string, arg1: java.lang.Object | any, arg2: java.lang.Object | any, arg3: java.lang.Object | any): org.springframework.core.log.LogMessage
                     /**
                      * Build a lazily formatted message from the given format string and arguments.
                      * @param format the format string (following {#link String#format} rules)
@@ -79,7 +79,7 @@ declare namespace org {
                      * @see String#format(String, Object...)
                      */
                     // @ts-ignore
-                    format(format: string, arg1: any, arg2: any, arg3: any, arg4: any): org.springframework.core.log.LogMessage
+                    public static format(format: java.lang.String | string, arg1: java.lang.Object | any, arg2: java.lang.Object | any, arg3: java.lang.Object | any, arg4: java.lang.Object | any): org.springframework.core.log.LogMessage
                     /**
                      * Build a lazily formatted message from the given format string and varargs.
                      * @param format the format string (following {#link String#format} rules)
@@ -87,7 +87,7 @@ declare namespace org {
                      * @see String#format(String, Object...)
                      */
                     // @ts-ignore
-                    format(format: string, ...args: any[]): org.springframework.core.log.LogMessage
+                    public static format(format: java.lang.String | string, ...args: java.lang.Object[] | any[]): org.springframework.core.log.LogMessage
                 }
             }
         }

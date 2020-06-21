@@ -49,45 +49,45 @@ declare namespace java {
                  * that additional input is required.
                  */
                 // @ts-ignore
-                readonly UNDERFLOW: java.nio.charset.CoderResult
+                public static readonly UNDERFLOW: java.nio.charset.CoderResult
                 /**
                  * Result object indicating overflow, meaning that there is insufficient
                  * room in the output buffer.
                  */
                 // @ts-ignore
-                readonly OVERFLOW: java.nio.charset.CoderResult
+                public static readonly OVERFLOW: java.nio.charset.CoderResult
                 /**
                  * Returns a string describing this coder result.
                  * @return A descriptive string
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Tells whether or not this object describes an underflow condition.
                  * @return <tt>true</tt> if, and only if, this object denotes underflow
                  */
                 // @ts-ignore
-                isUnderflow(): boolean
+                public isUnderflow(): boolean
                 /**
                  * Tells whether or not this object describes an overflow condition.
                  * @return <tt>true</tt> if, and only if, this object denotes overflow
                  */
                 // @ts-ignore
-                isOverflow(): boolean
+                public isOverflow(): boolean
                 /**
                  * Tells whether or not this object describes an error condition.
                  * @return <tt>true</tt> if, and only if, this object denotes either a
                  *           malformed-input error or an unmappable-character error
                  */
                 // @ts-ignore
-                isError(): boolean
+                public isError(): boolean
                 /**
                  * Tells whether or not this object describes a malformed-input error.
                  * @return <tt>true</tt> if, and only if, this object denotes a
                  *           malformed-input error
                  */
                 // @ts-ignore
-                isMalformed(): boolean
+                public isMalformed(): boolean
                 /**
                  * Tells whether or not this object describes an unmappable-character
                  * error.
@@ -95,7 +95,7 @@ declare namespace java {
                  *           unmappable-character error
                  */
                 // @ts-ignore
-                isUnmappable(): boolean
+                public isUnmappable(): boolean
                 /**
                  * Returns the length of the erroneous input described by this
                  * object&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -105,7 +105,7 @@ declare namespace java {
                  *           if the {#link #isError() isError} does not return <tt>true</tt>
                  */
                 // @ts-ignore
-                length(): int
+                public length(): number /*int*/
                 /**
                  * Static factory method that returns the unique object describing a
                  * malformed-input error of the given length.
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return The requested coder-result object
                  */
                 // @ts-ignore
-                malformedForLength(length: number /*int*/): java.nio.charset.CoderResult
+                public static malformedForLength(length: number /*int*/): java.nio.charset.CoderResult
                 /**
                  * Static factory method that returns the unique result object describing
                  * an unmappable-character error of the given length.
@@ -123,7 +123,7 @@ declare namespace java {
                  * @return The requested coder-result object
                  */
                 // @ts-ignore
-                unmappableForLength(length: number /*int*/): java.nio.charset.CoderResult
+                public static unmappableForLength(length: number /*int*/): java.nio.charset.CoderResult
                 /**
                  * Throws an exception appropriate to the result described by this object.
                  * @throws BufferUnderflowException
@@ -138,7 +138,7 @@ declare namespace java {
                  *           exceptions length value will be that of this object
                  */
                 // @ts-ignore
-                throwException(): void
+                public throwException(): void
             }
         }
     }

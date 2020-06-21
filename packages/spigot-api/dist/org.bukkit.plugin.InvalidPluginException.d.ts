@@ -11,7 +11,7 @@ declare namespace org {
                  * @param cause Exception that triggered this Exception
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a new InvalidPluginException
                  */
@@ -27,7 +27,7 @@ declare namespace org {
                  *      the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a new InvalidPluginException with the specified detail
                  * message
@@ -35,7 +35,7 @@ declare namespace org {
                  *      getMessage() method.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
             }
         }
     }

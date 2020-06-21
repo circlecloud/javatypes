@@ -13,19 +13,19 @@ declare namespace org {
                          * @return The original value.
                          */
                         // @ts-ignore
-                        getOriginalValue(): java.lang.String
+                        getOriginalValue(): string
                         /**
                          * Gets the new value of the GameRule.
                          * @return The new value.
                          */
                         // @ts-ignore
-                        getValue(): java.lang.String
+                        getValue(): string
                         /**
                          * Gets the name of this GameRule.
                          * @return The name of the GameRule.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                     }
                 }
             }

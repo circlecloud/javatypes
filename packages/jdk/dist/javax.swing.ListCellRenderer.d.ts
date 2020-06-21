@@ -66,7 +66,7 @@ declare namespace javax {
              * @see ListModel
              */
             // @ts-ignore
-            getListCellRendererComponent(list: javax.swing.JList<E>, value: E, index: number /*int*/, isSelected: boolean, cellHasFocus: boolean): java.awt.Component
+            getListCellRendererComponent(list: javax.swing.JList<any>, value: E, index: number /*int*/, isSelected: boolean, cellHasFocus: boolean): java.awt.Component
         }
     }
 }

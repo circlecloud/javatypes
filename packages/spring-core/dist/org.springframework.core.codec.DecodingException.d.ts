@@ -21,14 +21,14 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Create a new DecodingException.
                      * @param msg the detail message
                      * @param cause root cause for the exception, if any
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 }
             }
         }

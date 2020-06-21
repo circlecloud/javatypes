@@ -27,7 +27,7 @@ declare namespace org {
                          *          available
                          */
                         // @ts-ignore
-                        getPlayers(): java.util.Optional<? extends org.spongepowered.api.network.status.StatusResponse.Players>
+                        getPlayers(): java.util.Optional<any>
                         /**
                          * Gets the version of the server displayed when the client or the server
                          * are outdated.

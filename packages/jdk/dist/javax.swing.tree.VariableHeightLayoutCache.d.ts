@@ -27,7 +27,7 @@ declare namespace javax {
                  *   description: The TreeModel that will provide the data.
                  */
                 // @ts-ignore
-                setModel(newModel: javax.swing.tree.TreeModel): void
+                public setModel(newModel: javax.swing.tree.TreeModel): void
                 /**
                  * Determines whether or not the root node from
                  * the <code>TreeModel</code> is visible.
@@ -38,7 +38,7 @@ declare namespace javax {
                  *                from the TreeModel is visible.
                  */
                 // @ts-ignore
-                setRootVisible(rootVisible: boolean): void
+                public setRootVisible(rootVisible: boolean): void
                 /**
                  * Sets the height of each cell.  If the specified value
                  * is less than or equal to zero the current cell renderer is
@@ -48,13 +48,13 @@ declare namespace javax {
                  *   description: The height of each cell.
                  */
                 // @ts-ignore
-                setRowHeight(rowHeight: number /*int*/): void
+                public setRowHeight(rowHeight: number /*int*/): void
                 /**
                  * Sets the renderer that is responsible for drawing nodes in the tree.
                  * @param nd the renderer
                  */
                 // @ts-ignore
-                setNodeDimensions(nd: javax.swing.tree.AbstractLayoutCache.NodeDimensions): void
+                public setNodeDimensions(nd: javax.swing.tree.AbstractLayoutCache.NodeDimensions): void
                 /**
                  * Marks the path <code>path</code> expanded state to
                  * <code>isExpanded</code>.
@@ -62,13 +62,13 @@ declare namespace javax {
                  * @param isExpanded true if the path should be expanded, otherwise false
                  */
                 // @ts-ignore
-                setExpandedState(path: javax.swing.tree.TreePath, isExpanded: boolean): void
+                public setExpandedState(path: javax.swing.tree.TreePath, isExpanded: boolean): void
                 /**
                  * Returns true if the path is expanded, and visible.
                  * @return true if the path is expanded and visible, otherwise false
                  */
                 // @ts-ignore
-                getExpandedState(path: javax.swing.tree.TreePath): boolean
+                public getExpandedState(path: javax.swing.tree.TreePath): boolean
                 /**
                  * Returns the <code>Rectangle</code> enclosing the label portion
                  * into which the item identified by <code>path</code> will be drawn.
@@ -78,7 +78,7 @@ declare namespace javax {
                  *     if the node could not be ascertained
                  */
                 // @ts-ignore
-                getBounds(path: javax.swing.tree.TreePath, placeIn: java.awt.Rectangle): java.awt.Rectangle
+                public getBounds(path: javax.swing.tree.TreePath, placeIn: java.awt.Rectangle): java.awt.Rectangle
                 /**
                  * Returns the path for <code>row</code>.  If <code>row</code>
                  * is not visible, <code>null</code> is returned.
@@ -87,7 +87,7 @@ declare namespace javax {
                  *  if <code>row</code> is not visible
                  */
                 // @ts-ignore
-                getPathForRow(row: number /*int*/): javax.swing.tree.TreePath
+                public getPathForRow(row: number /*int*/): javax.swing.tree.TreePath
                 /**
                  * Returns the row where the last item identified in path is visible.
                  * Will return -1 if any of the elements in path are not
@@ -96,33 +96,33 @@ declare namespace javax {
                  * @return the row where the last item in path is visible
                  */
                 // @ts-ignore
-                getRowForPath(path: javax.swing.tree.TreePath): int
+                public getRowForPath(path: javax.swing.tree.TreePath): number /*int*/
                 /**
                  * Returns the number of visible rows.
                  * @return the number of visible rows
                  */
                 // @ts-ignore
-                getRowCount(): int
+                public getRowCount(): number /*int*/
                 /**
                  * Instructs the <code>LayoutCache</code> that the bounds for
                  * <code>path</code> are invalid, and need to be updated.
                  * @param path the <code>TreePath</code> which is now invalid
                  */
                 // @ts-ignore
-                invalidatePathBounds(path: javax.swing.tree.TreePath): void
+                public invalidatePathBounds(path: javax.swing.tree.TreePath): void
                 /**
                  * Returns the preferred height.
                  * @return the preferred height
                  */
                 // @ts-ignore
-                getPreferredHeight(): int
+                public getPreferredHeight(): number /*int*/
                 /**
                  * Returns the preferred width and height for the region in
                  * <code>visibleRegion</code>.
                  * @param bounds  the region being queried
                  */
                 // @ts-ignore
-                getPreferredWidth(bounds: java.awt.Rectangle): int
+                public getPreferredWidth(bounds: java.awt.Rectangle): number /*int*/
                 /**
                  * Returns the path to the node that is closest to x,y.  If
                  * there is nothing currently visible this will return <code>null</code>,
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @return the path to the node that is closest to x, y
                  */
                 // @ts-ignore
-                getPathClosestTo(x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
+                public getPathClosestTo(x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
                 /**
                  * Returns an <code>Enumerator</code> that increments over the visible paths
                  * starting at the passed in location. The ordering of the enumeration
@@ -145,19 +145,19 @@ declare namespace javax {
                  *      paths
                  */
                 // @ts-ignore
-                getVisiblePathsFrom(path: javax.swing.tree.TreePath): java.util.Enumeration<javax.swing.tree.TreePath>
+                public getVisiblePathsFrom(path: javax.swing.tree.TreePath): java.util.Enumeration<javax.swing.tree.TreePath>
                 /**
                  * Returns the number of visible children for <code>path</code>.
                  * @return the number of visible children for <code>path</code>
                  */
                 // @ts-ignore
-                getVisibleChildCount(path: javax.swing.tree.TreePath): int
+                public getVisibleChildCount(path: javax.swing.tree.TreePath): number /*int*/
                 /**
                  * Informs the <code>TreeState</code> that it needs to recalculate
                  * all the sizes it is referencing.
                  */
                 // @ts-ignore
-                invalidateSizes(): void
+                public invalidateSizes(): void
                 /**
                  * Returns true if the value identified by <code>path</code> is
                  * currently expanded.
@@ -165,7 +165,7 @@ declare namespace javax {
                  *     currently expanded
                  */
                 // @ts-ignore
-                isExpanded(path: javax.swing.tree.TreePath): boolean
+                public isExpanded(path: javax.swing.tree.TreePath): boolean
                 /**
                  * Invoked after a node (or a set of siblings) has changed in some
                  * way. The node(s) have not changed locations in the tree or
@@ -180,7 +180,7 @@ declare namespace javax {
                  * @param e the <code>TreeModelEvent</code> of interest
                  */
                 // @ts-ignore
-                treeNodesChanged(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesChanged(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Invoked after nodes have been inserted into the tree.
                  * <p><code>e.path</code> returns the parent of the new nodes.
@@ -189,7 +189,7 @@ declare namespace javax {
                  * @param e the <code>TreeModelEvent</code> of interest
                  */
                 // @ts-ignore
-                treeNodesInserted(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesInserted(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Invoked after nodes have been removed from the tree.  Note that
                  * if a subtree is removed from the tree, this method may only be
@@ -201,7 +201,7 @@ declare namespace javax {
                  * @param e the <code>TreeModelEvent</code> of interest
                  */
                 // @ts-ignore
-                treeNodesRemoved(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesRemoved(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Invoked after the tree has drastically changed structure from a
                  * given node down.  If the path returned by <code>e.getPath</code>
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @param e the <code>TreeModelEvent</code> of interest
                  */
                 // @ts-ignore
-                treeStructureChanged(e: javax.swing.event.TreeModelEvent): void
+                public treeStructureChanged(e: javax.swing.event.TreeModelEvent): void
             }
         }
     }

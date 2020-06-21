@@ -13,7 +13,7 @@ declare namespace org {
                                  * @return The brewed items
                                  */
                                 // @ts-ignore
-                                getBrewedItemStacks(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                                getBrewedItemStacks(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             }
                         }
                     }

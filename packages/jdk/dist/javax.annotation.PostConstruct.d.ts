@@ -46,7 +46,7 @@ declare namespace javax {
          * @see javax.annotation.Resource
          */
         // @ts-ignore
-        class PostConstruct implements java.lang.annotation.Annotation {
+        abstract class PostConstruct implements java.lang.annotation.Annotation {
         }
     }
 }

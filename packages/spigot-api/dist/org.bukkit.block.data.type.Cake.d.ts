@@ -17,7 +17,7 @@ declare namespace org {
                          * @return the 'bites' value
                          */
                         // @ts-ignore
-                        getBites(): int
+                        getBites(): number /*int*/
                         /**
                          * Sets the value of the 'bites' property.
                          * @param bites the new 'bites' value
@@ -29,7 +29,7 @@ declare namespace org {
                          * @return the maximum 'bites' value
                          */
                         // @ts-ignore
-                        getMaximumBites(): int
+                        getMaximumBites(): number /*int*/
                     }
                 }
             }

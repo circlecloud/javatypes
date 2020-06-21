@@ -22,7 +22,7 @@ declare namespace org {
                          * @return return value for the method
                          */
                         // @ts-ignore
-                        reimplement(obj: any, method: java.lang.reflect.Method, args: any[]): java.lang.Object
+                        reimplement(obj: java.lang.Object | any, method: java.lang.reflect.Method, args: java.lang.Object[] | any[]): any
                     }
                 }
             }

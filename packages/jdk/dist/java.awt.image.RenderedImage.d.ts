@@ -30,7 +30,7 @@ declare namespace java {
                  * @see java.awt.Image#UndefinedProperty
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
                 /**
                  * Returns an array of names recognized by
                  * {@link #getProperty(String) getProperty(String)}
@@ -40,7 +40,7 @@ declare namespace java {
                  *  or <code>null</code> if no property names are recognized.
                  */
                 // @ts-ignore
-                getPropertyNames(): java.lang.String[]
+                getPropertyNames(): string[]
                 /**
                  * Returns the ColorModel associated with this image.  All Rasters
                  * returned from this image will have this as their ColorModel.  This
@@ -61,63 +61,63 @@ declare namespace java {
                  * @return the width of this <code>RenderedImage</code>.
                  */
                 // @ts-ignore
-                getWidth(): int
+                getWidth(): number /*int*/
                 /**
                  * Returns the height of the RenderedImage.
                  * @return the height of this <code>RenderedImage</code>.
                  */
                 // @ts-ignore
-                getHeight(): int
+                getHeight(): number /*int*/
                 /**
                  * Returns the minimum X coordinate (inclusive) of the RenderedImage.
                  * @return the X coordinate of this <code>RenderedImage</code>.
                  */
                 // @ts-ignore
-                getMinX(): int
+                getMinX(): number /*int*/
                 /**
                  * Returns the minimum Y coordinate (inclusive) of the RenderedImage.
                  * @return the Y coordinate of this <code>RenderedImage</code>.
                  */
                 // @ts-ignore
-                getMinY(): int
+                getMinY(): number /*int*/
                 /**
                  * Returns the number of tiles in the X direction.
                  * @return the number of tiles in the X direction.
                  */
                 // @ts-ignore
-                getNumXTiles(): int
+                getNumXTiles(): number /*int*/
                 /**
                  * Returns the number of tiles in the Y direction.
                  * @return the number of tiles in the Y direction.
                  */
                 // @ts-ignore
-                getNumYTiles(): int
+                getNumYTiles(): number /*int*/
                 /**
                  * Returns the minimum tile index in the X direction.
                  * @return the minimum tile index in the X direction.
                  */
                 // @ts-ignore
-                getMinTileX(): int
+                getMinTileX(): number /*int*/
                 /**
                  * Returns the minimum tile index in the Y direction.
                  * @return the minimum tile index in the X direction.
                  */
                 // @ts-ignore
-                getMinTileY(): int
+                getMinTileY(): number /*int*/
                 /**
                  * Returns the tile width in pixels.  All tiles must have the same
                  * width.
                  * @return the tile width in pixels.
                  */
                 // @ts-ignore
-                getTileWidth(): int
+                getTileWidth(): number /*int*/
                 /**
                  * Returns the tile height in pixels.  All tiles must have the same
                  * height.
                  * @return the tile height in pixels.
                  */
                 // @ts-ignore
-                getTileHeight(): int
+                getTileHeight(): number /*int*/
                 /**
                  * Returns the X offset of the tile grid relative to the origin,
                  * i.e., the X coordinate of the upper-left pixel of tile (0, 0).
@@ -125,7 +125,7 @@ declare namespace java {
                  * @return the X offset of the tile grid relative to the origin.
                  */
                 // @ts-ignore
-                getTileGridXOffset(): int
+                getTileGridXOffset(): number /*int*/
                 /**
                  * Returns the Y offset of the tile grid relative to the origin,
                  * i.e., the Y coordinate of the upper-left pixel of tile (0, 0).
@@ -133,7 +133,7 @@ declare namespace java {
                  * @return the Y offset of the tile grid relative to the origin.
                  */
                 // @ts-ignore
-                getTileGridYOffset(): int
+                getTileGridYOffset(): number /*int*/
                 /**
                  * Returns tile (tileX, tileY).  Note that tileX and tileY are indices
                  * into the tile array, not pixel locations.  The Raster that is returned

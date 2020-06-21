@@ -27,7 +27,7 @@ declare namespace java {
              * @param guard the Guard object that guards access to the object.
              */
             // @ts-ignore
-            constructor(object: any, guard: java.security.Guard)
+            constructor(object: java.lang.Object | any, guard: java.security.Guard)
             /**
              * Retrieves the guarded object, or throws an exception if access
              * to the guarded object is denied by the guard.
@@ -36,7 +36,7 @@ declare namespace java {
              *  denied.
              */
             // @ts-ignore
-            getObject(): java.lang.Object
+            public getObject(): any
         }
     }
 }

@@ -20,7 +20,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        mouseClicked(e: java.awt.event.MouseEvent): void
+                        public mouseClicked(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when the mouse has been clicked on the menu. This
                          * method clears or sets the selection path of the
@@ -28,14 +28,14 @@ declare namespace javax {
                          * @param e the mouse event
                          */
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when the mouse has been released on the menu. Delegates the
                          * mouse event to the MenuSelectionManager.
                          * @param e the mouse event
                          */
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when the cursor enters the menu. This method sets the selected
                          * path for the MenuSelectionManager and handles the case
@@ -44,9 +44,9 @@ declare namespace javax {
                          * @param e the mouse event; not used
                          */
                         // @ts-ignore
-                        mouseEntered(e: java.awt.event.MouseEvent): void
+                        public mouseEntered(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseExited(e: java.awt.event.MouseEvent): void
+                        public mouseExited(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when a mouse button is pressed on the menu and then dragged.
                          * Delegates the mouse event to the MenuSelectionManager.
@@ -54,9 +54,9 @@ declare namespace javax {
                          * @see java.awt.event.MouseMotionListener#mouseDragged
                          */
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

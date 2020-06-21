@@ -28,32 +28,32 @@ declare namespace javax {
                  * Returns the number of Tab instances the receiver contains.
                  */
                 // @ts-ignore
-                getTabCount(): int
+                public getTabCount(): number /*int*/
                 /**
                  * Returns the TabStop at index <code>index</code>. This will throw an
                  * IllegalArgumentException if <code>index</code> is outside the range
                  * of tabs.
                  */
                 // @ts-ignore
-                getTab(index: number /*int*/): javax.swing.text.TabStop
+                public getTab(index: number /*int*/): javax.swing.text.TabStop
                 /**
                  * Returns the Tab instance after <code>location</code>. This will
                  * return null if there are no tabs after <code>location</code>.
                  */
                 // @ts-ignore
-                getTabAfter(location: number /*float*/): javax.swing.text.TabStop
+                public getTabAfter(location: number /*float*/): javax.swing.text.TabStop
                 /**
                  * @return the index of the TabStop <code>tab</code>, or -1 if
                  *  <code>tab</code> is not contained in the receiver.
                  */
                 // @ts-ignore
-                getTabIndex(tab: javax.swing.text.TabStop): int
+                public getTabIndex(tab: javax.swing.text.TabStop): number /*int*/
                 /**
                  * Returns the index of the Tab to be used after <code>location</code>.
                  * This will return -1 if there are no tabs after <code>location</code>.
                  */
                 // @ts-ignore
-                getTabIndexAfter(location: number /*float*/): int
+                public getTabIndexAfter(location: number /*float*/): number /*int*/
                 /**
                  * Indicates whether this <code>TabSet</code> is equal to another one.
                  * @param o the <code>TabSet</code> instance which this instance
@@ -64,19 +64,19 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode for this set of TabStops.
                  * @return a hashcode value for this set of TabStops.
                  * @since 1.5
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the string representation of the set of tabs.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

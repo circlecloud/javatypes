@@ -78,7 +78,7 @@ declare namespace org {
                          * to be autowired.
                          */
                         // @ts-ignore
-                        setAutowiredAnnotationType(autowiredAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                        public setAutowiredAnnotationType(autowiredAnnotationType: java.lang.Class<any>): void
                         /**
                          * Set the 'autowired' annotation types, to be used on constructors, fields,
                          * setter methods, and arbitrary config methods.
@@ -90,13 +90,13 @@ declare namespace org {
                          * to be autowired.
                          */
                         // @ts-ignore
-                        setAutowiredAnnotationTypes(autowiredAnnotationTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>): void
+                        public setAutowiredAnnotationTypes(autowiredAnnotationTypes: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>): void
                         /**
                          * Set the name of an attribute of the annotation that specifies whether it is required.
                          * @see #setRequiredParameterValue(boolean)
                          */
                         // @ts-ignore
-                        setRequiredParameterName(requiredParameterName: string): void
+                        public setRequiredParameterName(requiredParameterName: java.lang.String | string): void
                         /**
                          * Set the boolean value that marks a dependency as required.
                          * <p>For example if using 'required=true' (the default), this value should be
@@ -104,23 +104,23 @@ declare namespace org {
                          * @see #setRequiredParameterName(String)
                          */
                         // @ts-ignore
-                        setRequiredParameterValue(requiredParameterValue: boolean): void
+                        public setRequiredParameterValue(requiredParameterValue: boolean): void
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
-                        postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                        public postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                         // @ts-ignore
-                        resetBeanDefinition(beanName: string): void
+                        public resetBeanDefinition(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        determineCandidateConstructors(beanClass: java.lang.Class<any>, beanName: string): java.lang.reflect.Constructor[]
+                        public determineCandidateConstructors(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.reflect.Constructor<any>[]
                         // @ts-ignore
-                        postProcessProperties(pvs: org.springframework.beans.PropertyValues, bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        public postProcessProperties(pvs: org.springframework.beans.PropertyValues, bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                         // @ts-ignore
-                        postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        public postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                         /**
                          * 'Native' processing method for direct calls with an arbitrary target instance,
                          * resolving all of its fields and methods which are annotated with one of the
@@ -130,7 +130,7 @@ declare namespace org {
                          * @see #setAutowiredAnnotationTypes(Set)
                          */
                         // @ts-ignore
-                        processInjection(bean: any): void
+                        public processInjection(bean: java.lang.Object | any): void
                         /**
                          * Determine if the annotated field or method requires its dependency.
                          * <p>A 'required' dependency means that autowiring should fail when no beans
@@ -159,7 +159,7 @@ declare namespace org {
                          * @throws BeansException if bean retrieval failed
                          */
                         // @ts-ignore
-                        findAutowireCandidates<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String, T>
+                        findAutowireCandidates<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String | string, T>
                     }
                 }
             }

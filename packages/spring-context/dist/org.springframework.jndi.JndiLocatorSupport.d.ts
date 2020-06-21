@@ -17,14 +17,14 @@ declare namespace org {
              * @see #setResourceRef
              */
             // @ts-ignore
-            class JndiLocatorSupport extends org.springframework.jndi.JndiAccessor {
+            abstract class JndiLocatorSupport extends org.springframework.jndi.JndiAccessor {
                 // @ts-ignore
                 constructor()
                 /**
                  * JNDI prefix used in a Java EE container.
                  */
                 // @ts-ignore
-                readonly CONTAINER_PREFIX: string
+                public static readonly CONTAINER_PREFIX: java.lang.String | string
                 /**
                  * Set whether the lookup occurs in a Java EE container, i.e. if the prefix
                  * "java:comp/env/" needs to be added if the JNDI name doesn't already
@@ -32,12 +32,12 @@ declare namespace org {
                  * <p>Note: Will only get applied if no other scheme (e.g. "java:") is given.
                  */
                 // @ts-ignore
-                setResourceRef(resourceRef: boolean): void
+                public setResourceRef(resourceRef: boolean): void
                 /**
                  * Return whether the lookup occurs in a Java EE container.
                  */
                 // @ts-ignore
-                isResourceRef(): boolean
+                public isResourceRef(): boolean
                 /**
                  * Perform an actual JNDI lookup for the given name via the JndiTemplate.
                  * <p>If the name doesn't begin with "java:comp/env/", this prefix is added
@@ -48,7 +48,7 @@ declare namespace org {
                  * @see #setResourceRef
                  */
                 // @ts-ignore
-                lookup(jndiName: string): java.lang.Object
+                lookup(jndiName: java.lang.String | string): any
                 /**
                  * Perform an actual JNDI lookup for the given name via the JndiTemplate.
                  * <p>If the name doesn't begin with "java:comp/env/", this prefix is added
@@ -60,7 +60,7 @@ declare namespace org {
                  * @see #setResourceRef
                  */
                 // @ts-ignore
-                lookup<T>(jndiName: string, requiredType: java.lang.Class<T>): T
+                lookup<T>(jndiName: java.lang.String | string, requiredType: java.lang.Class<T>): T
                 /**
                  * Convert the given JNDI name into the actual JNDI name to use.
                  * <p>The default implementation applies the "java:comp/env/" prefix if
@@ -71,7 +71,7 @@ declare namespace org {
                  * @see #setResourceRef
                  */
                 // @ts-ignore
-                convertJndiName(jndiName: string): java.lang.String
+                convertJndiName(jndiName: java.lang.String | string): string
             }
         }
     }

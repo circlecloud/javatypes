@@ -14,18 +14,18 @@ declare namespace org {
                      * @return The experience to drop
                      */
                     // @ts-ignore
-                    getExpToDrop(): int
+                    public getExpToDrop(): number /*int*/
                     /**
                      * Set the amount of experience dropped by the block after the event has
                      * processed
                      * @param exp 1 or higher to drop experience, else nothing will drop
                      */
                     // @ts-ignore
-                    setExpToDrop(exp: number /*int*/): void
+                    public setExpToDrop(exp: number /*int*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -28,7 +28,7 @@ declare namespace org {
                      * @see java.util.LinkedHashSet
                      */
                     // @ts-ignore
-                    constructor(collectionType: java.lang.Class<java.util.Collection>)
+                    constructor(collectionType: java.lang.Class<any>)
                     /**
                      * Create a new CustomCollectionEditor for the given target type.
                      * <p>If the incoming value is of the given type, it will be used as-is.
@@ -48,17 +48,17 @@ declare namespace org {
                      * @see java.util.LinkedHashSet
                      */
                     // @ts-ignore
-                    constructor(collectionType: java.lang.Class<java.util.Collection>, nullAsEmptyCollection: boolean)
+                    constructor(collectionType: java.lang.Class<any>, nullAsEmptyCollection: boolean)
                     /**
                      * Convert the given text value to a Collection with a single element.
                      */
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Convert the given value to a Collection of the target type.
                      */
                     // @ts-ignore
-                    setValue(value: any): void
+                    public setValue(value: java.lang.Object | any): void
                     /**
                      * Create a Collection of the given type, with the given
                      * initial capacity (if supported by the Collection type).
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return the new Collection instance
                      */
                     // @ts-ignore
-                    createCollection(collectionType: java.lang.Class<java.util.Collection>, initialCapacity: number /*int*/): java.util.Collection<java.lang.Object>
+                    createCollection(collectionType: java.lang.Class<any>, initialCapacity: number /*int*/): Array<java.lang.Object | any>
                     /**
                      * Return whether to always create a new Collection,
                      * even if the type of the passed-in Collection already matches.
@@ -92,13 +92,13 @@ declare namespace org {
                      * @see #alwaysCreateNewCollection()
                      */
                     // @ts-ignore
-                    convertElement(element: any): java.lang.Object
+                    convertElement(element: java.lang.Object | any): any
                     /**
                      * This implementation returns {@code null} to indicate that
                      * there is no appropriate text representation.
                      */
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

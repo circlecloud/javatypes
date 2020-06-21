@@ -10,7 +10,7 @@ declare namespace org {
                         // @ts-ignore
                         class NamedValueInfo extends java.lang.Object {
                             // @ts-ignore
-                            constructor(name: string, required: boolean, defaultValue: string)
+                            constructor(name: java.lang.String | string, required: boolean, defaultValue: java.lang.String | string)
                         }
                     }
                 }

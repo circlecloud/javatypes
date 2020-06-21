@@ -14,7 +14,7 @@ declare namespace org {
                  * @see DefaultValueStyler
                  */
                 // @ts-ignore
-                class StylerUtils extends java.lang.Object {
+                abstract class StylerUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -24,7 +24,7 @@ declare namespace org {
                      * @see DefaultValueStyler
                      */
                     // @ts-ignore
-                    style(value: any): java.lang.String
+                    public static style(value: java.lang.Object | any): string
                 }
             }
         }

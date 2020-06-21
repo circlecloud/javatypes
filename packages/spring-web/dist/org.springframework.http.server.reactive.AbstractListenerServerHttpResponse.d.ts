@@ -10,22 +10,22 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class AbstractListenerServerHttpResponse extends org.springframework.http.server.reactive.AbstractServerHttpResponse {
+                    abstract class AbstractListenerServerHttpResponse extends org.springframework.http.server.reactive.AbstractServerHttpResponse {
                         // @ts-ignore
                         constructor(dataBufferFactory: DataBufferFactory)
                         // @ts-ignore
                         constructor(dataBufferFactory: DataBufferFactory, headers: org.springframework.http.HttpHeaders)
                         // @ts-ignore
-                        writeWithInternal(body: object): <any>
+                        writeWithInternal(body: object): object
                         // @ts-ignore
-                        writeAndFlushWithInternal(body: object): <any>
+                        writeAndFlushWithInternal(body: object): object
                         /**
                          * Abstract template method to create a {@code Processor<Publisher<DataBuffer>, Void>}
                          * that will write the response body with flushes to the underlying output. Called from
                          * {@link #writeAndFlushWithInternal(Publisher)}.
                          */
                         // @ts-ignore
-                        abstract createBodyFlushProcessor(): <any>
+                        abstract createBodyFlushProcessor(): object
                     }
                 }
             }

@@ -14,9 +14,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        print(object: CurrencyUnit, locale: java.util.Locale): java.lang.String
+                        public print(object: CurrencyUnit, locale: java.util.Locale): string
                         // @ts-ignore
-                        parse(text: string, locale: java.util.Locale): CurrencyUnit
+                        public parse(text: java.lang.String | string, locale: java.util.Locale): CurrencyUnit
                     }
                 }
             }

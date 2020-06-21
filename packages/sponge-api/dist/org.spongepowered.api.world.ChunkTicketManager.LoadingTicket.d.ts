@@ -22,14 +22,14 @@ declare namespace org {
                          * @return The number of possible concurrently loaded chunks
                          */
                         // @ts-ignore
-                        getNumChunks(): int
+                        getNumChunks(): number /*int*/
                         /**
                          * Gets the maximum limit on the number of concurrently loaded chunks
                          * this ticket can have.
                          * @return The maximum allowed concurrently loaded chunks
                          */
                         // @ts-ignore
-                        getMaxNumChunks(): int
+                        getMaxNumChunks(): number /*int*/
                         /**
                          * Gets the {@link World} passed when creating this ticket.
                          * @return The World object given to this ticket upon its creation
@@ -65,13 +65,13 @@ declare namespace org {
                          * @return The ID of the plugin that registered this ticket
                          */
                         // @ts-ignore
-                        getPlugin(): java.lang.String
+                        getPlugin(): string
                         /**
                          * Gets the set of chunks that are being force-loaded by this ticket.
                          * @return The set of force-loaded chunks
                          */
                         // @ts-ignore
-                        getChunkList(): <any>
+                        getChunkList(): object
                         /**
                          * Force-loads a chunk using this ticket. If the configured concurrently
                          * loaded chunk limit is reached, the oldest loaded chunk will be

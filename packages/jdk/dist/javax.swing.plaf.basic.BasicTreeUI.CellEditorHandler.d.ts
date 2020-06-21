@@ -15,12 +15,12 @@ declare namespace javax {
                          * Messaged when editing has stopped in the tree.
                          */
                         // @ts-ignore
-                        editingStopped(e: javax.swing.event.ChangeEvent): void
+                        public editingStopped(e: javax.swing.event.ChangeEvent): void
                         /**
                          * Messaged when editing has been canceled in the tree.
                          */
                         // @ts-ignore
-                        editingCanceled(e: javax.swing.event.ChangeEvent): void
+                        public editingCanceled(e: javax.swing.event.ChangeEvent): void
                     }
                 }
             }

@@ -13,11 +13,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(...declarables: org.springframework.amqp.core.Declarable[])
                     // @ts-ignore
-                    constructor(declarables: Array<org.springframework.amqp.core.Declarable>)
+                    constructor(declarables: java.util.Collection<org.springframework.amqp.core.Declarable> | Array<org.springframework.amqp.core.Declarable>)
                     // @ts-ignore
-                    getDeclarables(): java.util.Collection<org.springframework.amqp.core.Declarable>
+                    public getDeclarables(): Array<org.springframework.amqp.core.Declarable>
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

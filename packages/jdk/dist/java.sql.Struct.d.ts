@@ -26,7 +26,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getSQLTypeName(): java.lang.String
+            getSQLTypeName(): string
             /**
              * Produces the ordered values of the attributes of the SQL
              * structured type that this <code>Struct</code> object represents.
@@ -49,7 +49,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getAttributes(): java.lang.Object[]
+            getAttributes(): any[]
             /**
              * Produces the ordered values of the attributes of the SQL
              * structured type that this <code>Struct</code> object represents.
@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getAttributes(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object[]
+            getAttributes(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any[]
         }
     }
 }

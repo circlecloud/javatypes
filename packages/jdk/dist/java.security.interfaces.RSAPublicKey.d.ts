@@ -13,7 +13,7 @@ declare namespace java {
                  * version of the type.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Returns the public exponent.
                  * @return the public exponent

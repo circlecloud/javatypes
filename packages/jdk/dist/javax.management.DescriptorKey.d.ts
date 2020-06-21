@@ -116,7 +116,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class DescriptorKey implements java.lang.annotation.Annotation {
+        abstract class DescriptorKey implements java.lang.annotation.Annotation {
         }
     }
 }

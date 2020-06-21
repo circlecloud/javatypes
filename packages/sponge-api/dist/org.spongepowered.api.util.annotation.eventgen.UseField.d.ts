@@ -13,7 +13,7 @@ declare namespace org {
                          * event.</p>
                          */
                         // @ts-ignore
-                        class UseField implements java.lang.annotation.Annotation {
+                        abstract class UseField implements java.lang.annotation.Annotation {
                         }
                     }
                 }

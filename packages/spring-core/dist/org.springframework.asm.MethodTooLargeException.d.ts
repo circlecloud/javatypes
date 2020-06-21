@@ -16,31 +16,31 @@ declare namespace org {
                  * @param codeSize the size of the method's Code attribute, in bytes.
                  */
                 // @ts-ignore
-                constructor(className: string, methodName: string, descriptor: string, codeSize: number /*int*/)
+                constructor(className: java.lang.String | string, methodName: java.lang.String | string, descriptor: java.lang.String | string, codeSize: number /*int*/)
                 /**
                  * Returns the internal name of the owner class.
                  * @return the internal name of the owner class.
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                getClassName(): string
                 /**
                  * Returns the name of the method.
                  * @return the name of the method.
                  */
                 // @ts-ignore
-                getMethodName(): java.lang.String
+                getMethodName(): string
                 /**
                  * Returns the descriptor of the method.
                  * @return the descriptor of the method.
                  */
                 // @ts-ignore
-                getDescriptor(): java.lang.String
+                getDescriptor(): string
                 /**
                  * Returns the size of the method's Code attribute, in bytes.
                  * @return the size of the method's Code attribute, in bytes.
                  */
                 // @ts-ignore
-                getCodeSize(): int
+                getCodeSize(): number /*int*/
             }
         }
     }

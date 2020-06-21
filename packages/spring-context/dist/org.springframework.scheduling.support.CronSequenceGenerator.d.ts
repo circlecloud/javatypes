@@ -35,7 +35,7 @@ declare namespace org {
                      * @see java.util.TimeZone#getDefault()
                      */
                     // @ts-ignore
-                    constructor(expression: string)
+                    constructor(expression: java.lang.String | string)
                     /**
                      * Construct a {@link CronSequenceGenerator} from the pattern provided,
                      * using the specified {@link TimeZone}.
@@ -44,7 +44,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if the pattern cannot be parsed
                      */
                     // @ts-ignore
-                    constructor(expression: string, timeZone: java.util.TimeZone)
+                    constructor(expression: java.lang.String | string, timeZone: java.util.TimeZone)
                     /**
                      * Get the next {@link Date} in the sequence matching the Cron pattern and
                      * after the value provided. The return value will have a whole number of
@@ -53,7 +53,7 @@ declare namespace org {
                      * @return the next value matching the pattern
                      */
                     // @ts-ignore
-                    next(date: java.util.Date): java.util.Date
+                    public next(date: java.util.Date): java.util.Date
                     /**
                      * Determine whether the specified expression represents a valid cron pattern.
                      * @param expression the expression to evaluate
@@ -61,13 +61,13 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    isValidExpression(expression: string): boolean
+                    public static isValidExpression(expression: java.lang.String | string): boolean
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

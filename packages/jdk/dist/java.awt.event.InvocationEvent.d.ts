@@ -43,7 +43,7 @@ declare namespace java {
                  * @see #InvocationEvent(Object, Runnable, Object, boolean)
                  */
                 // @ts-ignore
-                constructor(source: any, runnable: java.lang.Runnable)
+                constructor(source: java.lang.Object | any, runnable: java.lang.Runnable)
                 /**
                  * Constructs an <code>InvocationEvent</code> with the specified
                  * source which will execute the runnable's <code>run</code>
@@ -77,7 +77,7 @@ declare namespace java {
                  * @see #InvocationEvent(Object, int, Runnable, Object, boolean)
                  */
                 // @ts-ignore
-                constructor(source: any, runnable: java.lang.Runnable, notifier: any, catchThrowables: boolean)
+                constructor(source: java.lang.Object | any, runnable: java.lang.Runnable, notifier: java.lang.Object | any, catchThrowables: boolean)
                 /**
                  * Constructs an <code>InvocationEvent</code> with the specified
                  * source which will execute the runnable's <code>run</code>
@@ -105,7 +105,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if <code>source</code> is null
                  */
                 // @ts-ignore
-                constructor(source: any, runnable: java.lang.Runnable, listener: java.lang.Runnable, catchThrowables: boolean)
+                constructor(source: java.lang.Object | any, runnable: java.lang.Runnable, listener: java.lang.Runnable, catchThrowables: boolean)
                 /**
                  * Constructs an <code>InvocationEvent</code> with the specified
                  * source and ID which will execute the runnable's <code>run</code>
@@ -138,22 +138,22 @@ declare namespace java {
                  * @see #getID()
                  */
                 // @ts-ignore
-                constructor(source: any, id: number /*int*/, runnable: java.lang.Runnable, notifier: any, catchThrowables: boolean)
+                constructor(source: java.lang.Object | any, id: number /*int*/, runnable: java.lang.Runnable, notifier: java.lang.Object | any, catchThrowables: boolean)
                 /**
                  * Marks the first integer id for the range of invocation event ids.
                  */
                 // @ts-ignore
-                readonly INVOCATION_FIRST: number /*int*/
+                public static readonly INVOCATION_FIRST: number /*int*/
                 /**
                  * The default id for all InvocationEvents.
                  */
                 // @ts-ignore
-                readonly INVOCATION_DEFAULT: number /*int*/
+                public static readonly INVOCATION_DEFAULT: number /*int*/
                 /**
                  * Marks the last integer id for the range of invocation event ids.
                  */
                 // @ts-ignore
-                readonly INVOCATION_LAST: number /*int*/
+                public static readonly INVOCATION_LAST: number /*int*/
                 /**
                  * The Runnable whose run() method will be called.
                  */
@@ -166,7 +166,7 @@ declare namespace java {
                  * @see #isDispatched
                  */
                 // @ts-ignore
-                notifier: any
+                notifier: java.lang.Object | any
                 /**
                  * Set to true if dispatch() catches Throwable and stores it in the
                  * exception instance variable. If false, Throwables are propagated up
@@ -180,7 +180,7 @@ declare namespace java {
                  * @see #isDispatched
                  */
                 // @ts-ignore
-                dispatch(): void
+                public dispatch(): void
                 /**
                  * Returns any Exception caught while executing the Runnable's <code>run()
                  * </code> method.
@@ -189,7 +189,7 @@ declare namespace java {
                  *           catch exceptions
                  */
                 // @ts-ignore
-                getException(): java.lang.Exception
+                public getException(): java.lang.Exception
                 /**
                  * Returns any Throwable caught while executing the Runnable's <code>run()
                  * </code> method.
@@ -199,14 +199,14 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getThrowable(): java.lang.Throwable
+                public getThrowable(): Error
                 /**
                  * Returns the timestamp of when this event occurred.
                  * @return this event's timestamp
                  * @since 1.4
                  */
                 // @ts-ignore
-                getWhen(): long
+                public getWhen(): number /*long*/
                 /**
                  * Returns {@code true} if the event is dispatched or any exception is
                  * thrown while dispatching, {@code false} otherwise. The method should
@@ -237,14 +237,14 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                isDispatched(): boolean
+                public isDispatched(): boolean
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return A string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

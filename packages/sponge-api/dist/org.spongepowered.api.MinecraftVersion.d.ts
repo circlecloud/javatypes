@@ -16,7 +16,7 @@ declare namespace org {
                  * @return The version name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns whether this version is an older version that doesn't support
                  * all of the features in {@link StatusResponse}. These versions are only

@@ -22,7 +22,7 @@ declare namespace org {
                          * @since 1.6.
                          */
                         // @ts-ignore
-                        getTypePrecedence(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
+                        public getTypePrecedence(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
                         /**
                          * Set the precedence for evaluating type information in message properties.
                          * When using {@code @RabbitListener} at the method level, the framework attempts
@@ -42,7 +42,7 @@ declare namespace org {
                          * @since 1.6
                          */
                         // @ts-ignore
-                        setTypePrecedence(typePrecedence: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence): void
+                        public setTypePrecedence(typePrecedence: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence): void
                         /**
                          * Specify a set of packages to trust during deserialization.
                          * The asterisk ({@code *}) means trust all.
@@ -50,17 +50,17 @@ declare namespace org {
                          * @since 1.6.11
                          */
                         // @ts-ignore
-                        setTrustedPackages(...trustedPackages: string[]): void
+                        public setTrustedPackages(...trustedPackages: java.lang.String[] | string[]): void
                         // @ts-ignore
-                        addTrustedPackages(...packages: string[]): void
+                        public addTrustedPackages(...packages: java.lang.String[] | string[]): void
                         // @ts-ignore
-                        toJavaType(properties: org.springframework.amqp.core.MessageProperties): JavaType
+                        public toJavaType(properties: org.springframework.amqp.core.MessageProperties): JavaType
                         // @ts-ignore
-                        fromJavaType(javaType: JavaType, properties: org.springframework.amqp.core.MessageProperties): void
+                        public fromJavaType(javaType: JavaType, properties: org.springframework.amqp.core.MessageProperties): void
                         // @ts-ignore
-                        fromClass(clazz: java.lang.Class<any>, properties: org.springframework.amqp.core.MessageProperties): void
+                        public fromClass(clazz: java.lang.Class<any>, properties: org.springframework.amqp.core.MessageProperties): void
                         // @ts-ignore
-                        toClass(properties: org.springframework.amqp.core.MessageProperties): java.lang.Class<?>
+                        public toClass(properties: org.springframework.amqp.core.MessageProperties): java.lang.Class<any>
                     }
                 }
             }

@@ -11,10 +11,22 @@ declare namespace java {
              */
             // @ts-ignore
             class Category extends java.lang.Enum<java.util.Locale.Category> {
+                /**
+                 * Category used to represent the default locale for
+                 * displaying user interfaces.
+                 */
+                // @ts-ignore
+                readonly DISPLAY: java.util.Locale.Category
+                /**
+                 * Category used to represent the default locale for
+                 * formatting dates, numbers, and/or currencies.
+                 */
+                // @ts-ignore
+                readonly FORMAT: java.util.Locale.Category
                 // @ts-ignore
                 values(): java.util.Locale.Category[]
                 // @ts-ignore
-                valueOf(name: string): java.util.Locale.Category
+                valueOf(name: java.lang.String | string): java.util.Locale.Category
             }
         }
     }

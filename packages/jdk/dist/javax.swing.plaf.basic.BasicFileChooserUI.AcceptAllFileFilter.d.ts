@@ -8,9 +8,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        accept(f: java.io.File): boolean
+                        public accept(f: java.io.File): boolean
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                     }
                 }
             }

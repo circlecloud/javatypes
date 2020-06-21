@@ -227,7 +227,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class Scanner extends java.lang.Object implements java.util.Iterator<java.lang.String>, java.io.Closeable {
+        class Scanner extends java.lang.Object implements java.util.Iterator<java.lang.String | string>, java.io.Closeable {
             /**
              * Constructs a new <code>Scanner</code> that produces values scanned
              * from the specified source.
@@ -256,7 +256,7 @@ declare namespace java {
              *          does not exist
              */
             // @ts-ignore
-            constructor(source: java.io.InputStream, charsetName: string)
+            constructor(source: java.io.InputStream, charsetName: java.lang.String | string)
             /**
              * Constructs a new <code>Scanner</code> that produces values scanned
              * from the specified file. Bytes from the file are converted into
@@ -279,7 +279,7 @@ declare namespace java {
              *          not found
              */
             // @ts-ignore
-            constructor(source: java.io.File, charsetName: string)
+            constructor(source: java.io.File, charsetName: java.lang.String | string)
             /**
              * Constructs a new <code>Scanner</code> that produces values scanned
              * from the specified file. Bytes from the file are converted into
@@ -309,14 +309,14 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            constructor(source: java.nio.file.Path, charsetName: string)
+            constructor(source: java.nio.file.Path, charsetName: java.lang.String | string)
             /**
              * Constructs a new <code>Scanner</code> that produces values scanned
              * from the specified string.
              * @param source A string to scan
              */
             // @ts-ignore
-            constructor(source: string)
+            constructor(source: java.lang.String | string)
             /**
              * Constructs a new <code>Scanner</code> that produces values scanned
              * from the specified channel. Bytes from the source are converted into
@@ -337,7 +337,7 @@ declare namespace java {
              *          does not exist
              */
             // @ts-ignore
-            constructor(source: java.nio.channels.ReadableByteChannel, charsetName: string)
+            constructor(source: java.nio.channels.ReadableByteChannel, charsetName: java.lang.String | string)
             /**
              * Closes this scanner.
              * <p> If this scanner has not yet been closed then if its underlying
@@ -349,7 +349,7 @@ declare namespace java {
              * been closed will result in an {@link IllegalStateException}.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns the <code>IOException</code> last thrown by this
              * <code>Scanner</code>'s underlying <code>Readable</code>. This method
@@ -357,21 +357,21 @@ declare namespace java {
              * @return the last exception thrown by this scanner's readable
              */
             // @ts-ignore
-            ioException(): java.io.IOException
+            public ioException(): java.io.IOException
             /**
              * Returns the <code>Pattern</code> this <code>Scanner</code> is currently
              * using to match delimiters.
              * @return this scanner's delimiting pattern.
              */
             // @ts-ignore
-            delimiter(): java.util.regex.Pattern
+            public delimiter(): java.util.regex.Pattern
             /**
              * Sets this scanner's delimiting pattern to the specified pattern.
              * @param pattern A delimiting pattern
              * @return this scanner
              */
             // @ts-ignore
-            useDelimiter(pattern: java.util.regex.Pattern): java.util.Scanner
+            public useDelimiter(pattern: java.util.regex.Pattern): java.util.Scanner
             /**
              * Sets this scanner's delimiting pattern to a pattern constructed from
              * the specified <code>String</code>.
@@ -384,7 +384,7 @@ declare namespace java {
              * @return this scanner
              */
             // @ts-ignore
-            useDelimiter(pattern: string): java.util.Scanner
+            public useDelimiter(pattern: java.lang.String | string): java.util.Scanner
             /**
              * Returns this scanner's locale.
              * <p>A scanner's locale affects many elements of its default
@@ -393,7 +393,7 @@ declare namespace java {
              * @return this scanner's locale
              */
             // @ts-ignore
-            locale(): java.util.Locale
+            public locale(): java.util.Locale
             /**
              * Sets this scanner's locale to the specified locale.
              * <p>A scanner's locale affects many elements of its default
@@ -405,7 +405,7 @@ declare namespace java {
              * @return this scanner
              */
             // @ts-ignore
-            useLocale(locale: java.util.Locale): java.util.Scanner
+            public useLocale(locale: java.util.Locale): java.util.Scanner
             /**
              * Returns this scanner's default radix.
              * <p>A scanner's radix affects elements of its default
@@ -414,7 +414,7 @@ declare namespace java {
              * @return the default radix of this scanner
              */
             // @ts-ignore
-            radix(): int
+            public radix(): number /*int*/
             /**
              * Sets this scanner's default radix to the specified radix.
              * <p>A scanner's radix affects elements of its default
@@ -430,7 +430,7 @@ declare namespace java {
              * @throws IllegalArgumentException if radix is out of range
              */
             // @ts-ignore
-            useRadix(radix: number /*int*/): java.util.Scanner
+            public useRadix(radix: number /*int*/): java.util.Scanner
             /**
              * Returns the match result of the last scanning operation performed
              * by this scanner. This method throws <code>IllegalStateException</code>
@@ -449,7 +449,7 @@ declare namespace java {
              * @throws IllegalStateException  If no match result is available
              */
             // @ts-ignore
-            match(): java.util.regex.MatchResult
+            public match(): java.util.regex.MatchResult
             /**
              * <p>Returns the string representation of this <code>Scanner</code>. The
              * string representation of a <code>Scanner</code> contains information
@@ -457,7 +457,7 @@ declare namespace java {
              * @return The string representation of this scanner
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns true if this scanner has another token in its input.
              * This method may block while waiting for input to scan.
@@ -467,7 +467,7 @@ declare namespace java {
              * @see java.util.Iterator
              */
             // @ts-ignore
-            hasNext(): boolean
+            public hasNext(): boolean
             /**
              * Finds and returns the next complete token from this scanner.
              * A complete token is preceded and followed by input that matches
@@ -480,7 +480,7 @@ declare namespace java {
              * @see java.util.Iterator
              */
             // @ts-ignore
-            next(): java.lang.String
+            public next(): string
             /**
              * The remove operation is not supported by this implementation of
              * <code>Iterator</code>.
@@ -488,7 +488,7 @@ declare namespace java {
              * @see java.util.Iterator
              */
             // @ts-ignore
-            remove(): void
+            public remove(): void
             /**
              * Returns true if the next token matches the pattern constructed from the
              * specified string. The scanner does not advance past any input.
@@ -501,7 +501,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNext(pattern: string): boolean
+            public hasNext(pattern: java.lang.String | string): boolean
             /**
              * Returns the next token if it matches the pattern constructed from the
              * specified string.  If the match is successful, the scanner advances
@@ -515,7 +515,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            next(pattern: string): java.lang.String
+            public next(pattern: java.lang.String | string): string
             /**
              * Returns true if the next complete token matches the specified pattern.
              * A complete token is prefixed and postfixed by input that matches
@@ -527,7 +527,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNext(pattern: java.util.regex.Pattern): boolean
+            public hasNext(pattern: java.util.regex.Pattern): boolean
             /**
              * Returns the next token if it matches the specified pattern. This
              * method may block while waiting for input to scan, even if a previous
@@ -540,7 +540,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            next(pattern: java.util.regex.Pattern): java.lang.String
+            public next(pattern: java.util.regex.Pattern): string
             /**
              * Returns true if there is another line in the input of this scanner.
              * This method may block while waiting for input. The scanner does not
@@ -549,7 +549,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextLine(): boolean
+            public hasNextLine(): boolean
             /**
              * Advances this scanner past the current line and returns the input
              * that was skipped.
@@ -564,7 +564,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextLine(): java.lang.String
+            public nextLine(): string
             /**
              * Attempts to find the next occurrence of a pattern constructed from the
              * specified string, ignoring delimiters.
@@ -576,7 +576,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            findInLine(pattern: string): java.lang.String
+            public findInLine(pattern: java.lang.String | string): string
             /**
              * Attempts to find the next occurrence of the specified pattern ignoring
              * delimiters. If the pattern is found before the next line separator, the
@@ -594,7 +594,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            findInLine(pattern: java.util.regex.Pattern): java.lang.String
+            public findInLine(pattern: java.util.regex.Pattern): string
             /**
              * Attempts to find the next occurrence of a pattern constructed from the
              * specified string, ignoring delimiters.
@@ -609,7 +609,7 @@ declare namespace java {
              * @throws IllegalArgumentException if horizon is negative
              */
             // @ts-ignore
-            findWithinHorizon(pattern: string, horizon: number /*int*/): java.lang.String
+            public findWithinHorizon(pattern: java.lang.String | string, horizon: number /*int*/): string
             /**
              * Attempts to find the next occurrence of the specified pattern.
              * <p>This method searches through the input up to the specified
@@ -637,7 +637,7 @@ declare namespace java {
              * @throws IllegalArgumentException if horizon is negative
              */
             // @ts-ignore
-            findWithinHorizon(pattern: java.util.regex.Pattern, horizon: number /*int*/): java.lang.String
+            public findWithinHorizon(pattern: java.util.regex.Pattern, horizon: number /*int*/): string
             /**
              * Skips input that matches the specified pattern, ignoring delimiters.
              * This method will skip input if an anchored match of the specified
@@ -658,7 +658,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            skip(pattern: java.util.regex.Pattern): java.util.Scanner
+            public skip(pattern: java.util.regex.Pattern): java.util.Scanner
             /**
              * Skips input that matches a pattern constructed from the specified
              * string.
@@ -670,7 +670,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            skip(pattern: string): java.util.Scanner
+            public skip(pattern: java.lang.String | string): java.util.Scanner
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a boolean value using a case insensitive pattern
@@ -681,7 +681,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextBoolean(): boolean
+            public hasNextBoolean(): boolean
             /**
              * Scans the next token of the input into a boolean value and returns
              * that value. This method will throw <code>InputMismatchException</code>
@@ -694,7 +694,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextBoolean(): boolean
+            public nextBoolean(): boolean
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a byte value in the default radix using the
@@ -704,7 +704,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextByte(): boolean
+            public hasNextByte(): boolean
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a byte value in the specified radix using the
@@ -715,7 +715,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextByte(radix: number /*int*/): boolean
+            public hasNextByte(radix: number /*int*/): boolean
             /**
              * Scans the next token of the input as a <tt>byte</tt>.
              * <p> An invocation of this method of the form
@@ -730,7 +730,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextByte(): byte
+            public nextByte(): number /*byte*/
             /**
              * Scans the next token of the input as a <tt>byte</tt>.
              * This method will throw <code>InputMismatchException</code>
@@ -756,7 +756,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextByte(radix: number /*int*/): byte
+            public nextByte(radix: number /*int*/): number /*byte*/
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a short value in the default radix using the
@@ -766,7 +766,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextShort(): boolean
+            public hasNextShort(): boolean
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a short value in the specified radix using the
@@ -777,7 +777,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextShort(radix: number /*int*/): boolean
+            public hasNextShort(radix: number /*int*/): boolean
             /**
              * Scans the next token of the input as a <tt>short</tt>.
              * <p> An invocation of this method of the form
@@ -792,7 +792,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextShort(): short
+            public nextShort(): number /*short*/
             /**
              * Scans the next token of the input as a <tt>short</tt>.
              * This method will throw <code>InputMismatchException</code>
@@ -818,7 +818,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextShort(radix: number /*int*/): short
+            public nextShort(radix: number /*int*/): number /*short*/
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as an int value in the default radix using the
@@ -828,7 +828,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextInt(): boolean
+            public hasNextInt(): boolean
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as an int value in the specified radix using the
@@ -839,7 +839,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextInt(radix: number /*int*/): boolean
+            public hasNextInt(radix: number /*int*/): boolean
             /**
              * Scans the next token of the input as an <tt>int</tt>.
              * <p> An invocation of this method of the form
@@ -854,7 +854,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextInt(): int
+            public nextInt(): number /*int*/
             /**
              * Scans the next token of the input as an <tt>int</tt>.
              * This method will throw <code>InputMismatchException</code>
@@ -880,7 +880,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextInt(radix: number /*int*/): int
+            public nextInt(radix: number /*int*/): number /*int*/
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a long value in the default radix using the
@@ -890,7 +890,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextLong(): boolean
+            public hasNextLong(): boolean
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a long value in the specified radix using the
@@ -901,7 +901,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextLong(radix: number /*int*/): boolean
+            public hasNextLong(radix: number /*int*/): boolean
             /**
              * Scans the next token of the input as a <tt>long</tt>.
              * <p> An invocation of this method of the form
@@ -916,7 +916,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextLong(): long
+            public nextLong(): number /*long*/
             /**
              * Scans the next token of the input as a <tt>long</tt>.
              * This method will throw <code>InputMismatchException</code>
@@ -942,7 +942,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextLong(radix: number /*int*/): long
+            public nextLong(radix: number /*int*/): number /*long*/
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a float value using the {@link #nextFloat}
@@ -952,7 +952,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextFloat(): boolean
+            public hasNextFloat(): boolean
             /**
              * Scans the next token of the input as a <tt>float</tt>.
              * This method will throw <code>InputMismatchException</code>
@@ -979,7 +979,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextFloat(): float
+            public nextFloat(): number /*float*/
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a double value using the {@link #nextDouble}
@@ -989,7 +989,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextDouble(): boolean
+            public hasNextDouble(): boolean
             /**
              * Scans the next token of the input as a <tt>double</tt>.
              * This method will throw <code>InputMismatchException</code>
@@ -1016,7 +1016,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextDouble(): double
+            public nextDouble(): number /*double*/
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a <code>BigInteger</code> in the default radix using the
@@ -1027,7 +1027,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextBigInteger(): boolean
+            public hasNextBigInteger(): boolean
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a <code>BigInteger</code> in the specified radix using
@@ -1039,7 +1039,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextBigInteger(radix: number /*int*/): boolean
+            public hasNextBigInteger(radix: number /*int*/): boolean
             /**
              * Scans the next token of the input as a {@link java.math.BigInteger
              * BigInteger}.
@@ -1055,7 +1055,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextBigInteger(): java.math.BigInteger
+            public nextBigInteger(): java.math.BigInteger
             /**
              * Scans the next token of the input as a {@link java.math.BigInteger
              * BigInteger}.
@@ -1076,7 +1076,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextBigInteger(radix: number /*int*/): java.math.BigInteger
+            public nextBigInteger(radix: number /*int*/): java.math.BigInteger
             /**
              * Returns true if the next token in this scanner's input can be
              * interpreted as a <code>BigDecimal</code> using the
@@ -1087,7 +1087,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            hasNextBigDecimal(): boolean
+            public hasNextBigDecimal(): boolean
             /**
              * Scans the next token of the input as a {@link java.math.BigDecimal
              * BigDecimal}.
@@ -1107,7 +1107,7 @@ declare namespace java {
              * @throws IllegalStateException if this scanner is closed
              */
             // @ts-ignore
-            nextBigDecimal(): java.math.BigDecimal
+            public nextBigDecimal(): java.math.BigDecimal
             /**
              * Resets this scanner.
              * <p> Resetting a scanner discards all of its explicit state
@@ -1125,7 +1125,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            reset(): java.util.Scanner
+            public reset(): java.util.Scanner
         }
     }
 }

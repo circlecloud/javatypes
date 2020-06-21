@@ -26,14 +26,14 @@ declare namespace org {
                      *      registered for this plugin.
                      */
                     // @ts-ignore
-                    sendPluginMessage(source: org.bukkit.plugin.Plugin, channel: string, message: number /*byte*/[]): void
+                    sendPluginMessage(source: org.bukkit.plugin.Plugin, channel: java.lang.String | string, message: number /*byte*/[]): void
                     /**
                      * Gets a set containing all the Plugin Channels that this client is
                      * listening on.
                      * @return Set containing all the channels that this client may accept.
                      */
                     // @ts-ignore
-                    getListeningPluginChannels(): java.util.Set<java.lang.String>
+                    getListeningPluginChannels(): Array<java.lang.String | string>
                 }
             }
         }

@@ -16,13 +16,13 @@ declare namespace org {
                          * replacement, or the original if the replacement is {@code null}.
                          */
                         // @ts-ignore
-                        
+                        readonly IGNORE_ALL: org.spongepowered.api.data.merge.MergeFunction
                         /**
                          * Represents a {@link MergeFunction} that forces no merges and uses the
                          * original, or proposed replacement if the original is {@code null}.
                          */
                         // @ts-ignore
-                        
+                        readonly FORCE_NOTHING: org.spongepowered.api.data.merge.MergeFunction
                         /**
                          * Performs a merge of a type of {@link ValueContainer} such that a merge
                          * of the contained {@link BaseValue}s has been performed and the resulting
@@ -53,7 +53,7 @@ declare namespace org {
                          * @return The "merged" {#link ValueContainer}
                          */
                         // @ts-ignore
-                        merge<C extends org.spongepowered.api.data.value.ValueContainer<?>>(original: C extends org.spongepowered.api.data.value.ValueContainer<any>, replacement: C extends org.spongepowered.api.data.value.ValueContainer<any>): C
+                        merge<C extends org.spongepowered.api.data.value.ValueContainer<?>>(original: C, replacement: C): C
                         /**
                          * Creates a new {@link MergeFunction} chaining this current merge function
                          * with the provided merge function. The order of the merge is this

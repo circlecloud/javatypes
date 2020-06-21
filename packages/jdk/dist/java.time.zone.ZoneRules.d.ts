@@ -35,7 +35,7 @@ declare namespace java {
                  * @return the zone rules, not null
                  */
                 // @ts-ignore
-                of(baseStandardOffset: java.time.ZoneOffset, baseWallOffset: java.time.ZoneOffset, standardOffsetTransitionList: Array<java.time.zone.ZoneOffsetTransition>, transitionList: Array<java.time.zone.ZoneOffsetTransition>, lastRules: Array<java.time.zone.ZoneOffsetTransitionRule>): java.time.zone.ZoneRules
+                public static of(baseStandardOffset: java.time.ZoneOffset, baseWallOffset: java.time.ZoneOffset, standardOffsetTransitionList: java.util.List<java.time.zone.ZoneOffsetTransition> | Array<java.time.zone.ZoneOffsetTransition>, transitionList: java.util.List<java.time.zone.ZoneOffsetTransition> | Array<java.time.zone.ZoneOffsetTransition>, lastRules: java.util.List<java.time.zone.ZoneOffsetTransitionRule> | Array<java.time.zone.ZoneOffsetTransitionRule>): java.time.zone.ZoneRules
                 /**
                  * Obtains an instance of ZoneRules that has fixed zone rules.
                  * @param offset  the offset this fixed zone rules is based on, not null
@@ -43,13 +43,13 @@ declare namespace java {
                  * @see #isFixedOffset()
                  */
                 // @ts-ignore
-                of(offset: java.time.ZoneOffset): java.time.zone.ZoneRules
+                public static of(offset: java.time.ZoneOffset): java.time.zone.ZoneRules
                 /**
                  * Checks of the zone rules are fixed, such that the offset never varies.
                  * @return true if the time-zone is fixed and the offset never changes
                  */
                 // @ts-ignore
-                isFixedOffset(): boolean
+                public isFixedOffset(): boolean
                 /**
                  * Gets the offset applicable at the specified instant in these rules.
                  * <p>
@@ -61,7 +61,7 @@ declare namespace java {
                  * @return the offset, not null
                  */
                 // @ts-ignore
-                getOffset(instant: java.time.Instant): java.time.ZoneOffset
+                public getOffset(instant: java.time.Instant): java.time.ZoneOffset
                 /**
                  * Gets a suitable offset for the specified local date-time in these rules.
                  * <p>
@@ -90,7 +90,7 @@ declare namespace java {
                  * @return the best available offset for the local date-time, not null
                  */
                 // @ts-ignore
-                getOffset(localDateTime: java.time.LocalDateTime): java.time.ZoneOffset
+                public getOffset(localDateTime: java.time.LocalDateTime): java.time.ZoneOffset
                 /**
                  * Gets the offset applicable at the specified local date-time in these rules.
                  * <p>
@@ -133,7 +133,7 @@ declare namespace java {
                  * @return the list of valid offsets, may be immutable, not null
                  */
                 // @ts-ignore
-                getValidOffsets(localDateTime: java.time.LocalDateTime): java.util.List<java.time.ZoneOffset>
+                public getValidOffsets(localDateTime: java.time.LocalDateTime): Array<java.time.ZoneOffset>
                 /**
                  * Gets the offset transition applicable at the specified local date-time in these rules.
                  * <p>
@@ -168,7 +168,7 @@ declare namespace java {
                  * @return the offset transition, null if the local date-time is not in transition
                  */
                 // @ts-ignore
-                getTransition(localDateTime: java.time.LocalDateTime): java.time.zone.ZoneOffsetTransition
+                public getTransition(localDateTime: java.time.LocalDateTime): java.time.zone.ZoneOffsetTransition
                 /**
                  * Gets the standard offset for the specified instant in this zone.
                  * <p>
@@ -181,7 +181,7 @@ declare namespace java {
                  * @return the standard offset, not null
                  */
                 // @ts-ignore
-                getStandardOffset(instant: java.time.Instant): java.time.ZoneOffset
+                public getStandardOffset(instant: java.time.Instant): java.time.ZoneOffset
                 /**
                  * Gets the amount of daylight savings in use for the specified instant in this zone.
                  * <p>
@@ -199,7 +199,7 @@ declare namespace java {
                  * @return the difference between the standard and actual offset, not null
                  */
                 // @ts-ignore
-                getDaylightSavings(instant: java.time.Instant): java.time.Duration
+                public getDaylightSavings(instant: java.time.Instant): java.time.Duration
                 /**
                  * Checks if the specified instant is in daylight savings.
                  * <p>
@@ -214,7 +214,7 @@ declare namespace java {
                  * @return the standard offset, not null
                  */
                 // @ts-ignore
-                isDaylightSavings(instant: java.time.Instant): boolean
+                public isDaylightSavings(instant: java.time.Instant): boolean
                 /**
                  * Checks if the offset date-time is valid for these rules.
                  * <p>
@@ -229,7 +229,7 @@ declare namespace java {
                  * @return true if the offset date-time is valid for these rules
                  */
                 // @ts-ignore
-                isValidOffset(localDateTime: java.time.LocalDateTime, offset: java.time.ZoneOffset): boolean
+                public isValidOffset(localDateTime: java.time.LocalDateTime, offset: java.time.ZoneOffset): boolean
                 /**
                  * Gets the next transition after the specified instant.
                  * <p>
@@ -241,7 +241,7 @@ declare namespace java {
                  * @return the next transition after the specified instant, null if this is after the last transition
                  */
                 // @ts-ignore
-                nextTransition(instant: java.time.Instant): java.time.zone.ZoneOffsetTransition
+                public nextTransition(instant: java.time.Instant): java.time.zone.ZoneOffsetTransition
                 /**
                  * Gets the previous transition before the specified instant.
                  * <p>
@@ -253,7 +253,7 @@ declare namespace java {
                  * @return the previous transition after the specified instant, null if this is before the first transition
                  */
                 // @ts-ignore
-                previousTransition(instant: java.time.Instant): java.time.zone.ZoneOffsetTransition
+                public previousTransition(instant: java.time.Instant): java.time.zone.ZoneOffsetTransition
                 /**
                  * Gets the complete list of fully defined transitions.
                  * <p>
@@ -266,7 +266,7 @@ declare namespace java {
                  * @return an immutable list of fully defined transitions, not null
                  */
                 // @ts-ignore
-                getTransitions(): java.util.List<java.time.zone.ZoneOffsetTransition>
+                public getTransitions(): Array<java.time.zone.ZoneOffsetTransition>
                 /**
                  * Gets the list of transition rules for years beyond those defined in the transition list.
                  * <p>
@@ -288,7 +288,7 @@ declare namespace java {
                  * @return an immutable list of transition rules, not null
                  */
                 // @ts-ignore
-                getTransitionRules(): java.util.List<java.time.zone.ZoneOffsetTransitionRule>
+                public getTransitionRules(): Array<java.time.zone.ZoneOffsetTransitionRule>
                 /**
                  * Checks if this set of rules equals another.
                  * <p>
@@ -301,19 +301,19 @@ declare namespace java {
                  * @return true if this rules is the same as that specified
                  */
                 // @ts-ignore
-                equals(otherRules: any): boolean
+                public equals(otherRules: java.lang.Object | any): boolean
                 /**
                  * Returns a suitable hash code given the definition of {@code #equals}.
                  * @return the hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this object.
                  * @return a string for debugging, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

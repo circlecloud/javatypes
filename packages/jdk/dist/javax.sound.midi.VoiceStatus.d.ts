@@ -66,7 +66,7 @@ declare namespace javax {
                  * <A HREF="#description_of_active">active and inactive voices</A>.
                  */
                 // @ts-ignore
-                active: boolean
+                public active: boolean
                 /**
                  * The MIDI channel on which this voice is playing.  The value is a
                  * zero-based channel number if the voice is active, or
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @see #active
                  */
                 // @ts-ignore
-                channel: number /*int*/
+                public channel: number /*int*/
                 /**
                  * The bank number of the instrument that this voice is currently using.
                  * This is a number dictated by the MIDI bank-select message; it does not
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @see MidiChannel#programChange(int, int)
                  */
                 // @ts-ignore
-                bank: number /*int*/
+                public bank: number /*int*/
                 /**
                  * The program number of the instrument that this voice is currently using.
                  * The value ranges from 0 to 127 if the voice is active, and is
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @see #active
                  */
                 // @ts-ignore
-                program: number /*int*/
+                public program: number /*int*/
                 /**
                  * The MIDI note that this voice is playing.  The range for an active voice
                  * is from 0 to 127 in semitones, with 60 referring to Middle C.
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @see #active
                  */
                 // @ts-ignore
-                note: number /*int*/
+                public note: number /*int*/
                 /**
                  * The current MIDI volume level for the voice.
                  * The value ranges from 0 to 127 if the voice is active, and is
@@ -121,7 +121,7 @@ declare namespace javax {
                  * @see #active
                  */
                 // @ts-ignore
-                volume: number /*int*/
+                public volume: number /*int*/
             }
         }
     }

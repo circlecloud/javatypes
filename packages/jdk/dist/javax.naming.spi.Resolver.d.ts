@@ -37,7 +37,7 @@ declare namespace javax {
                  * @see #resolveToClass(String, Class)
                  */
                 // @ts-ignore
-                resolveToClass(name: javax.naming.Name, contextType: java.lang.Class<javax.naming.Context>): javax.naming.spi.ResolveResult
+                resolveToClass(name: javax.naming.Name, contextType: java.lang.Class<any>): javax.naming.spi.ResolveResult
                 /**
                  * Partially resolves a name.
                  * See {@link #resolveToClass(Name, Class)} for details.
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception was encountered
                  */
                 // @ts-ignore
-                resolveToClass(name: string, contextType: java.lang.Class<javax.naming.Context>): javax.naming.spi.ResolveResult
+                resolveToClass(name: java.lang.String | string, contextType: java.lang.Class<any>): javax.naming.spi.ResolveResult
             }
         }
     }

@@ -71,7 +71,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class StringTokenizer extends java.lang.Object implements java.util.Enumeration<java.lang.Object> {
+        class StringTokenizer extends java.lang.Object implements java.util.Enumeration<java.lang.Object | any> {
             /**
              * Constructs a string tokenizer for the specified string. All
              * characters in the <code>delim</code> argument are the delimiters
@@ -94,7 +94,7 @@ declare namespace java {
              * @exception NullPointerException if str is <CODE>null</CODE>
              */
             // @ts-ignore
-            constructor(str: string, delim: string, returnDelims: boolean)
+            constructor(str: java.lang.String | string, delim: java.lang.String | string, returnDelims: boolean)
             /**
              * Constructs a string tokenizer for the specified string. The
              * characters in the <code>delim</code> argument are the delimiters
@@ -110,7 +110,7 @@ declare namespace java {
              * @exception NullPointerException if str is <CODE>null</CODE>
              */
             // @ts-ignore
-            constructor(str: string, delim: string)
+            constructor(str: java.lang.String | string, delim: java.lang.String | string)
             /**
              * Constructs a string tokenizer for the specified string. The
              * tokenizer uses the default delimiter set, which is
@@ -122,7 +122,7 @@ declare namespace java {
              * @exception NullPointerException if str is <CODE>null</CODE>
              */
             // @ts-ignore
-            constructor(str: string)
+            constructor(str: java.lang.String | string)
             /**
              * Tests if there are more tokens available from this tokenizer's string.
              * If this method returns <tt>true</tt>, then a subsequent call to
@@ -132,7 +132,7 @@ declare namespace java {
              *           otherwise.
              */
             // @ts-ignore
-            hasMoreTokens(): boolean
+            public hasMoreTokens(): boolean
             /**
              * Returns the next token from this string tokenizer.
              * @return the next token from this string tokenizer.
@@ -140,7 +140,7 @@ declare namespace java {
              *                tokenizer's string.
              */
             // @ts-ignore
-            nextToken(): java.lang.String
+            public nextToken(): string
             /**
              * Returns the next token in this string tokenizer's string. First,
              * the set of characters considered to be delimiters by this
@@ -156,7 +156,7 @@ declare namespace java {
              * @exception NullPointerException if delim is <CODE>null</CODE>
              */
             // @ts-ignore
-            nextToken(delim: string): java.lang.String
+            public nextToken(delim: java.lang.String | string): string
             /**
              * Returns the same value as the <code>hasMoreTokens</code>
              * method. It exists so that this class can implement the
@@ -167,7 +167,7 @@ declare namespace java {
              * @see java.util.StringTokenizer#hasMoreTokens()
              */
             // @ts-ignore
-            hasMoreElements(): boolean
+            public hasMoreElements(): boolean
             /**
              * Returns the same value as the <code>nextToken</code> method,
              * except that its declared return value is <code>Object</code> rather than
@@ -180,7 +180,7 @@ declare namespace java {
              * @see java.util.StringTokenizer#nextToken()
              */
             // @ts-ignore
-            nextElement(): java.lang.Object
+            public nextElement(): any
             /**
              * Calculates the number of times that this tokenizer's
              * <code>nextToken</code> method can be called before it generates an
@@ -190,7 +190,7 @@ declare namespace java {
              * @see java.util.StringTokenizer#nextToken()
              */
             // @ts-ignore
-            countTokens(): int
+            public countTokens(): number /*int*/
         }
     }
 }

@@ -13,17 +13,17 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory, scope: org.springframework.beans.factory.config.Scope)
                         // @ts-ignore
-                        getBeanFactory(): org.springframework.beans.factory.config.ConfigurableBeanFactory
+                        public getBeanFactory(): org.springframework.beans.factory.config.ConfigurableBeanFactory
                         // @ts-ignore
-                        getScope(): org.springframework.beans.factory.config.Scope
+                        public getScope(): org.springframework.beans.factory.config.Scope
                         // @ts-ignore
-                        containsObject(key: string): boolean
+                        public containsObject(key: java.lang.String | string): boolean
                         // @ts-ignore
-                        getObject(key: string): java.lang.Object
+                        public getObject(key: java.lang.String | string): any
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

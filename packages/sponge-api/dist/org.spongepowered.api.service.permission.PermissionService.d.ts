@@ -29,12 +29,12 @@ declare namespace org {
                          * The standard identifier for the collection which stores users.
                          */
                         // @ts-ignore
-                        
+                        readonly SUBJECTS_USER: java.lang.String | string
                         /**
                          * The standard identifier for the collection which stores groups.
                          */
                         // @ts-ignore
-                        
+                        readonly SUBJECTS_GROUP: java.lang.String | string
                         /**
                          * The standard identifier for the collection which stores "system"
                          * subjects.
@@ -42,7 +42,7 @@ declare namespace org {
                          * server. For example, the server "console".</p>
                          */
                         // @ts-ignore
-                        
+                        readonly SUBJECTS_SYSTEM: java.lang.String | string
                         /**
                          * The standard identifier for the collection which stores default subjects.
                          * <p>By convention, the {@link #getDefaults()} subject is stored in this
@@ -51,20 +51,20 @@ declare namespace org {
                          * collection with the same identifier as the parent collection.</p>
                          */
                         // @ts-ignore
-                        
+                        readonly SUBJECTS_DEFAULT: java.lang.String | string
                         /**
                          * The standard identifier for the collection which stores command block
                          * subjects.
                          */
                         // @ts-ignore
-                        
+                        readonly SUBJECTS_COMMAND_BLOCK: java.lang.String | string
                         /**
                          * The standard identifier for the collection which stores role templates.
                          * <p>Role templates are registered alongside {@link PermissionDescription}s,
                          * via {@link PermissionDescription.Builder#assign(String, boolean)}.</p>
                          */
                         // @ts-ignore
-                        
+                        readonly SUBJECTS_ROLE_TEMPLATE: java.lang.String | string
                         /**
                          * Returns the subject collection which holds users.
                          * <p>User identifiers are expected to be UUIDs in RFC4122 string format
@@ -110,7 +110,7 @@ declare namespace org {
                          * @return The predicate
                          */
                         // @ts-ignore
-                        getIdentifierValidityPredicate(): java.util.function.Predicate<java.lang.String>
+                        getIdentifierValidityPredicate(): java.util.function$.Predicate<java.lang.String | string>
                         /**
                          * Loads and returns a subject collection with the given identifier.
                          * <p>The returned future will complete exceptionally if the subject
@@ -125,7 +125,7 @@ declare namespace org {
                          *                                   service
                          */
                         // @ts-ignore
-                        loadCollection(identifier: string): java.util.concurrent.CompletableFuture<org.spongepowered.api.service.permission.SubjectCollection>
+                        loadCollection(identifier: java.lang.String | string): java.util.concurrent.CompletableFuture<org.spongepowered.api.service.permission.SubjectCollection>
                         /**
                          * Returns a subject collection with the given identifier, if the
                          * collection is already loaded within this service.
@@ -140,7 +140,7 @@ declare namespace org {
                          * @return A subject collection for the given identifier
                          */
                         // @ts-ignore
-                        getCollection(identifier: string): java.util.Optional<org.spongepowered.api.service.permission.SubjectCollection>
+                        getCollection(identifier: java.lang.String | string): java.util.Optional<org.spongepowered.api.service.permission.SubjectCollection>
                         /**
                          * Returns whether a subject collection with the given identifier currently
                          * exists.
@@ -148,21 +148,21 @@ declare namespace org {
                          * @return If the collection currently exists
                          */
                         // @ts-ignore
-                        hasCollection(identifier: string): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        hasCollection(identifier: java.lang.String | string): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Returns an immutable copy of all currently loaded subject collections
                          * held by this permission service.
                          * @return The loaded collections for this service
                          */
                         // @ts-ignore
-                        getLoadedCollections(): java.util.Map<java.lang.String, org.spongepowered.api.service.permission.SubjectCollection>
+                        getLoadedCollections(): java.util.Map<java.lang.String | string, org.spongepowered.api.service.permission.SubjectCollection>
                         /**
                          * Returns a set of the subject collection identifiers known to this
                          * service.
                          * @return A set of collection identifiers
                          */
                         // @ts-ignore
-                        getAllIdentifiers(): java.util.concurrent.CompletableFuture<java.util.Set<java.lang.String>>
+                        getAllIdentifiers(): java.util.concurrent.CompletableFuture<java.util.Set<java.lang.String | string> | Array<java.lang.String | string>>
                         /**
                          * Creates a new subject reference to represent the expressed subject.
                          * <p>Note that instances of SubjectReference must be capable of resolving
@@ -180,7 +180,7 @@ declare namespace org {
                          *                                   service / the collection.
                          */
                         // @ts-ignore
-                        newSubjectReference(collectionIdentifier: string, subjectIdentifier: string): org.spongepowered.api.service.permission.SubjectReference
+                        newSubjectReference(collectionIdentifier: java.lang.String | string, subjectIdentifier: java.lang.String | string): org.spongepowered.api.service.permission.SubjectReference
                         /**
                          * Creates a new description builder for the given plugin's permission.
                          * @param plugin The plugin to create permission descriptions for
@@ -188,7 +188,7 @@ declare namespace org {
                          * @throws IllegalArgumentException if plugin is not a plugin instance
                          */
                         // @ts-ignore
-                        newDescriptionBuilder(plugin: any): org.spongepowered.api.service.permission.PermissionDescription.Builder
+                        newDescriptionBuilder(plugin: java.lang.Object | any): org.spongepowered.api.service.permission.PermissionDescription.Builder
                         /**
                          * Gets the registered or generated {@link PermissionDescription} for the
                          * given permission if available.
@@ -199,7 +199,7 @@ declare namespace org {
                          *          {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        getDescription(permission: string): java.util.Optional<org.spongepowered.api.service.permission.PermissionDescription>
+                        getDescription(permission: java.lang.String | string): java.util.Optional<org.spongepowered.api.service.permission.PermissionDescription>
                         /**
                          * Gets a immutable collection containing all registered or generated
                          * {@link PermissionDescription}s.
@@ -210,7 +210,7 @@ declare namespace org {
                          *          descriptions
                          */
                         // @ts-ignore
-                        getDescriptions(): java.util.Collection<org.spongepowered.api.service.permission.PermissionDescription>
+                        getDescriptions(): Array<org.spongepowered.api.service.permission.PermissionDescription>
                     }
                 }
             }

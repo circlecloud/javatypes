@@ -12,13 +12,13 @@ declare namespace org {
                  * @return the rename text
                  */
                 // @ts-ignore
-                getRenameText(): java.lang.String
+                getRenameText(): string
                 /**
                  * Get the experience cost (in levels) to complete the current repair.
                  * @return the experience cost
                  */
                 // @ts-ignore
-                getRepairCost(): int
+                getRepairCost(): number /*int*/
                 /**
                  * Set the experience cost (in levels) to complete the current repair.
                  * @param levels the experience cost
@@ -35,7 +35,7 @@ declare namespace org {
                  * @return the maximum experience cost
                  */
                 // @ts-ignore
-                getMaximumRepairCost(): int
+                getMaximumRepairCost(): number /*int*/
                 /**
                  * Set the maximum experience cost (in levels) to be allowed by the current
                  * repair. The default value set by vanilla Minecraft is 40.

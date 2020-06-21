@@ -59,7 +59,7 @@ declare namespace org {
                  * @return anger level
                  */
                 // @ts-ignore
-                getAnger(): int
+                getAnger(): number /*int*/
                 /**
                  * Set the bee's new anger level.
                  * @param anger new anger
@@ -71,7 +71,7 @@ declare namespace org {
                  * @return Ticks the bee cannot enter a hive for
                  */
                 // @ts-ignore
-                getCannotEnterHiveTicks(): int
+                getCannotEnterHiveTicks(): number /*int*/
                 /**
                  * Set the amount of ticks the bee cannot enter a hive for.
                  * @param ticks Ticks the bee cannot enter a hive for

@@ -40,12 +40,12 @@ declare namespace org {
                      * System environment property source name: {@value}.
                      */
                     // @ts-ignore
-                    readonly SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME: string
+                    public static readonly SYSTEM_ENVIRONMENT_PROPERTY_SOURCE_NAME: java.lang.String | string
                     /**
                      * JVM system properties property source name: {@value}.
                      */
                     // @ts-ignore
-                    readonly SYSTEM_PROPERTIES_PROPERTY_SOURCE_NAME: string
+                    public static readonly SYSTEM_PROPERTIES_PROPERTY_SOURCE_NAME: java.lang.String | string
                     /**
                      * Customize the set of property sources with those appropriate for any standard
                      * Java environment:

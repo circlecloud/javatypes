@@ -19,9 +19,9 @@ declare namespace org {
                                     // @ts-ignore
                                     experience(experience: number /*double*/): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.EndStep
                                     // @ts-ignore
-                                    id(id: string): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.EndStep
+                                    id(id: java.lang.String | string): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.EndStep
                                     // @ts-ignore
-                                    name(name: string): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.EndStep
+                                    name(name: java.lang.String | string): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.EndStep
                                     // @ts-ignore
                                     name(name: org.spongepowered.api.text.translation.Translation): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.EndStep
                                     // @ts-ignore

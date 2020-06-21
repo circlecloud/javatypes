@@ -22,13 +22,13 @@ declare namespace org {
                          * @return The object
                          */
                         // @ts-ignore
-                        get(): T
+                        public get(): T
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

@@ -16,17 +16,17 @@ declare namespace org {
                      * @return the spawn location
                      */
                     // @ts-ignore
-                    getSpawnLocation(): org.bukkit.Location
+                    public getSpawnLocation(): org.bukkit.Location
                     /**
                      * Sets player's spawn location.
                      * @param location the spawn location
                      */
                     // @ts-ignore
-                    setSpawnLocation(location: org.bukkit.Location): void
+                    public setSpawnLocation(location: org.bukkit.Location): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

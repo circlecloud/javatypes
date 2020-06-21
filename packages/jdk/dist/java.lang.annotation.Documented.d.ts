@@ -12,7 +12,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            class Documented implements java.lang.annotation.Annotation {
+            abstract class Documented implements java.lang.annotation.Annotation {
             }
         }
     }

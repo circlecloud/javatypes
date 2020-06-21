@@ -17,7 +17,7 @@ declare namespace org {
                              * @see Title#getTitle()
                              */
                             // @ts-ignore
-                            getTitle(): java.util.Optional<org.spongepowered.api.text.Text>
+                            public getTitle(): java.util.Optional<org.spongepowered.api.text.Text>
                             /**
                              * Sets the title to send to the player.
                              * @param title The text to use as the title, or {#code null} to reset
@@ -25,14 +25,14 @@ declare namespace org {
                              * @see Title#getTitle()
                              */
                             // @ts-ignore
-                            title(title: org.spongepowered.api.text.Text): org.spongepowered.api.text.title.Title.Builder
+                            public title(title: org.spongepowered.api.text.Text): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns the current subtitle of this builder.
                              * @return The current subtitle, or {#link Optional#empty()} if none
                              * @see Title#getSubtitle()
                              */
                             // @ts-ignore
-                            getSubtitle(): java.util.Optional<org.spongepowered.api.text.Text>
+                            public getSubtitle(): java.util.Optional<org.spongepowered.api.text.Text>
                             /**
                              * Sets the subtitle to send to the player.
                              * @param subtitle The text to use as the subtitle, or {#code null} to
@@ -41,14 +41,14 @@ declare namespace org {
                              * @see Title#getSubtitle()
                              */
                             // @ts-ignore
-                            subtitle(subtitle: org.spongepowered.api.text.Text): org.spongepowered.api.text.title.Title.Builder
+                            public subtitle(subtitle: org.spongepowered.api.text.Text): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns the current action bar text of this builder.
                              * @return The current action bar text, or {#link Optional#empty()} if none
                              * @see Title#getActionBar()
                              */
                             // @ts-ignore
-                            getActionBar(): java.util.Optional<org.spongepowered.api.text.Text>
+                            public getActionBar(): java.util.Optional<org.spongepowered.api.text.Text>
                             /**
                              * Sets the action bar text to send to the player.
                              * @param actionBar The text to use for the action bar, or {#code null}
@@ -57,14 +57,14 @@ declare namespace org {
                              * @see Title#getActionBar()
                              */
                             // @ts-ignore
-                            actionBar(actionBar: org.spongepowered.api.text.Text): org.spongepowered.api.text.title.Title.Builder
+                            public actionBar(actionBar: org.spongepowered.api.text.Text): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns the current fade in effect time of the title.
                              * @return The current fade in time, or {#link Optional#empty()} if none
                              * @see Title#getFadeIn()
                              */
                             // @ts-ignore
-                            getFadeIn(): java.util.Optional<java.lang.Integer>
+                            public getFadeIn(): java.util.Optional<java.lang.Integer | number>
                             /**
                              * Sets the duration in ticks of the fade in effect of the title. Once
                              * this period of time is over the title will stay for the amount of
@@ -76,14 +76,14 @@ declare namespace org {
                              * @see Title#getFadeIn()
                              */
                             // @ts-ignore
-                            fadeIn(fadeIn: number): org.spongepowered.api.text.title.Title.Builder
+                            public fadeIn(fadeIn: java.lang.Integer | number): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns the current stay effect time of the title.
                              * @return The current stay time, or {#link Optional#empty()} if none
                              * @see Title#getStay()
                              */
                             // @ts-ignore
-                            getStay(): java.util.Optional<java.lang.Integer>
+                            public getStay(): java.util.Optional<java.lang.Integer | number>
                             /**
                              * Sets the duration in ticks how long the title should stay on the
                              * screen. Once this period of time is over the title will fade out
@@ -95,7 +95,7 @@ declare namespace org {
                              * @see Title#getStay()
                              */
                             // @ts-ignore
-                            stay(stay: number): org.spongepowered.api.text.title.Title.Builder
+                            public stay(stay: java.lang.Integer | number): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns the current fade out effect time of the title.
                              * @return The current fade out time, or {#link Optional#empty()} if
@@ -103,7 +103,7 @@ declare namespace org {
                              * @see Title#getFadeOut()
                              */
                             // @ts-ignore
-                            getFadeOut(): java.util.Optional<java.lang.Integer>
+                            public getFadeOut(): java.util.Optional<java.lang.Integer | number>
                             /**
                              * Sets the duration in ticks of the fade out effect of the title.
                              * <p>The default value for Vanilla is 20 (1 second).</p>
@@ -113,14 +113,14 @@ declare namespace org {
                              * @see Title#getFadeOut()
                              */
                             // @ts-ignore
-                            fadeOut(fadeOut: number): org.spongepowered.api.text.title.Title.Builder
+                            public fadeOut(fadeOut: java.lang.Integer | number): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns whether this builder is currently configured to clear.
                              * @return {#code true} if the title will clear
                              * @see Title#isClear()
                              */
                             // @ts-ignore
-                            isClear(): boolean
+                            public isClear(): boolean
                             /**
                              * Removes the currently displayed title from the player's screen. This
                              * will keep the currently used display times and will only remove the
@@ -129,7 +129,7 @@ declare namespace org {
                              * @see Title#isClear()
                              */
                             // @ts-ignore
-                            clear(): org.spongepowered.api.text.title.Title.Builder
+                            public clear(): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Sets whether the the currently displayed title should be removed from
                              * the player's screen and will keep the currently used display times.
@@ -138,14 +138,14 @@ declare namespace org {
                              * @see Title#isClear()
                              */
                             // @ts-ignore
-                            clear(clear: boolean): org.spongepowered.api.text.title.Title.Builder
+                            public clear(clear: boolean): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Returns whether this builder is currently configured to reset.
                              * @return {#code true} if the title will reset
                              * @see Title#isReset()
                              */
                             // @ts-ignore
-                            isReset(): boolean
+                            public isReset(): boolean
                             /**
                              * Removes the currently displayed title from the player's screen and
                              * set the configuration back to the default values.
@@ -153,7 +153,7 @@ declare namespace org {
                              * @see Title#isReset()
                              */
                             // @ts-ignore
-                            reset(): org.spongepowered.api.text.title.Title.Builder
+                            public reset(): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Sets whether the currently displayed title should be removed from the
                              * player's screen and the configuration set back to the default values.
@@ -162,20 +162,20 @@ declare namespace org {
                              * @see Title#isReset()
                              */
                             // @ts-ignore
-                            reset(reset: boolean): org.spongepowered.api.text.title.Title.Builder
+                            public reset(reset: boolean): org.spongepowered.api.text.title.Title.Builder
                             /**
                              * Builds an immutable instance of the current configuration.
                              * @return An immutable {#link Title} with the currently configured
                              *          settings
                              */
                             // @ts-ignore
-                            build(): org.spongepowered.api.text.title.Title
+                            public build(): org.spongepowered.api.text.title.Title
                             // @ts-ignore
-                            equals(o: any): boolean
+                            public equals(o: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

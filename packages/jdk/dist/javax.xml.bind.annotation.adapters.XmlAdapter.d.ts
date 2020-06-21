@@ -113,7 +113,7 @@ declare namespace javax {
                      * @since JAXB 2.0
                      */
                     // @ts-ignore
-                    class XmlAdapter<ValueType, BoundType> extends java.lang.Object {
+                    abstract class XmlAdapter<ValueType, BoundType> extends java.lang.Object {
                         /**
                          * Do-nothing constructor for the derived classes.
                          */
@@ -128,7 +128,7 @@ declare namespace javax {
                          *       reporting the error to the user through {#link javax.xml.bind.ValidationEventHandler}.
                          */
                         // @ts-ignore
-                        abstract unmarshal(v: ValueType): BoundType
+                        public abstract unmarshal(v: ValueType): BoundType
                         /**
                          * Convert a bound type to a value type.
                          * @param v
@@ -138,7 +138,7 @@ declare namespace javax {
                          *       reporting the error to the user through {#link javax.xml.bind.ValidationEventHandler}.
                          */
                         // @ts-ignore
-                        abstract marshal(v: BoundType): ValueType
+                        public abstract marshal(v: BoundType): ValueType
                     }
                 }
             }

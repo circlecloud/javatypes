@@ -1,7 +1,7 @@
 declare namespace javax {
     namespace jws {
         // @ts-ignore
-        class HandlerChain implements java.lang.annotation.Annotation {
+        abstract class HandlerChain implements java.lang.annotation.Annotation {
         }
     }
 }

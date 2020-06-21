@@ -17,7 +17,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(formatter: DateTimeFormatter)
                         // @ts-ignore
-                        print(partial: ReadablePartial, locale: java.util.Locale): java.lang.String
+                        public print(partial: ReadablePartial, locale: java.util.Locale): string
                     }
                 }
             }

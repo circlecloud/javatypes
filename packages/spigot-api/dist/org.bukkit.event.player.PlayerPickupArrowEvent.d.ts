@@ -14,7 +14,7 @@ declare namespace org {
                      * @return The arrow being picked up
                      */
                     // @ts-ignore
-                    getArrow(): org.bukkit.entity.AbstractArrow
+                    public getArrow(): org.bukkit.entity.AbstractArrow
                 }
             }
         }

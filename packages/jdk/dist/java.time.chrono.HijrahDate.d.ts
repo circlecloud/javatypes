@@ -42,7 +42,7 @@ declare namespace java {
                  * @return the current date using the system clock and default time-zone, not null
                  */
                 // @ts-ignore
-                now(): java.time.chrono.HijrahDate
+                public static now(): java.time.chrono.HijrahDate
                 /**
                  * Obtains the current {@code HijrahDate} of the Islamic Umm Al-Qura calendar
                  * in the specified time-zone.
@@ -56,7 +56,7 @@ declare namespace java {
                  * @return the current date using the system clock, not null
                  */
                 // @ts-ignore
-                now(zone: java.time.ZoneId): java.time.chrono.HijrahDate
+                public static now(zone: java.time.ZoneId): java.time.chrono.HijrahDate
                 /**
                  * Obtains the current {@code HijrahDate} of the Islamic Umm Al-Qura calendar
                  * from the specified clock.
@@ -69,7 +69,7 @@ declare namespace java {
                  * @throws DateTimeException if the current date cannot be obtained
                  */
                 // @ts-ignore
-                now(clock: java.time.Clock): java.time.chrono.HijrahDate
+                public static now(clock: java.time.Clock): java.time.chrono.HijrahDate
                 /**
                  * Obtains a {@code HijrahDate} of the Islamic Umm Al-Qura calendar
                  * from the proleptic-year, month-of-year and day-of-month fields.
@@ -84,7 +84,7 @@ declare namespace java {
                  *   or if the day-of-month is invalid for the month-year
                  */
                 // @ts-ignore
-                of(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.HijrahDate
+                public static of(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.HijrahDate
                 /**
                  * Obtains a {@code HijrahDate} of the Islamic Umm Al-Qura calendar from a temporal object.
                  * <p>
@@ -102,7 +102,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to convert to a {#code HijrahDate}
                  */
                 // @ts-ignore
-                from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.HijrahDate
+                public static from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.HijrahDate
                 /**
                  * Gets the chronology of this date, which is the Hijrah calendar system.
                  * <p>
@@ -111,7 +111,7 @@ declare namespace java {
                  * @return the Hijrah chronology, not null
                  */
                 // @ts-ignore
-                getChronology(): java.time.chrono.HijrahChronology
+                public getChronology(): java.time.chrono.HijrahChronology
                 /**
                  * Gets the era applicable at this date.
                  * <p>
@@ -120,7 +120,7 @@ declare namespace java {
                  * @return the era applicable at this date, not null
                  */
                 // @ts-ignore
-                getEra(): java.time.chrono.HijrahEra
+                public getEra(): java.time.chrono.HijrahEra
                 /**
                  * Returns the length of the month represented by this date.
                  * <p>
@@ -129,7 +129,7 @@ declare namespace java {
                  * @return the length of the month in days
                  */
                 // @ts-ignore
-                lengthOfMonth(): int
+                public lengthOfMonth(): number /*int*/
                 /**
                  * Returns the length of the year represented by this date.
                  * <p>
@@ -139,13 +139,13 @@ declare namespace java {
                  * @return the length of the year in days
                  */
                 // @ts-ignore
-                lengthOfYear(): int
+                public lengthOfYear(): number /*int*/
                 // @ts-ignore
-                range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
                 // @ts-ignore
-                getLong(field: java.time.temporal.TemporalField): long
+                public getLong(field: java.time.temporal.TemporalField): number /*long*/
                 // @ts-ignore
-                with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.chrono.HijrahDate
+                public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.chrono.HijrahDate
                 /**
                  * {@inheritDoc}
                  * @throws DateTimeException if unable to make the adjustment.
@@ -153,7 +153,7 @@ declare namespace java {
                  * @throws ArithmeticException {#inheritDoc}
                  */
                 // @ts-ignore
-                with(adjuster: java.time.temporal.TemporalAdjuster): java.time.chrono.HijrahDate
+                public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.chrono.HijrahDate
                 /**
                  * Returns a {@code HijrahDate} with the Chronology requested.
                  * <p>
@@ -164,37 +164,37 @@ declare namespace java {
                  * @return a HijrahDate with the requested HijrahChronology, non-null
                  */
                 // @ts-ignore
-                withVariant(chronology: java.time.chrono.HijrahChronology): java.time.chrono.HijrahDate
+                public withVariant(chronology: java.time.chrono.HijrahChronology): java.time.chrono.HijrahDate
                 /**
                  * {@inheritDoc}
                  * @throws DateTimeException {#inheritDoc}
                  * @throws ArithmeticException {#inheritDoc}
                  */
                 // @ts-ignore
-                plus(amount: java.time.temporal.TemporalAmount): java.time.chrono.HijrahDate
+                public plus(amount: java.time.temporal.TemporalAmount): java.time.chrono.HijrahDate
                 /**
                  * {@inheritDoc}
                  * @throws DateTimeException {#inheritDoc}
                  * @throws ArithmeticException {#inheritDoc}
                  */
                 // @ts-ignore
-                minus(amount: java.time.temporal.TemporalAmount): java.time.chrono.HijrahDate
+                public minus(amount: java.time.temporal.TemporalAmount): java.time.chrono.HijrahDate
                 // @ts-ignore
-                toEpochDay(): long
+                public toEpochDay(): number /*long*/
                 /**
                  * Checks if the year is a leap year, according to the Hijrah calendar system rules.
                  * @return true if this date is in a leap year
                  */
                 // @ts-ignore
-                isLeapYear(): boolean
+                public isLeapYear(): boolean
                 // @ts-ignore
-                plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.HijrahDate
+                public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.HijrahDate
                 // @ts-ignore
-                minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.HijrahDate
+                public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.HijrahDate
                 // @ts-ignore
-                atTime(localTime: java.time.LocalTime): java.time.chrono.ChronoLocalDateTime<java.time.chrono.HijrahDate>
+                public atTime(localTime: java.time.LocalTime): java.time.chrono.ChronoLocalDateTime<java.time.chrono.HijrahDate>
                 // @ts-ignore
-                until(endDate: java.time.chrono.ChronoLocalDate): java.time.chrono.ChronoPeriod
+                public until(endDate: java.time.chrono.ChronoLocalDate): java.time.chrono.ChronoPeriod
                 /**
                  * Compares this date to another date, including the chronology.
                  * <p>
@@ -207,13 +207,13 @@ declare namespace java {
                  * @return true if this is equal to the other date and the Chronologies are equal
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this date.
                  * @return a suitable hash code based only on the Chronology and the date
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

@@ -14,7 +14,7 @@ declare namespace org {
                      * @param message The message of the exception
                      */
                     // @ts-ignore
-                    constructor(message: string)
+                    constructor(message: java.lang.String | string)
                     /**
                      * Creates a new {@link RegistryException} with the provided {@code message}
                      * and propagated {@link Throwable cause}.
@@ -22,13 +22,13 @@ declare namespace org {
                      * @param cause The cause
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Creates a new {@link RegistryException} with the provided {@link Throwable cause}.
                      * @param cause The cause
                      */
                     // @ts-ignore
-                    constructor(cause: Error)
+                    constructor(cause: java.lang.Throwable | Error)
                 }
             }
         }

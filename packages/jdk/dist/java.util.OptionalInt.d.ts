@@ -27,14 +27,14 @@ declare namespace java {
              * @return an empty {#code OptionalInt}
              */
             // @ts-ignore
-            empty(): java.util.OptionalInt
+            public static empty(): java.util.OptionalInt
             /**
              * Return an {@code OptionalInt} with the specified value present.
              * @param value the value to be present
              * @return an {#code OptionalInt} with the value present
              */
             // @ts-ignore
-            of(value: number /*int*/): java.util.OptionalInt
+            public static of(value: number /*int*/): java.util.OptionalInt
             /**
              * If a value is present in this {@code OptionalInt}, returns the value,
              * otherwise throws {@code NoSuchElementException}.
@@ -43,13 +43,13 @@ declare namespace java {
              * @see OptionalInt#isPresent()
              */
             // @ts-ignore
-            getAsInt(): int
+            public getAsInt(): number /*int*/
             /**
              * Return {@code true} if there is a value present, otherwise {@code false}.
              * @return {#code true} if there is a value present, otherwise {@code false}
              */
             // @ts-ignore
-            isPresent(): boolean
+            public isPresent(): boolean
             /**
              * Have the specified consumer accept the value if a value is present,
              * otherwise do nothing.
@@ -58,14 +58,14 @@ declare namespace java {
              *  null
              */
             // @ts-ignore
-            ifPresent(consumer: java.util.function.IntConsumer | java.util.function$.IntConsumer): void
+            public ifPresent(consumer: java.util.function$.IntConsumer): void
             /**
              * Return the value if present, otherwise return {@code other}.
              * @param other the value to be returned if there is no value present
              * @return the value, if present, otherwise {#code other}
              */
             // @ts-ignore
-            orElse(other: number /*int*/): int
+            public orElse(other: number /*int*/): number /*int*/
             /**
              * Return the value if present, otherwise invoke {@code other} and return
              * the result of that invocation.
@@ -76,7 +76,7 @@ declare namespace java {
              *  null
              */
             // @ts-ignore
-            orElseGet(other: java.util.function.IntSupplier | java.util.function$.IntSupplier): int
+            public orElseGet(other: java.util.function$.IntSupplier): number /*int*/
             /**
              * Return the contained value, if present, otherwise throw an exception
              * to be created by the provided supplier.
@@ -92,7 +92,7 @@ declare namespace java {
              *  {#code exceptionSupplier} is null
              */
             // @ts-ignore
-            orElseThrow<X extends java.lang.Throwable>(exceptionSupplier: java.util.function.Supplier<X> | java.util.function$.Supplier<X>): int
+            public orElseThrow<X extends java.lang.Throwable>(exceptionSupplier: java.util.function$.Supplier<X>): number /*int*/
             /**
              * Indicates whether some other object is "equal to" this OptionalInt. The
              * other object is considered equal if:
@@ -106,14 +106,14 @@ declare namespace java {
              *  otherwise {#code false}
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value of the present value, if any, or 0 (zero) if
              * no value is present.
              * @return hash code value of the present value or 0 if no value is present
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * {@inheritDoc}
              * Returns a non-empty string representation of this object suitable for
@@ -125,7 +125,7 @@ declare namespace java {
              * @return the string representation of this instance
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

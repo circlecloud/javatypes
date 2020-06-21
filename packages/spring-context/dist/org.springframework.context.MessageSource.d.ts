@@ -34,7 +34,7 @@ declare namespace org {
                  * @see java.text.MessageFormat
                  */
                 // @ts-ignore
-                getMessage(code: string, args: any[], defaultMessage: string, locale: java.util.Locale): java.lang.String
+                getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], defaultMessage: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Try to resolve the message. Treat as an error if the message can't be found.
                  * @param code the message code to look up, e.g. 'calculator.noRateSet'.
@@ -50,7 +50,7 @@ declare namespace org {
                  * @see java.text.MessageFormat
                  */
                 // @ts-ignore
-                getMessage(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                 /**
                  * Try to resolve the message using all the attributes contained within the
                  * {@code MessageSourceResolvable} argument that was passed in.
@@ -70,7 +70,7 @@ declare namespace org {
                  * @see java.text.MessageFormat
                  */
                 // @ts-ignore
-                getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): java.lang.String
+                getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): string
             }
         }
     }

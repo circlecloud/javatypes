@@ -13,7 +13,7 @@ declare namespace java {
          * @see Signature
          */
         // @ts-ignore
-        class SignatureSpi extends java.lang.Object {
+        abstract class SignatureSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -96,7 +96,7 @@ declare namespace java {
              *  process the input data provided.
              */
             // @ts-ignore
-            abstract engineSign(): byte[]
+            abstract engineSign(): number /*byte*/[]
             /**
              * Finishes this signature operation and stores the resulting signature
              * bytes in the provided buffer {@code outbuf}, starting at
@@ -130,7 +130,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            engineSign(outbuf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): int
+            engineSign(outbuf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Verifies the passed-in signature.
              * @param sigBytes the signature bytes to be verified.
@@ -179,7 +179,7 @@ declare namespace java {
              *  engineSetParameter}.
              */
             // @ts-ignore
-            abstract engineSetParameter(param: string, value: any): void
+            abstract engineSetParameter(param: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * <p>This method is overridden by providers to initialize
              * this signature engine with the specified parameter set.
@@ -228,7 +228,7 @@ declare namespace java {
              * @deprecated 
              */
             // @ts-ignore
-            abstract engineGetParameter(param: string): java.lang.Object
+            abstract engineGetParameter(param: java.lang.String | string): any
             /**
              * Returns a clone if the implementation is cloneable.
              * @return a clone if the implementation is cloneable.
@@ -236,7 +236,7 @@ declare namespace java {
              *  on an implementation that does not support {#code Cloneable}.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

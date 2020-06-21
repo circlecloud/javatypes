@@ -23,11 +23,11 @@ declare namespace javax {
                     // @ts-ignore
                     iconPane: javax.swing.JComponent
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installComponents(): void
                     // @ts-ignore
@@ -43,20 +43,20 @@ declare namespace javax {
                     // @ts-ignore
                     createMouseInputListener(): javax.swing.event.MouseInputListener
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Desktop icons can not be resized.  Therefore, we should always
                      * return the minimum size of the desktop icon.
                      * @see #getMinimumSize
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getInsets(c: javax.swing.JComponent): java.awt.Insets
+                    public getInsets(c: javax.swing.JComponent): java.awt.Insets
                     // @ts-ignore
-                    deiconize(): void
+                    public deiconize(): void
                 }
             }
         }

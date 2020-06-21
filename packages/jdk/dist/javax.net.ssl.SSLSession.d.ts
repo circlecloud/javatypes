@@ -36,7 +36,7 @@ declare namespace javax {
                  * @return the Session identifier
                  */
                 // @ts-ignore
-                getId(): byte[]
+                getId(): number /*byte*/[]
                 /**
                  * Returns the context in which this session is bound.
                  * <P>
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return the time this Session was created
                  */
                 // @ts-ignore
-                getCreationTime(): long
+                getCreationTime(): number /*long*/
                 /**
                  * Returns the last time this Session representation was accessed by the
                  * session level infrastructure, in milliseconds since
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @return the last time this Session was accessed
                  */
                 // @ts-ignore
-                getLastAccessedTime(): long
+                getLastAccessedTime(): number /*long*/
                 /**
                  * Invalidates the session.
                  * <P>
@@ -117,7 +117,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if either argument is null.
                  */
                 // @ts-ignore
-                putValue(name: string, value: any): void
+                putValue(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Returns the object bound to the given name in the session's
                  * application layer data.  Returns null if there is no such binding.
@@ -130,7 +130,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if the argument is null.
                  */
                 // @ts-ignore
-                getValue(name: string): java.lang.Object
+                getValue(name: java.lang.String | string): any
                 /**
                  * Removes the object bound to the given name in the session's
                  * application layer data.  Does nothing if there is no object
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if the argument is null.
                  */
                 // @ts-ignore
-                removeValue(name: string): void
+                removeValue(name: java.lang.String | string): void
                 /**
                  * Returns an array of the names of all the application layer
                  * data objects bound into the Session.
@@ -156,7 +156,7 @@ declare namespace javax {
                  *   bound to this Session.
                  */
                 // @ts-ignore
-                getValueNames(): java.lang.String[]
+                getValueNames(): string[]
                 /**
                  * Returns the identity of the peer which was established as part
                  * of defining the session.
@@ -249,7 +249,7 @@ declare namespace javax {
                  * @return the name of the session's cipher suite
                  */
                 // @ts-ignore
-                getCipherSuite(): java.lang.String
+                getCipherSuite(): string
                 /**
                  * Returns the standard name of the protocol used for all
                  * connections in the session.
@@ -258,7 +258,7 @@ declare namespace javax {
                  *  connections in the session.
                  */
                 // @ts-ignore
-                getProtocol(): java.lang.String
+                getProtocol(): string
                 /**
                  * Returns the host name of the peer in this session.
                  * <P>
@@ -277,7 +277,7 @@ declare namespace javax {
                  *           is available.
                  */
                 // @ts-ignore
-                getPeerHost(): java.lang.String
+                getPeerHost(): string
                 /**
                  * Returns the port number of the peer in this session.
                  * <P>
@@ -292,7 +292,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getPeerPort(): int
+                getPeerPort(): number /*int*/
                 /**
                  * Gets the current size of the largest SSL/TLS packet that is expected
                  * when using this session.
@@ -308,7 +308,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getPacketBufferSize(): int
+                getPacketBufferSize(): number /*int*/
                 /**
                  * Gets the current size of the largest application data that is
                  * expected when using this session.
@@ -323,7 +323,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getApplicationBufferSize(): int
+                getApplicationBufferSize(): number /*int*/
             }
         }
     }

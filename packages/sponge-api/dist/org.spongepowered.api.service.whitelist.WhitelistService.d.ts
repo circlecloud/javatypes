@@ -16,7 +16,7 @@ declare namespace org {
                          * @return The {#link GameProfile}s present on this whitelist
                          */
                         // @ts-ignore
-                        getWhitelistedProfiles(): java.util.Collection<org.spongepowered.api.profile.GameProfile>
+                        getWhitelistedProfiles(): Array<org.spongepowered.api.profile.GameProfile>
                         /**
                          * Gets whether the specified {@link GameProfile} is present on this
                          * whitelist.

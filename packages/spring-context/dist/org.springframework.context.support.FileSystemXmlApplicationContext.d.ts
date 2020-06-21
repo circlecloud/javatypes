@@ -54,7 +54,7 @@ declare namespace org {
                      * @throws BeansException if context creation failed
                      */
                     // @ts-ignore
-                    constructor(configLocation: string)
+                    constructor(configLocation: java.lang.String | string)
                     /**
                      * Create a new FileSystemXmlApplicationContext, loading the definitions
                      * from the given XML files and automatically refreshing the context.
@@ -62,7 +62,7 @@ declare namespace org {
                      * @throws BeansException if context creation failed
                      */
                     // @ts-ignore
-                    constructor(...configLocations: string[])
+                    constructor(...configLocations: java.lang.String[] | string[])
                     /**
                      * Create a new FileSystemXmlApplicationContext with the given parent,
                      * loading the definitions from the given XML files and automatically
@@ -72,7 +72,7 @@ declare namespace org {
                      * @throws BeansException if context creation failed
                      */
                     // @ts-ignore
-                    constructor(configLocations: string[], parent: org.springframework.context.ApplicationContext)
+                    constructor(configLocations: java.lang.String[] | string[], parent: org.springframework.context.ApplicationContext)
                     /**
                      * Create a new FileSystemXmlApplicationContext, loading the definitions
                      * from the given XML files.
@@ -84,7 +84,7 @@ declare namespace org {
                      * @see #refresh()
                      */
                     // @ts-ignore
-                    constructor(configLocations: string[], refresh: boolean)
+                    constructor(configLocations: java.lang.String[] | string[], refresh: boolean)
                     /**
                      * Create a new FileSystemXmlApplicationContext with the given parent,
                      * loading the definitions from the given XML files.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @see #refresh()
                      */
                     // @ts-ignore
-                    constructor(configLocations: string[], refresh: boolean, parent: org.springframework.context.ApplicationContext)
+                    constructor(configLocations: java.lang.String[] | string[], refresh: boolean, parent: org.springframework.context.ApplicationContext)
                     /**
                      * Resolve resource paths as file system paths.
                      * <p>Note: Even if a given path starts with a slash, it will get
@@ -108,7 +108,7 @@ declare namespace org {
                      * @see org.springframework.web.context.support.XmlWebApplicationContext#getResourceByPath
                      */
                     // @ts-ignore
-                    getResourceByPath(path: string): Resource
+                    getResourceByPath(path: java.lang.String | string): Resource
                 }
             }
         }

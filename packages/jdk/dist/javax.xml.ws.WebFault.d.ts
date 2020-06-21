@@ -8,7 +8,7 @@ declare namespace javax {
              * @since JAX-WS 2.0
              */
             // @ts-ignore
-            class WebFault implements java.lang.annotation.Annotation {
+            abstract class WebFault implements java.lang.annotation.Annotation {
             }
         }
     }

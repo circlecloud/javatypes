@@ -13,21 +13,21 @@ declare namespace javax {
                  * @return the mapped exception.
                  */
                 // @ts-ignore
-                mapSystemException(ex: org.omg.CORBA.SystemException): java.rmi.RemoteException
+                public static mapSystemException(ex: org.omg.CORBA.SystemException): java.rmi.RemoteException
                 /**
                  * Writes any java.lang.Object as a CORBA any.
                  * @param out the stream in which to write the any.
                  * @param obj the object to write as an any.
                  */
                 // @ts-ignore
-                writeAny(out: org.omg.CORBA.portable.OutputStream, obj: any): void
+                public static writeAny(out: org.omg.CORBA.portable.OutputStream, obj: java.lang.Object | any): void
                 /**
                  * Reads a java.lang.Object as a CORBA any.
                  * @param in the stream from which to read the any.
                  * @return the object read from the stream.
                  */
                 // @ts-ignore
-                readAny(input: org.omg.CORBA.portable.InputStream): java.lang.Object
+                public static readAny(input: org.omg.CORBA.portable.InputStream): any
                 /**
                  * Writes a java.lang.Object as a CORBA Object. If <code>obj</code> is
                  * an exported RMI-IIOP server object, the tie is found
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @param obj the object to write.
                  */
                 // @ts-ignore
-                writeRemoteObject(out: org.omg.CORBA.portable.OutputStream, obj: any): void
+                public static writeRemoteObject(out: org.omg.CORBA.portable.OutputStream, obj: java.lang.Object | any): void
                 /**
                  * Writes a java.lang.Object as either a value or a CORBA Object.
                  * If <code>obj</code> is a value object or a stub object, it is written to
@@ -52,7 +52,7 @@ declare namespace javax {
                  * @param obj the object to write.
                  */
                 // @ts-ignore
-                writeAbstractObject(out: org.omg.CORBA.portable.OutputStream, obj: any): void
+                public static writeAbstractObject(out: org.omg.CORBA.portable.OutputStream, obj: java.lang.Object | any): void
                 /**
                  * Registers a target for a tie. Adds the tie to an internal table and calls
                  * {@link Tie#setTarget} on the tie object.
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @param target the target for the tie.
                  */
                 // @ts-ignore
-                registerTarget(tie: javax.rmi.CORBA.Tie, target: java.rmi.Remote): void
+                public static registerTarget(tie: javax.rmi.CORBA.Tie, target: java.rmi.Remote): void
                 /**
                  * Removes the associated tie from an internal table and calls {@link
                  * Tie#deactivate}
@@ -68,27 +68,27 @@ declare namespace javax {
                  * @param target the object to unexport.
                  */
                 // @ts-ignore
-                unexportObject(target: java.rmi.Remote): void
+                public static unexportObject(target: java.rmi.Remote): void
                 /**
                  * Returns the tie (if any) for a given target object.
                  * @return the tie or null if no tie is registered for the given target.
                  */
                 // @ts-ignore
-                getTie(target: java.rmi.Remote): javax.rmi.CORBA.Tie
+                public static getTie(target: java.rmi.Remote): javax.rmi.CORBA.Tie
                 /**
                  * Returns a singleton instance of a class that implements the
                  * {@link ValueHandler} interface.
                  * @return a class which implements the ValueHandler interface.
                  */
                 // @ts-ignore
-                createValueHandler(): javax.rmi.CORBA.ValueHandler
+                public static createValueHandler(): javax.rmi.CORBA.ValueHandler
                 /**
                  * Returns the codebase, if any, for the given class.
                  * @param clz the class to get a codebase for.
                  * @return a space-separated list of URLs, or null.
                  */
                 // @ts-ignore
-                getCodebase(clz: java.lang.Class): java.lang.String
+                public static getCodebase(clz: java.lang.Class<any>): string
                 /**
                  * Returns a class instance for the specified class.
                  * <P>The spec for this method is the "Java to IDL language
@@ -116,7 +116,7 @@ declare namespace javax {
                  * @exception ClassNotFoundException if class cannot be loaded.
                  */
                 // @ts-ignore
-                loadClass(className: string, remoteCodebase: string, loader: java.lang.ClassLoader): java.lang.Class
+                public static loadClass(className: java.lang.String | string, remoteCodebase: java.lang.String | string, loader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * The <tt>isLocal</tt> method has the same semantics as the
                  * <tt>ObjectImpl._is_local</tt>
@@ -134,7 +134,7 @@ declare namespace javax {
                  *  specify the conditions that cause a <tt>RemoteException</tt> to be thrown.
                  */
                 // @ts-ignore
-                isLocal(stub: javax.rmi.CORBA.Stub): boolean
+                public static isLocal(stub: javax.rmi.CORBA.Stub): boolean
                 /**
                  * Wraps an exception thrown by an implementation
                  * method.  It returns the corresponding client-side exception.
@@ -142,7 +142,7 @@ declare namespace javax {
                  * @return the wrapped exception.
                  */
                 // @ts-ignore
-                wrapException(orig: Error): java.rmi.RemoteException
+                public static wrapException(orig: java.lang.Throwable | Error): java.rmi.RemoteException
                 /**
                  * Copies or connects an array of objects. Used by local stubs
                  * to copy any number of actual parameters, preserving sharing
@@ -153,7 +153,7 @@ declare namespace javax {
                  * @exception RemoteException if any object could not be copied or connected.
                  */
                 // @ts-ignore
-                copyObjects(obj: any[], orb: org.omg.CORBA.ORB): java.lang.Object[]
+                public static copyObjects(obj: java.lang.Object[] | any[], orb: org.omg.CORBA.ORB): any[]
                 /**
                  * Copies or connects an object. Used by local stubs to copy
                  * an actual parameter, result object, or exception.
@@ -163,7 +163,7 @@ declare namespace javax {
                  * @exception RemoteException if the object could not be copied or connected.
                  */
                 // @ts-ignore
-                copyObject(obj: any, orb: org.omg.CORBA.ORB): java.lang.Object
+                public static copyObject(obj: java.lang.Object | any, orb: org.omg.CORBA.ORB): any
             }
         }
     }

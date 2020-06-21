@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 2.5.5
                  */
                 // @ts-ignore
-                class TransformerUtils extends java.lang.Object {
+                abstract class TransformerUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -18,7 +18,7 @@ declare namespace org {
                      * <p>Defaults to "2".
                      */
                     // @ts-ignore
-                    readonly DEFAULT_INDENT_AMOUNT: number /*int*/
+                    public static readonly DEFAULT_INDENT_AMOUNT: number /*int*/
                     /**
                      * Enable indenting for the supplied {@link javax.xml.transform.Transformer}.
                      * <p>If the underlying XSLT engine is Xalan, then the special output key {@code indent-amount}
@@ -28,7 +28,7 @@ declare namespace org {
                      * @see javax.xml.transform.OutputKeys#INDENT
                      */
                     // @ts-ignore
-                    enableIndenting(transformer: javax.xml.transform.Transformer): void
+                    public static enableIndenting(transformer: javax.xml.transform.Transformer): void
                     /**
                      * Enable indenting for the supplied {@link javax.xml.transform.Transformer}.
                      * <p>If the underlying XSLT engine is Xalan, then the special output key {@code indent-amount}
@@ -39,14 +39,14 @@ declare namespace org {
                      * @see javax.xml.transform.OutputKeys#INDENT
                      */
                     // @ts-ignore
-                    enableIndenting(transformer: javax.xml.transform.Transformer, indentAmount: number /*int*/): void
+                    public static enableIndenting(transformer: javax.xml.transform.Transformer, indentAmount: number /*int*/): void
                     /**
                      * Disable indenting for the supplied {@link javax.xml.transform.Transformer}.
                      * @param transformer the target transformer
                      * @see javax.xml.transform.OutputKeys#INDENT
                      */
                     // @ts-ignore
-                    disableIndenting(transformer: javax.xml.transform.Transformer): void
+                    public static disableIndenting(transformer: javax.xml.transform.Transformer): void
                 }
             }
         }

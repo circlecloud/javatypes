@@ -105,7 +105,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                constructor(type: javax.sound.sampled.AudioFileFormat.Type, format: javax.sound.sampled.AudioFormat, frameLength: number /*int*/, properties: java.util.Map<java.lang.String, java.lang.Object>)
+                constructor(type: javax.sound.sampled.AudioFileFormat.Type, format: javax.sound.sampled.AudioFormat, frameLength: number /*int*/, properties: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                 /**
                  * Obtains the audio file type, such as <code>WAVE</code> or <code>AU</code>.
                  * @return the audio file type
@@ -116,27 +116,27 @@ declare namespace javax {
                  * @see Type#SND
                  */
                 // @ts-ignore
-                getType(): javax.sound.sampled.AudioFileFormat.Type
+                public getType(): javax.sound.sampled.AudioFileFormat.Type
                 /**
                  * Obtains the size in bytes of the entire audio file (not just its audio data).
                  * @return the audio file length in bytes
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getByteLength(): int
+                public getByteLength(): number /*int*/
                 /**
                  * Obtains the format of the audio data contained in the audio file.
                  * @return the audio data format
                  */
                 // @ts-ignore
-                getFormat(): javax.sound.sampled.AudioFormat
+                public getFormat(): javax.sound.sampled.AudioFormat
                 /**
                  * Obtains the length of the audio data contained in the file, expressed in sample frames.
                  * @return the number of sample frames of audio data in the file
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getFrameLength(): int
+                public getFrameLength(): number /*int*/
                 /**
                  * Obtain an unmodifiable map of properties.
                  * The concept of properties is further explained in
@@ -148,7 +148,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                properties(): java.util.Map<java.lang.String, java.lang.Object>
+                public properties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Obtain the property value specified by the key.
                  * The concept of properties is further explained in
@@ -163,13 +163,13 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getProperty(key: string): java.lang.Object
+                public getProperty(key: java.lang.String | string): any
                 /**
                  * Provides a string representation of the file format.
                  * @return the file format as a string
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

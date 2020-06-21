@@ -129,13 +129,13 @@ declare namespace javax {
              *                this <code>SizeSequence</code>
              */
             // @ts-ignore
-            setSizes(sizes: number /*int*/[]): void
+            public setSizes(sizes: number /*int*/[]): void
             /**
              * Returns the size of all entries.
              * @return a new array containing the sizes in this object
              */
             // @ts-ignore
-            getSizes(): int[]
+            public getSizes(): number /*int*/[]
             /**
              * Returns the start position for the specified entry.
              * For example, <code>getPosition(0)</code> returns 0,
@@ -151,7 +151,7 @@ declare namespace javax {
              * @return the starting position of the specified entry
              */
             // @ts-ignore
-            getPosition(index: number /*int*/): int
+            public getPosition(index: number /*int*/): number /*int*/
             /**
              * Returns the index of the entry
              * that corresponds to the specified position.
@@ -161,7 +161,7 @@ declare namespace javax {
              * @return the index of the entry that occupies the specified position
              */
             // @ts-ignore
-            getIndex(position: number /*int*/): int
+            public getIndex(position: number /*int*/): number /*int*/
             /**
              * Returns the size of the specified entry.
              * If <code>index</code> is out of the range
@@ -171,7 +171,7 @@ declare namespace javax {
              * @return the size of the entry
              */
             // @ts-ignore
-            getSize(index: number /*int*/): int
+            public getSize(index: number /*int*/): number /*int*/
             /**
              * Sets the size of the specified entry.
              * Note that if the value of <code>index</code>
@@ -182,7 +182,7 @@ declare namespace javax {
              * @param size   the size of the entry
              */
             // @ts-ignore
-            setSize(index: number /*int*/, size: number /*int*/): void
+            public setSize(index: number /*int*/, size: number /*int*/): void
             /**
              * Adds a contiguous group of entries to this <code>SizeSequence</code>.
              * Note that the values of <code>start</code> and
@@ -200,7 +200,7 @@ declare namespace javax {
              *    (<code>0 &lt;= start &lt; (getSizes().length)) AND (length &gt;= 0)</code>
              */
             // @ts-ignore
-            insertEntries(start: number /*int*/, length: number /*int*/, value: number /*int*/): void
+            public insertEntries(start: number /*int*/, length: number /*int*/, value: number /*int*/): void
             /**
              * Removes a contiguous group of entries
              * from this <code>SizeSequence</code>.
@@ -214,7 +214,7 @@ declare namespace javax {
              * @param length  the number of entries to be removed
              */
             // @ts-ignore
-            removeEntries(start: number /*int*/, length: number /*int*/): void
+            public removeEntries(start: number /*int*/, length: number /*int*/): void
         }
     }
 }

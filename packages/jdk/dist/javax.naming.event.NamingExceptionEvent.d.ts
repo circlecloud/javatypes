@@ -29,14 +29,14 @@ declare namespace javax {
                  * @return The exception that was thrown.
                  */
                 // @ts-ignore
-                getException(): javax.naming.NamingException
+                public getException(): javax.naming.NamingException
                 /**
                  * Retrieves the <tt>EventContext</tt> that fired this event.
                  * This returns the same object as <tt>EventObject.getSource()</tt>.
                  * @return The non-null <tt>EventContext</tt> that fired this event.
                  */
                 // @ts-ignore
-                getEventContext(): javax.naming.event.EventContext
+                public getEventContext(): javax.naming.event.EventContext
                 /**
                  * Invokes the <tt>namingExceptionThrown()</tt> method on
                  * a listener using this event.
@@ -44,7 +44,7 @@ declare namespace javax {
                  *  the method.
                  */
                 // @ts-ignore
-                dispatch(listener: javax.naming.event.NamingListener): void
+                public dispatch(listener: javax.naming.event.NamingListener): void
             }
         }
     }

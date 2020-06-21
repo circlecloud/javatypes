@@ -24,19 +24,19 @@ declare namespace javax {
                  * Checks if the button is selected.
                  */
                 // @ts-ignore
-                isSelected(): boolean
+                public isSelected(): boolean
                 /**
                  * Sets the selected state of the button.
                  * @param b true selects the toggle button,
                  *           false deselects the toggle button.
                  */
                 // @ts-ignore
-                setSelected(b: boolean): void
+                public setSelected(b: boolean): void
                 /**
                  * Sets the pressed state of the toggle button.
                  */
                 // @ts-ignore
-                setPressed(b: boolean): void
+                public setPressed(b: boolean): void
             }
         }
     }

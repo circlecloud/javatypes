@@ -29,20 +29,20 @@ declare namespace org {
              * @see org.springframework.web.context.support.StandardServletEnvironment
              */
             // @ts-ignore
-            class JndiPropertySource extends <any> {
+            class JndiPropertySource extends java.lang.Object {
                 /**
                  * Create a new {@code JndiPropertySource} with the given name
                  * and a {@link JndiLocatorDelegate} configured to prefix any names with
                  * "java:comp/env/".
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Create a new {@code JndiPropertySource} with the given name and the given
                  * {@code JndiLocatorDelegate}.
                  */
                 // @ts-ignore
-                constructor(name: string, jndiLocator: org.springframework.jndi.JndiLocatorDelegate)
+                constructor(name: java.lang.String | string, jndiLocator: org.springframework.jndi.JndiLocatorDelegate)
                 /**
                  * This implementation looks up and returns the value associated with the given
                  * name from the underlying {@link JndiLocatorDelegate}. If a {@link NamingException}
@@ -50,7 +50,7 @@ declare namespace org {
                  * {@code null} and issues a DEBUG-level log statement with the exception message.
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                public getProperty(name: java.lang.String | string): any
             }
         }
     }

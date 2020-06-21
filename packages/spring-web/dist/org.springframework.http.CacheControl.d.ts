@@ -39,7 +39,7 @@ declare namespace org {
                  * @return {#code this}, to facilitate method chaining
                  */
                 // @ts-ignore
-                empty(): org.springframework.http.CacheControl
+                public static empty(): org.springframework.http.CacheControl
                 /**
                  * Add a "max-age=" directive.
                  * <p>This directive is well suited for publicly caching resources, knowing that
@@ -56,7 +56,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.8">rfc7234 section 5.2.2.8</a>
                  */
                 // @ts-ignore
-                maxAge(maxAge: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
+                public static maxAge(maxAge: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
                 /**
                  * Add a "max-age=" directive.
                  * <p>This directive is well suited for publicly caching resources, knowing that
@@ -72,7 +72,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.8">rfc7234 section 5.2.2.8</a>
                  */
                 // @ts-ignore
-                maxAge(maxAge: java.time.Duration): org.springframework.http.CacheControl
+                public static maxAge(maxAge: java.time.Duration): org.springframework.http.CacheControl
                 /**
                  * Add a "no-cache" directive.
                  * <p>This directive is well suited for telling caches that the response
@@ -86,7 +86,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.2">rfc7234 section 5.2.2.2</a>
                  */
                 // @ts-ignore
-                noCache(): org.springframework.http.CacheControl
+                public static noCache(): org.springframework.http.CacheControl
                 /**
                  * Add a "no-store" directive.
                  * <p>This directive is well suited for preventing caches (browsers and proxies)
@@ -95,7 +95,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.3">rfc7234 section 5.2.2.3</a>
                  */
                 // @ts-ignore
-                noStore(): org.springframework.http.CacheControl
+                public static noStore(): org.springframework.http.CacheControl
                 /**
                  * Add a "must-revalidate" directive.
                  * <p>This directive indicates that once it has become stale, a cache MUST NOT
@@ -105,7 +105,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.1">rfc7234 section 5.2.2.1</a>
                  */
                 // @ts-ignore
-                mustRevalidate(): org.springframework.http.CacheControl
+                public mustRevalidate(): org.springframework.http.CacheControl
                 /**
                  * Add a "no-transform" directive.
                  * <p>This directive indicates that intermediaries (caches and others) should
@@ -115,7 +115,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.4">rfc7234 section 5.2.2.4</a>
                  */
                 // @ts-ignore
-                noTransform(): org.springframework.http.CacheControl
+                public noTransform(): org.springframework.http.CacheControl
                 /**
                  * Add a "public" directive.
                  * <p>This directive indicates that any cache MAY store the response,
@@ -125,7 +125,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.5">rfc7234 section 5.2.2.5</a>
                  */
                 // @ts-ignore
-                cachePublic(): org.springframework.http.CacheControl
+                public cachePublic(): org.springframework.http.CacheControl
                 /**
                  * Add a "private" directive.
                  * <p>This directive indicates that the response message is intended
@@ -134,7 +134,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.6">rfc7234 section 5.2.2.6</a>
                  */
                 // @ts-ignore
-                cachePrivate(): org.springframework.http.CacheControl
+                public cachePrivate(): org.springframework.http.CacheControl
                 /**
                  * Add a "proxy-revalidate" directive.
                  * <p>This directive has the same meaning as the "must-revalidate" directive,
@@ -143,7 +143,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.7">rfc7234 section 5.2.2.7</a>
                  */
                 // @ts-ignore
-                proxyRevalidate(): org.springframework.http.CacheControl
+                public proxyRevalidate(): org.springframework.http.CacheControl
                 /**
                  * Add an "s-maxage" directive.
                  * <p>This directive indicates that, in shared caches, the maximum age specified
@@ -155,7 +155,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.9">rfc7234 section 5.2.2.9</a>
                  */
                 // @ts-ignore
-                sMaxAge(sMaxAge: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
+                public sMaxAge(sMaxAge: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
                 /**
                  * Add an "s-maxage" directive.
                  * <p>This directive indicates that, in shared caches, the maximum age specified
@@ -166,7 +166,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2.2.9">rfc7234 section 5.2.2.9</a>
                  */
                 // @ts-ignore
-                sMaxAge(sMaxAge: java.time.Duration): org.springframework.http.CacheControl
+                public sMaxAge(sMaxAge: java.time.Duration): org.springframework.http.CacheControl
                 /**
                  * Add a "stale-while-revalidate" directive.
                  * <p>This directive indicates that caches MAY serve the response in which it
@@ -181,7 +181,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc5861#section-3">rfc5861 section 3</a>
                  */
                 // @ts-ignore
-                staleWhileRevalidate(staleWhileRevalidate: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
+                public staleWhileRevalidate(staleWhileRevalidate: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
                 /**
                  * Add a "stale-while-revalidate" directive.
                  * <p>This directive indicates that caches MAY serve the response in which it
@@ -195,7 +195,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc5861#section-3">rfc5861 section 3</a>
                  */
                 // @ts-ignore
-                staleWhileRevalidate(staleWhileRevalidate: java.time.Duration): org.springframework.http.CacheControl
+                public staleWhileRevalidate(staleWhileRevalidate: java.time.Duration): org.springframework.http.CacheControl
                 /**
                  * Add a "stale-if-error" directive.
                  * <p>This directive indicates that when an error is encountered, a cached stale response
@@ -207,7 +207,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc5861#section-4">rfc5861 section 4</a>
                  */
                 // @ts-ignore
-                staleIfError(staleIfError: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
+                public staleIfError(staleIfError: number /*long*/, unit: java.util.concurrent.TimeUnit): org.springframework.http.CacheControl
                 /**
                  * Add a "stale-if-error" directive.
                  * <p>This directive indicates that when an error is encountered, a cached stale response
@@ -218,15 +218,15 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc5861#section-4">rfc5861 section 4</a>
                  */
                 // @ts-ignore
-                staleIfError(staleIfError: java.time.Duration): org.springframework.http.CacheControl
+                public staleIfError(staleIfError: java.time.Duration): org.springframework.http.CacheControl
                 /**
                  * Return the "Cache-Control" header value, if any.
                  * @return the header value, or {#code null} if no directive was added
                  */
                 // @ts-ignore
-                getHeaderValue(): java.lang.String
+                public getHeaderValue(): string
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

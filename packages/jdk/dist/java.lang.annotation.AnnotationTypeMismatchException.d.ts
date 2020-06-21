@@ -23,7 +23,7 @@ declare namespace java {
                  *         as well.  The exact format of the string is unspecified.
                  */
                 // @ts-ignore
-                constructor(element: java.lang.reflect.Method, foundType: string)
+                constructor(element: java.lang.reflect.Method, foundType: java.lang.String | string)
                 /**
                  * Returns the <tt>Method</tt> object for the incorrectly typed element.
                  * @return the <tt>Method</tt> object for the incorrectly typed element
@@ -37,7 +37,7 @@ declare namespace java {
                  * @return the type of data found in the incorrectly typed element
                  */
                 // @ts-ignore
-                foundType(): java.lang.String
+                foundType(): string
             }
         }
     }

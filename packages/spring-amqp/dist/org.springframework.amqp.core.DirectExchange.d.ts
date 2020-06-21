@@ -12,18 +12,18 @@ declare namespace org {
                 // @ts-ignore
                 class DirectExchange extends org.springframework.amqp.core.AbstractExchange {
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
-                    constructor(name: string, durable: boolean, autoDelete: boolean)
+                    constructor(name: java.lang.String | string, durable: boolean, autoDelete: boolean)
                     // @ts-ignore
-                    constructor(name: string, durable: boolean, autoDelete: boolean, arguments: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(name: java.lang.String | string, durable: boolean, autoDelete: boolean, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     /**
                      * The default exchange.
                      */
                     // @ts-ignore
-                    readonly DEFAULT: org.springframework.amqp.core.DirectExchange
+                    public static readonly DEFAULT: org.springframework.amqp.core.DirectExchange
                     // @ts-ignore
-                    getType(): java.lang.String
+                    public getType(): string
                 }
             }
         }

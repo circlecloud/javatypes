@@ -21,7 +21,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Dictionary<K, V> extends java.lang.Object {
+        abstract class Dictionary<K, V> extends java.lang.Object {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -33,7 +33,7 @@ declare namespace java {
              * @return the number of keys in this dictionary.
              */
             // @ts-ignore
-            abstract size(): int
+            public abstract size(): number /*int*/
             /**
              * Tests if this dictionary maps no keys to value. The general contract
              * for the <tt>isEmpty</tt> method is that the result is true if and only
@@ -42,7 +42,7 @@ declare namespace java {
              *           <code>false</code> otherwise.
              */
             // @ts-ignore
-            abstract isEmpty(): boolean
+            public abstract isEmpty(): boolean
             /**
              * Returns an enumeration of the keys in this dictionary. The general
              * contract for the keys method is that an <tt>Enumeration</tt> object
@@ -53,7 +53,7 @@ declare namespace java {
              * @see java.util.Enumeration
              */
             // @ts-ignore
-            abstract keys(): java.util.Enumeration<K>
+            public abstract keys(): java.util.Enumeration<K>
             /**
              * Returns an enumeration of the values in this dictionary. The general
              * contract for the <tt>elements</tt> method is that an
@@ -64,7 +64,7 @@ declare namespace java {
              * @see java.util.Enumeration
              */
             // @ts-ignore
-            abstract elements(): java.util.Enumeration<V>
+            public abstract elements(): java.util.Enumeration<V>
             /**
              * Returns the value to which the key is mapped in this dictionary.
              * The general contract for the <tt>isEmpty</tt> method is that if this
@@ -78,7 +78,7 @@ declare namespace java {
              * @see java.util.Dictionary#put(java.lang.Object, java.lang.Object)
              */
             // @ts-ignore
-            abstract get(key: any): V
+            public abstract get(key: java.lang.Object | any): V
             /**
              * Maps the specified <code>key</code> to the specified
              * <code>value</code> in this dictionary. Neither the key nor the
@@ -106,7 +106,7 @@ declare namespace java {
              * @see java.util.Dictionary#get(java.lang.Object)
              */
             // @ts-ignore
-            abstract put(key: K, value: V): V
+            public abstract put(key: K, value: V): V
             /**
              * Removes the <code>key</code> (and its corresponding
              * <code>value</code>) from this dictionary. This method does nothing
@@ -118,7 +118,7 @@ declare namespace java {
              * @exception NullPointerException if <tt>key</tt> is <tt>null</tt>.
              */
             // @ts-ignore
-            abstract remove(key: any): V
+            public abstract remove(key: java.lang.Object | any): V
         }
     }
 }

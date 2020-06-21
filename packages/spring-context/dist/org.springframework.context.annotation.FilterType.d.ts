@@ -16,10 +16,40 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class FilterType extends java.lang.Enum<org.springframework.context.annotation.FilterType> {
+                    /**
+                     * Filter candidates marked with a given annotation.
+                     * @see org.springframework.core.type.filter.AnnotationTypeFilter
+                     */
+                    // @ts-ignore
+                    readonly ANNOTATION: org.springframework.context.annotation.FilterType
+                    /**
+                     * Filter candidates assignable to a given type.
+                     * @see org.springframework.core.type.filter.AssignableTypeFilter
+                     */
+                    // @ts-ignore
+                    readonly ASSIGNABLE_TYPE: org.springframework.context.annotation.FilterType
+                    /**
+                     * Filter candidates matching a given AspectJ type pattern expression.
+                     * @see org.springframework.core.type.filter.AspectJTypeFilter
+                     */
+                    // @ts-ignore
+                    readonly ASPECTJ: org.springframework.context.annotation.FilterType
+                    /**
+                     * Filter candidates matching a given regex pattern.
+                     * @see org.springframework.core.type.filter.RegexPatternTypeFilter
+                     */
+                    // @ts-ignore
+                    readonly REGEX: org.springframework.context.annotation.FilterType
+                    /**
+                     * Filter candidates using a given custom
+                     * {@link org.springframework.core.type.filter.TypeFilter} implementation.
+                     */
+                    // @ts-ignore
+                    readonly CUSTOM: org.springframework.context.annotation.FilterType
                     // @ts-ignore
                     values(): org.springframework.context.annotation.FilterType[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.context.annotation.FilterType
+                    valueOf(name: java.lang.String | string): org.springframework.context.annotation.FilterType
                 }
             }
         }

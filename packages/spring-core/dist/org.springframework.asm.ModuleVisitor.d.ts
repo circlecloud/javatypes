@@ -9,7 +9,7 @@ declare namespace org {
              * @author Eric Bruneton
              */
             // @ts-ignore
-            class ModuleVisitor extends java.lang.Object {
+            abstract class ModuleVisitor extends java.lang.Object {
                 /**
                  * Constructs a new {@link ModuleVisitor}.
                  * @param api the ASM API version implemented by this visitor. Must be one of {#link Opcodes#ASM6}
@@ -42,13 +42,13 @@ declare namespace org {
                  * @param mainClass the internal name of the main class of the current module.
                  */
                 // @ts-ignore
-                visitMainClass(mainClass: string): void
+                public visitMainClass(mainClass: java.lang.String | string): void
                 /**
                  * Visit a package of the current module.
                  * @param packaze the internal name of a package.
                  */
                 // @ts-ignore
-                visitPackage(packaze: string): void
+                public visitPackage(packaze: java.lang.String | string): void
                 /**
                  * Visits a dependence of the current module.
                  * @param module the fully qualified name (using dots) of the dependence.
@@ -57,7 +57,7 @@ declare namespace org {
                  * @param version the module version at compile time, or {#literal null}.
                  */
                 // @ts-ignore
-                visitRequire(module: string, access: number /*int*/, version: string): void
+                public visitRequire(module: java.lang.String | string, access: number /*int*/, version: java.lang.String | string): void
                 /**
                  * Visit an exported package of the current module.
                  * @param packaze the internal name of the exported package.
@@ -67,7 +67,7 @@ declare namespace org {
                  *      classes of the exported package, or {#literal null}.
                  */
                 // @ts-ignore
-                visitExport(packaze: string, access: number /*int*/, ...modules: string[]): void
+                public visitExport(packaze: java.lang.String | string, access: number /*int*/, ...modules: java.lang.String[] | string[]): void
                 /**
                  * Visit an open package of the current module.
                  * @param packaze the internal name of the opened package.
@@ -77,14 +77,14 @@ declare namespace org {
                  *      reflection to the classes of the open package, or {#literal null}.
                  */
                 // @ts-ignore
-                visitOpen(packaze: string, access: number /*int*/, ...modules: string[]): void
+                public visitOpen(packaze: java.lang.String | string, access: number /*int*/, ...modules: java.lang.String[] | string[]): void
                 /**
                  * Visit a service used by the current module. The name must be the internal name of an interface
                  * or a class.
                  * @param service the internal name of the service.
                  */
                 // @ts-ignore
-                visitUse(service: string): void
+                public visitUse(service: java.lang.String | string): void
                 /**
                  * Visit an implementation of a service.
                  * @param service the internal name of the service.
@@ -92,13 +92,13 @@ declare namespace org {
                  *      one provider).
                  */
                 // @ts-ignore
-                visitProvide(service: string, ...providers: string[]): void
+                public visitProvide(service: java.lang.String | string, ...providers: java.lang.String[] | string[]): void
                 /**
                  * Visits the end of the module. This method, which is the last one to be called, is used to
                  * inform the visitor that everything have been visited.
                  */
                 // @ts-ignore
-                visitEnd(): void
+                public visitEnd(): void
             }
         }
     }

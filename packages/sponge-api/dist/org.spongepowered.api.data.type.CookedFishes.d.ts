@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class CookedFishes extends java.lang.Object {
                         // @ts-ignore
-                        readonly COD: org.spongepowered.api.data.type.CookedFish
+                        public static readonly COD: org.spongepowered.api.data.type.CookedFish
                         // @ts-ignore
-                        readonly SALMON: org.spongepowered.api.data.type.CookedFish
+                        public static readonly SALMON: org.spongepowered.api.data.type.CookedFish
                     }
                 }
             }

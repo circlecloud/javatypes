@@ -14,7 +14,7 @@ declare namespace org {
                 // @ts-ignore
                 class SpongeAbsorbEvent extends org.bukkit.event.block.BlockEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(block: org.bukkit.block.Block, waterblocks: Array<org.bukkit.block.BlockState>)
+                    constructor(block: org.bukkit.block.Block, waterblocks: java.util.List<org.bukkit.block.BlockState> | Array<org.bukkit.block.BlockState>)
                     /**
                      * Get a list of all blocks to be removed by the sponge.
                      * <br>
@@ -23,15 +23,15 @@ declare namespace org {
                      * @return list of the to be removed blocks.
                      */
                     // @ts-ignore
-                    getBlocks(): java.util.List<org.bukkit.block.BlockState>
+                    public getBlocks(): Array<org.bukkit.block.BlockState>
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

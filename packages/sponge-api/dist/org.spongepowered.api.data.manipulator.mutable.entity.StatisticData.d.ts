@@ -10,7 +10,7 @@ declare namespace org {
                              * a {@link Player}.
                              */
                             // @ts-ignore
-                            interface StatisticData extends org.spongepowered.api.data.manipulator.mutable.MappedData<org.spongepowered.api.statistic.Statistic, java.lang.Long, org.spongepowered.api.data.manipulator.mutable.entity.StatisticData, org.spongepowered.api.data.manipulator.immutable.entity.ImmutableStatisticData> {
+                            interface StatisticData extends org.spongepowered.api.data.manipulator.mutable.MappedData<org.spongepowered.api.statistic.Statistic, java.lang.Long | number, org.spongepowered.api.data.manipulator.mutable.entity.StatisticData, org.spongepowered.api.data.manipulator.immutable.entity.ImmutableStatisticData> {
                             }
                         }
                     }

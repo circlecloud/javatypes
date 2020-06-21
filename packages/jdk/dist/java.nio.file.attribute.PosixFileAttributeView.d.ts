@@ -103,7 +103,7 @@ declare namespace java {
                      * have the name {@code "posix"}.
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * @throws IOException                {#inheritDoc}
                      * @throws SecurityException
@@ -130,7 +130,7 @@ declare namespace java {
                      *           method denies write access to the file.
                      */
                     // @ts-ignore
-                    setPermissions(perms: Array<java.nio.file.attribute.PosixFilePermission>): void
+                    setPermissions(perms: java.util.Set<java.nio.file.attribute.PosixFilePermission> | Array<java.nio.file.attribute.PosixFilePermission>): void
                     /**
                      * Updates the file group-owner.
                      * @param group

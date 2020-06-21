@@ -19,7 +19,7 @@ declare namespace java {
              *                  method.
              */
             // @ts-ignore
-            update(o: java.util.Observable, arg: any): void
+            update(o: java.util.Observable, arg: java.lang.Object | any): void
         }
     }
 }

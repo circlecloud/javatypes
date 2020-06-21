@@ -14,17 +14,17 @@ declare namespace org {
                      * @return The amount of experience
                      */
                     // @ts-ignore
-                    getAmount(): int
+                    public getAmount(): number /*int*/
                     /**
                      * Set the amount of experience the player will receive
                      * @param amount The amount of experience to set
                      */
                     // @ts-ignore
-                    setAmount(amount: number /*int*/): void
+                    public setAmount(amount: number /*int*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -61,14 +61,14 @@ declare namespace java {
              * @param algorithm the algorithm
              */
             // @ts-ignore
-            constructor(paramGenSpi: java.security.AlgorithmParameterGeneratorSpi, provider: java.security.Provider, algorithm: string)
+            constructor(paramGenSpi: java.security.AlgorithmParameterGeneratorSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns the standard name of the algorithm this parameter
              * generator is associated with.
              * @return the string name of the algorithm.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns an AlgorithmParameterGenerator object for generating
              * a set of parameters to be used with the specified algorithm.
@@ -92,7 +92,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.AlgorithmParameterGenerator
+            public static getInstance(algorithm: java.lang.String | string): java.security.AlgorithmParameterGenerator
             /**
              * Returns an AlgorithmParameterGenerator object for generating
              * a set of parameters to be used with the specified algorithm.
@@ -120,7 +120,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.AlgorithmParameterGenerator
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.AlgorithmParameterGenerator
             /**
              * Returns an AlgorithmParameterGenerator object for generating
              * a set of parameters to be used with the specified algorithm.
@@ -144,13 +144,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.AlgorithmParameterGenerator
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.AlgorithmParameterGenerator
             /**
              * Returns the provider of this algorithm parameter generator object.
              * @return the provider of this algorithm parameter generator object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Initializes this parameter generator for a certain size.
              * To create the parameters, the {@code SecureRandom}
@@ -162,7 +162,7 @@ declare namespace java {
              * @param size the size (number of bits).
              */
             // @ts-ignore
-            init(size: number /*int*/): void
+            public init(size: number /*int*/): void
             /**
              * Initializes this parameter generator for a certain size and source
              * of randomness.
@@ -170,7 +170,7 @@ declare namespace java {
              * @param random the source of randomness.
              */
             // @ts-ignore
-            init(size: number /*int*/, random: java.security.SecureRandom): void
+            public init(size: number /*int*/, random: java.security.SecureRandom): void
             /**
              * Initializes this parameter generator with a set of algorithm-specific
              * parameter generation values.
@@ -185,7 +185,7 @@ declare namespace java {
              *  generation values are inappropriate for this parameter generator.
              */
             // @ts-ignore
-            init(genParamSpec: java.security.spec.AlgorithmParameterSpec): void
+            public init(genParamSpec: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Initializes this parameter generator with a set of algorithm-specific
              * parameter generation values.
@@ -195,13 +195,13 @@ declare namespace java {
              *  generation values are inappropriate for this parameter generator.
              */
             // @ts-ignore
-            init(genParamSpec: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
+            public init(genParamSpec: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
             /**
              * Generates the parameters.
              * @return the new AlgorithmParameters object.
              */
             // @ts-ignore
-            generateParameters(): java.security.AlgorithmParameters
+            public generateParameters(): java.security.AlgorithmParameters
         }
     }
 }

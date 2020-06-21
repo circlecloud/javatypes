@@ -34,7 +34,7 @@ declare namespace java {
                  *          are equal, or {@code transition.getNano()} returns non-zero value
                  */
                 // @ts-ignore
-                of(transition: java.time.LocalDateTime, offsetBefore: java.time.ZoneOffset, offsetAfter: java.time.ZoneOffset): java.time.zone.ZoneOffsetTransition
+                public static of(transition: java.time.LocalDateTime, offsetBefore: java.time.ZoneOffset, offsetAfter: java.time.ZoneOffset): java.time.zone.ZoneOffsetTransition
                 /**
                  * Gets the transition instant.
                  * <p>
@@ -46,13 +46,13 @@ declare namespace java {
                  * @return the transition instant, not null
                  */
                 // @ts-ignore
-                getInstant(): java.time.Instant
+                public getInstant(): java.time.Instant
                 /**
                  * Gets the transition instant as an epoch second.
                  * @return the transition epoch second
                  */
                 // @ts-ignore
-                toEpochSecond(): long
+                public toEpochSecond(): number /*long*/
                 /**
                  * Gets the local transition date-time, as would be expressed with the 'before' offset.
                  * <p>
@@ -65,7 +65,7 @@ declare namespace java {
                  * @return the transition date-time expressed with the before offset, not null
                  */
                 // @ts-ignore
-                getDateTimeBefore(): java.time.LocalDateTime
+                public getDateTimeBefore(): java.time.LocalDateTime
                 /**
                  * Gets the local transition date-time, as would be expressed with the 'after' offset.
                  * <p>
@@ -76,7 +76,7 @@ declare namespace java {
                  * @return the transition date-time expressed with the after offset, not null
                  */
                 // @ts-ignore
-                getDateTimeAfter(): java.time.LocalDateTime
+                public getDateTimeAfter(): java.time.LocalDateTime
                 /**
                  * Gets the offset before the transition.
                  * <p>
@@ -84,7 +84,7 @@ declare namespace java {
                  * @return the offset before the transition, not null
                  */
                 // @ts-ignore
-                getOffsetBefore(): java.time.ZoneOffset
+                public getOffsetBefore(): java.time.ZoneOffset
                 /**
                  * Gets the offset after the transition.
                  * <p>
@@ -92,7 +92,7 @@ declare namespace java {
                  * @return the offset after the transition, not null
                  */
                 // @ts-ignore
-                getOffsetAfter(): java.time.ZoneOffset
+                public getOffsetAfter(): java.time.ZoneOffset
                 /**
                  * Gets the duration of the transition.
                  * <p>
@@ -102,7 +102,7 @@ declare namespace java {
                  * @return the duration of the transition, positive for gaps, negative for overlaps
                  */
                 // @ts-ignore
-                getDuration(): java.time.Duration
+                public getDuration(): java.time.Duration
                 /**
                  * Does this transition represent a gap in the local time-line.
                  * <p>
@@ -112,7 +112,7 @@ declare namespace java {
                  * @return true if this transition is a gap, false if it is an overlap
                  */
                 // @ts-ignore
-                isGap(): boolean
+                public isGap(): boolean
                 /**
                  * Does this transition represent an overlap in the local time-line.
                  * <p>
@@ -122,7 +122,7 @@ declare namespace java {
                  * @return true if this transition is an overlap, false if it is a gap
                  */
                 // @ts-ignore
-                isOverlap(): boolean
+                public isOverlap(): boolean
                 /**
                  * Checks if the specified offset is valid during this transition.
                  * <p>
@@ -133,7 +133,7 @@ declare namespace java {
                  * @return true if the offset is valid during the transition
                  */
                 // @ts-ignore
-                isValidOffset(offset: java.time.ZoneOffset): boolean
+                public isValidOffset(offset: java.time.ZoneOffset): boolean
                 /**
                  * Compares this transition to another based on the transition instant.
                  * <p>
@@ -143,7 +143,7 @@ declare namespace java {
                  * @return the comparator value, negative if less, positive if greater
                  */
                 // @ts-ignore
-                compareTo(transition: java.time.zone.ZoneOffsetTransition): int
+                public compareTo(transition: java.time.zone.ZoneOffsetTransition): number /*int*/
                 /**
                  * Checks if this object equals another.
                  * <p>
@@ -152,19 +152,19 @@ declare namespace java {
                  * @return true if equal
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a suitable hash code.
                  * @return the hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this object.
                  * @return a string for debugging, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -27,7 +27,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs an instance of InvalidNameException with
              * all fields set to null.

@@ -34,70 +34,70 @@ declare namespace javax {
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    fieldsIn(elements: java.lang.Iterable<javax.lang.model.element.Element>): java.util.List<javax.lang.model.element.VariableElement>
+                    public static fieldsIn(elements: java.lang.Iterable<any>): Array<javax.lang.model.element.VariableElement>
                     /**
                      * Returns a set of fields in {@code elements}.
                      * @return a set of fields in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    fieldsIn(elements: Array<javax.lang.model.element.Element>): java.util.Set<javax.lang.model.element.VariableElement>
+                    public static fieldsIn(elements: java.util.Set<any> | Array<any>): Array<javax.lang.model.element.VariableElement>
                     /**
                      * Returns a list of constructors in {@code elements}.
                      * @return a list of constructors in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    constructorsIn(elements: java.lang.Iterable<javax.lang.model.element.Element>): java.util.List<javax.lang.model.element.ExecutableElement>
+                    public static constructorsIn(elements: java.lang.Iterable<any>): Array<javax.lang.model.element.ExecutableElement>
                     /**
                      * Returns a set of constructors in {@code elements}.
                      * @return a set of constructors in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    constructorsIn(elements: Array<javax.lang.model.element.Element>): java.util.Set<javax.lang.model.element.ExecutableElement>
+                    public static constructorsIn(elements: java.util.Set<any> | Array<any>): Array<javax.lang.model.element.ExecutableElement>
                     /**
                      * Returns a list of methods in {@code elements}.
                      * @return a list of methods in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    methodsIn(elements: java.lang.Iterable<javax.lang.model.element.Element>): java.util.List<javax.lang.model.element.ExecutableElement>
+                    public static methodsIn(elements: java.lang.Iterable<any>): Array<javax.lang.model.element.ExecutableElement>
                     /**
                      * Returns a set of methods in {@code elements}.
                      * @return a set of methods in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    methodsIn(elements: Array<javax.lang.model.element.Element>): java.util.Set<javax.lang.model.element.ExecutableElement>
+                    public static methodsIn(elements: java.util.Set<any> | Array<any>): Array<javax.lang.model.element.ExecutableElement>
                     /**
                      * Returns a list of types in {@code elements}.
                      * @return a list of types in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    typesIn(elements: java.lang.Iterable<javax.lang.model.element.Element>): java.util.List<javax.lang.model.element.TypeElement>
+                    public static typesIn(elements: java.lang.Iterable<any>): Array<javax.lang.model.element.TypeElement>
                     /**
                      * Returns a set of types in {@code elements}.
                      * @return a set of types in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    typesIn(elements: Array<javax.lang.model.element.Element>): java.util.Set<javax.lang.model.element.TypeElement>
+                    public static typesIn(elements: java.util.Set<any> | Array<any>): Array<javax.lang.model.element.TypeElement>
                     /**
                      * Returns a list of packages in {@code elements}.
                      * @return a list of packages in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    packagesIn(elements: java.lang.Iterable<javax.lang.model.element.Element>): java.util.List<javax.lang.model.element.PackageElement>
+                    public static packagesIn(elements: java.lang.Iterable<any>): Array<javax.lang.model.element.PackageElement>
                     /**
                      * Returns a set of packages in {@code elements}.
                      * @return a set of packages in {#code elements}
                      * @param elements the elements to filter
                      */
                     // @ts-ignore
-                    packagesIn(elements: Array<javax.lang.model.element.Element>): java.util.Set<javax.lang.model.element.PackageElement>
+                    public static packagesIn(elements: java.util.Set<any> | Array<any>): Array<javax.lang.model.element.PackageElement>
                 }
             }
         }

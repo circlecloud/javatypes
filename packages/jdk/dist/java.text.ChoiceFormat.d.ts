@@ -121,7 +121,7 @@ declare namespace java {
              * @see #applyPattern
              */
             // @ts-ignore
-            constructor(newPattern: string)
+            constructor(newPattern: java.lang.String | string)
             /**
              * Constructs with the limits and the corresponding formats.
              * @param limits limits in ascending order
@@ -129,19 +129,19 @@ declare namespace java {
              * @see #setChoices
              */
             // @ts-ignore
-            constructor(limits: number /*double*/[], formats: string[])
+            constructor(limits: number /*double*/[], formats: java.lang.String[] | string[])
             /**
              * Sets the pattern.
              * @param newPattern See the class description.
              */
             // @ts-ignore
-            applyPattern(newPattern: string): void
+            public applyPattern(newPattern: java.lang.String | string): void
             /**
              * Gets the pattern.
              * @return the pattern string
              */
             // @ts-ignore
-            toPattern(): java.lang.String
+            public toPattern(): string
             /**
              * Set the choices to be used in formatting.
              * @param limits contains the top value that you want
@@ -157,19 +157,19 @@ declare namespace java {
              *  is called. Otherwise Y.toString() is called.
              */
             // @ts-ignore
-            setChoices(limits: number /*double*/[], formats: string[]): void
+            public setChoices(limits: number /*double*/[], formats: java.lang.String[] | string[]): void
             /**
              * Get the limits passed in the constructor.
              * @return the limits.
              */
             // @ts-ignore
-            getLimits(): double[]
+            public getLimits(): number /*double*/[]
             /**
              * Get the formats passed in the constructor.
              * @return the formats.
              */
             // @ts-ignore
-            getFormats(): java.lang.Object[]
+            public getFormats(): any[]
             /**
              * Specialization of format. This method really calls
              * <code>format(double, StringBuffer, FieldPosition)</code>
@@ -178,7 +178,7 @@ declare namespace java {
              * a practical limitation.
              */
             // @ts-ignore
-            format(number: number /*long*/, toAppendTo: java.lang.StringBuffer, status: java.text.FieldPosition): java.lang.StringBuffer
+            public format(number: number /*long*/, toAppendTo: java.lang.StringBuffer, status: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Returns pattern with formatted double.
              * @param number number to be formatted and substituted.
@@ -186,7 +186,7 @@ declare namespace java {
              * @param status ignore no useful status is returned.
              */
             // @ts-ignore
-            format(number: number /*double*/, toAppendTo: java.lang.StringBuffer, status: java.text.FieldPosition): java.lang.StringBuffer
+            public format(number: number /*double*/, toAppendTo: java.lang.StringBuffer, status: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Parses a Number from the input text.
              * @param text the source text.
@@ -200,7 +200,7 @@ declare namespace java {
              * @return A Number representing the value of the number parsed.
              */
             // @ts-ignore
-            parse(text: string, status: java.text.ParsePosition): java.lang.Number
+            public parse(text: java.lang.String | string, status: java.text.ParsePosition): java.lang.Number
             /**
              * Finds the least double greater than {@code d}.
              * If {@code NaN}, returns same value.
@@ -210,7 +210,7 @@ declare namespace java {
              * @see #previousDouble
              */
             // @ts-ignore
-            nextDouble(d: number /*double*/): double
+            public static nextDouble(d: number /*double*/): number /*double*/
             /**
              * Finds the greatest double less than {@code d}.
              * If {@code NaN}, returns same value.
@@ -219,22 +219,22 @@ declare namespace java {
              * @see #nextDouble
              */
             // @ts-ignore
-            previousDouble(d: number /*double*/): double
+            public static previousDouble(d: number /*double*/): number /*double*/
             /**
              * Overrides Cloneable
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Generates a hash code for the message format object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Equality comparision between two
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Finds the least double greater than {@code d} (if {@code positive} is
              * {@code true}), or the greatest double less than {@code d} (if
@@ -251,7 +251,7 @@ declare namespace java {
              * @return the least or greater double value
              */
             // @ts-ignore
-            nextDouble(d: number /*double*/, positive: boolean): double
+            public static nextDouble(d: number /*double*/, positive: boolean): number /*double*/
         }
     }
 }

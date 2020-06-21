@@ -50,21 +50,21 @@ declare namespace org {
                  * @return whether the other object is equivalent
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code for this vector.
                  * @return hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Get a new block vector.
                  * @return vector
                  */
                 // @ts-ignore
-                clone(): org.bukkit.util.BlockVector
+                public clone(): org.bukkit.util.BlockVector
                 // @ts-ignore
-                deserialize(args: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.util.BlockVector
+                public static deserialize(args: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.util.BlockVector
             }
         }
     }

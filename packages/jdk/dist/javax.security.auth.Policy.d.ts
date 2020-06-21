@@ -106,7 +106,7 @@ declare namespace javax {
              * @see java.security.Security security properties
              */
             // @ts-ignore
-            class Policy extends java.lang.Object {
+            abstract class Policy extends java.lang.Object {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -127,7 +127,7 @@ declare namespace javax {
                  * @see #setPolicy
                  */
                 // @ts-ignore
-                getPolicy(): javax.security.auth.Policy
+                public static getPolicy(): javax.security.auth.Policy
                 /**
                  * Sets the system-wide Policy object. This method first calls
                  * {@code SecurityManager.checkPermission} with the
@@ -140,7 +140,7 @@ declare namespace javax {
                  * @see #getPolicy
                  */
                 // @ts-ignore
-                setPolicy(policy: javax.security.auth.Policy): void
+                public static setPolicy(policy: javax.security.auth.Policy): void
                 /**
                  * Retrieve the Permissions granted to the Principals associated with
                  * the specified {@code CodeSource}.
@@ -162,7 +162,7 @@ declare namespace javax {
                  *                   parameters.
                  */
                 // @ts-ignore
-                abstract getPermissions(subject: javax.security.auth.Subject, cs: java.security.CodeSource): java.security.PermissionCollection
+                public abstract getPermissions(subject: javax.security.auth.Subject, cs: java.security.CodeSource): java.security.PermissionCollection
                 /**
                  * Refresh and reload the Policy.
                  * <p>This method causes this object to refresh/reload its current
@@ -174,7 +174,7 @@ declare namespace javax {
                  *                           to refresh the Policy.
                  */
                 // @ts-ignore
-                abstract refresh(): void
+                public abstract refresh(): void
             }
         }
     }

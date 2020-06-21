@@ -17,7 +17,7 @@ declare namespace org {
                                  * @see Keys#FUSE_DURATION
                                  */
                                 // @ts-ignore
-                                fuseDuration(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                                fuseDuration(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                                 /**
                                  * The amount of ticks before {@link FusedExplosive} detonates. Setting
                                  * this value has no effect if the explosive is not currently
@@ -30,7 +30,7 @@ declare namespace org {
                                  * @see Keys#TICKS_REMAINING
                                  */
                                 // @ts-ignore
-                                ticksRemaining(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                                ticksRemaining(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                             }
                         }
                     }

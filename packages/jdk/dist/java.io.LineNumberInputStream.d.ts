@@ -52,7 +52,7 @@ declare namespace java {
              * @see java.io.LineNumberInputStream#getLineNumber()
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to {@code len} bytes of data from this input stream
              * into an array of bytes. This method blocks until some input is available.
@@ -70,7 +70,7 @@ declare namespace java {
              * @see java.io.LineNumberInputStream#read()
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips over and discards {@code n} bytes of data from this
              * input stream. The {@code skip} method may, for a variety of
@@ -88,21 +88,21 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Sets the line number to the specified argument.
              * @param lineNumber   the new line number.
              * @see #getLineNumber
              */
             // @ts-ignore
-            setLineNumber(lineNumber: number /*int*/): void
+            public setLineNumber(lineNumber: number /*int*/): void
             /**
              * Returns the current line number.
              * @return the current line number.
              * @see #setLineNumber
              */
             // @ts-ignore
-            getLineNumber(): int
+            public getLineNumber(): number /*int*/
             /**
              * Returns the number of bytes that can be read from this input
              * stream without blocking.
@@ -121,7 +121,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Marks the current position in this input stream. A subsequent
              * call to the {@code reset} method repositions this stream at
@@ -137,7 +137,7 @@ declare namespace java {
              * @see java.io.LineNumberInputStream#reset()
              */
             // @ts-ignore
-            mark(readlimit: number /*int*/): void
+            public mark(readlimit: number /*int*/): void
             /**
              * Repositions this stream to the position at the time the
              * {@code mark} method was last called on this input stream.
@@ -161,7 +161,7 @@ declare namespace java {
              * @see java.io.LineNumberInputStream#mark(int)
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
         }
     }
 }

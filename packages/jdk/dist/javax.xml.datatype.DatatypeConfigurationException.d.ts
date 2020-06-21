@@ -20,7 +20,7 @@ declare namespace javax {
                  * @param message The detail message.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * <p>Create a new <code>DatatypeConfigurationException</code> with
                  * the specified detail message and cause.</p>
@@ -28,14 +28,14 @@ declare namespace javax {
                  * @param cause The cause.  A <code>null</code> value is permitted, and indicates that the cause is nonexistent or unknown.
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * <p>Create a new <code>DatatypeConfigurationException</code> with
                  * the specified cause.</p>
                  * @param cause The cause.  A <code>null</code> value is permitted, and indicates that the cause is nonexistent or unknown.
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

@@ -33,7 +33,7 @@ declare namespace java {
              * Write a single character.
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Write a portion of an array of characters.
              * @param cbuf  Array of characters
@@ -41,12 +41,12 @@ declare namespace java {
              * @param len   Number of characters to write
              */
             // @ts-ignore
-            write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Write a string.
              */
             // @ts-ignore
-            write(str: string): void
+            public write(str: java.lang.String | string): void
             /**
              * Write a portion of a string.
              * @param str  String to be written
@@ -54,7 +54,7 @@ declare namespace java {
              * @param len  Number of characters to write
              */
             // @ts-ignore
-            write(str: string, off: number /*int*/, len: number /*int*/): void
+            public write(str: java.lang.String | string, off: number /*int*/, len: number /*int*/): void
             /**
              * Appends the specified character sequence to this writer.
              * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
@@ -74,7 +74,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence): java.io.StringWriter
+            public append(csq: java.lang.CharSequence): java.io.StringWriter
             /**
              * Appends a subsequence of the specified character sequence to this writer.
              * <p> An invocation of this method of the form <tt>out.append(csq, start,
@@ -100,7 +100,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.StringWriter
+            public append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.StringWriter
             /**
              * Appends the specified character to this writer.
              * <p> An invocation of this method of the form <tt>out.append(c)</tt>
@@ -113,30 +113,30 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(c: string): java.io.StringWriter
+            public append(c: string): java.io.StringWriter
             /**
              * Return the buffer's current value as a string.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Return the string buffer itself.
              * @return StringBuffer holding the current buffer value.
              */
             // @ts-ignore
-            getBuffer(): java.lang.StringBuffer
+            public getBuffer(): java.lang.StringBuffer
             /**
              * Flush the stream.
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Closing a <tt>StringWriter</tt> has no effect. The methods in this
              * class can be called after the stream has been closed without generating
              * an <tt>IOException</tt>.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

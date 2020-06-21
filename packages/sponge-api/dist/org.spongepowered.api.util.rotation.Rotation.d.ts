@@ -13,7 +13,7 @@ declare namespace org {
                          * @return The angle in degrees
                          */
                         // @ts-ignore
-                        getAngle(): int
+                        getAngle(): number /*int*/
                     }
                 }
             }

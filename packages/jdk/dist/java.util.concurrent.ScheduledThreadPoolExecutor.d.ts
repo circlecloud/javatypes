@@ -150,27 +150,27 @@ declare namespace java {
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                schedule(command: java.lang.Runnable, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<?>
+                public schedule(command: java.lang.Runnable, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                schedule<V>(callable: java.util.concurrent.Callable<V>, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<V>
-                /**
-                 * @throws RejectedExecutionException {#inheritDoc}
-                 * @throws NullPointerException       {#inheritDoc}
-                 * @throws IllegalArgumentException   {#inheritDoc}
-                 */
-                // @ts-ignore
-                scheduleAtFixedRate(command: java.lang.Runnable, initialDelay: number /*long*/, period: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<?>
+                public schedule<V>(callable: java.util.concurrent.Callable<V>, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<V>
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  * @throws IllegalArgumentException   {#inheritDoc}
                  */
                 // @ts-ignore
-                scheduleWithFixedDelay(command: java.lang.Runnable, initialDelay: number /*long*/, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<?>
+                public scheduleAtFixedRate(command: java.lang.Runnable, initialDelay: number /*long*/, period: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>
+                /**
+                 * @throws RejectedExecutionException {#inheritDoc}
+                 * @throws NullPointerException       {#inheritDoc}
+                 * @throws IllegalArgumentException   {#inheritDoc}
+                 */
+                // @ts-ignore
+                public scheduleWithFixedDelay(command: java.lang.Runnable, initialDelay: number /*long*/, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Executes {@code command} with zero required delay.
                  * This has effect equivalent to
@@ -190,25 +190,25 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                execute(command: java.lang.Runnable): void
+                public execute(command: java.lang.Runnable): void
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                submit<T>(task: java.lang.Runnable, result: T): java.util.concurrent.Future<T>
+                public submit<T>(task: java.lang.Runnable, result: T): java.util.concurrent.Future<T>
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                 /**
                  * Sets the policy on whether to continue executing existing
                  * periodic tasks even when this executor has been {@code shutdown}.
@@ -220,7 +220,7 @@ declare namespace java {
                  * @see #getContinueExistingPeriodicTasksAfterShutdownPolicy
                  */
                 // @ts-ignore
-                setContinueExistingPeriodicTasksAfterShutdownPolicy(value: boolean): void
+                public setContinueExistingPeriodicTasksAfterShutdownPolicy(value: boolean): void
                 /**
                  * Gets the policy on whether to continue executing existing
                  * periodic tasks even when this executor has been {@code shutdown}.
@@ -232,7 +232,7 @@ declare namespace java {
                  * @see #setContinueExistingPeriodicTasksAfterShutdownPolicy
                  */
                 // @ts-ignore
-                getContinueExistingPeriodicTasksAfterShutdownPolicy(): boolean
+                public getContinueExistingPeriodicTasksAfterShutdownPolicy(): boolean
                 /**
                  * Sets the policy on whether to execute existing delayed
                  * tasks even when this executor has been {@code shutdown}.
@@ -244,7 +244,7 @@ declare namespace java {
                  * @see #getExecuteExistingDelayedTasksAfterShutdownPolicy
                  */
                 // @ts-ignore
-                setExecuteExistingDelayedTasksAfterShutdownPolicy(value: boolean): void
+                public setExecuteExistingDelayedTasksAfterShutdownPolicy(value: boolean): void
                 /**
                  * Gets the policy on whether to execute existing delayed
                  * tasks even when this executor has been {@code shutdown}.
@@ -256,7 +256,7 @@ declare namespace java {
                  * @see #setExecuteExistingDelayedTasksAfterShutdownPolicy
                  */
                 // @ts-ignore
-                getExecuteExistingDelayedTasksAfterShutdownPolicy(): boolean
+                public getExecuteExistingDelayedTasksAfterShutdownPolicy(): boolean
                 /**
                  * Sets the policy on whether cancelled tasks should be immediately
                  * removed from the work queue at time of cancellation.  This value is
@@ -266,7 +266,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                setRemoveOnCancelPolicy(value: boolean): void
+                public setRemoveOnCancelPolicy(value: boolean): void
                 /**
                  * Gets the policy on whether cancelled tasks should be immediately
                  * removed from the work queue at time of cancellation.  This value is
@@ -277,7 +277,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getRemoveOnCancelPolicy(): boolean
+                public getRemoveOnCancelPolicy(): boolean
                 /**
                  * Initiates an orderly shutdown in which previously submitted
                  * tasks are executed, but no new tasks will be accepted.
@@ -294,7 +294,7 @@ declare namespace java {
                  * @throws SecurityException {#inheritDoc}
                  */
                 // @ts-ignore
-                shutdown(): void
+                public shutdown(): void
                 /**
                  * Attempts to stop all actively executing tasks, halts the
                  * processing of waiting tasks, and returns a list of the tasks
@@ -314,7 +314,7 @@ declare namespace java {
                  * @throws SecurityException {#inheritDoc}
                  */
                 // @ts-ignore
-                shutdownNow(): java.util.List<java.lang.Runnable>
+                public shutdownNow(): Array<java.lang.Runnable>
                 /**
                  * Returns the task queue used by this executor.  Each element of
                  * this queue is a {@link ScheduledFuture}, including those
@@ -326,7 +326,7 @@ declare namespace java {
                  * @return the task queue
                  */
                 // @ts-ignore
-                getQueue(): java.util.concurrent.BlockingQueue<java.lang.Runnable>
+                public getQueue(): java.util.concurrent.BlockingQueue<java.lang.Runnable>
             }
         }
     }

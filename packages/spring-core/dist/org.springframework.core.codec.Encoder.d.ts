@@ -37,7 +37,7 @@ declare namespace org {
                      * @return the output stream
                      */
                     // @ts-ignore
-                    encode(inputStream: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    encode(inputStream: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Encode an Object of type T to a data buffer. This is useful for scenarios,
                      * that distinct messages (or events) are encoded and handled individually,
@@ -54,12 +54,12 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    encodeValue(value: T, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, valueType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.core.io.buffer.DataBuffer
+                    encodeValue(value: T, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, valueType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.core.io.buffer.DataBuffer
                     /**
                      * Return the list of mime types this encoder supports.
                      */
                     // @ts-ignore
-                    getEncodableMimeTypes(): java.util.List<org.springframework.util.MimeType>
+                    getEncodableMimeTypes(): Array<org.springframework.util.MimeType>
                 }
             }
         }

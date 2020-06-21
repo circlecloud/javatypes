@@ -24,24 +24,24 @@ declare namespace org {
                  * @see #setJndiEnvironment
                  */
                 // @ts-ignore
-                setJndiTemplate(jndiTemplate: org.springframework.jndi.JndiTemplate): void
+                public setJndiTemplate(jndiTemplate: org.springframework.jndi.JndiTemplate): void
                 /**
                  * Return the JNDI template to use for JNDI lookups.
                  */
                 // @ts-ignore
-                getJndiTemplate(): org.springframework.jndi.JndiTemplate
+                public getJndiTemplate(): org.springframework.jndi.JndiTemplate
                 /**
                  * Set the JNDI environment to use for JNDI lookups.
                  * <p>Creates a JndiTemplate with the given environment settings.
                  * @see #setJndiTemplate
                  */
                 // @ts-ignore
-                setJndiEnvironment(jndiEnvironment: java.util.Properties): void
+                public setJndiEnvironment(jndiEnvironment: java.util.Properties): void
                 /**
                  * Return the JNDI environment to use for JNDI lookups.
                  */
                 // @ts-ignore
-                getJndiEnvironment(): java.util.Properties
+                public getJndiEnvironment(): java.util.Properties
             }
         }
     }

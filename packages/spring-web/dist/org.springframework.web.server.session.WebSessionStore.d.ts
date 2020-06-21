@@ -20,7 +20,7 @@ declare namespace org {
                          * @return the created session instance
                          */
                         // @ts-ignore
-                        createWebSession(): <any>
+                        createWebSession(): object
                         /**
                          * Return the WebSession for the given id.
                          * <p><strong>Note:</strong> This method should perform an expiration check,
@@ -30,21 +30,21 @@ declare namespace org {
                          * @return the session, or an empty {#code Mono} .
                          */
                         // @ts-ignore
-                        retrieveSession(sessionId: string): <any>
+                        retrieveSession(sessionId: java.lang.String | string): object
                         /**
                          * Remove the WebSession for the specified id.
                          * @param sessionId the id of the session to remove
                          * @return a completion notification (success or error)
                          */
                         // @ts-ignore
-                        removeSession(sessionId: string): <any>
+                        removeSession(sessionId: java.lang.String | string): object
                         /**
                          * Update the last accessed timestamp to "now".
                          * @param webSession the session to update
                          * @return the session with the updated last access time
                          */
                         // @ts-ignore
-                        updateLastAccessTime(webSession: org.springframework.web.server.WebSession): <any>
+                        updateLastAccessTime(webSession: org.springframework.web.server.WebSession): object
                     }
                 }
             }

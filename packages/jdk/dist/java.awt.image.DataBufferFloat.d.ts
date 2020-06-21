@@ -124,7 +124,7 @@ declare namespace java {
                  * @return the first float data array.
                  */
                 // @ts-ignore
-                getData(): float[]
+                public getData(): number /*float*/[]
                 /**
                  * Returns the data array for the specified bank.
                  * <p>
@@ -136,7 +136,7 @@ declare namespace java {
                  * @return the data array specified by <code>bank</code>.
                  */
                 // @ts-ignore
-                getData(bank: number /*int*/): float[]
+                public getData(bank: number /*int*/): number /*float*/[]
                 /**
                  * Returns the data array for all banks.
                  * <p>
@@ -147,7 +147,7 @@ declare namespace java {
                  * @return all data arrays for this data buffer.
                  */
                 // @ts-ignore
-                getBankData(): float[][]
+                public getBankData(): number /*float*/[][]
                 /**
                  * Returns the requested data array element from the first
                  * (default) bank as an <code>int</code>.
@@ -157,7 +157,7 @@ declare namespace java {
                  * @see #setElem(int, int, int)
                  */
                 // @ts-ignore
-                getElem(i: number /*int*/): int
+                public getElem(i: number /*int*/): number /*int*/
                 /**
                  * Returns the requested data array element from the specified
                  * bank as an <code>int</code>.
@@ -168,7 +168,7 @@ declare namespace java {
                  * @see #setElem(int, int, int)
                  */
                 // @ts-ignore
-                getElem(bank: number /*int*/, i: number /*int*/): int
+                public getElem(bank: number /*int*/, i: number /*int*/): number /*int*/
                 /**
                  * Sets the requested data array element in the first (default)
                  * bank to the given <code>int</code>.
@@ -178,7 +178,7 @@ declare namespace java {
                  * @see #getElem(int, int)
                  */
                 // @ts-ignore
-                setElem(i: number /*int*/, val: number /*int*/): void
+                public setElem(i: number /*int*/, val: number /*int*/): void
                 /**
                  * Sets the requested data array element in the specified bank to
                  * the given <code>int</code>.
@@ -189,7 +189,7 @@ declare namespace java {
                  * @see #getElem(int, int)
                  */
                 // @ts-ignore
-                setElem(bank: number /*int*/, i: number /*int*/, val: number /*int*/): void
+                public setElem(bank: number /*int*/, i: number /*int*/, val: number /*int*/): void
                 /**
                  * Returns the requested data array element from the first
                  * (default) bank as a <code>float</code>.
@@ -199,7 +199,7 @@ declare namespace java {
                  * @see #setElemFloat(int, int, float)
                  */
                 // @ts-ignore
-                getElemFloat(i: number /*int*/): float
+                public getElemFloat(i: number /*int*/): number /*float*/
                 /**
                  * Returns the requested data array element from the specified
                  * bank as a <code>float</code>.
@@ -210,7 +210,7 @@ declare namespace java {
                  * @see #setElemFloat(int, int, float)
                  */
                 // @ts-ignore
-                getElemFloat(bank: number /*int*/, i: number /*int*/): float
+                public getElemFloat(bank: number /*int*/, i: number /*int*/): number /*float*/
                 /**
                  * Sets the requested data array element in the first (default)
                  * bank to the given <code>float</code>.
@@ -220,7 +220,7 @@ declare namespace java {
                  * @see #getElemFloat(int, int)
                  */
                 // @ts-ignore
-                setElemFloat(i: number /*int*/, val: number /*float*/): void
+                public setElemFloat(i: number /*int*/, val: number /*float*/): void
                 /**
                  * Sets the requested data array element in the specified bank to
                  * the given <code>float</code>.
@@ -231,7 +231,7 @@ declare namespace java {
                  * @see #getElemFloat(int, int)
                  */
                 // @ts-ignore
-                setElemFloat(bank: number /*int*/, i: number /*int*/, val: number /*float*/): void
+                public setElemFloat(bank: number /*int*/, i: number /*int*/, val: number /*float*/): void
                 /**
                  * Returns the requested data array element from the first
                  * (default) bank as a <code>double</code>.
@@ -241,7 +241,7 @@ declare namespace java {
                  * @see #setElemDouble(int, int, double)
                  */
                 // @ts-ignore
-                getElemDouble(i: number /*int*/): double
+                public getElemDouble(i: number /*int*/): number /*double*/
                 /**
                  * Returns the requested data array element from the specified
                  * bank as a <code>double</code>.
@@ -252,7 +252,7 @@ declare namespace java {
                  * @see #setElemDouble(int, int, double)
                  */
                 // @ts-ignore
-                getElemDouble(bank: number /*int*/, i: number /*int*/): double
+                public getElemDouble(bank: number /*int*/, i: number /*int*/): number /*double*/
                 /**
                  * Sets the requested data array element in the first (default)
                  * bank to the given <code>double</code>.
@@ -262,7 +262,7 @@ declare namespace java {
                  * @see #getElemDouble(int, int)
                  */
                 // @ts-ignore
-                setElemDouble(i: number /*int*/, val: number /*double*/): void
+                public setElemDouble(i: number /*int*/, val: number /*double*/): void
                 /**
                  * Sets the requested data array element in the specified bank to
                  * the given <code>double</code>.
@@ -273,7 +273,7 @@ declare namespace java {
                  * @see #getElemDouble(int, int)
                  */
                 // @ts-ignore
-                setElemDouble(bank: number /*int*/, i: number /*int*/, val: number /*double*/): void
+                public setElemDouble(bank: number /*int*/, i: number /*int*/, val: number /*double*/): void
             }
         }
     }

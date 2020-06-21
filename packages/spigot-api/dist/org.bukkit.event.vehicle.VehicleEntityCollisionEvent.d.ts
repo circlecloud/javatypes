@@ -10,23 +10,23 @@ declare namespace org {
                     // @ts-ignore
                     constructor(vehicle: org.bukkit.entity.Vehicle, entity: org.bukkit.entity.Entity)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    isPickupCancelled(): boolean
+                    public isPickupCancelled(): boolean
                     // @ts-ignore
-                    setPickupCancelled(cancel: boolean): void
+                    public setPickupCancelled(cancel: boolean): void
                     // @ts-ignore
-                    isCollisionCancelled(): boolean
+                    public isCollisionCancelled(): boolean
                     // @ts-ignore
-                    setCollisionCancelled(cancel: boolean): void
+                    public setCollisionCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

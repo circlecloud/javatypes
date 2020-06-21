@@ -16,7 +16,7 @@ declare namespace javax {
          * @author Hans Muller
          */
         // @ts-ignore
-        class UIDefaults extends java.util.Hashtable<java.lang.Object, java.lang.Object> {
+        class UIDefaults extends java.util.Hashtable<java.lang.Object | any, java.lang.Object | any> {
             /**
              * Creates an empty defaults table.
              */
@@ -47,7 +47,7 @@ declare namespace javax {
              *           pairs
              */
             // @ts-ignore
-            constructor(keyValueList: any[])
+            constructor(keyValueList: java.lang.Object[] | any[])
             /**
              * Returns the value for key.  If the value is a
              * <code>UIDefaults.LazyValue</code> then the real
@@ -72,7 +72,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            get(key: any): java.lang.Object
+            public get(key: java.lang.Object | any): any
             /**
              * Returns the value for key associated with the given locale.
              * If the value is a <code>UIDefaults.LazyValue</code> then the real
@@ -97,7 +97,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            get(key: any, l: java.util.Locale): java.lang.Object
+            public get(key: java.lang.Object | any, l: java.util.Locale): any
             /**
              * Sets the value of <code>key</code> to <code>value</code> for all locales.
              * If <code>key</code> is a string and the new value isn't
@@ -112,7 +112,7 @@ declare namespace javax {
              * @see java.util.Hashtable#put
              */
             // @ts-ignore
-            put(key: any, value: any): java.lang.Object
+            public put(key: java.lang.Object | any, value: java.lang.Object | any): any
             /**
              * Puts all of the key/value pairs in the database and
              * unconditionally generates one <code>PropertyChangeEvent</code>.
@@ -124,7 +124,7 @@ declare namespace javax {
              * @see java.util.Hashtable#put
              */
             // @ts-ignore
-            putDefaults(keyValueList: any[]): void
+            public putDefaults(keyValueList: java.lang.Object[] | any[]): void
             /**
              * If the value of <code>key</code> is a <code>Font</code> return it,
              * otherwise return <code>null</code>.
@@ -134,7 +134,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getFont(key: any): java.awt.Font
+            public getFont(key: java.lang.Object | any): java.awt.Font
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is a <code>Font</code> return it, otherwise return <code>null</code>.
@@ -147,7 +147,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getFont(key: any, l: java.util.Locale): java.awt.Font
+            public getFont(key: java.lang.Object | any, l: java.util.Locale): java.awt.Font
             /**
              * If the value of <code>key</code> is a <code>Color</code> return it,
              * otherwise return <code>null</code>.
@@ -157,7 +157,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getColor(key: any): java.awt.Color
+            public getColor(key: java.lang.Object | any): java.awt.Color
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is a <code>Color</code> return it, otherwise return <code>null</code>.
@@ -170,7 +170,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getColor(key: any, l: java.util.Locale): java.awt.Color
+            public getColor(key: java.lang.Object | any, l: java.util.Locale): java.awt.Color
             /**
              * If the value of <code>key</code> is an <code>Icon</code> return it,
              * otherwise return <code>null</code>.
@@ -180,7 +180,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getIcon(key: any): javax.swing.Icon
+            public getIcon(key: java.lang.Object | any): javax.swing.Icon
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is an <code>Icon</code> return it, otherwise return <code>null</code>.
@@ -193,7 +193,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getIcon(key: any, l: java.util.Locale): javax.swing.Icon
+            public getIcon(key: java.lang.Object | any, l: java.util.Locale): javax.swing.Icon
             /**
              * If the value of <code>key</code> is a <code>Border</code> return it,
              * otherwise return <code>null</code>.
@@ -203,7 +203,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getBorder(key: any): javax.swing.border.Border
+            public getBorder(key: java.lang.Object | any): javax.swing.border.Border
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is a <code>Border</code> return it, otherwise return <code>null</code>.
@@ -216,7 +216,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getBorder(key: any, l: java.util.Locale): javax.swing.border.Border
+            public getBorder(key: java.lang.Object | any, l: java.util.Locale): javax.swing.border.Border
             /**
              * If the value of <code>key</code> is a <code>String</code> return it,
              * otherwise return <code>null</code>.
@@ -226,7 +226,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getString(key: any): java.lang.String
+            public getString(key: java.lang.Object | any): string
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is a <code>String</code> return it, otherwise return <code>null</code>.
@@ -239,7 +239,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getString(key: any, l: java.util.Locale): java.lang.String
+            public getString(key: java.lang.Object | any, l: java.util.Locale): string
             /**
              * If the value of <code>key</code> is an <code>Integer</code> return its
              * integer value, otherwise return 0.
@@ -248,7 +248,7 @@ declare namespace javax {
              *           return its value, otherwise return 0
              */
             // @ts-ignore
-            getInt(key: any): int
+            public getInt(key: java.lang.Object | any): number /*int*/
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is an <code>Integer</code> return its integer value, otherwise return 0.
@@ -260,7 +260,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getInt(key: any, l: java.util.Locale): int
+            public getInt(key: java.lang.Object | any, l: java.util.Locale): number /*int*/
             /**
              * If the value of <code>key</code> is boolean, return the
              * boolean value, otherwise return false.
@@ -270,7 +270,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getBoolean(key: any): boolean
+            public getBoolean(key: java.lang.Object | any): boolean
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is boolean, return the boolean value, otherwise return false.
@@ -282,7 +282,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getBoolean(key: any, l: java.util.Locale): boolean
+            public getBoolean(key: java.lang.Object | any, l: java.util.Locale): boolean
             /**
              * If the value of <code>key</code> is an <code>Insets</code> return it,
              * otherwise return <code>null</code>.
@@ -292,7 +292,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getInsets(key: any): java.awt.Insets
+            public getInsets(key: java.lang.Object | any): java.awt.Insets
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is an <code>Insets</code> return it, otherwise return <code>null</code>.
@@ -305,7 +305,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getInsets(key: any, l: java.util.Locale): java.awt.Insets
+            public getInsets(key: java.lang.Object | any, l: java.util.Locale): java.awt.Insets
             /**
              * If the value of <code>key</code> is a <code>Dimension</code> return it,
              * otherwise return <code>null</code>.
@@ -315,7 +315,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getDimension(key: any): java.awt.Dimension
+            public getDimension(key: java.lang.Object | any): java.awt.Dimension
             /**
              * If the value of <code>key</code> for the given <code>Locale</code>
              * is a <code>Dimension</code> return it, otherwise return <code>null</code>.
@@ -328,7 +328,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDimension(key: any, l: java.util.Locale): java.awt.Dimension
+            public getDimension(key: java.lang.Object | any, l: java.util.Locale): java.awt.Dimension
             /**
              * The value of <code>get(uidClassID)</code> must be the
              * <code>String</code> name of a
@@ -349,7 +349,7 @@ declare namespace javax {
              * @see #getUI
              */
             // @ts-ignore
-            getUIClass(uiClassID: string, uiClassLoader: java.lang.ClassLoader): java.lang.Class<? extends javax.swing.plaf.ComponentUI>
+            public getUIClass(uiClassID: java.lang.String | string, uiClassLoader: java.lang.ClassLoader): java.lang.Class<any>
             /**
              * Returns the L&amp;F class that renders this component.
              * @param uiClassID a string containing the class ID
@@ -357,7 +357,7 @@ declare namespace javax {
              *           <code>getUIClass(uiClassID, null)</code>
              */
             // @ts-ignore
-            getUIClass(uiClassID: string): java.lang.Class<? extends javax.swing.plaf.ComponentUI>
+            public getUIClass(uiClassID: java.lang.String | string): java.lang.Class<any>
             /**
              * If <code>getUI()</code> fails for any reason,
              * it calls this method before returning <code>null</code>.
@@ -366,7 +366,7 @@ declare namespace javax {
              * @see #getUI
              */
             // @ts-ignore
-            getUIError(msg: string): void
+            getUIError(msg: java.lang.String | string): void
             /**
              * Creates an <code>ComponentUI</code> implementation for the
              * specified component.  In other words create the look
@@ -382,7 +382,7 @@ declare namespace javax {
              * @return the <code>ComponentUI</code> object
              */
             // @ts-ignore
-            getUI(target: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+            public getUI(target: javax.swing.JComponent): javax.swing.plaf.ComponentUI
             /**
              * Adds a <code>PropertyChangeListener</code> to the listener list.
              * The listener is registered for all properties.
@@ -393,7 +393,7 @@ declare namespace javax {
              * @see java.beans.PropertyChangeSupport
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a <code>PropertyChangeListener</code> from the listener list.
              * This removes a <code>PropertyChangeListener</code> that was registered
@@ -402,7 +402,7 @@ declare namespace javax {
              * @see java.beans.PropertyChangeSupport
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the <code>PropertyChangeListener</code>s added
              * to this UIDefaults with addPropertyChangeListener().
@@ -411,7 +411,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
             /**
              * Support for reporting bound property changes.  If oldValue and
              * newValue are not equal and the <code>PropertyChangeEvent</code>x
@@ -424,7 +424,7 @@ declare namespace javax {
              * @see java.beans.PropertyChangeSupport
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Adds a resource bundle to the list of resource bundles that are
              * searched for localized values.  Resource bundles are searched in the
@@ -436,7 +436,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            addResourceBundle(bundleName: string): void
+            public addResourceBundle(bundleName: java.lang.String | string): void
             /**
              * Removes a resource bundle from the list of resource bundles that are
              * searched for localized defaults.
@@ -446,7 +446,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            removeResourceBundle(bundleName: string): void
+            public removeResourceBundle(bundleName: java.lang.String | string): void
             /**
              * Sets the default locale.  The default locale is used in retrieving
              * localized values via <code>get</code> methods that do not take a
@@ -461,7 +461,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setDefaultLocale(l: java.util.Locale): void
+            public setDefaultLocale(l: java.util.Locale): void
             /**
              * Returns the default locale.  The default locale is used in retrieving
              * localized values via <code>get</code> methods that do not take a
@@ -476,7 +476,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDefaultLocale(): java.util.Locale
+            public getDefaultLocale(): java.util.Locale
         }
     }
 }

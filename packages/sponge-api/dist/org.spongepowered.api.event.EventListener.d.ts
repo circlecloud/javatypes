@@ -14,7 +14,7 @@ declare namespace org {
                      * @throws Exception If an error occurs
                      */
                     // @ts-ignore
-                    handle(event: T extends org.spongepowered.api.event.Event): void
+                    handle(event: T): void
                 }
             }
         }

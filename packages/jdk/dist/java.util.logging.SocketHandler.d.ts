@@ -73,21 +73,21 @@ declare namespace java {
                  *          host and port.
                  */
                 // @ts-ignore
-                constructor(host: string, port: number /*int*/)
+                constructor(host: java.lang.String | string, port: number /*int*/)
                 /**
                  * Close this output stream.
                  * @exception SecurityException  if a security manager exists and if
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Format and publish a <tt>LogRecord</tt>.
                  * @param record  description of the log event. A null record is
                  *                  silently ignored and is not published
                  */
                 // @ts-ignore
-                publish(record: java.util.logging.LogRecord): void
+                public publish(record: java.util.logging.LogRecord): void
             }
         }
     }

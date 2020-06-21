@@ -62,7 +62,7 @@ declare namespace javax {
              * @param text the text of the check box.
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a check box where properties are taken from the
              * Action supplied.
@@ -78,7 +78,7 @@ declare namespace javax {
              *         state. If <code>true</code> the check box is selected
              */
             // @ts-ignore
-            constructor(text: string, selected: boolean)
+            constructor(text: java.lang.String | string, selected: boolean)
             /**
              * Creates an initially unselected check box with
              * the specified text and icon.
@@ -86,7 +86,7 @@ declare namespace javax {
              * @param icon  the Icon image to display
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Creates a check box with text and icon,
              * and specifies whether or not it is initially selected.
@@ -96,12 +96,12 @@ declare namespace javax {
              *         state. If <code>true</code> the check box is selected
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon, selected: boolean)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon, selected: boolean)
             /**
              * Identifies a change to the flat property.
              */
             // @ts-ignore
-            readonly BORDER_PAINTED_FLAT_CHANGED_PROPERTY: string
+            public static readonly BORDER_PAINTED_FLAT_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Sets the <code>borderPaintedFlat</code> property,
              * which gives a hint to the look and feel as to the
@@ -123,7 +123,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setBorderPaintedFlat(b: boolean): void
+            public setBorderPaintedFlat(b: boolean): void
             /**
              * Gets the value of the <code>borderPaintedFlat</code> property.
              * @return the value of the <code>borderPaintedFlat</code> property
@@ -131,13 +131,13 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            isBorderPaintedFlat(): boolean
+            public isBorderPaintedFlat(): boolean
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the L&amp;F class
              * that renders this component.
@@ -148,7 +148,7 @@ declare namespace javax {
              *    description: A string that specifies the name of the L&amp;F class
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns a string representation of this JCheckBox. This method
              * is intended to be used only for debugging purposes, and the
@@ -159,7 +159,7 @@ declare namespace javax {
              * @return a string representation of this JCheckBox.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JCheckBox.
              * For JCheckBoxes, the AccessibleContext takes the form of an
@@ -171,7 +171,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this CheckBox.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

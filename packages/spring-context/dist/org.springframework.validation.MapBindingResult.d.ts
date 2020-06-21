@@ -19,13 +19,13 @@ declare namespace org {
                  * @param objectName the name of the target object
                  */
                 // @ts-ignore
-                constructor(target: java.util.Map<any, ?>, objectName: string)
+                constructor(target: java.util.Map<any, any>, objectName: java.lang.String | string)
                 // @ts-ignore
-                getTargetMap(): java.util.Map<?, ?>
+                public getTargetMap(): java.util.Map<any, any>
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                public getTarget(): any
                 // @ts-ignore
-                getActualFieldValue(field: string): java.lang.Object
+                getActualFieldValue(field: java.lang.String | string): any
             }
         }
     }

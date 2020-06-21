@@ -19,32 +19,32 @@ declare namespace java {
                  * into one of the other categories.
                  */
                 // @ts-ignore
-                readonly GENERIC_FAILURE: number /*int*/
+                public static readonly GENERIC_FAILURE: number /*int*/
                 /**
                  * WRITE_FAILURE is used when a write to an output stream fails.
                  */
                 // @ts-ignore
-                readonly WRITE_FAILURE: number /*int*/
+                public static readonly WRITE_FAILURE: number /*int*/
                 /**
                  * FLUSH_FAILURE is used when a flush to an output stream fails.
                  */
                 // @ts-ignore
-                readonly FLUSH_FAILURE: number /*int*/
+                public static readonly FLUSH_FAILURE: number /*int*/
                 /**
                  * CLOSE_FAILURE is used when a close of an output stream fails.
                  */
                 // @ts-ignore
-                readonly CLOSE_FAILURE: number /*int*/
+                public static readonly CLOSE_FAILURE: number /*int*/
                 /**
                  * OPEN_FAILURE is used when an open of an output stream fails.
                  */
                 // @ts-ignore
-                readonly OPEN_FAILURE: number /*int*/
+                public static readonly OPEN_FAILURE: number /*int*/
                 /**
                  * FORMAT_FAILURE is used when formatting fails for any reason.
                  */
                 // @ts-ignore
-                readonly FORMAT_FAILURE: number /*int*/
+                public static readonly FORMAT_FAILURE: number /*int*/
                 /**
                  * The error method is called when a Handler failure occurs.
                  * <p>
@@ -56,7 +56,7 @@ declare namespace java {
                  * @param code   an error code defined in ErrorManager
                  */
                 // @ts-ignore
-                error(msg: string, ex: java.lang.Exception, code: number /*int*/): void
+                public error(msg: java.lang.String | string, ex: java.lang.Exception, code: number /*int*/): void
             }
         }
     }

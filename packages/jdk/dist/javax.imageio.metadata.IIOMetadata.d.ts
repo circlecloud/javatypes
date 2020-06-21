@@ -35,7 +35,7 @@ declare namespace javax {
              * @see javax.imageio.ImageTranscoder
              */
             // @ts-ignore
-            class IIOMetadata extends java.lang.Object {
+            abstract class IIOMetadata extends java.lang.Object {
                 /**
                  * Constructs an empty <code>IIOMetadata</code> object.  The
                  * subclass is responsible for supplying values for all protected
@@ -75,7 +75,7 @@ declare namespace javax {
                  *  <code>null</code>, nor of the same length.
                  */
                 // @ts-ignore
-                constructor(standardMetadataFormatSupported: boolean, nativeMetadataFormatName: string, nativeMetadataFormatClassName: string, extraMetadataFormatNames: string[], extraMetadataFormatClassNames: string[])
+                constructor(standardMetadataFormatSupported: boolean, nativeMetadataFormatName: java.lang.String | string, nativeMetadataFormatClassName: java.lang.String | string, extraMetadataFormatNames: java.lang.String[] | string[], extraMetadataFormatClassNames: java.lang.String[] | string[])
                 /**
                  * A boolean indicating whether the concrete subclass supports the
                  * standard metadata format, set via the constructor.
@@ -87,21 +87,21 @@ declare namespace javax {
                  * initialized to <code>null</code> and set via the constructor.
                  */
                 // @ts-ignore
-                nativeMetadataFormatName: string
+                nativeMetadataFormatName: java.lang.String | string
                 /**
                  * The name of the class implementing <code>IIOMetadataFormat</code>
                  * and representing the native metadata format, initialized to
                  * <code>null</code> and set via the constructor.
                  */
                 // @ts-ignore
-                nativeMetadataFormatClassName: string
+                nativeMetadataFormatClassName: java.lang.String | string
                 /**
                  * An array of names of formats, other than the standard and
                  * native formats, that are supported by this plug-in,
                  * initialized to <code>null</code> and set via the constructor.
                  */
                 // @ts-ignore
-                extraMetadataFormatNames: string[]
+                extraMetadataFormatNames: java.lang.String[] | string[]
                 /**
                  * An array of names of classes implementing <code>IIOMetadataFormat</code>
                  * and representing the metadata formats, other than the standard and
@@ -109,7 +109,7 @@ declare namespace javax {
                  * initialized to <code>null</code> and set via the constructor.
                  */
                 // @ts-ignore
-                extraMetadataFormatClassNames: string[]
+                extraMetadataFormatClassNames: java.lang.String[] | string[]
                 /**
                  * An <code>IIOMetadataController</code> that is suggested for use
                  * as the controller for this <code>IIOMetadata</code> object.  It
@@ -152,7 +152,7 @@ declare namespace javax {
                  * @see #getMetadataFormat
                  */
                 // @ts-ignore
-                isStandardMetadataFormatSupported(): boolean
+                public isStandardMetadataFormatSupported(): boolean
                 /**
                  * Returns <code>true</code> if this object does not support the
                  * <code>mergeTree</code>, <code>setFromTree</code>, and
@@ -161,7 +161,7 @@ declare namespace javax {
                  *  modified.
                  */
                 // @ts-ignore
-                abstract isReadOnly(): boolean
+                public abstract isReadOnly(): boolean
                 /**
                  * Returns the name of the "native" metadata format for this
                  * plug-in, which typically allows for lossless encoding and
@@ -182,7 +182,7 @@ declare namespace javax {
                  * @see #getMetadataFormatNames
                  */
                 // @ts-ignore
-                getNativeMetadataFormatName(): java.lang.String
+                public getNativeMetadataFormatName(): string
                 /**
                  * Returns an array of <code>String</code>s containing the names
                  * of additional metadata formats, other than the native and standard
@@ -201,7 +201,7 @@ declare namespace javax {
                  * @see #getMetadataFormatNames
                  */
                 // @ts-ignore
-                getExtraMetadataFormatNames(): java.lang.String[]
+                public getExtraMetadataFormatNames(): string[]
                 /**
                  * Returns an array of <code>String</code>s containing the names
                  * of all metadata formats, including the native and standard
@@ -219,7 +219,7 @@ declare namespace javax {
                  * @see #getExtraMetadataFormatNames
                  */
                 // @ts-ignore
-                getMetadataFormatNames(): java.lang.String[]
+                public getMetadataFormatNames(): string[]
                 /**
                  * Returns an <code>IIOMetadataFormat</code> object describing the
                  * given metadata format, or <code>null</code> if no description
@@ -246,7 +246,7 @@ declare namespace javax {
                  *  the format name cannot be loaded.
                  */
                 // @ts-ignore
-                getMetadataFormat(formatName: string): javax.imageio.metadata.IIOMetadataFormat
+                public getMetadataFormat(formatName: java.lang.String | string): javax.imageio.metadata.IIOMetadataFormat
                 /**
                  * Returns an XML DOM <code>Node</code> object that represents the
                  * root of a tree of metadata contained within this object
@@ -265,7 +265,7 @@ declare namespace javax {
                  * @see #mergeTree
                  */
                 // @ts-ignore
-                abstract getAsTree(formatName: string): org.w3c.dom.Node
+                public abstract getAsTree(formatName: java.lang.String | string): org.w3c.dom.Node
                 /**
                  * Alters the internal state of this <code>IIOMetadata</code>
                  * object from a tree of XML DOM <code>Node</code>s whose syntax
@@ -295,7 +295,7 @@ declare namespace javax {
                  * @see #setFromTree
                  */
                 // @ts-ignore
-                abstract mergeTree(formatName: string, root: org.w3c.dom.Node): void
+                public abstract mergeTree(formatName: java.lang.String | string, root: org.w3c.dom.Node): void
                 /**
                  * Returns an <code>IIOMetadataNode</code> representing the chroma
                  * information of the standard <code>javax_imageio_1.0</code>
@@ -468,7 +468,7 @@ declare namespace javax {
                  * @see #mergeTree
                  */
                 // @ts-ignore
-                setFromTree(formatName: string, root: org.w3c.dom.Node): void
+                public setFromTree(formatName: java.lang.String | string, root: org.w3c.dom.Node): void
                 /**
                  * Resets all the data stored in this object to default values,
                  * usually to the state this object was in immediately after
@@ -482,7 +482,7 @@ declare namespace javax {
                  * @see javax.imageio.ImageWriter#getDefaultImageMetadata
                  */
                 // @ts-ignore
-                abstract reset(): void
+                public abstract reset(): void
                 /**
                  * Sets the <code>IIOMetadataController</code> to be used
                  * to provide settings for this <code>IIOMetadata</code>
@@ -502,7 +502,7 @@ declare namespace javax {
                  * @see #activateController()
                  */
                 // @ts-ignore
-                setController(controller: javax.imageio.metadata.IIOMetadataController): void
+                public setController(controller: javax.imageio.metadata.IIOMetadataController): void
                 /**
                  * Returns whatever <code>IIOMetadataController</code> is currently
                  * installed.  This could be the default if there is one,
@@ -519,7 +519,7 @@ declare namespace javax {
                  * @see #activateController()
                  */
                 // @ts-ignore
-                getController(): javax.imageio.metadata.IIOMetadataController
+                public getController(): javax.imageio.metadata.IIOMetadataController
                 /**
                  * Returns the default <code>IIOMetadataController</code>, if there
                  * is one, regardless of the currently installed controller.  If
@@ -535,7 +535,7 @@ declare namespace javax {
                  * @see #activateController()
                  */
                 // @ts-ignore
-                getDefaultController(): javax.imageio.metadata.IIOMetadataController
+                public getDefaultController(): javax.imageio.metadata.IIOMetadataController
                 /**
                  * Returns <code>true</code> if there is a controller installed
                  * for this <code>IIOMetadata</code> object.
@@ -550,7 +550,7 @@ declare namespace javax {
                  * @see #activateController()
                  */
                 // @ts-ignore
-                hasController(): boolean
+                public hasController(): boolean
                 /**
                  * Activates the installed <code>IIOMetadataController</code> for
                  * this <code>IIOMetadata</code> object and returns the resulting
@@ -575,7 +575,7 @@ declare namespace javax {
                  * @see #hasController
                  */
                 // @ts-ignore
-                activateController(): boolean
+                public activateController(): boolean
             }
         }
     }

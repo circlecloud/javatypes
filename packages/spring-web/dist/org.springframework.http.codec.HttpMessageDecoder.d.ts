@@ -24,7 +24,7 @@ declare namespace org {
                      * @return a Map with hints, possibly empty
                      */
                     // @ts-ignore
-                    getDecodeHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                    getDecodeHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

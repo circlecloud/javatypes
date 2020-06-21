@@ -88,7 +88,7 @@ declare namespace java {
              * @see AsynchronousServerSocketChannel#open(AsynchronousChannelGroup)
              */
             // @ts-ignore
-            class AsynchronousChannelGroup extends java.lang.Object {
+            abstract class AsynchronousChannelGroup extends java.lang.Object {
                 /**
                  * Initialize a new instance of this class.
                  * @param provider
@@ -101,7 +101,7 @@ declare namespace java {
                  * @return The provider that created this channel group
                  */
                 // @ts-ignore
-                provider(): java.nio.channels.spi.AsynchronousChannelProvider
+                public provider(): java.nio.channels.spi.AsynchronousChannelProvider
                 /**
                  * Creates an asynchronous channel group with a fixed thread pool.
                  * <p> The resulting asynchronous channel group reuses a fixed number of
@@ -124,7 +124,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                withFixedThreadPool(nThreads: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.nio.channels.AsynchronousChannelGroup
+                public static withFixedThreadPool(nThreads: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.nio.channels.AsynchronousChannelGroup
                 /**
                  * Creates an asynchronous channel group with a given thread pool that
                  * creates new threads as needed.
@@ -157,7 +157,7 @@ declare namespace java {
                  * @see java.util.concurrent.Executors#newCachedThreadPool
                  */
                 // @ts-ignore
-                withCachedThreadPool(executor: java.util.concurrent.ExecutorService, initialSize: number /*int*/): java.nio.channels.AsynchronousChannelGroup
+                public static withCachedThreadPool(executor: java.util.concurrent.ExecutorService, initialSize: number /*int*/): java.nio.channels.AsynchronousChannelGroup
                 /**
                  * Creates an asynchronous channel group with a given thread pool.
                  * <p> The {@code executor} parameter is an {@code ExecutorService} that
@@ -185,14 +185,14 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                withThreadPool(executor: java.util.concurrent.ExecutorService): java.nio.channels.AsynchronousChannelGroup
+                public static withThreadPool(executor: java.util.concurrent.ExecutorService): java.nio.channels.AsynchronousChannelGroup
                 /**
                  * Tells whether or not this asynchronous channel group is shutdown.
                  * @return {#code true} if this asynchronous channel group is shutdown or
                  *           has been marked for shutdown.
                  */
                 // @ts-ignore
-                abstract isShutdown(): boolean
+                public abstract isShutdown(): boolean
                 /**
                  * Tells whether or not this group has terminated.
                  * <p> Where this method returns {@code true}, then the associated thread
@@ -200,7 +200,7 @@ declare namespace java {
                  * @return {#code true} if this group has terminated
                  */
                 // @ts-ignore
-                abstract isTerminated(): boolean
+                public abstract isTerminated(): boolean
                 /**
                  * Initiates an orderly shutdown of the group.
                  * <p> This method marks the group as shutdown. Further attempts to construct
@@ -211,7 +211,7 @@ declare namespace java {
                  * group is already shutdown.
                  */
                 // @ts-ignore
-                abstract shutdown(): void
+                public abstract shutdown(): void
                 /**
                  * Shuts down the group and closes all open channels in the group.
                  * <p> In addition to the actions performed by the {@link #shutdown() shutdown}
@@ -227,7 +227,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract shutdownNow(): void
+                public abstract shutdownNow(): void
                 /**
                  * Awaits termination of the group.
                  * <p> This method blocks until the group has terminated, or the timeout
@@ -242,7 +242,7 @@ declare namespace java {
                  *           If interrupted while waiting
                  */
                 // @ts-ignore
-                abstract awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public abstract awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
             }
         }
     }

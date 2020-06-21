@@ -24,7 +24,7 @@ declare namespace org {
                          * This is a disambiguator function that returns the first matching command.
                          */
                         // @ts-ignore
-                        readonly FIRST_DISAMBIGUATOR: org.spongepowered.api.command.dispatcher.Disambiguator
+                        public static readonly FIRST_DISAMBIGUATOR: org.spongepowered.api.command.dispatcher.Disambiguator
                         /**
                          * Register a given command using the given list of aliases.
                          * <p>If there is a conflict with one of the aliases (i.e. that alias
@@ -39,7 +39,7 @@ declare namespace org {
                          *      registered
                          */
                         // @ts-ignore
-                        register(callable: org.spongepowered.api.command.CommandCallable, ...alias: string[]): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public register(callable: org.spongepowered.api.command.CommandCallable, ...alias: java.lang.String[] | string[]): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         /**
                          * Register a given command using the given list of aliases.
                          * <p>If there is a conflict with one of the aliases (i.e. that alias
@@ -54,7 +54,7 @@ declare namespace org {
                          *      registered
                          */
                         // @ts-ignore
-                        register(callable: org.spongepowered.api.command.CommandCallable, aliases: Array<java.lang.String>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public register(callable: org.spongepowered.api.command.CommandCallable, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         /**
                          * Register a given command using a given list of aliases.
                          * <p>The provided callback function will be called with a list of aliases
@@ -73,71 +73,71 @@ declare namespace org {
                          *      be registered
                          */
                         // @ts-ignore
-                        register(callable: org.spongepowered.api.command.CommandCallable, aliases: Array<java.lang.String>, callback: java.util.function.Function<java.util.List<java.lang.String>, java.util.List<java.lang.String>> | java.util.function$.Function<java.util.List<java.lang.String>, java.util.List<java.lang.String>>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public register(callable: org.spongepowered.api.command.CommandCallable, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>, callback: java.util.function$.Function<java.util.List<java.lang.String | string> | Array<java.lang.String | string>, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         /**
                          * Remove a mapping identified by the given alias.
                          * @param alias The alias
                          * @return The previous mapping associated with the alias, if one was found
                          */
                         // @ts-ignore
-                        remove(alias: string): java.util.Collection<org.spongepowered.api.command.CommandMapping>
+                        public remove(alias: java.lang.String | string): Array<org.spongepowered.api.command.CommandMapping>
                         /**
                          * Remove all mappings identified by the given aliases.
                          * @param aliases A collection of aliases
                          * @return Whether any were found
                          */
                         // @ts-ignore
-                        removeAll(aliases: Array<any>): boolean
+                        public removeAll(aliases: java.util.Collection<any> | Array<any>): boolean
                         /**
                          * Remove a command identified by the given mapping.
                          * @param mapping The mapping
                          * @return The previous mapping associated with the alias, if one was found
                          */
                         // @ts-ignore
-                        removeMapping(mapping: org.spongepowered.api.command.CommandMapping): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public removeMapping(mapping: org.spongepowered.api.command.CommandMapping): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         /**
                          * Remove all mappings contained with the given collection.
                          * @param mappings The collection
                          * @return Whether the at least one command was removed
                          */
                         // @ts-ignore
-                        removeMappings(mappings: Array<any>): boolean
+                        public removeMappings(mappings: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        getCommands(): java.util.Set<org.spongepowered.api.command.CommandMapping>
+                        public getCommands(): Array<org.spongepowered.api.command.CommandMapping>
                         // @ts-ignore
-                        getPrimaryAliases(): java.util.Set<java.lang.String>
+                        public getPrimaryAliases(): Array<java.lang.String | string>
                         // @ts-ignore
-                        getAliases(): java.util.Set<java.lang.String>
+                        public getAliases(): Array<java.lang.String | string>
                         // @ts-ignore
-                        get(alias: string): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public get(alias: java.lang.String | string): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         // @ts-ignore
-                        get(alias: string, source: org.spongepowered.api.command.CommandSource): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public get(alias: java.lang.String | string, source: org.spongepowered.api.command.CommandSource): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         // @ts-ignore
-                        containsAlias(alias: string): boolean
+                        public containsAlias(alias: java.lang.String | string): boolean
                         // @ts-ignore
-                        containsMapping(mapping: org.spongepowered.api.command.CommandMapping): boolean
+                        public containsMapping(mapping: org.spongepowered.api.command.CommandMapping): boolean
                         // @ts-ignore
-                        process(source: org.spongepowered.api.command.CommandSource, commandLine: string): org.spongepowered.api.command.CommandResult
+                        public process(source: org.spongepowered.api.command.CommandSource, commandLine: java.lang.String | string): org.spongepowered.api.command.CommandResult
                         // @ts-ignore
-                        getSuggestions(src: org.spongepowered.api.command.CommandSource, arguments: string, targetPosition: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): java.util.List<java.lang.String>
+                        public getSuggestions(src: org.spongepowered.api.command.CommandSource, arguments: java.lang.String | string, targetPosition: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): Array<java.lang.String | string>
                         // @ts-ignore
-                        testPermission(source: org.spongepowered.api.command.CommandSource): boolean
+                        public testPermission(source: org.spongepowered.api.command.CommandSource): boolean
                         // @ts-ignore
-                        getShortDescription(source: org.spongepowered.api.command.CommandSource): java.util.Optional<org.spongepowered.api.text.Text>
+                        public getShortDescription(source: org.spongepowered.api.command.CommandSource): java.util.Optional<org.spongepowered.api.text.Text>
                         // @ts-ignore
-                        getHelp(source: org.spongepowered.api.command.CommandSource): java.util.Optional<org.spongepowered.api.text.Text>
+                        public getHelp(source: org.spongepowered.api.command.CommandSource): java.util.Optional<org.spongepowered.api.text.Text>
                         /**
                          * Gets the number of registered aliases.
                          * @return The number of aliases
                          */
                         // @ts-ignore
-                        size(): int
+                        public size(): number /*int*/
                         // @ts-ignore
-                        getUsage(source: org.spongepowered.api.command.CommandSource): org.spongepowered.api.text.Text
+                        public getUsage(source: org.spongepowered.api.command.CommandSource): org.spongepowered.api.text.Text
                         // @ts-ignore
-                        getAll(alias: string): java.util.Set<org.spongepowered.api.command.CommandMapping>
+                        public getAll(alias: java.lang.String | string): Array<org.spongepowered.api.command.CommandMapping>
                         // @ts-ignore
-                        getAll(): <any>
+                        public getAll(): object
                     }
                 }
             }

@@ -84,7 +84,7 @@ declare namespace javax {
              * @see #getCompressionMode
              */
             // @ts-ignore
-            readonly MODE_DISABLED: number /*int*/
+            public static readonly MODE_DISABLED: number /*int*/
             /**
              * A constant value that may be passed into methods such as
              * <code>setTilingMode</code>,
@@ -106,7 +106,7 @@ declare namespace javax {
              * @see #getCompressionMode
              */
             // @ts-ignore
-            readonly MODE_DEFAULT: number /*int*/
+            public static readonly MODE_DEFAULT: number /*int*/
             /**
              * A constant value that may be passed into methods such as
              * <code>setTilingMode</code> or <code>setCompressionMode</code>
@@ -127,7 +127,7 @@ declare namespace javax {
              * @see #getCompressionMode
              */
             // @ts-ignore
-            readonly MODE_EXPLICIT: number /*int*/
+            public static readonly MODE_EXPLICIT: number /*int*/
             /**
              * A constant value that may be passed into methods such as
              * <code>setTilingMode</code>, <code>setProgressiveMode</code>, or
@@ -151,7 +151,7 @@ declare namespace javax {
              * @see #getCompressionMode
              */
             // @ts-ignore
-            readonly MODE_COPY_FROM_METADATA: number /*int*/
+            public static readonly MODE_COPY_FROM_METADATA: number /*int*/
             /**
              * The mode controlling tiling settings, which Must be
              * set to one of the four <code>MODE_*</code> values.  The default
@@ -257,7 +257,7 @@ declare namespace javax {
              * value.
              */
             // @ts-ignore
-            compressionTypes: string[]
+            compressionTypes: java.lang.String[] | string[]
             /**
              * A <code>String</code> containing the name of the current
              * compression type, or <code>null</code> if none is set.
@@ -265,7 +265,7 @@ declare namespace javax {
              * value.
              */
             // @ts-ignore
-            compressionType: string
+            compressionType: java.lang.String | string
             /**
              * A <code>float</code> containing the current compression quality
              * setting.  The initial value is <code>1.0F</code>.
@@ -289,7 +289,7 @@ declare namespace javax {
              * @return the current <code>Locale</code>, or <code>null</code>.
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Returns <code>true</code> if the writer can perform tiling
              * while writing.  If this method returns <code>false</code>, then
@@ -300,7 +300,7 @@ declare namespace javax {
              * @see #setTiling(int, int, int, int)
              */
             // @ts-ignore
-            canWriteTiles(): boolean
+            public canWriteTiles(): boolean
             /**
              * Returns <code>true</code> if the writer can perform tiling with
              * non-zero grid offsets while writing.  If this method returns
@@ -315,7 +315,7 @@ declare namespace javax {
              * @see #setTiling(int, int, int, int)
              */
             // @ts-ignore
-            canOffsetTiles(): boolean
+            public canOffsetTiles(): boolean
             /**
              * Determines whether the image will be tiled in the output
              * stream and, if it will, how the tiling parameters will be
@@ -344,7 +344,7 @@ declare namespace javax {
              * @see #getTilingMode
              */
             // @ts-ignore
-            setTilingMode(mode: number /*int*/): void
+            public setTilingMode(mode: number /*int*/): void
             /**
              * Returns the current tiling mode, if tiling is supported.
              * Otherwise throws an <code>UnsupportedOperationException</code>.
@@ -354,7 +354,7 @@ declare namespace javax {
              * @see #setTilingMode
              */
             // @ts-ignore
-            getTilingMode(): int
+            public getTilingMode(): number /*int*/
             /**
              * Returns an array of <code>Dimension</code>s indicating the
              * legal size ranges for tiles as they will be encoded in the
@@ -375,7 +375,7 @@ declare namespace javax {
              *  of at least two, or <code>null</code>.
              */
             // @ts-ignore
-            getPreferredTileSizes(): java.awt.Dimension[]
+            public getPreferredTileSizes(): java.awt.Dimension[]
             /**
              * Specifies that the image should be tiled in the output stream.
              * The <code>tileWidth</code> and <code>tileHeight</code>
@@ -408,7 +408,7 @@ declare namespace javax {
              * @see #getTileGridYOffset()
              */
             // @ts-ignore
-            setTiling(tileWidth: number /*int*/, tileHeight: number /*int*/, tileGridXOffset: number /*int*/, tileGridYOffset: number /*int*/): void
+            public setTiling(tileWidth: number /*int*/, tileHeight: number /*int*/, tileGridXOffset: number /*int*/, tileGridYOffset: number /*int*/): void
             /**
              * Removes any previous tile grid parameters specified by calls to
              * <code>setTiling</code>.
@@ -423,7 +423,7 @@ declare namespace javax {
              * @see #setTiling(int, int, int, int)
              */
             // @ts-ignore
-            unsetTiling(): void
+            public unsetTiling(): void
             /**
              * Returns the width of each tile in an image as it will be
              * written to the output stream.  If tiling parameters have not
@@ -439,7 +439,7 @@ declare namespace javax {
              * @see #getTileHeight()
              */
             // @ts-ignore
-            getTileWidth(): int
+            public getTileWidth(): number /*int*/
             /**
              * Returns the height of each tile in an image as it will be written to
              * the output stream.  If tiling parameters have not
@@ -455,7 +455,7 @@ declare namespace javax {
              * @see #getTileWidth()
              */
             // @ts-ignore
-            getTileHeight(): int
+            public getTileHeight(): number /*int*/
             /**
              * Returns the horizontal tile grid offset of an image as it will
              * be written to the output stream.  If tiling parameters have not
@@ -471,7 +471,7 @@ declare namespace javax {
              * @see #getTileGridYOffset()
              */
             // @ts-ignore
-            getTileGridXOffset(): int
+            public getTileGridXOffset(): number /*int*/
             /**
              * Returns the vertical tile grid offset of an image as it will
              * be written to the output stream.  If tiling parameters have not
@@ -487,7 +487,7 @@ declare namespace javax {
              * @see #getTileGridXOffset()
              */
             // @ts-ignore
-            getTileGridYOffset(): int
+            public getTileGridYOffset(): number /*int*/
             /**
              * Returns <code>true</code> if the writer can write out images
              * as a series of passes of progressively increasing quality.
@@ -497,7 +497,7 @@ declare namespace javax {
              * @see #getProgressiveMode
              */
             // @ts-ignore
-            canWriteProgressive(): boolean
+            public canWriteProgressive(): boolean
             /**
              * Specifies that the writer is to write the image out in a
              * progressive mode such that the stream will contain a series of
@@ -530,7 +530,7 @@ declare namespace javax {
              * @see #getProgressiveMode
              */
             // @ts-ignore
-            setProgressiveMode(mode: number /*int*/): void
+            public setProgressiveMode(mode: number /*int*/): void
             /**
              * Returns the current mode for writing the stream in a
              * progressive manner.
@@ -540,13 +540,13 @@ declare namespace javax {
              * @see #setProgressiveMode
              */
             // @ts-ignore
-            getProgressiveMode(): int
+            public getProgressiveMode(): number /*int*/
             /**
              * Returns <code>true</code> if this writer supports compression.
              * @return <code>true</code> if the writer supports compression.
              */
             // @ts-ignore
-            canWriteCompressed(): boolean
+            public canWriteCompressed(): boolean
             /**
              * Specifies whether compression is to be performed, and if so how
              * compression parameters are to be determined.  The <code>mode</code>
@@ -581,7 +581,7 @@ declare namespace javax {
              * @see #getCompressionMode
              */
             // @ts-ignore
-            setCompressionMode(mode: number /*int*/): void
+            public setCompressionMode(mode: number /*int*/): void
             /**
              * Returns the current compression mode, if compression is
              * supported.
@@ -591,7 +591,7 @@ declare namespace javax {
              * @see #setCompressionMode
              */
             // @ts-ignore
-            getCompressionMode(): int
+            public getCompressionMode(): number /*int*/
             /**
              * Returns a list of available compression types, as an array or
              * <code>String</code>s, or <code>null</code> if a compression
@@ -615,7 +615,7 @@ declare namespace javax {
              *  support compression.
              */
             // @ts-ignore
-            getCompressionTypes(): java.lang.String[]
+            public getCompressionTypes(): string[]
             /**
              * Sets the compression type to one of the values indicated by
              * <code>getCompressionTypes</code>.  If a value of
@@ -646,7 +646,7 @@ declare namespace javax {
              * @see #unsetCompression
              */
             // @ts-ignore
-            setCompressionType(compressionType: string): void
+            public setCompressionType(compressionType: java.lang.String | string): void
             /**
              * Returns the currently set compression type, or
              * <code>null</code> if none has been set.  The type is returned
@@ -667,7 +667,7 @@ declare namespace javax {
              * @see #setCompressionType
              */
             // @ts-ignore
-            getCompressionType(): java.lang.String
+            public getCompressionType(): string
             /**
              * Removes any previous compression type and quality settings.
              * <p> The default implementation sets the instance variable
@@ -682,7 +682,7 @@ declare namespace javax {
              * @see #setCompressionQuality
              */
             // @ts-ignore
-            unsetCompression(): void
+            public unsetCompression(): void
             /**
              * Returns a localized version of the name of the current
              * compression type, using the <code>Locale</code> returned by
@@ -702,7 +702,7 @@ declare namespace javax {
              * @exception IllegalStateException if no compression type is set.
              */
             // @ts-ignore
-            getLocalizedCompressionTypeName(): java.lang.String
+            public getLocalizedCompressionTypeName(): string
             /**
              * Returns <code>true</code> if the current compression type
              * provides lossless compression.  If a plug-in provides only
@@ -727,7 +727,7 @@ declare namespace javax {
              *  compression type is <code>null</code>.
              */
             // @ts-ignore
-            isCompressionLossless(): boolean
+            public isCompressionLossless(): boolean
             /**
              * Sets the compression quality to a value between <code>0</code>
              * and <code>1</code>.  Only a single compression quality setting
@@ -767,7 +767,7 @@ declare namespace javax {
              * @see #getCompressionQuality
              */
             // @ts-ignore
-            setCompressionQuality(quality: number /*float*/): void
+            public setCompressionQuality(quality: number /*float*/): void
             /**
              * Returns the current compression quality setting.
              * <p> If there are multiple compression types but none has been
@@ -790,7 +790,7 @@ declare namespace javax {
              * @see #setCompressionQuality
              */
             // @ts-ignore
-            getCompressionQuality(): float
+            public getCompressionQuality(): number /*float*/
             /**
              * Returns a <code>float</code> indicating an estimate of the
              * number of bits of output data for each bit of input image data
@@ -823,7 +823,7 @@ declare namespace javax {
              *  not between <code>0</code>and <code>1</code>, inclusive.
              */
             // @ts-ignore
-            getBitRate(quality: number /*float*/): float
+            public getBitRate(quality: number /*float*/): number /*float*/
             /**
              * Returns an array of <code>String</code>s that may be used along
              * with <code>getCompressionQualityValues</code> as part of a user
@@ -870,7 +870,7 @@ declare namespace javax {
              * @see #getCompressionQualityValues
              */
             // @ts-ignore
-            getCompressionQualityDescriptions(): java.lang.String[]
+            public getCompressionQualityDescriptions(): string[]
             /**
              * Returns an array of <code>float</code>s that may be used along
              * with <code>getCompressionQualityDescriptions</code> as part of a user
@@ -903,7 +903,7 @@ declare namespace javax {
              * @see #getCompressionQualityDescriptions
              */
             // @ts-ignore
-            getCompressionQualityValues(): float[]
+            public getCompressionQualityValues(): number /*float*/[]
         }
     }
 }

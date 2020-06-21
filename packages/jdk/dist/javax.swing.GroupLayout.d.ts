@@ -177,14 +177,14 @@ declare namespace javax {
              * @see Group
              */
             // @ts-ignore
-            readonly DEFAULT_SIZE: number /*int*/
+            public static readonly DEFAULT_SIZE: number /*int*/
             /**
              * Indicates the preferred size from the component or gap should
              * be used for a particular range value.
              * @see Group
              */
             // @ts-ignore
-            readonly PREFERRED_SIZE: number /*int*/
+            public static readonly PREFERRED_SIZE: number /*int*/
             /**
              * Sets whether component visibility is considered when sizing and
              * positioning components. A value of {@code true} indicates that
@@ -205,7 +205,7 @@ declare namespace javax {
              * @see #setHonorsVisibility(Component,Boolean)
              */
             // @ts-ignore
-            setHonorsVisibility(honorsVisibility: boolean): void
+            public setHonorsVisibility(honorsVisibility: boolean): void
             /**
              * Returns whether component visibility is considered when sizing and
              * positioning components.
@@ -213,7 +213,7 @@ declare namespace javax {
              *          positioning components
              */
             // @ts-ignore
-            getHonorsVisibility(): boolean
+            public getHonorsVisibility(): boolean
             /**
              * Sets whether the component's visibility is considered for
              * sizing and positioning. A value of {@code Boolean.TRUE}
@@ -234,7 +234,7 @@ declare namespace javax {
              * @see #setHonorsVisibility(Component,Boolean)
              */
             // @ts-ignore
-            setHonorsVisibility(component: java.awt.Component, honorsVisibility: java.lang.Boolean): void
+            public setHonorsVisibility(component: java.awt.Component, honorsVisibility: java.lang.Boolean): void
             /**
              * Sets whether a gap between components should automatically be
              * created.  For example, if this is {@code true} and you add two
@@ -245,7 +245,7 @@ declare namespace javax {
              *         automatically created
              */
             // @ts-ignore
-            setAutoCreateGaps(autoCreatePadding: boolean): void
+            public setAutoCreateGaps(autoCreatePadding: boolean): void
             /**
              * Returns {@code true} if gaps between components are automatically
              * created.
@@ -253,7 +253,7 @@ declare namespace javax {
              *          created
              */
             // @ts-ignore
-            getAutoCreateGaps(): boolean
+            public getAutoCreateGaps(): boolean
             /**
              * Sets whether a gap between the container and components that
              * touch the border of the container should automatically be
@@ -263,7 +263,7 @@ declare namespace javax {
              *         automatically be created
              */
             // @ts-ignore
-            setAutoCreateContainerGaps(autoCreateContainerPadding: boolean): void
+            public setAutoCreateContainerGaps(autoCreateContainerPadding: boolean): void
             /**
              * Returns {@code true} if gaps between the container and components that
              * border the container are automatically created.
@@ -271,7 +271,7 @@ declare namespace javax {
              *          border the container are automatically created
              */
             // @ts-ignore
-            getAutoCreateContainerGaps(): boolean
+            public getAutoCreateContainerGaps(): boolean
             /**
              * Sets the {@code Group} that positions and sizes
              * components along the horizontal axis.
@@ -280,7 +280,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if group is {#code null}
              */
             // @ts-ignore
-            setHorizontalGroup(group: javax.swing.GroupLayout.Group): void
+            public setHorizontalGroup(group: javax.swing.GroupLayout.Group): void
             /**
              * Sets the {@code Group} that positions and sizes
              * components along the vertical axis.
@@ -289,13 +289,13 @@ declare namespace javax {
              * @throws IllegalArgumentException if group is {#code null}
              */
             // @ts-ignore
-            setVerticalGroup(group: javax.swing.GroupLayout.Group): void
+            public setVerticalGroup(group: javax.swing.GroupLayout.Group): void
             /**
              * Creates and returns a {@code SequentialGroup}.
              * @return a new {#code SequentialGroup}
              */
             // @ts-ignore
-            createSequentialGroup(): javax.swing.GroupLayout.SequentialGroup
+            public createSequentialGroup(): javax.swing.GroupLayout.SequentialGroup
             /**
              * Creates and returns a {@code ParallelGroup} with an alignment of
              * {@code Alignment.LEADING}.  This is a cover method for the more
@@ -304,7 +304,7 @@ declare namespace javax {
              * @see #createParallelGroup(Alignment)
              */
             // @ts-ignore
-            createParallelGroup(): javax.swing.GroupLayout.ParallelGroup
+            public createParallelGroup(): javax.swing.GroupLayout.ParallelGroup
             /**
              * Creates and returns a {@code ParallelGroup} with the specified
              * alignment.  This is a cover method for the more general {@code
@@ -317,7 +317,7 @@ declare namespace javax {
              * @see ParallelGroup
              */
             // @ts-ignore
-            createParallelGroup(alignment: javax.swing.GroupLayout.Alignment): javax.swing.GroupLayout.ParallelGroup
+            public createParallelGroup(alignment: javax.swing.GroupLayout.Alignment): javax.swing.GroupLayout.ParallelGroup
             /**
              * Creates and returns a {@code ParallelGroup} with the specified
              * alignment and resize behavior. The {@code
@@ -344,7 +344,7 @@ declare namespace javax {
              * @see GroupLayout.ParallelGroup
              */
             // @ts-ignore
-            createParallelGroup(alignment: javax.swing.GroupLayout.Alignment, resizable: boolean): javax.swing.GroupLayout.ParallelGroup
+            public createParallelGroup(alignment: javax.swing.GroupLayout.Alignment, resizable: boolean): javax.swing.GroupLayout.ParallelGroup
             /**
              * Creates and returns a {@code ParallelGroup} that aligns it's
              * elements along the baseline.
@@ -355,7 +355,7 @@ declare namespace javax {
              * @see ParallelGroup
              */
             // @ts-ignore
-            createBaselineGroup(resizable: boolean, anchorBaselineToTop: boolean): javax.swing.GroupLayout.ParallelGroup
+            public createBaselineGroup(resizable: boolean, anchorBaselineToTop: boolean): javax.swing.GroupLayout.ParallelGroup
             /**
              * Forces the specified components to have the same size
              * regardless of their preferred, minimum or maximum sizes. Components that
@@ -373,7 +373,7 @@ declare namespace javax {
              * @see #linkSize(int,Component[])
              */
             // @ts-ignore
-            linkSize(...components: java.awt.Component[]): void
+            public linkSize(...components: java.awt.Component[]): void
             /**
              * Forces the specified components to have the same size along the
              * specified axis regardless of their preferred, minimum or
@@ -397,7 +397,7 @@ declare namespace javax {
              *           {@code SwingConstants.VERTICAL}
              */
             // @ts-ignore
-            linkSize(axis: number /*int*/, ...components: java.awt.Component[]): void
+            public linkSize(axis: number /*int*/, ...components: java.awt.Component[]): void
             /**
              * Replaces an existing component with a new one.
              * @param existingComponent the component that should be removed
@@ -409,7 +409,7 @@ declare namespace javax {
              *          by this layout manager
              */
             // @ts-ignore
-            replace(existingComponent: java.awt.Component, newComponent: java.awt.Component): void
+            public replace(existingComponent: java.awt.Component, newComponent: java.awt.Component): void
             /**
              * Sets the {@code LayoutStyle} used to calculate the preferred
              * gaps between components. A value of {@code null} indicates the
@@ -418,7 +418,7 @@ declare namespace javax {
              * @see LayoutStyle
              */
             // @ts-ignore
-            setLayoutStyle(layoutStyle: javax.swing.LayoutStyle): void
+            public setLayoutStyle(layoutStyle: javax.swing.LayoutStyle): void
             /**
              * Returns the {@code LayoutStyle} used for calculating the preferred
              * gap between components. This returns the value specified to
@@ -427,7 +427,7 @@ declare namespace javax {
              *          gap between components
              */
             // @ts-ignore
-            getLayoutStyle(): javax.swing.LayoutStyle
+            public getLayoutStyle(): javax.swing.LayoutStyle
             /**
              * Notification that a {@code Component} has been added to
              * the parent container.  You should not invoke this method
@@ -437,7 +437,7 @@ declare namespace javax {
              * @param component the {#code Component} to be added
              */
             // @ts-ignore
-            addLayoutComponent(name: string, component: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, component: java.awt.Component): void
             /**
              * Notification that a {@code Component} has been removed from
              * the parent container.  You should not invoke this method
@@ -447,7 +447,7 @@ declare namespace javax {
              * @see java.awt.Component#remove
              */
             // @ts-ignore
-            removeLayoutComponent(component: java.awt.Component): void
+            public removeLayoutComponent(component: java.awt.Component): void
             /**
              * Returns the preferred size for the specified container.
              * @param parent the container to return the preferred size for
@@ -459,7 +459,7 @@ declare namespace javax {
              * @see java.awt.Container#getPreferredSize
              */
             // @ts-ignore
-            preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Returns the minimum size for the specified container.
              * @param parent the container to return the size for
@@ -471,7 +471,7 @@ declare namespace javax {
              * @see java.awt.Container#getMinimumSize
              */
             // @ts-ignore
-            minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Lays out the specified container.
              * @param parent the container to be laid out
@@ -479,7 +479,7 @@ declare namespace javax {
              *          this layout are not in both a horizontal and vertical group
              */
             // @ts-ignore
-            layoutContainer(parent: java.awt.Container): void
+            public layoutContainer(parent: java.awt.Container): void
             /**
              * Notification that a {@code Component} has been added to
              * the parent container.  You should not invoke this method
@@ -489,7 +489,7 @@ declare namespace javax {
              * @param constraints description of where to place the component
              */
             // @ts-ignore
-            addLayoutComponent(component: java.awt.Component, constraints: any): void
+            public addLayoutComponent(component: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Returns the maximum size for the specified container.
              * @param parent the container to return the size for
@@ -501,7 +501,7 @@ declare namespace javax {
              * @see java.awt.Container#getMaximumSize
              */
             // @ts-ignore
-            maximumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public maximumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Returns the alignment along the x axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -514,7 +514,7 @@ declare namespace javax {
              * @return the alignment; this implementation returns {#code .5}
              */
             // @ts-ignore
-            getLayoutAlignmentX(parent: java.awt.Container): float
+            public getLayoutAlignmentX(parent: java.awt.Container): number /*float*/
             /**
              * Returns the alignment along the y axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -527,7 +527,7 @@ declare namespace javax {
              * @return alignment; this implementation returns {#code .5}
              */
             // @ts-ignore
-            getLayoutAlignmentY(parent: java.awt.Container): float
+            public getLayoutAlignmentY(parent: java.awt.Container): number /*float*/
             /**
              * Invalidates the layout, indicating that if the layout manager
              * has cached information it should be discarded.
@@ -536,7 +536,7 @@ declare namespace javax {
              *          the same {@code Container} that this was created with
              */
             // @ts-ignore
-            invalidateLayout(parent: java.awt.Container): void
+            public invalidateLayout(parent: java.awt.Container): void
             /**
              * Returns a string representation of this {@code GroupLayout}.
              * This method is intended to be used for debugging purposes,
@@ -545,7 +545,7 @@ declare namespace javax {
              * @return a string representation of this {#code GroupLayout}
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

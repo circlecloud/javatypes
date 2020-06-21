@@ -14,11 +14,11 @@ declare namespace org {
                      * @return The reason
                      */
                     // @ts-ignore
-                    getReason(): org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
+                    public getReason(): org.bukkit.event.entity.EntityUnleashEvent.UnleashReason
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

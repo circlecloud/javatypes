@@ -20,7 +20,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_RADIUS
                                  */
                                 // @ts-ignore
-                                radius(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                radius(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link ParticleType} of this cloud.
                                  * @return The particle type of this cloud
@@ -34,7 +34,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_DURATION
                                  */
                                 // @ts-ignore
-                                duration(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                duration(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the bounded {@code waitTime} value of this cloud. The wait time
                                  * dictates how long until this cloud will affect {@link Entity} instances
@@ -43,7 +43,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_WAIT_TIME
                                  */
                                 // @ts-ignore
-                                waitTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                waitTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the bounded {@code radiusOnUse} value of this cloud.
                                  * The radius is modified per {@link Entity} affected.
@@ -54,7 +54,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_RADIUS_ON_USE
                                  */
                                 // @ts-ignore
-                                radiusOnUse(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                radiusOnUse(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the bounded {@code radiusPerTick} value of this cloud.
                                  * <p>The radius is increased every tick. A radiusPerTick of 0 will cause
@@ -65,7 +65,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_RADIUS_PER_TICK
                                  */
                                 // @ts-ignore
-                                radiusPerTick(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                radiusPerTick(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the bounded {@code durationOnUse} value of this cloud.
                                  * The duration on use is added to the duration for every time
@@ -77,7 +77,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_DURATION_ON_USE
                                  */
                                 // @ts-ignore
-                                durationOnUse(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                durationOnUse(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the bounded {@code applicationDelay} value of this cloud.
                                  * What this means is the application delay between times of application
@@ -86,7 +86,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_REAPPLICATION_DELAY
                                  */
                                 // @ts-ignore
-                                applicationDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                applicationDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ListValue} of {@link PotionEffect}s of this cloud.
                                  * The potion effects will affect any {@link Entity} according to the
@@ -102,7 +102,7 @@ declare namespace org {
                                  * @see Keys#AREA_EFFECT_CLOUD_AGE
                                  */
                                 // @ts-ignore
-                                age(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                age(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

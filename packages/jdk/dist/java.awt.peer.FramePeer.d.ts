@@ -18,7 +18,7 @@ declare namespace java {
                  * @see Frame#setTitle(String)
                  */
                 // @ts-ignore
-                setTitle(title: string): void
+                setTitle(title: java.lang.String | string): void
                 /**
                  * Sets the menu bar for the frame.
                  * @param mb the menu bar to set
@@ -47,7 +47,7 @@ declare namespace java {
                  * @see Frame#getExtendedState()
                  */
                 // @ts-ignore
-                getState(): int
+                getState(): number /*int*/
                 /**
                  * Sets the bounds of the frame when it becomes maximized.
                  * @param bounds the maximized bounds of the frame

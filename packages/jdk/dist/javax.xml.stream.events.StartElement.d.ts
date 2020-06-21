@@ -29,7 +29,7 @@ declare namespace javax {
                      *  empty iterator
                      */
                     // @ts-ignore
-                    getAttributes(): java.util.Iterator
+                    getAttributes(): java.util.Iterator<any>
                     /**
                      * Returns an Iterator of namespaces declared on this element.
                      * This Iterator does not contain previously declared namespaces
@@ -49,7 +49,7 @@ declare namespace javax {
                      *  empty iterator
                      */
                     // @ts-ignore
-                    getNamespaces(): java.util.Iterator
+                    getNamespaces(): java.util.Iterator<any>
                     /**
                      * Returns the attribute referred to by this name
                      * @param name the qname of the desired name
@@ -74,7 +74,7 @@ declare namespace javax {
                      * @return the uri bound to the prefix or null
                      */
                     // @ts-ignore
-                    getNamespaceURI(prefix: string): java.lang.String
+                    getNamespaceURI(prefix: java.lang.String | string): string
                 }
             }
         }

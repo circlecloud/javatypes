@@ -175,7 +175,7 @@ declare namespace java {
              * @see java.lang.Character
              */
             // @ts-ignore
-            class Charset extends java.lang.Object implements java.lang.Comparable<java.nio.charset.Charset> {
+            abstract class Charset extends java.lang.Object implements java.lang.Comparable<java.nio.charset.Charset> {
                 /**
                  * Initializes a new charset with the given canonical name and alias
                  * set.
@@ -187,7 +187,7 @@ declare namespace java {
                  *          If the canonical name or any of the aliases are illegal
                  */
                 // @ts-ignore
-                constructor(canonicalName: string, aliases: string[])
+                constructor(canonicalName: java.lang.String | string, aliases: java.lang.String[] | string[])
                 /**
                  * Tells whether the named charset is supported.
                  * @param charsetName
@@ -201,7 +201,7 @@ declare namespace java {
                  *           If the given <tt>charsetName</tt> is null
                  */
                 // @ts-ignore
-                isSupported(charsetName: string): boolean
+                public static isSupported(charsetName: java.lang.String | string): boolean
                 /**
                  * Returns a charset object for the named charset.
                  * @param charsetName
@@ -217,7 +217,7 @@ declare namespace java {
                  *           in this instance of the Java virtual machine
                  */
                 // @ts-ignore
-                forName(charsetName: string): java.nio.charset.Charset
+                public static forName(charsetName: java.lang.String | string): java.nio.charset.Charset
                 /**
                  * Constructs a sorted map from canonical charset names to charset objects.
                  * <p> The map returned by this method will have one entry for each charset
@@ -241,7 +241,7 @@ declare namespace java {
                  *          to charset objects
                  */
                 // @ts-ignore
-                availableCharsets(): java.util.SortedMap<java.lang.String, java.nio.charset.Charset>
+                public static availableCharsets(): java.util.SortedMap<java.lang.String | string, java.nio.charset.Charset>
                 /**
                  * Returns the default charset of this Java virtual machine.
                  * <p> The default charset is determined during virtual-machine startup and
@@ -251,19 +251,19 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                defaultCharset(): java.nio.charset.Charset
+                public static defaultCharset(): java.nio.charset.Charset
                 /**
                  * Returns this charset's canonical name.
                  * @return The canonical name of this charset
                  */
                 // @ts-ignore
-                name(): java.lang.String
+                public name(): string
                 /**
                  * Returns a set containing this charset's aliases.
                  * @return An immutable set of this charset's aliases
                  */
                 // @ts-ignore
-                aliases(): java.util.Set<java.lang.String>
+                public aliases(): Array<java.lang.String | string>
                 /**
                  * Returns this charset's human-readable name for the default locale.
                  * <p> The default implementation of this method simply returns this
@@ -272,7 +272,7 @@ declare namespace java {
                  * @return The display name of this charset in the default locale
                  */
                 // @ts-ignore
-                displayName(): java.lang.String
+                public displayName(): string
                 /**
                  * Tells whether or not this charset is registered in the <a
                  * href="http://www.iana.org/assignments/character-sets">IANA Charset
@@ -281,7 +281,7 @@ declare namespace java {
                  *           implementor to be registered with the IANA
                  */
                 // @ts-ignore
-                isRegistered(): boolean
+                public isRegistered(): boolean
                 /**
                  * Returns this charset's human-readable name for the given locale.
                  * <p> The default implementation of this method simply returns this
@@ -292,7 +292,7 @@ declare namespace java {
                  * @return The display name of this charset in the given locale
                  */
                 // @ts-ignore
-                displayName(locale: java.util.Locale): java.lang.String
+                public displayName(locale: java.util.Locale): string
                 /**
                  * Tells whether or not this charset contains the given charset.
                  * <p> A charset <i>C</i> is said to <i>contain</i> a charset <i>D</i> if,
@@ -315,13 +315,13 @@ declare namespace java {
                  * @return <tt>true</tt> if the given charset is contained in this charset
                  */
                 // @ts-ignore
-                abstract contains(cs: java.nio.charset.Charset): boolean
+                public abstract contains(cs: java.nio.charset.Charset): boolean
                 /**
                  * Constructs a new decoder for this charset.
                  * @return A new decoder for this charset
                  */
                 // @ts-ignore
-                abstract newDecoder(): java.nio.charset.CharsetDecoder
+                public abstract newDecoder(): java.nio.charset.CharsetDecoder
                 /**
                  * Constructs a new encoder for this charset.
                  * @return A new encoder for this charset
@@ -329,7 +329,7 @@ declare namespace java {
                  *           If this charset does not support encoding
                  */
                 // @ts-ignore
-                abstract newEncoder(): java.nio.charset.CharsetEncoder
+                public abstract newEncoder(): java.nio.charset.CharsetEncoder
                 /**
                  * Tells whether or not this charset supports encoding.
                  * <p> Nearly all charsets support encoding.  The primary exceptions are
@@ -342,7 +342,7 @@ declare namespace java {
                  * @return <tt>true</tt> if, and only if, this charset supports encoding
                  */
                 // @ts-ignore
-                canEncode(): boolean
+                public canEncode(): boolean
                 /**
                  * Convenience method that decodes bytes in this charset into Unicode
                  * characters.
@@ -363,7 +363,7 @@ declare namespace java {
                  * @return A char buffer containing the decoded characters
                  */
                 // @ts-ignore
-                decode(bb: java.nio.ByteBuffer): java.nio.CharBuffer
+                public decode(bb: java.nio.ByteBuffer): java.nio.CharBuffer
                 /**
                  * Convenience method that encodes Unicode characters into bytes in this
                  * charset.
@@ -384,7 +384,7 @@ declare namespace java {
                  * @return A byte buffer containing the encoded characters
                  */
                 // @ts-ignore
-                encode(cb: java.nio.CharBuffer): java.nio.ByteBuffer
+                public encode(cb: java.nio.CharBuffer): java.nio.ByteBuffer
                 /**
                  * Convenience method that encodes a string into bytes in this charset.
                  * <p> An invocation of this method upon a charset <tt>cs</tt> returns the
@@ -395,7 +395,7 @@ declare namespace java {
                  * @return A byte buffer containing the encoded characters
                  */
                 // @ts-ignore
-                encode(str: string): java.nio.ByteBuffer
+                public encode(str: java.lang.String | string): java.nio.ByteBuffer
                 /**
                  * Compares this charset to another.
                  * <p> Charsets are ordered by their canonical names, without regard to
@@ -406,13 +406,13 @@ declare namespace java {
                  *          is less than, equal to, or greater than the specified charset
                  */
                 // @ts-ignore
-                compareTo(that: java.nio.charset.Charset): int
+                public compareTo(that: java.nio.charset.Charset): number /*int*/
                 /**
                  * Computes a hashcode for this charset.
                  * @return An integer hashcode
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Tells whether or not this object is equal to another.
                  * <p> Two charsets are equal if, and only if, they have the same canonical
@@ -421,13 +421,13 @@ declare namespace java {
                  *           given object
                  */
                 // @ts-ignore
-                equals(ob: any): boolean
+                public equals(ob: java.lang.Object | any): boolean
                 /**
                  * Returns a string describing this charset.
                  * @return A string describing this charset
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

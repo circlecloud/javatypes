@@ -28,7 +28,7 @@ declare namespace org {
                      * @see javax.servlet.http.HttpServletResponse#sendError(int, String)
                      */
                     // @ts-ignore
-                    class ResponseStatus implements java.lang.annotation.Annotation {
+                    abstract class ResponseStatus implements java.lang.annotation.Annotation {
                     }
                 }
             }

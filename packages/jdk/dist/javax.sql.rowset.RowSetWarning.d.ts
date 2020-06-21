@@ -38,7 +38,7 @@ declare namespace javax {
                  *         <code>RowSetWarning</code> constructor
                  */
                 // @ts-ignore
-                constructor(reason: string)
+                constructor(reason: java.lang.String | string)
                 /**
                  * Constructs a default <code>RowSetWarning</code> object. The reason
                  * defaults to <code>null</code>, SQLState defaults to null and vendorCode
@@ -58,7 +58,7 @@ declare namespace javax {
                  *         XOPEN <i>SQLState</i> is supplied, no exception is thrown.
                  */
                 // @ts-ignore
-                constructor(reason: string, SQLState: string)
+                constructor(reason: java.lang.String | string, SQLState: java.lang.String | string)
                 /**
                  * Constructs a fully specified <code>RowSetWarning</code> object initialized
                  * with the given values for the reason, SQLState and vendorCode.
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @param vendorCode a database vendor-specific warning code
                  */
                 // @ts-ignore
-                constructor(reason: string, SQLState: string, vendorCode: number /*int*/)
+                constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/)
                 /**
                  * Retrieves the warning chained to this <code>RowSetWarning</code>
                  * object.

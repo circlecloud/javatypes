@@ -41,13 +41,13 @@ declare namespace javax {
                  * @exception BadLocationException for an invalid range specification
                  */
                 // @ts-ignore
-                addHighlight(p0: number /*int*/, p1: number /*int*/, p: javax.swing.text.Highlighter.HighlightPainter): java.lang.Object
+                addHighlight(p0: number /*int*/, p1: number /*int*/, p: javax.swing.text.Highlighter.HighlightPainter): any
                 /**
                  * Removes a highlight from the view.
                  * @param tag  which highlight to remove
                  */
                 // @ts-ignore
-                removeHighlight(tag: any): void
+                removeHighlight(tag: java.lang.Object | any): void
                 /**
                  * Removes all highlights this highlighter is responsible for.
                  */
@@ -64,7 +64,7 @@ declare namespace javax {
                  * @exception BadLocationException for an invalid range specification
                  */
                 // @ts-ignore
-                changeHighlight(tag: any, p0: number /*int*/, p1: number /*int*/): void
+                changeHighlight(tag: java.lang.Object | any, p0: number /*int*/, p1: number /*int*/): void
                 /**
                  * Fetches the current list of highlights.
                  * @return the highlight list

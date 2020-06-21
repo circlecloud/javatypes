@@ -30,7 +30,7 @@ declare namespace java {
                          * time the write lock hold count is set to one.
                          */
                         // @ts-ignore
-                        lock(): void
+                        public lock(): void
                         /**
                          * Acquires the write lock unless the current thread is
                          * {@linkplain Thread#interrupt interrupted}.
@@ -67,7 +67,7 @@ declare namespace java {
                          * @throws InterruptedException if the current thread is interrupted
                          */
                         // @ts-ignore
-                        lockInterruptibly(): void
+                        public lockInterruptibly(): void
                         /**
                          * Acquires the write lock only if it is not held by another thread
                          * at the time of invocation.
@@ -94,7 +94,7 @@ declare namespace java {
                          *  by the current thread; and {@code false} otherwise.
                          */
                         // @ts-ignore
-                        tryLock(): boolean
+                        public tryLock(): boolean
                         /**
                          * Acquires the write lock if it is not held by another thread
                          * within the given waiting time and the current thread has
@@ -154,7 +154,7 @@ declare namespace java {
                          * @throws NullPointerException if the time unit is null
                          */
                         // @ts-ignore
-                        tryLock(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                        public tryLock(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                         /**
                          * Attempts to release this lock.
                          * <p>If the current thread is the holder of this lock then
@@ -166,7 +166,7 @@ declare namespace java {
                          *  hold this lock
                          */
                         // @ts-ignore
-                        unlock(): void
+                        public unlock(): void
                         /**
                          * Returns a {@link Condition} instance for use with this
                          * {@link Lock} instance.
@@ -203,7 +203,7 @@ declare namespace java {
                          * @return the Condition object
                          */
                         // @ts-ignore
-                        newCondition(): java.util.concurrent.locks.Condition
+                        public newCondition(): java.util.concurrent.locks.Condition
                         /**
                          * Returns a string identifying this lock, as well as its lock
                          * state.  The state, in brackets includes either the String
@@ -212,7 +212,7 @@ declare namespace java {
                          * @return a string identifying this lock, as well as its lock state
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         /**
                          * Queries if this write lock is held by the current thread.
                          * Identical in effect to {@link
@@ -222,7 +222,7 @@ declare namespace java {
                          * @since 1.6
                          */
                         // @ts-ignore
-                        isHeldByCurrentThread(): boolean
+                        public isHeldByCurrentThread(): boolean
                         /**
                          * Queries the number of holds on this write lock by the current
                          * thread.  A thread has a hold on a lock for each lock action
@@ -233,7 +233,7 @@ declare namespace java {
                          * @since 1.6
                          */
                         // @ts-ignore
-                        getHoldCount(): int
+                        public getHoldCount(): number /*int*/
                     }
                 }
             }

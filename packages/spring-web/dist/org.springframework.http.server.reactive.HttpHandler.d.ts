@@ -30,7 +30,7 @@ declare namespace org {
                          * @return indicates completion of request handling
                          */
                         // @ts-ignore
-                        handle(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): <any>
+                        handle(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): object
                     }
                 }
             }

@@ -23,7 +23,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            class HttpsURLConnection extends java.net.HttpURLConnection {
+            abstract class HttpsURLConnection extends java.net.HttpURLConnection {
                 /**
                  * Creates an <code>HttpsURLConnection</code> using the
                  * URL specified.
@@ -43,7 +43,7 @@ declare namespace javax {
                  *           the connection has been established.
                  */
                 // @ts-ignore
-                abstract getCipherSuite(): java.lang.String
+                public abstract getCipherSuite(): string
                 /**
                  * Returns the certificate(s) that were sent to the server during
                  * handshaking.
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @see #getLocalPrincipal()
                  */
                 // @ts-ignore
-                abstract getLocalCertificates(): java.security.cert.Certificate[]
+                public abstract getLocalCertificates(): java.security.cert.Certificate[]
                 /**
                  * Returns the server's certificate chain which was established
                  * as part of defining the session.
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see #getPeerPrincipal()
                  */
                 // @ts-ignore
-                abstract getServerCertificates(): java.security.cert.Certificate[]
+                public abstract getServerCertificates(): java.security.cert.Certificate[]
                 /**
                  * Returns the server's principal which was established as part of
                  * defining the session.
@@ -103,7 +103,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getPeerPrincipal(): java.security.Principal
+                public getPeerPrincipal(): java.security.Principal
                 /**
                  * Returns the principal that was sent to the server during handshaking.
                  * <P>
@@ -122,7 +122,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLocalPrincipal(): java.security.Principal
+                public getLocalPrincipal(): java.security.Principal
                 /**
                  * Sets the default <code>HostnameVerifier</code> inherited by a
                  * new instance of this class.
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @see #getDefaultHostnameVerifier()
                  */
                 // @ts-ignore
-                setDefaultHostnameVerifier(v: javax.net.ssl.HostnameVerifier): void
+                public static setDefaultHostnameVerifier(v: javax.net.ssl.HostnameVerifier): void
                 /**
                  * Gets the default <code>HostnameVerifier</code> that is inherited
                  * by new instances of this class.
@@ -147,7 +147,7 @@ declare namespace javax {
                  * @see #setDefaultHostnameVerifier(HostnameVerifier)
                  */
                 // @ts-ignore
-                getDefaultHostnameVerifier(): javax.net.ssl.HostnameVerifier
+                public static getDefaultHostnameVerifier(): javax.net.ssl.HostnameVerifier
                 /**
                  * Sets the <code>HostnameVerifier</code> for this instance.
                  * <P>
@@ -162,7 +162,7 @@ declare namespace javax {
                  * @see #setDefaultHostnameVerifier(HostnameVerifier)
                  */
                 // @ts-ignore
-                setHostnameVerifier(v: javax.net.ssl.HostnameVerifier): void
+                public setHostnameVerifier(v: javax.net.ssl.HostnameVerifier): void
                 /**
                  * Gets the <code>HostnameVerifier</code> in place on this instance.
                  * @return the host name verifier
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @see #setDefaultHostnameVerifier(HostnameVerifier)
                  */
                 // @ts-ignore
-                getHostnameVerifier(): javax.net.ssl.HostnameVerifier
+                public getHostnameVerifier(): javax.net.ssl.HostnameVerifier
                 /**
                  * Sets the default <code>SSLSocketFactory</code> inherited by new
                  * instances of this class.
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @see #getDefaultSSLSocketFactory()
                  */
                 // @ts-ignore
-                setDefaultSSLSocketFactory(sf: javax.net.ssl.SSLSocketFactory): void
+                public static setDefaultSSLSocketFactory(sf: javax.net.ssl.SSLSocketFactory): void
                 /**
                  * Gets the default static <code>SSLSocketFactory</code> that is
                  * inherited by new instances of this class.
@@ -197,7 +197,7 @@ declare namespace javax {
                  * @see #setDefaultSSLSocketFactory(SSLSocketFactory)
                  */
                 // @ts-ignore
-                getDefaultSSLSocketFactory(): javax.net.ssl.SSLSocketFactory
+                public static getDefaultSSLSocketFactory(): javax.net.ssl.SSLSocketFactory
                 /**
                  * Sets the <code>SSLSocketFactory</code> to be used when this instance
                  * creates sockets for secure https URL connections.
@@ -216,7 +216,7 @@ declare namespace javax {
                  * @see #getSSLSocketFactory()
                  */
                 // @ts-ignore
-                setSSLSocketFactory(sf: javax.net.ssl.SSLSocketFactory): void
+                public setSSLSocketFactory(sf: javax.net.ssl.SSLSocketFactory): void
                 /**
                  * Gets the SSL socket factory to be used when creating sockets
                  * for secure https URL connections.
@@ -224,7 +224,7 @@ declare namespace javax {
                  * @see #setSSLSocketFactory(SSLSocketFactory)
                  */
                 // @ts-ignore
-                getSSLSocketFactory(): javax.net.ssl.SSLSocketFactory
+                public getSSLSocketFactory(): javax.net.ssl.SSLSocketFactory
             }
         }
     }

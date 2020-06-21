@@ -19,9 +19,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getShift(): int
+                        public getShift(): number /*int*/
                         // @ts-ignore
-                        getAdditionalHeight(): int
+                        public getAdditionalHeight(): number /*int*/
                     }
                 }
             }

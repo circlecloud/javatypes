@@ -28,14 +28,14 @@ declare namespace java {
                  * @return a copy of this <code>Paper</code>.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns the height of the page in 1/72nds of an inch.
                  * @return the height of the page described by this
                  *           <code>Paper</code>.
                  */
                 // @ts-ignore
-                getHeight(): double
+                public getHeight(): number /*double*/
                 /**
                  * Sets the width and height of this <code>Paper</code>
                  * object, which represents the properties of the page onto
@@ -48,7 +48,7 @@ declare namespace java {
                  *  object's height
                  */
                 // @ts-ignore
-                setSize(width: number /*double*/, height: number /*double*/): void
+                public setSize(width: number /*double*/, height: number /*double*/): void
                 /**
                  * Returns the width of the page in 1/72nds
                  * of an inch.
@@ -56,7 +56,7 @@ declare namespace java {
                  *  <code>Paper</code>.
                  */
                 // @ts-ignore
-                getWidth(): double
+                public getWidth(): number /*double*/
                 /**
                  * Sets the imageable area of this <code>Paper</code>.  The
                  * imageable area is the area on the page in which printing
@@ -71,35 +71,35 @@ declare namespace java {
                  *  imageable area of this <code>Paper</code>
                  */
                 // @ts-ignore
-                setImageableArea(x: number /*double*/, y: number /*double*/, width: number /*double*/, height: number /*double*/): void
+                public setImageableArea(x: number /*double*/, y: number /*double*/, width: number /*double*/, height: number /*double*/): void
                 /**
                  * Returns the x coordinate of the upper-left corner of this
                  * <code>Paper</code> object's imageable area.
                  * @return the x coordinate of the imageable area.
                  */
                 // @ts-ignore
-                getImageableX(): double
+                public getImageableX(): number /*double*/
                 /**
                  * Returns the y coordinate of the upper-left corner of this
                  * <code>Paper</code> object's imageable area.
                  * @return the y coordinate of the imageable area.
                  */
                 // @ts-ignore
-                getImageableY(): double
+                public getImageableY(): number /*double*/
                 /**
                  * Returns the width of this <code>Paper</code> object's imageable
                  * area.
                  * @return the width of the imageable area.
                  */
                 // @ts-ignore
-                getImageableWidth(): double
+                public getImageableWidth(): number /*double*/
                 /**
                  * Returns the height of this <code>Paper</code> object's imageable
                  * area.
                  * @return the height of the imageable area.
                  */
                 // @ts-ignore
-                getImageableHeight(): double
+                public getImageableHeight(): number /*double*/
             }
         }
     }

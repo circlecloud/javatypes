@@ -33,7 +33,7 @@ declare namespace org {
                  * @return the maximum fuse ticks
                  */
                 // @ts-ignore
-                getMaxFuseTicks(): int
+                getMaxFuseTicks(): number /*int*/
                 /**
                  * Set the explosion radius in which this Creeper's explosion will affect.
                  * @param radius the new explosion radius
@@ -45,7 +45,7 @@ declare namespace org {
                  * @return the explosion radius
                  */
                 // @ts-ignore
-                getExplosionRadius(): int
+                getExplosionRadius(): number /*int*/
                 /**
                  * Makes this Creeper explode instantly.
                  * The resulting explosion can be cancelled by an

@@ -22,7 +22,7 @@ declare namespace javax {
              *  Namespaces in XML, 5.2 Namespace Defaulting</a>
              */
             // @ts-ignore
-            readonly NULL_NS_URI: string
+            public static readonly NULL_NS_URI: java.lang.String | string
             /**
              * <p>Prefix to use to represent the default XML Namespace.</p>
              * <p>Defined by the XML specification to be "".</p>
@@ -31,7 +31,7 @@ declare namespace javax {
              *  Namespaces in XML, 3. Qualified Names</a>
              */
             // @ts-ignore
-            readonly DEFAULT_NS_PREFIX: string
+            public static readonly DEFAULT_NS_PREFIX: java.lang.String | string
             /**
              * <p>The official XML Namespace name URI.</p>
              * <p>Defined by the XML specification to be
@@ -41,7 +41,7 @@ declare namespace javax {
              *  Namespaces in XML, 3. Qualified Names</a>
              */
             // @ts-ignore
-            readonly XML_NS_URI: string
+            public static readonly XML_NS_URI: java.lang.String | string
             /**
              * <p>The official XML Namespace prefix.</p>
              * <p>Defined by the XML specification to be "{@code xml}".</p>
@@ -50,7 +50,7 @@ declare namespace javax {
              *  Namespaces in XML, 3. Qualified Names<</a>
              */
             // @ts-ignore
-            readonly XML_NS_PREFIX: string
+            public static readonly XML_NS_PREFIX: java.lang.String | string
             /**
              * <p>The official XML attribute used for specifying XML Namespace
              * declarations, {@link #XMLNS_ATTRIBUTE
@@ -65,7 +65,7 @@ declare namespace javax {
              *  Namespaces in XML Errata</a>
              */
             // @ts-ignore
-            readonly XMLNS_ATTRIBUTE_NS_URI: string
+            public static readonly XMLNS_ATTRIBUTE_NS_URI: java.lang.String | string
             /**
              * <p>The official XML attribute used for specifying XML Namespace
              * declarations.</p>
@@ -77,7 +77,7 @@ declare namespace javax {
              *  Namespaces in XML, 3. Qualified Names</a>
              */
             // @ts-ignore
-            readonly XMLNS_ATTRIBUTE: string
+            public static readonly XMLNS_ATTRIBUTE: java.lang.String | string
             /**
              * <p>W3C XML Schema Namespace URI.</p>
              * <p>Defined to be "{@code http://www.w3.org/2001/XMLSchema}".
@@ -87,7 +87,7 @@ declare namespace javax {
              *   Structures, 2.6 Schema-Related Markup in Documents Being Validated</a>
              */
             // @ts-ignore
-            readonly W3C_XML_SCHEMA_NS_URI: string
+            public static readonly W3C_XML_SCHEMA_NS_URI: java.lang.String | string
             /**
              * <p>W3C XML Schema Instance Namespace URI.</p>
              * <p>Defined to be "{@code http://www.w3.org/2001/XMLSchema-instance}".</p>
@@ -97,27 +97,27 @@ declare namespace javax {
              *   Structures, 2.6 Schema-Related Markup in Documents Being Validated</a>
              */
             // @ts-ignore
-            readonly W3C_XML_SCHEMA_INSTANCE_NS_URI: string
+            public static readonly W3C_XML_SCHEMA_INSTANCE_NS_URI: java.lang.String | string
             /**
              * <p>W3C XPath Datatype Namespace URI.</p>
              * <p>Defined to be "{@code http://www.w3.org/2003/11/xpath-datatypes}".</p>
              * @see <a href="http://www.w3.org/TR/xpath-datamodel">XQuery 1.0 and XPath 2.0 Data Model</a>
              */
             // @ts-ignore
-            readonly W3C_XPATH_DATATYPE_NS_URI: string
+            public static readonly W3C_XPATH_DATATYPE_NS_URI: java.lang.String | string
             /**
              * <p>XML Document Type Declaration Namespace URI as an arbitrary value.</p>
              * <p>Since not formally defined by any existing standard, arbitrarily define to be "{@code http://www.w3.org/TR/REC-xml}".
              */
             // @ts-ignore
-            readonly XML_DTD_NS_URI: string
+            public static readonly XML_DTD_NS_URI: java.lang.String | string
             /**
              * <p>RELAX NG Namespace URI.</p>
              * <p>Defined to be "{@code http://relaxng.org/ns/structure/1.0}".</p>
              * @see <a href="http://relaxng.org/spec-20011203.html">RELAX NG Specification</a>
              */
             // @ts-ignore
-            readonly RELAXNG_NS_URI: string
+            public static readonly RELAXNG_NS_URI: java.lang.String | string
             /**
              * <p>Feature for secure processing.</p>
              * <ul>
@@ -132,7 +132,7 @@ declare namespace javax {
              * </ul>
              */
             // @ts-ignore
-            readonly FEATURE_SECURE_PROCESSING: string
+            public static readonly FEATURE_SECURE_PROCESSING: java.lang.String | string
             /**
              * <p>Property: accessExternalDTD</p>
              * <p>
@@ -187,7 +187,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            readonly ACCESS_EXTERNAL_DTD: string
+            public static readonly ACCESS_EXTERNAL_DTD: java.lang.String | string
             /**
              * <p>Property: accessExternalSchema</p>
              * <p>
@@ -241,7 +241,7 @@ declare namespace javax {
              *  </p>
              */
             // @ts-ignore
-            readonly ACCESS_EXTERNAL_SCHEMA: string
+            public static readonly ACCESS_EXTERNAL_SCHEMA: java.lang.String | string
             /**
              * <p>Property: accessExternalStylesheet</p>
              * <p>
@@ -296,7 +296,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            readonly ACCESS_EXTERNAL_STYLESHEET: string
+            public static readonly ACCESS_EXTERNAL_STYLESHEET: java.lang.String | string
         }
     }
 }

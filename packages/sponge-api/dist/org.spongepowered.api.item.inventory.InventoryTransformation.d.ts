@@ -29,7 +29,7 @@ declare namespace org {
                          * @return The new transformation
                          */
                         // @ts-ignore
-                        of(...operations: org.spongepowered.api.item.inventory.query.QueryOperation[]): org.spongepowered.api.item.inventory.InventoryTransformation
+                        of(...operations: org.spongepowered.api.item.inventory.query.QueryOperation<any>[]): org.spongepowered.api.item.inventory.InventoryTransformation
                     }
                 }
             }

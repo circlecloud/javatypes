@@ -12,7 +12,7 @@ declare namespace org {
                      * @return The players
                      */
                     // @ts-ignore
-                    getPlayers(): java.util.Collection<org.spongepowered.api.entity.living.player.Player>
+                    getPlayers(): Array<org.spongepowered.api.entity.living.player.Player>
                     // @ts-ignore
                     getLocation(position: Vector3i): org.spongepowered.api.world.Location<org.spongepowered.api.world.World>
                     // @ts-ignore
@@ -241,7 +241,7 @@ declare namespace org {
                      * @return The name for this world
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the current {@link Difficulty}.
                      * @see WorldProperties#getDifficulty()
@@ -256,7 +256,7 @@ declare namespace org {
                      * @return the game rule, if available
                      */
                     // @ts-ignore
-                    getGameRule(gameRule: string): java.util.Optional<java.lang.String>
+                    getGameRule(gameRule: java.lang.String | string): java.util.Optional<java.lang.String | string>
                     /**
                      * Gets the current {@link Map map} of game rules and their
                      * values. Most game rules can be found in {@link DefaultGameRules}.
@@ -264,7 +264,7 @@ declare namespace org {
                      * @return The map of game rules and their values
                      */
                     // @ts-ignore
-                    getGameRules(): java.util.Map<java.lang.String, java.lang.String>
+                    getGameRules(): java.util.Map<java.lang.String | string, java.lang.String | string>
                     /**
                      * Gets whether the spawn chunks should remain loaded.
                      * @see WorldProperties#doesKeepSpawnLoaded()
@@ -322,7 +322,7 @@ declare namespace org {
                      * @return The sea level
                      */
                     // @ts-ignore
-                    getSeaLevel(): int
+                    getSeaLevel(): number /*int*/
                     // @ts-ignore
                     getBiomeWorker(): org.spongepowered.api.world.extent.worker.MutableBiomeVolumeWorker<org.spongepowered.api.world.World>
                     // @ts-ignore
@@ -340,7 +340,7 @@ declare namespace org {
                      * @return The view distance
                      */
                     // @ts-ignore
-                    getViewDistance(): int
+                    getViewDistance(): number /*int*/
                     /**
                      * Sets the view distance (in chunks) for this world.
                      * <p>The view distance must be greater than or equal to 3,

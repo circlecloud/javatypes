@@ -38,13 +38,13 @@ declare namespace org {
                          * The default bean name separator.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_BEAN_NAME_SEPARATOR: string
+                        public static readonly DEFAULT_BEAN_NAME_SEPARATOR: java.lang.String | string
                         /**
                          * Set the separator to expect between bean name and property path.
                          * Default is a dot (".").
                          */
                         // @ts-ignore
-                        setBeanNameSeparator(beanNameSeparator: string): void
+                        public setBeanNameSeparator(beanNameSeparator: java.lang.String | string): void
                         /**
                          * Set whether to ignore invalid keys. Default is "false".
                          * <p>If you ignore invalid keys, keys that do not follow the 'beanName.property' format
@@ -52,19 +52,19 @@ declare namespace org {
                          * This allows one to have arbitrary other keys in a properties file.
                          */
                         // @ts-ignore
-                        setIgnoreInvalidKeys(ignoreInvalidKeys: boolean): void
+                        public setIgnoreInvalidKeys(ignoreInvalidKeys: boolean): void
                         // @ts-ignore
                         processProperties(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, props: java.util.Properties): void
                         /**
                          * Process the given key as 'beanName.property' entry.
                          */
                         // @ts-ignore
-                        processKey(factory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, key: string, value: string): void
+                        processKey(factory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, key: java.lang.String | string, value: java.lang.String | string): void
                         /**
                          * Apply the given property value to the corresponding bean.
                          */
                         // @ts-ignore
-                        applyPropertyValue(factory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, beanName: string, property: string, value: string): void
+                        applyPropertyValue(factory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, beanName: java.lang.String | string, property: java.lang.String | string, value: java.lang.String | string): void
                         /**
                          * Were there overrides for this bean?
                          * Only valid after processing has occurred at least once.
@@ -72,7 +72,7 @@ declare namespace org {
                          * @return whether there were property overrides for the named bean
                          */
                         // @ts-ignore
-                        hasPropertyOverridesFor(beanName: string): boolean
+                        public hasPropertyOverridesFor(beanName: java.lang.String | string): boolean
                     }
                 }
             }

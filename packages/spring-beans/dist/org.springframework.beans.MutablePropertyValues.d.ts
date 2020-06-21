@@ -34,7 +34,7 @@ declare namespace org {
                  * @see #addPropertyValues(Map)
                  */
                 // @ts-ignore
-                constructor(original: java.util.Map<any, ?>)
+                constructor(original: java.util.Map<any, any>)
                 /**
                  * Construct a new MutablePropertyValues object using the given List of
                  * PropertyValue objects as-is.
@@ -43,7 +43,7 @@ declare namespace org {
                  * @param propertyValueList a List of PropertyValue objects
                  */
                 // @ts-ignore
-                constructor(propertyValueList: Array<org.springframework.beans.PropertyValue>)
+                constructor(propertyValueList: java.util.List<org.springframework.beans.PropertyValue> | Array<org.springframework.beans.PropertyValue>)
                 /**
                  * Return the underlying List of PropertyValue objects in its raw form.
                  * The returned List can be modified directly, although this is not recommended.
@@ -51,12 +51,12 @@ declare namespace org {
                  * It is not intended for typical programmatic use.
                  */
                 // @ts-ignore
-                getPropertyValueList(): java.util.List<org.springframework.beans.PropertyValue>
+                public getPropertyValueList(): Array<org.springframework.beans.PropertyValue>
                 /**
                  * Return the number of PropertyValue entries in the list.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Copy all given PropertyValues into this object. Guarantees PropertyValue
                  * references are independent, although it can't deep copy objects currently
@@ -65,7 +65,7 @@ declare namespace org {
                  * @return this in order to allow for adding multiple property values in a chain
                  */
                 // @ts-ignore
-                addPropertyValues(other: org.springframework.beans.PropertyValues): org.springframework.beans.MutablePropertyValues
+                public addPropertyValues(other: org.springframework.beans.PropertyValues): org.springframework.beans.MutablePropertyValues
                 /**
                  * Add all property values from the given Map.
                  * @param other a Map with property values keyed by property name,
@@ -73,7 +73,7 @@ declare namespace org {
                  * @return this in order to allow for adding multiple property values in a chain
                  */
                 // @ts-ignore
-                addPropertyValues(other: java.util.Map<any, ?>): org.springframework.beans.MutablePropertyValues
+                public addPropertyValues(other: java.util.Map<any, any>): org.springframework.beans.MutablePropertyValues
                 /**
                  * Add a PropertyValue object, replacing any existing one for the
                  * corresponding property or getting merged with it (if applicable).
@@ -81,7 +81,7 @@ declare namespace org {
                  * @return this in order to allow for adding multiple property values in a chain
                  */
                 // @ts-ignore
-                addPropertyValue(pv: org.springframework.beans.PropertyValue): org.springframework.beans.MutablePropertyValues
+                public addPropertyValue(pv: org.springframework.beans.PropertyValue): org.springframework.beans.MutablePropertyValues
                 /**
                  * Overloaded version of {@code addPropertyValue} that takes
                  * a property name and a property value.
@@ -92,7 +92,7 @@ declare namespace org {
                  * @see #addPropertyValue(PropertyValue)
                  */
                 // @ts-ignore
-                addPropertyValue(propertyName: string, propertyValue: any): void
+                public addPropertyValue(propertyName: java.lang.String | string, propertyValue: java.lang.Object | any): void
                 /**
                  * Add a PropertyValue object, replacing any existing one for the
                  * corresponding property or getting merged with it (if applicable).
@@ -101,36 +101,36 @@ declare namespace org {
                  * @return this in order to allow for adding multiple property values in a chain
                  */
                 // @ts-ignore
-                add(propertyName: string, propertyValue: any): org.springframework.beans.MutablePropertyValues
+                public add(propertyName: java.lang.String | string, propertyValue: java.lang.Object | any): org.springframework.beans.MutablePropertyValues
                 /**
                  * Modify a PropertyValue object held in this object.
                  * Indexed from 0.
                  */
                 // @ts-ignore
-                setPropertyValueAt(pv: org.springframework.beans.PropertyValue, i: number /*int*/): void
+                public setPropertyValueAt(pv: org.springframework.beans.PropertyValue, i: number /*int*/): void
                 /**
                  * Remove the given PropertyValue, if contained.
                  * @param pv the PropertyValue to remove
                  */
                 // @ts-ignore
-                removePropertyValue(pv: org.springframework.beans.PropertyValue): void
+                public removePropertyValue(pv: org.springframework.beans.PropertyValue): void
                 /**
                  * Overloaded version of {@code removePropertyValue} that takes a property name.
                  * @param propertyName name of the property
                  * @see #removePropertyValue(PropertyValue)
                  */
                 // @ts-ignore
-                removePropertyValue(propertyName: string): void
+                public removePropertyValue(propertyName: java.lang.String | string): void
                 // @ts-ignore
-                iterator(): java.util.Iterator<org.springframework.beans.PropertyValue>
+                public iterator(): java.util.Iterator<org.springframework.beans.PropertyValue>
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<org.springframework.beans.PropertyValue>
+                public spliterator(): java.util.Spliterator<org.springframework.beans.PropertyValue>
                 // @ts-ignore
-                stream(): java.util.stream.Stream<org.springframework.beans.PropertyValue>
+                public stream(): java.util.stream.Stream<org.springframework.beans.PropertyValue>
                 // @ts-ignore
-                getPropertyValues(): org.springframework.beans.PropertyValue[]
+                public getPropertyValues(): org.springframework.beans.PropertyValue[]
                 // @ts-ignore
-                getPropertyValue(propertyName: string): org.springframework.beans.PropertyValue
+                public getPropertyValue(propertyName: java.lang.String | string): org.springframework.beans.PropertyValue
                 /**
                  * Get the raw property value, if any.
                  * @param propertyName the name to search for
@@ -140,13 +140,13 @@ declare namespace org {
                  * @see PropertyValue#getValue()
                  */
                 // @ts-ignore
-                get(propertyName: string): java.lang.Object
+                public get(propertyName: java.lang.String | string): any
                 // @ts-ignore
-                changesSince(old: org.springframework.beans.PropertyValues): org.springframework.beans.PropertyValues
+                public changesSince(old: org.springframework.beans.PropertyValues): org.springframework.beans.PropertyValues
                 // @ts-ignore
-                contains(propertyName: string): boolean
+                public contains(propertyName: java.lang.String | string): boolean
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Register the specified property as "processed" in the sense
                  * of some processor calling the corresponding setter method
@@ -156,31 +156,31 @@ declare namespace org {
                  * @param propertyName the name of the property.
                  */
                 // @ts-ignore
-                registerProcessedProperty(propertyName: string): void
+                public registerProcessedProperty(propertyName: java.lang.String | string): void
                 /**
                  * Clear the "processed" registration of the given property, if any.
                  * @since 3.2.13
                  */
                 // @ts-ignore
-                clearProcessedProperty(propertyName: string): void
+                public clearProcessedProperty(propertyName: java.lang.String | string): void
                 /**
                  * Mark this holder as containing converted values only
                  * (i.e. no runtime resolution needed anymore).
                  */
                 // @ts-ignore
-                setConverted(): void
+                public setConverted(): void
                 /**
                  * Return whether this holder contains converted values only ({@code true}),
                  * or whether the values still need to be converted ({@code false}).
                  */
                 // @ts-ignore
-                isConverted(): boolean
+                public isConverted(): boolean
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -19,14 +19,14 @@ declare namespace java {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Get the role of this object.
                  * @return an instance of <code>AccessibleRole</code>
                  *      describing the role of the object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Get the <code>AccessibleValue</code> associated with this
                  * object.  In the implementation of the Java Accessibility
@@ -36,31 +36,31 @@ declare namespace java {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleValue(): javax.accessibility.AccessibleValue
+                public getAccessibleValue(): javax.accessibility.AccessibleValue
                 /**
                  * Get the accessible value of this object.
                  * @return The current value of this object.
                  */
                 // @ts-ignore
-                getCurrentAccessibleValue(): java.lang.Number
+                public getCurrentAccessibleValue(): java.lang.Number
                 /**
                  * Set the value of this object as a Number.
                  * @return True if the value was set.
                  */
                 // @ts-ignore
-                setCurrentAccessibleValue(n: java.lang.Number): boolean
+                public setCurrentAccessibleValue(n: java.lang.Number): boolean
                 /**
                  * Get the minimum accessible value of this object.
                  * @return The minimum value of this object.
                  */
                 // @ts-ignore
-                getMinimumAccessibleValue(): java.lang.Number
+                public getMinimumAccessibleValue(): java.lang.Number
                 /**
                  * Get the maximum accessible value of this object.
                  * @return The maximum value of this object.
                  */
                 // @ts-ignore
-                getMaximumAccessibleValue(): java.lang.Number
+                public getMaximumAccessibleValue(): java.lang.Number
             }
         }
     }

@@ -25,7 +25,7 @@ declare namespace javax {
                  *  array of instances of a subclass of {@code MBeanParameterInfo}.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.openmbean.OpenMBeanParameterInfo[])
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.openmbean.OpenMBeanParameterInfo[])
                 /**
                  * <p>Constructs an {@code OpenMBeanConstructorInfoSupport}
                  * instance, which describes the constructor of a class of open
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.openmbean.OpenMBeanParameterInfo[], descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.openmbean.OpenMBeanParameterInfo[], descriptor: javax.management.Descriptor)
                 /**
                  * <p>Compares the specified {@code obj} parameter with this
                  * {@code OpenMBeanConstructorInfoSupport} instance for
@@ -70,7 +70,7 @@ declare namespace javax {
                  *  {@code OpenMBeanConstructorInfoSupport} instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns the hash code value for this {@code
                  * OpenMBeanConstructorInfoSupport} instance.</p>
@@ -98,7 +98,7 @@ declare namespace javax {
                  *  OpenMBeanConstructorInfoSupport} instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * <p>Returns a string representation of this {@code
                  * OpenMBeanConstructorInfoSupport} instance.</p>
@@ -115,7 +115,7 @@ declare namespace javax {
                  *  OpenMBeanConstructorInfoSupport} instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

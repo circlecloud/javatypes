@@ -109,7 +109,7 @@ declare namespace javax {
                      *                   {@code LoginModule}.
                      */
                     // @ts-ignore
-                    initialize(subject: javax.security.auth.Subject, callbackHandler: javax.security.auth.callback.CallbackHandler, sharedState: java.util.Map<java.lang.String, any>, options: java.util.Map<java.lang.String, any>): void
+                    initialize(subject: javax.security.auth.Subject, callbackHandler: javax.security.auth.callback.CallbackHandler, sharedState: java.util.Map<java.lang.String | string, any>, options: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Method to authenticate a {@code Subject} (phase 1).
                      * <p> The implementation of this method authenticates

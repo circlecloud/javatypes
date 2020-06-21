@@ -29,7 +29,7 @@ declare namespace java {
                  * details about virtual screen devices.
                  */
                 // @ts-ignore
-                fillPointWithCoords(point: java.awt.Point): int
+                fillPointWithCoords(point: java.awt.Point): number /*int*/
                 /**
                  * Returns whether or not the window is located under the mouse
                  * pointer. The window is considered to be under the mouse pointer

@@ -14,7 +14,7 @@ declare namespace org {
                          * Return the SSL session id, if any.
                          */
                         // @ts-ignore
-                        getSessionId(): java.lang.String
+                        getSessionId(): string
                         /**
                          * Return SSL certificates associated with the request, if any.
                          */

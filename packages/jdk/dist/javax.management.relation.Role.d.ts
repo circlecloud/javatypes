@@ -20,21 +20,21 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                constructor(roleName: string, roleValue: Array<javax.management.ObjectName>)
+                constructor(roleName: java.lang.String | string, roleValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>)
                 /**
                  * Retrieves role name.
                  * @return the role name.
                  * @see #setRoleName
                  */
                 // @ts-ignore
-                getRoleName(): java.lang.String
+                public getRoleName(): string
                 /**
                  * Retrieves role value.
                  * @return ArrayList of ObjectName objects for referenced MBeans.
                  * @see #setRoleValue
                  */
                 // @ts-ignore
-                getRoleValue(): java.util.List<javax.management.ObjectName>
+                public getRoleValue(): Array<javax.management.ObjectName>
                 /**
                  * Sets role name.
                  * @param roleName  role name
@@ -42,7 +42,7 @@ declare namespace javax {
                  * @see #getRoleName
                  */
                 // @ts-ignore
-                setRoleName(roleName: string): void
+                public setRoleName(roleName: java.lang.String | string): void
                 /**
                  * Sets role value.
                  * @param roleValue  List of ObjectName objects for referenced
@@ -51,19 +51,19 @@ declare namespace javax {
                  * @see #getRoleValue
                  */
                 // @ts-ignore
-                setRoleValue(roleValue: Array<javax.management.ObjectName>): void
+                public setRoleValue(roleValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>): void
                 /**
                  * Returns a string describing the role.
                  * @return the description of the role.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Clone the role object.
                  * @return a Role that is an independent copy of the current Role object.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a string for the given role value.
                  * @param roleValue  List of ObjectName objects
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                roleValueToString(roleValue: Array<javax.management.ObjectName>): java.lang.String
+                public static roleValueToString(roleValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>): string
             }
         }
     }

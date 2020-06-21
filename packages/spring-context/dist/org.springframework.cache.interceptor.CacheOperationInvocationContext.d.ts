@@ -21,7 +21,7 @@ declare namespace org {
                      * Return the target instance on which the method was invoked.
                      */
                     // @ts-ignore
-                    getTarget(): java.lang.Object
+                    getTarget(): any
                     /**
                      * Return the method which was invoked.
                      */
@@ -31,7 +31,7 @@ declare namespace org {
                      * Return the argument list used to invoke the method.
                      */
                     // @ts-ignore
-                    getArgs(): java.lang.Object[]
+                    getArgs(): any[]
                 }
             }
         }

@@ -17,7 +17,7 @@ declare namespace org {
                      * @see org.springframework.web.client.RestTemplate
                      */
                     // @ts-ignore
-                    class InterceptingHttpAccessor extends org.springframework.http.client.support.HttpAccessor {
+                    abstract class InterceptingHttpAccessor extends org.springframework.http.client.support.HttpAccessor {
                         // @ts-ignore
                         constructor()
                         /**
@@ -28,7 +28,7 @@ declare namespace org {
                          * @see AnnotationAwareOrderComparator
                          */
                         // @ts-ignore
-                        setInterceptors(interceptors: Array<org.springframework.http.client.ClientHttpRequestInterceptor>): void
+                        public setInterceptors(interceptors: java.util.List<org.springframework.http.client.ClientHttpRequestInterceptor> | Array<org.springframework.http.client.ClientHttpRequestInterceptor>): void
                         /**
                          * Get the request interceptors that this accessor uses.
                          * <p>The returned {@link List} is active and may be modified. Note,
@@ -37,19 +37,19 @@ declare namespace org {
                          * {@link ClientHttpRequestFactory} is built.
                          */
                         // @ts-ignore
-                        getInterceptors(): java.util.List<org.springframework.http.client.ClientHttpRequestInterceptor>
+                        public getInterceptors(): Array<org.springframework.http.client.ClientHttpRequestInterceptor>
                         /**
                          * {@inheritDoc}
                          */
                         // @ts-ignore
-                        setRequestFactory(requestFactory: org.springframework.http.client.ClientHttpRequestFactory): void
+                        public setRequestFactory(requestFactory: org.springframework.http.client.ClientHttpRequestFactory): void
                         /**
                          * Overridden to expose an {@link InterceptingClientHttpRequestFactory}
                          * if necessary.
                          * @see #getInterceptors()
                          */
                         // @ts-ignore
-                        getRequestFactory(): org.springframework.http.client.ClientHttpRequestFactory
+                        public getRequestFactory(): org.springframework.http.client.ClientHttpRequestFactory
                     }
                 }
             }

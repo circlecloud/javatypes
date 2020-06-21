@@ -58,14 +58,14 @@ declare namespace javax {
                  * @return a string giving the local name
                  */
                 // @ts-ignore
-                getLocalName(): java.lang.String
+                getLocalName(): string
                 /**
                  * Gets the namespace-qualified name of the XML name that this
                  * <code>Name</code> object represents.
                  * @return the namespace-qualified name as a string
                  */
                 // @ts-ignore
-                getQualifiedName(): java.lang.String
+                getQualifiedName(): string
                 /**
                  * Returns the prefix that was specified when this <code>Name</code> object
                  * was initialized. This prefix is associated with the namespace for the XML
@@ -73,14 +73,14 @@ declare namespace javax {
                  * @return the prefix as a string
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                getPrefix(): string
                 /**
                  * Returns the URI of the namespace for the XML
                  * name that this <code>Name</code> object represents.
                  * @return the URI as a string
                  */
                 // @ts-ignore
-                getURI(): java.lang.String
+                getURI(): string
             }
         }
     }

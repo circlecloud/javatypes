@@ -11,7 +11,7 @@ declare namespace org {
                      * @return The new builder instance
                      */
                     // @ts-ignore
-                    builder(): org.spongepowered.api.data.DataRegistration.Builder<?, ?>
+                    builder(): org.spongepowered.api.data.DataRegistration.Builder<any, any>
                     /**
                      * Gets the {@link DataManipulator} class for this registration.
                      * @return The manipulator class registered
@@ -24,7 +24,7 @@ declare namespace org {
                      * @return The manipulator class registered
                      */
                     // @ts-ignore
-                    getImplementationClass(): java.lang.Class<? extends T>
+                    getImplementationClass(): java.lang.Class<any>
                     /**
                      * Gets the {@link ImmutableDataManipulator} class for this registration.
                      * @return The immutable class registered
@@ -37,7 +37,7 @@ declare namespace org {
                      * @return The immutable manipulator class registered
                      */
                     // @ts-ignore
-                    getImmutableImplementationClass(): java.lang.Class<? extends I>
+                    getImmutableImplementationClass(): java.lang.Class<any>
                     /**
                      * Gets the {@link DataManipulatorBuilder} registered for this registration.
                      * @return The manipulator builder
@@ -51,9 +51,9 @@ declare namespace org {
                     // @ts-ignore
                     getPluginContainer(): org.spongepowered.api.plugin.PluginContainer
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                 }
             }
         }

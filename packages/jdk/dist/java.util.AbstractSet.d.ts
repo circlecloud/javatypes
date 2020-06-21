@@ -25,7 +25,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AbstractSet<E> extends java.util.AbstractCollection<E> implements java.util.Set<E> {
+        abstract class AbstractSet<E> extends java.util.AbstractCollection<E> implements java.util.Set<E> {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -48,7 +48,7 @@ declare namespace java {
              * @return <tt>true</tt> if the specified object is equal to this set
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this set.  The hash code of a set is
              * defined to be the sum of the hash codes of the elements in the set,
@@ -65,7 +65,7 @@ declare namespace java {
              * @see Set#equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Removes from this set all of its elements that are contained in the
              * specified collection (optional operation).  If the specified
@@ -101,7 +101,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            public removeAll(c: java.util.Collection<any> | Array<any>): boolean
         }
     }
 }

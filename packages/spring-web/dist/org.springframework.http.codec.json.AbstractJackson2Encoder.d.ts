@@ -12,7 +12,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class AbstractJackson2Encoder extends org.springframework.http.codec.json.Jackson2CodecSupport implements org.springframework.http.codec.HttpMessageEncoder<java.lang.Object> {
+                    abstract class AbstractJackson2Encoder extends org.springframework.http.codec.json.Jackson2CodecSupport implements org.springframework.http.codec.HttpMessageEncoder<java.lang.Object | any> {
                         /**
                          * Constructor with a Jackson {@link ObjectMapper} to use.
                          */
@@ -26,15 +26,15 @@ declare namespace org {
                          * @see HttpMessageEncoder#getStreamingMediaTypes()
                          */
                         // @ts-ignore
-                        setStreamingMediaTypes(mediaTypes: Array<org.springframework.http.MediaType>): void
+                        public setStreamingMediaTypes(mediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>): void
                         // @ts-ignore
-                        canEncode(elementType: ResolvableType, mimeType: MimeType): boolean
+                        public canEncode(elementType: ResolvableType, mimeType: MimeType): boolean
                         // @ts-ignore
-                        encode(inputStream: object, bufferFactory: DataBufferFactory, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public encode(inputStream: object, bufferFactory: DataBufferFactory, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        encodeValue(value: any, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): DataBuffer
+                        public encodeValue(value: java.lang.Object | any, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): DataBuffer
                         // @ts-ignore
-                        customizeWriter(writer: ObjectWriter, mimeType: MimeType, elementType: ResolvableType, hints: java.util.Map<java.lang.String, java.lang.Object>): ObjectWriter
+                        customizeWriter(writer: ObjectWriter, mimeType: MimeType, elementType: ResolvableType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): ObjectWriter
                         /**
                          * Determine the JSON encoding to use for the given mime type.
                          * @param mimeType the mime type as requested by the caller
@@ -44,11 +44,11 @@ declare namespace org {
                         // @ts-ignore
                         getJsonEncoding(mimeType: MimeType): JsonEncoding
                         // @ts-ignore
-                        getEncodableMimeTypes(): java.util.List<MimeType>
+                        public getEncodableMimeTypes(): Array<MimeType>
                         // @ts-ignore
-                        getStreamingMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                        public getStreamingMediaTypes(): Array<org.springframework.http.MediaType>
                         // @ts-ignore
-                        getEncodeHints(actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                        public getEncodeHints(actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
                         getAnnotation<A extends java.lang.annotation.Annotation>(parameter: MethodParameter, annotType: java.lang.Class<A>): A
                     }

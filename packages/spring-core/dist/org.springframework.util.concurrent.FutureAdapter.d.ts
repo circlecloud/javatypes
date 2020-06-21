@@ -12,7 +12,7 @@ declare namespace org {
                  * @param <S> the type of the adaptee's {#code Future}
                  */
                 // @ts-ignore
-                class FutureAdapter<T, S> extends java.lang.Object implements java.util.concurrent.Future<T> {
+                abstract class FutureAdapter<T, S> extends java.lang.Object implements java.util.concurrent.Future<T> {
                     /**
                      * Constructs a new {@code FutureAdapter} with the given adaptee.
                      * @param adaptee the future to delegate to
@@ -25,15 +25,15 @@ declare namespace org {
                     // @ts-ignore
                     getAdaptee(): java.util.concurrent.Future<S>
                     // @ts-ignore
-                    cancel(mayInterruptIfRunning: boolean): boolean
+                    public cancel(mayInterruptIfRunning: boolean): boolean
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    isDone(): boolean
+                    public isDone(): boolean
                     // @ts-ignore
-                    get(): T
+                    public get(): T
                     // @ts-ignore
-                    get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+                    public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
                     /**
                      * Adapts the given adaptee's result into T.
                      * @return the adapted result

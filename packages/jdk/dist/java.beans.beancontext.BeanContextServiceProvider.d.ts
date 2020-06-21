@@ -39,7 +39,7 @@ declare namespace java {
                  * @return a reference to the requested service
                  */
                 // @ts-ignore
-                getService(bcs: java.beans.beancontext.BeanContextServices, requestor: any, serviceClass: java.lang.Class, serviceSelector: any): java.lang.Object
+                getService(bcs: java.beans.beancontext.BeanContextServices, requestor: java.lang.Object | any, serviceClass: java.lang.Class<any>, serviceSelector: java.lang.Object | any): any
                 /**
                  * Invoked by <code>BeanContextServices</code>,
                  * this method releases a nested <code>BeanContextChild</code>'s
@@ -51,7 +51,7 @@ declare namespace java {
                  * @param service the service that is to be released
                  */
                 // @ts-ignore
-                releaseService(bcs: java.beans.beancontext.BeanContextServices, requestor: any, service: any): void
+                releaseService(bcs: java.beans.beancontext.BeanContextServices, requestor: java.lang.Object | any, service: java.lang.Object | any): void
                 /**
                  * Invoked by <code>BeanContextServices</code>, this method
                  * gets the current service selectors for the specified service.
@@ -65,7 +65,7 @@ declare namespace java {
                  * @return the current service selectors for the specified serviceClass
                  */
                 // @ts-ignore
-                getCurrentServiceSelectors(bcs: java.beans.beancontext.BeanContextServices, serviceClass: java.lang.Class): java.util.Iterator
+                getCurrentServiceSelectors(bcs: java.beans.beancontext.BeanContextServices, serviceClass: java.lang.Class<any>): java.util.Iterator<any>
             }
         }
     }

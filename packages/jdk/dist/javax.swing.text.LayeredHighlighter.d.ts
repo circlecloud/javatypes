@@ -7,7 +7,7 @@ declare namespace javax {
              * @see Highlighter
              */
             // @ts-ignore
-            class LayeredHighlighter extends java.lang.Object implements javax.swing.text.Highlighter {
+            abstract class LayeredHighlighter extends java.lang.Object implements javax.swing.text.Highlighter {
                 // @ts-ignore
                 constructor()
                 /**
@@ -22,7 +22,7 @@ declare namespace javax {
                  * @param view View instance being rendered
                  */
                 // @ts-ignore
-                abstract paintLayeredHighlights(g: java.awt.Graphics, p0: number /*int*/, p1: number /*int*/, viewBounds: java.awt.Shape, editor: javax.swing.text.JTextComponent, view: javax.swing.text.View): void
+                public abstract paintLayeredHighlights(g: java.awt.Graphics, p0: number /*int*/, p1: number /*int*/, viewBounds: java.awt.Shape, editor: javax.swing.text.JTextComponent, view: javax.swing.text.View): void
             }
         }
     }

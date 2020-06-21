@@ -18,7 +18,7 @@ declare namespace org {
                              * @see ListValue
                              */
                             // @ts-ignore
-                            asList(): java.util.List<E>
+                            asList(): Array<E>
                             /**
                              * Gets an element of type {@code E} by the provided {@code index}.
                              * @param index The index to get the value at
@@ -54,7 +54,7 @@ declare namespace org {
                              * @see List#set(int, Object)
                              */
                             // @ts-ignore
-                            setElements(elements: Array<E>): M
+                            setElements(elements: java.util.List<E> | Array<E>): M
                             /**
                              * Appends the provided element at the end of the underlying {@link List}.
                              * @param element The element to append
@@ -116,7 +116,7 @@ declare namespace org {
                              * @see List#removeIf(Predicate)
                              */
                             // @ts-ignore
-                            removeAll(predicate: java.util.function.Predicate<E> | java.util.function$.Predicate<E>): M
+                            removeAll(predicate: java.util.function$.Predicate<E>): M
                         }
                     }
                 }

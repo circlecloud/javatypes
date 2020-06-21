@@ -63,13 +63,13 @@ declare namespace java {
                  * is the default.
                  */
                 // @ts-ignore
-                readonly EDGE_ZERO_FILL: number /*int*/
+                public static readonly EDGE_ZERO_FILL: number /*int*/
                 /**
                  * Pixels at the edge of the source image are copied to
                  * the corresponding pixels in the destination without modification.
                  */
                 // @ts-ignore
-                readonly EDGE_NO_OP: number /*int*/
+                public static readonly EDGE_NO_OP: number /*int*/
                 /**
                  * Returns the edge condition.
                  * @return the edge condition of this <code>ConvolveOp</code>.
@@ -77,13 +77,13 @@ declare namespace java {
                  * @see #EDGE_ZERO_FILL
                  */
                 // @ts-ignore
-                getEdgeCondition(): int
+                public getEdgeCondition(): number /*int*/
                 /**
                  * Returns the Kernel.
                  * @return the <code>Kernel</code> of this <code>ConvolveOp</code>.
                  */
                 // @ts-ignore
-                getKernel(): java.awt.image.Kernel
+                public getKernel(): java.awt.image.Kernel
                 /**
                  * Performs a convolution on BufferedImages.  Each component of the
                  * source image will be convolved (including the alpha component, if
@@ -104,7 +104,7 @@ declare namespace java {
                  * @throws ImagingOpException if <code>src</code> cannot be filtered
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
+                public filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
                 /**
                  * Performs a convolution on Rasters.  Each band of the source Raster
                  * will be convolved.
@@ -124,7 +124,7 @@ declare namespace java {
                  *          <code>dst</code>
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Creates a zeroed destination image with the correct size and number
                  * of bands.  If destCM is null, an appropriate ColorModel will be used.
@@ -134,27 +134,27 @@ declare namespace java {
                  *          size and number of bands.
                  */
                 // @ts-ignore
-                createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
+                public createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
                 /**
                  * Creates a zeroed destination Raster with the correct size and number
                  * of bands, given this source.
                  */
                 // @ts-ignore
-                createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
+                public createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
                 /**
                  * Returns the bounding box of the filtered destination image.  Since
                  * this is not a geometric operation, the bounding box does not
                  * change.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
                 /**
                  * Returns the bounding box of the filtered destination Raster.  Since
                  * this is not a geometric operation, the bounding box does not
                  * change.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
                 /**
                  * Returns the location of the destination point given a
                  * point in the source.  If dstPt is non-null, it will
@@ -162,12 +162,12 @@ declare namespace java {
                  * operation, the srcPt will equal the dstPt.
                  */
                 // @ts-ignore
-                getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Returns the rendering hints for this op.
                  */
                 // @ts-ignore
-                getRenderingHints(): java.awt.RenderingHints
+                public getRenderingHints(): java.awt.RenderingHints
             }
         }
     }

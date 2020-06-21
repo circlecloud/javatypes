@@ -35,7 +35,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            forEach(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): void
+            forEach(action: java.util.function$.Consumer<any>): void
             /**
              * Creates a {@link Spliterator} over the elements described by this
              * {@code Iterable}.

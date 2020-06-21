@@ -21,13 +21,13 @@ declare namespace org {
                      * @see org.springframework.jndi.JndiAccessor#setJndiTemplate
                      */
                     // @ts-ignore
-                    setJndiTemplate(jndiTemplate: org.springframework.jndi.JndiTemplate): void
+                    public setJndiTemplate(jndiTemplate: org.springframework.jndi.JndiTemplate): void
                     /**
                      * Set the JNDI environment to use for JNDI lookups.
                      * @see org.springframework.jndi.JndiAccessor#setJndiEnvironment
                      */
                     // @ts-ignore
-                    setJndiEnvironment(jndiEnvironment: java.util.Properties): void
+                    public setJndiEnvironment(jndiEnvironment: java.util.Properties): void
                     /**
                      * Set whether the lookup occurs in a Java EE container, i.e. if the prefix
                      * "java:comp/env/" needs to be added if the JNDI name doesn't already
@@ -35,7 +35,7 @@ declare namespace org {
                      * @see org.springframework.jndi.JndiLocatorSupport#setResourceRef
                      */
                     // @ts-ignore
-                    setResourceRef(resourceRef: boolean): void
+                    public setResourceRef(resourceRef: boolean): void
                     /**
                      * Specify a JNDI name of the {@link java.util.concurrent.Executor} to delegate to,
                      * replacing the default JNDI name "java:comp/DefaultManagedExecutorService".
@@ -45,9 +45,9 @@ declare namespace org {
                      * @see #setResourceRef
                      */
                     // @ts-ignore
-                    setJndiName(jndiName: string): void
+                    public setJndiName(jndiName: java.lang.String | string): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                 }
             }
         }

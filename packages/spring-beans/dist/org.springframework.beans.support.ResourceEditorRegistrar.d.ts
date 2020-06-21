@@ -44,7 +44,7 @@ declare namespace org {
                      * @see org.springframework.core.io.support.ResourceArrayPropertyEditor
                      */
                     // @ts-ignore
-                    registerCustomEditors(registry: org.springframework.beans.PropertyEditorRegistry): void
+                    public registerCustomEditors(registry: org.springframework.beans.PropertyEditorRegistry): void
                 }
             }
         }

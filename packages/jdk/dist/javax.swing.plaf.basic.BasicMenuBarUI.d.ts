@@ -20,9 +20,9 @@ declare namespace javax {
                     // @ts-ignore
                     changeListener: javax.swing.event.ChangeListener
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -30,7 +30,7 @@ declare namespace javax {
                     // @ts-ignore
                     installKeyboardActions(): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallDefaults(): void
                     // @ts-ignore
@@ -42,9 +42,9 @@ declare namespace javax {
                     // @ts-ignore
                     createChangeListener(): javax.swing.event.ChangeListener
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                 }
             }
         }

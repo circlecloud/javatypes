@@ -61,7 +61,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class RowFilter<M, I> extends java.lang.Object {
+        abstract class RowFilter<M, I> extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -95,7 +95,7 @@ declare namespace javax {
              * @see java.util.regex.Pattern
              */
             // @ts-ignore
-            regexFilter<M, I>(regex: string, ...indices: number /*int*/[]): javax.swing.RowFilter<M, I>
+            public static regexFilter<M, I>(regex: java.lang.String | string, ...indices: number /*int*/[]): javax.swing.RowFilter<M, I>
             /**
              * Returns a <code>RowFilter</code> that includes entries that
              * have at least one <code>Date</code> value meeting the specified
@@ -118,7 +118,7 @@ declare namespace javax {
              * @see java.util.Date
              */
             // @ts-ignore
-            dateFilter<M, I>(type: javax.swing.RowFilter.ComparisonType, date: java.util.Date, ...indices: number /*int*/[]): javax.swing.RowFilter<M, I>
+            public static dateFilter<M, I>(type: javax.swing.RowFilter.ComparisonType, date: java.util.Date, ...indices: number /*int*/[]): javax.swing.RowFilter<M, I>
             /**
              * Returns a <code>RowFilter</code> that includes entries that
              * have at least one <code>Number</code> value meeting the
@@ -137,7 +137,7 @@ declare namespace javax {
              *          or <code>number</code> is <code>null</code>
              */
             // @ts-ignore
-            numberFilter<M, I>(type: javax.swing.RowFilter.ComparisonType, number: java.lang.Number, ...indices: number /*int*/[]): javax.swing.RowFilter<M, I>
+            public static numberFilter<M, I>(type: javax.swing.RowFilter.ComparisonType, number: java.lang.Number, ...indices: number /*int*/[]): javax.swing.RowFilter<M, I>
             /**
              * Returns a <code>RowFilter</code> that includes entries if any
              * of the supplied filters includes the entry.
@@ -159,7 +159,7 @@ declare namespace javax {
              * @see java.util.Arrays#asList
              */
             // @ts-ignore
-            orFilter<M, I>(filters: java.lang.Iterable<javax.swing.RowFilter<any super M, ? super I>>): javax.swing.RowFilter<M, I>
+            public static orFilter<M, I>(filters: java.lang.Iterable<any>): javax.swing.RowFilter<M, I>
             /**
              * Returns a <code>RowFilter</code> that includes entries if all
              * of the supplied filters include the entry.
@@ -181,7 +181,7 @@ declare namespace javax {
              * @see java.util.Arrays#asList
              */
             // @ts-ignore
-            andFilter<M, I>(filters: java.lang.Iterable<javax.swing.RowFilter<any super M, ? super I>>): javax.swing.RowFilter<M, I>
+            public static andFilter<M, I>(filters: java.lang.Iterable<any>): javax.swing.RowFilter<M, I>
             /**
              * Returns a <code>RowFilter</code> that includes entries if the
              * supplied filter does not include the entry.
@@ -191,7 +191,7 @@ declare namespace javax {
              *          <code>null</code>
              */
             // @ts-ignore
-            notFilter<M, I>(filter: javax.swing.RowFilter<M, I>): javax.swing.RowFilter<M, I>
+            public static notFilter<M, I>(filter: javax.swing.RowFilter<M, I>): javax.swing.RowFilter<M, I>
             /**
              * Returns true if the specified entry should be shown;
              * returns false if the entry should be hidden.
@@ -204,7 +204,7 @@ declare namespace javax {
              * @return true if the entry should be shown
              */
             // @ts-ignore
-            abstract include(entry: javax.swing.RowFilter.Entry<M, I>): boolean
+            public abstract include(entry: javax.swing.RowFilter.Entry<any, any>): boolean
         }
     }
 }

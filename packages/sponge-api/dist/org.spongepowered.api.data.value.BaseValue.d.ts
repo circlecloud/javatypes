@@ -63,7 +63,7 @@ declare namespace org {
                          * @return The key for this value
                          */
                         // @ts-ignore
-                        getKey(): org.spongepowered.api.data.key.Key<? extends org.spongepowered.api.data.value.BaseValue<E>>
+                        getKey(): org.spongepowered.api.data.key.Key<any>
                     }
                 }
             }

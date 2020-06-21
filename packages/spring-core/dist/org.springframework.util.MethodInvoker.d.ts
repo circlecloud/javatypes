@@ -27,12 +27,12 @@ declare namespace org {
                  * @see #setTargetMethod
                  */
                 // @ts-ignore
-                setTargetClass(targetClass: java.lang.Class<any>): void
+                public setTargetClass(targetClass: java.lang.Class<any>): void
                 /**
                  * Return the target class on which to call the target method.
                  */
                 // @ts-ignore
-                getTargetClass(): java.lang.Class<?>
+                public getTargetClass(): java.lang.Class<any>
                 /**
                  * Set the target object on which to call the target method.
                  * Only necessary when the target method is not static;
@@ -41,12 +41,12 @@ declare namespace org {
                  * @see #setTargetMethod
                  */
                 // @ts-ignore
-                setTargetObject(targetObject: any): void
+                public setTargetObject(targetObject: java.lang.Object | any): void
                 /**
                  * Return the target object on which to call the target method.
                  */
                 // @ts-ignore
-                getTargetObject(): java.lang.Object
+                public getTargetObject(): any
                 /**
                  * Set the name of the method to be invoked.
                  * Refers to either a static method or a non-static method,
@@ -55,12 +55,12 @@ declare namespace org {
                  * @see #setTargetObject
                  */
                 // @ts-ignore
-                setTargetMethod(targetMethod: string): void
+                public setTargetMethod(targetMethod: java.lang.String | string): void
                 /**
                  * Return the name of the method to be invoked.
                  */
                 // @ts-ignore
-                getTargetMethod(): java.lang.String
+                public getTargetMethod(): string
                 /**
                  * Set a fully qualified static method name to invoke,
                  * e.g. "example.MyExampleClass.myExampleMethod".
@@ -69,18 +69,18 @@ declare namespace org {
                  * @see #setTargetMethod
                  */
                 // @ts-ignore
-                setStaticMethod(staticMethod: string): void
+                public setStaticMethod(staticMethod: java.lang.String | string): void
                 /**
                  * Set arguments for the method invocation. If this property is not set,
                  * or the Object array is of length 0, a method with no arguments is assumed.
                  */
                 // @ts-ignore
-                setArguments(...arguments: any[]): void
+                public setArguments(...arguments: java.lang.Object[] | any[]): void
                 /**
                  * Return the arguments for the method invocation.
                  */
                 // @ts-ignore
-                getArguments(): java.lang.Object[]
+                public getArguments(): any[]
                 /**
                  * Prepare the specified method.
                  * The method can be invoked any number of times afterwards.
@@ -88,7 +88,7 @@ declare namespace org {
                  * @see #invoke
                  */
                 // @ts-ignore
-                prepare(): void
+                public prepare(): void
                 /**
                  * Resolve the given class name into a Class.
                  * <p>The default implementations uses {@code ClassUtils.forName},
@@ -98,7 +98,7 @@ declare namespace org {
                  * @throws ClassNotFoundException if the class name was invalid
                  */
                 // @ts-ignore
-                resolveClassName(className: string): java.lang.Class<?>
+                resolveClassName(className: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Find a matching method with the specified name for the specified arguments.
                  * @return a matching method, or {#code null} if none
@@ -117,13 +117,13 @@ declare namespace org {
                  * @see #invoke
                  */
                 // @ts-ignore
-                getPreparedMethod(): java.lang.reflect.Method
+                public getPreparedMethod(): java.lang.reflect.Method
                 /**
                  * Return whether this invoker has been prepared already,
                  * i.e. whether it allows access to {@link #getPreparedMethod()} already.
                  */
                 // @ts-ignore
-                isPrepared(): boolean
+                public isPrepared(): boolean
                 /**
                  * Invoke the specified method.
                  * <p>The invoker needs to have been prepared before.
@@ -134,7 +134,7 @@ declare namespace org {
                  * @see #prepare
                  */
                 // @ts-ignore
-                invoke(): java.lang.Object
+                public invoke(): any
                 /**
                  * Algorithm that judges the match between the declared parameter types of a candidate method
                  * and a specific list of arguments that this method is supposed to be invoked with.
@@ -156,7 +156,7 @@ declare namespace org {
                  * @return the accumulated weight for all arguments
                  */
                 // @ts-ignore
-                getTypeDifferenceWeight(paramTypes: java.lang.Class[], args: any[]): int
+                public static getTypeDifferenceWeight(paramTypes: java.lang.Class<any>[], args: java.lang.Object[] | any[]): number /*int*/
             }
         }
     }

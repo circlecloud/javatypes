@@ -31,13 +31,13 @@ declare namespace org {
                  * @see java.text.MessageFormat
                  */
                 // @ts-ignore
-                class AbstractMessageSource extends org.springframework.context.support.MessageSourceSupport implements org.springframework.context.HierarchicalMessageSource {
+                abstract class AbstractMessageSource extends org.springframework.context.support.MessageSourceSupport implements org.springframework.context.HierarchicalMessageSource {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setParentMessageSource(parent: org.springframework.context.MessageSource): void
+                    public setParentMessageSource(parent: org.springframework.context.MessageSource): void
                     // @ts-ignore
-                    getParentMessageSource(): org.springframework.context.MessageSource
+                    public getParentMessageSource(): org.springframework.context.MessageSource
                     /**
                      * Specify locale-independent common messages, with the message code as key
                      * and the full message String (may contain argument placeholders) as value.
@@ -45,7 +45,7 @@ declare namespace org {
                      * through a {@link org.springframework.beans.factory.config.PropertiesFactoryBean}.
                      */
                     // @ts-ignore
-                    setCommonMessages(commonMessages: java.util.Properties): void
+                    public setCommonMessages(commonMessages: java.util.Properties): void
                     /**
                      * Return a Properties object defining locale-independent common messages, if any.
                      */
@@ -69,7 +69,7 @@ declare namespace org {
                      * @see org.springframework.validation.FieldError
                      */
                     // @ts-ignore
-                    setUseCodeAsDefaultMessage(useCodeAsDefaultMessage: boolean): void
+                    public setUseCodeAsDefaultMessage(useCodeAsDefaultMessage: boolean): void
                     /**
                      * Return whether to use the message code as default message instead of
                      * throwing a NoSuchMessageException. Useful for development and debugging.
@@ -81,11 +81,11 @@ declare namespace org {
                     // @ts-ignore
                     isUseCodeAsDefaultMessage(): boolean
                     // @ts-ignore
-                    getMessage(code: string, args: any[], defaultMessage: string, locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], defaultMessage: java.lang.String | string, locale: java.util.Locale): string
                     // @ts-ignore
-                    getMessage(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     // @ts-ignore
-                    getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): java.lang.String
+                    public getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): string
                     /**
                      * Resolve the given code and arguments as message in the given Locale,
                      * returning {@code null} if not found. Does <i>not</i> fall back to
@@ -101,7 +101,7 @@ declare namespace org {
                      * @see #setUseCodeAsDefaultMessage
                      */
                     // @ts-ignore
-                    getMessageInternal(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                    getMessageInternal(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     /**
                      * Try to retrieve the given message from the parent {@code MessageSource}, if any.
                      * @param code the code to lookup up, such as 'calculator.noRateSet'
@@ -112,7 +112,7 @@ declare namespace org {
                      * @see #getParentMessageSource()
                      */
                     // @ts-ignore
-                    getMessageFromParent(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                    getMessageFromParent(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     /**
                      * Get a default message for the given {@code MessageSourceResolvable}.
                      * <p>This implementation fully renders the default message if available,
@@ -126,7 +126,7 @@ declare namespace org {
                      * @see #getDefaultMessage(String)
                      */
                     // @ts-ignore
-                    getDefaultMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): java.lang.String
+                    getDefaultMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): string
                     /**
                      * Return a fallback default message for the given code, if any.
                      * <p>Default is to return the code itself if "useCodeAsDefaultMessage" is activated,
@@ -138,7 +138,7 @@ declare namespace org {
                      * @see #setUseCodeAsDefaultMessage
                      */
                     // @ts-ignore
-                    getDefaultMessage(code: string): java.lang.String
+                    getDefaultMessage(code: java.lang.String | string): string
                     /**
                      * Searches through the given array of objects, finds any MessageSourceResolvable
                      * objects and resolves them.
@@ -148,7 +148,7 @@ declare namespace org {
                      * @return an array of arguments with any MessageSourceResolvables resolved
                      */
                     // @ts-ignore
-                    resolveArguments(args: any[], locale: java.util.Locale): java.lang.Object[]
+                    resolveArguments(args: java.lang.Object[] | any[], locale: java.util.Locale): any[]
                     /**
                      * Subclasses can override this method to resolve a message without arguments
                      * in an optimized fashion, i.e. to resolve without involving a MessageFormat.
@@ -167,7 +167,7 @@ declare namespace org {
                      * @see java.text.MessageFormat
                      */
                     // @ts-ignore
-                    resolveCodeWithoutArguments(code: string, locale: java.util.Locale): java.lang.String
+                    resolveCodeWithoutArguments(code: java.lang.String | string, locale: java.util.Locale): string
                     /**
                      * Subclasses must implement this method to resolve a message.
                      * <p>Returns a MessageFormat instance rather than a message String,
@@ -182,7 +182,7 @@ declare namespace org {
                      * @see #resolveCodeWithoutArguments(String, java.util.Locale)
                      */
                     // @ts-ignore
-                    abstract resolveCode(code: string, locale: java.util.Locale): java.text.MessageFormat
+                    abstract resolveCode(code: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                 }
             }
         }

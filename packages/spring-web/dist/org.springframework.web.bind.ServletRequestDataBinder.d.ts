@@ -40,7 +40,7 @@ declare namespace org {
                      * @see #DEFAULT_OBJECT_NAME
                      */
                     // @ts-ignore
-                    constructor(target: any)
+                    constructor(target: java.lang.Object | any)
                     /**
                      * Create a new ServletRequestDataBinder instance.
                      * @param target the target object to bind onto (or {#code null}
@@ -48,7 +48,7 @@ declare namespace org {
                      * @param objectName the name of the target object
                      */
                     // @ts-ignore
-                    constructor(target: any, objectName: string)
+                    constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                     /**
                      * Bind the parameters of the given request to this binder's target,
                      * also binding multipart files in case of a multipart request.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @see #bind(org.springframework.beans.PropertyValues)
                      */
                     // @ts-ignore
-                    bind(request: ServletRequest): void
+                    public bind(request: ServletRequest): void
                     /**
                      * Extension point that subclasses can use to add extra bind values for a
                      * request. Invoked before {@link #doBind(MutablePropertyValues)}.
@@ -84,7 +84,7 @@ declare namespace org {
                      * @throws ServletRequestBindingException subclass of ServletException on any binding problem
                      */
                     // @ts-ignore
-                    closeNoCatch(): void
+                    public closeNoCatch(): void
                 }
             }
         }

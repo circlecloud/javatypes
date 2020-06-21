@@ -26,7 +26,7 @@ declare namespace javax {
                  * @param message the detail message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a new <code>URIReferenceException</code> with the
                  * specified detail message and cause.
@@ -38,7 +38,7 @@ declare namespace javax {
                  *         indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a new <code>URIReferenceException</code> with the
                  * specified detail message, cause and <code>URIReference</code>.
@@ -54,7 +54,7 @@ declare namespace javax {
                  *     <code>null</code>
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error, uriReference: javax.xml.crypto.URIReference)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, uriReference: javax.xml.crypto.URIReference)
                 /**
                  * Constructs a new <code>URIReferenceException</code> with the specified
                  * cause and a detail message of <code>(cause==null ? null :
@@ -64,7 +64,7 @@ declare namespace javax {
                  *         indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Returns the <code>URIReference</code> that was being dereferenced
                  * when the exception was thrown.
@@ -82,7 +82,7 @@ declare namespace javax {
                  *     <code>null</code> if the cause is nonexistent or unknown.
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
                 /**
                  * Prints this <code>URIReferenceException</code>, its backtrace and
                  * the cause's backtrace to the standard error stream.

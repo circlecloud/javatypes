@@ -60,7 +60,7 @@ declare namespace javax {
              * @author Timothy Prinzing
              */
             // @ts-ignore
-            class AbstractDocument extends java.lang.Object implements javax.swing.text.Document, java.io.Serializable {
+            abstract class AbstractDocument extends java.lang.Object implements javax.swing.text.Document, java.io.Serializable {
                 /**
                  * Constructs a new <code>AbstractDocument</code>, wrapped around some
                  * specified content storage mechanism.
@@ -85,33 +85,33 @@ declare namespace javax {
                  * Error message to indicate a bad location.
                  */
                 // @ts-ignore
-                readonly BAD_LOCATION: string
+                static readonly BAD_LOCATION: java.lang.String | string
                 /**
                  * Name of elements used to represent paragraphs
                  */
                 // @ts-ignore
-                readonly ParagraphElementName: string
+                public static readonly ParagraphElementName: java.lang.String | string
                 /**
                  * Name of elements used to represent content
                  */
                 // @ts-ignore
-                readonly ContentElementName: string
+                public static readonly ContentElementName: java.lang.String | string
                 /**
                  * Name of elements used to hold sections (lines/paragraphs).
                  */
                 // @ts-ignore
-                readonly SectionElementName: string
+                public static readonly SectionElementName: java.lang.String | string
                 /**
                  * Name of elements used to hold a unidirectional run
                  */
                 // @ts-ignore
-                readonly BidiElementName: string
+                public static readonly BidiElementName: java.lang.String | string
                 /**
                  * Name of the attribute used to specify element
                  * names.
                  */
                 // @ts-ignore
-                readonly ElementNameAttribute: string
+                public static readonly ElementNameAttribute: java.lang.String | string
                 /**
                  * Supports managing a set of properties. Callers
                  * can use the <code>documentProperties</code> dictionary
@@ -120,14 +120,14 @@ declare namespace javax {
                  * @see #setDocumentProperties
                  */
                 // @ts-ignore
-                getDocumentProperties(): java.util.Dictionary<java.lang.Object, java.lang.Object>
+                public getDocumentProperties(): java.util.Dictionary<java.lang.Object | any, java.lang.Object | any>
                 /**
                  * Replaces the document properties dictionary for this document.
                  * @param x the new dictionary
                  * @see #getDocumentProperties
                  */
                 // @ts-ignore
-                setDocumentProperties(x: java.util.Dictionary<java.lang.Object, java.lang.Object>): void
+                public setDocumentProperties(x: java.util.Dictionary<java.lang.Object | any, java.lang.Object | any>): void
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -198,7 +198,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
                 /**
                  * Gets the asynchronous loading priority.  If less than zero,
                  * the document should not be loaded asynchronously.
@@ -206,7 +206,7 @@ declare namespace javax {
                  *    if the document should not be loaded asynchronously
                  */
                 // @ts-ignore
-                getAsynchronousLoadPriority(): int
+                public getAsynchronousLoadPriority(): number /*int*/
                 /**
                  * Sets the asynchronous loading priority.
                  * @param p the new asynchronous loading priority; a value
@@ -214,7 +214,7 @@ declare namespace javax {
                  *    loaded asynchronously
                  */
                 // @ts-ignore
-                setAsynchronousLoadPriority(p: number /*int*/): void
+                public setAsynchronousLoadPriority(p: number /*int*/): void
                 /**
                  * Sets the <code>DocumentFilter</code>. The <code>DocumentFilter</code>
                  * is passed <code>insert</code> and <code>remove</code> to conditionally
@@ -225,7 +225,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                setDocumentFilter(filter: javax.swing.text.DocumentFilter): void
+                public setDocumentFilter(filter: javax.swing.text.DocumentFilter): void
                 /**
                  * Returns the <code>DocumentFilter</code> that is responsible for
                  * filtering of insertion/removal. A <code>null</code> return value
@@ -235,7 +235,7 @@ declare namespace javax {
                  * @return the DocumentFilter
                  */
                 // @ts-ignore
-                getDocumentFilter(): javax.swing.text.DocumentFilter
+                public getDocumentFilter(): javax.swing.text.DocumentFilter
                 /**
                  * This allows the model to be safely rendered in the presence
                  * of currency, if the model supports being updated asynchronously.
@@ -266,7 +266,7 @@ declare namespace javax {
                  * @param r the renderer to execute
                  */
                 // @ts-ignore
-                render(r: java.lang.Runnable): void
+                public render(r: java.lang.Runnable): void
                 /**
                  * Returns the length of the data.  This is the number of
                  * characters of content that represents the users data.
@@ -274,21 +274,21 @@ declare namespace javax {
                  * @see Document#getLength
                  */
                 // @ts-ignore
-                getLength(): int
+                public getLength(): number /*int*/
                 /**
                  * Adds a document listener for notification of any changes.
                  * @param listener the <code>DocumentListener</code> to add
                  * @see Document#addDocumentListener
                  */
                 // @ts-ignore
-                addDocumentListener(listener: javax.swing.event.DocumentListener): void
+                public addDocumentListener(listener: javax.swing.event.DocumentListener): void
                 /**
                  * Removes a document listener.
                  * @param listener the <code>DocumentListener</code> to remove
                  * @see Document#removeDocumentListener
                  */
                 // @ts-ignore
-                removeDocumentListener(listener: javax.swing.event.DocumentListener): void
+                public removeDocumentListener(listener: javax.swing.event.DocumentListener): void
                 /**
                  * Returns an array of all the document listeners
                  * registered on this document.
@@ -300,7 +300,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getDocumentListeners(): javax.swing.event.DocumentListener[]
+                public getDocumentListeners(): javax.swing.event.DocumentListener[]
                 /**
                  * Adds an undo listener for notification of any changes.
                  * Undo/Redo operations performed on the <code>UndoableEdit</code>
@@ -310,14 +310,14 @@ declare namespace javax {
                  * @see Document#addUndoableEditListener
                  */
                 // @ts-ignore
-                addUndoableEditListener(listener: javax.swing.event.UndoableEditListener): void
+                public addUndoableEditListener(listener: javax.swing.event.UndoableEditListener): void
                 /**
                  * Removes an undo listener.
                  * @param listener the <code>UndoableEditListener</code> to remove
                  * @see Document#removeDocumentListener
                  */
                 // @ts-ignore
-                removeUndoableEditListener(listener: javax.swing.event.UndoableEditListener): void
+                public removeUndoableEditListener(listener: javax.swing.event.UndoableEditListener): void
                 /**
                  * Returns an array of all the undoable edit listeners
                  * registered on this document.
@@ -329,7 +329,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getUndoableEditListeners(): javax.swing.event.UndoableEditListener[]
+                public getUndoableEditListeners(): javax.swing.event.UndoableEditListener[]
                 /**
                  * A convenience method for looking up a property value. It is
                  * equivalent to:
@@ -341,7 +341,7 @@ declare namespace javax {
                  * @see #getDocumentProperties
                  */
                 // @ts-ignore
-                getProperty(key: any): java.lang.Object
+                public getProperty(key: java.lang.Object | any): any
                 /**
                  * A convenience method for storing up a property value.  It is
                  * equivalent to:
@@ -355,7 +355,7 @@ declare namespace javax {
                  * @see #getDocumentProperties
                  */
                 // @ts-ignore
-                putProperty(key: any, value: any): void
+                public putProperty(key: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Removes some content from the document.
                  * Removing content causes a write lock to be held while the
@@ -373,7 +373,7 @@ declare namespace javax {
                  * @see Document#remove
                  */
                 // @ts-ignore
-                remove(offs: number /*int*/, len: number /*int*/): void
+                public remove(offs: number /*int*/, len: number /*int*/): void
                 /**
                  * Deletes the region of text from <code>offset</code> to
                  * <code>offset + length</code>, and replaces it with <code>text</code>.
@@ -394,7 +394,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                replace(offset: number /*int*/, length: number /*int*/, text: string, attrs: javax.swing.text.AttributeSet): void
+                public replace(offset: number /*int*/, length: number /*int*/, text: java.lang.String | string, attrs: javax.swing.text.AttributeSet): void
                 /**
                  * Inserts some content into the document.
                  * Inserting content causes a write lock to be held while the
@@ -413,7 +413,7 @@ declare namespace javax {
                  * @see Document#insertString
                  */
                 // @ts-ignore
-                insertString(offs: number /*int*/, str: string, a: javax.swing.text.AttributeSet): void
+                public insertString(offs: number /*int*/, str: java.lang.String | string, a: javax.swing.text.AttributeSet): void
                 /**
                  * Gets a sequence of text from the document.
                  * @param offset the starting offset &gt;= 0
@@ -424,7 +424,7 @@ declare namespace javax {
                  * @see Document#getText
                  */
                 // @ts-ignore
-                getText(offset: number /*int*/, length: number /*int*/): java.lang.String
+                public getText(offset: number /*int*/, length: number /*int*/): string
                 /**
                  * Fetches the text contained within the given portion
                  * of the document.
@@ -456,7 +456,7 @@ declare namespace javax {
                  *    that is not a valid position within the document
                  */
                 // @ts-ignore
-                getText(offset: number /*int*/, length: number /*int*/, txt: javax.swing.text.Segment): void
+                public getText(offset: number /*int*/, length: number /*int*/, txt: javax.swing.text.Segment): void
                 /**
                  * Returns a position that will track change as the document
                  * is altered.
@@ -472,7 +472,7 @@ declare namespace javax {
                  * @see Document#createPosition
                  */
                 // @ts-ignore
-                createPosition(offs: number /*int*/): javax.swing.text.Position
+                public createPosition(offs: number /*int*/): javax.swing.text.Position
                 /**
                  * Returns a position that represents the start of the document.  The
                  * position returned can be counted on to track change and stay
@@ -480,7 +480,7 @@ declare namespace javax {
                  * @return the position
                  */
                 // @ts-ignore
-                getStartPosition(): javax.swing.text.Position
+                public getStartPosition(): javax.swing.text.Position
                 /**
                  * Returns a position that represents the end of the document.  The
                  * position returned can be counted on to track change and stay
@@ -488,7 +488,7 @@ declare namespace javax {
                  * @return the position
                  */
                 // @ts-ignore
-                getEndPosition(): javax.swing.text.Position
+                public getEndPosition(): javax.swing.text.Position
                 /**
                  * Gets all root elements defined.  Typically, there
                  * will only be one so the default implementation
@@ -496,7 +496,7 @@ declare namespace javax {
                  * @return the root element
                  */
                 // @ts-ignore
-                getRootElements(): javax.swing.text.Element[]
+                public getRootElements(): javax.swing.text.Element[]
                 /**
                  * Returns the root element that views should be based upon
                  * unless some other mechanism for assigning views to element
@@ -505,14 +505,14 @@ declare namespace javax {
                  * @see Document#getDefaultRootElement
                  */
                 // @ts-ignore
-                abstract getDefaultRootElement(): javax.swing.text.Element
+                public abstract getDefaultRootElement(): javax.swing.text.Element
                 /**
                  * Returns the root element of the bidirectional structure for this
                  * document.  Its children represent character runs with a given
                  * Unicode bidi level.
                  */
                 // @ts-ignore
-                getBidiRootElement(): javax.swing.text.Element
+                public getBidiRootElement(): javax.swing.text.Element
                 /**
                  * Get the paragraph element containing the given position.  Sub-classes
                  * must define for themselves what exactly constitutes a paragraph.  They
@@ -522,7 +522,7 @@ declare namespace javax {
                  * @return the element
                  */
                 // @ts-ignore
-                abstract getParagraphElement(pos: number /*int*/): javax.swing.text.Element
+                public abstract getParagraphElement(pos: number /*int*/): javax.swing.text.Element
                 /**
                  * Fetches the context for managing attributes.  This
                  * method effectively establishes the strategy used
@@ -566,7 +566,7 @@ declare namespace javax {
                  * @param out the output stream
                  */
                 // @ts-ignore
-                dump(out: java.io.PrintStream): void
+                public dump(out: java.io.PrintStream): void
                 /**
                  * Gets the content for the document.
                  * @return the content
@@ -653,7 +653,7 @@ declare namespace javax {
                  * @see #readUnlock
                  */
                 // @ts-ignore
-                readLock(): void
+                public readLock(): void
                 /**
                  * Does a read unlock.  This signals that one
                  * of the readers is done.  If there are no more readers
@@ -672,7 +672,7 @@ declare namespace javax {
                  * @see #readLock
                  */
                 // @ts-ignore
-                readUnlock(): void
+                public readUnlock(): void
             }
         }
     }

@@ -18,7 +18,7 @@ declare namespace javax {
              * @param description A human readable description of the feature.
              */
             // @ts-ignore
-            constructor(name: string, description: string)
+            constructor(name: java.lang.String | string, description: java.lang.String | string)
             /**
              * Constructs an <CODE>MBeanFeatureInfo</CODE> object.
              * @param name The name of the feature.
@@ -28,7 +28,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(name: string, description: string, descriptor: javax.management.Descriptor)
+            constructor(name: java.lang.String | string, description: java.lang.String | string, descriptor: javax.management.Descriptor)
             /**
              * The name of the feature.  It is recommended that subclasses call
              * {@link #getName} rather than reading this field, and that they
@@ -36,7 +36,7 @@ declare namespace javax {
              * @serial The name of the feature.
              */
             // @ts-ignore
-            name: string
+            name: java.lang.String | string
             /**
              * The human-readable description of the feature.  It is
              * recommended that subclasses call {@link #getDescription} rather
@@ -44,19 +44,19 @@ declare namespace javax {
              * @serial The human-readable description of the feature.
              */
             // @ts-ignore
-            description: string
+            description: java.lang.String | string
             /**
              * Returns the name of the feature.
              * @return the name of the feature.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns the human-readable description of the feature.
              * @return the human-readable description of the feature.
              */
             // @ts-ignore
-            getDescription(): java.lang.String
+            public getDescription(): string
             /**
              * Returns the descriptor for the feature.  Changing the returned value
              * will have no affect on the original descriptor.
@@ -64,7 +64,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDescriptor(): javax.management.Descriptor
+            public getDescriptor(): javax.management.Descriptor
             /**
              * Compare this MBeanFeatureInfo to another.
              * @param o the object to compare to.
@@ -75,9 +75,9 @@ declare namespace javax {
              *  MBeanFeatureInfo.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

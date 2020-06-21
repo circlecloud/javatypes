@@ -6,19 +6,19 @@ declare namespace org {
                 // @ts-ignore
                 constructor(id: number /*int*/)
                 // @ts-ignore
-                getDurationModifier(): double
+                public getDurationModifier(): number /*double*/
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Get the potion type bound to this wrapper.
                  * @return The potion effect type
                  */
                 // @ts-ignore
-                getType(): org.bukkit.potion.PotionEffectType
+                public getType(): org.bukkit.potion.PotionEffectType
                 // @ts-ignore
-                isInstant(): boolean
+                public isInstant(): boolean
                 // @ts-ignore
-                getColor(): org.bukkit.Color
+                public getColor(): org.bukkit.Color
             }
         }
     }

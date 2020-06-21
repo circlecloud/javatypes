@@ -27,14 +27,14 @@ declare namespace org {
                      * @return The id
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the default maximum quantity for
                      * {@link ItemStack}s of this item.
                      * @return Max stack quantity
                      */
                     // @ts-ignore
-                    getMaxStackQuantity(): int
+                    getMaxStackQuantity(): number /*int*/
                     /**
                      * Gets the default {@link Property} of this {@link ItemType}.
                      * <p>While item stacks do have properties, generally, there is an

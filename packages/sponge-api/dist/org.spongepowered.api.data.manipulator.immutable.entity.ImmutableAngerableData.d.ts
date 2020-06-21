@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable bounded value for the anger level
                                  */
                                 // @ts-ignore
-                                angerLevel(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                angerLevel(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

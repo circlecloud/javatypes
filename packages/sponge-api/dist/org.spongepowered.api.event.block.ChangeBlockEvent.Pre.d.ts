@@ -21,7 +21,7 @@ declare namespace org {
                              * @return The immutable list of one or more locations that can change
                              */
                             // @ts-ignore
-                            getLocations(): java.util.List<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
+                            getLocations(): Array<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
                         }
                     }
                 }

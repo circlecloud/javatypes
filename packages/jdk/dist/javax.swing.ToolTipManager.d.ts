@@ -31,13 +31,13 @@ declare namespace javax {
              * @param flag  true to enable the tip, false otherwise
              */
             // @ts-ignore
-            setEnabled(flag: boolean): void
+            public setEnabled(flag: boolean): void
             /**
              * Returns true if this object is enabled.
              * @return true if this object is enabled, false otherwise
              */
             // @ts-ignore
-            isEnabled(): boolean
+            public isEnabled(): boolean
             /**
              * When displaying the <code>JToolTip</code>, the
              * <code>ToolTipManager</code> chooses to use a lightweight
@@ -47,7 +47,7 @@ declare namespace javax {
              * @param aFlag true if a lightweight panel is desired, false otherwise
              */
             // @ts-ignore
-            setLightWeightPopupEnabled(aFlag: boolean): void
+            public setLightWeightPopupEnabled(aFlag: boolean): void
             /**
              * Returns true if lightweight (all-Java) <code>Tooltips</code>
              * are in use, or false if heavyweight (native peer)
@@ -55,7 +55,7 @@ declare namespace javax {
              * @return true if lightweight <code>ToolTips</code> are in use
              */
             // @ts-ignore
-            isLightWeightPopupEnabled(): boolean
+            public isLightWeightPopupEnabled(): boolean
             /**
              * Specifies the initial delay value.
              * @param milliseconds  the number of milliseconds to delay
@@ -64,7 +64,7 @@ declare namespace javax {
              * @see #getInitialDelay
              */
             // @ts-ignore
-            setInitialDelay(milliseconds: number /*int*/): void
+            public setInitialDelay(milliseconds: number /*int*/): void
             /**
              * Returns the initial delay value.
              * @return an integer representing the initial delay value,
@@ -72,7 +72,7 @@ declare namespace javax {
              * @see #setInitialDelay
              */
             // @ts-ignore
-            getInitialDelay(): int
+            public getInitialDelay(): number /*int*/
             /**
              * Specifies the dismissal delay value.
              * @param milliseconds  the number of milliseconds to delay
@@ -80,7 +80,7 @@ declare namespace javax {
              * @see #getDismissDelay
              */
             // @ts-ignore
-            setDismissDelay(milliseconds: number /*int*/): void
+            public setDismissDelay(milliseconds: number /*int*/): void
             /**
              * Returns the dismissal delay value.
              * @return an integer representing the dismissal delay value,
@@ -88,7 +88,7 @@ declare namespace javax {
              * @see #setDismissDelay
              */
             // @ts-ignore
-            getDismissDelay(): int
+            public getDismissDelay(): number /*int*/
             /**
              * Used to specify the amount of time before the user has to wait
              * <code>initialDelay</code> milliseconds before a tooltip will be
@@ -103,20 +103,20 @@ declare namespace javax {
              * @see #getReshowDelay
              */
             // @ts-ignore
-            setReshowDelay(milliseconds: number /*int*/): void
+            public setReshowDelay(milliseconds: number /*int*/): void
             /**
              * Returns the reshow delay property.
              * @return reshown delay property
              * @see #setReshowDelay
              */
             // @ts-ignore
-            getReshowDelay(): int
+            public getReshowDelay(): number /*int*/
             /**
              * Returns a shared <code>ToolTipManager</code> instance.
              * @return a shared <code>ToolTipManager</code> object
              */
             // @ts-ignore
-            sharedInstance(): javax.swing.ToolTipManager
+            public static sharedInstance(): javax.swing.ToolTipManager
             /**
              * Registers a component for tooltip management.
              * <p>
@@ -129,48 +129,48 @@ declare namespace javax {
              * @see JComponent#isFocusTraversable
              */
             // @ts-ignore
-            registerComponent(component: javax.swing.JComponent): void
+            public registerComponent(component: javax.swing.JComponent): void
             /**
              * Removes a component from tooltip control.
              * @param component  a <code>JComponent</code> object to remove
              */
             // @ts-ignore
-            unregisterComponent(component: javax.swing.JComponent): void
+            public unregisterComponent(component: javax.swing.JComponent): void
             /**
              * Called when the mouse enters the region of a component.
              * This determines whether the tool tip should be shown.
              * @param event  the event in question
              */
             // @ts-ignore
-            mouseEntered(event: java.awt.event.MouseEvent): void
+            public mouseEntered(event: java.awt.event.MouseEvent): void
             /**
              * Called when the mouse exits the region of a component.
              * Any tool tip showing should be hidden.
              * @param event  the event in question
              */
             // @ts-ignore
-            mouseExited(event: java.awt.event.MouseEvent): void
+            public mouseExited(event: java.awt.event.MouseEvent): void
             /**
              * Called when the mouse is pressed.
              * Any tool tip showing should be hidden.
              * @param event  the event in question
              */
             // @ts-ignore
-            mousePressed(event: java.awt.event.MouseEvent): void
+            public mousePressed(event: java.awt.event.MouseEvent): void
             /**
              * Called when the mouse is pressed and dragged.
              * Does nothing.
              * @param event  the event in question
              */
             // @ts-ignore
-            mouseDragged(event: java.awt.event.MouseEvent): void
+            public mouseDragged(event: java.awt.event.MouseEvent): void
             /**
              * Called when the mouse is moved.
              * Determines whether the tool tip should be displayed.
              * @param event  the event in question
              */
             // @ts-ignore
-            mouseMoved(event: java.awt.event.MouseEvent): void
+            public mouseMoved(event: java.awt.event.MouseEvent): void
         }
     }
 }

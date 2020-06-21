@@ -40,10 +40,22 @@ declare namespace java {
              */
             // @ts-ignore
             class ThaiBuddhistEra extends java.lang.Enum<java.time.chrono.ThaiBuddhistEra> implements java.time.chrono.Era {
+                /**
+                 * The singleton instance for the era before the current one, 'Before Buddhist Era',
+                 * which has the numeric value 0.
+                 */
+                // @ts-ignore
+                readonly BEFORE_BE: java.time.chrono.ThaiBuddhistEra
+                /**
+                 * The singleton instance for the current era, 'Buddhist Era',
+                 * which has the numeric value 1.
+                 */
+                // @ts-ignore
+                readonly BE: java.time.chrono.ThaiBuddhistEra
                 // @ts-ignore
                 values(): java.time.chrono.ThaiBuddhistEra[]
                 // @ts-ignore
-                valueOf(name: string): java.time.chrono.ThaiBuddhistEra
+                valueOf(name: java.lang.String | string): java.time.chrono.ThaiBuddhistEra
                 /**
                  * Obtains an instance of {@code ThaiBuddhistEra} from an {@code int} value.
                  * <p>
@@ -62,7 +74,7 @@ declare namespace java {
                  * @return the era value, from 0 (BEFORE_BE) to 1 (BE)
                  */
                 // @ts-ignore
-                getValue(): int
+                getValue(): number /*int*/
             }
         }
     }

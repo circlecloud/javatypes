@@ -30,7 +30,7 @@ declare namespace java {
                  * @return a new sequential or parallel {#code Stream}
                  */
                 // @ts-ignore
-                stream<T>(spliterator: java.util.Spliterator<T>, parallel: boolean): java.util.stream.Stream<T>
+                public static stream<T>(spliterator: java.util.Spliterator<T>, parallel: boolean): java.util.stream.Stream<T>
                 /**
                  * Creates a new sequential or parallel {@code Stream} from a
                  * {@code Supplier} of {@code Spliterator}.
@@ -62,7 +62,7 @@ declare namespace java {
                  * @see #stream(java.util.Spliterator, boolean)
                  */
                 // @ts-ignore
-                stream<T>(supplier: java.util.function.Supplier<java.util.Spliterator<T>> | java.util.function$.Supplier<java.util.Spliterator<T>>, characteristics: number /*int*/, parallel: boolean): java.util.stream.Stream<T>
+                public static stream<T>(supplier: java.util.function$.Supplier<any>, characteristics: number /*int*/, parallel: boolean): java.util.stream.Stream<T>
                 /**
                  * Creates a new sequential or parallel {@code IntStream} from a
                  * {@code Spliterator.OfInt}.
@@ -82,7 +82,7 @@ declare namespace java {
                  * @return a new sequential or parallel {#code IntStream}
                  */
                 // @ts-ignore
-                intStream(spliterator: java.util.Spliterator.OfInt, parallel: boolean): java.util.stream.IntStream
+                public static intStream(spliterator: java.util.Spliterator.OfInt, parallel: boolean): java.util.stream.IntStream
                 /**
                  * Creates a new sequential or parallel {@code IntStream} from a
                  * {@code Supplier} of {@code Spliterator.OfInt}.
@@ -113,7 +113,7 @@ declare namespace java {
                  * @see #intStream(java.util.Spliterator.OfInt, boolean)
                  */
                 // @ts-ignore
-                intStream(supplier: java.util.function.Supplier<java.util.Spliterator.OfInt> | java.util.function$.Supplier<java.util.Spliterator.OfInt>, characteristics: number /*int*/, parallel: boolean): java.util.stream.IntStream
+                public static intStream(supplier: java.util.function$.Supplier<any>, characteristics: number /*int*/, parallel: boolean): java.util.stream.IntStream
                 /**
                  * Creates a new sequential or parallel {@code LongStream} from a
                  * {@code Spliterator.OfLong}.
@@ -133,7 +133,7 @@ declare namespace java {
                  * @return a new sequential or parallel {#code LongStream}
                  */
                 // @ts-ignore
-                longStream(spliterator: java.util.Spliterator.OfLong, parallel: boolean): java.util.stream.LongStream
+                public static longStream(spliterator: java.util.Spliterator.OfLong, parallel: boolean): java.util.stream.LongStream
                 /**
                  * Creates a new sequential or parallel {@code LongStream} from a
                  * {@code Supplier} of {@code Spliterator.OfLong}.
@@ -164,7 +164,7 @@ declare namespace java {
                  * @see #longStream(java.util.Spliterator.OfLong, boolean)
                  */
                 // @ts-ignore
-                longStream(supplier: java.util.function.Supplier<java.util.Spliterator.OfLong> | java.util.function$.Supplier<java.util.Spliterator.OfLong>, characteristics: number /*int*/, parallel: boolean): java.util.stream.LongStream
+                public static longStream(supplier: java.util.function$.Supplier<any>, characteristics: number /*int*/, parallel: boolean): java.util.stream.LongStream
                 /**
                  * Creates a new sequential or parallel {@code DoubleStream} from a
                  * {@code Spliterator.OfDouble}.
@@ -184,7 +184,7 @@ declare namespace java {
                  * @return a new sequential or parallel {#code DoubleStream}
                  */
                 // @ts-ignore
-                doubleStream(spliterator: java.util.Spliterator.OfDouble, parallel: boolean): java.util.stream.DoubleStream
+                public static doubleStream(spliterator: java.util.Spliterator.OfDouble, parallel: boolean): java.util.stream.DoubleStream
                 /**
                  * Creates a new sequential or parallel {@code DoubleStream} from a
                  * {@code Supplier} of {@code Spliterator.OfDouble}.
@@ -215,7 +215,7 @@ declare namespace java {
                  * @see #doubleStream(java.util.Spliterator.OfDouble, boolean)
                  */
                 // @ts-ignore
-                doubleStream(supplier: java.util.function.Supplier<java.util.Spliterator.OfDouble> | java.util.function$.Supplier<java.util.Spliterator.OfDouble>, characteristics: number /*int*/, parallel: boolean): java.util.stream.DoubleStream
+                public static doubleStream(supplier: java.util.function$.Supplier<any>, characteristics: number /*int*/, parallel: boolean): java.util.stream.DoubleStream
             }
         }
     }

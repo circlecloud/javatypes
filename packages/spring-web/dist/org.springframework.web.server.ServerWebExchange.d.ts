@@ -19,7 +19,7 @@ declare namespace org {
                      * @see #getLogPrefix()
                      */
                     // @ts-ignore
-                    
+                    readonly LOG_ID_ATTRIBUTE: java.lang.String | string
                     /**
                      * Return the current HTTP request.
                      */
@@ -34,7 +34,7 @@ declare namespace org {
                      * Return a mutable map of request attributes for the current exchange.
                      */
                     // @ts-ignore
-                    getAttributes(): java.util.Map<java.lang.String, java.lang.Object>
+                    getAttributes(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Return the request attribute value if present.
                      * @param name the attribute name
@@ -42,7 +42,7 @@ declare namespace org {
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getAttribute<T>(name: string): T
+                    getAttribute<T>(name: java.lang.String | string): T
                     /**
                      * Return the request attribute value or if not present raise an
                      * {@link IllegalArgumentException}.
@@ -51,7 +51,7 @@ declare namespace org {
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getRequiredAttribute<T>(name: string): T
+                    getRequiredAttribute<T>(name: java.lang.String | string): T
                     /**
                      * Return the request attribute value, or a default, fallback value.
                      * @param name the attribute name
@@ -60,7 +60,7 @@ declare namespace org {
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getAttributeOrDefault<T>(name: string, defaultValue: T): T
+                    getAttributeOrDefault<T>(name: java.lang.String | string, defaultValue: T): T
                     /**
                      * Return the web session for the current request. Always guaranteed  to
                      * return an instance either matching to the session id requested by the
@@ -70,12 +70,12 @@ declare namespace org {
                      * for more details.
                      */
                     // @ts-ignore
-                    getSession(): <any>
+                    getSession(): object
                     /**
                      * Return the authenticated user for the request, if any.
                      */
                     // @ts-ignore
-                    getPrincipal<T extends java.security.Principal>(): <any>
+                    getPrincipal<T extends java.security.Principal>(): object
                     /**
                      * Return the form data from the body of the request if the Content-Type is
                      * {@code "application/x-www-form-urlencoded"} or an empty map otherwise.
@@ -84,7 +84,7 @@ declare namespace org {
                      * cached so that this method is safe to call more than once.
                      */
                     // @ts-ignore
-                    getFormData(): <any>
+                    getFormData(): object
                     /**
                      * Return the parts of a multipart request if the Content-Type is
                      * {@code "multipart/form-data"} or an empty map otherwise.
@@ -95,7 +95,7 @@ declare namespace org {
                      * part is not cached, and can only be read once.
                      */
                     // @ts-ignore
-                    getMultipartData(): <any>
+                    getMultipartData(): object
                     /**
                      * Return the {@link LocaleContext} using the configured
                      * {@link org.springframework.web.server.i18n.LocaleContextResolver}.
@@ -132,7 +132,7 @@ declare namespace org {
                      * @return true if the request does not require further processing.
                      */
                     // @ts-ignore
-                    checkNotModified(etag: string): boolean
+                    checkNotModified(etag: java.lang.String | string): boolean
                     /**
                      * Check whether the requested resource has been modified given the supplied
                      * {@code ETag} (entity tag) and last-modified timestamp as determined by
@@ -152,7 +152,7 @@ declare namespace org {
                      * @return true if the request does not require further processing.
                      */
                     // @ts-ignore
-                    checkNotModified(etag: string, lastModified: java.time.Instant): boolean
+                    checkNotModified(etag: java.lang.String | string, lastModified: java.time.Instant): boolean
                     /**
                      * Transform the given url according to the registered transformation function(s).
                      * By default, this method returns the given {@code url}, though additional
@@ -161,7 +161,7 @@ declare namespace org {
                      * @return the transformed URL
                      */
                     // @ts-ignore
-                    transformUrl(url: string): java.lang.String
+                    transformUrl(url: java.lang.String | string): string
                     /**
                      * Register an additional URL transformation function for use with {@link #transformUrl}.
                      * The given function can be used to insert an id for authentication, a nonce for CSRF
@@ -170,7 +170,7 @@ declare namespace org {
                      * @param transformer a URL transformation function to add
                      */
                     // @ts-ignore
-                    addUrlTransformer(transformer: java.util.function.Function<java.lang.String, java.lang.String> | java.util.function$.Function<java.lang.String, java.lang.String>): void
+                    addUrlTransformer(transformer: java.util.function$.Function<java.lang.String | string, java.lang.String | string>): void
                     /**
                      * Return a log message prefix to use to correlate messages for this exchange.
                      * The prefix is based on the value of the attribute {@link #LOG_ID_ATTRIBUTE}
@@ -181,7 +181,7 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    getLogPrefix(): java.lang.String
+                    getLogPrefix(): string
                     /**
                      * Return a builder to mutate properties of this exchange by wrapping it
                      * with {@link ServerWebExchangeDecorator} and returning either mutated

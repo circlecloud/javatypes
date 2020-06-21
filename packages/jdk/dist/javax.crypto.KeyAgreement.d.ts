@@ -42,7 +42,7 @@ declare namespace javax {
              * @param algorithm the algorithm
              */
             // @ts-ignore
-            constructor(keyAgreeSpi: javax.crypto.KeyAgreementSpi, provider: java.security.Provider, algorithm: string)
+            constructor(keyAgreeSpi: javax.crypto.KeyAgreementSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns the algorithm name of this <code>KeyAgreement</code> object.
              * <p>This is the same name that was specified in one of the
@@ -51,7 +51,7 @@ declare namespace javax {
              * @return the algorithm name of this <code>KeyAgreement</code> object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns a <code>KeyAgreement</code> object that implements the
              * specified key agreement algorithm.
@@ -77,7 +77,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): javax.crypto.KeyAgreement
+            public static getInstance(algorithm: java.lang.String | string): javax.crypto.KeyAgreement
             /**
              * Returns a <code>KeyAgreement</code> object that implements the
              * specified key agreement algorithm.
@@ -107,7 +107,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): javax.crypto.KeyAgreement
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.crypto.KeyAgreement
             /**
              * Returns a <code>KeyAgreement</code> object that implements the
              * specified key agreement algorithm.
@@ -133,13 +133,13 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): javax.crypto.KeyAgreement
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.crypto.KeyAgreement
             /**
              * Returns the provider of this <code>KeyAgreement</code> object.
              * @return the provider of this <code>KeyAgreement</code> object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Initializes this key agreement with the given key, which is required to
              * contain all the algorithm parameters required for this key agreement.
@@ -158,7 +158,7 @@ declare namespace javax {
              *  has an incompatible algorithm type.
              */
             // @ts-ignore
-            init(key: java.security.Key): void
+            public init(key: java.security.Key): void
             /**
              * Initializes this key agreement with the given key and source of
              * randomness. The given key is required to contain all the algorithm
@@ -177,7 +177,7 @@ declare namespace javax {
              *  has an incompatible algorithm type.
              */
             // @ts-ignore
-            init(key: java.security.Key, random: java.security.SecureRandom): void
+            public init(key: java.security.Key, random: java.security.SecureRandom): void
             /**
              * Initializes this key agreement with the given key and set of
              * algorithm parameters.
@@ -199,7 +199,7 @@ declare namespace javax {
              *  are inappropriate for this key agreement.
              */
             // @ts-ignore
-            init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
+            public init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Initializes this key agreement with the given key, set of
              * algorithm parameters, and source of randomness.
@@ -215,7 +215,7 @@ declare namespace javax {
              *  are inappropriate for this key agreement.
              */
             // @ts-ignore
-            init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
+            public init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
             /**
              * Executes the next phase of this key agreement with the given
              * key that was received from one of the other parties involved in this key
@@ -233,7 +233,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            doPhase(key: java.security.Key, lastPhase: boolean): java.security.Key
+            public doPhase(key: java.security.Key, lastPhase: boolean): java.security.Key
             /**
              * Generates the shared secret and returns it in a new buffer.
              * <p>This method resets this <code>KeyAgreement</code> object, so that it
@@ -246,7 +246,7 @@ declare namespace javax {
              *  completed yet
              */
             // @ts-ignore
-            generateSecret(): byte[]
+            public generateSecret(): number /*byte*/[]
             /**
              * Generates the shared secret, and places it into the buffer
              * <code>sharedSecret</code>, beginning at <code>offset</code> inclusive.
@@ -268,7 +268,7 @@ declare namespace javax {
              *  to hold the secret
              */
             // @ts-ignore
-            generateSecret(sharedSecret: number /*byte*/[], offset: number /*int*/): int
+            public generateSecret(sharedSecret: number /*byte*/[], offset: number /*int*/): number /*int*/
             /**
              * Creates the shared secret and returns it as a <code>SecretKey</code>
              * object of the specified algorithm.
@@ -288,7 +288,7 @@ declare namespace javax {
              *  the key material is too short)
              */
             // @ts-ignore
-            generateSecret(algorithm: string): javax.crypto.SecretKey
+            public generateSecret(algorithm: java.lang.String | string): javax.crypto.SecretKey
         }
     }
 }

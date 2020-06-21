@@ -8,7 +8,7 @@ declare namespace org {
                          * A generic integer property.
                          */
                         // @ts-ignore
-                        class IntProperty extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, java.lang.Integer> {
+                        class IntProperty extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, java.lang.Integer | number> {
                             /**
                              * Create a new integer property with the specified value.
                              * @param value value to match
@@ -32,9 +32,9 @@ declare namespace org {
                              *       properties
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                             /**
                              * Create an {@link IntProperty} property which matches {@link IntProperty}
                              * properties with equal value.
@@ -42,7 +42,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(value: any): org.spongepowered.api.item.inventory.property.IntProperty
+                            public static of(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.IntProperty
                             /**
                              * Create an {@link IntProperty} property which matches {@link IntProperty}
                              * properties with unequal value.
@@ -50,7 +50,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            not(value: any): org.spongepowered.api.item.inventory.property.IntProperty
+                            public static not(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.IntProperty
                             /**
                              * Create an {@link IntProperty} property which matches {@link IntProperty}
                              * properties with value greater than this value.
@@ -58,7 +58,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThan(value: any): org.spongepowered.api.item.inventory.property.IntProperty
+                            public static greaterThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.IntProperty
                             /**
                              * Create an {@link IntProperty} property which matches {@link IntProperty}
                              * properties with value greater than or equal to this value.
@@ -66,7 +66,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.IntProperty
+                            public static greaterThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.IntProperty
                             /**
                              * Create an {@link IntProperty} property which matches {@link IntProperty}
                              * properties with value less than this value.
@@ -74,7 +74,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThan(value: any): org.spongepowered.api.item.inventory.property.IntProperty
+                            public static lessThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.IntProperty
                             /**
                              * Create an {@link IntProperty} property which matches {@link IntProperty}
                              * properties with value less than or equal to this value.
@@ -82,7 +82,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.IntProperty
+                            public static lessThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.IntProperty
                         }
                     }
                 }

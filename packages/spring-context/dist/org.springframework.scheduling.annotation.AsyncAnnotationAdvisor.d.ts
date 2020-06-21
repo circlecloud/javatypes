@@ -42,7 +42,7 @@ declare namespace org {
                      * @see AnnotationAsyncExecutionInterceptor#getDefaultExecutor(BeanFactory)
                      */
                     // @ts-ignore
-                    constructor(executor: java.util.function.Supplier<java.util.concurrent.Executor> | java.util.function$.Supplier<java.util.concurrent.Executor>, exceptionHandler: java.util.function.Supplier<AsyncUncaughtExceptionHandler> | java.util.function$.Supplier<AsyncUncaughtExceptionHandler>)
+                    constructor(executor: java.util.function$.Supplier<java.util.concurrent.Executor>, exceptionHandler: java.util.function$.Supplier<AsyncUncaughtExceptionHandler>)
                     /**
                      * Set the 'async' annotation type.
                      * <p>The default async annotation type is the {@link Async} annotation, as well
@@ -53,25 +53,25 @@ declare namespace org {
                      * @param asyncAnnotationType the desired annotation type
                      */
                     // @ts-ignore
-                    setAsyncAnnotationType(asyncAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                    public setAsyncAnnotationType(asyncAnnotationType: java.lang.Class<any>): void
                     /**
                      * Set the {@code BeanFactory} to be used when looking up executors by qualifier.
                      */
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    getAdvice(): Advice
+                    public getAdvice(): Advice
                     // @ts-ignore
-                    getPointcut(): Pointcut
+                    public getPointcut(): Pointcut
                     // @ts-ignore
-                    buildAdvice(executor: java.util.function.Supplier<java.util.concurrent.Executor> | java.util.function$.Supplier<java.util.concurrent.Executor>, exceptionHandler: java.util.function.Supplier<AsyncUncaughtExceptionHandler> | java.util.function$.Supplier<AsyncUncaughtExceptionHandler>): Advice
+                    buildAdvice(executor: java.util.function$.Supplier<java.util.concurrent.Executor>, exceptionHandler: java.util.function$.Supplier<AsyncUncaughtExceptionHandler>): Advice
                     /**
                      * Calculate a pointcut for the given async annotation types, if any.
                      * @param asyncAnnotationTypes the async annotation types to introspect
                      * @return the applicable Pointcut object, or {#code null} if none
                      */
                     // @ts-ignore
-                    buildPointcut(asyncAnnotationTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>): Pointcut
+                    buildPointcut(asyncAnnotationTypes: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>): Pointcut
                 }
             }
         }

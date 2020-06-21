@@ -68,7 +68,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setIssuers(issuers: Array<javax.security.auth.x500.X500Principal>): void
+                public setIssuers(issuers: java.util.Collection<javax.security.auth.x500.X500Principal> | Array<javax.security.auth.x500.X500Principal>): void
                 /**
                  * <strong>Note:</strong> use {@linkplain #setIssuers(Collection)} instead
                  * or only specify the byte array form of distinguished names when using
@@ -126,7 +126,7 @@ declare namespace java {
                  * @see #getIssuerNames
                  */
                 // @ts-ignore
-                setIssuerNames(names: Array<any>): void
+                public setIssuerNames(names: java.util.Collection<any> | Array<any>): void
                 /**
                  * Adds a name to the issuerNames criterion. The issuer distinguished
                  * name in the {@code X509CRL} must match at least one of the specified
@@ -140,7 +140,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                addIssuer(issuer: javax.security.auth.x500.X500Principal): void
+                public addIssuer(issuer: javax.security.auth.x500.X500Principal): void
                 /**
                  * <strong>Denigrated</strong>, use
                  * {@linkplain #addIssuer(X500Principal)} or
@@ -161,7 +161,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs
                  */
                 // @ts-ignore
-                addIssuerName(name: string): void
+                public addIssuerName(name: java.lang.String | string): void
                 /**
                  * Adds a name to the issuerNames criterion. The issuer distinguished
                  * name in the {@code X509CRL} must match at least one of the specified
@@ -186,7 +186,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs
                  */
                 // @ts-ignore
-                addIssuerName(name: number /*byte*/[]): void
+                public addIssuerName(name: number /*byte*/[]): void
                 /**
                  * Sets the minCRLNumber criterion. The {@code X509CRL} must have a
                  * CRL number extension whose value is greater than or equal to the
@@ -195,7 +195,7 @@ declare namespace java {
                  * @param minCRL the minimum CRL number accepted (or {#code null})
                  */
                 // @ts-ignore
-                setMinCRLNumber(minCRL: java.math.BigInteger): void
+                public setMinCRLNumber(minCRL: java.math.BigInteger): void
                 /**
                  * Sets the maxCRLNumber criterion. The {@code X509CRL} must have a
                  * CRL number extension whose value is less than or equal to the
@@ -204,7 +204,7 @@ declare namespace java {
                  * @param maxCRL the maximum CRL number accepted (or {#code null})
                  */
                 // @ts-ignore
-                setMaxCRLNumber(maxCRL: java.math.BigInteger): void
+                public setMaxCRLNumber(maxCRL: java.math.BigInteger): void
                 /**
                  * Sets the dateAndTime criterion. The specified date must be
                  * equal to or later than the value of the thisUpdate component
@@ -220,7 +220,7 @@ declare namespace java {
                  * @see #getDateAndTime
                  */
                 // @ts-ignore
-                setDateAndTime(dateAndTime: java.util.Date): void
+                public setDateAndTime(dateAndTime: java.util.Date): void
                 /**
                  * Sets the certificate being checked. This is not a criterion. Rather,
                  * it is optional information that may help a {@code CertStore}
@@ -232,7 +232,7 @@ declare namespace java {
                  * @see #getCertificateChecking
                  */
                 // @ts-ignore
-                setCertificateChecking(cert: java.security.cert.X509Certificate): void
+                public setCertificateChecking(cert: java.security.cert.X509Certificate): void
                 /**
                  * Returns the issuerNames criterion. The issuer distinguished
                  * name in the {@code X509CRL} must match at least one of the specified
@@ -247,7 +247,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getIssuers(): java.util.Collection<javax.security.auth.x500.X500Principal>
+                public getIssuers(): Array<javax.security.auth.x500.X500Principal>
                 /**
                  * Returns a copy of the issuerNames criterion. The issuer distinguished
                  * name in the {@code X509CRL} must match at least one of the specified
@@ -271,7 +271,7 @@ declare namespace java {
                  * @see #setIssuerNames
                  */
                 // @ts-ignore
-                getIssuerNames(): java.util.Collection<java.lang.Object>
+                public getIssuerNames(): Array<java.lang.Object | any>
                 /**
                  * Returns the minCRLNumber criterion. The {@code X509CRL} must have a
                  * CRL number extension whose value is greater than or equal to the
@@ -279,7 +279,7 @@ declare namespace java {
                  * @return the minimum CRL number accepted (or {#code null})
                  */
                 // @ts-ignore
-                getMinCRL(): java.math.BigInteger
+                public getMinCRL(): java.math.BigInteger
                 /**
                  * Returns the maxCRLNumber criterion. The {@code X509CRL} must have a
                  * CRL number extension whose value is less than or equal to the
@@ -288,7 +288,7 @@ declare namespace java {
                  * @return the maximum CRL number accepted (or {#code null})
                  */
                 // @ts-ignore
-                getMaxCRL(): java.math.BigInteger
+                public getMaxCRL(): java.math.BigInteger
                 /**
                  * Returns the dateAndTime criterion. The specified date must be
                  * equal to or later than the value of the thisUpdate component
@@ -303,7 +303,7 @@ declare namespace java {
                  * @see #setDateAndTime
                  */
                 // @ts-ignore
-                getDateAndTime(): java.util.Date
+                public getDateAndTime(): java.util.Date
                 /**
                  * Returns the certificate being checked. This is not a criterion. Rather,
                  * it is optional information that may help a {@code CertStore}
@@ -314,14 +314,14 @@ declare namespace java {
                  * @see #setCertificateChecking
                  */
                 // @ts-ignore
-                getCertificateChecking(): java.security.cert.X509Certificate
+                public getCertificateChecking(): java.security.cert.X509Certificate
                 /**
                  * Returns a printable representation of the {@code X509CRLSelector}.
                  * @return a {#code String} describing the contents of the
                  *          {@code X509CRLSelector}.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Decides whether a {@code CRL} should be selected.
                  * @param crl the {#code CRL} to be checked
@@ -329,13 +329,13 @@ declare namespace java {
                  *          {@code false} otherwise
                  */
                 // @ts-ignore
-                match(crl: java.security.cert.CRL): boolean
+                public match(crl: java.security.cert.CRL): boolean
                 /**
                  * Returns a copy of this object.
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

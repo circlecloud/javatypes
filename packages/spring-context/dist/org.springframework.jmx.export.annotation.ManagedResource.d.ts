@@ -17,7 +17,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.metadata.ManagedResource
                      */
                     // @ts-ignore
-                    class ManagedResource implements java.lang.annotation.Annotation {
+                    abstract class ManagedResource implements java.lang.annotation.Annotation {
                     }
                 }
             }

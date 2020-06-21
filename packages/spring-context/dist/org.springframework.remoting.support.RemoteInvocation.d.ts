@@ -34,7 +34,7 @@ declare namespace org {
                      * @param arguments the arguments for the invocation
                      */
                     // @ts-ignore
-                    constructor(methodName: string, parameterTypes: java.lang.Class[], arguments: any[])
+                    constructor(methodName: java.lang.String | string, parameterTypes: java.lang.Class<any>[], arguments: java.lang.Object[] | any[])
                     /**
                      * Create a new RemoteInvocation for JavaBean-style deserialization
                      * (e.g. with Jackson).
@@ -46,34 +46,34 @@ declare namespace org {
                      * <p>This setter is intended for JavaBean-style deserialization.
                      */
                     // @ts-ignore
-                    setMethodName(methodName: string): void
+                    public setMethodName(methodName: java.lang.String | string): void
                     /**
                      * Return the name of the target method.
                      */
                     // @ts-ignore
-                    getMethodName(): java.lang.String
+                    public getMethodName(): string
                     /**
                      * Set the parameter types of the target method.
                      * <p>This setter is intended for JavaBean-style deserialization.
                      */
                     // @ts-ignore
-                    setParameterTypes(parameterTypes: java.lang.Class[]): void
+                    public setParameterTypes(parameterTypes: java.lang.Class<any>[]): void
                     /**
                      * Return the parameter types of the target method.
                      */
                     // @ts-ignore
-                    getParameterTypes(): java.lang.Class[]
+                    public getParameterTypes(): java.lang.Class<any>[]
                     /**
                      * Set the arguments for the target method call.
                      * <p>This setter is intended for JavaBean-style deserialization.
                      */
                     // @ts-ignore
-                    setArguments(arguments: any[]): void
+                    public setArguments(arguments: java.lang.Object[] | any[]): void
                     /**
                      * Return the arguments for the target method call.
                      */
                     // @ts-ignore
-                    getArguments(): java.lang.Object[]
+                    public getArguments(): any[]
                     /**
                      * Add an additional invocation attribute. Useful to add additional
                      * invocation context without having to subclass RemoteInvocation.
@@ -86,7 +86,7 @@ declare namespace org {
                      * @throws IllegalStateException if the key is already bound
                      */
                     // @ts-ignore
-                    addAttribute(key: string, value: java.io.Serializable): void
+                    public addAttribute(key: java.lang.String | string, value: java.io.Serializable): void
                     /**
                      * Retrieve the attribute for the given key, if any.
                      * <p>The implementation avoids to unnecessarily create the attributes
@@ -95,7 +95,7 @@ declare namespace org {
                      * @return the attribute value, or {#code null} if not defined
                      */
                     // @ts-ignore
-                    getAttribute(key: string): java.io.Serializable
+                    public getAttribute(key: java.lang.String | string): java.io.Serializable
                     /**
                      * Set the attributes Map. Only here for special purposes:
                      * Preferably, use {@link #addAttribute} and {@link #getAttribute}.
@@ -104,7 +104,7 @@ declare namespace org {
                      * @see #getAttribute
                      */
                     // @ts-ignore
-                    setAttributes(attributes: java.util.Map<java.lang.String, java.io.Serializable>): void
+                    public setAttributes(attributes: java.util.Map<java.lang.String | string, java.io.Serializable>): void
                     /**
                      * Return the attributes Map. Mainly here for debugging purposes:
                      * Preferably, use {@link #addAttribute} and {@link #getAttribute}.
@@ -113,7 +113,7 @@ declare namespace org {
                      * @see #getAttribute
                      */
                     // @ts-ignore
-                    getAttributes(): java.util.Map<java.lang.String, java.io.Serializable>
+                    public getAttributes(): java.util.Map<java.lang.String | string, java.io.Serializable>
                     /**
                      * Perform this invocation on the given target object.
                      * Typically called when a RemoteInvocation is received on the server.
@@ -125,9 +125,9 @@ declare namespace org {
                      * @see java.lang.reflect.Method#invoke
                      */
                     // @ts-ignore
-                    invoke(targetObject: any): java.lang.Object
+                    public invoke(targetObject: java.lang.Object | any): any
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

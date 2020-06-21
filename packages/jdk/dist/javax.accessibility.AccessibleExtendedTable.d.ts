@@ -23,7 +23,7 @@ declare namespace javax {
              *  otherwise -1.
              */
             // @ts-ignore
-            getAccessibleRow(index: number /*int*/): int
+            getAccessibleRow(index: number /*int*/): number /*int*/
             /**
              * Returns the column number of an index in the table.
              * @param index the zero-based index in the table.  The index is
@@ -32,7 +32,7 @@ declare namespace javax {
              *  otherwise -1.
              */
             // @ts-ignore
-            getAccessibleColumn(index: number /*int*/): int
+            getAccessibleColumn(index: number /*int*/): number /*int*/
             /**
              * Returns the index at a row and column in the table.
              * @param r zero-based row of the table
@@ -42,7 +42,7 @@ declare namespace javax {
              *  row == 0 and column == 0.
              */
             // @ts-ignore
-            getAccessibleIndex(r: number /*int*/, c: number /*int*/): int
+            getAccessibleIndex(r: number /*int*/, c: number /*int*/): number /*int*/
         }
     }
 }

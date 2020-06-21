@@ -20,14 +20,14 @@ declare namespace javax {
                  * @param s the detail message.
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Constructor taking a string and an exception.
                  * @param e the nested exception.
                  * @param s the detail message.
                  */
                 // @ts-ignore
-                constructor(e: java.lang.Exception, s: string)
+                constructor(e: java.lang.Exception, s: java.lang.String | string)
             }
         }
     }

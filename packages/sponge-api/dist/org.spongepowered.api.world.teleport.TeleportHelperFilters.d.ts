@@ -10,7 +10,7 @@ declare namespace org {
                          * block is in the config blacklist and returns the appropriate result.
                          */
                         // @ts-ignore
-                        readonly CONFIG: org.spongepowered.api.world.teleport.TeleportHelperFilter
+                        public static readonly CONFIG: org.spongepowered.api.world.teleport.TeleportHelperFilter
                         /**
                          * The default behavior for safe teleportation.
                          * <p>This filter attempts to find a location to teleport to that has
@@ -25,7 +25,7 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly DEFAULT: org.spongepowered.api.world.teleport.TeleportHelperFilter
+                        public static readonly DEFAULT: org.spongepowered.api.world.teleport.TeleportHelperFilter
                         /**
                          * The flying safe teleportation behavior.
                          * <p>This filter attempts to find the following:</p>
@@ -37,19 +37,19 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly FLYING: org.spongepowered.api.world.teleport.TeleportHelperFilter
+                        public static readonly FLYING: org.spongepowered.api.world.teleport.TeleportHelperFilter
                         /**
                          * This filter is the same as the {@link #DEFAULT} kernel, except that
                          * portals are not valid targets.
                          */
                         // @ts-ignore
-                        readonly NO_PORTAL: org.spongepowered.api.world.teleport.TeleportHelperFilter
+                        public static readonly NO_PORTAL: org.spongepowered.api.world.teleport.TeleportHelperFilter
                         /**
                          * This filter is the same as the {@link #DEFAULT} kernel, except that
                          * only targets that can see the sky are considered.
                          */
                         // @ts-ignore
-                        readonly SURFACE_ONLY: org.spongepowered.api.world.teleport.TeleportHelperFilter
+                        public static readonly SURFACE_ONLY: org.spongepowered.api.world.teleport.TeleportHelperFilter
                     }
                 }
             }

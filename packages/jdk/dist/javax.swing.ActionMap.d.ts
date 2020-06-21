@@ -34,14 +34,14 @@ declare namespace javax {
              * @param map  the <code>ActionMap</code> that is the parent of this one
              */
             // @ts-ignore
-            setParent(map: javax.swing.ActionMap): void
+            public setParent(map: javax.swing.ActionMap): void
             /**
              * Returns this <code>ActionMap</code>'s parent.
              * @return the <code>ActionMap</code> that is the parent of this one,
              *          or null if this <code>ActionMap</code> has no parent
              */
             // @ts-ignore
-            getParent(): javax.swing.ActionMap
+            public getParent(): javax.swing.ActionMap
             /**
              * Adds a binding for <code>key</code> to <code>action</code>.
              * If <code>action</code> is null, this removes the current binding
@@ -50,41 +50,41 @@ declare namespace javax {
              * <code>action.getValue(NAME)</code>.
              */
             // @ts-ignore
-            put(key: any, action: javax.swing.Action): void
+            public put(key: java.lang.Object | any, action: javax.swing.Action): void
             /**
              * Returns the binding for <code>key</code>, messaging the
              * parent <code>ActionMap</code> if the binding is not locally defined.
              */
             // @ts-ignore
-            get(key: any): javax.swing.Action
+            public get(key: java.lang.Object | any): javax.swing.Action
             /**
              * Removes the binding for <code>key</code> from this <code>ActionMap</code>.
              */
             // @ts-ignore
-            remove(key: any): void
+            public remove(key: java.lang.Object | any): void
             /**
              * Removes all the mappings from this <code>ActionMap</code>.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns the <code>Action</code> names that are bound in this <code>ActionMap</code>.
              */
             // @ts-ignore
-            keys(): java.lang.Object[]
+            public keys(): any[]
             /**
              * Returns the number of bindings in this {@code ActionMap}.
              * @return the number of bindings in this {#code ActionMap}
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns an array of the keys defined in this <code>ActionMap</code> and
              * its parent. This method differs from <code>keys()</code> in that
              * this method includes the keys defined in the parent.
              */
             // @ts-ignore
-            allKeys(): java.lang.Object[]
+            public allKeys(): any[]
         }
     }
 }

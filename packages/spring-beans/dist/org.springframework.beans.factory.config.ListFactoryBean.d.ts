@@ -12,14 +12,14 @@ declare namespace org {
                      * @see MapFactoryBean
                      */
                     // @ts-ignore
-                    class ListFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.util.List<java.lang.Object>> {
+                    class ListFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.util.List<java.lang.Object | any> | Array<java.lang.Object | any>> {
                         // @ts-ignore
                         constructor()
                         /**
                          * Set the source List, typically populated via XML "list" elements.
                          */
                         // @ts-ignore
-                        setSourceList(sourceList: Array<any>): void
+                        public setSourceList(sourceList: java.util.List<any> | Array<any>): void
                         /**
                          * Set the class to use for the target List. Can be populated with a fully
                          * qualified class name when defined in a Spring application context.
@@ -27,11 +27,11 @@ declare namespace org {
                          * @see java.util.ArrayList
                          */
                         // @ts-ignore
-                        setTargetListClass(targetListClass: java.lang.Class<java.util.List>): void
+                        public setTargetListClass(targetListClass: java.lang.Class<any>): void
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<java.util.List>
+                        public getObjectType(): java.lang.Class<java.util.List<any> | Array<any>>
                         // @ts-ignore
-                        createInstance(): java.util.List<java.lang.Object>
+                        createInstance(): Array<java.lang.Object | any>
                     }
                 }
             }

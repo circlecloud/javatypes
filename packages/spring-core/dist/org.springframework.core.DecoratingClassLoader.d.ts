@@ -10,7 +10,7 @@ declare namespace org {
              * @since 2.5.2
              */
             // @ts-ignore
-            class DecoratingClassLoader extends java.lang.ClassLoader {
+            abstract class DecoratingClassLoader extends java.lang.ClassLoader {
                 /**
                  * Create a new DecoratingClassLoader with no parent ClassLoader.
                  */
@@ -29,7 +29,7 @@ declare namespace org {
                  * @param packageName the package name to exclude
                  */
                 // @ts-ignore
-                excludePackage(packageName: string): void
+                public excludePackage(packageName: java.lang.String | string): void
                 /**
                  * Add a class name to exclude from decoration (e.g. overriding).
                  * <p>Any class name registered here will be handled by the parent
@@ -37,7 +37,7 @@ declare namespace org {
                  * @param className the class name to exclude
                  */
                 // @ts-ignore
-                excludeClass(className: string): void
+                public excludeClass(className: java.lang.String | string): void
                 /**
                  * Determine whether the specified class is excluded from decoration
                  * by this class loader.
@@ -48,7 +48,7 @@ declare namespace org {
                  * @see #excludeClass
                  */
                 // @ts-ignore
-                isExcluded(className: string): boolean
+                isExcluded(className: java.lang.String | string): boolean
             }
         }
     }

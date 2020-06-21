@@ -14,7 +14,7 @@ declare namespace org {
                          * @return This builder
                          */
                         // @ts-ignore
-                        name(name: string): org.spongepowered.api.scoreboard.Team.Builder
+                        name(name: java.lang.String | string): org.spongepowered.api.scoreboard.Team.Builder
                         /**
                          * Sets the color of the {@link Team}.
                          * <p>The team's color is a distinct concept from its prefix or suffix.
@@ -107,7 +107,7 @@ declare namespace org {
                          * @return This builder
                          */
                         // @ts-ignore
-                        members(users: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.scoreboard.Team.Builder
+                        members(users: java.util.Set<org.spongepowered.api.text.Text> | Array<org.spongepowered.api.text.Text>): org.spongepowered.api.scoreboard.Team.Builder
                         /**
                          * Builds an instance of a {@link Team}.
                          * @return A new instance of a {#link Team}

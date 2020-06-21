@@ -35,7 +35,7 @@ declare namespace java {
                  *              </ul>
                  */
                 // @ts-ignore
-                constructor(className: string, identityHashCode: number /*int*/, stackDepth: number /*int*/, stackFrame: java.lang.StackTraceElement)
+                constructor(className: java.lang.String | string, identityHashCode: number /*int*/, stackDepth: number /*int*/, stackFrame: java.lang.StackTraceElement)
                 /**
                  * Returns an integer which is the number of frames deep into the stack
                  * where the monitor locking took place.
@@ -43,14 +43,14 @@ declare namespace java {
                  *          monitor object locking too place
                  */
                 // @ts-ignore
-                getLockedStackDepth(): int
+                public getLockedStackDepth(): number /*int*/
                 /**
                  * The complete {@link StackTraceElement} in which the monitor was locked.
                  * @return the <code>StackTraceElement</code> in which the associated
                  *          monitor was locked
                  */
                 // @ts-ignore
-                getLockedStackFrame(): java.lang.StackTraceElement
+                public getLockedStackFrame(): java.lang.StackTraceElement
                 /**
                  * Receives a {@link CompositeData} representing a <code>MonitorInfo</code>
                  * object and attempts to return the root <code>MonitorInfo</code>
@@ -84,7 +84,7 @@ declare namespace java {
                  *              </ul>
                  */
                 // @ts-ignore
-                from(cd: javax.management.openmbean.CompositeData): java.lang.management.MonitorInfo
+                public static from(cd: javax.management.openmbean.CompositeData): java.lang.management.MonitorInfo
             }
         }
     }

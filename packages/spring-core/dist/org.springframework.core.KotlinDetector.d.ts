@@ -8,26 +8,26 @@ declare namespace org {
              * @since 5.0
              */
             // @ts-ignore
-            class KotlinDetector extends java.lang.Object {
+            abstract class KotlinDetector extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Determine whether Kotlin is present in general.
                  */
                 // @ts-ignore
-                isKotlinPresent(): boolean
+                public static isKotlinPresent(): boolean
                 /**
                  * Determine whether Kotlin reflection is present.
                  * @since 5.1
                  */
                 // @ts-ignore
-                isKotlinReflectPresent(): boolean
+                public static isKotlinReflectPresent(): boolean
                 /**
                  * Determine whether the given {@code Class} is a Kotlin type
                  * (with Kotlin metadata present on it).
                  */
                 // @ts-ignore
-                isKotlinType(clazz: java.lang.Class<any>): boolean
+                public static isKotlinType(clazz: java.lang.Class<any>): boolean
             }
         }
     }

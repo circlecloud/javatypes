@@ -16,7 +16,7 @@ declare namespace org {
                                  * @return The value for the absorption
                                  */
                                 // @ts-ignore
-                                absorption(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double>
+                                absorption(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double | number>
                             }
                         }
                     }

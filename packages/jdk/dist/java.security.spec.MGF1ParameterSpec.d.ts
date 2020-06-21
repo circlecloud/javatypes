@@ -37,39 +37,39 @@ declare namespace java {
                  * @exception NullPointerException if {#code mdName} is null.
                  */
                 // @ts-ignore
-                constructor(mdName: string)
+                constructor(mdName: java.lang.String | string)
                 /**
                  * The MGF1ParameterSpec which uses "SHA-1" message digest.
                  */
                 // @ts-ignore
-                readonly SHA1: java.security.spec.MGF1ParameterSpec
+                public static readonly SHA1: java.security.spec.MGF1ParameterSpec
                 /**
                  * The MGF1ParameterSpec which uses "SHA-224" message digest.
                  */
                 // @ts-ignore
-                readonly SHA224: java.security.spec.MGF1ParameterSpec
+                public static readonly SHA224: java.security.spec.MGF1ParameterSpec
                 /**
                  * The MGF1ParameterSpec which uses "SHA-256" message digest.
                  */
                 // @ts-ignore
-                readonly SHA256: java.security.spec.MGF1ParameterSpec
+                public static readonly SHA256: java.security.spec.MGF1ParameterSpec
                 /**
                  * The MGF1ParameterSpec which uses "SHA-384" message digest.
                  */
                 // @ts-ignore
-                readonly SHA384: java.security.spec.MGF1ParameterSpec
+                public static readonly SHA384: java.security.spec.MGF1ParameterSpec
                 /**
                  * The MGF1ParameterSpec which uses SHA-512 message digest.
                  */
                 // @ts-ignore
-                readonly SHA512: java.security.spec.MGF1ParameterSpec
+                public static readonly SHA512: java.security.spec.MGF1ParameterSpec
                 /**
                  * Returns the algorithm name of the message digest used by the mask
                  * generation function.
                  * @return the algorithm name of the message digest.
                  */
                 // @ts-ignore
-                getDigestAlgorithm(): java.lang.String
+                public getDigestAlgorithm(): string
             }
         }
     }

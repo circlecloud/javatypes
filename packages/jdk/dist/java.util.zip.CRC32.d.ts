@@ -21,7 +21,7 @@ declare namespace java {
                  * @param b the byte to update the checksum with
                  */
                 // @ts-ignore
-                update(b: number /*int*/): void
+                public update(b: number /*int*/): void
                 /**
                  * Updates the CRC-32 checksum with the specified array of bytes.
                  * @throws ArrayIndexOutOfBoundsException
@@ -30,13 +30,13 @@ declare namespace java {
                  *           array {@code b}
                  */
                 // @ts-ignore
-                update(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public update(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Updates the CRC-32 checksum with the specified array of bytes.
                  * @param b the array of bytes to update the checksum with
                  */
                 // @ts-ignore
-                update(b: number /*byte*/[]): void
+                public update(b: number /*byte*/[]): void
                 /**
                  * Updates the checksum with the bytes from the specified buffer.
                  * The checksum is updated using
@@ -49,17 +49,17 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                update(buffer: java.nio.ByteBuffer): void
+                public update(buffer: java.nio.ByteBuffer): void
                 /**
                  * Resets CRC-32 to initial value.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Returns CRC-32 value.
                  */
                 // @ts-ignore
-                getValue(): long
+                public getValue(): number /*long*/
             }
         }
     }

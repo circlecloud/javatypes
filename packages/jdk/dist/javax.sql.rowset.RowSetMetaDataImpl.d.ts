@@ -32,7 +32,7 @@ declare namespace javax {
                  * @throws SQLException if the given number is equal to or less than zero
                  */
                 // @ts-ignore
-                setColumnCount(columnCount: number /*int*/): void
+                public setColumnCount(columnCount: number /*int*/): void
                 /**
                  * Sets whether the designated column is automatically
                  * numbered, thus read-only, to the given <code>boolean</code>
@@ -47,7 +47,7 @@ declare namespace javax {
                  *          the given index is out of bounds
                  */
                 // @ts-ignore
-                setAutoIncrement(columnIndex: number /*int*/, property: boolean): void
+                public setAutoIncrement(columnIndex: number /*int*/, property: boolean): void
                 /**
                  * Sets whether the name of the designated column is case sensitive to
                  * the given <code>boolean</code>.
@@ -60,7 +60,7 @@ declare namespace javax {
                  *          the given column number is out of bounds
                  */
                 // @ts-ignore
-                setCaseSensitive(columnIndex: number /*int*/, property: boolean): void
+                public setCaseSensitive(columnIndex: number /*int*/, property: boolean): void
                 /**
                  * Sets whether a value stored in the designated column can be used
                  * in a <code>WHERE</code> clause to the given <code>boolean</code> value.
@@ -74,7 +74,7 @@ declare namespace javax {
                  *          the given column number is out of bounds
                  */
                 // @ts-ignore
-                setSearchable(columnIndex: number /*int*/, property: boolean): void
+                public setSearchable(columnIndex: number /*int*/, property: boolean): void
                 /**
                  * Sets whether a value stored in the designated column is a cash
                  * value to the given <code>boolean</code>.
@@ -86,7 +86,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                setCurrency(columnIndex: number /*int*/, property: boolean): void
+                public setCurrency(columnIndex: number /*int*/, property: boolean): void
                 /**
                  * Sets whether a value stored in the designated column can be set
                  * to <code>NULL</code> to the given constant from the interface
@@ -106,7 +106,7 @@ declare namespace javax {
                  *            <code>ResultSetMetaData.columnNullableUnknown</code>
                  */
                 // @ts-ignore
-                setNullable(columnIndex: number /*int*/, property: number /*int*/): void
+                public setNullable(columnIndex: number /*int*/, property: number /*int*/): void
                 /**
                  * Sets whether a value stored in the designated column is a signed
                  * number to the given <code>boolean</code>.
@@ -119,7 +119,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                setSigned(columnIndex: number /*int*/, property: boolean): void
+                public setSigned(columnIndex: number /*int*/, property: boolean): void
                 /**
                  * Sets the normal maximum number of chars in the designated column
                  * to the given number.
@@ -132,7 +132,7 @@ declare namespace javax {
                  *         less than <code>0</code>
                  */
                 // @ts-ignore
-                setColumnDisplaySize(columnIndex: number /*int*/, size: number /*int*/): void
+                public setColumnDisplaySize(columnIndex: number /*int*/, size: number /*int*/): void
                 /**
                  * Sets the suggested column label for use in printouts and
                  * displays, if any, to <i>label</i>. If <i>label</i> is
@@ -147,7 +147,7 @@ declare namespace javax {
                  *          or the given column index is out of bounds
                  */
                 // @ts-ignore
-                setColumnLabel(columnIndex: number /*int*/, label: string): void
+                public setColumnLabel(columnIndex: number /*int*/, label: java.lang.String | string): void
                 /**
                  * Sets the column name of the designated column to the given name.
                  * @param columnIndex the first column is 1, the second is 2, and so on;
@@ -159,7 +159,7 @@ declare namespace javax {
                  *       index is out of bounds
                  */
                 // @ts-ignore
-                setColumnName(columnIndex: number /*int*/, columnName: string): void
+                public setColumnName(columnIndex: number /*int*/, columnName: java.lang.String | string): void
                 /**
                  * Sets the designated column's table's schema name, if any, to
                  * <i>schemaName</i>. If <i>schemaName</i> is <code>null</code>,
@@ -173,7 +173,7 @@ declare namespace javax {
                  *         or the given column number is out of bounds
                  */
                 // @ts-ignore
-                setSchemaName(columnIndex: number /*int*/, schemaName: string): void
+                public setSchemaName(columnIndex: number /*int*/, schemaName: java.lang.String | string): void
                 /**
                  * Sets the total number of decimal digits in a value stored in the
                  * designated column to the given number.
@@ -186,7 +186,7 @@ declare namespace javax {
                  *          is less than <code>0</code>
                  */
                 // @ts-ignore
-                setPrecision(columnIndex: number /*int*/, precision: number /*int*/): void
+                public setPrecision(columnIndex: number /*int*/, precision: number /*int*/): void
                 /**
                  * Sets the number of digits to the right of the decimal point in a value
                  * stored in the designated column to the given number.
@@ -199,7 +199,7 @@ declare namespace javax {
                  *          is less than <code>0</code>
                  */
                 // @ts-ignore
-                setScale(columnIndex: number /*int*/, scale: number /*int*/): void
+                public setScale(columnIndex: number /*int*/, scale: number /*int*/): void
                 /**
                  * Sets the name of the table from which the designated column
                  * was derived to the given table name.
@@ -211,7 +211,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                setTableName(columnIndex: number /*int*/, tableName: string): void
+                public setTableName(columnIndex: number /*int*/, tableName: java.lang.String | string): void
                 /**
                  * Sets the catalog name of the table from which the designated
                  * column was derived to <i>catalogName</i>. If <i>catalogName</i>
@@ -224,7 +224,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                setCatalogName(columnIndex: number /*int*/, catalogName: string): void
+                public setCatalogName(columnIndex: number /*int*/, catalogName: java.lang.String | string): void
                 /**
                  * Sets the SQL type code for values stored in the designated column
                  * to the given type code from the class <code>java.sql.Types</code>.
@@ -239,7 +239,7 @@ declare namespace javax {
                  * @see java.sql.Types
                  */
                 // @ts-ignore
-                setColumnType(columnIndex: number /*int*/, SQLType: number /*int*/): void
+                public setColumnType(columnIndex: number /*int*/, SQLType: number /*int*/): void
                 /**
                  * Sets the type name used by the data source for values stored in the
                  * designated column to the given type name.
@@ -251,7 +251,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                setColumnTypeName(columnIndex: number /*int*/, typeName: string): void
+                public setColumnTypeName(columnIndex: number /*int*/, typeName: java.lang.String | string): void
                 /**
                  * Retrieves the number of columns in the <code>RowSet</code> object
                  * for which this <code>RowSetMetaDataImpl</code> object was created.
@@ -259,7 +259,7 @@ declare namespace javax {
                  * @throws SQLException if an error occurs determining the column count
                  */
                 // @ts-ignore
-                getColumnCount(): int
+                public getColumnCount(): number /*int*/
                 /**
                  * Retrieves whether a value stored in the designated column is
                  * automatically numbered, and thus readonly.
@@ -271,7 +271,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isAutoIncrement(columnIndex: number /*int*/): boolean
+                public isAutoIncrement(columnIndex: number /*int*/): boolean
                 /**
                  * Indicates whether the case of the designated column's name
                  * matters.
@@ -283,7 +283,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isCaseSensitive(columnIndex: number /*int*/): boolean
+                public isCaseSensitive(columnIndex: number /*int*/): boolean
                 /**
                  * Indicates whether a value stored in the designated column
                  * can be used in a <code>WHERE</code> clause.
@@ -295,7 +295,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isSearchable(columnIndex: number /*int*/): boolean
+                public isSearchable(columnIndex: number /*int*/): boolean
                 /**
                  * Indicates whether a value stored in the designated column
                  * is a cash value.
@@ -307,7 +307,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isCurrency(columnIndex: number /*int*/): boolean
+                public isCurrency(columnIndex: number /*int*/): boolean
                 /**
                  * Retrieves a constant indicating whether it is possible
                  * to store a <code>NULL</code> value in the designated column.
@@ -321,7 +321,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isNullable(columnIndex: number /*int*/): int
+                public isNullable(columnIndex: number /*int*/): number /*int*/
                 /**
                  * Indicates whether a value stored in the designated column is
                  * a signed number.
@@ -333,7 +333,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isSigned(columnIndex: number /*int*/): boolean
+                public isSigned(columnIndex: number /*int*/): boolean
                 /**
                  * Retrieves the normal maximum width in chars of the designated column.
                  * @param columnIndex the first column is 1, the second is 2, and so on;
@@ -344,7 +344,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getColumnDisplaySize(columnIndex: number /*int*/): int
+                public getColumnDisplaySize(columnIndex: number /*int*/): number /*int*/
                 /**
                  * Retrieves the suggested column title for the designated
                  * column for use in printouts and displays.
@@ -355,7 +355,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getColumnLabel(columnIndex: number /*int*/): java.lang.String
+                public getColumnLabel(columnIndex: number /*int*/): string
                 /**
                  * Retrieves the name of the designated column.
                  * @param columnIndex the first column is 1, the second is 2, and so on;
@@ -365,7 +365,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getColumnName(columnIndex: number /*int*/): java.lang.String
+                public getColumnName(columnIndex: number /*int*/): string
                 /**
                  * Retrieves the schema name of the table from which the value
                  * in the designated column was derived.
@@ -378,7 +378,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getSchemaName(columnIndex: number /*int*/): java.lang.String
+                public getSchemaName(columnIndex: number /*int*/): string
                 /**
                  * Retrieves the total number of digits for values stored in
                  * the designated column.
@@ -389,7 +389,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getPrecision(columnIndex: number /*int*/): int
+                public getPrecision(columnIndex: number /*int*/): number /*int*/
                 /**
                  * Retrieves the number of digits to the right of the decimal point
                  * for values stored in the designated column.
@@ -400,7 +400,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getScale(columnIndex: number /*int*/): int
+                public getScale(columnIndex: number /*int*/): number /*int*/
                 /**
                  * Retrieves the name of the table from which the value
                  * in the designated column was derived.
@@ -412,7 +412,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getTableName(columnIndex: number /*int*/): java.lang.String
+                public getTableName(columnIndex: number /*int*/): string
                 /**
                  * Retrieves the catalog name of the table from which the value
                  * in the designated column was derived.
@@ -424,7 +424,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getCatalogName(columnIndex: number /*int*/): java.lang.String
+                public getCatalogName(columnIndex: number /*int*/): string
                 /**
                  * Retrieves the type code (one of the <code>java.sql.Types</code>
                  * constants) for the SQL type of the value stored in the
@@ -438,7 +438,7 @@ declare namespace javax {
                  * @see java.sql.Types
                  */
                 // @ts-ignore
-                getColumnType(columnIndex: number /*int*/): int
+                public getColumnType(columnIndex: number /*int*/): number /*int*/
                 /**
                  * Retrieves the DBMS-specific type name for values stored in the
                  * designated column.
@@ -449,7 +449,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getColumnTypeName(columnIndex: number /*int*/): java.lang.String
+                public getColumnTypeName(columnIndex: number /*int*/): string
                 /**
                  * Indicates whether the designated column is definitely
                  * not writable, thus readonly.
@@ -461,7 +461,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isReadOnly(columnIndex: number /*int*/): boolean
+                public isReadOnly(columnIndex: number /*int*/): boolean
                 /**
                  * Indicates whether it is possible for a write operation on
                  * the designated column to succeed. A return value of
@@ -475,7 +475,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isWritable(columnIndex: number /*int*/): boolean
+                public isWritable(columnIndex: number /*int*/): boolean
                 /**
                  * Indicates whether a write operation on the designated column
                  * will definitely succeed.
@@ -487,7 +487,7 @@ declare namespace javax {
                  *  or the given column number is out of bounds
                  */
                 // @ts-ignore
-                isDefinitelyWritable(columnIndex: number /*int*/): boolean
+                public isDefinitelyWritable(columnIndex: number /*int*/): boolean
                 /**
                  * Retrieves the fully-qualified name of the class in the Java
                  * programming language to which a value in the designated column
@@ -510,7 +510,7 @@ declare namespace javax {
                  *          or the given column number is out of bounds
                  */
                 // @ts-ignore
-                getColumnClassName(columnIndex: number /*int*/): java.lang.String
+                public getColumnClassName(columnIndex: number /*int*/): string
                 /**
                  * Returns an object that implements the given interface to allow access to non-standard methods,
                  * or standard methods not exposed by the proxy.
@@ -525,7 +525,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                unwrap<T>(iface: java.lang.Class<T>): T
+                public unwrap<T>(iface: java.lang.Class<T>): T
                 /**
                  * Returns true if this either implements the interface argument or is directly or indirectly a wrapper
                  * for an object that does. Returns false otherwise. If this implements the interface then return true,
@@ -541,7 +541,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                isWrapperFor(interfaces: java.lang.Class<any>): boolean
+                public isWrapperFor(interfaces: java.lang.Class<any>): boolean
             }
         }
     }

@@ -247,7 +247,7 @@ declare namespace java {
                  *  than the maximum supported number of parties
                  */
                 // @ts-ignore
-                register(): int
+                public register(): number /*int*/
                 /**
                  * Adds the given number of new unarrived parties to this phaser.
                  * If an ongoing invocation of {@link #onAdvance} is in progress,
@@ -267,7 +267,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code parties < 0}
                  */
                 // @ts-ignore
-                bulkRegister(parties: number /*int*/): int
+                public bulkRegister(parties: number /*int*/): number /*int*/
                 /**
                  * Arrives at this phaser, without waiting for others to arrive.
                  * <p>It is a usage error for an unregistered party to invoke this
@@ -279,7 +279,7 @@ declare namespace java {
                  *  of unarrived parties would become negative
                  */
                 // @ts-ignore
-                arrive(): int
+                public arrive(): number /*int*/
                 /**
                  * Arrives at this phaser and deregisters from it without waiting
                  * for others to arrive. Deregistration reduces the number of
@@ -295,7 +295,7 @@ declare namespace java {
                  *  of registered or unarrived parties would become negative
                  */
                 // @ts-ignore
-                arriveAndDeregister(): int
+                public arriveAndDeregister(): number /*int*/
                 /**
                  * Arrives at this phaser and awaits others. Equivalent in effect
                  * to {@code awaitAdvance(arrive())}.  If you need to await with
@@ -313,7 +313,7 @@ declare namespace java {
                  *  of unarrived parties would become negative
                  */
                 // @ts-ignore
-                arriveAndAwaitAdvance(): int
+                public arriveAndAwaitAdvance(): number /*int*/
                 /**
                  * Awaits the phase of this phaser to advance from the given phase
                  * value, returning immediately if the current phase is not equal
@@ -326,7 +326,7 @@ declare namespace java {
                  *  if terminated
                  */
                 // @ts-ignore
-                awaitAdvance(phase: number /*int*/): int
+                public awaitAdvance(phase: number /*int*/): number /*int*/
                 /**
                  * Awaits the phase of this phaser to advance from the given phase
                  * value, throwing {@code InterruptedException} if interrupted
@@ -342,7 +342,7 @@ declare namespace java {
                  * @throws InterruptedException if thread interrupted while waiting
                  */
                 // @ts-ignore
-                awaitAdvanceInterruptibly(phase: number /*int*/): int
+                public awaitAdvanceInterruptibly(phase: number /*int*/): number /*int*/
                 /**
                  * Awaits the phase of this phaser to advance from the given phase
                  * value or the given timeout to elapse, throwing {@code
@@ -363,7 +363,7 @@ declare namespace java {
                  * @throws TimeoutException if timed out while waiting
                  */
                 // @ts-ignore
-                awaitAdvanceInterruptibly(phase: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): int
+                public awaitAdvanceInterruptibly(phase: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): number /*int*/
                 /**
                  * Forces this phaser to enter termination state.  Counts of
                  * registered parties are unaffected.  If this phaser is a member
@@ -374,7 +374,7 @@ declare namespace java {
                  * unexpected exceptions.
                  */
                 // @ts-ignore
-                forceTermination(): void
+                public forceTermination(): void
                 /**
                  * Returns the current phase number. The maximum phase number is
                  * {@code Integer.MAX_VALUE}, after which it restarts at
@@ -384,13 +384,13 @@ declare namespace java {
                  * @return the phase number, or a negative value if terminated
                  */
                 // @ts-ignore
-                getPhase(): int
+                public getPhase(): number /*int*/
                 /**
                  * Returns the number of parties registered at this phaser.
                  * @return the number of parties
                  */
                 // @ts-ignore
-                getRegisteredParties(): int
+                public getRegisteredParties(): number /*int*/
                 /**
                  * Returns the number of registered parties that have arrived at
                  * the current phase of this phaser. If this phaser has terminated,
@@ -398,7 +398,7 @@ declare namespace java {
                  * @return the number of arrived parties
                  */
                 // @ts-ignore
-                getArrivedParties(): int
+                public getArrivedParties(): number /*int*/
                 /**
                  * Returns the number of registered parties that have not yet
                  * arrived at the current phase of this phaser. If this phaser has
@@ -406,26 +406,26 @@ declare namespace java {
                  * @return the number of unarrived parties
                  */
                 // @ts-ignore
-                getUnarrivedParties(): int
+                public getUnarrivedParties(): number /*int*/
                 /**
                  * Returns the parent of this phaser, or {@code null} if none.
                  * @return the parent of this phaser, or {#code null} if none
                  */
                 // @ts-ignore
-                getParent(): java.util.concurrent.Phaser
+                public getParent(): java.util.concurrent.Phaser
                 /**
                  * Returns the root ancestor of this phaser, which is the same as
                  * this phaser if it has no parent.
                  * @return the root ancestor of this phaser
                  */
                 // @ts-ignore
-                getRoot(): java.util.concurrent.Phaser
+                public getRoot(): java.util.concurrent.Phaser
                 /**
                  * Returns {@code true} if this phaser has been terminated.
                  * @return {#code true} if this phaser has been terminated
                  */
                 // @ts-ignore
-                isTerminated(): boolean
+                public isTerminated(): boolean
                 /**
                  * Overridable method to perform an action upon impending phase
                  * advance, and to control termination. This method is invoked
@@ -472,7 +472,7 @@ declare namespace java {
                  * @return a string identifying this phaser, as well as its state
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

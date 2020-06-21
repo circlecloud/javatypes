@@ -27,29 +27,29 @@ declare namespace org {
                      * @throws IllegalArgumentException if the given content type is not supported by the Java Image I/O API
                      */
                     // @ts-ignore
-                    setDefaultContentType(defaultContentType: org.springframework.http.MediaType): void
+                    public setDefaultContentType(defaultContentType: org.springframework.http.MediaType): void
                     /**
                      * Returns the default {@code Content-Type} to be used for writing.
                      * Called when {@link #write} is invoked without a specified content type parameter.
                      */
                     // @ts-ignore
-                    getDefaultContentType(): org.springframework.http.MediaType
+                    public getDefaultContentType(): org.springframework.http.MediaType
                     /**
                      * Sets the cache directory. If this property is set to an existing directory,
                      * this converter will cache image data.
                      */
                     // @ts-ignore
-                    setCacheDir(cacheDir: java.io.File): void
+                    public setCacheDir(cacheDir: java.io.File): void
                     // @ts-ignore
-                    canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    getSupportedMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getSupportedMediaTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    read(clazz: java.lang.Class<java.awt.image.BufferedImage>, inputMessage: org.springframework.http.HttpInputMessage): java.awt.image.BufferedImage
+                    public read(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.awt.image.BufferedImage
                     // @ts-ignore
-                    write(image: java.awt.image.BufferedImage, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    public write(image: java.awt.image.BufferedImage, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
                     /**
                      * Template method that allows for manipulating the {@link ImageReadParam}
                      * before it is used to read an image.

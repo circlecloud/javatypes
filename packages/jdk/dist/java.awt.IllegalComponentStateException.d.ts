@@ -20,7 +20,7 @@ declare namespace java {
              * @param s the String that contains a detailed message
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
         }
     }
 }

@@ -23,7 +23,7 @@ declare namespace org {
                  *      boolean)}.
                  */
                 // @ts-ignore
-                constructor(tag: number /*int*/, owner: string, name: string, descriptor: string)
+                constructor(tag: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string)
                 /**
                  * Constructs a new field or method handle.
                  * @param tag the kind of field or method designated by this Handle. Must be {#link
@@ -38,7 +38,7 @@ declare namespace org {
                  * @param isInterface whether the owner is an interface or not.
                  */
                 // @ts-ignore
-                constructor(tag: number /*int*/, owner: string, name: string, descriptor: string, isInterface: boolean)
+                constructor(tag: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string, isInterface: boolean)
                 /**
                  * Returns the kind of field or method designated by this handle.
                  * @return {#link Opcodes#H_GETFIELD}, {@link Opcodes#H_GETSTATIC}, {@link Opcodes#H_PUTFIELD},
@@ -47,35 +47,35 @@ declare namespace org {
                  *      Opcodes#H_NEWINVOKESPECIAL} or {@link Opcodes#H_INVOKEINTERFACE}.
                  */
                 // @ts-ignore
-                getTag(): int
+                public getTag(): number /*int*/
                 /**
                  * Returns the internal name of the class that owns the field or method designated by this handle.
                  * @return the internal name of the class that owns the field or method designated by this handle.
                  */
                 // @ts-ignore
-                getOwner(): java.lang.String
+                public getOwner(): string
                 /**
                  * Returns the name of the field or method designated by this handle.
                  * @return the name of the field or method designated by this handle.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the descriptor of the field or method designated by this handle.
                  * @return the descriptor of the field or method designated by this handle.
                  */
                 // @ts-ignore
-                getDesc(): java.lang.String
+                public getDesc(): string
                 /**
                  * Returns true if the owner of the field or method designated by this handle is an interface.
                  * @return true if the owner of the field or method designated by this handle is an interface.
                  */
                 // @ts-ignore
-                isInterface(): boolean
+                public isInterface(): boolean
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the textual representation of this handle. The textual representation is:
                  * <ul>
@@ -84,7 +84,7 @@ declare namespace org {
                  * </ul>
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

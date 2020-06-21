@@ -63,13 +63,13 @@ declare namespace java {
              * cursor.
              */
             // @ts-ignore
-            readonly NULLORDER: number /*int*/
+            public static readonly NULLORDER: number /*int*/
             /**
              * Resets the cursor to the beginning of the string.  The next call
              * to next() will return the first collation element in the string.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Get the next collation element in the string.  <p>This iterator iterates
              * over a sequence of collation elements that were built from the string.
@@ -86,7 +86,7 @@ declare namespace java {
              * @return the next collation element
              */
             // @ts-ignore
-            next(): int
+            public next(): number /*int*/
             /**
              * Get the previous collation element in the string.  <p>This iterator iterates
              * over a sequence of collation elements that were built from the string.
@@ -104,28 +104,28 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            previous(): int
+            public previous(): number /*int*/
             /**
              * Return the primary component of a collation element.
              * @param order the collation element
              * @return the element's primary component
              */
             // @ts-ignore
-            primaryOrder(order: number /*int*/): int
+            public static primaryOrder(order: number /*int*/): number /*int*/
             /**
              * Return the secondary component of a collation element.
              * @param order the collation element
              * @return the element's secondary component
              */
             // @ts-ignore
-            secondaryOrder(order: number /*int*/): short
+            public static secondaryOrder(order: number /*int*/): number /*short*/
             /**
              * Return the tertiary component of a collation element.
              * @param order the collation element
              * @return the element's tertiary component
              */
             // @ts-ignore
-            tertiaryOrder(order: number /*int*/): short
+            public static tertiaryOrder(order: number /*int*/): number /*short*/
             /**
              * Sets the iterator to point to the collation element corresponding to
              * the specified character (the parameter is a CHARACTER offset in the
@@ -141,7 +141,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setOffset(newOffset: number /*int*/): void
+            public setOffset(newOffset: number /*int*/): void
             /**
              * Returns the character offset in the original text corresponding to the next
              * collation element.  (That is, getOffset() returns the position in the text
@@ -156,7 +156,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getOffset(): int
+            public getOffset(): number /*int*/
             /**
              * Return the maximum length of any expansion sequences that end
              * with the specified comparison order.
@@ -166,21 +166,21 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getMaxExpansion(order: number /*int*/): int
+            public getMaxExpansion(order: number /*int*/): number /*int*/
             /**
              * Set a new string over which to iterate.
              * @param source  the new source text
              * @since 1.2
              */
             // @ts-ignore
-            setText(source: string): void
+            public setText(source: java.lang.String | string): void
             /**
              * Set a new string over which to iterate.
              * @param source  the new source text.
              * @since 1.2
              */
             // @ts-ignore
-            setText(source: java.text.CharacterIterator): void
+            public setText(source: java.text.CharacterIterator): void
         }
     }
 }

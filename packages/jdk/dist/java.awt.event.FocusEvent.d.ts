@@ -106,29 +106,29 @@ declare namespace java {
                  * The first number in the range of ids used for focus events.
                  */
                 // @ts-ignore
-                readonly FOCUS_FIRST: number /*int*/
+                public static readonly FOCUS_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for focus events.
                  */
                 // @ts-ignore
-                readonly FOCUS_LAST: number /*int*/
+                public static readonly FOCUS_LAST: number /*int*/
                 /**
                  * This event indicates that the Component is now the focus owner.
                  */
                 // @ts-ignore
-                readonly FOCUS_GAINED: number /*int*/
+                public static readonly FOCUS_GAINED: number /*int*/
                 /**
                  * This event indicates that the Component is no longer the focus owner.
                  */
                 // @ts-ignore
-                readonly FOCUS_LOST: number /*int*/
+                public static readonly FOCUS_LOST: number /*int*/
                 /**
                  * Identifies the focus change event as temporary or permanent.
                  * @return <code>true</code> if the focus change is temporary;
                  *          <code>false</code> otherwise
                  */
                 // @ts-ignore
-                isTemporary(): boolean
+                public isTemporary(): boolean
                 /**
                  * Returns the other Component involved in this focus change. For a
                  * FOCUS_GAINED event, this is the Component that lost focus. For a
@@ -140,14 +140,14 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getOppositeComponent(): java.awt.Component
+                public getOppositeComponent(): java.awt.Component
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

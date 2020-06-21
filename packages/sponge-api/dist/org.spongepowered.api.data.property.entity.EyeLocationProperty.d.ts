@@ -5,7 +5,7 @@ declare namespace org {
                 namespace property {
                     namespace entity {
                         // @ts-ignore
-                        class EyeLocationProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, Vector3d> {
+                        class EyeLocationProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, Vector3d> {
                             /**
                              * Creates a new {@link EyeLocationProperty} based on the provided
                              * {@code position}.
@@ -23,7 +23,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(value: Vector3d, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

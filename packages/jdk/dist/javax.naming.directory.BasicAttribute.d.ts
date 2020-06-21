@@ -42,7 +42,7 @@ declare namespace javax {
                  * @param id The attribute's id. It cannot be null.
                  */
                 // @ts-ignore
-                constructor(id: string)
+                constructor(id: java.lang.String | string)
                 /**
                  * Constructs a new instance of an unordered attribute with a single value.
                  * @param id The attribute's id. It cannot be null.
@@ -50,7 +50,7 @@ declare namespace javax {
                  *         value is added to the attribute.
                  */
                 // @ts-ignore
-                constructor(id: string, value: any)
+                constructor(id: java.lang.String | string, value: java.lang.Object | any)
                 /**
                  * Constructs a new instance of a possibly ordered attribute with no value.
                  * @param id The attribute's id. It cannot be null.
@@ -58,7 +58,7 @@ declare namespace javax {
                  *  false otherwise.
                  */
                 // @ts-ignore
-                constructor(id: string, ordered: boolean)
+                constructor(id: java.lang.String | string, ordered: boolean)
                 /**
                  * Constructs a new instance of a possibly ordered attribute with a
                  * single value.
@@ -69,7 +69,7 @@ declare namespace javax {
                  *  false otherwise.
                  */
                 // @ts-ignore
-                constructor(id: string, value: any, ordered: boolean)
+                constructor(id: java.lang.String | string, value: java.lang.Object | any, ordered: boolean)
                 /**
                  * Holds the attribute's id. It is initialized by the public constructor and
                  * cannot be null unless methods in BasicAttribute that use attrID
@@ -77,14 +77,14 @@ declare namespace javax {
                  * @serial 
                  */
                 // @ts-ignore
-                attrID: string
+                attrID: java.lang.String | string
                 /**
                  * Holds the attribute's values. Initialized by public constructors.
                  * Cannot be null unless methods in BasicAttribute that use
                  * values have been overridden.
                  */
                 // @ts-ignore
-                values: java.util.Vector<java.lang.Object>
+                values: java.util.Vector<java.lang.Object | any>
                 /**
                  * A flag for recording whether this attribute's values are ordered.
                  * @serial 
@@ -92,7 +92,7 @@ declare namespace javax {
                 // @ts-ignore
                 ordered: boolean
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Determines whether obj is equal to this attribute.
                  * Two attributes are equal if their attribute-ids, syntaxes
@@ -119,7 +119,7 @@ declare namespace javax {
                  * @see #contains
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Calculates the hash code of this attribute.
                  * <p>
@@ -134,7 +134,7 @@ declare namespace javax {
                  * @see #equals
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Generates the string representation of this attribute.
                  * The string consists of the attribute's id and its values.
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @return The non-null string representation of this attribute.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Retrieves an enumeration of this attribute's values.
                  * <p>
@@ -153,7 +153,7 @@ declare namespace javax {
                  * from the directory.
                  */
                 // @ts-ignore
-                getAll(): javax.naming.NamingEnumeration<?>
+                public getAll(): javax.naming.NamingEnumeration<any>
                 /**
                  * Retrieves one of this attribute's values.
                  * <p>
@@ -163,11 +163,11 @@ declare namespace javax {
                  * from the directory.
                  */
                 // @ts-ignore
-                get(): java.lang.Object
+                public get(): any
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                getID(): java.lang.String
+                public getID(): string
                 /**
                  * Determines whether a value is in this attribute.
                  * <p>
@@ -179,7 +179,7 @@ declare namespace javax {
                  * A subclass may use schema information to determine equality.
                  */
                 // @ts-ignore
-                contains(attrVal: any): boolean
+                public contains(attrVal: java.lang.Object | any): boolean
                 /**
                  * Adds a new value to this attribute.
                  * <p>
@@ -190,7 +190,7 @@ declare namespace javax {
                  * A subclass may use schema information to determine equality.
                  */
                 // @ts-ignore
-                add(attrVal: any): boolean
+                public add(attrVal: java.lang.Object | any): boolean
                 /**
                  * Removes a specified value from this attribute.
                  * <p>
@@ -201,19 +201,19 @@ declare namespace javax {
                  * A subclass may use schema information to determine equality.
                  */
                 // @ts-ignore
-                remove(attrval: any): boolean
+                public remove(attrval: java.lang.Object | any): boolean
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 // @ts-ignore
-                isOrdered(): boolean
+                public isOrdered(): boolean
                 // @ts-ignore
-                get(ix: number /*int*/): java.lang.Object
+                public get(ix: number /*int*/): any
                 // @ts-ignore
-                remove(ix: number /*int*/): java.lang.Object
+                public remove(ix: number /*int*/): any
                 // @ts-ignore
-                add(ix: number /*int*/, attrVal: any): void
+                public add(ix: number /*int*/, attrVal: java.lang.Object | any): void
                 // @ts-ignore
-                set(ix: number /*int*/, attrVal: any): java.lang.Object
+                public set(ix: number /*int*/, attrVal: java.lang.Object | any): any
                 /**
                  * Retrieves the syntax definition associated with this attribute.
                  * <p>
@@ -221,7 +221,7 @@ declare namespace javax {
                  * should override this method if it supports schema.
                  */
                 // @ts-ignore
-                getAttributeSyntaxDefinition(): javax.naming.directory.DirContext
+                public getAttributeSyntaxDefinition(): javax.naming.directory.DirContext
                 /**
                  * Retrieves this attribute's schema definition.
                  * <p>
@@ -229,7 +229,7 @@ declare namespace javax {
                  * should override this method if it supports schema.
                  */
                 // @ts-ignore
-                getAttributeDefinition(): javax.naming.directory.DirContext
+                public getAttributeDefinition(): javax.naming.directory.DirContext
             }
         }
     }

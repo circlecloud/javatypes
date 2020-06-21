@@ -17,14 +17,14 @@ declare namespace org {
                      * @return Whether the class has a registration already or not
                      */
                     // @ts-ignore
-                    hasRegistrationFor(mappedClass: java.lang.Class<TExtra>): boolean
+                    hasRegistrationFor(mappedClass: java.lang.Class<any>): boolean
                     /**
                      * Gets the {@link CatalogType} based on the provided {@link Class}.
                      * @param clazz The class to get the catalog type for
                      * @return The catalog type
                      */
                     // @ts-ignore
-                    getForClass(clazz: java.lang.Class<TExtra>): T
+                    getForClass(clazz: java.lang.Class<any>): T
                 }
             }
         }

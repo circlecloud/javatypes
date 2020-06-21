@@ -11,7 +11,7 @@ declare namespace org {
                  * @return Brew Time
                  */
                 // @ts-ignore
-                getBrewingTime(): int
+                getBrewingTime(): number /*int*/
                 /**
                  * Set the time left before brewing completes.
                  * @param brewTime Brewing time
@@ -23,7 +23,7 @@ declare namespace org {
                  * @return The fuel level
                  */
                 // @ts-ignore
-                getFuelLevel(): int
+                getFuelLevel(): number /*int*/
                 /**
                  * Set the level of current fuel for brewing.
                  * @param level fuel level

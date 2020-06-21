@@ -140,7 +140,7 @@ declare namespace javax {
             // @ts-ignore
             numProgressivePasses: number /*int*/
             // @ts-ignore
-            setDestinationType(destinationType: javax.imageio.ImageTypeSpecifier): void
+            public setDestinationType(destinationType: javax.imageio.ImageTypeSpecifier): void
             /**
              * Supplies a <code>BufferedImage</code> to be used as the
              * destination for decoded pixel data.  The currently set image
@@ -164,7 +164,7 @@ declare namespace javax {
              * @see #getDestination
              */
             // @ts-ignore
-            setDestination(destination: java.awt.image.BufferedImage): void
+            public setDestination(destination: java.awt.image.BufferedImage): void
             /**
              * Returns the <code>BufferedImage</code> currently set by the
              * <code>setDestination</code> method, or <code>null</code>
@@ -173,7 +173,7 @@ declare namespace javax {
              * @see #setDestination
              */
             // @ts-ignore
-            getDestination(): java.awt.image.BufferedImage
+            public getDestination(): java.awt.image.BufferedImage
             /**
              * Sets the indices of the destination bands where data
              * will be placed.  Duplicate indices are not allowed.
@@ -202,7 +202,7 @@ declare namespace javax {
              * @see ImageReader#checkReadParamBandSettings
              */
             // @ts-ignore
-            setDestinationBands(destinationBands: number /*int*/[]): void
+            public setDestinationBands(destinationBands: number /*int*/[]): void
             /**
              * Returns the set of band indices where data will be placed.
              * If no value has been set, <code>null</code> is returned to
@@ -212,7 +212,7 @@ declare namespace javax {
              * @see #setDestinationBands
              */
             // @ts-ignore
-            getDestinationBands(): int[]
+            public getDestinationBands(): number /*int*/[]
             /**
              * Returns <code>true</code> if this reader allows the source
              * image to be rendered at an arbitrary size as part of the
@@ -226,7 +226,7 @@ declare namespace javax {
              * @see #setSourceRenderSize
              */
             // @ts-ignore
-            canSetSourceRenderSize(): boolean
+            public canSetSourceRenderSize(): boolean
             /**
              * If the image is able to be rendered at an arbitrary size, sets
              * the source width and height to the supplied values.  Note that
@@ -257,7 +257,7 @@ declare namespace javax {
              * @see ImageReader#getAspectRatio
              */
             // @ts-ignore
-            setSourceRenderSize(size: java.awt.Dimension): void
+            public setSourceRenderSize(size: java.awt.Dimension): void
             /**
              * Returns the width and height of the source image as it
              * will be rendered during decoding, if they have been set via the
@@ -268,7 +268,7 @@ declare namespace javax {
              * @see #setSourceRenderSize
              */
             // @ts-ignore
-            getSourceRenderSize(): java.awt.Dimension
+            public getSourceRenderSize(): java.awt.Dimension
             /**
              * Sets the range of progressive passes that will be decoded.
              * Passes outside of this range will be ignored.
@@ -303,7 +303,7 @@ declare namespace javax {
              * @see #getSourceMaxProgressivePass
              */
             // @ts-ignore
-            setSourceProgressivePasses(minPass: number /*int*/, numPasses: number /*int*/): void
+            public setSourceProgressivePasses(minPass: number /*int*/, numPasses: number /*int*/): void
             /**
              * Returns the index of the first progressive pass that will be
              * decoded. If no value has been set, 0 will be returned (which is
@@ -313,7 +313,7 @@ declare namespace javax {
              * @see #getSourceNumProgressivePasses
              */
             // @ts-ignore
-            getSourceMinProgressivePass(): int
+            public getSourceMinProgressivePass(): number /*int*/
             /**
              * If <code>getSourceNumProgressivePasses</code> is equal to
              * <code>Integer.MAX_VALUE</code>, returns
@@ -324,7 +324,7 @@ declare namespace javax {
              *  <code>Integer.MAX_VALUE</code>.
              */
             // @ts-ignore
-            getSourceMaxProgressivePass(): int
+            public getSourceMaxProgressivePass(): number /*int*/
             /**
              * Returns the number of the progressive passes that will be
              * decoded. If no value has been set,
@@ -335,7 +335,7 @@ declare namespace javax {
              * @see #getSourceMinProgressivePass
              */
             // @ts-ignore
-            getSourceNumProgressivePasses(): int
+            public getSourceNumProgressivePasses(): number /*int*/
         }
     }
 }

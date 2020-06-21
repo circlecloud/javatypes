@@ -26,14 +26,14 @@ declare namespace javax {
              *  otherwise, null
              */
             // @ts-ignore
-            getToolTipText(): java.lang.String
+            getToolTipText(): string
             /**
              * Returns the titled border text
              * @return the titled border text, if supported, of the object;
              *  otherwise, null
              */
             // @ts-ignore
-            getTitledBorderText(): java.lang.String
+            getTitledBorderText(): string
             /**
              * Returns key bindings associated with this object
              * @return the key bindings, if supported, of the object;

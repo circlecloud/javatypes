@@ -30,19 +30,19 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                load(props: java.util.Properties, jis: java.io.InputStream): void
+                public load(props: java.util.Properties, jis: java.io.InputStream): void
                 // @ts-ignore
-                load(props: java.util.Properties, reader: java.io.Reader): void
+                public load(props: java.util.Properties, reader: java.io.Reader): void
                 // @ts-ignore
-                store(props: java.util.Properties, os: java.io.OutputStream, header: string): void
+                public store(props: java.util.Properties, os: java.io.OutputStream, header: java.lang.String | string): void
                 // @ts-ignore
-                store(props: java.util.Properties, writer: java.io.Writer, header: string): void
+                public store(props: java.util.Properties, writer: java.io.Writer, header: java.lang.String | string): void
                 // @ts-ignore
-                loadFromXml(props: java.util.Properties, jis: java.io.InputStream): void
+                public loadFromXml(props: java.util.Properties, jis: java.io.InputStream): void
                 // @ts-ignore
-                storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: string): void
+                public storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: java.lang.String | string): void
                 // @ts-ignore
-                storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: string, encoding: string): void
+                public storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: java.lang.String | string, encoding: java.lang.String | string): void
             }
         }
     }

@@ -22,14 +22,14 @@ declare namespace javax {
                  * @param notice The non-null unsolicited notification.
                  */
                 // @ts-ignore
-                constructor(src: any, notice: javax.naming.ldap.UnsolicitedNotification)
+                constructor(src: java.lang.Object | any, notice: javax.naming.ldap.UnsolicitedNotification)
                 /**
                  * Returns the unsolicited notification.
                  * @return The non-null unsolicited notification that caused this
                  *  event to be fired.
                  */
                 // @ts-ignore
-                getNotification(): javax.naming.ldap.UnsolicitedNotification
+                public getNotification(): javax.naming.ldap.UnsolicitedNotification
                 /**
                  * Invokes the <tt>notificationReceived()</tt> method on
                  * a listener using this event.
@@ -37,7 +37,7 @@ declare namespace javax {
                  *  <tt>notificationReceived</tt>.
                  */
                 // @ts-ignore
-                dispatch(listener: javax.naming.ldap.UnsolicitedNotificationListener): void
+                public dispatch(listener: javax.naming.ldap.UnsolicitedNotificationListener): void
             }
         }
     }

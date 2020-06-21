@@ -21,7 +21,7 @@ declare namespace org {
                      * @see ObjectName#getInstance(String)
                      */
                     // @ts-ignore
-                    getInstance(objectName: any): javax.management.ObjectName
+                    public static getInstance(objectName: java.lang.Object | any): javax.management.ObjectName
                     /**
                      * Retrieve the {@code ObjectName} instance corresponding to the supplied name.
                      * @param objectName the {#code ObjectName} in {@code String} format
@@ -31,7 +31,7 @@ declare namespace org {
                      * @see ObjectName#getInstance(String)
                      */
                     // @ts-ignore
-                    getInstance(objectName: string): javax.management.ObjectName
+                    public static getInstance(objectName: java.lang.String | string): javax.management.ObjectName
                     /**
                      * Retrieve an {@code ObjectName} instance for the specified domain and a
                      * single property with the supplied key and value.
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see ObjectName#getInstance(String, String, String)
                      */
                     // @ts-ignore
-                    getInstance(domainName: string, key: string, value: string): javax.management.ObjectName
+                    public static getInstance(domainName: java.lang.String | string, key: java.lang.String | string, value: java.lang.String | string): javax.management.ObjectName
                     /**
                      * Retrieve an {@code ObjectName} instance with the specified domain name
                      * and the supplied key/name properties.
@@ -56,7 +56,7 @@ declare namespace org {
                      * @see ObjectName#getInstance(String, java.util.Hashtable)
                      */
                     // @ts-ignore
-                    getInstance(domainName: string, properties: java.util.Hashtable<java.lang.String, java.lang.String>): javax.management.ObjectName
+                    public static getInstance(domainName: java.lang.String | string, properties: java.util.Hashtable<java.lang.String | string, java.lang.String | string>): javax.management.ObjectName
                 }
             }
         }

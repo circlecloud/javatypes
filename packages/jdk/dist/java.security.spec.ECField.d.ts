@@ -18,7 +18,7 @@ declare namespace java {
                  * @return the field size in bits.
                  */
                 // @ts-ignore
-                getFieldSize(): int
+                getFieldSize(): number /*int*/
             }
         }
     }

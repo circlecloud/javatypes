@@ -66,7 +66,7 @@ declare namespace org {
                  * @param annotationFormatterFactory the annotation formatter factory to add
                  */
                 // @ts-ignore
-                addFormatterForFieldAnnotation(annotationFormatterFactory: org.springframework.format.AnnotationFormatterFactory<java.lang.annotation.Annotation>): void
+                addFormatterForFieldAnnotation(annotationFormatterFactory: org.springframework.format.AnnotationFormatterFactory<any>): void
             }
         }
     }

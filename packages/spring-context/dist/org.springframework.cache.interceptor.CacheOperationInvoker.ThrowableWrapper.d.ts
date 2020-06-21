@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class ThrowableWrapper extends java.lang.RuntimeException {
                         // @ts-ignore
-                        constructor(original: Error)
+                        constructor(original: java.lang.Throwable | Error)
                         // @ts-ignore
-                        getOriginal(): java.lang.Throwable
+                        getOriginal(): Error
                     }
                 }
             }

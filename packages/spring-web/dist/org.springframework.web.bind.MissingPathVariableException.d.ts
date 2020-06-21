@@ -20,19 +20,19 @@ declare namespace org {
                      * @param parameter the method parameter
                      */
                     // @ts-ignore
-                    constructor(variableName: string, parameter: MethodParameter)
+                    constructor(variableName: java.lang.String | string, parameter: MethodParameter)
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Return the expected name of the path variable.
                      */
                     // @ts-ignore
-                    getVariableName(): java.lang.String
+                    public getVariableName(): string
                     /**
                      * Return the method parameter bound to the path variable.
                      */
                     // @ts-ignore
-                    getParameter(): MethodParameter
+                    public getParameter(): MethodParameter
                 }
             }
         }

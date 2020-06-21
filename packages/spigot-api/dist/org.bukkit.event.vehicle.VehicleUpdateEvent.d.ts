@@ -10,9 +10,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(vehicle: org.bukkit.entity.Vehicle)
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

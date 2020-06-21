@@ -70,7 +70,7 @@ declare namespace java {
                  *  <code>Component</code>'s coords.
                  */
                 // @ts-ignore
-                getLocation(): java.awt.Point
+                public getLocation(): java.awt.Point
                 /**
                  * This method returns the current <code>DataFlavor</code>s from the
                  * <code>DropTargetContext</code>.
@@ -78,7 +78,7 @@ declare namespace java {
                  * @return current DataFlavors from the DropTargetContext
                  */
                 // @ts-ignore
-                getCurrentDataFlavors(): java.awt.datatransfer.DataFlavor[]
+                public getCurrentDataFlavors(): java.awt.datatransfer.DataFlavor[]
                 /**
                  * This method returns the current <code>DataFlavor</code>s
                  * as a <code>java.util.List</code>
@@ -86,7 +86,7 @@ declare namespace java {
                  * @return a <code>java.util.List</code> of the Current <code>DataFlavor</code>s
                  */
                 // @ts-ignore
-                getCurrentDataFlavorsAsList(): java.util.List<java.awt.datatransfer.DataFlavor>
+                public getCurrentDataFlavorsAsList(): Array<java.awt.datatransfer.DataFlavor>
                 /**
                  * This method returns a <code>boolean</code> indicating
                  * if the specified <code>DataFlavor</code> is supported.
@@ -96,19 +96,19 @@ declare namespace java {
                  * @return if a particular DataFlavor is supported
                  */
                 // @ts-ignore
-                isDataFlavorSupported(df: java.awt.datatransfer.DataFlavor): boolean
+                public isDataFlavorSupported(df: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * This method returns the source drop actions.
                  * @return the source drop actions
                  */
                 // @ts-ignore
-                getSourceActions(): int
+                public getSourceActions(): number /*int*/
                 /**
                  * This method returns the user drop action.
                  * @return the user drop action
                  */
                 // @ts-ignore
-                getDropAction(): int
+                public getDropAction(): number /*int*/
                 /**
                  * This method returns the Transferable object that represents
                  * the data associated with the current drag operation.
@@ -118,7 +118,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTransferable(): java.awt.datatransfer.Transferable
+                public getTransferable(): java.awt.datatransfer.Transferable
                 /**
                  * Accepts the drag.
                  * This method should be called from a
@@ -130,14 +130,14 @@ declare namespace java {
                  * @param dragOperation the operation accepted by the target
                  */
                 // @ts-ignore
-                acceptDrag(dragOperation: number /*int*/): void
+                public acceptDrag(dragOperation: number /*int*/): void
                 /**
                  * Rejects the drag as a result of examining either the
                  * <code>dropAction</code> or the available <code>DataFlavor</code>
                  * types.
                  */
                 // @ts-ignore
-                rejectDrag(): void
+                public rejectDrag(): void
             }
         }
     }

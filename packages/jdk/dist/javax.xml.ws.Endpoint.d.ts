@@ -30,7 +30,7 @@ declare namespace javax {
              * @see java.util.concurrent.Executor
              */
             // @ts-ignore
-            class Endpoint extends java.lang.Object {
+            abstract class Endpoint extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -38,13 +38,13 @@ declare namespace javax {
                  * <p>Type: javax.xml.namespace.QName
                  */
                 // @ts-ignore
-                readonly WSDL_SERVICE: string
+                public static readonly WSDL_SERVICE: java.lang.String | string
                 /**
                  * Standard property: name of WSDL port.
                  * <p>Type: javax.xml.namespace.QName
                  */
                 // @ts-ignore
-                readonly WSDL_PORT: string
+                public static readonly WSDL_PORT: java.lang.String | string
                 /**
                  * Creates an endpoint with the specified implementor object. If there is
                  * a binding specified via a BindingType annotation then it MUST be used else
@@ -57,7 +57,7 @@ declare namespace javax {
                  * @return The newly created endpoint.
                  */
                 // @ts-ignore
-                create(implementor: any): javax.xml.ws.Endpoint
+                public static create(implementor: java.lang.Object | any): javax.xml.ws.Endpoint
                 /**
                  * Creates an endpoint with the specified implementor object and web
                  * service features. If there is a binding specified via a BindingType
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @since JAX-WS 2.2
                  */
                 // @ts-ignore
-                create(implementor: any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
+                public static create(implementor: java.lang.Object | any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
                 /**
                  * Creates an endpoint with the specified binding type and
                  * implementor object.
@@ -90,7 +90,7 @@ declare namespace javax {
                  * @return The newly created endpoint.
                  */
                 // @ts-ignore
-                create(bindingId: string, implementor: any): javax.xml.ws.Endpoint
+                public static create(bindingId: java.lang.String | string, implementor: java.lang.Object | any): javax.xml.ws.Endpoint
                 /**
                  * Creates an endpoint with the specified binding type,
                  * implementor object, and web service features.
@@ -109,19 +109,19 @@ declare namespace javax {
                  * @since JAX-WS 2.2
                  */
                 // @ts-ignore
-                create(bindingId: string, implementor: any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
+                public static create(bindingId: java.lang.String | string, implementor: java.lang.Object | any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
                 /**
                  * Returns the binding for this endpoint.
                  * @return The binding for this endpoint
                  */
                 // @ts-ignore
-                abstract getBinding(): javax.xml.ws.Binding
+                public abstract getBinding(): javax.xml.ws.Binding
                 /**
                  * Returns the implementation object for this endpoint.
                  * @return The implementor for this endpoint
                  */
                 // @ts-ignore
-                abstract getImplementor(): java.lang.Object
+                public abstract getImplementor(): any
                 /**
                  * Publishes this endpoint at the given address.
                  * The necessary server infrastructure will be created and
@@ -142,7 +142,7 @@ declare namespace javax {
                  *           <code>WebServicePermission("publishEndpoint")</code> permission.
                  */
                 // @ts-ignore
-                abstract publish(address: string): void
+                public abstract publish(address: java.lang.String | string): void
                 /**
                  * Creates and publishes an endpoint for the specified implementor
                  * object at the given address.
@@ -164,7 +164,7 @@ declare namespace javax {
                  *           <code>WebServicePermission("publishEndpoint")</code> permission.
                  */
                 // @ts-ignore
-                publish(address: string, implementor: any): javax.xml.ws.Endpoint
+                public static publish(address: java.lang.String | string, implementor: java.lang.Object | any): javax.xml.ws.Endpoint
                 /**
                  * Creates and publishes an endpoint for the specified implementor
                  * object at the given address. The created endpoint is configured
@@ -191,7 +191,7 @@ declare namespace javax {
                  * @since JAX-WS 2.2
                  */
                 // @ts-ignore
-                publish(address: string, implementor: any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
+                public static publish(address: java.lang.String | string, implementor: java.lang.Object | any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
                 /**
                  * Publishes this endpoint at the provided server context.
                  * A server context encapsulates the server infrastructure
@@ -214,7 +214,7 @@ declare namespace javax {
                  *           <code>WebServicePermission("publishEndpoint")</code> permission.
                  */
                 // @ts-ignore
-                abstract publish(serverContext: any): void
+                public abstract publish(serverContext: java.lang.Object | any): void
                 /**
                  * Publishes this endpoint at the provided server context.
                  * A server context encapsulates the server infrastructure
@@ -242,26 +242,26 @@ declare namespace javax {
                  * @since JAX-WS 2.2
                  */
                 // @ts-ignore
-                publish(serverContext: javax.xml.ws.spi.http.HttpContext): void
+                public publish(serverContext: javax.xml.ws.spi.http.HttpContext): void
                 /**
                  * Stops publishing this endpoint.
                  * If the endpoint is not in a published state, this method
                  * has no effect.
                  */
                 // @ts-ignore
-                abstract stop(): void
+                public abstract stop(): void
                 /**
                  * Returns true if the endpoint is in the published state.
                  * @return <code>true</code> if the endpoint is in the published state.
                  */
                 // @ts-ignore
-                abstract isPublished(): boolean
+                public abstract isPublished(): boolean
                 /**
                  * Returns a list of metadata documents for the service.
                  * @return <code>List&lt;javax.xml.transform.Source&gt;</code> A list of metadata documents for the service
                  */
                 // @ts-ignore
-                abstract getMetadata(): java.util.List<javax.xml.transform.Source>
+                public abstract getMetadata(): Array<javax.xml.transform.Source>
                 /**
                  * Sets the metadata for this endpoint.
                  * @param metadata A list of XML document sources containing
@@ -271,7 +271,7 @@ declare namespace javax {
                  *          has already been published.
                  */
                 // @ts-ignore
-                abstract setMetadata(metadata: Array<javax.xml.transform.Source>): void
+                public abstract setMetadata(metadata: java.util.List<javax.xml.transform.Source> | Array<javax.xml.transform.Source>): void
                 /**
                  * Returns the executor for this <code>Endpoint</code>instance.
                  * The executor is used to dispatch an incoming request to
@@ -281,7 +281,7 @@ declare namespace javax {
                  * @see java.util.concurrent.Executor
                  */
                 // @ts-ignore
-                abstract getExecutor(): java.util.concurrent.Executor
+                public abstract getExecutor(): java.util.concurrent.Executor
                 /**
                  * Sets the executor for this <code>Endpoint</code> instance.
                  * The executor is used to dispatch an incoming request to
@@ -298,21 +298,21 @@ declare namespace javax {
                  * @see java.util.concurrent.Executor
                  */
                 // @ts-ignore
-                abstract setExecutor(executor: java.util.concurrent.Executor): void
+                public abstract setExecutor(executor: java.util.concurrent.Executor): void
                 /**
                  * Returns the property bag for this <code>Endpoint</code> instance.
                  * @return Map&lt;String,Object&gt; The property bag
                  *          associated with this instance.
                  */
                 // @ts-ignore
-                abstract getProperties(): java.util.Map<java.lang.String, java.lang.Object>
+                public abstract getProperties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Sets the property bag for this <code>Endpoint</code> instance.
                  * @param properties The property bag associated with
                  *         this instance.
                  */
                 // @ts-ignore
-                abstract setProperties(properties: java.util.Map<java.lang.String, java.lang.Object>): void
+                public abstract setProperties(properties: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                 /**
                  * Returns the <code>EndpointReference</code> associated with
                  * this <code>Endpoint</code> instance.
@@ -335,7 +335,7 @@ declare namespace javax {
                  * @since JAX-WS 2.1
                  */
                 // @ts-ignore
-                abstract getEndpointReference(...referenceParameters: org.w3c.dom.Element[]): javax.xml.ws.EndpointReference
+                public abstract getEndpointReference(...referenceParameters: org.w3c.dom.Element[]): javax.xml.ws.EndpointReference
                 /**
                  * Returns the <code>EndpointReference</code> associated with
                  * this <code>Endpoint</code> instance.
@@ -356,7 +356,7 @@ declare namespace javax {
                  * @since JAX-WS 2.1
                  */
                 // @ts-ignore
-                abstract getEndpointReference<T extends javax.xml.ws.EndpointReference>(clazz: java.lang.Class<T>, ...referenceParameters: org.w3c.dom.Element[]): T
+                public abstract getEndpointReference<T extends javax.xml.ws.EndpointReference>(clazz: java.lang.Class<T>, ...referenceParameters: org.w3c.dom.Element[]): T
                 /**
                  * By settng a <code>EndpointContext</code>, JAX-WS runtime knows about
                  * addresses of other endpoints in an application. If multiple endpoints
@@ -370,7 +370,7 @@ declare namespace javax {
                  * @since JAX-WS 2.2
                  */
                 // @ts-ignore
-                setEndpointContext(ctxt: javax.xml.ws.EndpointContext): void
+                public setEndpointContext(ctxt: javax.xml.ws.EndpointContext): void
             }
         }
     }

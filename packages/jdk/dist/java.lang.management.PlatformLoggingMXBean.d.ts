@@ -37,14 +37,14 @@ declare namespace java {
                  *          value is returned.
                  */
                 // @ts-ignore
-                getLoggerLevel(loggerName: string): java.lang.String
+                getLoggerLevel(loggerName: java.lang.String | string): string
                 /**
                  * Returns a list of the names of all of the currently registered
                  * <code>Logger</code> instances.
                  * @return a list of the names of all registered <code>Logger</code> objects.
                  */
                 // @ts-ignore
-                getLoggerNames(): java.util.List<java.lang.String>
+                getLoggerNames(): Array<java.lang.String | string>
                 /**
                  * Returns the name of the parent {@link java.util.logging.Logger} of the specified registered
                  * <code>Logger</code>,<code>loggerName</code>.
@@ -60,7 +60,7 @@ declare namespace java {
                  *          value is returned.
                  */
                 // @ts-ignore
-                getParentLoggerName(loggerName: string): java.lang.String
+                getParentLoggerName(loggerName: java.lang.String | string): string
                 /**
                  * Attempts to update the log level of the {@link java.util.logging.Logger} with name
                  * <code>loggerName</code> to <code>levelName</code>.
@@ -81,7 +81,7 @@ declare namespace java {
                  *  the caller does not have {#link java.util.logging.LoggingPermission} of &quot;control&quot;.
                  */
                 // @ts-ignore
-                setLoggerLevel(loggerName: string, levelName: string): void
+                setLoggerLevel(loggerName: java.lang.String | string, levelName: java.lang.String | string): void
             }
         }
     }

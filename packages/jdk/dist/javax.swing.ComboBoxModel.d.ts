@@ -21,13 +21,13 @@ declare namespace javax {
              *         to clear the selection
              */
             // @ts-ignore
-            setSelectedItem(anItem: any): void
+            setSelectedItem(anItem: java.lang.Object | any): void
             /**
              * Returns the selected item
              * @return The selected item or <code>null</code> if there is no selection
              */
             // @ts-ignore
-            getSelectedItem(): java.lang.Object
+            getSelectedItem(): any
         }
     }
 }

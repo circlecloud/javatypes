@@ -28,7 +28,7 @@ declare namespace javax {
                      * Fetch the child view this record represents
                      */
                     // @ts-ignore
-                    getChildView(): javax.swing.text.View
+                    public getChildView(): javax.swing.text.View
                     /**
                      * Update the child state.  This should be
                      * called by the thread that desires to spend
@@ -51,34 +51,34 @@ declare namespace javax {
                      * </ol>
                      */
                     // @ts-ignore
-                    run(): void
+                    public run(): void
                     /**
                      * What is the span along the minor axis.
                      */
                     // @ts-ignore
-                    getMinorSpan(): float
+                    public getMinorSpan(): number /*float*/
                     /**
                      * What is the offset along the minor axis
                      */
                     // @ts-ignore
-                    getMinorOffset(): float
+                    public getMinorOffset(): number /*float*/
                     /**
                      * What is the span along the major axis.
                      */
                     // @ts-ignore
-                    getMajorSpan(): float
+                    public getMajorSpan(): number /*float*/
                     /**
                      * Get the offset along the major axis
                      */
                     // @ts-ignore
-                    getMajorOffset(): float
+                    public getMajorOffset(): number /*float*/
                     /**
                      * This method should only be called by the ChildLocator,
                      * it is simply a convenient place to hold the cached
                      * location.
                      */
                     // @ts-ignore
-                    setMajorOffset(offs: number /*float*/): void
+                    public setMajorOffset(offs: number /*float*/): void
                     /**
                      * Mark preferences changed for this child.
                      * @param width true if the width preference has changed
@@ -86,12 +86,12 @@ declare namespace javax {
                      * @see javax.swing.JComponent#revalidate
                      */
                     // @ts-ignore
-                    preferenceChanged(width: boolean, height: boolean): void
+                    public preferenceChanged(width: boolean, height: boolean): void
                     /**
                      * Has the child view been laid out.
                      */
                     // @ts-ignore
-                    isLayoutValid(): boolean
+                    public isLayoutValid(): boolean
                 }
             }
         }

@@ -19,43 +19,43 @@ declare namespace org {
                      * Return the {@code id} field of this event, if available.
                      */
                     // @ts-ignore
-                    id(): java.lang.String
+                    public id(): string
                     /**
                      * Return the {@code event} field of this event, if available.
                      */
                     // @ts-ignore
-                    event(): java.lang.String
+                    public event(): string
                     /**
                      * Return the {@code retry} field of this event, if available.
                      */
                     // @ts-ignore
-                    retry(): java.time.Duration
+                    public retry(): java.time.Duration
                     /**
                      * Return the comment of this event, if available.
                      */
                     // @ts-ignore
-                    comment(): java.lang.String
+                    public comment(): string
                     /**
                      * Return the {@code data} field of this event, if available.
                      */
                     // @ts-ignore
-                    data(): T
+                    public data(): T
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Return a builder for a {@code SseEvent}.
                      * @param <T> the type of data that this event contains
                      * @return the builder
                      */
                     // @ts-ignore
-                    builder<T>(): org.springframework.http.codec.ServerSentEvent.Builder<T>
+                    public static builder<T>(): org.springframework.http.codec.ServerSentEvent.Builder<T>
                     /**
                      * Return a builder for a {@code SseEvent}, populated with the give {@linkplain #data() data}.
                      * @param <T> the type of data that this event contains
                      * @return the builder
                      */
                     // @ts-ignore
-                    builder<T>(data: T): org.springframework.http.codec.ServerSentEvent.Builder<T>
+                    public static builder<T>(data: T): org.springframework.http.codec.ServerSentEvent.Builder<T>
                 }
             }
         }

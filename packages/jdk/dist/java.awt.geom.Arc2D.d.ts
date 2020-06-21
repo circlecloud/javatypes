@@ -27,7 +27,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Arc2D extends java.awt.geom.RectangularShape {
+            abstract class Arc2D extends java.awt.geom.RectangularShape {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -63,7 +63,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly OPEN: number /*int*/
+                public static readonly OPEN: number /*int*/
                 /**
                  * The closure type for an arc closed by drawing a straight
                  * line segment from the start of the arc segment to the end of the
@@ -71,7 +71,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly CHORD: number /*int*/
+                public static readonly CHORD: number /*int*/
                 /**
                  * The closure type for an arc closed by drawing straight line
                  * segments from the start of the arc segment to the center
@@ -79,7 +79,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly PIE: number /*int*/
+                public static readonly PIE: number /*int*/
                 /**
                  * Returns the starting angle of the arc.
                  * @return A double value that represents the starting angle
@@ -88,7 +88,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getAngleStart(): double
+                public abstract getAngleStart(): number /*double*/
                 /**
                  * Returns the angular extent of the arc.
                  * @return A double value that represents the angular extent
@@ -97,7 +97,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getAngleExtent(): double
+                public abstract getAngleExtent(): number /*double*/
                 /**
                  * Returns the arc closure type of the arc: {@link #OPEN},
                  * {@link #CHORD}, or {@link #PIE}.
@@ -107,7 +107,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getArcType(): int
+                public getArcType(): number /*int*/
                 /**
                  * Returns the starting point of the arc.  This point is the
                  * intersection of the ray from the center defined by the
@@ -117,7 +117,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getStartPoint(): java.awt.geom.Point2D
+                public getStartPoint(): java.awt.geom.Point2D
                 /**
                  * Returns the ending point of the arc.  This point is the
                  * intersection of the ray from the center defined by the
@@ -128,7 +128,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getEndPoint(): java.awt.geom.Point2D
+                public getEndPoint(): java.awt.geom.Point2D
                 /**
                  * Sets the location, size, angular extents, and closure type of
                  * this arc to the specified double values.
@@ -145,7 +145,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setArc(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
+                public abstract setArc(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
                 /**
                  * Sets the location, size, angular extents, and closure type of
                  * this arc to the specified values.
@@ -161,7 +161,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setArc(loc: java.awt.geom.Point2D, size: java.awt.geom.Dimension2D, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
+                public setArc(loc: java.awt.geom.Point2D, size: java.awt.geom.Dimension2D, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
                 /**
                  * Sets the location, size, angular extents, and closure type of
                  * this arc to the specified values.
@@ -175,14 +175,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setArc(rect: java.awt.geom.Rectangle2D, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
+                public setArc(rect: java.awt.geom.Rectangle2D, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
                 /**
                  * Sets this arc to be the same as the specified arc.
                  * @param a The <CODE>Arc2D</CODE> to use to set the arc's values.
                  * @since 1.2
                  */
                 // @ts-ignore
-                setArc(a: java.awt.geom.Arc2D): void
+                public setArc(a: java.awt.geom.Arc2D): void
                 /**
                  * Sets the position, bounds, angular extents, and closure type of
                  * this arc to the specified values. The arc is defined by a center
@@ -197,7 +197,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setArcByCenter(x: number /*double*/, y: number /*double*/, radius: number /*double*/, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
+                public setArcByCenter(x: number /*double*/, y: number /*double*/, radius: number /*double*/, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
                 /**
                  * Sets the position, bounds, and angular extents of this arc to the
                  * specified value. The starting angle of the arc is tangent to the
@@ -216,7 +216,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setArcByTangent(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D, p3: java.awt.geom.Point2D, radius: number /*double*/): void
+                public setArcByTangent(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D, p3: java.awt.geom.Point2D, radius: number /*double*/): void
                 /**
                  * Sets the starting angle of this arc to the specified double
                  * value.
@@ -225,7 +225,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setAngleStart(angSt: number /*double*/): void
+                public abstract setAngleStart(angSt: number /*double*/): void
                 /**
                  * Sets the angular extent of this arc to the specified double
                  * value.
@@ -234,7 +234,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setAngleExtent(angExt: number /*double*/): void
+                public abstract setAngleExtent(angExt: number /*double*/): void
                 /**
                  * Sets the starting angle of this arc to the angle that the
                  * specified point defines relative to the center of this arc.
@@ -244,7 +244,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setAngleStart(p: java.awt.geom.Point2D): void
+                public setAngleStart(p: java.awt.geom.Point2D): void
                 /**
                  * Sets the starting angle and angular extent of this arc using two
                  * sets of coordinates. The first set of coordinates is used to
@@ -260,7 +260,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setAngles(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                public setAngles(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                 /**
                  * Sets the starting angle and angular extent of this arc using
                  * two points. The first point is used to determine the angle of
@@ -276,7 +276,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setAngles(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
+                public setAngles(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
                 /**
                  * Sets the closure type of this arc to the specified value:
                  * <CODE>OPEN</CODE>, <CODE>CHORD</CODE>, or <CODE>PIE</CODE>.
@@ -289,7 +289,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setArcType(type: number /*int*/): void
+                public setArcType(type: number /*int*/): void
                 /**
                  * {@inheritDoc}
                  * Note that the arc
@@ -298,7 +298,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                public setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                 /**
                  * Returns the high-precision framing rectangle of the arc.  The framing
                  * rectangle contains only the part of this <code>Arc2D</code> that is
@@ -315,7 +315,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds2D(): java.awt.geom.Rectangle2D
+                public getBounds2D(): java.awt.geom.Rectangle2D
                 /**
                  * Constructs a <code>Rectangle2D</code> of the appropriate precision
                  * to hold the parameters calculated to be the framing rectangle
@@ -341,7 +341,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                containsAngle(angle: number /*double*/): boolean
+                public containsAngle(angle: number /*double*/): boolean
                 /**
                  * Determines whether or not the specified point is inside the boundary
                  * of the arc.
@@ -353,7 +353,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * Determines whether or not the interior of the arc intersects
                  * the interior of the specified rectangle.
@@ -366,7 +366,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Determines whether or not the interior of the arc entirely contains
                  * the specified rectangle.
@@ -379,7 +379,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Determines whether or not the interior of the arc entirely contains
                  * the specified rectangle.
@@ -389,7 +389,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(r: java.awt.geom.Rectangle2D): boolean
+                public contains(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * Returns an iteration object that defines the boundary of the
                  * arc.
@@ -405,14 +405,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                 /**
                  * Returns the hashcode for this <code>Arc2D</code>.
                  * @return the hashcode for this <code>Arc2D</code>.
                  * @since 1.6
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Determines whether or not the specified <code>Object</code> is
                  * equal to this <code>Arc2D</code>.  The specified
@@ -428,7 +428,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

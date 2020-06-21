@@ -33,7 +33,7 @@ declare namespace java {
                  * @throws NullPointerException if other is null
                  */
                 // @ts-ignore
-                and(other: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): java.util.function.Predicate<T>
+                and(other: java.util.function$.Predicate<any>): java.util.function$.Predicate<T>
                 /**
                  * Returns a predicate that represents the logical negation of this
                  * predicate.
@@ -41,7 +41,7 @@ declare namespace java {
                  *  predicate
                  */
                 // @ts-ignore
-                negate(): java.util.function.Predicate<T>
+                negate(): java.util.function$.Predicate<T>
                 /**
                  * Returns a composed predicate that represents a short-circuiting logical
                  * OR of this predicate and another.  When evaluating the composed
@@ -57,7 +57,7 @@ declare namespace java {
                  * @throws NullPointerException if other is null
                  */
                 // @ts-ignore
-                or(other: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): java.util.function.Predicate<T>
+                or(other: java.util.function$.Predicate<any>): java.util.function$.Predicate<T>
                 /**
                  * Returns a predicate that tests if two arguments are equal according
                  * to {@link Objects#equals(Object, Object)}.
@@ -68,7 +68,7 @@ declare namespace java {
                  *  to {#link Objects#equals(Object, Object)}
                  */
                 // @ts-ignore
-                isEqual<T>(targetRef: any): java.util.function.Predicate<T>
+                isEqual<T>(targetRef: java.lang.Object | any): java.util.function$.Predicate<T>
             }
         }
     }

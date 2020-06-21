@@ -62,7 +62,7 @@ declare namespace org {
                              * @return The player's view distance
                              */
                             // @ts-ignore
-                            getViewDistance(): int
+                            getViewDistance(): number /*int*/
                             /**
                              * Gets the current player chat visibility setting.
                              * @return Chat visibility setting
@@ -96,7 +96,7 @@ declare namespace org {
                              * @return A set of skin parts displayed
                              */
                             // @ts-ignore
-                            getDisplayedSkinParts(): java.util.Set<org.spongepowered.api.data.type.SkinPart>
+                            getDisplayedSkinParts(): Array<org.spongepowered.api.data.type.SkinPart>
                             /**
                              * Gets the appropriate {@link PlayerConnection} linking this Player
                              * to a client.
@@ -275,7 +275,7 @@ declare namespace org {
                              * @return The advancement trees
                              */
                             // @ts-ignore
-                            getUnlockedAdvancementTrees(): java.util.Collection<org.spongepowered.api.advancement.AdvancementTree>
+                            getUnlockedAdvancementTrees(): Array<org.spongepowered.api.advancement.AdvancementTree>
                         }
                     }
                 }

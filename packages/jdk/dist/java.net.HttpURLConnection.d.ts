@@ -34,7 +34,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class HttpURLConnection extends java.net.URLConnection {
+        abstract class HttpURLConnection extends java.net.URLConnection {
             /**
              * Constructor for the HttpURLConnection.
              * @param u the URL
@@ -45,7 +45,7 @@ declare namespace java {
              * The HTTP method (GET,POST,PUT,etc.).
              */
             // @ts-ignore
-            method: string
+            method: java.lang.String | string
             /**
              * The chunk-length when using chunked encoding streaming mode for output.
              * A value of {@code -1} means chunked encoding is disabled for output.
@@ -87,7 +87,7 @@ declare namespace java {
              * The HTTP response message.
              */
             // @ts-ignore
-            responseMessage: string
+            responseMessage: java.lang.String | string
             /**
              * If {@code true}, the protocol will automatically follow redirects.
              * If {@code false}, the protocol will not automatically follow
@@ -109,183 +109,183 @@ declare namespace java {
              * HTTP Status-Code 200: OK.
              */
             // @ts-ignore
-            readonly HTTP_OK: number /*int*/
+            public static readonly HTTP_OK: number /*int*/
             /**
              * HTTP Status-Code 201: Created.
              */
             // @ts-ignore
-            readonly HTTP_CREATED: number /*int*/
+            public static readonly HTTP_CREATED: number /*int*/
             /**
              * HTTP Status-Code 202: Accepted.
              */
             // @ts-ignore
-            readonly HTTP_ACCEPTED: number /*int*/
+            public static readonly HTTP_ACCEPTED: number /*int*/
             /**
              * HTTP Status-Code 203: Non-Authoritative Information.
              */
             // @ts-ignore
-            readonly HTTP_NOT_AUTHORITATIVE: number /*int*/
+            public static readonly HTTP_NOT_AUTHORITATIVE: number /*int*/
             /**
              * HTTP Status-Code 204: No Content.
              */
             // @ts-ignore
-            readonly HTTP_NO_CONTENT: number /*int*/
+            public static readonly HTTP_NO_CONTENT: number /*int*/
             /**
              * HTTP Status-Code 205: Reset Content.
              */
             // @ts-ignore
-            readonly HTTP_RESET: number /*int*/
+            public static readonly HTTP_RESET: number /*int*/
             /**
              * HTTP Status-Code 206: Partial Content.
              */
             // @ts-ignore
-            readonly HTTP_PARTIAL: number /*int*/
+            public static readonly HTTP_PARTIAL: number /*int*/
             /**
              * HTTP Status-Code 300: Multiple Choices.
              */
             // @ts-ignore
-            readonly HTTP_MULT_CHOICE: number /*int*/
+            public static readonly HTTP_MULT_CHOICE: number /*int*/
             /**
              * HTTP Status-Code 301: Moved Permanently.
              */
             // @ts-ignore
-            readonly HTTP_MOVED_PERM: number /*int*/
+            public static readonly HTTP_MOVED_PERM: number /*int*/
             /**
              * HTTP Status-Code 302: Temporary Redirect.
              */
             // @ts-ignore
-            readonly HTTP_MOVED_TEMP: number /*int*/
+            public static readonly HTTP_MOVED_TEMP: number /*int*/
             /**
              * HTTP Status-Code 303: See Other.
              */
             // @ts-ignore
-            readonly HTTP_SEE_OTHER: number /*int*/
+            public static readonly HTTP_SEE_OTHER: number /*int*/
             /**
              * HTTP Status-Code 304: Not Modified.
              */
             // @ts-ignore
-            readonly HTTP_NOT_MODIFIED: number /*int*/
+            public static readonly HTTP_NOT_MODIFIED: number /*int*/
             /**
              * HTTP Status-Code 305: Use Proxy.
              */
             // @ts-ignore
-            readonly HTTP_USE_PROXY: number /*int*/
+            public static readonly HTTP_USE_PROXY: number /*int*/
             /**
              * HTTP Status-Code 400: Bad Request.
              */
             // @ts-ignore
-            readonly HTTP_BAD_REQUEST: number /*int*/
+            public static readonly HTTP_BAD_REQUEST: number /*int*/
             /**
              * HTTP Status-Code 401: Unauthorized.
              */
             // @ts-ignore
-            readonly HTTP_UNAUTHORIZED: number /*int*/
+            public static readonly HTTP_UNAUTHORIZED: number /*int*/
             /**
              * HTTP Status-Code 402: Payment Required.
              */
             // @ts-ignore
-            readonly HTTP_PAYMENT_REQUIRED: number /*int*/
+            public static readonly HTTP_PAYMENT_REQUIRED: number /*int*/
             /**
              * HTTP Status-Code 403: Forbidden.
              */
             // @ts-ignore
-            readonly HTTP_FORBIDDEN: number /*int*/
+            public static readonly HTTP_FORBIDDEN: number /*int*/
             /**
              * HTTP Status-Code 404: Not Found.
              */
             // @ts-ignore
-            readonly HTTP_NOT_FOUND: number /*int*/
+            public static readonly HTTP_NOT_FOUND: number /*int*/
             /**
              * HTTP Status-Code 405: Method Not Allowed.
              */
             // @ts-ignore
-            readonly HTTP_BAD_METHOD: number /*int*/
+            public static readonly HTTP_BAD_METHOD: number /*int*/
             /**
              * HTTP Status-Code 406: Not Acceptable.
              */
             // @ts-ignore
-            readonly HTTP_NOT_ACCEPTABLE: number /*int*/
+            public static readonly HTTP_NOT_ACCEPTABLE: number /*int*/
             /**
              * HTTP Status-Code 407: Proxy Authentication Required.
              */
             // @ts-ignore
-            readonly HTTP_PROXY_AUTH: number /*int*/
+            public static readonly HTTP_PROXY_AUTH: number /*int*/
             /**
              * HTTP Status-Code 408: Request Time-Out.
              */
             // @ts-ignore
-            readonly HTTP_CLIENT_TIMEOUT: number /*int*/
+            public static readonly HTTP_CLIENT_TIMEOUT: number /*int*/
             /**
              * HTTP Status-Code 409: Conflict.
              */
             // @ts-ignore
-            readonly HTTP_CONFLICT: number /*int*/
+            public static readonly HTTP_CONFLICT: number /*int*/
             /**
              * HTTP Status-Code 410: Gone.
              */
             // @ts-ignore
-            readonly HTTP_GONE: number /*int*/
+            public static readonly HTTP_GONE: number /*int*/
             /**
              * HTTP Status-Code 411: Length Required.
              */
             // @ts-ignore
-            readonly HTTP_LENGTH_REQUIRED: number /*int*/
+            public static readonly HTTP_LENGTH_REQUIRED: number /*int*/
             /**
              * HTTP Status-Code 412: Precondition Failed.
              */
             // @ts-ignore
-            readonly HTTP_PRECON_FAILED: number /*int*/
+            public static readonly HTTP_PRECON_FAILED: number /*int*/
             /**
              * HTTP Status-Code 413: Request Entity Too Large.
              */
             // @ts-ignore
-            readonly HTTP_ENTITY_TOO_LARGE: number /*int*/
+            public static readonly HTTP_ENTITY_TOO_LARGE: number /*int*/
             /**
              * HTTP Status-Code 414: Request-URI Too Large.
              */
             // @ts-ignore
-            readonly HTTP_REQ_TOO_LONG: number /*int*/
+            public static readonly HTTP_REQ_TOO_LONG: number /*int*/
             /**
              * HTTP Status-Code 415: Unsupported Media Type.
              */
             // @ts-ignore
-            readonly HTTP_UNSUPPORTED_TYPE: number /*int*/
+            public static readonly HTTP_UNSUPPORTED_TYPE: number /*int*/
             /**
              * HTTP Status-Code 500: Internal Server Error.
              * @deprecated it is misplaced and shouldn't have existed.
              */
             // @ts-ignore
-            readonly HTTP_SERVER_ERROR: number /*int*/
+            public static readonly HTTP_SERVER_ERROR: number /*int*/
             /**
              * HTTP Status-Code 500: Internal Server Error.
              */
             // @ts-ignore
-            readonly HTTP_INTERNAL_ERROR: number /*int*/
+            public static readonly HTTP_INTERNAL_ERROR: number /*int*/
             /**
              * HTTP Status-Code 501: Not Implemented.
              */
             // @ts-ignore
-            readonly HTTP_NOT_IMPLEMENTED: number /*int*/
+            public static readonly HTTP_NOT_IMPLEMENTED: number /*int*/
             /**
              * HTTP Status-Code 502: Bad Gateway.
              */
             // @ts-ignore
-            readonly HTTP_BAD_GATEWAY: number /*int*/
+            public static readonly HTTP_BAD_GATEWAY: number /*int*/
             /**
              * HTTP Status-Code 503: Service Unavailable.
              */
             // @ts-ignore
-            readonly HTTP_UNAVAILABLE: number /*int*/
+            public static readonly HTTP_UNAVAILABLE: number /*int*/
             /**
              * HTTP Status-Code 504: Gateway Timeout.
              */
             // @ts-ignore
-            readonly HTTP_GATEWAY_TIMEOUT: number /*int*/
+            public static readonly HTTP_GATEWAY_TIMEOUT: number /*int*/
             /**
              * HTTP Status-Code 505: HTTP Version Not Supported.
              */
             // @ts-ignore
-            readonly HTTP_VERSION: number /*int*/
+            public static readonly HTTP_VERSION: number /*int*/
             /**
              * Returns the key for the {@code n}<sup>th</sup> header field.
              * Some implementations may treat the {@code 0}<sup>th</sup>
@@ -297,7 +297,7 @@ declare namespace java {
              *           or {@code null} if the key does not exist.
              */
             // @ts-ignore
-            getHeaderFieldKey(n: number /*int*/): java.lang.String
+            public getHeaderFieldKey(n: number /*int*/): string
             /**
              * This method is used to enable streaming of a HTTP request body
              * without internal buffering, when the content length is known in
@@ -328,7 +328,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setFixedLengthStreamingMode(contentLength: number /*int*/): void
+            public setFixedLengthStreamingMode(contentLength: number /*int*/): void
             /**
              * This method is used to enable streaming of a HTTP request body
              * without internal buffering, when the content length is known in
@@ -354,7 +354,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setFixedLengthStreamingMode(contentLength: number /*long*/): void
+            public setFixedLengthStreamingMode(contentLength: number /*long*/): void
             /**
              * This method is used to enable streaming of a HTTP request body
              * without internal buffering, when the content length is <b>not</b>
@@ -378,7 +378,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setChunkedStreamingMode(chunklen: number /*int*/): void
+            public setChunkedStreamingMode(chunklen: number /*int*/): void
             /**
              * Returns the value for the {@code n}<sup>th</sup> header field.
              * Some implementations may treat the {@code 0}<sup>th</sup>
@@ -394,7 +394,7 @@ declare namespace java {
              * @see java.net.HttpURLConnection#getHeaderFieldKey(int)
              */
             // @ts-ignore
-            getHeaderField(n: number /*int*/): java.lang.String
+            public getHeaderField(n: number /*int*/): string
             /**
              * Sets whether HTTP redirects  (requests with response code 3xx) should
              * be automatically followed by this class.  True by default.  Applets
@@ -413,7 +413,7 @@ declare namespace java {
              * @see #getFollowRedirects()
              */
             // @ts-ignore
-            setFollowRedirects(set: boolean): void
+            public static setFollowRedirects(set: boolean): void
             /**
              * Returns a {@code boolean} indicating
              * whether or not HTTP redirects (3xx) should
@@ -423,7 +423,7 @@ declare namespace java {
              * @see #setFollowRedirects(boolean)
              */
             // @ts-ignore
-            getFollowRedirects(): boolean
+            public static getFollowRedirects(): boolean
             /**
              * Sets whether HTTP redirects (requests with response code 3xx) should
              * be automatically followed by this {@code HttpURLConnection}
@@ -438,7 +438,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            setInstanceFollowRedirects(followRedirects: boolean): void
+            public setInstanceFollowRedirects(followRedirects: boolean): void
             /**
              * Returns the value of this {@code HttpURLConnection}'s
              * {@code instanceFollowRedirects} field.
@@ -449,7 +449,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getInstanceFollowRedirects(): boolean
+            public getInstanceFollowRedirects(): boolean
             /**
              * Set the method for the URL request, one of:
              * <UL>
@@ -471,14 +471,14 @@ declare namespace java {
              * @see #getRequestMethod()
              */
             // @ts-ignore
-            setRequestMethod(method: string): void
+            public setRequestMethod(method: java.lang.String | string): void
             /**
              * Get the request method.
              * @return the HTTP request method
              * @see #setRequestMethod(java.lang.String)
              */
             // @ts-ignore
-            getRequestMethod(): java.lang.String
+            public getRequestMethod(): string
             /**
              * Gets the status code from an HTTP response message.
              * For example, in the case of the following status lines:
@@ -493,7 +493,7 @@ declare namespace java {
              * @return the HTTP Status-Code, or -1
              */
             // @ts-ignore
-            getResponseCode(): int
+            public getResponseCode(): number /*int*/
             /**
              * Gets the HTTP response message, if any, returned along with the
              * response code from a server.  From responses like:
@@ -508,9 +508,9 @@ declare namespace java {
              * @return the HTTP response message, or {#code null}
              */
             // @ts-ignore
-            getResponseMessage(): java.lang.String
+            public getResponseMessage(): string
             // @ts-ignore
-            getHeaderFieldDate(name: string, Default: number /*long*/): long
+            public getHeaderFieldDate(name: java.lang.String | string, Default: number /*long*/): number /*long*/
             /**
              * Indicates that other requests to the server
              * are unlikely in the near future. Calling disconnect()
@@ -518,14 +518,14 @@ declare namespace java {
              * instance can be reused for other requests.
              */
             // @ts-ignore
-            abstract disconnect(): void
+            public abstract disconnect(): void
             /**
              * Indicates if the connection is going through a proxy.
              * @return a boolean indicating if the connection is
              *  using a proxy.
              */
             // @ts-ignore
-            abstract usingProxy(): boolean
+            public abstract usingProxy(): boolean
             /**
              * Returns a {@link SocketPermission} object representing the
              * permission necessary to connect to the destination host and port.
@@ -536,7 +536,7 @@ declare namespace java {
              *          host and port.
              */
             // @ts-ignore
-            getPermission(): java.security.Permission
+            public getPermission(): java.security.Permission
             /**
              * Returns the error stream if the connection failed
              * but the server sent useful data nonetheless. The
@@ -554,7 +554,7 @@ declare namespace java {
              *  useful data.
              */
             // @ts-ignore
-            getErrorStream(): java.io.InputStream
+            public getErrorStream(): java.io.InputStream
         }
     }
 }

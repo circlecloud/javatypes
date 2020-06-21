@@ -20,7 +20,7 @@ declare namespace javax {
                  * @return number of links in this hypertext doc.
                  */
                 // @ts-ignore
-                getLinkCount(): int
+                public getLinkCount(): number /*int*/
                 /**
                  * Returns the index into an array of hyperlinks that
                  * is associated with this character index, or -1 if there
@@ -29,7 +29,7 @@ declare namespace javax {
                  * @return index into the set of hyperlinks for this hypertext doc.
                  */
                 // @ts-ignore
-                getLinkIndex(charIndex: number /*int*/): int
+                public getLinkIndex(charIndex: number /*int*/): number /*int*/
                 /**
                  * Returns the index into an array of hyperlinks that
                  * index.  If there is no hyperlink at this index, it returns
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @return string representation of the hyperlink
                  */
                 // @ts-ignore
-                getLink(linkIndex: number /*int*/): javax.accessibility.AccessibleHyperlink
+                public getLink(linkIndex: number /*int*/): javax.accessibility.AccessibleHyperlink
                 /**
                  * Returns the contiguous text within the document that
                  * is associated with this hyperlink.
@@ -46,7 +46,7 @@ declare namespace javax {
                  * @return the contiguous text sharing the link at this index
                  */
                 // @ts-ignore
-                getLinkText(linkIndex: number /*int*/): java.lang.String
+                public getLinkText(linkIndex: number /*int*/): string
             }
         }
     }

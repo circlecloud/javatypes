@@ -33,32 +33,32 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*double*/
+                    public x: number /*double*/
                     /**
                      * The Y coordinate of this <code>Point2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*double*/
+                    public y: number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setLocation(x: number /*double*/, y: number /*double*/): void
+                    public setLocation(x: number /*double*/, y: number /*double*/): void
                     /**
                      * Returns a <code>String</code> that represents the value
                      * of this <code>Point2D</code>.
@@ -66,7 +66,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

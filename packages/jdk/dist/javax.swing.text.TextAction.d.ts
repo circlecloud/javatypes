@@ -26,13 +26,13 @@ declare namespace javax {
              * @author Timothy Prinzing
              */
             // @ts-ignore
-            class TextAction extends javax.swing.AbstractAction {
+            abstract class TextAction extends javax.swing.AbstractAction {
                 /**
                  * Creates a new JTextAction object.
                  * @param name the name of the action
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Determines the component to use for the action.
                  * This if fetched from the source of the ActionEvent
@@ -57,7 +57,7 @@ declare namespace javax {
                  * @return the augmented list
                  */
                 // @ts-ignore
-                augmentList(list1: javax.swing.Action[], list2: javax.swing.Action[]): javax.swing.Action[]
+                public static augmentList(list1: javax.swing.Action[], list2: javax.swing.Action[]): javax.swing.Action[]
                 /**
                  * Fetches the text component that currently has focus.
                  * This allows actions to be shared across text components

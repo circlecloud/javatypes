@@ -27,7 +27,7 @@ declare namespace org {
                          * @return The mutable bounded value for the "age"
                          */
                         // @ts-ignore
-                        age(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                        age(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                         /**
                          * Gets the {@link Value} for the "adult" state.
                          * @return The value for the "adult" state

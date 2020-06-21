@@ -85,7 +85,7 @@ declare namespace javax {
                      *  associated with this size (an anonymous size).
                      */
                     // @ts-ignore
-                    getMediaSizeName(): javax.print.attribute.standard.MediaSizeName
+                    public getMediaSizeName(): javax.print.attribute.standard.MediaSizeName
                     /**
                      * Get the MediaSize for the specified named media.
                      * @param media - the name of the media for which the size is sought
@@ -93,7 +93,7 @@ declare namespace javax {
                      *  with any size.
                      */
                     // @ts-ignore
-                    getMediaSizeForName(media: javax.print.attribute.standard.MediaSizeName): javax.print.attribute.standard.MediaSize
+                    public static getMediaSizeForName(media: javax.print.attribute.standard.MediaSizeName): javax.print.attribute.standard.MediaSize
                     /**
                      * The specified dimensions are used to locate a matching MediaSize
                      * instance from amongst all the standard MediaSize instances.
@@ -115,7 +115,7 @@ declare namespace javax {
                      *       {@code y <= 0}, or {@code units < 1}.
                      */
                     // @ts-ignore
-                    findMedia(x: number /*float*/, y: number /*float*/, units: number /*int*/): javax.print.attribute.standard.MediaSizeName
+                    public static findMedia(x: number /*float*/, y: number /*float*/, units: number /*int*/): javax.print.attribute.standard.MediaSizeName
                     /**
                      * Returns whether this media size attribute is equivalent to the passed
                      * in object.
@@ -137,7 +137,7 @@ declare namespace javax {
                      *           attribute, false otherwise.
                      */
                     // @ts-ignore
-                    equals(object: any): boolean
+                    public equals(object: java.lang.Object | any): boolean
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -148,7 +148,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -158,7 +158,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

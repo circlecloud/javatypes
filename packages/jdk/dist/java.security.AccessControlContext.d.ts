@@ -39,7 +39,7 @@ declare namespace java {
              *                   if perm is null
              */
             // @ts-ignore
-            checkPermission(perm: java.security.Permission): void
+            public checkPermission(perm: java.security.Permission): void
             /**
              * Compares the argument to the receiver, and answers true
              * if they represent the <em>same</em> object using a class
@@ -53,7 +53,7 @@ declare namespace java {
              * @see #hashCode
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Answers an integer hash code for the receiver. Any two
              * objects which answer <code>true</code> when passed to
@@ -63,7 +63,7 @@ declare namespace java {
              * @see #equals
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Answers the DomainCombiner for the receiver.
              * @return the DomainCombiner or null
@@ -71,7 +71,7 @@ declare namespace java {
              *       when the caller doesn't have the  "getDomainCombiner" SecurityPermission
              */
             // @ts-ignore
-            getDomainCombiner(): java.security.DomainCombiner
+            public getDomainCombiner(): java.security.DomainCombiner
         }
     }
 }

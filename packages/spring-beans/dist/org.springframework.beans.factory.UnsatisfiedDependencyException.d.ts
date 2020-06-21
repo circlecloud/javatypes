@@ -20,7 +20,7 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, propertyName: string, msg: string)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, propertyName: java.lang.String | string, msg: java.lang.String | string)
                     /**
                      * Create a new UnsatisfiedDependencyException.
                      * @param resourceDescription description of the resource that the bean definition came from
@@ -29,7 +29,7 @@ declare namespace org {
                      * @param ex the bean creation exception that indicated the unsatisfied dependency
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, propertyName: string, ex: org.springframework.beans.BeansException)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, propertyName: java.lang.String | string, ex: org.springframework.beans.BeansException)
                     /**
                      * Create a new UnsatisfiedDependencyException.
                      * @param resourceDescription description of the resource that the bean definition came from
@@ -39,7 +39,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, injectionPoint: org.springframework.beans.factory.InjectionPoint, msg: string)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, injectionPoint: org.springframework.beans.factory.InjectionPoint, msg: java.lang.String | string)
                     /**
                      * Create a new UnsatisfiedDependencyException.
                      * @param resourceDescription description of the resource that the bean definition came from
@@ -49,13 +49,13 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, injectionPoint: org.springframework.beans.factory.InjectionPoint, ex: org.springframework.beans.BeansException)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, injectionPoint: org.springframework.beans.factory.InjectionPoint, ex: org.springframework.beans.BeansException)
                     /**
                      * Return the injection point (field or method/constructor parameter), if known.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getInjectionPoint(): org.springframework.beans.factory.InjectionPoint
+                    public getInjectionPoint(): org.springframework.beans.factory.InjectionPoint
                 }
             }
         }

@@ -32,7 +32,7 @@ declare namespace javax {
                      * @see javax.xml.ws.Binding
                      */
                     // @ts-ignore
-                    getBindingID(): java.lang.String
+                    getBindingID(): string
                 }
             }
         }

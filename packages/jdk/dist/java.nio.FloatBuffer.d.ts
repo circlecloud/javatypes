@@ -39,7 +39,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class FloatBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.FloatBuffer> {
+        abstract class FloatBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.FloatBuffer> {
             /**
              * Allocates a new float buffer.
              * <p> The new buffer's position will be zero, its limit will be its
@@ -53,7 +53,7 @@ declare namespace java {
              *           If the <tt>capacity</tt> is a negative integer
              */
             // @ts-ignore
-            allocate(capacity: number /*int*/): java.nio.FloatBuffer
+            public static allocate(capacity: number /*int*/): java.nio.FloatBuffer
             /**
              * Wraps a float array into a buffer.
              * <p> The new buffer will be backed by the given float array;
@@ -80,7 +80,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            wrap(array: number /*float*/[], offset: number /*int*/, length: number /*int*/): java.nio.FloatBuffer
+            public static wrap(array: number /*float*/[], offset: number /*int*/, length: number /*int*/): java.nio.FloatBuffer
             /**
              * Wraps a float array into a buffer.
              * <p> The new buffer will be backed by the given float array;
@@ -95,7 +95,7 @@ declare namespace java {
              * @return The new float buffer
              */
             // @ts-ignore
-            wrap(array: number /*float*/[]): java.nio.FloatBuffer
+            public static wrap(array: number /*float*/[]): java.nio.FloatBuffer
             /**
              * Creates a new float buffer whose content is a shared subsequence of
              * this buffer's content.
@@ -111,7 +111,7 @@ declare namespace java {
              * @return The new float buffer
              */
             // @ts-ignore
-            abstract slice(): java.nio.FloatBuffer
+            public abstract slice(): java.nio.FloatBuffer
             /**
              * Creates a new float buffer that shares this buffer's content.
              * <p> The content of the new buffer will be that of this buffer.  Changes
@@ -125,7 +125,7 @@ declare namespace java {
              * @return The new float buffer
              */
             // @ts-ignore
-            abstract duplicate(): java.nio.FloatBuffer
+            public abstract duplicate(): java.nio.FloatBuffer
             /**
              * Creates a new, read-only float buffer that shares this buffer's
              * content.
@@ -141,7 +141,7 @@ declare namespace java {
              * @return The new, read-only float buffer
              */
             // @ts-ignore
-            abstract asReadOnlyBuffer(): java.nio.FloatBuffer
+            public abstract asReadOnlyBuffer(): java.nio.FloatBuffer
             /**
              * Relative <i>get</i> method.  Reads the float at this buffer's
              * current position, and then increments the position.
@@ -150,7 +150,7 @@ declare namespace java {
              *           If the buffer's current position is not smaller than its limit
              */
             // @ts-ignore
-            abstract get(): float
+            public abstract get(): number /*float*/
             /**
              * Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given float into this buffer at the current
@@ -164,7 +164,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(f: number /*float*/): java.nio.FloatBuffer
+            public abstract put(f: number /*float*/): java.nio.FloatBuffer
             /**
              * Absolute <i>get</i> method.  Reads the float at the given
              * index.
@@ -176,7 +176,7 @@ declare namespace java {
              *           or not smaller than the buffer's limit
              */
             // @ts-ignore
-            abstract get(index: number /*int*/): float
+            public abstract get(index: number /*int*/): number /*float*/
             /**
              * Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given float into this buffer at the given
@@ -193,7 +193,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(index: number /*int*/, f: number /*float*/): java.nio.FloatBuffer
+            public abstract put(index: number /*int*/, f: number /*float*/): java.nio.FloatBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers floats from this buffer into the given
@@ -234,7 +234,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            get(dst: number /*float*/[], offset: number /*int*/, length: number /*int*/): java.nio.FloatBuffer
+            public get(dst: number /*float*/[], offset: number /*int*/, length: number /*int*/): java.nio.FloatBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers floats from this buffer into the given
@@ -250,7 +250,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            get(dst: number /*float*/[]): java.nio.FloatBuffer
+            public get(dst: number /*float*/[]): java.nio.FloatBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the floats remaining in the given source
@@ -283,7 +283,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: java.nio.FloatBuffer): java.nio.FloatBuffer
+            public put(src: java.nio.FloatBuffer): java.nio.FloatBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers floats into this buffer from the given
@@ -324,7 +324,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: number /*float*/[], offset: number /*int*/, length: number /*int*/): java.nio.FloatBuffer
+            public put(src: number /*float*/[], offset: number /*int*/, length: number /*int*/): java.nio.FloatBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the entire content of the given source
@@ -342,7 +342,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: number /*float*/[]): java.nio.FloatBuffer
+            public put(src: number /*float*/[]): java.nio.FloatBuffer
             /**
              * Tells whether or not this buffer is backed by an accessible float
              * array.
@@ -353,7 +353,7 @@ declare namespace java {
              *           is backed by an array and is not read-only
              */
             // @ts-ignore
-            hasArray(): boolean
+            public hasArray(): boolean
             /**
              * Returns the float array that backs this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -369,7 +369,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            array(): float[]
+            public array(): number /*float*/[]
             /**
              * Returns the offset within this buffer's backing array of the first
              * element of the buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -386,7 +386,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            arrayOffset(): int
+            public arrayOffset(): number /*int*/
             /**
              * Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> The floats between the buffer's current position and its limit,
@@ -407,19 +407,19 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract compact(): java.nio.FloatBuffer
+            public abstract compact(): java.nio.FloatBuffer
             /**
              * Tells whether or not this float buffer is direct.
              * @return <tt>true</tt> if, and only if, this buffer is direct
              */
             // @ts-ignore
-            abstract isDirect(): boolean
+            public abstract isDirect(): boolean
             /**
              * Returns a string summarizing the state of this buffer.
              * @return A summary string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the current hash code of this buffer.
              * <p> The hash code of a float buffer depends only upon its remaining
@@ -431,7 +431,7 @@ declare namespace java {
              * @return The current hash code of this buffer
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tells whether or not this buffer is equal to another object.
              * <p> Two float buffers are equal if, and only if,
@@ -454,7 +454,7 @@ declare namespace java {
              *            given object
              */
             // @ts-ignore
-            equals(ob: any): boolean
+            public equals(ob: java.lang.Object | any): boolean
             /**
              * Compares this buffer to another.
              * <p> Two float buffers are compared by comparing their sequences of
@@ -471,7 +471,7 @@ declare namespace java {
              *           is less than, equal to, or greater than the given buffer
              */
             // @ts-ignore
-            compareTo(that: java.nio.FloatBuffer): int
+            public compareTo(that: java.nio.FloatBuffer): number /*int*/
             /**
              * Retrieves this buffer's byte order.
              * <p> The byte order of a float buffer created by allocation or by
@@ -483,7 +483,7 @@ declare namespace java {
              * @return This buffer's byte order
              */
             // @ts-ignore
-            abstract order(): java.nio.ByteOrder
+            public abstract order(): java.nio.ByteOrder
         }
     }
 }

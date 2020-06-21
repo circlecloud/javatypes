@@ -14,7 +14,7 @@ declare namespace java {
                  *           a string identifying the file or {#code null} if not known
                  */
                 // @ts-ignore
-                constructor(file: string)
+                constructor(file: java.lang.String | string)
                 /**
                  * Constructs an instance of this class.
                  * @param file
@@ -25,7 +25,7 @@ declare namespace java {
                  *           a reason message with additional information or {#code null}
                  */
                 // @ts-ignore
-                constructor(file: string, other: string, reason: string)
+                constructor(file: java.lang.String | string, other: java.lang.String | string, reason: java.lang.String | string)
             }
         }
     }

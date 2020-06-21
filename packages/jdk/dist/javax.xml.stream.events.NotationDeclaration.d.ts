@@ -19,17 +19,17 @@ declare namespace javax {
                      * The notation name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * The notation's public identifier, or null if none was given.
                      */
                     // @ts-ignore
-                    getPublicId(): java.lang.String
+                    getPublicId(): string
                     /**
                      * The notation's system identifier, or null if none was given.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    getSystemId(): string
                 }
             }
         }

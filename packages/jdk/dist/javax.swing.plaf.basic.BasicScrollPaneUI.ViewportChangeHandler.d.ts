@@ -11,7 +11,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        stateChanged(e: javax.swing.event.ChangeEvent): void
+                        public stateChanged(e: javax.swing.event.ChangeEvent): void
                     }
                 }
             }

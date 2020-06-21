@@ -33,7 +33,7 @@ declare namespace java {
                      * @param e the <code>ActionEvent</code>
                      */
                     // @ts-ignore
-                    actionPerformed(e: java.awt.event.ActionEvent): void
+                    public actionPerformed(e: java.awt.event.ActionEvent): void
                 }
             }
         }

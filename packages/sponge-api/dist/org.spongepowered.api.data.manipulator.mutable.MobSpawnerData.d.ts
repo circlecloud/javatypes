@@ -17,7 +17,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_REMAINING_DELAY
                              */
                             // @ts-ignore
-                            remainingDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            remainingDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link MutableBoundedValue} for the minimum spawn delay
                              * required between attempts to spawn an {@link Entity}.
@@ -25,7 +25,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_MINIMUM_DELAY
                              */
                             // @ts-ignore
-                            minimumSpawnDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            minimumSpawnDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link MutableBoundedValue} for the maximum spawn delay
                              * required between attempts to spawn an {@link Entity}.
@@ -33,7 +33,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_MAXIMUM_DELAY
                              */
                             // @ts-ignore
-                            maximumSpawnDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            maximumSpawnDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link MutableBoundedValue} for the count of successful
                              * spawns of all {@link Entity} instances from the owning spawner. This
@@ -43,7 +43,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_SPAWN_COUNT
                              */
                             // @ts-ignore
-                            spawnCount(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            spawnCount(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link MutableBoundedValue} for the limitation on the number
                              * of nearby {@link Entity} instances can exist near the owning spawner. The
@@ -53,7 +53,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_MAXIMUM_NEARBY_ENTITIES
                              */
                             // @ts-ignore
-                            maximumNearbyEntities(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            maximumNearbyEntities(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link MutableBoundedValue} for the minimum range a
                              * {@link Player} must remain in proximity of the spawner, such that if a
@@ -63,7 +63,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_REQUIRED_PLAYER_RANGE
                              */
                             // @ts-ignore
-                            requiredPlayerRange(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            requiredPlayerRange(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link MutableBoundedValue} for the maximum range that an
                              * {@link Entity} can be spawned from the spawner.
@@ -72,7 +72,7 @@ declare namespace org {
                              * @see Keys#SPAWNER_SPAWN_RANGE
                              */
                             // @ts-ignore
-                            spawnRange(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short>
+                            spawnRange(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Short | number>
                             /**
                              * Gets the {@link Value} for the overridden
                              * {@link WeightedSerializableObject}{@code <EntityArchetype>} to spawn

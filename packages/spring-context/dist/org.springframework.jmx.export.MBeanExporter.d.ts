@@ -35,23 +35,23 @@ declare namespace org {
                      * Autodetection mode indicating that no autodetection should be used.
                      */
                     // @ts-ignore
-                    readonly AUTODETECT_NONE: number /*int*/
+                    public static readonly AUTODETECT_NONE: number /*int*/
                     /**
                      * Autodetection mode indicating that only valid MBeans should be autodetected.
                      */
                     // @ts-ignore
-                    readonly AUTODETECT_MBEAN: number /*int*/
+                    public static readonly AUTODETECT_MBEAN: number /*int*/
                     /**
                      * Autodetection mode indicating that only the {@link MBeanInfoAssembler} should be able
                      * to autodetect beans.
                      */
                     // @ts-ignore
-                    readonly AUTODETECT_ASSEMBLER: number /*int*/
+                    public static readonly AUTODETECT_ASSEMBLER: number /*int*/
                     /**
                      * Autodetection mode indicating that all autodetection mechanisms should be used.
                      */
                     // @ts-ignore
-                    readonly AUTODETECT_ALL: number /*int*/
+                    public static readonly AUTODETECT_ALL: number /*int*/
                     /**
                      * Supply a {@code Map} of beans to be registered with the JMX
                      * {@code MBeanServer}.
@@ -70,7 +70,7 @@ declare namespace org {
                      * @see javax.management.ObjectName#ObjectName(String)
                      */
                     // @ts-ignore
-                    setBeans(beans: java.util.Map<java.lang.String, java.lang.Object>): void
+                    public setBeans(beans: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                     /**
                      * Set whether to autodetect MBeans in the bean factory that this exporter
                      * runs in. Will also ask an {@code AutodetectCapableMBeanInfoAssembler}
@@ -82,7 +82,7 @@ declare namespace org {
                      * @see #isMBean
                      */
                     // @ts-ignore
-                    setAutodetect(autodetect: boolean): void
+                    public setAutodetect(autodetect: boolean): void
                     /**
                      * Set the autodetection mode to use.
                      * @throws IllegalArgumentException if the supplied value is not
@@ -94,7 +94,7 @@ declare namespace org {
                      * @see #AUTODETECT_NONE
                      */
                     // @ts-ignore
-                    setAutodetectMode(autodetectMode: number /*int*/): void
+                    public setAutodetectMode(autodetectMode: number /*int*/): void
                     /**
                      * Set the autodetection mode to use by name.
                      * @throws IllegalArgumentException if the supplied value is not resolvable
@@ -106,7 +106,7 @@ declare namespace org {
                      * @see #AUTODETECT_NONE
                      */
                     // @ts-ignore
-                    setAutodetectModeName(constantName: string): void
+                    public setAutodetectModeName(constantName: java.lang.String | string): void
                     /**
                      * Specify whether to allow eager initialization of candidate beans
                      * when autodetecting MBeans in the Spring application context.
@@ -115,7 +115,7 @@ declare namespace org {
                      * including FactoryBean-produced objects that haven't been initialized yet.
                      */
                     // @ts-ignore
-                    setAllowEagerInit(allowEagerInit: boolean): void
+                    public setAllowEagerInit(allowEagerInit: boolean): void
                     /**
                      * Set the implementation of the {@code MBeanInfoAssembler} interface to use
                      * for this exporter. Default is a {@code SimpleReflectiveMBeanInfoAssembler}.
@@ -128,7 +128,7 @@ declare namespace org {
                      * @see #setAutodetect
                      */
                     // @ts-ignore
-                    setAssembler(assembler: org.springframework.jmx.export.assembler.MBeanInfoAssembler): void
+                    public setAssembler(assembler: org.springframework.jmx.export.assembler.MBeanInfoAssembler): void
                     /**
                      * Set the implementation of the {@code ObjectNamingStrategy} interface
                      * to use for this exporter. Default is a {@code KeyNamingStrategy}.
@@ -136,7 +136,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.naming.MetadataNamingStrategy
                      */
                     // @ts-ignore
-                    setNamingStrategy(namingStrategy: org.springframework.jmx.export.naming.ObjectNamingStrategy): void
+                    public setNamingStrategy(namingStrategy: org.springframework.jmx.export.naming.ObjectNamingStrategy): void
                     /**
                      * Indicates whether Spring should ensure that {@link ObjectName ObjectNames}
                      * generated by the configured {@link ObjectNamingStrategy} for
@@ -147,7 +147,7 @@ declare namespace org {
                      * @see JmxUtils#appendIdentityToObjectName(javax.management.ObjectName, Object)
                      */
                     // @ts-ignore
-                    setEnsureUniqueRuntimeObjectNames(ensureUniqueRuntimeObjectNames: boolean): void
+                    public setEnsureUniqueRuntimeObjectNames(ensureUniqueRuntimeObjectNames: boolean): void
                     /**
                      * Indicates whether or not the managed resource should be exposed on the
                      * {@link Thread#getContextClassLoader() thread context ClassLoader} before
@@ -157,24 +157,24 @@ declare namespace org {
                      * expose a standard JMX {@link javax.management.modelmbean.RequiredModelMBean}.
                      */
                     // @ts-ignore
-                    setExposeManagedResourceClassLoader(exposeManagedResourceClassLoader: boolean): void
+                    public setExposeManagedResourceClassLoader(exposeManagedResourceClassLoader: boolean): void
                     /**
                      * Set the list of names for beans that should be excluded from autodetection.
                      */
                     // @ts-ignore
-                    setExcludedBeans(...excludedBeans: string[]): void
+                    public setExcludedBeans(...excludedBeans: java.lang.String[] | string[]): void
                     /**
                      * Add the name of bean that should be excluded from autodetection.
                      */
                     // @ts-ignore
-                    addExcludedBean(excludedBean: string): void
+                    public addExcludedBean(excludedBean: java.lang.String | string): void
                     /**
                      * Set the {@code MBeanExporterListener}s that should be notified
                      * of MBean registration and unregistration events.
                      * @see MBeanExporterListener
                      */
                     // @ts-ignore
-                    setListeners(...listeners: org.springframework.jmx.export.MBeanExporterListener[]): void
+                    public setListeners(...listeners: org.springframework.jmx.export.MBeanExporterListener[]): void
                     /**
                      * Set the {@link NotificationListenerBean NotificationListenerBeans}
                      * containing the
@@ -184,7 +184,7 @@ declare namespace org {
                      * @see NotificationListenerBean
                      */
                     // @ts-ignore
-                    setNotificationListeners(...notificationListeners: org.springframework.jmx.export.NotificationListenerBean[]): void
+                    public setNotificationListeners(...notificationListeners: org.springframework.jmx.export.NotificationListenerBean[]): void
                     /**
                      * Set the {@link NotificationListener NotificationListeners} to register
                      * with the {@link javax.management.MBeanServer}.
@@ -200,9 +200,9 @@ declare namespace org {
                      * handback objects see {@link #setNotificationListeners(NotificationListenerBean[])}.
                      */
                     // @ts-ignore
-                    setNotificationListenerMappings(listeners: java.util.Map<any, javax.management.NotificationListener>): void
+                    public setNotificationListenerMappings(listeners: java.util.Map<any, any>): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * This callback is only required for resolution of bean names in the
                      * {@link #setBeans(java.util.Map) "beans"} {@link Map} and for
@@ -212,27 +212,27 @@ declare namespace org {
                      * @see #setAutodetect
                      */
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Kick off bean registration automatically after the regular singleton instantiation phase.
                      * @see #registerBeans()
                      */
                     // @ts-ignore
-                    afterSingletonsInstantiated(): void
+                    public afterSingletonsInstantiated(): void
                     /**
                      * Unregisters all beans that this exported has exposed via JMX
                      * when the enclosing {@code ApplicationContext} is destroyed.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     // @ts-ignore
-                    registerManagedResource(managedResource: any): javax.management.ObjectName
+                    public registerManagedResource(managedResource: java.lang.Object | any): javax.management.ObjectName
                     // @ts-ignore
-                    registerManagedResource(managedResource: any, objectName: javax.management.ObjectName): void
+                    public registerManagedResource(managedResource: java.lang.Object | any, objectName: javax.management.ObjectName): void
                     // @ts-ignore
-                    unregisterManagedResource(objectName: javax.management.ObjectName): void
+                    public unregisterManagedResource(objectName: javax.management.ObjectName): void
                     /**
                      * Register the defined beans with the {@link MBeanServer}.
                      * <p>Each bean is exposed to the {@code MBeanServer} via a
@@ -256,7 +256,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.config.BeanDefinition#isLazyInit
                      */
                     // @ts-ignore
-                    isBeanDefinitionLazyInit(beanFactory: ListableBeanFactory, beanName: string): boolean
+                    isBeanDefinitionLazyInit(beanFactory: ListableBeanFactory, beanName: java.lang.String | string): boolean
                     /**
                      * Register an individual bean with the {@link #setServer MBeanServer}.
                      * <p>This method is responsible for deciding <strong>how</strong> a bean
@@ -278,7 +278,7 @@ declare namespace org {
                      * @see #registerLazyInit
                      */
                     // @ts-ignore
-                    registerBeanNameOrInstance(mapValue: any, beanKey: string): javax.management.ObjectName
+                    registerBeanNameOrInstance(mapValue: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.ObjectName
                     /**
                      * Retrieve the {@code ObjectName} for a bean.
                      * <p>If the bean implements the {@code SelfNaming} interface, then the
@@ -291,7 +291,7 @@ declare namespace org {
                      *  if the retrieved {#code ObjectName} is malformed
                      */
                     // @ts-ignore
-                    getObjectName(bean: any, beanKey: string): javax.management.ObjectName
+                    getObjectName(bean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.ObjectName
                     /**
                      * Determine whether the given bean class qualifies as an MBean as-is.
                      * <p>The default implementation delegates to {@link JmxUtils#isMBean},
@@ -313,7 +313,7 @@ declare namespace org {
                      * @return the adapted MBean, or {#code null} if not possible
                      */
                     // @ts-ignore
-                    adaptMBeanIfPossible(bean: any): javax.management.DynamicMBean
+                    adaptMBeanIfPossible(bean: java.lang.Object | any): javax.management.DynamicMBean
                     /**
                      * Creates an MBean that is configured with the appropriate management
                      * interface for the supplied managed resource.
@@ -323,7 +323,7 @@ declare namespace org {
                      * @see #getMBeanInfo(Object, String)
                      */
                     // @ts-ignore
-                    createAndConfigureMBean(managedResource: any, beanKey: string): javax.management.modelmbean.ModelMBean
+                    createAndConfigureMBean(managedResource: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBean
                     /**
                      * Create an instance of a class that implements {@code ModelMBean}.
                      * <p>This method is called to obtain a {@code ModelMBean} instance to

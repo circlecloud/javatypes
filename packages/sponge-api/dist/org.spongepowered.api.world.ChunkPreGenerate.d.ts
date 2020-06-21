@@ -18,13 +18,13 @@ declare namespace org {
                      * @return The number of chunks.
                      */
                     // @ts-ignore
-                    getTotalGeneratedChunks(): int
+                    getTotalGeneratedChunks(): number /*int*/
                     /**
                      * The total number of chunks skipped during this generation.
                      * @return The number of chunks.
                      */
                     // @ts-ignore
-                    getTotalSkippedChunks(): int
+                    getTotalSkippedChunks(): number /*int*/
                     /**
                      * The target number of chunks that will be generated or skipped
                      * during this generation. This includes chunks already generated
@@ -32,7 +32,7 @@ declare namespace org {
                      * @return The total number of chunks to be generated.
                      */
                     // @ts-ignore
-                    getTargetTotalChunks(): int
+                    getTargetTotalChunks(): number /*int*/
                     /**
                      * Gets the total wall clock time it has taken (so far) to generate
                      * chunks.

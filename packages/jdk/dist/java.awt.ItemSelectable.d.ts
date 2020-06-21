@@ -12,7 +12,7 @@ declare namespace java {
              * items are selected.
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            getSelectedObjects(): any[]
             /**
              * Adds a listener to receive item events when the state of an item is
              * changed by the user. Item events are not sent when an item's

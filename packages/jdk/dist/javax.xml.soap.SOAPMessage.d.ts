@@ -69,7 +69,7 @@ declare namespace javax {
              * @see AttachmentPart
              */
             // @ts-ignore
-            class SOAPMessage extends java.lang.Object {
+            abstract class SOAPMessage extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                readonly CHARACTER_SET_ENCODING: string
+                public static readonly CHARACTER_SET_ENCODING: java.lang.String | string
                 /**
                  * Specifies whether the SOAP Message will contain an XML declaration when
                  * it is sent. The only valid values are "true" and "false". The default is
@@ -89,7 +89,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                readonly WRITE_XML_DECLARATION: string
+                public static readonly WRITE_XML_DECLARATION: java.lang.String | string
                 /**
                  * Sets the description of this <code>SOAPMessage</code> object's
                  * content with the given description.
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @see #getContentDescription
                  */
                 // @ts-ignore
-                abstract setContentDescription(description: string): void
+                public abstract setContentDescription(description: java.lang.String | string): void
                 /**
                  * Retrieves a description of this <code>SOAPMessage</code> object's
                  * content.
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @see #setContentDescription
                  */
                 // @ts-ignore
-                abstract getContentDescription(): java.lang.String
+                public abstract getContentDescription(): string
                 /**
                  * Gets the SOAP part of this <code>SOAPMessage</code> object.
                  * <P>
@@ -117,7 +117,7 @@ declare namespace javax {
                  *          object
                  */
                 // @ts-ignore
-                abstract getSOAPPart(): javax.xml.soap.SOAPPart
+                public abstract getSOAPPart(): javax.xml.soap.SOAPPart
                 /**
                  * Gets the SOAP Body contained in this <code>SOAPMessage</code> object.
                  * <p>
@@ -128,7 +128,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                getSOAPBody(): javax.xml.soap.SOAPBody
+                public getSOAPBody(): javax.xml.soap.SOAPBody
                 /**
                  * Gets the SOAP Header contained in this <code>SOAPMessage</code>
                  * object.
@@ -140,7 +140,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                getSOAPHeader(): javax.xml.soap.SOAPHeader
+                public getSOAPHeader(): javax.xml.soap.SOAPHeader
                 /**
                  * Removes all <code>AttachmentPart</code> objects that have been added
                  * to this <code>SOAPMessage</code> object.
@@ -148,7 +148,7 @@ declare namespace javax {
                  * This method does not touch the SOAP part.
                  */
                 // @ts-ignore
-                abstract removeAllAttachments(): void
+                public abstract removeAllAttachments(): void
                 /**
                  * Gets a count of the number of attachments in this message. This count
                  * does not include the SOAP part.
@@ -156,14 +156,14 @@ declare namespace javax {
                  *          part of this <code>SOAPMessage</code> object
                  */
                 // @ts-ignore
-                abstract countAttachments(): int
+                public abstract countAttachments(): number /*int*/
                 /**
                  * Retrieves all the <code>AttachmentPart</code> objects that are part of
                  * this <code>SOAPMessage</code> object.
                  * @return an iterator over all the attachments in this message
                  */
                 // @ts-ignore
-                abstract getAttachments(): java.util.Iterator
+                public abstract getAttachments(): java.util.Iterator<any>
                 /**
                  * Retrieves all the <code>AttachmentPart</code> objects that have header
                  * entries that match the specified headers. Note that a returned
@@ -175,7 +175,7 @@ declare namespace javax {
                  *          one of the given headers
                  */
                 // @ts-ignore
-                abstract getAttachments(headers: javax.xml.soap.MimeHeaders): java.util.Iterator
+                public abstract getAttachments(headers: javax.xml.soap.MimeHeaders): java.util.Iterator<any>
                 /**
                  * Removes all the <code>AttachmentPart</code> objects that have header
                  * entries that match the specified headers. Note that the removed
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract removeAttachments(headers: javax.xml.soap.MimeHeaders): void
+                public abstract removeAttachments(headers: javax.xml.soap.MimeHeaders): void
                 /**
                  * Returns an <code>AttachmentPart</code> object that is associated with an
                  * attachment that is referenced by this <code>SOAPElement</code> or
@@ -211,7 +211,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract getAttachment(element: javax.xml.soap.SOAPElement): javax.xml.soap.AttachmentPart
+                public abstract getAttachment(element: javax.xml.soap.SOAPElement): javax.xml.soap.AttachmentPart
                 /**
                  * Adds the given <code>AttachmentPart</code> object to this <code>SOAPMessage</code>
                  * object. An <code>AttachmentPart</code> object must be created before
@@ -222,7 +222,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException
                  */
                 // @ts-ignore
-                abstract addAttachmentPart(AttachmentPart: javax.xml.soap.AttachmentPart): void
+                public abstract addAttachmentPart(AttachmentPart: javax.xml.soap.AttachmentPart): void
                 /**
                  * Creates a new empty <code>AttachmentPart</code> object. Note that the
                  * method <code>addAttachmentPart</code> must be called with this new
@@ -232,7 +232,7 @@ declare namespace javax {
                  *          and added to this <code>SOAPMessage</code> object
                  */
                 // @ts-ignore
-                abstract createAttachmentPart(): javax.xml.soap.AttachmentPart
+                public abstract createAttachmentPart(): javax.xml.soap.AttachmentPart
                 /**
                  * Creates an <code>AttachmentPart</code> object and populates it using
                  * the given <code>DataHandler</code> object.
@@ -249,7 +249,7 @@ declare namespace javax {
                  * @see javax.activation.DataContentHandler
                  */
                 // @ts-ignore
-                createAttachmentPart(dataHandler: javax.activation.DataHandler): javax.xml.soap.AttachmentPart
+                public createAttachmentPart(dataHandler: javax.activation.DataHandler): javax.xml.soap.AttachmentPart
                 /**
                  * Returns all the transport-specific MIME headers for this <code>SOAPMessage</code>
                  * object in a transport-independent fashion.
@@ -257,7 +257,7 @@ declare namespace javax {
                  *          objects
                  */
                 // @ts-ignore
-                abstract getMimeHeaders(): javax.xml.soap.MimeHeaders
+                public abstract getMimeHeaders(): javax.xml.soap.MimeHeaders
                 /**
                  * Creates an <code>AttachmentPart</code> object and populates it with
                  * the specified data of the specified content type. The type of the
@@ -280,7 +280,7 @@ declare namespace javax {
                  * @see javax.activation.DataContentHandler
                  */
                 // @ts-ignore
-                createAttachmentPart(content: any, contentType: string): javax.xml.soap.AttachmentPart
+                public createAttachmentPart(content: java.lang.Object | any, contentType: java.lang.String | string): javax.xml.soap.AttachmentPart
                 /**
                  * Updates this <code>SOAPMessage</code> object with all the changes that
                  * have been made to it. This method is called automatically when
@@ -301,7 +301,7 @@ declare namespace javax {
                  *                changes to this message.
                  */
                 // @ts-ignore
-                abstract saveChanges(): void
+                public abstract saveChanges(): void
                 /**
                  * Indicates whether this <code>SOAPMessage</code> object needs to have
                  * the method <code>saveChanges</code> called on it.
@@ -309,7 +309,7 @@ declare namespace javax {
                  *          called; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                abstract saveRequired(): boolean
+                public abstract saveRequired(): boolean
                 /**
                  * Writes this <code>SOAPMessage</code> object to the given output
                  * stream. The externalization format is as defined by the SOAP 1.1 with
@@ -330,7 +330,7 @@ declare namespace javax {
                  *                if there was a problem in externalizing this SOAP message
                  */
                 // @ts-ignore
-                abstract writeTo(out: java.io.OutputStream): void
+                public abstract writeTo(out: java.io.OutputStream): void
                 /**
                  * Associates the specified value with the specified property. If there was
                  * already a value associated with this property, the old value is
@@ -364,7 +364,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                setProperty(property: string, value: any): void
+                public setProperty(property: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Retrieves value of the specified property.
                  * @param property
@@ -376,7 +376,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                getProperty(property: string): java.lang.Object
+                public getProperty(property: java.lang.String | string): any
             }
         }
     }

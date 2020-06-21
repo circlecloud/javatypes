@@ -22,9 +22,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor(target: java.nio.file.Path, ...options: java.nio.file.CopyOption[])
                         // @ts-ignore
-                        preVisitDirectory(dir: java.nio.file.Path, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
+                        public preVisitDirectory(dir: java.nio.file.Path, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
                         // @ts-ignore
-                        visitFile(file: java.nio.file.Path, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
+                        public visitFile(file: java.nio.file.Path, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
                     }
                 }
             }

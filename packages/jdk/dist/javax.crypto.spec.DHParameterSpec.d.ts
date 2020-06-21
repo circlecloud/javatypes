@@ -46,13 +46,13 @@ declare namespace javax {
                  * @return the prime modulus <code>p</code>
                  */
                 // @ts-ignore
-                getP(): java.math.BigInteger
+                public getP(): java.math.BigInteger
                 /**
                  * Returns the base generator <code>g</code>.
                  * @return the base generator <code>g</code>
                  */
                 // @ts-ignore
-                getG(): java.math.BigInteger
+                public getG(): java.math.BigInteger
                 /**
                  * Returns the size in bits, <code>l</code>, of the random exponent
                  * (private value).
@@ -60,7 +60,7 @@ declare namespace javax {
                  *  (private value), or 0 if this size has not been set
                  */
                 // @ts-ignore
-                getL(): int
+                public getL(): number /*int*/
             }
         }
     }

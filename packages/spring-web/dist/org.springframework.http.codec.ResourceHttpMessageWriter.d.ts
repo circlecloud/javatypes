@@ -23,13 +23,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(bufferSize: number /*int*/)
                     // @ts-ignore
-                    canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    getWritableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getWritableMediaTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    write(inputStream: object, actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public write(inputStream: object, actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

@@ -38,7 +38,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>len</code> bytes from the specified byte array
              * starting at offset <code>off</code> to the underlying output stream.
@@ -51,7 +51,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes this data output stream. This forces any buffered output
              * bytes to be written out to the stream.
@@ -63,7 +63,7 @@ declare namespace java {
              * @see java.io.OutputStream#flush()
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Writes a <code>boolean</code> to the underlying output stream as
              * a 1-byte value. The value <code>true</code> is written out as the
@@ -76,7 +76,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeBoolean(v: boolean): void
+            public writeBoolean(v: boolean): void
             /**
              * Writes out a <code>byte</code> to the underlying output stream as
              * a 1-byte value. If no exception is thrown, the counter
@@ -86,7 +86,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeByte(v: number /*int*/): void
+            public writeByte(v: number /*int*/): void
             /**
              * Writes a <code>short</code> to the underlying output stream as two
              * bytes, high byte first. If no exception is thrown, the counter
@@ -96,7 +96,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeShort(v: number /*int*/): void
+            public writeShort(v: number /*int*/): void
             /**
              * Writes a <code>char</code> to the underlying output stream as a
              * 2-byte value, high byte first. If no exception is thrown, the
@@ -106,7 +106,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeChar(v: number /*int*/): void
+            public writeChar(v: number /*int*/): void
             /**
              * Writes an <code>int</code> to the underlying output stream as four
              * bytes, high byte first. If no exception is thrown, the counter
@@ -116,7 +116,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeInt(v: number /*int*/): void
+            public writeInt(v: number /*int*/): void
             /**
              * Writes a <code>long</code> to the underlying output stream as eight
              * bytes, high byte first. In no exception is thrown, the counter
@@ -126,7 +126,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeLong(v: number /*long*/): void
+            public writeLong(v: number /*long*/): void
             /**
              * Converts the float argument to an <code>int</code> using the
              * <code>floatToIntBits</code> method in class <code>Float</code>,
@@ -140,7 +140,7 @@ declare namespace java {
              * @see java.lang.Float#floatToIntBits(float)
              */
             // @ts-ignore
-            writeFloat(v: number /*float*/): void
+            public writeFloat(v: number /*float*/): void
             /**
              * Converts the double argument to a <code>long</code> using the
              * <code>doubleToLongBits</code> method in class <code>Double</code>,
@@ -154,7 +154,7 @@ declare namespace java {
              * @see java.lang.Double#doubleToLongBits(double)
              */
             // @ts-ignore
-            writeDouble(v: number /*double*/): void
+            public writeDouble(v: number /*double*/): void
             /**
              * Writes out the string to the underlying output stream as a
              * sequence of bytes. Each character in the string is written out, in
@@ -166,7 +166,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeBytes(s: string): void
+            public writeBytes(s: java.lang.String | string): void
             /**
              * Writes a string to the underlying output stream as a sequence of
              * characters. Each character is written to the data output stream as
@@ -179,7 +179,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            writeChars(s: string): void
+            public writeChars(s: java.lang.String | string): void
             /**
              * Writes a string to the underlying output stream using
              * <a href="DataInput.html#modified-utf-8">modified UTF-8</a>
@@ -199,7 +199,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeUTF(str: string): void
+            public writeUTF(str: java.lang.String | string): void
             /**
              * Returns the current value of the counter <code>written</code>,
              * the number of bytes written to this data output stream so far.
@@ -208,7 +208,7 @@ declare namespace java {
              * @see java.io.DataOutputStream#written
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
         }
     }
 }

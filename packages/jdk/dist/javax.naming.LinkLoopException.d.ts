@@ -22,7 +22,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of LinkLoopException.
              * All the non-link-related and link-related fields are initialized to null.

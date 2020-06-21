@@ -36,19 +36,19 @@ declare namespace javax {
                      * No job sheets are printed.
                      */
                     // @ts-ignore
-                    readonly NONE: javax.print.attribute.standard.JobSheets
+                    public static readonly NONE: javax.print.attribute.standard.JobSheets
                     /**
                      * One or more site specific standard job sheets are printed. e.g. a
                      * single start sheet is printed, or both start and end sheets are
                      * printed.
                      */
                     // @ts-ignore
-                    readonly STANDARD: javax.print.attribute.standard.JobSheets
+                    public static readonly STANDARD: javax.print.attribute.standard.JobSheets
                     /**
                      * Returns the string table for class JobSheets.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class JobSheets.
                      */
@@ -64,7 +64,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -74,7 +74,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

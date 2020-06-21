@@ -23,7 +23,7 @@ declare namespace org {
                  * @see <a href="https://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>
                  */
                 // @ts-ignore
-                class UriUtils extends java.lang.Object {
+                abstract class UriUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -33,7 +33,7 @@ declare namespace org {
                      * @return the encoded scheme
                      */
                     // @ts-ignore
-                    encodeScheme(scheme: string, encoding: string): java.lang.String
+                    public static encodeScheme(scheme: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI scheme with the given encoding.
                      * @param scheme the scheme to be encoded
@@ -42,7 +42,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeScheme(scheme: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeScheme(scheme: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI authority with the given encoding.
                      * @param authority the authority to be encoded
@@ -50,7 +50,7 @@ declare namespace org {
                      * @return the encoded authority
                      */
                     // @ts-ignore
-                    encodeAuthority(authority: string, encoding: string): java.lang.String
+                    public static encodeAuthority(authority: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI authority with the given encoding.
                      * @param authority the authority to be encoded
@@ -59,7 +59,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeAuthority(authority: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeAuthority(authority: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI user info with the given encoding.
                      * @param userInfo the user info to be encoded
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return the encoded user info
                      */
                     // @ts-ignore
-                    encodeUserInfo(userInfo: string, encoding: string): java.lang.String
+                    public static encodeUserInfo(userInfo: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI user info with the given encoding.
                      * @param userInfo the user info to be encoded
@@ -76,7 +76,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeUserInfo(userInfo: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeUserInfo(userInfo: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI host with the given encoding.
                      * @param host the host to be encoded
@@ -84,7 +84,7 @@ declare namespace org {
                      * @return the encoded host
                      */
                     // @ts-ignore
-                    encodeHost(host: string, encoding: string): java.lang.String
+                    public static encodeHost(host: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI host with the given encoding.
                      * @param host the host to be encoded
@@ -93,7 +93,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeHost(host: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeHost(host: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI port with the given encoding.
                      * @param port the port to be encoded
@@ -101,7 +101,7 @@ declare namespace org {
                      * @return the encoded port
                      */
                     // @ts-ignore
-                    encodePort(port: string, encoding: string): java.lang.String
+                    public static encodePort(port: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI port with the given encoding.
                      * @param port the port to be encoded
@@ -110,7 +110,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodePort(port: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodePort(port: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI path with the given encoding.
                      * @param path the path to be encoded
@@ -118,7 +118,7 @@ declare namespace org {
                      * @return the encoded path
                      */
                     // @ts-ignore
-                    encodePath(path: string, encoding: string): java.lang.String
+                    public static encodePath(path: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI path with the given encoding.
                      * @param path the path to be encoded
@@ -127,7 +127,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodePath(path: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodePath(path: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI path segment with the given encoding.
                      * @param segment the segment to be encoded
@@ -135,7 +135,7 @@ declare namespace org {
                      * @return the encoded segment
                      */
                     // @ts-ignore
-                    encodePathSegment(segment: string, encoding: string): java.lang.String
+                    public static encodePathSegment(segment: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI path segment with the given encoding.
                      * @param segment the segment to be encoded
@@ -144,7 +144,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodePathSegment(segment: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodePathSegment(segment: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI query with the given encoding.
                      * @param query the query to be encoded
@@ -152,7 +152,7 @@ declare namespace org {
                      * @return the encoded query
                      */
                     // @ts-ignore
-                    encodeQuery(query: string, encoding: string): java.lang.String
+                    public static encodeQuery(query: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI query with the given encoding.
                      * @param query the query to be encoded
@@ -161,7 +161,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeQuery(query: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeQuery(query: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the given URI query parameter with the given encoding.
                      * @param queryParam the query parameter to be encoded
@@ -169,7 +169,7 @@ declare namespace org {
                      * @return the encoded query parameter
                      */
                     // @ts-ignore
-                    encodeQueryParam(queryParam: string, encoding: string): java.lang.String
+                    public static encodeQueryParam(queryParam: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI query parameter with the given encoding.
                      * @param queryParam the query parameter to be encoded
@@ -178,7 +178,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeQueryParam(queryParam: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeQueryParam(queryParam: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Encode the query parameters from the given {@code MultiValueMap} with UTF-8.
                      * <p>This can be used with {@link UriComponentsBuilder#queryParams(MultiValueMap)}
@@ -196,7 +196,7 @@ declare namespace org {
                      * @since 5.2.3
                      */
                     // @ts-ignore
-                    encodeQueryParams(params: object): <any>
+                    public static encodeQueryParams(params: object): object
                     /**
                      * Encode the given URI fragment with the given encoding.
                      * @param fragment the fragment to be encoded
@@ -204,7 +204,7 @@ declare namespace org {
                      * @return the encoded fragment
                      */
                     // @ts-ignore
-                    encodeFragment(fragment: string, encoding: string): java.lang.String
+                    public static encodeFragment(fragment: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode the given URI fragment with the given encoding.
                      * @param fragment the fragment to be encoded
@@ -213,7 +213,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeFragment(fragment: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encodeFragment(fragment: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Variant of {@link #encode(String, Charset)} with a String charset.
                      * @param source the String to be encoded
@@ -221,7 +221,7 @@ declare namespace org {
                      * @return the encoded String
                      */
                     // @ts-ignore
-                    encode(source: string, encoding: string): java.lang.String
+                    public static encode(source: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Encode all characters that are either illegal, or have any reserved
                      * meaning, anywhere within a URI, as defined in
@@ -234,7 +234,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encode(source: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static encode(source: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Convenience method to apply {@link #encode(String, Charset)} to all
                      * given URI variable values.
@@ -243,7 +243,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeUriVariables(uriVariables: java.util.Map<java.lang.String, any>): java.util.Map<java.lang.String, java.lang.String>
+                    public static encodeUriVariables(uriVariables: java.util.Map<java.lang.String | string, any>): java.util.Map<java.lang.String | string, java.lang.String | string>
                     /**
                      * Convenience method to apply {@link #encode(String, Charset)} to all
                      * given URI variable values.
@@ -252,7 +252,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    encodeUriVariables(...uriVariables: any[]): java.lang.Object[]
+                    public static encodeUriVariables(...uriVariables: java.lang.Object[] | any[]): any[]
                     /**
                      * Decode the given encoded URI component.
                      * <p>See {@link StringUtils#uriDecode(String, Charset)} for the decoding rules.
@@ -264,7 +264,7 @@ declare namespace org {
                      * @see java.net.URLDecoder#decode(String, String)
                      */
                     // @ts-ignore
-                    decode(source: string, encoding: string): java.lang.String
+                    public static decode(source: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Decode the given encoded URI component.
                      * <p>See {@link StringUtils#uriDecode(String, Charset)} for the decoding rules.
@@ -277,7 +277,7 @@ declare namespace org {
                      * @see java.net.URLDecoder#decode(String, String)
                      */
                     // @ts-ignore
-                    decode(source: string, charset: java.nio.charset.Charset): java.lang.String
+                    public static decode(source: java.lang.String | string, charset: java.nio.charset.Charset): string
                     /**
                      * Extract the file extension from the given URI path.
                      * @param path the URI path (e.g. "/products/index.html")
@@ -285,7 +285,7 @@ declare namespace org {
                      * @since 4.3.2
                      */
                     // @ts-ignore
-                    extractFileExtension(path: string): java.lang.String
+                    public static extractFileExtension(path: java.lang.String | string): string
                 }
             }
         }

@@ -10,7 +10,7 @@ declare namespace org {
                          * @return The goal class
                          */
                         // @ts-ignore
-                        getGoalClass(): java.lang.Class<? extends org.spongepowered.api.entity.ai.Goal<?>>
+                        getGoalClass(): java.lang.Class<any>
                     }
                 }
             }

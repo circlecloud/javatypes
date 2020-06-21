@@ -18,13 +18,13 @@ declare namespace org {
                              * with the display slot {@link DisplaySlots#LIST}.</p>
                              */
                             // @ts-ignore
-                            readonly HEARTS: org.spongepowered.api.scoreboard.objective.displaymode.ObjectiveDisplayMode
+                            public static readonly HEARTS: org.spongepowered.api.scoreboard.objective.displaymode.ObjectiveDisplayMode
                             /**
                              * Causes the scores for an {@link Objective}
                              * to be displayed as integers.
                              */
                             // @ts-ignore
-                            readonly INTEGER: org.spongepowered.api.scoreboard.objective.displaymode.ObjectiveDisplayMode
+                            public static readonly INTEGER: org.spongepowered.api.scoreboard.objective.displaymode.ObjectiveDisplayMode
                         }
                     }
                 }

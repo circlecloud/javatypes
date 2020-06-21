@@ -95,21 +95,21 @@ declare namespace java {
              *           conditions is violated
              */
             // @ts-ignore
-            constructor(copies: number /*int*/, defaultSelection: java.awt.JobAttributes.DefaultSelectionType, destination: java.awt.JobAttributes.DestinationType, dialog: java.awt.JobAttributes.DialogType, fileName: string, maxPage: number /*int*/, minPage: number /*int*/, multipleDocumentHandling: java.awt.JobAttributes.MultipleDocumentHandlingType, pageRanges: number /*int*/[][], printer: string, sides: java.awt.JobAttributes.SidesType)
+            constructor(copies: number /*int*/, defaultSelection: java.awt.JobAttributes.DefaultSelectionType, destination: java.awt.JobAttributes.DestinationType, dialog: java.awt.JobAttributes.DialogType, fileName: java.lang.String | string, maxPage: number /*int*/, minPage: number /*int*/, multipleDocumentHandling: java.awt.JobAttributes.MultipleDocumentHandlingType, pageRanges: number /*int*/[][], printer: java.lang.String | string, sides: java.awt.JobAttributes.SidesType)
             /**
              * Creates and returns a copy of this <code>JobAttributes</code>.
              * @return the newly created copy; it is safe to cast this Object into
              *           a <code>JobAttributes</code>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Sets all of the attributes of this <code>JobAttributes</code> to
              * the same values as the attributes of obj.
              * @param obj the <code>JobAttributes</code> to copy
              */
             // @ts-ignore
-            set(obj: java.awt.JobAttributes): void
+            public set(obj: java.awt.JobAttributes): void
             /**
              * Returns the number of copies the application should render for jobs
              * using these attributes. This attribute is updated to the value chosen
@@ -117,7 +117,7 @@ declare namespace java {
              * @return an integer greater than 0.
              */
             // @ts-ignore
-            getCopies(): int
+            public getCopies(): number /*int*/
             /**
              * Specifies the number of copies the application should render for jobs
              * using these attributes. Not specifying this attribute is equivalent to
@@ -127,13 +127,13 @@ declare namespace java {
              *       or equal to 0
              */
             // @ts-ignore
-            setCopies(copies: number /*int*/): void
+            public setCopies(copies: number /*int*/): void
             /**
              * Sets the number of copies the application should render for jobs using
              * these attributes to the default. The default number of copies is 1.
              */
             // @ts-ignore
-            setCopiesToDefault(): void
+            public setCopiesToDefault(): void
             /**
              * Specifies whether, for jobs using these attributes, the application
              * should print all pages, the range specified by the return value of
@@ -143,7 +143,7 @@ declare namespace java {
              *           DefaultSelectionType.SELECTION
              */
             // @ts-ignore
-            getDefaultSelection(): java.awt.JobAttributes.DefaultSelectionType
+            public getDefaultSelection(): java.awt.JobAttributes.DefaultSelectionType
             /**
              * Specifies whether, for jobs using these attributes, the application
              * should print all pages, the range specified by the return value of
@@ -154,7 +154,7 @@ declare namespace java {
              * @throws IllegalArgumentException if defaultSelection is <code>null</code>
              */
             // @ts-ignore
-            setDefaultSelection(defaultSelection: java.awt.JobAttributes.DefaultSelectionType): void
+            public setDefaultSelection(defaultSelection: java.awt.JobAttributes.DefaultSelectionType): void
             /**
              * Specifies whether output will be to a printer or a file for jobs using
              * these attributes. This attribute is updated to the value chosen by the
@@ -162,7 +162,7 @@ declare namespace java {
              * @return DesintationType.FILE or DesintationType.PRINTER
              */
             // @ts-ignore
-            getDestination(): java.awt.JobAttributes.DestinationType
+            public getDestination(): java.awt.JobAttributes.DestinationType
             /**
              * Specifies whether output will be to a printer or a file for jobs using
              * these attributes. Not specifying this attribute is equivalent to
@@ -171,7 +171,7 @@ declare namespace java {
              * @throws IllegalArgumentException if destination is null.
              */
             // @ts-ignore
-            setDestination(destination: java.awt.JobAttributes.DestinationType): void
+            public setDestination(destination: java.awt.JobAttributes.DestinationType): void
             /**
              * Returns whether, for jobs using these attributes, the user should see
              * a print dialog in which to modify the print settings, and which type of
@@ -186,7 +186,7 @@ declare namespace java {
              *           <code>DialogType.NONE</code>
              */
             // @ts-ignore
-            getDialog(): java.awt.JobAttributes.DialogType
+            public getDialog(): java.awt.JobAttributes.DialogType
             /**
              * Specifies whether, for jobs using these attributes, the user should see
              * a print dialog in which to modify the print settings, and which type of
@@ -202,21 +202,21 @@ declare namespace java {
              * @throws IllegalArgumentException if dialog is null.
              */
             // @ts-ignore
-            setDialog(dialog: java.awt.JobAttributes.DialogType): void
+            public setDialog(dialog: java.awt.JobAttributes.DialogType): void
             /**
              * Specifies the file name for the output file for jobs using these
              * attributes. This attribute is updated to the value chosen by the user.
              * @return the possibly <code>null</code> file name
              */
             // @ts-ignore
-            getFileName(): java.lang.String
+            public getFileName(): string
             /**
              * Specifies the file name for the output file for jobs using these
              * attributes. Default is platform-dependent and implementation-defined.
              * @param fileName the possibly null file name.
              */
             // @ts-ignore
-            setFileName(fileName: string): void
+            public setFileName(fileName: java.lang.String | string): void
             /**
              * Returns, for jobs using these attributes, the first page to be
              * printed, if a range of pages is to be printed. This attribute is
@@ -230,7 +230,7 @@ declare namespace java {
              *           less than or equal to <i>maxPage</i>.
              */
             // @ts-ignore
-            getFromPage(): int
+            public getFromPage(): number /*int*/
             /**
              * Specifies, for jobs using these attributes, the first page to be
              * printed, if a range of pages is to be printed. If this attribute is not
@@ -246,7 +246,7 @@ declare namespace java {
              *           conditions is violated.
              */
             // @ts-ignore
-            setFromPage(fromPage: number /*int*/): void
+            public setFromPage(fromPage: number /*int*/): void
             /**
              * Specifies the maximum value the user can specify as the last page to
              * be printed for jobs using these attributes. This attribute cannot be
@@ -256,7 +256,7 @@ declare namespace java {
              *           to <i>minPage</i>.
              */
             // @ts-ignore
-            getMaxPage(): int
+            public getMaxPage(): number /*int*/
             /**
              * Specifies the maximum value the user can specify as the last page to
              * be printed for jobs using these attributes. Not specifying this
@@ -267,7 +267,7 @@ declare namespace java {
              *           conditions is violated
              */
             // @ts-ignore
-            setMaxPage(maxPage: number /*int*/): void
+            public setMaxPage(maxPage: number /*int*/): void
             /**
              * Specifies the minimum value the user can specify as the first page to
              * be printed for jobs using these attributes. This attribute cannot be
@@ -277,7 +277,7 @@ declare namespace java {
              *           to <i>maxPage</i>.
              */
             // @ts-ignore
-            getMinPage(): int
+            public getMinPage(): number /*int*/
             /**
              * Specifies the minimum value the user can specify as the first page to
              * be printed for jobs using these attributes. Not specifying this
@@ -288,7 +288,7 @@ declare namespace java {
              *           conditions is violated.
              */
             // @ts-ignore
-            setMinPage(minPage: number /*int*/): void
+            public setMinPage(minPage: number /*int*/): void
             /**
              * Specifies the handling of multiple copies, including collation, for
              * jobs using these attributes. This attribute is updated to the value
@@ -297,7 +297,7 @@ declare namespace java {
              *      MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
              */
             // @ts-ignore
-            getMultipleDocumentHandling(): java.awt.JobAttributes.MultipleDocumentHandlingType
+            public getMultipleDocumentHandling(): java.awt.JobAttributes.MultipleDocumentHandlingType
             /**
              * Specifies the handling of multiple copies, including collation, for
              * jobs using these attributes. Not specifying this attribute is equivalent
@@ -309,14 +309,14 @@ declare namespace java {
              * @throws IllegalArgumentException if multipleDocumentHandling is null.
              */
             // @ts-ignore
-            setMultipleDocumentHandling(multipleDocumentHandling: java.awt.JobAttributes.MultipleDocumentHandlingType): void
+            public setMultipleDocumentHandling(multipleDocumentHandling: java.awt.JobAttributes.MultipleDocumentHandlingType): void
             /**
              * Sets the handling of multiple copies, including collation, for jobs
              * using these attributes to the default. The default handling is
              * MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
              */
             // @ts-ignore
-            setMultipleDocumentHandlingToDefault(): void
+            public setMultipleDocumentHandlingToDefault(): void
             /**
              * Specifies, for jobs using these attributes, the ranges of pages to be
              * printed, if a range of pages is to be printed. All range numbers are
@@ -335,7 +335,7 @@ declare namespace java {
              *           specifies pages 1, 2, 3, 5, 15, 16, 17, 18, and 19.
              */
             // @ts-ignore
-            getPageRanges(): int[][]
+            public getPageRanges(): number /*int*/[][]
             /**
              * Specifies, for jobs using these attributes, the ranges of pages to be
              * printed, if a range of pages is to be printed. All range numbers are
@@ -361,21 +361,21 @@ declare namespace java {
              *           conditions is violated.
              */
             // @ts-ignore
-            setPageRanges(pageRanges: number /*int*/[][]): void
+            public setPageRanges(pageRanges: number /*int*/[][]): void
             /**
              * Returns the destination printer for jobs using these attributes. This
              * attribute is updated to the value chosen by the user.
              * @return the possibly null printer name.
              */
             // @ts-ignore
-            getPrinter(): java.lang.String
+            public getPrinter(): string
             /**
              * Specifies the destination printer for jobs using these attributes.
              * Default is platform-dependent and implementation-defined.
              * @param printer the possibly null printer name.
              */
             // @ts-ignore
-            setPrinter(printer: string): void
+            public setPrinter(printer: java.lang.String | string): void
             /**
              * Returns how consecutive pages should be imposed upon the sides of the
              * print medium for jobs using these attributes. SidesType.ONE_SIDED
@@ -395,7 +395,7 @@ declare namespace java {
              *           SidesType.TWO_SIDED_SHORT_EDGE.
              */
             // @ts-ignore
-            getSides(): java.awt.JobAttributes.SidesType
+            public getSides(): java.awt.JobAttributes.SidesType
             /**
              * Specifies how consecutive pages should be imposed upon the sides of the
              * print medium for jobs using these attributes. SidesType.ONE_SIDED
@@ -416,14 +416,14 @@ declare namespace java {
              * @throws IllegalArgumentException if sides is null.
              */
             // @ts-ignore
-            setSides(sides: java.awt.JobAttributes.SidesType): void
+            public setSides(sides: java.awt.JobAttributes.SidesType): void
             /**
              * Sets how consecutive pages should be imposed upon the sides of the
              * print medium for jobs using these attributes to the default. The
              * default imposition is SidesType.ONE_SIDED.
              */
             // @ts-ignore
-            setSidesToDefault(): void
+            public setSidesToDefault(): void
             /**
              * Returns, for jobs using these attributes, the last page (inclusive)
              * to be printed, if a range of pages is to be printed. This attribute is
@@ -437,7 +437,7 @@ declare namespace java {
              *           and less than or equal to <i>maxPage</i>.
              */
             // @ts-ignore
-            getToPage(): int
+            public getToPage(): number /*int*/
             /**
              * Specifies, for jobs using these attributes, the last page (inclusive)
              * to be printed, if a range of pages is to be printed.
@@ -453,7 +453,7 @@ declare namespace java {
              *           conditions is violated.
              */
             // @ts-ignore
-            setToPage(toPage: number /*int*/): void
+            public setToPage(toPage: number /*int*/): void
             /**
              * Determines whether two JobAttributes are equal to each other.
              * <p>
@@ -467,19 +467,19 @@ declare namespace java {
              *           above criteria.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hash code value for this JobAttributes.
              * @return the hash code.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of this JobAttributes.
              * @return the string representation.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

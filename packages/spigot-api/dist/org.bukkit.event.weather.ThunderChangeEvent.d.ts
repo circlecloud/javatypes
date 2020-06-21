@@ -10,19 +10,19 @@ declare namespace org {
                     // @ts-ignore
                     constructor(world: org.bukkit.World, to: boolean)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the state of thunder that the world is being set to
                      * @return true if the weather is being set to thundering, false otherwise
                      */
                     // @ts-ignore
-                    toThunderState(): boolean
+                    public toThunderState(): boolean
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

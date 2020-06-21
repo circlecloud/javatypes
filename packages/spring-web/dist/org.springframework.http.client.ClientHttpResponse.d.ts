@@ -34,14 +34,14 @@ declare namespace org {
                      * @see HttpStatus#resolve(int)
                      */
                     // @ts-ignore
-                    getRawStatusCode(): int
+                    getRawStatusCode(): number /*int*/
                     /**
                      * Get the HTTP status text of the response.
                      * @return the HTTP status text
                      * @throws IOException in case of I/O errors
                      */
                     // @ts-ignore
-                    getStatusText(): java.lang.String
+                    getStatusText(): string
                     /**
                      * Close this response, freeing any resources created.
                      */

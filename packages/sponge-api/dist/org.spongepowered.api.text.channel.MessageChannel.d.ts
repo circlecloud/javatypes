@@ -13,23 +13,23 @@ declare namespace org {
                          * A channel with no members.
                          */
                         // @ts-ignore
-                        
+                        readonly TO_NONE: org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * A channel with all online players as members.
                          */
                         // @ts-ignore
-                        
+                        readonly TO_PLAYERS: org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * A channel with the server console as a member.
                          */
                         // @ts-ignore
-                        
+                        readonly TO_CONSOLE: org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * A channel with all online players, as well as the server console, as
                          * members.
                          */
                         // @ts-ignore
-                        
+                        readonly TO_ALL: org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * Creates a message channel that targets all subjects with the given
                          * permission.
@@ -38,7 +38,7 @@ declare namespace org {
                          * @see PermissionMessageChannel
                          */
                         // @ts-ignore
-                        permission(permission: string): org.spongepowered.api.text.channel.MessageChannel
+                        permission(permission: java.lang.String | string): org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * Creates a message channel that targets all subjects contained within the
                          * given channels and applies the message transformations of each channel in
@@ -58,7 +58,7 @@ declare namespace org {
                          * @see CombinedMessageChannel
                          */
                         // @ts-ignore
-                        combined(channels: Array<org.spongepowered.api.text.channel.MessageChannel>): org.spongepowered.api.text.channel.MessageChannel
+                        combined(channels: java.util.Collection<org.spongepowered.api.text.channel.MessageChannel> | Array<org.spongepowered.api.text.channel.MessageChannel>): org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * Creates a message channel that targets the given sources.
                          * @param recipients The recipients
@@ -74,7 +74,7 @@ declare namespace org {
                          * @see FixedMessageChannel
                          */
                         // @ts-ignore
-                        fixed(recipients: Array<org.spongepowered.api.text.channel.MessageReceiver>): org.spongepowered.api.text.channel.MessageChannel
+                        fixed(recipients: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.channel.MessageChannel
                         /**
                          * Creates a message channel that targets the given world.
                          * @param world The world
@@ -107,7 +107,7 @@ declare namespace org {
                          * @param original The original message to send
                          */
                         // @ts-ignore
-                        send(sender: any, original: org.spongepowered.api.text.Text): void
+                        send(sender: java.lang.Object | any, original: org.spongepowered.api.text.Text): void
                         /**
                          * Send a message to this channel, transforming and sending it to the
                          * members.
@@ -116,7 +116,7 @@ declare namespace org {
                          * @param type The type of message
                          */
                         // @ts-ignore
-                        send(sender: any, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): void
+                        send(sender: java.lang.Object | any, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): void
                         /**
                          * Handle transforming the input message appropriately.
                          * @param sender The sender of the message
@@ -126,13 +126,13 @@ declare namespace org {
                          * @return The message to send, if present, otherwise {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        transformMessage(sender: any, recipient: org.spongepowered.api.text.channel.MessageReceiver, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): java.util.Optional<org.spongepowered.api.text.Text>
+                        transformMessage(sender: java.lang.Object | any, recipient: org.spongepowered.api.text.channel.MessageReceiver, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): java.util.Optional<org.spongepowered.api.text.Text>
                         /**
                          * Gets a collection of all members in this channel.
                          * @return A collection of all members of this channel
                          */
                         // @ts-ignore
-                        getMembers(): java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver>
+                        getMembers(): Array<org.spongepowered.api.text.channel.MessageReceiver>
                         /**
                          * Gets or creates a mutable version of this channel.
                          * <p>The default behaviour of this method is to copy the current member

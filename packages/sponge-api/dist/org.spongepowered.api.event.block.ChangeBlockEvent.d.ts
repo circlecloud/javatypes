@@ -16,7 +16,7 @@ declare namespace org {
                          * @return The unmodifiable list of transactions
                          */
                         // @ts-ignore
-                        getTransactions(): java.util.List<org.spongepowered.api.data.Transaction<org.spongepowered.api.block.BlockSnapshot>>
+                        getTransactions(): Array<org.spongepowered.api.data.Transaction<org.spongepowered.api.block.BlockSnapshot>>
                         /**
                          * Applies the provided {@link Predicate} to the {@link List} of
                          * {@link Transaction}s from {@link #getTransactions()} such that
@@ -29,7 +29,7 @@ declare namespace org {
                          *      <code>false</code>
                          */
                         // @ts-ignore
-                        filter(predicate: java.util.function.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>> | java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): java.util.List<org.spongepowered.api.data.Transaction<org.spongepowered.api.block.BlockSnapshot>>
+                        filter(predicate: java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): Array<org.spongepowered.api.data.Transaction<org.spongepowered.api.block.BlockSnapshot>>
                         /**
                          * Invalidates the list as such that all {@link Transaction}s are
                          * marked as "invalid" and will not apply post event.

@@ -23,12 +23,12 @@ declare namespace org {
                  * @return the whether this track is set on a slope
                  */
                 // @ts-ignore
-                isOnSlope(): boolean
+                public isOnSlope(): boolean
                 /**
                  * @return the whether this track is set as a curve
                  */
                 // @ts-ignore
-                isCurve(): boolean
+                public isCurve(): boolean
                 /**
                  * @return the direction these tracks are set
                  *      <p>
@@ -37,9 +37,9 @@ declare namespace org {
                  *      set as a curve, the corner of the track is returned.
                  */
                 // @ts-ignore
-                getDirection(): org.bukkit.block.BlockFace
+                public getDirection(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return the data without the extended properties used by {@link
                  * PoweredRail} and {@link DetectorRail}. Overridden in {@link
@@ -48,7 +48,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getConvertedData(): byte
+                getConvertedData(): number /*byte*/
                 /**
                  * Set the direction of these tracks
                  * <p>
@@ -59,9 +59,9 @@ declare namespace org {
                  * @param isOnSlope whether or not the track should be on a slope
                  */
                 // @ts-ignore
-                setDirection(face: org.bukkit.block.BlockFace, isOnSlope: boolean): void
+                public setDirection(face: org.bukkit.block.BlockFace, isOnSlope: boolean): void
                 // @ts-ignore
-                clone(): org.bukkit.material.Rails
+                public clone(): org.bukkit.material.Rails
             }
         }
     }

@@ -6,10 +6,30 @@ declare namespace org {
              */
             // @ts-ignore
             class NameTagVisibility extends java.lang.Enum<org.bukkit.scoreboard.NameTagVisibility> {
+                /**
+                 * Always show the player's nametag.
+                 */
+                // @ts-ignore
+                readonly ALWAYS: org.bukkit.scoreboard.NameTagVisibility
+                /**
+                 * Never show the player's nametag.
+                 */
+                // @ts-ignore
+                readonly NEVER: org.bukkit.scoreboard.NameTagVisibility
+                /**
+                 * Show the player's nametag only to his own team members.
+                 */
+                // @ts-ignore
+                readonly HIDE_FOR_OTHER_TEAMS: org.bukkit.scoreboard.NameTagVisibility
+                /**
+                 * Show the player's nametag only to members of other teams.
+                 */
+                // @ts-ignore
+                readonly HIDE_FOR_OWN_TEAM: org.bukkit.scoreboard.NameTagVisibility
                 // @ts-ignore
                 values(): org.bukkit.scoreboard.NameTagVisibility[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.scoreboard.NameTagVisibility
+                valueOf(name: java.lang.String | string): org.bukkit.scoreboard.NameTagVisibility
             }
         }
     }

@@ -31,7 +31,7 @@ declare namespace org {
              * @return Height of the world
              */
             // @ts-ignore
-            getHeight(): int
+            getHeight(): number /*int*/
             /**
              * Checks if the specified block is empty (air) or not.
              * @param x X coordinate

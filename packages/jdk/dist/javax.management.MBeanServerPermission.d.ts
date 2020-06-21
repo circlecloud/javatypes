@@ -46,7 +46,7 @@ declare namespace javax {
              *         list of the allowed names.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * <p>Create a new MBeanServerPermission with the given name.</p>
              * @param name the name of the granted permission.  It must
@@ -64,9 +64,9 @@ declare namespace javax {
              *  if arguments are invalid.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * <p>Checks if this MBeanServerPermission object "implies" the specified
              * permission.</p>
@@ -83,7 +83,7 @@ declare namespace javax {
              *  false if not.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two MBeanServerPermission objects for equality. Checks that
              * <i>obj</i> is an MBeanServerPermission, and represents the same
@@ -93,9 +93,9 @@ declare namespace javax {
              * @return true if the objects are equal.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

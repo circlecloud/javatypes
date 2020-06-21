@@ -151,7 +151,7 @@ declare namespace java {
                  * @throws InterruptedException if the current thread is interrupted
                  */
                 // @ts-ignore
-                acquire(): void
+                public acquire(): void
                 /**
                  * Acquires a permit from this semaphore, blocking until one is
                  * available.
@@ -169,7 +169,7 @@ declare namespace java {
                  * status will be set.
                  */
                 // @ts-ignore
-                acquireUninterruptibly(): void
+                public acquireUninterruptibly(): void
                 /**
                  * Acquires a permit from this semaphore, only if one is available at the
                  * time of invocation.
@@ -191,7 +191,7 @@ declare namespace java {
                  *          otherwise
                  */
                 // @ts-ignore
-                tryAcquire(): boolean
+                public tryAcquire(): boolean
                 /**
                  * Acquires a permit from this semaphore, if one becomes available
                  * within the given waiting time and the current thread has not
@@ -228,7 +228,7 @@ declare namespace java {
                  * @throws InterruptedException if the current thread is interrupted
                  */
                 // @ts-ignore
-                tryAcquire(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public tryAcquire(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Releases a permit, returning it to the semaphore.
                  * <p>Releases a permit, increasing the number of available permits by
@@ -241,7 +241,7 @@ declare namespace java {
                  * in the application.
                  */
                 // @ts-ignore
-                release(): void
+                public release(): void
                 /**
                  * Acquires the given number of permits from this semaphore,
                  * blocking until all are available,
@@ -275,7 +275,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code permits} is negative
                  */
                 // @ts-ignore
-                acquire(permits: number /*int*/): void
+                public acquire(permits: number /*int*/): void
                 /**
                  * Acquires the given number of permits from this semaphore,
                  * blocking until all are available.
@@ -295,7 +295,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code permits} is negative
                  */
                 // @ts-ignore
-                acquireUninterruptibly(permits: number /*int*/): void
+                public acquireUninterruptibly(permits: number /*int*/): void
                 /**
                  * Acquires the given number of permits from this semaphore, only
                  * if all are available at the time of invocation.
@@ -320,7 +320,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code permits} is negative
                  */
                 // @ts-ignore
-                tryAcquire(permits: number /*int*/): boolean
+                public tryAcquire(permits: number /*int*/): boolean
                 /**
                  * Acquires the given number of permits from this semaphore, if all
                  * become available within the given waiting time and the current
@@ -366,7 +366,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code permits} is negative
                  */
                 // @ts-ignore
-                tryAcquire(permits: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public tryAcquire(permits: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Releases the given number of permits, returning them to the semaphore.
                  * <p>Releases the given number of permits, increasing the number of
@@ -387,20 +387,20 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code permits} is negative
                  */
                 // @ts-ignore
-                release(permits: number /*int*/): void
+                public release(permits: number /*int*/): void
                 /**
                  * Returns the current number of permits available in this semaphore.
                  * <p>This method is typically used for debugging and testing purposes.
                  * @return the number of permits available in this semaphore
                  */
                 // @ts-ignore
-                availablePermits(): int
+                public availablePermits(): number /*int*/
                 /**
                  * Acquires and returns all permits that are immediately available.
                  * @return the number of permits acquired
                  */
                 // @ts-ignore
-                drainPermits(): int
+                public drainPermits(): number /*int*/
                 /**
                  * Shrinks the number of available permits by the indicated
                  * reduction. This method can be useful in subclasses that use
@@ -417,7 +417,7 @@ declare namespace java {
                  * @return {#code true} if this semaphore has fairness set true
                  */
                 // @ts-ignore
-                isFair(): boolean
+                public isFair(): boolean
                 /**
                  * Queries whether any threads are waiting to acquire. Note that
                  * because cancellations may occur at any time, a {@code true}
@@ -428,7 +428,7 @@ declare namespace java {
                  *          acquire the lock
                  */
                 // @ts-ignore
-                hasQueuedThreads(): boolean
+                public hasQueuedThreads(): boolean
                 /**
                  * Returns an estimate of the number of threads waiting to acquire.
                  * The value is only an estimate because the number of threads may
@@ -438,7 +438,7 @@ declare namespace java {
                  * @return the estimated number of threads waiting for this lock
                  */
                 // @ts-ignore
-                getQueueLength(): int
+                public getQueueLength(): number /*int*/
                 /**
                  * Returns a collection containing threads that may be waiting to acquire.
                  * Because the actual set of threads may change dynamically while
@@ -449,7 +449,7 @@ declare namespace java {
                  * @return the collection of threads
                  */
                 // @ts-ignore
-                getQueuedThreads(): java.util.Collection<java.lang.Thread>
+                getQueuedThreads(): Array<java.lang.Thread>
                 /**
                  * Returns a string identifying this semaphore, as well as its state.
                  * The state, in brackets, includes the String {@code "Permits ="}
@@ -457,7 +457,7 @@ declare namespace java {
                  * @return a string identifying this semaphore, as well as its state
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -21,7 +21,7 @@ declare namespace org {
                  * Return the underlying resource (never {@code null}).
                  */
                 // @ts-ignore
-                getWrappedObject(): java.lang.Object
+                getWrappedObject(): any
             }
         }
     }

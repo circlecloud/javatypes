@@ -36,7 +36,7 @@ declare namespace org {
                      * @see Integer#toString
                      */
                     // @ts-ignore
-                    constructor(numberClass: java.lang.Class<java.lang.Number>, allowEmpty: boolean)
+                    constructor(numberClass: java.lang.Class<any>, allowEmpty: boolean)
                     /**
                      * Create a new CustomNumberEditor instance, using the given NumberFormat
                      * for parsing and rendering.
@@ -52,22 +52,22 @@ declare namespace org {
                      * @see java.text.NumberFormat#format
                      */
                     // @ts-ignore
-                    constructor(numberClass: java.lang.Class<java.lang.Number>, numberFormat: java.text.NumberFormat, allowEmpty: boolean)
+                    constructor(numberClass: java.lang.Class<any>, numberFormat: java.text.NumberFormat, allowEmpty: boolean)
                     /**
                      * Parse the Number from the given text, using the specified NumberFormat.
                      */
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Coerce a Number value into the required target class, if necessary.
                      */
                     // @ts-ignore
-                    setValue(value: any): void
+                    public setValue(value: java.lang.Object | any): void
                     /**
                      * Format the Number as String, using the specified NumberFormat.
                      */
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

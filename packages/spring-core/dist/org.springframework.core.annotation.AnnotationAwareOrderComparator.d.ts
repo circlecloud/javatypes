@@ -27,7 +27,7 @@ declare namespace org {
                      * Shared default instance of {@code AnnotationAwareOrderComparator}.
                      */
                     // @ts-ignore
-                    readonly INSTANCE: org.springframework.core.annotation.AnnotationAwareOrderComparator
+                    public static readonly INSTANCE: org.springframework.core.annotation.AnnotationAwareOrderComparator
                     /**
                      * This implementation checks for {@link Order @Order} or
                      * {@link javax.annotation.Priority @Priority} on various kinds of
@@ -35,7 +35,7 @@ declare namespace org {
                      * check in the superclass.
                      */
                     // @ts-ignore
-                    findOrder(obj: any): java.lang.Integer
+                    findOrder(obj: java.lang.Object | any): number
                     /**
                      * This implementation retrieves an @{@link javax.annotation.Priority}
                      * value, allowing for additional semantics over the regular @{@link Order}
@@ -43,7 +43,7 @@ declare namespace org {
                      * multiple matches but only one object to be returned.
                      */
                     // @ts-ignore
-                    getPriority(obj: any): java.lang.Integer
+                    public getPriority(obj: java.lang.Object | any): number
                     /**
                      * Sort the given list with a default {@link AnnotationAwareOrderComparator}.
                      * <p>Optimized to skip sorting for lists with size 0 or 1,
@@ -52,7 +52,7 @@ declare namespace org {
                      * @see java.util.List#sort(java.util.Comparator)
                      */
                     // @ts-ignore
-                    sort(list: Array<any>): void
+                    public static sort(list: java.util.List<any> | Array<any>): void
                     /**
                      * Sort the given array with a default AnnotationAwareOrderComparator.
                      * <p>Optimized to skip sorting for lists with size 0 or 1,
@@ -61,7 +61,7 @@ declare namespace org {
                      * @see java.util.Arrays#sort(Object[], java.util.Comparator)
                      */
                     // @ts-ignore
-                    sort(array: any[]): void
+                    public static sort(array: java.lang.Object[] | any[]): void
                     /**
                      * Sort the given array or List with a default AnnotationAwareOrderComparator,
                      * if necessary. Simply skips sorting when given any other value.
@@ -71,7 +71,7 @@ declare namespace org {
                      * @see java.util.Arrays#sort(Object[], java.util.Comparator)
                      */
                     // @ts-ignore
-                    sortIfNecessary(value: any): void
+                    public static sortIfNecessary(value: java.lang.Object | any): void
                 }
             }
         }

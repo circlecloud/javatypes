@@ -32,7 +32,7 @@ declare namespace org {
                      * @see #DEFAULT_PREFIX_SEPARATOR
                      */
                     // @ts-ignore
-                    constructor(request: ServletRequest, prefix: string)
+                    constructor(request: ServletRequest, prefix: java.lang.String | string)
                     /**
                      * Create new ServletRequestPropertyValues supplying both prefix and
                      * prefix separator.
@@ -43,12 +43,12 @@ declare namespace org {
                      *  and the rest of the parameter name ("param1", "param2")
                      */
                     // @ts-ignore
-                    constructor(request: ServletRequest, prefix: string, prefixSeparator: string)
+                    constructor(request: ServletRequest, prefix: java.lang.String | string, prefixSeparator: java.lang.String | string)
                     /**
                      * Default prefix separator.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_PREFIX_SEPARATOR: string
+                    public static readonly DEFAULT_PREFIX_SEPARATOR: java.lang.String | string
                 }
             }
         }

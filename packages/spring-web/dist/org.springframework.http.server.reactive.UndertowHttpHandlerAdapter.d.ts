@@ -15,11 +15,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor(httpHandler: org.springframework.http.server.reactive.HttpHandler)
                         // @ts-ignore
-                        setDataBufferFactory(bufferFactory: DataBufferFactory): void
+                        public setDataBufferFactory(bufferFactory: DataBufferFactory): void
                         // @ts-ignore
-                        getDataBufferFactory(): DataBufferFactory
+                        public getDataBufferFactory(): DataBufferFactory
                         // @ts-ignore
-                        handleRequest(exchange: HttpServerExchange): void
+                        public handleRequest(exchange: HttpServerExchange): void
                     }
                 }
             }

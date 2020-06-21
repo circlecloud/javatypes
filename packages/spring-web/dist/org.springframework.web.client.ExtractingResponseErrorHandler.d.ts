@@ -40,12 +40,12 @@ declare namespace org {
                      * @param messageConverters the message converters to use
                      */
                     // @ts-ignore
-                    constructor(messageConverters: Array<org.springframework.http.converter.HttpMessageConverter<any>>)
+                    constructor(messageConverters: java.util.List<org.springframework.http.converter.HttpMessageConverter<any>> | Array<org.springframework.http.converter.HttpMessageConverter<any>>)
                     /**
                      * Set the message converters to use by this extractor.
                      */
                     // @ts-ignore
-                    setMessageConverters(messageConverters: Array<org.springframework.http.converter.HttpMessageConverter<any>>): void
+                    public setMessageConverters(messageConverters: java.util.List<org.springframework.http.converter.HttpMessageConverter<any>> | Array<org.springframework.http.converter.HttpMessageConverter<any>>): void
                     /**
                      * Set the mapping from HTTP status code to {@code RestClientException} subclass.
                      * If this mapping has a match
@@ -56,7 +56,7 @@ declare namespace org {
                      * response into the mapped subclass of {@link RestClientException}.
                      */
                     // @ts-ignore
-                    setStatusMapping(statusMapping: java.util.Map<org.springframework.http.HttpStatus, java.lang.Class<org.springframework.web.client.RestClientException>>): void
+                    public setStatusMapping(statusMapping: java.util.Map<org.springframework.http.HttpStatus, java.lang.Class<any>>): void
                     /**
                      * Set the mapping from HTTP status series to {@code RestClientException} subclass.
                      * If this mapping has a match
@@ -67,11 +67,11 @@ declare namespace org {
                      * response into the mapped subclass of {@link RestClientException}.
                      */
                     // @ts-ignore
-                    setSeriesMapping(seriesMapping: java.util.Map<org.springframework.http.HttpStatus.Series, java.lang.Class<org.springframework.web.client.RestClientException>>): void
+                    public setSeriesMapping(seriesMapping: java.util.Map<org.springframework.http.HttpStatus.Series, java.lang.Class<any>>): void
                     // @ts-ignore
                     hasError(statusCode: org.springframework.http.HttpStatus): boolean
                     // @ts-ignore
-                    handleError(response: org.springframework.http.client.ClientHttpResponse, statusCode: org.springframework.http.HttpStatus): void
+                    public handleError(response: org.springframework.http.client.ClientHttpResponse, statusCode: org.springframework.http.HttpStatus): void
                 }
             }
         }

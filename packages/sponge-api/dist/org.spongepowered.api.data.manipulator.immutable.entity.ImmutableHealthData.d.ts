@@ -22,7 +22,7 @@ declare namespace org {
                                  * @return Health value
                                  */
                                 // @ts-ignore
-                                health(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                health(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets an {@link ImmutableBoundedValue} for the maximum health.
                                  * <p>The maximum health set here may affect the attribute increasing
@@ -31,7 +31,7 @@ declare namespace org {
                                  * @return This entities maximum health
                                  */
                                 // @ts-ignore
-                                maxHealth(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                maxHealth(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                             }
                         }
                     }

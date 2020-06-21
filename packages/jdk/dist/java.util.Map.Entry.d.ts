@@ -74,7 +74,7 @@ declare namespace java {
                  *          entry
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this map entry.  The hash code
                  * of a map entry <tt>e</tt> is defined to be: <pre>
@@ -91,7 +91,7 @@ declare namespace java {
                  * @see #equals(Object)
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a comparator that compares {@link Map.Entry} in natural order on key.
                  * <p>The returned comparator is serializable and throws {@link
@@ -103,7 +103,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                comparingByKey<K extends java.lang.Comparable<? super K>, V>(): java.util.Comparator<java.util.Map.Entry<K, V>>
+                comparingByKey<K extends java.lang.Comparable, V>(): java.util.Comparator<java.util.Map.Entry<K, V>>
                 /**
                  * Returns a comparator that compares {@link Map.Entry} in natural order on value.
                  * <p>The returned comparator is serializable and throws {@link
@@ -115,7 +115,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                comparingByValue<K, V extends java.lang.Comparable<? super V>>(): java.util.Comparator<java.util.Map.Entry<K, V>>
+                comparingByValue<K, V extends java.lang.Comparable>(): java.util.Comparator<java.util.Map.Entry<K, V>>
                 /**
                  * Returns a comparator that compares {@link Map.Entry} by key using the given
                  * {@link Comparator}.
@@ -128,7 +128,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                comparingByKey<K, V>(cmp: java.util.Comparator<any super K>): java.util.Comparator<java.util.Map.Entry<K, V>>
+                comparingByKey<K, V>(cmp: java.util.Comparator<any>): java.util.Comparator<java.util.Map.Entry<K, V>>
                 /**
                  * Returns a comparator that compares {@link Map.Entry} by value using the given
                  * {@link Comparator}.
@@ -141,7 +141,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                comparingByValue<K, V>(cmp: java.util.Comparator<any super V>): java.util.Comparator<java.util.Map.Entry<K, V>>
+                comparingByValue<K, V>(cmp: java.util.Comparator<any>): java.util.Comparator<java.util.Map.Entry<K, V>>
             }
         }
     }

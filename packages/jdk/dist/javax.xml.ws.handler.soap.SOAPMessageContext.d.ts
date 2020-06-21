@@ -52,7 +52,7 @@ declare namespace javax {
                          *      the <code>WebServiceException</code> is the original <code>JAXBException</code>.
                          */
                         // @ts-ignore
-                        getHeaders(header: javax.xml.namespace.QName, context: javax.xml.bind.JAXBContext, allRoles: boolean): java.lang.Object[]
+                        getHeaders(header: javax.xml.namespace.QName, context: javax.xml.bind.JAXBContext, allRoles: boolean): any[]
                         /**
                          * Gets the SOAP actor roles associated with an execution
                          * of the handler chain.
@@ -66,7 +66,7 @@ declare namespace javax {
                          * @return Array of <code>String</code> for SOAP actor roles
                          */
                         // @ts-ignore
-                        getRoles(): java.util.Set<java.lang.String>
+                        getRoles(): Array<java.lang.String | string>
                     }
                 }
             }

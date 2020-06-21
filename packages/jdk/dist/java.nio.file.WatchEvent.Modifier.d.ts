@@ -16,7 +16,7 @@ declare namespace java {
                      * @return the name of the modifier
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                 }
             }
         }

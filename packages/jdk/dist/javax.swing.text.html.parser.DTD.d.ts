@@ -21,59 +21,59 @@ declare namespace javax {
                          * @param name the name, as a <code>String</code> of the new DTD
                          */
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                         // @ts-ignore
-                        name: string
+                        public name: java.lang.String | string
                         // @ts-ignore
-                        elements: java.util.Vector<javax.swing.text.html.parser.Element>
+                        public elements: java.util.Vector<javax.swing.text.html.parser.Element>
                         // @ts-ignore
-                        elementHash: java.util.Hashtable<java.lang.String, javax.swing.text.html.parser.Element>
+                        public elementHash: java.util.Hashtable<java.lang.String | string, javax.swing.text.html.parser.Element>
                         // @ts-ignore
-                        entityHash: java.util.Hashtable<java.lang.Object, javax.swing.text.html.parser.Entity>
+                        public entityHash: java.util.Hashtable<java.lang.Object | any, javax.swing.text.html.parser.Entity>
                         // @ts-ignore
-                        readonly pcdata: javax.swing.text.html.parser.Element
+                        public readonly pcdata: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly html: javax.swing.text.html.parser.Element
+                        public readonly html: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly meta: javax.swing.text.html.parser.Element
+                        public readonly meta: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly base: javax.swing.text.html.parser.Element
+                        public readonly base: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly isindex: javax.swing.text.html.parser.Element
+                        public readonly isindex: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly head: javax.swing.text.html.parser.Element
+                        public readonly head: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly body: javax.swing.text.html.parser.Element
+                        public readonly body: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly applet: javax.swing.text.html.parser.Element
+                        public readonly applet: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly param: javax.swing.text.html.parser.Element
+                        public readonly param: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly p: javax.swing.text.html.parser.Element
+                        public readonly p: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly title: javax.swing.text.html.parser.Element
+                        public readonly title: javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        readonly FILE_VERSION: number /*int*/
+                        public static readonly FILE_VERSION: number /*int*/
                         /**
                          * Gets the name of the DTD.
                          * @return the name of the DTD
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Gets an entity by name.
                          * @return the <code>Entity</code> corresponding to the
                          *    <code>name</code> <code>String</code>
                          */
                         // @ts-ignore
-                        getEntity(name: string): javax.swing.text.html.parser.Entity
+                        public getEntity(name: java.lang.String | string): javax.swing.text.html.parser.Entity
                         /**
                          * Gets a character entity.
                          * @return the <code>Entity</code> corresponding to the
                          *     <code>ch</code> character
                          */
                         // @ts-ignore
-                        getEntity(ch: number /*int*/): javax.swing.text.html.parser.Entity
+                        public getEntity(ch: number /*int*/): javax.swing.text.html.parser.Entity
                         /**
                          * Gets an element by name. A new element is
                          * created if the element doesn't exist.
@@ -82,7 +82,7 @@ declare namespace javax {
                          *    <code>name</code>, which may be newly created
                          */
                         // @ts-ignore
-                        getElement(name: string): javax.swing.text.html.parser.Element
+                        public getElement(name: java.lang.String | string): javax.swing.text.html.parser.Element
                         /**
                          * Gets an element by index.
                          * @param index the requested index
@@ -90,7 +90,7 @@ declare namespace javax {
                          *    <code>index</code>
                          */
                         // @ts-ignore
-                        getElement(index: number /*int*/): javax.swing.text.html.parser.Element
+                        public getElement(index: number /*int*/): javax.swing.text.html.parser.Element
                         /**
                          * Defines an entity.  If the <code>Entity</code> specified
                          * by <code>name</code>, <code>type</code>, and <code>data</code>
@@ -103,7 +103,7 @@ declare namespace javax {
                          *    if not found
                          */
                         // @ts-ignore
-                        defineEntity(name: string, type: number /*int*/, data: string[]): javax.swing.text.html.parser.Entity
+                        public defineEntity(name: java.lang.String | string, type: number /*int*/, data: string[]): javax.swing.text.html.parser.Entity
                         /**
                          * Returns the <code>Element</code> which matches the
                          * specified parameters.  If one doesn't exist, a new
@@ -118,7 +118,7 @@ declare namespace javax {
                          * @return the <code>Element</code> specified
                          */
                         // @ts-ignore
-                        defineElement(name: string, type: number /*int*/, omitStart: boolean, omitEnd: boolean, content: javax.swing.text.html.parser.ContentModel, exclusions: java.util.BitSet, inclusions: java.util.BitSet, atts: javax.swing.text.html.parser.AttributeList): javax.swing.text.html.parser.Element
+                        public defineElement(name: java.lang.String | string, type: number /*int*/, omitStart: boolean, omitEnd: boolean, content: javax.swing.text.html.parser.ContentModel, exclusions: java.util.BitSet, inclusions: java.util.BitSet, atts: javax.swing.text.html.parser.AttributeList): javax.swing.text.html.parser.Element
                         /**
                          * Defines attributes for an {@code Element}.
                          * @param name the name of the <code>Element</code>
@@ -126,50 +126,50 @@ declare namespace javax {
                          *     <code>Element</code>
                          */
                         // @ts-ignore
-                        defineAttributes(name: string, atts: javax.swing.text.html.parser.AttributeList): void
+                        public defineAttributes(name: java.lang.String | string, atts: javax.swing.text.html.parser.AttributeList): void
                         /**
                          * Creates and returns a character <code>Entity</code>.
                          * @param name the entity's name
                          * @return the new character <code>Entity</code>
                          */
                         // @ts-ignore
-                        defEntity(name: string, type: number /*int*/, ch: number /*int*/): javax.swing.text.html.parser.Entity
+                        public defEntity(name: java.lang.String | string, type: number /*int*/, ch: number /*int*/): javax.swing.text.html.parser.Entity
                         /**
                          * Creates and returns an <code>Entity</code>.
                          * @param name the entity's name
                          * @return the new <code>Entity</code>
                          */
                         // @ts-ignore
-                        defEntity(name: string, type: number /*int*/, str: string): javax.swing.text.html.parser.Entity
+                        defEntity(name: java.lang.String | string, type: number /*int*/, str: java.lang.String | string): javax.swing.text.html.parser.Entity
                         /**
                          * Creates and returns an <code>Element</code>.
                          * @param name the element's name
                          * @return the new <code>Element</code>
                          */
                         // @ts-ignore
-                        defElement(name: string, type: number /*int*/, omitStart: boolean, omitEnd: boolean, content: javax.swing.text.html.parser.ContentModel, exclusions: string[], inclusions: string[], atts: javax.swing.text.html.parser.AttributeList): javax.swing.text.html.parser.Element
+                        defElement(name: java.lang.String | string, type: number /*int*/, omitStart: boolean, omitEnd: boolean, content: javax.swing.text.html.parser.ContentModel, exclusions: java.lang.String[] | string[], inclusions: java.lang.String[] | string[], atts: javax.swing.text.html.parser.AttributeList): javax.swing.text.html.parser.Element
                         /**
                          * Creates and returns an <code>AttributeList</code>.
                          * @param name the attribute list's name
                          * @return the new <code>AttributeList</code>
                          */
                         // @ts-ignore
-                        defAttributeList(name: string, type: number /*int*/, modifier: number /*int*/, value: string, values: string, atts: javax.swing.text.html.parser.AttributeList): javax.swing.text.html.parser.AttributeList
+                        defAttributeList(name: java.lang.String | string, type: number /*int*/, modifier: number /*int*/, value: java.lang.String | string, values: java.lang.String | string, atts: javax.swing.text.html.parser.AttributeList): javax.swing.text.html.parser.AttributeList
                         /**
                          * Creates and returns a new content model.
                          * @param type the type of the new content model
                          * @return the new <code>ContentModel</code>
                          */
                         // @ts-ignore
-                        defContentModel(type: number /*int*/, obj: any, next: javax.swing.text.html.parser.ContentModel): javax.swing.text.html.parser.ContentModel
+                        defContentModel(type: number /*int*/, obj: java.lang.Object | any, next: javax.swing.text.html.parser.ContentModel): javax.swing.text.html.parser.ContentModel
                         /**
                          * Returns a string representation of this DTD.
                          * @return the string representation of this DTD
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        putDTDHash(name: string, dtd: javax.swing.text.html.parser.DTD): void
+                        public static putDTDHash(name: java.lang.String | string, dtd: javax.swing.text.html.parser.DTD): void
                         /**
                          * Returns a DTD with the specified <code>name</code>.  If
                          * a DTD with that name doesn't exist, one is created
@@ -179,13 +179,13 @@ declare namespace javax {
                          * @return the DTD which corresponds to <code>name</code>
                          */
                         // @ts-ignore
-                        getDTD(name: string): javax.swing.text.html.parser.DTD
+                        public static getDTD(name: java.lang.String | string): javax.swing.text.html.parser.DTD
                         /**
                          * Recreates a DTD from an archived format.
                          * @param in  the <code>DataInputStream</code> to read from
                          */
                         // @ts-ignore
-                        read(input: java.io.DataInputStream): void
+                        public read(input: java.io.DataInputStream): void
                     }
                 }
             }

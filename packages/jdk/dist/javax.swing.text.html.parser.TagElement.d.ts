@@ -15,15 +15,15 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(elem: javax.swing.text.html.parser.Element, fictional: boolean)
                         // @ts-ignore
-                        breaksFlow(): boolean
+                        public breaksFlow(): boolean
                         // @ts-ignore
-                        isPreformatted(): boolean
+                        public isPreformatted(): boolean
                         // @ts-ignore
-                        getElement(): javax.swing.text.html.parser.Element
+                        public getElement(): javax.swing.text.html.parser.Element
                         // @ts-ignore
-                        getHTMLTag(): javax.swing.text.html.HTML.Tag
+                        public getHTMLTag(): javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        fictional(): boolean
+                        public fictional(): boolean
                     }
                 }
             }

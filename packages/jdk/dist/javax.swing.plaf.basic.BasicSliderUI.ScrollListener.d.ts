@@ -15,11 +15,11 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(dir: number /*int*/, block: boolean)
                         // @ts-ignore
-                        setDirection(direction: number /*int*/): void
+                        public setDirection(direction: number /*int*/): void
                         // @ts-ignore
-                        setScrollByBlock(block: boolean): void
+                        public setScrollByBlock(block: boolean): void
                         // @ts-ignore
-                        actionPerformed(e: java.awt.event.ActionEvent): void
+                        public actionPerformed(e: java.awt.event.ActionEvent): void
                     }
                 }
             }

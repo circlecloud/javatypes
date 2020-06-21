@@ -9,7 +9,7 @@ declare namespace org {
                                 // @ts-ignore
                                 interface Builder extends org.spongepowered.api.entity.ai.task.AITaskBuilder<org.spongepowered.api.entity.living.Agent, org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask, org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask.Builder> {
                                     // @ts-ignore
-                                    watch(watchClass: java.lang.Class<org.spongepowered.api.entity.Entity>): org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask.Builder
+                                    watch(watchClass: java.lang.Class<any>): org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask.Builder
                                     // @ts-ignore
                                     maxDistance(maxDistance: number /*float*/): org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask.Builder
                                     // @ts-ignore

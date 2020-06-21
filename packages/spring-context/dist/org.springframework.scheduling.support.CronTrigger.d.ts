@@ -17,7 +17,7 @@ declare namespace org {
                      *  expression conventions
                      */
                     // @ts-ignore
-                    constructor(expression: string)
+                    constructor(expression: java.lang.String | string)
                     /**
                      * Build a {@link CronTrigger} from the pattern provided in the given time zone.
                      * @param expression a space-separated list of time fields, following cron
@@ -25,12 +25,12 @@ declare namespace org {
                      * @param timeZone a time zone in which the trigger times will be generated
                      */
                     // @ts-ignore
-                    constructor(expression: string, timeZone: java.util.TimeZone)
+                    constructor(expression: java.lang.String | string, timeZone: java.util.TimeZone)
                     /**
                      * Return the cron pattern that this trigger has been built with.
                      */
                     // @ts-ignore
-                    getExpression(): java.lang.String
+                    public getExpression(): string
                     /**
                      * Determine the next execution time according to the given trigger context.
                      * <p>Next execution times are calculated based on the
@@ -38,13 +38,13 @@ declare namespace org {
                      * previous execution; therefore, overlapping executions won't occur.
                      */
                     // @ts-ignore
-                    nextExecutionTime(triggerContext: org.springframework.scheduling.TriggerContext): java.util.Date
+                    public nextExecutionTime(triggerContext: org.springframework.scheduling.TriggerContext): java.util.Date
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

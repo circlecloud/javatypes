@@ -18,7 +18,7 @@ declare namespace javax {
              * @return the length of the list
              */
             // @ts-ignore
-            getSize(): int
+            getSize(): number /*int*/
             /**
              * Returns the value at the specified index.
              * @param index the requested index

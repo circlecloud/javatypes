@@ -25,7 +25,7 @@ declare namespace java {
                  * @param s the detail message.
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Constructs a <code>ServerCloneException</code> with the specified
                  * detail message and cause.
@@ -33,7 +33,7 @@ declare namespace java {
                  * @param cause the cause
                  */
                 // @ts-ignore
-                constructor(s: string, cause: java.lang.Exception)
+                constructor(s: java.lang.String | string, cause: java.lang.Exception)
                 /**
                  * The cause of the exception.
                  * <p>This field predates the general-purpose exception chaining facility.
@@ -49,7 +49,7 @@ declare namespace java {
                  * @return the detail message
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 /**
                  * Returns the cause of this exception.  This method returns the value
                  * of the {@link #detail} field.
@@ -57,7 +57,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

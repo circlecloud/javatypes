@@ -44,12 +44,12 @@ declare namespace org {
                          * @param handlerMappingsLocation the mapping file location
                          */
                         // @ts-ignore
-                        constructor(classLoader: java.lang.ClassLoader, handlerMappingsLocation: string)
+                        constructor(classLoader: java.lang.ClassLoader, handlerMappingsLocation: java.lang.String | string)
                         /**
                          * The location to look for the mapping files. Can be present in multiple JAR files.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_HANDLER_MAPPINGS_LOCATION: string
+                        public static readonly DEFAULT_HANDLER_MAPPINGS_LOCATION: java.lang.String | string
                         /**
                          * Logger available to subclasses.
                          */
@@ -62,9 +62,9 @@ declare namespace org {
                          * @return the located {#link NamespaceHandler}, or {@code null} if none found
                          */
                         // @ts-ignore
-                        resolve(namespaceUri: string): org.springframework.beans.factory.xml.NamespaceHandler
+                        public resolve(namespaceUri: java.lang.String | string): org.springframework.beans.factory.xml.NamespaceHandler
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

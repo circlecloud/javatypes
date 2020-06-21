@@ -122,7 +122,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                setX(x: javax.swing.Spring): void
+                public setX(x: javax.swing.Spring): void
                 /**
                  * Returns the value of the <code>x</code> property.
                  * @return the spring controlling the <code>x</code> value
@@ -131,7 +131,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                getX(): javax.swing.Spring
+                public getX(): javax.swing.Spring
                 /**
                  * Sets the <code>y</code> property,
                  * which controls the <code>y</code> value
@@ -142,7 +142,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                setY(y: javax.swing.Spring): void
+                public setY(y: javax.swing.Spring): void
                 /**
                  * Returns the value of the <code>y</code> property.
                  * @return the spring controlling the <code>y</code> value
@@ -151,7 +151,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                getY(): javax.swing.Spring
+                public getY(): javax.swing.Spring
                 /**
                  * Sets the <code>width</code> property,
                  * which controls the width of a component.
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                setWidth(width: javax.swing.Spring): void
+                public setWidth(width: javax.swing.Spring): void
                 /**
                  * Returns the value of the <code>width</code> property.
                  * @return the spring controlling the width of a component
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                getWidth(): javax.swing.Spring
+                public getWidth(): javax.swing.Spring
                 /**
                  * Sets the <code>height</code> property,
                  * which controls the height of a component.
@@ -179,7 +179,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                setHeight(height: javax.swing.Spring): void
+                public setHeight(height: javax.swing.Spring): void
                 /**
                  * Returns the value of the <code>height</code> property.
                  * @return the spring controlling the height of a component
@@ -187,7 +187,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                getHeight(): javax.swing.Spring
+                public getHeight(): javax.swing.Spring
                 /**
                  * Sets the spring controlling the specified edge.
                  * The edge must have one of the following values:
@@ -222,7 +222,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                setConstraint(edgeName: string, s: javax.swing.Spring): void
+                public setConstraint(edgeName: java.lang.String | string, s: javax.swing.Spring): void
                 /**
                  * Returns the value of the specified edge, which may be
                  * a derived value, or even <code>null</code>.
@@ -256,7 +256,7 @@ declare namespace javax {
                  * @see SpringLayout.Constraints
                  */
                 // @ts-ignore
-                getConstraint(edgeName: string): javax.swing.Spring
+                public getConstraint(edgeName: java.lang.String | string): javax.swing.Spring
             }
         }
     }

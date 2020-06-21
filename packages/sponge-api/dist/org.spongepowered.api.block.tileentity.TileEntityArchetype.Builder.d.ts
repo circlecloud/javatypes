@@ -29,9 +29,9 @@ declare namespace org {
                             // @ts-ignore
                             tileData(dataView: org.spongepowered.api.data.DataView): org.spongepowered.api.block.tileentity.TileEntityArchetype.Builder
                             // @ts-ignore
-                            setData(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): org.spongepowered.api.block.tileentity.TileEntityArchetype.Builder
+                            setData(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): org.spongepowered.api.block.tileentity.TileEntityArchetype.Builder
                             // @ts-ignore
-                            set<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(value: V extends org.spongepowered.api.data.value.BaseValue<E>): org.spongepowered.api.block.tileentity.TileEntityArchetype.Builder
+                            set<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(value: V): org.spongepowered.api.block.tileentity.TileEntityArchetype.Builder
                             // @ts-ignore
                             set<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(key: org.spongepowered.api.data.key.Key<V>, value: E): org.spongepowered.api.block.tileentity.TileEntityArchetype.Builder
                             /**

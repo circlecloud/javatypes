@@ -27,7 +27,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Gets the <code>AccessibleText</code> for the <code>JPasswordField</code>.
                  * The returned object also implements the
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getAccessibleText(): javax.accessibility.AccessibleText
+                public getAccessibleText(): javax.accessibility.AccessibleText
                 /**
                  * Returns the <code>String</code> at a given <code>index</code>.
                  * @param part the <code>CHARACTER</code>, <code>WORD</code> or
@@ -55,7 +55,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getAtIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getAtIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the <code>String</code> after a given <code>index</code>.
                  * @param part the <code>CHARACTER</code>, <code>WORD</code> or
@@ -70,7 +70,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getAfterIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getAfterIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the <code>String</code> before a given <code>index</code>.
                  * @param part the <code>CHARACTER</code>, <code>WORD</code> or
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBeforeIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getBeforeIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the text between two <code>indices</code>.
                  * @param startIndex the start index in the text
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): java.lang.String
+                public getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): string
                 /**
                  * Returns the <code>AccessibleTextSequence</code> at a given
                  * <code>index</code>.
@@ -114,7 +114,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getTextSequenceAt(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
+                public getTextSequenceAt(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
                 /**
                  * Returns the <code>AccessibleTextSequence</code> after a given
                  * <code>index</code>.
@@ -133,7 +133,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getTextSequenceAfter(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
+                public getTextSequenceAfter(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
                 /**
                  * Returns the <code>AccessibleTextSequence</code> before a given
                  * <code>index</code>.
@@ -152,7 +152,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getTextSequenceBefore(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
+                public getTextSequenceBefore(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
             }
         }
     }

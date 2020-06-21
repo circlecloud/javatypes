@@ -8,15 +8,15 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                class ByteArrayEncoder extends org.springframework.core.codec.AbstractEncoder<byte[]> {
+                class ByteArrayEncoder extends org.springframework.core.codec.AbstractEncoder<number /*byte*/[]> {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                     // @ts-ignore
-                    encode(inputStream: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public encode(inputStream: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    encodeValue(bytes: number /*byte*/[], bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, valueType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.core.io.buffer.DataBuffer
+                    public encodeValue(bytes: number /*byte*/[], bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, valueType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.core.io.buffer.DataBuffer
                 }
             }
         }

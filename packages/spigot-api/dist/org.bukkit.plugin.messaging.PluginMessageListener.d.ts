@@ -16,7 +16,7 @@ declare namespace org {
                      * @param message The raw message that was sent.
                      */
                     // @ts-ignore
-                    onPluginMessageReceived(channel: string, player: org.bukkit.entity.Player, message: number /*byte*/[]): void
+                    onPluginMessageReceived(channel: java.lang.String | string, player: org.bukkit.entity.Player, message: number /*byte*/[]): void
                 }
             }
         }

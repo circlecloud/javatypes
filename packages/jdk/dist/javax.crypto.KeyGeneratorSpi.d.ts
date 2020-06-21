@@ -11,7 +11,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class KeyGeneratorSpi extends java.lang.Object {
+        abstract class KeyGeneratorSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**

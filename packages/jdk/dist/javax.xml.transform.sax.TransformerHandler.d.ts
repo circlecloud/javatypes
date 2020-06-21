@@ -24,14 +24,14 @@ declare namespace javax {
                      * @param systemID Base URI for the source tree.
                      */
                     // @ts-ignore
-                    setSystemId(systemID: string): void
+                    setSystemId(systemID: java.lang.String | string): void
                     /**
                      * Get the base ID (URI or system ID) from where relative
                      * URLs will be resolved.
                      * @return The systemID that was set with {#link #setSystemId}.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    getSystemId(): string
                     /**
                      * <p>Get the <code>Transformer</code> associated with this handler, which
                      * is needed in order to set parameters and output properties.</p>

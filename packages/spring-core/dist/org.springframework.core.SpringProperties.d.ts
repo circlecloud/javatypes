@@ -27,7 +27,7 @@ declare namespace org {
                  * @param value the associated property value, or {#code null} to reset it
                  */
                 // @ts-ignore
-                setProperty(key: string, value: string): void
+                public static setProperty(key: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Retrieve the property value for the given key, checking local Spring
                  * properties first and falling back to JVM-level system properties.
@@ -35,14 +35,14 @@ declare namespace org {
                  * @return the associated property value, or {#code null} if none found
                  */
                 // @ts-ignore
-                getProperty(key: string): java.lang.String
+                public static getProperty(key: java.lang.String | string): string
                 /**
                  * Programmatically set a local flag to "true", overriding an
                  * entry in the {@code spring.properties} file (if any).
                  * @param key the property key
                  */
                 // @ts-ignore
-                setFlag(key: string): void
+                public static setFlag(key: java.lang.String | string): void
                 /**
                  * Retrieve the flag for the given property key.
                  * @param key the property key
@@ -50,7 +50,7 @@ declare namespace org {
                  *  {@code} false otherwise
                  */
                 // @ts-ignore
-                getFlag(key: string): boolean
+                public static getFlag(key: java.lang.String | string): boolean
             }
         }
     }

@@ -101,7 +101,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChannel implements java.nio.channels.SeekableByteChannel, java.nio.channels.GatheringByteChannel, java.nio.channels.ScatteringByteChannel {
+            abstract class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChannel implements java.nio.channels.SeekableByteChannel, java.nio.channels.GatheringByteChannel, java.nio.channels.ScatteringByteChannel {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -215,7 +215,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                open(path: java.nio.file.Path, options: Array<java.nio.file.OpenOption>, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.FileChannel
+                public static open(path: java.nio.file.Path, options: java.util.Set<any> | Array<any>, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.FileChannel
                 /**
                  * Opens or creates a file, returning a file channel to access the file.
                  * <p> An invocation of this method behaves in exactly the same way as the
@@ -249,7 +249,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                open(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.nio.channels.FileChannel
+                public static open(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.nio.channels.FileChannel
                 /**
                  * Reads a sequence of bytes from this channel into the given buffer.
                  * <p> Bytes are read starting at this channel's current file position, and
@@ -258,7 +258,7 @@ declare namespace java {
                  * ReadableByteChannel} interface. </p>
                  */
                 // @ts-ignore
-                abstract read(dst: java.nio.ByteBuffer): int
+                public abstract read(dst: java.nio.ByteBuffer): number /*int*/
                 /**
                  * Reads a sequence of bytes from this channel into a subsequence of the
                  * given buffers.
@@ -268,7 +268,7 @@ declare namespace java {
                  * ScatteringByteChannel} interface.  </p>
                  */
                 // @ts-ignore
-                abstract read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                public abstract read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * Reads a sequence of bytes from this channel into the given buffers.
                  * <p> Bytes are read starting at this channel's current file position, and
@@ -277,7 +277,7 @@ declare namespace java {
                  * ScatteringByteChannel} interface.  </p>
                  */
                 // @ts-ignore
-                read(dsts: java.nio.ByteBuffer[]): long
+                public read(dsts: java.nio.ByteBuffer[]): number /*long*/
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer.
                  * <p> Bytes are written starting at this channel's current file position
@@ -289,7 +289,7 @@ declare namespace java {
                  * interface. </p>
                  */
                 // @ts-ignore
-                abstract write(src: java.nio.ByteBuffer): int
+                public abstract write(src: java.nio.ByteBuffer): number /*int*/
                 /**
                  * Writes a sequence of bytes to this channel from a subsequence of the
                  * given buffers.
@@ -302,7 +302,7 @@ declare namespace java {
                  * interface.  </p>
                  */
                 // @ts-ignore
-                abstract write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                public abstract write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * Writes a sequence of bytes to this channel from the given buffers.
                  * <p> Bytes are written starting at this channel's current file position
@@ -314,7 +314,7 @@ declare namespace java {
                  * interface.  </p>
                  */
                 // @ts-ignore
-                write(srcs: java.nio.ByteBuffer[]): long
+                public write(srcs: java.nio.ByteBuffer[]): number /*long*/
                 /**
                  * Returns this channel's file position.
                  * @return This channel's file position,
@@ -326,7 +326,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract position(): long
+                public abstract position(): number /*long*/
                 /**
                  * Sets this channel's file position.
                  * <p> Setting the position to a value that is greater than the file's
@@ -348,7 +348,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract position(newPosition: number /*long*/): java.nio.channels.FileChannel
+                public abstract position(newPosition: number /*long*/): java.nio.channels.FileChannel
                 /**
                  * Returns the current size of this channel's file.
                  * @return The current size of this channel's file,
@@ -359,7 +359,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract size(): long
+                public abstract size(): number /*long*/
                 /**
                  * Truncates this channel's file to the given size.
                  * <p> If the given size is less than the file's current size then the file
@@ -381,7 +381,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract truncate(size: number /*long*/): java.nio.channels.FileChannel
+                public abstract truncate(size: number /*long*/): java.nio.channels.FileChannel
                 /**
                  * Forces any updates to this channel's file to be written to the storage
                  * device that contains it.
@@ -423,7 +423,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract force(metaData: boolean): void
+                public abstract force(metaData: boolean): void
                 /**
                  * Transfers bytes from this channel's file to the given writable byte
                  * channel.
@@ -474,7 +474,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract transferTo(position: number /*long*/, count: number /*long*/, target: java.nio.channels.WritableByteChannel): long
+                public abstract transferTo(position: number /*long*/, count: number /*long*/, target: java.nio.channels.WritableByteChannel): number /*long*/
                 /**
                  * Transfers bytes into this channel's file from the given readable byte
                  * channel.
@@ -525,7 +525,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract transferFrom(src: java.nio.channels.ReadableByteChannel, position: number /*long*/, count: number /*long*/): long
+                public abstract transferFrom(src: java.nio.channels.ReadableByteChannel, position: number /*long*/, count: number /*long*/): number /*long*/
                 /**
                  * Reads a sequence of bytes from this channel into the given buffer,
                  * starting at the given file position.
@@ -560,7 +560,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract read(dst: java.nio.ByteBuffer, position: number /*long*/): int
+                public abstract read(dst: java.nio.ByteBuffer, position: number /*long*/): number /*int*/
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer,
                  * starting at the given file position.
@@ -595,7 +595,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract write(src: java.nio.ByteBuffer, position: number /*long*/): int
+                public abstract write(src: java.nio.ByteBuffer, position: number /*long*/): number /*int*/
                 /**
                  * Maps a region of this channel's file directly into memory.
                  * <p> A region of a file may be mapped into memory in one of three modes:
@@ -665,7 +665,7 @@ declare namespace java {
                  * @see java.nio.MappedByteBuffer
                  */
                 // @ts-ignore
-                abstract map(mode: java.nio.channels.FileChannel.MapMode, position: number /*long*/, size: number /*long*/): java.nio.MappedByteBuffer
+                public abstract map(mode: java.nio.channels.FileChannel.MapMode, position: number /*long*/, size: number /*long*/): java.nio.MappedByteBuffer
                 /**
                  * Acquires a lock on the given region of this channel's file.
                  * <p> An invocation of this method will block until the region can be
@@ -737,7 +737,7 @@ declare namespace java {
                  * @see #tryLock(long,long,boolean)
                  */
                 // @ts-ignore
-                abstract lock(position: number /*long*/, size: number /*long*/, shared: boolean): java.nio.channels.FileLock
+                public abstract lock(position: number /*long*/, size: number /*long*/, shared: boolean): java.nio.channels.FileLock
                 /**
                  * Acquires an exclusive lock on this channel's file.
                  * <p> An invocation of this method of the form <tt>fc.lock()</tt> behaves
@@ -767,7 +767,7 @@ declare namespace java {
                  * @see #tryLock(long,long,boolean)
                  */
                 // @ts-ignore
-                lock(): java.nio.channels.FileLock
+                public lock(): java.nio.channels.FileLock
                 /**
                  * Attempts to acquire a lock on the given region of this channel's file.
                  * <p> This method does not block.  An invocation always returns
@@ -822,7 +822,7 @@ declare namespace java {
                  * @see #tryLock()
                  */
                 // @ts-ignore
-                abstract tryLock(position: number /*long*/, size: number /*long*/, shared: boolean): java.nio.channels.FileLock
+                public abstract tryLock(position: number /*long*/, size: number /*long*/, shared: boolean): java.nio.channels.FileLock
                 /**
                  * Attempts to acquire an exclusive lock on this channel's file.
                  * <p> An invocation of this method of the form <tt>fc.tryLock()</tt>
@@ -846,7 +846,7 @@ declare namespace java {
                  * @see #tryLock(long,long,boolean)
                  */
                 // @ts-ignore
-                tryLock(): java.nio.channels.FileLock
+                public tryLock(): java.nio.channels.FileLock
             }
         }
     }

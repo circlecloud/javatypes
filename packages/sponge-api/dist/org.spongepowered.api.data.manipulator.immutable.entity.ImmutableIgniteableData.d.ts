@@ -17,14 +17,14 @@ declare namespace org {
                                  * @return The immutable value of "fire ticks"
                                  */
                                 // @ts-ignore
-                                fireTicks(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                fireTicks(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the remaining amount of
                                  * "ticks" before the fire will damage the owning {@link Entity}.
                                  * @return The immutable value
                                  */
                                 // @ts-ignore
-                                fireDelay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                fireDelay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

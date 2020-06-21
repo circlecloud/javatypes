@@ -34,11 +34,11 @@ declare namespace org {
                          * constructed with.
                          */
                         // @ts-ignore
-                        getResourceLoader(): org.springframework.core.io.ResourceLoader
+                        public getResourceLoader(): org.springframework.core.io.ResourceLoader
                         // @ts-ignore
-                        getMetadataReader(className: string): org.springframework.core.type.classreading.MetadataReader
+                        public getMetadataReader(className: java.lang.String | string): org.springframework.core.type.classreading.MetadataReader
                         // @ts-ignore
-                        getMetadataReader(resource: org.springframework.core.io.Resource): org.springframework.core.type.classreading.MetadataReader
+                        public getMetadataReader(resource: org.springframework.core.io.Resource): org.springframework.core.type.classreading.MetadataReader
                     }
                 }
             }

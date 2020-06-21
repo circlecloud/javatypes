@@ -30,7 +30,7 @@ declare namespace javax {
                      * @return the entity's name, may not be null
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                 }
             }
         }

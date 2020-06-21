@@ -16,7 +16,7 @@ declare namespace org {
              * @see NonNull
              */
             // @ts-ignore
-            class NonNullApi implements java.lang.annotation.Annotation {
+            abstract class NonNullApi implements java.lang.annotation.Annotation {
             }
         }
     }

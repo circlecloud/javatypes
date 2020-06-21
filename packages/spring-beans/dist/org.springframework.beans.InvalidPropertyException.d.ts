@@ -16,7 +16,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string)
                 /**
                  * Create a new InvalidPropertyException.
                  * @param beanClass the offending bean class
@@ -25,17 +25,17 @@ declare namespace org {
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string, cause: Error)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Return the offending bean class.
                  */
                 // @ts-ignore
-                getBeanClass(): java.lang.Class<?>
+                public getBeanClass(): java.lang.Class<any>
                 /**
                  * Return the name of the offending property.
                  */
                 // @ts-ignore
-                getPropertyName(): java.lang.String
+                public getPropertyName(): string
             }
         }
     }

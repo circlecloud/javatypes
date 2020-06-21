@@ -13,7 +13,7 @@ declare namespace org {
                          * @return The inventory this Carrier is holding
                          */
                         // @ts-ignore
-                        getInventory(): org.spongepowered.api.item.inventory.type.CarriedInventory<? extends org.spongepowered.api.item.inventory.Carrier>
+                        getInventory(): org.spongepowered.api.item.inventory.type.CarriedInventory<any>
                     }
                 }
             }

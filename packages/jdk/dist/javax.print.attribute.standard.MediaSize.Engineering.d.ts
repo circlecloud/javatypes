@@ -13,27 +13,27 @@ declare namespace javax {
                          * Specifies the engineering A size, 8.5 inch by 11 inch.
                          */
                         // @ts-ignore
-                        readonly A: javax.print.attribute.standard.MediaSize
+                        public static readonly A: javax.print.attribute.standard.MediaSize
                         /**
                          * Specifies the engineering B size, 11 inch by 17 inch.
                          */
                         // @ts-ignore
-                        readonly B: javax.print.attribute.standard.MediaSize
+                        public static readonly B: javax.print.attribute.standard.MediaSize
                         /**
                          * Specifies the engineering C size, 17 inch by 22 inch.
                          */
                         // @ts-ignore
-                        readonly C: javax.print.attribute.standard.MediaSize
+                        public static readonly C: javax.print.attribute.standard.MediaSize
                         /**
                          * Specifies the engineering D size, 22 inch by 34 inch.
                          */
                         // @ts-ignore
-                        readonly D: javax.print.attribute.standard.MediaSize
+                        public static readonly D: javax.print.attribute.standard.MediaSize
                         /**
                          * Specifies the engineering E size, 34 inch by 44 inch.
                          */
                         // @ts-ignore
-                        readonly E: javax.print.attribute.standard.MediaSize
+                        public static readonly E: javax.print.attribute.standard.MediaSize
                     }
                 }
             }

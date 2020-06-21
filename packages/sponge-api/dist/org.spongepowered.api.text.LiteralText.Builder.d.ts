@@ -16,7 +16,7 @@ declare namespace org {
                          * @see LiteralText#getContent()
                          */
                         // @ts-ignore
-                        getContent(): java.lang.String
+                        public getContent(): string
                         /**
                          * Sets the plain text content of this text.
                          * @param content The content of this text
@@ -24,51 +24,51 @@ declare namespace org {
                          * @see LiteralText#getContent()
                          */
                         // @ts-ignore
-                        content(content: string): org.spongepowered.api.text.LiteralText.Builder
+                        public content(content: java.lang.String | string): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        build(): org.spongepowered.api.text.LiteralText
+                        public build(): org.spongepowered.api.text.LiteralText
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.LiteralText.Builder
+                        public format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.LiteralText.Builder
+                        public color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.LiteralText.Builder
+                        public style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.LiteralText.Builder
+                        public onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.LiteralText.Builder
+                        public onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.LiteralText.Builder
+                        public onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.LiteralText.Builder
+                        public append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        append(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public append(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        append(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public append(children: java.lang.Iterable<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        append(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public append(children: java.util.Iterator<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.LiteralText.Builder
+                        public insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public insert(pos: number /*int*/, children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public insert(pos: number /*int*/, children: java.lang.Iterable<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public insert(pos: number /*int*/, children: java.util.Iterator<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.LiteralText.Builder
+                        public remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        remove(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public remove(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        remove(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public remove(children: java.lang.Iterable<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        remove(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.LiteralText.Builder
+                        public remove(children: java.util.Iterator<any>): org.spongepowered.api.text.LiteralText.Builder
                         // @ts-ignore
-                        removeAll(): org.spongepowered.api.text.LiteralText.Builder
+                        public removeAll(): org.spongepowered.api.text.LiteralText.Builder
                     }
                 }
             }

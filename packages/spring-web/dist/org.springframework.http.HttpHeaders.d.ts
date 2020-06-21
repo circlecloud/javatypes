@@ -42,367 +42,367 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.3.2">Section 5.3.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly ACCEPT: string
+                public static readonly ACCEPT: java.lang.String | string
                 /**
                  * The HTTP {@code Accept-Charset} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.3.3">Section 5.3.3 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly ACCEPT_CHARSET: string
+                public static readonly ACCEPT_CHARSET: java.lang.String | string
                 /**
                  * The HTTP {@code Accept-Encoding} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.3.4">Section 5.3.4 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly ACCEPT_ENCODING: string
+                public static readonly ACCEPT_ENCODING: java.lang.String | string
                 /**
                  * The HTTP {@code Accept-Language} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.3.5">Section 5.3.5 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly ACCEPT_LANGUAGE: string
+                public static readonly ACCEPT_LANGUAGE: java.lang.String | string
                 /**
                  * The HTTP {@code Accept-Ranges} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-2.3">Section 5.3.5 of RFC 7233</a>
                  */
                 // @ts-ignore
-                readonly ACCEPT_RANGES: string
+                public static readonly ACCEPT_RANGES: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Allow-Credentials} response header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_ALLOW_CREDENTIALS: string
+                public static readonly ACCESS_CONTROL_ALLOW_CREDENTIALS: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Allow-Headers} response header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_ALLOW_HEADERS: string
+                public static readonly ACCESS_CONTROL_ALLOW_HEADERS: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Allow-Methods} response header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_ALLOW_METHODS: string
+                public static readonly ACCESS_CONTROL_ALLOW_METHODS: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Allow-Origin} response header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_ALLOW_ORIGIN: string
+                public static readonly ACCESS_CONTROL_ALLOW_ORIGIN: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Expose-Headers} response header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_EXPOSE_HEADERS: string
+                public static readonly ACCESS_CONTROL_EXPOSE_HEADERS: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Max-Age} response header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_MAX_AGE: string
+                public static readonly ACCESS_CONTROL_MAX_AGE: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Request-Headers} request header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_REQUEST_HEADERS: string
+                public static readonly ACCESS_CONTROL_REQUEST_HEADERS: java.lang.String | string
                 /**
                  * The CORS {@code Access-Control-Request-Method} request header field name.
                  * @see <a href="https://www.w3.org/TR/cors/">CORS W3C recommendation</a>
                  */
                 // @ts-ignore
-                readonly ACCESS_CONTROL_REQUEST_METHOD: string
+                public static readonly ACCESS_CONTROL_REQUEST_METHOD: java.lang.String | string
                 /**
                  * The HTTP {@code Age} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.1">Section 5.1 of RFC 7234</a>
                  */
                 // @ts-ignore
-                readonly AGE: string
+                public static readonly AGE: java.lang.String | string
                 /**
                  * The HTTP {@code Allow} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.4.1">Section 7.4.1 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly ALLOW: string
+                public static readonly ALLOW: java.lang.String | string
                 /**
                  * The HTTP {@code Authorization} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7235#section-4.2">Section 4.2 of RFC 7235</a>
                  */
                 // @ts-ignore
-                readonly AUTHORIZATION: string
+                public static readonly AUTHORIZATION: java.lang.String | string
                 /**
                  * The HTTP {@code Cache-Control} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.2">Section 5.2 of RFC 7234</a>
                  */
                 // @ts-ignore
-                readonly CACHE_CONTROL: string
+                public static readonly CACHE_CONTROL: java.lang.String | string
                 /**
                  * The HTTP {@code Connection} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-6.1">Section 6.1 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly CONNECTION: string
+                public static readonly CONNECTION: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Encoding} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-3.1.2.2">Section 3.1.2.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_ENCODING: string
+                public static readonly CONTENT_ENCODING: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Disposition} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc6266">RFC 6266</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_DISPOSITION: string
+                public static readonly CONTENT_DISPOSITION: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Language} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-3.1.3.2">Section 3.1.3.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_LANGUAGE: string
+                public static readonly CONTENT_LANGUAGE: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Length} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-3.3.2">Section 3.3.2 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_LENGTH: string
+                public static readonly CONTENT_LENGTH: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Location} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-3.1.4.2">Section 3.1.4.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_LOCATION: string
+                public static readonly CONTENT_LOCATION: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Range} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-4.2">Section 4.2 of RFC 7233</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_RANGE: string
+                public static readonly CONTENT_RANGE: java.lang.String | string
                 /**
                  * The HTTP {@code Content-Type} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-3.1.1.5">Section 3.1.1.5 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly CONTENT_TYPE: string
+                public static readonly CONTENT_TYPE: java.lang.String | string
                 /**
                  * The HTTP {@code Cookie} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc2109#section-4.3.4">Section 4.3.4 of RFC 2109</a>
                  */
                 // @ts-ignore
-                readonly COOKIE: string
+                public static readonly COOKIE: java.lang.String | string
                 /**
                  * The HTTP {@code Date} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.1.1.2">Section 7.1.1.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly DATE: string
+                public static readonly DATE: java.lang.String | string
                 /**
                  * The HTTP {@code ETag} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7232#section-2.3">Section 2.3 of RFC 7232</a>
                  */
                 // @ts-ignore
-                readonly ETAG: string
+                public static readonly ETAG: java.lang.String | string
                 /**
                  * The HTTP {@code Expect} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.1.1">Section 5.1.1 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly EXPECT: string
+                public static readonly EXPECT: java.lang.String | string
                 /**
                  * The HTTP {@code Expires} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.3">Section 5.3 of RFC 7234</a>
                  */
                 // @ts-ignore
-                readonly EXPIRES: string
+                public static readonly EXPIRES: java.lang.String | string
                 /**
                  * The HTTP {@code From} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.5.1">Section 5.5.1 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly FROM: string
+                public static readonly FROM: java.lang.String | string
                 /**
                  * The HTTP {@code Host} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-5.4">Section 5.4 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly HOST: string
+                public static readonly HOST: java.lang.String | string
                 /**
                  * The HTTP {@code If-Match} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7232#section-3.1">Section 3.1 of RFC 7232</a>
                  */
                 // @ts-ignore
-                readonly IF_MATCH: string
+                public static readonly IF_MATCH: java.lang.String | string
                 /**
                  * The HTTP {@code If-Modified-Since} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7232#section-3.3">Section 3.3 of RFC 7232</a>
                  */
                 // @ts-ignore
-                readonly IF_MODIFIED_SINCE: string
+                public static readonly IF_MODIFIED_SINCE: java.lang.String | string
                 /**
                  * The HTTP {@code If-None-Match} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7232#section-3.2">Section 3.2 of RFC 7232</a>
                  */
                 // @ts-ignore
-                readonly IF_NONE_MATCH: string
+                public static readonly IF_NONE_MATCH: java.lang.String | string
                 /**
                  * The HTTP {@code If-Range} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-3.2">Section 3.2 of RFC 7233</a>
                  */
                 // @ts-ignore
-                readonly IF_RANGE: string
+                public static readonly IF_RANGE: java.lang.String | string
                 /**
                  * The HTTP {@code If-Unmodified-Since} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7232#section-3.4">Section 3.4 of RFC 7232</a>
                  */
                 // @ts-ignore
-                readonly IF_UNMODIFIED_SINCE: string
+                public static readonly IF_UNMODIFIED_SINCE: java.lang.String | string
                 /**
                  * The HTTP {@code Last-Modified} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7232#section-2.2">Section 2.2 of RFC 7232</a>
                  */
                 // @ts-ignore
-                readonly LAST_MODIFIED: string
+                public static readonly LAST_MODIFIED: java.lang.String | string
                 /**
                  * The HTTP {@code Link} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc5988">RFC 5988</a>
                  */
                 // @ts-ignore
-                readonly LINK: string
+                public static readonly LINK: java.lang.String | string
                 /**
                  * The HTTP {@code Location} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.1.2">Section 7.1.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly LOCATION: string
+                public static readonly LOCATION: java.lang.String | string
                 /**
                  * The HTTP {@code Max-Forwards} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.1.2">Section 5.1.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly MAX_FORWARDS: string
+                public static readonly MAX_FORWARDS: java.lang.String | string
                 /**
                  * The HTTP {@code Origin} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc6454">RFC 6454</a>
                  */
                 // @ts-ignore
-                readonly ORIGIN: string
+                public static readonly ORIGIN: java.lang.String | string
                 /**
                  * The HTTP {@code Pragma} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.4">Section 5.4 of RFC 7234</a>
                  */
                 // @ts-ignore
-                readonly PRAGMA: string
+                public static readonly PRAGMA: java.lang.String | string
                 /**
                  * The HTTP {@code Proxy-Authenticate} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7235#section-4.3">Section 4.3 of RFC 7235</a>
                  */
                 // @ts-ignore
-                readonly PROXY_AUTHENTICATE: string
+                public static readonly PROXY_AUTHENTICATE: java.lang.String | string
                 /**
                  * The HTTP {@code Proxy-Authorization} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7235#section-4.4">Section 4.4 of RFC 7235</a>
                  */
                 // @ts-ignore
-                readonly PROXY_AUTHORIZATION: string
+                public static readonly PROXY_AUTHORIZATION: java.lang.String | string
                 /**
                  * The HTTP {@code Range} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-3.1">Section 3.1 of RFC 7233</a>
                  */
                 // @ts-ignore
-                readonly RANGE: string
+                public static readonly RANGE: java.lang.String | string
                 /**
                  * The HTTP {@code Referer} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.5.2">Section 5.5.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly REFERER: string
+                public static readonly REFERER: java.lang.String | string
                 /**
                  * The HTTP {@code Retry-After} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.1.3">Section 7.1.3 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly RETRY_AFTER: string
+                public static readonly RETRY_AFTER: java.lang.String | string
                 /**
                  * The HTTP {@code Server} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.4.2">Section 7.4.2 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly SERVER: string
+                public static readonly SERVER: java.lang.String | string
                 /**
                  * The HTTP {@code Set-Cookie} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc2109#section-4.2.2">Section 4.2.2 of RFC 2109</a>
                  */
                 // @ts-ignore
-                readonly SET_COOKIE: string
+                public static readonly SET_COOKIE: java.lang.String | string
                 /**
                  * The HTTP {@code Set-Cookie2} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc2965">RFC 2965</a>
                  */
                 // @ts-ignore
-                readonly SET_COOKIE2: string
+                public static readonly SET_COOKIE2: java.lang.String | string
                 /**
                  * The HTTP {@code TE} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-4.3">Section 4.3 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly TE: string
+                public static readonly TE: java.lang.String | string
                 /**
                  * The HTTP {@code Trailer} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-4.4">Section 4.4 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly TRAILER: string
+                public static readonly TRAILER: java.lang.String | string
                 /**
                  * The HTTP {@code Transfer-Encoding} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-3.3.1">Section 3.3.1 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly TRANSFER_ENCODING: string
+                public static readonly TRANSFER_ENCODING: java.lang.String | string
                 /**
                  * The HTTP {@code Upgrade} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-6.7">Section 6.7 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly UPGRADE: string
+                public static readonly UPGRADE: java.lang.String | string
                 /**
                  * The HTTP {@code User-Agent} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-5.5.3">Section 5.5.3 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly USER_AGENT: string
+                public static readonly USER_AGENT: java.lang.String | string
                 /**
                  * The HTTP {@code Vary} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7231#section-7.1.4">Section 7.1.4 of RFC 7231</a>
                  */
                 // @ts-ignore
-                readonly VARY: string
+                public static readonly VARY: java.lang.String | string
                 /**
                  * The HTTP {@code Via} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7230#section-5.7.1">Section 5.7.1 of RFC 7230</a>
                  */
                 // @ts-ignore
-                readonly VIA: string
+                public static readonly VIA: java.lang.String | string
                 /**
                  * The HTTP {@code Warning} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7234#section-5.5">Section 5.5 of RFC 7234</a>
                  */
                 // @ts-ignore
-                readonly WARNING: string
+                public static readonly WARNING: java.lang.String | string
                 /**
                  * The HTTP {@code WWW-Authenticate} header field name.
                  * @see <a href="https://tools.ietf.org/html/rfc7235#section-4.1">Section 4.1 of RFC 7235</a>
                  */
                 // @ts-ignore
-                readonly WWW_AUTHENTICATE: string
+                public static readonly WWW_AUTHENTICATE: java.lang.String | string
                 /**
                  * An empty {@code HttpHeaders} instance (immutable).
                  * @since 5.0
                  */
                 // @ts-ignore
-                readonly EMPTY: org.springframework.http.HttpHeaders
+                public static readonly EMPTY: org.springframework.http.HttpHeaders
                 /**
                  * Get the list of header values for the given header name, if any.
                  * @param headerName the header name
@@ -410,27 +410,27 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                getOrEmpty(headerName: any): java.util.List<java.lang.String>
+                public getOrEmpty(headerName: java.lang.Object | any): Array<java.lang.String | string>
                 /**
                  * Set the list of acceptable {@linkplain MediaType media types},
                  * as specified by the {@code Accept} header.
                  */
                 // @ts-ignore
-                setAccept(acceptableMediaTypes: Array<org.springframework.http.MediaType>): void
+                public setAccept(acceptableMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>): void
                 /**
                  * Return the list of acceptable {@linkplain MediaType media types},
                  * as specified by the {@code Accept} header.
                  * <p>Returns an empty list when the acceptable media types are unspecified.
                  */
                 // @ts-ignore
-                getAccept(): java.util.List<org.springframework.http.MediaType>
+                public getAccept(): Array<org.springframework.http.MediaType>
                 /**
                  * Set the acceptable language ranges, as specified by the
                  * {@literal Accept-Language} header.
                  * @since 5.0
                  */
                 // @ts-ignore
-                setAcceptLanguage(languages: Array<java.util.Locale.LanguageRange>): void
+                public setAcceptLanguage(languages: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>): void
                 /**
                  * Return the language ranges from the {@literal "Accept-Language"} header.
                  * <p>If you only need sorted, preferred locales only use
@@ -441,13 +441,13 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                getAcceptLanguage(): java.util.List<java.util.Locale.LanguageRange>
+                public getAcceptLanguage(): Array<java.util.Locale.LanguageRange>
                 /**
                  * Variant of {@link #setAcceptLanguage(List)} using {@link Locale}'s.
                  * @since 5.0
                  */
                 // @ts-ignore
-                setAcceptLanguageAsLocales(locales: Array<java.util.Locale>): void
+                public setAcceptLanguageAsLocales(locales: java.util.List<java.util.Locale> | Array<java.util.Locale>): void
                 /**
                  * A variant of {@link #getAcceptLanguage()} that converts each
                  * {@link java.util.Locale.LanguageRange} to a {@link Locale}.
@@ -456,119 +456,119 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                getAcceptLanguageAsLocales(): java.util.List<java.util.Locale>
+                public getAcceptLanguageAsLocales(): Array<java.util.Locale>
                 /**
                  * Set the (new) value of the {@code Access-Control-Allow-Credentials} response header.
                  */
                 // @ts-ignore
-                setAccessControlAllowCredentials(allowCredentials: boolean): void
+                public setAccessControlAllowCredentials(allowCredentials: boolean): void
                 /**
                  * Return the value of the {@code Access-Control-Allow-Credentials} response header.
                  */
                 // @ts-ignore
-                getAccessControlAllowCredentials(): boolean
+                public getAccessControlAllowCredentials(): boolean
                 /**
                  * Set the (new) value of the {@code Access-Control-Allow-Headers} response header.
                  */
                 // @ts-ignore
-                setAccessControlAllowHeaders(allowedHeaders: Array<java.lang.String>): void
+                public setAccessControlAllowHeaders(allowedHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the value of the {@code Access-Control-Allow-Headers} response header.
                  */
                 // @ts-ignore
-                getAccessControlAllowHeaders(): java.util.List<java.lang.String>
+                public getAccessControlAllowHeaders(): Array<java.lang.String | string>
                 /**
                  * Set the (new) value of the {@code Access-Control-Allow-Methods} response header.
                  */
                 // @ts-ignore
-                setAccessControlAllowMethods(allowedMethods: Array<org.springframework.http.HttpMethod>): void
+                public setAccessControlAllowMethods(allowedMethods: java.util.List<org.springframework.http.HttpMethod> | Array<org.springframework.http.HttpMethod>): void
                 /**
                  * Return the value of the {@code Access-Control-Allow-Methods} response header.
                  */
                 // @ts-ignore
-                getAccessControlAllowMethods(): java.util.List<org.springframework.http.HttpMethod>
+                public getAccessControlAllowMethods(): Array<org.springframework.http.HttpMethod>
                 /**
                  * Set the (new) value of the {@code Access-Control-Allow-Origin} response header.
                  */
                 // @ts-ignore
-                setAccessControlAllowOrigin(allowedOrigin: string): void
+                public setAccessControlAllowOrigin(allowedOrigin: java.lang.String | string): void
                 /**
                  * Return the value of the {@code Access-Control-Allow-Origin} response header.
                  */
                 // @ts-ignore
-                getAccessControlAllowOrigin(): java.lang.String
+                public getAccessControlAllowOrigin(): string
                 /**
                  * Set the (new) value of the {@code Access-Control-Expose-Headers} response header.
                  */
                 // @ts-ignore
-                setAccessControlExposeHeaders(exposedHeaders: Array<java.lang.String>): void
+                public setAccessControlExposeHeaders(exposedHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the value of the {@code Access-Control-Expose-Headers} response header.
                  */
                 // @ts-ignore
-                getAccessControlExposeHeaders(): java.util.List<java.lang.String>
+                public getAccessControlExposeHeaders(): Array<java.lang.String | string>
                 /**
                  * Set the (new) value of the {@code Access-Control-Max-Age} response header.
                  * @since 5.2
                  */
                 // @ts-ignore
-                setAccessControlMaxAge(maxAge: java.time.Duration): void
+                public setAccessControlMaxAge(maxAge: java.time.Duration): void
                 /**
                  * Set the (new) value of the {@code Access-Control-Max-Age} response header.
                  */
                 // @ts-ignore
-                setAccessControlMaxAge(maxAge: number /*long*/): void
+                public setAccessControlMaxAge(maxAge: number /*long*/): void
                 /**
                  * Return the value of the {@code Access-Control-Max-Age} response header.
                  * <p>Returns -1 when the max age is unknown.
                  */
                 // @ts-ignore
-                getAccessControlMaxAge(): long
+                public getAccessControlMaxAge(): number /*long*/
                 /**
                  * Set the (new) value of the {@code Access-Control-Request-Headers} request header.
                  */
                 // @ts-ignore
-                setAccessControlRequestHeaders(requestHeaders: Array<java.lang.String>): void
+                public setAccessControlRequestHeaders(requestHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the value of the {@code Access-Control-Request-Headers} request header.
                  */
                 // @ts-ignore
-                getAccessControlRequestHeaders(): java.util.List<java.lang.String>
+                public getAccessControlRequestHeaders(): Array<java.lang.String | string>
                 /**
                  * Set the (new) value of the {@code Access-Control-Request-Method} request header.
                  */
                 // @ts-ignore
-                setAccessControlRequestMethod(requestMethod: org.springframework.http.HttpMethod): void
+                public setAccessControlRequestMethod(requestMethod: org.springframework.http.HttpMethod): void
                 /**
                  * Return the value of the {@code Access-Control-Request-Method} request header.
                  */
                 // @ts-ignore
-                getAccessControlRequestMethod(): org.springframework.http.HttpMethod
+                public getAccessControlRequestMethod(): org.springframework.http.HttpMethod
                 /**
                  * Set the list of acceptable {@linkplain Charset charsets},
                  * as specified by the {@code Accept-Charset} header.
                  */
                 // @ts-ignore
-                setAcceptCharset(acceptableCharsets: Array<java.nio.charset.Charset>): void
+                public setAcceptCharset(acceptableCharsets: java.util.List<java.nio.charset.Charset> | Array<java.nio.charset.Charset>): void
                 /**
                  * Return the list of acceptable {@linkplain Charset charsets},
                  * as specified by the {@code Accept-Charset} header.
                  */
                 // @ts-ignore
-                getAcceptCharset(): java.util.List<java.nio.charset.Charset>
+                public getAcceptCharset(): Array<java.nio.charset.Charset>
                 /**
                  * Set the set of allowed {@link HttpMethod HTTP methods},
                  * as specified by the {@code Allow} header.
                  */
                 // @ts-ignore
-                setAllow(allowedMethods: Array<org.springframework.http.HttpMethod>): void
+                public setAllow(allowedMethods: java.util.Set<org.springframework.http.HttpMethod> | Array<org.springframework.http.HttpMethod>): void
                 /**
                  * Return the set of allowed {@link HttpMethod HTTP methods},
                  * as specified by the {@code Allow} header.
                  * <p>Returns an empty set when the allowed methods are unspecified.
                  */
                 // @ts-ignore
-                getAllow(): java.util.Set<org.springframework.http.HttpMethod>
+                public getAllow(): Array<org.springframework.http.HttpMethod>
                 /**
                  * Set the value of the {@linkplain #AUTHORIZATION Authorization} header to
                  * Basic Authentication based on the given username and password.
@@ -585,7 +585,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7617">RFC 7617</a>
                  */
                 // @ts-ignore
-                setBasicAuth(username: string, password: string): void
+                public setBasicAuth(username: java.lang.String | string, password: java.lang.String | string): void
                 /**
                  * Set the value of the {@linkplain #AUTHORIZATION Authorization} header to
                  * Basic Authentication based on the given username and password.
@@ -602,7 +602,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7617">RFC 7617</a>
                  */
                 // @ts-ignore
-                setBasicAuth(username: string, password: string, charset: java.nio.charset.Charset): void
+                public setBasicAuth(username: java.lang.String | string, password: java.lang.String | string, charset: java.nio.charset.Charset): void
                 /**
                  * Set the value of the {@linkplain #AUTHORIZATION Authorization} header to
                  * Basic Authentication based on the given {@linkplain #encodeBasicAuth
@@ -620,7 +620,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7617">RFC 7617</a>
                  */
                 // @ts-ignore
-                setBasicAuth(encodedCredentials: string): void
+                public setBasicAuth(encodedCredentials: java.lang.String | string): void
                 /**
                  * Set the value of the {@linkplain #AUTHORIZATION Authorization} header to
                  * the given Bearer token.
@@ -629,39 +629,39 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>
                  */
                 // @ts-ignore
-                setBearerAuth(token: string): void
+                public setBearerAuth(token: java.lang.String | string): void
                 /**
                  * Set a configured {@link CacheControl} instance as the
                  * new value of the {@code Cache-Control} header.
                  * @since 5.0.5
                  */
                 // @ts-ignore
-                setCacheControl(cacheControl: org.springframework.http.CacheControl): void
+                public setCacheControl(cacheControl: org.springframework.http.CacheControl): void
                 /**
                  * Set the (new) value of the {@code Cache-Control} header.
                  */
                 // @ts-ignore
-                setCacheControl(cacheControl: string): void
+                public setCacheControl(cacheControl: java.lang.String | string): void
                 /**
                  * Return the value of the {@code Cache-Control} header.
                  */
                 // @ts-ignore
-                getCacheControl(): java.lang.String
+                public getCacheControl(): string
                 /**
                  * Set the (new) value of the {@code Connection} header.
                  */
                 // @ts-ignore
-                setConnection(connection: string): void
+                public setConnection(connection: java.lang.String | string): void
                 /**
                  * Set the (new) value of the {@code Connection} header.
                  */
                 // @ts-ignore
-                setConnection(connection: Array<java.lang.String>): void
+                public setConnection(connection: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the value of the {@code Connection} header.
                  */
                 // @ts-ignore
-                getConnection(): java.util.List<java.lang.String>
+                public getConnection(): Array<java.lang.String | string>
                 /**
                  * Set the {@code Content-Disposition} header when creating a
                  * {@code "multipart/form-data"} request.
@@ -674,7 +674,7 @@ declare namespace org {
                  * @see #getContentDisposition()
                  */
                 // @ts-ignore
-                setContentDispositionFormData(name: string, filename: string): void
+                public setContentDispositionFormData(name: java.lang.String | string, filename: java.lang.String | string): void
                 /**
                  * Set the {@literal Content-Disposition} header.
                  * <p>This could be used on a response to indicate if the content is
@@ -686,14 +686,14 @@ declare namespace org {
                  * @see #getContentDisposition()
                  */
                 // @ts-ignore
-                setContentDisposition(contentDisposition: org.springframework.http.ContentDisposition): void
+                public setContentDisposition(contentDisposition: org.springframework.http.ContentDisposition): void
                 /**
                  * Return a parsed representation of the {@literal Content-Disposition} header.
                  * @since 5.0
                  * @see #setContentDisposition(ContentDisposition)
                  */
                 // @ts-ignore
-                getContentDisposition(): org.springframework.http.ContentDisposition
+                public getContentDisposition(): org.springframework.http.ContentDisposition
                 /**
                  * Set the {@link Locale} of the content language,
                  * as specified by the {@literal Content-Language} header.
@@ -702,7 +702,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                setContentLanguage(locale: java.util.Locale): void
+                public setContentLanguage(locale: java.util.Locale): void
                 /**
                  * Return the first {@link Locale} of the content languages,
                  * as specified by the {@literal Content-Language} header.
@@ -712,47 +712,47 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                getContentLanguage(): java.util.Locale
+                public getContentLanguage(): java.util.Locale
                 /**
                  * Set the length of the body in bytes, as specified by the
                  * {@code Content-Length} header.
                  */
                 // @ts-ignore
-                setContentLength(contentLength: number /*long*/): void
+                public setContentLength(contentLength: number /*long*/): void
                 /**
                  * Return the length of the body in bytes, as specified by the
                  * {@code Content-Length} header.
                  * <p>Returns -1 when the content-length is unknown.
                  */
                 // @ts-ignore
-                getContentLength(): long
+                public getContentLength(): number /*long*/
                 /**
                  * Set the {@linkplain MediaType media type} of the body,
                  * as specified by the {@code Content-Type} header.
                  */
                 // @ts-ignore
-                setContentType(mediaType: org.springframework.http.MediaType): void
+                public setContentType(mediaType: org.springframework.http.MediaType): void
                 /**
                  * Return the {@linkplain MediaType media type} of the body, as specified
                  * by the {@code Content-Type} header.
                  * <p>Returns {@code null} when the content-type is unknown.
                  */
                 // @ts-ignore
-                getContentType(): org.springframework.http.MediaType
+                public getContentType(): org.springframework.http.MediaType
                 /**
                  * Set the date and time at which the message was created, as specified
                  * by the {@code Date} header.
                  * @since 5.2
                  */
                 // @ts-ignore
-                setDate(date: java.time.ZonedDateTime): void
+                public setDate(date: java.time.ZonedDateTime): void
                 /**
                  * Set the date and time at which the message was created, as specified
                  * by the {@code Date} header.
                  * @since 5.2
                  */
                 // @ts-ignore
-                setDate(date: java.time.Instant): void
+                public setDate(date: java.time.Instant): void
                 /**
                  * Set the date and time at which the message was created, as specified
                  * by the {@code Date} header.
@@ -760,7 +760,7 @@ declare namespace org {
                  * January 1, 1970 GMT.
                  */
                 // @ts-ignore
-                setDate(date: number /*long*/): void
+                public setDate(date: number /*long*/): void
                 /**
                  * Return the date and time at which the message was created, as specified
                  * by the {@code Date} header.
@@ -769,31 +769,31 @@ declare namespace org {
                  * @throws IllegalArgumentException if the value cannot be converted to a date
                  */
                 // @ts-ignore
-                getDate(): long
+                public getDate(): number /*long*/
                 /**
                  * Set the (new) entity tag of the body, as specified by the {@code ETag} header.
                  */
                 // @ts-ignore
-                setETag(etag: string): void
+                public setETag(etag: java.lang.String | string): void
                 /**
                  * Return the entity tag of the body, as specified by the {@code ETag} header.
                  */
                 // @ts-ignore
-                getETag(): java.lang.String
+                public getETag(): string
                 /**
                  * Set the duration after which the message is no longer valid,
                  * as specified by the {@code Expires} header.
                  * @since 5.0.5
                  */
                 // @ts-ignore
-                setExpires(expires: java.time.ZonedDateTime): void
+                public setExpires(expires: java.time.ZonedDateTime): void
                 /**
                  * Set the date and time at which the message is no longer valid,
                  * as specified by the {@code Expires} header.
                  * @since 5.2
                  */
                 // @ts-ignore
-                setExpires(expires: java.time.Instant): void
+                public setExpires(expires: java.time.Instant): void
                 /**
                  * Set the date and time at which the message is no longer valid,
                  * as specified by the {@code Expires} header.
@@ -801,7 +801,7 @@ declare namespace org {
                  * January 1, 1970 GMT.
                  */
                 // @ts-ignore
-                setExpires(expires: number /*long*/): void
+                public setExpires(expires: number /*long*/): void
                 /**
                  * Return the date and time at which the message is no longer valid,
                  * as specified by the {@code Expires} header.
@@ -810,7 +810,7 @@ declare namespace org {
                  * @see #getFirstZonedDateTime(String)
                  */
                 // @ts-ignore
-                getExpires(): long
+                public getExpires(): number /*long*/
                 /**
                  * Set the (new) value of the {@code Host} header.
                  * <p>If the given {@linkplain InetSocketAddress#getPort() port} is {@code 0},
@@ -819,7 +819,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                setHost(host: java.net.InetSocketAddress): void
+                public setHost(host: java.net.InetSocketAddress): void
                 /**
                  * Return the value of the {@code Host} header, if available.
                  * <p>If the header value does not contain a port, the
@@ -828,47 +828,47 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                getHost(): java.net.InetSocketAddress
+                public getHost(): java.net.InetSocketAddress
                 /**
                  * Set the (new) value of the {@code If-Match} header.
                  * @since 4.3
                  */
                 // @ts-ignore
-                setIfMatch(ifMatch: string): void
+                public setIfMatch(ifMatch: java.lang.String | string): void
                 /**
                  * Set the (new) value of the {@code If-Match} header.
                  * @since 4.3
                  */
                 // @ts-ignore
-                setIfMatch(ifMatchList: Array<java.lang.String>): void
+                public setIfMatch(ifMatchList: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the value of the {@code If-Match} header.
                  * @throws IllegalArgumentException if parsing fails
                  * @since 4.3
                  */
                 // @ts-ignore
-                getIfMatch(): java.util.List<java.lang.String>
+                public getIfMatch(): Array<java.lang.String | string>
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setIfModifiedSince(ifModifiedSince: java.time.ZonedDateTime): void
+                public setIfModifiedSince(ifModifiedSince: java.time.ZonedDateTime): void
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setIfModifiedSince(ifModifiedSince: java.time.Instant): void
+                public setIfModifiedSince(ifModifiedSince: java.time.Instant): void
                 /**
                  * Set the (new) value of the {@code If-Modified-Since} header.
                  * <p>The date should be specified as the number of milliseconds since
                  * January 1, 1970 GMT.
                  */
                 // @ts-ignore
-                setIfModifiedSince(ifModifiedSince: number /*long*/): void
+                public setIfModifiedSince(ifModifiedSince: number /*long*/): void
                 /**
                  * Return the value of the {@code If-Modified-Since} header.
                  * <p>The date is returned as the number of milliseconds since
@@ -876,37 +876,37 @@ declare namespace org {
                  * @see #getFirstZonedDateTime(String)
                  */
                 // @ts-ignore
-                getIfModifiedSince(): long
+                public getIfModifiedSince(): number /*long*/
                 /**
                  * Set the (new) value of the {@code If-None-Match} header.
                  */
                 // @ts-ignore
-                setIfNoneMatch(ifNoneMatch: string): void
+                public setIfNoneMatch(ifNoneMatch: java.lang.String | string): void
                 /**
                  * Set the (new) values of the {@code If-None-Match} header.
                  */
                 // @ts-ignore
-                setIfNoneMatch(ifNoneMatchList: Array<java.lang.String>): void
+                public setIfNoneMatch(ifNoneMatchList: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the value of the {@code If-None-Match} header.
                  * @throws IllegalArgumentException if parsing fails
                  */
                 // @ts-ignore
-                getIfNoneMatch(): java.util.List<java.lang.String>
+                public getIfNoneMatch(): Array<java.lang.String | string>
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setIfUnmodifiedSince(ifUnmodifiedSince: java.time.ZonedDateTime): void
+                public setIfUnmodifiedSince(ifUnmodifiedSince: java.time.ZonedDateTime): void
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setIfUnmodifiedSince(ifUnmodifiedSince: java.time.Instant): void
+                public setIfUnmodifiedSince(ifUnmodifiedSince: java.time.Instant): void
                 /**
                  * Set the (new) value of the {@code If-Unmodified-Since} header.
                  * <p>The date should be specified as the number of milliseconds since
@@ -914,7 +914,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                setIfUnmodifiedSince(ifUnmodifiedSince: number /*long*/): void
+                public setIfUnmodifiedSince(ifUnmodifiedSince: number /*long*/): void
                 /**
                  * Return the value of the {@code If-Unmodified-Since} header.
                  * <p>The date is returned as the number of milliseconds since
@@ -923,21 +923,21 @@ declare namespace org {
                  * @see #getFirstZonedDateTime(String)
                  */
                 // @ts-ignore
-                getIfUnmodifiedSince(): long
+                public getIfUnmodifiedSince(): number /*long*/
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setLastModified(lastModified: java.time.ZonedDateTime): void
+                public setLastModified(lastModified: java.time.ZonedDateTime): void
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setLastModified(lastModified: java.time.Instant): void
+                public setLastModified(lastModified: java.time.Instant): void
                 /**
                  * Set the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
@@ -945,7 +945,7 @@ declare namespace org {
                  * January 1, 1970 GMT.
                  */
                 // @ts-ignore
-                setLastModified(lastModified: number /*long*/): void
+                public setLastModified(lastModified: number /*long*/): void
                 /**
                  * Return the time the resource was last changed, as specified by the
                  * {@code Last-Modified} header.
@@ -954,61 +954,61 @@ declare namespace org {
                  * @see #getFirstZonedDateTime(String)
                  */
                 // @ts-ignore
-                getLastModified(): long
+                public getLastModified(): number /*long*/
                 /**
                  * Set the (new) location of a resource,
                  * as specified by the {@code Location} header.
                  */
                 // @ts-ignore
-                setLocation(location: java.net.URI): void
+                public setLocation(location: java.net.URI): void
                 /**
                  * Return the (new) location of a resource
                  * as specified by the {@code Location} header.
                  * <p>Returns {@code null} when the location is unknown.
                  */
                 // @ts-ignore
-                getLocation(): java.net.URI
+                public getLocation(): java.net.URI
                 /**
                  * Set the (new) value of the {@code Origin} header.
                  */
                 // @ts-ignore
-                setOrigin(origin: string): void
+                public setOrigin(origin: java.lang.String | string): void
                 /**
                  * Return the value of the {@code Origin} header.
                  */
                 // @ts-ignore
-                getOrigin(): java.lang.String
+                public getOrigin(): string
                 /**
                  * Set the (new) value of the {@code Pragma} header.
                  */
                 // @ts-ignore
-                setPragma(pragma: string): void
+                public setPragma(pragma: java.lang.String | string): void
                 /**
                  * Return the value of the {@code Pragma} header.
                  */
                 // @ts-ignore
-                getPragma(): java.lang.String
+                public getPragma(): string
                 /**
                  * Sets the (new) value of the {@code Range} header.
                  */
                 // @ts-ignore
-                setRange(ranges: Array<org.springframework.http.HttpRange>): void
+                public setRange(ranges: java.util.List<org.springframework.http.HttpRange> | Array<org.springframework.http.HttpRange>): void
                 /**
                  * Return the value of the {@code Range} header.
                  * <p>Returns an empty list when the range is unknown.
                  */
                 // @ts-ignore
-                getRange(): java.util.List<org.springframework.http.HttpRange>
+                public getRange(): Array<org.springframework.http.HttpRange>
                 /**
                  * Set the (new) value of the {@code Upgrade} header.
                  */
                 // @ts-ignore
-                setUpgrade(upgrade: string): void
+                public setUpgrade(upgrade: java.lang.String | string): void
                 /**
                  * Return the value of the {@code Upgrade} header.
                  */
                 // @ts-ignore
-                getUpgrade(): java.lang.String
+                public getUpgrade(): string
                 /**
                  * Set the request header names (e.g. "Accept-Language") for which the
                  * response is subject to content negotiation and variances based on the
@@ -1017,13 +1017,13 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                setVary(requestHeaders: Array<java.lang.String>): void
+                public setVary(requestHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Return the request header names subject to content negotiation.
                  * @since 4.3
                  */
                 // @ts-ignore
-                getVary(): java.util.List<java.lang.String>
+                public getVary(): Array<java.lang.String | string>
                 /**
                  * Set the given date under the given header name after formatting it as a string
                  * using the RFC-1123 date-time formatter. The equivalent of
@@ -1031,7 +1031,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                setZonedDateTime(headerName: string, date: java.time.ZonedDateTime): void
+                public setZonedDateTime(headerName: java.lang.String | string, date: java.time.ZonedDateTime): void
                 /**
                  * Set the given date under the given header name after formatting it as a string
                  * using the RFC-1123 date-time formatter. The equivalent of
@@ -1039,7 +1039,7 @@ declare namespace org {
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                setInstant(headerName: string, date: java.time.Instant): void
+                public setInstant(headerName: java.lang.String | string, date: java.time.Instant): void
                 /**
                  * Set the given date under the given header name after formatting it as a string
                  * using the RFC-1123 date-time formatter. The equivalent of
@@ -1048,7 +1048,7 @@ declare namespace org {
                  * @see #setZonedDateTime(String, ZonedDateTime)
                  */
                 // @ts-ignore
-                setDate(headerName: string, date: number /*long*/): void
+                public setDate(headerName: java.lang.String | string, date: number /*long*/): void
                 /**
                  * Parse the first header value for the given header name as a date,
                  * return -1 if there is no value, or raise {@link IllegalArgumentException}
@@ -1059,7 +1059,7 @@ declare namespace org {
                  * @see #getFirstZonedDateTime(String)
                  */
                 // @ts-ignore
-                getFirstDate(headerName: string): long
+                public getFirstDate(headerName: java.lang.String | string): number /*long*/
                 /**
                  * Parse the first header value for the given header name as a date,
                  * return {@code null} if there is no value, or raise {@link IllegalArgumentException}
@@ -1069,7 +1069,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                getFirstZonedDateTime(headerName: string): java.time.ZonedDateTime
+                public getFirstZonedDateTime(headerName: java.lang.String | string): java.time.ZonedDateTime
                 /**
                  * Return all values of a given header name,
                  * even if this header is set multiple times.
@@ -1078,7 +1078,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                getValuesAsList(headerName: string): java.util.List<java.lang.String>
+                public getValuesAsList(headerName: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Remove the well-known {@code "Content-*"} HTTP headers.
                  * <p>Such headers should be cleared from the response if the intended
@@ -1086,7 +1086,7 @@ declare namespace org {
                  * @since 5.2.3
                  */
                 // @ts-ignore
-                clearContentHeaders(): void
+                public clearContentHeaders(): void
                 /**
                  * Retrieve a combined result from the field values of the ETag header.
                  * @param headerName the header name
@@ -1095,7 +1095,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                getETagValuesAsList(headerName: string): java.util.List<java.lang.String>
+                getETagValuesAsList(headerName: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Retrieve a combined result from the field values of multi-valued headers.
                  * @param headerName the header name
@@ -1103,21 +1103,21 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                getFieldValues(headerName: string): java.lang.String
+                getFieldValues(headerName: java.lang.String | string): string
                 /**
                  * Turn the given list of header values into a comma-delimited result.
                  * @param headerValues the list of header values
                  * @return a combined result with comma delimitation
                  */
                 // @ts-ignore
-                toCommaDelimitedString(headerValues: Array<java.lang.String>): java.lang.String
+                toCommaDelimitedString(headerValues: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): string
                 /**
                  * Return the first header value for the given header name, if any.
                  * @param headerName the header name
                  * @return the first header value, or {#code null} if none
                  */
                 // @ts-ignore
-                getFirst(headerName: string): java.lang.String
+                public getFirst(headerName: java.lang.String | string): string
                 /**
                  * Add the given, single header value under the given name.
                  * @param headerName the header name
@@ -1127,11 +1127,11 @@ declare namespace org {
                  * @see #set(String, String)
                  */
                 // @ts-ignore
-                add(headerName: string, headerValue: string): void
+                public add(headerName: java.lang.String | string, headerValue: java.lang.String | string): void
                 // @ts-ignore
-                addAll(key: string, values: Array<java.lang.String>): void
+                public addAll(key: java.lang.String | string, values: java.util.List<any> | Array<any>): void
                 // @ts-ignore
-                addAll(values: object): void
+                public addAll(values: object): void
                 /**
                  * Set the given, single header value under the given name.
                  * @param headerName the header name
@@ -1141,52 +1141,52 @@ declare namespace org {
                  * @see #add(String, String)
                  */
                 // @ts-ignore
-                set(headerName: string, headerValue: string): void
+                public set(headerName: java.lang.String | string, headerValue: java.lang.String | string): void
                 // @ts-ignore
-                setAll(values: java.util.Map<java.lang.String, java.lang.String>): void
+                public setAll(values: java.util.Map<java.lang.String | string, java.lang.String | string>): void
                 // @ts-ignore
-                toSingleValueMap(): java.util.Map<java.lang.String, java.lang.String>
+                public toSingleValueMap(): java.util.Map<java.lang.String | string, java.lang.String | string>
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 // @ts-ignore
-                get(key: any): java.util.List<java.lang.String>
+                public get(key: java.lang.Object | any): Array<java.lang.String | string>
                 // @ts-ignore
-                put(key: string, value: Array<java.lang.String>): java.util.List<java.lang.String>
+                public put(key: java.lang.String | string, value: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): Array<java.lang.String | string>
                 // @ts-ignore
-                remove(key: any): java.util.List<java.lang.String>
+                public remove(key: java.lang.Object | any): Array<java.lang.String | string>
                 // @ts-ignore
-                putAll(map: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): void
+                public putAll(map: java.util.Map<any, any>): void
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 // @ts-ignore
-                keySet(): java.util.Set<java.lang.String>
+                public keySet(): Array<java.lang.String | string>
                 // @ts-ignore
-                values(): java.util.Collection<java.util.List<java.lang.String>>
+                public values(): Array<java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                 // @ts-ignore
-                entrySet(): java.util.Set<<any>>
+                public entrySet(): Array<object>
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return an {@code HttpHeaders} object that can only be read, not written to.
                  */
                 // @ts-ignore
-                readOnlyHttpHeaders(headers: org.springframework.http.HttpHeaders): org.springframework.http.HttpHeaders
+                public static readOnlyHttpHeaders(headers: org.springframework.http.HttpHeaders): org.springframework.http.HttpHeaders
                 /**
                  * Return an {@code HttpHeaders} object that can be read and written to.
                  * @since 5.1.1
                  */
                 // @ts-ignore
-                writableHttpHeaders(headers: org.springframework.http.HttpHeaders): org.springframework.http.HttpHeaders
+                public static writableHttpHeaders(headers: org.springframework.http.HttpHeaders): org.springframework.http.HttpHeaders
                 /**
                  * Helps to format HTTP header values, as HTTP header values themselves can
                  * contain comma-separated values, can become confusing with regular
@@ -1196,7 +1196,7 @@ declare namespace org {
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                formatHeaders(headers: object): java.lang.String
+                public static formatHeaders(headers: object): string
                 /**
                  * Encode the given username and password into Basic Authentication credentials.
                  * <p>The encoded credentials returned by this method can be supplied to
@@ -1214,7 +1214,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7617">RFC 7617</a>
                  */
                 // @ts-ignore
-                encodeBasicAuth(username: string, password: string, charset: java.nio.charset.Charset): java.lang.String
+                public static encodeBasicAuth(username: java.lang.String | string, password: java.lang.String | string, charset: java.nio.charset.Charset): string
             }
         }
     }

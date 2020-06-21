@@ -22,33 +22,33 @@ declare namespace org {
                         // @ts-ignore
                         constructor(maxByteCount: number /*int*/)
                         // @ts-ignore
-                        add(buffer: org.springframework.core.io.buffer.DataBuffer): boolean
+                        public add(buffer: org.springframework.core.io.buffer.DataBuffer): boolean
                         // @ts-ignore
-                        add(index: number /*int*/, buffer: org.springframework.core.io.buffer.DataBuffer): void
+                        public add(index: number /*int*/, buffer: org.springframework.core.io.buffer.DataBuffer): void
                         // @ts-ignore
-                        addAll(collection: Array<org.springframework.core.io.buffer.DataBuffer>): boolean
+                        public addAll(collection: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        addAll(index: number /*int*/, collection: Array<org.springframework.core.io.buffer.DataBuffer>): boolean
+                        public addAll(index: number /*int*/, collection: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        remove(index: number /*int*/): org.springframework.core.io.buffer.DataBuffer
+                        public remove(index: number /*int*/): org.springframework.core.io.buffer.DataBuffer
                         // @ts-ignore
-                        remove(o: any): boolean
+                        public remove(o: java.lang.Object | any): boolean
                         // @ts-ignore
                         removeRange(fromIndex: number /*int*/, toIndex: number /*int*/): void
                         // @ts-ignore
-                        removeAll(c: Array<any>): boolean
+                        public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        removeIf(filter: java.util.function.Predicate<any super org.springframework.core.io.buffer.DataBuffer> | java.util.function$.Predicate<? super org.springframework.core.io.buffer.DataBuffer>): boolean
+                        public removeIf(filter: java.util.function$.Predicate<any>): boolean
                         // @ts-ignore
-                        set(index: number /*int*/, element: org.springframework.core.io.buffer.DataBuffer): org.springframework.core.io.buffer.DataBuffer
+                        public set(index: number /*int*/, element: org.springframework.core.io.buffer.DataBuffer): org.springframework.core.io.buffer.DataBuffer
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         /**
                          * Shortcut to {@link DataBufferUtils#release release} all data buffers and
                          * then {@link #clear()}.
                          */
                         // @ts-ignore
-                        releaseAndClear(): void
+                        public releaseAndClear(): void
                     }
                 }
             }

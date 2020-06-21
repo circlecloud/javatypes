@@ -19,7 +19,7 @@ declare namespace javax {
                     // @ts-ignore
                     paletteTitleHeight: number /*int*/
                     // @ts-ignore
-                    addNotify(): void
+                    public addNotify(): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -55,11 +55,11 @@ declare namespace javax {
                     // @ts-ignore
                     createLayout(): java.awt.LayoutManager
                     // @ts-ignore
-                    paintPalette(g: java.awt.Graphics): void
+                    public paintPalette(g: java.awt.Graphics): void
                     // @ts-ignore
-                    paintComponent(g: java.awt.Graphics): void
+                    public paintComponent(g: java.awt.Graphics): void
                     // @ts-ignore
-                    setPalette(b: boolean): void
+                    public setPalette(b: boolean): void
                 }
             }
         }

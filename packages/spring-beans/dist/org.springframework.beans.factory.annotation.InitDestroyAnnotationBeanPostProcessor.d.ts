@@ -41,7 +41,7 @@ declare namespace org {
                          * is the JSR-250 {@link javax.annotation.PostConstruct} annotation.
                          */
                         // @ts-ignore
-                        setInitAnnotationType(initAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                        public setInitAnnotationType(initAnnotationType: java.lang.Class<any>): void
                         /**
                          * Specify the destroy annotation to check for, indicating destruction
                          * methods to call when the context is shutting down.
@@ -50,21 +50,21 @@ declare namespace org {
                          * is the JSR-250 {@link javax.annotation.PreDestroy} annotation.
                          */
                         // @ts-ignore
-                        setDestroyAnnotationType(destroyAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                        public setDestroyAnnotationType(destroyAnnotationType: java.lang.Class<any>): void
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         // @ts-ignore
-                        postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                        public postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                         // @ts-ignore
-                        postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                        public postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        postProcessAfterInitialization(bean: any, beanName: string): java.lang.Object
+                        public postProcessAfterInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        postProcessBeforeDestruction(bean: any, beanName: string): void
+                        public postProcessBeforeDestruction(bean: java.lang.Object | any, beanName: java.lang.String | string): void
                         // @ts-ignore
-                        requiresDestruction(bean: any): boolean
+                        public requiresDestruction(bean: java.lang.Object | any): boolean
                     }
                 }
             }

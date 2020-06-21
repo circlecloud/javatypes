@@ -24,9 +24,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(block: org.bukkit.block.Block, newState: org.bukkit.block.BlockState)
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

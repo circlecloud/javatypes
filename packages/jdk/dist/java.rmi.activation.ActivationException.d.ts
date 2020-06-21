@@ -28,7 +28,7 @@ declare namespace java {
                  * @param s the detail message
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Constructs an <code>ActivationException</code> with the specified
                  * detail message and cause.  This constructor sets the {@link #detail}
@@ -37,7 +37,7 @@ declare namespace java {
                  * @param cause the cause
                  */
                 // @ts-ignore
-                constructor(s: string, cause: Error)
+                constructor(s: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * The cause of the activation exception.
                  * <p>This field predates the general-purpose exception chaining facility.
@@ -46,14 +46,14 @@ declare namespace java {
                  * @serial 
                  */
                 // @ts-ignore
-                detail: Error
+                detail: java.lang.Throwable | Error
                 /**
                  * Returns the detail message, including the message from the cause, if
                  * any, of this exception.
                  * @return the detail message
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 /**
                  * Returns the cause of this exception.  This method returns the value
                  * of the {@link #detail} field.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

@@ -16,41 +16,41 @@ declare namespace org {
                      * @since 5.0.5
                      */
                     // @ts-ignore
-                    constructor(reason: string, cause: Error)
+                    constructor(reason: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Constructor for a 500 error with a handler {@link Method} and an optional cause.
                      * @since 5.0.5
                      */
                     // @ts-ignore
-                    constructor(reason: string, handlerMethod: java.lang.reflect.Method, cause: Error)
+                    constructor(reason: java.lang.String | string, handlerMethod: java.lang.reflect.Method, cause: java.lang.Throwable | Error)
                     /**
                      * Constructor for a 500 error with a {@link MethodParameter} and an optional cause.
                      */
                     // @ts-ignore
-                    constructor(reason: string, parameter: MethodParameter, cause: Error)
+                    constructor(reason: java.lang.String | string, parameter: MethodParameter, cause: java.lang.Throwable | Error)
                     /**
                      * Constructor for a 500 error linked to a specific {@code MethodParameter}.
                      * @deprecated in favor of {#link #ServerErrorException(String, MethodParameter, Throwable)}
                      */
                     // @ts-ignore
-                    constructor(reason: string, parameter: MethodParameter)
+                    constructor(reason: java.lang.String | string, parameter: MethodParameter)
                     /**
                      * Constructor for a 500 error with a reason only.
                      * @deprecated in favor of {#link #ServerErrorException(String, Throwable)}
                      */
                     // @ts-ignore
-                    constructor(reason: string)
+                    constructor(reason: java.lang.String | string)
                     /**
                      * Return the handler method associated with the error, if any.
                      * @since 5.0.5
                      */
                     // @ts-ignore
-                    getHandlerMethod(): java.lang.reflect.Method
+                    public getHandlerMethod(): java.lang.reflect.Method
                     /**
                      * Return the specific method parameter associated with the error, if any.
                      */
                     // @ts-ignore
-                    getMethodParameter(): MethodParameter
+                    public getMethodParameter(): MethodParameter
                 }
             }
         }

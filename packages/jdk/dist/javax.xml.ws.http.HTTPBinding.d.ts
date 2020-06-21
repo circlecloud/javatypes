@@ -13,7 +13,7 @@ declare namespace javax {
                      * A constant representing the identity of the XML/HTTP binding.
                      */
                     // @ts-ignore
-                    
+                    readonly HTTP_BINDING: java.lang.String | string
                 }
             }
         }

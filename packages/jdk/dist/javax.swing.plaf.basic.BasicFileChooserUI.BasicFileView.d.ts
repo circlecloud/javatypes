@@ -10,21 +10,21 @@ declare namespace javax {
                         // @ts-ignore
                         iconCache: java.util.Hashtable<java.io.File, javax.swing.Icon>
                         // @ts-ignore
-                        clearIconCache(): void
+                        public clearIconCache(): void
                         // @ts-ignore
-                        getName(f: java.io.File): java.lang.String
+                        public getName(f: java.io.File): string
                         // @ts-ignore
-                        getDescription(f: java.io.File): java.lang.String
+                        public getDescription(f: java.io.File): string
                         // @ts-ignore
-                        getTypeDescription(f: java.io.File): java.lang.String
+                        public getTypeDescription(f: java.io.File): string
                         // @ts-ignore
-                        getCachedIcon(f: java.io.File): javax.swing.Icon
+                        public getCachedIcon(f: java.io.File): javax.swing.Icon
                         // @ts-ignore
-                        cacheIcon(f: java.io.File, i: javax.swing.Icon): void
+                        public cacheIcon(f: java.io.File, i: javax.swing.Icon): void
                         // @ts-ignore
-                        getIcon(f: java.io.File): javax.swing.Icon
+                        public getIcon(f: java.io.File): javax.swing.Icon
                         // @ts-ignore
-                        isHidden(f: java.io.File): java.lang.Boolean
+                        public isHidden(f: java.io.File): java.lang.Boolean
                     }
                 }
             }

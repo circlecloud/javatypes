@@ -22,29 +22,29 @@ declare namespace org {
                  * @return true if activated, false if not
                  */
                 // @ts-ignore
-                isActivated(): boolean
+                public isActivated(): boolean
                 /**
                  * Set tripwire activated state
                  * @param act - true if activated, false if not
                  */
                 // @ts-ignore
-                setActivated(act: boolean): void
+                public setActivated(act: boolean): void
                 /**
                  * Test if object triggering this tripwire directly
                  * @return true if object activating tripwire, false if not
                  */
                 // @ts-ignore
-                isObjectTriggering(): boolean
+                public isObjectTriggering(): boolean
                 /**
                  * Set object triggering state for this tripwire
                  * @param trig - true if object activating tripwire, false if not
                  */
                 // @ts-ignore
-                setObjectTriggering(trig: boolean): void
+                public setObjectTriggering(trig: boolean): void
                 // @ts-ignore
-                clone(): org.bukkit.material.Tripwire
+                public clone(): org.bukkit.material.Tripwire
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

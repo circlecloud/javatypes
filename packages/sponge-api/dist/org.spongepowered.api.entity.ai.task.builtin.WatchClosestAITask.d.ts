@@ -20,7 +20,7 @@ declare namespace org {
                                  * @return The class of entity to "watch"
                                  */
                                 // @ts-ignore
-                                getWatchedClass(): java.lang.Class<? extends org.spongepowered.api.entity.Entity>
+                                getWatchedClass(): java.lang.Class<any>
                                 /**
                                  * Sets the {@link Class} of the {@link Entity} type to "stare" or
                                  * "watch" when that type of entity is nearby.
@@ -28,13 +28,13 @@ declare namespace org {
                                  * @return This task, for chaining
                                  */
                                 // @ts-ignore
-                                setWatchedClass(watchedClass: java.lang.Class<org.spongepowered.api.entity.Entity>): org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask
+                                setWatchedClass(watchedClass: java.lang.Class<any>): org.spongepowered.api.entity.ai.task.builtin.WatchClosestAITask
                                 /**
                                  * Gets the maximum distance to "watch" a targeted {@link Entity}.
                                  * @return The distance to watch a targeted entity
                                  */
                                 // @ts-ignore
-                                getMaxDistance(): float
+                                getMaxDistance(): number /*float*/
                                 /**
                                  * Sets the maximum distance to "watch" a targeted {@link Entity}.
                                  * @param maxDistance The maximum distance to watch an entity
@@ -48,7 +48,7 @@ declare namespace org {
                                  * @return The chance to watch
                                  */
                                 // @ts-ignore
-                                getChance(): float
+                                getChance(): number /*float*/
                                 /**
                                  * SEts the chance to "watch" a targeted {@link Entity}.
                                  * @param chance The chance to "watch"

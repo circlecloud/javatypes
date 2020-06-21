@@ -146,7 +146,7 @@ declare namespace java {
              * @author Doug Lea
              */
             // @ts-ignore
-            class ForkJoinTask<V> extends java.lang.Object implements java.util.concurrent.Future<V>, java.io.Serializable {
+            abstract class ForkJoinTask<V> extends java.lang.Object implements java.util.concurrent.Future<V>, java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -164,7 +164,7 @@ declare namespace java {
                  * @return {#code this}, to simplify usage
                  */
                 // @ts-ignore
-                fork(): java.util.concurrent.ForkJoinTask<V>
+                public fork(): java.util.concurrent.ForkJoinTask<V>
                 /**
                  * Returns the result of the computation when it {@link #isDone is
                  * done}.  This method differs from {@link #get()} in that
@@ -176,7 +176,7 @@ declare namespace java {
                  * @return the computed result
                  */
                 // @ts-ignore
-                join(): V
+                public join(): V
                 /**
                  * Commences performing this task, awaits its completion if
                  * necessary, and returns its result, or throws an (unchecked)
@@ -185,7 +185,7 @@ declare namespace java {
                  * @return the computed result
                  */
                 // @ts-ignore
-                invoke(): V
+                public invoke(): V
                 /**
                  * Forks the given tasks, returning when {@code isDone} holds for
                  * each task or an (unchecked) exception is encountered, in which
@@ -203,7 +203,7 @@ declare namespace java {
                  * @throws NullPointerException if any task is null
                  */
                 // @ts-ignore
-                invokeAll(t1: java.util.concurrent.ForkJoinTask<any>, t2: java.util.concurrent.ForkJoinTask<any>): void
+                public static invokeAll(t1: java.util.concurrent.ForkJoinTask<any>, t2: java.util.concurrent.ForkJoinTask<any>): void
                 /**
                  * Forks the given tasks, returning when {@code isDone} holds for
                  * each task or an (unchecked) exception is encountered, in which
@@ -219,7 +219,7 @@ declare namespace java {
                  * @throws NullPointerException if any task is null
                  */
                 // @ts-ignore
-                invokeAll(...tasks: java.util.concurrent.ForkJoinTask[]): void
+                public static invokeAll(...tasks: java.util.concurrent.ForkJoinTask<any>[]): void
                 /**
                  * Forks all tasks in the specified collection, returning when
                  * {@code isDone} holds for each task or an (unchecked) exception
@@ -238,7 +238,7 @@ declare namespace java {
                  * @throws NullPointerException if tasks or any element are null
                  */
                 // @ts-ignore
-                invokeAll<T extends java.util.concurrent.ForkJoinTask<?>>(tasks: Array<T>): java.util.Collection<T>
+                public static invokeAll<T extends java.util.concurrent.ForkJoinTask<?>>(tasks: java.util.Collection<T> | Array<T>): Array<T>
                 /**
                  * Attempts to cancel execution of this task. This attempt will
                  * fail if the task has already completed or could not be
@@ -263,17 +263,17 @@ declare namespace java {
                  * @return {#code true} if this task is now cancelled
                  */
                 // @ts-ignore
-                cancel(mayInterruptIfRunning: boolean): boolean
+                public cancel(mayInterruptIfRunning: boolean): boolean
                 // @ts-ignore
-                isDone(): boolean
+                public isDone(): boolean
                 // @ts-ignore
-                isCancelled(): boolean
+                public isCancelled(): boolean
                 /**
                  * Returns {@code true} if this task threw an exception or was cancelled.
                  * @return {#code true} if this task threw an exception or was cancelled
                  */
                 // @ts-ignore
-                isCompletedAbnormally(): boolean
+                public isCompletedAbnormally(): boolean
                 /**
                  * Returns {@code true} if this task completed without throwing an
                  * exception and was not cancelled.
@@ -281,7 +281,7 @@ declare namespace java {
                  *  exception and was not cancelled
                  */
                 // @ts-ignore
-                isCompletedNormally(): boolean
+                public isCompletedNormally(): boolean
                 /**
                  * Returns the exception thrown by the base computation, or a
                  * {@code CancellationException} if cancelled, or {@code null} if
@@ -289,7 +289,7 @@ declare namespace java {
                  * @return the exception, or {#code null} if none
                  */
                 // @ts-ignore
-                getException(): java.lang.Throwable
+                public getException(): Error
                 /**
                  * Completes this task abnormally, and if not already aborted or
                  * cancelled, causes it to throw the given exception upon
@@ -304,7 +304,7 @@ declare namespace java {
                  *  thrown will be a {@code RuntimeException} with cause {@code ex}.
                  */
                 // @ts-ignore
-                completeExceptionally(ex: Error): void
+                public completeExceptionally(ex: java.lang.Throwable | Error): void
                 /**
                  * Completes this task, and if not already aborted or cancelled,
                  * returning the given value as the result of subsequent
@@ -318,7 +318,7 @@ declare namespace java {
                  * @param value the result value for this task
                  */
                 // @ts-ignore
-                complete(value: V): void
+                public complete(value: V): void
                 /**
                  * Completes this task normally without setting a value. The most
                  * recent value established by {@link #setRawResult} (or {@code
@@ -327,7 +327,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                quietlyComplete(): void
+                public quietlyComplete(): void
                 /**
                  * Waits if necessary for the computation to complete, and then
                  * retrieves its result.
@@ -339,7 +339,7 @@ declare namespace java {
                  *  member of a ForkJoinPool and was interrupted while waiting
                  */
                 // @ts-ignore
-                get(): V
+                public get(): V
                 /**
                  * Waits if necessary for at most the given time for the computation
                  * to complete, and then retrieves its result, if available.
@@ -354,7 +354,7 @@ declare namespace java {
                  * @throws TimeoutException if the wait timed out
                  */
                 // @ts-ignore
-                get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
+                public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
                 /**
                  * Joins this task, without returning its result or throwing its
                  * exception. This method may be useful when processing
@@ -362,14 +362,14 @@ declare namespace java {
                  * known to have aborted.
                  */
                 // @ts-ignore
-                quietlyJoin(): void
+                public quietlyJoin(): void
                 /**
                  * Commences performing this task and awaits its completion if
                  * necessary, without returning its result or throwing its
                  * exception.
                  */
                 // @ts-ignore
-                quietlyInvoke(): void
+                public quietlyInvoke(): void
                 /**
                  * Possibly executes tasks until the pool hosting the current task
                  * {@link ForkJoinPool#isQuiescent is quiescent}. This method may
@@ -378,7 +378,7 @@ declare namespace java {
                  * processed.
                  */
                 // @ts-ignore
-                helpQuiesce(): void
+                public static helpQuiesce(): void
                 /**
                  * Resets the internal bookkeeping state of this task, allowing a
                  * subsequent {@code fork}. This method allows repeated reuse of
@@ -395,7 +395,7 @@ declare namespace java {
                  * setRawResult(null)}.
                  */
                 // @ts-ignore
-                reinitialize(): void
+                public reinitialize(): void
                 /**
                  * Returns the pool hosting the current task execution, or null
                  * if this task is executing outside of any ForkJoinPool.
@@ -403,7 +403,7 @@ declare namespace java {
                  * @return the pool, or {#code null} if none
                  */
                 // @ts-ignore
-                getPool(): java.util.concurrent.ForkJoinPool
+                public static getPool(): java.util.concurrent.ForkJoinPool
                 /**
                  * Returns {@code true} if the current thread is a {@link
                  * ForkJoinWorkerThread} executing as a ForkJoinPool computation.
@@ -412,7 +412,7 @@ declare namespace java {
                  *  or {@code false} otherwise
                  */
                 // @ts-ignore
-                inForkJoinPool(): boolean
+                public static inForkJoinPool(): boolean
                 /**
                  * Tries to unschedule this task for execution. This method will
                  * typically (but is not guaranteed to) succeed if this task is
@@ -423,7 +423,7 @@ declare namespace java {
                  * @return {#code true} if unforked
                  */
                 // @ts-ignore
-                tryUnfork(): boolean
+                public tryUnfork(): boolean
                 /**
                  * Returns an estimate of the number of tasks that have been
                  * forked by the current worker thread but not yet executed. This
@@ -432,7 +432,7 @@ declare namespace java {
                  * @return the number of tasks
                  */
                 // @ts-ignore
-                getQueuedTaskCount(): int
+                public static getQueuedTaskCount(): number /*int*/
                 /**
                  * Returns an estimate of how many more locally queued tasks are
                  * held by the current worker thread than there are other worker
@@ -446,7 +446,7 @@ declare namespace java {
                  * @return the surplus number of tasks, which may be negative
                  */
                 // @ts-ignore
-                getSurplusQueuedTaskCount(): int
+                public static getSurplusQueuedTaskCount(): number /*int*/
                 /**
                  * Returns the result that would be returned by {@link #join}, even
                  * if this task completed abnormally, or {@code null} if this task
@@ -456,7 +456,7 @@ declare namespace java {
                  * @return the result, or {#code null} if not completed
                  */
                 // @ts-ignore
-                abstract getRawResult(): V
+                public abstract getRawResult(): V
                 /**
                  * Forces the given value to be returned as a result.  This method
                  * is designed to support extensions, and should not in general be
@@ -492,7 +492,7 @@ declare namespace java {
                  * @return the next task, or {#code null} if none are available
                  */
                 // @ts-ignore
-                peekNextLocalTask(): java.util.concurrent.ForkJoinTask<?>
+                static peekNextLocalTask(): java.util.concurrent.ForkJoinTask<any>
                 /**
                  * Unschedules and returns, without executing, the next task
                  * queued by the current thread but not yet executed, if the
@@ -502,7 +502,7 @@ declare namespace java {
                  * @return the next task, or {#code null} if none are available
                  */
                 // @ts-ignore
-                pollNextLocalTask(): java.util.concurrent.ForkJoinTask<?>
+                static pollNextLocalTask(): java.util.concurrent.ForkJoinTask<any>
                 /**
                  * If the current thread is operating in a ForkJoinPool,
                  * unschedules and returns, without executing, the next task
@@ -516,14 +516,14 @@ declare namespace java {
                  * @return a task, or {#code null} if none are available
                  */
                 // @ts-ignore
-                pollTask(): java.util.concurrent.ForkJoinTask<?>
+                static pollTask(): java.util.concurrent.ForkJoinTask<any>
                 /**
                  * Returns the tag for this task.
                  * @return the tag for this task
                  * @since 1.8
                  */
                 // @ts-ignore
-                getForkJoinTaskTag(): short
+                public getForkJoinTaskTag(): number /*short*/
                 /**
                  * Atomically sets the tag value for this task.
                  * @param tag the tag value
@@ -531,7 +531,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setForkJoinTaskTag(tag: number /*short*/): short
+                public setForkJoinTaskTag(tag: number /*short*/): number /*short*/
                 /**
                  * Atomically conditionally sets the tag value for this task.
                  * Among other applications, tags can be used as visit markers
@@ -546,7 +546,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                compareAndSetForkJoinTaskTag(e: number /*short*/, tag: number /*short*/): boolean
+                public compareAndSetForkJoinTaskTag(e: number /*short*/, tag: number /*short*/): boolean
                 /**
                  * Returns a new {@code ForkJoinTask} that performs the {@code run}
                  * method of the given {@code Runnable} as its action, and returns
@@ -555,7 +555,7 @@ declare namespace java {
                  * @return the task
                  */
                 // @ts-ignore
-                adapt(runnable: java.lang.Runnable): java.util.concurrent.ForkJoinTask<?>
+                public static adapt(runnable: java.lang.Runnable): java.util.concurrent.ForkJoinTask<any>
                 /**
                  * Returns a new {@code ForkJoinTask} that performs the {@code run}
                  * method of the given {@code Runnable} as its action, and returns
@@ -566,7 +566,7 @@ declare namespace java {
                  * @return the task
                  */
                 // @ts-ignore
-                adapt<T>(runnable: java.lang.Runnable, result: T): java.util.concurrent.ForkJoinTask<T>
+                public static adapt<T>(runnable: java.lang.Runnable, result: T): java.util.concurrent.ForkJoinTask<T>
                 /**
                  * Returns a new {@code ForkJoinTask} that performs the {@code call}
                  * method of the given {@code Callable} as its action, and returns
@@ -577,7 +577,7 @@ declare namespace java {
                  * @return the task
                  */
                 // @ts-ignore
-                adapt<T>(callable: java.util.concurrent.Callable<T>): java.util.concurrent.ForkJoinTask<T>
+                public static adapt<T>(callable: java.util.concurrent.Callable<any>): java.util.concurrent.ForkJoinTask<T>
             }
         }
     }

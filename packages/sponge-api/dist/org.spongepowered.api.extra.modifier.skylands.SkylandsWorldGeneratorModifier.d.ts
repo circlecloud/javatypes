@@ -14,11 +14,11 @@ declare namespace org {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            modifyWorldGenerator(properties: org.spongepowered.api.world.storage.WorldProperties, settings: org.spongepowered.api.data.DataContainer, worldGenerator: org.spongepowered.api.world.gen.WorldGenerator): void
+                            public modifyWorldGenerator(properties: org.spongepowered.api.world.storage.WorldProperties, settings: org.spongepowered.api.data.DataContainer, worldGenerator: org.spongepowered.api.world.gen.WorldGenerator): void
                             // @ts-ignore
-                            getId(): java.lang.String
+                            public getId(): string
                             // @ts-ignore
-                            getName(): java.lang.String
+                            public getName(): string
                         }
                     }
                 }

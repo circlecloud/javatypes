@@ -19,7 +19,7 @@ declare namespace java {
                  * 					queue to register to the reference object with.
                  */
                 // @ts-ignore
-                constructor(r: T, q: java.lang.ref.ReferenceQueue<any super T>)
+                constructor(r: T, q: java.lang.ref.ReferenceQueue<any>)
                 /**
                  * Return the referent of the reference object.  Phantom reference
                  * objects referents are inaccessible, and so null is returned.
@@ -27,7 +27,7 @@ declare namespace java {
                  * 					Returns null.
                  */
                 // @ts-ignore
-                get(): T
+                public get(): T
             }
         }
     }

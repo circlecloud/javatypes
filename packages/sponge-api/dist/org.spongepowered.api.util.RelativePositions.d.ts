@@ -8,9 +8,19 @@ declare namespace org {
                 // @ts-ignore
                 class RelativePositions extends java.lang.Enum<org.spongepowered.api.util.RelativePositions> {
                     // @ts-ignore
+                    readonly X: org.spongepowered.api.util.RelativePositions
+                    // @ts-ignore
+                    readonly Y: org.spongepowered.api.util.RelativePositions
+                    // @ts-ignore
+                    readonly Z: org.spongepowered.api.util.RelativePositions
+                    // @ts-ignore
+                    readonly PITCH: org.spongepowered.api.util.RelativePositions
+                    // @ts-ignore
+                    readonly YAW: org.spongepowered.api.util.RelativePositions
+                    // @ts-ignore
                     values(): org.spongepowered.api.util.RelativePositions[]
                     // @ts-ignore
-                    valueOf(name: string): org.spongepowered.api.util.RelativePositions
+                    valueOf(name: java.lang.String | string): org.spongepowered.api.util.RelativePositions
                 }
             }
         }

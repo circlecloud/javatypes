@@ -67,7 +67,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Properties extends java.util.Hashtable<java.lang.Object, java.lang.Object> {
+        class Properties extends java.util.Hashtable<java.lang.Object | any, java.lang.Object | any> {
             /**
              * Creates an empty property list with no default values.
              */
@@ -99,7 +99,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setProperty(key: string, value: string): java.lang.Object
+            public setProperty(key: java.lang.String | string, value: java.lang.String | string): any
             /**
              * Reads a property list (key and element pairs) from the input
              * character stream in a simple line-oriented format.
@@ -233,7 +233,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            load(reader: java.io.Reader): void
+            public load(reader: java.io.Reader): void
             /**
              * Reads a property list (key and element pairs) from the input
              * byte stream. The input stream is in a simple line-oriented
@@ -254,7 +254,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            load(inStream: java.io.InputStream): void
+            public load(inStream: java.io.InputStream): void
             /**
              * Calls the {@code store(OutputStream out, String comments)} method
              * and suppresses IOExceptions that were thrown.
@@ -270,7 +270,7 @@ declare namespace java {
              *              {@code Strings}.
              */
             // @ts-ignore
-            save(out: java.io.OutputStream, comments: string): void
+            public save(out: java.io.OutputStream, comments: java.lang.String | string): void
             /**
              * Writes this property list (key and element pairs) in this
              * {@code Properties} table to the output character stream in a
@@ -319,7 +319,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            store(writer: java.io.Writer, comments: string): void
+            public store(writer: java.io.Writer, comments: java.lang.String | string): void
             /**
              * Writes this property list (key and element pairs) in this
              * {@code Properties} table to the output stream in a format suitable
@@ -357,7 +357,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            store(out: java.io.OutputStream, comments: string): void
+            public store(out: java.io.OutputStream, comments: java.lang.String | string): void
             /**
              * Loads all of the properties represented by the XML document on the
              * specified input stream into this properties table.
@@ -386,7 +386,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            loadFromXML(input: java.io.InputStream): void
+            public loadFromXML(input: java.io.InputStream): void
             /**
              * Emits an XML document representing all of the properties contained
              * in this table.
@@ -406,7 +406,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            storeToXML(os: java.io.OutputStream, comment: string): void
+            public storeToXML(os: java.io.OutputStream, comment: java.lang.String | string): void
             /**
              * Emits an XML document representing all of the properties contained
              * in this table, using the specified encoding.
@@ -441,7 +441,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            storeToXML(os: java.io.OutputStream, comment: string, encoding: string): void
+            public storeToXML(os: java.io.OutputStream, comment: java.lang.String | string, encoding: java.lang.String | string): void
             /**
              * Searches for the property with the specified key in this property list.
              * If the key is not found in this property list, the default property list,
@@ -453,7 +453,7 @@ declare namespace java {
              * @see #defaults
              */
             // @ts-ignore
-            getProperty(key: string): java.lang.String
+            public getProperty(key: java.lang.String | string): string
             /**
              * Searches for the property with the specified key in this property list.
              * If the key is not found in this property list, the default property list,
@@ -466,7 +466,7 @@ declare namespace java {
              * @see #defaults
              */
             // @ts-ignore
-            getProperty(key: string, defaultValue: string): java.lang.String
+            public getProperty(key: java.lang.String | string, defaultValue: java.lang.String | string): string
             /**
              * Returns an enumeration of all the keys in this property list,
              * including distinct keys in the default property list if a key
@@ -481,7 +481,7 @@ declare namespace java {
              * @see #stringPropertyNames
              */
             // @ts-ignore
-            propertyNames(): java.util.Enumeration<?>
+            public propertyNames(): java.util.Enumeration<any>
             /**
              * Returns a set of keys in this property list where
              * the key and its corresponding value are strings,
@@ -500,7 +500,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            stringPropertyNames(): java.util.Set<java.lang.String>
+            public stringPropertyNames(): Array<java.lang.String | string>
             /**
              * Prints this property list out to the specified output stream.
              * This method is useful for debugging.
@@ -509,7 +509,7 @@ declare namespace java {
              *           is not a string.
              */
             // @ts-ignore
-            list(out: java.io.PrintStream): void
+            public list(out: java.io.PrintStream): void
             /**
              * Prints this property list out to the specified output stream.
              * This method is useful for debugging.
@@ -519,7 +519,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            list(out: java.io.PrintWriter): void
+            public list(out: java.io.PrintWriter): void
         }
     }
 }

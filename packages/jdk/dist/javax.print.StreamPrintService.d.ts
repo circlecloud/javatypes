@@ -26,7 +26,7 @@ declare namespace javax {
          * StreamPrintService's are not expected to support the Destination attribute.
          */
         // @ts-ignore
-        class StreamPrintService extends java.lang.Object implements javax.print.PrintService {
+        abstract class StreamPrintService extends java.lang.Object implements javax.print.PrintService {
             /**
              * Constructs a StreamPrintService object.
              * @param out  stream to which to send formatted print data.
@@ -38,7 +38,7 @@ declare namespace javax {
              * @return the stream to which this service will send formatted print data.
              */
             // @ts-ignore
-            getOutputStream(): java.io.OutputStream
+            public getOutputStream(): java.io.OutputStream
             /**
              * Returns the document format emitted by this print service.
              * Must be in mimetype format, compatible with the mime type
@@ -46,7 +46,7 @@ declare namespace javax {
              * @return mime type identifying the output format.
              */
             // @ts-ignore
-            abstract getOutputFormat(): java.lang.String
+            public abstract getOutputFormat(): string
             /**
              * Disposes this <code>StreamPrintService</code>.
              * If a stream service cannot be re-used, it must be disposed
@@ -56,7 +56,7 @@ declare namespace javax {
              * just marks it as not for further use by this service.
              */
             // @ts-ignore
-            dispose(): void
+            public dispose(): void
             /**
              * Returns a <code>boolean</code> indicating whether or not
              * this <code>StreamPrintService</code> has been disposed.
@@ -66,7 +66,7 @@ declare namespace javax {
              * @return if this <code>StreamPrintService</code> has been disposed
              */
             // @ts-ignore
-            isDisposed(): boolean
+            public isDisposed(): boolean
         }
     }
 }

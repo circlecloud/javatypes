@@ -11,46 +11,46 @@ declare namespace javax {
              * @return the agent identity.
              */
             // @ts-ignore
-            getMBeanServerId(): java.lang.String
+            getMBeanServerId(): string
             /**
              * Returns the full name of the JMX specification implemented
              * by this product.
              * @return the specification name.
              */
             // @ts-ignore
-            getSpecificationName(): java.lang.String
+            getSpecificationName(): string
             /**
              * Returns the version of the JMX specification implemented
              * by this product.
              * @return the specification version.
              */
             // @ts-ignore
-            getSpecificationVersion(): java.lang.String
+            getSpecificationVersion(): string
             /**
              * Returns the vendor of the JMX specification implemented
              * by this product.
              * @return the specification vendor.
              */
             // @ts-ignore
-            getSpecificationVendor(): java.lang.String
+            getSpecificationVendor(): string
             /**
              * Returns the JMX implementation name (the name of this product).
              * @return the implementation name.
              */
             // @ts-ignore
-            getImplementationName(): java.lang.String
+            getImplementationName(): string
             /**
              * Returns the JMX implementation version (the version of this product).
              * @return the implementation version.
              */
             // @ts-ignore
-            getImplementationVersion(): java.lang.String
+            getImplementationVersion(): string
             /**
              * Returns the JMX implementation vendor (the vendor of this product).
              * @return the implementation vendor.
              */
             // @ts-ignore
-            getImplementationVendor(): java.lang.String
+            getImplementationVendor(): string
         }
     }
 }

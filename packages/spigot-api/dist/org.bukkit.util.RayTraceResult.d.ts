@@ -51,31 +51,31 @@ declare namespace org {
                  * @return a copy of the exact hit position
                  */
                 // @ts-ignore
-                getHitPosition(): org.bukkit.util.Vector
+                public getHitPosition(): org.bukkit.util.Vector
                 /**
                  * Gets the hit block.
                  * @return the hit block, or <code>null</code> if not available
                  */
                 // @ts-ignore
-                getHitBlock(): org.bukkit.block.Block
+                public getHitBlock(): org.bukkit.block.Block
                 /**
                  * Gets the hit block face.
                  * @return the hit block face, or <code>null</code> if not available
                  */
                 // @ts-ignore
-                getHitBlockFace(): org.bukkit.block.BlockFace
+                public getHitBlockFace(): org.bukkit.block.BlockFace
                 /**
                  * Gets the hit entity.
                  * @return the hit entity, or <code>null</code> if not available
                  */
                 // @ts-ignore
-                getHitEntity(): org.bukkit.entity.Entity
+                public getHitEntity(): org.bukkit.entity.Entity
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

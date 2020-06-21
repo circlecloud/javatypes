@@ -13,7 +13,7 @@ declare namespace org {
                  * @see org.springframework.web.context.support.WebApplicationContextUtils
                  */
                 // @ts-ignore
-                class FacesContextUtils extends java.lang.Object {
+                abstract class FacesContextUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -26,7 +26,7 @@ declare namespace org {
                      * @see org.springframework.web.context.WebApplicationContext#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE
                      */
                     // @ts-ignore
-                    getWebApplicationContext(fc: FacesContext): org.springframework.web.context.WebApplicationContext
+                    public static getWebApplicationContext(fc: FacesContext): org.springframework.web.context.WebApplicationContext
                     /**
                      * Find the root {@link WebApplicationContext} for this web app, typically
                      * loaded via {@link org.springframework.web.context.ContextLoaderListener}.
@@ -38,7 +38,7 @@ declare namespace org {
                      * @see org.springframework.web.context.WebApplicationContext#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE
                      */
                     // @ts-ignore
-                    getRequiredWebApplicationContext(fc: FacesContext): org.springframework.web.context.WebApplicationContext
+                    public static getRequiredWebApplicationContext(fc: FacesContext): org.springframework.web.context.WebApplicationContext
                     /**
                      * Return the best available mutex for the given session:
                      * that is, an object to synchronize on for the given session.
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see org.springframework.web.util.HttpSessionMutexListener
                      */
                     // @ts-ignore
-                    getSessionMutex(fc: FacesContext): java.lang.Object
+                    public static getSessionMutex(fc: FacesContext): any
                 }
             }
         }

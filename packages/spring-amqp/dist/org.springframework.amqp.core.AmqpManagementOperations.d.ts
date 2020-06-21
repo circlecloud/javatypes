@@ -22,7 +22,7 @@ declare namespace org {
                      * @param exchange the exchange.
                      */
                     // @ts-ignore
-                    addExchange(vhost: string, exchange: org.springframework.amqp.core.Exchange): void
+                    addExchange(vhost: java.lang.String | string, exchange: org.springframework.amqp.core.Exchange): void
                     /**
                      * Purge a queue in the default vhost ('/').
                      * @param queue the queue.
@@ -35,7 +35,7 @@ declare namespace org {
                      * @param queue the queue.
                      */
                     // @ts-ignore
-                    purgeQueue(vhost: string, queue: org.springframework.amqp.core.Queue): void
+                    purgeQueue(vhost: java.lang.String | string, queue: org.springframework.amqp.core.Queue): void
                     /**
                      * Delete a queue from the default vhost ('/').
                      * @param queue the queue.
@@ -48,14 +48,14 @@ declare namespace org {
                      * @param queue the queue.
                      */
                     // @ts-ignore
-                    deleteQueue(vhost: string, queue: org.springframework.amqp.core.Queue): void
+                    deleteQueue(vhost: java.lang.String | string, queue: org.springframework.amqp.core.Queue): void
                     /**
                      * Get a specific queue from the default vhost ('/').
                      * @param name the queue name.
                      * @return the Queue.
                      */
                     // @ts-ignore
-                    getQueue(name: string): org.springframework.amqp.core.Queue
+                    getQueue(name: java.lang.String | string): org.springframework.amqp.core.Queue
                     /**
                      * Get a specific queue from the provided vhost.
                      * @param vhost the vhost.
@@ -63,20 +63,20 @@ declare namespace org {
                      * @return the Queue.
                      */
                     // @ts-ignore
-                    getQueue(vhost: string, name: string): org.springframework.amqp.core.Queue
+                    getQueue(vhost: java.lang.String | string, name: java.lang.String | string): org.springframework.amqp.core.Queue
                     /**
                      * Get all queues.
                      * @return the queues.
                      */
                     // @ts-ignore
-                    getQueues(): java.util.List<org.springframework.amqp.core.Queue>
+                    getQueues(): Array<org.springframework.amqp.core.Queue>
                     /**
                      * Get all queues in the provided vhost.
                      * @param vhost the vhost.
                      * @return the queues.
                      */
                     // @ts-ignore
-                    getQueues(vhost: string): java.util.List<org.springframework.amqp.core.Queue>
+                    getQueues(vhost: java.lang.String | string): Array<org.springframework.amqp.core.Queue>
                     /**
                      * Add a queue to the default vhost ('/').
                      * @param queue the queue.
@@ -89,7 +89,7 @@ declare namespace org {
                      * @param queue the queue.
                      */
                     // @ts-ignore
-                    addQueue(vhost: string, queue: org.springframework.amqp.core.Queue): void
+                    addQueue(vhost: java.lang.String | string, queue: org.springframework.amqp.core.Queue): void
                     /**
                      * Delete an exchange from the default vhost ('/').
                      * @param exchange the queue.
@@ -102,14 +102,14 @@ declare namespace org {
                      * @param exchange the queue.
                      */
                     // @ts-ignore
-                    deleteExchange(vhost: string, exchange: org.springframework.amqp.core.Exchange): void
+                    deleteExchange(vhost: java.lang.String | string, exchange: org.springframework.amqp.core.Exchange): void
                     /**
                      * Get a specific queue from the default vhost ('/').
                      * @param name the exchange name.
                      * @return the Exchange.
                      */
                     // @ts-ignore
-                    getExchange(name: string): org.springframework.amqp.core.Exchange
+                    getExchange(name: java.lang.String | string): org.springframework.amqp.core.Exchange
                     /**
                      * Get a specific exchange from the provided vhost.
                      * @param vhost the vhost.
@@ -117,13 +117,13 @@ declare namespace org {
                      * @return the Exchange.
                      */
                     // @ts-ignore
-                    getExchange(vhost: string, name: string): org.springframework.amqp.core.Exchange
+                    getExchange(vhost: java.lang.String | string, name: java.lang.String | string): org.springframework.amqp.core.Exchange
                     /**
                      * Get all exchanges.
                      * @return the exchanges.
                      */
                     // @ts-ignore
-                    getExchanges(): java.util.List<org.springframework.amqp.core.Exchange>
+                    getExchanges(): Array<org.springframework.amqp.core.Exchange>
                     /**
                      * Get all exchanges in the provided vhost. Only {@link DirectExchange},
                      * {@link FanoutExchange}, {@link HeadersExchange} and {@link TopicExchange}s
@@ -132,20 +132,20 @@ declare namespace org {
                      * @return the exchanges.
                      */
                     // @ts-ignore
-                    getExchanges(vhost: string): java.util.List<org.springframework.amqp.core.Exchange>
+                    getExchanges(vhost: java.lang.String | string): Array<org.springframework.amqp.core.Exchange>
                     /**
                      * Get all bindings.
                      * @return the bindings.
                      */
                     // @ts-ignore
-                    getBindings(): java.util.List<org.springframework.amqp.core.Binding>
+                    getBindings(): Array<org.springframework.amqp.core.Binding>
                     /**
                      * Get all bindings in the provided vhost.
                      * @param vhost the vhost.
                      * @return the bindings.
                      */
                     // @ts-ignore
-                    getBindings(vhost: string): java.util.List<org.springframework.amqp.core.Binding>
+                    getBindings(vhost: java.lang.String | string): Array<org.springframework.amqp.core.Binding>
                     /**
                      * Get all bindings from the provided exchange in the provided vhost.
                      * @param vhost the vhost.
@@ -153,7 +153,7 @@ declare namespace org {
                      * @return the bindings.
                      */
                     // @ts-ignore
-                    getBindingsForExchange(vhost: string, exchange: string): java.util.List<org.springframework.amqp.core.Binding>
+                    getBindingsForExchange(vhost: java.lang.String | string, exchange: java.lang.String | string): Array<org.springframework.amqp.core.Binding>
                 }
             }
         }

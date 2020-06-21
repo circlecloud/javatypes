@@ -36,7 +36,7 @@ declare namespace javax {
                  * @param name the name of the <code>WebServicePermission</code>
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new permission with the specified name and actions.
                  * The <code>actions</code> parameter is currently unused and
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @param actions should be <code>null</code>
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

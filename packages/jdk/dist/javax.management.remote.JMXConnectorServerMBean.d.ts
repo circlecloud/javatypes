@@ -105,7 +105,7 @@ declare namespace javax {
                  *  empty.
                  */
                 // @ts-ignore
-                getConnectionIds(): java.lang.String[]
+                getConnectionIds(): string[]
                 /**
                  * <p>The address of this connector server.</p>
                  * <p>
@@ -133,7 +133,7 @@ declare namespace javax {
                  *  attributes, the returned map is empty.
                  */
                 // @ts-ignore
-                getAttributes(): java.util.Map<java.lang.String, ?>
+                getAttributes(): java.util.Map<java.lang.String | string, any>
                 /**
                  * <p>Returns a client stub for this connector server.  A client
                  * stub is a serializable object whose {@link
@@ -156,7 +156,7 @@ declare namespace javax {
                  *  stub cannot be created.
                  */
                 // @ts-ignore
-                toJMXConnector(env: java.util.Map<java.lang.String, any>): javax.management.remote.JMXConnector
+                toJMXConnector(env: java.util.Map<java.lang.String | string, any>): javax.management.remote.JMXConnector
             }
         }
     }

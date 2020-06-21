@@ -13,7 +13,7 @@ declare namespace org {
                  * @return the knockback strength value
                  */
                 // @ts-ignore
-                getKnockbackStrength(): int
+                getKnockbackStrength(): number /*int*/
                 /**
                  * Sets the knockback strength for an arrow.
                  * @param knockbackStrength the knockback strength value
@@ -28,7 +28,7 @@ declare namespace org {
                  * @return base damage amount
                  */
                 // @ts-ignore
-                getDamage(): double
+                getDamage(): number /*double*/
                 /**
                  * Sets the base amount of damage this arrow will do.
                  * @param damage new damage amount
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return pierce level
                  */
                 // @ts-ignore
-                getPierceLevel(): int
+                getPierceLevel(): number /*int*/
                 /**
                  * Sets the number of times this arrow can pierce through an entity.
                  * Must be between 0 and 127 times.

@@ -14,7 +14,7 @@ declare namespace org {
                          * Return the form field value.
                          */
                         // @ts-ignore
-                        value(): java.lang.String
+                        value(): string
                     }
                 }
             }

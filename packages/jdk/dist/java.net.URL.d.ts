@@ -176,7 +176,7 @@ declare namespace java {
              *                   java.lang.String)
              */
             // @ts-ignore
-            constructor(protocol: string, host: string, port: number /*int*/, file: string)
+            constructor(protocol: java.lang.String | string, host: java.lang.String | string, port: number /*int*/, file: java.lang.String | string)
             /**
              * Creates a URL from the specified {@code protocol}
              * name, {@code host} name, and {@code file} name. The
@@ -194,7 +194,7 @@ declare namespace java {
              *                   int, java.lang.String)
              */
             // @ts-ignore
-            constructor(protocol: string, host: string, file: string)
+            constructor(protocol: java.lang.String | string, host: java.lang.String | string, file: java.lang.String | string)
             /**
              * Creates a {@code URL} object from the specified
              * {@code protocol}, {@code host}, {@code port}
@@ -232,7 +232,7 @@ declare namespace java {
              * @see java.net.NetPermission
              */
             // @ts-ignore
-            constructor(protocol: string, host: string, port: number /*int*/, file: string, handler: java.net.URLStreamHandler)
+            constructor(protocol: java.lang.String | string, host: java.lang.String | string, port: number /*int*/, file: java.lang.String | string, handler: java.net.URLStreamHandler)
             /**
              * Creates a {@code URL} object from the {@code String}
              * representation.
@@ -245,7 +245,7 @@ declare namespace java {
              * @see java.net.URL#URL(java.net.URL, java.lang.String)
              */
             // @ts-ignore
-            constructor(spec: string)
+            constructor(spec: java.lang.String | string)
             /**
              * Creates a URL by parsing the given spec within a specified context.
              * The new URL is created from the given context URL and the spec
@@ -292,7 +292,7 @@ declare namespace java {
              *                   java.lang.String, int, int)
              */
             // @ts-ignore
-            constructor(context: java.net.URL, spec: string)
+            constructor(context: java.net.URL, spec: java.lang.String | string)
             /**
              * Creates a URL by parsing the given spec with the specified handler
              * within a specified context. If the handler is null, the parsing
@@ -313,7 +313,7 @@ declare namespace java {
              *                   java.lang.String, int, int)
              */
             // @ts-ignore
-            constructor(context: java.net.URL, spec: string, handler: java.net.URLStreamHandler)
+            constructor(context: java.net.URL, spec: java.lang.String | string, handler: java.net.URLStreamHandler)
             /**
              * Gets the query part of this {@code URL}.
              * @return the query part of this {#code URL},
@@ -321,7 +321,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getQuery(): java.lang.String
+            public getQuery(): string
             /**
              * Gets the path part of this {@code URL}.
              * @return the path part of this {#code URL}, or an
@@ -329,7 +329,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getPath(): java.lang.String
+            public getPath(): string
             /**
              * Gets the userInfo part of this {@code URL}.
              * @return the userInfo part of this {#code URL}, or
@@ -337,20 +337,20 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getUserInfo(): java.lang.String
+            public getUserInfo(): string
             /**
              * Gets the authority part of this {@code URL}.
              * @return the authority part of this {#code URL}
              * @since 1.3
              */
             // @ts-ignore
-            getAuthority(): java.lang.String
+            public getAuthority(): string
             /**
              * Gets the port number of this {@code URL}.
              * @return the port number, or -1 if the port is not set
              */
             // @ts-ignore
-            getPort(): int
+            public getPort(): number /*int*/
             /**
              * Gets the default port number of the protocol associated
              * with this {@code URL}. If the URL scheme or the URLStreamHandler
@@ -360,13 +360,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDefaultPort(): int
+            public getDefaultPort(): number /*int*/
             /**
              * Gets the protocol name of this {@code URL}.
              * @return the protocol of this {#code URL}.
              */
             // @ts-ignore
-            getProtocol(): java.lang.String
+            public getProtocol(): string
             /**
              * Gets the host name of this {@code URL}, if applicable.
              * The format of the host conforms to RFC 2732, i.e. for a
@@ -375,7 +375,7 @@ declare namespace java {
              * @return the host name of this {#code URL}.
              */
             // @ts-ignore
-            getHost(): java.lang.String
+            public getHost(): string
             /**
              * Gets the file name of this {@code URL}.
              * The returned file portion will be
@@ -387,7 +387,7 @@ declare namespace java {
              *  or an empty string if one does not exist
              */
             // @ts-ignore
-            getFile(): java.lang.String
+            public getFile(): string
             /**
              * Gets the anchor (also known as the "reference") of this
              * {@code URL}.
@@ -395,7 +395,7 @@ declare namespace java {
              *           {#code URL}, or <CODE>null</CODE> if one does not exist
              */
             // @ts-ignore
-            getRef(): java.lang.String
+            public getRef(): string
             /**
              * Compares this URL for equality with another object.<p>
              * If the given object is not a URL then this method immediately returns
@@ -416,7 +416,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Creates an integer suitable for hash table indexing.<p>
              * The hash code is based upon all the URL components relevant for URL
@@ -424,7 +424,7 @@ declare namespace java {
              * @return a hash code for this {#code URL}.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares two URLs, excluding the fragment component.<p>
              * Returns {@code true} if this {@code URL} and the
@@ -435,7 +435,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            sameFile(other: java.net.URL): boolean
+            public sameFile(other: java.net.URL): boolean
             /**
              * Constructs a string representation of this {@code URL}. The
              * string is created by calling the {@code toExternalForm}
@@ -446,7 +446,7 @@ declare namespace java {
              * @see java.net.URLStreamHandler#toExternalForm(java.net.URL)
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Constructs a string representation of this {@code URL}. The
              * string is created by calling the {@code toExternalForm}
@@ -457,7 +457,7 @@ declare namespace java {
              * @see java.net.URLStreamHandler#toExternalForm(java.net.URL)
              */
             // @ts-ignore
-            toExternalForm(): java.lang.String
+            public toExternalForm(): string
             /**
              * Returns a {@link java.net.URI} equivalent to this URL.
              * This method functions in the same way as {@code new URI (this.toString())}.
@@ -470,7 +470,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toURI(): java.net.URI
+            public toURI(): java.net.URI
             /**
              * Returns a {@link java.net.URLConnection URLConnection} instance that
              * represents a connection to the remote object referred to by the
@@ -497,7 +497,7 @@ declare namespace java {
              *              int, java.lang.String)
              */
             // @ts-ignore
-            openConnection(): java.net.URLConnection
+            public openConnection(): java.net.URLConnection
             /**
              * Same as {@link #openConnection()}, except that the connection will be
              * made through the specified proxy; Protocol handlers that do not
@@ -526,7 +526,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            openConnection(proxy: java.net.Proxy): java.net.URLConnection
+            public openConnection(proxy: java.net.Proxy): java.net.URLConnection
             /**
              * Opens a connection to this {@code URL} and returns an
              * {@code InputStream} for reading from that connection. This
@@ -540,7 +540,7 @@ declare namespace java {
              * @see java.net.URLConnection#getInputStream()
              */
             // @ts-ignore
-            openStream(): java.io.InputStream
+            public openStream(): java.io.InputStream
             /**
              * Gets the contents of this URL. This method is a shorthand for:
              * <blockquote><pre>
@@ -551,7 +551,7 @@ declare namespace java {
              * @see java.net.URLConnection#getContent()
              */
             // @ts-ignore
-            getContent(): java.lang.Object
+            public getContent(): any
             /**
              * Gets the contents of this URL. This method is a shorthand for:
              * <blockquote><pre>
@@ -566,7 +566,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getContent(classes: java.lang.Class[]): java.lang.Object
+            public getContent(classes: java.lang.Class<any>[]): any
             /**
              * Sets an application's {@code URLStreamHandlerFactory}.
              * This method can be called at most once in a given Java Virtual
@@ -588,7 +588,7 @@ declare namespace java {
              * @see SecurityManager#checkSetFactory
              */
             // @ts-ignore
-            setURLStreamHandlerFactory(fac: java.net.URLStreamHandlerFactory): void
+            public static setURLStreamHandlerFactory(fac: java.net.URLStreamHandlerFactory): void
         }
     }
 }

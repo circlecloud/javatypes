@@ -65,14 +65,14 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getCodeSource(): java.security.CodeSource
+            public getCodeSource(): java.security.CodeSource
             /**
              * Returns the ClassLoader of this domain.
              * @return the ClassLoader of this domain which may be null.
              * @since 1.4
              */
             // @ts-ignore
-            getClassLoader(): java.lang.ClassLoader
+            public getClassLoader(): java.lang.ClassLoader
             /**
              * Returns an array of principals for this domain.
              * @return a non-null array of principals for this domain.
@@ -80,7 +80,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPrincipals(): java.security.Principal[]
+            public getPrincipals(): java.security.Principal[]
             /**
              * Returns the static permissions granted to this domain.
              * @return the static set of permissions for this domain which may be null.
@@ -88,7 +88,7 @@ declare namespace java {
              * @see Policy#getPermissions(ProtectionDomain)
              */
             // @ts-ignore
-            getPermissions(): java.security.PermissionCollection
+            public getPermissions(): java.security.PermissionCollection
             /**
              * Check and see if this ProtectionDomain implies the permissions
              * expressed in the Permission object.
@@ -115,12 +115,12 @@ declare namespace java {
              * @return true if "permission" is implicit to this ProtectionDomain.
              */
             // @ts-ignore
-            implies(permission: java.security.Permission): boolean
+            public implies(permission: java.security.Permission): boolean
             /**
              * Convert a ProtectionDomain to a String.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

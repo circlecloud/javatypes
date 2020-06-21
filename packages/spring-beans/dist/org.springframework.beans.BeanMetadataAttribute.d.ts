@@ -15,31 +15,31 @@ declare namespace org {
                  * @param value the value of the attribute (possibly before type conversion)
                  */
                 // @ts-ignore
-                constructor(name: string, value: any)
+                constructor(name: java.lang.String | string, value: java.lang.Object | any)
                 /**
                  * Return the name of the attribute.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Return the value of the attribute.
                  */
                 // @ts-ignore
-                getValue(): java.lang.Object
+                public getValue(): any
                 /**
                  * Set the configuration source {@code Object} for this metadata element.
                  * <p>The exact type of the object will depend on the configuration mechanism used.
                  */
                 // @ts-ignore
-                setSource(source: any): void
+                public setSource(source: java.lang.Object | any): void
                 // @ts-ignore
-                getSource(): java.lang.Object
+                public getSource(): any
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

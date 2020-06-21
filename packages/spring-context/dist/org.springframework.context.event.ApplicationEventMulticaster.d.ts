@@ -26,7 +26,7 @@ declare namespace org {
                      * @param listenerBeanName the name of the listener bean to add
                      */
                     // @ts-ignore
-                    addApplicationListenerBean(listenerBeanName: string): void
+                    addApplicationListenerBean(listenerBeanName: java.lang.String | string): void
                     /**
                      * Remove a listener from the notification list.
                      * @param listener the listener to remove
@@ -38,7 +38,7 @@ declare namespace org {
                      * @param listenerBeanName the name of the listener bean to remove
                      */
                     // @ts-ignore
-                    removeApplicationListenerBean(listenerBeanName: string): void
+                    removeApplicationListenerBean(listenerBeanName: java.lang.String | string): void
                     /**
                      * Remove all listeners registered with this multicaster.
                      * <p>After a remove call, the multicaster will perform no action

@@ -25,11 +25,11 @@ declare namespace org {
                  * @return true if powered, otherwise false
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.RedstoneWire
+                public clone(): org.bukkit.material.RedstoneWire
             }
         }
     }

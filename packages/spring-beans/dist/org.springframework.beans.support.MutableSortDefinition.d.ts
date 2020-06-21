@@ -35,7 +35,7 @@ declare namespace org {
                      * @param ascending whether to sort ascending (true) or descending (false)
                      */
                     // @ts-ignore
-                    constructor(property: string, ignoreCase: boolean, ascending: boolean)
+                    constructor(property: java.lang.String | string, ignoreCase: boolean, ascending: boolean)
                     /**
                      * Create a new MutableSortDefinition.
                      * @param toggleAscendingOnSameProperty whether to toggle the ascending flag
@@ -51,23 +51,23 @@ declare namespace org {
                      * @see #setToggleAscendingOnProperty
                      */
                     // @ts-ignore
-                    setProperty(property: string): void
+                    public setProperty(property: java.lang.String | string): void
                     // @ts-ignore
-                    getProperty(): java.lang.String
+                    public getProperty(): string
                     /**
                      * Set whether upper and lower case in String values should be ignored.
                      */
                     // @ts-ignore
-                    setIgnoreCase(ignoreCase: boolean): void
+                    public setIgnoreCase(ignoreCase: boolean): void
                     // @ts-ignore
-                    isIgnoreCase(): boolean
+                    public isIgnoreCase(): boolean
                     /**
                      * Set whether to sort ascending (true) or descending (false).
                      */
                     // @ts-ignore
-                    setAscending(ascending: boolean): void
+                    public setAscending(ascending: boolean): void
                     // @ts-ignore
-                    isAscending(): boolean
+                    public isAscending(): boolean
                     /**
                      * Set whether to toggle the ascending flag if the same property gets set again
                      * (that is, {@link #setProperty} gets called with already set property name again).
@@ -76,17 +76,17 @@ declare namespace org {
                      * resort for the same field but opposite order.
                      */
                     // @ts-ignore
-                    setToggleAscendingOnProperty(toggleAscendingOnProperty: boolean): void
+                    public setToggleAscendingOnProperty(toggleAscendingOnProperty: boolean): void
                     /**
                      * Return whether to toggle the ascending flag if the same property gets set again
                      * (that is, {@code setProperty} gets called with already set property name again).
                      */
                     // @ts-ignore
-                    isToggleAscendingOnProperty(): boolean
+                    public isToggleAscendingOnProperty(): boolean
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

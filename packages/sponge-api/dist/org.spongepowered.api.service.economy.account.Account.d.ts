@@ -54,7 +54,7 @@ declare namespace org {
                              *      {#link Currency} and {@link Context}s
                              */
                             // @ts-ignore
-                            hasBalance(currency: org.spongepowered.api.service.economy.Currency, contexts: Array<org.spongepowered.api.service.context.Context>): boolean
+                            hasBalance(currency: org.spongepowered.api.service.economy.Currency, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): boolean
                             /**
                              * Returns whether this account has a set balance for the specified
                              * {@link Currency}, with the current active contexts.
@@ -81,7 +81,7 @@ declare namespace org {
                              *      the specified {@link Context}s.
                              */
                             // @ts-ignore
-                            getBalance(currency: org.spongepowered.api.service.economy.Currency, contexts: Array<org.spongepowered.api.service.context.Context>): java.math.BigDecimal
+                            getBalance(currency: org.spongepowered.api.service.economy.Currency, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.math.BigDecimal
                             /**
                              * Returns a {@link BigDecimal} representative of the balance stored
                              * within this {@link Account} for the {@link Currency} given, with
@@ -109,7 +109,7 @@ declare namespace org {
                              *      that this account holds
                              */
                             // @ts-ignore
-                            getBalances(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.Map<org.spongepowered.api.service.economy.Currency, java.math.BigDecimal>
+                            getBalances(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.Map<org.spongepowered.api.service.economy.Currency, java.math.BigDecimal>
                             /**
                              * Returns a {@link Map} of all currently set balances the account holds
                              * within the current active {@link Context}s.2
@@ -139,7 +139,7 @@ declare namespace org {
                              * @return The result of the transaction
                              */
                             // @ts-ignore
-                            setBalance(currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
+                            setBalance(currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
                             /**
                              * Sets the balance for this account to the specified amount for the
                              * specified {@link Currency}, with the current active {@link Context}s.
@@ -162,7 +162,7 @@ declare namespace org {
                              *      entry represents the result of resetting a particular currency.
                              */
                             // @ts-ignore
-                            resetBalances(cause: org.spongepowered.api.event.cause.Cause, contexts: Array<org.spongepowered.api.service.context.Context>): java.util.Map<org.spongepowered.api.service.economy.Currency, org.spongepowered.api.service.economy.transaction.TransactionResult>
+                            resetBalances(cause: org.spongepowered.api.event.cause.Cause, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.Map<org.spongepowered.api.service.economy.Currency, org.spongepowered.api.service.economy.transaction.TransactionResult>
                             /**
                              * Resets the balances for all {@link Currency}s used on this account to
                              * their default values ({@link #getDefaultBalance(Currency)}), using
@@ -183,7 +183,7 @@ declare namespace org {
                              * @return The result of the transaction
                              */
                             // @ts-ignore
-                            resetBalance(currency: org.spongepowered.api.service.economy.Currency, cause: org.spongepowered.api.event.cause.Cause, contexts: Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
+                            resetBalance(currency: org.spongepowered.api.service.economy.Currency, cause: org.spongepowered.api.event.cause.Cause, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
                             /**
                              * Resets the balance for the specified {@link Currency} to its default
                              * value ({@link #getDefaultBalance(Currency)}),
@@ -205,7 +205,7 @@ declare namespace org {
                              * @return The result of the transaction
                              */
                             // @ts-ignore
-                            deposit(currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
+                            deposit(currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
                             /**
                              * Deposits the given amount of the specified {@link Currency} to
                              * this account, using the current active {@link Context}s.
@@ -227,7 +227,7 @@ declare namespace org {
                              * @return The result of the transaction
                              */
                             // @ts-ignore
-                            withdraw(currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
+                            withdraw(currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransactionResult
                             /**
                              * Withdraws the specified amount of the specified {@link Currency} from
                              * this account, using the current active {@link Context}s.
@@ -255,7 +255,7 @@ declare namespace org {
                              *      the operation
                              */
                             // @ts-ignore
-                            transfer(to: org.spongepowered.api.service.economy.account.Account, currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransferResult
+                            transfer(to: org.spongepowered.api.service.economy.account.Account, currency: org.spongepowered.api.service.economy.Currency, amount: java.math.BigDecimal, cause: org.spongepowered.api.event.cause.Cause, contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): org.spongepowered.api.service.economy.transaction.TransferResult
                             /**
                              * Transfers the specified amount of the specified {@link Currency}
                              * from this account the destination account,

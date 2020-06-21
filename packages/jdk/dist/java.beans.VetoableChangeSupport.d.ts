@@ -46,7 +46,7 @@ declare namespace java {
              * @param sourceBean  The bean to be given as the source for any events.
              */
             // @ts-ignore
-            constructor(sourceBean: any)
+            constructor(sourceBean: java.lang.Object | any)
             /**
              * Add a VetoableChangeListener to the listener list.
              * The listener is registered for all properties.
@@ -57,7 +57,7 @@ declare namespace java {
              * @param listener  The VetoableChangeListener to be added
              */
             // @ts-ignore
-            addVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
+            public addVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
             /**
              * Remove a VetoableChangeListener from the listener list.
              * This removes a VetoableChangeListener that was registered
@@ -69,7 +69,7 @@ declare namespace java {
              * @param listener  The VetoableChangeListener to be removed
              */
             // @ts-ignore
-            removeVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
+            public removeVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
             /**
              * Returns an array of all the listeners that were added to the
              * VetoableChangeSupport object with addVetoableChangeListener().
@@ -100,7 +100,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getVetoableChangeListeners(): java.beans.VetoableChangeListener[]
+            public getVetoableChangeListeners(): java.beans.VetoableChangeListener[]
             /**
              * Add a VetoableChangeListener for a specific property.  The listener
              * will be invoked only when a call on fireVetoableChange names that
@@ -114,7 +114,7 @@ declare namespace java {
              * @param listener  The VetoableChangeListener to be added
              */
             // @ts-ignore
-            addVetoableChangeListener(propertyName: string, listener: java.beans.VetoableChangeListener): void
+            public addVetoableChangeListener(propertyName: java.lang.String | string, listener: java.beans.VetoableChangeListener): void
             /**
              * Remove a VetoableChangeListener for a specific property.
              * If <code>listener</code> was added more than once to the same event
@@ -128,7 +128,7 @@ declare namespace java {
              * @param listener  The VetoableChangeListener to be removed
              */
             // @ts-ignore
-            removeVetoableChangeListener(propertyName: string, listener: java.beans.VetoableChangeListener): void
+            public removeVetoableChangeListener(propertyName: java.lang.String | string, listener: java.beans.VetoableChangeListener): void
             /**
              * Returns an array of all the listeners which have been associated
              * with the named property.
@@ -140,7 +140,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getVetoableChangeListeners(propertyName: string): java.beans.VetoableChangeListener[]
+            public getVetoableChangeListeners(propertyName: java.lang.String | string): java.beans.VetoableChangeListener[]
             /**
              * Reports a constrained property update to listeners
              * that have been registered to track updates of
@@ -162,7 +162,7 @@ declare namespace java {
              * @throws PropertyVetoException if one of listeners vetoes the property update
              */
             // @ts-ignore
-            fireVetoableChange(propertyName: string, oldValue: any, newValue: any): void
+            public fireVetoableChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Reports an integer constrained property update to listeners
              * that have been registered to track updates of
@@ -184,7 +184,7 @@ declare namespace java {
              * @throws PropertyVetoException if one of listeners vetoes the property update
              */
             // @ts-ignore
-            fireVetoableChange(propertyName: string, oldValue: number /*int*/, newValue: number /*int*/): void
+            public fireVetoableChange(propertyName: java.lang.String | string, oldValue: number /*int*/, newValue: number /*int*/): void
             /**
              * Reports a boolean constrained property update to listeners
              * that have been registered to track updates of
@@ -206,7 +206,7 @@ declare namespace java {
              * @throws PropertyVetoException if one of listeners vetoes the property update
              */
             // @ts-ignore
-            fireVetoableChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+            public fireVetoableChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
             /**
              * Fires a property change event to listeners
              * that have been registered to track updates of
@@ -223,7 +223,7 @@ declare namespace java {
              * @throws PropertyVetoException if one of listeners vetoes the property update
              */
             // @ts-ignore
-            fireVetoableChange(event: java.beans.PropertyChangeEvent): void
+            public fireVetoableChange(event: java.beans.PropertyChangeEvent): void
             /**
              * Check if there are any listeners for a specific property, including
              * those registered on all properties.  If <code>propertyName</code>
@@ -232,7 +232,7 @@ declare namespace java {
              * @return true if there are one or more listeners for the given property
              */
             // @ts-ignore
-            hasListeners(propertyName: string): boolean
+            public hasListeners(propertyName: java.lang.String | string): boolean
         }
     }
 }

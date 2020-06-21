@@ -8,27 +8,27 @@ declare namespace org {
                             namespace source {
                                 namespace common {
                                     // @ts-ignore
-                                    class AbstractEntityDamageSource extends java.lang.Object implements org.spongepowered.api.event.cause.entity.damage.source.EntityDamageSource {
+                                    abstract class AbstractEntityDamageSource extends java.lang.Object implements org.spongepowered.api.event.cause.entity.damage.source.EntityDamageSource {
                                         // @ts-ignore
-                                        constructor(builder: org.spongepowered.api.event.cause.entity.damage.source.common.AbstractEntityDamageSource.AbstractEntityDamageSourceBuilder<any, ?>)
+                                        constructor(builder: org.spongepowered.api.event.cause.entity.damage.source.common.AbstractEntityDamageSource.AbstractEntityDamageSourceBuilder<any, any>)
                                         // @ts-ignore
-                                        getSource(): org.spongepowered.api.entity.Entity
+                                        public getSource(): org.spongepowered.api.entity.Entity
                                         // @ts-ignore
-                                        getType(): org.spongepowered.api.event.cause.entity.damage.DamageType
+                                        public getType(): org.spongepowered.api.event.cause.entity.damage.DamageType
                                         // @ts-ignore
-                                        isAbsolute(): boolean
+                                        public isAbsolute(): boolean
                                         // @ts-ignore
-                                        isBypassingArmor(): boolean
+                                        public isBypassingArmor(): boolean
                                         // @ts-ignore
-                                        isScaledByDifficulty(): boolean
+                                        public isScaledByDifficulty(): boolean
                                         // @ts-ignore
-                                        isExplosive(): boolean
+                                        public isExplosive(): boolean
                                         // @ts-ignore
-                                        isMagic(): boolean
+                                        public isMagic(): boolean
                                         // @ts-ignore
-                                        doesAffectCreative(): boolean
+                                        public doesAffectCreative(): boolean
                                         // @ts-ignore
-                                        getExhaustion(): double
+                                        public getExhaustion(): number /*double*/
                                     }
                                 }
                             }

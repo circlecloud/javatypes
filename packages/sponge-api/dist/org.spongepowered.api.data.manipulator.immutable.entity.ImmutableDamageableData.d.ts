@@ -30,7 +30,7 @@ declare namespace org {
                                  * @return The last damage dealt as an optional value
                                  */
                                 // @ts-ignore
-                                lastDamage(): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<java.lang.Double>
+                                lastDamage(): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<java.lang.Double | number>
                             }
                         }
                     }

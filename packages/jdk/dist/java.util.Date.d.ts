@@ -173,12 +173,12 @@ declare namespace java {
              *  replaced by <code>DateFormat.parse(String s)</code>.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Return a copy of this object.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Determines the date and time based on the arguments. The
              * arguments are interpreted as a year, month, day of the month,
@@ -204,7 +204,7 @@ declare namespace java {
              *  <code>TimeZone</code>, followed by <code>Calendar.getTime().getTime()</code>.
              */
             // @ts-ignore
-            UTC(year: number /*int*/, month: number /*int*/, date: number /*int*/, hrs: number /*int*/, min: number /*int*/, sec: number /*int*/): long
+            public static UTC(year: number /*int*/, month: number /*int*/, date: number /*int*/, hrs: number /*int*/, min: number /*int*/, sec: number /*int*/): number /*long*/
             /**
              * Attempts to interpret the string <tt>s</tt> as a representation
              * of a date and time. If the attempt is successful, the time
@@ -318,7 +318,7 @@ declare namespace java {
              *  replaced by <code>DateFormat.parse(String s)</code>.
              */
             // @ts-ignore
-            parse(s: string): long
+            public static parse(s: java.lang.String | string): number /*long*/
             /**
              * Returns a value that is the result of subtracting 1900 from the
              * year that contains or begins with the instant in time represented
@@ -330,7 +330,7 @@ declare namespace java {
              *  replaced by <code>Calendar.get(Calendar.YEAR) - 1900</code>.
              */
             // @ts-ignore
-            getYear(): int
+            public getYear(): number /*int*/
             /**
              * Sets the year of this <tt>Date</tt> object to be the specified
              * value plus 1900. This <code>Date</code> object is modified so
@@ -346,7 +346,7 @@ declare namespace java {
              *  replaced by <code>Calendar.set(Calendar.YEAR, year + 1900)</code>.
              */
             // @ts-ignore
-            setYear(year: number /*int*/): void
+            public setYear(year: number /*int*/): void
             /**
              * Returns a number representing the month that contains or begins
              * with the instant in time represented by this <tt>Date</tt> object.
@@ -358,7 +358,7 @@ declare namespace java {
              *  replaced by <code>Calendar.get(Calendar.MONTH)</code>.
              */
             // @ts-ignore
-            getMonth(): int
+            public getMonth(): number /*int*/
             /**
              * Sets the month of this date to the specified value. This
              * <tt>Date</tt> object is modified so that it represents a point
@@ -373,7 +373,7 @@ declare namespace java {
              *  replaced by <code>Calendar.set(Calendar.MONTH, int month)</code>.
              */
             // @ts-ignore
-            setMonth(month: number /*int*/): void
+            public setMonth(month: number /*int*/): void
             /**
              * Returns the day of the month represented by this <tt>Date</tt> object.
              * The value returned is between <code>1</code> and <code>31</code>
@@ -387,7 +387,7 @@ declare namespace java {
              * @deprecated 
              */
             // @ts-ignore
-            getDate(): int
+            public getDate(): number /*int*/
             /**
              * Sets the day of the month of this <tt>Date</tt> object to the
              * specified value. This <tt>Date</tt> object is modified so that
@@ -403,7 +403,7 @@ declare namespace java {
              *  replaced by <code>Calendar.set(Calendar.DAY_OF_MONTH, int date)</code>.
              */
             // @ts-ignore
-            setDate(date: number /*int*/): void
+            public setDate(date: number /*int*/): void
             /**
              * Returns the day of the week represented by this date. The
              * returned value (<tt>0</tt> = Sunday, <tt>1</tt> = Monday,
@@ -418,7 +418,7 @@ declare namespace java {
              *  replaced by <code>Calendar.get(Calendar.DAY_OF_WEEK)</code>.
              */
             // @ts-ignore
-            getDay(): int
+            public getDay(): number /*int*/
             /**
              * Returns the hour represented by this <tt>Date</tt> object. The
              * returned value is a number (<tt>0</tt> through <tt>23</tt>)
@@ -431,7 +431,7 @@ declare namespace java {
              *  replaced by <code>Calendar.get(Calendar.HOUR_OF_DAY)</code>.
              */
             // @ts-ignore
-            getHours(): int
+            public getHours(): number /*int*/
             /**
              * Sets the hour of this <tt>Date</tt> object to the specified value.
              * This <tt>Date</tt> object is modified so that it represents a point
@@ -444,7 +444,7 @@ declare namespace java {
              *  replaced by <code>Calendar.set(Calendar.HOUR_OF_DAY, int hours)</code>.
              */
             // @ts-ignore
-            setHours(hours: number /*int*/): void
+            public setHours(hours: number /*int*/): void
             /**
              * Returns the number of minutes past the hour represented by this date,
              * as interpreted in the local time zone.
@@ -455,7 +455,7 @@ declare namespace java {
              *  replaced by <code>Calendar.get(Calendar.MINUTE)</code>.
              */
             // @ts-ignore
-            getMinutes(): int
+            public getMinutes(): number /*int*/
             /**
              * Sets the minutes of this <tt>Date</tt> object to the specified value.
              * This <tt>Date</tt> object is modified so that it represents a point
@@ -468,7 +468,7 @@ declare namespace java {
              *  replaced by <code>Calendar.set(Calendar.MINUTE, int minutes)</code>.
              */
             // @ts-ignore
-            setMinutes(minutes: number /*int*/): void
+            public setMinutes(minutes: number /*int*/): void
             /**
              * Returns the number of seconds past the minute represented by this date.
              * The value returned is between <code>0</code> and <code>61</code>. The
@@ -480,7 +480,7 @@ declare namespace java {
              *  replaced by <code>Calendar.get(Calendar.SECOND)</code>.
              */
             // @ts-ignore
-            getSeconds(): int
+            public getSeconds(): number /*int*/
             /**
              * Sets the seconds of this <tt>Date</tt> to the specified value.
              * This <tt>Date</tt> object is modified so that it represents a
@@ -493,7 +493,7 @@ declare namespace java {
              *  replaced by <code>Calendar.set(Calendar.SECOND, int seconds)</code>.
              */
             // @ts-ignore
-            setSeconds(seconds: number /*int*/): void
+            public setSeconds(seconds: number /*int*/): void
             /**
              * Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT
              * represented by this <tt>Date</tt> object.
@@ -501,14 +501,14 @@ declare namespace java {
              *           represented by this date.
              */
             // @ts-ignore
-            getTime(): long
+            public getTime(): number /*long*/
             /**
              * Sets this <code>Date</code> object to represent a point in time that is
              * <code>time</code> milliseconds after January 1, 1970 00:00:00 GMT.
              * @param time   the number of milliseconds.
              */
             // @ts-ignore
-            setTime(time: number /*long*/): void
+            public setTime(time: number /*long*/): void
             /**
              * Tests if this date is before the specified date.
              * @param when   a date.
@@ -519,7 +519,7 @@ declare namespace java {
              * @exception NullPointerException if <code>when</code> is null.
              */
             // @ts-ignore
-            before(when: java.util.Date): boolean
+            public before(when: java.util.Date): boolean
             /**
              * Tests if this date is after the specified date.
              * @param when   a date.
@@ -530,7 +530,7 @@ declare namespace java {
              * @exception NullPointerException if <code>when</code> is null.
              */
             // @ts-ignore
-            after(when: java.util.Date): boolean
+            public after(when: java.util.Date): boolean
             /**
              * Compares two dates for equality.
              * The result is <code>true</code> if and only if the argument is
@@ -546,7 +546,7 @@ declare namespace java {
              * @see java.util.Date#getTime()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Compares two Dates for ordering.
              * @param anotherDate   the <code>Date</code> to be compared.
@@ -558,7 +558,7 @@ declare namespace java {
              * @exception NullPointerException if <code>anotherDate</code> is null.
              */
             // @ts-ignore
-            compareTo(anotherDate: java.util.Date): int
+            public compareTo(anotherDate: java.util.Date): number /*int*/
             /**
              * Returns a hash code value for this object. The result is the
              * exclusive OR of the two halves of the primitive <tt>long</tt>
@@ -570,7 +570,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Converts this <code>Date</code> object to a <code>String</code>
              * of the form:
@@ -601,7 +601,7 @@ declare namespace java {
              * @see java.util.Date#toGMTString()
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Creates a string representation of this <tt>Date</tt> object in an
              * implementation-dependent form. The intent is that the form should
@@ -618,7 +618,7 @@ declare namespace java {
              *  replaced by <code>DateFormat.format(Date date)</code>.
              */
             // @ts-ignore
-            toLocaleString(): java.lang.String
+            public toLocaleString(): string
             /**
              * Creates a string representation of this <tt>Date</tt> object of
              * the form:
@@ -650,7 +650,7 @@ declare namespace java {
              *  GMT <code>TimeZone</code>.
              */
             // @ts-ignore
-            toGMTString(): java.lang.String
+            public toGMTString(): string
             /**
              * Returns the offset, measured in minutes, for the local time zone
              * relative to UTC that is appropriate for the time represented by
@@ -683,7 +683,7 @@ declare namespace java {
              *  Calendar.get(Calendar.DST_OFFSET)) / (60 * 1000)</code>.
              */
             // @ts-ignore
-            getTimezoneOffset(): int
+            public getTimezoneOffset(): number /*int*/
             /**
              * Obtains an instance of {@code Date} from an {@code Instant} object.
              * <p>
@@ -704,7 +704,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            from(instant: java.time.Instant): java.util.Date
+            public static from(instant: java.time.Instant): java.util.Date
             /**
              * Converts this {@code Date} object to an {@code Instant}.
              * <p>
@@ -715,7 +715,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toInstant(): java.time.Instant
+            public toInstant(): java.time.Instant
         }
     }
 }

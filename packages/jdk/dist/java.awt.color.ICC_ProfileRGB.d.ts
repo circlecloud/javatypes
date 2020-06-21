@@ -46,17 +46,17 @@ declare namespace java {
                  * Used to get a gamma value or TRC for the red component.
                  */
                 // @ts-ignore
-                readonly REDCOMPONENT: number /*int*/
+                public static readonly REDCOMPONENT: number /*int*/
                 /**
                  * Used to get a gamma value or TRC for the green component.
                  */
                 // @ts-ignore
-                readonly GREENCOMPONENT: number /*int*/
+                public static readonly GREENCOMPONENT: number /*int*/
                 /**
                  * Used to get a gamma value or TRC for the blue component.
                  */
                 // @ts-ignore
-                readonly BLUECOMPONENT: number /*int*/
+                public static readonly BLUECOMPONENT: number /*int*/
                 /**
                  * Returns an array that contains the components of the profile's
                  * <CODE>mediaWhitePointTag</CODE>.
@@ -64,7 +64,7 @@ declare namespace java {
                  *  and z components of the profile's <CODE>mediaWhitePointTag</CODE>.
                  */
                 // @ts-ignore
-                getMediaWhitePoint(): float[]
+                public getMediaWhitePoint(): number /*float*/[]
                 /**
                  * Returns a 3x3 <CODE>float</CODE> matrix constructed from the
                  * X, Y, and Z components of the profile's <CODE>redColorantTag</CODE>,
@@ -78,7 +78,7 @@ declare namespace java {
                  *  <CODE>greenColorantTag</CODE>, and <CODE>blueColorantTag</CODE>.
                  */
                 // @ts-ignore
-                getMatrix(): float[][]
+                public getMatrix(): number /*float*/[][]
                 /**
                  * Returns a gamma value representing the tone reproduction curve
                  * (TRC) for a particular component.  The component parameter
@@ -102,7 +102,7 @@ declare namespace java {
                  *             the corresponding TRC as a single gamma value.
                  */
                 // @ts-ignore
-                getGamma(component: number /*int*/): float
+                public getGamma(component: number /*int*/): number /*float*/
                 /**
                  * Returns the TRC for a particular component as an array.
                  * Component must be <code>REDCOMPONENT</code>,
@@ -131,7 +131,7 @@ declare namespace java {
                  *             the corresponding TRC as a table.
                  */
                 // @ts-ignore
-                getTRC(component: number /*int*/): short[]
+                public getTRC(component: number /*int*/): number /*short*/[]
             }
         }
     }

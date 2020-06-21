@@ -82,7 +82,7 @@ declare namespace java {
              * @see AWTPermission
              */
             // @ts-ignore
-            constructor(image: java.awt.Image, tooltip: string)
+            constructor(image: java.awt.Image, tooltip: java.lang.String | string)
             /**
              * Creates a <code>TrayIcon</code> with the specified image,
              * tooltip and popup menu.
@@ -108,7 +108,7 @@ declare namespace java {
              * @see AWTPermission
              */
             // @ts-ignore
-            constructor(image: java.awt.Image, tooltip: string, popup: java.awt.PopupMenu)
+            constructor(image: java.awt.Image, tooltip: java.lang.String | string, popup: java.awt.PopupMenu)
             /**
              * Sets the image for this <code>TrayIcon</code>.  The previous
              * tray icon image is discarded without calling the {@link
@@ -128,7 +128,7 @@ declare namespace java {
              * @see TrayIcon#TrayIcon(Image, String)
              */
             // @ts-ignore
-            setImage(image: java.awt.Image): void
+            public setImage(image: java.awt.Image): void
             /**
              * Returns the current image used for this <code>TrayIcon</code>.
              * @return the image
@@ -136,7 +136,7 @@ declare namespace java {
              * @see Image
              */
             // @ts-ignore
-            getImage(): java.awt.Image
+            public getImage(): java.awt.Image
             /**
              * Sets the popup menu for this <code>TrayIcon</code>.  If
              * <code>popup</code> is <code>null</code>, no popup menu will be
@@ -160,14 +160,14 @@ declare namespace java {
              * @see #getPopupMenu
              */
             // @ts-ignore
-            setPopupMenu(popup: java.awt.PopupMenu): void
+            public setPopupMenu(popup: java.awt.PopupMenu): void
             /**
              * Returns the popup menu associated with this <code>TrayIcon</code>.
              * @return the popup menu or <code>null</code> if none exists
              * @see #setPopupMenu(PopupMenu)
              */
             // @ts-ignore
-            getPopupMenu(): java.awt.PopupMenu
+            public getPopupMenu(): java.awt.PopupMenu
             /**
              * Sets the tooltip string for this <code>TrayIcon</code>. The
              * tooltip is displayed automatically when the mouse hovers over
@@ -180,7 +180,7 @@ declare namespace java {
              * @see #getToolTip
              */
             // @ts-ignore
-            setToolTip(tooltip: string): void
+            public setToolTip(tooltip: java.lang.String | string): void
             /**
              * Returns the tooltip string associated with this
              * <code>TrayIcon</code>.
@@ -188,7 +188,7 @@ declare namespace java {
              * @see #setToolTip(String)
              */
             // @ts-ignore
-            getToolTip(): java.lang.String
+            public getToolTip(): string
             /**
              * Sets the auto-size property.  Auto-size determines whether the
              * tray image is automatically sized to fit the space allocated
@@ -205,7 +205,7 @@ declare namespace java {
              * @see #isImageAutoSize
              */
             // @ts-ignore
-            setImageAutoSize(autosize: boolean): void
+            public setImageAutoSize(autosize: boolean): void
             /**
              * Returns the value of the auto-size property.
              * @return <code>true</code> if the image will be auto-sized,
@@ -213,7 +213,7 @@ declare namespace java {
              * @see #setImageAutoSize(boolean)
              */
             // @ts-ignore
-            isImageAutoSize(): boolean
+            public isImageAutoSize(): boolean
             /**
              * Adds the specified mouse listener to receive mouse events from
              * this <code>TrayIcon</code>.  Calling this method with a
@@ -232,7 +232,7 @@ declare namespace java {
              * @see #getMouseListeners
              */
             // @ts-ignore
-            addMouseListener(listener: java.awt.event.MouseListener): void
+            public addMouseListener(listener: java.awt.event.MouseListener): void
             /**
              * Removes the specified mouse listener.  Calling this method with
              * <code>null</code> or an invalid value has no effect.
@@ -245,7 +245,7 @@ declare namespace java {
              * @see #getMouseListeners
              */
             // @ts-ignore
-            removeMouseListener(listener: java.awt.event.MouseListener): void
+            public removeMouseListener(listener: java.awt.event.MouseListener): void
             /**
              * Returns an array of all the mouse listeners
              * registered on this <code>TrayIcon</code>.
@@ -257,7 +257,7 @@ declare namespace java {
              * @see java.awt.event.MouseListener
              */
             // @ts-ignore
-            getMouseListeners(): java.awt.event.MouseListener[]
+            public getMouseListeners(): java.awt.event.MouseListener[]
             /**
              * Adds the specified mouse listener to receive mouse-motion
              * events from this <code>TrayIcon</code>.  Calling this method
@@ -275,7 +275,7 @@ declare namespace java {
              * @see #getMouseMotionListeners
              */
             // @ts-ignore
-            addMouseMotionListener(listener: java.awt.event.MouseMotionListener): void
+            public addMouseMotionListener(listener: java.awt.event.MouseMotionListener): void
             /**
              * Removes the specified mouse-motion listener.  Calling this method with
              * <code>null</code> or an invalid value has no effect.
@@ -288,7 +288,7 @@ declare namespace java {
              * @see #getMouseMotionListeners
              */
             // @ts-ignore
-            removeMouseMotionListener(listener: java.awt.event.MouseMotionListener): void
+            public removeMouseMotionListener(listener: java.awt.event.MouseMotionListener): void
             /**
              * Returns an array of all the mouse-motion listeners
              * registered on this <code>TrayIcon</code>.
@@ -300,7 +300,7 @@ declare namespace java {
              * @see java.awt.event.MouseMotionListener
              */
             // @ts-ignore
-            getMouseMotionListeners(): java.awt.event.MouseMotionListener[]
+            public getMouseMotionListeners(): java.awt.event.MouseMotionListener[]
             /**
              * Returns the command name of the action event fired by this tray icon.
              * @return the action command name, or <code>null</code> if none exists
@@ -308,7 +308,7 @@ declare namespace java {
              * @see #setActionCommand(String)
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * Sets the command name for the action event fired by this tray
              * icon.  By default, this action command is set to
@@ -320,7 +320,7 @@ declare namespace java {
              * @see #getActionCommand
              */
             // @ts-ignore
-            setActionCommand(command: string): void
+            public setActionCommand(command: java.lang.String | string): void
             /**
              * Adds the specified action listener to receive
              * <code>ActionEvent</code>s from this <code>TrayIcon</code>.
@@ -338,7 +338,7 @@ declare namespace java {
              * @see #setActionCommand(String)
              */
             // @ts-ignore
-            addActionListener(listener: java.awt.event.ActionListener): void
+            public addActionListener(listener: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener.  Calling this method with
              * <code>null</code> or an invalid value has no effect.
@@ -352,7 +352,7 @@ declare namespace java {
              * @see #setActionCommand(String)
              */
             // @ts-ignore
-            removeActionListener(listener: java.awt.event.ActionListener): void
+            public removeActionListener(listener: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this <code>TrayIcon</code>.
@@ -364,7 +364,7 @@ declare namespace java {
              * @see java.awt.event.ActionListener
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Displays a popup message near the tray icon.  The message will
              * disappear after a time or if the user clicks on it.  Clicking
@@ -386,7 +386,7 @@ declare namespace java {
              *  and <code>text</code> are <code>null</code>
              */
             // @ts-ignore
-            displayMessage(caption: string, text: string, messageType: java.awt.TrayIcon.MessageType): void
+            public displayMessage(caption: java.lang.String | string, text: java.lang.String | string, messageType: java.awt.TrayIcon.MessageType): void
             /**
              * Returns the size, in pixels, of the space that the tray icon
              * occupies in the system tray.  For the tray icon that is not yet
@@ -398,7 +398,7 @@ declare namespace java {
              * @see TrayIcon#getSize()
              */
             // @ts-ignore
-            getSize(): java.awt.Dimension
+            public getSize(): java.awt.Dimension
         }
     }
 }

@@ -41,30 +41,30 @@ declare namespace org {
                      * @param resourceNames relatively-qualified names of resources to load
                      */
                     // @ts-ignore
-                    constructor(relativeClass: java.lang.Class<any>, ...resourceNames: string[])
+                    constructor(relativeClass: java.lang.Class<any>, ...resourceNames: java.lang.String[] | string[])
                     /**
                      * Exposes the underlying {@link XmlBeanDefinitionReader} for additional
                      * configuration facilities and {@code loadBeanDefinition} variations.
                      */
                     // @ts-ignore
-                    getReader(): XmlBeanDefinitionReader
+                    public getReader(): XmlBeanDefinitionReader
                     /**
                      * Set whether to use XML validation. Default is {@code true}.
                      */
                     // @ts-ignore
-                    setValidating(validating: boolean): void
+                    public setValidating(validating: boolean): void
                     /**
                      * Delegates the given environment to underlying {@link XmlBeanDefinitionReader}.
                      * Should be called before any call to {@code #load}.
                      */
                     // @ts-ignore
-                    setEnvironment(environment: ConfigurableEnvironment): void
+                    public setEnvironment(environment: ConfigurableEnvironment): void
                     /**
                      * Load bean definitions from the given XML resources.
                      * @param resources one or more resources to load from
                      */
                     // @ts-ignore
-                    load(...resources: Resource[]): void
+                    public load(...resources: Resource[]): void
                     /**
                      * Load bean definitions from the given XML resources.
                      * @param relativeClass class whose package will be used as a prefix when
@@ -72,7 +72,7 @@ declare namespace org {
                      * @param resourceNames relatively-qualified names of resources to load
                      */
                     // @ts-ignore
-                    load(relativeClass: java.lang.Class<any>, ...resourceNames: string[]): void
+                    public load(relativeClass: java.lang.Class<any>, ...resourceNames: java.lang.String[] | string[]): void
                 }
             }
         }

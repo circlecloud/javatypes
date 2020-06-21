@@ -12,9 +12,13 @@ declare namespace org {
                         // @ts-ignore
                         class TypePrecedence extends java.lang.Enum<org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence> {
                             // @ts-ignore
+                            readonly INFERRED: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
+                            // @ts-ignore
+                            readonly TYPE_ID: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
+                            // @ts-ignore
                             values(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence[]
                             // @ts-ignore
-                            valueOf(name: string): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
+                            valueOf(name: java.lang.String | string): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
                         }
                     }
                 }

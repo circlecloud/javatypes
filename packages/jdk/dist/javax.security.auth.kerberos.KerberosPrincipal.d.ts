@@ -32,7 +32,7 @@ declare namespace javax {
                      *  java.security.krb5.realm system property.
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Constructs a KerberosPrincipal from the provided string and
                      * name type input.  The string is assumed to contain a name in the
@@ -59,43 +59,43 @@ declare namespace javax {
                      *  file or via the java.security.krb5.realm system property.
                      */
                     // @ts-ignore
-                    constructor(name: string, nameType: number /*int*/)
+                    constructor(name: java.lang.String | string, nameType: number /*int*/)
                     /**
                      * unknown name type.
                      */
                     // @ts-ignore
-                    readonly KRB_NT_UNKNOWN: number /*int*/
+                    public static readonly KRB_NT_UNKNOWN: number /*int*/
                     /**
                      * user principal name type.
                      */
                     // @ts-ignore
-                    readonly KRB_NT_PRINCIPAL: number /*int*/
+                    public static readonly KRB_NT_PRINCIPAL: number /*int*/
                     /**
                      * service and other unique instance (krbtgt) name type.
                      */
                     // @ts-ignore
-                    readonly KRB_NT_SRV_INST: number /*int*/
+                    public static readonly KRB_NT_SRV_INST: number /*int*/
                     /**
                      * service with host name as instance (telnet, rcommands) name type.
                      */
                     // @ts-ignore
-                    readonly KRB_NT_SRV_HST: number /*int*/
+                    public static readonly KRB_NT_SRV_HST: number /*int*/
                     /**
                      * service with host as remaining components name type.
                      */
                     // @ts-ignore
-                    readonly KRB_NT_SRV_XHST: number /*int*/
+                    public static readonly KRB_NT_SRV_XHST: number /*int*/
                     /**
                      * unique ID name type.
                      */
                     // @ts-ignore
-                    readonly KRB_NT_UID: number /*int*/
+                    public static readonly KRB_NT_UID: number /*int*/
                     /**
                      * Returns the realm component of this Kerberos principal.
                      * @return the realm component of this Kerberos principal.
                      */
                     // @ts-ignore
-                    getRealm(): java.lang.String
+                    public getRealm(): string
                     /**
                      * Returns a hashcode for this principal. The hash code is defined to
                      * be the result of the following  calculation:
@@ -105,7 +105,7 @@ declare namespace javax {
                      * @return a hashCode() for the {#code KerberosPrincipal}
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Compares the specified Object with this Principal for equality.
                      * Returns true if the given object is also a
@@ -118,7 +118,7 @@ declare namespace javax {
                      *  as this one, false otherwise.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * The returned string corresponds to the single-string
                      * representation of a Kerberos Principal name as specified in
@@ -126,7 +126,7 @@ declare namespace javax {
                      * @return the principal name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns the name type of the KerberosPrincipal. Valid name types
                      * are specified in Section 6.2 of
@@ -134,9 +134,9 @@ declare namespace javax {
                      * @return the name type.
                      */
                     // @ts-ignore
-                    getNameType(): int
+                    public getNameType(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

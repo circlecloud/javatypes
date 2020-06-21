@@ -21,29 +21,29 @@ declare namespace org {
                          * @param existingDefinition the existing bean definition for the same name
                          */
                         // @ts-ignore
-                        constructor(beanName: string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition, existingDefinition: org.springframework.beans.factory.config.BeanDefinition)
+                        constructor(beanName: java.lang.String | string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition, existingDefinition: org.springframework.beans.factory.config.BeanDefinition)
                         /**
                          * Return the description of the resource that the bean definition came from.
                          */
                         // @ts-ignore
-                        getResourceDescription(): java.lang.String
+                        public getResourceDescription(): string
                         /**
                          * Return the name of the bean.
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Return the newly registered bean definition.
                          * @see #getBeanName()
                          */
                         // @ts-ignore
-                        getBeanDefinition(): org.springframework.beans.factory.config.BeanDefinition
+                        public getBeanDefinition(): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Return the existing bean definition for the same name.
                          * @see #getBeanName()
                          */
                         // @ts-ignore
-                        getExistingDefinition(): org.springframework.beans.factory.config.BeanDefinition
+                        public getExistingDefinition(): org.springframework.beans.factory.config.BeanDefinition
                     }
                 }
             }

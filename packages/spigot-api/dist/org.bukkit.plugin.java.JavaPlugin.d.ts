@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a Java plugin
                  */
                 // @ts-ignore
-                class JavaPlugin extends org.bukkit.plugin.PluginBase {
+                abstract class JavaPlugin extends org.bukkit.plugin.PluginBase {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
@@ -17,26 +17,26 @@ declare namespace org {
                      * @return The folder.
                      */
                     // @ts-ignore
-                    getDataFolder(): java.io.File
+                    public getDataFolder(): java.io.File
                     /**
                      * Gets the associated PluginLoader responsible for this plugin
                      * @return PluginLoader that controls this plugin
                      */
                     // @ts-ignore
-                    getPluginLoader(): org.bukkit.plugin.PluginLoader
+                    public getPluginLoader(): org.bukkit.plugin.PluginLoader
                     /**
                      * Returns the Server instance currently running this plugin
                      * @return Server running this plugin
                      */
                     // @ts-ignore
-                    getServer(): org.bukkit.Server
+                    public getServer(): org.bukkit.Server
                     /**
                      * Returns a value indicating whether or not this plugin is currently
                      * enabled
                      * @return true if this plugin is enabled, otherwise false
                      */
                     // @ts-ignore
-                    isEnabled(): boolean
+                    public isEnabled(): boolean
                     /**
                      * Returns the file which contains this plugin
                      * @return File containing this plugin
@@ -48,9 +48,9 @@ declare namespace org {
                      * @return Contents of the plugin.yaml file
                      */
                     // @ts-ignore
-                    getDescription(): org.bukkit.plugin.PluginDescriptionFile
+                    public getDescription(): org.bukkit.plugin.PluginDescriptionFile
                     // @ts-ignore
-                    getConfig(): org.bukkit.configuration.file.FileConfiguration
+                    public getConfig(): org.bukkit.configuration.file.FileConfiguration
                     /**
                      * Provides a reader for a text file located inside the jar.
                      * <p>
@@ -61,17 +61,17 @@ declare namespace org {
                      * @see ClassLoader#getResourceAsStream(String)
                      */
                     // @ts-ignore
-                    getTextResource(file: string): java.io.Reader
+                    getTextResource(file: java.lang.String | string): java.io.Reader
                     // @ts-ignore
-                    reloadConfig(): void
+                    public reloadConfig(): void
                     // @ts-ignore
-                    saveConfig(): void
+                    public saveConfig(): void
                     // @ts-ignore
-                    saveDefaultConfig(): void
+                    public saveDefaultConfig(): void
                     // @ts-ignore
-                    saveResource(resourcePath: string, replace: boolean): void
+                    public saveResource(resourcePath: java.lang.String | string, replace: boolean): void
                     // @ts-ignore
-                    getResource(filename: string): java.io.InputStream
+                    public getResource(filename: java.lang.String | string): java.io.InputStream
                     /**
                      * Returns the ClassLoader which holds this plugin
                      * @return ClassLoader holding this plugin
@@ -88,12 +88,12 @@ declare namespace org {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    onCommand(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, label: string, args: string[]): boolean
+                    public onCommand(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, label: java.lang.String | string, args: java.lang.String[] | string[]): boolean
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    onTabComplete(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, alias: string, args: string[]): java.util.List<java.lang.String>
+                    public onTabComplete(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, alias: java.lang.String | string, args: java.lang.String[] | string[]): Array<java.lang.String | string>
                     /**
                      * Gets the command with the given name, specific to this plugin. Commands
                      * need to be registered in the {@link PluginDescriptionFile#getCommands()
@@ -102,23 +102,23 @@ declare namespace org {
                      * @return the plugin command if found, otherwise null
                      */
                     // @ts-ignore
-                    getCommand(name: string): org.bukkit.command.PluginCommand
+                    public getCommand(name: java.lang.String | string): org.bukkit.command.PluginCommand
                     // @ts-ignore
-                    onLoad(): void
+                    public onLoad(): void
                     // @ts-ignore
-                    onDisable(): void
+                    public onDisable(): void
                     // @ts-ignore
-                    onEnable(): void
+                    public onEnable(): void
                     // @ts-ignore
-                    getDefaultWorldGenerator(worldName: string, id: string): org.bukkit.generator.ChunkGenerator
+                    public getDefaultWorldGenerator(worldName: java.lang.String | string, id: java.lang.String | string): org.bukkit.generator.ChunkGenerator
                     // @ts-ignore
-                    isNaggable(): boolean
+                    public isNaggable(): boolean
                     // @ts-ignore
-                    setNaggable(canNag: boolean): void
+                    public setNaggable(canNag: boolean): void
                     // @ts-ignore
-                    getLogger(): java.util.logging.Logger
+                    public getLogger(): java.util.logging.Logger
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * This method provides fast access to the plugin that has {@link
                      * #getProvidingPlugin(Class) provided} the given plugin class, which is
@@ -142,7 +142,7 @@ declare namespace org {
                      *      extend the class
                      */
                     // @ts-ignore
-                    getPlugin<T extends org.bukkit.plugin.java.JavaPlugin>(clazz: java.lang.Class<T>): T
+                    public static getPlugin<T extends org.bukkit.plugin.java.JavaPlugin>(clazz: java.lang.Class<T>): T
                     /**
                      * This method provides fast access to the plugin that has provided the
                      * given class.
@@ -155,7 +155,7 @@ declare namespace org {
                      *      given JavaPlugin
                      */
                     // @ts-ignore
-                    getProvidingPlugin(clazz: java.lang.Class<any>): org.bukkit.plugin.java.JavaPlugin
+                    public static getProvidingPlugin(clazz: java.lang.Class<any>): org.bukkit.plugin.java.JavaPlugin
                 }
             }
         }

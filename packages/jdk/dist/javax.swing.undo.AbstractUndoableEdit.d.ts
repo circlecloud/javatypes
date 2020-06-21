@@ -23,7 +23,7 @@ declare namespace javax {
                  * @see javax.swing.UIDefaults
                  */
                 // @ts-ignore
-                readonly UndoName: string
+                static readonly UndoName: java.lang.String | string
                 /**
                  * String returned by <code>getRedoPresentationName</code>;
                  * as of Java 2 platform v1.3.1 this field is no longer used. This value
@@ -32,7 +32,7 @@ declare namespace javax {
                  * @see javax.swing.UIDefaults
                  */
                 // @ts-ignore
-                readonly RedoName: string
+                static readonly RedoName: java.lang.String | string
                 /**
                  * Sets <code>alive</code> to false. Note that this
                  * is a one way operation; dead edits cannot be resurrected.
@@ -43,7 +43,7 @@ declare namespace javax {
                  * method, or when it is dequeued from an <code>UndoManager</code>.
                  */
                 // @ts-ignore
-                die(): void
+                public die(): void
                 /**
                  * Throws <code>CannotUndoException</code> if <code>canUndo</code>
                  * returns <code>false</code>. Sets <code>hasBeenDone</code>
@@ -55,7 +55,7 @@ declare namespace javax {
                  * @see #canUndo
                  */
                 // @ts-ignore
-                undo(): void
+                public undo(): void
                 /**
                  * Returns true if this edit is <code>alive</code>
                  * and <code>hasBeenDone</code> is <code>true</code>.
@@ -66,7 +66,7 @@ declare namespace javax {
                  * @see #redo
                  */
                 // @ts-ignore
-                canUndo(): boolean
+                public canUndo(): boolean
                 /**
                  * Throws <code>CannotRedoException</code> if <code>canRedo</code>
                  * returns false. Sets <code>hasBeenDone</code> to <code>true</code>.
@@ -77,7 +77,7 @@ declare namespace javax {
                  * @see #canRedo
                  */
                 // @ts-ignore
-                redo(): void
+                public redo(): void
                 /**
                  * Returns <code>true</code> if this edit is <code>alive</code>
                  * and <code>hasBeenDone</code> is <code>false</code>.
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @see #redo
                  */
                 // @ts-ignore
-                canRedo(): boolean
+                public canRedo(): boolean
                 /**
                  * This default implementation returns false.
                  * @param anEdit the edit to be added
@@ -96,7 +96,7 @@ declare namespace javax {
                  * @see UndoableEdit#addEdit
                  */
                 // @ts-ignore
-                addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
+                public addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
                 /**
                  * This default implementation returns false.
                  * @param anEdit the edit to replace
@@ -104,14 +104,14 @@ declare namespace javax {
                  * @see UndoableEdit#replaceEdit
                  */
                 // @ts-ignore
-                replaceEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
+                public replaceEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
                 /**
                  * This default implementation returns true.
                  * @return true
                  * @see UndoableEdit#isSignificant
                  */
                 // @ts-ignore
-                isSignificant(): boolean
+                public isSignificant(): boolean
                 /**
                  * This default implementation returns "". Used by
                  * <code>getUndoPresentationName</code> and
@@ -124,7 +124,7 @@ declare namespace javax {
                  * @see #getRedoPresentationName
                  */
                 // @ts-ignore
-                getPresentationName(): java.lang.String
+                public getPresentationName(): string
                 /**
                  * Retreives the value from the defaults table with key
                  * <code>AbstractUndoableEdit.undoText</code> and returns
@@ -140,7 +140,7 @@ declare namespace javax {
                  * @see #getPresentationName
                  */
                 // @ts-ignore
-                getUndoPresentationName(): java.lang.String
+                public getUndoPresentationName(): string
                 /**
                  * Retreives the value from the defaults table with key
                  * <code>AbstractUndoableEdit.redoText</code> and returns
@@ -156,14 +156,14 @@ declare namespace javax {
                  * @see #getPresentationName
                  */
                 // @ts-ignore
-                getRedoPresentationName(): java.lang.String
+                public getRedoPresentationName(): string
                 /**
                  * Returns a string that displays and identifies this
                  * object's properties.
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

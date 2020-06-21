@@ -14,15 +14,15 @@ declare namespace org {
                              * Return the extracted URI variables.
                              */
                             // @ts-ignore
-                            getUriVariables(): java.util.Map<java.lang.String, java.lang.String>
+                            public getUriVariables(): java.util.Map<java.lang.String | string, java.lang.String | string>
                             /**
                              * Return maps of matrix variables per path segment, keyed off by URI
                              * variable name.
                              */
                             // @ts-ignore
-                            getMatrixVariables(): java.util.Map<java.lang.String, <any>>
+                            public getMatrixVariables(): java.util.Map<java.lang.String | string, object>
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

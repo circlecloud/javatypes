@@ -14,105 +14,105 @@ declare namespace org {
                     // @ts-ignore
                     constructor(parent: org.spongepowered.api.data.DataView, path: org.spongepowered.api.data.DataQuery, safety: org.spongepowered.api.data.DataView.SafetyMode)
                     // @ts-ignore
-                    readonly map: java.util.Map<java.lang.String, java.lang.Object>
+                    readonly map: java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    getContainer(): org.spongepowered.api.data.DataContainer
+                    public getContainer(): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    getCurrentPath(): org.spongepowered.api.data.DataQuery
+                    public getCurrentPath(): org.spongepowered.api.data.DataQuery
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     // @ts-ignore
-                    getParent(): java.util.Optional<org.spongepowered.api.data.DataView>
+                    public getParent(): java.util.Optional<org.spongepowered.api.data.DataView>
                     // @ts-ignore
-                    getKeys(deep: boolean): java.util.Set<org.spongepowered.api.data.DataQuery>
+                    public getKeys(deep: boolean): Array<org.spongepowered.api.data.DataQuery>
                     // @ts-ignore
-                    getValues(deep: boolean): java.util.Map<org.spongepowered.api.data.DataQuery, java.lang.Object>
+                    public getValues(deep: boolean): java.util.Map<org.spongepowered.api.data.DataQuery, java.lang.Object | any>
                     // @ts-ignore
-                    contains(path: org.spongepowered.api.data.DataQuery): boolean
+                    public contains(path: org.spongepowered.api.data.DataQuery): boolean
                     // @ts-ignore
-                    contains(path: org.spongepowered.api.data.DataQuery, ...paths: org.spongepowered.api.data.DataQuery[]): boolean
+                    public contains(path: org.spongepowered.api.data.DataQuery, ...paths: org.spongepowered.api.data.DataQuery[]): boolean
                     // @ts-ignore
-                    get(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Object>
+                    public get(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Object | any>
                     // @ts-ignore
-                    set(path: org.spongepowered.api.data.DataQuery, value: any): org.spongepowered.api.data.DataView
+                    public set(path: org.spongepowered.api.data.DataQuery, value: java.lang.Object | any): org.spongepowered.api.data.DataView
                     // @ts-ignore
-                    set<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataView
+                    public set<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataView
                     // @ts-ignore
-                    remove(path: org.spongepowered.api.data.DataQuery): org.spongepowered.api.data.DataView
+                    public remove(path: org.spongepowered.api.data.DataQuery): org.spongepowered.api.data.DataView
                     // @ts-ignore
-                    createView(path: org.spongepowered.api.data.DataQuery): org.spongepowered.api.data.DataView
+                    public createView(path: org.spongepowered.api.data.DataQuery): org.spongepowered.api.data.DataView
                     // @ts-ignore
-                    createView(path: org.spongepowered.api.data.DataQuery, map: java.util.Map<any, ?>): org.spongepowered.api.data.DataView
+                    public createView(path: org.spongepowered.api.data.DataQuery, map: java.util.Map<any, any>): org.spongepowered.api.data.DataView
                     // @ts-ignore
-                    getView(path: org.spongepowered.api.data.DataQuery): java.util.Optional<org.spongepowered.api.data.DataView>
+                    public getView(path: org.spongepowered.api.data.DataQuery): java.util.Optional<org.spongepowered.api.data.DataView>
                     // @ts-ignore
-                    getMap(path: org.spongepowered.api.data.DataQuery): java.util.Optional<? extends java.util.Map<?, ?>>
+                    public getMap(path: org.spongepowered.api.data.DataQuery): java.util.Optional<any>
                     // @ts-ignore
-                    getBoolean(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Boolean>
+                    public getBoolean(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Boolean>
                     // @ts-ignore
-                    getByte(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Byte>
+                    public getByte(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Byte | number>
                     // @ts-ignore
-                    getShort(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Short>
+                    public getShort(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Short | number>
                     // @ts-ignore
-                    getInt(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Integer>
+                    public getInt(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Integer | number>
                     // @ts-ignore
-                    getLong(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Long>
+                    public getLong(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Long | number>
                     // @ts-ignore
-                    getFloat(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Float>
+                    public getFloat(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Float | number>
                     // @ts-ignore
-                    getDouble(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Double>
+                    public getDouble(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Double | number>
                     // @ts-ignore
-                    getString(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.String>
+                    public getString(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.String | string>
                     // @ts-ignore
-                    getList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<?>>
+                    public getList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<any> | Array<any>>
                     // @ts-ignore
-                    getStringList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.String>>
+                    public getStringList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                     // @ts-ignore
-                    getCharacterList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Character>>
+                    public getCharacterList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Character> | Array<java.lang.Character>>
                     // @ts-ignore
-                    getBooleanList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Boolean>>
+                    public getBooleanList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Boolean> | Array<java.lang.Boolean>>
                     // @ts-ignore
-                    getByteList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Byte>>
+                    public getByteList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Byte | number> | Array<java.lang.Byte | number>>
                     // @ts-ignore
-                    getShortList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Short>>
+                    public getShortList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Short | number> | Array<java.lang.Short | number>>
                     // @ts-ignore
-                    getIntegerList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Integer>>
+                    public getIntegerList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Integer | number> | Array<java.lang.Integer | number>>
                     // @ts-ignore
-                    getLongList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Long>>
+                    public getLongList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Long | number> | Array<java.lang.Long | number>>
                     // @ts-ignore
-                    getFloatList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Float>>
+                    public getFloatList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Float | number> | Array<java.lang.Float | number>>
                     // @ts-ignore
-                    getDoubleList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Double>>
+                    public getDoubleList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Double | number> | Array<java.lang.Double | number>>
                     // @ts-ignore
-                    getMapList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.util.Map<?, ?>>>
+                    public getMapList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.util.Map<any, any>> | Array<java.util.Map<any, any>>>
                     // @ts-ignore
-                    getViewList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<org.spongepowered.api.data.DataView>>
+                    public getViewList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<org.spongepowered.api.data.DataView> | Array<org.spongepowered.api.data.DataView>>
                     // @ts-ignore
-                    getSerializable<T extends org.spongepowered.api.data.DataSerializable>(path: org.spongepowered.api.data.DataQuery, clazz: java.lang.Class<T>): java.util.Optional<T>
+                    public getSerializable<T extends org.spongepowered.api.data.DataSerializable>(path: org.spongepowered.api.data.DataQuery, clazz: java.lang.Class<T>): java.util.Optional<T>
                     // @ts-ignore
-                    getSerializableList<T extends org.spongepowered.api.data.DataSerializable>(path: org.spongepowered.api.data.DataQuery, clazz: java.lang.Class<T>): java.util.Optional<java.util.List<T>>
+                    public getSerializableList<T extends org.spongepowered.api.data.DataSerializable>(path: org.spongepowered.api.data.DataQuery, clazz: java.lang.Class<T>): java.util.Optional<java.util.List<T> | Array<T>>
                     // @ts-ignore
-                    getCatalogType<T extends org.spongepowered.api.CatalogType>(path: org.spongepowered.api.data.DataQuery, catalogType: java.lang.Class<T>): java.util.Optional<T>
+                    public getCatalogType<T extends org.spongepowered.api.CatalogType>(path: org.spongepowered.api.data.DataQuery, catalogType: java.lang.Class<T>): java.util.Optional<T>
                     // @ts-ignore
-                    getCatalogTypeList<T extends org.spongepowered.api.CatalogType>(path: org.spongepowered.api.data.DataQuery, catalogType: java.lang.Class<T>): java.util.Optional<java.util.List<T>>
+                    public getCatalogTypeList<T extends org.spongepowered.api.CatalogType>(path: org.spongepowered.api.data.DataQuery, catalogType: java.lang.Class<T>): java.util.Optional<java.util.List<T> | Array<T>>
                     // @ts-ignore
-                    getObject<T>(path: org.spongepowered.api.data.DataQuery, objectClass: java.lang.Class<T>): java.util.Optional<T>
+                    public getObject<T>(path: org.spongepowered.api.data.DataQuery, objectClass: java.lang.Class<T>): java.util.Optional<T>
                     // @ts-ignore
-                    getObjectList<T>(path: org.spongepowered.api.data.DataQuery, objectClass: java.lang.Class<T>): java.util.Optional<java.util.List<T>>
+                    public getObjectList<T>(path: org.spongepowered.api.data.DataQuery, objectClass: java.lang.Class<T>): java.util.Optional<java.util.List<T> | Array<T>>
                     // @ts-ignore
-                    copy(): org.spongepowered.api.data.DataContainer
+                    public copy(): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    copy(safety: org.spongepowered.api.data.DataView.SafetyMode): org.spongepowered.api.data.DataContainer
+                    public copy(safety: org.spongepowered.api.data.DataView.SafetyMode): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     // @ts-ignore
-                    getSafetyMode(): org.spongepowered.api.data.DataView.SafetyMode
+                    public getSafetyMode(): org.spongepowered.api.data.DataView.SafetyMode
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

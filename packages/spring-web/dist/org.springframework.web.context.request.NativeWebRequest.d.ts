@@ -18,13 +18,13 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest
                          */
                         // @ts-ignore
-                        getNativeRequest(): java.lang.Object
+                        getNativeRequest(): any
                         /**
                          * Return the underlying native response object, if any.
                          * @see javax.servlet.http.HttpServletResponse
                          */
                         // @ts-ignore
-                        getNativeResponse(): java.lang.Object
+                        getNativeResponse(): any
                         /**
                          * Return the underlying native request object, if available.
                          * @param requiredType the desired type of request object

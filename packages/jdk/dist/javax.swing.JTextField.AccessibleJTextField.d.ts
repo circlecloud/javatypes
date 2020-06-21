@@ -27,7 +27,7 @@ declare namespace javax {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
             }
         }
     }

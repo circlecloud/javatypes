@@ -49,7 +49,7 @@ declare namespace javax {
                  * @param cipherSuites the array of ciphersuites (or null)
                  */
                 // @ts-ignore
-                constructor(cipherSuites: string[])
+                constructor(cipherSuites: java.lang.String[] | string[])
                 /**
                  * Constructs SSLParameters from the specified array of ciphersuites
                  * and protocols.
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @param protocols the array of protocols (or null)
                  */
                 // @ts-ignore
-                constructor(cipherSuites: string[], protocols: string[])
+                constructor(cipherSuites: java.lang.String[] | string[], protocols: java.lang.String[] | string[])
                 /**
                  * Returns a copy of the array of ciphersuites or null if none
                  * have been set.
@@ -69,13 +69,13 @@ declare namespace javax {
                  *  have been set.
                  */
                 // @ts-ignore
-                getCipherSuites(): java.lang.String[]
+                public getCipherSuites(): string[]
                 /**
                  * Sets the array of ciphersuites.
                  * @param cipherSuites the array of ciphersuites (or null)
                  */
                 // @ts-ignore
-                setCipherSuites(cipherSuites: string[]): void
+                public setCipherSuites(cipherSuites: java.lang.String[] | string[]): void
                 /**
                  * Returns a copy of the array of protocols or null if none
                  * have been set.
@@ -83,39 +83,39 @@ declare namespace javax {
                  *  have been set.
                  */
                 // @ts-ignore
-                getProtocols(): java.lang.String[]
+                public getProtocols(): string[]
                 /**
                  * Sets the array of protocols.
                  * @param protocols the array of protocols (or null)
                  */
                 // @ts-ignore
-                setProtocols(protocols: string[]): void
+                public setProtocols(protocols: java.lang.String[] | string[]): void
                 /**
                  * Returns whether client authentication should be requested.
                  * @return whether client authentication should be requested.
                  */
                 // @ts-ignore
-                getWantClientAuth(): boolean
+                public getWantClientAuth(): boolean
                 /**
                  * Sets whether client authentication should be requested. Calling
                  * this method clears the <code>needClientAuth</code> flag.
                  * @param wantClientAuth whether client authentication should be requested
                  */
                 // @ts-ignore
-                setWantClientAuth(wantClientAuth: boolean): void
+                public setWantClientAuth(wantClientAuth: boolean): void
                 /**
                  * Returns whether client authentication should be required.
                  * @return whether client authentication should be required.
                  */
                 // @ts-ignore
-                getNeedClientAuth(): boolean
+                public getNeedClientAuth(): boolean
                 /**
                  * Sets whether client authentication should be required. Calling
                  * this method clears the <code>wantClientAuth</code> flag.
                  * @param needClientAuth whether client authentication should be required
                  */
                 // @ts-ignore
-                setNeedClientAuth(needClientAuth: boolean): void
+                public setNeedClientAuth(needClientAuth: boolean): void
                 /**
                  * Returns the cryptographic algorithm constraints.
                  * @return the cryptographic algorithm constraints, or null if the
@@ -124,7 +124,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getAlgorithmConstraints(): java.security.AlgorithmConstraints
+                public getAlgorithmConstraints(): java.security.AlgorithmConstraints
                 /**
                  * Sets the cryptographic algorithm constraints, which will be used
                  * in addition to any configured by the runtime environment.
@@ -136,7 +136,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                setAlgorithmConstraints(constraints: java.security.AlgorithmConstraints): void
+                public setAlgorithmConstraints(constraints: java.security.AlgorithmConstraints): void
                 /**
                  * Gets the endpoint identification algorithm.
                  * @return the endpoint identification algorithm, or null if none
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getEndpointIdentificationAlgorithm(): java.lang.String
+                public getEndpointIdentificationAlgorithm(): string
                 /**
                  * Sets the endpoint identification algorithm.
                  * <p>
@@ -162,7 +162,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                setEndpointIdentificationAlgorithm(algorithm: string): void
+                public setEndpointIdentificationAlgorithm(algorithm: java.lang.String | string): void
                 /**
                  * Sets the desired {@link SNIServerName}s of the Server Name
                  * Indication (SNI) parameter.
@@ -183,7 +183,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setServerNames(serverNames: Array<javax.net.ssl.SNIServerName>): void
+                public setServerNames(serverNames: java.util.List<javax.net.ssl.SNIServerName> | Array<javax.net.ssl.SNIServerName>): void
                 /**
                  * Returns a {@link List} containing all {@link SNIServerName}s of the
                  * Server Name Indication (SNI) parameter, or null if none has been set.
@@ -219,7 +219,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getServerNames(): java.util.List<javax.net.ssl.SNIServerName>
+                public getServerNames(): Array<javax.net.ssl.SNIServerName>
                 /**
                  * Sets the {@link SNIMatcher}s of the Server Name Indication (SNI)
                  * parameter.
@@ -241,7 +241,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setSNIMatchers(matchers: Array<javax.net.ssl.SNIMatcher>): void
+                public setSNIMatchers(matchers: java.util.Collection<javax.net.ssl.SNIMatcher> | Array<javax.net.ssl.SNIMatcher>): void
                 /**
                  * Returns a {@link Collection} containing all {@link SNIMatcher}s of the
                  * Server Name Indication (SNI) parameter, or null if none has been set.
@@ -258,7 +258,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getSNIMatchers(): java.util.Collection<javax.net.ssl.SNIMatcher>
+                public getSNIMatchers(): Array<javax.net.ssl.SNIMatcher>
                 /**
                  * Sets whether the local cipher suites preference should be honored.
                  * @param honorOrder whether local cipher suites order in
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setUseCipherSuitesOrder(honorOrder: boolean): void
+                public setUseCipherSuitesOrder(honorOrder: boolean): void
                 /**
                  * Returns whether the local cipher suites preference should be honored.
                  * @return whether local cipher suites order in {#code #getCipherSuites}
@@ -277,7 +277,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getUseCipherSuitesOrder(): boolean
+                public getUseCipherSuitesOrder(): boolean
             }
         }
     }

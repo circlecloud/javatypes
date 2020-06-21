@@ -14,7 +14,7 @@ declare namespace org {
                      * @return A copied map
                      */
                     // @ts-ignore
-                    copyMap<K, V>(map: java.util.Map<K, V>): java.util.Map<K, V>
+                    public static copyMap<K, V>(map: java.util.Map<any, any>): java.util.Map<K, V>
                     /**
                      * Attempts to use native {@link Object#clone()} methods on available map
                      * types. If a list cannot be properly cloned, a new {@link ArrayList} is
@@ -24,7 +24,7 @@ declare namespace org {
                      * @return A copied list
                      */
                     // @ts-ignore
-                    copyList<T>(list: Array<T>): java.util.List<T>
+                    public static copyList<T>(list: java.util.List<any> | Array<any>): Array<T>
                 }
             }
         }

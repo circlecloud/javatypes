@@ -25,13 +25,13 @@ declare namespace java {
              * @return a reference to the public key.
              */
             // @ts-ignore
-            getPublic(): java.security.PublicKey
+            public getPublic(): java.security.PublicKey
             /**
              * Returns a reference to the private key component of this key pair.
              * @return a reference to the private key.
              */
             // @ts-ignore
-            getPrivate(): java.security.PrivateKey
+            public getPrivate(): java.security.PrivateKey
         }
     }
 }

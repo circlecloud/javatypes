@@ -20,7 +20,7 @@ declare namespace java {
              * @param s   the detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs a {@code LinkageError} with the specified detail
              * message and cause.
@@ -29,7 +29,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            constructor(s: string, cause: Error)
+            constructor(s: java.lang.String | string, cause: java.lang.Throwable | Error)
         }
     }
 }

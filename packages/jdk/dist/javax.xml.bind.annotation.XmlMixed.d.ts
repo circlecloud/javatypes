@@ -88,7 +88,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlMixed implements java.lang.annotation.Annotation {
+                abstract class XmlMixed implements java.lang.annotation.Annotation {
                 }
             }
         }

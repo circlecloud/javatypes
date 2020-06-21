@@ -23,7 +23,7 @@ declare namespace org {
                      * @see java.util.LinkedHashMap
                      */
                     // @ts-ignore
-                    constructor(mapType: java.lang.Class<java.util.Map>)
+                    constructor(mapType: java.lang.Class<any>)
                     /**
                      * Create a new CustomMapEditor for the given target type.
                      * <p>If the incoming value is of the given type, it will be used as-is.
@@ -42,17 +42,17 @@ declare namespace org {
                      * @see java.util.LinkedHashMap
                      */
                     // @ts-ignore
-                    constructor(mapType: java.lang.Class<java.util.Map>, nullAsEmptyMap: boolean)
+                    constructor(mapType: java.lang.Class<any>, nullAsEmptyMap: boolean)
                     /**
                      * Convert the given text value to a Map with a single element.
                      */
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Convert the given value to a Map of the target type.
                      */
                     // @ts-ignore
-                    setValue(value: any): void
+                    public setValue(value: java.lang.Object | any): void
                     /**
                      * Create a Map of the given type, with the given
                      * initial capacity (if supported by the Map type).
@@ -61,7 +61,7 @@ declare namespace org {
                      * @return the new Map instance
                      */
                     // @ts-ignore
-                    createMap(mapType: java.lang.Class<java.util.Map>, initialCapacity: number /*int*/): java.util.Map<java.lang.Object, java.lang.Object>
+                    createMap(mapType: java.lang.Class<any>, initialCapacity: number /*int*/): java.util.Map<java.lang.Object | any, java.lang.Object | any>
                     /**
                      * Return whether to always create a new Map,
                      * even if the type of the passed-in Map already matches.
@@ -86,7 +86,7 @@ declare namespace org {
                      * @see #alwaysCreateNewMap
                      */
                     // @ts-ignore
-                    convertKey(key: any): java.lang.Object
+                    convertKey(key: java.lang.Object | any): any
                     /**
                      * Hook to convert each encountered Map value.
                      * The default implementation simply returns the passed-in value as-is.
@@ -101,13 +101,13 @@ declare namespace org {
                      * @see #alwaysCreateNewMap
                      */
                     // @ts-ignore
-                    convertValue(value: any): java.lang.Object
+                    convertValue(value: java.lang.Object | any): any
                     /**
                      * This implementation returns {@code null} to indicate that
                      * there is no appropriate text representation.
                      */
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

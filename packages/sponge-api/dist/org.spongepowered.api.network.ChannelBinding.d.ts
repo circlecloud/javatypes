@@ -21,7 +21,7 @@ declare namespace org {
                      * @return The channel name
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the plugin that created this binding.
                      * @return The owning plugin

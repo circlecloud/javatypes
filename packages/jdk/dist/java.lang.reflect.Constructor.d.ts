@@ -23,36 +23,36 @@ declare namespace java {
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaringClass(): java.lang.Class<T>
+                public getDeclaringClass(): java.lang.Class<T>
                 /**
                  * Returns the name of this constructor, as a string.  This is
                  * the binary name of the constructor's declaring class.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getModifiers(): int
+                public getModifiers(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @throws GenericSignatureFormatError {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTypeParameters(): java.lang.reflect.TypeVariable[]
+                public getTypeParameters(): java.lang.reflect.TypeVariable<java.lang.reflect.Constructor<T>>[]
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getParameterTypes(): java.lang.Class[]
+                public getParameterTypes(): java.lang.Class<any>[]
                 /**
                  * {@inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getParameterCount(): int
+                public getParameterCount(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @throws GenericSignatureFormatError {#inheritDoc}
@@ -61,12 +61,12 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getGenericParameterTypes(): java.lang.reflect.Type[]
+                public getGenericParameterTypes(): java.lang.reflect.Type[]
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getExceptionTypes(): java.lang.Class[]
+                public getExceptionTypes(): java.lang.Class<any>[]
                 /**
                  * {@inheritDoc}
                  * @throws GenericSignatureFormatError {#inheritDoc}
@@ -75,7 +75,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getGenericExceptionTypes(): java.lang.reflect.Type[]
+                public getGenericExceptionTypes(): java.lang.reflect.Type[]
                 /**
                  * Compares this {@code Constructor} against the specified object.
                  * Returns true if the objects are the same.  Two {@code Constructor} objects are
@@ -83,14 +83,14 @@ declare namespace java {
                  * same formal parameter types.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode for this {@code Constructor}. The hashcode is
                  * the same as the hashcode for the underlying constructor's
                  * declaring class name.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this {@code Constructor}.  The string is
                  * formatted as the constructor access modifiers, if any,
@@ -108,7 +108,7 @@ declare namespace java {
                  * @jls 8.8.3. Constructor Modifiers
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a string describing this {@code Constructor},
                  * including type parameters.  The string is formatted as the
@@ -139,7 +139,7 @@ declare namespace java {
                  * @jls 8.8.3. Constructor Modifiers
                  */
                 // @ts-ignore
-                toGenericString(): java.lang.String
+                public toGenericString(): string
                 /**
                  * Uses the constructor represented by this {@code Constructor} object to
                  * create and initialize a new instance of the constructor's
@@ -182,51 +182,51 @@ declare namespace java {
                  *               by this method fails.
                  */
                 // @ts-ignore
-                newInstance(...initargs: any[]): T
+                public newInstance(...initargs: java.lang.Object[] | any[]): T
                 /**
                  * {@inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                isVarArgs(): boolean
+                public isVarArgs(): boolean
                 /**
                  * {@inheritDoc}
                  * @jls 13.1 The Form of a Binary
                  * @since 1.5
                  */
                 // @ts-ignore
-                isSynthetic(): boolean
+                public isSynthetic(): boolean
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException  {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+                public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * {@inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getParameterAnnotations(): java.lang.annotation.Annotation[][]
+                public getParameterAnnotations(): java.lang.annotation.Annotation[][]
                 /**
                  * {@inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAnnotatedReturnType(): java.lang.reflect.AnnotatedType
+                public getAnnotatedReturnType(): java.lang.reflect.AnnotatedType
                 /**
                  * {@inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAnnotatedReceiverType(): java.lang.reflect.AnnotatedType
+                public getAnnotatedReceiverType(): java.lang.reflect.AnnotatedType
             }
         }
     }

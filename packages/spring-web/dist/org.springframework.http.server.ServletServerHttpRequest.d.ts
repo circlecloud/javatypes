@@ -19,32 +19,32 @@ declare namespace org {
                     // @ts-ignore
                     constructor(servletRequest: HttpServletRequest)
                     // @ts-ignore
-                    readonly FORM_CONTENT_TYPE: string
+                    static readonly FORM_CONTENT_TYPE: java.lang.String | string
                     // @ts-ignore
-                    readonly FORM_CHARSET: java.nio.charset.Charset
+                    static readonly FORM_CHARSET: java.nio.charset.Charset
                     /**
                      * Returns the {@code HttpServletRequest} this object is based on.
                      */
                     // @ts-ignore
-                    getServletRequest(): HttpServletRequest
+                    public getServletRequest(): HttpServletRequest
                     // @ts-ignore
-                    getMethod(): org.springframework.http.HttpMethod
+                    public getMethod(): org.springframework.http.HttpMethod
                     // @ts-ignore
-                    getMethodValue(): java.lang.String
+                    public getMethodValue(): string
                     // @ts-ignore
-                    getURI(): java.net.URI
+                    public getURI(): java.net.URI
                     // @ts-ignore
-                    getHeaders(): org.springframework.http.HttpHeaders
+                    public getHeaders(): org.springframework.http.HttpHeaders
                     // @ts-ignore
-                    getPrincipal(): java.security.Principal
+                    public getPrincipal(): java.security.Principal
                     // @ts-ignore
-                    getLocalAddress(): java.net.InetSocketAddress
+                    public getLocalAddress(): java.net.InetSocketAddress
                     // @ts-ignore
-                    getRemoteAddress(): java.net.InetSocketAddress
+                    public getRemoteAddress(): java.net.InetSocketAddress
                     // @ts-ignore
-                    getBody(): java.io.InputStream
+                    public getBody(): java.io.InputStream
                     // @ts-ignore
-                    getAsyncRequestControl(response: org.springframework.http.server.ServerHttpResponse): org.springframework.http.server.ServerHttpAsyncRequestControl
+                    public getAsyncRequestControl(response: org.springframework.http.server.ServerHttpResponse): org.springframework.http.server.ServerHttpAsyncRequestControl
                 }
             }
         }

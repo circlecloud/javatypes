@@ -16,27 +16,27 @@ declare namespace org {
                      * @return a SkipReason value detailing why the time has skipped
                      */
                     // @ts-ignore
-                    getSkipReason(): org.bukkit.event.world.TimeSkipEvent.SkipReason
+                    public getSkipReason(): org.bukkit.event.world.TimeSkipEvent.SkipReason
                     /**
                      * Gets the amount of time that was skipped.
                      * @return Amount of time skipped
                      */
                     // @ts-ignore
-                    getSkipAmount(): long
+                    public getSkipAmount(): number /*long*/
                     /**
                      * Sets the amount of time to skip.
                      * @param skipAmount Amount of time to skip
                      */
                     // @ts-ignore
-                    setSkipAmount(skipAmount: number /*long*/): void
+                    public setSkipAmount(skipAmount: number /*long*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

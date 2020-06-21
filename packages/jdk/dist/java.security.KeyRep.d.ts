@@ -34,7 +34,7 @@ declare namespace java {
              *           or if encoded is {@code null}
              */
             // @ts-ignore
-            constructor(type: java.security.KeyRep.Type, algorithm: string, format: string, encoded: number /*byte*/[])
+            constructor(type: java.security.KeyRep.Type, algorithm: java.lang.String | string, format: java.lang.String | string, encoded: number /*byte*/[])
             /**
              * Resolve the Key object.
              * <p> This method supports three Type/format combinations:
@@ -56,7 +56,7 @@ declare namespace java {
              *   resolution of the key fails for any reason
              */
             // @ts-ignore
-            readResolve(): java.lang.Object
+            readResolve(): any
         }
     }
 }

@@ -25,7 +25,7 @@ declare namespace java {
                  * @throws NullPointerException if the argument is null
                  */
                 // @ts-ignore
-                minBy<T>(comparator: java.util.Comparator<any super T>): java.util.function.BinaryOperator<T>
+                minBy<T>(comparator: java.util.Comparator<any>): java.util.function$.BinaryOperator<T>
                 /**
                  * Returns a {@link BinaryOperator} which returns the greater of two elements
                  * according to the specified {@code Comparator}.
@@ -36,7 +36,7 @@ declare namespace java {
                  * @throws NullPointerException if the argument is null
                  */
                 // @ts-ignore
-                maxBy<T>(comparator: java.util.Comparator<any super T>): java.util.function.BinaryOperator<T>
+                maxBy<T>(comparator: java.util.Comparator<any>): java.util.function$.BinaryOperator<T>
             }
         }
     }

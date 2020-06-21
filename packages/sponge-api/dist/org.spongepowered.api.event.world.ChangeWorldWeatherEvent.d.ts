@@ -37,13 +37,13 @@ declare namespace org {
                          * @return The original duration
                          */
                         // @ts-ignore
-                        getOriginalDuration(): int
+                        getOriginalDuration(): number /*int*/
                         /**
                          * Sets the duration of the {@link Weather} (in ticks).
                          * @return The duration of the weather (in ticks)
                          */
                         // @ts-ignore
-                        getDuration(): int
+                        getDuration(): number /*int*/
                         /**
                          * Sets the duration of the {@link Weather} (in ticks).
                          * @param duration The duration of the weather (in ticks)

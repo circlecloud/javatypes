@@ -17,7 +17,7 @@ declare namespace org {
                                  * @see Keys#PICKUP_DELAY
                                  */
                                 // @ts-ignore
-                                delay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                delay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link Value} for the "is infinite" state of
                                  * the pickup delay.

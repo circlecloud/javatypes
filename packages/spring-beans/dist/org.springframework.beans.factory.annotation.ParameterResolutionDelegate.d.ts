@@ -29,7 +29,7 @@ declare namespace org {
                          * @see #resolveDependency
                          */
                         // @ts-ignore
-                        isAutowirable(parameter: java.lang.reflect.Parameter, parameterIndex: number /*int*/): boolean
+                        public static isAutowirable(parameter: java.lang.reflect.Parameter, parameterIndex: number /*int*/): boolean
                         /**
                          * Resolve the dependency for the supplied {@link Parameter} from the
                          * supplied {@link AutowireCapableBeanFactory}.
@@ -60,7 +60,7 @@ declare namespace org {
                          * @see AutowireCapableBeanFactory#resolveDependency(DependencyDescriptor, String)
                          */
                         // @ts-ignore
-                        resolveDependency(parameter: java.lang.reflect.Parameter, parameterIndex: number /*int*/, containingClass: java.lang.Class<any>, beanFactory: org.springframework.beans.factory.config.AutowireCapableBeanFactory): java.lang.Object
+                        public static resolveDependency(parameter: java.lang.reflect.Parameter, parameterIndex: number /*int*/, containingClass: java.lang.Class<any>, beanFactory: org.springframework.beans.factory.config.AutowireCapableBeanFactory): any
                     }
                 }
             }

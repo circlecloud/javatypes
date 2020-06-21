@@ -8,7 +8,7 @@ declare namespace org {
                          * Execute a callback.
                          */
                         // @ts-ignore
-                        class ExecuteCallback extends org.spongepowered.api.text.action.ClickAction<java.util.function.Consumer<org.spongepowered.api.command.CommandSource>> {
+                        class ExecuteCallback extends org.spongepowered.api.text.action.ClickAction<java.util.function$.Consumer<org.spongepowered.api.command.CommandSource>> {
                         }
                     }
                 }

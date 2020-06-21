@@ -9,11 +9,11 @@ declare namespace org {
                      * @param <T> The catalog type
                      */
                     // @ts-ignore
-                    class AbstractGameRegistryRegisterEvent<T extends org.spongepowered.api.CatalogType> extends org.spongepowered.api.event.impl.AbstractEvent implements org.spongepowered.api.event.game.GameRegistryEvent.Register<T> {
+                    abstract class AbstractGameRegistryRegisterEvent<T extends org.spongepowered.api.CatalogType> extends org.spongepowered.api.event.impl.AbstractEvent implements org.spongepowered.api.event.game.GameRegistryEvent.Register<T> {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        register(catalogType: T extends org.spongepowered.api.CatalogType): void
+                        public register(catalogType: T): void
                     }
                 }
             }

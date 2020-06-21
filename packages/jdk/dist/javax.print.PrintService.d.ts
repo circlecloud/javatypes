@@ -38,7 +38,7 @@ declare namespace javax {
              * @return name of the service.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             /**
              * Creates and returns a PrintJob capable of handling data from
              * any of the supported document flavors.
@@ -151,7 +151,7 @@ declare namespace javax {
              *           The array is empty if no categories are supported.
              */
             // @ts-ignore
-            getSupportedAttributeCategories(): java.lang.Class[]
+            getSupportedAttributeCategories(): java.lang.Class<any>[]
             /**
              * Determines whether a client can specify the given printing
              * attribute category when setting up a job for this print service. A
@@ -186,7 +186,7 @@ declare namespace javax {
              *      {#link javax.print.attribute.Attribute Attribute}.
              */
             // @ts-ignore
-            isAttributeCategorySupported(category: java.lang.Class<javax.print.attribute.Attribute>): boolean
+            isAttributeCategorySupported(category: java.lang.Class<any>): boolean
             /**
              * Determines this print service's default printing attribute value in
              * the given category. A printing attribute value is an instance of
@@ -226,7 +226,7 @@ declare namespace javax {
              *      javax.print.attribute.Attribute Attribute}.
              */
             // @ts-ignore
-            getDefaultAttributeValue(category: java.lang.Class<javax.print.attribute.Attribute>): java.lang.Object
+            getDefaultAttributeValue(category: java.lang.Class<any>): any
             /**
              * Determines the printing attribute values a client can specify in
              * the given category when setting up a job for this print service. A
@@ -298,7 +298,7 @@ declare namespace javax {
              *      <code>DocFlavor</code> is not supported by this service.
              */
             // @ts-ignore
-            getSupportedAttributeValues(category: java.lang.Class<javax.print.attribute.Attribute>, flavor: javax.print.DocFlavor, attributes: javax.print.attribute.AttributeSet): java.lang.Object
+            getSupportedAttributeValues(category: java.lang.Class<any>, flavor: javax.print.DocFlavor, attributes: javax.print.attribute.AttributeSet): any
             /**
              * Determines whether a client can specify the given printing
              * attribute
@@ -411,14 +411,14 @@ declare namespace javax {
              *  false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            equals(obj: java.lang.Object | any): boolean
             /**
              * This method should be implemented consistently with
              * <code>equals(Object)</code>.
              * @return hash code of this object.
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
         }
     }
 }

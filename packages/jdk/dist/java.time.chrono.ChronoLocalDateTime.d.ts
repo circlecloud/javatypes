@@ -28,7 +28,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface ChronoLocalDateTime<D extends java.time.chrono.ChronoLocalDate> extends java.time.temporal.Temporal, java.time.temporal.TemporalAdjuster, java.lang.Comparable<java.time.chrono.ChronoLocalDateTime<?>> {
+            interface ChronoLocalDateTime<D extends java.time.chrono.ChronoLocalDate> extends java.time.temporal.Temporal, java.time.temporal.TemporalAdjuster, java.lang.Comparable<java.time.chrono.ChronoLocalDateTime<any>> {
                 /**
                  * Gets a comparator that compares {@code ChronoLocalDateTime} in
                  * time-line order ignoring the chronology.
@@ -44,7 +44,7 @@ declare namespace java {
                  * @see #isEqual
                  */
                 // @ts-ignore
-                timeLineOrder(): java.util.Comparator<java.time.chrono.ChronoLocalDateTime<?>>
+                timeLineOrder(): java.util.Comparator<java.time.chrono.ChronoLocalDateTime<any>>
                 /**
                  * Obtains an instance of {@code ChronoLocalDateTime} from a temporal object.
                  * <p>
@@ -66,7 +66,7 @@ declare namespace java {
                  * @see Chronology#localDateTime(TemporalAccessor)
                  */
                 // @ts-ignore
-                from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<?>
+                from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<any>
                 /**
                  * Gets the chronology of this date-time.
                  * <p>
@@ -234,7 +234,7 @@ declare namespace java {
                  * @throws DateTimeException if an error occurs during printing
                  */
                 // @ts-ignore
-                format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+                format(formatter: java.time.format.DateTimeFormatter): string
                 /**
                  * Combines this time with a time-zone to create a {@code ChronoZonedDateTime}.
                  * <p>
@@ -290,7 +290,7 @@ declare namespace java {
                  * @return the number of seconds from the epoch of 1970-01-01T00:00:00Z
                  */
                 // @ts-ignore
-                toEpochSecond(offset: java.time.ZoneOffset): long
+                toEpochSecond(offset: java.time.ZoneOffset): number /*long*/
                 /**
                  * Compares this date-time to another date-time, including the chronology.
                  * <p>
@@ -317,7 +317,7 @@ declare namespace java {
                  * @return the comparator value, negative if less, positive if greater
                  */
                 // @ts-ignore
-                compareTo(other: java.time.chrono.ChronoLocalDateTime<any>): int
+                compareTo(other: java.time.chrono.ChronoLocalDateTime<any>): number /*int*/
                 /**
                  * Checks if this date-time is after the specified date-time ignoring the chronology.
                  * <p>
@@ -371,13 +371,13 @@ declare namespace java {
                  * @return true if this is equal to the other date
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this date-time.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Outputs this date-time as a {@code String}.
                  * <p>
@@ -385,7 +385,7 @@ declare namespace java {
                  * @return a string representation of this date-time, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

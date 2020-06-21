@@ -54,7 +54,7 @@ declare namespace javax {
                  *     editor from; the same spinner as was passed to the constructor.
                  */
                 // @ts-ignore
-                dismiss(spinner: javax.swing.JSpinner): void
+                public dismiss(spinner: javax.swing.JSpinner): void
                 /**
                  * Returns the <code>JSpinner</code> ancestor of this editor or
                  * <code>null</code> if none of the ancestors are a
@@ -68,7 +68,7 @@ declare namespace javax {
                  * @see JSpinner#createEditor
                  */
                 // @ts-ignore
-                getSpinner(): javax.swing.JSpinner
+                public getSpinner(): javax.swing.JSpinner
                 /**
                  * Returns the <code>JFormattedTextField</code> child of this
                  * editor.  By default the text field is the first and only
@@ -79,7 +79,7 @@ declare namespace javax {
                  * @see #getModel
                  */
                 // @ts-ignore
-                getTextField(): javax.swing.JFormattedTextField
+                public getTextField(): javax.swing.JFormattedTextField
                 /**
                  * This method is called when the spinner's model's state changes.
                  * It sets the <code>value</code> of the text field to the current
@@ -90,7 +90,7 @@ declare namespace javax {
                  * @see JSpinner#getValue
                  */
                 // @ts-ignore
-                stateChanged(e: javax.swing.event.ChangeEvent): void
+                public stateChanged(e: javax.swing.event.ChangeEvent): void
                 /**
                  * Called by the <code>JFormattedTextField</code>
                  * <code>PropertyChangeListener</code>.  When the <code>"value"</code>
@@ -106,7 +106,7 @@ declare namespace javax {
                  * @see #getTextField
                  */
                 // @ts-ignore
-                propertyChange(e: java.beans.PropertyChangeEvent): void
+                public propertyChange(e: java.beans.PropertyChangeEvent): void
                 /**
                  * This <code>LayoutManager</code> method does nothing.  We're
                  * only managing a single child and there's no support
@@ -115,14 +115,14 @@ declare namespace javax {
                  * @param child ignored
                  */
                 // @ts-ignore
-                addLayoutComponent(name: string, child: java.awt.Component): void
+                public addLayoutComponent(name: java.lang.String | string, child: java.awt.Component): void
                 /**
                  * This <code>LayoutManager</code> method does nothing.  There
                  * isn't any per-child state.
                  * @param child ignored
                  */
                 // @ts-ignore
-                removeLayoutComponent(child: java.awt.Component): void
+                public removeLayoutComponent(child: java.awt.Component): void
                 /**
                  * Returns the preferred size of first (and only) child plus the
                  * size of the parents insets.
@@ -131,7 +131,7 @@ declare namespace javax {
                  *           of the specified container.
                  */
                 // @ts-ignore
-                preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+                public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
                 /**
                  * Returns the minimum size of first (and only) child plus the
                  * size of the parents insets.
@@ -140,13 +140,13 @@ declare namespace javax {
                  *           of the specified container.
                  */
                 // @ts-ignore
-                minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+                public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
                 /**
                  * Resize the one (and only) child to completely fill the area
                  * within the parents insets.
                  */
                 // @ts-ignore
-                layoutContainer(parent: java.awt.Container): void
+                public layoutContainer(parent: java.awt.Container): void
                 /**
                  * Pushes the currently edited value to the <code>SpinnerModel</code>.
                  * <p>
@@ -155,7 +155,7 @@ declare namespace javax {
                  * @throws ParseException if the edited value is not legal
                  */
                 // @ts-ignore
-                commitEdit(): void
+                public commitEdit(): void
                 /**
                  * Returns the baseline.
                  * @throws IllegalArgumentException {#inheritDoc}
@@ -164,7 +164,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaseline(width: number /*int*/, height: number /*int*/): int
+                public getBaseline(width: number /*int*/, height: number /*int*/): number /*int*/
                 /**
                  * Returns an enum indicating how the baseline of the component
                  * changes as the size changes.
@@ -173,7 +173,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaselineResizeBehavior(): java.awt.Component.BaselineResizeBehavior
+                public getBaselineResizeBehavior(): java.awt.Component.BaselineResizeBehavior
             }
         }
     }

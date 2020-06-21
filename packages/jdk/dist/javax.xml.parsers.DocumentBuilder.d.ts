@@ -18,7 +18,7 @@ declare namespace javax {
              * @author <a href="mailto:Jeff.Suttor#Sun.com">Jeff Suttor</a>
              */
             // @ts-ignore
-            class DocumentBuilder extends java.lang.Object {
+            abstract class DocumentBuilder extends java.lang.Object {
                 /**
                  * Protected constructor
                  */
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Parse the content of the given <code>InputStream</code> as an XML
                  * document and return a new DOM {@link Document} object.
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(jis: java.io.InputStream): org.w3c.dom.Document
+                public parse(jis: java.io.InputStream): org.w3c.dom.Document
                 /**
                  * Parse the content of the given <code>InputStream</code> as an
                  * XML document and return a new DOM {@link Document} object.
@@ -68,7 +68,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(jis: java.io.InputStream, systemId: string): org.w3c.dom.Document
+                public parse(jis: java.io.InputStream, systemId: java.lang.String | string): org.w3c.dom.Document
                 /**
                  * Parse the content of the given URI as an XML document
                  * and return a new DOM {@link Document} object.
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(uri: string): org.w3c.dom.Document
+                public parse(uri: java.lang.String | string): org.w3c.dom.Document
                 /**
                  * Parse the content of the given file as an XML document
                  * and return a new DOM {@link Document} object.
@@ -96,7 +96,7 @@ declare namespace javax {
                  * @return A new DOM Document object.
                  */
                 // @ts-ignore
-                parse(f: java.io.File): org.w3c.dom.Document
+                public parse(f: java.io.File): org.w3c.dom.Document
                 /**
                  * Parse the content of the given input source as an XML document
                  * and return a new DOM {@link Document} object.
@@ -110,7 +110,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                abstract parse(jis: org.xml.sax.InputSource): org.w3c.dom.Document
+                public abstract parse(jis: org.xml.sax.InputSource): org.w3c.dom.Document
                 /**
                  * Indicates whether or not this parser is configured to
                  * understand namespaces.
@@ -118,7 +118,7 @@ declare namespace javax {
                  *          namespaces; false otherwise.
                  */
                 // @ts-ignore
-                abstract isNamespaceAware(): boolean
+                public abstract isNamespaceAware(): boolean
                 /**
                  * Indicates whether or not this parser is configured to
                  * validate XML documents.
@@ -126,7 +126,7 @@ declare namespace javax {
                  *          XML documents; false otherwise.
                  */
                 // @ts-ignore
-                abstract isValidating(): boolean
+                public abstract isValidating(): boolean
                 /**
                  * Specify the {@link EntityResolver} to be used to resolve
                  * entities present in the XML document to be parsed. Setting
@@ -137,7 +137,7 @@ declare namespace javax {
                  *            present in the XML document to be parsed.
                  */
                 // @ts-ignore
-                abstract setEntityResolver(er: org.xml.sax.EntityResolver): void
+                public abstract setEntityResolver(er: org.xml.sax.EntityResolver): void
                 /**
                  * Specify the {@link ErrorHandler} to be used by the parser.
                  * Setting this to <code>null</code> will result in the underlying
@@ -146,20 +146,20 @@ declare namespace javax {
                  * @param eh The <code>ErrorHandler</code> to be used by the parser.
                  */
                 // @ts-ignore
-                abstract setErrorHandler(eh: org.xml.sax.ErrorHandler): void
+                public abstract setErrorHandler(eh: org.xml.sax.ErrorHandler): void
                 /**
                  * Obtain a new instance of a DOM {@link Document} object
                  * to build a DOM tree with.
                  * @return A new instance of a DOM Document object.
                  */
                 // @ts-ignore
-                abstract newDocument(): org.w3c.dom.Document
+                public abstract newDocument(): org.w3c.dom.Document
                 /**
                  * Obtain an instance of a {@link DOMImplementation} object.
                  * @return A new instance of a <code>DOMImplementation</code>.
                  */
                 // @ts-ignore
-                abstract getDOMImplementation(): org.w3c.dom.DOMImplementation
+                public abstract getDOMImplementation(): org.w3c.dom.DOMImplementation
                 /**
                  * <p>Get a reference to the the {@link Schema} being used by
                  * the XML processor.</p>
@@ -171,7 +171,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSchema(): javax.xml.validation.Schema
+                public getSchema(): javax.xml.validation.Schema
                 /**
                  * <p>Get the XInclude processing mode for this parser.</p>
                  * @return the return value of
@@ -183,7 +183,7 @@ declare namespace javax {
                  * @see DocumentBuilderFactory#setXIncludeAware(boolean)
                  */
                 // @ts-ignore
-                isXIncludeAware(): boolean
+                public isXIncludeAware(): boolean
             }
         }
     }

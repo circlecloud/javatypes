@@ -24,7 +24,7 @@ declare namespace java {
                  * @param message the detail message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a {@code RejectedExecutionException} with the
                  * specified detail message and cause.
@@ -33,7 +33,7 @@ declare namespace java {
                  *          {#link #getCause()} method)
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a {@code RejectedExecutionException} with the
                  * specified cause.  The detail message is set to {@code (cause ==
@@ -43,7 +43,7 @@ declare namespace java {
                  *          {#link #getCause()} method)
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

@@ -12,9 +12,9 @@ declare namespace org {
                 // @ts-ignore
                 class BindingBuilder extends java.lang.Object {
                     // @ts-ignore
-                    bind(queue: org.springframework.amqp.core.Queue): org.springframework.amqp.core.BindingBuilder.DestinationConfigurer
+                    public static bind(queue: org.springframework.amqp.core.Queue): org.springframework.amqp.core.BindingBuilder.DestinationConfigurer
                     // @ts-ignore
-                    bind(exchange: org.springframework.amqp.core.Exchange): org.springframework.amqp.core.BindingBuilder.DestinationConfigurer
+                    public static bind(exchange: org.springframework.amqp.core.Exchange): org.springframework.amqp.core.BindingBuilder.DestinationConfigurer
                 }
             }
         }

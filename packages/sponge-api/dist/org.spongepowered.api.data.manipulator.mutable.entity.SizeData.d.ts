@@ -17,21 +17,21 @@ declare namespace org {
                                  * @see Keys#BASE_SIZE
                                  */
                                 // @ts-ignore
-                                base(): org.spongepowered.api.data.value.mutable.Value<java.lang.Float>
+                                base(): org.spongepowered.api.data.value.mutable.Value<java.lang.Float | number>
                                 /**
                                  * Gets the current y height of this entity.
                                  * @return The current y height
                                  * @see Keys#HEIGHT
                                  */
                                 // @ts-ignore
-                                height(): org.spongepowered.api.data.value.mutable.Value<java.lang.Float>
+                                height(): org.spongepowered.api.data.value.mutable.Value<java.lang.Float | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the "scale" size.
                                  * @return The value for the scale
                                  * @see Keys#SCALE
                                  */
                                 // @ts-ignore
-                                scale(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Float>
+                                scale(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Float | number>
                             }
                         }
                     }

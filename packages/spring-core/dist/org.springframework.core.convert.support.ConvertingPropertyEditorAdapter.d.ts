@@ -21,9 +21,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor(conversionService: org.springframework.core.convert.ConversionService, targetDescriptor: org.springframework.core.convert.TypeDescriptor)
                         // @ts-ignore
-                        setAsText(text: string): void
+                        public setAsText(text: java.lang.String | string): void
                         // @ts-ignore
-                        getAsText(): java.lang.String
+                        public getAsText(): string
                     }
                 }
             }

@@ -14,7 +14,7 @@ declare namespace javax {
                     // @ts-ignore
                     editor: javax.swing.JTextField
                     // @ts-ignore
-                    getEditorComponent(): java.awt.Component
+                    public getEditorComponent(): java.awt.Component
                     /**
                      * Creates the internal editor component. Override this to provide
                      * a custom implementation.
@@ -28,19 +28,19 @@ declare namespace javax {
                      * @param anObject the displayed value of the editor
                      */
                     // @ts-ignore
-                    setItem(anObject: any): void
+                    public setItem(anObject: java.lang.Object | any): void
                     // @ts-ignore
-                    getItem(): java.lang.Object
+                    public getItem(): any
                     // @ts-ignore
-                    selectAll(): void
+                    public selectAll(): void
                     // @ts-ignore
-                    focusGained(e: java.awt.event.FocusEvent): void
+                    public focusGained(e: java.awt.event.FocusEvent): void
                     // @ts-ignore
-                    focusLost(e: java.awt.event.FocusEvent): void
+                    public focusLost(e: java.awt.event.FocusEvent): void
                     // @ts-ignore
-                    addActionListener(l: java.awt.event.ActionListener): void
+                    public addActionListener(l: java.awt.event.ActionListener): void
                     // @ts-ignore
-                    removeActionListener(l: java.awt.event.ActionListener): void
+                    public removeActionListener(l: java.awt.event.ActionListener): void
                 }
             }
         }

@@ -67,14 +67,14 @@ declare namespace org {
                              * @return The targeted block predicate
                              */
                             // @ts-ignore
-                            getPlacementTarget(): java.util.function.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
+                            getPlacementTarget(): java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
                             /**
                              * Sets the {@link Predicate} that this populator used to determine of a
                              * given {@link Location} is valid to attempt to place a block at.
                              * @param target The new targeted block predicate
                              */
                             // @ts-ignore
-                            getPlacementTarget(target: java.util.function.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>> | java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): void
+                            getPlacementTarget(target: java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): void
                         }
                     }
                 }

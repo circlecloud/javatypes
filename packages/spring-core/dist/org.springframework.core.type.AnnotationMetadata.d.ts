@@ -22,7 +22,7 @@ declare namespace org {
                      * @return the annotation type names
                      */
                     // @ts-ignore
-                    getAnnotationTypes(): java.util.Set<java.lang.String>
+                    getAnnotationTypes(): Array<java.lang.String | string>
                     /**
                      * Get the fully qualified class names of all meta-annotation types that
                      * are <em>present</em> on the given annotation type on the underlying class.
@@ -31,7 +31,7 @@ declare namespace org {
                      * @return the meta-annotation type names, or an empty set if none found
                      */
                     // @ts-ignore
-                    getMetaAnnotationTypes(annotationName: string): java.util.Set<java.lang.String>
+                    getMetaAnnotationTypes(annotationName: java.lang.String | string): Array<java.lang.String | string>
                     /**
                      * Determine whether an annotation of the given type is <em>present</em> on
                      * the underlying class.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @return {#code true} if a matching annotation is present
                      */
                     // @ts-ignore
-                    hasAnnotation(annotationName: string): boolean
+                    hasAnnotation(annotationName: java.lang.String | string): boolean
                     /**
                      * Determine whether the underlying class has an annotation that is itself
                      * annotated with the meta-annotation of the given type.
@@ -49,7 +49,7 @@ declare namespace org {
                      * @return {#code true} if a matching meta-annotation is present
                      */
                     // @ts-ignore
-                    hasMetaAnnotation(metaAnnotationName: string): boolean
+                    hasMetaAnnotation(metaAnnotationName: java.lang.String | string): boolean
                     /**
                      * Determine whether the underlying class has any methods that are
                      * annotated (or meta-annotated) with the given annotation type.
@@ -57,7 +57,7 @@ declare namespace org {
                      *  type to look for
                      */
                     // @ts-ignore
-                    hasAnnotatedMethods(annotationName: string): boolean
+                    hasAnnotatedMethods(annotationName: java.lang.String | string): boolean
                     /**
                      * Retrieve the method metadata for all methods that are annotated
                      * (or meta-annotated) with the given annotation type.
@@ -70,7 +70,7 @@ declare namespace org {
                      *  the annotation type.
                      */
                     // @ts-ignore
-                    getAnnotatedMethods(annotationName: string): java.util.Set<org.springframework.core.type.MethodMetadata>
+                    getAnnotatedMethods(annotationName: java.lang.String | string): Array<org.springframework.core.type.MethodMetadata>
                     /**
                      * Factory method to create a new {@link AnnotationMetadata} instance
                      * for the given class using standard reflection.

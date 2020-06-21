@@ -51,14 +51,14 @@ declare namespace javax {
                  * type for the value is Integer.
                  */
                 // @ts-ignore
-                readonly tabSizeAttribute: string
+                public static readonly tabSizeAttribute: java.lang.String | string
                 /**
                  * Name of the attribute that specifies the maximum
                  * length of a line, if there is a maximum length.
                  * The type for the value is Integer.
                  */
                 // @ts-ignore
-                readonly lineLimitAttribute: string
+                public static readonly lineLimitAttribute: java.lang.String | string
                 /**
                  * Inserts some content into the document.
                  * Inserting content causes a write lock to be held while the
@@ -77,14 +77,14 @@ declare namespace javax {
                  * @see Document#insertString
                  */
                 // @ts-ignore
-                insertString(offs: number /*int*/, str: string, a: javax.swing.text.AttributeSet): void
+                public insertString(offs: number /*int*/, str: java.lang.String | string, a: javax.swing.text.AttributeSet): void
                 /**
                  * Gets the default root element for the document model.
                  * @return the root
                  * @see Document#getDefaultRootElement
                  */
                 // @ts-ignore
-                getDefaultRootElement(): javax.swing.text.Element
+                public getDefaultRootElement(): javax.swing.text.Element
                 /**
                  * Creates the root element to be used to represent the
                  * default document structure.
@@ -97,7 +97,7 @@ declare namespace javax {
                  * document only models lines, it returns the line instead.
                  */
                 // @ts-ignore
-                getParagraphElement(pos: number /*int*/): javax.swing.text.Element
+                public getParagraphElement(pos: number /*int*/): javax.swing.text.Element
                 /**
                  * Updates document structure as a result of text insertion.  This
                  * will happen within a write lock.  Since this document simply

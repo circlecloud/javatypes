@@ -18,7 +18,7 @@ declare namespace javax {
                  * @throws IllegalStateException if the task has started
                  */
                 // @ts-ignore
-                setProcessors(processors: java.lang.Iterable<javax.annotation.processing.Processor>): void
+                setProcessors(processors: java.lang.Iterable<any>): void
                 /**
                  * Set the locale to be applied when formatting diagnostics and
                  * other localized data.

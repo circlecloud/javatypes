@@ -33,7 +33,7 @@ declare namespace org {
                             // @ts-ignore
                             with(index: number /*int*/, patternShape: org.spongepowered.api.data.type.BannerPatternShape, color: org.spongepowered.api.data.type.DyeColor): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
                             // @ts-ignore
-                            with(collection: Array<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
+                            with(collection: java.util.List<org.spongepowered.api.data.meta.PatternLayer> | Array<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
                             // @ts-ignore
                             withElement(elements: org.spongepowered.api.data.meta.PatternLayer): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
                             // @ts-ignore
@@ -58,7 +58,7 @@ declare namespace org {
                             // @ts-ignore
                             withoutAll(elements: java.lang.Iterable<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
                             // @ts-ignore
-                            withoutAll(predicate: java.util.function.Predicate<org.spongepowered.api.data.meta.PatternLayer> | java.util.function$.Predicate<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
+                            withoutAll(predicate: java.util.function$.Predicate<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
                             // @ts-ignore
                             asMutable(): org.spongepowered.api.data.value.mutable.PatternListValue
                         }

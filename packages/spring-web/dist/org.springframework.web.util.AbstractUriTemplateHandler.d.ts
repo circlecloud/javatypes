@@ -12,7 +12,7 @@ declare namespace org {
                  * @deprecated as of 5.0 in favor of {#link DefaultUriBuilderFactory}
                  */
                 // @ts-ignore
-                class AbstractUriTemplateHandler extends java.lang.Object implements org.springframework.web.util.UriTemplateHandler {
+                abstract class AbstractUriTemplateHandler extends java.lang.Object implements org.springframework.web.util.UriTemplateHandler {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,12 +23,12 @@ declare namespace org {
                      * @param baseUrl the base URL.
                      */
                     // @ts-ignore
-                    setBaseUrl(baseUrl: string): void
+                    public setBaseUrl(baseUrl: java.lang.String | string): void
                     /**
                      * Return the configured base URL.
                      */
                     // @ts-ignore
-                    getBaseUrl(): java.lang.String
+                    public getBaseUrl(): string
                     /**
                      * Configure default URI variable values to use with every expanded URI
                      * template. These default values apply only when expanding with a Map, and
@@ -38,26 +38,26 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setDefaultUriVariables(defaultUriVariables: java.util.Map<java.lang.String, any>): void
+                    public setDefaultUriVariables(defaultUriVariables: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Return a read-only copy of the configured default URI variables.
                      */
                     // @ts-ignore
-                    getDefaultUriVariables(): java.util.Map<java.lang.String, ?>
+                    public getDefaultUriVariables(): java.util.Map<java.lang.String | string, any>
                     // @ts-ignore
-                    expand(uriTemplate: string, uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    public expand(uriTemplate: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                     // @ts-ignore
-                    expand(uriTemplate: string, ...uriVariables: any[]): java.net.URI
+                    public expand(uriTemplate: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): java.net.URI
                     /**
                      * Actually expand and encode the URI template.
                      */
                     // @ts-ignore
-                    abstract expandInternal(uriTemplate: string, uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    abstract expandInternal(uriTemplate: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                     /**
                      * Actually expand and encode the URI template.
                      */
                     // @ts-ignore
-                    abstract expandInternal(uriTemplate: string, ...uriVariables: any[]): java.net.URI
+                    abstract expandInternal(uriTemplate: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): java.net.URI
                 }
             }
         }

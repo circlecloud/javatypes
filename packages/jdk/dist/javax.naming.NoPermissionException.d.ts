@@ -19,7 +19,7 @@ declare namespace javax {
              * @param explanation     Possibly null additional detail about this exception.
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of NoPermissionException.
              * All fields are initialized to null.

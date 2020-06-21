@@ -42,7 +42,7 @@ declare namespace java {
                      * have the name {@code "user"}.
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * Returns a list containing the names of the user-defined attributes.
                      * @return An unmodifiable list containing the names of the file's
@@ -57,7 +57,7 @@ declare namespace java {
                      *           denies read access to the file.
                      */
                     // @ts-ignore
-                    list(): java.util.List<java.lang.String>
+                    list(): Array<java.lang.String | string>
                     /**
                      * Returns the size of the value of a user-defined attribute.
                      * @param name
@@ -75,7 +75,7 @@ declare namespace java {
                      *           denies read access to the file.
                      */
                     // @ts-ignore
-                    size(name: string): int
+                    size(name: java.lang.String | string): number /*int*/
                     /**
                      * Read the value of a user-defined attribute into a buffer.
                      * <p> This method reads the value of the attribute into the given buffer
@@ -117,7 +117,7 @@ declare namespace java {
                      * @see #size
                      */
                     // @ts-ignore
-                    read(name: string, dst: java.nio.ByteBuffer): int
+                    read(name: java.lang.String | string, dst: java.nio.ByteBuffer): number /*int*/
                     /**
                      * Writes the value of a user-defined attribute from a buffer.
                      * <p> This method writes the value of the attribute from a given buffer as
@@ -158,7 +158,7 @@ declare namespace java {
                      *           method denies write access to the file.
                      */
                     // @ts-ignore
-                    write(name: string, src: java.nio.ByteBuffer): int
+                    write(name: java.lang.String | string, src: java.nio.ByteBuffer): number /*int*/
                     /**
                      * Deletes a user-defined attribute.
                      * @param name
@@ -173,7 +173,7 @@ declare namespace java {
                      *           method denies write access to the file.
                      */
                     // @ts-ignore
-                    delete(name: string): void
+                    delete(name: java.lang.String | string): void
                 }
             }
         }

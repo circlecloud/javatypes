@@ -24,7 +24,7 @@ declare namespace org {
                  * @see org.springframework.web.servlet.FrameworkServlet#setContextConfigLocation
                  */
                 // @ts-ignore
-                
+                readonly CONFIG_LOCATION_DELIMITERS: java.lang.String | string
                 /**
                  * Name of the ConversionService bean in the factory.
                  * If none is supplied, default conversion rules apply.
@@ -32,7 +32,7 @@ declare namespace org {
                  * @see org.springframework.core.convert.ConversionService
                  */
                 // @ts-ignore
-                
+                readonly CONVERSION_SERVICE_BEAN_NAME: java.lang.String | string
                 /**
                  * Name of the LoadTimeWeaver bean in the factory. If such a bean is supplied,
                  * the context will use a temporary ClassLoader for type matching, in order
@@ -41,25 +41,25 @@ declare namespace org {
                  * @see org.springframework.instrument.classloading.LoadTimeWeaver
                  */
                 // @ts-ignore
-                
+                readonly LOAD_TIME_WEAVER_BEAN_NAME: java.lang.String | string
                 /**
                  * Name of the {@link Environment} bean in the factory.
                  * @since 3.1
                  */
                 // @ts-ignore
-                
+                readonly ENVIRONMENT_BEAN_NAME: java.lang.String | string
                 /**
                  * Name of the System properties bean in the factory.
                  * @see java.lang.System#getProperties()
                  */
                 // @ts-ignore
-                
+                readonly SYSTEM_PROPERTIES_BEAN_NAME: java.lang.String | string
                 /**
                  * Name of the System environment bean in the factory.
                  * @see java.lang.System#getenv()
                  */
                 // @ts-ignore
-                
+                readonly SYSTEM_ENVIRONMENT_BEAN_NAME: java.lang.String | string
                 /**
                  * {@link Thread#getName() Name} of the {@linkplain #registerShutdownHook()
                  * shutdown hook} thread: {@value}.
@@ -67,13 +67,13 @@ declare namespace org {
                  * @see #registerShutdownHook()
                  */
                 // @ts-ignore
-                
+                readonly SHUTDOWN_HOOK_THREAD_NAME: java.lang.String | string
                 /**
                  * Set the unique id of this application context.
                  * @since 3.0
                  */
                 // @ts-ignore
-                setId(id: string): void
+                setId(id: java.lang.String | string): void
                 /**
                  * Set the parent of this application context.
                  * <p>Note that the parent shouldn't be changed: It should only be set outside

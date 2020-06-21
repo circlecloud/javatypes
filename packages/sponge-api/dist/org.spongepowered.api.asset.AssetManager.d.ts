@@ -17,7 +17,7 @@ declare namespace org {
                      * @return Asset if present, empty otherwise
                      */
                     // @ts-ignore
-                    getAsset(plugin: any, name: string): java.util.Optional<org.spongepowered.api.asset.Asset>
+                    getAsset(plugin: java.lang.Object | any, name: java.lang.String | string): java.util.Optional<org.spongepowered.api.asset.Asset>
                     /**
                      * Returns the {@link Asset} of the specified name within the domain of the
                      * implementation. This method will typically call
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return Asset if present, empty otherwise
                      */
                     // @ts-ignore
-                    getAsset(name: string): java.util.Optional<org.spongepowered.api.asset.Asset>
+                    getAsset(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.asset.Asset>
                 }
             }
         }

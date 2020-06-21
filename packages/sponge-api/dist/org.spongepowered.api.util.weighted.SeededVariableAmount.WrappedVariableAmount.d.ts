@@ -19,13 +19,13 @@ declare namespace org {
                             // @ts-ignore
                             constructor(inner: org.spongepowered.api.util.weighted.VariableAmount)
                             // @ts-ignore
-                            getAmount(rand: java.util.Random, seed: T): double
+                            public getAmount(rand: java.util.Random, seed: T): number /*double*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                             // @ts-ignore
-                            equals(obj: any): boolean
+                            public equals(obj: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                         }
                     }
                 }

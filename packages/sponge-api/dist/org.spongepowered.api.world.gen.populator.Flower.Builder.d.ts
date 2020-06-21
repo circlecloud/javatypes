@@ -55,7 +55,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                supplier(override: java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.data.type.PlantType> | java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.data.type.PlantType>): org.spongepowered.api.world.gen.populator.Flower.Builder
+                                supplier(override: java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.data.type.PlantType>): org.spongepowered.api.world.gen.populator.Flower.Builder
                                 /**
                                  * Builds a new instance of a {@link Flower} populator with the settings
                                  * set within the builder.

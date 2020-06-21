@@ -21,13 +21,13 @@ declare namespace org {
                                  * @return The original list of dropped items
                                  */
                                 // @ts-ignore
-                                getOriginalDroppedItems(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                                getOriginalDroppedItems(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                                 /**
                                  * Gets the mutable list of {@link ItemStackSnapshot}s to be dropped.
                                  * @return The list of dropped itemstacks
                                  */
                                 // @ts-ignore
-                                getDroppedItems(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                                getDroppedItems(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             }
                         }
                     }

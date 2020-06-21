@@ -17,7 +17,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        itemStateChanged(e: java.awt.event.ItemEvent): void
+                        public itemStateChanged(e: java.awt.event.ItemEvent): void
                     }
                 }
             }

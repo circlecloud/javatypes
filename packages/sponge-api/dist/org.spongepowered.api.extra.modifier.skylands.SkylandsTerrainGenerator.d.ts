@@ -19,14 +19,14 @@ declare namespace org {
                              * Maximum height of the basic terrain.
                              */
                             // @ts-ignore
-                            readonly MAX_HEIGHT: number /*int*/
+                            public static readonly MAX_HEIGHT: number /*int*/
                             /**
                              * Minimum height of the basic terrain.
                              */
                             // @ts-ignore
-                            readonly MIN_HEIGHT: number /*int*/
+                            public static readonly MIN_HEIGHT: number /*int*/
                             // @ts-ignore
-                            populate(world: org.spongepowered.api.world.World, buffer: org.spongepowered.api.world.extent.MutableBlockVolume, biomes: org.spongepowered.api.world.extent.ImmutableBiomeVolume): void
+                            public populate(world: org.spongepowered.api.world.World, buffer: org.spongepowered.api.world.extent.MutableBlockVolume, biomes: org.spongepowered.api.world.extent.ImmutableBiomeVolume): void
                         }
                     }
                 }

@@ -113,7 +113,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly FETCH_FORWARD: number /*int*/
             /**
              * The constant indicating that the rows in a result set will be
              * processed in a reverse direction; last-to-first.
@@ -122,7 +122,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly FETCH_REVERSE: number /*int*/
             /**
              * The constant indicating that the order in which rows in a
              * result set will be processed is unknown.
@@ -130,14 +130,14 @@ declare namespace java {
              * as a hint to the driver, which the driver may ignore.
              */
             // @ts-ignore
-            
+            readonly FETCH_UNKNOWN: number /*int*/
             /**
              * The constant indicating the type for a <code>ResultSet</code> object
              * whose cursor may move only forward.
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly TYPE_FORWARD_ONLY: number /*int*/
             /**
              * The constant indicating the type for a <code>ResultSet</code> object
              * that is scrollable but generally not sensitive to changes to the data
@@ -145,7 +145,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly TYPE_SCROLL_INSENSITIVE: number /*int*/
             /**
              * The constant indicating the type for a <code>ResultSet</code> object
              * that is scrollable and generally sensitive to changes to the data
@@ -153,35 +153,35 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly TYPE_SCROLL_SENSITIVE: number /*int*/
             /**
              * The constant indicating the concurrency mode for a
              * <code>ResultSet</code> object that may NOT be updated.
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly CONCUR_READ_ONLY: number /*int*/
             /**
              * The constant indicating the concurrency mode for a
              * <code>ResultSet</code> object that may be updated.
              * @since 1.2
              */
             // @ts-ignore
-            
+            readonly CONCUR_UPDATABLE: number /*int*/
             /**
              * The constant indicating that open <code>ResultSet</code> objects with this
              * holdability will remain open when the current transaction is committed.
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly HOLD_CURSORS_OVER_COMMIT: number /*int*/
             /**
              * The constant indicating that open <code>ResultSet</code> objects with this
              * holdability will be closed when the current transaction is committed.
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly CLOSE_CURSORS_AT_COMMIT: number /*int*/
             /**
              * Moves the cursor forward one row from its current position.
              * A <code>ResultSet</code> cursor is initially positioned
@@ -259,7 +259,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getString(columnIndex: number /*int*/): java.lang.String
+            getString(columnIndex: number /*int*/): string
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -291,7 +291,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getByte(columnIndex: number /*int*/): byte
+            getByte(columnIndex: number /*int*/): number /*byte*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -304,7 +304,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getShort(columnIndex: number /*int*/): short
+            getShort(columnIndex: number /*int*/): number /*short*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -317,7 +317,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getInt(columnIndex: number /*int*/): int
+            getInt(columnIndex: number /*int*/): number /*int*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -330,7 +330,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getLong(columnIndex: number /*int*/): long
+            getLong(columnIndex: number /*int*/): number /*long*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -343,7 +343,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getFloat(columnIndex: number /*int*/): float
+            getFloat(columnIndex: number /*int*/): number /*float*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -356,7 +356,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getDouble(columnIndex: number /*int*/): double
+            getDouble(columnIndex: number /*int*/): number /*double*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -388,7 +388,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getBytes(columnIndex: number /*int*/): byte[]
+            getBytes(columnIndex: number /*int*/): number /*byte*/[]
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -519,7 +519,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getString(columnLabel: string): java.lang.String
+            getString(columnLabel: java.lang.String | string): string
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -538,7 +538,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getBoolean(columnLabel: string): boolean
+            getBoolean(columnLabel: java.lang.String | string): boolean
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -551,7 +551,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getByte(columnLabel: string): byte
+            getByte(columnLabel: java.lang.String | string): number /*byte*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -564,7 +564,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getShort(columnLabel: string): short
+            getShort(columnLabel: java.lang.String | string): number /*short*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -577,7 +577,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getInt(columnLabel: string): int
+            getInt(columnLabel: java.lang.String | string): number /*int*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -590,7 +590,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getLong(columnLabel: string): long
+            getLong(columnLabel: java.lang.String | string): number /*long*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -603,7 +603,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getFloat(columnLabel: string): float
+            getFloat(columnLabel: java.lang.String | string): number /*float*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -616,7 +616,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getDouble(columnLabel: string): double
+            getDouble(columnLabel: java.lang.String | string): number /*double*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -634,7 +634,7 @@ declare namespace java {
              *              or {@code getBigDecimal(String columnLabel)}
              */
             // @ts-ignore
-            getBigDecimal(columnLabel: string, scale: number /*int*/): java.math.BigDecimal
+            getBigDecimal(columnLabel: java.lang.String | string, scale: number /*int*/): java.math.BigDecimal
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -648,7 +648,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getBytes(columnLabel: string): byte[]
+            getBytes(columnLabel: java.lang.String | string): number /*byte*/[]
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -661,7 +661,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getDate(columnLabel: string): java.sql.Date
+            getDate(columnLabel: java.lang.String | string): java.sql.Date
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -675,7 +675,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getTime(columnLabel: string): java.sql.Time
+            getTime(columnLabel: java.lang.String | string): java.sql.Time
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -688,7 +688,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getTimestamp(columnLabel: string): java.sql.Timestamp
+            getTimestamp(columnLabel: java.lang.String | string): java.sql.Timestamp
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a stream of
@@ -712,7 +712,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getAsciiStream(columnLabel: string): java.io.InputStream
+            getAsciiStream(columnLabel: java.lang.String | string): java.io.InputStream
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a stream of two-byte
@@ -742,7 +742,7 @@ declare namespace java {
              * @deprecated use <code>getCharacterStream</code> instead
              */
             // @ts-ignore
-            getUnicodeStream(columnLabel: string): java.io.InputStream
+            getUnicodeStream(columnLabel: java.lang.String | string): java.io.InputStream
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a stream of uninterpreted
@@ -765,7 +765,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getBinaryStream(columnLabel: string): java.io.InputStream
+            getBinaryStream(columnLabel: java.lang.String | string): java.io.InputStream
             /**
              * Retrieves the first warning reported by calls on this
              * <code>ResultSet</code> object.
@@ -819,7 +819,7 @@ declare namespace java {
              *  this method
              */
             // @ts-ignore
-            getCursorName(): java.lang.String
+            getCursorName(): string
             /**
              * Retrieves the  number, types and properties of
              * this <code>ResultSet</code> object's columns.
@@ -863,7 +863,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getObject(columnIndex: number /*int*/): java.lang.Object
+            getObject(columnIndex: number /*int*/): any
             /**
              * <p>Gets the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -891,7 +891,7 @@ declare namespace java {
              *             called on a closed result set
              */
             // @ts-ignore
-            getObject(columnLabel: string): java.lang.Object
+            getObject(columnLabel: java.lang.String | string): any
             /**
              * Maps the given <code>ResultSet</code> column label to its
              * <code>ResultSet</code> column index.
@@ -902,7 +902,7 @@ declare namespace java {
              *   or this method is called on a closed result set
              */
             // @ts-ignore
-            findColumn(columnLabel: string): int
+            findColumn(columnLabel: java.lang.String | string): number /*int*/
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a
@@ -932,7 +932,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getCharacterStream(columnLabel: string): java.io.Reader
+            getCharacterStream(columnLabel: java.lang.String | string): java.io.Reader
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a
@@ -962,7 +962,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBigDecimal(columnLabel: string): java.math.BigDecimal
+            getBigDecimal(columnLabel: java.lang.String | string): java.math.BigDecimal
             /**
              * Retrieves whether the cursor is before the first row in
              * this <code>ResultSet</code> object.
@@ -1106,7 +1106,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getRow(): int
+            getRow(): number /*int*/
             /**
              * Moves the cursor to the given row number in
              * this <code>ResultSet</code> object.
@@ -1225,7 +1225,7 @@ declare namespace java {
              * @see #setFetchDirection
              */
             // @ts-ignore
-            getFetchDirection(): int
+            getFetchDirection(): number /*int*/
             /**
              * Gives the JDBC driver a hint as to the number of rows that should
              * be fetched from the database when more rows are needed for this
@@ -1254,7 +1254,7 @@ declare namespace java {
              * @see #setFetchSize
              */
             // @ts-ignore
-            getFetchSize(): int
+            getFetchSize(): number /*int*/
             /**
              * Retrieves the type of this <code>ResultSet</code> object.
              * The type is determined by the <code>Statement</code> object
@@ -1267,7 +1267,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getType(): int
+            getType(): number /*int*/
             /**
              * Retrieves the concurrency mode of this <code>ResultSet</code> object.
              * The concurrency used is determined by the
@@ -1280,7 +1280,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getConcurrency(): int
+            getConcurrency(): number /*int*/
             /**
              * Retrieves whether the current row has been updated.  The value returned
              * depends on whether or not the result set can detect updates.
@@ -1514,7 +1514,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateString(columnIndex: number /*int*/, x: string): void
+            updateString(columnIndex: number /*int*/, x: java.lang.String | string): void
             /**
              * Updates the designated column with a <code>byte</code> array value.
              * The updater methods are used to update column values in the
@@ -1677,7 +1677,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateObject(columnIndex: number /*int*/, x: any, scaleOrLength: number /*int*/): void
+            updateObject(columnIndex: number /*int*/, x: java.lang.Object | any, scaleOrLength: number /*int*/): void
             /**
              * Updates the designated column with an <code>Object</code> value.
              * The updater methods are used to update column values in the
@@ -1695,7 +1695,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateObject(columnIndex: number /*int*/, x: any): void
+            updateObject(columnIndex: number /*int*/, x: java.lang.Object | any): void
             /**
              * Updates the designated column with a <code>null</code> value.
              * The updater methods are used to update column values in the
@@ -1712,7 +1712,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateNull(columnLabel: string): void
+            updateNull(columnLabel: java.lang.String | string): void
             /**
              * Updates the designated column with a <code>boolean</code> value.
              * The updater methods are used to update column values in the
@@ -1730,7 +1730,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateBoolean(columnLabel: string, x: boolean): void
+            updateBoolean(columnLabel: java.lang.String | string, x: boolean): void
             /**
              * Updates the designated column with a <code>byte</code> value.
              * The updater methods are used to update column values in the
@@ -1748,7 +1748,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateByte(columnLabel: string, x: number /*byte*/): void
+            updateByte(columnLabel: java.lang.String | string, x: number /*byte*/): void
             /**
              * Updates the designated column with a <code>short</code> value.
              * The updater methods are used to update column values in the
@@ -1766,7 +1766,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateShort(columnLabel: string, x: number /*short*/): void
+            updateShort(columnLabel: java.lang.String | string, x: number /*short*/): void
             /**
              * Updates the designated column with an <code>int</code> value.
              * The updater methods are used to update column values in the
@@ -1784,7 +1784,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateInt(columnLabel: string, x: number /*int*/): void
+            updateInt(columnLabel: java.lang.String | string, x: number /*int*/): void
             /**
              * Updates the designated column with a <code>long</code> value.
              * The updater methods are used to update column values in the
@@ -1802,7 +1802,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateLong(columnLabel: string, x: number /*long*/): void
+            updateLong(columnLabel: java.lang.String | string, x: number /*long*/): void
             /**
              * Updates the designated column with a <code>float </code> value.
              * The updater methods are used to update column values in the
@@ -1820,7 +1820,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateFloat(columnLabel: string, x: number /*float*/): void
+            updateFloat(columnLabel: java.lang.String | string, x: number /*float*/): void
             /**
              * Updates the designated column with a <code>double</code> value.
              * The updater methods are used to update column values in the
@@ -1838,7 +1838,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateDouble(columnLabel: string, x: number /*double*/): void
+            updateDouble(columnLabel: java.lang.String | string, x: number /*double*/): void
             /**
              * Updates the designated column with a <code>java.sql.BigDecimal</code>
              * value.
@@ -1857,7 +1857,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateBigDecimal(columnLabel: string, x: java.math.BigDecimal): void
+            updateBigDecimal(columnLabel: java.lang.String | string, x: java.math.BigDecimal): void
             /**
              * Updates the designated column with a <code>String</code> value.
              * The updater methods are used to update column values in the
@@ -1875,7 +1875,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateString(columnLabel: string, x: string): void
+            updateString(columnLabel: java.lang.String | string, x: java.lang.String | string): void
             /**
              * Updates the designated column with a byte array value.
              * The updater methods are used to update column values in the
@@ -1893,7 +1893,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateBytes(columnLabel: string, x: number /*byte*/[]): void
+            updateBytes(columnLabel: java.lang.String | string, x: number /*byte*/[]): void
             /**
              * Updates the designated column with a <code>java.sql.Date</code> value.
              * The updater methods are used to update column values in the
@@ -1911,7 +1911,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateDate(columnLabel: string, x: java.sql.Date): void
+            updateDate(columnLabel: java.lang.String | string, x: java.sql.Date): void
             /**
              * Updates the designated column with a <code>java.sql.Time</code> value.
              * The updater methods are used to update column values in the
@@ -1929,7 +1929,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateTime(columnLabel: string, x: java.sql.Time): void
+            updateTime(columnLabel: java.lang.String | string, x: java.sql.Time): void
             /**
              * Updates the designated column with a <code>java.sql.Timestamp</code>
              * value.
@@ -1948,7 +1948,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateTimestamp(columnLabel: string, x: java.sql.Timestamp): void
+            updateTimestamp(columnLabel: java.lang.String | string, x: java.sql.Timestamp): void
             /**
              * Updates the designated column with an ascii stream value, which will have
              * the specified number of bytes.
@@ -1968,7 +1968,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateAsciiStream(columnLabel: string, x: java.io.InputStream, length: number /*int*/): void
+            updateAsciiStream(columnLabel: java.lang.String | string, x: java.io.InputStream, length: number /*int*/): void
             /**
              * Updates the designated column with a binary stream value, which will have
              * the specified number of bytes.
@@ -1988,7 +1988,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateBinaryStream(columnLabel: string, x: java.io.InputStream, length: number /*int*/): void
+            updateBinaryStream(columnLabel: java.lang.String | string, x: java.io.InputStream, length: number /*int*/): void
             /**
              * Updates the designated column with a character stream value, which will have
              * the specified number of bytes.
@@ -2009,7 +2009,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateCharacterStream(columnLabel: string, reader: java.io.Reader, length: number /*int*/): void
+            updateCharacterStream(columnLabel: java.lang.String | string, reader: java.io.Reader, length: number /*int*/): void
             /**
              * Updates the designated column with an <code>Object</code> value.
              * The updater methods are used to update column values in the
@@ -2039,7 +2039,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateObject(columnLabel: string, x: any, scaleOrLength: number /*int*/): void
+            updateObject(columnLabel: java.lang.String | string, x: java.lang.Object | any, scaleOrLength: number /*int*/): void
             /**
              * Updates the designated column with an <code>Object</code> value.
              * The updater methods are used to update column values in the
@@ -2057,7 +2057,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            updateObject(columnLabel: string, x: any): void
+            updateObject(columnLabel: java.lang.String | string, x: java.lang.Object | any): void
             /**
              * Inserts the contents of the insert row into this
              * <code>ResultSet</code> object and into the database.
@@ -2224,7 +2224,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getObject(columnIndex: number /*int*/, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getObject(columnIndex: number /*int*/, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>Ref</code> object
@@ -2310,7 +2310,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getObject(columnLabel: string, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getObject(columnLabel: java.lang.String | string, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>Ref</code> object
@@ -2326,7 +2326,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getRef(columnLabel: string): java.sql.Ref
+            getRef(columnLabel: java.lang.String | string): java.sql.Ref
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>Blob</code> object
@@ -2342,7 +2342,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBlob(columnLabel: string): java.sql.Blob
+            getBlob(columnLabel: java.lang.String | string): java.sql.Blob
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>Clob</code> object
@@ -2358,7 +2358,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getClob(columnLabel: string): java.sql.Clob
+            getClob(columnLabel: java.lang.String | string): java.sql.Clob
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as an <code>Array</code> object
@@ -2374,7 +2374,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getArray(columnLabel: string): java.sql.Array
+            getArray(columnLabel: java.lang.String | string): java.sql.Array
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>java.sql.Date</code> object
@@ -2414,7 +2414,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getDate(columnLabel: string, cal: java.util.Calendar): java.sql.Date
+            getDate(columnLabel: java.lang.String | string, cal: java.util.Calendar): java.sql.Date
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>java.sql.Time</code> object
@@ -2454,7 +2454,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getTime(columnLabel: string, cal: java.util.Calendar): java.sql.Time
+            getTime(columnLabel: java.lang.String | string, cal: java.util.Calendar): java.sql.Time
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>java.sql.Timestamp</code> object
@@ -2494,7 +2494,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getTimestamp(columnLabel: string, cal: java.util.Calendar): java.sql.Timestamp
+            getTimestamp(columnLabel: java.lang.String | string, cal: java.util.Calendar): java.sql.Timestamp
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>java.net.URL</code>
@@ -2528,7 +2528,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getURL(columnLabel: string): java.net.URL
+            getURL(columnLabel: java.lang.String | string): java.net.URL
             /**
              * Updates the designated column with a <code>java.sql.Ref</code> value.
              * The updater methods are used to update column values in the
@@ -2564,7 +2564,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            updateRef(columnLabel: string, x: java.sql.Ref): void
+            updateRef(columnLabel: java.lang.String | string, x: java.sql.Ref): void
             /**
              * Updates the designated column with a <code>java.sql.Blob</code> value.
              * The updater methods are used to update column values in the
@@ -2600,7 +2600,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            updateBlob(columnLabel: string, x: java.sql.Blob): void
+            updateBlob(columnLabel: java.lang.String | string, x: java.sql.Blob): void
             /**
              * Updates the designated column with a <code>java.sql.Clob</code> value.
              * The updater methods are used to update column values in the
@@ -2636,7 +2636,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            updateClob(columnLabel: string, x: java.sql.Clob): void
+            updateClob(columnLabel: java.lang.String | string, x: java.sql.Clob): void
             /**
              * Updates the designated column with a <code>java.sql.Array</code> value.
              * The updater methods are used to update column values in the
@@ -2672,7 +2672,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            updateArray(columnLabel: string, x: java.sql.Array): void
+            updateArray(columnLabel: java.lang.String | string, x: java.sql.Array): void
             /**
              * Retrieves the value of the designated column in the current row of this
              * <code>ResultSet</code> object as a <code>java.sql.RowId</code> object in the Java
@@ -2704,7 +2704,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getRowId(columnLabel: string): java.sql.RowId
+            getRowId(columnLabel: java.lang.String | string): java.sql.RowId
             /**
              * Updates the designated column with a <code>RowId</code> value. The updater
              * methods are used to update column values in the current row or the insert
@@ -2740,7 +2740,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateRowId(columnLabel: string, x: java.sql.RowId): void
+            updateRowId(columnLabel: java.lang.String | string, x: java.sql.RowId): void
             /**
              * Retrieves the holdability of this <code>ResultSet</code> object
              * @return either <code>ResultSet.HOLD_CURSORS_OVER_COMMIT</code> or <code>ResultSet.CLOSE_CURSORS_AT_COMMIT</code>
@@ -2749,7 +2749,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getHoldability(): int
+            getHoldability(): number /*int*/
             /**
              * Retrieves whether this <code>ResultSet</code> object has been closed. A <code>ResultSet</code> is closed if the
              * method close has been called on it, or if it is automatically closed.
@@ -2780,7 +2780,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNString(columnIndex: number /*int*/, nString: string): void
+            updateNString(columnIndex: number /*int*/, nString: java.lang.String | string): void
             /**
              * Updates the designated column with a <code>String</code> value.
              * It is intended for use when updating <code>NCHAR</code>,<code>NVARCHAR</code>
@@ -2802,7 +2802,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNString(columnLabel: string, nString: string): void
+            updateNString(columnLabel: java.lang.String | string, nString: java.lang.String | string): void
             /**
              * Updates the designated column with a <code>java.sql.NClob</code> value.
              * The updater methods are used to update column values in the
@@ -2842,7 +2842,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNClob(columnLabel: string, nClob: java.sql.NClob): void
+            updateNClob(columnLabel: java.lang.String | string, nClob: java.sql.NClob): void
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a <code>NClob</code> object
@@ -2878,7 +2878,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getNClob(columnLabel: string): java.sql.NClob
+            getNClob(columnLabel: java.lang.String | string): java.sql.NClob
             /**
              * Retrieves the value of the designated column in  the current row of
              * this <code>ResultSet</code> as a
@@ -2908,7 +2908,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getSQLXML(columnLabel: string): java.sql.SQLXML
+            getSQLXML(columnLabel: java.lang.String | string): java.sql.SQLXML
             /**
              * Updates the designated column with a <code>java.sql.SQLXML</code> value.
              * The updater
@@ -2960,7 +2960,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateSQLXML(columnLabel: string, xmlObject: java.sql.SQLXML): void
+            updateSQLXML(columnLabel: java.lang.String | string, xmlObject: java.sql.SQLXML): void
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -2979,7 +2979,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getNString(columnIndex: number /*int*/): java.lang.String
+            getNString(columnIndex: number /*int*/): string
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as
@@ -2998,7 +2998,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getNString(columnLabel: string): java.lang.String
+            getNString(columnLabel: java.lang.String | string): string
             /**
              * Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object as a
@@ -3038,7 +3038,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getNCharacterStream(columnLabel: string): java.io.Reader
+            getNCharacterStream(columnLabel: java.lang.String | string): java.io.Reader
             /**
              * Updates the designated column with a character stream value, which will have
              * the specified number of bytes.   The
@@ -3089,7 +3089,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNCharacterStream(columnLabel: string, reader: java.io.Reader, length: number /*long*/): void
+            updateNCharacterStream(columnLabel: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Updates the designated column with an ascii stream value, which will have
              * the specified number of bytes.
@@ -3173,7 +3173,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateAsciiStream(columnLabel: string, x: java.io.InputStream, length: number /*long*/): void
+            updateAsciiStream(columnLabel: java.lang.String | string, x: java.io.InputStream, length: number /*long*/): void
             /**
              * Updates the designated column with a binary stream value, which will have
              * the specified number of bytes.
@@ -3194,7 +3194,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateBinaryStream(columnLabel: string, x: java.io.InputStream, length: number /*long*/): void
+            updateBinaryStream(columnLabel: java.lang.String | string, x: java.io.InputStream, length: number /*long*/): void
             /**
              * Updates the designated column with a character stream value, which will have
              * the specified number of bytes.
@@ -3216,7 +3216,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateCharacterStream(columnLabel: string, reader: java.io.Reader, length: number /*long*/): void
+            updateCharacterStream(columnLabel: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Updates the designated column using the given input stream, which
              * will have the specified number of bytes.
@@ -3260,7 +3260,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateBlob(columnLabel: string, inputStream: java.io.InputStream, length: number /*long*/): void
+            updateBlob(columnLabel: java.lang.String | string, inputStream: java.io.InputStream, length: number /*long*/): void
             /**
              * Updates the designated column using the given <code>Reader</code>
              * object, which is the given number of characters long.
@@ -3310,7 +3310,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateClob(columnLabel: string, reader: java.io.Reader, length: number /*long*/): void
+            updateClob(columnLabel: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Updates the designated column using the given <code>Reader</code>
              * object, which is the given number of characters long.
@@ -3364,7 +3364,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNClob(columnLabel: string, reader: java.io.Reader, length: number /*long*/): void
+            updateNClob(columnLabel: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Updates the designated column with a character stream value.
              * The data will be read from the stream
@@ -3421,7 +3421,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNCharacterStream(columnLabel: string, reader: java.io.Reader): void
+            updateNCharacterStream(columnLabel: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Updates the designated column with an ascii stream value.
              * The data will be read from the stream
@@ -3517,7 +3517,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateAsciiStream(columnLabel: string, x: java.io.InputStream): void
+            updateAsciiStream(columnLabel: java.lang.String | string, x: java.io.InputStream): void
             /**
              * Updates the designated column with a binary stream value.
              * The data will be read from the stream
@@ -3541,7 +3541,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateBinaryStream(columnLabel: string, x: java.io.InputStream): void
+            updateBinaryStream(columnLabel: java.lang.String | string, x: java.io.InputStream): void
             /**
              * Updates the designated column with a character stream value.
              * The data will be read from the stream
@@ -3565,7 +3565,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateCharacterStream(columnLabel: string, reader: java.io.Reader): void
+            updateCharacterStream(columnLabel: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Updates the designated column using the given input stream. The data will be read from the stream
              * as needed until end-of-stream is reached.
@@ -3611,7 +3611,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateBlob(columnLabel: string, inputStream: java.io.InputStream): void
+            updateBlob(columnLabel: java.lang.String | string, inputStream: java.io.InputStream): void
             /**
              * Updates the designated column using the given <code>Reader</code>
              * object.
@@ -3662,7 +3662,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateClob(columnLabel: string, reader: java.io.Reader): void
+            updateClob(columnLabel: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Updates the designated column using the given <code>Reader</code>
              * The data will be read from the stream
@@ -3716,7 +3716,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            updateNClob(columnLabel: string, reader: java.io.Reader): void
+            updateNClob(columnLabel: java.lang.String | string, reader: java.io.Reader): void
             /**
              * <p>Retrieves the value of the designated column in the current row
              * of this <code>ResultSet</code> object and will convert from the
@@ -3772,7 +3772,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getObject<T>(columnLabel: string, type: java.lang.Class<T>): T
+            getObject<T>(columnLabel: java.lang.String | string, type: java.lang.Class<T>): T
             /**
              * Updates the designated column with an {@code Object} value.
              * The updater methods are used to update column values in the
@@ -3807,7 +3807,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            updateObject(columnIndex: number /*int*/, x: any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
+            updateObject(columnIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
             /**
              * Updates the designated column with an {@code Object} value.
              * The updater methods are used to update column values in the
@@ -3845,7 +3845,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            updateObject(columnLabel: string, x: any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
+            updateObject(columnLabel: java.lang.String | string, x: java.lang.Object | any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
             /**
              * Updates the designated column with an {@code Object} value.
              * The updater methods are used to update column values in the
@@ -3868,7 +3868,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            updateObject(columnIndex: number /*int*/, x: any, targetSqlType: java.sql.SQLType): void
+            updateObject(columnIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: java.sql.SQLType): void
             /**
              * Updates the designated column with an {@code Object} value.
              * The updater methods are used to update column values in the
@@ -3893,7 +3893,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            updateObject(columnLabel: string, x: any, targetSqlType: java.sql.SQLType): void
+            updateObject(columnLabel: java.lang.String | string, x: java.lang.Object | any, targetSqlType: java.sql.SQLType): void
         }
     }
 }

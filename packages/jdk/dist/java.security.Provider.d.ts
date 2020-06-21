@@ -43,7 +43,7 @@ declare namespace java {
          * @author Andreas Sterbenz
          */
         // @ts-ignore
-        class Provider extends java.util.Properties {
+        abstract class Provider extends java.util.Properties {
             /**
              * Constructs a provider with the specified name, version number,
              * and information.
@@ -52,26 +52,26 @@ declare namespace java {
              * @param info a description of the provider and its services.
              */
             // @ts-ignore
-            constructor(name: string, version: number /*double*/, info: string)
+            constructor(name: java.lang.String | string, version: number /*double*/, info: java.lang.String | string)
             /**
              * Returns the name of this provider.
              * @return the name of this provider.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns the version number for this provider.
              * @return the version number for this provider.
              */
             // @ts-ignore
-            getVersion(): double
+            public getVersion(): number /*double*/
             /**
              * Returns a human-readable description of the provider and its
              * services.  This may return an HTML page, with relevant links.
              * @return a description of the provider and its services.
              */
             // @ts-ignore
-            getInfo(): java.lang.String
+            public getInfo(): string
             /**
              * Returns a string with the name and the version number
              * of this provider.
@@ -79,7 +79,7 @@ declare namespace java {
              *  for this provider.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Clears this provider so that it no longer contains the properties
              * used to look up facilities implemented by the provider.
@@ -94,7 +94,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Reads a property list (key and element pairs) from the input stream.
              * @param inStream   the input stream.
@@ -103,7 +103,7 @@ declare namespace java {
              * @see java.util.Properties#load
              */
             // @ts-ignore
-            load(inStream: java.io.InputStream): void
+            public load(inStream: java.io.InputStream): void
             /**
              * Copies all of the mappings from the specified Map to this provider.
              * These mappings will replace any properties that this provider had
@@ -111,7 +111,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            putAll(t: java.util.Map<any, ?>): void
+            public putAll(t: java.util.Map<any, any>): void
             /**
              * Returns an unmodifiable Set view of the property entries contained
              * in this Provider.
@@ -119,21 +119,21 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<java.lang.Object, java.lang.Object>>
+            public entrySet(): Array<java.util.Map.Entry<java.lang.Object | any, java.lang.Object | any>>
             /**
              * Returns an unmodifiable Set view of the property keys contained in
              * this provider.
              * @since 1.2
              */
             // @ts-ignore
-            keySet(): java.util.Set<java.lang.Object>
+            public keySet(): Array<java.lang.Object | any>
             /**
              * Returns an unmodifiable Collection view of the property values
              * contained in this provider.
              * @since 1.2
              */
             // @ts-ignore
-            values(): java.util.Collection<java.lang.Object>
+            public values(): Array<java.lang.Object | any>
             /**
              * Sets the {@code key} property to have the specified
              * {@code value}.
@@ -148,7 +148,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            put(key: any, value: any): java.lang.Object
+            public put(key: java.lang.Object | any, value: java.lang.Object | any): any
             /**
              * If the specified key is not already associated with a value (or is mapped
              * to {@code null}) associates it with the given value and returns
@@ -164,7 +164,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            putIfAbsent(key: any, value: any): java.lang.Object
+            public putIfAbsent(key: java.lang.Object | any, value: java.lang.Object | any): any
             /**
              * Removes the {@code key} property (and its corresponding
              * {@code value}).
@@ -179,7 +179,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            remove(key: any): java.lang.Object
+            public remove(key: java.lang.Object | any): any
             /**
              * Removes the entry for the specified key only if it is currently
              * mapped to the specified value.
@@ -194,7 +194,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            remove(key: any, value: any): boolean
+            public remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
             /**
              * Replaces the entry for the specified key only if currently
              * mapped to the specified value.
@@ -209,7 +209,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            replace(key: any, oldValue: any, newValue: any): boolean
+            public replace(key: java.lang.Object | any, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): boolean
             /**
              * Replaces the entry for the specified key only if it is
              * currently mapped to some value.
@@ -224,7 +224,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            replace(key: any, value: any): java.lang.Object
+            public replace(key: java.lang.Object | any, value: java.lang.Object | any): any
             /**
              * Replaces each entry's value with the result of invoking the given
              * function on that entry, in the order entries are returned by an entry
@@ -241,7 +241,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super java.lang.Object, ? super java.lang.Object, java.lang.Object> | java.util.function$.BiFunction<? super java.lang.Object, ? super java.lang.Object, java.lang.Object>): void
+            public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
             /**
              * Attempts to compute a mapping for the specified key and its
              * current mapped value (or {@code null} if there is no current
@@ -258,7 +258,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            compute(key: any, remappingFunction: java.util.function.BiFunction<any super java.lang.Object, ? super java.lang.Object, java.lang.Object> | java.util.function$.BiFunction<? super java.lang.Object, ? super java.lang.Object, java.lang.Object>): java.lang.Object
+            public compute(key: java.lang.Object | any, remappingFunction: java.util.function$.BiFunction<any, any, any>): any
             /**
              * If the specified key is not already associated with a value (or
              * is mapped to {@code null}), attempts to compute its value using
@@ -276,7 +276,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            computeIfAbsent(key: any, mappingFunction: java.util.function.Function<any super java.lang.Object, java.lang.Object> | java.util.function$.Function<? super java.lang.Object, java.lang.Object>): java.lang.Object
+            public computeIfAbsent(key: java.lang.Object | any, mappingFunction: java.util.function$.Function<any, any>): any
             /**
              * If the value for the specified key is present and non-null, attempts to
              * compute a new mapping given the key and its current mapped value.
@@ -292,7 +292,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            computeIfPresent(key: any, remappingFunction: java.util.function.BiFunction<any super java.lang.Object, ? super java.lang.Object, java.lang.Object> | java.util.function$.BiFunction<? super java.lang.Object, ? super java.lang.Object, java.lang.Object>): java.lang.Object
+            public computeIfPresent(key: java.lang.Object | any, remappingFunction: java.util.function$.BiFunction<any, any, any>): any
             /**
              * If the specified key is not already associated with a value or is
              * associated with null, associates it with the given value. Otherwise,
@@ -311,25 +311,25 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            merge(key: any, value: any, remappingFunction: java.util.function.BiFunction<any super java.lang.Object, ? super java.lang.Object, java.lang.Object> | java.util.function$.BiFunction<? super java.lang.Object, ? super java.lang.Object, java.lang.Object>): java.lang.Object
+            public merge(key: java.lang.Object | any, value: java.lang.Object | any, remappingFunction: java.util.function$.BiFunction<any, any, any>): any
             // @ts-ignore
-            get(key: any): java.lang.Object
+            public get(key: java.lang.Object | any): any
             /**
              * @since 1.8
              */
             // @ts-ignore
-            getOrDefault(key: any, defaultValue: any): java.lang.Object
+            public getOrDefault(key: java.lang.Object | any, defaultValue: java.lang.Object | any): any
             /**
              * @since 1.8
              */
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super java.lang.Object, ? super java.lang.Object> | java.util.function$.BiConsumer<? super java.lang.Object, ? super java.lang.Object>): void
+            public forEach(action: java.util.function$.BiConsumer<any, any>): void
             // @ts-ignore
-            keys(): java.util.Enumeration<java.lang.Object>
+            public keys(): java.util.Enumeration<java.lang.Object | any>
             // @ts-ignore
-            elements(): java.util.Enumeration<java.lang.Object>
+            public elements(): java.util.Enumeration<java.lang.Object | any>
             // @ts-ignore
-            getProperty(key: string): java.lang.String
+            public getProperty(key: java.lang.String | string): string
             /**
              * Get the service describing this Provider's implementation of the
              * specified type of this algorithm or alias. If no such
@@ -347,7 +347,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getService(type: string, algorithm: string): java.security.Provider.Service
+            public getService(type: java.lang.String | string, algorithm: java.lang.String | string): java.security.Provider.Service
             /**
              * Get an unmodifiable Set of all services supported by
              * this Provider.
@@ -356,7 +356,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getServices(): java.util.Set<java.security.Provider.Service>
+            public getServices(): Array<java.security.Provider.Service>
             /**
              * Add a service. If a service of the same type with the same algorithm
              * name exists and it was added using {@link #putService putService()},

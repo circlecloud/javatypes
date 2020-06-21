@@ -51,7 +51,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(index: number /*int*/, parameter: boolean, read: boolean, dataSize: number /*int*/, transferSize: number /*int*/, cause: Error)
+            constructor(index: number /*int*/, parameter: boolean, read: boolean, dataSize: number /*int*/, transferSize: number /*int*/, cause: java.lang.Throwable | Error)
             /**
              * Retrieves the index of the column or parameter that was truncated.
              * <P>This may be -1 if the column or parameter index is unknown, in
@@ -59,7 +59,7 @@ declare namespace java {
              * @return the index of the truncated parameter or column value
              */
             // @ts-ignore
-            getIndex(): int
+            getIndex(): number /*int*/
             /**
              * Indicates whether the value truncated was a parameter value or
              * a column value.
@@ -82,14 +82,14 @@ declare namespace java {
              * @return the number of bytes of data that should have been transferred
              */
             // @ts-ignore
-            getDataSize(): int
+            getDataSize(): number /*int*/
             /**
              * Gets the number of bytes of data actually transferred.
              * The value may be <code>-1</code> if the size is unknown.
              * @return the number of bytes of data actually transferred
              */
             // @ts-ignore
-            getTransferSize(): int
+            getTransferSize(): number /*int*/
         }
     }
 }

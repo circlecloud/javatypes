@@ -13,9 +13,9 @@ declare namespace javax {
             // @ts-ignore
             class DataBindingException extends java.lang.RuntimeException {
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

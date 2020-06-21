@@ -24,28 +24,28 @@ declare namespace java {
                      * Bit flag 0x1 representing <i>public</i> access.  See {@link #lookupModes()}.
                      */
                     // @ts-ignore
-                    readonly PUBLIC: number /*int*/
+                    public static readonly PUBLIC: number /*int*/
                     /**
                      * Bit flag 0x2 representing <i>private</i> access.  See {@link #lookupModes()}.
                      */
                     // @ts-ignore
-                    readonly PRIVATE: number /*int*/
+                    public static readonly PRIVATE: number /*int*/
                     /**
                      * Bit flag 0x4 representing <i>protected</i> access.  See {@link #lookupModes()}.
                      */
                     // @ts-ignore
-                    readonly PROTECTED: number /*int*/
+                    public static readonly PROTECTED: number /*int*/
                     /**
                      * Bit flag 0x8 representing <i>package</i> access.  See {@link #lookupModes()}.
                      */
                     // @ts-ignore
-                    readonly PACKAGE: number /*int*/
+                    public static readonly PACKAGE: number /*int*/
                     /**
                      * A query to determine the lookup capabilities held by this instance.
                      * @return the lookup mode bit mask for this Lookup object
                      */
                     // @ts-ignore
-                    lookupModes(): int
+                    public lookupModes(): number /*int*/
                     /**
                      * Return an early-bound method handle to a non-static method.  The receiver must
                      * have a Class in its hierarchy that provides the virtual method named methodName.
@@ -61,7 +61,7 @@ declare namespace java {
                      * @throws NoSuchMethodException if the method doesn't exist
                      */
                     // @ts-ignore
-                    bind(receiver: any, methodName: string, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                    public bind(receiver: java.lang.Object | any, methodName: java.lang.String | string, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle bound to a specific-implementation of a virtual method, as if created by an invokespecial bytecode
                      * using the class specialToken.  The method and all Classes in its MethodType must be accessible to
@@ -80,7 +80,7 @@ declare namespace java {
                      * @throws SecurityException - if any installed SecurityManager denies access to the method
                      */
                     // @ts-ignore
-                    findSpecial(clazz: java.lang.Class<any>, methodName: string, type: java.lang.invoke.MethodType, specialToken: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                    public findSpecial(clazz: java.lang.Class<any>, methodName: java.lang.String | string, type: java.lang.invoke.MethodType, specialToken: java.lang.Class<any>): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle to a static method.  The MethodHandle will have the same type as the
                      * method.  The method and all classes in its type must be accessible to the caller.
@@ -94,7 +94,7 @@ declare namespace java {
                      * @throws SecurityException - if any installed SecurityManager denies access to the method
                      */
                     // @ts-ignore
-                    findStatic(clazz: java.lang.Class<any>, methodName: string, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                    public findStatic(clazz: java.lang.Class<any>, methodName: java.lang.String | string, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle to a virtual method.  The method will be looked up in the first argument
                      * (aka receiver) prior to dispatch.  The type of the MethodHandle will be that of the method
@@ -109,7 +109,7 @@ declare namespace java {
                      * @throws SecurityException - if any installed SecurityManager denies access to the method
                      */
                     // @ts-ignore
-                    findVirtual(clazz: java.lang.Class<any>, methodName: string, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                    public findVirtual(clazz: java.lang.Class<any>, methodName: java.lang.String | string, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle that provides read access to a field.
                      * The MethodHandle will have a MethodType taking a single
@@ -125,7 +125,7 @@ declare namespace java {
                      * @throws NullPointerException if any of the arguments are null
                      */
                     // @ts-ignore
-                    findGetter(clazz: java.lang.Class<any>, fieldName: string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                    public findGetter(clazz: java.lang.Class<any>, fieldName: java.lang.String | string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle that provides read access to a field.
                      * The MethodHandle will have a MethodType taking no arguments
@@ -140,7 +140,7 @@ declare namespace java {
                      * @throws NullPointerException if any of the arguments are null
                      */
                     // @ts-ignore
-                    findStaticGetter(clazz: java.lang.Class<any>, fieldName: string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                    public findStaticGetter(clazz: java.lang.Class<any>, fieldName: java.lang.String | string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle that provides write access to a field.
                      * The MethodHandle will have a MethodType taking a two
@@ -156,7 +156,7 @@ declare namespace java {
                      * @throws NullPointerException if any of the arguments are null
                      */
                     // @ts-ignore
-                    findSetter(clazz: java.lang.Class<any>, fieldName: string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                    public findSetter(clazz: java.lang.Class<any>, fieldName: java.lang.String | string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle that provides write access to a field.
                      * The MethodHandle will have a MethodType taking one argument
@@ -171,7 +171,7 @@ declare namespace java {
                      * @throws NullPointerException if any of the arguments are null
                      */
                     // @ts-ignore
-                    findStaticSetter(clazz: java.lang.Class<any>, fieldName: string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                    public findStaticSetter(clazz: java.lang.Class<any>, fieldName: java.lang.String | string, fieldType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                     /**
                      * Create a lookup on the request class.  The resulting lookup will have no more
                      * access privileges than the original.
@@ -179,13 +179,13 @@ declare namespace java {
                      * @return a new MethodHandles.Lookup object
                      */
                     // @ts-ignore
-                    in(lookupClass: java.lang.Class<any>): java.lang.invoke.MethodHandles.Lookup
+                    public in(lookupClass: java.lang.Class<any>): java.lang.invoke.MethodHandles.Lookup
                     /**
                      * The class being used for visibility checks and access permissions.
                      * @return The class used in by this Lookup object for access checking
                      */
                     // @ts-ignore
-                    lookupClass(): java.lang.Class<?>
+                    public lookupClass(): java.lang.Class<any>
                     /**
                      * Make a MethodHandle to the Reflect method.  If the method is non-static, the receiver argument
                      * is treated as the intial argument in the MethodType.
@@ -199,7 +199,7 @@ declare namespace java {
                      * @throws IllegalAccessException - if access is denied
                      */
                     // @ts-ignore
-                    unreflect(method: java.lang.reflect.Method): java.lang.invoke.MethodHandle
+                    public unreflect(method: java.lang.reflect.Method): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle for the reflect constructor. The MethodType has a return type
                      * of the declared class, and the arguments of the constructor.  The MehtodHnadle
@@ -212,7 +212,7 @@ declare namespace java {
                      * @throws IllegalAccessException - if access is denied
                      */
                     // @ts-ignore
-                    unreflectConstructor(method: java.lang.reflect.Constructor<any>): java.lang.invoke.MethodHandle
+                    public unreflectConstructor(method: java.lang.reflect.Constructor<any>): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle that will create an object of the required class and initialize it using
                      * the constructor method with signature <i>type</i>.  The MethodHandle will have a MethodType
@@ -227,7 +227,7 @@ declare namespace java {
                      * @throws NullPointerException if any of the arguments are null
                      */
                     // @ts-ignore
-                    findConstructor(declaringClass: java.lang.Class<any>, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                    public findConstructor(declaringClass: java.lang.Class<any>, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                     /**
                      * Return a MethodHandle for the Reflect method, that will directly call the requested method
                      * as through from the class <code>specialToken</code>.  The MethodType of the method handle
@@ -238,7 +238,7 @@ declare namespace java {
                      * @throws IllegalAccessException - if access is denied
                      */
                     // @ts-ignore
-                    unreflectSpecial(method: java.lang.reflect.Method, specialToken: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                    public unreflectSpecial(method: java.lang.reflect.Method, specialToken: java.lang.Class<any>): java.lang.invoke.MethodHandle
                     /**
                      * Create a MethodHandle that returns the value of the Reflect field.  There are two cases:
                      * <ol>
@@ -254,7 +254,7 @@ declare namespace java {
                      * @throws IllegalAccessException - if access is denied
                      */
                     // @ts-ignore
-                    unreflectGetter(field: java.lang.reflect.Field): java.lang.invoke.MethodHandle
+                    public unreflectGetter(field: java.lang.reflect.Field): java.lang.invoke.MethodHandle
                     /**
                      * Create a MethodHandle that sets the value of the Reflect field.  All MethodHandles created
                      * here have a return type of void.  For the arguments, there are two cases:
@@ -270,7 +270,7 @@ declare namespace java {
                      * @throws IllegalAccessException - if access is denied
                      */
                     // @ts-ignore
-                    unreflectSetter(field: java.lang.reflect.Field): java.lang.invoke.MethodHandle
+                    public unreflectSetter(field: java.lang.reflect.Field): java.lang.invoke.MethodHandle
                     /**
                      * Cracks a MethodHandle, which allows access to its symbolic parts.
                      * The MethodHandle must have been created by this Lookup object or one that is able to recreate the MethodHandle.
@@ -282,9 +282,9 @@ declare namespace java {
                      * @throws SecurityException if a SecurityManager denies access
                      */
                     // @ts-ignore
-                    revealDirect(target: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandleInfo
+                    public revealDirect(target: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandleInfo
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

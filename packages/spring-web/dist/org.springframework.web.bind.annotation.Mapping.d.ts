@@ -10,7 +10,7 @@ declare namespace org {
                      * @see RequestMapping
                      */
                     // @ts-ignore
-                    class Mapping implements java.lang.annotation.Annotation {
+                    abstract class Mapping implements java.lang.annotation.Annotation {
                     }
                 }
             }

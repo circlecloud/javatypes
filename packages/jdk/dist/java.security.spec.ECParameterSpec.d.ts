@@ -30,25 +30,25 @@ declare namespace java {
                  * @return the elliptic curve that this parameter defines.
                  */
                 // @ts-ignore
-                getCurve(): java.security.spec.EllipticCurve
+                public getCurve(): java.security.spec.EllipticCurve
                 /**
                  * Returns the generator which is also known as the base point.
                  * @return the generator which is also known as the base point.
                  */
                 // @ts-ignore
-                getGenerator(): java.security.spec.ECPoint
+                public getGenerator(): java.security.spec.ECPoint
                 /**
                  * Returns the order of the generator.
                  * @return the order of the generator.
                  */
                 // @ts-ignore
-                getOrder(): java.math.BigInteger
+                public getOrder(): java.math.BigInteger
                 /**
                  * Returns the cofactor.
                  * @return the cofactor.
                  */
                 // @ts-ignore
-                getCofactor(): int
+                public getCofactor(): number /*int*/
             }
         }
     }

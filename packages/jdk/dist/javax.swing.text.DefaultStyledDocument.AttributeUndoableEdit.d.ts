@@ -23,13 +23,13 @@ declare namespace javax {
                      * @exception CannotRedoException if the change cannot be redone
                      */
                     // @ts-ignore
-                    redo(): void
+                    public redo(): void
                     /**
                      * Undoes a change.
                      * @exception CannotUndoException if the change cannot be undone
                      */
                     // @ts-ignore
-                    undo(): void
+                    public undo(): void
                 }
             }
         }

@@ -35,14 +35,14 @@ declare namespace javax {
                  * @return the line responsible for this event
                  */
                 // @ts-ignore
-                getLine(): javax.sound.sampled.Line
+                public getLine(): javax.sound.sampled.Line
                 /**
                  * Obtains the event's type.
                  * @return this event's type ({#link Type#OPEN}, {@link Type#CLOSE},
                  *  {@link Type#START}, or {@link Type#STOP})
                  */
                 // @ts-ignore
-                getType(): javax.sound.sampled.LineEvent.Type
+                public getType(): javax.sound.sampled.LineEvent.Type
                 /**
                  * Obtains the position in the line's audio data when the event occurred, expressed in sample frames.
                  * For example, if a source line had already played back 14 sample frames at the time it was
@@ -57,14 +57,14 @@ declare namespace javax {
                  * @return the line's position as a sample frame number
                  */
                 // @ts-ignore
-                getFramePosition(): long
+                public getFramePosition(): number /*long*/
                 /**
                  * Obtains a string representation of the event.  The contents of the string may vary
                  * between implementations of Java Sound.
                  * @return a string describing the event.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

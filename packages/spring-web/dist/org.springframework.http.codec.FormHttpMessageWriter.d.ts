@@ -20,36 +20,36 @@ declare namespace org {
                  * @see org.springframework.http.codec.multipart.MultipartHttpMessageWriter
                  */
                 // @ts-ignore
-                class FormHttpMessageWriter extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageWriter<<any>> {
+                class FormHttpMessageWriter extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageWriter<object> {
                     // @ts-ignore
                     constructor()
                     /**
                      * The default charset used by the writer.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                    public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                     /**
                      * Set the default character set to use for writing form data when the response
                      * Content-Type header does not explicitly specify it.
                      * <p>By default this is set to "UTF-8".
                      */
                     // @ts-ignore
-                    setDefaultCharset(charset: java.nio.charset.Charset): void
+                    public setDefaultCharset(charset: java.nio.charset.Charset): void
                     /**
                      * Return the configured default charset.
                      */
                     // @ts-ignore
-                    getDefaultCharset(): java.nio.charset.Charset
+                    public getDefaultCharset(): java.nio.charset.Charset
                     // @ts-ignore
-                    getWritableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getWritableMediaTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
                     getMediaType(mediaType: org.springframework.http.MediaType): org.springframework.http.MediaType
                     // @ts-ignore
-                    serializeForm(formData: object, charset: java.nio.charset.Charset): java.lang.String
+                    serializeForm(formData: object, charset: java.nio.charset.Charset): string
                 }
             }
         }

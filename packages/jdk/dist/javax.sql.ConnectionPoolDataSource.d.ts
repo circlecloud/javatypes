@@ -37,7 +37,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getPooledConnection(user: string, password: string): javax.sql.PooledConnection
+            getPooledConnection(user: java.lang.String | string, password: java.lang.String | string): javax.sql.PooledConnection
         }
     }
 }

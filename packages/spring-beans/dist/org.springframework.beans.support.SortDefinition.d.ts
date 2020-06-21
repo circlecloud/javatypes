@@ -14,7 +14,7 @@ declare namespace org {
                      * Can also be a nested bean property path.
                      */
                     // @ts-ignore
-                    getProperty(): java.lang.String
+                    getProperty(): string
                     /**
                      * Return whether upper and lower case in String values should be ignored.
                      */

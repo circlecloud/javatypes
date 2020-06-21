@@ -53,7 +53,7 @@ declare namespace java {
                      *               </code> returns <code>true</code>
                      */
                     // @ts-ignore
-                    createInputMethodWindow(title: string, attachToInputContext: boolean): java.awt.Window
+                    createInputMethodWindow(title: java.lang.String | string, attachToInputContext: boolean): java.awt.Window
                     /**
                      * Creates a top-level Swing JFrame for use by the input method.
                      * The intended behavior of this window is:
@@ -86,7 +86,7 @@ declare namespace java {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    createInputMethodJFrame(title: string, attachToInputContext: boolean): javax.swing.JFrame
+                    createInputMethodJFrame(title: java.lang.String | string, attachToInputContext: boolean): javax.swing.JFrame
                     /**
                      * Enables or disables notification of the current client window's
                      * location and state for the specified input method. When

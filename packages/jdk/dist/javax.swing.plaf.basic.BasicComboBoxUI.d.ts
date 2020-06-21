@@ -28,7 +28,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    comboBox: javax.swing.JComboBox
+                    comboBox: javax.swing.JComboBox<any>
                     /**
                      * This protected field is implementation specific. Do not access directly
                      * or override.
@@ -36,7 +36,7 @@ declare namespace javax {
                     // @ts-ignore
                     hasFocus: boolean
                     // @ts-ignore
-                    listBox: javax.swing.JList
+                    listBox: javax.swing.JList<any>
                     // @ts-ignore
                     currentValuePane: javax.swing.CellRendererPane
                     // @ts-ignore
@@ -107,11 +107,11 @@ declare namespace javax {
                     // @ts-ignore
                     padding: java.awt.Insets
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Installs the default colors, default font, default renderer, and default
                      * editor into the JComboBox.
@@ -201,7 +201,7 @@ declare namespace javax {
                      * @see javax.swing.JComboBox#setRenderer
                      */
                     // @ts-ignore
-                    createRenderer(): javax.swing.ListCellRenderer
+                    createRenderer(): javax.swing.ListCellRenderer<any>
                     /**
                      * Creates the default editor that will be used in editable combo boxes.
                      * A default editor will be used only if an editor has not been
@@ -234,14 +234,14 @@ declare namespace javax {
                      * @see javax.swing.ComboBoxEditor
                      */
                     // @ts-ignore
-                    addEditor(): void
+                    public addEditor(): void
                     /**
                      * This public method is implementation specific and should be private.
                      * do not call or override.
                      * @see #addEditor
                      */
                     // @ts-ignore
-                    removeEditor(): void
+                    public removeEditor(): void
                     /**
                      * This protected method is implementation specific and should be private.
                      * do not call or override.
@@ -262,14 +262,14 @@ declare namespace javax {
                      * @see #createArrowButton
                      */
                     // @ts-ignore
-                    configureArrowButton(): void
+                    public configureArrowButton(): void
                     /**
                      * This public method is implementation specific and should be private. Do
                      * not call or override.
                      * @see #createArrowButton
                      */
                     // @ts-ignore
-                    unconfigureArrowButton(): void
+                    public unconfigureArrowButton(): void
                     /**
                      * Creates a button which will be used as the control to show or hide
                      * the popup portion of the combo box.
@@ -281,29 +281,29 @@ declare namespace javax {
                      * Tells if the popup is visible or not.
                      */
                     // @ts-ignore
-                    isPopupVisible(c: javax.swing.JComboBox): boolean
+                    public isPopupVisible(c: javax.swing.JComboBox<any>): boolean
                     /**
                      * Hides the popup.
                      */
                     // @ts-ignore
-                    setPopupVisible(c: javax.swing.JComboBox, v: boolean): void
+                    public setPopupVisible(c: javax.swing.JComboBox<any>, v: boolean): void
                     /**
                      * Determines if the JComboBox is focus traversable.  If the JComboBox is editable
                      * this returns false, otherwise it returns true.
                      */
                     // @ts-ignore
-                    isFocusTraversable(c: javax.swing.JComboBox): boolean
+                    public isFocusTraversable(c: javax.swing.JComboBox<any>): boolean
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * The minimum size is the size of the display area plus insets plus the button.
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -312,7 +312,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -321,11 +321,11 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     // @ts-ignore
-                    getAccessibleChildrenCount(c: javax.swing.JComponent): int
+                    public getAccessibleChildrenCount(c: javax.swing.JComponent): number /*int*/
                     // @ts-ignore
-                    getAccessibleChild(c: javax.swing.JComponent, i: number /*int*/): javax.accessibility.Accessible
+                    public getAccessibleChild(c: javax.swing.JComponent, i: number /*int*/): javax.accessibility.Accessible
                     /**
                      * Returns whether or not the supplied keyCode maps to a key that is used for
                      * navigation.  This is used for optimizing key input by only passing non-
@@ -365,12 +365,12 @@ declare namespace javax {
                      * Paints the currently selected item.
                      */
                     // @ts-ignore
-                    paintCurrentValue(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
+                    public paintCurrentValue(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
                     /**
                      * Paints the background of the currently selected item.
                      */
                     // @ts-ignore
-                    paintCurrentValueBackground(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
+                    public paintCurrentValueBackground(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
                     /**
                      * Return the default size of an empty display area of the combo box using
                      * the current renderer and font.

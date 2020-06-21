@@ -25,7 +25,7 @@ declare namespace org {
                      * @since 3.1
                      */
                     // @ts-ignore
-                    class AbstractNamedValueMethodArgumentResolver extends java.lang.Object implements org.springframework.web.method.support.HandlerMethodArgumentResolver {
+                    abstract class AbstractNamedValueMethodArgumentResolver extends java.lang.Object implements org.springframework.web.method.support.HandlerMethodArgumentResolver {
                         // @ts-ignore
                         constructor()
                         /**
@@ -37,7 +37,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanFactory: ConfigurableBeanFactory)
                         // @ts-ignore
-                        resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): java.lang.Object
+                        public resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): any
                         /**
                          * Create the {@link NamedValueInfo} object for the given method parameter. Implementations typically
                          * retrieve the method annotation by means of {@link MethodParameter#getParameterAnnotation(Class)}.
@@ -56,7 +56,7 @@ declare namespace org {
                          * @throws Exception in case of errors
                          */
                         // @ts-ignore
-                        abstract resolveName(name: string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        abstract resolveName(name: java.lang.String | string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): any
                         /**
                          * Invoked when a named value is required, but {@link #resolveName(String, MethodParameter, NativeWebRequest)}
                          * returned {@code null} and there is no default value. Subclasses typically throw an exception in this case.
@@ -66,7 +66,7 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        handleMissingValue(name: string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): void
+                        handleMissingValue(name: java.lang.String | string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): void
                         /**
                          * Invoked when a named value is required, but {@link #resolveName(String, MethodParameter, NativeWebRequest)}
                          * returned {@code null} and there is no default value. Subclasses typically throw an exception in this case.
@@ -74,7 +74,7 @@ declare namespace org {
                          * @param parameter the method parameter
                          */
                         // @ts-ignore
-                        handleMissingValue(name: string, parameter: MethodParameter): void
+                        handleMissingValue(name: java.lang.String | string, parameter: MethodParameter): void
                         /**
                          * Invoked after a value is resolved.
                          * @param arg the resolved argument value
@@ -84,7 +84,7 @@ declare namespace org {
                          * @param webRequest the current request
                          */
                         // @ts-ignore
-                        handleResolvedValue(arg: any, name: string, parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest): void
+                        handleResolvedValue(arg: java.lang.Object | any, name: java.lang.String | string, parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest): void
                     }
                 }
             }

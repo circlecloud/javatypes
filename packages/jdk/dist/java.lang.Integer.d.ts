@@ -20,7 +20,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Integer extends java.lang.Number implements java.lang.Comparable<java.lang.Integer> {
+        class Integer extends java.lang.Number implements java.lang.Comparable<java.lang.Integer | number> {
             /**
              * Constructs a newly allocated {@code Integer} object that
              * represents the specified {@code int} value.
@@ -42,40 +42,40 @@ declare namespace java {
              * @see java.lang.Integer#parseInt(java.lang.String, int)
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * A constant holding the minimum value an {@code int} can
              * have, -2<sup>31</sup>.
              */
             // @ts-ignore
-            readonly MIN_VALUE: number /*int*/
+            public static readonly MIN_VALUE: number /*int*/
             /**
              * A constant holding the maximum value an {@code int} can
              * have, 2<sup>31</sup>-1.
              */
             // @ts-ignore
-            readonly MAX_VALUE: number /*int*/
+            public static readonly MAX_VALUE: number /*int*/
             /**
              * The {@code Class} instance representing the primitive type
              * {@code int}.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Integer>
+            public static readonly TYPE: java.lang.Class<java.lang.Integer | number>
             /**
              * The number of bits used to represent an {@code int} value in two's
              * complement binary form.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code int} value in two's
              * complement binary form.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * Returns a string representation of the first argument in the
              * radix specified by the second argument.
@@ -114,7 +114,7 @@ declare namespace java {
              * @see java.lang.Character#MIN_RADIX
              */
             // @ts-ignore
-            toString(i: number /*int*/, radix: number /*int*/): java.lang.String
+            public static toString(i: number /*int*/, radix: number /*int*/): string
             /**
              * Returns a string representation of the first argument as an
              * unsigned integer value in the radix specified by the second
@@ -137,7 +137,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedString(i: number /*int*/, radix: number /*int*/): java.lang.String
+            public static toUnsignedString(i: number /*int*/, radix: number /*int*/): string
             /**
              * Returns a string representation of the integer argument as an
              * unsigned integer in base&nbsp;16.
@@ -174,7 +174,7 @@ declare namespace java {
              * @since JDK1.0.2
              */
             // @ts-ignore
-            toHexString(i: number /*int*/): java.lang.String
+            public static toHexString(i: number /*int*/): string
             /**
              * Returns a string representation of the integer argument as an
              * unsigned integer in base&nbsp;8.
@@ -204,7 +204,7 @@ declare namespace java {
              * @since JDK1.0.2
              */
             // @ts-ignore
-            toOctalString(i: number /*int*/): java.lang.String
+            public static toOctalString(i: number /*int*/): string
             /**
              * Returns a string representation of the integer argument as an
              * unsigned integer in base&nbsp;2.
@@ -230,7 +230,7 @@ declare namespace java {
              * @since JDK1.0.2
              */
             // @ts-ignore
-            toBinaryString(i: number /*int*/): java.lang.String
+            public static toBinaryString(i: number /*int*/): string
             /**
              * Returns a {@code String} object representing the
              * specified integer. The argument is converted to signed decimal
@@ -241,7 +241,7 @@ declare namespace java {
              * @return a string representation of the argument in base&nbsp;10.
              */
             // @ts-ignore
-            toString(i: number /*int*/): java.lang.String
+            public static toString(i: number /*int*/): string
             /**
              * Returns a string representation of the argument as an unsigned
              * decimal value.
@@ -255,7 +255,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedString(i: number /*int*/): java.lang.String
+            public static toUnsignedString(i: number /*int*/): string
             /**
              * Parses the string argument as a signed integer in the radix
              * specified by the second argument. The characters in the string
@@ -306,7 +306,7 @@ declare namespace java {
              *              does not contain a parsable {@code int}.
              */
             // @ts-ignore
-            parseInt(s: string, radix: number /*int*/): int
+            public static parseInt(s: java.lang.String | string, radix: number /*int*/): number /*int*/
             /**
              * Parses the string argument as a signed decimal integer. The
              * characters in the string must all be decimal digits, except
@@ -324,7 +324,7 @@ declare namespace java {
              *                parsable integer.
              */
             // @ts-ignore
-            parseInt(s: string): int
+            public static parseInt(s: java.lang.String | string): number /*int*/
             /**
              * Parses the string argument as an unsigned integer in the radix
              * specified by the second argument.  An unsigned integer maps the
@@ -361,7 +361,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parseUnsignedInt(s: string, radix: number /*int*/): int
+            public static parseUnsignedInt(s: java.lang.String | string, radix: number /*int*/): number /*int*/
             /**
              * Parses the string argument as an unsigned decimal integer. The
              * characters in the string must all be decimal digits, except
@@ -378,7 +378,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parseUnsignedInt(s: string): int
+            public static parseUnsignedInt(s: java.lang.String | string): number /*int*/
             /**
              * Returns an {@code Integer} object holding the value
              * extracted from the specified {@code String} when parsed
@@ -402,7 +402,7 @@ declare namespace java {
              *             does not contain a parsable {@code int}.
              */
             // @ts-ignore
-            valueOf(s: string, radix: number /*int*/): java.lang.Integer
+            public static valueOf(s: java.lang.String | string, radix: number /*int*/): number
             /**
              * Returns an {@code Integer} object holding the
              * value of the specified {@code String}. The argument is
@@ -423,7 +423,7 @@ declare namespace java {
              *              as an integer.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Integer
+            public static valueOf(s: java.lang.String | string): number
             /**
              * Returns an {@code Integer} instance representing the specified
              * {@code int} value.  If a new {@code Integer} instance is not
@@ -438,27 +438,27 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(i: number /*int*/): java.lang.Integer
+            public static valueOf(i: number /*int*/): number
             /**
              * Returns the value of this {@code Integer} as a {@code byte}
              * after a narrowing primitive conversion.
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of this {@code Integer} as a {@code short}
              * after a narrowing primitive conversion.
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
             /**
              * Returns the value of this {@code Integer} as an
              * {@code int}.
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Returns the value of this {@code Integer} as a {@code long}
              * after a widening primitive conversion.
@@ -466,21 +466,21 @@ declare namespace java {
              * @see Integer#toUnsignedLong(int)
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Returns the value of this {@code Integer} as a {@code float}
              * after a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Returns the value of this {@code Integer} as a {@code double}
              * after a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns a {@code String} object representing this
              * {@code Integer}'s value. The value is converted to signed
@@ -491,7 +491,7 @@ declare namespace java {
              *           base&nbsp;10.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this {@code Integer}.
              * @return a hash code value for this object, equal to the
@@ -499,7 +499,7 @@ declare namespace java {
              *           {@code Integer} object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code int} value; compatible with
              * {@code Integer.hashCode()}.
@@ -508,7 +508,7 @@ declare namespace java {
              * @return a hash code value for a {#code int} value.
              */
             // @ts-ignore
-            hashCode(value: number /*int*/): int
+            public static hashCode(value: number /*int*/): number /*int*/
             /**
              * Compares this object to the specified object.  The result is
              * {@code true} if and only if the argument is not
@@ -519,7 +519,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Determines the integer value of the system property with the
              * specified name.
@@ -546,7 +546,7 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getInteger(nm: string): java.lang.Integer
+            public static getInteger(nm: java.lang.String | string): number
             /**
              * Determines the integer value of the system property with the
              * specified name.
@@ -582,7 +582,7 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getInteger(nm: string, val: number /*int*/): java.lang.Integer
+            public static getInteger(nm: java.lang.String | string, val: number /*int*/): number
             /**
              * Returns the integer value of the system property with the
              * specified name.  The first argument is treated as the name of a
@@ -618,7 +618,7 @@ declare namespace java {
              * @see System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getInteger(nm: string, val: number): java.lang.Integer
+            public static getInteger(nm: java.lang.String | string, val: java.lang.Integer | number): number
             /**
              * Decodes a {@code String} into an {@code Integer}.
              * Accepts decimal, hexadecimal, and octal numbers given
@@ -657,7 +657,7 @@ declare namespace java {
              * @see java.lang.Integer#parseInt(java.lang.String, int)
              */
             // @ts-ignore
-            decode(nm: string): java.lang.Integer
+            public static decode(nm: java.lang.String | string): number
             /**
              * Compares two {@code Integer} objects numerically.
              * @param anotherInteger   the {#code Integer} to be compared.
@@ -671,7 +671,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(anotherInteger: number): int
+            public compareTo(anotherInteger: java.lang.Integer | number): number /*int*/
             /**
              * Compares two {@code int} values numerically.
              * The value returned is identical to what would be returned by:
@@ -686,7 +686,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            compare(x: number /*int*/, y: number /*int*/): int
+            public static compare(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Compares two {@code int} values numerically treating the values
              * as unsigned.
@@ -699,7 +699,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            compareUnsigned(x: number /*int*/, y: number /*int*/): int
+            public static compareUnsigned(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Converts the argument to a {@code long} by an unsigned
              * conversion.  In an unsigned conversion to a {@code long}, the
@@ -716,7 +716,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedLong(x: number /*int*/): long
+            public static toUnsignedLong(x: number /*int*/): number /*long*/
             /**
              * Returns the unsigned quotient of dividing the first argument by
              * the second where each argument and the result is interpreted as
@@ -734,7 +734,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            divideUnsigned(dividend: number /*int*/, divisor: number /*int*/): int
+            public static divideUnsigned(dividend: number /*int*/, divisor: number /*int*/): number /*int*/
             /**
              * Returns the unsigned remainder from dividing the first argument
              * by the second where each argument and the result is interpreted
@@ -747,7 +747,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            remainderUnsigned(dividend: number /*int*/, divisor: number /*int*/): int
+            public static remainderUnsigned(dividend: number /*int*/, divisor: number /*int*/): number /*int*/
             /**
              * Returns an {@code int} value with at most a single one-bit, in the
              * position of the highest-order ("leftmost") one-bit in the specified
@@ -761,7 +761,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            highestOneBit(i: number /*int*/): int
+            public static highestOneBit(i: number /*int*/): number /*int*/
             /**
              * Returns an {@code int} value with at most a single one-bit, in the
              * position of the lowest-order ("rightmost") one-bit in the specified
@@ -775,7 +775,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            lowestOneBit(i: number /*int*/): int
+            public static lowestOneBit(i: number /*int*/): number /*int*/
             /**
              * Returns the number of zero bits preceding the highest-order
              * ("leftmost") one-bit in the two's complement binary representation
@@ -796,7 +796,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            numberOfLeadingZeros(i: number /*int*/): int
+            public static numberOfLeadingZeros(i: number /*int*/): number /*int*/
             /**
              * Returns the number of zero bits following the lowest-order ("rightmost")
              * one-bit in the two's complement binary representation of the specified
@@ -811,7 +811,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            numberOfTrailingZeros(i: number /*int*/): int
+            public static numberOfTrailingZeros(i: number /*int*/): number /*int*/
             /**
              * Returns the number of one-bits in the two's complement binary
              * representation of the specified {@code int} value.  This function is
@@ -822,7 +822,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            bitCount(i: number /*int*/): int
+            public static bitCount(i: number /*int*/): number /*int*/
             /**
              * Returns the value obtained by rotating the two's complement binary
              * representation of the specified {@code int} value left by the
@@ -842,7 +842,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            rotateLeft(i: number /*int*/, distance: number /*int*/): int
+            public static rotateLeft(i: number /*int*/, distance: number /*int*/): number /*int*/
             /**
              * Returns the value obtained by rotating the two's complement binary
              * representation of the specified {@code int} value right by the
@@ -862,7 +862,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            rotateRight(i: number /*int*/, distance: number /*int*/): int
+            public static rotateRight(i: number /*int*/, distance: number /*int*/): number /*int*/
             /**
              * Returns the value obtained by reversing the order of the bits in the
              * two's complement binary representation of the specified {@code int}
@@ -873,7 +873,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverse(i: number /*int*/): int
+            public static reverse(i: number /*int*/): number /*int*/
             /**
              * Returns the signum function of the specified {@code int} value.  (The
              * return value is -1 if the specified value is negative; 0 if the
@@ -883,7 +883,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            signum(i: number /*int*/): int
+            public static signum(i: number /*int*/): number /*int*/
             /**
              * Returns the value obtained by reversing the order of the bytes in the
              * two's complement representation of the specified {@code int} value.
@@ -893,7 +893,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverseBytes(i: number /*int*/): int
+            public static reverseBytes(i: number /*int*/): number /*int*/
             /**
              * Adds two integers together as per the + operator.
              * @param a the first operand
@@ -903,7 +903,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            sum(a: number /*int*/, b: number /*int*/): int
+            public static sum(a: number /*int*/, b: number /*int*/): number /*int*/
             /**
              * Returns the greater of two {@code int} values
              * as if by calling {@link Math#max(int, int) Math.max}.
@@ -914,7 +914,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            max(a: number /*int*/, b: number /*int*/): int
+            public static max(a: number /*int*/, b: number /*int*/): number /*int*/
             /**
              * Returns the smaller of two {@code int} values
              * as if by calling {@link Math#min(int, int) Math.min}.
@@ -925,7 +925,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            min(a: number /*int*/, b: number /*int*/): int
+            public static min(a: number /*int*/, b: number /*int*/): number /*int*/
         }
     }
 }

@@ -14,13 +14,13 @@ declare namespace org {
                          * @deprecated See {#link PaletteTypes#GLOBAL_BLOCKS}
                          */
                         // @ts-ignore
-                        readonly GLOBAL: org.spongepowered.api.world.schematic.BlockPaletteType
+                        public static readonly GLOBAL: org.spongepowered.api.world.schematic.BlockPaletteType
                         /**
                          * A local palette containing only a subset of the global palette.
                          * @deprecated See {#link PaletteTypes#LOCAL_BLOCKS}
                          */
                         // @ts-ignore
-                        readonly LOCAL: org.spongepowered.api.world.schematic.BlockPaletteType
+                        public static readonly LOCAL: org.spongepowered.api.world.schematic.BlockPaletteType
                     }
                 }
             }

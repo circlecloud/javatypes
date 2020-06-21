@@ -67,9 +67,9 @@ declare namespace org {
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         /**
                          * Specify the {@link PropertyEditorRegistrar PropertyEditorRegistrars}
                          * to apply to beans defined within the current application context.
@@ -81,7 +81,7 @@ declare namespace org {
                          * @see ConfigurableListableBeanFactory#addPropertyEditorRegistrar
                          */
                         // @ts-ignore
-                        setPropertyEditorRegistrars(propertyEditorRegistrars: org.springframework.beans.PropertyEditorRegistrar[]): void
+                        public setPropertyEditorRegistrars(propertyEditorRegistrars: org.springframework.beans.PropertyEditorRegistrar[]): void
                         /**
                          * Specify the custom editors to register via a {@link Map}, using the
                          * class name of the required type as the key and the class name of the
@@ -89,9 +89,9 @@ declare namespace org {
                          * @see ConfigurableListableBeanFactory#registerCustomEditor
                          */
                         // @ts-ignore
-                        setCustomEditors(customEditors: java.util.Map<java.lang.Class<any>, java.lang.Class<java.beans.PropertyEditor>>): void
+                        public setCustomEditors(customEditors: java.util.Map<java.lang.Class<any>, java.lang.Class<any>>): void
                         // @ts-ignore
-                        postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
+                        public postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
                     }
                 }
             }

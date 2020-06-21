@@ -27,21 +27,21 @@ declare namespace org {
                      * treating {@code true} lower than {@code false}.
                      */
                     // @ts-ignore
-                    readonly TRUE_LOW: org.springframework.util.comparator.BooleanComparator
+                    public static readonly TRUE_LOW: org.springframework.util.comparator.BooleanComparator
                     /**
                      * A shared default instance of this comparator,
                      * treating {@code true} higher than {@code false}.
                      */
                     // @ts-ignore
-                    readonly TRUE_HIGH: org.springframework.util.comparator.BooleanComparator
+                    public static readonly TRUE_HIGH: org.springframework.util.comparator.BooleanComparator
                     // @ts-ignore
-                    compare(v1: java.lang.Boolean, v2: java.lang.Boolean): int
+                    public compare(v1: java.lang.Boolean, v2: java.lang.Boolean): number /*int*/
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

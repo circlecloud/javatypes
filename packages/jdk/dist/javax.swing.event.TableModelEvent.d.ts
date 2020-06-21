@@ -85,27 +85,27 @@ declare namespace javax {
                  * Identifies the addition of new rows or columns.
                  */
                 // @ts-ignore
-                readonly INSERT: number /*int*/
+                public static readonly INSERT: number /*int*/
                 /**
                  * Identifies a change to existing data.
                  */
                 // @ts-ignore
-                readonly UPDATE: number /*int*/
+                public static readonly UPDATE: number /*int*/
                 /**
                  * Identifies the removal of rows or columns.
                  */
                 // @ts-ignore
-                readonly DELETE: number /*int*/
+                public static readonly DELETE: number /*int*/
                 /**
                  * Identifies the header row.
                  */
                 // @ts-ignore
-                readonly HEADER_ROW: number /*int*/
+                public static readonly HEADER_ROW: number /*int*/
                 /**
                  * Specifies all columns in a row or rows.
                  */
                 // @ts-ignore
-                readonly ALL_COLUMNS: number /*int*/
+                public static readonly ALL_COLUMNS: number /*int*/
                 // @ts-ignore
                 type: number /*int*/
                 // @ts-ignore
@@ -119,24 +119,24 @@ declare namespace javax {
                  * ie. names, types and order of the columns.
                  */
                 // @ts-ignore
-                getFirstRow(): int
+                public getFirstRow(): number /*int*/
                 /**
                  * Returns the last row that changed.
                  */
                 // @ts-ignore
-                getLastRow(): int
+                public getLastRow(): number /*int*/
                 /**
                  * Returns the column for the event.  If the return
                  * value is ALL_COLUMNS; it means every column in the specified
                  * rows changed.
                  */
                 // @ts-ignore
-                getColumn(): int
+                public getColumn(): number /*int*/
                 /**
                  * Returns the type of event - one of: INSERT, UPDATE and DELETE.
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
             }
         }
     }

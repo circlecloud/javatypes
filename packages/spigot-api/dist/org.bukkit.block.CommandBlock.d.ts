@@ -13,7 +13,7 @@ declare namespace org {
                  * @return Command that this CommandBlock will run when powered.
                  */
                 // @ts-ignore
-                getCommand(): java.lang.String
+                getCommand(): string
                 /**
                  * Sets the command that this CommandBlock will run when powered.
                  * Setting the command to null is the same as setting it to an empty
@@ -21,7 +21,7 @@ declare namespace org {
                  * @param command Command that this CommandBlock will run when powered.
                  */
                 // @ts-ignore
-                setCommand(command: string): void
+                setCommand(command: java.lang.String | string): void
                 /**
                  * Gets the name of this CommandBlock.  The name is used with commands
                  * that this CommandBlock executes.  This name will never be null, and
@@ -29,7 +29,7 @@ declare namespace org {
                  * @return Name of this CommandBlock.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Sets the name of this CommandBlock.  The name is used with commands
                  * that this CommandBlock executes.  Setting the name to null is the
@@ -37,7 +37,7 @@ declare namespace org {
                  * @param name New name for this CommandBlock.
                  */
                 // @ts-ignore
-                setName(name: string): void
+                setName(name: java.lang.String | string): void
             }
         }
     }

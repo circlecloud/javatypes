@@ -16,7 +16,7 @@ declare namespace org {
                  * @param cause the root cause (may be {#code null})
                  */
                 // @ts-ignore
-                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, requiredType: java.lang.Class<any>, cause: Error)
+                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, requiredType: java.lang.Class<any>, cause: java.lang.Throwable | Error)
                 /**
                  * Create a new ConversionNotSupportedException.
                  * @param value the offending value that couldn't be converted (may be {#code null})
@@ -24,7 +24,7 @@ declare namespace org {
                  * @param cause the root cause (may be {#code null})
                  */
                 // @ts-ignore
-                constructor(value: any, requiredType: java.lang.Class<any>, cause: Error)
+                constructor(value: java.lang.Object | any, requiredType: java.lang.Class<any>, cause: java.lang.Throwable | Error)
             }
         }
     }

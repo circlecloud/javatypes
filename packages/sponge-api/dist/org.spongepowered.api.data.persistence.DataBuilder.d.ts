@@ -28,7 +28,7 @@ declare namespace org {
                         // @ts-ignore
                         reset(): org.spongepowered.api.data.persistence.DataBuilder<T>
                         // @ts-ignore
-                        from(value: T extends org.spongepowered.api.data.DataSerializable): org.spongepowered.api.data.persistence.DataBuilder<T>
+                        from(value: T): org.spongepowered.api.data.persistence.DataBuilder<T>
                     }
                 }
             }

@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class TopicExchangeRoutingKeyConfigurer extends org.springframework.amqp.core.BindingBuilder.AbstractRoutingKeyConfigurer<org.springframework.amqp.core.TopicExchange> {
                         // @ts-ignore
-                        with(routingKey: string): org.springframework.amqp.core.Binding
+                        public with(routingKey: java.lang.String | string): org.springframework.amqp.core.Binding
                         // @ts-ignore
-                        with(routingKeyEnum: java.lang.Enum<any>): org.springframework.amqp.core.Binding
+                        public with(routingKeyEnum: java.lang.Enum<any>): org.springframework.amqp.core.Binding
                     }
                 }
             }

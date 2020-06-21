@@ -16,7 +16,7 @@ declare namespace org {
                          * @param initializer for global data binder initialization
                          */
                         // @ts-ignore
-                        constructor(binderMethods: Array<org.springframework.web.method.support.InvocableHandlerMethod>, initializer: org.springframework.web.bind.support.WebBindingInitializer)
+                        constructor(binderMethods: java.util.List<org.springframework.web.method.support.InvocableHandlerMethod> | Array<org.springframework.web.method.support.InvocableHandlerMethod>, initializer: org.springframework.web.bind.support.WebBindingInitializer)
                         /**
                          * Initialize a WebDataBinder with {@code @InitBinder} methods.
                          * <p>If the {@code @InitBinder} annotation specifies attributes names,
@@ -25,7 +25,7 @@ declare namespace org {
                          * @see #isBinderMethodApplicable
                          */
                         // @ts-ignore
-                        initBinder(dataBinder: org.springframework.web.bind.WebDataBinder, request: org.springframework.web.context.request.NativeWebRequest): void
+                        public initBinder(dataBinder: org.springframework.web.bind.WebDataBinder, request: org.springframework.web.context.request.NativeWebRequest): void
                         /**
                          * Determine whether the given {@code @InitBinder} method should be used
                          * to initialize the given {@link WebDataBinder} instance. By default we

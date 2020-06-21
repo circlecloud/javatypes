@@ -23,13 +23,13 @@ declare namespace org {
                      * @param enable whether to enable or not
                      */
                     // @ts-ignore
-                    setEnableLoggingRequestDetails(enable: boolean): void
+                    public setEnableLoggingRequestDetails(enable: boolean): void
                     /**
                      * Whether any logging of values being encoded or decoded is explicitly
                      * disabled regardless of log level.
                      */
                     // @ts-ignore
-                    isEnableLoggingRequestDetails(): boolean
+                    public isEnableLoggingRequestDetails(): boolean
                 }
             }
         }

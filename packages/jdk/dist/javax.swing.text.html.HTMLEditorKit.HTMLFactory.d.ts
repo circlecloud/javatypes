@@ -93,7 +93,7 @@ declare namespace javax {
                          * @return the view
                          */
                         // @ts-ignore
-                        create(elem: javax.swing.text.Element): javax.swing.text.View
+                        public create(elem: javax.swing.text.Element): javax.swing.text.View
                     }
                 }
             }

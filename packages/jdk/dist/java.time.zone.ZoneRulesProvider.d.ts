@@ -47,7 +47,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            class ZoneRulesProvider extends java.lang.Object {
+            abstract class ZoneRulesProvider extends java.lang.Object {
                 /**
                  * Constructor.
                  */
@@ -60,7 +60,7 @@ declare namespace java {
                  * @return a modifiable copy of the set of zone IDs, not null
                  */
                 // @ts-ignore
-                getAvailableZoneIds(): java.util.Set<java.lang.String>
+                public static getAvailableZoneIds(): Array<java.lang.String | string>
                 /**
                  * Gets the rules for the zone ID.
                  * <p>
@@ -84,7 +84,7 @@ declare namespace java {
                  * @throws ZoneRulesException if rules cannot be obtained for the zone ID
                  */
                 // @ts-ignore
-                getRules(zoneId: string, forCaching: boolean): java.time.zone.ZoneRules
+                public static getRules(zoneId: java.lang.String | string, forCaching: boolean): java.time.zone.ZoneRules
                 /**
                  * Gets the history of rules for the zone ID.
                  * <p>
@@ -109,7 +109,7 @@ declare namespace java {
                  * @throws ZoneRulesException if history cannot be obtained for the zone ID
                  */
                 // @ts-ignore
-                getVersions(zoneId: string): java.util.NavigableMap<java.lang.String, java.time.zone.ZoneRules>
+                public static getVersions(zoneId: java.lang.String | string): java.util.NavigableMap<java.lang.String | string, java.time.zone.ZoneRules>
                 /**
                  * Registers a zone rules provider.
                  * <p>
@@ -125,7 +125,7 @@ declare namespace java {
                  * @throws ZoneRulesException if a zone ID is already registered
                  */
                 // @ts-ignore
-                registerProvider(provider: java.time.zone.ZoneRulesProvider): void
+                public static registerProvider(provider: java.time.zone.ZoneRulesProvider): void
                 /**
                  * Refreshes the rules from the underlying data provider.
                  * <p>
@@ -149,7 +149,7 @@ declare namespace java {
                  * @throws ZoneRulesException if an error occurs during the refresh
                  */
                 // @ts-ignore
-                refresh(): boolean
+                public static refresh(): boolean
                 /**
                  * SPI method to get the available zone IDs.
                  * <p>
@@ -162,7 +162,7 @@ declare namespace java {
                  * @throws ZoneRulesException if a problem occurs while providing the IDs
                  */
                 // @ts-ignore
-                abstract provideZoneIds(): java.util.Set<java.lang.String>
+                abstract provideZoneIds(): Array<java.lang.String | string>
                 /**
                  * SPI method to get the rules for the zone ID.
                  * <p>
@@ -189,7 +189,7 @@ declare namespace java {
                  * @throws ZoneRulesException if rules cannot be obtained for the zone ID
                  */
                 // @ts-ignore
-                abstract provideRules(zoneId: string, forCaching: boolean): java.time.zone.ZoneRules
+                abstract provideRules(zoneId: java.lang.String | string, forCaching: boolean): java.time.zone.ZoneRules
                 /**
                  * SPI method to get the history of rules for the zone ID.
                  * <p>
@@ -213,7 +213,7 @@ declare namespace java {
                  * @throws ZoneRulesException if history cannot be obtained for the zone ID
                  */
                 // @ts-ignore
-                abstract provideVersions(zoneId: string): java.util.NavigableMap<java.lang.String, java.time.zone.ZoneRules>
+                abstract provideVersions(zoneId: java.lang.String | string): java.util.NavigableMap<java.lang.String | string, java.time.zone.ZoneRules>
                 /**
                  * SPI method to refresh the rules from the underlying data provider.
                  * <p>

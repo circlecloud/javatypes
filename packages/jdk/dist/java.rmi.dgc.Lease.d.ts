@@ -21,13 +21,13 @@ declare namespace java {
                  * @return client VMID
                  */
                 // @ts-ignore
-                getVMID(): java.rmi.dgc.VMID
+                public getVMID(): java.rmi.dgc.VMID
                 /**
                  * Returns the lease duration.
                  * @return lease duration
                  */
                 // @ts-ignore
-                getValue(): long
+                public getValue(): number /*long*/
             }
         }
     }

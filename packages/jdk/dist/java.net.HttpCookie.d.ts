@@ -43,7 +43,7 @@ declare namespace java {
              * @see #setVersion
              */
             // @ts-ignore
-            constructor(name: string, value: string)
+            constructor(name: java.lang.String | string, value: java.lang.String | string)
             /**
              * Constructs cookies from set-cookie or set-cookie2 header string.
              * RFC 2965 section 3.2.2 set-cookie2 syntax indicates that one header line
@@ -61,14 +61,14 @@ declare namespace java {
              *           if the header string is {#code null}
              */
             // @ts-ignore
-            parse(header: string): java.util.List<java.net.HttpCookie>
+            public static parse(header: java.lang.String | string): Array<java.net.HttpCookie>
             /**
              * Reports whether this HTTP cookie has expired or not.
              * @return {#code true} to indicate this HTTP cookie has expired;
              *           otherwise, {@code false}
              */
             // @ts-ignore
-            hasExpired(): boolean
+            public hasExpired(): boolean
             /**
              * Specifies a comment that describes a cookie's purpose.
              * The comment is useful if the browser presents the cookie
@@ -78,7 +78,7 @@ declare namespace java {
              * @see #getComment
              */
             // @ts-ignore
-            setComment(purpose: string): void
+            public setComment(purpose: java.lang.String | string): void
             /**
              * Returns the comment describing the purpose of this cookie, or
              * {@code null} if the cookie has no comment.
@@ -86,7 +86,7 @@ declare namespace java {
              * @see #setComment
              */
             // @ts-ignore
-            getComment(): java.lang.String
+            public getComment(): string
             /**
              * Specifies a comment URL that describes a cookie's purpose.
              * The comment URL is useful if the browser presents the cookie
@@ -96,7 +96,7 @@ declare namespace java {
              * @see #getCommentURL
              */
             // @ts-ignore
-            setCommentURL(purpose: string): void
+            public setCommentURL(purpose: java.lang.String | string): void
             /**
              * Returns the comment URL describing the purpose of this cookie, or
              * {@code null} if the cookie has no comment URL.
@@ -105,7 +105,7 @@ declare namespace java {
              * @see #setCommentURL
              */
             // @ts-ignore
-            getCommentURL(): java.lang.String
+            public getCommentURL(): string
             /**
              * Specify whether user agent should discard the cookie unconditionally.
              * This is RFC 2965 only attribute.
@@ -114,14 +114,14 @@ declare namespace java {
              * @see #getDiscard
              */
             // @ts-ignore
-            setDiscard(discard: boolean): void
+            public setDiscard(discard: boolean): void
             /**
              * Returns the discard attribute of the cookie
              * @return a {#code boolean} to represent this cookie's discard attribute
              * @see #setDiscard
              */
             // @ts-ignore
-            getDiscard(): boolean
+            public getDiscard(): boolean
             /**
              * Specify the portlist of the cookie, which restricts the port(s)
              * to which a cookie may be sent back in a Cookie header.
@@ -131,14 +131,14 @@ declare namespace java {
              * @see #getPortlist
              */
             // @ts-ignore
-            setPortlist(ports: string): void
+            public setPortlist(ports: java.lang.String | string): void
             /**
              * Returns the port list attribute of the cookie
              * @return a {#code String} contains the port list or {@code null} if none
              * @see #setPortlist
              */
             // @ts-ignore
-            getPortlist(): java.lang.String
+            public getPortlist(): string
             /**
              * Specifies the domain within which this cookie should be presented.
              * <p> The form of the domain name is specified by RFC 2965. A domain
@@ -153,7 +153,7 @@ declare namespace java {
              * @see #getDomain
              */
             // @ts-ignore
-            setDomain(pattern: string): void
+            public setDomain(pattern: java.lang.String | string): void
             /**
              * Returns the domain name set for this cookie. The form of the domain name
              * is set by RFC 2965.
@@ -161,7 +161,7 @@ declare namespace java {
              * @see #setDomain
              */
             // @ts-ignore
-            getDomain(): java.lang.String
+            public getDomain(): string
             /**
              * Sets the maximum age of the cookie in seconds.
              * <p> A positive value indicates that the cookie will expire
@@ -178,7 +178,7 @@ declare namespace java {
              * @see #getMaxAge
              */
             // @ts-ignore
-            setMaxAge(expiry: number /*long*/): void
+            public setMaxAge(expiry: number /*long*/): void
             /**
              * Returns the maximum age of the cookie, specified in seconds. By default,
              * {@code -1} indicating the cookie will persist until browser shutdown.
@@ -186,7 +186,7 @@ declare namespace java {
              * @see #setMaxAge
              */
             // @ts-ignore
-            getMaxAge(): long
+            public getMaxAge(): number /*long*/
             /**
              * Specifies a path for the cookie to which the client should return
              * the cookie.
@@ -202,7 +202,7 @@ declare namespace java {
              * @see #getPath
              */
             // @ts-ignore
-            setPath(uri: string): void
+            public setPath(uri: java.lang.String | string): void
             /**
              * Returns the path on the server to which the browser returns this cookie.
              * The cookie is visible to all subpaths on the server.
@@ -211,7 +211,7 @@ declare namespace java {
              * @see #setPath
              */
             // @ts-ignore
-            getPath(): java.lang.String
+            public getPath(): string
             /**
              * Indicates whether the cookie should only be sent using a secure protocol,
              * such as HTTPS or SSL.
@@ -223,7 +223,7 @@ declare namespace java {
              * @see #getSecure
              */
             // @ts-ignore
-            setSecure(flag: boolean): void
+            public setSecure(flag: boolean): void
             /**
              * Returns {@code true} if sending this cookie should be restricted to a
              * secure protocol, or {@code false} if the it can be sent using any
@@ -233,14 +233,14 @@ declare namespace java {
              * @see #setSecure
              */
             // @ts-ignore
-            getSecure(): boolean
+            public getSecure(): boolean
             /**
              * Returns the name of the cookie. The name cannot be changed after
              * creation.
              * @return a {#code String} specifying the cookie's name
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Assigns a new value to a cookie after the cookie is created.
              * If you use a binary value, you may want to use BASE64 encoding.
@@ -253,14 +253,14 @@ declare namespace java {
              * @see #getValue
              */
             // @ts-ignore
-            setValue(newValue: string): void
+            public setValue(newValue: java.lang.String | string): void
             /**
              * Returns the value of the cookie.
              * @return a {#code String} containing the cookie's present value
              * @see #setValue
              */
             // @ts-ignore
-            getValue(): java.lang.String
+            public getValue(): string
             /**
              * Returns the version of the protocol this cookie complies with. Version 1
              * complies with RFC 2965/2109, and version 0 complies with the original
@@ -271,7 +271,7 @@ declare namespace java {
              * @see #setVersion
              */
             // @ts-ignore
-            getVersion(): int
+            public getVersion(): number /*int*/
             /**
              * Sets the version of the cookie protocol this cookie complies
              * with. Version 0 complies with the original Netscape cookie
@@ -284,7 +284,7 @@ declare namespace java {
              * @see #getVersion
              */
             // @ts-ignore
-            setVersion(v: number /*int*/): void
+            public setVersion(v: number /*int*/): void
             /**
              * Returns {@code true} if this cookie contains the <i>HttpOnly</i>
              * attribute. This means that the cookie should not be accessible to
@@ -293,7 +293,7 @@ declare namespace java {
              * @see #setHttpOnly(boolean)
              */
             // @ts-ignore
-            isHttpOnly(): boolean
+            public isHttpOnly(): boolean
             /**
              * Indicates whether the cookie should be considered HTTP Only. If set to
              * {@code true} it means the cookie should not be accessible to scripting
@@ -304,7 +304,7 @@ declare namespace java {
              * @see #isHttpOnly()
              */
             // @ts-ignore
-            setHttpOnly(httpOnly: boolean): void
+            public setHttpOnly(httpOnly: boolean): void
             /**
              * The utility method to check whether a host name is in a domain or not.
              * <p> This concept is described in the cookie specification.
@@ -350,7 +350,7 @@ declare namespace java {
              * @return {#code true} if they domain-matches; {@code false} if not
              */
             // @ts-ignore
-            domainMatches(domain: string, host: string): boolean
+            public static domainMatches(domain: java.lang.String | string, host: java.lang.String | string): boolean
             /**
              * Constructs a cookie header string representation of this cookie,
              * which is in the format defined by corresponding cookie specification,
@@ -358,7 +358,7 @@ declare namespace java {
              * @return a string form of the cookie. The string has the defined format
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Test the equality of two HTTP cookies.
              * <p> The result is {@code true} only if two cookies come from same domain
@@ -368,7 +368,7 @@ declare namespace java {
              *           otherwise, {@code false}
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code of this HTTP cookie. The result is the sum of
              * hash code value of three significant components of this cookie: name,
@@ -381,13 +381,13 @@ declare namespace java {
              * @return this HTTP cookie's hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Create and return a copy of this object.
              * @return a clone of this HTTP cookie
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

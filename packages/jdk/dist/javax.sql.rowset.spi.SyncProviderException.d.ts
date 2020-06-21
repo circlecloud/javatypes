@@ -48,7 +48,7 @@ declare namespace javax {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Constructs a <code>SyncProviderException</code> object with the specified
                      * <code>SyncResolver</code> instance.

@@ -13,14 +13,14 @@ declare namespace org {
              * @see FileCopyUtils
              */
             // @ts-ignore
-            class StreamUtils extends java.lang.Object {
+            abstract class StreamUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * The default buffer size used when copying bytes.
                  */
                 // @ts-ignore
-                readonly BUFFER_SIZE: number /*int*/
+                public static readonly BUFFER_SIZE: number /*int*/
                 /**
                  * Copy the contents of the given InputStream into a new byte array.
                  * <p>Leaves the stream open when done.
@@ -29,7 +29,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copyToByteArray(input: java.io.InputStream): byte[]
+                public static copyToByteArray(input: java.io.InputStream): number /*byte*/[]
                 /**
                  * Copy the contents of the given InputStream into a String.
                  * <p>Leaves the stream open when done.
@@ -39,7 +39,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copyToString(input: java.io.InputStream, charset: java.nio.charset.Charset): java.lang.String
+                public static copyToString(input: java.io.InputStream, charset: java.nio.charset.Charset): string
                 /**
                  * Copy the contents of the given {@link ByteArrayOutputStream} into a {@link String}.
                  * <p>This is a more effective equivalent of {@code new String(baos.toByteArray(), charset)}.
@@ -51,7 +51,7 @@ declare namespace org {
                  * @since 5.2.6
                  */
                 // @ts-ignore
-                copyToString(baos: java.io.ByteArrayOutputStream, charset: java.nio.charset.Charset): java.lang.String
+                public static copyToString(baos: java.io.ByteArrayOutputStream, charset: java.nio.charset.Charset): string
                 /**
                  * Copy the contents of the given byte array to the given OutputStream.
                  * <p>Leaves the stream open when done.
@@ -60,7 +60,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: number /*byte*/[], out: java.io.OutputStream): void
+                public static copy(input: number /*byte*/[], out: java.io.OutputStream): void
                 /**
                  * Copy the contents of the given String to the given output OutputStream.
                  * <p>Leaves the stream open when done.
@@ -70,7 +70,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: string, charset: java.nio.charset.Charset, out: java.io.OutputStream): void
+                public static copy(input: java.lang.String | string, charset: java.nio.charset.Charset, out: java.io.OutputStream): void
                 /**
                  * Copy the contents of the given InputStream to the given OutputStream.
                  * <p>Leaves both streams open when done.
@@ -80,7 +80,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: java.io.InputStream, out: java.io.OutputStream): int
+                public static copy(input: java.io.InputStream, out: java.io.OutputStream): number /*int*/
                 /**
                  * Copy a range of content of the given InputStream to the given OutputStream.
                  * <p>If the specified range exceeds the length of the InputStream, this copies
@@ -95,7 +95,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                copyRange(input: java.io.InputStream, out: java.io.OutputStream, start: number /*long*/, end: number /*long*/): long
+                public static copyRange(input: java.io.InputStream, out: java.io.OutputStream, start: number /*long*/, end: number /*long*/): number /*long*/
                 /**
                  * Drain the remaining content of the given InputStream.
                  * <p>Leaves the InputStream open when done.
@@ -105,14 +105,14 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                drain(input: java.io.InputStream): int
+                public static drain(input: java.io.InputStream): number /*int*/
                 /**
                  * Return an efficient empty {@link InputStream}.
                  * @return a {#link ByteArrayInputStream} based on an empty byte array
                  * @since 4.2.2
                  */
                 // @ts-ignore
-                emptyInput(): java.io.InputStream
+                public static emptyInput(): java.io.InputStream
                 /**
                  * Return a variant of the given {@link InputStream} where calling
                  * {@link InputStream#close() close()} has no effect.
@@ -120,7 +120,7 @@ declare namespace org {
                  * @return a version of the InputStream that ignores calls to close
                  */
                 // @ts-ignore
-                nonClosing(input: java.io.InputStream): java.io.InputStream
+                public static nonClosing(input: java.io.InputStream): java.io.InputStream
                 /**
                  * Return a variant of the given {@link OutputStream} where calling
                  * {@link OutputStream#close() close()} has no effect.
@@ -128,7 +128,7 @@ declare namespace org {
                  * @return a version of the OutputStream that ignores calls to close
                  */
                 // @ts-ignore
-                nonClosing(out: java.io.OutputStream): java.io.OutputStream
+                public static nonClosing(out: java.io.OutputStream): java.io.OutputStream
             }
         }
     }

@@ -21,36 +21,36 @@ declare namespace org {
                          * Set the JMX ObjectName of this managed resource.
                          */
                         // @ts-ignore
-                        setObjectName(objectName: string): void
+                        public setObjectName(objectName: java.lang.String | string): void
                         /**
                          * Return the JMX ObjectName of this managed resource.
                          */
                         // @ts-ignore
-                        getObjectName(): java.lang.String
+                        public getObjectName(): string
                         // @ts-ignore
-                        setLog(log: boolean): void
+                        public setLog(log: boolean): void
                         // @ts-ignore
-                        isLog(): boolean
+                        public isLog(): boolean
                         // @ts-ignore
-                        setLogFile(logFile: string): void
+                        public setLogFile(logFile: java.lang.String | string): void
                         // @ts-ignore
-                        getLogFile(): java.lang.String
+                        public getLogFile(): string
                         // @ts-ignore
-                        setPersistPolicy(persistPolicy: string): void
+                        public setPersistPolicy(persistPolicy: java.lang.String | string): void
                         // @ts-ignore
-                        getPersistPolicy(): java.lang.String
+                        public getPersistPolicy(): string
                         // @ts-ignore
-                        setPersistPeriod(persistPeriod: number /*int*/): void
+                        public setPersistPeriod(persistPeriod: number /*int*/): void
                         // @ts-ignore
-                        getPersistPeriod(): int
+                        public getPersistPeriod(): number /*int*/
                         // @ts-ignore
-                        setPersistName(persistName: string): void
+                        public setPersistName(persistName: java.lang.String | string): void
                         // @ts-ignore
-                        getPersistName(): java.lang.String
+                        public getPersistName(): string
                         // @ts-ignore
-                        setPersistLocation(persistLocation: string): void
+                        public setPersistLocation(persistLocation: java.lang.String | string): void
                         // @ts-ignore
-                        getPersistLocation(): java.lang.String
+                        public getPersistLocation(): string
                     }
                 }
             }

@@ -25,7 +25,7 @@ declare namespace javax {
                      * @return a string
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Adds a document edit.  If the number of edits crosses
                      * a threshold, this switches on a hashtable lookup for
@@ -35,19 +35,19 @@ declare namespace javax {
                      * @return true if the edit was added
                      */
                     // @ts-ignore
-                    addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
+                    public addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
                     /**
                      * Redoes a change.
                      * @exception CannotRedoException if the change cannot be redone
                      */
                     // @ts-ignore
-                    redo(): void
+                    public redo(): void
                     /**
                      * Undoes a change.
                      * @exception CannotUndoException if the change cannot be undone
                      */
                     // @ts-ignore
-                    undo(): void
+                    public undo(): void
                     /**
                      * DefaultDocument events are significant.  If you wish to aggregate
                      * DefaultDocumentEvents to present them as a single edit to the user
@@ -55,14 +55,14 @@ declare namespace javax {
                      * @return whether the event is significant for edit undo purposes
                      */
                     // @ts-ignore
-                    isSignificant(): boolean
+                    public isSignificant(): boolean
                     /**
                      * Provides a localized, human readable description of this edit
                      * suitable for use in, say, a change log.
                      * @return the description
                      */
                     // @ts-ignore
-                    getPresentationName(): java.lang.String
+                    public getPresentationName(): string
                     /**
                      * Provides a localized, human readable description of the undoable
                      * form of this edit, e.g. for use as an Undo menu item. Typically
@@ -70,7 +70,7 @@ declare namespace javax {
                      * @return the description
                      */
                     // @ts-ignore
-                    getUndoPresentationName(): java.lang.String
+                    public getUndoPresentationName(): string
                     /**
                      * Provides a localized, human readable description of the redoable
                      * form of this edit, e.g. for use as a Redo menu item. Typically
@@ -78,42 +78,42 @@ declare namespace javax {
                      * @return the description
                      */
                     // @ts-ignore
-                    getRedoPresentationName(): java.lang.String
+                    public getRedoPresentationName(): string
                     /**
                      * Returns the type of event.
                      * @return the event type as a DocumentEvent.EventType
                      * @see DocumentEvent#getType
                      */
                     // @ts-ignore
-                    getType(): javax.swing.event.DocumentEvent.EventType
+                    public getType(): javax.swing.event.DocumentEvent.EventType
                     /**
                      * Returns the offset within the document of the start of the change.
                      * @return the offset &gt;= 0
                      * @see DocumentEvent#getOffset
                      */
                     // @ts-ignore
-                    getOffset(): int
+                    public getOffset(): number /*int*/
                     /**
                      * Returns the length of the change.
                      * @return the length &gt;= 0
                      * @see DocumentEvent#getLength
                      */
                     // @ts-ignore
-                    getLength(): int
+                    public getLength(): number /*int*/
                     /**
                      * Gets the document that sourced the change event.
                      * @return the document
                      * @see DocumentEvent#getDocument
                      */
                     // @ts-ignore
-                    getDocument(): javax.swing.text.Document
+                    public getDocument(): javax.swing.text.Document
                     /**
                      * Gets the changes for an element.
                      * @param elem the element
                      * @return the changes
                      */
                     // @ts-ignore
-                    getChange(elem: javax.swing.text.Element): javax.swing.event.DocumentEvent.ElementChange
+                    public getChange(elem: javax.swing.text.Element): javax.swing.event.DocumentEvent.ElementChange
                 }
             }
         }

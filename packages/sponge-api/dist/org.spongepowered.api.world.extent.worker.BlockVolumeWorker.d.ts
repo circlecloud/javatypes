@@ -55,7 +55,7 @@ declare namespace org {
                              * @return The reduction
                              */
                             // @ts-ignore
-                            reduce<T>(reducer: org.spongepowered.api.world.extent.worker.procedure.BlockVolumeReducer<T>, merge: java.util.function.BiFunction<T, T, T> | java.util.function$.BiFunction<T, T, T>, identity: T): T
+                            reduce<T>(reducer: org.spongepowered.api.world.extent.worker.procedure.BlockVolumeReducer<T>, merge: java.util.function$.BiFunction<T, T, T>, identity: T): T
                         }
                     }
                 }

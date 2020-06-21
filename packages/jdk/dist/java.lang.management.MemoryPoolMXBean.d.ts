@@ -49,7 +49,7 @@ declare namespace java {
                  * @see #isCollectionUsageThresholdSupported()
                  */
                 // @ts-ignore
-                getCollectionUsageThreshold(): long
+                getCollectionUsageThreshold(): number /*long*/
                 /**
                  * Returns the number of times that the memory usage for this memory pool
                  * has grown to exceed the collection usage threshold.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @see #isCollectionUsageThresholdSupported()
                  */
                 // @ts-ignore
-                getCollectionUsageThresholdCount(): long
+                getCollectionUsageThresholdCount(): number /*long*/
                 /**
                  * Returns a string array containing the unique names of each memory manager
                  * that manages this memory pool. A memory pool will always have at least
@@ -69,13 +69,13 @@ declare namespace java {
                  * @return the names of all the memory managers for this memory pool.
                  */
                 // @ts-ignore
-                getMemoryManagerNames(): java.lang.String[]
+                getMemoryManagerNames(): string[]
                 /**
                  * Returns the name of this memory pool.
                  * @return the name of this memory pool.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns information on the peak usage of the memory pool. The scope of
                  * this covers all elapsed time since either the start of the virtual
@@ -119,7 +119,7 @@ declare namespace java {
                  * @see #setUsageThreshold(long)
                  */
                 // @ts-ignore
-                getUsageThreshold(): long
+                getUsageThreshold(): number /*long*/
                 /**
                  * Returns the number of times that the memory usage for this memory pool
                  * has grown to exceed the current usage threshold.
@@ -130,7 +130,7 @@ declare namespace java {
                  * @see #isUsageThresholdSupported()
                  */
                 // @ts-ignore
-                getUsageThresholdCount(): long
+                getUsageThresholdCount(): number /*long*/
                 /**
                  * Returns a boolean indication of whether or not this memory pool hit or
                  * exceeded the current value of the collection usage threshold after the

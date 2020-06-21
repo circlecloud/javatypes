@@ -206,7 +206,7 @@ declare namespace java {
              * @throws IOException Any of the usual Input/Output related exceptions.
              */
             // @ts-ignore
-            readObject(): java.lang.Object
+            public readObject(): any
             /**
              * This method is called by trusted subclasses of ObjectOutputStream that
              * constructed ObjectOutputStream using the protected no-arg constructor.
@@ -224,7 +224,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readObjectOverride(): java.lang.Object
+            readObjectOverride(): any
             /**
              * Reads an "unshared" object from the ObjectInputStream.  This method is
              * identical to readObject, except that it prevents subsequent calls to
@@ -268,7 +268,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readUnshared(): java.lang.Object
+            public readUnshared(): any
             /**
              * Read the non-static and non-transient fields of the current class from
              * this stream.  This may only be called from the readObject method of the
@@ -281,7 +281,7 @@ declare namespace java {
              *           objects.
              */
             // @ts-ignore
-            defaultReadObject(): void
+            public defaultReadObject(): void
             /**
              * Reads the persistent fields from the stream and makes them available by
              * name.
@@ -295,7 +295,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readFields(): java.io.ObjectInputStream.GetField
+            public readFields(): java.io.ObjectInputStream.GetField
             /**
              * Register an object to be validated before the graph is returned.  While
              * similar to resolveObject these validations are called after the entire
@@ -312,7 +312,7 @@ declare namespace java {
              * @throws InvalidObjectException The validation object is null.
              */
             // @ts-ignore
-            registerValidation(obj: java.io.ObjectInputValidation, prio: number /*int*/): void
+            public registerValidation(obj: java.io.ObjectInputValidation, prio: number /*int*/): void
             /**
              * Load the local class equivalent of the specified stream class
              * description.  Subclasses may implement this method to allow classes to
@@ -352,7 +352,7 @@ declare namespace java {
              *           be found.
              */
             // @ts-ignore
-            resolveClass(desc: java.io.ObjectStreamClass): java.lang.Class<?>
+            resolveClass(desc: java.io.ObjectStreamClass): java.lang.Class<any>
             /**
              * Returns a proxy class that implements the interfaces named in a proxy
              * class descriptor; subclasses may implement this method to read custom
@@ -401,7 +401,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            resolveProxyClass(interfaces: string[]): java.lang.Class<?>
+            resolveProxyClass(interfaces: java.lang.String[] | string[]): java.lang.Class<any>
             /**
              * This method will allow trusted subclasses of ObjectInputStream to
              * substitute one object for another during deserialization. Replacing
@@ -426,7 +426,7 @@ declare namespace java {
              * @throws IOException Any of the usual Input/Output exceptions.
              */
             // @ts-ignore
-            resolveObject(obj: any): java.lang.Object
+            resolveObject(obj: java.lang.Object | any): any
             /**
              * Enable the stream to allow objects read from the stream to be replaced.
              * When enabled, the resolveObject method is called for every object being
@@ -483,7 +483,7 @@ declare namespace java {
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads into an array of bytes.  This method will block until some input
              * is available. Consider using java.io.DataInputStream.readFully to read
@@ -497,7 +497,7 @@ declare namespace java {
              * @see java.io.DataInputStream#readFully(byte[],int,int)
              */
             // @ts-ignore
-            read(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Returns the number of bytes that can be read without blocking.
              * @return the number of available bytes.
@@ -505,14 +505,14 @@ declare namespace java {
              *           underlying <code>InputStream</code>
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Closes the input stream. Must be called to release any resources
              * associated with the stream.
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Reads in a boolean.
              * @return the boolean read.
@@ -520,7 +520,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readBoolean(): boolean
+            public readBoolean(): boolean
             /**
              * Reads an 8 bit byte.
              * @return the 8 bit byte read.
@@ -528,7 +528,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readByte(): byte
+            public readByte(): number /*byte*/
             /**
              * Reads an unsigned 8 bit byte.
              * @return the 8 bit byte read.
@@ -536,7 +536,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readUnsignedByte(): int
+            public readUnsignedByte(): number /*int*/
             /**
              * Reads a 16 bit char.
              * @return the 16 bit char read.
@@ -544,7 +544,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readChar(): char
+            public readChar(): string
             /**
              * Reads a 16 bit short.
              * @return the 16 bit short read.
@@ -552,7 +552,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readShort(): short
+            public readShort(): number /*short*/
             /**
              * Reads an unsigned 16 bit short.
              * @return the 16 bit short read.
@@ -560,7 +560,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readUnsignedShort(): int
+            public readUnsignedShort(): number /*int*/
             /**
              * Reads a 32 bit int.
              * @return the 32 bit integer read.
@@ -568,7 +568,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readInt(): int
+            public readInt(): number /*int*/
             /**
              * Reads a 64 bit long.
              * @return the read 64 bit long.
@@ -576,7 +576,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readLong(): long
+            public readLong(): number /*long*/
             /**
              * Reads a 32 bit float.
              * @return the 32 bit float read.
@@ -584,7 +584,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readFloat(): float
+            public readFloat(): number /*float*/
             /**
              * Reads a 64 bit double.
              * @return the 64 bit double read.
@@ -592,7 +592,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readDouble(): double
+            public readDouble(): number /*double*/
             /**
              * Reads bytes, blocking until all bytes are read.
              * @param buf the buffer into which the data is read
@@ -600,7 +600,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readFully(buf: number /*byte*/[]): void
+            public readFully(buf: number /*byte*/[]): void
             /**
              * Reads bytes, blocking until all bytes are read.
              * @param buf the buffer into which the data is read
@@ -610,7 +610,7 @@ declare namespace java {
              * @throws IOException If other I/O error has occurred.
              */
             // @ts-ignore
-            readFully(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public readFully(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Skips bytes.
              * @param len the number of bytes to be skipped
@@ -618,7 +618,7 @@ declare namespace java {
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            skipBytes(len: number /*int*/): int
+            public skipBytes(len: number /*int*/): number /*int*/
             /**
              * Reads in a line that has been terminated by a \n, \r, \r\n or EOF.
              * @return a String copy of the line.
@@ -628,7 +628,7 @@ declare namespace java {
              *           see DataInputStream for the details and alternatives.
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            public readLine(): string
             /**
              * Reads a String in
              * <a href="DataInput.html#modified-utf-8">modified UTF-8</a>
@@ -640,7 +640,7 @@ declare namespace java {
              *           modified UTF-8 encoding of a string
              */
             // @ts-ignore
-            readUTF(): java.lang.String
+            public readUTF(): string
         }
     }
 }

@@ -21,7 +21,7 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest#getHeader(String)
                          */
                         // @ts-ignore
-                        getHeader(headerName: string): java.lang.String
+                        getHeader(headerName: java.lang.String | string): string
                         /**
                          * Return the request header values for the given header name,
                          * or {@code null} if none.
@@ -30,21 +30,21 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest#getHeaders(String)
                          */
                         // @ts-ignore
-                        getHeaderValues(headerName: string): java.lang.String[]
+                        getHeaderValues(headerName: java.lang.String | string): string[]
                         /**
                          * Return a Iterator over request header names.
                          * @since 3.0
                          * @see javax.servlet.http.HttpServletRequest#getHeaderNames()
                          */
                         // @ts-ignore
-                        getHeaderNames(): java.util.Iterator<java.lang.String>
+                        getHeaderNames(): java.util.Iterator<java.lang.String | string>
                         /**
                          * Return the request parameter of the given name, or {@code null} if none.
                          * <p>Retrieves the first parameter value in case of a multi-value parameter.
                          * @see javax.servlet.http.HttpServletRequest#getParameter(String)
                          */
                         // @ts-ignore
-                        getParameter(paramName: string): java.lang.String
+                        getParameter(paramName: java.lang.String | string): string
                         /**
                          * Return the request parameter values for the given parameter name,
                          * or {@code null} if none.
@@ -52,14 +52,14 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest#getParameterValues(String)
                          */
                         // @ts-ignore
-                        getParameterValues(paramName: string): java.lang.String[]
+                        getParameterValues(paramName: java.lang.String | string): string[]
                         /**
                          * Return a Iterator over request parameter names.
                          * @since 3.0
                          * @see javax.servlet.http.HttpServletRequest#getParameterNames()
                          */
                         // @ts-ignore
-                        getParameterNames(): java.util.Iterator<java.lang.String>
+                        getParameterNames(): java.util.Iterator<java.lang.String | string>
                         /**
                          * Return a immutable Map of the request parameters, with parameter names as map keys
                          * and parameter values as map values. The map values will be of type String array.
@@ -67,7 +67,7 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest#getParameterMap()
                          */
                         // @ts-ignore
-                        getParameterMap(): java.util.Map<java.lang.String, java.lang.String[]>
+                        getParameterMap(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                         /**
                          * Return the primary Locale for this request.
                          * @see javax.servlet.http.HttpServletRequest#getLocale()
@@ -80,13 +80,13 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest#getContextPath()
                          */
                         // @ts-ignore
-                        getContextPath(): java.lang.String
+                        getContextPath(): string
                         /**
                          * Return the remote user for this request, if any.
                          * @see javax.servlet.http.HttpServletRequest#getRemoteUser()
                          */
                         // @ts-ignore
-                        getRemoteUser(): java.lang.String
+                        getRemoteUser(): string
                         /**
                          * Return the user principal for this request, if any.
                          * @see javax.servlet.http.HttpServletRequest#getUserPrincipal()
@@ -98,7 +98,7 @@ declare namespace org {
                          * @see javax.servlet.http.HttpServletRequest#isUserInRole(String)
                          */
                         // @ts-ignore
-                        isUserInRole(role: string): boolean
+                        isUserInRole(role: java.lang.String | string): boolean
                         /**
                          * Return whether this request has been sent over a secure transport
                          * mechanism (such as SSL).
@@ -172,7 +172,7 @@ declare namespace org {
                          * @return true if the request does not require further processing.
                          */
                         // @ts-ignore
-                        checkNotModified(etag: string): boolean
+                        checkNotModified(etag: java.lang.String | string): boolean
                         /**
                          * Check whether the requested resource has been modified given the
                          * supplied {@code ETag} (entity tag) and last-modified timestamp,
@@ -208,7 +208,7 @@ declare namespace org {
                          * @since 4.2
                          */
                         // @ts-ignore
-                        checkNotModified(etag: string, lastModifiedTimestamp: number /*long*/): boolean
+                        checkNotModified(etag: java.lang.String | string, lastModifiedTimestamp: number /*long*/): boolean
                         /**
                          * Get a short description of this request,
                          * typically containing request URI and session id.
@@ -217,7 +217,7 @@ declare namespace org {
                          * @return the requested description as String
                          */
                         // @ts-ignore
-                        getDescription(includeClientInfo: boolean): java.lang.String
+                        getDescription(includeClientInfo: boolean): string
                     }
                 }
             }

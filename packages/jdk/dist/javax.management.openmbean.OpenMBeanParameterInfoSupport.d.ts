@@ -21,7 +21,7 @@ declare namespace javax {
                  *  null.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, openType: javax.management.openmbean.OpenType<any>)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, openType: javax.management.openmbean.OpenType<any>)
                 /**
                  * Constructs an {@code OpenMBeanParameterInfoSupport} instance,
                  * which describes the parameter used in one or more operations or
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, openType: javax.management.openmbean.OpenType<any>, descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, openType: javax.management.openmbean.OpenType<any>, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs an {@code OpenMBeanParameterInfoSupport} instance,
                  * which describes the parameter used in one or more operations or
@@ -70,7 +70,7 @@ declare namespace javax {
                  *  ArrayType} or a {@code TabularType}.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, openType: javax.management.openmbean.OpenType<T>, defaultValue: T)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, openType: javax.management.openmbean.OpenType<T>, defaultValue: T)
                 /**
                  * <p>Constructs an {@code OpenMBeanParameterInfoSupport} instance,
                  * which describes the parameter used in one or more operations or
@@ -109,7 +109,7 @@ declare namespace javax {
                  *  defaultValue} is not contained in {@code legalValues}.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, openType: javax.management.openmbean.OpenType<T>, defaultValue: T, legalValues: T[])
+                constructor(name: java.lang.String | string, description: java.lang.String | string, openType: javax.management.openmbean.OpenType<T>, defaultValue: T, legalValues: T[])
                 /**
                  * Constructs an {@code OpenMBeanParameterInfoSupport} instance,
                  * which describes the parameter used in one or more operations or
@@ -151,41 +151,41 @@ declare namespace javax {
                  *  is {@code true}.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, openType: javax.management.openmbean.OpenType<T>, defaultValue: T, minValue: java.lang.Comparable<T>, maxValue: java.lang.Comparable<T>)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, openType: javax.management.openmbean.OpenType<T>, defaultValue: T, minValue: java.lang.Comparable<T>, maxValue: java.lang.Comparable<T>)
                 /**
                  * Returns the open type for the values of the parameter described
                  * by this {@code OpenMBeanParameterInfoSupport} instance.
                  */
                 // @ts-ignore
-                getOpenType(): javax.management.openmbean.OpenType<?>
+                public getOpenType(): javax.management.openmbean.OpenType<any>
                 /**
                  * Returns the default value for the parameter described by this
                  * {@code OpenMBeanParameterInfoSupport} instance, if specified,
                  * or {@code null} otherwise.
                  */
                 // @ts-ignore
-                getDefaultValue(): java.lang.Object
+                public getDefaultValue(): any
                 /**
                  * Returns an unmodifiable Set of legal values for the parameter
                  * described by this {@code OpenMBeanParameterInfoSupport}
                  * instance, if specified, or {@code null} otherwise.
                  */
                 // @ts-ignore
-                getLegalValues(): java.util.Set<?>
+                public getLegalValues(): Array<any>
                 /**
                  * Returns the minimal value for the parameter described by this
                  * {@code OpenMBeanParameterInfoSupport} instance, if specified,
                  * or {@code null} otherwise.
                  */
                 // @ts-ignore
-                getMinValue(): java.lang.Comparable<?>
+                public getMinValue(): java.lang.Comparable<any>
                 /**
                  * Returns the maximal value for the parameter described by this
                  * {@code OpenMBeanParameterInfoSupport} instance, if specified,
                  * or {@code null} otherwise.
                  */
                 // @ts-ignore
-                getMaxValue(): java.lang.Comparable<?>
+                public getMaxValue(): java.lang.Comparable<any>
                 /**
                  * Returns {@code true} if this {@code
                  * OpenMBeanParameterInfoSupport} instance specifies a non-null
@@ -193,7 +193,7 @@ declare namespace javax {
                  * otherwise.
                  */
                 // @ts-ignore
-                hasDefaultValue(): boolean
+                public hasDefaultValue(): boolean
                 /**
                  * Returns {@code true} if this {@code
                  * OpenMBeanParameterInfoSupport} instance specifies a non-null
@@ -201,7 +201,7 @@ declare namespace javax {
                  * otherwise.
                  */
                 // @ts-ignore
-                hasLegalValues(): boolean
+                public hasLegalValues(): boolean
                 /**
                  * Returns {@code true} if this {@code
                  * OpenMBeanParameterInfoSupport} instance specifies a non-null
@@ -209,7 +209,7 @@ declare namespace javax {
                  * otherwise.
                  */
                 // @ts-ignore
-                hasMinValue(): boolean
+                public hasMinValue(): boolean
                 /**
                  * Returns {@code true} if this {@code
                  * OpenMBeanParameterInfoSupport} instance specifies a non-null
@@ -217,7 +217,7 @@ declare namespace javax {
                  * otherwise.
                  */
                 // @ts-ignore
-                hasMaxValue(): boolean
+                public hasMaxValue(): boolean
                 /**
                  * Tests whether {@code obj} is a valid value for the parameter
                  * described by this {@code OpenMBeanParameterInfo} instance.
@@ -228,7 +228,7 @@ declare namespace javax {
                  *  {@code false} otherwise.
                  */
                 // @ts-ignore
-                isValue(obj: any): boolean
+                public isValue(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Compares the specified {@code obj} parameter with this {@code
                  * OpenMBeanParameterInfoSupport} instance for equality.</p>
@@ -254,7 +254,7 @@ declare namespace javax {
                  *  {@code OpenMBeanParameterInfoSupport} instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns the hash code value for this {@code
                  * OpenMBeanParameterInfoSupport} instance.</p>
@@ -281,7 +281,7 @@ declare namespace javax {
                  *  OpenMBeanParameterInfoSupport} instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this
                  * {@code OpenMBeanParameterInfoSupport} instance.
@@ -300,7 +300,7 @@ declare namespace javax {
                  *  {#code OpenMBeanParameterInfoSupport} instance.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

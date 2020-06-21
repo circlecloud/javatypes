@@ -18,7 +18,7 @@ declare namespace org {
                      * @see org.springframework.web.jsf.el.SpringBeanFacesELResolver
                      */
                     // @ts-ignore
-                    class WebApplicationContextUtils extends java.lang.Object {
+                    abstract class WebApplicationContextUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -32,7 +32,7 @@ declare namespace org {
                          * @see org.springframework.web.context.WebApplicationContext#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE
                          */
                         // @ts-ignore
-                        getRequiredWebApplicationContext(sc: ServletContext): org.springframework.web.context.WebApplicationContext
+                        public static getRequiredWebApplicationContext(sc: ServletContext): org.springframework.web.context.WebApplicationContext
                         /**
                          * Find the root {@code WebApplicationContext} for this web app, typically
                          * loaded via {@link org.springframework.web.context.ContextLoaderListener}.
@@ -43,7 +43,7 @@ declare namespace org {
                          * @see org.springframework.web.context.WebApplicationContext#ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE
                          */
                         // @ts-ignore
-                        getWebApplicationContext(sc: ServletContext): org.springframework.web.context.WebApplicationContext
+                        public static getWebApplicationContext(sc: ServletContext): org.springframework.web.context.WebApplicationContext
                         /**
                          * Find a custom {@code WebApplicationContext} for this web app.
                          * @param sc the ServletContext to find the web application context for
@@ -51,7 +51,7 @@ declare namespace org {
                          * @return the desired WebApplicationContext for this web app, or {#code null} if none
                          */
                         // @ts-ignore
-                        getWebApplicationContext(sc: ServletContext, attrName: string): org.springframework.web.context.WebApplicationContext
+                        public static getWebApplicationContext(sc: ServletContext, attrName: java.lang.String | string): org.springframework.web.context.WebApplicationContext
                         /**
                          * Find a unique {@code WebApplicationContext} for this web app: either the
                          * root web app context (preferred) or a unique {@code WebApplicationContext}
@@ -68,14 +68,14 @@ declare namespace org {
                          * @see ServletContext#getAttributeNames()
                          */
                         // @ts-ignore
-                        findWebApplicationContext(sc: ServletContext): org.springframework.web.context.WebApplicationContext
+                        public static findWebApplicationContext(sc: ServletContext): org.springframework.web.context.WebApplicationContext
                         /**
                          * Register web-specific scopes ("request", "session", "globalSession")
                          * with the given BeanFactory, as used by the WebApplicationContext.
                          * @param beanFactory the BeanFactory to configure
                          */
                         // @ts-ignore
-                        registerWebApplicationScopes(beanFactory: ConfigurableListableBeanFactory): void
+                        public static registerWebApplicationScopes(beanFactory: ConfigurableListableBeanFactory): void
                         /**
                          * Register web-specific scopes ("request", "session", "globalSession", "application")
                          * with the given BeanFactory, as used by the WebApplicationContext.
@@ -83,7 +83,7 @@ declare namespace org {
                          * @param sc the ServletContext that we're running within
                          */
                         // @ts-ignore
-                        registerWebApplicationScopes(beanFactory: ConfigurableListableBeanFactory, sc: ServletContext): void
+                        public static registerWebApplicationScopes(beanFactory: ConfigurableListableBeanFactory, sc: ServletContext): void
                         /**
                          * Register web-specific environment beans ("contextParameters", "contextAttributes")
                          * with the given BeanFactory, as used by the WebApplicationContext.
@@ -91,7 +91,7 @@ declare namespace org {
                          * @param sc the ServletContext that we're running within
                          */
                         // @ts-ignore
-                        registerEnvironmentBeans(bf: ConfigurableListableBeanFactory, sc: ServletContext): void
+                        public static registerEnvironmentBeans(bf: ConfigurableListableBeanFactory, sc: ServletContext): void
                         /**
                          * Register web-specific environment beans ("contextParameters", "contextAttributes")
                          * with the given BeanFactory, as used by the WebApplicationContext.
@@ -100,7 +100,7 @@ declare namespace org {
                          * @param servletConfig the ServletConfig
                          */
                         // @ts-ignore
-                        registerEnvironmentBeans(bf: ConfigurableListableBeanFactory, servletContext: ServletContext, servletConfig: ServletConfig): void
+                        public static registerEnvironmentBeans(bf: ConfigurableListableBeanFactory, servletContext: ServletContext, servletConfig: ServletConfig): void
                         /**
                          * Convenient variant of {@link #initServletPropertySources(MutablePropertySources,
                          * ServletContext, ServletConfig)} that always provides {@code null} for the
@@ -108,7 +108,7 @@ declare namespace org {
                          * @see #initServletPropertySources(MutablePropertySources, ServletContext, ServletConfig)
                          */
                         // @ts-ignore
-                        initServletPropertySources(propertySources: MutablePropertySources, servletContext: ServletContext): void
+                        public static initServletPropertySources(propertySources: MutablePropertySources, servletContext: ServletContext): void
                         /**
                          * Replace {@code Servlet}-based {@link StubPropertySource stub property sources} with
                          * actual instances populated with the given {@code servletContext} and
@@ -128,7 +128,7 @@ declare namespace org {
                          * @see org.springframework.core.env.ConfigurableEnvironment#getPropertySources()
                          */
                         // @ts-ignore
-                        initServletPropertySources(sources: MutablePropertySources, servletContext: ServletContext, servletConfig: ServletConfig): void
+                        public static initServletPropertySources(sources: MutablePropertySources, servletContext: ServletContext, servletConfig: ServletConfig): void
                     }
                 }
             }

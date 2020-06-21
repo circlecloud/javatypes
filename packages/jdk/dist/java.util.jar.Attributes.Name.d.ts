@@ -21,7 +21,7 @@ declare namespace java {
                      * @exception NullPointerException if the attribute name was null
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * <code>Name</code> object for <code>Manifest-Version</code>
                      * manifest attribute. This attribute indicates the version number
@@ -30,7 +30,7 @@ declare namespace java {
                      *       Manifest and Signature Specification</a>
                      */
                     // @ts-ignore
-                    readonly MANIFEST_VERSION: java.util.jar.Attributes.Name
+                    public static readonly MANIFEST_VERSION: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Signature-Version</code>
                      * manifest attribute used when signing JAR files.
@@ -38,13 +38,13 @@ declare namespace java {
                      *       Manifest and Signature Specification</a>
                      */
                     // @ts-ignore
-                    readonly SIGNATURE_VERSION: java.util.jar.Attributes.Name
+                    public static readonly SIGNATURE_VERSION: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Content-Type</code>
                      * manifest attribute.
                      */
                     // @ts-ignore
-                    readonly CONTENT_TYPE: java.util.jar.Attributes.Name
+                    public static readonly CONTENT_TYPE: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Class-Path</code>
                      * manifest attribute. Bundled extensions can use this attribute
@@ -53,7 +53,7 @@ declare namespace java {
                      *       JAR file specification</a>
                      */
                     // @ts-ignore
-                    readonly CLASS_PATH: java.util.jar.Attributes.Name
+                    public static readonly CLASS_PATH: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Main-Class</code> manifest
                      * attribute used for launching applications packaged in JAR files.
@@ -62,7 +62,7 @@ declare namespace java {
                      * <tt>java</tt> application launcher.
                      */
                     // @ts-ignore
-                    readonly MAIN_CLASS: java.util.jar.Attributes.Name
+                    public static readonly MAIN_CLASS: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Sealed</code> manifest attribute
                      * used for sealing.
@@ -70,7 +70,7 @@ declare namespace java {
                      *       Package Sealing</a>
                      */
                     // @ts-ignore
-                    readonly SEALED: java.util.jar.Attributes.Name
+                    public static readonly SEALED: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Extension-List</code> manifest attribute
                      * used for declaring dependencies on installed extensions.
@@ -78,7 +78,7 @@ declare namespace java {
                      *       Installed extension dependency</a>
                      */
                     // @ts-ignore
-                    readonly EXTENSION_LIST: java.util.jar.Attributes.Name
+                    public static readonly EXTENSION_LIST: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Extension-Name</code> manifest attribute
                      * used for declaring dependencies on installed extensions.
@@ -86,7 +86,7 @@ declare namespace java {
                      *       Installed extension dependency</a>
                      */
                     // @ts-ignore
-                    readonly EXTENSION_NAME: java.util.jar.Attributes.Name
+                    public static readonly EXTENSION_NAME: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Extension-Name</code> manifest attribute
                      * used for declaring dependencies on installed extensions.
@@ -96,7 +96,7 @@ declare namespace java {
                      *       Installed extension dependency</a>
                      */
                     // @ts-ignore
-                    readonly EXTENSION_INSTALLATION: java.util.jar.Attributes.Name
+                    public static readonly EXTENSION_INSTALLATION: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Implementation-Title</code>
                      * manifest attribute used for package versioning.
@@ -104,7 +104,7 @@ declare namespace java {
                      *       Java Product Versioning Specification</a>
                      */
                     // @ts-ignore
-                    readonly IMPLEMENTATION_TITLE: java.util.jar.Attributes.Name
+                    public static readonly IMPLEMENTATION_TITLE: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Implementation-Version</code>
                      * manifest attribute used for package versioning.
@@ -112,7 +112,7 @@ declare namespace java {
                      *       Java Product Versioning Specification</a>
                      */
                     // @ts-ignore
-                    readonly IMPLEMENTATION_VERSION: java.util.jar.Attributes.Name
+                    public static readonly IMPLEMENTATION_VERSION: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Implementation-Vendor</code>
                      * manifest attribute used for package versioning.
@@ -120,7 +120,7 @@ declare namespace java {
                      *       Java Product Versioning Specification</a>
                      */
                     // @ts-ignore
-                    readonly IMPLEMENTATION_VENDOR: java.util.jar.Attributes.Name
+                    public static readonly IMPLEMENTATION_VENDOR: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Implementation-Vendor-Id</code>
                      * manifest attribute used for package versioning.
@@ -130,7 +130,7 @@ declare namespace java {
                      *       Optional Package Versioning</a>
                      */
                     // @ts-ignore
-                    readonly IMPLEMENTATION_VENDOR_ID: java.util.jar.Attributes.Name
+                    public static readonly IMPLEMENTATION_VENDOR_ID: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Implementation-URL</code>
                      * manifest attribute used for package versioning.
@@ -140,7 +140,7 @@ declare namespace java {
                      *       Optional Package Versioning</a>
                      */
                     // @ts-ignore
-                    readonly IMPLEMENTATION_URL: java.util.jar.Attributes.Name
+                    public static readonly IMPLEMENTATION_URL: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Specification-Title</code>
                      * manifest attribute used for package versioning.
@@ -148,7 +148,7 @@ declare namespace java {
                      *       Java Product Versioning Specification</a>
                      */
                     // @ts-ignore
-                    readonly SPECIFICATION_TITLE: java.util.jar.Attributes.Name
+                    public static readonly SPECIFICATION_TITLE: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Specification-Version</code>
                      * manifest attribute used for package versioning.
@@ -156,7 +156,7 @@ declare namespace java {
                      *       Java Product Versioning Specification</a>
                      */
                     // @ts-ignore
-                    readonly SPECIFICATION_VERSION: java.util.jar.Attributes.Name
+                    public static readonly SPECIFICATION_VERSION: java.util.jar.Attributes.Name
                     /**
                      * <code>Name</code> object for <code>Specification-Vendor</code>
                      * manifest attribute used for package versioning.
@@ -164,7 +164,7 @@ declare namespace java {
                      *       Java Product Versioning Specification</a>
                      */
                     // @ts-ignore
-                    readonly SPECIFICATION_VENDOR: java.util.jar.Attributes.Name
+                    public static readonly SPECIFICATION_VENDOR: java.util.jar.Attributes.Name
                     /**
                      * Compares this attribute name to another for equality.
                      * @param o the object to compare
@@ -172,17 +172,17 @@ declare namespace java {
                      *          specified attribute object
                      */
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     /**
                      * Computes the hash value for this attribute name.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns the attribute name as a String.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

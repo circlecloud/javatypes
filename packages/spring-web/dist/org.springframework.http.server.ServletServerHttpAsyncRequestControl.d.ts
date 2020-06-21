@@ -17,23 +17,23 @@ declare namespace org {
                     // @ts-ignore
                     constructor(request: org.springframework.http.server.ServletServerHttpRequest, response: org.springframework.http.server.ServletServerHttpResponse)
                     // @ts-ignore
-                    isStarted(): boolean
+                    public isStarted(): boolean
                     // @ts-ignore
-                    isCompleted(): boolean
+                    public isCompleted(): boolean
                     // @ts-ignore
-                    start(): void
+                    public start(): void
                     // @ts-ignore
-                    start(timeout: number /*long*/): void
+                    public start(timeout: number /*long*/): void
                     // @ts-ignore
-                    complete(): void
+                    public complete(): void
                     // @ts-ignore
-                    onComplete(event: AsyncEvent): void
+                    public onComplete(event: AsyncEvent): void
                     // @ts-ignore
-                    onStartAsync(event: AsyncEvent): void
+                    public onStartAsync(event: AsyncEvent): void
                     // @ts-ignore
-                    onError(event: AsyncEvent): void
+                    public onError(event: AsyncEvent): void
                     // @ts-ignore
-                    onTimeout(event: AsyncEvent): void
+                    public onTimeout(event: AsyncEvent): void
                 }
             }
         }

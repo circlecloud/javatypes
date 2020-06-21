@@ -29,7 +29,7 @@ declare namespace java {
                      * @return a (possibly empty) Vector of RenderableImages, or null.
                      */
                     // @ts-ignore
-                    getSources(): java.util.Vector<java.awt.image.renderable.RenderableImage>
+                    public getSources(): java.util.Vector<java.awt.image.renderable.RenderableImage>
                     /**
                      * Gets a property from the property set of this image.
                      * If the property name is not recognized, java.awt.Image.UndefinedProperty
@@ -39,13 +39,13 @@ declare namespace java {
                      *          java.awt.Image.UndefinedProperty.
                      */
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                     /**
                      * Return a list of names recognized by getProperty.
                      * @return a list of property names.
                      */
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    public getPropertyNames(): string[]
                     /**
                      * Returns true if successive renderings (that is, calls to
                      * createRendering() or createScaledRendering()) with the same arguments
@@ -57,7 +57,7 @@ declare namespace java {
                      *          <code>false</code> otherwise.
                      */
                     // @ts-ignore
-                    isDynamic(): boolean
+                    public isDynamic(): boolean
                     /**
                      * Gets the width in user coordinate space.  By convention, the
                      * usual width of a RenderableImage is equal to the image's aspect
@@ -65,24 +65,24 @@ declare namespace java {
                      * @return the width of the image in user coordinates.
                      */
                     // @ts-ignore
-                    getWidth(): float
+                    public getWidth(): number /*float*/
                     /**
                      * Gets the height in user coordinate space.  By convention, the
                      * usual height of a RenderedImage is equal to 1.0F.
                      * @return the height of the image in user coordinates.
                      */
                     // @ts-ignore
-                    getHeight(): float
+                    public getHeight(): number /*float*/
                     /**
                      * Gets the minimum X coordinate of the rendering-independent image data.
                      */
                     // @ts-ignore
-                    getMinX(): float
+                    public getMinX(): number /*float*/
                     /**
                      * Gets the minimum Y coordinate of the rendering-independent image data.
                      */
                     // @ts-ignore
-                    getMinY(): float
+                    public getMinY(): number /*float*/
                     /**
                      * Change the current ParameterBlock of the operation, allowing
                      * editing of image rendering chains.  The effects of such a
@@ -93,7 +93,7 @@ declare namespace java {
                      * @see #getParameterBlock
                      */
                     // @ts-ignore
-                    setParameterBlock(paramBlock: java.awt.image.renderable.ParameterBlock): java.awt.image.renderable.ParameterBlock
+                    public setParameterBlock(paramBlock: java.awt.image.renderable.ParameterBlock): java.awt.image.renderable.ParameterBlock
                     /**
                      * Returns a reference to the current parameter block.
                      * @return the <code>ParameterBlock</code> of this
@@ -101,7 +101,7 @@ declare namespace java {
                      * @see #setParameterBlock(ParameterBlock)
                      */
                     // @ts-ignore
-                    getParameterBlock(): java.awt.image.renderable.ParameterBlock
+                    public getParameterBlock(): java.awt.image.renderable.ParameterBlock
                     /**
                      * Creates a RenderedImage instance of this image with width w, and
                      * height h in pixels.  The RenderContext is built automatically
@@ -125,7 +125,7 @@ declare namespace java {
                      * @return a RenderedImage containing the rendered data.
                      */
                     // @ts-ignore
-                    createScaledRendering(w: number /*int*/, h: number /*int*/, hints: java.awt.RenderingHints): java.awt.image.RenderedImage
+                    public createScaledRendering(w: number /*int*/, h: number /*int*/, hints: java.awt.RenderingHints): java.awt.image.RenderedImage
                     /**
                      * Gets a RenderedImage instance of this image with a default
                      * width and height in pixels.  The RenderContext is built
@@ -136,7 +136,7 @@ declare namespace java {
                      * @return a RenderedImage containing the rendered data.
                      */
                     // @ts-ignore
-                    createDefaultRendering(): java.awt.image.RenderedImage
+                    public createDefaultRendering(): java.awt.image.RenderedImage
                     /**
                      * Creates a RenderedImage which represents this
                      * RenderableImageOp (including its Renderable sources) rendered
@@ -171,7 +171,7 @@ declare namespace java {
                      * @return a RenderedImage containing the desired output image.
                      */
                     // @ts-ignore
-                    createRendering(renderContext: java.awt.image.renderable.RenderContext): java.awt.image.RenderedImage
+                    public createRendering(renderContext: java.awt.image.renderable.RenderContext): java.awt.image.RenderedImage
                 }
             }
         }

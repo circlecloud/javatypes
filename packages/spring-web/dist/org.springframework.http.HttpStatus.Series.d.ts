@@ -9,14 +9,24 @@ declare namespace org {
                 // @ts-ignore
                 class Series extends java.lang.Enum<org.springframework.http.HttpStatus.Series> {
                     // @ts-ignore
+                    readonly INFORMATIONAL: org.springframework.http.HttpStatus.Series
+                    // @ts-ignore
+                    readonly SUCCESSFUL: org.springframework.http.HttpStatus.Series
+                    // @ts-ignore
+                    readonly REDIRECTION: org.springframework.http.HttpStatus.Series
+                    // @ts-ignore
+                    readonly CLIENT_ERROR: org.springframework.http.HttpStatus.Series
+                    // @ts-ignore
+                    readonly SERVER_ERROR: org.springframework.http.HttpStatus.Series
+                    // @ts-ignore
                     values(): org.springframework.http.HttpStatus.Series[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.http.HttpStatus.Series
+                    valueOf(name: java.lang.String | string): org.springframework.http.HttpStatus.Series
                     /**
                      * Return the integer value of this status series. Ranges from 1 to 5.
                      */
                     // @ts-ignore
-                    value(): int
+                    value(): number /*int*/
                     /**
                      * Return the enum constant of this type with the corresponding series.
                      * @param status a standard HTTP status enum value

@@ -111,7 +111,7 @@ declare namespace java {
              * Constant for the 1970-01-01T00:00:00Z epoch instant.
              */
             // @ts-ignore
-            readonly EPOCH: java.time.Instant
+            public static readonly EPOCH: java.time.Instant
             /**
              * The minimum supported {@code Instant}, '-1000000000-01-01T00:00Z'.
              * This could be used by an application as a "far past" instant.
@@ -123,7 +123,7 @@ declare namespace java {
              * an {@code int}.
              */
             // @ts-ignore
-            readonly MIN: java.time.Instant
+            public static readonly MIN: java.time.Instant
             /**
              * The maximum supported {@code Instant}, '1000000000-12-31T23:59:59.999999999Z'.
              * This could be used by an application as a "far future" instant.
@@ -135,7 +135,7 @@ declare namespace java {
              * an {@code int}.
              */
             // @ts-ignore
-            readonly MAX: java.time.Instant
+            public static readonly MAX: java.time.Instant
             /**
              * Obtains the current instant from the system clock.
              * <p>
@@ -147,7 +147,7 @@ declare namespace java {
              * @return the current instant using the system clock, not null
              */
             // @ts-ignore
-            now(): java.time.Instant
+            public static now(): java.time.Instant
             /**
              * Obtains the current instant from the specified clock.
              * <p>
@@ -159,7 +159,7 @@ declare namespace java {
              * @return the current instant, not null
              */
             // @ts-ignore
-            now(clock: java.time.Clock): java.time.Instant
+            public static now(clock: java.time.Clock): java.time.Instant
             /**
              * Obtains an instance of {@code Instant} using seconds from the
              * epoch of 1970-01-01T00:00:00Z.
@@ -170,7 +170,7 @@ declare namespace java {
              * @throws DateTimeException if the instant exceeds the maximum or minimum instant
              */
             // @ts-ignore
-            ofEpochSecond(epochSecond: number /*long*/): java.time.Instant
+            public static ofEpochSecond(epochSecond: number /*long*/): java.time.Instant
             /**
              * Obtains an instance of {@code Instant} using seconds from the
              * epoch of 1970-01-01T00:00:00Z and nanosecond fraction of second.
@@ -191,7 +191,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            ofEpochSecond(epochSecond: number /*long*/, nanoAdjustment: number /*long*/): java.time.Instant
+            public static ofEpochSecond(epochSecond: number /*long*/, nanoAdjustment: number /*long*/): java.time.Instant
             /**
              * Obtains an instance of {@code Instant} using milliseconds from the
              * epoch of 1970-01-01T00:00:00Z.
@@ -202,7 +202,7 @@ declare namespace java {
              * @throws DateTimeException if the instant exceeds the maximum or minimum instant
              */
             // @ts-ignore
-            ofEpochMilli(epochMilli: number /*long*/): java.time.Instant
+            public static ofEpochMilli(epochMilli: number /*long*/): java.time.Instant
             /**
              * Obtains an instance of {@code Instant} from a temporal object.
              * <p>
@@ -220,7 +220,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to an {#code Instant}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.Instant
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.Instant
             /**
              * Obtains an instance of {@code Instant} from a text string such as
              * {@code 2007-12-03T10:15:30.00Z}.
@@ -232,7 +232,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.Instant
+            public static parse(text: java.lang.CharSequence): java.time.Instant
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -259,7 +259,7 @@ declare namespace java {
              * @return true if the field is supported on this instant, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Checks if the specified unit is supported.
              * <p>
@@ -289,7 +289,7 @@ declare namespace java {
              * @return true if the unit can be added/subtracted, false if not
              */
             // @ts-ignore
-            isSupported(unit: java.time.temporal.TemporalUnit): boolean
+            public isSupported(unit: java.time.temporal.TemporalUnit): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -313,7 +313,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this instant as an {@code int}.
              * <p>
@@ -341,7 +341,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this instant as a {@code long}.
              * <p>
@@ -365,7 +365,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Gets the number of seconds from the Java epoch of 1970-01-01T00:00:00Z.
              * <p>
@@ -375,7 +375,7 @@ declare namespace java {
              * @return the seconds from the epoch of 1970-01-01T00:00:00Z
              */
             // @ts-ignore
-            getEpochSecond(): long
+            public getEpochSecond(): number /*long*/
             /**
              * Gets the number of nanoseconds, later along the time-line, from the start
              * of the second.
@@ -385,7 +385,7 @@ declare namespace java {
              * @return the nanoseconds within the second, always positive, never exceeds 999,999,999
              */
             // @ts-ignore
-            getNano(): int
+            public getNano(): number /*int*/
             /**
              * Returns an adjusted copy of this instant.
              * <p>
@@ -404,7 +404,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(adjuster: java.time.temporal.TemporalAdjuster): java.time.Instant
+            public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.Instant
             /**
              * Returns a copy of this instant with the specified field set to a new value.
              * <p>
@@ -449,7 +449,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.Instant
+            public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.Instant
             /**
              * Returns a copy of this {@code Instant} truncated to the specified unit.
              * <p>
@@ -472,7 +472,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the unit is not supported
              */
             // @ts-ignore
-            truncatedTo(unit: java.time.temporal.TemporalUnit): java.time.Instant
+            public truncatedTo(unit: java.time.temporal.TemporalUnit): java.time.Instant
             /**
              * Returns a copy of this instant with the specified amount added.
              * <p>
@@ -493,7 +493,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.Instant
+            public plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.Instant
             /**
              * Returns a copy of this instant with the specified amount added.
              * <p>
@@ -552,7 +552,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Instant
+            public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Instant
             /**
              * Returns a copy of this instant with the specified duration in seconds added.
              * <p>
@@ -563,7 +563,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusSeconds(secondsToAdd: number /*long*/): java.time.Instant
+            public plusSeconds(secondsToAdd: number /*long*/): java.time.Instant
             /**
              * Returns a copy of this instant with the specified duration in milliseconds added.
              * <p>
@@ -574,7 +574,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusMillis(millisToAdd: number /*long*/): java.time.Instant
+            public plusMillis(millisToAdd: number /*long*/): java.time.Instant
             /**
              * Returns a copy of this instant with the specified duration in nanoseconds added.
              * <p>
@@ -585,7 +585,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusNanos(nanosToAdd: number /*long*/): java.time.Instant
+            public plusNanos(nanosToAdd: number /*long*/): java.time.Instant
             /**
              * Returns a copy of this instant with the specified amount subtracted.
              * <p>
@@ -606,7 +606,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.Instant
+            public minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.Instant
             /**
              * Returns a copy of this instant with the specified amount subtracted.
              * <p>
@@ -626,7 +626,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Instant
+            public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Instant
             /**
              * Returns a copy of this instant with the specified duration in seconds subtracted.
              * <p>
@@ -637,7 +637,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusSeconds(secondsToSubtract: number /*long*/): java.time.Instant
+            public minusSeconds(secondsToSubtract: number /*long*/): java.time.Instant
             /**
              * Returns a copy of this instant with the specified duration in milliseconds subtracted.
              * <p>
@@ -648,7 +648,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusMillis(millisToSubtract: number /*long*/): java.time.Instant
+            public minusMillis(millisToSubtract: number /*long*/): java.time.Instant
             /**
              * Returns a copy of this instant with the specified duration in nanoseconds subtracted.
              * <p>
@@ -659,7 +659,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusNanos(nanosToSubtract: number /*long*/): java.time.Instant
+            public minusNanos(nanosToSubtract: number /*long*/): java.time.Instant
             /**
              * Queries this instant using the specified query.
              * <p>
@@ -678,7 +678,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have this instant.
              * <p>
@@ -704,7 +704,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Calculates the amount of time until another instant in terms of the specified unit.
              * <p>
@@ -749,7 +749,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+            public until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Combines this instant with an offset to create an {@code OffsetDateTime}.
              * <p>
@@ -764,7 +764,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            atOffset(offset: java.time.ZoneOffset): java.time.OffsetDateTime
+            public atOffset(offset: java.time.ZoneOffset): java.time.OffsetDateTime
             /**
              * Combines this instant with a time-zone to create a {@code ZonedDateTime}.
              * <p>
@@ -779,7 +779,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            atZone(zone: java.time.ZoneId): java.time.ZonedDateTime
+            public atZone(zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Converts this instant to the number of milliseconds from the epoch
              * of 1970-01-01T00:00:00Z.
@@ -794,7 +794,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            toEpochMilli(): long
+            public toEpochMilli(): number /*long*/
             /**
              * Compares this instant to the specified instant.
              * <p>
@@ -805,7 +805,7 @@ declare namespace java {
              * @throws NullPointerException if otherInstant is null
              */
             // @ts-ignore
-            compareTo(otherInstant: java.time.Instant): int
+            public compareTo(otherInstant: java.time.Instant): number /*int*/
             /**
              * Checks if this instant is after the specified instant.
              * <p>
@@ -815,7 +815,7 @@ declare namespace java {
              * @throws NullPointerException if otherInstant is null
              */
             // @ts-ignore
-            isAfter(otherInstant: java.time.Instant): boolean
+            public isAfter(otherInstant: java.time.Instant): boolean
             /**
              * Checks if this instant is before the specified instant.
              * <p>
@@ -825,7 +825,7 @@ declare namespace java {
              * @throws NullPointerException if otherInstant is null
              */
             // @ts-ignore
-            isBefore(otherInstant: java.time.Instant): boolean
+            public isBefore(otherInstant: java.time.Instant): boolean
             /**
              * Checks if this instant is equal to the specified instant.
              * <p>
@@ -834,13 +834,13 @@ declare namespace java {
              * @return true if the other instant is equal to this one
              */
             // @ts-ignore
-            equals(otherInstant: any): boolean
+            public equals(otherInstant: java.lang.Object | any): boolean
             /**
              * Returns a hash code for this instant.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * A string representation of this instant using ISO-8601 representation.
              * <p>
@@ -848,7 +848,7 @@ declare namespace java {
              * @return an ISO-8601 representation of this instant, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -26,7 +26,7 @@ declare namespace java {
              * @author Yassir Elley
              */
             // @ts-ignore
-            class CertPathValidatorSpi extends java.lang.Object {
+            abstract class CertPathValidatorSpi extends java.lang.Object {
                 /**
                  * The default constructor.
                  */
@@ -51,7 +51,7 @@ declare namespace java {
                  *  inappropriate for this {@code CertPathValidator}
                  */
                 // @ts-ignore
-                abstract engineValidate(certPath: java.security.cert.CertPath, params: java.security.cert.CertPathParameters): java.security.cert.CertPathValidatorResult
+                public abstract engineValidate(certPath: java.security.cert.CertPath, params: java.security.cert.CertPathParameters): java.security.cert.CertPathValidatorResult
                 /**
                  * Returns a {@code CertPathChecker} that this implementation uses to
                  * check the revocation status of certificates. A PKIX implementation
@@ -69,7 +69,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                engineGetRevocationChecker(): java.security.cert.CertPathChecker
+                public engineGetRevocationChecker(): java.security.cert.CertPathChecker
             }
         }
     }

@@ -8,7 +8,7 @@ declare namespace org {
                      * @param <T> The entry type
                      */
                     // @ts-ignore
-                    class TableEntry<T> extends java.lang.Object {
+                    abstract class TableEntry<T> extends java.lang.Object {
                         /**
                          * Creates a new {@link TableEntry} with the desired {@code weight}.
                          * @param weight The weight to associate with this entry
@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The weight
                          */
                         // @ts-ignore
-                        getWeight(): double
+                        public getWeight(): number /*double*/
                     }
                 }
             }

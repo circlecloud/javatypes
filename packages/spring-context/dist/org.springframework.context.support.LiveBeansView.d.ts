@@ -23,28 +23,28 @@ declare namespace org {
                      * The "MBean Domain" property name.
                      */
                     // @ts-ignore
-                    readonly MBEAN_DOMAIN_PROPERTY_NAME: string
+                    public static readonly MBEAN_DOMAIN_PROPERTY_NAME: java.lang.String | string
                     /**
                      * The MBean application key.
                      */
                     // @ts-ignore
-                    readonly MBEAN_APPLICATION_KEY: string
+                    public static readonly MBEAN_APPLICATION_KEY: java.lang.String | string
                     // @ts-ignore
-                    setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
+                    public setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
                     /**
                      * Generate a JSON snapshot of current beans and their dependencies,
                      * finding all active ApplicationContexts through {@link #findApplicationContexts()},
                      * then delegating to {@link #generateJson(java.util.Set)}.
                      */
                     // @ts-ignore
-                    getSnapshotAsJson(): java.lang.String
+                    public getSnapshotAsJson(): string
                     /**
                      * Find all applicable ApplicationContexts for the current application.
                      * <p>Called if no specific ApplicationContext has been set for this LiveBeansView.
                      * @return the set of ApplicationContexts
                      */
                     // @ts-ignore
-                    findApplicationContexts(): java.util.Set<org.springframework.context.ConfigurableApplicationContext>
+                    findApplicationContexts(): Array<org.springframework.context.ConfigurableApplicationContext>
                     /**
                      * Actually generate a JSON snapshot of the beans in the given ApplicationContexts.
                      * <p>This implementation doesn't use any JSON parsing libraries in order to avoid
@@ -57,7 +57,7 @@ declare namespace org {
                      * @return the JSON document
                      */
                     // @ts-ignore
-                    generateJson(contexts: Array<org.springframework.context.ConfigurableApplicationContext>): java.lang.String
+                    generateJson(contexts: java.util.Set<org.springframework.context.ConfigurableApplicationContext> | Array<org.springframework.context.ConfigurableApplicationContext>): string
                     /**
                      * Determine whether the specified bean is eligible for inclusion in the
                      * LiveBeansView JSON snapshot.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return {#code true} if the bean is to be included; {@code false} otherwise
                      */
                     // @ts-ignore
-                    isBeanEligible(beanName: string, bd: BeanDefinition, bf: ConfigurableBeanFactory): boolean
+                    isBeanEligible(beanName: java.lang.String | string, bd: BeanDefinition, bf: ConfigurableBeanFactory): boolean
                     /**
                      * Determine a resource description for the given bean definition and
                      * apply basic JSON escaping (backslashes, double quotes) to it.
@@ -75,7 +75,7 @@ declare namespace org {
                      * @return the JSON-escaped resource description
                      */
                     // @ts-ignore
-                    getEscapedResourceDescription(bd: BeanDefinition): java.lang.String
+                    getEscapedResourceDescription(bd: BeanDefinition): string
                 }
             }
         }

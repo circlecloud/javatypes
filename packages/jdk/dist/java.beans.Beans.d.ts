@@ -22,7 +22,7 @@ declare namespace java {
              * @exception IOException if an I/O error occurs.
              */
             // @ts-ignore
-            instantiate(cls: java.lang.ClassLoader, beanName: string): java.lang.Object
+            public static instantiate(cls: java.lang.ClassLoader, beanName: java.lang.String | string): any
             /**
              * <p>
              * Instantiate a JavaBean.
@@ -39,7 +39,7 @@ declare namespace java {
              * @exception IOException if an I/O error occurs.
              */
             // @ts-ignore
-            instantiate(cls: java.lang.ClassLoader, beanName: string, beanContext: java.beans.beancontext.BeanContext): java.lang.Object
+            public static instantiate(cls: java.lang.ClassLoader, beanName: java.lang.String | string, beanContext: java.beans.beancontext.BeanContext): any
             /**
              * Instantiate a bean.
              * <p>
@@ -90,7 +90,7 @@ declare namespace java {
              * @exception IOException if an I/O error occurs.
              */
             // @ts-ignore
-            instantiate(cls: java.lang.ClassLoader, beanName: string, beanContext: java.beans.beancontext.BeanContext, initializer: java.beans.AppletInitializer): java.lang.Object
+            public static instantiate(cls: java.lang.ClassLoader, beanName: java.lang.String | string, beanContext: java.beans.beancontext.BeanContext, initializer: java.beans.AppletInitializer): any
             /**
              * From a given bean, obtain an object representing a specified
              * type view of that source object.
@@ -107,7 +107,7 @@ declare namespace java {
              * @param targetType  The type of view we'd like to get.
              */
             // @ts-ignore
-            getInstanceOf(bean: any, targetType: java.lang.Class<any>): java.lang.Object
+            public static getInstanceOf(bean: java.lang.Object | any, targetType: java.lang.Class<any>): any
             /**
              * Check if a bean can be viewed as a given target type.
              * The result will be true if the Beans.getInstanceof method
@@ -118,7 +118,7 @@ declare namespace java {
              * @return "true" if the given bean supports the given targetType.
              */
             // @ts-ignore
-            isInstanceOf(bean: any, targetType: java.lang.Class<any>): boolean
+            public static isInstanceOf(bean: java.lang.Object | any, targetType: java.lang.Class<any>): boolean
             /**
              * Test if we are in design-mode.
              * @return True if we are running in an application construction
@@ -126,7 +126,7 @@ declare namespace java {
              * @see DesignMode
              */
             // @ts-ignore
-            isDesignTime(): boolean
+            public static isDesignTime(): boolean
             /**
              * Determines whether beans can assume a GUI is available.
              * @return True if we are running in an environment where beans
@@ -138,7 +138,7 @@ declare namespace java {
              * @see Visibility
              */
             // @ts-ignore
-            isGuiAvailable(): boolean
+            public static isGuiAvailable(): boolean
             /**
              * Used to indicate whether of not we are running in an application
              * builder environment.
@@ -154,7 +154,7 @@ declare namespace java {
              * @see SecurityManager#checkPropertiesAccess
              */
             // @ts-ignore
-            setDesignTime(isDesignTime: boolean): void
+            public static setDesignTime(isDesignTime: boolean): void
             /**
              * Used to indicate whether of not we are running in an environment
              * where GUI interaction is available.
@@ -170,7 +170,7 @@ declare namespace java {
              * @see SecurityManager#checkPropertiesAccess
              */
             // @ts-ignore
-            setGuiAvailable(isGuiAvailable: boolean): void
+            public static setGuiAvailable(isGuiAvailable: boolean): void
         }
     }
 }

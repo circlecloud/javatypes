@@ -22,7 +22,7 @@ declare namespace org {
                      * @see org.springframework.context.annotation.Bean
                      */
                     // @ts-ignore
-                    class ApplicationScope implements java.lang.annotation.Annotation {
+                    abstract class ApplicationScope implements java.lang.annotation.Annotation {
                     }
                 }
             }

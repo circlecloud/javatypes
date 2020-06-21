@@ -54,7 +54,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class Duration extends java.lang.Object {
+            abstract class Duration extends java.lang.Object {
                 /**
                  * Default no-arg constructor.
                  * <p>Note: Always use the {@link DatatypeFactory} to
@@ -124,14 +124,14 @@ declare namespace javax {
                  * @throws IllegalStateException If the combination of set fields does not match one of the XML Schema date/time datatypes.
                  */
                 // @ts-ignore
-                getXMLSchemaType(): javax.xml.namespace.QName
+                public getXMLSchemaType(): javax.xml.namespace.QName
                 /**
                  * Returns the sign of this duration in -1,0, or 1.
                  * @return -1 if this duration is negative, 0 if the duration is zero,
                  *       and 1 if the duration is positive.
                  */
                 // @ts-ignore
-                abstract getSign(): int
+                public abstract getSign(): number /*int*/
                 /**
                  * <p>Get the years value of this <code>Duration</code> as an <code>int</code> or <code>0</code> if not present.</p>
                  * <p><code>getYears()</code> is a convenience method for
@@ -142,7 +142,7 @@ declare namespace javax {
                  * @return If the years field is present, return its value as an <code>int</code>, else return <code>0</code>.
                  */
                 // @ts-ignore
-                getYears(): int
+                public getYears(): number /*int*/
                 /**
                  * Obtains the value of the MONTHS field as an integer value,
                  * or 0 if not present.
@@ -151,7 +151,7 @@ declare namespace javax {
                  * @return Months of this <code>Duration</code>.
                  */
                 // @ts-ignore
-                getMonths(): int
+                public getMonths(): number /*int*/
                 /**
                  * Obtains the value of the DAYS field as an integer value,
                  * or 0 if not present.
@@ -160,7 +160,7 @@ declare namespace javax {
                  * @return Days of this <code>Duration</code>.
                  */
                 // @ts-ignore
-                getDays(): int
+                public getDays(): number /*int*/
                 /**
                  * Obtains the value of the HOURS field as an integer value,
                  * or 0 if not present.
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @return Hours of this <code>Duration</code>.
                  */
                 // @ts-ignore
-                getHours(): int
+                public getHours(): number /*int*/
                 /**
                  * Obtains the value of the MINUTES field as an integer value,
                  * or 0 if not present.
@@ -178,7 +178,7 @@ declare namespace javax {
                  * @return Minutes of this <code>Duration</code>.
                  */
                 // @ts-ignore
-                getMinutes(): int
+                public getMinutes(): number /*int*/
                 /**
                  * Obtains the value of the SECONDS field as an integer value,
                  * or 0 if not present.
@@ -189,7 +189,7 @@ declare namespace javax {
                  *    this method returns 2)
                  */
                 // @ts-ignore
-                getSeconds(): int
+                public getSeconds(): number /*int*/
                 /**
                  * <p>Returns the length of the duration in milli-seconds.</p>
                  * <p>If the seconds field carries more digits than milli-second order,
@@ -215,7 +215,7 @@ declare namespace javax {
                  *  is null.
                  */
                 // @ts-ignore
-                getTimeInMillis(startInstant: java.util.Calendar): long
+                public getTimeInMillis(startInstant: java.util.Calendar): number /*long*/
                 /**
                  * <p>Returns the length of the duration in milli-seconds.</p>
                  * <p>If the seconds field carries more digits than milli-second order,
@@ -242,7 +242,7 @@ declare namespace javax {
                  * @see #getTimeInMillis(Calendar)
                  */
                 // @ts-ignore
-                getTimeInMillis(startInstant: java.util.Date): long
+                public getTimeInMillis(startInstant: java.util.Date): number /*long*/
                 /**
                  * Gets the value of a field.
                  * Fields of a duration object may contain arbitrary large value.
@@ -262,7 +262,7 @@ declare namespace javax {
                  * @throws NullPointerException If the <code>field</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract getField(field: javax.xml.datatype.DatatypeConstants.Field): java.lang.Number
+                public abstract getField(field: javax.xml.datatype.DatatypeConstants.Field): java.lang.Number
                 /**
                  * Checks if a field is set.
                  * A field of a duration object may or may not be present.
@@ -275,7 +275,7 @@ declare namespace javax {
                  *       If the field parameter is null.
                  */
                 // @ts-ignore
-                abstract isSet(field: javax.xml.datatype.DatatypeConstants.Field): boolean
+                public abstract isSet(field: javax.xml.datatype.DatatypeConstants.Field): boolean
                 /**
                  * <p>Computes a new duration whose value is <code>this+rhs</code>.</p>
                  * <p>For example,</p>
@@ -317,7 +317,7 @@ declare namespace javax {
                  * @see #subtract(Duration)
                  */
                 // @ts-ignore
-                abstract add(rhs: javax.xml.datatype.Duration): javax.xml.datatype.Duration
+                public abstract add(rhs: javax.xml.datatype.Duration): javax.xml.datatype.Duration
                 /**
                  * Adds this duration to a {@link Calendar} object.
                  * <p>
@@ -353,7 +353,7 @@ declare namespace javax {
                  *       if the calendar parameter is null.
                  */
                 // @ts-ignore
-                abstract addTo(calendar: java.util.Calendar): void
+                public abstract addTo(calendar: java.util.Calendar): void
                 /**
                  * Adds this duration to a {@link Date} object.
                  * <p>
@@ -372,7 +372,7 @@ declare namespace javax {
                  *       if the date parameter is null.
                  */
                 // @ts-ignore
-                addTo(date: java.util.Date): void
+                public addTo(date: java.util.Date): void
                 /**
                  * <p>Computes a new duration whose value is <code>this-rhs</code>.</p>
                  * <p>For example:</p>
@@ -412,7 +412,7 @@ declare namespace javax {
                  * @see #add(Duration)
                  */
                 // @ts-ignore
-                subtract(rhs: javax.xml.datatype.Duration): javax.xml.datatype.Duration
+                public subtract(rhs: javax.xml.datatype.Duration): javax.xml.datatype.Duration
                 /**
                  * <p>Computes a new duration whose value is <code>factor</code> times
                  * longer than the value of this duration.</p>
@@ -426,7 +426,7 @@ declare namespace javax {
                  * @see #multiply(BigDecimal)
                  */
                 // @ts-ignore
-                multiply(factor: number /*int*/): javax.xml.datatype.Duration
+                public multiply(factor: number /*int*/): javax.xml.datatype.Duration
                 /**
                  * Computes a new duration whose value is <code>factor</code> times
                  * longer than the value of this duration.
@@ -465,7 +465,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                abstract multiply(factor: java.math.BigDecimal): javax.xml.datatype.Duration
+                public abstract multiply(factor: java.math.BigDecimal): javax.xml.datatype.Duration
                 /**
                  * Returns a new <code>Duration</code> object whose
                  * value is <code>-this</code>.
@@ -476,7 +476,7 @@ declare namespace javax {
                  * @return always return a non-null valid <code>Duration</code> object.
                  */
                 // @ts-ignore
-                abstract negate(): javax.xml.datatype.Duration
+                public abstract negate(): javax.xml.datatype.Duration
                 /**
                  * <p>Converts the years and months fields into the days field
                  * by using a specific time instant as the reference point.</p>
@@ -502,7 +502,7 @@ declare namespace javax {
                  * @throws NullPointerException If the startTimeInstant parameter is null.
                  */
                 // @ts-ignore
-                abstract normalizeWith(startTimeInstant: java.util.Calendar): javax.xml.datatype.Duration
+                public abstract normalizeWith(startTimeInstant: java.util.Calendar): javax.xml.datatype.Duration
                 /**
                  * <p>Partial order relation comparison with this <code>Duration</code> instance.</p>
                  * <p>Comparison result must be in accordance with
@@ -528,7 +528,7 @@ declare namespace javax {
                  * @see #isLongerThan(Duration)
                  */
                 // @ts-ignore
-                abstract compare(duration: javax.xml.datatype.Duration): int
+                public abstract compare(duration: javax.xml.datatype.Duration): number /*int*/
                 /**
                  * <p>Checks if this duration object is strictly longer than
                  * another <code>Duration</code> object.</p>
@@ -549,7 +549,7 @@ declare namespace javax {
                  * @see #compare(Duration duration)
                  */
                 // @ts-ignore
-                isLongerThan(duration: javax.xml.datatype.Duration): boolean
+                public isLongerThan(duration: javax.xml.datatype.Duration): boolean
                 /**
                  * <p>Checks if this duration object is strictly shorter than
                  * another <code>Duration</code> object.</p>
@@ -565,7 +565,7 @@ declare namespace javax {
                  * @see #compare(Duration duration)
                  */
                 // @ts-ignore
-                isShorterThan(duration: javax.xml.datatype.Duration): boolean
+                public isShorterThan(duration: javax.xml.datatype.Duration): boolean
                 /**
                  * <p>Checks if this duration object has the same duration
                  * as another <code>Duration</code> object.</p>
@@ -597,13 +597,13 @@ declare namespace javax {
                  * @see #compare(Duration duration)
                  */
                 // @ts-ignore
-                equals(duration: any): boolean
+                public equals(duration: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code consistent with the definition of the equals method.
                  * @see Object#hashCode()
                  */
                 // @ts-ignore
-                abstract hashCode(): int
+                public abstract hashCode(): number /*int*/
                 /**
                  * <p>Returns a <code>String</code> representation of this <code>Duration</code> <code>Object</code>.</p>
                  * <p>The result is formatted according to the XML Schema 1.0 spec and can be always parsed back later into the
@@ -616,7 +616,7 @@ declare namespace javax {
                  * @return A non-<code>null</code> valid <code>String</code> representation of this <code>Duration</code>.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -11,23 +11,23 @@ declare namespace org {
                      * @return acting entity
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     // @ts-ignore
-                    getReason(): org.bukkit.event.block.CauldronLevelChangeEvent.ChangeReason
+                    public getReason(): org.bukkit.event.block.CauldronLevelChangeEvent.ChangeReason
                     // @ts-ignore
-                    getOldLevel(): int
+                    public getOldLevel(): number /*int*/
                     // @ts-ignore
-                    getNewLevel(): int
+                    public getNewLevel(): number /*int*/
                     // @ts-ignore
-                    setNewLevel(newLevel: number /*int*/): void
+                    public setNewLevel(newLevel: number /*int*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

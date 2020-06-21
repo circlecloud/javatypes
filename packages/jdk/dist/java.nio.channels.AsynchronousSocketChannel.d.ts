@@ -77,7 +77,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class AsynchronousSocketChannel extends java.lang.Object implements java.nio.channels.AsynchronousByteChannel, java.nio.channels.NetworkChannel {
+            abstract class AsynchronousSocketChannel extends java.lang.Object implements java.nio.channels.AsynchronousByteChannel, java.nio.channels.NetworkChannel {
                 /**
                  * Initializes a new instance of this class.
                  * @param provider
@@ -90,7 +90,7 @@ declare namespace java {
                  * @return The provider that created this channel
                  */
                 // @ts-ignore
-                provider(): java.nio.channels.spi.AsynchronousChannelProvider
+                public provider(): java.nio.channels.spi.AsynchronousChannelProvider
                 /**
                  * Opens an asynchronous socket channel.
                  * <p> The new channel is created by invoking the {@link
@@ -109,7 +109,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousSocketChannel
+                public static open(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousSocketChannel
                 /**
                  * Opens an asynchronous socket channel.
                  * <p> This method returns an asynchronous socket channel that is bound to
@@ -123,7 +123,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.AsynchronousSocketChannel
+                public static open(): java.nio.channels.AsynchronousSocketChannel
                 /**
                  * @throws ConnectionPendingException
                  *           If a connection operation is already in progress on this channel
@@ -137,14 +137,14 @@ declare namespace java {
                  *           the operation
                  */
                 // @ts-ignore
-                abstract bind(local: java.net.SocketAddress): java.nio.channels.AsynchronousSocketChannel
+                public abstract bind(local: java.net.SocketAddress): java.nio.channels.AsynchronousSocketChannel
                 /**
                  * @throws IllegalArgumentException                {#inheritDoc}
                  * @throws ClosedChannelException                  {#inheritDoc}
                  * @throws IOException                             {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.AsynchronousSocketChannel
+                public abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.AsynchronousSocketChannel
                 /**
                  * Shutdown the connection for reading without closing the channel.
                  * <p> Once shutdown for reading then further reads on the channel will
@@ -163,7 +163,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract shutdownInput(): java.nio.channels.AsynchronousSocketChannel
+                public abstract shutdownInput(): java.nio.channels.AsynchronousSocketChannel
                 /**
                  * Shutdown the connection for writing without closing the channel.
                  * <p> Once shutdown for writing then further attempts to write to the
@@ -180,7 +180,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract shutdownOutput(): java.nio.channels.AsynchronousSocketChannel
+                public abstract shutdownOutput(): java.nio.channels.AsynchronousSocketChannel
                 /**
                  * Returns the remote address to which this channel's socket is connected.
                  * <p> Where the channel is bound and connected to an Internet Protocol
@@ -194,7 +194,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract getRemoteAddress(): java.net.SocketAddress
+                public abstract getRemoteAddress(): java.net.SocketAddress
                 /**
                  * Connects this channel.
                  * <p> This method initiates an operation to connect this channel. The
@@ -231,7 +231,7 @@ declare namespace java {
                  * @see #getRemoteAddress
                  */
                 // @ts-ignore
-                abstract connect<A>(remote: java.net.SocketAddress, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Void, any super A>): void
+                public abstract connect<A>(remote: java.net.SocketAddress, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Void, any>): void
                 /**
                  * Connects this channel.
                  * <p> This method initiates an operation to connect this channel. This
@@ -256,7 +256,7 @@ declare namespace java {
                  *           and it does not permit access to the given remote endpoint
                  */
                 // @ts-ignore
-                abstract connect(remote: java.net.SocketAddress): java.util.concurrent.Future<java.lang.Void>
+                public abstract connect(remote: java.net.SocketAddress): java.util.concurrent.Future<java.lang.Void>
                 /**
                  * Reads a sequence of bytes from this channel into the given buffer.
                  * <p> This method initiates an asynchronous read operation to read a
@@ -297,7 +297,7 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                abstract read<A>(dst: java.nio.ByteBuffer, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                public abstract read<A>(dst: java.nio.ByteBuffer, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * @throws IllegalArgumentException        {#inheritDoc}
                  * @throws ReadPendingException            {#inheritDoc}
@@ -307,7 +307,7 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                read<A>(dst: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                public read<A>(dst: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * @throws IllegalArgumentException        {#inheritDoc}
                  * @throws ReadPendingException            {#inheritDoc}
@@ -315,7 +315,7 @@ declare namespace java {
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                abstract read(dst: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer>
+                public abstract read(dst: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer | number>
                 /**
                  * Reads a sequence of bytes from this channel into a subsequence of the
                  * given buffers. This operation, sometimes called a <em>scattering read</em>,
@@ -387,7 +387,7 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                abstract read<A>(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Long, any super A>): void
+                public abstract read<A>(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Long | number, any>): void
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer.
                  * <p> This method initiates an asynchronous write operation to write a
@@ -425,7 +425,7 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                abstract write<A>(src: java.nio.ByteBuffer, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                public abstract write<A>(src: java.nio.ByteBuffer, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * @throws WritePendingException          {#inheritDoc}
                  * @throws NotYetConnectedException
@@ -434,14 +434,14 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                write<A>(src: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                public write<A>(src: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * @throws WritePendingException       {#inheritDoc}
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                abstract write(src: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer>
+                public abstract write(src: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer | number>
                 /**
                  * Writes a sequence of bytes to this channel from a subsequence of the given
                  * buffers. This operation, sometimes called a <em>gathering write</em>, is
@@ -508,7 +508,7 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                abstract write<A>(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Long, any super A>): void
+                public abstract write<A>(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Long | number, any>): void
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -526,7 +526,7 @@ declare namespace java {
                  * @throws IOException                {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract getLocalAddress(): java.net.SocketAddress
+                public abstract getLocalAddress(): java.net.SocketAddress
             }
         }
     }

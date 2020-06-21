@@ -43,7 +43,7 @@ declare namespace org {
                          * @return The default options
                          */
                         // @ts-ignore
-                        getOptions(): java.util.Map<org.spongepowered.api.effect.particle.ParticleOption<?>, java.lang.Object>
+                        getOptions(): java.util.Map<org.spongepowered.api.effect.particle.ParticleOption<any>, java.lang.Object | any>
                     }
                 }
             }

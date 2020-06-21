@@ -23,7 +23,7 @@ declare namespace org {
                  * @return Remaining delay
                  */
                 // @ts-ignore
-                getPickupDelay(): int
+                getPickupDelay(): number /*int*/
                 /**
                  * Sets the delay before this Item is available to be picked up by players
                  * @param delay New delay

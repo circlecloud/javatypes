@@ -15,7 +15,7 @@ declare namespace org {
                      * @param <T> the converted object type
                      */
                     // @ts-ignore
-                    class AbstractXmlHttpMessageConverter<T> extends org.springframework.http.converter.AbstractHttpMessageConverter<T> {
+                    abstract class AbstractXmlHttpMessageConverter<T> extends org.springframework.http.converter.AbstractHttpMessageConverter<T> {
                         /**
                          * Protected constructor that sets the {@link #setSupportedMediaTypes(java.util.List) supportedMediaTypes}
                          * to {@code text/xml} and {@code application/xml}, and {@code application/*-xml}.
@@ -23,7 +23,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readInternal(clazz: java.lang.Class<T>, inputMessage: org.springframework.http.HttpInputMessage): T
+                        public readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): T
                         // @ts-ignore
                         writeInternal(t: T, outputMessage: org.springframework.http.HttpOutputMessage): void
                         /**
@@ -43,7 +43,7 @@ declare namespace org {
                          * @throws Exception in case of I/O or conversion errors
                          */
                         // @ts-ignore
-                        abstract readFromSource(clazz: java.lang.Class<T>, headers: org.springframework.http.HttpHeaders, source: javax.xml.transform.Source): T
+                        abstract readFromSource(clazz: java.lang.Class<any>, headers: org.springframework.http.HttpHeaders, source: javax.xml.transform.Source): T
                         /**
                          * Abstract template method called from {@link #writeInternal(Object, HttpOutputMessage)}.
                          * @param t the object to write to the output message

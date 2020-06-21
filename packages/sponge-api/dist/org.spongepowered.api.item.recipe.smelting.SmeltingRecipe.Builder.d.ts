@@ -19,7 +19,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                ingredient(ingredientPredicate: java.util.function.Predicate<org.spongepowered.api.item.inventory.ItemStackSnapshot> | java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStackSnapshot>, exemplaryIngredient: org.spongepowered.api.item.inventory.ItemStackSnapshot): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.ResultStep
+                                ingredient(ingredientPredicate: java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStackSnapshot>, exemplaryIngredient: org.spongepowered.api.item.inventory.ItemStackSnapshot): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder.ResultStep
                                 /**
                                  * Changes the ingredient predicate and returns this builder.
                                  * The ingredient predicate is the predicate which must return

@@ -23,7 +23,7 @@ declare namespace javax {
              *  {@code java.lang.Boolean}.)
              */
             // @ts-ignore
-            constructor(name: string, type: string, description: string, isReadable: boolean, isWritable: boolean, isIs: boolean)
+            constructor(name: java.lang.String | string, type: java.lang.String | string, description: java.lang.String | string, isReadable: boolean, isWritable: boolean, isIs: boolean)
             /**
              * Constructs an <CODE>MBeanAttributeInfo</CODE> object.
              * @param name The name of the attribute.
@@ -42,7 +42,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(name: string, type: string, description: string, isReadable: boolean, isWritable: boolean, isIs: boolean, descriptor: javax.management.Descriptor)
+            constructor(name: java.lang.String | string, type: java.lang.String | string, description: java.lang.String | string, isReadable: boolean, isWritable: boolean, isIs: boolean, descriptor: javax.management.Descriptor)
             /**
              * <p>This constructor takes the name of a simple attribute, and Method
              * objects for reading and writing the attribute.  The {@link Descriptor}
@@ -59,7 +59,7 @@ declare namespace javax {
              *  problem in the definition of this attribute.
              */
             // @ts-ignore
-            constructor(name: string, description: string, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method)
+            constructor(name: java.lang.String | string, description: java.lang.String | string, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method)
             /**
              * <p>Returns a shallow clone of this instance.
              * The clone is obtained by simply calling <tt>super.clone()</tt>,
@@ -70,33 +70,33 @@ declare namespace javax {
              * interest to subclasses.</p>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the class name of the attribute.
              * @return the class name.
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             /**
              * Whether the value of the attribute can be read.
              * @return True if the attribute can be read, false otherwise.
              */
             // @ts-ignore
-            isReadable(): boolean
+            public isReadable(): boolean
             /**
              * Whether new values can be written to the attribute.
              * @return True if the attribute can be written to, false otherwise.
              */
             // @ts-ignore
-            isWritable(): boolean
+            public isWritable(): boolean
             /**
              * Indicates if this attribute has an "is" getter.
              * @return true if this attribute has an "is" getter.
              */
             // @ts-ignore
-            isIs(): boolean
+            public isIs(): boolean
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compare this MBeanAttributeInfo to another.
              * @param o the object to compare to.
@@ -107,9 +107,9 @@ declare namespace javax {
              *  necessarily identical) to those of this MBeanAttributeInfo.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

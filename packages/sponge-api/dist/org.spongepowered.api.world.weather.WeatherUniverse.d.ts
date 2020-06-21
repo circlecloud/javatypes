@@ -19,13 +19,13 @@ declare namespace org {
                          * @return The remaining weather duration.
                          */
                         // @ts-ignore
-                        getRemainingDuration(): long
+                        getRemainingDuration(): number /*long*/
                         /**
                          * Gets the duration the current {@link Weather} has been running for.
                          * @return The running weather duration.
                          */
                         // @ts-ignore
-                        getRunningDuration(): long
+                        getRunningDuration(): number /*long*/
                         /**
                          * Sets the {@link Weather} of the volume with a random duration.
                          * @param weather The new {#link Weather}.

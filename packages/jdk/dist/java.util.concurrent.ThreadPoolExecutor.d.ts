@@ -348,7 +348,7 @@ declare namespace java {
                  * @throws NullPointerException if {#code command} is null
                  */
                 // @ts-ignore
-                execute(command: java.lang.Runnable): void
+                public execute(command: java.lang.Runnable): void
                 /**
                  * Initiates an orderly shutdown in which previously submitted
                  * tasks are executed, but no new tasks will be accepted.
@@ -359,7 +359,7 @@ declare namespace java {
                  * @throws SecurityException {#inheritDoc}
                  */
                 // @ts-ignore
-                shutdown(): void
+                public shutdown(): void
                 /**
                  * Attempts to stop all actively executing tasks, halts the
                  * processing of waiting tasks, and returns a list of the tasks
@@ -375,9 +375,9 @@ declare namespace java {
                  * @throws SecurityException {#inheritDoc}
                  */
                 // @ts-ignore
-                shutdownNow(): java.util.List<java.lang.Runnable>
+                public shutdownNow(): Array<java.lang.Runnable>
                 // @ts-ignore
-                isShutdown(): boolean
+                public isShutdown(): boolean
                 /**
                  * Returns true if this executor is in the process of terminating
                  * after {@link #shutdown} or {@link #shutdownNow} but has not
@@ -389,11 +389,11 @@ declare namespace java {
                  * @return {#code true} if terminating but not yet terminated
                  */
                 // @ts-ignore
-                isTerminating(): boolean
+                public isTerminating(): boolean
                 // @ts-ignore
-                isTerminated(): boolean
+                public isTerminated(): boolean
                 // @ts-ignore
-                awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Invokes {@code shutdown} when this executor is no longer
                  * referenced and it has no threads.
@@ -407,14 +407,14 @@ declare namespace java {
                  * @see #getThreadFactory
                  */
                 // @ts-ignore
-                setThreadFactory(threadFactory: java.util.concurrent.ThreadFactory): void
+                public setThreadFactory(threadFactory: java.util.concurrent.ThreadFactory): void
                 /**
                  * Returns the thread factory used to create new threads.
                  * @return the current thread factory
                  * @see #setThreadFactory(ThreadFactory)
                  */
                 // @ts-ignore
-                getThreadFactory(): java.util.concurrent.ThreadFactory
+                public getThreadFactory(): java.util.concurrent.ThreadFactory
                 /**
                  * Sets a new handler for unexecutable tasks.
                  * @param handler the new handler
@@ -422,14 +422,14 @@ declare namespace java {
                  * @see #getRejectedExecutionHandler
                  */
                 // @ts-ignore
-                setRejectedExecutionHandler(handler: java.util.concurrent.RejectedExecutionHandler): void
+                public setRejectedExecutionHandler(handler: java.util.concurrent.RejectedExecutionHandler): void
                 /**
                  * Returns the current handler for unexecutable tasks.
                  * @return the current handler
                  * @see #setRejectedExecutionHandler(RejectedExecutionHandler)
                  */
                 // @ts-ignore
-                getRejectedExecutionHandler(): java.util.concurrent.RejectedExecutionHandler
+                public getRejectedExecutionHandler(): java.util.concurrent.RejectedExecutionHandler
                 /**
                  * Sets the core number of threads.  This overrides any value set
                  * in the constructor.  If the new value is smaller than the
@@ -441,14 +441,14 @@ declare namespace java {
                  * @see #getCorePoolSize
                  */
                 // @ts-ignore
-                setCorePoolSize(corePoolSize: number /*int*/): void
+                public setCorePoolSize(corePoolSize: number /*int*/): void
                 /**
                  * Returns the core number of threads.
                  * @return the core number of threads
                  * @see #setCorePoolSize
                  */
                 // @ts-ignore
-                getCorePoolSize(): int
+                public getCorePoolSize(): number /*int*/
                 /**
                  * Starts a core thread, causing it to idly wait for work. This
                  * overrides the default policy of starting core threads only when
@@ -457,7 +457,7 @@ declare namespace java {
                  * @return {#code true} if a thread was started
                  */
                 // @ts-ignore
-                prestartCoreThread(): boolean
+                public prestartCoreThread(): boolean
                 /**
                  * Starts all core threads, causing them to idly wait for work. This
                  * overrides the default policy of starting core threads only when
@@ -465,7 +465,7 @@ declare namespace java {
                  * @return the number of threads started
                  */
                 // @ts-ignore
-                prestartAllCoreThreads(): int
+                public prestartAllCoreThreads(): number /*int*/
                 /**
                  * Returns true if this pool allows core threads to time out and
                  * terminate if no tasks arrive within the keepAlive time, being
@@ -478,7 +478,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                allowsCoreThreadTimeOut(): boolean
+                public allowsCoreThreadTimeOut(): boolean
                 /**
                  * Sets the policy governing whether core threads may time out and
                  * terminate if no tasks arrive within the keep-alive time, being
@@ -495,7 +495,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                allowCoreThreadTimeOut(value: boolean): void
+                public allowCoreThreadTimeOut(value: boolean): void
                 /**
                  * Sets the maximum allowed number of threads. This overrides any
                  * value set in the constructor. If the new value is smaller than
@@ -508,14 +508,14 @@ declare namespace java {
                  * @see #getMaximumPoolSize
                  */
                 // @ts-ignore
-                setMaximumPoolSize(maximumPoolSize: number /*int*/): void
+                public setMaximumPoolSize(maximumPoolSize: number /*int*/): void
                 /**
                  * Returns the maximum allowed number of threads.
                  * @return the maximum allowed number of threads
                  * @see #setMaximumPoolSize
                  */
                 // @ts-ignore
-                getMaximumPoolSize(): int
+                public getMaximumPoolSize(): number /*int*/
                 /**
                  * Sets the time limit for which threads may remain idle before
                  * being terminated.  If there are more than the core number of
@@ -530,7 +530,7 @@ declare namespace java {
                  * @see #getKeepAliveTime(TimeUnit)
                  */
                 // @ts-ignore
-                setKeepAliveTime(time: number /*long*/, unit: java.util.concurrent.TimeUnit): void
+                public setKeepAliveTime(time: number /*long*/, unit: java.util.concurrent.TimeUnit): void
                 /**
                  * Returns the thread keep-alive time, which is the amount of time
                  * that threads in excess of the core pool size may remain
@@ -540,7 +540,7 @@ declare namespace java {
                  * @see #setKeepAliveTime(long, TimeUnit)
                  */
                 // @ts-ignore
-                getKeepAliveTime(unit: java.util.concurrent.TimeUnit): long
+                public getKeepAliveTime(unit: java.util.concurrent.TimeUnit): number /*long*/
                 /**
                  * Returns the task queue used by this executor. Access to the
                  * task queue is intended primarily for debugging and monitoring.
@@ -549,7 +549,7 @@ declare namespace java {
                  * @return the task queue
                  */
                 // @ts-ignore
-                getQueue(): java.util.concurrent.BlockingQueue<java.lang.Runnable>
+                public getQueue(): java.util.concurrent.BlockingQueue<java.lang.Runnable>
                 /**
                  * Removes this task from the executor's internal queue if it is
                  * present, thus causing it not to be run if it has not already
@@ -565,7 +565,7 @@ declare namespace java {
                  * @return {#code true} if the task was removed
                  */
                 // @ts-ignore
-                remove(task: java.lang.Runnable): boolean
+                public remove(task: java.lang.Runnable): boolean
                 /**
                  * Tries to remove from the work queue all {@link Future}
                  * tasks that have been cancelled. This method can be useful as a
@@ -577,27 +577,27 @@ declare namespace java {
                  * the presence of interference by other threads.
                  */
                 // @ts-ignore
-                purge(): void
+                public purge(): void
                 /**
                  * Returns the current number of threads in the pool.
                  * @return the number of threads
                  */
                 // @ts-ignore
-                getPoolSize(): int
+                public getPoolSize(): number /*int*/
                 /**
                  * Returns the approximate number of threads that are actively
                  * executing tasks.
                  * @return the number of threads
                  */
                 // @ts-ignore
-                getActiveCount(): int
+                public getActiveCount(): number /*int*/
                 /**
                  * Returns the largest number of threads that have ever
                  * simultaneously been in the pool.
                  * @return the number of threads
                  */
                 // @ts-ignore
-                getLargestPoolSize(): int
+                public getLargestPoolSize(): number /*int*/
                 /**
                  * Returns the approximate total number of tasks that have ever been
                  * scheduled for execution. Because the states of tasks and
@@ -606,7 +606,7 @@ declare namespace java {
                  * @return the number of tasks
                  */
                 // @ts-ignore
-                getTaskCount(): long
+                public getTaskCount(): number /*long*/
                 /**
                  * Returns the approximate total number of tasks that have
                  * completed execution. Because the states of tasks and threads
@@ -616,7 +616,7 @@ declare namespace java {
                  * @return the number of tasks
                  */
                 // @ts-ignore
-                getCompletedTaskCount(): long
+                public getCompletedTaskCount(): number /*long*/
                 /**
                  * Returns a string identifying this pool, as well as its state,
                  * including indications of run state and estimated worker and
@@ -624,7 +624,7 @@ declare namespace java {
                  * @return a string identifying this pool, as well as its state
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Method invoked prior to executing the given Runnable in the
                  * given thread.  This method is invoked by thread {@code t} that
@@ -682,7 +682,7 @@ declare namespace java {
                  *  execution completed normally
                  */
                 // @ts-ignore
-                afterExecute(r: java.lang.Runnable, t: Error): void
+                afterExecute(r: java.lang.Runnable, t: java.lang.Throwable | Error): void
                 /**
                  * Method invoked when the Executor has terminated.  Default
                  * implementation does nothing. Note: To properly nest multiple

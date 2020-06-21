@@ -59,7 +59,7 @@ declare namespace javax {
                  * @return A string that is the same as the input string.
                  */
                 // @ts-ignore
-                parseString(lexicalXSDString: string): java.lang.String
+                parseString(lexicalXSDString: java.lang.String | string): string
                 /**
                  * <p>
                  * Convert the string argument into a BigInteger value.
@@ -70,7 +70,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDInteger</code> is not a valid string representation of a {#link java.math.BigInteger} value.
                  */
                 // @ts-ignore
-                parseInteger(lexicalXSDInteger: string): java.math.BigInteger
+                parseInteger(lexicalXSDInteger: java.lang.String | string): java.math.BigInteger
                 /**
                  * <p>
                  * Convert the string argument into an int value.
@@ -81,7 +81,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDInt</code> is not a valid string representation of an <code>int</code> value.
                  */
                 // @ts-ignore
-                parseInt(lexicalXSDInt: string): int
+                parseInt(lexicalXSDInt: java.lang.String | string): number /*int*/
                 /**
                  * <p>
                  * Converts the string argument into a long value.
@@ -92,7 +92,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDLong</code> is not a valid string representation of a <code>long</code> value.
                  */
                 // @ts-ignore
-                parseLong(lexicalXSDLong: string): long
+                parseLong(lexicalXSDLong: java.lang.String | string): number /*long*/
                 /**
                  * <p>
                  * Converts the string argument into a short value.
@@ -103,7 +103,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDShort</code> is not a valid string representation of a <code>short</code> value.
                  */
                 // @ts-ignore
-                parseShort(lexicalXSDShort: string): short
+                parseShort(lexicalXSDShort: java.lang.String | string): number /*short*/
                 /**
                  * <p>
                  * Converts the string argument into a BigDecimal value.
@@ -114,7 +114,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDDecimal</code> is not a valid string representation of {#link java.math.BigDecimal}.
                  */
                 // @ts-ignore
-                parseDecimal(lexicalXSDDecimal: string): java.math.BigDecimal
+                parseDecimal(lexicalXSDDecimal: java.lang.String | string): java.math.BigDecimal
                 /**
                  * <p>
                  * Converts the string argument into a float value.
@@ -125,7 +125,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDFloat</code> is not a valid string representation of a <code>float</code> value.
                  */
                 // @ts-ignore
-                parseFloat(lexicalXSDFloat: string): float
+                parseFloat(lexicalXSDFloat: java.lang.String | string): number /*float*/
                 /**
                  * <p>
                  * Converts the string argument into a double value.
@@ -136,7 +136,7 @@ declare namespace javax {
                  * @throws NumberFormatException <code>lexicalXSDDouble</code> is not a valid string representation of a <code>double</code> value.
                  */
                 // @ts-ignore
-                parseDouble(lexicalXSDDouble: string): double
+                parseDouble(lexicalXSDDouble: java.lang.String | string): number /*double*/
                 /**
                  * <p>
                  * Converts the string argument into a boolean value.
@@ -147,7 +147,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:boolean.
                  */
                 // @ts-ignore
-                parseBoolean(lexicalXSDBoolean: string): boolean
+                parseBoolean(lexicalXSDBoolean: java.lang.String | string): boolean
                 /**
                  * <p>
                  * Converts the string argument into a byte value.
@@ -159,7 +159,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:byte.
                  */
                 // @ts-ignore
-                parseByte(lexicalXSDByte: string): byte
+                parseByte(lexicalXSDByte: java.lang.String | string): number /*byte*/
                 /**
                  * <p>
                  * Converts the string argument into a QName value.
@@ -175,7 +175,7 @@ declare namespace javax {
                  *       if namespace prefix of <tt>lexicalXSDQname</tt> is not bound to a URI in NamespaceContext <tt>nsc</tt>.
                  */
                 // @ts-ignore
-                parseQName(lexicalXSDQName: string, nsc: javax.xml.namespace.NamespaceContext): javax.xml.namespace.QName
+                parseQName(lexicalXSDQName: java.lang.String | string, nsc: javax.xml.namespace.NamespaceContext): javax.xml.namespace.QName
                 /**
                  * <p>
                  * Converts the string argument into a Calendar value.
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:dateTime.
                  */
                 // @ts-ignore
-                parseDateTime(lexicalXSDDateTime: string): java.util.Calendar
+                parseDateTime(lexicalXSDDateTime: java.lang.String | string): java.util.Calendar
                 /**
                  * <p>
                  * Converts the string argument into an array of bytes.
@@ -197,7 +197,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:base64Binary
                  */
                 // @ts-ignore
-                parseBase64Binary(lexicalXSDBase64Binary: string): byte[]
+                parseBase64Binary(lexicalXSDBase64Binary: java.lang.String | string): number /*byte*/[]
                 /**
                  * <p>
                  * Converts the string argument into an array of bytes.
@@ -208,7 +208,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:hexBinary.
                  */
                 // @ts-ignore
-                parseHexBinary(lexicalXSDHexBinary: string): byte[]
+                parseHexBinary(lexicalXSDHexBinary: java.lang.String | string): number /*byte*/[]
                 /**
                  * <p>
                  * Converts the string argument into a long value.
@@ -219,7 +219,7 @@ declare namespace javax {
                  * @throws NumberFormatException if string parameter can not be parsed into a <tt>long</tt> value.
                  */
                 // @ts-ignore
-                parseUnsignedInt(lexicalXSDUnsignedInt: string): long
+                parseUnsignedInt(lexicalXSDUnsignedInt: java.lang.String | string): number /*long*/
                 /**
                  * <p>
                  * Converts the string argument into an int value.
@@ -230,7 +230,7 @@ declare namespace javax {
                  * @throws NumberFormatException if string parameter can not be parsed into an <tt>int</tt> value.
                  */
                 // @ts-ignore
-                parseUnsignedShort(lexicalXSDUnsignedShort: string): int
+                parseUnsignedShort(lexicalXSDUnsignedShort: java.lang.String | string): number /*int*/
                 /**
                  * <p>
                  * Converts the string argument into a Calendar value.
@@ -241,7 +241,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Time.
                  */
                 // @ts-ignore
-                parseTime(lexicalXSDTime: string): java.util.Calendar
+                parseTime(lexicalXSDTime: java.lang.String | string): java.util.Calendar
                 /**
                  * <p>
                  * Converts the string argument into a Calendar value.
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Date.
                  */
                 // @ts-ignore
-                parseDate(lexicalXSDDate: string): java.util.Calendar
+                parseDate(lexicalXSDDate: java.lang.String | string): java.util.Calendar
                 /**
                  * <p>
                  * Return a string containing the lexical representation of the
@@ -264,7 +264,7 @@ declare namespace javax {
                  *      simple type.
                  */
                 // @ts-ignore
-                parseAnySimpleType(lexicalXSDAnySimpleType: string): java.lang.String
+                parseAnySimpleType(lexicalXSDAnySimpleType: java.lang.String | string): string
                 /**
                  * <p>
                  * Converts the string argument into a string.
@@ -273,7 +273,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:string
                  */
                 // @ts-ignore
-                printString(val: string): java.lang.String
+                printString(val: java.lang.String | string): string
                 /**
                  * <p>
                  * Converts a BigInteger value into a string.
@@ -283,7 +283,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printInteger(val: java.math.BigInteger): java.lang.String
+                printInteger(val: java.math.BigInteger): string
                 /**
                  * <p>
                  * Converts an int value into a string.
@@ -292,7 +292,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:int
                  */
                 // @ts-ignore
-                printInt(val: number /*int*/): java.lang.String
+                printInt(val: number /*int*/): string
                 /**
                  * <p>
                  * Converts a long value into a string.
@@ -301,7 +301,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:long
                  */
                 // @ts-ignore
-                printLong(val: number /*long*/): java.lang.String
+                printLong(val: number /*long*/): string
                 /**
                  * <p>
                  * Converts a short value into a string.
@@ -310,7 +310,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:short
                  */
                 // @ts-ignore
-                printShort(val: number /*short*/): java.lang.String
+                printShort(val: number /*short*/): string
                 /**
                  * <p>
                  * Converts a BigDecimal value into a string.
@@ -320,7 +320,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printDecimal(val: java.math.BigDecimal): java.lang.String
+                printDecimal(val: java.math.BigDecimal): string
                 /**
                  * <p>
                  * Converts a float value into a string.
@@ -329,7 +329,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:float
                  */
                 // @ts-ignore
-                printFloat(val: number /*float*/): java.lang.String
+                printFloat(val: number /*float*/): string
                 /**
                  * <p>
                  * Converts a double value into a string.
@@ -338,7 +338,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:double
                  */
                 // @ts-ignore
-                printDouble(val: number /*double*/): java.lang.String
+                printDouble(val: number /*double*/): string
                 /**
                  * <p>
                  * Converts a boolean value into a string.
@@ -347,7 +347,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:boolean
                  */
                 // @ts-ignore
-                printBoolean(val: boolean): java.lang.String
+                printBoolean(val: boolean): string
                 /**
                  * <p>
                  * Converts a byte value into a string.
@@ -356,7 +356,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:byte
                  */
                 // @ts-ignore
-                printByte(val: number /*byte*/): java.lang.String
+                printByte(val: number /*byte*/): string
                 /**
                  * <p>
                  * Converts a QName instance into a string.
@@ -369,7 +369,7 @@ declare namespace javax {
                  *  if <tt>nsc</tt> is non-null or <tt>nsc.getPrefix(nsprefixFromVal)</tt> is null.
                  */
                 // @ts-ignore
-                printQName(val: javax.xml.namespace.QName, nsc: javax.xml.namespace.NamespaceContext): java.lang.String
+                printQName(val: javax.xml.namespace.QName, nsc: javax.xml.namespace.NamespaceContext): string
                 /**
                  * <p>
                  * Converts a Calendar value into a string.
@@ -379,7 +379,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printDateTime(val: java.util.Calendar): java.lang.String
+                printDateTime(val: java.util.Calendar): string
                 /**
                  * <p>
                  * Converts an array of bytes into a string.
@@ -389,7 +389,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printBase64Binary(val: number /*byte*/[]): java.lang.String
+                printBase64Binary(val: number /*byte*/[]): string
                 /**
                  * <p>
                  * Converts an array of bytes into a string.
@@ -399,7 +399,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printHexBinary(val: number /*byte*/[]): java.lang.String
+                printHexBinary(val: number /*byte*/[]): string
                 /**
                  * <p>
                  * Converts a long value into a string.
@@ -408,7 +408,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:unsignedInt
                  */
                 // @ts-ignore
-                printUnsignedInt(val: number /*long*/): java.lang.String
+                printUnsignedInt(val: number /*long*/): string
                 /**
                  * <p>
                  * Converts an int value into a string.
@@ -417,7 +417,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:unsignedShort
                  */
                 // @ts-ignore
-                printUnsignedShort(val: number /*int*/): java.lang.String
+                printUnsignedShort(val: number /*int*/): string
                 /**
                  * <p>
                  * Converts a Calendar value into a string.
@@ -427,7 +427,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printTime(val: java.util.Calendar): java.lang.String
+                printTime(val: java.util.Calendar): string
                 /**
                  * <p>
                  * Converts a Calendar value into a string.
@@ -437,7 +437,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <tt>val</tt> is null.
                  */
                 // @ts-ignore
-                printDate(val: java.util.Calendar): java.lang.String
+                printDate(val: java.util.Calendar): string
                 /**
                  * <p>
                  * Converts a string value into a string.
@@ -446,7 +446,7 @@ declare namespace javax {
                  * @return A string containing a lexical representation of xsd:AnySimpleType
                  */
                 // @ts-ignore
-                printAnySimpleType(val: string): java.lang.String
+                printAnySimpleType(val: java.lang.String | string): string
             }
         }
     }

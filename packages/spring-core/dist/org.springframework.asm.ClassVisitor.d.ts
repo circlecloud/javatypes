@@ -10,7 +10,7 @@ declare namespace org {
              * @author Eric Bruneton
              */
             // @ts-ignore
-            class ClassVisitor extends java.lang.Object {
+            abstract class ClassVisitor extends java.lang.Object {
                 /**
                  * Constructs a new {@link ClassVisitor}.
                  * @param api the ASM API version implemented by this visitor. Must be one of {#link
@@ -54,7 +54,7 @@ declare namespace org {
                  *      Type#getInternalName()}). May be {@literal null}.
                  */
                 // @ts-ignore
-                visit(version: number /*int*/, access: number /*int*/, name: string, signature: string, superName: string, interfaces: string[]): void
+                public visit(version: number /*int*/, access: number /*int*/, name: java.lang.String | string, signature: java.lang.String | string, superName: java.lang.String | string, interfaces: java.lang.String[] | string[]): void
                 /**
                  * Visits the source of the class.
                  * @param source the name of the source file from which the class was compiled. May be {#literal
@@ -63,7 +63,7 @@ declare namespace org {
                  *      compiled elements of the class. May be {#literal null}.
                  */
                 // @ts-ignore
-                visitSource(source: string, debug: string): void
+                public visitSource(source: java.lang.String | string, debug: java.lang.String | string): void
                 /**
                  * Visit the module corresponding to the class.
                  * @param name the fully qualified name (using dots) of the module.
@@ -74,7 +74,7 @@ declare namespace org {
                  *      interested in visiting this module.
                  */
                 // @ts-ignore
-                visitModule(name: string, access: number /*int*/, version: string): org.springframework.asm.ModuleVisitor
+                public visitModule(name: java.lang.String | string, access: number /*int*/, version: java.lang.String | string): org.springframework.asm.ModuleVisitor
                 /**
                  * Visits the nest host class of the class. A nest is a set of classes of the same package that
                  * share access to their private members. One of these classes, called the host, lists the other
@@ -85,7 +85,7 @@ declare namespace org {
                  * @param nestHost the internal name of the host class of the nest.
                  */
                 // @ts-ignore
-                visitNestHost(nestHost: string): void
+                public visitNestHost(nestHost: java.lang.String | string): void
                 /**
                  * Visits the enclosing class of the class. This method must be called only if the class has an
                  * enclosing class.
@@ -96,7 +96,7 @@ declare namespace org {
                  *      the class is not enclosed in a method of its enclosing class.
                  */
                 // @ts-ignore
-                visitOuterClass(owner: string, name: string, descriptor: string): void
+                public visitOuterClass(owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string): void
                 /**
                  * Visits an annotation of the class.
                  * @param descriptor the class descriptor of the annotation class.
@@ -105,7 +105,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitAnnotation(descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitAnnotation(descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits an annotation on a type in the class signature.
                  * @param typeRef a reference to the annotated type. The sort of this type reference must be
@@ -121,13 +121,13 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a non standard attribute of the class.
                  * @param attribute an attribute.
                  */
                 // @ts-ignore
-                visitAttribute(attribute: org.springframework.asm.Attribute): void
+                public visitAttribute(attribute: org.springframework.asm.Attribute): void
                 /**
                  * Visits a member of the nest. A nest is a set of classes of the same package that share access
                  * to their private members. One of these classes, called the host, lists the other members of the
@@ -137,7 +137,7 @@ declare namespace org {
                  * @param nestMember the internal name of a nest member.
                  */
                 // @ts-ignore
-                visitNestMember(nestMember: string): void
+                public visitNestMember(nestMember: java.lang.String | string): void
                 /**
                  * <b>Experimental, use at your own risk. This method will be renamed when it becomes stable, this
                  * will break existing code using it</b>. Visits a permitted subtypes. A permitted subtypes is one
@@ -146,7 +146,7 @@ declare namespace org {
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                visitPermittedSubtypeExperimental(permittedSubtype: string): void
+                public visitPermittedSubtypeExperimental(permittedSubtype: java.lang.String | string): void
                 /**
                  * Visits information about an inner class. This inner class is not necessarily a member of the
                  * class being visited.
@@ -159,7 +159,7 @@ declare namespace org {
                  *      class.
                  */
                 // @ts-ignore
-                visitInnerClass(name: string, outerName: string, innerName: string, access: number /*int*/): void
+                public visitInnerClass(name: java.lang.String | string, outerName: java.lang.String | string, innerName: java.lang.String | string, access: number /*int*/): void
                 /**
                  * Visits a record component of the class.
                  * @param access the record component access flags, the only possible value is {#link
@@ -173,7 +173,7 @@ declare namespace org {
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                visitRecordComponentExperimental(access: number /*int*/, name: string, descriptor: string, signature: string): org.springframework.asm.RecordComponentVisitor
+                public visitRecordComponentExperimental(access: number /*int*/, name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string): org.springframework.asm.RecordComponentVisitor
                 /**
                  * Visits a field of the class.
                  * @param access the field's access flags (see {#link Opcodes}). This parameter also indicates if
@@ -192,7 +192,7 @@ declare namespace org {
                  *      visitor is not interested in visiting these annotations and attributes.
                  */
                 // @ts-ignore
-                visitField(access: number /*int*/, name: string, descriptor: string, signature: string, value: any): org.springframework.asm.FieldVisitor
+                public visitField(access: number /*int*/, name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string, value: java.lang.Object | any): org.springframework.asm.FieldVisitor
                 /**
                  * Visits a method of the class. This method <i>must</i> return a new {@link MethodVisitor}
                  * instance (or {@literal null}) each time it is called, i.e., it should not return a previously
@@ -209,13 +209,13 @@ declare namespace org {
                  *      visitor is not interested in visiting the code of this method.
                  */
                 // @ts-ignore
-                visitMethod(access: number /*int*/, name: string, descriptor: string, signature: string, exceptions: string[]): org.springframework.asm.MethodVisitor
+                public visitMethod(access: number /*int*/, name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string, exceptions: java.lang.String[] | string[]): org.springframework.asm.MethodVisitor
                 /**
                  * Visits the end of the class. This method, which is the last one to be called, is used to inform
                  * the visitor that all the fields and methods of the class have been visited.
                  */
                 // @ts-ignore
-                visitEnd(): void
+                public visitEnd(): void
             }
         }
     }

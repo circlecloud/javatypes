@@ -59,7 +59,7 @@ declare namespace javax {
                  * @see #setValueAt
                  */
                 // @ts-ignore
-                constructor(columnNames: java.util.Vector, rowCount: number /*int*/)
+                constructor(columnNames: java.util.Vector<any>, rowCount: number /*int*/)
                 /**
                  * Constructs a <code>DefaultTableModel</code> with as many
                  * columns as there are elements in <code>columnNames</code>
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @see #setValueAt
                  */
                 // @ts-ignore
-                constructor(columnNames: any[], rowCount: number /*int*/)
+                constructor(columnNames: java.lang.Object[] | any[], rowCount: number /*int*/)
                 /**
                  * Constructs a <code>DefaultTableModel</code> and initializes the table
                  * by passing <code>data</code> and <code>columnNames</code>
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @see #setDataVector
                  */
                 // @ts-ignore
-                constructor(data: java.util.Vector, columnNames: java.util.Vector)
+                constructor(data: java.util.Vector<any>, columnNames: java.util.Vector<any>)
                 /**
                  * Constructs a <code>DefaultTableModel</code> and initializes the table
                  * by passing <code>data</code> and <code>columnNames</code>
@@ -101,18 +101,18 @@ declare namespace javax {
                  * @see #setDataVector
                  */
                 // @ts-ignore
-                constructor(data: any[][], columnNames: any[])
+                constructor(data: java.lang.Object[][] | any[][], columnNames: java.lang.Object[] | any[])
                 /**
                  * The <code>Vector</code> of <code>Vectors</code> of
                  * <code>Object</code> values.
                  */
                 // @ts-ignore
-                dataVector: java.util.Vector
+                dataVector: java.util.Vector<any>
                 /**
                  * The <code>Vector</code> of column identifiers.
                  */
                 // @ts-ignore
-                columnIdentifiers: java.util.Vector
+                columnIdentifiers: java.util.Vector<any>
                 /**
                  * Returns the <code>Vector</code> of <code>Vectors</code>
                  * that contains the table's
@@ -126,7 +126,7 @@ declare namespace javax {
                  * @see #setDataVector
                  */
                 // @ts-ignore
-                getDataVector(): java.util.Vector
+                public getDataVector(): java.util.Vector<any>
                 /**
                  * Replaces the current <code>dataVector</code> instance variable
                  * with the new <code>Vector</code> of rows, <code>dataVector</code>.
@@ -147,7 +147,7 @@ declare namespace javax {
                  * @see #getDataVector
                  */
                 // @ts-ignore
-                setDataVector(dataVector: java.util.Vector, columnIdentifiers: java.util.Vector): void
+                public setDataVector(dataVector: java.util.Vector<any>, columnIdentifiers: java.util.Vector<any>): void
                 /**
                  * Replaces the value in the <code>dataVector</code> instance
                  * variable with the values in the array <code>dataVector</code>.
@@ -159,13 +159,13 @@ declare namespace javax {
                  * @see #setDataVector(Vector, Vector)
                  */
                 // @ts-ignore
-                setDataVector(dataVector: any[][], columnIdentifiers: any[]): void
+                public setDataVector(dataVector: java.lang.Object[][] | any[][], columnIdentifiers: java.lang.Object[] | any[]): void
                 /**
                  * Equivalent to <code>fireTableChanged</code>.
                  * @param event  the change event
                  */
                 // @ts-ignore
-                newDataAvailable(event: javax.swing.event.TableModelEvent): void
+                public newDataAvailable(event: javax.swing.event.TableModelEvent): void
                 /**
                  * Ensures that the new rows have the correct number of columns.
                  * This is accomplished by  using the <code>setSize</code> method in
@@ -181,18 +181,18 @@ declare namespace javax {
                  * @see #getDataVector
                  */
                 // @ts-ignore
-                newRowsAdded(e: javax.swing.event.TableModelEvent): void
+                public newRowsAdded(e: javax.swing.event.TableModelEvent): void
                 /**
                  * Equivalent to <code>fireTableChanged</code>.
                  * @param event the change event
                  */
                 // @ts-ignore
-                rowsRemoved(event: javax.swing.event.TableModelEvent): void
+                public rowsRemoved(event: javax.swing.event.TableModelEvent): void
                 /**
                  * Obsolete as of Java 2 platform v1.3.  Please use <code>setRowCount</code> instead.
                  */
                 // @ts-ignore
-                setNumRows(rowCount: number /*int*/): void
+                public setNumRows(rowCount: number /*int*/): void
                 /**
                  * Sets the number of rows in the model.  If the new size is greater
                  * than the current size, new rows are added to the end of the model
@@ -202,7 +202,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setRowCount(rowCount: number /*int*/): void
+                public setRowCount(rowCount: number /*int*/): void
                 /**
                  * Adds a row to the end of the model.  The new row will contain
                  * <code>null</code> values unless <code>rowData</code> is specified.
@@ -210,7 +210,7 @@ declare namespace javax {
                  * @param rowData          optional data of the row being added
                  */
                 // @ts-ignore
-                addRow(rowData: java.util.Vector): void
+                public addRow(rowData: java.util.Vector<any>): void
                 /**
                  * Adds a row to the end of the model.  The new row will contain
                  * <code>null</code> values unless <code>rowData</code> is specified.
@@ -218,7 +218,7 @@ declare namespace javax {
                  * @param rowData          optional data of the row being added
                  */
                 // @ts-ignore
-                addRow(rowData: any[]): void
+                public addRow(rowData: java.lang.Object[] | any[]): void
                 /**
                  * Inserts a row at <code>row</code> in the model.  The new row
                  * will contain <code>null</code> values unless <code>rowData</code>
@@ -228,7 +228,7 @@ declare namespace javax {
                  * @exception ArrayIndexOutOfBoundsException  if the row was invalid
                  */
                 // @ts-ignore
-                insertRow(row: number /*int*/, rowData: java.util.Vector): void
+                public insertRow(row: number /*int*/, rowData: java.util.Vector<any>): void
                 /**
                  * Inserts a row at <code>row</code> in the model.  The new row
                  * will contain <code>null</code> values unless <code>rowData</code>
@@ -238,7 +238,7 @@ declare namespace javax {
                  * @exception ArrayIndexOutOfBoundsException  if the row was invalid
                  */
                 // @ts-ignore
-                insertRow(row: number /*int*/, rowData: any[]): void
+                public insertRow(row: number /*int*/, rowData: java.lang.Object[] | any[]): void
                 /**
                  * Moves one or more rows from the inclusive range <code>start</code> to
                  * <code>end</code> to the <code>to</code> position in the model.
@@ -262,7 +262,7 @@ declare namespace javax {
                  *  would be moved out of the table's range
                  */
                 // @ts-ignore
-                moveRow(start: number /*int*/, end: number /*int*/, to: number /*int*/): void
+                public moveRow(start: number /*int*/, end: number /*int*/, to: number /*int*/): void
                 /**
                  * Removes the row at <code>row</code> from the model.  Notification
                  * of the row being removed will be sent to all the listeners.
@@ -270,7 +270,7 @@ declare namespace javax {
                  * @exception ArrayIndexOutOfBoundsException  if the row was invalid
                  */
                 // @ts-ignore
-                removeRow(row: number /*int*/): void
+                public removeRow(row: number /*int*/): void
                 /**
                  * Replaces the column identifiers in the model.  If the number of
                  * <code>newIdentifier</code>s is greater than the current number
@@ -284,7 +284,7 @@ declare namespace javax {
                  * @see #setNumRows
                  */
                 // @ts-ignore
-                setColumnIdentifiers(columnIdentifiers: java.util.Vector): void
+                public setColumnIdentifiers(columnIdentifiers: java.util.Vector<any>): void
                 /**
                  * Replaces the column identifiers in the model.  If the number of
                  * <code>newIdentifier</code>s is greater than the current number
@@ -298,7 +298,7 @@ declare namespace javax {
                  * @see #setNumRows
                  */
                 // @ts-ignore
-                setColumnIdentifiers(newIdentifiers: any[]): void
+                public setColumnIdentifiers(newIdentifiers: java.lang.Object[] | any[]): void
                 /**
                  * Sets the number of columns in the model.  If the new size is greater
                  * than the current size, new columns are added to the end of the model
@@ -310,7 +310,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setColumnCount(columnCount: number /*int*/): void
+                public setColumnCount(columnCount: number /*int*/): void
                 /**
                  * Adds a column to the model.  The new column will have the
                  * identifier <code>columnName</code>, which may be null.  This method
@@ -321,7 +321,7 @@ declare namespace javax {
                  * @param columnName the identifier of the column being added
                  */
                 // @ts-ignore
-                addColumn(columnName: any): void
+                public addColumn(columnName: java.lang.Object | any): void
                 /**
                  * Adds a column to the model.  The new column will have the
                  * identifier <code>columnName</code>, which may be null.
@@ -335,7 +335,7 @@ declare namespace javax {
                  * @param columnData       optional data of the column being added
                  */
                 // @ts-ignore
-                addColumn(columnName: any, columnData: java.util.Vector): void
+                public addColumn(columnName: java.lang.Object | any, columnData: java.util.Vector<any>): void
                 /**
                  * Adds a column to the model.  The new column will have the
                  * identifier <code>columnName</code>.  <code>columnData</code> is the
@@ -347,19 +347,19 @@ declare namespace javax {
                  * @see #addColumn(Object, Vector)
                  */
                 // @ts-ignore
-                addColumn(columnName: any, columnData: any[]): void
+                public addColumn(columnName: java.lang.Object | any, columnData: java.lang.Object[] | any[]): void
                 /**
                  * Returns the number of rows in this data table.
                  * @return the number of rows in the model
                  */
                 // @ts-ignore
-                getRowCount(): int
+                public getRowCount(): number /*int*/
                 /**
                  * Returns the number of columns in this data table.
                  * @return the number of columns in the model
                  */
                 // @ts-ignore
-                getColumnCount(): int
+                public getColumnCount(): number /*int*/
                 /**
                  * Returns the column name.
                  * @return a name for this column using the string value of the
@@ -369,7 +369,7 @@ declare namespace javax {
                  *  name provided by the superclass.
                  */
                 // @ts-ignore
-                getColumnName(column: number /*int*/): java.lang.String
+                public getColumnName(column: number /*int*/): string
                 /**
                  * Returns true regardless of parameter values.
                  * @param row             the row whose value is to be queried
@@ -378,7 +378,7 @@ declare namespace javax {
                  * @see #setValueAt
                  */
                 // @ts-ignore
-                isCellEditable(row: number /*int*/, column: number /*int*/): boolean
+                public isCellEditable(row: number /*int*/, column: number /*int*/): boolean
                 /**
                  * Returns an attribute value for the cell at <code>row</code>
                  * and <code>column</code>.
@@ -389,7 +389,7 @@ declare namespace javax {
                  *                column was given
                  */
                 // @ts-ignore
-                getValueAt(row: number /*int*/, column: number /*int*/): java.lang.Object
+                public getValueAt(row: number /*int*/, column: number /*int*/): any
                 /**
                  * Sets the object value for the cell at <code>column</code> and
                  * <code>row</code>.  <code>aValue</code> is the new value.  This method
@@ -401,7 +401,7 @@ declare namespace javax {
                  *                column was given
                  */
                 // @ts-ignore
-                setValueAt(aValue: any, row: number /*int*/, column: number /*int*/): void
+                public setValueAt(aValue: java.lang.Object | any, row: number /*int*/, column: number /*int*/): void
                 /**
                  * Returns a vector that contains the same objects as the array.
                  * @param anArray  the array to be converted
@@ -409,7 +409,7 @@ declare namespace javax {
                  *                           returns <code>null</code>
                  */
                 // @ts-ignore
-                convertToVector(anArray: any[]): java.util.Vector
+                static convertToVector(anArray: java.lang.Object[] | any[]): java.util.Vector<any>
                 /**
                  * Returns a vector of vectors that contains the same objects as the array.
                  * @param anArray  the double array to be converted
@@ -417,7 +417,7 @@ declare namespace javax {
                  *                           <code>null</code>, returns <code>null</code>
                  */
                 // @ts-ignore
-                convertToVector(anArray: any[][]): java.util.Vector
+                static convertToVector(anArray: java.lang.Object[][] | any[][]): java.util.Vector<any>
             }
         }
     }

@@ -20,40 +20,40 @@ declare namespace org {
                      * {@link java.util.Map.Entry} is not supported.</p>
                      */
                     // @ts-ignore
-                    class Context extends java.lang.Object implements java.util.Map.Entry<java.lang.String, java.lang.String> {
+                    class Context extends java.lang.Object implements java.util.Map.Entry<java.lang.String | string, java.lang.String | string> {
                         /**
                          * Create a new context instance.
                          * @param key Context key. Must not be null.
                          * @param value Context value. Must not be null.
                          */
                         // @ts-ignore
-                        constructor(key: string, value: string)
+                        constructor(key: java.lang.String | string, value: java.lang.String | string)
                         // @ts-ignore
-                        readonly USER_KEY: string
+                        public static readonly USER_KEY: java.lang.String | string
                         // @ts-ignore
-                        readonly WORLD_KEY: string
+                        public static readonly WORLD_KEY: java.lang.String | string
                         // @ts-ignore
-                        readonly DIMENSION_KEY: string
+                        public static readonly DIMENSION_KEY: java.lang.String | string
                         // @ts-ignore
-                        readonly REMOTE_IP_KEY: string
+                        public static readonly REMOTE_IP_KEY: java.lang.String | string
                         // @ts-ignore
-                        readonly LOCAL_HOST_KEY: string
+                        public static readonly LOCAL_HOST_KEY: java.lang.String | string
                         // @ts-ignore
-                        readonly LOCAL_IP_KEY: string
+                        public static readonly LOCAL_IP_KEY: java.lang.String | string
                         // @ts-ignore
-                        readonly LOCAL_PORT_KEY: string
+                        public static readonly LOCAL_PORT_KEY: java.lang.String | string
                         /**
                          * Gets the context key.
                          * @return The key
                          */
                         // @ts-ignore
-                        getKey(): java.lang.String
+                        public getKey(): string
                         /**
                          * Gets the context value.
                          * @return The value
                          */
                         // @ts-ignore
-                        getValue(): java.lang.String
+                        public getValue(): string
                         /**
                          * Alias method for {@link #getKey()}.
                          * @return The type of the context
@@ -63,7 +63,7 @@ declare namespace org {
                          *              otherwise suggest.
                          */
                         // @ts-ignore
-                        getType(): java.lang.String
+                        public getType(): string
                         /**
                          * Alias method for {@link #getValue()}.
                          * @return The specific name of the item involved in this context
@@ -72,15 +72,15 @@ declare namespace org {
                          *              to. (it could reasonably be either key or value)
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         // @ts-ignore
-                        setValue(value: string): java.lang.String
+                        public setValue(value: java.lang.String | string): string
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

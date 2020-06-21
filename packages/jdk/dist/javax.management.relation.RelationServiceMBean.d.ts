@@ -56,7 +56,7 @@ declare namespace javax {
                  *  <P>- one null role info provided
                  */
                 // @ts-ignore
-                createRelationType(relationTypeName: string, roleInfoArray: javax.management.relation.RoleInfo[]): void
+                createRelationType(relationTypeName: java.lang.String | string, roleInfoArray: javax.management.relation.RoleInfo[]): void
                 /**
                  * Adds given object as a relation type. The object is expected to
                  * implement the RelationType interface.
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @return ArrayList of relation type names (Strings)
                  */
                 // @ts-ignore
-                getAllRelationTypeNames(): java.util.List<java.lang.String>
+                getAllRelationTypeNames(): Array<java.lang.String | string>
                 /**
                  * Retrieves list of role infos (RoleInfo objects) of a given relation
                  * type.
@@ -86,7 +86,7 @@ declare namespace javax {
                  *  with that name.
                  */
                 // @ts-ignore
-                getRoleInfos(relationTypeName: string): java.util.List<javax.management.relation.RoleInfo>
+                getRoleInfos(relationTypeName: java.lang.String | string): Array<javax.management.relation.RoleInfo>
                 /**
                  * Retrieves role info for given role of a given relation type.
                  * @param relationTypeName  name of relation type
@@ -99,7 +99,7 @@ declare namespace javax {
                  *  relation type.
                  */
                 // @ts-ignore
-                getRoleInfo(relationTypeName: string, roleInfoName: string): javax.management.relation.RoleInfo
+                getRoleInfo(relationTypeName: java.lang.String | string, roleInfoName: java.lang.String | string): javax.management.relation.RoleInfo
                 /**
                  * Removes given relation type from Relation Service.
                  * <P>The relation objects of that type will be removed from the
@@ -112,7 +112,7 @@ declare namespace javax {
                  *  with that name
                  */
                 // @ts-ignore
-                removeRelationType(relationTypeName: string): void
+                removeRelationType(relationTypeName: java.lang.String | string): void
                 /**
                  * Creates a simple relation (represented by a RelationSupport object) of
                  * given relation type, and adds it in the Relation Service.
@@ -145,7 +145,7 @@ declare namespace javax {
                  *  <P>- an MBean provided for that role does not exist
                  */
                 // @ts-ignore
-                createRelation(relationId: string, relationTypeName: string, roleList: javax.management.relation.RoleList): void
+                createRelation(relationId: java.lang.String | string, relationTypeName: java.lang.String | string, roleList: javax.management.relation.RoleList): void
                 /**
                  * Adds an MBean created by the user (and registered by him in the MBean
                  * Server) as a relation in the Relation Service.
@@ -203,7 +203,7 @@ declare namespace javax {
                  *  to that id
                  */
                 // @ts-ignore
-                isRelationMBean(relationId: string): javax.management.ObjectName
+                isRelationMBean(relationId: java.lang.String | string): javax.management.ObjectName
                 /**
                  * Returns the relation id associated to the given ObjectName if the
                  * MBean has been added as a relation in the Relation Service.
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                isRelation(objectName: javax.management.ObjectName): java.lang.String
+                isRelation(objectName: javax.management.ObjectName): string
                 /**
                  * Checks if there is a relation identified in Relation Service with given
                  * relation id.
@@ -222,14 +222,14 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                hasRelation(relationId: string): java.lang.Boolean
+                hasRelation(relationId: java.lang.String | string): java.lang.Boolean
                 /**
                  * Returns all the relation ids for all the relations handled by the
                  * Relation Service.
                  * @return ArrayList of String
                  */
                 // @ts-ignore
-                getAllRelationIds(): java.util.List<java.lang.String>
+                getAllRelationIds(): Array<java.lang.String | string>
                 /**
                  * Checks if given Role can be read in a relation of the given type.
                  * @param roleName  name of role to be checked
@@ -244,7 +244,7 @@ declare namespace javax {
                  *  known in the Relation Service
                  */
                 // @ts-ignore
-                checkRoleReading(roleName: string, relationTypeName: string): java.lang.Integer
+                checkRoleReading(roleName: java.lang.String | string, relationTypeName: java.lang.String | string): number
                 /**
                  * Checks if given Role can be set in a relation of given type.
                  * @param role  role to be checked
@@ -264,7 +264,7 @@ declare namespace javax {
                  * @exception RelationTypeNotFoundException  if unknown relation type
                  */
                 // @ts-ignore
-                checkRoleWriting(role: javax.management.relation.Role, relationTypeName: string, initFlag: java.lang.Boolean): java.lang.Integer
+                checkRoleWriting(role: javax.management.relation.Role, relationTypeName: java.lang.String | string, initFlag: java.lang.Boolean): number
                 /**
                  * Sends a notification (RelationNotification) for a relation creation.
                  * The notification type is:
@@ -281,7 +281,7 @@ declare namespace javax {
                  *  relation id
                  */
                 // @ts-ignore
-                sendRelationCreationNotification(relationId: string): void
+                sendRelationCreationNotification(relationId: java.lang.String | string): void
                 /**
                  * Sends a notification (RelationNotification) for a role update in the
                  * given relation. The notification type is:
@@ -303,7 +303,7 @@ declare namespace javax {
                  *  relation id
                  */
                 // @ts-ignore
-                sendRoleUpdateNotification(relationId: string, newRole: javax.management.relation.Role, oldRoleValue: Array<javax.management.ObjectName>): void
+                sendRoleUpdateNotification(relationId: java.lang.String | string, newRole: javax.management.relation.Role, oldRoleValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>): void
                 /**
                  * Sends a notification (RelationNotification) for a relation removal.
                  * The notification type is:
@@ -321,7 +321,7 @@ declare namespace javax {
                  *  relation id
                  */
                 // @ts-ignore
-                sendRelationRemovalNotification(relationId: string, unregMBeanList: Array<javax.management.ObjectName>): void
+                sendRelationRemovalNotification(relationId: java.lang.String | string, unregMBeanList: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>): void
                 /**
                  * Handles update of the Relation Service role map for the update of given
                  * role in given relation.
@@ -342,7 +342,7 @@ declare namespace javax {
                  * @exception RelationNotFoundException  if no relation for given id.
                  */
                 // @ts-ignore
-                updateRoleMap(relationId: string, newRole: javax.management.relation.Role, oldRoleValue: Array<javax.management.ObjectName>): void
+                updateRoleMap(relationId: java.lang.String | string, newRole: javax.management.relation.Role, oldRoleValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>): void
                 /**
                  * Removes given relation from the Relation Service.
                  * <P>A RelationNotification notification is sent, its type being:
@@ -359,7 +359,7 @@ declare namespace javax {
                  *  given relation id
                  */
                 // @ts-ignore
-                removeRelation(relationId: string): void
+                removeRelation(relationId: java.lang.String | string): void
                 /**
                  * Purges the relations.
                  * <P>Depending on the purgeFlag value, this method is either called
@@ -403,7 +403,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                findReferencingRelations(mbeanName: javax.management.ObjectName, relationTypeName: string, roleName: string): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+                findReferencingRelations(mbeanName: javax.management.ObjectName, relationTypeName: java.lang.String | string, roleName: java.lang.String | string): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                 /**
                  * Retrieves the MBeans associated to given one in a relation.
                  * <P>This corresponds to CIM Associators and AssociatorNames operations.
@@ -422,7 +422,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                findAssociatedMBeans(mbeanName: javax.management.ObjectName, relationTypeName: string, roleName: string): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String>>
+                findAssociatedMBeans(mbeanName: javax.management.ObjectName, relationTypeName: java.lang.String | string, roleName: java.lang.String | string): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                 /**
                  * Returns the relation ids for relations of the given type.
                  * @param relationTypeName  relation type name
@@ -432,7 +432,7 @@ declare namespace javax {
                  *  with that name.
                  */
                 // @ts-ignore
-                findRelationsOfType(relationTypeName: string): java.util.List<java.lang.String>
+                findRelationsOfType(relationTypeName: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Retrieves role value for given role name in given relation.
                  * @param relationId  relation id
@@ -449,7 +449,7 @@ declare namespace javax {
                  * @see #setRole
                  */
                 // @ts-ignore
-                getRole(relationId: string, roleName: string): java.util.List<javax.management.ObjectName>
+                getRole(relationId: java.lang.String | string, roleName: java.lang.String | string): Array<javax.management.ObjectName>
                 /**
                  * Retrieves values of roles with given names in given relation.
                  * @param relationId  relation id
@@ -464,7 +464,7 @@ declare namespace javax {
                  * @see #setRoles
                  */
                 // @ts-ignore
-                getRoles(relationId: string, roleNameArray: string[]): javax.management.relation.RoleResult
+                getRoles(relationId: java.lang.String | string, roleNameArray: java.lang.String[] | string[]): javax.management.relation.RoleResult
                 /**
                  * Returns all roles present in the relation.
                  * @param relationId  relation id
@@ -477,7 +477,7 @@ declare namespace javax {
                  *  Service is not registered in the MBean Server
                  */
                 // @ts-ignore
-                getAllRoles(relationId: string): javax.management.relation.RoleResult
+                getAllRoles(relationId: java.lang.String | string): javax.management.relation.RoleResult
                 /**
                  * Retrieves the number of MBeans currently referenced in the
                  * given role.
@@ -489,7 +489,7 @@ declare namespace javax {
                  * @exception RoleNotFoundException  if there is no role with given name
                  */
                 // @ts-ignore
-                getRoleCardinality(relationId: string, roleName: string): java.lang.Integer
+                getRoleCardinality(relationId: java.lang.String | string, roleName: java.lang.String | string): number
                 /**
                  * Sets the given role in given relation.
                  * <P>Will check the role according to its corresponding role definition
@@ -522,7 +522,7 @@ declare namespace javax {
                  * @see #getRole
                  */
                 // @ts-ignore
-                setRole(relationId: string, role: javax.management.relation.Role): void
+                setRole(relationId: java.lang.String | string, role: javax.management.relation.Role): void
                 /**
                  * Sets the given roles in given relation.
                  * <P>Will check the role according to its corresponding role definition
@@ -541,7 +541,7 @@ declare namespace javax {
                  * @see #getRoles
                  */
                 // @ts-ignore
-                setRoles(relationId: string, roleList: javax.management.relation.RoleList): javax.management.relation.RoleResult
+                setRoles(relationId: java.lang.String | string, roleList: javax.management.relation.RoleList): javax.management.relation.RoleResult
                 /**
                  * Retrieves MBeans referenced in the various roles of the relation.
                  * @param relationId  relation id
@@ -553,7 +553,7 @@ declare namespace javax {
                  *  relation id
                  */
                 // @ts-ignore
-                getReferencedMBeans(relationId: string): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String>>
+                getReferencedMBeans(relationId: java.lang.String | string): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                 /**
                  * Returns name of associated relation type for given relation.
                  * @param relationId  relation id
@@ -563,7 +563,7 @@ declare namespace javax {
                  *  relation id
                  */
                 // @ts-ignore
-                getRelationTypeName(relationId: string): java.lang.String
+                getRelationTypeName(relationId: java.lang.String | string): string
             }
         }
     }

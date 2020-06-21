@@ -24,7 +24,7 @@ declare namespace org {
              * @see PropertyEditorRegistrySupport
              */
             // @ts-ignore
-            class AbstractNestablePropertyAccessor extends org.springframework.beans.AbstractPropertyAccessor {
+            abstract class AbstractNestablePropertyAccessor extends org.springframework.beans.AbstractPropertyAccessor {
                 /**
                  * Create a new empty accessor. Wrapped instance needs to be set afterwards.
                  * Registers default editors.
@@ -45,7 +45,7 @@ declare namespace org {
                  * @param object the object wrapped by this accessor
                  */
                 // @ts-ignore
-                constructor(object: any)
+                constructor(object: java.lang.Object | any)
                 /**
                  * Create a new accessor, wrapping a new instance of the specified class.
                  * @param clazz class to instantiate and wrap
@@ -60,7 +60,7 @@ declare namespace org {
                  * @param rootObject the root object at the top of the path
                  */
                 // @ts-ignore
-                constructor(object: any, nestedPath: string, rootObject: any)
+                constructor(object: java.lang.Object | any, nestedPath: java.lang.String | string, rootObject: java.lang.Object | any)
                 /**
                  * Create a new accessor for the given object,
                  * registering a nested path that the object is in.
@@ -69,25 +69,25 @@ declare namespace org {
                  * @param parent the containing accessor (must not be {#code null})
                  */
                 // @ts-ignore
-                constructor(object: any, nestedPath: string, parent: org.springframework.beans.AbstractNestablePropertyAccessor)
+                constructor(object: java.lang.Object | any, nestedPath: java.lang.String | string, parent: org.springframework.beans.AbstractNestablePropertyAccessor)
                 /**
                  * Specify a limit for array and collection auto-growing.
                  * <p>Default is unlimited on a plain accessor.
                  */
                 // @ts-ignore
-                setAutoGrowCollectionLimit(autoGrowCollectionLimit: number /*int*/): void
+                public setAutoGrowCollectionLimit(autoGrowCollectionLimit: number /*int*/): void
                 /**
                  * Return the limit for array and collection auto-growing.
                  */
                 // @ts-ignore
-                getAutoGrowCollectionLimit(): int
+                public getAutoGrowCollectionLimit(): number /*int*/
                 /**
                  * Switch the target object, replacing the cached introspection results only
                  * if the class of the new object is different to that of the replaced object.
                  * @param object the new target object
                  */
                 // @ts-ignore
-                setWrappedInstance(object: any): void
+                public setWrappedInstance(object: java.lang.Object | any): void
                 /**
                  * Switch the target object, replacing the cached introspection results only
                  * if the class of the new object is different to that of the replaced object.
@@ -96,48 +96,48 @@ declare namespace org {
                  * @param rootObject the root object at the top of the path
                  */
                 // @ts-ignore
-                setWrappedInstance(object: any, nestedPath: string, rootObject: any): void
+                public setWrappedInstance(object: java.lang.Object | any, nestedPath: java.lang.String | string, rootObject: java.lang.Object | any): void
                 // @ts-ignore
-                getWrappedInstance(): java.lang.Object
+                public getWrappedInstance(): any
                 // @ts-ignore
-                getWrappedClass(): java.lang.Class<?>
+                public getWrappedClass(): java.lang.Class<any>
                 /**
                  * Return the nested path of the object wrapped by this accessor.
                  */
                 // @ts-ignore
-                getNestedPath(): java.lang.String
+                public getNestedPath(): string
                 /**
                  * Return the root object at the top of the path of this accessor.
                  * @see #getNestedPath
                  */
                 // @ts-ignore
-                getRootInstance(): java.lang.Object
+                public getRootInstance(): any
                 /**
                  * Return the class of the root object at the top of the path of this accessor.
                  * @see #getNestedPath
                  */
                 // @ts-ignore
-                getRootClass(): java.lang.Class<?>
+                public getRootClass(): java.lang.Class<any>
                 // @ts-ignore
-                setPropertyValue(propertyName: string, value: any): void
+                public setPropertyValue(propertyName: java.lang.String | string, value: java.lang.Object | any): void
                 // @ts-ignore
-                setPropertyValue(pv: org.springframework.beans.PropertyValue): void
+                public setPropertyValue(pv: org.springframework.beans.PropertyValue): void
                 // @ts-ignore
                 setPropertyValue(tokens: org.springframework.beans.AbstractNestablePropertyAccessor.PropertyTokenHolder, pv: org.springframework.beans.PropertyValue): void
                 // @ts-ignore
-                getPropertyType(propertyName: string): java.lang.Class<?>
+                public getPropertyType(propertyName: java.lang.String | string): java.lang.Class<any>
                 // @ts-ignore
-                getPropertyTypeDescriptor(propertyName: string): TypeDescriptor
+                public getPropertyTypeDescriptor(propertyName: java.lang.String | string): TypeDescriptor
                 // @ts-ignore
-                isReadableProperty(propertyName: string): boolean
+                public isReadableProperty(propertyName: java.lang.String | string): boolean
                 // @ts-ignore
-                isWritableProperty(propertyName: string): boolean
+                public isWritableProperty(propertyName: java.lang.String | string): boolean
                 // @ts-ignore
-                convertForProperty(propertyName: string, oldValue: any, newValue: any, td: TypeDescriptor): java.lang.Object
+                convertForProperty(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any, td: TypeDescriptor): any
                 // @ts-ignore
-                getPropertyValue(propertyName: string): java.lang.Object
+                public getPropertyValue(propertyName: java.lang.String | string): any
                 // @ts-ignore
-                getPropertyValue(tokens: org.springframework.beans.AbstractNestablePropertyAccessor.PropertyTokenHolder): java.lang.Object
+                getPropertyValue(tokens: org.springframework.beans.AbstractNestablePropertyAccessor.PropertyTokenHolder): any
                 /**
                  * Return the {@link PropertyHandler} for the specified {@code propertyName}, navigating
                  * if necessary. Return {@code null} if not found rather than throwing an exception.
@@ -147,7 +147,7 @@ declare namespace org {
                  * @throws BeansException in case of introspection failure
                  */
                 // @ts-ignore
-                getPropertyHandler(propertyName: string): org.springframework.beans.AbstractNestablePropertyAccessor.PropertyHandler
+                getPropertyHandler(propertyName: java.lang.String | string): org.springframework.beans.AbstractNestablePropertyAccessor.PropertyHandler
                 /**
                  * Return a {@link PropertyHandler} for the specified local {@code propertyName}.
                  * Only used to reach a property available in the current context.
@@ -155,7 +155,7 @@ declare namespace org {
                  * @return the handler for that property, or {#code null} if it has not been found
                  */
                 // @ts-ignore
-                abstract getLocalPropertyHandler(propertyName: string): org.springframework.beans.AbstractNestablePropertyAccessor.PropertyHandler
+                abstract getLocalPropertyHandler(propertyName: java.lang.String | string): org.springframework.beans.AbstractNestablePropertyAccessor.PropertyHandler
                 /**
                  * Create a new nested property accessor instance.
                  * Can be overridden in subclasses to create a PropertyAccessor subclass.
@@ -164,12 +164,12 @@ declare namespace org {
                  * @return the nested PropertyAccessor instance
                  */
                 // @ts-ignore
-                abstract newNestedPropertyAccessor(object: any, nestedPath: string): org.springframework.beans.AbstractNestablePropertyAccessor
+                abstract newNestedPropertyAccessor(object: java.lang.Object | any, nestedPath: java.lang.String | string): org.springframework.beans.AbstractNestablePropertyAccessor
                 /**
                  * Create a {@link NotWritablePropertyException} for the specified property.
                  */
                 // @ts-ignore
-                abstract createNotWritablePropertyException(propertyName: string): org.springframework.beans.NotWritablePropertyException
+                abstract createNotWritablePropertyException(propertyName: java.lang.String | string): org.springframework.beans.NotWritablePropertyException
                 /**
                  * Get the last component of the path. Also works if not nested.
                  * @param pa property accessor to work on
@@ -177,16 +177,16 @@ declare namespace org {
                  * @return last component of the path (the property on the target bean)
                  */
                 // @ts-ignore
-                getFinalPath(pa: org.springframework.beans.AbstractNestablePropertyAccessor, nestedPath: string): java.lang.String
+                getFinalPath(pa: org.springframework.beans.AbstractNestablePropertyAccessor, nestedPath: java.lang.String | string): string
                 /**
                  * Recursively navigate to return a property accessor for the nested property path.
                  * @param propertyPath property path, which may be nested
                  * @return a property accessor for the target bean
                  */
                 // @ts-ignore
-                getPropertyAccessorForPropertyPath(propertyPath: string): org.springframework.beans.AbstractNestablePropertyAccessor
+                getPropertyAccessorForPropertyPath(propertyPath: java.lang.String | string): org.springframework.beans.AbstractNestablePropertyAccessor
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

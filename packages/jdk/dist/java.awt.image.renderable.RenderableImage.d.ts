@@ -31,7 +31,7 @@ declare namespace java {
                      * specifying which hints were observed in creating the rendering.
                      */
                     // @ts-ignore
-                    
+                    readonly HINTS_OBSERVED: java.lang.String | string
                     /**
                      * Returns a vector of RenderableImages that are the sources of
                      * image data for this RenderableImage. Note that this method may
@@ -50,13 +50,13 @@ declare namespace java {
                      *          java.awt.Image.UndefinedProperty.
                      */
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    getProperty(name: java.lang.String | string): any
                     /**
                      * Returns a list of names recognized by getProperty.
                      * @return a list of property names.
                      */
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    getPropertyNames(): string[]
                     /**
                      * Returns true if successive renderings (that is, calls to
                      * createRendering() or createScaledRendering()) with the same arguments
@@ -76,28 +76,28 @@ declare namespace java {
                      * @return the width of the image in user coordinates.
                      */
                     // @ts-ignore
-                    getWidth(): float
+                    getWidth(): number /*float*/
                     /**
                      * Gets the height in user coordinate space.  By convention, the
                      * usual height of a RenderedImage is equal to 1.0F.
                      * @return the height of the image in user coordinates.
                      */
                     // @ts-ignore
-                    getHeight(): float
+                    getHeight(): number /*float*/
                     /**
                      * Gets the minimum X coordinate of the rendering-independent image data.
                      * @return the minimum X coordinate of the rendering-independent image
                      *  data.
                      */
                     // @ts-ignore
-                    getMinX(): float
+                    getMinX(): number /*float*/
                     /**
                      * Gets the minimum Y coordinate of the rendering-independent image data.
                      * @return the minimum Y coordinate of the rendering-independent image
                      *  data.
                      */
                     // @ts-ignore
-                    getMinY(): float
+                    getMinY(): number /*float*/
                     /**
                      * Creates a RenderedImage instance of this image with width w, and
                      * height h in pixels.  The RenderContext is built automatically

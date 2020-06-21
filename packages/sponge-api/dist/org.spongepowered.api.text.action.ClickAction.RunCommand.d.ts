@@ -8,7 +8,7 @@ declare namespace org {
                          * Runs a command.
                          */
                         // @ts-ignore
-                        class RunCommand extends org.spongepowered.api.text.action.ClickAction<java.lang.String> {
+                        class RunCommand extends org.spongepowered.api.text.action.ClickAction<java.lang.String | string> {
                         }
                     }
                 }

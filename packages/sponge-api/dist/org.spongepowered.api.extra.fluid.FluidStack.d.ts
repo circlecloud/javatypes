@@ -30,7 +30,7 @@ declare namespace org {
                          * @return The volume in milli buckets
                          */
                         // @ts-ignore
-                        getVolume(): int
+                        getVolume(): number /*int*/
                         /**
                          * Sets the desired volume for this stack.
                          * <p>Note that the volume is measured in "milli buckets", otherwise read

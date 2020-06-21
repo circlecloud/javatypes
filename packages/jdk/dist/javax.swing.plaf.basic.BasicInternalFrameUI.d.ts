@@ -43,11 +43,11 @@ declare namespace javax {
                     // @ts-ignore
                     openMenuKey: javax.swing.KeyStroke
                     // @ts-ignore
-                    createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -75,11 +75,11 @@ declare namespace javax {
                     // @ts-ignore
                     createPropertyChangeListener(): java.beans.PropertyChangeListener
                     // @ts-ignore
-                    getPreferredSize(x: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(x: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMinimumSize(x: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(x: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(x: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(x: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Installs necessary mouse handlers on <code>newPane</code>
                      * and adds it to the frame.
@@ -108,7 +108,7 @@ declare namespace javax {
                     // @ts-ignore
                     setKeyBindingRegistered(b: boolean): void
                     // @ts-ignore
-                    isKeyBindingActive(): boolean
+                    public isKeyBindingActive(): boolean
                     // @ts-ignore
                     setKeyBindingActive(b: boolean): void
                     // @ts-ignore
@@ -116,21 +116,21 @@ declare namespace javax {
                     // @ts-ignore
                     setupMenuCloseKey(): void
                     // @ts-ignore
-                    getNorthPane(): javax.swing.JComponent
+                    public getNorthPane(): javax.swing.JComponent
                     // @ts-ignore
-                    setNorthPane(c: javax.swing.JComponent): void
+                    public setNorthPane(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    getSouthPane(): javax.swing.JComponent
+                    public getSouthPane(): javax.swing.JComponent
                     // @ts-ignore
-                    setSouthPane(c: javax.swing.JComponent): void
+                    public setSouthPane(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    getWestPane(): javax.swing.JComponent
+                    public getWestPane(): javax.swing.JComponent
                     // @ts-ignore
-                    setWestPane(c: javax.swing.JComponent): void
+                    public setWestPane(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    getEastPane(): javax.swing.JComponent
+                    public getEastPane(): javax.swing.JComponent
                     // @ts-ignore
-                    setEastPane(c: javax.swing.JComponent): void
+                    public setEastPane(c: javax.swing.JComponent): void
                     /**
                      * Returns the proper DesktopManager. Calls getDesktopPane() to
                      * find the JDesktop component and returns the desktopManager from

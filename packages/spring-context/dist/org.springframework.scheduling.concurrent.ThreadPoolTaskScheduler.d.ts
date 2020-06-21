@@ -23,7 +23,7 @@ declare namespace org {
                      * <p><b>This setting can be modified at runtime, for example through JMX.</b>
                      */
                     // @ts-ignore
-                    setPoolSize(poolSize: number /*int*/): void
+                    public setPoolSize(poolSize: number /*int*/): void
                     /**
                      * Set the remove-on-cancel mode on {@link ScheduledThreadPoolExecutor}.
                      * <p>Default is {@code false}. If set to {@code true}, the target executor will be
@@ -31,12 +31,12 @@ declare namespace org {
                      * <p><b>This setting can be modified at runtime, for example through JMX.</b>
                      */
                     // @ts-ignore
-                    setRemoveOnCancelPolicy(removeOnCancelPolicy: boolean): void
+                    public setRemoveOnCancelPolicy(removeOnCancelPolicy: boolean): void
                     /**
                      * Set a custom {@link ErrorHandler} strategy.
                      */
                     // @ts-ignore
-                    setErrorHandler(errorHandler: ErrorHandler): void
+                    public setErrorHandler(errorHandler: ErrorHandler): void
                     // @ts-ignore
                     initializeExecutor(threadFactory: java.util.concurrent.ThreadFactory, rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): java.util.concurrent.ExecutorService
                     /**
@@ -58,7 +58,7 @@ declare namespace org {
                      * @throws IllegalStateException if the ThreadPoolTaskScheduler hasn't been initialized yet
                      */
                     // @ts-ignore
-                    getScheduledExecutor(): java.util.concurrent.ScheduledExecutorService
+                    public getScheduledExecutor(): java.util.concurrent.ScheduledExecutorService
                     /**
                      * Return the underlying ScheduledThreadPoolExecutor, if available.
                      * @return the underlying ScheduledExecutorService (never {#code null})
@@ -67,7 +67,7 @@ declare namespace org {
                      * @see #getScheduledExecutor()
                      */
                     // @ts-ignore
-                    getScheduledThreadPoolExecutor(): java.util.concurrent.ScheduledThreadPoolExecutor
+                    public getScheduledThreadPoolExecutor(): java.util.concurrent.ScheduledThreadPoolExecutor
                     /**
                      * Return the current pool size.
                      * <p>Requires an underlying {@link ScheduledThreadPoolExecutor}.
@@ -75,13 +75,13 @@ declare namespace org {
                      * @see java.util.concurrent.ScheduledThreadPoolExecutor#getPoolSize()
                      */
                     // @ts-ignore
-                    getPoolSize(): int
+                    public getPoolSize(): number /*int*/
                     /**
                      * Return the current setting for the remove-on-cancel mode.
                      * <p>Requires an underlying {@link ScheduledThreadPoolExecutor}.
                      */
                     // @ts-ignore
-                    isRemoveOnCancelPolicy(): boolean
+                    public isRemoveOnCancelPolicy(): boolean
                     /**
                      * Return the number of currently active threads.
                      * <p>Requires an underlying {@link ScheduledThreadPoolExecutor}.
@@ -89,33 +89,33 @@ declare namespace org {
                      * @see java.util.concurrent.ScheduledThreadPoolExecutor#getActiveCount()
                      */
                     // @ts-ignore
-                    getActiveCount(): int
+                    public getActiveCount(): number /*int*/
                     // @ts-ignore
-                    execute(task: java.lang.Runnable): void
+                    public execute(task: java.lang.Runnable): void
                     // @ts-ignore
-                    execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
+                    public execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
                     // @ts-ignore
-                    submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                    public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                     // @ts-ignore
-                    submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                    public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                     // @ts-ignore
-                    submitListenable(task: java.lang.Runnable): <any>
+                    public submitListenable(task: java.lang.Runnable): object
                     // @ts-ignore
-                    submitListenable<T>(task: java.util.concurrent.Callable<T>): <any>
+                    public submitListenable<T>(task: java.util.concurrent.Callable<T>): object
                     // @ts-ignore
                     cancelRemainingTask(task: java.lang.Runnable): void
                     // @ts-ignore
-                    schedule(task: java.lang.Runnable, trigger: org.springframework.scheduling.Trigger): java.util.concurrent.ScheduledFuture<?>
+                    public schedule(task: java.lang.Runnable, trigger: org.springframework.scheduling.Trigger): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    schedule(task: java.lang.Runnable, startTime: java.util.Date): java.util.concurrent.ScheduledFuture<?>
+                    public schedule(task: java.lang.Runnable, startTime: java.util.Date): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.util.Date, period: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.util.Date, period: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleAtFixedRate(task: java.lang.Runnable, period: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleAtFixedRate(task: java.lang.Runnable, period: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.util.Date, delay: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.util.Date, delay: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleWithFixedDelay(task: java.lang.Runnable, delay: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleWithFixedDelay(task: java.lang.Runnable, delay: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                 }
             }
         }

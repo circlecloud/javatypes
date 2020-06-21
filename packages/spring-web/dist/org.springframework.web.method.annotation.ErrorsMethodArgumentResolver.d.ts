@@ -18,9 +18,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         // @ts-ignore
-                        resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): java.lang.Object
+                        public resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): any
                     }
                 }
             }

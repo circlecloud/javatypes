@@ -10,19 +10,19 @@ declare namespace org {
                 // @ts-ignore
                 class SignChangeEvent extends org.bukkit.event.block.BlockEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(theBlock: org.bukkit.block.Block, thePlayer: org.bukkit.entity.Player, theLines: string[])
+                    constructor(theBlock: org.bukkit.block.Block, thePlayer: org.bukkit.entity.Player, theLines: java.lang.String[] | string[])
                     /**
                      * Gets the player changing the sign involved in this event.
                      * @return the Player involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Gets all of the lines of text from the sign involved in this event.
                      * @return the String array for the sign's lines new text
                      */
                     // @ts-ignore
-                    getLines(): java.lang.String[]
+                    public getLines(): string[]
                     /**
                      * Gets a single line of text from the sign involved in this event.
                      * @param index index of the line to get
@@ -32,7 +32,7 @@ declare namespace org {
                      *      or < 0}
                      */
                     // @ts-ignore
-                    getLine(index: number /*int*/): java.lang.String
+                    public getLine(index: number /*int*/): string
                     /**
                      * Sets a single line for the sign involved in this event
                      * @param index index of the line to set
@@ -41,15 +41,15 @@ declare namespace org {
                      *      or < 0}
                      */
                     // @ts-ignore
-                    setLine(index: number /*int*/, line: string): void
+                    public setLine(index: number /*int*/, line: java.lang.String | string): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -55,7 +55,7 @@ declare namespace javax {
                  *                             (case sensitive, but leading and trailing whitespaces removed).
                  */
                 // @ts-ignore
-                constructor(typeName: string, description: string, itemNames: string[], itemDescriptions: string[], itemTypes: javax.management.openmbean.OpenType[])
+                constructor(typeName: java.lang.String | string, description: java.lang.String | string, itemNames: java.lang.String[] | string[], itemDescriptions: java.lang.String[] | string[], itemTypes: javax.management.openmbean.OpenType<any>[])
                 /**
                  * Returns <code>true</code> if this <code>CompositeType</code> instance defines an item
                  * whose name is <var>itemName</var>.
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @return true if an item of this name is present.
                  */
                 // @ts-ignore
-                containsKey(itemName: string): boolean
+                public containsKey(itemName: java.lang.String | string): boolean
                 /**
                  * Returns the description of the item whose name is <var>itemName</var>,
                  * or <code>null</code> if this <code>CompositeType</code> instance does not define any item
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @return the description.
                  */
                 // @ts-ignore
-                getDescription(itemName: string): java.lang.String
+                public getDescription(itemName: java.lang.String | string): string
                 /**
                  * Returns the <i>open type</i> of the item whose name is <var>itemName</var>,
                  * or <code>null</code> if this <code>CompositeType</code> instance does not define any item
@@ -81,14 +81,14 @@ declare namespace javax {
                  * @return the type.
                  */
                 // @ts-ignore
-                getType(itemName: string): javax.management.openmbean.OpenType<?>
+                public getType(itemName: java.lang.String | string): javax.management.openmbean.OpenType<any>
                 /**
                  * Returns an unmodifiable Set view of all the item names defined by this <code>CompositeType</code> instance.
                  * The set's iterator will return the item names in ascending order.
                  * @return a {#link Set} of {@link String}.
                  */
                 // @ts-ignore
-                keySet(): java.util.Set<java.lang.String>
+                public keySet(): Array<java.lang.String | string>
                 /**
                  * Tests whether <var>obj</var> is a value which could be
                  * described by this <code>CompositeType</code> instance.
@@ -133,7 +133,7 @@ declare namespace javax {
                  *  composite type, <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isValue(obj: any): boolean
+                public isValue(obj: java.lang.Object | any): boolean
                 /**
                  * Compares the specified <code>obj</code> parameter with this <code>CompositeType</code> instance for equality.
                  * <p>
@@ -148,7 +148,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>CompositeType</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>CompositeType</code> instance.
                  * <p>
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>CompositeType</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>CompositeType</code> instance.
                  * <p>
@@ -178,7 +178,7 @@ declare namespace javax {
                  * @return a string representation of this <code>CompositeType</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

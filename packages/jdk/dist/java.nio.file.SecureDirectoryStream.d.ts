@@ -102,7 +102,7 @@ declare namespace java {
                  *           if the file is opened for writing.
                  */
                 // @ts-ignore
-                newByteChannel(path: T, options: Array<java.nio.file.OpenOption>, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.SeekableByteChannel
+                newByteChannel(path: T, options: java.util.Set<any> | Array<any>, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.SeekableByteChannel
                 /**
                  * Deletes a file.
                  * <p> Unlike the {@link Files#delete delete()} method, this method does

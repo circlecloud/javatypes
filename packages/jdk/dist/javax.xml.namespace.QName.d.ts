@@ -73,7 +73,7 @@ declare namespace javax {
                  *  prefix)
                  */
                 // @ts-ignore
-                constructor(namespaceURI: string, localPart: string)
+                constructor(namespaceURI: java.lang.String | string, localPart: java.lang.String | string)
                 /**
                  * <p><code>QName</code> constructor specifying the Namespace URI,
                  * local part and prefix.</p>
@@ -109,7 +109,7 @@ declare namespace javax {
                  *    or <code>prefix</code> is <code>null</code>
                  */
                 // @ts-ignore
-                constructor(namespaceURI: string, localPart: string, prefix: string)
+                constructor(namespaceURI: java.lang.String | string, localPart: java.lang.String | string, prefix: java.lang.String | string)
                 /**
                  * <p><code>QName</code> constructor specifying the local part.</p>
                  * <p>If the local part is <code>null</code> an
@@ -143,19 +143,19 @@ declare namespace javax {
                  *  prefix)
                  */
                 // @ts-ignore
-                constructor(localPart: string)
+                constructor(localPart: java.lang.String | string)
                 /**
                  * <p>Get the Namespace URI of this <code>QName</code>.</p>
                  * @return Namespace URI of this <code>QName</code>
                  */
                 // @ts-ignore
-                getNamespaceURI(): java.lang.String
+                public getNamespaceURI(): string
                 /**
                  * <p>Get the local part of this <code>QName</code>.</p>
                  * @return local part of this <code>QName</code>
                  */
                 // @ts-ignore
-                getLocalPart(): java.lang.String
+                public getLocalPart(): string
                 /**
                  * <p>Get the prefix of this <code>QName</code>.</p>
                  * <p>The prefix assigned to a <code>QName</code> might
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @return prefix of this <code>QName</code>
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                public getPrefix(): string
                 /**
                  * <p>Test this <code>QName</code> for equality with another
                  * <code>Object</code>.</p>
@@ -186,7 +186,7 @@ declare namespace javax {
                  *  equal to this <code>QName</code> else <code>false</code>
                  */
                 // @ts-ignore
-                equals(objectToTest: any): boolean
+                public equals(objectToTest: java.lang.Object | any): boolean
                 /**
                  * <p>Generate the hash code for this <code>QName</code>.</p>
                  * <p>The hash code is calculated using both the Namespace URI and
@@ -198,7 +198,7 @@ declare namespace javax {
                  * @return hash code for this <code>QName</code> <code>Object</code>
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * <p><code>String</code> representation of this
                  * <code>QName</code>.</p>
@@ -220,7 +220,7 @@ declare namespace javax {
                  * @return <code>String</code> representation of this <code>QName</code>
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * <p><code>QName</code> derived from parsing the formatted
                  * <code>String</code>.</p>
@@ -259,7 +259,7 @@ declare namespace javax {
                  * @see #toString() QName.toString()
                  */
                 // @ts-ignore
-                valueOf(qNameAsString: string): javax.xml.namespace.QName
+                public static valueOf(qNameAsString: java.lang.String | string): javax.xml.namespace.QName
             }
         }
     }

@@ -14,9 +14,9 @@ declare namespace org {
                     // @ts-ignore
                     class AspectJTypeFilter extends java.lang.Object implements org.springframework.core.type.filter.TypeFilter {
                         // @ts-ignore
-                        constructor(typePatternExpression: string, classLoader: java.lang.ClassLoader)
+                        constructor(typePatternExpression: java.lang.String | string, classLoader: java.lang.ClassLoader)
                         // @ts-ignore
-                        match(metadataReader: org.springframework.core.type.classreading.MetadataReader, metadataReaderFactory: org.springframework.core.type.classreading.MetadataReaderFactory): boolean
+                        public match(metadataReader: org.springframework.core.type.classreading.MetadataReader, metadataReaderFactory: org.springframework.core.type.classreading.MetadataReaderFactory): boolean
                     }
                 }
             }

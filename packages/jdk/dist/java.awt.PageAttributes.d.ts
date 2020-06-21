@@ -69,14 +69,14 @@ declare namespace java {
              *           a PageAttributes.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Sets all of the attributes of this PageAttributes to the same values as
              * the attributes of obj.
              * @param obj the PageAttributes to copy.
              */
             // @ts-ignore
-            set(obj: java.awt.PageAttributes): void
+            public set(obj: java.awt.PageAttributes): void
             /**
              * Returns whether pages using these attributes will be rendered in
              * color or monochrome. This attribute is updated to the value chosen
@@ -84,7 +84,7 @@ declare namespace java {
              * @return ColorType.COLOR or ColorType.MONOCHROME.
              */
             // @ts-ignore
-            getColor(): java.awt.PageAttributes.ColorType
+            public getColor(): java.awt.PageAttributes.ColorType
             /**
              * Specifies whether pages using these attributes will be rendered in
              * color or monochrome. Not specifying this attribute is equivalent to
@@ -93,14 +93,14 @@ declare namespace java {
              * @throws IllegalArgumentException if color is null.
              */
             // @ts-ignore
-            setColor(color: java.awt.PageAttributes.ColorType): void
+            public setColor(color: java.awt.PageAttributes.ColorType): void
             /**
              * Returns the paper size for pages using these attributes. This
              * attribute is updated to the value chosen by the user.
              * @return one of the constant fields of the MediaType class.
              */
             // @ts-ignore
-            getMedia(): java.awt.PageAttributes.MediaType
+            public getMedia(): java.awt.PageAttributes.MediaType
             /**
              * Specifies the desired paper size for pages using these attributes. The
              * actual paper size will be determined by the limitations of the target
@@ -114,7 +114,7 @@ declare namespace java {
              * @throws IllegalArgumentException if media is null.
              */
             // @ts-ignore
-            setMedia(media: java.awt.PageAttributes.MediaType): void
+            public setMedia(media: java.awt.PageAttributes.MediaType): void
             /**
              * Sets the paper size for pages using these attributes to the default
              * size for the default locale. The default size for locales in the
@@ -122,7 +122,7 @@ declare namespace java {
              * all other locales is MediaType.ISO_A4.
              */
             // @ts-ignore
-            setMediaToDefault(): void
+            public setMediaToDefault(): void
             /**
              * Returns the print orientation for pages using these attributes. This
              * attribute is updated to the value chosen by the user.
@@ -130,7 +130,7 @@ declare namespace java {
              *           OrientationRequestedType.LANDSCAPE.
              */
             // @ts-ignore
-            getOrientationRequested(): java.awt.PageAttributes.OrientationRequestedType
+            public getOrientationRequested(): java.awt.PageAttributes.OrientationRequestedType
             /**
              * Specifies the print orientation for pages using these attributes. Not
              * specifying the property is equivalent to specifying
@@ -140,7 +140,7 @@ declare namespace java {
              * @throws IllegalArgumentException if orientationRequested is null.
              */
             // @ts-ignore
-            setOrientationRequested(orientationRequested: java.awt.PageAttributes.OrientationRequestedType): void
+            public setOrientationRequested(orientationRequested: java.awt.PageAttributes.OrientationRequestedType): void
             /**
              * Specifies the print orientation for pages using these attributes.
              * Specifying <code>3</code> denotes portrait. Specifying <code>4</code>
@@ -152,13 +152,13 @@ declare namespace java {
              *           <code>3</code> or <code>4</code>
              */
             // @ts-ignore
-            setOrientationRequested(orientationRequested: number /*int*/): void
+            public setOrientationRequested(orientationRequested: number /*int*/): void
             /**
              * Sets the print orientation for pages using these attributes to the
              * default. The default orientation is portrait.
              */
             // @ts-ignore
-            setOrientationRequestedToDefault(): void
+            public setOrientationRequestedToDefault(): void
             /**
              * Returns whether drawing at (0, 0) to pages using these attributes
              * draws at the upper-left corner of the physical page, or at the
@@ -169,7 +169,7 @@ declare namespace java {
              * @return OriginType.PHYSICAL or OriginType.PRINTABLE
              */
             // @ts-ignore
-            getOrigin(): java.awt.PageAttributes.OriginType
+            public getOrigin(): java.awt.PageAttributes.OriginType
             /**
              * Specifies whether drawing at (0, 0) to pages using these attributes
              * draws at the upper-left corner of the physical page, or at the
@@ -180,7 +180,7 @@ declare namespace java {
              * @throws IllegalArgumentException if origin is null.
              */
             // @ts-ignore
-            setOrigin(origin: java.awt.PageAttributes.OriginType): void
+            public setOrigin(origin: java.awt.PageAttributes.OriginType): void
             /**
              * Returns the print quality for pages using these attributes. This
              * attribute is updated to the value chosen by the user.
@@ -188,7 +188,7 @@ declare namespace java {
              *           PrintQualityType.HIGH
              */
             // @ts-ignore
-            getPrintQuality(): java.awt.PageAttributes.PrintQualityType
+            public getPrintQuality(): java.awt.PageAttributes.PrintQualityType
             /**
              * Specifies the print quality for pages using these attributes. Not
              * specifying the property is equivalent to specifying
@@ -198,7 +198,7 @@ declare namespace java {
              * @throws IllegalArgumentException if printQuality is null.
              */
             // @ts-ignore
-            setPrintQuality(printQuality: java.awt.PageAttributes.PrintQualityType): void
+            public setPrintQuality(printQuality: java.awt.PageAttributes.PrintQualityType): void
             /**
              * Specifies the print quality for pages using these attributes.
              * Specifying <code>3</code> denotes draft. Specifying <code>4</code>
@@ -211,13 +211,13 @@ declare namespace java {
              *           </code>, <code>4</code>, or <code>5</code>
              */
             // @ts-ignore
-            setPrintQuality(printQuality: number /*int*/): void
+            public setPrintQuality(printQuality: number /*int*/): void
             /**
              * Sets the print quality for pages using these attributes to the default.
              * The default print quality is normal.
              */
             // @ts-ignore
-            setPrintQualityToDefault(): void
+            public setPrintQualityToDefault(): void
             /**
              * Returns the print resolution for pages using these attributes.
              * Index 0 of the array specifies the cross feed direction resolution
@@ -232,7 +232,7 @@ declare namespace java {
              *           <code>3</code> or <code>4</code>.
              */
             // @ts-ignore
-            getPrinterResolution(): int[]
+            public getPrinterResolution(): number /*int*/[]
             /**
              * Specifies the desired print resolution for pages using these attributes.
              * The actual resolution will be determined by the limitations of the
@@ -254,7 +254,7 @@ declare namespace java {
              *           conditions is violated.
              */
             // @ts-ignore
-            setPrinterResolution(printerResolution: number /*int*/[]): void
+            public setPrinterResolution(printerResolution: number /*int*/[]): void
             /**
              * Specifies the desired cross feed and feed print resolutions in dots per
              * inch for pages using these attributes. The same value is used for both
@@ -266,14 +266,14 @@ declare namespace java {
              *           equal to 0.
              */
             // @ts-ignore
-            setPrinterResolution(printerResolution: number /*int*/): void
+            public setPrinterResolution(printerResolution: number /*int*/): void
             /**
              * Sets the printer resolution for pages using these attributes to the
              * default. The default is 72 dpi for both the feed and cross feed
              * resolutions.
              */
             // @ts-ignore
-            setPrinterResolutionToDefault(): void
+            public setPrinterResolutionToDefault(): void
             /**
              * Determines whether two PageAttributes are equal to each other.
              * <p>
@@ -288,19 +288,19 @@ declare namespace java {
              *           above criteria.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hash code value for this PageAttributes.
              * @return the hash code.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of this PageAttributes.
              * @return the string representation.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

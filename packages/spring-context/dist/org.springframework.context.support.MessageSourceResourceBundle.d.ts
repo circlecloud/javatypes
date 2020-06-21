@@ -34,7 +34,7 @@ declare namespace org {
                      * Returns {@code null} if the message could not be resolved.
                      */
                     // @ts-ignore
-                    handleGetObject(key: string): java.lang.Object
+                    handleGetObject(key: java.lang.String | string): any
                     /**
                      * This implementation checks whether the target MessageSource can resolve
                      * a message for the given key, translating {@code NoSuchMessageException}
@@ -42,19 +42,19 @@ declare namespace org {
                      * JDK 1.6, this does not rely on the capability to enumerate message keys.
                      */
                     // @ts-ignore
-                    containsKey(key: string): boolean
+                    public containsKey(key: java.lang.String | string): boolean
                     /**
                      * This implementation throws {@code UnsupportedOperationException},
                      * as a MessageSource does not allow for enumerating the defined message codes.
                      */
                     // @ts-ignore
-                    getKeys(): java.util.Enumeration<java.lang.String>
+                    public getKeys(): java.util.Enumeration<java.lang.String | string>
                     /**
                      * This implementation exposes the specified Locale for introspection
                      * through the standard {@code ResourceBundle.getLocale()} method.
                      */
                     // @ts-ignore
-                    getLocale(): java.util.Locale
+                    public getLocale(): java.util.Locale
                 }
             }
         }

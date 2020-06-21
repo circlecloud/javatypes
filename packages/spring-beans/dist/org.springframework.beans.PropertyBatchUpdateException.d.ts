@@ -24,28 +24,28 @@ declare namespace org {
                  * If this returns 0, no errors were encountered during binding.
                  */
                 // @ts-ignore
-                getExceptionCount(): int
+                public getExceptionCount(): number /*int*/
                 /**
                  * Return an array of the propertyAccessExceptions stored in this object.
                  * <p>Will return the empty array (not {@code null}) if there were no errors.
                  */
                 // @ts-ignore
-                getPropertyAccessExceptions(): org.springframework.beans.PropertyAccessException[]
+                public getPropertyAccessExceptions(): org.springframework.beans.PropertyAccessException[]
                 /**
                  * Return the exception for this field, or {@code null} if there isn't any.
                  */
                 // @ts-ignore
-                getPropertyAccessException(propertyName: string): org.springframework.beans.PropertyAccessException
+                public getPropertyAccessException(propertyName: java.lang.String | string): org.springframework.beans.PropertyAccessException
                 // @ts-ignore
-                getMessage(): java.lang.String
+                public getMessage(): string
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                printStackTrace(ps: java.io.PrintStream): void
+                public printStackTrace(ps: java.io.PrintStream): void
                 // @ts-ignore
-                printStackTrace(pw: java.io.PrintWriter): void
+                public printStackTrace(pw: java.io.PrintWriter): void
                 // @ts-ignore
-                contains(exType: java.lang.Class<any>): boolean
+                public contains(exType: java.lang.Class<any>): boolean
             }
         }
     }

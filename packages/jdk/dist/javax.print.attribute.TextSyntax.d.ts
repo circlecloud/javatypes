@@ -12,7 +12,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class TextSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class TextSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Constructs a TextAttribute with the specified string and locale.
                  * @param value   Text string.
@@ -23,25 +23,25 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if <CODE>value</CODE> is null.
                  */
                 // @ts-ignore
-                constructor(value: string, locale: java.util.Locale)
+                constructor(value: java.lang.String | string, locale: java.util.Locale)
                 /**
                  * Returns this text attribute's text string.
                  * @return the text string.
                  */
                 // @ts-ignore
-                getValue(): java.lang.String
+                public getValue(): string
                 /**
                  * Returns this text attribute's text string's natural language (locale).
                  * @return the locale
                  */
                 // @ts-ignore
-                getLocale(): java.util.Locale
+                public getLocale(): java.util.Locale
                 /**
                  * Returns a hashcode for this text attribute.
                  * @return A hashcode value for this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns whether this text attribute is equivalent to the passed in
                  * object. To be equivalent, all of the following conditions must be true:
@@ -62,14 +62,14 @@ declare namespace javax {
                  *           attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a String identifying this text attribute. The String is
                  * the attribute's underlying text string.
                  * @return A String identifying this object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

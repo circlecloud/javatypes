@@ -30,19 +30,19 @@ declare namespace javax {
                      * data.
                      */
                     // @ts-ignore
-                    readonly NOT_ATTEMPTED: javax.print.attribute.standard.PDLOverrideSupported
+                    public static readonly NOT_ATTEMPTED: javax.print.attribute.standard.PDLOverrideSupported
                     /**
                      * The printer attempts to make the external job attribute values take
                      * precedence over embedded instructions in the documents' print data,
                      * however there is no guarantee.
                      */
                     // @ts-ignore
-                    readonly ATTEMPTED: javax.print.attribute.standard.PDLOverrideSupported
+                    public static readonly ATTEMPTED: javax.print.attribute.standard.PDLOverrideSupported
                     /**
                      * Returns the string table for class PDLOverrideSupported.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class PDLOverrideSupported.
                      */
@@ -58,7 +58,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -68,7 +68,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

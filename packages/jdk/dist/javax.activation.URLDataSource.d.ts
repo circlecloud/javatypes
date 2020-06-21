@@ -32,21 +32,21 @@ declare namespace javax {
              * @return the content type.
              */
             // @ts-ignore
-            getContentType(): java.lang.String
+            public getContentType(): string
             /**
              * Calls the <code>getFile</code> method on the URL used to
              * instantiate the object.
              * @return the result of calling the URL's getFile method.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * The getInputStream method from the URL. Calls the
              * <code>openStream</code> method on the URL.
              * @return the InputStream.
              */
             // @ts-ignore
-            getInputStream(): java.io.InputStream
+            public getInputStream(): java.io.InputStream
             /**
              * The getOutputStream method from the URL. First an attempt is
              * made to get the URLConnection object for the URL. If that
@@ -55,13 +55,13 @@ declare namespace javax {
              * @return the OutputStream.
              */
             // @ts-ignore
-            getOutputStream(): java.io.OutputStream
+            public getOutputStream(): java.io.OutputStream
             /**
              * Return the URL used to create this DataSource.
              * @return The URL.
              */
             // @ts-ignore
-            getURL(): java.net.URL
+            public getURL(): java.net.URL
         }
     }
 }

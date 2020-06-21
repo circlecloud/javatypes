@@ -15,39 +15,39 @@ declare namespace org {
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    durable(): org.springframework.amqp.core.QueueBuilder
+                    public static durable(): org.springframework.amqp.core.QueueBuilder
                     /**
                      * Creates a builder for a non-durable (transient) queue.
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    nonDurable(): org.springframework.amqp.core.QueueBuilder
+                    public static nonDurable(): org.springframework.amqp.core.QueueBuilder
                     /**
                      * Creates a builder for a durable queue.
                      * @param name the name of the queue.
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    durable(name: string): org.springframework.amqp.core.QueueBuilder
+                    public static durable(name: java.lang.String | string): org.springframework.amqp.core.QueueBuilder
                     /**
                      * Creates a builder for a non-durable (transient) queue.
                      * @param name the name of the queue.
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    nonDurable(name: string): org.springframework.amqp.core.QueueBuilder
+                    public static nonDurable(name: java.lang.String | string): org.springframework.amqp.core.QueueBuilder
                     /**
                      * The final queue will be exclusive.
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    exclusive(): org.springframework.amqp.core.QueueBuilder
+                    public exclusive(): org.springframework.amqp.core.QueueBuilder
                     /**
                      * The final queue will auto delete.
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    autoDelete(): org.springframework.amqp.core.QueueBuilder
+                    public autoDelete(): org.springframework.amqp.core.QueueBuilder
                     /**
                      * The final queue will contain argument used to declare a queue.
                      * @param key argument name
@@ -55,20 +55,20 @@ declare namespace org {
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    withArgument(key: string, value: any): org.springframework.amqp.core.QueueBuilder
+                    public withArgument(key: java.lang.String | string, value: java.lang.Object | any): org.springframework.amqp.core.QueueBuilder
                     /**
                      * The final queue will contain arguments used to declare a queue.
                      * @param arguments the arguments map
                      * @return the QueueBuilder instance.
                      */
                     // @ts-ignore
-                    withArguments(arguments: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.amqp.core.QueueBuilder
+                    public withArguments(arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.amqp.core.QueueBuilder
                     /**
                      * Builds a final queue.
                      * @return the Queue instance.
                      */
                     // @ts-ignore
-                    build(): org.springframework.amqp.core.Queue
+                    public build(): org.springframework.amqp.core.Queue
                 }
             }
         }

@@ -11,7 +11,7 @@ declare namespace org {
                          * @param <E> The type of elements supported
                          */
                         // @ts-ignore
-                        interface ImmutableSetValue<E> extends org.spongepowered.api.data.value.immutable.ImmutableCollectionValue<E, java.util.Set<E>, org.spongepowered.api.data.value.immutable.ImmutableSetValue<E>, org.spongepowered.api.data.value.mutable.SetValue<E>> {
+                        interface ImmutableSetValue<E> extends org.spongepowered.api.data.value.immutable.ImmutableCollectionValue<E, java.util.Set<E> | Array<E>, org.spongepowered.api.data.value.immutable.ImmutableSetValue<E>, org.spongepowered.api.data.value.mutable.SetValue<E>> {
                         }
                     }
                 }

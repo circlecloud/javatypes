@@ -58,7 +58,7 @@ declare namespace java {
              *  a supported ISO 4217 code.
              */
             // @ts-ignore
-            getInstance(currencyCode: string): java.util.Currency
+            public static getInstance(currencyCode: java.lang.String | string): java.util.Currency
             /**
              * Returns the <code>Currency</code> instance for the country of the
              * given locale. The language and variant components of the locale
@@ -80,7 +80,7 @@ declare namespace java {
              *  is not a supported ISO 3166 country code.
              */
             // @ts-ignore
-            getInstance(locale: java.util.Locale): java.util.Currency
+            public static getInstance(locale: java.util.Locale): java.util.Currency
             /**
              * Gets the set of available currencies.  The returned set of currencies
              * contains all of the available currencies, which may include currencies
@@ -91,13 +91,13 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getAvailableCurrencies(): java.util.Set<java.util.Currency>
+            public static getAvailableCurrencies(): Array<java.util.Currency>
             /**
              * Gets the ISO 4217 currency code of this currency.
              * @return the ISO 4217 currency code of this currency.
              */
             // @ts-ignore
-            getCurrencyCode(): java.lang.String
+            public getCurrencyCode(): string
             /**
              * Gets the symbol of this currency for the default
              * {@link Locale.Category#DISPLAY DISPLAY} locale.
@@ -112,7 +112,7 @@ declare namespace java {
              *      {#link Locale.Category#DISPLAY DISPLAY} locale
              */
             // @ts-ignore
-            getSymbol(): java.lang.String
+            public getSymbol(): string
             /**
              * Gets the symbol of this currency for the specified locale.
              * For example, for the US Dollar, the symbol is "$" if the specified
@@ -124,7 +124,7 @@ declare namespace java {
              * @exception NullPointerException if <code>locale</code> is null
              */
             // @ts-ignore
-            getSymbol(locale: java.util.Locale): java.lang.String
+            public getSymbol(locale: java.util.Locale): string
             /**
              * Gets the default number of fraction digits used with this currency.
              * For example, the default number of fraction digits for the Euro is 2,
@@ -134,14 +134,14 @@ declare namespace java {
              * @return the default number of fraction digits used with this currency
              */
             // @ts-ignore
-            getDefaultFractionDigits(): int
+            public getDefaultFractionDigits(): number /*int*/
             /**
              * Returns the ISO 4217 numeric code of this currency.
              * @return the ISO 4217 numeric code of this currency
              * @since 1.7
              */
             // @ts-ignore
-            getNumericCode(): int
+            public getNumericCode(): number /*int*/
             /**
              * Gets the name that is suitable for displaying this currency for
              * the default {@link Locale.Category#DISPLAY DISPLAY} locale.
@@ -156,7 +156,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getDisplayName(): java.lang.String
+            public getDisplayName(): string
             /**
              * Gets the name that is suitable for displaying this currency for
              * the specified locale.  If there is no suitable display name found
@@ -168,13 +168,13 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getDisplayName(locale: java.util.Locale): java.lang.String
+            public getDisplayName(locale: java.util.Locale): string
             /**
              * Returns the ISO 4217 currency code of this currency.
              * @return the ISO 4217 currency code of this currency
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

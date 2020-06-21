@@ -15,15 +15,15 @@ declare namespace org {
                          * Indicates an unresolvable value.
                          */
                         // @ts-ignore
-                        readonly UNRESOLVABLE: any
+                        public static readonly UNRESOLVABLE: java.lang.Object | any
                         // @ts-ignore
-                        resolveMultipartRequest(webRequest: org.springframework.web.context.request.NativeWebRequest): org.springframework.web.multipart.MultipartRequest
+                        public static resolveMultipartRequest(webRequest: org.springframework.web.context.request.NativeWebRequest): org.springframework.web.multipart.MultipartRequest
                         // @ts-ignore
-                        isMultipartRequest(request: HttpServletRequest): boolean
+                        public static isMultipartRequest(request: HttpServletRequest): boolean
                         // @ts-ignore
-                        isMultipartArgument(parameter: MethodParameter): boolean
+                        public static isMultipartArgument(parameter: MethodParameter): boolean
                         // @ts-ignore
-                        resolveMultipartArgument(name: string, parameter: MethodParameter, request: HttpServletRequest): java.lang.Object
+                        public static resolveMultipartArgument(name: java.lang.String | string, parameter: MethodParameter, request: HttpServletRequest): any
                     }
                 }
             }

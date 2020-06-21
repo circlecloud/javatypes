@@ -33,7 +33,7 @@ declare namespace java {
              * @author Jim Graham
              */
             // @ts-ignore
-            class RGBImageFilter extends java.awt.image.ImageFilter {
+            abstract class RGBImageFilter extends java.awt.image.ImageFilter {
                 // @ts-ignore
                 constructor()
                 /**
@@ -82,7 +82,7 @@ declare namespace java {
                  * @see ColorModel#getRGBdefault
                  */
                 // @ts-ignore
-                setColorModel(model: java.awt.image.ColorModel): void
+                public setColorModel(model: java.awt.image.ColorModel): void
                 /**
                  * Registers two ColorModel objects for substitution.  If the oldcm
                  * is encountered during any of the setPixels methods, the newcm
@@ -92,7 +92,7 @@ declare namespace java {
                  * @param newcm the ColorModel object to replace oldcm on the fly
                  */
                 // @ts-ignore
-                substituteColorModel(oldcm: java.awt.image.ColorModel, newcm: java.awt.image.ColorModel): void
+                public substituteColorModel(oldcm: java.awt.image.ColorModel, newcm: java.awt.image.ColorModel): void
                 /**
                  * Filters an IndexColorModel object by running each entry in its
                  * color tables through the filterRGB function that RGBImageFilter
@@ -104,7 +104,7 @@ declare namespace java {
                  * @return a new IndexColorModel representing the filtered colors
                  */
                 // @ts-ignore
-                filterIndexColorModel(icm: java.awt.image.IndexColorModel): java.awt.image.IndexColorModel
+                public filterIndexColorModel(icm: java.awt.image.IndexColorModel): java.awt.image.IndexColorModel
                 /**
                  * Filters a buffer of pixels in the default RGB ColorModel by passing
                  * them one by one through the filterRGB method.
@@ -122,7 +122,7 @@ declare namespace java {
                  * @see #filterRGB
                  */
                 // @ts-ignore
-                filterRGBPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public filterRGBPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * If the ColorModel object is the same one that has already
                  * been converted, then simply passes the pixels through with the
@@ -140,7 +140,7 @@ declare namespace java {
                  * @see #filterRGBPixels
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * If the ColorModel object is the same one that has already
                  * been converted, then simply passes the pixels through with the
@@ -160,7 +160,7 @@ declare namespace java {
                  * @see #filterRGBPixels
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Subclasses must specify a method to convert a single input pixel
                  * in the default RGB ColorModel to a single output pixel.
@@ -173,7 +173,7 @@ declare namespace java {
                  * @see #filterRGBPixels
                  */
                 // @ts-ignore
-                abstract filterRGB(x: number /*int*/, y: number /*int*/, rgb: number /*int*/): int
+                public abstract filterRGB(x: number /*int*/, y: number /*int*/, rgb: number /*int*/): number /*int*/
             }
         }
     }

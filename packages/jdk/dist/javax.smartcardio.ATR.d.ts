@@ -26,7 +26,7 @@ declare namespace javax {
              * @return a copy of the bytes in this ATR.
              */
             // @ts-ignore
-            getBytes(): byte[]
+            public getBytes(): number /*byte*/[]
             /**
              * Returns a copy of the historical bytes in this ATR.
              * If this ATR does not contain historical bytes, an array of length
@@ -34,13 +34,13 @@ declare namespace javax {
              * @return a copy of the historical bytes in this ATR.
              */
             // @ts-ignore
-            getHistoricalBytes(): byte[]
+            public getHistoricalBytes(): number /*byte*/[]
             /**
              * Returns a string representation of this ATR.
              * @return a String representation of this ATR.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares the specified object with this ATR for equality.
              * Returns true if the given object is also an ATR and its bytes are
@@ -49,13 +49,13 @@ declare namespace javax {
              * @return true if the specified object is equal to this ATR
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this ATR.
              * @return the hash code value for this ATR.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

@@ -24,7 +24,7 @@ declare namespace org {
                      * @see org.springframework.beans.BeanWrapperImpl
                      */
                     // @ts-ignore
-                    setTypeConverter(typeConverter: org.springframework.beans.TypeConverter): void
+                    public setTypeConverter(typeConverter: org.springframework.beans.TypeConverter): void
                     /**
                      * Return the TypeConverter used for argument type conversion.
                      * <p>Can be cast to {@link org.springframework.beans.PropertyEditorRegistry}
@@ -33,7 +33,7 @@ declare namespace org {
                      * PropertyEditorRegistry interface).
                      */
                     // @ts-ignore
-                    getTypeConverter(): org.springframework.beans.TypeConverter
+                    public getTypeConverter(): org.springframework.beans.TypeConverter
                     /**
                      * Obtain the default TypeConverter for this method invoker.
                      * <p>Called if no explicit TypeConverter has been specified.
@@ -54,7 +54,7 @@ declare namespace org {
                      * @see org.springframework.beans.PropertyEditorRegistry#registerCustomEditor
                      */
                     // @ts-ignore
-                    registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
+                    public registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
                     /**
                      * This implementation looks for a method with matching parameter types.
                      * @see #doFindMatchingMethod
@@ -68,7 +68,7 @@ declare namespace org {
                      * @return a matching method, or {#code null} if none
                      */
                     // @ts-ignore
-                    doFindMatchingMethod(arguments: any[]): java.lang.reflect.Method
+                    doFindMatchingMethod(arguments: java.lang.Object[] | any[]): java.lang.reflect.Method
                 }
             }
         }

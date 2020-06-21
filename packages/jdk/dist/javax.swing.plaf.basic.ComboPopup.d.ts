@@ -40,7 +40,7 @@ declare namespace javax {
                      * for general list manipulation.
                      */
                     // @ts-ignore
-                    getList(): javax.swing.JList
+                    getList(): javax.swing.JList<any>
                     /**
                      * Returns a mouse listener that will be added to the combo box or null.
                      * If this method returns null then it will not be added to the combo box.

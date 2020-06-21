@@ -18,7 +18,7 @@ declare namespace org {
                      * @see CookieValue
                      */
                     // @ts-ignore
-                    class RequestHeader implements java.lang.annotation.Annotation {
+                    abstract class RequestHeader implements java.lang.annotation.Annotation {
                     }
                 }
             }

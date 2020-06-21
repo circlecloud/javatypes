@@ -17,7 +17,7 @@ declare namespace org {
                          * @return the 'moisture' value
                          */
                         // @ts-ignore
-                        getMoisture(): int
+                        getMoisture(): number /*int*/
                         /**
                          * Sets the value of the 'moisture' property.
                          * @param moisture the new 'moisture' value
@@ -29,7 +29,7 @@ declare namespace org {
                          * @return the maximum 'moisture' value
                          */
                         // @ts-ignore
-                        getMaximumMoisture(): int
+                        getMaximumMoisture(): number /*int*/
                     }
                 }
             }

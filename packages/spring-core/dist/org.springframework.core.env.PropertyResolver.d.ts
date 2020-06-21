@@ -17,7 +17,7 @@ declare namespace org {
                      * i.e. if the value for the given key is not {@code null}.
                      */
                     // @ts-ignore
-                    containsProperty(key: string): boolean
+                    containsProperty(key: java.lang.String | string): boolean
                     /**
                      * Return the property value associated with the given key,
                      * or {@code null} if the key cannot be resolved.
@@ -27,7 +27,7 @@ declare namespace org {
                      * @see #getRequiredProperty(String)
                      */
                     // @ts-ignore
-                    getProperty(key: string): java.lang.String
+                    getProperty(key: java.lang.String | string): string
                     /**
                      * Return the property value associated with the given key, or
                      * {@code defaultValue} if the key cannot be resolved.
@@ -37,7 +37,7 @@ declare namespace org {
                      * @see #getProperty(String, Class)
                      */
                     // @ts-ignore
-                    getProperty(key: string, defaultValue: string): java.lang.String
+                    getProperty(key: java.lang.String | string, defaultValue: java.lang.String | string): string
                     /**
                      * Return the property value associated with the given key,
                      * or {@code null} if the key cannot be resolved.
@@ -46,7 +46,7 @@ declare namespace org {
                      * @see #getRequiredProperty(String, Class)
                      */
                     // @ts-ignore
-                    getProperty<T>(key: string, targetType: java.lang.Class<T>): T
+                    getProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>): T
                     /**
                      * Return the property value associated with the given key,
                      * or {@code defaultValue} if the key cannot be resolved.
@@ -56,21 +56,21 @@ declare namespace org {
                      * @see #getRequiredProperty(String, Class)
                      */
                     // @ts-ignore
-                    getProperty<T>(key: string, targetType: java.lang.Class<T>, defaultValue: T): T
+                    getProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>, defaultValue: T): T
                     /**
                      * Return the property value associated with the given key (never {@code null}).
                      * @throws IllegalStateException if the key cannot be resolved
                      * @see #getRequiredProperty(String, Class)
                      */
                     // @ts-ignore
-                    getRequiredProperty(key: string): java.lang.String
+                    getRequiredProperty(key: java.lang.String | string): string
                     /**
                      * Return the property value associated with the given key, converted to the given
                      * targetType (never {@code null}).
                      * @throws IllegalStateException if the given key cannot be resolved
                      */
                     // @ts-ignore
-                    getRequiredProperty<T>(key: string, targetType: java.lang.Class<T>): T
+                    getRequiredProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>): T
                     /**
                      * Resolve ${...} placeholders in the given text, replacing them with corresponding
                      * property values as resolved by {@link #getProperty}. Unresolvable placeholders with
@@ -82,7 +82,7 @@ declare namespace org {
                      * @see org.springframework.util.SystemPropertyUtils#resolvePlaceholders(String)
                      */
                     // @ts-ignore
-                    resolvePlaceholders(text: string): java.lang.String
+                    resolvePlaceholders(text: java.lang.String | string): string
                     /**
                      * Resolve ${...} placeholders in the given text, replacing them with corresponding
                      * property values as resolved by {@link #getProperty}. Unresolvable placeholders with
@@ -93,7 +93,7 @@ declare namespace org {
                      * @see org.springframework.util.SystemPropertyUtils#resolvePlaceholders(String, boolean)
                      */
                     // @ts-ignore
-                    resolveRequiredPlaceholders(text: string): java.lang.String
+                    resolveRequiredPlaceholders(text: java.lang.String | string): string
                 }
             }
         }

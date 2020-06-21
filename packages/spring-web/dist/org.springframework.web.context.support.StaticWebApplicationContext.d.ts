@@ -29,31 +29,31 @@ declare namespace org {
                          * Set the ServletContext that this WebApplicationContext runs in.
                          */
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                         // @ts-ignore
-                        getServletContext(): ServletContext
+                        public getServletContext(): ServletContext
                         // @ts-ignore
-                        setServletConfig(servletConfig: ServletConfig): void
+                        public setServletConfig(servletConfig: ServletConfig): void
                         // @ts-ignore
-                        getServletConfig(): ServletConfig
+                        public getServletConfig(): ServletConfig
                         // @ts-ignore
-                        setNamespace(namespace: string): void
+                        public setNamespace(namespace: java.lang.String | string): void
                         // @ts-ignore
-                        getNamespace(): java.lang.String
+                        public getNamespace(): string
                         /**
                          * The {@link StaticWebApplicationContext} class does not support this method.
                          * @throws UnsupportedOperationException <b>always</b>
                          */
                         // @ts-ignore
-                        setConfigLocation(configLocation: string): void
+                        public setConfigLocation(configLocation: java.lang.String | string): void
                         /**
                          * The {@link StaticWebApplicationContext} class does not support this method.
                          * @throws UnsupportedOperationException <b>always</b>
                          */
                         // @ts-ignore
-                        setConfigLocations(...configLocations: string[]): void
+                        public setConfigLocations(...configLocations: java.lang.String[] | string[]): void
                         // @ts-ignore
-                        getConfigLocations(): java.lang.String[]
+                        public getConfigLocations(): string[]
                         /**
                          * Register request/session scopes, a {@link ServletContextAwareProcessor}, etc.
                          */
@@ -64,7 +64,7 @@ declare namespace org {
                          * @see ServletContextResource
                          */
                         // @ts-ignore
-                        getResourceByPath(path: string): Resource
+                        getResourceByPath(path: java.lang.String | string): Resource
                         /**
                          * This implementation supports pattern matching in unexpanded WARs too.
                          * @see ServletContextResourcePatternResolver
@@ -84,7 +84,7 @@ declare namespace org {
                         // @ts-ignore
                         initPropertySources(): void
                         // @ts-ignore
-                        getTheme(themeName: string): Theme
+                        public getTheme(themeName: java.lang.String | string): Theme
                     }
                 }
             }

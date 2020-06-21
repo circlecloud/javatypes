@@ -40,7 +40,7 @@ declare namespace org {
                          * @see #setPrefixJson
                          */
                         // @ts-ignore
-                        setJsonPrefix(jsonPrefix: string): void
+                        public setJsonPrefix(jsonPrefix: java.lang.String | string): void
                         /**
                          * Indicate whether the JSON output by this view should be prefixed with ")]}', ". Default is false.
                          * <p>Prefixing the JSON string in this manner is used to help prevent JSON Hijacking.
@@ -49,9 +49,9 @@ declare namespace org {
                          * @see #setJsonPrefix
                          */
                         // @ts-ignore
-                        setPrefixJson(prefixJson: boolean): void
+                        public setPrefixJson(prefixJson: boolean): void
                         // @ts-ignore
-                        writePrefix(generator: JsonGenerator, object: any): void
+                        writePrefix(generator: JsonGenerator, object: java.lang.Object | any): void
                     }
                 }
             }

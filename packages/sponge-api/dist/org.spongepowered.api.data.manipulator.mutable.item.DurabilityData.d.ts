@@ -23,7 +23,7 @@ declare namespace org {
                                  * @see Keys#ITEM_DURABILITY
                                  */
                                 // @ts-ignore
-                                durability(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                durability(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link Value} for the "unbreakable" state of the
                                  * {@link ItemStack}. While the {@link ItemStack} is "unbreakable",

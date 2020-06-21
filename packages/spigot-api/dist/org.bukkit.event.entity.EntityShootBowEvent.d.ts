@@ -10,39 +10,39 @@ declare namespace org {
                     // @ts-ignore
                     constructor(shooter: org.bukkit.entity.LivingEntity, bow: org.bukkit.inventory.ItemStack, projectile: org.bukkit.entity.Entity, force: number /*float*/)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets the bow ItemStack used to fire the arrow.
                      * @return the bow involved in this event
                      */
                     // @ts-ignore
-                    getBow(): org.bukkit.inventory.ItemStack
+                    public getBow(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the projectile which will be launched by this event
                      * @return the launched projectile
                      */
                     // @ts-ignore
-                    getProjectile(): org.bukkit.entity.Entity
+                    public getProjectile(): org.bukkit.entity.Entity
                     /**
                      * Replaces the projectile which will be launched
                      * @param projectile the new projectile
                      */
                     // @ts-ignore
-                    setProjectile(projectile: org.bukkit.entity.Entity): void
+                    public setProjectile(projectile: org.bukkit.entity.Entity): void
                     /**
                      * Gets the force the arrow was launched with
                      * @return bow shooting force, up to 1.0
                      */
                     // @ts-ignore
-                    getForce(): float
+                    public getForce(): number /*float*/
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

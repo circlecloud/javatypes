@@ -124,13 +124,13 @@ declare namespace java {
              * list's appearance without changing its functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Removes the peer for this list.  The peer allows us to modify the
              * list's appearance without changing its functionality.
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Gets the number of items in the list.
              * @return the number of items in the list
@@ -138,13 +138,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getItemCount(): int
+            public getItemCount(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getItemCount()</code>.
              */
             // @ts-ignore
-            countItems(): int
+            public countItems(): number /*int*/
             /**
              * Gets the item associated with the specified index.
              * @return an item that is associated with
@@ -153,7 +153,7 @@ declare namespace java {
              * @see #getItemCount
              */
             // @ts-ignore
-            getItem(index: number /*int*/): java.lang.String
+            public getItem(index: number /*int*/): string
             /**
              * Gets the items in the list.
              * @return a string array containing items of the list
@@ -163,19 +163,19 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getItems(): java.lang.String[]
+            public getItems(): string[]
             /**
              * Adds the specified item to the end of scrolling list.
              * @param item the item to be added
              * @since JDK1.1
              */
             // @ts-ignore
-            add(item: string): void
+            public add(item: java.lang.String | string): void
             /**
              * @deprecated replaced by <code>add(String)</code>.
              */
             // @ts-ignore
-            addItem(item: string): void
+            public addItem(item: java.lang.String | string): void
             /**
              * Adds the specified item to the the scrolling list
              * at the position indicated by the index.  The index is
@@ -190,12 +190,12 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            add(item: string, index: number /*int*/): void
+            public add(item: java.lang.String | string, index: number /*int*/): void
             /**
              * @deprecated replaced by <code>add(String, int)</code>.
              */
             // @ts-ignore
-            addItem(item: string, index: number /*int*/): void
+            public addItem(item: java.lang.String | string, index: number /*int*/): void
             /**
              * Replaces the item at the specified index in the scrolling list
              * with the new string.
@@ -205,7 +205,7 @@ declare namespace java {
              *           is out of range
              */
             // @ts-ignore
-            replaceItem(newValue: string, index: number /*int*/): void
+            public replaceItem(newValue: java.lang.String | string, index: number /*int*/): void
             /**
              * Removes all items from this list.
              * @see #remove
@@ -213,13 +213,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>removeAll()</code>.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Removes the first occurrence of an item from the list.
              * If the specified item is selected, and is the only selected
@@ -230,7 +230,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            remove(item: string): void
+            public remove(item: java.lang.String | string): void
             /**
              * Removes the item at the specified position
              * from this scrolling list.
@@ -244,13 +244,13 @@ declare namespace java {
              *                greater than <code>getItemCount()-1</code>
              */
             // @ts-ignore
-            remove(position: number /*int*/): void
+            public remove(position: number /*int*/): void
             /**
              * @deprecated replaced by <code>remove(String)</code>
              *                          and <code>remove(int)</code>.
              */
             // @ts-ignore
-            delItem(position: number /*int*/): void
+            public delItem(position: number /*int*/): void
             /**
              * Gets the index of the selected item on the list,
              * @return the index of the selected item;
@@ -261,7 +261,7 @@ declare namespace java {
              * @see #isIndexSelected
              */
             // @ts-ignore
-            getSelectedIndex(): int
+            public getSelectedIndex(): number /*int*/
             /**
              * Gets the selected indexes on the list.
              * @return an array of the selected indexes on this scrolling list;
@@ -271,7 +271,7 @@ declare namespace java {
              * @see #isIndexSelected
              */
             // @ts-ignore
-            getSelectedIndexes(): int[]
+            public getSelectedIndexes(): number /*int*/[]
             /**
              * Gets the selected item on this scrolling list.
              * @return the selected item on the list;
@@ -282,7 +282,7 @@ declare namespace java {
              * @see #isIndexSelected
              */
             // @ts-ignore
-            getSelectedItem(): java.lang.String
+            public getSelectedItem(): string
             /**
              * Gets the selected items on this scrolling list.
              * @return an array of the selected items on this scrolling list;
@@ -292,7 +292,7 @@ declare namespace java {
              * @see #isIndexSelected
              */
             // @ts-ignore
-            getSelectedItems(): java.lang.String[]
+            public getSelectedItems(): string[]
             /**
              * Gets the selected items on this scrolling list in an array of Objects.
              * @return an array of <code>Object</code>s representing the
@@ -302,7 +302,7 @@ declare namespace java {
              * @see ItemSelectable
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * Selects the item at the specified index in the scrolling list.
              * <p>
@@ -319,7 +319,7 @@ declare namespace java {
              * @see #isIndexSelected
              */
             // @ts-ignore
-            select(index: number /*int*/): void
+            public select(index: number /*int*/): void
             /**
              * Deselects the item at the specified index.
              * <p>
@@ -334,7 +334,7 @@ declare namespace java {
              * @see #isIndexSelected
              */
             // @ts-ignore
-            deselect(index: number /*int*/): void
+            public deselect(index: number /*int*/): void
             /**
              * Determines if the specified item in this scrolling list is
              * selected.
@@ -346,13 +346,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            isIndexSelected(index: number /*int*/): boolean
+            public isIndexSelected(index: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>isIndexSelected(int)</code>.
              */
             // @ts-ignore
-            isSelected(index: number /*int*/): boolean
+            public isSelected(index: number /*int*/): boolean
             /**
              * Gets the number of visible lines in this list.  Note that
              * once the <code>List</code> has been created, this number
@@ -360,7 +360,7 @@ declare namespace java {
              * @return the number of visible lines in this scrolling list
              */
             // @ts-ignore
-            getRows(): int
+            public getRows(): number /*int*/
             /**
              * Determines whether this list allows multiple selections.
              * @return <code>true</code> if this list allows multiple
@@ -369,13 +369,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            isMultipleMode(): boolean
+            public isMultipleMode(): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>isMultipleMode()</code>.
              */
             // @ts-ignore
-            allowsMultipleSelections(): boolean
+            public allowsMultipleSelections(): boolean
             /**
              * Sets the flag that determines whether this list
              * allows multiple selections.
@@ -391,13 +391,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setMultipleMode(b: boolean): void
+            public setMultipleMode(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setMultipleMode(boolean)</code>.
              */
             // @ts-ignore
-            setMultipleSelections(b: boolean): void
+            public setMultipleSelections(b: boolean): void
             /**
              * Gets the index of the item that was last made visible by
              * the method <code>makeVisible</code>.
@@ -405,14 +405,14 @@ declare namespace java {
              * @see #makeVisible
              */
             // @ts-ignore
-            getVisibleIndex(): int
+            public getVisibleIndex(): number /*int*/
             /**
              * Makes the item at the specified index visible.
              * @param index    the position of the item
              * @see #getVisibleIndex
              */
             // @ts-ignore
-            makeVisible(index: number /*int*/): void
+            public makeVisible(index: number /*int*/): void
             /**
              * Gets the preferred dimensions for a list with the specified
              * number of rows.
@@ -423,13 +423,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getPreferredSize(rows: number /*int*/): java.awt.Dimension
+            public getPreferredSize(rows: number /*int*/): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize(int)</code>.
              */
             // @ts-ignore
-            preferredSize(rows: number /*int*/): java.awt.Dimension
+            public preferredSize(rows: number /*int*/): java.awt.Dimension
             /**
              * Gets the preferred size of this scrolling list.
              * @return the preferred dimensions for displaying this scrolling list
@@ -437,13 +437,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize()</code>.
              */
             // @ts-ignore
-            preferredSize(): java.awt.Dimension
+            public preferredSize(): java.awt.Dimension
             /**
              * Gets the minimum dimensions for a list with the specified
              * number of rows.
@@ -454,13 +454,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(rows: number /*int*/): java.awt.Dimension
+            public getMinimumSize(rows: number /*int*/): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize(int)</code>.
              */
             // @ts-ignore
-            minimumSize(rows: number /*int*/): java.awt.Dimension
+            public minimumSize(rows: number /*int*/): java.awt.Dimension
             /**
              * Determines the minimum size of this scrolling list.
              * @return the minimum dimensions needed
@@ -469,13 +469,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize()</code>.
              */
             // @ts-ignore
-            minimumSize(): java.awt.Dimension
+            public minimumSize(): java.awt.Dimension
             /**
              * Adds the specified item listener to receive item events from
              * this list.  Item events are sent in response to user input, but not
@@ -494,7 +494,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addItemListener(l: java.awt.event.ItemListener): void
+            public addItemListener(l: java.awt.event.ItemListener): void
             /**
              * Removes the specified item listener so that it no longer
              * receives item events from this list.
@@ -510,7 +510,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeItemListener(l: java.awt.event.ItemListener): void
+            public removeItemListener(l: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the item listeners
              * registered on this list.
@@ -524,7 +524,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Adds the specified action listener to receive action events from
              * this list. Action events occur when a user double-clicks
@@ -543,7 +543,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener so that it no longer
              * receives action events from this list. Action events
@@ -560,7 +560,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this list.
@@ -574,7 +574,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -604,7 +604,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this scrolling list. If an event is
              * an instance of <code>ItemEvent</code>, it invokes the
@@ -681,7 +681,7 @@ declare namespace java {
              * @return the parameter string of this scrolling list
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * @deprecated As of JDK version 1.1,
              *  Not for public use in the future.
@@ -689,7 +689,7 @@ declare namespace java {
              *  private method.
              */
             // @ts-ignore
-            delItems(start: number /*int*/, end: number /*int*/): void
+            public delItems(start: number /*int*/, end: number /*int*/): void
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>List</code>. For lists, the <code>AccessibleContext</code>
@@ -700,7 +700,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

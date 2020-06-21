@@ -14,7 +14,7 @@ declare namespace org {
                  * @return Task id number
                  */
                 // @ts-ignore
-                getTaskId(): int
+                getTaskId(): number /*int*/
                 /**
                  * Returns the Plugin that owns this task.
                  * @return The Plugin that owns the task

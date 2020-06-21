@@ -21,17 +21,17 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(direction: number /*int*/, width: number /*int*/, freeStanding: boolean)
                     // @ts-ignore
-                    setFreeStanding(freeStanding: boolean): void
+                    public setFreeStanding(freeStanding: boolean): void
                     // @ts-ignore
-                    paint(g: java.awt.Graphics): void
+                    public paint(g: java.awt.Graphics): void
                     // @ts-ignore
-                    getPreferredSize(): java.awt.Dimension
+                    public getPreferredSize(): java.awt.Dimension
                     // @ts-ignore
-                    getMinimumSize(): java.awt.Dimension
+                    public getMinimumSize(): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(): java.awt.Dimension
+                    public getMaximumSize(): java.awt.Dimension
                     // @ts-ignore
-                    getButtonWidth(): int
+                    public getButtonWidth(): number /*int*/
                 }
             }
         }

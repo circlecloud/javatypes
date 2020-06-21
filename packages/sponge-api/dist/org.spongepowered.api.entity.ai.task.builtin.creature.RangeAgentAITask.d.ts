@@ -24,7 +24,7 @@ declare namespace org {
                                      * @return The movement speed modifier
                                      */
                                     // @ts-ignore
-                                    getMoveSpeed(): double
+                                    getMoveSpeed(): number /*double*/
                                     /**
                                      * Sets the movement speed modifier for moving towards a targeted
                                      * {@link Entity}.
@@ -39,7 +39,7 @@ declare namespace org {
                                      * @return The delay in ticks between attempts to attack
                                      */
                                     // @ts-ignore
-                                    getDelayBetweenAttacks(): int
+                                    getDelayBetweenAttacks(): number /*int*/
                                     /**
                                      * The time, in ticks, this {@link Ranger} will wait before attacking
                                      * again.
@@ -54,7 +54,7 @@ declare namespace org {
                                      * @return The radius of which the owning entity will attempt to attack
                                      */
                                     // @ts-ignore
-                                    getAttackRadius(): float
+                                    getAttackRadius(): number /*float*/
                                     /**
                                      * Sets the radius of which the owning {@link Ranger} will attempt to
                                      * attack a targeted {@link Entity}.

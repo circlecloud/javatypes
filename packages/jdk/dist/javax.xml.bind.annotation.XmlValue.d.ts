@@ -79,7 +79,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlValue implements java.lang.annotation.Annotation {
+                abstract class XmlValue implements java.lang.annotation.Annotation {
                 }
             }
         }

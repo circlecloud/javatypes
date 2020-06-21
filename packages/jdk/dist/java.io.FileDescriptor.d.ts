@@ -25,7 +25,7 @@ declare namespace java {
              * @see java.lang.System#in
              */
             // @ts-ignore
-            readonly in: java.io.FileDescriptor
+            public static readonly in: java.io.FileDescriptor
             /**
              * A handle to the standard output stream. Usually, this file
              * descriptor is not used directly, but rather via the output stream
@@ -33,7 +33,7 @@ declare namespace java {
              * @see java.lang.System#out
              */
             // @ts-ignore
-            readonly out: java.io.FileDescriptor
+            public static readonly out: java.io.FileDescriptor
             /**
              * A handle to the standard error stream. Usually, this file
              * descriptor is not used directly, but rather via the output stream
@@ -41,7 +41,7 @@ declare namespace java {
              * @see java.lang.System#err
              */
             // @ts-ignore
-            readonly err: java.io.FileDescriptor
+            public static readonly err: java.io.FileDescriptor
             /**
              * Tests if this file descriptor object is valid.
              * @return {#code true} if the file descriptor object represents a
@@ -49,7 +49,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            valid(): boolean
+            public valid(): boolean
             /**
              * Force all system buffers to synchronize with the underlying
              * device.  This method returns after all modified data and
@@ -76,7 +76,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            sync(): void
+            public sync(): void
         }
     }
 }

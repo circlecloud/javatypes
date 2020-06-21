@@ -32,7 +32,7 @@ declare namespace org {
                      * @see org.springframework.web.context.support.ServletContextResourceLoader#getResourceByPath
                      */
                     // @ts-ignore
-                    getResourceByPath(path: string): org.springframework.core.io.Resource
+                    getResourceByPath(path: java.lang.String | string): org.springframework.core.io.Resource
                 }
             }
         }

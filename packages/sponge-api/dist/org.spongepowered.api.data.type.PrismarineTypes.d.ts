@@ -6,11 +6,11 @@ declare namespace org {
                     // @ts-ignore
                     class PrismarineTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly BRICKS: org.spongepowered.api.data.type.PrismarineType
+                        public static readonly BRICKS: org.spongepowered.api.data.type.PrismarineType
                         // @ts-ignore
-                        readonly DARK: org.spongepowered.api.data.type.PrismarineType
+                        public static readonly DARK: org.spongepowered.api.data.type.PrismarineType
                         // @ts-ignore
-                        readonly ROUGH: org.spongepowered.api.data.type.PrismarineType
+                        public static readonly ROUGH: org.spongepowered.api.data.type.PrismarineType
                     }
                 }
             }

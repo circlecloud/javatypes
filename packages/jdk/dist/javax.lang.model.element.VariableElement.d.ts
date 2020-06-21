@@ -33,7 +33,7 @@ declare namespace javax {
                      * @jls 4.12.4 final Variables
                      */
                     // @ts-ignore
-                    getConstantValue(): java.lang.Object
+                    getConstantValue(): any
                     /**
                      * Returns the simple name of this variable element.
                      * <p>For method and constructor parameters, the name of each

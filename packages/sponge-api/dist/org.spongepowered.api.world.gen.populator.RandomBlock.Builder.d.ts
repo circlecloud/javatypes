@@ -42,7 +42,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                placementTarget(target: java.util.function.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>> | java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): org.spongepowered.api.world.gen.populator.RandomBlock.Builder
+                                placementTarget(target: java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): org.spongepowered.api.world.gen.populator.RandomBlock.Builder
                                 /**
                                  * Sets the height range of the random block placement.
                                  * @param height The new height range

@@ -14,7 +14,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Rectangle2D extends java.awt.geom.RectangularShape {
+            abstract class Rectangle2D extends java.awt.geom.RectangularShape {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -34,28 +34,28 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly OUT_LEFT: number /*int*/
+                public static readonly OUT_LEFT: number /*int*/
                 /**
                  * The bitmask that indicates that a point lies above
                  * this <code>Rectangle2D</code>.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly OUT_TOP: number /*int*/
+                public static readonly OUT_TOP: number /*int*/
                 /**
                  * The bitmask that indicates that a point lies to the right of
                  * this <code>Rectangle2D</code>.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly OUT_RIGHT: number /*int*/
+                public static readonly OUT_RIGHT: number /*int*/
                 /**
                  * The bitmask that indicates that a point lies below
                  * this <code>Rectangle2D</code>.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly OUT_BOTTOM: number /*int*/
+                public static readonly OUT_BOTTOM: number /*int*/
                 /**
                  * Sets the location and size of this <code>Rectangle2D</code>
                  * to the specified <code>double</code> values.
@@ -68,7 +68,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setRect(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                public abstract setRect(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                 /**
                  * Sets this <code>Rectangle2D</code> to be the same as the specified
                  * <code>Rectangle2D</code>.
@@ -76,7 +76,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setRect(r: java.awt.geom.Rectangle2D): void
+                public setRect(r: java.awt.geom.Rectangle2D): void
                 /**
                  * Tests if the specified line segment intersects the interior of this
                  * <code>Rectangle2D</code>.
@@ -94,7 +94,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersectsLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): boolean
+                public intersectsLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): boolean
                 /**
                  * Tests if the specified line segment intersects the interior of this
                  * <code>Rectangle2D</code>.
@@ -106,7 +106,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersectsLine(l: java.awt.geom.Line2D): boolean
+                public intersectsLine(l: java.awt.geom.Line2D): boolean
                 /**
                  * Determines where the specified coordinates lie with respect
                  * to this <code>Rectangle2D</code>.
@@ -124,7 +124,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract outcode(x: number /*double*/, y: number /*double*/): int
+                public abstract outcode(x: number /*double*/, y: number /*double*/): number /*int*/
                 /**
                  * Determines where the specified {@link Point2D} lies with
                  * respect to this <code>Rectangle2D</code>.
@@ -141,7 +141,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                outcode(p: java.awt.geom.Point2D): int
+                public outcode(p: java.awt.geom.Point2D): number /*int*/
                 /**
                  * Sets the location and size of the outer bounds of this
                  * <code>Rectangle2D</code> to the specified rectangular values.
@@ -154,31 +154,31 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                public setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds2D(): java.awt.geom.Rectangle2D
+                public getBounds2D(): java.awt.geom.Rectangle2D
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Returns a new <code>Rectangle2D</code> object representing the
                  * intersection of this <code>Rectangle2D</code> with the specified
@@ -191,7 +191,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract createIntersection(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
+                public abstract createIntersection(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
                 /**
                  * Intersects the pair of specified source <code>Rectangle2D</code>
                  * objects and puts the result into the specified destination
@@ -209,7 +209,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersect(src1: java.awt.geom.Rectangle2D, src2: java.awt.geom.Rectangle2D, dest: java.awt.geom.Rectangle2D): void
+                public static intersect(src1: java.awt.geom.Rectangle2D, src2: java.awt.geom.Rectangle2D, dest: java.awt.geom.Rectangle2D): void
                 /**
                  * Returns a new <code>Rectangle2D</code> object representing the
                  * union of this <code>Rectangle2D</code> with the specified
@@ -222,7 +222,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract createUnion(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
+                public abstract createUnion(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
                 /**
                  * Unions the pair of source <code>Rectangle2D</code> objects
                  * and puts the result into the specified destination
@@ -240,7 +240,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                union(src1: java.awt.geom.Rectangle2D, src2: java.awt.geom.Rectangle2D, dest: java.awt.geom.Rectangle2D): void
+                public static union(src1: java.awt.geom.Rectangle2D, src2: java.awt.geom.Rectangle2D, dest: java.awt.geom.Rectangle2D): void
                 /**
                  * Adds a point, specified by the double precision arguments
                  * <code>newx</code> and <code>newy</code>, to this
@@ -261,7 +261,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                add(newx: number /*double*/, newy: number /*double*/): void
+                public add(newx: number /*double*/, newy: number /*double*/): void
                 /**
                  * Adds the <code>Point2D</code> object <code>pt</code> to this
                  * <code>Rectangle2D</code>.
@@ -281,7 +281,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                add(pt: java.awt.geom.Point2D): void
+                public add(pt: java.awt.geom.Point2D): void
                 /**
                  * Adds a <code>Rectangle2D</code> object to this
                  * <code>Rectangle2D</code>.  The resulting <code>Rectangle2D</code>
@@ -291,7 +291,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                add(r: java.awt.geom.Rectangle2D): void
+                public add(r: java.awt.geom.Rectangle2D): void
                 /**
                  * Returns an iteration object that defines the boundary of this
                  * <code>Rectangle2D</code>.
@@ -309,7 +309,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                 /**
                  * Returns an iteration object that defines the boundary of the
                  * flattened <code>Rectangle2D</code>.  Since rectangles are already
@@ -332,14 +332,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
                 /**
                  * Returns the hashcode for this <code>Rectangle2D</code>.
                  * @return the hashcode for this <code>Rectangle2D</code>.
                  * @since 1.2
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Determines whether or not the specified <code>Object</code> is
                  * equal to this <code>Rectangle2D</code>.  The specified
@@ -354,7 +354,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

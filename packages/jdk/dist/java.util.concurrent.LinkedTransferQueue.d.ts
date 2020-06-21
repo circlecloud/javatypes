@@ -51,7 +51,7 @@ declare namespace java {
                  *          of its elements are null
                  */
                 // @ts-ignore
-                constructor(c: Array<E>)
+                constructor(c: java.util.Collection<any> | Array<any>)
                 /**
                  * Returns a {@link Spliterator} over the elements in this queue.
                  * <p>The returned spliterator is
@@ -64,14 +64,14 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<E>
+                public spliterator(): java.util.Spliterator<E>
                 /**
                  * Inserts the specified element at the tail of this queue.
                  * As the queue is unbounded, this method will never block.
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                put(e: E): void
+                public put(e: E): void
                 /**
                  * Inserts the specified element at the tail of this queue.
                  * As the queue is unbounded, this method will never block or
@@ -82,7 +82,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Inserts the specified element at the tail of this queue.
                  * As the queue is unbounded, this method will never return {@code false}.
@@ -90,7 +90,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E): boolean
+                public offer(e: E): boolean
                 /**
                  * Inserts the specified element at the tail of this queue.
                  * As the queue is unbounded, this method will never throw
@@ -99,7 +99,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                add(e: E): boolean
+                public add(e: E): boolean
                 /**
                  * Transfers the element to a waiting consumer immediately, if possible.
                  * <p>More precisely, transfers the specified element immediately
@@ -109,7 +109,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                tryTransfer(e: E): boolean
+                public tryTransfer(e: E): boolean
                 /**
                  * Transfers the element to a consumer, waiting if necessary to do so.
                  * <p>More precisely, transfers the specified element immediately
@@ -120,7 +120,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                transfer(e: E): void
+                public transfer(e: E): void
                 /**
                  * Transfers the element to a consumer if it is possible to do so
                  * before the timeout elapses.
@@ -134,25 +134,25 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                tryTransfer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public tryTransfer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 // @ts-ignore
-                take(): E
+                public take(): E
                 // @ts-ignore
-                poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 // @ts-ignore
-                poll(): E
+                public poll(): E
                 /**
                  * @throws NullPointerException     {#inheritDoc}
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>): int
+                public drainTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * @throws NullPointerException     {#inheritDoc}
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>, maxElements: number /*int*/): int
+                public drainTo(c: java.util.Collection<any> | Array<any>, maxElements: number /*int*/): number /*int*/
                 /**
                  * Returns an iterator over the elements in this queue in proper sequence.
                  * The elements will be returned in order from first (head) to last (tail).
@@ -161,17 +161,17 @@ declare namespace java {
                  * @return an iterator over the elements in this queue in proper sequence
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 // @ts-ignore
-                peek(): E
+                public peek(): E
                 /**
                  * Returns {@code true} if this queue contains no elements.
                  * @return {#code true} if this queue contains no elements
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                hasWaitingConsumer(): boolean
+                public hasWaitingConsumer(): boolean
                 /**
                  * Returns the number of elements in this queue.  If this queue
                  * contains more than {@code Integer.MAX_VALUE} elements, returns
@@ -183,9 +183,9 @@ declare namespace java {
                  * @return the number of elements in this queue
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                getWaitingConsumerCount(): int
+                public getWaitingConsumerCount(): number /*int*/
                 /**
                  * Removes a single instance of the specified element from this queue,
                  * if it is present.  More formally, removes an element {@code e} such
@@ -197,7 +197,7 @@ declare namespace java {
                  * @return {#code true} if this queue changed as a result of the call
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Returns {@code true} if this queue contains the specified element.
                  * More formally, returns {@code true} if and only if this queue contains
@@ -206,7 +206,7 @@ declare namespace java {
                  * @return {#code true} if this queue contains the specified element
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Always returns {@code Integer.MAX_VALUE} because a
                  * {@code LinkedTransferQueue} is not capacity constrained.
@@ -215,7 +215,7 @@ declare namespace java {
                  *          BlockingQueue.remainingCapacity})
                  */
                 // @ts-ignore
-                remainingCapacity(): int
+                public remainingCapacity(): number /*int*/
             }
         }
     }

@@ -34,7 +34,7 @@ declare namespace org {
                  * @since 06.12.2003
                  */
                 // @ts-ignore
-                class OncePerRequestFilter extends org.springframework.web.filter.GenericFilterBean {
+                abstract class OncePerRequestFilter extends org.springframework.web.filter.GenericFilterBean {
                     // @ts-ignore
                     constructor()
                     /**
@@ -43,7 +43,7 @@ declare namespace org {
                      * @see #getAlreadyFilteredAttributeName
                      */
                     // @ts-ignore
-                    readonly ALREADY_FILTERED_SUFFIX: string
+                    public static readonly ALREADY_FILTERED_SUFFIX: java.lang.String | string
                     /**
                      * This {@code doFilter} implementation stores a request attribute for
                      * "already filtered", proceeding without filtering again if the
@@ -53,7 +53,7 @@ declare namespace org {
                      * @see #doFilterInternal
                      */
                     // @ts-ignore
-                    doFilter(request: ServletRequest, response: ServletResponse, filterChain: FilterChain): void
+                    public doFilter(request: ServletRequest, response: ServletResponse, filterChain: FilterChain): void
                     /**
                      * The dispatcher type {@code javax.servlet.DispatcherType.ASYNC} introduced
                      * in Servlet 3.0 means a filter can be invoked in more than one thread over
@@ -84,7 +84,7 @@ declare namespace org {
                      * @see #ALREADY_FILTERED_SUFFIX
                      */
                     // @ts-ignore
-                    getAlreadyFilteredAttributeName(): java.lang.String
+                    getAlreadyFilteredAttributeName(): string
                     /**
                      * Can be overridden in subclasses for custom filtering control,
                      * returning {@code true} to avoid filtering of the given request.

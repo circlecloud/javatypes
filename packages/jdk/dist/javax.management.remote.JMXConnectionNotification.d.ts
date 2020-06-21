@@ -76,34 +76,34 @@ declare namespace javax {
                  *  <code>sequenceNumber</code> is negative.
                  */
                 // @ts-ignore
-                constructor(type: string, source: any, connectionId: string, sequenceNumber: number /*long*/, message: string, userData: any)
+                constructor(type: java.lang.String | string, source: java.lang.Object | any, connectionId: java.lang.String | string, sequenceNumber: number /*long*/, message: java.lang.String | string, userData: java.lang.Object | any)
                 /**
                  * <p>Notification type string for a connection-opened notification.
                  */
                 // @ts-ignore
-                readonly OPENED: string
+                public static readonly OPENED: java.lang.String | string
                 /**
                  * <p>Notification type string for a connection-closed notification.
                  */
                 // @ts-ignore
-                readonly CLOSED: string
+                public static readonly CLOSED: java.lang.String | string
                 /**
                  * <p>Notification type string for a connection-failed notification.
                  */
                 // @ts-ignore
-                readonly FAILED: string
+                public static readonly FAILED: java.lang.String | string
                 /**
                  * <p>Notification type string for a connection that has possibly
                  * lost notifications.</p>
                  */
                 // @ts-ignore
-                readonly NOTIFS_LOST: string
+                public static readonly NOTIFS_LOST: java.lang.String | string
                 /**
                  * <p>The connection ID to which this notification pertains.
                  * @return the connection ID.
                  */
                 // @ts-ignore
-                getConnectionId(): java.lang.String
+                public getConnectionId(): string
             }
         }
     }

@@ -42,7 +42,7 @@ declare namespace org {
                      * @see AnnotationCacheOperationSource#findCacheOperations(Class)
                      */
                     // @ts-ignore
-                    parseCacheAnnotations(type: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    parseCacheAnnotations(type: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * Parse the cache definition for the given method,
                      * based on an annotation type understood by this parser.
@@ -53,7 +53,7 @@ declare namespace org {
                      * @see AnnotationCacheOperationSource#findCacheOperations(Method)
                      */
                     // @ts-ignore
-                    parseCacheAnnotations(method: java.lang.reflect.Method): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    parseCacheAnnotations(method: java.lang.reflect.Method): Array<org.springframework.cache.interceptor.CacheOperation>
                 }
             }
         }

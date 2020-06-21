@@ -43,7 +43,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            connect(snk: java.io.PipedReader): void
+            public connect(snk: java.io.PipedReader): void
             /**
              * Writes the specified <code>char</code> to the piped output stream.
              * If a thread was reading data characters from the connected piped input
@@ -58,7 +58,7 @@ declare namespace java {
              *           or an I/O error occurs.
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Writes <code>len</code> characters from the specified character array
              * starting at offset <code>off</code> to this piped output stream.
@@ -76,7 +76,7 @@ declare namespace java {
              *           or an I/O error occurs.
              */
             // @ts-ignore
-            write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes this output stream and forces any buffered output characters
              * to be written out.
@@ -84,7 +84,7 @@ declare namespace java {
              * @exception IOException  if the pipe is closed, or an I/O error occurs.
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Closes this piped output stream and releases any system resources
              * associated with this stream. This stream may no longer be used for
@@ -92,7 +92,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

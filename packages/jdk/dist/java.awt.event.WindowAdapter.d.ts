@@ -27,51 +27,51 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class WindowAdapter extends java.lang.Object implements java.awt.event.WindowListener, java.awt.event.WindowStateListener, java.awt.event.WindowFocusListener {
+            abstract class WindowAdapter extends java.lang.Object implements java.awt.event.WindowListener, java.awt.event.WindowStateListener, java.awt.event.WindowFocusListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * Invoked when a window has been opened.
                  */
                 // @ts-ignore
-                windowOpened(e: java.awt.event.WindowEvent): void
+                public windowOpened(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window is in the process of being closed.
                  * The close operation can be overridden at this point.
                  */
                 // @ts-ignore
-                windowClosing(e: java.awt.event.WindowEvent): void
+                public windowClosing(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window has been closed.
                  */
                 // @ts-ignore
-                windowClosed(e: java.awt.event.WindowEvent): void
+                public windowClosed(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window is iconified.
                  */
                 // @ts-ignore
-                windowIconified(e: java.awt.event.WindowEvent): void
+                public windowIconified(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window is de-iconified.
                  */
                 // @ts-ignore
-                windowDeiconified(e: java.awt.event.WindowEvent): void
+                public windowDeiconified(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window is activated.
                  */
                 // @ts-ignore
-                windowActivated(e: java.awt.event.WindowEvent): void
+                public windowActivated(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window is de-activated.
                  */
                 // @ts-ignore
-                windowDeactivated(e: java.awt.event.WindowEvent): void
+                public windowDeactivated(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when a window state is changed.
                  * @since 1.4
                  */
                 // @ts-ignore
-                windowStateChanged(e: java.awt.event.WindowEvent): void
+                public windowStateChanged(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when the Window is set to be the focused Window, which means
                  * that the Window, or one of its subcomponents, will receive keyboard
@@ -79,7 +79,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                windowGainedFocus(e: java.awt.event.WindowEvent): void
+                public windowGainedFocus(e: java.awt.event.WindowEvent): void
                 /**
                  * Invoked when the Window is no longer the focused Window, which means
                  * that keyboard events will no longer be delivered to the Window or any of
@@ -87,7 +87,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                windowLostFocus(e: java.awt.event.WindowEvent): void
+                public windowLostFocus(e: java.awt.event.WindowEvent): void
             }
         }
     }

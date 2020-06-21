@@ -14,7 +14,7 @@ declare namespace javax {
                         // @ts-ignore
                         buttonIndex: number /*int*/
                         // @ts-ignore
-                        actionPerformed(e: java.awt.event.ActionEvent): void
+                        public actionPerformed(e: java.awt.event.ActionEvent): void
                     }
                 }
             }

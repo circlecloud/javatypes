@@ -5,7 +5,7 @@ declare namespace org {
              * An annotation to mark methods as being event handler methods
              */
             // @ts-ignore
-            class EventHandler implements java.lang.annotation.Annotation {
+            abstract class EventHandler implements java.lang.annotation.Annotation {
             }
         }
     }

@@ -28,54 +28,54 @@ declare namespace javax {
                      * proceeding towards the bottom {@literal &} right.
                      */
                     // @ts-ignore
-                    readonly TOBOTTOM_TORIGHT: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TOBOTTOM_TORIGHT: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in columns starting at the top right,
                      * proceeding towards the bottom {@literal &} left.
                      */
                     // @ts-ignore
-                    readonly TOBOTTOM_TOLEFT: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TOBOTTOM_TOLEFT: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in columns starting at the bottom left,
                      * proceeding towards the top {@literal &} right.
                      */
                     // @ts-ignore
-                    readonly TOTOP_TORIGHT: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TOTOP_TORIGHT: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in columns starting at the bottom right,
                      * proceeding towards the top {@literal &} left.
                      */
                     // @ts-ignore
-                    readonly TOTOP_TOLEFT: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TOTOP_TOLEFT: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in rows starting at the top left,
                      * proceeding towards the right {@literal &} bottom.
                      */
                     // @ts-ignore
-                    readonly TORIGHT_TOBOTTOM: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TORIGHT_TOBOTTOM: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in rows starting at the bottom left,
                      * proceeding towards the right {@literal &} top.
                      */
                     // @ts-ignore
-                    readonly TORIGHT_TOTOP: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TORIGHT_TOTOP: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in rows starting at the top right,
                      * proceeding towards the left {@literal &} bottom.
                      */
                     // @ts-ignore
-                    readonly TOLEFT_TOBOTTOM: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TOLEFT_TOBOTTOM: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Pages are laid out in rows starting at the bottom right,
                      * proceeding towards the left {@literal &} top.
                      */
                     // @ts-ignore
-                    readonly TOLEFT_TOTOP: javax.print.attribute.standard.PresentationDirection
+                    public static readonly TOLEFT_TOTOP: javax.print.attribute.standard.PresentationDirection
                     /**
                      * Returns the string table for class PresentationDirection.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class PresentationDirection.
                      */
@@ -91,7 +91,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -101,7 +101,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

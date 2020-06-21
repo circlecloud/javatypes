@@ -23,13 +23,13 @@ declare namespace java {
                  * @return the <code>Class</code> object referred to.
                  */
                 // @ts-ignore
-                getDefinitionClass(): java.lang.Class<?>
+                public getDefinitionClass(): java.lang.Class<any>
                 /**
                  * Returns the array of bytes that contains the new class file.
                  * @return the class file bytes.
                  */
                 // @ts-ignore
-                getDefinitionClassFile(): byte[]
+                public getDefinitionClassFile(): number /*byte*/[]
             }
         }
     }

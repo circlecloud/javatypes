@@ -33,7 +33,7 @@ declare namespace javax {
          * installed and its checkPrintJobAccess() method denies access.
          */
         // @ts-ignore
-        class PrintServiceLookup extends java.lang.Object {
+        abstract class PrintServiceLookup extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -48,7 +48,7 @@ declare namespace javax {
              *  attributes.  If no services match, the array is zero-length.
              */
             // @ts-ignore
-            lookupPrintServices(flavor: javax.print.DocFlavor, attributes: javax.print.attribute.AttributeSet): javax.print.PrintService[]
+            public static lookupPrintServices(flavor: javax.print.DocFlavor, attributes: javax.print.attribute.AttributeSet): javax.print.PrintService[]
             /**
              * Locates MultiDoc print Services capable of printing MultiDocs
              * containing all the specified doc flavors.
@@ -67,7 +67,7 @@ declare namespace javax {
              *  If no services match, the array is zero-length.
              */
             // @ts-ignore
-            lookupMultiDocPrintServices(flavors: javax.print.DocFlavor[], attributes: javax.print.attribute.AttributeSet): javax.print.MultiDocPrintService[]
+            public static lookupMultiDocPrintServices(flavors: javax.print.DocFlavor[], attributes: javax.print.attribute.AttributeSet): javax.print.MultiDocPrintService[]
             /**
              * Locates the default print service for this environment.
              * This may return null.
@@ -88,7 +88,7 @@ declare namespace javax {
              * @return the default PrintService.
              */
             // @ts-ignore
-            lookupDefaultPrintService(): javax.print.PrintService
+            public static lookupDefaultPrintService(): javax.print.PrintService
             /**
              * Allows an application to explicitly register a class that
              * implements lookup services. The registration will not persist
@@ -103,7 +103,7 @@ declare namespace javax {
              *          registered; <code>false</code> otherwise.
              */
             // @ts-ignore
-            registerServiceProvider(sp: javax.print.PrintServiceLookup): boolean
+            public static registerServiceProvider(sp: javax.print.PrintServiceLookup): boolean
             /**
              * Allows an application to directly register an instance of a
              * class which implements a print service.
@@ -123,7 +123,7 @@ declare namespace javax {
              *          registered; <code>false</code> otherwise.
              */
             // @ts-ignore
-            registerService(service: javax.print.PrintService): boolean
+            public static registerService(service: javax.print.PrintService): boolean
             /**
              * Locates services that can be positively confirmed to support
              * the combination of attributes and DocFlavors specified.
@@ -144,7 +144,7 @@ declare namespace javax {
              *  array is zero-length.
              */
             // @ts-ignore
-            abstract getPrintServices(flavor: javax.print.DocFlavor, attributes: javax.print.attribute.AttributeSet): javax.print.PrintService[]
+            public abstract getPrintServices(flavor: javax.print.DocFlavor, attributes: javax.print.attribute.AttributeSet): javax.print.PrintService[]
             /**
              * Not called directly by applications.
              * Implemented by a service provider, used by the static methods
@@ -153,7 +153,7 @@ declare namespace javax {
              *  class. If none are found, the array is zero-length.
              */
             // @ts-ignore
-            abstract getPrintServices(): javax.print.PrintService[]
+            public abstract getPrintServices(): javax.print.PrintService[]
             /**
              * Not called directly by applications.
              * <p>
@@ -170,7 +170,7 @@ declare namespace javax {
              *  array is zero-length.
              */
             // @ts-ignore
-            abstract getMultiDocPrintServices(flavors: javax.print.DocFlavor[], attributes: javax.print.attribute.AttributeSet): javax.print.MultiDocPrintService[]
+            public abstract getMultiDocPrintServices(flavors: javax.print.DocFlavor[], attributes: javax.print.attribute.AttributeSet): javax.print.MultiDocPrintService[]
             /**
              * Not called directly by applications.
              * Implemented by a service provider, and called by the print lookup
@@ -179,7 +179,7 @@ declare namespace javax {
              *  If there is no default, returns null.
              */
             // @ts-ignore
-            abstract getDefaultPrintService(): javax.print.PrintService
+            public abstract getDefaultPrintService(): javax.print.PrintService
         }
     }
 }

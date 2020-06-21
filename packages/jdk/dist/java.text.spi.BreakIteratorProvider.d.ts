@@ -8,7 +8,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class BreakIteratorProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -29,7 +29,7 @@ declare namespace java {
                  * @see java.text.BreakIterator#getWordInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getWordInstance(locale: java.util.Locale): java.text.BreakIterator
+                public abstract getWordInstance(locale: java.util.Locale): java.text.BreakIterator
                 /**
                  * Returns a new <code>BreakIterator</code> instance
                  * for <a href="../BreakIterator.html#line">line breaks</a>
@@ -44,7 +44,7 @@ declare namespace java {
                  * @see java.text.BreakIterator#getLineInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getLineInstance(locale: java.util.Locale): java.text.BreakIterator
+                public abstract getLineInstance(locale: java.util.Locale): java.text.BreakIterator
                 /**
                  * Returns a new <code>BreakIterator</code> instance
                  * for <a href="../BreakIterator.html#character">character breaks</a>
@@ -59,7 +59,7 @@ declare namespace java {
                  * @see java.text.BreakIterator#getCharacterInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getCharacterInstance(locale: java.util.Locale): java.text.BreakIterator
+                public abstract getCharacterInstance(locale: java.util.Locale): java.text.BreakIterator
                 /**
                  * Returns a new <code>BreakIterator</code> instance
                  * for <a href="../BreakIterator.html#sentence">sentence breaks</a>
@@ -74,7 +74,7 @@ declare namespace java {
                  * @see java.text.BreakIterator#getSentenceInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getSentenceInstance(locale: java.util.Locale): java.text.BreakIterator
+                public abstract getSentenceInstance(locale: java.util.Locale): java.text.BreakIterator
             }
         }
     }

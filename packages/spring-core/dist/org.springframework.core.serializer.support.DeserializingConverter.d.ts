@@ -13,7 +13,7 @@ declare namespace org {
                      * @since 3.0.5
                      */
                     // @ts-ignore
-                    class DeserializingConverter extends java.lang.Object implements org.springframework.core.convert.converter.Converter<byte[], java.lang.Object> {
+                    class DeserializingConverter extends java.lang.Object implements org.springframework.core.convert.converter.Converter<number /*byte*/[], java.lang.Object | any> {
                         /**
                          * Create a {@code DeserializingConverter} with default {@link java.io.ObjectInputStream}
                          * configuration, using the "latest user-defined ClassLoader".
@@ -33,9 +33,9 @@ declare namespace org {
                          * Create a {@code DeserializingConverter} that delegates to the provided {@link Deserializer}.
                          */
                         // @ts-ignore
-                        constructor(deserializer: org.springframework.core.serializer.Deserializer<java.lang.Object>)
+                        constructor(deserializer: org.springframework.core.serializer.Deserializer<java.lang.Object | any>)
                         // @ts-ignore
-                        convert(source: number /*byte*/[]): java.lang.Object
+                        public convert(source: number /*byte*/[]): any
                     }
                 }
             }

@@ -6,7 +6,7 @@ declare namespace org {
              * @param <T> type of recipe
              */
             // @ts-ignore
-            class CookingRecipe<T extends org.bukkit.inventory.CookingRecipe> extends java.lang.Object implements org.bukkit.inventory.Recipe, org.bukkit.Keyed {
+            abstract class CookingRecipe<T extends org.bukkit.inventory.CookingRecipe> extends java.lang.Object implements org.bukkit.inventory.Recipe, org.bukkit.Keyed {
                 /**
                  * Create a cooking recipe to craft the specified ItemStack.
                  * @param key The unique recipe key
@@ -33,65 +33,65 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                setInput(input: org.bukkit.Material): org.bukkit.inventory.CookingRecipe
+                public setInput(input: org.bukkit.Material): org.bukkit.inventory.CookingRecipe<any>
                 /**
                  * Get the input material.
                  * @return The input material.
                  */
                 // @ts-ignore
-                getInput(): org.bukkit.inventory.ItemStack
+                public getInput(): org.bukkit.inventory.ItemStack
                 /**
                  * Sets the input of this cooking recipe.
                  * @param input The input choice.
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                setInputChoice(input: org.bukkit.inventory.RecipeChoice): T
+                public setInputChoice(input: org.bukkit.inventory.RecipeChoice): T
                 /**
                  * Get the input choice.
                  * @return The input choice.
                  */
                 // @ts-ignore
-                getInputChoice(): org.bukkit.inventory.RecipeChoice
+                public getInputChoice(): org.bukkit.inventory.RecipeChoice
                 /**
                  * Get the result of this recipe.
                  * @return The resulting stack.
                  */
                 // @ts-ignore
-                getResult(): org.bukkit.inventory.ItemStack
+                public getResult(): org.bukkit.inventory.ItemStack
                 /**
                  * Sets the experience given by this recipe.
                  * @param experience the experience level
                  */
                 // @ts-ignore
-                setExperience(experience: number /*float*/): void
+                public setExperience(experience: number /*float*/): void
                 /**
                  * Get the experience given by this recipe.
                  * @return experience level
                  */
                 // @ts-ignore
-                getExperience(): float
+                public getExperience(): number /*float*/
                 /**
                  * Set the cooking time for this recipe in ticks.
                  * @param cookingTime new cooking time
                  */
                 // @ts-ignore
-                setCookingTime(cookingTime: number /*int*/): void
+                public setCookingTime(cookingTime: number /*int*/): void
                 /**
                  * Get the cooking time for this recipe in ticks.
                  * @return cooking time
                  */
                 // @ts-ignore
-                getCookingTime(): int
+                public getCookingTime(): number /*int*/
                 // @ts-ignore
-                getKey(): org.bukkit.NamespacedKey
+                public getKey(): org.bukkit.NamespacedKey
                 /**
                  * Get the group of this recipe. Recipes with the same group may be grouped
                  * together when displayed in the client.
                  * @return recipe group. An empty string denotes no group. May not be null.
                  */
                 // @ts-ignore
-                getGroup(): java.lang.String
+                public getGroup(): string
                 /**
                  * Set the group of this recipe. Recipes with the same group may be grouped
                  * together when displayed in the client.
@@ -99,7 +99,7 @@ declare namespace org {
                  *  null.
                  */
                 // @ts-ignore
-                setGroup(group: string): void
+                public setGroup(group: java.lang.String | string): void
             }
         }
     }

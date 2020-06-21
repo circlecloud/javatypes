@@ -14,14 +14,14 @@ declare namespace org {
                  * @param message the exception message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Create a new HttpMediaTypeNotSupportedException.
                  * @param contentType the unsupported content type
                  * @param supportedMediaTypes the list of supported media types
                  */
                 // @ts-ignore
-                constructor(contentType: org.springframework.http.MediaType, supportedMediaTypes: Array<org.springframework.http.MediaType>)
+                constructor(contentType: org.springframework.http.MediaType, supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>)
                 /**
                  * Create a new HttpMediaTypeNotSupportedException.
                  * @param contentType the unsupported content type
@@ -29,12 +29,12 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(contentType: org.springframework.http.MediaType, supportedMediaTypes: Array<org.springframework.http.MediaType>, msg: string)
+                constructor(contentType: org.springframework.http.MediaType, supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>, msg: java.lang.String | string)
                 /**
                  * Return the HTTP request content type method that caused the failure.
                  */
                 // @ts-ignore
-                getContentType(): org.springframework.http.MediaType
+                public getContentType(): org.springframework.http.MediaType
             }
         }
     }

@@ -14,7 +14,7 @@ declare namespace org {
              * @see org.springframework.web.util.NestedServletException
              */
             // @ts-ignore
-            class NestedExceptionUtils extends java.lang.Object {
+            abstract class NestedExceptionUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -24,7 +24,7 @@ declare namespace org {
                  * @return the full exception message
                  */
                 // @ts-ignore
-                buildMessage(message: string, cause: Error): java.lang.String
+                public static buildMessage(message: java.lang.String | string, cause: java.lang.Throwable | Error): string
                 /**
                  * Retrieve the innermost cause of the given exception, if any.
                  * @param original the original exception to introspect
@@ -32,7 +32,7 @@ declare namespace org {
                  * @since 4.3.9
                  */
                 // @ts-ignore
-                getRootCause(original: Error): java.lang.Throwable
+                public static getRootCause(original: java.lang.Throwable | Error): Error
                 /**
                  * Retrieve the most specific cause of the given exception, that is,
                  * either the innermost cause (root cause) or the exception itself.
@@ -43,7 +43,7 @@ declare namespace org {
                  * @since 4.3.9
                  */
                 // @ts-ignore
-                getMostSpecificCause(original: Error): java.lang.Throwable
+                public static getMostSpecificCause(original: java.lang.Throwable | Error): Error
             }
         }
     }

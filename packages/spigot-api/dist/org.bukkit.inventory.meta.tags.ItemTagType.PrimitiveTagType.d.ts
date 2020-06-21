@@ -14,13 +14,13 @@ declare namespace org {
                         // @ts-ignore
                         class PrimitiveTagType<T> extends java.lang.Object implements org.bukkit.inventory.meta.tags.ItemTagType<T, T> {
                             // @ts-ignore
-                            getPrimitiveType(): java.lang.Class<T>
+                            public getPrimitiveType(): java.lang.Class<T>
                             // @ts-ignore
-                            getComplexType(): java.lang.Class<T>
+                            public getComplexType(): java.lang.Class<T>
                             // @ts-ignore
-                            toPrimitive(complex: T, context: org.bukkit.inventory.meta.tags.ItemTagAdapterContext): T
+                            public toPrimitive(complex: T, context: org.bukkit.inventory.meta.tags.ItemTagAdapterContext): T
                             // @ts-ignore
-                            fromPrimitive(primitive: T, context: org.bukkit.inventory.meta.tags.ItemTagAdapterContext): T
+                            public fromPrimitive(primitive: T, context: org.bukkit.inventory.meta.tags.ItemTagAdapterContext): T
                         }
                     }
                 }

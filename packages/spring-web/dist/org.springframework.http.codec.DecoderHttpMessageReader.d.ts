@@ -24,15 +24,15 @@ declare namespace org {
                      * Return the {@link Decoder} of this reader.
                      */
                     // @ts-ignore
-                    getDecoder(): <any>
+                    public getDecoder(): object
                     // @ts-ignore
-                    getReadableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getReadableMediaTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Determine the Content-Type of the HTTP message based on the
                      * "Content-Type" header or otherwise default to
@@ -43,16 +43,16 @@ declare namespace org {
                     // @ts-ignore
                     getContentType(inputMessage: org.springframework.http.HttpMessage): org.springframework.http.MediaType
                     // @ts-ignore
-                    read(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public read(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    readMono(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public readMono(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Get additional hints for decoding for example based on the server request
                      * or annotations from controller method parameters. By default, delegate to
                      * the decoder if it is an instance of {@link HttpMessageDecoder}.
                      */
                     // @ts-ignore
-                    getReadHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                    getReadHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

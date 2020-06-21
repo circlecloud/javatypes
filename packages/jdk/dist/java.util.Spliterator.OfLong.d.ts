@@ -6,13 +6,13 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface OfLong extends java.util.Spliterator.OfPrimitive<java.lang.Long, java.util.function.LongConsumer, java.util.Spliterator.OfLong> {
+            interface OfLong extends java.util.Spliterator.OfPrimitive<java.lang.Long | number, java.util.function$.LongConsumer, java.util.Spliterator.OfLong> {
                 // @ts-ignore
                 trySplit(): java.util.Spliterator.OfLong
                 // @ts-ignore
-                tryAdvance(action: java.util.function.LongConsumer | java.util.function$.LongConsumer): boolean
+                tryAdvance(action: java.util.function$.LongConsumer): boolean
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.LongConsumer | java.util.function$.LongConsumer): void
+                forEachRemaining(action: java.util.function$.LongConsumer): void
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code LongConsumer} then it is cast
@@ -23,7 +23,7 @@ declare namespace java {
                  *  {@link #tryAdvance(java.util.function.LongConsumer)}.
                  */
                 // @ts-ignore
-                tryAdvance(action: java.util.function.Consumer<any super java.lang.Long> | java.util.function$.Consumer<? super java.lang.Long>): boolean
+                tryAdvance(action: java.util.function$.Consumer<any>): boolean
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code LongConsumer} then it is cast
@@ -34,7 +34,7 @@ declare namespace java {
                  *  {@link #forEachRemaining(java.util.function.LongConsumer)}.
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.Consumer<any super java.lang.Long> | java.util.function$.Consumer<? super java.lang.Long>): void
+                forEachRemaining(action: java.util.function$.Consumer<any>): void
             }
         }
     }

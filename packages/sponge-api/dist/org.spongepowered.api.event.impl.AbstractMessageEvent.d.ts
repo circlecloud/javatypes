@@ -9,7 +9,7 @@ declare namespace org {
                      * instance to hold the message data.
                      */
                     // @ts-ignore
-                    class AbstractMessageEvent extends org.spongepowered.api.event.impl.AbstractEvent implements org.spongepowered.api.event.message.MessageEvent {
+                    abstract class AbstractMessageEvent extends org.spongepowered.api.event.impl.AbstractEvent implements org.spongepowered.api.event.message.MessageEvent {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore

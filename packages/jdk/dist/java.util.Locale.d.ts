@@ -372,7 +372,7 @@ declare namespace java {
              * @exception NullPointerException thrown if any argument is null.
              */
             // @ts-ignore
-            constructor(language: string, country: string, variant: string)
+            constructor(language: java.lang.String | string, country: java.lang.String | string, variant: java.lang.String | string)
             /**
              * Construct a locale from language and country.
              * This constructor normalizes the language value to lowercase and
@@ -395,7 +395,7 @@ declare namespace java {
              * @exception NullPointerException thrown if either argument is null.
              */
             // @ts-ignore
-            constructor(language: string, country: string)
+            constructor(language: java.lang.String | string, country: java.lang.String | string)
             /**
              * Construct a locale from a language code.
              * This constructor normalizes the language value to lowercase.
@@ -416,112 +416,112 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(language: string)
+            constructor(language: java.lang.String | string)
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly ENGLISH: java.util.Locale
+            public static readonly ENGLISH: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly FRENCH: java.util.Locale
+            public static readonly FRENCH: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly GERMAN: java.util.Locale
+            public static readonly GERMAN: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly ITALIAN: java.util.Locale
+            public static readonly ITALIAN: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly JAPANESE: java.util.Locale
+            public static readonly JAPANESE: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly KOREAN: java.util.Locale
+            public static readonly KOREAN: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly CHINESE: java.util.Locale
+            public static readonly CHINESE: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly SIMPLIFIED_CHINESE: java.util.Locale
+            public static readonly SIMPLIFIED_CHINESE: java.util.Locale
             /**
              * Useful constant for language.
              */
             // @ts-ignore
-            readonly TRADITIONAL_CHINESE: java.util.Locale
+            public static readonly TRADITIONAL_CHINESE: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly FRANCE: java.util.Locale
+            public static readonly FRANCE: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly GERMANY: java.util.Locale
+            public static readonly GERMANY: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly ITALY: java.util.Locale
+            public static readonly ITALY: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly JAPAN: java.util.Locale
+            public static readonly JAPAN: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly KOREA: java.util.Locale
+            public static readonly KOREA: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly CHINA: java.util.Locale
+            public static readonly CHINA: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly PRC: java.util.Locale
+            public static readonly PRC: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly TAIWAN: java.util.Locale
+            public static readonly TAIWAN: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly UK: java.util.Locale
+            public static readonly UK: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly US: java.util.Locale
+            public static readonly US: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly CANADA: java.util.Locale
+            public static readonly CANADA: java.util.Locale
             /**
              * Useful constant for country.
              */
             // @ts-ignore
-            readonly CANADA_FRENCH: java.util.Locale
+            public static readonly CANADA_FRENCH: java.util.Locale
             /**
              * Useful constant for the root locale.  The root locale is the locale whose
              * language, country, and variant are empty ("") strings.  This is regarded
@@ -530,7 +530,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly ROOT: java.util.Locale
+            public static readonly ROOT: java.util.Locale
             /**
              * The key for the private use extension ('x').
              * @see #getExtension(char)
@@ -538,7 +538,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            readonly PRIVATE_USE_EXTENSION: string
+            public static readonly PRIVATE_USE_EXTENSION: string
             /**
              * The key for Unicode locale extension ('u').
              * @see #getExtension(char)
@@ -546,7 +546,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            readonly UNICODE_LOCALE_EXTENSION: string
+            public static readonly UNICODE_LOCALE_EXTENSION: string
             /**
              * Gets the current value of the default locale for this instance
              * of the Java Virtual Machine.
@@ -559,7 +559,7 @@ declare namespace java {
              * @return the default locale for this instance of the Java Virtual Machine
              */
             // @ts-ignore
-            getDefault(): java.util.Locale
+            public static getDefault(): java.util.Locale
             /**
              * Gets the current value of the default locale for the specified Category
              * for this instance of the Java Virtual Machine.
@@ -576,7 +576,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getDefault(category: java.util.Locale.Category): java.util.Locale
+            public static getDefault(category: java.util.Locale.Category): java.util.Locale
             /**
              * Sets the default locale for this instance of the Java Virtual Machine.
              * This does not affect the host locale.
@@ -605,7 +605,7 @@ declare namespace java {
              * @see java.util.PropertyPermission
              */
             // @ts-ignore
-            setDefault(newLocale: java.util.Locale): void
+            public static setDefault(newLocale: java.util.Locale): void
             /**
              * Sets the default locale for the specified Category for this instance
              * of the Java Virtual Machine. This does not affect the host locale.
@@ -634,7 +634,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setDefault(category: java.util.Locale.Category, newLocale: java.util.Locale): void
+            public static setDefault(category: java.util.Locale.Category, newLocale: java.util.Locale): void
             /**
              * Returns an array of all installed locales.
              * The returned array represents the union of locales supported
@@ -645,7 +645,7 @@ declare namespace java {
              * @return An array of installed locales.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Returns a list of all 2-letter country codes defined in ISO 3166.
              * Can be used to create Locales.
@@ -657,7 +657,7 @@ declare namespace java {
              * @return An array of ISO 3166 two-letter country codes.
              */
             // @ts-ignore
-            getISOCountries(): java.lang.String[]
+            public static getISOCountries(): string[]
             /**
              * Returns a list of all 2-letter language codes defined in ISO 639.
              * Can be used to create Locales.
@@ -674,7 +674,7 @@ declare namespace java {
              * @return Am array of ISO 639 two-letter language codes.
              */
             // @ts-ignore
-            getISOLanguages(): java.lang.String[]
+            public static getISOLanguages(): string[]
             /**
              * Returns the language code of this Locale.
              * <p><b>Note:</b> ISO 639 is not a stable standard&mdash; some languages' codes have changed.
@@ -694,7 +694,7 @@ declare namespace java {
              * @see #getDisplayLanguage
              */
             // @ts-ignore
-            getLanguage(): java.lang.String
+            public getLanguage(): string
             /**
              * Returns the script for this locale, which should
              * either be the empty string or an ISO 15924 4-letter script
@@ -705,7 +705,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getScript(): java.lang.String
+            public getScript(): string
             /**
              * Returns the country/region code for this locale, which should
              * either be the empty string, an uppercase ISO 3166 2-letter code,
@@ -714,14 +714,14 @@ declare namespace java {
              * @see #getDisplayCountry
              */
             // @ts-ignore
-            getCountry(): java.lang.String
+            public getCountry(): string
             /**
              * Returns the variant code for this locale.
              * @return The variant code, or the empty string if none is defined.
              * @see #getDisplayVariant
              */
             // @ts-ignore
-            getVariant(): java.lang.String
+            public getVariant(): string
             /**
              * Returns {@code true} if this {@code Locale} has any <a href="#def_extensions">
              * extensions</a>.
@@ -729,7 +729,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hasExtensions(): boolean
+            public hasExtensions(): boolean
             /**
              * Returns a copy of this {@code Locale} with no <a href="#def_extensions">
              * extensions</a>. If this {@code Locale} has no extensions, this {@code Locale}
@@ -739,7 +739,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stripExtensions(): java.util.Locale
+            public stripExtensions(): java.util.Locale
             /**
              * Returns the extension (or private use) value associated with
              * the specified key, or null if there is no extension
@@ -755,7 +755,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getExtension(key: string): java.lang.String
+            public getExtension(key: string): string
             /**
              * Returns the set of extension keys associated with this locale, or the
              * empty set if it has no extensions. The returned set is unmodifiable.
@@ -765,7 +765,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getExtensionKeys(): java.util.Set<java.lang.Character>
+            public getExtensionKeys(): Array<java.lang.Character>
             /**
              * Returns the set of unicode locale attributes associated with
              * this locale, or the empty set if it has no attributes. The
@@ -774,7 +774,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getUnicodeLocaleAttributes(): java.util.Set<java.lang.String>
+            public getUnicodeLocaleAttributes(): Array<java.lang.String | string>
             /**
              * Returns the Unicode locale type associated with the specified Unicode locale key
              * for this locale. Returns the empty string for keys that are defined with no type.
@@ -789,7 +789,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getUnicodeLocaleType(key: string): java.lang.String
+            public getUnicodeLocaleType(key: java.lang.String | string): string
             /**
              * Returns the set of Unicode locale keys defined by this locale, or the empty set if
              * this locale has none.  The returned set is immutable.  Keys are all lower case.
@@ -798,7 +798,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getUnicodeLocaleKeys(): java.util.Set<java.lang.String>
+            public getUnicodeLocaleKeys(): Array<java.lang.String | string>
             /**
              * Returns a string representation of this <code>Locale</code>
              * object, consisting of language, country, variant, script,
@@ -835,7 +835,7 @@ declare namespace java {
              * @see #toLanguageTag
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a well-formed IETF BCP 47 language tag representing
              * this locale.
@@ -892,7 +892,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            toLanguageTag(): java.lang.String
+            public toLanguageTag(): string
             /**
              * Returns a locale for the specified IETF BCP 47 language tag string.
              * <p>If the specified language tag contains any ill-formed subtags,
@@ -994,7 +994,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            forLanguageTag(languageTag: string): java.util.Locale
+            public static forLanguageTag(languageTag: java.lang.String | string): java.util.Locale
             /**
              * Returns a three-letter abbreviation of this locale's language.
              * If the language matches an ISO 639-1 two-letter code, the
@@ -1009,7 +1009,7 @@ declare namespace java {
              *  three-letter language abbreviation is not available for this locale.
              */
             // @ts-ignore
-            getISO3Language(): java.lang.String
+            public getISO3Language(): string
             /**
              * Returns a three-letter abbreviation for this locale's country.
              * If the country matches an ISO 3166-1 alpha-2 code, the
@@ -1022,7 +1022,7 @@ declare namespace java {
              *  three-letter country abbreviation is not available for this locale.
              */
             // @ts-ignore
-            getISO3Country(): java.lang.String
+            public getISO3Country(): string
             /**
              * Returns a name for the locale's language that is appropriate for display to the
              * user.
@@ -1041,7 +1041,7 @@ declare namespace java {
              * @return The name of the display language.
              */
             // @ts-ignore
-            getDisplayLanguage(): java.lang.String
+            public getDisplayLanguage(): string
             /**
              * Returns a name for the locale's language that is appropriate for display to the
              * user.
@@ -1059,7 +1059,7 @@ declare namespace java {
              * @exception NullPointerException if <code>inLocale</code> is <code>null</code>
              */
             // @ts-ignore
-            getDisplayLanguage(inLocale: java.util.Locale): java.lang.String
+            public getDisplayLanguage(inLocale: java.util.Locale): string
             /**
              * Returns a name for the the locale's script that is appropriate for display to
              * the user. If possible, the name will be localized for the default
@@ -1070,7 +1070,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getDisplayScript(): java.lang.String
+            public getDisplayScript(): string
             /**
              * Returns a name for the locale's script that is appropriate
              * for display to the user. If possible, the name will be
@@ -1083,7 +1083,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getDisplayScript(inLocale: java.util.Locale): java.lang.String
+            public getDisplayScript(inLocale: java.util.Locale): string
             /**
              * Returns a name for the locale's country that is appropriate for display to the
              * user.
@@ -1102,7 +1102,7 @@ declare namespace java {
              * @return The name of the country appropriate to the locale.
              */
             // @ts-ignore
-            getDisplayCountry(): java.lang.String
+            public getDisplayCountry(): string
             /**
              * Returns a name for the locale's country that is appropriate for display to the
              * user.
@@ -1120,7 +1120,7 @@ declare namespace java {
              * @exception NullPointerException if <code>inLocale</code> is <code>null</code>
              */
             // @ts-ignore
-            getDisplayCountry(inLocale: java.util.Locale): java.lang.String
+            public getDisplayCountry(inLocale: java.util.Locale): string
             /**
              * Returns a name for the locale's variant code that is appropriate for display to the
              * user.  If possible, the name will be localized for the default
@@ -1129,7 +1129,7 @@ declare namespace java {
              * @return The name of the display variant code appropriate to the locale.
              */
             // @ts-ignore
-            getDisplayVariant(): java.lang.String
+            public getDisplayVariant(): string
             /**
              * Returns a name for the locale's variant code that is appropriate for display to the
              * user.  If possible, the name will be localized for inLocale.  If the locale
@@ -1139,7 +1139,7 @@ declare namespace java {
              * @exception NullPointerException if <code>inLocale</code> is <code>null</code>
              */
             // @ts-ignore
-            getDisplayVariant(inLocale: java.util.Locale): java.lang.String
+            public getDisplayVariant(inLocale: java.util.Locale): string
             /**
              * Returns a name for the locale that is appropriate for display to the
              * user. This will be the values returned by getDisplayLanguage(),
@@ -1159,7 +1159,7 @@ declare namespace java {
              * @return The name of the locale appropriate to display.
              */
             // @ts-ignore
-            getDisplayName(): java.lang.String
+            public getDisplayName(): string
             /**
              * Returns a name for the locale that is appropriate for display
              * to the user.  This will be the values returned by
@@ -1182,19 +1182,19 @@ declare namespace java {
              * @throws NullPointerException if <code>inLocale</code> is <code>null</code>
              */
             // @ts-ignore
-            getDisplayName(inLocale: java.util.Locale): java.lang.String
+            public getDisplayName(inLocale: java.util.Locale): string
             /**
              * Overrides Cloneable.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Override hashCode.
              * Since Locales are often used in hashtables, caches the value
              * for speed.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns true if this Locale is equal to another object.  A Locale is
              * deemed equal to another Locale with identical language, script, country,
@@ -1202,7 +1202,7 @@ declare namespace java {
              * @return true if this Locale is equal to the specified object.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a list of matching {@code Locale} instances using the filtering
              * mechanism defined in RFC 4647.
@@ -1221,7 +1221,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            filter(priorityList: Array<java.util.Locale.LanguageRange>, locales: Array<java.util.Locale>, mode: java.util.Locale.FilteringMode): java.util.List<java.util.Locale>
+            public static filter(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, locales: java.util.Collection<java.util.Locale> | Array<java.util.Locale>, mode: java.util.Locale.FilteringMode): Array<java.util.Locale>
             /**
              * Returns a list of matching {@code Locale} instances using the filtering
              * mechanism defined in RFC 4647. This is equivalent to
@@ -1238,7 +1238,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            filter(priorityList: Array<java.util.Locale.LanguageRange>, locales: Array<java.util.Locale>): java.util.List<java.util.Locale>
+            public static filter(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, locales: java.util.Collection<java.util.Locale> | Array<java.util.Locale>): Array<java.util.Locale>
             /**
              * Returns a list of matching languages tags using the basic filtering
              * mechanism defined in RFC 4647.
@@ -1257,7 +1257,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            filterTags(priorityList: Array<java.util.Locale.LanguageRange>, tags: Array<java.lang.String>, mode: java.util.Locale.FilteringMode): java.util.List<java.lang.String>
+            public static filterTags(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, tags: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>, mode: java.util.Locale.FilteringMode): Array<java.lang.String | string>
             /**
              * Returns a list of matching languages tags using the basic filtering
              * mechanism defined in RFC 4647. This is equivalent to
@@ -1274,7 +1274,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            filterTags(priorityList: Array<java.util.Locale.LanguageRange>, tags: Array<java.lang.String>): java.util.List<java.lang.String>
+            public static filterTags(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, tags: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>): Array<java.lang.String | string>
             /**
              * Returns a {@code Locale} instance for the best-matching language
              * tag using the lookup mechanism defined in RFC 4647.
@@ -1288,7 +1288,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            lookup(priorityList: Array<java.util.Locale.LanguageRange>, locales: Array<java.util.Locale>): java.util.Locale
+            public static lookup(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, locales: java.util.Collection<java.util.Locale> | Array<java.util.Locale>): java.util.Locale
             /**
              * Returns the best-matching language tag using the lookup mechanism
              * defined in RFC 4647.
@@ -1302,7 +1302,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            lookupTag(priorityList: Array<java.util.Locale.LanguageRange>, tags: Array<java.lang.String>): java.lang.String
+            public static lookupTag(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, tags: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>): string
         }
     }
 }

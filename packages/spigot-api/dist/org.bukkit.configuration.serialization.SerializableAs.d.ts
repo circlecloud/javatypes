@@ -16,7 +16,7 @@ declare namespace org {
                  * @see ConfigurationSerialization#registerClass(Class, String)
                  */
                 // @ts-ignore
-                class SerializableAs implements java.lang.annotation.Annotation {
+                abstract class SerializableAs implements java.lang.annotation.Annotation {
                 }
             }
         }

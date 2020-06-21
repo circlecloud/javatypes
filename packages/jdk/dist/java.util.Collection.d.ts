@@ -108,7 +108,7 @@ declare namespace java {
              * @return the number of elements in this collection
              */
             // @ts-ignore
-            size(): int
+            size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this collection contains no elements.
              * @return <tt>true</tt> if this collection contains no elements
@@ -131,7 +131,7 @@ declare namespace java {
              *          (<a href="#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            contains(o: any): boolean
+            contains(o: java.lang.Object | any): boolean
             /**
              * Returns an iterator over the elements in this collection.  There are no
              * guarantees concerning the order in which the elements are returned
@@ -155,7 +155,7 @@ declare namespace java {
              * @return an array containing all of the elements in this collection
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            toArray(): any[]
             /**
              * Returns an array containing all of the elements in this collection;
              * the runtime type of the returned array is that of the specified array.
@@ -246,7 +246,7 @@ declare namespace java {
              *          is not supported by this collection
              */
             // @ts-ignore
-            remove(o: any): boolean
+            remove(o: java.lang.Object | any): boolean
             /**
              * Returns <tt>true</tt> if this collection contains all of the elements
              * in the specified collection.
@@ -265,7 +265,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            containsAll(c: Array<any>): boolean
+            containsAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Adds all of the elements in the specified collection to this collection
              * (optional operation).  The behavior of this operation is undefined if
@@ -290,7 +290,7 @@ declare namespace java {
              * @see #add(Object)
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes all of this collection's elements that are also contained in the
              * specified collection (optional operation).  After this call returns,
@@ -314,7 +314,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            removeAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes all of the elements of this collection that satisfy the given
              * predicate.  Errors or runtime exceptions thrown during iteration or by
@@ -335,7 +335,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            removeIf(filter: java.util.function.Predicate<any super E> | java.util.function$.Predicate<? super E>): boolean
+            removeIf(filter: java.util.function$.Predicate<any>): boolean
             /**
              * Retains only the elements in this collection that are contained in the
              * specified collection (optional operation).  In other words, removes from
@@ -358,7 +358,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            retainAll(c: Array<any>): boolean
+            retainAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes all of the elements from this collection (optional operation).
              * The collection will be empty after this method returns.
@@ -397,7 +397,7 @@ declare namespace java {
              * @see List#equals(Object)
              */
             // @ts-ignore
-            equals(o: any): boolean
+            equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this collection.  While the
              * <tt>Collection</tt> interface adds no stipulations to the general
@@ -412,7 +412,7 @@ declare namespace java {
              * @see Object#equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
             /**
              * Creates a {@link Spliterator} over the elements in this collection.
              * Implementations should document characteristic values reported by the

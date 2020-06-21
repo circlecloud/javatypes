@@ -10,7 +10,7 @@ declare namespace org {
                         // @ts-ignore
                         interface ProjectileSource {
                             // @ts-ignore
-                            
+                            readonly UNKNOWN: org.spongepowered.api.entity.projectile.source.UnknownProjectileSource
                             /**
                              * Launches a {@link Projectile} from this projectile source.
                              * @param projectileClass The class of the projectile

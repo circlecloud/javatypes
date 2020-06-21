@@ -20,7 +20,7 @@ declare namespace org {
                          * @param attributeValue the attribute value to store
                          */
                         // @ts-ignore
-                        storeAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: string, attributeValue: any): void
+                        storeAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string, attributeValue: java.lang.Object | any): void
                         /**
                          * Retrieve the specified attribute from the backend session.
                          * <p>This will typically be called with the expectation that the
@@ -31,7 +31,7 @@ declare namespace org {
                          * @return the current attribute value, or {#code null} if none
                          */
                         // @ts-ignore
-                        retrieveAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: string): java.lang.Object
+                        retrieveAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string): any
                         /**
                          * Clean up the specified attribute in the backend session.
                          * <p>Indicates that the attribute name will not be used anymore.
@@ -39,7 +39,7 @@ declare namespace org {
                          * @param attributeName the name of the attribute
                          */
                         // @ts-ignore
-                        cleanupAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: string): void
+                        cleanupAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string): void
                     }
                 }
             }

@@ -65,7 +65,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class AsynchronousFileChannel extends java.lang.Object implements java.nio.channels.AsynchronousChannel {
+            abstract class AsynchronousFileChannel extends java.lang.Object implements java.nio.channels.AsynchronousChannel {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -180,7 +180,7 @@ declare namespace java {
                  *           write access if the file is opened for writing
                  */
                 // @ts-ignore
-                open(file: java.nio.file.Path, options: Array<java.nio.file.OpenOption>, executor: java.util.concurrent.ExecutorService, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.AsynchronousFileChannel
+                public static open(file: java.nio.file.Path, options: java.util.Set<any> | Array<any>, executor: java.util.concurrent.ExecutorService, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.AsynchronousFileChannel
                 /**
                  * Opens or creates a file for reading and/or writing, returning an
                  * asynchronous file channel to access the file.
@@ -219,7 +219,7 @@ declare namespace java {
                  *           write access if the file is opened for writing
                  */
                 // @ts-ignore
-                open(file: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.nio.channels.AsynchronousFileChannel
+                public static open(file: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.nio.channels.AsynchronousFileChannel
                 /**
                  * Returns the current size of this channel's file.
                  * @return The current size of this channel's file, measured in bytes
@@ -229,7 +229,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract size(): long
+                public abstract size(): number /*long*/
                 /**
                  * Truncates this channel's file to the given size.
                  * <p> If the given size is less than the file's current size then the file
@@ -249,7 +249,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract truncate(size: number /*long*/): java.nio.channels.AsynchronousFileChannel
+                public abstract truncate(size: number /*long*/): java.nio.channels.AsynchronousFileChannel
                 /**
                  * Forces any updates to this channel's file to be written to the storage
                  * device that contains it.
@@ -286,7 +286,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract force(metaData: boolean): void
+                public abstract force(metaData: boolean): void
                 /**
                  * Acquires a lock on the given region of this channel's file.
                  * <p> This method initiates an operation to acquire a lock on the given
@@ -350,7 +350,7 @@ declare namespace java {
                  *           If {#code shared} is false but this channel was not opened for writing
                  */
                 // @ts-ignore
-                abstract lock<A>(position: number /*long*/, size: number /*long*/, shared: boolean, attachment: A, handler: java.nio.channels.CompletionHandler<java.nio.channels.FileLock, any super A>): void
+                public abstract lock<A>(position: number /*long*/, size: number /*long*/, shared: boolean, attachment: A, handler: java.nio.channels.CompletionHandler<java.nio.channels.FileLock, any>): void
                 /**
                  * Acquires an exclusive lock on this channel's file.
                  * <p> This method initiates an operation to acquire a lock on the given
@@ -376,7 +376,7 @@ declare namespace java {
                  *           If this channel was not opened for writing
                  */
                 // @ts-ignore
-                lock<A>(attachment: A, handler: java.nio.channels.CompletionHandler<java.nio.channels.FileLock, any super A>): void
+                public lock<A>(attachment: A, handler: java.nio.channels.CompletionHandler<java.nio.channels.FileLock, any>): void
                 /**
                  * Acquires a lock on the given region of this channel's file.
                  * <p> This method initiates an operation to acquire a lock on the given
@@ -409,7 +409,7 @@ declare namespace java {
                  *           If {#code shared} is false but this channel was not opened for writing
                  */
                 // @ts-ignore
-                abstract lock(position: number /*long*/, size: number /*long*/, shared: boolean): java.util.concurrent.Future<java.nio.channels.FileLock>
+                public abstract lock(position: number /*long*/, size: number /*long*/, shared: boolean): java.util.concurrent.Future<java.nio.channels.FileLock>
                 /**
                  * Acquires an exclusive lock on this channel's file.
                  * <p> This method initiates an operation to acquire an exclusive lock on this
@@ -429,7 +429,7 @@ declare namespace java {
                  *           If this channel was not opened for writing
                  */
                 // @ts-ignore
-                lock(): java.util.concurrent.Future<java.nio.channels.FileLock>
+                public lock(): java.util.concurrent.Future<java.nio.channels.FileLock>
                 /**
                  * Attempts to acquire a lock on the given region of this channel's file.
                  * <p> This method does not block. An invocation always returns immediately,
@@ -469,7 +469,7 @@ declare namespace java {
                  * @see #tryLock()
                  */
                 // @ts-ignore
-                abstract tryLock(position: number /*long*/, size: number /*long*/, shared: boolean): java.nio.channels.FileLock
+                public abstract tryLock(position: number /*long*/, size: number /*long*/, shared: boolean): java.nio.channels.FileLock
                 /**
                  * Attempts to acquire an exclusive lock on this channel's file.
                  * <p> An invocation of this method of the form {@code ch.tryLock()}
@@ -495,7 +495,7 @@ declare namespace java {
                  * @see #tryLock(long,long,boolean)
                  */
                 // @ts-ignore
-                tryLock(): java.nio.channels.FileLock
+                public tryLock(): java.nio.channels.FileLock
                 /**
                  * Reads a sequence of bytes from this channel into the given buffer,
                  * starting at the given file position.
@@ -526,7 +526,7 @@ declare namespace java {
                  *           If this channel was not opened for reading
                  */
                 // @ts-ignore
-                abstract read<A>(dst: java.nio.ByteBuffer, position: number /*long*/, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                public abstract read<A>(dst: java.nio.ByteBuffer, position: number /*long*/, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * Reads a sequence of bytes from this channel into the given buffer,
                  * starting at the given file position.
@@ -553,7 +553,7 @@ declare namespace java {
                  *           If this channel was not opened for reading
                  */
                 // @ts-ignore
-                abstract read(dst: java.nio.ByteBuffer, position: number /*long*/): java.util.concurrent.Future<java.lang.Integer>
+                public abstract read(dst: java.nio.ByteBuffer, position: number /*long*/): java.util.concurrent.Future<java.lang.Integer | number>
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer, starting
                  * at the given file position.
@@ -581,7 +581,7 @@ declare namespace java {
                  *           If this channel was not opened for writing
                  */
                 // @ts-ignore
-                abstract write<A>(src: java.nio.ByteBuffer, position: number /*long*/, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                public abstract write<A>(src: java.nio.ByteBuffer, position: number /*long*/, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer, starting
                  * at the given file position.
@@ -609,7 +609,7 @@ declare namespace java {
                  *           If this channel was not opened for writing
                  */
                 // @ts-ignore
-                abstract write(src: java.nio.ByteBuffer, position: number /*long*/): java.util.concurrent.Future<java.lang.Integer>
+                public abstract write(src: java.nio.ByteBuffer, position: number /*long*/): java.util.concurrent.Future<java.lang.Integer | number>
             }
         }
     }

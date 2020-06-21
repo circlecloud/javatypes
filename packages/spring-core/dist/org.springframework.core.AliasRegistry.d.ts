@@ -17,14 +17,14 @@ declare namespace org {
                  *  and may not be overridden
                  */
                 // @ts-ignore
-                registerAlias(name: string, alias: string): void
+                registerAlias(name: java.lang.String | string, alias: java.lang.String | string): void
                 /**
                  * Remove the specified alias from this registry.
                  * @param alias the alias to remove
                  * @throws IllegalStateException if no such alias was found
                  */
                 // @ts-ignore
-                removeAlias(alias: string): void
+                removeAlias(alias: java.lang.String | string): void
                 /**
                  * Determine whether the given name is defined as an alias
                  * (as opposed to the name of an actually registered component).
@@ -32,14 +32,14 @@ declare namespace org {
                  * @return whether the given name is an alias
                  */
                 // @ts-ignore
-                isAlias(name: string): boolean
+                isAlias(name: java.lang.String | string): boolean
                 /**
                  * Return the aliases for the given name, if defined.
                  * @param name the name to check for aliases
                  * @return the aliases, or an empty array if none
                  */
                 // @ts-ignore
-                getAliases(name: string): java.lang.String[]
+                getAliases(name: java.lang.String | string): string[]
             }
         }
     }

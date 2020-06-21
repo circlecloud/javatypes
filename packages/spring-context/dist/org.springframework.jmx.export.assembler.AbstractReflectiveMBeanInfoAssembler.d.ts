@@ -26,116 +26,116 @@ declare namespace org {
                      * @see #populateOperationDescriptor
                      */
                     // @ts-ignore
-                    class AbstractReflectiveMBeanInfoAssembler extends org.springframework.jmx.export.assembler.AbstractMBeanInfoAssembler {
+                    abstract class AbstractReflectiveMBeanInfoAssembler extends org.springframework.jmx.export.assembler.AbstractMBeanInfoAssembler {
                         // @ts-ignore
                         constructor()
                         /**
                          * Identifies a getter method in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_GET_METHOD: string
+                        static readonly FIELD_GET_METHOD: java.lang.String | string
                         /**
                          * Identifies a setter method in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_SET_METHOD: string
+                        static readonly FIELD_SET_METHOD: java.lang.String | string
                         /**
                          * Constant identifier for the role field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_ROLE: string
+                        static readonly FIELD_ROLE: java.lang.String | string
                         /**
                          * Constant identifier for the getter role field value in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly ROLE_GETTER: string
+                        static readonly ROLE_GETTER: java.lang.String | string
                         /**
                          * Constant identifier for the setter role field value in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly ROLE_SETTER: string
+                        static readonly ROLE_SETTER: java.lang.String | string
                         /**
                          * Identifies an operation (method) in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly ROLE_OPERATION: string
+                        static readonly ROLE_OPERATION: java.lang.String | string
                         /**
                          * Constant identifier for the visibility field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_VISIBILITY: string
+                        static readonly FIELD_VISIBILITY: java.lang.String | string
                         /**
                          * Lowest visibility, used for operations that correspond to
                          * accessors or mutators for attributes.
                          * @see #FIELD_VISIBILITY
                          */
                         // @ts-ignore
-                        readonly ATTRIBUTE_OPERATION_VISIBILITY: number /*int*/
+                        static readonly ATTRIBUTE_OPERATION_VISIBILITY: number /*int*/
                         /**
                          * Constant identifier for the class field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_CLASS: string
+                        static readonly FIELD_CLASS: java.lang.String | string
                         /**
                          * Constant identifier for the log field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_LOG: string
+                        static readonly FIELD_LOG: java.lang.String | string
                         /**
                          * Constant identifier for the logfile field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_LOG_FILE: string
+                        static readonly FIELD_LOG_FILE: java.lang.String | string
                         /**
                          * Constant identifier for the currency time limit field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_CURRENCY_TIME_LIMIT: string
+                        static readonly FIELD_CURRENCY_TIME_LIMIT: java.lang.String | string
                         /**
                          * Constant identifier for the default field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_DEFAULT: string
+                        static readonly FIELD_DEFAULT: java.lang.String | string
                         /**
                          * Constant identifier for the persistPolicy field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_PERSIST_POLICY: string
+                        static readonly FIELD_PERSIST_POLICY: java.lang.String | string
                         /**
                          * Constant identifier for the persistPeriod field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_PERSIST_PERIOD: string
+                        static readonly FIELD_PERSIST_PERIOD: java.lang.String | string
                         /**
                          * Constant identifier for the persistLocation field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_PERSIST_LOCATION: string
+                        static readonly FIELD_PERSIST_LOCATION: java.lang.String | string
                         /**
                          * Constant identifier for the persistName field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_PERSIST_NAME: string
+                        static readonly FIELD_PERSIST_NAME: java.lang.String | string
                         /**
                          * Constant identifier for the displayName field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_DISPLAY_NAME: string
+                        static readonly FIELD_DISPLAY_NAME: java.lang.String | string
                         /**
                          * Constant identifier for the units field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_UNITS: string
+                        static readonly FIELD_UNITS: java.lang.String | string
                         /**
                          * Constant identifier for the metricType field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_METRIC_TYPE: string
+                        static readonly FIELD_METRIC_TYPE: java.lang.String | string
                         /**
                          * Constant identifier for the custom metricCategory field in a JMX {@link Descriptor}.
                          */
                         // @ts-ignore
-                        readonly FIELD_METRIC_CATEGORY: string
+                        static readonly FIELD_METRIC_CATEGORY: java.lang.String | string
                         /**
                          * Set the default for the JMX field "currencyTimeLimit".
                          * The default will usually indicate to never cache attribute values.
@@ -157,12 +157,12 @@ declare namespace org {
                          * @see #applyCurrencyTimeLimit(javax.management.Descriptor, int)
                          */
                         // @ts-ignore
-                        setDefaultCurrencyTimeLimit(defaultCurrencyTimeLimit: number): void
+                        public setDefaultCurrencyTimeLimit(defaultCurrencyTimeLimit: java.lang.Integer | number): void
                         /**
                          * Return default value for the JMX field "currencyTimeLimit", if any.
                          */
                         // @ts-ignore
-                        getDefaultCurrencyTimeLimit(): java.lang.Integer
+                        getDefaultCurrencyTimeLimit(): number
                         /**
                          * Set whether to use strict casing for attributes. Enabled by default.
                          * <p>When using strict casing, a JavaBean property with a getter such as
@@ -171,7 +171,7 @@ declare namespace org {
                          * {@code foo}.
                          */
                         // @ts-ignore
-                        setUseStrictCasing(useStrictCasing: boolean): void
+                        public setUseStrictCasing(useStrictCasing: boolean): void
                         /**
                          * Return whether strict casing for attributes is enabled.
                          */
@@ -194,7 +194,7 @@ declare namespace org {
                          * @see #getClassForDescriptor(Object)
                          */
                         // @ts-ignore
-                        setExposeClassDescriptor(exposeClassDescriptor: boolean): void
+                        public setExposeClassDescriptor(exposeClassDescriptor: boolean): void
                         /**
                          * Return whether to expose the JMX descriptor field "class" for managed operations.
                          */
@@ -206,7 +206,7 @@ declare namespace org {
                          * <p>Default is a {@link DefaultParameterNameDiscoverer}.
                          */
                         // @ts-ignore
-                        setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
+                        public setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
                         /**
                          * Return the ParameterNameDiscoverer to use for resolving method parameter
                          * names if needed (may be {@code null} in order to skip parameter detection).
@@ -226,7 +226,7 @@ declare namespace org {
                          * @see #populateAttributeDescriptor
                          */
                         // @ts-ignore
-                        getAttributeInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanAttributeInfo[]
+                        getAttributeInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanAttributeInfo[]
                         /**
                          * Iterate through all methods on the MBean class and gives subclasses the chance
                          * to vote on their inclusion. If a particular method corresponds to the accessor
@@ -240,7 +240,7 @@ declare namespace org {
                          * @see #populateOperationDescriptor
                          */
                         // @ts-ignore
-                        getOperationInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanOperationInfo[]
+                        getOperationInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanOperationInfo[]
                         /**
                          * Creates an instance of {@code ModelMBeanOperationInfo} for the
                          * given method. Populates the parameter info for the operation.
@@ -252,7 +252,7 @@ declare namespace org {
                          * @return the {#code ModelMBeanOperationInfo}
                          */
                         // @ts-ignore
-                        createModelMBeanOperationInfo(method: java.lang.reflect.Method, name: string, beanKey: string): javax.management.modelmbean.ModelMBeanOperationInfo
+                        createModelMBeanOperationInfo(method: java.lang.reflect.Method, name: java.lang.String | string, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanOperationInfo
                         /**
                          * Return the class to be used for the JMX descriptor field "class".
                          * Only applied when the "exposeClassDescriptor" property is "true".
@@ -265,7 +265,7 @@ declare namespace org {
                          * @see org.springframework.aop.framework.AopProxyUtils#proxiedUserInterfaces(Object)
                          */
                         // @ts-ignore
-                        getClassForDescriptor(managedBean: any): java.lang.Class<?>
+                        getClassForDescriptor(managedBean: java.lang.Object | any): java.lang.Class<any>
                         /**
                          * Allows subclasses to vote on the inclusion of a particular attribute accessor.
                          * @param method the accessor {#code Method}
@@ -275,7 +275,7 @@ declare namespace org {
                          *  otherwise {@code false}
                          */
                         // @ts-ignore
-                        abstract includeReadAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        abstract includeReadAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Allows subclasses to vote on the inclusion of a particular attribute mutator.
                          * @param method the mutator {#code Method}.
@@ -285,7 +285,7 @@ declare namespace org {
                          *  otherwise {@code false}
                          */
                         // @ts-ignore
-                        abstract includeWriteAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        abstract includeWriteAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Allows subclasses to vote on the inclusion of a particular operation.
                          * @param method the operation method
@@ -294,7 +294,7 @@ declare namespace org {
                          * @return whether the operation should be included in the management interface
                          */
                         // @ts-ignore
-                        abstract includeOperation(method: java.lang.reflect.Method, beanKey: string): boolean
+                        abstract includeOperation(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Get the description for a particular attribute.
                          * <p>The default implementation returns a description for the operation
@@ -305,7 +305,7 @@ declare namespace org {
                          * @return the description for the attribute
                          */
                         // @ts-ignore
-                        getAttributeDescription(propertyDescriptor: java.beans.PropertyDescriptor, beanKey: string): java.lang.String
+                        getAttributeDescription(propertyDescriptor: java.beans.PropertyDescriptor, beanKey: java.lang.String | string): string
                         /**
                          * Get the description for a particular operation.
                          * <p>The default implementation returns a description for the operation
@@ -316,7 +316,7 @@ declare namespace org {
                          * @return the description for the operation
                          */
                         // @ts-ignore
-                        getOperationDescription(method: java.lang.reflect.Method, beanKey: string): java.lang.String
+                        getOperationDescription(method: java.lang.reflect.Method, beanKey: java.lang.String | string): string
                         /**
                          * Create parameter info for the given method.
                          * <p>The default implementation returns an empty array of {@code MBeanParameterInfo}.
@@ -326,7 +326,7 @@ declare namespace org {
                          * @return the {#code MBeanParameterInfo} array
                          */
                         // @ts-ignore
-                        getOperationParameters(method: java.lang.reflect.Method, beanKey: string): javax.management.MBeanParameterInfo[]
+                        getOperationParameters(method: java.lang.reflect.Method, beanKey: java.lang.String | string): javax.management.MBeanParameterInfo[]
                         /**
                          * Allows subclasses to add extra fields to the {@code Descriptor} for an MBean.
                          * <p>The default implementation sets the {@code currencyTimeLimit} field to
@@ -339,7 +339,7 @@ declare namespace org {
                          * @see #applyDefaultCurrencyTimeLimit(javax.management.Descriptor)
                          */
                         // @ts-ignore
-                        populateMBeanDescriptor(descriptor: javax.management.Descriptor, managedBean: any, beanKey: string): void
+                        populateMBeanDescriptor(descriptor: javax.management.Descriptor, managedBean: java.lang.Object | any, beanKey: java.lang.String | string): void
                         /**
                          * Allows subclasses to add extra fields to the {@code Descriptor} for a
                          * particular attribute.
@@ -354,7 +354,7 @@ declare namespace org {
                          * @see #applyDefaultCurrencyTimeLimit(javax.management.Descriptor)
                          */
                         // @ts-ignore
-                        populateAttributeDescriptor(desc: javax.management.Descriptor, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method, beanKey: string): void
+                        populateAttributeDescriptor(desc: javax.management.Descriptor, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method, beanKey: java.lang.String | string): void
                         /**
                          * Allows subclasses to add extra fields to the {@code Descriptor} for a
                          * particular operation.
@@ -368,7 +368,7 @@ declare namespace org {
                          * @see #applyDefaultCurrencyTimeLimit(javax.management.Descriptor)
                          */
                         // @ts-ignore
-                        populateOperationDescriptor(desc: javax.management.Descriptor, method: java.lang.reflect.Method, beanKey: string): void
+                        populateOperationDescriptor(desc: javax.management.Descriptor, method: java.lang.reflect.Method, beanKey: java.lang.String | string): void
                         /**
                          * Set the {@code currencyTimeLimit} field to the specified
                          * "defaultCurrencyTimeLimit", if any (by default none).

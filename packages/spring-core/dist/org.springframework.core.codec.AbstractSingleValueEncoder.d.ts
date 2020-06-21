@@ -10,11 +10,11 @@ declare namespace org {
                  * @param <T> the element type
                  */
                 // @ts-ignore
-                class AbstractSingleValueEncoder<T> extends org.springframework.core.codec.AbstractEncoder<T> {
+                abstract class AbstractSingleValueEncoder<T> extends org.springframework.core.codec.AbstractEncoder<T> {
                     // @ts-ignore
                     constructor(...supportedMimeTypes: org.springframework.util.MimeType[])
                     // @ts-ignore
-                    encode(inputStream: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public encode(inputStream: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Encode {@code T} to an output {@link DataBuffer} stream.
                      * @param t the value to process
@@ -25,7 +25,7 @@ declare namespace org {
                      * @return the output stream
                      */
                     // @ts-ignore
-                    abstract encode(t: T, dataBufferFactory: org.springframework.core.io.buffer.DataBufferFactory, type: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    abstract encode(t: T, dataBufferFactory: org.springframework.core.io.buffer.DataBufferFactory, type: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

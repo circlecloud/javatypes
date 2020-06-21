@@ -39,7 +39,7 @@ declare namespace javax {
              * @see ClassLoader#getResources
              */
             // @ts-ignore
-            scanForPlugins(): void
+            public static scanForPlugins(): void
             /**
              * Sets a flag indicating whether a disk-based cache file should
              * be used when creating <code>ImageInputStream</code>s and
@@ -62,7 +62,7 @@ declare namespace javax {
              * @see #getUseCache
              */
             // @ts-ignore
-            setUseCache(useCache: boolean): void
+            public static setUseCache(useCache: boolean): void
             /**
              * Returns the current value set by <code>setUseCache</code>, or
              * <code>true</code> if no explicit setting has been made.
@@ -72,7 +72,7 @@ declare namespace javax {
              * @see #setUseCache
              */
             // @ts-ignore
-            getUseCache(): boolean
+            public static getUseCache(): boolean
             /**
              * Sets the directory where cache files are to be created.  A
              * value of <code>null</code> indicates that the system-dependent
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see #getCacheDirectory
              */
             // @ts-ignore
-            setCacheDirectory(cacheDirectory: java.io.File): void
+            public static setCacheDirectory(cacheDirectory: java.io.File): void
             /**
              * Returns the current value set by
              * <code>setCacheDirectory</code>, or <code>null</code> if no
@@ -98,7 +98,7 @@ declare namespace javax {
              * @see #setCacheDirectory
              */
             // @ts-ignore
-            getCacheDirectory(): java.io.File
+            public static getCacheDirectory(): java.io.File
             /**
              * Returns an <code>ImageInputStream</code> that will take its
              * input from the given <code>Object</code>.  The set of
@@ -121,7 +121,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageInputStreamSpi
              */
             // @ts-ignore
-            createImageInputStream(input: any): javax.imageio.stream.ImageInputStream
+            public static createImageInputStream(input: java.lang.Object | any): javax.imageio.stream.ImageInputStream
             /**
              * Returns an <code>ImageOutputStream</code> that will send its
              * output to the given <code>Object</code>.  The set of
@@ -145,7 +145,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageOutputStreamSpi
              */
             // @ts-ignore
-            createImageOutputStream(output: any): javax.imageio.stream.ImageOutputStream
+            public static createImageOutputStream(output: java.lang.Object | any): javax.imageio.stream.ImageOutputStream
             /**
              * Returns an array of <code>String</code>s listing all of the
              * informal format names understood by the current set of registered
@@ -153,7 +153,7 @@ declare namespace javax {
              * @return an array of <code>String</code>s.
              */
             // @ts-ignore
-            getReaderFormatNames(): java.lang.String[]
+            public static getReaderFormatNames(): string[]
             /**
              * Returns an array of <code>String</code>s listing all of the
              * MIME types understood by the current set of registered
@@ -161,7 +161,7 @@ declare namespace javax {
              * @return an array of <code>String</code>s.
              */
             // @ts-ignore
-            getReaderMIMETypes(): java.lang.String[]
+            public static getReaderMIMETypes(): string[]
             /**
              * Returns an array of <code>String</code>s listing all of the
              * file suffixes associated with the formats understood
@@ -170,7 +170,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getReaderFileSuffixes(): java.lang.String[]
+            public static getReaderFileSuffixes(): string[]
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageReader</code>s that claim to be able to
@@ -186,7 +186,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageReaderSpi#canDecodeInput
              */
             // @ts-ignore
-            getImageReaders(input: any): java.util.Iterator<javax.imageio.ImageReader>
+            public static getImageReaders(input: java.lang.Object | any): java.util.Iterator<javax.imageio.ImageReader>
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageReader</code>s that claim to be able to
@@ -200,7 +200,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageReaderSpi#getFormatNames
              */
             // @ts-ignore
-            getImageReadersByFormatName(formatName: string): java.util.Iterator<javax.imageio.ImageReader>
+            public static getImageReadersByFormatName(formatName: java.lang.String | string): java.util.Iterator<javax.imageio.ImageReader>
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageReader</code>s that claim to be able to
@@ -214,7 +214,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageReaderSpi#getFileSuffixes
              */
             // @ts-ignore
-            getImageReadersBySuffix(fileSuffix: string): java.util.Iterator<javax.imageio.ImageReader>
+            public static getImageReadersBySuffix(fileSuffix: java.lang.String | string): java.util.Iterator<javax.imageio.ImageReader>
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageReader</code>s that claim to be able to
@@ -228,7 +228,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageReaderSpi#getMIMETypes
              */
             // @ts-ignore
-            getImageReadersByMIMEType(MIMEType: string): java.util.Iterator<javax.imageio.ImageReader>
+            public static getImageReadersByMIMEType(MIMEType: java.lang.String | string): java.util.Iterator<javax.imageio.ImageReader>
             /**
              * Returns an array of <code>String</code>s listing all of the
              * informal format names understood by the current set of registered
@@ -236,7 +236,7 @@ declare namespace javax {
              * @return an array of <code>String</code>s.
              */
             // @ts-ignore
-            getWriterFormatNames(): java.lang.String[]
+            public static getWriterFormatNames(): string[]
             /**
              * Returns an array of <code>String</code>s listing all of the
              * MIME types understood by the current set of registered
@@ -244,7 +244,7 @@ declare namespace javax {
              * @return an array of <code>String</code>s.
              */
             // @ts-ignore
-            getWriterMIMETypes(): java.lang.String[]
+            public static getWriterMIMETypes(): string[]
             /**
              * Returns an array of <code>String</code>s listing all of the
              * file suffixes associated with the formats understood
@@ -253,7 +253,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getWriterFileSuffixes(): java.lang.String[]
+            public static getWriterFileSuffixes(): string[]
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageWriter</code>s that claim to be able to
@@ -267,7 +267,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageWriterSpi#getFormatNames
              */
             // @ts-ignore
-            getImageWritersByFormatName(formatName: string): java.util.Iterator<javax.imageio.ImageWriter>
+            public static getImageWritersByFormatName(formatName: java.lang.String | string): java.util.Iterator<javax.imageio.ImageWriter>
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageWriter</code>s that claim to be able to
@@ -280,7 +280,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageWriterSpi#getFileSuffixes
              */
             // @ts-ignore
-            getImageWritersBySuffix(fileSuffix: string): java.util.Iterator<javax.imageio.ImageWriter>
+            public static getImageWritersBySuffix(fileSuffix: java.lang.String | string): java.util.Iterator<javax.imageio.ImageWriter>
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageWriter</code>s that claim to be able to
@@ -293,7 +293,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageWriterSpi#getMIMETypes
              */
             // @ts-ignore
-            getImageWritersByMIMEType(MIMEType: string): java.util.Iterator<javax.imageio.ImageWriter>
+            public static getImageWritersByMIMEType(MIMEType: java.lang.String | string): java.util.Iterator<javax.imageio.ImageWriter>
             /**
              * Returns an <code>ImageWriter</code>corresponding to the given
              * <code>ImageReader</code>, if there is one, or <code>null</code>
@@ -320,7 +320,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageReaderSpi#getImageWriterSpiNames()
              */
             // @ts-ignore
-            getImageWriter(reader: javax.imageio.ImageReader): javax.imageio.ImageWriter
+            public static getImageWriter(reader: javax.imageio.ImageReader): javax.imageio.ImageWriter
             /**
              * Returns an <code>ImageReader</code>corresponding to the given
              * <code>ImageWriter</code>, if there is one, or <code>null</code>
@@ -340,7 +340,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageWriterSpi#getImageReaderSpiNames()
              */
             // @ts-ignore
-            getImageReader(writer: javax.imageio.ImageWriter): javax.imageio.ImageReader
+            public static getImageReader(writer: javax.imageio.ImageWriter): javax.imageio.ImageReader
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageWriter</code>s that claim to be able to
@@ -355,7 +355,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageWriterSpi#canEncodeImage(ImageTypeSpecifier)
              */
             // @ts-ignore
-            getImageWriters(type: javax.imageio.ImageTypeSpecifier, formatName: string): java.util.Iterator<javax.imageio.ImageWriter>
+            public static getImageWriters(type: javax.imageio.ImageTypeSpecifier, formatName: java.lang.String | string): java.util.Iterator<javax.imageio.ImageWriter>
             /**
              * Returns an <code>Iterator</code> containing all currently
              * registered <code>ImageTranscoder</code>s that claim to be
@@ -369,7 +369,7 @@ declare namespace javax {
              *  <code>writer</code> is <code>null</code>.
              */
             // @ts-ignore
-            getImageTranscoders(reader: javax.imageio.ImageReader, writer: javax.imageio.ImageWriter): java.util.Iterator<javax.imageio.ImageTranscoder>
+            public static getImageTranscoders(reader: javax.imageio.ImageReader, writer: javax.imageio.ImageWriter): java.util.Iterator<javax.imageio.ImageTranscoder>
             /**
              * Returns a <code>BufferedImage</code> as the result of decoding
              * a supplied <code>File</code> with an <code>ImageReader</code>
@@ -396,7 +396,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            read(input: java.io.File): java.awt.image.BufferedImage
+            public static read(input: java.io.File): java.awt.image.BufferedImage
             /**
              * Returns a <code>BufferedImage</code> as the result of decoding
              * a supplied <code>InputStream</code> with an <code>ImageReader</code>
@@ -423,7 +423,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            read(input: java.io.InputStream): java.awt.image.BufferedImage
+            public static read(input: java.io.InputStream): java.awt.image.BufferedImage
             /**
              * Returns a <code>BufferedImage</code> as the result of decoding
              * a supplied <code>URL</code> with an <code>ImageReader</code>
@@ -447,7 +447,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            read(input: java.net.URL): java.awt.image.BufferedImage
+            public static read(input: java.net.URL): java.awt.image.BufferedImage
             /**
              * Returns a <code>BufferedImage</code> as the result of decoding
              * a supplied <code>ImageInputStream</code> with an
@@ -467,7 +467,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            read(stream: javax.imageio.stream.ImageInputStream): java.awt.image.BufferedImage
+            public static read(stream: javax.imageio.stream.ImageInputStream): java.awt.image.BufferedImage
             /**
              * Writes an image using the an arbitrary <code>ImageWriter</code>
              * that supports the given format to an
@@ -488,7 +488,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            write(im: java.awt.image.RenderedImage, formatName: string, output: javax.imageio.stream.ImageOutputStream): boolean
+            public static write(im: java.awt.image.RenderedImage, formatName: java.lang.String | string, output: javax.imageio.stream.ImageOutputStream): boolean
             /**
              * Writes an image using an arbitrary <code>ImageWriter</code>
              * that supports the given format to a <code>File</code>.  If
@@ -504,7 +504,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            write(im: java.awt.image.RenderedImage, formatName: string, output: java.io.File): boolean
+            public static write(im: java.awt.image.RenderedImage, formatName: java.lang.String | string, output: java.io.File): boolean
             /**
              * Writes an image using an arbitrary <code>ImageWriter</code>
              * that supports the given format to an <code>OutputStream</code>.
@@ -523,7 +523,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            write(im: java.awt.image.RenderedImage, formatName: string, output: java.io.OutputStream): boolean
+            public static write(im: java.awt.image.RenderedImage, formatName: java.lang.String | string, output: java.io.OutputStream): boolean
         }
     }
 }

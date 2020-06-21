@@ -10,7 +10,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class InternalFrameFocusTraversalPolicy extends java.awt.FocusTraversalPolicy {
+        abstract class InternalFrameFocusTraversalPolicy extends java.awt.FocusTraversalPolicy {
             // @ts-ignore
             constructor()
             /**
@@ -32,7 +32,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if window is null
              */
             // @ts-ignore
-            getInitialComponent(frame: javax.swing.JInternalFrame): java.awt.Component
+            public getInitialComponent(frame: javax.swing.JInternalFrame): java.awt.Component
         }
     }
 }

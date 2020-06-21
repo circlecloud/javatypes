@@ -27,7 +27,7 @@ declare namespace org {
                      * @return the allowed 'facing' values
                      */
                     // @ts-ignore
-                    getFaces(): java.util.Set<org.bukkit.block.BlockFace>
+                    getFaces(): Array<org.bukkit.block.BlockFace>
                 }
             }
         }

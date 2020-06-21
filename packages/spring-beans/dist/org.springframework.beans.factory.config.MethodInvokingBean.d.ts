@@ -38,11 +38,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        resolveClassName(className: string): java.lang.Class<?>
+                        resolveClassName(className: java.lang.String | string): java.lang.Class<any>
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         /**
                          * Obtain the TypeConverter from the BeanFactory that this bean runs in,
                          * if possible.
@@ -51,13 +51,13 @@ declare namespace org {
                         // @ts-ignore
                         getDefaultTypeConverter(): org.springframework.beans.TypeConverter
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Perform the invocation and convert InvocationTargetException
                          * into the underlying target exception.
                          */
                         // @ts-ignore
-                        invokeWithTargetException(): java.lang.Object
+                        invokeWithTargetException(): any
                     }
                 }
             }

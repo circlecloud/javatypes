@@ -19,7 +19,7 @@ declare namespace javax {
                         // @ts-ignore
                         currentMouseY: number /*int*/
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                         /**
                          * If the mouse is pressed above the "thumb" component
                          * then reduce the scrollbars value by one page ("page up"),
@@ -28,17 +28,17 @@ declare namespace javax {
                          * of the track.
                          */
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        shouldScroll(direction: number /*int*/): boolean
+                        public shouldScroll(direction: number /*int*/): boolean
                         /**
                          * Set the models value to the position of the top/left
                          * of the thumb relative to the origin of the track.
                          */
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

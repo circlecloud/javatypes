@@ -8,7 +8,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class TableStringConverter extends java.lang.Object {
+            abstract class TableStringConverter extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -23,7 +23,7 @@ declare namespace javax {
                  *          bounds of the model
                  */
                 // @ts-ignore
-                abstract toString(model: javax.swing.table.TableModel, row: number /*int*/, column: number /*int*/): java.lang.String
+                public abstract toString(model: javax.swing.table.TableModel, row: number /*int*/, column: number /*int*/): string
             }
         }
     }

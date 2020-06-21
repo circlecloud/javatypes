@@ -55,40 +55,40 @@ declare namespace javax {
                  *                           while decoding the control's value.
                  */
                 // @ts-ignore
-                constructor(id: string, criticality: boolean, value: number /*byte*/[])
+                constructor(id: java.lang.String | string, criticality: boolean, value: number /*byte*/[])
                 /**
                  * The server-side sort response control's assigned object identifier
                  * is 1.2.840.113556.1.4.474.
                  */
                 // @ts-ignore
-                readonly OID: string
+                public static readonly OID: java.lang.String | string
                 /**
                  * Determines if the search results have been successfully sorted.
                  * If an error occurred during sorting a NamingException is thrown.
                  * @return true if the search results have been sorted.
                  */
                 // @ts-ignore
-                isSorted(): boolean
+                public isSorted(): boolean
                 /**
                  * Retrieves the LDAP result code of the sort operation.
                  * @return The result code. A zero value indicates success.
                  */
                 // @ts-ignore
-                getResultCode(): int
+                public getResultCode(): number /*int*/
                 /**
                  * Retrieves the ID of the attribute that caused the sort to fail.
                  * Returns null if no ID was returned by the server.
                  * @return The possibly null ID of the bad attribute.
                  */
                 // @ts-ignore
-                getAttributeID(): java.lang.String
+                public getAttributeID(): string
                 /**
                  * Retrieves the NamingException appropriate for the result code.
                  * @return A NamingException or null if the result code indicates
                  *          success.
                  */
                 // @ts-ignore
-                getException(): javax.naming.NamingException
+                public getException(): javax.naming.NamingException
             }
         }
     }

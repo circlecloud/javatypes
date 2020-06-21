@@ -16,7 +16,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    class HttpExchange extends java.lang.Object {
+                    abstract class HttpExchange extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -25,14 +25,14 @@ declare namespace javax {
                          * <p>Type: String
                          */
                         // @ts-ignore
-                        readonly REQUEST_CIPHER_SUITE: string
+                        public static readonly REQUEST_CIPHER_SUITE: java.lang.String | string
                         /**
                          * Standard property: bit size of the algorithm when the request is
                          * received over HTTPS
                          * <p>Type: Integer
                          */
                         // @ts-ignore
-                        readonly REQUEST_KEY_SIZE: string
+                        public static readonly REQUEST_KEY_SIZE: java.lang.String | string
                         /**
                          * Standard property: A SSL certificate, if any, associated with the request
                          * <p>Type: java.security.cert.X509Certificate[]
@@ -41,7 +41,7 @@ declare namespace javax {
                          * is the one used to authenticate the first, and so on.
                          */
                         // @ts-ignore
-                        readonly REQUEST_X509CERTIFICATE: string
+                        public static readonly REQUEST_X509CERTIFICATE: java.lang.String | string
                         /**
                          * Returns an immutable Map containing the HTTP headers that were
                          * included with this request. The keys in this Map will be the header
@@ -55,7 +55,7 @@ declare namespace javax {
                          * @return an immutable Map which can be used to access request headers
                          */
                         // @ts-ignore
-                        abstract getRequestHeaders(): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+                        public abstract getRequestHeaders(): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                         /**
                          * Returns the value of the specified request header. If the request
                          * did not include a header of the specified name, this method returns
@@ -68,7 +68,7 @@ declare namespace javax {
                          *          or null if the request does not have a header of that name
                          */
                         // @ts-ignore
-                        abstract getRequestHeader(name: string): java.lang.String
+                        public abstract getRequestHeader(name: java.lang.String | string): string
                         /**
                          * Returns a mutable Map into which the HTTP response headers can be stored
                          * and which will be transmitted as part of this response. The keys in the
@@ -80,7 +80,7 @@ declare namespace javax {
                          * @return a mutable Map which can be used to set response headers.
                          */
                         // @ts-ignore
-                        abstract getResponseHeaders(): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+                        public abstract getResponseHeaders(): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                         /**
                          * Adds a response header with the given name and value. This method
                          * allows a response header to have multiple values. This is a
@@ -93,7 +93,7 @@ declare namespace javax {
                          * @see #getResponseHeaders
                          */
                         // @ts-ignore
-                        abstract addResponseHeader(name: string, value: string): void
+                        public abstract addResponseHeader(name: java.lang.String | string, value: java.lang.String | string): void
                         /**
                          * Returns the part of the request's URI from the protocol
                          * name up to the query string in the first line of the HTTP request.
@@ -101,7 +101,7 @@ declare namespace javax {
                          * @return the request URI
                          */
                         // @ts-ignore
-                        abstract getRequestURI(): java.lang.String
+                        public abstract getRequestURI(): string
                         /**
                          * Returns the context path of all the endpoints in an application.
                          * This path is the portion of the request URI that indicates the
@@ -116,20 +116,20 @@ declare namespace javax {
                          * @see HttpContext#getPath
                          */
                         // @ts-ignore
-                        abstract getContextPath(): java.lang.String
+                        public abstract getContextPath(): string
                         /**
                          * Get the HTTP request method
                          * @return the request method
                          */
                         // @ts-ignore
-                        abstract getRequestMethod(): java.lang.String
+                        public abstract getRequestMethod(): string
                         /**
                          * Returns a {@link HttpContext} for this exchange.
                          * Container matches the request with the associated Endpoint's HttpContext
                          * @return the HttpContext for this exchange
                          */
                         // @ts-ignore
-                        abstract getHttpContext(): javax.xml.ws.spi.http.HttpContext
+                        public abstract getHttpContext(): javax.xml.ws.spi.http.HttpContext
                         /**
                          * This must be called to end an exchange. Container takes care of
                          * closing request and response streams. This must be called so that
@@ -137,7 +137,7 @@ declare namespace javax {
                          * @throws IOException if any i/o error
                          */
                         // @ts-ignore
-                        abstract close(): void
+                        public abstract close(): void
                         /**
                          * Returns a stream from which the request body can be read.
                          * Multiple calls to this method will return the same stream.
@@ -145,7 +145,7 @@ declare namespace javax {
                          * @throws IOException if any i/o error during request processing
                          */
                         // @ts-ignore
-                        abstract getRequestBody(): java.io.InputStream
+                        public abstract getRequestBody(): java.io.InputStream
                         /**
                          * Returns a stream to which the response body must be
                          * written. {@link #setStatus}) must be called prior to calling
@@ -155,7 +155,7 @@ declare namespace javax {
                          * @throws IOException if any i/o error during response processing
                          */
                         // @ts-ignore
-                        abstract getResponseBody(): java.io.OutputStream
+                        public abstract getResponseBody(): java.io.OutputStream
                         /**
                          * Sets the HTTP status code for the response.
                          * <p>
@@ -164,20 +164,20 @@ declare namespace javax {
                          * @see #getResponseBody
                          */
                         // @ts-ignore
-                        abstract setStatus(status: number /*int*/): void
+                        public abstract setStatus(status: number /*int*/): void
                         /**
                          * Returns the unresolved address of the remote entity invoking
                          * this request.
                          * @return the InetSocketAddress of the caller
                          */
                         // @ts-ignore
-                        abstract getRemoteAddress(): java.net.InetSocketAddress
+                        public abstract getRemoteAddress(): java.net.InetSocketAddress
                         /**
                          * Returns the unresolved local address on which the request was received.
                          * @return the InetSocketAddress of the local interface
                          */
                         // @ts-ignore
-                        abstract getLocalAddress(): java.net.InetSocketAddress
+                        public abstract getLocalAddress(): java.net.InetSocketAddress
                         /**
                          * Returns the protocol string from the request in the form
                          * <i>protocol/majorVersion.minorVersion</i>. For example,
@@ -185,14 +185,14 @@ declare namespace javax {
                          * @return the protocol string from the request
                          */
                         // @ts-ignore
-                        abstract getProtocol(): java.lang.String
+                        public abstract getProtocol(): string
                         /**
                          * Returns the name of the scheme used to make this request,
                          * for example: http, or https.
                          * @return name of the scheme used to make this request
                          */
                         // @ts-ignore
-                        abstract getScheme(): java.lang.String
+                        public abstract getScheme(): string
                         /**
                          * Returns the extra path information that follows the web service
                          * path but precedes the query string in the request URI and will start
@@ -206,7 +206,7 @@ declare namespace javax {
                          *          <tt>null</tt> if there is no extra path in the request URI
                          */
                         // @ts-ignore
-                        abstract getPathInfo(): java.lang.String
+                        public abstract getPathInfo(): string
                         /**
                          * Returns the query string that is contained in the request URI
                          * after the path.
@@ -216,7 +216,7 @@ declare namespace javax {
                          *          <tt>null</tt> if the request URI doesn't have one
                          */
                         // @ts-ignore
-                        abstract getQueryString(): java.lang.String
+                        public abstract getQueryString(): string
                         /**
                          * Returns an attribute that is associated with this
                          * <code>HttpExchange</code>. JAX-WS handlers and endpoints may then
@@ -236,7 +236,7 @@ declare namespace javax {
                          *          exist
                          */
                         // @ts-ignore
-                        abstract getAttribute(name: string): java.lang.Object
+                        public abstract getAttribute(name: java.lang.String | string): any
                         /**
                          * Gives all the attribute names that are associated with
                          * this <code>HttpExchange</code>.
@@ -244,7 +244,7 @@ declare namespace javax {
                          * @see #getAttribute(String)
                          */
                         // @ts-ignore
-                        abstract getAttributeNames(): java.util.Set<java.lang.String>
+                        public abstract getAttributeNames(): Array<java.lang.String | string>
                         /**
                          * Returns the {@link Principal} that represents the authenticated
                          * user for this <code>HttpExchange</code>.
@@ -252,7 +252,7 @@ declare namespace javax {
                          *          <tt>null</tt> if not authenticated
                          */
                         // @ts-ignore
-                        abstract getUserPrincipal(): java.security.Principal
+                        public abstract getUserPrincipal(): java.security.Principal
                         /**
                          * Indicates whether an authenticated user is included in the specified
                          * logical "role".
@@ -261,7 +261,7 @@ declare namespace javax {
                          *          given role
                          */
                         // @ts-ignore
-                        abstract isUserInRole(role: string): boolean
+                        public abstract isUserInRole(role: java.lang.String | string): boolean
                     }
                 }
             }

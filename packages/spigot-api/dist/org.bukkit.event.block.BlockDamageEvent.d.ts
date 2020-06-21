@@ -16,35 +16,35 @@ declare namespace org {
                      * @return The player damaging the block involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Gets if the block is set to instantly break when damaged by the player.
                      * @return true if the block should instantly break when damaged by the
                      *      player
                      */
                     // @ts-ignore
-                    getInstaBreak(): boolean
+                    public getInstaBreak(): boolean
                     /**
                      * Sets if the block should instantly break when damaged by the player.
                      * @param bool true if you want the block to instantly break when damaged
                      *      by the player
                      */
                     // @ts-ignore
-                    setInstaBreak(bool: boolean): void
+                    public setInstaBreak(bool: boolean): void
                     /**
                      * Gets the ItemStack for the item currently in the player's hand.
                      * @return The ItemStack for the item currently in the player's hand
                      */
                     // @ts-ignore
-                    getItemInHand(): org.bukkit.inventory.ItemStack
+                    public getItemInHand(): org.bukkit.inventory.ItemStack
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

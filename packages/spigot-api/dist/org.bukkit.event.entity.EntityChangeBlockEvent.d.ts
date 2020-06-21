@@ -14,27 +14,27 @@ declare namespace org {
                      * @return the block that is changing
                      */
                     // @ts-ignore
-                    getBlock(): org.bukkit.block.Block
+                    public getBlock(): org.bukkit.block.Block
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the Material that the block is changing into
                      * @return the material that the block is changing into
                      */
                     // @ts-ignore
-                    getTo(): org.bukkit.Material
+                    public getTo(): org.bukkit.Material
                     /**
                      * Gets the data for the block that would be changed into
                      * @return the data for the block that would be changed into
                      */
                     // @ts-ignore
-                    getBlockData(): org.bukkit.block.data.BlockData
+                    public getBlockData(): org.bukkit.block.data.BlockData
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

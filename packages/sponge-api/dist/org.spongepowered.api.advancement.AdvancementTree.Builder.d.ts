@@ -25,9 +25,9 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        background(background: string): org.spongepowered.api.advancement.AdvancementTree.Builder
+                        background(background: java.lang.String | string): org.spongepowered.api.advancement.AdvancementTree.Builder
                         // @ts-ignore
-                        id(id: string): org.spongepowered.api.advancement.AdvancementTree.Builder
+                        id(id: java.lang.String | string): org.spongepowered.api.advancement.AdvancementTree.Builder
                         /**
                          * Sets the name of the {@link AdvancementTree}. Defaults to
                          * the plain {@link DisplayInfo#getTitle()} of the root
@@ -37,7 +37,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        name(name: string): org.spongepowered.api.advancement.AdvancementTree.Builder
+                        name(name: java.lang.String | string): org.spongepowered.api.advancement.AdvancementTree.Builder
                         // @ts-ignore
                         build(): org.spongepowered.api.advancement.AdvancementTree
                         // @ts-ignore

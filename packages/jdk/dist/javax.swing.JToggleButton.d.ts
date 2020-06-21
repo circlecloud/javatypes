@@ -66,7 +66,7 @@ declare namespace javax {
              * @param text  the string displayed on the toggle button
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a toggle button with the specified text
              * and selection state.
@@ -75,7 +75,7 @@ declare namespace javax {
              *                   otherwise, the button is initially unselected
              */
             // @ts-ignore
-            constructor(text: string, selected: boolean)
+            constructor(text: java.lang.String | string, selected: boolean)
             /**
              * Creates a toggle button where properties are taken from the
              * Action supplied.
@@ -90,7 +90,7 @@ declare namespace javax {
              * @param icon  the image that the button should display
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Creates a toggle button with the specified text, image, and
              * selection state.
@@ -100,13 +100,13 @@ declare namespace javax {
              *                   otherwise, the button is initially unselected
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon, selected: boolean)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon, selected: boolean)
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the l&amp;f class
              * that renders this component.
@@ -116,7 +116,7 @@ declare namespace javax {
              * @beaninfo description: A string that specifies the name of the L&amp;F class
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns a string representation of this JToggleButton. This method
              * is intended to be used only for debugging purposes, and the
@@ -126,7 +126,7 @@ declare namespace javax {
              * @return a string representation of this JToggleButton.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JToggleButton.
              * For toggle buttons, the AccessibleContext takes the form of an
@@ -138,7 +138,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this ToggleButton.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -28,7 +28,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class KeyAgreementSpi extends java.lang.Object {
+        abstract class KeyAgreementSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -97,7 +97,7 @@ declare namespace javax {
              *  completed yet
              */
             // @ts-ignore
-            abstract engineGenerateSecret(): byte[]
+            abstract engineGenerateSecret(): number /*byte*/[]
             /**
              * Generates the shared secret, and places it into the buffer
              * <code>sharedSecret</code>, beginning at <code>offset</code> inclusive.
@@ -120,7 +120,7 @@ declare namespace javax {
              *  to hold the secret
              */
             // @ts-ignore
-            abstract engineGenerateSecret(sharedSecret: number /*byte*/[], offset: number /*int*/): int
+            abstract engineGenerateSecret(sharedSecret: number /*byte*/[], offset: number /*int*/): number /*int*/
             /**
              * Creates the shared secret and returns it as a secret key object
              * of the requested algorithm type.
@@ -141,7 +141,7 @@ declare namespace javax {
              *  the key material is too short)
              */
             // @ts-ignore
-            abstract engineGenerateSecret(algorithm: string): javax.crypto.SecretKey
+            abstract engineGenerateSecret(algorithm: java.lang.String | string): javax.crypto.SecretKey
         }
     }
 }

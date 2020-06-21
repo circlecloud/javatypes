@@ -41,7 +41,7 @@ declare namespace javax {
                  * @return the <code>Component</code> that the renderer uses to draw the value
                  */
                 // @ts-ignore
-                getTreeCellRendererComponent(tree: javax.swing.JTree, value: any, selected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/, hasFocus: boolean): java.awt.Component
+                getTreeCellRendererComponent(tree: javax.swing.JTree, value: java.lang.Object | any, selected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/, hasFocus: boolean): java.awt.Component
             }
         }
     }

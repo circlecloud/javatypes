@@ -24,13 +24,13 @@ declare namespace org {
                      * @return the display name that is set
                      */
                     // @ts-ignore
-                    getDisplayName(): java.lang.String
+                    getDisplayName(): string
                     /**
                      * Sets the display name.
                      * @param name the name to set
                      */
                     // @ts-ignore
-                    setDisplayName(name: string): void
+                    setDisplayName(name: java.lang.String | string): void
                     /**
                      * Checks for existence of a localized name.
                      * @return true if this has a localized name
@@ -45,13 +45,13 @@ declare namespace org {
                      * @return the localized name that is set
                      */
                     // @ts-ignore
-                    getLocalizedName(): java.lang.String
+                    getLocalizedName(): string
                     /**
                      * Sets the localized name.
                      * @param name the name to set
                      */
                     // @ts-ignore
-                    setLocalizedName(name: string): void
+                    setLocalizedName(name: java.lang.String | string): void
                     /**
                      * Checks for existence of lore.
                      * @return true if this has lore
@@ -66,14 +66,14 @@ declare namespace org {
                      * @return a list of lore that is set
                      */
                     // @ts-ignore
-                    getLore(): java.util.List<java.lang.String>
+                    getLore(): Array<java.lang.String | string>
                     /**
                      * Sets the lore for this item.
                      * Removes lore when given null.
                      * @param lore the lore that will be set
                      */
                     // @ts-ignore
-                    setLore(lore: Array<java.lang.String>): void
+                    setLore(lore: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Checks for existence of custom model data.
                      * <p>
@@ -94,7 +94,7 @@ declare namespace org {
                      * @return the localized name that is set
                      */
                     // @ts-ignore
-                    getCustomModelData(): int
+                    getCustomModelData(): number /*int*/
                     /**
                      * Sets the custom model data.
                      * <p>
@@ -103,7 +103,7 @@ declare namespace org {
                      * @param data the data to set, or null to clear
                      */
                     // @ts-ignore
-                    setCustomModelData(data: number): void
+                    setCustomModelData(data: java.lang.Integer | number): void
                     /**
                      * Checks for the existence of any enchantments.
                      * @return true if an enchantment exists on this meta
@@ -123,14 +123,14 @@ declare namespace org {
                      * @return The level that the specified enchantment has, or 0 if none
                      */
                     // @ts-ignore
-                    getEnchantLevel(ench: org.bukkit.enchantments.Enchantment): int
+                    getEnchantLevel(ench: org.bukkit.enchantments.Enchantment): number /*int*/
                     /**
                      * Returns a copy the enchantments in this ItemMeta. <br>
                      * Returns an empty map if none.
                      * @return An immutable copy of the enchantments
                      */
                     // @ts-ignore
-                    getEnchants(): java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer>
+                    getEnchants(): java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer | number>
                     /**
                      * Adds the specified enchantment to this item meta.
                      * @param ench Enchantment to add
@@ -175,7 +175,7 @@ declare namespace org {
                      * @return A set of all itemFlags set
                      */
                     // @ts-ignore
-                    getItemFlags(): java.util.Set<org.bukkit.inventory.ItemFlag>
+                    getItemFlags(): Array<org.bukkit.inventory.ItemFlag>
                     /**
                      * Check if the specified flag is present on this item.
                      * @param flag the flag to check
@@ -210,7 +210,7 @@ declare namespace org {
                      *          and their AttributeModifiers, or null if none exist
                      */
                     // @ts-ignore
-                    getAttributeModifiers(): <any>
+                    getAttributeModifiers(): object
                     /**
                      * Return an immutable copy of all {@link Attribute}s and their
                      * {@link AttributeModifier}s for a given {@link EquipmentSlot}.<br>
@@ -225,7 +225,7 @@ declare namespace org {
                      *          if no attributes are set.
                      */
                     // @ts-ignore
-                    getAttributeModifiers(slot: org.bukkit.inventory.EquipmentSlot): <any>
+                    getAttributeModifiers(slot: org.bukkit.inventory.EquipmentSlot): object
                     /**
                      * Return an immutable copy of all {@link AttributeModifier}s
                      * for a given {@link Attribute}
@@ -235,7 +235,7 @@ declare namespace org {
                      * @throws NullPointerException if Attribute is null
                      */
                     // @ts-ignore
-                    getAttributeModifiers(attribute: org.bukkit.attribute.Attribute): java.util.Collection<org.bukkit.attribute.AttributeModifier>
+                    getAttributeModifiers(attribute: org.bukkit.attribute.Attribute): Array<org.bukkit.attribute.AttributeModifier>
                     /**
                      * Add an Attribute and it's Modifier.
                      * AttributeModifiers can now support {@link EquipmentSlot}s.

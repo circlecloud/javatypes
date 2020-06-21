@@ -37,37 +37,37 @@ declare namespace java {
                  * @return the public exponent
                  */
                 // @ts-ignore
-                getPublicExponent(): java.math.BigInteger
+                public getPublicExponent(): java.math.BigInteger
                 /**
                  * Returns the primeP.
                  * @return the primeP
                  */
                 // @ts-ignore
-                getPrimeP(): java.math.BigInteger
+                public getPrimeP(): java.math.BigInteger
                 /**
                  * Returns the primeQ.
                  * @return the primeQ
                  */
                 // @ts-ignore
-                getPrimeQ(): java.math.BigInteger
+                public getPrimeQ(): java.math.BigInteger
                 /**
                  * Returns the primeExponentP.
                  * @return the primeExponentP
                  */
                 // @ts-ignore
-                getPrimeExponentP(): java.math.BigInteger
+                public getPrimeExponentP(): java.math.BigInteger
                 /**
                  * Returns the primeExponentQ.
                  * @return the primeExponentQ
                  */
                 // @ts-ignore
-                getPrimeExponentQ(): java.math.BigInteger
+                public getPrimeExponentQ(): java.math.BigInteger
                 /**
                  * Returns the crtCoefficient.
                  * @return the crtCoefficient
                  */
                 // @ts-ignore
-                getCrtCoefficient(): java.math.BigInteger
+                public getCrtCoefficient(): java.math.BigInteger
             }
         }
     }

@@ -26,7 +26,7 @@ declare namespace javax {
                  * @see #getActor
                  */
                 // @ts-ignore
-                setActor(actorURI: string): void
+                setActor(actorURI: java.lang.String | string): void
                 /**
                  * Sets the <code>Role</code> associated with this <code>SOAPHeaderElement</code>
                  * object to the specified <code>Role</code>.
@@ -37,7 +37,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                setRole(uri: string): void
+                setRole(uri: java.lang.String | string): void
                 /**
                  * Returns the uri of the <i>actor</i> attribute of this
                  * <code>SOAPHeaderElement</code>.
@@ -48,7 +48,7 @@ declare namespace javax {
                  * @see #setActor
                  */
                 // @ts-ignore
-                getActor(): java.lang.String
+                getActor(): string
                 /**
                  * Returns the value of the <i>Role</i> attribute of this
                  * <code>SOAPHeaderElement</code>.
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getRole(): java.lang.String
+                getRole(): string
                 /**
                  * Sets the mustUnderstand attribute for this <code>SOAPHeaderElement</code>
                  * object to be either true or false.

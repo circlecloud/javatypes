@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a Weather-related event
                  */
                 // @ts-ignore
-                class WeatherEvent extends org.bukkit.event.Event {
+                abstract class WeatherEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(where: org.bukkit.World)
                     // @ts-ignore
@@ -16,7 +16,7 @@ declare namespace org {
                      * @return World this event is occurring in
                      */
                     // @ts-ignore
-                    getWorld(): org.bukkit.World
+                    public getWorld(): org.bukkit.World
                 }
             }
         }

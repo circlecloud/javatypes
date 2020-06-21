@@ -29,13 +29,13 @@ declare namespace org {
                          * @param bundleFunction The bundle function to get a bundle from
                          */
                         // @ts-ignore
-                        constructor(key: string, bundleFunction: java.util.function.Function<java.util.Locale, java.util.ResourceBundle> | java.util.function$.Function<java.util.Locale, java.util.ResourceBundle>)
+                        constructor(key: java.lang.String | string, bundleFunction: java.util.function$.Function<java.util.Locale, java.util.ResourceBundle>)
                         // @ts-ignore
-                        getId(): java.lang.String
+                        public getId(): string
                         // @ts-ignore
-                        get(locale: java.util.Locale): java.lang.String
+                        public get(locale: java.util.Locale): string
                         // @ts-ignore
-                        get(locale: java.util.Locale, ...args: any[]): java.lang.String
+                        public get(locale: java.util.Locale, ...args: java.lang.Object[] | any[]): string
                     }
                 }
             }

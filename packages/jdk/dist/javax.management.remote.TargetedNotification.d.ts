@@ -23,26 +23,26 @@ declare namespace javax {
                  *         or <var>notification</var> is null.
                  */
                 // @ts-ignore
-                constructor(notification: javax.management.Notification, listenerID: number)
+                constructor(notification: javax.management.Notification, listenerID: java.lang.Integer | number)
                 /**
                  * <p>The emitted notification.</p>
                  * @return The notification.
                  */
                 // @ts-ignore
-                getNotification(): javax.management.Notification
+                public getNotification(): javax.management.Notification
                 /**
                  * <p>The ID of the listener to which the notification is
                  * targeted.</p>
                  * @return The listener ID.
                  */
                 // @ts-ignore
-                getListenerID(): java.lang.Integer
+                public getListenerID(): number
                 /**
                  * Returns a textual representation of this Targeted Notification.
                  * @return a String representation of this Targeted Notification.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

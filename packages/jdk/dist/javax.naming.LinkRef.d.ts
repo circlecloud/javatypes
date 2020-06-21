@@ -52,7 +52,7 @@ declare namespace javax {
              * @param linkName The non-null name for which to create this link.
              */
             // @ts-ignore
-            constructor(linkName: string)
+            constructor(linkName: java.lang.String | string)
             /**
              * Retrieves the name of this link.
              * @return The non-null name of this link.
@@ -60,7 +60,7 @@ declare namespace javax {
              * @exception NamingException If a naming exception was encountered.
              */
             // @ts-ignore
-            getLinkName(): java.lang.String
+            public getLinkName(): string
         }
     }
 }

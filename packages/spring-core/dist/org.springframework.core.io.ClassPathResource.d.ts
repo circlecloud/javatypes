@@ -27,7 +27,7 @@ declare namespace org {
                      * @see org.springframework.util.ClassUtils#getDefaultClassLoader()
                      */
                     // @ts-ignore
-                    constructor(path: string)
+                    constructor(path: java.lang.String | string)
                     /**
                      * Create a new {@code ClassPathResource} for {@code ClassLoader} usage.
                      * A leading slash will be removed, as the ClassLoader resource access
@@ -38,7 +38,7 @@ declare namespace org {
                      * @see ClassLoader#getResourceAsStream(String)
                      */
                     // @ts-ignore
-                    constructor(path: string, classLoader: java.lang.ClassLoader)
+                    constructor(path: java.lang.String | string, classLoader: java.lang.ClassLoader)
                     /**
                      * Create a new {@code ClassPathResource} for {@code Class} usage.
                      * The path can be relative to the given class, or absolute within
@@ -48,7 +48,7 @@ declare namespace org {
                      * @see java.lang.Class#getResourceAsStream
                      */
                     // @ts-ignore
-                    constructor(path: string, clazz: java.lang.Class<any>)
+                    constructor(path: java.lang.String | string, clazz: java.lang.Class<any>)
                     /**
                      * Create a new {@code ClassPathResource} with optional {@code ClassLoader}
                      * and {@code Class}. Only for internal usage.
@@ -59,24 +59,24 @@ declare namespace org {
                      *  {#link #ClassPathResource(String, ClassLoader)} vs {@link #ClassPathResource(String, Class)}
                      */
                     // @ts-ignore
-                    constructor(path: string, classLoader: java.lang.ClassLoader, clazz: java.lang.Class<any>)
+                    constructor(path: java.lang.String | string, classLoader: java.lang.ClassLoader, clazz: java.lang.Class<any>)
                     /**
                      * Return the path for this resource (as resource path within the class path).
                      */
                     // @ts-ignore
-                    getPath(): java.lang.String
+                    public getPath(): string
                     /**
                      * Return the ClassLoader that this resource will be obtained from.
                      */
                     // @ts-ignore
-                    getClassLoader(): java.lang.ClassLoader
+                    public getClassLoader(): java.lang.ClassLoader
                     /**
                      * This implementation checks for the resolution of a resource URL.
                      * @see java.lang.ClassLoader#getResource(String)
                      * @see java.lang.Class#getResource(String)
                      */
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     /**
                      * Resolves a URL for the underlying class path resource.
                      * @return the resolved URL, or {#code null} if not resolvable
@@ -89,7 +89,7 @@ declare namespace org {
                      * @see java.lang.Class#getResourceAsStream(String)
                      */
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     /**
                      * This implementation returns a URL for the underlying class path resource,
                      * if available.
@@ -97,37 +97,37 @@ declare namespace org {
                      * @see java.lang.Class#getResource(String)
                      */
                     // @ts-ignore
-                    getURL(): java.net.URL
+                    public getURL(): java.net.URL
                     /**
                      * This implementation creates a ClassPathResource, applying the given path
                      * relative to the path of the underlying resource of this descriptor.
                      * @see org.springframework.util.StringUtils#applyRelativePath(String, String)
                      */
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * This implementation returns the name of the file that this class path
                      * resource refers to.
                      * @see org.springframework.util.StringUtils#getFilename(String)
                      */
                     // @ts-ignore
-                    getFilename(): java.lang.String
+                    public getFilename(): string
                     /**
                      * This implementation returns a description that includes the class path location.
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * This implementation compares the underlying class path locations.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the hash code of the underlying
                      * class path location.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

@@ -18,7 +18,7 @@ declare namespace org {
                                  * @param z The z coordinate of the biome
                                  */
                                 // @ts-ignore
-                                visit(volume: V extends org.spongepowered.api.world.extent.BiomeVolume, x: number /*int*/, y: number /*int*/, z: number /*int*/): void
+                                visit(volume: V, x: number /*int*/, y: number /*int*/, z: number /*int*/): void
                             }
                         }
                     }

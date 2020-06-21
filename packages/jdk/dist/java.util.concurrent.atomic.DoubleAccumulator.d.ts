@@ -44,13 +44,13 @@ declare namespace java {
                      * @param identity identity (initial value) for the accumulator function
                      */
                     // @ts-ignore
-                    constructor(accumulatorFunction: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator, identity: number /*double*/)
+                    constructor(accumulatorFunction: java.util.function$.DoubleBinaryOperator, identity: number /*double*/)
                     /**
                      * Updates with the given value.
                      * @param x the value
                      */
                     // @ts-ignore
-                    accumulate(x: number /*double*/): void
+                    public accumulate(x: number /*double*/): void
                     /**
                      * Returns the current value.  The returned value is <em>NOT</em>
                      * an atomic snapshot; invocation in the absence of concurrent
@@ -60,7 +60,7 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    get(): double
+                    public get(): number /*double*/
                     /**
                      * Resets variables maintaining updates to the identity value.
                      * This method may be a useful alternative to creating a new
@@ -70,7 +70,7 @@ declare namespace java {
                      * updating.
                      */
                     // @ts-ignore
-                    reset(): void
+                    public reset(): void
                     /**
                      * Equivalent in effect to {@link #get} followed by {@link
                      * #reset}. This method may apply for example during quiescent
@@ -81,37 +81,37 @@ declare namespace java {
                      * @return the value before reset
                      */
                     // @ts-ignore
-                    getThenReset(): double
+                    public getThenReset(): number /*double*/
                     /**
                      * Returns the String representation of the current value.
                      * @return the String representation of the current value
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Equivalent to {@link #get}.
                      * @return the current value
                      */
                     // @ts-ignore
-                    doubleValue(): double
+                    public doubleValue(): number /*double*/
                     /**
                      * Returns the {@linkplain #get current value} as a {@code long}
                      * after a narrowing primitive conversion.
                      */
                     // @ts-ignore
-                    longValue(): long
+                    public longValue(): number /*long*/
                     /**
                      * Returns the {@linkplain #get current value} as an {@code int}
                      * after a narrowing primitive conversion.
                      */
                     // @ts-ignore
-                    intValue(): int
+                    public intValue(): number /*int*/
                     /**
                      * Returns the {@linkplain #get current value} as a {@code float}
                      * after a narrowing primitive conversion.
                      */
                     // @ts-ignore
-                    floatValue(): float
+                    public floatValue(): number /*float*/
                 }
             }
         }

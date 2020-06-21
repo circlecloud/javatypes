@@ -36,7 +36,7 @@ declare namespace javax {
                     // @ts-ignore
                     toolBarFocusListener: java.awt.event.FocusListener
                     // @ts-ignore
-                    constraintBeforeFloating: string
+                    constraintBeforeFloating: java.lang.String | string
                     /**
                      * As of Java 2 platform v1.3 this previously undocumented field is no
                      * longer used.
@@ -74,11 +74,11 @@ declare namespace javax {
                     // @ts-ignore
                     rightKey: javax.swing.KeyStroke
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -141,7 +141,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    isRolloverBorders(): boolean
+                    public isRolloverBorders(): boolean
                     /**
                      * Sets the flag for enabling rollover borders on the toolbar and it will
                      * also install the appropriate border depending on the state of the flag.
@@ -151,7 +151,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    setRolloverBorders(rollover: boolean): void
+                    public setRolloverBorders(rollover: boolean): void
                     /**
                      * Installs rollover borders on all the child components of the JComponent.
                      * <p>
@@ -236,35 +236,35 @@ declare namespace javax {
                     // @ts-ignore
                     setBorderToNormal(c: java.awt.Component): void
                     // @ts-ignore
-                    setFloatingLocation(x: number /*int*/, y: number /*int*/): void
+                    public setFloatingLocation(x: number /*int*/, y: number /*int*/): void
                     // @ts-ignore
-                    isFloating(): boolean
+                    public isFloating(): boolean
                     // @ts-ignore
-                    setFloating(b: boolean, p: java.awt.Point): void
+                    public setFloating(b: boolean, p: java.awt.Point): void
                     // @ts-ignore
-                    setOrientation(orientation: number /*int*/): void
+                    public setOrientation(orientation: number /*int*/): void
                     /**
                      * Gets the color displayed when over a docking area
                      */
                     // @ts-ignore
-                    getDockingColor(): java.awt.Color
+                    public getDockingColor(): java.awt.Color
                     /**
                      * Sets the color displayed when over a docking area
                      */
                     // @ts-ignore
-                    setDockingColor(c: java.awt.Color): void
+                    public setDockingColor(c: java.awt.Color): void
                     /**
                      * Gets the color displayed when over a floating area
                      */
                     // @ts-ignore
-                    getFloatingColor(): java.awt.Color
+                    public getFloatingColor(): java.awt.Color
                     /**
                      * Sets the color displayed when over a floating area
                      */
                     // @ts-ignore
-                    setFloatingColor(c: java.awt.Color): void
+                    public setFloatingColor(c: java.awt.Color): void
                     // @ts-ignore
-                    canDock(c: java.awt.Component, p: java.awt.Point): boolean
+                    public canDock(c: java.awt.Component, p: java.awt.Point): boolean
                     // @ts-ignore
                     dragTo(position: java.awt.Point, origin: java.awt.Point): void
                     // @ts-ignore

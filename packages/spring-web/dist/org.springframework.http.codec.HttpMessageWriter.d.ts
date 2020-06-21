@@ -17,7 +17,7 @@ declare namespace org {
                      * Return the {@link MediaType}'s that this writer supports.
                      */
                     // @ts-ignore
-                    getWritableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    getWritableMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Whether the given object type is supported by this writer.
                      * @param elementType the type of object to check
@@ -38,7 +38,7 @@ declare namespace org {
                      * @return indicates completion or error
                      */
                     // @ts-ignore
-                    write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Server-side only alternative to
                      * {@link #write(Publisher, ResolvableType, MediaType, ReactiveHttpOutputMessage, Map)}
@@ -54,7 +54,7 @@ declare namespace org {
                      * @return a {#link Mono} that indicates completion of writing or error
                      */
                     // @ts-ignore
-                    write(inputStream: object, actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    write(inputStream: object, actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

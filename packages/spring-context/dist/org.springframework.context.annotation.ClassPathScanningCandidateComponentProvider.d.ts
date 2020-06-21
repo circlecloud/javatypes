@@ -62,17 +62,17 @@ declare namespace org {
                      * @see #DEFAULT_RESOURCE_PATTERN
                      */
                     // @ts-ignore
-                    setResourcePattern(resourcePattern: string): void
+                    public setResourcePattern(resourcePattern: java.lang.String | string): void
                     /**
                      * Add an include type filter to the <i>end</i> of the inclusion list.
                      */
                     // @ts-ignore
-                    addIncludeFilter(includeFilter: TypeFilter): void
+                    public addIncludeFilter(includeFilter: TypeFilter): void
                     /**
                      * Add an exclude type filter to the <i>front</i> of the exclusion list.
                      */
                     // @ts-ignore
-                    addExcludeFilter(excludeFilter: TypeFilter): void
+                    public addExcludeFilter(excludeFilter: TypeFilter): void
                     /**
                      * Reset the configured type filters.
                      * @param useDefaultFilters whether to re-register the default filters for
@@ -82,7 +82,7 @@ declare namespace org {
                      * @see #registerDefaultFilters()
                      */
                     // @ts-ignore
-                    resetFilters(useDefaultFilters: boolean): void
+                    public resetFilters(useDefaultFilters: boolean): void
                     /**
                      * Register the default filter for {@link Component @Component}.
                      * <p>This will implicitly register all annotations that have the
@@ -101,9 +101,9 @@ declare namespace org {
                      * @param environment the Environment to use
                      */
                     // @ts-ignore
-                    setEnvironment(environment: Environment): void
+                    public setEnvironment(environment: Environment): void
                     // @ts-ignore
-                    getEnvironment(): Environment
+                    public getEnvironment(): Environment
                     /**
                      * Return the {@link BeanDefinitionRegistry} used by this scanner, if any.
                      */
@@ -118,12 +118,12 @@ declare namespace org {
                      * @see org.springframework.core.io.support.PathMatchingResourcePatternResolver
                      */
                     // @ts-ignore
-                    setResourceLoader(resourceLoader: ResourceLoader): void
+                    public setResourceLoader(resourceLoader: ResourceLoader): void
                     /**
                      * Return the ResourceLoader that this component provider uses.
                      */
                     // @ts-ignore
-                    getResourceLoader(): ResourceLoader
+                    public getResourceLoader(): ResourceLoader
                     /**
                      * Set the {@link MetadataReaderFactory} to use.
                      * <p>Default is a {@link CachingMetadataReaderFactory} for the specified
@@ -132,19 +132,19 @@ declare namespace org {
                      * for the given MetadataReaderFactory to override the default factory.
                      */
                     // @ts-ignore
-                    setMetadataReaderFactory(metadataReaderFactory: MetadataReaderFactory): void
+                    public setMetadataReaderFactory(metadataReaderFactory: MetadataReaderFactory): void
                     /**
                      * Return the MetadataReaderFactory used by this component provider.
                      */
                     // @ts-ignore
-                    getMetadataReaderFactory(): MetadataReaderFactory
+                    public getMetadataReaderFactory(): MetadataReaderFactory
                     /**
                      * Scan the class path for candidate components.
                      * @param basePackage the package to check for annotated classes
                      * @return a corresponding Set of autodetected bean definitions
                      */
                     // @ts-ignore
-                    findCandidateComponents(basePackage: string): java.util.Set<BeanDefinition>
+                    public findCandidateComponents(basePackage: java.lang.String | string): Array<BeanDefinition>
                     /**
                      * Resolve the specified base package into a pattern specification for
                      * the package search path.
@@ -154,7 +154,7 @@ declare namespace org {
                      * @return the pattern specification to be used for package searching
                      */
                     // @ts-ignore
-                    resolveBasePackage(basePackage: string): java.lang.String
+                    resolveBasePackage(basePackage: java.lang.String | string): string
                     /**
                      * Determine whether the given class does not match any exclude filter
                      * and does match at least one include filter.
@@ -177,7 +177,7 @@ declare namespace org {
                      * Clear the local metadata cache, if any, removing all cached class metadata.
                      */
                     // @ts-ignore
-                    clearCache(): void
+                    public clearCache(): void
                 }
             }
         }

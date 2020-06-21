@@ -31,7 +31,7 @@ declare namespace java {
              * 				The detail message for the exception.
              */
             // @ts-ignore
-            constructor(detailMessage: string)
+            constructor(detailMessage: java.lang.String | string)
             /**
              * Constructs a new instance of this class with its
              * walkback, message and cause filled in.
@@ -40,14 +40,14 @@ declare namespace java {
              * @param throwable The cause of this Throwable
              */
             // @ts-ignore
-            constructor(detailMessage: string, throwable: Error)
+            constructor(detailMessage: java.lang.String | string, throwable: java.lang.Throwable | Error)
             /**
              * Constructs a new instance of this class with its
              * walkback and cause filled in.
              * @param throwable The cause of this Throwable
              */
             // @ts-ignore
-            constructor(throwable: Error)
+            constructor(throwable: java.lang.Throwable | Error)
             /**
              * Constructs a new instance of this class with its walkback, message
              * and cause filled in.
@@ -71,7 +71,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            constructor(detailMessage: string, throwable: Error, enableSuppression: boolean, enableWritableStackTrace: boolean)
+            constructor(detailMessage: java.lang.String | string, throwable: java.lang.Throwable | Error, enableSuppression: boolean, enableWritableStackTrace: boolean)
             /**
              * Record in the receiver a walkback from the point
              * where this message was sent. The message is
@@ -82,7 +82,7 @@ declare namespace java {
              * @return the receiver
              */
             // @ts-ignore
-            fillInStackTrace(): java.lang.Throwable
+            public fillInStackTrace(): Error
             /**
              * Answers the extra information message which was provided
              * when the throwable was created. If no message was provided
@@ -91,7 +91,7 @@ declare namespace java {
              * 				The receiver's message.
              */
             // @ts-ignore
-            getMessage(): java.lang.String
+            public getMessage(): string
             /**
              * Answers the extra information message which was provided
              * when the throwable was created. If no message was provided
@@ -101,14 +101,14 @@ declare namespace java {
              * 				The receiver's message.
              */
             // @ts-ignore
-            getLocalizedMessage(): java.lang.String
+            public getLocalizedMessage(): string
             /**
              * Answers an array of StackTraceElement. Each StackTraceElement represents
              * a entry on the stack.
              * @return an array of StackTraceElement representing the stack
              */
             // @ts-ignore
-            getStackTrace(): java.lang.StackTraceElement[]
+            public getStackTrace(): java.lang.StackTraceElement[]
             /**
              * Sets the array of StackTraceElements. Each StackTraceElement represents
              * a entry on the stack. A copy of this array will be returned by getStackTrace()
@@ -116,13 +116,13 @@ declare namespace java {
              * @param trace The array of StackTraceElement
              */
             // @ts-ignore
-            setStackTrace(trace: java.lang.StackTraceElement[]): void
+            public setStackTrace(trace: java.lang.StackTraceElement[]): void
             /**
              * Outputs a printable representation of the receiver's
              * walkback on the System.err stream.
              */
             // @ts-ignore
-            printStackTrace(): void
+            public printStackTrace(): void
             /**
              * Outputs a printable representation of the receiver's
              * walkback on the stream specified by the argument.
@@ -130,7 +130,7 @@ declare namespace java {
              * 				The stream to write the walkback on.
              */
             // @ts-ignore
-            printStackTrace(err: java.io.PrintStream): void
+            public printStackTrace(err: java.io.PrintStream): void
             /**
              * Outputs a printable representation of the receiver's
              * walkback on the writer specified by the argument.
@@ -138,7 +138,7 @@ declare namespace java {
              * 				The writer to write the walkback on.
              */
             // @ts-ignore
-            printStackTrace(err: java.io.PrintWriter): void
+            public printStackTrace(err: java.io.PrintWriter): void
             /**
              * Answers a string containing a concise, human-readable
              * description of the receiver.
@@ -146,7 +146,7 @@ declare namespace java {
              * 				a printable representation for the receiver.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Initialize the cause of the receiver. The cause cannot be
              * reassigned.
@@ -156,7 +156,7 @@ declare namespace java {
              * @return the receiver.
              */
             // @ts-ignore
-            initCause(throwable: Error): java.lang.Throwable
+            public initCause(throwable: java.lang.Throwable | Error): Error
             /**
              * Answers the cause of this Throwable, or null if there
              * is no cause.
@@ -164,7 +164,7 @@ declare namespace java {
              * 				The receiver's cause.
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            public getCause(): Error
             /**
              * The specified exception is going to be suppressed in order to give priority
              * to this exception (primary exception) and to be appended to the list of
@@ -181,7 +181,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            addSuppressed(exception: Error): void
+            public addSuppressed(exception: java.lang.Throwable | Error): void
             /**
              * Returns an array of exceptions suppressed, typically by the automatically
              * generated code from the try-with-resources statement, in order to give
@@ -191,7 +191,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getSuppressed(): java.lang.Throwable[]
+            public getSuppressed(): Error[]
         }
     }
 }

@@ -42,14 +42,14 @@ declare namespace java {
              * @see #add
              */
             // @ts-ignore
-            get(uri: java.net.URI): java.util.List<java.net.HttpCookie>
+            get(uri: java.net.URI): Array<java.net.HttpCookie>
             /**
              * Get all not-expired cookies in cookie store.
              * @return an immutable list of http cookies;
              *                   return empty list if there's no http cookie in store
              */
             // @ts-ignore
-            getCookies(): java.util.List<java.net.HttpCookie>
+            getCookies(): Array<java.net.HttpCookie>
             /**
              * Get all URIs which identify the cookies in this cookie store.
              * @return an immutable list of URIs;
@@ -57,7 +57,7 @@ declare namespace java {
              *                   is associated with an URI
              */
             // @ts-ignore
-            getURIs(): java.util.List<java.net.URI>
+            getURIs(): Array<java.net.URI>
             /**
              * Remove a cookie from store.
              * @param uri       the uri this cookie associated with.

@@ -10,11 +10,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(what: org.bukkit.entity.Entity)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Projectile
+                    public getEntity(): org.bukkit.entity.Projectile
                 }
             }
         }

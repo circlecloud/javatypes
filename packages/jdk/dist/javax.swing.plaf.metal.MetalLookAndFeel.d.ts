@@ -44,35 +44,35 @@ declare namespace javax {
                      * @return the name of this look and feel
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns an identifier for this look and feel. This returns
                      * {@code "Metal"}.
                      * @return the identifier of this look and feel
                      */
                     // @ts-ignore
-                    getID(): java.lang.String
+                    public getID(): string
                     /**
                      * Returns a short description of this look and feel. This returns
                      * {@code "The Java(tm) Look and Feel"}.
                      * @return a short description for the look and feel
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * Returns {@code false}; {@code MetalLookAndFeel} is not a native
                      * look and feel.
                      * @return {#code false}
                      */
                     // @ts-ignore
-                    isNativeLookAndFeel(): boolean
+                    public isNativeLookAndFeel(): boolean
                     /**
                      * Returns {@code true}; {@code MetalLookAndFeel} can be run on
                      * any platform.
                      * @return {#code true}
                      */
                     // @ts-ignore
-                    isSupportedLookAndFeel(): boolean
+                    public isSupportedLookAndFeel(): boolean
                     /**
                      * Returns {@code true}; metal can provide {@code Window}
                      * decorations.
@@ -83,7 +83,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getSupportsWindowDecorations(): boolean
+                    public getSupportsWindowDecorations(): boolean
                     /**
                      * Populates {@code table} with mappings from {@code uiClassID} to
                      * the fully qualified name of the ui class. {@code
@@ -223,13 +223,13 @@ declare namespace javax {
                      * @see MetalTheme#addCustomEntriesToTable(UIDefaults)
                      */
                     // @ts-ignore
-                    getDefaults(): javax.swing.UIDefaults
+                    public getDefaults(): javax.swing.UIDefaults
                     /**
                      * {@inheritDoc}
                      * @since 1.4
                      */
                     // @ts-ignore
-                    provideErrorFeedback(component: java.awt.Component): void
+                    public provideErrorFeedback(component: java.awt.Component): void
                     /**
                      * Set the theme used by <code>MetalLookAndFeel</code>.
                      * <p>
@@ -250,7 +250,7 @@ declare namespace javax {
                      * @see #getCurrentTheme
                      */
                     // @ts-ignore
-                    setCurrentTheme(theme: javax.swing.plaf.metal.MetalTheme): void
+                    public static setCurrentTheme(theme: javax.swing.plaf.metal.MetalTheme): void
                     /**
                      * Return the theme currently being used by <code>MetalLookAndFeel</code>.
                      * If the current theme is {@code null}, the default theme is created.
@@ -259,7 +259,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getCurrentTheme(): javax.swing.plaf.metal.MetalTheme
+                    public static getCurrentTheme(): javax.swing.plaf.metal.MetalTheme
                     /**
                      * Returns an <code>Icon</code> with a disabled appearance.
                      * This method is used to generate a disabled <code>Icon</code> when
@@ -278,7 +278,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getDisabledIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
+                    public getDisabledIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
                     /**
                      * Returns an <code>Icon</code> for use by disabled
                      * components that are also selected. This method is used to generate an
@@ -299,7 +299,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getDisabledSelectedIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
+                    public getDisabledSelectedIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
                     /**
                      * Returns the control text font of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlTextColor()}.
@@ -307,7 +307,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlTextFont(): javax.swing.plaf.FontUIResource
+                    public static getControlTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the system text font of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getSystemTextFont()}.
@@ -315,7 +315,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getSystemTextFont(): javax.swing.plaf.FontUIResource
+                    public static getSystemTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the user text font of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getUserTextFont()}.
@@ -323,7 +323,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getUserTextFont(): javax.swing.plaf.FontUIResource
+                    public static getUserTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the menu text font of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getMenuTextFont()}.
@@ -331,7 +331,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getMenuTextFont(): javax.swing.plaf.FontUIResource
+                    public static getMenuTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the window title font of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getWindowTitleFont()}.
@@ -339,7 +339,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWindowTitleFont(): javax.swing.plaf.FontUIResource
+                    public static getWindowTitleFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the sub-text font of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getSubTextFont()}.
@@ -347,7 +347,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getSubTextFont(): javax.swing.plaf.FontUIResource
+                    public static getSubTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the desktop color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getDesktopColor()}.
@@ -355,7 +355,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getDesktopColor(): javax.swing.plaf.ColorUIResource
+                    public static getDesktopColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the focus color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getFocusColor()}.
@@ -363,7 +363,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getFocusColor(): javax.swing.plaf.ColorUIResource
+                    public static getFocusColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the white color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getWhite()}.
@@ -371,7 +371,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWhite(): javax.swing.plaf.ColorUIResource
+                    public static getWhite(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the black color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getBlack()}.
@@ -379,7 +379,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getBlack(): javax.swing.plaf.ColorUIResource
+                    public static getBlack(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControl()}.
@@ -387,7 +387,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControl(): javax.swing.plaf.ColorUIResource
+                    public static getControl(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control shadow color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlShadow()}.
@@ -395,7 +395,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlShadow(): javax.swing.plaf.ColorUIResource
+                    public static getControlShadow(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control dark shadow color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlDarkShadow()}.
@@ -403,7 +403,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlDarkShadow(): javax.swing.plaf.ColorUIResource
+                    public static getControlDarkShadow(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control info color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlInfo()}.
@@ -411,7 +411,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlInfo(): javax.swing.plaf.ColorUIResource
+                    public static getControlInfo(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control highlight color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlHighlight()}.
@@ -419,7 +419,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlHighlight(): javax.swing.plaf.ColorUIResource
+                    public static getControlHighlight(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control disabled color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlDisabled()}.
@@ -427,7 +427,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlDisabled(): javax.swing.plaf.ColorUIResource
+                    public static getControlDisabled(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the primary control color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getPrimaryControl()}.
@@ -435,7 +435,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getPrimaryControl(): javax.swing.plaf.ColorUIResource
+                    public static getPrimaryControl(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the primary control shadow color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getPrimaryControlShadow()}.
@@ -443,7 +443,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getPrimaryControlShadow(): javax.swing.plaf.ColorUIResource
+                    public static getPrimaryControlShadow(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the primary control dark shadow color of the current
                      * theme. This is a cover method for {@code
@@ -452,7 +452,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getPrimaryControlDarkShadow(): javax.swing.plaf.ColorUIResource
+                    public static getPrimaryControlDarkShadow(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the primary control info color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getPrimaryControlInfo()}.
@@ -460,7 +460,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getPrimaryControlInfo(): javax.swing.plaf.ColorUIResource
+                    public static getPrimaryControlInfo(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the primary control highlight color of the current
                      * theme. This is a cover method for {@code
@@ -469,7 +469,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getPrimaryControlHighlight(): javax.swing.plaf.ColorUIResource
+                    public static getPrimaryControlHighlight(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the system text color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getSystemTextColor()}.
@@ -477,7 +477,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getSystemTextColor(): javax.swing.plaf.ColorUIResource
+                    public static getSystemTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control text color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getControlTextColor()}.
@@ -485,7 +485,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getControlTextColor(): javax.swing.plaf.ColorUIResource
+                    public static getControlTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the inactive control text color of the current theme. This is a
                      * cover method for {@code
@@ -494,7 +494,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getInactiveControlTextColor(): javax.swing.plaf.ColorUIResource
+                    public static getInactiveControlTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the inactive system text color of the current theme. This is a
                      * cover method for {@code
@@ -503,7 +503,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getInactiveSystemTextColor(): javax.swing.plaf.ColorUIResource
+                    public static getInactiveSystemTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the user text color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getUserTextColor()}.
@@ -511,7 +511,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getUserTextColor(): javax.swing.plaf.ColorUIResource
+                    public static getUserTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the text highlight color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getTextHighlightColor()}.
@@ -519,7 +519,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getTextHighlightColor(): javax.swing.plaf.ColorUIResource
+                    public static getTextHighlightColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the highlighted text color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getHighlightedTextColor()}.
@@ -527,7 +527,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getHighlightedTextColor(): javax.swing.plaf.ColorUIResource
+                    public static getHighlightedTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the window background color of the current theme. This is a
                      * cover method for {@code getCurrentTheme().getWindowBackground()}.
@@ -535,7 +535,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWindowBackground(): javax.swing.plaf.ColorUIResource
+                    public static getWindowBackground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the window title background color of the current
                      * theme. This is a cover method for {@code
@@ -544,7 +544,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWindowTitleBackground(): javax.swing.plaf.ColorUIResource
+                    public static getWindowTitleBackground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the window title foreground color of the current
                      * theme. This is a cover method for {@code
@@ -553,7 +553,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWindowTitleForeground(): javax.swing.plaf.ColorUIResource
+                    public static getWindowTitleForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the window title inactive background color of the current
                      * theme. This is a cover method for {@code
@@ -562,7 +562,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWindowTitleInactiveBackground(): javax.swing.plaf.ColorUIResource
+                    public static getWindowTitleInactiveBackground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the window title inactive foreground color of the current
                      * theme. This is a cover method for {@code
@@ -571,7 +571,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getWindowTitleInactiveForeground(): javax.swing.plaf.ColorUIResource
+                    public static getWindowTitleInactiveForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the menu background color of the current theme. This is
                      * a cover method for {@code getCurrentTheme().getMenuBackground()}.
@@ -579,7 +579,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getMenuBackground(): javax.swing.plaf.ColorUIResource
+                    public static getMenuBackground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the menu foreground color of the current theme. This is
                      * a cover method for {@code getCurrentTheme().getMenuForeground()}.
@@ -587,7 +587,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getMenuForeground(): javax.swing.plaf.ColorUIResource
+                    public static getMenuForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the menu selected background color of the current theme. This is
                      * a cover method for
@@ -596,7 +596,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getMenuSelectedBackground(): javax.swing.plaf.ColorUIResource
+                    public static getMenuSelectedBackground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the menu selected foreground color of the current theme. This is
                      * a cover method for
@@ -605,7 +605,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getMenuSelectedForeground(): javax.swing.plaf.ColorUIResource
+                    public static getMenuSelectedForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the menu disabled foreground color of the current theme. This is
                      * a cover method for
@@ -614,7 +614,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getMenuDisabledForeground(): javax.swing.plaf.ColorUIResource
+                    public static getMenuDisabledForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the separator background color of the current theme. This is
                      * a cover method for {@code getCurrentTheme().getSeparatorBackground()}.
@@ -622,7 +622,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getSeparatorBackground(): javax.swing.plaf.ColorUIResource
+                    public static getSeparatorBackground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the separator foreground color of the current theme. This is
                      * a cover method for {@code getCurrentTheme().getSeparatorForeground()}.
@@ -630,7 +630,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getSeparatorForeground(): javax.swing.plaf.ColorUIResource
+                    public static getSeparatorForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the accelerator foreground color of the current theme. This is
                      * a cover method for {@code getCurrentTheme().getAcceleratorForeground()}.
@@ -638,7 +638,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getAcceleratorForeground(): javax.swing.plaf.ColorUIResource
+                    public static getAcceleratorForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the accelerator selected foreground color of the
                      * current theme. This is a cover method for {@code
@@ -647,7 +647,7 @@ declare namespace javax {
                      * @see MetalTheme
                      */
                     // @ts-ignore
-                    getAcceleratorSelectedForeground(): javax.swing.plaf.ColorUIResource
+                    public static getAcceleratorSelectedForeground(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns a {@code LayoutStyle} implementing the Java look and feel
                      * design guidelines as specified at
@@ -657,7 +657,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getLayoutStyle(): javax.swing.LayoutStyle
+                    public getLayoutStyle(): javax.swing.LayoutStyle
                 }
             }
         }

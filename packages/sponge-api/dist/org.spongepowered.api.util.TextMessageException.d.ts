@@ -27,15 +27,15 @@ declare namespace org {
                      * @param throwable The cause
                      */
                     // @ts-ignore
-                    constructor(message: org.spongepowered.api.text.Text, throwable: Error)
+                    constructor(message: org.spongepowered.api.text.Text, throwable: java.lang.Throwable | Error)
                     /**
                      * Constructs a new {@link TextMessageException} with the given cause.
                      * @param throwable The cause
                      */
                     // @ts-ignore
-                    constructor(throwable: Error)
+                    constructor(throwable: java.lang.Throwable | Error)
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    getMessage(): string
                     /**
                      * Returns the text message for this exception, or null if nothing is
                      * present.
@@ -44,7 +44,7 @@ declare namespace org {
                     // @ts-ignore
                     getText(): org.spongepowered.api.text.Text
                     // @ts-ignore
-                    getLocalizedMessage(): java.lang.String
+                    getLocalizedMessage(): string
                 }
             }
         }

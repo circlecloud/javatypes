@@ -17,7 +17,7 @@ declare namespace org {
                              * @return This builder for chaining
                              */
                             // @ts-ignore
-                            id(permissionId: string): org.spongepowered.api.service.permission.PermissionDescription.Builder
+                            id(permissionId: java.lang.String | string): org.spongepowered.api.service.permission.PermissionDescription.Builder
                             /**
                              * Sets the short description to use.
                              * <p>May include a link to a more detailed description on the plugin's
@@ -45,7 +45,7 @@ declare namespace org {
                              * @return This builder for chaining
                              */
                             // @ts-ignore
-                            assign(role: string, value: boolean): org.spongepowered.api.service.permission.PermissionDescription.Builder
+                            assign(role: java.lang.String | string, value: boolean): org.spongepowered.api.service.permission.PermissionDescription.Builder
                             /**
                              * Creates and registers a new {@link PermissionDescription} instance
                              * with the given settings.

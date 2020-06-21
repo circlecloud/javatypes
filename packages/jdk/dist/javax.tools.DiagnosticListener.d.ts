@@ -19,7 +19,7 @@ declare namespace javax {
              *  arguments
              */
             // @ts-ignore
-            report(diagnostic: javax.tools.Diagnostic<S>): void
+            report(diagnostic: javax.tools.Diagnostic<any>): void
         }
     }
 }

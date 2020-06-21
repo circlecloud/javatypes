@@ -51,7 +51,7 @@ declare namespace javax {
              * @param mimeType  the MIME type of the object
              */
             // @ts-ignore
-            constructor(obj: any, mimeType: string)
+            constructor(obj: java.lang.Object | any, mimeType: java.lang.String | string)
             /**
              * Create a <code>DataHandler</code> instance referencing a URL.
              * The DataHandler internally creates a <code>URLDataSource</code>
@@ -74,7 +74,7 @@ declare namespace javax {
              * @return a valid DataSource object for this DataHandler
              */
             // @ts-ignore
-            getDataSource(): javax.activation.DataSource
+            public getDataSource(): javax.activation.DataSource
             /**
              * Return the name of the data object. If this DataHandler
              * was created with a DataSource, this method calls through
@@ -83,7 +83,7 @@ declare namespace javax {
              * @return the name of the object
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Return the MIME type of this object as retrieved from
              * the source object. Note that this is the <i>full</i>
@@ -91,7 +91,7 @@ declare namespace javax {
              * @return the MIME type
              */
             // @ts-ignore
-            getContentType(): java.lang.String
+            public getContentType(): string
             /**
              * Get the InputStream for this object. <p>
              * For DataHandlers instantiated with a DataSource, the DataHandler
@@ -114,7 +114,7 @@ declare namespace javax {
              * @see javax.activation.UnsupportedDataTypeException
              */
             // @ts-ignore
-            getInputStream(): java.io.InputStream
+            public getInputStream(): java.io.InputStream
             /**
              * Write the data to an <code>OutputStream</code>.<p>
              * If the DataHandler was created with a DataSource, writeTo
@@ -129,7 +129,7 @@ declare namespace javax {
              * @exception IOException   if an I/O error occurs
              */
             // @ts-ignore
-            writeTo(os: java.io.OutputStream): void
+            public writeTo(os: java.io.OutputStream): void
             /**
              * Get an OutputStream for this DataHandler to allow overwriting
              * the underlying data.
@@ -141,7 +141,7 @@ declare namespace javax {
              * @see javax.activation.URLDataSource
              */
             // @ts-ignore
-            getOutputStream(): java.io.OutputStream
+            public getOutputStream(): java.io.OutputStream
             /**
              * Return the DataFlavors in which this data is available. <p>
              * Returns an array of DataFlavor objects indicating the flavors
@@ -163,7 +163,7 @@ declare namespace javax {
              * @see javax.activation.DataContentHandler#getTransferDataFlavors
              */
             // @ts-ignore
-            getTransferDataFlavors(): java.awt.datatransfer.DataFlavor[]
+            public getTransferDataFlavors(): java.awt.datatransfer.DataFlavor[]
             /**
              * Returns whether the specified data flavor is supported
              * for this object.<p>
@@ -175,7 +175,7 @@ declare namespace javax {
              * @see javax.activation.DataHandler#getTransferDataFlavors
              */
             // @ts-ignore
-            isDataFlavorSupported(flavor: java.awt.datatransfer.DataFlavor): boolean
+            public isDataFlavorSupported(flavor: java.awt.datatransfer.DataFlavor): boolean
             /**
              * Returns an object that represents the data to be
              * transferred. The class of the object returned is defined by the
@@ -205,7 +205,7 @@ declare namespace javax {
              * @see javax.activation.ActivationDataFlavor
              */
             // @ts-ignore
-            getTransferData(flavor: java.awt.datatransfer.DataFlavor): java.lang.Object
+            public getTransferData(flavor: java.awt.datatransfer.DataFlavor): any
             /**
              * Set the CommandMap for use by this DataHandler.
              * Setting it to <code>null</code> causes the CommandMap to revert
@@ -217,7 +217,7 @@ declare namespace javax {
              * @see javax.activation.CommandMap#setDefaultCommandMap
              */
             // @ts-ignore
-            setCommandMap(commandMap: javax.activation.CommandMap): void
+            public setCommandMap(commandMap: javax.activation.CommandMap): void
             /**
              * Return the <i>preferred</i> commands for this type of data.
              * This method calls the <code>getPreferredCommands</code> method
@@ -230,7 +230,7 @@ declare namespace javax {
              * @see javax.activation.CommandMap#getPreferredCommands
              */
             // @ts-ignore
-            getPreferredCommands(): javax.activation.CommandInfo[]
+            public getPreferredCommands(): javax.activation.CommandInfo[]
             /**
              * Return all the commands for this type of data.
              * This method returns an array containing all commands
@@ -242,7 +242,7 @@ declare namespace javax {
              * @see javax.activation.CommandMap#getAllCommands
              */
             // @ts-ignore
-            getAllCommands(): javax.activation.CommandInfo[]
+            public getAllCommands(): javax.activation.CommandInfo[]
             /**
              * Get the command <i>cmdName</i>. Use the search semantics as
              * defined by the CommandMap installed in this DataHandler. The
@@ -254,7 +254,7 @@ declare namespace javax {
              * @see javax.activation.CommandMap#getCommand
              */
             // @ts-ignore
-            getCommand(cmdName: string): javax.activation.CommandInfo
+            public getCommand(cmdName: java.lang.String | string): javax.activation.CommandInfo
             /**
              * Return the data in its preferred Object form. <p>
              * If the DataHandler was instantiated with an object, return
@@ -270,7 +270,7 @@ declare namespace javax {
              *                               this operation.
              */
             // @ts-ignore
-            getContent(): java.lang.Object
+            public getContent(): any
             /**
              * A convenience method that takes a CommandInfo object
              * and instantiates the corresponding command, usually
@@ -283,7 +283,7 @@ declare namespace javax {
              * @return the instantiated command object
              */
             // @ts-ignore
-            getBean(cmdinfo: javax.activation.CommandInfo): java.lang.Object
+            public getBean(cmdinfo: javax.activation.CommandInfo): any
             /**
              * Sets the DataContentHandlerFactory.  The DataContentHandlerFactory
              * is called first to find DataContentHandlers.
@@ -296,7 +296,7 @@ declare namespace javax {
              * @see javax.activation.DataContentHandlerFactory
              */
             // @ts-ignore
-            setDataContentHandlerFactory(newFactory: javax.activation.DataContentHandlerFactory): void
+            public static setDataContentHandlerFactory(newFactory: javax.activation.DataContentHandlerFactory): void
         }
     }
 }

@@ -43,17 +43,17 @@ declare namespace org {
                          * Default config location for the root context.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CONFIG_LOCATION: string
+                        public static readonly DEFAULT_CONFIG_LOCATION: java.lang.String | string
                         /**
                          * Default prefix for building a config location for a namespace.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CONFIG_LOCATION_PREFIX: string
+                        public static readonly DEFAULT_CONFIG_LOCATION_PREFIX: java.lang.String | string
                         /**
                          * Default suffix for building a config location for a namespace.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CONFIG_LOCATION_SUFFIX: string
+                        public static readonly DEFAULT_CONFIG_LOCATION_SUFFIX: java.lang.String | string
                         /**
                          * Loads the bean definitions via an GroovyBeanDefinitionReader.
                          * @see org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
@@ -90,17 +90,17 @@ declare namespace org {
                          * (like for a DispatcherServlet instance with the servlet-name "test").
                          */
                         // @ts-ignore
-                        getDefaultConfigLocations(): java.lang.String[]
+                        getDefaultConfigLocations(): string[]
                         // @ts-ignore
-                        setMetaClass(metaClass: MetaClass): void
+                        public setMetaClass(metaClass: MetaClass): void
                         // @ts-ignore
-                        getMetaClass(): MetaClass
+                        public getMetaClass(): MetaClass
                         // @ts-ignore
-                        invokeMethod(name: string, args: any): java.lang.Object
+                        public invokeMethod(name: java.lang.String | string, args: java.lang.Object | any): any
                         // @ts-ignore
-                        setProperty(property: string, newValue: any): void
+                        public setProperty(property: java.lang.String | string, newValue: java.lang.Object | any): void
                         // @ts-ignore
-                        getProperty(property: string): java.lang.Object
+                        public getProperty(property: java.lang.String | string): any
                     }
                 }
             }

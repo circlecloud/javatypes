@@ -65,7 +65,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, updateCounts: number /*int*/[])
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, updateCounts: number /*int*/[])
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with a given
              * <code>reason</code>, <code>SQLState</code> and
@@ -95,7 +95,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, updateCounts: number /*int*/[])
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, updateCounts: number /*int*/[])
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with a given
              * <code>reason</code> and <code>updateCounts</code>.
@@ -124,7 +124,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(reason: string, updateCounts: number /*int*/[])
+            constructor(reason: java.lang.String | string, updateCounts: number /*int*/[])
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with a given
              * <code>updateCounts</code>.
@@ -183,7 +183,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with a
              * given <code>cause</code> and <code>updateCounts</code>.
@@ -214,7 +214,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(updateCounts: number /*int*/[], cause: Error)
+            constructor(updateCounts: number /*int*/[], cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with
              * a given <code>reason</code>, <code>cause</code>
@@ -243,7 +243,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(reason: string, updateCounts: number /*int*/[], cause: Error)
+            constructor(reason: java.lang.String | string, updateCounts: number /*int*/[], cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with
              * a given <code>reason</code>, <code>SQLState</code>,<code>cause</code>, and
@@ -273,7 +273,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, updateCounts: number /*int*/[], cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, updateCounts: number /*int*/[], cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with
              * a given <code>reason</code>, <code>SQLState</code>, <code>vendorCode</code>
@@ -304,7 +304,7 @@ declare namespace java {
              *  java.lang.Throwable)
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, updateCounts: number /*int*/[], cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, updateCounts: number /*int*/[], cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>BatchUpdateException</code> object initialized with
              * a given <code>reason</code>, <code>SQLState</code>, <code>vendorCode</code>
@@ -331,7 +331,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, updateCounts: number /*long*/[], cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, updateCounts: number /*long*/[], cause: java.lang.Throwable | Error)
             /**
              * Retrieves the update count for each update statement in the batch
              * update that executed successfully before this exception occurred.
@@ -363,7 +363,7 @@ declare namespace java {
              * @see #getLargeUpdateCounts()
              */
             // @ts-ignore
-            getUpdateCounts(): int[]
+            getUpdateCounts(): number /*int*/[]
             /**
              * Retrieves the update count for each update statement in the batch
              * update that executed successfully before this exception occurred.
@@ -392,7 +392,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getLargeUpdateCounts(): long[]
+            getLargeUpdateCounts(): number /*long*/[]
         }
     }
 }

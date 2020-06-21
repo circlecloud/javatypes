@@ -74,7 +74,7 @@ declare namespace java {
              *  is null.
              */
             // @ts-ignore
-            normalize(src: java.lang.CharSequence, form: java.text.Normalizer.Form): java.lang.String
+            public static normalize(src: java.lang.CharSequence, form: java.text.Normalizer.Form): string
             /**
              * Determines if the given sequence of char values is normalized.
              * @param src        The sequence of char values to be checked.
@@ -89,7 +89,7 @@ declare namespace java {
              *  is null.
              */
             // @ts-ignore
-            isNormalized(src: java.lang.CharSequence, form: java.text.Normalizer.Form): boolean
+            public static isNormalized(src: java.lang.CharSequence, form: java.text.Normalizer.Form): boolean
         }
     }
 }

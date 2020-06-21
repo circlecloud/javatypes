@@ -34,7 +34,7 @@ declare namespace javax {
                  * @return the component for editing
                  */
                 // @ts-ignore
-                getTableCellEditorComponent(table: javax.swing.JTable, value: any, isSelected: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
+                getTableCellEditorComponent(table: javax.swing.JTable, value: java.lang.Object | any, isSelected: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
             }
         }
     }

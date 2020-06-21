@@ -36,7 +36,7 @@ declare namespace java {
              * @param s   the detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs a <code>ClassNotFoundException</code> with the
              * specified detail message and optional exception that was
@@ -46,7 +46,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            constructor(s: string, ex: Error)
+            constructor(s: java.lang.String | string, ex: java.lang.Throwable | Error)
             /**
              * Returns the exception that was raised if an error occurred while
              * attempting to load the class. Otherwise, returns <tt>null</tt>.
@@ -57,7 +57,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getException(): java.lang.Throwable
+            getException(): Error
             /**
              * Returns the cause of this exception (the exception that was raised
              * if an error occurred while attempting to load the class; otherwise
@@ -66,7 +66,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
         }
     }
 }

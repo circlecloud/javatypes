@@ -35,7 +35,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(configSource: org.springframework.web.cors.reactive.CorsConfigurationSource, processor: org.springframework.web.cors.reactive.CorsProcessor)
                         // @ts-ignore
-                        filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): <any>
+                        public filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): object
                     }
                 }
             }

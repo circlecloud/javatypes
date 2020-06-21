@@ -26,7 +26,7 @@ declare namespace javax {
              * @see AccessibleText#getBeforeIndex
              */
             // @ts-ignore
-            
+            readonly LINE: number /*int*/
             /**
              * Constant used to indicate that the part of the text that should be
              * retrieved is contiguous text with the same text attributes.
@@ -35,7 +35,7 @@ declare namespace javax {
              * @see AccessibleText#getBeforeIndex
              */
             // @ts-ignore
-            
+            readonly ATTRIBUTE_RUN: number /*int*/
             /**
              * Returns the text between two indices
              * @param startIndex the start index in the text
@@ -44,7 +44,7 @@ declare namespace javax {
              *  Otherwise, null is returned.
              */
             // @ts-ignore
-            getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): java.lang.String
+            getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): string
             /**
              * Returns the <code>AccessibleTextSequence</code> at a given index.
              * @param part the <code>CHARACTER</code>, <code>WORD</code>,

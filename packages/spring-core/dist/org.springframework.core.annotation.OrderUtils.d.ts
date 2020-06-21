@@ -12,7 +12,7 @@ declare namespace org {
                  * @see javax.annotation.Priority
                  */
                 // @ts-ignore
-                class OrderUtils extends java.lang.Object {
+                abstract class OrderUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -25,7 +25,7 @@ declare namespace org {
                      * @see #getPriority(Class)
                      */
                     // @ts-ignore
-                    getOrder(type: java.lang.Class<any>, defaultOrder: number /*int*/): int
+                    public static getOrder(type: java.lang.Class<any>, defaultOrder: number /*int*/): number /*int*/
                     /**
                      * Return the order on the specified {@code type}, or the specified
                      * default value if none can be found.
@@ -35,7 +35,7 @@ declare namespace org {
                      * @see #getPriority(Class)
                      */
                     // @ts-ignore
-                    getOrder(type: java.lang.Class<any>, defaultOrder: number): java.lang.Integer
+                    public static getOrder(type: java.lang.Class<any>, defaultOrder: java.lang.Integer | number): number
                     /**
                      * Return the order on the specified {@code type}.
                      * <p>Takes care of {@link Order @Order} and {@code @javax.annotation.Priority}.
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see #getPriority(Class)
                      */
                     // @ts-ignore
-                    getOrder(type: java.lang.Class<any>): java.lang.Integer
+                    public static getOrder(type: java.lang.Class<any>): number
                     /**
                      * Return the value of the {@code javax.annotation.Priority} annotation
                      * declared on the specified type, or {@code null} if none.
@@ -52,7 +52,7 @@ declare namespace org {
                      * @return the priority value if the annotation is declared, or {#code null} if none
                      */
                     // @ts-ignore
-                    getPriority(type: java.lang.Class<any>): java.lang.Integer
+                    public static getPriority(type: java.lang.Class<any>): number
                 }
             }
         }

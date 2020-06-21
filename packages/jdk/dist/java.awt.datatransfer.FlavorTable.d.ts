@@ -28,7 +28,7 @@ declare namespace java {
                  *          specific data formats
                  */
                 // @ts-ignore
-                getNativesForFlavor(flav: java.awt.datatransfer.DataFlavor): java.util.List<java.lang.String>
+                getNativesForFlavor(flav: java.awt.datatransfer.DataFlavor): Array<java.lang.String | string>
                 /**
                  * Returns a <code>List</code> of <code>DataFlavor</code>s to which the
                  * specified <code>String</code> corresponds. The <code>List</code> will be
@@ -48,7 +48,7 @@ declare namespace java {
                  *          platform-specific native can be translated
                  */
                 // @ts-ignore
-                getFlavorsForNative(nat: string): java.util.List<java.awt.datatransfer.DataFlavor>
+                getFlavorsForNative(nat: java.lang.String | string): Array<java.awt.datatransfer.DataFlavor>
             }
         }
     }

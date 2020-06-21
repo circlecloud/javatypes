@@ -129,7 +129,7 @@ declare namespace java {
              * @see SelectionKey
              */
             // @ts-ignore
-            class Selector extends java.lang.Object implements java.io.Closeable {
+            abstract class Selector extends java.lang.Object implements java.io.Closeable {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -146,19 +146,19 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.Selector
+                public static open(): java.nio.channels.Selector
                 /**
                  * Tells whether or not this selector is open.
                  * @return <tt>true</tt> if, and only if, this selector is open
                  */
                 // @ts-ignore
-                abstract isOpen(): boolean
+                public abstract isOpen(): boolean
                 /**
                  * Returns the provider that created this channel.
                  * @return The provider that created this channel
                  */
                 // @ts-ignore
-                abstract provider(): java.nio.channels.spi.SelectorProvider
+                public abstract provider(): java.nio.channels.spi.SelectorProvider
                 /**
                  * Returns this selector's key set.
                  * <p> The key set is not directly modifiable.  A key is removed only after
@@ -171,7 +171,7 @@ declare namespace java {
                  *           If this selector is closed
                  */
                 // @ts-ignore
-                abstract keys(): java.util.Set<java.nio.channels.SelectionKey>
+                public abstract keys(): Array<java.nio.channels.SelectionKey>
                 /**
                  * Returns this selector's selected-key set.
                  * <p> Keys may be removed from, but not directly added to, the
@@ -183,7 +183,7 @@ declare namespace java {
                  *           If this selector is closed
                  */
                 // @ts-ignore
-                abstract selectedKeys(): java.util.Set<java.nio.channels.SelectionKey>
+                public abstract selectedKeys(): Array<java.nio.channels.SelectionKey>
                 /**
                  * Selects a set of keys whose corresponding channels are ready for I/O
                  * operations.
@@ -200,7 +200,7 @@ declare namespace java {
                  *           If this selector is closed
                  */
                 // @ts-ignore
-                abstract selectNow(): int
+                public abstract selectNow(): number /*int*/
                 /**
                  * Selects a set of keys whose corresponding channels are ready for I/O
                  * operations.
@@ -225,7 +225,7 @@ declare namespace java {
                  *           If the value of the timeout argument is negative
                  */
                 // @ts-ignore
-                abstract select(timeout: number /*long*/): int
+                public abstract select(timeout: number /*long*/): number /*int*/
                 /**
                  * Selects a set of keys whose corresponding channels are ready for I/O
                  * operations.
@@ -241,7 +241,7 @@ declare namespace java {
                  *           If this selector is closed
                  */
                 // @ts-ignore
-                abstract select(): int
+                public abstract select(): number /*int*/
                 /**
                  * Causes the first selection operation that has not yet returned to return
                  * immediately.
@@ -259,7 +259,7 @@ declare namespace java {
                  * @return This selector
                  */
                 // @ts-ignore
-                abstract wakeup(): java.nio.channels.Selector
+                public abstract wakeup(): java.nio.channels.Selector
                 /**
                  * Closes this selector.
                  * <p> If a thread is currently blocked in one of this selector's selection
@@ -277,7 +277,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract close(): void
+                public abstract close(): void
             }
         }
     }

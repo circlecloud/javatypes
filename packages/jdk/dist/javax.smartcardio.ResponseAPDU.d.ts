@@ -34,7 +34,7 @@ declare namespace javax {
              *  has no body.
              */
             // @ts-ignore
-            getNr(): int
+            public getNr(): number /*int*/
             /**
              * Returns a copy of the data bytes in the response body. If this APDU as
              * no body, this method returns a byte array with a length of zero.
@@ -42,19 +42,19 @@ declare namespace javax {
              *     byte array if this APDU has no body.
              */
             // @ts-ignore
-            getData(): byte[]
+            public getData(): number /*byte*/[]
             /**
              * Returns the value of the status byte SW1 as a value between 0 and 255.
              * @return the value of the status byte SW1 as a value between 0 and 255.
              */
             // @ts-ignore
-            getSW1(): int
+            public getSW1(): number /*int*/
             /**
              * Returns the value of the status byte SW2 as a value between 0 and 255.
              * @return the value of the status byte SW2 as a value between 0 and 255.
              */
             // @ts-ignore
-            getSW2(): int
+            public getSW2(): number /*int*/
             /**
              * Returns the value of the status bytes SW1 and SW2 as a single
              * status word SW.
@@ -63,19 +63,19 @@ declare namespace javax {
              * @return the value of the status word SW.
              */
             // @ts-ignore
-            getSW(): int
+            public getSW(): number /*int*/
             /**
              * Returns a copy of the bytes in this APDU.
              * @return a copy of the bytes in this APDU.
              */
             // @ts-ignore
-            getBytes(): byte[]
+            public getBytes(): number /*byte*/[]
             /**
              * Returns a string representation of this response APDU.
              * @return a String representation of this response APDU.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares the specified object with this response APDU for equality.
              * Returns true if the given object is also a ResponseAPDU and its bytes are
@@ -84,13 +84,13 @@ declare namespace javax {
              * @return true if the specified object is equal to this response APDU
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this response APDU.
              * @return the hash code value for this response APDU.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

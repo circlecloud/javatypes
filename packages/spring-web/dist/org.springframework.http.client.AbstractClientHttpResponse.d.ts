@@ -8,11 +8,11 @@ declare namespace org {
                  * @since 3.1.1
                  */
                 // @ts-ignore
-                class AbstractClientHttpResponse extends java.lang.Object implements org.springframework.http.client.ClientHttpResponse {
+                abstract class AbstractClientHttpResponse extends java.lang.Object implements org.springframework.http.client.ClientHttpResponse {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getStatusCode(): org.springframework.http.HttpStatus
+                    public getStatusCode(): org.springframework.http.HttpStatus
                 }
             }
         }

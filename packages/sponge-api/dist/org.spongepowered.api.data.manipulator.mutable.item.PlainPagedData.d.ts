@@ -11,14 +11,14 @@ declare namespace org {
                              * such that the text elements are single pages.
                              */
                             // @ts-ignore
-                            interface PlainPagedData extends org.spongepowered.api.data.manipulator.mutable.ListData<java.lang.String, org.spongepowered.api.data.manipulator.mutable.item.PlainPagedData, org.spongepowered.api.data.manipulator.immutable.item.ImmutablePlainPagedData> {
+                            interface PlainPagedData extends org.spongepowered.api.data.manipulator.mutable.ListData<java.lang.String | string, org.spongepowered.api.data.manipulator.mutable.item.PlainPagedData, org.spongepowered.api.data.manipulator.immutable.item.ImmutablePlainPagedData> {
                                 /**
                                  * Gets the {@link ListValue} for the {@link Text} pages.
                                  * @return The list value of text pages
                                  * @see Keys#PLAIN_BOOK_PAGES
                                  */
                                 // @ts-ignore
-                                pages(): org.spongepowered.api.data.value.mutable.ListValue<java.lang.String>
+                                pages(): org.spongepowered.api.data.value.mutable.ListValue<java.lang.String | string>
                             }
                         }
                     }

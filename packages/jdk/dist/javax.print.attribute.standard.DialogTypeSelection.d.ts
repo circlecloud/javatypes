@@ -31,14 +31,14 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(value: number /*int*/)
                     // @ts-ignore
-                    readonly NATIVE: javax.print.attribute.standard.DialogTypeSelection
+                    public static readonly NATIVE: javax.print.attribute.standard.DialogTypeSelection
                     // @ts-ignore
-                    readonly COMMON: javax.print.attribute.standard.DialogTypeSelection
+                    public static readonly COMMON: javax.print.attribute.standard.DialogTypeSelection
                     /**
                      * Returns the string table for class DialogTypeSelection.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class DialogTypeSelection.
                      */
@@ -54,7 +54,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -64,7 +64,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

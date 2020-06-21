@@ -55,7 +55,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            width: number /*int*/
+            public width: number /*int*/
             /**
              * The height dimension; negative values can be used.
              * @serial 
@@ -64,19 +64,19 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            height: number /*int*/
+            public height: number /*int*/
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            getWidth(): double
+            public getWidth(): number /*double*/
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            getHeight(): double
+            public getHeight(): number /*double*/
             /**
              * Sets the size of this <code>Dimension</code> object to
              * the specified width and height in double precision.
@@ -88,7 +88,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setSize(width: number /*double*/, height: number /*double*/): void
+            public setSize(width: number /*double*/, height: number /*double*/): void
             /**
              * Gets the size of this <code>Dimension</code> object.
              * This method is included for completeness, to parallel the
@@ -100,7 +100,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getSize(): java.awt.Dimension
+            public getSize(): java.awt.Dimension
             /**
              * Sets the size of this <code>Dimension</code> object to the specified size.
              * This method is included for completeness, to parallel the
@@ -111,7 +111,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setSize(d: java.awt.Dimension): void
+            public setSize(d: java.awt.Dimension): void
             /**
              * Sets the size of this <code>Dimension</code> object
              * to the specified width and height.
@@ -124,18 +124,18 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setSize(width: number /*int*/, height: number /*int*/): void
+            public setSize(width: number /*int*/, height: number /*int*/): void
             /**
              * Checks whether two dimension objects have equal values.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code for this <code>Dimension</code>.
              * @return a hash code for this <code>Dimension</code>
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of the values of this
              * <code>Dimension</code> object's <code>height</code> and
@@ -147,7 +147,7 @@ declare namespace java {
              *           object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

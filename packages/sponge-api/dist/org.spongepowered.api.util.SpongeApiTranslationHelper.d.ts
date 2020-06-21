@@ -17,7 +17,7 @@ declare namespace org {
                      * @return The translatable text
                      */
                     // @ts-ignore
-                    t(key: string, ...args: any[]): org.spongepowered.api.text.Text
+                    public static t(key: java.lang.String | string, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.Text
                 }
             }
         }

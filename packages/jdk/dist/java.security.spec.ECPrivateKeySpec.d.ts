@@ -27,14 +27,14 @@ declare namespace java {
                  * @return the private value S.
                  */
                 // @ts-ignore
-                getS(): java.math.BigInteger
+                public getS(): java.math.BigInteger
                 /**
                  * Returns the associated elliptic curve domain
                  * parameters.
                  * @return the EC domain parameters.
                  */
                 // @ts-ignore
-                getParams(): java.security.spec.ECParameterSpec
+                public getParams(): java.security.spec.ECParameterSpec
             }
         }
     }

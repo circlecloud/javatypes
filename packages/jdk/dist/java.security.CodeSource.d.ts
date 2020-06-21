@@ -33,7 +33,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tests for equality between the specified object and this
              * object. Two CodeSource objects are considered equal if their
@@ -44,13 +44,13 @@ declare namespace java {
              * @return true if the objects are considered equal, false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the location associated with this CodeSource.
              * @return the location (URL).
              */
             // @ts-ignore
-            getLocation(): java.net.URL
+            public getLocation(): java.net.URL
             /**
              * Returns the certificates associated with this CodeSource.
              * <p>
@@ -65,7 +65,7 @@ declare namespace java {
              * @return A copy of the certificates array, or null if there is none.
              */
             // @ts-ignore
-            getCertificates(): java.security.cert.Certificate[]
+            public getCertificates(): java.security.cert.Certificate[]
             /**
              * Returns the code signers associated with this CodeSource.
              * <p>
@@ -78,7 +78,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getCodeSigners(): java.security.CodeSigner[]
+            public getCodeSigners(): java.security.CodeSigner[]
             /**
              * Returns true if this CodeSource object "implies" the specified CodeSource.
              * <p>
@@ -139,14 +139,14 @@ declare namespace java {
              *  false if not.
              */
             // @ts-ignore
-            implies(codesource: java.security.CodeSource): boolean
+            public implies(codesource: java.security.CodeSource): boolean
             /**
              * Returns a string describing this CodeSource, telling its
              * URL and certificates.
              * @return information about this CodeSource.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -55,7 +55,7 @@ declare namespace java {
              *  Profile</i></a>
              */
             // @ts-ignore
-            class PKIXRevocationChecker extends java.security.cert.PKIXCertPathChecker {
+            abstract class PKIXRevocationChecker extends java.security.cert.PKIXCertPathChecker {
                 /**
                  * Default constructor.
                  */
@@ -69,7 +69,7 @@ declare namespace java {
                  * @param uri the responder URI
                  */
                 // @ts-ignore
-                setOcspResponder(uri: java.net.URI): void
+                public setOcspResponder(uri: java.net.URI): void
                 /**
                  * Gets the URI that identifies the location of the OCSP responder. This
                  * overrides the {@code ocsp.responderURL} security property. If this
@@ -79,7 +79,7 @@ declare namespace java {
                  * @return the responder URI, or {#code null} if not set
                  */
                 // @ts-ignore
-                getOcspResponder(): java.net.URI
+                public getOcspResponder(): java.net.URI
                 /**
                  * Sets the OCSP responder's certificate. This overrides the
                  * {@code ocsp.responderCertSubjectName},
@@ -88,7 +88,7 @@ declare namespace java {
                  * @param cert the responder's certificate
                  */
                 // @ts-ignore
-                setOcspResponderCert(cert: java.security.cert.X509Certificate): void
+                public setOcspResponderCert(cert: java.security.cert.X509Certificate): void
                 /**
                  * Gets the OCSP responder's certificate. This overrides the
                  * {@code ocsp.responderCertSubjectName},
@@ -99,21 +99,21 @@ declare namespace java {
                  * @return the responder's certificate, or {#code null} if not set
                  */
                 // @ts-ignore
-                getOcspResponderCert(): java.security.cert.X509Certificate
+                public getOcspResponderCert(): java.security.cert.X509Certificate
                 /**
                  * Sets the optional OCSP request extensions.
                  * @param extensions a list of extensions. The list is copied to protect
                  *         against subsequent modification.
                  */
                 // @ts-ignore
-                setOcspExtensions(extensions: Array<java.security.cert.Extension>): void
+                public setOcspExtensions(extensions: java.util.List<java.security.cert.Extension> | Array<java.security.cert.Extension>): void
                 /**
                  * Gets the optional OCSP request extensions.
                  * @return an unmodifiable list of extensions. The list is empty if no
                  *          extensions have been specified.
                  */
                 // @ts-ignore
-                getOcspExtensions(): java.util.List<java.security.cert.Extension>
+                public getOcspExtensions(): Array<java.security.cert.Extension>
                 /**
                  * Sets the OCSP responses. These responses are used to determine
                  * the revocation status of the specified certificates when OCSP is used.
@@ -123,7 +123,7 @@ declare namespace java {
                  *         the map is performed to protect against subsequent modification.
                  */
                 // @ts-ignore
-                setOcspResponses(responses: java.util.Map<java.security.cert.X509Certificate, byte[]>): void
+                public setOcspResponses(responses: java.util.Map<java.security.cert.X509Certificate, number /*byte*/[]>): void
                 /**
                  * Gets the OCSP responses. These responses are used to determine
                  * the revocation status of the specified certificates when OCSP is used.
@@ -134,21 +134,21 @@ declare namespace java {
                  *         Returns an empty map if no responses have been specified.
                  */
                 // @ts-ignore
-                getOcspResponses(): java.util.Map<java.security.cert.X509Certificate, byte[]>
+                public getOcspResponses(): java.util.Map<java.security.cert.X509Certificate, number /*byte*/[]>
                 /**
                  * Sets the revocation options.
                  * @param options a set of revocation options. The set is copied to protect
                  *         against subsequent modification.
                  */
                 // @ts-ignore
-                setOptions(options: Array<java.security.cert.PKIXRevocationChecker.Option>): void
+                public setOptions(options: java.util.Set<java.security.cert.PKIXRevocationChecker.Option> | Array<java.security.cert.PKIXRevocationChecker.Option>): void
                 /**
                  * Gets the revocation options.
                  * @return an unmodifiable set of revocation options. The set is empty if
                  *          no options have been specified.
                  */
                 // @ts-ignore
-                getOptions(): java.util.Set<java.security.cert.PKIXRevocationChecker.Option>
+                public getOptions(): Array<java.security.cert.PKIXRevocationChecker.Option>
                 /**
                  * Returns a list containing the exceptions that are ignored by the
                  * revocation checker when the {@link Option#SOFT_FAIL SOFT_FAIL} option
@@ -163,9 +163,9 @@ declare namespace java {
                  *          is empty if no exceptions have been ignored.
                  */
                 // @ts-ignore
-                abstract getSoftFailExceptions(): java.util.List<java.security.cert.CertPathValidatorException>
+                public abstract getSoftFailExceptions(): Array<java.security.cert.CertPathValidatorException>
                 // @ts-ignore
-                clone(): java.security.cert.PKIXRevocationChecker
+                public clone(): java.security.cert.PKIXRevocationChecker
             }
         }
     }

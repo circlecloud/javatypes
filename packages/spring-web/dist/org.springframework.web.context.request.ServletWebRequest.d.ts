@@ -26,57 +26,57 @@ declare namespace org {
                         // @ts-ignore
                         constructor(request: HttpServletRequest, response: HttpServletResponse)
                         // @ts-ignore
-                        getNativeRequest(): java.lang.Object
+                        public getNativeRequest(): any
                         // @ts-ignore
-                        getNativeResponse(): java.lang.Object
+                        public getNativeResponse(): any
                         // @ts-ignore
-                        getNativeRequest<T>(requiredType: java.lang.Class<T>): T
+                        public getNativeRequest<T>(requiredType: java.lang.Class<T>): T
                         // @ts-ignore
-                        getNativeResponse<T>(requiredType: java.lang.Class<T>): T
+                        public getNativeResponse<T>(requiredType: java.lang.Class<T>): T
                         /**
                          * Return the HTTP method of the request.
                          * @since 4.0.2
                          */
                         // @ts-ignore
-                        getHttpMethod(): org.springframework.http.HttpMethod
+                        public getHttpMethod(): org.springframework.http.HttpMethod
                         // @ts-ignore
-                        getHeader(headerName: string): java.lang.String
+                        public getHeader(headerName: java.lang.String | string): string
                         // @ts-ignore
-                        getHeaderValues(headerName: string): java.lang.String[]
+                        public getHeaderValues(headerName: java.lang.String | string): string[]
                         // @ts-ignore
-                        getHeaderNames(): java.util.Iterator<java.lang.String>
+                        public getHeaderNames(): java.util.Iterator<java.lang.String | string>
                         // @ts-ignore
-                        getParameter(paramName: string): java.lang.String
+                        public getParameter(paramName: java.lang.String | string): string
                         // @ts-ignore
-                        getParameterValues(paramName: string): java.lang.String[]
+                        public getParameterValues(paramName: java.lang.String | string): string[]
                         // @ts-ignore
-                        getParameterNames(): java.util.Iterator<java.lang.String>
+                        public getParameterNames(): java.util.Iterator<java.lang.String | string>
                         // @ts-ignore
-                        getParameterMap(): java.util.Map<java.lang.String, java.lang.String[]>
+                        public getParameterMap(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                         // @ts-ignore
-                        getLocale(): java.util.Locale
+                        public getLocale(): java.util.Locale
                         // @ts-ignore
-                        getContextPath(): java.lang.String
+                        public getContextPath(): string
                         // @ts-ignore
-                        getRemoteUser(): java.lang.String
+                        public getRemoteUser(): string
                         // @ts-ignore
-                        getUserPrincipal(): java.security.Principal
+                        public getUserPrincipal(): java.security.Principal
                         // @ts-ignore
-                        isUserInRole(role: string): boolean
+                        public isUserInRole(role: java.lang.String | string): boolean
                         // @ts-ignore
-                        isSecure(): boolean
+                        public isSecure(): boolean
                         // @ts-ignore
-                        checkNotModified(lastModifiedTimestamp: number /*long*/): boolean
+                        public checkNotModified(lastModifiedTimestamp: number /*long*/): boolean
                         // @ts-ignore
-                        checkNotModified(etag: string): boolean
+                        public checkNotModified(etag: java.lang.String | string): boolean
                         // @ts-ignore
-                        checkNotModified(etag: string, lastModifiedTimestamp: number /*long*/): boolean
+                        public checkNotModified(etag: java.lang.String | string, lastModifiedTimestamp: number /*long*/): boolean
                         // @ts-ignore
-                        isNotModified(): boolean
+                        public isNotModified(): boolean
                         // @ts-ignore
-                        getDescription(includeClientInfo: boolean): java.lang.String
+                        public getDescription(includeClientInfo: boolean): string
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

@@ -54,12 +54,12 @@ declare namespace org {
                      * Parse the Date from the given text, using the specified DateFormat.
                      */
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Format the Date as String, using the specified DateFormat.
                      */
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

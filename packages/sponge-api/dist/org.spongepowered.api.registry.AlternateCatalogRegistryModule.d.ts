@@ -10,7 +10,7 @@ declare namespace org {
                      * @return The catalog map to use for the registry system
                      */
                     // @ts-ignore
-                    provideCatalogMap(): java.util.Map<java.lang.String, T>
+                    provideCatalogMap(): java.util.Map<java.lang.String | string, T>
                 }
             }
         }

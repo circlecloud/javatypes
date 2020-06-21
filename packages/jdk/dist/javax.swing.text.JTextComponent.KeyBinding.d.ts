@@ -22,17 +22,17 @@ declare namespace javax {
                      * @param actionName the name of the action for the key
                      */
                     // @ts-ignore
-                    constructor(key: javax.swing.KeyStroke, actionName: string)
+                    constructor(key: javax.swing.KeyStroke, actionName: java.lang.String | string)
                     /**
                      * The key.
                      */
                     // @ts-ignore
-                    key: javax.swing.KeyStroke
+                    public key: javax.swing.KeyStroke
                     /**
                      * The name of the action for the key.
                      */
                     // @ts-ignore
-                    actionName: string
+                    public actionName: java.lang.String | string
                 }
             }
         }

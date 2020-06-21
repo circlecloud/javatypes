@@ -22,7 +22,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class OpenType<T> extends java.lang.Object implements java.io.Serializable {
+            abstract class OpenType<T> extends java.lang.Object implements java.io.Serializable {
                 /**
                  * Constructs an <code>OpenType</code> instance (actually a subclass instance as <code>OpenType</code> is abstract),
                  * checking for the validity of the given parameters.
@@ -49,7 +49,7 @@ declare namespace javax {
                  * @throws OpenDataException  if <var>className</var> is not one of the allowed Java class names for open data
                  */
                 // @ts-ignore
-                constructor(className: string, typeName: string, description: string)
+                constructor(className: java.lang.String | string, typeName: java.lang.String | string, description: java.lang.String | string)
                 /**
                  * List of the fully qualified names of the Java classes allowed for open
                  * data values. A multidimensional array of any one of these classes or
@@ -75,12 +75,12 @@ declare namespace javax {
                  * </pre>
                  */
                 // @ts-ignore
-                readonly ALLOWED_CLASSNAMES_LIST: Array<java.lang.String>
+                public static readonly ALLOWED_CLASSNAMES_LIST: java.util.List<java.lang.String | string> | Array<java.lang.String | string>
                 /**
                  * @deprecated Use {#link #ALLOWED_CLASSNAMES_LIST ALLOWED_CLASSNAMES_LIST} instead.
                  */
                 // @ts-ignore
-                readonly ALLOWED_CLASSNAMES: string[]
+                public static readonly ALLOWED_CLASSNAMES: java.lang.String[] | string[]
                 /**
                  * Returns the fully qualified Java class name of the open data values
                  * this open type describes.
@@ -99,26 +99,26 @@ declare namespace javax {
                  * @return the class name.
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Returns the name of this <code>OpenType</code> instance.
                  * @return the type name.
                  */
                 // @ts-ignore
-                getTypeName(): java.lang.String
+                public getTypeName(): string
                 /**
                  * Returns the text description of this <code>OpenType</code> instance.
                  * @return the description.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Returns <code>true</code> if the open data values this open
                  * type describes are arrays, <code>false</code> otherwise.
                  * @return true if this is an array type.
                  */
                 // @ts-ignore
-                isArray(): boolean
+                public isArray(): boolean
                 /**
                  * Tests whether <var>obj</var> is a value for this open type.
                  * @param obj the object to be tested for validity.
@@ -126,7 +126,7 @@ declare namespace javax {
                  *  open type, <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                abstract isValue(obj: any): boolean
+                public abstract isValue(obj: java.lang.Object | any): boolean
                 /**
                  * Compares the specified <code>obj</code> parameter with this
                  * open type instance for equality.
@@ -134,15 +134,15 @@ declare namespace javax {
                  * @return true if this object and <code>obj</code> are equal.
                  */
                 // @ts-ignore
-                abstract equals(obj: any): boolean
+                public abstract equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                abstract hashCode(): int
+                public abstract hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this open type instance.
                  * @return the string representation.
                  */
                 // @ts-ignore
-                abstract toString(): java.lang.String
+                public abstract toString(): string
             }
         }
     }

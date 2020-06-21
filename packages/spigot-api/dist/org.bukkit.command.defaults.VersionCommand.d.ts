@@ -5,11 +5,11 @@ declare namespace org {
                 // @ts-ignore
                 class VersionCommand extends org.bukkit.command.defaults.BukkitCommand {
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
-                    execute(sender: org.bukkit.command.CommandSender, currentAlias: string, args: string[]): boolean
+                    public execute(sender: org.bukkit.command.CommandSender, currentAlias: java.lang.String | string, args: java.lang.String[] | string[]): boolean
                     // @ts-ignore
-                    tabComplete(sender: org.bukkit.command.CommandSender, alias: string, args: string[]): java.util.List<java.lang.String>
+                    public tabComplete(sender: org.bukkit.command.CommandSender, alias: java.lang.String | string, args: java.lang.String[] | string[]): Array<java.lang.String | string>
                 }
             }
         }

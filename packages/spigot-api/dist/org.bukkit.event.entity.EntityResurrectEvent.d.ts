@@ -12,15 +12,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor(what: org.bukkit.entity.LivingEntity)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

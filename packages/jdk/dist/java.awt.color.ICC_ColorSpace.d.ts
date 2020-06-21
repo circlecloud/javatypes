@@ -55,7 +55,7 @@ declare namespace java {
                  * @return the ICC_Profile for this ICC_ColorSpace.
                  */
                 // @ts-ignore
-                getProfile(): java.awt.color.ICC_Profile
+                public getProfile(): java.awt.color.ICC_Profile
                 /**
                  * Transforms a color value assumed to be in this ColorSpace
                  * into a value in the default CS_sRGB color space.
@@ -78,7 +78,7 @@ declare namespace java {
                  *  at least the number of components in this ColorSpace.
                  */
                 // @ts-ignore
-                toRGB(colorvalue: number /*float*/[]): float[]
+                public toRGB(colorvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Transforms a color value assumed to be in the default CS_sRGB
                  * color space into this ColorSpace.
@@ -101,7 +101,7 @@ declare namespace java {
                  *  at least 3.
                  */
                 // @ts-ignore
-                fromRGB(rgbvalue: number /*float*/[]): float[]
+                public fromRGB(rgbvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Transforms a color value assumed to be in this ColorSpace
                  * into the CS_CIEXYZ conversion color space.
@@ -201,7 +201,7 @@ declare namespace java {
                  *  at least the number of components in this ColorSpace.
                  */
                 // @ts-ignore
-                toCIEXYZ(colorvalue: number /*float*/[]): float[]
+                public toCIEXYZ(colorvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Transforms a color value assumed to be in the CS_CIEXYZ conversion
                  * color space into this ColorSpace.
@@ -302,7 +302,7 @@ declare namespace java {
                  *  at least 3.
                  */
                 // @ts-ignore
-                fromCIEXYZ(colorvalue: number /*float*/[]): float[]
+                public fromCIEXYZ(colorvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the minimum normalized color component value for the
                  * specified component.  For TYPE_XYZ spaces, this method returns
@@ -320,7 +320,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getMinValue(component: number /*int*/): float
+                public getMinValue(component: number /*int*/): number /*float*/
                 /**
                  * Returns the maximum normalized color component value for the
                  * specified component.  For TYPE_XYZ spaces, this method returns
@@ -339,7 +339,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getMaxValue(component: number /*int*/): float
+                public getMaxValue(component: number /*int*/): number /*float*/
             }
         }
     }

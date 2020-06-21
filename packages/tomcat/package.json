@@ -1,0 +1,16 @@
+{
+    "name": "@javatypes/tomcat",
+    "version": "0.0.0",
+    "description": "java tomcat types",
+    "author": "MiaoWoo <admin@yumc.pw>",
+    "homepage": "https://github.com/circlecloud/javatypes#readme",
+    "license": "MIT",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/circlecloud/javatypes.git"
+    },
+    "bugs": {
+        "url": "https://github.com/circlecloud/javatypes/issues"
+    }
+}

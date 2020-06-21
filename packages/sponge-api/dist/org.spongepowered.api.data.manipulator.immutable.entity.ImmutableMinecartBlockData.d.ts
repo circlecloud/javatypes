@@ -20,7 +20,7 @@ declare namespace org {
                                  * @return The block offset
                                  */
                                 // @ts-ignore
-                                offset(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer>
+                                offset(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer | number>
                             }
                         }
                     }

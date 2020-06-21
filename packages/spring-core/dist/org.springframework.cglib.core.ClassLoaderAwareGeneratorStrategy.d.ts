@@ -15,7 +15,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(classLoader: java.lang.ClassLoader)
                     // @ts-ignore
-                    generate(cg: ClassGenerator): byte[]
+                    public generate(cg: ClassGenerator): number /*byte*/[]
                 }
             }
         }

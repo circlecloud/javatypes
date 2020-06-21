@@ -14,7 +14,7 @@ declare namespace java {
              * @param host   the detail message.
              */
             // @ts-ignore
-            constructor(host: string)
+            constructor(host: java.lang.String | string)
             /**
              * Constructs a new {@code ProtocolException} with no detail message.
              */

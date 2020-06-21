@@ -8,7 +8,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class DateFormatSymbolsProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class DateFormatSymbolsProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -28,7 +28,7 @@ declare namespace java {
                  * @see java.text.DateFormatSymbols#getInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getInstance(locale: java.util.Locale): java.text.DateFormatSymbols
+                public abstract getInstance(locale: java.util.Locale): java.text.DateFormatSymbols
             }
         }
     }

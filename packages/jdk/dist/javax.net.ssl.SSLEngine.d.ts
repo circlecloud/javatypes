@@ -314,7 +314,7 @@ declare namespace javax {
              * @author Brad R. Wetmore
              */
             // @ts-ignore
-            class SSLEngine extends java.lang.Object {
+            abstract class SSLEngine extends java.lang.Object {
                 /**
                  * Constructor for an <code>SSLEngine</code> providing no hints
                  * for an internal session reuse strategy.
@@ -342,7 +342,7 @@ declare namespace javax {
                  * @see SSLSessionContext
                  */
                 // @ts-ignore
-                constructor(peerHost: string, peerPort: number /*int*/)
+                constructor(peerHost: java.lang.String | string, peerPort: number /*int*/)
                 /**
                  * Returns the host name of the peer.
                  * <P>
@@ -352,7 +352,7 @@ declare namespace javax {
                  *           available.
                  */
                 // @ts-ignore
-                getPeerHost(): java.lang.String
+                public getPeerHost(): string
                 /**
                  * Returns the port number of the peer.
                  * <P>
@@ -362,7 +362,7 @@ declare namespace javax {
                  *           available.
                  */
                 // @ts-ignore
-                getPeerPort(): int
+                public getPeerPort(): number /*int*/
                 /**
                  * Attempts to encode a buffer of plaintext application data into
                  * SSL/TLS network data.
@@ -394,7 +394,7 @@ declare namespace javax {
                  * @see #wrap(ByteBuffer [], int, int, ByteBuffer)
                  */
                 // @ts-ignore
-                wrap(src: java.nio.ByteBuffer, dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
+                public wrap(src: java.nio.ByteBuffer, dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
                 /**
                  * Attempts to encode plaintext bytes from a sequence of data
                  * buffers into SSL/TLS network data.
@@ -427,7 +427,7 @@ declare namespace javax {
                  * @see #wrap(ByteBuffer [], int, int, ByteBuffer)
                  */
                 // @ts-ignore
-                wrap(srcs: java.nio.ByteBuffer[], dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
+                public wrap(srcs: java.nio.ByteBuffer[], dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
                 /**
                  * Attempts to encode plaintext bytes from a subsequence of data
                  * buffers into SSL/TLS network data.  This <i>"gathering"</i>
@@ -503,7 +503,7 @@ declare namespace javax {
                  *               ByteBuffer[], int, int)
                  */
                 // @ts-ignore
-                abstract wrap(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/, dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
+                public abstract wrap(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/, dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
                 /**
                  * Attempts to decode SSL/TLS network data into a plaintext
                  * application data buffer.
@@ -535,7 +535,7 @@ declare namespace javax {
                  * @see #unwrap(ByteBuffer, ByteBuffer [], int, int)
                  */
                 // @ts-ignore
-                unwrap(src: java.nio.ByteBuffer, dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
+                public unwrap(src: java.nio.ByteBuffer, dst: java.nio.ByteBuffer): javax.net.ssl.SSLEngineResult
                 /**
                  * Attempts to decode SSL/TLS network data into a sequence of plaintext
                  * application data buffers.
@@ -568,7 +568,7 @@ declare namespace javax {
                  * @see #unwrap(ByteBuffer, ByteBuffer [], int, int)
                  */
                 // @ts-ignore
-                unwrap(src: java.nio.ByteBuffer, dsts: java.nio.ByteBuffer[]): javax.net.ssl.SSLEngineResult
+                public unwrap(src: java.nio.ByteBuffer, dsts: java.nio.ByteBuffer[]): javax.net.ssl.SSLEngineResult
                 /**
                  * Attempts to decode SSL/TLS network data into a subsequence of
                  * plaintext application data buffers.  This <i>"scattering"</i>
@@ -649,7 +649,7 @@ declare namespace javax {
                  *               ByteBuffer[], int, int)
                  */
                 // @ts-ignore
-                abstract unwrap(src: java.nio.ByteBuffer, dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): javax.net.ssl.SSLEngineResult
+                public abstract unwrap(src: java.nio.ByteBuffer, dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): javax.net.ssl.SSLEngineResult
                 /**
                  * Returns a delegated <code>Runnable</code> task for
                  * this <code>SSLEngine</code>.
@@ -674,7 +674,7 @@ declare namespace javax {
                  *           if none are available.
                  */
                 // @ts-ignore
-                abstract getDelegatedTask(): java.lang.Runnable
+                public abstract getDelegatedTask(): java.lang.Runnable
                 /**
                  * Signals that no more inbound network data will be sent
                  * to this <code>SSLEngine</code>.
@@ -706,7 +706,7 @@ declare namespace javax {
                  * @see #isOutboundDone()
                  */
                 // @ts-ignore
-                abstract closeInbound(): void
+                public abstract closeInbound(): void
                 /**
                  * Returns whether {@link #unwrap(ByteBuffer, ByteBuffer)} will
                  * accept any more inbound data messages.
@@ -716,7 +716,7 @@ declare namespace javax {
                  * @see #closeInbound()
                  */
                 // @ts-ignore
-                abstract isInboundDone(): boolean
+                public abstract isInboundDone(): boolean
                 /**
                  * Signals that no more outbound application data will be sent
                  * on this <code>SSLEngine</code>.
@@ -729,7 +729,7 @@ declare namespace javax {
                  * @see #isOutboundDone()
                  */
                 // @ts-ignore
-                abstract closeOutbound(): void
+                public abstract closeOutbound(): void
                 /**
                  * Returns whether {@link #wrap(ByteBuffer, ByteBuffer)} will
                  * produce any more outbound data messages.
@@ -744,7 +744,7 @@ declare namespace javax {
                  * @see #closeInbound()
                  */
                 // @ts-ignore
-                abstract isOutboundDone(): boolean
+                public abstract isOutboundDone(): boolean
                 /**
                  * Returns the names of the cipher suites which could be enabled for use
                  * on this engine.  Normally, only a subset of these will actually
@@ -756,7 +756,7 @@ declare namespace javax {
                  * @see #setEnabledCipherSuites(String [])
                  */
                 // @ts-ignore
-                abstract getSupportedCipherSuites(): java.lang.String[]
+                public abstract getSupportedCipherSuites(): string[]
                 /**
                  * Returns the names of the SSL cipher suites which are currently
                  * enabled for use on this engine.  When an SSLEngine is first
@@ -772,7 +772,7 @@ declare namespace javax {
                  * @see #setEnabledCipherSuites(String [])
                  */
                 // @ts-ignore
-                abstract getEnabledCipherSuites(): java.lang.String[]
+                public abstract getEnabledCipherSuites(): string[]
                 /**
                  * Sets the cipher suites enabled for use on this engine.
                  * <P>
@@ -791,14 +791,14 @@ declare namespace javax {
                  * @see #getEnabledCipherSuites()
                  */
                 // @ts-ignore
-                abstract setEnabledCipherSuites(suites: string[]): void
+                public abstract setEnabledCipherSuites(suites: java.lang.String[] | string[]): void
                 /**
                  * Returns the names of the protocols which could be enabled for use
                  * with this <code>SSLEngine</code>.
                  * @return an array of protocols supported
                  */
                 // @ts-ignore
-                abstract getSupportedProtocols(): java.lang.String[]
+                public abstract getSupportedProtocols(): string[]
                 /**
                  * Returns the names of the protocol versions which are currently
                  * enabled for use with this <code>SSLEngine</code>.
@@ -806,7 +806,7 @@ declare namespace javax {
                  * @see #setEnabledProtocols(String [])
                  */
                 // @ts-ignore
-                abstract getEnabledProtocols(): java.lang.String[]
+                public abstract getEnabledProtocols(): string[]
                 /**
                  * Set the protocol versions enabled for use on this engine.
                  * <P>
@@ -821,7 +821,7 @@ declare namespace javax {
                  * @see #getEnabledProtocols()
                  */
                 // @ts-ignore
-                abstract setEnabledProtocols(protocols: string[]): void
+                public abstract setEnabledProtocols(protocols: java.lang.String[] | string[]): void
                 /**
                  * Returns the <code>SSLSession</code> in use in this
                  * <code>SSLEngine</code>.
@@ -842,7 +842,7 @@ declare namespace javax {
                  * @see SSLSession
                  */
                 // @ts-ignore
-                abstract getSession(): javax.net.ssl.SSLSession
+                public abstract getSession(): javax.net.ssl.SSLSession
                 /**
                  * Returns the {@code SSLSession} being constructed during a SSL/TLS
                  * handshake.
@@ -877,7 +877,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getHandshakeSession(): javax.net.ssl.SSLSession
+                public getHandshakeSession(): javax.net.ssl.SSLSession
                 /**
                  * Initiates handshaking (initial or renegotiation) on this SSLEngine.
                  * <P>
@@ -908,13 +908,13 @@ declare namespace javax {
                  * @see SSLSession#invalidate()
                  */
                 // @ts-ignore
-                abstract beginHandshake(): void
+                public abstract beginHandshake(): void
                 /**
                  * Returns the current handshake status for this <code>SSLEngine</code>.
                  * @return the current <code>SSLEngineResult.HandshakeStatus</code>.
                  */
                 // @ts-ignore
-                abstract getHandshakeStatus(): javax.net.ssl.SSLEngineResult.HandshakeStatus
+                public abstract getHandshakeStatus(): javax.net.ssl.SSLEngineResult.HandshakeStatus
                 /**
                  * Configures the engine to use client (or server) mode when
                  * handshaking.
@@ -932,7 +932,7 @@ declare namespace javax {
                  * @see #getUseClientMode()
                  */
                 // @ts-ignore
-                abstract setUseClientMode(mode: boolean): void
+                public abstract setUseClientMode(mode: boolean): void
                 /**
                  * Returns true if the engine is set to use client mode when
                  * handshaking.
@@ -941,7 +941,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getUseClientMode(): boolean
+                public abstract getUseClientMode(): boolean
                 /**
                  * Configures the engine to <i>require</i> client authentication.  This
                  * option is only useful for engines in the server mode.
@@ -968,7 +968,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract setNeedClientAuth(need: boolean): void
+                public abstract setNeedClientAuth(need: boolean): void
                 /**
                  * Returns true if the engine will <i>require</i> client authentication.
                  * This option is only useful to engines in the server mode.
@@ -980,7 +980,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getNeedClientAuth(): boolean
+                public abstract getNeedClientAuth(): boolean
                 /**
                  * Configures the engine to <i>request</i> client authentication.
                  * This option is only useful for engines in the server mode.
@@ -1006,7 +1006,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract setWantClientAuth(want: boolean): void
+                public abstract setWantClientAuth(want: boolean): void
                 /**
                  * Returns true if the engine will <i>request</i> client authentication.
                  * This option is only useful for engines in the server mode.
@@ -1018,7 +1018,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getWantClientAuth(): boolean
+                public abstract getWantClientAuth(): boolean
                 /**
                  * Controls whether new SSL sessions may be established by this engine.
                  * If session creations are not allowed, and there are no
@@ -1030,7 +1030,7 @@ declare namespace javax {
                  * @see #getEnableSessionCreation()
                  */
                 // @ts-ignore
-                abstract setEnableSessionCreation(flag: boolean): void
+                public abstract setEnableSessionCreation(flag: boolean): void
                 /**
                  * Returns true if new SSL sessions may be established by this engine.
                  * @return true indicates that sessions may be created; this
@@ -1039,7 +1039,7 @@ declare namespace javax {
                  * @see #setEnableSessionCreation(boolean)
                  */
                 // @ts-ignore
-                abstract getEnableSessionCreation(): boolean
+                public abstract getEnableSessionCreation(): boolean
                 /**
                  * Returns the SSLParameters in effect for this SSLEngine.
                  * The ciphersuites and protocols of the returned SSLParameters
@@ -1048,7 +1048,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getSSLParameters(): javax.net.ssl.SSLParameters
+                public getSSLParameters(): javax.net.ssl.SSLParameters
                 /**
                  * Applies SSLParameters to this engine.
                  * <p>This means:
@@ -1073,7 +1073,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setSSLParameters(params: javax.net.ssl.SSLParameters): void
+                public setSSLParameters(params: javax.net.ssl.SSLParameters): void
             }
         }
     }

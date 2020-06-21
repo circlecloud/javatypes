@@ -84,13 +84,13 @@ declare namespace java {
                  * shall be synchronized on that object.
                  */
                 // @ts-ignore
-                children: java.util.HashMap
+                children: java.util.HashMap<any>
                 /**
                  * all accesses to the <code> protected ArrayList bcmListeners </code> field
                  * shall be synchronized on that object.
                  */
                 // @ts-ignore
-                bcmListeners: java.util.ArrayList
+                bcmListeners: java.util.ArrayList<any>
                 /**
                  * The current locale of this BeanContext.
                  */
@@ -108,7 +108,7 @@ declare namespace java {
                  * @return the BeanContext instance
                  */
                 // @ts-ignore
-                getBeanContextPeer(): java.beans.beancontext.BeanContext
+                public getBeanContextPeer(): java.beans.beancontext.BeanContext
                 /**
                  * <p>
                  * The instantiateChild method is a convenience hook
@@ -126,14 +126,14 @@ declare namespace java {
                  * @return the new object
                  */
                 // @ts-ignore
-                instantiateChild(beanName: string): java.lang.Object
+                public instantiateChild(beanName: java.lang.String | string): any
                 /**
                  * Gets the number of children currently nested in
                  * this BeanContext.
                  * @return number of children
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Reports whether or not this
                  * <tt>BeanContext</tt> is empty.
@@ -143,7 +143,7 @@ declare namespace java {
                  * @return if there are not children
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Determines whether or not the specified object
                  * is currently a child of this <tt>BeanContext</tt>.
@@ -151,7 +151,7 @@ declare namespace java {
                  * @return if this object is a child
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Determines whether or not the specified object
                  * is currently a child of this <tt>BeanContext</tt>.
@@ -159,20 +159,20 @@ declare namespace java {
                  * @return if this object is a child
                  */
                 // @ts-ignore
-                containsKey(o: any): boolean
+                public containsKey(o: java.lang.Object | any): boolean
                 /**
                  * Gets all JavaBean or <tt>BeanContext</tt> instances
                  * currently nested in this <tt>BeanContext</tt>.
                  * @return an <tt>Iterator</tt> of the nested children
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator
+                public iterator(): java.util.Iterator<any>
                 /**
                  * Gets all JavaBean or <tt>BeanContext</tt>
                  * instances currently nested in this BeanContext.
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Gets an array containing all children of
                  * this <tt>BeanContext</tt> that match
@@ -182,7 +182,7 @@ declare namespace java {
                  * @return an array of children
                  */
                 // @ts-ignore
-                toArray(arry: any[]): java.lang.Object[]
+                public toArray(arry: java.lang.Object[] | any[]): any[]
                 /**
                  * <p>
                  * Subclasses can override this method to insert their own subclass
@@ -193,7 +193,7 @@ declare namespace java {
                  * @param peer        the peer if the tragetChild and the peer are related by an implementation of BeanContextProxy     * #return Subtype-specific subclass of Child without overriding collection methods
                  */
                 // @ts-ignore
-                createBCSChild(targetChild: any, peer: any): java.beans.beancontext.BeanContextSupport.BCSChild
+                createBCSChild(targetChild: java.lang.Object | any, peer: java.lang.Object | any): java.beans.beancontext.BeanContextSupport.BCSChild
                 /**
                  * Adds/nests a child within this <tt>BeanContext</tt>.
                  * <p>
@@ -207,7 +207,7 @@ declare namespace java {
                  * @see #validatePendingAdd
                  */
                 // @ts-ignore
-                add(targetChild: any): boolean
+                public add(targetChild: java.lang.Object | any): boolean
                 /**
                  * Removes a child from this BeanContext.  If the child object is not
                  * for adding then this method throws an IllegalStateException.
@@ -215,7 +215,7 @@ declare namespace java {
                  * @see #validatePendingRemove
                  */
                 // @ts-ignore
-                remove(targetChild: any): boolean
+                public remove(targetChild: java.lang.Object | any): boolean
                 /**
                  * internal remove used when removal caused by
                  * unexpected <tt>setBeanContext</tt> or
@@ -227,7 +227,7 @@ declare namespace java {
                  * @return whether or not was present before being removed
                  */
                 // @ts-ignore
-                remove(targetChild: any, callChildSetBC: boolean): boolean
+                remove(targetChild: java.lang.Object | any, callChildSetBC: boolean): boolean
                 /**
                  * Tests to see if all objects in the
                  * specified <tt>Collection</tt> are children of
@@ -238,7 +238,7 @@ declare namespace java {
                  *  this <tt>BeanContext</tt>, false if not.
                  */
                 // @ts-ignore
-                containsAll(c: Array): boolean
+                public containsAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * add Collection to set of Children (Unsupported)
                  * implementations must synchronized on the hierarchy lock and "children" protected field
@@ -246,7 +246,7 @@ declare namespace java {
                  * @return this implementation unconditionally throws {#code UnsupportedOperationException}
                  */
                 // @ts-ignore
-                addAll(c: Array): boolean
+                public addAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * remove all specified children (Unsupported)
                  * implementations must synchronized on the hierarchy lock and "children" protected field
@@ -254,7 +254,7 @@ declare namespace java {
                  * @return this implementation unconditionally throws {#code UnsupportedOperationException}
                  */
                 // @ts-ignore
-                removeAll(c: Array): boolean
+                public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * retain only specified children (Unsupported)
                  * implementations must synchronized on the hierarchy lock and "children" protected field
@@ -262,28 +262,28 @@ declare namespace java {
                  * @return this implementation unconditionally throws {#code UnsupportedOperationException}
                  */
                 // @ts-ignore
-                retainAll(c: Array): boolean
+                public retainAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * clear the children (Unsupported)
                  * implementations must synchronized on the hierarchy lock and "children" protected field
                  * @throws UnsupportedOperationException thrown unconditionally by this implementation
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Adds a BeanContextMembershipListener
                  * @param bcml the BeanContextMembershipListener to add
                  * @throws NullPointerException if the argument is null
                  */
                 // @ts-ignore
-                addBeanContextMembershipListener(bcml: java.beans.beancontext.BeanContextMembershipListener): void
+                public addBeanContextMembershipListener(bcml: java.beans.beancontext.BeanContextMembershipListener): void
                 /**
                  * Removes a BeanContextMembershipListener
                  * @param bcml the BeanContextMembershipListener to remove
                  * @throws NullPointerException if the argument is null
                  */
                 // @ts-ignore
-                removeBeanContextMembershipListener(bcml: java.beans.beancontext.BeanContextMembershipListener): void
+                public removeBeanContextMembershipListener(bcml: java.beans.beancontext.BeanContextMembershipListener): void
                 /**
                  * @param name the name of the resource requested.
                  * @param bcc  the child object making the request.
@@ -291,20 +291,20 @@ declare namespace java {
                  * @throws NullPointerException if the argument is null
                  */
                 // @ts-ignore
-                getResourceAsStream(name: string, bcc: java.beans.beancontext.BeanContextChild): java.io.InputStream
+                public getResourceAsStream(name: java.lang.String | string, bcc: java.beans.beancontext.BeanContextChild): java.io.InputStream
                 /**
                  * @param name the name of the resource requested.
                  * @param bcc  the child object making the request.
                  * @return the requested resource as an InputStream
                  */
                 // @ts-ignore
-                getResource(name: string, bcc: java.beans.beancontext.BeanContextChild): java.net.URL
+                public getResource(name: java.lang.String | string, bcc: java.beans.beancontext.BeanContextChild): java.net.URL
                 /**
                  * Sets the new design time value for this <tt>BeanContext</tt>.
                  * @param dTime the new designTime value
                  */
                 // @ts-ignore
-                setDesignTime(dTime: boolean): void
+                public setDesignTime(dTime: boolean): void
                 /**
                  * Reports whether or not this object is in
                  * currently in design time mode.
@@ -312,7 +312,7 @@ declare namespace java {
                  *  <tt>false</tt> if not
                  */
                 // @ts-ignore
-                isDesignTime(): boolean
+                public isDesignTime(): boolean
                 /**
                  * Sets the locale of this BeanContext.
                  * @param newLocale the new locale. This method call will have
@@ -320,13 +320,13 @@ declare namespace java {
                  * @throws PropertyVetoException if the new value is rejected
                  */
                 // @ts-ignore
-                setLocale(newLocale: java.util.Locale): void
+                public setLocale(newLocale: java.util.Locale): void
                 /**
                  * Gets the locale for this <tt>BeanContext</tt>.
                  * @return the current Locale of the <tt>BeanContext</tt>
                  */
                 // @ts-ignore
-                getLocale(): java.util.Locale
+                public getLocale(): java.util.Locale
                 /**
                  * <p>
                  * This method is typically called from the environment in order to determine
@@ -340,17 +340,17 @@ declare namespace java {
                  * @return <tt>true</tt> if the implementor needs a GUI
                  */
                 // @ts-ignore
-                needsGui(): boolean
+                public needsGui(): boolean
                 /**
                  * notify this instance that it may no longer render a GUI.
                  */
                 // @ts-ignore
-                dontUseGui(): void
+                public dontUseGui(): void
                 /**
                  * Notify this instance that it may now render a GUI
                  */
                 // @ts-ignore
-                okToUseGui(): void
+                public okToUseGui(): void
                 /**
                  * Used to determine if the <tt>BeanContext</tt>
                  * child is avoiding using its GUI.
@@ -358,7 +358,7 @@ declare namespace java {
                  * @see Visibility
                  */
                 // @ts-ignore
-                avoidingGui(): boolean
+                public avoidingGui(): boolean
                 /**
                  * Is this <tt>BeanContext</tt> in the
                  * process of being serialized?
@@ -366,14 +366,14 @@ declare namespace java {
                  *  currently being serialized
                  */
                 // @ts-ignore
-                isSerializing(): boolean
+                public isSerializing(): boolean
                 /**
                  * Returns an iterator of all children
                  * of this <tt>BeanContext</tt>.
                  * @return an iterator for all the current BCSChild values
                  */
                 // @ts-ignore
-                bcsChildren(): java.util.Iterator
+                bcsChildren(): java.util.Iterator<any>
                 /**
                  * called by writeObject after defaultWriteObject() but prior to
                  * serialization of currently serializable children.
@@ -407,7 +407,7 @@ declare namespace java {
                  * @param bcsc the newly deserialized BCSChild
                  */
                 // @ts-ignore
-                childDeserializedHook(child: any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
+                childDeserializedHook(child: java.lang.Object | any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
                 /**
                  * Used by writeObject to serialize a Collection.
                  * @param oos the <tt>ObjectOutputStream</tt>
@@ -416,7 +416,7 @@ declare namespace java {
                  * @throws IOException if serialization failed
                  */
                 // @ts-ignore
-                serialize(oos: java.io.ObjectOutputStream, coll: Array): void
+                serialize(oos: java.io.ObjectOutputStream, coll: java.util.Collection<any> | Array<any>): void
                 /**
                  * used by readObject to deserialize a collection.
                  * @param ois the ObjectInputStream to use
@@ -425,7 +425,7 @@ declare namespace java {
                  * @throws ClassNotFoundException if needed classes are not found
                  */
                 // @ts-ignore
-                deserialize(ois: java.io.ObjectInputStream, coll: Array): void
+                deserialize(ois: java.io.ObjectInputStream, coll: java.util.Collection<any> | Array<any>): void
                 /**
                  * Used to serialize all children of
                  * this <tt>BeanContext</tt>.
@@ -434,7 +434,7 @@ declare namespace java {
                  * @throws IOException if serialization failed
                  */
                 // @ts-ignore
-                writeChildren(oos: java.io.ObjectOutputStream): void
+                public writeChildren(oos: java.io.ObjectOutputStream): void
                 /**
                  * When an instance of this class is used as a delegate for the
                  * implementation of the BeanContext protocols (and its subprotocols)
@@ -444,17 +444,17 @@ declare namespace java {
                  * @throws ClassNotFoundException if needed classes are not found
                  */
                 // @ts-ignore
-                readChildren(ois: java.io.ObjectInputStream): void
+                public readChildren(ois: java.io.ObjectInputStream): void
                 /**
                  * subclasses may envelope to monitor veto child property changes.
                  */
                 // @ts-ignore
-                vetoableChange(pce: java.beans.PropertyChangeEvent): void
+                public vetoableChange(pce: java.beans.PropertyChangeEvent): void
                 /**
                  * subclasses may envelope to monitor child property changes.
                  */
                 // @ts-ignore
-                propertyChange(pce: java.beans.PropertyChangeEvent): void
+                public propertyChange(pce: java.beans.PropertyChangeEvent): void
                 /**
                  * <p>
                  * Subclasses of this class may override, or envelope, this method to
@@ -465,7 +465,7 @@ declare namespace java {
                  * @return true iff the child may be added to this BeanContext, otherwise false.
                  */
                 // @ts-ignore
-                validatePendingAdd(targetChild: any): boolean
+                validatePendingAdd(targetChild: java.lang.Object | any): boolean
                 /**
                  * <p>
                  * Subclasses of this class may override, or envelope, this method to
@@ -476,7 +476,7 @@ declare namespace java {
                  * @return true iff the child may be removed from this BeanContext, otherwise false.
                  */
                 // @ts-ignore
-                validatePendingRemove(targetChild: any): boolean
+                validatePendingRemove(targetChild: java.lang.Object | any): boolean
                 /**
                  * subclasses may override this method to simply extend add() semantics
                  * after the child has been added and before the event notification has
@@ -485,7 +485,7 @@ declare namespace java {
                  * @param bcsc the BCSChild
                  */
                 // @ts-ignore
-                childJustAddedHook(child: any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
+                childJustAddedHook(child: java.lang.Object | any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
                 /**
                  * subclasses may override this method to simply extend remove() semantics
                  * after the child has been removed and before the event notification has
@@ -494,21 +494,21 @@ declare namespace java {
                  * @param bcsc the BCSChild
                  */
                 // @ts-ignore
-                childJustRemovedHook(child: any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
+                childJustRemovedHook(child: java.lang.Object | any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
                 /**
                  * Gets the Component (if any) associated with the specified child.
                  * @param child the specified child
                  * @return the Component (if any) associated with the specified child.
                  */
                 // @ts-ignore
-                getChildVisibility(child: any): java.beans.Visibility
+                static getChildVisibility(child: java.lang.Object | any): java.beans.Visibility
                 /**
                  * Gets the Serializable (if any) associated with the specified Child
                  * @param child the specified child
                  * @return the Serializable (if any) associated with the specified Child
                  */
                 // @ts-ignore
-                getChildSerializable(child: any): java.io.Serializable
+                static getChildSerializable(child: java.lang.Object | any): java.io.Serializable
                 /**
                  * Gets the PropertyChangeListener
                  * (if any) of the specified child
@@ -516,7 +516,7 @@ declare namespace java {
                  * @return the PropertyChangeListener (if any) of the specified child
                  */
                 // @ts-ignore
-                getChildPropertyChangeListener(child: any): java.beans.PropertyChangeListener
+                static getChildPropertyChangeListener(child: java.lang.Object | any): java.beans.PropertyChangeListener
                 /**
                  * Gets the VetoableChangeListener
                  * (if any) of the specified child
@@ -524,7 +524,7 @@ declare namespace java {
                  * @return the VetoableChangeListener (if any) of the specified child
                  */
                 // @ts-ignore
-                getChildVetoableChangeListener(child: any): java.beans.VetoableChangeListener
+                static getChildVetoableChangeListener(child: java.lang.Object | any): java.beans.VetoableChangeListener
                 /**
                  * Gets the BeanContextMembershipListener
                  * (if any) of the specified child
@@ -532,7 +532,7 @@ declare namespace java {
                  * @return the BeanContextMembershipListener (if any) of the specified child
                  */
                 // @ts-ignore
-                getChildBeanContextMembershipListener(child: any): java.beans.beancontext.BeanContextMembershipListener
+                static getChildBeanContextMembershipListener(child: java.lang.Object | any): java.beans.beancontext.BeanContextMembershipListener
                 /**
                  * Gets the BeanContextChild (if any) of the specified child
                  * @param child the specified child
@@ -540,7 +540,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if child implements both BeanContextChild and BeanContextProxy
                  */
                 // @ts-ignore
-                getChildBeanContextChild(child: any): java.beans.beancontext.BeanContextChild
+                static getChildBeanContextChild(child: java.lang.Object | any): java.beans.beancontext.BeanContextChild
                 /**
                  * Fire a BeanContextshipEvent on the BeanContextMembershipListener interface
                  * @param bcme the event to fire
@@ -568,7 +568,7 @@ declare namespace java {
                  * @return a copy of the current nested children
                  */
                 // @ts-ignore
-                copyChildren(): java.lang.Object[]
+                copyChildren(): any[]
                 /**
                  * Tests to see if two class objects,
                  * or their names are equal.
@@ -577,7 +577,7 @@ declare namespace java {
                  * @return true if equal, false if not
                  */
                 // @ts-ignore
-                classEquals(first: java.lang.Class, second: java.lang.Class): boolean
+                static classEquals(first: java.lang.Class<any>, second: java.lang.Class<any>): boolean
             }
         }
     }

@@ -46,7 +46,7 @@ declare namespace org {
                      * @see #setPropertyPath
                      */
                     // @ts-ignore
-                    class PropertyPathFactoryBean extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<java.lang.Object>, org.springframework.beans.factory.BeanNameAware, org.springframework.beans.factory.BeanFactoryAware {
+                    class PropertyPathFactoryBean extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<java.lang.Object | any>, org.springframework.beans.factory.BeanNameAware, org.springframework.beans.factory.BeanFactoryAware {
                         // @ts-ignore
                         constructor()
                         /**
@@ -57,7 +57,7 @@ declare namespace org {
                          * @see #setTargetBeanName
                          */
                         // @ts-ignore
-                        setTargetObject(targetObject: any): void
+                        public setTargetObject(targetObject: java.lang.Object | any): void
                         /**
                          * Specify the name of a target bean to apply the property path to.
                          * Alternatively, specify a target object directly.
@@ -66,14 +66,14 @@ declare namespace org {
                          * @see #setTargetObject
                          */
                         // @ts-ignore
-                        setTargetBeanName(targetBeanName: string): void
+                        public setTargetBeanName(targetBeanName: java.lang.String | string): void
                         /**
                          * Specify the property path to apply to the target.
                          * @param propertyPath the property path, potentially nested
                          *  (e.g. "age" or "spouse.age")
                          */
                         // @ts-ignore
-                        setPropertyPath(propertyPath: string): void
+                        public setPropertyPath(propertyPath: java.lang.String | string): void
                         /**
                          * Specify the type of the result from evaluating the property path.
                          * <p>Note: This is not necessary for directly specified target objects
@@ -83,7 +83,7 @@ declare namespace org {
                          * @param resultType the result type, for example "java.lang.Integer"
                          */
                         // @ts-ignore
-                        setResultType(resultType: java.lang.Class<any>): void
+                        public setResultType(resultType: java.lang.Class<any>): void
                         /**
                          * The bean name of this PropertyPathFactoryBean will be interpreted
                          * as "beanName.property" pattern, if neither "targetObject" nor
@@ -91,13 +91,13 @@ declare namespace org {
                          * This allows for concise bean definitions with just an id/name.
                          */
                         // @ts-ignore
-                        setBeanName(beanName: string): void
+                        public setBeanName(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
-                        getObject(): java.lang.Object
+                        public getObject(): any
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         /**
                          * While this FactoryBean will often be used for singleton targets,
                          * the invoked getters for the property path might return a new object
@@ -105,7 +105,7 @@ declare namespace org {
                          * same object for each {@link #getObject()} call.
                          */
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

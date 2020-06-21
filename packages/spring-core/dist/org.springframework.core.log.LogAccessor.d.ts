@@ -22,193 +22,193 @@ declare namespace org {
                      * Return the target Commons Log.
                      */
                     // @ts-ignore
-                    getLog(): Log
+                    public getLog(): Log
                     /**
                      * Is fatal logging currently enabled?
                      */
                     // @ts-ignore
-                    isFatalEnabled(): boolean
+                    public isFatalEnabled(): boolean
                     /**
                      * Is error logging currently enabled?
                      */
                     // @ts-ignore
-                    isErrorEnabled(): boolean
+                    public isErrorEnabled(): boolean
                     /**
                      * Is warn logging currently enabled?
                      */
                     // @ts-ignore
-                    isWarnEnabled(): boolean
+                    public isWarnEnabled(): boolean
                     /**
                      * Is info logging currently enabled?
                      */
                     // @ts-ignore
-                    isInfoEnabled(): boolean
+                    public isInfoEnabled(): boolean
                     /**
                      * Is debug logging currently enabled?
                      */
                     // @ts-ignore
-                    isDebugEnabled(): boolean
+                    public isDebugEnabled(): boolean
                     /**
                      * Is trace logging currently enabled?
                      */
                     // @ts-ignore
-                    isTraceEnabled(): boolean
+                    public isTraceEnabled(): boolean
                     /**
                      * Log a message with fatal log level.
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    fatal(message: java.lang.CharSequence): void
+                    public fatal(message: java.lang.CharSequence): void
                     /**
                      * Log an error with fatal log level.
                      * @param cause the exception to log
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    fatal(cause: Error, message: java.lang.CharSequence): void
+                    public fatal(cause: java.lang.Throwable | Error, message: java.lang.CharSequence): void
                     /**
                      * Log a message with error log level.
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    error(message: java.lang.CharSequence): void
+                    public error(message: java.lang.CharSequence): void
                     /**
                      * Log an error with error log level.
                      * @param cause the exception to log
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    error(cause: Error, message: java.lang.CharSequence): void
+                    public error(cause: java.lang.Throwable | Error, message: java.lang.CharSequence): void
                     /**
                      * Log a message with warn log level.
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    warn(message: java.lang.CharSequence): void
+                    public warn(message: java.lang.CharSequence): void
                     /**
                      * Log an error with warn log level.
                      * @param cause the exception to log
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    warn(cause: Error, message: java.lang.CharSequence): void
+                    public warn(cause: java.lang.Throwable | Error, message: java.lang.CharSequence): void
                     /**
                      * Log a message with info log level.
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    info(message: java.lang.CharSequence): void
+                    public info(message: java.lang.CharSequence): void
                     /**
                      * Log an error with info log level.
                      * @param cause the exception to log
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    info(cause: Error, message: java.lang.CharSequence): void
+                    public info(cause: java.lang.Throwable | Error, message: java.lang.CharSequence): void
                     /**
                      * Log a message with debug log level.
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    debug(message: java.lang.CharSequence): void
+                    public debug(message: java.lang.CharSequence): void
                     /**
                      * Log an error with debug log level.
                      * @param cause the exception to log
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    debug(cause: Error, message: java.lang.CharSequence): void
+                    public debug(cause: java.lang.Throwable | Error, message: java.lang.CharSequence): void
                     /**
                      * Log a message with trace log level.
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    trace(message: java.lang.CharSequence): void
+                    public trace(message: java.lang.CharSequence): void
                     /**
                      * Log an error with trace log level.
                      * @param cause the exception to log
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    trace(cause: Error, message: java.lang.CharSequence): void
+                    public trace(cause: java.lang.Throwable | Error, message: java.lang.CharSequence): void
                     /**
                      * Log a message with fatal log level.
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    fatal(messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public fatal(messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log an error with fatal log level.
                      * @param cause the exception to log
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    fatal(cause: Error, messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public fatal(cause: java.lang.Throwable | Error, messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log a message with error log level.
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    error(messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public error(messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log an error with error log level.
                      * @param cause the exception to log
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    error(cause: Error, messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public error(cause: java.lang.Throwable | Error, messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log a message with warn log level.
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    warn(messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public warn(messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log an error with warn log level.
                      * @param cause the exception to log
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    warn(cause: Error, messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public warn(cause: java.lang.Throwable | Error, messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log a message with info log level.
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    info(messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public info(messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log an error with info log level.
                      * @param cause the exception to log
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    info(cause: Error, messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public info(cause: java.lang.Throwable | Error, messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log a message with debug log level.
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    debug(messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public debug(messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log an error with debug log level.
                      * @param cause the exception to log
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    debug(cause: Error, messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public debug(cause: java.lang.Throwable | Error, messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log a message with trace log level.
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    trace(messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public trace(messageSupplier: java.util.function$.Supplier<any>): void
                     /**
                      * Log an error with trace log level.
                      * @param cause the exception to log
                      * @param messageSupplier a lazy supplier for the message to log
                      */
                     // @ts-ignore
-                    trace(cause: Error, messageSupplier: java.util.function.Supplier<java.lang.CharSequence> | java.util.function$.Supplier<java.lang.CharSequence>): void
+                    public trace(cause: java.lang.Throwable | Error, messageSupplier: java.util.function$.Supplier<any>): void
                 }
             }
         }

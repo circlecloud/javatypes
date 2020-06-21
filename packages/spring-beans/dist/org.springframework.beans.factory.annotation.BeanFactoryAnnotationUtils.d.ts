@@ -12,7 +12,7 @@ declare namespace org {
                      * @see BeanFactoryUtils
                      */
                     // @ts-ignore
-                    class BeanFactoryAnnotationUtils extends java.lang.Object {
+                    abstract class BeanFactoryAnnotationUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -28,7 +28,7 @@ declare namespace org {
                          * @see BeanFactoryUtils#beansOfTypeIncludingAncestors(ListableBeanFactory, Class)
                          */
                         // @ts-ignore
-                        qualifiedBeansOfType<T>(beanFactory: org.springframework.beans.factory.ListableBeanFactory, beanType: java.lang.Class<T>, qualifier: string): java.util.Map<java.lang.String, T>
+                        public static qualifiedBeansOfType<T>(beanFactory: org.springframework.beans.factory.ListableBeanFactory, beanType: java.lang.Class<T>, qualifier: java.lang.String | string): java.util.Map<java.lang.String | string, T>
                         /**
                          * Obtain a bean of type {@code T} from the given {@code BeanFactory} declaring a
                          * qualifier (e.g. via {@code <qualifier>} or {@code @Qualifier}) matching the given
@@ -43,7 +43,7 @@ declare namespace org {
                          * @see BeanFactoryUtils#beanOfTypeIncludingAncestors(ListableBeanFactory, Class)
                          */
                         // @ts-ignore
-                        qualifiedBeanOfType<T>(beanFactory: org.springframework.beans.factory.BeanFactory, beanType: java.lang.Class<T>, qualifier: string): T
+                        public static qualifiedBeanOfType<T>(beanFactory: org.springframework.beans.factory.BeanFactory, beanType: java.lang.Class<T>, qualifier: java.lang.String | string): T
                         /**
                          * Check whether the named bean declares a qualifier of the given name.
                          * @param qualifier the qualifier to match
@@ -55,7 +55,7 @@ declare namespace org {
                          * @since 5.0
                          */
                         // @ts-ignore
-                        isQualifierMatch(qualifier: java.util.function.Predicate<java.lang.String> | java.util.function$.Predicate<java.lang.String>, beanName: string, beanFactory: org.springframework.beans.factory.BeanFactory): boolean
+                        public static isQualifierMatch(qualifier: java.util.function$.Predicate<java.lang.String | string>, beanName: java.lang.String | string, beanFactory: org.springframework.beans.factory.BeanFactory): boolean
                     }
                 }
             }

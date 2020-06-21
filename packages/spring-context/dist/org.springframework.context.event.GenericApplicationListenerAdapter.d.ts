@@ -19,13 +19,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(delegate: org.springframework.context.ApplicationListener<any>)
                     // @ts-ignore
-                    onApplicationEvent(event: org.springframework.context.ApplicationEvent): void
+                    public onApplicationEvent(event: org.springframework.context.ApplicationEvent): void
                     // @ts-ignore
-                    supportsEventType(eventType: ResolvableType): boolean
+                    public supportsEventType(eventType: ResolvableType): boolean
                     // @ts-ignore
-                    supportsSourceType(sourceType: java.lang.Class<any>): boolean
+                    public supportsSourceType(sourceType: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                 }
             }
         }

@@ -51,7 +51,7 @@ declare namespace java {
                  * Returns a new InputContext instance.
                  */
                 // @ts-ignore
-                getInstance(): java.awt.im.InputContext
+                public static getInstance(): java.awt.im.InputContext
                 /**
                  * Attempts to select an input method or keyboard layout that
                  * supports the given locale, and returns a value indicating whether such
@@ -94,7 +94,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>locale</code> is null
                  */
                 // @ts-ignore
-                selectInputMethod(locale: java.util.Locale): boolean
+                public selectInputMethod(locale: java.util.Locale): boolean
                 /**
                  * Returns the current locale of the current input method or keyboard
                  * layout.
@@ -112,7 +112,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getLocale(): java.util.Locale
+                public getLocale(): java.util.Locale
                 /**
                  * Sets the subsets of the Unicode character set that input methods of this input
                  * context should be allowed to input. Null may be passed in to
@@ -126,7 +126,7 @@ declare namespace java {
                  * @param subsets The subsets of the Unicode character set from which characters may be input
                  */
                 // @ts-ignore
-                setCharacterSubsets(subsets: java.lang.Character.Subset[]): void
+                public setCharacterSubsets(subsets: java.lang.Character.Subset[]): void
                 /**
                  * Enables or disables the current input method for composition,
                  * depending on the value of the parameter <code>enable</code>.
@@ -153,7 +153,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setCompositionEnabled(enable: boolean): void
+                public setCompositionEnabled(enable: boolean): void
                 /**
                  * Determines whether the current input method is enabled for composition.
                  * An input method that is enabled for composition interprets incoming
@@ -168,7 +168,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isCompositionEnabled(): boolean
+                public isCompositionEnabled(): boolean
                 /**
                  * Asks the current input method to reconvert text from the
                  * current client component. The input method obtains the text to
@@ -187,7 +187,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                reconvert(): void
+                public reconvert(): void
                 /**
                  * Dispatches an event to the active input method. Called by AWT.
                  * If no input method is available, then the event will never be consumed.
@@ -195,7 +195,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>event</code> is null
                  */
                 // @ts-ignore
-                dispatchEvent(event: java.awt.AWTEvent): void
+                public dispatchEvent(event: java.awt.AWTEvent): void
                 /**
                  * Notifies the input context that a client component has been
                  * removed from its containment hierarchy, or that input method
@@ -209,7 +209,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>client</code> is null
                  */
                 // @ts-ignore
-                removeNotify(client: java.awt.Component): void
+                public removeNotify(client: java.awt.Component): void
                 /**
                  * Ends any input composition that may currently be going on in this
                  * context. Depending on the platform and possibly user preferences,
@@ -223,7 +223,7 @@ declare namespace java {
                  * saved to a file or copied to the clipboard.
                  */
                 // @ts-ignore
-                endComposition(): void
+                public endComposition(): void
                 /**
                  * Releases the resources used by this input context.
                  * Called by AWT for the default input context of each Window.
@@ -231,7 +231,7 @@ declare namespace java {
                  * has no effect.
                  */
                 // @ts-ignore
-                dispose(): void
+                public dispose(): void
                 /**
                  * Returns a control object from the current input method, or null. A
                  * control object provides methods that control the behavior of the
@@ -246,7 +246,7 @@ declare namespace java {
                  * @return A control object from the current input method, or null.
                  */
                 // @ts-ignore
-                getInputMethodControlObject(): java.lang.Object
+                public getInputMethodControlObject(): any
             }
         }
     }

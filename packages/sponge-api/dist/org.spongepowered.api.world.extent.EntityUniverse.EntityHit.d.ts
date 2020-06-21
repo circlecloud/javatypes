@@ -24,31 +24,31 @@ declare namespace org {
                              * @return The intersected entity
                              */
                             // @ts-ignore
-                            getEntity(): org.spongepowered.api.entity.Entity
+                            public getEntity(): org.spongepowered.api.entity.Entity
                             /**
                              * Gets the intersection point.
                              * @return The point of intersection
                              */
                             // @ts-ignore
-                            getIntersection(): Vector3d
+                            public getIntersection(): Vector3d
                             /**
                              * Gets the intersection normal.
                              * @return The normal of intersection
                              */
                             // @ts-ignore
-                            getNormal(): Vector3d
+                            public getNormal(): Vector3d
                             /**
                              * Gets the distance from the start to the intersection.
                              * @return The distance from the start to the intersection
                              */
                             // @ts-ignore
-                            getDistance(): double
+                            public getDistance(): number /*double*/
                             // @ts-ignore
-                            equals(other: any): boolean
+                            public equals(other: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

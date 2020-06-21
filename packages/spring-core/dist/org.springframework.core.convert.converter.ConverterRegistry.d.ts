@@ -17,7 +17,7 @@ declare namespace org {
                          * @throws IllegalArgumentException if the parameterized types could not be resolved
                          */
                         // @ts-ignore
-                        addConverter(converter: org.springframework.core.convert.converter.Converter<any, ?>): void
+                        addConverter(converter: org.springframework.core.convert.converter.Converter<any, any>): void
                         /**
                          * Add a plain converter to this registry.
                          * The convertible source/target type pair is specified explicitly.
@@ -26,7 +26,7 @@ declare namespace org {
                          * @since 3.1
                          */
                         // @ts-ignore
-                        addConverter<S, T>(sourceType: java.lang.Class<S>, targetType: java.lang.Class<T>, converter: org.springframework.core.convert.converter.Converter<any super S, T>): void
+                        addConverter<S, T>(sourceType: java.lang.Class<S>, targetType: java.lang.Class<T>, converter: org.springframework.core.convert.converter.Converter<any, any>): void
                         /**
                          * Add a generic converter to this registry.
                          */
@@ -38,7 +38,7 @@ declare namespace org {
                          * @throws IllegalArgumentException if the parameterized types could not be resolved
                          */
                         // @ts-ignore
-                        addConverterFactory(factory: org.springframework.core.convert.converter.ConverterFactory<any, ?>): void
+                        addConverterFactory(factory: org.springframework.core.convert.converter.ConverterFactory<any, any>): void
                         /**
                          * Remove any converters from {@code sourceType} to {@code targetType}.
                          * @param sourceType the source type

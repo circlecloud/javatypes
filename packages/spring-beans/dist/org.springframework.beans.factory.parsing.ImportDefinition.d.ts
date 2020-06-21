@@ -16,30 +16,30 @@ declare namespace org {
                          * @param importedResource the location of the imported resource
                          */
                         // @ts-ignore
-                        constructor(importedResource: string)
+                        constructor(importedResource: java.lang.String | string)
                         /**
                          * Create a new ImportDefinition.
                          * @param importedResource the location of the imported resource
                          * @param source the source object (may be {#code null})
                          */
                         // @ts-ignore
-                        constructor(importedResource: string, source: any)
+                        constructor(importedResource: java.lang.String | string, source: java.lang.Object | any)
                         /**
                          * Create a new ImportDefinition.
                          * @param importedResource the location of the imported resource
                          * @param source the source object (may be {#code null})
                          */
                         // @ts-ignore
-                        constructor(importedResource: string, actualResources: Resource[], source: any)
+                        constructor(importedResource: java.lang.String | string, actualResources: Resource[], source: java.lang.Object | any)
                         /**
                          * Return the location of the imported resource.
                          */
                         // @ts-ignore
-                        getImportedResource(): java.lang.String
+                        public getImportedResource(): string
                         // @ts-ignore
-                        getActualResources(): Resource[]
+                        public getActualResources(): Resource[]
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                     }
                 }
             }

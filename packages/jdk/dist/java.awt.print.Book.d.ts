@@ -21,7 +21,7 @@ declare namespace java {
                  * @return the number of pages this <code>Book</code> contains.
                  */
                 // @ts-ignore
-                getNumberOfPages(): int
+                public getNumberOfPages(): number /*int*/
                 /**
                  * Returns the {@link PageFormat} of the page specified by
                  * <code>pageIndex</code>.
@@ -33,7 +33,7 @@ declare namespace java {
                  *           does not contain the requested page
                  */
                 // @ts-ignore
-                getPageFormat(pageIndex: number /*int*/): java.awt.print.PageFormat
+                public getPageFormat(pageIndex: number /*int*/): java.awt.print.PageFormat
                 /**
                  * Returns the {@link Printable} instance responsible for rendering
                  * the page specified by <code>pageIndex</code>.
@@ -44,7 +44,7 @@ declare namespace java {
                  *             does not contain the requested page
                  */
                 // @ts-ignore
-                getPrintable(pageIndex: number /*int*/): java.awt.print.Printable
+                public getPrintable(pageIndex: number /*int*/): java.awt.print.Printable
                 /**
                  * Sets the <code>PageFormat</code> and the <code>Painter</code> for a
                  * specified page number.
@@ -59,7 +59,7 @@ declare namespace java {
                  *           <code>page</code> argument is <code>null</code>
                  */
                 // @ts-ignore
-                setPage(pageIndex: number /*int*/, painter: java.awt.print.Printable, page: java.awt.print.PageFormat): void
+                public setPage(pageIndex: number /*int*/, painter: java.awt.print.Printable, page: java.awt.print.PageFormat): void
                 /**
                  * Appends a single page to the end of this <code>Book</code>.
                  * @param painter   the <code>Printable</code> instance that
@@ -70,7 +70,7 @@ declare namespace java {
                  *           argument is <code>null</code>
                  */
                 // @ts-ignore
-                append(painter: java.awt.print.Printable, page: java.awt.print.PageFormat): void
+                public append(painter: java.awt.print.Printable, page: java.awt.print.PageFormat): void
                 /**
                  * Appends <code>numPages</code> pages to the end of this
                  * <code>Book</code>.  Each of the pages is associated with
@@ -85,7 +85,7 @@ declare namespace java {
                  *           argument is <code>null</code>
                  */
                 // @ts-ignore
-                append(painter: java.awt.print.Printable, page: java.awt.print.PageFormat, numPages: number /*int*/): void
+                public append(painter: java.awt.print.Printable, page: java.awt.print.PageFormat, numPages: number /*int*/): void
             }
         }
     }

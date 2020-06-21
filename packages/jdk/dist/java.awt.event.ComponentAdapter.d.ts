@@ -24,29 +24,29 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class ComponentAdapter extends java.lang.Object implements java.awt.event.ComponentListener {
+            abstract class ComponentAdapter extends java.lang.Object implements java.awt.event.ComponentListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * Invoked when the component's size changes.
                  */
                 // @ts-ignore
-                componentResized(e: java.awt.event.ComponentEvent): void
+                public componentResized(e: java.awt.event.ComponentEvent): void
                 /**
                  * Invoked when the component's position changes.
                  */
                 // @ts-ignore
-                componentMoved(e: java.awt.event.ComponentEvent): void
+                public componentMoved(e: java.awt.event.ComponentEvent): void
                 /**
                  * Invoked when the component has been made visible.
                  */
                 // @ts-ignore
-                componentShown(e: java.awt.event.ComponentEvent): void
+                public componentShown(e: java.awt.event.ComponentEvent): void
                 /**
                  * Invoked when the component has been made invisible.
                  */
                 // @ts-ignore
-                componentHidden(e: java.awt.event.ComponentEvent): void
+                public componentHidden(e: java.awt.event.ComponentEvent): void
             }
         }
     }

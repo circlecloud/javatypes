@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 3.1
                  */
                 // @ts-ignore
-                class AbstractClientHttpRequestFactoryWrapper extends java.lang.Object implements org.springframework.http.client.ClientHttpRequestFactory {
+                abstract class AbstractClientHttpRequestFactoryWrapper extends java.lang.Object implements org.springframework.http.client.ClientHttpRequestFactory {
                     /**
                      * Create a {@code AbstractClientHttpRequestFactoryWrapper} wrapping the given request factory.
                      * @param requestFactory the request factory to be wrapped
@@ -22,7 +22,7 @@ declare namespace org {
                      * {@linkplain #AbstractClientHttpRequestFactoryWrapper(ClientHttpRequestFactory) constructor}.
                      */
                     // @ts-ignore
-                    createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
+                    public createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
                     /**
                      * Create a new {@link ClientHttpRequest} for the specified URI and HTTP method
                      * by using the passed-on request factory.

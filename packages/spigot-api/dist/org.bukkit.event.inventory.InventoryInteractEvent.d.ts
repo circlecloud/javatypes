@@ -7,7 +7,7 @@ declare namespace org {
                  * HumanEntity and the contents of an Inventory.
                  */
                 // @ts-ignore
-                class InventoryInteractEvent extends org.bukkit.event.inventory.InventoryEvent implements org.bukkit.event.Cancellable {
+                abstract class InventoryInteractEvent extends org.bukkit.event.inventory.InventoryEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
                     constructor(transaction: org.bukkit.inventory.InventoryView)
                     /**
@@ -15,7 +15,7 @@ declare namespace org {
                      * @return The clicking player.
                      */
                     // @ts-ignore
-                    getWhoClicked(): org.bukkit.entity.HumanEntity
+                    public getWhoClicked(): org.bukkit.entity.HumanEntity
                     /**
                      * Sets the result of this event. This will change whether or not this
                      * event is considered cancelled.
@@ -23,7 +23,7 @@ declare namespace org {
                      * @see #isCancelled()
                      */
                     // @ts-ignore
-                    setResult(newResult: org.bukkit.event.Event.Result): void
+                    public setResult(newResult: org.bukkit.event.Event.Result): void
                     /**
                      * Gets the {@link org.bukkit.event.Event.Result} of this event. The Result describes the
                      * behavior that will be applied to the inventory in relation to this
@@ -31,7 +31,7 @@ declare namespace org {
                      * @return the Result of this event.
                      */
                     // @ts-ignore
-                    getResult(): org.bukkit.event.Event.Result
+                    public getResult(): org.bukkit.event.Event.Result
                     /**
                      * Gets whether or not this event is cancelled. This is based off of the
                      * Result value returned by {@link #getResult()}.  Result.ALLOW and
@@ -42,7 +42,7 @@ declare namespace org {
                      * @return whether the event is cancelled
                      */
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     /**
                      * Proxy method to {@link #setResult(org.bukkit.event.Event.Result)} for the Cancellable
                      * interface. {@link #setResult(org.bukkit.event.Event.Result)} is preferred, as it allows
@@ -52,7 +52,7 @@ declare namespace org {
                      * @param toCancel result becomes DENY if true, ALLOW if false
                      */
                     // @ts-ignore
-                    setCancelled(toCancel: boolean): void
+                    public setCancelled(toCancel: boolean): void
                 }
             }
         }

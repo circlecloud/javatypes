@@ -17,14 +17,14 @@ declare namespace org {
                      * @param obj the object to style
                      */
                     // @ts-ignore
-                    styleStart(buffer: java.lang.StringBuilder, obj: any): void
+                    styleStart(buffer: java.lang.StringBuilder, obj: java.lang.Object | any): void
                     /**
                      * Style a {@code toString()}'ed object after it's fields are styled.
                      * @param buffer the buffer to print to
                      * @param obj the object to style
                      */
                     // @ts-ignore
-                    styleEnd(buffer: java.lang.StringBuilder, obj: any): void
+                    styleEnd(buffer: java.lang.StringBuilder, obj: java.lang.Object | any): void
                     /**
                      * Style a field value as a string.
                      * @param buffer the buffer to print to
@@ -32,14 +32,14 @@ declare namespace org {
                      * @param value the field value
                      */
                     // @ts-ignore
-                    styleField(buffer: java.lang.StringBuilder, fieldName: string, value: any): void
+                    styleField(buffer: java.lang.StringBuilder, fieldName: java.lang.String | string, value: java.lang.Object | any): void
                     /**
                      * Style the given value.
                      * @param buffer the buffer to print to
                      * @param value the field value
                      */
                     // @ts-ignore
-                    styleValue(buffer: java.lang.StringBuilder, value: any): void
+                    styleValue(buffer: java.lang.StringBuilder, value: java.lang.Object | any): void
                     /**
                      * Style the field separator.
                      * @param buffer the buffer to print to

@@ -40,24 +40,24 @@ declare namespace org {
                      * <p>Default is localhost.
                      */
                     // @ts-ignore
-                    setHost(host: string): void
+                    public setHost(host: java.lang.String | string): void
                     /**
                      * Return the host of the registry for the exported RMI service.
                      */
                     // @ts-ignore
-                    getHost(): java.lang.String
+                    public getHost(): string
                     /**
                      * Set the port of the registry for the exported RMI service,
                      * i.e. {@code rmi://host:PORT/name}
                      * <p>Default is {@code Registry.REGISTRY_PORT} (1099).
                      */
                     // @ts-ignore
-                    setPort(port: number /*int*/): void
+                    public setPort(port: number /*int*/): void
                     /**
                      * Return the port of the registry for the exported RMI service.
                      */
                     // @ts-ignore
-                    getPort(): int
+                    public getPort(): number /*int*/
                     /**
                      * Set a custom RMI client socket factory to use for the RMI registry.
                      * <p>If the given object also implements {@code java.rmi.server.RMIServerSocketFactory},
@@ -68,7 +68,7 @@ declare namespace org {
                      * @see java.rmi.registry.LocateRegistry#getRegistry(String, int, java.rmi.server.RMIClientSocketFactory)
                      */
                     // @ts-ignore
-                    setClientSocketFactory(clientSocketFactory: java.rmi.server.RMIClientSocketFactory): void
+                    public setClientSocketFactory(clientSocketFactory: java.rmi.server.RMIClientSocketFactory): void
                     /**
                      * Set a custom RMI server socket factory to use for the RMI registry.
                      * <p>Only needs to be specified when the client socket factory does not
@@ -79,7 +79,7 @@ declare namespace org {
                      * @see java.rmi.registry.LocateRegistry#createRegistry(int, RMIClientSocketFactory, java.rmi.server.RMIServerSocketFactory)
                      */
                     // @ts-ignore
-                    setServerSocketFactory(serverSocketFactory: java.rmi.server.RMIServerSocketFactory): void
+                    public setServerSocketFactory(serverSocketFactory: java.rmi.server.RMIServerSocketFactory): void
                     /**
                      * Set whether to always create the registry in-process,
                      * not attempting to locate an existing registry at the specified port.
@@ -88,9 +88,9 @@ declare namespace org {
                      * intend to create a new registry in any case.
                      */
                     // @ts-ignore
-                    setAlwaysCreate(alwaysCreate: boolean): void
+                    public setAlwaysCreate(alwaysCreate: boolean): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Locate or create the RMI registry.
                      * @param registryHost the registry host to use (if this is specified,
@@ -102,7 +102,7 @@ declare namespace org {
                      * @throws java.rmi.RemoteException if the registry couldn't be located or created
                      */
                     // @ts-ignore
-                    getRegistry(registryHost: string, registryPort: number /*int*/, clientSocketFactory: java.rmi.server.RMIClientSocketFactory, serverSocketFactory: java.rmi.server.RMIServerSocketFactory): java.rmi.registry.Registry
+                    getRegistry(registryHost: java.lang.String | string, registryPort: number /*int*/, clientSocketFactory: java.rmi.server.RMIClientSocketFactory, serverSocketFactory: java.rmi.server.RMIServerSocketFactory): java.rmi.registry.Registry
                     /**
                      * Locate or create the RMI registry.
                      * @param registryPort the registry port to use
@@ -132,17 +132,17 @@ declare namespace org {
                     // @ts-ignore
                     testRegistry(registry: java.rmi.registry.Registry): void
                     // @ts-ignore
-                    getObject(): java.rmi.registry.Registry
+                    public getObject(): java.rmi.registry.Registry
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends java.rmi.registry.Registry>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                     /**
                      * Unexport the RMI registry on bean factory shutdown,
                      * provided that this bean actually created a registry.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

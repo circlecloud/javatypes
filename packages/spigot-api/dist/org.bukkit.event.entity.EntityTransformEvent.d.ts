@@ -8,7 +8,7 @@ declare namespace org {
                 // @ts-ignore
                 class EntityTransformEvent extends org.bukkit.event.entity.EntityEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(original: org.bukkit.entity.Entity, convertedList: Array<org.bukkit.entity.Entity>, transformReason: org.bukkit.event.entity.EntityTransformEvent.TransformReason)
+                    constructor(original: org.bukkit.entity.Entity, convertedList: java.util.List<org.bukkit.entity.Entity> | Array<org.bukkit.entity.Entity>, transformReason: org.bukkit.event.entity.EntityTransformEvent.TransformReason)
                     /**
                      * Gets the entity that the original entity was transformed to.
                      * This returns the first entity in the transformed entity list.
@@ -16,27 +16,27 @@ declare namespace org {
                      * @see #getTransformedEntities()
                      */
                     // @ts-ignore
-                    getTransformedEntity(): org.bukkit.entity.Entity
+                    public getTransformedEntity(): org.bukkit.entity.Entity
                     /**
                      * Gets the entities that the original entity was transformed to.
                      * @return The transformed entities.
                      */
                     // @ts-ignore
-                    getTransformedEntities(): java.util.List<org.bukkit.entity.Entity>
+                    public getTransformedEntities(): Array<org.bukkit.entity.Entity>
                     /**
                      * Gets the reason for the conversion that has occurred.
                      * @return The reason for conversion that has occurred.
                      */
                     // @ts-ignore
-                    getTransformReason(): org.bukkit.event.entity.EntityTransformEvent.TransformReason
+                    public getTransformReason(): org.bukkit.event.entity.EntityTransformEvent.TransformReason
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

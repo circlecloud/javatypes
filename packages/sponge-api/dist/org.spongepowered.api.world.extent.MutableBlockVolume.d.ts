@@ -84,7 +84,7 @@ declare namespace org {
                         // @ts-ignore
                         getRelativeBlockView(): org.spongepowered.api.world.extent.MutableBlockVolume
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<? extends org.spongepowered.api.world.extent.MutableBlockVolume>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<any>
                     }
                 }
             }

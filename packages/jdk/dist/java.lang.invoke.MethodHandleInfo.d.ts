@@ -12,59 +12,59 @@ declare namespace java {
                  * Getter MethodHandle for an instance field
                  */
                 // @ts-ignore
-                
+                readonly REF_getField: number /*int*/
                 /**
                  * Getter MethodHandle for an static field
                  */
                 // @ts-ignore
-                
+                readonly REF_getStatic: number /*int*/
                 /**
                  * Setter MethodHandle for an instance field
                  */
                 // @ts-ignore
-                
+                readonly REF_putField: number /*int*/
                 /**
                  * Setter MethodHandle for an static field
                  */
                 // @ts-ignore
-                
+                readonly REF_putStatic: number /*int*/
                 /**
                  * MethodHandle for an instance method
                  */
                 // @ts-ignore
-                
+                readonly REF_invokeVirtual: number /*int*/
                 /**
                  * MethodHandle for a static method
                  */
                 // @ts-ignore
-                
+                readonly REF_invokeStatic: number /*int*/
                 /**
                  * MethodHandle for an special method
                  */
                 // @ts-ignore
-                
+                readonly REF_invokeSpecial: number /*int*/
                 /**
                  * MethodHandle for a constructor
                  */
                 // @ts-ignore
-                
+                readonly REF_newInvokeSpecial: number /*int*/
                 /**
                  * MethodHandle for an interface method
                  */
                 // @ts-ignore
-                
+                readonly REF_invokeInterface: number /*int*/
                 /**
                  * Returns the Class where the cracked MethodHandle's underlying method, field or constructor is declared.
                  * @return class that declares the underlying member
                  */
                 // @ts-ignore
-                getDeclaringClass(): java.lang.Class<?>
+                getDeclaringClass(): java.lang.Class<any>
                 /**
                  * Returns the simple name of the MethodHandle's underlying member.
                  * @return A string representing the name of the method or field, or "&lt;init&gt;" for constructor.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns the type of the MethodHandle's underlying member as a MethodType.
                  * If the underlying member is non-static, the receiver parameter will not be included.
@@ -79,13 +79,13 @@ declare namespace java {
                  * @return An int representing the member's modifiers, or -1 if the underlying member is not accessible.
                  */
                 // @ts-ignore
-                getModifiers(): int
+                getModifiers(): number /*int*/
                 /**
                  * Returns the reference kind of the MethodHandle. The possible reference kinds are the declared MethodHandleInfo.REF fields.
                  * @return Returns one of the defined reference kinds which represent the MethodHandle kind.
                  */
                 // @ts-ignore
-                getReferenceKind(): int
+                getReferenceKind(): number /*int*/
                 /**
                  * Returns whether the MethodHandle's underlying method or constructor has variable argument arity.
                  * @return whether the underlying method has variable arity
@@ -112,7 +112,7 @@ declare namespace java {
                  * @throws IllegalArgumentException If the provided referenceKind is invalid
                  */
                 // @ts-ignore
-                referenceKindToString(referenceKind: number /*int*/): java.lang.String
+                referenceKindToString(referenceKind: number /*int*/): string
                 /**
                  * Answers a string containing a concise, human-readable description of the receiver.
                  * @param kind the reference kind, one of the declared MethodHandleInfo.REF fields.
@@ -122,7 +122,7 @@ declare namespace java {
                  * @return a String of the format "K C.N:MT"
                  */
                 // @ts-ignore
-                toString(kind: number /*int*/, defc: java.lang.Class<any>, name: string, type: java.lang.invoke.MethodType): java.lang.String
+                toString(kind: number /*int*/, defc: java.lang.Class<any>, name: java.lang.String | string, type: java.lang.invoke.MethodType): string
             }
         }
     }

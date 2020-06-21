@@ -11,7 +11,7 @@ declare namespace org {
                  * @return The ID of the map.
                  */
                 // @ts-ignore
-                getId(): int
+                getId(): number /*int*/
                 /**
                  * Check whether this map is virtual. A map is virtual if its lowermost
                  * MapRenderer is plugin-provided.
@@ -36,13 +36,13 @@ declare namespace org {
                  * @return The center X position.
                  */
                 // @ts-ignore
-                getCenterX(): int
+                getCenterX(): number /*int*/
                 /**
                  * Get the center Z position of this map.
                  * @return The center Z position.
                  */
                 // @ts-ignore
-                getCenterZ(): int
+                getCenterZ(): number /*int*/
                 /**
                  * Set the center X position of this map.
                  * @param x The center X position.
@@ -75,7 +75,7 @@ declare namespace org {
                  * @return A {#code List<MapRenderer>} containing each map renderer.
                  */
                 // @ts-ignore
-                getRenderers(): java.util.List<org.bukkit.map.MapRenderer>
+                getRenderers(): Array<org.bukkit.map.MapRenderer>
                 /**
                  * Add a renderer to this map.
                  * @param renderer The MapRenderer to add.

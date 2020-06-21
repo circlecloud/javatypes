@@ -17,7 +17,7 @@ declare namespace org {
              * overridden to enable this.
              */
             // @ts-ignore
-            class ChunkGenerator extends java.lang.Object {
+            abstract class ChunkGenerator extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -43,7 +43,7 @@ declare namespace org {
                  *      generator
                  */
                 // @ts-ignore
-                generateChunkData(world: org.bukkit.World, random: java.util.Random, x: number /*int*/, z: number /*int*/, biome: org.bukkit.generator.ChunkGenerator.BiomeGrid): org.bukkit.generator.ChunkGenerator.ChunkData
+                public generateChunkData(world: org.bukkit.World, random: java.util.Random, x: number /*int*/, z: number /*int*/, biome: org.bukkit.generator.ChunkGenerator.BiomeGrid): org.bukkit.generator.ChunkGenerator.ChunkData
                 /**
                  * Create a ChunkData for a world.
                  * @param world the world the ChunkData is for
@@ -59,7 +59,7 @@ declare namespace org {
                  * @return true if the location is valid, otherwise false
                  */
                 // @ts-ignore
-                canSpawn(world: org.bukkit.World, x: number /*int*/, z: number /*int*/): boolean
+                public canSpawn(world: org.bukkit.World, x: number /*int*/, z: number /*int*/): boolean
                 /**
                  * Gets a list of default {@link BlockPopulator}s to apply to a given
                  * world
@@ -67,7 +67,7 @@ declare namespace org {
                  * @return List containing any amount of BlockPopulators
                  */
                 // @ts-ignore
-                getDefaultPopulators(world: org.bukkit.World): java.util.List<org.bukkit.generator.BlockPopulator>
+                public getDefaultPopulators(world: org.bukkit.World): Array<org.bukkit.generator.BlockPopulator>
                 /**
                  * Gets a fixed spawn location to use for a given world.
                  * <p>
@@ -78,42 +78,42 @@ declare namespace org {
                  * @return Location containing a new spawn point, otherwise null
                  */
                 // @ts-ignore
-                getFixedSpawnLocation(world: org.bukkit.World, random: java.util.Random): org.bukkit.Location
+                public getFixedSpawnLocation(world: org.bukkit.World, random: java.util.Random): org.bukkit.Location
                 /**
                  * Gets if this ChunkGenerator is parallel capable.
                  * See {@link ChunkGenerator} for more information.
                  * @return parallel capable status
                  */
                 // @ts-ignore
-                isParallelCapable(): boolean
+                public isParallelCapable(): boolean
                 /**
                  * Gets if the server should generate Vanilla caves after this
                  * ChunkGenerator.
                  * @return true if the server should generate Vanilla caves
                  */
                 // @ts-ignore
-                shouldGenerateCaves(): boolean
+                public shouldGenerateCaves(): boolean
                 /**
                  * Gets if the server should generate Vanilla decorations after this
                  * ChunkGenerator.
                  * @return true if the server should generate Vanilla decorations
                  */
                 // @ts-ignore
-                shouldGenerateDecorations(): boolean
+                public shouldGenerateDecorations(): boolean
                 /**
                  * Gets if the server should generate Vanilla mobs after this
                  * ChunkGenerator.
                  * @return true if the server should generate Vanilla mobs
                  */
                 // @ts-ignore
-                shouldGenerateMobs(): boolean
+                public shouldGenerateMobs(): boolean
                 /**
                  * Gets if the server should generate Vanilla structures after this
                  * ChunkGenerator.
                  * @return true if the server should generate Vanilla structures
                  */
                 // @ts-ignore
-                shouldGenerateStructures(): boolean
+                public shouldGenerateStructures(): boolean
             }
         }
     }

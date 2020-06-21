@@ -31,35 +31,35 @@ declare namespace org {
                  * @version $Id: KeyFactory.java,v 1.26 2006/03/05 02:43:19 herbyderby Exp $
                  */
                 // @ts-ignore
-                class KeyFactory extends java.lang.Object {
+                abstract class KeyFactory extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly CLASS_BY_NAME: Customizer
+                    public static readonly CLASS_BY_NAME: Customizer
                     // @ts-ignore
-                    readonly STORE_CLASS_AS_STRING: FieldTypeCustomizer
+                    public static readonly STORE_CLASS_AS_STRING: FieldTypeCustomizer
                     /**
                      * {@link Type#hashCode()} is very expensive as it traverses full descriptor to calculate hash code.
                      * This customizer uses {@link Type#getSort()} as a hash code.
                      */
                     // @ts-ignore
-                    readonly HASH_ASM_TYPE: HashCodeCustomizer
+                    public static readonly HASH_ASM_TYPE: HashCodeCustomizer
                     /**
                      * @deprecated this customizer might result in unexpected class leak since key object still holds a strong reference to the Object and class.
                      *  It is recommended to have pre-processing method that would strip Objects and represent Classes as Strings
                      */
                     // @ts-ignore
-                    readonly OBJECT_BY_CLASS: Customizer
+                    public static readonly OBJECT_BY_CLASS: Customizer
                     // @ts-ignore
-                    create(keyInterface: java.lang.Class): org.springframework.cglib.core.KeyFactory
+                    public static create(keyInterface: java.lang.Class<any>): org.springframework.cglib.core.KeyFactory
                     // @ts-ignore
-                    create(keyInterface: java.lang.Class, customizer: Customizer): org.springframework.cglib.core.KeyFactory
+                    public static create(keyInterface: java.lang.Class<any>, customizer: Customizer): org.springframework.cglib.core.KeyFactory
                     // @ts-ignore
-                    create(keyInterface: java.lang.Class, first: KeyFactoryCustomizer, next: Array<KeyFactoryCustomizer>): org.springframework.cglib.core.KeyFactory
+                    public static create(keyInterface: java.lang.Class<any>, first: KeyFactoryCustomizer, next: java.util.List<KeyFactoryCustomizer> | Array<KeyFactoryCustomizer>): org.springframework.cglib.core.KeyFactory
                     // @ts-ignore
-                    create(loader: java.lang.ClassLoader, keyInterface: java.lang.Class, customizer: Customizer): org.springframework.cglib.core.KeyFactory
+                    public static create(loader: java.lang.ClassLoader, keyInterface: java.lang.Class<any>, customizer: Customizer): org.springframework.cglib.core.KeyFactory
                     // @ts-ignore
-                    create(loader: java.lang.ClassLoader, keyInterface: java.lang.Class, customizer: KeyFactoryCustomizer, next: Array<KeyFactoryCustomizer>): org.springframework.cglib.core.KeyFactory
+                    public static create(loader: java.lang.ClassLoader, keyInterface: java.lang.Class<any>, customizer: KeyFactoryCustomizer, next: java.util.List<KeyFactoryCustomizer> | Array<KeyFactoryCustomizer>): org.springframework.cglib.core.KeyFactory
                 }
             }
         }

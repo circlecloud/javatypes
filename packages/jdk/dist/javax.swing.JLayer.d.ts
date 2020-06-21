@@ -110,7 +110,7 @@ declare namespace javax {
              * @see #setUI
              */
             // @ts-ignore
-            constructor(view: V extends java.awt.Component)
+            constructor(view: V)
             /**
              * Creates a new {@code JLayer} object with the specified view component
              * and {@link javax.swing.plaf.LayerUI} object.
@@ -119,7 +119,7 @@ declare namespace javax {
              *  to be used by this {@code JLayer}
              */
             // @ts-ignore
-            constructor(view: V extends java.awt.Component, ui: javax.swing.plaf.LayerUI<V>)
+            constructor(view: V, ui: javax.swing.plaf.LayerUI<V>)
             /**
              * Returns the {@code JLayer}'s view component or {@code null}.
              * <br>This is a bound property.
@@ -128,7 +128,7 @@ declare namespace javax {
              * @see #setView(Component)
              */
             // @ts-ignore
-            getView(): V
+            public getView(): V
             /**
              * Sets the {@code JLayer}'s view component, which can be {@code null}.
              * <br>This is a bound property.
@@ -136,20 +136,20 @@ declare namespace javax {
              * @see #getView()
              */
             // @ts-ignore
-            setView(view: V extends java.awt.Component): void
+            public setView(view: V): void
             /**
              * Sets the {@link javax.swing.plaf.LayerUI} which will perform painting
              * and receive input events for this {@code JLayer}.
              * @param ui the {#link javax.swing.plaf.LayerUI} for this {@code JLayer}
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.LayerUI<any super V>): void
+            public setUI(ui: javax.swing.plaf.LayerUI<any>): void
             /**
              * Returns the {@link javax.swing.plaf.LayerUI} for this {@code JLayer}.
              * @return the {#code LayerUI} for this {@code JLayer}
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.LayerUI<? super V>
+            public getUI(): javax.swing.plaf.LayerUI<any>
             /**
              * Returns the {@code JLayer}'s glassPane component or {@code null}.
              * <br>This is a bound property.
@@ -158,7 +158,7 @@ declare namespace javax {
              * @see #setGlassPane(JPanel)
              */
             // @ts-ignore
-            getGlassPane(): javax.swing.JPanel
+            public getGlassPane(): javax.swing.JPanel
             /**
              * Sets the {@code JLayer}'s glassPane component, which can be {@code null}.
              * <br>This is a bound property.
@@ -166,7 +166,7 @@ declare namespace javax {
              * @see #getGlassPane()
              */
             // @ts-ignore
-            setGlassPane(glassPane: javax.swing.JPanel): void
+            public setGlassPane(glassPane: javax.swing.JPanel): void
             /**
              * Called by the constructor methods to create a default {@code glassPane}.
              * By default this method creates a new JPanel with visibility set to true
@@ -174,7 +174,7 @@ declare namespace javax {
              * @return the default {#code glassPane}
              */
             // @ts-ignore
-            createGlassPane(): javax.swing.JPanel
+            public createGlassPane(): javax.swing.JPanel
             /**
              * Sets the layout manager for this container.  This method is
              * overridden to prevent the layout manager from being set.
@@ -185,7 +185,7 @@ declare namespace javax {
              * @exception IllegalArgumentException this method is not supported
              */
             // @ts-ignore
-            setLayout(mgr: java.awt.LayoutManager): void
+            public setLayout(mgr: java.awt.LayoutManager): void
             /**
              * A non-{@code null} border, or non-zero insets, isn't supported, to prevent the geometry
              * of this component from becoming complex enough to inhibit
@@ -198,7 +198,7 @@ declare namespace javax {
              * @exception IllegalArgumentException this method is not supported
              */
             // @ts-ignore
-            setBorder(border: javax.swing.border.Border): void
+            public setBorder(border: javax.swing.border.Border): void
             /**
              * This method is not supported by {@code JLayer}
              * and always throws {@code UnsupportedOperationException}
@@ -207,17 +207,17 @@ declare namespace javax {
              * @see #setGlassPane(JPanel)
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Always returns {@code true} to cause painting to originate from {@code JLayer},
              * or one of its ancestors.
@@ -236,13 +236,13 @@ declare namespace javax {
              * @param h  the height of the region to be painted
              */
             // @ts-ignore
-            paintImmediately(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public paintImmediately(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Delegates all painting to the {@link javax.swing.plaf.LayerUI} object.
              * @param g the {#code Graphics} to render to
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * This method is empty, because all painting is done by
              * {@link #paint(Graphics)} and
@@ -261,12 +261,12 @@ declare namespace javax {
              * @return false
              */
             // @ts-ignore
-            isOptimizedDrawingEnabled(): boolean
+            public isOptimizedDrawingEnabled(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            propertyChange(evt: java.beans.PropertyChangeEvent): void
+            public propertyChange(evt: java.beans.PropertyChangeEvent): void
             /**
              * Enables the events from JLayer and <b>all its descendants</b>
              * defined by the specified event mask parameter
@@ -300,7 +300,7 @@ declare namespace javax {
              * @see Component#isDisplayable()
              */
             // @ts-ignore
-            setLayerEventMask(layerEventMask: number /*long*/): void
+            public setLayerEventMask(layerEventMask: number /*long*/): void
             /**
              * Returns the bitmap of event mask to receive by this {@code JLayer}
              * and its {@code LayerUI}.
@@ -312,13 +312,13 @@ declare namespace javax {
              * @return the bitmask of event types to receive for this {#code JLayer}
              */
             // @ts-ignore
-            getLayerEventMask(): long
+            public getLayerEventMask(): number /*long*/
             /**
              * Delegates its functionality to the {@link javax.swing.plaf.LayerUI#updateUI(JLayer)} method,
              * if {@code LayerUI} is set.
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the preferred size of the viewport for a view component.
              * <p>
@@ -328,7 +328,7 @@ declare namespace javax {
              * @see Scrollable
              */
             // @ts-ignore
-            getPreferredScrollableViewportSize(): java.awt.Dimension
+            public getPreferredScrollableViewportSize(): java.awt.Dimension
             /**
              * Returns a scroll increment, which is required for components
              * that display logical rows or columns in order to completely expose
@@ -340,7 +340,7 @@ declare namespace javax {
              * @see Scrollable
              */
             // @ts-ignore
-            getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns {@code false} to indicate that the height of the viewport does not
              * determine the height of the layer, unless the preferred height
@@ -352,7 +352,7 @@ declare namespace javax {
              * @see Scrollable
              */
             // @ts-ignore
-            getScrollableTracksViewportHeight(): boolean
+            public getScrollableTracksViewportHeight(): boolean
             /**
              * Returns {@code false} to indicate that the width of the viewport does not
              * determine the width of the layer, unless the preferred width
@@ -364,7 +364,7 @@ declare namespace javax {
              * @see Scrollable
              */
             // @ts-ignore
-            getScrollableTracksViewportWidth(): boolean
+            public getScrollableTracksViewportWidth(): boolean
             /**
              * Returns a scroll increment, which is required for components
              * that display logical rows or columns in order to completely expose
@@ -382,29 +382,29 @@ declare namespace javax {
              * @see Scrollable
              */
             // @ts-ignore
-            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Delegates its functionality to the {@link javax.swing.plaf.LayerUI#doLayout(JLayer)} method,
              * if {@code LayerUI} is set.
              */
             // @ts-ignore
-            doLayout(): void
+            public doLayout(): void
             /**
              * Gets the AccessibleContext associated with this {@code JLayer}.
              * @return the AccessibleContext associated with this {#code JLayer}.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

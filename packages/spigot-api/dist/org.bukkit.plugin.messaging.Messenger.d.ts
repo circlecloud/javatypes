@@ -15,12 +15,12 @@ declare namespace org {
                      * Represents the largest size that an individual Plugin Message may be.
                      */
                     // @ts-ignore
-                    
+                    readonly MAX_MESSAGE_SIZE: number /*int*/
                     /**
                      * Represents the largest size that a Plugin Channel may be.
                      */
                     // @ts-ignore
-                    
+                    readonly MAX_CHANNEL_SIZE: number /*int*/
                     /**
                      * Checks if the specified channel is a reserved name.
                      * <br>
@@ -31,7 +31,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if channel is null.
                      */
                     // @ts-ignore
-                    isReservedChannel(channel: string): boolean
+                    isReservedChannel(channel: java.lang.String | string): boolean
                     /**
                      * Registers the specific plugin to the requested outgoing plugin channel,
                      * allowing it to send messages through that channel to any clients.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin or channel is null.
                      */
                     // @ts-ignore
-                    registerOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string): void
+                    registerOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): void
                     /**
                      * Unregisters the specific plugin from the requested outgoing plugin
                      * channel, no longer allowing it to send messages through that channel to
@@ -51,7 +51,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin or channel is null.
                      */
                     // @ts-ignore
-                    unregisterOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string): void
+                    unregisterOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): void
                     /**
                      * Unregisters the specific plugin from all outgoing plugin channels, no
                      * longer allowing it to send any plugin messages.
@@ -72,7 +72,7 @@ declare namespace org {
                      *      is null, or the listener is already registered for this channel.
                      */
                     // @ts-ignore
-                    registerIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string, listener: org.bukkit.plugin.messaging.PluginMessageListener): org.bukkit.plugin.messaging.PluginMessageListenerRegistration
+                    registerIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string, listener: org.bukkit.plugin.messaging.PluginMessageListener): org.bukkit.plugin.messaging.PluginMessageListenerRegistration
                     /**
                      * Unregisters the specific plugin's listener from listening on the
                      * requested incoming plugin channel, no longer allowing it to act upon
@@ -84,7 +84,7 @@ declare namespace org {
                      *      is null.
                      */
                     // @ts-ignore
-                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string, listener: org.bukkit.plugin.messaging.PluginMessageListener): void
+                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string, listener: org.bukkit.plugin.messaging.PluginMessageListener): void
                     /**
                      * Unregisters the specific plugin from listening on the requested
                      * incoming plugin channel, no longer allowing it to act upon any plugin
@@ -94,7 +94,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin or channel is null.
                      */
                     // @ts-ignore
-                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string): void
+                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): void
                     /**
                      * Unregisters the specific plugin from listening on all plugin channels
                      * through all listeners.
@@ -108,7 +108,7 @@ declare namespace org {
                      * @return List of all registered outgoing plugin channels.
                      */
                     // @ts-ignore
-                    getOutgoingChannels(): java.util.Set<java.lang.String>
+                    getOutgoingChannels(): Array<java.lang.String | string>
                     /**
                      * Gets a set containing all the outgoing plugin channels that the
                      * specified plugin is registered to.
@@ -118,13 +118,13 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin is null.
                      */
                     // @ts-ignore
-                    getOutgoingChannels(plugin: org.bukkit.plugin.Plugin): java.util.Set<java.lang.String>
+                    getOutgoingChannels(plugin: org.bukkit.plugin.Plugin): Array<java.lang.String | string>
                     /**
                      * Gets a set containing all the incoming plugin channels.
                      * @return List of all registered incoming plugin channels.
                      */
                     // @ts-ignore
-                    getIncomingChannels(): java.util.Set<java.lang.String>
+                    getIncomingChannels(): Array<java.lang.String | string>
                     /**
                      * Gets a set containing all the incoming plugin channels that the
                      * specified plugin is registered for.
@@ -134,7 +134,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin is null.
                      */
                     // @ts-ignore
-                    getIncomingChannels(plugin: org.bukkit.plugin.Plugin): java.util.Set<java.lang.String>
+                    getIncomingChannels(plugin: org.bukkit.plugin.Plugin): Array<java.lang.String | string>
                     /**
                      * Gets a set containing all the incoming plugin channel registrations
                      * that the specified plugin has.
@@ -143,7 +143,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin is null.
                      */
                     // @ts-ignore
-                    getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin): java.util.Set<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
+                    getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin): Array<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
                     /**
                      * Gets a set containing all the incoming plugin channel registrations
                      * that are on the requested channel.
@@ -152,7 +152,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if channel is null.
                      */
                     // @ts-ignore
-                    getIncomingChannelRegistrations(channel: string): java.util.Set<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
+                    getIncomingChannelRegistrations(channel: java.lang.String | string): Array<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
                     /**
                      * Gets a set containing all the incoming plugin channel registrations
                      * that the specified plugin has on the requested channel.
@@ -162,7 +162,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if plugin or channel is null.
                      */
                     // @ts-ignore
-                    getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin, channel: string): java.util.Set<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
+                    getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): Array<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
                     /**
                      * Checks if the specified plugin message listener registration is valid.
                      * <p>
@@ -181,7 +181,7 @@ declare namespace org {
                      * @return True if the channel is registered, else false.
                      */
                     // @ts-ignore
-                    isIncomingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: string): boolean
+                    isIncomingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): boolean
                     /**
                      * Checks if the specified plugin has registered to send outgoing messages
                      * through the requested channel.
@@ -190,7 +190,7 @@ declare namespace org {
                      * @return True if the channel is registered, else false.
                      */
                     // @ts-ignore
-                    isOutgoingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: string): boolean
+                    isOutgoingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): boolean
                     /**
                      * Dispatches the specified incoming message to any registered listeners.
                      * @param source Source of the message.
@@ -198,7 +198,7 @@ declare namespace org {
                      * @param message Raw payload of the message.
                      */
                     // @ts-ignore
-                    dispatchIncomingMessage(source: org.bukkit.entity.Player, channel: string, message: number /*byte*/[]): void
+                    dispatchIncomingMessage(source: org.bukkit.entity.Player, channel: java.lang.String | string, message: number /*byte*/[]): void
                 }
             }
         }

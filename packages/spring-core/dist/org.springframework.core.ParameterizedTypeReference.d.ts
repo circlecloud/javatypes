@@ -18,17 +18,17 @@ declare namespace org {
              * @see <a href="https://gafter.blogspot.nl/2006/12/super-type-tokens.html">Neal Gafter on Super Type Tokens</a>
              */
             // @ts-ignore
-            class ParameterizedTypeReference<T> extends java.lang.Object {
+            abstract class ParameterizedTypeReference<T> extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                getType(): java.lang.reflect.Type
+                public getType(): java.lang.reflect.Type
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Build a {@code ParameterizedTypeReference} wrapping the given type.
                  * @param type a generic type (possibly obtained via reflection,
@@ -38,7 +38,7 @@ declare namespace org {
                  * @since 4.3.12
                  */
                 // @ts-ignore
-                forType<T>(type: java.lang.reflect.Type): org.springframework.core.ParameterizedTypeReference<T>
+                public static forType<T>(type: java.lang.reflect.Type): org.springframework.core.ParameterizedTypeReference<T>
             }
         }
     }

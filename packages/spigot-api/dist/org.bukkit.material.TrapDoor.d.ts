@@ -20,29 +20,29 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                isOpen(): boolean
+                public isOpen(): boolean
                 // @ts-ignore
-                setOpen(isOpen: boolean): void
+                public setOpen(isOpen: boolean): void
                 /**
                  * Test if trapdoor is inverted
                  * @return true if inverted (top half), false if normal (bottom half)
                  */
                 // @ts-ignore
-                isInverted(): boolean
+                public isInverted(): boolean
                 /**
                  * Set trapdoor inverted state
                  * @param inv - true if inverted (top half), false if normal (bottom half)
                  */
                 // @ts-ignore
-                setInverted(inv: boolean): void
+                public setInverted(inv: boolean): void
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.TrapDoor
+                public clone(): org.bukkit.material.TrapDoor
             }
         }
     }

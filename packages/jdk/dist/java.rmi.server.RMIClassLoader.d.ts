@@ -81,7 +81,7 @@ declare namespace java {
                  * @see #loadClass(String,String)
                  */
                 // @ts-ignore
-                loadClass(name: string): java.lang.Class<?>
+                public static loadClass(name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Loads a class from a codebase URL.
                  * If <code>codebase</code> is <code>null</code>, then this method
@@ -104,7 +104,7 @@ declare namespace java {
                  *  could not be found at the specified URL
                  */
                 // @ts-ignore
-                loadClass(codebase: java.net.URL, name: string): java.lang.Class<?>
+                public static loadClass(codebase: java.net.URL, name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Loads a class from a codebase URL path.
                  * <p>This method delegates to the
@@ -125,7 +125,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                loadClass(codebase: string, name: string): java.lang.Class<?>
+                public static loadClass(codebase: java.lang.String | string, name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Loads a class from a codebase URL path, optionally using the
                  * supplied loader.
@@ -156,7 +156,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                loadClass(codebase: string, name: string, defaultLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public static loadClass(codebase: java.lang.String | string, name: java.lang.String | string, defaultLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Loads a dynamic proxy class (see {@link java.lang.reflect.Proxy})
                  * that implements a set of interfaces with the given names
@@ -189,7 +189,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                loadProxyClass(codebase: string, interfaces: string[], defaultLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public static loadProxyClass(codebase: java.lang.String | string, interfaces: java.lang.String[] | string[], defaultLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Returns a class loader that loads classes from the given codebase
                  * URL path.
@@ -221,7 +221,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getClassLoader(codebase: string): java.lang.ClassLoader
+                public static getClassLoader(codebase: java.lang.String | string): java.lang.ClassLoader
                 /**
                  * Returns the annotation string (representing a location for
                  * the class definition) that RMI will use to annotate the class
@@ -236,7 +236,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getClassAnnotation(cl: java.lang.Class<any>): java.lang.String
+                public static getClassAnnotation(cl: java.lang.Class<any>): string
                 /**
                  * Returns the canonical instance of the default provider
                  * for the service provider interface {@link RMIClassLoaderSpi}.
@@ -414,7 +414,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getDefaultProviderInstance(): java.rmi.server.RMIClassLoaderSpi
+                public static getDefaultProviderInstance(): java.rmi.server.RMIClassLoaderSpi
                 /**
                  * Returns the security context of the given class loader.
                  * @param loader a class loader from which to get the security context
@@ -424,7 +424,7 @@ declare namespace java {
                  * @see java.lang.SecurityManager#getSecurityContext()
                  */
                 // @ts-ignore
-                getSecurityContext(loader: java.lang.ClassLoader): java.lang.Object
+                public static getSecurityContext(loader: java.lang.ClassLoader): any
             }
         }
     }

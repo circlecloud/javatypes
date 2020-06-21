@@ -16,21 +16,21 @@ declare namespace org {
                      * @param msg the detail message (used as exception message as-is)
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Create a new BeanDefinitionStoreException.
                      * @param msg the detail message (used as exception message as-is)
                      * @param cause the root cause (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Create a new BeanDefinitionStoreException.
                      * @param resourceDescription description of the resource that the bean definition came from
                      * @param msg the detail message (used as exception message as-is)
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, msg: string)
+                    constructor(resourceDescription: java.lang.String | string, msg: java.lang.String | string)
                     /**
                      * Create a new BeanDefinitionStoreException.
                      * @param resourceDescription description of the resource that the bean definition came from
@@ -38,7 +38,7 @@ declare namespace org {
                      * @param cause the root cause (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, msg: string, cause: Error)
+                    constructor(resourceDescription: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Create a new BeanDefinitionStoreException.
                      * @param resourceDescription description of the resource that the bean definition came from
@@ -47,7 +47,7 @@ declare namespace org {
                      *  the resource and the name of the bean)
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, msg: string)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, msg: java.lang.String | string)
                     /**
                      * Create a new BeanDefinitionStoreException.
                      * @param resourceDescription description of the resource that the bean definition came from
@@ -57,17 +57,17 @@ declare namespace org {
                      * @param cause the root cause (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, msg: string, cause: Error)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Return the description of the resource that the bean definition came from, if available.
                      */
                     // @ts-ignore
-                    getResourceDescription(): java.lang.String
+                    public getResourceDescription(): string
                     /**
                      * Return the name of the bean, if available.
                      */
                     // @ts-ignore
-                    getBeanName(): java.lang.String
+                    public getBeanName(): string
                 }
             }
         }

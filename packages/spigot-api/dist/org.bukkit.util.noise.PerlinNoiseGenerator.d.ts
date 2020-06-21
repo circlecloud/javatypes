@@ -30,7 +30,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(rand: java.util.Random)
                     // @ts-ignore
-                    readonly grad3: number /*int*/[][]
+                    static readonly grad3: number /*int*/[][]
                     /**
                      * Computes and returns the 1D unseeded perlin noise for the given
                      * coordinates in 1D space
@@ -38,7 +38,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/): double
+                    public static getNoise(x: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 2D unseeded perlin noise for the given
                      * coordinates in 2D space
@@ -47,7 +47,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/, y: number /*double*/): double
+                    public static getNoise(x: number /*double*/, y: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 3D unseeded perlin noise for the given
                      * coordinates in 3D space
@@ -57,15 +57,15 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/, y: number /*double*/, z: number /*double*/): double
+                    public static getNoise(x: number /*double*/, y: number /*double*/, z: number /*double*/): number /*double*/
                     /**
                      * Gets the singleton unseeded instance of this generator
                      * @return Singleton
                      */
                     // @ts-ignore
-                    getInstance(): org.bukkit.util.noise.PerlinNoiseGenerator
+                    public static getInstance(): org.bukkit.util.noise.PerlinNoiseGenerator
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 1D coordinates using the specified number of
                      * octaves and parameters
@@ -76,7 +76,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public static getNoise(x: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 2D coordinates using the specified number of
                      * octaves and parameters
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/, y: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public static getNoise(x: number /*double*/, y: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -101,7 +101,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/, y: number /*double*/, z: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public static getNoise(x: number /*double*/, y: number /*double*/, z: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                 }
             }
         }

@@ -21,7 +21,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class JMXConnectorServer extends javax.management.NotificationBroadcasterSupport implements javax.management.remote.JMXConnectorServerMBean, javax.management.MBeanRegistration, javax.management.remote.JMXAddressable {
+            abstract class JMXConnectorServer extends javax.management.NotificationBroadcasterSupport implements javax.management.remote.JMXConnectorServerMBean, javax.management.MBeanRegistration, javax.management.remote.JMXAddressable {
                 /**
                  * <p>Constructs a connector server that will be registered as an
                  * MBean in the MBean server it is attached to.  This constructor
@@ -49,7 +49,7 @@ declare namespace javax {
                  * JMXAuthenticator}.</p>
                  */
                 // @ts-ignore
-                readonly AUTHENTICATOR: string
+                public static readonly AUTHENTICATOR: java.lang.String | string
                 /**
                  * <p>Returns the MBean server that this connector server is
                  * attached to.</p>
@@ -57,11 +57,11 @@ declare namespace javax {
                  *  to, or null if it is not yet attached to an MBean server.
                  */
                 // @ts-ignore
-                getMBeanServer(): javax.management.MBeanServer
+                public getMBeanServer(): javax.management.MBeanServer
                 // @ts-ignore
-                setMBeanServerForwarder(mbsf: javax.management.remote.MBeanServerForwarder): void
+                public setMBeanServerForwarder(mbsf: javax.management.remote.MBeanServerForwarder): void
                 // @ts-ignore
-                getConnectionIds(): java.lang.String[]
+                public getConnectionIds(): string[]
                 /**
                  * <p>Returns a client stub for this connector server.  A client
                  * stub is a serializable object whose {@link
@@ -96,7 +96,7 @@ declare namespace javax {
                  *  stub cannot be created.
                  */
                 // @ts-ignore
-                toJMXConnector(env: java.util.Map<java.lang.String, any>): javax.management.remote.JMXConnector
+                public toJMXConnector(env: java.util.Map<java.lang.String | string, any>): javax.management.remote.JMXConnector
                 /**
                  * <p>Returns an array indicating the notifications that this MBean
                  * sends. The implementation in <code>JMXConnectorServer</code>
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @return the array of possible notifications.
                  */
                 // @ts-ignore
-                getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+                public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
                 /**
                  * <p>Called by a subclass when a new client connection is opened.
                  * Adds <code>connectionId</code> to the list returned by {@link
@@ -128,7 +128,7 @@ declare namespace javax {
                  *  null.
                  */
                 // @ts-ignore
-                connectionOpened(connectionId: string, message: string, userData: any): void
+                connectionOpened(connectionId: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any): void
                 /**
                  * <p>Called by a subclass when a client connection is closed
                  * normally.  Removes <code>connectionId</code> from the list returned
@@ -146,7 +146,7 @@ declare namespace javax {
                  *  is null.
                  */
                 // @ts-ignore
-                connectionClosed(connectionId: string, message: string, userData: any): void
+                connectionClosed(connectionId: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any): void
                 /**
                  * <p>Called by a subclass when a client connection fails.
                  * Removes <code>connectionId</code> from the list returned by
@@ -164,7 +164,7 @@ declare namespace javax {
                  *  null.
                  */
                 // @ts-ignore
-                connectionFailed(connectionId: string, message: string, userData: any): void
+                connectionFailed(connectionId: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any): void
                 /**
                  * <p>Called by an MBean server when this connector server is
                  * registered in that MBean server.  This connector server becomes
@@ -182,9 +182,9 @@ declare namespace javax {
                  *  <code>name</code> is null.
                  */
                 // @ts-ignore
-                preRegister(mbs: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+                public preRegister(mbs: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
                 // @ts-ignore
-                postRegister(registrationDone: java.lang.Boolean): void
+                public postRegister(registrationDone: java.lang.Boolean): void
                 /**
                  * <p>Called by an MBean server when this connector server is
                  * unregistered from that MBean server.  If this connector server
@@ -198,9 +198,9 @@ declare namespace javax {
                  * @exception IOException if thrown by the {#link #stop stop} method.
                  */
                 // @ts-ignore
-                preDeregister(): void
+                public preDeregister(): void
                 // @ts-ignore
-                postDeregister(): void
+                public postDeregister(): void
             }
         }
     }

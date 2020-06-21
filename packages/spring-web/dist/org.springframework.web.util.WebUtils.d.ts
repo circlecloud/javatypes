@@ -10,7 +10,7 @@ declare namespace org {
                  * @author Sebastien Deleuze
                  */
                 // @ts-ignore
-                class WebUtils extends java.lang.Object {
+                abstract class WebUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -19,70 +19,70 @@ declare namespace org {
                      * originating request. Its own request URI is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly INCLUDE_REQUEST_URI_ATTRIBUTE: string
+                    public static readonly INCLUDE_REQUEST_URI_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for include context path.
                      * <p>If included via a {@code RequestDispatcher}, the current resource will see the
                      * originating context path. Its own context path is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly INCLUDE_CONTEXT_PATH_ATTRIBUTE: string
+                    public static readonly INCLUDE_CONTEXT_PATH_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for include servlet path.
                      * <p>If included via a {@code RequestDispatcher}, the current resource will see the
                      * originating servlet path. Its own servlet path is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly INCLUDE_SERVLET_PATH_ATTRIBUTE: string
+                    public static readonly INCLUDE_SERVLET_PATH_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for include path info.
                      * <p>If included via a {@code RequestDispatcher}, the current resource will see the
                      * originating path info. Its own path info is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly INCLUDE_PATH_INFO_ATTRIBUTE: string
+                    public static readonly INCLUDE_PATH_INFO_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for include query string.
                      * <p>If included via a {@code RequestDispatcher}, the current resource will see the
                      * originating query string. Its own query string is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly INCLUDE_QUERY_STRING_ATTRIBUTE: string
+                    public static readonly INCLUDE_QUERY_STRING_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.4+ spec request attribute for forward request URI.
                      * <p>If forwarded to via a RequestDispatcher, the current resource will see its
                      * own request URI. The originating request URI is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly FORWARD_REQUEST_URI_ATTRIBUTE: string
+                    public static readonly FORWARD_REQUEST_URI_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.4+ spec request attribute for forward context path.
                      * <p>If forwarded to via a RequestDispatcher, the current resource will see its
                      * own context path. The originating context path is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly FORWARD_CONTEXT_PATH_ATTRIBUTE: string
+                    public static readonly FORWARD_CONTEXT_PATH_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.4+ spec request attribute for forward servlet path.
                      * <p>If forwarded to via a RequestDispatcher, the current resource will see its
                      * own servlet path. The originating servlet path is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly FORWARD_SERVLET_PATH_ATTRIBUTE: string
+                    public static readonly FORWARD_SERVLET_PATH_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.4+ spec request attribute for forward path info.
                      * <p>If forwarded to via a RequestDispatcher, the current resource will see its
                      * own path ingo. The originating path info is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly FORWARD_PATH_INFO_ATTRIBUTE: string
+                    public static readonly FORWARD_PATH_INFO_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.4+ spec request attribute for forward query string.
                      * <p>If forwarded to via a RequestDispatcher, the current resource will see its
                      * own query string. The originating query string is exposed as a request attribute.
                      */
                     // @ts-ignore
-                    readonly FORWARD_QUERY_STRING_ATTRIBUTE: string
+                    public static readonly FORWARD_QUERY_STRING_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for error page status code.
                      * <p>To be exposed to JSPs that are marked as error pages, when forwarding
@@ -90,7 +90,7 @@ declare namespace org {
                      * resolution mechanism.
                      */
                     // @ts-ignore
-                    readonly ERROR_STATUS_CODE_ATTRIBUTE: string
+                    public static readonly ERROR_STATUS_CODE_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for error page exception type.
                      * <p>To be exposed to JSPs that are marked as error pages, when forwarding
@@ -98,7 +98,7 @@ declare namespace org {
                      * resolution mechanism.
                      */
                     // @ts-ignore
-                    readonly ERROR_EXCEPTION_TYPE_ATTRIBUTE: string
+                    public static readonly ERROR_EXCEPTION_TYPE_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for error page message.
                      * <p>To be exposed to JSPs that are marked as error pages, when forwarding
@@ -106,7 +106,7 @@ declare namespace org {
                      * resolution mechanism.
                      */
                     // @ts-ignore
-                    readonly ERROR_MESSAGE_ATTRIBUTE: string
+                    public static readonly ERROR_MESSAGE_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for error page exception.
                      * <p>To be exposed to JSPs that are marked as error pages, when forwarding
@@ -114,7 +114,7 @@ declare namespace org {
                      * resolution mechanism.
                      */
                     // @ts-ignore
-                    readonly ERROR_EXCEPTION_ATTRIBUTE: string
+                    public static readonly ERROR_EXCEPTION_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for error page request URI.
                      * <p>To be exposed to JSPs that are marked as error pages, when forwarding
@@ -122,7 +122,7 @@ declare namespace org {
                      * resolution mechanism.
                      */
                     // @ts-ignore
-                    readonly ERROR_REQUEST_URI_ATTRIBUTE: string
+                    public static readonly ERROR_REQUEST_URI_ATTRIBUTE: java.lang.String | string
                     /**
                      * Standard Servlet 2.3+ spec request attribute for error page servlet name.
                      * <p>To be exposed to JSPs that are marked as error pages, when forwarding
@@ -130,59 +130,59 @@ declare namespace org {
                      * resolution mechanism.
                      */
                     // @ts-ignore
-                    readonly ERROR_SERVLET_NAME_ATTRIBUTE: string
+                    public static readonly ERROR_SERVLET_NAME_ATTRIBUTE: java.lang.String | string
                     /**
                      * Prefix of the charset clause in a content type String: ";charset=".
                      */
                     // @ts-ignore
-                    readonly CONTENT_TYPE_CHARSET_PREFIX: string
+                    public static readonly CONTENT_TYPE_CHARSET_PREFIX: java.lang.String | string
                     /**
                      * Default character encoding to use when {@code request.getCharacterEncoding}
                      * returns {@code null}, according to the Servlet spec.
                      * @see ServletRequest#getCharacterEncoding
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CHARACTER_ENCODING: string
+                    public static readonly DEFAULT_CHARACTER_ENCODING: java.lang.String | string
                     /**
                      * Standard Servlet spec context attribute that specifies a temporary
                      * directory for the current web application, of type {@code java.io.File}.
                      */
                     // @ts-ignore
-                    readonly TEMP_DIR_CONTEXT_ATTRIBUTE: string
+                    public static readonly TEMP_DIR_CONTEXT_ATTRIBUTE: java.lang.String | string
                     /**
                      * HTML escape parameter at the servlet context level
                      * (i.e. a context-param in {@code web.xml}): "defaultHtmlEscape".
                      */
                     // @ts-ignore
-                    readonly HTML_ESCAPE_CONTEXT_PARAM: string
+                    public static readonly HTML_ESCAPE_CONTEXT_PARAM: java.lang.String | string
                     /**
                      * Use of response encoding for HTML escaping parameter at the servlet context level
                      * (i.e. a context-param in {@code web.xml}): "responseEncodedHtmlEscape".
                      * @since 4.1.2
                      */
                     // @ts-ignore
-                    readonly RESPONSE_ENCODED_HTML_ESCAPE_CONTEXT_PARAM: string
+                    public static readonly RESPONSE_ENCODED_HTML_ESCAPE_CONTEXT_PARAM: java.lang.String | string
                     /**
                      * Web app root key parameter at the servlet context level
                      * (i.e. a context-param in {@code web.xml}): "webAppRootKey".
                      */
                     // @ts-ignore
-                    readonly WEB_APP_ROOT_KEY_PARAM: string
+                    public static readonly WEB_APP_ROOT_KEY_PARAM: java.lang.String | string
                     /**
                      * Default web app root key: "webapp.root".
                      */
                     // @ts-ignore
-                    readonly DEFAULT_WEB_APP_ROOT_KEY: string
+                    public static readonly DEFAULT_WEB_APP_ROOT_KEY: java.lang.String | string
                     /**
                      * Name suffixes in case of image buttons.
                      */
                     // @ts-ignore
-                    readonly SUBMIT_IMAGE_SUFFIXES: string[]
+                    public static readonly SUBMIT_IMAGE_SUFFIXES: java.lang.String[] | string[]
                     /**
                      * Key for the mutex session attribute.
                      */
                     // @ts-ignore
-                    readonly SESSION_MUTEX_ATTRIBUTE: string
+                    public static readonly SESSION_MUTEX_ATTRIBUTE: java.lang.String | string
                     /**
                      * Set a system property to the web application root directory.
                      * The key of the system property can be defined with the "webAppRootKey"
@@ -197,7 +197,7 @@ declare namespace org {
                      * @see WebAppRootListener
                      */
                     // @ts-ignore
-                    setWebAppRootSystemProperty(servletContext: ServletContext): void
+                    public static setWebAppRootSystemProperty(servletContext: ServletContext): void
                     /**
                      * Remove the system property that points to the web app root directory.
                      * To be called on shutdown of the web application.
@@ -205,7 +205,7 @@ declare namespace org {
                      * @see #setWebAppRootSystemProperty
                      */
                     // @ts-ignore
-                    removeWebAppRootSystemProperty(servletContext: ServletContext): void
+                    public static removeWebAppRootSystemProperty(servletContext: ServletContext): void
                     /**
                      * Return whether default HTML escaping is enabled for the web application,
                      * i.e. the value of the "defaultHtmlEscape" context-param in {@code web.xml}
@@ -218,7 +218,7 @@ declare namespace org {
                      *  ({#code null} = no explicit default)
                      */
                     // @ts-ignore
-                    getDefaultHtmlEscape(servletContext: ServletContext): java.lang.Boolean
+                    public static getDefaultHtmlEscape(servletContext: ServletContext): java.lang.Boolean
                     /**
                      * Return whether response encoding should be used when HTML escaping characters,
                      * thus only escaping XML markup significant characters with UTF-* encodings.
@@ -234,7 +234,7 @@ declare namespace org {
                      * @since 4.1.2
                      */
                     // @ts-ignore
-                    getResponseEncodedHtmlEscape(servletContext: ServletContext): java.lang.Boolean
+                    public static getResponseEncodedHtmlEscape(servletContext: ServletContext): java.lang.Boolean
                     /**
                      * Return the temporary directory for the current web application,
                      * as provided by the servlet container.
@@ -242,7 +242,7 @@ declare namespace org {
                      * @return the File representing the temporary directory
                      */
                     // @ts-ignore
-                    getTempDir(servletContext: ServletContext): java.io.File
+                    public static getTempDir(servletContext: ServletContext): java.io.File
                     /**
                      * Return the real path of the given path within the web application,
                      * as provided by the servlet container.
@@ -257,14 +257,14 @@ declare namespace org {
                      * @see javax.servlet.ServletContext#getRealPath
                      */
                     // @ts-ignore
-                    getRealPath(servletContext: ServletContext, path: string): java.lang.String
+                    public static getRealPath(servletContext: ServletContext, path: java.lang.String | string): string
                     /**
                      * Determine the session id of the given request, if any.
                      * @param request current HTTP request
                      * @return the session id, or {#code null} if none
                      */
                     // @ts-ignore
-                    getSessionId(request: HttpServletRequest): java.lang.String
+                    public static getSessionId(request: HttpServletRequest): string
                     /**
                      * Check the given request for a session attribute of the given name.
                      * Returns null if there is no session or if the session has no such attribute.
@@ -274,7 +274,7 @@ declare namespace org {
                      * @return the value of the session attribute, or {#code null} if not found
                      */
                     // @ts-ignore
-                    getSessionAttribute(request: HttpServletRequest, name: string): java.lang.Object
+                    public static getSessionAttribute(request: HttpServletRequest, name: java.lang.String | string): any
                     /**
                      * Check the given request for a session attribute of the given name.
                      * Throws an exception if there is no session or if the session has no such
@@ -285,7 +285,7 @@ declare namespace org {
                      * @throws IllegalStateException if the session attribute could not be found
                      */
                     // @ts-ignore
-                    getRequiredSessionAttribute(request: HttpServletRequest, name: string): java.lang.Object
+                    public static getRequiredSessionAttribute(request: HttpServletRequest, name: java.lang.String | string): any
                     /**
                      * Set the session attribute with the given name to the given value.
                      * Removes the session attribute if value is null, if a session existed at all.
@@ -295,7 +295,7 @@ declare namespace org {
                      * @param value the value of the session attribute
                      */
                     // @ts-ignore
-                    setSessionAttribute(request: HttpServletRequest, name: string, value: any): void
+                    public static setSessionAttribute(request: HttpServletRequest, name: java.lang.String | string, value: java.lang.Object | any): void
                     /**
                      * Return the best available mutex for the given session:
                      * that is, an object to synchronize on for the given session.
@@ -317,7 +317,7 @@ declare namespace org {
                      * @see HttpSessionMutexListener
                      */
                     // @ts-ignore
-                    getSessionMutex(session: HttpSession): java.lang.Object
+                    public static getSessionMutex(session: HttpSession): any
                     /**
                      * Return an appropriate request object of the specified type, if available,
                      * unwrapping the given request as far as necessary.
@@ -327,7 +327,7 @@ declare namespace org {
                      *  of that type is available
                      */
                     // @ts-ignore
-                    getNativeRequest<T>(request: ServletRequest, requiredType: java.lang.Class<T>): T
+                    public static getNativeRequest<T>(request: ServletRequest, requiredType: java.lang.Class<T>): T
                     /**
                      * Return an appropriate response object of the specified type, if available,
                      * unwrapping the given response as far as necessary.
@@ -337,7 +337,7 @@ declare namespace org {
                      *  of that type is available
                      */
                     // @ts-ignore
-                    getNativeResponse<T>(response: ServletResponse, requiredType: java.lang.Class<T>): T
+                    public static getNativeResponse<T>(response: ServletResponse, requiredType: java.lang.Class<T>): T
                     /**
                      * Determine whether the given request is an include request,
                      * that is, not a top-level HTTP request coming in from the outside.
@@ -348,7 +348,7 @@ declare namespace org {
                      * @return whether the given request is an include request
                      */
                     // @ts-ignore
-                    isIncludeRequest(request: ServletRequest): boolean
+                    public static isIncludeRequest(request: ServletRequest): boolean
                     /**
                      * Expose the Servlet spec's error attributes as {@link javax.servlet.http.HttpServletRequest}
                      * attributes under the keys defined in the Servlet 2.3 specification, for error pages that
@@ -368,7 +368,7 @@ declare namespace org {
                      * @param servletName the name of the offending servlet
                      */
                     // @ts-ignore
-                    exposeErrorRequestAttributes(request: HttpServletRequest, ex: Error, servletName: string): void
+                    public static exposeErrorRequestAttributes(request: HttpServletRequest, ex: java.lang.Throwable | Error, servletName: java.lang.String | string): void
                     /**
                      * Clear the Servlet spec's error attributes as {@link javax.servlet.http.HttpServletRequest}
                      * attributes under the keys defined in the Servlet 2.3 specification:
@@ -381,7 +381,7 @@ declare namespace org {
                      * @param request current servlet request
                      */
                     // @ts-ignore
-                    clearErrorRequestAttributes(request: HttpServletRequest): void
+                    public static clearErrorRequestAttributes(request: HttpServletRequest): void
                     /**
                      * Retrieve the first cookie with the given name. Note that multiple
                      * cookies can have the same name but different paths or domains.
@@ -390,7 +390,7 @@ declare namespace org {
                      * @return the first cookie with the given name, or {#code null} if none is found
                      */
                     // @ts-ignore
-                    getCookie(request: HttpServletRequest, name: string): Cookie
+                    public static getCookie(request: HttpServletRequest, name: java.lang.String | string): Cookie
                     /**
                      * Check if a specific input type="submit" parameter was sent in the request,
                      * either via a button (directly with name) or via an image (name + ".x" or
@@ -401,7 +401,7 @@ declare namespace org {
                      * @see #SUBMIT_IMAGE_SUFFIXES
                      */
                     // @ts-ignore
-                    hasSubmitParameter(request: ServletRequest, name: string): boolean
+                    public static hasSubmitParameter(request: ServletRequest, name: java.lang.String | string): boolean
                     /**
                      * Obtain a named parameter from the given request parameters.
                      * <p>See {@link #findParameterValue(java.util.Map, String)}
@@ -412,7 +412,7 @@ declare namespace org {
                      *  if the parameter does not exist in given request
                      */
                     // @ts-ignore
-                    findParameterValue(request: ServletRequest, name: string): java.lang.String
+                    public static findParameterValue(request: ServletRequest, name: java.lang.String | string): string
                     /**
                      * Return a map containing all parameters with the given prefix.
                      * Maps single values to String and multiple values to String array.
@@ -428,7 +428,7 @@ declare namespace org {
                      * @see javax.servlet.ServletRequest#getParameterMap
                      */
                     // @ts-ignore
-                    getParametersStartingWith(request: ServletRequest, prefix: string): java.util.Map<java.lang.String, java.lang.Object>
+                    public static getParametersStartingWith(request: ServletRequest, prefix: java.lang.String | string): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Parse the given string with matrix variables. An example string would look
                      * like this {@code "q1=a;q1=b;q2=a,b,c"}. The resulting map would contain
@@ -439,7 +439,7 @@ declare namespace org {
                      * @since 3.2
                      */
                     // @ts-ignore
-                    parseMatrixVariables(matrixVariables: string): <any>
+                    public static parseMatrixVariables(matrixVariables: java.lang.String | string): object
                     /**
                      * Check the given request origin against a list of allowed origins.
                      * A list containing "*" means that all origins are allowed.
@@ -453,7 +453,7 @@ declare namespace org {
                      * @see <a href="https://tools.ietf.org/html/rfc6454">RFC 6454: The Web Origin Concept</a>
                      */
                     // @ts-ignore
-                    isValidOrigin(request: org.springframework.http.HttpRequest, allowedOrigins: Array<java.lang.String>): boolean
+                    public static isValidOrigin(request: org.springframework.http.HttpRequest, allowedOrigins: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>): boolean
                     /**
                      * Check if the request is a same-origin one, based on {@code Origin}, {@code Host},
                      * {@code Forwarded}, {@code X-Forwarded-Proto}, {@code X-Forwarded-Host} and
@@ -467,7 +467,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    isSameOrigin(request: org.springframework.http.HttpRequest): boolean
+                    public static isSameOrigin(request: org.springframework.http.HttpRequest): boolean
                 }
             }
         }

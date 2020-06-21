@@ -27,14 +27,14 @@ declare namespace org {
                          * set), if you want your code to look especially fancy.
                          */
                         // @ts-ignore
-                        
+                        readonly GLOBAL_CONTEXT: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>
                         /**
                          * Return all permissions associated with this data object.
                          * @return an immutable copy of the mappings between contexts and lists of
                          *          permissions containing every permission registered
                          */
                         // @ts-ignore
-                        getAllPermissions(): java.util.Map<java.util.Set<org.spongepowered.api.service.context.Context>, java.util.Map<java.lang.String, java.lang.Boolean>>
+                        getAllPermissions(): java.util.Map<java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, java.util.Map<java.lang.String | string, java.lang.Boolean>>
                         /**
                          * Returns the list of permissions set for the given context.
                          * <p>This list is immutable and is not a live view. If no permissions have
@@ -43,7 +43,7 @@ declare namespace org {
                          * @return Any permissions set
                          */
                         // @ts-ignore
-                        getPermissions(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.Map<java.lang.String, java.lang.Boolean>
+                        getPermissions(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.Map<java.lang.String | string, java.lang.Boolean>
                         /**
                          * Sets a permission to a given value.
                          * <p>Setting value as {@link Tristate#UNDEFINED} unsets the permission.</p>
@@ -56,7 +56,7 @@ declare namespace org {
                          * @return Whether the operation was successful
                          */
                         // @ts-ignore
-                        setPermission(contexts: Array<org.spongepowered.api.service.context.Context>, permission: string, value: org.spongepowered.api.util.Tristate): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        setPermission(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, permission: java.lang.String | string, value: org.spongepowered.api.util.Tristate): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Clear all permissions set in any context.
                          * @return Whether any change occurred
@@ -71,7 +71,7 @@ declare namespace org {
                          * @return Whether any change occurred
                          */
                         // @ts-ignore
-                        clearPermissions(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        clearPermissions(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Return all registered parent subjects for all contexts.
                          * <p>The returned map is immutable and not a live view. The results of this
@@ -80,7 +80,7 @@ declare namespace org {
                          * @return All registered parents and the context they are registered in
                          */
                         // @ts-ignore
-                        getAllParents(): java.util.Map<java.util.Set<org.spongepowered.api.service.context.Context>, java.util.List<org.spongepowered.api.service.permission.SubjectReference>>
+                        getAllParents(): java.util.Map<java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, java.util.List<org.spongepowered.api.service.permission.SubjectReference> | Array<org.spongepowered.api.service.permission.SubjectReference>>
                         /**
                          * Return all registered parent subjects for a given context.
                          * <p>The returned map is immutable and not a live view. The results of this
@@ -90,7 +90,7 @@ declare namespace org {
                          * @return names of parents valid in the given context
                          */
                         // @ts-ignore
-                        getParents(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.List<org.spongepowered.api.service.permission.SubjectReference>
+                        getParents(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): Array<org.spongepowered.api.service.permission.SubjectReference>
                         /**
                          * Adds a parent in a particular context combination.
                          * <p>Passing an empty context combination means the parent is added in the
@@ -100,7 +100,7 @@ declare namespace org {
                          * @return Whether the operation was successful
                          */
                         // @ts-ignore
-                        addParent(contexts: Array<org.spongepowered.api.service.context.Context>, parent: org.spongepowered.api.service.permission.SubjectReference): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        addParent(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, parent: org.spongepowered.api.service.permission.SubjectReference): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Removes a parent in a particular context combination.
                          * <p>Passing an empty context combination means the parent is removed in
@@ -110,7 +110,7 @@ declare namespace org {
                          * @return Whether the operation was successful
                          */
                         // @ts-ignore
-                        removeParent(contexts: Array<org.spongepowered.api.service.context.Context>, parent: org.spongepowered.api.service.permission.SubjectReference): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        removeParent(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, parent: org.spongepowered.api.service.permission.SubjectReference): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Remove all parents in any context combination.
                          * @return Whether any change occurred
@@ -125,20 +125,20 @@ declare namespace org {
                          * @return Whether any change occurred
                          */
                         // @ts-ignore
-                        clearParents(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        clearParents(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Return all options for all context combinations currently registered.
                          * @return An immutable snapshot of all options data
                          */
                         // @ts-ignore
-                        getAllOptions(): java.util.Map<java.util.Set<org.spongepowered.api.service.context.Context>, java.util.Map<java.lang.String, java.lang.String>>
+                        getAllOptions(): java.util.Map<java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, java.util.Map<java.lang.String | string, java.lang.String | string>>
                         /**
                          * Gets options for a specific context combination.
                          * @param contexts The context combination to get options for
                          * @return All available options, returning an empty map if none are present
                          */
                         // @ts-ignore
-                        getOptions(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.Map<java.lang.String, java.lang.String>
+                        getOptions(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.Map<java.lang.String | string, java.lang.String | string>
                         /**
                          * Sets a specific option to a value.
                          * <p>Passing a null value will unset the option.</p>
@@ -148,7 +148,7 @@ declare namespace org {
                          * @return Whether the operation was successful
                          */
                         // @ts-ignore
-                        setOption(contexts: Array<org.spongepowered.api.service.context.Context>, key: string, value: string): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        setOption(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, key: java.lang.String | string, value: java.lang.String | string): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Clear all options.
                          * @return Whether the operation was successful
@@ -163,7 +163,7 @@ declare namespace org {
                          * @return Whether the operation was successful (any options were removed)
                          */
                         // @ts-ignore
-                        clearOptions(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        clearOptions(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                     }
                 }
             }

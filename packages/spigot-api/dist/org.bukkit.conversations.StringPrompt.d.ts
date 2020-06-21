@@ -6,7 +6,7 @@ declare namespace org {
              * string from the user.
              */
             // @ts-ignore
-            class StringPrompt extends java.lang.Object implements org.bukkit.conversations.Prompt {
+            abstract class StringPrompt extends java.lang.Object implements org.bukkit.conversations.Prompt {
                 // @ts-ignore
                 constructor()
                 /**
@@ -15,7 +15,7 @@ declare namespace org {
                  * @return True.
                  */
                 // @ts-ignore
-                blocksForInput(context: org.bukkit.conversations.ConversationContext): boolean
+                public blocksForInput(context: org.bukkit.conversations.ConversationContext): boolean
             }
         }
     }

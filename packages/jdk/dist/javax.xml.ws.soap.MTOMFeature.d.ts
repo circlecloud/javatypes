@@ -61,7 +61,7 @@ declare namespace javax {
                      * Constant value identifying the MTOMFeature
                      */
                     // @ts-ignore
-                    readonly ID: string
+                    public static readonly ID: java.lang.String | string
                     /**
                      * Property for MTOM threshold value. This property serves as a hint when
                      * MTOM is enabled, binary data above this size in bytes SHOULD be sent
@@ -74,14 +74,14 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getID(): java.lang.String
+                    public getID(): string
                     /**
                      * Gets the threshold value used to determine when binary data
                      * should be sent as an attachment.
                      * @return the current threshold size in bytes
                      */
                     // @ts-ignore
-                    getThreshold(): int
+                    public getThreshold(): number /*int*/
                 }
             }
         }

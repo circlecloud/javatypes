@@ -16,7 +16,7 @@ declare namespace javax {
              * @param s The String to use in the message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Creates a <code>ScriptException</code> wrapping an <code>Exception</code> thrown by an underlying
              * interpreter.  Line and column numbers and filename are unspecified.
@@ -34,7 +34,7 @@ declare namespace javax {
              *  the <code>ScriptException</code> to be thrown.
              */
             // @ts-ignore
-            constructor(message: string, fileName: string, lineNumber: number /*int*/)
+            constructor(message: java.lang.String | string, fileName: java.lang.String | string, lineNumber: number /*int*/)
             /**
              * <code>ScriptException</code> constructor specifying message, filename, line number
              * and column number.
@@ -44,26 +44,26 @@ declare namespace javax {
              * @param columnNumber the column number.
              */
             // @ts-ignore
-            constructor(message: string, fileName: string, lineNumber: number /*int*/, columnNumber: number /*int*/)
+            constructor(message: java.lang.String | string, fileName: java.lang.String | string, lineNumber: number /*int*/, columnNumber: number /*int*/)
             /**
              * Returns a message containing the String passed to a constructor as well as
              * line and column numbers and filename if any of these are known.
              * @return The error message.
              */
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
             /**
              * Get the line number on which an error occurred.
              * @return The line number.  Returns -1 if a line number is unavailable.
              */
             // @ts-ignore
-            getLineNumber(): int
+            getLineNumber(): number /*int*/
             /**
              * Get the column number on which an error occurred.
              * @return The column number.  Returns -1 if a column number is unavailable.
              */
             // @ts-ignore
-            getColumnNumber(): int
+            getColumnNumber(): number /*int*/
             /**
              * Get the source of the script causing the error.
              * @return The file name of the script or some other string describing the script
@@ -71,7 +71,7 @@ declare namespace javax {
              *  if a description of the source is unavailable.
              */
             // @ts-ignore
-            getFileName(): java.lang.String
+            getFileName(): string
         }
     }
 }

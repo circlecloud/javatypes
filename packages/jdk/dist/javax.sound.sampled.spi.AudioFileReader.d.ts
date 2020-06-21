@@ -10,7 +10,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class AudioFileReader extends java.lang.Object {
+                abstract class AudioFileReader extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -32,7 +32,7 @@ declare namespace javax {
                      * @see InputStream#mark
                      */
                     // @ts-ignore
-                    abstract getAudioFileFormat(stream: java.io.InputStream): javax.sound.sampled.AudioFileFormat
+                    public abstract getAudioFileFormat(stream: java.io.InputStream): javax.sound.sampled.AudioFileFormat
                     /**
                      * Obtains the audio file format of the URL provided.  The URL must
                      * point to valid audio file data.
@@ -44,7 +44,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getAudioFileFormat(url: java.net.URL): javax.sound.sampled.AudioFileFormat
+                    public abstract getAudioFileFormat(url: java.net.URL): javax.sound.sampled.AudioFileFormat
                     /**
                      * Obtains the audio file format of the <code>File</code> provided.  The <code>File</code> must
                      * point to valid audio file data.
@@ -56,7 +56,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getAudioFileFormat(file: java.io.File): javax.sound.sampled.AudioFileFormat
+                    public abstract getAudioFileFormat(file: java.io.File): javax.sound.sampled.AudioFileFormat
                     /**
                      * Obtains an audio input stream from the input stream provided.  The stream must
                      * point to valid audio file data.  In general, audio file readers may
@@ -77,7 +77,7 @@ declare namespace javax {
                      * @see InputStream#mark
                      */
                     // @ts-ignore
-                    abstract getAudioInputStream(stream: java.io.InputStream): javax.sound.sampled.AudioInputStream
+                    public abstract getAudioInputStream(stream: java.io.InputStream): javax.sound.sampled.AudioInputStream
                     /**
                      * Obtains an audio input stream from the URL provided.  The URL must
                      * point to valid audio file data.
@@ -90,7 +90,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getAudioInputStream(url: java.net.URL): javax.sound.sampled.AudioInputStream
+                    public abstract getAudioInputStream(url: java.net.URL): javax.sound.sampled.AudioInputStream
                     /**
                      * Obtains an audio input stream from the <code>File</code> provided.  The <code>File</code> must
                      * point to valid audio file data.
@@ -103,7 +103,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getAudioInputStream(file: java.io.File): javax.sound.sampled.AudioInputStream
+                    public abstract getAudioInputStream(file: java.io.File): javax.sound.sampled.AudioInputStream
                 }
             }
         }

@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 4.2
                  */
                 // @ts-ignore
-                class CorsUtils extends java.lang.Object {
+                abstract class CorsUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -17,13 +17,13 @@ declare namespace org {
                      * header presence and ensuring that origins are different.
                      */
                     // @ts-ignore
-                    isCorsRequest(request: HttpServletRequest): boolean
+                    public static isCorsRequest(request: HttpServletRequest): boolean
                     /**
                      * Returns {@code true} if the request is a valid CORS pre-flight one by checking {code OPTIONS} method with
                      * {@code Origin} and {@code Access-Control-Request-Method} headers presence.
                      */
                     // @ts-ignore
-                    isPreFlightRequest(request: HttpServletRequest): boolean
+                    public static isPreFlightRequest(request: HttpServletRequest): boolean
                 }
             }
         }

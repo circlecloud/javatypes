@@ -14,7 +14,7 @@ declare namespace java {
              * the keyword {@code void}.
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Void>
+            public static readonly TYPE: java.lang.Class<java.lang.Void>
         }
     }
 }

@@ -37,58 +37,58 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*float*/
+                    public x: number /*float*/
                     /**
                      * The Y coordinate of this <code>Rectangle2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*float*/
+                    public y: number /*float*/
                     /**
                      * The width of this <code>Rectangle2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    width: number /*float*/
+                    public width: number /*float*/
                     /**
                      * The height of this <code>Rectangle2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    height: number /*float*/
+                    public height: number /*float*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getWidth(): double
+                    public getWidth(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getHeight(): double
+                    public getHeight(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     /**
                      * Sets the location and size of this <code>Rectangle2D</code>
                      * to the specified <code>float</code> values.
@@ -101,43 +101,43 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setRect(x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/): void
+                    public setRect(x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setRect(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                    public setRect(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setRect(r: java.awt.geom.Rectangle2D): void
+                    public setRect(r: java.awt.geom.Rectangle2D): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    outcode(x: number /*double*/, y: number /*double*/): int
+                    public outcode(x: number /*double*/, y: number /*double*/): number /*int*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    createIntersection(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
+                    public createIntersection(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    createUnion(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
+                    public createUnion(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
                     /**
                      * Returns the <code>String</code> representation of this
                      * <code>Rectangle2D</code>.
@@ -146,7 +146,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

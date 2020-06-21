@@ -7,7 +7,7 @@ declare namespace org {
                  * that is not simply expressed by its basic type.
                  */
                 // @ts-ignore
-                interface DataHolder extends org.spongepowered.api.data.DataSerializable, org.spongepowered.api.data.property.PropertyHolder, org.spongepowered.api.data.value.mutable.CompositeValueStore<org.spongepowered.api.data.DataHolder, org.spongepowered.api.data.manipulator.DataManipulator<?, ?>> {
+                interface DataHolder extends org.spongepowered.api.data.DataSerializable, org.spongepowered.api.data.property.PropertyHolder, org.spongepowered.api.data.value.mutable.CompositeValueStore<org.spongepowered.api.data.DataHolder, org.spongepowered.api.data.manipulator.DataManipulator<any, any>> {
                     /**
                      * Validates the container with known data required to set the raw data to
                      * this {@link DataHolder}. If the container is incomplete or contains

@@ -37,7 +37,7 @@ declare namespace java {
                  *           if {#code src} is not in valid Base64 scheme
                  */
                 // @ts-ignore
-                decode(src: number /*byte*/[]): byte[]
+                public decode(src: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Decodes a Base64 encoded String into a newly-allocated byte array
                  * using the {@link Base64} encoding scheme.
@@ -50,7 +50,7 @@ declare namespace java {
                  *           if {#code src} is not in valid Base64 scheme
                  */
                 // @ts-ignore
-                decode(src: string): byte[]
+                public decode(src: java.lang.String | string): number /*byte*/[]
                 /**
                  * Decodes all bytes from the input byte array using the {@link Base64}
                  * encoding scheme, writing the results into the given output byte array,
@@ -72,7 +72,7 @@ declare namespace java {
                  *           does not have enough space for decoding all input bytes.
                  */
                 // @ts-ignore
-                decode(src: number /*byte*/[], dst: number /*byte*/[]): int
+                public decode(src: number /*byte*/[], dst: number /*byte*/[]): number /*int*/
                 /**
                  * Decodes all bytes from the input byte buffer using the {@link Base64}
                  * encoding scheme, writing the results into a newly-allocated ByteBuffer.
@@ -90,7 +90,7 @@ declare namespace java {
                  *           if {#code src} is not in valid Base64 scheme.
                  */
                 // @ts-ignore
-                decode(buffer: java.nio.ByteBuffer): java.nio.ByteBuffer
+                public decode(buffer: java.nio.ByteBuffer): java.nio.ByteBuffer
                 /**
                  * Returns an input stream for decoding {@link Base64} encoded byte stream.
                  * <p> The {@code read}  methods of the returned {@code InputStream} will
@@ -103,7 +103,7 @@ declare namespace java {
                  *           byte stream
                  */
                 // @ts-ignore
-                wrap(jis: java.io.InputStream): java.io.InputStream
+                public wrap(jis: java.io.InputStream): java.io.InputStream
             }
         }
     }

@@ -71,7 +71,7 @@ declare namespace javax {
                  * Paints the matte border.
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitialize the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
@@ -79,32 +79,32 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns the insets of the border.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getBorderInsets(): java.awt.Insets
+                public getBorderInsets(): java.awt.Insets
                 /**
                  * Returns the color used for tiling the border or null
                  * if a tile icon is being used.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getMatteColor(): java.awt.Color
+                public getMatteColor(): java.awt.Color
                 /**
                  * Returns the icon used for tiling the border or null
                  * if a solid color is being used.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getTileIcon(): javax.swing.Icon
+                public getTileIcon(): javax.swing.Icon
                 /**
                  * Returns whether or not the border is opaque.
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
             }
         }
     }

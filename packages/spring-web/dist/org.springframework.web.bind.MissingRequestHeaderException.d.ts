@@ -18,19 +18,19 @@ declare namespace org {
                      * @param parameter the method parameter
                      */
                     // @ts-ignore
-                    constructor(headerName: string, parameter: MethodParameter)
+                    constructor(headerName: java.lang.String | string, parameter: MethodParameter)
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Return the expected name of the request header.
                      */
                     // @ts-ignore
-                    getHeaderName(): java.lang.String
+                    public getHeaderName(): string
                     /**
                      * Return the method parameter bound to the request header.
                      */
                     // @ts-ignore
-                    getParameter(): MethodParameter
+                    public getParameter(): MethodParameter
                 }
             }
         }

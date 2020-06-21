@@ -33,7 +33,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: number /*int*/[]): void
+            public static sort(a: number /*int*/[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -52,7 +52,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>Implementation note: The sorting algorithm is a Dual-Pivot Quicksort
@@ -63,7 +63,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: number /*long*/[]): void
+            public static sort(a: number /*long*/[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -82,7 +82,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>Implementation note: The sorting algorithm is a Dual-Pivot Quicksort
@@ -93,7 +93,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: number /*short*/[]): void
+            public static sort(a: number /*short*/[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -112,7 +112,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>Implementation note: The sorting algorithm is a Dual-Pivot Quicksort
@@ -123,7 +123,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: string[]): void
+            public static sort(a: string[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -142,7 +142,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>Implementation note: The sorting algorithm is a Dual-Pivot Quicksort
@@ -153,7 +153,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: number /*byte*/[]): void
+            public static sort(a: number /*byte*/[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -172,7 +172,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>The {@code <} relation does not provide a total order on all float
@@ -190,7 +190,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: number /*float*/[]): void
+            public static sort(a: number /*float*/[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -216,7 +216,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>The {@code <} relation does not provide a total order on all double
@@ -234,7 +234,7 @@ declare namespace java {
              * @param a the array to be sorted
              */
             // @ts-ignore
-            sort(a: number /*double*/[]): void
+            public static sort(a: number /*double*/[]): void
             /**
              * Sorts the specified range of the array into ascending order. The range
              * to be sorted extends from the index {@code fromIndex}, inclusive, to
@@ -260,7 +260,7 @@ declare namespace java {
              *      if {#code fromIndex < 0} or {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * @implNote The sorting algorithm is a parallel sort-merge that breaks the
@@ -277,7 +277,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*byte*/[]): void
+            public static parallelSort(a: number /*byte*/[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -302,7 +302,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * @implNote The sorting algorithm is a parallel sort-merge that breaks the
@@ -319,7 +319,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: string[]): void
+            public static parallelSort(a: string[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -344,7 +344,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * @implNote The sorting algorithm is a parallel sort-merge that breaks the
@@ -361,7 +361,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*short*/[]): void
+            public static parallelSort(a: number /*short*/[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -386,7 +386,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * @implNote The sorting algorithm is a parallel sort-merge that breaks the
@@ -403,7 +403,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*int*/[]): void
+            public static parallelSort(a: number /*int*/[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -428,7 +428,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * @implNote The sorting algorithm is a parallel sort-merge that breaks the
@@ -445,7 +445,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*long*/[]): void
+            public static parallelSort(a: number /*long*/[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -470,7 +470,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>The {@code <} relation does not provide a total order on all float
@@ -494,7 +494,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*float*/[]): void
+            public static parallelSort(a: number /*float*/[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -526,7 +526,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array into ascending numerical order.
              * <p>The {@code <} relation does not provide a total order on all double
@@ -550,7 +550,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*double*/[]): void
+            public static parallelSort(a: number /*double*/[]): void
             /**
              * Sorts the specified range of the array into ascending numerical order.
              * The range to be sorted extends from the index {@code fromIndex},
@@ -582,7 +582,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array of objects into ascending order, according
              * to the {@linkplain Comparable natural ordering} of its elements.
@@ -613,7 +613,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort<T extends java.lang.Comparable<? super T>>(a: T[]): void
+            public static parallelSort<T extends java.lang.Comparable>(a: T[]): void
             /**
              * Sorts the specified range of the specified array of objects into
              * ascending order, according to the
@@ -654,7 +654,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort<T extends java.lang.Comparable<? super T>>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static parallelSort<T extends java.lang.Comparable>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array of objects according to the order induced by
              * the specified comparator.  All elements in the array must be
@@ -685,7 +685,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort<T>(a: T[], cmp: java.util.Comparator<any super T>): void
+            public static parallelSort<T>(a: T[], cmp: java.util.Comparator<any>): void
             /**
              * Sorts the specified range of the specified array of objects according
              * to the order induced by the specified comparator.  The range to be
@@ -726,7 +726,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSort<T>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/, cmp: java.util.Comparator<any super T>): void
+            public static parallelSort<T>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/, cmp: java.util.Comparator<any>): void
             /**
              * Sorts the specified array of objects into ascending order, according
              * to the {@linkplain Comparable natural ordering} of its elements.
@@ -765,7 +765,7 @@ declare namespace java {
              *          {#link Comparable} contract
              */
             // @ts-ignore
-            sort(a: any[]): void
+            public static sort(a: java.lang.Object[] | any[]): void
             /**
              * Sorts the specified range of the specified array of objects into
              * ascending order, according to the
@@ -814,7 +814,7 @@ declare namespace java {
              *          integers).
              */
             // @ts-ignore
-            sort(a: any[], fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public static sort(a: java.lang.Object[] | any[], fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sorts the specified array of objects according to the order induced by
              * the specified comparator.  All elements in the array must be
@@ -854,7 +854,7 @@ declare namespace java {
              *          found to violate the {#link Comparator} contract
              */
             // @ts-ignore
-            sort<T>(a: T[], c: java.util.Comparator<any super T>): void
+            public static sort<T>(a: T[], c: java.util.Comparator<any>): void
             /**
              * Sorts the specified range of the specified array of objects according
              * to the order induced by the specified comparator.  The range to be
@@ -903,7 +903,7 @@ declare namespace java {
              *          {@code toIndex > a.length}
              */
             // @ts-ignore
-            sort<T>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/, c: java.util.Comparator<any super T>): void
+            public static sort<T>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/, c: java.util.Comparator<any>): void
             /**
              * Cumulates, in parallel, each element of the given array in place,
              * using the supplied function. For example if the array initially
@@ -919,7 +919,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix<T>(array: T[], op: java.util.function.BinaryOperator<T> | java.util.function$.BinaryOperator<T>): void
+            public static parallelPrefix<T>(array: T[], op: java.util.function$.BinaryOperator<T>): void
             /**
              * Performs {@link #parallelPrefix(Object[], BinaryOperator)}
              * for the given subrange of the array.
@@ -936,7 +936,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix<T>(array: T[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function.BinaryOperator<T> | java.util.function$.BinaryOperator<T>): void
+            public static parallelPrefix<T>(array: T[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function$.BinaryOperator<T>): void
             /**
              * Cumulates, in parallel, each element of the given array in place,
              * using the supplied function. For example if the array initially
@@ -951,7 +951,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix(array: number /*long*/[], op: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): void
+            public static parallelPrefix(array: number /*long*/[], op: java.util.function$.LongBinaryOperator): void
             /**
              * Performs {@link #parallelPrefix(long[], LongBinaryOperator)}
              * for the given subrange of the array.
@@ -967,7 +967,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix(array: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): void
+            public static parallelPrefix(array: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function$.LongBinaryOperator): void
             /**
              * Cumulates, in parallel, each element of the given array in place,
              * using the supplied function. For example if the array initially
@@ -984,7 +984,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix(array: number /*double*/[], op: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): void
+            public static parallelPrefix(array: number /*double*/[], op: java.util.function$.DoubleBinaryOperator): void
             /**
              * Performs {@link #parallelPrefix(double[], DoubleBinaryOperator)}
              * for the given subrange of the array.
@@ -1000,7 +1000,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix(array: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): void
+            public static parallelPrefix(array: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function$.DoubleBinaryOperator): void
             /**
              * Cumulates, in parallel, each element of the given array in place,
              * using the supplied function. For example if the array initially
@@ -1015,7 +1015,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix(array: number /*int*/[], op: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): void
+            public static parallelPrefix(array: number /*int*/[], op: java.util.function$.IntBinaryOperator): void
             /**
              * Performs {@link #parallelPrefix(int[], IntBinaryOperator)}
              * for the given subrange of the array.
@@ -1031,7 +1031,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelPrefix(array: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): void
+            public static parallelPrefix(array: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, op: java.util.function$.IntBinaryOperator): void
             /**
              * Searches the specified array of longs for the specified value using the
              * binary search algorithm.  The array must be sorted (as
@@ -1051,7 +1051,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: number /*long*/[], key: number /*long*/): int
+            public static binarySearch(a: number /*long*/[], key: number /*long*/): number /*int*/
             /**
              * Searches a range of
              * the specified array of longs for the specified value using the
@@ -1084,7 +1084,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*long*/): int
+            public static binarySearch(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*long*/): number /*int*/
             /**
              * Searches the specified array of ints for the specified value using the
              * binary search algorithm.  The array must be sorted (as
@@ -1104,7 +1104,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: number /*int*/[], key: number /*int*/): int
+            public static binarySearch(a: number /*int*/[], key: number /*int*/): number /*int*/
             /**
              * Searches a range of
              * the specified array of ints for the specified value using the
@@ -1137,7 +1137,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*int*/): int
+            public static binarySearch(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*int*/): number /*int*/
             /**
              * Searches the specified array of shorts for the specified value using
              * the binary search algorithm.  The array must be sorted
@@ -1157,7 +1157,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: number /*short*/[], key: number /*short*/): int
+            public static binarySearch(a: number /*short*/[], key: number /*short*/): number /*int*/
             /**
              * Searches a range of
              * the specified array of shorts for the specified value using
@@ -1190,7 +1190,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*short*/): int
+            public static binarySearch(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*short*/): number /*int*/
             /**
              * Searches the specified array of chars for the specified value using the
              * binary search algorithm.  The array must be sorted (as
@@ -1210,7 +1210,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: string[], key: string): int
+            public static binarySearch(a: string[], key: string): number /*int*/
             /**
              * Searches a range of
              * the specified array of chars for the specified value using the
@@ -1243,7 +1243,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/, key: string): int
+            public static binarySearch(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/, key: string): number /*int*/
             /**
              * Searches the specified array of bytes for the specified value using the
              * binary search algorithm.  The array must be sorted (as
@@ -1263,7 +1263,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: number /*byte*/[], key: number /*byte*/): int
+            public static binarySearch(a: number /*byte*/[], key: number /*byte*/): number /*int*/
             /**
              * Searches a range of
              * the specified array of bytes for the specified value using the
@@ -1296,7 +1296,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*byte*/): int
+            public static binarySearch(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*byte*/): number /*int*/
             /**
              * Searches the specified array of doubles for the specified value using
              * the binary search algorithm.  The array must be sorted
@@ -1317,7 +1317,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: number /*double*/[], key: number /*double*/): int
+            public static binarySearch(a: number /*double*/[], key: number /*double*/): number /*int*/
             /**
              * Searches a range of
              * the specified array of doubles for the specified value using
@@ -1351,7 +1351,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*double*/): int
+            public static binarySearch(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*double*/): number /*int*/
             /**
              * Searches the specified array of floats for the specified value using
              * the binary search algorithm. The array must be sorted
@@ -1372,7 +1372,7 @@ declare namespace java {
              *          and only if the key is found.
              */
             // @ts-ignore
-            binarySearch(a: number /*float*/[], key: number /*float*/): int
+            public static binarySearch(a: number /*float*/[], key: number /*float*/): number /*int*/
             /**
              * Searches a range of
              * the specified array of floats for the specified value using
@@ -1406,7 +1406,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*float*/): int
+            public static binarySearch(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/, key: number /*float*/): number /*int*/
             /**
              * Searches the specified array for the specified object using the binary
              * search algorithm. The array must be sorted into ascending order
@@ -1435,7 +1435,7 @@ declare namespace java {
              *          elements of the array.
              */
             // @ts-ignore
-            binarySearch(a: any[], key: any): int
+            public static binarySearch(a: java.lang.Object[] | any[], key: java.lang.Object | any): number /*int*/
             /**
              * Searches a range of
              * the specified array for the specified object using the binary
@@ -1476,7 +1476,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch(a: any[], fromIndex: number /*int*/, toIndex: number /*int*/, key: any): int
+            public static binarySearch(a: java.lang.Object[] | any[], fromIndex: number /*int*/, toIndex: number /*int*/, key: java.lang.Object | any): number /*int*/
             /**
              * Searches the specified array for the specified object using the binary
              * search algorithm.  The array must be sorted into ascending order
@@ -1507,7 +1507,7 @@ declare namespace java {
              *          elements of the array using this comparator.
              */
             // @ts-ignore
-            binarySearch<T>(a: T[], key: T, c: java.util.Comparator<any super T>): int
+            public static binarySearch<T>(a: T[], key: T, c: java.util.Comparator<any>): number /*int*/
             /**
              * Searches a range of
              * the specified array for the specified object using the binary
@@ -1550,7 +1550,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            binarySearch<T>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/, key: T, c: java.util.Comparator<any super T>): int
+            public static binarySearch<T>(a: T[], fromIndex: number /*int*/, toIndex: number /*int*/, key: T, c: java.util.Comparator<any>): number /*int*/
             /**
              * Returns <tt>true</tt> if the two specified arrays of longs are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1563,7 +1563,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: number /*long*/[], a2: number /*long*/[]): boolean
+            public static equals(a: number /*long*/[], a2: number /*long*/[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of ints are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1576,7 +1576,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: number /*int*/[], a2: number /*int*/[]): boolean
+            public static equals(a: number /*int*/[], a2: number /*int*/[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of shorts are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1589,7 +1589,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: number /*short*/[], a2: number /*short*/[]): boolean
+            public static equals(a: number /*short*/[], a2: number /*short*/[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of chars are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1602,7 +1602,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: string[], a2: string[]): boolean
+            public static equals(a: string[], a2: string[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of bytes are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1615,7 +1615,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: number /*byte*/[], a2: number /*byte*/[]): boolean
+            public static equals(a: number /*byte*/[], a2: number /*byte*/[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of booleans are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1628,7 +1628,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: boolean[], a2: boolean[]): boolean
+            public static equals(a: boolean[], a2: boolean[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of doubles are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1646,7 +1646,7 @@ declare namespace java {
              * @see Double#equals(Object)
              */
             // @ts-ignore
-            equals(a: number /*double*/[], a2: number /*double*/[]): boolean
+            public static equals(a: number /*double*/[], a2: number /*double*/[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of floats are
              * <i>equal</i> to one another.  Two arrays are considered equal if both
@@ -1664,7 +1664,7 @@ declare namespace java {
              * @see Float#equals(Object)
              */
             // @ts-ignore
-            equals(a: number /*float*/[], a2: number /*float*/[]): boolean
+            public static equals(a: number /*float*/[], a2: number /*float*/[]): boolean
             /**
              * Returns <tt>true</tt> if the two specified arrays of Objects are
              * <i>equal</i> to one another.  The two arrays are considered equal if
@@ -1679,7 +1679,7 @@ declare namespace java {
              * @return <tt>true</tt> if the two arrays are equal
              */
             // @ts-ignore
-            equals(a: any[], a2: any[]): boolean
+            public static equals(a: java.lang.Object[] | any[], a2: java.lang.Object[] | any[]): boolean
             /**
              * Assigns the specified long value to each element of the specified array
              * of longs.
@@ -1687,7 +1687,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: number /*long*/[], val: number /*long*/): void
+            public static fill(a: number /*long*/[], val: number /*long*/): void
             /**
              * Assigns the specified long value to each element of the specified
              * range of the specified array of longs.  The range to be filled
@@ -1705,7 +1705,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*long*/): void
+            public static fill(a: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*long*/): void
             /**
              * Assigns the specified int value to each element of the specified array
              * of ints.
@@ -1713,7 +1713,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: number /*int*/[], val: number /*int*/): void
+            public static fill(a: number /*int*/[], val: number /*int*/): void
             /**
              * Assigns the specified int value to each element of the specified
              * range of the specified array of ints.  The range to be filled
@@ -1731,7 +1731,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*int*/): void
+            public static fill(a: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*int*/): void
             /**
              * Assigns the specified short value to each element of the specified array
              * of shorts.
@@ -1739,7 +1739,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: number /*short*/[], val: number /*short*/): void
+            public static fill(a: number /*short*/[], val: number /*short*/): void
             /**
              * Assigns the specified short value to each element of the specified
              * range of the specified array of shorts.  The range to be filled
@@ -1757,7 +1757,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*short*/): void
+            public static fill(a: number /*short*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*short*/): void
             /**
              * Assigns the specified char value to each element of the specified array
              * of chars.
@@ -1765,7 +1765,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: string[], val: string): void
+            public static fill(a: string[], val: string): void
             /**
              * Assigns the specified char value to each element of the specified
              * range of the specified array of chars.  The range to be filled
@@ -1783,7 +1783,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/, val: string): void
+            public static fill(a: string[], fromIndex: number /*int*/, toIndex: number /*int*/, val: string): void
             /**
              * Assigns the specified byte value to each element of the specified array
              * of bytes.
@@ -1791,7 +1791,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: number /*byte*/[], val: number /*byte*/): void
+            public static fill(a: number /*byte*/[], val: number /*byte*/): void
             /**
              * Assigns the specified byte value to each element of the specified
              * range of the specified array of bytes.  The range to be filled
@@ -1809,7 +1809,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*byte*/): void
+            public static fill(a: number /*byte*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*byte*/): void
             /**
              * Assigns the specified boolean value to each element of the specified
              * array of booleans.
@@ -1817,7 +1817,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: boolean[], val: boolean): void
+            public static fill(a: boolean[], val: boolean): void
             /**
              * Assigns the specified boolean value to each element of the specified
              * range of the specified array of booleans.  The range to be filled
@@ -1835,7 +1835,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: boolean[], fromIndex: number /*int*/, toIndex: number /*int*/, val: boolean): void
+            public static fill(a: boolean[], fromIndex: number /*int*/, toIndex: number /*int*/, val: boolean): void
             /**
              * Assigns the specified double value to each element of the specified
              * array of doubles.
@@ -1843,7 +1843,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: number /*double*/[], val: number /*double*/): void
+            public static fill(a: number /*double*/[], val: number /*double*/): void
             /**
              * Assigns the specified double value to each element of the specified
              * range of the specified array of doubles.  The range to be filled
@@ -1861,7 +1861,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*double*/): void
+            public static fill(a: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*double*/): void
             /**
              * Assigns the specified float value to each element of the specified array
              * of floats.
@@ -1869,7 +1869,7 @@ declare namespace java {
              * @param val the value to be stored in all elements of the array
              */
             // @ts-ignore
-            fill(a: number /*float*/[], val: number /*float*/): void
+            public static fill(a: number /*float*/[], val: number /*float*/): void
             /**
              * Assigns the specified float value to each element of the specified
              * range of the specified array of floats.  The range to be filled
@@ -1887,7 +1887,7 @@ declare namespace java {
              *          <tt>toIndex &gt; a.length</tt>
              */
             // @ts-ignore
-            fill(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*float*/): void
+            public static fill(a: number /*float*/[], fromIndex: number /*int*/, toIndex: number /*int*/, val: number /*float*/): void
             /**
              * Assigns the specified Object reference to each element of the specified
              * array of Objects.
@@ -1897,7 +1897,7 @@ declare namespace java {
              *          runtime type that can be stored in the specified array
              */
             // @ts-ignore
-            fill(a: any[], val: any): void
+            public static fill(a: java.lang.Object[] | any[], val: java.lang.Object | any): void
             /**
              * Assigns the specified Object reference to each element of the specified
              * range of the specified array of Objects.  The range to be filled
@@ -1917,7 +1917,7 @@ declare namespace java {
              *          runtime type that can be stored in the specified array
              */
             // @ts-ignore
-            fill(a: any[], fromIndex: number /*int*/, toIndex: number /*int*/, val: any): void
+            public static fill(a: java.lang.Object[] | any[], fromIndex: number /*int*/, toIndex: number /*int*/, val: java.lang.Object | any): void
             /**
              * Copies the specified array, truncating or padding with nulls (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -1937,7 +1937,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf<T>(original: T[], newLength: number /*int*/): T
+            public static copyOf<T>(original: T[], newLength: number /*int*/): T
             /**
              * Copies the specified array, truncating or padding with nulls (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -1962,7 +1962,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf<T, U>(original: U[], newLength: number /*int*/, newType: java.lang.Class<T[]>): T
+            public static copyOf<T, U>(original: U[], newLength: number /*int*/, newType: java.lang.Class<any>): T
             /**
              * Copies the specified array, truncating or padding with zeros (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -1980,7 +1980,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: number /*byte*/[], newLength: number /*int*/): byte[]
+            public static copyOf(original: number /*byte*/[], newLength: number /*int*/): number /*byte*/[]
             /**
              * Copies the specified array, truncating or padding with zeros (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -1998,7 +1998,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: number /*short*/[], newLength: number /*int*/): short[]
+            public static copyOf(original: number /*short*/[], newLength: number /*int*/): number /*short*/[]
             /**
              * Copies the specified array, truncating or padding with zeros (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -2016,7 +2016,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: number /*int*/[], newLength: number /*int*/): int[]
+            public static copyOf(original: number /*int*/[], newLength: number /*int*/): number /*int*/[]
             /**
              * Copies the specified array, truncating or padding with zeros (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -2034,7 +2034,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: number /*long*/[], newLength: number /*int*/): long[]
+            public static copyOf(original: number /*long*/[], newLength: number /*int*/): number /*long*/[]
             /**
              * Copies the specified array, truncating or padding with null characters (if necessary)
              * so the copy has the specified length.  For all indices that are valid
@@ -2052,7 +2052,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: string[], newLength: number /*int*/): char[]
+            public static copyOf(original: string[], newLength: number /*int*/): string[]
             /**
              * Copies the specified array, truncating or padding with zeros (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -2070,7 +2070,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: number /*float*/[], newLength: number /*int*/): float[]
+            public static copyOf(original: number /*float*/[], newLength: number /*int*/): number /*float*/[]
             /**
              * Copies the specified array, truncating or padding with zeros (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -2088,7 +2088,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: number /*double*/[], newLength: number /*int*/): double[]
+            public static copyOf(original: number /*double*/[], newLength: number /*int*/): number /*double*/[]
             /**
              * Copies the specified array, truncating or padding with <tt>false</tt> (if necessary)
              * so the copy has the specified length.  For all indices that are
@@ -2106,7 +2106,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOf(original: boolean[], newLength: number /*int*/): boolean[]
+            public static copyOf(original: boolean[], newLength: number /*int*/): boolean[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2136,7 +2136,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange<T>(original: T[], from: number /*int*/, to: number /*int*/): T
+            public static copyOfRange<T>(original: T[], from: number /*int*/, to: number /*int*/): T
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2170,7 +2170,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange<T, U>(original: U[], from: number /*int*/, to: number /*int*/, newType: java.lang.Class<T[]>): T
+            public static copyOfRange<T, U>(original: U[], from: number /*int*/, to: number /*int*/, newType: java.lang.Class<any>): T
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2197,7 +2197,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: number /*byte*/[], from: number /*int*/, to: number /*int*/): byte[]
+            public static copyOfRange(original: number /*byte*/[], from: number /*int*/, to: number /*int*/): number /*byte*/[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2224,7 +2224,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: number /*short*/[], from: number /*int*/, to: number /*int*/): short[]
+            public static copyOfRange(original: number /*short*/[], from: number /*int*/, to: number /*int*/): number /*short*/[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2251,7 +2251,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: number /*int*/[], from: number /*int*/, to: number /*int*/): int[]
+            public static copyOfRange(original: number /*int*/[], from: number /*int*/, to: number /*int*/): number /*int*/[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2278,7 +2278,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: number /*long*/[], from: number /*int*/, to: number /*int*/): long[]
+            public static copyOfRange(original: number /*long*/[], from: number /*int*/, to: number /*int*/): number /*long*/[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2305,7 +2305,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: string[], from: number /*int*/, to: number /*int*/): char[]
+            public static copyOfRange(original: string[], from: number /*int*/, to: number /*int*/): string[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2332,7 +2332,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: number /*float*/[], from: number /*int*/, to: number /*int*/): float[]
+            public static copyOfRange(original: number /*float*/[], from: number /*int*/, to: number /*int*/): number /*float*/[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2359,7 +2359,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: number /*double*/[], from: number /*int*/, to: number /*int*/): double[]
+            public static copyOfRange(original: number /*double*/[], from: number /*int*/, to: number /*int*/): number /*double*/[]
             /**
              * Copies the specified range of the specified array into a new array.
              * The initial index of the range (<tt>from</tt>) must lie between zero
@@ -2386,7 +2386,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copyOfRange(original: boolean[], from: number /*int*/, to: number /*int*/): boolean[]
+            public static copyOfRange(original: boolean[], from: number /*int*/, to: number /*int*/): boolean[]
             /**
              * Returns a fixed-size list backed by the specified array.  (Changes to
              * the returned list "write through" to the array.)  This method acts
@@ -2403,7 +2403,7 @@ declare namespace java {
              * @return a list view of the specified array
              */
             // @ts-ignore
-            asList<T>(...a: T[]): java.util.List<T>
+            public static asList<T>(...a: T[]): Array<T>
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>long</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2419,7 +2419,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: number /*long*/[]): int
+            public static hashCode(a: number /*long*/[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two non-null <tt>int</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2435,7 +2435,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: number /*int*/[]): int
+            public static hashCode(a: number /*int*/[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>short</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2451,7 +2451,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: number /*short*/[]): int
+            public static hashCode(a: number /*short*/[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>char</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2467,7 +2467,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: string[]): int
+            public static hashCode(a: string[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>byte</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2483,7 +2483,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: number /*byte*/[]): int
+            public static hashCode(a: number /*byte*/[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>boolean</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2499,7 +2499,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: boolean[]): int
+            public static hashCode(a: boolean[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>float</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2515,7 +2515,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: number /*float*/[]): int
+            public static hashCode(a: number /*float*/[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.
              * For any two <tt>double</tt> arrays <tt>a</tt> and <tt>b</tt>
@@ -2531,7 +2531,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: number /*double*/[]): int
+            public static hashCode(a: number /*double*/[]): number /*int*/
             /**
              * Returns a hash code based on the contents of the specified array.  If
              * the array contains other arrays as elements, the hash code is based on
@@ -2551,7 +2551,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(a: any[]): int
+            public static hashCode(a: java.lang.Object[] | any[]): number /*int*/
             /**
              * Returns a hash code based on the "deep contents" of the specified
              * array.  If the array contains other arrays as elements, the
@@ -2579,7 +2579,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            deepHashCode(a: any[]): int
+            public static deepHashCode(a: java.lang.Object[] | any[]): number /*int*/
             /**
              * Returns <tt>true</tt> if the two specified arrays are <i>deeply
              * equal</i> to one another.  Unlike the {@link #equals(Object[],Object[])}
@@ -2612,7 +2612,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            deepEquals(a1: any[], a2: any[]): boolean
+            public static deepEquals(a1: java.lang.Object[] | any[], a2: java.lang.Object[] | any[]): boolean
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2626,7 +2626,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: number /*long*/[]): java.lang.String
+            public static toString(a: number /*long*/[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2640,7 +2640,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: number /*int*/[]): java.lang.String
+            public static toString(a: number /*int*/[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2654,7 +2654,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: number /*short*/[]): java.lang.String
+            public static toString(a: number /*short*/[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2668,7 +2668,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: string[]): java.lang.String
+            public static toString(a: string[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2682,7 +2682,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: number /*byte*/[]): java.lang.String
+            public static toString(a: number /*byte*/[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2696,7 +2696,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: boolean[]): java.lang.String
+            public static toString(a: boolean[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2710,7 +2710,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: number /*float*/[]): java.lang.String
+            public static toString(a: number /*float*/[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * The string representation consists of a list of the array's elements,
@@ -2724,7 +2724,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: number /*double*/[]): java.lang.String
+            public static toString(a: number /*double*/[]): string
             /**
              * Returns a string representation of the contents of the specified array.
              * If the array contains other arrays as elements, they are converted to
@@ -2740,7 +2740,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toString(a: any[]): java.lang.String
+            public static toString(a: java.lang.Object[] | any[]): string
             /**
              * Returns a string representation of the "deep contents" of the specified
              * array.  If the array contains other arrays as elements, the string
@@ -2770,7 +2770,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            deepToString(a: any[]): java.lang.String
+            public static deepToString(a: java.lang.Object[] | any[]): string
             /**
              * Set all elements of the specified array, using the provided
              * generator function to compute each element.
@@ -2784,7 +2784,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setAll<T>(array: T[], generator: java.util.function.IntFunction<T> | java.util.function$.IntFunction<T>): void
+            public static setAll<T>(array: T[], generator: java.util.function$.IntFunction<any>): void
             /**
              * Set all elements of the specified array, in parallel, using the
              * provided generator function to compute each element.
@@ -2799,7 +2799,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSetAll<T>(array: T[], generator: java.util.function.IntFunction<T> | java.util.function$.IntFunction<T>): void
+            public static parallelSetAll<T>(array: T[], generator: java.util.function$.IntFunction<any>): void
             /**
              * Set all elements of the specified array, using the provided
              * generator function to compute each element.
@@ -2812,7 +2812,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setAll(array: number /*int*/[], generator: java.util.function.IntUnaryOperator | java.util.function$.IntUnaryOperator): void
+            public static setAll(array: number /*int*/[], generator: java.util.function$.IntUnaryOperator): void
             /**
              * Set all elements of the specified array, in parallel, using the
              * provided generator function to compute each element.
@@ -2826,7 +2826,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSetAll(array: number /*int*/[], generator: java.util.function.IntUnaryOperator | java.util.function$.IntUnaryOperator): void
+            public static parallelSetAll(array: number /*int*/[], generator: java.util.function$.IntUnaryOperator): void
             /**
              * Set all elements of the specified array, using the provided
              * generator function to compute each element.
@@ -2839,7 +2839,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setAll(array: number /*long*/[], generator: java.util.function.IntToLongFunction | java.util.function$.IntToLongFunction): void
+            public static setAll(array: number /*long*/[], generator: java.util.function$.IntToLongFunction): void
             /**
              * Set all elements of the specified array, in parallel, using the
              * provided generator function to compute each element.
@@ -2853,7 +2853,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSetAll(array: number /*long*/[], generator: java.util.function.IntToLongFunction | java.util.function$.IntToLongFunction): void
+            public static parallelSetAll(array: number /*long*/[], generator: java.util.function$.IntToLongFunction): void
             /**
              * Set all elements of the specified array, using the provided
              * generator function to compute each element.
@@ -2866,7 +2866,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setAll(array: number /*double*/[], generator: java.util.function.IntToDoubleFunction | java.util.function$.IntToDoubleFunction): void
+            public static setAll(array: number /*double*/[], generator: java.util.function$.IntToDoubleFunction): void
             /**
              * Set all elements of the specified array, in parallel, using the
              * provided generator function to compute each element.
@@ -2880,7 +2880,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parallelSetAll(array: number /*double*/[], generator: java.util.function.IntToDoubleFunction | java.util.function$.IntToDoubleFunction): void
+            public static parallelSetAll(array: number /*double*/[], generator: java.util.function$.IntToDoubleFunction): void
             /**
              * Returns a {@link Spliterator} covering all of the specified array.
              * <p>The spliterator reports {@link Spliterator#SIZED},
@@ -2892,7 +2892,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator<T>(array: T[]): java.util.Spliterator<T>
+            public static spliterator<T>(array: T[]): java.util.Spliterator<T>
             /**
              * Returns a {@link Spliterator} covering the specified range of the
              * specified array.
@@ -2911,7 +2911,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator<T>(array: T[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator<T>
+            public static spliterator<T>(array: T[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator<T>
             /**
              * Returns a {@link Spliterator.OfInt} covering all of the specified array.
              * <p>The spliterator reports {@link Spliterator#SIZED},
@@ -2922,7 +2922,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(array: number /*int*/[]): java.util.Spliterator.OfInt
+            public static spliterator(array: number /*int*/[]): java.util.Spliterator.OfInt
             /**
              * Returns a {@link Spliterator.OfInt} covering the specified range of the
              * specified array.
@@ -2940,7 +2940,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(array: number /*int*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator.OfInt
+            public static spliterator(array: number /*int*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator.OfInt
             /**
              * Returns a {@link Spliterator.OfLong} covering all of the specified array.
              * <p>The spliterator reports {@link Spliterator#SIZED},
@@ -2951,7 +2951,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(array: number /*long*/[]): java.util.Spliterator.OfLong
+            public static spliterator(array: number /*long*/[]): java.util.Spliterator.OfLong
             /**
              * Returns a {@link Spliterator.OfLong} covering the specified range of the
              * specified array.
@@ -2969,7 +2969,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(array: number /*long*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator.OfLong
+            public static spliterator(array: number /*long*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator.OfLong
             /**
              * Returns a {@link Spliterator.OfDouble} covering all of the specified
              * array.
@@ -2981,7 +2981,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(array: number /*double*/[]): java.util.Spliterator.OfDouble
+            public static spliterator(array: number /*double*/[]): java.util.Spliterator.OfDouble
             /**
              * Returns a {@link Spliterator.OfDouble} covering the specified range of
              * the specified array.
@@ -2999,7 +2999,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(array: number /*double*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator.OfDouble
+            public static spliterator(array: number /*double*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.Spliterator.OfDouble
             /**
              * Returns a sequential {@link Stream} with the specified array as its
              * source.
@@ -3009,7 +3009,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream<T>(array: T[]): java.util.stream.Stream<T>
+            public static stream<T>(array: T[]): java.util.stream.Stream<T>
             /**
              * Returns a sequential {@link Stream} with the specified range of the
              * specified array as its source.
@@ -3025,7 +3025,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream<T>(array: T[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.Stream<T>
+            public static stream<T>(array: T[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.Stream<T>
             /**
              * Returns a sequential {@link IntStream} with the specified array as its
              * source.
@@ -3034,7 +3034,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(array: number /*int*/[]): java.util.stream.IntStream
+            public static stream(array: number /*int*/[]): java.util.stream.IntStream
             /**
              * Returns a sequential {@link IntStream} with the specified range of the
              * specified array as its source.
@@ -3049,7 +3049,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(array: number /*int*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.IntStream
+            public static stream(array: number /*int*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.IntStream
             /**
              * Returns a sequential {@link LongStream} with the specified array as its
              * source.
@@ -3058,7 +3058,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(array: number /*long*/[]): java.util.stream.LongStream
+            public static stream(array: number /*long*/[]): java.util.stream.LongStream
             /**
              * Returns a sequential {@link LongStream} with the specified range of the
              * specified array as its source.
@@ -3073,7 +3073,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(array: number /*long*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.LongStream
+            public static stream(array: number /*long*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.LongStream
             /**
              * Returns a sequential {@link DoubleStream} with the specified array as its
              * source.
@@ -3082,7 +3082,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(array: number /*double*/[]): java.util.stream.DoubleStream
+            public static stream(array: number /*double*/[]): java.util.stream.DoubleStream
             /**
              * Returns a sequential {@link DoubleStream} with the specified range of the
              * specified array as its source.
@@ -3097,7 +3097,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(array: number /*double*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.DoubleStream
+            public static stream(array: number /*double*/[], startInclusive: number /*int*/, endExclusive: number /*int*/): java.util.stream.DoubleStream
         }
     }
 }

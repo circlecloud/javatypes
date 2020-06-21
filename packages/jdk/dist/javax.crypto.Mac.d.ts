@@ -38,7 +38,7 @@ declare namespace javax {
              * @param algorithm the algorithm
              */
             // @ts-ignore
-            constructor(macSpi: javax.crypto.MacSpi, provider: java.security.Provider, algorithm: string)
+            constructor(macSpi: javax.crypto.MacSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns the algorithm name of this <code>Mac</code> object.
              * <p>This is the same name that was specified in one of the
@@ -47,7 +47,7 @@ declare namespace javax {
              * @return the algorithm name of this <code>Mac</code> object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns a <code>Mac</code> object that implements the
              * specified MAC algorithm.
@@ -70,7 +70,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): javax.crypto.Mac
+            public static getInstance(algorithm: java.lang.String | string): javax.crypto.Mac
             /**
              * Returns a <code>Mac</code> object that implements the
              * specified MAC algorithm.
@@ -97,7 +97,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): javax.crypto.Mac
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.crypto.Mac
             /**
              * Returns a <code>Mac</code> object that implements the
              * specified MAC algorithm.
@@ -120,19 +120,19 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): javax.crypto.Mac
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.crypto.Mac
             /**
              * Returns the provider of this <code>Mac</code> object.
              * @return the provider of this <code>Mac</code> object.
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns the length of the MAC in bytes.
              * @return the MAC length in bytes.
              */
             // @ts-ignore
-            getMacLength(): int
+            public getMacLength(): number /*int*/
             /**
              * Initializes this <code>Mac</code> object with the given key.
              * @param key the key.
@@ -140,7 +140,7 @@ declare namespace javax {
              *  initializing this MAC.
              */
             // @ts-ignore
-            init(key: java.security.Key): void
+            public init(key: java.security.Key): void
             /**
              * Initializes this <code>Mac</code> object with the given key and
              * algorithm parameters.
@@ -152,7 +152,7 @@ declare namespace javax {
              *  parameters are inappropriate for this MAC.
              */
             // @ts-ignore
-            init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
+            public init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Processes the given byte.
              * @param input the input byte to be processed.
@@ -160,7 +160,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            update(input: number /*byte*/): void
+            public update(input: number /*byte*/): void
             /**
              * Processes the given array of bytes.
              * @param input the array of bytes to be processed.
@@ -168,7 +168,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            update(input: number /*byte*/[]): void
+            public update(input: number /*byte*/[]): void
             /**
              * Processes the first <code>len</code> bytes in <code>input</code>,
              * starting at <code>offset</code> inclusive.
@@ -179,7 +179,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            update(input: number /*byte*/[], offset: number /*int*/, len: number /*int*/): void
+            public update(input: number /*byte*/[], offset: number /*int*/, len: number /*int*/): void
             /**
              * Processes <code>input.remaining()</code> bytes in the ByteBuffer
              * <code>input</code>, starting at <code>input.position()</code>.
@@ -191,7 +191,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            update(input: java.nio.ByteBuffer): void
+            public update(input: java.nio.ByteBuffer): void
             /**
              * Finishes the MAC operation.
              * <p>A call to this method resets this <code>Mac</code> object to the
@@ -209,7 +209,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            doFinal(): byte[]
+            public doFinal(): number /*byte*/[]
             /**
              * Finishes the MAC operation.
              * <p>A call to this method resets this <code>Mac</code> object to the
@@ -233,7 +233,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            doFinal(output: number /*byte*/[], outOffset: number /*int*/): void
+            public doFinal(output: number /*byte*/[], outOffset: number /*int*/): void
             /**
              * Processes the given array of bytes and finishes the MAC operation.
              * <p>A call to this method resets this <code>Mac</code> object to the
@@ -252,7 +252,7 @@ declare namespace javax {
              *  initialized.
              */
             // @ts-ignore
-            doFinal(input: number /*byte*/[]): byte[]
+            public doFinal(input: number /*byte*/[]): number /*byte*/[]
             /**
              * Resets this <code>Mac</code> object.
              * <p>A call to this method resets this <code>Mac</code> object to the
@@ -267,7 +267,7 @@ declare namespace javax {
              * <code>init(Key, AlgorithmParameterSpec)</code>.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Returns a clone if the provider implementation is cloneable.
              * @return a clone if the provider implementation is cloneable.
@@ -275,7 +275,7 @@ declare namespace javax {
              *  delegate that does not support <code>Cloneable</code>.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

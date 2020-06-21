@@ -41,7 +41,7 @@ declare namespace org {
                          * @see #setInterfaceMappings
                          */
                         // @ts-ignore
-                        setManagedInterfaces(...managedInterfaces: java.lang.Class[]): void
+                        public setManagedInterfaces(...managedInterfaces: java.lang.Class<any>[]): void
                         /**
                          * Set the mappings of bean keys to a comma-separated list of interface names.
                          * <p>The property key should match the bean key and the property value should match
@@ -50,11 +50,11 @@ declare namespace org {
                          * @param mappings the mappings of bean keys to interface names
                          */
                         // @ts-ignore
-                        setInterfaceMappings(mappings: java.util.Properties): void
+                        public setInterfaceMappings(mappings: java.util.Properties): void
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Check to see if the {@code Method} is declared in
                          * one of the configured interfaces and that it is public.
@@ -65,7 +65,7 @@ declare namespace org {
                          *  configured interfaces, otherwise {@code false}.
                          */
                         // @ts-ignore
-                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Check to see if the {@code Method} is declared in
                          * one of the configured interfaces and that it is public.
@@ -76,7 +76,7 @@ declare namespace org {
                          *  configured interfaces, otherwise {@code false}.
                          */
                         // @ts-ignore
-                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Check to see if the {@code Method} is declared in
                          * one of the configured interfaces and that it is public.
@@ -87,7 +87,7 @@ declare namespace org {
                          *  configured interfaces, otherwise {@code false}.
                          */
                         // @ts-ignore
-                        includeOperation(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeOperation(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                     }
                 }
             }

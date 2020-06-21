@@ -20,11 +20,11 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                isPressed(): boolean
+                public isPressed(): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.PressurePlate
+                public clone(): org.bukkit.material.PressurePlate
             }
         }
     }

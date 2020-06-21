@@ -18,7 +18,7 @@ declare namespace javax {
                      * @return the UI object
                      */
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Installs the UI defaults.
                      */
@@ -43,17 +43,17 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getContext(c: javax.swing.JComponent): javax.swing.plaf.synth.SynthContext
+                    public getContext(c: javax.swing.JComponent): javax.swing.plaf.synth.SynthContext
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                     /**
                      * Creates the default divider.
                      */
                     // @ts-ignore
-                    createDefaultDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
+                    public createDefaultDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
                     /**
                      * {@inheritDoc}
                      */
@@ -70,7 +70,7 @@ declare namespace javax {
                      * @see #paint(SynthContext,Graphics)
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the specified component according to the Look and Feel.
                      * <p>This method is not used by Synth Look and Feel.
@@ -80,7 +80,7 @@ declare namespace javax {
                      * @see #paint(SynthContext,Graphics)
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the specified component. This implementation does nothing.
                      * @param context context for the component being painted
@@ -93,12 +93,12 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+                    public paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    finishedPaintingChildren(jc: javax.swing.JSplitPane, g: java.awt.Graphics): void
+                    public finishedPaintingChildren(jc: javax.swing.JSplitPane, g: java.awt.Graphics): void
                 }
             }
         }

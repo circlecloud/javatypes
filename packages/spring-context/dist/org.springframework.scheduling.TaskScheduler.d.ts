@@ -40,7 +40,7 @@ declare namespace org {
                  * @see org.springframework.scheduling.support.CronTrigger
                  */
                 // @ts-ignore
-                schedule(task: java.lang.Runnable, trigger: org.springframework.scheduling.Trigger): java.util.concurrent.ScheduledFuture<?>
+                schedule(task: java.lang.Runnable, trigger: org.springframework.scheduling.Trigger): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, invoking it at the specified execution time.
                  * <p>Execution will end once the scheduler shuts down or the returned
@@ -55,7 +55,7 @@ declare namespace org {
                  * @see #schedule(Runnable, Date)
                  */
                 // @ts-ignore
-                schedule(task: java.lang.Runnable, startTime: java.time.Instant): java.util.concurrent.ScheduledFuture<?>
+                schedule(task: java.lang.Runnable, startTime: java.time.Instant): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, invoking it at the specified execution time.
                  * <p>Execution will end once the scheduler shuts down or the returned
@@ -68,7 +68,7 @@ declare namespace org {
                  *  for internal reasons (e.g. a pool overload handling policy or a pool shutdown in progress)
                  */
                 // @ts-ignore
-                schedule(task: java.lang.Runnable, startTime: java.util.Date): java.util.concurrent.ScheduledFuture<?>
+                schedule(task: java.lang.Runnable, startTime: java.util.Date): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, invoking it at the specified execution time
                  * and subsequently with the given period.
@@ -85,7 +85,7 @@ declare namespace org {
                  * @see #scheduleAtFixedRate(Runnable, Date, long)
                  */
                 // @ts-ignore
-                scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.time.Instant, period: java.time.Duration): java.util.concurrent.ScheduledFuture<?>
+                scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.time.Instant, period: java.time.Duration): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, invoking it at the specified execution time
                  * and subsequently with the given period.
@@ -100,7 +100,7 @@ declare namespace org {
                  *  for internal reasons (e.g. a pool overload handling policy or a pool shutdown in progress)
                  */
                 // @ts-ignore
-                scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.util.Date, period: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.util.Date, period: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, starting as soon as possible and
                  * invoking it with the given period.
@@ -115,7 +115,7 @@ declare namespace org {
                  * @see #scheduleAtFixedRate(Runnable, long)
                  */
                 // @ts-ignore
-                scheduleAtFixedRate(task: java.lang.Runnable, period: java.time.Duration): java.util.concurrent.ScheduledFuture<?>
+                scheduleAtFixedRate(task: java.lang.Runnable, period: java.time.Duration): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, starting as soon as possible and
                  * invoking it with the given period.
@@ -128,7 +128,7 @@ declare namespace org {
                  *  for internal reasons (e.g. a pool overload handling policy or a pool shutdown in progress)
                  */
                 // @ts-ignore
-                scheduleAtFixedRate(task: java.lang.Runnable, period: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                scheduleAtFixedRate(task: java.lang.Runnable, period: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, invoking it at the specified execution time
                  * and subsequently with the given delay between the completion of one execution
@@ -146,7 +146,7 @@ declare namespace org {
                  * @see #scheduleWithFixedDelay(Runnable, Date, long)
                  */
                 // @ts-ignore
-                scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.time.Instant, delay: java.time.Duration): java.util.concurrent.ScheduledFuture<?>
+                scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.time.Instant, delay: java.time.Duration): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, invoking it at the specified execution time
                  * and subsequently with the given delay between the completion of one execution
@@ -163,7 +163,7 @@ declare namespace org {
                  *  for internal reasons (e.g. a pool overload handling policy or a pool shutdown in progress)
                  */
                 // @ts-ignore
-                scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.util.Date, delay: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.util.Date, delay: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, starting as soon as possible and invoking it with
                  * the given delay between the completion of one execution and the start of the next.
@@ -178,7 +178,7 @@ declare namespace org {
                  * @see #scheduleWithFixedDelay(Runnable, long)
                  */
                 // @ts-ignore
-                scheduleWithFixedDelay(task: java.lang.Runnable, delay: java.time.Duration): java.util.concurrent.ScheduledFuture<?>
+                scheduleWithFixedDelay(task: java.lang.Runnable, delay: java.time.Duration): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Schedule the given {@link Runnable}, starting as soon as possible and invoking it with
                  * the given delay between the completion of one execution and the start of the next.
@@ -192,7 +192,7 @@ declare namespace org {
                  *  for internal reasons (e.g. a pool overload handling policy or a pool shutdown in progress)
                  */
                 // @ts-ignore
-                scheduleWithFixedDelay(task: java.lang.Runnable, delay: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                scheduleWithFixedDelay(task: java.lang.Runnable, delay: number /*long*/): java.util.concurrent.ScheduledFuture<any>
             }
         }
     }

@@ -15,20 +15,20 @@ declare namespace org {
                              * @return The amount of online players
                              */
                             // @ts-ignore
-                            getOnline(): int
+                            getOnline(): number /*int*/
                             /**
                              * Gets the maximum amount of allowed players on the server.
                              * @return The maximum amount of allowed players
                              */
                             // @ts-ignore
-                            getMax(): int
+                            getMax(): number /*int*/
                             /**
                              * Gets an immutable list of online players on the server to display on
                              * the client.
                              * @return An immutable list of online players
                              */
                             // @ts-ignore
-                            getProfiles(): java.util.List<org.spongepowered.api.profile.GameProfile>
+                            getProfiles(): Array<org.spongepowered.api.profile.GameProfile>
                         }
                     }
                 }

@@ -19,12 +19,12 @@ declare namespace org {
                          * Set the user's chronology (calendar system).
                          */
                         // @ts-ignore
-                        setChronology(chronology: java.time.chrono.Chronology): void
+                        public setChronology(chronology: java.time.chrono.Chronology): void
                         /**
                          * Return the user's chronology (calendar system), if any.
                          */
                         // @ts-ignore
-                        getChronology(): java.time.chrono.Chronology
+                        public getChronology(): java.time.chrono.Chronology
                         /**
                          * Set the user's time zone.
                          * <p>Alternatively, set a {@link TimeZoneAwareLocaleContext} on
@@ -34,12 +34,12 @@ declare namespace org {
                          * @see org.springframework.context.i18n.LocaleContextHolder#setLocaleContext
                          */
                         // @ts-ignore
-                        setTimeZone(timeZone: java.time.ZoneId): void
+                        public setTimeZone(timeZone: java.time.ZoneId): void
                         /**
                          * Return the user's time zone, if any.
                          */
                         // @ts-ignore
-                        getTimeZone(): java.time.ZoneId
+                        public getTimeZone(): java.time.ZoneId
                         /**
                          * Get the DateTimeFormatter with the this context's settings
                          * applied to the base {@code formatter}.
@@ -48,7 +48,7 @@ declare namespace org {
                          * @return the contextual DateTimeFormatter
                          */
                         // @ts-ignore
-                        getFormatter(formatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatter
+                        public getFormatter(formatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatter
                     }
                 }
             }

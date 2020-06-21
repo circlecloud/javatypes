@@ -73,7 +73,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(dtd: javax.swing.text.html.parser.DTD)
                         // @ts-ignore
-                        parse(input: java.io.Reader, callback: javax.swing.text.html.HTMLEditorKit.ParserCallback, ignoreCharSet: boolean): void
+                        public parse(input: java.io.Reader, callback: javax.swing.text.html.HTMLEditorKit.ParserCallback, ignoreCharSet: boolean): void
                         /**
                          * Handle Start Tag.
                          */
@@ -97,7 +97,7 @@ declare namespace javax {
                         // @ts-ignore
                         handleText(data: string[]): void
                         // @ts-ignore
-                        handleError(ln: number /*int*/, errorMsg: string): void
+                        handleError(ln: number /*int*/, errorMsg: java.lang.String | string): void
                     }
                 }
             }

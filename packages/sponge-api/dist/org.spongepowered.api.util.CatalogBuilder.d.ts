@@ -13,14 +13,14 @@ declare namespace org {
                      * @return This builder for chaining
                      */
                     // @ts-ignore
-                    id(id: string): B
+                    id(id: java.lang.String | string): B
                     /**
                      * Sets the name of the {@link CatalogType}. Defaults to {@link #id(String)}.
                      * @param name The name
                      * @return This builder for chaining
                      */
                     // @ts-ignore
-                    name(name: string): B
+                    name(name: java.lang.String | string): B
                     /**
                      * Sets the name of the {@link CatalogType} as a {@link Translation}. Defaults to {@link #id}.
                      * @param translation The name translation
@@ -41,7 +41,7 @@ declare namespace org {
                      * @deprecated It's not allowed to duplicate catalog types.
                      */
                     // @ts-ignore
-                    from(value: C extends org.spongepowered.api.CatalogType): B
+                    from(value: C): B
                 }
             }
         }

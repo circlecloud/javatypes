@@ -33,7 +33,7 @@ declare namespace javax {
              * @return A new {#link javax.management.MBeanServerDelegate}.
              */
             // @ts-ignore
-            newMBeanServerDelegate(): javax.management.MBeanServerDelegate
+            public newMBeanServerDelegate(): javax.management.MBeanServerDelegate
             /**
              * This method creates a new MBeanServer implementation object.
              * When creating a new MBeanServer the
@@ -68,7 +68,7 @@ declare namespace javax {
              * @return A new private implementation of an MBeanServer.
              */
             // @ts-ignore
-            newMBeanServer(defaultDomain: string, outer: javax.management.MBeanServer, delegate: javax.management.MBeanServerDelegate): javax.management.MBeanServer
+            public newMBeanServer(defaultDomain: java.lang.String | string, outer: javax.management.MBeanServer, delegate: javax.management.MBeanServerDelegate): javax.management.MBeanServer
         }
     }
 }

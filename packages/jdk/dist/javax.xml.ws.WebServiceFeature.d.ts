@@ -20,7 +20,7 @@ declare namespace javax {
              * @since 2.1
              */
             // @ts-ignore
-            class WebServiceFeature extends java.lang.Object {
+            abstract class WebServiceFeature extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -33,13 +33,13 @@ declare namespace javax {
                  * @return the unique identifier for this feature.
                  */
                 // @ts-ignore
-                abstract getID(): java.lang.String
+                public abstract getID(): string
                 /**
                  * Returns <code>true</code> if this feature is enabled.
                  * @return <code>true</code> if and only if the feature is enabled .
                  */
                 // @ts-ignore
-                isEnabled(): boolean
+                public isEnabled(): boolean
             }
         }
     }

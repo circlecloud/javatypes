@@ -46,7 +46,7 @@ declare namespace java {
                  * @throws NullPointerException if the name is null
                  */
                 // @ts-ignore
-                constructor(name: string, value: number /*int*/)
+                constructor(name: java.lang.String | string, value: number /*int*/)
                 /**
                  * Create a named Level with a given integer value and a
                  * given localization resource name.
@@ -59,13 +59,13 @@ declare namespace java {
                  * @throws NullPointerException if the name is null
                  */
                 // @ts-ignore
-                constructor(name: string, value: number /*int*/, resourceBundleName: string)
+                constructor(name: java.lang.String | string, value: number /*int*/, resourceBundleName: java.lang.String | string)
                 /**
                  * OFF is a special level that can be used to turn off logging.
                  * This level is initialized to <CODE>Integer.MAX_VALUE</CODE>.
                  */
                 // @ts-ignore
-                readonly OFF: java.util.logging.Level
+                public static readonly OFF: java.util.logging.Level
                 /**
                  * SEVERE is a message level indicating a serious failure.
                  * <p>
@@ -76,7 +76,7 @@ declare namespace java {
                  * This level is initialized to <CODE>1000</CODE>.
                  */
                 // @ts-ignore
-                readonly SEVERE: java.util.logging.Level
+                public static readonly SEVERE: java.util.logging.Level
                 /**
                  * WARNING is a message level indicating a potential problem.
                  * <p>
@@ -86,7 +86,7 @@ declare namespace java {
                  * This level is initialized to <CODE>900</CODE>.
                  */
                 // @ts-ignore
-                readonly WARNING: java.util.logging.Level
+                public static readonly WARNING: java.util.logging.Level
                 /**
                  * INFO is a message level for informational messages.
                  * <p>
@@ -97,7 +97,7 @@ declare namespace java {
                  * This level is initialized to <CODE>800</CODE>.
                  */
                 // @ts-ignore
-                readonly INFO: java.util.logging.Level
+                public static readonly INFO: java.util.logging.Level
                 /**
                  * CONFIG is a message level for static configuration messages.
                  * <p>
@@ -109,7 +109,7 @@ declare namespace java {
                  * This level is initialized to <CODE>700</CODE>.
                  */
                 // @ts-ignore
-                readonly CONFIG: java.util.logging.Level
+                public static readonly CONFIG: java.util.logging.Level
                 /**
                  * FINE is a message level providing tracing information.
                  * <p>
@@ -130,7 +130,7 @@ declare namespace java {
                  * This level is initialized to <CODE>500</CODE>.
                  */
                 // @ts-ignore
-                readonly FINE: java.util.logging.Level
+                public static readonly FINE: java.util.logging.Level
                 /**
                  * FINER indicates a fairly detailed tracing message.
                  * By default logging calls for entering, returning, or throwing
@@ -138,32 +138,32 @@ declare namespace java {
                  * This level is initialized to <CODE>400</CODE>.
                  */
                 // @ts-ignore
-                readonly FINER: java.util.logging.Level
+                public static readonly FINER: java.util.logging.Level
                 /**
                  * FINEST indicates a highly detailed tracing message.
                  * This level is initialized to <CODE>300</CODE>.
                  */
                 // @ts-ignore
-                readonly FINEST: java.util.logging.Level
+                public static readonly FINEST: java.util.logging.Level
                 /**
                  * ALL indicates that all messages should be logged.
                  * This level is initialized to <CODE>Integer.MIN_VALUE</CODE>.
                  */
                 // @ts-ignore
-                readonly ALL: java.util.logging.Level
+                public static readonly ALL: java.util.logging.Level
                 /**
                  * Return the level's localization resource bundle name, or
                  * null if no localization bundle is defined.
                  * @return localization resource bundle name
                  */
                 // @ts-ignore
-                getResourceBundleName(): java.lang.String
+                public getResourceBundleName(): string
                 /**
                  * Return the non-localized string name of the Level.
                  * @return non-localized name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Return the localized string name of the Level, for
                  * the current default locale.
@@ -173,13 +173,13 @@ declare namespace java {
                  * @return localized name
                  */
                 // @ts-ignore
-                getLocalizedName(): java.lang.String
+                public getLocalizedName(): string
                 /**
                  * Returns a string representation of this Level.
                  * @return the non-localized name of the Level, for example "INFO".
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Get the integer value for this level.  This integer value
                  * can be used for efficient ordering comparisons between
@@ -187,7 +187,7 @@ declare namespace java {
                  * @return the integer value for this level.
                  */
                 // @ts-ignore
-                intValue(): int
+                public intValue(): number /*int*/
                 /**
                  * Parse a level name string into a Level.
                  * <p>
@@ -214,19 +214,19 @@ declare namespace java {
                  *  initialized to that value.
                  */
                 // @ts-ignore
-                parse(name: string): java.util.logging.Level
+                public static parse(name: java.lang.String | string): java.util.logging.Level
                 /**
                  * Compare two objects for value equality.
                  * @return true if and only if the two objects have the same level value.
                  */
                 // @ts-ignore
-                equals(ox: any): boolean
+                public equals(ox: java.lang.Object | any): boolean
                 /**
                  * Generate a hashcode.
                  * @return a hashcode based on the level value
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

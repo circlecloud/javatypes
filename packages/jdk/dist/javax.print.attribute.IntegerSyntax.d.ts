@@ -16,7 +16,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class IntegerSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class IntegerSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Construct a new integer attribute with the given integer value.
                  * @param value  Integer value.
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @return the integer value
                  */
                 // @ts-ignore
-                getValue(): int
+                public getValue(): number /*int*/
                 /**
                  * Returns whether this integer attribute is equivalent to the passed in
                  * object. To be equivalent, all of the following conditions must be true:
@@ -59,20 +59,20 @@ declare namespace javax {
                  *           attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this integer attribute. The hash code is
                  * just this integer attribute's integer value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string value corresponding to this integer attribute. The
                  * string value is just this integer attribute's integer value converted to
                  * a string.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

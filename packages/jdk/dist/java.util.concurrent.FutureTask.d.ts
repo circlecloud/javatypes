@@ -46,21 +46,21 @@ declare namespace java {
                 // @ts-ignore
                 constructor(runnable: java.lang.Runnable, result: V)
                 // @ts-ignore
-                isCancelled(): boolean
+                public isCancelled(): boolean
                 // @ts-ignore
-                isDone(): boolean
+                public isDone(): boolean
                 // @ts-ignore
-                cancel(mayInterruptIfRunning: boolean): boolean
+                public cancel(mayInterruptIfRunning: boolean): boolean
                 /**
                  * @throws CancellationException {#inheritDoc}
                  */
                 // @ts-ignore
-                get(): V
+                public get(): V
                 /**
                  * @throws CancellationException {#inheritDoc}
                  */
                 // @ts-ignore
-                get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
+                public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
                 /**
                  * Protected method invoked when this task transitions to state
                  * {@code isDone} (whether normally or via cancellation). The
@@ -90,9 +90,9 @@ declare namespace java {
                  * @param t the cause of failure
                  */
                 // @ts-ignore
-                setException(t: Error): void
+                setException(t: java.lang.Throwable | Error): void
                 // @ts-ignore
-                run(): void
+                public run(): void
                 /**
                  * Executes the computation without setting its result, and then
                  * resets this future to initial state, failing to do so if the

@@ -6,7 +6,7 @@ declare namespace org {
                  * Base class for all noise generators
                  */
                 // @ts-ignore
-                class NoiseGenerator extends java.lang.Object {
+                abstract class NoiseGenerator extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
@@ -23,20 +23,20 @@ declare namespace org {
                      * @return Floored value
                      */
                     // @ts-ignore
-                    floor(x: number /*double*/): int
+                    public static floor(x: number /*double*/): number /*int*/
                     // @ts-ignore
-                    fade(x: number /*double*/): double
+                    static fade(x: number /*double*/): number /*double*/
                     // @ts-ignore
-                    lerp(x: number /*double*/, y: number /*double*/, z: number /*double*/): double
+                    static lerp(x: number /*double*/, y: number /*double*/, z: number /*double*/): number /*double*/
                     // @ts-ignore
-                    grad(hash: number /*int*/, x: number /*double*/, y: number /*double*/, z: number /*double*/): double
+                    static grad(hash: number /*int*/, x: number /*double*/, y: number /*double*/, z: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 1D noise for the given coordinate in 1D space
                      * @param x X coordinate
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/): double
+                    public noise(x: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 2D noise for the given coordinates in 2D space
                      * @param x X coordinate
@@ -44,7 +44,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 3D noise for the given coordinates in 3D space
                      * @param x X coordinate
@@ -53,7 +53,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    abstract noise(x: number /*double*/, y: number /*double*/, z: number /*double*/): double
+                    public abstract noise(x: number /*double*/, y: number /*double*/, z: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 1D coordinates using the specified number of
                      * octaves and parameters
@@ -64,7 +64,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 1D coordinates using the specified number of
                      * octaves and parameters
@@ -76,7 +76,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                     /**
                      * Generates noise for the 2D coordinates using the specified number of
                      * octaves and parameters
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 2D coordinates using the specified number of
                      * octaves and parameters
@@ -101,7 +101,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, y: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -114,7 +114,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -128,7 +128,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, octaves: number /*int*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                 }
             }
         }

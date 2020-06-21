@@ -23,13 +23,13 @@ declare namespace javax {
                  * @param edit    an UndoableEdit object
                  */
                 // @ts-ignore
-                constructor(source: any, edit: javax.swing.undo.UndoableEdit)
+                constructor(source: java.lang.Object | any, edit: javax.swing.undo.UndoableEdit)
                 /**
                  * Returns the edit value.
                  * @return the UndoableEdit object encapsulating the edit
                  */
                 // @ts-ignore
-                getEdit(): javax.swing.undo.UndoableEdit
+                public getEdit(): javax.swing.undo.UndoableEdit
             }
         }
     }

@@ -32,7 +32,7 @@ declare namespace javax {
                      * @return the element, null if none
                      */
                     // @ts-ignore
-                    positionToElement(pos: number /*int*/): javax.swing.text.Element
+                    public positionToElement(pos: number /*int*/): javax.swing.text.Element
                     /**
                      * Replaces content with a new set of elements.
                      * @param offset the starting offset &gt;= 0
@@ -40,71 +40,71 @@ declare namespace javax {
                      * @param elems the new elements
                      */
                     // @ts-ignore
-                    replace(offset: number /*int*/, length: number /*int*/, elems: javax.swing.text.Element[]): void
+                    public replace(offset: number /*int*/, length: number /*int*/, elems: javax.swing.text.Element[]): void
                     /**
                      * Converts the element to a string.
                      * @return the string
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Gets the element name.
                      * @return the element name
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Gets the starting offset in the model for the element.
                      * @return the offset &gt;= 0
                      */
                     // @ts-ignore
-                    getStartOffset(): int
+                    public getStartOffset(): number /*int*/
                     /**
                      * Gets the ending offset in the model for the element.
                      * @throws NullPointerException if this element has no children
                      * @return the offset &gt;= 0
                      */
                     // @ts-ignore
-                    getEndOffset(): int
+                    public getEndOffset(): number /*int*/
                     /**
                      * Gets a child element.
                      * @param index the child index, &gt;= 0 &amp;&amp; &lt; getElementCount()
                      * @return the child element, null if none
                      */
                     // @ts-ignore
-                    getElement(index: number /*int*/): javax.swing.text.Element
+                    public getElement(index: number /*int*/): javax.swing.text.Element
                     /**
                      * Gets the number of children for the element.
                      * @return the number of children &gt;= 0
                      */
                     // @ts-ignore
-                    getElementCount(): int
+                    public getElementCount(): number /*int*/
                     /**
                      * Gets the child element index closest to the given model offset.
                      * @param offset the offset &gt;= 0
                      * @return the element index &gt;= 0
                      */
                     // @ts-ignore
-                    getElementIndex(offset: number /*int*/): int
+                    public getElementIndex(offset: number /*int*/): number /*int*/
                     /**
                      * Checks whether the element is a leaf.
                      * @return true if a leaf
                      */
                     // @ts-ignore
-                    isLeaf(): boolean
+                    public isLeaf(): boolean
                     /**
                      * Returns true if the receiver allows children.
                      * @return true if the receiver allows children, otherwise false
                      */
                     // @ts-ignore
-                    getAllowsChildren(): boolean
+                    public getAllowsChildren(): boolean
                     /**
                      * Returns the children of the receiver as an
                      * <code>Enumeration</code>.
                      * @return the children of the receiver
                      */
                     // @ts-ignore
-                    children(): java.util.Enumeration
+                    public children(): java.util.Enumeration<any>
                 }
             }
         }

@@ -15,22 +15,22 @@ declare namespace org {
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    class AbstractReactiveWebInitializer extends java.lang.Object implements org.springframework.web.WebApplicationInitializer {
+                    abstract class AbstractReactiveWebInitializer extends java.lang.Object implements org.springframework.web.WebApplicationInitializer {
                         // @ts-ignore
                         constructor()
                         /**
                          * The default servlet name to use. See {@link #getServletName}.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_SERVLET_NAME: string
+                        public static readonly DEFAULT_SERVLET_NAME: java.lang.String | string
                         // @ts-ignore
-                        onStartup(servletContext: ServletContext): void
+                        public onStartup(servletContext: ServletContext): void
                         /**
                          * Return the name to use to register the {@link ServletHttpHandlerAdapter}.
                          * <p>By default this is {@link #DEFAULT_SERVLET_NAME}.
                          */
                         // @ts-ignore
-                        getServletName(): java.lang.String
+                        getServletName(): string
                         /**
                          * Return the Spring configuration that contains application beans including
                          * the ones detected by {@link WebHttpHandlerBuilder#applicationContext}.
@@ -44,7 +44,7 @@ declare namespace org {
                          * are given to {@linkplain #createApplicationContext()}.
                          */
                         // @ts-ignore
-                        abstract getConfigClasses(): java.lang.Class[]
+                        abstract getConfigClasses(): java.lang.Class<any>[]
                         /**
                          * Refresh the given application context, if necessary.
                          */
@@ -65,7 +65,7 @@ declare namespace org {
                          * <p>By default this is set to '/'.
                          */
                         // @ts-ignore
-                        getServletMapping(): java.lang.String
+                        getServletMapping(): string
                     }
                 }
             }

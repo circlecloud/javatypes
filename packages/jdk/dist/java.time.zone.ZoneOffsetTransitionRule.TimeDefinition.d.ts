@@ -15,10 +15,25 @@ declare namespace java {
                  */
                 // @ts-ignore
                 class TimeDefinition extends java.lang.Enum<java.time.zone.ZoneOffsetTransitionRule.TimeDefinition> {
+                    /**
+                     * The local date-time is expressed in terms of the UTC offset.
+                     */
+                    // @ts-ignore
+                    readonly UTC: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    /**
+                     * The local date-time is expressed in terms of the wall offset.
+                     */
+                    // @ts-ignore
+                    readonly WALL: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    /**
+                     * The local date-time is expressed in terms of the standard offset.
+                     */
+                    // @ts-ignore
+                    readonly STANDARD: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                     // @ts-ignore
                     values(): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition[]
                     // @ts-ignore
-                    valueOf(name: string): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                    valueOf(name: java.lang.String | string): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                     /**
                      * Converts the specified local date-time to the local date-time actually
                      * seen on a wall clock.

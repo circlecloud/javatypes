@@ -25,9 +25,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(locale: java.util.Locale, timeZone: java.util.TimeZone)
                     // @ts-ignore
-                    getTimeZone(): java.util.TimeZone
+                    public getTimeZone(): java.util.TimeZone
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

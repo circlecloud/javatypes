@@ -16,9 +16,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    put(key: K, value: V): B
+                    public put(key: K, value: V): B
                     // @ts-ignore
-                    get(): java.util.Map<K, V>
+                    public get(): java.util.Map<K, V>
                     // @ts-ignore
                     _this(): B
                 }

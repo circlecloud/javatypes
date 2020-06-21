@@ -32,7 +32,7 @@ declare namespace java {
                  * Singleton instance of the ISO chronology.
                  */
                 // @ts-ignore
-                readonly INSTANCE: java.time.chrono.IsoChronology
+                public static readonly INSTANCE: java.time.chrono.IsoChronology
                 /**
                  * Gets the ID of the chronology - 'ISO'.
                  * <p>
@@ -42,7 +42,7 @@ declare namespace java {
                  * @see #getCalendarType()
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                public getId(): string
                 /**
                  * Gets the calendar type of the underlying calendar system - 'iso8601'.
                  * <p>
@@ -55,7 +55,7 @@ declare namespace java {
                  * @see #getId()
                  */
                 // @ts-ignore
-                getCalendarType(): java.lang.String
+                public getCalendarType(): string
                 /**
                  * Obtains an ISO local date from the era, year-of-era, month-of-year
                  * and day-of-month fields.
@@ -68,7 +68,7 @@ declare namespace java {
                  * @throws ClassCastException if the type of {#code era} is not {@code IsoEra}
                  */
                 // @ts-ignore
-                date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.LocalDate
+                public date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.LocalDate
                 /**
                  * Obtains an ISO local date from the proleptic-year, month-of-year
                  * and day-of-month fields.
@@ -81,7 +81,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.LocalDate
+                public date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.LocalDate
                 /**
                  * Obtains an ISO local date from the era, year-of-era and day-of-year fields.
                  * @param era  the ISO era, not null
@@ -91,7 +91,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.LocalDate
+                public dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.LocalDate
                 /**
                  * Obtains an ISO local date from the proleptic-year and day-of-year fields.
                  * <p>
@@ -102,7 +102,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.LocalDate
+                public dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.LocalDate
                 /**
                  * Obtains an ISO local date from the epoch-day.
                  * <p>
@@ -112,7 +112,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateEpochDay(epochDay: number /*long*/): java.time.LocalDate
+                public dateEpochDay(epochDay: number /*long*/): java.time.LocalDate
                 /**
                  * Obtains an ISO local date from another date-time object.
                  * <p>
@@ -122,7 +122,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                date(temporal: java.time.temporal.TemporalAccessor): java.time.LocalDate
+                public date(temporal: java.time.temporal.TemporalAccessor): java.time.LocalDate
                 /**
                  * Obtains an ISO local date-time from another date-time object.
                  * <p>
@@ -132,7 +132,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date-time
                  */
                 // @ts-ignore
-                localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.LocalDateTime
+                public localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.LocalDateTime
                 /**
                  * Obtains an ISO zoned date-time from another date-time object.
                  * <p>
@@ -142,7 +142,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date-time
                  */
                 // @ts-ignore
-                zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.ZonedDateTime
+                public zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.ZonedDateTime
                 /**
                  * Obtains an ISO zoned date-time in this chronology from an {@code Instant}.
                  * <p>
@@ -153,7 +153,7 @@ declare namespace java {
                  * @throws DateTimeException if the result exceeds the supported range
                  */
                 // @ts-ignore
-                zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.ZonedDateTime
+                public zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.ZonedDateTime
                 /**
                  * Obtains the current ISO local date from the system clock in the default time-zone.
                  * <p>
@@ -166,7 +166,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateNow(): java.time.LocalDate
+                public dateNow(): java.time.LocalDate
                 /**
                  * Obtains the current ISO local date from the system clock in the specified time-zone.
                  * <p>
@@ -179,7 +179,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateNow(zone: java.time.ZoneId): java.time.LocalDate
+                public dateNow(zone: java.time.ZoneId): java.time.LocalDate
                 /**
                  * Obtains the current ISO local date from the specified clock.
                  * <p>
@@ -191,7 +191,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateNow(clock: java.time.Clock): java.time.LocalDate
+                public dateNow(clock: java.time.Clock): java.time.LocalDate
                 /**
                  * Checks if the year is a leap year, according to the ISO proleptic
                  * calendar system rules.
@@ -211,13 +211,13 @@ declare namespace java {
                  * @return true if the year is leap, false otherwise
                  */
                 // @ts-ignore
-                isLeapYear(prolepticYear: number /*long*/): boolean
+                public isLeapYear(prolepticYear: number /*long*/): boolean
                 // @ts-ignore
-                prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): int
+                public prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): number /*int*/
                 // @ts-ignore
-                eraOf(eraValue: number /*int*/): java.time.chrono.IsoEra
+                public eraOf(eraValue: number /*int*/): java.time.chrono.IsoEra
                 // @ts-ignore
-                eras(): java.util.List<java.time.chrono.Era>
+                public eras(): Array<java.time.chrono.Era>
                 /**
                  * Resolves parsed {@code ChronoField} values into a date during parsing.
                  * <p>
@@ -303,9 +303,9 @@ declare namespace java {
                  *   because of a conflict in the input data
                  */
                 // @ts-ignore
-                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, resolverStyle: java.time.format.ResolverStyle): java.time.LocalDate
+                public resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, resolverStyle: java.time.format.ResolverStyle): java.time.LocalDate
                 // @ts-ignore
-                range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
                 /**
                  * Obtains a period for this chronology based on years, months and days.
                  * <p>
@@ -318,7 +318,7 @@ declare namespace java {
                  * @return the ISO period, not null
                  */
                 // @ts-ignore
-                period(years: number /*int*/, months: number /*int*/, days: number /*int*/): java.time.Period
+                public period(years: number /*int*/, months: number /*int*/, days: number /*int*/): java.time.Period
             }
         }
     }

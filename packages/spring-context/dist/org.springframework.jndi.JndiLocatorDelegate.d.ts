@@ -28,18 +28,18 @@ declare namespace org {
                  * @see JndiPropertySource
                  */
                 // @ts-ignore
-                readonly IGNORE_JNDI_PROPERTY_NAME: string
+                public static readonly IGNORE_JNDI_PROPERTY_NAME: java.lang.String | string
                 // @ts-ignore
-                lookup(jndiName: string): java.lang.Object
+                public lookup(jndiName: java.lang.String | string): any
                 // @ts-ignore
-                lookup<T>(jndiName: string, requiredType: java.lang.Class<T>): T
+                public lookup<T>(jndiName: java.lang.String | string, requiredType: java.lang.Class<T>): T
                 /**
                  * Configure a {@code JndiLocatorDelegate} with its "resourceRef" property set to
                  * {@code true}, meaning that all names will be prefixed with "java:comp/env/".
                  * @see #setResourceRef
                  */
                 // @ts-ignore
-                createDefaultResourceRefLocator(): org.springframework.jndi.JndiLocatorDelegate
+                public static createDefaultResourceRefLocator(): org.springframework.jndi.JndiLocatorDelegate
                 /**
                  * Check whether a default JNDI environment, as in a Java EE environment,
                  * is available on this JVM.
@@ -47,7 +47,7 @@ declare namespace org {
                  *  {@code false} if not
                  */
                 // @ts-ignore
-                isDefaultJndiEnvironmentAvailable(): boolean
+                public static isDefaultJndiEnvironmentAvailable(): boolean
             }
         }
     }

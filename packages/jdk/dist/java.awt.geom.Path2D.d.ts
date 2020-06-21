@@ -36,7 +36,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class Path2D extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
+            abstract class Path2D extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
                 /**
                  * An even-odd winding rule for determining the interior of
                  * a path.
@@ -44,7 +44,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly WIND_EVEN_ODD: number /*int*/
+                public static readonly WIND_EVEN_ODD: number /*int*/
                 /**
                  * A non-zero winding rule for determining the interior of a
                  * path.
@@ -52,7 +52,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly WIND_NON_ZERO: number /*int*/
+                public static readonly WIND_NON_ZERO: number /*int*/
                 /**
                  * Adds a point to the path by moving to the specified
                  * coordinates specified in double precision.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract moveTo(x: number /*double*/, y: number /*double*/): void
+                public abstract moveTo(x: number /*double*/, y: number /*double*/): void
                 /**
                  * Adds a point to the path by drawing a straight line from the
                  * current coordinates to the new specified coordinates
@@ -71,7 +71,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract lineTo(x: number /*double*/, y: number /*double*/): void
+                public abstract lineTo(x: number /*double*/, y: number /*double*/): void
                 /**
                  * Adds a curved segment, defined by two new points, to the path by
                  * drawing a Quadratic curve that intersects both the current
@@ -86,7 +86,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract quadTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                public abstract quadTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                 /**
                  * Adds a curved segment, defined by three new points, to the path by
                  * drawing a B&eacute;zier curve that intersects both the current
@@ -103,7 +103,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract curveTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, x3: number /*double*/, y3: number /*double*/): void
+                public abstract curveTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, x3: number /*double*/, y3: number /*double*/): void
                 /**
                  * Closes the current subpath by drawing a straight line back to
                  * the coordinates of the last {@code moveTo}.  If the path is already
@@ -111,7 +111,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                closePath(): void
+                public closePath(): void
                 /**
                  * Appends the geometry of the specified {@code Shape} object to the
                  * path, possibly connecting the new geometry to the existing path
@@ -134,7 +134,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                append(s: java.awt.Shape, connect: boolean): void
+                public append(s: java.awt.Shape, connect: boolean): void
                 /**
                  * Appends the geometry of the specified
                  * {@link PathIterator} object
@@ -158,7 +158,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract append(pi: java.awt.geom.PathIterator, connect: boolean): void
+                public abstract append(pi: java.awt.geom.PathIterator, connect: boolean): void
                 /**
                  * Returns the fill style winding rule.
                  * @return an integer representing the current winding rule.
@@ -168,7 +168,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getWindingRule(): int
+                public getWindingRule(): number /*int*/
                 /**
                  * Sets the winding rule for this path to the specified value.
                  * @param rule an integer representing the specified
@@ -181,7 +181,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setWindingRule(rule: number /*int*/): void
+                public setWindingRule(rule: number /*int*/): void
                 /**
                  * Returns the coordinates most recently added to the end of the path
                  * as a {@link Point2D} object.
@@ -190,7 +190,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getCurrentPoint(): java.awt.geom.Point2D
+                public getCurrentPoint(): java.awt.geom.Point2D
                 /**
                  * Resets the path to empty.  The append position is set back to the
                  * beginning of the path and all coordinates and point types are
@@ -198,7 +198,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Transforms the geometry of this path using the specified
                  * {@link AffineTransform}.
@@ -208,7 +208,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract transform(at: java.awt.geom.AffineTransform): void
+                public abstract transform(at: java.awt.geom.AffineTransform): void
                 /**
                  * Returns a new {@code Shape} representing a transformed version
                  * of this {@code Path2D}.
@@ -230,13 +230,13 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                createTransformedShape(at: java.awt.geom.AffineTransform): java.awt.Shape
+                public createTransformedShape(at: java.awt.geom.AffineTransform): java.awt.Shape
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBounds(): java.awt.Rectangle
+                public getBounds(): java.awt.Rectangle
                 /**
                  * Tests if the specified coordinates are inside the closed
                  * boundary of the specified {@link PathIterator}.
@@ -252,7 +252,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(pi: java.awt.geom.PathIterator, x: number /*double*/, y: number /*double*/): boolean
+                public static contains(pi: java.awt.geom.PathIterator, x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * Tests if the specified {@link Point2D} is inside the closed
                  * boundary of the specified {@link PathIterator}.
@@ -267,19 +267,19 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(pi: java.awt.geom.PathIterator, p: java.awt.geom.Point2D): boolean
+                public static contains(pi: java.awt.geom.PathIterator, p: java.awt.geom.Point2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(p: java.awt.geom.Point2D): boolean
+                public contains(p: java.awt.geom.Point2D): boolean
                 /**
                  * Tests if the specified rectangular area is entirely inside the
                  * closed boundary of the specified {@link PathIterator}.
@@ -311,7 +311,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(pi: java.awt.geom.PathIterator, x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public static contains(pi: java.awt.geom.PathIterator, x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Tests if the specified {@link Rectangle2D} is entirely inside the
                  * closed boundary of the specified {@link PathIterator}.
@@ -340,7 +340,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(pi: java.awt.geom.PathIterator, r: java.awt.geom.Rectangle2D): boolean
+                public static contains(pi: java.awt.geom.PathIterator, r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -360,7 +360,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -380,7 +380,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                contains(r: java.awt.geom.Rectangle2D): boolean
+                public contains(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * Tests if the interior of the specified {@link PathIterator}
                  * intersects the interior of a specified set of rectangular
@@ -413,7 +413,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                intersects(pi: java.awt.geom.PathIterator, x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public static intersects(pi: java.awt.geom.PathIterator, x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Tests if the interior of the specified {@link PathIterator}
                  * intersects the interior of a specified {@link Rectangle2D}.
@@ -442,7 +442,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                intersects(pi: java.awt.geom.PathIterator, r: java.awt.geom.Rectangle2D): boolean
+                public static intersects(pi: java.awt.geom.PathIterator, r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -461,7 +461,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -480,7 +480,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                intersects(r: java.awt.geom.Rectangle2D): boolean
+                public intersects(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -492,7 +492,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
                 /**
                  * Creates a new object of the same class as this object.
                  * @return a clone of this instance.
@@ -501,7 +501,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract clone(): java.lang.Object
+                public abstract clone(): any
             }
         }
     }

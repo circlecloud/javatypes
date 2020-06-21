@@ -26,16 +26,16 @@ declare namespace org {
                      * <p>By default this is an instance of {@link AllEncompassingFormHttpMessageConverter}.
                      */
                     // @ts-ignore
-                    setFormConverter(converter: org.springframework.http.converter.FormHttpMessageConverter): void
+                    public setFormConverter(converter: org.springframework.http.converter.FormHttpMessageConverter): void
                     // @ts-ignore
-                    getFormConverter(): org.springframework.http.converter.FormHttpMessageConverter
+                    public getFormConverter(): org.springframework.http.converter.FormHttpMessageConverter
                     /**
                      * The default character set to use for reading form data.
                      * This is a shortcut for:<br>
                      * {@code getFormConverter.setCharset(charset)}.
                      */
                     // @ts-ignore
-                    setCharset(charset: java.nio.charset.Charset): void
+                    public setCharset(charset: java.nio.charset.Charset): void
                     // @ts-ignore
                     doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain): void
                 }

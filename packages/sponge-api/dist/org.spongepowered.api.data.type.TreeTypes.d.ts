@@ -6,17 +6,17 @@ declare namespace org {
                     // @ts-ignore
                     class TreeTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly ACACIA: org.spongepowered.api.data.type.TreeType
+                        public static readonly ACACIA: org.spongepowered.api.data.type.TreeType
                         // @ts-ignore
-                        readonly BIRCH: org.spongepowered.api.data.type.TreeType
+                        public static readonly BIRCH: org.spongepowered.api.data.type.TreeType
                         // @ts-ignore
-                        readonly DARK_OAK: org.spongepowered.api.data.type.TreeType
+                        public static readonly DARK_OAK: org.spongepowered.api.data.type.TreeType
                         // @ts-ignore
-                        readonly JUNGLE: org.spongepowered.api.data.type.TreeType
+                        public static readonly JUNGLE: org.spongepowered.api.data.type.TreeType
                         // @ts-ignore
-                        readonly OAK: org.spongepowered.api.data.type.TreeType
+                        public static readonly OAK: org.spongepowered.api.data.type.TreeType
                         // @ts-ignore
-                        readonly SPRUCE: org.spongepowered.api.data.type.TreeType
+                        public static readonly SPRUCE: org.spongepowered.api.data.type.TreeType
                     }
                 }
             }

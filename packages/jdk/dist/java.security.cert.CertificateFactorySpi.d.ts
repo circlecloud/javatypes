@@ -25,7 +25,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class CertificateFactorySpi extends java.lang.Object {
+            abstract class CertificateFactorySpi extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -59,7 +59,7 @@ declare namespace java {
                  * @exception CertificateException on parsing errors.
                  */
                 // @ts-ignore
-                abstract engineGenerateCertificate(inStream: java.io.InputStream): java.security.cert.Certificate
+                public abstract engineGenerateCertificate(inStream: java.io.InputStream): java.security.cert.Certificate
                 /**
                  * Generates a {@code CertPath} object and initializes it with
                  * the data read from the {@code InputStream} inStream. The data
@@ -76,7 +76,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                engineGenerateCertPath(inStream: java.io.InputStream): java.security.cert.CertPath
+                public engineGenerateCertPath(inStream: java.io.InputStream): java.security.cert.CertPath
                 /**
                  * Generates a {@code CertPath} object and initializes it with
                  * the data read from the {@code InputStream} inStream. The data
@@ -95,7 +95,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                engineGenerateCertPath(inStream: java.io.InputStream, encoding: string): java.security.cert.CertPath
+                public engineGenerateCertPath(inStream: java.io.InputStream, encoding: java.lang.String | string): java.security.cert.CertPath
                 /**
                  * Generates a {@code CertPath} object and initializes it with
                  * a {@code List} of {@code Certificate}s.
@@ -115,7 +115,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                engineGenerateCertPath(certificates: Array<java.security.cert.Certificate>): java.security.cert.CertPath
+                public engineGenerateCertPath(certificates: java.util.List<any> | Array<any>): java.security.cert.CertPath
                 /**
                  * Returns an iteration of the {@code CertPath} encodings supported
                  * by this certificate factory, with the default encoding first. See
@@ -137,7 +137,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                engineGetCertPathEncodings(): java.util.Iterator<java.lang.String>
+                public engineGetCertPathEncodings(): java.util.Iterator<java.lang.String | string>
                 /**
                  * Returns a (possibly empty) collection view of the certificates read
                  * from the given input stream {@code inStream}.
@@ -169,7 +169,7 @@ declare namespace java {
                  * @exception CertificateException on parsing errors.
                  */
                 // @ts-ignore
-                abstract engineGenerateCertificates(inStream: java.io.InputStream): java.util.Collection<? extends java.security.cert.Certificate>
+                public abstract engineGenerateCertificates(inStream: java.io.InputStream): Array<any>
                 /**
                  * Generates a certificate revocation list (CRL) object and initializes it
                  * with the data read from the input stream {@code inStream}.
@@ -195,7 +195,7 @@ declare namespace java {
                  * @exception CRLException on parsing errors.
                  */
                 // @ts-ignore
-                abstract engineGenerateCRL(inStream: java.io.InputStream): java.security.cert.CRL
+                public abstract engineGenerateCRL(inStream: java.io.InputStream): java.security.cert.CRL
                 /**
                  * Returns a (possibly empty) collection view of the CRLs read
                  * from the given input stream {@code inStream}.
@@ -224,7 +224,7 @@ declare namespace java {
                  * @exception CRLException on parsing errors.
                  */
                 // @ts-ignore
-                abstract engineGenerateCRLs(inStream: java.io.InputStream): java.util.Collection<? extends java.security.cert.CRL>
+                public abstract engineGenerateCRLs(inStream: java.io.InputStream): Array<any>
             }
         }
     }

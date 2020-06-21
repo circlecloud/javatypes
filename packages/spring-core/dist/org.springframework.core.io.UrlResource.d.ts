@@ -34,7 +34,7 @@ declare namespace org {
                      * @see java.net.URL#URL(String)
                      */
                     // @ts-ignore
-                    constructor(path: string)
+                    constructor(path: java.lang.String | string)
                     /**
                      * Create a new {@code UrlResource} based on a URI specification.
                      * <p>The given parts will automatically get encoded if necessary.
@@ -46,7 +46,7 @@ declare namespace org {
                      * @see java.net.URI#URI(String, String, String)
                      */
                     // @ts-ignore
-                    constructor(protocol: string, location: string)
+                    constructor(protocol: java.lang.String | string, location: java.lang.String | string)
                     /**
                      * Create a new {@code UrlResource} based on a URI specification.
                      * <p>The given parts will automatically get encoded if necessary.
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see java.net.URI#URI(String, String, String)
                      */
                     // @ts-ignore
-                    constructor(protocol: string, location: string, fragment: string)
+                    constructor(protocol: java.lang.String | string, location: java.lang.String | string, fragment: java.lang.String | string)
                     /**
                      * This implementation opens an InputStream for the given URL.
                      * <p>It sets the {@code useCaches} flag to {@code false},
@@ -70,34 +70,34 @@ declare namespace org {
                      * @see java.net.URLConnection#getInputStream()
                      */
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     /**
                      * This implementation returns the underlying URL reference.
                      */
                     // @ts-ignore
-                    getURL(): java.net.URL
+                    public getURL(): java.net.URL
                     /**
                      * This implementation returns the underlying URI directly,
                      * if possible.
                      */
                     // @ts-ignore
-                    getURI(): java.net.URI
+                    public getURI(): java.net.URI
                     // @ts-ignore
-                    isFile(): boolean
+                    public isFile(): boolean
                     /**
                      * This implementation returns a File reference for the underlying URL/URI,
                      * provided that it refers to a file in the file system.
                      * @see org.springframework.util.ResourceUtils#getFile(java.net.URL, String)
                      */
                     // @ts-ignore
-                    getFile(): java.io.File
+                    public getFile(): java.io.File
                     /**
                      * This implementation creates a {@code UrlResource}, delegating to
                      * {@link #createRelativeURL(String)} for adapting the relative path.
                      * @see #createRelativeURL(String)
                      */
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * This delegate creates a {@code java.net.URL}, applying the given path
                      * relative to the path of the underlying URL of this resource descriptor.
@@ -107,28 +107,28 @@ declare namespace org {
                      * @see java.net.URL#URL(java.net.URL, String)
                      */
                     // @ts-ignore
-                    createRelativeURL(relativePath: string): java.net.URL
+                    createRelativeURL(relativePath: java.lang.String | string): java.net.URL
                     /**
                      * This implementation returns the name of the file that this URL refers to.
                      * @see java.net.URL#getPath()
                      */
                     // @ts-ignore
-                    getFilename(): java.lang.String
+                    public getFilename(): string
                     /**
                      * This implementation returns a description that includes the URL.
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * This implementation compares the underlying URL references.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the hash code of the underlying URL reference.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

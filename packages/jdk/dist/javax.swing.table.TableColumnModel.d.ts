@@ -61,7 +61,7 @@ declare namespace javax {
                  * @return the number of columns in the model
                  */
                 // @ts-ignore
-                getColumnCount(): int
+                getColumnCount(): number /*int*/
                 /**
                  * Returns an <code>Enumeration</code> of all the columns in the model.
                  * @return an <code>Enumeration</code> of all the columns in the model
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see #getColumn
                  */
                 // @ts-ignore
-                getColumnIndex(columnIdentifier: any): int
+                getColumnIndex(columnIdentifier: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the <code>TableColumn</code> object for the column at
                  * <code>columnIndex</code>.
@@ -97,7 +97,7 @@ declare namespace javax {
                  * @return the margin, in pixels, between the cells
                  */
                 // @ts-ignore
-                getColumnMargin(): int
+                getColumnMargin(): number /*int*/
                 /**
                  * Returns the index of the column that lies on the
                  * horizontal point, <code>xPosition</code>;
@@ -119,13 +119,13 @@ declare namespace javax {
                  * @see javax.swing.JTable#columnAtPoint
                  */
                 // @ts-ignore
-                getColumnIndexAtX(xPosition: number /*int*/): int
+                getColumnIndexAtX(xPosition: number /*int*/): number /*int*/
                 /**
                  * Returns the total width of all the columns.
                  * @return the total computed width of all columns
                  */
                 // @ts-ignore
-                getTotalColumnWidth(): int
+                getTotalColumnWidth(): number /*int*/
                 /**
                  * Sets whether the columns in this model may be selected.
                  * @param flag   true if columns may be selected; otherwise false
@@ -146,13 +146,13 @@ declare namespace javax {
                  *           selected columns; or an empty array if nothing is selected
                  */
                 // @ts-ignore
-                getSelectedColumns(): int[]
+                getSelectedColumns(): number /*int*/[]
                 /**
                  * Returns the number of selected columns.
                  * @return the number of selected columns; or 0 if no columns are selected
                  */
                 // @ts-ignore
-                getSelectedColumnCount(): int
+                getSelectedColumnCount(): number /*int*/
                 /**
                  * Sets the selection model.
                  * @param newModel  a <code>ListSelectionModel</code> object

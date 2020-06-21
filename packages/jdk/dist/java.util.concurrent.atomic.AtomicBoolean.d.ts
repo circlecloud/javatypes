@@ -30,7 +30,7 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    get(): boolean
+                    public get(): boolean
                     /**
                      * Atomically sets the value to the given updated value
                      * if the current value {@code ==} the expected value.
@@ -40,7 +40,7 @@ declare namespace java {
                      *  the actual value was not equal to the expected value.
                      */
                     // @ts-ignore
-                    compareAndSet(expect: boolean, update: boolean): boolean
+                    public compareAndSet(expect: boolean, update: boolean): boolean
                     /**
                      * Atomically sets the value to the given updated value
                      * if the current value {@code ==} the expected value.
@@ -52,33 +52,33 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    weakCompareAndSet(expect: boolean, update: boolean): boolean
+                    public weakCompareAndSet(expect: boolean, update: boolean): boolean
                     /**
                      * Unconditionally sets to the given value.
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    set(newValue: boolean): void
+                    public set(newValue: boolean): void
                     /**
                      * Eventually sets to the given value.
                      * @param newValue the new value
                      * @since 1.6
                      */
                     // @ts-ignore
-                    lazySet(newValue: boolean): void
+                    public lazySet(newValue: boolean): void
                     /**
                      * Atomically sets to the given value and returns the previous value.
                      * @param newValue the new value
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(newValue: boolean): boolean
+                    public getAndSet(newValue: boolean): boolean
                     /**
                      * Returns the String representation of the current value.
                      * @return the String representation of the current value
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

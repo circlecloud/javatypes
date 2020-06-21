@@ -12,19 +12,19 @@ declare namespace javax {
                  * The value of this cell.
                  */
                 // @ts-ignore
-                value: any
+                value: java.lang.Object | any
                 /**
                  * Returns the value of this cell.
                  * @return the value of this cell
                  */
                 // @ts-ignore
-                getCellEditorValue(): java.lang.Object
+                public getCellEditorValue(): any
                 /**
                  * Sets the value of this cell.
                  * @param value the new value of this cell
                  */
                 // @ts-ignore
-                setValue(value: any): void
+                public setValue(value: java.lang.Object | any): void
                 /**
                  * Returns true if <code>anEvent</code> is <b>not</b> a
                  * <code>MouseEvent</code>.  Otherwise, it returns true
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see #shouldSelectCell
                  */
                 // @ts-ignore
-                isCellEditable(anEvent: java.util.EventObject): boolean
+                public isCellEditable(anEvent: java.util.EventObject): boolean
                 /**
                  * Returns true to indicate that the editing cell may
                  * be selected.
@@ -45,13 +45,13 @@ declare namespace javax {
                  * @see #isCellEditable
                  */
                 // @ts-ignore
-                shouldSelectCell(anEvent: java.util.EventObject): boolean
+                public shouldSelectCell(anEvent: java.util.EventObject): boolean
                 /**
                  * Returns true to indicate that editing has begun.
                  * @param anEvent          the event
                  */
                 // @ts-ignore
-                startCellEditing(anEvent: java.util.EventObject): boolean
+                public startCellEditing(anEvent: java.util.EventObject): boolean
                 /**
                  * Stops editing and
                  * returns true to indicate that editing has stopped.
@@ -59,26 +59,26 @@ declare namespace javax {
                  * @return true
                  */
                 // @ts-ignore
-                stopCellEditing(): boolean
+                public stopCellEditing(): boolean
                 /**
                  * Cancels editing.  This method calls <code>fireEditingCanceled</code>.
                  */
                 // @ts-ignore
-                cancelCellEditing(): void
+                public cancelCellEditing(): void
                 /**
                  * When an action is performed, editing is ended.
                  * @param e the action event
                  * @see #stopCellEditing
                  */
                 // @ts-ignore
-                actionPerformed(e: java.awt.event.ActionEvent): void
+                public actionPerformed(e: java.awt.event.ActionEvent): void
                 /**
                  * When an item's state changes, editing is ended.
                  * @param e the action event
                  * @see #stopCellEditing
                  */
                 // @ts-ignore
-                itemStateChanged(e: java.awt.event.ItemEvent): void
+                public itemStateChanged(e: java.awt.event.ItemEvent): void
             }
         }
     }

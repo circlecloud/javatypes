@@ -39,7 +39,7 @@ declare namespace org {
                          * @see #resolveStringValue(String)
                          */
                         // @ts-ignore
-                        visitBeanDefinition(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
+                        public visitBeanDefinition(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
                         // @ts-ignore
                         visitParentName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
                         // @ts-ignore
@@ -53,26 +53,26 @@ declare namespace org {
                         // @ts-ignore
                         visitPropertyValues(pvs: org.springframework.beans.MutablePropertyValues): void
                         // @ts-ignore
-                        visitIndexedArgumentValues(ias: java.util.Map<java.lang.Integer, org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): void
+                        visitIndexedArgumentValues(ias: java.util.Map<java.lang.Integer | number, org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): void
                         // @ts-ignore
-                        visitGenericArgumentValues(gas: Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): void
+                        visitGenericArgumentValues(gas: java.util.List<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder> | Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): void
                         // @ts-ignore
-                        resolveValue(value: any): java.lang.Object
+                        resolveValue(value: java.lang.Object | any): any
                         // @ts-ignore
-                        visitArray(arrayVal: any[]): void
+                        visitArray(arrayVal: java.lang.Object[] | any[]): void
                         // @ts-ignore
-                        visitList(listVal: Array): void
+                        visitList(listVal: java.util.List<any> | Array<any>): void
                         // @ts-ignore
-                        visitSet(setVal: Array): void
+                        visitSet(setVal: java.util.Set<any> | Array<any>): void
                         // @ts-ignore
-                        visitMap(mapVal: java.util.Map<any, ?>): void
+                        visitMap(mapVal: java.util.Map<any, any>): void
                         /**
                          * Resolve the given String value, for example parsing placeholders.
                          * @param strVal the original String value
                          * @return the resolved String value
                          */
                         // @ts-ignore
-                        resolveStringValue(strVal: string): java.lang.String
+                        resolveStringValue(strVal: java.lang.String | string): string
                     }
                 }
             }

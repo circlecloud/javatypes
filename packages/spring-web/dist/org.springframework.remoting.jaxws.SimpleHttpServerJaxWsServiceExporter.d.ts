@@ -33,14 +33,14 @@ declare namespace org {
                      * {@link #setBacklog "backlog"} properties (or rely on the defaults there).
                      */
                     // @ts-ignore
-                    setServer(server: com.sun.net.httpserver.HttpServer): void
+                    public setServer(server: com.sun.net.httpserver.HttpServer): void
                     /**
                      * Specify the HTTP server's port. Default is 8080.
                      * <p>Only applicable for a locally configured HTTP server.
                      * Ignored when the {@link #setServer "server"} property has been specified.
                      */
                     // @ts-ignore
-                    setPort(port: number /*int*/): void
+                    public setPort(port: number /*int*/): void
                     /**
                      * Specify the HTTP server's hostname to bind to. Default is localhost;
                      * can be overridden with a specific network address to bind to.
@@ -48,7 +48,7 @@ declare namespace org {
                      * Ignored when the {@link #setServer "server"} property has been specified.
                      */
                     // @ts-ignore
-                    setHostname(hostname: string): void
+                    public setHostname(hostname: java.lang.String | string): void
                     /**
                      * Specify the HTTP server's TCP backlog. Default is -1,
                      * indicating the system's default value.
@@ -56,7 +56,7 @@ declare namespace org {
                      * Ignored when the {@link #setServer "server"} property has been specified.
                      */
                     // @ts-ignore
-                    setBacklog(backlog: number /*int*/): void
+                    public setBacklog(backlog: number /*int*/): void
                     /**
                      * Specify the number of seconds to wait until HTTP exchanges have
                      * completed when shutting down the HTTP server. Default is 0.
@@ -64,7 +64,7 @@ declare namespace org {
                      * Ignored when the {@link #setServer "server"} property has been specified.
                      */
                     // @ts-ignore
-                    setShutdownDelay(shutdownDelay: number /*int*/): void
+                    public setShutdownDelay(shutdownDelay: number /*int*/): void
                     /**
                      * Set the base path for context publication. Default is "/".
                      * <p>For each context publication path, the service name will be
@@ -74,21 +74,21 @@ declare namespace org {
                      * @see javax.jws.WebService#serviceName()
                      */
                     // @ts-ignore
-                    setBasePath(basePath: string): void
+                    public setBasePath(basePath: java.lang.String | string): void
                     /**
                      * Register common {@link com.sun.net.httpserver.Filter Filters} to be
                      * applied to all detected {@link javax.jws.WebService} annotated beans.
                      */
                     // @ts-ignore
-                    setFilters(filters: Array<com.sun.net.httpserver.Filter>): void
+                    public setFilters(filters: java.util.List<com.sun.net.httpserver.Filter> | Array<com.sun.net.httpserver.Filter>): void
                     /**
                      * Register a common {@link com.sun.net.httpserver.Authenticator} to be
                      * applied to all detected {@link javax.jws.WebService} annotated beans.
                      */
                     // @ts-ignore
-                    setAuthenticator(authenticator: com.sun.net.httpserver.Authenticator): void
+                    public setAuthenticator(authenticator: com.sun.net.httpserver.Authenticator): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
                     publishEndpoint(endpoint: javax.xml.ws.Endpoint, annotation: javax.jws.WebService): void
                     // @ts-ignore
@@ -100,7 +100,7 @@ declare namespace org {
                      * @return the fully populated HttpContext
                      */
                     // @ts-ignore
-                    buildHttpContext(endpoint: javax.xml.ws.Endpoint, serviceName: string): com.sun.net.httpserver.HttpContext
+                    buildHttpContext(endpoint: javax.xml.ws.Endpoint, serviceName: java.lang.String | string): com.sun.net.httpserver.HttpContext
                     /**
                      * Calculate the full endpoint path for the given endpoint.
                      * @param endpoint the JAX-WS Provider Endpoint object
@@ -108,9 +108,9 @@ declare namespace org {
                      * @return the full endpoint path
                      */
                     // @ts-ignore
-                    calculateEndpointPath(endpoint: javax.xml.ws.Endpoint, serviceName: string): java.lang.String
+                    calculateEndpointPath(endpoint: javax.xml.ws.Endpoint, serviceName: java.lang.String | string): string
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

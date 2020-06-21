@@ -15,7 +15,7 @@ declare namespace javax {
                  * @return java.util.List&lt;Handler> Handler chain
                  */
                 // @ts-ignore
-                getHandlerChain(): java.util.List<javax.xml.ws.handler.Handler>
+                getHandlerChain(): Array<javax.xml.ws.handler.Handler<any>>
                 /**
                  * Sets the handler chain for the protocol binding instance.
                  * @param chain    A List of handler configuration entries
@@ -27,7 +27,7 @@ declare namespace javax {
                  *           chain.
                  */
                 // @ts-ignore
-                setHandlerChain(chain: Array<javax.xml.ws.handler.Handler>): void
+                setHandlerChain(chain: java.util.List<javax.xml.ws.handler.Handler<any>> | Array<javax.xml.ws.handler.Handler<any>>): void
                 /**
                  * Get the URI for this binding instance.
                  * @return String The binding identifier for the port.
@@ -35,7 +35,7 @@ declare namespace javax {
                  * @since JAX-WS 2.1
                  */
                 // @ts-ignore
-                getBindingID(): java.lang.String
+                getBindingID(): string
             }
         }
     }

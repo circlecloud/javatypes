@@ -28,12 +28,12 @@ declare namespace javax {
                      *       if there weren't any
                      */
                     // @ts-ignore
-                    getEvents(): javax.xml.bind.ValidationEvent[]
+                    public getEvents(): javax.xml.bind.ValidationEvent[]
                     /**
                      * Clear all collected errors and warnings.
                      */
                     // @ts-ignore
-                    reset(): void
+                    public reset(): void
                     /**
                      * Returns true if this event collector contains at least one
                      * ValidationEvent.
@@ -41,9 +41,9 @@ declare namespace javax {
                      *          ValidationEvent, false otherwise
                      */
                     // @ts-ignore
-                    hasEvents(): boolean
+                    public hasEvents(): boolean
                     // @ts-ignore
-                    handleEvent(event: javax.xml.bind.ValidationEvent): boolean
+                    public handleEvent(event: javax.xml.bind.ValidationEvent): boolean
                 }
             }
         }

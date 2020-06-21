@@ -9,7 +9,7 @@ declare namespace org {
              * @deprecated as of 5.0 since the framework is based on Java 8+ now
              */
             // @ts-ignore
-            class UsesJava8 implements java.lang.annotation.Annotation {
+            abstract class UsesJava8 implements java.lang.annotation.Annotation {
             }
         }
     }

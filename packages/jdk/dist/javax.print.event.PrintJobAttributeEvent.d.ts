@@ -22,14 +22,14 @@ declare namespace javax {
                  * @return Print Job object.
                  */
                 // @ts-ignore
-                getPrintJob(): javax.print.DocPrintJob
+                public getPrintJob(): javax.print.DocPrintJob
                 /**
                  * Determine the printing attributes that changed and their new values.
                  * @return Attributes containing the new values for the print job
                  *  attributes that changed. The returned set may not be modifiable.
                  */
                 // @ts-ignore
-                getAttributes(): javax.print.attribute.PrintJobAttributeSet
+                public getAttributes(): javax.print.attribute.PrintJobAttributeSet
             }
         }
     }

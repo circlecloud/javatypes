@@ -21,14 +21,14 @@ declare namespace javax {
                  * @return the description.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                getDescription(): string
                 /**
                  * Returns the name of the constructor
                  * described by this <tt>OpenMBeanConstructorInfo</tt> instance.
                  * @return the name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns an array of <tt>OpenMBeanParameterInfo</tt> instances
                  * describing each parameter in the signature of the constructor
@@ -54,7 +54,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>OpenMBeanConstructorInfo</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>OpenMBeanConstructorInfo</code> instance.
                  * <p>
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>OpenMBeanConstructorInfo</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>OpenMBeanConstructorInfo</code> instance.
                  * <p>
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @return a string representation of this <code>OpenMBeanConstructorInfo</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

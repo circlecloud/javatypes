@@ -35,7 +35,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <code>name</code> is empty.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new SubjectDelegationPermission object with the
                  * specified name.  The name is the symbolic name of the
@@ -49,7 +49,7 @@ declare namespace javax {
                  *  or <code>actions</code> is not null.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

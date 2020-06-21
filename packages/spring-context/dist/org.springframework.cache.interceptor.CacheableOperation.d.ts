@@ -18,9 +18,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(b: org.springframework.cache.interceptor.CacheableOperation.Builder)
                     // @ts-ignore
-                    getUnless(): java.lang.String
+                    public getUnless(): string
                     // @ts-ignore
-                    isSync(): boolean
+                    public isSync(): boolean
                 }
             }
         }

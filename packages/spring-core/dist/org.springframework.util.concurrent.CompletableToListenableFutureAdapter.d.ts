@@ -24,21 +24,21 @@ declare namespace org {
                     // @ts-ignore
                     constructor(completableFuture: java.util.concurrent.CompletableFuture<T>)
                     // @ts-ignore
-                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any super T>): void
+                    public addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any>): void
                     // @ts-ignore
-                    addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any super T>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
+                    public addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
                     // @ts-ignore
-                    completable(): java.util.concurrent.CompletableFuture<T>
+                    public completable(): java.util.concurrent.CompletableFuture<T>
                     // @ts-ignore
-                    cancel(mayInterruptIfRunning: boolean): boolean
+                    public cancel(mayInterruptIfRunning: boolean): boolean
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    isDone(): boolean
+                    public isDone(): boolean
                     // @ts-ignore
-                    get(): T
+                    public get(): T
                     // @ts-ignore
-                    get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+                    public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
                 }
             }
         }

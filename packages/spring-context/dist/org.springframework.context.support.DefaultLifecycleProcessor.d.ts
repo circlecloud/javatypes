@@ -18,9 +18,9 @@ declare namespace org {
                      * <p>The default value is 30 seconds.
                      */
                     // @ts-ignore
-                    setTimeoutPerShutdownPhase(timeoutPerShutdownPhase: number /*long*/): void
+                    public setTimeoutPerShutdownPhase(timeoutPerShutdownPhase: number /*long*/): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     /**
                      * Start all registered beans that implement {@link Lifecycle} and are <i>not</i>
                      * already running. Any bean that implements {@link SmartLifecycle} will be
@@ -30,7 +30,7 @@ declare namespace org {
                      * will be started before the dependent bean regardless of the declared phase.
                      */
                     // @ts-ignore
-                    start(): void
+                    public start(): void
                     /**
                      * Stop all registered beans that implement {@link Lifecycle} and <i>are</i>
                      * currently running. Any bean that implements {@link SmartLifecycle} will be
@@ -40,20 +40,20 @@ declare namespace org {
                      * will be stopped before the dependency bean regardless of the declared phase.
                      */
                     // @ts-ignore
-                    stop(): void
+                    public stop(): void
                     // @ts-ignore
-                    onRefresh(): void
+                    public onRefresh(): void
                     // @ts-ignore
-                    onClose(): void
+                    public onClose(): void
                     // @ts-ignore
-                    isRunning(): boolean
+                    public isRunning(): boolean
                     /**
                      * Retrieve all applicable Lifecycle beans: all singletons that have already been created,
                      * as well as all SmartLifecycle beans (even if they are marked as lazy-init).
                      * @return the Map of applicable beans, with bean names as keys and bean instances as values
                      */
                     // @ts-ignore
-                    getLifecycleBeans(): java.util.Map<java.lang.String, org.springframework.context.Lifecycle>
+                    getLifecycleBeans(): java.util.Map<java.lang.String | string, org.springframework.context.Lifecycle>
                     /**
                      * Determine the lifecycle phase of the given bean.
                      * <p>The default implementation checks for the {@link Phased} interface, using
@@ -64,7 +64,7 @@ declare namespace org {
                      * @see SmartLifecycle
                      */
                     // @ts-ignore
-                    getPhase(bean: org.springframework.context.Lifecycle): int
+                    getPhase(bean: org.springframework.context.Lifecycle): number /*int*/
                 }
             }
         }

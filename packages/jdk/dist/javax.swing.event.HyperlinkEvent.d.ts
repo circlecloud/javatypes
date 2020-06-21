@@ -27,7 +27,7 @@ declare namespace javax {
                  * @param u the affected URL
                  */
                 // @ts-ignore
-                constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL)
+                constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL)
                 /**
                  * Creates a new object representing a hypertext link event.
                  * @param source the object responsible for the event
@@ -40,7 +40,7 @@ declare namespace javax {
                  *    URL.
                  */
                 // @ts-ignore
-                constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL, desc: string)
+                constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL, desc: java.lang.String | string)
                 /**
                  * Creates a new object representing a hypertext link event.
                  * @param source the object responsible for the event
@@ -56,7 +56,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL, desc: string, sourceElement: javax.swing.text.Element)
+                constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL, desc: java.lang.String | string, sourceElement: javax.swing.text.Element)
                 /**
                  * Creates a new object representing a hypertext link event.
                  * @param source the object responsible for the event
@@ -73,13 +73,13 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL, desc: string, sourceElement: javax.swing.text.Element, inputEvent: java.awt.event.InputEvent)
+                constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, u: java.net.URL, desc: java.lang.String | string, sourceElement: javax.swing.text.Element, inputEvent: java.awt.event.InputEvent)
                 /**
                  * Gets the type of event.
                  * @return the type
                  */
                 // @ts-ignore
-                getEventType(): javax.swing.event.HyperlinkEvent.EventType
+                public getEventType(): javax.swing.event.HyperlinkEvent.EventType
                 /**
                  * Get the description of the link as a string.
                  * This may be useful if a URL can't be formed
@@ -87,13 +87,13 @@ declare namespace javax {
                  * URL would be null.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Gets the URL that the link refers to.
                  * @return the URL
                  */
                 // @ts-ignore
-                getURL(): java.net.URL
+                public getURL(): java.net.URL
                 /**
                  * Returns the <code>Element</code> that corresponds to the source of the
                  * event. This will typically be an <code>Element</code> representing
@@ -104,7 +104,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getSourceElement(): javax.swing.text.Element
+                public getSourceElement(): javax.swing.text.Element
                 /**
                  * Returns the {@code InputEvent} that triggered the hyperlink event.
                  * This will typically be a {@code MouseEvent}.  If a constructor is used
@@ -114,7 +114,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getInputEvent(): java.awt.event.InputEvent
+                public getInputEvent(): java.awt.event.InputEvent
             }
         }
     }

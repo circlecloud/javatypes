@@ -46,14 +46,14 @@ declare namespace javax {
              *  relation set is unchanged
              */
             // @ts-ignore
-            add(relation: javax.accessibility.AccessibleRelation): boolean
+            public add(relation: javax.accessibility.AccessibleRelation): boolean
             /**
              * Adds all of the relations to the existing relation set.  Duplicate
              * entries are ignored.
              * @param relations  AccessibleRelation array describing the relation set.
              */
             // @ts-ignore
-            addAll(relations: javax.accessibility.AccessibleRelation[]): void
+            public addAll(relations: javax.accessibility.AccessibleRelation[]): void
             /**
              * Removes a relation from the current relation set.  If the relation
              * is not in the set, the relation set will be unchanged and the
@@ -65,18 +65,18 @@ declare namespace javax {
              *  relation set is unchanged
              */
             // @ts-ignore
-            remove(relation: javax.accessibility.AccessibleRelation): boolean
+            public remove(relation: javax.accessibility.AccessibleRelation): boolean
             /**
              * Removes all the relations from the current relation set.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns the number of relations in the relation set.
              * @return the number of relations in the relation set
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns whether the relation set contains a relation
              * that matches the specified key.
@@ -84,7 +84,7 @@ declare namespace javax {
              * @return true if the relation is in the relation set; otherwise false
              */
             // @ts-ignore
-            contains(key: string): boolean
+            public contains(key: java.lang.String | string): boolean
             /**
              * Returns the relation that matches the specified key.
              * @param key the AccessibleRelation key
@@ -92,13 +92,13 @@ declare namespace javax {
              *  Otherwise, null is returned.
              */
             // @ts-ignore
-            get(key: string): javax.accessibility.AccessibleRelation
+            public get(key: java.lang.String | string): javax.accessibility.AccessibleRelation
             /**
              * Returns the current relation set as an array of AccessibleRelation
              * @return AccessibleRelation array contacting the current relation.
              */
             // @ts-ignore
-            toArray(): javax.accessibility.AccessibleRelation[]
+            public toArray(): javax.accessibility.AccessibleRelation[]
             /**
              * Creates a localized String representing all the relations in the set
              * using the default locale.
@@ -106,7 +106,7 @@ declare namespace javax {
              * @see AccessibleBundle#toDisplayString
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

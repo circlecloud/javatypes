@@ -15,7 +15,7 @@ declare namespace java {
              * @serial exclude
              */
             // @ts-ignore
-            class Activatable extends java.rmi.server.RemoteServer {
+            abstract class Activatable extends java.rmi.server.RemoteServer {
                 /**
                  * Constructs an activatable remote object by registering
                  * an activation descriptor (with the specified location, data, and
@@ -53,7 +53,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(location: string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/)
+                constructor(location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/)
                 /**
                  * Constructs an activatable remote object by registering
                  * an activation descriptor (with the specified location, data, and
@@ -94,7 +94,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(location: string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory)
+                constructor(location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory)
                 /**
                  * Constructor used to activate/export the object on a specified
                  * port. An "activatable" remote object must have a constructor that
@@ -165,7 +165,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                register(desc: java.rmi.activation.ActivationDesc): java.rmi.Remote
+                public static register(desc: java.rmi.activation.ActivationDesc): java.rmi.Remote
                 /**
                  * Informs the system that the object with the corresponding activation
                  * <code>id</code> is currently inactive. If the object is currently
@@ -193,7 +193,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                inactive(id: java.rmi.activation.ActivationID): boolean
+                public static inactive(id: java.rmi.activation.ActivationID): boolean
                 /**
                  * Revokes previous registration for the activation descriptor
                  * associated with <code>id</code>. An object can no longer be
@@ -207,7 +207,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                unregister(id: java.rmi.activation.ActivationID): void
+                public static unregister(id: java.rmi.activation.ActivationID): void
                 /**
                  * Registers an activation descriptor (with the specified location,
                  * data, and restart mode) for the specified object, and exports that
@@ -246,7 +246,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, location: string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/): java.rmi.activation.ActivationID
+                public static exportObject(obj: java.rmi.Remote, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/): java.rmi.activation.ActivationID
                 /**
                  * Registers an activation descriptor (with the specified location,
                  * data, and restart mode) for the specified object, and exports that
@@ -308,7 +308,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, location: string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.activation.ActivationID
+                public static exportObject(obj: java.rmi.Remote, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, restart: boolean, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.activation.ActivationID
                 /**
                  * Export the activatable remote object to the RMI runtime to make
                  * the object available to receive incoming calls. The object is
@@ -329,7 +329,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, id: java.rmi.activation.ActivationID, port: number /*int*/): java.rmi.Remote
+                public static exportObject(obj: java.rmi.Remote, id: java.rmi.activation.ActivationID, port: number /*int*/): java.rmi.Remote
                 /**
                  * Export the activatable remote object to the RMI runtime to make
                  * the object available to receive incoming calls. The object is
@@ -353,7 +353,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, id: java.rmi.activation.ActivationID, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.Remote
+                public static exportObject(obj: java.rmi.Remote, id: java.rmi.activation.ActivationID, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.Remote
                 /**
                  * Remove the remote object, obj, from the RMI runtime. If
                  * successful, the object can no longer accept incoming RMI calls.
@@ -374,7 +374,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                unexportObject(obj: java.rmi.Remote, force: boolean): boolean
+                public static unexportObject(obj: java.rmi.Remote, force: boolean): boolean
             }
         }
     }

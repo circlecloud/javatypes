@@ -27,19 +27,19 @@ declare namespace javax {
                  * @return the private value <code>x</code>
                  */
                 // @ts-ignore
-                getX(): java.math.BigInteger
+                public getX(): java.math.BigInteger
                 /**
                  * Returns the prime modulus <code>p</code>.
                  * @return the prime modulus <code>p</code>
                  */
                 // @ts-ignore
-                getP(): java.math.BigInteger
+                public getP(): java.math.BigInteger
                 /**
                  * Returns the base generator <code>g</code>.
                  * @return the base generator <code>g</code>
                  */
                 // @ts-ignore
-                getG(): java.math.BigInteger
+                public getG(): java.math.BigInteger
             }
         }
     }

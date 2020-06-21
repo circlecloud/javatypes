@@ -43,7 +43,7 @@ declare namespace javax {
                      * accessing or accepting all the print data yet.
                      */
                     // @ts-ignore
-                    readonly JOB_INCOMING: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_INCOMING: javax.print.attribute.standard.JobStateReason
                     /**
                      * The printer has created the Print Job, but the printer is expecting
                      * additional print data before it can move the job into the PROCESSING
@@ -54,7 +54,7 @@ declare namespace javax {
                      * and JOB_INCOMING reasons at the same time.
                      */
                     // @ts-ignore
-                    readonly JOB_DATA_INSUFFICIENT: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_DATA_INSUFFICIENT: javax.print.attribute.standard.JobStateReason
                     /**
                      * The Printer could not access one or more documents passed by reference
                      * (i.e., the print data representation object is a URL). This reason is
@@ -69,7 +69,7 @@ declare namespace javax {
                      * objects.
                      */
                     // @ts-ignore
-                    readonly DOCUMENT_ACCESS_ERROR: javax.print.attribute.standard.JobStateReason
+                    public static readonly DOCUMENT_ACCESS_ERROR: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was not completely submitted for some unforeseen reason.
                      * Possibilities include (1) the printer has crashed before the job was
@@ -79,12 +79,12 @@ declare namespace javax {
                      * the job was fully submitted.
                      */
                     // @ts-ignore
-                    readonly SUBMISSION_INTERRUPTED: javax.print.attribute.standard.JobStateReason
+                    public static readonly SUBMISSION_INTERRUPTED: javax.print.attribute.standard.JobStateReason
                     /**
                      * The printer is transmitting the job to the output device.
                      */
                     // @ts-ignore
-                    readonly JOB_OUTGOING: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_OUTGOING: javax.print.attribute.standard.JobStateReason
                     /**
                      * The value of the job's {@link JobHoldUntil JobHoldUntil} attribute was
                      * specified with a date-time that is still in the future. The job must
@@ -94,7 +94,7 @@ declare namespace javax {
                      * {@link JobHoldUntil JobHoldUntil} job template attribute is supported.
                      */
                     // @ts-ignore
-                    readonly JOB_HOLD_UNTIL_SPECIFIED: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_HOLD_UNTIL_SPECIFIED: javax.print.attribute.standard.JobStateReason
                     /**
                      * At least one of the resources needed by the job, such as media, fonts,
                      * resource objects, etc., is not ready on any of the physical printers
@@ -106,39 +106,39 @@ declare namespace javax {
                      * job scheduling policy.
                      */
                     // @ts-ignore
-                    readonly RESOURCES_ARE_NOT_READY: javax.print.attribute.standard.JobStateReason
+                    public static readonly RESOURCES_ARE_NOT_READY: javax.print.attribute.standard.JobStateReason
                     /**
                      * The value of the printer's {@link PrinterStateReasons
                      * PrinterStateReasons} attribute contains a {@link PrinterStateReason
                      * PrinterStateReason} value of STOPPED_PARTLY.
                      */
                     // @ts-ignore
-                    readonly PRINTER_STOPPED_PARTLY: javax.print.attribute.standard.JobStateReason
+                    public static readonly PRINTER_STOPPED_PARTLY: javax.print.attribute.standard.JobStateReason
                     /**
                      * The value of the printer's {@link PrinterState PrinterState} attribute
                      * ia STOPPED.
                      */
                     // @ts-ignore
-                    readonly PRINTER_STOPPED: javax.print.attribute.standard.JobStateReason
+                    public static readonly PRINTER_STOPPED: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job is in the PROCESSING state, but more specifically, the printer
                      * ia interpreting the document data.
                      */
                     // @ts-ignore
-                    readonly JOB_INTERPRETING: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_INTERPRETING: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job is in the PROCESSING state, but more specifically, the printer
                      * has queued the document data.
                      */
                     // @ts-ignore
-                    readonly JOB_QUEUED: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_QUEUED: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job is in the PROCESSING state, but more specifically, the printer
                      * is interpreting document data and producing another electronic
                      * representation.
                      */
                     // @ts-ignore
-                    readonly JOB_TRANSFORMING: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_TRANSFORMING: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job is in the PENDING_HELD, PENDING, or PROCESSING state, but more
                      * specifically, the printer has completed enough processing of the document
@@ -151,7 +151,7 @@ declare namespace javax {
                      * PROCESSING state when marking does begin.
                      */
                     // @ts-ignore
-                    readonly JOB_QUEUED_FOR_MARKER: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_QUEUED_FOR_MARKER: javax.print.attribute.standard.JobStateReason
                     /**
                      * The output device is marking media. This value is useful for printers
                      * which spend a great deal of time processing (1) when no marking is
@@ -161,7 +161,7 @@ declare namespace javax {
                      * that impression or sheet counts are still increasing for the job.
                      */
                     // @ts-ignore
-                    readonly JOB_PRINTING: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_PRINTING: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was canceled by the owner of the job, i.e., by a user whose
                      * authenticated identity is the same as the value of the originating user
@@ -170,7 +170,7 @@ declare namespace javax {
                      * supported.
                      */
                     // @ts-ignore
-                    readonly JOB_CANCELED_BY_USER: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_CANCELED_BY_USER: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was canceled by the operator, i.e., by a user who has been
                      * authenticated as having operator privileges (whether local or remote). If
@@ -182,14 +182,14 @@ declare namespace javax {
                      * the owner of the job.
                      */
                     // @ts-ignore
-                    readonly JOB_CANCELED_BY_OPERATOR: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_CANCELED_BY_OPERATOR: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was canceled by an unidentified local user, i.e., a user at a
                      * console at the device. This value should be supported if the
                      * implementation supports canceling jobs at the console.
                      */
                     // @ts-ignore
-                    readonly JOB_CANCELED_AT_DEVICE: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_CANCELED_AT_DEVICE: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was aborted by the system. Either the job (1) is in the process
                      * of being aborted, (2) has been aborted by the system and placed in the
@@ -198,7 +198,7 @@ declare namespace javax {
                      * again. This value should be supported.
                      */
                     // @ts-ignore
-                    readonly ABORTED_BY_SYSTEM: javax.print.attribute.standard.JobStateReason
+                    public static readonly ABORTED_BY_SYSTEM: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was aborted by the system because the printer determined while
                      * attempting to decompress the document's data that the compression is
@@ -207,7 +207,7 @@ declare namespace javax {
                      * description attribute.
                      */
                     // @ts-ignore
-                    readonly UNSUPPORTED_COMPRESSION: javax.print.attribute.standard.JobStateReason
+                    public static readonly UNSUPPORTED_COMPRESSION: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was aborted by the system because the printer encountered an
                      * error in the document data while decompressing it. If the printer posts
@@ -215,7 +215,7 @@ declare namespace javax {
                      * have led to the UNSUPPORTED_COMPRESSION job state reason.
                      */
                     // @ts-ignore
-                    readonly COMPRESSION_ERROR: javax.print.attribute.standard.JobStateReason
+                    public static readonly COMPRESSION_ERROR: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was aborted by the system because the document data's document
                      * format (doc flavor) is not among those supported by the printer. If the
@@ -227,7 +227,7 @@ declare namespace javax {
                      * is required to be specified for each doc.
                      */
                     // @ts-ignore
-                    readonly UNSUPPORTED_DOCUMENT_FORMAT: javax.print.attribute.standard.JobStateReason
+                    public static readonly UNSUPPORTED_DOCUMENT_FORMAT: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job was aborted by the system because the printer encountered an
                      * error in the document data while processing it. If the printer posts this
@@ -235,7 +235,7 @@ declare namespace javax {
                      * led to the UNSUPPORTED_DOCUMENT_FORMAT job state reason.
                      */
                     // @ts-ignore
-                    readonly DOCUMENT_FORMAT_ERROR: javax.print.attribute.standard.JobStateReason
+                    public static readonly DOCUMENT_FORMAT_ERROR: javax.print.attribute.standard.JobStateReason
                     /**
                      * The requester has canceled the job or the printer has aborted the job,
                      * but the printer is still performing some actions on the job until a
@@ -250,31 +250,31 @@ declare namespace javax {
                      * CANCELED or ABORTED job states.
                      */
                     // @ts-ignore
-                    readonly PROCESSING_TO_STOP_POINT: javax.print.attribute.standard.JobStateReason
+                    public static readonly PROCESSING_TO_STOP_POINT: javax.print.attribute.standard.JobStateReason
                     /**
                      * The printer is off-line and accepting no jobs. All PENDING jobs are put
                      * into the PENDING_HELD state. This situation could be true if the
                      * service's or document transform's input is impaired or broken.
                      */
                     // @ts-ignore
-                    readonly SERVICE_OFF_LINE: javax.print.attribute.standard.JobStateReason
+                    public static readonly SERVICE_OFF_LINE: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job completed successfully. This value should be supported.
                      */
                     // @ts-ignore
-                    readonly JOB_COMPLETED_SUCCESSFULLY: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_COMPLETED_SUCCESSFULLY: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job completed with warnings. This value should be supported if the
                      * implementation detects warnings.
                      */
                     // @ts-ignore
-                    readonly JOB_COMPLETED_WITH_WARNINGS: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_COMPLETED_WITH_WARNINGS: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job completed with errors (and possibly warnings too). This value
                      * should be supported if the implementation detects errors.
                      */
                     // @ts-ignore
-                    readonly JOB_COMPLETED_WITH_ERRORS: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_COMPLETED_WITH_ERRORS: javax.print.attribute.standard.JobStateReason
                     /**
                      * This job is retained and is currently able to be restarted. If
                      * JOB_RESTARTABLE is contained in the job's {@link JobStateReasons
@@ -284,7 +284,7 @@ declare namespace javax {
                      * Print Service API at present.]</I>
                      */
                     // @ts-ignore
-                    readonly JOB_RESTARTABLE: javax.print.attribute.standard.JobStateReason
+                    public static readonly JOB_RESTARTABLE: javax.print.attribute.standard.JobStateReason
                     /**
                      * The job has been forwarded to a device or print system that is unable to
                      * send back status. The printer sets the job's {@link JobState JobState}
@@ -294,12 +294,12 @@ declare namespace javax {
                      * any better information.
                      */
                     // @ts-ignore
-                    readonly QUEUED_IN_DEVICE: javax.print.attribute.standard.JobStateReason
+                    public static readonly QUEUED_IN_DEVICE: javax.print.attribute.standard.JobStateReason
                     /**
                      * Returns the string table for class JobStateReason.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class JobStateReason.
                      */
@@ -315,7 +315,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -325,7 +325,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

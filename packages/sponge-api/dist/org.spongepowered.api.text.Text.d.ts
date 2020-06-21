@@ -20,49 +20,49 @@ declare namespace org {
                  * @see ScoreText
                  */
                 // @ts-ignore
-                class Text extends java.lang.Object implements org.spongepowered.api.text.TextRepresentable, org.spongepowered.api.data.DataSerializable, java.lang.Comparable<org.spongepowered.api.text.Text> {
+                abstract class Text extends java.lang.Object implements org.spongepowered.api.text.TextRepresentable, org.spongepowered.api.data.DataSerializable, java.lang.Comparable<org.spongepowered.api.text.Text> {
                     /**
                      * The empty, unformatted {@link Text} instance.
                      */
                     // @ts-ignore
-                    readonly EMPTY: org.spongepowered.api.text.Text
+                    public static readonly EMPTY: org.spongepowered.api.text.Text
                     /**
                      * An unformatted {@link Text} that will start a new line (if supported).
                      */
                     // @ts-ignore
-                    readonly NEW_LINE: org.spongepowered.api.text.LiteralText
+                    public static readonly NEW_LINE: org.spongepowered.api.text.LiteralText
                     /**
                      * A {@link Comparator} for texts that compares the plain text of two text
                      * instances.
                      */
                     // @ts-ignore
-                    PLAIN_COMPARATOR: java.util.Comparator<org.spongepowered.api.text.Text>
+                    public static PLAIN_COMPARATOR: java.util.Comparator<org.spongepowered.api.text.Text>
                     /**
                      * Returns the format of this {@link Text}.
                      * @return The format of this text
                      */
                     // @ts-ignore
-                    getFormat(): org.spongepowered.api.text.format.TextFormat
+                    public getFormat(): org.spongepowered.api.text.format.TextFormat
                     /**
                      * Returns the color of this {@link Text}.
                      * @return The color of this text
                      */
                     // @ts-ignore
-                    getColor(): org.spongepowered.api.text.format.TextColor
+                    public getColor(): org.spongepowered.api.text.format.TextColor
                     /**
                      * Returns the style of this {@link Text}. This will return a compound
                      * {@link TextStyle} if multiple different styles have been set.
                      * @return The style of this text
                      */
                     // @ts-ignore
-                    getStyle(): org.spongepowered.api.text.format.TextStyle
+                    public getStyle(): org.spongepowered.api.text.format.TextStyle
                     /**
                      * Returns the immutable list of children appended after the content of this
                      * {@link Text}.
                      * @return The immutable list of children
                      */
                     // @ts-ignore
-                    getChildren(): <any>
+                    public getChildren(): object
                     /**
                      * Returns an immutable {@link Iterable} over this text and all of its
                      * children. This is recursive, the children of the children will be also
@@ -70,7 +70,7 @@ declare namespace org {
                      * @return An iterable over this text and the children texts
                      */
                     // @ts-ignore
-                    withChildren(): java.lang.Iterable<org.spongepowered.api.text.Text>
+                    public withChildren(): java.lang.Iterable<org.spongepowered.api.text.Text>
                     /**
                      * Returns the {@link ClickAction} executed on the client when this
                      * {@link Text} gets clicked.
@@ -78,7 +78,7 @@ declare namespace org {
                      *          set
                      */
                     // @ts-ignore
-                    getClickAction(): java.util.Optional<org.spongepowered.api.text.action.ClickAction<?>>
+                    public getClickAction(): java.util.Optional<org.spongepowered.api.text.action.ClickAction<any>>
                     /**
                      * Returns the {@link HoverAction} executed on the client when this
                      * {@link Text} gets hovered.
@@ -86,7 +86,7 @@ declare namespace org {
                      *          set
                      */
                     // @ts-ignore
-                    getHoverAction(): java.util.Optional<org.spongepowered.api.text.action.HoverAction<?>>
+                    public getHoverAction(): java.util.Optional<org.spongepowered.api.text.action.HoverAction<any>>
                     /**
                      * Returns the {@link ShiftClickAction} executed on the client when this
                      * {@link Text} gets shift-clicked.
@@ -94,13 +94,13 @@ declare namespace org {
                      *          if not set
                      */
                     // @ts-ignore
-                    getShiftClickAction(): java.util.Optional<org.spongepowered.api.text.action.ShiftClickAction<?>>
+                    public getShiftClickAction(): java.util.Optional<org.spongepowered.api.text.action.ShiftClickAction<any>>
                     /**
                      * Returns whether this {@link Text} is empty.
                      * @return {#code true} if this text is empty
                      */
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     /**
                      * Returns a new {@link Builder} with the content, formatting and actions of
                      * this text. This can be used to edit an otherwise immutable {@link Text}
@@ -108,21 +108,21 @@ declare namespace org {
                      * @return A new message builder with the content of this text
                      */
                     // @ts-ignore
-                    abstract toBuilder(): org.spongepowered.api.text.Text.Builder
+                    public abstract toBuilder(): org.spongepowered.api.text.Text.Builder
                     /**
                      * Returns a plain text representation of this {@link Text} without any
                      * formatting.
                      * @return This text converted to plain text
                      */
                     // @ts-ignore
-                    toPlain(): java.lang.String
+                    public toPlain(): string
                     /**
                      * Returns a plain text representation of this {@link Text} without any
                      * children.
                      * @return This text (without children) converted to plain text
                      */
                     // @ts-ignore
-                    toPlainSingle(): java.lang.String
+                    public toPlainSingle(): string
                     /**
                      * Concatenates the specified {@link Text} to this Text and returns the
                      * result.
@@ -130,14 +130,14 @@ declare namespace org {
                      * @return Concatenated text
                      */
                     // @ts-ignore
-                    concat(other: org.spongepowered.api.text.Text): org.spongepowered.api.text.Text
+                    public concat(other: org.spongepowered.api.text.Text): org.spongepowered.api.text.Text
                     /**
                      * Removes all empty texts from the beginning and end of this
                      * text.
                      * @return Text result
                      */
                     // @ts-ignore
-                    trim(): org.spongepowered.api.text.Text
+                    public trim(): org.spongepowered.api.text.Text
                     /**
                      * Replaces a pattern in this text with a {@link Text}, preserving
                      * formatting where possible.
@@ -153,7 +153,7 @@ declare namespace org {
                      * @return The resulting (copied) text
                      */
                     // @ts-ignore
-                    replace(oldValue: java.util.regex.Pattern, newValue: org.spongepowered.api.text.Text, lossy: boolean): org.spongepowered.api.text.Text
+                    public replace(oldValue: java.util.regex.Pattern, newValue: org.spongepowered.api.text.Text, lossy: boolean): org.spongepowered.api.text.Text
                     /**
                      * Replaces a pattern in this text with a {@link Text}, preserving all
                      * formatting.
@@ -164,7 +164,7 @@ declare namespace org {
                      * @return The resulting (copied) text
                      */
                     // @ts-ignore
-                    replace(oldValue: java.util.regex.Pattern, newValue: org.spongepowered.api.text.Text): org.spongepowered.api.text.Text
+                    public replace(oldValue: java.util.regex.Pattern, newValue: org.spongepowered.api.text.Text): org.spongepowered.api.text.Text
                     /**
                      * Replaces a string within this text with a {@link Text}, preserving
                      * formatting where possible.
@@ -180,7 +180,7 @@ declare namespace org {
                      * @return The resulting (copied) text
                      */
                     // @ts-ignore
-                    replace(oldValue: string, newValue: org.spongepowered.api.text.Text, lossy: boolean): org.spongepowered.api.text.Text
+                    public replace(oldValue: java.lang.String | string, newValue: org.spongepowered.api.text.Text, lossy: boolean): org.spongepowered.api.text.Text
                     /**
                      * Replaces a string within this text with a {@link Text}, preserving all
                      * formatting.
@@ -191,27 +191,27 @@ declare namespace org {
                      * @return The resulting (copied) text
                      */
                     // @ts-ignore
-                    replace(oldValue: string, newValue: org.spongepowered.api.text.Text): org.spongepowered.api.text.Text
+                    public replace(oldValue: java.lang.String | string, newValue: org.spongepowered.api.text.Text): org.spongepowered.api.text.Text
                     // @ts-ignore
-                    getContentVersion(): int
+                    public getContentVersion(): number /*int*/
                     // @ts-ignore
-                    toContainer(): org.spongepowered.api.data.DataContainer
+                    public toContainer(): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    compareTo(o: org.spongepowered.api.text.Text): int
+                    public compareTo(o: org.spongepowered.api.text.Text): number /*int*/
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    toText(): org.spongepowered.api.text.Text
+                    public toText(): org.spongepowered.api.text.Text
                     /**
                      * Returns an empty, unformatted {@link Text} instance.
                      * @return An empty text
                      */
                     // @ts-ignore
-                    of(): org.spongepowered.api.text.Text
+                    public static of(): org.spongepowered.api.text.Text
                     /**
                      * Creates a {@link Text} with the specified plain text. The created text
                      * won't have any formatting or events configured.
@@ -220,7 +220,7 @@ declare namespace org {
                      * @see LiteralText
                      */
                     // @ts-ignore
-                    of(content: string): org.spongepowered.api.text.LiteralText
+                    public static of(content: java.lang.String | string): org.spongepowered.api.text.LiteralText
                     /**
                      * Creates a {@link Text} with the specified char as plain text. The created
                      * text won't have any formatting or events configured.
@@ -229,7 +229,7 @@ declare namespace org {
                      * @see LiteralText
                      */
                     // @ts-ignore
-                    of(content: string): org.spongepowered.api.text.LiteralText
+                    public static of(content: string): org.spongepowered.api.text.LiteralText
                     /**
                      * Creates a new unformatted {@link TranslatableText} with the given
                      * {@link Translation} and arguments.
@@ -239,7 +239,7 @@ declare namespace org {
                      * @see TranslatableText
                      */
                     // @ts-ignore
-                    of(translation: org.spongepowered.api.text.translation.Translation, ...args: any[]): org.spongepowered.api.text.TranslatableText
+                    public static of(translation: org.spongepowered.api.text.translation.Translation, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText
                     /**
                      * Creates a new unformatted {@link TranslatableText} from the given
                      * {@link Translatable}.
@@ -249,7 +249,7 @@ declare namespace org {
                      * @see TranslatableText
                      */
                     // @ts-ignore
-                    of(translatable: org.spongepowered.api.text.translation.Translatable, ...args: any[]): org.spongepowered.api.text.TranslatableText
+                    public static of(translatable: org.spongepowered.api.text.translation.Translatable, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText
                     /**
                      * Creates a new unformatted {@link SelectorText} with the given selector.
                      * @param selector The selector for the text
@@ -257,7 +257,7 @@ declare namespace org {
                      * @see SelectorText
                      */
                     // @ts-ignore
-                    of(selector: org.spongepowered.api.text.selector.Selector): org.spongepowered.api.text.SelectorText
+                    public static of(selector: org.spongepowered.api.text.selector.Selector): org.spongepowered.api.text.SelectorText
                     /**
                      * Creates a new unformatted {@link ScoreText} with the given score.
                      * @param score The score for the text
@@ -265,7 +265,7 @@ declare namespace org {
                      * @see ScoreText
                      */
                     // @ts-ignore
-                    of(score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText
+                    public static of(score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText
                     /**
                      * Builds a {@link Text} from a given array of objects.
                      * <p>For instance, you can use this like
@@ -284,13 +284,13 @@ declare namespace org {
                      * @return The built text object
                      */
                     // @ts-ignore
-                    of(...objects: any[]): org.spongepowered.api.text.Text
+                    public static of(...objects: java.lang.Object[] | any[]): org.spongepowered.api.text.Text
                     /**
                      * Creates a {@link Text.Builder} with empty text.
                      * @return A new text builder with empty text
                      */
                     // @ts-ignore
-                    builder(): org.spongepowered.api.text.Text.Builder
+                    public static builder(): org.spongepowered.api.text.Text.Builder
                     /**
                      * Creates a new unformatted {@link LiteralText.Builder} with the specified
                      * content.
@@ -300,7 +300,7 @@ declare namespace org {
                      * @see LiteralText.Builder
                      */
                     // @ts-ignore
-                    builder(content: string): org.spongepowered.api.text.LiteralText.Builder
+                    public static builder(content: java.lang.String | string): org.spongepowered.api.text.LiteralText.Builder
                     /**
                      * Creates a new unformatted {@link LiteralText.Builder} with the specified
                      * content.
@@ -310,7 +310,7 @@ declare namespace org {
                      * @see LiteralText.Builder
                      */
                     // @ts-ignore
-                    builder(content: string): org.spongepowered.api.text.LiteralText.Builder
+                    public static builder(content: string): org.spongepowered.api.text.LiteralText.Builder
                     /**
                      * Creates a new {@link LiteralText.Builder} with the formatting and actions
                      * of the specified {@link Text} and the given content.
@@ -321,7 +321,7 @@ declare namespace org {
                      * @see LiteralText.Builder
                      */
                     // @ts-ignore
-                    builder(text: org.spongepowered.api.text.Text, content: string): org.spongepowered.api.text.LiteralText.Builder
+                    public static builder(text: org.spongepowered.api.text.Text, content: java.lang.String | string): org.spongepowered.api.text.LiteralText.Builder
                     /**
                      * Creates a new unformatted {@link TranslatableText.Builder} with the given
                      * {@link Translation} and arguments.
@@ -332,7 +332,7 @@ declare namespace org {
                      * @see TranslatableText.Builder
                      */
                     // @ts-ignore
-                    builder(translation: org.spongepowered.api.text.translation.Translation, ...args: any[]): org.spongepowered.api.text.TranslatableText.Builder
+                    public static builder(translation: org.spongepowered.api.text.translation.Translation, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText.Builder
                     /**
                      * Creates a new unformatted {@link TranslatableText.Builder} from the given
                      * {@link Translatable}.
@@ -343,7 +343,7 @@ declare namespace org {
                      * @see TranslatableText.Builder
                      */
                     // @ts-ignore
-                    builder(translatable: org.spongepowered.api.text.translation.Translatable, ...args: any[]): org.spongepowered.api.text.TranslatableText.Builder
+                    public static builder(translatable: org.spongepowered.api.text.translation.Translatable, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText.Builder
                     /**
                      * Creates a new {@link TranslatableText.Builder} with the formatting and
                      * actions of the specified {@link Text} and the given {@link Translation}
@@ -356,7 +356,7 @@ declare namespace org {
                      * @see TranslatableText.Builder
                      */
                     // @ts-ignore
-                    builder(text: org.spongepowered.api.text.Text, translation: org.spongepowered.api.text.translation.Translation, ...args: any[]): org.spongepowered.api.text.TranslatableText.Builder
+                    public static builder(text: org.spongepowered.api.text.Text, translation: org.spongepowered.api.text.translation.Translation, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText.Builder
                     /**
                      * Creates a new {@link TranslatableText.Builder} with the formatting and
                      * actions of the specified {@link Text} and the given {@link Translatable}.
@@ -368,7 +368,7 @@ declare namespace org {
                      * @see TranslatableText.Builder
                      */
                     // @ts-ignore
-                    builder(text: org.spongepowered.api.text.Text, translatable: org.spongepowered.api.text.translation.Translatable, ...args: any[]): org.spongepowered.api.text.TranslatableText.Builder
+                    public static builder(text: org.spongepowered.api.text.Text, translatable: org.spongepowered.api.text.translation.Translatable, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText.Builder
                     /**
                      * Creates a new unformatted {@link SelectorText.Builder} with the given
                      * selector.
@@ -378,7 +378,7 @@ declare namespace org {
                      * @see SelectorText.Builder
                      */
                     // @ts-ignore
-                    builder(selector: org.spongepowered.api.text.selector.Selector): org.spongepowered.api.text.SelectorText.Builder
+                    public static builder(selector: org.spongepowered.api.text.selector.Selector): org.spongepowered.api.text.SelectorText.Builder
                     /**
                      * Creates a new {@link SelectorText.Builder} with the formatting and
                      * actions of the specified {@link Text} and the given selector.
@@ -389,7 +389,7 @@ declare namespace org {
                      * @see SelectorText.Builder
                      */
                     // @ts-ignore
-                    builder(text: org.spongepowered.api.text.Text, selector: org.spongepowered.api.text.selector.Selector): org.spongepowered.api.text.SelectorText.Builder
+                    public static builder(text: org.spongepowered.api.text.Text, selector: org.spongepowered.api.text.selector.Selector): org.spongepowered.api.text.SelectorText.Builder
                     /**
                      * Creates a new unformatted {@link ScoreText.Builder} with the given score.
                      * @param score The score for the text builder
@@ -398,7 +398,7 @@ declare namespace org {
                      * @see ScoreText.Builder
                      */
                     // @ts-ignore
-                    builder(score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText.Builder
+                    public static builder(score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText.Builder
                     /**
                      * Creates a new {@link ScoreText.Builder} with the formatting and actions
                      * of the specified {@link Text} and the given score.
@@ -409,28 +409,28 @@ declare namespace org {
                      * @see ScoreText.Builder
                      */
                     // @ts-ignore
-                    builder(text: org.spongepowered.api.text.Text, score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText.Builder
+                    public static builder(text: org.spongepowered.api.text.Text, score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText.Builder
                     /**
                      * Joins a sequence of text objects together.
                      * @param texts The texts to join
                      * @return A text object that joins the given text objects
                      */
                     // @ts-ignore
-                    join(...texts: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text
+                    public static join(...texts: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text
                     /**
                      * Joins a sequence of text objects together.
                      * @param texts The texts to join
                      * @return A text object that joins the given text objects
                      */
                     // @ts-ignore
-                    join(texts: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text
+                    public static join(texts: java.lang.Iterable<any>): org.spongepowered.api.text.Text
                     /**
                      * Joins a sequence of text objects together.
                      * @param texts The texts to join
                      * @return A text object that joins the given text objects
                      */
                     // @ts-ignore
-                    join(texts: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text
+                    public static join(texts: java.util.Iterator<any>): org.spongepowered.api.text.Text
                     /**
                      * Joins a sequence of text objects together along with a separator.
                      * @param separator The separator
@@ -438,7 +438,7 @@ declare namespace org {
                      * @return A text object that joins the given text objects
                      */
                     // @ts-ignore
-                    joinWith(separator: org.spongepowered.api.text.Text, ...texts: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text
+                    public static joinWith(separator: org.spongepowered.api.text.Text, ...texts: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text
                     /**
                      * Joins a sequence of text objects together along with a separator.
                      * @param separator The separator
@@ -446,7 +446,7 @@ declare namespace org {
                      * @return A text object that joins the given text objects
                      */
                     // @ts-ignore
-                    joinWith(separator: org.spongepowered.api.text.Text, texts: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text
+                    public static joinWith(separator: org.spongepowered.api.text.Text, texts: java.lang.Iterable<any>): org.spongepowered.api.text.Text
                     /**
                      * Joins a sequence of text objects together along with a separator.
                      * @param separator The separator
@@ -454,7 +454,7 @@ declare namespace org {
                      * @return A text object that joins the given text objects
                      */
                     // @ts-ignore
-                    joinWith(separator: org.spongepowered.api.text.Text, texts: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text
+                    public static joinWith(separator: org.spongepowered.api.text.Text, texts: java.util.Iterator<any>): org.spongepowered.api.text.Text
                 }
             }
         }

@@ -54,7 +54,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                supplier(override: java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType> | java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType>): org.spongepowered.api.world.gen.populator.Mushroom.Builder
+                                supplier(override: java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType>): org.spongepowered.api.world.gen.populator.Mushroom.Builder
                                 /**
                                  * Builds a new instance of a {@link Mushroom} populator with the
                                  * settings set within the builder.

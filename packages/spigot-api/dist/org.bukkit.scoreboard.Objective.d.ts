@@ -14,14 +14,14 @@ declare namespace org {
                  * @throws IllegalStateException if this objective has been unregistered
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Gets the name displayed to players for this objective
                  * @return this objective's display name
                  * @throws IllegalStateException if this objective has been unregistered
                  */
                 // @ts-ignore
-                getDisplayName(): java.lang.String
+                getDisplayName(): string
                 /**
                  * Sets the name displayed to players for this objective.
                  * @param displayName Display name to set
@@ -31,14 +31,14 @@ declare namespace org {
                  *      characters.
                  */
                 // @ts-ignore
-                setDisplayName(displayName: string): void
+                setDisplayName(displayName: java.lang.String | string): void
                 /**
                  * Gets the criteria this objective tracks.
                  * @return this objective's criteria
                  * @throws IllegalStateException if this objective has been unregistered
                  */
                 // @ts-ignore
-                getCriteria(): java.lang.String
+                getCriteria(): string
                 /**
                  * Gets if the objective's scores can be modified directly by a plugin.
                  * @return true if scores are modifiable
@@ -109,7 +109,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if entry is longer than 40 characters.
                  */
                 // @ts-ignore
-                getScore(entry: string): org.bukkit.scoreboard.Score
+                getScore(entry: java.lang.String | string): org.bukkit.scoreboard.Score
             }
         }
     }

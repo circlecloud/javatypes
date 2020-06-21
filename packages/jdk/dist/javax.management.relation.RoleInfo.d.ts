@@ -38,7 +38,7 @@ declare namespace javax {
                  *  is not a MBean class.
                  */
                 // @ts-ignore
-                constructor(roleName: string, mbeanClassName: string, read: boolean, write: boolean, min: number /*int*/, max: number /*int*/, descr: string)
+                constructor(roleName: java.lang.String | string, mbeanClassName: java.lang.String | string, read: boolean, write: boolean, min: number /*int*/, max: number /*int*/, descr: java.lang.String | string)
                 /**
                  * Constructor.
                  * @param roleName  name of the role
@@ -62,7 +62,7 @@ declare namespace javax {
                  *  declaration of this class for compatibility with existing code.
                  */
                 // @ts-ignore
-                constructor(roleName: string, mbeanClassName: string, read: boolean, write: boolean)
+                constructor(roleName: java.lang.String | string, mbeanClassName: java.lang.String | string, read: boolean, write: boolean)
                 /**
                  * Constructor.
                  * @param roleName  name of the role
@@ -83,7 +83,7 @@ declare namespace javax {
                  *  declaration of this class for compatibility with existing code.
                  */
                 // @ts-ignore
-                constructor(roleName: string, mbeanClassName: string)
+                constructor(roleName: java.lang.String | string, mbeanClassName: java.lang.String | string)
                 /**
                  * Copy constructor.
                  * @param roleInfo the <tt>RoleInfo</tt> instance to be copied.
@@ -95,50 +95,50 @@ declare namespace javax {
                  * To specify an unlimited cardinality.
                  */
                 // @ts-ignore
-                readonly ROLE_CARDINALITY_INFINITY: number /*int*/
+                public static readonly ROLE_CARDINALITY_INFINITY: number /*int*/
                 /**
                  * Returns the name of the role.
                  * @return the name of the role.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns read access mode for the role (true if it is readable).
                  * @return true if the role is readable.
                  */
                 // @ts-ignore
-                isReadable(): boolean
+                public isReadable(): boolean
                 /**
                  * Returns write access mode for the role (true if it is writable).
                  * @return true if the role is writable.
                  */
                 // @ts-ignore
-                isWritable(): boolean
+                public isWritable(): boolean
                 /**
                  * Returns description text for the role.
                  * @return the description of the role.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Returns minimum degree for corresponding role reference.
                  * @return the minimum degree.
                  */
                 // @ts-ignore
-                getMinDegree(): int
+                public getMinDegree(): number /*int*/
                 /**
                  * Returns maximum degree for corresponding role reference.
                  * @return the maximum degree.
                  */
                 // @ts-ignore
-                getMaxDegree(): int
+                public getMaxDegree(): number /*int*/
                 /**
                  * <p>Returns name of type of MBean expected to be referenced in
                  * corresponding role.</p>
                  * @return the name of the referenced type.
                  */
                 // @ts-ignore
-                getRefMBeanClassName(): java.lang.String
+                public getRefMBeanClassName(): string
                 /**
                  * Returns true if the <tt>value</tt> parameter is greater than or equal to
                  * the expected minimum degree, false otherwise.
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @return true if greater than or equal to minimum degree, false otherwise.
                  */
                 // @ts-ignore
-                checkMinDegree(value: number /*int*/): boolean
+                public checkMinDegree(value: number /*int*/): boolean
                 /**
                  * Returns true if the <tt>value</tt> parameter is lower than or equal to
                  * the expected maximum degree, false otherwise.
@@ -154,13 +154,13 @@ declare namespace javax {
                  * @return true if lower than or equal to maximum degree, false otherwise.
                  */
                 // @ts-ignore
-                checkMaxDegree(value: number /*int*/): boolean
+                public checkMaxDegree(value: number /*int*/): boolean
                 /**
                  * Returns a string describing the role info.
                  * @return a description of the role info.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

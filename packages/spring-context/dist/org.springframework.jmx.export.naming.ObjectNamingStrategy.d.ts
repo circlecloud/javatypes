@@ -24,7 +24,7 @@ declare namespace org {
                          * @throws MalformedObjectNameException if the resulting {#code ObjectName} is invalid
                          */
                         // @ts-ignore
-                        getObjectName(managedBean: any, beanKey: string): javax.management.ObjectName
+                        getObjectName(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.ObjectName
                     }
                 }
             }

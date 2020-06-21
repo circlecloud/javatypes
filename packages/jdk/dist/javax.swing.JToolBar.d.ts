@@ -57,7 +57,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a new tool bar with a specified <code>name</code> and
              * <code>orientation</code>.
@@ -72,13 +72,13 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            constructor(name: string, orientation: number /*int*/)
+            constructor(name: java.lang.String | string, orientation: number /*int*/)
             /**
              * Returns the tool bar's current UI.
              * @see #setUI
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ToolBarUI
+            public getUI(): javax.swing.plaf.ToolBarUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the <code>ToolBarUI</code> L&amp;F object
@@ -89,7 +89,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ToolBarUI): void
+            public setUI(ui: javax.swing.plaf.ToolBarUI): void
             /**
              * Notification from the <code>UIFactory</code> that the L&amp;F has changed.
              * Called to replace the UI with the latest version from the
@@ -97,7 +97,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "ToolBarUI"
@@ -105,7 +105,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the index of the specified component.
              * (Note: Separators occupy index positions.)
@@ -114,7 +114,7 @@ declare namespace javax {
              *           where 0 is first
              */
             // @ts-ignore
-            getComponentIndex(c: java.awt.Component): int
+            public getComponentIndex(c: java.awt.Component): number /*int*/
             /**
              * Returns the component at the specified index.
              * @param i  the component's position, where 0 is first
@@ -122,7 +122,7 @@ declare namespace javax {
              *           or <code>null</code> for an invalid index
              */
             // @ts-ignore
-            getComponentAtIndex(i: number /*int*/): java.awt.Component
+            public getComponentAtIndex(i: number /*int*/): java.awt.Component
             /**
              * Sets the margin between the tool bar's border and
              * its buttons. Setting to <code>null</code> causes the tool bar to
@@ -140,7 +140,7 @@ declare namespace javax {
              *       expert: true
              */
             // @ts-ignore
-            setMargin(m: java.awt.Insets): void
+            public setMargin(m: java.awt.Insets): void
             /**
              * Returns the margin between the tool bar's border and
              * its buttons.
@@ -148,14 +148,14 @@ declare namespace javax {
              * @see Insets
              */
             // @ts-ignore
-            getMargin(): java.awt.Insets
+            public getMargin(): java.awt.Insets
             /**
              * Gets the <code>borderPainted</code> property.
              * @return the value of the <code>borderPainted</code> property
              * @see #setBorderPainted
              */
             // @ts-ignore
-            isBorderPainted(): boolean
+            public isBorderPainted(): boolean
             /**
              * Sets the <code>borderPainted</code> property, which is
              * <code>true</code> if the border should be painted.
@@ -169,7 +169,7 @@ declare namespace javax {
              *       expert: true
              */
             // @ts-ignore
-            setBorderPainted(b: boolean): void
+            public setBorderPainted(b: boolean): void
             /**
              * Paints the tool bar's border if the <code>borderPainted</code> property
              * is <code>true</code>.
@@ -186,7 +186,7 @@ declare namespace javax {
              * @see #setFloatable
              */
             // @ts-ignore
-            isFloatable(): boolean
+            public isFloatable(): boolean
             /**
              * Sets the <code>floatable</code> property,
              * which must be <code>true</code> for the user to move the tool bar.
@@ -204,7 +204,7 @@ declare namespace javax {
              *    preferred: true
              */
             // @ts-ignore
-            setFloatable(b: boolean): void
+            public setFloatable(b: boolean): void
             /**
              * Returns the current orientation of the tool bar.  The value is either
              * <code>HORIZONTAL</code> or <code>VERTICAL</code>.
@@ -213,7 +213,7 @@ declare namespace javax {
              * @see #setOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Sets the orientation of the tool bar.  The orientation must have
              * either the value <code>HORIZONTAL</code> or <code>VERTICAL</code>.
@@ -231,7 +231,7 @@ declare namespace javax {
              *               VERTICAL   SwingConstants.VERTICAL
              */
             // @ts-ignore
-            setOrientation(o: number /*int*/): void
+            public setOrientation(o: number /*int*/): void
             /**
              * Sets the rollover state of this toolbar. If the rollover state is true
              * then the border of the toolbar buttons will be drawn only when the
@@ -248,7 +248,7 @@ declare namespace javax {
              *   description: Will draw rollover button borders in the toolbar.
              */
             // @ts-ignore
-            setRollover(rollover: boolean): void
+            public setRollover(rollover: boolean): void
             /**
              * Returns the rollover state.
              * @return true if rollover toolbar buttons are to be drawn; otherwise false
@@ -256,27 +256,27 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            isRollover(): boolean
+            public isRollover(): boolean
             /**
              * Appends a separator of default size to the end of the tool bar.
              * The default size is determined by the current look and feel.
              */
             // @ts-ignore
-            addSeparator(): void
+            public addSeparator(): void
             /**
              * Appends a separator of a specified size to the end
              * of the tool bar.
              * @param size the <code>Dimension</code> of the separator
              */
             // @ts-ignore
-            addSeparator(size: java.awt.Dimension): void
+            public addSeparator(size: java.awt.Dimension): void
             /**
              * Adds a new <code>JButton</code> which dispatches the action.
              * @param a the <code>Action</code> object to add as a new menu item
              * @return the new button which dispatches the action
              */
             // @ts-ignore
-            add(a: javax.swing.Action): javax.swing.JButton
+            public add(a: javax.swing.Action): javax.swing.JButton
             /**
              * Factory method which creates the <code>JButton</code> for
              * <code>Action</code>s added to the <code>JToolBar</code>.
@@ -305,7 +305,7 @@ declare namespace javax {
              * @param index the index of the component
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Returns a string representation of this <code>JToolBar</code>.
              * This method
@@ -316,9 +316,9 @@ declare namespace javax {
              * @return a string representation of this <code>JToolBar</code>.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             // @ts-ignore
-            setLayout(mgr: java.awt.LayoutManager): void
+            public setLayout(mgr: java.awt.LayoutManager): void
             /**
              * Gets the AccessibleContext associated with this JToolBar.
              * For tool bars, the AccessibleContext takes the form of an
@@ -328,7 +328,7 @@ declare namespace javax {
              *          AccessibleContext of this JToolBar
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

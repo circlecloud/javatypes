@@ -45,7 +45,7 @@ declare namespace javax {
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getIV(): byte[]
+                public getIV(): number /*byte*/[]
             }
         }
     }

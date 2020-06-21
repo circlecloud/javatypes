@@ -33,29 +33,29 @@ declare namespace org {
                  * @return true if this is the head of the bed, false if it is the foot
                  */
                 // @ts-ignore
-                isHeadOfBed(): boolean
+                public isHeadOfBed(): boolean
                 /**
                  * Configure this to be either the head or the foot of the bed
                  * @param isHeadOfBed True to make it the head.
                  */
                 // @ts-ignore
-                setHeadOfBed(isHeadOfBed: boolean): void
+                public setHeadOfBed(isHeadOfBed: boolean): void
                 /**
                  * Set which direction the head of the bed is facing. Note that this will
                  * only affect one of the two blocks the bed is made of.
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 /**
                  * Get the direction that this bed's head is facing toward
                  * @return the direction the head of the bed is facing
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Bed
+                public clone(): org.bukkit.material.Bed
             }
         }
     }

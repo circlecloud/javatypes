@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#HEALTH_SCALE
                                  */
                                 // @ts-ignore
-                                healthScale(): org.spongepowered.api.data.value.BoundedValue<java.lang.Double>
+                                healthScale(): org.spongepowered.api.data.value.BoundedValue<java.lang.Double | number>
                             }
                         }
                     }

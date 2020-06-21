@@ -21,7 +21,7 @@ declare namespace org {
                      * The content type for hessian ({@code application/x-hessian}).
                      */
                     // @ts-ignore
-                    readonly CONTENT_TYPE_HESSIAN: string
+                    public static readonly CONTENT_TYPE_HESSIAN: java.lang.String | string
                     /**
                      * Specify the Hessian SerializerFactory to use.
                      * <p>This will typically be passed in as an inner bean definition
@@ -29,39 +29,39 @@ declare namespace org {
                      * with custom bean property values applied.
                      */
                     // @ts-ignore
-                    setSerializerFactory(serializerFactory: SerializerFactory): void
+                    public setSerializerFactory(serializerFactory: SerializerFactory): void
                     /**
                      * Set whether to send the Java collection type for each serialized
                      * collection. Default is "true".
                      */
                     // @ts-ignore
-                    setSendCollectionType(sendCollectionType: boolean): void
+                    public setSendCollectionType(sendCollectionType: boolean): void
                     /**
                      * Set whether to allow non-serializable types as Hessian arguments
                      * and return values. Default is "true".
                      */
                     // @ts-ignore
-                    setAllowNonSerializable(allowNonSerializable: boolean): void
+                    public setAllowNonSerializable(allowNonSerializable: boolean): void
                     /**
                      * Specify a custom HessianRemoteResolver to use for resolving remote
                      * object references.
                      */
                     // @ts-ignore
-                    setRemoteResolver(remoteResolver: HessianRemoteResolver): void
+                    public setRemoteResolver(remoteResolver: HessianRemoteResolver): void
                     /**
                      * Set whether Hessian's debug mode should be enabled, logging to
                      * this exporter's Commons Logging log. Default is "false".
                      * @see com.caucho.hessian.client.HessianProxyFactory#setDebug
                      */
                     // @ts-ignore
-                    setDebug(debug: boolean): void
+                    public setDebug(debug: boolean): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Initialize this exporter.
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Perform an invocation on the exported object.
                      * @param inputStream the request stream
@@ -69,7 +69,7 @@ declare namespace org {
                      * @throws Throwable if invocation failed
                      */
                     // @ts-ignore
-                    invoke(inputStream: java.io.InputStream, outputStream: java.io.OutputStream): void
+                    public invoke(inputStream: java.io.InputStream, outputStream: java.io.OutputStream): void
                     /**
                      * Actually invoke the skeleton with the given streams.
                      * @param skeleton the skeleton to invoke

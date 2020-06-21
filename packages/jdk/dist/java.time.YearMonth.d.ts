@@ -38,7 +38,7 @@ declare namespace java {
              * @return the current year-month using the system clock and default time-zone, not null
              */
             // @ts-ignore
-            now(): java.time.YearMonth
+            public static now(): java.time.YearMonth
             /**
              * Obtains the current year-month from the system clock in the specified time-zone.
              * <p>
@@ -51,7 +51,7 @@ declare namespace java {
              * @return the current year-month using the system clock, not null
              */
             // @ts-ignore
-            now(zone: java.time.ZoneId): java.time.YearMonth
+            public static now(zone: java.time.ZoneId): java.time.YearMonth
             /**
              * Obtains the current year-month from the specified clock.
              * <p>
@@ -62,7 +62,7 @@ declare namespace java {
              * @return the current year-month, not null
              */
             // @ts-ignore
-            now(clock: java.time.Clock): java.time.YearMonth
+            public static now(clock: java.time.Clock): java.time.YearMonth
             /**
              * Obtains an instance of {@code YearMonth} from a year and month.
              * @param year  the year to represent, from MIN_YEAR to MAX_YEAR
@@ -71,7 +71,7 @@ declare namespace java {
              * @throws DateTimeException if the year value is invalid
              */
             // @ts-ignore
-            of(year: number /*int*/, month: java.time.Month): java.time.YearMonth
+            public static of(year: number /*int*/, month: java.time.Month): java.time.YearMonth
             /**
              * Obtains an instance of {@code YearMonth} from a year and month.
              * @param year  the year to represent, from MIN_YEAR to MAX_YEAR
@@ -80,7 +80,7 @@ declare namespace java {
              * @throws DateTimeException if either field value is invalid
              */
             // @ts-ignore
-            of(year: number /*int*/, month: number /*int*/): java.time.YearMonth
+            public static of(year: number /*int*/, month: number /*int*/): java.time.YearMonth
             /**
              * Obtains an instance of {@code YearMonth} from a temporal object.
              * <p>
@@ -100,7 +100,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code YearMonth}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.YearMonth
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.YearMonth
             /**
              * Obtains an instance of {@code YearMonth} from a text string such as {@code 2007-12}.
              * <p>
@@ -112,7 +112,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.YearMonth
+            public static parse(text: java.lang.CharSequence): java.time.YearMonth
             /**
              * Obtains an instance of {@code YearMonth} from a text string using a specific formatter.
              * <p>
@@ -123,7 +123,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.YearMonth
+            public static parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.YearMonth
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -151,7 +151,7 @@ declare namespace java {
              * @return true if the field is supported on this year-month, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Checks if the specified unit is supported.
              * <p>
@@ -179,7 +179,7 @@ declare namespace java {
              * @return true if the unit can be added/subtracted, false if not
              */
             // @ts-ignore
-            isSupported(unit: java.time.temporal.TemporalUnit): boolean
+            public isSupported(unit: java.time.temporal.TemporalUnit): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -203,7 +203,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this year-month as an {@code int}.
              * <p>
@@ -231,7 +231,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this year-month as a {@code long}.
              * <p>
@@ -255,7 +255,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Gets the year field.
              * <p>
@@ -265,7 +265,7 @@ declare namespace java {
              * @return the year, from MIN_YEAR to MAX_YEAR
              */
             // @ts-ignore
-            getYear(): int
+            public getYear(): number /*int*/
             /**
              * Gets the month-of-year field from 1 to 12.
              * <p>
@@ -276,7 +276,7 @@ declare namespace java {
              * @see #getMonth()
              */
             // @ts-ignore
-            getMonthValue(): int
+            public getMonthValue(): number /*int*/
             /**
              * Gets the month-of-year field using the {@code Month} enum.
              * <p>
@@ -288,7 +288,7 @@ declare namespace java {
              * @see #getMonthValue()
              */
             // @ts-ignore
-            getMonth(): java.time.Month
+            public getMonth(): java.time.Month
             /**
              * Checks if the year is a leap year, according to the ISO proleptic
              * calendar system rules.
@@ -307,7 +307,7 @@ declare namespace java {
              * @return true if the year is leap, false otherwise
              */
             // @ts-ignore
-            isLeapYear(): boolean
+            public isLeapYear(): boolean
             /**
              * Checks if the day-of-month is valid for this year-month.
              * <p>
@@ -317,7 +317,7 @@ declare namespace java {
              * @return true if the day is valid for this year-month
              */
             // @ts-ignore
-            isValidDay(dayOfMonth: number /*int*/): boolean
+            public isValidDay(dayOfMonth: number /*int*/): boolean
             /**
              * Returns the length of the month, taking account of the year.
              * <p>
@@ -326,7 +326,7 @@ declare namespace java {
              * @return the length of the month in days, from 28 to 31
              */
             // @ts-ignore
-            lengthOfMonth(): int
+            public lengthOfMonth(): number /*int*/
             /**
              * Returns the length of the year.
              * <p>
@@ -334,7 +334,7 @@ declare namespace java {
              * @return 366 if the year is leap, 365 otherwise
              */
             // @ts-ignore
-            lengthOfYear(): int
+            public lengthOfYear(): number /*int*/
             /**
              * Returns an adjusted copy of this year-month.
              * <p>
@@ -357,7 +357,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(adjuster: java.time.temporal.TemporalAdjuster): java.time.YearMonth
+            public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.YearMonth
             /**
              * Returns a copy of this year-month with the specified field set to a new value.
              * <p>
@@ -406,7 +406,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.YearMonth
+            public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.YearMonth
             /**
              * Returns a copy of this {@code YearMonth} with the year altered.
              * <p>
@@ -416,7 +416,7 @@ declare namespace java {
              * @throws DateTimeException if the year value is invalid
              */
             // @ts-ignore
-            withYear(year: number /*int*/): java.time.YearMonth
+            public withYear(year: number /*int*/): java.time.YearMonth
             /**
              * Returns a copy of this {@code YearMonth} with the month-of-year altered.
              * <p>
@@ -426,7 +426,7 @@ declare namespace java {
              * @throws DateTimeException if the month-of-year value is invalid
              */
             // @ts-ignore
-            withMonth(month: number /*int*/): java.time.YearMonth
+            public withMonth(month: number /*int*/): java.time.YearMonth
             /**
              * Returns a copy of this year-month with the specified amount added.
              * <p>
@@ -447,7 +447,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.YearMonth
+            public plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.YearMonth
             /**
              * Returns a copy of this year-month with the specified amount added.
              * <p>
@@ -499,7 +499,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.YearMonth
+            public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.YearMonth
             /**
              * Returns a copy of this {@code YearMonth} with the specified number of years added.
              * <p>
@@ -509,7 +509,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            plusYears(yearsToAdd: number /*long*/): java.time.YearMonth
+            public plusYears(yearsToAdd: number /*long*/): java.time.YearMonth
             /**
              * Returns a copy of this {@code YearMonth} with the specified number of months added.
              * <p>
@@ -519,7 +519,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            plusMonths(monthsToAdd: number /*long*/): java.time.YearMonth
+            public plusMonths(monthsToAdd: number /*long*/): java.time.YearMonth
             /**
              * Returns a copy of this year-month with the specified amount subtracted.
              * <p>
@@ -540,7 +540,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.YearMonth
+            public minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.YearMonth
             /**
              * Returns a copy of this year-month with the specified amount subtracted.
              * <p>
@@ -560,7 +560,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.YearMonth
+            public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.YearMonth
             /**
              * Returns a copy of this {@code YearMonth} with the specified number of years subtracted.
              * <p>
@@ -570,7 +570,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            minusYears(yearsToSubtract: number /*long*/): java.time.YearMonth
+            public minusYears(yearsToSubtract: number /*long*/): java.time.YearMonth
             /**
              * Returns a copy of this {@code YearMonth} with the specified number of months subtracted.
              * <p>
@@ -580,7 +580,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            minusMonths(monthsToSubtract: number /*long*/): java.time.YearMonth
+            public minusMonths(monthsToSubtract: number /*long*/): java.time.YearMonth
             /**
              * Queries this year-month using the specified query.
              * <p>
@@ -599,7 +599,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have this year-month.
              * <p>
@@ -626,7 +626,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Calculates the amount of time until another year-month in terms of the specified unit.
              * <p>
@@ -674,7 +674,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+            public until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Formats this year-month using the specified formatter.
              * <p>
@@ -684,7 +684,7 @@ declare namespace java {
              * @throws DateTimeException if an error occurs during printing
              */
             // @ts-ignore
-            format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+            public format(formatter: java.time.format.DateTimeFormatter): string
             /**
              * Combines this year-month with a day-of-month to create a {@code LocalDate}.
              * <p>
@@ -702,7 +702,7 @@ declare namespace java {
              * @see #isValidDay(int)
              */
             // @ts-ignore
-            atDay(dayOfMonth: number /*int*/): java.time.LocalDate
+            public atDay(dayOfMonth: number /*int*/): java.time.LocalDate
             /**
              * Returns a {@code LocalDate} at the end of the month.
              * <p>
@@ -717,7 +717,7 @@ declare namespace java {
              * @return the last valid date of this year-month, not null
              */
             // @ts-ignore
-            atEndOfMonth(): java.time.LocalDate
+            public atEndOfMonth(): java.time.LocalDate
             /**
              * Compares this year-month to another year-month.
              * <p>
@@ -727,21 +727,21 @@ declare namespace java {
              * @return the comparator value, negative if less, positive if greater
              */
             // @ts-ignore
-            compareTo(other: java.time.YearMonth): int
+            public compareTo(other: java.time.YearMonth): number /*int*/
             /**
              * Checks if this year-month is after the specified year-month.
              * @param other  the other year-month to compare to, not null
              * @return true if this is after the specified year-month
              */
             // @ts-ignore
-            isAfter(other: java.time.YearMonth): boolean
+            public isAfter(other: java.time.YearMonth): boolean
             /**
              * Checks if this year-month is before the specified year-month.
              * @param other  the other year-month to compare to, not null
              * @return true if this point is before the specified year-month
              */
             // @ts-ignore
-            isBefore(other: java.time.YearMonth): boolean
+            public isBefore(other: java.time.YearMonth): boolean
             /**
              * Checks if this year-month is equal to another year-month.
              * <p>
@@ -750,13 +750,13 @@ declare namespace java {
              * @return true if this is equal to the other year-month
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this year-month.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this year-month as a {@code String}, such as {@code 2007-12}.
              * <p>
@@ -764,7 +764,7 @@ declare namespace java {
              * @return a string representation of this year-month, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

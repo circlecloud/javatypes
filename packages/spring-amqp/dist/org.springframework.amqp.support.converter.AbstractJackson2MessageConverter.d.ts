@@ -16,7 +16,7 @@ declare namespace org {
                      * @since 2.1
                      */
                     // @ts-ignore
-                    class AbstractJackson2MessageConverter extends org.springframework.amqp.support.converter.AbstractMessageConverter implements org.springframework.amqp.support.converter.SmartMessageConverter {
+                    abstract class AbstractJackson2MessageConverter extends org.springframework.amqp.support.converter.AbstractMessageConverter implements org.springframework.amqp.support.converter.SmartMessageConverter {
                         /**
                          * Construct with the provided {@link ObjectMapper} instance.
                          * @param objectMapper the {#link ObjectMapper} to use.
@@ -26,43 +26,43 @@ declare namespace org {
                          * @see DefaultJackson2JavaTypeMapper#setTrustedPackages(String...)
                          */
                         // @ts-ignore
-                        constructor(objectMapper: ObjectMapper, contentType: MimeType, ...trustedPackages: string[])
+                        constructor(objectMapper: ObjectMapper, contentType: MimeType, ...trustedPackages: java.lang.String[] | string[])
                         // @ts-ignore
                         readonly log: Log
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: string
+                        public static readonly DEFAULT_CHARSET: java.lang.String | string
                         // @ts-ignore
                         readonly objectMapper: ObjectMapper
                         // @ts-ignore
                         typeMapperSet: boolean
                         // @ts-ignore
-                        getClassMapper(): org.springframework.amqp.support.converter.ClassMapper
+                        public getClassMapper(): org.springframework.amqp.support.converter.ClassMapper
                         // @ts-ignore
-                        setClassMapper(classMapper: org.springframework.amqp.support.converter.ClassMapper): void
+                        public setClassMapper(classMapper: org.springframework.amqp.support.converter.ClassMapper): void
                         /**
                          * Specify the default charset to use when converting to or from text-based
                          * Message body content. If not specified, the charset will be "UTF-8".
                          * @param defaultCharset The default charset.
                          */
                         // @ts-ignore
-                        setDefaultCharset(defaultCharset: string): void
+                        public setDefaultCharset(defaultCharset: java.lang.String | string): void
                         // @ts-ignore
-                        getDefaultCharset(): java.lang.String
+                        public getDefaultCharset(): string
                         // @ts-ignore
-                        setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                         // @ts-ignore
                         getClassLoader(): java.lang.ClassLoader
                         // @ts-ignore
-                        getJavaTypeMapper(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper
+                        public getJavaTypeMapper(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper
                         // @ts-ignore
-                        setJavaTypeMapper(javaTypeMapper: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper): void
+                        public setJavaTypeMapper(javaTypeMapper: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper): void
                         /**
                          * Return the type precedence.
                          * @return the precedence.
                          * @see #setTypePrecedence(Jackson2JavaTypeMapper.TypePrecedence)
                          */
                         // @ts-ignore
-                        getTypePrecedence(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
+                        public getTypePrecedence(): org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence
                         /**
                          * Set the precedence for evaluating type information in message properties.
                          * When using {@code @RabbitListener} at the method level, the framework attempts
@@ -80,19 +80,19 @@ declare namespace org {
                          * @see DefaultJackson2JavaTypeMapper#setTypePrecedence(Jackson2JavaTypeMapper.TypePrecedence)
                          */
                         // @ts-ignore
-                        setTypePrecedence(typePrecedence: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence): void
+                        public setTypePrecedence(typePrecedence: org.springframework.amqp.support.converter.Jackson2JavaTypeMapper.TypePrecedence): void
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                         /**
                          * {@inheritDoc}
                          * @param conversionHint The conversionHint must be a {#link ParameterizedTypeReference}.
                          */
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message, conversionHint: any): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message, conversionHint: java.lang.Object | any): any
                         // @ts-ignore
-                        createMessage(objectToConvert: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        createMessage(objectToConvert: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         // @ts-ignore
-                        createMessage(objectToConvert: any, messageProperties: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
+                        createMessage(objectToConvert: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
                     }
                 }
             }

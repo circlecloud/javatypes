@@ -18,13 +18,13 @@ declare namespace javax {
              * @return an int specifying the fixed width of the icon.
              */
             // @ts-ignore
-            getIconWidth(): int
+            getIconWidth(): number /*int*/
             /**
              * Returns the icon's height.
              * @return an int specifying the fixed height of the icon.
              */
             // @ts-ignore
-            getIconHeight(): int
+            getIconHeight(): number /*int*/
         }
     }
 }

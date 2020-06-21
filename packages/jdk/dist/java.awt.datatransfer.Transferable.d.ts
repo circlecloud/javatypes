@@ -40,7 +40,7 @@ declare namespace java {
                  *               not supported.
                  */
                 // @ts-ignore
-                getTransferData(flavor: java.awt.datatransfer.DataFlavor): java.lang.Object
+                getTransferData(flavor: java.awt.datatransfer.DataFlavor): any
             }
         }
     }

@@ -87,27 +87,27 @@ declare namespace javax {
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addGroup(group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.ParallelGroup
+                public addGroup(group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component): javax.swing.GroupLayout.ParallelGroup
+                public addComponent(component: java.awt.Component): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.ParallelGroup
+                public addComponent(component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addGap(pref: number /*int*/): javax.swing.GroupLayout.ParallelGroup
+                public addGap(pref: number /*int*/): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addGap(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.ParallelGroup
+                public addGap(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * Adds a {@code Group} to this {@code ParallelGroup} with the
                  * specified alignment. If the child is smaller than the
@@ -120,7 +120,7 @@ declare namespace javax {
                  *          {@code null}
                  */
                 // @ts-ignore
-                addGroup(alignment: javax.swing.GroupLayout.Alignment, group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.ParallelGroup
+                public addGroup(alignment: javax.swing.GroupLayout.Alignment, group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * Adds a {@code Component} to this {@code ParallelGroup} with
                  * the specified alignment.
@@ -131,7 +131,7 @@ declare namespace javax {
                  *          {@code null}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component, alignment: javax.swing.GroupLayout.Alignment): javax.swing.GroupLayout.ParallelGroup
+                public addComponent(component: java.awt.Component, alignment: javax.swing.GroupLayout.Alignment): javax.swing.GroupLayout.ParallelGroup
                 /**
                  * Adds a {@code Component} to this {@code ParallelGroup} with the
                  * specified alignment and size.
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component, alignment: javax.swing.GroupLayout.Alignment, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.ParallelGroup
+                public addComponent(component: java.awt.Component, alignment: javax.swing.GroupLayout.Alignment, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.ParallelGroup
             }
         }
     }

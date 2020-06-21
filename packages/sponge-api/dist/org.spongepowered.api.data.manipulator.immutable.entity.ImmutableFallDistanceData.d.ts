@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The value for the fall distance
                                  */
                                 // @ts-ignore
-                                fallDistance(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Float>
+                                fallDistance(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Float | number>
                             }
                         }
                     }

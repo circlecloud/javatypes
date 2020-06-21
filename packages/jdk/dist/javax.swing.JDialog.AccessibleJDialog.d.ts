@@ -17,7 +17,7 @@ declare namespace javax {
                  *  object does not have a name
                  */
                 // @ts-ignore
-                getAccessibleName(): java.lang.String
+                public getAccessibleName(): string
                 /**
                  * Get the state of this object.
                  * @return an instance of AccessibleStateSet containing the current
@@ -25,7 +25,7 @@ declare namespace javax {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
             }
         }
     }

@@ -44,7 +44,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless()
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs a new text area with the specified number of
              * rows and columns and the empty string as text.
@@ -79,7 +79,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless()
              */
             // @ts-ignore
-            constructor(text: string, rows: number /*int*/, columns: number /*int*/)
+            constructor(text: java.lang.String | string, rows: number /*int*/, columns: number /*int*/)
             /**
              * Constructs a new text area with the specified text,
              * and with the rows, columns, and scroll bar visibility
@@ -116,38 +116,38 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless()
              */
             // @ts-ignore
-            constructor(text: string, rows: number /*int*/, columns: number /*int*/, scrollbars: number /*int*/)
+            constructor(text: java.lang.String | string, rows: number /*int*/, columns: number /*int*/, scrollbars: number /*int*/)
             /**
              * Create and display both vertical and horizontal scrollbars.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCROLLBARS_BOTH: number /*int*/
+            public static readonly SCROLLBARS_BOTH: number /*int*/
             /**
              * Create and display vertical scrollbar only.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCROLLBARS_VERTICAL_ONLY: number /*int*/
+            public static readonly SCROLLBARS_VERTICAL_ONLY: number /*int*/
             /**
              * Create and display horizontal scrollbar only.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCROLLBARS_HORIZONTAL_ONLY: number /*int*/
+            public static readonly SCROLLBARS_HORIZONTAL_ONLY: number /*int*/
             /**
              * Do not create or display any scrollbars for the text area.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCROLLBARS_NONE: number /*int*/
+            public static readonly SCROLLBARS_NONE: number /*int*/
             /**
              * Creates the <code>TextArea</code>'s peer.  The peer allows us to modify
              * the appearance of the <code>TextArea</code> without changing any of its
              * functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Inserts the specified text at the specified position
              * in this text area.
@@ -162,13 +162,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            insert(str: string, pos: number /*int*/): void
+            public insert(str: java.lang.String | string, pos: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>insert(String, int)</code>.
              */
             // @ts-ignore
-            insertText(str: string, pos: number /*int*/): void
+            public insertText(str: java.lang.String | string, pos: number /*int*/): void
             /**
              * Appends the given text to the text area's current text.
              * <p>Note that passing <code>null</code> or inconsistent
@@ -179,13 +179,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            append(str: string): void
+            public append(str: java.lang.String | string): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>append(String)</code>.
              */
             // @ts-ignore
-            appendText(str: string): void
+            public appendText(str: java.lang.String | string): void
             /**
              * Replaces text between the indicated start and end positions
              * with the specified replacement text.  The text at the end
@@ -205,13 +205,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            replaceRange(str: string, start: number /*int*/, end: number /*int*/): void
+            public replaceRange(str: java.lang.String | string, start: number /*int*/, end: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>replaceRange(String, int, int)</code>.
              */
             // @ts-ignore
-            replaceText(str: string, start: number /*int*/, end: number /*int*/): void
+            public replaceText(str: java.lang.String | string, start: number /*int*/, end: number /*int*/): void
             /**
              * Returns the number of rows in the text area.
              * @return the number of rows in the text area
@@ -220,7 +220,7 @@ declare namespace java {
              * @since JDK1
              */
             // @ts-ignore
-            getRows(): int
+            public getRows(): number /*int*/
             /**
              * Sets the number of rows for this text area.
              * @param rows   the number of rows
@@ -232,7 +232,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setRows(rows: number /*int*/): void
+            public setRows(rows: number /*int*/): void
             /**
              * Returns the number of columns in this text area.
              * @return the number of columns in the text area
@@ -240,7 +240,7 @@ declare namespace java {
              * @see #getRows()
              */
             // @ts-ignore
-            getColumns(): int
+            public getColumns(): number /*int*/
             /**
              * Sets the number of columns for this text area.
              * @param columns   the number of columns
@@ -252,7 +252,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setColumns(columns: number /*int*/): void
+            public setColumns(columns: number /*int*/): void
             /**
              * Returns an enumerated value that indicates which scroll bars
              * the text area uses.
@@ -270,7 +270,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getScrollbarVisibility(): int
+            public getScrollbarVisibility(): number /*int*/
             /**
              * Determines the preferred size of a text area with the specified
              * number of rows and columns.
@@ -283,13 +283,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getPreferredSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
+            public getPreferredSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize(int, int)</code>.
              */
             // @ts-ignore
-            preferredSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
+            public preferredSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
             /**
              * Determines the preferred size of this text area.
              * @return the preferred dimensions needed for this text area
@@ -297,13 +297,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize()</code>.
              */
             // @ts-ignore
-            preferredSize(): java.awt.Dimension
+            public preferredSize(): java.awt.Dimension
             /**
              * Determines the minimum size of a text area with the specified
              * number of rows and columns.
@@ -316,13 +316,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
+            public getMinimumSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize(int, int)</code>.
              */
             // @ts-ignore
-            minimumSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
+            public minimumSize(rows: number /*int*/, columns: number /*int*/): java.awt.Dimension
             /**
              * Determines the minimum size of this text area.
              * @return the preferred dimensions needed for this text area
@@ -330,13 +330,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize()</code>.
              */
             // @ts-ignore
-            minimumSize(): java.awt.Dimension
+            public minimumSize(): java.awt.Dimension
             /**
              * Returns a string representing the state of this <code>TextArea</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -346,7 +346,7 @@ declare namespace java {
              * @return the parameter string of this text area
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns the <code>AccessibleContext</code> associated with
              * this <code>TextArea</code>. For text areas, the
@@ -358,7 +358,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -9,7 +9,7 @@ declare namespace org {
                  * @see ConfigManager For getting configuration without injection
                  */
                 // @ts-ignore
-                class ConfigDir implements java.lang.annotation.Annotation {
+                abstract class ConfigDir implements java.lang.annotation.Annotation {
                 }
             }
         }

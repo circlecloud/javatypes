@@ -11,13 +11,13 @@ declare namespace org {
                              * such that the text elements are single pages.
                              */
                             // @ts-ignore
-                            interface ImmutablePlainPagedData extends org.spongepowered.api.data.manipulator.immutable.ImmutableListData<java.lang.String, org.spongepowered.api.data.manipulator.immutable.item.ImmutablePlainPagedData, org.spongepowered.api.data.manipulator.mutable.item.PlainPagedData> {
+                            interface ImmutablePlainPagedData extends org.spongepowered.api.data.manipulator.immutable.ImmutableListData<java.lang.String | string, org.spongepowered.api.data.manipulator.immutable.item.ImmutablePlainPagedData, org.spongepowered.api.data.manipulator.mutable.item.PlainPagedData> {
                                 /**
                                  * Gets the {@link ImmutableListValue} for the {@link Text} pages.
                                  * @return The immutable list value of text pages
                                  */
                                 // @ts-ignore
-                                pages(): org.spongepowered.api.data.value.immutable.ImmutableListValue<java.lang.String>
+                                pages(): org.spongepowered.api.data.value.immutable.ImmutableListValue<java.lang.String | string>
                             }
                         }
                     }

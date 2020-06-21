@@ -14,7 +14,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class CompiledScript extends java.lang.Object {
+        abstract class CompiledScript extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -28,7 +28,7 @@ declare namespace javax {
              * @throws NullPointerException if context is null.
              */
             // @ts-ignore
-            abstract eval(context: javax.script.ScriptContext): java.lang.Object
+            public abstract eval(context: javax.script.ScriptContext): any
             /**
              * Executes the program stored in the <code>CompiledScript</code> object using
              * the supplied <code>Bindings</code> of attributes as the <code>ENGINE_SCOPE</code> of the
@@ -42,7 +42,7 @@ declare namespace javax {
              * @throws ScriptException if an error occurs.
              */
             // @ts-ignore
-            eval(bindings: javax.script.Bindings): java.lang.Object
+            public eval(bindings: javax.script.Bindings): any
             /**
              * Executes the program stored in the <code>CompiledScript</code> object.  The
              * default <code>ScriptContext</code> of the associated <code>ScriptEngine</code> is used.
@@ -51,14 +51,14 @@ declare namespace javax {
              * @throws ScriptException if an error occurs.
              */
             // @ts-ignore
-            eval(): java.lang.Object
+            public eval(): any
             /**
              * Returns the <code>ScriptEngine</code> whose <code>compile</code> method created this <code>CompiledScript</code>.
              * The <code>CompiledScript</code> will execute in this engine.
              * @return The <code>ScriptEngine</code> that created this <code>CompiledScript</code>
              */
             // @ts-ignore
-            abstract getEngine(): javax.script.ScriptEngine
+            public abstract getEngine(): javax.script.ScriptEngine
         }
     }
 }

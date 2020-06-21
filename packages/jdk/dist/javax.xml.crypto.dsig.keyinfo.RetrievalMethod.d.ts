@@ -45,14 +45,14 @@ declare namespace javax {
                          *     empty but never <code>null</code>).
                          */
                         // @ts-ignore
-                        getTransforms(): java.util.List
+                        getTransforms(): Array<any>
                         /**
                          * Returns the URI of the referenced <code>KeyInfo</code> information.
                          * @return the URI of the referenced <code>KeyInfo</code> information in
                          *     RFC 2396 format (never <code>null</code>)
                          */
                         // @ts-ignore
-                        getURI(): java.lang.String
+                        getURI(): string
                         /**
                          * Dereferences the <code>KeyInfo</code> information referenced by this
                          * <code>RetrievalMethod</code> and applies the specified

@@ -23,26 +23,26 @@ declare namespace javax {
                  * deselected).
                  */
                 // @ts-ignore
-                disableAllObjectNames(): void
+                public disableAllObjectNames(): void
                 /**
                  * Disables MBeanServerNotifications concerning given ObjectName.
                  * @param objectName  ObjectName no longer of interest
                  * @exception IllegalArgumentException  if the given ObjectName is null
                  */
                 // @ts-ignore
-                disableObjectName(objectName: javax.management.ObjectName): void
+                public disableObjectName(objectName: javax.management.ObjectName): void
                 /**
                  * Enables all MBeanServerNotifications (all ObjectNames are selected).
                  */
                 // @ts-ignore
-                enableAllObjectNames(): void
+                public enableAllObjectNames(): void
                 /**
                  * Enables MBeanServerNotifications concerning given ObjectName.
                  * @param objectName  ObjectName of interest
                  * @exception IllegalArgumentException  if the given ObjectName is null
                  */
                 // @ts-ignore
-                enableObjectName(objectName: javax.management.ObjectName): void
+                public enableObjectName(objectName: javax.management.ObjectName): void
                 /**
                  * Gets all the ObjectNames enabled.
                  * @return Vector of ObjectNames:
@@ -52,7 +52,7 @@ declare namespace javax {
                  *  selected.
                  */
                 // @ts-ignore
-                getEnabledObjectNames(): java.util.Vector<javax.management.ObjectName>
+                public getEnabledObjectNames(): java.util.Vector<javax.management.ObjectName>
                 /**
                  * Gets all the ObjectNames disabled.
                  * @return Vector of ObjectNames:
@@ -62,7 +62,7 @@ declare namespace javax {
                  *  deselected.
                  */
                 // @ts-ignore
-                getDisabledObjectNames(): java.util.Vector<javax.management.ObjectName>
+                public getDisabledObjectNames(): java.util.Vector<javax.management.ObjectName>
                 /**
                  * Invoked before sending the specified notification to the listener.
                  * <P>If:
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                isNotificationEnabled(notif: javax.management.Notification): boolean
+                public isNotificationEnabled(notif: javax.management.Notification): boolean
             }
         }
     }

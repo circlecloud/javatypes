@@ -48,7 +48,7 @@ declare namespace javax {
                  * @return The nonnegative number of attributes in this attribute set.
                  */
                 // @ts-ignore
-                size(): int
+                size(): number /*int*/
                 /**
                  * Retrieves the attribute with the given attribute id from the
                  * attribute set.
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @see #remove
                  */
                 // @ts-ignore
-                get(attrID: string): javax.naming.directory.Attribute
+                get(attrID: java.lang.String | string): javax.naming.directory.Attribute
                 /**
                  * Retrieves an enumeration of the attributes in the attribute set.
                  * The effects of updates to this attribute set on this enumeration
@@ -72,7 +72,7 @@ declare namespace javax {
                  *          is returned.
                  */
                 // @ts-ignore
-                getAll(): javax.naming.NamingEnumeration<? extends javax.naming.directory.Attribute>
+                getAll(): javax.naming.NamingEnumeration<any>
                 /**
                  * Retrieves an enumeration of the ids of the attributes in the
                  * attribute set.
@@ -85,7 +85,7 @@ declare namespace javax {
                  *          is returned.
                  */
                 // @ts-ignore
-                getIDs(): javax.naming.NamingEnumeration<java.lang.String>
+                getIDs(): javax.naming.NamingEnumeration<java.lang.String | string>
                 /**
                  * Adds a new attribute to the attribute set.
                  * @param attrID   non-null The id of the attribute to add.
@@ -99,7 +99,7 @@ declare namespace javax {
                  * @see #remove
                  */
                 // @ts-ignore
-                put(attrID: string, val: any): javax.naming.directory.Attribute
+                put(attrID: java.lang.String | string, val: java.lang.Object | any): javax.naming.directory.Attribute
                 /**
                  * Adds a new attribute to the attribute set.
                  * @param attr     The non-null attribute to add.
@@ -125,7 +125,7 @@ declare namespace javax {
                  *          null if no such attribute existed.
                  */
                 // @ts-ignore
-                remove(attrID: string): javax.naming.directory.Attribute
+                remove(attrID: java.lang.String | string): javax.naming.directory.Attribute
                 /**
                  * Makes a copy of the attribute set.
                  * The new set contains the same attributes as the original set:
@@ -134,7 +134,7 @@ declare namespace javax {
                  * @return A non-null copy of this attribute set.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

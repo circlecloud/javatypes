@@ -14,13 +14,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setOrder(order: number /*int*/): void
+                    public setOrder(order: number /*int*/): void
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     // @ts-ignore
-                    supportsMethod(method: java.lang.reflect.Method): boolean
+                    public supportsMethod(method: java.lang.reflect.Method): boolean
                     // @ts-ignore
-                    createApplicationListener(beanName: string, type: java.lang.Class<any>, method: java.lang.reflect.Method): org.springframework.context.ApplicationListener<?>
+                    public createApplicationListener(beanName: java.lang.String | string, type: java.lang.Class<any>, method: java.lang.reflect.Method): org.springframework.context.ApplicationListener<any>
                 }
             }
         }

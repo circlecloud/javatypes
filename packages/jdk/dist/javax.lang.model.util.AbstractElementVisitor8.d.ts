@@ -39,7 +39,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                class AbstractElementVisitor8<R, P> extends javax.lang.model.util.AbstractElementVisitor7<R, P> {
+                abstract class AbstractElementVisitor8<R, P> extends javax.lang.model.util.AbstractElementVisitor7<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */

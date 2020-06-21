@@ -11,13 +11,13 @@ declare namespace org {
                  * @see AmqpAdmin
                  */
                 // @ts-ignore
-                class AbstractExchange extends org.springframework.amqp.core.AbstractDeclarable implements org.springframework.amqp.core.Exchange {
+                abstract class AbstractExchange extends org.springframework.amqp.core.AbstractDeclarable implements org.springframework.amqp.core.Exchange {
                     /**
                      * Construct a new durable, non-auto-delete Exchange with the provided name.
                      * @param name the name of the exchange.
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Construct a new Exchange, given a name, durability flag, auto-delete flag.
                      * @param name the name of the exchange.
@@ -27,7 +27,7 @@ declare namespace org {
                      *  longer in use
                      */
                     // @ts-ignore
-                    constructor(name: string, durable: boolean, autoDelete: boolean)
+                    constructor(name: java.lang.String | string, durable: boolean, autoDelete: boolean)
                     /**
                      * Construct a new Exchange, given a name, durability flag, and auto-delete flag, and
                      * arguments.
@@ -39,26 +39,26 @@ declare namespace org {
                      * @param arguments the arguments used to declare the exchange
                      */
                     // @ts-ignore
-                    constructor(name: string, durable: boolean, autoDelete: boolean, arguments: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(name: java.lang.String | string, durable: boolean, autoDelete: boolean, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     // @ts-ignore
-                    abstract getType(): java.lang.String
+                    public abstract getType(): string
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     // @ts-ignore
-                    isDurable(): boolean
+                    public isDurable(): boolean
                     // @ts-ignore
-                    isAutoDelete(): boolean
+                    public isAutoDelete(): boolean
                     /**
                      * Add an argument to the arguments.
                      * @param argName the argument name.
                      * @param argValue the argument value.
                      */
                     // @ts-ignore
-                    addArgument(argName: string, argValue: any): void
+                    addArgument(argName: java.lang.String | string, argValue: java.lang.Object | any): void
                     // @ts-ignore
-                    getArguments(): java.util.Map<java.lang.String, java.lang.Object>
+                    public getArguments(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    isDelayed(): boolean
+                    public isDelayed(): boolean
                     /**
                      * Set the delayed flag.
                      * @param delayed the delayed.
@@ -66,9 +66,9 @@ declare namespace org {
                      * @see Exchange#isDelayed()
                      */
                     // @ts-ignore
-                    setDelayed(delayed: boolean): void
+                    public setDelayed(delayed: boolean): void
                     // @ts-ignore
-                    isInternal(): boolean
+                    public isInternal(): boolean
                     /**
                      * Set the internal flag.
                      * @param internal the internal.
@@ -76,9 +76,9 @@ declare namespace org {
                      * @see Exchange#isInternal()
                      */
                     // @ts-ignore
-                    setInternal(internal: boolean): void
+                    public setInternal(internal: boolean): void
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

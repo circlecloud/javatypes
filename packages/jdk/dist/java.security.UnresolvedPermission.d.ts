@@ -74,7 +74,7 @@ declare namespace java {
              *  the array will not affect this UnsolvedPermission.
              */
             // @ts-ignore
-            constructor(type: string, name: string, actions: string, certs: java.security.cert.Certificate[])
+            constructor(type: java.lang.String | string, name: java.lang.String | string, actions: java.lang.String | string, certs: java.security.cert.Certificate[])
             /**
              * This method always returns false for unresolved permissions.
              * That is, an UnresolvedPermission is never considered to
@@ -83,7 +83,7 @@ declare namespace java {
              * @return false.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two UnresolvedPermission objects for equality.
              * Checks that <i>obj</i> is an UnresolvedPermission, and has
@@ -98,13 +98,13 @@ declare namespace java {
              *  certificates as this object.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this object.
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the canonical string representation of the actions,
              * which currently is the empty string "", since there are no actions for
@@ -115,7 +115,7 @@ declare namespace java {
              * @return the empty string "".
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Get the type (class name) of the underlying permission that
              * has not been resolved.
@@ -124,7 +124,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getUnresolvedType(): java.lang.String
+            public getUnresolvedType(): string
             /**
              * Get the target name of the underlying permission that
              * has not been resolved.
@@ -134,7 +134,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getUnresolvedName(): java.lang.String
+            public getUnresolvedName(): string
             /**
              * Get the actions for the underlying permission that
              * has not been resolved.
@@ -144,7 +144,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getUnresolvedActions(): java.lang.String
+            public getUnresolvedActions(): string
             /**
              * Get the signer certificates (without any supporting chain)
              * for the underlying permission that has not been resolved.
@@ -154,7 +154,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getUnresolvedCerts(): java.security.cert.Certificate[]
+            public getUnresolvedCerts(): java.security.cert.Certificate[]
             /**
              * Returns a string describing this UnresolvedPermission.  The convention
              * is to specify the class name, the permission name, and the actions, in
@@ -162,7 +162,7 @@ declare namespace java {
              * @return information about this UnresolvedPermission.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a new PermissionCollection object for storing
              * UnresolvedPermission  objects.
@@ -171,7 +171,7 @@ declare namespace java {
              *  storing UnresolvedPermissions.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

@@ -18,7 +18,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            class AbstractChronology extends java.lang.Object implements java.time.chrono.Chronology {
+            abstract class AbstractChronology extends java.lang.Object implements java.time.chrono.Chronology {
                 /**
                  * Creates an instance.
                  */
@@ -116,7 +116,7 @@ declare namespace java {
                  *   because of a conflict in the input data
                  */
                 // @ts-ignore
-                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.ChronoLocalDate
+                public resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.ChronoLocalDate
                 /**
                  * Compares this chronology to another chronology.
                  * <p>
@@ -129,7 +129,7 @@ declare namespace java {
                  * @return the comparator value, negative if less, positive if greater
                  */
                 // @ts-ignore
-                compareTo(other: java.time.chrono.Chronology): int
+                public compareTo(other: java.time.chrono.Chronology): number /*int*/
                 /**
                  * Checks if this chronology is equal to another chronology.
                  * <p>
@@ -140,7 +140,7 @@ declare namespace java {
                  * @return true if this is equal to the other chronology
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this chronology.
                  * <p>
@@ -150,13 +150,13 @@ declare namespace java {
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Outputs this chronology as a {@code String}, using the chronology ID.
                  * @return a string representation of this chronology, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

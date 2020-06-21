@@ -11,7 +11,7 @@ declare namespace javax {
              * @see SSLContext
              */
             // @ts-ignore
-            class SSLContextSpi extends java.lang.Object {
+            abstract class SSLContextSpi extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -83,7 +83,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                abstract engineCreateSSLEngine(host: string, port: number /*int*/): javax.net.ssl.SSLEngine
+                abstract engineCreateSSLEngine(host: java.lang.String | string, port: number /*int*/): javax.net.ssl.SSLEngine
                 /**
                  * Returns a server <code>SSLSessionContext</code> object for
                  * this context.

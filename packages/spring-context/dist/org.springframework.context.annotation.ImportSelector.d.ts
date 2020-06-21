@@ -43,7 +43,7 @@ declare namespace org {
                      * @return the class names, or an empty array if none
                      */
                     // @ts-ignore
-                    selectImports(importingClassMetadata: AnnotationMetadata): java.lang.String[]
+                    selectImports(importingClassMetadata: AnnotationMetadata): string[]
                     /**
                      * Return a predicate for excluding classes from the import candidates, to be
                      * transitively applied to all classes found through this selector's imports.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @since 5.2.4
                      */
                     // @ts-ignore
-                    getExclusionFilter(): java.util.function.Predicate<java.lang.String>
+                    getExclusionFilter(): java.util.function$.Predicate<java.lang.String | string>
                 }
             }
         }

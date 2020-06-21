@@ -14,19 +14,19 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setEmbeddedValueResolver(resolver: StringValueResolver): void
+                    public setEmbeddedValueResolver(resolver: StringValueResolver): void
                     // @ts-ignore
-                    addPrinter(printer: org.springframework.format.Printer<any>): void
+                    public addPrinter(printer: org.springframework.format.Printer<any>): void
                     // @ts-ignore
-                    addParser(parser: org.springframework.format.Parser<any>): void
+                    public addParser(parser: org.springframework.format.Parser<any>): void
                     // @ts-ignore
-                    addFormatter(formatter: org.springframework.format.Formatter<any>): void
+                    public addFormatter(formatter: org.springframework.format.Formatter<any>): void
                     // @ts-ignore
-                    addFormatterForFieldType(fieldType: java.lang.Class<any>, formatter: org.springframework.format.Formatter<any>): void
+                    public addFormatterForFieldType(fieldType: java.lang.Class<any>, formatter: org.springframework.format.Formatter<any>): void
                     // @ts-ignore
-                    addFormatterForFieldType(fieldType: java.lang.Class<any>, printer: org.springframework.format.Printer<any>, parser: org.springframework.format.Parser<any>): void
+                    public addFormatterForFieldType(fieldType: java.lang.Class<any>, printer: org.springframework.format.Printer<any>, parser: org.springframework.format.Parser<any>): void
                     // @ts-ignore
-                    addFormatterForFieldAnnotation(annotationFormatterFactory: org.springframework.format.AnnotationFormatterFactory<java.lang.annotation.Annotation>): void
+                    public addFormatterForFieldAnnotation(annotationFormatterFactory: org.springframework.format.AnnotationFormatterFactory<any>): void
                 }
             }
         }

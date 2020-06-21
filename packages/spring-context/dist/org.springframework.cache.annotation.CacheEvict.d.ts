@@ -14,7 +14,7 @@ declare namespace org {
                  * @see CacheConfig
                  */
                 // @ts-ignore
-                class CacheEvict implements java.lang.annotation.Annotation {
+                abstract class CacheEvict implements java.lang.annotation.Annotation {
                 }
             }
         }

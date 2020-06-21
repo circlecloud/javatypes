@@ -9,11 +9,11 @@ declare namespace org {
                     // @ts-ignore
                     class Weathers extends java.lang.Object {
                         // @ts-ignore
-                        readonly CLEAR: org.spongepowered.api.world.weather.Weather
+                        public static readonly CLEAR: org.spongepowered.api.world.weather.Weather
                         // @ts-ignore
-                        readonly RAIN: org.spongepowered.api.world.weather.Weather
+                        public static readonly RAIN: org.spongepowered.api.world.weather.Weather
                         // @ts-ignore
-                        readonly THUNDER_STORM: org.spongepowered.api.world.weather.Weather
+                        public static readonly THUNDER_STORM: org.spongepowered.api.world.weather.Weather
                     }
                 }
             }

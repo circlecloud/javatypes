@@ -45,7 +45,7 @@ declare namespace javax {
                  * @return the processor-specific options passed to the tool
                  */
                 // @ts-ignore
-                getOptions(): java.util.Map<java.lang.String, java.lang.String>
+                getOptions(): java.util.Map<java.lang.String | string, java.lang.String | string>
                 /**
                  * Returns the messager used to report errors, warnings, and other
                  * notices.

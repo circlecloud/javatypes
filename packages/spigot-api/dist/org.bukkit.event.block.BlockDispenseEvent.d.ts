@@ -19,13 +19,13 @@ declare namespace org {
                      * @return An ItemStack for the item being dispensed
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Sets the item being dispensed.
                      * @param item the item being dispensed
                      */
                     // @ts-ignore
-                    setItem(item: org.bukkit.inventory.ItemStack): void
+                    public setItem(item: org.bukkit.inventory.ItemStack): void
                     /**
                      * Gets the velocity.
                      * <p>
@@ -34,21 +34,21 @@ declare namespace org {
                      * @return A Vector for the dispensed item's velocity
                      */
                     // @ts-ignore
-                    getVelocity(): org.bukkit.util.Vector
+                    public getVelocity(): org.bukkit.util.Vector
                     /**
                      * Sets the velocity of the item being dispensed.
                      * @param vel the velocity of the item being dispensed
                      */
                     // @ts-ignore
-                    setVelocity(vel: org.bukkit.util.Vector): void
+                    public setVelocity(vel: org.bukkit.util.Vector): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

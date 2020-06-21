@@ -19,65 +19,65 @@ declare namespace org {
                  * you're using fevents in a plugin system.
                  */
                 // @ts-ignore
-                bakeAll(): void
+                public static bakeAll(): void
                 /**
                  * Unregister all listeners from all handler lists.
                  */
                 // @ts-ignore
-                unregisterAll(): void
+                public static unregisterAll(): void
                 /**
                  * Unregister a specific plugin's listeners from all handler lists.
                  * @param plugin plugin to unregister
                  */
                 // @ts-ignore
-                unregisterAll(plugin: org.bukkit.plugin.Plugin): void
+                public static unregisterAll(plugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Unregister a specific listener from all handler lists.
                  * @param listener listener to unregister
                  */
                 // @ts-ignore
-                unregisterAll(listener: org.bukkit.event.Listener): void
+                public static unregisterAll(listener: org.bukkit.event.Listener): void
                 /**
                  * Register a new listener in this handler list
                  * @param listener listener to register
                  */
                 // @ts-ignore
-                register(listener: org.bukkit.plugin.RegisteredListener): void
+                public register(listener: org.bukkit.plugin.RegisteredListener): void
                 /**
                  * Register a collection of new listeners in this handler list
                  * @param listeners listeners to register
                  */
                 // @ts-ignore
-                registerAll(listeners: Array<org.bukkit.plugin.RegisteredListener>): void
+                public registerAll(listeners: java.util.Collection<org.bukkit.plugin.RegisteredListener> | Array<org.bukkit.plugin.RegisteredListener>): void
                 /**
                  * Remove a listener from a specific order slot
                  * @param listener listener to remove
                  */
                 // @ts-ignore
-                unregister(listener: org.bukkit.plugin.RegisteredListener): void
+                public unregister(listener: org.bukkit.plugin.RegisteredListener): void
                 /**
                  * Remove a specific plugin's listeners from this handler
                  * @param plugin plugin to remove
                  */
                 // @ts-ignore
-                unregister(plugin: org.bukkit.plugin.Plugin): void
+                public unregister(plugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Remove a specific listener from this handler
                  * @param listener listener to remove
                  */
                 // @ts-ignore
-                unregister(listener: org.bukkit.event.Listener): void
+                public unregister(listener: org.bukkit.event.Listener): void
                 /**
                  * Bake HashMap and ArrayLists to 2d array - does nothing if not necessary
                  */
                 // @ts-ignore
-                bake(): void
+                public bake(): void
                 /**
                  * Get the baked registered listeners associated with this handler list
                  * @return the array of registered listeners
                  */
                 // @ts-ignore
-                getRegisteredListeners(): org.bukkit.plugin.RegisteredListener[]
+                public getRegisteredListeners(): org.bukkit.plugin.RegisteredListener[]
                 /**
                  * Get a specific plugin's registered listeners associated with this
                  * handler list
@@ -85,13 +85,13 @@ declare namespace org {
                  * @return the list of registered listeners
                  */
                 // @ts-ignore
-                getRegisteredListeners(plugin: org.bukkit.plugin.Plugin): java.util.ArrayList<org.bukkit.plugin.RegisteredListener>
+                public static getRegisteredListeners(plugin: org.bukkit.plugin.Plugin): java.util.ArrayList<org.bukkit.plugin.RegisteredListener>
                 /**
                  * Get a list of all handler lists for every event type
                  * @return the list of all handler lists
                  */
                 // @ts-ignore
-                getHandlerLists(): java.util.ArrayList<org.bukkit.event.HandlerList>
+                public static getHandlerLists(): java.util.ArrayList<org.bukkit.event.HandlerList>
             }
         }
     }

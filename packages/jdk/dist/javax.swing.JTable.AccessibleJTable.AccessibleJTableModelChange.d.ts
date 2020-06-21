@@ -17,15 +17,15 @@ declare namespace javax {
                     // @ts-ignore
                     lastColumn: number /*int*/
                     // @ts-ignore
-                    getType(): int
+                    public getType(): number /*int*/
                     // @ts-ignore
-                    getFirstRow(): int
+                    public getFirstRow(): number /*int*/
                     // @ts-ignore
-                    getLastRow(): int
+                    public getLastRow(): number /*int*/
                     // @ts-ignore
-                    getFirstColumn(): int
+                    public getFirstColumn(): number /*int*/
                     // @ts-ignore
-                    getLastColumn(): int
+                    public getLastColumn(): number /*int*/
                 }
             }
         }

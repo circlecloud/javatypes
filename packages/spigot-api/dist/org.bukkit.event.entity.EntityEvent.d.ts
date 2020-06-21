@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents an Entity-related event
                  */
                 // @ts-ignore
-                class EntityEvent extends org.bukkit.event.Event {
+                abstract class EntityEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(what: org.bukkit.entity.Entity)
                     // @ts-ignore
@@ -16,13 +16,13 @@ declare namespace org {
                      * @return Entity who is involved in this event
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     /**
                      * Gets the EntityType of the Entity involved in this event.
                      * @return EntityType of the Entity involved in this event
                      */
                     // @ts-ignore
-                    getEntityType(): org.bukkit.entity.EntityType
+                    public getEntityType(): org.bukkit.entity.EntityType
                 }
             }
         }

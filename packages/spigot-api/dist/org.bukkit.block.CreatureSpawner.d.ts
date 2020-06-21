@@ -25,14 +25,14 @@ declare namespace org {
                  *  {#link #setSpawnedType(org.bukkit.entity.EntityType)}.
                  */
                 // @ts-ignore
-                setCreatureTypeByName(creatureType: string): void
+                setCreatureTypeByName(creatureType: java.lang.String | string): void
                 /**
                  * Get the spawner's creature type.
                  * @return The creature type's name.
                  * @deprecated magic value, use {#link #getSpawnedType()}.
                  */
                 // @ts-ignore
-                getCreatureTypeName(): java.lang.String
+                getCreatureTypeName(): string
                 /**
                  * Get the spawner's delay.
                  * <br>
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return The delay.
                  */
                 // @ts-ignore
-                getDelay(): int
+                getDelay(): number /*int*/
                 /**
                  * Set the spawner's delay.
                  * <br>
@@ -60,7 +60,7 @@ declare namespace org {
                  * @return the minimum spawn delay amount
                  */
                 // @ts-ignore
-                getMinSpawnDelay(): int
+                getMinSpawnDelay(): number /*int*/
                 /**
                  * Set the minimum spawn delay amount (in ticks).
                  * @param delay the minimum spawn delay amount
@@ -81,7 +81,7 @@ declare namespace org {
                  * @return the maximum spawn delay amount
                  */
                 // @ts-ignore
-                getMaxSpawnDelay(): int
+                getMaxSpawnDelay(): number /*int*/
                 /**
                  * Set the maximum spawn delay amount (in ticks).
                  * <br>
@@ -99,7 +99,7 @@ declare namespace org {
                  * @return the current spawn count
                  */
                 // @ts-ignore
-                getSpawnCount(): int
+                getSpawnCount(): number /*int*/
                 /**
                  * Set how many mobs attempt to spawn.
                  * @param spawnCount the new spawn count
@@ -117,7 +117,7 @@ declare namespace org {
                  * @return the maximum number of nearby, similar, entities
                  */
                 // @ts-ignore
-                getMaxNearbyEntities(): int
+                getMaxNearbyEntities(): number /*int*/
                 /**
                  * Set the maximum number of similar entities that are allowed to be within
                  * spawning range of this spawner.
@@ -139,7 +139,7 @@ declare namespace org {
                  *  spawner to be active.
                  */
                 // @ts-ignore
-                getRequiredPlayerRange(): int
+                getRequiredPlayerRange(): number /*int*/
                 /**
                  * Set the maximum distance (squared) a player can be in order for this
                  * spawner to be active.
@@ -165,7 +165,7 @@ declare namespace org {
                  * @return the spawn range
                  */
                 // @ts-ignore
-                getSpawnRange(): int
+                getSpawnRange(): number /*int*/
                 /**
                  * Set the new spawn range.
                  * <br>

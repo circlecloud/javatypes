@@ -258,7 +258,7 @@ declare namespace java {
                  *           argument or any of its elements are {@code null}
                  */
                 // @ts-ignore
-                getProxyClass(loader: java.lang.ClassLoader, ...interfaces: java.lang.Class[]): java.lang.Class<?>
+                public static getProxyClass(loader: java.lang.ClassLoader, ...interfaces: java.lang.Class<any>[]): java.lang.Class<any>
                 /**
                  * Returns an instance of a proxy class for the specified interfaces
                  * that dispatches method invocations to the specified invocation
@@ -303,7 +303,7 @@ declare namespace java {
                  *           {@code null}
                  */
                 // @ts-ignore
-                newProxyInstance(loader: java.lang.ClassLoader, interfaces: java.lang.Class[], h: java.lang.reflect.InvocationHandler): java.lang.Object
+                public static newProxyInstance(loader: java.lang.ClassLoader, interfaces: java.lang.Class<any>[], h: java.lang.reflect.InvocationHandler): any
                 /**
                  * Returns true if and only if the specified class was dynamically
                  * generated to be a proxy class using the {@code getProxyClass}
@@ -317,7 +317,7 @@ declare namespace java {
                  * @throws NullPointerException if {#code cl} is {@code null}
                  */
                 // @ts-ignore
-                isProxyClass(cl: java.lang.Class<any>): boolean
+                public static isProxyClass(cl: java.lang.Class<any>): boolean
                 /**
                  * Returns the invocation handler for the specified proxy instance.
                  * @param proxy the proxy instance to return the invocation handler for
@@ -332,7 +332,7 @@ declare namespace java {
                  *           handler's class.
                  */
                 // @ts-ignore
-                getInvocationHandler(proxy: any): java.lang.reflect.InvocationHandler
+                public static getInvocationHandler(proxy: java.lang.Object | any): java.lang.reflect.InvocationHandler
             }
         }
     }

@@ -11,10 +11,30 @@ declare namespace java {
              */
             // @ts-ignore
             class Form extends java.lang.Enum<java.text.Normalizer.Form> {
+                /**
+                 * Canonical decomposition.
+                 */
+                // @ts-ignore
+                readonly NFD: java.text.Normalizer.Form
+                /**
+                 * Canonical decomposition, followed by canonical composition.
+                 */
+                // @ts-ignore
+                readonly NFC: java.text.Normalizer.Form
+                /**
+                 * Compatibility decomposition.
+                 */
+                // @ts-ignore
+                readonly NFKD: java.text.Normalizer.Form
+                /**
+                 * Compatibility decomposition, followed by canonical composition.
+                 */
+                // @ts-ignore
+                readonly NFKC: java.text.Normalizer.Form
                 // @ts-ignore
                 values(): java.text.Normalizer.Form[]
                 // @ts-ignore
-                valueOf(name: string): java.text.Normalizer.Form
+                valueOf(name: java.lang.String | string): java.text.Normalizer.Form
             }
         }
     }

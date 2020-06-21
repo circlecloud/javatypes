@@ -39,14 +39,14 @@ declare namespace org {
                          * @see ChildBeanDefinition
                          */
                         // @ts-ignore
-                        registerBeanDefinition(beanName: string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
+                        registerBeanDefinition(beanName: java.lang.String | string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
                         /**
                          * Remove the BeanDefinition for the given name.
                          * @param beanName the name of the bean instance to register
                          * @throws NoSuchBeanDefinitionException if there is no such bean definition
                          */
                         // @ts-ignore
-                        removeBeanDefinition(beanName: string): void
+                        removeBeanDefinition(beanName: java.lang.String | string): void
                         /**
                          * Return the BeanDefinition for the given bean name.
                          * @param beanName name of the bean to find a definition for
@@ -54,27 +54,27 @@ declare namespace org {
                          * @throws NoSuchBeanDefinitionException if there is no such bean definition
                          */
                         // @ts-ignore
-                        getBeanDefinition(beanName: string): org.springframework.beans.factory.config.BeanDefinition
+                        getBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Check if this registry contains a bean definition with the given name.
                          * @param beanName the name of the bean to look for
                          * @return if this registry contains a bean definition with the given name
                          */
                         // @ts-ignore
-                        containsBeanDefinition(beanName: string): boolean
+                        containsBeanDefinition(beanName: java.lang.String | string): boolean
                         /**
                          * Return the names of all beans defined in this registry.
                          * @return the names of all beans defined in this registry,
                          *  or an empty array if none defined
                          */
                         // @ts-ignore
-                        getBeanDefinitionNames(): java.lang.String[]
+                        getBeanDefinitionNames(): string[]
                         /**
                          * Return the number of beans defined in the registry.
                          * @return the number of beans defined in the registry
                          */
                         // @ts-ignore
-                        getBeanDefinitionCount(): int
+                        getBeanDefinitionCount(): number /*int*/
                         /**
                          * Determine whether the given bean name is already in use within this registry,
                          * i.e. whether there is a local bean or alias registered under this name.
@@ -82,7 +82,7 @@ declare namespace org {
                          * @return whether the given bean name is already in use
                          */
                         // @ts-ignore
-                        isBeanNameInUse(beanName: string): boolean
+                        isBeanNameInUse(beanName: java.lang.String | string): boolean
                     }
                 }
             }

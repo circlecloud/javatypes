@@ -15,11 +15,11 @@ declare namespace org {
                      * @return the new {#link MainHand} of the player
                      */
                     // @ts-ignore
-                    getMainHand(): org.bukkit.inventory.MainHand
+                    public getMainHand(): org.bukkit.inventory.MainHand
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

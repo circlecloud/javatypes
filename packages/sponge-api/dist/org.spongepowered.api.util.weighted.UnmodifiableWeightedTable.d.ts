@@ -34,65 +34,65 @@ declare namespace org {
                         // @ts-ignore
                         constructor(table: org.spongepowered.api.util.weighted.WeightedTable<T>, rolls: org.spongepowered.api.util.weighted.VariableAmount)
                         // @ts-ignore
-                        add(entry: org.spongepowered.api.util.weighted.TableEntry<T>): boolean
+                        public add(entry: org.spongepowered.api.util.weighted.TableEntry<T>): boolean
                         // @ts-ignore
-                        add(object: T, weight: number /*double*/): boolean
+                        public add(object: T, weight: number /*double*/): boolean
                         // @ts-ignore
-                        addAll(c: Array<org.spongepowered.api.util.weighted.TableEntry<T>>): boolean
+                        public addAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        setRolls(rolls: org.spongepowered.api.util.weighted.VariableAmount): void
+                        public setRolls(rolls: org.spongepowered.api.util.weighted.VariableAmount): void
                         // @ts-ignore
-                        setRolls(rolls: number /*int*/): void
+                        public setRolls(rolls: number /*int*/): void
                         // @ts-ignore
-                        remove(entry: any): boolean
+                        public remove(entry: java.lang.Object | any): boolean
                         // @ts-ignore
-                        removeObject(entry: any): boolean
+                        public removeObject(entry: java.lang.Object | any): boolean
                         // @ts-ignore
-                        removeAll(c: Array<any>): boolean
+                        public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        removeIf(filter: java.util.function.Predicate<any super org.spongepowered.api.util.weighted.TableEntry<T>> | java.util.function$.Predicate<? super org.spongepowered.api.util.weighted.TableEntry<T>>): boolean
+                        public removeIf(filter: java.util.function$.Predicate<any>): boolean
                         // @ts-ignore
-                        retainAll(c: Array<any>): boolean
+                        public retainAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         // @ts-ignore
-                        iterator(): java.util.Iterator<org.spongepowered.api.util.weighted.TableEntry<T>>
+                        public iterator(): java.util.Iterator<org.spongepowered.api.util.weighted.TableEntry<T>>
                         // @ts-ignore
-                        contains(o: any): boolean
+                        public contains(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        getRolls(): org.spongepowered.api.util.weighted.VariableAmount
+                        public getRolls(): org.spongepowered.api.util.weighted.VariableAmount
                         // @ts-ignore
-                        get(rand: java.util.Random): java.util.List<T>
+                        public get(rand: java.util.Random): Array<T>
                         // @ts-ignore
-                        containsObject(obj: any): boolean
+                        public containsObject(obj: java.lang.Object | any): boolean
                         // @ts-ignore
-                        containsAll(c: Array<any>): boolean
+                        public containsAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        containsAllObjects(c: Array<any>): boolean
+                        public containsAllObjects(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         // @ts-ignore
-                        size(): int
+                        public size(): number /*int*/
                         // @ts-ignore
-                        getEntries(): java.util.List<org.spongepowered.api.util.weighted.TableEntry<T>>
+                        public getEntries(): Array<org.spongepowered.api.util.weighted.TableEntry<T>>
                         // @ts-ignore
-                        toArray(): java.lang.Object[]
+                        public toArray(): any[]
                         // @ts-ignore
-                        toArray<R>(a: R[]): R
+                        public toArray<R>(a: R[]): R
                         // @ts-ignore
-                        spliterator(): java.util.Spliterator<org.spongepowered.api.util.weighted.TableEntry<T>>
+                        public spliterator(): java.util.Spliterator<org.spongepowered.api.util.weighted.TableEntry<T>>
                         // @ts-ignore
-                        stream(): java.util.stream.Stream<org.spongepowered.api.util.weighted.TableEntry<T>>
+                        public stream(): java.util.stream.Stream<org.spongepowered.api.util.weighted.TableEntry<T>>
                         // @ts-ignore
-                        parallelStream(): java.util.stream.Stream<org.spongepowered.api.util.weighted.TableEntry<T>>
+                        public parallelStream(): java.util.stream.Stream<org.spongepowered.api.util.weighted.TableEntry<T>>
                         // @ts-ignore
-                        forEach(action: java.util.function.Consumer<any super org.spongepowered.api.util.weighted.TableEntry<T>> | java.util.function$.Consumer<? super org.spongepowered.api.util.weighted.TableEntry<T>>): void
+                        public forEach(action: java.util.function$.Consumer<any>): void
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                     }
                 }
             }

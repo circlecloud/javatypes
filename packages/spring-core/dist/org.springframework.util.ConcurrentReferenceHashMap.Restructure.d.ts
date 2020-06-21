@@ -8,9 +8,13 @@ declare namespace org {
                 // @ts-ignore
                 class Restructure extends java.lang.Enum<org.springframework.util.ConcurrentReferenceHashMap.Restructure> {
                     // @ts-ignore
+                    readonly WHEN_NECESSARY: org.springframework.util.ConcurrentReferenceHashMap.Restructure
+                    // @ts-ignore
+                    readonly NEVER: org.springframework.util.ConcurrentReferenceHashMap.Restructure
+                    // @ts-ignore
                     values(): org.springframework.util.ConcurrentReferenceHashMap.Restructure[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.util.ConcurrentReferenceHashMap.Restructure
+                    valueOf(name: java.lang.String | string): org.springframework.util.ConcurrentReferenceHashMap.Restructure
                 }
             }
         }

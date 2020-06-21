@@ -14,7 +14,7 @@ declare namespace org {
                  * @return Parent configuration
                  */
                 // @ts-ignore
-                configuration(): org.bukkit.configuration.Configuration
+                public configuration(): org.bukkit.configuration.Configuration
                 /**
                  * Gets the char that will be used to separate {@link
                  * ConfigurationSection}s
@@ -24,7 +24,7 @@ declare namespace org {
                  * @return Path separator
                  */
                 // @ts-ignore
-                pathSeparator(): char
+                public pathSeparator(): string
                 /**
                  * Sets the char that will be used to separate {@link
                  * ConfigurationSection}s
@@ -35,7 +35,7 @@ declare namespace org {
                  * @return This object, for chaining
                  */
                 // @ts-ignore
-                pathSeparator(value: string): org.bukkit.configuration.ConfigurationOptions
+                public pathSeparator(value: string): org.bukkit.configuration.ConfigurationOptions
                 /**
                  * Checks if the {@link Configuration} should copy values from its default
                  * {@link Configuration} directly.
@@ -50,7 +50,7 @@ declare namespace org {
                  * @return Whether or not defaults are directly copied
                  */
                 // @ts-ignore
-                copyDefaults(): boolean
+                public copyDefaults(): boolean
                 /**
                  * Sets if the {@link Configuration} should copy values from its default
                  * {@link Configuration} directly.
@@ -66,7 +66,7 @@ declare namespace org {
                  * @return This object, for chaining
                  */
                 // @ts-ignore
-                copyDefaults(value: boolean): org.bukkit.configuration.ConfigurationOptions
+                public copyDefaults(value: boolean): org.bukkit.configuration.ConfigurationOptions
             }
         }
     }

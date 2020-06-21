@@ -13,14 +13,14 @@ declare namespace org {
              * @see FileSystemUtils
              */
             // @ts-ignore
-            class FileCopyUtils extends java.lang.Object {
+            abstract class FileCopyUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * The default buffer size used when copying bytes.
                  */
                 // @ts-ignore
-                readonly BUFFER_SIZE: number /*int*/
+                public static readonly BUFFER_SIZE: number /*int*/
                 /**
                  * Copy the contents of the given input File to the given output File.
                  * @param in the file to copy from
@@ -29,7 +29,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: java.io.File, out: java.io.File): int
+                public static copy(input: java.io.File, out: java.io.File): number /*int*/
                 /**
                  * Copy the contents of the given byte array to the given output File.
                  * @param in the byte array to copy from
@@ -37,7 +37,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: number /*byte*/[], out: java.io.File): void
+                public static copy(input: number /*byte*/[], out: java.io.File): void
                 /**
                  * Copy the contents of the given input File into a new byte array.
                  * @param in the file to copy from
@@ -45,7 +45,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copyToByteArray(input: java.io.File): byte[]
+                public static copyToByteArray(input: java.io.File): number /*byte*/[]
                 /**
                  * Copy the contents of the given InputStream to the given OutputStream.
                  * Closes both streams when done.
@@ -55,7 +55,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: java.io.InputStream, out: java.io.OutputStream): int
+                public static copy(input: java.io.InputStream, out: java.io.OutputStream): number /*int*/
                 /**
                  * Copy the contents of the given byte array to the given OutputStream.
                  * Closes the stream when done.
@@ -64,7 +64,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: number /*byte*/[], out: java.io.OutputStream): void
+                public static copy(input: number /*byte*/[], out: java.io.OutputStream): void
                 /**
                  * Copy the contents of the given InputStream into a new byte array.
                  * Closes the stream when done.
@@ -73,7 +73,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copyToByteArray(input: java.io.InputStream): byte[]
+                public static copyToByteArray(input: java.io.InputStream): number /*byte*/[]
                 /**
                  * Copy the contents of the given Reader to the given Writer.
                  * Closes both when done.
@@ -83,7 +83,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: java.io.Reader, out: java.io.Writer): int
+                public static copy(input: java.io.Reader, out: java.io.Writer): number /*int*/
                 /**
                  * Copy the contents of the given String to the given output Writer.
                  * Closes the writer when done.
@@ -92,7 +92,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copy(input: string, out: java.io.Writer): void
+                public static copy(input: java.lang.String | string, out: java.io.Writer): void
                 /**
                  * Copy the contents of the given Reader into a String.
                  * Closes the reader when done.
@@ -101,7 +101,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                copyToString(input: java.io.Reader): java.lang.String
+                public static copyToString(input: java.io.Reader): string
             }
         }
     }

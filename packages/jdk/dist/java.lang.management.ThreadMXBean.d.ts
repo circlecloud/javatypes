@@ -46,7 +46,7 @@ declare namespace java {
                  *              not have {#link ManagementPermission} of &quot;monitor&quot;.
                  */
                 // @ts-ignore
-                findMonitorDeadlockedThreads(): long[]
+                findMonitorDeadlockedThreads(): number /*long*/[]
                 /**
                  * Returns an array of the identifiers of all of the threads that are alive
                  * in the current virtual machine. When processing the return from this
@@ -56,7 +56,7 @@ declare namespace java {
                  *          virtual machine.
                  */
                 // @ts-ignore
-                getAllThreadIds(): long[]
+                getAllThreadIds(): number /*long*/[]
                 /**
                  * If supported by the virtual machine, returns the total CPU usage time for
                  * the currently running thread. The returned time will have nanosecond
@@ -83,7 +83,7 @@ declare namespace java {
                  *              timing.
                  */
                 // @ts-ignore
-                getCurrentThreadCpuTime(): long
+                getCurrentThreadCpuTime(): number /*long*/
                 /**
                  * If supported by the virtual machine, returns the total CPU usage time for
                  * the current thread running in user mode. The returned time will have
@@ -110,14 +110,14 @@ declare namespace java {
                  *              timing.
                  */
                 // @ts-ignore
-                getCurrentThreadUserTime(): long
+                getCurrentThreadUserTime(): number /*long*/
                 /**
                  * Returns the number of daemon threads currently alive in the virtual
                  * machine.
                  * @return the number of currently alive daemon threads.
                  */
                 // @ts-ignore
-                getDaemonThreadCount(): int
+                getDaemonThreadCount(): number /*int*/
                 /**
                  * Returns the peak number of threads that have ever been alive in the
                  * virtual machine at any one instant since either the virtual machine
@@ -126,14 +126,14 @@ declare namespace java {
                  * @see #resetPeakThreadCount()
                  */
                 // @ts-ignore
-                getPeakThreadCount(): int
+                getPeakThreadCount(): number /*int*/
                 /**
                  * Returns the number of threads currently alive in the virtual machine.
                  * This includes both daemon threads and non-daemon threads.
                  * @return the number of currently alive threads.
                  */
                 // @ts-ignore
-                getThreadCount(): int
+                getThreadCount(): number /*int*/
                 /**
                  * If supported by the virtual machine, returns the total CPU usage time for
                  * the thread with the specified identifier. The returned time will have
@@ -163,7 +163,7 @@ declare namespace java {
                  * @see #isThreadCpuTimeEnabled()
                  */
                 // @ts-ignore
-                getThreadCpuTime(id: number /*long*/): long
+                getThreadCpuTime(id: number /*long*/): number /*long*/
                 /**
                  * Returns a {@link ThreadInfo} object for the thread with the specified
                  * identifier. The returned object will not have a stack trace so that a
@@ -400,14 +400,14 @@ declare namespace java {
                  * @see #isThreadCpuTimeEnabled()
                  */
                 // @ts-ignore
-                getThreadUserTime(id: number /*long*/): long
+                getThreadUserTime(id: number /*long*/): number /*long*/
                 /**
                  * Returns the number of threads that have been started in this virtual
                  * machine since it came into being.
                  * @return the total number of started threads.
                  */
                 // @ts-ignore
-                getTotalStartedThreadCount(): long
+                getTotalStartedThreadCount(): number /*long*/
                 /**
                  * Returns a boolean indication of whether or not the virtual machine
                  * supports the CPU timing of the current thread.
@@ -550,7 +550,7 @@ declare namespace java {
                  * @see #isSynchronizerUsageSupported()
                  */
                 // @ts-ignore
-                findDeadlockedThreads(): long[]
+                findDeadlockedThreads(): number /*long*/[]
                 /**
                  * Returns an array of {@link ThreadInfo} objects holding information on all
                  * threads that were alive when the call was invoked.

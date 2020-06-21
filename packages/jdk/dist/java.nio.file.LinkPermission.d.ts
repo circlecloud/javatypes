@@ -42,7 +42,7 @@ declare namespace java {
                  *           if name is empty or invalid
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Constructs a {@code LinkPermission} with the specified name.
                  * @param name
@@ -54,7 +54,7 @@ declare namespace java {
                  *           if name is empty or invalid, or actions is a non-empty string
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

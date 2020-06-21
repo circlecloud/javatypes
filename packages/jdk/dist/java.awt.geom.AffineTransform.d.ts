@@ -178,7 +178,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_IDENTITY: number /*int*/
+                public static readonly TYPE_IDENTITY: number /*int*/
                 /**
                  * This flag bit indicates that the transform defined by this object
                  * performs a translation in addition to the conversions indicated
@@ -196,7 +196,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_TRANSLATION: number /*int*/
+                public static readonly TYPE_TRANSLATION: number /*int*/
                 /**
                  * This flag bit indicates that the transform defined by this object
                  * performs a uniform scale in addition to the conversions indicated
@@ -216,7 +216,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_UNIFORM_SCALE: number /*int*/
+                public static readonly TYPE_UNIFORM_SCALE: number /*int*/
                 /**
                  * This flag bit indicates that the transform defined by this object
                  * performs a general scale in addition to the conversions indicated
@@ -236,7 +236,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_GENERAL_SCALE: number /*int*/
+                public static readonly TYPE_GENERAL_SCALE: number /*int*/
                 /**
                  * This constant is a bit mask for any of the scale flag bits.
                  * @see #TYPE_UNIFORM_SCALE
@@ -244,7 +244,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_MASK_SCALE: number /*int*/
+                public static readonly TYPE_MASK_SCALE: number /*int*/
                 /**
                  * This flag bit indicates that the transform defined by this object
                  * performs a mirror image flip about some axis which changes the
@@ -271,7 +271,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_FLIP: number /*int*/
+                public static readonly TYPE_FLIP: number /*int*/
                 /**
                  * This flag bit indicates that the transform defined by this object
                  * performs a quadrant rotation by some multiple of 90 degrees in
@@ -291,7 +291,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_QUADRANT_ROTATION: number /*int*/
+                public static readonly TYPE_QUADRANT_ROTATION: number /*int*/
                 /**
                  * This flag bit indicates that the transform defined by this object
                  * performs a rotation by an arbitrary angle in addition to the
@@ -312,7 +312,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_GENERAL_ROTATION: number /*int*/
+                public static readonly TYPE_GENERAL_ROTATION: number /*int*/
                 /**
                  * This constant is a bit mask for any of the rotation flag bits.
                  * @see #TYPE_QUADRANT_ROTATION
@@ -320,7 +320,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_MASK_ROTATION: number /*int*/
+                public static readonly TYPE_MASK_ROTATION: number /*int*/
                 /**
                  * This constant indicates that the transform defined by this object
                  * performs an arbitrary conversion of the input coordinates.
@@ -339,7 +339,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly TYPE_GENERAL_TRANSFORM: number /*int*/
+                public static readonly TYPE_GENERAL_TRANSFORM: number /*int*/
                 /**
                  * Returns a transform representing a translation transformation.
                  * The matrix representing the returned transform is:
@@ -357,7 +357,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getTranslateInstance(tx: number /*double*/, ty: number /*double*/): java.awt.geom.AffineTransform
+                public static getTranslateInstance(tx: number /*double*/, ty: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform representing a rotation transformation.
                  * The matrix representing the returned transform is:
@@ -377,7 +377,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getRotateInstance(theta: number /*double*/): java.awt.geom.AffineTransform
+                public static getRotateInstance(theta: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform that rotates coordinates around an anchor point.
                  * This operation is equivalent to translating the coordinates so
@@ -413,7 +413,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getRotateInstance(theta: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): java.awt.geom.AffineTransform
+                public static getRotateInstance(theta: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform that rotates coordinates according to
                  * a rotation vector.
@@ -434,7 +434,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getRotateInstance(vecx: number /*double*/, vecy: number /*double*/): java.awt.geom.AffineTransform
+                public static getRotateInstance(vecx: number /*double*/, vecy: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform that rotates coordinates around an anchor
                  * point according to a rotation vector.
@@ -460,7 +460,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getRotateInstance(vecx: number /*double*/, vecy: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): java.awt.geom.AffineTransform
+                public static getRotateInstance(vecx: number /*double*/, vecy: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform that rotates coordinates by the specified
                  * number of quadrants.
@@ -476,7 +476,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getQuadrantRotateInstance(numquadrants: number /*int*/): java.awt.geom.AffineTransform
+                public static getQuadrantRotateInstance(numquadrants: number /*int*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform that rotates coordinates by the specified
                  * number of quadrants around the specified anchor point.
@@ -496,7 +496,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getQuadrantRotateInstance(numquadrants: number /*int*/, anchorx: number /*double*/, anchory: number /*double*/): java.awt.geom.AffineTransform
+                public static getQuadrantRotateInstance(numquadrants: number /*int*/, anchorx: number /*double*/, anchory: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform representing a scaling transformation.
                  * The matrix representing the returned transform is:
@@ -514,7 +514,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getScaleInstance(sx: number /*double*/, sy: number /*double*/): java.awt.geom.AffineTransform
+                public static getScaleInstance(sx: number /*double*/, sy: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Returns a transform representing a shearing transformation.
                  * The matrix representing the returned transform is:
@@ -532,7 +532,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getShearInstance(shx: number /*double*/, shy: number /*double*/): java.awt.geom.AffineTransform
+                public static getShearInstance(shx: number /*double*/, shy: number /*double*/): java.awt.geom.AffineTransform
                 /**
                  * Retrieves the flag bits describing the conversion properties of
                  * this transform.
@@ -558,7 +558,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Returns the determinant of the matrix representation of the transform.
                  * The determinant is useful both to determine if the transform can
@@ -600,7 +600,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getDeterminant(): double
+                public getDeterminant(): number /*double*/
                 /**
                  * Retrieves the 6 specifiable values in the 3x3 affine transformation
                  * matrix and places them into an array of double precisions values.
@@ -621,7 +621,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getMatrix(flatmatrix: number /*double*/[]): void
+                public getMatrix(flatmatrix: number /*double*/[]): void
                 /**
                  * Returns the X coordinate scaling element (m00) of the 3x3
                  * affine transformation matrix.
@@ -631,7 +631,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getScaleX(): double
+                public getScaleX(): number /*double*/
                 /**
                  * Returns the Y coordinate scaling element (m11) of the 3x3
                  * affine transformation matrix.
@@ -641,7 +641,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getScaleY(): double
+                public getScaleY(): number /*double*/
                 /**
                  * Returns the X coordinate shearing element (m01) of the 3x3
                  * affine transformation matrix.
@@ -651,7 +651,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getShearX(): double
+                public getShearX(): number /*double*/
                 /**
                  * Returns the Y coordinate shearing element (m10) of the 3x3
                  * affine transformation matrix.
@@ -661,7 +661,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getShearY(): double
+                public getShearY(): number /*double*/
                 /**
                  * Returns the X coordinate of the translation element (m02) of the
                  * 3x3 affine transformation matrix.
@@ -671,7 +671,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getTranslateX(): double
+                public getTranslateX(): number /*double*/
                 /**
                  * Returns the Y coordinate of the translation element (m12) of the
                  * 3x3 affine transformation matrix.
@@ -681,7 +681,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getTranslateY(): double
+                public getTranslateY(): number /*double*/
                 /**
                  * Concatenates this transform with a translation transformation.
                  * This is equivalent to calling concatenate(T), where T is an
@@ -698,7 +698,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                translate(tx: number /*double*/, ty: number /*double*/): void
+                public translate(tx: number /*double*/, ty: number /*double*/): void
                 /**
                  * Concatenates this transform with a rotation transformation.
                  * This is equivalent to calling concatenate(R), where R is an
@@ -717,7 +717,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                rotate(theta: number /*double*/): void
+                public rotate(theta: number /*double*/): void
                 /**
                  * Concatenates this transform with a transform that rotates
                  * coordinates around an anchor point.
@@ -744,7 +744,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                rotate(theta: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
+                public rotate(theta: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
                 /**
                  * Concatenates this transform with a transform that rotates
                  * coordinates according to a rotation vector.
@@ -763,7 +763,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                rotate(vecx: number /*double*/, vecy: number /*double*/): void
+                public rotate(vecx: number /*double*/, vecy: number /*double*/): void
                 /**
                  * Concatenates this transform with a transform that rotates
                  * coordinates around an anchor point according to a rotation
@@ -786,7 +786,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                rotate(vecx: number /*double*/, vecy: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
+                public rotate(vecx: number /*double*/, vecy: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
                 /**
                  * Concatenates this transform with a transform that rotates
                  * coordinates by the specified number of quadrants.
@@ -800,7 +800,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                quadrantRotate(numquadrants: number /*int*/): void
+                public quadrantRotate(numquadrants: number /*int*/): void
                 /**
                  * Concatenates this transform with a transform that rotates
                  * coordinates by the specified number of quadrants around
@@ -817,7 +817,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                quadrantRotate(numquadrants: number /*int*/, anchorx: number /*double*/, anchory: number /*double*/): void
+                public quadrantRotate(numquadrants: number /*int*/, anchorx: number /*double*/, anchory: number /*double*/): void
                 /**
                  * Concatenates this transform with a scaling transformation.
                  * This is equivalent to calling concatenate(S), where S is an
@@ -834,7 +834,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                scale(sx: number /*double*/, sy: number /*double*/): void
+                public scale(sx: number /*double*/, sy: number /*double*/): void
                 /**
                  * Concatenates this transform with a shearing transformation.
                  * This is equivalent to calling concatenate(SH), where SH is an
@@ -851,13 +851,13 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                shear(shx: number /*double*/, shy: number /*double*/): void
+                public shear(shx: number /*double*/, shy: number /*double*/): void
                 /**
                  * Resets this transform to the Identity transform.
                  * @since 1.2
                  */
                 // @ts-ignore
-                setToIdentity(): void
+                public setToIdentity(): void
                 /**
                  * Sets this transform to a translation transformation.
                  * The matrix representing this transform becomes:
@@ -873,7 +873,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setToTranslation(tx: number /*double*/, ty: number /*double*/): void
+                public setToTranslation(tx: number /*double*/, ty: number /*double*/): void
                 /**
                  * Sets this transform to a rotation transformation.
                  * The matrix representing this transform becomes:
@@ -891,7 +891,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setToRotation(theta: number /*double*/): void
+                public setToRotation(theta: number /*double*/): void
                 /**
                  * Sets this transform to a translated rotation transformation.
                  * This operation is equivalent to translating the coordinates so
@@ -923,7 +923,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setToRotation(theta: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
+                public setToRotation(theta: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
                 /**
                  * Sets this transform to a rotation transformation that rotates
                  * coordinates according to a rotation vector.
@@ -942,7 +942,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setToRotation(vecx: number /*double*/, vecy: number /*double*/): void
+                public setToRotation(vecx: number /*double*/, vecy: number /*double*/): void
                 /**
                  * Sets this transform to a rotation transformation that rotates
                  * coordinates around an anchor point according to a rotation
@@ -965,7 +965,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setToRotation(vecx: number /*double*/, vecy: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
+                public setToRotation(vecx: number /*double*/, vecy: number /*double*/, anchorx: number /*double*/, anchory: number /*double*/): void
                 /**
                  * Sets this transform to a rotation transformation that rotates
                  * coordinates by the specified number of quadrants.
@@ -979,7 +979,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setToQuadrantRotation(numquadrants: number /*int*/): void
+                public setToQuadrantRotation(numquadrants: number /*int*/): void
                 /**
                  * Sets this transform to a translated rotation transformation
                  * that rotates coordinates by the specified number of quadrants
@@ -996,7 +996,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setToQuadrantRotation(numquadrants: number /*int*/, anchorx: number /*double*/, anchory: number /*double*/): void
+                public setToQuadrantRotation(numquadrants: number /*int*/, anchorx: number /*double*/, anchory: number /*double*/): void
                 /**
                  * Sets this transform to a scaling transformation.
                  * The matrix representing this transform becomes:
@@ -1012,7 +1012,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setToScale(sx: number /*double*/, sy: number /*double*/): void
+                public setToScale(sx: number /*double*/, sy: number /*double*/): void
                 /**
                  * Sets this transform to a shearing transformation.
                  * The matrix representing this transform becomes:
@@ -1028,7 +1028,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setToShear(shx: number /*double*/, shy: number /*double*/): void
+                public setToShear(shx: number /*double*/, shy: number /*double*/): void
                 /**
                  * Sets this transform to a copy of the transform in the specified
                  * <code>AffineTransform</code> object.
@@ -1037,7 +1037,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setTransform(Tx: java.awt.geom.AffineTransform): void
+                public setTransform(Tx: java.awt.geom.AffineTransform): void
                 /**
                  * Sets this transform to the matrix specified by the 6
                  * double precision values.
@@ -1050,7 +1050,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setTransform(m00: number /*double*/, m10: number /*double*/, m01: number /*double*/, m11: number /*double*/, m02: number /*double*/, m12: number /*double*/): void
+                public setTransform(m00: number /*double*/, m10: number /*double*/, m01: number /*double*/, m11: number /*double*/, m02: number /*double*/, m12: number /*double*/): void
                 /**
                  * Concatenates an <code>AffineTransform</code> <code>Tx</code> to
                  * this <code>AffineTransform</code> Cx in the most commonly useful
@@ -1073,7 +1073,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                concatenate(Tx: java.awt.geom.AffineTransform): void
+                public concatenate(Tx: java.awt.geom.AffineTransform): void
                 /**
                  * Concatenates an <code>AffineTransform</code> <code>Tx</code> to
                  * this <code>AffineTransform</code> Cx
@@ -1099,7 +1099,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                preConcatenate(Tx: java.awt.geom.AffineTransform): void
+                public preConcatenate(Tx: java.awt.geom.AffineTransform): void
                 /**
                  * Returns an <code>AffineTransform</code> object representing the
                  * inverse transformation.
@@ -1123,7 +1123,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                createInverse(): java.awt.geom.AffineTransform
+                public createInverse(): java.awt.geom.AffineTransform
                 /**
                  * Sets this transform to the inverse of itself.
                  * The inverse transform Tx' of this transform Tx
@@ -1144,7 +1144,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                invert(): void
+                public invert(): void
                 /**
                  * Transforms the specified <code>ptSrc</code> and stores the result
                  * in <code>ptDst</code>.
@@ -1164,7 +1164,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(ptSrc: java.awt.geom.Point2D, ptDst: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public transform(ptSrc: java.awt.geom.Point2D, ptDst: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Transforms an array of point objects by this transform.
                  * If any element of the <code>ptDst</code> array is
@@ -1197,7 +1197,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(ptSrc: java.awt.geom.Point2D[], srcOff: number /*int*/, ptDst: java.awt.geom.Point2D[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public transform(ptSrc: java.awt.geom.Point2D[], srcOff: number /*int*/, ptDst: java.awt.geom.Point2D[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Transforms an array of floating point coordinates by this transform.
                  * The two coordinate array sections can be exactly the same or
@@ -1220,7 +1220,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(srcPts: number /*float*/[], srcOff: number /*int*/, dstPts: number /*float*/[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public transform(srcPts: number /*float*/[], srcOff: number /*int*/, dstPts: number /*float*/[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Transforms an array of double precision coordinates by this transform.
                  * The two coordinate array sections can be exactly the same or
@@ -1243,7 +1243,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public transform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Transforms an array of floating point coordinates by this transform
                  * and stores the results into an array of doubles.
@@ -1262,7 +1262,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(srcPts: number /*float*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public transform(srcPts: number /*float*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Transforms an array of double precision coordinates by this transform
                  * and stores the results into an array of floats.
@@ -1281,7 +1281,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*float*/[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public transform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*float*/[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Inverse transforms the specified <code>ptSrc</code> and stores the
                  * result in <code>ptDst</code>.
@@ -1302,7 +1302,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                inverseTransform(ptSrc: java.awt.geom.Point2D, ptDst: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public inverseTransform(ptSrc: java.awt.geom.Point2D, ptDst: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Inverse transforms an array of double precision coordinates by
                  * this transform.
@@ -1328,7 +1328,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                inverseTransform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public inverseTransform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Transforms the relative distance vector specified by
                  * <code>ptSrc</code> and stores the result in <code>ptDst</code>.
@@ -1355,7 +1355,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                deltaTransform(ptSrc: java.awt.geom.Point2D, ptDst: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public deltaTransform(ptSrc: java.awt.geom.Point2D, ptDst: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Transforms an array of relative distance vectors by this
                  * transform.
@@ -1388,7 +1388,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                deltaTransform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
+                public deltaTransform(srcPts: number /*double*/[], srcOff: number /*int*/, dstPts: number /*double*/[], dstOff: number /*int*/, numPts: number /*int*/): void
                 /**
                  * Returns a new {@link Shape} object defined by the geometry of the
                  * specified <code>Shape</code> after it has been transformed by
@@ -1400,7 +1400,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                createTransformedShape(pSrc: java.awt.Shape): java.awt.Shape
+                public createTransformedShape(pSrc: java.awt.Shape): java.awt.Shape
                 /**
                  * Returns a <code>String</code> that represents the value of this
                  * {@link Object}.
@@ -1409,7 +1409,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns <code>true</code> if this <code>AffineTransform</code> is
                  * an identity transform.
@@ -1418,7 +1418,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                isIdentity(): boolean
+                public isIdentity(): boolean
                 /**
                  * Returns a copy of this <code>AffineTransform</code> object.
                  * @return an <code>Object</code> that is a copy of this
@@ -1426,14 +1426,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns the hashcode for this transform.
                  * @return a hash code for this transform.
                  * @since 1.2
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns <code>true</code> if this <code>AffineTransform</code>
                  * represents the same affine coordinate transform as the specified
@@ -1445,7 +1445,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

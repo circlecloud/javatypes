@@ -6,13 +6,13 @@ declare namespace org {
              * response from the user.
              */
             // @ts-ignore
-            class BooleanPrompt extends org.bukkit.conversations.ValidatingPrompt {
+            abstract class BooleanPrompt extends org.bukkit.conversations.ValidatingPrompt {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                isInputValid(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                isInputValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 // @ts-ignore
-                acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
                 /**
                  * Override this method to perform some action with the user's boolean
                  * response.

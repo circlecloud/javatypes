@@ -38,13 +38,13 @@ declare namespace javax {
                      * @see Element#equals
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    equals(obj: java.lang.Object | any): boolean
                     /**
                      * Obeys the general contract of {@link Object#hashCode Object.hashCode}.
                      * @see #equals
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    hashCode(): number /*int*/
                     /**
                      * Compares this name to the specified {@code CharSequence}. The result
                      * is {@code true} if and only if this name represents the same sequence

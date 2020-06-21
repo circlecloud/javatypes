@@ -52,7 +52,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Writes a portion of an array of characters.
              * <p> Ordinarily this method stores characters from the given array into
@@ -67,7 +67,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Writes a portion of a String.
              * <p> If the value of the <tt>len</tt> parameter is negative then no
@@ -81,7 +81,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(s: string, off: number /*int*/, len: number /*int*/): void
+            public write(s: java.lang.String | string, off: number /*int*/, len: number /*int*/): void
             /**
              * Writes a line separator.  The line separator string is defined by the
              * system property <tt>line.separator</tt>, and is not necessarily a single
@@ -89,15 +89,15 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            newLine(): void
+            public newLine(): void
             /**
              * Flushes the stream.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

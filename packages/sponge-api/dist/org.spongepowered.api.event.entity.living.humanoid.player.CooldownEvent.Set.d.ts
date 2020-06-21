@@ -24,13 +24,13 @@ declare namespace org {
                                          * @return The originally set cooldown
                                          */
                                         // @ts-ignore
-                                        getOriginalNewCooldown(): int
+                                        getOriginalNewCooldown(): number /*int*/
                                         /**
                                          * Gets the new cooldown the item type has for the player.
                                          * @return The new cooldown of the item type
                                          */
                                         // @ts-ignore
-                                        getNewCooldown(): int
+                                        getNewCooldown(): number /*int*/
                                         /**
                                          * Sets the new cooldown for the item type for the player.
                                          * @param ticks The amount of ticks the cooldown should last for

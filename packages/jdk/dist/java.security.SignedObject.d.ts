@@ -98,7 +98,7 @@ declare namespace java {
              *  de-serialization
              */
             // @ts-ignore
-            getObject(): java.lang.Object
+            public getObject(): any
             /**
              * Retrieves the signature on the signed object, in the form of a
              * byte array.
@@ -106,13 +106,13 @@ declare namespace java {
              *  method is called.
              */
             // @ts-ignore
-            getSignature(): byte[]
+            public getSignature(): number /*byte*/[]
             /**
              * Retrieves the name of the signature algorithm.
              * @return the signature algorithm name.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Verifies that the signature in this SignedObject is the valid
              * signature for the object stored inside, with the given
@@ -125,7 +125,7 @@ declare namespace java {
              *  is valid, {@code false} otherwise
              */
             // @ts-ignore
-            verify(verificationKey: java.security.PublicKey, verificationEngine: java.security.Signature): boolean
+            public verify(verificationKey: java.security.PublicKey, verificationEngine: java.security.Signature): boolean
         }
     }
 }

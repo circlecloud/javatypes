@@ -23,7 +23,7 @@ declare namespace org {
                              * @return The connected Chests, if available
                              */
                             // @ts-ignore
-                            getConnectedChests(): java.util.Set<org.spongepowered.api.block.tileentity.carrier.Chest>
+                            getConnectedChests(): Array<org.spongepowered.api.block.tileentity.carrier.Chest>
                         }
                     }
                 }

@@ -81,7 +81,7 @@ declare namespace java {
              *          {@code null}
              */
             // @ts-ignore
-            setEmptyValue(emptyValue: java.lang.CharSequence): java.util.StringJoiner
+            public setEmptyValue(emptyValue: java.lang.CharSequence): java.util.StringJoiner
             /**
              * Returns the current value, consisting of the {@code prefix}, the values
              * added so far separated by the {@code delimiter}, and the {@code suffix},
@@ -90,7 +90,7 @@ declare namespace java {
              * @return the string representation of this {#code StringJoiner}
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Adds a copy of the given {@code CharSequence} value as the next
              * element of the {@code StringJoiner} value. If {@code newElement} is
@@ -99,7 +99,7 @@ declare namespace java {
              * @return a reference to this {#code StringJoiner}
              */
             // @ts-ignore
-            add(newElement: java.lang.CharSequence): java.util.StringJoiner
+            public add(newElement: java.lang.CharSequence): java.util.StringJoiner
             /**
              * Adds the contents of the given {@code StringJoiner} without prefix and
              * suffix as the next element if it is non-empty. If the given {@code
@@ -117,7 +117,7 @@ declare namespace java {
              * @return This {#code StringJoiner}
              */
             // @ts-ignore
-            merge(other: java.util.StringJoiner): java.util.StringJoiner
+            public merge(other: java.util.StringJoiner): java.util.StringJoiner
             /**
              * Returns the length of the {@code String} representation
              * of this {@code StringJoiner}. Note that if
@@ -128,7 +128,7 @@ declare namespace java {
              * @return the length of the current value of {#code StringJoiner}
              */
             // @ts-ignore
-            length(): int
+            public length(): number /*int*/
         }
     }
 }

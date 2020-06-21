@@ -37,7 +37,7 @@ declare namespace org {
                      * @return all cache operations for this method, or {#code null} if none found
                      */
                     // @ts-ignore
-                    getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                 }
             }
         }

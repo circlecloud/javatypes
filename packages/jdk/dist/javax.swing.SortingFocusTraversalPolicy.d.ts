@@ -39,7 +39,7 @@ declare namespace javax {
              * Constructs a SortingFocusTraversalPolicy with the specified Comparator.
              */
             // @ts-ignore
-            constructor(comparator: java.util.Comparator<any super java.awt.Component>)
+            constructor(comparator: java.util.Comparator<any>)
             /**
              * Returns the Component that should receive the focus after aComponent.
              * aContainer must be a focus cycle root of aComponent or a focus traversal policy provider.
@@ -62,7 +62,7 @@ declare namespace javax {
              *          aComponent is null
              */
             // @ts-ignore
-            getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             /**
              * Returns the Component that should receive the focus before aComponent.
              * aContainer must be a focus cycle root of aComponent or a focus traversal policy provider.
@@ -85,7 +85,7 @@ declare namespace javax {
              *          aComponent is null
              */
             // @ts-ignore
-            getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             /**
              * Returns the first Component in the traversal cycle. This method is used
              * to determine the next Component to focus when traversal wraps in the
@@ -97,7 +97,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            getFirstComponent(aContainer: java.awt.Container): java.awt.Component
+            public getFirstComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Returns the last Component in the traversal cycle. This method is used
              * to determine the next Component to focus when traversal wraps in the
@@ -109,7 +109,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            getLastComponent(aContainer: java.awt.Container): java.awt.Component
+            public getLastComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Returns the default Component to focus. This Component will be the first
              * to receive focus when traversing down into a new focus traversal cycle
@@ -123,7 +123,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            getDefaultComponent(aContainer: java.awt.Container): java.awt.Component
+            public getDefaultComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Sets whether this SortingFocusTraversalPolicy transfers focus down-cycle
              * implicitly. If <code>true</code>, during normal focus traversal,
@@ -138,7 +138,7 @@ declare namespace javax {
              * @see #getFirstComponent
              */
             // @ts-ignore
-            setImplicitDownCycleTraversal(implicitDownCycleTraversal: boolean): void
+            public setImplicitDownCycleTraversal(implicitDownCycleTraversal: boolean): void
             /**
              * Returns whether this SortingFocusTraversalPolicy transfers focus down-
              * cycle implicitly. If <code>true</code>, during normal focus
@@ -152,21 +152,21 @@ declare namespace javax {
              * @see #getFirstComponent
              */
             // @ts-ignore
-            getImplicitDownCycleTraversal(): boolean
+            public getImplicitDownCycleTraversal(): boolean
             /**
              * Sets the Comparator which will be used to sort the Components in a
              * focus traversal cycle.
              * @param comparator the Comparator which will be used for sorting
              */
             // @ts-ignore
-            setComparator(comparator: java.util.Comparator<any super java.awt.Component>): void
+            setComparator(comparator: java.util.Comparator<any>): void
             /**
              * Returns the Comparator which will be used to sort the Components in a
              * focus traversal cycle.
              * @return the Comparator which will be used for sorting
              */
             // @ts-ignore
-            getComparator(): java.util.Comparator<? super java.awt.Component>
+            getComparator(): java.util.Comparator<any>
             /**
              * Determines whether a Component is an acceptable choice as the new
              * focus owner. By default, this method will accept a Component if and

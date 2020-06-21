@@ -15,7 +15,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class Entry<M, I> extends java.lang.Object {
+            abstract class Entry<M, I> extends java.lang.Object {
                 /**
                  * Creates an <code>Entry</code>.
                  */
@@ -26,7 +26,7 @@ declare namespace javax {
                  * @return the model containing the data that this entry represents
                  */
                 // @ts-ignore
-                abstract getModel(): M
+                public abstract getModel(): M
                 /**
                  * Returns the number of values in the entry.  For
                  * example, when used with a table this corresponds to the
@@ -34,7 +34,7 @@ declare namespace javax {
                  * @return number of values in the object being filtered
                  */
                 // @ts-ignore
-                abstract getValueCount(): int
+                public abstract getValueCount(): number /*int*/
                 /**
                  * Returns the value at the specified index.  This may return
                  * <code>null</code>.  When used with a table, index
@@ -45,7 +45,7 @@ declare namespace javax {
                  *          &gt;= getValueCount
                  */
                 // @ts-ignore
-                abstract getValue(index: number /*int*/): java.lang.Object
+                public abstract getValue(index: number /*int*/): any
                 /**
                  * Returns the string value at the specified index.  If
                  * filtering is being done based on <code>String</code> values
@@ -63,7 +63,7 @@ declare namespace javax {
                  *          &gt;= getValueCount
                  */
                 // @ts-ignore
-                getStringValue(index: number /*int*/): java.lang.String
+                public getStringValue(index: number /*int*/): string
                 /**
                  * Returns the identifer (in the model) of the entry.
                  * For a table this corresponds to the index of the row in the model,
@@ -72,7 +72,7 @@ declare namespace javax {
                  *          this entry
                  */
                 // @ts-ignore
-                abstract getIdentifier(): I
+                public abstract getIdentifier(): I
             }
         }
     }

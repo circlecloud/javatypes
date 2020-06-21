@@ -44,7 +44,7 @@ declare namespace org {
                      *  {#link Configuration @Configuration} classes
                      */
                     // @ts-ignore
-                    constructor(...componentClasses: java.lang.Class[])
+                    constructor(...componentClasses: java.lang.Class<any>[])
                     /**
                      * Create a new AnnotationConfigApplicationContext, scanning for components
                      * in the given packages, registering bean definitions for those components,
@@ -52,13 +52,13 @@ declare namespace org {
                      * @param basePackages the packages to scan for component classes
                      */
                     // @ts-ignore
-                    constructor(...basePackages: string[])
+                    constructor(...basePackages: java.lang.String[] | string[])
                     /**
                      * Propagate the given custom {@code Environment} to the underlying
                      * {@link AnnotatedBeanDefinitionReader} and {@link ClassPathBeanDefinitionScanner}.
                      */
                     // @ts-ignore
-                    setEnvironment(environment: ConfigurableEnvironment): void
+                    public setEnvironment(environment: ConfigurableEnvironment): void
                     /**
                      * Provide a custom {@link BeanNameGenerator} for use with {@link AnnotatedBeanDefinitionReader}
                      * and/or {@link ClassPathBeanDefinitionScanner}, if any.
@@ -71,7 +71,7 @@ declare namespace org {
                      * @see FullyQualifiedAnnotationBeanNameGenerator
                      */
                     // @ts-ignore
-                    setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
+                    public setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
                     /**
                      * Set the {@link ScopeMetadataResolver} to use for registered component classes.
                      * <p>The default is an {@link AnnotationScopeMetadataResolver}.
@@ -79,7 +79,7 @@ declare namespace org {
                      * and/or {@link #scan(String...)}.
                      */
                     // @ts-ignore
-                    setScopeMetadataResolver(scopeMetadataResolver: org.springframework.context.annotation.ScopeMetadataResolver): void
+                    public setScopeMetadataResolver(scopeMetadataResolver: org.springframework.context.annotation.ScopeMetadataResolver): void
                     /**
                      * Register one or more component classes to be processed.
                      * <p>Note that {@link #refresh()} must be called in order for the context
@@ -90,7 +90,7 @@ declare namespace org {
                      * @see #refresh()
                      */
                     // @ts-ignore
-                    register(...componentClasses: java.lang.Class[]): void
+                    public register(...componentClasses: java.lang.Class<any>[]): void
                     /**
                      * Perform a scan within the specified base packages.
                      * <p>Note that {@link #refresh()} must be called in order for the context
@@ -100,9 +100,9 @@ declare namespace org {
                      * @see #refresh()
                      */
                     // @ts-ignore
-                    scan(...basePackages: string[]): void
+                    public scan(...basePackages: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    registerBean<T>(beanName: string, beanClass: java.lang.Class<T>, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
+                    public registerBean<T>(beanName: java.lang.String | string, beanClass: java.lang.Class<T>, supplier: java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
                 }
             }
         }

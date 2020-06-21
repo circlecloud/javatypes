@@ -17,7 +17,7 @@ declare namespace org {
                          * @return A collection of entities
                          */
                         // @ts-ignore
-                        getTileEntities(): java.util.Collection<org.spongepowered.api.block.tileentity.TileEntity>
+                        getTileEntities(): Array<org.spongepowered.api.block.tileentity.TileEntity>
                         /**
                          * Return a collection of tile entities contained within this volume,
                          * possibly only returning tile entities only in loaded areas. The returned
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return A collection of filtered entities
                          */
                         // @ts-ignore
-                        getTileEntities(filter: java.util.function.Predicate<org.spongepowered.api.block.tileentity.TileEntity> | java.util.function$.Predicate<org.spongepowered.api.block.tileentity.TileEntity>): java.util.Collection<org.spongepowered.api.block.tileentity.TileEntity>
+                        getTileEntities(filter: java.util.function$.Predicate<org.spongepowered.api.block.tileentity.TileEntity>): Array<org.spongepowered.api.block.tileentity.TileEntity>
                         /**
                          * Gets the tile entity at the given position, if it exists.
                          * @param position The position
@@ -48,7 +48,7 @@ declare namespace org {
                         // @ts-ignore
                         getTileEntity(x: number /*int*/, y: number /*int*/, z: number /*int*/): java.util.Optional<org.spongepowered.api.block.tileentity.TileEntity>
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<? extends org.spongepowered.api.world.extent.TileEntityVolume>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<any>
                     }
                 }
             }

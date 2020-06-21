@@ -14,11 +14,11 @@ declare namespace org {
                      * @return The portal block the entity is touching
                      */
                     // @ts-ignore
-                    getLocation(): org.bukkit.Location
+                    public getLocation(): org.bukkit.Location
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

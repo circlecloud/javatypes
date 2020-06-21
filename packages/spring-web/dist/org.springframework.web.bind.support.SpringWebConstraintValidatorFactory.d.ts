@@ -21,9 +21,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getInstance<T extends <any>>(key: java.lang.Class<T>): T
+                        public getInstance<T extends java.lang.Object>(key: java.lang.Class<T>): T
                         // @ts-ignore
-                        releaseInstance(instance: object): void
+                        public releaseInstance(instance: object): void
                         /**
                          * Retrieve the Spring {@link WebApplicationContext} to use.
                          * The default implementation returns the current {@link WebApplicationContext}

@@ -18,7 +18,7 @@ declare namespace javax {
                  *          {@code null}
                  */
                 // @ts-ignore
-                constructor(sourceBean: any)
+                constructor(sourceBean: java.lang.Object | any)
                 /**
                  * Constructs a SwingPropertyChangeSupport object.
                  * @param sourceBean the bean to be given as the source for any events
@@ -29,7 +29,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                constructor(sourceBean: any, notifyOnEDT: boolean)
+                constructor(sourceBean: java.lang.Object | any, notifyOnEDT: boolean)
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -43,7 +43,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                firePropertyChange(evt: java.beans.PropertyChangeEvent): void
+                public firePropertyChange(evt: java.beans.PropertyChangeEvent): void
                 /**
                  * Returns {@code notifyOnEDT} property.
                  * @return {#code notifyOnEDT} property
@@ -51,7 +51,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                isNotifyOnEDT(): boolean
+                public isNotifyOnEDT(): boolean
             }
         }
     }

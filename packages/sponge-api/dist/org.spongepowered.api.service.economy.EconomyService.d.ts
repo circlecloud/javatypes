@@ -30,7 +30,7 @@ declare namespace org {
                          * @return The {#link Set} of all {@link Currency}s
                          */
                         // @ts-ignore
-                        getCurrencies(): java.util.Set<org.spongepowered.api.service.economy.Currency>
+                        getCurrencies(): Array<org.spongepowered.api.service.economy.Currency>
                         /**
                          * Returns whether a {@link UniqueAccount} exists with the specified {@link UUID}.
                          * @param uuid The {#link UUID} of the account to check for
@@ -46,7 +46,7 @@ declare namespace org {
                          * @return Whether an {#link Account} with the specified identifier exists
                          */
                         // @ts-ignore
-                        hasAccount(identifier: string): boolean
+                        hasAccount(identifier: java.lang.String | string): boolean
                         /**
                          * Gets the {@link UniqueAccount} for the user with the specified {@link UUID}.
                          * <p>If an account does not already exists with the specified {@link UUID},
@@ -69,7 +69,7 @@ declare namespace org {
                          * @return The {#link Account}, if available.
                          */
                         // @ts-ignore
-                        getOrCreateAccount(identifier: string): java.util.Optional<org.spongepowered.api.service.economy.account.Account>
+                        getOrCreateAccount(identifier: java.lang.String | string): java.util.Optional<org.spongepowered.api.service.economy.account.Account>
                     }
                 }
             }

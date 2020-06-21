@@ -22,21 +22,21 @@ declare namespace javax {
              * @see #setSelectionMode
              */
             // @ts-ignore
-            
+            readonly SINGLE_SELECTION: number /*int*/
             /**
              * A value for the selectionMode property: select one contiguous
              * range of indices at a time.
              * @see #setSelectionMode
              */
             // @ts-ignore
-            
+            readonly SINGLE_INTERVAL_SELECTION: number /*int*/
             /**
              * A value for the selectionMode property: select one or more
              * contiguous ranges of indices at a time.
              * @see #setSelectionMode
              */
             // @ts-ignore
-            
+            readonly MULTIPLE_INTERVAL_SELECTION: number /*int*/
             /**
              * Changes the selection to be between {@code index0} and {@code index1}
              * inclusive. {@code index0} doesn't have to be less than or equal to
@@ -97,12 +97,12 @@ declare namespace javax {
              * Returns the first selected index or -1 if the selection is empty.
              */
             // @ts-ignore
-            getMinSelectionIndex(): int
+            getMinSelectionIndex(): number /*int*/
             /**
              * Returns the last selected index or -1 if the selection is empty.
              */
             // @ts-ignore
-            getMaxSelectionIndex(): int
+            getMaxSelectionIndex(): number /*int*/
             /**
              * Returns true if the specified index is selected.
              */
@@ -120,7 +120,7 @@ declare namespace javax {
              * @see #addSelectionInterval
              */
             // @ts-ignore
-            getAnchorSelectionIndex(): int
+            getAnchorSelectionIndex(): number /*int*/
             /**
              * Set the anchor selection index.
              * @see #getAnchorSelectionIndex
@@ -135,7 +135,7 @@ declare namespace javax {
              * @see #addSelectionInterval
              */
             // @ts-ignore
-            getLeadSelectionIndex(): int
+            getLeadSelectionIndex(): number /*int*/
             /**
              * Set the lead selection index.
              * @see #getLeadSelectionIndex
@@ -232,7 +232,7 @@ declare namespace javax {
              * @see #setSelectionMode
              */
             // @ts-ignore
-            getSelectionMode(): int
+            getSelectionMode(): number /*int*/
             /**
              * Add a listener to the list that's notified each time a change
              * to the selection occurs.

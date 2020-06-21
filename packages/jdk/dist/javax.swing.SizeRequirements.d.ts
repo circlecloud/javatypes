@@ -81,7 +81,7 @@ declare namespace javax {
              * <code>comp.getMinimumSize().height</code>.
              */
             // @ts-ignore
-            minimum: number /*int*/
+            public minimum: number /*int*/
             /**
              * The preferred (natural) size.
              * For a component <code>comp</code>, this should be equal to either
@@ -89,7 +89,7 @@ declare namespace javax {
              * <code>comp.getPreferredSize().height</code>.
              */
             // @ts-ignore
-            preferred: number /*int*/
+            public preferred: number /*int*/
             /**
              * The maximum size allowed.
              * For a component <code>comp</code>, this should be equal to either
@@ -97,21 +97,21 @@ declare namespace javax {
              * <code>comp.getMaximumSize().height</code>.
              */
             // @ts-ignore
-            maximum: number /*int*/
+            public maximum: number /*int*/
             /**
              * The alignment, specified as a value between 0.0 and 1.0,
              * inclusive.
              * To specify centering, the alignment should be 0.5.
              */
             // @ts-ignore
-            alignment: number /*float*/
+            public alignment: number /*float*/
             /**
              * Returns a string describing the minimum, preferred, and maximum
              * size requirements, along with the alignment.
              * @return the string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Determines the total space necessary to
              * place a set of components end-to-end.  The needs
@@ -126,7 +126,7 @@ declare namespace javax {
              * @return the total space requirements.
              */
             // @ts-ignore
-            getTiledSizeRequirements(children: javax.swing.SizeRequirements[]): javax.swing.SizeRequirements
+            public static getTiledSizeRequirements(children: javax.swing.SizeRequirements[]): javax.swing.SizeRequirements
             /**
              * Determines the total space necessary to
              * align a set of components.  The needs
@@ -138,7 +138,7 @@ declare namespace javax {
              * @return the total space requirements.
              */
             // @ts-ignore
-            getAlignedSizeRequirements(children: javax.swing.SizeRequirements[]): javax.swing.SizeRequirements
+            public static getAlignedSizeRequirements(children: javax.swing.SizeRequirements[]): javax.swing.SizeRequirements
             /**
              * Creates a set of offset/span pairs representing how to
              * lay out a set of components end-to-end.
@@ -160,7 +160,7 @@ declare namespace javax {
              *    total target span.
              */
             // @ts-ignore
-            calculateTiledPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[]): void
+            public static calculateTiledPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[]): void
             /**
              * Creates a set of offset/span pairs representing how to
              * lay out a set of components end-to-end.
@@ -192,7 +192,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            calculateTiledPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[], forward: boolean): void
+            public static calculateTiledPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[], forward: boolean): void
             /**
              * Creates a bunch of offset/span pairs specifying how to
              * lay out a set of components with the specified alignments.
@@ -217,7 +217,7 @@ declare namespace javax {
              *    total target span.
              */
             // @ts-ignore
-            calculateAlignedPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[]): void
+            public static calculateAlignedPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[]): void
             /**
              * Creates a set of offset/span pairs specifying how to
              * lay out a set of components with the specified alignments.
@@ -248,7 +248,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            calculateAlignedPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[], normal: boolean): void
+            public static calculateAlignedPositions(allocated: number /*int*/, total: javax.swing.SizeRequirements, children: javax.swing.SizeRequirements[], offsets: number /*int*/[], spans: number /*int*/[], normal: boolean): void
             /**
              * Adjust a specified array of sizes by a given amount.
              * @param delta     an int specifying the size difference
@@ -256,7 +256,7 @@ declare namespace javax {
              * @return an array of ints containing the final size for each item
              */
             // @ts-ignore
-            adjustSizes(delta: number /*int*/, children: javax.swing.SizeRequirements[]): int[]
+            public static adjustSizes(delta: number /*int*/, children: javax.swing.SizeRequirements[]): number /*int*/[]
         }
     }
 }

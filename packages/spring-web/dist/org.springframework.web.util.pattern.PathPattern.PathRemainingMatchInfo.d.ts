@@ -15,18 +15,18 @@ declare namespace org {
                              * Return the part of a path that was not matched by a pattern.
                              */
                             // @ts-ignore
-                            getPathRemaining(): org.springframework.http.server.PathContainer
+                            public getPathRemaining(): org.springframework.http.server.PathContainer
                             /**
                              * Return variables that were bound in the part of the path that was
                              * successfully matched or an empty map.
                              */
                             // @ts-ignore
-                            getUriVariables(): java.util.Map<java.lang.String, java.lang.String>
+                            public getUriVariables(): java.util.Map<java.lang.String | string, java.lang.String | string>
                             /**
                              * Return the path parameters for each bound variable.
                              */
                             // @ts-ignore
-                            getMatrixVariables(): java.util.Map<java.lang.String, <any>>
+                            public getMatrixVariables(): java.util.Map<java.lang.String | string, object>
                         }
                     }
                 }

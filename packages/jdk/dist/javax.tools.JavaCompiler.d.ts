@@ -191,7 +191,7 @@ declare namespace javax {
              *  {#linkplain JavaFileObject.Kind#SOURCE source}
              */
             // @ts-ignore
-            getTask(out: java.io.Writer, fileManager: javax.tools.JavaFileManager, diagnosticListener: javax.tools.DiagnosticListener<any super javax.tools.JavaFileObject>, options: java.lang.Iterable<java.lang.String>, classes: java.lang.Iterable<java.lang.String>, compilationUnits: java.lang.Iterable<javax.tools.JavaFileObject>): javax.tools.JavaCompiler.CompilationTask
+            getTask(out: java.io.Writer, fileManager: javax.tools.JavaFileManager, diagnosticListener: javax.tools.DiagnosticListener<any>, options: java.lang.Iterable<java.lang.String | string>, classes: java.lang.Iterable<java.lang.String | string>, compilationUnits: java.lang.Iterable<any>): javax.tools.JavaCompiler.CompilationTask
             /**
              * Gets a new instance of the standard file manager implementation
              * for this tool.  The file manager will use the given diagnostic
@@ -210,7 +210,7 @@ declare namespace javax {
              * @return the standard file manager
              */
             // @ts-ignore
-            getStandardFileManager(diagnosticListener: javax.tools.DiagnosticListener<any super javax.tools.JavaFileObject>, locale: java.util.Locale, charset: java.nio.charset.Charset): javax.tools.StandardJavaFileManager
+            getStandardFileManager(diagnosticListener: javax.tools.DiagnosticListener<any>, locale: java.util.Locale, charset: java.nio.charset.Charset): javax.tools.StandardJavaFileManager
         }
     }
 }

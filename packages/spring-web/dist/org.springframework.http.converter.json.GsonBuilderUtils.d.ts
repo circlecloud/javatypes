@@ -13,7 +13,7 @@ declare namespace org {
                      * @see org.springframework.util.Base64Utils
                      */
                     // @ts-ignore
-                    class GsonBuilderUtils extends java.lang.Object {
+                    abstract class GsonBuilderUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -25,7 +25,7 @@ declare namespace org {
                          * instead of a JSON array.
                          */
                         // @ts-ignore
-                        gsonBuilderWithBase64EncodedByteArrays(): GsonBuilder
+                        public static gsonBuilderWithBase64EncodedByteArrays(): GsonBuilder
                     }
                 }
             }

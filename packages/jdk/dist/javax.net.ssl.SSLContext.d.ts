@@ -29,7 +29,7 @@ declare namespace javax {
                  * @param protocol the protocol
                  */
                 // @ts-ignore
-                constructor(contextSpi: javax.net.ssl.SSLContextSpi, provider: java.security.Provider, protocol: string)
+                constructor(contextSpi: javax.net.ssl.SSLContextSpi, provider: java.security.Provider, protocol: java.lang.String | string)
                 /**
                  * Returns the default SSL context.
                  * <p>If a default context was set using the {@link #setDefault
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getDefault(): javax.net.ssl.SSLContext
+                public static getDefault(): javax.net.ssl.SSLContext
                 /**
                  * Sets the default SSL context. It will be returned by subsequent calls
                  * to {@link #getDefault}. The default context must be immediately usable
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setDefault(context: javax.net.ssl.SSLContext): void
+                public static setDefault(context: javax.net.ssl.SSLContext): void
                 /**
                  * Returns a <code>SSLContext</code> object that implements the
                  * specified secure socket protocol.
@@ -83,7 +83,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(protocol: string): javax.net.ssl.SSLContext
+                public static getInstance(protocol: java.lang.String | string): javax.net.ssl.SSLContext
                 /**
                  * Returns a <code>SSLContext</code> object that implements the
                  * specified secure socket protocol.
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(protocol: string, provider: string): javax.net.ssl.SSLContext
+                public static getInstance(protocol: java.lang.String | string, provider: java.lang.String | string): javax.net.ssl.SSLContext
                 /**
                  * Returns a <code>SSLContext</code> object that implements the
                  * specified secure socket protocol.
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(protocol: string, provider: java.security.Provider): javax.net.ssl.SSLContext
+                public static getInstance(protocol: java.lang.String | string, provider: java.security.Provider): javax.net.ssl.SSLContext
                 /**
                  * Returns the protocol name of this <code>SSLContext</code> object.
                  * <p>This is the same name that was specified in one of the
@@ -144,13 +144,13 @@ declare namespace javax {
                  * @return the protocol name of this <code>SSLContext</code> object.
                  */
                 // @ts-ignore
-                getProtocol(): java.lang.String
+                public getProtocol(): string
                 /**
                  * Returns the provider of this <code>SSLContext</code> object.
                  * @return the provider of this <code>SSLContext</code> object
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Initializes this context. Either of the first two parameters
                  * may be null in which case the installed security providers will
@@ -167,7 +167,7 @@ declare namespace javax {
                  * @throws KeyManagementException if this operation fails
                  */
                 // @ts-ignore
-                init(km: javax.net.ssl.KeyManager[], tm: javax.net.ssl.TrustManager[], random: java.security.SecureRandom): void
+                public init(km: javax.net.ssl.KeyManager[], tm: javax.net.ssl.TrustManager[], random: java.security.SecureRandom): void
                 /**
                  * Returns a <code>SocketFactory</code> object for this
                  * context.
@@ -176,7 +176,7 @@ declare namespace javax {
                  *           initialization and the <code>init()</code> has not been called
                  */
                 // @ts-ignore
-                getSocketFactory(): javax.net.ssl.SSLSocketFactory
+                public getSocketFactory(): javax.net.ssl.SSLSocketFactory
                 /**
                  * Returns a <code>ServerSocketFactory</code> object for
                  * this context.
@@ -185,7 +185,7 @@ declare namespace javax {
                  *           initialization and the <code>init()</code> has not been called
                  */
                 // @ts-ignore
-                getServerSocketFactory(): javax.net.ssl.SSLServerSocketFactory
+                public getServerSocketFactory(): javax.net.ssl.SSLServerSocketFactory
                 /**
                  * Creates a new <code>SSLEngine</code> using this context.
                  * <P>
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                createSSLEngine(): javax.net.ssl.SSLEngine
+                public createSSLEngine(): javax.net.ssl.SSLEngine
                 /**
                  * Creates a new <code>SSLEngine</code> using this context using
                  * advisory peer information.
@@ -224,7 +224,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                createSSLEngine(peerHost: string, peerPort: number /*int*/): javax.net.ssl.SSLEngine
+                public createSSLEngine(peerHost: java.lang.String | string, peerPort: number /*int*/): javax.net.ssl.SSLEngine
                 /**
                  * Returns the server session context, which represents the set of
                  * SSL sessions available for use during the handshake phase of
@@ -238,7 +238,7 @@ declare namespace javax {
                  * @return server session context bound to this SSL context
                  */
                 // @ts-ignore
-                getServerSessionContext(): javax.net.ssl.SSLSessionContext
+                public getServerSessionContext(): javax.net.ssl.SSLSessionContext
                 /**
                  * Returns the client session context, which represents the set of
                  * SSL sessions available for use during the handshake phase of
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @return client session context bound to this SSL context
                  */
                 // @ts-ignore
-                getClientSessionContext(): javax.net.ssl.SSLSessionContext
+                public getClientSessionContext(): javax.net.ssl.SSLSessionContext
                 /**
                  * Returns a copy of the SSLParameters indicating the default
                  * settings for this SSL context.
@@ -264,7 +264,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getDefaultSSLParameters(): javax.net.ssl.SSLParameters
+                public getDefaultSSLParameters(): javax.net.ssl.SSLParameters
                 /**
                  * Returns a copy of the SSLParameters indicating the supported
                  * settings for this SSL context.
@@ -277,7 +277,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getSupportedSSLParameters(): javax.net.ssl.SSLParameters
+                public getSupportedSSLParameters(): javax.net.ssl.SSLParameters
             }
         }
     }

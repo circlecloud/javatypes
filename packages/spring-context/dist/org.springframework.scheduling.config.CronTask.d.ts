@@ -19,7 +19,7 @@ declare namespace org {
                      * @param expression the cron expression defining when the task should be executed
                      */
                     // @ts-ignore
-                    constructor(runnable: java.lang.Runnable, expression: string)
+                    constructor(runnable: java.lang.Runnable, expression: java.lang.String | string)
                     /**
                      * Create a new {@code CronTask}.
                      * @param runnable the underlying task to execute
@@ -31,7 +31,7 @@ declare namespace org {
                      * Return the cron expression defining when the task should be executed.
                      */
                     // @ts-ignore
-                    getExpression(): java.lang.String
+                    public getExpression(): string
                 }
             }
         }

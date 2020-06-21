@@ -6,19 +6,19 @@ declare namespace org {
                     // @ts-ignore
                     class StoneTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly ANDESITE: org.spongepowered.api.data.type.StoneType
+                        public static readonly ANDESITE: org.spongepowered.api.data.type.StoneType
                         // @ts-ignore
-                        readonly DIORITE: org.spongepowered.api.data.type.StoneType
+                        public static readonly DIORITE: org.spongepowered.api.data.type.StoneType
                         // @ts-ignore
-                        readonly GRANITE: org.spongepowered.api.data.type.StoneType
+                        public static readonly GRANITE: org.spongepowered.api.data.type.StoneType
                         // @ts-ignore
-                        readonly SMOOTH_ANDESITE: org.spongepowered.api.data.type.StoneType
+                        public static readonly SMOOTH_ANDESITE: org.spongepowered.api.data.type.StoneType
                         // @ts-ignore
-                        readonly SMOOTH_DIORITE: org.spongepowered.api.data.type.StoneType
+                        public static readonly SMOOTH_DIORITE: org.spongepowered.api.data.type.StoneType
                         // @ts-ignore
-                        readonly SMOOTH_GRANITE: org.spongepowered.api.data.type.StoneType
+                        public static readonly SMOOTH_GRANITE: org.spongepowered.api.data.type.StoneType
                         // @ts-ignore
-                        readonly STONE: org.spongepowered.api.data.type.StoneType
+                        public static readonly STONE: org.spongepowered.api.data.type.StoneType
                     }
                 }
             }

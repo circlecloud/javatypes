@@ -29,7 +29,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class DragSourceAdapter extends java.lang.Object implements java.awt.dnd.DragSourceListener, java.awt.dnd.DragSourceMotionListener {
+            abstract class DragSourceAdapter extends java.lang.Object implements java.awt.dnd.DragSourceListener, java.awt.dnd.DragSourceMotionListener {
                 // @ts-ignore
                 constructor()
                 /**
@@ -44,7 +44,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dragEnter(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dragEnter(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Called as the cursor's hotspot moves over a platform-dependent drop site.
                  * This method is invoked when all the following conditions are true:
@@ -58,13 +58,13 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dragOver(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dragOver(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Called whenever the mouse is moved during a drag operation.
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dragMouseMoved(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dragMouseMoved(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Called when the user has modified the drop gesture.
                  * This method is invoked when the state of the input
@@ -74,7 +74,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dropActionChanged(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dropActionChanged(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Called as the cursor's hotspot exits a platform-dependent drop site.
                  * This method is invoked when any of the following conditions are true:
@@ -95,7 +95,7 @@ declare namespace java {
                  * @param dse the <code>DragSourceEvent</code>
                  */
                 // @ts-ignore
-                dragExit(dse: java.awt.dnd.DragSourceEvent): void
+                public dragExit(dse: java.awt.dnd.DragSourceEvent): void
                 /**
                  * This method is invoked to signify that the Drag and Drop
                  * operation is complete. The getDropSuccess() method of
@@ -108,7 +108,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDropEvent</code>
                  */
                 // @ts-ignore
-                dragDropEnd(dsde: java.awt.dnd.DragSourceDropEvent): void
+                public dragDropEnd(dsde: java.awt.dnd.DragSourceDropEvent): void
             }
         }
     }

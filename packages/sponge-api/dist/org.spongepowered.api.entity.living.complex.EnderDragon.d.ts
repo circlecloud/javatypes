@@ -10,7 +10,7 @@ declare namespace org {
                         // @ts-ignore
                         interface EnderDragon extends org.spongepowered.api.entity.living.complex.ComplexLiving, org.spongepowered.api.entity.living.monster.Boss, org.spongepowered.api.entity.living.Aerial, org.spongepowered.api.entity.projectile.ProjectileLauncher {
                             // @ts-ignore
-                            getParts(): java.util.Set<org.spongepowered.api.entity.living.complex.EnderDragonPart>
+                            getParts(): Array<org.spongepowered.api.entity.living.complex.EnderDragonPart>
                             /**
                              * Returns the current {@code EnderCrystal} that is healing this
                              * ender dragon.

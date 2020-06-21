@@ -14,14 +14,14 @@ declare namespace org {
                          * @deprecated Use the event {#link org.spongepowered.api.event.game.GameRegistryEvent.Register}
                          */
                         // @ts-ignore
-                        register(recipe: T extends org.spongepowered.api.item.recipe.Recipe): void
+                        register(recipe: T): void
                         /**
                          * Retrieves all recipes registered in this registry.
                          * @return An unmodifiable collection of registered recipes
                          * @deprecated Use {#link #getAll()} instead.
                          */
                         // @ts-ignore
-                        getRecipes(): java.util.Collection<T>
+                        getRecipes(): Array<T>
                     }
                 }
             }

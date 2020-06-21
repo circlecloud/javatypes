@@ -307,7 +307,7 @@ declare namespace org {
                  * @see org.springframework.test.context.ContextConfiguration
                  */
                 // @ts-ignore
-                class Configuration implements java.lang.annotation.Annotation {
+                abstract class Configuration implements java.lang.annotation.Annotation {
                 }
             }
         }

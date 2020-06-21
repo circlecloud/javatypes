@@ -26,7 +26,7 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Construct a {@code NestedServletException} with the specified detail message
                      * and nested exception.
@@ -34,13 +34,13 @@ declare namespace org {
                      * @param cause the nested exception
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Return the detail message, including the message from the nested exception
                      * if there is one.
                      */
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                 }
             }
         }

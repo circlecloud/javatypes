@@ -27,7 +27,7 @@ declare namespace javax {
                  * @param msg the message to report
                  */
                 // @ts-ignore
-                constructor(e: java.lang.Exception, msg: string)
+                constructor(e: java.lang.Exception, msg: java.lang.String | string)
                 /**
                  * Construct an exception with a nested inner exception
                  * and a message
@@ -35,13 +35,13 @@ declare namespace javax {
                  * @param e the exception to nest
                  */
                 // @ts-ignore
-                constructor(msg: string, e: java.lang.Exception)
+                constructor(msg: java.lang.String | string, e: java.lang.Exception)
                 /**
                  * Construct an exception with associated message
                  * @param msg the message to report
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Return the nested exception (if any)
                  * @return the nested exception or null
@@ -52,13 +52,13 @@ declare namespace javax {
                  * use the exception chaining mechanism of JDK1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
                 /**
                  * Report the message associated with this error
                  * @return the string value of the message
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

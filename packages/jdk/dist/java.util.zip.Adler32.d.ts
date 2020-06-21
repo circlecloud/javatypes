@@ -23,7 +23,7 @@ declare namespace java {
                  * @param b the byte to update the checksum with
                  */
                 // @ts-ignore
-                update(b: number /*int*/): void
+                public update(b: number /*int*/): void
                 /**
                  * Updates the checksum with the specified array of bytes.
                  * @throws ArrayIndexOutOfBoundsException
@@ -32,13 +32,13 @@ declare namespace java {
                  *           array {@code b}
                  */
                 // @ts-ignore
-                update(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public update(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Updates the checksum with the specified array of bytes.
                  * @param b the byte array to update the checksum with
                  */
                 // @ts-ignore
-                update(b: number /*byte*/[]): void
+                public update(b: number /*byte*/[]): void
                 /**
                  * Updates the checksum with the bytes from the specified buffer.
                  * The checksum is updated using
@@ -51,17 +51,17 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                update(buffer: java.nio.ByteBuffer): void
+                public update(buffer: java.nio.ByteBuffer): void
                 /**
                  * Resets the checksum to initial value.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Returns the checksum value.
                  */
                 // @ts-ignore
-                getValue(): long
+                public getValue(): number /*long*/
             }
         }
     }

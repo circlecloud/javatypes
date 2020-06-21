@@ -163,145 +163,145 @@ declare namespace java {
              * The color white.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly white: java.awt.Color
+            public static readonly white: java.awt.Color
             /**
              * The color white.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly WHITE: java.awt.Color
+            public static readonly WHITE: java.awt.Color
             /**
              * The color light gray.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly lightGray: java.awt.Color
+            public static readonly lightGray: java.awt.Color
             /**
              * The color light gray.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly LIGHT_GRAY: java.awt.Color
+            public static readonly LIGHT_GRAY: java.awt.Color
             /**
              * The color gray.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly gray: java.awt.Color
+            public static readonly gray: java.awt.Color
             /**
              * The color gray.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly GRAY: java.awt.Color
+            public static readonly GRAY: java.awt.Color
             /**
              * The color dark gray.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly darkGray: java.awt.Color
+            public static readonly darkGray: java.awt.Color
             /**
              * The color dark gray.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DARK_GRAY: java.awt.Color
+            public static readonly DARK_GRAY: java.awt.Color
             /**
              * The color black.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly black: java.awt.Color
+            public static readonly black: java.awt.Color
             /**
              * The color black.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly BLACK: java.awt.Color
+            public static readonly BLACK: java.awt.Color
             /**
              * The color red.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly red: java.awt.Color
+            public static readonly red: java.awt.Color
             /**
              * The color red.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly RED: java.awt.Color
+            public static readonly RED: java.awt.Color
             /**
              * The color pink.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly pink: java.awt.Color
+            public static readonly pink: java.awt.Color
             /**
              * The color pink.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly PINK: java.awt.Color
+            public static readonly PINK: java.awt.Color
             /**
              * The color orange.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly orange: java.awt.Color
+            public static readonly orange: java.awt.Color
             /**
              * The color orange.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly ORANGE: java.awt.Color
+            public static readonly ORANGE: java.awt.Color
             /**
              * The color yellow.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly yellow: java.awt.Color
+            public static readonly yellow: java.awt.Color
             /**
              * The color yellow.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly YELLOW: java.awt.Color
+            public static readonly YELLOW: java.awt.Color
             /**
              * The color green.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly green: java.awt.Color
+            public static readonly green: java.awt.Color
             /**
              * The color green.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly GREEN: java.awt.Color
+            public static readonly GREEN: java.awt.Color
             /**
              * The color magenta.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly magenta: java.awt.Color
+            public static readonly magenta: java.awt.Color
             /**
              * The color magenta.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly MAGENTA: java.awt.Color
+            public static readonly MAGENTA: java.awt.Color
             /**
              * The color cyan.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly cyan: java.awt.Color
+            public static readonly cyan: java.awt.Color
             /**
              * The color cyan.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly CYAN: java.awt.Color
+            public static readonly CYAN: java.awt.Color
             /**
              * The color blue.  In the default sRGB space.
              */
             // @ts-ignore
-            readonly blue: java.awt.Color
+            public static readonly blue: java.awt.Color
             /**
              * The color blue.  In the default sRGB space.
              * @since 1.4
              */
             // @ts-ignore
-            readonly BLUE: java.awt.Color
+            public static readonly BLUE: java.awt.Color
             /**
              * Returns the red component in the range 0-255 in the default sRGB
              * space.
@@ -309,7 +309,7 @@ declare namespace java {
              * @see #getRGB
              */
             // @ts-ignore
-            getRed(): int
+            public getRed(): number /*int*/
             /**
              * Returns the green component in the range 0-255 in the default sRGB
              * space.
@@ -317,7 +317,7 @@ declare namespace java {
              * @see #getRGB
              */
             // @ts-ignore
-            getGreen(): int
+            public getGreen(): number /*int*/
             /**
              * Returns the blue component in the range 0-255 in the default sRGB
              * space.
@@ -325,14 +325,14 @@ declare namespace java {
              * @see #getRGB
              */
             // @ts-ignore
-            getBlue(): int
+            public getBlue(): number /*int*/
             /**
              * Returns the alpha component in the range 0-255.
              * @return the alpha component.
              * @see #getRGB
              */
             // @ts-ignore
-            getAlpha(): int
+            public getAlpha(): number /*int*/
             /**
              * Returns the RGB value representing the color in the default sRGB
              * {@link ColorModel}.
@@ -347,7 +347,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getRGB(): int
+            public getRGB(): number /*int*/
             /**
              * Creates a new <code>Color</code> that is a brighter version of this
              * <code>Color</code>.
@@ -367,7 +367,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            brighter(): java.awt.Color
+            public brighter(): java.awt.Color
             /**
              * Creates a new <code>Color</code> that is a darker version of this
              * <code>Color</code>.
@@ -387,14 +387,14 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            darker(): java.awt.Color
+            public darker(): java.awt.Color
             /**
              * Computes the hash code for this <code>Color</code>.
              * @return a hash code value for this object.
              * @since JDK1.0
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Determines whether another object is equal to this
              * <code>Color</code>.
@@ -409,7 +409,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a string representation of this <code>Color</code>. This
              * method is intended to be used only for debugging purposes.  The
@@ -419,7 +419,7 @@ declare namespace java {
              * @return a string representation of this <code>Color</code>.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Converts a <code>String</code> to an integer and returns the
              * specified opaque <code>Color</code>. This method handles string
@@ -434,7 +434,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            decode(nm: string): java.awt.Color
+            public static decode(nm: java.lang.String | string): java.awt.Color
             /**
              * Finds a color in the system properties.
              * <p>
@@ -454,7 +454,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getColor(nm: string): java.awt.Color
+            public static getColor(nm: java.lang.String | string): java.awt.Color
             /**
              * Finds a color in the system properties.
              * <p>
@@ -476,7 +476,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getColor(nm: string, v: java.awt.Color): java.awt.Color
+            public static getColor(nm: java.lang.String | string, v: java.awt.Color): java.awt.Color
             /**
              * Finds a color in the system properties.
              * <p>
@@ -499,7 +499,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getColor(nm: string, v: number /*int*/): java.awt.Color
+            public static getColor(nm: java.lang.String | string, v: number /*int*/): java.awt.Color
             /**
              * Converts the components of a color, as specified by the HSB
              * model, to an equivalent set of values for the default RGB model.
@@ -528,7 +528,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            HSBtoRGB(hue: number /*float*/, saturation: number /*float*/, brightness: number /*float*/): int
+            public static HSBtoRGB(hue: number /*float*/, saturation: number /*float*/, brightness: number /*float*/): number /*int*/
             /**
              * Converts the components of a color, as specified by the default RGB
              * model, to an equivalent set of values for hue, saturation, and
@@ -552,7 +552,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            RGBtoHSB(r: number /*int*/, g: number /*int*/, b: number /*int*/, hsbvals: number /*float*/[]): float[]
+            public static RGBtoHSB(r: number /*int*/, g: number /*int*/, b: number /*int*/, hsbvals: number /*float*/[]): number /*float*/[]
             /**
              * Creates a <code>Color</code> object based on the specified values
              * for the HSB color model.
@@ -572,7 +572,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getHSBColor(h: number /*float*/, s: number /*float*/, b: number /*float*/): java.awt.Color
+            public static getHSBColor(h: number /*float*/, s: number /*float*/, b: number /*float*/): java.awt.Color
             /**
              * Returns a <code>float</code> array containing the color and alpha
              * components of the <code>Color</code>, as represented in the default
@@ -586,7 +586,7 @@ declare namespace java {
              * @return the RGBA components in a <code>float</code> array.
              */
             // @ts-ignore
-            getRGBComponents(compArray: number /*float*/[]): float[]
+            public getRGBComponents(compArray: number /*float*/[]): number /*float*/[]
             /**
              * Returns a <code>float</code> array containing only the color
              * components of the <code>Color</code>, in the default sRGB color
@@ -599,7 +599,7 @@ declare namespace java {
              * @return the RGB components in a <code>float</code> array.
              */
             // @ts-ignore
-            getRGBColorComponents(compArray: number /*float*/[]): float[]
+            public getRGBColorComponents(compArray: number /*float*/[]): number /*float*/[]
             /**
              * Returns a <code>float</code> array containing the color and alpha
              * components of the <code>Color</code>, in the
@@ -617,7 +617,7 @@ declare namespace java {
              *           array.
              */
             // @ts-ignore
-            getComponents(compArray: number /*float*/[]): float[]
+            public getComponents(compArray: number /*float*/[]): number /*float*/[]
             /**
              * Returns a <code>float</code> array containing only the color
              * components of the <code>Color</code>, in the
@@ -634,7 +634,7 @@ declare namespace java {
              * @return the color components in a <code>float</code> array.
              */
             // @ts-ignore
-            getColorComponents(compArray: number /*float*/[]): float[]
+            public getColorComponents(compArray: number /*float*/[]): number /*float*/[]
             /**
              * Returns a <code>float</code> array containing the color and alpha
              * components of the <code>Color</code>, in the
@@ -652,7 +652,7 @@ declare namespace java {
              *           array.
              */
             // @ts-ignore
-            getComponents(cspace: java.awt.color.ColorSpace, compArray: number /*float*/[]): float[]
+            public getComponents(cspace: java.awt.color.ColorSpace, compArray: number /*float*/[]): number /*float*/[]
             /**
              * Returns a <code>float</code> array containing only the color
              * components of the <code>Color</code> in the
@@ -669,13 +669,13 @@ declare namespace java {
              * @return the color components in a <code>float</code> array.
              */
             // @ts-ignore
-            getColorComponents(cspace: java.awt.color.ColorSpace, compArray: number /*float*/[]): float[]
+            public getColorComponents(cspace: java.awt.color.ColorSpace, compArray: number /*float*/[]): number /*float*/[]
             /**
              * Returns the <code>ColorSpace</code> of this <code>Color</code>.
              * @return this <code>Color</code> object's <code>ColorSpace</code>.
              */
             // @ts-ignore
-            getColorSpace(): java.awt.color.ColorSpace
+            public getColorSpace(): java.awt.color.ColorSpace
             /**
              * Creates and returns a {@link PaintContext} used to
              * generate a solid color field pattern.
@@ -704,7 +704,7 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            createContext(cm: java.awt.image.ColorModel, r: java.awt.Rectangle, r2d: java.awt.geom.Rectangle2D, xform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
+            public createContext(cm: java.awt.image.ColorModel, r: java.awt.Rectangle, r2d: java.awt.geom.Rectangle2D, xform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
             /**
              * Returns the transparency mode for this <code>Color</code>.  This is
              * required to implement the <code>Paint</code> interface.
@@ -714,7 +714,7 @@ declare namespace java {
              * @see #createContext
              */
             // @ts-ignore
-            getTransparency(): int
+            public getTransparency(): number /*int*/
         }
     }
 }

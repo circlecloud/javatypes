@@ -19,7 +19,7 @@ declare namespace javax {
          * @since 1.3
          */
         // @ts-ignore
-        class AbstractCellEditor extends java.lang.Object implements javax.swing.CellEditor, java.io.Serializable {
+        abstract class AbstractCellEditor extends java.lang.Object implements javax.swing.CellEditor, java.io.Serializable {
             // @ts-ignore
             constructor()
             // @ts-ignore
@@ -32,37 +32,37 @@ declare namespace javax {
              * @return true
              */
             // @ts-ignore
-            isCellEditable(e: java.util.EventObject): boolean
+            public isCellEditable(e: java.util.EventObject): boolean
             /**
              * Returns true.
              * @param anEvent  an event object
              * @return true
              */
             // @ts-ignore
-            shouldSelectCell(anEvent: java.util.EventObject): boolean
+            public shouldSelectCell(anEvent: java.util.EventObject): boolean
             /**
              * Calls <code>fireEditingStopped</code> and returns true.
              * @return true
              */
             // @ts-ignore
-            stopCellEditing(): boolean
+            public stopCellEditing(): boolean
             /**
              * Calls <code>fireEditingCanceled</code>.
              */
             // @ts-ignore
-            cancelCellEditing(): void
+            public cancelCellEditing(): void
             /**
              * Adds a <code>CellEditorListener</code> to the listener list.
              * @param l  the new listener to be added
              */
             // @ts-ignore
-            addCellEditorListener(l: javax.swing.event.CellEditorListener): void
+            public addCellEditorListener(l: javax.swing.event.CellEditorListener): void
             /**
              * Removes a <code>CellEditorListener</code> from the listener list.
              * @param l  the listener to be removed
              */
             // @ts-ignore
-            removeCellEditorListener(l: javax.swing.event.CellEditorListener): void
+            public removeCellEditorListener(l: javax.swing.event.CellEditorListener): void
             /**
              * Returns an array of all the <code>CellEditorListener</code>s added
              * to this AbstractCellEditor with addCellEditorListener().
@@ -71,7 +71,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getCellEditorListeners(): javax.swing.event.CellEditorListener[]
+            public getCellEditorListeners(): javax.swing.event.CellEditorListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance

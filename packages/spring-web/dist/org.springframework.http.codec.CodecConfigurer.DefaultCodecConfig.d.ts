@@ -18,7 +18,7 @@ declare namespace org {
                          * the input stream needs to be aggregated.
                          */
                         // @ts-ignore
-                        maxInMemorySize(): java.lang.Integer
+                        maxInMemorySize(): number
                         /**
                          * Whether to log form data at DEBUG level, and headers at TRACE level.
                          * Both may contain sensitive information.

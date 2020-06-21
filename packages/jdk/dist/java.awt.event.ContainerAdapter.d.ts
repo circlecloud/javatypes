@@ -24,19 +24,19 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class ContainerAdapter extends java.lang.Object implements java.awt.event.ContainerListener {
+            abstract class ContainerAdapter extends java.lang.Object implements java.awt.event.ContainerListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * Invoked when a component has been added to the container.
                  */
                 // @ts-ignore
-                componentAdded(e: java.awt.event.ContainerEvent): void
+                public componentAdded(e: java.awt.event.ContainerEvent): void
                 /**
                  * Invoked when a component has been removed from the container.
                  */
                 // @ts-ignore
-                componentRemoved(e: java.awt.event.ContainerEvent): void
+                public componentRemoved(e: java.awt.event.ContainerEvent): void
             }
         }
     }

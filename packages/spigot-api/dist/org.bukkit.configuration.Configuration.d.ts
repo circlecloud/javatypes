@@ -20,7 +20,7 @@ declare namespace org {
                  * @throws IllegalArgumentException Thrown if path is null.
                  */
                 // @ts-ignore
-                addDefault(path: string, value: any): void
+                addDefault(path: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Sets the default values of the given paths as provided.
                  * <p>
@@ -31,7 +31,7 @@ declare namespace org {
                  * @throws IllegalArgumentException Thrown if defaults is null.
                  */
                 // @ts-ignore
-                addDefaults(defaults: java.util.Map<java.lang.String, java.lang.Object>): void
+                addDefaults(defaults: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                 /**
                  * Sets the default values of the given paths as provided.
                  * <p>

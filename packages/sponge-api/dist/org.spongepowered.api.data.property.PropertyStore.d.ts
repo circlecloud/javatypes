@@ -53,7 +53,7 @@ declare namespace org {
                          * @return The priority
                          */
                         // @ts-ignore
-                        getPriority(): int
+                        getPriority(): number /*int*/
                     }
                 }
             }

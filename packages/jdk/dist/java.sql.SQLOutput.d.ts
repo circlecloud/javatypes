@@ -32,7 +32,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            writeString(x: string): void
+            writeString(x: java.lang.String | string): void
             /**
              * Writes the next attribute to the stream as a Java boolean.
              * Writes the next attribute to the stream as a <code>String</code>
@@ -313,7 +313,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            writeNString(x: string): void
+            writeNString(x: java.lang.String | string): void
             /**
              * Writes an SQL <code>NCLOB</code> value to the stream.
              * @param x a <code>NClob</code> object representing data of an SQL
@@ -384,7 +384,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            writeObject(x: any, targetSqlType: java.sql.SQLType): void
+            writeObject(x: java.lang.Object | any, targetSqlType: java.sql.SQLType): void
         }
     }
 }

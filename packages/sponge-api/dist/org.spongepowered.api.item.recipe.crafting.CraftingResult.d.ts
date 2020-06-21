@@ -18,7 +18,7 @@ declare namespace org {
                              *      crafting window
                              */
                             // @ts-ignore
-                            constructor(result: org.spongepowered.api.item.inventory.ItemStackSnapshot, remainingItems: Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>)
+                            constructor(result: org.spongepowered.api.item.inventory.ItemStackSnapshot, remainingItems: java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot> | Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>)
                             /**
                              * This method should be used instead of the
                              * {@link CraftingRecipe#getExemplaryResult()} method, as it customizes the
@@ -30,7 +30,7 @@ declare namespace org {
                              *          {#link CraftingRecipe}
                              */
                             // @ts-ignore
-                            getResult(): org.spongepowered.api.item.inventory.ItemStackSnapshot
+                            public getResult(): org.spongepowered.api.item.inventory.ItemStackSnapshot
                             /**
                              * Returns a list of {@link ItemStackSnapshot} to be set in the input
                              * {@link CraftingGridInventory}, contains {@link ItemStackSnapshot#NONE}s for
@@ -39,13 +39,13 @@ declare namespace org {
                              *          {@link CraftingGridInventory}
                              */
                             // @ts-ignore
-                            getRemainingItems(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                            public getRemainingItems(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             // @ts-ignore
-                            equals(o: any): boolean
+                            public equals(o: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

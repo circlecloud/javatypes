@@ -7,13 +7,13 @@ declare namespace java {
                  * a noop remove() method.
                  */
                 // @ts-ignore
-                class BCSIterator extends java.lang.Object implements java.util.Iterator {
+                class BCSIterator extends java.lang.Object implements java.util.Iterator<any> {
                     // @ts-ignore
-                    hasNext(): boolean
+                    public hasNext(): boolean
                     // @ts-ignore
-                    next(): java.lang.Object
+                    public next(): any
                     // @ts-ignore
-                    remove(): void
+                    public remove(): void
                 }
             }
         }

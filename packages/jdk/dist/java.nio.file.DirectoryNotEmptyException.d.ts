@@ -14,7 +14,7 @@ declare namespace java {
                  *           a string identifying the directory or {#code null} if not known
                  */
                 // @ts-ignore
-                constructor(dir: string)
+                constructor(dir: java.lang.String | string)
             }
         }
     }

@@ -41,19 +41,19 @@ declare namespace org {
                          * The default name for the multipart resolver bean.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_MULTIPART_RESOLVER_BEAN_NAME: string
+                        public static readonly DEFAULT_MULTIPART_RESOLVER_BEAN_NAME: java.lang.String | string
                         /**
                          * Set the bean name of the MultipartResolver to fetch from Spring's
                          * root application context. Default is "filterMultipartResolver".
                          */
                         // @ts-ignore
-                        setMultipartResolverBeanName(multipartResolverBeanName: string): void
+                        public setMultipartResolverBeanName(multipartResolverBeanName: java.lang.String | string): void
                         /**
                          * Return the bean name of the MultipartResolver to fetch from Spring's
                          * root application context.
                          */
                         // @ts-ignore
-                        getMultipartResolverBeanName(): java.lang.String
+                        getMultipartResolverBeanName(): string
                         /**
                          * Check for a multipart request via this filter's MultipartResolver,
                          * and wrap the original request with a MultipartHttpServletRequest if appropriate.

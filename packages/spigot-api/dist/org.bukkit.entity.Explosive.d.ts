@@ -17,7 +17,7 @@ declare namespace org {
                  * @return the radius of blocks affected
                  */
                 // @ts-ignore
-                getYield(): float
+                getYield(): number /*float*/
                 /**
                  * Set whether or not this explosive's explosion causes fire
                  * @param isIncendiary Whether it should cause fire

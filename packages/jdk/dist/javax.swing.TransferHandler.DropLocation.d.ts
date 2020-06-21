@@ -31,7 +31,7 @@ declare namespace javax {
                  * @return the drop point.
                  */
                 // @ts-ignore
-                getDropPoint(): java.awt.Point
+                public getDropPoint(): java.awt.Point
                 /**
                  * Returns a string representation of this drop location.
                  * This method is intended to be used for debugging purposes,
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @return a string representation of this drop location
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

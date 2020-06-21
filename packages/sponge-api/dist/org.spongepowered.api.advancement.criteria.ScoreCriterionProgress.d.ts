@@ -15,13 +15,13 @@ declare namespace org {
                          * @return The goal value
                          */
                         // @ts-ignore
-                        getGoal(): int
+                        getGoal(): number /*int*/
                         /**
                          * Gets the score value.
                          * @return The score value
                          */
                         // @ts-ignore
-                        getScore(): int
+                        getScore(): number /*int*/
                         /**
                          * Adds the target score value, the score cannot exceed
                          * the goal value ({@link #getGoal()}) or be under zero.

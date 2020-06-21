@@ -75,15 +75,15 @@ declare namespace org {
                  * Returns true if the iteration has more elements
                  */
                 // @ts-ignore
-                hasNext(): boolean
+                public hasNext(): boolean
                 /**
                  * Returns the next Block in the trace
                  * @return the next Block in the trace
                  */
                 // @ts-ignore
-                next(): org.bukkit.block.Block
+                public next(): org.bukkit.block.Block
                 // @ts-ignore
-                remove(): void
+                public remove(): void
             }
         }
     }

@@ -9,11 +9,11 @@ declare namespace org {
                     // @ts-ignore
                     class DataFormats extends java.lang.Object {
                         // @ts-ignore
-                        readonly HOCON: org.spongepowered.api.data.persistence.StringDataFormat
+                        public static readonly HOCON: org.spongepowered.api.data.persistence.StringDataFormat
                         // @ts-ignore
-                        readonly JSON: org.spongepowered.api.data.persistence.StringDataFormat
+                        public static readonly JSON: org.spongepowered.api.data.persistence.StringDataFormat
                         // @ts-ignore
-                        readonly NBT: org.spongepowered.api.data.persistence.DataFormat
+                        public static readonly NBT: org.spongepowered.api.data.persistence.DataFormat
                     }
                 }
             }

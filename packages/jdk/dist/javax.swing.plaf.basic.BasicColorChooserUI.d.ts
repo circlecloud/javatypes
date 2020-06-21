@@ -25,15 +25,15 @@ declare namespace javax {
                     // @ts-ignore
                     propertyChangeListener: java.beans.PropertyChangeListener
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
                     createDefaultChoosers(): javax.swing.colorchooser.AbstractColorChooserPanel[]
                     // @ts-ignore
                     uninstallDefaultChoosers(): void
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installPreviewPanel(): void
                     /**

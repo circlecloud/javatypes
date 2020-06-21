@@ -129,7 +129,7 @@ declare namespace javax {
                      * Constant value identifying the AddressingFeature
                      */
                     // @ts-ignore
-                    readonly ID: string
+                    public static readonly ID: java.lang.String | string
                     /**
                      * If addressing is enabled, this property determines whether the endpoint
                      * requires WS-Addressing. If required is true, WS-Addressing headers MUST
@@ -141,7 +141,7 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getID(): java.lang.String
+                    public getID(): string
                     /**
                      * If addressing is enabled, this property determines whether the endpoint
                      * requires WS-Addressing. If required is true, WS-Addressing headers MUST
@@ -149,7 +149,7 @@ declare namespace javax {
                      * @return the current required value
                      */
                     // @ts-ignore
-                    isRequired(): boolean
+                    public isRequired(): boolean
                     /**
                      * If addressing is enabled, this property determines whether endpoint
                      * requires the use of anonymous responses, or non-anonymous responses,
@@ -164,7 +164,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    getResponses(): javax.xml.ws.soap.AddressingFeature.Responses
+                    public getResponses(): javax.xml.ws.soap.AddressingFeature.Responses
                 }
             }
         }

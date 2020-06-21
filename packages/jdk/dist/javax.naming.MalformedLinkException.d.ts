@@ -21,7 +21,7 @@ declare namespace javax {
              *                          detail about this exception.
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of Malformed LinkException.
              * All fields are initialized to null.

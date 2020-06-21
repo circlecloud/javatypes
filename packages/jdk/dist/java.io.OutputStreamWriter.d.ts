@@ -48,7 +48,7 @@ declare namespace java {
              *              If the named encoding is not supported
              */
             // @ts-ignore
-            constructor(out: java.io.OutputStream, charsetName: string)
+            constructor(out: java.io.OutputStream, charsetName: java.lang.String | string)
             /**
              * Creates an OutputStreamWriter that uses the default character encoding.
              * @param out  An OutputStream
@@ -93,13 +93,13 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getEncoding(): java.lang.String
+            public getEncoding(): string
             /**
              * Writes a single character.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Writes a portion of an array of characters.
              * @param cbuf  Buffer of characters
@@ -108,7 +108,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Writes a portion of a string.
              * @param str  A String
@@ -117,15 +117,15 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(str: string, off: number /*int*/, len: number /*int*/): void
+            public write(str: java.lang.String | string, off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes the stream.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

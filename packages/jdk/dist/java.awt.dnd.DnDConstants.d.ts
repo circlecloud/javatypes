@@ -12,23 +12,23 @@ declare namespace java {
                  * An <code>int</code> representing no action.
                  */
                 // @ts-ignore
-                readonly ACTION_NONE: number /*int*/
+                public static readonly ACTION_NONE: number /*int*/
                 /**
                  * An <code>int</code> representing a &quot;copy&quot; action.
                  */
                 // @ts-ignore
-                readonly ACTION_COPY: number /*int*/
+                public static readonly ACTION_COPY: number /*int*/
                 /**
                  * An <code>int</code> representing a &quot;move&quot; action.
                  */
                 // @ts-ignore
-                readonly ACTION_MOVE: number /*int*/
+                public static readonly ACTION_MOVE: number /*int*/
                 /**
                  * An <code>int</code> representing a &quot;copy&quot; or
                  * &quot;move&quot; action.
                  */
                 // @ts-ignore
-                readonly ACTION_COPY_OR_MOVE: number /*int*/
+                public static readonly ACTION_COPY_OR_MOVE: number /*int*/
                 /**
                  * An <code>int</code> representing a &quot;link&quot; action.
                  * The link verb is found in many, if not all native DnD platforms, and the
@@ -43,13 +43,13 @@ declare namespace java {
                  * results for the user.
                  */
                 // @ts-ignore
-                readonly ACTION_LINK: number /*int*/
+                public static readonly ACTION_LINK: number /*int*/
                 /**
                  * An <code>int</code> representing a &quot;reference&quot;
                  * action (synonym for ACTION_LINK).
                  */
                 // @ts-ignore
-                readonly ACTION_REFERENCE: number /*int*/
+                public static readonly ACTION_REFERENCE: number /*int*/
             }
         }
     }

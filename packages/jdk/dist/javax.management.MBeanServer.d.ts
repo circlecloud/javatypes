@@ -192,7 +192,7 @@ declare namespace javax {
              * @throws RuntimeErrorException {#inheritDoc}
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName): javax.management.ObjectInstance
             /**
              * {@inheritDoc}
              * <p>If this method successfully creates an MBean, a notification
@@ -202,7 +202,7 @@ declare namespace javax {
              * @throws RuntimeErrorException {#inheritDoc}
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName): javax.management.ObjectInstance
             /**
              * {@inheritDoc}
              * <p>If this method successfully creates an MBean, a notification
@@ -212,7 +212,7 @@ declare namespace javax {
              * @throws RuntimeErrorException {#inheritDoc}
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName, params: any[], signature: string[]): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): javax.management.ObjectInstance
             /**
              * {@inheritDoc}
              * <p>If this method successfully creates an MBean, a notification
@@ -222,7 +222,7 @@ declare namespace javax {
              * @throws RuntimeErrorException {#inheritDoc}
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: any[], signature: string[]): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): javax.management.ObjectInstance
             /**
              * <p>Registers a pre-existing object as an MBean with the MBean
              * server. If the object name given is null, the MBean must
@@ -271,7 +271,7 @@ declare namespace javax {
              * @see javax.management.MBeanRegistration
              */
             // @ts-ignore
-            registerMBean(object: any, name: javax.management.ObjectName): javax.management.ObjectInstance
+            registerMBean(object: java.lang.Object | any, name: javax.management.ObjectName): javax.management.ObjectInstance
             /**
              * {@inheritDoc}
              * <p>If this method successfully unregisters an MBean, a notification
@@ -289,13 +289,13 @@ declare namespace javax {
              * @throws RuntimeOperationsException {#inheritDoc}
              */
             // @ts-ignore
-            queryMBeans(name: javax.management.ObjectName, query: javax.management.QueryExp): java.util.Set<javax.management.ObjectInstance>
+            queryMBeans(name: javax.management.ObjectName, query: javax.management.QueryExp): Array<javax.management.ObjectInstance>
             /**
              * {@inheritDoc}
              * @throws RuntimeOperationsException {#inheritDoc}
              */
             // @ts-ignore
-            queryNames(name: javax.management.ObjectName, query: javax.management.QueryExp): java.util.Set<javax.management.ObjectName>
+            queryNames(name: javax.management.ObjectName, query: javax.management.QueryExp): Array<javax.management.ObjectName>
             /**
              * @throws RuntimeOperationsException {#inheritDoc}
              */
@@ -308,17 +308,17 @@ declare namespace javax {
              *  be greater than the number of MBeans the caller can access.
              */
             // @ts-ignore
-            getMBeanCount(): java.lang.Integer
+            getMBeanCount(): number
             /**
              * @throws RuntimeOperationsException {#inheritDoc}
              */
             // @ts-ignore
-            getAttribute(name: javax.management.ObjectName, attribute: string): java.lang.Object
+            getAttribute(name: javax.management.ObjectName, attribute: java.lang.String | string): any
             /**
              * @throws RuntimeOperationsException {#inheritDoc}
              */
             // @ts-ignore
-            getAttributes(name: javax.management.ObjectName, attributes: string[]): javax.management.AttributeList
+            getAttributes(name: javax.management.ObjectName, attributes: java.lang.String[] | string[]): javax.management.AttributeList
             /**
              * @throws RuntimeOperationsException {#inheritDoc}
              */
@@ -330,11 +330,11 @@ declare namespace javax {
             // @ts-ignore
             setAttributes(name: javax.management.ObjectName, attributes: javax.management.AttributeList): javax.management.AttributeList
             // @ts-ignore
-            invoke(name: javax.management.ObjectName, operationName: string, params: any[], signature: string[]): java.lang.Object
+            invoke(name: javax.management.ObjectName, operationName: java.lang.String | string, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): any
             // @ts-ignore
-            getDefaultDomain(): java.lang.String
+            getDefaultDomain(): string
             // @ts-ignore
-            getDomains(): java.lang.String[]
+            getDomains(): string[]
             /**
              * {@inheritDoc}
              * If the source of the notification
@@ -342,25 +342,25 @@ declare namespace javax {
              * by that MBean's ObjectName.  Otherwise the source is unchanged.
              */
             // @ts-ignore
-            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             /**
              * {@inheritDoc}
              * @throws RuntimeOperationsException {#inheritDoc}
              */
             // @ts-ignore
-            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: any): void
+            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
             removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName): void
             // @ts-ignore
-            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: any): void
+            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
             removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener): void
             // @ts-ignore
-            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
             getMBeanInfo(name: javax.management.ObjectName): javax.management.MBeanInfo
             // @ts-ignore
-            isInstanceOf(name: javax.management.ObjectName, className: string): boolean
+            isInstanceOf(name: javax.management.ObjectName, className: java.lang.String | string): boolean
             /**
              * <p>Instantiates an object using the list of all class loaders
              * registered in the MBean server's {@link
@@ -385,7 +385,7 @@ declare namespace javax {
              *  passed in parameter is null.
              */
             // @ts-ignore
-            instantiate(className: string): java.lang.Object
+            instantiate(className: java.lang.String | string): any
             /**
              * <p>Instantiates an object using the class Loader specified by its
              * <CODE>ObjectName</CODE>.  If the loader name is null, the
@@ -413,7 +413,7 @@ declare namespace javax {
              *  passed in parameter is null.
              */
             // @ts-ignore
-            instantiate(className: string, loaderName: javax.management.ObjectName): java.lang.Object
+            instantiate(className: java.lang.String | string, loaderName: javax.management.ObjectName): any
             /**
              * <p>Instantiates an object using the list of all class loaders
              * registered in the MBean server {@link
@@ -439,7 +439,7 @@ declare namespace javax {
              *  passed in parameter is null.
              */
             // @ts-ignore
-            instantiate(className: string, params: any[], signature: string[]): java.lang.Object
+            instantiate(className: java.lang.String | string, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): any
             /**
              * <p>Instantiates an object. The class loader to be used is
              * identified by its object name. If the object name of the loader
@@ -465,7 +465,7 @@ declare namespace javax {
              *  passed in parameter is null.
              */
             // @ts-ignore
-            instantiate(className: string, loaderName: javax.management.ObjectName, params: any[], signature: string[]): java.lang.Object
+            instantiate(className: java.lang.String | string, loaderName: javax.management.ObjectName, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): any
             /**
              * <p>De-serializes a byte array in the context of the class loader
              * of an MBean.</p>
@@ -501,7 +501,7 @@ declare namespace javax {
              *  class loader repository and use it to deserialize.
              */
             // @ts-ignore
-            deserialize(className: string, data: number /*byte*/[]): java.io.ObjectInputStream
+            deserialize(className: java.lang.String | string, data: number /*byte*/[]): java.io.ObjectInputStream
             /**
              * <p>De-serializes a byte array in the context of a given MBean
              * class loader.  The class loader is the one that loaded the
@@ -525,7 +525,7 @@ declare namespace javax {
              *  the class loader for deserialization.
              */
             // @ts-ignore
-            deserialize(className: string, loaderName: javax.management.ObjectName, data: number /*byte*/[]): java.io.ObjectInputStream
+            deserialize(className: java.lang.String | string, loaderName: javax.management.ObjectName, data: number /*byte*/[]): java.io.ObjectInputStream
             /**
              * <p>Return the {@link java.lang.ClassLoader} that was used for
              * loading the class of the named MBean.</p>

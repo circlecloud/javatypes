@@ -36,7 +36,7 @@ declare namespace org {
                      * @see #writeRemoteInvocationResult(HttpServletRequest, HttpServletResponse, RemoteInvocationResult)
                      */
                     // @ts-ignore
-                    handleRequest(request: HttpServletRequest, response: HttpServletResponse): void
+                    public handleRequest(request: HttpServletRequest, response: HttpServletResponse): void
                     /**
                      * Read a RemoteInvocation from the given HTTP request.
                      * <p>Delegates to {@link #readRemoteInvocation(HttpServletRequest, InputStream)} with

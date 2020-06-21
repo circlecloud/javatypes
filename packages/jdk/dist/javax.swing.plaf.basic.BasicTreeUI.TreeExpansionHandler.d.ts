@@ -14,12 +14,12 @@ declare namespace javax {
                          * Called whenever an item in the tree has been expanded.
                          */
                         // @ts-ignore
-                        treeExpanded(event: javax.swing.event.TreeExpansionEvent): void
+                        public treeExpanded(event: javax.swing.event.TreeExpansionEvent): void
                         /**
                          * Called whenever an item in the tree has been collapsed.
                          */
                         // @ts-ignore
-                        treeCollapsed(event: javax.swing.event.TreeExpansionEvent): void
+                        public treeCollapsed(event: javax.swing.event.TreeExpansionEvent): void
                     }
                 }
             }

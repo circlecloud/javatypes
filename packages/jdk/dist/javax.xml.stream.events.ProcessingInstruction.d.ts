@@ -15,13 +15,13 @@ declare namespace javax {
                      * @return the String value of the PI or null
                      */
                     // @ts-ignore
-                    getTarget(): java.lang.String
+                    getTarget(): string
                     /**
                      * The data section of the processing instruction
                      * @return the String value of the PI's data or null
                      */
                     // @ts-ignore
-                    getData(): java.lang.String
+                    getData(): string
                 }
             }
         }

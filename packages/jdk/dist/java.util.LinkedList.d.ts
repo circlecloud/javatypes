@@ -60,48 +60,48 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Returns the first element in this list.
              * @return the first element in this list
              * @throws NoSuchElementException if this list is empty
              */
             // @ts-ignore
-            getFirst(): E
+            public getFirst(): E
             /**
              * Returns the last element in this list.
              * @return the last element in this list
              * @throws NoSuchElementException if this list is empty
              */
             // @ts-ignore
-            getLast(): E
+            public getLast(): E
             /**
              * Removes and returns the first element from this list.
              * @return the first element from this list
              * @throws NoSuchElementException if this list is empty
              */
             // @ts-ignore
-            removeFirst(): E
+            public removeFirst(): E
             /**
              * Removes and returns the last element from this list.
              * @return the last element from this list
              * @throws NoSuchElementException if this list is empty
              */
             // @ts-ignore
-            removeLast(): E
+            public removeLast(): E
             /**
              * Inserts the specified element at the beginning of this list.
              * @param e the element to add
              */
             // @ts-ignore
-            addFirst(e: E): void
+            public addFirst(e: E): void
             /**
              * Appends the specified element to the end of this list.
              * <p>This method is equivalent to {@link #add}.
              * @param e the element to add
              */
             // @ts-ignore
-            addLast(e: E): void
+            public addLast(e: E): void
             /**
              * Returns {@code true} if this list contains the specified element.
              * More formally, returns {@code true} if and only if this list contains
@@ -111,13 +111,13 @@ declare namespace java {
              * @return {#code true} if this list contains the specified element
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Returns the number of elements in this list.
              * @return the number of elements in this list
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Appends the specified element to the end of this list.
              * <p>This method is equivalent to {@link #addLast}.
@@ -125,7 +125,7 @@ declare namespace java {
              * @return {#code true} (as specified by {@link Collection#add})
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Removes the first occurrence of the specified element from this list,
              * if it is present.  If this list does not contain the element, it is
@@ -139,7 +139,7 @@ declare namespace java {
              * @return {#code true} if this list contained the specified element
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Appends all of the elements in the specified collection to the end of
              * this list, in the order that they are returned by the specified
@@ -152,7 +152,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Inserts all of the elements in the specified collection into this
              * list, starting at the specified position.  Shifts the element
@@ -168,13 +168,13 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<E>): boolean
+            public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes all of the elements from this list.
              * The list will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns the element at the specified position in this list.
              * @param index index of the element to return
@@ -182,7 +182,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            get(index: number /*int*/): E
+            public get(index: number /*int*/): E
             /**
              * Replaces the element at the specified position in this list with the
              * specified element.
@@ -192,7 +192,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            set(index: number /*int*/, element: E): E
+            public set(index: number /*int*/, element: E): E
             /**
              * Inserts the specified element at the specified position in this list.
              * Shifts the element currently at that position (if any) and any
@@ -202,7 +202,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            add(index: number /*int*/, element: E): void
+            public add(index: number /*int*/, element: E): void
             /**
              * Removes the element at the specified position in this list.  Shifts any
              * subsequent elements to the left (subtracts one from their indices).
@@ -212,7 +212,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            remove(index: number /*int*/): E
+            public remove(index: number /*int*/): E
             /**
              * Returns the index of the first occurrence of the specified element
              * in this list, or -1 if this list does not contain the element.
@@ -224,7 +224,7 @@ declare namespace java {
              *          this list, or -1 if this list does not contain the element
              */
             // @ts-ignore
-            indexOf(o: any): int
+            public indexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns the index of the last occurrence of the specified element
              * in this list, or -1 if this list does not contain the element.
@@ -236,14 +236,14 @@ declare namespace java {
              *          this list, or -1 if this list does not contain the element
              */
             // @ts-ignore
-            lastIndexOf(o: any): int
+            public lastIndexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Retrieves, but does not remove, the head (first element) of this list.
              * @return the head of this list, or {#code null} if this list is empty
              * @since 1.5
              */
             // @ts-ignore
-            peek(): E
+            public peek(): E
             /**
              * Retrieves, but does not remove, the head (first element) of this list.
              * @return the head of this list
@@ -251,14 +251,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            element(): E
+            public element(): E
             /**
              * Retrieves and removes the head (first element) of this list.
              * @return the head of this list, or {#code null} if this list is empty
              * @since 1.5
              */
             // @ts-ignore
-            poll(): E
+            public poll(): E
             /**
              * Retrieves and removes the head (first element) of this list.
              * @return the head of this list
@@ -266,7 +266,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            remove(): E
+            public remove(): E
             /**
              * Adds the specified element as the tail (last element) of this list.
              * @param e the element to add
@@ -274,7 +274,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            offer(e: E): boolean
+            public offer(e: E): boolean
             /**
              * Inserts the specified element at the front of this list.
              * @param e the element to insert
@@ -282,7 +282,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            offerFirst(e: E): boolean
+            public offerFirst(e: E): boolean
             /**
              * Inserts the specified element at the end of this list.
              * @param e the element to insert
@@ -290,7 +290,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            offerLast(e: E): boolean
+            public offerLast(e: E): boolean
             /**
              * Retrieves, but does not remove, the first element of this list,
              * or returns {@code null} if this list is empty.
@@ -299,7 +299,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            peekFirst(): E
+            public peekFirst(): E
             /**
              * Retrieves, but does not remove, the last element of this list,
              * or returns {@code null} if this list is empty.
@@ -308,7 +308,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            peekLast(): E
+            public peekLast(): E
             /**
              * Retrieves and removes the first element of this list,
              * or returns {@code null} if this list is empty.
@@ -317,7 +317,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            pollFirst(): E
+            public pollFirst(): E
             /**
              * Retrieves and removes the last element of this list,
              * or returns {@code null} if this list is empty.
@@ -326,7 +326,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            pollLast(): E
+            public pollLast(): E
             /**
              * Pushes an element onto the stack represented by this list.  In other
              * words, inserts the element at the front of this list.
@@ -335,7 +335,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            push(e: E): void
+            public push(e: E): void
             /**
              * Pops an element from the stack represented by this list.  In other
              * words, removes and returns the first element of this list.
@@ -346,7 +346,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            pop(): E
+            public pop(): E
             /**
              * Removes the first occurrence of the specified element in this
              * list (when traversing the list from head to tail).  If the list
@@ -356,7 +356,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            removeFirstOccurrence(o: any): boolean
+            public removeFirstOccurrence(o: java.lang.Object | any): boolean
             /**
              * Removes the last occurrence of the specified element in this
              * list (when traversing the list from head to tail).  If the list
@@ -366,7 +366,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            removeLastOccurrence(o: any): boolean
+            public removeLastOccurrence(o: java.lang.Object | any): boolean
             /**
              * Returns a list-iterator of the elements in this list (in proper
              * sequence), starting at the specified position in the list.
@@ -387,19 +387,19 @@ declare namespace java {
              * @see List#listIterator(int)
              */
             // @ts-ignore
-            listIterator(index: number /*int*/): java.util.ListIterator<E>
+            public listIterator(index: number /*int*/): java.util.ListIterator<E>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            descendingIterator(): java.util.Iterator<E>
+            public descendingIterator(): java.util.Iterator<E>
             /**
              * Returns a shallow copy of this {@code LinkedList}. (The elements
              * themselves are not cloned.)
              * @return a shallow copy of this {#code LinkedList} instance
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns an array containing all of the elements in this list
              * in proper sequence (from first to last element).
@@ -412,7 +412,7 @@ declare namespace java {
              *          in proper sequence
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * Returns an array containing all of the elements in this list in
              * proper sequence (from first to last element); the runtime type of
@@ -446,7 +446,7 @@ declare namespace java {
              * @throws NullPointerException if the specified array is null
              */
             // @ts-ignore
-            toArray<T>(a: T[]): T
+            public toArray<T>(a: T[]): T
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -460,7 +460,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

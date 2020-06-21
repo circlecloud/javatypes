@@ -72,7 +72,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * Reads a sequence of bytes from this channel into the given buffers.
                  * <p> An invocation of this method of the form <tt>c.read(dsts)</tt>
@@ -99,7 +99,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                read(dsts: java.nio.ByteBuffer[]): long
+                read(dsts: java.nio.ByteBuffer[]): number /*long*/
             }
         }
     }

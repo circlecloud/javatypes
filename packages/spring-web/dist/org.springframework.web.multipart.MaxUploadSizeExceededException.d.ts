@@ -24,13 +24,13 @@ declare namespace org {
                      * @param ex root cause from multipart parsing API in use
                      */
                     // @ts-ignore
-                    constructor(maxUploadSize: number /*long*/, ex: Error)
+                    constructor(maxUploadSize: number /*long*/, ex: java.lang.Throwable | Error)
                     /**
                      * Return the maximum upload size allowed,
                      * or -1 if the size limit isn't known.
                      */
                     // @ts-ignore
-                    getMaxUploadSize(): long
+                    public getMaxUploadSize(): number /*long*/
                 }
             }
         }

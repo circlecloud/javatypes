@@ -65,7 +65,7 @@ declare namespace javax {
                  *                    the node's data
                  */
                 // @ts-ignore
-                constructor(userObject: any)
+                constructor(userObject: java.lang.Object | any)
                 /**
                  * Creates a tree node with no parent, no children, initialized with
                  * the specified user object, and that allows children only if
@@ -76,13 +76,13 @@ declare namespace javax {
                  *         nodes -- otherwise, it is always a leaf node
                  */
                 // @ts-ignore
-                constructor(userObject: any, allowsChildren: boolean)
+                constructor(userObject: java.lang.Object | any, allowsChildren: boolean)
                 /**
                  * An enumeration that is always empty. This is used when an enumeration
                  * of a leaf node's children is requested.
                  */
                 // @ts-ignore
-                readonly EMPTY_ENUMERATION: java.util.Enumeration<javax.swing.tree.TreeNode>
+                public static readonly EMPTY_ENUMERATION: java.util.Enumeration<javax.swing.tree.TreeNode>
                 /**
                  * this node's parent, or null if this node has no parent
                  */
@@ -92,7 +92,7 @@ declare namespace javax {
                  * optional user object
                  */
                 // @ts-ignore
-                userObject: any
+                userObject: java.lang.Object | any
                 /**
                  * true if the node is able to have children
                  */
@@ -117,7 +117,7 @@ declare namespace javax {
                  * @see #isNodeDescendant
                  */
                 // @ts-ignore
-                insert(newChild: javax.swing.tree.MutableTreeNode, childIndex: number /*int*/): void
+                public insert(newChild: javax.swing.tree.MutableTreeNode, childIndex: number /*int*/): void
                 /**
                  * Removes the child at the specified index from this node's children
                  * and sets that node's parent to null. The child node to remove
@@ -128,7 +128,7 @@ declare namespace javax {
                  *                           <code>childIndex</code> is out of bounds
                  */
                 // @ts-ignore
-                remove(childIndex: number /*int*/): void
+                public remove(childIndex: number /*int*/): void
                 /**
                  * Sets this node's parent to <code>newParent</code> but does not
                  * change the parent's child array.  This method is called from
@@ -138,13 +138,13 @@ declare namespace javax {
                  * @param newParent       this node's new parent
                  */
                 // @ts-ignore
-                setParent(newParent: javax.swing.tree.MutableTreeNode): void
+                public setParent(newParent: javax.swing.tree.MutableTreeNode): void
                 /**
                  * Returns this node's parent or null if this node has no parent.
                  * @return this node's parent TreeNode, or null if this node has no parent
                  */
                 // @ts-ignore
-                getParent(): javax.swing.tree.TreeNode
+                public getParent(): javax.swing.tree.TreeNode
                 /**
                  * Returns the child at the specified index in this node's child array.
                  * @param index   an index into this node's child array
@@ -153,13 +153,13 @@ declare namespace javax {
                  * @return the TreeNode in this node's child array at  the specified index
                  */
                 // @ts-ignore
-                getChildAt(index: number /*int*/): javax.swing.tree.TreeNode
+                public getChildAt(index: number /*int*/): javax.swing.tree.TreeNode
                 /**
                  * Returns the number of children of this node.
                  * @return an int giving the number of children of this node
                  */
                 // @ts-ignore
-                getChildCount(): int
+                public getChildCount(): number /*int*/
                 /**
                  * Returns the index of the specified child in this node's child array.
                  * If the specified node is not a child of this node, returns
@@ -173,7 +173,7 @@ declare namespace javax {
                  *           a child of this node
                  */
                 // @ts-ignore
-                getIndex(aChild: javax.swing.tree.TreeNode): int
+                public getIndex(aChild: javax.swing.tree.TreeNode): number /*int*/
                 /**
                  * Creates and returns a forward-order enumeration of this node's
                  * children.  Modifying this node's child array invalidates any child
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @return an Enumeration of this node's children
                  */
                 // @ts-ignore
-                children(): java.util.Enumeration
+                public children(): java.util.Enumeration<any>
                 /**
                  * Determines whether or not this node is allowed to have children.
                  * If <code>allows</code> is false, all of this node's children are
@@ -191,13 +191,13 @@ declare namespace javax {
                  * @param allows  true if this node is allowed to have children
                  */
                 // @ts-ignore
-                setAllowsChildren(allows: boolean): void
+                public setAllowsChildren(allows: boolean): void
                 /**
                  * Returns true if this node is allowed to have children.
                  * @return true if this node allows children, else false
                  */
                 // @ts-ignore
-                getAllowsChildren(): boolean
+                public getAllowsChildren(): boolean
                 /**
                  * Sets the user object for this node to <code>userObject</code>.
                  * @param userObject      the Object that constitutes this node's
@@ -206,7 +206,7 @@ declare namespace javax {
                  * @see #toString
                  */
                 // @ts-ignore
-                setUserObject(userObject: any): void
+                public setUserObject(userObject: java.lang.Object | any): void
                 /**
                  * Returns this node's user object.
                  * @return the Object stored at this node by the user
@@ -214,14 +214,14 @@ declare namespace javax {
                  * @see #toString
                  */
                 // @ts-ignore
-                getUserObject(): java.lang.Object
+                public getUserObject(): any
                 /**
                  * Removes the subtree rooted at this node from the tree, giving this
                  * node a null parent.  Does nothing if this node is the root of its
                  * tree.
                  */
                 // @ts-ignore
-                removeFromParent(): void
+                public removeFromParent(): void
                 /**
                  * Removes <code>aChild</code> from this node's child array, giving it a
                  * null parent.
@@ -230,13 +230,13 @@ declare namespace javax {
                  *                                   is null or is not a child of this node
                  */
                 // @ts-ignore
-                remove(aChild: javax.swing.tree.MutableTreeNode): void
+                public remove(aChild: javax.swing.tree.MutableTreeNode): void
                 /**
                  * Removes all of this node's children, setting their parents to null.
                  * If this node has no children, this method does nothing.
                  */
                 // @ts-ignore
-                removeAllChildren(): void
+                public removeAllChildren(): void
                 /**
                  * Removes <code>newChild</code> from its parent and makes it a child of
                  * this node by adding it to the end of this node's child array.
@@ -248,7 +248,7 @@ declare namespace javax {
                  *                                           children
                  */
                 // @ts-ignore
-                add(newChild: javax.swing.tree.MutableTreeNode): void
+                public add(newChild: javax.swing.tree.MutableTreeNode): void
                 /**
                  * Returns true if <code>anotherNode</code> is an ancestor of this node
                  * -- if it is this node, this node's parent, or an ancestor of this
@@ -262,7 +262,7 @@ declare namespace javax {
                  * @return true if this node is a descendant of <code>anotherNode</code>
                  */
                 // @ts-ignore
-                isNodeAncestor(anotherNode: javax.swing.tree.TreeNode): boolean
+                public isNodeAncestor(anotherNode: javax.swing.tree.TreeNode): boolean
                 /**
                  * Returns true if <code>anotherNode</code> is a descendant of this node
                  * -- if it is this node, one of this node's children, or a descendant of
@@ -276,7 +276,7 @@ declare namespace javax {
                  * @return true if this node is an ancestor of <code>anotherNode</code>
                  */
                 // @ts-ignore
-                isNodeDescendant(anotherNode: javax.swing.tree.DefaultMutableTreeNode): boolean
+                public isNodeDescendant(anotherNode: javax.swing.tree.DefaultMutableTreeNode): boolean
                 /**
                  * Returns the nearest common ancestor to this node and <code>aNode</code>.
                  * Returns null, if no such ancestor exists -- if this node and
@@ -289,7 +289,7 @@ declare namespace javax {
                  *           or null if none
                  */
                 // @ts-ignore
-                getSharedAncestor(aNode: javax.swing.tree.DefaultMutableTreeNode): javax.swing.tree.TreeNode
+                public getSharedAncestor(aNode: javax.swing.tree.DefaultMutableTreeNode): javax.swing.tree.TreeNode
                 /**
                  * Returns true if and only if <code>aNode</code> is in the same tree
                  * as this node.  Returns false if <code>aNode</code> is null.
@@ -299,7 +299,7 @@ declare namespace javax {
                  *           false if <code>aNode</code> is null
                  */
                 // @ts-ignore
-                isNodeRelated(aNode: javax.swing.tree.DefaultMutableTreeNode): boolean
+                public isNodeRelated(aNode: javax.swing.tree.DefaultMutableTreeNode): boolean
                 /**
                  * Returns the depth of the tree rooted at this node -- the longest
                  * distance from this node to a leaf.  If this node has no children,
@@ -310,7 +310,7 @@ declare namespace javax {
                  * @return the depth of the tree whose root is this node
                  */
                 // @ts-ignore
-                getDepth(): int
+                public getDepth(): number /*int*/
                 /**
                  * Returns the number of levels above this node -- the distance from
                  * the root to this node.  If this node is the root, returns 0.
@@ -318,7 +318,7 @@ declare namespace javax {
                  * @return the number of levels above this node
                  */
                 // @ts-ignore
-                getLevel(): int
+                public getLevel(): number /*int*/
                 /**
                  * Returns the path from the root, to get to this node.  The last
                  * element in the path is this node.
@@ -327,7 +327,7 @@ declare namespace javax {
                  *          element is this node.
                  */
                 // @ts-ignore
-                getPath(): javax.swing.tree.TreeNode[]
+                public getPath(): javax.swing.tree.TreeNode[]
                 /**
                  * Builds the parents of node up to and including the root node,
                  * where the original node is the last element in the returned array.
@@ -347,7 +347,7 @@ declare namespace javax {
                  * returned path will contain nulls.
                  */
                 // @ts-ignore
-                getUserObjectPath(): java.lang.Object[]
+                public getUserObjectPath(): any[]
                 /**
                  * Returns the root of the tree that contains this node.  The root is
                  * the ancestor with a null parent.
@@ -355,7 +355,7 @@ declare namespace javax {
                  * @return the root of the tree that contains this node
                  */
                 // @ts-ignore
-                getRoot(): javax.swing.tree.TreeNode
+                public getRoot(): javax.swing.tree.TreeNode
                 /**
                  * Returns true if this node is the root of the tree.  The root is
                  * the only node in the tree with a null parent; every tree has exactly
@@ -363,7 +363,7 @@ declare namespace javax {
                  * @return true if this node is the root of its tree
                  */
                 // @ts-ignore
-                isRoot(): boolean
+                public isRoot(): boolean
                 /**
                  * Returns the node that follows this node in a preorder traversal of this
                  * node's tree.  Returns null if this node is the last node of the
@@ -374,7 +374,7 @@ declare namespace javax {
                  *           null if this node is last
                  */
                 // @ts-ignore
-                getNextNode(): javax.swing.tree.DefaultMutableTreeNode
+                public getNextNode(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Returns the node that precedes this node in a preorder traversal of
                  * this node's tree.  Returns <code>null</code> if this node is the
@@ -386,7 +386,7 @@ declare namespace javax {
                  *           null if this node is the first
                  */
                 // @ts-ignore
-                getPreviousNode(): javax.swing.tree.DefaultMutableTreeNode
+                public getPreviousNode(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Creates and returns an enumeration that traverses the subtree rooted at
                  * this node in preorder.  The first node returned by the enumeration's
@@ -397,7 +397,7 @@ declare namespace javax {
                  * @return an enumeration for traversing the tree in preorder
                  */
                 // @ts-ignore
-                preorderEnumeration(): java.util.Enumeration
+                public preorderEnumeration(): java.util.Enumeration<any>
                 /**
                  * Creates and returns an enumeration that traverses the subtree rooted at
                  * this node in postorder.  The first node returned by the enumeration's
@@ -410,7 +410,7 @@ declare namespace javax {
                  * @return an enumeration for traversing the tree in postorder
                  */
                 // @ts-ignore
-                postorderEnumeration(): java.util.Enumeration
+                public postorderEnumeration(): java.util.Enumeration<any>
                 /**
                  * Creates and returns an enumeration that traverses the subtree rooted at
                  * this node in breadth-first order.  The first node returned by the
@@ -421,7 +421,7 @@ declare namespace javax {
                  * @return an enumeration for traversing the tree in breadth-first order
                  */
                 // @ts-ignore
-                breadthFirstEnumeration(): java.util.Enumeration
+                public breadthFirstEnumeration(): java.util.Enumeration<any>
                 /**
                  * Creates and returns an enumeration that traverses the subtree rooted at
                  * this node in depth-first order.  The first node returned by the
@@ -434,7 +434,7 @@ declare namespace javax {
                  * @return an enumeration for traversing the tree in depth-first order
                  */
                 // @ts-ignore
-                depthFirstEnumeration(): java.util.Enumeration
+                public depthFirstEnumeration(): java.util.Enumeration<any>
                 /**
                  * Creates and returns an enumeration that follows the path from
                  * <code>ancestor</code> to this node.  The enumeration's
@@ -454,7 +454,7 @@ declare namespace javax {
                  *           this node to this one
                  */
                 // @ts-ignore
-                pathFromAncestorEnumeration(ancestor: javax.swing.tree.TreeNode): java.util.Enumeration
+                public pathFromAncestorEnumeration(ancestor: javax.swing.tree.TreeNode): java.util.Enumeration<any>
                 /**
                  * Returns true if <code>aNode</code> is a child of this node.  If
                  * <code>aNode</code> is null, this method returns false.
@@ -462,7 +462,7 @@ declare namespace javax {
                  *                   <code>aNode</code> is null
                  */
                 // @ts-ignore
-                isNodeChild(aNode: javax.swing.tree.TreeNode): boolean
+                public isNodeChild(aNode: javax.swing.tree.TreeNode): boolean
                 /**
                  * Returns this node's first child.  If this node has no children,
                  * throws NoSuchElementException.
@@ -470,7 +470,7 @@ declare namespace javax {
                  * @exception NoSuchElementException  if this node has no children
                  */
                 // @ts-ignore
-                getFirstChild(): javax.swing.tree.TreeNode
+                public getFirstChild(): javax.swing.tree.TreeNode
                 /**
                  * Returns this node's last child.  If this node has no children,
                  * throws NoSuchElementException.
@@ -478,7 +478,7 @@ declare namespace javax {
                  * @exception NoSuchElementException  if this node has no children
                  */
                 // @ts-ignore
-                getLastChild(): javax.swing.tree.TreeNode
+                public getLastChild(): javax.swing.tree.TreeNode
                 /**
                  * Returns the child in this node's child array that immediately
                  * follows <code>aChild</code>, which must be a child of this node.  If
@@ -493,7 +493,7 @@ declare namespace javax {
                  *           <code>aChild</code>
                  */
                 // @ts-ignore
-                getChildAfter(aChild: javax.swing.tree.TreeNode): javax.swing.tree.TreeNode
+                public getChildAfter(aChild: javax.swing.tree.TreeNode): javax.swing.tree.TreeNode
                 /**
                  * Returns the child in this node's child array that immediately
                  * precedes <code>aChild</code>, which must be a child of this node.  If
@@ -506,7 +506,7 @@ declare namespace javax {
                  *           <code>aChild</code>
                  */
                 // @ts-ignore
-                getChildBefore(aChild: javax.swing.tree.TreeNode): javax.swing.tree.TreeNode
+                public getChildBefore(aChild: javax.swing.tree.TreeNode): javax.swing.tree.TreeNode
                 /**
                  * Returns true if <code>anotherNode</code> is a sibling of (has the
                  * same parent as) this node.  A node is its own sibling.  If
@@ -515,7 +515,7 @@ declare namespace javax {
                  * @return true if <code>anotherNode</code> is a sibling of this node
                  */
                 // @ts-ignore
-                isNodeSibling(anotherNode: javax.swing.tree.TreeNode): boolean
+                public isNodeSibling(anotherNode: javax.swing.tree.TreeNode): boolean
                 /**
                  * Returns the number of siblings of this node.  A node is its own sibling
                  * (if it has no parent or no siblings, this method returns
@@ -523,7 +523,7 @@ declare namespace javax {
                  * @return the number of siblings of this node
                  */
                 // @ts-ignore
-                getSiblingCount(): int
+                public getSiblingCount(): number /*int*/
                 /**
                  * Returns the next sibling of this node in the parent's children array.
                  * Returns null if this node has no parent or is the parent's last child.
@@ -534,7 +534,7 @@ declare namespace javax {
                  * @return the sibling of this node that immediately follows this node
                  */
                 // @ts-ignore
-                getNextSibling(): javax.swing.tree.DefaultMutableTreeNode
+                public getNextSibling(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Returns the previous sibling of this node in the parent's children
                  * array.  Returns null if this node has no parent or is the parent's
@@ -543,7 +543,7 @@ declare namespace javax {
                  * @return the sibling of this node that immediately precedes this node
                  */
                 // @ts-ignore
-                getPreviousSibling(): javax.swing.tree.DefaultMutableTreeNode
+                public getPreviousSibling(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Returns true if this node has no children.  To distinguish between
                  * nodes that have no children and nodes that <i>cannot</i> have
@@ -553,7 +553,7 @@ declare namespace javax {
                  * @return true if this node has no children
                  */
                 // @ts-ignore
-                isLeaf(): boolean
+                public isLeaf(): boolean
                 /**
                  * Finds and returns the first leaf that is a descendant of this node --
                  * either this node or its first child's first leaf.
@@ -563,7 +563,7 @@ declare namespace javax {
                  * @return the first leaf in the subtree rooted at this node
                  */
                 // @ts-ignore
-                getFirstLeaf(): javax.swing.tree.DefaultMutableTreeNode
+                public getFirstLeaf(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Finds and returns the last leaf that is a descendant of this node --
                  * either this node or its last child's last leaf.
@@ -573,7 +573,7 @@ declare namespace javax {
                  * @return the last leaf in the subtree rooted at this node
                  */
                 // @ts-ignore
-                getLastLeaf(): javax.swing.tree.DefaultMutableTreeNode
+                public getLastLeaf(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Returns the leaf after this node or null if this node is the
                  * last leaf in the tree.
@@ -593,7 +593,7 @@ declare namespace javax {
                  * @return returns the next leaf past this node
                  */
                 // @ts-ignore
-                getNextLeaf(): javax.swing.tree.DefaultMutableTreeNode
+                public getNextLeaf(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Returns the leaf before this node or null if this node is the
                  * first leaf in the tree.
@@ -613,7 +613,7 @@ declare namespace javax {
                  * @return returns the leaf before this node
                  */
                 // @ts-ignore
-                getPreviousLeaf(): javax.swing.tree.DefaultMutableTreeNode
+                public getPreviousLeaf(): javax.swing.tree.DefaultMutableTreeNode
                 /**
                  * Returns the total number of leaves that are descendants of this node.
                  * If this node is a leaf, returns <code>1</code>.  This method is O(n)
@@ -622,14 +622,14 @@ declare namespace javax {
                  * @return the number of leaves beneath this node
                  */
                 // @ts-ignore
-                getLeafCount(): int
+                public getLeafCount(): number /*int*/
                 /**
                  * Returns the result of sending <code>toString()</code> to this node's
                  * user object, or the empty string if the node has no user object.
                  * @see #getUserObject
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Overridden to make clone public.  Returns a shallow copy of this node;
                  * the new node has no parent or children and has a reference to the same
@@ -637,7 +637,7 @@ declare namespace javax {
                  * @return a copy of this node
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

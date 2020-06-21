@@ -7,7 +7,7 @@ declare namespace org {
              *  Use {#link org.bukkit.block.data.BlockData}.
              */
             // @ts-ignore
-            class TexturedMaterial extends org.bukkit.material.MaterialData {
+            abstract class TexturedMaterial extends org.bukkit.material.MaterialData {
                 // @ts-ignore
                 constructor(m: org.bukkit.Material)
                 /**
@@ -23,27 +23,27 @@ declare namespace org {
                  * @return a list of possible textures for this block
                  */
                 // @ts-ignore
-                abstract getTextures(): java.util.List<org.bukkit.Material>
+                public abstract getTextures(): Array<org.bukkit.Material>
                 /**
                  * Gets the current Material this block is made of
                  * @return Material of this block
                  */
                 // @ts-ignore
-                getMaterial(): org.bukkit.Material
+                public getMaterial(): org.bukkit.Material
                 /**
                  * Sets the material this block is made of
                  * @param material
                  *             New material of this block
                  */
                 // @ts-ignore
-                setMaterial(material: org.bukkit.Material): void
+                public setMaterial(material: org.bukkit.Material): void
                 /**
                  * Get material index from data
                  * @return index of data in textures list
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getTextureIndex(): int
+                getTextureIndex(): number /*int*/
                 /**
                  * Set material index
                  * @param idx - index of data in textures list
@@ -52,9 +52,9 @@ declare namespace org {
                 // @ts-ignore
                 setTextureIndex(idx: number /*int*/): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.TexturedMaterial
+                public clone(): org.bukkit.material.TexturedMaterial
             }
         }
     }

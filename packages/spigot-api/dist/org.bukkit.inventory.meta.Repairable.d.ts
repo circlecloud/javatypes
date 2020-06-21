@@ -18,7 +18,7 @@ declare namespace org {
                      * @return the repair penalty
                      */
                     // @ts-ignore
-                    getRepairCost(): int
+                    getRepairCost(): number /*int*/
                     /**
                      * Sets the repair penalty
                      * @param cost repair penalty

@@ -62,24 +62,24 @@ declare namespace org {
                      * @see CommandLinePropertySource#CommandLinePropertySource(Object)
                      */
                     // @ts-ignore
-                    constructor(...args: string[])
+                    constructor(...args: java.lang.String[] | string[])
                     /**
                      * Create a new {@code SimpleCommandLinePropertySource} having the given name
                      * and backed by the given {@code String[]} of command line arguments.
                      */
                     // @ts-ignore
-                    constructor(name: string, args: string[])
+                    constructor(name: java.lang.String | string, args: java.lang.String[] | string[])
                     /**
                      * Get the property names for the option arguments.
                      */
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    public getPropertyNames(): string[]
                     // @ts-ignore
-                    containsOption(name: string): boolean
+                    containsOption(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    getOptionValues(name: string): java.util.List<java.lang.String>
+                    getOptionValues(name: java.lang.String | string): Array<java.lang.String | string>
                     // @ts-ignore
-                    getNonOptionArgs(): java.util.List<java.lang.String>
+                    getNonOptionArgs(): Array<java.lang.String | string>
                 }
             }
         }

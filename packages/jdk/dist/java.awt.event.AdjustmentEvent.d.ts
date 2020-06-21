@@ -84,54 +84,54 @@ declare namespace java {
                  * Marks the first integer id for the range of adjustment event ids.
                  */
                 // @ts-ignore
-                readonly ADJUSTMENT_FIRST: number /*int*/
+                public static readonly ADJUSTMENT_FIRST: number /*int*/
                 /**
                  * Marks the last integer id for the range of adjustment event ids.
                  */
                 // @ts-ignore
-                readonly ADJUSTMENT_LAST: number /*int*/
+                public static readonly ADJUSTMENT_LAST: number /*int*/
                 /**
                  * The adjustment value changed event.
                  */
                 // @ts-ignore
-                readonly ADJUSTMENT_VALUE_CHANGED: number /*int*/
+                public static readonly ADJUSTMENT_VALUE_CHANGED: number /*int*/
                 /**
                  * The unit increment adjustment type.
                  */
                 // @ts-ignore
-                readonly UNIT_INCREMENT: number /*int*/
+                public static readonly UNIT_INCREMENT: number /*int*/
                 /**
                  * The unit decrement adjustment type.
                  */
                 // @ts-ignore
-                readonly UNIT_DECREMENT: number /*int*/
+                public static readonly UNIT_DECREMENT: number /*int*/
                 /**
                  * The block decrement adjustment type.
                  */
                 // @ts-ignore
-                readonly BLOCK_DECREMENT: number /*int*/
+                public static readonly BLOCK_DECREMENT: number /*int*/
                 /**
                  * The block increment adjustment type.
                  */
                 // @ts-ignore
-                readonly BLOCK_INCREMENT: number /*int*/
+                public static readonly BLOCK_INCREMENT: number /*int*/
                 /**
                  * The absolute tracking adjustment type.
                  */
                 // @ts-ignore
-                readonly TRACK: number /*int*/
+                public static readonly TRACK: number /*int*/
                 /**
                  * Returns the <code>Adjustable</code> object where this event originated.
                  * @return the <code>Adjustable</code> object where this event originated
                  */
                 // @ts-ignore
-                getAdjustable(): java.awt.Adjustable
+                public getAdjustable(): java.awt.Adjustable
                 /**
                  * Returns the current value in the adjustment event.
                  * @return the current value in the adjustment event
                  */
                 // @ts-ignore
-                getValue(): int
+                public getValue(): number /*int*/
                 /**
                  * Returns the type of adjustment which caused the value changed
                  * event.  It will have one of the following values:
@@ -145,7 +145,7 @@ declare namespace java {
                  * @return one of the adjustment values listed above
                  */
                 // @ts-ignore
-                getAdjustmentType(): int
+                public getAdjustmentType(): number /*int*/
                 /**
                  * Returns <code>true</code> if this is one of multiple
                  * adjustment events.
@@ -154,9 +154,9 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getValueIsAdjusting(): boolean
+                public getValueIsAdjusting(): boolean
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

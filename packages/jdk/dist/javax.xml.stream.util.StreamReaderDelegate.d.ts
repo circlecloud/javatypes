@@ -32,103 +32,103 @@ declare namespace javax {
                      * @param reader the new parent
                      */
                     // @ts-ignore
-                    setParent(reader: javax.xml.stream.XMLStreamReader): void
+                    public setParent(reader: javax.xml.stream.XMLStreamReader): void
                     /**
                      * Get the parent of this instance.
                      * @return the parent or null if none is set
                      */
                     // @ts-ignore
-                    getParent(): javax.xml.stream.XMLStreamReader
+                    public getParent(): javax.xml.stream.XMLStreamReader
                     // @ts-ignore
-                    next(): int
+                    public next(): number /*int*/
                     // @ts-ignore
-                    nextTag(): int
+                    public nextTag(): number /*int*/
                     // @ts-ignore
-                    getElementText(): java.lang.String
+                    public getElementText(): string
                     // @ts-ignore
-                    require(type: number /*int*/, namespaceURI: string, localName: string): void
+                    public require(type: number /*int*/, namespaceURI: java.lang.String | string, localName: java.lang.String | string): void
                     // @ts-ignore
-                    hasNext(): boolean
+                    public hasNext(): boolean
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     // @ts-ignore
-                    getNamespaceURI(prefix: string): java.lang.String
+                    public getNamespaceURI(prefix: java.lang.String | string): string
                     // @ts-ignore
-                    getNamespaceContext(): javax.xml.namespace.NamespaceContext
+                    public getNamespaceContext(): javax.xml.namespace.NamespaceContext
                     // @ts-ignore
-                    isStartElement(): boolean
+                    public isStartElement(): boolean
                     // @ts-ignore
-                    isEndElement(): boolean
+                    public isEndElement(): boolean
                     // @ts-ignore
-                    isCharacters(): boolean
+                    public isCharacters(): boolean
                     // @ts-ignore
-                    isWhiteSpace(): boolean
+                    public isWhiteSpace(): boolean
                     // @ts-ignore
-                    getAttributeValue(namespaceUri: string, localName: string): java.lang.String
+                    public getAttributeValue(namespaceUri: java.lang.String | string, localName: java.lang.String | string): string
                     // @ts-ignore
-                    getAttributeCount(): int
+                    public getAttributeCount(): number /*int*/
                     // @ts-ignore
-                    getAttributeName(index: number /*int*/): javax.xml.namespace.QName
+                    public getAttributeName(index: number /*int*/): javax.xml.namespace.QName
                     // @ts-ignore
-                    getAttributePrefix(index: number /*int*/): java.lang.String
+                    public getAttributePrefix(index: number /*int*/): string
                     // @ts-ignore
-                    getAttributeNamespace(index: number /*int*/): java.lang.String
+                    public getAttributeNamespace(index: number /*int*/): string
                     // @ts-ignore
-                    getAttributeLocalName(index: number /*int*/): java.lang.String
+                    public getAttributeLocalName(index: number /*int*/): string
                     // @ts-ignore
-                    getAttributeType(index: number /*int*/): java.lang.String
+                    public getAttributeType(index: number /*int*/): string
                     // @ts-ignore
-                    getAttributeValue(index: number /*int*/): java.lang.String
+                    public getAttributeValue(index: number /*int*/): string
                     // @ts-ignore
-                    isAttributeSpecified(index: number /*int*/): boolean
+                    public isAttributeSpecified(index: number /*int*/): boolean
                     // @ts-ignore
-                    getNamespaceCount(): int
+                    public getNamespaceCount(): number /*int*/
                     // @ts-ignore
-                    getNamespacePrefix(index: number /*int*/): java.lang.String
+                    public getNamespacePrefix(index: number /*int*/): string
                     // @ts-ignore
-                    getNamespaceURI(index: number /*int*/): java.lang.String
+                    public getNamespaceURI(index: number /*int*/): string
                     // @ts-ignore
-                    getEventType(): int
+                    public getEventType(): number /*int*/
                     // @ts-ignore
-                    getText(): java.lang.String
+                    public getText(): string
                     // @ts-ignore
-                    getTextCharacters(sourceStart: number /*int*/, target: string[], targetStart: number /*int*/, length: number /*int*/): int
+                    public getTextCharacters(sourceStart: number /*int*/, target: string[], targetStart: number /*int*/, length: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getTextCharacters(): char[]
+                    public getTextCharacters(): string[]
                     // @ts-ignore
-                    getTextStart(): int
+                    public getTextStart(): number /*int*/
                     // @ts-ignore
-                    getTextLength(): int
+                    public getTextLength(): number /*int*/
                     // @ts-ignore
-                    getEncoding(): java.lang.String
+                    public getEncoding(): string
                     // @ts-ignore
-                    hasText(): boolean
+                    public hasText(): boolean
                     // @ts-ignore
-                    getLocation(): javax.xml.stream.Location
+                    public getLocation(): javax.xml.stream.Location
                     // @ts-ignore
-                    getName(): javax.xml.namespace.QName
+                    public getName(): javax.xml.namespace.QName
                     // @ts-ignore
-                    getLocalName(): java.lang.String
+                    public getLocalName(): string
                     // @ts-ignore
-                    hasName(): boolean
+                    public hasName(): boolean
                     // @ts-ignore
-                    getNamespaceURI(): java.lang.String
+                    public getNamespaceURI(): string
                     // @ts-ignore
-                    getPrefix(): java.lang.String
+                    public getPrefix(): string
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    public getVersion(): string
                     // @ts-ignore
-                    isStandalone(): boolean
+                    public isStandalone(): boolean
                     // @ts-ignore
-                    standaloneSet(): boolean
+                    public standaloneSet(): boolean
                     // @ts-ignore
-                    getCharacterEncodingScheme(): java.lang.String
+                    public getCharacterEncodingScheme(): string
                     // @ts-ignore
-                    getPITarget(): java.lang.String
+                    public getPITarget(): string
                     // @ts-ignore
-                    getPIData(): java.lang.String
+                    public getPIData(): string
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                 }
             }
         }

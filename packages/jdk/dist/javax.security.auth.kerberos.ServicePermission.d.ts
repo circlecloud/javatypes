@@ -71,7 +71,7 @@ declare namespace javax {
                      * @param action the action string
                      */
                     // @ts-ignore
-                    constructor(servicePrincipal: string, action: string)
+                    constructor(servicePrincipal: java.lang.String | string, action: java.lang.String | string)
                     /**
                      * Checks if this Kerberos service permission object "implies" the
                      * specified permission.
@@ -82,7 +82,7 @@ declare namespace javax {
                      *  false if not.
                      */
                     // @ts-ignore
-                    implies(p: java.security.Permission): boolean
+                    public implies(p: java.security.Permission): boolean
                     /**
                      * Checks two ServicePermission objects for equality.
                      * <P>
@@ -92,20 +92,20 @@ declare namespace javax {
                      *  ServicePermission object.
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns the hash code value for this object.
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns the canonical string representation of the actions.
                      * Always returns present actions in the following order:
                      * initiate, accept.
                      */
                     // @ts-ignore
-                    getActions(): java.lang.String
+                    public getActions(): string
                     /**
                      * Returns a PermissionCollection object for storing
                      * ServicePermission objects.
@@ -118,7 +118,7 @@ declare namespace javax {
                      *  ServicePermissions.
                      */
                     // @ts-ignore
-                    newPermissionCollection(): java.security.PermissionCollection
+                    public newPermissionCollection(): java.security.PermissionCollection
                 }
             }
         }

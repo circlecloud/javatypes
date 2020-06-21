@@ -116,12 +116,12 @@ declare namespace java {
                  * Request the PixelGrabber to start fetching the pixels.
                  */
                 // @ts-ignore
-                startGrabbing(): void
+                public startGrabbing(): void
                 /**
                  * Request the PixelGrabber to abort the image fetch.
                  */
                 // @ts-ignore
-                abortGrabbing(): void
+                public abortGrabbing(): void
                 /**
                  * Request the Image or ImageProducer to start delivering pixels and
                  * wait for all of the pixels in the rectangle of interest to be
@@ -132,7 +132,7 @@ declare namespace java {
                  *             Another thread has interrupted this thread.
                  */
                 // @ts-ignore
-                grabPixels(): boolean
+                public grabPixels(): boolean
                 /**
                  * Request the Image or ImageProducer to start delivering pixels and
                  * wait for all of the pixels in the rectangle of interest to be
@@ -154,7 +154,7 @@ declare namespace java {
                  *             Another thread has interrupted this thread.
                  */
                 // @ts-ignore
-                grabPixels(ms: number /*long*/): boolean
+                public grabPixels(ms: number /*long*/): boolean
                 /**
                  * Return the status of the pixels.  The ImageObserver flags
                  * representing the available pixel information are returned.
@@ -162,7 +162,7 @@ declare namespace java {
                  * @see ImageObserver
                  */
                 // @ts-ignore
-                getStatus(): int
+                public getStatus(): number /*int*/
                 /**
                  * Get the width of the pixel buffer (after adjusting for image width).
                  * If no width was specified for the rectangle of pixels to grab then
@@ -173,7 +173,7 @@ declare namespace java {
                  * @see #getStatus
                  */
                 // @ts-ignore
-                getWidth(): int
+                public getWidth(): number /*int*/
                 /**
                  * Get the height of the pixel buffer (after adjusting for image height).
                  * If no width was specified for the rectangle of pixels to grab then
@@ -184,7 +184,7 @@ declare namespace java {
                  * @see #getStatus
                  */
                 // @ts-ignore
-                getHeight(): int
+                public getHeight(): number /*int*/
                 /**
                  * Get the pixel buffer.  If the PixelGrabber was not constructed
                  * with an explicit pixel buffer to hold the pixels then this method
@@ -201,7 +201,7 @@ declare namespace java {
                  * @see #setPixels(int, int, int, int, ColorModel, int[], int, int)
                  */
                 // @ts-ignore
-                getPixels(): java.lang.Object
+                public getPixels(): any
                 /**
                  * Get the ColorModel for the pixels stored in the array.  If the
                  * PixelGrabber was constructed with an explicit pixel buffer then
@@ -220,7 +220,7 @@ declare namespace java {
                  * @see #setColorModel(ColorModel)
                  */
                 // @ts-ignore
-                getColorModel(): java.awt.image.ColorModel
+                public getColorModel(): java.awt.image.ColorModel
                 /**
                  * The setDimensions method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -234,7 +234,7 @@ declare namespace java {
                  * @param height the height of the dimension
                  */
                 // @ts-ignore
-                setDimensions(width: number /*int*/, height: number /*int*/): void
+                public setDimensions(width: number /*int*/, height: number /*int*/): void
                 /**
                  * The setHints method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -247,7 +247,7 @@ declare namespace java {
                  * @param hints a set of hints used to process the pixels
                  */
                 // @ts-ignore
-                setHints(hints: number /*int*/): void
+                public setHints(hints: number /*int*/): void
                 /**
                  * The setProperties method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -260,7 +260,7 @@ declare namespace java {
                  * @param props the list of properties
                  */
                 // @ts-ignore
-                setProperties(props: java.util.Hashtable<any, ?>): void
+                public setProperties(props: java.util.Hashtable<any, any>): void
                 /**
                  * The setColorModel method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -274,7 +274,7 @@ declare namespace java {
                  * @see #getColorModel
                  */
                 // @ts-ignore
-                setColorModel(model: java.awt.image.ColorModel): void
+                public setColorModel(model: java.awt.image.ColorModel): void
                 /**
                  * The setPixels method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -298,7 +298,7 @@ declare namespace java {
                  * @see #getPixels
                  */
                 // @ts-ignore
-                setPixels(srcX: number /*int*/, srcY: number /*int*/, srcW: number /*int*/, srcH: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], srcOff: number /*int*/, srcScan: number /*int*/): void
+                public setPixels(srcX: number /*int*/, srcY: number /*int*/, srcW: number /*int*/, srcH: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], srcOff: number /*int*/, srcScan: number /*int*/): void
                 /**
                  * The setPixels method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -322,7 +322,7 @@ declare namespace java {
                  * @see #getPixels
                  */
                 // @ts-ignore
-                setPixels(srcX: number /*int*/, srcY: number /*int*/, srcW: number /*int*/, srcH: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], srcOff: number /*int*/, srcScan: number /*int*/): void
+                public setPixels(srcX: number /*int*/, srcY: number /*int*/, srcW: number /*int*/, srcH: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], srcOff: number /*int*/, srcScan: number /*int*/): void
                 /**
                  * The imageComplete method is part of the ImageConsumer API which
                  * this class must implement to retrieve the pixels.
@@ -335,7 +335,7 @@ declare namespace java {
                  * @param status the status of image loading
                  */
                 // @ts-ignore
-                imageComplete(status: number /*int*/): void
+                public imageComplete(status: number /*int*/): void
                 /**
                  * Returns the status of the pixels.  The ImageObserver flags
                  * representing the available pixel information are returned.
@@ -349,7 +349,7 @@ declare namespace java {
                  * @see #getStatus()
                  */
                 // @ts-ignore
-                status(): int
+                public status(): number /*int*/
             }
         }
     }

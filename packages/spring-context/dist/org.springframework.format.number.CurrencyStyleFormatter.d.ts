@@ -22,27 +22,27 @@ declare namespace org {
                      * Default is 2.
                      */
                     // @ts-ignore
-                    setFractionDigits(fractionDigits: number /*int*/): void
+                    public setFractionDigits(fractionDigits: number /*int*/): void
                     /**
                      * Specify the rounding mode to use for decimal parsing.
                      * Default is {@link java.math.RoundingMode#UNNECESSARY}.
                      */
                     // @ts-ignore
-                    setRoundingMode(roundingMode: java.math.RoundingMode): void
+                    public setRoundingMode(roundingMode: java.math.RoundingMode): void
                     /**
                      * Specify the currency, if known.
                      */
                     // @ts-ignore
-                    setCurrency(currency: java.util.Currency): void
+                    public setCurrency(currency: java.util.Currency): void
                     /**
                      * Specify the pattern to use to format number values.
                      * If not specified, the default DecimalFormat pattern is used.
                      * @see java.text.DecimalFormat#applyPattern(String)
                      */
                     // @ts-ignore
-                    setPattern(pattern: string): void
+                    public setPattern(pattern: java.lang.String | string): void
                     // @ts-ignore
-                    parse(text: string, locale: java.util.Locale): java.math.BigDecimal
+                    public parse(text: java.lang.String | string, locale: java.util.Locale): java.math.BigDecimal
                     // @ts-ignore
                     getNumberFormat(locale: java.util.Locale): java.text.NumberFormat
                 }

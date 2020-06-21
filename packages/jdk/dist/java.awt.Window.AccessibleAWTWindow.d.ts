@@ -18,7 +18,7 @@ declare namespace java {
                  * @see javax.accessibility.AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Get the state of this object.
                  * @return an instance of AccessibleStateSet containing the current
@@ -26,7 +26,7 @@ declare namespace java {
                  * @see javax.accessibility.AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
             }
         }
     }

@@ -64,14 +64,14 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the look and feel (L&amp;amp;F) object that renders this component.
              * @return the PanelUI object that renders this component
              * @since 1.4
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.PanelUI
+            public getUI(): javax.swing.plaf.PanelUI
             /**
              * Sets the look and feel (L&amp;F) object that renders this component.
              * @param ui  the PanelUI L&amp;F object
@@ -83,7 +83,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.PanelUI): void
+            public setUI(ui: javax.swing.plaf.PanelUI): void
             /**
              * Returns a string that specifies the name of the L&amp;F class
              * that renders this component.
@@ -94,7 +94,7 @@ declare namespace javax {
              *    description: A string that specifies the name of the L&amp;F class.
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns a string representation of this JPanel. This method
              * is intended to be used only for debugging purposes, and the
@@ -104,7 +104,7 @@ declare namespace javax {
              * @return a string representation of this JPanel.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JPanel.
              * For JPanels, the AccessibleContext takes the form of an
@@ -114,7 +114,7 @@ declare namespace javax {
              *          AccessibleContext of this JPanel
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

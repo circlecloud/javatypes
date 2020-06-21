@@ -65,7 +65,7 @@ declare namespace java {
              * @see X509Extension
              */
             // @ts-ignore
-            class X509CRL extends java.security.cert.CRL implements java.security.cert.X509Extension {
+            abstract class X509CRL extends java.security.cert.CRL implements java.security.cert.X509Extension {
                 /**
                  * Constructor for X.509 CRLs.
                  */
@@ -82,21 +82,21 @@ declare namespace java {
                  *  match, false otherwise.
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode value for this CRL from its
                  * encoded form.
                  * @return the hashcode value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the ASN.1 DER-encoded form of this CRL.
                  * @return the encoded form of this certificate
                  * @exception CRLException if an encoding error occurs.
                  */
                 // @ts-ignore
-                abstract getEncoded(): byte[]
+                public abstract getEncoded(): number /*byte*/[]
                 /**
                  * Verifies that this CRL was signed using the
                  * private key that corresponds to the given public key.
@@ -109,7 +109,7 @@ declare namespace java {
                  * @exception CRLException on encoding errors.
                  */
                 // @ts-ignore
-                abstract verify(key: java.security.PublicKey): void
+                public abstract verify(key: java.security.PublicKey): void
                 /**
                  * Verifies that this CRL was signed using the
                  * private key that corresponds to the given public key.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @exception CRLException on encoding errors.
                  */
                 // @ts-ignore
-                abstract verify(key: java.security.PublicKey, sigProvider: string): void
+                public abstract verify(key: java.security.PublicKey, sigProvider: java.lang.String | string): void
                 /**
                  * Verifies that this CRL was signed using the
                  * private key that corresponds to the given public key.
@@ -146,7 +146,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                verify(key: java.security.PublicKey, sigProvider: java.security.Provider): void
+                public verify(key: java.security.PublicKey, sigProvider: java.security.Provider): void
                 /**
                  * Gets the {@code version} (version number) value from the CRL.
                  * The ASN.1 definition for this is:
@@ -160,7 +160,7 @@ declare namespace java {
                  * @return the version number, i.e. 1 or 2.
                  */
                 // @ts-ignore
-                abstract getVersion(): int
+                public abstract getVersion(): number /*int*/
                 /**
                  * <strong>Denigrated</strong>, replaced by {@linkplain
                  * #getIssuerX500Principal()}. This method returns the {@code issuer}
@@ -196,7 +196,7 @@ declare namespace java {
                  * @return a Principal whose name is the issuer distinguished name.
                  */
                 // @ts-ignore
-                abstract getIssuerDN(): java.security.Principal
+                public abstract getIssuerDN(): java.security.Principal
                 /**
                  * Returns the issuer (issuer distinguished name) value from the
                  * CRL as an {@code X500Principal}.
@@ -207,7 +207,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getIssuerX500Principal(): javax.security.auth.x500.X500Principal
+                public getIssuerX500Principal(): javax.security.auth.x500.X500Principal
                 /**
                  * Gets the {@code thisUpdate} date from the CRL.
                  * The ASN.1 definition for this is:
@@ -220,14 +220,14 @@ declare namespace java {
                  * @return the {#code thisUpdate} date from the CRL.
                  */
                 // @ts-ignore
-                abstract getThisUpdate(): java.util.Date
+                public abstract getThisUpdate(): java.util.Date
                 /**
                  * Gets the {@code nextUpdate} date from the CRL.
                  * @return the {#code nextUpdate} date from the CRL, or null if
                  *  not present.
                  */
                 // @ts-ignore
-                abstract getNextUpdate(): java.util.Date
+                public abstract getNextUpdate(): java.util.Date
                 /**
                  * Gets the CRL entry, if any, with the given certificate serialNumber.
                  * @param serialNumber the serial number of the certificate for which a CRL entry
@@ -237,7 +237,7 @@ declare namespace java {
                  * @see X509CRLEntry
                  */
                 // @ts-ignore
-                abstract getRevokedCertificate(serialNumber: java.math.BigInteger): java.security.cert.X509CRLEntry
+                public abstract getRevokedCertificate(serialNumber: java.math.BigInteger): java.security.cert.X509CRLEntry
                 /**
                  * Get the CRL entry, if any, for the given certificate.
                  * <p>This method can be used to lookup CRL entries in indirect CRLs,
@@ -253,7 +253,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getRevokedCertificate(certificate: java.security.cert.X509Certificate): java.security.cert.X509CRLEntry
+                public getRevokedCertificate(certificate: java.security.cert.X509Certificate): java.security.cert.X509CRLEntry
                 /**
                  * Gets all the entries from this CRL.
                  * This returns a Set of X509CRLEntry objects.
@@ -261,7 +261,7 @@ declare namespace java {
                  * @see X509CRLEntry
                  */
                 // @ts-ignore
-                abstract getRevokedCertificates(): java.util.Set<? extends java.security.cert.X509CRLEntry>
+                public abstract getRevokedCertificates(): Array<any>
                 /**
                  * Gets the DER-encoded CRL information, the
                  * {@code tbsCertList} from this CRL.
@@ -270,7 +270,7 @@ declare namespace java {
                  * @exception CRLException if an encoding error occurs.
                  */
                 // @ts-ignore
-                abstract getTBSCertList(): byte[]
+                public abstract getTBSCertList(): number /*byte*/[]
                 /**
                  * Gets the {@code signature} value (the raw signature bits) from
                  * the CRL.
@@ -281,7 +281,7 @@ declare namespace java {
                  * @return the signature.
                  */
                 // @ts-ignore
-                abstract getSignature(): byte[]
+                public abstract getSignature(): number /*byte*/[]
                 /**
                  * Gets the signature algorithm name for the CRL
                  * signature algorithm. An example is the string "SHA256withRSA".
@@ -300,7 +300,7 @@ declare namespace java {
                  * @return the signature algorithm name.
                  */
                 // @ts-ignore
-                abstract getSigAlgName(): java.lang.String
+                public abstract getSigAlgName(): string
                 /**
                  * Gets the signature algorithm OID string from the CRL.
                  * An OID is represented by a set of nonnegative whole numbers separated
@@ -315,7 +315,7 @@ declare namespace java {
                  * @return the signature algorithm OID string.
                  */
                 // @ts-ignore
-                abstract getSigAlgOID(): java.lang.String
+                public abstract getSigAlgOID(): string
                 /**
                  * Gets the DER-encoded signature algorithm parameters from this
                  * CRL's signature algorithm. In most cases, the signature
@@ -331,7 +331,7 @@ declare namespace java {
                  *          null if no parameters are present.
                  */
                 // @ts-ignore
-                abstract getSigAlgParams(): byte[]
+                public abstract getSigAlgParams(): number /*byte*/[]
             }
         }
     }

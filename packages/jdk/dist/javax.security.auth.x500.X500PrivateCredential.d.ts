@@ -33,34 +33,34 @@ declare namespace javax {
                      *  {@code key} or {@code alias} is null
                      */
                     // @ts-ignore
-                    constructor(cert: java.security.cert.X509Certificate, key: java.security.PrivateKey, alias: string)
+                    constructor(cert: java.security.cert.X509Certificate, key: java.security.PrivateKey, alias: java.lang.String | string)
                     /**
                      * Returns the X.509 certificate.
                      * <p>
                      * @return the X509Certificate
                      */
                     // @ts-ignore
-                    getCertificate(): java.security.cert.X509Certificate
+                    public getCertificate(): java.security.cert.X509Certificate
                     /**
                      * Returns the PrivateKey.
                      * <p>
                      * @return the PrivateKey
                      */
                     // @ts-ignore
-                    getPrivateKey(): java.security.PrivateKey
+                    public getPrivateKey(): java.security.PrivateKey
                     /**
                      * Returns the KeyStore alias.
                      * <p>
                      * @return the KeyStore alias
                      */
                     // @ts-ignore
-                    getAlias(): java.lang.String
+                    public getAlias(): string
                     /**
                      * Clears the references to the X.509 certificate, private key and the
                      * KeyStore alias in this object.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Determines if the references to the X.509 certificate and private key
                      * in this object have been cleared.
@@ -68,7 +68,7 @@ declare namespace javax {
                      * @return true if X509Certificate and the PrivateKey are null
                      */
                     // @ts-ignore
-                    isDestroyed(): boolean
+                    public isDestroyed(): boolean
                 }
             }
         }

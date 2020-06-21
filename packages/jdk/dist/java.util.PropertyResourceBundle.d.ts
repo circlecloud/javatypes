@@ -95,7 +95,7 @@ declare namespace java {
             // @ts-ignore
             constructor(reader: java.io.Reader)
             // @ts-ignore
-            handleGetObject(key: string): java.lang.Object
+            public handleGetObject(key: java.lang.String | string): any
             /**
              * Returns an <code>Enumeration</code> of the keys contained in
              * this <code>ResourceBundle</code> and its parent bundles.
@@ -104,7 +104,7 @@ declare namespace java {
              * @see #keySet()
              */
             // @ts-ignore
-            getKeys(): java.util.Enumeration<java.lang.String>
+            public getKeys(): java.util.Enumeration<java.lang.String | string>
             /**
              * Returns a <code>Set</code> of the keys contained
              * <em>only</em> in this <code>ResourceBundle</code>.
@@ -114,7 +114,7 @@ declare namespace java {
              * @see #keySet()
              */
             // @ts-ignore
-            handleKeySet(): java.util.Set<java.lang.String>
+            handleKeySet(): Array<java.lang.String | string>
         }
     }
 }

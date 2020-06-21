@@ -8,49 +8,49 @@ declare namespace org {
                  * order that they are specified in {@link #of(Object...)}.
                  */
                 // @ts-ignore
-                class TextTemplate extends java.lang.Object implements org.spongepowered.api.text.TextRepresentable, java.lang.Iterable<java.lang.Object> {
+                class TextTemplate extends java.lang.Object implements org.spongepowered.api.text.TextRepresentable, java.lang.Iterable<java.lang.Object | any> {
                     /**
                      * Default "open" String for how arguments are contained within the
                      * template.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_OPEN_ARG: string
+                    public static readonly DEFAULT_OPEN_ARG: java.lang.String | string
                     /**
                      * Default "close" String for how arguments are contained within the
                      * template.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CLOSE_ARG: string
+                    public static readonly DEFAULT_CLOSE_ARG: java.lang.String | string
                     /**
                      * Empty representation of a {@link TextTemplate}. This is returned if the
                      * array supplied to {@link #of(Object...)} is empty.
                      */
                     // @ts-ignore
-                    readonly EMPTY: org.spongepowered.api.text.TextTemplate
+                    public static readonly EMPTY: org.spongepowered.api.text.TextTemplate
                     /**
                      * Returns the elements contained in this TextTemplate.
                      * @return The elements within the template
                      */
                     // @ts-ignore
-                    getElements(): java.util.List<java.lang.Object>
+                    public getElements(): Array<java.lang.Object | any>
                     /**
                      * Returns the arguments contained within the TextTemplate.
                      * @return The arguments within this TextTemplate
                      */
                     // @ts-ignore
-                    getArguments(): java.util.Map<java.lang.String, org.spongepowered.api.text.TextTemplate.Arg>
+                    public getArguments(): java.util.Map<java.lang.String | string, org.spongepowered.api.text.TextTemplate.Arg>
                     /**
                      * Returns the string used for containing Args within the template.
                      * @return String containing args
                      */
                     // @ts-ignore
-                    getOpenArgString(): java.lang.String
+                    public getOpenArgString(): string
                     /**
                      * Returns the string used for containing Args within the template.
                      * @return String containing args
                      */
                     // @ts-ignore
-                    getCloseArgString(): java.lang.String
+                    public getCloseArgString(): string
                     /**
                      * Concatenates the specified {@link TextTemplate} to this template and
                      * returns the result. In the event that the two templates' open/close
@@ -60,7 +60,7 @@ declare namespace org {
                      * @return Concatenated template
                      */
                     // @ts-ignore
-                    concat(other: org.spongepowered.api.text.TextTemplate): org.spongepowered.api.text.TextTemplate
+                    public concat(other: org.spongepowered.api.text.TextTemplate): org.spongepowered.api.text.TextTemplate
                     /**
                      * Applies an empty map of parameters to this TextTemplate and returns the
                      * result in a {@link Text.Builder}.
@@ -68,7 +68,7 @@ declare namespace org {
                      * @throws TextTemplateArgumentException if required parameters are missing
                      */
                     // @ts-ignore
-                    apply(): org.spongepowered.api.text.Text.Builder
+                    public apply(): org.spongepowered.api.text.Text.Builder
                     /**
                      * Applies the specified parameters to this TextTemplate and returns the
                      * result in a {@link Text.Builder}.
@@ -77,7 +77,7 @@ declare namespace org {
                      * @throws TextTemplateArgumentException if required parameters are missing
                      */
                     // @ts-ignore
-                    apply(params: java.util.Map<java.lang.String, any>): org.spongepowered.api.text.Text.Builder
+                    public apply(params: java.util.Map<java.lang.String | string, any>): org.spongepowered.api.text.Text.Builder
                     /**
                      * Constructs a new TextTemplate for the given elements. The order of the
                      * elements is the order in which they will be appended to the result
@@ -98,7 +98,7 @@ declare namespace org {
                      * @return Newly constructed TextTemplate
                      */
                     // @ts-ignore
-                    of(openArg: string, closeArg: string, elements: any[]): org.spongepowered.api.text.TextTemplate
+                    public static of(openArg: java.lang.String | string, closeArg: java.lang.String | string, elements: java.lang.Object[] | any[]): org.spongepowered.api.text.TextTemplate
                     /**
                      * Constructs a new TextTemplate for the given elements. The order of the
                      * elements is the order in which they will be appended to the result
@@ -117,13 +117,13 @@ declare namespace org {
                      * @return Newly constructed TextTemplate
                      */
                     // @ts-ignore
-                    of(...elements: any[]): org.spongepowered.api.text.TextTemplate
+                    public static of(...elements: java.lang.Object[] | any[]): org.spongepowered.api.text.TextTemplate
                     /**
                      * Returns the empty representation of a TextTemplate.
                      * @return Empty TextTemplate
                      */
                     // @ts-ignore
-                    of(): org.spongepowered.api.text.TextTemplate
+                    public static of(): org.spongepowered.api.text.TextTemplate
                     /**
                      * Constructs a new {@link Arg} to be supplied to {@link #of(Object...)}.
                      * This argument expects a {@link TextElement} parameter.
@@ -131,17 +131,17 @@ declare namespace org {
                      * @return argument builder
                      */
                     // @ts-ignore
-                    arg(name: string): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                    public static arg(name: java.lang.String | string): org.spongepowered.api.text.TextTemplate.Arg.Builder
                     // @ts-ignore
-                    toText(): org.spongepowered.api.text.Text
+                    public toText(): org.spongepowered.api.text.Text
                     // @ts-ignore
-                    iterator(): java.util.Iterator<java.lang.Object>
+                    public iterator(): java.util.Iterator<java.lang.Object | any>
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                 }
             }
         }

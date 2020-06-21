@@ -28,7 +28,7 @@ declare namespace org {
                  * @param applicationContext the application to configure
                  */
                 // @ts-ignore
-                initialize(applicationContext: C extends org.springframework.context.ConfigurableApplicationContext): void
+                initialize(applicationContext: C): void
             }
         }
     }

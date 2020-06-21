@@ -45,7 +45,7 @@ declare namespace javax {
                  * @see MidiChannel#programChange(int, int)
                  */
                 // @ts-ignore
-                getBank(): int
+                public getBank(): number /*int*/
                 /**
                  * Returns the index, within
                  * a bank, of the instrument whose location this <code>Patch</code> specifies.
@@ -55,7 +55,7 @@ declare namespace javax {
                  * @see MidiChannel#programChange(int, int)
                  */
                 // @ts-ignore
-                getProgram(): int
+                public getProgram(): number /*int*/
             }
         }
     }

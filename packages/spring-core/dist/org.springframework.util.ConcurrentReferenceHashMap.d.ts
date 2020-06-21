@@ -79,18 +79,18 @@ declare namespace org {
                 // @ts-ignore
                 constructor(initialCapacity: number /*int*/, loadFactor: number /*float*/, concurrencyLevel: number /*int*/, referenceType: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType)
                 // @ts-ignore
-                getLoadFactor(): float
+                getLoadFactor(): number /*float*/
                 // @ts-ignore
-                getSegmentsSize(): int
+                getSegmentsSize(): number /*int*/
                 // @ts-ignore
-                getSegment(index: number /*int*/): org.springframework.util.ConcurrentReferenceHashMap<K, V>.Segment
+                getSegment(index: number /*int*/): org.springframework.util.ConcurrentReferenceHashMap.Segment<any>
                 /**
                  * Factory method that returns the {@link ReferenceManager}.
                  * This method will be called once for each {@link Segment}.
                  * @return a new reference manager
                  */
                 // @ts-ignore
-                createReferenceManager(): org.springframework.util.ConcurrentReferenceHashMap<K, V>.ReferenceManager
+                createReferenceManager(): org.springframework.util.ConcurrentReferenceHashMap.ReferenceManager<any>
                 /**
                  * Get the hash for a given object, apply an additional hash function to reduce
                  * collisions. This implementation uses the same Wang/Jenkins algorithm as
@@ -99,13 +99,13 @@ declare namespace org {
                  * @return the resulting hash code
                  */
                 // @ts-ignore
-                getHash(o: any): int
+                getHash(o: java.lang.Object | any): number /*int*/
                 // @ts-ignore
-                get(key: any): V
+                public get(key: java.lang.Object | any): V
                 // @ts-ignore
-                getOrDefault(key: any, defaultValue: V): V
+                public getOrDefault(key: java.lang.Object | any, defaultValue: V): V
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 /**
                  * Return a {@link Reference} to the {@link Entry} for the specified {@code key},
                  * or {@code null} if not found.
@@ -114,21 +114,21 @@ declare namespace org {
                  * @return the reference, or {#code null} if not found
                  */
                 // @ts-ignore
-                getReference(key: any, restructure: org.springframework.util.ConcurrentReferenceHashMap.Restructure): org.springframework.util.ConcurrentReferenceHashMap.Reference<K, V>
+                getReference(key: java.lang.Object | any, restructure: org.springframework.util.ConcurrentReferenceHashMap.Restructure): org.springframework.util.ConcurrentReferenceHashMap.Reference<K, V>
                 // @ts-ignore
-                put(key: K, value: V): V
+                public put(key: K, value: V): V
                 // @ts-ignore
-                putIfAbsent(key: K, value: V): V
+                public putIfAbsent(key: K, value: V): V
                 // @ts-ignore
-                remove(key: any): V
+                public remove(key: java.lang.Object | any): V
                 // @ts-ignore
-                remove(key: any, value: any): boolean
+                public remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
                 // @ts-ignore
-                replace(key: K, oldValue: V, newValue: V): boolean
+                public replace(key: K, oldValue: V, newValue: V): boolean
                 // @ts-ignore
-                replace(key: K, value: V): V
+                public replace(key: K, value: V): V
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Remove any entries that have been garbage collected and are no longer referenced.
                  * Under normal circumstances garbage collected entries are automatically purged as
@@ -136,13 +136,13 @@ declare namespace org {
                  * and is useful when the Map is read frequently but updated less often.
                  */
                 // @ts-ignore
-                purgeUnreferencedEntries(): void
+                public purgeUnreferencedEntries(): void
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+                public entrySet(): Array<java.util.Map.Entry<K, V>>
                 /**
                  * Calculate a shift value that can be used to create a power-of-two value between
                  * the specified maximum and minimum values.
@@ -151,7 +151,7 @@ declare namespace org {
                  * @return the calculated shift (use {#code 1 << shift} to obtain a value)
                  */
                 // @ts-ignore
-                calculateShift(minimumValue: number /*int*/, maximumValue: number /*int*/): int
+                static calculateShift(minimumValue: number /*int*/, maximumValue: number /*int*/): number /*int*/
             }
         }
     }

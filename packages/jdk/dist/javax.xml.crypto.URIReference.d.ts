@@ -20,14 +20,14 @@ declare namespace javax {
                  *     <code>null</code> if not specified)
                  */
                 // @ts-ignore
-                getURI(): java.lang.String
+                getURI(): string
                 /**
                  * Returns the type of data referenced by this URI.
                  * @return the type (a URI) of the data object (may be <code>null</code>
                  *     if not specified)
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                getType(): string
             }
         }
     }

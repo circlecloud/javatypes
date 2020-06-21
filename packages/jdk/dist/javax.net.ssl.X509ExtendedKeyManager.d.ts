@@ -11,7 +11,7 @@ declare namespace javax {
              * @author Brad R. Wetmore
              */
             // @ts-ignore
-            class X509ExtendedKeyManager extends java.lang.Object implements javax.net.ssl.X509KeyManager {
+            abstract class X509ExtendedKeyManager extends java.lang.Object implements javax.net.ssl.X509KeyManager {
                 /**
                  * Constructor used by subclasses only.
                  */
@@ -36,7 +36,7 @@ declare namespace javax {
                  *           are no matches.
                  */
                 // @ts-ignore
-                chooseEngineClientAlias(keyType: string[], issuers: java.security.Principal[], engine: javax.net.ssl.SSLEngine): java.lang.String
+                public chooseEngineClientAlias(keyType: java.lang.String[] | string[], issuers: java.security.Principal[], engine: javax.net.ssl.SSLEngine): string
                 /**
                  * Choose an alias to authenticate the server side of an
                  * <code>SSLEngine</code> connection given the public key type
@@ -55,7 +55,7 @@ declare namespace javax {
                  *           are no matches.
                  */
                 // @ts-ignore
-                chooseEngineServerAlias(keyType: string, issuers: java.security.Principal[], engine: javax.net.ssl.SSLEngine): java.lang.String
+                public chooseEngineServerAlias(keyType: java.lang.String | string, issuers: java.security.Principal[], engine: javax.net.ssl.SSLEngine): string
             }
         }
     }

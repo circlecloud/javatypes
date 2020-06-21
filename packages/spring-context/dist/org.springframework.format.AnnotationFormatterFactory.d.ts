@@ -16,7 +16,7 @@ declare namespace org {
                  * The types of fields that may be annotated with the &lt;A&gt; annotation.
                  */
                 // @ts-ignore
-                getFieldTypes(): java.util.Set<java.lang.Class<?>>
+                getFieldTypes(): Array<java.lang.Class<any>>
                 /**
                  * Get the Printer to print the value of a field of {@code fieldType} annotated with
                  * {@code annotation}.
@@ -27,7 +27,7 @@ declare namespace org {
                  * @return the printer
                  */
                 // @ts-ignore
-                getPrinter(annotation: A extends java.lang.annotation.Annotation, fieldType: java.lang.Class<any>): org.springframework.format.Printer<?>
+                getPrinter(annotation: A, fieldType: java.lang.Class<any>): org.springframework.format.Printer<any>
                 /**
                  * Get the Parser to parse a submitted value for a field of {@code fieldType}
                  * annotated with {@code annotation}.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @return the parser
                  */
                 // @ts-ignore
-                getParser(annotation: A extends java.lang.annotation.Annotation, fieldType: java.lang.Class<any>): org.springframework.format.Parser<?>
+                getParser(annotation: A, fieldType: java.lang.Class<any>): org.springframework.format.Parser<any>
             }
         }
     }

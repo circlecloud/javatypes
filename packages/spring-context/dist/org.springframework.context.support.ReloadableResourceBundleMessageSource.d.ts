@@ -58,7 +58,7 @@ declare namespace org {
                      * @see org.springframework.util.PropertiesPersister#load
                      */
                     // @ts-ignore
-                    setFileEncodings(fileEncodings: java.util.Properties): void
+                    public setFileEncodings(fileEncodings: java.util.Properties): void
                     /**
                      * Specify whether to allow for concurrent refresh behavior, i.e. one thread
                      * locked in a refresh attempt for a specific cached properties file whereas
@@ -71,14 +71,14 @@ declare namespace org {
                      * @see #setCacheSeconds
                      */
                     // @ts-ignore
-                    setConcurrentRefresh(concurrentRefresh: boolean): void
+                    public setConcurrentRefresh(concurrentRefresh: boolean): void
                     /**
                      * Set the PropertiesPersister to use for parsing properties files.
                      * <p>The default is a DefaultPropertiesPersister.
                      * @see org.springframework.util.DefaultPropertiesPersister
                      */
                     // @ts-ignore
-                    setPropertiesPersister(propertiesPersister: PropertiesPersister): void
+                    public setPropertiesPersister(propertiesPersister: PropertiesPersister): void
                     /**
                      * Set the ResourceLoader to use for loading bundle properties files.
                      * <p>The default is a DefaultResourceLoader. Will get overridden by the
@@ -89,19 +89,19 @@ declare namespace org {
                      * @see org.springframework.context.ResourceLoaderAware
                      */
                     // @ts-ignore
-                    setResourceLoader(resourceLoader: ResourceLoader): void
+                    public setResourceLoader(resourceLoader: ResourceLoader): void
                     /**
                      * Resolves the given message code as key in the retrieved bundle files,
                      * returning the value found in the bundle as-is (without MessageFormat parsing).
                      */
                     // @ts-ignore
-                    resolveCodeWithoutArguments(code: string, locale: java.util.Locale): java.lang.String
+                    resolveCodeWithoutArguments(code: java.lang.String | string, locale: java.util.Locale): string
                     /**
                      * Resolves the given message code as key in the retrieved bundle files,
                      * using a cached MessageFormat instance per message code.
                      */
                     // @ts-ignore
-                    resolveCode(code: string, locale: java.util.Locale): java.text.MessageFormat
+                    resolveCode(code: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                     /**
                      * Get a PropertiesHolder that contains the actually visible properties
                      * for a Locale, after merging all specified resource bundles.
@@ -123,7 +123,7 @@ declare namespace org {
                      * @see #calculateFilenamesForLocale
                      */
                     // @ts-ignore
-                    calculateAllFilenames(basename: string, locale: java.util.Locale): java.util.List<java.lang.String>
+                    calculateAllFilenames(basename: java.lang.String | string, locale: java.util.Locale): Array<java.lang.String | string>
                     /**
                      * Calculate the filenames for the given bundle basename and Locale,
                      * appending language code, country code, and variant code.
@@ -135,7 +135,7 @@ declare namespace org {
                      * @return the List of filenames to check
                      */
                     // @ts-ignore
-                    calculateFilenamesForLocale(basename: string, locale: java.util.Locale): java.util.List<java.lang.String>
+                    calculateFilenamesForLocale(basename: java.lang.String | string, locale: java.util.Locale): Array<java.lang.String | string>
                     /**
                      * Get a PropertiesHolder for the given filename, either from the
                      * cache or freshly loaded.
@@ -143,7 +143,7 @@ declare namespace org {
                      * @return the current PropertiesHolder for the bundle
                      */
                     // @ts-ignore
-                    getProperties(filename: string): org.springframework.context.support.ReloadableResourceBundleMessageSource.PropertiesHolder
+                    getProperties(filename: java.lang.String | string): org.springframework.context.support.ReloadableResourceBundleMessageSource.PropertiesHolder
                     /**
                      * Refresh the PropertiesHolder for the given bundle filename.
                      * The holder can be {@code null} if not cached before, or a timed-out cache entry
@@ -152,7 +152,7 @@ declare namespace org {
                      * @param propHolder the current PropertiesHolder for the bundle
                      */
                     // @ts-ignore
-                    refreshProperties(filename: string, propHolder: org.springframework.context.support.ReloadableResourceBundleMessageSource.PropertiesHolder): org.springframework.context.support.ReloadableResourceBundleMessageSource.PropertiesHolder
+                    refreshProperties(filename: java.lang.String | string, propHolder: org.springframework.context.support.ReloadableResourceBundleMessageSource.PropertiesHolder): org.springframework.context.support.ReloadableResourceBundleMessageSource.PropertiesHolder
                     /**
                      * Load the properties from the given resource.
                      * @param resource the resource to load from
@@ -161,7 +161,7 @@ declare namespace org {
                      * @throws IOException if properties loading failed
                      */
                     // @ts-ignore
-                    loadProperties(resource: Resource, filename: string): java.util.Properties
+                    loadProperties(resource: Resource, filename: java.lang.String | string): java.util.Properties
                     /**
                      * Template method for creating a plain new {@link Properties} instance.
                      * The default implementation simply calls {@link Properties#Properties()}.
@@ -178,15 +178,15 @@ declare namespace org {
                      * Subsequent resolve calls will lead to reloading of the properties files.
                      */
                     // @ts-ignore
-                    clearCache(): void
+                    public clearCache(): void
                     /**
                      * Clear the resource bundle caches of this MessageSource and all its ancestors.
                      * @see #clearCache
                      */
                     // @ts-ignore
-                    clearCacheIncludingAncestors(): void
+                    public clearCacheIncludingAncestors(): void
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -42,7 +42,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class KeyboardFocusManager extends java.lang.Object implements java.awt.KeyEventDispatcher, java.awt.KeyEventPostProcessor {
+        abstract class KeyboardFocusManager extends java.lang.Object implements java.awt.KeyEventDispatcher, java.awt.KeyEventPostProcessor {
             /**
              * Initializes a KeyboardFocusManager.
              */
@@ -56,7 +56,7 @@ declare namespace java {
              * @see Component#getFocusTraversalKeys
              */
             // @ts-ignore
-            readonly FORWARD_TRAVERSAL_KEYS: number /*int*/
+            public static readonly FORWARD_TRAVERSAL_KEYS: number /*int*/
             /**
              * The identifier for the Backward focus traversal keys.
              * @see #setDefaultFocusTraversalKeys
@@ -65,7 +65,7 @@ declare namespace java {
              * @see Component#getFocusTraversalKeys
              */
             // @ts-ignore
-            readonly BACKWARD_TRAVERSAL_KEYS: number /*int*/
+            public static readonly BACKWARD_TRAVERSAL_KEYS: number /*int*/
             /**
              * The identifier for the Up Cycle focus traversal keys.
              * @see #setDefaultFocusTraversalKeys
@@ -74,7 +74,7 @@ declare namespace java {
              * @see Component#getFocusTraversalKeys
              */
             // @ts-ignore
-            readonly UP_CYCLE_TRAVERSAL_KEYS: number /*int*/
+            public static readonly UP_CYCLE_TRAVERSAL_KEYS: number /*int*/
             /**
              * The identifier for the Down Cycle focus traversal keys.
              * @see #setDefaultFocusTraversalKeys
@@ -83,7 +83,7 @@ declare namespace java {
              * @see Component#getFocusTraversalKeys
              */
             // @ts-ignore
-            readonly DOWN_CYCLE_TRAVERSAL_KEYS: number /*int*/
+            public static readonly DOWN_CYCLE_TRAVERSAL_KEYS: number /*int*/
             /**
              * Returns the current KeyboardFocusManager instance for the calling
              * thread's context.
@@ -91,7 +91,7 @@ declare namespace java {
              * @see #setCurrentKeyboardFocusManager
              */
             // @ts-ignore
-            getCurrentKeyboardFocusManager(): java.awt.KeyboardFocusManager
+            public static getCurrentKeyboardFocusManager(): java.awt.KeyboardFocusManager
             /**
              * Sets the current KeyboardFocusManager instance for the calling thread's
              * context. If null is specified, then the current KeyboardFocusManager
@@ -109,7 +109,7 @@ declare namespace java {
              *          to replace the current KeyboardFocusManager
              */
             // @ts-ignore
-            setCurrentKeyboardFocusManager(newManager: java.awt.KeyboardFocusManager): void
+            public static setCurrentKeyboardFocusManager(newManager: java.awt.KeyboardFocusManager): void
             /**
              * Returns the focus owner, if the focus owner is in the same context as
              * the calling thread. The focus owner is defined as the Component in an
@@ -124,7 +124,7 @@ declare namespace java {
              * @see #setGlobalFocusOwner
              */
             // @ts-ignore
-            getFocusOwner(): java.awt.Component
+            public getFocusOwner(): java.awt.Component
             /**
              * Returns the focus owner, even if the calling thread is in a different
              * context than the focus owner. The focus owner is defined as the
@@ -191,7 +191,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            clearFocusOwner(): void
+            public clearFocusOwner(): void
             /**
              * Clears the global focus owner at both the Java and native levels. If
              * there exists a focus owner, that Component will receive a permanent
@@ -216,7 +216,7 @@ declare namespace java {
              *          "replaceKeyboardFocusManager" permission
              */
             // @ts-ignore
-            clearGlobalFocusOwner(): void
+            public clearGlobalFocusOwner(): void
             /**
              * Returns the permanent focus owner, if the permanent focus owner is in
              * the same context as the calling thread. The permanent focus owner is
@@ -231,7 +231,7 @@ declare namespace java {
              * @see #setGlobalPermanentFocusOwner
              */
             // @ts-ignore
-            getPermanentFocusOwner(): java.awt.Component
+            public getPermanentFocusOwner(): java.awt.Component
             /**
              * Returns the permanent focus owner, even if the calling thread is in a
              * different context than the permanent focus owner. The permanent focus
@@ -289,7 +289,7 @@ declare namespace java {
              * @see #setGlobalFocusedWindow
              */
             // @ts-ignore
-            getFocusedWindow(): java.awt.Window
+            public getFocusedWindow(): java.awt.Window
             /**
              * Returns the focused Window, even if the calling thread is in a different
              * context than the focused Window. The focused Window is the Window that
@@ -342,7 +342,7 @@ declare namespace java {
              * @see #setGlobalActiveWindow
              */
             // @ts-ignore
-            getActiveWindow(): java.awt.Window
+            public getActiveWindow(): java.awt.Window
             /**
              * Returns the active Window, even if the calling thread is in a different
              * context than the active Window. Only a Frame or a Dialog can be the
@@ -396,7 +396,7 @@ declare namespace java {
              * @see Container#getFocusTraversalPolicy
              */
             // @ts-ignore
-            getDefaultFocusTraversalPolicy(): java.awt.FocusTraversalPolicy
+            public getDefaultFocusTraversalPolicy(): java.awt.FocusTraversalPolicy
             /**
              * Sets the default FocusTraversalPolicy. Top-level components
              * use this value on their creation to initialize their own focus traversal
@@ -412,7 +412,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setDefaultFocusTraversalPolicy(defaultPolicy: java.awt.FocusTraversalPolicy): void
+            public setDefaultFocusTraversalPolicy(defaultPolicy: java.awt.FocusTraversalPolicy): void
             /**
              * Sets the default focus traversal keys for a given traversal operation.
              * This traversal key {@code Set} will be in effect on all
@@ -498,7 +498,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setDefaultFocusTraversalKeys(id: number /*int*/, keystrokes: Array<java.awt.AWTKeyStroke>): void
+            public setDefaultFocusTraversalKeys(id: number /*int*/, keystrokes: java.util.Set<any> | Array<any>): void
             /**
              * Returns a Set of default focus traversal keys for a given traversal
              * operation. This traversal key Set will be in effect on all Windows that
@@ -525,7 +525,7 @@ declare namespace java {
              *          KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS
              */
             // @ts-ignore
-            getDefaultFocusTraversalKeys(id: number /*int*/): java.util.Set<java.awt.AWTKeyStroke>
+            public getDefaultFocusTraversalKeys(id: number /*int*/): Array<java.awt.AWTKeyStroke>
             /**
              * Returns the current focus cycle root, if the current focus cycle root is
              * in the same context as the calling thread. If the focus owner is itself
@@ -542,7 +542,7 @@ declare namespace java {
              * @see #setGlobalCurrentFocusCycleRoot
              */
             // @ts-ignore
-            getCurrentFocusCycleRoot(): java.awt.Container
+            public getCurrentFocusCycleRoot(): java.awt.Container
             /**
              * Returns the current focus cycle root, even if the calling thread is in a
              * different context than the current focus cycle root. If the focus owner
@@ -583,7 +583,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setGlobalCurrentFocusCycleRoot(newFocusCycleRoot: java.awt.Container): void
+            public setGlobalCurrentFocusCycleRoot(newFocusCycleRoot: java.awt.Container): void
             /**
              * Adds a PropertyChangeListener to the listener list. The listener is
              * registered for all bound properties of this class, including the
@@ -615,7 +615,7 @@ declare namespace java {
              * @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a PropertyChangeListener from the listener list. This method
              * should be used to remove the PropertyChangeListeners that were
@@ -628,7 +628,7 @@ declare namespace java {
              * @see #removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the property change listeners
              * registered on this keyboard focus manager.
@@ -642,7 +642,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
             /**
              * Adds a PropertyChangeListener to the listener list for a specific
              * property. The specified property may be user-defined, or one of the
@@ -675,7 +675,7 @@ declare namespace java {
              * @see #getPropertyChangeListeners(java.lang.String)
              */
             // @ts-ignore
-            addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a PropertyChangeListener from the listener list for a specific
              * property. This method should be used to remove PropertyChangeListeners
@@ -689,7 +689,7 @@ declare namespace java {
              * @see #removePropertyChangeListener(java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            removePropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the <code>PropertyChangeListener</code>s
              * associated with the named property.
@@ -701,7 +701,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(propertyName: string): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(propertyName: java.lang.String | string): java.beans.PropertyChangeListener[]
             /**
              * Fires a PropertyChangeEvent in response to a change in a bound property.
              * The event will be delivered to all registered PropertyChangeListeners.
@@ -711,7 +711,7 @@ declare namespace java {
              * @param newValue the property's new value
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Adds a VetoableChangeListener to the listener list. The listener is
              * registered for all vetoable properties of this class, including the
@@ -729,7 +729,7 @@ declare namespace java {
              * @see #addVetoableChangeListener(java.lang.String,java.beans.VetoableChangeListener)
              */
             // @ts-ignore
-            addVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
+            public addVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
             /**
              * Removes a VetoableChangeListener from the listener list. This method
              * should be used to remove the VetoableChangeListeners that were
@@ -742,7 +742,7 @@ declare namespace java {
              * @see #removeVetoableChangeListener(java.lang.String,java.beans.VetoableChangeListener)
              */
             // @ts-ignore
-            removeVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
+            public removeVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
             /**
              * Returns an array of all the vetoable change listeners
              * registered on this keyboard focus manager.
@@ -756,7 +756,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getVetoableChangeListeners(): java.beans.VetoableChangeListener[]
+            public getVetoableChangeListeners(): java.beans.VetoableChangeListener[]
             /**
              * Adds a VetoableChangeListener to the listener list for a specific
              * property. The specified property may be user-defined, or one of the
@@ -775,7 +775,7 @@ declare namespace java {
              * @see #getVetoableChangeListeners
              */
             // @ts-ignore
-            addVetoableChangeListener(propertyName: string, listener: java.beans.VetoableChangeListener): void
+            public addVetoableChangeListener(propertyName: java.lang.String | string, listener: java.beans.VetoableChangeListener): void
             /**
              * Removes a VetoableChangeListener from the listener list for a specific
              * property. This method should be used to remove VetoableChangeListeners
@@ -789,7 +789,7 @@ declare namespace java {
              * @see #removeVetoableChangeListener(java.beans.VetoableChangeListener)
              */
             // @ts-ignore
-            removeVetoableChangeListener(propertyName: string, listener: java.beans.VetoableChangeListener): void
+            public removeVetoableChangeListener(propertyName: java.lang.String | string, listener: java.beans.VetoableChangeListener): void
             /**
              * Returns an array of all the <code>VetoableChangeListener</code>s
              * associated with the named property.
@@ -802,7 +802,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getVetoableChangeListeners(propertyName: string): java.beans.VetoableChangeListener[]
+            public getVetoableChangeListeners(propertyName: java.lang.String | string): java.beans.VetoableChangeListener[]
             /**
              * Fires a PropertyChangeEvent in response to a change in a vetoable
              * property. The event will be delivered to all registered
@@ -819,7 +819,7 @@ declare namespace java {
              *          <code>PropertyVetoException</code>
              */
             // @ts-ignore
-            fireVetoableChange(propertyName: string, oldValue: any, newValue: any): void
+            fireVetoableChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Adds a KeyEventDispatcher to this KeyboardFocusManager's dispatcher
              * chain. This KeyboardFocusManager will request that each
@@ -842,7 +842,7 @@ declare namespace java {
              * @see #removeKeyEventDispatcher
              */
             // @ts-ignore
-            addKeyEventDispatcher(dispatcher: java.awt.KeyEventDispatcher): void
+            public addKeyEventDispatcher(dispatcher: java.awt.KeyEventDispatcher): void
             /**
              * Removes a KeyEventDispatcher which was previously added to this
              * KeyboardFocusManager's dispatcher chain. This KeyboardFocusManager
@@ -863,7 +863,7 @@ declare namespace java {
              * @see #addKeyEventDispatcher
              */
             // @ts-ignore
-            removeKeyEventDispatcher(dispatcher: java.awt.KeyEventDispatcher): void
+            public removeKeyEventDispatcher(dispatcher: java.awt.KeyEventDispatcher): void
             /**
              * Returns this KeyboardFocusManager's KeyEventDispatcher chain as a List.
              * The List will not include this KeyboardFocusManager unless it was
@@ -877,7 +877,7 @@ declare namespace java {
              * @see #removeKeyEventDispatcher
              */
             // @ts-ignore
-            getKeyEventDispatchers(): java.util.List<java.awt.KeyEventDispatcher>
+            getKeyEventDispatchers(): Array<java.awt.KeyEventDispatcher>
             /**
              * Adds a KeyEventPostProcessor to this KeyboardFocusManager's post-
              * processor chain. After a KeyEvent has been dispatched to and handled by
@@ -904,7 +904,7 @@ declare namespace java {
              * @see #removeKeyEventPostProcessor
              */
             // @ts-ignore
-            addKeyEventPostProcessor(processor: java.awt.KeyEventPostProcessor): void
+            public addKeyEventPostProcessor(processor: java.awt.KeyEventPostProcessor): void
             /**
              * Removes a previously added KeyEventPostProcessor from this
              * KeyboardFocusManager's post-processor chain. This KeyboardFocusManager
@@ -926,7 +926,7 @@ declare namespace java {
              * @see #addKeyEventPostProcessor
              */
             // @ts-ignore
-            removeKeyEventPostProcessor(processor: java.awt.KeyEventPostProcessor): void
+            public removeKeyEventPostProcessor(processor: java.awt.KeyEventPostProcessor): void
             /**
              * Returns this KeyboardFocusManager's KeyEventPostProcessor chain as a
              * List. The List will not include this KeyboardFocusManager unless it was
@@ -940,7 +940,7 @@ declare namespace java {
              * @see #removeKeyEventPostProcessor
              */
             // @ts-ignore
-            getKeyEventPostProcessors(): java.util.List<java.awt.KeyEventPostProcessor>
+            getKeyEventPostProcessors(): Array<java.awt.KeyEventPostProcessor>
             /**
              * This method is called by the AWT event dispatcher requesting that the
              * current KeyboardFocusManager dispatch the specified event on its behalf.
@@ -960,7 +960,7 @@ declare namespace java {
              * @see #dispatchKeyEvent
              */
             // @ts-ignore
-            abstract dispatchEvent(e: java.awt.AWTEvent): boolean
+            public abstract dispatchEvent(e: java.awt.AWTEvent): boolean
             /**
              * Redispatches an AWTEvent in such a way that the AWT event dispatcher
              * will not recursively request that the KeyboardFocusManager, or any
@@ -977,7 +977,7 @@ declare namespace java {
              * @see KeyEventDispatcher
              */
             // @ts-ignore
-            redispatchEvent(target: java.awt.Component, e: java.awt.AWTEvent): void
+            public redispatchEvent(target: java.awt.Component, e: java.awt.AWTEvent): void
             /**
              * Typically this method will be called by <code>dispatchEvent</code> if no
              * other KeyEventDispatcher in the dispatcher chain dispatched the
@@ -993,7 +993,7 @@ declare namespace java {
              * @see #dispatchEvent
              */
             // @ts-ignore
-            abstract dispatchKeyEvent(e: java.awt.event.KeyEvent): boolean
+            public abstract dispatchKeyEvent(e: java.awt.event.KeyEvent): boolean
             /**
              * This method will be called by <code>dispatchKeyEvent</code>.
              * By default, this method will handle any unconsumed KeyEvents that
@@ -1006,7 +1006,7 @@ declare namespace java {
              * @see MenuShortcut
              */
             // @ts-ignore
-            abstract postProcessKeyEvent(e: java.awt.event.KeyEvent): boolean
+            public abstract postProcessKeyEvent(e: java.awt.event.KeyEvent): boolean
             /**
              * This method initiates a focus traversal operation if and only if the
              * KeyEvent represents a focus traversal key for the specified
@@ -1020,7 +1020,7 @@ declare namespace java {
              * @param e the event that may represent a focus traversal key
              */
             // @ts-ignore
-            abstract processKeyEvent(focusedComponent: java.awt.Component, e: java.awt.event.KeyEvent): void
+            public abstract processKeyEvent(focusedComponent: java.awt.Component, e: java.awt.event.KeyEvent): void
             /**
              * Called by the AWT to notify the KeyboardFocusManager that it should
              * delay dispatching of KeyEvents until the specified Component becomes
@@ -1079,7 +1079,7 @@ declare namespace java {
              * @see FocusTraversalPolicy
              */
             // @ts-ignore
-            abstract focusNextComponent(aComponent: java.awt.Component): void
+            public abstract focusNextComponent(aComponent: java.awt.Component): void
             /**
              * Focuses the Component before aComponent, typically based on a
              * FocusTraversalPolicy.
@@ -1088,7 +1088,7 @@ declare namespace java {
              * @see FocusTraversalPolicy
              */
             // @ts-ignore
-            abstract focusPreviousComponent(aComponent: java.awt.Component): void
+            public abstract focusPreviousComponent(aComponent: java.awt.Component): void
             /**
              * Moves the focus up one focus traversal cycle. Typically, the focus owner
              * is set to aComponent's focus cycle root, and the current focus cycle
@@ -1100,7 +1100,7 @@ declare namespace java {
              *         traversal operation
              */
             // @ts-ignore
-            abstract upFocusCycle(aComponent: java.awt.Component): void
+            public abstract upFocusCycle(aComponent: java.awt.Component): void
             /**
              * Moves the focus down one focus traversal cycle. Typically, if
              * aContainer is a focus cycle root, then the focus owner is set to
@@ -1111,17 +1111,17 @@ declare namespace java {
              *         traversal operation
              */
             // @ts-ignore
-            abstract downFocusCycle(aContainer: java.awt.Container): void
+            public abstract downFocusCycle(aContainer: java.awt.Container): void
             /**
              * Focuses the Component after the current focus owner.
              */
             // @ts-ignore
-            focusNextComponent(): void
+            public focusNextComponent(): void
             /**
              * Focuses the Component before the current focus owner.
              */
             // @ts-ignore
-            focusPreviousComponent(): void
+            public focusPreviousComponent(): void
             /**
              * Moves the focus up one focus traversal cycle from the current focus
              * owner. Typically, the new focus owner is set to the current focus
@@ -1132,7 +1132,7 @@ declare namespace java {
              * current focus cycle root is unchanged.
              */
             // @ts-ignore
-            upFocusCycle(): void
+            public upFocusCycle(): void
             /**
              * Moves the focus down one focus traversal cycle from the current focus
              * owner, if and only if the current focus owner is a Container that is a
@@ -1143,7 +1143,7 @@ declare namespace java {
              * occurs.
              */
             // @ts-ignore
-            downFocusCycle(): void
+            public downFocusCycle(): void
         }
     }
 }

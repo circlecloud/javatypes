@@ -16,7 +16,7 @@ declare namespace org {
                              * @return The builder
                              */
                             // @ts-ignore
-                            builder(): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<?>
+                            builder(): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<any>
                             /**
                              * Gets the type of the used {@link FilteredTriggerConfiguration}.
                              * @return The configuration type

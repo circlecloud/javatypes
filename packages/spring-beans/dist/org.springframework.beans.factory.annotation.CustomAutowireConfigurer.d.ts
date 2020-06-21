@@ -25,11 +25,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         /**
                          * Register custom qualifier annotation types to be considered
                          * when autowiring beans. Each element of the provided set may
@@ -41,9 +41,9 @@ declare namespace org {
                          * @param customQualifierTypes the custom types to register
                          */
                         // @ts-ignore
-                        setCustomQualifierTypes(customQualifierTypes: Array<any>): void
+                        public setCustomQualifierTypes(customQualifierTypes: java.util.Set<any> | Array<any>): void
                         // @ts-ignore
-                        postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
+                        public postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
                     }
                 }
             }

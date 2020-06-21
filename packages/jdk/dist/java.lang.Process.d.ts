@@ -40,7 +40,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Process extends java.lang.Object {
+        abstract class Process extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -58,7 +58,7 @@ declare namespace java {
              *          subprocess
              */
             // @ts-ignore
-            abstract getOutputStream(): java.io.OutputStream
+            public abstract getOutputStream(): java.io.OutputStream
             /**
              * Returns the input stream connected to the normal output of the
              * subprocess.  The stream obtains data piped from the standard
@@ -80,7 +80,7 @@ declare namespace java {
              *          subprocess
              */
             // @ts-ignore
-            abstract getInputStream(): java.io.InputStream
+            public abstract getInputStream(): java.io.InputStream
             /**
              * Returns the input stream connected to the error output of the
              * subprocess.  The stream obtains data piped from the error output
@@ -98,7 +98,7 @@ declare namespace java {
              *          the subprocess
              */
             // @ts-ignore
-            abstract getErrorStream(): java.io.InputStream
+            public abstract getErrorStream(): java.io.InputStream
             /**
              * Causes the current thread to wait, if necessary, until the
              * process represented by this {@code Process} object has
@@ -115,7 +115,7 @@ declare namespace java {
              *          an {@link InterruptedException} is thrown.
              */
             // @ts-ignore
-            abstract waitFor(): int
+            public abstract waitFor(): number /*int*/
             /**
              * Causes the current thread to wait, if necessary, until the
              * subprocess represented by this {@code Process} object has
@@ -138,7 +138,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            waitFor(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+            public waitFor(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
             /**
              * Returns the exit value for the subprocess.
              * @return the exit value of the subprocess represented by this
@@ -148,14 +148,14 @@ declare namespace java {
              *          by this {#code Process} object has not yet terminated
              */
             // @ts-ignore
-            abstract exitValue(): int
+            public abstract exitValue(): number /*int*/
             /**
              * Kills the subprocess. Whether the subprocess represented by this
              * {@code Process} object is forcibly terminated or not is
              * implementation dependent.
              */
             // @ts-ignore
-            abstract destroy(): void
+            public abstract destroy(): void
             /**
              * Kills the subprocess. The subprocess represented by this
              * {@code Process} object is forcibly terminated.
@@ -174,7 +174,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            destroyForcibly(): java.lang.Process
+            public destroyForcibly(): java.lang.Process
             /**
              * Tests whether the subprocess represented by this {@code Process} is
              * alive.
@@ -183,7 +183,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            isAlive(): boolean
+            public isAlive(): boolean
         }
     }
 }

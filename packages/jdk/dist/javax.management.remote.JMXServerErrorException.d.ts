@@ -21,9 +21,9 @@ declare namespace javax {
                  *  connectors will never do so.
                  */
                 // @ts-ignore
-                constructor(s: string, err: java.lang.Error)
+                constructor(s: java.lang.String | string, err: java.lang.Error)
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

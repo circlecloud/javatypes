@@ -18,19 +18,19 @@ declare namespace javax {
                  * XML 1.0 recommendation
                  */
                 // @ts-ignore
-                
+                readonly WARNING: number /*int*/
                 /**
                  * Conditions that correspond to the definition of "error" in section
                  * 1.2 of the W3C XML 1.0 Recommendation
                  */
                 // @ts-ignore
-                
+                readonly ERROR: number /*int*/
                 /**
                  * Conditions that correspond to the definition of "fatal error" in section
                  * 1.2 of the W3C XML 1.0 Recommendation
                  */
                 // @ts-ignore
-                
+                readonly FATAL_ERROR: number /*int*/
                 /**
                  * Retrieve the severity code for this warning/error.
                  * <p>
@@ -39,20 +39,20 @@ declare namespace javax {
                  * @return the severity code for this warning/error
                  */
                 // @ts-ignore
-                getSeverity(): int
+                getSeverity(): number /*int*/
                 /**
                  * Retrieve the text message for this warning/error.
                  * @return the text message for this warning/error or null if one wasn't set
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 /**
                  * Retrieve the linked exception for this warning/error.
                  * @return the linked exception for this warning/error or null if one
                  *          wasn't set
                  */
                 // @ts-ignore
-                getLinkedException(): java.lang.Throwable
+                getLinkedException(): Error
                 /**
                  * Retrieve the locator for this warning/error.
                  * @return the locator that indicates where the warning/error occurred

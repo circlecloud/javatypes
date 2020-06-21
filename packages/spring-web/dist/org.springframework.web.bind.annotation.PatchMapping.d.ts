@@ -17,7 +17,7 @@ declare namespace org {
                      * @see RequestMapping
                      */
                     // @ts-ignore
-                    class PatchMapping implements java.lang.annotation.Annotation {
+                    abstract class PatchMapping implements java.lang.annotation.Annotation {
                     }
                 }
             }

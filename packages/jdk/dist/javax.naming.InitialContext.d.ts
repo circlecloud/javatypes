@@ -136,7 +136,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            constructor(environment: java.util.Hashtable<any, ?>)
+            constructor(environment: java.util.Hashtable<any, any>)
             /**
              * The environment associated with this InitialContext.
              * It is initialized to null and is updated by the constructor
@@ -146,7 +146,7 @@ declare namespace javax {
              * @see #getEnvironment
              */
             // @ts-ignore
-            myProps: java.util.Hashtable<java.lang.Object, java.lang.Object>
+            myProps: java.util.Hashtable<java.lang.Object | any, java.lang.Object | any>
             /**
              * Field holding the result of calling NamingManager.getInitialContext().
              * It is set by getDefaultInitCtx() the first time getDefaultInitCtx()
@@ -176,7 +176,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            init(environment: java.util.Hashtable<any, ?>): void
+            init(environment: java.util.Hashtable<any, any>): void
             /**
              * A static method to retrieve the named object.
              * This is a shortcut method equivalent to invoking:
@@ -199,7 +199,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            doLookup<T>(name: javax.naming.Name): T
+            public static doLookup<T>(name: javax.naming.Name): T
             /**
              * A static method to retrieve the named object.
              * See {@link #doLookup(Name)} for details.
@@ -211,7 +211,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            doLookup<T>(name: string): T
+            public static doLookup<T>(name: java.lang.String | string): T
             /**
              * Retrieves the initial context by calling
              * <code>NamingManager.getInitialContext()</code>
@@ -240,7 +240,7 @@ declare namespace javax {
              * @see javax.naming.spi.NamingManager#getURLContext
              */
             // @ts-ignore
-            getURLOrDefaultInitCtx(name: string): javax.naming.Context
+            getURLOrDefaultInitCtx(name: java.lang.String | string): javax.naming.Context
             /**
              * Retrieves a context for resolving <code>name</code>.
              * If the first component of <code>name</code> name is a URL string,
@@ -284,49 +284,49 @@ declare namespace javax {
             // @ts-ignore
             getURLOrDefaultInitCtx(name: javax.naming.Name): javax.naming.Context
             // @ts-ignore
-            lookup(name: string): java.lang.Object
+            public lookup(name: java.lang.String | string): any
             // @ts-ignore
-            lookup(name: javax.naming.Name): java.lang.Object
+            public lookup(name: javax.naming.Name): any
             // @ts-ignore
-            bind(name: string, obj: any): void
+            public bind(name: java.lang.String | string, obj: java.lang.Object | any): void
             // @ts-ignore
-            bind(name: javax.naming.Name, obj: any): void
+            public bind(name: javax.naming.Name, obj: java.lang.Object | any): void
             // @ts-ignore
-            rebind(name: string, obj: any): void
+            public rebind(name: java.lang.String | string, obj: java.lang.Object | any): void
             // @ts-ignore
-            rebind(name: javax.naming.Name, obj: any): void
+            public rebind(name: javax.naming.Name, obj: java.lang.Object | any): void
             // @ts-ignore
-            unbind(name: string): void
+            public unbind(name: java.lang.String | string): void
             // @ts-ignore
-            unbind(name: javax.naming.Name): void
+            public unbind(name: javax.naming.Name): void
             // @ts-ignore
-            rename(oldName: string, newName: string): void
+            public rename(oldName: java.lang.String | string, newName: java.lang.String | string): void
             // @ts-ignore
-            rename(oldName: javax.naming.Name, newName: javax.naming.Name): void
+            public rename(oldName: javax.naming.Name, newName: javax.naming.Name): void
             // @ts-ignore
-            list(name: string): javax.naming.NamingEnumeration<javax.naming.NameClassPair>
+            public list(name: java.lang.String | string): javax.naming.NamingEnumeration<javax.naming.NameClassPair>
             // @ts-ignore
-            list(name: javax.naming.Name): javax.naming.NamingEnumeration<javax.naming.NameClassPair>
+            public list(name: javax.naming.Name): javax.naming.NamingEnumeration<javax.naming.NameClassPair>
             // @ts-ignore
-            listBindings(name: string): javax.naming.NamingEnumeration<javax.naming.Binding>
+            public listBindings(name: java.lang.String | string): javax.naming.NamingEnumeration<javax.naming.Binding>
             // @ts-ignore
-            listBindings(name: javax.naming.Name): javax.naming.NamingEnumeration<javax.naming.Binding>
+            public listBindings(name: javax.naming.Name): javax.naming.NamingEnumeration<javax.naming.Binding>
             // @ts-ignore
-            destroySubcontext(name: string): void
+            public destroySubcontext(name: java.lang.String | string): void
             // @ts-ignore
-            destroySubcontext(name: javax.naming.Name): void
+            public destroySubcontext(name: javax.naming.Name): void
             // @ts-ignore
-            createSubcontext(name: string): javax.naming.Context
+            public createSubcontext(name: java.lang.String | string): javax.naming.Context
             // @ts-ignore
-            createSubcontext(name: javax.naming.Name): javax.naming.Context
+            public createSubcontext(name: javax.naming.Name): javax.naming.Context
             // @ts-ignore
-            lookupLink(name: string): java.lang.Object
+            public lookupLink(name: java.lang.String | string): any
             // @ts-ignore
-            lookupLink(name: javax.naming.Name): java.lang.Object
+            public lookupLink(name: javax.naming.Name): any
             // @ts-ignore
-            getNameParser(name: string): javax.naming.NameParser
+            public getNameParser(name: java.lang.String | string): javax.naming.NameParser
             // @ts-ignore
-            getNameParser(name: javax.naming.Name): javax.naming.NameParser
+            public getNameParser(name: javax.naming.Name): javax.naming.NameParser
             /**
              * Composes the name of this context with a name relative to
              * this context.
@@ -335,7 +335,7 @@ declare namespace javax {
              * <tt>prefix</tt> parameter must be an empty name (<tt>""</tt>).
              */
             // @ts-ignore
-            composeName(name: string, prefix: string): java.lang.String
+            public composeName(name: java.lang.String | string, prefix: java.lang.String | string): string
             /**
              * Composes the name of this context with a name relative to
              * this context.
@@ -344,17 +344,17 @@ declare namespace javax {
              * <tt>prefix</tt> parameter must be an empty name.
              */
             // @ts-ignore
-            composeName(name: javax.naming.Name, prefix: javax.naming.Name): javax.naming.Name
+            public composeName(name: javax.naming.Name, prefix: javax.naming.Name): javax.naming.Name
             // @ts-ignore
-            addToEnvironment(propName: string, propVal: any): java.lang.Object
+            public addToEnvironment(propName: java.lang.String | string, propVal: java.lang.Object | any): any
             // @ts-ignore
-            removeFromEnvironment(propName: string): java.lang.Object
+            public removeFromEnvironment(propName: java.lang.String | string): any
             // @ts-ignore
-            getEnvironment(): java.util.Hashtable<?, ?>
+            public getEnvironment(): java.util.Hashtable<any, any>
             // @ts-ignore
-            close(): void
+            public close(): void
             // @ts-ignore
-            getNameInNamespace(): java.lang.String
+            public getNameInNamespace(): string
         }
     }
 }

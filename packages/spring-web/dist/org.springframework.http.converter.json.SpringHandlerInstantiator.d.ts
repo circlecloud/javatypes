@@ -27,45 +27,45 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanFactory: AutowireCapableBeanFactory)
                         // @ts-ignore
-                        deserializerInstance(config: DeserializationConfig, annotated: Annotated, implClass: java.lang.Class<any>): <any>
+                        public deserializerInstance(config: DeserializationConfig, annotated: Annotated, implClass: java.lang.Class<any>): object
                         // @ts-ignore
-                        keyDeserializerInstance(config: DeserializationConfig, annotated: Annotated, implClass: java.lang.Class<any>): KeyDeserializer
+                        public keyDeserializerInstance(config: DeserializationConfig, annotated: Annotated, implClass: java.lang.Class<any>): KeyDeserializer
                         // @ts-ignore
-                        serializerInstance(config: SerializationConfig, annotated: Annotated, implClass: java.lang.Class<any>): <any>
+                        public serializerInstance(config: SerializationConfig, annotated: Annotated, implClass: java.lang.Class<any>): object
                         // @ts-ignore
-                        typeResolverBuilderInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): <any>
+                        public typeResolverBuilderInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): object
                         // @ts-ignore
-                        typeIdResolverInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): TypeIdResolver
+                        public typeIdResolverInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): TypeIdResolver
                         /**
                          * @since 4.3
                          */
                         // @ts-ignore
-                        valueInstantiatorInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): ValueInstantiator
+                        public valueInstantiatorInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): ValueInstantiator
                         /**
                          * @since 4.3
                          */
                         // @ts-ignore
-                        objectIdGeneratorInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): <any>
+                        public objectIdGeneratorInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): object
                         /**
                          * @since 4.3
                          */
                         // @ts-ignore
-                        resolverIdGeneratorInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): ObjectIdResolver
+                        public resolverIdGeneratorInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): ObjectIdResolver
                         /**
                          * @since 4.3
                          */
                         // @ts-ignore
-                        namingStrategyInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): PropertyNamingStrategy
+                        public namingStrategyInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): PropertyNamingStrategy
                         /**
                          * @since 4.3
                          */
                         // @ts-ignore
-                        converterInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): <any>
+                        public converterInstance(config: object, annotated: Annotated, implClass: java.lang.Class<any>): object
                         /**
                          * @since 4.3
                          */
                         // @ts-ignore
-                        virtualPropertyWriterInstance(config: object, implClass: java.lang.Class<any>): VirtualBeanPropertyWriter
+                        public virtualPropertyWriterInstance(config: object, implClass: java.lang.Class<any>): VirtualBeanPropertyWriter
                     }
                 }
             }

@@ -19,7 +19,7 @@ declare namespace javax {
              * @author Kara Kytle
              */
             // @ts-ignore
-            class Instrument extends javax.sound.midi.SoundbankResource {
+            abstract class Instrument extends javax.sound.midi.SoundbankResource {
                 /**
                  * Constructs a new MIDI instrument from the specified <code>Patch</code>.
                  * When a subsequent request is made to load the
@@ -33,14 +33,14 @@ declare namespace javax {
                  * @see Synthesizer#loadInstrument(Instrument)
                  */
                 // @ts-ignore
-                constructor(soundbank: javax.sound.midi.Soundbank, patch: javax.sound.midi.Patch, name: string, dataClass: java.lang.Class<any>)
+                constructor(soundbank: javax.sound.midi.Soundbank, patch: javax.sound.midi.Patch, name: java.lang.String | string, dataClass: java.lang.Class<any>)
                 /**
                  * Obtains the <code>Patch</code> object that indicates the bank and program
                  * numbers where this instrument is to be stored in the synthesizer.
                  * @return this instrument's patch
                  */
                 // @ts-ignore
-                getPatch(): javax.sound.midi.Patch
+                public getPatch(): javax.sound.midi.Patch
             }
         }
     }

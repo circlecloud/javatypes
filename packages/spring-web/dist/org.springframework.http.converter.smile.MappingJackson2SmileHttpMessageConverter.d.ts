@@ -36,7 +36,7 @@ declare namespace org {
                          * The {@code ObjectMapper} must be configured with a {@code SmileFactory} instance.
                          */
                         // @ts-ignore
-                        setObjectMapper(objectMapper: ObjectMapper): void
+                        public setObjectMapper(objectMapper: ObjectMapper): void
                     }
                 }
             }

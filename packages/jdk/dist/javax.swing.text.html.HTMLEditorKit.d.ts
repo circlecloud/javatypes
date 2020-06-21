@@ -129,69 +129,69 @@ declare namespace javax {
                      * up the tag views.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CSS: string
+                    public static readonly DEFAULT_CSS: java.lang.String | string
                     /**
                      * The bold action identifier
                      */
                     // @ts-ignore
-                    readonly BOLD_ACTION: string
+                    public static readonly BOLD_ACTION: java.lang.String | string
                     /**
                      * The italic action identifier
                      */
                     // @ts-ignore
-                    readonly ITALIC_ACTION: string
+                    public static readonly ITALIC_ACTION: java.lang.String | string
                     /**
                      * The paragraph left indent action identifier
                      */
                     // @ts-ignore
-                    readonly PARA_INDENT_LEFT: string
+                    public static readonly PARA_INDENT_LEFT: java.lang.String | string
                     /**
                      * The paragraph right indent action identifier
                      */
                     // @ts-ignore
-                    readonly PARA_INDENT_RIGHT: string
+                    public static readonly PARA_INDENT_RIGHT: java.lang.String | string
                     /**
                      * The  font size increase to next value action identifier
                      */
                     // @ts-ignore
-                    readonly FONT_CHANGE_BIGGER: string
+                    public static readonly FONT_CHANGE_BIGGER: java.lang.String | string
                     /**
                      * The font size decrease to next value action identifier
                      */
                     // @ts-ignore
-                    readonly FONT_CHANGE_SMALLER: string
+                    public static readonly FONT_CHANGE_SMALLER: java.lang.String | string
                     /**
                      * The Color choice action identifier
                      * The color is passed as an argument
                      */
                     // @ts-ignore
-                    readonly COLOR_ACTION: string
+                    public static readonly COLOR_ACTION: java.lang.String | string
                     /**
                      * The logical style choice action identifier
                      * The logical style is passed in as an argument
                      */
                     // @ts-ignore
-                    readonly LOGICAL_STYLE_ACTION: string
+                    public static readonly LOGICAL_STYLE_ACTION: java.lang.String | string
                     /**
                      * Align images at the top.
                      */
                     // @ts-ignore
-                    readonly IMG_ALIGN_TOP: string
+                    public static readonly IMG_ALIGN_TOP: java.lang.String | string
                     /**
                      * Align images in the middle.
                      */
                     // @ts-ignore
-                    readonly IMG_ALIGN_MIDDLE: string
+                    public static readonly IMG_ALIGN_MIDDLE: java.lang.String | string
                     /**
                      * Align images at the bottom.
                      */
                     // @ts-ignore
-                    readonly IMG_ALIGN_BOTTOM: string
+                    public static readonly IMG_ALIGN_BOTTOM: java.lang.String | string
                     /**
                      * Align images at the border.
                      */
                     // @ts-ignore
-                    readonly IMG_BORDER: string
+                    public static readonly IMG_BORDER: java.lang.String | string
                     /**
                      * Get the MIME type of the data that this
                      * kit represents support for.  This kit supports
@@ -199,7 +199,7 @@ declare namespace javax {
                      * @return the type
                      */
                     // @ts-ignore
-                    getContentType(): java.lang.String
+                    public getContentType(): string
                     /**
                      * Fetch a factory that is suitable for producing
                      * views of any models that are produced by this
@@ -207,14 +207,14 @@ declare namespace javax {
                      * @return the factory
                      */
                     // @ts-ignore
-                    getViewFactory(): javax.swing.text.ViewFactory
+                    public getViewFactory(): javax.swing.text.ViewFactory
                     /**
                      * Create an uninitialized text storage model
                      * that is appropriate for this type of editor.
                      * @return the model
                      */
                     // @ts-ignore
-                    createDefaultDocument(): javax.swing.text.Document
+                    public createDefaultDocument(): javax.swing.text.Document
                     /**
                      * Inserts content from the given stream. If <code>doc</code> is
                      * an instance of HTMLDocument, this will read
@@ -233,7 +233,7 @@ declare namespace javax {
                      *             if pos is invalid
                      */
                     // @ts-ignore
-                    read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
+                    public read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
                     /**
                      * Inserts HTML into an existing document.
                      * @param doc       the document to insert into
@@ -248,7 +248,7 @@ declare namespace javax {
                      *             if pos is invalid
                      */
                     // @ts-ignore
-                    insertHTML(doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, html: string, popDepth: number /*int*/, pushDepth: number /*int*/, insertTag: javax.swing.text.html.HTML.Tag): void
+                    public insertHTML(doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, html: java.lang.String | string, popDepth: number /*int*/, pushDepth: number /*int*/, insertTag: javax.swing.text.html.HTML.Tag): void
                     /**
                      * Write content from a document to the given stream
                      * in a format appropriate for this kind of content handler.
@@ -262,14 +262,14 @@ declare namespace javax {
                      *    location within the document
                      */
                     // @ts-ignore
-                    write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                    public write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
                     /**
                      * Called when the kit is being installed into the
                      * a JEditorPane.
                      * @param c the JEditorPane
                      */
                     // @ts-ignore
-                    install(c: javax.swing.JEditorPane): void
+                    public install(c: javax.swing.JEditorPane): void
                     /**
                      * Called when the kit is being removed from the
                      * JEditorPane.  This is used to unregister any
@@ -277,7 +277,7 @@ declare namespace javax {
                      * @param c the JEditorPane
                      */
                     // @ts-ignore
-                    deinstall(c: javax.swing.JEditorPane): void
+                    public deinstall(c: javax.swing.JEditorPane): void
                     /**
                      * Set the set of styles to be used to render the various
                      * HTML elements.  These styles are specified in terms of
@@ -289,7 +289,7 @@ declare namespace javax {
                      * if desired.
                      */
                     // @ts-ignore
-                    setStyleSheet(s: javax.swing.text.html.StyleSheet): void
+                    public setStyleSheet(s: javax.swing.text.html.StyleSheet): void
                     /**
                      * Get the set of styles currently being used to render the
                      * HTML elements.  By default the resource specified by
@@ -297,7 +297,7 @@ declare namespace javax {
                      * instances.
                      */
                     // @ts-ignore
-                    getStyleSheet(): javax.swing.text.html.StyleSheet
+                    public getStyleSheet(): javax.swing.text.html.StyleSheet
                     /**
                      * Fetches the command list for the editor.  This is
                      * the list of commands supported by the superclass
@@ -306,7 +306,7 @@ declare namespace javax {
                      * @return the command list
                      */
                     // @ts-ignore
-                    getActions(): javax.swing.Action[]
+                    public getActions(): javax.swing.Action[]
                     /**
                      * Copies the key/values in <code>element</code>s AttributeSet into
                      * <code>set</code>. This does not copy component, icon, or element
@@ -323,31 +323,31 @@ declare namespace javax {
                      * @return the attribute set
                      */
                     // @ts-ignore
-                    getInputAttributes(): javax.swing.text.MutableAttributeSet
+                    public getInputAttributes(): javax.swing.text.MutableAttributeSet
                     /**
                      * Sets the default cursor.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setDefaultCursor(cursor: java.awt.Cursor): void
+                    public setDefaultCursor(cursor: java.awt.Cursor): void
                     /**
                      * Returns the default cursor.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getDefaultCursor(): java.awt.Cursor
+                    public getDefaultCursor(): java.awt.Cursor
                     /**
                      * Sets the cursor to use over links.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setLinkCursor(cursor: java.awt.Cursor): void
+                    public setLinkCursor(cursor: java.awt.Cursor): void
                     /**
                      * Returns the cursor to use over hyper links.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getLinkCursor(): java.awt.Cursor
+                    public getLinkCursor(): java.awt.Cursor
                     /**
                      * Indicates whether an html form submission is processed automatically
                      * or only <code>FormSubmitEvent</code> is fired.
@@ -357,7 +357,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    isAutoFormSubmission(): boolean
+                    public isAutoFormSubmission(): boolean
                     /**
                      * Specifies if an html form submission is processed
                      * automatically or only <code>FormSubmitEvent</code> is fired.
@@ -367,13 +367,13 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    setAutoFormSubmission(isAuto: boolean): void
+                    public setAutoFormSubmission(isAuto: boolean): void
                     /**
                      * Creates a copy of the editor kit.
                      * @return the copy
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                     /**
                      * Fetch the parser to use for reading HTML streams.
                      * This can be reimplemented to provide a different
@@ -390,7 +390,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getAccessibleContext(): javax.accessibility.AccessibleContext
+                    public getAccessibleContext(): javax.accessibility.AccessibleContext
                 }
             }
         }

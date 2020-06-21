@@ -21,21 +21,21 @@ declare namespace org {
                          * @param executor the executor to use
                          */
                         // @ts-ignore
-                        setExecutor(executor: java.util.concurrent.Executor): void
+                        public setExecutor(executor: java.util.concurrent.Executor): void
                         /**
                          * Configure the {@link ByteBufferPool} to use.
                          * <p>By default, initialized with a {@link MappedByteBufferPool}.
                          * @param byteBufferPool the {#link ByteBuffer} pool to use
                          */
                         // @ts-ignore
-                        setByteBufferPool(byteBufferPool: ByteBufferPool): void
+                        public setByteBufferPool(byteBufferPool: ByteBufferPool): void
                         /**
                          * Configure the {@link Scheduler} to use.
                          * <p>By default, initialized with a {@link ScheduledExecutorScheduler}.
                          * @param scheduler the {#link Scheduler} to use
                          */
                         // @ts-ignore
-                        setScheduler(scheduler: Scheduler): void
+                        public setScheduler(scheduler: Scheduler): void
                         /**
                          * Configure the thread prefix to initialize {@link QueuedThreadPool} executor with. This
                          * is used only when a {@link Executor} instance isn't
@@ -44,26 +44,26 @@ declare namespace org {
                          * @param threadPrefix the thread prefix to use
                          */
                         // @ts-ignore
-                        setThreadPrefix(threadPrefix: string): void
+                        public setThreadPrefix(threadPrefix: java.lang.String | string): void
                         /**
                          * Return the configured {@link Executor}.
                          */
                         // @ts-ignore
-                        getExecutor(): java.util.concurrent.Executor
+                        public getExecutor(): java.util.concurrent.Executor
                         /**
                          * Return the configured {@link ByteBufferPool}.
                          */
                         // @ts-ignore
-                        getByteBufferPool(): ByteBufferPool
+                        public getByteBufferPool(): ByteBufferPool
                         /**
                          * Return the configured {@link Scheduler}.
                          */
                         // @ts-ignore
-                        getScheduler(): Scheduler
+                        public getScheduler(): Scheduler
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        destroy(): void
+                        public destroy(): void
                     }
                 }
             }

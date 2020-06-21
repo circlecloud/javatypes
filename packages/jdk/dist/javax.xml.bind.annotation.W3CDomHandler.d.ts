@@ -26,15 +26,15 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(builder: javax.xml.parsers.DocumentBuilder)
                     // @ts-ignore
-                    getBuilder(): javax.xml.parsers.DocumentBuilder
+                    public getBuilder(): javax.xml.parsers.DocumentBuilder
                     // @ts-ignore
-                    setBuilder(builder: javax.xml.parsers.DocumentBuilder): void
+                    public setBuilder(builder: javax.xml.parsers.DocumentBuilder): void
                     // @ts-ignore
-                    createUnmarshaller(errorHandler: javax.xml.bind.ValidationEventHandler): javax.xml.transform.dom.DOMResult
+                    public createUnmarshaller(errorHandler: javax.xml.bind.ValidationEventHandler): javax.xml.transform.dom.DOMResult
                     // @ts-ignore
-                    getElement(r: javax.xml.transform.dom.DOMResult): org.w3c.dom.Element
+                    public getElement(r: javax.xml.transform.dom.DOMResult): org.w3c.dom.Element
                     // @ts-ignore
-                    marshal(element: org.w3c.dom.Element, errorHandler: javax.xml.bind.ValidationEventHandler): javax.xml.transform.Source
+                    public marshal(element: org.w3c.dom.Element, errorHandler: javax.xml.bind.ValidationEventHandler): javax.xml.transform.Source
                 }
             }
         }

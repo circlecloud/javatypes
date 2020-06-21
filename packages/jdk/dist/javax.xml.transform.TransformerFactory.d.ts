@@ -15,7 +15,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class TransformerFactory extends java.lang.Object {
+            abstract class TransformerFactory extends java.lang.Object {
                 /**
                  * Default constructor is protected on purpose.
                  */
@@ -69,7 +69,7 @@ declare namespace javax {
                  *  the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.transform.TransformerFactory
+                public static newInstance(): javax.xml.transform.TransformerFactory
                 /**
                  * <p>Obtain a new instance of a <code>TransformerFactory</code> from factory class name.
                  * This function is useful when there are multiple providers in the classpath.
@@ -97,7 +97,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                newInstance(factoryClassName: string, classLoader: java.lang.ClassLoader): javax.xml.transform.TransformerFactory
+                public static newInstance(factoryClassName: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.transform.TransformerFactory
                 /**
                  * <p>Process the <code>Source</code> into a <code>Transformer</code>
                  * <code>Object</code>.  The <code>Source</code> is an XSLT document that
@@ -123,7 +123,7 @@ declare namespace javax {
                  *    XSL Transformations (XSLT) Version 1.0</a>
                  */
                 // @ts-ignore
-                abstract newTransformer(source: javax.xml.transform.Source): javax.xml.transform.Transformer
+                public abstract newTransformer(source: javax.xml.transform.Source): javax.xml.transform.Transformer
                 /**
                  * <p>Create a new <code>Transformer</code> that performs a copy
                  * of the <code>Source</code> to the <code>Result</code>.
@@ -134,7 +134,7 @@ declare namespace javax {
                  *    possible to create a <code>Transformer</code> instance.
                  */
                 // @ts-ignore
-                abstract newTransformer(): javax.xml.transform.Transformer
+                public abstract newTransformer(): javax.xml.transform.Transformer
                 /**
                  * Process the Source into a Templates object, which is a
                  * a compiled representation of the source. This Templates object
@@ -149,7 +149,7 @@ declare namespace javax {
                  *    construct the Templates object fails.
                  */
                 // @ts-ignore
-                abstract newTemplates(source: javax.xml.transform.Source): javax.xml.transform.Templates
+                public abstract newTemplates(source: javax.xml.transform.Source): javax.xml.transform.Templates
                 /**
                  * <p>Get the stylesheet specification(s) associated with the
                  * XML <code>Source</code> document via the
@@ -172,7 +172,7 @@ declare namespace javax {
                  *    Associating Style Sheets with XML documents Version 1.0</a>
                  */
                 // @ts-ignore
-                abstract getAssociatedStylesheet(source: javax.xml.transform.Source, media: string, title: string, charset: string): javax.xml.transform.Source
+                public abstract getAssociatedStylesheet(source: javax.xml.transform.Source, media: java.lang.String | string, title: java.lang.String | string, charset: java.lang.String | string): javax.xml.transform.Source
                 /**
                  * Set an object that is used by default during the transformation
                  * to resolve URIs used in document(), xsl:import, or xsl:include.
@@ -180,14 +180,14 @@ declare namespace javax {
                  *  or null.
                  */
                 // @ts-ignore
-                abstract setURIResolver(resolver: javax.xml.transform.URIResolver): void
+                public abstract setURIResolver(resolver: javax.xml.transform.URIResolver): void
                 /**
                  * Get the object that is used by default during the transformation
                  * to resolve URIs used in document(), xsl:import, or xsl:include.
                  * @return The URIResolver that was set with setURIResolver.
                  */
                 // @ts-ignore
-                abstract getURIResolver(): javax.xml.transform.URIResolver
+                public abstract getURIResolver(): javax.xml.transform.URIResolver
                 /**
                  * <p>Set a feature for this <code>TransformerFactory</code> and <code>Transformer</code>s
                  * or <code>Template</code>s created by this factory.</p>
@@ -221,7 +221,7 @@ declare namespace javax {
                  * @throws NullPointerException If the <code>name</code> parameter is null.
                  */
                 // @ts-ignore
-                abstract setFeature(name: string, value: boolean): void
+                public abstract setFeature(name: java.lang.String | string, value: boolean): void
                 /**
                  * Look up the value of a feature.
                  * <p>
@@ -236,7 +236,7 @@ declare namespace javax {
                  * @throws NullPointerException If the <code>name</code> parameter is null.
                  */
                 // @ts-ignore
-                abstract getFeature(name: string): boolean
+                public abstract getFeature(name: java.lang.String | string): boolean
                 /**
                  * Allows the user to set specific attributes on the underlying
                  * implementation.  An attribute in this context is defined to
@@ -289,7 +289,7 @@ declare namespace javax {
                  *    recognize the attribute.
                  */
                 // @ts-ignore
-                abstract setAttribute(name: string, value: any): void
+                public abstract setAttribute(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Allows the user to retrieve specific attributes on the underlying
                  * implementation.
@@ -301,7 +301,7 @@ declare namespace javax {
                  *    recognize the attribute.
                  */
                 // @ts-ignore
-                abstract getAttribute(name: string): java.lang.Object
+                public abstract getAttribute(name: java.lang.String | string): any
                 /**
                  * Set the error event listener for the TransformerFactory, which
                  * is used for the processing of transformation instructions,
@@ -313,13 +313,13 @@ declare namespace javax {
                  *    <code>null</code>
                  */
                 // @ts-ignore
-                abstract setErrorListener(listener: javax.xml.transform.ErrorListener): void
+                public abstract setErrorListener(listener: javax.xml.transform.ErrorListener): void
                 /**
                  * Get the error event handler for the TransformerFactory.
                  * @return The current error handler, which should never be null.
                  */
                 // @ts-ignore
-                abstract getErrorListener(): javax.xml.transform.ErrorListener
+                public abstract getErrorListener(): javax.xml.transform.ErrorListener
             }
         }
     }

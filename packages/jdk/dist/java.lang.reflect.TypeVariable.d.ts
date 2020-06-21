@@ -55,7 +55,7 @@ declare namespace java {
                  * @return the name of this type variable, as it appears in the source code
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns an array of AnnotatedType objects that represent the use of
                  * types to denote the upper bounds of the type parameter represented by

@@ -195,14 +195,14 @@ declare namespace java {
                  * @see #getScrollType
                  */
                 // @ts-ignore
-                readonly WHEEL_UNIT_SCROLL: number /*int*/
+                public static readonly WHEEL_UNIT_SCROLL: number /*int*/
                 /**
                  * Constant representing scrolling by a "block" (like scrolling
                  * with page-up, page-down keys)
                  * @see #getScrollType
                  */
                 // @ts-ignore
-                readonly WHEEL_BLOCK_SCROLL: number /*int*/
+                public static readonly WHEEL_BLOCK_SCROLL: number /*int*/
                 /**
                  * Returns the type of scrolling that should take place in response to this
                  * event.  This is determined by the native platform.  Legal values are:
@@ -219,7 +219,7 @@ declare namespace java {
                  * @see javax.swing.Scrollable#getScrollableBlockIncrement
                  */
                 // @ts-ignore
-                getScrollType(): int
+                public getScrollType(): number /*int*/
                 /**
                  * Returns the number of units that should be scrolled per
                  * click of mouse wheel rotation.
@@ -231,7 +231,7 @@ declare namespace java {
                  * @see #getScrollType
                  */
                 // @ts-ignore
-                getScrollAmount(): int
+                public getScrollAmount(): number /*int*/
                 /**
                  * Returns the number of "clicks" the mouse wheel was rotated, as an integer.
                  * A partial rotation may occur if the mouse supports a high-resolution wheel.
@@ -242,7 +242,7 @@ declare namespace java {
                  * @see #getPreciseWheelRotation
                  */
                 // @ts-ignore
-                getWheelRotation(): int
+                public getWheelRotation(): number /*int*/
                 /**
                  * Returns the number of "clicks" the mouse wheel was rotated, as a double.
                  * A partial rotation may occur if the mouse supports a high-resolution wheel.
@@ -254,7 +254,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getPreciseWheelRotation(): double
+                public getPreciseWheelRotation(): number /*double*/
                 /**
                  * This is a convenience method to aid in the implementation of
                  * the common-case MouseWheelListener - to scroll a ScrollPane or
@@ -302,14 +302,14 @@ declare namespace java {
                  * @see javax.swing.JScrollPane#setWheelScrollingEnabled
                  */
                 // @ts-ignore
-                getUnitsToScroll(): int
+                public getUnitsToScroll(): number /*int*/
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

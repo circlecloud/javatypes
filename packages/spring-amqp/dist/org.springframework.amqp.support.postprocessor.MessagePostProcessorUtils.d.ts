@@ -11,7 +11,7 @@ declare namespace org {
                     // @ts-ignore
                     class MessagePostProcessorUtils extends java.lang.Object {
                         // @ts-ignore
-                        sort(processors: Array<org.springframework.amqp.core.MessagePostProcessor>): java.util.Collection<org.springframework.amqp.core.MessagePostProcessor>
+                        public static sort(processors: java.util.Collection<org.springframework.amqp.core.MessagePostProcessor> | Array<org.springframework.amqp.core.MessagePostProcessor>): Array<org.springframework.amqp.core.MessagePostProcessor>
                     }
                 }
             }

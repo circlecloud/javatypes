@@ -24,7 +24,7 @@ declare namespace org {
                  * @see Import
                  */
                 // @ts-ignore
-                class ImportResource implements java.lang.annotation.Annotation {
+                abstract class ImportResource implements java.lang.annotation.Annotation {
                 }
             }
         }

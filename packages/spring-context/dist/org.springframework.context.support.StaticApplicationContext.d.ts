@@ -45,35 +45,35 @@ declare namespace org {
                      * @see #addMessage
                      */
                     // @ts-ignore
-                    getStaticMessageSource(): org.springframework.context.support.StaticMessageSource
+                    public getStaticMessageSource(): org.springframework.context.support.StaticMessageSource
                     /**
                      * Register a singleton bean with the underlying bean factory.
                      * <p>For more advanced needs, register with the underlying BeanFactory directly.
                      * @see #getDefaultListableBeanFactory
                      */
                     // @ts-ignore
-                    registerSingleton(name: string, clazz: java.lang.Class<any>): void
+                    public registerSingleton(name: java.lang.String | string, clazz: java.lang.Class<any>): void
                     /**
                      * Register a singleton bean with the underlying bean factory.
                      * <p>For more advanced needs, register with the underlying BeanFactory directly.
                      * @see #getDefaultListableBeanFactory
                      */
                     // @ts-ignore
-                    registerSingleton(name: string, clazz: java.lang.Class<any>, pvs: MutablePropertyValues): void
+                    public registerSingleton(name: java.lang.String | string, clazz: java.lang.Class<any>, pvs: MutablePropertyValues): void
                     /**
                      * Register a prototype bean with the underlying bean factory.
                      * <p>For more advanced needs, register with the underlying BeanFactory directly.
                      * @see #getDefaultListableBeanFactory
                      */
                     // @ts-ignore
-                    registerPrototype(name: string, clazz: java.lang.Class<any>): void
+                    public registerPrototype(name: java.lang.String | string, clazz: java.lang.Class<any>): void
                     /**
                      * Register a prototype bean with the underlying bean factory.
                      * <p>For more advanced needs, register with the underlying BeanFactory directly.
                      * @see #getDefaultListableBeanFactory
                      */
                     // @ts-ignore
-                    registerPrototype(name: string, clazz: java.lang.Class<any>, pvs: MutablePropertyValues): void
+                    public registerPrototype(name: java.lang.String | string, clazz: java.lang.Class<any>, pvs: MutablePropertyValues): void
                     /**
                      * Associate the given message with the given code.
                      * @param code lookup code
@@ -82,7 +82,7 @@ declare namespace org {
                      * @see #getStaticMessageSource
                      */
                     // @ts-ignore
-                    addMessage(code: string, locale: java.util.Locale, defaultMessage: string): void
+                    public addMessage(code: java.lang.String | string, locale: java.util.Locale, defaultMessage: java.lang.String | string): void
                 }
             }
         }

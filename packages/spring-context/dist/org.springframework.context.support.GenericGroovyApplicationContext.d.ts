@@ -99,7 +99,7 @@ declare namespace org {
                      * @param resourceNames relatively-qualified names of resources to load
                      */
                     // @ts-ignore
-                    constructor(relativeClass: java.lang.Class<any>, ...resourceNames: string[])
+                    constructor(relativeClass: java.lang.Class<any>, ...resourceNames: java.lang.String[] | string[])
                     /**
                      * Exposes the underlying {@link GroovyBeanDefinitionReader} for convenient access
                      * to the {@code loadBeanDefinition} methods on it as well as the ability
@@ -108,13 +108,13 @@ declare namespace org {
                      * @see GroovyBeanDefinitionReader#loadBeanDefinitions(String...)
                      */
                     // @ts-ignore
-                    getReader(): GroovyBeanDefinitionReader
+                    public getReader(): GroovyBeanDefinitionReader
                     /**
                      * Delegates the given environment to underlying {@link GroovyBeanDefinitionReader}.
                      * Should be called before any call to {@code #load}.
                      */
                     // @ts-ignore
-                    setEnvironment(environment: ConfigurableEnvironment): void
+                    public setEnvironment(environment: ConfigurableEnvironment): void
                     /**
                      * Load bean definitions from the given Groovy scripts or XML files.
                      * <p>Note that ".xml" files will be parsed as XML content; all other kinds
@@ -122,7 +122,7 @@ declare namespace org {
                      * @param resources one or more resources to load from
                      */
                     // @ts-ignore
-                    load(...resources: Resource[]): void
+                    public load(...resources: Resource[]): void
                     /**
                      * Load bean definitions from the given Groovy scripts or XML files.
                      * <p>Note that ".xml" files will be parsed as XML content; all other kinds
@@ -132,17 +132,17 @@ declare namespace org {
                      * @param resourceNames relatively-qualified names of resources to load
                      */
                     // @ts-ignore
-                    load(relativeClass: java.lang.Class<any>, ...resourceNames: string[]): void
+                    public load(relativeClass: java.lang.Class<any>, ...resourceNames: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    setMetaClass(metaClass: MetaClass): void
+                    public setMetaClass(metaClass: MetaClass): void
                     // @ts-ignore
-                    getMetaClass(): MetaClass
+                    public getMetaClass(): MetaClass
                     // @ts-ignore
-                    invokeMethod(name: string, args: any): java.lang.Object
+                    public invokeMethod(name: java.lang.String | string, args: java.lang.Object | any): any
                     // @ts-ignore
-                    setProperty(property: string, newValue: any): void
+                    public setProperty(property: java.lang.String | string, newValue: java.lang.Object | any): void
                     // @ts-ignore
-                    getProperty(property: string): java.lang.Object
+                    public getProperty(property: java.lang.String | string): any
                 }
             }
         }

@@ -9,7 +9,7 @@ declare namespace javax {
                  * @author Kara Kytle
                  */
                 // @ts-ignore
-                class MidiDeviceProvider extends java.lang.Object {
+                abstract class MidiDeviceProvider extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -21,14 +21,14 @@ declare namespace javax {
                      *          {@code false}
                      */
                     // @ts-ignore
-                    isDeviceSupported(info: javax.sound.midi.MidiDevice.Info): boolean
+                    public isDeviceSupported(info: javax.sound.midi.MidiDevice.Info): boolean
                     /**
                      * Obtains the set of info objects representing the device or devices
                      * provided by this {@code MidiDeviceProvider}.
                      * @return set of device info objects
                      */
                     // @ts-ignore
-                    abstract getDeviceInfo(): javax.sound.midi.MidiDevice.Info[]
+                    public abstract getDeviceInfo(): javax.sound.midi.MidiDevice.Info[]
                     /**
                      * Obtains an instance of the device represented by the info object.
                      * @param info an info object that describes the desired device
@@ -38,7 +38,7 @@ declare namespace javax {
                      *          {#code MidiDeviceProvider}
                      */
                     // @ts-ignore
-                    abstract getDevice(info: javax.sound.midi.MidiDevice.Info): javax.sound.midi.MidiDevice
+                    public abstract getDevice(info: javax.sound.midi.MidiDevice.Info): javax.sound.midi.MidiDevice
                 }
             }
         }

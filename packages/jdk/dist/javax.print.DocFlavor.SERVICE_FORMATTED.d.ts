@@ -21,7 +21,7 @@ declare namespace javax {
                  *      null.
                  */
                 // @ts-ignore
-                constructor(className: string)
+                constructor(className: java.lang.String | string)
                 /**
                  * Service formatted print data doc flavor with print data
                  * representation class name =
@@ -29,21 +29,21 @@ declare namespace javax {
                  * (renderable image object).
                  */
                 // @ts-ignore
-                readonly RENDERABLE_IMAGE: javax.print.DocFlavor.SERVICE_FORMATTED
+                public static readonly RENDERABLE_IMAGE: javax.print.DocFlavor.SERVICE_FORMATTED
                 /**
                  * Service formatted print data doc flavor with print data
                  * representation class name = <CODE>"java.awt.print.Printable"</CODE>
                  * (printable object).
                  */
                 // @ts-ignore
-                readonly PRINTABLE: javax.print.DocFlavor.SERVICE_FORMATTED
+                public static readonly PRINTABLE: javax.print.DocFlavor.SERVICE_FORMATTED
                 /**
                  * Service formatted print data doc flavor with print data
                  * representation class name = <CODE>"java.awt.print.Pageable"</CODE>
                  * (pageable object).
                  */
                 // @ts-ignore
-                readonly PAGEABLE: javax.print.DocFlavor.SERVICE_FORMATTED
+                public static readonly PAGEABLE: javax.print.DocFlavor.SERVICE_FORMATTED
             }
         }
     }

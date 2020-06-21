@@ -46,7 +46,7 @@ declare namespace javax {
                  *  corresponding item as defined in <tt>compositeType</tt>.
                  */
                 // @ts-ignore
-                constructor(compositeType: javax.management.openmbean.CompositeType, itemNames: string[], itemValues: any[])
+                constructor(compositeType: javax.management.openmbean.CompositeType, itemNames: java.lang.String[] | string[], itemValues: java.lang.Object[] | any[])
                 /**
                  * <p>
                  * Constructs a <tt>CompositeDataSupport</tt> instance with the specified <tt>compositeType</tt>, whose item names and corresponding values
@@ -71,12 +71,12 @@ declare namespace javax {
                  *  the class <tt>java.lang.String</tt>.
                  */
                 // @ts-ignore
-                constructor(compositeType: javax.management.openmbean.CompositeType, items: java.util.Map<java.lang.String, any>)
+                constructor(compositeType: javax.management.openmbean.CompositeType, items: java.util.Map<java.lang.String | string, any>)
                 /**
                  * Returns the <i>composite type </i> of this <i>composite data</i> instance.
                  */
                 // @ts-ignore
-                getCompositeType(): javax.management.openmbean.CompositeType
+                public getCompositeType(): javax.management.openmbean.CompositeType
                 /**
                  * Returns the value of the item whose name is <tt>key</tt>.
                  * @throws IllegalArgumentException  if <tt>key</tt> is a null or empty String.
@@ -84,7 +84,7 @@ declare namespace javax {
                  *  this <tt>CompositeData</tt> instance.
                  */
                 // @ts-ignore
-                get(key: string): java.lang.Object
+                public get(key: java.lang.String | string): any
                 /**
                  * Returns an array of the values of the items whose names are specified by
                  * <tt>keys</tt>, in the same order as <tt>keys</tt>.
@@ -94,21 +94,21 @@ declare namespace javax {
                  *  item name for this <tt>CompositeData</tt> instance.
                  */
                 // @ts-ignore
-                getAll(keys: string[]): java.lang.Object[]
+                public getAll(keys: java.lang.String[] | string[]): any[]
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance contains
                  * an item whose name is <tt>key</tt>.
                  * If <tt>key</tt> is a null or empty String, this method simply returns false.
                  */
                 // @ts-ignore
-                containsKey(key: string): boolean
+                public containsKey(key: java.lang.String | string): boolean
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance
                  * contains an item
                  * whose value is <tt>value</tt>.
                  */
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 /**
                  * Returns an unmodifiable Collection view of the item values contained in this
                  * <tt>CompositeData</tt> instance.
@@ -117,7 +117,7 @@ declare namespace javax {
                  * item names.
                  */
                 // @ts-ignore
-                values(): java.util.Collection<?>
+                public values(): Array<any>
                 /**
                  * Compares the specified <var>obj</var> parameter with this
                  * <code>CompositeDataSupport</code> instance for equality.
@@ -145,7 +145,7 @@ declare namespace javax {
                  *  <code>CompositeDataSupport</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>CompositeDataSupport</code> instance.
                  * <p>
@@ -167,7 +167,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>CompositeDataSupport</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>CompositeDataSupport</code> instance.
                  * <p>
@@ -177,7 +177,7 @@ declare namespace javax {
                  * @return a string representation of this <code>CompositeDataSupport</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

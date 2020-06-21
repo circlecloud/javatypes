@@ -29,7 +29,7 @@ declare namespace org {
                          * @param typeName the name of the annotation type
                          */
                         // @ts-ignore
-                        constructor(typeName: string)
+                        constructor(typeName: java.lang.String | string)
                         /**
                          * Construct a qualifier to match against an annotation of the
                          * given type whose {@code value} attribute also matches
@@ -38,7 +38,7 @@ declare namespace org {
                          * @param value the annotation value to match
                          */
                         // @ts-ignore
-                        constructor(type: java.lang.Class<any>, value: any)
+                        constructor(type: java.lang.Class<any>, value: java.lang.Object | any)
                         /**
                          * Construct a qualifier to match against an annotation of the
                          * given type name whose {@code value} attribute also matches
@@ -49,19 +49,19 @@ declare namespace org {
                          * @param value the annotation value to match
                          */
                         // @ts-ignore
-                        constructor(typeName: string, value: any)
+                        constructor(typeName: java.lang.String | string, value: java.lang.Object | any)
                         /**
                          * The name of the key used to store the value.
                          */
                         // @ts-ignore
-                        readonly VALUE_KEY: string
+                        public static readonly VALUE_KEY: java.lang.String | string
                         /**
                          * Retrieve the type name. This value will be the same as the
                          * type name provided to the constructor or the fully-qualified
                          * class name if a Class instance was provided to the constructor.
                          */
                         // @ts-ignore
-                        getTypeName(): java.lang.String
+                        public getTypeName(): string
                     }
                 }
             }

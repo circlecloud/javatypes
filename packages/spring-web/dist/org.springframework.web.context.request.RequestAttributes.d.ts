@@ -19,7 +19,7 @@ declare namespace org {
                          * Constant that indicates request scope.
                          */
                         // @ts-ignore
-                        
+                        readonly SCOPE_REQUEST: number /*int*/
                         /**
                          * Constant that indicates session scope.
                          * <p>This preferably refers to a locally isolated session, if such
@@ -27,19 +27,19 @@ declare namespace org {
                          * Else, it simply refers to the common session.
                          */
                         // @ts-ignore
-                        
+                        readonly SCOPE_SESSION: number /*int*/
                         /**
                          * Name of the standard reference to the request object: "request".
                          * @see #resolveReference
                          */
                         // @ts-ignore
-                        
+                        readonly REFERENCE_REQUEST: java.lang.String | string
                         /**
                          * Name of the standard reference to the session object: "session".
                          * @see #resolveReference
                          */
                         // @ts-ignore
-                        
+                        readonly REFERENCE_SESSION: java.lang.String | string
                         /**
                          * Return the value for the scoped attribute of the given name, if any.
                          * @param name the name of the attribute
@@ -47,7 +47,7 @@ declare namespace org {
                          * @return the current attribute value, or {#code null} if not found
                          */
                         // @ts-ignore
-                        getAttribute(name: string, scope: number /*int*/): java.lang.Object
+                        getAttribute(name: java.lang.String | string, scope: number /*int*/): any
                         /**
                          * Set the value for the scoped attribute of the given name,
                          * replacing an existing value (if any).
@@ -56,7 +56,7 @@ declare namespace org {
                          * @param value the value for the attribute
                          */
                         // @ts-ignore
-                        setAttribute(name: string, value: any, scope: number /*int*/): void
+                        setAttribute(name: java.lang.String | string, value: java.lang.Object | any, scope: number /*int*/): void
                         /**
                          * Remove the scoped attribute of the given name, if it exists.
                          * <p>Note that an implementation should also remove a registered destruction
@@ -67,14 +67,14 @@ declare namespace org {
                          * @param scope the scope identifier
                          */
                         // @ts-ignore
-                        removeAttribute(name: string, scope: number /*int*/): void
+                        removeAttribute(name: java.lang.String | string, scope: number /*int*/): void
                         /**
                          * Retrieve the names of all attributes in the scope.
                          * @param scope the scope identifier
                          * @return the attribute names as String array
                          */
                         // @ts-ignore
-                        getAttributeNames(scope: number /*int*/): java.lang.String[]
+                        getAttributeNames(scope: number /*int*/): string[]
                         /**
                          * Register a callback to be executed on destruction of the
                          * specified attribute in the given scope.
@@ -97,7 +97,7 @@ declare namespace org {
                          * @param scope the scope identifier
                          */
                         // @ts-ignore
-                        registerDestructionCallback(name: string, callback: java.lang.Runnable, scope: number /*int*/): void
+                        registerDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable, scope: number /*int*/): void
                         /**
                          * Resolve the contextual reference for the given key, if any.
                          * <p>At a minimum: the HttpServletRequest reference for key "request", and
@@ -106,20 +106,20 @@ declare namespace org {
                          * @return the corresponding object, or {#code null} if none found
                          */
                         // @ts-ignore
-                        resolveReference(key: string): java.lang.Object
+                        resolveReference(key: java.lang.String | string): any
                         /**
                          * Return an id for the current underlying session.
                          * @return the session id as String (never {#code null})
                          */
                         // @ts-ignore
-                        getSessionId(): java.lang.String
+                        getSessionId(): string
                         /**
                          * Expose the best available mutex for the underlying session:
                          * that is, an object to synchronize on for the underlying session.
                          * @return the session mutex to use (never {#code null})
                          */
                         // @ts-ignore
-                        getSessionMutex(): java.lang.Object
+                        getSessionMutex(): any
                     }
                 }
             }

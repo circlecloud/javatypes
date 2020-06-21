@@ -9,28 +9,28 @@ declare namespace org {
                     // @ts-ignore
                     class CacheOperationContext extends java.lang.Object implements org.springframework.cache.interceptor.CacheOperationInvocationContext<org.springframework.cache.interceptor.CacheOperation> {
                         // @ts-ignore
-                        constructor(metadata: org.springframework.cache.interceptor.CacheAspectSupport.CacheOperationMetadata, args: any[], target: any)
+                        constructor(metadata: org.springframework.cache.interceptor.CacheAspectSupport.CacheOperationMetadata, args: java.lang.Object[] | any[], target: java.lang.Object | any)
                         // @ts-ignore
-                        getOperation(): org.springframework.cache.interceptor.CacheOperation
+                        public getOperation(): org.springframework.cache.interceptor.CacheOperation
                         // @ts-ignore
-                        getTarget(): java.lang.Object
+                        public getTarget(): any
                         // @ts-ignore
-                        getMethod(): java.lang.reflect.Method
+                        public getMethod(): java.lang.reflect.Method
                         // @ts-ignore
-                        getArgs(): java.lang.Object[]
+                        public getArgs(): any[]
                         // @ts-ignore
-                        isConditionPassing(result: any): boolean
+                        isConditionPassing(result: java.lang.Object | any): boolean
                         // @ts-ignore
-                        canPutToCache(value: any): boolean
+                        canPutToCache(value: java.lang.Object | any): boolean
                         /**
                          * Compute the key for the given caching operation.
                          */
                         // @ts-ignore
-                        generateKey(result: any): java.lang.Object
+                        generateKey(result: java.lang.Object | any): any
                         // @ts-ignore
-                        getCaches(): java.util.Collection<? extends org.springframework.cache.Cache>
+                        getCaches(): Array<any>
                         // @ts-ignore
-                        getCacheNames(): java.util.Collection<java.lang.String>
+                        getCacheNames(): Array<java.lang.String | string>
                     }
                 }
             }

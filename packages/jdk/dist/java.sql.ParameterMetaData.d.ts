@@ -20,39 +20,39 @@ declare namespace java {
              * parameter will not allow <code>NULL</code> values.
              */
             // @ts-ignore
-            
+            readonly parameterNoNulls: number /*int*/
             /**
              * The constant indicating that a
              * parameter will allow <code>NULL</code> values.
              */
             // @ts-ignore
-            
+            readonly parameterNullable: number /*int*/
             /**
              * The constant indicating that the
              * nullability of a parameter is unknown.
              */
             // @ts-ignore
-            
+            readonly parameterNullableUnknown: number /*int*/
             /**
              * The constant indicating that the mode of the parameter is unknown.
              */
             // @ts-ignore
-            
+            readonly parameterModeUnknown: number /*int*/
             /**
              * The constant indicating that the parameter's mode is IN.
              */
             // @ts-ignore
-            
+            readonly parameterModeIn: number /*int*/
             /**
              * The constant indicating that the parameter's mode is INOUT.
              */
             // @ts-ignore
-            
+            readonly parameterModeInOut: number /*int*/
             /**
              * The constant indicating that the parameter's mode is  OUT.
              */
             // @ts-ignore
-            
+            readonly parameterModeOut: number /*int*/
             /**
              * Retrieves the number of parameters in the <code>PreparedStatement</code>
              * object for which this <code>ParameterMetaData</code> object contains
@@ -62,7 +62,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getParameterCount(): int
+            getParameterCount(): number /*int*/
             /**
              * Retrieves whether null values are allowed in the designated parameter.
              * @param param the first parameter is 1, the second is 2, ...
@@ -74,7 +74,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isNullable(param: number /*int*/): int
+            isNullable(param: number /*int*/): number /*int*/
             /**
              * Retrieves whether values for the designated parameter can be signed numbers.
              * @param param the first parameter is 1, the second is 2, ...
@@ -98,7 +98,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPrecision(param: number /*int*/): int
+            getPrecision(param: number /*int*/): number /*int*/
             /**
              * Retrieves the designated parameter's number of digits to right of the decimal point.
              * 0 is returned for data types where the scale is not applicable.
@@ -108,7 +108,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getScale(param: number /*int*/): int
+            getScale(param: number /*int*/): number /*int*/
             /**
              * Retrieves the designated parameter's SQL type.
              * @param param the first parameter is 1, the second is 2, ...
@@ -118,7 +118,7 @@ declare namespace java {
              * @see Types
              */
             // @ts-ignore
-            getParameterType(param: number /*int*/): int
+            getParameterType(param: number /*int*/): number /*int*/
             /**
              * Retrieves the designated parameter's database-specific type name.
              * @param param the first parameter is 1, the second is 2, ...
@@ -128,7 +128,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getParameterTypeName(param: number /*int*/): java.lang.String
+            getParameterTypeName(param: number /*int*/): string
             /**
              * Retrieves the fully-qualified name of the Java class whose instances
              * should be passed to the method <code>PreparedStatement.setObject</code>.
@@ -142,7 +142,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getParameterClassName(param: number /*int*/): java.lang.String
+            getParameterClassName(param: number /*int*/): string
             /**
              * Retrieves the designated parameter's mode.
              * @param param the first parameter is 1, the second is 2, ...
@@ -155,7 +155,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getParameterMode(param: number /*int*/): int
+            getParameterMode(param: number /*int*/): number /*int*/
         }
     }
 }

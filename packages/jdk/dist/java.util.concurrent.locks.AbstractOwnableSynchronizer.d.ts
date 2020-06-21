@@ -14,7 +14,7 @@ declare namespace java {
                  * @author Doug Lea
                  */
                 // @ts-ignore
-                class AbstractOwnableSynchronizer extends java.lang.Object implements java.io.Serializable {
+                abstract class AbstractOwnableSynchronizer extends java.lang.Object implements java.io.Serializable {
                     /**
                      * Empty constructor for use by subclasses.
                      */

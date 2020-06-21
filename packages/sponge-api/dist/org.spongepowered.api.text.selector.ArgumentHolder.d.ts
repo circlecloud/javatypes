@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The size of the Set from {#link #getTypes()}
                          */
                         // @ts-ignore
-                        getCount(): int
+                        getCount(): number /*int*/
                         /**
                          * Returns a set containing all the {@link ArgumentHolder}s this
                          * {@link ArgumentHolder} holds.
@@ -28,7 +28,7 @@ declare namespace org {
                          *          {@link ArgumentHolder} holds
                          */
                         // @ts-ignore
-                        getTypes(): java.util.Set<T>
+                        getTypes(): Array<T>
                     }
                 }
             }

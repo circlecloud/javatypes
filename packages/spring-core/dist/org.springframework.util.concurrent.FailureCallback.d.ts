@@ -15,7 +15,7 @@ declare namespace org {
                      * @param ex the failure
                      */
                     // @ts-ignore
-                    onFailure(ex: Error): void
+                    onFailure(ex: java.lang.Throwable | Error): void
                 }
             }
         }

@@ -46,7 +46,7 @@ declare namespace javax {
                      * Syntax and Processing.
                      */
                     // @ts-ignore
-                    
+                    readonly XMLNS: java.lang.String | string
                     /**
                      * Validates the signature according to the
                      * <a href="http://www.w3.org/TR/xmldsig-core/#sec-CoreValidation">
@@ -87,13 +87,13 @@ declare namespace javax {
                      *     but never <code>null</code>)
                      */
                     // @ts-ignore
-                    getObjects(): java.util.List
+                    getObjects(): Array<any>
                     /**
                      * Returns the optional Id of this <code>XMLSignature</code>.
                      * @return the Id (may be <code>null</code> if not specified)
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Returns the signature value of this <code>XMLSignature</code>.
                      * @return the signature value

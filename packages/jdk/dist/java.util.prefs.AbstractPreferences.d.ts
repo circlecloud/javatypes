@@ -79,7 +79,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class AbstractPreferences extends java.util.prefs.Preferences {
+            abstract class AbstractPreferences extends java.util.prefs.Preferences {
                 /**
                  * Creates a preference node with the specified parent and the specified
                  * name relative to its parent.
@@ -92,7 +92,7 @@ declare namespace java {
                  *           name isn't <tt>""</tt>.
                  */
                 // @ts-ignore
-                constructor(parent: java.util.prefs.AbstractPreferences, name: string)
+                constructor(parent: java.util.prefs.AbstractPreferences, name: java.lang.String | string)
                 /**
                  * This field should be <tt>true</tt> if this node did not exist in the
                  * backing store prior to the creation of this object.  The field
@@ -111,7 +111,7 @@ declare namespace java {
                  * holds a lock on a descendant of that node.
                  */
                 // @ts-ignore
-                readonly lock: any
+                readonly lock: java.lang.Object | any
                 /**
                  * Implements the <tt>put</tt> method as per the specification in
                  * {@link Preferences#put(String,String)}.
@@ -130,7 +130,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                put(key: string, value: string): void
+                public put(key: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Implements the <tt>get</tt> method as per the specification in
                  * {@link Preferences#get(String,String)}.
@@ -152,7 +152,7 @@ declare namespace java {
                  *          <tt>null</tt> default <i>is</i> permitted.)
                  */
                 // @ts-ignore
-                get(key: string, def: string): java.lang.String
+                public get(key: java.lang.String | string, def: java.lang.String | string): string
                 /**
                  * Implements the <tt>remove(String)</tt> method as per the specification
                  * in {@link Preferences#remove(String)}.
@@ -167,7 +167,7 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}.
                  */
                 // @ts-ignore
-                remove(key: string): void
+                public remove(key: java.lang.String | string): void
                 /**
                  * Implements the <tt>clear</tt> method as per the specification in
                  * {@link Preferences#clear()}.
@@ -181,7 +181,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Implements the <tt>putInt</tt> method as per the specification in
                  * {@link Preferences#putInt(String,int)}.
@@ -197,7 +197,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                putInt(key: string, value: number /*int*/): void
+                public putInt(key: java.lang.String | string, value: number /*int*/): void
                 /**
                  * Implements the <tt>getInt</tt> method as per the specification in
                  * {@link Preferences#getInt(String,int)}.
@@ -219,7 +219,7 @@ declare namespace java {
                  * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
                  */
                 // @ts-ignore
-                getInt(key: string, def: number /*int*/): int
+                public getInt(key: java.lang.String | string, def: number /*int*/): number /*int*/
                 /**
                  * Implements the <tt>putLong</tt> method as per the specification in
                  * {@link Preferences#putLong(String,long)}.
@@ -235,7 +235,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                putLong(key: string, value: number /*long*/): void
+                public putLong(key: java.lang.String | string, value: number /*long*/): void
                 /**
                  * Implements the <tt>getLong</tt> method as per the specification in
                  * {@link Preferences#getLong(String,long)}.
@@ -257,7 +257,7 @@ declare namespace java {
                  * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
                  */
                 // @ts-ignore
-                getLong(key: string, def: number /*long*/): long
+                public getLong(key: java.lang.String | string, def: number /*long*/): number /*long*/
                 /**
                  * Implements the <tt>putBoolean</tt> method as per the specification in
                  * {@link Preferences#putBoolean(String,boolean)}.
@@ -273,7 +273,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                putBoolean(key: string, value: boolean): void
+                public putBoolean(key: java.lang.String | string, value: boolean): void
                 /**
                  * Implements the <tt>getBoolean</tt> method as per the specification in
                  * {@link Preferences#getBoolean(String,boolean)}.
@@ -298,7 +298,7 @@ declare namespace java {
                  * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
                  */
                 // @ts-ignore
-                getBoolean(key: string, def: boolean): boolean
+                public getBoolean(key: java.lang.String | string, def: boolean): boolean
                 /**
                  * Implements the <tt>putFloat</tt> method as per the specification in
                  * {@link Preferences#putFloat(String,float)}.
@@ -314,7 +314,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                putFloat(key: string, value: number /*float*/): void
+                public putFloat(key: java.lang.String | string, value: number /*float*/): void
                 /**
                  * Implements the <tt>getFloat</tt> method as per the specification in
                  * {@link Preferences#getFloat(String,float)}.
@@ -336,7 +336,7 @@ declare namespace java {
                  * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
                  */
                 // @ts-ignore
-                getFloat(key: string, def: number /*float*/): float
+                public getFloat(key: java.lang.String | string, def: number /*float*/): number /*float*/
                 /**
                  * Implements the <tt>putDouble</tt> method as per the specification in
                  * {@link Preferences#putDouble(String,double)}.
@@ -352,7 +352,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                putDouble(key: string, value: number /*double*/): void
+                public putDouble(key: java.lang.String | string, value: number /*double*/): void
                 /**
                  * Implements the <tt>getDouble</tt> method as per the specification in
                  * {@link Preferences#getDouble(String,double)}.
@@ -374,7 +374,7 @@ declare namespace java {
                  * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
                  */
                 // @ts-ignore
-                getDouble(key: string, def: number /*double*/): double
+                public getDouble(key: java.lang.String | string, def: number /*double*/): number /*double*/
                 /**
                  * Implements the <tt>putByteArray</tt> method as per the specification in
                  * {@link Preferences#putByteArray(String,byte[])}.
@@ -387,7 +387,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                putByteArray(key: string, value: number /*byte*/[]): void
+                public putByteArray(key: java.lang.String | string, value: number /*byte*/[]): void
                 /**
                  * Implements the <tt>getByteArray</tt> method as per the specification in
                  * {@link Preferences#getByteArray(String,byte[])}.
@@ -405,7 +405,7 @@ declare namespace java {
                  *          <tt>null</tt> value for <tt>def</tt> <i>is</i> permitted.)
                  */
                 // @ts-ignore
-                getByteArray(key: string, def: number /*byte*/[]): byte[]
+                public getByteArray(key: java.lang.String | string, def: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Implements the <tt>keys</tt> method as per the specification in
                  * {@link Preferences#keys()}.
@@ -420,7 +420,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                keys(): java.lang.String[]
+                public keys(): string[]
                 /**
                  * Implements the <tt>children</tt> method as per the specification in
                  * {@link Preferences#childrenNames()}.
@@ -440,7 +440,7 @@ declare namespace java {
                  * @see #cachedChildren()
                  */
                 // @ts-ignore
-                childrenNames(): java.lang.String[]
+                public childrenNames(): string[]
                 /**
                  * Returns all known unremoved children of this node.
                  * @return all known unremoved children of this node.
@@ -458,7 +458,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                parent(): java.util.prefs.Preferences
+                public parent(): java.util.prefs.Preferences
                 /**
                  * Implements the <tt>node</tt> method as per the specification in
                  * {@link Preferences#node(String)}.
@@ -501,7 +501,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                node(path: string): java.util.prefs.Preferences
+                public node(path: java.lang.String | string): java.util.prefs.Preferences
                 /**
                  * Implements the <tt>nodeExists</tt> method as per the specification in
                  * {@link Preferences#nodeExists(String)}.
@@ -521,7 +521,7 @@ declare namespace java {
                  *          <tt>pathname</tt> is not the empty string (<tt>""</tt>).
                  */
                 // @ts-ignore
-                nodeExists(path: string): boolean
+                public nodeExists(path: java.lang.String | string): boolean
                 /**
                  * Implements the <tt>removeNode()</tt> method as per the specification in
                  * {@link Preferences#removeNode()}.
@@ -551,7 +551,7 @@ declare namespace java {
                  *          communicate with it.
                  */
                 // @ts-ignore
-                removeNode(): void
+                public removeNode(): void
                 /**
                  * Implements the <tt>name</tt> method as per the specification in
                  * {@link Preferences#name()}.
@@ -560,7 +560,7 @@ declare namespace java {
                  * @return this preference node's name, relative to its parent.
                  */
                 // @ts-ignore
-                name(): java.lang.String
+                public name(): string
                 /**
                  * Implements the <tt>absolutePath</tt> method as per the specification in
                  * {@link Preferences#absolutePath()}.
@@ -571,7 +571,7 @@ declare namespace java {
                  * @return this preference node's absolute path name.
                  */
                 // @ts-ignore
-                absolutePath(): java.lang.String
+                public absolutePath(): string
                 /**
                  * Implements the <tt>isUserNode</tt> method as per the specification in
                  * {@link Preferences#isUserNode()}.
@@ -584,15 +584,15 @@ declare namespace java {
                  *          preference tree.
                  */
                 // @ts-ignore
-                isUserNode(): boolean
+                public isUserNode(): boolean
                 // @ts-ignore
-                addPreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
+                public addPreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
                 // @ts-ignore
-                removePreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
+                public removePreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
                 // @ts-ignore
-                addNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
+                public addNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
                 // @ts-ignore
-                removeNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
+                public removeNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
                 /**
                  * Put the given key-value association into this preference node.  It is
                  * guaranteed that <tt>key</tt> and <tt>value</tt> are non-null and of
@@ -603,7 +603,7 @@ declare namespace java {
                  * @param value the value
                  */
                 // @ts-ignore
-                abstract putSpi(key: string, value: string): void
+                abstract putSpi(key: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Return the value associated with the specified key at this preference
                  * node, or <tt>null</tt> if there is no association for this key, or the
@@ -622,7 +622,7 @@ declare namespace java {
                  *           key, or the association cannot be determined at this time.
                  */
                 // @ts-ignore
-                abstract getSpi(key: string): java.lang.String
+                abstract getSpi(key: java.lang.String | string): string
                 /**
                  * Remove the association (if any) for the specified key at this
                  * preference node.  It is guaranteed that <tt>key</tt> is non-null.
@@ -632,7 +632,7 @@ declare namespace java {
                  * @param key the key
                  */
                 // @ts-ignore
-                abstract removeSpi(key: string): void
+                abstract removeSpi(key: java.lang.String | string): void
                 /**
                  * Removes this preference node, invalidating it and any preferences that
                  * it contains.  The named child will have no descendants at the time this
@@ -668,7 +668,7 @@ declare namespace java {
                  *          communicate with it.
                  */
                 // @ts-ignore
-                abstract keysSpi(): java.lang.String[]
+                abstract keysSpi(): string[]
                 /**
                  * Returns the names of the children of this preference node.  (The
                  * returned array will be of size zero if this node has no children.)
@@ -685,7 +685,7 @@ declare namespace java {
                  *          communicate with it.
                  */
                 // @ts-ignore
-                abstract childrenNamesSpi(): java.lang.String[]
+                abstract childrenNamesSpi(): string[]
                 /**
                  * Returns the named child if it exists, or <tt>null</tt> if it does not.
                  * It is guaranteed that <tt>nodeName</tt> is non-null, non-empty,
@@ -713,7 +713,7 @@ declare namespace java {
                  *          communicate with it.
                  */
                 // @ts-ignore
-                getChild(nodeName: string): java.util.prefs.AbstractPreferences
+                getChild(nodeName: java.lang.String | string): java.util.prefs.AbstractPreferences
                 /**
                  * Returns the named child of this preference node, creating it if it does
                  * not already exist.  It is guaranteed that <tt>name</tt> is non-null,
@@ -741,12 +741,12 @@ declare namespace java {
                  * @return The named child node.
                  */
                 // @ts-ignore
-                abstract childSpi(name: string): java.util.prefs.AbstractPreferences
+                abstract childSpi(name: java.lang.String | string): java.util.prefs.AbstractPreferences
                 /**
                  * Returns the absolute path name of this preferences node.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Implements the <tt>sync</tt> method as per the specification in
                  * {@link Preferences#sync()}.
@@ -766,7 +766,7 @@ declare namespace java {
                  * @see #flush()
                  */
                 // @ts-ignore
-                sync(): void
+                public sync(): void
                 /**
                  * This method is invoked with this node locked.  The contract of this
                  * method is to synchronize any cached preferences stored at this node
@@ -805,7 +805,7 @@ declare namespace java {
                  * @see #flush()
                  */
                 // @ts-ignore
-                flush(): void
+                public flush(): void
                 /**
                  * This method is invoked with this node locked.  The contract of this
                  * method is to force any cached changes in the contents of this
@@ -845,7 +845,7 @@ declare namespace java {
                  *          backing store.
                  */
                 // @ts-ignore
-                exportNode(os: java.io.OutputStream): void
+                public exportNode(os: java.io.OutputStream): void
                 /**
                  * Implements the <tt>exportSubtree</tt> method as per the specification in
                  * {@link Preferences#exportSubtree(OutputStream)}.
@@ -856,7 +856,7 @@ declare namespace java {
                  *          backing store.
                  */
                 // @ts-ignore
-                exportSubtree(os: java.io.OutputStream): void
+                public exportSubtree(os: java.io.OutputStream): void
             }
         }
     }

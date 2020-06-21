@@ -15,7 +15,7 @@ declare namespace java {
              *  for information about dynamic stub generation.
              */
             // @ts-ignore
-            class RemoteStub extends java.rmi.server.RemoteObject {
+            abstract class RemoteStub extends java.rmi.server.RemoteObject {
                 /**
                  * Constructs a {@code RemoteStub}.
                  */
@@ -42,7 +42,7 @@ declare namespace java {
                  *  the {@link #RemoteStub(RemoteRef)} constructor.
                  */
                 // @ts-ignore
-                setRef(stub: java.rmi.server.RemoteStub, ref: java.rmi.server.RemoteRef): void
+                static setRef(stub: java.rmi.server.RemoteStub, ref: java.rmi.server.RemoteRef): void
             }
         }
     }

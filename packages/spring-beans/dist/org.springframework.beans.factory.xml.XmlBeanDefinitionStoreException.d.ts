@@ -22,14 +22,14 @@ declare namespace org {
                          * @see org.xml.sax.SAXParseException
                          */
                         // @ts-ignore
-                        constructor(resourceDescription: string, msg: string, cause: org.xml.sax.SAXException)
+                        constructor(resourceDescription: java.lang.String | string, msg: java.lang.String | string, cause: org.xml.sax.SAXException)
                         /**
                          * Return the line number in the XML resource that failed.
                          * @return the line number if available (in case of a SAXParseException); -1 else
                          * @see org.xml.sax.SAXParseException#getLineNumber()
                          */
                         // @ts-ignore
-                        getLineNumber(): int
+                        public getLineNumber(): number /*int*/
                     }
                 }
             }

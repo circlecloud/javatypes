@@ -27,7 +27,7 @@ declare namespace org {
                     // @ts-ignore
                     getBindingResult(): BindingResult
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    getMessage(): string
                 }
             }
         }

@@ -85,7 +85,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getBytes(pos: number /*long*/, length: number /*int*/): byte[]
+                    public getBytes(pos: number /*long*/, length: number /*int*/): number /*byte*/[]
                     /**
                      * Retrieves the number of bytes in this <code>SerialBlob</code>
                      * object's array of bytes.
@@ -95,7 +95,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    length(): long
+                    public length(): number /*long*/
                     /**
                      * Returns this <code>SerialBlob</code> object as an input stream.
                      * Unlike the related method, <code>setBinaryStream</code>,
@@ -108,7 +108,7 @@ declare namespace javax {
                      * @see #setBinaryStream
                      */
                     // @ts-ignore
-                    getBinaryStream(): java.io.InputStream
+                    public getBinaryStream(): java.io.InputStream
                     /**
                      * Returns the position in this <code>SerialBlob</code> object where
                      * the given pattern of bytes begins, starting the search at the
@@ -130,7 +130,7 @@ declare namespace javax {
                      *          value from the database
                      */
                     // @ts-ignore
-                    position(pattern: number /*byte*/[], start: number /*long*/): long
+                    public position(pattern: number /*byte*/[], start: number /*long*/): number /*long*/
                     /**
                      * Returns the position in this <code>SerialBlob</code> object where
                      * the given <code>Blob</code> object begins, starting the search at the
@@ -152,7 +152,7 @@ declare namespace javax {
                      *          value from the database
                      */
                     // @ts-ignore
-                    position(pattern: java.sql.Blob, start: number /*long*/): long
+                    public position(pattern: java.sql.Blob, start: number /*long*/): number /*long*/
                     /**
                      * Writes the given array of bytes to the <code>BLOB</code> value that
                      * this <code>Blob</code> object represents, starting at position
@@ -173,7 +173,7 @@ declare namespace javax {
                      * @see #getBytes
                      */
                     // @ts-ignore
-                    setBytes(pos: number /*long*/, bytes: number /*byte*/[]): int
+                    public setBytes(pos: number /*long*/, bytes: number /*byte*/[]): number /*int*/
                     /**
                      * Writes all or part of the given <code>byte</code> array to the
                      * <code>BLOB</code> value that this <code>Blob</code> object represents
@@ -204,7 +204,7 @@ declare namespace javax {
                      * @see #getBytes
                      */
                     // @ts-ignore
-                    setBytes(pos: number /*long*/, bytes: number /*byte*/[], offset: number /*int*/, length: number /*int*/): int
+                    public setBytes(pos: number /*long*/, bytes: number /*byte*/[], offset: number /*int*/, length: number /*int*/): number /*int*/
                     /**
                      * Retrieves a stream that can be used to write to the <code>BLOB</code>
                      * value that this <code>Blob</code> object represents.  The stream begins
@@ -225,7 +225,7 @@ declare namespace javax {
                      * @see #getBinaryStream
                      */
                     // @ts-ignore
-                    setBinaryStream(pos: number /*long*/): java.io.OutputStream
+                    public setBinaryStream(pos: number /*long*/): java.io.OutputStream
                     /**
                      * Truncates the <code>BLOB</code> value that this <code>Blob</code>
                      * object represents to be <code>len</code> bytes in length.
@@ -237,7 +237,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    truncate(length: number /*long*/): void
+                    public truncate(length: number /*long*/): void
                     /**
                      * Returns an
                      * <code>InputStream</code> object that contains a partial
@@ -256,7 +256,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBinaryStream(pos: number /*long*/, length: number /*long*/): java.io.InputStream
+                    public getBinaryStream(pos: number /*long*/, length: number /*long*/): java.io.InputStream
                     /**
                      * This method frees the {@code SeriableBlob} object and releases the
                      * resources that it holds. The object is invalid once the {@code free}
@@ -266,7 +266,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    free(): void
+                    public free(): void
                     /**
                      * Compares this SerialBlob to the specified object.  The result is {@code
                      * true} if and only if the argument is not {@code null} and is a {@code
@@ -277,13 +277,13 @@ declare namespace javax {
                      *           equivalent to this SerialBlob, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this {@code SerialBlob}.
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialBlob}. The copy will contain a
                      * reference to a clone of the internal byte array, not a reference
@@ -292,7 +292,7 @@ declare namespace javax {
                      * @return a clone of this SerialBlob
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

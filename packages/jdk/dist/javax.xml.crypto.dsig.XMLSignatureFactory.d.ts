@@ -82,7 +82,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class XMLSignatureFactory extends java.lang.Object {
+                abstract class XMLSignatureFactory extends java.lang.Object {
                     /**
                      * Default constructor, for invocation by subclasses.
                      */
@@ -114,7 +114,7 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(mechanismType: string): javax.xml.crypto.dsig.XMLSignatureFactory
+                    public static getInstance(mechanismType: java.lang.String | string): javax.xml.crypto.dsig.XMLSignatureFactory
                     /**
                      * Returns an <code>XMLSignatureFactory</code> that supports the
                      * requested XML processing mechanism and representation type (ex: "DOM"),
@@ -136,7 +136,7 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(mechanismType: string, provider: java.security.Provider): javax.xml.crypto.dsig.XMLSignatureFactory
+                    public static getInstance(mechanismType: java.lang.String | string, provider: java.security.Provider): javax.xml.crypto.dsig.XMLSignatureFactory
                     /**
                      * Returns an <code>XMLSignatureFactory</code> that supports the
                      * requested XML processing mechanism and representation type (ex: "DOM"),
@@ -161,7 +161,7 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(mechanismType: string, provider: string): javax.xml.crypto.dsig.XMLSignatureFactory
+                    public static getInstance(mechanismType: java.lang.String | string, provider: java.lang.String | string): javax.xml.crypto.dsig.XMLSignatureFactory
                     /**
                      * Returns an <code>XMLSignatureFactory</code> that supports the
                      * default XML processing mechanism and representation type ("DOM").
@@ -181,7 +181,7 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(): javax.xml.crypto.dsig.XMLSignatureFactory
+                    public static getInstance(): javax.xml.crypto.dsig.XMLSignatureFactory
                     /**
                      * Returns the type of the XML processing mechanism and representation
                      * supported by this <code>XMLSignatureFactory</code> (ex: "DOM").
@@ -189,13 +189,13 @@ declare namespace javax {
                      *     <code>XMLSignatureFactory</code>
                      */
                     // @ts-ignore
-                    getMechanismType(): java.lang.String
+                    public getMechanismType(): string
                     /**
                      * Returns the provider of this <code>XMLSignatureFactory</code>.
                      * @return the provider of this <code>XMLSignatureFactory</code>
                      */
                     // @ts-ignore
-                    getProvider(): java.security.Provider
+                    public getProvider(): java.security.Provider
                     /**
                      * Creates an <code>XMLSignature</code> and initializes it with the contents
                      * of the specified <code>SignedInfo</code> and <code>KeyInfo</code>
@@ -206,7 +206,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>si</code> is <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newXMLSignature(si: javax.xml.crypto.dsig.SignedInfo, ki: javax.xml.crypto.dsig.keyinfo.KeyInfo): javax.xml.crypto.dsig.XMLSignature
+                    public abstract newXMLSignature(si: javax.xml.crypto.dsig.SignedInfo, ki: javax.xml.crypto.dsig.keyinfo.KeyInfo): javax.xml.crypto.dsig.XMLSignature
                     /**
                      * Creates an <code>XMLSignature</code> and initializes it with the
                      * specified parameters.
@@ -222,7 +222,7 @@ declare namespace javax {
                      *     type <code>XMLObject</code>
                      */
                     // @ts-ignore
-                    abstract newXMLSignature(si: javax.xml.crypto.dsig.SignedInfo, ki: javax.xml.crypto.dsig.keyinfo.KeyInfo, objects: Array, id: string, signatureValueId: string): javax.xml.crypto.dsig.XMLSignature
+                    public abstract newXMLSignature(si: javax.xml.crypto.dsig.SignedInfo, ki: javax.xml.crypto.dsig.keyinfo.KeyInfo, objects: java.util.List<any> | Array<any>, id: java.lang.String | string, signatureValueId: java.lang.String | string): javax.xml.crypto.dsig.XMLSignature
                     /**
                      * Creates a <code>Reference</code> with the specified URI and digest
                      * method.
@@ -234,7 +234,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>dm</code> is <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newReference(uri: string, dm: javax.xml.crypto.dsig.DigestMethod): javax.xml.crypto.dsig.Reference
+                    public abstract newReference(uri: java.lang.String | string, dm: javax.xml.crypto.dsig.DigestMethod): javax.xml.crypto.dsig.Reference
                     /**
                      * Creates a <code>Reference</code> with the specified parameters.
                      * @param uri the reference URI (may be <code>null</code>)
@@ -252,7 +252,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>dm</code> is <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newReference(uri: string, dm: javax.xml.crypto.dsig.DigestMethod, transforms: Array, type: string, id: string): javax.xml.crypto.dsig.Reference
+                    public abstract newReference(uri: java.lang.String | string, dm: javax.xml.crypto.dsig.DigestMethod, transforms: java.util.List<any> | Array<any>, type: java.lang.String | string, id: java.lang.String | string): javax.xml.crypto.dsig.Reference
                     /**
                      * Creates a <code>Reference</code> with the specified parameters and
                      * pre-calculated digest value.
@@ -279,7 +279,7 @@ declare namespace javax {
                      *     <code>digestValue</code> is <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newReference(uri: string, dm: javax.xml.crypto.dsig.DigestMethod, transforms: Array, type: string, id: string, digestValue: number /*byte*/[]): javax.xml.crypto.dsig.Reference
+                    public abstract newReference(uri: java.lang.String | string, dm: javax.xml.crypto.dsig.DigestMethod, transforms: java.util.List<any> | Array<any>, type: java.lang.String | string, id: java.lang.String | string, digestValue: number /*byte*/[]): javax.xml.crypto.dsig.Reference
                     /**
                      * Creates a <code>Reference</code> with the specified parameters.
                      * <p>This method is useful when a list of transforms have already been
@@ -317,7 +317,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newReference(uri: string, dm: javax.xml.crypto.dsig.DigestMethod, appliedTransforms: Array, result: javax.xml.crypto.Data, transforms: Array, type: string, id: string): javax.xml.crypto.dsig.Reference
+                    public abstract newReference(uri: java.lang.String | string, dm: javax.xml.crypto.dsig.DigestMethod, appliedTransforms: java.util.List<any> | Array<any>, result: javax.xml.crypto.Data, transforms: java.util.List<any> | Array<any>, type: java.lang.String | string, id: java.lang.String | string): javax.xml.crypto.dsig.Reference
                     /**
                      * Creates a <code>SignedInfo</code> with the specified canonicalization
                      * and signature methods, and list of one or more references.
@@ -333,7 +333,7 @@ declare namespace javax {
                      *     are <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newSignedInfo(cm: javax.xml.crypto.dsig.CanonicalizationMethod, sm: javax.xml.crypto.dsig.SignatureMethod, references: Array): javax.xml.crypto.dsig.SignedInfo
+                    public abstract newSignedInfo(cm: javax.xml.crypto.dsig.CanonicalizationMethod, sm: javax.xml.crypto.dsig.SignatureMethod, references: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.SignedInfo
                     /**
                      * Creates a <code>SignedInfo</code> with the specified parameters.
                      * @param cm the canonicalization method
@@ -349,7 +349,7 @@ declare namespace javax {
                      *     <code>references</code> are <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newSignedInfo(cm: javax.xml.crypto.dsig.CanonicalizationMethod, sm: javax.xml.crypto.dsig.SignatureMethod, references: Array, id: string): javax.xml.crypto.dsig.SignedInfo
+                    public abstract newSignedInfo(cm: javax.xml.crypto.dsig.CanonicalizationMethod, sm: javax.xml.crypto.dsig.SignatureMethod, references: java.util.List<any> | Array<any>, id: java.lang.String | string): javax.xml.crypto.dsig.SignedInfo
                     /**
                      * Creates an <code>XMLObject</code> from the specified parameters.
                      * @param content a list of {#link XMLStructure}s. The list
@@ -363,7 +363,7 @@ declare namespace javax {
                      *     entries that are not of type {#link XMLStructure}
                      */
                     // @ts-ignore
-                    abstract newXMLObject(content: Array, id: string, mimeType: string, encoding: string): javax.xml.crypto.dsig.XMLObject
+                    public abstract newXMLObject(content: java.util.List<any> | Array<any>, id: java.lang.String | string, mimeType: java.lang.String | string, encoding: java.lang.String | string): javax.xml.crypto.dsig.XMLObject
                     /**
                      * Creates a <code>Manifest</code> containing the specified
                      * list of {@link Reference}s.
@@ -377,7 +377,7 @@ declare namespace javax {
                      *     entries that are not of type {#link Reference}
                      */
                     // @ts-ignore
-                    abstract newManifest(references: Array): javax.xml.crypto.dsig.Manifest
+                    public abstract newManifest(references: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.Manifest
                     /**
                      * Creates a <code>Manifest</code> containing the specified
                      * list of {@link Reference}s and optional id.
@@ -392,7 +392,7 @@ declare namespace javax {
                      *     entries that are not of type {#link Reference}
                      */
                     // @ts-ignore
-                    abstract newManifest(references: Array, id: string): javax.xml.crypto.dsig.Manifest
+                    public abstract newManifest(references: java.util.List<any> | Array<any>, id: java.lang.String | string): javax.xml.crypto.dsig.Manifest
                     /**
                      * Creates a <code>SignatureProperty</code> containing the specified
                      * list of {@link XMLStructure}s, target URI and optional id.
@@ -409,7 +409,7 @@ declare namespace javax {
                      *     entries that are not of type {#link XMLStructure}
                      */
                     // @ts-ignore
-                    abstract newSignatureProperty(content: Array, target: string, id: string): javax.xml.crypto.dsig.SignatureProperty
+                    public abstract newSignatureProperty(content: java.util.List<any> | Array<any>, target: java.lang.String | string, id: java.lang.String | string): javax.xml.crypto.dsig.SignatureProperty
                     /**
                      * Creates a <code>SignatureProperties</code> containing the specified
                      * list of {@link SignatureProperty}s and optional id.
@@ -425,7 +425,7 @@ declare namespace javax {
                      *     entries that are not of type {#link SignatureProperty}
                      */
                     // @ts-ignore
-                    abstract newSignatureProperties(properties: Array, id: string): javax.xml.crypto.dsig.SignatureProperties
+                    public abstract newSignatureProperties(properties: java.util.List<any> | Array<any>, id: java.lang.String | string): javax.xml.crypto.dsig.SignatureProperties
                     /**
                      * Creates a <code>DigestMethod</code> for the specified algorithm URI
                      * and parameters.
@@ -441,7 +441,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newDigestMethod(algorithm: string, params: javax.xml.crypto.dsig.spec.DigestMethodParameterSpec): javax.xml.crypto.dsig.DigestMethod
+                    public abstract newDigestMethod(algorithm: java.lang.String | string, params: javax.xml.crypto.dsig.spec.DigestMethodParameterSpec): javax.xml.crypto.dsig.DigestMethod
                     /**
                      * Creates a <code>SignatureMethod</code> for the specified algorithm URI
                      * and parameters.
@@ -457,7 +457,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newSignatureMethod(algorithm: string, params: javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec): javax.xml.crypto.dsig.SignatureMethod
+                    public abstract newSignatureMethod(algorithm: java.lang.String | string, params: javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec): javax.xml.crypto.dsig.SignatureMethod
                     /**
                      * Creates a <code>Transform</code> for the specified algorithm URI
                      * and parameters.
@@ -473,7 +473,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newTransform(algorithm: string, params: javax.xml.crypto.dsig.spec.TransformParameterSpec): javax.xml.crypto.dsig.Transform
+                    public abstract newTransform(algorithm: java.lang.String | string, params: javax.xml.crypto.dsig.spec.TransformParameterSpec): javax.xml.crypto.dsig.Transform
                     /**
                      * Creates a <code>Transform</code> for the specified algorithm URI
                      * and parameters. The parameters are specified as a mechanism-specific
@@ -495,7 +495,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newTransform(algorithm: string, params: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.Transform
+                    public abstract newTransform(algorithm: java.lang.String | string, params: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.Transform
                     /**
                      * Creates a <code>CanonicalizationMethod</code> for the specified
                      * algorithm URI and parameters.
@@ -511,7 +511,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newCanonicalizationMethod(algorithm: string, params: javax.xml.crypto.dsig.spec.C14NMethodParameterSpec): javax.xml.crypto.dsig.CanonicalizationMethod
+                    public abstract newCanonicalizationMethod(algorithm: java.lang.String | string, params: javax.xml.crypto.dsig.spec.C14NMethodParameterSpec): javax.xml.crypto.dsig.CanonicalizationMethod
                     /**
                      * Creates a <code>CanonicalizationMethod</code> for the specified
                      * algorithm URI and parameters. The parameters are specified as a
@@ -533,7 +533,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    abstract newCanonicalizationMethod(algorithm: string, params: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.CanonicalizationMethod
+                    public abstract newCanonicalizationMethod(algorithm: java.lang.String | string, params: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.CanonicalizationMethod
                     /**
                      * Returns a <code>KeyInfoFactory</code> that creates <code>KeyInfo</code>
                      * objects. The returned <code>KeyInfoFactory</code> has the same
@@ -544,7 +544,7 @@ declare namespace javax {
                      *     is not available
                      */
                     // @ts-ignore
-                    getKeyInfoFactory(): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
+                    public getKeyInfoFactory(): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
                     /**
                      * Unmarshals a new <code>XMLSignature</code> instance from a
                      * mechanism-specific <code>XMLValidateContext</code> instance.
@@ -559,7 +559,7 @@ declare namespace javax {
                      *     during unmarshalling
                      */
                     // @ts-ignore
-                    abstract unmarshalXMLSignature(context: javax.xml.crypto.dsig.XMLValidateContext): javax.xml.crypto.dsig.XMLSignature
+                    public abstract unmarshalXMLSignature(context: javax.xml.crypto.dsig.XMLValidateContext): javax.xml.crypto.dsig.XMLSignature
                     /**
                      * Unmarshals a new <code>XMLSignature</code> instance from a
                      * mechanism-specific <code>XMLStructure</code> instance.
@@ -576,7 +576,7 @@ declare namespace javax {
                      *     during unmarshalling
                      */
                     // @ts-ignore
-                    abstract unmarshalXMLSignature(xmlStructure: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.XMLSignature
+                    public abstract unmarshalXMLSignature(xmlStructure: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.XMLSignature
                     /**
                      * Indicates whether a specified feature is supported.
                      * @param feature the feature name (as an absolute URI)
@@ -585,7 +585,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>feature</code> is <code>null</code>
                      */
                     // @ts-ignore
-                    abstract isFeatureSupported(feature: string): boolean
+                    public abstract isFeatureSupported(feature: java.lang.String | string): boolean
                     /**
                      * Returns a reference to the <code>URIDereferencer</code> that is used by
                      * default to dereference URIs in {@link Reference} objects.
@@ -593,7 +593,7 @@ declare namespace javax {
                      *     <code>null</code>)
                      */
                     // @ts-ignore
-                    abstract getURIDereferencer(): javax.xml.crypto.URIDereferencer
+                    public abstract getURIDereferencer(): javax.xml.crypto.URIDereferencer
                 }
             }
         }

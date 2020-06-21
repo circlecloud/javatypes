@@ -72,7 +72,7 @@ declare namespace java {
              * @see #isUnresolved()
              */
             // @ts-ignore
-            constructor(hostname: string, port: number /*int*/)
+            constructor(hostname: java.lang.String | string, port: number /*int*/)
             /**
              * Creates an unresolved socket address from a hostname and a port number.
              * <p>
@@ -94,19 +94,19 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            createUnresolved(host: string, port: number /*int*/): java.net.InetSocketAddress
+            public static createUnresolved(host: java.lang.String | string, port: number /*int*/): java.net.InetSocketAddress
             /**
              * Gets the port number.
              * @return the port number.
              */
             // @ts-ignore
-            getPort(): int
+            public getPort(): number /*int*/
             /**
              * Gets the {@code InetAddress}.
              * @return the InetAdress or {#code null} if it is unresolved.
              */
             // @ts-ignore
-            getAddress(): java.net.InetAddress
+            public getAddress(): java.net.InetAddress
             /**
              * Gets the {@code hostname}.
              * Note: This method may trigger a name service reverse lookup if the
@@ -114,7 +114,7 @@ declare namespace java {
              * @return the hostname part of the address.
              */
             // @ts-ignore
-            getHostName(): java.lang.String
+            public getHostName(): string
             /**
              * Returns the hostname, or the String form of the address if it
              * doesn't have a hostname (it was created using a literal).
@@ -123,14 +123,14 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getHostString(): java.lang.String
+            public getHostString(): string
             /**
              * Checks whether the address has been resolved or not.
              * @return {#code true} if the hostname couldn't be resolved into
              *           an {@code InetAddress}.
              */
             // @ts-ignore
-            isUnresolved(): boolean
+            public isUnresolved(): boolean
             /**
              * Constructs a string representation of this InetSocketAddress.
              * This String is constructed by calling toString() on the InetAddress
@@ -139,7 +139,7 @@ declare namespace java {
              * @return a string representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -159,13 +159,13 @@ declare namespace java {
              * @see java.net.InetAddress#equals(java.lang.Object)
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hashcode for this socket address.
              * @return a hash code value for this socket address.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

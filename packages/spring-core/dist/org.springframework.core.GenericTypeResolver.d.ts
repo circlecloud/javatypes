@@ -21,7 +21,7 @@ declare namespace org {
                  * @deprecated since 5.2 in favor of {#code methodParameter.withContainingClass(implementationClass).getParameterType()}
                  */
                 // @ts-ignore
-                resolveParameterType(methodParameter: org.springframework.core.MethodParameter, implementationClass: java.lang.Class<any>): java.lang.Class<?>
+                public static resolveParameterType(methodParameter: org.springframework.core.MethodParameter, implementationClass: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Determine the target type for the generic return type of the given method,
                  * where formal type variables are declared on the given class.
@@ -30,7 +30,7 @@ declare namespace org {
                  * @return the corresponding generic parameter or return type
                  */
                 // @ts-ignore
-                resolveReturnType(method: java.lang.reflect.Method, clazz: java.lang.Class<any>): java.lang.Class<?>
+                public static resolveReturnType(method: java.lang.reflect.Method, clazz: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Resolve the single type argument of the given generic interface against the given
                  * target method which is assumed to return the given interface or an implementation
@@ -41,7 +41,7 @@ declare namespace org {
                  *  if not resolvable or if the single argument is of type {@link WildcardType}.
                  */
                 // @ts-ignore
-                resolveReturnTypeArgument(method: java.lang.reflect.Method, genericIfc: java.lang.Class<any>): java.lang.Class<?>
+                public static resolveReturnTypeArgument(method: java.lang.reflect.Method, genericIfc: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Resolve the single type argument of the given generic interface against
                  * the given target class which is assumed to implement the generic interface
@@ -51,7 +51,7 @@ declare namespace org {
                  * @return the resolved type of the argument, or {#code null} if not resolvable
                  */
                 // @ts-ignore
-                resolveTypeArgument(clazz: java.lang.Class<any>, genericIfc: java.lang.Class<any>): java.lang.Class<?>
+                public static resolveTypeArgument(clazz: java.lang.Class<any>, genericIfc: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Resolve the type arguments of the given generic interface against the given
                  * target class which is assumed to implement the generic interface and possibly
@@ -62,7 +62,7 @@ declare namespace org {
                  *  number of actual type arguments, or {#code null} if not resolvable
                  */
                 // @ts-ignore
-                resolveTypeArguments(clazz: java.lang.Class<any>, genericIfc: java.lang.Class<any>): java.lang.Class[]
+                public static resolveTypeArguments(clazz: java.lang.Class<any>, genericIfc: java.lang.Class<any>): java.lang.Class<any>[]
                 /**
                  * Resolve the given generic type against the given context class,
                  * substituting type variables as far as possible.
@@ -73,7 +73,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                resolveType(genericType: java.lang.reflect.Type, contextClass: java.lang.Class<any>): java.lang.reflect.Type
+                public static resolveType(genericType: java.lang.reflect.Type, contextClass: java.lang.Class<any>): java.lang.reflect.Type
                 /**
                  * Resolve the specified generic type against the given TypeVariable map.
                  * <p>Used by Spring Data.
@@ -82,7 +82,7 @@ declare namespace org {
                  * @return the type if it resolves to a Class, or {#code Object.class} otherwise
                  */
                 // @ts-ignore
-                resolveType(genericType: java.lang.reflect.Type, map: java.util.Map<java.lang.reflect.TypeVariable, java.lang.reflect.Type>): java.lang.Class<?>
+                public static resolveType(genericType: java.lang.reflect.Type, map: java.util.Map<java.lang.reflect.TypeVariable<any>, java.lang.reflect.Type>): java.lang.Class<any>
                 /**
                  * Build a mapping of {@link TypeVariable#getName TypeVariable names} to
                  * {@link Class concrete classes} for the specified {@link Class}.
@@ -90,7 +90,7 @@ declare namespace org {
                  * @see #resolveType(Type, Map)
                  */
                 // @ts-ignore
-                getTypeVariableMap(clazz: java.lang.Class<any>): java.util.Map<java.lang.reflect.TypeVariable, java.lang.reflect.Type>
+                public static getTypeVariableMap(clazz: java.lang.Class<any>): java.util.Map<java.lang.reflect.TypeVariable<any>, java.lang.reflect.Type>
             }
         }
     }

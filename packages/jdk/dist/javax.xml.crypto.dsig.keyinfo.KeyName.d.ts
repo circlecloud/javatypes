@@ -34,7 +34,7 @@ declare namespace javax {
                          *     <code>null</code>)
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                     }
                 }
             }

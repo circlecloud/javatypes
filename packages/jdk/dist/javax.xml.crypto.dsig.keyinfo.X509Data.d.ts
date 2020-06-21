@@ -55,7 +55,7 @@ declare namespace javax {
                          * <code>X509Data</code> structure.
                          */
                         // @ts-ignore
-                        
+                        readonly TYPE: java.lang.String | string
                         /**
                          * URI identifying the binary (ASN.1 DER) X.509 Certificate KeyInfo type:
                          * http://www.w3.org/2000/09/xmldsig#rawX509Certificate. This can be
@@ -63,7 +63,7 @@ declare namespace javax {
                          * {@link RetrievalMethod} class to describe a remote X509 Certificate.
                          */
                         // @ts-ignore
-                        
+                        readonly RAW_X509_CERTIFICATE_TYPE: java.lang.String | string
                         /**
                          * Returns an {@link java.util.Collections#unmodifiableList unmodifiable
                          * list} of the content in this <code>X509Data</code>. Valid types are
@@ -75,7 +75,7 @@ declare namespace javax {
                          *     (never <code>null</code> or empty)
                          */
                         // @ts-ignore
-                        getContent(): java.util.List
+                        getContent(): Array<any>
                     }
                 }
             }

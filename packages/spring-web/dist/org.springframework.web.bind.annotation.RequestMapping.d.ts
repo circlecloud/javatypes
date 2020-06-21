@@ -46,7 +46,7 @@ declare namespace org {
                      * @see org.springframework.web.reactive.result.method.annotation.RequestMappingHandlerAdapter
                      */
                     // @ts-ignore
-                    class RequestMapping implements java.lang.annotation.Annotation {
+                    abstract class RequestMapping implements java.lang.annotation.Annotation {
                     }
                 }
             }

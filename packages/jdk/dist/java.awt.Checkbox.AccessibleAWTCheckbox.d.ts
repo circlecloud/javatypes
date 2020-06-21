@@ -16,7 +16,7 @@ declare namespace java {
                  * toggle button changes.
                  */
                 // @ts-ignore
-                itemStateChanged(e: java.awt.event.ItemEvent): void
+                public itemStateChanged(e: java.awt.event.ItemEvent): void
                 /**
                  * Get the AccessibleAction associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -25,7 +25,7 @@ declare namespace java {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleAction(): javax.accessibility.AccessibleAction
+                public getAccessibleAction(): javax.accessibility.AccessibleAction
                 /**
                  * Get the AccessibleValue associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -34,7 +34,7 @@ declare namespace java {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleValue(): javax.accessibility.AccessibleValue
+                public getAccessibleValue(): javax.accessibility.AccessibleValue
                 /**
                  * Returns the number of Actions available in this object.
                  * If there is more than one, the first one is the "default"
@@ -42,20 +42,20 @@ declare namespace java {
                  * @return the number of Actions in this object
                  */
                 // @ts-ignore
-                getAccessibleActionCount(): int
+                public getAccessibleActionCount(): number /*int*/
                 /**
                  * Return a description of the specified action of the object.
                  * @param i zero-based index of the actions
                  */
                 // @ts-ignore
-                getAccessibleActionDescription(i: number /*int*/): java.lang.String
+                public getAccessibleActionDescription(i: number /*int*/): string
                 /**
                  * Perform the specified Action on the object
                  * @param i zero-based index of actions
                  * @return true if the the action was performed; else false.
                  */
                 // @ts-ignore
-                doAccessibleAction(i: number /*int*/): boolean
+                public doAccessibleAction(i: number /*int*/): boolean
                 /**
                  * Get the value of this object as a Number.  If the value has not been
                  * set, the return value will be null.
@@ -63,14 +63,14 @@ declare namespace java {
                  * @see #setCurrentAccessibleValue
                  */
                 // @ts-ignore
-                getCurrentAccessibleValue(): java.lang.Number
+                public getCurrentAccessibleValue(): java.lang.Number
                 /**
                  * Set the value of this object as a Number.
                  * @return True if the value was set; else False
                  * @see #getCurrentAccessibleValue
                  */
                 // @ts-ignore
-                setCurrentAccessibleValue(n: java.lang.Number): boolean
+                public setCurrentAccessibleValue(n: java.lang.Number): boolean
                 /**
                  * Get the minimum value of this object as a Number.
                  * @return Minimum value of the object; null if this object does not
@@ -78,7 +78,7 @@ declare namespace java {
                  * @see #getMaximumAccessibleValue
                  */
                 // @ts-ignore
-                getMinimumAccessibleValue(): java.lang.Number
+                public getMinimumAccessibleValue(): java.lang.Number
                 /**
                  * Get the maximum value of this object as a Number.
                  * @return Maximum value of the object; null if this object does not
@@ -86,7 +86,7 @@ declare namespace java {
                  * @see #getMinimumAccessibleValue
                  */
                 // @ts-ignore
-                getMaximumAccessibleValue(): java.lang.Number
+                public getMaximumAccessibleValue(): java.lang.Number
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of
@@ -94,7 +94,7 @@ declare namespace java {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Get the state set of this object.
                  * @return an instance of AccessibleState containing the current state
@@ -102,7 +102,7 @@ declare namespace java {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
             }
         }
     }

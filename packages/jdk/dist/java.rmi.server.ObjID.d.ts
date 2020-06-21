@@ -53,18 +53,18 @@ declare namespace java {
                  * Object number for well-known <code>ObjID</code> of the registry.
                  */
                 // @ts-ignore
-                readonly REGISTRY_ID: number /*int*/
+                public static readonly REGISTRY_ID: number /*int*/
                 /**
                  * Object number for well-known <code>ObjID</code> of the activator.
                  */
                 // @ts-ignore
-                readonly ACTIVATOR_ID: number /*int*/
+                public static readonly ACTIVATOR_ID: number /*int*/
                 /**
                  * Object number for well-known <code>ObjID</code> of
                  * the distributed garbage collector.
                  */
                 // @ts-ignore
-                readonly DGC_ID: number /*int*/
+                public static readonly DGC_ID: number /*int*/
                 /**
                  * Marshals a binary representation of this <code>ObjID</code> to
                  * an <code>ObjectOutput</code> instance.
@@ -79,7 +79,7 @@ declare namespace java {
                  *  this operation
                  */
                 // @ts-ignore
-                write(out: java.io.ObjectOutput): void
+                public write(out: java.io.ObjectOutput): void
                 /**
                  * Constructs and returns a new <code>ObjID</code> instance by
                  * unmarshalling a binary representation from an
@@ -98,14 +98,14 @@ declare namespace java {
                  *  this operation
                  */
                 // @ts-ignore
-                read(input: java.io.ObjectInput): java.rmi.server.ObjID
+                public static read(input: java.io.ObjectInput): java.rmi.server.ObjID
                 /**
                  * Returns the hash code value for this object identifier, the
                  * object number.
                  * @return the hash code value for this object identifier
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares the specified object with this <code>ObjID</code> for
                  * equality.
@@ -117,13 +117,13 @@ declare namespace java {
                  *  this one, and <code>false</code> otherwise
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a string representation of this object identifier.
                  * @return a string representation of this object identifier
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

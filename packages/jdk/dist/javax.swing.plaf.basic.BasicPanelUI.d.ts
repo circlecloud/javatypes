@@ -11,11 +11,11 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(p: javax.swing.JPanel): void
                     // @ts-ignore
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -37,7 +37,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 }
             }
         }

@@ -10,17 +10,17 @@ declare namespace org {
                     // @ts-ignore
                     constructor(pig: org.bukkit.entity.Pig, bolt: org.bukkit.entity.LightningStrike, pigzombie: org.bukkit.entity.PigZombie)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Pig
+                    public getEntity(): org.bukkit.entity.Pig
                     /**
                      * Gets the bolt which is striking the pig.
                      * @return lightning entity
                      */
                     // @ts-ignore
-                    getLightning(): org.bukkit.entity.LightningStrike
+                    public getLightning(): org.bukkit.entity.LightningStrike
                     /**
                      * Gets the zombie pig that will replace the pig, provided the event is
                      * not cancelled first.
@@ -28,11 +28,11 @@ declare namespace org {
                      * @deprecated use {#link EntityTransformEvent#getTransformedEntity()}
                      */
                     // @ts-ignore
-                    getPigZombie(): org.bukkit.entity.PigZombie
+                    public getPigZombie(): org.bukkit.entity.PigZombie
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

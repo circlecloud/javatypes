@@ -39,7 +39,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class AbstractAnnotationValueVisitor6<R, P> extends java.lang.Object implements javax.lang.model.element.AnnotationValueVisitor<R, P> {
+                abstract class AbstractAnnotationValueVisitor6<R, P> extends java.lang.Object implements javax.lang.model.element.AnnotationValueVisitor<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */
@@ -53,7 +53,7 @@ declare namespace javax {
                      * @param p  {#inheritDoc}
                      */
                     // @ts-ignore
-                    visit(av: javax.lang.model.element.AnnotationValue, p: P): R
+                    public visit(av: javax.lang.model.element.AnnotationValue, p: P): R
                     /**
                      * Visits an annotation value as if by passing itself to that
                      * value's {@link AnnotationValue#accept accept} method passing
@@ -63,7 +63,7 @@ declare namespace javax {
                      * @param av {#inheritDoc}
                      */
                     // @ts-ignore
-                    visit(av: javax.lang.model.element.AnnotationValue): R
+                    public visit(av: javax.lang.model.element.AnnotationValue): R
                     /**
                      * {@inheritDoc}
                      * <p>The default implementation of this method in {@code
@@ -74,7 +74,7 @@ declare namespace javax {
                      * @param p  {#inheritDoc}
                      */
                     // @ts-ignore
-                    visitUnknown(av: javax.lang.model.element.AnnotationValue, p: P): R
+                    public visitUnknown(av: javax.lang.model.element.AnnotationValue, p: P): R
                 }
             }
         }

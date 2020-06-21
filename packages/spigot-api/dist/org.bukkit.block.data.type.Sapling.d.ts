@@ -16,7 +16,7 @@ declare namespace org {
                          * @return the 'stage' value
                          */
                         // @ts-ignore
-                        getStage(): int
+                        getStage(): number /*int*/
                         /**
                          * Sets the value of the 'stage' property.
                          * @param stage the new 'stage' value
@@ -28,7 +28,7 @@ declare namespace org {
                          * @return the maximum 'stage' value
                          */
                         // @ts-ignore
-                        getMaximumStage(): int
+                        getMaximumStage(): number /*int*/
                     }
                 }
             }

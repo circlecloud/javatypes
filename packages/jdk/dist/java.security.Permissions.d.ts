@@ -52,7 +52,7 @@ declare namespace java {
              * @see PermissionCollection#isReadOnly()
              */
             // @ts-ignore
-            add(permission: java.security.Permission): void
+            public add(permission: java.security.Permission): void
             /**
              * Checks to see if this object's PermissionCollection for permissions of
              * the specified permission's class implies the permissions
@@ -78,14 +78,14 @@ declare namespace java {
              *  belongs to, false if not.
              */
             // @ts-ignore
-            implies(permission: java.security.Permission): boolean
+            public implies(permission: java.security.Permission): boolean
             /**
              * Returns an enumeration of all the Permission objects in all the
              * PermissionCollections in this Permissions object.
              * @return an enumeration of all the Permissions.
              */
             // @ts-ignore
-            elements(): java.util.Enumeration<java.security.Permission>
+            public elements(): java.util.Enumeration<java.security.Permission>
         }
     }
 }

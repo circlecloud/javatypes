@@ -75,7 +75,7 @@ declare namespace javax {
                          * <code>DSAKeyValue</code> structure.
                          */
                         // @ts-ignore
-                        
+                        readonly DSA_TYPE: java.lang.String | string
                         /**
                          * URI identifying the RSA KeyValue KeyInfo type:
                          * http://www.w3.org/2000/09/xmldsig#RSAKeyValue. This can be specified as
@@ -84,7 +84,7 @@ declare namespace javax {
                          * <code>RSAKeyValue</code> structure.
                          */
                         // @ts-ignore
-                        
+                        readonly RSA_TYPE: java.lang.String | string
                         /**
                          * Returns the public key of this <code>KeyValue</code>.
                          * @return the public key of this <code>KeyValue</code>

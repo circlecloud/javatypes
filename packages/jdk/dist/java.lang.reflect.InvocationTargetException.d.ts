@@ -26,7 +26,7 @@ declare namespace java {
                  * @param target the target exception
                  */
                 // @ts-ignore
-                constructor(target: Error)
+                constructor(target: java.lang.Throwable | Error)
                 /**
                  * Constructs a InvocationTargetException with a target exception
                  * and a detail message.
@@ -34,7 +34,7 @@ declare namespace java {
                  * @param s      the detail message
                  */
                 // @ts-ignore
-                constructor(target: Error, s: string)
+                constructor(target: java.lang.Throwable | Error, s: java.lang.String | string)
                 /**
                  * Get the thrown target exception.
                  * <p>This method predates the general-purpose exception chaining facility.
@@ -43,7 +43,7 @@ declare namespace java {
                  * @return the thrown target exception (cause of this exception).
                  */
                 // @ts-ignore
-                getTargetException(): java.lang.Throwable
+                getTargetException(): Error
                 /**
                  * Returns the cause of this exception (the thrown target exception,
                  * which may be {@code null}).
@@ -51,7 +51,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

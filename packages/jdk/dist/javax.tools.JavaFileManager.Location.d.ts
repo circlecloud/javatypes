@@ -12,7 +12,7 @@ declare namespace javax {
                  * @return a name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Determines if this is an output location.  An output
                  * location is a location that is conventionally used for

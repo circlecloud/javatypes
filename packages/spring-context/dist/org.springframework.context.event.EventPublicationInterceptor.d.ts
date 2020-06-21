@@ -33,13 +33,13 @@ declare namespace org {
                      *  if it does not expose a constructor that takes a single {@code Object} argument
                      */
                     // @ts-ignore
-                    setApplicationEventClass(applicationEventClass: java.lang.Class<any>): void
+                    public setApplicationEventClass(applicationEventClass: java.lang.Class<any>): void
                     // @ts-ignore
-                    setApplicationEventPublisher(applicationEventPublisher: org.springframework.context.ApplicationEventPublisher): void
+                    public setApplicationEventPublisher(applicationEventPublisher: org.springframework.context.ApplicationEventPublisher): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                 }
             }
         }

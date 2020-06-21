@@ -27,7 +27,7 @@ declare namespace javax {
              * @author Philip Milne
              */
             // @ts-ignore
-            class AbstractTableModel extends java.lang.Object implements javax.swing.table.TableModel, java.io.Serializable {
+            abstract class AbstractTableModel extends java.lang.Object implements javax.swing.table.TableModel, java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -43,7 +43,7 @@ declare namespace javax {
                  * @return a string containing the default name of <code>column</code>
                  */
                 // @ts-ignore
-                getColumnName(column: number /*int*/): java.lang.String
+                public getColumnName(column: number /*int*/): string
                 /**
                  * Returns a column given its name.
                  * Implementation is naive so this should be overridden if
@@ -54,14 +54,14 @@ declare namespace javax {
                  * @return the column with <code>columnName</code>, or -1 if not found
                  */
                 // @ts-ignore
-                findColumn(columnName: string): int
+                public findColumn(columnName: java.lang.String | string): number /*int*/
                 /**
                  * Returns <code>Object.class</code> regardless of <code>columnIndex</code>.
                  * @param columnIndex  the column being queried
                  * @return the Object.class
                  */
                 // @ts-ignore
-                getColumnClass(columnIndex: number /*int*/): java.lang.Class<?>
+                public getColumnClass(columnIndex: number /*int*/): java.lang.Class<any>
                 /**
                  * Returns false.  This is the default implementation for all cells.
                  * @param rowIndex  the row being queried
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @return false
                  */
                 // @ts-ignore
-                isCellEditable(rowIndex: number /*int*/, columnIndex: number /*int*/): boolean
+                public isCellEditable(rowIndex: number /*int*/, columnIndex: number /*int*/): boolean
                 /**
                  * This empty implementation is provided so users don't have to implement
                  * this method if their data model is not editable.
@@ -78,21 +78,21 @@ declare namespace javax {
                  * @param columnIndex  column of cell
                  */
                 // @ts-ignore
-                setValueAt(aValue: any, rowIndex: number /*int*/, columnIndex: number /*int*/): void
+                public setValueAt(aValue: java.lang.Object | any, rowIndex: number /*int*/, columnIndex: number /*int*/): void
                 /**
                  * Adds a listener to the list that's notified each time a change
                  * to the data model occurs.
                  * @param l               the TableModelListener
                  */
                 // @ts-ignore
-                addTableModelListener(l: javax.swing.event.TableModelListener): void
+                public addTableModelListener(l: javax.swing.event.TableModelListener): void
                 /**
                  * Removes a listener from the list that's notified each time a
                  * change to the data model occurs.
                  * @param l               the TableModelListener
                  */
                 // @ts-ignore
-                removeTableModelListener(l: javax.swing.event.TableModelListener): void
+                public removeTableModelListener(l: javax.swing.event.TableModelListener): void
                 /**
                  * Returns an array of all the table model listeners
                  * registered on this model.
@@ -104,7 +104,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getTableModelListeners(): javax.swing.event.TableModelListener[]
+                public getTableModelListeners(): javax.swing.event.TableModelListener[]
                 /**
                  * Notifies all listeners that all cell values in the table's
                  * rows may have changed. The number of rows may also have changed
@@ -116,7 +116,7 @@ declare namespace javax {
                  * @see javax.swing.JTable#tableChanged(TableModelEvent)
                  */
                 // @ts-ignore
-                fireTableDataChanged(): void
+                public fireTableDataChanged(): void
                 /**
                  * Notifies all listeners that the table's structure has changed.
                  * The number of columns in the table, and the names and types of
@@ -131,7 +131,7 @@ declare namespace javax {
                  * @see EventListenerList
                  */
                 // @ts-ignore
-                fireTableStructureChanged(): void
+                public fireTableStructureChanged(): void
                 /**
                  * Notifies all listeners that rows in the range
                  * <code>[firstRow, lastRow]</code>, inclusive, have been inserted.
@@ -141,7 +141,7 @@ declare namespace javax {
                  * @see EventListenerList
                  */
                 // @ts-ignore
-                fireTableRowsInserted(firstRow: number /*int*/, lastRow: number /*int*/): void
+                public fireTableRowsInserted(firstRow: number /*int*/, lastRow: number /*int*/): void
                 /**
                  * Notifies all listeners that rows in the range
                  * <code>[firstRow, lastRow]</code>, inclusive, have been updated.
@@ -151,7 +151,7 @@ declare namespace javax {
                  * @see EventListenerList
                  */
                 // @ts-ignore
-                fireTableRowsUpdated(firstRow: number /*int*/, lastRow: number /*int*/): void
+                public fireTableRowsUpdated(firstRow: number /*int*/, lastRow: number /*int*/): void
                 /**
                  * Notifies all listeners that rows in the range
                  * <code>[firstRow, lastRow]</code>, inclusive, have been deleted.
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @see EventListenerList
                  */
                 // @ts-ignore
-                fireTableRowsDeleted(firstRow: number /*int*/, lastRow: number /*int*/): void
+                public fireTableRowsDeleted(firstRow: number /*int*/, lastRow: number /*int*/): void
                 /**
                  * Notifies all listeners that the value of the cell at
                  * <code>[row, column]</code> has been updated.
@@ -171,7 +171,7 @@ declare namespace javax {
                  * @see EventListenerList
                  */
                 // @ts-ignore
-                fireTableCellUpdated(row: number /*int*/, column: number /*int*/): void
+                public fireTableCellUpdated(row: number /*int*/, column: number /*int*/): void
                 /**
                  * Forwards the given notification event to all
                  * <code>TableModelListeners</code> that registered
@@ -182,7 +182,7 @@ declare namespace javax {
                  * @see EventListenerList
                  */
                 // @ts-ignore
-                fireTableChanged(e: javax.swing.event.TableModelEvent): void
+                public fireTableChanged(e: javax.swing.event.TableModelEvent): void
                 /**
                  * Returns an array of all the objects currently registered
                  * as <code><em>Foo</em>Listener</code>s
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             }
         }
     }

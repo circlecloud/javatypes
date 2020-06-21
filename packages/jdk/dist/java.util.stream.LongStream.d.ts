@@ -23,7 +23,7 @@ declare namespace java {
              * @see <a href="package-summary.html">java.util.stream</a>
              */
             // @ts-ignore
-            interface LongStream extends java.util.stream.BaseStream<java.lang.Long, java.util.stream.LongStream> {
+            interface LongStream extends java.util.stream.BaseStream<java.lang.Long | number, java.util.stream.LongStream> {
                 /**
                  * Returns a stream consisting of the elements of this stream that match
                  * the given predicate.
@@ -36,7 +36,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                filter(predicate: java.util.function.LongPredicate | java.util.function$.LongPredicate): java.util.stream.LongStream
+                filter(predicate: java.util.function$.LongPredicate): java.util.stream.LongStream
                 /**
                  * Returns a stream consisting of the results of applying the given
                  * function to the elements of this stream.
@@ -48,7 +48,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                map(mapper: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): java.util.stream.LongStream
+                map(mapper: java.util.function$.LongUnaryOperator): java.util.stream.LongStream
                 /**
                  * Returns an object-valued {@code Stream} consisting of the results of
                  * applying the given function to the elements of this stream.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToObj<U>(mapper: java.util.function.LongFunction<U> | java.util.function$.LongFunction<U>): java.util.stream.Stream<U>
+                mapToObj<U>(mapper: java.util.function$.LongFunction<any>): java.util.stream.Stream<U>
                 /**
                  * Returns an {@code IntStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -73,7 +73,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToInt(mapper: java.util.function.LongToIntFunction | java.util.function$.LongToIntFunction): java.util.stream.IntStream
+                mapToInt(mapper: java.util.function$.LongToIntFunction): java.util.stream.IntStream
                 /**
                  * Returns a {@code DoubleStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -85,7 +85,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToDouble(mapper: java.util.function.LongToDoubleFunction | java.util.function$.LongToDoubleFunction): java.util.stream.DoubleStream
+                mapToDouble(mapper: java.util.function$.LongToDoubleFunction): java.util.stream.DoubleStream
                 /**
                  * Returns a stream consisting of the results of replacing each element of
                  * this stream with the contents of a mapped stream produced by applying
@@ -103,7 +103,7 @@ declare namespace java {
                  * @see Stream#flatMap(Function)
                  */
                 // @ts-ignore
-                flatMap(mapper: java.util.function.LongFunction<java.util.stream.LongStream> | java.util.function$.LongFunction<java.util.stream.LongStream>): java.util.stream.LongStream
+                flatMap(mapper: java.util.function$.LongFunction<any>): java.util.stream.LongStream
                 /**
                  * Returns a stream consisting of the distinct elements of this stream.
                  * <p>This is a <a href="package-summary.html#StreamOps">stateful
@@ -147,7 +147,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                peek(action: java.util.function.LongConsumer | java.util.function$.LongConsumer): java.util.stream.LongStream
+                peek(action: java.util.function$.LongConsumer): java.util.stream.LongStream
                 /**
                  * Returns a stream consisting of the elements of this stream, truncated
                  * to be no longer than {@code maxSize} in length.
@@ -210,7 +210,7 @@ declare namespace java {
                  *                non-interfering</a> action to perform on the elements
                  */
                 // @ts-ignore
-                forEach(action: java.util.function.LongConsumer | java.util.function$.LongConsumer): void
+                forEach(action: java.util.function$.LongConsumer): void
                 /**
                  * Performs an action for each element of this stream, guaranteeing that
                  * each element is processed in encounter order for streams that have a
@@ -222,7 +222,7 @@ declare namespace java {
                  * @see #forEach(LongConsumer)
                  */
                 // @ts-ignore
-                forEachOrdered(action: java.util.function.LongConsumer | java.util.function$.LongConsumer): void
+                forEachOrdered(action: java.util.function$.LongConsumer): void
                 /**
                  * Returns an array containing the elements of this stream.
                  * <p>This is a <a href="package-summary.html#StreamOps">terminal
@@ -230,7 +230,7 @@ declare namespace java {
                  * @return an array containing the elements of this stream
                  */
                 // @ts-ignore
-                toArray(): long[]
+                toArray(): number /*long*/[]
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using the provided identity value and an
@@ -280,7 +280,7 @@ declare namespace java {
                  * @see #average()
                  */
                 // @ts-ignore
-                reduce(identity: number /*long*/, op: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                reduce(identity: number /*long*/, op: java.util.function$.LongBinaryOperator): number /*long*/
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using an
@@ -313,7 +313,7 @@ declare namespace java {
                  * @see #reduce(long, LongBinaryOperator)
                  */
                 // @ts-ignore
-                reduce(op: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): java.util.OptionalLong
+                reduce(op: java.util.function$.LongBinaryOperator): java.util.OptionalLong
                 /**
                  * Performs a <a href="package-summary.html#MutableReduction">mutable
                  * reduction</a> operation on the elements of this stream.  A mutable
@@ -348,7 +348,7 @@ declare namespace java {
                  * @see Stream#collect(Supplier, BiConsumer, BiConsumer)
                  */
                 // @ts-ignore
-                collect<R>(supplier: java.util.function.Supplier<R> | java.util.function$.Supplier<R>, accumulator: java.util.function.ObjLongConsumer<R> | java.util.function$.ObjLongConsumer<R>, combiner: java.util.function.BiConsumer<R, R> | java.util.function$.BiConsumer<R, R>): R
+                collect<R>(supplier: java.util.function$.Supplier<R>, accumulator: java.util.function$.ObjLongConsumer<R>, combiner: java.util.function$.BiConsumer<R, R>): R
                 /**
                  * Returns the sum of elements in this stream.  This is a special case
                  * of a <a href="package-summary.html#Reduction">reduction</a>
@@ -361,7 +361,7 @@ declare namespace java {
                  * @return the sum of elements in this stream
                  */
                 // @ts-ignore
-                sum(): long
+                sum(): number /*long*/
                 /**
                  * Returns an {@code OptionalLong} describing the minimum element of this
                  * stream, or an empty optional if this stream is empty.  This is a special
@@ -402,7 +402,7 @@ declare namespace java {
                  * @return the count of elements in this stream
                  */
                 // @ts-ignore
-                count(): long
+                count(): number /*long*/
                 /**
                  * Returns an {@code OptionalDouble} describing the arithmetic mean of elements of
                  * this stream, or an empty optional if this stream is empty.  This is a
@@ -442,7 +442,7 @@ declare namespace java {
                  *  predicate, otherwise {@code false}
                  */
                 // @ts-ignore
-                anyMatch(predicate: java.util.function.LongPredicate | java.util.function$.LongPredicate): boolean
+                anyMatch(predicate: java.util.function$.LongPredicate): boolean
                 /**
                  * Returns whether all elements of this stream match the provided predicate.
                  * May not evaluate the predicate on all elements if not necessary for
@@ -461,7 +461,7 @@ declare namespace java {
                  *  provided predicate or the stream is empty, otherwise {@code false}
                  */
                 // @ts-ignore
-                allMatch(predicate: java.util.function.LongPredicate | java.util.function$.LongPredicate): boolean
+                allMatch(predicate: java.util.function$.LongPredicate): boolean
                 /**
                  * Returns whether no elements of this stream match the provided predicate.
                  * May not evaluate the predicate on all elements if not necessary for
@@ -480,7 +480,7 @@ declare namespace java {
                  *  provided predicate or the stream is empty, otherwise {@code false}
                  */
                 // @ts-ignore
-                noneMatch(predicate: java.util.function.LongPredicate | java.util.function$.LongPredicate): boolean
+                noneMatch(predicate: java.util.function$.LongPredicate): boolean
                 /**
                  * Returns an {@link OptionalLong} describing the first element of this
                  * stream, or an empty {@code OptionalLong} if the stream is empty.  If the
@@ -527,7 +527,7 @@ declare namespace java {
                  *  each boxed to {@code Long}
                  */
                 // @ts-ignore
-                boxed(): java.util.stream.Stream<java.lang.Long>
+                boxed(): java.util.stream.Stream<java.lang.Long | number>
                 // @ts-ignore
                 sequential(): java.util.stream.LongStream
                 // @ts-ignore
@@ -577,7 +577,7 @@ declare namespace java {
                  * @return a new sequential {#code LongStream}
                  */
                 // @ts-ignore
-                iterate(seed: number /*long*/, f: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): java.util.stream.LongStream
+                iterate(seed: number /*long*/, f: java.util.function$.LongUnaryOperator): java.util.stream.LongStream
                 /**
                  * Returns an infinite sequential unordered stream where each element is
                  * generated by the provided {@code LongSupplier}.  This is suitable for
@@ -586,7 +586,7 @@ declare namespace java {
                  * @return a new infinite sequential unordered {#code LongStream}
                  */
                 // @ts-ignore
-                generate(s: java.util.function.LongSupplier | java.util.function$.LongSupplier): java.util.stream.LongStream
+                generate(s: java.util.function$.LongSupplier): java.util.stream.LongStream
                 /**
                  * Returns a sequential ordered {@code LongStream} from {@code startInclusive}
                  * (inclusive) to {@code endExclusive} (exclusive) by an incremental step of

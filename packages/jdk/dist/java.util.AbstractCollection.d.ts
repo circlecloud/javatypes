@@ -27,7 +27,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AbstractCollection<E> extends java.lang.Object implements java.util.Collection<E> {
+        abstract class AbstractCollection<E> extends java.lang.Object implements java.util.Collection<E> {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -39,15 +39,15 @@ declare namespace java {
              * @return an iterator over the elements contained in this collection
              */
             // @ts-ignore
-            abstract iterator(): java.util.Iterator<E>
+            public abstract iterator(): java.util.Iterator<E>
             // @ts-ignore
-            abstract size(): int
+            public abstract size(): number /*int*/
             /**
              * {@inheritDoc}
              * <p>This implementation returns <tt>size() == 0</tt>.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over the elements in the collection,
@@ -56,7 +56,7 @@ declare namespace java {
              * @throws NullPointerException {#inheritDoc}
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation returns an array containing all the elements
@@ -77,7 +77,7 @@ declare namespace java {
              * }</pre>
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * {@inheritDoc}
              * <p>This implementation returns an array containing all the elements
@@ -102,7 +102,7 @@ declare namespace java {
              * @throws NullPointerException {#inheritDoc}
              */
             // @ts-ignore
-            toArray<T>(a: T[]): T
+            public toArray<T>(a: T[]): T
             /**
              * {@inheritDoc}
              * <p>This implementation always throws an
@@ -114,7 +114,7 @@ declare namespace java {
              * @throws IllegalStateException         {#inheritDoc}
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over the collection looking for the
@@ -129,7 +129,7 @@ declare namespace java {
              * @throws NullPointerException          {#inheritDoc}
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over the specified collection,
@@ -141,7 +141,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            containsAll(c: Array<any>): boolean
+            public containsAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over the specified collection, and adds
@@ -157,7 +157,7 @@ declare namespace java {
              * @see #add(Object)
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over this collection, checking each
@@ -176,7 +176,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            public removeAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over this collection, checking each
@@ -195,7 +195,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            retainAll(c: Array<any>): boolean
+            public retainAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * {@inheritDoc}
              * <p>This implementation iterates over this collection, removing each
@@ -209,7 +209,7 @@ declare namespace java {
              * @throws UnsupportedOperationException {#inheritDoc}
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns a string representation of this collection.  The string
              * representation consists of a list of the collection's elements in the
@@ -220,7 +220,7 @@ declare namespace java {
              * @return a string representation of this collection
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -20,28 +20,28 @@ declare namespace org {
                  * is removed when the browser is closed.
                  */
                 // @ts-ignore
-                getMaxAge(): java.time.Duration
+                public getMaxAge(): java.time.Duration
                 /**
                  * Return the cookie "Domain" attribute, or {@code null} if not set.
                  */
                 // @ts-ignore
-                getDomain(): java.lang.String
+                public getDomain(): string
                 /**
                  * Return the cookie "Path" attribute, or {@code null} if not set.
                  */
                 // @ts-ignore
-                getPath(): java.lang.String
+                public getPath(): string
                 /**
                  * Return {@code true} if the cookie has the "Secure" attribute.
                  */
                 // @ts-ignore
-                isSecure(): boolean
+                public isSecure(): boolean
                 /**
                  * Return {@code true} if the cookie has the "HttpOnly" attribute.
                  * @see <a href="https://www.owasp.org/index.php/HTTPOnly">https://www.owasp.org/index.php/HTTPOnly</a>
                  */
                 // @ts-ignore
-                isHttpOnly(): boolean
+                public isHttpOnly(): boolean
                 /**
                  * Return the cookie "SameSite" attribute, or {@code null} if not set.
                  * <p>This limits the scope of the cookie such that it will only be attached to
@@ -50,13 +50,13 @@ declare namespace org {
                  * @since 5.1
                  */
                 // @ts-ignore
-                getSameSite(): java.lang.String
+                public getSameSite(): string
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Factory method to obtain a builder for a server-defined cookie that starts
                  * with a name-value pair and may also include attributes.
@@ -65,7 +65,7 @@ declare namespace org {
                  * @return a builder to create the cookie with
                  */
                 // @ts-ignore
-                from(name: string, value: string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
+                public static from(name: java.lang.String | string, value: java.lang.String | string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
                 /**
                  * Factory method to obtain a builder for a server-defined cookie. Unlike
                  * {@link #from(String, String)} this option assumes input from a remote
@@ -77,7 +77,7 @@ declare namespace org {
                  * @since 5.2.5
                  */
                 // @ts-ignore
-                fromClientResponse(name: string, value: string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
+                public static fromClientResponse(name: java.lang.String | string, value: java.lang.String | string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
             }
         }
     }

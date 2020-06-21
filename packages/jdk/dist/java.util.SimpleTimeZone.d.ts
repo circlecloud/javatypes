@@ -102,7 +102,7 @@ declare namespace java {
              * @param ID         The time zone name that is given to this instance.
              */
             // @ts-ignore
-            constructor(rawOffset: number /*int*/, ID: string)
+            constructor(rawOffset: number /*int*/, ID: java.lang.String | string)
             /**
              * Constructs a SimpleTimeZone with the given base time zone offset from
              * GMT, time zone ID, and rules for starting and ending the daylight
@@ -152,7 +152,7 @@ declare namespace java {
              *  parameters are out of range for the start or end rule
              */
             // @ts-ignore
-            constructor(rawOffset: number /*int*/, ID: string, startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/)
+            constructor(rawOffset: number /*int*/, ID: java.lang.String | string, startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/)
             /**
              * Constructs a SimpleTimeZone with the given base time zone offset from
              * GMT, time zone ID, and rules for starting and ending the daylight
@@ -201,7 +201,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            constructor(rawOffset: number /*int*/, ID: string, startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/, dstSavings: number /*int*/)
+            constructor(rawOffset: number /*int*/, ID: java.lang.String | string, startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/, dstSavings: number /*int*/)
             /**
              * Constructs a SimpleTimeZone with the given base time zone offset from
              * GMT, time zone ID, and rules for starting and ending the daylight
@@ -244,7 +244,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(rawOffset: number /*int*/, ID: string, startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, startTimeMode: number /*int*/, endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/, endTimeMode: number /*int*/, dstSavings: number /*int*/)
+            constructor(rawOffset: number /*int*/, ID: java.lang.String | string, startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, startTimeMode: number /*int*/, endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/, endTimeMode: number /*int*/, dstSavings: number /*int*/)
             /**
              * Constant for a mode of start or end time specified as wall clock
              * time.  Wall clock time is standard time for the onset rule, and
@@ -252,26 +252,26 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly WALL_TIME: number /*int*/
+            public static readonly WALL_TIME: number /*int*/
             /**
              * Constant for a mode of start or end time specified as standard time.
              * @since 1.4
              */
             // @ts-ignore
-            readonly STANDARD_TIME: number /*int*/
+            public static readonly STANDARD_TIME: number /*int*/
             /**
              * Constant for a mode of start or end time specified as UTC. European
              * Union rules are specified as UTC time, for example.
              * @since 1.4
              */
             // @ts-ignore
-            readonly UTC_TIME: number /*int*/
+            public static readonly UTC_TIME: number /*int*/
             /**
              * Sets the daylight saving time starting year.
              * @param year  The daylight saving starting year.
              */
             // @ts-ignore
-            setStartYear(year: number /*int*/): void
+            public setStartYear(year: number /*int*/): void
             /**
              * Sets the daylight saving time start rule. For example, if daylight saving
              * time starts on the first Sunday in April at 2 am in local wall clock
@@ -290,7 +290,7 @@ declare namespace java {
              *  <code>startDayOfWeek</code>, or <code>startTime</code> parameters are out of range
              */
             // @ts-ignore
-            setStartRule(startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/): void
+            public setStartRule(startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/): void
             /**
              * Sets the daylight saving time start rule to a fixed date within a month.
              * This method is equivalent to:
@@ -307,7 +307,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setStartRule(startMonth: number /*int*/, startDay: number /*int*/, startTime: number /*int*/): void
+            public setStartRule(startMonth: number /*int*/, startDay: number /*int*/, startTime: number /*int*/): void
             /**
              * Sets the daylight saving time start rule to a weekday before or after the given date within
              * a month, e.g., the first Monday on or after the 8th.
@@ -327,7 +327,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setStartRule(startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, after: boolean): void
+            public setStartRule(startMonth: number /*int*/, startDay: number /*int*/, startDayOfWeek: number /*int*/, startTime: number /*int*/, after: boolean): void
             /**
              * Sets the daylight saving time end rule. For example, if daylight saving time
              * ends on the last Sunday in October at 2 am in wall clock time,
@@ -347,7 +347,7 @@ declare namespace java {
              *  <code>endDayOfWeek</code>, or <code>endTime</code> parameters are out of range
              */
             // @ts-ignore
-            setEndRule(endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/): void
+            public setEndRule(endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/): void
             /**
              * Sets the daylight saving time end rule to a fixed date within a month.
              * This method is equivalent to:
@@ -364,7 +364,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setEndRule(endMonth: number /*int*/, endDay: number /*int*/, endTime: number /*int*/): void
+            public setEndRule(endMonth: number /*int*/, endDay: number /*int*/, endTime: number /*int*/): void
             /**
              * Sets the daylight saving time end rule to a weekday before or after the given date within
              * a month, e.g., the first Monday on or after the 8th.
@@ -385,7 +385,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setEndRule(endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/, after: boolean): void
+            public setEndRule(endMonth: number /*int*/, endDay: number /*int*/, endDayOfWeek: number /*int*/, endTime: number /*int*/, after: boolean): void
             /**
              * Returns the offset of this time zone from UTC at the given
              * time. If daylight saving time is in effect at the given time,
@@ -397,7 +397,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getOffset(date: number /*long*/): int
+            public getOffset(date: number /*long*/): number /*int*/
             /**
              * Returns the difference in milliseconds between local time and
              * UTC, taking into account both the raw offset and the effect of
@@ -423,21 +423,21 @@ declare namespace java {
              *                   or <code>millis</code> parameters are out of range
              */
             // @ts-ignore
-            getOffset(era: number /*int*/, year: number /*int*/, month: number /*int*/, day: number /*int*/, dayOfWeek: number /*int*/, millis: number /*int*/): int
+            public getOffset(era: number /*int*/, year: number /*int*/, month: number /*int*/, day: number /*int*/, dayOfWeek: number /*int*/, millis: number /*int*/): number /*int*/
             /**
              * Gets the GMT offset for this time zone.
              * @return the GMT offset value in milliseconds
              * @see #setRawOffset
              */
             // @ts-ignore
-            getRawOffset(): int
+            public getRawOffset(): number /*int*/
             /**
              * Sets the base time zone offset to GMT.
              * This is the offset to add to UTC to get local time.
              * @see #getRawOffset
              */
             // @ts-ignore
-            setRawOffset(offsetMillis: number /*int*/): void
+            public setRawOffset(offsetMillis: number /*int*/): void
             /**
              * Sets the amount of time in milliseconds that the clock is advanced
              * during daylight saving time.
@@ -448,7 +448,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setDSTSavings(millisSavedDuringDST: number /*int*/): void
+            public setDSTSavings(millisSavedDuringDST: number /*int*/): void
             /**
              * Returns the amount of time in milliseconds that the clock is
              * advanced during daylight saving time.
@@ -460,14 +460,14 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getDSTSavings(): int
+            public getDSTSavings(): number /*int*/
             /**
              * Queries if this time zone uses daylight saving time.
              * @return true if this time zone uses daylight saving time;
              *  false otherwise.
              */
             // @ts-ignore
-            useDaylightTime(): boolean
+            public useDaylightTime(): boolean
             /**
              * Returns {@code true} if this {@code SimpleTimeZone} observes
              * Daylight Saving Time. This method is equivalent to {@link
@@ -477,26 +477,26 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            observesDaylightTime(): boolean
+            public observesDaylightTime(): boolean
             /**
              * Queries if the given date is in daylight saving time.
              * @return true if daylight saving time is in effective at the
              *  given date; false otherwise.
              */
             // @ts-ignore
-            inDaylightTime(date: java.util.Date): boolean
+            public inDaylightTime(date: java.util.Date): boolean
             /**
              * Returns a clone of this <code>SimpleTimeZone</code> instance.
              * @return a clone of this instance.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Generates the hash code for the SimpleDateFormat object.
              * @return the hash code for this object
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares the equality of two <code>SimpleTimeZone</code> objects.
              * @param obj  The <code>SimpleTimeZone</code> object to be compared with.
@@ -504,7 +504,7 @@ declare namespace java {
              *              <code>SimpleTimeZone</code> object; false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns <code>true</code> if this zone has the same rules and offset as another zone.
              * @param other the TimeZone object to be compared with
@@ -513,13 +513,13 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            hasSameRules(other: java.util.TimeZone): boolean
+            public hasSameRules(other: java.util.TimeZone): boolean
             /**
              * Returns a string representation of this time zone.
              * @return a string representation of this time zone.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

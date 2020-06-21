@@ -76,7 +76,7 @@ declare namespace javax {
                      * @return {#inheritDoc}
                      */
                     // @ts-ignore
-                    visitPackage(e: javax.lang.model.element.PackageElement, p: P): R
+                    public visitPackage(e: javax.lang.model.element.PackageElement, p: P): R
                     /**
                      * Visits a type element, dispatching to the visit method for the
                      * specific {@linkplain ElementKind kind} of type, {@code
@@ -87,7 +87,7 @@ declare namespace javax {
                      * @return the result of the kind-specific visit method
                      */
                     // @ts-ignore
-                    visitType(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitType(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * Visits an {@code ANNOTATION_TYPE} type element by calling
                      * {@code defaultAction}.
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitTypeAsAnnotationType(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitTypeAsAnnotationType(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * Visits a {@code CLASS} type element by calling {@code
                      * defaultAction}.
@@ -105,7 +105,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitTypeAsClass(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitTypeAsClass(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * Visits an {@code ENUM} type element by calling {@code
                      * defaultAction}.
@@ -114,7 +114,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitTypeAsEnum(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitTypeAsEnum(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * Visits an {@code INTERFACE} type element by calling {@code
                      * defaultAction}.
@@ -124,7 +124,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitTypeAsInterface(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitTypeAsInterface(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * Visits a variable element, dispatching to the visit method for
                      * the specific {@linkplain ElementKind kind} of variable, {@code
@@ -135,7 +135,7 @@ declare namespace javax {
                      * @return the result of the kind-specific visit method
                      */
                     // @ts-ignore
-                    visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits an {@code ENUM_CONSTANT} variable element by calling
                      * {@code defaultAction}.
@@ -144,7 +144,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitVariableAsEnumConstant(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariableAsEnumConstant(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits an {@code EXCEPTION_PARAMETER} variable element by calling
                      * {@code defaultAction}.
@@ -153,7 +153,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitVariableAsExceptionParameter(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariableAsExceptionParameter(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits a {@code FIELD} variable element by calling
                      * {@code defaultAction}.
@@ -162,7 +162,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitVariableAsField(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariableAsField(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits a {@code LOCAL_VARIABLE} variable element by calling
                      * {@code defaultAction}.
@@ -171,7 +171,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitVariableAsLocalVariable(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariableAsLocalVariable(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits a {@code PARAMETER} variable element by calling
                      * {@code defaultAction}.
@@ -180,7 +180,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitVariableAsParameter(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariableAsParameter(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits a {@code RESOURCE_VARIABLE} variable element by calling
                      * {@code visitUnknown}.
@@ -190,7 +190,7 @@ declare namespace javax {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    visitVariableAsResourceVariable(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariableAsResourceVariable(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * Visits an executable element, dispatching to the visit method
                      * for the specific {@linkplain ElementKind kind} of executable,
@@ -201,7 +201,7 @@ declare namespace javax {
                      * @return the result of the kind-specific visit method
                      */
                     // @ts-ignore
-                    visitExecutable(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutable(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * Visits a {@code CONSTRUCTOR} executable element by calling
                      * {@code defaultAction}.
@@ -210,7 +210,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitExecutableAsConstructor(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutableAsConstructor(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * Visits an {@code INSTANCE_INIT} executable element by calling
                      * {@code defaultAction}.
@@ -219,7 +219,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitExecutableAsInstanceInit(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutableAsInstanceInit(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * Visits a {@code METHOD} executable element by calling
                      * {@code defaultAction}.
@@ -228,7 +228,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitExecutableAsMethod(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutableAsMethod(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * Visits a {@code STATIC_INIT} executable element by calling
                      * {@code defaultAction}.
@@ -237,7 +237,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitExecutableAsStaticInit(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutableAsStaticInit(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * {@inheritDoc}
                      * The element argument has kind {@code TYPE_PARAMETER}.
@@ -246,7 +246,7 @@ declare namespace javax {
                      * @return {#inheritDoc}
                      */
                     // @ts-ignore
-                    visitTypeParameter(e: javax.lang.model.element.TypeParameterElement, p: P): R
+                    public visitTypeParameter(e: javax.lang.model.element.TypeParameterElement, p: P): R
                 }
             }
         }

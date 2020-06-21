@@ -13,7 +13,7 @@ declare namespace java {
          * @since 1.6
          */
         // @ts-ignore
-        class PolicySpi extends java.lang.Object {
+        abstract class PolicySpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**

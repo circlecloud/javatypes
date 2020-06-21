@@ -16,7 +16,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(resourceDecoder: ResourceDecoder)
                     // @ts-ignore
-                    getReadHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                    getReadHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

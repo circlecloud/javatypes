@@ -18,14 +18,14 @@ declare namespace java {
                  * @see FileDialog#setFile(String)
                  */
                 // @ts-ignore
-                setFile(file: string): void
+                setFile(file: java.lang.String | string): void
                 /**
                  * Sets the current directory for this file dialog.
                  * @param dir the directory to set
                  * @see FileDialog#setDirectory(String)
                  */
                 // @ts-ignore
-                setDirectory(dir: string): void
+                setDirectory(dir: java.lang.String | string): void
                 /**
                  * Sets the filename filter for filtering the displayed files.
                  * @param filter the filter to set

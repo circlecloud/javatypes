@@ -54,7 +54,7 @@ declare namespace javax {
                      * @return the modifiers of this element, or an empty set if there are none
                      */
                     // @ts-ignore
-                    getModifiers(): java.util.Set<javax.lang.model.element.Modifier>
+                    getModifiers(): Array<javax.lang.model.element.Modifier>
                     /**
                      * Returns the simple (unqualified) name of this element.  The
                      * name of a generic type does not include any reference to its
@@ -127,7 +127,7 @@ declare namespace javax {
                      * @jls 8.9 Enums
                      */
                     // @ts-ignore
-                    getEnclosedElements(): java.util.List<? extends javax.lang.model.element.Element>
+                    getEnclosedElements(): Array<any>
                     /**
                      * Returns {@code true} if the argument represents the same
                      * element as {@code this}, or {@code false} otherwise.
@@ -144,13 +144,13 @@ declare namespace javax {
                      *           element as this
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    equals(obj: java.lang.Object | any): boolean
                     /**
                      * Obeys the general contract of {@link Object#hashCode Object.hashCode}.
                      * @see #equals
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    hashCode(): number /*int*/
                     /**
                      * {@inheritDoc}
                      * <p> To get inherited annotations as well, use {@link
@@ -159,7 +159,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getAnnotationMirrors(): java.util.List<? extends javax.lang.model.element.AnnotationMirror>
+                    getAnnotationMirrors(): Array<any>
                     /**
                      * {@inheritDoc}
                      * @since 1.6

@@ -13,7 +13,7 @@ declare namespace org {
                     // @ts-ignore
                     interface ItemStackSnapshot extends org.spongepowered.api.data.ImmutableDataHolder<org.spongepowered.api.item.inventory.ItemStackSnapshot>, org.spongepowered.api.text.translation.Translatable {
                         // @ts-ignore
-                        
+                        readonly NONE: org.spongepowered.api.item.inventory.ItemStackSnapshot
                         /**
                          * Gets the {@link ItemType} of this {@link ItemStackSnapshot}. The
                          * {@link ItemType} is always available.
@@ -28,14 +28,14 @@ declare namespace org {
                          * @deprecated Use {#link #getQuantity()}
                          */
                         // @ts-ignore
-                        getCount(): int
+                        getCount(): number /*int*/
                         /**
                          * Gets the quantity of items in this the {@link ItemStack} this
                          * {@link ItemStackSnapshot} is representing.
                          * @return The current stack size
                          */
                         // @ts-ignore
-                        getQuantity(): int
+                        getQuantity(): number /*int*/
                         /**
                          * Returns true if {@link #getQuantity()} is zero and therefore this
                          * ItemStackSnapshot is empty.

@@ -156,7 +156,7 @@ declare namespace javax {
              *  is null.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Construct an object name with exactly one key property.
              * @param domain  The domain part of the object name.
@@ -169,7 +169,7 @@ declare namespace javax {
              * @exception NullPointerException One of the parameters is null.
              */
             // @ts-ignore
-            constructor(domain: string, key: string, value: string)
+            constructor(domain: java.lang.String | string, key: java.lang.String | string, value: java.lang.String | string)
             /**
              * Construct an object name with several key properties from a Hashtable.
              * @param domain  The domain part of the object name.
@@ -185,13 +185,13 @@ declare namespace javax {
              * @exception NullPointerException One of the parameters is null.
              */
             // @ts-ignore
-            constructor(domain: string, table: java.util.Hashtable<java.lang.String, java.lang.String>)
+            constructor(domain: java.lang.String | string, table: java.util.Hashtable<java.lang.String | string, java.lang.String | string>)
             /**
              * Defines the wildcard "*:*" ObjectName.
              * @since 1.6
              */
             // @ts-ignore
-            readonly WILDCARD: javax.management.ObjectName
+            public static readonly WILDCARD: javax.management.ObjectName
             /**
              * <p>Return an instance of ObjectName that can be used anywhere
              * an object obtained with {@link #ObjectName(String) new
@@ -207,7 +207,7 @@ declare namespace javax {
              *  is null.
              */
             // @ts-ignore
-            getInstance(name: string): javax.management.ObjectName
+            public static getInstance(name: java.lang.String | string): javax.management.ObjectName
             /**
              * <p>Return an instance of ObjectName that can be used anywhere
              * an object obtained with {@link #ObjectName(String, String,
@@ -227,7 +227,7 @@ declare namespace javax {
              * @exception NullPointerException One of the parameters is null.
              */
             // @ts-ignore
-            getInstance(domain: string, key: string, value: string): javax.management.ObjectName
+            public static getInstance(domain: java.lang.String | string, key: java.lang.String | string, value: java.lang.String | string): javax.management.ObjectName
             /**
              * <p>Return an instance of ObjectName that can be used anywhere
              * an object obtained with {@link #ObjectName(String, Hashtable)
@@ -250,7 +250,7 @@ declare namespace javax {
              * @exception NullPointerException One of the parameters is null.
              */
             // @ts-ignore
-            getInstance(domain: string, table: java.util.Hashtable<java.lang.String, java.lang.String>): javax.management.ObjectName
+            public static getInstance(domain: java.lang.String | string, table: java.util.Hashtable<java.lang.String | string, java.lang.String | string>): javax.management.ObjectName
             /**
              * <p>Return an instance of ObjectName that can be used anywhere
              * the given object can be used.  The returned object may be of a
@@ -275,7 +275,7 @@ declare namespace javax {
              * @exception NullPointerException The <code>name</code> is null.
              */
             // @ts-ignore
-            getInstance(name: javax.management.ObjectName): javax.management.ObjectName
+            public static getInstance(name: javax.management.ObjectName): javax.management.ObjectName
             /**
              * Checks whether the object name is a pattern.
              * <p>
@@ -284,13 +284,13 @@ declare namespace javax {
              * @return True if the name is a pattern, otherwise false.
              */
             // @ts-ignore
-            isPattern(): boolean
+            public isPattern(): boolean
             /**
              * Checks whether the object name is a pattern on the domain part.
              * @return True if the name is a domain pattern, otherwise false.
              */
             // @ts-ignore
-            isDomainPattern(): boolean
+            public isDomainPattern(): boolean
             /**
              * Checks whether the object name is a pattern on the key properties.
              * <p>
@@ -300,7 +300,7 @@ declare namespace javax {
              * @return True if the name is a property pattern, otherwise false.
              */
             // @ts-ignore
-            isPropertyPattern(): boolean
+            public isPropertyPattern(): boolean
             /**
              * Checks whether the object name is a pattern on the key property list.
              * <p>
@@ -310,7 +310,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            isPropertyListPattern(): boolean
+            public isPropertyListPattern(): boolean
             /**
              * Checks whether the object name is a pattern on the value part
              * of at least one of the key properties.
@@ -321,7 +321,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            isPropertyValuePattern(): boolean
+            public isPropertyValuePattern(): boolean
             /**
              * Checks whether the value associated with a key in a key
              * property is a pattern.
@@ -334,7 +334,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            isPropertyValuePattern(property: string): boolean
+            public isPropertyValuePattern(property: java.lang.String | string): boolean
             /**
              * <p>Returns the canonical form of the name; that is, a string
              * representation where the properties are sorted in lexical
@@ -358,13 +358,13 @@ declare namespace javax {
              * @return The canonical form of the name.
              */
             // @ts-ignore
-            getCanonicalName(): java.lang.String
+            public getCanonicalName(): string
             /**
              * Returns the domain part.
              * @return The domain.
              */
             // @ts-ignore
-            getDomain(): java.lang.String
+            public getDomain(): string
             /**
              * Obtains the value associated with a key in a key property.
              * @param property The property whose value is to be obtained.
@@ -373,7 +373,7 @@ declare namespace javax {
              * @exception NullPointerException If <code>property</code> is null.
              */
             // @ts-ignore
-            getKeyProperty(property: string): java.lang.String
+            public getKeyProperty(property: java.lang.String | string): string
             /**
              * <p>Returns the key properties as a Hashtable.  The returned
              * value is a Hashtable in which each key is a key in the
@@ -384,7 +384,7 @@ declare namespace javax {
              * @return The table of key properties.
              */
             // @ts-ignore
-            getKeyPropertyList(): java.util.Hashtable<java.lang.String, java.lang.String>
+            public getKeyPropertyList(): java.util.Hashtable<java.lang.String | string, java.lang.String | string>
             /**
              * <p>Returns a string representation of the list of key
              * properties specified at creation time.  If this ObjectName was
@@ -395,7 +395,7 @@ declare namespace javax {
              *  independent of whether the ObjectName is a pattern.
              */
             // @ts-ignore
-            getKeyPropertyListString(): java.lang.String
+            public getKeyPropertyListString(): string
             /**
              * Returns a string representation of the list of key properties,
              * in which the key properties are sorted in lexical order. This
@@ -407,7 +407,7 @@ declare namespace javax {
              *  independent of whether the ObjectName is a pattern.
              */
             // @ts-ignore
-            getCanonicalKeyPropertyListString(): java.lang.String
+            public getCanonicalKeyPropertyListString(): string
             /**
              * <p>Returns a string representation of the object name.  The
              * format of this string is not specified, but users can expect
@@ -416,7 +416,7 @@ declare namespace javax {
              * @return a string representation of this object name.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares the current object name with another object name.  Two
              * ObjectName instances are equal if and only if their canonical
@@ -428,12 +428,12 @@ declare namespace javax {
              *  canonical form is equal to that of this ObjectName.
              */
             // @ts-ignore
-            equals(object: any): boolean
+            public equals(object: java.lang.Object | any): boolean
             /**
              * Returns a hash code for this object name.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * <p>Returns a quoted form of the given String, suitable for
              * inclusion in an ObjectName.  The returned value can be used as
@@ -459,7 +459,7 @@ declare namespace javax {
              * @exception NullPointerException if <code>s</code> is null.
              */
             // @ts-ignore
-            quote(s: string): java.lang.String
+            public static quote(s: java.lang.String | string): string
             /**
              * <p>Returns an unquoted form of the given String.  If
              * <code>q</code> is a String returned by {@link #quote quote(s)},
@@ -476,7 +476,7 @@ declare namespace javax {
              * @exception NullPointerException if <code>q</code> is null.
              */
             // @ts-ignore
-            unquote(q: string): java.lang.String
+            public static unquote(q: java.lang.String | string): string
             /**
              * <p>Test whether this ObjectName, which may be a pattern,
              * matches another ObjectName.  If <code>name</code> is a pattern,
@@ -491,9 +491,9 @@ declare namespace javax {
              * @exception NullPointerException if <code>name</code> is null.
              */
             // @ts-ignore
-            apply(name: javax.management.ObjectName): boolean
+            public apply(name: javax.management.ObjectName): boolean
             // @ts-ignore
-            setMBeanServer(mbs: javax.management.MBeanServer): void
+            public setMBeanServer(mbs: javax.management.MBeanServer): void
             /**
              * <p>Compares two ObjectName instances. The ordering relation between
              * ObjectNames is not completely specified but is intended to be such
@@ -533,7 +533,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            compareTo(name: javax.management.ObjectName): int
+            public compareTo(name: javax.management.ObjectName): number /*int*/
         }
     }
 }

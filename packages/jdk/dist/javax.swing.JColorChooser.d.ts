@@ -63,17 +63,17 @@ declare namespace javax {
              * The selection model property name.
              */
             // @ts-ignore
-            readonly SELECTION_MODEL_PROPERTY: string
+            public static readonly SELECTION_MODEL_PROPERTY: java.lang.String | string
             /**
              * The preview panel property name.
              */
             // @ts-ignore
-            readonly PREVIEW_PANEL_PROPERTY: string
+            public static readonly PREVIEW_PANEL_PROPERTY: java.lang.String | string
             /**
              * The chooserPanel array property name.
              */
             // @ts-ignore
-            readonly CHOOSER_PANELS_PROPERTY: string
+            public static readonly CHOOSER_PANELS_PROPERTY: java.lang.String | string
             // @ts-ignore
             accessibleContext: javax.accessibility.AccessibleContext
             /**
@@ -92,7 +92,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showDialog(component: java.awt.Component, title: string, initialColor: java.awt.Color): java.awt.Color
+            public static showDialog(component: java.awt.Component, title: java.lang.String | string, initialColor: java.awt.Color): java.awt.Color
             /**
              * Creates and returns a new dialog containing the specified
              * <code>ColorChooser</code> pane along with "OK", "Cancel", and "Reset"
@@ -114,14 +114,14 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            createDialog(c: java.awt.Component, title: string, modal: boolean, chooserPane: javax.swing.JColorChooser, okListener: java.awt.event.ActionListener, cancelListener: java.awt.event.ActionListener): javax.swing.JDialog
+            public static createDialog(c: java.awt.Component, title: java.lang.String | string, modal: boolean, chooserPane: javax.swing.JColorChooser, okListener: java.awt.event.ActionListener, cancelListener: java.awt.event.ActionListener): javax.swing.JDialog
             /**
              * Returns the L&amp;F object that renders this component.
              * @return the <code>ColorChooserUI</code> object that renders
              *           this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ColorChooserUI
+            public getUI(): javax.swing.plaf.ColorChooserUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the <code>ColorChooserUI</code> L&amp;F object
@@ -131,7 +131,7 @@ declare namespace javax {
              *  description: The UI object that implements the color chooser's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ColorChooserUI): void
+            public setUI(ui: javax.swing.plaf.ColorChooserUI): void
             /**
              * Notification from the <code>UIManager</code> that the L&amp;F has changed.
              * Replaces the current UI object with the latest version from the
@@ -139,7 +139,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "ColorChooserUI"
@@ -147,14 +147,14 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Gets the current color value from the color chooser.
              * By default, this delegates to the model.
              * @return the current color value of the color chooser
              */
             // @ts-ignore
-            getColor(): java.awt.Color
+            public getColor(): java.awt.Color
             /**
              * Sets the current color of the color chooser to the specified color.
              * The <code>ColorSelectionModel</code> will fire a <code>ChangeEvent</code>
@@ -165,7 +165,7 @@ declare namespace javax {
              *  description: The current color the chooser is to display.
              */
             // @ts-ignore
-            setColor(color: java.awt.Color): void
+            public setColor(color: java.awt.Color): void
             /**
              * Sets the current color of the color chooser to the
              * specified RGB color.  Note that the values of red, green,
@@ -177,7 +177,7 @@ declare namespace javax {
              * @see java.awt.Color
              */
             // @ts-ignore
-            setColor(r: number /*int*/, g: number /*int*/, b: number /*int*/): void
+            public setColor(r: number /*int*/, g: number /*int*/, b: number /*int*/): void
             /**
              * Sets the current color of the color chooser to the
              * specified color.
@@ -187,7 +187,7 @@ declare namespace javax {
              *           above that specify the Red value.
              */
             // @ts-ignore
-            setColor(c: number /*int*/): void
+            public setColor(c: number /*int*/): void
             /**
              * Sets the <code>dragEnabled</code> property,
              * which must be <code>true</code> to enable
@@ -221,7 +221,7 @@ declare namespace javax {
              *         bound: false
              */
             // @ts-ignore
-            setDragEnabled(b: boolean): void
+            public setDragEnabled(b: boolean): void
             /**
              * Gets the value of the <code>dragEnabled</code> property.
              * @return the value of the <code>dragEnabled</code> property
@@ -229,7 +229,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDragEnabled(): boolean
+            public getDragEnabled(): boolean
             /**
              * Sets the current preview panel.
              * This will fire a <code>PropertyChangeEvent</code> for the property
@@ -241,19 +241,19 @@ declare namespace javax {
              *  description: The UI component which displays the current color.
              */
             // @ts-ignore
-            setPreviewPanel(preview: javax.swing.JComponent): void
+            public setPreviewPanel(preview: javax.swing.JComponent): void
             /**
              * Returns the preview panel that shows a chosen color.
              * @return a <code>JComponent</code> object -- the preview panel
              */
             // @ts-ignore
-            getPreviewPanel(): javax.swing.JComponent
+            public getPreviewPanel(): javax.swing.JComponent
             /**
              * Adds a color chooser panel to the color chooser.
              * @param panel the <code>AbstractColorChooserPanel</code> to be added
              */
             // @ts-ignore
-            addChooserPanel(panel: javax.swing.colorchooser.AbstractColorChooserPanel): void
+            public addChooserPanel(panel: javax.swing.colorchooser.AbstractColorChooserPanel): void
             /**
              * Removes the Color Panel specified.
              * @param panel   a string that specifies the panel to be removed
@@ -262,7 +262,7 @@ declare namespace javax {
              *                   known chooser panels
              */
             // @ts-ignore
-            removeChooserPanel(panel: javax.swing.colorchooser.AbstractColorChooserPanel): javax.swing.colorchooser.AbstractColorChooserPanel
+            public removeChooserPanel(panel: javax.swing.colorchooser.AbstractColorChooserPanel): javax.swing.colorchooser.AbstractColorChooserPanel
             /**
              * Specifies the Color Panels used to choose a color value.
              * @param panels  an array of <code>AbstractColorChooserPanel</code>
@@ -272,19 +272,19 @@ declare namespace javax {
              *  description: An array of different chooser types.
              */
             // @ts-ignore
-            setChooserPanels(panels: javax.swing.colorchooser.AbstractColorChooserPanel[]): void
+            public setChooserPanels(panels: javax.swing.colorchooser.AbstractColorChooserPanel[]): void
             /**
              * Returns the specified color panels.
              * @return an array of <code>AbstractColorChooserPanel</code> objects
              */
             // @ts-ignore
-            getChooserPanels(): javax.swing.colorchooser.AbstractColorChooserPanel[]
+            public getChooserPanels(): javax.swing.colorchooser.AbstractColorChooserPanel[]
             /**
              * Returns the data model that handles color selections.
              * @return a <code>ColorSelectionModel</code> object
              */
             // @ts-ignore
-            getSelectionModel(): javax.swing.colorchooser.ColorSelectionModel
+            public getSelectionModel(): javax.swing.colorchooser.ColorSelectionModel
             /**
              * Sets the model containing the selected color.
              * @param newModel   the new <code>ColorSelectionModel</code> object
@@ -293,7 +293,7 @@ declare namespace javax {
              *  description: The model which contains the currently selected color.
              */
             // @ts-ignore
-            setSelectionModel(newModel: javax.swing.colorchooser.ColorSelectionModel): void
+            public setSelectionModel(newModel: javax.swing.colorchooser.ColorSelectionModel): void
             /**
              * Returns a string representation of this <code>JColorChooser</code>.
              * This method
@@ -304,7 +304,7 @@ declare namespace javax {
              * @return a string representation of this <code>JColorChooser</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JColorChooser.
              * For color choosers, the AccessibleContext takes the form of an
@@ -314,7 +314,7 @@ declare namespace javax {
              *          AccessibleContext of this JColorChooser
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -14,7 +14,7 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerCommandSendEvent extends org.bukkit.event.player.PlayerEvent {
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, commands: Array<java.lang.String>)
+                    constructor(player: org.bukkit.entity.Player, commands: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>)
                     /**
                      * Returns a mutable collection of all top level commands to be sent.
                      * <br>
@@ -23,11 +23,11 @@ declare namespace org {
                      * @return collection of all commands
                      */
                     // @ts-ignore
-                    getCommands(): java.util.Collection<java.lang.String>
+                    public getCommands(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

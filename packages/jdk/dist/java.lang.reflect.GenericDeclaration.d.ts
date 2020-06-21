@@ -21,7 +21,7 @@ declare namespace java {
                  *      <cite>The Java&trade; Virtual Machine Specification</cite>
                  */
                 // @ts-ignore
-                getTypeParameters(): java.lang.reflect.TypeVariable[]
+                getTypeParameters(): java.lang.reflect.TypeVariable<any>[]
             }
         }
     }

@@ -222,7 +222,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            skipBytes(n: number /*int*/): int
+            skipBytes(n: number /*int*/): number /*int*/
             /**
              * Reads one input byte and returns
              * {@code true} if that byte is nonzero,
@@ -251,7 +251,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readByte(): byte
+            readByte(): number /*byte*/
             /**
              * Reads one input byte, zero-extends
              * it to type {@code int}, and returns
@@ -270,7 +270,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readUnsignedByte(): int
+            readUnsignedByte(): number /*int*/
             /**
              * Reads two input bytes and returns
              * a {@code short} value. Let {@code a}
@@ -290,7 +290,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readShort(): short
+            readShort(): number /*short*/
             /**
              * Reads two input bytes and returns
              * an {@code int} value in the range {@code 0}
@@ -312,7 +312,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readUnsignedShort(): int
+            readUnsignedShort(): number /*int*/
             /**
              * Reads two input bytes and returns a {@code char} value.
              * Let {@code a}
@@ -331,7 +331,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readChar(): char
+            readChar(): string
             /**
              * Reads four input bytes and returns an
              * {@code int} value. Let {@code a-d}
@@ -349,7 +349,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readInt(): int
+            readInt(): number /*int*/
             /**
              * Reads eight input bytes and returns
              * a {@code long} value. Let {@code a-h}
@@ -375,7 +375,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readLong(): long
+            readLong(): number /*long*/
             /**
              * Reads four input bytes and returns
              * a {@code float} value. It does this
@@ -394,7 +394,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readFloat(): float
+            readFloat(): number /*float*/
             /**
              * Reads eight input bytes and returns
              * a {@code double} value. It does this
@@ -413,7 +413,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readDouble(): double
+            readDouble(): number /*double*/
             /**
              * Reads the next line of text from the input stream.
              * It reads successive bytes, converting
@@ -453,7 +453,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            readLine(): string
             /**
              * Reads in a string that has been encoded using a
              * <a href="#modified-utf-8">modified UTF-8</a>
@@ -540,7 +540,7 @@ declare namespace java {
              *                valid modified UTF-8 encoding of a string.
              */
             // @ts-ignore
-            readUTF(): java.lang.String
+            readUTF(): string
         }
     }
 }

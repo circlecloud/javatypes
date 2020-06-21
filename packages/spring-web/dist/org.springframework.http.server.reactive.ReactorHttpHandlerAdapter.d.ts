@@ -10,11 +10,11 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class ReactorHttpHandlerAdapter extends java.lang.Object implements java.util.function.BiFunction<HttpServerRequest, HttpServerResponse, <any>> {
+                    class ReactorHttpHandlerAdapter extends java.lang.Object implements java.util.function.BiFunction<HttpServerRequest, HttpServerResponse, object> {
                         // @ts-ignore
                         constructor(httpHandler: org.springframework.http.server.reactive.HttpHandler)
                         // @ts-ignore
-                        apply(reactorRequest: HttpServerRequest, reactorResponse: HttpServerResponse): <any>
+                        public apply(reactorRequest: HttpServerRequest, reactorResponse: HttpServerResponse): object
                     }
                 }
             }

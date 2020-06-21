@@ -53,7 +53,7 @@ declare namespace java {
              * <code>getProcedures</code>.
              */
             // @ts-ignore
-            
+            readonly procedureResultUnknown: number /*int*/
             /**
              * Indicates that the procedure does not return a result.
              * <P>
@@ -62,7 +62,7 @@ declare namespace java {
              * <code>getProcedures</code>.
              */
             // @ts-ignore
-            
+            readonly procedureNoResult: number /*int*/
             /**
              * Indicates that the procedure returns a result.
              * <P>
@@ -71,7 +71,7 @@ declare namespace java {
              * <code>getProcedures</code>.
              */
             // @ts-ignore
-            
+            readonly procedureReturnsResult: number /*int*/
             /**
              * Indicates that type of the column is unknown.
              * <P>
@@ -81,7 +81,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureColumnUnknown: number /*int*/
             /**
              * Indicates that the column stores IN parameters.
              * <P>
@@ -91,7 +91,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureColumnIn: number /*int*/
             /**
              * Indicates that the column stores INOUT parameters.
              * <P>
@@ -101,7 +101,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureColumnInOut: number /*int*/
             /**
              * Indicates that the column stores OUT parameters.
              * <P>
@@ -111,7 +111,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureColumnOut: number /*int*/
             /**
              * Indicates that the column stores return values.
              * <P>
@@ -121,7 +121,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureColumnReturn: number /*int*/
             /**
              * Indicates that the column stores results.
              * <P>
@@ -131,7 +131,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureColumnResult: number /*int*/
             /**
              * Indicates that <code>NULL</code> values are not allowed.
              * <P>
@@ -141,7 +141,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureNoNulls: number /*int*/
             /**
              * Indicates that <code>NULL</code> values are allowed.
              * <P>
@@ -151,7 +151,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureNullable: number /*int*/
             /**
              * Indicates that whether <code>NULL</code> values are allowed
              * is unknown.
@@ -162,7 +162,7 @@ declare namespace java {
              * returned by the method <code>getProcedureColumns</code>.
              */
             // @ts-ignore
-            
+            readonly procedureNullableUnknown: number /*int*/
             /**
              * Indicates that the column might not allow <code>NULL</code> values.
              * <P>
@@ -172,7 +172,7 @@ declare namespace java {
              * <code>getColumns</code>.
              */
             // @ts-ignore
-            
+            readonly columnNoNulls: number /*int*/
             /**
              * Indicates that the column definitely allows <code>NULL</code> values.
              * <P>
@@ -182,7 +182,7 @@ declare namespace java {
              * <code>getColumns</code>.
              */
             // @ts-ignore
-            
+            readonly columnNullable: number /*int*/
             /**
              * Indicates that the nullability of columns is unknown.
              * <P>
@@ -192,7 +192,7 @@ declare namespace java {
              * <code>getColumns</code>.
              */
             // @ts-ignore
-            
+            readonly columnNullableUnknown: number /*int*/
             /**
              * Indicates that the scope of the best row identifier is
              * very temporary, lasting only while the
@@ -204,7 +204,7 @@ declare namespace java {
              * returned by the method <code>getBestRowIdentifier</code>.
              */
             // @ts-ignore
-            
+            readonly bestRowTemporary: number /*int*/
             /**
              * Indicates that the scope of the best row identifier is
              * the remainder of the current transaction.
@@ -215,7 +215,7 @@ declare namespace java {
              * returned by the method <code>getBestRowIdentifier</code>.
              */
             // @ts-ignore
-            
+            readonly bestRowTransaction: number /*int*/
             /**
              * Indicates that the scope of the best row identifier is
              * the remainder of the current session.
@@ -226,7 +226,7 @@ declare namespace java {
              * returned by the method <code>getBestRowIdentifier</code>.
              */
             // @ts-ignore
-            
+            readonly bestRowSession: number /*int*/
             /**
              * Indicates that the best row identifier may or may not be a pseudo column.
              * <P>
@@ -236,7 +236,7 @@ declare namespace java {
              * returned by the method <code>getBestRowIdentifier</code>.
              */
             // @ts-ignore
-            
+            readonly bestRowUnknown: number /*int*/
             /**
              * Indicates that the best row identifier is NOT a pseudo column.
              * <P>
@@ -246,7 +246,7 @@ declare namespace java {
              * returned by the method <code>getBestRowIdentifier</code>.
              */
             // @ts-ignore
-            
+            readonly bestRowNotPseudo: number /*int*/
             /**
              * Indicates that the best row identifier is a pseudo column.
              * <P>
@@ -256,7 +256,7 @@ declare namespace java {
              * returned by the method <code>getBestRowIdentifier</code>.
              */
             // @ts-ignore
-            
+            readonly bestRowPseudo: number /*int*/
             /**
              * Indicates that this version column may or may not be a pseudo column.
              * <P>
@@ -266,7 +266,7 @@ declare namespace java {
              * returned by the method <code>getVersionColumns</code>.
              */
             // @ts-ignore
-            
+            readonly versionColumnUnknown: number /*int*/
             /**
              * Indicates that this version column is NOT a pseudo column.
              * <P>
@@ -276,7 +276,7 @@ declare namespace java {
              * returned by the method <code>getVersionColumns</code>.
              */
             // @ts-ignore
-            
+            readonly versionColumnNotPseudo: number /*int*/
             /**
              * Indicates that this version column is a pseudo column.
              * <P>
@@ -286,7 +286,7 @@ declare namespace java {
              * returned by the method <code>getVersionColumns</code>.
              */
             // @ts-ignore
-            
+            readonly versionColumnPseudo: number /*int*/
             /**
              * For the column <code>UPDATE_RULE</code>,
              * indicates that
@@ -304,7 +304,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeyCascade: number /*int*/
             /**
              * For the column <code>UPDATE_RULE</code>, indicates that
              * a primary key may not be updated if it has been imported by
@@ -320,7 +320,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeyRestrict: number /*int*/
             /**
              * For the columns <code>UPDATE_RULE</code>
              * and <code>DELETE_RULE</code>, indicates that
@@ -334,7 +334,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeySetNull: number /*int*/
             /**
              * For the columns <code>UPDATE_RULE</code>
              * and <code>DELETE_RULE</code>, indicates that
@@ -347,7 +347,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeyNoAction: number /*int*/
             /**
              * For the columns <code>UPDATE_RULE</code>
              * and <code>DELETE_RULE</code>, indicates that
@@ -361,7 +361,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeySetDefault: number /*int*/
             /**
              * Indicates deferrability.  See SQL-92 for a definition.
              * <P>
@@ -371,7 +371,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeyInitiallyDeferred: number /*int*/
             /**
              * Indicates deferrability.  See SQL-92 for a definition.
              * <P>
@@ -381,7 +381,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeyInitiallyImmediate: number /*int*/
             /**
              * Indicates deferrability.  See SQL-92 for a definition.
              * <P>
@@ -391,7 +391,7 @@ declare namespace java {
              * and <code>getCrossReference</code>.
              */
             // @ts-ignore
-            
+            readonly importedKeyNotDeferrable: number /*int*/
             /**
              * Indicates that a <code>NULL</code> value is NOT allowed for this
              * data type.
@@ -401,7 +401,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typeNoNulls: number /*int*/
             /**
              * Indicates that a <code>NULL</code> value is allowed for this
              * data type.
@@ -411,7 +411,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typeNullable: number /*int*/
             /**
              * Indicates that it is not known whether a <code>NULL</code> value
              * is allowed for this data type.
@@ -421,7 +421,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typeNullableUnknown: number /*int*/
             /**
              * Indicates that <code>WHERE</code> search clauses are not supported
              * for this type.
@@ -431,7 +431,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typePredNone: number /*int*/
             /**
              * Indicates that the data type
              * can be only be used in <code>WHERE</code> search clauses
@@ -442,7 +442,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typePredChar: number /*int*/
             /**
              * Indicates that the data type can be only be used in <code>WHERE</code>
              * search clauses
@@ -453,7 +453,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typePredBasic: number /*int*/
             /**
              * Indicates that all <code>WHERE</code> search clauses can be
              * based on this type.
@@ -463,7 +463,7 @@ declare namespace java {
              * <code>getTypeInfo</code>.
              */
             // @ts-ignore
-            
+            readonly typeSearchable: number /*int*/
             /**
              * Indicates that this column contains table statistics that
              * are returned in conjunction with a table's index descriptions.
@@ -473,7 +473,7 @@ declare namespace java {
              * <code>getIndexInfo</code>.
              */
             // @ts-ignore
-            
+            readonly tableIndexStatistic: number /*short*/
             /**
              * Indicates that this table index is a clustered index.
              * <P>
@@ -482,7 +482,7 @@ declare namespace java {
              * <code>getIndexInfo</code>.
              */
             // @ts-ignore
-            
+            readonly tableIndexClustered: number /*short*/
             /**
              * Indicates that this table index is a hashed index.
              * <P>
@@ -491,7 +491,7 @@ declare namespace java {
              * <code>getIndexInfo</code>.
              */
             // @ts-ignore
-            
+            readonly tableIndexHashed: number /*short*/
             /**
              * Indicates that this table index is not a clustered
              * index, a hashed index, or table statistics;
@@ -502,7 +502,7 @@ declare namespace java {
              * <code>getIndexInfo</code>.
              */
             // @ts-ignore
-            
+            readonly tableIndexOther: number /*short*/
             /**
              * Indicates that <code>NULL</code> values might not be allowed.
              * <P>
@@ -511,7 +511,7 @@ declare namespace java {
              * returned by the method <code>getAttributes</code>.
              */
             // @ts-ignore
-            
+            readonly attributeNoNulls: number /*short*/
             /**
              * Indicates that <code>NULL</code> values are definitely allowed.
              * <P>
@@ -520,7 +520,7 @@ declare namespace java {
              * returned by the method <code>getAttributes</code>.
              */
             // @ts-ignore
-            
+            readonly attributeNullable: number /*short*/
             /**
              * Indicates that whether <code>NULL</code> values are allowed is not
              * known.
@@ -530,7 +530,7 @@ declare namespace java {
              * returned by the method <code>getAttributes</code>.
              */
             // @ts-ignore
-            
+            readonly attributeNullableUnknown: number /*short*/
             /**
              * A possible return value for the method
              * <code>DatabaseMetaData.getSQLStateType</code> which is used to indicate
@@ -541,7 +541,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly sqlStateXOpen: number /*int*/
             /**
              * A possible return value for the method
              * <code>DatabaseMetaData.getSQLStateType</code> which is used to indicate
@@ -551,7 +551,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly sqlStateSQL: number /*int*/
             /**
              * A possible return value for the method
              * <code>DatabaseMetaData.getSQLStateType</code> which is used to indicate
@@ -563,7 +563,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly sqlStateSQL99: number /*int*/
             /**
              * Indicates that type of the parameter or column is unknown.
              * <P>
@@ -573,7 +573,7 @@ declare namespace java {
              * returned by the method <code>getFunctionColumns</code>.
              */
             // @ts-ignore
-            
+            readonly functionColumnUnknown: number /*int*/
             /**
              * Indicates that the parameter or column is an IN parameter.
              * <P>
@@ -584,7 +584,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionColumnIn: number /*int*/
             /**
              * Indicates that the parameter or column is an INOUT parameter.
              * <P>
@@ -595,7 +595,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionColumnInOut: number /*int*/
             /**
              * Indicates that the parameter or column is an OUT parameter.
              * <P>
@@ -606,7 +606,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionColumnOut: number /*int*/
             /**
              * Indicates that the parameter or column is a return value.
              * <P>
@@ -617,7 +617,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionReturn: number /*int*/
             /**
              * Indicates that the parameter or column is a column in a result set.
              * <P>
@@ -628,7 +628,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionColumnResult: number /*int*/
             /**
              * Indicates that <code>NULL</code> values are not allowed.
              * <P>
@@ -639,7 +639,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionNoNulls: number /*int*/
             /**
              * Indicates that <code>NULL</code> values are allowed.
              * <P>
@@ -650,7 +650,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionNullable: number /*int*/
             /**
              * Indicates that whether <code>NULL</code> values are allowed
              * is unknown.
@@ -662,7 +662,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionNullableUnknown: number /*int*/
             /**
              * Indicates that it is not known whether the function returns
              * a result or a table.
@@ -673,7 +673,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionResultUnknown: number /*int*/
             /**
              * Indicates that the function  does not return a table.
              * <P>
@@ -683,7 +683,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionNoTable: number /*int*/
             /**
              * Indicates that the function  returns a table.
              * <P>
@@ -693,7 +693,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly functionReturnsTable: number /*int*/
             /**
              * Retrieves whether the current user can call all the procedures
              * returned by the method <code>getProcedures</code>.
@@ -718,14 +718,14 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getURL(): java.lang.String
+            getURL(): string
             /**
              * Retrieves the user name as known to this database.
              * @return the database user name
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getUserName(): java.lang.String
+            getUserName(): string
             /**
              * Retrieves whether this database is in read-only mode.
              * @return <code>true</code> if so; <code>false</code> otherwise
@@ -781,40 +781,40 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getDatabaseProductName(): java.lang.String
+            getDatabaseProductName(): string
             /**
              * Retrieves the version number of this database product.
              * @return database version number
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getDatabaseProductVersion(): java.lang.String
+            getDatabaseProductVersion(): string
             /**
              * Retrieves the name of this JDBC driver.
              * @return JDBC driver name
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getDriverName(): java.lang.String
+            getDriverName(): string
             /**
              * Retrieves the version number of this JDBC driver as a <code>String</code>.
              * @return JDBC driver version
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getDriverVersion(): java.lang.String
+            getDriverVersion(): string
             /**
              * Retrieves this JDBC driver's major version number.
              * @return JDBC driver major version
              */
             // @ts-ignore
-            getDriverMajorVersion(): int
+            getDriverMajorVersion(): number /*int*/
             /**
              * Retrieves this JDBC driver's minor version number.
              * @return JDBC driver minor version number
              */
             // @ts-ignore
-            getDriverMinorVersion(): int
+            getDriverMinorVersion(): number /*int*/
             /**
              * Retrieves whether this database stores tables in a local file.
              * @return <code>true</code> if so; <code>false</code> otherwise
@@ -901,7 +901,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getIdentifierQuoteString(): java.lang.String
+            getIdentifierQuoteString(): string
             /**
              * Retrieves a comma-separated list of all of this database's SQL keywords
              * that are NOT also SQL:2003 keywords.
@@ -910,7 +910,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getSQLKeywords(): java.lang.String
+            getSQLKeywords(): string
             /**
              * Retrieves a comma-separated list of math functions available with
              * this database.  These are the Open /Open CLI math function names used in
@@ -919,7 +919,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getNumericFunctions(): java.lang.String
+            getNumericFunctions(): string
             /**
              * Retrieves a comma-separated list of string functions available with
              * this database.  These are the  Open Group CLI string function names used
@@ -928,7 +928,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getStringFunctions(): java.lang.String
+            getStringFunctions(): string
             /**
              * Retrieves a comma-separated list of system functions available with
              * this database.  These are the  Open Group CLI system function names used
@@ -937,7 +937,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getSystemFunctions(): java.lang.String
+            getSystemFunctions(): string
             /**
              * Retrieves a comma-separated list of the time and date functions available
              * with this database.
@@ -945,7 +945,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getTimeDateFunctions(): java.lang.String
+            getTimeDateFunctions(): string
             /**
              * Retrieves the string that can be used to escape wildcard characters.
              * This is the string that can be used to escape '_' or '%' in
@@ -958,7 +958,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getSearchStringEscape(): java.lang.String
+            getSearchStringEscape(): string
             /**
              * Retrieves all the "extra" characters that can be used in unquoted
              * identifier names (those beyond a-z, A-Z, 0-9 and _).
@@ -966,7 +966,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getExtraNameCharacters(): java.lang.String
+            getExtraNameCharacters(): string
             /**
              * Retrieves whether this database supports <code>ALTER TABLE</code>
              * with add column.
@@ -1198,21 +1198,21 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getSchemaTerm(): java.lang.String
+            getSchemaTerm(): string
             /**
              * Retrieves the database vendor's preferred term for "procedure".
              * @return the vendor term for "procedure"
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getProcedureTerm(): java.lang.String
+            getProcedureTerm(): string
             /**
              * Retrieves the database vendor's preferred term for "catalog".
              * @return the vendor term for "catalog"
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getCatalogTerm(): java.lang.String
+            getCatalogTerm(): string
             /**
              * Retrieves whether a catalog appears at the start of a fully qualified
              * table name.  If not, the catalog appears at the end.
@@ -1229,7 +1229,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getCatalogSeparator(): java.lang.String
+            getCatalogSeparator(): string
             /**
              * Retrieves whether a schema name can be used in a data manipulation statement.
              * @return <code>true</code> if so; <code>false</code> otherwise
@@ -1430,7 +1430,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxBinaryLiteralLength(): int
+            getMaxBinaryLiteralLength(): number /*int*/
             /**
              * Retrieves the maximum number of characters this database allows
              * for a character literal.
@@ -1440,7 +1440,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxCharLiteralLength(): int
+            getMaxCharLiteralLength(): number /*int*/
             /**
              * Retrieves the maximum number of characters this database allows
              * for a column name.
@@ -1450,7 +1450,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxColumnNameLength(): int
+            getMaxColumnNameLength(): number /*int*/
             /**
              * Retrieves the maximum number of columns this database allows in a
              * <code>GROUP BY</code> clause.
@@ -1460,7 +1460,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxColumnsInGroupBy(): int
+            getMaxColumnsInGroupBy(): number /*int*/
             /**
              * Retrieves the maximum number of columns this database allows in an index.
              * @return the maximum number of columns allowed;
@@ -1469,7 +1469,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxColumnsInIndex(): int
+            getMaxColumnsInIndex(): number /*int*/
             /**
              * Retrieves the maximum number of columns this database allows in an
              * <code>ORDER BY</code> clause.
@@ -1479,7 +1479,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxColumnsInOrderBy(): int
+            getMaxColumnsInOrderBy(): number /*int*/
             /**
              * Retrieves the maximum number of columns this database allows in a
              * <code>SELECT</code> list.
@@ -1489,7 +1489,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxColumnsInSelect(): int
+            getMaxColumnsInSelect(): number /*int*/
             /**
              * Retrieves the maximum number of columns this database allows in a table.
              * @return the maximum number of columns allowed;
@@ -1498,7 +1498,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxColumnsInTable(): int
+            getMaxColumnsInTable(): number /*int*/
             /**
              * Retrieves the maximum number of concurrent connections to this
              * database that are possible.
@@ -1508,7 +1508,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxConnections(): int
+            getMaxConnections(): number /*int*/
             /**
              * Retrieves the maximum number of characters that this database allows in a
              * cursor name.
@@ -1518,7 +1518,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxCursorNameLength(): int
+            getMaxCursorNameLength(): number /*int*/
             /**
              * Retrieves the maximum number of bytes this database allows for an
              * index, including all of the parts of the index.
@@ -1529,7 +1529,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxIndexLength(): int
+            getMaxIndexLength(): number /*int*/
             /**
              * Retrieves the maximum number of characters that this database allows in a
              * schema name.
@@ -1539,7 +1539,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxSchemaNameLength(): int
+            getMaxSchemaNameLength(): number /*int*/
             /**
              * Retrieves the maximum number of characters that this database allows in a
              * procedure name.
@@ -1549,7 +1549,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxProcedureNameLength(): int
+            getMaxProcedureNameLength(): number /*int*/
             /**
              * Retrieves the maximum number of characters that this database allows in a
              * catalog name.
@@ -1559,7 +1559,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxCatalogNameLength(): int
+            getMaxCatalogNameLength(): number /*int*/
             /**
              * Retrieves the maximum number of bytes this database allows in
              * a single row.
@@ -1568,7 +1568,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxRowSize(): int
+            getMaxRowSize(): number /*int*/
             /**
              * Retrieves whether the return value for the method
              * <code>getMaxRowSize</code> includes the SQL data types
@@ -1587,7 +1587,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxStatementLength(): int
+            getMaxStatementLength(): number /*int*/
             /**
              * Retrieves the maximum number of active statements to this database
              * that can be open at the same time.
@@ -1597,7 +1597,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxStatements(): int
+            getMaxStatements(): number /*int*/
             /**
              * Retrieves the maximum number of characters this database allows in
              * a table name.
@@ -1607,7 +1607,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxTableNameLength(): int
+            getMaxTableNameLength(): number /*int*/
             /**
              * Retrieves the maximum number of tables this database allows in a
              * <code>SELECT</code> statement.
@@ -1617,7 +1617,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxTablesInSelect(): int
+            getMaxTablesInSelect(): number /*int*/
             /**
              * Retrieves the maximum number of characters this database allows in
              * a user name.
@@ -1627,7 +1627,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getMaxUserNameLength(): int
+            getMaxUserNameLength(): number /*int*/
             /**
              * Retrieves this database's default transaction isolation level.  The
              * possible values are defined in <code>java.sql.Connection</code>.
@@ -1636,7 +1636,7 @@ declare namespace java {
              * @see Connection
              */
             // @ts-ignore
-            getDefaultTransactionIsolation(): int
+            getDefaultTransactionIsolation(): number /*int*/
             /**
              * Retrieves whether this database supports transactions. If not, invoking the
              * method <code>commit</code> is a noop, and the isolation level is
@@ -1734,7 +1734,7 @@ declare namespace java {
              * @see #getSearchStringEscape
              */
             // @ts-ignore
-            getProcedures(catalog: string, schemaPattern: string, procedureNamePattern: string): java.sql.ResultSet
+            getProcedures(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, procedureNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the given catalog's stored procedure parameter
              * and result columns.
@@ -1824,7 +1824,7 @@ declare namespace java {
              * @see #getSearchStringEscape
              */
             // @ts-ignore
-            getProcedureColumns(catalog: string, schemaPattern: string, procedureNamePattern: string, columnNamePattern: string): java.sql.ResultSet
+            getProcedureColumns(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, procedureNamePattern: java.lang.String | string, columnNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the tables available in the given catalog.
              * Only table descriptions matching the catalog, schema, table
@@ -1870,7 +1870,7 @@ declare namespace java {
              * @see #getSearchStringEscape
              */
             // @ts-ignore
-            getTables(catalog: string, schemaPattern: string, tableNamePattern: string, types: string[]): java.sql.ResultSet
+            getTables(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, tableNamePattern: java.lang.String | string, types: java.lang.String[] | string[]): java.sql.ResultSet
             /**
              * Retrieves the schema names available in this database.  The results
              * are ordered by <code>TABLE_CATALOG</code> and
@@ -2001,7 +2001,7 @@ declare namespace java {
              * @see #getSearchStringEscape
              */
             // @ts-ignore
-            getColumns(catalog: string, schemaPattern: string, tableNamePattern: string, columnNamePattern: string): java.sql.ResultSet
+            getColumns(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, tableNamePattern: java.lang.String | string, columnNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the access rights for a table's columns.
              * <P>Only privileges matching the column name criteria are
@@ -2036,7 +2036,7 @@ declare namespace java {
              * @see #getSearchStringEscape
              */
             // @ts-ignore
-            getColumnPrivileges(catalog: string, schema: string, table: string, columnNamePattern: string): java.sql.ResultSet
+            getColumnPrivileges(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string, columnNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the access rights for each table available
              * in a catalog. Note that a table privilege applies to one or
@@ -2075,7 +2075,7 @@ declare namespace java {
              * @see #getSearchStringEscape
              */
             // @ts-ignore
-            getTablePrivileges(catalog: string, schemaPattern: string, tableNamePattern: string): java.sql.ResultSet
+            getTablePrivileges(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, tableNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of a table's optimal set of columns that
              * uniquely identifies a row. They are ordered by SCOPE.
@@ -2125,7 +2125,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getBestRowIdentifier(catalog: string, schema: string, table: string, scope: number /*int*/, nullable: boolean): java.sql.ResultSet
+            getBestRowIdentifier(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string, scope: number /*int*/, nullable: boolean): java.sql.ResultSet
             /**
              * Retrieves a description of a table's columns that are automatically
              * updated when any value in a row is updated.  They are
@@ -2169,7 +2169,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getVersionColumns(catalog: string, schema: string, table: string): java.sql.ResultSet
+            getVersionColumns(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the given table's primary key columns.  They
              * are ordered by COLUMN_NAME.
@@ -2198,7 +2198,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getPrimaryKeys(catalog: string, schema: string, table: string): java.sql.ResultSet
+            getPrimaryKeys(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the primary key columns that are
              * referenced by the given table's foreign key columns (the primary keys
@@ -2273,7 +2273,7 @@ declare namespace java {
              * @see #getExportedKeys
              */
             // @ts-ignore
-            getImportedKeys(catalog: string, schema: string, table: string): java.sql.ResultSet
+            getImportedKeys(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the foreign key columns that reference the
              * given table's primary key columns (the foreign keys exported by a
@@ -2349,7 +2349,7 @@ declare namespace java {
              * @see #getImportedKeys
              */
             // @ts-ignore
-            getExportedKeys(catalog: string, schema: string, table: string): java.sql.ResultSet
+            getExportedKeys(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the foreign key columns in the given foreign key
              * table that reference the primary key or the columns representing a unique constraint of the  parent table (could be the same or a different table).
@@ -2432,7 +2432,7 @@ declare namespace java {
              * @see #getImportedKeys
              */
             // @ts-ignore
-            getCrossReference(parentCatalog: string, parentSchema: string, parentTable: string, foreignCatalog: string, foreignSchema: string, foreignTable: string): java.sql.ResultSet
+            getCrossReference(parentCatalog: java.lang.String | string, parentSchema: java.lang.String | string, parentTable: java.lang.String | string, foreignCatalog: java.lang.String | string, foreignSchema: java.lang.String | string, foreignTable: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of all the data types supported by
              * this database. They are ordered by DATA_TYPE and then by how
@@ -2549,7 +2549,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getIndexInfo(catalog: string, schema: string, table: string, unique: boolean, approximate: boolean): java.sql.ResultSet
+            getIndexInfo(catalog: java.lang.String | string, schema: java.lang.String | string, table: java.lang.String | string, unique: boolean, approximate: boolean): java.sql.ResultSet
             /**
              * Retrieves whether this database supports the given result set type.
              * @param type defined in <code>java.sql.ResultSet</code>
@@ -2753,7 +2753,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getUDTs(catalog: string, schemaPattern: string, typeNamePattern: string, types: number /*int*/[]): java.sql.ResultSet
+            getUDTs(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, typeNamePattern: java.lang.String | string, types: number /*int*/[]): java.sql.ResultSet
             /**
              * Retrieves the connection that produced this metadata object.
              * <P>
@@ -2847,7 +2847,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getSuperTypes(catalog: string, schemaPattern: string, typeNamePattern: string): java.sql.ResultSet
+            getSuperTypes(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, typeNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the table hierarchies defined in a particular
              * schema in this database.
@@ -2879,7 +2879,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getSuperTables(catalog: string, schemaPattern: string, tableNamePattern: string): java.sql.ResultSet
+            getSuperTables(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, tableNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the given attribute of the given type
              * for a user-defined type (UDT) that is available in the given schema
@@ -2959,7 +2959,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAttributes(catalog: string, schemaPattern: string, typeNamePattern: string, attributeNamePattern: string): java.sql.ResultSet
+            getAttributes(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, typeNamePattern: java.lang.String | string, attributeNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves whether this database supports the given result set holdability.
              * @param holdability one of the following constants:
@@ -2982,7 +2982,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getResultSetHoldability(): int
+            getResultSetHoldability(): number /*int*/
             /**
              * Retrieves the major version number of the underlying database.
              * @return the underlying database's major version
@@ -2990,7 +2990,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDatabaseMajorVersion(): int
+            getDatabaseMajorVersion(): number /*int*/
             /**
              * Retrieves the minor version number of the underlying database.
              * @return underlying database's minor version
@@ -2998,7 +2998,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDatabaseMinorVersion(): int
+            getDatabaseMinorVersion(): number /*int*/
             /**
              * Retrieves the major JDBC version number for this
              * driver.
@@ -3007,7 +3007,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getJDBCMajorVersion(): int
+            getJDBCMajorVersion(): number /*int*/
             /**
              * Retrieves the minor JDBC version number for this
              * driver.
@@ -3016,7 +3016,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getJDBCMinorVersion(): int
+            getJDBCMinorVersion(): number /*int*/
             /**
              * Indicates whether the SQLSTATE returned by <code>SQLException.getSQLState</code>
              * is X/Open (now known as Open Group) SQL CLI or SQL:2003.
@@ -3027,7 +3027,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getSQLStateType(): int
+            getSQLStateType(): number /*int*/
             /**
              * Indicates whether updates made to a LOB are made on a copy or directly
              * to the LOB.
@@ -3089,7 +3089,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getSchemas(catalog: string, schemaPattern: string): java.sql.ResultSet
+            getSchemas(catalog: java.lang.String | string, schemaPattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves whether this database supports invoking user-defined or vendor functions
              * using the stored procedure escape syntax.
@@ -3181,7 +3181,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getFunctions(catalog: string, schemaPattern: string, functionNamePattern: string): java.sql.ResultSet
+            getFunctions(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, functionNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the given catalog's system or user
              * function parameters and return type.
@@ -3273,7 +3273,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getFunctionColumns(catalog: string, schemaPattern: string, functionNamePattern: string, columnNamePattern: string): java.sql.ResultSet
+            getFunctionColumns(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, functionNamePattern: java.lang.String | string, columnNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves a description of the pseudo or hidden columns available
              * in a given table within the specified catalog and schema.
@@ -3333,7 +3333,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getPseudoColumns(catalog: string, schemaPattern: string, tableNamePattern: string, columnNamePattern: string): java.sql.ResultSet
+            getPseudoColumns(catalog: java.lang.String | string, schemaPattern: java.lang.String | string, tableNamePattern: java.lang.String | string, columnNamePattern: java.lang.String | string): java.sql.ResultSet
             /**
              * Retrieves whether a generated key will always be returned if the column
              * name(s) or index(es) specified for the auto generated key column(s)
@@ -3357,7 +3357,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getMaxLogicalLobSize(): long
+            getMaxLogicalLobSize(): number /*long*/
             /**
              * Retrieves whether this database supports REF CURSOR.
              * <p>

@@ -29,50 +29,50 @@ declare namespace javax {
                  * information to the Accessibility PropertyChange mechanism
                  */
                 // @ts-ignore
-                propertyChange(e: java.beans.PropertyChangeEvent): void
+                public propertyChange(e: java.beans.PropertyChangeEvent): void
                 /**
                  * Track changes to the table contents
                  */
                 // @ts-ignore
-                tableChanged(e: javax.swing.event.TableModelEvent): void
+                public tableChanged(e: javax.swing.event.TableModelEvent): void
                 /**
                  * Track changes to the table contents (row insertions)
                  */
                 // @ts-ignore
-                tableRowsInserted(e: javax.swing.event.TableModelEvent): void
+                public tableRowsInserted(e: javax.swing.event.TableModelEvent): void
                 /**
                  * Track changes to the table contents (row deletions)
                  */
                 // @ts-ignore
-                tableRowsDeleted(e: javax.swing.event.TableModelEvent): void
+                public tableRowsDeleted(e: javax.swing.event.TableModelEvent): void
                 /**
                  * Track changes to the table contents (column insertions)
                  */
                 // @ts-ignore
-                columnAdded(e: javax.swing.event.TableColumnModelEvent): void
+                public columnAdded(e: javax.swing.event.TableColumnModelEvent): void
                 /**
                  * Track changes to the table contents (column deletions)
                  */
                 // @ts-ignore
-                columnRemoved(e: javax.swing.event.TableColumnModelEvent): void
+                public columnRemoved(e: javax.swing.event.TableColumnModelEvent): void
                 /**
                  * Track changes of a column repositioning.
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnMoved(e: javax.swing.event.TableColumnModelEvent): void
+                public columnMoved(e: javax.swing.event.TableColumnModelEvent): void
                 /**
                  * Track changes of a column moving due to margin changes.
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnMarginChanged(e: javax.swing.event.ChangeEvent): void
+                public columnMarginChanged(e: javax.swing.event.ChangeEvent): void
                 /**
                  * Track that the selection model of the TableColumnModel changed.
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnSelectionChanged(e: javax.swing.event.ListSelectionEvent): void
+                public columnSelectionChanged(e: javax.swing.event.ListSelectionEvent): void
                 /**
                  * Track changes to a cell's contents.
                  * Invoked when editing is finished. The changes are saved, the
@@ -80,19 +80,19 @@ declare namespace javax {
                  * @see CellEditorListener
                  */
                 // @ts-ignore
-                editingStopped(e: javax.swing.event.ChangeEvent): void
+                public editingStopped(e: javax.swing.event.ChangeEvent): void
                 /**
                  * Invoked when editing is canceled. The editor object is discarded
                  * and the cell is rendered once again.
                  * @see CellEditorListener
                  */
                 // @ts-ignore
-                editingCanceled(e: javax.swing.event.ChangeEvent): void
+                public editingCanceled(e: javax.swing.event.ChangeEvent): void
                 /**
                  * Track changes to table cell selections
                  */
                 // @ts-ignore
-                valueChanged(e: javax.swing.event.ListSelectionEvent): void
+                public valueChanged(e: javax.swing.event.ListSelectionEvent): void
                 /**
                  * Get the AccessibleSelection associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                 /**
                  * Gets the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -109,7 +109,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Returns the <code>Accessible</code> child, if one exists,
                  * contained at the local coordinate <code>Point</code>.
@@ -120,7 +120,7 @@ declare namespace javax {
                  *     at the specified location; else <code>null</code>
                  */
                 // @ts-ignore
-                getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                 /**
                  * Returns the number of accessible children in the object.  If all
                  * of the children of this object implement <code>Accessible</code>,
@@ -128,14 +128,14 @@ declare namespace javax {
                  * @return the number of accessible children in the object
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the nth <code>Accessible</code> child of the object.
                  * @param i zero-based index of child
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns the number of <code>Accessible</code> children
                  * currently selected.
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @return the number of items currently selected
                  */
                 // @ts-ignore
-                getAccessibleSelectionCount(): int
+                public getAccessibleSelectionCount(): number /*int*/
                 /**
                  * Returns an <code>Accessible</code> representing the
                  * specified selected child in the object.  If there
@@ -157,7 +157,7 @@ declare namespace javax {
                  * @see #getAccessibleSelectionCount
                  */
                 // @ts-ignore
-                getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Determines if the current child of this object is selected.
                  * @param i the zero-based index of the child in this
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @see AccessibleContext#getAccessibleChild
                  */
                 // @ts-ignore
-                isAccessibleChildSelected(i: number /*int*/): boolean
+                public isAccessibleChildSelected(i: number /*int*/): boolean
                 /**
                  * Adds the specified <code>Accessible</code> child of the
                  * object to the object's selection.  If the object supports
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @see AccessibleContext#getAccessibleChild
                  */
                 // @ts-ignore
-                addAccessibleSelection(i: number /*int*/): void
+                public addAccessibleSelection(i: number /*int*/): void
                 /**
                  * Removes the specified child of the object from the object's
                  * selection.  If the specified item isn't currently selected, this
@@ -193,20 +193,20 @@ declare namespace javax {
                  * @see AccessibleContext#getAccessibleChild
                  */
                 // @ts-ignore
-                removeAccessibleSelection(i: number /*int*/): void
+                public removeAccessibleSelection(i: number /*int*/): void
                 /**
                  * Clears the selection in the object, so that no children in the
                  * object are selected.
                  */
                 // @ts-ignore
-                clearAccessibleSelection(): void
+                public clearAccessibleSelection(): void
                 /**
                  * Causes every child of the object to be selected, but only
                  * if the <code>JTable</code> supports multiple selections,
                  * and if individual cell selection is enabled.
                  */
                 // @ts-ignore
-                selectAllAccessibleSelection(): void
+                public selectAllAccessibleSelection(): void
                 /**
                  * Returns the row number of an index in the table.
                  * @param index the zero-based index in the table
@@ -215,7 +215,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAccessibleRow(index: number /*int*/): int
+                public getAccessibleRow(index: number /*int*/): number /*int*/
                 /**
                  * Returns the column number of an index in the table.
                  * @param index the zero-based index in the table
@@ -224,7 +224,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAccessibleColumn(index: number /*int*/): int
+                public getAccessibleColumn(index: number /*int*/): number /*int*/
                 /**
                  * Returns the index at a row and column in the table.
                  * @param r zero-based row of the table
@@ -234,7 +234,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAccessibleIndex(r: number /*int*/, c: number /*int*/): int
+                public getAccessibleIndex(r: number /*int*/, c: number /*int*/): number /*int*/
                 /**
                  * Gets the <code>AccessibleTable</code> associated with this
                  * object.  In the implementation of the Java Accessibility
@@ -245,41 +245,41 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleTable(): javax.accessibility.AccessibleTable
+                public getAccessibleTable(): javax.accessibility.AccessibleTable
                 /**
                  * Returns the caption for the table.
                  * @return the caption for the table
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleCaption(): javax.accessibility.Accessible
+                public getAccessibleCaption(): javax.accessibility.Accessible
                 /**
                  * Sets the caption for the table.
                  * @param a the caption for the table
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAccessibleCaption(a: javax.accessibility.Accessible): void
+                public setAccessibleCaption(a: javax.accessibility.Accessible): void
                 /**
                  * Returns the summary description of the table.
                  * @return the summary description of the table
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleSummary(): javax.accessibility.Accessible
+                public getAccessibleSummary(): javax.accessibility.Accessible
                 /**
                  * Sets the summary description of the table.
                  * @param a the summary description of the table
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAccessibleSummary(a: javax.accessibility.Accessible): void
+                public setAccessibleSummary(a: javax.accessibility.Accessible): void
                 // @ts-ignore
-                getAccessibleRowCount(): int
+                public getAccessibleRowCount(): number /*int*/
                 // @ts-ignore
-                getAccessibleColumnCount(): int
+                public getAccessibleColumnCount(): number /*int*/
                 // @ts-ignore
-                getAccessibleAt(r: number /*int*/, c: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleAt(r: number /*int*/, c: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns the number of rows occupied by the <code>Accessible</code>
                  * at a specified row and column in the table.
@@ -288,7 +288,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleRowExtentAt(r: number /*int*/, c: number /*int*/): int
+                public getAccessibleRowExtentAt(r: number /*int*/, c: number /*int*/): number /*int*/
                 /**
                  * Returns the number of columns occupied by the
                  * <code>Accessible</code> at a given (row, column).
@@ -297,7 +297,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleColumnExtentAt(r: number /*int*/, c: number /*int*/): int
+                public getAccessibleColumnExtentAt(r: number /*int*/, c: number /*int*/): number /*int*/
                 /**
                  * Returns the row headers as an <code>AccessibleTable</code>.
                  * @return an <code>AccessibleTable</code> representing the row
@@ -305,7 +305,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleRowHeader(): javax.accessibility.AccessibleTable
+                public getAccessibleRowHeader(): javax.accessibility.AccessibleTable
                 /**
                  * Sets the row headers as an <code>AccessibleTable</code>.
                  * @param a an <code>AccessibleTable</code> representing the row
@@ -313,7 +313,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAccessibleRowHeader(a: javax.accessibility.AccessibleTable): void
+                public setAccessibleRowHeader(a: javax.accessibility.AccessibleTable): void
                 /**
                  * Returns the column headers as an <code>AccessibleTable</code>.
                  * @return an <code>AccessibleTable</code> representing the column
@@ -322,7 +322,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleColumnHeader(): javax.accessibility.AccessibleTable
+                public getAccessibleColumnHeader(): javax.accessibility.AccessibleTable
                 /**
                  * Sets the column headers as an <code>AccessibleTable</code>.
                  * @param a an <code>AccessibleTable</code> representing the
@@ -330,7 +330,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAccessibleColumnHeader(a: javax.accessibility.AccessibleTable): void
+                public setAccessibleColumnHeader(a: javax.accessibility.AccessibleTable): void
                 /**
                  * Returns the description of the specified row in the table.
                  * @param r zero-based row of the table
@@ -338,7 +338,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleRowDescription(r: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleRowDescription(r: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Sets the description text of the specified row of the table.
                  * @param r zero-based row of the table
@@ -346,7 +346,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAccessibleRowDescription(r: number /*int*/, a: javax.accessibility.Accessible): void
+                public setAccessibleRowDescription(r: number /*int*/, a: javax.accessibility.Accessible): void
                 /**
                  * Returns the description of the specified column in the table.
                  * @param c zero-based column of the table
@@ -354,7 +354,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleColumnDescription(c: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleColumnDescription(c: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Sets the description text of the specified column of the table.
                  * @param c zero-based column of the table
@@ -362,7 +362,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAccessibleColumnDescription(c: number /*int*/, a: javax.accessibility.Accessible): void
+                public setAccessibleColumnDescription(c: number /*int*/, a: javax.accessibility.Accessible): void
                 /**
                  * Returns a boolean value indicating whether the accessible at a
                  * given (row, column) is selected.
@@ -373,7 +373,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isAccessibleSelected(r: number /*int*/, c: number /*int*/): boolean
+                public isAccessibleSelected(r: number /*int*/, c: number /*int*/): boolean
                 /**
                  * Returns a boolean value indicating whether the specified row
                  * is selected.
@@ -383,7 +383,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isAccessibleRowSelected(r: number /*int*/): boolean
+                public isAccessibleRowSelected(r: number /*int*/): boolean
                 /**
                  * Returns a boolean value indicating whether the specified column
                  * is selected.
@@ -393,7 +393,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isAccessibleColumnSelected(c: number /*int*/): boolean
+                public isAccessibleColumnSelected(c: number /*int*/): boolean
                 /**
                  * Returns the selected rows in a table.
                  * @return an array of selected rows where each element is a
@@ -401,7 +401,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getSelectedAccessibleRows(): int[]
+                public getSelectedAccessibleRows(): number /*int*/[]
                 /**
                  * Returns the selected columns in a table.
                  * @return an array of selected columns where each element is a
@@ -409,7 +409,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getSelectedAccessibleColumns(): int[]
+                public getSelectedAccessibleColumns(): number /*int*/[]
                 /**
                  * Returns the row at a given index into the table.
                  * @param i zero-based index into the table
@@ -417,7 +417,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleRowAtIndex(i: number /*int*/): int
+                public getAccessibleRowAtIndex(i: number /*int*/): number /*int*/
                 /**
                  * Returns the column at a given index into the table.
                  * @param i zero-based index into the table
@@ -425,7 +425,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleColumnAtIndex(i: number /*int*/): int
+                public getAccessibleColumnAtIndex(i: number /*int*/): number /*int*/
                 /**
                  * Returns the index at a given (row, column) in the table.
                  * @param r zero-based row of the table
@@ -434,7 +434,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleIndexAt(r: number /*int*/, c: number /*int*/): int
+                public getAccessibleIndexAt(r: number /*int*/, c: number /*int*/): number /*int*/
             }
         }
     }

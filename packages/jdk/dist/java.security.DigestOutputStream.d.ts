@@ -37,14 +37,14 @@ declare namespace java {
              * @see #setMessageDigest(java.security.MessageDigest)
              */
             // @ts-ignore
-            getMessageDigest(): java.security.MessageDigest
+            public getMessageDigest(): java.security.MessageDigest
             /**
              * Associates the specified message digest with this stream.
              * @param digest the message digest to be associated with this stream.
              * @see #getMessageDigest()
              */
             // @ts-ignore
-            setMessageDigest(digest: java.security.MessageDigest): void
+            public setMessageDigest(digest: java.security.MessageDigest): void
             /**
              * Updates the message digest (if the digest function is on) using
              * the specified byte, and in any case writes the byte
@@ -60,7 +60,7 @@ declare namespace java {
              * @see MessageDigest#update(byte)
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Updates the message digest (if the digest function is on) using
              * the specified subarray, and in any case writes the subarray to
@@ -80,7 +80,7 @@ declare namespace java {
              * @see MessageDigest#update(byte[], int, int)
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Turns the digest function on or off. The default is on.  When
              * it is on, a call to one of the {@code write} methods results in an
@@ -90,13 +90,13 @@ declare namespace java {
              *  off.
              */
             // @ts-ignore
-            on(on: boolean): void
+            public on(on: boolean): void
             /**
              * Prints a string representation of this digest output stream and
              * its associated message digest object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

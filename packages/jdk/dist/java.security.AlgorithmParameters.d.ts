@@ -43,13 +43,13 @@ declare namespace java {
              * @param algorithm the algorithm
              */
             // @ts-ignore
-            constructor(paramSpi: java.security.AlgorithmParametersSpi, provider: java.security.Provider, algorithm: string)
+            constructor(paramSpi: java.security.AlgorithmParametersSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns the name of the algorithm associated with this parameter object.
              * @return the algorithm name.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns a parameter object for the specified algorithm.
              * <p> This method traverses the list of registered security Providers,
@@ -74,7 +74,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.AlgorithmParameters
+            public static getInstance(algorithm: java.lang.String | string): java.security.AlgorithmParameters
             /**
              * Returns a parameter object for the specified algorithm.
              * <p> A new AlgorithmParameters object encapsulating the
@@ -103,7 +103,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.AlgorithmParameters
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.AlgorithmParameters
             /**
              * Returns a parameter object for the specified algorithm.
              * <p> A new AlgorithmParameters object encapsulating the
@@ -128,13 +128,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.AlgorithmParameters
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.AlgorithmParameters
             /**
              * Returns the provider of this parameter object.
              * @return the provider of this parameter object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Initializes this parameter object using the parameters
              * specified in {@code paramSpec}.
@@ -144,7 +144,7 @@ declare namespace java {
              *  object, or if this parameter object has already been initialized.
              */
             // @ts-ignore
-            init(paramSpec: java.security.spec.AlgorithmParameterSpec): void
+            public init(paramSpec: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Imports the specified parameters and decodes them according to the
              * primary decoding format for parameters. The primary decoding
@@ -155,7 +155,7 @@ declare namespace java {
              *  has already been initialized.
              */
             // @ts-ignore
-            init(params: number /*byte*/[]): void
+            public init(params: number /*byte*/[]): void
             /**
              * Imports the parameters from {@code params} and decodes them
              * according to the specified decoding scheme.
@@ -169,7 +169,7 @@ declare namespace java {
              *  has already been initialized.
              */
             // @ts-ignore
-            init(params: number /*byte*/[], format: string): void
+            public init(params: number /*byte*/[], format: java.lang.String | string): void
             /**
              * Returns a (transparent) specification of this parameter object.
              * {@code paramSpec} identifies the specification class in which
@@ -186,7 +186,7 @@ declare namespace java {
              *  parameter object has not been initialized.
              */
             // @ts-ignore
-            getParameterSpec<T extends java.security.spec.AlgorithmParameterSpec>(paramSpec: java.lang.Class<T>): T
+            public getParameterSpec<T extends java.security.spec.AlgorithmParameterSpec>(paramSpec: java.lang.Class<T>): T
             /**
              * Returns the parameters in their primary encoding format.
              * The primary encoding format for parameters is ASN.1, if an ASN.1
@@ -196,7 +196,7 @@ declare namespace java {
              *  has not been initialized.
              */
             // @ts-ignore
-            getEncoded(): byte[]
+            public getEncoded(): number /*byte*/[]
             /**
              * Returns the parameters encoded in the specified scheme.
              * If {@code format} is null, the
@@ -209,14 +209,14 @@ declare namespace java {
              *  has not been initialized.
              */
             // @ts-ignore
-            getEncoded(format: string): byte[]
+            public getEncoded(format: java.lang.String | string): number /*byte*/[]
             /**
              * Returns a formatted string describing the parameters.
              * @return a formatted string describing the parameters, or null if this
              *  parameter object has not been initialized.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

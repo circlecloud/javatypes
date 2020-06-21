@@ -92,14 +92,14 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                constructor(type: number /*int*/, divisionType: number /*float*/, resolution: number /*int*/, bytes: number /*int*/, microseconds: number /*long*/, properties: java.util.Map<java.lang.String, java.lang.Object>)
+                constructor(type: number /*int*/, divisionType: number /*float*/, resolution: number /*int*/, bytes: number /*int*/, microseconds: number /*long*/, properties: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                 /**
                  * Represents unknown length.
                  * @see #getByteLength
                  * @see #getMicrosecondLength
                  */
                 // @ts-ignore
-                readonly UNKNOWN_LENGTH: number /*int*/
+                public static readonly UNKNOWN_LENGTH: number /*int*/
                 /**
                  * The type of MIDI file.
                  */
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @return the file's type (0, 1, or 2)
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Obtains the timing division type for the MIDI file.
                  * @return the division type (PPQ or one of the SMPTE types)
@@ -148,7 +148,7 @@ declare namespace javax {
                  * @see Sequence#getDivisionType()
                  */
                 // @ts-ignore
-                getDivisionType(): float
+                public getDivisionType(): number /*float*/
                 /**
                  * Obtains the timing resolution for the MIDI file.
                  * If the division type is PPQ, the resolution is specified in ticks per beat.
@@ -158,14 +158,14 @@ declare namespace javax {
                  * @see Sequence#getResolution()
                  */
                 // @ts-ignore
-                getResolution(): int
+                public getResolution(): number /*int*/
                 /**
                  * Obtains the length of the MIDI file, expressed in 8-bit bytes.
                  * @return the number of bytes in the file, or UNKNOWN_LENGTH if not known
                  * @see #UNKNOWN_LENGTH
                  */
                 // @ts-ignore
-                getByteLength(): int
+                public getByteLength(): number /*int*/
                 /**
                  * Obtains the length of the MIDI file, expressed in microseconds.
                  * @return the file's duration in microseconds, or UNKNOWN_LENGTH if not known
@@ -174,7 +174,7 @@ declare namespace javax {
                  * @see #UNKNOWN_LENGTH
                  */
                 // @ts-ignore
-                getMicrosecondLength(): long
+                public getMicrosecondLength(): number /*long*/
                 /**
                  * Obtain an unmodifiable map of properties.
                  * The concept of properties is further explained in
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                properties(): java.util.Map<java.lang.String, java.lang.Object>
+                public properties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Obtain the property value specified by the key.
                  * The concept of properties is further explained in
@@ -201,7 +201,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getProperty(key: string): java.lang.Object
+                public getProperty(key: java.lang.String | string): any
             }
         }
     }

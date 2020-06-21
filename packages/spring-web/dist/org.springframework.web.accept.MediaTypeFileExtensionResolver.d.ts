@@ -16,13 +16,13 @@ declare namespace org {
                      * @return a list of extensions or an empty list (never {#code null})
                      */
                     // @ts-ignore
-                    resolveFileExtensions(mediaType: org.springframework.http.MediaType): java.util.List<java.lang.String>
+                    resolveFileExtensions(mediaType: org.springframework.http.MediaType): Array<java.lang.String | string>
                     /**
                      * Get all registered file extensions.
                      * @return a list of extensions or an empty list (never {#code null})
                      */
                     // @ts-ignore
-                    getAllFileExtensions(): java.util.List<java.lang.String>
+                    getAllFileExtensions(): Array<java.lang.String | string>
                 }
             }
         }

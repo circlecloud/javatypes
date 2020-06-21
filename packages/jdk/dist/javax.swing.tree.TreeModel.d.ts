@@ -39,7 +39,7 @@ declare namespace javax {
                  * @return the root of the tree
                  */
                 // @ts-ignore
-                getRoot(): java.lang.Object
+                getRoot(): any
                 /**
                  * Returns the child of <code>parent</code> at index <code>index</code>
                  * in the parent's
@@ -52,7 +52,7 @@ declare namespace javax {
                  * @return the child of <code>parent</code> at index <code>index</code>
                  */
                 // @ts-ignore
-                getChild(parent: any, index: number /*int*/): java.lang.Object
+                getChild(parent: java.lang.Object | any, index: number /*int*/): any
                 /**
                  * Returns the number of children of <code>parent</code>.
                  * Returns 0 if the node
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return the number of children of the node <code>parent</code>
                  */
                 // @ts-ignore
-                getChildCount(parent: any): int
+                getChildCount(parent: java.lang.Object | any): number /*int*/
                 /**
                  * Returns <code>true</code> if <code>node</code> is a leaf.
                  * It is possible for this method to return <code>false</code>
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @return true if <code>node</code> is a leaf
                  */
                 // @ts-ignore
-                isLeaf(node: any): boolean
+                isLeaf(node: java.lang.Object | any): boolean
                 /**
                  * Messaged when the user has altered the value for the item identified
                  * by <code>path</code> to <code>newValue</code>.
@@ -84,7 +84,7 @@ declare namespace javax {
                  * @param newValue the new value from the TreeCellEditor
                  */
                 // @ts-ignore
-                valueForPathChanged(path: javax.swing.tree.TreePath, newValue: any): void
+                valueForPathChanged(path: javax.swing.tree.TreePath, newValue: java.lang.Object | any): void
                 /**
                  * Returns the index of child in parent.  If either <code>parent</code>
                  * or <code>child</code> is <code>null</code>, returns -1.
@@ -97,7 +97,7 @@ declare namespace javax {
                  *     or don't belong to this tree model
                  */
                 // @ts-ignore
-                getIndexOfChild(parent: any, child: any): int
+                getIndexOfChild(parent: java.lang.Object | any, child: java.lang.Object | any): number /*int*/
                 /**
                  * Adds a listener for the <code>TreeModelEvent</code>
                  * posted after the tree changes.

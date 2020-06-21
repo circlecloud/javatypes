@@ -6,7 +6,7 @@ declare namespace org {
                  * Used for plugin enable and disable events
                  */
                 // @ts-ignore
-                class PluginEvent extends org.bukkit.event.server.ServerEvent {
+                abstract class PluginEvent extends org.bukkit.event.server.ServerEvent {
                     // @ts-ignore
                     constructor(plugin: org.bukkit.plugin.Plugin)
                     /**
@@ -14,7 +14,7 @@ declare namespace org {
                      * @return Plugin for this event
                      */
                     // @ts-ignore
-                    getPlugin(): org.bukkit.plugin.Plugin
+                    public getPlugin(): org.bukkit.plugin.Plugin
                 }
             }
         }

@@ -47,7 +47,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                
+                readonly LOOP_CONTINUOUSLY: number /*int*/
                 /**
                  * Sets the current sequence on which the sequencer operates.
                  * <p>This method can be called even if the
@@ -185,7 +185,7 @@ declare namespace javax {
                  * @see #getTempoInMPQ
                  */
                 // @ts-ignore
-                getTempoInBPM(): float
+                getTempoInBPM(): number /*float*/
                 /**
                  * Sets the tempo in beats per minute.   The actual tempo of playback
                  * is the product of the specified value and the tempo factor.
@@ -206,7 +206,7 @@ declare namespace javax {
                  * @see #getTempoInBPM
                  */
                 // @ts-ignore
-                getTempoInMPQ(): float
+                getTempoInMPQ(): number /*float*/
                 /**
                  * Sets the tempo in microseconds per quarter note.  The actual tempo
                  * of playback is the product of the specified value and the tempo
@@ -241,14 +241,14 @@ declare namespace javax {
                  * @see #setTempoFactor(float)
                  */
                 // @ts-ignore
-                getTempoFactor(): float
+                getTempoFactor(): number /*float*/
                 /**
                  * Obtains the length of the current sequence, expressed in MIDI ticks,
                  * or 0 if no sequence is set.
                  * @return length of the sequence in ticks
                  */
                 // @ts-ignore
-                getTickLength(): long
+                getTickLength(): number /*long*/
                 /**
                  * Obtains the current position in the sequence, expressed in MIDI
                  * ticks.  (The duration of a tick in seconds is determined both by
@@ -258,7 +258,7 @@ declare namespace javax {
                  * @see #setTickPosition
                  */
                 // @ts-ignore
-                getTickPosition(): long
+                getTickPosition(): number /*long*/
                 /**
                  * Sets the current sequencer position in MIDI ticks
                  * @param tick the desired tick position
@@ -272,7 +272,7 @@ declare namespace javax {
                  * @return length of the sequence in microseconds.
                  */
                 // @ts-ignore
-                getMicrosecondLength(): long
+                getMicrosecondLength(): number /*long*/
                 /**
                  * Obtains the current position in the sequence, expressed in
                  * microseconds.
@@ -280,7 +280,7 @@ declare namespace javax {
                  * @see #setMicrosecondPosition
                  */
                 // @ts-ignore
-                getMicrosecondPosition(): long
+                getMicrosecondPosition(): number /*long*/
                 /**
                  * Sets the current position in the sequence, expressed in microseconds
                  * @param microseconds desired position in microseconds
@@ -462,7 +462,7 @@ declare namespace javax {
                  * @see ControllerEventListener
                  */
                 // @ts-ignore
-                addControllerEventListener(listener: javax.sound.midi.ControllerEventListener, controllers: number /*int*/[]): int[]
+                addControllerEventListener(listener: javax.sound.midi.ControllerEventListener, controllers: number /*int*/[]): number /*int*/[]
                 /**
                  * Removes a controller event listener's interest in one or more
                  * types of controller event. The <code>controllers</code> argument
@@ -483,7 +483,7 @@ declare namespace javax {
                  * @see #addControllerEventListener
                  */
                 // @ts-ignore
-                removeControllerEventListener(listener: javax.sound.midi.ControllerEventListener, controllers: number /*int*/[]): int[]
+                removeControllerEventListener(listener: javax.sound.midi.ControllerEventListener, controllers: number /*int*/[]): number /*int*/[]
                 /**
                  * Sets the first MIDI tick that will be
                  * played in the loop. If the loop count is
@@ -520,7 +520,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLoopStartPoint(): long
+                getLoopStartPoint(): number /*long*/
                 /**
                  * Sets the last MIDI tick that will be played in
                  * the loop. If the loop count is 0, the loop end
@@ -559,7 +559,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLoopEndPoint(): long
+                getLoopEndPoint(): number /*long*/
                 /**
                  * Sets the number of repetitions of the loop for
                  * playback.
@@ -608,7 +608,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLoopCount(): int
+                getLoopCount(): number /*int*/
             }
         }
     }

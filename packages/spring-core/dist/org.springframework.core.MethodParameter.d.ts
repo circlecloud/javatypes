@@ -70,25 +70,25 @@ declare namespace org {
                  * @return the Method, or {#code null} if none
                  */
                 // @ts-ignore
-                getMethod(): java.lang.reflect.Method
+                public getMethod(): java.lang.reflect.Method
                 /**
                  * Return the wrapped Constructor, if any.
                  * <p>Note: Either Method or Constructor is available.
                  * @return the Constructor, or {#code null} if none
                  */
                 // @ts-ignore
-                getConstructor(): java.lang.reflect.Constructor<?>
+                public getConstructor(): java.lang.reflect.Constructor<any>
                 /**
                  * Return the class that declares the underlying Method or Constructor.
                  */
                 // @ts-ignore
-                getDeclaringClass(): java.lang.Class<?>
+                public getDeclaringClass(): java.lang.Class<any>
                 /**
                  * Return the wrapped member.
                  * @return the Method or Constructor as Member
                  */
                 // @ts-ignore
-                getMember(): java.lang.reflect.Member
+                public getMember(): java.lang.reflect.Member
                 /**
                  * Return the wrapped annotated element.
                  * <p>Note: This method exposes the annotations declared on the method/constructor
@@ -96,33 +96,33 @@ declare namespace org {
                  * @return the Method or Constructor as AnnotatedElement
                  */
                 // @ts-ignore
-                getAnnotatedElement(): java.lang.reflect.AnnotatedElement
+                public getAnnotatedElement(): java.lang.reflect.AnnotatedElement
                 /**
                  * Return the wrapped executable.
                  * @return the Method or Constructor as Executable
                  * @since 5.0
                  */
                 // @ts-ignore
-                getExecutable(): java.lang.reflect.Executable
+                public getExecutable(): java.lang.reflect.Executable
                 /**
                  * Return the {@link Parameter} descriptor for method/constructor parameter.
                  * @since 5.0
                  */
                 // @ts-ignore
-                getParameter(): java.lang.reflect.Parameter
+                public getParameter(): java.lang.reflect.Parameter
                 /**
                  * Return the index of the method/constructor parameter.
                  * @return the parameter index (-1 in case of the return type)
                  */
                 // @ts-ignore
-                getParameterIndex(): int
+                public getParameterIndex(): number /*int*/
                 /**
                  * Increase this parameter's nesting level.
                  * @see #getNestingLevel()
                  * @deprecated since 5.2 in favor of {#link #nested(Integer)}
                  */
                 // @ts-ignore
-                increaseNestingLevel(): void
+                public increaseNestingLevel(): void
                 /**
                  * Decrease this parameter's nesting level.
                  * @see #getNestingLevel()
@@ -130,14 +130,14 @@ declare namespace org {
                  *  using {#link #nested(Integer)} if nesting is required
                  */
                 // @ts-ignore
-                decreaseNestingLevel(): void
+                public decreaseNestingLevel(): void
                 /**
                  * Return the nesting level of the target type
                  * (typically 1; e.g. in case of a List of Lists, 1 would indicate the
                  * nested List, whereas 2 would indicate the element of the nested List).
                  */
                 // @ts-ignore
-                getNestingLevel(): int
+                public getNestingLevel(): number /*int*/
                 /**
                  * Return a variant of this {@code MethodParameter} with the type
                  * for the current level set to the specified value.
@@ -145,7 +145,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                withTypeIndex(typeIndex: number /*int*/): org.springframework.core.MethodParameter
+                public withTypeIndex(typeIndex: number /*int*/): org.springframework.core.MethodParameter
                 /**
                  * Set the type index for the current nesting level.
                  * @param typeIndex the corresponding type index
@@ -154,7 +154,7 @@ declare namespace org {
                  * @deprecated since 5.2 in favor of {#link #withTypeIndex}
                  */
                 // @ts-ignore
-                setTypeIndexForCurrentLevel(typeIndex: number /*int*/): void
+                public setTypeIndexForCurrentLevel(typeIndex: number /*int*/): void
                 /**
                  * Return the type index for the current nesting level.
                  * @return the corresponding type index, or {#code null}
@@ -162,7 +162,7 @@ declare namespace org {
                  * @see #getNestingLevel()
                  */
                 // @ts-ignore
-                getTypeIndexForCurrentLevel(): java.lang.Integer
+                public getTypeIndexForCurrentLevel(): number
                 /**
                  * Return the type index for the specified nesting level.
                  * @param nestingLevel the nesting level to check
@@ -170,14 +170,14 @@ declare namespace org {
                  *  if none specified (indicating the default type index)
                  */
                 // @ts-ignore
-                getTypeIndexForLevel(nestingLevel: number /*int*/): java.lang.Integer
+                public getTypeIndexForLevel(nestingLevel: number /*int*/): number
                 /**
                  * Return a variant of this {@code MethodParameter} which points to the
                  * same parameter but one nesting level deeper.
                  * @since 4.3
                  */
                 // @ts-ignore
-                nested(): org.springframework.core.MethodParameter
+                public nested(): org.springframework.core.MethodParameter
                 /**
                  * Return a variant of this {@code MethodParameter} which points to the
                  * same parameter but one nesting level deeper.
@@ -185,7 +185,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                nested(typeIndex: number): org.springframework.core.MethodParameter
+                public nested(typeIndex: java.lang.Integer | number): org.springframework.core.MethodParameter
                 /**
                  * Return whether this method indicates a parameter which is not required:
                  * either in the form of Java 8's {@link java.util.Optional}, any variant
@@ -195,7 +195,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                isOptional(): boolean
+                public isOptional(): boolean
                 /**
                  * Return a variant of this {@code MethodParameter} which points to
                  * the same parameter but one nesting level deeper in case of a
@@ -205,7 +205,7 @@ declare namespace org {
                  * @see #nested()
                  */
                 // @ts-ignore
-                nestedIfOptional(): org.springframework.core.MethodParameter
+                public nestedIfOptional(): org.springframework.core.MethodParameter
                 /**
                  * Return a variant of this {@code MethodParameter} which refers to the
                  * given containing class.
@@ -215,7 +215,7 @@ declare namespace org {
                  * @see #getParameterType()
                  */
                 // @ts-ignore
-                withContainingClass(containingClass: java.lang.Class<any>): org.springframework.core.MethodParameter
+                public withContainingClass(containingClass: java.lang.Class<any>): org.springframework.core.MethodParameter
                 /**
                  * Return the containing class for this method parameter.
                  * @return a specific containing class (potentially a subclass of the
@@ -223,20 +223,20 @@ declare namespace org {
                  * @see #getDeclaringClass()
                  */
                 // @ts-ignore
-                getContainingClass(): java.lang.Class<?>
+                public getContainingClass(): java.lang.Class<any>
                 /**
                  * Return the type of the method/constructor parameter.
                  * @return the parameter type (never {#code null})
                  */
                 // @ts-ignore
-                getParameterType(): java.lang.Class<?>
+                public getParameterType(): java.lang.Class<any>
                 /**
                  * Return the generic type of the method/constructor parameter.
                  * @return the parameter type (never {#code null})
                  * @since 3.0
                  */
                 // @ts-ignore
-                getGenericParameterType(): java.lang.reflect.Type
+                public getGenericParameterType(): java.lang.reflect.Type
                 /**
                  * Return the nested type of the method/constructor parameter.
                  * @return the parameter type (never {#code null})
@@ -244,7 +244,7 @@ declare namespace org {
                  * @see #getNestingLevel()
                  */
                 // @ts-ignore
-                getNestedParameterType(): java.lang.Class<?>
+                public getNestedParameterType(): java.lang.Class<any>
                 /**
                  * Return the nested generic type of the method/constructor parameter.
                  * @return the parameter type (never {#code null})
@@ -252,19 +252,19 @@ declare namespace org {
                  * @see #getNestingLevel()
                  */
                 // @ts-ignore
-                getNestedGenericParameterType(): java.lang.reflect.Type
+                public getNestedGenericParameterType(): java.lang.reflect.Type
                 /**
                  * Return the annotations associated with the target method/constructor itself.
                  */
                 // @ts-ignore
-                getMethodAnnotations(): java.lang.annotation.Annotation[]
+                public getMethodAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * Return the method/constructor annotation of the given type, if available.
                  * @param annotationType the annotation type to look for
                  * @return the annotation object, or {#code null} if not found
                  */
                 // @ts-ignore
-                getMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
+                public getMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
                 /**
                  * Return whether the method/constructor is annotated with the given type.
                  * @param annotationType the annotation type to look for
@@ -272,33 +272,33 @@ declare namespace org {
                  * @see #getMethodAnnotation(Class)
                  */
                 // @ts-ignore
-                hasMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): boolean
+                public hasMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): boolean
                 /**
                  * Return the annotations associated with the specific method/constructor parameter.
                  */
                 // @ts-ignore
-                getParameterAnnotations(): java.lang.annotation.Annotation[]
+                public getParameterAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * Return {@code true} if the parameter has at least one annotation,
                  * {@code false} if it has none.
                  * @see #getParameterAnnotations()
                  */
                 // @ts-ignore
-                hasParameterAnnotations(): boolean
+                public hasParameterAnnotations(): boolean
                 /**
                  * Return the parameter annotation of the given type, if available.
                  * @param annotationType the annotation type to look for
                  * @return the annotation object, or {#code null} if not found
                  */
                 // @ts-ignore
-                getParameterAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
+                public getParameterAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
                 /**
                  * Return whether the parameter is declared with the given annotation type.
                  * @param annotationType the annotation type to look for
                  * @see #getParameterAnnotation(Class)
                  */
                 // @ts-ignore
-                hasParameterAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): boolean
+                public hasParameterAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): boolean
                 /**
                  * Initialize parameter name discovery for this method parameter.
                  * <p>This method does not actually try to retrieve the parameter name at
@@ -306,7 +306,7 @@ declare namespace org {
                  * {@link #getParameterName()} (if ever).
                  */
                 // @ts-ignore
-                initParameterNameDiscovery(parameterNameDiscoverer: org.springframework.core.ParameterNameDiscoverer): void
+                public initParameterNameDiscovery(parameterNameDiscoverer: org.springframework.core.ParameterNameDiscoverer): void
                 /**
                  * Return the name of the method/constructor parameter.
                  * @return the parameter name (may be {#code null} if no
@@ -315,7 +315,7 @@ declare namespace org {
                  *  has been set to begin with)
                  */
                 // @ts-ignore
-                getParameterName(): java.lang.String
+                public getParameterName(): string
                 /**
                  * A template method to post-process a given annotation instance before
                  * returning it to the caller.
@@ -325,7 +325,7 @@ declare namespace org {
                  * @since 4.2
                  */
                 // @ts-ignore
-                adaptAnnotation<A extends java.lang.annotation.Annotation>(annotation: A extends java.lang.annotation.Annotation): A
+                adaptAnnotation<A extends java.lang.annotation.Annotation>(annotation: A): A
                 /**
                  * A template method to post-process a given annotation array before
                  * returning it to the caller.
@@ -337,13 +337,13 @@ declare namespace org {
                 // @ts-ignore
                 adaptAnnotationArray(annotations: java.lang.annotation.Annotation[]): java.lang.annotation.Annotation[]
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.springframework.core.MethodParameter
+                public clone(): org.springframework.core.MethodParameter
                 /**
                  * Create a new MethodParameter for the given method or constructor.
                  * <p>This is a convenience factory method for scenarios where a
@@ -354,7 +354,7 @@ declare namespace org {
                  * @deprecated as of 5.0, in favor of {#link #forExecutable}
                  */
                 // @ts-ignore
-                forMethodOrConstructor(methodOrConstructor: any, parameterIndex: number /*int*/): org.springframework.core.MethodParameter
+                public static forMethodOrConstructor(methodOrConstructor: java.lang.Object | any, parameterIndex: number /*int*/): org.springframework.core.MethodParameter
                 /**
                  * Create a new MethodParameter for the given method or constructor.
                  * <p>This is a convenience factory method for scenarios where a
@@ -365,7 +365,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                forExecutable(executable: java.lang.reflect.Executable, parameterIndex: number /*int*/): org.springframework.core.MethodParameter
+                public static forExecutable(executable: java.lang.reflect.Executable, parameterIndex: number /*int*/): org.springframework.core.MethodParameter
                 /**
                  * Create a new MethodParameter for the given parameter descriptor.
                  * <p>This is a convenience factory method for scenarios where a
@@ -375,9 +375,9 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                forParameter(parameter: java.lang.reflect.Parameter): org.springframework.core.MethodParameter
+                public static forParameter(parameter: java.lang.reflect.Parameter): org.springframework.core.MethodParameter
                 // @ts-ignore
-                findParameterIndex(parameter: java.lang.reflect.Parameter): int
+                static findParameterIndex(parameter: java.lang.reflect.Parameter): number /*int*/
             }
         }
     }

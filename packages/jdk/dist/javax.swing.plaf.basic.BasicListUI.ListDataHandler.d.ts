@@ -25,11 +25,11 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        intervalAdded(e: javax.swing.event.ListDataEvent): void
+                        public intervalAdded(e: javax.swing.event.ListDataEvent): void
                         // @ts-ignore
-                        intervalRemoved(e: javax.swing.event.ListDataEvent): void
+                        public intervalRemoved(e: javax.swing.event.ListDataEvent): void
                         // @ts-ignore
-                        contentsChanged(e: javax.swing.event.ListDataEvent): void
+                        public contentsChanged(e: javax.swing.event.ListDataEvent): void
                     }
                 }
             }

@@ -14,7 +14,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class Formatter extends java.lang.Object {
+            abstract class Formatter extends java.lang.Object {
                 /**
                  * Construct a new formatter.
                  */
@@ -31,7 +31,7 @@ declare namespace java {
                  * @return the formatted log record
                  */
                 // @ts-ignore
-                abstract format(record: java.util.logging.LogRecord): java.lang.String
+                public abstract format(record: java.util.logging.LogRecord): string
                 /**
                  * Return the header string for a set of formatted records.
                  * <p>
@@ -41,7 +41,7 @@ declare namespace java {
                  * @return header string
                  */
                 // @ts-ignore
-                getHead(h: java.util.logging.Handler): java.lang.String
+                public getHead(h: java.util.logging.Handler): string
                 /**
                  * Return the tail string for a set of formatted records.
                  * <p>
@@ -51,7 +51,7 @@ declare namespace java {
                  * @return tail string
                  */
                 // @ts-ignore
-                getTail(h: java.util.logging.Handler): java.lang.String
+                public getTail(h: java.util.logging.Handler): string
                 /**
                  * Localize and format the message string from a log record.  This
                  * method is provided as a convenience for Formatter subclasses to
@@ -73,7 +73,7 @@ declare namespace java {
                  * @return a localized and formatted message
                  */
                 // @ts-ignore
-                formatMessage(record: java.util.logging.LogRecord): java.lang.String
+                public formatMessage(record: java.util.logging.LogRecord): string
             }
         }
     }

@@ -8,39 +8,39 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerKickEvent extends org.bukkit.event.player.PlayerEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(playerKicked: org.bukkit.entity.Player, kickReason: string, leaveMessage: string)
+                    constructor(playerKicked: org.bukkit.entity.Player, kickReason: java.lang.String | string, leaveMessage: java.lang.String | string)
                     /**
                      * Gets the reason why the player is getting kicked
                      * @return string kick reason
                      */
                     // @ts-ignore
-                    getReason(): java.lang.String
+                    public getReason(): string
                     /**
                      * Gets the leave message send to all online players
                      * @return string kick reason
                      */
                     // @ts-ignore
-                    getLeaveMessage(): java.lang.String
+                    public getLeaveMessage(): string
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Sets the reason why the player is getting kicked
                      * @param kickReason kick reason
                      */
                     // @ts-ignore
-                    setReason(kickReason: string): void
+                    public setReason(kickReason: java.lang.String | string): void
                     /**
                      * Sets the leave message send to all online players
                      * @param leaveMessage leave message
                      */
                     // @ts-ignore
-                    setLeaveMessage(leaveMessage: string): void
+                    public setLeaveMessage(leaveMessage: java.lang.String | string): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

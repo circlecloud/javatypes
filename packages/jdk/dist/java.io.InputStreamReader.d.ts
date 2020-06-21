@@ -42,7 +42,7 @@ declare namespace java {
              *              If the named charset is not supported
              */
             // @ts-ignore
-            constructor(input: java.io.InputStream, charsetName: string)
+            constructor(input: java.io.InputStream, charsetName: java.lang.String | string)
             /**
              * Creates an InputStreamReader that uses the given charset.
              * @param in       An InputStream
@@ -78,7 +78,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getEncoding(): java.lang.String
+            public getEncoding(): string
             /**
              * Reads a single character.
              * @return The character read, or -1 if the end of the stream has been
@@ -86,7 +86,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads characters into a portion of an array.
              * @param cbuf     Destination buffer
@@ -97,7 +97,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[], offset: number /*int*/, length: number /*int*/): int
+            public read(cbuf: string[], offset: number /*int*/, length: number /*int*/): number /*int*/
             /**
              * Tells whether this stream is ready to be read.  An InputStreamReader is
              * ready if its input buffer is not empty, or if bytes are available to be
@@ -105,9 +105,9 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

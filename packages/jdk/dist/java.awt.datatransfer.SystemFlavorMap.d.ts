@@ -16,7 +16,7 @@ declare namespace java {
                  * Returns the default FlavorMap for this thread's ClassLoader.
                  */
                 // @ts-ignore
-                getDefaultFlavorMap(): java.awt.datatransfer.FlavorMap
+                public static getDefaultFlavorMap(): java.awt.datatransfer.FlavorMap
                 /**
                  * Returns a <code>List</code> of <code>String</code> natives to which the
                  * specified <code>DataFlavor</code> can be translated by the data transfer
@@ -41,7 +41,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getNativesForFlavor(flav: java.awt.datatransfer.DataFlavor): java.util.List<java.lang.String>
+                public getNativesForFlavor(flav: java.awt.datatransfer.DataFlavor): Array<java.lang.String | string>
                 /**
                  * Returns a <code>List</code> of <code>DataFlavor</code>s to which the
                  * specified <code>String</code> native can be translated by the data
@@ -72,7 +72,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getFlavorsForNative(nat: string): java.util.List<java.awt.datatransfer.DataFlavor>
+                public getFlavorsForNative(nat: java.lang.String | string): Array<java.awt.datatransfer.DataFlavor>
                 /**
                  * Returns a <code>Map</code> of the specified <code>DataFlavor</code>s to
                  * their most preferred <code>String</code> native. Each native value will
@@ -94,7 +94,7 @@ declare namespace java {
                  * @see #encodeDataFlavor
                  */
                 // @ts-ignore
-                getNativesForFlavors(flavors: java.awt.datatransfer.DataFlavor[]): java.util.Map<java.awt.datatransfer.DataFlavor, java.lang.String>
+                public getNativesForFlavors(flavors: java.awt.datatransfer.DataFlavor[]): java.util.Map<java.awt.datatransfer.DataFlavor, java.lang.String | string>
                 /**
                  * Returns a <code>Map</code> of the specified <code>String</code> natives
                  * to their most preferred <code>DataFlavor</code>. Each
@@ -118,7 +118,7 @@ declare namespace java {
                  * @see #encodeJavaMIMEType
                  */
                 // @ts-ignore
-                getFlavorsForNatives(natives: string[]): java.util.Map<java.lang.String, java.awt.datatransfer.DataFlavor>
+                public getFlavorsForNatives(natives: java.lang.String[] | string[]): java.util.Map<java.lang.String | string, java.awt.datatransfer.DataFlavor>
                 /**
                  * Adds a mapping from the specified <code>DataFlavor</code> (and all
                  * <code>DataFlavor</code>s equal to the specified <code>DataFlavor</code>)
@@ -138,7 +138,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                addUnencodedNativeForFlavor(flav: java.awt.datatransfer.DataFlavor, nat: string): void
+                public addUnencodedNativeForFlavor(flav: java.awt.datatransfer.DataFlavor, nat: java.lang.String | string): void
                 /**
                  * Discards the current mappings for the specified <code>DataFlavor</code>
                  * and all <code>DataFlavor</code>s equal to the specified
@@ -166,7 +166,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                setNativesForFlavor(flav: java.awt.datatransfer.DataFlavor, natives: string[]): void
+                public setNativesForFlavor(flav: java.awt.datatransfer.DataFlavor, natives: java.lang.String[] | string[]): void
                 /**
                  * Adds a mapping from a single <code>String</code> native to a single
                  * <code>DataFlavor</code>. Unlike <code>getFlavorsForNative</code>, the
@@ -184,7 +184,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                addFlavorForUnencodedNative(nat: string, flav: java.awt.datatransfer.DataFlavor): void
+                public addFlavorForUnencodedNative(nat: java.lang.String | string, flav: java.awt.datatransfer.DataFlavor): void
                 /**
                  * Discards the current mappings for the specified <code>String</code>
                  * native, and creates new mappings to the specified
@@ -211,7 +211,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                setFlavorsForNative(nat: string, flavors: java.awt.datatransfer.DataFlavor[]): void
+                public setFlavorsForNative(nat: java.lang.String | string, flavors: java.awt.datatransfer.DataFlavor[]): void
                 /**
                  * Encodes a MIME type for use as a <code>String</code> native. The format
                  * of an encoded representation of a MIME type is implementation-dependent.
@@ -231,7 +231,7 @@ declare namespace java {
                  *          mimeType is <code>null</code>
                  */
                 // @ts-ignore
-                encodeJavaMIMEType(mimeType: string): java.lang.String
+                public static encodeJavaMIMEType(mimeType: java.lang.String | string): string
                 /**
                  * Encodes a <code>DataFlavor</code> for use as a <code>String</code>
                  * native. The format of an encoded <code>DataFlavor</code> is
@@ -255,7 +255,7 @@ declare namespace java {
                  *          flav is <code>null</code> or has a <code>null</code> MIME type
                  */
                 // @ts-ignore
-                encodeDataFlavor(flav: java.awt.datatransfer.DataFlavor): java.lang.String
+                public static encodeDataFlavor(flav: java.awt.datatransfer.DataFlavor): string
                 /**
                  * Returns whether the specified <code>String</code> is an encoded Java
                  * MIME type.
@@ -264,7 +264,7 @@ declare namespace java {
                  *          <code>false</code> otherwise
                  */
                 // @ts-ignore
-                isJavaMIMEType(str: string): boolean
+                public static isJavaMIMEType(str: java.lang.String | string): boolean
                 /**
                  * Decodes a <code>String</code> native for use as a Java MIME type.
                  * @param nat the <code>String</code> to decode
@@ -272,7 +272,7 @@ declare namespace java {
                  *          an encoded <code>String</code> native
                  */
                 // @ts-ignore
-                decodeJavaMIMEType(nat: string): java.lang.String
+                public static decodeJavaMIMEType(nat: java.lang.String | string): string
                 /**
                  * Decodes a <code>String</code> native for use as a
                  * <code>DataFlavor</code>.
@@ -281,7 +281,7 @@ declare namespace java {
                  *          nat is not an encoded <code>String</code> native
                  */
                 // @ts-ignore
-                decodeDataFlavor(nat: string): java.awt.datatransfer.DataFlavor
+                public static decodeDataFlavor(nat: java.lang.String | string): java.awt.datatransfer.DataFlavor
             }
         }
     }

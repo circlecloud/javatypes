@@ -19,7 +19,7 @@ declare namespace javax {
                      * Get the character data of this event
                      */
                     // @ts-ignore
-                    getData(): java.lang.String
+                    getData(): string
                     /**
                      * Returns true if this set of Characters
                      * is all whitespace.  Whitespace inside a document

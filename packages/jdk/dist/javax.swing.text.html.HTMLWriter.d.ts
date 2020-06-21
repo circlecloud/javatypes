@@ -33,7 +33,7 @@ declare namespace javax {
                      *             location within the document.
                      */
                     // @ts-ignore
-                    write(): void
+                    public write(): void
                     /**
                      * Writes out the attribute set.  Ignores all
                      * attributes with a key of type HTML.Tag,

@@ -45,7 +45,7 @@ declare namespace javax {
                  * with this name is added and the value will be "\r\n".
                  */
                 // @ts-ignore
-                readonly EndOfLineStringProperty: string
+                public static readonly EndOfLineStringProperty: java.lang.String | string
                 /**
                  * Name of the action to place content into the associated
                  * document.  If there is a selection, it is removed before
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly insertContentAction: string
+                public static readonly insertContentAction: java.lang.String | string
                 /**
                  * Name of the action to place a line/paragraph break into
                  * the document.  If there is a selection, it is removed before
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly insertBreakAction: string
+                public static readonly insertBreakAction: java.lang.String | string
                 /**
                  * Name of the action to place a tab character into
                  * the document.  If there is a selection, it is removed before
@@ -69,21 +69,21 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly insertTabAction: string
+                public static readonly insertTabAction: java.lang.String | string
                 /**
                  * Name of the action to delete the character of content that
                  * precedes the current caret position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly deletePrevCharAction: string
+                public static readonly deletePrevCharAction: java.lang.String | string
                 /**
                  * Name of the action to delete the character of content that
                  * follows the current caret position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly deleteNextCharAction: string
+                public static readonly deleteNextCharAction: java.lang.String | string
                 /**
                  * Name of the action to delete the word that
                  * follows the beginning of the selection.
@@ -92,7 +92,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly deleteNextWordAction: string
+                public static readonly deleteNextWordAction: java.lang.String | string
                 /**
                  * Name of the action to delete the word that
                  * precedes the beginning of the selection.
@@ -101,21 +101,21 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly deletePrevWordAction: string
+                public static readonly deletePrevWordAction: java.lang.String | string
                 /**
                  * Name of the action to set the editor into read-only
                  * mode.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly readOnlyAction: string
+                public static readonly readOnlyAction: java.lang.String | string
                 /**
                  * Name of the action to set the editor into writeable
                  * mode.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly writableAction: string
+                public static readonly writableAction: java.lang.String | string
                 /**
                  * Name of the action to cut the selected region
                  * and place the contents into the system clipboard.
@@ -123,7 +123,7 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly cutAction: string
+                public static readonly cutAction: java.lang.String | string
                 /**
                  * Name of the action to copy the selected region
                  * and place the contents into the system clipboard.
@@ -131,7 +131,7 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly copyAction: string
+                public static readonly copyAction: java.lang.String | string
                 /**
                  * Name of the action to paste the contents of the
                  * system clipboard into the selected region, or before the
@@ -140,245 +140,245 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly pasteAction: string
+                public static readonly pasteAction: java.lang.String | string
                 /**
                  * Name of the action to create a beep.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly beepAction: string
+                public static readonly beepAction: java.lang.String | string
                 /**
                  * Name of the action to page up vertically.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly pageUpAction: string
+                public static readonly pageUpAction: java.lang.String | string
                 /**
                  * Name of the action to page down vertically.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly pageDownAction: string
+                public static readonly pageDownAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * logically forward one position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly forwardAction: string
+                public static readonly forwardAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * logically backward one position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly backwardAction: string
+                public static readonly backwardAction: java.lang.String | string
                 /**
                  * Name of the Action for extending the selection
                  * by moving the caret logically forward one position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionForwardAction: string
+                public static readonly selectionForwardAction: java.lang.String | string
                 /**
                  * Name of the Action for extending the selection
                  * by moving the caret logically backward one position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionBackwardAction: string
+                public static readonly selectionBackwardAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * logically upward one position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly upAction: string
+                public static readonly upAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * logically downward one position.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly downAction: string
+                public static readonly downAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * logically upward one position, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionUpAction: string
+                public static readonly selectionUpAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * logically downward one position, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionDownAction: string
+                public static readonly selectionDownAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of a word.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly beginWordAction: string
+                public static readonly beginWordAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * to the end of a word.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly endWordAction: string
+                public static readonly endWordAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of a word, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionBeginWordAction: string
+                public static readonly selectionBeginWordAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * to the end of a word, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionEndWordAction: string
+                public static readonly selectionEndWordAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret to the
                  * beginning of the previous word.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly previousWordAction: string
+                public static readonly previousWordAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret to the
                  * beginning of the next word.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly nextWordAction: string
+                public static readonly nextWordAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the selection to the
                  * beginning of the previous word, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionPreviousWordAction: string
+                public static readonly selectionPreviousWordAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the selection to the
                  * beginning of the next word, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionNextWordAction: string
+                public static readonly selectionNextWordAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of a line.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly beginLineAction: string
+                public static readonly beginLineAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the end of a line.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly endLineAction: string
+                public static readonly endLineAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of a line, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionBeginLineAction: string
+                public static readonly selectionBeginLineAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the end of a line, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionEndLineAction: string
+                public static readonly selectionEndLineAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of a paragraph.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly beginParagraphAction: string
+                public static readonly beginParagraphAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the end of a paragraph.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly endParagraphAction: string
+                public static readonly endParagraphAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of a paragraph, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionBeginParagraphAction: string
+                public static readonly selectionBeginParagraphAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the end of a paragraph, extending the selection.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionEndParagraphAction: string
+                public static readonly selectionEndParagraphAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of the document.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly beginAction: string
+                public static readonly beginAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the end of the document.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly endAction: string
+                public static readonly endAction: java.lang.String | string
                 /**
                  * Name of the <code>Action</code> for moving the caret
                  * to the beginning of the document.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionBeginAction: string
+                public static readonly selectionBeginAction: java.lang.String | string
                 /**
                  * Name of the Action for moving the caret
                  * to the end of the document.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectionEndAction: string
+                public static readonly selectionEndAction: java.lang.String | string
                 /**
                  * Name of the Action for selecting a word around the caret.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectWordAction: string
+                public static readonly selectWordAction: java.lang.String | string
                 /**
                  * Name of the Action for selecting a line around the caret.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectLineAction: string
+                public static readonly selectLineAction: java.lang.String | string
                 /**
                  * Name of the Action for selecting a paragraph around the caret.
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectParagraphAction: string
+                public static readonly selectParagraphAction: java.lang.String | string
                 /**
                  * Name of the Action for selecting the entire document
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly selectAllAction: string
+                public static readonly selectAllAction: java.lang.String | string
                 /**
                  * Name of the action that is executed by default if
                  * a <em>key typed event</em> is received and there
@@ -386,7 +386,7 @@ declare namespace javax {
                  * @see #getActions
                  */
                 // @ts-ignore
-                readonly defaultKeyTypedAction: string
+                public static readonly defaultKeyTypedAction: java.lang.String | string
                 /**
                  * Gets the MIME type of the data that this
                  * kit represents support for.  The default
@@ -394,7 +394,7 @@ declare namespace javax {
                  * @return the type
                  */
                 // @ts-ignore
-                getContentType(): java.lang.String
+                public getContentType(): string
                 /**
                  * Fetches a factory that is suitable for producing
                  * views of any models that are produced by this
@@ -403,7 +403,7 @@ declare namespace javax {
                  * @return the view factory
                  */
                 // @ts-ignore
-                getViewFactory(): javax.swing.text.ViewFactory
+                public getViewFactory(): javax.swing.text.ViewFactory
                 /**
                  * Fetches the set of commands that can be used
                  * on a text component that is using a model and
@@ -411,21 +411,21 @@ declare namespace javax {
                  * @return the command list
                  */
                 // @ts-ignore
-                getActions(): javax.swing.Action[]
+                public getActions(): javax.swing.Action[]
                 /**
                  * Fetches a caret that can navigate through views
                  * produced by the associated ViewFactory.
                  * @return the caret
                  */
                 // @ts-ignore
-                createCaret(): javax.swing.text.Caret
+                public createCaret(): javax.swing.text.Caret
                 /**
                  * Creates an uninitialized text storage model (PlainDocument)
                  * that is appropriate for this type of editor.
                  * @return the model
                  */
                 // @ts-ignore
-                createDefaultDocument(): javax.swing.text.Document
+                public createDefaultDocument(): javax.swing.text.Document
                 /**
                  * Inserts content from the given stream which is expected
                  * to be in a format appropriate for this kind of content
@@ -439,7 +439,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                read(input: java.io.InputStream, doc: javax.swing.text.Document, pos: number /*int*/): void
+                public read(input: java.io.InputStream, doc: javax.swing.text.Document, pos: number /*int*/): void
                 /**
                  * Writes content from a document to the given stream
                  * in a format appropriate for this kind of content handler.
@@ -453,7 +453,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                write(out: java.io.OutputStream, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                public write(out: java.io.OutputStream, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
                 /**
                  * Inserts content from the given stream, which will be
                  * treated as plain text.
@@ -466,7 +466,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
+                public read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
                 /**
                  * Writes content from a document to the given stream
                  * as plain text.
@@ -480,7 +480,7 @@ declare namespace javax {
                  *    the length of the document.
                  */
                 // @ts-ignore
-                write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                public write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
             }
         }
     }

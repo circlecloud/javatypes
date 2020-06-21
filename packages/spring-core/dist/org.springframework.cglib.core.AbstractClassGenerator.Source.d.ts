@@ -6,7 +6,7 @@ declare namespace org {
                     // @ts-ignore
                     class Source extends java.lang.Object {
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                     }
                 }
             }

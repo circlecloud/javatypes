@@ -77,7 +77,7 @@ declare namespace org {
                      * @param resourceType the resource type to ignore
                      */
                     // @ts-ignore
-                    ignoreResourceType(resourceType: string): void
+                    public ignoreResourceType(resourceType: java.lang.String | string): void
                     /**
                      * Set whether to allow a fallback to a type match if no explicit name has been
                      * specified. The default name (i.e. the field name or bean property name) will
@@ -89,7 +89,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.config.AutowireCapableBeanFactory#resolveDependency
                      */
                     // @ts-ignore
-                    setFallbackToDefaultTypeMatch(fallbackToDefaultTypeMatch: boolean): void
+                    public setFallbackToDefaultTypeMatch(fallbackToDefaultTypeMatch: boolean): void
                     /**
                      * Set whether to always use JNDI lookups equivalent to standard Java EE 5 resource
                      * injection, <b>even for {@code name} attributes and default names</b>.
@@ -101,7 +101,7 @@ declare namespace org {
                      * @see #setResourceFactory
                      */
                     // @ts-ignore
-                    setAlwaysUseJndiLookup(alwaysUseJndiLookup: boolean): void
+                    public setAlwaysUseJndiLookup(alwaysUseJndiLookup: boolean): void
                     /**
                      * Specify the factory for objects to be injected into {@code @Resource} /
                      * {@code @WebServiceRef} / {@code @EJB} annotated fields and setter methods,
@@ -114,7 +114,7 @@ declare namespace org {
                      * @see #setAlwaysUseJndiLookup
                      */
                     // @ts-ignore
-                    setJndiFactory(jndiFactory: BeanFactory): void
+                    public setJndiFactory(jndiFactory: BeanFactory): void
                     /**
                      * Specify the factory for objects to be injected into {@code @Resource} /
                      * {@code @WebServiceRef} / {@code @EJB} annotated fields and setter methods,
@@ -129,21 +129,21 @@ declare namespace org {
                      * @see #setAlwaysUseJndiLookup
                      */
                     // @ts-ignore
-                    setResourceFactory(resourceFactory: BeanFactory): void
+                    public setResourceFactory(resourceFactory: BeanFactory): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    postProcessMergedBeanDefinition(beanDefinition: RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                    public postProcessMergedBeanDefinition(beanDefinition: RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                     // @ts-ignore
-                    resetBeanDefinition(beanName: string): void
+                    public resetBeanDefinition(beanName: java.lang.String | string): void
                     // @ts-ignore
-                    postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: string): java.lang.Object
+                    public postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): any
                     // @ts-ignore
-                    postProcessAfterInstantiation(bean: any, beanName: string): boolean
+                    public postProcessAfterInstantiation(bean: java.lang.Object | any, beanName: java.lang.String | string): boolean
                     // @ts-ignore
-                    postProcessProperties(pvs: PropertyValues, bean: any, beanName: string): PropertyValues
+                    public postProcessProperties(pvs: PropertyValues, bean: java.lang.Object | any, beanName: java.lang.String | string): PropertyValues
                     // @ts-ignore
-                    postProcessPropertyValues(pvs: PropertyValues, pds: java.beans.PropertyDescriptor[], bean: any, beanName: string): PropertyValues
+                    public postProcessPropertyValues(pvs: PropertyValues, pds: java.beans.PropertyDescriptor[], bean: java.lang.Object | any, beanName: java.lang.String | string): PropertyValues
                     /**
                      * Obtain a lazily resolving resource proxy for the given name and type,
                      * delegating to {@link #getResource} on demand once a method call comes in.
@@ -155,7 +155,7 @@ declare namespace org {
                      * @see Lazy
                      */
                     // @ts-ignore
-                    buildLazyResourceProxy(element: org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.LookupElement, requestingBeanName: string): java.lang.Object
+                    buildLazyResourceProxy(element: org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.LookupElement, requestingBeanName: java.lang.String | string): any
                     /**
                      * Obtain the resource object for the given name and type.
                      * @param element the descriptor for the annotated field/method
@@ -164,7 +164,7 @@ declare namespace org {
                      * @throws NoSuchBeanDefinitionException if no corresponding target resource found
                      */
                     // @ts-ignore
-                    getResource(element: org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.LookupElement, requestingBeanName: string): java.lang.Object
+                    getResource(element: org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.LookupElement, requestingBeanName: java.lang.String | string): any
                     /**
                      * Obtain a resource object for the given name and type through autowiring
                      * based on the given factory.
@@ -175,7 +175,7 @@ declare namespace org {
                      * @throws NoSuchBeanDefinitionException if no corresponding target resource found
                      */
                     // @ts-ignore
-                    autowireResource(factory: BeanFactory, element: org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.LookupElement, requestingBeanName: string): java.lang.Object
+                    autowireResource(factory: BeanFactory, element: org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.LookupElement, requestingBeanName: java.lang.String | string): any
                 }
             }
         }

@@ -28,7 +28,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface ChronoZonedDateTime<D extends java.time.chrono.ChronoLocalDate> extends java.time.temporal.Temporal, java.lang.Comparable<java.time.chrono.ChronoZonedDateTime<?>> {
+            interface ChronoZonedDateTime<D extends java.time.chrono.ChronoLocalDate> extends java.time.temporal.Temporal, java.lang.Comparable<java.time.chrono.ChronoZonedDateTime<any>> {
                 /**
                  * Gets a comparator that compares {@code ChronoZonedDateTime} in
                  * time-line order ignoring the chronology.
@@ -44,7 +44,7 @@ declare namespace java {
                  * @see #isEqual
                  */
                 // @ts-ignore
-                timeLineOrder(): java.util.Comparator<java.time.chrono.ChronoZonedDateTime<?>>
+                timeLineOrder(): java.util.Comparator<java.time.chrono.ChronoZonedDateTime<any>>
                 /**
                  * Obtains an instance of {@code ChronoZonedDateTime} from a temporal object.
                  * <p>
@@ -66,13 +66,13 @@ declare namespace java {
                  * @see Chronology#zonedDateTime(TemporalAccessor)
                  */
                 // @ts-ignore
-                from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<?>
+                from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<any>
                 // @ts-ignore
                 range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
                 // @ts-ignore
-                get(field: java.time.temporal.TemporalField): int
+                get(field: java.time.temporal.TemporalField): number /*int*/
                 // @ts-ignore
-                getLong(field: java.time.temporal.TemporalField): long
+                getLong(field: java.time.temporal.TemporalField): number /*long*/
                 /**
                  * Gets the local date part of this date-time.
                  * <p>
@@ -311,7 +311,7 @@ declare namespace java {
                  * @throws DateTimeException if an error occurs during printing
                  */
                 // @ts-ignore
-                format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+                format(formatter: java.time.format.DateTimeFormatter): string
                 /**
                  * Converts this date-time to an {@code Instant}.
                  * <p>
@@ -334,7 +334,7 @@ declare namespace java {
                  * @return the number of seconds from the epoch of 1970-01-01T00:00:00Z
                  */
                 // @ts-ignore
-                toEpochSecond(): long
+                toEpochSecond(): number /*long*/
                 /**
                  * Compares this date-time to another date-time, including the chronology.
                  * <p>
@@ -350,7 +350,7 @@ declare namespace java {
                  * @return the comparator value, negative if less, positive if greater
                  */
                 // @ts-ignore
-                compareTo(other: java.time.chrono.ChronoZonedDateTime<any>): int
+                compareTo(other: java.time.chrono.ChronoZonedDateTime<any>): number /*int*/
                 /**
                  * Checks if the instant of this date-time is before that of the specified date-time.
                  * <p>
@@ -403,13 +403,13 @@ declare namespace java {
                  * @return true if this is equal to the other date-time
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this date-time.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Outputs this date-time as a {@code String}.
                  * <p>
@@ -417,7 +417,7 @@ declare namespace java {
                  * @return a string representation of this date-time, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

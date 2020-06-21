@@ -37,16 +37,16 @@ declare namespace org {
                          * Suffix for DTD files.
                          */
                         // @ts-ignore
-                        readonly DTD_SUFFIX: string
+                        public static readonly DTD_SUFFIX: java.lang.String | string
                         /**
                          * Suffix for schema definition files.
                          */
                         // @ts-ignore
-                        readonly XSD_SUFFIX: string
+                        public static readonly XSD_SUFFIX: java.lang.String | string
                         // @ts-ignore
-                        resolveEntity(publicId: string, systemId: string): org.xml.sax.InputSource
+                        public resolveEntity(publicId: java.lang.String | string, systemId: java.lang.String | string): org.xml.sax.InputSource
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

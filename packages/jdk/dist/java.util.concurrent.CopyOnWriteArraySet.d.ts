@@ -58,19 +58,19 @@ declare namespace java {
                  * @throws NullPointerException if the specified collection is null
                  */
                 // @ts-ignore
-                constructor(c: Array<E>)
+                constructor(c: java.util.Collection<any> | Array<any>)
                 /**
                  * Returns the number of elements in this set.
                  * @return the number of elements in this set
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns {@code true} if this set contains no elements.
                  * @return {#code true} if this set contains no elements
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Returns {@code true} if this set contains the specified element.
                  * More formally, returns {@code true} if and only if this set
@@ -80,7 +80,7 @@ declare namespace java {
                  * @return {#code true} if this set contains the specified element
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Returns an array containing all of the elements in this set.
                  * If this set makes any guarantees as to what order its elements
@@ -95,7 +95,7 @@ declare namespace java {
                  * @return an array containing all the elements in this set
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Returns an array containing all of the elements in this set; the
                  * runtime type of the returned array is that of the specified array.
@@ -131,13 +131,13 @@ declare namespace java {
                  * @throws NullPointerException if the specified array is null
                  */
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 /**
                  * Removes all of the elements from this set.
                  * The set will be empty after this call returns.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Removes the specified element from this set if it is present.
                  * More formally, removes an element {@code e} such that
@@ -150,7 +150,7 @@ declare namespace java {
                  * @return {#code true} if this set contained the specified element
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Adds the specified element to this set if it is not already present.
                  * More formally, adds the specified element {@code e} to this set if
@@ -163,7 +163,7 @@ declare namespace java {
                  *          element
                  */
                 // @ts-ignore
-                add(e: E): boolean
+                public add(e: E): boolean
                 /**
                  * Returns {@code true} if this set contains all of the elements of the
                  * specified collection.  If the specified collection is also a set, this
@@ -175,7 +175,7 @@ declare namespace java {
                  * @see #contains(Object)
                  */
                 // @ts-ignore
-                containsAll(c: Array<any>): boolean
+                public containsAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Adds all of the elements in the specified collection to this set if
                  * they're not already present.  If the specified collection is also a
@@ -189,7 +189,7 @@ declare namespace java {
                  * @see #add(Object)
                  */
                 // @ts-ignore
-                addAll(c: Array<E>): boolean
+                public addAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Removes from this set all of its elements that are contained in the
                  * specified collection.  If the specified collection is also a set,
@@ -205,7 +205,7 @@ declare namespace java {
                  * @see #remove(Object)
                  */
                 // @ts-ignore
-                removeAll(c: Array<any>): boolean
+                public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Retains only the elements in this set that are contained in the
                  * specified collection.  In other words, removes from this set all of
@@ -223,7 +223,7 @@ declare namespace java {
                  * @see #remove(Object)
                  */
                 // @ts-ignore
-                retainAll(c: Array<any>): boolean
+                public retainAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Returns an iterator over the elements contained in this set
                  * in the order in which these elements were added.
@@ -234,7 +234,7 @@ declare namespace java {
                  * @return an iterator over the elements in this set
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 /**
                  * Compares the specified object with this set for equality.
                  * Returns {@code true} if the specified object is the same object
@@ -251,11 +251,11 @@ declare namespace java {
                  * @return {#code true} if the specified object is equal to this set
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                removeIf(filter: java.util.function.Predicate<any super E> | java.util.function$.Predicate<? super E>): boolean
+                public removeIf(filter: java.util.function$.Predicate<any>): boolean
                 // @ts-ignore
-                forEach(action: java.util.function.Consumer<any super E> | java.util.function$.Consumer<? super E>): void
+                public forEach(action: java.util.function$.Consumer<any>): void
                 /**
                  * Returns a {@link Spliterator} over the elements in this set in the order
                  * in which these elements were added.
@@ -269,7 +269,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<E>
+                public spliterator(): java.util.Spliterator<E>
             }
         }
     }

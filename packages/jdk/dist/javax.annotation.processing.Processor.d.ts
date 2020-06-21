@@ -166,7 +166,7 @@ declare namespace javax {
                  * @see javax.annotation.processing.SupportedOptions
                  */
                 // @ts-ignore
-                getSupportedOptions(): java.util.Set<java.lang.String>
+                getSupportedOptions(): Array<java.lang.String | string>
                 /**
                  * Returns the names of the annotation types supported by this
                  * processor.  An element of the result may be the canonical
@@ -198,7 +198,7 @@ declare namespace javax {
                  * @jls 6.5.5 Meaning of Type Names
                  */
                 // @ts-ignore
-                getSupportedAnnotationTypes(): java.util.Set<java.lang.String>
+                getSupportedAnnotationTypes(): Array<java.lang.String | string>
                 /**
                  * Returns the latest source version supported by this annotation
                  * processor.
@@ -234,7 +234,7 @@ declare namespace javax {
                  * @return whether or not the set of annotation types are claimed by this processor
                  */
                 // @ts-ignore
-                process(annotations: Array<javax.lang.model.element.TypeElement>, roundEnv: javax.annotation.processing.RoundEnvironment): boolean
+                process(annotations: java.util.Set<any> | Array<any>, roundEnv: javax.annotation.processing.RoundEnvironment): boolean
                 /**
                  * Returns to the tool infrastructure an iterable of suggested
                  * completions to an annotation.  Since completions are being asked
@@ -344,7 +344,7 @@ declare namespace javax {
                  * @return suggested completions to the annotation
                  */
                 // @ts-ignore
-                getCompletions(element: javax.lang.model.element.Element, annotation: javax.lang.model.element.AnnotationMirror, member: javax.lang.model.element.ExecutableElement, userText: string): java.lang.Iterable<? extends javax.annotation.processing.Completion>
+                getCompletions(element: javax.lang.model.element.Element, annotation: javax.lang.model.element.AnnotationMirror, member: javax.lang.model.element.ExecutableElement, userText: java.lang.String | string): java.lang.Iterable<any>
             }
         }
     }

@@ -8,15 +8,15 @@ declare namespace org {
              * org.bukkit.plugin.java.JavaPlugin}
              */
             // @ts-ignore
-            class PluginBase extends java.lang.Object implements org.bukkit.plugin.Plugin {
+            abstract class PluginBase extends java.lang.Object implements org.bukkit.plugin.Plugin {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
             }
         }
     }

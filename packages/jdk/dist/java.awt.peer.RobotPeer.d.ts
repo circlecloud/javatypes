@@ -62,7 +62,7 @@ declare namespace java {
                  * @see Robot#getPixelColor(int, int)
                  */
                 // @ts-ignore
-                getRGBPixel(x: number /*int*/, y: number /*int*/): int
+                getRGBPixel(x: number /*int*/, y: number /*int*/): number /*int*/
                 /**
                  * Gets the RGB values of the specified screen area as an array.
                  * @param bounds the screen area to capture the RGB values from
@@ -70,7 +70,7 @@ declare namespace java {
                  * @see Robot#createScreenCapture(Rectangle)
                  */
                 // @ts-ignore
-                getRGBPixels(bounds: java.awt.Rectangle): int[]
+                getRGBPixels(bounds: java.awt.Rectangle): number /*int*/[]
                 /**
                  * Disposes the robot peer when it is not needed anymore.
                  */

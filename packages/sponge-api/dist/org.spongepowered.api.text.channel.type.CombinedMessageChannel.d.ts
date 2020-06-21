@@ -27,13 +27,13 @@ declare namespace org {
                              * @param channels The channels to combine into a single message channel
                              */
                             // @ts-ignore
-                            constructor(channels: Array<org.spongepowered.api.text.channel.MessageChannel>)
+                            constructor(channels: java.util.Collection<org.spongepowered.api.text.channel.MessageChannel> | Array<org.spongepowered.api.text.channel.MessageChannel>)
                             // @ts-ignore
-                            readonly channels: Array<org.spongepowered.api.text.channel.MessageChannel>
+                            readonly channels: java.util.Collection<org.spongepowered.api.text.channel.MessageChannel> | Array<org.spongepowered.api.text.channel.MessageChannel>
                             // @ts-ignore
-                            transformMessage(sender: any, recipient: org.spongepowered.api.text.channel.MessageReceiver, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): java.util.Optional<org.spongepowered.api.text.Text>
+                            public transformMessage(sender: java.lang.Object | any, recipient: org.spongepowered.api.text.channel.MessageReceiver, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): java.util.Optional<org.spongepowered.api.text.Text>
                             // @ts-ignore
-                            getMembers(): java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver>
+                            public getMembers(): Array<org.spongepowered.api.text.channel.MessageReceiver>
                         }
                     }
                 }

@@ -26,7 +26,7 @@ declare namespace javax {
                  *  exception, or <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(message: string, offendingNode: org.w3c.dom.Node)
+                constructor(message: java.lang.String | string, offendingNode: org.w3c.dom.Node)
                 /**
                  * Constructs an <code>IIOInvalidTreeException</code> with a
                  * message string, a reference to an exception that caused this
@@ -41,7 +41,7 @@ declare namespace javax {
                  *  exception, or <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error, offendingNode: org.w3c.dom.Node)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, offendingNode: org.w3c.dom.Node)
                 /**
                  * The <code>Node</code> that led to the parsing error, or
                  * <code>null</code>.

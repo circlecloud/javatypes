@@ -53,22 +53,22 @@ declare namespace java {
                  * The first number in the range of ids used for container events.
                  */
                 // @ts-ignore
-                readonly CONTAINER_FIRST: number /*int*/
+                public static readonly CONTAINER_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for container events.
                  */
                 // @ts-ignore
-                readonly CONTAINER_LAST: number /*int*/
+                public static readonly CONTAINER_LAST: number /*int*/
                 /**
                  * This event indicates that a component was added to the container.
                  */
                 // @ts-ignore
-                readonly COMPONENT_ADDED: number /*int*/
+                public static readonly COMPONENT_ADDED: number /*int*/
                 /**
                  * This event indicates that a component was removed from the container.
                  */
                 // @ts-ignore
-                readonly COMPONENT_REMOVED: number /*int*/
+                public static readonly COMPONENT_REMOVED: number /*int*/
                 /**
                  * Returns the originator of the event.
                  * @return the <code>Container</code> object that originated
@@ -76,20 +76,20 @@ declare namespace java {
                  *  <code>Container</code>.
                  */
                 // @ts-ignore
-                getContainer(): java.awt.Container
+                public getContainer(): java.awt.Container
                 /**
                  * Returns the component that was affected by the event.
                  * @return the Component object that was added or removed
                  */
                 // @ts-ignore
-                getChild(): java.awt.Component
+                public getChild(): java.awt.Component
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

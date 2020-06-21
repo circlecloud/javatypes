@@ -6,7 +6,7 @@ declare namespace org {
              * to the user and requires no input.
              */
             // @ts-ignore
-            class MessagePrompt extends java.lang.Object implements org.bukkit.conversations.Prompt {
+            abstract class MessagePrompt extends java.lang.Object implements org.bukkit.conversations.Prompt {
                 // @ts-ignore
                 constructor()
                 /**
@@ -15,7 +15,7 @@ declare namespace org {
                  * @return Always false.
                  */
                 // @ts-ignore
-                blocksForInput(context: org.bukkit.conversations.ConversationContext): boolean
+                public blocksForInput(context: org.bukkit.conversations.ConversationContext): boolean
                 /**
                  * Accepts and ignores any user input, returning the next prompt in the
                  * prompt graph instead.
@@ -24,7 +24,7 @@ declare namespace org {
                  * @return The next prompt in the prompt graph.
                  */
                 // @ts-ignore
-                acceptInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                public acceptInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
                 /**
                  * Override this method to return the next prompt in the prompt graph.
                  * @param context Context information about the conversation.

@@ -60,14 +60,14 @@ declare namespace java {
                  *                  silently ignored and is not published
                  */
                 // @ts-ignore
-                publish(record: java.util.logging.LogRecord): void
+                public publish(record: java.util.logging.LogRecord): void
                 /**
                  * Override <tt>StreamHandler.close</tt> to do a flush but not
                  * to close the output stream.  That is, we do <b>not</b>
                  * close <tt>System.err</tt>.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
             }
         }
     }

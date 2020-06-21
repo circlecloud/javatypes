@@ -119,14 +119,14 @@ declare namespace javax {
                  * @see #setLimit
                  */
                 // @ts-ignore
-                getLimit(): int
+                public getLimit(): number /*int*/
                 /**
                  * Empties the undo manager sending each edit a <code>die</code> message
                  * in the process.
                  * @see AbstractUndoableEdit#die
                  */
                 // @ts-ignore
-                discardAllEdits(): void
+                public discardAllEdits(): void
                 /**
                  * Reduces the number of queued edits to a range of size limit,
                  * centered on the index of the next edit.
@@ -159,7 +159,7 @@ declare namespace javax {
                  * @see #getLimit
                  */
                 // @ts-ignore
-                setLimit(l: number /*int*/): void
+                public setLimit(l: number /*int*/): void
                 /**
                  * Returns the the next significant edit to be undone if <code>undo</code>
                  * is invoked. This returns <code>null</code> if there are no edits
@@ -205,7 +205,7 @@ declare namespace javax {
                  *          <code>CannotRedoException</code>
                  */
                 // @ts-ignore
-                undoOrRedo(): void
+                public undoOrRedo(): void
                 /**
                  * Returns true if it is possible to invoke <code>undo</code> or
                  * <code>redo</code>.
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @see #undoOrRedo
                  */
                 // @ts-ignore
-                canUndoOrRedo(): boolean
+                public canUndoOrRedo(): boolean
                 /**
                  * Undoes the appropriate edits.  If <code>end</code> has been
                  * invoked this calls through to the superclass, otherwise
@@ -228,7 +228,7 @@ declare namespace javax {
                  * @see #editToBeUndone
                  */
                 // @ts-ignore
-                undo(): void
+                public undo(): void
                 /**
                  * Returns true if edits may be undone.  If <code>end</code> has
                  * been invoked, this returns the value from super.  Otherwise
@@ -239,7 +239,7 @@ declare namespace javax {
                  * @see #editToBeUndone
                  */
                 // @ts-ignore
-                canUndo(): boolean
+                public canUndo(): boolean
                 /**
                  * Redoes the appropriate edits.  If <code>end</code> has been
                  * invoked this calls through to the superclass.  Otherwise
@@ -254,7 +254,7 @@ declare namespace javax {
                  * @see #editToBeRedone
                  */
                 // @ts-ignore
-                redo(): void
+                public redo(): void
                 /**
                  * Returns true if edits may be redone.  If <code>end</code> has
                  * been invoked, this returns the value from super.  Otherwise,
@@ -265,7 +265,7 @@ declare namespace javax {
                  * @see #editToBeRedone
                  */
                 // @ts-ignore
-                canRedo(): boolean
+                public canRedo(): boolean
                 /**
                  * Adds an <code>UndoableEdit</code> to this
                  * <code>UndoManager</code>, if it's possible.  This removes all
@@ -280,7 +280,7 @@ declare namespace javax {
                  * @see CompoundEdit#addEdit
                  */
                 // @ts-ignore
-                addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
+                public addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
                 /**
                  * Turns this <code>UndoManager</code> into a normal
                  * <code>CompoundEdit</code>.  This removes all edits that have
@@ -288,7 +288,7 @@ declare namespace javax {
                  * @see CompoundEdit#end
                  */
                 // @ts-ignore
-                end(): void
+                public end(): void
                 /**
                  * Convenience method that returns either
                  * <code>getUndoPresentationName</code> or
@@ -299,7 +299,7 @@ declare namespace javax {
                  * @return undo or redo name
                  */
                 // @ts-ignore
-                getUndoOrRedoPresentationName(): java.lang.String
+                public getUndoOrRedoPresentationName(): string
                 /**
                  * Returns a description of the undoable form of this edit.
                  * If <code>end</code> has been invoked this calls into super.
@@ -313,7 +313,7 @@ declare namespace javax {
                  * @see CompoundEdit#getUndoPresentationName
                  */
                 // @ts-ignore
-                getUndoPresentationName(): java.lang.String
+                public getUndoPresentationName(): string
                 /**
                  * Returns a description of the redoable form of this edit.
                  * If <code>end</code> has been invoked this calls into super.
@@ -327,7 +327,7 @@ declare namespace javax {
                  * @see CompoundEdit#getRedoPresentationName
                  */
                 // @ts-ignore
-                getRedoPresentationName(): java.lang.String
+                public getRedoPresentationName(): string
                 /**
                  * An <code>UndoableEditListener</code> method. This invokes
                  * <code>addEdit</code> with <code>e.getEdit()</code>.
@@ -336,14 +336,14 @@ declare namespace javax {
                  * @see #addEdit
                  */
                 // @ts-ignore
-                undoableEditHappened(e: javax.swing.event.UndoableEditEvent): void
+                public undoableEditHappened(e: javax.swing.event.UndoableEditEvent): void
                 /**
                  * Returns a string that displays and identifies this
                  * object's properties.
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

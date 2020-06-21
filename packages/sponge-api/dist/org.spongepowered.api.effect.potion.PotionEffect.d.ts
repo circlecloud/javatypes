@@ -41,14 +41,14 @@ declare namespace org {
                          * @return The duration.
                          */
                         // @ts-ignore
-                        getDuration(): int
+                        getDuration(): number /*int*/
                         /**
                          * Gets the amplifier at which this potion effect
                          * will apply effects.
                          * @return The amplifier.
                          */
                         // @ts-ignore
-                        getAmplifier(): int
+                        getAmplifier(): number /*int*/
                         /**
                          * Gets if the potion effect is an ambient effect.
                          * @return Gets if ambient.

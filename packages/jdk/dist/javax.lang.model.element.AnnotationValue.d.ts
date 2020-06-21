@@ -25,7 +25,7 @@ declare namespace javax {
                      * @return the value
                      */
                     // @ts-ignore
-                    getValue(): java.lang.Object
+                    getValue(): any
                     /**
                      * Returns a string representation of this value.
                      * This is returned in a form suitable for representing this value
@@ -33,7 +33,7 @@ declare namespace javax {
                      * @return a string representation of this value
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    toString(): string
                     /**
                      * Applies a visitor to this value.
                      * @param <R> the return type of the visitor's methods

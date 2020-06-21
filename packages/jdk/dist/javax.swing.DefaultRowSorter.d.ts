@@ -77,7 +77,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M> {
+        abstract class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M> {
             /**
              * Creates an empty <code>DefaultRowSorter</code>.
              */
@@ -106,7 +106,7 @@ declare namespace javax {
              * @return the underlying model
              */
             // @ts-ignore
-            getModel(): M
+            public getModel(): M
             /**
              * Sets whether or not the specified column is sortable.  The specified
              * value is only checked when <code>toggleSortOrder</code> is invoked.
@@ -122,7 +122,7 @@ declare namespace javax {
              * @see #setSortKeys
              */
             // @ts-ignore
-            setSortable(column: number /*int*/, sortable: boolean): void
+            public setSortable(column: number /*int*/, sortable: boolean): void
             /**
              * Returns true if the specified column is sortable; otherwise, false.
              * @param column the column to check sorting for, in terms of the
@@ -132,7 +132,7 @@ declare namespace javax {
              *          the range of the underlying model
              */
             // @ts-ignore
-            isSortable(column: number /*int*/): boolean
+            public isSortable(column: number /*int*/): boolean
             /**
              * Sets the sort keys. This creates a copy of the supplied
              * {@code List}; subsequent changes to the supplied
@@ -146,7 +146,7 @@ declare namespace javax {
              *          the range of the model
              */
             // @ts-ignore
-            setSortKeys(sortKeys: Array<javax.swing.RowSorter.SortKey>): void
+            public setSortKeys(sortKeys: java.util.List<any> | Array<any>): void
             /**
              * Returns the current sort keys.  This returns an unmodifiable
              * {@code non-null List}. If you need to change the sort keys,
@@ -155,7 +155,7 @@ declare namespace javax {
              * @return the current sort order
              */
             // @ts-ignore
-            getSortKeys(): java.util.List<? extends javax.swing.RowSorter.SortKey>
+            public getSortKeys(): Array<any>
             /**
              * Sets the maximum number of sort keys.  The number of sort keys
              * determines how equal values are resolved when sorting.  For
@@ -184,13 +184,13 @@ declare namespace javax {
              * @throws IllegalArgumentException if <code>max</code> &lt; 1
              */
             // @ts-ignore
-            setMaxSortKeys(max: number /*int*/): void
+            public setMaxSortKeys(max: number /*int*/): void
             /**
              * Returns the maximum number of sort keys.
              * @return the maximum number of sort keys
              */
             // @ts-ignore
-            getMaxSortKeys(): int
+            public getMaxSortKeys(): number /*int*/
             /**
              * If true, specifies that a sort should happen when the underlying
              * model is updated (<code>rowsUpdated</code> is invoked).  For
@@ -200,14 +200,14 @@ declare namespace javax {
              * @param sortsOnUpdates whether or not to sort on update events
              */
             // @ts-ignore
-            setSortsOnUpdates(sortsOnUpdates: boolean): void
+            public setSortsOnUpdates(sortsOnUpdates: boolean): void
             /**
              * Returns true if  a sort should happen when the underlying
              * model is updated; otherwise, returns false.
              * @return whether or not to sort when the model is updated
              */
             // @ts-ignore
-            getSortsOnUpdates(): boolean
+            public getSortsOnUpdates(): boolean
             /**
              * Sets the filter that determines which rows, if any, should be
              * hidden from the view.  The filter is applied before sorting.  A value
@@ -225,14 +225,14 @@ declare namespace javax {
              *         included
              */
             // @ts-ignore
-            setRowFilter(filter: javax.swing.RowFilter<any super M, ? super I>): void
+            public setRowFilter(filter: javax.swing.RowFilter<any, any>): void
             /**
              * Returns the filter that determines which rows, if any, should
              * be hidden from view.
              * @return the filter
              */
             // @ts-ignore
-            getRowFilter(): javax.swing.RowFilter<? super M, ? super I>
+            public getRowFilter(): javax.swing.RowFilter<any, any>
             /**
              * Reverses the sort order from ascending to descending (or
              * descending to ascending) if the specified column is already the
@@ -247,19 +247,19 @@ declare namespace javax {
              * @see #setMaxSortKeys(int)
              */
             // @ts-ignore
-            toggleSortOrder(column: number /*int*/): void
+            public toggleSortOrder(column: number /*int*/): void
             /**
              * {@inheritDoc}
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            convertRowIndexToView(index: number /*int*/): int
+            public convertRowIndexToView(index: number /*int*/): number /*int*/
             /**
              * {@inheritDoc}
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            convertRowIndexToModel(index: number /*int*/): int
+            public convertRowIndexToModel(index: number /*int*/): number /*int*/
             /**
              * Sorts and filters the rows in the view based on the sort keys
              * of the columns currently being sorted and the filter, if any,
@@ -269,7 +269,7 @@ declare namespace javax {
              * @see #setSortKeys
              */
             // @ts-ignore
-            sort(): void
+            public sort(): void
             /**
              * Returns whether or not to convert the value to a string before
              * doing comparisons when sorting.  If true
@@ -294,7 +294,7 @@ declare namespace javax {
              *          the range of the underlying model
              */
             // @ts-ignore
-            setComparator(column: number /*int*/, comparator: java.util.Comparator<any>): void
+            public setComparator(column: number /*int*/, comparator: java.util.Comparator<any>): void
             /**
              * Returns the <code>Comparator</code> for the specified
              * column.  This will return <code>null</code> if a <code>Comparator</code>
@@ -306,51 +306,51 @@ declare namespace javax {
              *          the range of the underlying model
              */
             // @ts-ignore
-            getComparator(column: number /*int*/): java.util.Comparator<?>
+            public getComparator(column: number /*int*/): java.util.Comparator<any>
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getViewRowCount(): int
+            public getViewRowCount(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getModelRowCount(): int
+            public getModelRowCount(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            modelStructureChanged(): void
+            public modelStructureChanged(): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            allRowsChanged(): void
-            /**
-             * {@inheritDoc}
-             * @throws IndexOutOfBoundsException {#inheritDoc}
-             */
-            // @ts-ignore
-            rowsInserted(firstRow: number /*int*/, endRow: number /*int*/): void
+            public allRowsChanged(): void
             /**
              * {@inheritDoc}
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            rowsDeleted(firstRow: number /*int*/, endRow: number /*int*/): void
+            public rowsInserted(firstRow: number /*int*/, endRow: number /*int*/): void
             /**
              * {@inheritDoc}
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/): void
+            public rowsDeleted(firstRow: number /*int*/, endRow: number /*int*/): void
             /**
              * {@inheritDoc}
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/, column: number /*int*/): void
+            public rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/): void
+            /**
+             * {@inheritDoc}
+             * @throws IndexOutOfBoundsException {#inheritDoc}
+             */
+            // @ts-ignore
+            public rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/, column: number /*int*/): void
         }
     }
 }

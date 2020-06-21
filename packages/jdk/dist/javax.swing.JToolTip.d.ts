@@ -44,13 +44,13 @@ declare namespace javax {
              * @return the <code>ToolTipUI</code> object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ToolTipUI
+            public getUI(): javax.swing.plaf.ToolTipUI
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "ToolTipUI"
@@ -58,7 +58,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the text to show when the tool tip is displayed.
              * The string <code>tipText</code> may be <code>null</code>.
@@ -68,14 +68,14 @@ declare namespace javax {
              *   description: Sets the text of the tooltip
              */
             // @ts-ignore
-            setTipText(tipText: string): void
+            public setTipText(tipText: java.lang.String | string): void
             /**
              * Returns the text that is shown when the tool tip is displayed.
              * The returned value may be <code>null</code>.
              * @return the <code>String</code> that is displayed
              */
             // @ts-ignore
-            getTipText(): java.lang.String
+            public getTipText(): string
             /**
              * Specifies the component that the tooltip describes.
              * The component <code>c</code> may be <code>null</code>
@@ -88,7 +88,7 @@ declare namespace javax {
              *  description: Sets the component that the tooltip describes.
              */
             // @ts-ignore
-            setComponent(c: javax.swing.JComponent): void
+            public setComponent(c: javax.swing.JComponent): void
             /**
              * Returns the component the tooltip applies to.
              * The returned value may be <code>null</code>.
@@ -96,7 +96,7 @@ declare namespace javax {
              * @see JComponent#createToolTip
              */
             // @ts-ignore
-            getComponent(): javax.swing.JComponent
+            public getComponent(): javax.swing.JComponent
             /**
              * Returns a string representation of this <code>JToolTip</code>.
              * This method
@@ -107,7 +107,7 @@ declare namespace javax {
              * @return a string representation of this <code>JToolTip</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JToolTip.
              * For tool tips, the AccessibleContext takes the form of an
@@ -117,7 +117,7 @@ declare namespace javax {
              *          AccessibleContext of this JToolTip
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -21,81 +21,81 @@ declare namespace org {
                          * @param normal The normal of the entered face, edge or corner
                          */
                         // @ts-ignore
-                        constructor(extent: E extends org.spongepowered.api.world.extent.Extent, x: number /*double*/, y: number /*double*/, z: number /*double*/, direction: Vector3d, normal: Vector3d)
+                        constructor(extent: E, x: number /*double*/, y: number /*double*/, z: number /*double*/, direction: Vector3d, normal: Vector3d)
                         /**
                          * Returns the extent that contains the block.
                          * @return The extent
                          */
                         // @ts-ignore
-                        getExtent(): E
+                        public getExtent(): E
                         /**
                          * Returns the x coordinate of the intersection.
                          * @return The x coordinate
                          */
                         // @ts-ignore
-                        getX(): double
+                        public getX(): number /*double*/
                         /**
                          * Returns the y coordinate of the intersection.
                          * @return The y coordinate
                          */
                         // @ts-ignore
-                        getY(): double
+                        public getY(): number /*double*/
                         /**
                          * Returns the z coordinate of the intersection.
                          * @return The z coordinate
                          */
                         // @ts-ignore
-                        getZ(): double
+                        public getZ(): number /*double*/
                         /**
                          * Returns the position of the intersection.
                          * @return The intersection coordinates
                          */
                         // @ts-ignore
-                        getPosition(): Vector3d
+                        public getPosition(): Vector3d
                         /**
                          * Returns the x coordinate of the block that was hit.
                          * @return The x coordinate
                          */
                         // @ts-ignore
-                        getBlockX(): int
+                        public getBlockX(): number /*int*/
                         /**
                          * Returns the y coordinate of the block that was hit.
                          * @return The y coordinate
                          */
                         // @ts-ignore
-                        getBlockY(): int
+                        public getBlockY(): number /*int*/
                         /**
                          * Returns the z coordinate of the block that was hit.
                          * @return The z coordinate
                          */
                         // @ts-ignore
-                        getBlockZ(): int
+                        public getBlockZ(): number /*int*/
                         /**
                          * Returns the position of the block that was hit.
                          * @return The coordinates of the hit block
                          */
                         // @ts-ignore
-                        getBlockPosition(): Vector3i
+                        public getBlockPosition(): Vector3i
                         /**
                          * Returns the location of the hit block, <b>not the intersection
                          * location</b>.
                          * @return The location of the hit block
                          */
                         // @ts-ignore
-                        getLocation(): org.spongepowered.api.world.Location<E>
+                        public getLocation(): org.spongepowered.api.world.Location<E>
                         /**
                          * Returns the direction of the ray as a normalized vector.
                          * @return The ray direction
                          */
                         // @ts-ignore
-                        getDirection(): Vector3d
+                        public getDirection(): Vector3d
                         /**
                          * Returns the normal of the entered face, edge or corner.
                          * Edges and corners use the average of the surrounding faces.
                          * @return The entered face, edge or corner normal
                          */
                         // @ts-ignore
-                        getNormal(): Vector3d
+                        public getNormal(): Vector3d
                         /**
                          * Returns all the intersected faces. In most cases, this is only one face,
                          * but if the ray enters an edge, two faces are returned (the ones
@@ -103,7 +103,7 @@ declare namespace org {
                          * @return An array of intersected faces, between one and three in length
                          */
                         // @ts-ignore
-                        getFaces(): org.spongepowered.api.util.Direction[]
+                        public getFaces(): org.spongepowered.api.util.Direction[]
                         /**
                          * Calls the mapper function on the extent and position.
                          * @param mapper The mapper
@@ -111,7 +111,7 @@ declare namespace org {
                          * @return The results of the mapping
                          */
                         // @ts-ignore
-                        map<T>(mapper: java.util.function.BiFunction<E, Vector3d, T> | java.util.function$.BiFunction<E, Vector3d, T>): T
+                        public map<T>(mapper: java.util.function$.BiFunction<E, Vector3d, T>): T
                         /**
                          * Calls the mapper function on the extent and block position.
                          * @param mapper The mapper
@@ -119,9 +119,9 @@ declare namespace org {
                          * @return The results of the mapping
                          */
                         // @ts-ignore
-                        mapBlock<T>(mapper: java.util.function.BiFunction<E, Vector3i, T> | java.util.function$.BiFunction<E, Vector3i, T>): T
+                        public mapBlock<T>(mapper: java.util.function$.BiFunction<E, Vector3i, T>): T
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

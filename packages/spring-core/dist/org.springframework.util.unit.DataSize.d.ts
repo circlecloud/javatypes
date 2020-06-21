@@ -31,35 +31,35 @@ declare namespace org {
                      * @return a {#link DataSize}
                      */
                     // @ts-ignore
-                    ofBytes(bytes: number /*long*/): org.springframework.util.unit.DataSize
+                    public static ofBytes(bytes: number /*long*/): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} representing the specified number of kilobytes.
                      * @param kilobytes the number of kilobytes, positive or negative
                      * @return a {#link DataSize}
                      */
                     // @ts-ignore
-                    ofKilobytes(kilobytes: number /*long*/): org.springframework.util.unit.DataSize
+                    public static ofKilobytes(kilobytes: number /*long*/): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} representing the specified number of megabytes.
                      * @param megabytes the number of megabytes, positive or negative
                      * @return a {#link DataSize}
                      */
                     // @ts-ignore
-                    ofMegabytes(megabytes: number /*long*/): org.springframework.util.unit.DataSize
+                    public static ofMegabytes(megabytes: number /*long*/): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} representing the specified number of gigabytes.
                      * @param gigabytes the number of gigabytes, positive or negative
                      * @return a {#link DataSize}
                      */
                     // @ts-ignore
-                    ofGigabytes(gigabytes: number /*long*/): org.springframework.util.unit.DataSize
+                    public static ofGigabytes(gigabytes: number /*long*/): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} representing the specified number of terabytes.
                      * @param terabytes the number of terabytes, positive or negative
                      * @return a {#link DataSize}
                      */
                     // @ts-ignore
-                    ofTerabytes(terabytes: number /*long*/): org.springframework.util.unit.DataSize
+                    public static ofTerabytes(terabytes: number /*long*/): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} representing an amount in the specified {@link DataUnit}.
                      * @param amount the amount of the size, measured in terms of the unit,
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return a corresponding {#link DataSize}
                      */
                     // @ts-ignore
-                    of(amount: number /*long*/, unit: org.springframework.util.unit.DataUnit): org.springframework.util.unit.DataSize
+                    public static of(amount: number /*long*/, unit: org.springframework.util.unit.DataUnit): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} from a text string such as {@code 12MB} using
                      * {@link DataUnit#BYTES} if no unit is specified.
@@ -83,7 +83,7 @@ declare namespace org {
                      * @see #parse(CharSequence, DataUnit)
                      */
                     // @ts-ignore
-                    parse(text: java.lang.CharSequence): org.springframework.util.unit.DataSize
+                    public static parse(text: java.lang.CharSequence): org.springframework.util.unit.DataSize
                     /**
                      * Obtain a {@link DataSize} from a text string such as {@code 12MB} using
                      * the specified default {@link DataUnit} if no unit is specified.
@@ -101,51 +101,51 @@ declare namespace org {
                      * @return the parsed {#link DataSize}
                      */
                     // @ts-ignore
-                    parse(text: java.lang.CharSequence, defaultUnit: org.springframework.util.unit.DataUnit): org.springframework.util.unit.DataSize
+                    public static parse(text: java.lang.CharSequence, defaultUnit: org.springframework.util.unit.DataUnit): org.springframework.util.unit.DataSize
                     /**
                      * Checks if this size is negative, excluding zero.
                      * @return true if this size has a size less than zero bytes
                      */
                     // @ts-ignore
-                    isNegative(): boolean
+                    public isNegative(): boolean
                     /**
                      * Return the number of bytes in this instance.
                      * @return the number of bytes
                      */
                     // @ts-ignore
-                    toBytes(): long
+                    public toBytes(): number /*long*/
                     /**
                      * Return the number of kilobytes in this instance.
                      * @return the number of kilobytes
                      */
                     // @ts-ignore
-                    toKilobytes(): long
+                    public toKilobytes(): number /*long*/
                     /**
                      * Return the number of megabytes in this instance.
                      * @return the number of megabytes
                      */
                     // @ts-ignore
-                    toMegabytes(): long
+                    public toMegabytes(): number /*long*/
                     /**
                      * Return the number of gigabytes in this instance.
                      * @return the number of gigabytes
                      */
                     // @ts-ignore
-                    toGigabytes(): long
+                    public toGigabytes(): number /*long*/
                     /**
                      * Return the number of terabytes in this instance.
                      * @return the number of terabytes
                      */
                     // @ts-ignore
-                    toTerabytes(): long
+                    public toTerabytes(): number /*long*/
                     // @ts-ignore
-                    compareTo(other: org.springframework.util.unit.DataSize): int
+                    public compareTo(other: org.springframework.util.unit.DataSize): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

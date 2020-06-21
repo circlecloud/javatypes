@@ -84,21 +84,21 @@ declare namespace org {
                  * @see org.springframework.util.MultiValueMap
                  */
                 // @ts-ignore
-                class FormHttpMessageConverter extends java.lang.Object implements org.springframework.http.converter.HttpMessageConverter<<any>> {
+                class FormHttpMessageConverter extends java.lang.Object implements org.springframework.http.converter.HttpMessageConverter<object> {
                     // @ts-ignore
                     constructor()
                     /**
                      * The default charset used by the converter.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                    public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                     /**
                      * Set the list of {@link MediaType} objects supported by this converter.
                      * @see #addSupportedMediaTypes(MediaType...)
                      * @see #getSupportedMediaTypes()
                      */
                     // @ts-ignore
-                    setSupportedMediaTypes(supportedMediaTypes: Array<org.springframework.http.MediaType>): void
+                    public setSupportedMediaTypes(supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>): void
                     /**
                      * Add {@link MediaType} objects to be supported by this converter.
                      * <p>The supplied {@code MediaType} objects will be appended to the list
@@ -108,26 +108,26 @@ declare namespace org {
                      * @see #setSupportedMediaTypes(List)
                      */
                     // @ts-ignore
-                    addSupportedMediaTypes(...supportedMediaTypes: org.springframework.http.MediaType[]): void
+                    public addSupportedMediaTypes(...supportedMediaTypes: org.springframework.http.MediaType[]): void
                     /**
                      * {@inheritDoc}
                      * @see #setSupportedMediaTypes(List)
                      * @see #addSupportedMediaTypes(MediaType...)
                      */
                     // @ts-ignore
-                    getSupportedMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getSupportedMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Set the message body converters to use. These converters are used to
                      * convert objects to MIME parts.
                      */
                     // @ts-ignore
-                    setPartConverters(partConverters: Array<org.springframework.http.converter.HttpMessageConverter<any>>): void
+                    public setPartConverters(partConverters: java.util.List<org.springframework.http.converter.HttpMessageConverter<any>> | Array<org.springframework.http.converter.HttpMessageConverter<any>>): void
                     /**
                      * Add a message body converter. Such a converter is used to convert objects
                      * to MIME parts.
                      */
                     // @ts-ignore
-                    addPartConverter(partConverter: org.springframework.http.converter.HttpMessageConverter<any>): void
+                    public addPartConverter(partConverter: org.springframework.http.converter.HttpMessageConverter<any>): void
                     /**
                      * Set the default character set to use for reading and writing form data when
                      * the request or response {@code Content-Type} header does not explicitly
@@ -142,7 +142,7 @@ declare namespace org {
                      * <p>By default this is set to "UTF-8".
                      */
                     // @ts-ignore
-                    setCharset(charset: java.nio.charset.Charset): void
+                    public setCharset(charset: java.nio.charset.Charset): void
                     /**
                      * Set the character set to use when writing multipart data to encode file
                      * names. Encoding is based on the {@code encoded-word} syntax defined in
@@ -154,15 +154,15 @@ declare namespace org {
                      * @see <a href="https://en.wikipedia.org/wiki/MIME#Encoded-Word">Encoded-Word</a>
                      */
                     // @ts-ignore
-                    setMultipartCharset(charset: java.nio.charset.Charset): void
+                    public setMultipartCharset(charset: java.nio.charset.Charset): void
                     // @ts-ignore
-                    canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    read(clazz: java.lang.Class<<any>>, inputMessage: org.springframework.http.HttpInputMessage): <any>
+                    public read(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): object
                     // @ts-ignore
-                    write(map: object, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    public write(map: object, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
                     /**
                      * Return the content type used to write forms, given the preferred content type.
                      * By default, this method returns the given content type, but adds the
@@ -177,14 +177,14 @@ declare namespace org {
                     // @ts-ignore
                     getFormContentType(contentType: org.springframework.http.MediaType): org.springframework.http.MediaType
                     // @ts-ignore
-                    serializeForm(formData: object, charset: java.nio.charset.Charset): java.lang.String
+                    serializeForm(formData: object, charset: java.nio.charset.Charset): string
                     /**
                      * Generate a multipart boundary.
                      * <p>This implementation delegates to
                      * {@link MimeTypeUtils#generateMultipartBoundary()}.
                      */
                     // @ts-ignore
-                    generateMultipartBoundary(): byte[]
+                    generateMultipartBoundary(): number /*byte*/[]
                     /**
                      * Return an {@link HttpEntity} for the given part Object.
                      * @param part the part to return an {#link HttpEntity} for
@@ -192,7 +192,7 @@ declare namespace org {
                      *  or a newly built {@link HttpEntity} wrapper for that part
                      */
                     // @ts-ignore
-                    getHttpEntity(part: any): org.springframework.http.HttpEntity<?>
+                    getHttpEntity(part: java.lang.Object | any): org.springframework.http.HttpEntity<any>
                     /**
                      * Return the filename of the given multipart part. This value will be used for the
                      * {@code Content-Disposition} header.
@@ -202,7 +202,7 @@ declare namespace org {
                      * @return the filename, or {#code null} if not known
                      */
                     // @ts-ignore
-                    getFilename(part: any): java.lang.String
+                    getFilename(part: java.lang.Object | any): string
                 }
             }
         }

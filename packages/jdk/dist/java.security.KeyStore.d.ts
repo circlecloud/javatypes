@@ -122,7 +122,7 @@ declare namespace java {
              * @param type the keystore type.
              */
             // @ts-ignore
-            constructor(keyStoreSpi: java.security.KeyStoreSpi, provider: java.security.Provider, type: string)
+            constructor(keyStoreSpi: java.security.KeyStoreSpi, provider: java.security.Provider, type: java.lang.String | string)
             /**
              * Returns a keystore object of the specified type.
              * <p> This method traverses the list of registered security Providers,
@@ -144,7 +144,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(type: string): java.security.KeyStore
+            public static getInstance(type: java.lang.String | string): java.security.KeyStore
             /**
              * Returns a keystore object of the specified type.
              * <p> A new KeyStore object encapsulating the
@@ -170,7 +170,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(type: string, provider: string): java.security.KeyStore
+            public static getInstance(type: java.lang.String | string, provider: java.lang.String | string): java.security.KeyStore
             /**
              * Returns a keystore object of the specified type.
              * <p> A new KeyStore object encapsulating the
@@ -192,7 +192,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(type: string, provider: java.security.Provider): java.security.KeyStore
+            public static getInstance(type: java.lang.String | string, provider: java.security.Provider): java.security.KeyStore
             /**
              * Returns the default keystore type as specified by the
              * {@code keystore.type} security property, or the string
@@ -210,19 +210,19 @@ declare namespace java {
              * @see java.security.Security security properties
              */
             // @ts-ignore
-            getDefaultType(): java.lang.String
+            public static getDefaultType(): string
             /**
              * Returns the provider of this keystore.
              * @return the provider of this keystore.
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns the type of this keystore.
              * @return the type of this keystore.
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             /**
              * Returns the key associated with the given alias, using the given
              * password to recover it.  The key must have been associated with
@@ -241,7 +241,7 @@ declare namespace java {
              *  (e.g., the given password is wrong).
              */
             // @ts-ignore
-            getKey(alias: string, password: string[]): java.security.Key
+            public getKey(alias: java.lang.String | string, password: string[]): java.security.Key
             /**
              * Returns the certificate chain associated with the given alias.
              * The certificate chain must have been associated with the alias
@@ -256,7 +256,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            getCertificateChain(alias: string): java.security.cert.Certificate[]
+            public getCertificateChain(alias: java.lang.String | string): java.security.cert.Certificate[]
             /**
              * Returns the certificate associated with the given alias.
              * <p> If the given alias name identifies an entry
@@ -277,7 +277,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            getCertificate(alias: string): java.security.cert.Certificate
+            public getCertificate(alias: java.lang.String | string): java.security.cert.Certificate
             /**
              * Returns the creation date of the entry identified by the given alias.
              * @param alias the alias name
@@ -287,7 +287,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            getCreationDate(alias: string): java.util.Date
+            public getCreationDate(alias: java.lang.String | string): java.util.Date
             /**
              * Assigns the given key to the given alias, protecting it with the given
              * password.
@@ -308,7 +308,7 @@ declare namespace java {
              *  for some other reason
              */
             // @ts-ignore
-            setKeyEntry(alias: string, key: java.security.Key, password: string[], chain: java.security.cert.Certificate[]): void
+            public setKeyEntry(alias: java.lang.String | string, key: java.security.Key, password: string[], chain: java.security.cert.Certificate[]): void
             /**
              * Assigns the given key (that has already been protected) to the given
              * alias.
@@ -330,7 +330,7 @@ declare namespace java {
              *  (loaded), or if this operation fails for some other reason.
              */
             // @ts-ignore
-            setKeyEntry(alias: string, key: number /*byte*/[], chain: java.security.cert.Certificate[]): void
+            public setKeyEntry(alias: java.lang.String | string, key: number /*byte*/[], chain: java.security.cert.Certificate[]): void
             /**
              * Assigns the given trusted certificate to the given alias.
              * <p> If the given alias identifies an existing entry
@@ -347,7 +347,7 @@ declare namespace java {
              *  or this operation fails for some other reason.
              */
             // @ts-ignore
-            setCertificateEntry(alias: string, cert: java.security.cert.Certificate): void
+            public setCertificateEntry(alias: java.lang.String | string, cert: java.security.cert.Certificate): void
             /**
              * Deletes the entry identified by the given alias from this keystore.
              * @param alias the alias name
@@ -355,7 +355,7 @@ declare namespace java {
              *  or if the entry cannot be removed.
              */
             // @ts-ignore
-            deleteEntry(alias: string): void
+            public deleteEntry(alias: java.lang.String | string): void
             /**
              * Lists all the alias names of this keystore.
              * @return enumeration of the alias names
@@ -363,7 +363,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            aliases(): java.util.Enumeration<java.lang.String>
+            public aliases(): java.util.Enumeration<java.lang.String | string>
             /**
              * Checks if the given alias exists in this keystore.
              * @param alias the alias name
@@ -372,7 +372,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            containsAlias(alias: string): boolean
+            public containsAlias(alias: java.lang.String | string): boolean
             /**
              * Retrieves the number of entries in this keystore.
              * @return the number of entries in this keystore
@@ -380,7 +380,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns true if the entry identified by the given alias
              * was created by a call to {@code setKeyEntry},
@@ -393,7 +393,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            isKeyEntry(alias: string): boolean
+            public isKeyEntry(alias: java.lang.String | string): boolean
             /**
              * Returns true if the entry identified by the given alias
              * was created by a call to {@code setCertificateEntry},
@@ -406,7 +406,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            isCertificateEntry(alias: string): boolean
+            public isCertificateEntry(alias: java.lang.String | string): boolean
             /**
              * Returns the (alias) name of the first keystore entry whose certificate
              * matches the given certificate.
@@ -429,7 +429,7 @@ declare namespace java {
              *  (loaded).
              */
             // @ts-ignore
-            getCertificateAlias(cert: java.security.cert.Certificate): java.lang.String
+            public getCertificateAlias(cert: java.security.cert.Certificate): string
             /**
              * Stores this keystore to the given output stream, and protects its
              * integrity with the given password.
@@ -444,7 +444,7 @@ declare namespace java {
              *  the keystore data could not be stored
              */
             // @ts-ignore
-            store(stream: java.io.OutputStream, password: string[]): void
+            public store(stream: java.io.OutputStream, password: string[]): void
             /**
              * Stores this keystore using the given {@code LoadStoreParameter}.
              * @param param the {#code LoadStoreParameter}
@@ -463,7 +463,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            store(param: java.security.KeyStore.LoadStoreParameter): void
+            public store(param: java.security.KeyStore.LoadStoreParameter): void
             /**
              * Loads this KeyStore from the given input stream.
              * <p>A password may be given to unlock the keystore
@@ -493,7 +493,7 @@ declare namespace java {
              *  keystore could not be loaded
              */
             // @ts-ignore
-            load(stream: java.io.InputStream, password: string[]): void
+            public load(stream: java.io.InputStream, password: string[]): void
             /**
              * Loads this keystore using the given {@code LoadStoreParameter}.
              * <p> Note that if this KeyStore has already been loaded, it is
@@ -517,7 +517,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            load(param: java.security.KeyStore.LoadStoreParameter): void
+            public load(param: java.security.KeyStore.LoadStoreParameter): void
             /**
              * Gets a keystore {@code Entry} for the specified alias
              * with the specified protection parameter.
@@ -543,7 +543,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getEntry(alias: string, protParam: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Entry
+            public getEntry(alias: java.lang.String | string, protParam: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Entry
             /**
              * Saves a keystore {@code Entry} under the specified alias.
              * The protection parameter is used to protect the
@@ -564,7 +564,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setEntry(alias: string, entry: java.security.KeyStore.Entry, protParam: java.security.KeyStore.ProtectionParameter): void
+            public setEntry(alias: java.lang.String | string, entry: java.security.KeyStore.Entry, protParam: java.security.KeyStore.ProtectionParameter): void
             /**
              * Determines if the keystore {@code Entry} for the specified
              * {@code alias} is an instance or subclass of the specified
@@ -582,7 +582,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            entryInstanceOf(alias: string, entryClass: java.lang.Class<java.security.KeyStore.Entry>): boolean
+            public entryInstanceOf(alias: java.lang.String | string, entryClass: java.lang.Class<any>): boolean
         }
     }
 }

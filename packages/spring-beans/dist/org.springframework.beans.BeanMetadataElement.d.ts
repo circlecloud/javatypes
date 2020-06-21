@@ -14,7 +14,7 @@ declare namespace org {
                  * (may be {@code null}).
                  */
                 // @ts-ignore
-                getSource(): java.lang.Object
+                getSource(): any
             }
         }
     }

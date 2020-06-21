@@ -20,7 +20,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class Redirect extends java.lang.Object {
+            abstract class Redirect extends java.lang.Object {
                 /**
                  * Indicates that subprocess I/O will be connected to the
                  * current Java process over a pipe.
@@ -32,7 +32,7 @@ declare namespace java {
                  * }</pre>
                  */
                 // @ts-ignore
-                readonly PIPE: java.lang.ProcessBuilder.Redirect
+                public static readonly PIPE: java.lang.ProcessBuilder.Redirect
                 /**
                  * Indicates that subprocess I/O source or destination will be the
                  * same as those of the current process.  This is the normal
@@ -44,13 +44,13 @@ declare namespace java {
                  * }</pre>
                  */
                 // @ts-ignore
-                readonly INHERIT: java.lang.ProcessBuilder.Redirect
+                public static readonly INHERIT: java.lang.ProcessBuilder.Redirect
                 /**
                  * Returns the type of this {@code Redirect}.
                  * @return the type of this {#code Redirect}
                  */
                 // @ts-ignore
-                abstract type(): java.lang.ProcessBuilder.Redirect.Type
+                public abstract type(): java.lang.ProcessBuilder.Redirect.Type
                 /**
                  * Returns the {@link File} source or destination associated
                  * with this redirect, or {@code null} if there is no such file.
@@ -58,7 +58,7 @@ declare namespace java {
                  *          or {#code null} if there is no such file
                  */
                 // @ts-ignore
-                file(): java.io.File
+                public file(): java.io.File
                 /**
                  * Returns a redirect to read from the specified file.
                  * <p>It will always be true that
@@ -71,7 +71,7 @@ declare namespace java {
                  * @return a redirect to read from the specified file
                  */
                 // @ts-ignore
-                from(file: java.io.File): java.lang.ProcessBuilder.Redirect
+                public static from(file: java.io.File): java.lang.ProcessBuilder.Redirect
                 /**
                  * Returns a redirect to write to the specified file.
                  * If the specified file exists when the subprocess is started,
@@ -86,7 +86,7 @@ declare namespace java {
                  * @return a redirect to write to the specified file
                  */
                 // @ts-ignore
-                to(file: java.io.File): java.lang.ProcessBuilder.Redirect
+                public static to(file: java.io.File): java.lang.ProcessBuilder.Redirect
                 /**
                  * Returns a redirect to append to the specified file.
                  * Each write operation first advances the position to the
@@ -104,7 +104,7 @@ declare namespace java {
                  * @return a redirect to append to the specified file
                  */
                 // @ts-ignore
-                appendTo(file: java.io.File): java.lang.ProcessBuilder.Redirect
+                public static appendTo(file: java.io.File): java.lang.ProcessBuilder.Redirect
                 /**
                  * Compares the specified object with this {@code Redirect} for
                  * equality.  Returns {@code true} if and only if the two
@@ -113,13 +113,13 @@ declare namespace java {
                  * {@code File} instances.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this {@code Redirect}.
                  * @return a hash code value for this {#code Redirect}
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

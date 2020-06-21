@@ -15,72 +15,72 @@ declare namespace javax {
              * @param fileManager delegate to this file manager
              */
             // @ts-ignore
-            constructor(fileManager: M extends javax.tools.JavaFileManager)
+            constructor(fileManager: M)
             /**
              * The file manager which all methods are delegated to.
              */
             // @ts-ignore
-            readonly fileManager: M extends javax.tools.JavaFileManager
+            readonly fileManager: M
             /**
              * @throws SecurityException {#inheritDoc}
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            getClassLoader(location: javax.tools.JavaFileManager.Location): java.lang.ClassLoader
+            public getClassLoader(location: javax.tools.JavaFileManager.Location): java.lang.ClassLoader
             /**
              * @throws IOException {#inheritDoc}
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            list(location: javax.tools.JavaFileManager.Location, packageName: string, kinds: Array<javax.tools.JavaFileObject.Kind>, recurse: boolean): java.lang.Iterable<javax.tools.JavaFileObject>
+            public list(location: javax.tools.JavaFileManager.Location, packageName: java.lang.String | string, kinds: java.util.Set<javax.tools.JavaFileObject.Kind> | Array<javax.tools.JavaFileObject.Kind>, recurse: boolean): java.lang.Iterable<javax.tools.JavaFileObject>
             /**
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            inferBinaryName(location: javax.tools.JavaFileManager.Location, file: javax.tools.JavaFileObject): java.lang.String
+            public inferBinaryName(location: javax.tools.JavaFileManager.Location, file: javax.tools.JavaFileObject): string
             /**
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            isSameFile(a: javax.tools.FileObject, b: javax.tools.FileObject): boolean
-            /**
-             * @throws IllegalArgumentException {#inheritDoc}
-             * @throws IllegalStateException {#inheritDoc}
-             */
-            // @ts-ignore
-            handleOption(current: string, remaining: java.util.Iterator<java.lang.String>): boolean
-            // @ts-ignore
-            hasLocation(location: javax.tools.JavaFileManager.Location): boolean
-            // @ts-ignore
-            isSupportedOption(option: string): int
+            public isSameFile(a: javax.tools.FileObject, b: javax.tools.FileObject): boolean
             /**
              * @throws IllegalArgumentException {#inheritDoc}
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            getJavaFileForInput(location: javax.tools.JavaFileManager.Location, className: string, kind: javax.tools.JavaFileObject.Kind): javax.tools.JavaFileObject
+            public handleOption(current: java.lang.String | string, remaining: java.util.Iterator<java.lang.String | string>): boolean
+            // @ts-ignore
+            public hasLocation(location: javax.tools.JavaFileManager.Location): boolean
+            // @ts-ignore
+            public isSupportedOption(option: java.lang.String | string): number /*int*/
             /**
              * @throws IllegalArgumentException {#inheritDoc}
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            getJavaFileForOutput(location: javax.tools.JavaFileManager.Location, className: string, kind: javax.tools.JavaFileObject.Kind, sibling: javax.tools.FileObject): javax.tools.JavaFileObject
+            public getJavaFileForInput(location: javax.tools.JavaFileManager.Location, className: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind): javax.tools.JavaFileObject
             /**
              * @throws IllegalArgumentException {#inheritDoc}
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            getFileForInput(location: javax.tools.JavaFileManager.Location, packageName: string, relativeName: string): javax.tools.FileObject
+            public getJavaFileForOutput(location: javax.tools.JavaFileManager.Location, className: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind, sibling: javax.tools.FileObject): javax.tools.JavaFileObject
             /**
              * @throws IllegalArgumentException {#inheritDoc}
              * @throws IllegalStateException {#inheritDoc}
              */
             // @ts-ignore
-            getFileForOutput(location: javax.tools.JavaFileManager.Location, packageName: string, relativeName: string, sibling: javax.tools.FileObject): javax.tools.FileObject
+            public getFileForInput(location: javax.tools.JavaFileManager.Location, packageName: java.lang.String | string, relativeName: java.lang.String | string): javax.tools.FileObject
+            /**
+             * @throws IllegalArgumentException {#inheritDoc}
+             * @throws IllegalStateException {#inheritDoc}
+             */
             // @ts-ignore
-            flush(): void
+            public getFileForOutput(location: javax.tools.JavaFileManager.Location, packageName: java.lang.String | string, relativeName: java.lang.String | string, sibling: javax.tools.FileObject): javax.tools.FileObject
             // @ts-ignore
-            close(): void
+            public flush(): void
+            // @ts-ignore
+            public close(): void
         }
     }
 }

@@ -24,7 +24,7 @@ declare namespace javax {
                  *           <code>null</code> otherwise.
                  */
                 // @ts-ignore
-                getValue(): java.lang.String
+                getValue(): string
                 /**
                  * If this is a Text node then this method will set its value,
                  * otherwise it sets the value of  the immediate (Text) child of this node.
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                setValue(value: string): void
+                setValue(value: java.lang.String | string): void
                 /**
                  * Sets the parent of this <code>Node</code> object to the given
                  * <code>SOAPElement</code> object.

@@ -26,13 +26,13 @@ declare namespace org {
                  * followed by the object name.
                  */
                 // @ts-ignore
-                
+                readonly MODEL_KEY_PREFIX: java.lang.String | string
                 /**
                  * Return the wrapped target object, which may be a bean, an object with
                  * public fields, a Map - depending on the concrete binding strategy.
                  */
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                getTarget(): any
                 /**
                  * Return a model Map for the obtained state, exposing a BindingResult
                  * instance as '{@link #MODEL_KEY_PREFIX MODEL_KEY_PREFIX} + objectName'
@@ -52,7 +52,7 @@ declare namespace org {
                  * @see org.springframework.web.servlet.tags.BindTag
                  */
                 // @ts-ignore
-                getModel(): java.util.Map<java.lang.String, java.lang.Object>
+                getModel(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Extract the raw field value for the given field.
                  * Typically used for comparison purposes.
@@ -60,7 +60,7 @@ declare namespace org {
                  * @return the current value of the field in its raw form, or {#code null} if not known
                  */
                 // @ts-ignore
-                getRawFieldValue(field: string): java.lang.Object
+                getRawFieldValue(field: java.lang.String | string): any
                 /**
                  * Find a custom property editor for the given type and property.
                  * @param field the path of the property (name or nested path), or
@@ -70,7 +70,7 @@ declare namespace org {
                  * @return the registered editor, or {#code null} if none
                  */
                 // @ts-ignore
-                findEditor(field: string, valueType: java.lang.Class<any>): java.beans.PropertyEditor
+                findEditor(field: java.lang.String | string, valueType: java.lang.Class<any>): java.beans.PropertyEditor
                 /**
                  * Return the underlying PropertyEditorRegistry.
                  * @return the PropertyEditorRegistry, or {#code null} if none
@@ -85,7 +85,7 @@ declare namespace org {
                  * @return the resolved message codes
                  */
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string): java.lang.String[]
+                resolveMessageCodes(errorCode: java.lang.String | string): string[]
                 /**
                  * Resolve the given error code into message codes for the given field.
                  * <p>Calls the configured {@link MessageCodesResolver} with appropriate parameters.
@@ -94,7 +94,7 @@ declare namespace org {
                  * @return the resolved message codes
                  */
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string, field: string): java.lang.String[]
+                resolveMessageCodes(errorCode: java.lang.String | string, field: java.lang.String | string): string[]
                 /**
                  * Add a custom {@link ObjectError} or {@link FieldError} to the errors list.
                  * <p>Intended to be used by cooperating strategies such as {@link BindingErrorProcessor}.
@@ -116,7 +116,7 @@ declare namespace org {
                  * @since 5.0.4
                  */
                 // @ts-ignore
-                recordFieldValue(field: string, type: java.lang.Class<any>, value: any): void
+                recordFieldValue(field: java.lang.String | string, type: java.lang.Class<any>, value: java.lang.Object | any): void
                 /**
                  * Mark the specified disallowed field as suppressed.
                  * <p>The data binder invokes this for each field value that was
@@ -124,7 +124,7 @@ declare namespace org {
                  * @see DataBinder#setAllowedFields
                  */
                 // @ts-ignore
-                recordSuppressedField(field: string): void
+                recordSuppressedField(field: java.lang.String | string): void
                 /**
                  * Return the list of fields that were suppressed during the bind process.
                  * <p>Can be used to determine whether any field values were targeting
@@ -132,7 +132,7 @@ declare namespace org {
                  * @see DataBinder#setAllowedFields
                  */
                 // @ts-ignore
-                getSuppressedFields(): java.lang.String[]
+                getSuppressedFields(): string[]
             }
         }
     }

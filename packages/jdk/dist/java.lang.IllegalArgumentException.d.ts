@@ -20,7 +20,7 @@ declare namespace java {
              * @param s   the detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs a new exception with the specified detail message and
              * cause.
@@ -36,7 +36,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a new exception with the specified cause and a detail
              * message of <tt>(cause==null ? null : cause.toString())</tt> (which
@@ -51,7 +51,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
         }
     }
 }

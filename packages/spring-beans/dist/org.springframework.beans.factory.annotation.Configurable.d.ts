@@ -13,7 +13,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class Configurable implements java.lang.annotation.Annotation {
+                    abstract class Configurable implements java.lang.annotation.Annotation {
                     }
                 }
             }

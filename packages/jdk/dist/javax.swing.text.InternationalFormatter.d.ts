@@ -82,14 +82,14 @@ declare namespace javax {
                  *  from/to Strings
                  */
                 // @ts-ignore
-                setFormat(format: java.text.Format): void
+                public setFormat(format: java.text.Format): void
                 /**
                  * Returns the format that dictates the legal values that can be edited
                  * and displayed.
                  * @return Format instance used for converting from/to Strings
                  */
                 // @ts-ignore
-                getFormat(): java.text.Format
+                public getFormat(): java.text.Format
                 /**
                  * Sets the minimum permissible value. If the <code>valueClass</code> has
                  * not been specified, and <code>minimum</code> is non null, the
@@ -99,13 +99,13 @@ declare namespace javax {
                  * @see #setValueClass
                  */
                 // @ts-ignore
-                setMinimum(minimum: java.lang.Comparable): void
+                public setMinimum(minimum: java.lang.Comparable<any>): void
                 /**
                  * Returns the minimum permissible value.
                  * @return Minimum legal value that can be input
                  */
                 // @ts-ignore
-                getMinimum(): java.lang.Comparable
+                public getMinimum(): java.lang.Comparable<any>
                 /**
                  * Sets the maximum permissible value. If the <code>valueClass</code> has
                  * not been specified, and <code>max</code> is non null, the
@@ -115,13 +115,13 @@ declare namespace javax {
                  * @see #setValueClass
                  */
                 // @ts-ignore
-                setMaximum(max: java.lang.Comparable): void
+                public setMaximum(max: java.lang.Comparable<any>): void
                 /**
                  * Returns the maximum permissible value.
                  * @return Maximum legal value that can be input
                  */
                 // @ts-ignore
-                getMaximum(): java.lang.Comparable
+                public getMaximum(): java.lang.Comparable<any>
                 /**
                  * Installs the <code>DefaultFormatter</code> onto a particular
                  * <code>JFormattedTextField</code>.
@@ -152,7 +152,7 @@ declare namespace javax {
                  *             uninstall from current JFormattedTextField.
                  */
                 // @ts-ignore
-                install(ftf: javax.swing.JFormattedTextField): void
+                public install(ftf: javax.swing.JFormattedTextField): void
                 /**
                  * Returns a String representation of the Object <code>value</code>.
                  * This invokes <code>format</code> on the current <code>Format</code>.
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @return String representation of value
                  */
                 // @ts-ignore
-                valueToString(value: any): java.lang.String
+                public valueToString(value: java.lang.Object | any): string
                 /**
                  * Returns the <code>Object</code> representation of the
                  * <code>String</code> <code>text</code>.
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @throws ParseException if there is an error in the conversion
                  */
                 // @ts-ignore
-                stringToValue(text: string): java.lang.Object
+                public stringToValue(text: java.lang.String | string): any
                 /**
                  * Returns the <code>Format.Field</code> constants associated with
                  * the text at <code>offset</code>. If <code>offset</code> is not
@@ -181,13 +181,13 @@ declare namespace javax {
                  *          given position.
                  */
                 // @ts-ignore
-                getFields(offset: number /*int*/): java.text.Format.Field[]
+                public getFields(offset: number /*int*/): java.text.Format.Field[]
                 /**
                  * Creates a copy of the DefaultFormatter.
                  * @return copy of the DefaultFormatter
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * If <code>getSupportsIncrement</code> returns true, this returns
                  * two Actions suitable for incrementing/decrementing the value.

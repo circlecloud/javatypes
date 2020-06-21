@@ -23,7 +23,7 @@ declare namespace javax {
                  *     <code>NodeSetData</code> in document order
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator
+                iterator(): java.util.Iterator<any>
             }
         }
     }

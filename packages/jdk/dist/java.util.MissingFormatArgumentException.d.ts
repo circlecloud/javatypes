@@ -18,15 +18,15 @@ declare namespace java {
              *          Format specifier which does not have a corresponding argument
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Returns the unmatched format specifier.
              * @return The unmatched format specifier
              */
             // @ts-ignore
-            getFormatSpecifier(): java.lang.String
+            getFormatSpecifier(): string
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

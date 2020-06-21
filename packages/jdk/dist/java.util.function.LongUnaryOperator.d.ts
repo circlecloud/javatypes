@@ -18,7 +18,7 @@ declare namespace java {
                  * @return the operator result
                  */
                 // @ts-ignore
-                applyAsLong(operand: number /*long*/): long
+                applyAsLong(operand: number /*long*/): number /*long*/
                 /**
                  * Returns a composed operator that first applies the {@code before}
                  * operator to its input, and then applies this operator to the result.
@@ -31,7 +31,7 @@ declare namespace java {
                  * @see #andThen(LongUnaryOperator)
                  */
                 // @ts-ignore
-                compose(before: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): java.util.function.LongUnaryOperator
+                compose(before: java.util.function$.LongUnaryOperator): java.util.function$.LongUnaryOperator
                 /**
                  * Returns a composed operator that first applies this operator to
                  * its input, and then applies the {@code after} operator to the result.
@@ -44,13 +44,13 @@ declare namespace java {
                  * @see #compose(LongUnaryOperator)
                  */
                 // @ts-ignore
-                andThen(after: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): java.util.function.LongUnaryOperator
+                andThen(after: java.util.function$.LongUnaryOperator): java.util.function$.LongUnaryOperator
                 /**
                  * Returns a unary operator that always returns its input argument.
                  * @return a unary operator that always returns its input argument
                  */
                 // @ts-ignore
-                identity(): java.util.function.LongUnaryOperator
+                identity(): java.util.function$.LongUnaryOperator
             }
         }
     }

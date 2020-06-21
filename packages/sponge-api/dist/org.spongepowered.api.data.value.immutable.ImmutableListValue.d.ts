@@ -11,7 +11,7 @@ declare namespace org {
                          * @param <E> The type of element of this list value
                          */
                         // @ts-ignore
-                        interface ImmutableListValue<E> extends org.spongepowered.api.data.value.immutable.ImmutableCollectionValue<E, java.util.List<E>, org.spongepowered.api.data.value.immutable.ImmutableListValue<E>, org.spongepowered.api.data.value.mutable.ListValue<E>> {
+                        interface ImmutableListValue<E> extends org.spongepowered.api.data.value.immutable.ImmutableCollectionValue<E, java.util.List<E> | Array<E>, org.spongepowered.api.data.value.immutable.ImmutableListValue<E>, org.spongepowered.api.data.value.mutable.ListValue<E>> {
                             /**
                              * Gets the desired element at the desired index.
                              * @param index The index of the element to return
@@ -67,7 +67,7 @@ declare namespace org {
                              * @return The index of the element, -1 if not available
                              */
                             // @ts-ignore
-                            indexOf(element: E): int
+                            indexOf(element: E): number /*int*/
                         }
                     }
                 }

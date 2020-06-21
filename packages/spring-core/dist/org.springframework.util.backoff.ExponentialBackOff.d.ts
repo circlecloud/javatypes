@@ -53,66 +53,66 @@ declare namespace org {
                      * The default initial interval.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_INITIAL_INTERVAL: number /*long*/
+                    public static readonly DEFAULT_INITIAL_INTERVAL: number /*long*/
                     /**
                      * The default multiplier (increases the interval by 50%).
                      */
                     // @ts-ignore
-                    readonly DEFAULT_MULTIPLIER: number /*double*/
+                    public static readonly DEFAULT_MULTIPLIER: number /*double*/
                     /**
                      * The default maximum back off time.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_MAX_INTERVAL: number /*long*/
+                    public static readonly DEFAULT_MAX_INTERVAL: number /*long*/
                     /**
                      * The default maximum elapsed time.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_MAX_ELAPSED_TIME: number /*long*/
+                    public static readonly DEFAULT_MAX_ELAPSED_TIME: number /*long*/
                     /**
                      * The initial interval in milliseconds.
                      */
                     // @ts-ignore
-                    setInitialInterval(initialInterval: number /*long*/): void
+                    public setInitialInterval(initialInterval: number /*long*/): void
                     /**
                      * Return the initial interval in milliseconds.
                      */
                     // @ts-ignore
-                    getInitialInterval(): long
+                    public getInitialInterval(): number /*long*/
                     /**
                      * The value to multiply the current interval by for each retry attempt.
                      */
                     // @ts-ignore
-                    setMultiplier(multiplier: number /*double*/): void
+                    public setMultiplier(multiplier: number /*double*/): void
                     /**
                      * Return the value to multiply the current interval by for each retry attempt.
                      */
                     // @ts-ignore
-                    getMultiplier(): double
+                    public getMultiplier(): number /*double*/
                     /**
                      * The maximum back off time.
                      */
                     // @ts-ignore
-                    setMaxInterval(maxInterval: number /*long*/): void
+                    public setMaxInterval(maxInterval: number /*long*/): void
                     /**
                      * Return the maximum back off time.
                      */
                     // @ts-ignore
-                    getMaxInterval(): long
+                    public getMaxInterval(): number /*long*/
                     /**
                      * The maximum elapsed time in milliseconds after which a call to
                      * {@link BackOffExecution#nextBackOff()} returns {@link BackOffExecution#STOP}.
                      */
                     // @ts-ignore
-                    setMaxElapsedTime(maxElapsedTime: number /*long*/): void
+                    public setMaxElapsedTime(maxElapsedTime: number /*long*/): void
                     /**
                      * Return the maximum elapsed time in milliseconds after which a call to
                      * {@link BackOffExecution#nextBackOff()} returns {@link BackOffExecution#STOP}.
                      */
                     // @ts-ignore
-                    getMaxElapsedTime(): long
+                    public getMaxElapsedTime(): number /*long*/
                     // @ts-ignore
-                    start(): org.springframework.util.backoff.BackOffExecution
+                    public start(): org.springframework.util.backoff.BackOffExecution
                 }
             }
         }

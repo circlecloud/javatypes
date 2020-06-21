@@ -15,7 +15,7 @@ declare namespace java {
                  * @param name Name of the attribute
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
             }
         }
     }

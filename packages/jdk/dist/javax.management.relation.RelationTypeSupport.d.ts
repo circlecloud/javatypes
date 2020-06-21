@@ -30,25 +30,25 @@ declare namespace javax {
                  *  <P>- one null role info provided
                  */
                 // @ts-ignore
-                constructor(relationTypeName: string, roleInfoArray: javax.management.relation.RoleInfo[])
+                constructor(relationTypeName: java.lang.String | string, roleInfoArray: javax.management.relation.RoleInfo[])
                 /**
                  * Constructor to be used for subclasses.
                  * @param relationTypeName  Name of relation type.
                  * @exception IllegalArgumentException  if null parameter.
                  */
                 // @ts-ignore
-                constructor(relationTypeName: string)
+                constructor(relationTypeName: java.lang.String | string)
                 /**
                  * Returns the relation type name.
                  * @return the relation type name.
                  */
                 // @ts-ignore
-                getRelationTypeName(): java.lang.String
+                public getRelationTypeName(): string
                 /**
                  * Returns the list of role definitions (ArrayList of RoleInfo objects).
                  */
                 // @ts-ignore
-                getRoleInfos(): java.util.List<javax.management.relation.RoleInfo>
+                public getRoleInfos(): Array<javax.management.relation.RoleInfo>
                 /**
                  * Returns the role info (RoleInfo object) for the given role info name
                  * (null if not found).
@@ -60,7 +60,7 @@ declare namespace javax {
                  *  relation type.
                  */
                 // @ts-ignore
-                getRoleInfo(roleInfoName: string): javax.management.relation.RoleInfo
+                public getRoleInfo(roleInfoName: java.lang.String | string): javax.management.relation.RoleInfo
                 /**
                  * Add a role info.
                  * This method of course should not be used after the creation of the

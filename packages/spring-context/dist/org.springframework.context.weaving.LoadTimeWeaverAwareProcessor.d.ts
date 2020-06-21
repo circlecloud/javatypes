@@ -46,11 +46,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(beanFactory: BeanFactory)
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                    public postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     // @ts-ignore
-                    postProcessAfterInitialization(bean: any, name: string): java.lang.Object
+                    public postProcessAfterInitialization(bean: java.lang.Object | any, name: java.lang.String | string): any
                 }
             }
         }

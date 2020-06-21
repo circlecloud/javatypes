@@ -21,7 +21,7 @@ declare namespace org {
                          * @param message The message to display with the exception
                          */
                         // @ts-ignore
-                        constructor(message: string)
+                        constructor(message: java.lang.String | string)
                         /**
                          * Constructs a new {@link InvalidDataException} with the specified message and
                          * cause.
@@ -29,14 +29,14 @@ declare namespace org {
                          * @param cause The cause of this exception
                          */
                         // @ts-ignore
-                        constructor(message: string, cause: Error)
+                        constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                         /**
                          * Constructs a new {@link InvalidDataException} with the specified cause and a
                          * null message.
                          * @param cause The cause of this exception
                          */
                         // @ts-ignore
-                        constructor(cause: Error)
+                        constructor(cause: java.lang.Throwable | Error)
                     }
                 }
             }

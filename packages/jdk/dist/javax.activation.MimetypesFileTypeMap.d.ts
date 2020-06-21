@@ -44,7 +44,7 @@ declare namespace javax {
              * @param mimeTypeFileName  the file name
              */
             // @ts-ignore
-            constructor(mimeTypeFileName: string)
+            constructor(mimeTypeFileName: java.lang.String | string)
             /**
              * Construct a MimetypesFileTypeMap with programmatic entries
              * added from the InputStream.
@@ -57,7 +57,7 @@ declare namespace javax {
              * @param mime_types A .mime.types formatted string of entries.
              */
             // @ts-ignore
-            addMimeTypes(mime_types: string): void
+            public addMimeTypes(mime_types: java.lang.String | string): void
             /**
              * Return the MIME type of the file object.
              * The implementation in this class calls
@@ -66,7 +66,7 @@ declare namespace javax {
              * @return the file's MIME type
              */
             // @ts-ignore
-            getContentType(f: java.io.File): java.lang.String
+            public getContentType(f: java.io.File): string
             /**
              * Return the MIME type based on the specified file name.
              * The MIME type entries are searched as described above under
@@ -76,7 +76,7 @@ declare namespace javax {
              * @return the file's MIME type
              */
             // @ts-ignore
-            getContentType(filename: string): java.lang.String
+            public getContentType(filename: java.lang.String | string): string
         }
     }
 }

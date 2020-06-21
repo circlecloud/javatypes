@@ -14,7 +14,7 @@ declare namespace javax {
              * @param isSelected  a boolean
              */
             // @ts-ignore
-            setValue(aValue: any, isSelected: boolean): void
+            setValue(aValue: java.lang.Object | any, isSelected: boolean): void
             /**
              * Returns the component used to render the value.
              * @return the Component responsible for displaying the value

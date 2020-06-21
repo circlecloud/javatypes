@@ -30,14 +30,14 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                addIngredient(ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Adds the specified ingredient.
                  * @param ingredient The ingredient to add.
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                addIngredient(ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Adds the specified ingredient.
                  * @param ingredient The ingredient to add.
@@ -46,7 +46,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                addIngredient(ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Adds multiples of the specified ingredient.
                  * @param count How many to add (can't be more than 9!)
@@ -54,7 +54,7 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                addIngredient(count: number /*int*/, ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(count: number /*int*/, ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Adds multiples of the specified ingredient.
                  * @param count How many to add (can't be more than 9!)
@@ -62,7 +62,7 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                addIngredient(count: number /*int*/, ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(count: number /*int*/, ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Adds multiples of the specified ingredient.
                  * @param count How many to add (can't be more than 9!)
@@ -72,16 +72,16 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                addIngredient(count: number /*int*/, ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(count: number /*int*/, ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
                 // @ts-ignore
-                addIngredient(ingredient: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.ShapelessRecipe
+                public addIngredient(ingredient: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes an ingredient from the list.
                  * @param ingredient The ingredient to remove
                  * @return The changed recipe.
                  */
                 // @ts-ignore
-                removeIngredient(ingredient: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(ingredient: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes an ingredient from the list. If the ingredient occurs multiple
                  * times, only one instance of it is removed. Only removes exact matches,
@@ -90,7 +90,7 @@ declare namespace org {
                  * @return The changed recipe.
                  */
                 // @ts-ignore
-                removeIngredient(ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes an ingredient from the list. If the ingredient occurs multiple
                  * times, only one instance of it is removed. If the data value is -1,
@@ -99,7 +99,7 @@ declare namespace org {
                  * @return The changed recipe.
                  */
                 // @ts-ignore
-                removeIngredient(ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes multiple instances of an ingredient from the list. If there are
                  * less instances then specified, all will be removed. Only removes exact
@@ -109,7 +109,7 @@ declare namespace org {
                  * @return The changed recipe.
                  */
                 // @ts-ignore
-                removeIngredient(count: number /*int*/, ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(count: number /*int*/, ingredient: org.bukkit.Material): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes multiple instances of an ingredient from the list. If there are
                  * less instances then specified, all will be removed. If the data value
@@ -119,7 +119,7 @@ declare namespace org {
                  * @return The changed recipe.
                  */
                 // @ts-ignore
-                removeIngredient(count: number /*int*/, ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(count: number /*int*/, ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes an ingredient from the list. If the ingredient occurs multiple
                  * times, only one instance of it is removed. If the data value is -1,
@@ -130,7 +130,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                removeIngredient(ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Removes multiple instances of an ingredient from the list. If there are
                  * less instances then specified, all will be removed. If the data value
@@ -142,30 +142,30 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                removeIngredient(count: number /*int*/, ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
+                public removeIngredient(count: number /*int*/, ingredient: org.bukkit.Material, rawdata: number /*int*/): org.bukkit.inventory.ShapelessRecipe
                 /**
                  * Get the result of this recipe.
                  * @return The result stack.
                  */
                 // @ts-ignore
-                getResult(): org.bukkit.inventory.ItemStack
+                public getResult(): org.bukkit.inventory.ItemStack
                 /**
                  * Get the list of ingredients used for this recipe.
                  * @return The input list
                  */
                 // @ts-ignore
-                getIngredientList(): java.util.List<org.bukkit.inventory.ItemStack>
+                public getIngredientList(): Array<org.bukkit.inventory.ItemStack>
                 // @ts-ignore
-                getChoiceList(): java.util.List<org.bukkit.inventory.RecipeChoice>
+                public getChoiceList(): Array<org.bukkit.inventory.RecipeChoice>
                 // @ts-ignore
-                getKey(): org.bukkit.NamespacedKey
+                public getKey(): org.bukkit.NamespacedKey
                 /**
                  * Get the group of this recipe. Recipes with the same group may be grouped
                  * together when displayed in the client.
                  * @return recipe group. An empty string denotes no group. May not be null.
                  */
                 // @ts-ignore
-                getGroup(): java.lang.String
+                public getGroup(): string
                 /**
                  * Set the group of this recipe. Recipes with the same group may be grouped
                  * together when displayed in the client.
@@ -173,7 +173,7 @@ declare namespace org {
                  *  null.
                  */
                 // @ts-ignore
-                setGroup(group: string): void
+                public setGroup(group: java.lang.String | string): void
             }
         }
     }

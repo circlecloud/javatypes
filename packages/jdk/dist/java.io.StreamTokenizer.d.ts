@@ -100,27 +100,27 @@ declare namespace java {
              * @see java.io.StreamTokenizer#TT_WORD
              */
             // @ts-ignore
-            ttype: number /*int*/
+            public ttype: number /*int*/
             /**
              * A constant indicating that the end of the stream has been read.
              */
             // @ts-ignore
-            readonly TT_EOF: number /*int*/
+            public static readonly TT_EOF: number /*int*/
             /**
              * A constant indicating that the end of the line has been read.
              */
             // @ts-ignore
-            readonly TT_EOL: number /*int*/
+            public static readonly TT_EOL: number /*int*/
             /**
              * A constant indicating that a number token has been read.
              */
             // @ts-ignore
-            readonly TT_NUMBER: number /*int*/
+            public static readonly TT_NUMBER: number /*int*/
             /**
              * A constant indicating that a word token has been read.
              */
             // @ts-ignore
-            readonly TT_WORD: number /*int*/
+            public static readonly TT_WORD: number /*int*/
             /**
              * If the current token is a word token, this field contains a
              * string giving the characters of the word token. When the current
@@ -138,7 +138,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            sval: string
+            public sval: java.lang.String | string
             /**
              * If the current token is a number, this field contains the value
              * of that number. The current token is a number when the value of
@@ -149,7 +149,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            nval: number /*double*/
+            public nval: number /*double*/
             /**
              * Resets this tokenizer's syntax table so that all characters are
              * "ordinary." See the {@code ordinaryChar} method
@@ -157,7 +157,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ordinaryChar(int)
              */
             // @ts-ignore
-            resetSyntax(): void
+            public resetSyntax(): void
             /**
              * Specifies that all characters <i>c</i> in the range
              * <code>low&nbsp;&lt;=&nbsp;<i>c</i>&nbsp;&lt;=&nbsp;high</code>
@@ -167,7 +167,7 @@ declare namespace java {
              * @param hi    the high end of the range.
              */
             // @ts-ignore
-            wordChars(low: number /*int*/, hi: number /*int*/): void
+            public wordChars(low: number /*int*/, hi: number /*int*/): void
             /**
              * Specifies that all characters <i>c</i> in the range
              * <code>low&nbsp;&lt;=&nbsp;<i>c</i>&nbsp;&lt;=&nbsp;high</code>
@@ -179,7 +179,7 @@ declare namespace java {
              * @param hi    the high end of the range.
              */
             // @ts-ignore
-            whitespaceChars(low: number /*int*/, hi: number /*int*/): void
+            public whitespaceChars(low: number /*int*/, hi: number /*int*/): void
             /**
              * Specifies that all characters <i>c</i> in the range
              * <code>low&nbsp;&lt;=&nbsp;<i>c</i>&nbsp;&lt;=&nbsp;high</code>
@@ -191,7 +191,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ordinaryChar(int)
              */
             // @ts-ignore
-            ordinaryChars(low: number /*int*/, hi: number /*int*/): void
+            public ordinaryChars(low: number /*int*/, hi: number /*int*/): void
             /**
              * Specifies that the character argument is "ordinary"
              * in this tokenizer. It removes any special significance the
@@ -208,7 +208,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            ordinaryChar(ch: number /*int*/): void
+            public ordinaryChar(ch: number /*int*/): void
             /**
              * Specified that the character argument starts a single-line
              * comment. All characters from the comment character to the end of
@@ -217,7 +217,7 @@ declare namespace java {
              * @param ch   the character.
              */
             // @ts-ignore
-            commentChar(ch: number /*int*/): void
+            public commentChar(ch: number /*int*/): void
             /**
              * Specifies that matching pairs of this character delimit string
              * constants in this tokenizer.
@@ -241,7 +241,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            quoteChar(ch: number /*int*/): void
+            public quoteChar(ch: number /*int*/): void
             /**
              * Specifies that numbers should be parsed by this tokenizer. The
              * syntax table of this tokenizer is modified so that each of the twelve
@@ -262,7 +262,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            parseNumbers(): void
+            public parseNumbers(): void
             /**
              * Determines whether or not ends of line are treated as tokens.
              * If the flag argument is true, this tokenizer treats end of lines
@@ -286,7 +286,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#TT_EOL
              */
             // @ts-ignore
-            eolIsSignificant(flag: boolean): void
+            public eolIsSignificant(flag: boolean): void
             /**
              * Determines whether or not the tokenizer recognizes C-style comments.
              * If the flag argument is {@code true}, this stream tokenizer
@@ -299,7 +299,7 @@ declare namespace java {
              *                  C-style comments.
              */
             // @ts-ignore
-            slashStarComments(flag: boolean): void
+            public slashStarComments(flag: boolean): void
             /**
              * Determines whether or not the tokenizer recognizes C++-style comments.
              * If the flag argument is {@code true}, this stream tokenizer
@@ -313,7 +313,7 @@ declare namespace java {
              *                  C++-style comments.
              */
             // @ts-ignore
-            slashSlashComments(flag: boolean): void
+            public slashSlashComments(flag: boolean): void
             /**
              * Determines whether or not word token are automatically lowercased.
              * If the flag argument is {@code true}, then the value in the
@@ -331,7 +331,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#TT_WORD
              */
             // @ts-ignore
-            lowerCaseMode(fl: boolean): void
+            public lowerCaseMode(fl: boolean): void
             /**
              * Parses the next token from the input stream of this tokenizer.
              * The type of the next token is returned in the {@code ttype}
@@ -350,7 +350,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            nextToken(): int
+            public nextToken(): number /*int*/
             /**
              * Causes the next call to the {@code nextToken} method of this
              * tokenizer to return the current value in the {@code ttype}
@@ -362,13 +362,13 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            pushBack(): void
+            public pushBack(): void
             /**
              * Return the current line number.
              * @return the current line number of this stream tokenizer.
              */
             // @ts-ignore
-            lineno(): int
+            public lineno(): number /*int*/
             /**
              * Returns the string representation of the current stream token and
              * the line number it occurs on.
@@ -381,7 +381,7 @@ declare namespace java {
              * @see java.io.StreamTokenizer#ttype
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

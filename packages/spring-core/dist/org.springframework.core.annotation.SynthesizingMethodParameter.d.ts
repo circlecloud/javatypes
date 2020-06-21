@@ -61,11 +61,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(original: org.springframework.core.annotation.SynthesizingMethodParameter)
                     // @ts-ignore
-                    adaptAnnotation<A extends java.lang.annotation.Annotation>(annotation: A extends java.lang.annotation.Annotation): A
+                    adaptAnnotation<A extends java.lang.annotation.Annotation>(annotation: A): A
                     // @ts-ignore
                     adaptAnnotationArray(annotations: java.lang.annotation.Annotation[]): java.lang.annotation.Annotation[]
                     // @ts-ignore
-                    clone(): org.springframework.core.annotation.SynthesizingMethodParameter
+                    public clone(): org.springframework.core.annotation.SynthesizingMethodParameter
                     /**
                      * Create a new SynthesizingMethodParameter for the given method or constructor.
                      * <p>This is a convenience factory method for scenarios where a
@@ -76,7 +76,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    forExecutable(executable: java.lang.reflect.Executable, parameterIndex: number /*int*/): org.springframework.core.annotation.SynthesizingMethodParameter
+                    public static forExecutable(executable: java.lang.reflect.Executable, parameterIndex: number /*int*/): org.springframework.core.annotation.SynthesizingMethodParameter
                     /**
                      * Create a new SynthesizingMethodParameter for the given parameter descriptor.
                      * <p>This is a convenience factory method for scenarios where a
@@ -86,7 +86,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    forParameter(parameter: java.lang.reflect.Parameter): org.springframework.core.annotation.SynthesizingMethodParameter
+                    public static forParameter(parameter: java.lang.reflect.Parameter): org.springframework.core.annotation.SynthesizingMethodParameter
                 }
             }
         }

@@ -17,16 +17,16 @@ declare namespace org {
                      * The default buffer size used by the encoder.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_BUFFER_SIZE: number /*int*/
+                    public static readonly DEFAULT_BUFFER_SIZE: number /*int*/
                     /**
                      * The hint key that contains the boundary string.
                      */
                     // @ts-ignore
-                    readonly BOUNDARY_STRING_HINT: string
+                    public static readonly BOUNDARY_STRING_HINT: java.lang.String | string
                     // @ts-ignore
-                    canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                     // @ts-ignore
-                    encode(input: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public encode(input: object, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

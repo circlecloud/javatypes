@@ -22,31 +22,31 @@ declare namespace org {
                          * @param value the Object to be serialized
                          */
                         // @ts-ignore
-                        constructor(value: any)
+                        constructor(value: java.lang.Object | any)
                         /**
                          * Modify the POJO to serialize.
                          */
                         // @ts-ignore
-                        setValue(value: any): void
+                        public setValue(value: java.lang.Object | any): void
                         /**
                          * Return the POJO that needs to be serialized.
                          */
                         // @ts-ignore
-                        getValue(): java.lang.Object
+                        public getValue(): any
                         /**
                          * Set the serialization view to serialize the POJO with.
                          * @see com.fasterxml.jackson.databind.ObjectMapper#writerWithView(Class)
                          * @see com.fasterxml.jackson.annotation.JsonView
                          */
                         // @ts-ignore
-                        setSerializationView(serializationView: java.lang.Class<any>): void
+                        public setSerializationView(serializationView: java.lang.Class<any>): void
                         /**
                          * Return the serialization view to use.
                          * @see com.fasterxml.jackson.databind.ObjectMapper#writerWithView(Class)
                          * @see com.fasterxml.jackson.annotation.JsonView
                          */
                         // @ts-ignore
-                        getSerializationView(): java.lang.Class<?>
+                        public getSerializationView(): java.lang.Class<any>
                         /**
                          * Set the Jackson filter provider to serialize the POJO with.
                          * @since 4.2
@@ -55,7 +55,7 @@ declare namespace org {
                          * @see Jackson2ObjectMapperBuilder#filters(FilterProvider)
                          */
                         // @ts-ignore
-                        setFilters(filters: FilterProvider): void
+                        public setFilters(filters: FilterProvider): void
                         /**
                          * Return the Jackson filter provider to use.
                          * @since 4.2
@@ -63,7 +63,7 @@ declare namespace org {
                          * @see com.fasterxml.jackson.annotation.JsonFilter
                          */
                         // @ts-ignore
-                        getFilters(): FilterProvider
+                        public getFilters(): FilterProvider
                     }
                 }
             }

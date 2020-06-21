@@ -36,7 +36,7 @@ declare namespace org {
                  * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
                  */
                 // @ts-ignore
-                class AbstractRefreshableApplicationContext extends org.springframework.context.support.AbstractApplicationContext {
+                abstract class AbstractRefreshableApplicationContext extends org.springframework.context.support.AbstractApplicationContext {
                     /**
                      * Create a new AbstractRefreshableApplicationContext with no parent.
                      */
@@ -55,7 +55,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
                      */
                     // @ts-ignore
-                    setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding: boolean): void
+                    public setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding: boolean): void
                     /**
                      * Set whether to allow circular references between beans - and automatically
                      * try to resolve them.
@@ -64,7 +64,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
                      */
                     // @ts-ignore
-                    setAllowCircularReferences(allowCircularReferences: boolean): void
+                    public setAllowCircularReferences(allowCircularReferences: boolean): void
                     /**
                      * This implementation performs an actual refresh of this context's underlying
                      * bean factory, shutting down the previous bean factory (if any) and
@@ -83,7 +83,7 @@ declare namespace org {
                     // @ts-ignore
                     hasBeanFactory(): boolean
                     // @ts-ignore
-                    getBeanFactory(): ConfigurableListableBeanFactory
+                    public getBeanFactory(): ConfigurableListableBeanFactory
                     /**
                      * Overridden to turn it into a no-op: With AbstractRefreshableApplicationContext,
                      * {@link #getBeanFactory()} serves a strong assertion for an active context anyway.

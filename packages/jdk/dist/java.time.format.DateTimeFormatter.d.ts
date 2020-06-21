@@ -397,7 +397,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_LOCAL_DATE: java.time.format.DateTimeFormatter
+                public static readonly ISO_LOCAL_DATE: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date formatter that formats or parses a date with an
                  * offset, such as '2011-12-03+01:00'.
@@ -417,7 +417,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_OFFSET_DATE: java.time.format.DateTimeFormatter
+                public static readonly ISO_OFFSET_DATE: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date formatter that formats or parses a date with the
                  * offset if available, such as '2011-12-03' or '2011-12-03+01:00'.
@@ -441,7 +441,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_DATE: java.time.format.DateTimeFormatter
+                public static readonly ISO_DATE: java.time.format.DateTimeFormatter
                 /**
                  * The ISO time formatter that formats or parses a time without an
                  * offset, such as '10:15' or '10:15:30'.
@@ -469,7 +469,7 @@ declare namespace java {
                  * It uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_LOCAL_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_LOCAL_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO time formatter that formats or parses a time with an
                  * offset, such as '10:15+01:00' or '10:15:30+01:00'.
@@ -488,7 +488,7 @@ declare namespace java {
                  * It uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_OFFSET_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_OFFSET_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO time formatter that formats or parses a time, with the
                  * offset if available, such as '10:15', '10:15:30' or '10:15:30+01:00'.
@@ -511,7 +511,7 @@ declare namespace java {
                  * It uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date-time formatter that formats or parses a date-time without
                  * an offset, such as '2011-12-03T10:15:30'.
@@ -530,7 +530,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_LOCAL_DATE_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_LOCAL_DATE_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date-time formatter that formats or parses a date-time with an
                  * offset, such as '2011-12-03T10:15:30+01:00'.
@@ -550,7 +550,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_OFFSET_DATE_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_OFFSET_DATE_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO-like date-time formatter that formats or parses a date-time with
                  * offset and zone, such as '2011-12-03T10:15:30+01:00[Europe/Paris]'.
@@ -574,7 +574,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_ZONED_DATE_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_ZONED_DATE_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO-like date-time formatter that formats or parses a date-time with
                  * the offset and zone if available, such as '2011-12-03T10:15:30',
@@ -604,7 +604,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_DATE_TIME: java.time.format.DateTimeFormatter
+                public static readonly ISO_DATE_TIME: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date formatter that formats or parses the ordinal date
                  * without an offset, such as '2012-337'.
@@ -633,7 +633,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_ORDINAL_DATE: java.time.format.DateTimeFormatter
+                public static readonly ISO_ORDINAL_DATE: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date formatter that formats or parses the week-based date
                  * without an offset, such as '2012-W48-6'.
@@ -666,7 +666,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_WEEK_DATE: java.time.format.DateTimeFormatter
+                public static readonly ISO_WEEK_DATE: java.time.format.DateTimeFormatter
                 /**
                  * The ISO instant formatter that formats or parses an instant in UTC,
                  * such as '2011-12-03T10:15:30Z'.
@@ -698,7 +698,7 @@ declare namespace java {
                  * It uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly ISO_INSTANT: java.time.format.DateTimeFormatter
+                public static readonly ISO_INSTANT: java.time.format.DateTimeFormatter
                 /**
                  * The ISO date formatter that formats or parses a date without an
                  * offset, such as '20111203'.
@@ -727,7 +727,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#STRICT STRICT} resolver style.
                  */
                 // @ts-ignore
-                readonly BASIC_ISO_DATE: java.time.format.DateTimeFormatter
+                public static readonly BASIC_ISO_DATE: java.time.format.DateTimeFormatter
                 /**
                  * The RFC-1123 date-time formatter, such as 'Tue, 3 Jun 2008 11:05:30 GMT'.
                  * <p>
@@ -772,7 +772,7 @@ declare namespace java {
                  * It has no override zone and uses the {@link ResolverStyle#SMART SMART} resolver style.
                  */
                 // @ts-ignore
-                readonly RFC_1123_DATE_TIME: java.time.format.DateTimeFormatter
+                public static readonly RFC_1123_DATE_TIME: java.time.format.DateTimeFormatter
                 /**
                  * Creates a formatter using the specified pattern.
                  * <p>
@@ -793,7 +793,7 @@ declare namespace java {
                  * @see DateTimeFormatterBuilder#appendPattern(String)
                  */
                 // @ts-ignore
-                ofPattern(pattern: string): java.time.format.DateTimeFormatter
+                public static ofPattern(pattern: java.lang.String | string): java.time.format.DateTimeFormatter
                 /**
                  * Creates a formatter using the specified pattern and locale.
                  * <p>
@@ -814,7 +814,7 @@ declare namespace java {
                  * @see DateTimeFormatterBuilder#appendPattern(String)
                  */
                 // @ts-ignore
-                ofPattern(pattern: string, locale: java.util.Locale): java.time.format.DateTimeFormatter
+                public static ofPattern(pattern: java.lang.String | string, locale: java.util.Locale): java.time.format.DateTimeFormatter
                 /**
                  * Returns a locale specific date format for the ISO chronology.
                  * <p>
@@ -837,7 +837,7 @@ declare namespace java {
                  * @return the date formatter, not null
                  */
                 // @ts-ignore
-                ofLocalizedDate(dateStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
+                public static ofLocalizedDate(dateStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
                 /**
                  * Returns a locale specific time format for the ISO chronology.
                  * <p>
@@ -860,7 +860,7 @@ declare namespace java {
                  * @return the time formatter, not null
                  */
                 // @ts-ignore
-                ofLocalizedTime(timeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
+                public static ofLocalizedTime(timeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
                 /**
                  * Returns a locale specific date-time formatter for the ISO chronology.
                  * <p>
@@ -883,7 +883,7 @@ declare namespace java {
                  * @return the date-time formatter, not null
                  */
                 // @ts-ignore
-                ofLocalizedDateTime(dateTimeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
+                public static ofLocalizedDateTime(dateTimeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
                 /**
                  * Returns a locale specific date and time format for the ISO chronology.
                  * <p>
@@ -907,7 +907,7 @@ declare namespace java {
                  * @return the date, time or date-time formatter, not null
                  */
                 // @ts-ignore
-                ofLocalizedDateTime(dateStyle: java.time.format.FormatStyle, timeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
+                public static ofLocalizedDateTime(dateStyle: java.time.format.FormatStyle, timeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatter
                 /**
                  * A query that provides access to the excess days that were parsed.
                  * <p>
@@ -948,7 +948,7 @@ declare namespace java {
                  * @return a query that provides access to the excess days that were parsed
                  */
                 // @ts-ignore
-                parsedExcessDays(): java.time.temporal.TemporalQuery<java.time.Period>
+                public static parsedExcessDays(): java.time.temporal.TemporalQuery<java.time.Period>
                 /**
                  * A query that provides access to whether a leap-second was parsed.
                  * <p>
@@ -980,7 +980,7 @@ declare namespace java {
                  * @return a query that provides access to whether a leap-second was parsed
                  */
                 // @ts-ignore
-                parsedLeapSecond(): java.time.temporal.TemporalQuery<java.lang.Boolean>
+                public static parsedLeapSecond(): java.time.temporal.TemporalQuery<java.lang.Boolean>
                 /**
                  * Gets the locale to be used during formatting.
                  * <p>
@@ -989,7 +989,7 @@ declare namespace java {
                  * @return the locale of this formatter, not null
                  */
                 // @ts-ignore
-                getLocale(): java.util.Locale
+                public getLocale(): java.util.Locale
                 /**
                  * Returns a copy of this formatter with a new locale.
                  * <p>
@@ -1001,13 +1001,13 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested locale, not null
                  */
                 // @ts-ignore
-                withLocale(locale: java.util.Locale): java.time.format.DateTimeFormatter
+                public withLocale(locale: java.util.Locale): java.time.format.DateTimeFormatter
                 /**
                  * Gets the DecimalStyle to be used during formatting.
                  * @return the locale of this formatter, not null
                  */
                 // @ts-ignore
-                getDecimalStyle(): java.time.format.DecimalStyle
+                public getDecimalStyle(): java.time.format.DecimalStyle
                 /**
                  * Returns a copy of this formatter with a new DecimalStyle.
                  * <p>
@@ -1016,7 +1016,7 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested DecimalStyle, not null
                  */
                 // @ts-ignore
-                withDecimalStyle(decimalStyle: java.time.format.DecimalStyle): java.time.format.DateTimeFormatter
+                public withDecimalStyle(decimalStyle: java.time.format.DecimalStyle): java.time.format.DateTimeFormatter
                 /**
                  * Gets the overriding chronology to be used during formatting.
                  * <p>
@@ -1026,7 +1026,7 @@ declare namespace java {
                  * @return the override chronology of this formatter, null if no override
                  */
                 // @ts-ignore
-                getChronology(): java.time.chrono.Chronology
+                public getChronology(): java.time.chrono.Chronology
                 /**
                  * Returns a copy of this formatter with a new override chronology.
                  * <p>
@@ -1060,7 +1060,7 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested override chronology, not null
                  */
                 // @ts-ignore
-                withChronology(chrono: java.time.chrono.Chronology): java.time.format.DateTimeFormatter
+                public withChronology(chrono: java.time.chrono.Chronology): java.time.format.DateTimeFormatter
                 /**
                  * Gets the overriding zone to be used during formatting.
                  * <p>
@@ -1070,7 +1070,7 @@ declare namespace java {
                  * @return the override zone of this formatter, null if no override
                  */
                 // @ts-ignore
-                getZone(): java.time.ZoneId
+                public getZone(): java.time.ZoneId
                 /**
                  * Returns a copy of this formatter with a new override zone.
                  * <p>
@@ -1107,7 +1107,7 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested override zone, not null
                  */
                 // @ts-ignore
-                withZone(zone: java.time.ZoneId): java.time.format.DateTimeFormatter
+                public withZone(zone: java.time.ZoneId): java.time.format.DateTimeFormatter
                 /**
                  * Gets the resolver style to use during parsing.
                  * <p>
@@ -1118,7 +1118,7 @@ declare namespace java {
                  * @return the resolver style of this formatter, not null
                  */
                 // @ts-ignore
-                getResolverStyle(): java.time.format.ResolverStyle
+                public getResolverStyle(): java.time.format.ResolverStyle
                 /**
                  * Returns a copy of this formatter with a new resolver style.
                  * <p>
@@ -1138,7 +1138,7 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested resolver style, not null
                  */
                 // @ts-ignore
-                withResolverStyle(resolverStyle: java.time.format.ResolverStyle): java.time.format.DateTimeFormatter
+                public withResolverStyle(resolverStyle: java.time.format.ResolverStyle): java.time.format.DateTimeFormatter
                 /**
                  * Gets the resolver fields to use during parsing.
                  * <p>
@@ -1149,7 +1149,7 @@ declare namespace java {
                  * @return the immutable set of resolver fields of this formatter, null if no fields
                  */
                 // @ts-ignore
-                getResolverFields(): java.util.Set<java.time.temporal.TemporalField>
+                public getResolverFields(): Array<java.time.temporal.TemporalField>
                 /**
                  * Returns a copy of this formatter with a new set of resolver fields.
                  * <p>
@@ -1189,7 +1189,7 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested resolver style, not null
                  */
                 // @ts-ignore
-                withResolverFields(...resolverFields: java.time.temporal.TemporalField[]): java.time.format.DateTimeFormatter
+                public withResolverFields(...resolverFields: java.time.temporal.TemporalField[]): java.time.format.DateTimeFormatter
                 /**
                  * Returns a copy of this formatter with a new set of resolver fields.
                  * <p>
@@ -1229,7 +1229,7 @@ declare namespace java {
                  * @return a formatter based on this formatter with the requested resolver style, not null
                  */
                 // @ts-ignore
-                withResolverFields(resolverFields: Array<java.time.temporal.TemporalField>): java.time.format.DateTimeFormatter
+                public withResolverFields(resolverFields: java.util.Set<java.time.temporal.TemporalField> | Array<java.time.temporal.TemporalField>): java.time.format.DateTimeFormatter
                 /**
                  * Formats a date-time object using this formatter.
                  * <p>
@@ -1239,7 +1239,7 @@ declare namespace java {
                  * @throws DateTimeException if an error occurs during formatting
                  */
                 // @ts-ignore
-                format(temporal: java.time.temporal.TemporalAccessor): java.lang.String
+                public format(temporal: java.time.temporal.TemporalAccessor): string
                 /**
                  * Formats a date-time object to an {@code Appendable} using this formatter.
                  * <p>
@@ -1255,7 +1255,7 @@ declare namespace java {
                  * @throws DateTimeException if an error occurs during formatting
                  */
                 // @ts-ignore
-                formatTo(temporal: java.time.temporal.TemporalAccessor, appendable: java.lang.Appendable): void
+                public formatTo(temporal: java.time.temporal.TemporalAccessor, appendable: java.lang.Appendable): void
                 /**
                  * Fully parses the text producing a temporal object.
                  * <p>
@@ -1271,7 +1271,7 @@ declare namespace java {
                  * @throws DateTimeParseException if unable to parse the requested result
                  */
                 // @ts-ignore
-                parse(text: java.lang.CharSequence): java.time.temporal.TemporalAccessor
+                public parse(text: java.lang.CharSequence): java.time.temporal.TemporalAccessor
                 /**
                  * Parses the text using this formatter, providing control over the text position.
                  * <p>
@@ -1302,7 +1302,7 @@ declare namespace java {
                  * @throws IndexOutOfBoundsException if the position is invalid
                  */
                 // @ts-ignore
-                parse(text: java.lang.CharSequence, position: java.text.ParsePosition): java.time.temporal.TemporalAccessor
+                public parse(text: java.lang.CharSequence, position: java.text.ParsePosition): java.time.temporal.TemporalAccessor
                 /**
                  * Fully parses the text producing an object of the specified type.
                  * <p>
@@ -1322,7 +1322,7 @@ declare namespace java {
                  * @throws DateTimeParseException if unable to parse the requested result
                  */
                 // @ts-ignore
-                parse<T>(text: java.lang.CharSequence, query: java.time.temporal.TemporalQuery<T>): T
+                public parse<T>(text: java.lang.CharSequence, query: java.time.temporal.TemporalQuery<T>): T
                 /**
                  * Fully parses the text producing an object of one of the specified types.
                  * <p>
@@ -1354,7 +1354,7 @@ declare namespace java {
                  * @throws DateTimeParseException if unable to parse the requested result
                  */
                 // @ts-ignore
-                parseBest(text: java.lang.CharSequence, ...queries: java.time.temporal.TemporalQuery[]): java.time.temporal.TemporalAccessor
+                public parseBest(text: java.lang.CharSequence, ...queries: java.time.temporal.TemporalQuery<any>[]): java.time.temporal.TemporalAccessor
                 /**
                  * Parses the text using this formatter, without resolving the result, intended
                  * for advanced use cases.
@@ -1394,7 +1394,7 @@ declare namespace java {
                  * @throws IndexOutOfBoundsException if the position is invalid
                  */
                 // @ts-ignore
-                parseUnresolved(text: java.lang.CharSequence, position: java.text.ParsePosition): java.time.temporal.TemporalAccessor
+                public parseUnresolved(text: java.lang.CharSequence, position: java.text.ParsePosition): java.time.temporal.TemporalAccessor
                 /**
                  * Returns this formatter as a {@code java.text.Format} instance.
                  * <p>
@@ -1408,7 +1408,7 @@ declare namespace java {
                  * @return this formatter as a classic format instance, not null
                  */
                 // @ts-ignore
-                toFormat(): java.text.Format
+                public toFormat(): java.text.Format
                 /**
                  * Returns this formatter as a {@code java.text.Format} instance that will
                  * parse using the specified query.
@@ -1425,13 +1425,13 @@ declare namespace java {
                  * @return this formatter as a classic format instance, not null
                  */
                 // @ts-ignore
-                toFormat(parseQuery: java.time.temporal.TemporalQuery<any>): java.text.Format
+                public toFormat(parseQuery: java.time.temporal.TemporalQuery<any>): java.text.Format
                 /**
                  * Returns a description of the underlying formatters.
                  * @return a description of this formatter, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

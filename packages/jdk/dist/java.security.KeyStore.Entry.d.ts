@@ -15,7 +15,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAttributes(): java.util.Set<java.security.KeyStore.Entry.Attribute>
+                getAttributes(): Array<java.security.KeyStore.Entry.Attribute>
             }
         }
     }

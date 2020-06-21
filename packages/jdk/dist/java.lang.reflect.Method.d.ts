@@ -24,32 +24,32 @@ declare namespace java {
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaringClass(): java.lang.Class<?>
+                public getDeclaringClass(): java.lang.Class<any>
                 /**
                  * Returns the name of the method represented by this {@code Method}
                  * object, as a {@code String}.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getModifiers(): int
+                public getModifiers(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @throws GenericSignatureFormatError {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTypeParameters(): java.lang.reflect.TypeVariable[]
+                public getTypeParameters(): java.lang.reflect.TypeVariable<java.lang.reflect.Method>[]
                 /**
                  * Returns a {@code Class} object that represents the formal return type
                  * of the method represented by this {@code Method} object.
                  * @return the return type for the method this object represents
                  */
                 // @ts-ignore
-                getReturnType(): java.lang.Class<?>
+                public getReturnType(): java.lang.Class<any>
                 /**
                  * Returns a {@code Type} object that represents the formal return
                  * type of the method represented by this {@code Method} object.
@@ -72,18 +72,18 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getGenericReturnType(): java.lang.reflect.Type
+                public getGenericReturnType(): java.lang.reflect.Type
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getParameterTypes(): java.lang.Class[]
+                public getParameterTypes(): java.lang.Class<any>[]
                 /**
                  * {@inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getParameterCount(): int
+                public getParameterCount(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @throws GenericSignatureFormatError {#inheritDoc}
@@ -92,12 +92,12 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getGenericParameterTypes(): java.lang.reflect.Type[]
+                public getGenericParameterTypes(): java.lang.reflect.Type[]
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getExceptionTypes(): java.lang.Class[]
+                public getExceptionTypes(): java.lang.Class<any>[]
                 /**
                  * {@inheritDoc}
                  * @throws GenericSignatureFormatError {#inheritDoc}
@@ -106,7 +106,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getGenericExceptionTypes(): java.lang.reflect.Type[]
+                public getGenericExceptionTypes(): java.lang.reflect.Type[]
                 /**
                  * Compares this {@code Method} against the specified object.  Returns
                  * true if the objects are the same.  Two {@code Methods} are the same if
@@ -114,14 +114,14 @@ declare namespace java {
                  * and formal parameter types and return type.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode for this {@code Method}.  The hashcode is computed
                  * as the exclusive-or of the hashcodes for the underlying
                  * method's declaring class name and the method's name.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this {@code Method}.  The string is
                  * formatted as the method access modifiers, if any, followed by
@@ -146,7 +146,7 @@ declare namespace java {
                  * @jls 8.4.3 Method Modifiers
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a string describing this {@code Method}, including
                  * type parameters.  The string is formatted as the method access
@@ -181,7 +181,7 @@ declare namespace java {
                  * @jls 8.4.3 Method Modifiers
                  */
                 // @ts-ignore
-                toGenericString(): java.lang.String
+                public toGenericString(): string
                 /**
                  * Invokes the underlying method represented by this {@code Method}
                  * object, on the specified object with the specified parameters.
@@ -233,7 +233,7 @@ declare namespace java {
                  *  provoked by this method fails.
                  */
                 // @ts-ignore
-                invoke(obj: any, ...args: any[]): java.lang.Object
+                public invoke(obj: java.lang.Object | any, ...args: java.lang.Object[] | any[]): any
                 /**
                  * Returns {@code true} if this method is a bridge
                  * method; returns {@code false} otherwise.
@@ -242,20 +242,20 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isBridge(): boolean
+                public isBridge(): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                isVarArgs(): boolean
+                public isVarArgs(): boolean
                 /**
                  * {@inheritDoc}
                  * @jls 13.1 The Form of a Binary
                  * @since 1.5
                  */
                 // @ts-ignore
-                isSynthetic(): boolean
+                public isSynthetic(): boolean
                 /**
                  * Returns {@code true} if this method is a default
                  * method; returns {@code false} otherwise.
@@ -267,7 +267,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                isDefault(): boolean
+                public isDefault(): boolean
                 /**
                  * Returns the default value for the annotation member represented by
                  * this {@code Method} instance.  If the member is of a primitive type,
@@ -282,32 +282,32 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getDefaultValue(): java.lang.Object
+                public getDefaultValue(): any
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException  {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+                public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * {@inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getParameterAnnotations(): java.lang.annotation.Annotation[][]
+                public getParameterAnnotations(): java.lang.annotation.Annotation[][]
                 /**
                  * {@inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAnnotatedReturnType(): java.lang.reflect.AnnotatedType
+                public getAnnotatedReturnType(): java.lang.reflect.AnnotatedType
             }
         }
     }

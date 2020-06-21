@@ -13,37 +13,37 @@ declare namespace org {
                                  * {@link Entity}.
                                  */
                                 // @ts-ignore
-                                readonly ABSORPTION: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly ABSORPTION: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                                 /**
                                  * Represents a {@link HealthModifier} that will reduce damage based on
                                  * the armor {@link ItemStack}s.
                                  */
                                 // @ts-ignore
-                                readonly ARMOR: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly ARMOR: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                                 /**
                                  * Represents a {@link HealthModifier} that will modify the heal amount
                                  * from a {@link PotionEffect} affecting the target.
                                  */
                                 // @ts-ignore
-                                readonly DEFENSIVE_POTION_EFFECT: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly DEFENSIVE_POTION_EFFECT: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                                 /**
                                  * Represents a {@link HealthModifier} that enhances damage based on the
                                  * current {@link Difficulty} of the {@link World}.
                                  */
                                 // @ts-ignore
-                                readonly DIFFICULTY: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly DIFFICULTY: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                                 /**
                                  * Represents a {@link HealthModifier} that will modify damage based on
                                  * magic.
                                  */
                                 // @ts-ignore
-                                readonly MAGIC: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly MAGIC: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                                 /**
                                  * Represents the {@link HealthModifier} that will increase heal amount
                                  * from a {@link PotionEffect} affecting the target.
                                  */
                                 // @ts-ignore
-                                readonly OFFENSIVE_POTION_EFFECT: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly OFFENSIVE_POTION_EFFECT: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                                 /**
                                  * Represents the {@link HealthModifier} that will modify heal amount from
                                  * an {@link EnchantmentType} on an equipped {@link ItemStack}.
@@ -53,7 +53,7 @@ declare namespace org {
                                  * incoming/outgoing heal amount.</p>
                                  */
                                 // @ts-ignore
-                                readonly WEAPON_ENCHANTMENT: org.spongepowered.api.event.cause.entity.health.HealthModifierType
+                                public static readonly WEAPON_ENCHANTMENT: org.spongepowered.api.event.cause.entity.health.HealthModifierType
                             }
                         }
                     }

@@ -16,7 +16,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class InputStream extends java.lang.Object implements java.io.Closeable {
+        abstract class InputStream extends java.lang.Object implements java.io.Closeable {
             // @ts-ignore
             constructor()
             /**
@@ -32,7 +32,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            abstract read(): int
+            public abstract read(): number /*int*/
             /**
              * Reads some number of bytes from the input stream and stores them into
              * the buffer array <code>b</code>. The number of bytes actually read is
@@ -63,7 +63,7 @@ declare namespace java {
              * @see java.io.InputStream#read(byte[], int, int)
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from the input stream into
              * an array of bytes.  An attempt is made to read as many as
@@ -116,7 +116,7 @@ declare namespace java {
              * @see java.io.InputStream#read()
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips over and discards <code>n</code> bytes of data from this input
              * stream. The <code>skip</code> method may, for a variety of reasons, end
@@ -138,7 +138,7 @@ declare namespace java {
              *                           or if some other I/O error occurs.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns an estimate of the number of bytes that can be read (or
              * skipped over) from this input stream without blocking by the next
@@ -161,7 +161,7 @@ declare namespace java {
              * @exception IOException if an I/O error occurs.
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Closes this input stream and releases any system resources associated
              * with the stream.
@@ -170,7 +170,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Marks the current position in this input stream. A subsequent call to
              * the <code>reset</code> method repositions this stream at the last marked
@@ -193,7 +193,7 @@ declare namespace java {
              * @see java.io.InputStream#reset()
              */
             // @ts-ignore
-            mark(readlimit: number /*int*/): void
+            public mark(readlimit: number /*int*/): void
             /**
              * Repositions this stream to the position at the time the
              * <code>mark</code> method was last called on this input stream.
@@ -230,7 +230,7 @@ declare namespace java {
              * @see java.io.IOException
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Tests if this input stream supports the <code>mark</code> and
              * <code>reset</code> methods. Whether or not <code>mark</code> and
@@ -243,7 +243,7 @@ declare namespace java {
              * @see java.io.InputStream#reset()
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
         }
     }
 }

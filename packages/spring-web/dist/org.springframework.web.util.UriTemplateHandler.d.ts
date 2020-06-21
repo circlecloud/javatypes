@@ -17,7 +17,7 @@ declare namespace org {
                      * @return the created URI instance
                      */
                     // @ts-ignore
-                    expand(uriTemplate: string, uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    expand(uriTemplate: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                     /**
                      * Expand the given URI template with an array of URI variables.
                      * @param uriTemplate the URI template
@@ -25,7 +25,7 @@ declare namespace org {
                      * @return the created URI instance
                      */
                     // @ts-ignore
-                    expand(uriTemplate: string, ...uriVariables: any[]): java.net.URI
+                    expand(uriTemplate: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): java.net.URI
                 }
             }
         }

@@ -17,45 +17,45 @@ declare namespace org {
                  * @see #doWriteRemoteInvocationResult
                  */
                 // @ts-ignore
-                class RemoteInvocationSerializingExporter extends org.springframework.remoting.support.RemoteInvocationBasedExporter {
+                abstract class RemoteInvocationSerializingExporter extends org.springframework.remoting.support.RemoteInvocationBasedExporter {
                     // @ts-ignore
                     constructor()
                     /**
                      * Default content type: "application/x-java-serialized-object".
                      */
                     // @ts-ignore
-                    readonly CONTENT_TYPE_SERIALIZED_OBJECT: string
+                    public static readonly CONTENT_TYPE_SERIALIZED_OBJECT: java.lang.String | string
                     /**
                      * Specify the content type to use for sending remote invocation responses.
                      * <p>Default is "application/x-java-serialized-object".
                      */
                     // @ts-ignore
-                    setContentType(contentType: string): void
+                    public setContentType(contentType: java.lang.String | string): void
                     /**
                      * Return the content type to use for sending remote invocation responses.
                      */
                     // @ts-ignore
-                    getContentType(): java.lang.String
+                    public getContentType(): string
                     /**
                      * Set whether to accept deserialization of proxy classes.
                      * <p>Default is "true". May be deactivated as a security measure.
                      */
                     // @ts-ignore
-                    setAcceptProxyClasses(acceptProxyClasses: boolean): void
+                    public setAcceptProxyClasses(acceptProxyClasses: boolean): void
                     /**
                      * Return whether to accept deserialization of proxy classes.
                      */
                     // @ts-ignore
-                    isAcceptProxyClasses(): boolean
+                    public isAcceptProxyClasses(): boolean
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Initialize this service exporter.
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     // @ts-ignore
-                    getProxy(): java.lang.Object
+                    getProxy(): any
                     /**
                      * Create an ObjectInputStream for the given InputStream.
                      * <p>The default implementation creates a Spring {@link CodebaseAwareObjectInputStream}.

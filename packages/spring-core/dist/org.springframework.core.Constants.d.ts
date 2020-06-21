@@ -29,18 +29,18 @@ declare namespace org {
                  * Return the name of the analyzed class.
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Return the number of constants exposed.
                  */
                 // @ts-ignore
-                getSize(): int
+                public getSize(): number /*int*/
                 /**
                  * Exposes the field cache to subclasses:
                  * a Map from String field name to object value.
                  */
                 // @ts-ignore
-                getFieldCache(): java.util.Map<java.lang.String, java.lang.Object>
+                getFieldCache(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Return a constant value cast to a Number.
                  * @param code the name of the field (never {#code null})
@@ -50,7 +50,7 @@ declare namespace org {
                  * @see #asObject
                  */
                 // @ts-ignore
-                asNumber(code: string): java.lang.Number
+                public asNumber(code: java.lang.String | string): java.lang.Number
                 /**
                  * Return a constant value as a String.
                  * @param code the name of the field (never {#code null})
@@ -60,7 +60,7 @@ declare namespace org {
                  * @see #asObject
                  */
                 // @ts-ignore
-                asString(code: string): java.lang.String
+                public asString(code: java.lang.String | string): string
                 /**
                  * Parse the given String (upper or lower case accepted) and return
                  * the appropriate value if it's the name of a constant field in the
@@ -70,7 +70,7 @@ declare namespace org {
                  * @throws ConstantException if there's no such field
                  */
                 // @ts-ignore
-                asObject(code: string): java.lang.Object
+                public asObject(code: java.lang.String | string): any
                 /**
                  * Return all names of the given group of constants.
                  * <p>Note that this method assumes that constants are named
@@ -82,7 +82,7 @@ declare namespace org {
                  * @return the set of constant names
                  */
                 // @ts-ignore
-                getNames(namePrefix: string): java.util.Set<java.lang.String>
+                public getNames(namePrefix: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Return all names of the group of constants for the
                  * given bean property name.
@@ -91,7 +91,7 @@ declare namespace org {
                  * @see #propertyToConstantNamePrefix
                  */
                 // @ts-ignore
-                getNamesForProperty(propertyName: string): java.util.Set<java.lang.String>
+                public getNamesForProperty(propertyName: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Return all names of the given group of constants.
                  * <p>Note that this method assumes that constants are named
@@ -103,7 +103,7 @@ declare namespace org {
                  * @return the set of constant names
                  */
                 // @ts-ignore
-                getNamesForSuffix(nameSuffix: string): java.util.Set<java.lang.String>
+                public getNamesForSuffix(nameSuffix: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Return all values of the given group of constants.
                  * <p>Note that this method assumes that constants are named
@@ -115,7 +115,7 @@ declare namespace org {
                  * @return the set of values
                  */
                 // @ts-ignore
-                getValues(namePrefix: string): java.util.Set<java.lang.Object>
+                public getValues(namePrefix: java.lang.String | string): Array<java.lang.Object | any>
                 /**
                  * Return all values of the group of constants for the
                  * given bean property name.
@@ -124,7 +124,7 @@ declare namespace org {
                  * @see #propertyToConstantNamePrefix
                  */
                 // @ts-ignore
-                getValuesForProperty(propertyName: string): java.util.Set<java.lang.Object>
+                public getValuesForProperty(propertyName: java.lang.String | string): Array<java.lang.Object | any>
                 /**
                  * Return all values of the given group of constants.
                  * <p>Note that this method assumes that constants are named
@@ -136,7 +136,7 @@ declare namespace org {
                  * @return the set of values
                  */
                 // @ts-ignore
-                getValuesForSuffix(nameSuffix: string): java.util.Set<java.lang.Object>
+                public getValuesForSuffix(nameSuffix: java.lang.String | string): Array<java.lang.Object | any>
                 /**
                  * Look up the given value within the given group of constants.
                  * <p>Will return the first match.
@@ -146,7 +146,7 @@ declare namespace org {
                  * @throws ConstantException if the value wasn't found
                  */
                 // @ts-ignore
-                toCode(value: any, namePrefix: string): java.lang.String
+                public toCode(value: java.lang.Object | any, namePrefix: java.lang.String | string): string
                 /**
                  * Look up the given value within the group of constants for
                  * the given bean property name. Will return the first match.
@@ -157,7 +157,7 @@ declare namespace org {
                  * @see #propertyToConstantNamePrefix
                  */
                 // @ts-ignore
-                toCodeForProperty(value: any, propertyName: string): java.lang.String
+                public toCodeForProperty(value: java.lang.Object | any, propertyName: java.lang.String | string): string
                 /**
                  * Look up the given value within the given group of constants.
                  * <p>Will return the first match.
@@ -167,7 +167,7 @@ declare namespace org {
                  * @throws ConstantException if the value wasn't found
                  */
                 // @ts-ignore
-                toCodeForSuffix(value: any, nameSuffix: string): java.lang.String
+                public toCodeForSuffix(value: java.lang.Object | any, nameSuffix: java.lang.String | string): string
                 /**
                  * Convert the given bean property name to a constant name prefix.
                  * <p>Uses a common naming idiom: turning all lower case characters to
@@ -182,7 +182,7 @@ declare namespace org {
                  * @see #toCodeForProperty
                  */
                 // @ts-ignore
-                propertyToConstantNamePrefix(propertyName: string): java.lang.String
+                public propertyToConstantNamePrefix(propertyName: java.lang.String | string): string
             }
         }
     }

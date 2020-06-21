@@ -54,7 +54,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(classLoader: java.lang.ClassLoader, encode: boolean)
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Create a URI instance for the given user-specified String value.
                      * <p>The default implementation encodes the value into a RFC-2396 compliant URI.
@@ -63,9 +63,9 @@ declare namespace org {
                      * @throws java.net.URISyntaxException if URI conversion failed
                      */
                     // @ts-ignore
-                    createURI(value: string): java.net.URI
+                    createURI(value: java.lang.String | string): java.net.URI
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

@@ -35,7 +35,7 @@ declare namespace java {
                  * @throws NullPointerException if after is null
                  */
                 // @ts-ignore
-                andThen<V>(after: java.util.function.Function<any super R, V> | java.util.function$.Function<? super R, V>): java.util.function.BiFunction<T, U, V>
+                andThen<V>(after: java.util.function$.Function<any, any>): java.util.function$.BiFunction<T, U, V>
             }
         }
     }

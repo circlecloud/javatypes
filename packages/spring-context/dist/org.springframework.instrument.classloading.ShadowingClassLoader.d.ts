@@ -34,23 +34,23 @@ declare namespace org {
                      * Packages that are excluded by default.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_EXCLUDED_PACKAGES: string[]
+                    public static readonly DEFAULT_EXCLUDED_PACKAGES: java.lang.String[] | string[]
                     /**
                      * Add the given ClassFileTransformer to the list of transformers that this
                      * ClassLoader will apply.
                      * @param transformer the ClassFileTransformer
                      */
                     // @ts-ignore
-                    addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
+                    public addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
                     /**
                      * Copy all ClassFileTransformers from the given ClassLoader to the list of
                      * transformers that this ClassLoader will apply.
                      * @param other the ClassLoader to copy from
                      */
                     // @ts-ignore
-                    copyTransformers(other: org.springframework.instrument.classloading.ShadowingClassLoader): void
+                    public copyTransformers(other: org.springframework.instrument.classloading.ShadowingClassLoader): void
                     // @ts-ignore
-                    loadClass(name: string): java.lang.Class<?>
+                    public loadClass(name: java.lang.String | string): java.lang.Class<any>
                     /**
                      * Determine whether the specified class is eligible for shadowing
                      * by this class loader.
@@ -59,13 +59,13 @@ declare namespace org {
                      * @see #isExcluded
                      */
                     // @ts-ignore
-                    isEligibleForShadowing(className: string): boolean
+                    isEligibleForShadowing(className: java.lang.String | string): boolean
                     // @ts-ignore
-                    getResource(name: string): java.net.URL
+                    public getResource(name: java.lang.String | string): java.net.URL
                     // @ts-ignore
-                    getResourceAsStream(name: string): java.io.InputStream
+                    public getResourceAsStream(name: java.lang.String | string): java.io.InputStream
                     // @ts-ignore
-                    getResources(name: string): java.util.Enumeration<java.net.URL>
+                    public getResources(name: java.lang.String | string): java.util.Enumeration<java.net.URL>
                 }
             }
         }

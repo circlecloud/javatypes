@@ -71,7 +71,7 @@ declare namespace java {
                  *           <code>null</code>.
                  */
                 // @ts-ignore
-                getWritableParent(): java.awt.image.WritableRaster
+                public getWritableParent(): java.awt.image.WritableRaster
                 /**
                  * Create a WritableRaster with the same size, SampleModel and DataBuffer
                  * as this one, but with a different location.  The new WritableRaster
@@ -87,7 +87,7 @@ declare namespace java {
                  *          overflow
                  */
                 // @ts-ignore
-                createWritableTranslatedChild(childMinX: number /*int*/, childMinY: number /*int*/): java.awt.image.WritableRaster
+                public createWritableTranslatedChild(childMinX: number /*int*/, childMinY: number /*int*/): java.awt.image.WritableRaster
                 /**
                  * Returns a new WritableRaster which shares all or part of this
                  * WritableRaster's DataBuffer.  The new WritableRaster will
@@ -139,7 +139,7 @@ declare namespace java {
                  *          overflow
                  */
                 // @ts-ignore
-                createWritableChild(parentX: number /*int*/, parentY: number /*int*/, w: number /*int*/, h: number /*int*/, childMinX: number /*int*/, childMinY: number /*int*/, bandList: number /*int*/[]): java.awt.image.WritableRaster
+                public createWritableChild(parentX: number /*int*/, parentY: number /*int*/, w: number /*int*/, h: number /*int*/, childMinX: number /*int*/, childMinY: number /*int*/, bandList: number /*int*/[]): java.awt.image.WritableRaster
                 /**
                  * Sets the data for a single pixel from a
                  * primitive array of type TransferType.  For image data supported by
@@ -163,7 +163,7 @@ declare namespace java {
                  *  in bounds, or if inData is too small to hold the input.
                  */
                 // @ts-ignore
-                setDataElements(x: number /*int*/, y: number /*int*/, inData: any): void
+                public setDataElements(x: number /*int*/, y: number /*int*/, inData: java.lang.Object | any): void
                 /**
                  * Sets the data for a rectangle of pixels from an input Raster.
                  * The input Raster must be compatible with this WritableRaster
@@ -182,7 +182,7 @@ declare namespace java {
                  *  in bounds.
                  */
                 // @ts-ignore
-                setDataElements(x: number /*int*/, y: number /*int*/, inRaster: java.awt.image.Raster): void
+                public setDataElements(x: number /*int*/, y: number /*int*/, inRaster: java.awt.image.Raster): void
                 /**
                  * Sets the data for a rectangle of pixels from a
                  * primitive array of type TransferType.  For image data supported by
@@ -210,7 +210,7 @@ declare namespace java {
                  *  in bounds, or if inData is too small to hold the input.
                  */
                 // @ts-ignore
-                setDataElements(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, inData: any): void
+                public setDataElements(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, inData: java.lang.Object | any): void
                 /**
                  * Copies pixels from Raster srcRaster to this WritableRaster.  Each pixel
                  * in srcRaster is copied to the same x,y address in this raster, unless
@@ -250,7 +250,7 @@ declare namespace java {
                  * @throws NullPointerException if srcRaster is null.
                  */
                 // @ts-ignore
-                setRect(srcRaster: java.awt.image.Raster): void
+                public setRect(srcRaster: java.awt.image.Raster): void
                 /**
                  * Copies pixels from Raster srcRaster to this WritableRaster.
                  * For each (x, y) address in srcRaster, the corresponding pixel
@@ -268,7 +268,7 @@ declare namespace java {
                  * @throws NullPointerException if srcRaster is null.
                  */
                 // @ts-ignore
-                setRect(dx: number /*int*/, dy: number /*int*/, srcRaster: java.awt.image.Raster): void
+                public setRect(dx: number /*int*/, dy: number /*int*/, srcRaster: java.awt.image.Raster): void
                 /**
                  * Sets a pixel in the DataBuffer using an int array of samples for input.
                  * An ArrayIndexOutOfBoundsException may be thrown if the coordinates are
@@ -282,7 +282,7 @@ declare namespace java {
                  *  in bounds, or if iArray is too small to hold the input.
                  */
                 // @ts-ignore
-                setPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[]): void
+                public setPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[]): void
                 /**
                  * Sets a pixel in the DataBuffer using a float array of samples for input.
                  * An ArrayIndexOutOfBoundsException may be thrown if the coordinates are
@@ -296,7 +296,7 @@ declare namespace java {
                  *  in bounds, or if fArray is too small to hold the input.
                  */
                 // @ts-ignore
-                setPixel(x: number /*int*/, y: number /*int*/, fArray: number /*float*/[]): void
+                public setPixel(x: number /*int*/, y: number /*int*/, fArray: number /*float*/[]): void
                 /**
                  * Sets a pixel in the DataBuffer using a double array of samples for input.
                  * An ArrayIndexOutOfBoundsException may be thrown if the coordinates are
@@ -310,7 +310,7 @@ declare namespace java {
                  *  in bounds, or if dArray is too small to hold the input.
                  */
                 // @ts-ignore
-                setPixel(x: number /*int*/, y: number /*int*/, dArray: number /*double*/[]): void
+                public setPixel(x: number /*int*/, y: number /*int*/, dArray: number /*double*/[]): void
                 /**
                  * Sets all samples for a rectangle of pixels from an int array containing
                  * one sample per array element.
@@ -327,7 +327,7 @@ declare namespace java {
                  *  in bounds, or if iArray is too small to hold the input.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[]): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[]): void
                 /**
                  * Sets all samples for a rectangle of pixels from a float array containing
                  * one sample per array element.
@@ -344,7 +344,7 @@ declare namespace java {
                  *  in bounds, or if fArray is too small to hold the input.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, fArray: number /*float*/[]): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, fArray: number /*float*/[]): void
                 /**
                  * Sets all samples for a rectangle of pixels from a double array containing
                  * one sample per array element.
@@ -361,7 +361,7 @@ declare namespace java {
                  *  in bounds, or if dArray is too small to hold the input.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, dArray: number /*double*/[]): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, dArray: number /*double*/[]): void
                 /**
                  * Sets a sample in the specified band for the pixel located at (x,y)
                  * in the DataBuffer using an int for input.
@@ -376,7 +376,7 @@ declare namespace java {
                  *  the band index are not in bounds.
                  */
                 // @ts-ignore
-                setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*int*/): void
+                public setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*int*/): void
                 /**
                  * Sets a sample in the specified band for the pixel located at (x,y)
                  * in the DataBuffer using a float for input.
@@ -391,7 +391,7 @@ declare namespace java {
                  *  the band index are not in bounds.
                  */
                 // @ts-ignore
-                setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*float*/): void
+                public setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*float*/): void
                 /**
                  * Sets a sample in the specified band for the pixel located at (x,y)
                  * in the DataBuffer using a double for input.
@@ -406,7 +406,7 @@ declare namespace java {
                  *  the band index are not in bounds.
                  */
                 // @ts-ignore
-                setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*double*/): void
+                public setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*double*/): void
                 /**
                  * Sets the samples in the specified band for the specified rectangle
                  * of pixels from an int array containing one sample per array element.
@@ -425,7 +425,7 @@ declare namespace java {
                  *  hold the input.
                  */
                 // @ts-ignore
-                setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[]): void
+                public setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[]): void
                 /**
                  * Sets the samples in the specified band for the specified rectangle
                  * of pixels from a float array containing one sample per array element.
@@ -444,7 +444,7 @@ declare namespace java {
                  *  hold the input.
                  */
                 // @ts-ignore
-                setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, fArray: number /*float*/[]): void
+                public setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, fArray: number /*float*/[]): void
                 /**
                  * Sets the samples in the specified band for the specified rectangle
                  * of pixels from a double array containing one sample per array element.
@@ -463,7 +463,7 @@ declare namespace java {
                  *  hold the input.
                  */
                 // @ts-ignore
-                setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, dArray: number /*double*/[]): void
+                public setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, dArray: number /*double*/[]): void
             }
         }
     }

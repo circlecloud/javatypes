@@ -9,7 +9,7 @@ declare namespace org {
              * @param <V> the value element type
              */
             // @ts-ignore
-            interface MultiValueMap<K, V> extends java.util.Map<K, java.util.List<V>> {
+            interface MultiValueMap<K, V> extends java.util.Map<K, java.util.List<V> | Array<V>> {
                 /**
                  * Return the first value for the given key.
                  * @param key the key
@@ -31,7 +31,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                addAll(key: K, values: Array<V>): void
+                addAll(key: K, values: java.util.List<any> | Array<any>): void
                 /**
                  * Add all the values of the given {@code MultiValueMap} to the current values.
                  * @param values the values to be added

@@ -8,13 +8,13 @@ declare namespace org {
                  * @param message Message to be displayed
                  */
                 // @ts-ignore
-                sendMessage(message: string): void
+                sendMessage(message: java.lang.String | string): void
                 /**
                  * Sends this sender multiple messages
                  * @param messages An array of messages to be displayed
                  */
                 // @ts-ignore
-                sendMessage(messages: string[]): void
+                sendMessage(messages: java.lang.String[] | string[]): void
                 /**
                  * Returns the server instance that this command is running on
                  * @return Server instance
@@ -26,7 +26,7 @@ declare namespace org {
                  * @return Name of the sender
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 // @ts-ignore
                 spigot(): org.bukkit.command.CommandSender.Spigot
             }

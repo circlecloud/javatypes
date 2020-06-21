@@ -14,7 +14,7 @@ declare namespace javax {
                  * @return the name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Fetches the default action to fire if a
                  * key is typed (i.e. a KEY_TYPED KeyEvent is received)

@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#ANGER
                                  */
                                 // @ts-ignore
-                                angerLevel(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                angerLevel(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

@@ -37,7 +37,7 @@ declare namespace javax {
              * @see javax.imageio.ImageReader
              */
             // @ts-ignore
-            class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi {
+            abstract class ImageReaderSpi extends javax.imageio.spi.ImageReaderWriterSpi {
                 /**
                  * Constructs a blank <code>ImageReaderSpi</code>.  It is up to
                  * the subclass to initialize instance variables and/or override
@@ -124,7 +124,7 @@ declare namespace javax {
                  *  is <code>null</code> or has length 0.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string, names: string[], suffixes: string[], MIMETypes: string[], readerClassName: string, inputTypes: java.lang.Class[], writerSpiNames: string[], supportsStandardStreamMetadataFormat: boolean, nativeStreamMetadataFormatName: string, nativeStreamMetadataFormatClassName: string, extraStreamMetadataFormatNames: string[], extraStreamMetadataFormatClassNames: string[], supportsStandardImageMetadataFormat: boolean, nativeImageMetadataFormatName: string, nativeImageMetadataFormatClassName: string, extraImageMetadataFormatNames: string[], extraImageMetadataFormatClassNames: string[])
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string, names: java.lang.String[] | string[], suffixes: java.lang.String[] | string[], MIMETypes: java.lang.String[] | string[], readerClassName: java.lang.String | string, inputTypes: java.lang.Class<any>[], writerSpiNames: java.lang.String[] | string[], supportsStandardStreamMetadataFormat: boolean, nativeStreamMetadataFormatName: java.lang.String | string, nativeStreamMetadataFormatClassName: java.lang.String | string, extraStreamMetadataFormatNames: java.lang.String[] | string[], extraStreamMetadataFormatClassNames: java.lang.String[] | string[], supportsStandardImageMetadataFormat: boolean, nativeImageMetadataFormatName: java.lang.String | string, nativeImageMetadataFormatClassName: java.lang.String | string, extraImageMetadataFormatNames: java.lang.String[] | string[], extraImageMetadataFormatClassNames: java.lang.String[] | string[])
                 /**
                  * A single-element array, initially containing
                  * <code>ImageInputStream.class</code>, to be returned from
@@ -133,20 +133,20 @@ declare namespace javax {
                  *  the equivalent array <code>{ ImageInputStream.class }</code>.
                  */
                 // @ts-ignore
-                readonly STANDARD_INPUT_TYPE: java.lang.Class[]
+                public static readonly STANDARD_INPUT_TYPE: java.lang.Class<any>[]
                 /**
                  * An array of <code>Class</code> objects to be returned from
                  * <code>getInputTypes</code>, initially <code>null</code>.
                  */
                 // @ts-ignore
-                inputTypes: java.lang.Class[]
+                inputTypes: java.lang.Class<any>[]
                 /**
                  * An array of strings to be returned from
                  * <code>getImageWriterSpiNames</code>, initially
                  * <code>null</code>.
                  */
                 // @ts-ignore
-                writerSpiNames: string[]
+                writerSpiNames: java.lang.String[] | string[]
                 /**
                  * Returns an array of <code>Class</code> objects indicating what
                  * types of objects may be used as arguments to the reader's
@@ -159,7 +159,7 @@ declare namespace javax {
                  *  <code>Class</code>objects of length at least 1.
                  */
                 // @ts-ignore
-                getInputTypes(): java.lang.Class[]
+                public getInputTypes(): java.lang.Class<any>[]
                 /**
                  * Returns <code>true</code> if the supplied source object appears
                  * to be of the format supported by this reader.  Returning
@@ -196,7 +196,7 @@ declare namespace javax {
                  *  stream.
                  */
                 // @ts-ignore
-                abstract canDecodeInput(source: any): boolean
+                public abstract canDecodeInput(source: java.lang.Object | any): boolean
                 /**
                  * Returns an instance of the <code>ImageReader</code>
                  * implementation associated with this service provider.
@@ -210,7 +210,7 @@ declare namespace javax {
                  *  or initialization of the reader object.
                  */
                 // @ts-ignore
-                createReaderInstance(): javax.imageio.ImageReader
+                public createReaderInstance(): javax.imageio.ImageReader
                 /**
                  * Returns an instance of the <code>ImageReader</code>
                  * implementation associated with this service provider.
@@ -232,7 +232,7 @@ declare namespace javax {
                  *  extension object is unsuitable.
                  */
                 // @ts-ignore
-                abstract createReaderInstance(extension: any): javax.imageio.ImageReader
+                public abstract createReaderInstance(extension: java.lang.Object | any): javax.imageio.ImageReader
                 /**
                  * Returns <code>true</code> if the <code>ImageReader</code> object
                  * passed in is an instance of the <code>ImageReader</code>
@@ -247,7 +247,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                isOwnReader(reader: javax.imageio.ImageReader): boolean
+                public isOwnReader(reader: javax.imageio.ImageReader): boolean
                 /**
                  * Returns an array of <code>String</code>s containing the fully
                  * qualified names of all the <code>ImageWriterSpi</code> classes
@@ -278,7 +278,7 @@ declare namespace javax {
                  * @see javax.imageio.ImageIO#getImageWriter(ImageReader)
                  */
                 // @ts-ignore
-                getImageWriterSpiNames(): java.lang.String[]
+                public getImageWriterSpiNames(): string[]
             }
         }
     }

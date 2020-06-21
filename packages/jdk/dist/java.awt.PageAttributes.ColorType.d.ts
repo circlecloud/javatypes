@@ -11,12 +11,12 @@ declare namespace java {
                  * The ColorType instance to use for specifying color printing.
                  */
                 // @ts-ignore
-                readonly COLOR: java.awt.PageAttributes.ColorType
+                public static readonly COLOR: java.awt.PageAttributes.ColorType
                 /**
                  * The ColorType instance to use for specifying monochrome printing.
                  */
                 // @ts-ignore
-                readonly MONOCHROME: java.awt.PageAttributes.ColorType
+                public static readonly MONOCHROME: java.awt.PageAttributes.ColorType
             }
         }
     }

@@ -35,7 +35,7 @@ declare namespace org {
                          * @return The list value
                          */
                         // @ts-ignore
-                        createListValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, elements: Array<E>): org.spongepowered.api.data.value.mutable.ListValue<E>
+                        createListValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, elements: java.util.List<E> | Array<E>): org.spongepowered.api.data.value.mutable.ListValue<E>
                         /**
                          * Creates a new {@link ListValue} with the provided {@link Key} and
                          * {@link List} of elements.
@@ -46,7 +46,7 @@ declare namespace org {
                          * @return The list value
                          */
                         // @ts-ignore
-                        createListValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, elements: Array<E>, defaults: Array<E>): org.spongepowered.api.data.value.mutable.ListValue<E>
+                        createListValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, elements: java.util.List<E> | Array<E>, defaults: java.util.List<E> | Array<E>): org.spongepowered.api.data.value.mutable.ListValue<E>
                         /**
                          * Creates a new {@link SetValue} with the provided {@link Key} and
                          * {@link Set} of elements.
@@ -56,7 +56,7 @@ declare namespace org {
                          * @return The set value
                          */
                         // @ts-ignore
-                        createSetValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, elements: Array<E>): org.spongepowered.api.data.value.mutable.SetValue<E>
+                        createSetValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, elements: java.util.Set<E> | Array<E>): org.spongepowered.api.data.value.mutable.SetValue<E>
                         /**
                          * Creates a new {@link SetValue} with the provided {@link Key} and
                          * {@link Set} of elements.
@@ -67,7 +67,7 @@ declare namespace org {
                          * @return The set value
                          */
                         // @ts-ignore
-                        createSetValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, elements: Array<E>, defaults: Array<E>): org.spongepowered.api.data.value.mutable.SetValue<E>
+                        createSetValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, elements: java.util.Set<E> | Array<E>, defaults: java.util.Set<E> | Array<E>): org.spongepowered.api.data.value.mutable.SetValue<E>
                         /**
                          * Creates a new {@link MapValue} of the provided {@link Key} with the
                          * types <code>K</code> and <code>V</code>.

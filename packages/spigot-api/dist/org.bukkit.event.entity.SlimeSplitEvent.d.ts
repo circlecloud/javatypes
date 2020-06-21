@@ -10,27 +10,27 @@ declare namespace org {
                     // @ts-ignore
                     constructor(slime: org.bukkit.entity.Slime, count: number /*int*/)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Slime
+                    public getEntity(): org.bukkit.entity.Slime
                     /**
                      * Gets the amount of smaller slimes to spawn
                      * @return the amount of slimes to spawn
                      */
                     // @ts-ignore
-                    getCount(): int
+                    public getCount(): number /*int*/
                     /**
                      * Sets how many smaller slimes will spawn on the split
                      * @param count the amount of slimes to spawn
                      */
                     // @ts-ignore
-                    setCount(count: number /*int*/): void
+                    public setCount(count: number /*int*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

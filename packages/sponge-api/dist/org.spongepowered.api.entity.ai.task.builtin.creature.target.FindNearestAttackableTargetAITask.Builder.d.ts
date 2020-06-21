@@ -11,11 +11,11 @@ declare namespace org {
                                         // @ts-ignore
                                         interface Builder extends org.spongepowered.api.entity.ai.task.builtin.creature.target.TargetAITask.Builder<org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask, org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask.Builder> {
                                             // @ts-ignore
-                                            target(targetClass: java.lang.Class<org.spongepowered.api.entity.living.Living>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask.Builder
+                                            target(targetClass: java.lang.Class<any>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask.Builder
                                             // @ts-ignore
                                             chance(chance: number /*int*/): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask.Builder
                                             // @ts-ignore
-                                            filter(predicate: java.util.function.Predicate<org.spongepowered.api.entity.living.Living> | java.util.function$.Predicate<org.spongepowered.api.entity.living.Living>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask.Builder
+                                            filter(predicate: java.util.function$.Predicate<any>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask.Builder
                                         }
                                     }
                                 }

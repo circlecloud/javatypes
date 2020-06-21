@@ -11,7 +11,7 @@ declare namespace org {
                      * Set the value of the {@literal name} parameter.
                      */
                     // @ts-ignore
-                    name(name: string): org.springframework.http.ContentDisposition.Builder
+                    name(name: java.lang.String | string): org.springframework.http.ContentDisposition.Builder
                     /**
                      * Set the value of the {@literal filename} parameter. The given
                      * filename will be formatted as quoted-string, as defined in RFC 2616,
@@ -20,7 +20,7 @@ declare namespace org {
                      * {@code "foo\\\"bar.txt"}.
                      */
                     // @ts-ignore
-                    filename(filename: string): org.springframework.http.ContentDisposition.Builder
+                    filename(filename: java.lang.String | string): org.springframework.http.ContentDisposition.Builder
                     /**
                      * Set the value of the {@literal filename*} that will be encoded as
                      * defined in the RFC 5987. Only the US-ASCII, UTF-8 and ISO-8859-1
@@ -32,7 +32,7 @@ declare namespace org {
                      * requests.
                      */
                     // @ts-ignore
-                    filename(filename: string, charset: java.nio.charset.Charset): org.springframework.http.ContentDisposition.Builder
+                    filename(filename: java.lang.String | string, charset: java.nio.charset.Charset): org.springframework.http.ContentDisposition.Builder
                     /**
                      * Set the value of the {@literal size} parameter.
                      * @deprecated since 5.2.3 as per
@@ -40,7 +40,7 @@ declare namespace org {
                      *  to be removed in a future release.
                      */
                     // @ts-ignore
-                    size(size: number): org.springframework.http.ContentDisposition.Builder
+                    size(size: java.lang.Long | number): org.springframework.http.ContentDisposition.Builder
                     /**
                      * Set the value of the {@literal creation-date} parameter.
                      * @deprecated since 5.2.3 as per

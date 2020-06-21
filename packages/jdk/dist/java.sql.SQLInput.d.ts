@@ -39,7 +39,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readString(): java.lang.String
+            readString(): string
             /**
              * Reads the next attribute in the stream and returns it as a <code>boolean</code>
              * in the Java programming language.
@@ -61,7 +61,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readByte(): byte
+            readByte(): number /*byte*/
             /**
              * Reads the next attribute in the stream and returns it as a <code>short</code>
              * in the Java programming language.
@@ -72,7 +72,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readShort(): short
+            readShort(): number /*short*/
             /**
              * Reads the next attribute in the stream and returns it as an <code>int</code>
              * in the Java programming language.
@@ -83,7 +83,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readInt(): int
+            readInt(): number /*int*/
             /**
              * Reads the next attribute in the stream and returns it as a <code>long</code>
              * in the Java programming language.
@@ -94,7 +94,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readLong(): long
+            readLong(): number /*long*/
             /**
              * Reads the next attribute in the stream and returns it as a <code>float</code>
              * in the Java programming language.
@@ -105,7 +105,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readFloat(): float
+            readFloat(): number /*float*/
             /**
              * Reads the next attribute in the stream and returns it as a <code>double</code>
              * in the Java programming language.
@@ -116,7 +116,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readDouble(): double
+            readDouble(): number /*double*/
             /**
              * Reads the next attribute in the stream and returns it as a <code>java.math.BigDecimal</code>
              * object in the Java programming language.
@@ -138,7 +138,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readBytes(): byte[]
+            readBytes(): number /*byte*/[]
             /**
              * Reads the next attribute in the stream and returns it as a <code>java.sql.Date</code> object.
              * @return the attribute; if the value is SQL <code>NULL</code>, returns <code>null</code>
@@ -222,7 +222,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readObject(): java.lang.Object
+            readObject(): any
             /**
              * Reads an SQL <code>REF</code> value from the stream and returns it as a
              * <code>Ref</code> object in the Java programming language.
@@ -323,7 +323,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readNString(): java.lang.String
+            readNString(): string
             /**
              * Reads an SQL <code>XML</code> value from the stream and returns it as a
              * <code>SQLXML</code> object in the Java programming language.

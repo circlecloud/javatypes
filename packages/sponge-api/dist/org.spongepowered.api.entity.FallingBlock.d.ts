@@ -20,14 +20,14 @@ declare namespace org {
                      * @return The immutable value for the damage per block of falling
                      */
                     // @ts-ignore
-                    fallDamagePerBlock(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double>
+                    fallDamagePerBlock(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double | number>
                     /**
                      * Gets the maximum damage the {@link FallingBlock} can deal to another
                      * entity for falling on the entity.
                      * @return The maximum damage the block can deal
                      */
                     // @ts-ignore
-                    maxFallDamage(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double>
+                    maxFallDamage(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double | number>
                     /**
                      * Gets the {@link BlockState} the falling block is representing.
                      * @return The falling block's block state
@@ -52,7 +52,7 @@ declare namespace org {
                      * @return The time the block has been falling
                      */
                     // @ts-ignore
-                    fallTime(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                    fallTime(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                     /**
                      * Gets whether this falling block will damage entities where it lands.
                      * @return Whether this falling block will damage entities where it lands

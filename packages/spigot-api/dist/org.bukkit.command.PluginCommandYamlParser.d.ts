@@ -6,7 +6,7 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                parse(plugin: org.bukkit.plugin.Plugin): java.util.List<org.bukkit.command.Command>
+                public static parse(plugin: org.bukkit.plugin.Plugin): Array<org.bukkit.command.Command>
             }
         }
     }

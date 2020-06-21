@@ -22,7 +22,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>name</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new instance of <code>ManagementPermission</code> with
                  * the given name and permitted actions.
@@ -33,7 +33,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>name</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

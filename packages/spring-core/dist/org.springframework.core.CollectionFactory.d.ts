@@ -19,7 +19,7 @@ declare namespace org {
                  * @return {#code true} if the type is <em>approximable</em>
                  */
                 // @ts-ignore
-                isApproximableCollectionType(collectionType: java.lang.Class<any>): boolean
+                public static isApproximableCollectionType(collectionType: java.lang.Class<any>): boolean
                 /**
                  * Create the most approximate collection for the given collection.
                  * <p><strong>Warning</strong>: Since the parameterized type {@code E} is
@@ -41,7 +41,7 @@ declare namespace org {
                  * @see java.util.LinkedHashSet
                  */
                 // @ts-ignore
-                createApproximateCollection<E>(collection: any, capacity: number /*int*/): java.util.Collection<E>
+                public static createApproximateCollection<E>(collection: java.lang.Object | any, capacity: number /*int*/): Array<E>
                 /**
                  * Create the most appropriate collection for the given collection type.
                  * <p>Delegates to {@link #createCollection(Class, Class, int)} with a
@@ -53,7 +53,7 @@ declare namespace org {
                  *  is {@code null} or of type {@link EnumSet}
                  */
                 // @ts-ignore
-                createCollection<E>(collectionType: java.lang.Class<any>, capacity: number /*int*/): java.util.Collection<E>
+                public static createCollection<E>(collectionType: java.lang.Class<any>, capacity: number /*int*/): Array<E>
                 /**
                  * Create the most appropriate collection for the given collection type.
                  * <p><strong>Warning</strong>: Since the parameterized type {@code E} is
@@ -78,7 +78,7 @@ declare namespace org {
                  *  the supplied {@code elementType} is not a subtype of {@link Enum}
                  */
                 // @ts-ignore
-                createCollection<E>(collectionType: java.lang.Class<any>, elementType: java.lang.Class<any>, capacity: number /*int*/): java.util.Collection<E>
+                public static createCollection<E>(collectionType: java.lang.Class<any>, elementType: java.lang.Class<any>, capacity: number /*int*/): Array<E>
                 /**
                  * Determine whether the given map type is an <em>approximable</em> type,
                  * i.e. a type that {@link #createApproximateMap} can approximate.
@@ -86,7 +86,7 @@ declare namespace org {
                  * @return {#code true} if the type is <em>approximable</em>
                  */
                 // @ts-ignore
-                isApproximableMapType(mapType: java.lang.Class<any>): boolean
+                public static isApproximableMapType(mapType: java.lang.Class<any>): boolean
                 /**
                  * Create the most approximate map for the given map.
                  * <p><strong>Warning</strong>: Since the parameterized type {@code K} is
@@ -105,7 +105,7 @@ declare namespace org {
                  * @see java.util.LinkedHashMap
                  */
                 // @ts-ignore
-                createApproximateMap<K, V>(map: any, capacity: number /*int*/): java.util.Map<K, V>
+                public static createApproximateMap<K, V>(map: java.lang.Object | any, capacity: number /*int*/): java.util.Map<K, V>
                 /**
                  * Create the most appropriate map for the given map type.
                  * <p>Delegates to {@link #createMap(Class, Class, int)} with a
@@ -117,7 +117,7 @@ declare namespace org {
                  *  {@code null} or of type {@link EnumMap}
                  */
                 // @ts-ignore
-                createMap<K, V>(mapType: java.lang.Class<any>, capacity: number /*int*/): java.util.Map<K, V>
+                public static createMap<K, V>(mapType: java.lang.Class<any>, capacity: number /*int*/): java.util.Map<K, V>
                 /**
                  * Create the most appropriate map for the given map type.
                  * <p><strong>Warning</strong>: Since the parameterized type {@code K}
@@ -143,7 +143,7 @@ declare namespace org {
                  *  the supplied {@code keyType} is not a subtype of {@link Enum}
                  */
                 // @ts-ignore
-                createMap<K, V>(mapType: java.lang.Class<any>, keyType: java.lang.Class<any>, capacity: number /*int*/): java.util.Map<K, V>
+                public static createMap<K, V>(mapType: java.lang.Class<any>, keyType: java.lang.Class<any>, capacity: number /*int*/): java.util.Map<K, V>
                 /**
                  * Create a variant of {@link java.util.Properties} that automatically adapts
                  * non-String values to String representations in {@link Properties#getProperty}.
@@ -155,7 +155,7 @@ declare namespace org {
                  * @see #createSortedProperties(Properties, boolean)
                  */
                 // @ts-ignore
-                createStringAdaptingProperties(): java.util.Properties
+                public static createStringAdaptingProperties(): java.util.Properties
                 /**
                  * Create a variant of {@link java.util.Properties} that sorts properties
                  * alphanumerically based on their keys.
@@ -171,7 +171,7 @@ declare namespace org {
                  * @see #createSortedProperties(Properties, boolean)
                  */
                 // @ts-ignore
-                createSortedProperties(omitComments: boolean): java.util.Properties
+                public static createSortedProperties(omitComments: boolean): java.util.Properties
                 /**
                  * Create a variant of {@link java.util.Properties} that sorts properties
                  * alphanumerically based on their keys.
@@ -192,7 +192,7 @@ declare namespace org {
                  * @see #createSortedProperties(boolean)
                  */
                 // @ts-ignore
-                createSortedProperties(properties: java.util.Properties, omitComments: boolean): java.util.Properties
+                public static createSortedProperties(properties: java.util.Properties, omitComments: boolean): java.util.Properties
             }
         }
     }

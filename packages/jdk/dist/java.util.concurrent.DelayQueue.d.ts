@@ -41,7 +41,7 @@ declare namespace java {
                  *          of its elements are null
                  */
                 // @ts-ignore
-                constructor(c: Array<E>)
+                constructor(c: java.util.Collection<any> | Array<any>)
                 /**
                  * Inserts the specified element into this delay queue.
                  * @param e the element to add
@@ -49,7 +49,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                add(e: E extends java.util.concurrent.Delayed): boolean
+                public add(e: E): boolean
                 /**
                  * Inserts the specified element into this delay queue.
                  * @param e the element to add
@@ -57,7 +57,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E extends java.util.concurrent.Delayed): boolean
+                public offer(e: E): boolean
                 /**
                  * Inserts the specified element into this delay queue. As the queue is
                  * unbounded this method will never block.
@@ -65,7 +65,7 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                put(e: E extends java.util.concurrent.Delayed): void
+                public put(e: E): void
                 /**
                  * Inserts the specified element into this delay queue. As the queue is
                  * unbounded this method will never block.
@@ -76,7 +76,7 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                offer(e: E extends java.util.concurrent.Delayed, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Retrieves and removes the head of this queue, or returns {@code null}
                  * if this queue has no elements with an expired delay.
@@ -84,7 +84,7 @@ declare namespace java {
                  *          queue has no elements with an expired delay
                  */
                 // @ts-ignore
-                poll(): E
+                public poll(): E
                 /**
                  * Retrieves and removes the head of this queue, waiting if necessary
                  * until an element with an expired delay is available on this queue.
@@ -92,7 +92,7 @@ declare namespace java {
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                take(): E
+                public take(): E
                 /**
                  * Retrieves and removes the head of this queue, waiting if necessary
                  * until an element with an expired delay is available on this queue,
@@ -103,7 +103,7 @@ declare namespace java {
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 /**
                  * Retrieves, but does not remove, the head of this queue, or
                  * returns {@code null} if this queue is empty.  Unlike
@@ -114,9 +114,9 @@ declare namespace java {
                  *          queue is empty
                  */
                 // @ts-ignore
-                peek(): E
+                public peek(): E
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -124,7 +124,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>): int
+                public drainTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -132,7 +132,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>, maxElements: number /*int*/): int
+                public drainTo(c: java.util.Collection<any> | Array<any>, maxElements: number /*int*/): number /*int*/
                 /**
                  * Atomically removes all of the elements from this delay queue.
                  * The queue will be empty after this call returns.
@@ -140,14 +140,14 @@ declare namespace java {
                  * simply discarded from the queue.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Always returns {@code Integer.MAX_VALUE} because
                  * a {@code DelayQueue} is not capacity constrained.
                  * @return {#code Integer.MAX_VALUE}
                  */
                 // @ts-ignore
-                remainingCapacity(): int
+                public remainingCapacity(): number /*int*/
                 /**
                  * Returns an array containing all of the elements in this queue.
                  * The returned array elements are in no particular order.
@@ -159,7 +159,7 @@ declare namespace java {
                  * @return an array containing all of the elements in this queue
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Returns an array containing all of the elements in this queue; the
                  * runtime type of the returned array is that of the specified array.
@@ -190,13 +190,13 @@ declare namespace java {
                  * @throws NullPointerException if the specified array is null
                  */
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 /**
                  * Removes a single instance of the specified element from this
                  * queue, if it is present, whether or not it has expired.
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Returns an iterator over all the elements (both expired and
                  * unexpired) in this queue. The iterator does not return the
@@ -206,7 +206,7 @@ declare namespace java {
                  * @return an iterator over the elements in this queue
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
             }
         }
     }

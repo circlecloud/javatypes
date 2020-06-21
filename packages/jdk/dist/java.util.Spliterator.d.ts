@@ -269,14 +269,14 @@ declare namespace java {
              *  non-commutative parallel computations.
              */
             // @ts-ignore
-            
+            readonly ORDERED: number /*int*/
             /**
              * Characteristic value signifying that, for each pair of
              * encountered elements {@code x, y}, {@code !x.equals(y)}. This
              * applies for example, to a Spliterator based on a {@link Set}.
              */
             // @ts-ignore
-            
+            readonly DISTINCT: number /*int*/
             /**
              * Characteristic value signifying that encounter order follows a defined
              * sort order. If so, method {@link #getComparator()} returns the associated
@@ -288,7 +288,7 @@ declare namespace java {
              *  implement {@link NavigableSet} or {@link SortedSet} report {@code SORTED}.
              */
             // @ts-ignore
-            
+            readonly SORTED: number /*int*/
             /**
              * Characteristic value signifying that the value returned from
              * {@code estimateSize()} prior to traversal or splitting represents a
@@ -301,14 +301,14 @@ declare namespace java {
              *  approximate their reported size do not.
              */
             // @ts-ignore
-            
+            readonly SIZED: number /*int*/
             /**
              * Characteristic value signifying that the source guarantees that
              * encountered elements will not be {@code null}. (This applies,
              * for example, to most concurrent collections, queues, and maps.)
              */
             // @ts-ignore
-            
+            readonly NONNULL: number /*int*/
             /**
              * Characteristic value signifying that the element source cannot be
              * structurally modified; that is, elements cannot be added, replaced, or
@@ -319,7 +319,7 @@ declare namespace java {
              * interference detected during traversal.
              */
             // @ts-ignore
-            
+            readonly IMMUTABLE: number /*int*/
             /**
              * Characteristic value signifying that the element source may be safely
              * concurrently modified (allowing additions, replacements, and/or removals)
@@ -339,7 +339,7 @@ declare namespace java {
              *  additions or removals.
              */
             // @ts-ignore
-            
+            readonly CONCURRENT: number /*int*/
             /**
              * Characteristic value signifying that all Spliterators resulting from
              * {@code trySplit()} will be both {@link #SIZED} and {@link #SUBSIZED}.
@@ -354,7 +354,7 @@ declare namespace java {
              *  but not the exact sizes of subtrees.
              */
             // @ts-ignore
-            
+            readonly SUBSIZED: number /*int*/
             /**
              * If a remaining element exists, performs the given action on it,
              * returning {@code true}; else returns {@code false}.  If this
@@ -367,7 +367,7 @@ declare namespace java {
              * @throws NullPointerException if the specified action is null
              */
             // @ts-ignore
-            tryAdvance(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): boolean
+            tryAdvance(action: java.util.function$.Consumer<any>): boolean
             /**
              * Performs the given action for each remaining element, sequentially in
              * the current thread, until all elements have been processed or the action
@@ -380,7 +380,7 @@ declare namespace java {
              * @throws NullPointerException if the specified action is null
              */
             // @ts-ignore
-            forEachRemaining(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): void
+            forEachRemaining(action: java.util.function$.Consumer<any>): void
             /**
              * If this spliterator can be partitioned, returns a Spliterator
              * covering elements, that will, upon return from this method, not
@@ -438,7 +438,7 @@ declare namespace java {
              *          unknown, or too expensive to compute.
              */
             // @ts-ignore
-            estimateSize(): long
+            estimateSize(): number /*long*/
             /**
              * Convenience method that returns {@link #estimateSize()} if this
              * Spliterator is {@link #SIZED}, else {@code -1}.
@@ -448,7 +448,7 @@ declare namespace java {
              * @return the exact size, if known, else {#code -1}.
              */
             // @ts-ignore
-            getExactSizeIfKnown(): long
+            getExactSizeIfKnown(): number /*long*/
             /**
              * Returns a set of characteristics of this Spliterator and its
              * elements. The result is represented as ORed values from {@link
@@ -468,7 +468,7 @@ declare namespace java {
              * @return a representation of characteristics
              */
             // @ts-ignore
-            characteristics(): int
+            characteristics(): number /*int*/
             /**
              * Returns {@code true} if this Spliterator's {@link
              * #characteristics} contain all of the given characteristics.
@@ -492,7 +492,7 @@ declare namespace java {
              *          a characteristic of {#code SORTED}.
              */
             // @ts-ignore
-            getComparator(): java.util.Comparator<? super T>
+            getComparator(): java.util.Comparator<any>
         }
     }
 }

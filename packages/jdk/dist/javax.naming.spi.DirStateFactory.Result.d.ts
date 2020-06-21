@@ -14,19 +14,19 @@ declare namespace javax {
                      * @param outAttrs The possibly null attributes to be bound.
                      */
                     // @ts-ignore
-                    constructor(obj: any, outAttrs: javax.naming.directory.Attributes)
+                    constructor(obj: java.lang.Object | any, outAttrs: javax.naming.directory.Attributes)
                     /**
                      * Retrieves the object to be bound.
                      * @return The possibly null object to be bound.
                      */
                     // @ts-ignore
-                    getObject(): java.lang.Object
+                    public getObject(): any
                     /**
                      * Retrieves the attributes to be bound.
                      * @return The possibly null attributes to be bound.
                      */
                     // @ts-ignore
-                    getAttributes(): javax.naming.directory.Attributes
+                    public getAttributes(): javax.naming.directory.Attributes
                 }
             }
         }

@@ -12,13 +12,13 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        isFocusTraversable(): boolean
+                        public isFocusTraversable(): boolean
                         // @ts-ignore
-                        requestFocus(): void
+                        public requestFocus(): void
                         // @ts-ignore
-                        paint(g: java.awt.Graphics): void
+                        public paint(g: java.awt.Graphics): void
                         // @ts-ignore
-                        isOpaque(): boolean
+                        public isOpaque(): boolean
                     }
                 }
             }

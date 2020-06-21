@@ -74,14 +74,14 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlSchema implements java.lang.annotation.Annotation {
+                abstract class XmlSchema implements java.lang.annotation.Annotation {
                     /**
                      * The default value of the {@link #location()} attribute,
                      * which indicates that the schema generator will generate
                      * components in this namespace.
                      */
                     // @ts-ignore
-                    readonly NO_LOCATION: string
+                    readonly NO_LOCATION: java.lang.String | string
                 }
             }
         }

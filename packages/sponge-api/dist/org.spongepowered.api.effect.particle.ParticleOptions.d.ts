@@ -19,7 +19,7 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly BLOCK_STATE: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.block.BlockState>
+                        public static readonly BLOCK_STATE: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.block.BlockState>
                         /**
                          * This option will modify the color of a particle. The only vanilla
                          * {@link ParticleType}s this option is applicable to are:
@@ -30,12 +30,12 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly COLOR: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.util.Color>
+                        public static readonly COLOR: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.util.Color>
                         /**
                          * This option will change the direction of a particle.
                          */
                         // @ts-ignore
-                        readonly DIRECTION: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.util.Direction>
+                        public static readonly DIRECTION: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.util.Direction>
                         /**
                          * This option will modify the color of a particle. The only vanilla
                          * {@link ParticleType}s this option is applicable to is
@@ -44,7 +44,7 @@ declare namespace org {
                          * will be thrown when applying.</p>
                          */
                         // @ts-ignore
-                        readonly FIREWORK_EFFECTS: org.spongepowered.api.effect.particle.ParticleOption<java.util.List<org.spongepowered.api.item.FireworkEffect>>
+                        public static readonly FIREWORK_EFFECTS: org.spongepowered.api.effect.particle.ParticleOption<java.util.List<org.spongepowered.api.item.FireworkEffect> | Array<org.spongepowered.api.item.FireworkEffect>>
                         /**
                          * This option will affect the appearance of a particle. The only vanilla
                          * {@link ParticleType} this option is applicable to are:
@@ -56,26 +56,26 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        readonly ITEM_STACK_SNAPSHOT: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                        public static readonly ITEM_STACK_SNAPSHOT: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                         /**
                          * This option will affect the appearance of a particle. The only vanilla
                          * {@link ParticleType} this option is applicable to is
                          * {@link ParticleTypes#NOTE}.
                          */
                         // @ts-ignore
-                        readonly NOTE: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.data.type.NotePitch>
+                        public static readonly NOTE: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.data.type.NotePitch>
                         /**
                          * This option will affect how all the particles are spread.
                          */
                         // @ts-ignore
-                        readonly OFFSET: org.spongepowered.api.effect.particle.ParticleOption<Vector3d>
+                        public static readonly OFFSET: org.spongepowered.api.effect.particle.ParticleOption<Vector3d>
                         /**
                          * This option will change the potion type of a particle. The only vanilla
                          * {@link ParticleType}s this option is applicable to is
                          * {@link ParticleTypes#SPLASH_POTION}.
                          */
                         // @ts-ignore
-                        readonly POTION_EFFECT_TYPE: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.effect.potion.PotionEffectType>
+                        public static readonly POTION_EFFECT_TYPE: org.spongepowered.api.effect.particle.ParticleOption<org.spongepowered.api.effect.potion.PotionEffectType>
                         /**
                          * This option will affect the amount of particles that are spawned. The
                          * minimum amount of particles is 1. The only vanilla {@link ParticleType}s
@@ -92,7 +92,7 @@ declare namespace org {
                          * will be thrown when applying.</p>
                          */
                         // @ts-ignore
-                        readonly QUANTITY: org.spongepowered.api.effect.particle.ParticleOption<java.lang.Integer>
+                        public static readonly QUANTITY: org.spongepowered.api.effect.particle.ParticleOption<java.lang.Integer | number>
                         /**
                          * This option will change the scale of a particle. The only
                          * vanilla {@link ParticleType}s this option is applicable to are:
@@ -104,7 +104,7 @@ declare namespace org {
                          * will be thrown when applying.</p>
                          */
                         // @ts-ignore
-                        readonly SCALE: org.spongepowered.api.effect.particle.ParticleOption<java.lang.Double>
+                        public static readonly SCALE: org.spongepowered.api.effect.particle.ParticleOption<java.lang.Double | number>
                         /**
                          * This option will affect whether a particle type will have a lower
                          * velocity in the horizontal plane. The only vanilla {@link ParticleType}s
@@ -118,12 +118,12 @@ declare namespace org {
                          * {@link #VELOCITY}) in the horizontal plane.</p>
                          */
                         // @ts-ignore
-                        readonly SLOW_HORIZONTAL_VELOCITY: org.spongepowered.api.effect.particle.ParticleOption<java.lang.Boolean>
+                        public static readonly SLOW_HORIZONTAL_VELOCITY: org.spongepowered.api.effect.particle.ParticleOption<java.lang.Boolean>
                         /**
                          * This option will affect how all the particles are moving.
                          */
                         // @ts-ignore
-                        readonly VELOCITY: org.spongepowered.api.effect.particle.ParticleOption<Vector3d>
+                        public static readonly VELOCITY: org.spongepowered.api.effect.particle.ParticleOption<Vector3d>
                     }
                 }
             }

@@ -28,12 +28,12 @@ declare namespace java {
                  * A key indicating the shape should be stroked with a 1-pixel wide stroke.
                  */
                 // @ts-ignore
-                readonly STROKE: boolean
+                public static readonly STROKE: boolean
                 /**
                  * A key indicating the shape should be filled.
                  */
                 // @ts-ignore
-                readonly FILL: boolean
+                public static readonly FILL: boolean
                 /**
                  * Returns the ascent of this <code>ShapeGraphicAttribute</code>.  The
                  * ascent of a <code>ShapeGraphicAttribute</code> is the positive
@@ -42,7 +42,7 @@ declare namespace java {
                  * @return the ascent of this <code>ShapeGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getAscent(): float
+                public getAscent(): number /*float*/
                 /**
                  * Returns the descent of this <code>ShapeGraphicAttribute</code>.
                  * The descent of a <code>ShapeGraphicAttribute</code> is the distance
@@ -51,7 +51,7 @@ declare namespace java {
                  * @return the descent of this <code>ShapeGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getDescent(): float
+                public getDescent(): number /*float*/
                 /**
                  * Returns the advance of this <code>ShapeGraphicAttribute</code>.
                  * The advance of a <code>ShapeGraphicAttribute</code> is the distance
@@ -60,12 +60,12 @@ declare namespace java {
                  * @return the advance of this <code>ShapeGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getAdvance(): float
+                public getAdvance(): number /*float*/
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                draw(graphics: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
+                public draw(graphics: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
                 /**
                  * Returns a {@link Rectangle2D} that encloses all of the
                  * bits drawn by this <code>ShapeGraphicAttribute</code> relative to
@@ -76,7 +76,7 @@ declare namespace java {
                  *  rendered by this <code>ShapeGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getBounds(): java.awt.geom.Rectangle2D
+                public getBounds(): java.awt.geom.Rectangle2D
                 /**
                  * Return a {@link java.awt.Shape} that represents the region that
                  * this <code>ShapeGraphicAttribute</code> renders.  This is used when a
@@ -90,14 +90,14 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getOutline(tx: java.awt.geom.AffineTransform): java.awt.Shape
+                public getOutline(tx: java.awt.geom.AffineTransform): java.awt.Shape
                 /**
                  * Returns a hashcode for this <code>ShapeGraphicAttribute</code>.
                  * @return a hash code value for this
                  *  <code>ShapeGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares this <code>ShapeGraphicAttribute</code> to the specified
                  * <code>Object</code>.
@@ -107,7 +107,7 @@ declare namespace java {
                  *  <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(rhs: any): boolean
+                public equals(rhs: java.lang.Object | any): boolean
                 /**
                  * Compares this <code>ShapeGraphicAttribute</code> to the specified
                  * <code>ShapeGraphicAttribute</code>.
@@ -118,7 +118,7 @@ declare namespace java {
                  *  <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(rhs: java.awt.font.ShapeGraphicAttribute): boolean
+                public equals(rhs: java.awt.font.ShapeGraphicAttribute): boolean
             }
         }
     }

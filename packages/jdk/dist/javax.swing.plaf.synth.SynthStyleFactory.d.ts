@@ -32,7 +32,7 @@ declare namespace javax {
                  * @author Scott Violet
                  */
                 // @ts-ignore
-                class SynthStyleFactory extends java.lang.Object {
+                abstract class SynthStyleFactory extends java.lang.Object {
                     /**
                      * Creates a <code>SynthStyleFactory</code>.
                      */
@@ -45,7 +45,7 @@ declare namespace javax {
                      * @return SynthStyle for region.
                      */
                     // @ts-ignore
-                    abstract getStyle(c: javax.swing.JComponent, id: javax.swing.plaf.synth.Region): javax.swing.plaf.synth.SynthStyle
+                    public abstract getStyle(c: javax.swing.JComponent, id: javax.swing.plaf.synth.Region): javax.swing.plaf.synth.SynthStyle
                 }
             }
         }

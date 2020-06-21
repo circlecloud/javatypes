@@ -28,7 +28,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
         }
     }
 }

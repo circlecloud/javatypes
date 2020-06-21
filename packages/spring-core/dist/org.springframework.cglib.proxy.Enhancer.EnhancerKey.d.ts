@@ -9,7 +9,7 @@ declare namespace org {
                     // @ts-ignore
                     interface EnhancerKey {
                         // @ts-ignore
-                        newInstance(type: string, interfaces: string[], filter: object, callbackTypes: org.springframework.asm.Type[], useFactory: boolean, interceptDuringConstruction: boolean, serialVersionUID: number): java.lang.Object
+                        newInstance(type: java.lang.String | string, interfaces: java.lang.String[] | string[], filter: object, callbackTypes: org.springframework.asm.Type[], useFactory: boolean, interceptDuringConstruction: boolean, serialVersionUID: java.lang.Long | number): any
                     }
                 }
             }

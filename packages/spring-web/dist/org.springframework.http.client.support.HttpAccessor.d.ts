@@ -17,7 +17,7 @@ declare namespace org {
                      * @see org.springframework.web.client.RestTemplate
                      */
                     // @ts-ignore
-                    class HttpAccessor extends java.lang.Object {
+                    abstract class HttpAccessor extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -37,12 +37,12 @@ declare namespace org {
                          * @see org.springframework.http.client.OkHttp3ClientHttpRequestFactory
                          */
                         // @ts-ignore
-                        setRequestFactory(requestFactory: org.springframework.http.client.ClientHttpRequestFactory): void
+                        public setRequestFactory(requestFactory: org.springframework.http.client.ClientHttpRequestFactory): void
                         /**
                          * Return the request factory that this accessor uses for obtaining client request handles.
                          */
                         // @ts-ignore
-                        getRequestFactory(): org.springframework.http.client.ClientHttpRequestFactory
+                        public getRequestFactory(): org.springframework.http.client.ClientHttpRequestFactory
                         /**
                          * Set the request initializers that this accessor should use.
                          * <p>The initializers will get immediately sorted according to their
@@ -50,7 +50,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        setClientHttpRequestInitializers(clientHttpRequestInitializers: Array<org.springframework.http.client.ClientHttpRequestInitializer>): void
+                        public setClientHttpRequestInitializers(clientHttpRequestInitializers: java.util.List<org.springframework.http.client.ClientHttpRequestInitializer> | Array<org.springframework.http.client.ClientHttpRequestInitializer>): void
                         /**
                          * Get the request initializers that this accessor uses.
                          * <p>The returned {@link List} is active and may be modified. Note,
@@ -61,7 +61,7 @@ declare namespace org {
                          * @see #setClientHttpRequestInitializers(List)
                          */
                         // @ts-ignore
-                        getClientHttpRequestInitializers(): java.util.List<org.springframework.http.client.ClientHttpRequestInitializer>
+                        public getClientHttpRequestInitializers(): Array<org.springframework.http.client.ClientHttpRequestInitializer>
                         /**
                          * Create a new {@link ClientHttpRequest} via this template's {@link ClientHttpRequestFactory}.
                          * @param url the URL to connect to

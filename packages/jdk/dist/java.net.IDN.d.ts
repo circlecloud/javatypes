@@ -40,12 +40,12 @@ declare namespace java {
              * Flag to allow processing of unassigned code points
              */
             // @ts-ignore
-            readonly ALLOW_UNASSIGNED: number /*int*/
+            public static readonly ALLOW_UNASSIGNED: number /*int*/
             /**
              * Flag to turn on the check against STD-3 ASCII rules
              */
             // @ts-ignore
-            readonly USE_STD3_ASCII_RULES: number /*int*/
+            public static readonly USE_STD3_ASCII_RULES: number /*int*/
             /**
              * Translates a string from Unicode to ASCII Compatible Encoding (ACE),
              * as defined by the ToASCII operation of <a href="http://www.ietf.org/rfc/rfc3490.txt">RFC 3490</a>.
@@ -66,7 +66,7 @@ declare namespace java {
              * @throws IllegalArgumentException   if the input string doesn't conform to RFC 3490 specification
              */
             // @ts-ignore
-            toASCII(input: string, flag: number /*int*/): java.lang.String
+            public static toASCII(input: java.lang.String | string, flag: number /*int*/): string
             /**
              * Translates a string from Unicode to ASCII Compatible Encoding (ACE),
              * as defined by the ToASCII operation of <a href="http://www.ietf.org/rfc/rfc3490.txt">RFC 3490</a>.
@@ -80,7 +80,7 @@ declare namespace java {
              * @throws IllegalArgumentException   if the input string doesn't conform to RFC 3490 specification
              */
             // @ts-ignore
-            toASCII(input: string): java.lang.String
+            public static toASCII(input: java.lang.String | string): string
             /**
              * Translates a string from ASCII Compatible Encoding (ACE) to Unicode,
              * as defined by the ToUnicode operation of <a href="http://www.ietf.org/rfc/rfc3490.txt">RFC 3490</a>.
@@ -96,7 +96,7 @@ declare namespace java {
              * @return the translated {#code String}
              */
             // @ts-ignore
-            toUnicode(input: string, flag: number /*int*/): java.lang.String
+            public static toUnicode(input: java.lang.String | string, flag: number /*int*/): string
             /**
              * Translates a string from ASCII Compatible Encoding (ACE) to Unicode,
              * as defined by the ToUnicode operation of <a href="http://www.ietf.org/rfc/rfc3490.txt">RFC 3490</a>.
@@ -109,7 +109,7 @@ declare namespace java {
              * @return the translated {#code String}
              */
             // @ts-ignore
-            toUnicode(input: string): java.lang.String
+            public static toUnicode(input: java.lang.String | string): string
         }
     }
 }

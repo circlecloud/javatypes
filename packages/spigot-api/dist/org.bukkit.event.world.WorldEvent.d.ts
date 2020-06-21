@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents events within a world
                  */
                 // @ts-ignore
-                class WorldEvent extends org.bukkit.event.Event {
+                abstract class WorldEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(world: org.bukkit.World)
                     /**
@@ -14,7 +14,7 @@ declare namespace org {
                      * @return World which caused this event
                      */
                     // @ts-ignore
-                    getWorld(): org.bukkit.World
+                    public getWorld(): org.bukkit.World
                 }
             }
         }

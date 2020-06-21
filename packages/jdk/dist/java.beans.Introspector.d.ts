@@ -46,17 +46,17 @@ declare namespace java {
              * Flag to indicate to use of all beaninfo.
              */
             // @ts-ignore
-            readonly USE_ALL_BEANINFO: number /*int*/
+            public static readonly USE_ALL_BEANINFO: number /*int*/
             /**
              * Flag to indicate to ignore immediate beaninfo.
              */
             // @ts-ignore
-            readonly IGNORE_IMMEDIATE_BEANINFO: number /*int*/
+            public static readonly IGNORE_IMMEDIATE_BEANINFO: number /*int*/
             /**
              * Flag to indicate to ignore all beaninfo.
              */
             // @ts-ignore
-            readonly IGNORE_ALL_BEANINFO: number /*int*/
+            public static readonly IGNORE_ALL_BEANINFO: number /*int*/
             /**
              * Introspect on a Java Bean and learn about all its properties, exposed
              * methods, and events.
@@ -71,7 +71,7 @@ declare namespace java {
              * @see #flushFromCaches
              */
             // @ts-ignore
-            getBeanInfo(beanClass: java.lang.Class<any>): java.beans.BeanInfo
+            public static getBeanInfo(beanClass: java.lang.Class<any>): java.beans.BeanInfo
             /**
              * Introspect on a Java bean and learn about all its properties, exposed
              * methods, and events, subject to some control flags.
@@ -93,7 +93,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            getBeanInfo(beanClass: java.lang.Class<any>, flags: number /*int*/): java.beans.BeanInfo
+            public static getBeanInfo(beanClass: java.lang.Class<any>, flags: number /*int*/): java.beans.BeanInfo
             /**
              * Introspect on a Java bean and learn all about its properties, exposed
              * methods, below a given "stop" point.
@@ -110,7 +110,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            getBeanInfo(beanClass: java.lang.Class<any>, stopClass: java.lang.Class<any>): java.beans.BeanInfo
+            public static getBeanInfo(beanClass: java.lang.Class<any>, stopClass: java.lang.Class<any>): java.beans.BeanInfo
             /**
              * Introspect on a Java Bean and learn about all its properties,
              * exposed methods and events, below a given {@code stopClass} point
@@ -138,7 +138,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getBeanInfo(beanClass: java.lang.Class<any>, stopClass: java.lang.Class<any>, flags: number /*int*/): java.beans.BeanInfo
+            public static getBeanInfo(beanClass: java.lang.Class<any>, stopClass: java.lang.Class<any>, flags: number /*int*/): java.beans.BeanInfo
             /**
              * Utility method to take a string and convert it to normal Java variable
              * name capitalization.  This normally means converting the first
@@ -152,7 +152,7 @@ declare namespace java {
              * @return The decapitalized version of the string.
              */
             // @ts-ignore
-            decapitalize(name: string): java.lang.String
+            public static decapitalize(name: java.lang.String | string): string
             /**
              * Gets the list of package names that will be used for
              * finding BeanInfo classes.
@@ -162,7 +162,7 @@ declare namespace java {
              *           Sun implementation initially sets to {"sun.beans.infos"}.
              */
             // @ts-ignore
-            getBeanInfoSearchPath(): java.lang.String[]
+            public static getBeanInfoSearchPath(): string[]
             /**
              * Change the list of package names that will be used for
              * finding BeanInfo classes.  The behaviour of
@@ -177,7 +177,7 @@ declare namespace java {
              * @see SecurityManager#checkPropertiesAccess
              */
             // @ts-ignore
-            setBeanInfoSearchPath(path: string[]): void
+            public static setBeanInfoSearchPath(path: java.lang.String[] | string[]): void
             /**
              * Flush all of the Introspector's internal caches.  This method is
              * not normally required.  It is normally only needed by advanced
@@ -185,7 +185,7 @@ declare namespace java {
              * to make the Introspector re-analyze existing Class objects.
              */
             // @ts-ignore
-            flushCaches(): void
+            public static flushCaches(): void
             /**
              * Flush the Introspector's internal cached information for a given class.
              * This method is not normally required.  It is normally only needed
@@ -200,7 +200,7 @@ declare namespace java {
              * @throws NullPointerException If the Class object is null.
              */
             // @ts-ignore
-            flushFromCaches(clz: java.lang.Class<any>): void
+            public static flushFromCaches(clz: java.lang.Class<any>): void
         }
     }
 }

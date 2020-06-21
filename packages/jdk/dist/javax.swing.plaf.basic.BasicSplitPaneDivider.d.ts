@@ -33,9 +33,9 @@ declare namespace javax {
                      * BasicSplitPaneUI adds two to this.
                      */
                     // @ts-ignore
-                    readonly ONE_TOUCH_SIZE: number /*int*/
+                    static readonly ONE_TOUCH_SIZE: number /*int*/
                     // @ts-ignore
-                    readonly ONE_TOUCH_OFFSET: number /*int*/
+                    static readonly ONE_TOUCH_OFFSET: number /*int*/
                     /**
                      * Handles mouse dragging message to do the actual dragging.
                      */
@@ -88,32 +88,32 @@ declare namespace javax {
                      * Sets the SplitPaneUI that is using the receiver.
                      */
                     // @ts-ignore
-                    setBasicSplitPaneUI(newUI: javax.swing.plaf.basic.BasicSplitPaneUI): void
+                    public setBasicSplitPaneUI(newUI: javax.swing.plaf.basic.BasicSplitPaneUI): void
                     /**
                      * Returns the <code>SplitPaneUI</code> the receiver is currently
                      * in.
                      */
                     // @ts-ignore
-                    getBasicSplitPaneUI(): javax.swing.plaf.basic.BasicSplitPaneUI
+                    public getBasicSplitPaneUI(): javax.swing.plaf.basic.BasicSplitPaneUI
                     /**
                      * Sets the size of the divider to <code>newSize</code>. That is
                      * the width if the splitpane is <code>HORIZONTAL_SPLIT</code>, or
                      * the height of <code>VERTICAL_SPLIT</code>.
                      */
                     // @ts-ignore
-                    setDividerSize(newSize: number /*int*/): void
+                    public setDividerSize(newSize: number /*int*/): void
                     /**
                      * Returns the size of the divider, that is the width if the splitpane
                      * is HORIZONTAL_SPLIT, or the height of VERTICAL_SPLIT.
                      */
                     // @ts-ignore
-                    getDividerSize(): int
+                    public getDividerSize(): number /*int*/
                     /**
                      * Sets the border of this component.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setBorder(border: javax.swing.border.Border): void
+                    public setBorder(border: javax.swing.border.Border): void
                     /**
                      * Returns the border of this component or null if no border is
                      * currently set.
@@ -122,7 +122,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getBorder(): javax.swing.border.Border
+                    public getBorder(): javax.swing.border.Border
                     /**
                      * If a border has been set on this component, returns the
                      * border's insets, else calls super.getInsets.
@@ -130,7 +130,7 @@ declare namespace javax {
                      * @see #setBorder
                      */
                     // @ts-ignore
-                    getInsets(): java.awt.Insets
+                    public getInsets(): java.awt.Insets
                     /**
                      * Sets whether or not the mouse is currently over the divider.
                      * @param mouseOver whether or not the mouse is currently over the divider
@@ -144,28 +144,28 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    isMouseOver(): boolean
+                    public isMouseOver(): boolean
                     /**
                      * Returns dividerSize x dividerSize
                      */
                     // @ts-ignore
-                    getPreferredSize(): java.awt.Dimension
+                    public getPreferredSize(): java.awt.Dimension
                     /**
                      * Returns dividerSize x dividerSize
                      */
                     // @ts-ignore
-                    getMinimumSize(): java.awt.Dimension
+                    public getMinimumSize(): java.awt.Dimension
                     /**
                      * Property change event, presumably from the JSplitPane, will message
                      * updateOrientation if necessary.
                      */
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                     /**
                      * Paints the divider.
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics): void
+                    public paint(g: java.awt.Graphics): void
                     /**
                      * Messaged when the oneTouchExpandable value of the JSplitPane the
                      * receiver is contained in changes. Will create the

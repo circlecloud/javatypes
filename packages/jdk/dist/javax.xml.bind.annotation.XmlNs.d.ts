@@ -15,7 +15,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlNs implements java.lang.annotation.Annotation {
+                abstract class XmlNs implements java.lang.annotation.Annotation {
                 }
             }
         }

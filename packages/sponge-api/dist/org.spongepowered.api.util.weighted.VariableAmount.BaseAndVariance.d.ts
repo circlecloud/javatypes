@@ -12,17 +12,17 @@ declare namespace org {
                         // @ts-ignore
                         class BaseAndVariance extends java.lang.Object implements org.spongepowered.api.util.weighted.VariableAmount {
                             // @ts-ignore
-                            getAmount(rand: java.util.Random): double
+                            public getAmount(rand: java.util.Random): number /*double*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                             // @ts-ignore
-                            equals(obj: any): boolean
+                            public equals(obj: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toContainer(): org.spongepowered.api.data.DataContainer
+                            public toContainer(): org.spongepowered.api.data.DataContainer
                             // @ts-ignore
-                            getContentVersion(): int
+                            public getContentVersion(): number /*int*/
                         }
                     }
                 }

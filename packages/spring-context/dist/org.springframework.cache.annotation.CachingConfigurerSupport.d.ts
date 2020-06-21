@@ -14,13 +14,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    cacheManager(): org.springframework.cache.CacheManager
+                    public cacheManager(): org.springframework.cache.CacheManager
                     // @ts-ignore
-                    cacheResolver(): org.springframework.cache.interceptor.CacheResolver
+                    public cacheResolver(): org.springframework.cache.interceptor.CacheResolver
                     // @ts-ignore
-                    keyGenerator(): org.springframework.cache.interceptor.KeyGenerator
+                    public keyGenerator(): org.springframework.cache.interceptor.KeyGenerator
                     // @ts-ignore
-                    errorHandler(): org.springframework.cache.interceptor.CacheErrorHandler
+                    public errorHandler(): org.springframework.cache.interceptor.CacheErrorHandler
                 }
             }
         }

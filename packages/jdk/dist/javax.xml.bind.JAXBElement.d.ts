@@ -43,7 +43,7 @@ declare namespace javax {
                  * @see #isTypeSubstituted()
                  */
                 // @ts-ignore
-                constructor(name: javax.xml.namespace.QName, declaredType: java.lang.Class<T>, scope: java.lang.Class, value: T)
+                constructor(name: javax.xml.namespace.QName, declaredType: java.lang.Class<T>, scope: java.lang.Class<any>, value: T)
                 /**
                  * Construct an xml element instance.
                  * This is just a convenience method for <tt>new JAXBElement(name,declaredType,GlobalScope.class,value)</tt>
@@ -69,7 +69,7 @@ declare namespace javax {
                  * xml element declaration.
                  */
                 // @ts-ignore
-                readonly scope: java.lang.Class
+                readonly scope: java.lang.Class<any>
                 /**
                  * xml element value.
                  * Represents content model and attributes of an xml element instance.
@@ -85,12 +85,12 @@ declare namespace javax {
                  * Returns the Java binding of the xml element declaration's type attribute.
                  */
                 // @ts-ignore
-                getDeclaredType(): java.lang.Class<T>
+                public getDeclaredType(): java.lang.Class<T>
                 /**
                  * Returns the xml element tag name.
                  */
                 // @ts-ignore
-                getName(): javax.xml.namespace.QName
+                public getName(): javax.xml.namespace.QName
                 /**
                  * <p>Set the content model and attributes of this xml element.</p>
                  * <p>When this property is set to <tt>null</tt>, <tt>isNil()</tt> must by <tt>true</tt>.
@@ -98,21 +98,21 @@ declare namespace javax {
                  * @see #isTypeSubstituted()
                  */
                 // @ts-ignore
-                setValue(t: T): void
+                public setValue(t: T): void
                 /**
                  * <p>Return the content model and attribute values for this element.</p>
                  * <p>See {@link #isNil()} for a description of a property constraint when
                  * this value is <tt>null</tt></p>
                  */
                 // @ts-ignore
-                getValue(): T
+                public getValue(): T
                 /**
                  * Returns scope of xml element declaration.
                  * @see #isGlobalScope()
                  * @return <tt>GlobalScope.class</tt> if this element is of global scope.
                  */
                 // @ts-ignore
-                getScope(): java.lang.Class
+                public getScope(): java.lang.Class<any>
                 /**
                  * <p>Returns <tt>true</tt> iff this element instance content model
                  * is nil.</p>
@@ -122,24 +122,24 @@ declare namespace javax {
                  * valid for a nil xml element to have attribute(s).</p>
                  */
                 // @ts-ignore
-                isNil(): boolean
+                public isNil(): boolean
                 /**
                  * <p>Set whether this element has nil content.</p>
                  * @see #isNil()
                  */
                 // @ts-ignore
-                setNil(value: boolean): void
+                public setNil(value: boolean): void
                 /**
                  * Returns true iff this xml element declaration is global.
                  */
                 // @ts-ignore
-                isGlobalScope(): boolean
+                public isGlobalScope(): boolean
                 /**
                  * Returns true iff this xml element instance's value has a different
                  * type than xml element declaration's declared type.
                  */
                 // @ts-ignore
-                isTypeSubstituted(): boolean
+                public isTypeSubstituted(): boolean
             }
         }
     }

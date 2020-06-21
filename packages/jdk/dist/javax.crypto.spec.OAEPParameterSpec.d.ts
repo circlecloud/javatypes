@@ -61,36 +61,36 @@ declare namespace javax {
                  *  <code>mgfName</code>, or <code>pSrc</code> is null.
                  */
                 // @ts-ignore
-                constructor(mdName: string, mgfName: string, mgfSpec: java.security.spec.AlgorithmParameterSpec, pSrc: javax.crypto.spec.PSource)
+                constructor(mdName: java.lang.String | string, mgfName: java.lang.String | string, mgfSpec: java.security.spec.AlgorithmParameterSpec, pSrc: javax.crypto.spec.PSource)
                 /**
                  * The OAEP parameter set with all default values.
                  */
                 // @ts-ignore
-                readonly DEFAULT: javax.crypto.spec.OAEPParameterSpec
+                public static readonly DEFAULT: javax.crypto.spec.OAEPParameterSpec
                 /**
                  * Returns the message digest algorithm name.
                  * @return the message digest algorithm name.
                  */
                 // @ts-ignore
-                getDigestAlgorithm(): java.lang.String
+                public getDigestAlgorithm(): string
                 /**
                  * Returns the mask generation function algorithm name.
                  * @return the mask generation function algorithm name.
                  */
                 // @ts-ignore
-                getMGFAlgorithm(): java.lang.String
+                public getMGFAlgorithm(): string
                 /**
                  * Returns the parameters for the mask generation function.
                  * @return the parameters for the mask generation function.
                  */
                 // @ts-ignore
-                getMGFParameters(): java.security.spec.AlgorithmParameterSpec
+                public getMGFParameters(): java.security.spec.AlgorithmParameterSpec
                 /**
                  * Returns the source of encoding input P.
                  * @return the source of encoding input P.
                  */
                 // @ts-ignore
-                getPSource(): javax.crypto.spec.PSource
+                public getPSource(): javax.crypto.spec.PSource
             }
         }
     }

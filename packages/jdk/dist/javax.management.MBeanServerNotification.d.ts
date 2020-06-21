@@ -80,27 +80,27 @@ declare namespace javax {
              *  notification.
              */
             // @ts-ignore
-            constructor(type: string, source: any, sequenceNumber: number /*long*/, objectName: javax.management.ObjectName)
+            constructor(type: java.lang.String | string, source: java.lang.Object | any, sequenceNumber: number /*long*/, objectName: javax.management.ObjectName)
             /**
              * Notification type denoting that an MBean has been registered.
              * Value is "JMX.mbean.registered".
              */
             // @ts-ignore
-            readonly REGISTRATION_NOTIFICATION: string
+            public static readonly REGISTRATION_NOTIFICATION: java.lang.String | string
             /**
              * Notification type denoting that an MBean has been unregistered.
              * Value is "JMX.mbean.unregistered".
              */
             // @ts-ignore
-            readonly UNREGISTRATION_NOTIFICATION: string
+            public static readonly UNREGISTRATION_NOTIFICATION: java.lang.String | string
             /**
              * Returns the  object name of the MBean that caused the notification.
              * @return the object name of the MBean that caused the notification.
              */
             // @ts-ignore
-            getMBeanName(): javax.management.ObjectName
+            public getMBeanName(): javax.management.ObjectName
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -38,15 +38,15 @@ declare namespace org {
                          * @see org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource
                          */
                         // @ts-ignore
-                        setAttributeSource(attributeSource: org.springframework.jmx.export.metadata.JmxAttributeSource): void
+                        public setAttributeSource(attributeSource: org.springframework.jmx.export.metadata.JmxAttributeSource): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Throws an IllegalArgumentException if it encounters a JDK dynamic proxy.
                          * Metadata can only be read from target classes and CGLIB proxies!
                          */
                         // @ts-ignore
-                        checkManagedBean(managedBean: any): void
+                        checkManagedBean(managedBean: java.lang.Object | any): void
                         /**
                          * Used for autodetection of beans. Checks to see if the bean's class has a
                          * {@code ManagedResource} attribute. If so it will add it list of included beans.
@@ -54,7 +54,7 @@ declare namespace org {
                          * @param beanName the name of the bean in the bean factory
                          */
                         // @ts-ignore
-                        includeBean(beanClass: java.lang.Class<any>, beanName: string): boolean
+                        public includeBean(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): boolean
                         /**
                          * Vote on the inclusion of an attribute accessor.
                          * @param method the accessor method
@@ -62,7 +62,7 @@ declare namespace org {
                          * @return whether the method has the appropriate metadata
                          */
                         // @ts-ignore
-                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Votes on the inclusion of an attribute mutator.
                          * @param method the mutator method
@@ -70,7 +70,7 @@ declare namespace org {
                          * @return whether the method has the appropriate metadata
                          */
                         // @ts-ignore
-                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Votes on the inclusion of an operation.
                          * @param method the operation method
@@ -78,39 +78,39 @@ declare namespace org {
                          * @return whether the method has the appropriate metadata
                          */
                         // @ts-ignore
-                        includeOperation(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeOperation(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Reads managed resource description from the source level metadata.
                          * Returns an empty {@code String} if no description can be found.
                          */
                         // @ts-ignore
-                        getDescription(managedBean: any, beanKey: string): java.lang.String
+                        getDescription(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): string
                         /**
                          * Creates a description for the attribute corresponding to this property
                          * descriptor. Attempts to create the description using metadata from either
                          * the getter or setter attributes, otherwise uses the property name.
                          */
                         // @ts-ignore
-                        getAttributeDescription(propertyDescriptor: java.beans.PropertyDescriptor, beanKey: string): java.lang.String
+                        getAttributeDescription(propertyDescriptor: java.beans.PropertyDescriptor, beanKey: java.lang.String | string): string
                         /**
                          * Retrieves the description for the supplied {@code Method} from the
                          * metadata. Uses the method name is no description is present in the metadata.
                          */
                         // @ts-ignore
-                        getOperationDescription(method: java.lang.reflect.Method, beanKey: string): java.lang.String
+                        getOperationDescription(method: java.lang.reflect.Method, beanKey: java.lang.String | string): string
                         /**
                          * Reads {@code MBeanParameterInfo} from the {@code ManagedOperationParameter}
                          * attributes attached to a method. Returns an empty array of {@code MBeanParameterInfo}
                          * if no attributes are found.
                          */
                         // @ts-ignore
-                        getOperationParameters(method: java.lang.reflect.Method, beanKey: string): javax.management.MBeanParameterInfo[]
+                        getOperationParameters(method: java.lang.reflect.Method, beanKey: java.lang.String | string): javax.management.MBeanParameterInfo[]
                         /**
                          * Reads the {@link ManagedNotification} metadata from the {@code Class} of the managed resource
                          * and generates and returns the corresponding {@link ModelMBeanNotificationInfo} metadata.
                          */
                         // @ts-ignore
-                        getNotificationInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanNotificationInfo[]
+                        getNotificationInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanNotificationInfo[]
                         /**
                          * Adds descriptor fields from the {@code ManagedResource} attribute
                          * to the MBean descriptor. Specifically, adds the {@code currencyTimeLimit},
@@ -118,20 +118,20 @@ declare namespace org {
                          * and {@code persistName} descriptor fields if they are present in the metadata.
                          */
                         // @ts-ignore
-                        populateMBeanDescriptor(desc: javax.management.Descriptor, managedBean: any, beanKey: string): void
+                        populateMBeanDescriptor(desc: javax.management.Descriptor, managedBean: java.lang.Object | any, beanKey: java.lang.String | string): void
                         /**
                          * Adds descriptor fields from the {@code ManagedAttribute} attribute or the {@code ManagedMetric} attribute
                          * to the attribute descriptor.
                          */
                         // @ts-ignore
-                        populateAttributeDescriptor(desc: javax.management.Descriptor, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method, beanKey: string): void
+                        populateAttributeDescriptor(desc: javax.management.Descriptor, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method, beanKey: java.lang.String | string): void
                         /**
                          * Adds descriptor fields from the {@code ManagedAttribute} attribute
                          * to the attribute descriptor. Specifically, adds the {@code currencyTimeLimit}
                          * descriptor field if it is present in the metadata.
                          */
                         // @ts-ignore
-                        populateOperationDescriptor(desc: javax.management.Descriptor, method: java.lang.reflect.Method, beanKey: string): void
+                        populateOperationDescriptor(desc: javax.management.Descriptor, method: java.lang.reflect.Method, beanKey: java.lang.String | string): void
                     }
                 }
             }

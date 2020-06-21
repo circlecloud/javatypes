@@ -42,13 +42,13 @@ declare namespace org {
                  * @throws IOException if an exception occurs during reading.
                  */
                 // @ts-ignore
-                constructor(className: string)
+                constructor(className: java.lang.String | string)
                 /**
                  * A flag to skip the Code attributes. If this flag is set the Code attributes are neither parsed
                  * nor visited.
                  */
                 // @ts-ignore
-                readonly SKIP_CODE: number /*int*/
+                public static readonly SKIP_CODE: number /*int*/
                 /**
                  * A flag to skip the SourceFile, SourceDebugExtension, LocalVariableTable,
                  * LocalVariableTypeTable, LineNumberTable and MethodParameters attributes. If this flag is set
@@ -57,7 +57,7 @@ declare namespace org {
                  * MethodVisitor#visitParameter} are not called).
                  */
                 // @ts-ignore
-                readonly SKIP_DEBUG: number /*int*/
+                public static readonly SKIP_DEBUG: number /*int*/
                 /**
                  * A flag to skip the StackMap and StackMapTable attributes. If this flag is set these attributes
                  * are neither parsed nor visited (i.e. {@link MethodVisitor#visitFrame} is not called). This flag
@@ -65,7 +65,7 @@ declare namespace org {
                  * that will be ignored and recomputed from scratch.
                  */
                 // @ts-ignore
-                readonly SKIP_FRAMES: number /*int*/
+                public static readonly SKIP_FRAMES: number /*int*/
                 /**
                  * A flag to expand the stack map frames. By default stack map frames are visited in their
                  * original format (i.e. "expanded" for classes whose version is less than V1_6, and "compressed"
@@ -74,19 +74,19 @@ declare namespace org {
                  * degrades performance quite a lot).
                  */
                 // @ts-ignore
-                readonly EXPAND_FRAMES: number /*int*/
+                public static readonly EXPAND_FRAMES: number /*int*/
                 /**
                  * A byte array containing the JVMS ClassFile structure to be parsed.
                  * @deprecated Use {#link #readByte(int)} and the other read methods instead. This field will
                  *      eventually be deleted.
                  */
                 // @ts-ignore
-                readonly b: number /*byte*/[]
+                public readonly b: number /*byte*/[]
                 /**
                  * The offset in bytes of the ClassFile's access_flags field.
                  */
                 // @ts-ignore
-                readonly header: number /*int*/
+                public readonly header: number /*int*/
                 /**
                  * Returns the class's access flags (see {@link Opcodes}). This value may not reflect Deprecated
                  * and Synthetic flags when bytecode is before 1.5 and those flags are represented by attributes.
@@ -94,14 +94,14 @@ declare namespace org {
                  * @see ClassVisitor#visit(int, int, String, String, String, String[])
                  */
                 // @ts-ignore
-                getAccess(): int
+                public getAccess(): number /*int*/
                 /**
                  * Returns the internal name of the class (see {@link Type#getInternalName()}).
                  * @return the internal class name.
                  * @see ClassVisitor#visit(int, int, String, String, String, String[])
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Returns the internal of name of the super class (see {@link Type#getInternalName()}). For
                  * interfaces, the super class is {@link Object}.
@@ -109,7 +109,7 @@ declare namespace org {
                  * @see ClassVisitor#visit(int, int, String, String, String, String[])
                  */
                 // @ts-ignore
-                getSuperName(): java.lang.String
+                public getSuperName(): string
                 /**
                  * Returns the internal names of the implemented interfaces (see {@link Type#getInternalName()}).
                  * @return the internal names of the directly implemented interfaces. Inherited implemented
@@ -117,7 +117,7 @@ declare namespace org {
                  * @see ClassVisitor#visit(int, int, String, String, String, String[])
                  */
                 // @ts-ignore
-                getInterfaces(): java.lang.String[]
+                public getInterfaces(): string[]
                 /**
                  * Makes the given visitor visit the JVMS ClassFile structure passed to the constructor of this
                  * {@link ClassReader}.
@@ -126,7 +126,7 @@ declare namespace org {
                  *      #SKIP_CODE}, {@link #SKIP_DEBUG}, {@link #SKIP_FRAMES} or {@link #EXPAND_FRAMES}.
                  */
                 // @ts-ignore
-                accept(classVisitor: org.springframework.asm.ClassVisitor, parsingOptions: number /*int*/): void
+                public accept(classVisitor: org.springframework.asm.ClassVisitor, parsingOptions: number /*int*/): void
                 /**
                  * Makes the given visitor visit the JVMS ClassFile structure passed to the constructor of this
                  * {@link ClassReader}.
@@ -141,7 +141,7 @@ declare namespace org {
                  *      #SKIP_CODE}, {@link #SKIP_DEBUG}, {@link #SKIP_FRAMES} or {@link #EXPAND_FRAMES}.
                  */
                 // @ts-ignore
-                accept(classVisitor: org.springframework.asm.ClassVisitor, attributePrototypes: org.springframework.asm.Attribute[], parsingOptions: number /*int*/): void
+                public accept(classVisitor: org.springframework.asm.ClassVisitor, attributePrototypes: org.springframework.asm.Attribute[], parsingOptions: number /*int*/): void
                 /**
                  * Returns the label corresponding to the given bytecode offset. The default implementation of
                  * this method creates a label for the given offset if it has not been already created.
@@ -158,7 +158,7 @@ declare namespace org {
                  * @return the number of entries in the class's constant pool table.
                  */
                 // @ts-ignore
-                getItemCount(): int
+                public getItemCount(): number /*int*/
                 /**
                  * Returns the start offset in this {@link ClassReader} of a JVMS 'cp_info' structure (i.e. a
                  * constant pool entry), plus one. <i>This method is intended for {@link Attribute} sub classes,
@@ -169,7 +169,7 @@ declare namespace org {
                  *      structure, plus one.
                  */
                 // @ts-ignore
-                getItem(constantPoolEntryIndex: number /*int*/): int
+                public getItem(constantPoolEntryIndex: number /*int*/): number /*int*/
                 /**
                  * Returns a conservative estimate of the maximum length of the strings contained in the class's
                  * constant pool table.
@@ -177,7 +177,7 @@ declare namespace org {
                  *      constant pool table.
                  */
                 // @ts-ignore
-                getMaxStringLength(): int
+                public getMaxStringLength(): number /*int*/
                 /**
                  * Reads a byte value in this {@link ClassReader}. <i>This method is intended for {@link
                  * Attribute} sub classes, and is normally not needed by class generators or adapters.</i>
@@ -185,7 +185,7 @@ declare namespace org {
                  * @return the read value.
                  */
                 // @ts-ignore
-                readByte(offset: number /*int*/): int
+                public readByte(offset: number /*int*/): number /*int*/
                 /**
                  * Reads an unsigned short value in this {@link ClassReader}. <i>This method is intended for
                  * {@link Attribute} sub classes, and is normally not needed by class generators or adapters.</i>
@@ -193,7 +193,7 @@ declare namespace org {
                  * @return the read value.
                  */
                 // @ts-ignore
-                readUnsignedShort(offset: number /*int*/): int
+                public readUnsignedShort(offset: number /*int*/): number /*int*/
                 /**
                  * Reads a signed short value in this {@link ClassReader}. <i>This method is intended for {@link
                  * Attribute} sub classes, and is normally not needed by class generators or adapters.</i>
@@ -201,7 +201,7 @@ declare namespace org {
                  * @return the read value.
                  */
                 // @ts-ignore
-                readShort(offset: number /*int*/): short
+                public readShort(offset: number /*int*/): number /*short*/
                 /**
                  * Reads a signed int value in this {@link ClassReader}. <i>This method is intended for {@link
                  * Attribute} sub classes, and is normally not needed by class generators or adapters.</i>
@@ -209,7 +209,7 @@ declare namespace org {
                  * @return the read value.
                  */
                 // @ts-ignore
-                readInt(offset: number /*int*/): int
+                public readInt(offset: number /*int*/): number /*int*/
                 /**
                  * Reads a signed long value in this {@link ClassReader}. <i>This method is intended for {@link
                  * Attribute} sub classes, and is normally not needed by class generators or adapters.</i>
@@ -217,7 +217,7 @@ declare namespace org {
                  * @return the read value.
                  */
                 // @ts-ignore
-                readLong(offset: number /*int*/): long
+                public readLong(offset: number /*int*/): number /*long*/
                 /**
                  * Reads a CONSTANT_Utf8 constant pool entry in this {@link ClassReader}. <i>This method is
                  * intended for {@link Attribute} sub classes, and is normally not needed by class generators or
@@ -229,7 +229,7 @@ declare namespace org {
                  * @return the String corresponding to the specified CONSTANT_Utf8 entry.
                  */
                 // @ts-ignore
-                readUTF8(offset: number /*int*/, charBuffer: string[]): java.lang.String
+                public readUTF8(offset: number /*int*/, charBuffer: string[]): string
                 /**
                  * Reads a CONSTANT_Class constant pool entry in this {@link ClassReader}. <i>This method is
                  * intended for {@link Attribute} sub classes, and is normally not needed by class generators or
@@ -241,7 +241,7 @@ declare namespace org {
                  * @return the String corresponding to the specified CONSTANT_Class entry.
                  */
                 // @ts-ignore
-                readClass(offset: number /*int*/, charBuffer: string[]): java.lang.String
+                public readClass(offset: number /*int*/, charBuffer: string[]): string
                 /**
                  * Reads a CONSTANT_Module constant pool entry in this {@link ClassReader}. <i>This method is
                  * intended for {@link Attribute} sub classes, and is normally not needed by class generators or
@@ -253,7 +253,7 @@ declare namespace org {
                  * @return the String corresponding to the specified CONSTANT_Module entry.
                  */
                 // @ts-ignore
-                readModule(offset: number /*int*/, charBuffer: string[]): java.lang.String
+                public readModule(offset: number /*int*/, charBuffer: string[]): string
                 /**
                  * Reads a CONSTANT_Package constant pool entry in this {@link ClassReader}. <i>This method is
                  * intended for {@link Attribute} sub classes, and is normally not needed by class generators or
@@ -265,7 +265,7 @@ declare namespace org {
                  * @return the String corresponding to the specified CONSTANT_Package entry.
                  */
                 // @ts-ignore
-                readPackage(offset: number /*int*/, charBuffer: string[]): java.lang.String
+                public readPackage(offset: number /*int*/, charBuffer: string[]): string
                 /**
                  * Reads a numeric or string constant pool entry in this {@link ClassReader}. <i>This method is
                  * intended for {@link Attribute} sub classes, and is normally not needed by class generators or
@@ -280,7 +280,7 @@ declare namespace org {
                  *      constant pool entry.
                  */
                 // @ts-ignore
-                readConst(constantPoolEntryIndex: number /*int*/, charBuffer: string[]): java.lang.Object
+                public readConst(constantPoolEntryIndex: number /*int*/, charBuffer: string[]): any
             }
         }
     }

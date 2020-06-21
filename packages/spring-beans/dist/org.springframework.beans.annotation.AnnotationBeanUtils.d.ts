@@ -10,7 +10,7 @@ declare namespace org {
                  * @deprecated as of 5.2, in favor of custom annotation attribute processing
                  */
                 // @ts-ignore
-                class AnnotationBeanUtils extends java.lang.Object {
+                abstract class AnnotationBeanUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -22,7 +22,7 @@ declare namespace org {
                      * @see org.springframework.beans.BeanWrapper
                      */
                     // @ts-ignore
-                    copyPropertiesToBean(ann: java.lang.annotation.Annotation, bean: any, ...excludedProperties: string[]): void
+                    public static copyPropertiesToBean(ann: java.lang.annotation.Annotation, bean: java.lang.Object | any, ...excludedProperties: java.lang.String[] | string[]): void
                     /**
                      * Copy the properties of the supplied {@link Annotation} to the supplied target bean.
                      * Any properties defined in {@code excludedProperties} will not be copied.
@@ -34,7 +34,7 @@ declare namespace org {
                      * @see org.springframework.beans.BeanWrapper
                      */
                     // @ts-ignore
-                    copyPropertiesToBean(ann: java.lang.annotation.Annotation, bean: any, valueResolver: StringValueResolver, ...excludedProperties: string[]): void
+                    public static copyPropertiesToBean(ann: java.lang.annotation.Annotation, bean: java.lang.Object | any, valueResolver: StringValueResolver, ...excludedProperties: java.lang.String[] | string[]): void
                 }
             }
         }

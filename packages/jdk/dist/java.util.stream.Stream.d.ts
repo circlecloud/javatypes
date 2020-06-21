@@ -105,7 +105,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                filter(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): java.util.stream.Stream<T>
+                filter(predicate: java.util.function$.Predicate<any>): java.util.stream.Stream<T>
                 /**
                  * Returns a stream consisting of the results of applying the given
                  * function to the elements of this stream.
@@ -118,7 +118,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                map<R>(mapper: java.util.function.Function<any super T, R> | java.util.function$.Function<? super T, R>): java.util.stream.Stream<R>
+                map<R>(mapper: java.util.function$.Function<any, any>): java.util.stream.Stream<R>
                 /**
                  * Returns an {@code IntStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -130,7 +130,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToInt(mapper: java.util.function.ToIntFunction<any super T> | java.util.function$.ToIntFunction<? super T>): java.util.stream.IntStream
+                mapToInt(mapper: java.util.function$.ToIntFunction<any>): java.util.stream.IntStream
                 /**
                  * Returns a {@code LongStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -142,7 +142,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToLong(mapper: java.util.function.ToLongFunction<any super T> | java.util.function$.ToLongFunction<? super T>): java.util.stream.LongStream
+                mapToLong(mapper: java.util.function$.ToLongFunction<any>): java.util.stream.LongStream
                 /**
                  * Returns a {@code DoubleStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -154,7 +154,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToDouble(mapper: java.util.function.ToDoubleFunction<any super T> | java.util.function$.ToDoubleFunction<? super T>): java.util.stream.DoubleStream
+                mapToDouble(mapper: java.util.function$.ToDoubleFunction<any>): java.util.stream.DoubleStream
                 /**
                  * Returns a stream consisting of the results of replacing each element of
                  * this stream with the contents of a mapped stream produced by applying
@@ -194,7 +194,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                flatMap<R>(mapper: java.util.function.Function<any super T, java.util.stream.Stream<R>> | java.util.function$.Function<? super T, java.util.stream.Stream<R>>): java.util.stream.Stream<R>
+                flatMap<R>(mapper: java.util.function$.Function<any, any>): java.util.stream.Stream<R>
                 /**
                  * Returns an {@code IntStream} consisting of the results of replacing each
                  * element of this stream with the contents of a mapped stream produced by
@@ -212,7 +212,7 @@ declare namespace java {
                  * @see #flatMap(Function)
                  */
                 // @ts-ignore
-                flatMapToInt(mapper: java.util.function.Function<any super T, java.util.stream.IntStream> | java.util.function$.Function<? super T, java.util.stream.IntStream>): java.util.stream.IntStream
+                flatMapToInt(mapper: java.util.function$.Function<any, any>): java.util.stream.IntStream
                 /**
                  * Returns an {@code LongStream} consisting of the results of replacing each
                  * element of this stream with the contents of a mapped stream produced by
@@ -230,7 +230,7 @@ declare namespace java {
                  * @see #flatMap(Function)
                  */
                 // @ts-ignore
-                flatMapToLong(mapper: java.util.function.Function<any super T, java.util.stream.LongStream> | java.util.function$.Function<? super T, java.util.stream.LongStream>): java.util.stream.LongStream
+                flatMapToLong(mapper: java.util.function$.Function<any, any>): java.util.stream.LongStream
                 /**
                  * Returns an {@code DoubleStream} consisting of the results of replacing
                  * each element of this stream with the contents of a mapped stream produced
@@ -248,7 +248,7 @@ declare namespace java {
                  * @see #flatMap(Function)
                  */
                 // @ts-ignore
-                flatMapToDouble(mapper: java.util.function.Function<any super T, java.util.stream.DoubleStream> | java.util.function$.Function<? super T, java.util.stream.DoubleStream>): java.util.stream.DoubleStream
+                flatMapToDouble(mapper: java.util.function$.Function<any, any>): java.util.stream.DoubleStream
                 /**
                  * Returns a stream consisting of the distinct elements (according to
                  * {@link Object#equals(Object)}) of this stream.
@@ -299,7 +299,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                sorted(comparator: java.util.Comparator<any super T>): java.util.stream.Stream<T>
+                sorted(comparator: java.util.Comparator<any>): java.util.stream.Stream<T>
                 /**
                  * Returns a stream consisting of the elements of this stream, additionally
                  * performing the provided action on each element as elements are consumed
@@ -326,7 +326,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                peek(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.stream.Stream<T>
+                peek(action: java.util.function$.Consumer<any>): java.util.stream.Stream<T>
                 /**
                  * Returns a stream consisting of the elements of this stream, truncated
                  * to be no longer than {@code maxSize} in length.
@@ -390,7 +390,7 @@ declare namespace java {
                  *                non-interfering</a> action to perform on the elements
                  */
                 // @ts-ignore
-                forEach(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): void
+                forEach(action: java.util.function$.Consumer<any>): void
                 /**
                  * Performs an action for each element of this stream, in the encounter
                  * order of the stream if the stream has a defined encounter order.
@@ -406,7 +406,7 @@ declare namespace java {
                  * @see #forEach(Consumer)
                  */
                 // @ts-ignore
-                forEachOrdered(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): void
+                forEachOrdered(action: java.util.function$.Consumer<any>): void
                 /**
                  * Returns an array containing the elements of this stream.
                  * <p>This is a <a href="package-summary.html#StreamOps">terminal
@@ -414,7 +414,7 @@ declare namespace java {
                  * @return an array containing the elements of this stream
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                toArray(): any[]
                 /**
                  * Returns an array containing the elements of this stream, using the
                  * provided {@code generator} function to allocate the returned array, as
@@ -439,7 +439,7 @@ declare namespace java {
                  *  element in this stream
                  */
                 // @ts-ignore
-                toArray<A>(generator: java.util.function.IntFunction<A[]> | java.util.function$.IntFunction<A[]>): A
+                toArray<A>(generator: java.util.function$.IntFunction<A[]>): A
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using the provided identity value and an
@@ -485,7 +485,7 @@ declare namespace java {
                  * @return the result of the reduction
                  */
                 // @ts-ignore
-                reduce(identity: T, accumulator: java.util.function.BinaryOperator<T> | java.util.function$.BinaryOperator<T>): T
+                reduce(identity: T, accumulator: java.util.function$.BinaryOperator<T>): T
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using an
@@ -521,7 +521,7 @@ declare namespace java {
                  * @see #max(Comparator)
                  */
                 // @ts-ignore
-                reduce(accumulator: java.util.function.BinaryOperator<T> | java.util.function$.BinaryOperator<T>): java.util.Optional<T>
+                reduce(accumulator: java.util.function$.BinaryOperator<T>): java.util.Optional<T>
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using the provided identity, accumulation and
@@ -565,7 +565,7 @@ declare namespace java {
                  * @see #reduce(Object, BinaryOperator)
                  */
                 // @ts-ignore
-                reduce<U>(identity: U, accumulator: java.util.function.BiFunction<U, any super T, U> | java.util.function$.BiFunction<U, ? super T, U>, combiner: java.util.function.BinaryOperator<U> | java.util.function$.BinaryOperator<U>): U
+                reduce<U>(identity: U, accumulator: java.util.function$.BiFunction<U, any, U>, combiner: java.util.function$.BinaryOperator<U>): U
                 /**
                  * Performs a <a href="package-summary.html#MutableReduction">mutable
                  * reduction</a> operation on the elements of this stream.  A mutable
@@ -614,7 +614,7 @@ declare namespace java {
                  * @return the result of the reduction
                  */
                 // @ts-ignore
-                collect<R>(supplier: java.util.function.Supplier<R> | java.util.function$.Supplier<R>, accumulator: java.util.function.BiConsumer<R, any super T> | java.util.function$.BiConsumer<R, ? super T>, combiner: java.util.function.BiConsumer<R, R> | java.util.function$.BiConsumer<R, R>): R
+                collect<R>(supplier: java.util.function$.Supplier<R>, accumulator: java.util.function$.BiConsumer<R, any>, combiner: java.util.function$.BiConsumer<R, R>): R
                 /**
                  * Performs a <a href="package-summary.html#MutableReduction">mutable
                  * reduction</a> operation on the elements of this stream using a
@@ -662,7 +662,7 @@ declare namespace java {
                  * @see Collectors
                  */
                 // @ts-ignore
-                collect<R, A>(collector: java.util.stream.Collector<any super T, A, R>): R
+                collect<R, A>(collector: java.util.stream.Collector<any, A, R>): R
                 /**
                  * Returns the minimum element of this stream according to the provided
                  * {@code Comparator}.  This is a special case of a
@@ -676,7 +676,7 @@ declare namespace java {
                  * @throws NullPointerException if the minimum element is null
                  */
                 // @ts-ignore
-                min(comparator: java.util.Comparator<any super T>): java.util.Optional<T>
+                min(comparator: java.util.Comparator<any>): java.util.Optional<T>
                 /**
                  * Returns the maximum element of this stream according to the provided
                  * {@code Comparator}.  This is a special case of a
@@ -691,7 +691,7 @@ declare namespace java {
                  * @throws NullPointerException if the maximum element is null
                  */
                 // @ts-ignore
-                max(comparator: java.util.Comparator<any super T>): java.util.Optional<T>
+                max(comparator: java.util.Comparator<any>): java.util.Optional<T>
                 /**
                  * Returns the count of elements in this stream.  This is a special case of
                  * a <a href="package-summary.html#Reduction">reduction</a> and is
@@ -703,7 +703,7 @@ declare namespace java {
                  * @return the count of elements in this stream
                  */
                 // @ts-ignore
-                count(): long
+                count(): number /*long*/
                 /**
                  * Returns whether any elements of this stream match the provided
                  * predicate.  May not evaluate the predicate on all elements if not
@@ -720,7 +720,7 @@ declare namespace java {
                  *  predicate, otherwise {@code false}
                  */
                 // @ts-ignore
-                anyMatch(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): boolean
+                anyMatch(predicate: java.util.function$.Predicate<any>): boolean
                 /**
                  * Returns whether all elements of this stream match the provided predicate.
                  * May not evaluate the predicate on all elements if not necessary for
@@ -739,7 +739,7 @@ declare namespace java {
                  *  provided predicate or the stream is empty, otherwise {@code false}
                  */
                 // @ts-ignore
-                allMatch(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): boolean
+                allMatch(predicate: java.util.function$.Predicate<any>): boolean
                 /**
                  * Returns whether no elements of this stream match the provided predicate.
                  * May not evaluate the predicate on all elements if not necessary for
@@ -758,7 +758,7 @@ declare namespace java {
                  *  provided predicate or the stream is empty, otherwise {@code false}
                  */
                 // @ts-ignore
-                noneMatch(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): boolean
+                noneMatch(predicate: java.util.function$.Predicate<any>): boolean
                 /**
                  * Returns an {@link Optional} describing the first element of this stream,
                  * or an empty {@code Optional} if the stream is empty.  If the stream has
@@ -834,7 +834,7 @@ declare namespace java {
                  * @return a new sequential {#code Stream}
                  */
                 // @ts-ignore
-                iterate<T>(seed: T, f: java.util.function.UnaryOperator<T> | java.util.function$.UnaryOperator<T>): java.util.stream.Stream<T>
+                iterate<T>(seed: T, f: java.util.function$.UnaryOperator<T>): java.util.stream.Stream<T>
                 /**
                  * Returns an infinite sequential unordered stream where each element is
                  * generated by the provided {@code Supplier}.  This is suitable for
@@ -844,7 +844,7 @@ declare namespace java {
                  * @return a new infinite sequential unordered {#code Stream}
                  */
                 // @ts-ignore
-                generate<T>(s: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): java.util.stream.Stream<T>
+                generate<T>(s: java.util.function$.Supplier<T>): java.util.stream.Stream<T>
                 /**
                  * Creates a lazily concatenated stream whose elements are all the
                  * elements of the first stream followed by all the elements of the
@@ -861,7 +861,7 @@ declare namespace java {
                  * @return the concatenation of the two input streams
                  */
                 // @ts-ignore
-                concat<T>(a: java.util.stream.Stream<T>, b: java.util.stream.Stream<T>): java.util.stream.Stream<T>
+                concat<T>(a: java.util.stream.Stream<any>, b: java.util.stream.Stream<any>): java.util.stream.Stream<T>
             }
         }
     }

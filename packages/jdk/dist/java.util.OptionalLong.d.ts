@@ -27,14 +27,14 @@ declare namespace java {
              * @return an empty {#code OptionalLong}.
              */
             // @ts-ignore
-            empty(): java.util.OptionalLong
+            public static empty(): java.util.OptionalLong
             /**
              * Return an {@code OptionalLong} with the specified value present.
              * @param value the value to be present
              * @return an {#code OptionalLong} with the value present
              */
             // @ts-ignore
-            of(value: number /*long*/): java.util.OptionalLong
+            public static of(value: number /*long*/): java.util.OptionalLong
             /**
              * If a value is present in this {@code OptionalLong}, returns the value,
              * otherwise throws {@code NoSuchElementException}.
@@ -43,13 +43,13 @@ declare namespace java {
              * @see OptionalLong#isPresent()
              */
             // @ts-ignore
-            getAsLong(): long
+            public getAsLong(): number /*long*/
             /**
              * Return {@code true} if there is a value present, otherwise {@code false}.
              * @return {#code true} if there is a value present, otherwise {@code false}
              */
             // @ts-ignore
-            isPresent(): boolean
+            public isPresent(): boolean
             /**
              * Have the specified consumer accept the value if a value is present,
              * otherwise do nothing.
@@ -58,14 +58,14 @@ declare namespace java {
              *  null
              */
             // @ts-ignore
-            ifPresent(consumer: java.util.function.LongConsumer | java.util.function$.LongConsumer): void
+            public ifPresent(consumer: java.util.function$.LongConsumer): void
             /**
              * Return the value if present, otherwise return {@code other}.
              * @param other the value to be returned if there is no value present
              * @return the value, if present, otherwise {#code other}
              */
             // @ts-ignore
-            orElse(other: number /*long*/): long
+            public orElse(other: number /*long*/): number /*long*/
             /**
              * Return the value if present, otherwise invoke {@code other} and return
              * the result of that invocation.
@@ -76,7 +76,7 @@ declare namespace java {
              *  null
              */
             // @ts-ignore
-            orElseGet(other: java.util.function.LongSupplier | java.util.function$.LongSupplier): long
+            public orElseGet(other: java.util.function$.LongSupplier): number /*long*/
             /**
              * Return the contained value, if present, otherwise throw an exception
              * to be created by the provided supplier.
@@ -92,7 +92,7 @@ declare namespace java {
              *  {#code exceptionSupplier} is null
              */
             // @ts-ignore
-            orElseThrow<X extends java.lang.Throwable>(exceptionSupplier: java.util.function.Supplier<X> | java.util.function$.Supplier<X>): long
+            public orElseThrow<X extends java.lang.Throwable>(exceptionSupplier: java.util.function$.Supplier<X>): number /*long*/
             /**
              * Indicates whether some other object is "equal to" this OptionalLong. The
              * other object is considered equal if:
@@ -106,14 +106,14 @@ declare namespace java {
              *  otherwise {#code false}
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value of the present value, if any, or 0 (zero) if
              * no value is present.
              * @return hash code value of the present value or 0 if no value is present
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * {@inheritDoc}
              * Returns a non-empty string representation of this object suitable for
@@ -125,7 +125,7 @@ declare namespace java {
              * @return the string representation of this instance
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -17,7 +17,7 @@ declare namespace org {
                                  * functional equivalent to saying "remove all fluids from that direction".
                                  */
                                 // @ts-ignore
-                                interface FluidTankData extends org.spongepowered.api.data.manipulator.mutable.MappedData<org.spongepowered.api.util.Direction, java.util.List<org.spongepowered.api.extra.fluid.FluidStackSnapshot>, org.spongepowered.api.extra.fluid.data.manipulator.mutable.FluidTankData, org.spongepowered.api.extra.fluid.data.manipulator.immutable.ImmutableFluidTankData> {
+                                interface FluidTankData extends org.spongepowered.api.data.manipulator.mutable.MappedData<org.spongepowered.api.util.Direction, java.util.List<org.spongepowered.api.extra.fluid.FluidStackSnapshot> | Array<org.spongepowered.api.extra.fluid.FluidStackSnapshot>, org.spongepowered.api.extra.fluid.data.manipulator.mutable.FluidTankData, org.spongepowered.api.extra.fluid.data.manipulator.immutable.ImmutableFluidTankData> {
                                     /**
                                      * Gets the {@link MapValue} of the various {@link FluidStackSnapshot}s
                                      * available from the owner. Note that a fluid tank may have multiple
@@ -26,7 +26,7 @@ declare namespace org {
                                      * @see Keys#FLUID_TANK_CONTENTS
                                      */
                                     // @ts-ignore
-                                    fluids(): org.spongepowered.api.data.value.mutable.MapValue<org.spongepowered.api.util.Direction, java.util.List<org.spongepowered.api.extra.fluid.FluidStackSnapshot>>
+                                    fluids(): org.spongepowered.api.data.value.mutable.MapValue<org.spongepowered.api.util.Direction, java.util.List<org.spongepowered.api.extra.fluid.FluidStackSnapshot> | Array<org.spongepowered.api.extra.fluid.FluidStackSnapshot>>
                                     /**
                                      * Gets the {@link List} of {@link FluidStackSnapshot}s at a defined
                                      * {@link Direction}.
@@ -34,7 +34,7 @@ declare namespace org {
                                      * @return The list of fluid stack snapshots, if available
                                      */
                                     // @ts-ignore
-                                    fluidAtDirection(direction: org.spongepowered.api.util.Direction): java.util.Optional<java.util.List<org.spongepowered.api.extra.fluid.FluidStackSnapshot>>
+                                    fluidAtDirection(direction: org.spongepowered.api.util.Direction): java.util.Optional<java.util.List<org.spongepowered.api.extra.fluid.FluidStackSnapshot> | Array<org.spongepowered.api.extra.fluid.FluidStackSnapshot>>
                                 }
                             }
                         }

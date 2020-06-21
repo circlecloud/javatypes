@@ -40,7 +40,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code nThreads <= 0}
                  */
                 // @ts-ignore
-                newFixedThreadPool(nThreads: number /*int*/): java.util.concurrent.ExecutorService
+                public static newFixedThreadPool(nThreads: number /*int*/): java.util.concurrent.ExecutorService
                 /**
                  * Creates a thread pool that maintains enough threads to support
                  * the given parallelism level, and may use multiple queues to
@@ -56,7 +56,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                newWorkStealingPool(parallelism: number /*int*/): java.util.concurrent.ExecutorService
+                public static newWorkStealingPool(parallelism: number /*int*/): java.util.concurrent.ExecutorService
                 /**
                  * Creates a work-stealing thread pool using all
                  * {@link Runtime#availableProcessors available processors}
@@ -66,7 +66,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                newWorkStealingPool(): java.util.concurrent.ExecutorService
+                public static newWorkStealingPool(): java.util.concurrent.ExecutorService
                 /**
                  * Creates a thread pool that reuses a fixed number of threads
                  * operating off a shared unbounded queue, using the provided
@@ -86,7 +86,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code nThreads <= 0}
                  */
                 // @ts-ignore
-                newFixedThreadPool(nThreads: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ExecutorService
+                public static newFixedThreadPool(nThreads: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ExecutorService
                 /**
                  * Creates an Executor that uses a single worker thread operating
                  * off an unbounded queue. (Note however that if this single
@@ -100,7 +100,7 @@ declare namespace java {
                  * @return the newly created single-threaded Executor
                  */
                 // @ts-ignore
-                newSingleThreadExecutor(): java.util.concurrent.ExecutorService
+                public static newSingleThreadExecutor(): java.util.concurrent.ExecutorService
                 /**
                  * Creates an Executor that uses a single worker thread operating
                  * off an unbounded queue, and uses the provided ThreadFactory to
@@ -114,7 +114,7 @@ declare namespace java {
                  * @throws NullPointerException if threadFactory is null
                  */
                 // @ts-ignore
-                newSingleThreadExecutor(threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ExecutorService
+                public static newSingleThreadExecutor(threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ExecutorService
                 /**
                  * Creates a thread pool that creates new threads as needed, but
                  * will reuse previously constructed threads when they are
@@ -131,7 +131,7 @@ declare namespace java {
                  * @return the newly created thread pool
                  */
                 // @ts-ignore
-                newCachedThreadPool(): java.util.concurrent.ExecutorService
+                public static newCachedThreadPool(): java.util.concurrent.ExecutorService
                 /**
                  * Creates a thread pool that creates new threads as needed, but
                  * will reuse previously constructed threads when they are
@@ -142,7 +142,7 @@ declare namespace java {
                  * @throws NullPointerException if threadFactory is null
                  */
                 // @ts-ignore
-                newCachedThreadPool(threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ExecutorService
+                public static newCachedThreadPool(threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ExecutorService
                 /**
                  * Creates a single-threaded executor that can schedule commands
                  * to run after a given delay, or to execute periodically.
@@ -157,7 +157,7 @@ declare namespace java {
                  * @return the newly created scheduled executor
                  */
                 // @ts-ignore
-                newSingleThreadScheduledExecutor(): java.util.concurrent.ScheduledExecutorService
+                public static newSingleThreadScheduledExecutor(): java.util.concurrent.ScheduledExecutorService
                 /**
                  * Creates a single-threaded executor that can schedule commands
                  * to run after a given delay, or to execute periodically.  (Note
@@ -175,7 +175,7 @@ declare namespace java {
                  * @throws NullPointerException if threadFactory is null
                  */
                 // @ts-ignore
-                newSingleThreadScheduledExecutor(threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ScheduledExecutorService
+                public static newSingleThreadScheduledExecutor(threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ScheduledExecutorService
                 /**
                  * Creates a thread pool that can schedule commands to run after a
                  * given delay, or to execute periodically.
@@ -185,7 +185,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code corePoolSize < 0}
                  */
                 // @ts-ignore
-                newScheduledThreadPool(corePoolSize: number /*int*/): java.util.concurrent.ScheduledExecutorService
+                public static newScheduledThreadPool(corePoolSize: number /*int*/): java.util.concurrent.ScheduledExecutorService
                 /**
                  * Creates a thread pool that can schedule commands to run after a
                  * given delay, or to execute periodically.
@@ -198,7 +198,7 @@ declare namespace java {
                  * @throws NullPointerException if threadFactory is null
                  */
                 // @ts-ignore
-                newScheduledThreadPool(corePoolSize: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ScheduledExecutorService
+                public static newScheduledThreadPool(corePoolSize: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.util.concurrent.ScheduledExecutorService
                 /**
                  * Returns an object that delegates all defined {@link
                  * ExecutorService} methods to the given executor, but not any
@@ -210,7 +210,7 @@ declare namespace java {
                  * @throws NullPointerException if executor null
                  */
                 // @ts-ignore
-                unconfigurableExecutorService(executor: java.util.concurrent.ExecutorService): java.util.concurrent.ExecutorService
+                public static unconfigurableExecutorService(executor: java.util.concurrent.ExecutorService): java.util.concurrent.ExecutorService
                 /**
                  * Returns an object that delegates all defined {@link
                  * ScheduledExecutorService} methods to the given executor, but
@@ -222,7 +222,7 @@ declare namespace java {
                  * @throws NullPointerException if executor null
                  */
                 // @ts-ignore
-                unconfigurableScheduledExecutorService(executor: java.util.concurrent.ScheduledExecutorService): java.util.concurrent.ScheduledExecutorService
+                public static unconfigurableScheduledExecutorService(executor: java.util.concurrent.ScheduledExecutorService): java.util.concurrent.ScheduledExecutorService
                 /**
                  * Returns a default thread factory used to create new threads.
                  * This factory creates all new threads used by an Executor in the
@@ -240,7 +240,7 @@ declare namespace java {
                  * @return a thread factory
                  */
                 // @ts-ignore
-                defaultThreadFactory(): java.util.concurrent.ThreadFactory
+                public static defaultThreadFactory(): java.util.concurrent.ThreadFactory
                 /**
                  * Returns a thread factory used to create new threads that
                  * have the same permissions as the current thread.
@@ -273,7 +273,7 @@ declare namespace java {
                  *  class loader
                  */
                 // @ts-ignore
-                privilegedThreadFactory(): java.util.concurrent.ThreadFactory
+                public static privilegedThreadFactory(): java.util.concurrent.ThreadFactory
                 /**
                  * Returns a {@link Callable} object that, when
                  * called, runs the given task and returns the given result.  This
@@ -286,7 +286,7 @@ declare namespace java {
                  * @throws NullPointerException if task null
                  */
                 // @ts-ignore
-                callable<T>(task: java.lang.Runnable, result: T): java.util.concurrent.Callable<T>
+                public static callable<T>(task: java.lang.Runnable, result: T): java.util.concurrent.Callable<T>
                 /**
                  * Returns a {@link Callable} object that, when
                  * called, runs the given task and returns {@code null}.
@@ -295,7 +295,7 @@ declare namespace java {
                  * @throws NullPointerException if task null
                  */
                 // @ts-ignore
-                callable(task: java.lang.Runnable): java.util.concurrent.Callable<java.lang.Object>
+                public static callable(task: java.lang.Runnable): java.util.concurrent.Callable<java.lang.Object | any>
                 /**
                  * Returns a {@link Callable} object that, when
                  * called, runs the given privileged action and returns its result.
@@ -304,7 +304,7 @@ declare namespace java {
                  * @throws NullPointerException if action null
                  */
                 // @ts-ignore
-                callable(action: java.security.PrivilegedAction<any>): java.util.concurrent.Callable<java.lang.Object>
+                public static callable(action: java.security.PrivilegedAction<any>): java.util.concurrent.Callable<java.lang.Object | any>
                 /**
                  * Returns a {@link Callable} object that, when
                  * called, runs the given privileged exception action and returns
@@ -314,7 +314,7 @@ declare namespace java {
                  * @throws NullPointerException if action null
                  */
                 // @ts-ignore
-                callable(action: java.security.PrivilegedExceptionAction<any>): java.util.concurrent.Callable<java.lang.Object>
+                public static callable(action: java.security.PrivilegedExceptionAction<any>): java.util.concurrent.Callable<java.lang.Object | any>
                 /**
                  * Returns a {@link Callable} object that will, when called,
                  * execute the given {@code callable} under the current access
@@ -330,7 +330,7 @@ declare namespace java {
                  * @throws NullPointerException if callable null
                  */
                 // @ts-ignore
-                privilegedCallable<T>(callable: java.util.concurrent.Callable<T>): java.util.concurrent.Callable<T>
+                public static privilegedCallable<T>(callable: java.util.concurrent.Callable<T>): java.util.concurrent.Callable<T>
                 /**
                  * Returns a {@link Callable} object that will, when called,
                  * execute the given {@code callable} under the current access
@@ -351,7 +351,7 @@ declare namespace java {
                  *  class loader
                  */
                 // @ts-ignore
-                privilegedCallableUsingCurrentClassLoader<T>(callable: java.util.concurrent.Callable<T>): java.util.concurrent.Callable<T>
+                public static privilegedCallableUsingCurrentClassLoader<T>(callable: java.util.concurrent.Callable<T>): java.util.concurrent.Callable<T>
             }
         }
     }

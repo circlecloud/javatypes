@@ -12,10 +12,35 @@ declare namespace java {
              */
             // @ts-ignore
             class ModalExclusionType extends java.lang.Enum<java.awt.Dialog.ModalExclusionType> {
+                /**
+                 * No modal exclusion.
+                 */
+                // @ts-ignore
+                readonly NO_EXCLUDE: java.awt.Dialog.ModalExclusionType
+                /**
+                 * <code>APPLICATION_EXCLUDE</code> indicates that a top-level window
+                 * won't be blocked by any application-modal dialogs. Also, it isn't
+                 * blocked by document-modal dialogs from outside of its child hierarchy.
+                 */
+                // @ts-ignore
+                readonly APPLICATION_EXCLUDE: java.awt.Dialog.ModalExclusionType
+                /**
+                 * <code>TOOLKIT_EXCLUDE</code> indicates that a top-level window
+                 * won't be blocked by  application-modal or toolkit-modal dialogs. Also,
+                 * it isn't blocked by document-modal dialogs from outside of its
+                 * child hierarchy.
+                 * The "toolkitModality" <code>AWTPermission</code> must be granted
+                 * for this exclusion. If an exclusion property is being changed to
+                 * <code>TOOLKIT_EXCLUDE</code> and this permission is not granted, a
+                 * <code>SecurityEcxeption</code> will be thrown, and the exclusion
+                 * property will be left unchanged.
+                 */
+                // @ts-ignore
+                readonly TOOLKIT_EXCLUDE: java.awt.Dialog.ModalExclusionType
                 // @ts-ignore
                 values(): java.awt.Dialog.ModalExclusionType[]
                 // @ts-ignore
-                valueOf(name: string): java.awt.Dialog.ModalExclusionType
+                valueOf(name: java.lang.String | string): java.awt.Dialog.ModalExclusionType
             }
         }
     }

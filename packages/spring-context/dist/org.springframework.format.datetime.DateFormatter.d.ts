@@ -22,20 +22,20 @@ declare namespace org {
                      * Create a new DateFormatter for the given date pattern.
                      */
                     // @ts-ignore
-                    constructor(pattern: string)
+                    constructor(pattern: java.lang.String | string)
                     /**
                      * Set the pattern to use to format date values.
                      * <p>If not specified, DateFormat's default style will be used.
                      */
                     // @ts-ignore
-                    setPattern(pattern: string): void
+                    public setPattern(pattern: java.lang.String | string): void
                     /**
                      * Set the ISO format used for this date.
                      * @param iso the {#link ISO} format
                      * @since 3.2
                      */
                     // @ts-ignore
-                    setIso(iso: org.springframework.format.annotation.DateTimeFormat.ISO): void
+                    public setIso(iso: org.springframework.format.annotation.DateTimeFormat.ISO): void
                     /**
                      * Set the style to use to format date values.
                      * <p>If not specified, DateFormat's default style will be used.
@@ -46,7 +46,7 @@ declare namespace org {
                      * @see DateFormat#FULL
                      */
                     // @ts-ignore
-                    setStyle(style: number /*int*/): void
+                    public setStyle(style: number /*int*/): void
                     /**
                      * Set the two character to use to format date values. The first character used for
                      * the date style, the second is for the time style. Supported characters are
@@ -62,23 +62,23 @@ declare namespace org {
                      * @since 3.2
                      */
                     // @ts-ignore
-                    setStylePattern(stylePattern: string): void
+                    public setStylePattern(stylePattern: java.lang.String | string): void
                     /**
                      * Set the TimeZone to normalize the date values into, if any.
                      */
                     // @ts-ignore
-                    setTimeZone(timeZone: java.util.TimeZone): void
+                    public setTimeZone(timeZone: java.util.TimeZone): void
                     /**
                      * Specify whether or not parsing is to be lenient. Default is false.
                      * <p>With lenient parsing, the parser may allow inputs that do not precisely match the format.
                      * With strict parsing, inputs must match the format exactly.
                      */
                     // @ts-ignore
-                    setLenient(lenient: boolean): void
+                    public setLenient(lenient: boolean): void
                     // @ts-ignore
-                    print(date: java.util.Date, locale: java.util.Locale): java.lang.String
+                    public print(date: java.util.Date, locale: java.util.Locale): string
                     // @ts-ignore
-                    parse(text: string, locale: java.util.Locale): java.util.Date
+                    public parse(text: java.lang.String | string, locale: java.util.Locale): java.util.Date
                     // @ts-ignore
                     getDateFormat(locale: java.util.Locale): java.text.DateFormat
                 }

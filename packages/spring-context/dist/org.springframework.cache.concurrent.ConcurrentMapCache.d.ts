@@ -24,7 +24,7 @@ declare namespace org {
                      * @param name the name of the cache
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Create a new ConcurrentMapCache with the specified name.
                      * @param name the name of the cache
@@ -32,7 +32,7 @@ declare namespace org {
                      *  values for this cache
                      */
                     // @ts-ignore
-                    constructor(name: string, allowNullValues: boolean)
+                    constructor(name: java.lang.String | string, allowNullValues: boolean)
                     /**
                      * Create a new ConcurrentMapCache with the specified name and the
                      * given internal {@link ConcurrentMap} to use.
@@ -42,7 +42,7 @@ declare namespace org {
                      *  (adapting them to an internal null holder value)
                      */
                     // @ts-ignore
-                    constructor(name: string, store: java.util.concurrent.ConcurrentMap<java.lang.Object, java.lang.Object>, allowNullValues: boolean)
+                    constructor(name: java.lang.String | string, store: java.util.concurrent.ConcurrentMap<java.lang.Object | any, java.lang.Object | any>, allowNullValues: boolean)
                     /**
                      * Create a new ConcurrentMapCache with the specified name and the
                      * given internal {@link ConcurrentMap} to use. If the
@@ -57,7 +57,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    constructor(name: string, store: java.util.concurrent.ConcurrentMap<java.lang.Object, java.lang.Object>, allowNullValues: boolean, serialization: SerializationDelegate)
+                    constructor(name: java.lang.String | string, store: java.util.concurrent.ConcurrentMap<java.lang.Object | any, java.lang.Object | any>, allowNullValues: boolean, serialization: SerializationDelegate)
                     /**
                      * Return whether this cache stores a copy of each entry ({@code true}) or
                      * a reference ({@code false}, default). If store by value is enabled, each
@@ -65,31 +65,31 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    isStoreByValue(): boolean
+                    public isStoreByValue(): boolean
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     // @ts-ignore
-                    getNativeCache(): java.util.concurrent.ConcurrentMap<java.lang.Object, java.lang.Object>
+                    public getNativeCache(): java.util.concurrent.ConcurrentMap<java.lang.Object | any, java.lang.Object | any>
                     // @ts-ignore
-                    lookup(key: any): java.lang.Object
+                    lookup(key: java.lang.Object | any): any
                     // @ts-ignore
-                    get<T>(key: any, valueLoader: java.util.concurrent.Callable<T>): T
+                    public get<T>(key: java.lang.Object | any, valueLoader: java.util.concurrent.Callable<T>): T
                     // @ts-ignore
-                    put(key: any, value: any): void
+                    public put(key: java.lang.Object | any, value: java.lang.Object | any): void
                     // @ts-ignore
-                    putIfAbsent(key: any, value: any): org.springframework.cache.Cache.ValueWrapper
+                    public putIfAbsent(key: java.lang.Object | any, value: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                     // @ts-ignore
-                    evict(key: any): void
+                    public evict(key: java.lang.Object | any): void
                     // @ts-ignore
-                    evictIfPresent(key: any): boolean
+                    public evictIfPresent(key: java.lang.Object | any): boolean
                     // @ts-ignore
-                    clear(): void
+                    public clear(): void
                     // @ts-ignore
-                    invalidate(): boolean
+                    public invalidate(): boolean
                     // @ts-ignore
-                    toStoreValue(userValue: any): java.lang.Object
+                    toStoreValue(userValue: java.lang.Object | any): any
                     // @ts-ignore
-                    fromStoreValue(storeValue: any): java.lang.Object
+                    fromStoreValue(storeValue: java.lang.Object | any): any
                 }
             }
         }

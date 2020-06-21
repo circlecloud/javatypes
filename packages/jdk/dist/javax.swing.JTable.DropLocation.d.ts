@@ -23,7 +23,7 @@ declare namespace javax {
                  * @return the drop row
                  */
                 // @ts-ignore
-                getRow(): int
+                public getRow(): number /*int*/
                 /**
                  * Returns the column index where a dropped item should be placed in the
                  * table. Interpretation of the value depends on the return of
@@ -38,21 +38,21 @@ declare namespace javax {
                  * @return the drop row
                  */
                 // @ts-ignore
-                getColumn(): int
+                public getColumn(): number /*int*/
                 /**
                  * Returns whether or not this location represents an insert
                  * of a row.
                  * @return whether or not this is an insert row
                  */
                 // @ts-ignore
-                isInsertRow(): boolean
+                public isInsertRow(): boolean
                 /**
                  * Returns whether or not this location represents an insert
                  * of a column.
                  * @return whether or not this is an insert column
                  */
                 // @ts-ignore
-                isInsertColumn(): boolean
+                public isInsertColumn(): boolean
                 /**
                  * Returns a string representation of this drop location.
                  * This method is intended to be used for debugging purposes,
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @return a string representation of this drop location
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

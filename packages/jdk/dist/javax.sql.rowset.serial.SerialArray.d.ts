@@ -77,7 +77,7 @@ declare namespace javax {
                      *         <i>array</i> or the <i>map</i> values are <code>null</code>
                      */
                     // @ts-ignore
-                    constructor(array: java.sql.Array, map: java.util.Map<java.lang.String, java.lang.Class<any>>)
+                    constructor(array: java.sql.Array, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>)
                     /**
                      * Constructs a new <code>SerialArray</code> object from the given
                      * <code>Array</code> object.
@@ -121,7 +121,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    free(): void
+                    public free(): void
                     /**
                      * Returns a new array that is a copy of this <code>SerialArray</code>
                      * object.
@@ -131,7 +131,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getArray(): java.lang.Object
+                    public getArray(): any
                     /**
                      * Returns a new array that is a copy of this <code>SerialArray</code>
                      * object, using the given type map for the custom
@@ -155,7 +155,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getArray(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+                    public getArray(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
                     /**
                      * Returns a new array that is a copy of a slice
                      * of this <code>SerialArray</code> object, starting with the
@@ -172,7 +172,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getArray(index: number /*long*/, count: number /*int*/): java.lang.Object
+                    public getArray(index: number /*long*/, count: number /*int*/): any
                     /**
                      * Returns a new array that is a copy of a slice
                      * of this <code>SerialArray</code> object, starting with the
@@ -202,7 +202,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getArray(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+                    public getArray(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
                     /**
                      * Retrieves the SQL type of the elements in this <code>SerialArray</code>
                      * object.  The <code>int</code> returned is one of the constants in the class
@@ -213,7 +213,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getBaseType(): int
+                    public getBaseType(): number /*int*/
                     /**
                      * Retrieves the DBMS-specific type name for the elements in this
                      * <code>SerialArray</code> object.
@@ -223,7 +223,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getBaseTypeName(): java.lang.String
+                    public getBaseTypeName(): string
                     /**
                      * Retrieves a <code>ResultSet</code> object holding the elements of
                      * the subarray that starts at
@@ -243,7 +243,7 @@ declare namespace javax {
                      *          {#code UnsupportedOperationException}
                      */
                     // @ts-ignore
-                    getResultSet(index: number /*long*/, count: number /*int*/): java.sql.ResultSet
+                    public getResultSet(index: number /*long*/, count: number /*int*/): java.sql.ResultSet
                     /**
                      * Retrieves a <code>ResultSet</code> object that contains all of
                      * the elements of the SQL <code>ARRAY</code>
@@ -266,7 +266,7 @@ declare namespace javax {
                      *          {#code UnsupportedOperationException}
                      */
                     // @ts-ignore
-                    getResultSet(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.sql.ResultSet
+                    public getResultSet(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): java.sql.ResultSet
                     /**
                      * Retrieves a <code>ResultSet</code> object that contains all of
                      * the elements in the <code>ARRAY</code> value that this
@@ -280,7 +280,7 @@ declare namespace javax {
                      *          {#code UnsupportedOperationException}
                      */
                     // @ts-ignore
-                    getResultSet(): java.sql.ResultSet
+                    public getResultSet(): java.sql.ResultSet
                     /**
                      * Retrieves a result set holding the elements of the subarray that starts at
                      * Retrieves a <code>ResultSet</code> object that contains a subarray of the
@@ -310,7 +310,7 @@ declare namespace javax {
                      *          {#code UnsupportedOperationException}
                      */
                     // @ts-ignore
-                    getResultSet(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.sql.ResultSet
+                    public getResultSet(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): java.sql.ResultSet
                     /**
                      * Compares this SerialArray to the specified object.  The result is {@code
                      * true} if and only if the argument is not {@code null} and is a {@code
@@ -320,7 +320,7 @@ declare namespace javax {
                      *           equivalent to this SerialArray, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this SerialArray. The hash code for a
                      * {@code SerialArray} object is computed using the hash codes
@@ -328,7 +328,7 @@ declare namespace javax {
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialArray}. The copy will contain a
                      * reference to a clone of the underlying objects array, not a reference
@@ -336,7 +336,7 @@ declare namespace javax {
                      * @return a clone of this SerialArray
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

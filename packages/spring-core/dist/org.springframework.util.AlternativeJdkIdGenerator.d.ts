@@ -15,7 +15,7 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                generateId(): java.util.UUID
+                public generateId(): java.util.UUID
             }
         }
     }

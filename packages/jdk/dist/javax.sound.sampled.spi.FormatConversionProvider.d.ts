@@ -20,7 +20,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class FormatConversionProvider extends java.lang.Object {
+                abstract class FormatConversionProvider extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -31,7 +31,7 @@ declare namespace javax {
                      *  returned.
                      */
                     // @ts-ignore
-                    abstract getSourceEncodings(): javax.sound.sampled.AudioFormat.Encoding[]
+                    public abstract getSourceEncodings(): javax.sound.sampled.AudioFormat.Encoding[]
                     /**
                      * Obtains the set of target format encodings to which format
                      * conversion services are provided by this provider.
@@ -40,7 +40,7 @@ declare namespace javax {
                      *  returned.
                      */
                     // @ts-ignore
-                    abstract getTargetEncodings(): javax.sound.sampled.AudioFormat.Encoding[]
+                    public abstract getTargetEncodings(): javax.sound.sampled.AudioFormat.Encoding[]
                     /**
                      * Indicates whether the format converter supports conversion from the
                      * specified source format encoding.
@@ -48,7 +48,7 @@ declare namespace javax {
                      * @return <code>true</code> if the encoding is supported, otherwise <code>false</code>
                      */
                     // @ts-ignore
-                    isSourceEncodingSupported(sourceEncoding: javax.sound.sampled.AudioFormat.Encoding): boolean
+                    public isSourceEncodingSupported(sourceEncoding: javax.sound.sampled.AudioFormat.Encoding): boolean
                     /**
                      * Indicates whether the format converter supports conversion to the
                      * specified target format encoding.
@@ -56,7 +56,7 @@ declare namespace javax {
                      * @return <code>true</code> if the encoding is supported, otherwise <code>false</code>
                      */
                     // @ts-ignore
-                    isTargetEncodingSupported(targetEncoding: javax.sound.sampled.AudioFormat.Encoding): boolean
+                    public isTargetEncodingSupported(targetEncoding: javax.sound.sampled.AudioFormat.Encoding): boolean
                     /**
                      * Obtains the set of target format encodings supported by the format converter
                      * given a particular source format.
@@ -66,7 +66,7 @@ declare namespace javax {
                      * @return array of supported target format encodings.
                      */
                     // @ts-ignore
-                    abstract getTargetEncodings(sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat.Encoding[]
+                    public abstract getTargetEncodings(sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat.Encoding[]
                     /**
                      * Indicates whether the format converter supports conversion to a particular encoding
                      * from a particular format.
@@ -75,7 +75,7 @@ declare namespace javax {
                      * @return <code>true</code> if the conversion is supported, otherwise <code>false</code>
                      */
                     // @ts-ignore
-                    isConversionSupported(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): boolean
+                    public isConversionSupported(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): boolean
                     /**
                      * Obtains the set of target formats with the encoding specified
                      * supported by the format converter
@@ -86,7 +86,7 @@ declare namespace javax {
                      * @return array of supported target formats.
                      */
                     // @ts-ignore
-                    abstract getTargetFormats(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat[]
+                    public abstract getTargetFormats(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat[]
                     /**
                      * Indicates whether the format converter supports conversion to one
                      * particular format from another.
@@ -95,7 +95,7 @@ declare namespace javax {
                      * @return <code>true</code> if the conversion is supported, otherwise <code>false</code>
                      */
                     // @ts-ignore
-                    isConversionSupported(targetFormat: javax.sound.sampled.AudioFormat, sourceFormat: javax.sound.sampled.AudioFormat): boolean
+                    public isConversionSupported(targetFormat: javax.sound.sampled.AudioFormat, sourceFormat: javax.sound.sampled.AudioFormat): boolean
                     /**
                      * Obtains an audio input stream with the specified encoding from the given audio
                      * input stream.
@@ -106,7 +106,7 @@ declare namespace javax {
                      *  not supported.
                      */
                     // @ts-ignore
-                    abstract getAudioInputStream(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
+                    public abstract getAudioInputStream(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
                     /**
                      * Obtains an audio input stream with the specified format from the given audio
                      * input stream.
@@ -117,7 +117,7 @@ declare namespace javax {
                      *  not supported.
                      */
                     // @ts-ignore
-                    abstract getAudioInputStream(targetFormat: javax.sound.sampled.AudioFormat, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
+                    public abstract getAudioInputStream(targetFormat: javax.sound.sampled.AudioFormat, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
                 }
             }
         }

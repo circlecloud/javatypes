@@ -14,9 +14,13 @@ declare namespace javax {
                     // @ts-ignore
                     class MethodType extends java.lang.Enum<javax.swing.text.html.FormSubmitEvent.MethodType> {
                         // @ts-ignore
+                        readonly GET: javax.swing.text.html.FormSubmitEvent.MethodType
+                        // @ts-ignore
+                        readonly POST: javax.swing.text.html.FormSubmitEvent.MethodType
+                        // @ts-ignore
                         values(): javax.swing.text.html.FormSubmitEvent.MethodType[]
                         // @ts-ignore
-                        valueOf(name: string): javax.swing.text.html.FormSubmitEvent.MethodType
+                        valueOf(name: java.lang.String | string): javax.swing.text.html.FormSubmitEvent.MethodType
                     }
                 }
             }

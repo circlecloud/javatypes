@@ -41,7 +41,7 @@ declare namespace org {
                         // @ts-ignore
                         getUnmodifiableBlockView(): org.spongepowered.api.world.extent.UnmodifiableBlockVolume
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.BlockVolumeWorker<? extends org.spongepowered.api.world.extent.UnmodifiableBlockVolume>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.BlockVolumeWorker<any>
                     }
                 }
             }

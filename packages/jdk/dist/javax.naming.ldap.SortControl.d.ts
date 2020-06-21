@@ -83,7 +83,7 @@ declare namespace javax {
                  *                         supplied arguments into a control.
                  */
                 // @ts-ignore
-                constructor(sortBy: string, criticality: boolean)
+                constructor(sortBy: java.lang.String | string, criticality: boolean)
                 /**
                  * Constructs a control to sort on a list of attributes in ascending order.
                  * Sorting will be performed using the ordering matching rule defined
@@ -100,7 +100,7 @@ declare namespace javax {
                  *                         supplied arguments into a control.
                  */
                 // @ts-ignore
-                constructor(sortBy: string[], criticality: boolean)
+                constructor(sortBy: java.lang.String[] | string[], criticality: boolean)
                 /**
                  * Constructs a control to sort on a list of sort keys.
                  * Each sort key specifies the sort order and ordering matching rule to use.
@@ -122,7 +122,7 @@ declare namespace javax {
                  * is 1.2.840.113556.1.4.473.
                  */
                 // @ts-ignore
-                readonly OID: string
+                public static readonly OID: java.lang.String | string
             }
         }
     }

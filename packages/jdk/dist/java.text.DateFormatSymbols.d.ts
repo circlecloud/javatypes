@@ -93,7 +93,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Gets the <code>DateFormatSymbols</code> instance for the default
              * locale.  This method provides access to <code>DateFormatSymbols</code>
@@ -109,7 +109,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(): java.text.DateFormatSymbols
+            public static getInstance(): java.text.DateFormatSymbols
             /**
              * Gets the <code>DateFormatSymbols</code> instance for the specified
              * locale.  This method provides access to <code>DateFormatSymbols</code>
@@ -123,19 +123,19 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(locale: java.util.Locale): java.text.DateFormatSymbols
+            public static getInstance(locale: java.util.Locale): java.text.DateFormatSymbols
             /**
              * Gets era strings. For example: "AD" and "BC".
              * @return the era strings.
              */
             // @ts-ignore
-            getEras(): java.lang.String[]
+            public getEras(): string[]
             /**
              * Sets era strings. For example: "AD" and "BC".
              * @param newEras the new era strings.
              */
             // @ts-ignore
-            setEras(newEras: string[]): void
+            public setEras(newEras: java.lang.String[] | string[]): void
             /**
              * Gets month strings. For example: "January", "February", etc.
              * <p>If the language requires different forms for formatting and
@@ -150,13 +150,13 @@ declare namespace java {
              * @return the month strings.
              */
             // @ts-ignore
-            getMonths(): java.lang.String[]
+            public getMonths(): string[]
             /**
              * Sets month strings. For example: "January", "February", etc.
              * @param newMonths the new month strings.
              */
             // @ts-ignore
-            setMonths(newMonths: string[]): void
+            public setMonths(newMonths: java.lang.String[] | string[]): void
             /**
              * Gets short month strings. For example: "Jan", "Feb", etc.
              * <p>If the language requires different forms for formatting and
@@ -171,20 +171,20 @@ declare namespace java {
              * @return the short month strings.
              */
             // @ts-ignore
-            getShortMonths(): java.lang.String[]
+            public getShortMonths(): string[]
             /**
              * Sets short month strings. For example: "Jan", "Feb", etc.
              * @param newShortMonths the new short month strings.
              */
             // @ts-ignore
-            setShortMonths(newShortMonths: string[]): void
+            public setShortMonths(newShortMonths: java.lang.String[] | string[]): void
             /**
              * Gets weekday strings. For example: "Sunday", "Monday", etc.
              * @return the weekday strings. Use <code>Calendar.SUNDAY</code>,
              *  <code>Calendar.MONDAY</code>, etc. to index the result array.
              */
             // @ts-ignore
-            getWeekdays(): java.lang.String[]
+            public getWeekdays(): string[]
             /**
              * Sets weekday strings. For example: "Sunday", "Monday", etc.
              * @param newWeekdays the new weekday strings. The array should
@@ -192,14 +192,14 @@ declare namespace java {
              *  <code>Calendar.MONDAY</code>, etc.
              */
             // @ts-ignore
-            setWeekdays(newWeekdays: string[]): void
+            public setWeekdays(newWeekdays: java.lang.String[] | string[]): void
             /**
              * Gets short weekday strings. For example: "Sun", "Mon", etc.
              * @return the short weekday strings. Use <code>Calendar.SUNDAY</code>,
              *  <code>Calendar.MONDAY</code>, etc. to index the result array.
              */
             // @ts-ignore
-            getShortWeekdays(): java.lang.String[]
+            public getShortWeekdays(): string[]
             /**
              * Sets short weekday strings. For example: "Sun", "Mon", etc.
              * @param newShortWeekdays the new short weekday strings. The array should
@@ -207,19 +207,19 @@ declare namespace java {
              *  <code>Calendar.MONDAY</code>, etc.
              */
             // @ts-ignore
-            setShortWeekdays(newShortWeekdays: string[]): void
+            public setShortWeekdays(newShortWeekdays: java.lang.String[] | string[]): void
             /**
              * Gets ampm strings. For example: "AM" and "PM".
              * @return the ampm strings.
              */
             // @ts-ignore
-            getAmPmStrings(): java.lang.String[]
+            public getAmPmStrings(): string[]
             /**
              * Sets ampm strings. For example: "AM" and "PM".
              * @param newAmpms the new ampm strings.
              */
             // @ts-ignore
-            setAmPmStrings(newAmpms: string[]): void
+            public setAmPmStrings(newAmpms: java.lang.String[] | string[]): void
             /**
              * Gets time zone strings.  Use of this method is discouraged; use
              * {@link java.util.TimeZone#getDisplayName() TimeZone.getDisplayName()}
@@ -258,7 +258,7 @@ declare namespace java {
              * @see #setZoneStrings(String[][])
              */
             // @ts-ignore
-            getZoneStrings(): java.lang.String[][]
+            public getZoneStrings(): string[][]
             /**
              * Sets time zone strings.  The argument must be a
              * two-dimensional array of strings of size <em>n</em> by <em>m</em>,
@@ -288,36 +288,36 @@ declare namespace java {
              * @see #getZoneStrings()
              */
             // @ts-ignore
-            setZoneStrings(newZoneStrings: string[][]): void
+            public setZoneStrings(newZoneStrings: java.lang.String[][] | string[][]): void
             /**
              * Gets localized date-time pattern characters. For example: 'u', 't', etc.
              * @return the localized date-time pattern characters.
              */
             // @ts-ignore
-            getLocalPatternChars(): java.lang.String
+            public getLocalPatternChars(): string
             /**
              * Sets localized date-time pattern characters. For example: 'u', 't', etc.
              * @param newLocalPatternChars the new localized date-time
              *  pattern characters.
              */
             // @ts-ignore
-            setLocalPatternChars(newLocalPatternChars: string): void
+            public setLocalPatternChars(newLocalPatternChars: java.lang.String | string): void
             /**
              * Overrides Cloneable
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Override hashCode.
              * Generates a hash code for the DateFormatSymbols object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Override equals
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

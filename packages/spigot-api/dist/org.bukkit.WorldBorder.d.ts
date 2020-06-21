@@ -12,7 +12,7 @@ declare namespace org {
              * @return The current side length of the border.
              */
             // @ts-ignore
-            getSize(): double
+            getSize(): number /*double*/
             /**
              * Sets the border to a square region with the specified side length in blocks.
              * @param newSize The new size of the border.
@@ -50,7 +50,7 @@ declare namespace org {
              * @return The current border damage buffer.
              */
             // @ts-ignore
-            getDamageBuffer(): double
+            getDamageBuffer(): number /*double*/
             /**
              * Sets the amount of blocks a player may safely be outside the border before taking damage.
              * @param blocks The amount of blocks. (The default is 5 blocks.)
@@ -62,7 +62,7 @@ declare namespace org {
              * @return The current border damage amount.
              */
             // @ts-ignore
-            getDamageAmount(): double
+            getDamageAmount(): number /*double*/
             /**
              * Sets the amount of damage a player takes when outside the border plus the border buffer.
              * @param damage The amount of damage. (The default is 0.2 damage per second per block.)
@@ -74,7 +74,7 @@ declare namespace org {
              * @return The current border warning time in seconds.
              */
             // @ts-ignore
-            getWarningTime(): int
+            getWarningTime(): number /*int*/
             /**
              * Sets the warning time that causes the screen to be tinted red when a contracting border will reach the player within the specified time.
              * @param seconds The amount of time in seconds. (The default is 15 seconds.)
@@ -86,7 +86,7 @@ declare namespace org {
              * @return The current border warning distance.
              */
             // @ts-ignore
-            getWarningDistance(): int
+            getWarningDistance(): number /*int*/
             /**
              * Sets the warning distance that causes the screen to be tinted red when the player is within the specified number of blocks from the border.
              * @param distance The distance in blocks. (The default is 5 blocks.)

@@ -56,7 +56,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <code>name</code> is empty.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new <code>AudioPermission</code> object that has the specified
                  * symbolic name, such as "play" or "record".  The <code>actions</code>
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <code>name</code> is empty.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

@@ -17,31 +17,31 @@ declare namespace org {
                              * @param endIdx The ending index of {#code value} in an input string
                              */
                             // @ts-ignore
-                            constructor(value: string, startIdx: number /*int*/, endIdx: number /*int*/)
+                            constructor(value: java.lang.String | string, startIdx: number /*int*/, endIdx: number /*int*/)
                             /**
                              * Gets the string used.
                              * @return The string used
                              */
                             // @ts-ignore
-                            getValue(): java.lang.String
+                            public getValue(): string
                             /**
                              * Gets the starting index.
                              * @return The starting index
                              */
                             // @ts-ignore
-                            getStartIdx(): int
+                            public getStartIdx(): number /*int*/
                             /**
                              * Gets the ending index.
                              * @return The ending index
                              */
                             // @ts-ignore
-                            getEndIdx(): int
+                            public getEndIdx(): number /*int*/
                             // @ts-ignore
-                            equals(o: any): boolean
+                            public equals(o: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

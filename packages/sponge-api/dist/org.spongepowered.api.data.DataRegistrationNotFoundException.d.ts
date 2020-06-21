@@ -15,7 +15,7 @@ declare namespace org {
                      * @param registrationQuery The registration query
                      */
                     // @ts-ignore
-                    constructor(registrationQuery: string)
+                    constructor(registrationQuery: java.lang.String | string)
                     /**
                      * Constructs a data registration not found exception with a specified
                      * message and registration query.
@@ -23,7 +23,7 @@ declare namespace org {
                      * @param registrationQuery The registration query
                      */
                     // @ts-ignore
-                    constructor(message: string, registrationQuery: string)
+                    constructor(message: java.lang.String | string, registrationQuery: java.lang.String | string)
                     /**
                      * Constructs a data registration not found exception with a message and a
                      * specified data manipulator class.
@@ -31,7 +31,7 @@ declare namespace org {
                      * @param manipulatorClass The manipulator class
                      */
                     // @ts-ignore
-                    constructor(message: string, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>)
+                    constructor(message: java.lang.String | string, manipulatorClass: java.lang.Class<any>)
                     /**
                      * Constructs a data registration not found exception with a message,
                      * a throwable cause, and a specified data manipulator class.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @param manipulatorClass The manipulator class
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, manipulatorClass: java.lang.Class<any>)
                     /**
                      * Constructs a data registration not found exception with a message,
                      * an immutable data manipulator class, and a mutable
@@ -50,7 +50,7 @@ declare namespace org {
                      * @param immutableClass The immutable class
                      */
                     // @ts-ignore
-                    constructor(message: string, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>, immutableClass: java.lang.Class<org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, ?>>)
+                    constructor(message: java.lang.String | string, manipulatorClass: java.lang.Class<any>, immutableClass: java.lang.Class<any>)
                     /**
                      * Constructs a data registration not found exception with a message,
                      * a throwable cause, an immutable data manipulator class,
@@ -61,25 +61,25 @@ declare namespace org {
                      * @param immutableClass The immutable class
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>, immutableClass: java.lang.Class<org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, ?>>)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, manipulatorClass: java.lang.Class<any>, immutableClass: java.lang.Class<any>)
                     /**
                      * Gets the specified registration query, if present.
                      * @return The registration query, if present
                      */
                     // @ts-ignore
-                    getRegistrationQuery(): java.lang.String
+                    getRegistrationQuery(): string
                     /**
                      * Gets the data manipulator class, if present.
                      * @return The manipulator class, if present
                      */
                     // @ts-ignore
-                    getManipulatorClass(): java.lang.Class<? extends org.spongepowered.api.data.manipulator.DataManipulator<?, ?>>
+                    getManipulatorClass(): java.lang.Class<any>
                     /**
                      * Gets the immutable data manipulator class, if present.
                      * @return The immutable manipulator class, if present
                      */
                     // @ts-ignore
-                    getImmutableClass(): java.lang.Class<? extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<?, ?>>
+                    getImmutableClass(): java.lang.Class<any>
                 }
             }
         }

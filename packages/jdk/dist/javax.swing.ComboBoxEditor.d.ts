@@ -16,12 +16,12 @@ declare namespace javax {
              * Set the item that should be edited. Cancel any editing if necessary
              */
             // @ts-ignore
-            setItem(anObject: any): void
+            setItem(anObject: java.lang.Object | any): void
             /**
              * Return the edited item
              */
             // @ts-ignore
-            getItem(): java.lang.Object
+            getItem(): any
             /**
              * Ask the editor to start editing and to select everything
              */

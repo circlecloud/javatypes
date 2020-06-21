@@ -6,19 +6,19 @@ declare namespace org {
              * @param <T> Service
              */
             // @ts-ignore
-            class RegisteredServiceProvider<T> extends java.lang.Object implements java.lang.Comparable<org.bukkit.plugin.RegisteredServiceProvider<?>> {
+            class RegisteredServiceProvider<T> extends java.lang.Object implements java.lang.Comparable<org.bukkit.plugin.RegisteredServiceProvider<any>> {
                 // @ts-ignore
                 constructor(service: java.lang.Class<T>, provider: T, priority: org.bukkit.plugin.ServicePriority, plugin: org.bukkit.plugin.Plugin)
                 // @ts-ignore
-                getService(): java.lang.Class<T>
+                public getService(): java.lang.Class<T>
                 // @ts-ignore
-                getPlugin(): org.bukkit.plugin.Plugin
+                public getPlugin(): org.bukkit.plugin.Plugin
                 // @ts-ignore
-                getProvider(): T
+                public getProvider(): T
                 // @ts-ignore
-                getPriority(): org.bukkit.plugin.ServicePriority
+                public getPriority(): org.bukkit.plugin.ServicePriority
                 // @ts-ignore
-                compareTo(other: org.bukkit.plugin.RegisteredServiceProvider<any>): int
+                public compareTo(other: org.bukkit.plugin.RegisteredServiceProvider<any>): number /*int*/
             }
         }
     }

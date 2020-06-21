@@ -17,12 +17,12 @@ declare namespace org {
                  * Return the cache name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Return the underlying native cache provider.
                  */
                 // @ts-ignore
-                getNativeCache(): java.lang.Object
+                getNativeCache(): any
                 /**
                  * Return the value to which this cache maps the specified key.
                  * <p>Returns {@code null} if the cache contains no mapping for this key;
@@ -37,7 +37,7 @@ declare namespace org {
                  * @see #get(Object, Callable)
                  */
                 // @ts-ignore
-                get(key: any): org.springframework.cache.Cache.ValueWrapper
+                get(key: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                 /**
                  * Return the value to which this cache maps the specified key,
                  * generically specifying a type that return value will be cast to.
@@ -57,7 +57,7 @@ declare namespace org {
                  * @see #get(Object)
                  */
                 // @ts-ignore
-                get<T>(key: any, type: java.lang.Class<T>): T
+                get<T>(key: java.lang.Object | any, type: java.lang.Class<T>): T
                 /**
                  * Return the value to which this cache maps the specified key, obtaining
                  * that value from {@code valueLoader} if necessary. This method provides
@@ -75,7 +75,7 @@ declare namespace org {
                  * @see #get(Object)
                  */
                 // @ts-ignore
-                get<T>(key: any, valueLoader: java.util.concurrent.Callable<T>): T
+                get<T>(key: java.lang.Object | any, valueLoader: java.util.concurrent.Callable<T>): T
                 /**
                  * Associate the specified value with the specified key in this cache.
                  * <p>If the cache previously contained a mapping for this key, the old
@@ -89,7 +89,7 @@ declare namespace org {
                  * @see #putIfAbsent(Object, Object)
                  */
                 // @ts-ignore
-                put(key: any, value: any): void
+                put(key: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Atomically associate the specified value with the specified key in this cache
                  * if it is not set already.
@@ -118,7 +118,7 @@ declare namespace org {
                  * @see #put(Object, Object)
                  */
                 // @ts-ignore
-                putIfAbsent(key: any, value: any): org.springframework.cache.Cache.ValueWrapper
+                putIfAbsent(key: java.lang.Object | any, value: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                 /**
                  * Evict the mapping for this key from this cache if it is present.
                  * <p>Actual eviction may be performed in an asynchronous or deferred
@@ -129,7 +129,7 @@ declare namespace org {
                  * @see #evictIfPresent(Object)
                  */
                 // @ts-ignore
-                evict(key: any): void
+                evict(key: java.lang.Object | any): void
                 /**
                  * Evict the mapping for this key from this cache if it is present,
                  * expecting the key to be immediately invisible for subsequent lookups.
@@ -147,7 +147,7 @@ declare namespace org {
                  * @see #evict(Object)
                  */
                 // @ts-ignore
-                evictIfPresent(key: any): boolean
+                evictIfPresent(key: java.lang.Object | any): boolean
                 /**
                  * Clear the cache through removing all mappings.
                  * <p>Actual clearing may be performed in an asynchronous or deferred

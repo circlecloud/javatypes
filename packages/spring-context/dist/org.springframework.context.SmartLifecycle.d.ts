@@ -55,7 +55,7 @@ declare namespace org {
                  * @see org.springframework.context.support.DefaultLifecycleProcessor#getPhase(Lifecycle)
                  */
                 // @ts-ignore
-                
+                readonly DEFAULT_PHASE: number /*int*/
                 /**
                  * Returns {@code true} if this {@code Lifecycle} component should get
                  * started automatically by the container at the time that the containing
@@ -101,7 +101,7 @@ declare namespace org {
                  * @see org.springframework.context.support.DefaultLifecycleProcessor#getPhase(Lifecycle)
                  */
                 // @ts-ignore
-                getPhase(): int
+                getPhase(): number /*int*/
             }
         }
     }

@@ -29,7 +29,7 @@ declare namespace org {
                      * </p>
                      */
                     // @ts-ignore
-                    class CatalogedBy implements java.lang.annotation.Annotation {
+                    abstract class CatalogedBy implements java.lang.annotation.Annotation {
                     }
                 }
             }

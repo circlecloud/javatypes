@@ -21,65 +21,65 @@ declare namespace javax {
                          * Create an attribute list element.
                          */
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                         /**
                          * Create an attribute list element.
                          */
                         // @ts-ignore
-                        constructor(name: string, type: number /*int*/, modifier: number /*int*/, value: string, values: java.util.Vector<any>, next: javax.swing.text.html.parser.AttributeList)
+                        constructor(name: java.lang.String | string, type: number /*int*/, modifier: number /*int*/, value: java.lang.String | string, values: java.util.Vector<any>, next: javax.swing.text.html.parser.AttributeList)
                         // @ts-ignore
-                        name: string
+                        public name: java.lang.String | string
                         // @ts-ignore
-                        type: number /*int*/
+                        public type: number /*int*/
                         // @ts-ignore
-                        values: java.util.Vector<any>
+                        public values: java.util.Vector<any>
                         // @ts-ignore
-                        modifier: number /*int*/
+                        public modifier: number /*int*/
                         // @ts-ignore
-                        value: string
+                        public value: java.lang.String | string
                         // @ts-ignore
-                        next: javax.swing.text.html.parser.AttributeList
+                        public next: javax.swing.text.html.parser.AttributeList
                         /**
                          * @return attribute name
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * @return attribute type
                          * @see DTDConstants
                          */
                         // @ts-ignore
-                        getType(): int
+                        public getType(): number /*int*/
                         /**
                          * @return attribute modifier
                          * @see DTDConstants
                          */
                         // @ts-ignore
-                        getModifier(): int
+                        public getModifier(): number /*int*/
                         /**
                          * @return possible attribute values
                          */
                         // @ts-ignore
-                        getValues(): java.util.Enumeration<?>
+                        public getValues(): java.util.Enumeration<any>
                         /**
                          * @return default attribute value
                          */
                         // @ts-ignore
-                        getValue(): java.lang.String
+                        public getValue(): string
                         /**
                          * @return the next attribute in the list
                          */
                         // @ts-ignore
-                        getNext(): javax.swing.text.html.parser.AttributeList
+                        public getNext(): javax.swing.text.html.parser.AttributeList
                         /**
                          * @return string representation
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        name2type(nm: string): int
+                        public static name2type(nm: java.lang.String | string): number /*int*/
                         // @ts-ignore
-                        type2name(tp: number /*int*/): java.lang.String
+                        public static type2name(tp: number /*int*/): string
                     }
                 }
             }

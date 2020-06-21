@@ -8,9 +8,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        componentAdded(e: java.awt.event.ContainerEvent): void
+                        public componentAdded(e: java.awt.event.ContainerEvent): void
                         // @ts-ignore
-                        componentRemoved(e: java.awt.event.ContainerEvent): void
+                        public componentRemoved(e: java.awt.event.ContainerEvent): void
                     }
                 }
             }

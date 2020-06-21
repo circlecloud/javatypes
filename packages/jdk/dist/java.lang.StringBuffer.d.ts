@@ -37,7 +37,7 @@ declare namespace java {
              * @exception NullPointerException when string is null
              */
             // @ts-ignore
-            constructor(string: string)
+            constructor(string: java.lang.String | string)
             /**
              * Constructs a new StringBuffer containing the characters in
              * the specified CharSequence and the default capacity.
@@ -54,7 +54,7 @@ declare namespace java {
              * @exception NullPointerException when chars is null
              */
             // @ts-ignore
-            append(chars: string[]): java.lang.StringBuffer
+            public append(chars: string[]): java.lang.StringBuffer
             /**
              * Adds the specified sequence of characters to the end of
              * this StringBuffer.
@@ -67,7 +67,7 @@ declare namespace java {
              * @exception NullPointerException when chars is null
              */
             // @ts-ignore
-            append(chars: string[], start: number /*int*/, length: number /*int*/): java.lang.StringBuffer
+            public append(chars: string[], start: number /*int*/, length: number /*int*/): java.lang.StringBuffer
             /**
              * Adds the specified character to the end of
              * this StringBuffer.
@@ -75,7 +75,7 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(ch: string): java.lang.StringBuffer
+            public append(ch: string): java.lang.StringBuffer
             /**
              * Adds the string representation of the specified double to the
              * end of this StringBuffer.
@@ -83,7 +83,7 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(value: number /*double*/): java.lang.StringBuffer
+            public append(value: number /*double*/): java.lang.StringBuffer
             /**
              * Adds the string representation of the specified float to the
              * end of this StringBuffer.
@@ -91,7 +91,7 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(value: number /*float*/): java.lang.StringBuffer
+            public append(value: number /*float*/): java.lang.StringBuffer
             /**
              * Adds the string representation of the specified integer to the
              * end of this StringBuffer.
@@ -99,7 +99,7 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(value: number /*int*/): java.lang.StringBuffer
+            public append(value: number /*int*/): java.lang.StringBuffer
             /**
              * Adds the string representation of the specified long to the
              * end of this StringBuffer.
@@ -107,7 +107,7 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(value: number /*long*/): java.lang.StringBuffer
+            public append(value: number /*long*/): java.lang.StringBuffer
             /**
              * Adds the string representation of the specified object to the
              * end of this StringBuffer.
@@ -115,14 +115,14 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(value: any): java.lang.StringBuffer
+            public append(value: java.lang.Object | any): java.lang.StringBuffer
             /**
              * Adds the specified string to the end of this StringBuffer.
              * @param string	the string
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(string: string): java.lang.StringBuffer
+            public append(string: java.lang.String | string): java.lang.StringBuffer
             /**
              * Adds the string representation of the specified boolean to the
              * end of this StringBuffer.
@@ -130,7 +130,7 @@ declare namespace java {
              * @return this StringBuffer
              */
             // @ts-ignore
-            append(value: boolean): java.lang.StringBuffer
+            public append(value: boolean): java.lang.StringBuffer
             /**
              * Answers the number of characters this StringBuffer can hold without
              * growing.
@@ -139,7 +139,7 @@ declare namespace java {
              * @see #length
              */
             // @ts-ignore
-            capacity(): int
+            public capacity(): number /*int*/
             /**
              * Answers the character at the specified offset in this StringBuffer.
              * @param index	the zero-based index in this StringBuffer
@@ -148,7 +148,7 @@ declare namespace java {
              *               If {#code index < 0} or {@code index >= length()}
              */
             // @ts-ignore
-            charAt(index: number /*int*/): char
+            public charAt(index: number /*int*/): string
             /**
              * Deletes a range of characters.
              * @param start	the offset of the first character
@@ -158,7 +158,7 @@ declare namespace java {
              * 				{@code end > length()}
              */
             // @ts-ignore
-            delete(start: number /*int*/, end: number /*int*/): java.lang.StringBuffer
+            public delete(start: number /*int*/, end: number /*int*/): java.lang.StringBuffer
             /**
              * Deletes a single character
              * @param location	the offset of the character to delete
@@ -167,7 +167,7 @@ declare namespace java {
              * 				{@code location >= length()}
              */
             // @ts-ignore
-            deleteCharAt(location: number /*int*/): java.lang.StringBuffer
+            public deleteCharAt(location: number /*int*/): java.lang.StringBuffer
             /**
              * Ensures that this StringBuffer can hold the specified number of characters
              * without growing.
@@ -175,7 +175,7 @@ declare namespace java {
              * 				StringBuffer will hold before growing
              */
             // @ts-ignore
-            ensureCapacity(min: number /*int*/): void
+            public ensureCapacity(min: number /*int*/): void
             /**
              * Copies the specified characters in this StringBuffer to the character array
              * starting at the specified offset in the character array.
@@ -188,7 +188,7 @@ declare namespace java {
              * @exception NullPointerException when buffer is null
              */
             // @ts-ignore
-            getChars(start: number /*int*/, end: number /*int*/, buffer: string[], index: number /*int*/): void
+            public getChars(start: number /*int*/, end: number /*int*/, buffer: string[], index: number /*int*/): void
             /**
              * Inserts the character array at the specified offset in this StringBuffer.
              * @param index	the index at which to insert
@@ -199,7 +199,7 @@ declare namespace java {
              * @exception NullPointerException when chars is null
              */
             // @ts-ignore
-            insert(index: number /*int*/, chars: string[]): java.lang.StringBuffer
+            public insert(index: number /*int*/, chars: string[]): java.lang.StringBuffer
             /**
              * Inserts the specified sequence of characters at the
              * specified offset in this StringBuffer.
@@ -214,7 +214,7 @@ declare namespace java {
              * @exception NullPointerException when chars is null
              */
             // @ts-ignore
-            insert(index: number /*int*/, chars: string[], start: number /*int*/, length: number /*int*/): java.lang.StringBuffer
+            public insert(index: number /*int*/, chars: string[], start: number /*int*/, length: number /*int*/): java.lang.StringBuffer
             /**
              * Inserts the character at the specified offset in this StringBuffer.
              * @param index	the index at which to insert
@@ -224,7 +224,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, ch: string): java.lang.StringBuffer
+            public insert(index: number /*int*/, ch: string): java.lang.StringBuffer
             /**
              * Inserts the string representation of the specified double at the specified
              * offset in this StringBuffer.
@@ -235,7 +235,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, value: number /*double*/): java.lang.StringBuffer
+            public insert(index: number /*int*/, value: number /*double*/): java.lang.StringBuffer
             /**
              * Inserts the string representation of the specified float at the specified
              * offset in this StringBuffer.
@@ -246,7 +246,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, value: number /*float*/): java.lang.StringBuffer
+            public insert(index: number /*int*/, value: number /*float*/): java.lang.StringBuffer
             /**
              * Inserts the string representation of the specified integer at the specified
              * offset in this StringBuffer.
@@ -257,7 +257,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, value: number /*int*/): java.lang.StringBuffer
+            public insert(index: number /*int*/, value: number /*int*/): java.lang.StringBuffer
             /**
              * Inserts the string representation of the specified long at the specified
              * offset in this StringBuffer.
@@ -268,7 +268,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, value: number /*long*/): java.lang.StringBuffer
+            public insert(index: number /*int*/, value: number /*long*/): java.lang.StringBuffer
             /**
              * Inserts the string representation of the specified object at the specified
              * offset in this StringBuffer.
@@ -279,7 +279,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, value: any): java.lang.StringBuffer
+            public insert(index: number /*int*/, value: java.lang.Object | any): java.lang.StringBuffer
             /**
              * Inserts the string at the specified offset in this StringBuffer.
              * @param index	the index at which to insert
@@ -289,7 +289,7 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, string: string): java.lang.StringBuffer
+            public insert(index: number /*int*/, string: java.lang.String | string): java.lang.StringBuffer
             /**
              * Inserts the string representation of the specified boolean at the specified
              * offset in this StringBuffer.
@@ -300,13 +300,13 @@ declare namespace java {
              * 				{@code index > length()}
              */
             // @ts-ignore
-            insert(index: number /*int*/, value: boolean): java.lang.StringBuffer
+            public insert(index: number /*int*/, value: boolean): java.lang.StringBuffer
             /**
              * Answers the size of this StringBuffer.
              * @return the number of characters in this StringBuffer
              */
             // @ts-ignore
-            length(): int
+            public length(): number /*int*/
             /**
              * Replace a range of characters with the characters in the specified String.
              * @param start	the offset of the first character
@@ -317,13 +317,13 @@ declare namespace java {
              * 				{@code start > end}
              */
             // @ts-ignore
-            replace(start: number /*int*/, end: number /*int*/, string: string): java.lang.StringBuffer
+            public replace(start: number /*int*/, end: number /*int*/, string: java.lang.String | string): java.lang.StringBuffer
             /**
              * Reverses the order of characters in this StringBuffer.
              * @return this StringBuffer
              */
             // @ts-ignore
-            reverse(): java.lang.StringBuffer
+            public reverse(): java.lang.StringBuffer
             /**
              * Sets the character at the specified offset in this StringBuffer.
              * @param index	the zero-based index in this StringBuffer
@@ -332,7 +332,7 @@ declare namespace java {
              * 				{@code index >= length()}
              */
             // @ts-ignore
-            setCharAt(index: number /*int*/, ch: string): void
+            public setCharAt(index: number /*int*/, ch: string): void
             /**
              * Sets the length of this StringBuffer to the specified length. If there
              * are more than length characters in this StringBuffer, the characters
@@ -343,7 +343,7 @@ declare namespace java {
              * @see #length
              */
             // @ts-ignore
-            setLength(length: number /*int*/): void
+            public setLength(length: number /*int*/): void
             /**
              * Copies a range of characters into a new String.
              * @param start	the offset of the first character
@@ -353,7 +353,7 @@ declare namespace java {
              * 				{@code start > length()}
              */
             // @ts-ignore
-            substring(start: number /*int*/): java.lang.String
+            public substring(start: number /*int*/): string
             /**
              * Copies a range of characters into a new String.
              * @param start	the offset of the first character
@@ -363,13 +363,13 @@ declare namespace java {
              * 				{@code end > length()}
              */
             // @ts-ignore
-            substring(start: number /*int*/, end: number /*int*/): java.lang.String
+            public substring(start: number /*int*/, end: number /*int*/): string
             /**
              * Answers the contents of this StringBuffer.
              * @return a String containing the characters in this StringBuffer
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Adds the specified StringBuffer to the end of this StringBuffer.
              * @param buffer	the StringBuffer
@@ -377,7 +377,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            append(buffer: java.lang.StringBuffer): java.lang.StringBuffer
+            public append(buffer: java.lang.StringBuffer): java.lang.StringBuffer
             /**
              * Copies a range of characters into a new String.
              * @param start	the offset of the first character
@@ -388,7 +388,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
+            public subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
             /**
              * Searches in this StringBuffer for the first index of the specified character. The
              * search for the character starts at the beginning and moves towards the
@@ -400,7 +400,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            indexOf(string: string): int
+            public indexOf(string: java.lang.String | string): number /*int*/
             /**
              * Searches in this StringBuffer for the index of the specified character. The
              * search for the character starts at the specified offset and moves towards
@@ -413,7 +413,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            indexOf(subString: string, start: number /*int*/): int
+            public indexOf(subString: java.lang.String | string, start: number /*int*/): number /*int*/
             /**
              * Searches in this StringBuffer for the last index of the specified character. The
              * search for the character starts at the end and moves towards the beginning.
@@ -424,7 +424,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            lastIndexOf(string: string): int
+            public lastIndexOf(string: java.lang.String | string): number /*int*/
             /**
              * Searches in this StringBuffer for the index of the specified character. The
              * search for the character starts at the specified offset and moves towards
@@ -437,7 +437,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            lastIndexOf(subString: string, start: number /*int*/): int
+            public lastIndexOf(subString: java.lang.String | string, start: number /*int*/): number /*int*/
             /**
              * Adds the specified CharSequence to the end of this StringBuffer.
              * @param sequence	the CharSequence
@@ -445,7 +445,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(sequence: java.lang.CharSequence): java.lang.StringBuffer
+            public append(sequence: java.lang.CharSequence): java.lang.StringBuffer
             /**
              * Adds the specified CharSequence to the end of this StringBuffer.
              * @param sequence	the CharSequence
@@ -457,7 +457,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(sequence: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.lang.StringBuffer
+            public append(sequence: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.lang.StringBuffer
             /**
              * Inserts the CharSequence at the specified offset in this StringBuffer.
              * @param index	the index at which to insert
@@ -468,7 +468,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            insert(index: number /*int*/, sequence: java.lang.CharSequence): java.lang.StringBuffer
+            public insert(index: number /*int*/, sequence: java.lang.CharSequence): java.lang.StringBuffer
             /**
              * Inserts the CharSequence at the specified offset in this StringBuffer.
              * @param index	the index at which to insert
@@ -482,14 +482,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            insert(index: number /*int*/, sequence: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.lang.StringBuffer
+            public insert(index: number /*int*/, sequence: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.lang.StringBuffer
             /**
              * Optionally modify the underlying char array to only
              * be large enough to hold the characters in this StringBuffer.
              * @since 1.5
              */
             // @ts-ignore
-            trimToSize(): void
+            public trimToSize(): void
             /**
              * Returns the Unicode character at the given point.
              * @param index		the character index
@@ -497,7 +497,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointAt(index: number /*int*/): int
+            public codePointAt(index: number /*int*/): number /*int*/
             /**
              * Returns the Unicode character before the given point.
              * @param index		the character index
@@ -505,7 +505,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointBefore(index: number /*int*/): int
+            public codePointBefore(index: number /*int*/): number /*int*/
             /**
              * Returns the total Unicode values in the specified range.
              * @param start		first index
@@ -514,7 +514,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointCount(start: number /*int*/, end: number /*int*/): int
+            public codePointCount(start: number /*int*/, end: number /*int*/): number /*int*/
             /**
              * Returns the index of the code point that was offset by {@code codePointCount}.
              * @param start			the position to offset
@@ -523,7 +523,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            offsetByCodePoints(start: number /*int*/, codePointCount: number /*int*/): int
+            public offsetByCodePoints(start: number /*int*/, codePointCount: number /*int*/): number /*int*/
             /**
              * Adds the specified code point to the end of this StringBuffer.
              * @param codePoint	the code point
@@ -531,7 +531,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            appendCodePoint(codePoint: number /*int*/): java.lang.StringBuffer
+            public appendCodePoint(codePoint: number /*int*/): java.lang.StringBuffer
         }
     }
 }

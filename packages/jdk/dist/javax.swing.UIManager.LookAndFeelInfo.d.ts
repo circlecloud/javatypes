@@ -19,7 +19,7 @@ declare namespace javax {
                  *                       the class that implements the look and feel
                  */
                 // @ts-ignore
-                constructor(name: string, className: string)
+                constructor(name: java.lang.String | string, className: java.lang.String | string)
                 /**
                  * Returns the name of the look and feel in a form suitable
                  * for a menu or other presentation
@@ -27,7 +27,7 @@ declare namespace javax {
                  * @see LookAndFeel#getName
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the name of the class that implements this look and feel.
                  * @return the name of the class that implements this
@@ -35,14 +35,14 @@ declare namespace javax {
                  * @see LookAndFeel
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Returns a string that displays and identifies this
                  * object's properties.
                  * @return a <code>String</code> representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -17,7 +17,7 @@ declare namespace org {
                  * @param propertyName the offending property
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string)
                 /**
                  * Create a new NullValueInNestedPathException.
                  * @param beanClass the offending bean class
@@ -25,7 +25,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string)
                 /**
                  * Create a new NullValueInNestedPathException.
                  * @param beanClass the offending bean class
@@ -35,7 +35,7 @@ declare namespace org {
                  * @since 4.3.2
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string, cause: Error)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

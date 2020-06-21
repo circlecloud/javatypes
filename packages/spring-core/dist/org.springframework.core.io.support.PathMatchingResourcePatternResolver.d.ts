@@ -143,25 +143,25 @@ declare namespace org {
                          * Return the ResourceLoader that this pattern resolver works with.
                          */
                         // @ts-ignore
-                        getResourceLoader(): org.springframework.core.io.ResourceLoader
+                        public getResourceLoader(): org.springframework.core.io.ResourceLoader
                         // @ts-ignore
-                        getClassLoader(): java.lang.ClassLoader
+                        public getClassLoader(): java.lang.ClassLoader
                         /**
                          * Set the PathMatcher implementation to use for this
                          * resource pattern resolver. Default is AntPathMatcher.
                          * @see org.springframework.util.AntPathMatcher
                          */
                         // @ts-ignore
-                        setPathMatcher(pathMatcher: org.springframework.util.PathMatcher): void
+                        public setPathMatcher(pathMatcher: org.springframework.util.PathMatcher): void
                         /**
                          * Return the PathMatcher that this resource pattern resolver uses.
                          */
                         // @ts-ignore
-                        getPathMatcher(): org.springframework.util.PathMatcher
+                        public getPathMatcher(): org.springframework.util.PathMatcher
                         // @ts-ignore
-                        getResource(location: string): org.springframework.core.io.Resource
+                        public getResource(location: java.lang.String | string): org.springframework.core.io.Resource
                         // @ts-ignore
-                        getResources(locationPattern: string): org.springframework.core.io.Resource[]
+                        public getResources(locationPattern: java.lang.String | string): org.springframework.core.io.Resource[]
                         /**
                          * Find all class location resources with the given location via the ClassLoader.
                          * Delegates to {@link #doFindAllClassPathResources(String)}.
@@ -172,7 +172,7 @@ declare namespace org {
                          * @see #convertClassLoaderURL
                          */
                         // @ts-ignore
-                        findAllClassPathResources(location: string): org.springframework.core.io.Resource[]
+                        findAllClassPathResources(location: java.lang.String | string): org.springframework.core.io.Resource[]
                         /**
                          * Find all class location resources with the given path via the ClassLoader.
                          * Called by {@link #findAllClassPathResources(String)}.
@@ -181,7 +181,7 @@ declare namespace org {
                          * @since 4.1.1
                          */
                         // @ts-ignore
-                        doFindAllClassPathResources(path: string): java.util.Set<org.springframework.core.io.Resource>
+                        doFindAllClassPathResources(path: java.lang.String | string): Array<org.springframework.core.io.Resource>
                         /**
                          * Convert the given URL as returned from the ClassLoader into a {@link Resource}.
                          * <p>The default implementation simply creates a {@link UrlResource} instance.
@@ -200,7 +200,7 @@ declare namespace org {
                          * @since 4.1.1
                          */
                         // @ts-ignore
-                        addAllClassLoaderJarRoots(classLoader: java.lang.ClassLoader, result: Array<org.springframework.core.io.Resource>): void
+                        addAllClassLoaderJarRoots(classLoader: java.lang.ClassLoader, result: java.util.Set<org.springframework.core.io.Resource> | Array<org.springframework.core.io.Resource>): void
                         /**
                          * Determine jar file references from the "java.class.path." manifest property and add them
                          * to the given set of resources in the form of pointers to the root of the jar file content.
@@ -208,7 +208,7 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        addClassPathManifestEntries(result: Array<org.springframework.core.io.Resource>): void
+                        addClassPathManifestEntries(result: java.util.Set<org.springframework.core.io.Resource> | Array<org.springframework.core.io.Resource>): void
                         /**
                          * Find all resources that match the given location pattern via the
                          * Ant-style PathMatcher. Supports resources in jar files and zip files
@@ -221,7 +221,7 @@ declare namespace org {
                          * @see org.springframework.util.PathMatcher
                          */
                         // @ts-ignore
-                        findPathMatchingResources(locationPattern: string): org.springframework.core.io.Resource[]
+                        findPathMatchingResources(locationPattern: java.lang.String | string): org.springframework.core.io.Resource[]
                         /**
                          * Determine the root directory for the given location.
                          * <p>Used for determining the starting point for file matching,
@@ -235,7 +235,7 @@ declare namespace org {
                          * @see #retrieveMatchingFiles
                          */
                         // @ts-ignore
-                        determineRootDir(location: string): java.lang.String
+                        determineRootDir(location: java.lang.String | string): string
                         /**
                          * Resolve the specified resource for path matching.
                          * <p>By default, Equinox OSGi "bundleresource:" / "bundleentry:" URL will be
@@ -275,12 +275,12 @@ declare namespace org {
                          * @see org.springframework.util.PathMatcher
                          */
                         // @ts-ignore
-                        doFindPathMatchingJarResources(rootDirResource: org.springframework.core.io.Resource, rootDirURL: java.net.URL, subPattern: string): java.util.Set<org.springframework.core.io.Resource>
+                        doFindPathMatchingJarResources(rootDirResource: org.springframework.core.io.Resource, rootDirURL: java.net.URL, subPattern: java.lang.String | string): Array<org.springframework.core.io.Resource>
                         /**
                          * Resolve the given jar file URL into a JarFile object.
                          */
                         // @ts-ignore
-                        getJarFile(jarFileUrl: string): java.util.jar.JarFile
+                        getJarFile(jarFileUrl: java.lang.String | string): java.util.jar.JarFile
                         /**
                          * Find all resources in the file system that match the given location pattern
                          * via the Ant-style PathMatcher.
@@ -292,7 +292,7 @@ declare namespace org {
                          * @see org.springframework.util.PathMatcher
                          */
                         // @ts-ignore
-                        doFindPathMatchingFileResources(rootDirResource: org.springframework.core.io.Resource, subPattern: string): java.util.Set<org.springframework.core.io.Resource>
+                        doFindPathMatchingFileResources(rootDirResource: org.springframework.core.io.Resource, subPattern: java.lang.String | string): Array<org.springframework.core.io.Resource>
                         /**
                          * Find all resources in the file system that match the given location pattern
                          * via the Ant-style PathMatcher.
@@ -304,7 +304,7 @@ declare namespace org {
                          * @see org.springframework.util.PathMatcher
                          */
                         // @ts-ignore
-                        doFindMatchingFileSystemResources(rootDir: java.io.File, subPattern: string): java.util.Set<org.springframework.core.io.Resource>
+                        doFindMatchingFileSystemResources(rootDir: java.io.File, subPattern: java.lang.String | string): Array<org.springframework.core.io.Resource>
                         /**
                          * Retrieve files that match the given path pattern,
                          * checking the given directory and its subdirectories.
@@ -315,7 +315,7 @@ declare namespace org {
                          * @throws IOException if directory contents could not be retrieved
                          */
                         // @ts-ignore
-                        retrieveMatchingFiles(rootDir: java.io.File, pattern: string): java.util.Set<java.io.File>
+                        retrieveMatchingFiles(rootDir: java.io.File, pattern: java.lang.String | string): Array<java.io.File>
                         /**
                          * Recursively retrieve files that match the given pattern,
                          * adding them to the given result list.
@@ -326,7 +326,7 @@ declare namespace org {
                          * @throws IOException if directory contents could not be retrieved
                          */
                         // @ts-ignore
-                        doRetrieveMatchingFiles(fullPattern: string, dir: java.io.File, result: Array<java.io.File>): void
+                        doRetrieveMatchingFiles(fullPattern: java.lang.String | string, dir: java.io.File, result: java.util.Set<java.io.File> | Array<java.io.File>): void
                         /**
                          * Determine a sorted list of files in the given directory.
                          * @param dir the directory to introspect

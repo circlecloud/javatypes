@@ -32,36 +32,36 @@ declare namespace org {
                         // @ts-ignore
                         constructor(rolls: org.spongepowered.api.util.weighted.VariableAmount)
                         // @ts-ignore
-                        add(entry: org.spongepowered.api.util.weighted.TableEntry<T>): boolean
+                        public add(entry: org.spongepowered.api.util.weighted.TableEntry<T>): boolean
                         // @ts-ignore
-                        add(object: T, weight: number /*double*/): boolean
+                        public add(object: T, weight: number /*double*/): boolean
                         // @ts-ignore
-                        addAll(c: Array<org.spongepowered.api.util.weighted.TableEntry<T>>): boolean
+                        public addAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        remove(entry: any): boolean
+                        public remove(entry: java.lang.Object | any): boolean
                         // @ts-ignore
-                        removeObject(entry: any): boolean
+                        public removeObject(entry: java.lang.Object | any): boolean
                         // @ts-ignore
-                        removeAll(c: Array<any>): boolean
+                        public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        retainAll(c: Array<any>): boolean
+                        public retainAll(c: java.util.Collection<any> | Array<any>): boolean
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         /**
                          * Recalculates the total weight of all entries in this table.
                          */
                         // @ts-ignore
                         recalculateWeight(): void
                         // @ts-ignore
-                        get(rand: java.util.Random): java.util.List<T>
+                        public get(rand: java.util.Random): Array<T>
                         // @ts-ignore
-                        iterator(): java.util.Iterator<org.spongepowered.api.util.weighted.TableEntry<T>>
+                        public iterator(): java.util.Iterator<org.spongepowered.api.util.weighted.TableEntry<T>>
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

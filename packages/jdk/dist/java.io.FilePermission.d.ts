@@ -84,7 +84,7 @@ declare namespace java {
              *           other than the specified possible actions.
              */
             // @ts-ignore
-            constructor(path: string, actions: string)
+            constructor(path: java.lang.String | string, actions: java.lang.String | string)
             /**
              * Checks if this FilePermission object "implies" the specified permission.
              * <P>
@@ -104,7 +104,7 @@ declare namespace java {
              *                   <code>false</code> otherwise.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two FilePermission objects for equality. Checks that <i>obj</i> is
              * a FilePermission, and has the same pathname and actions as this object.
@@ -114,13 +114,13 @@ declare namespace java {
              *           <code>false</code> otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this object.
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the "canonical string representation" of the actions.
              * That is, this method always returns present actions in the following order:
@@ -130,7 +130,7 @@ declare namespace java {
              * @return the canonical string representation of the actions.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Returns a new PermissionCollection object for storing FilePermission
              * objects.
@@ -158,7 +158,7 @@ declare namespace java {
              *  FilePermissions.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

@@ -7,7 +7,7 @@ declare namespace javax {
              * @author Steve Wilson
              */
             // @ts-ignore
-            class ColorChooserUI extends javax.swing.plaf.ComponentUI {
+            abstract class ColorChooserUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

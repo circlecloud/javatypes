@@ -58,12 +58,12 @@ declare namespace org {
                      * {@link org.springframework.web.client.DefaultResponseErrorHandler}.
                      */
                     // @ts-ignore
-                    setErrorHandler(errorHandler: org.springframework.web.client.ResponseErrorHandler): void
+                    public setErrorHandler(errorHandler: org.springframework.web.client.ResponseErrorHandler): void
                     /**
                      * Return the error handler.
                      */
                     // @ts-ignore
-                    getErrorHandler(): org.springframework.web.client.ResponseErrorHandler
+                    public getErrorHandler(): org.springframework.web.client.ResponseErrorHandler
                     /**
                      * Configure default URI variable values. This is a shortcut for:
                      * <pre class="code">
@@ -76,7 +76,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setDefaultUriVariables(defaultUriVariables: java.util.Map<java.lang.String, any>): void
+                    public setDefaultUriVariables(defaultUriVariables: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * This property has the same purpose as the corresponding property on the
                      * {@code RestTemplate}. For more details see
@@ -84,85 +84,85 @@ declare namespace org {
                      * @param handler the URI template handler to use
                      */
                     // @ts-ignore
-                    setUriTemplateHandler(handler: org.springframework.web.util.UriTemplateHandler): void
+                    public setUriTemplateHandler(handler: org.springframework.web.util.UriTemplateHandler): void
                     /**
                      * Return the configured URI template handler.
                      */
                     // @ts-ignore
-                    getUriTemplateHandler(): org.springframework.web.util.UriTemplateHandler
+                    public getUriTemplateHandler(): org.springframework.web.util.UriTemplateHandler
                     // @ts-ignore
-                    getRestOperations(): org.springframework.web.client.RestOperations
+                    public getRestOperations(): org.springframework.web.client.RestOperations
                     /**
                      * Set the message body converters to use.
                      * <p>These converters are used to convert from and to HTTP requests and responses.
                      */
                     // @ts-ignore
-                    setMessageConverters(messageConverters: Array<org.springframework.http.converter.HttpMessageConverter<any>>): void
+                    public setMessageConverters(messageConverters: java.util.List<org.springframework.http.converter.HttpMessageConverter<any>> | Array<org.springframework.http.converter.HttpMessageConverter<any>>): void
                     /**
                      * Return the message body converters.
                      */
                     // @ts-ignore
-                    getMessageConverters(): java.util.List<org.springframework.http.converter.HttpMessageConverter<?>>
+                    public getMessageConverters(): Array<org.springframework.http.converter.HttpMessageConverter<any>>
                     // @ts-ignore
-                    getForEntity<T>(url: string, responseType: java.lang.Class<T>, ...uriVariables: any[]): <any>
+                    public getForEntity<T>(url: java.lang.String | string, responseType: java.lang.Class<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    getForEntity<T>(url: string, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public getForEntity<T>(url: java.lang.String | string, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    getForEntity<T>(url: java.net.URI, responseType: java.lang.Class<T>): <any>
+                    public getForEntity<T>(url: java.net.URI, responseType: java.lang.Class<T>): object
                     // @ts-ignore
-                    headForHeaders(url: string, ...uriVariables: any[]): <any>
+                    public headForHeaders(url: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    headForHeaders(url: string, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public headForHeaders(url: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    headForHeaders(url: java.net.URI): <any>
+                    public headForHeaders(url: java.net.URI): object
                     // @ts-ignore
-                    postForLocation(url: string, request: org.springframework.http.HttpEntity<any>, ...uriVars: any[]): <any>
+                    public postForLocation(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, ...uriVars: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    postForLocation(url: string, request: org.springframework.http.HttpEntity<any>, uriVars: java.util.Map<java.lang.String, any>): <any>
+                    public postForLocation(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, uriVars: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    postForLocation(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): <any>
+                    public postForLocation(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): object
                     // @ts-ignore
-                    postForEntity<T>(url: string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: any[]): <any>
+                    public postForEntity<T>(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    postForEntity<T>(url: string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public postForEntity<T>(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    postForEntity<T>(url: java.net.URI, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): <any>
+                    public postForEntity<T>(url: java.net.URI, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): object
                     // @ts-ignore
-                    put(url: string, request: org.springframework.http.HttpEntity<any>, ...uriVars: any[]): <any>
+                    public put(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, ...uriVars: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    put(url: string, request: org.springframework.http.HttpEntity<any>, uriVars: java.util.Map<java.lang.String, any>): <any>
+                    public put(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, uriVars: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    put(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): <any>
+                    public put(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): object
                     // @ts-ignore
-                    delete(url: string, ...uriVariables: any[]): <any>
+                    public delete(url: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    delete(url: string, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public delete(url: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    delete(url: java.net.URI): <any>
+                    public delete(url: java.net.URI): object
                     // @ts-ignore
-                    optionsForAllow(url: string, ...uriVars: any[]): <any>
+                    public optionsForAllow(url: java.lang.String | string, ...uriVars: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    optionsForAllow(url: string, uriVars: java.util.Map<java.lang.String, any>): <any>
+                    public optionsForAllow(url: java.lang.String | string, uriVars: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    optionsForAllow(url: java.net.URI): <any>
+                    public optionsForAllow(url: java.net.URI): object
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: any[]): <any>
+                    public exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): <any>
+                    public exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): object
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, ...uriVariables: any[]): <any>
+                    public exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object): <any>
+                    public exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object): object
                     // @ts-ignore
-                    execute<T>(url: string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, ...uriVariables: any[]): <any>
+                    public execute<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     // @ts-ignore
-                    execute<T>(url: string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    public execute<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     // @ts-ignore
-                    execute<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>): <any>
+                    public execute<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>): object
                     /**
                      * Execute the given method on the provided URI. The
                      * {@link org.springframework.http.client.ClientHttpRequest}
@@ -176,7 +176,7 @@ declare namespace org {
                      * @return an arbitrary object, as returned by the {#link ResponseExtractor}
                      */
                     // @ts-ignore
-                    doExecute<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>): <any>
+                    doExecute<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>): object
                     /**
                      * Returns a request callback implementation that prepares the request {@code Accept}
                      * headers based on the given response type and configured {@linkplain

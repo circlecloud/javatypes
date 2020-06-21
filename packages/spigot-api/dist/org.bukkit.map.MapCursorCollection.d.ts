@@ -14,28 +14,28 @@ declare namespace org {
                  * @return The size of this collection.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Get a cursor from this collection.
                  * @param index The index of the cursor.
                  * @return The MapCursor.
                  */
                 // @ts-ignore
-                getCursor(index: number /*int*/): org.bukkit.map.MapCursor
+                public getCursor(index: number /*int*/): org.bukkit.map.MapCursor
                 /**
                  * Remove a cursor from the collection.
                  * @param cursor The MapCursor to remove.
                  * @return Whether the cursor was removed successfully.
                  */
                 // @ts-ignore
-                removeCursor(cursor: org.bukkit.map.MapCursor): boolean
+                public removeCursor(cursor: org.bukkit.map.MapCursor): boolean
                 /**
                  * Add a cursor to the collection.
                  * @param cursor The MapCursor to add.
                  * @return The MapCursor that was passed.
                  */
                 // @ts-ignore
-                addCursor(cursor: org.bukkit.map.MapCursor): org.bukkit.map.MapCursor
+                public addCursor(cursor: org.bukkit.map.MapCursor): org.bukkit.map.MapCursor
                 /**
                  * Add a cursor to the collection.
                  * @param x The x coordinate, from -128 to 127.
@@ -44,7 +44,7 @@ declare namespace org {
                  * @return The newly added MapCursor.
                  */
                 // @ts-ignore
-                addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/): org.bukkit.map.MapCursor
+                public addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/): org.bukkit.map.MapCursor
                 /**
                  * Add a cursor to the collection.
                  * @param x The x coordinate, from -128 to 127.
@@ -55,7 +55,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/, type: number /*byte*/): org.bukkit.map.MapCursor
+                public addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/, type: number /*byte*/): org.bukkit.map.MapCursor
                 /**
                  * Add a cursor to the collection.
                  * @param x The x coordinate, from -128 to 127.
@@ -67,7 +67,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/, type: number /*byte*/, visible: boolean): org.bukkit.map.MapCursor
+                public addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/, type: number /*byte*/, visible: boolean): org.bukkit.map.MapCursor
                 /**
                  * Add a cursor to the collection.
                  * @param x The x coordinate, from -128 to 127.
@@ -80,7 +80,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/, type: number /*byte*/, visible: boolean, caption: string): org.bukkit.map.MapCursor
+                public addCursor(x: number /*int*/, y: number /*int*/, direction: number /*byte*/, type: number /*byte*/, visible: boolean, caption: java.lang.String | string): org.bukkit.map.MapCursor
             }
         }
     }

@@ -25,7 +25,7 @@ declare namespace org {
                     // @ts-ignore
                     getScriptException(): javax.script.ScriptException
                     // @ts-ignore
-                    fillInStackTrace(): java.lang.Throwable
+                    fillInStackTrace(): Error
                 }
             }
         }

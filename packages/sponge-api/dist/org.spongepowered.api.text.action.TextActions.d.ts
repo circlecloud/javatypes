@@ -15,7 +15,7 @@ declare namespace org {
                          * @return The created click action instance
                          */
                         // @ts-ignore
-                        openUrl(url: java.net.URL): org.spongepowered.api.text.action.ClickAction.OpenUrl
+                        public static openUrl(url: java.net.URL): org.spongepowered.api.text.action.ClickAction.OpenUrl
                         /**
                          * Creates a new {@link ClickAction} that will type a command on the client
                          * when it is clicked.
@@ -23,7 +23,7 @@ declare namespace org {
                          * @return The created click action instance
                          */
                         // @ts-ignore
-                        runCommand(command: string): org.spongepowered.api.text.action.ClickAction.RunCommand
+                        public static runCommand(command: java.lang.String | string): org.spongepowered.api.text.action.ClickAction.RunCommand
                         /**
                          * Creates a new {@link ClickAction} that will change the page in a book
                          * when it is clicked.
@@ -31,7 +31,7 @@ declare namespace org {
                          * @return The created click action instance
                          */
                         // @ts-ignore
-                        changePage(page: number /*int*/): org.spongepowered.api.text.action.ClickAction.ChangePage
+                        public static changePage(page: number /*int*/): org.spongepowered.api.text.action.ClickAction.ChangePage
                         /**
                          * Creates a new {@link ClickAction} that will suggest the player a command
                          * when it is clicked.
@@ -39,7 +39,7 @@ declare namespace org {
                          * @return The created click action instance
                          */
                         // @ts-ignore
-                        suggestCommand(command: string): org.spongepowered.api.text.action.ClickAction.SuggestCommand
+                        public static suggestCommand(command: java.lang.String | string): org.spongepowered.api.text.action.ClickAction.SuggestCommand
                         /**
                          * Creates a new {@link ClickAction} that will execute the given runnable on
                          * the server when clicked. The callback will expire after some amount of
@@ -48,7 +48,7 @@ declare namespace org {
                          * @return The created click action instance
                          */
                         // @ts-ignore
-                        executeCallback(callback: java.util.function.Consumer<org.spongepowered.api.command.CommandSource> | java.util.function$.Consumer<org.spongepowered.api.command.CommandSource>): org.spongepowered.api.text.action.ClickAction.ExecuteCallback
+                        public static executeCallback(callback: java.util.function$.Consumer<org.spongepowered.api.command.CommandSource>): org.spongepowered.api.text.action.ClickAction.ExecuteCallback
                         /**
                          * Creates a new {@link HoverAction} that will show a text on the client
                          * when it is hovered.
@@ -56,7 +56,7 @@ declare namespace org {
                          * @return The created hover action instance
                          */
                         // @ts-ignore
-                        showText(text: org.spongepowered.api.text.Text): org.spongepowered.api.text.action.HoverAction.ShowText
+                        public static showText(text: org.spongepowered.api.text.Text): org.spongepowered.api.text.action.HoverAction.ShowText
                         /**
                          * Creates a new {@link HoverAction} that will show information about an
                          * item when it is hovered.
@@ -64,7 +64,7 @@ declare namespace org {
                          * @return The created hover action instance
                          */
                         // @ts-ignore
-                        showItem(item: org.spongepowered.api.item.inventory.ItemStackSnapshot): org.spongepowered.api.text.action.HoverAction.ShowItem
+                        public static showItem(item: org.spongepowered.api.item.inventory.ItemStackSnapshot): org.spongepowered.api.text.action.HoverAction.ShowItem
                         /**
                          * Creates a new {@link HoverAction} that will show information about an
                          * entity when it is hovered.
@@ -72,7 +72,7 @@ declare namespace org {
                          * @return The created hover action instance
                          */
                         // @ts-ignore
-                        showEntity(entity: org.spongepowered.api.text.action.HoverAction.ShowEntity.Ref): org.spongepowered.api.text.action.HoverAction.ShowEntity
+                        public static showEntity(entity: org.spongepowered.api.text.action.HoverAction.ShowEntity.Ref): org.spongepowered.api.text.action.HoverAction.ShowEntity
                         /**
                          * Creates a new {@link HoverAction} that will show information about an
                          * entity when it is hovered.
@@ -82,7 +82,7 @@ declare namespace org {
                          * @return The created hover action instance
                          */
                         // @ts-ignore
-                        showEntity(uuid: java.util.UUID, name: string, type: org.spongepowered.api.entity.EntityType): org.spongepowered.api.text.action.HoverAction.ShowEntity
+                        public static showEntity(uuid: java.util.UUID, name: java.lang.String | string, type: org.spongepowered.api.entity.EntityType): org.spongepowered.api.text.action.HoverAction.ShowEntity
                         /**
                          * Creates a new {@link HoverAction} that will show information about an
                          * entity when it is hovered.
@@ -91,7 +91,7 @@ declare namespace org {
                          * @return The created hover action instance
                          */
                         // @ts-ignore
-                        showEntity(uuid: java.util.UUID, name: string): org.spongepowered.api.text.action.HoverAction.ShowEntity
+                        public static showEntity(uuid: java.util.UUID, name: java.lang.String | string): org.spongepowered.api.text.action.HoverAction.ShowEntity
                         /**
                          * Creates a new {@link HoverAction} that will show information about an
                          * entity when it is hovered.
@@ -100,7 +100,7 @@ declare namespace org {
                          * @return The created hover action instance
                          */
                         // @ts-ignore
-                        showEntity(entity: org.spongepowered.api.entity.Entity, name: string): org.spongepowered.api.text.action.HoverAction.ShowEntity
+                        public static showEntity(entity: org.spongepowered.api.entity.Entity, name: java.lang.String | string): org.spongepowered.api.text.action.HoverAction.ShowEntity
                         /**
                          * Creates a new {@link ShiftClickAction} that will insert text at the
                          * current cursor position in the chat when it is shift-clicked.
@@ -108,7 +108,7 @@ declare namespace org {
                          * @return The created shift click action instance
                          */
                         // @ts-ignore
-                        insertText(text: string): org.spongepowered.api.text.action.ShiftClickAction.InsertText
+                        public static insertText(text: java.lang.String | string): org.spongepowered.api.text.action.ShiftClickAction.InsertText
                     }
                 }
             }

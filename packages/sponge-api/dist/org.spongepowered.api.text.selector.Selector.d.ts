@@ -32,14 +32,14 @@ declare namespace org {
                          * @return A new selector containing the given selector data
                          */
                         // @ts-ignore
-                        parse(selector: string): org.spongepowered.api.text.selector.Selector
+                        parse(selector: java.lang.String | string): org.spongepowered.api.text.selector.Selector
                         /**
                          * Fetch completions for a selector command argument.
                          * @param selector The partial selector
                          * @return Tab completions for the next part of the selector
                          */
                         // @ts-ignore
-                        complete(selector: string): java.util.List<java.lang.String>
+                        complete(selector: java.lang.String | string): Array<java.lang.String | string>
                         /**
                          * Returns the type of this {@link Selector}.
                          * @return The type of this selector
@@ -80,7 +80,7 @@ declare namespace org {
                          * @return The arguments for this {#link Selector}
                          */
                         // @ts-ignore
-                        getArguments(): java.util.List<org.spongepowered.api.text.selector.Argument<?>>
+                        getArguments(): Array<org.spongepowered.api.text.selector.Argument<any>>
                         /**
                          * Checks for the presence of {@code type} in this {@link Selector}.
                          * @param type - The {#link ArgumentType} to check for
@@ -107,7 +107,7 @@ declare namespace org {
                          * @return The matched entities
                          */
                         // @ts-ignore
-                        resolve(origin: org.spongepowered.api.command.CommandSource): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolve(origin: org.spongepowered.api.command.CommandSource): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around (0|0|0) in
                          * the given {@link Extent Extent(s)}.
@@ -117,7 +117,7 @@ declare namespace org {
                          * @return The matched entities
                          */
                         // @ts-ignore
-                        resolve(...extent: org.spongepowered.api.world.extent.Extent[]): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolve(...extent: org.spongepowered.api.world.extent.Extent[]): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around (0|0|0) in
                          * the given {@link Extent Extent(s)}.
@@ -127,7 +127,7 @@ declare namespace org {
                          * @return The matched entities
                          */
                         // @ts-ignore
-                        resolve(extent: Array<org.spongepowered.api.world.extent.Extent>): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolve(extent: java.util.Collection<any> | Array<any>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around the given
                          * {@link Location}.
@@ -137,7 +137,7 @@ declare namespace org {
                          * @return The matched entities
                          */
                         // @ts-ignore
-                        resolve(location: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolve(location: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around the origin.
                          * @param origin The source that should be considered the origin of this
@@ -146,7 +146,7 @@ declare namespace org {
                          * @deprecated Use {#link #resolve(CommandSource)}
                          */
                         // @ts-ignore
-                        resolveForce(origin: org.spongepowered.api.command.CommandSource): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolveForce(origin: org.spongepowered.api.command.CommandSource): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around (0|0|0) in
                          * the given {@link Extent Extent(s)}.
@@ -155,7 +155,7 @@ declare namespace org {
                          * @deprecated Use {#link #resolve(Extent[])}
                          */
                         // @ts-ignore
-                        resolveForce(...extent: org.spongepowered.api.world.extent.Extent[]): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolveForce(...extent: org.spongepowered.api.world.extent.Extent[]): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around (0|0|0) in
                          * the given {@link Extent Extent(s)}.
@@ -164,7 +164,7 @@ declare namespace org {
                          * @deprecated Use {#link #resolve(Collection)}
                          */
                         // @ts-ignore
-                        resolveForce(extent: Array<org.spongepowered.api.world.extent.Extent>): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolveForce(extent: java.util.Collection<any> | Array<any>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Resolves this {@link Selector} to a list of entities around the given
                          * {@link Location}.
@@ -173,14 +173,14 @@ declare namespace org {
                          * @deprecated Use {#link #resolve(Location)}
                          */
                         // @ts-ignore
-                        resolveForce(location: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): java.util.Set<org.spongepowered.api.entity.Entity>
+                        resolveForce(location: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Converts this {@link Selector} to a valid selector string.
                          * @return A valid {#link Selector} string that can be inserted into a
                          *          command
                          */
                         // @ts-ignore
-                        toPlain(): java.lang.String
+                        toPlain(): string
                         /**
                          * Returns a new {@link org.spongepowered.api.text.selector.Selector.Builder}
                          * with the content of this selector. This can be used to edit an immutable

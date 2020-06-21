@@ -45,7 +45,7 @@ declare namespace javax {
                  * @return the tab size
                  */
                 // @ts-ignore
-                getTabSize(): int
+                getTabSize(): number /*int*/
                 /**
                  * Renders a line of text, suppressing whitespace at the end
                  * and expanding any tabs.  This is implemented to make calls
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @exception BadLocationException if the range is invalid
                  */
                 // @ts-ignore
-                drawUnselectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): int
+                drawUnselectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Renders the given range in the model as selected text.  This
                  * is implemented to render the text in the color specified in
@@ -89,7 +89,7 @@ declare namespace javax {
                  * @exception BadLocationException if the range is invalid
                  */
                 // @ts-ignore
-                drawSelectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): int
+                drawSelectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Gives access to a buffer that can be used to fetch
                  * text from the associated document.
@@ -106,7 +106,7 @@ declare namespace javax {
                  * construction.
                  */
                 // @ts-ignore
-                calculateBreakPosition(p0: number /*int*/, p1: number /*int*/): int
+                calculateBreakPosition(p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Loads all of the children to initialize the view.
                  * This is called by the <code>setParent</code> method.
@@ -128,7 +128,7 @@ declare namespace javax {
                  * @return the tab stop, measured in points &gt;= 0
                  */
                 // @ts-ignore
-                nextTabStop(x: number /*float*/, tabOffset: number /*int*/): float
+                public nextTabStop(x: number /*float*/, tabOffset: number /*int*/): number /*float*/
                 /**
                  * Renders using the given rendering surface and area
                  * on that surface.  This is implemented to stash the
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Sets the size of the view.  This should cause
                  * layout of the view along the given axis, if it
@@ -148,7 +148,7 @@ declare namespace javax {
                  * @param height the height &gt;= 0
                  */
                 // @ts-ignore
-                setSize(width: number /*float*/, height: number /*float*/): void
+                public setSize(width: number /*float*/, height: number /*float*/): void
                 /**
                  * Determines the preferred span for this view along an
                  * axis.  This is implemented to provide the superclass
@@ -164,7 +164,7 @@ declare namespace javax {
                  * @see View#getPreferredSpan
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the minimum span for this view along an
                  * axis.  This is implemented to provide the superclass
@@ -180,7 +180,7 @@ declare namespace javax {
                  * @see View#getMinimumSpan
                  */
                 // @ts-ignore
-                getMinimumSpan(axis: number /*int*/): float
+                public getMinimumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the maximum span for this view along an
                  * axis.  This is implemented to provide the superclass
@@ -196,7 +196,7 @@ declare namespace javax {
                  * @see View#getMaximumSpan
                  */
                 // @ts-ignore
-                getMaximumSpan(axis: number /*int*/): float
+                public getMaximumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Gives notification that something was inserted into the
                  * document in a location that this view is responsible for.
@@ -207,7 +207,7 @@ declare namespace javax {
                  * @see View#insertUpdate
                  */
                 // @ts-ignore
-                insertUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public insertUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification that something was removed from the
                  * document in a location that this view is responsible for.
@@ -218,7 +218,7 @@ declare namespace javax {
                  * @see View#removeUpdate
                  */
                 // @ts-ignore
-                removeUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public removeUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification from the document that attributes were changed
                  * in a location that this view is responsible for.
@@ -228,7 +228,7 @@ declare namespace javax {
                  * @see View#changedUpdate
                  */
                 // @ts-ignore
-                changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
             }
         }
     }

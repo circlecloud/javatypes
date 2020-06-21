@@ -66,7 +66,7 @@ declare namespace java {
              * version of the class.
              */
             // @ts-ignore
-            
+            readonly serialVersionUID: number /*long*/
             /**
              * Returns the standard algorithm name for this key. For
              * example, "DSA" would indicate that this key is a DSA key.
@@ -77,7 +77,7 @@ declare namespace java {
              * @return the name of the algorithm associated with this key.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            getAlgorithm(): string
             /**
              * Returns the name of the primary encoding format of this key,
              * or null if this key does not support encoding.
@@ -95,7 +95,7 @@ declare namespace java {
              * @return the primary encoding format of the key.
              */
             // @ts-ignore
-            getFormat(): java.lang.String
+            getFormat(): string
             /**
              * Returns the key in its primary encoding format, or null
              * if this key does not support encoding.
@@ -103,7 +103,7 @@ declare namespace java {
              *  encoding.
              */
             // @ts-ignore
-            getEncoded(): byte[]
+            getEncoded(): number /*byte*/[]
         }
     }
 }

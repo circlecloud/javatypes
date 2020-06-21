@@ -175,7 +175,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isAnnotationPresent(annotationClass: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                isAnnotationPresent(annotationClass: java.lang.Class<any>): boolean
                 /**
                  * Returns this element's annotation for the specified type if
                  * such an annotation is <em>present</em>, else null.

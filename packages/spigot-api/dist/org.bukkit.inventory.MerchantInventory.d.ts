@@ -14,7 +14,7 @@ declare namespace org {
                  * @return the index of the currently selected recipe
                  */
                 // @ts-ignore
-                getSelectedRecipeIndex(): int
+                getSelectedRecipeIndex(): number /*int*/
                 /**
                  * Get the currently active recipe.
                  * <p>

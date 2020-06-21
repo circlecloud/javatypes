@@ -28,23 +28,23 @@ declare namespace org {
                          * <p>The default is {@code true}.
                          */
                         // @ts-ignore
-                        setMatchOptionalTrailingSeparator(matchOptionalTrailingSeparator: boolean): void
+                        public setMatchOptionalTrailingSeparator(matchOptionalTrailingSeparator: boolean): void
                         /**
                          * Whether optional trailing slashing match is enabled.
                          */
                         // @ts-ignore
-                        isMatchOptionalTrailingSeparator(): boolean
+                        public isMatchOptionalTrailingSeparator(): boolean
                         /**
                          * Whether path pattern matching should be case-sensitive.
                          * <p>The default is {@code true}.
                          */
                         // @ts-ignore
-                        setCaseSensitive(caseSensitive: boolean): void
+                        public setCaseSensitive(caseSensitive: boolean): void
                         /**
                          * Whether case-sensitive pattern matching is enabled.
                          */
                         // @ts-ignore
-                        isCaseSensitive(): boolean
+                        public isCaseSensitive(): boolean
                         /**
                          * Set options for parsing patterns. These should be the same as the
                          * options used to parse input paths.
@@ -53,13 +53,13 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        setPathOptions(pathOptions: org.springframework.http.server.PathContainer.Options): void
+                        public setPathOptions(pathOptions: org.springframework.http.server.PathContainer.Options): void
                         /**
                          * Return the {@link #setPathOptions configured} pattern parsing options.
                          * @since 5.2
                          */
                         // @ts-ignore
-                        getPathOptions(): org.springframework.http.server.PathContainer.Options
+                        public getPathOptions(): org.springframework.http.server.PathContainer.Options
                         /**
                          * Process the path pattern content, a character at a time, breaking it into
                          * path elements around separator boundaries and verifying the structure at each
@@ -71,7 +71,7 @@ declare namespace org {
                          * @throws PatternParseException in case of parse errors
                          */
                         // @ts-ignore
-                        parse(pathPattern: string): org.springframework.web.util.pattern.PathPattern
+                        public parse(pathPattern: java.lang.String | string): org.springframework.web.util.pattern.PathPattern
                     }
                 }
             }

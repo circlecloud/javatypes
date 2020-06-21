@@ -5,7 +5,7 @@ declare namespace java {
              * Provide access to the persistent fields read from the input stream.
              */
             // @ts-ignore
-            class GetField extends java.lang.Object {
+            abstract class GetField extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -13,7 +13,7 @@ declare namespace java {
                  * @return the descriptor class that describes the serializable fields
                  */
                 // @ts-ignore
-                abstract getObjectStreamClass(): java.io.ObjectStreamClass
+                public abstract getObjectStreamClass(): java.io.ObjectStreamClass
                 /**
                  * Return true if the named field is defaulted and has no value in this
                  * stream.
@@ -25,7 +25,7 @@ declare namespace java {
                  *          correspond to a serializable field
                  */
                 // @ts-ignore
-                abstract defaulted(name: string): boolean
+                public abstract defaulted(name: java.lang.String | string): boolean
                 /**
                  * Get the value of the named boolean field from the persistent field.
                  * @param name the name of the field
@@ -38,7 +38,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: boolean): boolean
+                public abstract get(name: java.lang.String | string, val: boolean): boolean
                 /**
                  * Get the value of the named byte field from the persistent field.
                  * @param name the name of the field
@@ -51,7 +51,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: number /*byte*/): byte
+                public abstract get(name: java.lang.String | string, val: number /*byte*/): number /*byte*/
                 /**
                  * Get the value of the named char field from the persistent field.
                  * @param name the name of the field
@@ -64,7 +64,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: string): char
+                public abstract get(name: java.lang.String | string, val: string): string
                 /**
                  * Get the value of the named short field from the persistent field.
                  * @param name the name of the field
@@ -77,7 +77,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: number /*short*/): short
+                public abstract get(name: java.lang.String | string, val: number /*short*/): number /*short*/
                 /**
                  * Get the value of the named int field from the persistent field.
                  * @param name the name of the field
@@ -90,7 +90,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: number /*int*/): int
+                public abstract get(name: java.lang.String | string, val: number /*int*/): number /*int*/
                 /**
                  * Get the value of the named long field from the persistent field.
                  * @param name the name of the field
@@ -103,7 +103,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: number /*long*/): long
+                public abstract get(name: java.lang.String | string, val: number /*long*/): number /*long*/
                 /**
                  * Get the value of the named float field from the persistent field.
                  * @param name the name of the field
@@ -116,7 +116,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: number /*float*/): float
+                public abstract get(name: java.lang.String | string, val: number /*float*/): number /*float*/
                 /**
                  * Get the value of the named double field from the persistent field.
                  * @param name the name of the field
@@ -129,7 +129,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: number /*double*/): double
+                public abstract get(name: java.lang.String | string, val: number /*double*/): number /*double*/
                 /**
                  * Get the value of the named Object field from the persistent field.
                  * @param name the name of the field
@@ -142,7 +142,7 @@ declare namespace java {
                  *          not serializable or if the field type is incorrect
                  */
                 // @ts-ignore
-                abstract get(name: string, val: any): java.lang.Object
+                public abstract get(name: java.lang.String | string, val: java.lang.Object | any): any
             }
         }
     }

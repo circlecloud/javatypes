@@ -14,7 +14,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class RectangularShape extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
+            abstract class RectangularShape extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * @see Arc2D
@@ -33,7 +33,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getX(): double
+                public abstract getX(): number /*double*/
                 /**
                  * Returns the Y coordinate of the upper-left corner of
                  * the framing rectangle in <code>double</code> precision.
@@ -42,7 +42,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getY(): double
+                public abstract getY(): number /*double*/
                 /**
                  * Returns the width of the framing rectangle in
                  * <code>double</code> precision.
@@ -50,7 +50,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getWidth(): double
+                public abstract getWidth(): number /*double*/
                 /**
                  * Returns the height of the framing rectangle
                  * in <code>double</code> precision.
@@ -58,7 +58,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getHeight(): double
+                public abstract getHeight(): number /*double*/
                 /**
                  * Returns the smallest X coordinate of the framing
                  * rectangle of the <code>Shape</code> in <code>double</code>
@@ -68,7 +68,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getMinX(): double
+                public getMinX(): number /*double*/
                 /**
                  * Returns the smallest Y coordinate of the framing
                  * rectangle of the <code>Shape</code> in <code>double</code>
@@ -78,7 +78,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getMinY(): double
+                public getMinY(): number /*double*/
                 /**
                  * Returns the largest X coordinate of the framing
                  * rectangle of the <code>Shape</code> in <code>double</code>
@@ -88,7 +88,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getMaxX(): double
+                public getMaxX(): number /*double*/
                 /**
                  * Returns the largest Y coordinate of the framing
                  * rectangle of the <code>Shape</code> in <code>double</code>
@@ -98,7 +98,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getMaxY(): double
+                public getMaxY(): number /*double*/
                 /**
                  * Returns the X coordinate of the center of the framing
                  * rectangle of the <code>Shape</code> in <code>double</code>
@@ -108,7 +108,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getCenterX(): double
+                public getCenterX(): number /*double*/
                 /**
                  * Returns the Y coordinate of the center of the framing
                  * rectangle of the <code>Shape</code> in <code>double</code>
@@ -118,7 +118,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getCenterY(): double
+                public getCenterY(): number /*double*/
                 /**
                  * Returns the framing {@link Rectangle2D}
                  * that defines the overall shape of this object.
@@ -130,7 +130,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFrame(): java.awt.geom.Rectangle2D
+                public getFrame(): java.awt.geom.Rectangle2D
                 /**
                  * Determines whether the <code>RectangularShape</code> is empty.
                  * When the <code>RectangularShape</code> is empty, it encloses no
@@ -140,7 +140,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract isEmpty(): boolean
+                public abstract isEmpty(): boolean
                 /**
                  * Sets the location and size of the framing rectangle of this
                  * <code>Shape</code> to the specified rectangular values.
@@ -154,7 +154,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                public abstract setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                 /**
                  * Sets the location and size of the framing rectangle of this
                  * <code>Shape</code> to the specified {@link Point2D} and
@@ -167,7 +167,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrame(loc: java.awt.geom.Point2D, size: java.awt.geom.Dimension2D): void
+                public setFrame(loc: java.awt.geom.Point2D, size: java.awt.geom.Dimension2D): void
                 /**
                  * Sets the framing rectangle of this <code>Shape</code> to
                  * be the specified <code>Rectangle2D</code>.  The framing rectangle is
@@ -178,7 +178,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrame(r: java.awt.geom.Rectangle2D): void
+                public setFrame(r: java.awt.geom.Rectangle2D): void
                 /**
                  * Sets the diagonal of the framing rectangle of this <code>Shape</code>
                  * based on the two specified coordinates.  The framing rectangle is
@@ -191,7 +191,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrameFromDiagonal(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                public setFrameFromDiagonal(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                 /**
                  * Sets the diagonal of the framing rectangle of this <code>Shape</code>
                  * based on two specified <code>Point2D</code> objects.  The framing
@@ -202,7 +202,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrameFromDiagonal(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
+                public setFrameFromDiagonal(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
                 /**
                  * Sets the framing rectangle of this <code>Shape</code>
                  * based on the specified center point coordinates and corner point
@@ -215,7 +215,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrameFromCenter(centerX: number /*double*/, centerY: number /*double*/, cornerX: number /*double*/, cornerY: number /*double*/): void
+                public setFrameFromCenter(centerX: number /*double*/, centerY: number /*double*/, cornerX: number /*double*/, cornerY: number /*double*/): void
                 /**
                  * Sets the framing rectangle of this <code>Shape</code> based on a
                  * specified center <code>Point2D</code> and corner
@@ -226,31 +226,31 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setFrameFromCenter(center: java.awt.geom.Point2D, corner: java.awt.geom.Point2D): void
+                public setFrameFromCenter(center: java.awt.geom.Point2D, corner: java.awt.geom.Point2D): void
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(p: java.awt.geom.Point2D): boolean
+                public contains(p: java.awt.geom.Point2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(r: java.awt.geom.Rectangle2D): boolean
+                public intersects(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(r: java.awt.geom.Rectangle2D): boolean
+                public contains(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds(): java.awt.Rectangle
+                public getBounds(): java.awt.Rectangle
                 /**
                  * Returns an iterator object that iterates along the
                  * <code>Shape</code> object's boundary and provides access to a
@@ -278,7 +278,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
                 /**
                  * Creates a new object of the same class and with the same
                  * contents as this object.
@@ -288,7 +288,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

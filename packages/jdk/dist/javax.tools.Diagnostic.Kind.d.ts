@@ -14,10 +14,39 @@ declare namespace javax {
              */
             // @ts-ignore
             class Kind extends java.lang.Enum<javax.tools.Diagnostic.Kind> {
+                /**
+                 * Problem which prevents the tool's normal completion.
+                 */
+                // @ts-ignore
+                readonly ERROR: javax.tools.Diagnostic.Kind
+                /**
+                 * Problem which does not usually prevent the tool from
+                 * completing normally.
+                 */
+                // @ts-ignore
+                readonly WARNING: javax.tools.Diagnostic.Kind
+                /**
+                 * Problem similar to a warning, but is mandated by the tool's
+                 * specification.  For example, the Java&trade; Language
+                 * Specification mandates warnings on certain
+                 * unchecked operations and the use of deprecated methods.
+                 */
+                // @ts-ignore
+                readonly MANDATORY_WARNING: javax.tools.Diagnostic.Kind
+                /**
+                 * Informative message from the tool.
+                 */
+                // @ts-ignore
+                readonly NOTE: javax.tools.Diagnostic.Kind
+                /**
+                 * Diagnostic which does not fit within the other kinds.
+                 */
+                // @ts-ignore
+                readonly OTHER: javax.tools.Diagnostic.Kind
                 // @ts-ignore
                 values(): javax.tools.Diagnostic.Kind[]
                 // @ts-ignore
-                valueOf(name: string): javax.tools.Diagnostic.Kind
+                valueOf(name: java.lang.String | string): javax.tools.Diagnostic.Kind
             }
         }
     }

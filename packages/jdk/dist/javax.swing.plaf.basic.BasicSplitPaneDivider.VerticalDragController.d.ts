@@ -20,13 +20,13 @@ declare namespace javax {
                          * splits.
                          */
                         // @ts-ignore
-                        getNeededLocation(x: number /*int*/, y: number /*int*/): int
+                        getNeededLocation(x: number /*int*/, y: number /*int*/): number /*int*/
                         /**
                          * Returns the new position to put the divider at based on
                          * the passed in MouseEvent.
                          */
                         // @ts-ignore
-                        positionForMouseEvent(e: java.awt.event.MouseEvent): int
+                        positionForMouseEvent(e: java.awt.event.MouseEvent): number /*int*/
                     }
                 }
             }

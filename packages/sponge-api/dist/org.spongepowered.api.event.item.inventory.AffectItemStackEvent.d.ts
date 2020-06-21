@@ -16,7 +16,7 @@ declare namespace org {
                              * @return The unmodifiable list of transactions
                              */
                             // @ts-ignore
-                            getTransactions(): java.util.List<? extends org.spongepowered.api.data.Transaction<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
+                            getTransactions(): Array<any>
                             /**
                              * Applies the provided {@link Predicate} to the {@link List} of
                              * {@link Transaction}s from {@link #getTransactions()} such that
@@ -30,7 +30,7 @@ declare namespace org {
                              *      <code>false</code>
                              */
                             // @ts-ignore
-                            filter(predicate: java.util.function.Predicate<org.spongepowered.api.item.inventory.ItemStack> | java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStack>): java.util.List<? extends org.spongepowered.api.data.Transaction<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
+                            filter(predicate: java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStack>): Array<any>
                         }
                     }
                 }

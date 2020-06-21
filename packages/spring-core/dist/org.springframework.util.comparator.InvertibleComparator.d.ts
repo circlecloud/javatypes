@@ -34,26 +34,26 @@ declare namespace org {
                      * Specify the sort order: ascending (true) or descending (false).
                      */
                     // @ts-ignore
-                    setAscending(ascending: boolean): void
+                    public setAscending(ascending: boolean): void
                     /**
                      * Return the sort order: ascending (true) or descending (false).
                      */
                     // @ts-ignore
-                    isAscending(): boolean
+                    public isAscending(): boolean
                     /**
                      * Invert the sort order: ascending -> descending or
                      * descending -> ascending.
                      */
                     // @ts-ignore
-                    invertOrder(): void
+                    public invertOrder(): void
                     // @ts-ignore
-                    compare(o1: T, o2: T): int
+                    public compare(o1: T, o2: T): number /*int*/
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -21,39 +21,39 @@ declare namespace org {
                  * @return the direction the stairs ascend towards
                  */
                 // @ts-ignore
-                getAscendingDirection(): org.bukkit.block.BlockFace
+                public getAscendingDirection(): org.bukkit.block.BlockFace
                 /**
                  * @return the direction the stairs descend towards
                  */
                 // @ts-ignore
-                getDescendingDirection(): org.bukkit.block.BlockFace
+                public getDescendingDirection(): org.bukkit.block.BlockFace
                 /**
                  * Set the direction the stair part of the block is facing
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 /**
                  * @return the direction the stair part of the block is facing
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 /**
                  * Test if step is inverted
                  * @return true if inverted (top half), false if normal (bottom half)
                  */
                 // @ts-ignore
-                isInverted(): boolean
+                public isInverted(): boolean
                 /**
                  * Set step inverted state
                  * @param inv - true if step is inverted (top half), false if step is
                  *      normal (bottom half)
                  */
                 // @ts-ignore
-                setInverted(inv: boolean): void
+                public setInverted(inv: boolean): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Stairs
+                public clone(): org.bukkit.material.Stairs
             }
         }
     }

@@ -50,7 +50,7 @@ declare namespace java {
                  * @return the index of the character hit.
                  */
                 // @ts-ignore
-                getCharIndex(): int
+                public getCharIndex(): number /*int*/
                 /**
                  * Returns <code>true</code> if the leading edge of the character was
                  * hit.
@@ -58,7 +58,7 @@ declare namespace java {
                  *  hit; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isLeadingEdge(): boolean
+                public isLeadingEdge(): boolean
                 /**
                  * Returns the insertion index.  This is the character index if
                  * the leading edge of the character was hit, and one greater
@@ -66,14 +66,14 @@ declare namespace java {
                  * @return the insertion index.
                  */
                 // @ts-ignore
-                getInsertionIndex(): int
+                public getInsertionIndex(): number /*int*/
                 /**
                  * Returns the hash code.
                  * @return the hash code of this <code>TextHitInfo</code>, which is
                  *  also the <code>charIndex</code> of this <code>TextHitInfo</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns <code>true</code> if the specified <code>Object</code> is a
                  * <code>TextHitInfo</code> and equals this <code>TextHitInfo</code>.
@@ -82,7 +82,7 @@ declare namespace java {
                  *  equals this <code>TextHitInfo</code>; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns <code>true</code> if the specified <code>TextHitInfo</code>
                  * has the same <code>charIndex</code> and <code>isLeadingEdge</code>
@@ -94,7 +94,7 @@ declare namespace java {
                  *  as this <code>TextHitInfo</code>.
                  */
                 // @ts-ignore
-                equals(hitInfo: java.awt.font.TextHitInfo): boolean
+                public equals(hitInfo: java.awt.font.TextHitInfo): boolean
                 /**
                  * Returns a <code>String</code> representing the hit for debugging
                  * use only.
@@ -102,7 +102,7 @@ declare namespace java {
                  *  <code>TextHitInfo</code>.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Creates a <code>TextHitInfo</code> on the leading edge of the
                  * character at the specified <code>charIndex</code>.
@@ -111,7 +111,7 @@ declare namespace java {
                  *  character at the specified <code>charIndex</code>.
                  */
                 // @ts-ignore
-                leading(charIndex: number /*int*/): java.awt.font.TextHitInfo
+                public static leading(charIndex: number /*int*/): java.awt.font.TextHitInfo
                 /**
                  * Creates a hit on the trailing edge of the character at
                  * the specified <code>charIndex</code>.
@@ -120,7 +120,7 @@ declare namespace java {
                  *  character at the specified <code>charIndex</code>.
                  */
                 // @ts-ignore
-                trailing(charIndex: number /*int*/): java.awt.font.TextHitInfo
+                public static trailing(charIndex: number /*int*/): java.awt.font.TextHitInfo
                 /**
                  * Creates a <code>TextHitInfo</code> at the specified offset,
                  * associated with the character before the offset.
@@ -129,7 +129,7 @@ declare namespace java {
                  * @return a <code>TextHitInfo</code> at the specified offset.
                  */
                 // @ts-ignore
-                beforeOffset(offset: number /*int*/): java.awt.font.TextHitInfo
+                public static beforeOffset(offset: number /*int*/): java.awt.font.TextHitInfo
                 /**
                  * Creates a <code>TextHitInfo</code> at the specified offset,
                  * associated with the character after the offset.
@@ -138,7 +138,7 @@ declare namespace java {
                  * @return a <code>TextHitInfo</code> at the specified offset.
                  */
                 // @ts-ignore
-                afterOffset(offset: number /*int*/): java.awt.font.TextHitInfo
+                public static afterOffset(offset: number /*int*/): java.awt.font.TextHitInfo
                 /**
                  * Creates a <code>TextHitInfo</code> on the other side of the
                  * insertion point.  This <code>TextHitInfo</code> remains unchanged.
@@ -146,7 +146,7 @@ declare namespace java {
                  *  insertion point.
                  */
                 // @ts-ignore
-                getOtherHit(): java.awt.font.TextHitInfo
+                public getOtherHit(): java.awt.font.TextHitInfo
                 /**
                  * Creates a <code>TextHitInfo</code> whose character index is offset
                  * by <code>delta</code> from the <code>charIndex</code> of this
@@ -158,7 +158,7 @@ declare namespace java {
                  *  this <code>TextHitInfo</code>.
                  */
                 // @ts-ignore
-                getOffsetHit(delta: number /*int*/): java.awt.font.TextHitInfo
+                public getOffsetHit(delta: number /*int*/): java.awt.font.TextHitInfo
             }
         }
     }

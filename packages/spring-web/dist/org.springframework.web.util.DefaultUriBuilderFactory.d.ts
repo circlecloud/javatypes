@@ -29,7 +29,7 @@ declare namespace org {
                      * @param baseUriTemplate the URI template to use a base URL
                      */
                     // @ts-ignore
-                    constructor(baseUriTemplate: string)
+                    constructor(baseUriTemplate: java.lang.String | string)
                     /**
                      * Variant of {@link #DefaultUriBuilderFactory(String)} with a
                      * {@code UriComponentsBuilder}.
@@ -50,24 +50,24 @@ declare namespace org {
                      * @param encodingMode the encoding mode to use
                      */
                     // @ts-ignore
-                    setEncodingMode(encodingMode: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode): void
+                    public setEncodingMode(encodingMode: org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode): void
                     /**
                      * Return the configured encoding mode.
                      */
                     // @ts-ignore
-                    getEncodingMode(): org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+                    public getEncodingMode(): org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
                     /**
                      * Provide default URI variable values to use when expanding URI templates
                      * with a Map of variables.
                      * @param defaultUriVariables default URI variable values
                      */
                     // @ts-ignore
-                    setDefaultUriVariables(defaultUriVariables: java.util.Map<java.lang.String, any>): void
+                    public setDefaultUriVariables(defaultUriVariables: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Return the configured default URI variable values.
                      */
                     // @ts-ignore
-                    getDefaultUriVariables(): java.util.Map<java.lang.String, ?>
+                    public getDefaultUriVariables(): java.util.Map<java.lang.String | string, any>
                     /**
                      * Whether to parse the input path into path segments if the encoding mode
                      * is set to {@link EncodingMode#URI_COMPONENT EncodingMode.URI_COMPONENT},
@@ -77,21 +77,21 @@ declare namespace org {
                      * @param parsePath whether to parse the path into path segments
                      */
                     // @ts-ignore
-                    setParsePath(parsePath: boolean): void
+                    public setParsePath(parsePath: boolean): void
                     /**
                      * Whether to parse the path into path segments if the encoding mode is set
                      * to {@link EncodingMode#URI_COMPONENT EncodingMode.URI_COMPONENT}.
                      */
                     // @ts-ignore
-                    shouldParsePath(): boolean
+                    public shouldParsePath(): boolean
                     // @ts-ignore
-                    expand(uriTemplate: string, uriVars: java.util.Map<java.lang.String, any>): java.net.URI
+                    public expand(uriTemplate: java.lang.String | string, uriVars: java.util.Map<java.lang.String | string, any>): java.net.URI
                     // @ts-ignore
-                    expand(uriTemplate: string, ...uriVars: any[]): java.net.URI
+                    public expand(uriTemplate: java.lang.String | string, ...uriVars: java.lang.Object[] | any[]): java.net.URI
                     // @ts-ignore
-                    uriString(uriTemplate: string): org.springframework.web.util.UriBuilder
+                    public uriString(uriTemplate: java.lang.String | string): org.springframework.web.util.UriBuilder
                     // @ts-ignore
-                    builder(): org.springframework.web.util.UriBuilder
+                    public builder(): org.springframework.web.util.UriBuilder
                 }
             }
         }

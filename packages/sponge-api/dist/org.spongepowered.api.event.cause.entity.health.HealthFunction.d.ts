@@ -23,9 +23,9 @@ declare namespace org {
                                  * @param function The double unary operator to use
                                  */
                                 // @ts-ignore
-                                constructor(modifier: org.spongepowered.api.event.cause.entity.health.HealthModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator)
+                                constructor(modifier: org.spongepowered.api.event.cause.entity.health.HealthModifier, func: java.util.function$.DoubleUnaryOperator)
                                 // @ts-ignore
-                                readonly NO_HEALTH: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator
+                                public static readonly NO_HEALTH: java.util.function$.DoubleUnaryOperator
                                 /**
                                  * Constructs a new health function.
                                  * @param first The health modifier to use
@@ -33,25 +33,25 @@ declare namespace org {
                                  * @return The resulting health function
                                  */
                                 // @ts-ignore
-                                of(first: org.spongepowered.api.event.cause.entity.health.HealthModifier, second: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): org.spongepowered.api.event.cause.entity.health.HealthFunction
+                                public static of(first: org.spongepowered.api.event.cause.entity.health.HealthModifier, second: java.util.function$.DoubleUnaryOperator): org.spongepowered.api.event.cause.entity.health.HealthFunction
                                 /**
                                  * Gets the {@link HealthModifier} for this function.
                                  * @return The health modifier
                                  */
                                 // @ts-ignore
-                                getModifier(): org.spongepowered.api.event.cause.entity.health.HealthModifier
+                                public getModifier(): org.spongepowered.api.event.cause.entity.health.HealthModifier
                                 /**
                                  * Gets the {@link DoubleUnaryOperator} for this function.
                                  * @return The healing function
                                  */
                                 // @ts-ignore
-                                getFunction(): java.util.function.DoubleUnaryOperator
+                                public getFunction(): java.util.function$.DoubleUnaryOperator
                                 // @ts-ignore
-                                toString(): java.lang.String
+                                public toString(): string
                                 // @ts-ignore
-                                equals(o: any): boolean
+                                public equals(o: java.lang.Object | any): boolean
                                 // @ts-ignore
-                                hashCode(): int
+                                public hashCode(): number /*int*/
                             }
                         }
                     }

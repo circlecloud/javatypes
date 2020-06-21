@@ -49,14 +49,14 @@ declare namespace java {
              * @throws NullPointerException   if the parameter o is null.
              */
             // @ts-ignore
-            addObserver(o: java.util.Observer): void
+            public addObserver(o: java.util.Observer): void
             /**
              * Deletes an observer from the set of observers of this object.
              * Passing <CODE>null</CODE> to this method will have no effect.
              * @param o   the observer to be deleted.
              */
             // @ts-ignore
-            deleteObserver(o: java.util.Observer): void
+            public deleteObserver(o: java.util.Observer): void
             /**
              * If this object has changed, as indicated by the
              * <code>hasChanged</code> method, then notify all of its observers
@@ -73,7 +73,7 @@ declare namespace java {
              * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
              */
             // @ts-ignore
-            notifyObservers(): void
+            public notifyObservers(): void
             /**
              * If this object has changed, as indicated by the
              * <code>hasChanged</code> method, then notify all of its observers
@@ -88,12 +88,12 @@ declare namespace java {
              * @see java.util.Observer#update(java.util.Observable, java.lang.Object)
              */
             // @ts-ignore
-            notifyObservers(arg: any): void
+            public notifyObservers(arg: java.lang.Object | any): void
             /**
              * Clears the observer list so that this object no longer has any observers.
              */
             // @ts-ignore
-            deleteObservers(): void
+            public deleteObservers(): void
             /**
              * Marks this <tt>Observable</tt> object as having been changed; the
              * <tt>hasChanged</tt> method will now return <tt>true</tt>.
@@ -121,13 +121,13 @@ declare namespace java {
              * @see java.util.Observable#setChanged()
              */
             // @ts-ignore
-            hasChanged(): boolean
+            public hasChanged(): boolean
             /**
              * Returns the number of observers of this <tt>Observable</tt> object.
              * @return the number of observers of this object.
              */
             // @ts-ignore
-            countObservers(): int
+            public countObservers(): number /*int*/
         }
     }
 }

@@ -49,11 +49,11 @@ declare namespace javax {
                     // @ts-ignore
                     trackHighlight: number /*int*/
                     // @ts-ignore
-                    readonly NO_HIGHLIGHT: number /*int*/
+                    static readonly NO_HIGHLIGHT: number /*int*/
                     // @ts-ignore
-                    readonly DECREASE_HIGHLIGHT: number /*int*/
+                    static readonly DECREASE_HIGHLIGHT: number /*int*/
                     // @ts-ignore
-                    readonly INCREASE_HIGHLIGHT: number /*int*/
+                    static readonly INCREASE_HIGHLIGHT: number /*int*/
                     // @ts-ignore
                     scrollListener: javax.swing.plaf.basic.BasicScrollBarUI.ScrollListener
                     // @ts-ignore
@@ -84,13 +84,13 @@ declare namespace javax {
                     // @ts-ignore
                     decrGap: number /*int*/
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
                     configureScrollBarColors(): void
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -130,9 +130,9 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    isThumbRollover(): boolean
+                    public isThumbRollover(): boolean
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * A vertical scrollbar's preferred width is the maximum of
                      * preferred widths of the (non <code>null</code>)
@@ -149,7 +149,7 @@ declare namespace javax {
                      * @see #getMinimumSize
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * @param c The JScrollBar that's delegating this method to us.
                      * @return new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE);
@@ -157,7 +157,7 @@ declare namespace javax {
                      * @see #getPreferredSize
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
                     createDecreaseButton(orientation: number /*int*/): javax.swing.JButton
                     // @ts-ignore
@@ -195,19 +195,19 @@ declare namespace javax {
                     // @ts-ignore
                     getMaximumThumbSize(): java.awt.Dimension
                     // @ts-ignore
-                    addLayoutComponent(name: string, child: java.awt.Component): void
+                    public addLayoutComponent(name: java.lang.String | string, child: java.awt.Component): void
                     // @ts-ignore
-                    removeLayoutComponent(child: java.awt.Component): void
+                    public removeLayoutComponent(child: java.awt.Component): void
                     // @ts-ignore
-                    preferredLayoutSize(scrollbarContainer: java.awt.Container): java.awt.Dimension
+                    public preferredLayoutSize(scrollbarContainer: java.awt.Container): java.awt.Dimension
                     // @ts-ignore
-                    minimumLayoutSize(scrollbarContainer: java.awt.Container): java.awt.Dimension
+                    public minimumLayoutSize(scrollbarContainer: java.awt.Container): java.awt.Dimension
                     // @ts-ignore
                     layoutVScrollbar(sb: javax.swing.JScrollBar): void
                     // @ts-ignore
                     layoutHScrollbar(sb: javax.swing.JScrollBar): void
                     // @ts-ignore
-                    layoutContainer(scrollbarContainer: java.awt.Container): void
+                    public layoutContainer(scrollbarContainer: java.awt.Container): void
                     /**
                      * Set the bounds of the thumb and force a repaint that includes
                      * the old thumbBounds and the new one.
@@ -249,7 +249,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getSupportsAbsolutePositioning(): boolean
+                    public getSupportsAbsolutePositioning(): boolean
                 }
             }
         }

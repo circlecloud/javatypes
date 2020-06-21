@@ -52,31 +52,31 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                constructor(pathSeparator: string)
+                constructor(pathSeparator: java.lang.String | string)
                 /**
                  * Default path separator: "/".
                  */
                 // @ts-ignore
-                readonly DEFAULT_PATH_SEPARATOR: string
+                public static readonly DEFAULT_PATH_SEPARATOR: java.lang.String | string
                 /**
                  * Set the path separator to use for pattern parsing.
                  * <p>Default is "/", as in Ant.
                  */
                 // @ts-ignore
-                setPathSeparator(pathSeparator: string): void
+                public setPathSeparator(pathSeparator: java.lang.String | string): void
                 /**
                  * Specify whether to perform pattern matching in a case-sensitive fashion.
                  * <p>Default is {@code true}. Switch this to {@code false} for case-insensitive matching.
                  * @since 4.2
                  */
                 // @ts-ignore
-                setCaseSensitive(caseSensitive: boolean): void
+                public setCaseSensitive(caseSensitive: boolean): void
                 /**
                  * Specify whether to trim tokenized paths and patterns.
                  * <p>Default is {@code false}.
                  */
                 // @ts-ignore
-                setTrimTokens(trimTokens: boolean): void
+                public setTrimTokens(trimTokens: boolean): void
                 /**
                  * Specify whether to cache parsed pattern metadata for patterns passed
                  * into this matcher's {@link #match} method. A value of {@code true}
@@ -90,13 +90,13 @@ declare namespace org {
                  * @see #getStringMatcher(String)
                  */
                 // @ts-ignore
-                setCachePatterns(cachePatterns: boolean): void
+                public setCachePatterns(cachePatterns: boolean): void
                 // @ts-ignore
-                isPattern(path: string): boolean
+                public isPattern(path: java.lang.String | string): boolean
                 // @ts-ignore
-                match(pattern: string, path: string): boolean
+                public match(pattern: java.lang.String | string, path: java.lang.String | string): boolean
                 // @ts-ignore
-                matchStart(pattern: string, path: string): boolean
+                public matchStart(pattern: java.lang.String | string, path: java.lang.String | string): boolean
                 /**
                  * Actually match the given {@code path} against the given {@code pattern}.
                  * @param pattern the pattern to match against
@@ -106,7 +106,7 @@ declare namespace org {
                  * @return {#code true} if the supplied {@code path} matched, {@code false} if it didn't
                  */
                 // @ts-ignore
-                doMatch(pattern: string, path: string, fullMatch: boolean, uriTemplateVariables: java.util.Map<java.lang.String, java.lang.String>): boolean
+                doMatch(pattern: java.lang.String | string, path: java.lang.String | string, fullMatch: boolean, uriTemplateVariables: java.util.Map<java.lang.String | string, java.lang.String | string>): boolean
                 /**
                  * Tokenize the given path pattern into parts, based on this matcher's settings.
                  * <p>Performs caching based on {@link #setCachePatterns}, delegating to
@@ -115,14 +115,14 @@ declare namespace org {
                  * @return the tokenized pattern parts
                  */
                 // @ts-ignore
-                tokenizePattern(pattern: string): java.lang.String[]
+                tokenizePattern(pattern: java.lang.String | string): string[]
                 /**
                  * Tokenize the given path into parts, based on this matcher's settings.
                  * @param path the path to tokenize
                  * @return the tokenized path parts
                  */
                 // @ts-ignore
-                tokenizePath(path: string): java.lang.String[]
+                tokenizePath(path: java.lang.String | string): string[]
                 /**
                  * Build or retrieve an {@link AntPathStringMatcher} for the given pattern.
                  * <p>The default implementation checks this AntPathMatcher's internal cache
@@ -137,7 +137,7 @@ declare namespace org {
                  * @see #setCachePatterns
                  */
                 // @ts-ignore
-                getStringMatcher(pattern: string): org.springframework.util.AntPathMatcher.AntPathStringMatcher
+                getStringMatcher(pattern: java.lang.String | string): org.springframework.util.AntPathMatcher.AntPathStringMatcher
                 /**
                  * Given a pattern and a full path, determine the pattern-mapped part. <p>For example: <ul>
                  * <li>'{@code /docs/cvs/commit.html}' and '{@code /docs/cvs/commit.html} -> ''</li>
@@ -152,9 +152,9 @@ declare namespace org {
                  * does <strong>not</strong> enforce this.
                  */
                 // @ts-ignore
-                extractPathWithinPattern(pattern: string, path: string): java.lang.String
+                public extractPathWithinPattern(pattern: java.lang.String | string, path: java.lang.String | string): string
                 // @ts-ignore
-                extractUriTemplateVariables(pattern: string, path: string): java.util.Map<java.lang.String, java.lang.String>
+                public extractUriTemplateVariables(pattern: java.lang.String | string, path: java.lang.String | string): java.util.Map<java.lang.String | string, java.lang.String | string>
                 /**
                  * Combine two patterns into a new pattern.
                  * <p>This implementation simply concatenates the two patterns, unless
@@ -184,7 +184,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the two patterns cannot be combined
                  */
                 // @ts-ignore
-                combine(pattern1: string, pattern2: string): java.lang.String
+                public combine(pattern1: java.lang.String | string, pattern2: java.lang.String | string): string
                 /**
                  * Given a full path, returns a {@link Comparator} suitable for sorting patterns in order of
                  * explicitness.
@@ -203,7 +203,7 @@ declare namespace org {
                  * @return a comparator capable of sorting patterns in order of explicitness
                  */
                 // @ts-ignore
-                getPatternComparator(path: string): java.util.Comparator<java.lang.String>
+                public getPatternComparator(path: java.lang.String | string): java.util.Comparator<java.lang.String | string>
             }
         }
     }

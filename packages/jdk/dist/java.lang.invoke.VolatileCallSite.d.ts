@@ -31,19 +31,19 @@ declare namespace java {
                 // @ts-ignore
                 constructor(type: java.lang.invoke.MethodType)
                 // @ts-ignore
-                dynamicInvoker(): java.lang.invoke.MethodHandle
+                public dynamicInvoker(): java.lang.invoke.MethodHandle
                 /**
                  * The target MethodHandle is returned as though by a read of a volatile variable.
                  */
                 // @ts-ignore
-                getTarget(): java.lang.invoke.MethodHandle
+                public getTarget(): java.lang.invoke.MethodHandle
                 /**
                  * Set the CallSite's target to be <i>nextTarget</i>.
                  * The <i>nextTarget</i> MethodHandle must have the same type as the CallSite.
                  * This occurs as though by a write to a volatile variable.
                  */
                 // @ts-ignore
-                setTarget(nextTarget: java.lang.invoke.MethodHandle): void
+                public setTarget(nextTarget: java.lang.invoke.MethodHandle): void
             }
         }
     }

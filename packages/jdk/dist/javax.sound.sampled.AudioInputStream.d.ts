@@ -73,13 +73,13 @@ declare namespace javax {
                  * @return an audio format object describing this stream's format
                  */
                 // @ts-ignore
-                getFormat(): javax.sound.sampled.AudioFormat
+                public getFormat(): javax.sound.sampled.AudioFormat
                 /**
                  * Obtains the length of the stream, expressed in sample frames rather than bytes.
                  * @return the length in sample frames
                  */
                 // @ts-ignore
-                getFrameLength(): long
+                public getFrameLength(): number /*long*/
                 /**
                  * Reads the next byte of data from the audio input stream.  The audio input
                  * stream's frame size must be one byte, or an <code>IOException</code>
@@ -92,7 +92,7 @@ declare namespace javax {
                  *  <p>
                  */
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 /**
                  * Reads some number of bytes from the audio input stream and stores them into
                  * the buffer array <code>b</code>. The number of bytes actually read is
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see #available
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[]): int
+                public read(b: number /*byte*/[]): number /*int*/
                 /**
                  * Reads up to a specified maximum number of bytes of data from the audio
                  * stream, putting them into the given byte array.
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @see #available
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Skips over and discards a specified number of bytes from this
                  * audio input stream.
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @see #available
                  */
                 // @ts-ignore
-                skip(n: number /*long*/): long
+                public skip(n: number /*long*/): number /*long*/
                 /**
                  * Returns the maximum number of bytes that can be read (or skipped over) from this
                  * audio input stream without blocking.  This limit applies only to the next invocation of
@@ -159,14 +159,14 @@ declare namespace javax {
                  * @see #skip
                  */
                 // @ts-ignore
-                available(): int
+                public available(): number /*int*/
                 /**
                  * Closes this audio input stream and releases any system resources associated
                  * with the stream.
                  * @throws IOException if an input or output error occurs
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Marks the current position in this audio input stream.
                  * @param readlimit the maximum number of bytes that can be read before
@@ -175,7 +175,7 @@ declare namespace javax {
                  * @see #markSupported
                  */
                 // @ts-ignore
-                mark(readlimit: number /*int*/): void
+                public mark(readlimit: number /*int*/): void
                 /**
                  * Repositions this audio input stream to the position it had at the time its
                  * <code>mark</code> method was last invoked.
@@ -184,7 +184,7 @@ declare namespace javax {
                  * @see #markSupported
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Tests whether this audio input stream supports the <code>mark</code> and
                  * <code>reset</code> methods.
@@ -194,7 +194,7 @@ declare namespace javax {
                  * @see #reset
                  */
                 // @ts-ignore
-                markSupported(): boolean
+                public markSupported(): boolean
             }
         }
     }

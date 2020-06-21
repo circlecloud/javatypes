@@ -25,7 +25,7 @@ declare namespace org {
                      * Reset the LocaleContext for the current thread.
                      */
                     // @ts-ignore
-                    resetLocaleContext(): void
+                    public static resetLocaleContext(): void
                     /**
                      * Associate the given LocaleContext with the current thread,
                      * <i>not</i> exposing it as inheritable for child threads.
@@ -37,7 +37,7 @@ declare namespace org {
                      * @see SimpleTimeZoneAwareLocaleContext
                      */
                     // @ts-ignore
-                    setLocaleContext(localeContext: org.springframework.context.i18n.LocaleContext): void
+                    public static setLocaleContext(localeContext: org.springframework.context.i18n.LocaleContext): void
                     /**
                      * Associate the given LocaleContext with the current thread.
                      * <p>The given LocaleContext may be a {@link TimeZoneAwareLocaleContext},
@@ -50,13 +50,13 @@ declare namespace org {
                      * @see SimpleTimeZoneAwareLocaleContext
                      */
                     // @ts-ignore
-                    setLocaleContext(localeContext: org.springframework.context.i18n.LocaleContext, inheritable: boolean): void
+                    public static setLocaleContext(localeContext: org.springframework.context.i18n.LocaleContext, inheritable: boolean): void
                     /**
                      * Return the LocaleContext associated with the current thread, if any.
                      * @return the current LocaleContext, or {#code null} if none
                      */
                     // @ts-ignore
-                    getLocaleContext(): org.springframework.context.i18n.LocaleContext
+                    public static getLocaleContext(): org.springframework.context.i18n.LocaleContext
                     /**
                      * Associate the given Locale with the current thread,
                      * preserving any TimeZone that may have been set already.
@@ -68,7 +68,7 @@ declare namespace org {
                      * @see SimpleLocaleContext#SimpleLocaleContext(Locale)
                      */
                     // @ts-ignore
-                    setLocale(locale: java.util.Locale): void
+                    public static setLocale(locale: java.util.Locale): void
                     /**
                      * Associate the given Locale with the current thread,
                      * preserving any TimeZone that may have been set already.
@@ -81,7 +81,7 @@ declare namespace org {
                      * @see SimpleLocaleContext#SimpleLocaleContext(Locale)
                      */
                     // @ts-ignore
-                    setLocale(locale: java.util.Locale, inheritable: boolean): void
+                    public static setLocale(locale: java.util.Locale, inheritable: boolean): void
                     /**
                      * Set a shared default locale at the framework level,
                      * as an alternative to the JVM-wide default locale.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @see Locale#getDefault()
                      */
                     // @ts-ignore
-                    setDefaultLocale(locale: java.util.Locale): void
+                    public static setDefaultLocale(locale: java.util.Locale): void
                     /**
                      * Return the Locale associated with the current thread, if any,
                      * or the system default Locale otherwise. This is effectively a
@@ -116,7 +116,7 @@ declare namespace org {
                      * @see java.util.Locale#getDefault()
                      */
                     // @ts-ignore
-                    getLocale(): java.util.Locale
+                    public static getLocale(): java.util.Locale
                     /**
                      * Return the Locale associated with the given user context, if any,
                      * or the system default Locale otherwise. This is effectively a
@@ -132,7 +132,7 @@ declare namespace org {
                      * @see java.util.Locale#getDefault()
                      */
                     // @ts-ignore
-                    getLocale(localeContext: org.springframework.context.i18n.LocaleContext): java.util.Locale
+                    public static getLocale(localeContext: org.springframework.context.i18n.LocaleContext): java.util.Locale
                     /**
                      * Associate the given TimeZone with the current thread,
                      * preserving any Locale that may have been set already.
@@ -144,7 +144,7 @@ declare namespace org {
                      * @see SimpleTimeZoneAwareLocaleContext#SimpleTimeZoneAwareLocaleContext(Locale, TimeZone)
                      */
                     // @ts-ignore
-                    setTimeZone(timeZone: java.util.TimeZone): void
+                    public static setTimeZone(timeZone: java.util.TimeZone): void
                     /**
                      * Associate the given TimeZone with the current thread,
                      * preserving any Locale that may have been set already.
@@ -157,7 +157,7 @@ declare namespace org {
                      * @see SimpleTimeZoneAwareLocaleContext#SimpleTimeZoneAwareLocaleContext(Locale, TimeZone)
                      */
                     // @ts-ignore
-                    setTimeZone(timeZone: java.util.TimeZone, inheritable: boolean): void
+                    public static setTimeZone(timeZone: java.util.TimeZone, inheritable: boolean): void
                     /**
                      * Set a shared default time zone at the framework level,
                      * as an alternative to the JVM-wide default time zone.
@@ -173,7 +173,7 @@ declare namespace org {
                      * @see TimeZone#getDefault()
                      */
                     // @ts-ignore
-                    setDefaultTimeZone(timeZone: java.util.TimeZone): void
+                    public static setDefaultTimeZone(timeZone: java.util.TimeZone): void
                     /**
                      * Return the TimeZone associated with the current thread, if any,
                      * or the system default TimeZone otherwise. This is effectively a
@@ -193,7 +193,7 @@ declare namespace org {
                      * @see java.util.TimeZone#getDefault()
                      */
                     // @ts-ignore
-                    getTimeZone(): java.util.TimeZone
+                    public static getTimeZone(): java.util.TimeZone
                     /**
                      * Return the TimeZone associated with the given user context, if any,
                      * or the system default TimeZone otherwise. This is effectively a
@@ -209,7 +209,7 @@ declare namespace org {
                      * @see java.util.TimeZone#getDefault()
                      */
                     // @ts-ignore
-                    getTimeZone(localeContext: org.springframework.context.i18n.LocaleContext): java.util.TimeZone
+                    public static getTimeZone(localeContext: org.springframework.context.i18n.LocaleContext): java.util.TimeZone
                 }
             }
         }

@@ -65,7 +65,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlList implements java.lang.annotation.Annotation {
+                abstract class XmlList implements java.lang.annotation.Annotation {
                 }
             }
         }

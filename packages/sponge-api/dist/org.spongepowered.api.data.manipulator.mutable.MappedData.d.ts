@@ -27,14 +27,14 @@ declare namespace org {
                              * @see Map#keySet()
                              */
                             // @ts-ignore
-                            getMapKeys(): java.util.Set<K>
+                            getMapKeys(): Array<K>
                             /**
                              * Gets the {@link java.util.Map.Entry} {@link Set} of values.
                              * @return The entry set
                              * @see Map#entrySet()
                              */
                             // @ts-ignore
-                            getMapValues(): java.util.Set<java.util.Map.Entry<K, V>>
+                            getMapValues(): Array<java.util.Map.Entry<K, V>>
                             /**
                              * Gets the {@link MapValue} of this manipulator.
                              * @return The map value of this manipulator
@@ -64,7 +64,7 @@ declare namespace org {
                              * @see Map#putAll(Map)
                              */
                             // @ts-ignore
-                            putAll(map: java.util.Map<K, V>): M
+                            putAll(map: java.util.Map<any, any>): M
                             /**
                              * Removes any values keyed to the provided {@code key}.
                              * @param key The key to remove the value of

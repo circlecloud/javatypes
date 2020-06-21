@@ -28,20 +28,20 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    get(): V
+                    public get(): V
                     /**
                      * Sets to the given value.
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    set(newValue: V): void
+                    public set(newValue: V): void
                     /**
                      * Eventually sets to the given value.
                      * @param newValue the new value
                      * @since 1.6
                      */
                     // @ts-ignore
-                    lazySet(newValue: V): void
+                    public lazySet(newValue: V): void
                     /**
                      * Atomically sets the value to the given updated value
                      * if the current value {@code ==} the expected value.
@@ -51,7 +51,7 @@ declare namespace java {
                      *  the actual value was not equal to the expected value.
                      */
                     // @ts-ignore
-                    compareAndSet(expect: V, update: V): boolean
+                    public compareAndSet(expect: V, update: V): boolean
                     /**
                      * Atomically sets the value to the given updated value
                      * if the current value {@code ==} the expected value.
@@ -63,14 +63,14 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    weakCompareAndSet(expect: V, update: V): boolean
+                    public weakCompareAndSet(expect: V, update: V): boolean
                     /**
                      * Atomically sets to the given value and returns the old value.
                      * @param newValue the new value
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(newValue: V): V
+                    public getAndSet(newValue: V): V
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function, returning the previous value. The
@@ -81,7 +81,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndUpdate(updateFunction: java.util.function.UnaryOperator<V> | java.util.function$.UnaryOperator<V>): V
+                    public getAndUpdate(updateFunction: java.util.function$.UnaryOperator<V>): V
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function, returning the updated value. The
@@ -92,7 +92,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    updateAndGet(updateFunction: java.util.function.UnaryOperator<V> | java.util.function$.UnaryOperator<V>): V
+                    public updateAndGet(updateFunction: java.util.function$.UnaryOperator<V>): V
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function to the current and given values,
@@ -107,7 +107,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndAccumulate(x: V, accumulatorFunction: java.util.function.BinaryOperator<V> | java.util.function$.BinaryOperator<V>): V
+                    public getAndAccumulate(x: V, accumulatorFunction: java.util.function$.BinaryOperator<V>): V
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function to the current and given values,
@@ -122,13 +122,13 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    accumulateAndGet(x: V, accumulatorFunction: java.util.function.BinaryOperator<V> | java.util.function$.BinaryOperator<V>): V
+                    public accumulateAndGet(x: V, accumulatorFunction: java.util.function$.BinaryOperator<V>): V
                     /**
                      * Returns the String representation of the current value.
                      * @return the String representation of the current value
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

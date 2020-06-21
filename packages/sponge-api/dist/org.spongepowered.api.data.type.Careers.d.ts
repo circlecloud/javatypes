@@ -9,29 +9,29 @@ declare namespace org {
                     // @ts-ignore
                     class Careers extends java.lang.Object {
                         // @ts-ignore
-                        readonly ARMORER: org.spongepowered.api.data.type.Career
+                        public static readonly ARMORER: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly BUTCHER: org.spongepowered.api.data.type.Career
+                        public static readonly BUTCHER: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly CARTOGRAPHER: org.spongepowered.api.data.type.Career
+                        public static readonly CARTOGRAPHER: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly CLERIC: org.spongepowered.api.data.type.Career
+                        public static readonly CLERIC: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly FARMER: org.spongepowered.api.data.type.Career
+                        public static readonly FARMER: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly FISHERMAN: org.spongepowered.api.data.type.Career
+                        public static readonly FISHERMAN: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly FLETCHER: org.spongepowered.api.data.type.Career
+                        public static readonly FLETCHER: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly LEATHERWORKER: org.spongepowered.api.data.type.Career
+                        public static readonly LEATHERWORKER: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly LIBRARIAN: org.spongepowered.api.data.type.Career
+                        public static readonly LIBRARIAN: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly SHEPHERD: org.spongepowered.api.data.type.Career
+                        public static readonly SHEPHERD: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly TOOL_SMITH: org.spongepowered.api.data.type.Career
+                        public static readonly TOOL_SMITH: org.spongepowered.api.data.type.Career
                         // @ts-ignore
-                        readonly WEAPON_SMITH: org.spongepowered.api.data.type.Career
+                        public static readonly WEAPON_SMITH: org.spongepowered.api.data.type.Career
                     }
                 }
             }

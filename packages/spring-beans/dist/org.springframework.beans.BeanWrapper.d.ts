@@ -38,17 +38,17 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                getAutoGrowCollectionLimit(): int
+                getAutoGrowCollectionLimit(): number /*int*/
                 /**
                  * Return the bean instance wrapped by this object.
                  */
                 // @ts-ignore
-                getWrappedInstance(): java.lang.Object
+                getWrappedInstance(): any
                 /**
                  * Return the type of the wrapped bean instance.
                  */
                 // @ts-ignore
-                getWrappedClass(): java.lang.Class<?>
+                getWrappedClass(): java.lang.Class<any>
                 /**
                  * Obtain the PropertyDescriptors for the wrapped object
                  * (as determined by standard JavaBeans introspection).
@@ -65,7 +65,7 @@ declare namespace org {
                  * @throws InvalidPropertyException if there is no such property
                  */
                 // @ts-ignore
-                getPropertyDescriptor(propertyName: string): java.beans.PropertyDescriptor
+                getPropertyDescriptor(propertyName: java.lang.String | string): java.beans.PropertyDescriptor
             }
         }
     }

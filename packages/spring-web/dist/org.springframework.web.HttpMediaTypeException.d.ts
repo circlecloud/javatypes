@@ -7,24 +7,24 @@ declare namespace org {
              * @since 3.0
              */
             // @ts-ignore
-            class HttpMediaTypeException extends ServletException {
+            abstract class HttpMediaTypeException extends ServletException {
                 /**
                  * Create a new HttpMediaTypeException.
                  * @param message the exception message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Create a new HttpMediaTypeException with a list of supported media types.
                  * @param supportedMediaTypes the list of supported media types
                  */
                 // @ts-ignore
-                constructor(message: string, supportedMediaTypes: Array<org.springframework.http.MediaType>)
+                constructor(message: java.lang.String | string, supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>)
                 /**
                  * Return the list of supported media types.
                  */
                 // @ts-ignore
-                getSupportedMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                public getSupportedMediaTypes(): Array<org.springframework.http.MediaType>
             }
         }
     }

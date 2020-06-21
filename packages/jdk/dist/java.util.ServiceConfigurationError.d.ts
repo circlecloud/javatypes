@@ -25,7 +25,7 @@ declare namespace java {
              * @param msg  The message, or <tt>null</tt> if there is no message
              */
             // @ts-ignore
-            constructor(msg: string)
+            constructor(msg: java.lang.String | string)
             /**
              * Constructs a new instance with the specified message and cause.
              * @param msg  The message, or <tt>null</tt> if there is no message
@@ -33,7 +33,7 @@ declare namespace java {
              *                 or unknown
              */
             // @ts-ignore
-            constructor(msg: string, cause: Error)
+            constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
         }
     }
 }

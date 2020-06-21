@@ -35,7 +35,7 @@ declare namespace org {
                      * @see DefaultListableBeanFactory#getBeanDefinition
                      */
                     // @ts-ignore
-                    class AbstractBeanFactory extends org.springframework.beans.factory.support.FactoryBeanRegistrySupport implements org.springframework.beans.factory.config.ConfigurableBeanFactory {
+                    abstract class AbstractBeanFactory extends org.springframework.beans.factory.support.FactoryBeanRegistrySupport implements org.springframework.beans.factory.config.ConfigurableBeanFactory {
                         /**
                          * Create a new AbstractBeanFactory.
                          */
@@ -49,11 +49,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor(parentBeanFactory: org.springframework.beans.factory.BeanFactory)
                         // @ts-ignore
-                        getBean(name: string): java.lang.Object
+                        public getBean(name: java.lang.String | string): any
                         // @ts-ignore
-                        getBean<T>(name: string, requiredType: java.lang.Class<T>): T
+                        public getBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>): T
                         // @ts-ignore
-                        getBean(name: string, ...args: any[]): java.lang.Object
+                        public getBean(name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
                         /**
                          * Return an instance, which may be shared or independent, of the specified bean.
                          * @param name the name of the bean to retrieve
@@ -64,7 +64,7 @@ declare namespace org {
                          * @throws BeansException if the bean could not be created
                          */
                         // @ts-ignore
-                        getBean<T>(name: string, requiredType: java.lang.Class<T>, ...args: any[]): T
+                        public getBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>, ...args: java.lang.Object[] | any[]): T
                         /**
                          * Return an instance, which may be shared or independent, of the specified bean.
                          * @param name the name of the bean to retrieve
@@ -77,15 +77,15 @@ declare namespace org {
                          * @throws BeansException if the bean could not be created
                          */
                         // @ts-ignore
-                        doGetBean<T>(name: string, requiredType: java.lang.Class<T>, args: any[], typeCheckOnly: boolean): T
+                        doGetBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>, args: java.lang.Object[] | any[], typeCheckOnly: boolean): T
                         // @ts-ignore
-                        containsBean(name: string): boolean
+                        public containsBean(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isSingleton(name: string): boolean
+                        public isSingleton(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isPrototype(name: string): boolean
+                        public isPrototype(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isTypeMatch(name: string, typeToMatch: ResolvableType): boolean
+                        public isTypeMatch(name: java.lang.String | string, typeToMatch: ResolvableType): boolean
                         /**
                          * Internal extended variant of {@link #isTypeMatch(String, ResolvableType)}
                          * to check whether the bean with the given name matches the specified type. Allow
@@ -101,57 +101,57 @@ declare namespace org {
                          * @see #getType
                          */
                         // @ts-ignore
-                        isTypeMatch(name: string, typeToMatch: ResolvableType, allowFactoryBeanInit: boolean): boolean
+                        isTypeMatch(name: java.lang.String | string, typeToMatch: ResolvableType, allowFactoryBeanInit: boolean): boolean
                         // @ts-ignore
-                        getType(name: string): java.lang.Class<?>
+                        public getType(name: java.lang.String | string): java.lang.Class<any>
                         // @ts-ignore
-                        getType(name: string, allowFactoryBeanInit: boolean): java.lang.Class<?>
+                        public getType(name: java.lang.String | string, allowFactoryBeanInit: boolean): java.lang.Class<any>
                         // @ts-ignore
-                        getAliases(name: string): java.lang.String[]
+                        public getAliases(name: java.lang.String | string): string[]
                         // @ts-ignore
-                        getParentBeanFactory(): org.springframework.beans.factory.BeanFactory
+                        public getParentBeanFactory(): org.springframework.beans.factory.BeanFactory
                         // @ts-ignore
-                        containsLocalBean(name: string): boolean
+                        public containsLocalBean(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        setParentBeanFactory(parentBeanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setParentBeanFactory(parentBeanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        getBeanClassLoader(): java.lang.ClassLoader
+                        public getBeanClassLoader(): java.lang.ClassLoader
                         // @ts-ignore
-                        setTempClassLoader(tempClassLoader: java.lang.ClassLoader): void
+                        public setTempClassLoader(tempClassLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        getTempClassLoader(): java.lang.ClassLoader
+                        public getTempClassLoader(): java.lang.ClassLoader
                         // @ts-ignore
-                        setCacheBeanMetadata(cacheBeanMetadata: boolean): void
+                        public setCacheBeanMetadata(cacheBeanMetadata: boolean): void
                         // @ts-ignore
-                        isCacheBeanMetadata(): boolean
+                        public isCacheBeanMetadata(): boolean
                         // @ts-ignore
-                        setBeanExpressionResolver(resolver: org.springframework.beans.factory.config.BeanExpressionResolver): void
+                        public setBeanExpressionResolver(resolver: org.springframework.beans.factory.config.BeanExpressionResolver): void
                         // @ts-ignore
-                        getBeanExpressionResolver(): org.springframework.beans.factory.config.BeanExpressionResolver
+                        public getBeanExpressionResolver(): org.springframework.beans.factory.config.BeanExpressionResolver
                         // @ts-ignore
-                        setConversionService(conversionService: ConversionService): void
+                        public setConversionService(conversionService: ConversionService): void
                         // @ts-ignore
-                        getConversionService(): ConversionService
+                        public getConversionService(): ConversionService
                         // @ts-ignore
-                        addPropertyEditorRegistrar(registrar: org.springframework.beans.PropertyEditorRegistrar): void
+                        public addPropertyEditorRegistrar(registrar: org.springframework.beans.PropertyEditorRegistrar): void
                         /**
                          * Return the set of PropertyEditorRegistrars.
                          */
                         // @ts-ignore
-                        getPropertyEditorRegistrars(): java.util.Set<org.springframework.beans.PropertyEditorRegistrar>
+                        public getPropertyEditorRegistrars(): Array<org.springframework.beans.PropertyEditorRegistrar>
                         // @ts-ignore
-                        registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditorClass: java.lang.Class<java.beans.PropertyEditor>): void
+                        public registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditorClass: java.lang.Class<any>): void
                         // @ts-ignore
-                        copyRegisteredEditorsTo(registry: org.springframework.beans.PropertyEditorRegistry): void
+                        public copyRegisteredEditorsTo(registry: org.springframework.beans.PropertyEditorRegistry): void
                         /**
                          * Return the map of custom editors, with Classes as keys and PropertyEditor classes as values.
                          */
                         // @ts-ignore
-                        getCustomEditors(): java.util.Map<java.lang.Class<?>, java.lang.Class<? extends java.beans.PropertyEditor>>
+                        public getCustomEditors(): java.util.Map<java.lang.Class<any>, java.lang.Class<any>>
                         // @ts-ignore
-                        setTypeConverter(typeConverter: org.springframework.beans.TypeConverter): void
+                        public setTypeConverter(typeConverter: org.springframework.beans.TypeConverter): void
                         /**
                          * Return the custom TypeConverter to use, if any.
                          * @return the custom TypeConverter, or {#code null} if none specified
@@ -159,23 +159,23 @@ declare namespace org {
                         // @ts-ignore
                         getCustomTypeConverter(): org.springframework.beans.TypeConverter
                         // @ts-ignore
-                        getTypeConverter(): org.springframework.beans.TypeConverter
+                        public getTypeConverter(): org.springframework.beans.TypeConverter
                         // @ts-ignore
-                        addEmbeddedValueResolver(valueResolver: StringValueResolver): void
+                        public addEmbeddedValueResolver(valueResolver: StringValueResolver): void
                         // @ts-ignore
-                        hasEmbeddedValueResolver(): boolean
+                        public hasEmbeddedValueResolver(): boolean
                         // @ts-ignore
-                        resolveEmbeddedValue(value: string): java.lang.String
+                        public resolveEmbeddedValue(value: java.lang.String | string): string
                         // @ts-ignore
-                        addBeanPostProcessor(beanPostProcessor: org.springframework.beans.factory.config.BeanPostProcessor): void
+                        public addBeanPostProcessor(beanPostProcessor: org.springframework.beans.factory.config.BeanPostProcessor): void
                         // @ts-ignore
-                        getBeanPostProcessorCount(): int
+                        public getBeanPostProcessorCount(): number /*int*/
                         /**
                          * Return the list of BeanPostProcessors that will get applied
                          * to beans created with this factory.
                          */
                         // @ts-ignore
-                        getBeanPostProcessors(): java.util.List<org.springframework.beans.factory.config.BeanPostProcessor>
+                        public getBeanPostProcessors(): Array<org.springframework.beans.factory.config.BeanPostProcessor>
                         /**
                          * Return whether this factory holds a InstantiationAwareBeanPostProcessor
                          * that will get applied to singleton beans on shutdown.
@@ -193,26 +193,26 @@ declare namespace org {
                         // @ts-ignore
                         hasDestructionAwareBeanPostProcessors(): boolean
                         // @ts-ignore
-                        registerScope(scopeName: string, scope: org.springframework.beans.factory.config.Scope): void
+                        public registerScope(scopeName: java.lang.String | string, scope: org.springframework.beans.factory.config.Scope): void
                         // @ts-ignore
-                        getRegisteredScopeNames(): java.lang.String[]
+                        public getRegisteredScopeNames(): string[]
                         // @ts-ignore
-                        getRegisteredScope(scopeName: string): org.springframework.beans.factory.config.Scope
+                        public getRegisteredScope(scopeName: java.lang.String | string): org.springframework.beans.factory.config.Scope
                         /**
                          * Set the security context provider for this bean factory. If a security manager
                          * is set, interaction with the user code will be executed using the privileged
                          * of the provided security context.
                          */
                         // @ts-ignore
-                        setSecurityContextProvider(securityProvider: org.springframework.beans.factory.support.SecurityContextProvider): void
+                        public setSecurityContextProvider(securityProvider: org.springframework.beans.factory.support.SecurityContextProvider): void
                         /**
                          * Delegate the creation of the access control context to the
                          * {@link #setSecurityContextProvider SecurityContextProvider}.
                          */
                         // @ts-ignore
-                        getAccessControlContext(): java.security.AccessControlContext
+                        public getAccessControlContext(): java.security.AccessControlContext
                         // @ts-ignore
-                        copyConfigurationFrom(otherFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory): void
+                        public copyConfigurationFrom(otherFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory): void
                         /**
                          * Return a 'merged' BeanDefinition for the given bean name,
                          * merging a child bean definition with its parent if necessary.
@@ -225,18 +225,18 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of an invalid bean definition
                          */
                         // @ts-ignore
-                        getMergedBeanDefinition(name: string): org.springframework.beans.factory.config.BeanDefinition
+                        public getMergedBeanDefinition(name: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         // @ts-ignore
-                        isFactoryBean(name: string): boolean
+                        public isFactoryBean(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isActuallyInCreation(beanName: string): boolean
+                        public isActuallyInCreation(beanName: java.lang.String | string): boolean
                         /**
                          * Return whether the specified prototype bean is currently in creation
                          * (within the current thread).
                          * @param beanName the name of the bean
                          */
                         // @ts-ignore
-                        isPrototypeCurrentlyInCreation(beanName: string): boolean
+                        isPrototypeCurrentlyInCreation(beanName: java.lang.String | string): boolean
                         /**
                          * Callback before prototype creation.
                          * <p>The default implementation register the prototype as currently in creation.
@@ -244,7 +244,7 @@ declare namespace org {
                          * @see #isPrototypeCurrentlyInCreation
                          */
                         // @ts-ignore
-                        beforePrototypeCreation(beanName: string): void
+                        beforePrototypeCreation(beanName: java.lang.String | string): void
                         /**
                          * Callback after prototype creation.
                          * <p>The default implementation marks the prototype as not in creation anymore.
@@ -252,9 +252,9 @@ declare namespace org {
                          * @see #isPrototypeCurrentlyInCreation
                          */
                         // @ts-ignore
-                        afterPrototypeCreation(beanName: string): void
+                        afterPrototypeCreation(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        destroyBean(beanName: string, beanInstance: any): void
+                        public destroyBean(beanName: java.lang.String | string, beanInstance: java.lang.Object | any): void
                         /**
                          * Destroy the given bean instance (usually a prototype instance
                          * obtained from this factory) according to the given bean definition.
@@ -263,9 +263,9 @@ declare namespace org {
                          * @param mbd the merged bean definition
                          */
                         // @ts-ignore
-                        destroyBean(beanName: string, bean: any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
+                        destroyBean(beanName: java.lang.String | string, bean: java.lang.Object | any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
                         // @ts-ignore
-                        destroyScopedBean(beanName: string): void
+                        public destroyScopedBean(beanName: java.lang.String | string): void
                         /**
                          * Return the bean name, stripping out the factory dereference prefix if necessary,
                          * and resolving aliases to canonical names.
@@ -273,14 +273,14 @@ declare namespace org {
                          * @return the transformed bean name
                          */
                         // @ts-ignore
-                        transformedBeanName(name: string): java.lang.String
+                        transformedBeanName(name: java.lang.String | string): string
                         /**
                          * Determine the original bean name, resolving locally defined aliases to canonical names.
                          * @param name the user-specified name
                          * @return the original bean name
                          */
                         // @ts-ignore
-                        originalBeanName(name: string): java.lang.String
+                        originalBeanName(name: java.lang.String | string): string
                         /**
                          * Initialize the given BeanWrapper with the custom editors registered
                          * with this factory. To be called for BeanWrappers that will create
@@ -310,7 +310,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of an invalid bean definition
                          */
                         // @ts-ignore
-                        getMergedLocalBeanDefinition(beanName: string): org.springframework.beans.factory.support.RootBeanDefinition
+                        getMergedLocalBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.support.RootBeanDefinition
                         /**
                          * Return a RootBeanDefinition for the given top-level bean, by merging with
                          * the parent if the given bean's definition is a child bean definition.
@@ -320,7 +320,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of an invalid bean definition
                          */
                         // @ts-ignore
-                        getMergedBeanDefinition(beanName: string, bd: org.springframework.beans.factory.config.BeanDefinition): org.springframework.beans.factory.support.RootBeanDefinition
+                        getMergedBeanDefinition(beanName: java.lang.String | string, bd: org.springframework.beans.factory.config.BeanDefinition): org.springframework.beans.factory.support.RootBeanDefinition
                         /**
                          * Return a RootBeanDefinition for the given bean, by merging with the
                          * parent if the given bean's definition is a child bean definition.
@@ -332,7 +332,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of an invalid bean definition
                          */
                         // @ts-ignore
-                        getMergedBeanDefinition(beanName: string, bd: org.springframework.beans.factory.config.BeanDefinition, containingBd: org.springframework.beans.factory.config.BeanDefinition): org.springframework.beans.factory.support.RootBeanDefinition
+                        getMergedBeanDefinition(beanName: java.lang.String | string, bd: org.springframework.beans.factory.config.BeanDefinition, containingBd: org.springframework.beans.factory.config.BeanDefinition): org.springframework.beans.factory.support.RootBeanDefinition
                         /**
                          * Check the given merged bean definition,
                          * potentially throwing validation exceptions.
@@ -342,14 +342,14 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of validation failure
                          */
                         // @ts-ignore
-                        checkMergedBeanDefinition(mbd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, args: any[]): void
+                        checkMergedBeanDefinition(mbd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, args: java.lang.Object[] | any[]): void
                         /**
                          * Remove the merged bean definition for the specified bean,
                          * recreating it on next access.
                          * @param beanName the bean name to clear the merged definition for
                          */
                         // @ts-ignore
-                        clearMergedBeanDefinition(beanName: string): void
+                        clearMergedBeanDefinition(beanName: java.lang.String | string): void
                         /**
                          * Clear the merged bean definition cache, removing entries for beans
                          * which are not considered eligible for full metadata caching yet.
@@ -359,7 +359,7 @@ declare namespace org {
                          * @since 4.2
                          */
                         // @ts-ignore
-                        clearMetadataCache(): void
+                        public clearMetadataCache(): void
                         /**
                          * Resolve the bean class for the specified bean definition,
                          * resolving a bean class name into a Class reference (if necessary)
@@ -372,7 +372,7 @@ declare namespace org {
                          * @throws CannotLoadBeanClassException if we failed to load the class
                          */
                         // @ts-ignore
-                        resolveBeanClass(mbd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, ...typesToMatch: java.lang.Class[]): java.lang.Class<?>
+                        resolveBeanClass(mbd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, ...typesToMatch: java.lang.Class<any>[]): java.lang.Class<any>
                         /**
                          * Evaluate the given String as contained in a bean definition,
                          * potentially resolving it as an expression.
@@ -382,7 +382,7 @@ declare namespace org {
                          * @see #setBeanExpressionResolver
                          */
                         // @ts-ignore
-                        evaluateBeanDefinitionString(value: string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): java.lang.Object
+                        evaluateBeanDefinitionString(value: java.lang.String | string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): any
                         /**
                          * Predict the eventual bean type (of the processed bean instance) for the
                          * specified bean. Called by {@link #getType} and {@link #isTypeMatch}.
@@ -399,14 +399,14 @@ declare namespace org {
                          * @return the type of the bean, or {#code null} if not predictable
                          */
                         // @ts-ignore
-                        predictBeanType(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class[]): java.lang.Class<?>
+                        predictBeanType(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class<any>[]): java.lang.Class<any>
                         /**
                          * Check whether the given bean is defined as a {@link FactoryBean}.
                          * @param beanName the name of the bean
                          * @param mbd the corresponding bean definition
                          */
                         // @ts-ignore
-                        isFactoryBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): boolean
+                        isFactoryBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): boolean
                         /**
                          * Determine the bean type for the given FactoryBean definition, as far as possible.
                          * Only called if there is no singleton instance registered for the target bean
@@ -431,7 +431,7 @@ declare namespace org {
                          * @see #getBean(String)
                          */
                         // @ts-ignore
-                        getTypeForFactoryBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, allowInit: boolean): ResolvableType
+                        getTypeForFactoryBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, allowInit: boolean): ResolvableType
                         /**
                          * Determine the bean type for the given FactoryBean definition, as far as possible.
                          * Only called if there is no singleton instance registered for the target bean already.
@@ -449,7 +449,7 @@ declare namespace org {
                          * @deprecated since 5.2 in favor of {#link #getTypeForFactoryBean(String, RootBeanDefinition, boolean)}
                          */
                         // @ts-ignore
-                        getTypeForFactoryBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Class<?>
+                        getTypeForFactoryBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Class<any>
                         /**
                          * Mark the specified bean as already created (or about to be created).
                          * <p>This allows the bean factory to optimize its caching for repeated
@@ -457,13 +457,13 @@ declare namespace org {
                          * @param beanName the name of the bean
                          */
                         // @ts-ignore
-                        markBeanAsCreated(beanName: string): void
+                        markBeanAsCreated(beanName: java.lang.String | string): void
                         /**
                          * Perform appropriate cleanup of cached metadata after bean creation failed.
                          * @param beanName the name of the bean
                          */
                         // @ts-ignore
-                        cleanupAfterBeanCreationFailure(beanName: string): void
+                        cleanupAfterBeanCreationFailure(beanName: java.lang.String | string): void
                         /**
                          * Determine whether the specified bean is eligible for having
                          * its bean definition metadata cached.
@@ -472,7 +472,7 @@ declare namespace org {
                          *  at this point already
                          */
                         // @ts-ignore
-                        isBeanEligibleForMetadataCaching(beanName: string): boolean
+                        isBeanEligibleForMetadataCaching(beanName: java.lang.String | string): boolean
                         /**
                          * Remove the singleton instance (if any) for the given bean name,
                          * but only if it hasn't been used for other purposes than type checking.
@@ -480,7 +480,7 @@ declare namespace org {
                          * @return {#code true} if actually removed, {@code false} otherwise
                          */
                         // @ts-ignore
-                        removeSingletonIfCreatedForTypeCheckOnly(beanName: string): boolean
+                        removeSingletonIfCreatedForTypeCheckOnly(beanName: java.lang.String | string): boolean
                         /**
                          * Check whether this factory's bean creation phase already started,
                          * i.e. whether any bean has been marked as created in the meantime.
@@ -499,7 +499,7 @@ declare namespace org {
                          * @return the object to expose for the bean
                          */
                         // @ts-ignore
-                        getObjectForBeanInstance(beanInstance: any, name: string, beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Object
+                        getObjectForBeanInstance(beanInstance: java.lang.Object | any, name: java.lang.String | string, beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): any
                         /**
                          * Determine whether the given bean name is already in use within this factory,
                          * i.e. whether there is a local bean or alias registered under this name or
@@ -507,7 +507,7 @@ declare namespace org {
                          * @param beanName the name to check
                          */
                         // @ts-ignore
-                        isBeanNameInUse(beanName: string): boolean
+                        public isBeanNameInUse(beanName: java.lang.String | string): boolean
                         /**
                          * Determine whether the given bean requires destruction on shutdown.
                          * <p>The default implementation checks the DisposableBean interface as well as
@@ -519,7 +519,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.config.DestructionAwareBeanPostProcessor
                          */
                         // @ts-ignore
-                        requiresDestruction(bean: any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): boolean
+                        requiresDestruction(bean: java.lang.Object | any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): boolean
                         /**
                          * Add the given bean to the list of disposable beans in this factory,
                          * registering its DisposableBean interface and/or the given destroy method
@@ -533,7 +533,7 @@ declare namespace org {
                          * @see #registerDependentBean
                          */
                         // @ts-ignore
-                        registerDisposableBeanIfNecessary(beanName: string, bean: any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
+                        registerDisposableBeanIfNecessary(beanName: java.lang.String | string, bean: java.lang.Object | any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
                         /**
                          * Check if this bean factory contains a bean definition with the given name.
                          * Does not consider any hierarchy this factory may participate in.
@@ -550,7 +550,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.ListableBeanFactory#containsBeanDefinition
                          */
                         // @ts-ignore
-                        abstract containsBeanDefinition(beanName: string): boolean
+                        abstract containsBeanDefinition(beanName: java.lang.String | string): boolean
                         /**
                          * Return the bean definition for the given bean name.
                          * Subclasses should normally implement caching, as this method is invoked
@@ -571,7 +571,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.config.ConfigurableListableBeanFactory#getBeanDefinition
                          */
                         // @ts-ignore
-                        abstract getBeanDefinition(beanName: string): org.springframework.beans.factory.config.BeanDefinition
+                        abstract getBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Create a bean instance for the given merged bean definition (and arguments).
                          * The bean definition will already have been merged with the parent definition
@@ -584,7 +584,7 @@ declare namespace org {
                          * @throws BeanCreationException if the bean could not be created
                          */
                         // @ts-ignore
-                        abstract createBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: any[]): java.lang.Object
+                        abstract createBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: java.lang.Object[] | any[]): any
                     }
                 }
             }

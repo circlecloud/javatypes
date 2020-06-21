@@ -18,7 +18,7 @@ declare namespace java {
                  * @see Button#setLabel
                  */
                 // @ts-ignore
-                setLabel(label: string): void
+                setLabel(label: java.lang.String | string): void
             }
         }
     }

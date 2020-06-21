@@ -21,7 +21,7 @@ declare namespace java {
          * </UL>
          */
         // @ts-ignore
-        class SQLException extends java.lang.Exception implements java.lang.Iterable<java.lang.Throwable> {
+        class SQLException extends java.lang.Exception implements java.lang.Iterable<java.lang.Throwable | Error> {
             /**
              * Constructs a <code>SQLException</code> object with a given
              * <code>reason</code>, <code>SQLState</code>  and
@@ -35,7 +35,7 @@ declare namespace java {
              * @param vendorCode a database vendor-specific exception code
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/)
             /**
              * Constructs a <code>SQLException</code> object with a given
              * <code>reason</code> and <code>SQLState</code>.
@@ -48,7 +48,7 @@ declare namespace java {
              * @param SQLState an XOPEN or SQL:2003 code identifying the exception
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string)
             /**
              * Constructs a <code>SQLException</code> object with a given
              * <code>reason</code>. The  <code>SQLState</code>  is initialized to
@@ -60,7 +60,7 @@ declare namespace java {
              * @param reason a description of the exception
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
             /**
              * Constructs a <code>SQLException</code> object.
              * The <code>reason</code>, <code>SQLState</code> are initialized
@@ -86,7 +86,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLException</code> object with a given
              * <code>reason</code> and  <code>cause</code>.
@@ -100,7 +100,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, cause: Error)
+            constructor(reason: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLException</code> object with a given
              * <code>reason</code>, <code>SQLState</code> and  <code>cause</code>.
@@ -115,7 +115,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, sqlState: string, cause: Error)
+            constructor(reason: java.lang.String | string, sqlState: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLException</code> object with a given
              * <code>reason</code>, <code>SQLState</code>, <code>vendorCode</code>
@@ -130,20 +130,20 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, sqlState: string, vendorCode: number /*int*/, cause: Error)
+            constructor(reason: java.lang.String | string, sqlState: java.lang.String | string, vendorCode: number /*int*/, cause: java.lang.Throwable | Error)
             /**
              * Retrieves the SQLState for this <code>SQLException</code> object.
              * @return the SQLState value
              */
             // @ts-ignore
-            getSQLState(): java.lang.String
+            getSQLState(): string
             /**
              * Retrieves the vendor-specific exception code
              * for this <code>SQLException</code> object.
              * @return the vendor's error code
              */
             // @ts-ignore
-            getErrorCode(): int
+            getErrorCode(): number /*int*/
             /**
              * Retrieves the exception chained to this
              * <code>SQLException</code> object by setNextException(SQLException ex).
@@ -170,7 +170,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<java.lang.Throwable>
+            iterator(): java.util.Iterator<java.lang.Throwable | Error>
         }
     }
 }

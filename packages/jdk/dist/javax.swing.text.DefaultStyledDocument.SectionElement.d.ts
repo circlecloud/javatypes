@@ -27,7 +27,7 @@ declare namespace javax {
                      * @return the name
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

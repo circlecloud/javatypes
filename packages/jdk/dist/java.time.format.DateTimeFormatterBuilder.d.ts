@@ -48,7 +48,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if both dateStyle and timeStyle are null
                  */
                 // @ts-ignore
-                getLocalizedDateTimePattern(dateStyle: java.time.format.FormatStyle, timeStyle: java.time.format.FormatStyle, chrono: java.time.chrono.Chronology, locale: java.util.Locale): java.lang.String
+                public static getLocalizedDateTimePattern(dateStyle: java.time.format.FormatStyle, timeStyle: java.time.format.FormatStyle, chrono: java.time.chrono.Chronology, locale: java.util.Locale): string
                 /**
                  * Changes the parse style to be case sensitive for the remainder of the formatter.
                  * <p>
@@ -67,7 +67,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                parseCaseSensitive(): java.time.format.DateTimeFormatterBuilder
+                public parseCaseSensitive(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Changes the parse style to be case insensitive for the remainder of the formatter.
                  * <p>
@@ -83,7 +83,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                parseCaseInsensitive(): java.time.format.DateTimeFormatterBuilder
+                public parseCaseInsensitive(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Changes the parse style to be strict for the remainder of the formatter.
                  * <p>
@@ -97,7 +97,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                parseStrict(): java.time.format.DateTimeFormatterBuilder
+                public parseStrict(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Changes the parse style to be lenient for the remainder of the formatter.
                  * Note that case sensitivity is set separately to this method.
@@ -112,7 +112,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                parseLenient(): java.time.format.DateTimeFormatterBuilder
+                public parseLenient(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends a default value for a field to the formatter for use in parsing.
                  * <p>
@@ -140,7 +140,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                parseDefaulting(field: java.time.temporal.TemporalField, value: number /*long*/): java.time.format.DateTimeFormatterBuilder
+                public parseDefaulting(field: java.time.temporal.TemporalField, value: number /*long*/): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the value of a date-time field to the formatter using a normal
                  * output style.
@@ -159,7 +159,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendValue(field: java.time.temporal.TemporalField): java.time.format.DateTimeFormatterBuilder
+                public appendValue(field: java.time.temporal.TemporalField): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the value of a date-time field to the formatter using a fixed
                  * width, zero-padded approach.
@@ -208,7 +208,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the width is invalid
                  */
                 // @ts-ignore
-                appendValue(field: java.time.temporal.TemporalField, width: number /*int*/): java.time.format.DateTimeFormatterBuilder
+                public appendValue(field: java.time.temporal.TemporalField, width: number /*int*/): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the value of a date-time field to the formatter providing full
                  * control over formatting.
@@ -240,7 +240,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the widths are invalid
                  */
                 // @ts-ignore
-                appendValue(field: java.time.temporal.TemporalField, minWidth: number /*int*/, maxWidth: number /*int*/, signStyle: java.time.format.SignStyle): java.time.format.DateTimeFormatterBuilder
+                public appendValue(field: java.time.temporal.TemporalField, minWidth: number /*int*/, maxWidth: number /*int*/, signStyle: java.time.format.SignStyle): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the reduced value of a date-time field to the formatter.
                  * <p>
@@ -279,7 +279,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the width or base value is invalid
                  */
                 // @ts-ignore
-                appendValueReduced(field: java.time.temporal.TemporalField, width: number /*int*/, maxWidth: number /*int*/, baseValue: number /*int*/): java.time.format.DateTimeFormatterBuilder
+                public appendValueReduced(field: java.time.temporal.TemporalField, width: number /*int*/, maxWidth: number /*int*/, baseValue: number /*int*/): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the reduced value of a date-time field to the formatter.
                  * <p>
@@ -332,7 +332,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the width or base value is invalid
                  */
                 // @ts-ignore
-                appendValueReduced(field: java.time.temporal.TemporalField, width: number /*int*/, maxWidth: number /*int*/, baseDate: java.time.chrono.ChronoLocalDate): java.time.format.DateTimeFormatterBuilder
+                public appendValueReduced(field: java.time.temporal.TemporalField, width: number /*int*/, maxWidth: number /*int*/, baseDate: java.time.chrono.ChronoLocalDate): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the fractional value of a date-time field to the formatter.
                  * <p>
@@ -365,7 +365,7 @@ declare namespace java {
                  *   either width is invalid
                  */
                 // @ts-ignore
-                appendFraction(field: java.time.temporal.TemporalField, minWidth: number /*int*/, maxWidth: number /*int*/, decimalPoint: boolean): java.time.format.DateTimeFormatterBuilder
+                public appendFraction(field: java.time.temporal.TemporalField, minWidth: number /*int*/, maxWidth: number /*int*/, decimalPoint: boolean): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the text of a date-time field to the formatter using the full
                  * text style.
@@ -381,7 +381,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendText(field: java.time.temporal.TemporalField): java.time.format.DateTimeFormatterBuilder
+                public appendText(field: java.time.temporal.TemporalField): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the text of a date-time field to the formatter.
                  * <p>
@@ -397,7 +397,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendText(field: java.time.temporal.TemporalField, textStyle: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
+                public appendText(field: java.time.temporal.TemporalField, textStyle: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the text of a date-time field to the formatter using the specified
                  * map to supply the text.
@@ -432,7 +432,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendText(field: java.time.temporal.TemporalField, textLookup: java.util.Map<java.lang.Long, java.lang.String>): java.time.format.DateTimeFormatterBuilder
+                public appendText(field: java.time.temporal.TemporalField, textLookup: java.util.Map<java.lang.Long | number, java.lang.String | string>): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends an instant using ISO-8601 to the formatter, formatting fractional
                  * digits in groups of three.
@@ -458,7 +458,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendInstant(): java.time.format.DateTimeFormatterBuilder
+                public appendInstant(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends an instant using ISO-8601 to the formatter with control over
                  * the number of fractional digits.
@@ -494,7 +494,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendInstant(fractionalDigits: number /*int*/): java.time.format.DateTimeFormatterBuilder
+                public appendInstant(fractionalDigits: number /*int*/): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the zone offset, such as '+01:00', to the formatter.
                  * <p>
@@ -503,7 +503,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendOffsetId(): java.time.format.DateTimeFormatterBuilder
+                public appendOffsetId(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the zone offset, such as '+01:00', to the formatter.
                  * <p>
@@ -542,7 +542,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendOffset(pattern: string, noOffsetText: string): java.time.format.DateTimeFormatterBuilder
+                public appendOffset(pattern: java.lang.String | string, noOffsetText: java.lang.String | string): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the localized zone offset, such as 'GMT+01:00', to the formatter.
                  * <p>
@@ -573,7 +573,7 @@ declare namespace java {
                  *  full} nor {@link TextStyle#SHORT short}
                  */
                 // @ts-ignore
-                appendLocalizedOffset(style: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
+                public appendLocalizedOffset(style: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the time-zone ID, such as 'Europe/Paris' or '+02:00', to the formatter.
                  * <p>
@@ -620,7 +620,7 @@ declare namespace java {
                  * @see #appendZoneRegionId()
                  */
                 // @ts-ignore
-                appendZoneId(): java.time.format.DateTimeFormatterBuilder
+                public appendZoneId(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the time-zone region ID, such as 'Europe/Paris', to the formatter,
                  * rejecting the zone ID if it is a {@code ZoneOffset}.
@@ -672,7 +672,7 @@ declare namespace java {
                  * @see #appendZoneId()
                  */
                 // @ts-ignore
-                appendZoneRegionId(): java.time.format.DateTimeFormatterBuilder
+                public appendZoneRegionId(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the time-zone ID, such as 'Europe/Paris' or '+02:00', to
                  * the formatter, using the best available zone ID.
@@ -724,7 +724,7 @@ declare namespace java {
                  * @see #appendZoneId()
                  */
                 // @ts-ignore
-                appendZoneOrOffsetId(): java.time.format.DateTimeFormatterBuilder
+                public appendZoneOrOffsetId(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the time-zone name, such as 'British Summer Time', to the formatter.
                  * <p>
@@ -756,7 +756,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendZoneText(textStyle: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
+                public appendZoneText(textStyle: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the time-zone name, such as 'British Summer Time', to the formatter.
                  * <p>
@@ -793,7 +793,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendZoneText(textStyle: java.time.format.TextStyle, preferredZones: Array<java.time.ZoneId>): java.time.format.DateTimeFormatterBuilder
+                public appendZoneText(textStyle: java.time.format.TextStyle, preferredZones: java.util.Set<java.time.ZoneId> | Array<java.time.ZoneId>): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the chronology ID, such as 'ISO' or 'ThaiBuddhist', to the formatter.
                  * <p>
@@ -813,7 +813,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendChronologyId(): java.time.format.DateTimeFormatterBuilder
+                public appendChronologyId(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the chronology name to the formatter.
                  * <p>
@@ -823,7 +823,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendChronologyText(textStyle: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
+                public appendChronologyText(textStyle: java.time.format.TextStyle): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends a localized date-time pattern to the formatter.
                  * <p>
@@ -852,7 +852,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if both the date and time styles are null
                  */
                 // @ts-ignore
-                appendLocalized(dateStyle: java.time.format.FormatStyle, timeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatterBuilder
+                public appendLocalized(dateStyle: java.time.format.FormatStyle, timeStyle: java.time.format.FormatStyle): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends a character literal to the formatter.
                  * <p>
@@ -861,7 +861,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendLiteral(literal: string): java.time.format.DateTimeFormatterBuilder
+                public appendLiteral(literal: string): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends a string literal to the formatter.
                  * <p>
@@ -872,7 +872,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendLiteral(literal: string): java.time.format.DateTimeFormatterBuilder
+                public appendLiteral(literal: java.lang.String | string): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends all the elements of a formatter to the builder.
                  * <p>
@@ -882,7 +882,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                append(formatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatterBuilder
+                public append(formatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends a formatter to the builder which will optionally format/parse.
                  * <p>
@@ -896,7 +896,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                appendOptional(formatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatterBuilder
+                public appendOptional(formatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Appends the elements defined by the specified pattern to the builder.
                  * <p>
@@ -1106,7 +1106,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the pattern is invalid
                  */
                 // @ts-ignore
-                appendPattern(pattern: string): java.time.format.DateTimeFormatterBuilder
+                public appendPattern(pattern: java.lang.String | string): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Causes the next added printer/parser to pad to a fixed width using a space.
                  * <p>
@@ -1125,7 +1125,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if pad width is too small
                  */
                 // @ts-ignore
-                padNext(padWidth: number /*int*/): java.time.format.DateTimeFormatterBuilder
+                public padNext(padWidth: number /*int*/): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Causes the next added printer/parser to pad to a fixed width.
                  * <p>
@@ -1147,7 +1147,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if pad width is too small
                  */
                 // @ts-ignore
-                padNext(padWidth: number /*int*/, padChar: string): java.time.format.DateTimeFormatterBuilder
+                public padNext(padWidth: number /*int*/, padChar: string): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Mark the start of an optional section.
                  * <p>
@@ -1168,7 +1168,7 @@ declare namespace java {
                  * @return this, for chaining, not null
                  */
                 // @ts-ignore
-                optionalStart(): java.time.format.DateTimeFormatterBuilder
+                public optionalStart(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Ends an optional section.
                  * <p>
@@ -1194,7 +1194,7 @@ declare namespace java {
                  * @throws IllegalStateException if there was no previous call to {#code optionalStart}
                  */
                 // @ts-ignore
-                optionalEnd(): java.time.format.DateTimeFormatterBuilder
+                public optionalEnd(): java.time.format.DateTimeFormatterBuilder
                 /**
                  * Completes this builder by creating the {@code DateTimeFormatter}
                  * using the default locale.
@@ -1211,7 +1211,7 @@ declare namespace java {
                  * @return the created formatter, not null
                  */
                 // @ts-ignore
-                toFormatter(): java.time.format.DateTimeFormatter
+                public toFormatter(): java.time.format.DateTimeFormatter
                 /**
                  * Completes this builder by creating the {@code DateTimeFormatter}
                  * using the specified locale.
@@ -1229,7 +1229,7 @@ declare namespace java {
                  * @return the created formatter, not null
                  */
                 // @ts-ignore
-                toFormatter(locale: java.util.Locale): java.time.format.DateTimeFormatter
+                public toFormatter(locale: java.util.Locale): java.time.format.DateTimeFormatter
             }
         }
     }

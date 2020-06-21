@@ -12,15 +12,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor(combustee: org.bukkit.entity.Entity, duration: number /*int*/)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * @return the amount of time (in seconds) the combustee should be alight
                      *      for
                      */
                     // @ts-ignore
-                    getDuration(): int
+                    public getDuration(): number /*int*/
                     /**
                      * The number of seconds the combustee should be alight for.
                      * <p>
@@ -29,11 +29,11 @@ declare namespace org {
                      * @param duration the time in seconds to be alight for.
                      */
                     // @ts-ignore
-                    setDuration(duration: number /*int*/): void
+                    public setDuration(duration: number /*int*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

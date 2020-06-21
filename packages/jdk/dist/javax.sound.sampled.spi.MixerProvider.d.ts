@@ -11,7 +11,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class MixerProvider extends java.lang.Object {
+                abstract class MixerProvider extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -27,7 +27,7 @@ declare namespace javax {
                      * @see #getMixerInfo()
                      */
                     // @ts-ignore
-                    isMixerSupported(info: javax.sound.sampled.Mixer.Info): boolean
+                    public isMixerSupported(info: javax.sound.sampled.Mixer.Info): boolean
                     /**
                      * Obtains the set of info objects representing the mixer
                      * or mixers provided by this MixerProvider.
@@ -41,7 +41,7 @@ declare namespace javax {
                      * @see #isMixerSupported(javax.sound.sampled.Mixer.Info) isMixerSupported(Mixer.Info)
                      */
                     // @ts-ignore
-                    abstract getMixerInfo(): javax.sound.sampled.Mixer.Info[]
+                    public abstract getMixerInfo(): javax.sound.sampled.Mixer.Info[]
                     /**
                      * Obtains an instance of the mixer represented by the info object.
                      * <p>
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @see #isMixerSupported(javax.sound.sampled.Mixer.Info) isMixerSupported(Mixer.Info)
                      */
                     // @ts-ignore
-                    abstract getMixer(info: javax.sound.sampled.Mixer.Info): javax.sound.sampled.Mixer
+                    public abstract getMixer(info: javax.sound.sampled.Mixer.Info): javax.sound.sampled.Mixer
                 }
             }
         }

@@ -5,7 +5,7 @@ declare namespace org {
                 // @ts-ignore
                 class PortalAgentTypes extends java.lang.Object {
                     // @ts-ignore
-                    readonly DEFAULT: org.spongepowered.api.world.PortalAgentType
+                    public static readonly DEFAULT: org.spongepowered.api.world.PortalAgentType
                 }
             }
         }

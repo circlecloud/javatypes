@@ -15,14 +15,14 @@ declare namespace org {
                  *      valid PluginLoader
                  */
                 // @ts-ignore
-                registerInterface(loader: java.lang.Class<org.bukkit.plugin.PluginLoader>): void
+                public registerInterface(loader: java.lang.Class<any>): void
                 /**
                  * Loads the plugins contained within the specified directory
                  * @param directory Directory to check for plugins
                  * @return A list of all plugins loaded
                  */
                 // @ts-ignore
-                loadPlugins(directory: java.io.File): org.bukkit.plugin.Plugin[]
+                public loadPlugins(directory: java.io.File): org.bukkit.plugin.Plugin[]
                 /**
                  * Loads the plugin in the specified file
                  * <p>
@@ -35,7 +35,7 @@ declare namespace org {
                  *      be found
                  */
                 // @ts-ignore
-                loadPlugin(file: java.io.File): org.bukkit.plugin.Plugin
+                public loadPlugin(file: java.io.File): org.bukkit.plugin.Plugin
                 /**
                  * Checks if the given plugin is loaded and returns it when applicable
                  * <p>
@@ -44,9 +44,9 @@ declare namespace org {
                  * @return Plugin if it exists, otherwise null
                  */
                 // @ts-ignore
-                getPlugin(name: string): org.bukkit.plugin.Plugin
+                public getPlugin(name: java.lang.String | string): org.bukkit.plugin.Plugin
                 // @ts-ignore
-                getPlugins(): org.bukkit.plugin.Plugin[]
+                public getPlugins(): org.bukkit.plugin.Plugin[]
                 /**
                  * Checks if the given plugin is enabled or not
                  * <p>
@@ -55,32 +55,32 @@ declare namespace org {
                  * @return true if the plugin is enabled, otherwise false
                  */
                 // @ts-ignore
-                isPluginEnabled(name: string): boolean
+                public isPluginEnabled(name: java.lang.String | string): boolean
                 /**
                  * Checks if the given plugin is enabled or not
                  * @param plugin Plugin to check
                  * @return true if the plugin is enabled, otherwise false
                  */
                 // @ts-ignore
-                isPluginEnabled(plugin: org.bukkit.plugin.Plugin): boolean
+                public isPluginEnabled(plugin: org.bukkit.plugin.Plugin): boolean
                 // @ts-ignore
-                enablePlugin(plugin: org.bukkit.plugin.Plugin): void
+                public enablePlugin(plugin: org.bukkit.plugin.Plugin): void
                 // @ts-ignore
-                disablePlugins(): void
+                public disablePlugins(): void
                 // @ts-ignore
-                disablePlugin(plugin: org.bukkit.plugin.Plugin): void
+                public disablePlugin(plugin: org.bukkit.plugin.Plugin): void
                 // @ts-ignore
-                clearPlugins(): void
+                public clearPlugins(): void
                 /**
                  * Calls an event with the given details.
                  * @param event Event details
                  */
                 // @ts-ignore
-                callEvent(event: org.bukkit.event.Event): void
+                public callEvent(event: org.bukkit.event.Event): void
                 // @ts-ignore
-                registerEvents(listener: org.bukkit.event.Listener, plugin: org.bukkit.plugin.Plugin): void
+                public registerEvents(listener: org.bukkit.event.Listener, plugin: org.bukkit.plugin.Plugin): void
                 // @ts-ignore
-                registerEvent(event: java.lang.Class<org.bukkit.event.Event>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin): void
+                public registerEvent(event: java.lang.Class<any>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Registers the given event to the specified listener using a directly
                  * passed EventExecutor
@@ -93,47 +93,47 @@ declare namespace org {
                  *      cancelled
                  */
                 // @ts-ignore
-                registerEvent(event: java.lang.Class<org.bukkit.event.Event>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin, ignoreCancelled: boolean): void
+                public registerEvent(event: java.lang.Class<any>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin, ignoreCancelled: boolean): void
                 // @ts-ignore
-                getPermission(name: string): org.bukkit.permissions.Permission
+                public getPermission(name: java.lang.String | string): org.bukkit.permissions.Permission
                 // @ts-ignore
-                addPermission(perm: org.bukkit.permissions.Permission): void
+                public addPermission(perm: org.bukkit.permissions.Permission): void
                 // @ts-ignore
-                addPermission(perm: org.bukkit.permissions.Permission, dirty: boolean): void
+                public addPermission(perm: org.bukkit.permissions.Permission, dirty: boolean): void
                 // @ts-ignore
-                getDefaultPermissions(op: boolean): java.util.Set<org.bukkit.permissions.Permission>
+                public getDefaultPermissions(op: boolean): Array<org.bukkit.permissions.Permission>
                 // @ts-ignore
-                removePermission(perm: org.bukkit.permissions.Permission): void
+                public removePermission(perm: org.bukkit.permissions.Permission): void
                 // @ts-ignore
-                removePermission(name: string): void
+                public removePermission(name: java.lang.String | string): void
                 // @ts-ignore
-                recalculatePermissionDefaults(perm: org.bukkit.permissions.Permission): void
+                public recalculatePermissionDefaults(perm: org.bukkit.permissions.Permission): void
                 // @ts-ignore
-                dirtyPermissibles(): void
+                public dirtyPermissibles(): void
                 // @ts-ignore
-                subscribeToPermission(permission: string, permissible: org.bukkit.permissions.Permissible): void
+                public subscribeToPermission(permission: java.lang.String | string, permissible: org.bukkit.permissions.Permissible): void
                 // @ts-ignore
-                unsubscribeFromPermission(permission: string, permissible: org.bukkit.permissions.Permissible): void
+                public unsubscribeFromPermission(permission: java.lang.String | string, permissible: org.bukkit.permissions.Permissible): void
                 // @ts-ignore
-                getPermissionSubscriptions(permission: string): java.util.Set<org.bukkit.permissions.Permissible>
+                public getPermissionSubscriptions(permission: java.lang.String | string): Array<org.bukkit.permissions.Permissible>
                 // @ts-ignore
-                subscribeToDefaultPerms(op: boolean, permissible: org.bukkit.permissions.Permissible): void
+                public subscribeToDefaultPerms(op: boolean, permissible: org.bukkit.permissions.Permissible): void
                 // @ts-ignore
-                unsubscribeFromDefaultPerms(op: boolean, permissible: org.bukkit.permissions.Permissible): void
+                public unsubscribeFromDefaultPerms(op: boolean, permissible: org.bukkit.permissions.Permissible): void
                 // @ts-ignore
-                getDefaultPermSubscriptions(op: boolean): java.util.Set<org.bukkit.permissions.Permissible>
+                public getDefaultPermSubscriptions(op: boolean): Array<org.bukkit.permissions.Permissible>
                 // @ts-ignore
-                getPermissions(): java.util.Set<org.bukkit.permissions.Permission>
+                public getPermissions(): Array<org.bukkit.permissions.Permission>
                 // @ts-ignore
-                isTransitiveDepend(plugin: org.bukkit.plugin.PluginDescriptionFile, depend: org.bukkit.plugin.PluginDescriptionFile): boolean
+                public isTransitiveDepend(plugin: org.bukkit.plugin.PluginDescriptionFile, depend: org.bukkit.plugin.PluginDescriptionFile): boolean
                 // @ts-ignore
-                useTimings(): boolean
+                public useTimings(): boolean
                 /**
                  * Sets whether or not per event timing code should be used
                  * @param use True if per event timing code should be used
                  */
                 // @ts-ignore
-                useTimings(use: boolean): void
+                public useTimings(use: boolean): void
             }
         }
     }

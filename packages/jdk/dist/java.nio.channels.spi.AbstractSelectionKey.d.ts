@@ -10,21 +10,21 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class AbstractSelectionKey extends java.nio.channels.SelectionKey {
+                abstract class AbstractSelectionKey extends java.nio.channels.SelectionKey {
                     /**
                      * Initializes a new instance of this class.
                      */
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    isValid(): boolean
+                    public isValid(): boolean
                     /**
                      * Cancels this key.
                      * <p> If this key has not yet been cancelled then it is added to its
                      * selector's cancelled-key set while synchronized on that set.  </p>
                      */
                     // @ts-ignore
-                    cancel(): void
+                    public cancel(): void
                 }
             }
         }

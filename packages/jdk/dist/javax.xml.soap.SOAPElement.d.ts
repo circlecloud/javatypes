@@ -58,7 +58,7 @@ declare namespace javax {
                  *                           <code>SOAPElement</code> object
                  */
                 // @ts-ignore
-                addChildElement(localName: string): javax.xml.soap.SOAPElement
+                addChildElement(localName: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Creates a new <code>SOAPElement</code> object initialized with the
                  * specified local name and prefix and adds the new element to this
@@ -73,7 +73,7 @@ declare namespace javax {
                  *                           <code>SOAPElement</code> object
                  */
                 // @ts-ignore
-                addChildElement(localName: string, prefix: string): javax.xml.soap.SOAPElement
+                addChildElement(localName: java.lang.String | string, prefix: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Creates a new <code>SOAPElement</code> object initialized with the
                  * specified local name, prefix, and URI and adds the new element to this
@@ -89,7 +89,7 @@ declare namespace javax {
                  *                           <code>SOAPElement</code> object
                  */
                 // @ts-ignore
-                addChildElement(localName: string, prefix: string, uri: string): javax.xml.soap.SOAPElement
+                addChildElement(localName: java.lang.String | string, prefix: java.lang.String | string, uri: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Add a <code>SOAPElement</code> as a child of this
                  * <code>SOAPElement</code> instance. The <code>SOAPElement</code>
@@ -142,7 +142,7 @@ declare namespace javax {
                  *                       <code>SOAPElement</code>
                  */
                 // @ts-ignore
-                addTextNode(text: string): javax.xml.soap.SOAPElement
+                addTextNode(text: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Adds an attribute with the specified name and value to this
                  * <code>SOAPElement</code> object.
@@ -157,7 +157,7 @@ declare namespace javax {
                  * @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
                  */
                 // @ts-ignore
-                addAttribute(name: javax.xml.soap.Name, value: string): javax.xml.soap.SOAPElement
+                addAttribute(name: javax.xml.soap.Name, value: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Adds an attribute with the specified name and value to this
                  * <code>SOAPElement</code> object.
@@ -173,7 +173,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addAttribute(qname: javax.xml.namespace.QName, value: string): javax.xml.soap.SOAPElement
+                addAttribute(qname: javax.xml.namespace.QName, value: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Adds a namespace declaration with the specified prefix and URI to this
                  * <code>SOAPElement</code> object.
@@ -185,7 +185,7 @@ declare namespace javax {
                  *                           namespace
                  */
                 // @ts-ignore
-                addNamespaceDeclaration(prefix: string, uri: string): javax.xml.soap.SOAPElement
+                addNamespaceDeclaration(prefix: java.lang.String | string, uri: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Returns the value of the attribute with the specified name.
                  * @param name a <code>Name</code> object with the name of the attribute
@@ -194,7 +194,7 @@ declare namespace javax {
                  * @see SOAPElement#getAttributeValue(javax.xml.namespace.QName)
                  */
                 // @ts-ignore
-                getAttributeValue(name: javax.xml.soap.Name): java.lang.String
+                getAttributeValue(name: javax.xml.soap.Name): string
                 /**
                  * Returns the value of the attribute with the specified qname.
                  * @param qname a <code>QName</code> object with the qname of the attribute
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getAttributeValue(qname: javax.xml.namespace.QName): java.lang.String
+                getAttributeValue(qname: javax.xml.namespace.QName): string
                 /**
                  * Returns an <code>Iterator</code> over all of the attribute
                  * <code>Name</code> objects in this
@@ -216,7 +216,7 @@ declare namespace javax {
                  * @return an iterator over the names of the attributes
                  */
                 // @ts-ignore
-                getAllAttributes(): java.util.Iterator
+                getAllAttributes(): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over all of the attributes
                  * in this <code>SOAPElement</code>  as <code>QName</code> objects.
@@ -228,7 +228,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getAllAttributesAsQNames(): java.util.Iterator
+                getAllAttributesAsQNames(): java.util.Iterator<any>
                 /**
                  * Returns the URI of the namespace that has the given prefix.
                  * @param prefix a <code>String</code> giving the prefix of the namespace
@@ -237,7 +237,7 @@ declare namespace javax {
                  *         the given prefix
                  */
                 // @ts-ignore
-                getNamespaceURI(prefix: string): java.lang.String
+                getNamespaceURI(prefix: java.lang.String | string): string
                 /**
                  * Returns an <code>Iterator</code> over the namespace prefix
                  * <code>String</code>s declared by this element. The prefixes returned by
@@ -247,7 +247,7 @@ declare namespace javax {
                  *          <code>SOAPElement</code> object
                  */
                 // @ts-ignore
-                getNamespacePrefixes(): java.util.Iterator
+                getNamespacePrefixes(): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over the namespace prefix
                  * <code>String</code>s visible to this element. The prefixes returned by
@@ -258,7 +258,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                getVisibleNamespacePrefixes(): java.util.Iterator
+                getVisibleNamespacePrefixes(): java.util.Iterator<any>
                 /**
                  * Creates a <code>QName</code> whose namespace URI is the one associated
                  * with the parameter, <code>prefix</code>, in the context of this
@@ -280,7 +280,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                createQName(localName: string, prefix: string): javax.xml.namespace.QName
+                createQName(localName: java.lang.String | string, prefix: java.lang.String | string): javax.xml.namespace.QName
                 /**
                  * Returns the name of this <code>SOAPElement</code> object.
                  * @return a <code>Name</code> object with the name of this
@@ -343,7 +343,7 @@ declare namespace javax {
                  *          removed successfully; <code>false</code> if it was not
                  */
                 // @ts-ignore
-                removeNamespaceDeclaration(prefix: string): boolean
+                removeNamespaceDeclaration(prefix: java.lang.String | string): boolean
                 /**
                  * Returns an <code>Iterator</code> over all the immediate child
                  * {@link Node}s of this element. This includes <code>javax.xml.soap.Text</code>
@@ -364,7 +364,7 @@ declare namespace javax {
                  *          object
                  */
                 // @ts-ignore
-                getChildElements(): java.util.Iterator
+                getChildElements(): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over all the immediate child
                  * {@link Node}s of this element with the specified name. All of these
@@ -389,7 +389,7 @@ declare namespace javax {
                  * @see SOAPElement#getChildElements(javax.xml.namespace.QName)
                  */
                 // @ts-ignore
-                getChildElements(name: javax.xml.soap.Name): java.util.Iterator
+                getChildElements(name: javax.xml.soap.Name): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over all the immediate child
                  * {@link Node}s of this element with the specified qname. All of these
@@ -415,7 +415,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getChildElements(qname: javax.xml.namespace.QName): java.util.Iterator
+                getChildElements(qname: javax.xml.namespace.QName): java.util.Iterator<any>
                 /**
                  * Sets the encoding style for this <code>SOAPElement</code> object
                  * to one specified.
@@ -426,14 +426,14 @@ declare namespace javax {
                  * @see #getEncodingStyle
                  */
                 // @ts-ignore
-                setEncodingStyle(encodingStyle: string): void
+                setEncodingStyle(encodingStyle: java.lang.String | string): void
                 /**
                  * Returns the encoding style for this <code>SOAPElement</code> object.
                  * @return a <code>String</code> giving the encoding style
                  * @see #setEncodingStyle
                  */
                 // @ts-ignore
-                getEncodingStyle(): java.lang.String
+                getEncodingStyle(): string
             }
         }
     }

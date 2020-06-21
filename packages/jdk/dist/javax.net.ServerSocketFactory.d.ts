@@ -16,7 +16,7 @@ declare namespace javax {
          * @author David Brownell
          */
         // @ts-ignore
-        class ServerSocketFactory extends java.lang.Object {
+        abstract class ServerSocketFactory extends java.lang.Object {
             /**
              * Creates a server socket factory.
              */
@@ -27,7 +27,7 @@ declare namespace javax {
              * @return the <code>ServerSocketFactory</code>
              */
             // @ts-ignore
-            getDefault(): javax.net.ServerSocketFactory
+            public static getDefault(): javax.net.ServerSocketFactory
             /**
              * Returns an unbound server socket.  The socket is configured with
              * the socket options (such as accept timeout) given to this factory.
@@ -38,7 +38,7 @@ declare namespace javax {
              * @see java.net.ServerSocket#ServerSocket()
              */
             // @ts-ignore
-            createServerSocket(): java.net.ServerSocket
+            public createServerSocket(): java.net.ServerSocket
             /**
              * Returns a server socket bound to the specified port.
              * The socket is configured with the socket options
@@ -60,7 +60,7 @@ declare namespace javax {
              * @see java.net.ServerSocket#ServerSocket(int)
              */
             // @ts-ignore
-            abstract createServerSocket(port: number /*int*/): java.net.ServerSocket
+            public abstract createServerSocket(port: number /*int*/): java.net.ServerSocket
             /**
              * Returns a server socket bound to the specified port, and uses the
              * specified connection backlog.  The socket is configured with
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see java.net.ServerSocket#ServerSocket(int, int)
              */
             // @ts-ignore
-            abstract createServerSocket(port: number /*int*/, backlog: number /*int*/): java.net.ServerSocket
+            public abstract createServerSocket(port: number /*int*/, backlog: number /*int*/): java.net.ServerSocket
             /**
              * Returns a server socket bound to the specified port,
              * with a specified listen backlog and local IP.
@@ -121,7 +121,7 @@ declare namespace javax {
              * @see java.net.ServerSocket#ServerSocket(int, int, java.net.InetAddress)
              */
             // @ts-ignore
-            abstract createServerSocket(port: number /*int*/, backlog: number /*int*/, ifAddress: java.net.InetAddress): java.net.ServerSocket
+            public abstract createServerSocket(port: number /*int*/, backlog: number /*int*/, ifAddress: java.net.InetAddress): java.net.ServerSocket
         }
     }
 }

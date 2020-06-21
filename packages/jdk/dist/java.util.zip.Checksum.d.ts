@@ -26,7 +26,7 @@ declare namespace java {
                  * @return the current checksum value
                  */
                 // @ts-ignore
-                getValue(): long
+                getValue(): number /*long*/
                 /**
                  * Resets the checksum to its initial value.
                  */

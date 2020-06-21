@@ -14,7 +14,7 @@ declare namespace org {
                      * @return the bed block involved in this event
                      */
                     // @ts-ignore
-                    getBed(): org.bukkit.block.Block
+                    public getBed(): org.bukkit.block.Block
                     /**
                      * Get if this event should set the new spawn location for the
                      * {@link Player}.
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return true if the spawn location will be changed
                      */
                     // @ts-ignore
-                    shouldSetSpawnLocation(): boolean
+                    public shouldSetSpawnLocation(): boolean
                     /**
                      * Set if this event should set the new spawn location for the
                      * {@link Player}.
@@ -40,11 +40,11 @@ declare namespace org {
                      * @param setBedSpawn true to change the new spawn location
                      */
                     // @ts-ignore
-                    setSpawnLocation(setBedSpawn: boolean): void
+                    public setSpawnLocation(setBedSpawn: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

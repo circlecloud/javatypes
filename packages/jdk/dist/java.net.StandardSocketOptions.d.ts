@@ -27,7 +27,7 @@ declare namespace java {
              * @see DatagramSocket#setBroadcast
              */
             // @ts-ignore
-            readonly SO_BROADCAST: java.net.SocketOption<java.lang.Boolean>
+            public static readonly SO_BROADCAST: java.net.SocketOption<java.lang.Boolean>
             /**
              * Keep connection alive.
              * <p> The value of this socket option is a {@code Boolean} that represents
@@ -43,7 +43,7 @@ declare namespace java {
              * @see Socket#setKeepAlive
              */
             // @ts-ignore
-            readonly SO_KEEPALIVE: java.net.SocketOption<java.lang.Boolean>
+            public static readonly SO_KEEPALIVE: java.net.SocketOption<java.lang.Boolean>
             /**
              * The size of the socket send buffer.
              * <p> The value of this socket option is an {@code Integer} that is the
@@ -68,7 +68,7 @@ declare namespace java {
              * @see Socket#setSendBufferSize
              */
             // @ts-ignore
-            readonly SO_SNDBUF: java.net.SocketOption<java.lang.Integer>
+            public static readonly SO_SNDBUF: java.net.SocketOption<java.lang.Integer | number>
             /**
              * The size of the socket receive buffer.
              * <p> The value of this socket option is an {@code Integer} that is the
@@ -100,7 +100,7 @@ declare namespace java {
              * @see ServerSocket#setReceiveBufferSize
              */
             // @ts-ignore
-            readonly SO_RCVBUF: java.net.SocketOption<java.lang.Integer>
+            public static readonly SO_RCVBUF: java.net.SocketOption<java.lang.Integer | number>
             /**
              * Re-use address.
              * <p> The value of this socket option is a {@code Boolean} that represents
@@ -125,7 +125,7 @@ declare namespace java {
              * @see ServerSocket#setReuseAddress
              */
             // @ts-ignore
-            readonly SO_REUSEADDR: java.net.SocketOption<java.lang.Boolean>
+            public static readonly SO_REUSEADDR: java.net.SocketOption<java.lang.Boolean>
             /**
              * Linger on close if data is present.
              * <p> The value of this socket option is an {@code Integer} that controls
@@ -152,7 +152,7 @@ declare namespace java {
              * @see Socket#setSoLinger
              */
             // @ts-ignore
-            readonly SO_LINGER: java.net.SocketOption<java.lang.Integer>
+            public static readonly SO_LINGER: java.net.SocketOption<java.lang.Integer | number>
             /**
              * The Type of Service (ToS) octet in the Internet Protocol (IP) header.
              * <p> The value of this socket option is an {@code Integer} representing
@@ -176,7 +176,7 @@ declare namespace java {
              * @see DatagramSocket#setTrafficClass
              */
             // @ts-ignore
-            readonly IP_TOS: java.net.SocketOption<java.lang.Integer>
+            public static readonly IP_TOS: java.net.SocketOption<java.lang.Integer | number>
             /**
              * The network interface for Internet Protocol (IP) multicast datagrams.
              * <p> The value of this socket option is a {@link NetworkInterface} that
@@ -195,7 +195,7 @@ declare namespace java {
              * @see MulticastSocket#setInterface
              */
             // @ts-ignore
-            readonly IP_MULTICAST_IF: java.net.SocketOption<java.net.NetworkInterface>
+            public static readonly IP_MULTICAST_IF: java.net.SocketOption<java.net.NetworkInterface>
             /**
              * The <em>time-to-live</em> for Internet Protocol (IP) multicast datagrams.
              * <p> The value of this socket option is an {@code Integer} in the range
@@ -218,7 +218,7 @@ declare namespace java {
              * @see MulticastSocket#setTimeToLive
              */
             // @ts-ignore
-            readonly IP_MULTICAST_TTL: java.net.SocketOption<java.lang.Integer>
+            public static readonly IP_MULTICAST_TTL: java.net.SocketOption<java.lang.Integer | number>
             /**
              * Loopback for Internet Protocol (IP) multicast datagrams.
              * <p> The value of this socket option is a {@code Boolean} that controls
@@ -238,7 +238,7 @@ declare namespace java {
              * @see MulticastSocket#setLoopbackMode
              */
             // @ts-ignore
-            readonly IP_MULTICAST_LOOP: java.net.SocketOption<java.lang.Boolean>
+            public static readonly IP_MULTICAST_LOOP: java.net.SocketOption<java.lang.Boolean>
             /**
              * Disable the Nagle algorithm.
              * <p> The value of this socket option is a {@code Boolean} that represents
@@ -258,7 +258,7 @@ declare namespace java {
              * @see Socket#setTcpNoDelay
              */
             // @ts-ignore
-            readonly TCP_NODELAY: java.net.SocketOption<java.lang.Boolean>
+            public static readonly TCP_NODELAY: java.net.SocketOption<java.lang.Boolean>
         }
     }
 }

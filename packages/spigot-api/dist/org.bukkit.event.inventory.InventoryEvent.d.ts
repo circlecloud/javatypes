@@ -16,24 +16,24 @@ declare namespace org {
                      * @return The upper inventory.
                      */
                     // @ts-ignore
-                    getInventory(): org.bukkit.inventory.Inventory
+                    public getInventory(): org.bukkit.inventory.Inventory
                     /**
                      * Gets the list of players viewing the primary (upper) inventory involved
                      * in this event
                      * @return A list of people viewing.
                      */
                     // @ts-ignore
-                    getViewers(): java.util.List<org.bukkit.entity.HumanEntity>
+                    public getViewers(): Array<org.bukkit.entity.HumanEntity>
                     /**
                      * Gets the view object itself
                      * @return InventoryView
                      */
                     // @ts-ignore
-                    getView(): org.bukkit.inventory.InventoryView
+                    public getView(): org.bukkit.inventory.InventoryView
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -12,7 +12,7 @@ declare namespace javax {
              * @since JAX-WS 2.0
              */
             // @ts-ignore
-            class RequestWrapper implements java.lang.annotation.Annotation {
+            abstract class RequestWrapper implements java.lang.annotation.Annotation {
             }
         }
     }

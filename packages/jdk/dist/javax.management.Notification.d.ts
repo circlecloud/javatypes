@@ -25,7 +25,7 @@ declare namespace javax {
              * @param sequenceNumber The notification sequence number within the source object.
              */
             // @ts-ignore
-            constructor(type: string, source: any, sequenceNumber: number /*long*/)
+            constructor(type: java.lang.String | string, source: java.lang.Object | any, sequenceNumber: number /*long*/)
             /**
              * Creates a Notification object.
              * The notification timeStamp is set to the current date.
@@ -35,7 +35,7 @@ declare namespace javax {
              * @param message The detailed message.
              */
             // @ts-ignore
-            constructor(type: string, source: any, sequenceNumber: number /*long*/, message: string)
+            constructor(type: java.lang.String | string, source: java.lang.Object | any, sequenceNumber: number /*long*/, message: java.lang.String | string)
             /**
              * Creates a Notification object.
              * @param type The notification type.
@@ -44,7 +44,7 @@ declare namespace javax {
              * @param timeStamp The notification emission date.
              */
             // @ts-ignore
-            constructor(type: string, source: any, sequenceNumber: number /*long*/, timeStamp: number /*long*/)
+            constructor(type: java.lang.String | string, source: java.lang.Object | any, sequenceNumber: number /*long*/, timeStamp: number /*long*/)
             /**
              * Creates a Notification object.
              * @param type The notification type.
@@ -54,7 +54,7 @@ declare namespace javax {
              * @param message The detailed message.
              */
             // @ts-ignore
-            constructor(type: string, source: any, sequenceNumber: number /*long*/, timeStamp: number /*long*/, message: string)
+            constructor(type: java.lang.String | string, source: java.lang.Object | any, sequenceNumber: number /*long*/, timeStamp: number /*long*/, message: java.lang.String | string)
             /**
              * <p>This field hides the {@link EventObject#source} field in the
              * parent class to make it non-transient and therefore part of the
@@ -62,14 +62,14 @@ declare namespace javax {
              * @serial The object on which the notification initially occurred.
              */
             // @ts-ignore
-            source: any
+            source: java.lang.Object | any
             /**
              * Sets the source.
              * @param source the new source for this object.
              * @see EventObject#getSource
              */
             // @ts-ignore
-            setSource(source: any): void
+            public setSource(source: java.lang.Object | any): void
             /**
              * Get the notification sequence number.
              * @return The notification sequence number within the source object. It's a serial number
@@ -79,7 +79,7 @@ declare namespace javax {
              * @see #setSequenceNumber
              */
             // @ts-ignore
-            getSequenceNumber(): long
+            public getSequenceNumber(): number /*long*/
             /**
              * Set the notification sequence number.
              * @param sequenceNumber The notification sequence number within the source object. It is
@@ -88,7 +88,7 @@ declare namespace javax {
              * @see #getSequenceNumber
              */
             // @ts-ignore
-            setSequenceNumber(sequenceNumber: number /*long*/): void
+            public setSequenceNumber(sequenceNumber: number /*long*/): void
             /**
              * Get the notification type.
              * @return The notification type. It's a string expressed in a dot notation
@@ -97,27 +97,27 @@ declare namespace javax {
              *  names.  An example of a notification type is com.example.alarm.router.
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             /**
              * Get the notification timestamp.
              * @return The notification timestamp.
              * @see #setTimeStamp
              */
             // @ts-ignore
-            getTimeStamp(): long
+            public getTimeStamp(): number /*long*/
             /**
              * Set the notification timestamp.
              * @param timeStamp The notification timestamp. It indicates when the notification was generated.
              * @see #getTimeStamp
              */
             // @ts-ignore
-            setTimeStamp(timeStamp: number /*long*/): void
+            public setTimeStamp(timeStamp: number /*long*/): void
             /**
              * Get the notification message.
              * @return The message string of this notification object.
              */
             // @ts-ignore
-            getMessage(): java.lang.String
+            public getMessage(): string
             /**
              * Get the user data.
              * @return The user data object. It is used for whatever data
@@ -125,7 +125,7 @@ declare namespace javax {
              * @see #setUserData
              */
             // @ts-ignore
-            getUserData(): java.lang.Object
+            public getUserData(): any
             /**
              * Set the user data.
              * @param userData The user data object. It is used for whatever data
@@ -133,13 +133,13 @@ declare namespace javax {
              * @see #getUserData
              */
             // @ts-ignore
-            setUserData(userData: any): void
+            public setUserData(userData: java.lang.Object | any): void
             /**
              * Returns a String representation of this notification.
              * @return A String representation of this notification.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

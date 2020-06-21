@@ -30,7 +30,7 @@ declare namespace java {
              * @see java.util.Enumeration
              */
             // @ts-ignore
-            constructor(e: java.util.Enumeration<java.io.InputStream>)
+            constructor(e: java.util.Enumeration<any>)
             /**
              * Initializes a newly
              * created <code>SequenceInputStream</code>
@@ -61,7 +61,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Reads the next byte of data from this input stream. The byte is
              * returned as an <code>int</code> in the range <code>0</code> to
@@ -80,7 +80,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this input stream
              * into an array of bytes.  If <code>len</code> is not zero, the method
@@ -104,7 +104,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Closes this input stream and releases any system resources
              * associated with the stream.
@@ -119,7 +119,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

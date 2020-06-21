@@ -85,7 +85,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                constructor(tx: java.awt.geom.AffineTransform, aaHint: any, fmHint: any)
+                constructor(tx: java.awt.geom.AffineTransform, aaHint: java.lang.Object | any, fmHint: java.lang.Object | any)
                 /**
                  * Indicates whether or not this <code>FontRenderContext</code> object
                  * measures text in a transformed render context.
@@ -96,7 +96,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                isTransformed(): boolean
+                public isTransformed(): boolean
                 /**
                  * Returns the integer type of the affine transform for this
                  * <code>FontRenderContext</code> as specified by
@@ -106,7 +106,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getTransformType(): int
+                public getTransformType(): number /*int*/
                 /**
                  * Gets the transform that is used to scale typographical points
                  * to pixels in this <code>FontRenderContext</code>.
@@ -115,7 +115,7 @@ declare namespace java {
                  * @see AffineTransform
                  */
                 // @ts-ignore
-                getTransform(): java.awt.geom.AffineTransform
+                public getTransform(): java.awt.geom.AffineTransform
                 /**
                  * Returns a boolean which indicates whether or not some form of
                  * antialiasing is specified by this <code>FontRenderContext</code>.
@@ -128,7 +128,7 @@ declare namespace java {
                  * @see #FontRenderContext(AffineTransform,Object,Object)
                  */
                 // @ts-ignore
-                isAntiAliased(): boolean
+                public isAntiAliased(): boolean
                 /**
                  * Returns a boolean which whether text fractional metrics mode
                  * is used in this <code>FontRenderContext</code>.
@@ -142,7 +142,7 @@ declare namespace java {
                  * @see #FontRenderContext(AffineTransform,Object,Object)
                  */
                 // @ts-ignore
-                usesFractionalMetrics(): boolean
+                public usesFractionalMetrics(): boolean
                 /**
                  * Return the text anti-aliasing rendering mode hint used in this
                  * <code>FontRenderContext</code>.
@@ -153,7 +153,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getAntiAliasingHint(): java.lang.Object
+                public getAntiAliasingHint(): any
                 /**
                  * Return the text fractional metrics rendering mode hint used in this
                  * <code>FontRenderContext</code>.
@@ -164,7 +164,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getFractionalMetricsHint(): java.lang.Object
+                public getFractionalMetricsHint(): any
                 /**
                  * Return true if obj is an instance of FontRenderContext and has the same
                  * transform, antialiasing, and fractional metrics values as this.
@@ -174,7 +174,7 @@ declare namespace java {
                  *          otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Return true if rhs has the same transform, antialiasing,
                  * and fractional metrics values as this.
@@ -185,12 +185,12 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                equals(rhs: java.awt.font.FontRenderContext): boolean
+                public equals(rhs: java.awt.font.FontRenderContext): boolean
                 /**
                  * Return a hashcode for this FontRenderContext.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

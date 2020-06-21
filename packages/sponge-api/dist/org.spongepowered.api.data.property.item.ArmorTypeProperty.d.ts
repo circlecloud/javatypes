@@ -5,7 +5,7 @@ declare namespace org {
                 namespace property {
                     namespace item {
                         // @ts-ignore
-                        class ArmorTypeProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, org.spongepowered.api.data.type.ArmorType> {
+                        class ArmorTypeProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, org.spongepowered.api.data.type.ArmorType> {
                             /**
                              * Construct a new {@link ArmorTypeProperty} with the desired
                              * {@link ArmorType}.
@@ -23,7 +23,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(value: org.spongepowered.api.data.type.ArmorType, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

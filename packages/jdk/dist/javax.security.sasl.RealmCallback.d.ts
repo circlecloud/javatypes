@@ -17,7 +17,7 @@ declare namespace javax {
                  *  the empty string.
                  */
                 // @ts-ignore
-                constructor(prompt: string)
+                constructor(prompt: java.lang.String | string)
                 /**
                  * Constructs a {@code RealmCallback} with a prompt and default
                  * realm information.
@@ -28,7 +28,7 @@ declare namespace javax {
                  *  or if {@code defaultRealm} is empty or null.
                  */
                 // @ts-ignore
-                constructor(prompt: string, defaultRealmInfo: string)
+                constructor(prompt: java.lang.String | string, defaultRealmInfo: java.lang.String | string)
             }
         }
     }

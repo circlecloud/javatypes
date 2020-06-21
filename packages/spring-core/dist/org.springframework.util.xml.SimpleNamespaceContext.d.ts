@@ -15,46 +15,46 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getNamespaceURI(prefix: string): java.lang.String
+                    public getNamespaceURI(prefix: java.lang.String | string): string
                     // @ts-ignore
-                    getPrefix(namespaceUri: string): java.lang.String
+                    public getPrefix(namespaceUri: java.lang.String | string): string
                     // @ts-ignore
-                    getPrefixes(namespaceUri: string): java.util.Iterator<java.lang.String>
+                    public getPrefixes(namespaceUri: java.lang.String | string): java.util.Iterator<java.lang.String | string>
                     /**
                      * Set the bindings for this namespace context.
                      * The supplied map must consist of string key value pairs.
                      */
                     // @ts-ignore
-                    setBindings(bindings: java.util.Map<java.lang.String, java.lang.String>): void
+                    public setBindings(bindings: java.util.Map<java.lang.String | string, java.lang.String | string>): void
                     /**
                      * Bind the given namespace as default namespace.
                      * @param namespaceUri the namespace uri
                      */
                     // @ts-ignore
-                    bindDefaultNamespaceUri(namespaceUri: string): void
+                    public bindDefaultNamespaceUri(namespaceUri: java.lang.String | string): void
                     /**
                      * Bind the given prefix to the given namespace.
                      * @param prefix the namespace prefix
                      * @param namespaceUri the namespace uri
                      */
                     // @ts-ignore
-                    bindNamespaceUri(prefix: string, namespaceUri: string): void
+                    public bindNamespaceUri(prefix: java.lang.String | string, namespaceUri: java.lang.String | string): void
                     /**
                      * Remove the given prefix from this context.
                      * @param prefix the prefix to be removed
                      */
                     // @ts-ignore
-                    removeBinding(prefix: string): void
+                    public removeBinding(prefix: java.lang.String | string): void
                     /**
                      * Remove all declared prefixes.
                      */
                     // @ts-ignore
-                    clear(): void
+                    public clear(): void
                     /**
                      * Return all declared prefixes.
                      */
                     // @ts-ignore
-                    getBoundPrefixes(): java.util.Iterator<java.lang.String>
+                    public getBoundPrefixes(): java.util.Iterator<java.lang.String | string>
                 }
             }
         }

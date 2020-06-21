@@ -33,23 +33,23 @@ declare namespace java {
              * This is the time of midnight at the start of the day.
              */
             // @ts-ignore
-            readonly MIN: java.time.LocalTime
+            public static readonly MIN: java.time.LocalTime
             /**
              * The maximum supported {@code LocalTime}, '23:59:59.999999999'.
              * This is the time just before midnight at the end of the day.
              */
             // @ts-ignore
-            readonly MAX: java.time.LocalTime
+            public static readonly MAX: java.time.LocalTime
             /**
              * The time of midnight at the start of the day, '00:00'.
              */
             // @ts-ignore
-            readonly MIDNIGHT: java.time.LocalTime
+            public static readonly MIDNIGHT: java.time.LocalTime
             /**
              * The time of noon in the middle of the day, '12:00'.
              */
             // @ts-ignore
-            readonly NOON: java.time.LocalTime
+            public static readonly NOON: java.time.LocalTime
             /**
              * Obtains the current time from the system clock in the default time-zone.
              * <p>
@@ -61,7 +61,7 @@ declare namespace java {
              * @return the current time using the system clock and default time-zone, not null
              */
             // @ts-ignore
-            now(): java.time.LocalTime
+            public static now(): java.time.LocalTime
             /**
              * Obtains the current time from the system clock in the specified time-zone.
              * <p>
@@ -74,7 +74,7 @@ declare namespace java {
              * @return the current time using the system clock, not null
              */
             // @ts-ignore
-            now(zone: java.time.ZoneId): java.time.LocalTime
+            public static now(zone: java.time.ZoneId): java.time.LocalTime
             /**
              * Obtains the current time from the specified clock.
              * <p>
@@ -85,7 +85,7 @@ declare namespace java {
              * @return the current time, not null
              */
             // @ts-ignore
-            now(clock: java.time.Clock): java.time.LocalTime
+            public static now(clock: java.time.Clock): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from an hour and minute.
              * <p>
@@ -97,7 +97,7 @@ declare namespace java {
              * @throws DateTimeException if the value of any field is out of range
              */
             // @ts-ignore
-            of(hour: number /*int*/, minute: number /*int*/): java.time.LocalTime
+            public static of(hour: number /*int*/, minute: number /*int*/): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from an hour, minute and second.
              * <p>
@@ -110,7 +110,7 @@ declare namespace java {
              * @throws DateTimeException if the value of any field is out of range
              */
             // @ts-ignore
-            of(hour: number /*int*/, minute: number /*int*/, second: number /*int*/): java.time.LocalTime
+            public static of(hour: number /*int*/, minute: number /*int*/, second: number /*int*/): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from an hour, minute, second and nanosecond.
              * <p>
@@ -123,7 +123,7 @@ declare namespace java {
              * @throws DateTimeException if the value of any field is out of range
              */
             // @ts-ignore
-            of(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, nanoOfSecond: number /*int*/): java.time.LocalTime
+            public static of(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, nanoOfSecond: number /*int*/): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from a second-of-day value.
              * <p>
@@ -134,7 +134,7 @@ declare namespace java {
              * @throws DateTimeException if the second-of-day value is invalid
              */
             // @ts-ignore
-            ofSecondOfDay(secondOfDay: number /*long*/): java.time.LocalTime
+            public static ofSecondOfDay(secondOfDay: number /*long*/): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from a nanos-of-day value.
              * <p>
@@ -144,7 +144,7 @@ declare namespace java {
              * @throws DateTimeException if the nanos of day value is invalid
              */
             // @ts-ignore
-            ofNanoOfDay(nanoOfDay: number /*long*/): java.time.LocalTime
+            public static ofNanoOfDay(nanoOfDay: number /*long*/): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from a temporal object.
              * <p>
@@ -162,7 +162,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code LocalTime}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.LocalTime
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from a text string such as {@code 10:15}.
              * <p>
@@ -173,7 +173,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.LocalTime
+            public static parse(text: java.lang.CharSequence): java.time.LocalTime
             /**
              * Obtains an instance of {@code LocalTime} from a text string using a specific formatter.
              * <p>
@@ -184,7 +184,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.LocalTime
+            public static parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.LocalTime
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -222,7 +222,7 @@ declare namespace java {
              * @return true if the field is supported on this time, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Checks if the specified unit is supported.
              * <p>
@@ -251,7 +251,7 @@ declare namespace java {
              * @return true if the unit can be added/subtracted, false if not
              */
             // @ts-ignore
-            isSupported(unit: java.time.temporal.TemporalUnit): boolean
+            public isSupported(unit: java.time.temporal.TemporalUnit): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -275,7 +275,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this time as an {@code int}.
              * <p>
@@ -303,7 +303,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this time as a {@code long}.
              * <p>
@@ -327,31 +327,31 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Gets the hour-of-day field.
              * @return the hour-of-day, from 0 to 23
              */
             // @ts-ignore
-            getHour(): int
+            public getHour(): number /*int*/
             /**
              * Gets the minute-of-hour field.
              * @return the minute-of-hour, from 0 to 59
              */
             // @ts-ignore
-            getMinute(): int
+            public getMinute(): number /*int*/
             /**
              * Gets the second-of-minute field.
              * @return the second-of-minute, from 0 to 59
              */
             // @ts-ignore
-            getSecond(): int
+            public getSecond(): number /*int*/
             /**
              * Gets the nano-of-second field.
              * @return the nano-of-second, from 0 to 999,999,999
              */
             // @ts-ignore
-            getNano(): int
+            public getNano(): number /*int*/
             /**
              * Returns an adjusted copy of this time.
              * <p>
@@ -373,7 +373,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(adjuster: java.time.temporal.TemporalAdjuster): java.time.LocalTime
+            public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.LocalTime
             /**
              * Returns a copy of this time with the specified field set to a new value.
              * <p>
@@ -456,7 +456,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.LocalTime
+            public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the hour-of-day altered.
              * <p>
@@ -466,7 +466,7 @@ declare namespace java {
              * @throws DateTimeException if the hour value is invalid
              */
             // @ts-ignore
-            withHour(hour: number /*int*/): java.time.LocalTime
+            public withHour(hour: number /*int*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the minute-of-hour altered.
              * <p>
@@ -476,7 +476,7 @@ declare namespace java {
              * @throws DateTimeException if the minute value is invalid
              */
             // @ts-ignore
-            withMinute(minute: number /*int*/): java.time.LocalTime
+            public withMinute(minute: number /*int*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the second-of-minute altered.
              * <p>
@@ -486,7 +486,7 @@ declare namespace java {
              * @throws DateTimeException if the second value is invalid
              */
             // @ts-ignore
-            withSecond(second: number /*int*/): java.time.LocalTime
+            public withSecond(second: number /*int*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the nano-of-second altered.
              * <p>
@@ -496,7 +496,7 @@ declare namespace java {
              * @throws DateTimeException if the nanos value is invalid
              */
             // @ts-ignore
-            withNano(nanoOfSecond: number /*int*/): java.time.LocalTime
+            public withNano(nanoOfSecond: number /*int*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the time truncated.
              * <p>
@@ -517,7 +517,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the unit is not supported
              */
             // @ts-ignore
-            truncatedTo(unit: java.time.temporal.TemporalUnit): java.time.LocalTime
+            public truncatedTo(unit: java.time.temporal.TemporalUnit): java.time.LocalTime
             /**
              * Returns a copy of this time with the specified amount added.
              * <p>
@@ -538,7 +538,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.LocalTime
+            public plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.LocalTime
             /**
              * Returns a copy of this time with the specified amount added.
              * <p>
@@ -591,7 +591,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalTime
+            public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of hours added.
              * <p>
@@ -603,7 +603,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the hours added, not null
              */
             // @ts-ignore
-            plusHours(hoursToAdd: number /*long*/): java.time.LocalTime
+            public plusHours(hoursToAdd: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of minutes added.
              * <p>
@@ -615,7 +615,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the minutes added, not null
              */
             // @ts-ignore
-            plusMinutes(minutesToAdd: number /*long*/): java.time.LocalTime
+            public plusMinutes(minutesToAdd: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of seconds added.
              * <p>
@@ -627,7 +627,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the seconds added, not null
              */
             // @ts-ignore
-            plusSeconds(secondstoAdd: number /*long*/): java.time.LocalTime
+            public plusSeconds(secondstoAdd: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of nanoseconds added.
              * <p>
@@ -639,7 +639,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the nanoseconds added, not null
              */
             // @ts-ignore
-            plusNanos(nanosToAdd: number /*long*/): java.time.LocalTime
+            public plusNanos(nanosToAdd: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this time with the specified amount subtracted.
              * <p>
@@ -660,7 +660,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.LocalTime
+            public minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.LocalTime
             /**
              * Returns a copy of this time with the specified amount subtracted.
              * <p>
@@ -680,7 +680,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalTime
+            public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of hours subtracted.
              * <p>
@@ -692,7 +692,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the hours subtracted, not null
              */
             // @ts-ignore
-            minusHours(hoursToSubtract: number /*long*/): java.time.LocalTime
+            public minusHours(hoursToSubtract: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of minutes subtracted.
              * <p>
@@ -704,7 +704,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the minutes subtracted, not null
              */
             // @ts-ignore
-            minusMinutes(minutesToSubtract: number /*long*/): java.time.LocalTime
+            public minusMinutes(minutesToSubtract: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of seconds subtracted.
              * <p>
@@ -716,7 +716,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the seconds subtracted, not null
              */
             // @ts-ignore
-            minusSeconds(secondsToSubtract: number /*long*/): java.time.LocalTime
+            public minusSeconds(secondsToSubtract: number /*long*/): java.time.LocalTime
             /**
              * Returns a copy of this {@code LocalTime} with the specified number of nanoseconds subtracted.
              * <p>
@@ -728,7 +728,7 @@ declare namespace java {
              * @return a {#code LocalTime} based on this time with the nanoseconds subtracted, not null
              */
             // @ts-ignore
-            minusNanos(nanosToSubtract: number /*long*/): java.time.LocalTime
+            public minusNanos(nanosToSubtract: number /*long*/): java.time.LocalTime
             /**
              * Queries this time using the specified query.
              * <p>
@@ -747,7 +747,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have the same time as this object.
              * <p>
@@ -772,7 +772,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Calculates the amount of time until another time in terms of the specified unit.
              * <p>
@@ -820,7 +820,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+            public until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Formats this time using the specified formatter.
              * <p>
@@ -830,7 +830,7 @@ declare namespace java {
              * @throws DateTimeException if an error occurs during printing
              */
             // @ts-ignore
-            format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+            public format(formatter: java.time.format.DateTimeFormatter): string
             /**
              * Combines this time with a date to create a {@code LocalDateTime}.
              * <p>
@@ -840,7 +840,7 @@ declare namespace java {
              * @return the local date-time formed from this time and the specified date, not null
              */
             // @ts-ignore
-            atDate(date: java.time.LocalDate): java.time.LocalDateTime
+            public atDate(date: java.time.LocalDate): java.time.LocalDateTime
             /**
              * Combines this time with an offset to create an {@code OffsetTime}.
              * <p>
@@ -850,21 +850,21 @@ declare namespace java {
              * @return the offset time formed from this time and the specified offset, not null
              */
             // @ts-ignore
-            atOffset(offset: java.time.ZoneOffset): java.time.OffsetTime
+            public atOffset(offset: java.time.ZoneOffset): java.time.OffsetTime
             /**
              * Extracts the time as seconds of day,
              * from {@code 0} to {@code 24 * 60 * 60 - 1}.
              * @return the second-of-day equivalent to this time
              */
             // @ts-ignore
-            toSecondOfDay(): int
+            public toSecondOfDay(): number /*int*/
             /**
              * Extracts the time as nanos of day,
              * from {@code 0} to {@code 24 * 60 * 60 * 1,000,000,000 - 1}.
              * @return the nano of day equivalent to this time
              */
             // @ts-ignore
-            toNanoOfDay(): long
+            public toNanoOfDay(): number /*long*/
             /**
              * Compares this time to another time.
              * <p>
@@ -875,7 +875,7 @@ declare namespace java {
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            compareTo(other: java.time.LocalTime): int
+            public compareTo(other: java.time.LocalTime): number /*int*/
             /**
              * Checks if this time is after the specified time.
              * <p>
@@ -885,7 +885,7 @@ declare namespace java {
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            isAfter(other: java.time.LocalTime): boolean
+            public isAfter(other: java.time.LocalTime): boolean
             /**
              * Checks if this time is before the specified time.
              * <p>
@@ -895,7 +895,7 @@ declare namespace java {
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            isBefore(other: java.time.LocalTime): boolean
+            public isBefore(other: java.time.LocalTime): boolean
             /**
              * Checks if this time is equal to another time.
              * <p>
@@ -908,13 +908,13 @@ declare namespace java {
              * @return true if this is equal to the other time
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this time.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this time as a {@code String}, such as {@code 10:15}.
              * <p>
@@ -931,7 +931,7 @@ declare namespace java {
              * @return a string representation of this time, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

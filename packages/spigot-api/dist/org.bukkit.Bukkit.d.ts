@@ -10,7 +10,7 @@ declare namespace org {
              * @return Server instance being ran
              */
             // @ts-ignore
-            getServer(): org.bukkit.Server
+            public static getServer(): org.bukkit.Server
             /**
              * Attempts to set the {@link Server} singleton.
              * <p>
@@ -18,25 +18,25 @@ declare namespace org {
              * @param server Server instance
              */
             // @ts-ignore
-            setServer(server: org.bukkit.Server): void
+            public static setServer(server: org.bukkit.Server): void
             /**
              * Gets the name of this server implementation.
              * @return name of this server implementation
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public static getName(): string
             /**
              * Gets the version string of this server implementation.
              * @return version of this server implementation
              */
             // @ts-ignore
-            getVersion(): java.lang.String
+            public static getVersion(): string
             /**
              * Gets the Bukkit version that this server is running.
              * @return version of Bukkit
              */
             // @ts-ignore
-            getBukkitVersion(): java.lang.String
+            public static getBukkitVersion(): string
             /**
              * Gets a view of all currently logged in players. This {@linkplain
              * Collections#unmodifiableCollection(Collection) view} is a reused
@@ -64,25 +64,25 @@ declare namespace org {
              * @return a view of currently online players.
              */
             // @ts-ignore
-            getOnlinePlayers(): java.util.Collection<? extends org.bukkit.entity.Player>
+            public static getOnlinePlayers(): Array<any>
             /**
              * Get the maximum amount of players which can login to this server.
              * @return the amount of players this server allows
              */
             // @ts-ignore
-            getMaxPlayers(): int
+            public static getMaxPlayers(): number /*int*/
             /**
              * Get the game port that the server runs on.
              * @return the port number of this server
              */
             // @ts-ignore
-            getPort(): int
+            public static getPort(): number /*int*/
             /**
              * Get the view distance from this server.
              * @return the view distance from this server.
              */
             // @ts-ignore
-            getViewDistance(): int
+            public static getViewDistance(): number /*int*/
             /**
              * Get the IP that this server is bound to, or empty string if not
              * specified.
@@ -90,54 +90,54 @@ declare namespace org {
              *      string
              */
             // @ts-ignore
-            getIp(): java.lang.String
+            public static getIp(): string
             /**
              * Get world type (level-type setting) for default world.
              * @return the value of level-type (e.g. DEFAULT, FLAT, DEFAULT_1_1)
              */
             // @ts-ignore
-            getWorldType(): java.lang.String
+            public static getWorldType(): string
             /**
              * Get generate-structures setting.
              * @return true if structure generation is enabled, false otherwise
              */
             // @ts-ignore
-            getGenerateStructures(): boolean
+            public static getGenerateStructures(): boolean
             /**
              * Gets whether this server allows the End or not.
              * @return whether this server allows the End or not
              */
             // @ts-ignore
-            getAllowEnd(): boolean
+            public static getAllowEnd(): boolean
             /**
              * Gets whether this server allows the Nether or not.
              * @return whether this server allows the Nether or not
              */
             // @ts-ignore
-            getAllowNether(): boolean
+            public static getAllowNether(): boolean
             /**
              * Gets whether this server has a whitelist or not.
              * @return whether this server has a whitelist or not
              */
             // @ts-ignore
-            hasWhitelist(): boolean
+            public static hasWhitelist(): boolean
             /**
              * Sets if the server is whitelisted.
              * @param value true for whitelist on, false for off
              */
             // @ts-ignore
-            setWhitelist(value: boolean): void
+            public static setWhitelist(value: boolean): void
             /**
              * Gets a list of whitelisted players.
              * @return a set containing all whitelisted players
              */
             // @ts-ignore
-            getWhitelistedPlayers(): java.util.Set<org.bukkit.OfflinePlayer>
+            public static getWhitelistedPlayers(): Array<org.bukkit.OfflinePlayer>
             /**
              * Reloads the whitelist from disk.
              */
             // @ts-ignore
-            reloadWhitelist(): void
+            public static reloadWhitelist(): void
             /**
              * Broadcast a message to all players.
              * <p>
@@ -147,7 +147,7 @@ declare namespace org {
              * @return the number of players
              */
             // @ts-ignore
-            broadcastMessage(message: string): int
+            public static broadcastMessage(message: java.lang.String | string): number /*int*/
             /**
              * Gets the name of the update folder. The update folder is used to safely
              * update plugins at the right moment on a plugin load.
@@ -156,20 +156,20 @@ declare namespace org {
              * @return the name of the update folder
              */
             // @ts-ignore
-            getUpdateFolder(): java.lang.String
+            public static getUpdateFolder(): string
             /**
              * Gets the update folder. The update folder is used to safely update
              * plugins at the right moment on a plugin load.
              * @return the update folder
              */
             // @ts-ignore
-            getUpdateFolderFile(): java.io.File
+            public static getUpdateFolderFile(): java.io.File
             /**
              * Gets the value of the connection throttle setting.
              * @return the value of the connection throttle setting
              */
             // @ts-ignore
-            getConnectionThrottle(): long
+            public static getConnectionThrottle(): number /*long*/
             /**
              * Gets default ticks per animal spawns value.
              * <p>
@@ -189,7 +189,7 @@ declare namespace org {
              * @return the default ticks per animal spawns value
              */
             // @ts-ignore
-            getTicksPerAnimalSpawns(): int
+            public static getTicksPerAnimalSpawns(): number /*int*/
             /**
              * Gets the default ticks per monster spawns value.
              * <p>
@@ -209,7 +209,7 @@ declare namespace org {
              * @return the default ticks per monsters spawn value
              */
             // @ts-ignore
-            getTicksPerMonsterSpawns(): int
+            public static getTicksPerMonsterSpawns(): number /*int*/
             /**
              * Gets the default ticks per water mob spawns value.
              * <p>
@@ -228,7 +228,7 @@ declare namespace org {
              * @return the default ticks per water mobs spawn value
              */
             // @ts-ignore
-            getTicksPerWaterSpawns(): int
+            public static getTicksPerWaterSpawns(): number /*int*/
             /**
              * Gets the default ticks per ambient mob spawns value.
              * <p>
@@ -247,7 +247,7 @@ declare namespace org {
              * @return the default ticks per ambient mobs spawn value
              */
             // @ts-ignore
-            getTicksPerAmbientSpawns(): int
+            public static getTicksPerAmbientSpawns(): number /*int*/
             /**
              * Gets a player object by the given username.
              * <p>
@@ -256,14 +256,14 @@ declare namespace org {
              * @return a player if one was found, null otherwise
              */
             // @ts-ignore
-            getPlayer(name: string): org.bukkit.entity.Player
+            public static getPlayer(name: java.lang.String | string): org.bukkit.entity.Player
             /**
              * Gets the player with the exact given name, case insensitive.
              * @param name Exact name of the player to retrieve
              * @return a player object if one was found, null otherwise
              */
             // @ts-ignore
-            getPlayerExact(name: string): org.bukkit.entity.Player
+            public static getPlayerExact(name: java.lang.String | string): org.bukkit.entity.Player
             /**
              * Attempts to match any players with the given name, and returns a list
              * of all possibly matches.
@@ -274,38 +274,38 @@ declare namespace org {
              * @return list of all possible players
              */
             // @ts-ignore
-            matchPlayer(name: string): java.util.List<org.bukkit.entity.Player>
+            public static matchPlayer(name: java.lang.String | string): Array<org.bukkit.entity.Player>
             /**
              * Gets the player with the given UUID.
              * @param id UUID of the player to retrieve
              * @return a player object if one was found, null otherwise
              */
             // @ts-ignore
-            getPlayer(id: java.util.UUID): org.bukkit.entity.Player
+            public static getPlayer(id: java.util.UUID): org.bukkit.entity.Player
             /**
              * Gets the plugin manager for interfacing with plugins.
              * @return a plugin manager for this Server instance
              */
             // @ts-ignore
-            getPluginManager(): org.bukkit.plugin.PluginManager
+            public static getPluginManager(): org.bukkit.plugin.PluginManager
             /**
              * Gets the scheduler for managing scheduled events.
              * @return a scheduling service for this server
              */
             // @ts-ignore
-            getScheduler(): org.bukkit.scheduler.BukkitScheduler
+            public static getScheduler(): org.bukkit.scheduler.BukkitScheduler
             /**
              * Gets a services manager.
              * @return s services manager
              */
             // @ts-ignore
-            getServicesManager(): org.bukkit.plugin.ServicesManager
+            public static getServicesManager(): org.bukkit.plugin.ServicesManager
             /**
              * Gets a list of all worlds on this server.
              * @return a list of worlds
              */
             // @ts-ignore
-            getWorlds(): java.util.List<org.bukkit.World>
+            public static getWorlds(): Array<org.bukkit.World>
             /**
              * Creates or loads a world with the given name using the specified
              * options.
@@ -316,7 +316,7 @@ declare namespace org {
              * @return newly created or loaded world
              */
             // @ts-ignore
-            createWorld(creator: org.bukkit.WorldCreator): org.bukkit.World
+            public static createWorld(creator: org.bukkit.WorldCreator): org.bukkit.World
             /**
              * Unloads a world with the given name.
              * @param name Name of the world to unload
@@ -324,7 +324,7 @@ declare namespace org {
              * @return true if successful, false otherwise
              */
             // @ts-ignore
-            unloadWorld(name: string, save: boolean): boolean
+            public static unloadWorld(name: java.lang.String | string, save: boolean): boolean
             /**
              * Unloads the given world.
              * @param world the world to unload
@@ -332,21 +332,21 @@ declare namespace org {
              * @return true if successful, false otherwise
              */
             // @ts-ignore
-            unloadWorld(world: org.bukkit.World, save: boolean): boolean
+            public static unloadWorld(world: org.bukkit.World, save: boolean): boolean
             /**
              * Gets the world with the given name.
              * @param name the name of the world to retrieve
              * @return a world with the given name, or null if none exists
              */
             // @ts-ignore
-            getWorld(name: string): org.bukkit.World
+            public static getWorld(name: java.lang.String | string): org.bukkit.World
             /**
              * Gets the world from the given Unique ID.
              * @param uid a unique-id of the world to retrieve
              * @return a world with the given Unique ID, or null if none exists
              */
             // @ts-ignore
-            getWorld(uid: java.util.UUID): org.bukkit.World
+            public static getWorld(uid: java.util.UUID): org.bukkit.World
             /**
              * Gets the map from the given item ID.
              * @param id the id of the map to get
@@ -354,14 +354,14 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getMap(id: number /*int*/): org.bukkit.map.MapView
+            public static getMap(id: number /*int*/): org.bukkit.map.MapView
             /**
              * Create a new map with an automatically assigned ID.
              * @param world the world the map will belong to
              * @return a newly created map view
              */
             // @ts-ignore
-            createMap(world: org.bukkit.World): org.bukkit.map.MapView
+            public static createMap(world: org.bukkit.World): org.bukkit.map.MapView
             /**
              * Create a new explorer map targeting the closest nearby structure of a
              * given {@link StructureType}.
@@ -376,7 +376,7 @@ declare namespace org {
              *       org.bukkit.StructureType, int, boolean)
              */
             // @ts-ignore
-            createExplorerMap(world: org.bukkit.World, location: org.bukkit.Location, structureType: org.bukkit.StructureType): org.bukkit.inventory.ItemStack
+            public static createExplorerMap(world: org.bukkit.World, location: org.bukkit.Location, structureType: org.bukkit.StructureType): org.bukkit.inventory.ItemStack
             /**
              * Create a new explorer map targeting the closest nearby structure of a
              * given {@link StructureType}.
@@ -394,36 +394,36 @@ declare namespace org {
              *       org.bukkit.StructureType, int, boolean)
              */
             // @ts-ignore
-            createExplorerMap(world: org.bukkit.World, location: org.bukkit.Location, structureType: org.bukkit.StructureType, radius: number /*int*/, findUnexplored: boolean): org.bukkit.inventory.ItemStack
+            public static createExplorerMap(world: org.bukkit.World, location: org.bukkit.Location, structureType: org.bukkit.StructureType, radius: number /*int*/, findUnexplored: boolean): org.bukkit.inventory.ItemStack
             /**
              * Reloads the server, refreshing settings and plugin information.
              */
             // @ts-ignore
-            reload(): void
+            public static reload(): void
             /**
              * Reload only the Minecraft data for the server. This includes custom
              * advancements and loot tables.
              */
             // @ts-ignore
-            reloadData(): void
+            public static reloadData(): void
             /**
              * Returns the primary logger associated with this server instance.
              * @return Logger associated with this server
              */
             // @ts-ignore
-            getLogger(): java.util.logging.Logger
+            public static getLogger(): java.util.logging.Logger
             /**
              * Gets a {@link PluginCommand} with the given name or alias.
              * @param name the name of the command to retrieve
              * @return a plugin command if found, null otherwise
              */
             // @ts-ignore
-            getPluginCommand(name: string): org.bukkit.command.PluginCommand
+            public static getPluginCommand(name: java.lang.String | string): org.bukkit.command.PluginCommand
             /**
              * Writes loaded players to disk.
              */
             // @ts-ignore
-            savePlayers(): void
+            public static savePlayers(): void
             /**
              * Dispatches a command on this server, and executes it if found.
              * @param sender the apparent sender of the command
@@ -434,7 +434,7 @@ declare namespace org {
              *      fails with an unhandled exception
              */
             // @ts-ignore
-            dispatchCommand(sender: org.bukkit.command.CommandSender, commandLine: string): boolean
+            public static dispatchCommand(sender: org.bukkit.command.CommandSender, commandLine: java.lang.String | string): boolean
             /**
              * Adds a recipe to the crafting manager.
              * @param recipe the recipe to add
@@ -442,7 +442,7 @@ declare namespace org {
              *      reason
              */
             // @ts-ignore
-            addRecipe(recipe: org.bukkit.inventory.Recipe): boolean
+            public static addRecipe(recipe: org.bukkit.inventory.Recipe): boolean
             /**
              * Get a list of all recipes for a given item. The stack size is ignored
              * in comparisons. If the durability is -1, it will match any data value.
@@ -450,23 +450,23 @@ declare namespace org {
              * @return a list of recipes with the given result
              */
             // @ts-ignore
-            getRecipesFor(result: org.bukkit.inventory.ItemStack): java.util.List<org.bukkit.inventory.Recipe>
+            public static getRecipesFor(result: org.bukkit.inventory.ItemStack): Array<org.bukkit.inventory.Recipe>
             /**
              * Get an iterator through the list of crafting recipes.
              * @return an iterator
              */
             // @ts-ignore
-            recipeIterator(): java.util.Iterator<org.bukkit.inventory.Recipe>
+            public static recipeIterator(): java.util.Iterator<org.bukkit.inventory.Recipe>
             /**
              * Clears the list of crafting recipes.
              */
             // @ts-ignore
-            clearRecipes(): void
+            public static clearRecipes(): void
             /**
              * Resets the list of crafting recipes to the default.
              */
             // @ts-ignore
-            resetRecipes(): void
+            public static resetRecipes(): void
             /**
              * Remove a recipe from the server.
              * <b>Note that removing a recipe may cause permanent loss of data
@@ -476,48 +476,48 @@ declare namespace org {
              * @return True if recipe was removed
              */
             // @ts-ignore
-            removeRecipe(key: org.bukkit.NamespacedKey): boolean
+            public static removeRecipe(key: org.bukkit.NamespacedKey): boolean
             /**
              * Gets a list of command aliases defined in the server properties.
              * @return a map of aliases to command names
              */
             // @ts-ignore
-            getCommandAliases(): java.util.Map<java.lang.String, java.lang.String[]>
+            public static getCommandAliases(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
             /**
              * Gets the radius, in blocks, around each worlds spawn point to protect.
              * @return spawn radius, or 0 if none
              */
             // @ts-ignore
-            getSpawnRadius(): int
+            public static getSpawnRadius(): number /*int*/
             /**
              * Sets the radius, in blocks, around each worlds spawn point to protect.
              * @param value new spawn radius, or 0 if none
              */
             // @ts-ignore
-            setSpawnRadius(value: number /*int*/): void
+            public static setSpawnRadius(value: number /*int*/): void
             /**
              * Gets whether the Server is in online mode or not.
              * @return true if the server authenticates clients, false otherwise
              */
             // @ts-ignore
-            getOnlineMode(): boolean
+            public static getOnlineMode(): boolean
             /**
              * Gets whether this server allows flying or not.
              * @return true if the server allows flight, false otherwise
              */
             // @ts-ignore
-            getAllowFlight(): boolean
+            public static getAllowFlight(): boolean
             /**
              * Gets whether the server is in hardcore mode or not.
              * @return true if the server mode is hardcore, false otherwise
              */
             // @ts-ignore
-            isHardcore(): boolean
+            public static isHardcore(): boolean
             /**
              * Shutdowns the server, stopping everything.
              */
             // @ts-ignore
-            shutdown(): void
+            public static shutdown(): void
             /**
              * Broadcasts the specified message to every user with the given
              * permission name.
@@ -527,7 +527,7 @@ declare namespace org {
              * @return number of message recipients
              */
             // @ts-ignore
-            broadcast(message: string, permission: string): int
+            public static broadcast(message: java.lang.String | string, permission: java.lang.String | string): number /*int*/
             /**
              * Gets the player by the given name, regardless if they are offline or
              * online.
@@ -544,7 +544,7 @@ declare namespace org {
              * @see #getOfflinePlayer(java.util.UUID)
              */
             // @ts-ignore
-            getOfflinePlayer(name: string): org.bukkit.OfflinePlayer
+            public static getOfflinePlayer(name: java.lang.String | string): org.bukkit.OfflinePlayer
             /**
              * Gets the player by the given UUID, regardless if they are offline or
              * online.
@@ -555,31 +555,31 @@ declare namespace org {
              * @return an offline player
              */
             // @ts-ignore
-            getOfflinePlayer(id: java.util.UUID): org.bukkit.OfflinePlayer
+            public static getOfflinePlayer(id: java.util.UUID): org.bukkit.OfflinePlayer
             /**
              * Gets a set containing all current IPs that are banned.
              * @return a set containing banned IP addresses
              */
             // @ts-ignore
-            getIPBans(): java.util.Set<java.lang.String>
+            public static getIPBans(): Array<java.lang.String | string>
             /**
              * Bans the specified address from the server.
              * @param address the IP address to ban
              */
             // @ts-ignore
-            banIP(address: string): void
+            public static banIP(address: java.lang.String | string): void
             /**
              * Unbans the specified address from the server.
              * @param address the IP address to unban
              */
             // @ts-ignore
-            unbanIP(address: string): void
+            public static unbanIP(address: java.lang.String | string): void
             /**
              * Gets a set containing all banned players.
              * @return a set containing banned players
              */
             // @ts-ignore
-            getBannedPlayers(): java.util.Set<org.bukkit.OfflinePlayer>
+            public static getBannedPlayers(): Array<org.bukkit.OfflinePlayer>
             /**
              * Gets a ban list for the supplied type.
              * <p>
@@ -589,56 +589,56 @@ declare namespace org {
              * @return a ban list of the specified type
              */
             // @ts-ignore
-            getBanList(type: org.bukkit.BanList.Type): org.bukkit.BanList
+            public static getBanList(type: org.bukkit.BanList.Type): org.bukkit.BanList
             /**
              * Gets a set containing all player operators.
              * @return a set containing player operators
              */
             // @ts-ignore
-            getOperators(): java.util.Set<org.bukkit.OfflinePlayer>
+            public static getOperators(): Array<org.bukkit.OfflinePlayer>
             /**
              * Gets the default {@link GameMode} for new players.
              * @return the default game mode
              */
             // @ts-ignore
-            getDefaultGameMode(): org.bukkit.GameMode
+            public static getDefaultGameMode(): org.bukkit.GameMode
             /**
              * Sets the default {@link GameMode} for new players.
              * @param mode the new game mode
              */
             // @ts-ignore
-            setDefaultGameMode(mode: org.bukkit.GameMode): void
+            public static setDefaultGameMode(mode: org.bukkit.GameMode): void
             /**
              * Gets a {@link ConsoleCommandSender} that may be used as an input source
              * for this server.
              * @return a console command sender
              */
             // @ts-ignore
-            getConsoleSender(): org.bukkit.command.ConsoleCommandSender
+            public static getConsoleSender(): org.bukkit.command.ConsoleCommandSender
             /**
              * Gets the folder that contains all of the various {@link World}s.
              * @return folder that contains all worlds
              */
             // @ts-ignore
-            getWorldContainer(): java.io.File
+            public static getWorldContainer(): java.io.File
             /**
              * Gets every player that has ever played on this server.
              * @return an array containing all previous players
              */
             // @ts-ignore
-            getOfflinePlayers(): org.bukkit.OfflinePlayer[]
+            public static getOfflinePlayers(): org.bukkit.OfflinePlayer[]
             /**
              * Gets the {@link Messenger} responsible for this server.
              * @return messenger responsible for this server
              */
             // @ts-ignore
-            getMessenger(): org.bukkit.plugin.messaging.Messenger
+            public static getMessenger(): org.bukkit.plugin.messaging.Messenger
             /**
              * Gets the {@link HelpMap} providing help topics for this server.
              * @return a help map for this server
              */
             // @ts-ignore
-            getHelpMap(): org.bukkit.help.HelpMap
+            public static getHelpMap(): org.bukkit.help.HelpMap
             /**
              * Creates an empty inventory with the specified type. If the type
              * is {@link InventoryType#CHEST}, the new inventory has a size of 27;
@@ -659,7 +659,7 @@ declare namespace org {
              * @see InventoryType#isCreatable()
              */
             // @ts-ignore
-            createInventory(owner: org.bukkit.inventory.InventoryHolder, type: org.bukkit.event.inventory.InventoryType): org.bukkit.inventory.Inventory
+            public static createInventory(owner: org.bukkit.inventory.InventoryHolder, type: org.bukkit.event.inventory.InventoryType): org.bukkit.inventory.Inventory
             /**
              * Creates an empty inventory with the specified type and title. If the type
              * is {@link InventoryType#CHEST}, the new inventory has a size of 27;
@@ -683,7 +683,7 @@ declare namespace org {
              * @see InventoryType#isCreatable()
              */
             // @ts-ignore
-            createInventory(owner: org.bukkit.inventory.InventoryHolder, type: org.bukkit.event.inventory.InventoryType, title: string): org.bukkit.inventory.Inventory
+            public static createInventory(owner: org.bukkit.inventory.InventoryHolder, type: org.bukkit.event.inventory.InventoryType, title: java.lang.String | string): org.bukkit.inventory.Inventory
             /**
              * Creates an empty inventory of type {@link InventoryType#CHEST} with the
              * specified size.
@@ -693,7 +693,7 @@ declare namespace org {
              * @throws IllegalArgumentException if the size is not a multiple of 9
              */
             // @ts-ignore
-            createInventory(owner: org.bukkit.inventory.InventoryHolder, size: number /*int*/): org.bukkit.inventory.Inventory
+            public static createInventory(owner: org.bukkit.inventory.InventoryHolder, size: number /*int*/): org.bukkit.inventory.Inventory
             /**
              * Creates an empty inventory of type {@link InventoryType#CHEST} with the
              * specified size and title.
@@ -705,7 +705,7 @@ declare namespace org {
              * @throws IllegalArgumentException if the size is not a multiple of 9
              */
             // @ts-ignore
-            createInventory(owner: org.bukkit.inventory.InventoryHolder, size: number /*int*/, title: string): org.bukkit.inventory.Inventory
+            public static createInventory(owner: org.bukkit.inventory.InventoryHolder, size: number /*int*/, title: java.lang.String | string): org.bukkit.inventory.Inventory
             /**
              * Creates an empty merchant.
              * @param title the title of the corresponding merchant inventory, displayed
@@ -713,35 +713,35 @@ declare namespace org {
              * @return a new merchant
              */
             // @ts-ignore
-            createMerchant(title: string): org.bukkit.inventory.Merchant
+            public static createMerchant(title: java.lang.String | string): org.bukkit.inventory.Merchant
             /**
              * Gets user-specified limit for number of monsters that can spawn in a
              * chunk.
              * @return the monster spawn limit
              */
             // @ts-ignore
-            getMonsterSpawnLimit(): int
+            public static getMonsterSpawnLimit(): number /*int*/
             /**
              * Gets user-specified limit for number of animals that can spawn in a
              * chunk.
              * @return the animal spawn limit
              */
             // @ts-ignore
-            getAnimalSpawnLimit(): int
+            public static getAnimalSpawnLimit(): number /*int*/
             /**
              * Gets user-specified limit for number of water animals that can spawn in
              * a chunk.
              * @return the water animal spawn limit
              */
             // @ts-ignore
-            getWaterAnimalSpawnLimit(): int
+            public static getWaterAnimalSpawnLimit(): number /*int*/
             /**
              * Gets user-specified limit for number of ambient mobs that can spawn in
              * a chunk.
              * @return the ambient spawn limit
              */
             // @ts-ignore
-            getAmbientSpawnLimit(): int
+            public static getAmbientSpawnLimit(): number /*int*/
             /**
              * Checks the current thread against the expected primary thread for the
              * server.
@@ -754,32 +754,32 @@ declare namespace org {
              *      false otherwise
              */
             // @ts-ignore
-            isPrimaryThread(): boolean
+            public static isPrimaryThread(): boolean
             /**
              * Gets the message that is displayed on the server list.
              * @return the servers MOTD
              */
             // @ts-ignore
-            getMotd(): java.lang.String
+            public static getMotd(): string
             /**
              * Gets the default message that is displayed when the server is stopped.
              * @return the shutdown message
              */
             // @ts-ignore
-            getShutdownMessage(): java.lang.String
+            public static getShutdownMessage(): string
             /**
              * Gets the current warning state for the server.
              * @return the configured warning state
              */
             // @ts-ignore
-            getWarningState(): org.bukkit.Warning.WarningState
+            public static getWarningState(): org.bukkit.Warning.WarningState
             /**
              * Gets the instance of the item factory (for {@link ItemMeta}).
              * @return the item factory
              * @see ItemFactory
              */
             // @ts-ignore
-            getItemFactory(): org.bukkit.inventory.ItemFactory
+            public static getItemFactory(): org.bukkit.inventory.ItemFactory
             /**
              * Gets the instance of the scoreboard manager.
              * <p>
@@ -787,7 +787,7 @@ declare namespace org {
              * @return the scoreboard manager or null if no worlds are loaded.
              */
             // @ts-ignore
-            getScoreboardManager(): org.bukkit.scoreboard.ScoreboardManager
+            public static getScoreboardManager(): org.bukkit.scoreboard.ScoreboardManager
             /**
              * Gets an instance of the server's default server-icon.
              * @return the default server-icon; null values may be used by the
@@ -795,7 +795,7 @@ declare namespace org {
              *      not guaranteed
              */
             // @ts-ignore
-            getServerIcon(): org.bukkit.util.CachedServerIcon
+            public static getServerIcon(): org.bukkit.util.CachedServerIcon
             /**
              * Loads an image from a file, and returns a cached image for the specific
              * server-icon.
@@ -810,7 +810,7 @@ declare namespace org {
              *      ServerListPingEvent#setServerIcon(CachedServerIcon)}
              */
             // @ts-ignore
-            loadServerIcon(file: java.io.File): org.bukkit.util.CachedServerIcon
+            public static loadServerIcon(file: java.io.File): org.bukkit.util.CachedServerIcon
             /**
              * Creates a cached server-icon for the specific image.
              * <p>
@@ -824,7 +824,7 @@ declare namespace org {
              *      ServerListPingEvent#setServerIcon(CachedServerIcon)}
              */
             // @ts-ignore
-            loadServerIcon(image: java.awt.image.BufferedImage): org.bukkit.util.CachedServerIcon
+            public static loadServerIcon(image: java.awt.image.BufferedImage): org.bukkit.util.CachedServerIcon
             /**
              * Set the idle kick timeout. Any players idle for the specified amount of
              * time will be automatically kicked.
@@ -833,13 +833,13 @@ declare namespace org {
              * @param threshold the idle timeout in minutes
              */
             // @ts-ignore
-            setIdleTimeout(threshold: number /*int*/): void
+            public static setIdleTimeout(threshold: number /*int*/): void
             /**
              * Gets the idle kick timeout.
              * @return the idle timeout in minutes
              */
             // @ts-ignore
-            getIdleTimeout(): int
+            public static getIdleTimeout(): number /*int*/
             /**
              * Create a ChunkData for use in a generator.
              * See {@link ChunkGenerator#generateChunkData(org.bukkit.World, java.util.Random, int, int, org.bukkit.generator.ChunkGenerator.BiomeGrid)}
@@ -847,7 +847,7 @@ declare namespace org {
              * @return a new ChunkData for the world
              */
             // @ts-ignore
-            createChunkData(world: org.bukkit.World): org.bukkit.generator.ChunkGenerator.ChunkData
+            public static createChunkData(world: org.bukkit.World): org.bukkit.generator.ChunkGenerator.ChunkData
             /**
              * Creates a boss bar instance to display to players. The progress
              * defaults to 1.0
@@ -858,7 +858,7 @@ declare namespace org {
              * @return the created boss bar
              */
             // @ts-ignore
-            createBossBar(title: string, color: org.bukkit.boss.BarColor, style: org.bukkit.boss.BarStyle, ...flags: org.bukkit.boss.BarFlag[]): org.bukkit.boss.BossBar
+            public static createBossBar(title: java.lang.String | string, color: org.bukkit.boss.BarColor, style: org.bukkit.boss.BarStyle, ...flags: org.bukkit.boss.BarFlag[]): org.bukkit.boss.BossBar
             /**
              * Creates a boss bar instance to display to players. The progress defaults
              * to 1.0.
@@ -873,7 +873,7 @@ declare namespace org {
              * @return the created boss bar
              */
             // @ts-ignore
-            createBossBar(key: org.bukkit.NamespacedKey, title: string, color: org.bukkit.boss.BarColor, style: org.bukkit.boss.BarStyle, ...flags: org.bukkit.boss.BarFlag[]): org.bukkit.boss.KeyedBossBar
+            public static createBossBar(key: org.bukkit.NamespacedKey, title: java.lang.String | string, color: org.bukkit.boss.BarColor, style: org.bukkit.boss.BarStyle, ...flags: org.bukkit.boss.BarFlag[]): org.bukkit.boss.KeyedBossBar
             /**
              * Gets an unmodifiable iterator through all persistent bossbars.
              * <ul>
@@ -887,7 +887,7 @@ declare namespace org {
              * @return a bossbar iterator
              */
             // @ts-ignore
-            getBossBars(): java.util.Iterator<org.bukkit.boss.KeyedBossBar>
+            public static getBossBars(): java.util.Iterator<org.bukkit.boss.KeyedBossBar>
             /**
              * Gets the {@link KeyedBossBar} specified by this key.
              * <ul>
@@ -902,7 +902,7 @@ declare namespace org {
              * @return bossbar or null if not exists
              */
             // @ts-ignore
-            getBossBar(key: org.bukkit.NamespacedKey): org.bukkit.boss.KeyedBossBar
+            public static getBossBar(key: org.bukkit.NamespacedKey): org.bukkit.boss.KeyedBossBar
             /**
              * Removes a {@link KeyedBossBar} specified by this key.
              * <ul>
@@ -917,28 +917,28 @@ declare namespace org {
              * @return true if removal succeeded or false
              */
             // @ts-ignore
-            removeBossBar(key: org.bukkit.NamespacedKey): boolean
+            public static removeBossBar(key: org.bukkit.NamespacedKey): boolean
             /**
              * Gets an entity on the server by its UUID
              * @param uuid the UUID of the entity
              * @return the entity with the given UUID, or null if it isn't found
              */
             // @ts-ignore
-            getEntity(uuid: java.util.UUID): org.bukkit.entity.Entity
+            public static getEntity(uuid: java.util.UUID): org.bukkit.entity.Entity
             /**
              * Get the advancement specified by this key.
              * @param key unique advancement key
              * @return advancement or null if not exists
              */
             // @ts-ignore
-            getAdvancement(key: org.bukkit.NamespacedKey): org.bukkit.advancement.Advancement
+            public static getAdvancement(key: org.bukkit.NamespacedKey): org.bukkit.advancement.Advancement
             /**
              * Get an iterator through all advancements. Advancements cannot be removed
              * from this iterator,
              * @return an advancement iterator
              */
             // @ts-ignore
-            advancementIterator(): java.util.Iterator<org.bukkit.advancement.Advancement>
+            public static advancementIterator(): java.util.Iterator<org.bukkit.advancement.Advancement>
             /**
              * Creates a new {@link BlockData} instance for the specified Material, with
              * all properties initialized to unspecified defaults.
@@ -946,7 +946,7 @@ declare namespace org {
              * @return new data instance
              */
             // @ts-ignore
-            createBlockData(material: org.bukkit.Material): org.bukkit.block.data.BlockData
+            public static createBlockData(material: org.bukkit.Material): org.bukkit.block.data.BlockData
             /**
              * Creates a new {@link BlockData} instance for the specified Material, with
              * all properties initialized to unspecified defaults.
@@ -955,7 +955,7 @@ declare namespace org {
              * @return new data instance
              */
             // @ts-ignore
-            createBlockData(material: org.bukkit.Material, consumer: java.util.function.Consumer<org.bukkit.block.data.BlockData> | java.util.function$.Consumer<org.bukkit.block.data.BlockData>): org.bukkit.block.data.BlockData
+            public static createBlockData(material: org.bukkit.Material, consumer: java.util.function$.Consumer<org.bukkit.block.data.BlockData>): org.bukkit.block.data.BlockData
             /**
              * Creates a new {@link BlockData} instance with material and properties
              * parsed from provided data.
@@ -964,7 +964,7 @@ declare namespace org {
              * @throws IllegalArgumentException if the specified data is not valid
              */
             // @ts-ignore
-            createBlockData(data: string): org.bukkit.block.data.BlockData
+            public static createBlockData(data: java.lang.String | string): org.bukkit.block.data.BlockData
             /**
              * Creates a new {@link BlockData} instance for the specified Material, with
              * all properties initialized to unspecified defaults, except for those
@@ -975,7 +975,7 @@ declare namespace org {
              * @throws IllegalArgumentException if the specified data is not valid
              */
             // @ts-ignore
-            createBlockData(material: org.bukkit.Material, data: string): org.bukkit.block.data.BlockData
+            public static createBlockData(material: org.bukkit.Material, data: java.lang.String | string): org.bukkit.block.data.BlockData
             /**
              * Gets a tag which has already been defined within the server. Plugins are
              * suggested to use the concrete tags in {@link Tag} rather than this method
@@ -994,7 +994,7 @@ declare namespace org {
              * @return the tag or null
              */
             // @ts-ignore
-            getTag<T extends org.bukkit.Keyed>(registry: string, tag: org.bukkit.NamespacedKey, clazz: java.lang.Class<T>): org.bukkit.Tag<T>
+            public static getTag<T extends org.bukkit.Keyed>(registry: java.lang.String | string, tag: org.bukkit.NamespacedKey, clazz: java.lang.Class<T>): org.bukkit.Tag<T>
             /**
              * Gets a all tags which have been defined within the server.
              * <br>
@@ -1008,14 +1008,14 @@ declare namespace org {
              * @return all defined tags
              */
             // @ts-ignore
-            getTags<T extends org.bukkit.Keyed>(registry: string, clazz: java.lang.Class<T>): java.lang.Iterable<org.bukkit.Tag<T>>
+            public static getTags<T extends org.bukkit.Keyed>(registry: java.lang.String | string, clazz: java.lang.Class<T>): java.lang.Iterable<org.bukkit.Tag<T>>
             /**
              * Gets the specified {@link LootTable}.
              * @param key the name of the LootTable
              * @return the LootTable, or null if no LootTable is found with that name
              */
             // @ts-ignore
-            getLootTable(key: org.bukkit.NamespacedKey): org.bukkit.loot.LootTable
+            public static getLootTable(key: org.bukkit.NamespacedKey): org.bukkit.loot.LootTable
             /**
              * Selects entities using the given Vanilla selector.
              * <br>
@@ -1036,15 +1036,15 @@ declare namespace org {
              *  or a parameter is null
              */
             // @ts-ignore
-            selectEntities(sender: org.bukkit.command.CommandSender, selector: string): java.util.List<org.bukkit.entity.Entity>
+            public static selectEntities(sender: org.bukkit.command.CommandSender, selector: java.lang.String | string): Array<org.bukkit.entity.Entity>
             /**
              * @see UnsafeValues
              * @return the unsafe values instance
              */
             // @ts-ignore
-            getUnsafe(): org.bukkit.UnsafeValues
+            public static getUnsafe(): org.bukkit.UnsafeValues
             // @ts-ignore
-            spigot(): org.bukkit.Server.Spigot
+            public static spigot(): org.bukkit.Server.Spigot
         }
     }
 }

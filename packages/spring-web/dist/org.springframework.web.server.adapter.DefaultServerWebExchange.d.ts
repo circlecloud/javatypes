@@ -13,37 +13,37 @@ declare namespace org {
                         // @ts-ignore
                         constructor(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, sessionManager: org.springframework.web.server.session.WebSessionManager, codecConfigurer: org.springframework.http.codec.ServerCodecConfigurer, localeContextResolver: org.springframework.web.server.i18n.LocaleContextResolver)
                         // @ts-ignore
-                        getRequest(): org.springframework.http.server.reactive.ServerHttpRequest
+                        public getRequest(): org.springframework.http.server.reactive.ServerHttpRequest
                         // @ts-ignore
-                        getResponse(): org.springframework.http.server.reactive.ServerHttpResponse
+                        public getResponse(): org.springframework.http.server.reactive.ServerHttpResponse
                         // @ts-ignore
-                        getAttributes(): java.util.Map<java.lang.String, java.lang.Object>
+                        public getAttributes(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        getSession(): <any>
+                        public getSession(): object
                         // @ts-ignore
-                        getPrincipal<T extends java.security.Principal>(): <any>
+                        public getPrincipal<T extends java.security.Principal>(): object
                         // @ts-ignore
-                        getFormData(): <any>
+                        public getFormData(): object
                         // @ts-ignore
-                        getMultipartData(): <any>
+                        public getMultipartData(): object
                         // @ts-ignore
-                        getLocaleContext(): LocaleContext
+                        public getLocaleContext(): LocaleContext
                         // @ts-ignore
-                        getApplicationContext(): ApplicationContext
+                        public getApplicationContext(): ApplicationContext
                         // @ts-ignore
-                        isNotModified(): boolean
+                        public isNotModified(): boolean
                         // @ts-ignore
-                        checkNotModified(lastModified: java.time.Instant): boolean
+                        public checkNotModified(lastModified: java.time.Instant): boolean
                         // @ts-ignore
-                        checkNotModified(etag: string): boolean
+                        public checkNotModified(etag: java.lang.String | string): boolean
                         // @ts-ignore
-                        checkNotModified(etag: string, lastModified: java.time.Instant): boolean
+                        public checkNotModified(etag: java.lang.String | string, lastModified: java.time.Instant): boolean
                         // @ts-ignore
-                        transformUrl(url: string): java.lang.String
+                        public transformUrl(url: java.lang.String | string): string
                         // @ts-ignore
-                        addUrlTransformer(transformer: java.util.function.Function<java.lang.String, java.lang.String> | java.util.function$.Function<java.lang.String, java.lang.String>): void
+                        public addUrlTransformer(transformer: java.util.function$.Function<java.lang.String | string, java.lang.String | string>): void
                         // @ts-ignore
-                        getLogPrefix(): java.lang.String
+                        public getLogPrefix(): string
                     }
                 }
             }

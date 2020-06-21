@@ -8,13 +8,13 @@ declare namespace org {
             // @ts-ignore
             class LootContext extends java.lang.Object {
                 // @ts-ignore
-                readonly DEFAULT_LOOT_MODIFIER: number /*int*/
+                public static readonly DEFAULT_LOOT_MODIFIER: number /*int*/
                 /**
                  * The {@link Location} to store where the loot will be generated.
                  * @return the Location of where the loot will be generated
                  */
                 // @ts-ignore
-                getLocation(): org.bukkit.Location
+                public getLocation(): org.bukkit.Location
                 /**
                  * Represents the {@link org.bukkit.potion.PotionEffectType#LUCK} that an
                  * entity can have. The higher the value the better chance of receiving more
@@ -22,7 +22,7 @@ declare namespace org {
                  * @return luck
                  */
                 // @ts-ignore
-                getLuck(): float
+                public getLuck(): number /*float*/
                 /**
                  * Represents the
                  * {@link org.bukkit.enchantments.Enchantment#LOOT_BONUS_MOBS} the
@@ -33,20 +33,20 @@ declare namespace org {
                  * @return the looting level
                  */
                 // @ts-ignore
-                getLootingModifier(): int
+                public getLootingModifier(): number /*int*/
                 /**
                  * Get the {@link Entity} that was killed. Can be null.
                  * @return the looted entity or null
                  */
                 // @ts-ignore
-                getLootedEntity(): org.bukkit.entity.Entity
+                public getLootedEntity(): org.bukkit.entity.Entity
                 /**
                  * Get the {@link HumanEntity} who killed the {@link #getLootedEntity()}.
                  * Can be null.
                  * @return the killer entity, or null.
                  */
                 // @ts-ignore
-                getKiller(): org.bukkit.entity.HumanEntity
+                public getKiller(): org.bukkit.entity.HumanEntity
             }
         }
     }

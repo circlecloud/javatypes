@@ -21,7 +21,7 @@ declare namespace org {
                                      * @return The movement speed modifier when targeting an entity
                                      */
                                     // @ts-ignore
-                                    getSpeed(): double
+                                    getSpeed(): number /*double*/
                                     /**
                                      * Sets the movement speed modifier when the parent {@link Creature}
                                      * is targeting an {@link Entity}.

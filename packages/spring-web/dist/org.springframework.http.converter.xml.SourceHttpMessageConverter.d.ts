@@ -24,12 +24,12 @@ declare namespace org {
                          * <p>Default is {@code false} meaning that DTD is disabled.
                          */
                         // @ts-ignore
-                        setSupportDtd(supportDtd: boolean): void
+                        public setSupportDtd(supportDtd: boolean): void
                         /**
                          * Return whether DTD parsing is supported.
                          */
                         // @ts-ignore
-                        isSupportDtd(): boolean
+                        public isSupportDtd(): boolean
                         /**
                          * Indicate whether external XML entities are processed when converting to a Source.
                          * <p>Default is {@code false}, meaning that external entities are not resolved.
@@ -37,20 +37,20 @@ declare namespace org {
                          * automatically sets {@link #setSupportDtd} to {@code true}.
                          */
                         // @ts-ignore
-                        setProcessExternalEntities(processExternalEntities: boolean): void
+                        public setProcessExternalEntities(processExternalEntities: boolean): void
                         /**
                          * Return whether XML external entities are allowed.
                          */
                         // @ts-ignore
-                        isProcessExternalEntities(): boolean
+                        public isProcessExternalEntities(): boolean
                         // @ts-ignore
-                        supports(clazz: java.lang.Class<any>): boolean
+                        public supports(clazz: java.lang.Class<any>): boolean
                         // @ts-ignore
-                        readInternal(clazz: java.lang.Class<T>, inputMessage: org.springframework.http.HttpInputMessage): T
+                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): T
                         // @ts-ignore
-                        getContentLength(t: T extends javax.xml.transform.Source, contentType: org.springframework.http.MediaType): java.lang.Long
+                        getContentLength(t: T, contentType: org.springframework.http.MediaType): number
                         // @ts-ignore
-                        writeInternal(t: T extends javax.xml.transform.Source, outputMessage: org.springframework.http.HttpOutputMessage): void
+                        writeInternal(t: T, outputMessage: org.springframework.http.HttpOutputMessage): void
                     }
                 }
             }

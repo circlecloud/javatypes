@@ -56,7 +56,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if targetType is {#code null}
                      */
                     // @ts-ignore
-                    convert<T>(source: any, targetType: java.lang.Class<T>): T
+                    convert<T>(source: java.lang.Object | any, targetType: java.lang.Class<T>): T
                     /**
                      * Convert the given {@code source} to the specified {@code targetType}.
                      * The TypeDescriptors provide additional context about the source and target locations
@@ -71,7 +71,7 @@ declare namespace org {
                      *  or {@code sourceType} is {@code null} but source is not {@code null}
                      */
                     // @ts-ignore
-                    convert(source: any, sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): java.lang.Object
+                    convert(source: java.lang.Object | any, sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): any
                 }
             }
         }

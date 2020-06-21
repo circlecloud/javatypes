@@ -13,30 +13,30 @@ declare namespace org {
                      * Constructor for when the requested Content-Type is invalid.
                      */
                     // @ts-ignore
-                    constructor(reason: string)
+                    constructor(reason: java.lang.String | string)
                     /**
                      * Constructor for when the requested Content-Type is not supported.
                      */
                     // @ts-ignore
-                    constructor(supportedMediaTypes: Array<org.springframework.http.MediaType>)
+                    constructor(supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>)
                     /**
                      * Return a Map with an "Accept" header.
                      * @since 5.1.11
                      */
                     // @ts-ignore
-                    getHeaders(): java.util.Map<java.lang.String, java.lang.String>
+                    public getHeaders(): java.util.Map<java.lang.String | string, java.lang.String | string>
                     /**
                      * Return HttpHeaders with an "Accept" header, or an empty instance.
                      * @since 5.1.13
                      */
                     // @ts-ignore
-                    getResponseHeaders(): org.springframework.http.HttpHeaders
+                    public getResponseHeaders(): org.springframework.http.HttpHeaders
                     /**
                      * Return the list of supported content types in cases when the Accept
                      * header is parsed but not supported, or an empty list otherwise.
                      */
                     // @ts-ignore
-                    getSupportedMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getSupportedMediaTypes(): Array<org.springframework.http.MediaType>
                 }
             }
         }

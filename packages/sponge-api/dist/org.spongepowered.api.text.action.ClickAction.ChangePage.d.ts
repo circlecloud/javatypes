@@ -8,7 +8,7 @@ declare namespace org {
                          * For books, changes pages.
                          */
                         // @ts-ignore
-                        class ChangePage extends org.spongepowered.api.text.action.ClickAction<java.lang.Integer> {
+                        class ChangePage extends org.spongepowered.api.text.action.ClickAction<java.lang.Integer | number> {
                         }
                     }
                 }

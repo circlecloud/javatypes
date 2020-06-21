@@ -13,7 +13,7 @@ declare namespace org {
                      * @return the maximum height
                      */
                     // @ts-ignore
-                    getMaxHeight(): int
+                    getMaxHeight(): number /*int*/
                     /**
                      * Set the block at x,y,z in the chunk data to material.
                      * Note: setting blocks outside the chunk's bounds does nothing.
@@ -126,7 +126,7 @@ declare namespace org {
                      * @deprecated Uses magic values
                      */
                     // @ts-ignore
-                    getData(x: number /*int*/, y: number /*int*/, z: number /*int*/): byte
+                    getData(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*byte*/
                 }
             }
         }

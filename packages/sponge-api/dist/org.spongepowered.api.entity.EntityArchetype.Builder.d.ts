@@ -39,14 +39,14 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        setData(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): org.spongepowered.api.entity.EntityArchetype.Builder
+                        setData(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): org.spongepowered.api.entity.EntityArchetype.Builder
                         /**
                          * Sets the desired {@link EntityType} of the produced {@link EntityArchetype}.
                          * @param value The type of entity type
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        set<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(value: V extends org.spongepowered.api.data.value.BaseValue<E>): org.spongepowered.api.entity.EntityArchetype.Builder
+                        set<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(value: V): org.spongepowered.api.entity.EntityArchetype.Builder
                         /**
                          * Sets the desired {@link EntityType} of the produced {@link EntityArchetype}.
                          * @param key The key

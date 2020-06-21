@@ -23,31 +23,31 @@ declare namespace javax {
          * @since 1.3
          */
         // @ts-ignore
-        class RefAddr extends java.lang.Object implements java.io.Serializable {
+        abstract class RefAddr extends java.lang.Object implements java.io.Serializable {
             /**
              * Constructs a new instance of RefAddr using its address type.
              * @param addrType A non-null string describing the type of the address.
              */
             // @ts-ignore
-            constructor(addrType: string)
+            constructor(addrType: java.lang.String | string)
             /**
              * Contains the type of this address.
              * @serial 
              */
             // @ts-ignore
-            addrType: string
+            addrType: java.lang.String | string
             /**
              * Retrieves the address type of this address.
              * @return The non-null address type of this address.
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             /**
              * Retrieves the contents of this address.
              * @return The possibly null address contents.
              */
             // @ts-ignore
-            abstract getContent(): java.lang.Object
+            public abstract getContent(): any
             /**
              * Determines whether obj is equal to this RefAddr.
              * <p>
@@ -65,7 +65,7 @@ declare namespace javax {
              * @see #getType
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Computes the hash code of this address using its address type and contents.
              * The hash code is the sum of the hash code of the address type and
@@ -74,7 +74,7 @@ declare namespace javax {
              * @see java.lang.Object#hashCode
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Generates the string representation of this address.
              * The string consists of the address's type and contents with labels.
@@ -82,7 +82,7 @@ declare namespace javax {
              * @return The non-null string representation of this address.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

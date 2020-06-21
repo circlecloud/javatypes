@@ -18,7 +18,7 @@ declare namespace java {
              * the format specifier.
              */
             // @ts-ignore
-            readonly LEFT_JUSTIFY: number /*int*/
+            public static readonly LEFT_JUSTIFY: number /*int*/
             /**
              * Converts the output to upper case according to the rules of the
              * {@linkplain java.util.Locale locale} given during creation of the
@@ -31,7 +31,7 @@ declare namespace java {
              * the format specifier.
              */
             // @ts-ignore
-            readonly UPPERCASE: number /*int*/
+            public static readonly UPPERCASE: number /*int*/
             /**
              * Requires the output to use an alternate form.  The definition of the
              * form is specified by the <tt>Formattable</tt>.
@@ -39,7 +39,7 @@ declare namespace java {
              * the format specifier.
              */
             // @ts-ignore
-            readonly ALTERNATE: number /*int*/
+            public static readonly ALTERNATE: number /*int*/
         }
     }
 }

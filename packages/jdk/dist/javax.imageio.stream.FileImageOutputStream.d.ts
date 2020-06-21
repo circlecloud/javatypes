@@ -33,15 +33,15 @@ declare namespace javax {
                 // @ts-ignore
                 constructor(raf: java.io.RandomAccessFile)
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 // @ts-ignore
-                write(b: number /*int*/): void
+                public write(b: number /*int*/): void
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                length(): long
+                public length(): number /*long*/
                 /**
                  * Sets the current stream position and resets the bit offset to
                  * 0.  It is legal to seeking past the end of the file; an
@@ -53,9 +53,9 @@ declare namespace javax {
                  * @exception IOException if any other I/O error occurs.
                  */
                 // @ts-ignore
-                seek(pos: number /*long*/): void
+                public seek(pos: number /*long*/): void
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * {@inheritDoc}
                  */

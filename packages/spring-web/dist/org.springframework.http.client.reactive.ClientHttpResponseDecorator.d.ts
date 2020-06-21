@@ -14,19 +14,19 @@ declare namespace org {
                         // @ts-ignore
                         constructor(delegate: org.springframework.http.client.reactive.ClientHttpResponse)
                         // @ts-ignore
-                        getDelegate(): org.springframework.http.client.reactive.ClientHttpResponse
+                        public getDelegate(): org.springframework.http.client.reactive.ClientHttpResponse
                         // @ts-ignore
-                        getStatusCode(): org.springframework.http.HttpStatus
+                        public getStatusCode(): org.springframework.http.HttpStatus
                         // @ts-ignore
-                        getRawStatusCode(): int
+                        public getRawStatusCode(): number /*int*/
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         // @ts-ignore
-                        getBody(): <any>
+                        public getBody(): object
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

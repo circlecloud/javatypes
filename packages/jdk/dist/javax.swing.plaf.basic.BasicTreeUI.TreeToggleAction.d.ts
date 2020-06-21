@@ -9,11 +9,11 @@ declare namespace javax {
                     // @ts-ignore
                     class TreeToggleAction extends javax.swing.AbstractAction {
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                         // @ts-ignore
-                        actionPerformed(e: java.awt.event.ActionEvent): void
+                        public actionPerformed(e: java.awt.event.ActionEvent): void
                         // @ts-ignore
-                        isEnabled(): boolean
+                        public isEnabled(): boolean
                     }
                 }
             }

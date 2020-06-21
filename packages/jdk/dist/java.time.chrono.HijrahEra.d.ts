@@ -14,10 +14,16 @@ declare namespace java {
              */
             // @ts-ignore
             class HijrahEra extends java.lang.Enum<java.time.chrono.HijrahEra> implements java.time.chrono.Era {
+                /**
+                 * The singleton instance for the current era, 'Anno Hegirae',
+                 * which has the numeric value 1.
+                 */
+                // @ts-ignore
+                readonly AH: java.time.chrono.HijrahEra
                 // @ts-ignore
                 values(): java.time.chrono.HijrahEra[]
                 // @ts-ignore
-                valueOf(name: string): java.time.chrono.HijrahEra
+                valueOf(name: java.lang.String | string): java.time.chrono.HijrahEra
                 /**
                  * Obtains an instance of {@code HijrahEra} from an {@code int} value.
                  * <p>
@@ -35,7 +41,7 @@ declare namespace java {
                  * @return the era value, 1 (AH)
                  */
                 // @ts-ignore
-                getValue(): int
+                getValue(): number /*int*/
                 /**
                  * Gets the range of valid values for the specified field.
                  * <p>

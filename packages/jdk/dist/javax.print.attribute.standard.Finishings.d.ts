@@ -204,13 +204,13 @@ declare namespace javax {
                      * Perform no binding.
                      */
                     // @ts-ignore
-                    readonly NONE: javax.print.attribute.standard.Finishings
+                    public static readonly NONE: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples. The exact number and
                      * placement of the staples is site-defined.
                      */
                     // @ts-ignore
-                    readonly STAPLE: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE: javax.print.attribute.standard.Finishings
                     /**
                      * This value is specified when it is desired to select a non-printed (or
                      * pre-printed) cover for the document. This does not supplant the
@@ -218,106 +218,106 @@ declare namespace javax {
                      * document  itself.
                      */
                     // @ts-ignore
-                    readonly COVER: javax.print.attribute.standard.Finishings
+                    public static readonly COVER: javax.print.attribute.standard.Finishings
                     /**
                      * This value indicates that a binding is to be applied to the document;
                      * the type and placement of the binding is site-defined.
                      */
                     // @ts-ignore
-                    readonly BIND: javax.print.attribute.standard.Finishings
+                    public static readonly BIND: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples (wire stitches) along the
                      * middle fold. The exact number and placement of the staples and the
                      * middle fold is implementation- and/or site-defined.
                      */
                     // @ts-ignore
-                    readonly SADDLE_STITCH: javax.print.attribute.standard.Finishings
+                    public static readonly SADDLE_STITCH: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples (wire stitches) along one
                      * edge. The exact number and placement of the staples is implementation-
                      * and/or site- defined.
                      */
                     // @ts-ignore
-                    readonly EDGE_STITCH: javax.print.attribute.standard.Finishings
+                    public static readonly EDGE_STITCH: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples in the top left corner.
                      */
                     // @ts-ignore
-                    readonly STAPLE_TOP_LEFT: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_TOP_LEFT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples in the bottom left
                      * corner.
                      */
                     // @ts-ignore
-                    readonly STAPLE_BOTTOM_LEFT: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_BOTTOM_LEFT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples in the top right corner.
                      */
                     // @ts-ignore
-                    readonly STAPLE_TOP_RIGHT: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_TOP_RIGHT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples in the bottom right
                      * corner.
                      */
                     // @ts-ignore
-                    readonly STAPLE_BOTTOM_RIGHT: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_BOTTOM_RIGHT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples (wire stitches) along the
                      * left edge. The exact number and placement of the staples is
                      * implementation- and/or site-defined.
                      */
                     // @ts-ignore
-                    readonly EDGE_STITCH_LEFT: javax.print.attribute.standard.Finishings
+                    public static readonly EDGE_STITCH_LEFT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples (wire stitches) along the
                      * top edge. The exact number and placement of the staples is
                      * implementation- and/or site-defined.
                      */
                     // @ts-ignore
-                    readonly EDGE_STITCH_TOP: javax.print.attribute.standard.Finishings
+                    public static readonly EDGE_STITCH_TOP: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples (wire stitches) along the
                      * right edge. The exact number and placement of the staples is
                      * implementation- and/or site-defined.
                      */
                     // @ts-ignore
-                    readonly EDGE_STITCH_RIGHT: javax.print.attribute.standard.Finishings
+                    public static readonly EDGE_STITCH_RIGHT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with one or more staples (wire stitches) along the
                      * bottom edge. The exact number and placement of the staples is
                      * implementation- and/or site-defined.
                      */
                     // @ts-ignore
-                    readonly EDGE_STITCH_BOTTOM: javax.print.attribute.standard.Finishings
+                    public static readonly EDGE_STITCH_BOTTOM: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with two staples (wire stitches) along the left
                      * edge assuming a portrait document (see above).
                      */
                     // @ts-ignore
-                    readonly STAPLE_DUAL_LEFT: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_DUAL_LEFT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with two staples (wire stitches) along the top
                      * edge assuming a portrait document (see above).
                      */
                     // @ts-ignore
-                    readonly STAPLE_DUAL_TOP: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_DUAL_TOP: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with two staples (wire stitches) along the right
                      * edge assuming a portrait document (see above).
                      */
                     // @ts-ignore
-                    readonly STAPLE_DUAL_RIGHT: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_DUAL_RIGHT: javax.print.attribute.standard.Finishings
                     /**
                      * Bind the document(s) with two staples (wire stitches) along the bottom
                      * edge assuming a portrait document (see above).
                      */
                     // @ts-ignore
-                    readonly STAPLE_DUAL_BOTTOM: javax.print.attribute.standard.Finishings
+                    public static readonly STAPLE_DUAL_BOTTOM: javax.print.attribute.standard.Finishings
                     /**
                      * Returns the string table for class Finishings.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class Finishings.
                      */
@@ -327,7 +327,7 @@ declare namespace javax {
                      * Returns the lowest integer value used by class Finishings.
                      */
                     // @ts-ignore
-                    getOffset(): int
+                    getOffset(): number /*int*/
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -338,7 +338,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -348,7 +348,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

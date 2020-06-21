@@ -172,7 +172,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlAnyElement implements java.lang.annotation.Annotation {
+                abstract class XmlAnyElement implements java.lang.annotation.Annotation {
                 }
             }
         }

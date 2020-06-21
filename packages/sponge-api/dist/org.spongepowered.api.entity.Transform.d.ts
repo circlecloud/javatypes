@@ -34,7 +34,7 @@ declare namespace org {
                      * @param extent The extent to use
                      */
                     // @ts-ignore
-                    constructor(extent: E extends org.spongepowered.api.world.extent.Extent)
+                    constructor(extent: E)
                     /**
                      * Creates a new {@link Transform} with the provided {@link Extent extent}
                      * and {@link Vector3d position}.
@@ -42,7 +42,7 @@ declare namespace org {
                      * @param position The position to use
                      */
                     // @ts-ignore
-                    constructor(extent: E extends org.spongepowered.api.world.extent.Extent, position: Vector3d)
+                    constructor(extent: E, position: Vector3d)
                     /**
                      * Creates a new {@link Transform} with the provided {@link Extent extent},
                      * {@link Vector3d position}, and {@link Vector3d rotation}.
@@ -51,7 +51,7 @@ declare namespace org {
                      * @param rotation The rotation to use
                      */
                     // @ts-ignore
-                    constructor(extent: E extends org.spongepowered.api.world.extent.Extent, position: Vector3d, rotation: Vector3d)
+                    constructor(extent: E, position: Vector3d, rotation: Vector3d)
                     /**
                      * Creates a new {@link Transform} with the provided {@link Location},
                      * {@link Vector3d rotation}, and {@link Vector3d scale}.
@@ -69,7 +69,7 @@ declare namespace org {
                      * @param scale The scale to use
                      */
                     // @ts-ignore
-                    constructor(extent: E extends org.spongepowered.api.world.extent.Extent, position: Vector3d, rotation: Vector3d, scale: Vector3d)
+                    constructor(extent: E, position: Vector3d, rotation: Vector3d, scale: Vector3d)
                     /**
                      * Gets the {@link Location} this transform contains. This is the position
                      * and the extent.
@@ -77,7 +77,7 @@ declare namespace org {
                      * @throws IllegalStateException If the transform doesn't have an extent
                      */
                     // @ts-ignore
-                    getLocation(): org.spongepowered.api.world.Location<E>
+                    public getLocation(): org.spongepowered.api.world.Location<E>
                     /**
                      * Creates a copy of this transform and sets the {@link Location}. This sets
                      * both the position and the extent.
@@ -85,7 +85,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    setLocation(location: org.spongepowered.api.world.Location<E>): org.spongepowered.api.entity.Transform<E>
+                    public setLocation(location: org.spongepowered.api.world.Location<E>): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Gets the {@link Extent} this transform contains.
                      * <p>Note: This can be null if the {@link Extent} is unloaded and garbage
@@ -94,20 +94,20 @@ declare namespace org {
                      * @throws IllegalStateException If the transform doesn't have an extent
                      */
                     // @ts-ignore
-                    getExtent(): E
+                    public getExtent(): E
                     /**
                      * Creates a copy of this transform and sets the {@link Extent}.
                      * @param extent The new extent
                      * @return A new transform
                      */
                     // @ts-ignore
-                    setExtent(extent: E extends org.spongepowered.api.world.extent.Extent): org.spongepowered.api.entity.Transform<E>
+                    public setExtent(extent: E): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Gets the coordinates of this transform.
                      * @return The coordinates
                      */
                     // @ts-ignore
-                    getPosition(): Vector3d
+                    public getPosition(): Vector3d
                     /**
                      * Creates a copy of this transform while setting the position of the new
                      * one.
@@ -115,7 +115,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    setPosition(position: Vector3d): org.spongepowered.api.entity.Transform<E>
+                    public setPosition(position: Vector3d): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Gets the rotation of this transform, as a {@link Vector3d}.
                      * <p>The format of the rotation is represented by:</p>
@@ -127,7 +127,7 @@ declare namespace org {
                      * @return The rotation vector
                      */
                     // @ts-ignore
-                    getRotation(): Vector3d
+                    public getRotation(): Vector3d
                     /**
                      * Creates a copy of this transform and sets the rotation.
                      * <p>The format of the rotation is represented by:</p>
@@ -140,7 +140,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    setRotation(rotation: Quaterniond): org.spongepowered.api.entity.Transform<E>
+                    public setRotation(rotation: Quaterniond): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Creates a copy of this transform and sets the rotation as a quaternion.
                      * <p>Quaternions are objectively better than the Euler angles preferred by
@@ -149,7 +149,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    setRotation(rotation: Vector3d): org.spongepowered.api.entity.Transform<E>
+                    public setRotation(rotation: Vector3d): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Returns the rotation as a quaternion.
                      * <p>Quaternions are objectively better than the Euler angles preferred by
@@ -157,38 +157,38 @@ declare namespace org {
                      * @return The rotation
                      */
                     // @ts-ignore
-                    getRotationAsQuaternion(): Quaterniond
+                    public getRotationAsQuaternion(): Quaterniond
                     /**
                      * Gets the pitch component of this transform rotation.
                      * @return The pitch
                      */
                     // @ts-ignore
-                    getPitch(): double
+                    public getPitch(): number /*double*/
                     /**
                      * Gets the yaw component of this transform rotation.
                      * @return The yaw
                      */
                     // @ts-ignore
-                    getYaw(): double
+                    public getYaw(): number /*double*/
                     /**
                      * Gets the roll component of this transform rotation.
                      * @return The roll
                      */
                     // @ts-ignore
-                    getRoll(): double
+                    public getRoll(): number /*double*/
                     /**
                      * Gets the scale of the transform for each axis.
                      * @return The scale
                      */
                     // @ts-ignore
-                    getScale(): Vector3d
+                    public getScale(): Vector3d
                     /**
                      * Creates a copy of this transform and sets the scale for each axis.
                      * @param scale The scale
                      * @return A new transform
                      */
                     // @ts-ignore
-                    setScale(scale: Vector3d): org.spongepowered.api.entity.Transform<E>
+                    public setScale(scale: Vector3d): org.spongepowered.api.entity.Transform<E>
                     /**
                      * "Adds" another transform to this one. This is equivalent to adding the
                      * translation, rotation and scale individually.
@@ -197,7 +197,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    add(other: org.spongepowered.api.entity.Transform<E>): org.spongepowered.api.entity.Transform<E>
+                    public add(other: org.spongepowered.api.entity.Transform<E>): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Adds a translation to this transform.
                      * <p>Returns the results as a new copy.</p>
@@ -205,14 +205,14 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    addTranslation(translation: Vector3d): org.spongepowered.api.entity.Transform<E>
+                    public addTranslation(translation: Vector3d): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Adds a rotation to this transform. Returns the results as a new copy.
                      * @param rotation The rotation to add
                      * @return A new transform
                      */
                     // @ts-ignore
-                    addRotation(rotation: Vector3d): org.spongepowered.api.entity.Transform<E>
+                    public addRotation(rotation: Vector3d): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Adds a rotation to this transform.
                      * <p>Quaternions are objectively better than the Euler angles preferred by
@@ -223,7 +223,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    addRotation(rotation: Quaterniond): org.spongepowered.api.entity.Transform<E>
+                    public addRotation(rotation: Quaterniond): org.spongepowered.api.entity.Transform<E>
                     /**
                      * "Adds" a scale to this transform. Scales are multiplicative, so this
                      * actually multiplies the current scale.
@@ -232,7 +232,7 @@ declare namespace org {
                      * @return A new transform
                      */
                     // @ts-ignore
-                    addScale(scale: Vector3d): org.spongepowered.api.entity.Transform<E>
+                    public addScale(scale: Vector3d): org.spongepowered.api.entity.Transform<E>
                     /**
                      * Returns a matrix representation of this transform.
                      * <p>This includes the position, rotation and scale. To apply the transform
@@ -251,7 +251,7 @@ declare namespace org {
                      * @return The transform as a matrix
                      */
                     // @ts-ignore
-                    toMatrix(): Matrix4d
+                    public toMatrix(): Matrix4d
                     /**
                      * Returns if this {@link Transform} is still valid.
                      * <p>Examples of invalid Transforms are:</p>
@@ -264,13 +264,13 @@ declare namespace org {
                      * @return True if valid, false if not
                      */
                     // @ts-ignore
-                    isValid(): boolean
+                    public isValid(): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

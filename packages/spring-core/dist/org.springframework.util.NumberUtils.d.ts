@@ -10,7 +10,7 @@ declare namespace org {
              * @since 1.1.2
              */
             // @ts-ignore
-            class NumberUtils extends java.lang.Object {
+            abstract class NumberUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -18,7 +18,7 @@ declare namespace org {
                  * Byte, Short, Integer, Long, BigInteger, Float, Double, BigDecimal.
                  */
                 // @ts-ignore
-                readonly STANDARD_NUMBER_TYPES: Array<java.lang.Class<any>>
+                public static readonly STANDARD_NUMBER_TYPES: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>
                 /**
                  * Convert the given number into an instance of the given target class.
                  * @param number the number to convert
@@ -36,7 +36,7 @@ declare namespace org {
                  * @see java.math.BigDecimal
                  */
                 // @ts-ignore
-                convertNumberToTargetClass<T extends java.lang.Number>(number: java.lang.Number, targetClass: java.lang.Class<T>): T
+                public static convertNumberToTargetClass<T extends java.lang.Number>(number: java.lang.Number, targetClass: java.lang.Class<T>): T
                 /**
                  * Parse the given {@code text} into a {@link Number} instance of the given
                  * target class, using the corresponding {@code decode} / {@code valueOf} method.
@@ -58,7 +58,7 @@ declare namespace org {
                  * @see java.math.BigDecimal#BigDecimal(String)
                  */
                 // @ts-ignore
-                parseNumber<T extends java.lang.Number>(text: string, targetClass: java.lang.Class<T>): T
+                public static parseNumber<T extends java.lang.Number>(text: java.lang.String | string, targetClass: java.lang.Class<T>): T
                 /**
                  * Parse the given {@code text} into a {@link Number} instance of the
                  * given target class, using the supplied {@link NumberFormat}.
@@ -75,7 +75,7 @@ declare namespace org {
                  * @see #parseNumber(String, Class)
                  */
                 // @ts-ignore
-                parseNumber<T extends java.lang.Number>(text: string, targetClass: java.lang.Class<T>, numberFormat: java.text.NumberFormat): T
+                public static parseNumber<T extends java.lang.Number>(text: java.lang.String | string, targetClass: java.lang.Class<T>, numberFormat: java.text.NumberFormat): T
             }
         }
     }

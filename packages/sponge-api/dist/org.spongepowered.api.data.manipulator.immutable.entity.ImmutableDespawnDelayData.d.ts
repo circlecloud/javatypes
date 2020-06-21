@@ -16,7 +16,7 @@ declare namespace org {
                                  * @return The immutable bounded value for the "despawn delay"
                                  */
                                 // @ts-ignore
-                                delay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                delay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableValue} for the "is infinite" state of
                                  * the despawn delay.

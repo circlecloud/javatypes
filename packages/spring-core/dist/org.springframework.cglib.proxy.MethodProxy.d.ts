@@ -16,12 +16,12 @@ declare namespace org {
                      * for similar functionality.
                      */
                     // @ts-ignore
-                    create(c1: java.lang.Class, c2: java.lang.Class, desc: string, name1: string, name2: string): org.springframework.cglib.proxy.MethodProxy
+                    public static create(c1: java.lang.Class<any>, c2: java.lang.Class<any>, desc: java.lang.String | string, name1: java.lang.String | string, name2: java.lang.String | string): org.springframework.cglib.proxy.MethodProxy
                     /**
                      * Return the signature of the proxied method.
                      */
                     // @ts-ignore
-                    getSignature(): Signature
+                    public getSignature(): Signature
                     /**
                      * Return the name of the synthetic method created by CGLIB which is
                      * used by {@link #invokeSuper} to invoke the superclass
@@ -29,7 +29,7 @@ declare namespace org {
                      * the same as the proxied method.
                      */
                     // @ts-ignore
-                    getSuperName(): java.lang.String
+                    public getSuperName(): string
                     /**
                      * Return the {@link org.springframework.cglib.reflect.FastClass} method index
                      * for the method used by {@link #invokeSuper}. This index uniquely
@@ -38,7 +38,7 @@ declare namespace org {
                      * @see #getSuperName
                      */
                     // @ts-ignore
-                    getSuperIndex(): int
+                    public getSuperIndex(): number /*int*/
                     /**
                      * Return the <code>MethodProxy</code> used when intercepting the method
                      * matching the given signature.
@@ -48,7 +48,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if the Class was not created by Enhancer or does not use a MethodInterceptor
                      */
                     // @ts-ignore
-                    find(type: java.lang.Class, sig: Signature): org.springframework.cglib.proxy.MethodProxy
+                    public static find(type: java.lang.Class<any>, sig: Signature): org.springframework.cglib.proxy.MethodProxy
                     /**
                      * Invoke the original method, on a different object of the same type.
                      * @param obj the compatible object; recursion will result if you use the object passed as the first
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see MethodInterceptor#intercept
                      */
                     // @ts-ignore
-                    invoke(obj: any, args: any[]): java.lang.Object
+                    public invoke(obj: java.lang.Object | any, args: java.lang.Object[] | any[]): any
                     /**
                      * Invoke the original (super) method on the specified object.
                      * @param obj the enhanced object, must be the object passed as the first
@@ -72,7 +72,7 @@ declare namespace org {
                      * @see MethodInterceptor#intercept
                      */
                     // @ts-ignore
-                    invokeSuper(obj: any, args: any[]): java.lang.Object
+                    public invokeSuper(obj: java.lang.Object | any, args: java.lang.Object[] | any[]): any
                 }
             }
         }

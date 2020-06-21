@@ -56,28 +56,28 @@ declare namespace org {
                          * The default charset used by the converter.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                        public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                         /**
                          * The media-type for protobuf {@code application/x-protobuf}.
                          */
                         // @ts-ignore
-                        readonly PROTOBUF: org.springframework.http.MediaType
+                        public static readonly PROTOBUF: org.springframework.http.MediaType
                         /**
                          * The HTTP header containing the protobuf schema.
                          */
                         // @ts-ignore
-                        readonly X_PROTOBUF_SCHEMA_HEADER: string
+                        public static readonly X_PROTOBUF_SCHEMA_HEADER: java.lang.String | string
                         /**
                          * The HTTP header containing the protobuf message.
                          */
                         // @ts-ignore
-                        readonly X_PROTOBUF_MESSAGE_HEADER: string
+                        public static readonly X_PROTOBUF_MESSAGE_HEADER: java.lang.String | string
                         // @ts-ignore
                         supports(clazz: java.lang.Class<any>): boolean
                         // @ts-ignore
                         getDefaultContentType(message: Message): org.springframework.http.MediaType
                         // @ts-ignore
-                        readInternal(clazz: java.lang.Class<Message>, inputMessage: org.springframework.http.HttpInputMessage): Message
+                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): Message
                         // @ts-ignore
                         canWrite(mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore

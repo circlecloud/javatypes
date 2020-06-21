@@ -25,19 +25,19 @@ declare namespace java {
                      * @see #DEFLATE_HINT
                      */
                     // @ts-ignore
-                    
+                    readonly KEEP: java.lang.String | string
                     /**
                      * The string "true", a possible value for certain properties.
                      * @see #DEFLATE_HINT
                      */
                     // @ts-ignore
-                    
+                    readonly TRUE: java.lang.String | string
                     /**
                      * The string "false", a possible value for certain properties.
                      * @see #DEFLATE_HINT
                      */
                     // @ts-ignore
-                    
+                    readonly FALSE: java.lang.String | string
                     /**
                      * Property indicating that the unpacker should
                      * ignore all transmitted values for DEFLATE_HINT,
@@ -47,7 +47,7 @@ declare namespace java {
                      * deflation hints.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFLATE_HINT: java.lang.String | string
                     /**
                      * The unpacker's progress as a percentage, as periodically
                      * updated by the unpacker.
@@ -60,7 +60,7 @@ declare namespace java {
                      * at the end.
                      */
                     // @ts-ignore
-                    
+                    readonly PROGRESS: java.lang.String | string
                     /**
                      * Get the set of this engine's properties. This set is
                      * a "live view", so that changing its
@@ -84,7 +84,7 @@ declare namespace java {
                      * @return A sorted association of option key strings to option values.
                      */
                     // @ts-ignore
-                    properties(): java.util.SortedMap<java.lang.String, java.lang.String>
+                    properties(): java.util.SortedMap<java.lang.String | string, java.lang.String | string>
                     /**
                      * Read a Pack200 archive, and write the encoded JAR to
                      * a JarOutputStream.

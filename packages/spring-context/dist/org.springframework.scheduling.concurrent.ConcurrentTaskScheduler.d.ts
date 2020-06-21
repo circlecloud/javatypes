@@ -72,24 +72,24 @@ declare namespace org {
                      * @see #setConcurrentExecutor
                      */
                     // @ts-ignore
-                    setScheduledExecutor(scheduledExecutor: java.util.concurrent.ScheduledExecutorService): void
+                    public setScheduledExecutor(scheduledExecutor: java.util.concurrent.ScheduledExecutorService): void
                     /**
                      * Provide an {@link ErrorHandler} strategy.
                      */
                     // @ts-ignore
-                    setErrorHandler(errorHandler: ErrorHandler): void
+                    public setErrorHandler(errorHandler: ErrorHandler): void
                     // @ts-ignore
-                    schedule(task: java.lang.Runnable, trigger: org.springframework.scheduling.Trigger): java.util.concurrent.ScheduledFuture<?>
+                    public schedule(task: java.lang.Runnable, trigger: org.springframework.scheduling.Trigger): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    schedule(task: java.lang.Runnable, startTime: java.util.Date): java.util.concurrent.ScheduledFuture<?>
+                    public schedule(task: java.lang.Runnable, startTime: java.util.Date): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.util.Date, period: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleAtFixedRate(task: java.lang.Runnable, startTime: java.util.Date, period: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleAtFixedRate(task: java.lang.Runnable, period: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleAtFixedRate(task: java.lang.Runnable, period: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.util.Date, delay: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleWithFixedDelay(task: java.lang.Runnable, startTime: java.util.Date, delay: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                     // @ts-ignore
-                    scheduleWithFixedDelay(task: java.lang.Runnable, delay: number /*long*/): java.util.concurrent.ScheduledFuture<?>
+                    public scheduleWithFixedDelay(task: java.lang.Runnable, delay: number /*long*/): java.util.concurrent.ScheduledFuture<any>
                 }
             }
         }

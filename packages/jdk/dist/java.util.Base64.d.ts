@@ -44,7 +44,7 @@ declare namespace java {
              * @return A Base64 encoder.
              */
             // @ts-ignore
-            getEncoder(): java.util.Base64.Encoder
+            public static getEncoder(): java.util.Base64.Encoder
             /**
              * Returns a {@link Encoder} that encodes using the
              * <a href="#url">URL and Filename safe</a> type base64
@@ -52,14 +52,14 @@ declare namespace java {
              * @return A Base64 encoder.
              */
             // @ts-ignore
-            getUrlEncoder(): java.util.Base64.Encoder
+            public static getUrlEncoder(): java.util.Base64.Encoder
             /**
              * Returns a {@link Encoder} that encodes using the
              * <a href="#mime">MIME</a> type base64 encoding scheme.
              * @return A Base64 encoder.
              */
             // @ts-ignore
-            getMimeEncoder(): java.util.Base64.Encoder
+            public static getMimeEncoder(): java.util.Base64.Encoder
             /**
              * Returns a {@link Encoder} that encodes using the
              * <a href="#mime">MIME</a> type base64 encoding scheme
@@ -76,14 +76,14 @@ declare namespace java {
              *           RFC 2045.
              */
             // @ts-ignore
-            getMimeEncoder(lineLength: number /*int*/, lineSeparator: number /*byte*/[]): java.util.Base64.Encoder
+            public static getMimeEncoder(lineLength: number /*int*/, lineSeparator: number /*byte*/[]): java.util.Base64.Encoder
             /**
              * Returns a {@link Decoder} that decodes using the
              * <a href="#basic">Basic</a> type base64 encoding scheme.
              * @return A Base64 decoder.
              */
             // @ts-ignore
-            getDecoder(): java.util.Base64.Decoder
+            public static getDecoder(): java.util.Base64.Decoder
             /**
              * Returns a {@link Decoder} that decodes using the
              * <a href="#url">URL and Filename safe</a> type base64
@@ -91,14 +91,14 @@ declare namespace java {
              * @return A Base64 decoder.
              */
             // @ts-ignore
-            getUrlDecoder(): java.util.Base64.Decoder
+            public static getUrlDecoder(): java.util.Base64.Decoder
             /**
              * Returns a {@link Decoder} that decodes using the
              * <a href="#mime">MIME</a> type base64 decoding scheme.
              * @return A Base64 decoder.
              */
             // @ts-ignore
-            getMimeDecoder(): java.util.Base64.Decoder
+            public static getMimeDecoder(): java.util.Base64.Decoder
         }
     }
 }

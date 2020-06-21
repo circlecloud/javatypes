@@ -9,9 +9,17 @@ declare namespace org {
                     // @ts-ignore
                     class Division extends java.lang.Enum<org.spongepowered.api.util.Direction.Division> {
                         // @ts-ignore
+                        readonly CARDINAL: org.spongepowered.api.util.Direction.Division
+                        // @ts-ignore
+                        readonly ORDINAL: org.spongepowered.api.util.Direction.Division
+                        // @ts-ignore
+                        readonly SECONDARY_ORDINAL: org.spongepowered.api.util.Direction.Division
+                        // @ts-ignore
+                        readonly NONE: org.spongepowered.api.util.Direction.Division
+                        // @ts-ignore
                         values(): org.spongepowered.api.util.Direction.Division[]
                         // @ts-ignore
-                        valueOf(name: string): org.spongepowered.api.util.Direction.Division
+                        valueOf(name: java.lang.String | string): org.spongepowered.api.util.Direction.Division
                     }
                 }
             }

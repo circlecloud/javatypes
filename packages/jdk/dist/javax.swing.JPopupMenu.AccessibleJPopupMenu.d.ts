@@ -21,7 +21,7 @@ declare namespace javax {
                  *  the object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * This method gets called when a bound property is changed.
                  * @param e A <code>PropertyChangeEvent</code> object describing
@@ -30,7 +30,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                propertyChange(e: java.beans.PropertyChangeEvent): void
+                public propertyChange(e: java.beans.PropertyChangeEvent): void
             }
         }
     }

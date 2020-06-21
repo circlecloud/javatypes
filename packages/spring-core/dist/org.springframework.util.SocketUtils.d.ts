@@ -38,13 +38,13 @@ declare namespace org {
                  * socket port.
                  */
                 // @ts-ignore
-                readonly PORT_RANGE_MIN: number /*int*/
+                public static readonly PORT_RANGE_MIN: number /*int*/
                 /**
                  * The default maximum value for port ranges used when finding an available
                  * socket port.
                  */
                 // @ts-ignore
-                readonly PORT_RANGE_MAX: number /*int*/
+                public static readonly PORT_RANGE_MAX: number /*int*/
                 /**
                  * Find an available TCP port randomly selected from the range
                  * [{@value #PORT_RANGE_MIN}, {@value #PORT_RANGE_MAX}].
@@ -52,7 +52,7 @@ declare namespace org {
                  * @throws IllegalStateException if no available port could be found
                  */
                 // @ts-ignore
-                findAvailableTcpPort(): int
+                public static findAvailableTcpPort(): number /*int*/
                 /**
                  * Find an available TCP port randomly selected from the range
                  * [{@code minPort}, {@value #PORT_RANGE_MAX}].
@@ -61,7 +61,7 @@ declare namespace org {
                  * @throws IllegalStateException if no available port could be found
                  */
                 // @ts-ignore
-                findAvailableTcpPort(minPort: number /*int*/): int
+                public static findAvailableTcpPort(minPort: number /*int*/): number /*int*/
                 /**
                  * Find an available TCP port randomly selected from the range
                  * [{@code minPort}, {@code maxPort}].
@@ -71,7 +71,7 @@ declare namespace org {
                  * @throws IllegalStateException if no available port could be found
                  */
                 // @ts-ignore
-                findAvailableTcpPort(minPort: number /*int*/, maxPort: number /*int*/): int
+                public static findAvailableTcpPort(minPort: number /*int*/, maxPort: number /*int*/): number /*int*/
                 /**
                  * Find the requested number of available TCP ports, each randomly selected
                  * from the range [{@value #PORT_RANGE_MIN}, {@value #PORT_RANGE_MAX}].
@@ -80,7 +80,7 @@ declare namespace org {
                  * @throws IllegalStateException if the requested number of available ports could not be found
                  */
                 // @ts-ignore
-                findAvailableTcpPorts(numRequested: number /*int*/): java.util.SortedSet<java.lang.Integer>
+                public static findAvailableTcpPorts(numRequested: number /*int*/): java.util.SortedSet<java.lang.Integer | number>
                 /**
                  * Find the requested number of available TCP ports, each randomly selected
                  * from the range [{@code minPort}, {@code maxPort}].
@@ -91,7 +91,7 @@ declare namespace org {
                  * @throws IllegalStateException if the requested number of available ports could not be found
                  */
                 // @ts-ignore
-                findAvailableTcpPorts(numRequested: number /*int*/, minPort: number /*int*/, maxPort: number /*int*/): java.util.SortedSet<java.lang.Integer>
+                public static findAvailableTcpPorts(numRequested: number /*int*/, minPort: number /*int*/, maxPort: number /*int*/): java.util.SortedSet<java.lang.Integer | number>
                 /**
                  * Find an available UDP port randomly selected from the range
                  * [{@value #PORT_RANGE_MIN}, {@value #PORT_RANGE_MAX}].
@@ -99,7 +99,7 @@ declare namespace org {
                  * @throws IllegalStateException if no available port could be found
                  */
                 // @ts-ignore
-                findAvailableUdpPort(): int
+                public static findAvailableUdpPort(): number /*int*/
                 /**
                  * Find an available UDP port randomly selected from the range
                  * [{@code minPort}, {@value #PORT_RANGE_MAX}].
@@ -108,7 +108,7 @@ declare namespace org {
                  * @throws IllegalStateException if no available port could be found
                  */
                 // @ts-ignore
-                findAvailableUdpPort(minPort: number /*int*/): int
+                public static findAvailableUdpPort(minPort: number /*int*/): number /*int*/
                 /**
                  * Find an available UDP port randomly selected from the range
                  * [{@code minPort}, {@code maxPort}].
@@ -118,7 +118,7 @@ declare namespace org {
                  * @throws IllegalStateException if no available port could be found
                  */
                 // @ts-ignore
-                findAvailableUdpPort(minPort: number /*int*/, maxPort: number /*int*/): int
+                public static findAvailableUdpPort(minPort: number /*int*/, maxPort: number /*int*/): number /*int*/
                 /**
                  * Find the requested number of available UDP ports, each randomly selected
                  * from the range [{@value #PORT_RANGE_MIN}, {@value #PORT_RANGE_MAX}].
@@ -127,7 +127,7 @@ declare namespace org {
                  * @throws IllegalStateException if the requested number of available ports could not be found
                  */
                 // @ts-ignore
-                findAvailableUdpPorts(numRequested: number /*int*/): java.util.SortedSet<java.lang.Integer>
+                public static findAvailableUdpPorts(numRequested: number /*int*/): java.util.SortedSet<java.lang.Integer | number>
                 /**
                  * Find the requested number of available UDP ports, each randomly selected
                  * from the range [{@code minPort}, {@code maxPort}].
@@ -138,7 +138,7 @@ declare namespace org {
                  * @throws IllegalStateException if the requested number of available ports could not be found
                  */
                 // @ts-ignore
-                findAvailableUdpPorts(numRequested: number /*int*/, minPort: number /*int*/, maxPort: number /*int*/): java.util.SortedSet<java.lang.Integer>
+                public static findAvailableUdpPorts(numRequested: number /*int*/, minPort: number /*int*/, maxPort: number /*int*/): java.util.SortedSet<java.lang.Integer | number>
             }
         }
     }

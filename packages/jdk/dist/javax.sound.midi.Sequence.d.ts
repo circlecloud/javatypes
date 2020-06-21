@@ -82,31 +82,31 @@ declare namespace javax {
                  * @see #Sequence(float, int)
                  */
                 // @ts-ignore
-                readonly PPQ: number /*float*/
+                public static readonly PPQ: number /*float*/
                 /**
                  * The SMPTE-based timing type with 24 frames per second (resolution is expressed in ticks per frame).
                  * @see #Sequence(float, int)
                  */
                 // @ts-ignore
-                readonly SMPTE_24: number /*float*/
+                public static readonly SMPTE_24: number /*float*/
                 /**
                  * The SMPTE-based timing type with 25 frames per second (resolution is expressed in ticks per frame).
                  * @see #Sequence(float, int)
                  */
                 // @ts-ignore
-                readonly SMPTE_25: number /*float*/
+                public static readonly SMPTE_25: number /*float*/
                 /**
                  * The SMPTE-based timing type with 29.97 frames per second (resolution is expressed in ticks per frame).
                  * @see #Sequence(float, int)
                  */
                 // @ts-ignore
-                readonly SMPTE_30DROP: number /*float*/
+                public static readonly SMPTE_30DROP: number /*float*/
                 /**
                  * The SMPTE-based timing type with 30 frames per second (resolution is expressed in ticks per frame).
                  * @see #Sequence(float, int)
                  */
                 // @ts-ignore
-                readonly SMPTE_30: number /*float*/
+                public static readonly SMPTE_30: number /*float*/
                 /**
                  * The timing division type of the sequence.
                  * @see #PPQ
@@ -142,7 +142,7 @@ declare namespace javax {
                  * @see MidiFileFormat#getDivisionType()
                  */
                 // @ts-ignore
-                getDivisionType(): float
+                public getDivisionType(): number /*float*/
                 /**
                  * Obtains the timing resolution for this sequence.
                  * If the sequence's division type is PPQ, the resolution is specified in ticks per beat.
@@ -153,7 +153,7 @@ declare namespace javax {
                  * @see MidiFileFormat#getResolution()
                  */
                 // @ts-ignore
-                getResolution(): int
+                public getResolution(): number /*int*/
                 /**
                  * Creates a new, initially empty track as part of this sequence.
                  * The track initially contains the meta-event End of Track.
@@ -163,7 +163,7 @@ declare namespace javax {
                  * @return the newly created track
                  */
                 // @ts-ignore
-                createTrack(): javax.sound.midi.Track
+                public createTrack(): javax.sound.midi.Track
                 /**
                  * Removes the specified track from the sequence.
                  * @param track the track to remove
@@ -173,7 +173,7 @@ declare namespace javax {
                  * @see #getTracks
                  */
                 // @ts-ignore
-                deleteTrack(track: javax.sound.midi.Track): boolean
+                public deleteTrack(track: javax.sound.midi.Track): boolean
                 /**
                  * Obtains an array containing all the tracks in this sequence.
                  * If the sequence contains no tracks, an array of length 0 is returned.
@@ -182,20 +182,20 @@ declare namespace javax {
                  * @see #deleteTrack
                  */
                 // @ts-ignore
-                getTracks(): javax.sound.midi.Track[]
+                public getTracks(): javax.sound.midi.Track[]
                 /**
                  * Obtains the duration of this sequence, expressed in microseconds.
                  * @return this sequence's duration in microseconds.
                  */
                 // @ts-ignore
-                getMicrosecondLength(): long
+                public getMicrosecondLength(): number /*long*/
                 /**
                  * Obtains the duration of this sequence, expressed in MIDI ticks.
                  * @return this sequence's length in ticks
                  * @see #getMicrosecondLength
                  */
                 // @ts-ignore
-                getTickLength(): long
+                public getTickLength(): number /*long*/
                 /**
                  * Obtains a list of patches referenced in this sequence.
                  * This patch list may be used to load the required
@@ -205,7 +205,7 @@ declare namespace javax {
                  * @see Synthesizer#loadInstruments(Soundbank, Patch[])
                  */
                 // @ts-ignore
-                getPatchList(): javax.sound.midi.Patch[]
+                public getPatchList(): javax.sound.midi.Patch[]
             }
         }
     }

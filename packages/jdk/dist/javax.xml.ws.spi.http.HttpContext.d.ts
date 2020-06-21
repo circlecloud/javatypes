@@ -14,7 +14,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    class HttpContext extends java.lang.Object {
+                    abstract class HttpContext extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
@@ -27,7 +27,7 @@ declare namespace javax {
                          * @param handler the handler to set for this context
                          */
                         // @ts-ignore
-                        setHandler(handler: javax.xml.ws.spi.http.HttpHandler): void
+                        public setHandler(handler: javax.xml.ws.spi.http.HttpHandler): void
                         /**
                          * Returns the path for this context. This path uniquely identifies
                          * an endpoint inside an application and the path is relative to
@@ -48,7 +48,7 @@ declare namespace javax {
                          * @return this context's path
                          */
                         // @ts-ignore
-                        abstract getPath(): java.lang.String
+                        public abstract getPath(): string
                         /**
                          * Returns an attribute value for container's configuration
                          * and other data that can be used by jax-ws runtime.
@@ -56,14 +56,14 @@ declare namespace javax {
                          * @return attribute value
                          */
                         // @ts-ignore
-                        abstract getAttribute(name: string): java.lang.Object
+                        public abstract getAttribute(name: java.lang.String | string): any
                         /**
                          * Returns all attribute names for container's configuration
                          * and other data that can be used by jax-ws runtime.
                          * @return set of all attribute names
                          */
                         // @ts-ignore
-                        abstract getAttributeNames(): java.util.Set<java.lang.String>
+                        public abstract getAttributeNames(): Array<java.lang.String | string>
                     }
                 }
             }

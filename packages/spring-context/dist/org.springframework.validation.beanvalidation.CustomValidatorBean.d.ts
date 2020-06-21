@@ -18,19 +18,19 @@ declare namespace org {
                      * <p>Default is {@link javax.validation.Validation#buildDefaultValidatorFactory()}.
                      */
                     // @ts-ignore
-                    setValidatorFactory(validatorFactory: ValidatorFactory): void
+                    public setValidatorFactory(validatorFactory: ValidatorFactory): void
                     /**
                      * Specify a custom MessageInterpolator to use for this Validator.
                      */
                     // @ts-ignore
-                    setMessageInterpolator(messageInterpolator: MessageInterpolator): void
+                    public setMessageInterpolator(messageInterpolator: MessageInterpolator): void
                     /**
                      * Specify a custom TraversableResolver to use for this Validator.
                      */
                     // @ts-ignore
-                    setTraversableResolver(traversableResolver: TraversableResolver): void
+                    public setTraversableResolver(traversableResolver: TraversableResolver): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                 }
             }
         }

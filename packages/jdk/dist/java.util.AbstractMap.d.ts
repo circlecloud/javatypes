@@ -32,7 +32,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AbstractMap<K, V> extends java.lang.Object implements java.util.Map<K, V> {
+        abstract class AbstractMap<K, V> extends java.lang.Object implements java.util.Map<K, V> {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -44,13 +44,13 @@ declare namespace java {
              * @implSpec This implementation returns <tt>entrySet().size()</tt>.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * {@inheritDoc}
              * @implSpec This implementation returns <tt>size() == 0</tt>.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * {@inheritDoc}
              * @implSpec This implementation iterates over <tt>entrySet()</tt> searching
@@ -62,7 +62,7 @@ declare namespace java {
              * @throws NullPointerException {#inheritDoc}
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              * @implSpec This implementation iterates over <tt>entrySet()</tt> searching
@@ -75,7 +75,7 @@ declare namespace java {
              * @throws NullPointerException {#inheritDoc}
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              * @implSpec This implementation iterates over <tt>entrySet()</tt> searching
@@ -88,7 +88,7 @@ declare namespace java {
              * @throws NullPointerException          {#inheritDoc}
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             /**
              * {@inheritDoc}
              * @implSpec This implementation always throws an
@@ -99,7 +99,7 @@ declare namespace java {
              * @throws IllegalArgumentException      {#inheritDoc}
              */
             // @ts-ignore
-            put(key: K, value: V): V
+            public put(key: K, value: V): V
             /**
              * {@inheritDoc}
              * @implSpec This implementation iterates over <tt>entrySet()</tt> searching for an
@@ -120,7 +120,7 @@ declare namespace java {
              * @throws NullPointerException          {#inheritDoc}
              */
             // @ts-ignore
-            remove(key: any): V
+            public remove(key: java.lang.Object | any): V
             /**
              * {@inheritDoc}
              * @implSpec This implementation iterates over the specified map's
@@ -136,7 +136,7 @@ declare namespace java {
              * @throws IllegalArgumentException      {#inheritDoc}
              */
             // @ts-ignore
-            putAll(m: java.util.Map<K, V>): void
+            public putAll(m: java.util.Map<any, any>): void
             /**
              * {@inheritDoc}
              * @implSpec This implementation calls <tt>entrySet().clear()</tt>.
@@ -147,7 +147,7 @@ declare namespace java {
              * @throws UnsupportedOperationException {#inheritDoc}
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * {@inheritDoc}
              * @implSpec This implementation returns a set that subclasses {#link AbstractSet}.
@@ -163,7 +163,7 @@ declare namespace java {
              *  method will not all return the same set.
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * {@inheritDoc}
              * @implSpec This implementation returns a collection that subclasses {#link
@@ -179,9 +179,9 @@ declare namespace java {
              *  method will not all return the same collection.
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             // @ts-ignore
-            abstract entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public abstract entrySet(): Array<java.util.Map.Entry<K, V>>
             /**
              * Compares the specified object with this map for equality.  Returns
              * <tt>true</tt> if the given object is also a map and the two maps
@@ -202,7 +202,7 @@ declare namespace java {
              * @return <tt>true</tt> if the specified object is equal to this map
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this map.  The hash code of a map is
              * defined to be the sum of the hash codes of each entry in the map's
@@ -219,7 +219,7 @@ declare namespace java {
              * @see Set#equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of this map.  The string representation
              * consists of a list of key-value mappings in the order returned by the
@@ -232,14 +232,14 @@ declare namespace java {
              * @return a string representation of this map
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a shallow copy of this <tt>AbstractMap</tt> instance: the keys
              * and values themselves are not cloned.
              * @return a shallow copy of this map
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
         }
     }
 }

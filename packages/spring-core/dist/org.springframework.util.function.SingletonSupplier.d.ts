@@ -22,7 +22,7 @@ declare namespace org {
                      * @param defaultSupplier the default supplier as a fallback
                      */
                     // @ts-ignore
-                    constructor(instance: T, defaultSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>)
+                    constructor(instance: T, defaultSupplier: java.util.function$.Supplier<any>)
                     /**
                      * Build a {@code SingletonSupplier} with the given instance supplier
                      * and a default supplier for the case when the instance is {@code null}.
@@ -30,48 +30,48 @@ declare namespace org {
                      * @param defaultSupplier the default supplier as a fallback
                      */
                     // @ts-ignore
-                    constructor(instanceSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>, defaultSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>)
+                    constructor(instanceSupplier: java.util.function$.Supplier<any>, defaultSupplier: java.util.function$.Supplier<any>)
                     /**
                      * Get the shared singleton instance for this supplier.
                      * @return the singleton instance (or {#code null} if none)
                      */
                     // @ts-ignore
-                    get(): T
+                    public get(): T
                     /**
                      * Obtain the shared singleton instance for this supplier.
                      * @return the singleton instance (never {#code null})
                      * @throws IllegalStateException in case of no instance
                      */
                     // @ts-ignore
-                    obtain(): T
+                    public obtain(): T
                     /**
                      * Build a {@code SingletonSupplier} with the given singleton instance.
                      * @param instance the singleton instance (never {#code null})
                      * @return the singleton supplier (never {#code null})
                      */
                     // @ts-ignore
-                    of<T>(instance: T): org.springframework.util.function.SingletonSupplier<T>
+                    public static of<T>(instance: T): org.springframework.util.function$.SingletonSupplier<T>
                     /**
                      * Build a {@code SingletonSupplier} with the given singleton instance.
                      * @param instance the singleton instance (potentially {#code null})
                      * @return the singleton supplier, or {#code null} if the instance was {@code null}
                      */
                     // @ts-ignore
-                    ofNullable<T>(instance: T): org.springframework.util.function.SingletonSupplier<T>
+                    public static ofNullable<T>(instance: T): org.springframework.util.function$.SingletonSupplier<T>
                     /**
                      * Build a {@code SingletonSupplier} with the given supplier.
                      * @param supplier the instance supplier (never {#code null})
                      * @return the singleton supplier (never {#code null})
                      */
                     // @ts-ignore
-                    of<T>(supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): org.springframework.util.function.SingletonSupplier<T>
+                    public static of<T>(supplier: java.util.function$.Supplier<T>): org.springframework.util.function$.SingletonSupplier<T>
                     /**
                      * Build a {@code SingletonSupplier} with the given supplier.
                      * @param supplier the instance supplier (potentially {#code null})
                      * @return the singleton supplier, or {#code null} if the instance supplier was {@code null}
                      */
                     // @ts-ignore
-                    ofNullable<T>(supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): org.springframework.util.function.SingletonSupplier<T>
+                    public static ofNullable<T>(supplier: java.util.function$.Supplier<T>): org.springframework.util.function$.SingletonSupplier<T>
                 }
             }
         }

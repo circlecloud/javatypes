@@ -28,7 +28,7 @@ declare namespace java {
              *                   created, or cannot be opened for any other reason
              */
             // @ts-ignore
-            constructor(fileName: string)
+            constructor(fileName: java.lang.String | string)
             /**
              * Constructs a FileWriter object given a file name with a boolean
              * indicating whether or not to append the data written.
@@ -40,7 +40,7 @@ declare namespace java {
              *                   created, or cannot be opened for any other reason
              */
             // @ts-ignore
-            constructor(fileName: string, append: boolean)
+            constructor(fileName: java.lang.String | string, append: boolean)
             /**
              * Constructs a FileWriter object given a File object.
              * @param file  a File object to write to.

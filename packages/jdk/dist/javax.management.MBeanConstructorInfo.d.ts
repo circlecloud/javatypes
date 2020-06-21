@@ -19,7 +19,7 @@ declare namespace javax {
              *  object describing the MBean constructor.
              */
             // @ts-ignore
-            constructor(description: string, constructor: java.lang.reflect.Constructor<any>)
+            constructor(description: java.lang.String | string, constructor: java.lang.reflect.Constructor<any>)
             /**
              * Constructs an <CODE>MBeanConstructorInfo</CODE> object.
              * @param name The name of the constructor.
@@ -29,7 +29,7 @@ declare namespace javax {
              * @param description A human readable description of the constructor.
              */
             // @ts-ignore
-            constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[])
+            constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[])
             /**
              * Constructs an <CODE>MBeanConstructorInfo</CODE> object.
              * @param name The name of the constructor.
@@ -42,7 +42,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[], descriptor: javax.management.Descriptor)
+            constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[], descriptor: javax.management.Descriptor)
             /**
              * <p>Returns a shallow clone of this instance.  The clone is
              * obtained by simply calling <tt>super.clone()</tt>, thus calling
@@ -53,7 +53,7 @@ declare namespace javax {
              * interest to subclasses.</p>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * <p>Returns the list of parameters for this constructor.  Each
              * parameter is described by an <CODE>MBeanParameterInfo</CODE>
@@ -66,9 +66,9 @@ declare namespace javax {
              * @return An array of <CODE>MBeanParameterInfo</CODE> objects.
              */
             // @ts-ignore
-            getSignature(): javax.management.MBeanParameterInfo[]
+            public getSignature(): javax.management.MBeanParameterInfo[]
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compare this MBeanConstructorInfo to another.
              * @param o the object to compare to.
@@ -81,9 +81,9 @@ declare namespace javax {
              *  equal.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

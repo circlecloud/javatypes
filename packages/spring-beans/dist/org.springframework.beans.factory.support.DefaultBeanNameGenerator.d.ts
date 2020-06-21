@@ -19,9 +19,9 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        readonly INSTANCE: org.springframework.beans.factory.support.DefaultBeanNameGenerator
+                        public static readonly INSTANCE: org.springframework.beans.factory.support.DefaultBeanNameGenerator
                         // @ts-ignore
-                        generateBeanName(definition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): java.lang.String
+                        public generateBeanName(definition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): string
                     }
                 }
             }

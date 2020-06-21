@@ -100,19 +100,19 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class Buffer extends java.lang.Object {
+        abstract class Buffer extends java.lang.Object {
             /**
              * Returns this buffer's capacity.
              * @return The capacity of this buffer
              */
             // @ts-ignore
-            capacity(): int
+            public capacity(): number /*int*/
             /**
              * Returns this buffer's position.
              * @return The position of this buffer
              */
             // @ts-ignore
-            position(): int
+            public position(): number /*int*/
             /**
              * Sets this buffer's position.  If the mark is defined and larger than the
              * new position then it is discarded.
@@ -124,13 +124,13 @@ declare namespace java {
              *           If the preconditions on <tt>newPosition</tt> do not hold
              */
             // @ts-ignore
-            position(newPosition: number /*int*/): java.nio.Buffer
+            public position(newPosition: number /*int*/): java.nio.Buffer
             /**
              * Returns this buffer's limit.
              * @return The limit of this buffer
              */
             // @ts-ignore
-            limit(): int
+            public limit(): number /*int*/
             /**
              * Sets this buffer's limit.  If the position is larger than the new limit
              * then it is set to the new limit.  If the mark is defined and larger than
@@ -143,13 +143,13 @@ declare namespace java {
              *           If the preconditions on <tt>newLimit</tt> do not hold
              */
             // @ts-ignore
-            limit(newLimit: number /*int*/): java.nio.Buffer
+            public limit(newLimit: number /*int*/): java.nio.Buffer
             /**
              * Sets this buffer's mark at its position.
              * @return This buffer
              */
             // @ts-ignore
-            mark(): java.nio.Buffer
+            public mark(): java.nio.Buffer
             /**
              * Resets this buffer's position to the previously-marked position.
              * <p> Invoking this method neither changes nor discards the mark's
@@ -159,7 +159,7 @@ declare namespace java {
              *           If the mark has not been set
              */
             // @ts-ignore
-            reset(): java.nio.Buffer
+            public reset(): java.nio.Buffer
             /**
              * Clears this buffer.  The position is set to zero, the limit is set to
              * the capacity, and the mark is discarded.
@@ -174,7 +174,7 @@ declare namespace java {
              * @return This buffer
              */
             // @ts-ignore
-            clear(): java.nio.Buffer
+            public clear(): java.nio.Buffer
             /**
              * Flips this buffer.  The limit is set to the current position and then
              * the position is set to zero.  If the mark is defined then it is
@@ -193,7 +193,7 @@ declare namespace java {
              * @return This buffer
              */
             // @ts-ignore
-            flip(): java.nio.Buffer
+            public flip(): java.nio.Buffer
             /**
              * Rewinds this buffer.  The position is set to zero and the mark is
              * discarded.
@@ -207,14 +207,14 @@ declare namespace java {
              * @return This buffer
              */
             // @ts-ignore
-            rewind(): java.nio.Buffer
+            public rewind(): java.nio.Buffer
             /**
              * Returns the number of elements between the current position and the
              * limit.
              * @return The number of elements remaining in this buffer
              */
             // @ts-ignore
-            remaining(): int
+            public remaining(): number /*int*/
             /**
              * Tells whether there are any elements between the current position and
              * the limit.
@@ -222,13 +222,13 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            hasRemaining(): boolean
+            public hasRemaining(): boolean
             /**
              * Tells whether or not this buffer is read-only.
              * @return <tt>true</tt> if, and only if, this buffer is read-only
              */
             // @ts-ignore
-            abstract isReadOnly(): boolean
+            public abstract isReadOnly(): boolean
             /**
              * Tells whether or not this buffer is backed by an accessible
              * array.
@@ -240,7 +240,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            abstract hasArray(): boolean
+            public abstract hasArray(): boolean
             /**
              * Returns the array that backs this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -260,7 +260,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            abstract array(): java.lang.Object
+            public abstract array(): any
             /**
              * Returns the offset within this buffer's backing array of the first
              * element of the buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -278,7 +278,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            abstract arrayOffset(): int
+            public abstract arrayOffset(): number /*int*/
             /**
              * Tells whether or not this buffer is
              * <a href="ByteBuffer.html#direct"><i>direct</i></a>.
@@ -286,7 +286,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            abstract isDirect(): boolean
+            public abstract isDirect(): boolean
         }
     }
 }

@@ -18,7 +18,7 @@ declare namespace org {
                      * @param interceptors the interceptors that are to be applied (can be {#code null})
                      */
                     // @ts-ignore
-                    constructor(requestFactory: org.springframework.http.client.ClientHttpRequestFactory, interceptors: Array<org.springframework.http.client.ClientHttpRequestInterceptor>)
+                    constructor(requestFactory: org.springframework.http.client.ClientHttpRequestFactory, interceptors: java.util.List<org.springframework.http.client.ClientHttpRequestInterceptor> | Array<org.springframework.http.client.ClientHttpRequestInterceptor>)
                     // @ts-ignore
                     createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod, requestFactory: org.springframework.http.client.ClientHttpRequestFactory): org.springframework.http.client.ClientHttpRequest
                 }

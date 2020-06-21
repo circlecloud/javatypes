@@ -13,15 +13,15 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        layoutContainer(c: java.awt.Container): void
+                        public layoutContainer(c: java.awt.Container): void
                         // @ts-ignore
-                        minimumLayoutSize(c: java.awt.Container): java.awt.Dimension
+                        public minimumLayoutSize(c: java.awt.Container): java.awt.Dimension
                         // @ts-ignore
-                        preferredLayoutSize(c: java.awt.Container): java.awt.Dimension
+                        public preferredLayoutSize(c: java.awt.Container): java.awt.Dimension
                         // @ts-ignore
-                        removeLayoutComponent(c: java.awt.Component): void
+                        public removeLayoutComponent(c: java.awt.Component): void
                         // @ts-ignore
-                        addLayoutComponent(string: string, c: java.awt.Component): void
+                        public addLayoutComponent(string: java.lang.String | string, c: java.awt.Component): void
                     }
                 }
             }

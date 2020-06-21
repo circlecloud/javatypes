@@ -22,14 +22,14 @@ declare namespace javax {
                  * the order in which they were added.
                  */
                 // @ts-ignore
-                undo(): void
+                public undo(): void
                 /**
                  * Sends <code>redo</code> to all contained
                  * <code>UndoableEdit</code>s in the order in
                  * which they were added.
                  */
                 // @ts-ignore
-                redo(): void
+                public redo(): void
                 /**
                  * Returns the last <code>UndoableEdit</code> in
                  * <code>edits</code>, or <code>null</code>
@@ -42,7 +42,7 @@ declare namespace javax {
                  * in the reverse of the order that they were added.
                  */
                 // @ts-ignore
-                die(): void
+                public die(): void
                 /**
                  * If this edit is <code>inProgress</code>,
                  * accepts <code>anEdit</code> and returns true.
@@ -57,28 +57,28 @@ declare namespace javax {
                  *   otherwise returns false
                  */
                 // @ts-ignore
-                addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
+                public addEdit(anEdit: javax.swing.undo.UndoableEdit): boolean
                 /**
                  * Sets <code>inProgress</code> to false.
                  * @see #canUndo
                  * @see #canRedo
                  */
                 // @ts-ignore
-                end(): void
+                public end(): void
                 /**
                  * Returns false if <code>isInProgress</code> or if super
                  * returns false.
                  * @see #isInProgress
                  */
                 // @ts-ignore
-                canUndo(): boolean
+                public canUndo(): boolean
                 /**
                  * Returns false if <code>isInProgress</code> or if super
                  * returns false.
                  * @see #isInProgress
                  */
                 // @ts-ignore
-                canRedo(): boolean
+                public canRedo(): boolean
                 /**
                  * Returns true if this edit is in progress--that is, it has not
                  * received end. This generally means that edits are still being
@@ -86,14 +86,14 @@ declare namespace javax {
                  * @see #end
                  */
                 // @ts-ignore
-                isInProgress(): boolean
+                public isInProgress(): boolean
                 /**
                  * Returns true if any of the <code>UndoableEdit</code>s
                  * in <code>edits</code> do.
                  * Returns false if they all return false.
                  */
                 // @ts-ignore
-                isSignificant(): boolean
+                public isSignificant(): boolean
                 /**
                  * Returns <code>getPresentationName</code> from the
                  * last <code>UndoableEdit</code> added to
@@ -101,7 +101,7 @@ declare namespace javax {
                  * calls super.
                  */
                 // @ts-ignore
-                getPresentationName(): java.lang.String
+                public getPresentationName(): string
                 /**
                  * Returns <code>getUndoPresentationName</code>
                  * from the last <code>UndoableEdit</code>
@@ -109,7 +109,7 @@ declare namespace javax {
                  * If <code>edits</code> is empty, calls super.
                  */
                 // @ts-ignore
-                getUndoPresentationName(): java.lang.String
+                public getUndoPresentationName(): string
                 /**
                  * Returns <code>getRedoPresentationName</code>
                  * from the last <code>UndoableEdit</code>
@@ -117,14 +117,14 @@ declare namespace javax {
                  * If <code>edits</code> is empty, calls super.
                  */
                 // @ts-ignore
-                getRedoPresentationName(): java.lang.String
+                public getRedoPresentationName(): string
                 /**
                  * Returns a string that displays and identifies this
                  * object's properties.
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

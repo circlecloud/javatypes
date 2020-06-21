@@ -9,15 +9,15 @@ declare namespace org {
                     // @ts-ignore
                     class StairShapes extends java.lang.Object {
                         // @ts-ignore
-                        readonly INNER_LEFT: org.spongepowered.api.data.type.StairShape
+                        public static readonly INNER_LEFT: org.spongepowered.api.data.type.StairShape
                         // @ts-ignore
-                        readonly INNER_RIGHT: org.spongepowered.api.data.type.StairShape
+                        public static readonly INNER_RIGHT: org.spongepowered.api.data.type.StairShape
                         // @ts-ignore
-                        readonly OUTER_LEFT: org.spongepowered.api.data.type.StairShape
+                        public static readonly OUTER_LEFT: org.spongepowered.api.data.type.StairShape
                         // @ts-ignore
-                        readonly OUTER_RIGHT: org.spongepowered.api.data.type.StairShape
+                        public static readonly OUTER_RIGHT: org.spongepowered.api.data.type.StairShape
                         // @ts-ignore
-                        readonly STRAIGHT: org.spongepowered.api.data.type.StairShape
+                        public static readonly STRAIGHT: org.spongepowered.api.data.type.StairShape
                     }
                 }
             }

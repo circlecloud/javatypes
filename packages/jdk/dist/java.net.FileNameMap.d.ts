@@ -15,7 +15,7 @@ declare namespace java {
              *  type for the specified file name.
              */
             // @ts-ignore
-            getContentTypeFor(fileName: string): java.lang.String
+            getContentTypeFor(fileName: java.lang.String | string): string
         }
     }
 }

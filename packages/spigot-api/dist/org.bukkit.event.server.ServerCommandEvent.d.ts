@@ -39,34 +39,34 @@ declare namespace org {
                 // @ts-ignore
                 class ServerCommandEvent extends org.bukkit.event.server.ServerEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(sender: org.bukkit.command.CommandSender, command: string)
+                    constructor(sender: org.bukkit.command.CommandSender, command: java.lang.String | string)
                     /**
                      * Gets the command that the user is attempting to execute from the
                      * console
                      * @return Command the user is attempting to execute
                      */
                     // @ts-ignore
-                    getCommand(): java.lang.String
+                    public getCommand(): string
                     /**
                      * Sets the command that the server will execute
                      * @param message New message that the server will execute
                      */
                     // @ts-ignore
-                    setCommand(message: string): void
+                    public setCommand(message: java.lang.String | string): void
                     /**
                      * Get the command sender.
                      * @return The sender
                      */
                     // @ts-ignore
-                    getSender(): org.bukkit.command.CommandSender
+                    public getSender(): org.bukkit.command.CommandSender
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                 }
             }
         }

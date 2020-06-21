@@ -32,12 +32,12 @@ declare namespace org {
                      * @param parsePath whether to parse the path into path segments
                      */
                     // @ts-ignore
-                    setParsePath(parsePath: boolean): void
+                    public setParsePath(parsePath: boolean): void
                     /**
                      * Whether the handler is configured to parse the path into path segments.
                      */
                     // @ts-ignore
-                    shouldParsePath(): boolean
+                    public shouldParsePath(): boolean
                     /**
                      * Whether to encode characters outside the unreserved set as defined in
                      * <a href="https://tools.ietf.org/html/rfc3986#section-2">RFC 3986 Section 2</a>.
@@ -54,27 +54,27 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setStrictEncoding(strictEncoding: boolean): void
+                    public setStrictEncoding(strictEncoding: boolean): void
                     /**
                      * Whether to strictly encode any character outside the unreserved set.
                      */
                     // @ts-ignore
-                    isStrictEncoding(): boolean
+                    public isStrictEncoding(): boolean
                     // @ts-ignore
-                    expandInternal(uriTemplate: string, uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    expandInternal(uriTemplate: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                     // @ts-ignore
-                    expandInternal(uriTemplate: string, ...uriVariables: any[]): java.net.URI
+                    expandInternal(uriTemplate: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): java.net.URI
                     /**
                      * Create a {@code UriComponentsBuilder} from the URI template string.
                      * This implementation also breaks up the path into path segments depending
                      * on whether {@link #setParsePath parsePath} is enabled.
                      */
                     // @ts-ignore
-                    initUriComponentsBuilder(uriTemplate: string): org.springframework.web.util.UriComponentsBuilder
+                    initUriComponentsBuilder(uriTemplate: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    expandAndEncode(builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String, any>): org.springframework.web.util.UriComponents
+                    expandAndEncode(builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String | string, any>): org.springframework.web.util.UriComponents
                     // @ts-ignore
-                    expandAndEncode(builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: any[]): org.springframework.web.util.UriComponents
+                    expandAndEncode(builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.lang.Object[] | any[]): org.springframework.web.util.UriComponents
                 }
             }
         }

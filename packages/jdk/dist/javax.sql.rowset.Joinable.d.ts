@@ -150,7 +150,7 @@ declare namespace javax {
                  * @see #setMatchColumn(int[])
                  */
                 // @ts-ignore
-                setMatchColumn(columnName: string): void
+                setMatchColumn(columnName: java.lang.String | string): void
                 /**
                  * Sets the designated columns as the match column for this <code>RowSet</code>
                  * object. A <code>JoinRowSet</code> object can now add this <code>RowSet</code>
@@ -163,7 +163,7 @@ declare namespace javax {
                  * @see #setMatchColumn(int[])
                  */
                 // @ts-ignore
-                setMatchColumn(columnNames: string[]): void
+                setMatchColumn(columnNames: java.lang.String[] | string[]): void
                 /**
                  * Retrieves the indexes of the match columns that were set for this
                  * <code>RowSet</code> object with the method
@@ -175,7 +175,7 @@ declare namespace javax {
                  * @see #unsetMatchColumn
                  */
                 // @ts-ignore
-                getMatchColumnIndexes(): int[]
+                getMatchColumnIndexes(): number /*int*/[]
                 /**
                  * Retrieves the names of the match columns that were set for this
                  * <code>RowSet</code> object with the method
@@ -187,7 +187,7 @@ declare namespace javax {
                  * @see #unsetMatchColumn
                  */
                 // @ts-ignore
-                getMatchColumnNames(): java.lang.String[]
+                getMatchColumnNames(): string[]
                 /**
                  * Unsets the designated column as the match column for this <code>RowSet</code>
                  * object.
@@ -233,7 +233,7 @@ declare namespace javax {
                  * @see #setMatchColumn
                  */
                 // @ts-ignore
-                unsetMatchColumn(columnName: string): void
+                unsetMatchColumn(columnName: java.lang.String | string): void
                 /**
                  * Unsets the designated columns as the match columns for this <code>RowSet</code>
                  * object.
@@ -244,7 +244,7 @@ declare namespace javax {
                  * @see #setMatchColumn
                  */
                 // @ts-ignore
-                unsetMatchColumn(columnName: string[]): void
+                unsetMatchColumn(columnName: java.lang.String[] | string[]): void
             }
         }
     }

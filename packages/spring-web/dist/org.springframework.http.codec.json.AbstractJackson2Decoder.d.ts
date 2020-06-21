@@ -13,7 +13,7 @@ declare namespace org {
                      * @see <a href="https://github.com/FasterXML/jackson-core/issues/57" target="_blank">Add support for non-blocking ("async") JSON parsing</a>
                      */
                     // @ts-ignore
-                    class AbstractJackson2Decoder extends org.springframework.http.codec.json.Jackson2CodecSupport implements org.springframework.http.codec.HttpMessageDecoder<java.lang.Object> {
+                    abstract class AbstractJackson2Decoder extends org.springframework.http.codec.json.Jackson2CodecSupport implements org.springframework.http.codec.HttpMessageDecoder<java.lang.Object | any> {
                         /**
                          * Constructor with a Jackson {@link ObjectMapper} to use.
                          */
@@ -29,17 +29,17 @@ declare namespace org {
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        setMaxInMemorySize(byteCount: number /*int*/): void
+                        public setMaxInMemorySize(byteCount: number /*int*/): void
                         /**
                          * Return the {@link #setMaxInMemorySize configured} byte count limit.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getMaxInMemorySize(): int
+                        public getMaxInMemorySize(): number /*int*/
                         // @ts-ignore
-                        canDecode(elementType: ResolvableType, mimeType: MimeType): boolean
+                        public canDecode(elementType: ResolvableType, mimeType: MimeType): boolean
                         // @ts-ignore
-                        decode(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decode(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         /**
                          * Process the input publisher into a flux. Default implementation returns
                          * {@link Flux#from(Publisher)}, but subclasses can choose to customize
@@ -52,15 +52,15 @@ declare namespace org {
                          * @since 5.1.14
                          */
                         // @ts-ignore
-                        processInput(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        processInput(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        decodeToMono(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decodeToMono(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        decode(dataBuffer: DataBuffer, targetType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                        public decode(dataBuffer: DataBuffer, targetType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
                         // @ts-ignore
-                        getDecodeHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                        public getDecodeHints(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        getDecodableMimeTypes(): java.util.List<MimeType>
+                        public getDecodableMimeTypes(): Array<MimeType>
                         // @ts-ignore
                         getAnnotation<A extends java.lang.annotation.Annotation>(parameter: MethodParameter, annotType: java.lang.Class<A>): A
                     }

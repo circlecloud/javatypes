@@ -29,15 +29,15 @@ declare namespace org {
                          * <p>Default is "true" (a shared singleton).
                          */
                         // @ts-ignore
-                        setSingleton(singleton: boolean): void
+                        public setSingleton(singleton: boolean): void
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObject(): java.util.Properties
+                        public getObject(): java.util.Properties
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<java.util.Properties>
+                        public getObjectType(): java.lang.Class<java.util.Properties>
                         /**
                          * Template method that subclasses may override to construct the object
                          * returned by this factory. The default implementation returns the

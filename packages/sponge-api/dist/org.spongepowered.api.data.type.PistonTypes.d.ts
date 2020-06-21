@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class PistonTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly NORMAL: org.spongepowered.api.data.type.PistonType
+                        public static readonly NORMAL: org.spongepowered.api.data.type.PistonType
                         // @ts-ignore
-                        readonly STICKY: org.spongepowered.api.data.type.PistonType
+                        public static readonly STICKY: org.spongepowered.api.data.type.PistonType
                     }
                 }
             }

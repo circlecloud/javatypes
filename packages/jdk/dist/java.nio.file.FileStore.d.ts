@@ -14,7 +14,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class FileStore extends java.lang.Object {
+            abstract class FileStore extends java.lang.Object {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -29,7 +29,7 @@ declare namespace java {
                  * @return the name of this file store
                  */
                 // @ts-ignore
-                abstract name(): java.lang.String
+                public abstract name(): string
                 /**
                  * Returns the <em>type</em> of this file store. The format of the string
                  * returned by this method is highly implementation specific. It may
@@ -38,7 +38,7 @@ declare namespace java {
                  * @return a string representing the type of this file store
                  */
                 // @ts-ignore
-                abstract type(): java.lang.String
+                public abstract type(): string
                 /**
                  * Tells whether this file store is read-only. A file store is read-only if
                  * it does not support write operations or other changes to files. Any
@@ -47,7 +47,7 @@ declare namespace java {
                  * @return {#code true} if, and only if, this file store is read-only
                  */
                 // @ts-ignore
-                abstract isReadOnly(): boolean
+                public abstract isReadOnly(): boolean
                 /**
                  * Returns the size, in bytes, of the file store.
                  * @return the size of the file store, in bytes
@@ -55,7 +55,7 @@ declare namespace java {
                  *           if an I/O error occurs
                  */
                 // @ts-ignore
-                abstract getTotalSpace(): long
+                public abstract getTotalSpace(): number /*long*/
                 /**
                  * Returns the number of bytes available to this Java virtual machine on the
                  * file store.
@@ -70,7 +70,7 @@ declare namespace java {
                  *           if an I/O error occurs
                  */
                 // @ts-ignore
-                abstract getUsableSpace(): long
+                public abstract getUsableSpace(): number /*long*/
                 /**
                  * Returns the number of unallocated bytes in the file store.
                  * <p> The returned number of unallocated bytes is a hint, but not a
@@ -84,7 +84,7 @@ declare namespace java {
                  *           if an I/O error occurs
                  */
                 // @ts-ignore
-                abstract getUnallocatedSpace(): long
+                public abstract getUnallocatedSpace(): number /*long*/
                 /**
                  * Tells whether or not this file store supports the file attributes
                  * identified by the given file attribute view.
@@ -99,7 +99,7 @@ declare namespace java {
                  *           supported
                  */
                 // @ts-ignore
-                abstract supportsFileAttributeView(type: java.lang.Class<java.nio.file.attribute.FileAttributeView>): boolean
+                public abstract supportsFileAttributeView(type: java.lang.Class<any>): boolean
                 /**
                  * Tells whether or not this file store supports the file attributes
                  * identified by the given file attribute view.
@@ -115,7 +115,7 @@ declare namespace java {
                  *           supported
                  */
                 // @ts-ignore
-                abstract supportsFileAttributeView(name: string): boolean
+                public abstract supportsFileAttributeView(name: java.lang.String | string): boolean
                 /**
                  * Returns a {@code FileStoreAttributeView} of the given type.
                  * <p> This method is intended to be used where the file store attribute
@@ -130,7 +130,7 @@ declare namespace java {
                  *           {#code null} if the attribute view is not available
                  */
                 // @ts-ignore
-                abstract getFileStoreAttributeView<V extends java.nio.file.attribute.FileStoreAttributeView>(type: java.lang.Class<V>): V
+                public abstract getFileStoreAttributeView<V extends java.nio.file.attribute.FileStoreAttributeView>(type: java.lang.Class<V>): V
                 /**
                  * Reads the value of a file store attribute.
                  * <p> The {@code attribute} parameter identifies the attribute to be read
@@ -159,7 +159,7 @@ declare namespace java {
                  *           if an I/O error occurs
                  */
                 // @ts-ignore
-                abstract getAttribute(attribute: string): java.lang.Object
+                public abstract getAttribute(attribute: java.lang.String | string): any
             }
         }
     }

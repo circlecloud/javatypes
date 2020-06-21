@@ -20,15 +20,15 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 /**
                  * Set whether this PoweredRail should be powered or not.
                  * @param isPowered whether or not the rail is powered
                  */
                 // @ts-ignore
-                setPowered(isPowered: boolean): void
+                public setPowered(isPowered: boolean): void
                 // @ts-ignore
-                clone(): org.bukkit.material.PoweredRail
+                public clone(): org.bukkit.material.PoweredRail
             }
         }
     }

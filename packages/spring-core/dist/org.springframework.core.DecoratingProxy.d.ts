@@ -25,7 +25,7 @@ declare namespace org {
                  * @return the decorated class (never {#code null})
                  */
                 // @ts-ignore
-                getDecoratedClass(): java.lang.Class<?>
+                getDecoratedClass(): java.lang.Class<any>
             }
         }
     }

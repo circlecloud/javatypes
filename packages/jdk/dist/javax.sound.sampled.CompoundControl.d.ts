@@ -9,7 +9,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class CompoundControl extends javax.sound.sampled.Control {
+            abstract class CompoundControl extends javax.sound.sampled.Control {
                 /**
                  * Constructs a new compound control object with the given parameters.
                  * @param type the type of control represented this compound control object
@@ -22,13 +22,13 @@ declare namespace javax {
                  * @return the set of member controls.
                  */
                 // @ts-ignore
-                getMemberControls(): javax.sound.sampled.Control[]
+                public getMemberControls(): javax.sound.sampled.Control[]
                 /**
                  * Provides a string representation of the control
                  * @return a string description
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

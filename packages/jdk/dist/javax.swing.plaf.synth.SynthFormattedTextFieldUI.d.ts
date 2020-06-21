@@ -17,7 +17,7 @@ declare namespace javax {
                      * @return the UI
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Fetches the name used as a key to lookup properties through the
                      * UIManager.  This is used as a prefix to all the standard
@@ -25,12 +25,12 @@ declare namespace javax {
                      * @return the name "FormattedTextField"
                      */
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+                    public paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
                 }
             }
         }

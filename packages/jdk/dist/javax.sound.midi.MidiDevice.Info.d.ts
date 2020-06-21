@@ -18,7 +18,7 @@ declare namespace javax {
                      * @param version version information for the device
                      */
                     // @ts-ignore
-                    constructor(name: string, vendor: string, description: string, version: string)
+                    constructor(name: java.lang.String | string, vendor: java.lang.String | string, description: java.lang.String | string, version: java.lang.String | string)
                     /**
                      * Reports whether two objects are equal.
                      * Returns <code>true</code> if the objects are identical.
@@ -28,42 +28,42 @@ declare namespace javax {
                      *  <code>obj</code> argument; <code>false</code> otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashcode method.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Obtains the name of the device.
                      * @return a string containing the device's name
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Obtains the name of the company who supplies the device.
                      * @return device the vendor's name
                      */
                     // @ts-ignore
-                    getVendor(): java.lang.String
+                    public getVendor(): string
                     /**
                      * Obtains the description of the device.
                      * @return a description of the device
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * Obtains the version of the device.
                      * @return textual version information for the device.
                      */
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    public getVersion(): string
                     /**
                      * Provides a string representation of the device information.
                      * @return a description of the info object
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

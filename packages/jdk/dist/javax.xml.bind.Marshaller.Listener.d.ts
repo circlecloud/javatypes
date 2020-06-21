@@ -21,7 +21,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class Listener extends java.lang.Object {
+                abstract class Listener extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -35,7 +35,7 @@ declare namespace javax {
                      * @param source instance of JAXB mapped class prior to marshalling from it.
                      */
                     // @ts-ignore
-                    beforeMarshal(source: any): void
+                    public beforeMarshal(source: java.lang.Object | any): void
                     /**
                      * <p/>
                      * Callback method invoked after marshalling <tt>source</tt> to XML.
@@ -47,7 +47,7 @@ declare namespace javax {
                      * @param source instance of JAXB mapped class after marshalling it.
                      */
                     // @ts-ignore
-                    afterMarshal(source: any): void
+                    public afterMarshal(source: java.lang.Object | any): void
                 }
             }
         }

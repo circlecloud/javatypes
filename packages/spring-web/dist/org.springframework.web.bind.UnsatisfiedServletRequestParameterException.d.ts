@@ -18,7 +18,7 @@ declare namespace org {
                      * @param actualParams the actual parameter Map associated with the ServletRequest
                      */
                     // @ts-ignore
-                    constructor(paramConditions: string[], actualParams: java.util.Map<java.lang.String, java.lang.String[]>)
+                    constructor(paramConditions: java.lang.String[] | string[], actualParams: java.util.Map<java.lang.String | string, java.lang.String[] | string[]>)
                     /**
                      * Create a new UnsatisfiedServletRequestParameterException.
                      * @param paramConditions all sets of parameter conditions that have been violated
@@ -26,29 +26,29 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    constructor(paramConditions: Array<java.lang.String[]>, actualParams: java.util.Map<java.lang.String, java.lang.String[]>)
+                    constructor(paramConditions: java.util.List<java.lang.String[] | string[]> | Array<java.lang.String[] | string[]>, actualParams: java.util.Map<java.lang.String | string, java.lang.String[] | string[]>)
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Return the parameter conditions that have been violated or the first group
                      * in case of multiple groups.
                      * @see org.springframework.web.bind.annotation.RequestMapping#params()
                      */
                     // @ts-ignore
-                    getParamConditions(): java.lang.String[]
+                    public getParamConditions(): string[]
                     /**
                      * Return all parameter condition groups that have been violated.
                      * @since 4.2
                      * @see org.springframework.web.bind.annotation.RequestMapping#params()
                      */
                     // @ts-ignore
-                    getParamConditionGroups(): java.util.List<java.lang.String[]>
+                    public getParamConditionGroups(): Array<java.lang.String[] | string[]>
                     /**
                      * Return the actual parameter Map associated with the ServletRequest.
                      * @see javax.servlet.ServletRequest#getParameterMap()
                      */
                     // @ts-ignore
-                    getActualParams(): java.util.Map<java.lang.String, java.lang.String[]>
+                    public getActualParams(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                 }
             }
         }

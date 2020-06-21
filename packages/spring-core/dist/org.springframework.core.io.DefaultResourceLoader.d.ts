@@ -39,7 +39,7 @@ declare namespace org {
                      * class loader at the time of this ResourceLoader's initialization.
                      */
                     // @ts-ignore
-                    setClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Return the ClassLoader to load class path resources with.
                      * <p>Will get passed to ClassPathResource's constructor for all
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see ClassPathResource
                      */
                     // @ts-ignore
-                    getClassLoader(): java.lang.ClassLoader
+                    public getClassLoader(): java.lang.ClassLoader
                     /**
                      * Register the given resolver with this resource loader, allowing for
                      * additional protocols to be handled.
@@ -57,14 +57,14 @@ declare namespace org {
                      * @see #getProtocolResolvers()
                      */
                     // @ts-ignore
-                    addProtocolResolver(resolver: org.springframework.core.io.ProtocolResolver): void
+                    public addProtocolResolver(resolver: org.springframework.core.io.ProtocolResolver): void
                     /**
                      * Return the collection of currently registered protocol resolvers,
                      * allowing for introspection as well as modification.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getProtocolResolvers(): java.util.Collection<org.springframework.core.io.ProtocolResolver>
+                    public getProtocolResolvers(): Array<org.springframework.core.io.ProtocolResolver>
                     /**
                      * Obtain a cache for the given value type, keyed by {@link Resource}.
                      * @param valueType the value type, e.g. an ASM {#code MetadataReader}
@@ -72,16 +72,16 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    getResourceCache<T>(valueType: java.lang.Class<T>): java.util.Map<org.springframework.core.io.Resource, T>
+                    public getResourceCache<T>(valueType: java.lang.Class<T>): java.util.Map<org.springframework.core.io.Resource, T>
                     /**
                      * Clear all resource caches in this resource loader.
                      * @since 5.0
                      * @see #getResourceCache
                      */
                     // @ts-ignore
-                    clearResourceCaches(): void
+                    public clearResourceCaches(): void
                     // @ts-ignore
-                    getResource(location: string): org.springframework.core.io.Resource
+                    public getResource(location: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * Return a Resource handle for the resource at the given path.
                      * <p>The default implementation supports class path locations. This should
@@ -94,7 +94,7 @@ declare namespace org {
                      * @see org.springframework.web.context.support.XmlWebApplicationContext#getResourceByPath
                      */
                     // @ts-ignore
-                    getResourceByPath(path: string): org.springframework.core.io.Resource
+                    getResourceByPath(path: java.lang.String | string): org.springframework.core.io.Resource
                 }
             }
         }

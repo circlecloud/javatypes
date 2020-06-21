@@ -9,19 +9,19 @@ declare namespace org {
                     // @ts-ignore
                     class RabbitTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly BLACK: org.spongepowered.api.data.type.RabbitType
+                        public static readonly BLACK: org.spongepowered.api.data.type.RabbitType
                         // @ts-ignore
-                        readonly BLACK_AND_WHITE: org.spongepowered.api.data.type.RabbitType
+                        public static readonly BLACK_AND_WHITE: org.spongepowered.api.data.type.RabbitType
                         // @ts-ignore
-                        readonly BROWN: org.spongepowered.api.data.type.RabbitType
+                        public static readonly BROWN: org.spongepowered.api.data.type.RabbitType
                         // @ts-ignore
-                        readonly GOLD: org.spongepowered.api.data.type.RabbitType
+                        public static readonly GOLD: org.spongepowered.api.data.type.RabbitType
                         // @ts-ignore
-                        readonly KILLER: org.spongepowered.api.data.type.RabbitType
+                        public static readonly KILLER: org.spongepowered.api.data.type.RabbitType
                         // @ts-ignore
-                        readonly SALT_AND_PEPPER: org.spongepowered.api.data.type.RabbitType
+                        public static readonly SALT_AND_PEPPER: org.spongepowered.api.data.type.RabbitType
                         // @ts-ignore
-                        readonly WHITE: org.spongepowered.api.data.type.RabbitType
+                        public static readonly WHITE: org.spongepowered.api.data.type.RabbitType
                     }
                 }
             }

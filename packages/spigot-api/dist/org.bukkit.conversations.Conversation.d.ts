@@ -45,7 +45,7 @@ declare namespace org {
                  *      context sessionData map.
                  */
                 // @ts-ignore
-                constructor(plugin: org.bukkit.plugin.Plugin, forWhom: org.bukkit.conversations.Conversable, firstPrompt: org.bukkit.conversations.Prompt, initialSessionData: java.util.Map<java.lang.Object, java.lang.Object>)
+                constructor(plugin: org.bukkit.plugin.Plugin, forWhom: org.bukkit.conversations.Conversable, firstPrompt: org.bukkit.conversations.Prompt, initialSessionData: java.util.Map<java.lang.Object | any, java.lang.Object | any>)
                 // @ts-ignore
                 currentPrompt: org.bukkit.conversations.Prompt
                 // @ts-ignore
@@ -57,15 +57,15 @@ declare namespace org {
                 // @ts-ignore
                 prefix: org.bukkit.conversations.ConversationPrefix
                 // @ts-ignore
-                cancellers: Array<org.bukkit.conversations.ConversationCanceller>
+                cancellers: java.util.List<org.bukkit.conversations.ConversationCanceller> | Array<org.bukkit.conversations.ConversationCanceller>
                 // @ts-ignore
-                abandonedListeners: Array<org.bukkit.conversations.ConversationAbandonedListener>
+                abandonedListeners: java.util.List<org.bukkit.conversations.ConversationAbandonedListener> | Array<org.bukkit.conversations.ConversationAbandonedListener>
                 /**
                  * Gets the entity for whom this conversation is mediating.
                  * @return The entity.
                  */
                 // @ts-ignore
-                getForWhom(): org.bukkit.conversations.Conversable
+                public getForWhom(): org.bukkit.conversations.Conversable
                 /**
                  * Gets the modality of this conversation. If a conversation is modal, all
                  * messages directed to the player are suppressed for the duration of the
@@ -73,7 +73,7 @@ declare namespace org {
                  * @return The conversation modality.
                  */
                 // @ts-ignore
-                isModal(): boolean
+                public isModal(): boolean
                 /**
                  * Gets the status of local echo for this conversation. If local echo is
                  * enabled, any text submitted to a conversation gets echoed back into the
@@ -81,7 +81,7 @@ declare namespace org {
                  * @return The status of local echo.
                  */
                 // @ts-ignore
-                isLocalEchoEnabled(): boolean
+                public isLocalEchoEnabled(): boolean
                 /**
                  * Sets the status of local echo for this conversation. If local echo is
                  * enabled, any text submitted to a conversation gets echoed back into the
@@ -89,76 +89,76 @@ declare namespace org {
                  * @param localEchoEnabled The status of local echo.
                  */
                 // @ts-ignore
-                setLocalEchoEnabled(localEchoEnabled: boolean): void
+                public setLocalEchoEnabled(localEchoEnabled: boolean): void
                 /**
                  * Gets the {@link ConversationPrefix} that prepends all output from this
                  * conversation.
                  * @return The ConversationPrefix in use.
                  */
                 // @ts-ignore
-                getPrefix(): org.bukkit.conversations.ConversationPrefix
+                public getPrefix(): org.bukkit.conversations.ConversationPrefix
                 /**
                  * Gets the list of {@link ConversationCanceller}s
                  * @return The list.
                  */
                 // @ts-ignore
-                getCancellers(): java.util.List<org.bukkit.conversations.ConversationCanceller>
+                public getCancellers(): Array<org.bukkit.conversations.ConversationCanceller>
                 /**
                  * Returns the Conversation's {@link ConversationContext}.
                  * @return The ConversationContext.
                  */
                 // @ts-ignore
-                getContext(): org.bukkit.conversations.ConversationContext
+                public getContext(): org.bukkit.conversations.ConversationContext
                 /**
                  * Displays the first prompt of this conversation and begins redirecting
                  * the user's chat responses.
                  */
                 // @ts-ignore
-                begin(): void
+                public begin(): void
                 /**
                  * Returns Returns the current state of the conversation.
                  * @return The current state of the conversation.
                  */
                 // @ts-ignore
-                getState(): org.bukkit.conversations.Conversation.ConversationState
+                public getState(): org.bukkit.conversations.Conversation.ConversationState
                 /**
                  * Passes player input into the current prompt. The next prompt (as
                  * determined by the current prompt) is then displayed to the user.
                  * @param input The user's chat text.
                  */
                 // @ts-ignore
-                acceptInput(input: string): void
+                public acceptInput(input: java.lang.String | string): void
                 /**
                  * Adds a {@link ConversationAbandonedListener}.
                  * @param listener The listener to add.
                  */
                 // @ts-ignore
-                addConversationAbandonedListener(listener: org.bukkit.conversations.ConversationAbandonedListener): void
+                public addConversationAbandonedListener(listener: org.bukkit.conversations.ConversationAbandonedListener): void
                 /**
                  * Removes a {@link ConversationAbandonedListener}.
                  * @param listener The listener to remove.
                  */
                 // @ts-ignore
-                removeConversationAbandonedListener(listener: org.bukkit.conversations.ConversationAbandonedListener): void
+                public removeConversationAbandonedListener(listener: org.bukkit.conversations.ConversationAbandonedListener): void
                 /**
                  * Abandons and resets the current conversation. Restores the user's
                  * normal chat behavior.
                  */
                 // @ts-ignore
-                abandon(): void
+                public abandon(): void
                 /**
                  * Abandons and resets the current conversation. Restores the user's
                  * normal chat behavior.
                  * @param details Details about why the conversation was abandoned
                  */
                 // @ts-ignore
-                abandon(details: org.bukkit.conversations.ConversationAbandonedEvent): void
+                public abandon(details: org.bukkit.conversations.ConversationAbandonedEvent): void
                 /**
                  * Displays the next user prompt and abandons the conversation if the next
                  * prompt is null.
                  */
                 // @ts-ignore
-                outputNextPrompt(): void
+                public outputNextPrompt(): void
             }
         }
     }

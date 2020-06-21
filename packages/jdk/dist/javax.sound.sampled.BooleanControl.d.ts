@@ -18,7 +18,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class BooleanControl extends javax.sound.sampled.Control {
+            abstract class BooleanControl extends javax.sound.sampled.Control {
                 /**
                  * Constructs a new boolean control object with the given parameters.
                  * @param type the type of control represented this float control object
@@ -29,7 +29,7 @@ declare namespace javax {
                  *  such as "false" or "off."
                  */
                 // @ts-ignore
-                constructor(type: javax.sound.sampled.BooleanControl.Type, initialValue: boolean, trueStateLabel: string, falseStateLabel: string)
+                constructor(type: javax.sound.sampled.BooleanControl.Type, initialValue: boolean, trueStateLabel: java.lang.String | string, falseStateLabel: java.lang.String | string)
                 /**
                  * Constructs a new boolean control object with the given parameters.
                  * The labels for the <code>true</code> and <code>false</code> states
@@ -47,13 +47,13 @@ declare namespace javax {
                  * @param value desired new value.
                  */
                 // @ts-ignore
-                setValue(value: boolean): void
+                public setValue(value: boolean): void
                 /**
                  * Obtains this control's current value.
                  * @return current value.
                  */
                 // @ts-ignore
-                getValue(): boolean
+                public getValue(): boolean
                 /**
                  * Obtains the label for the specified state.
                  * @param state the state whose label will be returned
@@ -61,13 +61,13 @@ declare namespace javax {
                  *  for <code>true</code>, or "false" or "off" for <code>false</code>.
                  */
                 // @ts-ignore
-                getStateLabel(state: boolean): java.lang.String
+                public getStateLabel(state: boolean): string
                 /**
                  * Provides a string representation of the control
                  * @return a string description
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

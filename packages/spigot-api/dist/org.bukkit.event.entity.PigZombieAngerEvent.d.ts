@@ -16,31 +16,31 @@ declare namespace org {
                      * @return triggering entity, or null
                      */
                     // @ts-ignore
-                    getTarget(): org.bukkit.entity.Entity
+                    public getTarget(): org.bukkit.entity.Entity
                     /**
                      * Gets the new anger resulting from this event.
                      * @return new anger
                      * @see PigZombie#getAnger()
                      */
                     // @ts-ignore
-                    getNewAnger(): int
+                    public getNewAnger(): number /*int*/
                     /**
                      * Sets the new anger resulting from this event.
                      * @param newAnger the new anger
                      * @see PigZombie#setAnger(int)
                      */
                     // @ts-ignore
-                    setNewAnger(newAnger: number /*int*/): void
+                    public setNewAnger(newAnger: number /*int*/): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.PigZombie
+                    public getEntity(): org.bukkit.entity.PigZombie
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

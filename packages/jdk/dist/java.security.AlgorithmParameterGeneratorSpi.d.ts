@@ -19,7 +19,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AlgorithmParameterGeneratorSpi extends java.lang.Object {
+        abstract class AlgorithmParameterGeneratorSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**

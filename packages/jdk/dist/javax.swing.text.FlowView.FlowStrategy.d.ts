@@ -28,7 +28,7 @@ declare namespace javax {
                      * @see View#insertUpdate
                      */
                     // @ts-ignore
-                    insertUpdate(fv: javax.swing.text.FlowView, e: javax.swing.event.DocumentEvent, alloc: java.awt.Rectangle): void
+                    public insertUpdate(fv: javax.swing.text.FlowView, e: javax.swing.event.DocumentEvent, alloc: java.awt.Rectangle): void
                     /**
                      * Gives notification that something was removed from the document
                      * in a location that the given flow view is responsible for.
@@ -37,7 +37,7 @@ declare namespace javax {
                      * @see View#removeUpdate
                      */
                     // @ts-ignore
-                    removeUpdate(fv: javax.swing.text.FlowView, e: javax.swing.event.DocumentEvent, alloc: java.awt.Rectangle): void
+                    public removeUpdate(fv: javax.swing.text.FlowView, e: javax.swing.event.DocumentEvent, alloc: java.awt.Rectangle): void
                     /**
                      * Gives notification from the document that attributes were changed
                      * in a location that this view is responsible for.
@@ -48,7 +48,7 @@ declare namespace javax {
                      * @see View#changedUpdate
                      */
                     // @ts-ignore
-                    changedUpdate(fv: javax.swing.text.FlowView, e: javax.swing.event.DocumentEvent, alloc: java.awt.Rectangle): void
+                    public changedUpdate(fv: javax.swing.text.FlowView, e: javax.swing.event.DocumentEvent, alloc: java.awt.Rectangle): void
                     /**
                      * This method gives flow strategies access to the logical
                      * view of the FlowView.
@@ -63,7 +63,7 @@ declare namespace javax {
                      * @param fv the view to reflow
                      */
                     // @ts-ignore
-                    layout(fv: javax.swing.text.FlowView): void
+                    public layout(fv: javax.swing.text.FlowView): void
                     /**
                      * Creates a row of views that will fit within the
                      * layout span of the row.  This is called by the layout method.
@@ -80,7 +80,7 @@ declare namespace javax {
                      * @return the position to start the next row
                      */
                     // @ts-ignore
-                    layoutRow(fv: javax.swing.text.FlowView, rowIndex: number /*int*/, pos: number /*int*/): int
+                    layoutRow(fv: javax.swing.text.FlowView, rowIndex: number /*int*/, pos: number /*int*/): number /*int*/
                     /**
                      * Adjusts the given row if possible to fit within the
                      * layout span.  By default this will try to find the

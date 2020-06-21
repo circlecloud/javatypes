@@ -33,32 +33,32 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*float*/
+                    public x: number /*float*/
                     /**
                      * The Y coordinate of this <code>Point2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*float*/
+                    public y: number /*float*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setLocation(x: number /*double*/, y: number /*double*/): void
+                    public setLocation(x: number /*double*/, y: number /*double*/): void
                     /**
                      * Sets the location of this <code>Point2D</code> to the
                      * specified <code>float</code> coordinates.
@@ -67,7 +67,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setLocation(x: number /*float*/, y: number /*float*/): void
+                    public setLocation(x: number /*float*/, y: number /*float*/): void
                     /**
                      * Returns a <code>String</code> that represents the value
                      * of this <code>Point2D</code>.
@@ -75,7 +75,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

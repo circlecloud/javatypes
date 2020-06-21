@@ -30,7 +30,7 @@ declare namespace org {
                                  * @return A mutable list of online players
                                  */
                                 // @ts-ignore
-                                getProfiles(): java.util.List<org.spongepowered.api.profile.GameProfile>
+                                getProfiles(): Array<org.spongepowered.api.profile.GameProfile>
                             }
                         }
                     }

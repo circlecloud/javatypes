@@ -48,12 +48,12 @@ declare namespace org {
                      * in order to expose {@link javax.enterprise.concurrent.ManagedTask} adapters for it.
                      */
                     // @ts-ignore
-                    setConcurrentExecutor(executor: java.util.concurrent.Executor): void
+                    public setConcurrentExecutor(executor: java.util.concurrent.Executor): void
                     /**
                      * Return the {@link java.util.concurrent.Executor} that this adapter delegates to.
                      */
                     // @ts-ignore
-                    getConcurrentExecutor(): java.util.concurrent.Executor
+                    public getConcurrentExecutor(): java.util.concurrent.Executor
                     /**
                      * Specify a custom {@link TaskDecorator} to be applied to any {@link Runnable}
                      * about to be executed.
@@ -65,19 +65,19 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setTaskDecorator(taskDecorator: TaskDecorator): void
+                    public setTaskDecorator(taskDecorator: TaskDecorator): void
                     // @ts-ignore
-                    execute(task: java.lang.Runnable): void
+                    public execute(task: java.lang.Runnable): void
                     // @ts-ignore
-                    execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
+                    public execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
                     // @ts-ignore
-                    submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                    public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                     // @ts-ignore
-                    submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                    public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                     // @ts-ignore
-                    submitListenable(task: java.lang.Runnable): <any>
+                    public submitListenable(task: java.lang.Runnable): object
                     // @ts-ignore
-                    submitListenable<T>(task: java.util.concurrent.Callable<T>): <any>
+                    public submitListenable<T>(task: java.util.concurrent.Callable<T>): object
                 }
             }
         }

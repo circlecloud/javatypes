@@ -53,7 +53,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                activate(force: boolean): java.rmi.Remote
+                public activate(force: boolean): java.rmi.Remote
                 /**
                  * Returns a hashcode for the activation id.  Two identifiers that
                  * refer to the same remote object will have the same hash code.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares two activation ids for content equality.
                  * Returns true if both of the following conditions are true:
@@ -74,7 +74,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

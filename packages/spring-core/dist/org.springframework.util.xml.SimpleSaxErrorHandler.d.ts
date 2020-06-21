@@ -18,11 +18,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(logger: Log)
                     // @ts-ignore
-                    warning(ex: org.xml.sax.SAXParseException): void
+                    public warning(ex: org.xml.sax.SAXParseException): void
                     // @ts-ignore
-                    error(ex: org.xml.sax.SAXParseException): void
+                    public error(ex: org.xml.sax.SAXParseException): void
                     // @ts-ignore
-                    fatalError(ex: org.xml.sax.SAXParseException): void
+                    public fatalError(ex: org.xml.sax.SAXParseException): void
                 }
             }
         }

@@ -18,7 +18,7 @@ declare namespace org {
                         // @ts-ignore
                         getDecompressorStream(zipped: java.io.InputStream): java.io.InputStream
                         // @ts-ignore
-                        getEncoding(): java.lang.String
+                        getEncoding(): string
                     }
                 }
             }

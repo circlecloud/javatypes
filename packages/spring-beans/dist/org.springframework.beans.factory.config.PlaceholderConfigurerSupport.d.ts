@@ -51,43 +51,43 @@ declare namespace org {
                      * @see org.springframework.context.support.PropertySourcesPlaceholderConfigurer
                      */
                     // @ts-ignore
-                    class PlaceholderConfigurerSupport extends org.springframework.beans.factory.config.PropertyResourceConfigurer implements org.springframework.beans.factory.BeanNameAware, org.springframework.beans.factory.BeanFactoryAware {
+                    abstract class PlaceholderConfigurerSupport extends org.springframework.beans.factory.config.PropertyResourceConfigurer implements org.springframework.beans.factory.BeanNameAware, org.springframework.beans.factory.BeanFactoryAware {
                         // @ts-ignore
                         constructor()
                         /**
                          * Default placeholder prefix: {@value}.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_PLACEHOLDER_PREFIX: string
+                        public static readonly DEFAULT_PLACEHOLDER_PREFIX: java.lang.String | string
                         /**
                          * Default placeholder suffix: {@value}.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_PLACEHOLDER_SUFFIX: string
+                        public static readonly DEFAULT_PLACEHOLDER_SUFFIX: java.lang.String | string
                         /**
                          * Default value separator: {@value}.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_VALUE_SEPARATOR: string
+                        public static readonly DEFAULT_VALUE_SEPARATOR: java.lang.String | string
                         /**
                          * Defaults to {@value #DEFAULT_PLACEHOLDER_PREFIX}.
                          */
                         // @ts-ignore
-                        placeholderPrefix: string
+                        placeholderPrefix: java.lang.String | string
                         /**
                          * Defaults to {@value #DEFAULT_PLACEHOLDER_SUFFIX}.
                          */
                         // @ts-ignore
-                        placeholderSuffix: string
+                        placeholderSuffix: java.lang.String | string
                         /**
                          * Defaults to {@value #DEFAULT_VALUE_SEPARATOR}.
                          */
                         // @ts-ignore
-                        valueSeparator: string
+                        valueSeparator: java.lang.String | string
                         // @ts-ignore
                         trimValues: boolean
                         // @ts-ignore
-                        nullValue: string
+                        nullValue: java.lang.String | string
                         // @ts-ignore
                         ignoreUnresolvablePlaceholders: boolean
                         /**
@@ -95,13 +95,13 @@ declare namespace org {
                          * The default is {@value #DEFAULT_PLACEHOLDER_PREFIX}.
                          */
                         // @ts-ignore
-                        setPlaceholderPrefix(placeholderPrefix: string): void
+                        public setPlaceholderPrefix(placeholderPrefix: java.lang.String | string): void
                         /**
                          * Set the suffix that a placeholder string ends with.
                          * The default is {@value #DEFAULT_PLACEHOLDER_SUFFIX}.
                          */
                         // @ts-ignore
-                        setPlaceholderSuffix(placeholderSuffix: string): void
+                        public setPlaceholderSuffix(placeholderSuffix: java.lang.String | string): void
                         /**
                          * Specify the separating character between the placeholder variable
                          * and the associated default value, or {@code null} if no such
@@ -109,7 +109,7 @@ declare namespace org {
                          * The default is {@value #DEFAULT_VALUE_SEPARATOR}.
                          */
                         // @ts-ignore
-                        setValueSeparator(valueSeparator: string): void
+                        public setValueSeparator(valueSeparator: java.lang.String | string): void
                         /**
                          * Specify whether to trim resolved values before applying them,
                          * removing superfluous whitespace from the beginning and end.
@@ -117,7 +117,7 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        setTrimValues(trimValues: boolean): void
+                        public setTrimValues(trimValues: boolean): void
                         /**
                          * Set a value that should be treated as {@code null} when resolved
                          * as a placeholder value: e.g. "" (empty String) or "null".
@@ -128,7 +128,7 @@ declare namespace org {
                          * unless you explicitly map a corresponding value here.
                          */
                         // @ts-ignore
-                        setNullValue(nullValue: string): void
+                        public setNullValue(nullValue: java.lang.String | string): void
                         /**
                          * Set whether to ignore unresolvable placeholders.
                          * <p>Default is "false": An exception will be thrown if a placeholder fails
@@ -137,7 +137,7 @@ declare namespace org {
                          * to resolve it.
                          */
                         // @ts-ignore
-                        setIgnoreUnresolvablePlaceholders(ignoreUnresolvablePlaceholders: boolean): void
+                        public setIgnoreUnresolvablePlaceholders(ignoreUnresolvablePlaceholders: boolean): void
                         /**
                          * Only necessary to check that we're not parsing our own bean definition,
                          * to avoid failing on unresolvable placeholders in properties file locations.
@@ -147,7 +147,7 @@ declare namespace org {
                          * @see org.springframework.core.io.ResourceEditor
                          */
                         // @ts-ignore
-                        setBeanName(beanName: string): void
+                        public setBeanName(beanName: java.lang.String | string): void
                         /**
                          * Only necessary to check that we're not parsing our own bean definition,
                          * to avoid failing on unresolvable placeholders in properties file locations.
@@ -157,7 +157,7 @@ declare namespace org {
                          * @see org.springframework.core.io.ResourceEditor
                          */
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
                         doProcessProperties(beanFactoryToProcess: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, valueResolver: StringValueResolver): void
                     }

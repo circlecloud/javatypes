@@ -28,13 +28,13 @@ declare namespace java {
                  * @return The parent Preferences node whose child was added or removed
                  */
                 // @ts-ignore
-                getParent(): java.util.prefs.Preferences
+                public getParent(): java.util.prefs.Preferences
                 /**
                  * Returns the node that was added or removed.
                  * @return The node that was added or removed.
                  */
                 // @ts-ignore
-                getChild(): java.util.prefs.Preferences
+                public getChild(): java.util.prefs.Preferences
             }
         }
     }

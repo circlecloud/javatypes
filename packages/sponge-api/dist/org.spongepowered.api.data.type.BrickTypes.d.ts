@@ -9,13 +9,13 @@ declare namespace org {
                     // @ts-ignore
                     class BrickTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly CHISELED: org.spongepowered.api.data.type.BrickType
+                        public static readonly CHISELED: org.spongepowered.api.data.type.BrickType
                         // @ts-ignore
-                        readonly CRACKED: org.spongepowered.api.data.type.BrickType
+                        public static readonly CRACKED: org.spongepowered.api.data.type.BrickType
                         // @ts-ignore
-                        readonly DEFAULT: org.spongepowered.api.data.type.BrickType
+                        public static readonly DEFAULT: org.spongepowered.api.data.type.BrickType
                         // @ts-ignore
-                        readonly MOSSY: org.spongepowered.api.data.type.BrickType
+                        public static readonly MOSSY: org.spongepowered.api.data.type.BrickType
                     }
                 }
             }

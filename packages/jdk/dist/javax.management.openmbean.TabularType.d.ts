@@ -42,14 +42,14 @@ declare namespace javax {
                  *                             is not an item name defined in <var>rowType</var>.
                  */
                 // @ts-ignore
-                constructor(typeName: string, description: string, rowType: javax.management.openmbean.CompositeType, indexNames: string[])
+                constructor(typeName: java.lang.String | string, description: java.lang.String | string, rowType: javax.management.openmbean.CompositeType, indexNames: java.lang.String[] | string[])
                 /**
                  * Returns the type of the row elements of tabular data values
                  * described by this <code>TabularType</code> instance.
                  * @return the type of each row.
                  */
                 // @ts-ignore
-                getRowType(): javax.management.openmbean.CompositeType
+                public getRowType(): javax.management.openmbean.CompositeType
                 /**
                  * <p>Returns, in the same order as was given to this instance's
                  * constructor, an unmodifiable List of the names of the items the
@@ -60,7 +60,7 @@ declare namespace javax {
                  *  items.
                  */
                 // @ts-ignore
-                getIndexNames(): java.util.List<java.lang.String>
+                public getIndexNames(): Array<java.lang.String | string>
                 /**
                  * Tests whether <var>obj</var> is a value which could be
                  * described by this <code>TabularType</code> instance.
@@ -79,7 +79,7 @@ declare namespace javax {
                  *  tabular type, <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isValue(obj: any): boolean
+                public isValue(obj: java.lang.Object | any): boolean
                 /**
                  * Compares the specified <code>obj</code> parameter with this <code>TabularType</code> instance for equality.
                  * <p>
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>TabularType</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>TabularType</code> instance.
                  * <p>
@@ -112,7 +112,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>TabularType</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>TabularType</code> instance.
                  * <p>
@@ -125,7 +125,7 @@ declare namespace javax {
                  * @return a string representation of this <code>TabularType</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

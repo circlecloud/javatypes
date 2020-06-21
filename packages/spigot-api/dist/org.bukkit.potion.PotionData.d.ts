@@ -22,25 +22,25 @@ declare namespace org {
                  * @return the potion type
                  */
                 // @ts-ignore
-                getType(): org.bukkit.potion.PotionType
+                public getType(): org.bukkit.potion.PotionType
                 /**
                  * Checks if the potion is in an upgraded state. This refers to whether or
                  * not the potion is Tier 2, such as Potion of Fire Resistance II.
                  * @return true if the potion is upgraded;
                  */
                 // @ts-ignore
-                isUpgraded(): boolean
+                public isUpgraded(): boolean
                 /**
                  * Checks if the potion is in an extended state. This refers to the extended
                  * duration potions
                  * @return true if the potion is extended
                  */
                 // @ts-ignore
-                isExtended(): boolean
+                public isExtended(): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

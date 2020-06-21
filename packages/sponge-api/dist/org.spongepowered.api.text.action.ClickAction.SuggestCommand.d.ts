@@ -8,7 +8,7 @@ declare namespace org {
                          * Suggests a command in the prompt.
                          */
                         // @ts-ignore
-                        class SuggestCommand extends org.spongepowered.api.text.action.ClickAction<java.lang.String> {
+                        class SuggestCommand extends org.spongepowered.api.text.action.ClickAction<java.lang.String | string> {
                         }
                     }
                 }

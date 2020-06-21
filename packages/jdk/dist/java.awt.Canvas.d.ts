@@ -33,7 +33,7 @@ declare namespace java {
              * @see java.awt.Component#getToolkit()
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Paints this canvas.
              * <p>
@@ -48,7 +48,7 @@ declare namespace java {
              * @see Component#paint(Graphics)
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Updates this canvas.
              * <p>
@@ -64,7 +64,7 @@ declare namespace java {
              * @see Component#update(Graphics)
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Creates a new strategy for multi-buffering on this component.
              * Multi-buffering is useful for rendering performance.  This method
@@ -85,7 +85,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createBufferStrategy(numBuffers: number /*int*/): void
+            public createBufferStrategy(numBuffers: number /*int*/): void
             /**
              * Creates a new strategy for multi-buffering on this component with the
              * required buffer capabilities.  This is useful, for example, if only
@@ -107,7 +107,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createBufferStrategy(numBuffers: number /*int*/, caps: java.awt.BufferCapabilities): void
+            public createBufferStrategy(numBuffers: number /*int*/, caps: java.awt.BufferCapabilities): void
             /**
              * Returns the <code>BufferStrategy</code> used by this component.  This
              * method will return null if a <code>BufferStrategy</code> has not yet
@@ -117,7 +117,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBufferStrategy(): java.awt.image.BufferStrategy
+            public getBufferStrategy(): java.awt.image.BufferStrategy
             /**
              * Gets the AccessibleContext associated with this Canvas.
              * For canvases, the AccessibleContext takes the form of an
@@ -128,7 +128,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

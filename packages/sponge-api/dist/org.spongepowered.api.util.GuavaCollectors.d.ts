@@ -16,7 +16,7 @@ declare namespace org {
                      * @deprecated Use {#link ImmutableList#toImmutableList()}
                      */
                     // @ts-ignore
-                    toImmutableList<T>(): java.util.stream.Collector<T, <any>, <any>>
+                    public static toImmutableList<T>(): java.util.stream.Collector<T, object, object>
                     /**
                      * Collect the values from a stream to an {@link ImmutableSet}.
                      * @param <T> The type of elements contained in the set
@@ -24,7 +24,7 @@ declare namespace org {
                      * @deprecated Use {#link ImmutableSet#toImmutableSet()}
                      */
                     // @ts-ignore
-                    toImmutableSet<T>(): java.util.stream.Collector<T, <any>, <any>>
+                    public static toImmutableSet<T>(): java.util.stream.Collector<T, object, object>
                 }
             }
         }

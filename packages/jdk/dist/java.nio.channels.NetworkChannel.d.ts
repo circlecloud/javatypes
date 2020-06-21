@@ -108,7 +108,7 @@ declare namespace java {
                  * @return A set of the socket options supported by this channel
                  */
                 // @ts-ignore
-                supportedOptions(): java.util.Set<java.net.SocketOption<?>>
+                supportedOptions(): Array<java.net.SocketOption<any>>
             }
         }
     }

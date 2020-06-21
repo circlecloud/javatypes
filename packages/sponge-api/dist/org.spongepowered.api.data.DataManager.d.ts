@@ -85,7 +85,7 @@ declare namespace org {
                      * @param <B> The type of immutable data builder
                      */
                     // @ts-ignore
-                    register<T extends org.spongepowered.api.data.ImmutableDataHolder<T>, B extends org.spongepowered.api.data.ImmutableDataBuilder<T, B>>(holderClass: java.lang.Class<T>, builder: B extends org.spongepowered.api.data.ImmutableDataBuilder<T, B>): void
+                    register<T extends org.spongepowered.api.data.ImmutableDataHolder<T>, B extends org.spongepowered.api.data.ImmutableDataBuilder<T, B>>(holderClass: java.lang.Class<T>, builder: B): void
                     /**
                      * Registers a legacy {@code id} that is used by a previous version of
                      * {@link DataRegistration} from a plugin such that the custom data can
@@ -94,7 +94,7 @@ declare namespace org {
                      * @param registration The registration object successfully created
                      */
                     // @ts-ignore
-                    registerLegacyManipulatorIds(legacyId: string, registration: org.spongepowered.api.data.DataRegistration<any, ?>): void
+                    registerLegacyManipulatorIds(legacyId: java.lang.String | string, registration: org.spongepowered.api.data.DataRegistration<any, any>): void
                     /**
                      * Attempts to retrieve the builder for the given
                      * {@link ImmutableDataHolder}.
@@ -155,7 +155,7 @@ declare namespace org {
                      * @return The collection of all registered data manipulator classes
                      */
                     // @ts-ignore
-                    getAllRegistrationsFor(container: org.spongepowered.api.plugin.PluginContainer): java.util.Collection<java.lang.Class<? extends org.spongepowered.api.data.manipulator.DataManipulator<?, ?>>>
+                    getAllRegistrationsFor(container: org.spongepowered.api.plugin.PluginContainer): Array<java.lang.Class<any>>
                     /**
                      * Creates a new {@link DataContainer} with a default
                      * {@link org.spongepowered.api.data.DataView.SafetyMode} of

@@ -65,19 +65,19 @@ declare namespace javax {
                  * @see #OBJECT_CHANGED
                  */
                 // @ts-ignore
-                constructor(source: javax.naming.event.EventContext, type: number /*int*/, newBd: javax.naming.Binding, oldBd: javax.naming.Binding, changeInfo: any)
+                constructor(source: javax.naming.event.EventContext, type: number /*int*/, newBd: javax.naming.Binding, oldBd: javax.naming.Binding, changeInfo: java.lang.Object | any)
                 /**
                  * Naming event type for indicating that a new object has been added.
                  * The value of this constant is <tt>0</tt>.
                  */
                 // @ts-ignore
-                readonly OBJECT_ADDED: number /*int*/
+                public static readonly OBJECT_ADDED: number /*int*/
                 /**
                  * Naming event type for indicating that an object has been removed.
                  * The value of this constant is <tt>1</tt>.
                  */
                 // @ts-ignore
-                readonly OBJECT_REMOVED: number /*int*/
+                public static readonly OBJECT_REMOVED: number /*int*/
                 /**
                  * Naming event type for indicating that an object has been renamed.
                  * Note that some services might fire multiple events for a single
@@ -100,7 +100,7 @@ declare namespace javax {
                  * The value of this constant is <tt>2</tt>.
                  */
                 // @ts-ignore
-                readonly OBJECT_RENAMED: number /*int*/
+                public static readonly OBJECT_RENAMED: number /*int*/
                 /**
                  * Naming event type for indicating that an object has been changed.
                  * The changes might include the object's attributes, or the object itself.
@@ -112,13 +112,13 @@ declare namespace javax {
                  * The value of this constant is <tt>3</tt>.
                  */
                 // @ts-ignore
-                readonly OBJECT_CHANGED: number /*int*/
+                public static readonly OBJECT_CHANGED: number /*int*/
                 /**
                  * Contains information about the change that generated this event.
                  * @serial 
                  */
                 // @ts-ignore
-                changeInfo: any
+                changeInfo: java.lang.Object | any
                 /**
                  * Contains the type of this event.
                  * @see #OBJECT_ADDED
@@ -150,7 +150,7 @@ declare namespace javax {
                  * @see #OBJECT_CHANGED
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Retrieves the event source that fired this event.
                  * This returns the same object as <tt>EventObject.getSource()</tt>.
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @return The non-null context that fired this event.
                  */
                 // @ts-ignore
-                getEventContext(): javax.naming.event.EventContext
+                public getEventContext(): javax.naming.event.EventContext
                 /**
                  * Retrieves the binding of the object before the change.
                  * <p>
@@ -185,7 +185,7 @@ declare namespace javax {
                  * @return The possibly null binding of the object before the change.
                  */
                 // @ts-ignore
-                getOldBinding(): javax.naming.Binding
+                public getOldBinding(): javax.naming.Binding
                 /**
                  * Retrieves the binding of the object after the change.
                  * <p>
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @return The possibly null binding of the object after the change.
                  */
                 // @ts-ignore
-                getNewBinding(): javax.naming.Binding
+                public getNewBinding(): javax.naming.Binding
                 /**
                  * Retrieves the change information for this event.
                  * The value of the change information is service-specific. For example,
@@ -212,7 +212,7 @@ declare namespace javax {
                  * @return The possibly null change information of this event.
                  */
                 // @ts-ignore
-                getChangeInfo(): java.lang.Object
+                public getChangeInfo(): any
                 /**
                  * Invokes the appropriate listener method on this event.
                  * The default implementation of
@@ -227,7 +227,7 @@ declare namespace javax {
                  * @param listener The nonnull listener.
                  */
                 // @ts-ignore
-                dispatch(listener: javax.naming.event.NamingListener): void
+                public dispatch(listener: javax.naming.event.NamingListener): void
             }
         }
     }

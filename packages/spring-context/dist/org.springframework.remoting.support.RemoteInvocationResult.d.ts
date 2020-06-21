@@ -21,14 +21,14 @@ declare namespace org {
                      *  of the target method
                      */
                     // @ts-ignore
-                    constructor(value: any)
+                    constructor(value: java.lang.Object | any)
                     /**
                      * Create a new RemoteInvocationResult for the given exception.
                      * @param exception the exception thrown by an unsuccessful invocation
                      *  of the target method
                      */
                     // @ts-ignore
-                    constructor(exception: Error)
+                    constructor(exception: java.lang.Throwable | Error)
                     /**
                      * Create a new RemoteInvocationResult for JavaBean-style deserialization
                      * (e.g. with Jackson).
@@ -45,14 +45,14 @@ declare namespace org {
                      * @see #RemoteInvocationResult()
                      */
                     // @ts-ignore
-                    setValue(value: any): void
+                    public setValue(value: java.lang.Object | any): void
                     /**
                      * Return the result value returned by a successful invocation
                      * of the target method, if any.
                      * @see #hasException
                      */
                     // @ts-ignore
-                    getValue(): java.lang.Object
+                    public getValue(): any
                     /**
                      * Set the exception thrown by an unsuccessful invocation of the
                      * target method, if any.
@@ -61,14 +61,14 @@ declare namespace org {
                      * @see #RemoteInvocationResult()
                      */
                     // @ts-ignore
-                    setException(exception: Error): void
+                    public setException(exception: java.lang.Throwable | Error): void
                     /**
                      * Return the exception thrown by an unsuccessful invocation
                      * of the target method, if any.
                      * @see #hasException
                      */
                     // @ts-ignore
-                    getException(): java.lang.Throwable
+                    public getException(): Error
                     /**
                      * Return whether this invocation result holds an exception.
                      * If this returns {@code false}, the result value applies
@@ -77,14 +77,14 @@ declare namespace org {
                      * @see #getException
                      */
                     // @ts-ignore
-                    hasException(): boolean
+                    public hasException(): boolean
                     /**
                      * Return whether this invocation result holds an InvocationTargetException,
                      * thrown by an invocation of the target method itself.
                      * @see #hasException()
                      */
                     // @ts-ignore
-                    hasInvocationTargetException(): boolean
+                    public hasInvocationTargetException(): boolean
                     /**
                      * Recreate the invocation result, either returning the result value
                      * in case of a successful invocation of the target method, or
@@ -93,7 +93,7 @@ declare namespace org {
                      * @throws Throwable the exception, if any
                      */
                     // @ts-ignore
-                    recreate(): java.lang.Object
+                    public recreate(): any
                 }
             }
         }

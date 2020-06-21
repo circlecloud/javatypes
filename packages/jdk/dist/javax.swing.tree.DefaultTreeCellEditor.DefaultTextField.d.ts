@@ -36,15 +36,15 @@ declare namespace javax {
                      *   description: The component's border.
                      */
                     // @ts-ignore
-                    setBorder(border: javax.swing.border.Border): void
+                    public setBorder(border: javax.swing.border.Border): void
                     /**
                      * Overrides <code>JComponent.getBorder</code> to
                      * returns the current border.
                      */
                     // @ts-ignore
-                    getBorder(): javax.swing.border.Border
+                    public getBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getFont(): java.awt.Font
+                    public getFont(): java.awt.Font
                     /**
                      * Overrides <code>JTextField.getPreferredSize</code> to
                      * return the preferred size based on current font, if set,
@@ -53,7 +53,7 @@ declare namespace javax {
                      *    the preferred size
                      */
                     // @ts-ignore
-                    getPreferredSize(): java.awt.Dimension
+                    public getPreferredSize(): java.awt.Dimension
                 }
             }
         }

@@ -75,7 +75,7 @@ declare namespace javax {
                  * @return A non-null string representing the IANA-registered mechanism name.
                  */
                 // @ts-ignore
-                getMechanismName(): java.lang.String
+                getMechanismName(): string
                 /**
                  * Determines whether this mechanism has an optional initial response.
                  * If true, caller should call {@code evaluateChallenge()} with an
@@ -100,7 +100,7 @@ declare namespace javax {
                  *  the challenge or generating a response.
                  */
                 // @ts-ignore
-                evaluateChallenge(challenge: number /*byte*/[]): byte[]
+                evaluateChallenge(challenge: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Determines whether the authentication exchange has completed.
                  * This method may be called at any time, but typically, it
@@ -135,7 +135,7 @@ declare namespace javax {
                  *  has neither integrity nor privacy.
                  */
                 // @ts-ignore
-                unwrap(incoming: number /*byte*/[], offset: number /*int*/, len: number /*int*/): byte[]
+                unwrap(incoming: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*byte*/[]
                 /**
                  * Wraps a byte array to be sent to the server.
                  * This method can be called only after the authentication exchange has
@@ -160,7 +160,7 @@ declare namespace javax {
                  *  has neither integrity nor privacy.
                  */
                 // @ts-ignore
-                wrap(outgoing: number /*byte*/[], offset: number /*int*/, len: number /*int*/): byte[]
+                wrap(outgoing: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*byte*/[]
                 /**
                  * Retrieves the negotiated property.
                  * This method can be called only after the authentication exchange has
@@ -173,7 +173,7 @@ declare namespace javax {
                  *  has not completed
                  */
                 // @ts-ignore
-                getNegotiatedProperty(propName: string): java.lang.Object
+                getNegotiatedProperty(propName: java.lang.String | string): any
                 /**
                  * Disposes of any system resources or security-sensitive information
                  * the SaslClient might be using. Invoking this method invalidates

@@ -12,27 +12,27 @@ declare namespace org {
             // @ts-ignore
             class IndexHelpTopic extends org.bukkit.help.HelpTopic {
                 // @ts-ignore
-                constructor(name: string, shortText: string, permission: string, topics: Array<org.bukkit.help.HelpTopic>)
+                constructor(name: java.lang.String | string, shortText: java.lang.String | string, permission: java.lang.String | string, topics: java.util.Collection<org.bukkit.help.HelpTopic> | Array<org.bukkit.help.HelpTopic>)
                 // @ts-ignore
-                constructor(name: string, shortText: string, permission: string, topics: Array<org.bukkit.help.HelpTopic>, preamble: string)
+                constructor(name: java.lang.String | string, shortText: java.lang.String | string, permission: java.lang.String | string, topics: java.util.Collection<org.bukkit.help.HelpTopic> | Array<org.bukkit.help.HelpTopic>, preamble: java.lang.String | string)
                 // @ts-ignore
-                permission: string
+                permission: java.lang.String | string
                 // @ts-ignore
-                preamble: string
+                preamble: java.lang.String | string
                 // @ts-ignore
-                allTopics: Array<org.bukkit.help.HelpTopic>
+                allTopics: java.util.Collection<org.bukkit.help.HelpTopic> | Array<org.bukkit.help.HelpTopic>
                 /**
                  * Sets the contents of the internal allTopics collection.
                  * @param topics The topics to set.
                  */
                 // @ts-ignore
-                setTopicsCollection(topics: Array<org.bukkit.help.HelpTopic>): void
+                setTopicsCollection(topics: java.util.Collection<org.bukkit.help.HelpTopic> | Array<org.bukkit.help.HelpTopic>): void
                 // @ts-ignore
-                canSee(sender: org.bukkit.command.CommandSender): boolean
+                public canSee(sender: org.bukkit.command.CommandSender): boolean
                 // @ts-ignore
-                amendCanSee(amendedPermission: string): void
+                public amendCanSee(amendedPermission: java.lang.String | string): void
                 // @ts-ignore
-                getFullText(sender: org.bukkit.command.CommandSender): java.lang.String
+                public getFullText(sender: org.bukkit.command.CommandSender): string
                 /**
                  * Builds the topic preamble. Override this method to change how the index
                  * preamble looks.
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return The topic preamble.
                  */
                 // @ts-ignore
-                buildPreamble(sender: org.bukkit.command.CommandSender): java.lang.String
+                buildPreamble(sender: org.bukkit.command.CommandSender): string
                 /**
                  * Builds individual lines in the index topic. Override this method to
                  * change how index lines are rendered.
@@ -49,7 +49,7 @@ declare namespace org {
                  * @return The rendered index line.
                  */
                 // @ts-ignore
-                buildIndexLine(sender: org.bukkit.command.CommandSender, topic: org.bukkit.help.HelpTopic): java.lang.String
+                buildIndexLine(sender: org.bukkit.command.CommandSender, topic: org.bukkit.help.HelpTopic): string
             }
         }
     }

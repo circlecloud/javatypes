@@ -35,7 +35,7 @@ declare namespace javax {
                  * @param title  the title the border should display
                  */
                 // @ts-ignore
-                constructor(title: string)
+                constructor(title: java.lang.String | string)
                 /**
                  * Creates a TitledBorder instance with the specified border
                  * and an empty title.
@@ -50,7 +50,7 @@ declare namespace javax {
                  * @param title  the title the border should display
                  */
                 // @ts-ignore
-                constructor(border: javax.swing.border.Border, title: string)
+                constructor(border: javax.swing.border.Border, title: java.lang.String | string)
                 /**
                  * Creates a TitledBorder instance with the specified border,
                  * title, title-justification, and title-position.
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @param titlePosition the position for the title
                  */
                 // @ts-ignore
-                constructor(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/)
+                constructor(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/)
                 /**
                  * Creates a TitledBorder instance with the specified border,
                  * title, title-justification, title-position, and title-font.
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @param titleFont the font for rendering the title
                  */
                 // @ts-ignore
-                constructor(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font)
+                constructor(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font)
                 /**
                  * Creates a TitledBorder instance with the specified border,
                  * title, title-justification, title-position, title-font, and
@@ -84,9 +84,9 @@ declare namespace javax {
                  * @param titleColor the color of the title
                  */
                 // @ts-ignore
-                constructor(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font, titleColor: java.awt.Color)
+                constructor(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font, titleColor: java.awt.Color)
                 // @ts-ignore
-                title: string
+                title: java.lang.String | string
                 // @ts-ignore
                 border: javax.swing.border.Border
                 // @ts-ignore
@@ -101,77 +101,77 @@ declare namespace javax {
                  * Use the default vertical orientation for the title text.
                  */
                 // @ts-ignore
-                readonly DEFAULT_POSITION: number /*int*/
+                public static readonly DEFAULT_POSITION: number /*int*/
                 /**
                  * Position the title above the border's top line.
                  */
                 // @ts-ignore
-                readonly ABOVE_TOP: number /*int*/
+                public static readonly ABOVE_TOP: number /*int*/
                 /**
                  * Position the title in the middle of the border's top line.
                  */
                 // @ts-ignore
-                readonly TOP: number /*int*/
+                public static readonly TOP: number /*int*/
                 /**
                  * Position the title below the border's top line.
                  */
                 // @ts-ignore
-                readonly BELOW_TOP: number /*int*/
+                public static readonly BELOW_TOP: number /*int*/
                 /**
                  * Position the title above the border's bottom line.
                  */
                 // @ts-ignore
-                readonly ABOVE_BOTTOM: number /*int*/
+                public static readonly ABOVE_BOTTOM: number /*int*/
                 /**
                  * Position the title in the middle of the border's bottom line.
                  */
                 // @ts-ignore
-                readonly BOTTOM: number /*int*/
+                public static readonly BOTTOM: number /*int*/
                 /**
                  * Position the title below the border's bottom line.
                  */
                 // @ts-ignore
-                readonly BELOW_BOTTOM: number /*int*/
+                public static readonly BELOW_BOTTOM: number /*int*/
                 /**
                  * Use the default justification for the title text.
                  */
                 // @ts-ignore
-                readonly DEFAULT_JUSTIFICATION: number /*int*/
+                public static readonly DEFAULT_JUSTIFICATION: number /*int*/
                 /**
                  * Position title text at the left side of the border line.
                  */
                 // @ts-ignore
-                readonly LEFT: number /*int*/
+                public static readonly LEFT: number /*int*/
                 /**
                  * Position title text in the center of the border line.
                  */
                 // @ts-ignore
-                readonly CENTER: number /*int*/
+                public static readonly CENTER: number /*int*/
                 /**
                  * Position title text at the right side of the border line.
                  */
                 // @ts-ignore
-                readonly RIGHT: number /*int*/
+                public static readonly RIGHT: number /*int*/
                 /**
                  * Position title text at the left side of the border line
                  * for left to right orientation, at the right side of the
                  * border line for right to left orientation.
                  */
                 // @ts-ignore
-                readonly LEADING: number /*int*/
+                public static readonly LEADING: number /*int*/
                 /**
                  * Position title text at the right side of the border line
                  * for left to right orientation, at the left side of the
                  * border line for right to left orientation.
                  */
                 // @ts-ignore
-                readonly TRAILING: number /*int*/
+                public static readonly TRAILING: number /*int*/
                 // @ts-ignore
-                readonly EDGE_SPACING: number /*int*/
+                static readonly EDGE_SPACING: number /*int*/
                 // @ts-ignore
-                readonly TEXT_SPACING: number /*int*/
+                static readonly TEXT_SPACING: number /*int*/
                 // @ts-ignore
-                readonly TEXT_INSET_H: number /*int*/
+                static readonly TEXT_INSET_H: number /*int*/
                 /**
                  * Paints the border for the specified component with the
                  * specified position and size.
@@ -183,91 +183,91 @@ declare namespace javax {
                  * @param height the height of the painted border
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitialize the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
                  * @param insets the object to be reinitialized
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns whether or not the border is opaque.
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
                 /**
                  * Returns the title of the titled border.
                  * @return the title of the titled border
                  */
                 // @ts-ignore
-                getTitle(): java.lang.String
+                public getTitle(): string
                 /**
                  * Returns the border of the titled border.
                  * @return the border of the titled border
                  */
                 // @ts-ignore
-                getBorder(): javax.swing.border.Border
+                public getBorder(): javax.swing.border.Border
                 /**
                  * Returns the title-position of the titled border.
                  * @return the title-position of the titled border
                  */
                 // @ts-ignore
-                getTitlePosition(): int
+                public getTitlePosition(): number /*int*/
                 /**
                  * Returns the title-justification of the titled border.
                  * @return the title-justification of the titled border
                  */
                 // @ts-ignore
-                getTitleJustification(): int
+                public getTitleJustification(): number /*int*/
                 /**
                  * Returns the title-font of the titled border.
                  * @return the title-font of the titled border
                  */
                 // @ts-ignore
-                getTitleFont(): java.awt.Font
+                public getTitleFont(): java.awt.Font
                 /**
                  * Returns the title-color of the titled border.
                  * @return the title-color of the titled border
                  */
                 // @ts-ignore
-                getTitleColor(): java.awt.Color
+                public getTitleColor(): java.awt.Color
                 /**
                  * Sets the title of the titled border.
                  * @param title  the title for the border
                  */
                 // @ts-ignore
-                setTitle(title: string): void
+                public setTitle(title: java.lang.String | string): void
                 /**
                  * Sets the border of the titled border.
                  * @param border the border
                  */
                 // @ts-ignore
-                setBorder(border: javax.swing.border.Border): void
+                public setBorder(border: javax.swing.border.Border): void
                 /**
                  * Sets the title-position of the titled border.
                  * @param titlePosition the position for the border
                  */
                 // @ts-ignore
-                setTitlePosition(titlePosition: number /*int*/): void
+                public setTitlePosition(titlePosition: number /*int*/): void
                 /**
                  * Sets the title-justification of the titled border.
                  * @param titleJustification the justification for the border
                  */
                 // @ts-ignore
-                setTitleJustification(titleJustification: number /*int*/): void
+                public setTitleJustification(titleJustification: number /*int*/): void
                 /**
                  * Sets the title-font of the titled border.
                  * @param titleFont the font for the border title
                  */
                 // @ts-ignore
-                setTitleFont(titleFont: java.awt.Font): void
+                public setTitleFont(titleFont: java.awt.Font): void
                 /**
                  * Sets the title-color of the titled border.
                  * @param titleColor the color for the border title
                  */
                 // @ts-ignore
-                setTitleColor(titleColor: java.awt.Color): void
+                public setTitleColor(titleColor: java.awt.Color): void
                 /**
                  * Returns the minimum dimensions this border requires
                  * in order to fully display the border and title.
@@ -275,7 +275,7 @@ declare namespace javax {
                  * @return the {#code Dimension} object
                  */
                 // @ts-ignore
-                getMinimumSize(c: java.awt.Component): java.awt.Dimension
+                public getMinimumSize(c: java.awt.Component): java.awt.Dimension
                 /**
                  * Returns the baseline.
                  * @throws NullPointerException {#inheritDoc}
@@ -284,7 +284,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaseline(c: java.awt.Component, width: number /*int*/, height: number /*int*/): int
+                public getBaseline(c: java.awt.Component, width: number /*int*/, height: number /*int*/): number /*int*/
                 /**
                  * Returns an enum indicating how the baseline of the border
                  * changes as the size changes.
@@ -293,7 +293,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaselineResizeBehavior(c: java.awt.Component): java.awt.Component.BaselineResizeBehavior
+                public getBaselineResizeBehavior(c: java.awt.Component): java.awt.Component.BaselineResizeBehavior
                 // @ts-ignore
                 getFont(c: java.awt.Component): java.awt.Font
             }

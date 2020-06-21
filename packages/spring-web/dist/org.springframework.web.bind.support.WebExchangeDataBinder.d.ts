@@ -18,7 +18,7 @@ declare namespace org {
                          * @see #DEFAULT_OBJECT_NAME
                          */
                         // @ts-ignore
-                        constructor(target: any)
+                        constructor(target: java.lang.Object | any)
                         /**
                          * Create a new instance.
                          * @param target the target object to bind onto (or {#code null} if the
@@ -26,20 +26,20 @@ declare namespace org {
                          * @param objectName the name of the target object
                          */
                         // @ts-ignore
-                        constructor(target: any, objectName: string)
+                        constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                         /**
                          * Bind query params, form data, and or multipart form data to the binder target.
                          * @param exchange the current exchange.
                          * @return a {#code Mono<Void>} when binding is complete
                          */
                         // @ts-ignore
-                        bind(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public bind(exchange: org.springframework.web.server.ServerWebExchange): object
                         /**
                          * Protected method to obtain the values for data binding. By default this
                          * method delegates to {@link #extractValuesToBind(ServerWebExchange)}.
                          */
                         // @ts-ignore
-                        getValuesToBind(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        getValuesToBind(exchange: org.springframework.web.server.ServerWebExchange): object
                         /**
                          * Combine query params and form data for multipart form data from the body
                          * of the request into a {@code Map<String, Object>} of values to use for
@@ -51,7 +51,7 @@ declare namespace org {
                          * @see ServerWebExchange#getMultipartData()
                          */
                         // @ts-ignore
-                        extractValuesToBind(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public static extractValuesToBind(exchange: org.springframework.web.server.ServerWebExchange): object
                     }
                 }
             }

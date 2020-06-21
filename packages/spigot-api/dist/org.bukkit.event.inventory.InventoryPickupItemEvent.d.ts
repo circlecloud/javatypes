@@ -14,21 +14,21 @@ declare namespace org {
                      * @return Inventory
                      */
                     // @ts-ignore
-                    getInventory(): org.bukkit.inventory.Inventory
+                    public getInventory(): org.bukkit.inventory.Inventory
                     /**
                      * Gets the Item entity that was picked up
                      * @return Item
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.entity.Item
+                    public getItem(): org.bukkit.entity.Item
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

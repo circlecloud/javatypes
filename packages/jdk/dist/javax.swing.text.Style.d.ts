@@ -21,7 +21,7 @@ declare namespace javax {
                  * @return the name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Adds a listener to track whenever an attribute
                  * has been changed.

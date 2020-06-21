@@ -23,12 +23,12 @@ declare namespace javax {
              * The do-nothing default window close operation.
              */
             // @ts-ignore
-            
+            readonly DO_NOTHING_ON_CLOSE: number /*int*/
             /**
              * The hide-window default window close operation
              */
             // @ts-ignore
-            
+            readonly HIDE_ON_CLOSE: number /*int*/
             /**
              * The dispose-window default window close operation.
              * <p>
@@ -40,7 +40,7 @@ declare namespace javax {
              * @see JInternalFrame#dispose()
              */
             // @ts-ignore
-            
+            readonly DISPOSE_ON_CLOSE: number /*int*/
             /**
              * The exit application default window close operation. Attempting
              * to set this on Windows that support this, such as
@@ -51,7 +51,7 @@ declare namespace javax {
              * @see JFrame#setDefaultCloseOperation
              */
             // @ts-ignore
-            
+            readonly EXIT_ON_CLOSE: number /*int*/
         }
     }
 }

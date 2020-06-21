@@ -12,9 +12,9 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    focusGained(event: java.awt.event.FocusEvent): void
+                    public focusGained(event: java.awt.event.FocusEvent): void
                     // @ts-ignore
-                    focusLost(event: java.awt.event.FocusEvent): void
+                    public focusLost(event: java.awt.event.FocusEvent): void
                 }
             }
         }

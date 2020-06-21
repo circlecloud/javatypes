@@ -33,7 +33,7 @@ declare namespace org {
                              * @return The lake spawn probability
                              */
                             // @ts-ignore
-                            getLakeProbability(): double
+                            getLakeProbability(): number /*double*/
                             /**
                              * Sets the probability of a lake spawning in a chunk.
                              * @param p The new lake spawn probability

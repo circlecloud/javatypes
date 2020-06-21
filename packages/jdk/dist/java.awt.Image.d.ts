@@ -9,7 +9,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Image extends java.lang.Object {
+        abstract class Image extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -26,27 +26,27 @@ declare namespace java {
              * property which was not defined for a particular image is fetched.
              */
             // @ts-ignore
-            readonly UndefinedProperty: any
+            public static readonly UndefinedProperty: java.lang.Object | any
             /**
              * Use the default image-scaling algorithm.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCALE_DEFAULT: number /*int*/
+            public static readonly SCALE_DEFAULT: number /*int*/
             /**
              * Choose an image-scaling algorithm that gives higher priority
              * to scaling speed than smoothness of the scaled image.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCALE_FAST: number /*int*/
+            public static readonly SCALE_FAST: number /*int*/
             /**
              * Choose an image-scaling algorithm that gives higher priority
              * to image smoothness than scaling speed.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCALE_SMOOTH: number /*int*/
+            public static readonly SCALE_SMOOTH: number /*int*/
             /**
              * Use the image scaling algorithm embodied in the
              * <code>ReplicateScaleFilter</code> class.
@@ -57,7 +57,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCALE_REPLICATE: number /*int*/
+            public static readonly SCALE_REPLICATE: number /*int*/
             /**
              * Use the Area Averaging image scaling algorithm.  The
              * image object is free to substitute a different filter that
@@ -67,7 +67,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly SCALE_AREA_AVERAGING: number /*int*/
+            public static readonly SCALE_AREA_AVERAGING: number /*int*/
             /**
              * Determines the width of the image. If the width is not yet known,
              * this method returns <code>-1</code> and the specified
@@ -79,7 +79,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver
              */
             // @ts-ignore
-            abstract getWidth(observer: java.awt.image.ImageObserver): int
+            public abstract getWidth(observer: java.awt.image.ImageObserver): number /*int*/
             /**
              * Determines the height of the image. If the height is not yet known,
              * this method returns <code>-1</code> and the specified
@@ -91,7 +91,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver
              */
             // @ts-ignore
-            abstract getHeight(observer: java.awt.image.ImageObserver): int
+            public abstract getHeight(observer: java.awt.image.ImageObserver): number /*int*/
             /**
              * Gets the object that produces the pixels for the image.
              * This method is called by the image filtering classes and by
@@ -101,7 +101,7 @@ declare namespace java {
              * @see java.awt.image.ImageProducer
              */
             // @ts-ignore
-            abstract getSource(): java.awt.image.ImageProducer
+            public abstract getSource(): java.awt.image.ImageProducer
             /**
              * Creates a graphics context for drawing to an off-screen image.
              * This method can only be called for off-screen images.
@@ -112,7 +112,7 @@ declare namespace java {
              * @see java.awt.Component#createImage(int, int)
              */
             // @ts-ignore
-            abstract getGraphics(): java.awt.Graphics
+            public abstract getGraphics(): java.awt.Graphics
             /**
              * Gets a property of this image by name.
              * <p>
@@ -135,7 +135,7 @@ declare namespace java {
              * @see java.awt.Image#UndefinedProperty
              */
             // @ts-ignore
-            abstract getProperty(name: string, observer: java.awt.image.ImageObserver): java.lang.Object
+            public abstract getProperty(name: java.lang.String | string, observer: java.awt.image.ImageObserver): any
             /**
              * Creates a scaled version of this image.
              * A new <code>Image</code> object is returned which will render
@@ -164,7 +164,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getScaledInstance(width: number /*int*/, height: number /*int*/, hints: number /*int*/): java.awt.Image
+            public getScaledInstance(width: number /*int*/, height: number /*int*/, hints: number /*int*/): java.awt.Image
             /**
              * Flushes all reconstructable resources being used by this Image object.
              * This includes any pixel data that is being cached for rendering to
@@ -203,7 +203,7 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Returns an ImageCapabilities object which can be
              * inquired as to the capabilities of this
@@ -227,7 +227,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getCapabilities(gc: java.awt.GraphicsConfiguration): java.awt.ImageCapabilities
+            public getCapabilities(gc: java.awt.GraphicsConfiguration): java.awt.ImageCapabilities
             /**
              * Sets a hint for this image about how important acceleration is.
              * This priority hint is used to compare to the priorities of other
@@ -249,7 +249,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setAccelerationPriority(priority: number /*float*/): void
+            public setAccelerationPriority(priority: number /*float*/): void
             /**
              * Returns the current value of the acceleration priority hint.
              * @see #setAccelerationPriority(float priority) setAccelerationPriority
@@ -258,7 +258,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getAccelerationPriority(): float
+            public getAccelerationPriority(): number /*float*/
         }
     }
 }

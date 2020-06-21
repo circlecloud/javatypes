@@ -105,7 +105,7 @@ declare namespace java {
              * @see Component#setVisible
              */
             // @ts-ignore
-            constructor(owner: java.awt.Frame, title: string)
+            constructor(owner: java.awt.Frame, title: java.lang.String | string)
             /**
              * Constructs an initially invisible <code>Dialog</code> with the
              * specified owner <code>Frame</code>, title and modality.
@@ -131,7 +131,7 @@ declare namespace java {
              * @see Component#setVisible
              */
             // @ts-ignore
-            constructor(owner: java.awt.Frame, title: string, modal: boolean)
+            constructor(owner: java.awt.Frame, title: java.lang.String | string, modal: boolean)
             /**
              * Constructs an initially invisible <code>Dialog</code> with the specified owner
              * <code>Frame</code>, title, modality, and <code>GraphicsConfiguration</code>.
@@ -161,7 +161,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(owner: java.awt.Frame, title: string, modal: boolean, gc: java.awt.GraphicsConfiguration)
+            constructor(owner: java.awt.Frame, title: java.lang.String | string, modal: boolean, gc: java.awt.GraphicsConfiguration)
             /**
              * Constructs an initially invisible, modeless <code>Dialog</code> with
              * the specified owner <code>Dialog</code> and an empty title.
@@ -191,7 +191,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            constructor(owner: java.awt.Dialog, title: string)
+            constructor(owner: java.awt.Dialog, title: java.lang.String | string)
             /**
              * Constructs an initially invisible <code>Dialog</code> with the
              * specified owner <code>Dialog</code>, title, and modality.
@@ -216,7 +216,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            constructor(owner: java.awt.Dialog, title: string, modal: boolean)
+            constructor(owner: java.awt.Dialog, title: java.lang.String | string, modal: boolean)
             /**
              * Constructs an initially invisible <code>Dialog</code> with the
              * specified owner <code>Dialog</code>, title, modality and
@@ -247,7 +247,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(owner: java.awt.Dialog, title: string, modal: boolean, gc: java.awt.GraphicsConfiguration)
+            constructor(owner: java.awt.Dialog, title: java.lang.String | string, modal: boolean, gc: java.awt.GraphicsConfiguration)
             /**
              * Constructs an initially invisible, modeless <code>Dialog</code> with the
              * specified owner <code>Window</code> and an empty title.
@@ -285,7 +285,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(owner: java.awt.Window, title: string)
+            constructor(owner: java.awt.Window, title: java.lang.String | string)
             /**
              * Constructs an initially invisible <code>Dialog</code> with the
              * specified owner <code>Window</code> and modality and an empty title.
@@ -341,7 +341,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(owner: java.awt.Window, title: string, modalityType: java.awt.Dialog.ModalityType)
+            constructor(owner: java.awt.Window, title: java.lang.String | string, modalityType: java.awt.Dialog.ModalityType)
             /**
              * Constructs an initially invisible <code>Dialog</code> with the
              * specified owner <code>Window</code>, title, modality and
@@ -374,7 +374,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(owner: java.awt.Window, title: string, modalityType: java.awt.Dialog.ModalityType, gc: java.awt.GraphicsConfiguration)
+            constructor(owner: java.awt.Window, title: java.lang.String | string, modalityType: java.awt.Dialog.ModalityType, gc: java.awt.GraphicsConfiguration)
             /**
              * Default modality type for modal dialogs. The default modality type is
              * <code>APPLICATION_MODAL</code>. Calling the oldstyle <code>setModal(true)</code>
@@ -384,7 +384,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly DEFAULT_MODALITY_TYPE: java.awt.Dialog.ModalityType
+            public static readonly DEFAULT_MODALITY_TYPE: java.awt.Dialog.ModalityType
             /**
              * Makes this Dialog displayable by connecting it to
              * a native screen resource.  Making a dialog displayable will
@@ -395,7 +395,7 @@ declare namespace java {
              * @see #removeNotify
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Indicates whether the dialog is modal.
              * <p>
@@ -410,7 +410,7 @@ declare namespace java {
              * @see java.awt.Dialog#setModalityType
              */
             // @ts-ignore
-            isModal(): boolean
+            public isModal(): boolean
             /**
              * Specifies whether this dialog should be modal.
              * <p>
@@ -432,7 +432,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setModal(modal: boolean): void
+            public setModal(modal: boolean): void
             /**
              * Returns the modality type of this dialog.
              * @return modality type of this dialog
@@ -440,7 +440,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getModalityType(): java.awt.Dialog.ModalityType
+            public getModalityType(): java.awt.Dialog.ModalityType
             /**
              * Sets the modality type for this dialog. See {@link
              * java.awt.Dialog.ModalityType ModalityType} for possible modality types.
@@ -461,7 +461,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setModalityType(type: java.awt.Dialog.ModalityType): void
+            public setModalityType(type: java.awt.Dialog.ModalityType): void
             /**
              * Gets the title of the dialog. The title is displayed in the
              * dialog's border.
@@ -470,7 +470,7 @@ declare namespace java {
              * @see java.awt.Dialog#setTitle
              */
             // @ts-ignore
-            getTitle(): java.lang.String
+            public getTitle(): string
             /**
              * Sets the title of the Dialog.
              * @param title the title displayed in the dialog's border;
@@ -478,7 +478,7 @@ declare namespace java {
              * @see #getTitle
              */
             // @ts-ignore
-            setTitle(title: string): void
+            public setTitle(title: java.lang.String | string): void
             /**
              * Shows or hides this {@code Dialog} depending on the value of parameter
              * {@code b}.
@@ -509,7 +509,7 @@ declare namespace java {
              * @see java.awt.Dialog#isModal
              */
             // @ts-ignore
-            setVisible(b: boolean): void
+            public setVisible(b: boolean): void
             /**
              * Makes the {@code Dialog} visible. If the dialog and/or its owner
              * are not yet displayable, both are made displayable.  The
@@ -531,7 +531,7 @@ declare namespace java {
              *  {#link #setVisible(boolean) setVisible(boolean)}.
              */
             // @ts-ignore
-            show(): void
+            public show(): void
             /**
              * Hides the Dialog and then causes {@code show} to return if it is currently
              * blocked.
@@ -542,7 +542,7 @@ declare namespace java {
              *  {#link #setVisible(boolean) setVisible(boolean)}.
              */
             // @ts-ignore
-            hide(): void
+            public hide(): void
             /**
              * {@inheritDoc}
              * <p>
@@ -551,7 +551,7 @@ declare namespace java {
              * @see java.awt.Window#toBack
              */
             // @ts-ignore
-            toBack(): void
+            public toBack(): void
             /**
              * Indicates whether this dialog is resizable by the user.
              * By default, all dialogs are initially resizable.
@@ -560,7 +560,7 @@ declare namespace java {
              * @see java.awt.Dialog#setResizable
              */
             // @ts-ignore
-            isResizable(): boolean
+            public isResizable(): boolean
             /**
              * Sets whether this dialog is resizable by the user.
              * @param resizable <code>true</code> if the user can
@@ -568,7 +568,7 @@ declare namespace java {
              * @see java.awt.Dialog#isResizable
              */
             // @ts-ignore
-            setResizable(resizable: boolean): void
+            public setResizable(resizable: boolean): void
             /**
              * Disables or enables decorations for this dialog.
              * <p>
@@ -595,7 +595,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setUndecorated(undecorated: boolean): void
+            public setUndecorated(undecorated: boolean): void
             /**
              * Indicates whether this dialog is undecorated.
              * By default, all dialogs are initially decorated.
@@ -605,22 +605,22 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isUndecorated(): boolean
+            public isUndecorated(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setOpacity(opacity: number /*float*/): void
+            public setOpacity(opacity: number /*float*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setShape(shape: java.awt.Shape): void
+            public setShape(shape: java.awt.Shape): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setBackground(bgColor: java.awt.Color): void
+            public setBackground(bgColor: java.awt.Color): void
             /**
              * Returns a string representing the state of this dialog. This
              * method is intended to be used only for debugging purposes, and the
@@ -630,7 +630,7 @@ declare namespace java {
              * @return the parameter string of this dialog window.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this Dialog.
              * For dialogs, the AccessibleContext takes the form of an
@@ -641,7 +641,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

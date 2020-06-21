@@ -11,7 +11,7 @@ declare namespace org {
                  * @return Amount of experience
                  */
                 // @ts-ignore
-                getExperience(): int
+                getExperience(): number /*int*/
                 /**
                  * Sets how much experience is contained within this orb
                  * @param value Amount of experience

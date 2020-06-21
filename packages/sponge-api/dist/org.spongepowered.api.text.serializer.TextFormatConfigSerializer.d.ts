@@ -12,9 +12,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        deserialize(type: object, value: ConfigurationNode): org.spongepowered.api.text.format.TextFormat
+                        public deserialize(type: object, value: ConfigurationNode): org.spongepowered.api.text.format.TextFormat
                         // @ts-ignore
-                        serialize(type: object, obj: org.spongepowered.api.text.format.TextFormat, value: ConfigurationNode): void
+                        public serialize(type: object, obj: org.spongepowered.api.text.format.TextFormat, value: ConfigurationNode): void
                     }
                 }
             }

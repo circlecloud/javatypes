@@ -18,49 +18,49 @@ declare namespace javax {
                  * @return the description.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                getDescription(): string
                 /**
                  * Returns the name of the parameter
                  * described by this <tt>OpenMBeanParameterInfo</tt> instance.
                  * @return the name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns the <i>open type</i> of the values of the parameter
                  * described by this <tt>OpenMBeanParameterInfo</tt> instance.
                  * @return the open type.
                  */
                 // @ts-ignore
-                getOpenType(): javax.management.openmbean.OpenType<?>
+                getOpenType(): javax.management.openmbean.OpenType<any>
                 /**
                  * Returns the default value for this parameter, if it has one, or
                  * <tt>null</tt> otherwise.
                  * @return the default value.
                  */
                 // @ts-ignore
-                getDefaultValue(): java.lang.Object
+                getDefaultValue(): any
                 /**
                  * Returns the set of legal values for this parameter, if it has
                  * one, or <tt>null</tt> otherwise.
                  * @return the set of legal values.
                  */
                 // @ts-ignore
-                getLegalValues(): java.util.Set<?>
+                getLegalValues(): Array<any>
                 /**
                  * Returns the minimal value for this parameter, if it has one, or
                  * <tt>null</tt> otherwise.
                  * @return the minimum value.
                  */
                 // @ts-ignore
-                getMinValue(): java.lang.Comparable<?>
+                getMinValue(): java.lang.Comparable<any>
                 /**
                  * Returns the maximal value for this parameter, if it has one, or
                  * <tt>null</tt> otherwise.
                  * @return the maximum value.
                  */
                 // @ts-ignore
-                getMaxValue(): java.lang.Comparable<?>
+                getMaxValue(): java.lang.Comparable<any>
                 /**
                  * Returns <tt>true</tt> if this parameter has a specified default
                  * value, or <tt>false</tt> otherwise.
@@ -99,7 +99,7 @@ declare namespace javax {
                  *  <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isValue(obj: any): boolean
+                isValue(obj: java.lang.Object | any): boolean
                 /**
                  * Compares the specified <var>obj</var> parameter with this <code>OpenMBeanParameterInfo</code> instance for equality.
                  * <p>
@@ -118,7 +118,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>OpenMBeanParameterInfo</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>OpenMBeanParameterInfo</code> instance.
                  * <p>
@@ -134,7 +134,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>OpenMBeanParameterInfo</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>OpenMBeanParameterInfo</code> instance.
                  * <p>
@@ -144,7 +144,7 @@ declare namespace javax {
                  * @return a string representation of this <code>OpenMBeanParameterInfo</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

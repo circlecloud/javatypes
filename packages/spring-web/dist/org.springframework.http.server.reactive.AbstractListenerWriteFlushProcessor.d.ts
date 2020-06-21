@@ -14,7 +14,7 @@ declare namespace org {
                      * @param <T> the type of element signaled to the {#link Subscriber}
                      */
                     // @ts-ignore
-                    class AbstractListenerWriteFlushProcessor<T> extends java.lang.Object {
+                    abstract class AbstractListenerWriteFlushProcessor<T> extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -22,7 +22,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        constructor(logPrefix: string)
+                        constructor(logPrefix: java.lang.String | string)
                         /**
                          * Special logger for debugging Reactive Streams signals.
                          * @see LogDelegateFactory#getHiddenLog(Class)
@@ -31,29 +31,29 @@ declare namespace org {
                          * @see WriteResultPublisher#rsWriteResultLogger
                          */
                         // @ts-ignore
-                        readonly rsWriteFlushLogger: Log
+                        static readonly rsWriteFlushLogger: Log
                         /**
                          * Create an instance with the given log prefix.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        getLogPrefix(): java.lang.String
+                        public getLogPrefix(): string
                         // @ts-ignore
-                        onSubscribe(subscription: Subscription): void
+                        public onSubscribe(subscription: Subscription): void
                         // @ts-ignore
-                        onNext(publisher: object): void
+                        public onNext(publisher: object): void
                         /**
                          * Error signal from the upstream, write Publisher. This is also used by
                          * sub-classes to delegate error notifications from the container.
                          */
                         // @ts-ignore
-                        onError(ex: Error): void
+                        public onError(ex: java.lang.Throwable | Error): void
                         /**
                          * Completion signal from the upstream, write Publisher. This is also used
                          * by sub-classes to delegate completion notifications from the container.
                          */
                         // @ts-ignore
-                        onComplete(): void
+                        public onComplete(): void
                         /**
                          * Invoked when flushing is possible, either in the same thread after a check
                          * via {@link #isWritePossible()}, or as a callback from the underlying
@@ -68,12 +68,12 @@ declare namespace org {
                         // @ts-ignore
                         cancel(): void
                         // @ts-ignore
-                        subscribe(subscriber: object): void
+                        public subscribe(subscriber: object): void
                         /**
                          * Create a new processor for the current flush boundary.
                          */
                         // @ts-ignore
-                        abstract createWriteProcessor(): <any>
+                        abstract createWriteProcessor(): object
                         /**
                          * Whether writing/flushing is possible.
                          */
@@ -101,7 +101,7 @@ declare namespace org {
                          * <p>Defaults to no-op.
                          */
                         // @ts-ignore
-                        flushingFailed(t: Error): void
+                        flushingFailed(t: java.lang.Throwable | Error): void
                     }
                 }
             }

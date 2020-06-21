@@ -19,7 +19,7 @@ declare namespace java {
                  * @return a unary operator that always returns its input argument
                  */
                 // @ts-ignore
-                identity<T>(): java.util.function.UnaryOperator<T>
+                identity<T>(): java.util.function$.UnaryOperator<T>
             }
         }
     }

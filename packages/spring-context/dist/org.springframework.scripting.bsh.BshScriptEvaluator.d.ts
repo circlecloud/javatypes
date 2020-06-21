@@ -22,11 +22,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(classLoader: java.lang.ClassLoader)
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    evaluate(script: org.springframework.scripting.ScriptSource): java.lang.Object
+                    public evaluate(script: org.springframework.scripting.ScriptSource): any
                     // @ts-ignore
-                    evaluate(script: org.springframework.scripting.ScriptSource, arguments: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                    public evaluate(script: org.springframework.scripting.ScriptSource, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
                 }
             }
         }

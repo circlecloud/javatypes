@@ -17,7 +17,7 @@ declare namespace javax {
          * @since Common Annotations 1.0
          */
         // @ts-ignore
-        class Generated implements java.lang.annotation.Annotation {
+        abstract class Generated implements java.lang.annotation.Annotation {
         }
     }
 }

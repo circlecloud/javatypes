@@ -45,7 +45,7 @@ declare namespace java {
                  *          filtering for the specified <code>ImageConsumer</code>.
                  */
                 // @ts-ignore
-                getFilterInstance(ic: java.awt.image.ImageConsumer): java.awt.image.ImageFilter
+                public getFilterInstance(ic: java.awt.image.ImageConsumer): java.awt.image.ImageFilter
                 /**
                  * Filters the information provided in the setDimensions method
                  * of the ImageConsumer interface.
@@ -58,7 +58,7 @@ declare namespace java {
                  * @see ImageConsumer#setDimensions
                  */
                 // @ts-ignore
-                setDimensions(width: number /*int*/, height: number /*int*/): void
+                public setDimensions(width: number /*int*/, height: number /*int*/): void
                 /**
                  * Passes the properties from the source object along after adding a
                  * property indicating the stream of filters it has been run through.
@@ -72,7 +72,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>props</code> is null
                  */
                 // @ts-ignore
-                setProperties(props: java.util.Hashtable<any, ?>): void
+                public setProperties(props: java.util.Hashtable<any, any>): void
                 /**
                  * Filter the information provided in the setColorModel method
                  * of the ImageConsumer interface.
@@ -85,7 +85,7 @@ declare namespace java {
                  * @see ImageConsumer#setColorModel
                  */
                 // @ts-ignore
-                setColorModel(model: java.awt.image.ColorModel): void
+                public setColorModel(model: java.awt.image.ColorModel): void
                 /**
                  * Filters the information provided in the setHints method
                  * of the ImageConsumer interface.
@@ -98,7 +98,7 @@ declare namespace java {
                  * @see ImageConsumer#setHints
                  */
                 // @ts-ignore
-                setHints(hints: number /*int*/): void
+                public setHints(hints: number /*int*/): void
                 /**
                  * Filters the information provided in the setPixels method of the
                  * ImageConsumer interface which takes an array of bytes.
@@ -111,7 +111,7 @@ declare namespace java {
                  * @see ImageConsumer#setPixels
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Filters the information provided in the setPixels method of the
                  * ImageConsumer interface which takes an array of integers.
@@ -124,7 +124,7 @@ declare namespace java {
                  * @see ImageConsumer#setPixels
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Filters the information provided in the imageComplete method of
                  * the ImageConsumer interface.
@@ -137,7 +137,7 @@ declare namespace java {
                  * @see ImageConsumer#imageComplete
                  */
                 // @ts-ignore
-                imageComplete(status: number /*int*/): void
+                public imageComplete(status: number /*int*/): void
                 /**
                  * Responds to a request for a TopDownLeftRight (TDLR) ordered resend
                  * of the pixel data from an <code>ImageConsumer</code>.
@@ -180,12 +180,12 @@ declare namespace java {
                  * @exception NullPointerException if <code>ip</code> is null
                  */
                 // @ts-ignore
-                resendTopDownLeftRight(ip: java.awt.image.ImageProducer): void
+                public resendTopDownLeftRight(ip: java.awt.image.ImageProducer): void
                 /**
                  * Clones this object.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

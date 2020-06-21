@@ -72,7 +72,7 @@ declare namespace java {
              * @see CharsetDecoder
              */
             // @ts-ignore
-            class CharsetEncoder extends java.lang.Object {
+            abstract class CharsetEncoder extends java.lang.Object {
                 /**
                  * Initializes a new encoder.  The new encoder will have the given
                  * bytes-per-char and replacement values.
@@ -115,14 +115,14 @@ declare namespace java {
                  * @return This encoder's charset
                  */
                 // @ts-ignore
-                charset(): java.nio.charset.Charset
+                public charset(): java.nio.charset.Charset
                 /**
                  * Returns this encoder's replacement value.
                  * @return This encoder's current replacement,
                  *           which is never <tt>null</tt> and is never empty
                  */
                 // @ts-ignore
-                replacement(): byte[]
+                public replacement(): number /*byte*/[]
                 /**
                  * Changes this encoder's replacement value.
                  * <p> This method invokes the {@link #implReplaceWith implReplaceWith}
@@ -144,7 +144,7 @@ declare namespace java {
                  *           If the preconditions on the parameter do not hold
                  */
                 // @ts-ignore
-                replaceWith(newReplacement: number /*byte*/[]): java.nio.charset.CharsetEncoder
+                public replaceWith(newReplacement: number /*byte*/[]): java.nio.charset.CharsetEncoder
                 /**
                  * Reports a change to this encoder's replacement value.
                  * <p> The default implementation of this method does nothing.  This method
@@ -167,13 +167,13 @@ declare namespace java {
                  *           is a legal replacement value for this encoder
                  */
                 // @ts-ignore
-                isLegalReplacement(repl: number /*byte*/[]): boolean
+                public isLegalReplacement(repl: number /*byte*/[]): boolean
                 /**
                  * Returns this encoder's current action for malformed-input errors.
                  * @return The current malformed-input action, which is never <tt>null</tt>
                  */
                 // @ts-ignore
-                malformedInputAction(): java.nio.charset.CodingErrorAction
+                public malformedInputAction(): java.nio.charset.CodingErrorAction
                 /**
                  * Changes this encoder's action for malformed-input errors.
                  * <p> This method invokes the {@link #implOnMalformedInput
@@ -184,7 +184,7 @@ declare namespace java {
                  *          If the precondition on the parameter does not hold
                  */
                 // @ts-ignore
-                onMalformedInput(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetEncoder
+                public onMalformedInput(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetEncoder
                 /**
                  * Reports a change to this encoder's malformed-input action.
                  * <p> The default implementation of this method does nothing.  This method
@@ -200,7 +200,7 @@ declare namespace java {
                  *          <tt>null</tt>
                  */
                 // @ts-ignore
-                unmappableCharacterAction(): java.nio.charset.CodingErrorAction
+                public unmappableCharacterAction(): java.nio.charset.CodingErrorAction
                 /**
                  * Changes this encoder's action for unmappable-character errors.
                  * <p> This method invokes the {@link #implOnUnmappableCharacter
@@ -211,7 +211,7 @@ declare namespace java {
                  *          If the precondition on the parameter does not hold
                  */
                 // @ts-ignore
-                onUnmappableCharacter(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetEncoder
+                public onUnmappableCharacter(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetEncoder
                 /**
                  * Reports a change to this encoder's unmappable-character action.
                  * <p> The default implementation of this method does nothing.  This method
@@ -229,7 +229,7 @@ declare namespace java {
                  *           per character of input
                  */
                 // @ts-ignore
-                averageBytesPerChar(): float
+                public averageBytesPerChar(): number /*float*/
                 /**
                  * Returns the maximum number of bytes that will be produced for each
                  * character of input.  This value may be used to compute the worst-case size
@@ -238,7 +238,7 @@ declare namespace java {
                  *           character of input
                  */
                 // @ts-ignore
-                maxBytesPerChar(): float
+                public maxBytesPerChar(): number /*float*/
                 /**
                  * Encodes as many characters as possible from the given input buffer,
                  * writing the results to the given output buffer.
@@ -320,7 +320,7 @@ declare namespace java {
                  *           an unexpected exception
                  */
                 // @ts-ignore
-                encode(input: java.nio.CharBuffer, out: java.nio.ByteBuffer, endOfInput: boolean): java.nio.charset.CoderResult
+                public encode(input: java.nio.CharBuffer, out: java.nio.ByteBuffer, endOfInput: boolean): java.nio.charset.CoderResult
                 /**
                  * Flushes this encoder.
                  * <p> Some encoders maintain internal state and may need to write some
@@ -353,7 +353,7 @@ declare namespace java {
                  *           parameter
                  */
                 // @ts-ignore
-                flush(out: java.nio.ByteBuffer): java.nio.charset.CoderResult
+                public flush(out: java.nio.ByteBuffer): java.nio.charset.CoderResult
                 /**
                  * Flushes this encoder.
                  * <p> The default implementation of this method does nothing, and always
@@ -375,7 +375,7 @@ declare namespace java {
                  * @return This encoder
                  */
                 // @ts-ignore
-                reset(): java.nio.charset.CharsetEncoder
+                public reset(): java.nio.charset.CharsetEncoder
                 /**
                  * Resets this encoder, clearing any charset-specific internal state.
                  * <p> The default implementation of this method does nothing.  This method
@@ -439,7 +439,7 @@ declare namespace java {
                  *           CodingErrorAction#REPORT}
                  */
                 // @ts-ignore
-                encode(input: java.nio.CharBuffer): java.nio.ByteBuffer
+                public encode(input: java.nio.CharBuffer): java.nio.ByteBuffer
                 /**
                  * Tells whether or not this encoder can encode the given character.
                  * <p> This method returns <tt>false</tt> if the given character is a
@@ -461,7 +461,7 @@ declare namespace java {
                  *           If an encoding operation is already in progress
                  */
                 // @ts-ignore
-                canEncode(c: string): boolean
+                public canEncode(c: string): boolean
                 /**
                  * Tells whether or not this encoder can encode the given character
                  * sequence.
@@ -482,7 +482,7 @@ declare namespace java {
                  *           If an encoding operation is already in progress
                  */
                 // @ts-ignore
-                canEncode(cs: java.lang.CharSequence): boolean
+                public canEncode(cs: java.lang.CharSequence): boolean
             }
         }
     }

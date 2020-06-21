@@ -17,7 +17,7 @@ declare namespace org {
              * @see LogDelegateFactory
              */
             // @ts-ignore
-            class HttpLogging extends java.lang.Object {
+            abstract class HttpLogging extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -28,7 +28,7 @@ declare namespace org {
                  * @return the resulting composite logger
                  */
                 // @ts-ignore
-                forLogName(primaryLoggerClass: java.lang.Class<any>): Log
+                public static forLogName(primaryLoggerClass: java.lang.Class<any>): Log
                 /**
                  * Wrap the given primary logger with a composite logger that delegates to
                  * it or to the fallback logger "org.springframework.web.HttpLogging",
@@ -37,7 +37,7 @@ declare namespace org {
                  * @return the resulting composite logger
                  */
                 // @ts-ignore
-                forLog(primaryLogger: Log): Log
+                public static forLog(primaryLogger: Log): Log
             }
         }
     }

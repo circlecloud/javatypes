@@ -14,7 +14,7 @@ declare namespace org {
                      * @return The name of this command source
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the locale used by this command source. If this
                      * {@link CommandSource} does have a {@link Locale} configured or does not

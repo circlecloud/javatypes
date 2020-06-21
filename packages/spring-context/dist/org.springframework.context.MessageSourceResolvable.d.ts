@@ -18,7 +18,7 @@ declare namespace org {
                  * @return a String array of codes which are associated with this message
                  */
                 // @ts-ignore
-                getCodes(): java.lang.String[]
+                getCodes(): string[]
                 /**
                  * Return the array of arguments to be used to resolve this message.
                  * <p>The default implementation simply returns {@code null}.
@@ -27,7 +27,7 @@ declare namespace org {
                  * @see java.text.MessageFormat
                  */
                 // @ts-ignore
-                getArguments(): java.lang.Object[]
+                getArguments(): any[]
                 /**
                  * Return the default message to be used to resolve this message.
                  * <p>The default implementation simply returns {@code null}.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @return the default message, or {#code null} if no default
                  */
                 // @ts-ignore
-                getDefaultMessage(): java.lang.String
+                getDefaultMessage(): string
             }
         }
     }

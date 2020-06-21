@@ -6,7 +6,7 @@ declare namespace javax {
                     // @ts-ignore
                     class SingleClickListener extends java.awt.event.MouseAdapter {
                         // @ts-ignore
-                        constructor(list: javax.swing.JList)
+                        constructor(list: javax.swing.JList<any>)
                     }
                 }
             }

@@ -13,7 +13,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class KeySelector extends java.lang.Object {
+            abstract class KeySelector extends java.lang.Object {
                 /**
                  * Default no-args constructor; intended for invocation by subclasses only.
                  */
@@ -45,7 +45,7 @@ declare namespace javax {
                  *     is not supported by this key selector
                  */
                 // @ts-ignore
-                abstract select(keyInfo: javax.xml.crypto.dsig.keyinfo.KeyInfo, purpose: javax.xml.crypto.KeySelector.Purpose, method: javax.xml.crypto.AlgorithmMethod, context: javax.xml.crypto.XMLCryptoContext): javax.xml.crypto.KeySelectorResult
+                public abstract select(keyInfo: javax.xml.crypto.dsig.keyinfo.KeyInfo, purpose: javax.xml.crypto.KeySelector.Purpose, method: javax.xml.crypto.AlgorithmMethod, context: javax.xml.crypto.XMLCryptoContext): javax.xml.crypto.KeySelectorResult
                 /**
                  * Returns a <code>KeySelector</code> that always selects the specified
                  * key, regardless of the <code>KeyInfo</code> passed to it.
@@ -54,7 +54,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>key</code> is <code>null</code>
                  */
                 // @ts-ignore
-                singletonKeySelector(key: java.security.Key): javax.xml.crypto.KeySelector
+                public static singletonKeySelector(key: java.security.Key): javax.xml.crypto.KeySelector
             }
         }
     }

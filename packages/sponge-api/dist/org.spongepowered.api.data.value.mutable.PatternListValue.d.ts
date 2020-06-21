@@ -41,9 +41,9 @@ declare namespace org {
                             // @ts-ignore
                             set(index: number /*int*/, element: org.spongepowered.api.data.meta.PatternLayer): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
-                            set(value: Array<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
+                            set(value: java.util.List<org.spongepowered.api.data.meta.PatternLayer> | Array<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
-                            transform(func: java.util.function.Function<java.util.List<org.spongepowered.api.data.meta.PatternLayer>, java.util.List<org.spongepowered.api.data.meta.PatternLayer>> | java.util.function$.Function<java.util.List<org.spongepowered.api.data.meta.PatternLayer>, java.util.List<org.spongepowered.api.data.meta.PatternLayer>>): org.spongepowered.api.data.value.mutable.PatternListValue
+                            transform(func: java.util.function$.Function<java.util.List<org.spongepowered.api.data.meta.PatternLayer> | Array<org.spongepowered.api.data.meta.PatternLayer>, java.util.List<org.spongepowered.api.data.meta.PatternLayer> | Array<org.spongepowered.api.data.meta.PatternLayer>>): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
                             addAll(elements: java.lang.Iterable<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
@@ -53,9 +53,9 @@ declare namespace org {
                             // @ts-ignore
                             removeAll(elements: java.lang.Iterable<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
-                            removeAll(predicate: java.util.function.Predicate<org.spongepowered.api.data.meta.PatternLayer> | java.util.function$.Predicate<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
+                            removeAll(predicate: java.util.function$.Predicate<org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
-                            filter(predicate: java.util.function.Predicate<any super org.spongepowered.api.data.meta.PatternLayer> | java.util.function$.Predicate<? super org.spongepowered.api.data.meta.PatternLayer>): org.spongepowered.api.data.value.mutable.PatternListValue
+                            filter(predicate: java.util.function$.Predicate<any>): org.spongepowered.api.data.value.mutable.PatternListValue
                             // @ts-ignore
                             asImmutable(): org.spongepowered.api.data.value.immutable.ImmutablePatternListValue
                         }

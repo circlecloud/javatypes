@@ -20,7 +20,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        resolveWiringInfo(beanInstance: any): org.springframework.beans.factory.wiring.BeanWiringInfo
+                        public resolveWiringInfo(beanInstance: java.lang.Object | any): org.springframework.beans.factory.wiring.BeanWiringInfo
                         /**
                          * Build the {@link BeanWiringInfo} for the given {@link Configurable} annotation.
                          * @param beanInstance the bean instance
@@ -28,7 +28,7 @@ declare namespace org {
                          * @return the resolved BeanWiringInfo
                          */
                         // @ts-ignore
-                        buildWiringInfo(beanInstance: any, annotation: org.springframework.beans.factory.annotation.Configurable): org.springframework.beans.factory.wiring.BeanWiringInfo
+                        buildWiringInfo(beanInstance: java.lang.Object | any, annotation: org.springframework.beans.factory.annotation.Configurable): org.springframework.beans.factory.wiring.BeanWiringInfo
                         /**
                          * Determine the default bean name for the specified bean instance.
                          * <p>The default implementation returns the superclass name for a CGLIB
@@ -38,7 +38,7 @@ declare namespace org {
                          * @see org.springframework.util.ClassUtils#getUserClass(Class)
                          */
                         // @ts-ignore
-                        getDefaultBeanName(beanInstance: any): java.lang.String
+                        getDefaultBeanName(beanInstance: java.lang.Object | any): string
                     }
                 }
             }

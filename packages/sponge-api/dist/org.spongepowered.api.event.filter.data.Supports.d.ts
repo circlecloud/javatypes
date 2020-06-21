@@ -12,7 +12,7 @@ declare namespace org {
                          * @see DataHolder#supports(Class)
                          */
                         // @ts-ignore
-                        class Supports implements java.lang.annotation.Annotation {
+                        abstract class Supports implements java.lang.annotation.Annotation {
                         }
                     }
                 }

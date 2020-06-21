@@ -15,7 +15,7 @@ declare namespace org {
                          * @return Argument name
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Returns true if this Arg is optional. If a parameter is missing for
                          * a non-optional Arg, a {@link TextTemplateArgumentException} will be
@@ -23,40 +23,40 @@ declare namespace org {
                          * @return True if optional
                          */
                         // @ts-ignore
-                        isOptional(): boolean
+                        public isOptional(): boolean
                         /**
                          * Returns the default value to use if the Arg {@link #isOptional()}
                          * and no parameter is supplied.
                          * @return Default value
                          */
                         // @ts-ignore
-                        getDefaultValue(): java.util.Optional<org.spongepowered.api.text.Text>
+                        public getDefaultValue(): java.util.Optional<org.spongepowered.api.text.Text>
                         /**
                          * Returns the base format to be applied to this Arg.
                          * @return Base format
                          */
                         // @ts-ignore
-                        getFormat(): org.spongepowered.api.text.format.TextFormat
+                        public getFormat(): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Returns the beginning string of the Arg's container.
                          * @return Open string
                          */
                         // @ts-ignore
-                        getOpenArgString(): java.lang.String
+                        public getOpenArgString(): string
                         /**
                          * Returns the end string of the Arg's container.
                          * @return Close string
                          */
                         // @ts-ignore
-                        getCloseArgString(): java.lang.String
+                        public getCloseArgString(): string
                         // @ts-ignore
-                        toText(): org.spongepowered.api.text.Text
+                        public toText(): org.spongepowered.api.text.Text
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        equals(obj: any): boolean
+                        public equals(obj: java.lang.Object | any): boolean
                     }
                 }
             }

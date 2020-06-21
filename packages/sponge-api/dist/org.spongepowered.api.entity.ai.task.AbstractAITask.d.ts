@@ -29,7 +29,7 @@ declare namespace org {
                          * @param <O> The type of Agent
                          */
                         // @ts-ignore
-                        class AbstractAITask<O extends org.spongepowered.api.entity.living.Agent> extends java.lang.Object implements org.spongepowered.api.entity.ai.task.AITask<O> {
+                        abstract class AbstractAITask<O extends org.spongepowered.api.entity.living.Agent> extends java.lang.Object implements org.spongepowered.api.entity.ai.task.AITask<O> {
                             /**
                              * Creates a new {@link AbstractAITask} with the provided
                              * {@link AITask}.
@@ -38,9 +38,9 @@ declare namespace org {
                             // @ts-ignore
                             constructor(type: org.spongepowered.api.entity.ai.task.AITaskType)
                             // @ts-ignore
-                            getType(): org.spongepowered.api.entity.ai.task.AITaskType
+                            public getType(): org.spongepowered.api.entity.ai.task.AITaskType
                             // @ts-ignore
-                            getGoal(): java.util.Optional<org.spongepowered.api.entity.ai.Goal<O>>
+                            public getGoal(): java.util.Optional<org.spongepowered.api.entity.ai.Goal<O>>
                             /**
                              * Invoked when the task is "started". A "start" of a task occurs at the
                              * "start" of the "AI" is "ticking". Depending on the case where
@@ -49,7 +49,7 @@ declare namespace org {
                              * called at the "start" of the tick to "prepare" for {@link #update()}.
                              */
                             // @ts-ignore
-                            abstract start(): void
+                            public abstract start(): void
                             /**
                              * Determines whether this {@link AITask} should be considered for "ticking"
                              * or {@link #start()}, {@link #update()}, and {@link #reset()} are called
@@ -57,7 +57,7 @@ declare namespace org {
                              * @return Whether this task should be marked for use in the current tick
                              */
                             // @ts-ignore
-                            abstract shouldUpdate(): boolean
+                            public abstract shouldUpdate(): boolean
                             /**
                              * Performs any customary logic for this "task" to modify the parent
                              * {@link Agent} in any way, including navigation, health, potion effects,
@@ -66,7 +66,7 @@ declare namespace org {
                              * {@link #continueUpdating()}
                              */
                             // @ts-ignore
-                            abstract update(): void
+                            public abstract update(): void
                             /**
                              * Called to verify that this {@link AITask} needs to {@link #update()}
                              * in this tick. If this returns {@code false}, this {@link AITask}
@@ -74,7 +74,7 @@ declare namespace org {
                              * @return Whether this task should update this "tick" or not
                              */
                             // @ts-ignore
-                            abstract continueUpdating(): boolean
+                            public abstract continueUpdating(): boolean
                             /**
                              * Performs any reset necessary for this task during the current tick.
                              * <p>Note that this may be called during any state during {@link #start()}
@@ -82,7 +82,7 @@ declare namespace org {
                              * current "AI" tick.</p>
                              */
                             // @ts-ignore
-                            abstract reset(): void
+                            public abstract reset(): void
                         }
                     }
                 }

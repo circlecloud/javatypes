@@ -16,7 +16,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Float extends java.lang.Number implements java.lang.Comparable<java.lang.Float> {
+        class Float extends java.lang.Number implements java.lang.Comparable<java.lang.Float | number> {
             /**
              * Constructs a newly allocated {@code Float} object that
              * represents the primitive {@code float} argument.
@@ -42,28 +42,28 @@ declare namespace java {
              * @see java.lang.Float#valueOf(java.lang.String)
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * A constant holding the positive infinity of type
              * {@code float}. It is equal to the value returned by
              * {@code Float.intBitsToFloat(0x7f800000)}.
              */
             // @ts-ignore
-            readonly POSITIVE_INFINITY: number /*float*/
+            public static readonly POSITIVE_INFINITY: number /*float*/
             /**
              * A constant holding the negative infinity of type
              * {@code float}. It is equal to the value returned by
              * {@code Float.intBitsToFloat(0xff800000)}.
              */
             // @ts-ignore
-            readonly NEGATIVE_INFINITY: number /*float*/
+            public static readonly NEGATIVE_INFINITY: number /*float*/
             /**
              * A constant holding a Not-a-Number (NaN) value of type
              * {@code float}.  It is equivalent to the value returned by
              * {@code Float.intBitsToFloat(0x7fc00000)}.
              */
             // @ts-ignore
-            readonly NaN: number /*float*/
+            public static readonly NaN: number /*float*/
             /**
              * A constant holding the largest positive finite value of type
              * {@code float}, (2-2<sup>-23</sup>)&middot;2<sup>127</sup>.
@@ -72,7 +72,7 @@ declare namespace java {
              * {@code Float.intBitsToFloat(0x7f7fffff)}.
              */
             // @ts-ignore
-            readonly MAX_VALUE: number /*float*/
+            public static readonly MAX_VALUE: number /*float*/
             /**
              * A constant holding the smallest positive normal value of type
              * {@code float}, 2<sup>-126</sup>.  It is equal to the
@@ -81,7 +81,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MIN_NORMAL: number /*float*/
+            public static readonly MIN_NORMAL: number /*float*/
             /**
              * A constant holding the smallest positive nonzero value of type
              * {@code float}, 2<sup>-149</sup>. It is equal to the
@@ -89,7 +89,7 @@ declare namespace java {
              * and also equal to {@code Float.intBitsToFloat(0x1)}.
              */
             // @ts-ignore
-            readonly MIN_VALUE: number /*float*/
+            public static readonly MIN_VALUE: number /*float*/
             /**
              * Maximum exponent a finite {@code float} variable may have.  It
              * is equal to the value returned by {@code
@@ -97,7 +97,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MAX_EXPONENT: number /*int*/
+            public static readonly MAX_EXPONENT: number /*int*/
             /**
              * Minimum exponent a normalized {@code float} variable may have.
              * It is equal to the value returned by {@code
@@ -105,26 +105,26 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MIN_EXPONENT: number /*int*/
+            public static readonly MIN_EXPONENT: number /*int*/
             /**
              * The number of bits used to represent a {@code float} value.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code float} value.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * The {@code Class} instance representing the primitive type
              * {@code float}.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Float>
+            public static readonly TYPE: java.lang.Class<java.lang.Float | number>
             /**
              * Returns a string representation of the {@code float}
              * argument. All characters mentioned below are ASCII characters.
@@ -189,7 +189,7 @@ declare namespace java {
              * @return a string representation of the argument.
              */
             // @ts-ignore
-            toString(f: number /*float*/): java.lang.String
+            public static toString(f: number /*float*/): string
             /**
              * Returns a hexadecimal string representation of the
              * {@code float} argument. All characters mentioned below are
@@ -257,7 +257,7 @@ declare namespace java {
              * @author Joseph D. Darcy
              */
             // @ts-ignore
-            toHexString(f: number /*float*/): java.lang.String
+            public static toHexString(f: number /*float*/): string
             /**
              * Returns a {@code Float} object holding the
              * {@code float} value represented by the argument string
@@ -360,7 +360,7 @@ declare namespace java {
              *           parsable number.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Float
+            public static valueOf(s: java.lang.String | string): number
             /**
              * Returns a {@code Float} instance representing the specified
              * {@code float} value.
@@ -374,7 +374,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(f: number /*float*/): java.lang.Float
+            public static valueOf(f: number /*float*/): number
             /**
              * Returns a new {@code float} initialized to the value
              * represented by the specified {@code String}, as performed
@@ -389,7 +389,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            parseFloat(s: string): float
+            public static parseFloat(s: java.lang.String | string): number /*float*/
             /**
              * Returns {@code true} if the specified number is a
              * Not-a-Number (NaN) value, {@code false} otherwise.
@@ -398,7 +398,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            isNaN(v: number /*float*/): boolean
+            public static isNaN(v: number /*float*/): boolean
             /**
              * Returns {@code true} if the specified number is infinitely
              * large in magnitude, {@code false} otherwise.
@@ -407,7 +407,7 @@ declare namespace java {
              *           negative infinity; {@code false} otherwise.
              */
             // @ts-ignore
-            isInfinite(v: number /*float*/): boolean
+            public static isInfinite(v: number /*float*/): boolean
             /**
              * Returns {@code true} if the argument is a finite floating-point
              * value; returns {@code false} otherwise (for NaN and infinity
@@ -418,7 +418,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            isFinite(f: number /*float*/): boolean
+            public static isFinite(f: number /*float*/): boolean
             /**
              * Returns {@code true} if this {@code Float} value is a
              * Not-a-Number (NaN), {@code false} otherwise.
@@ -426,7 +426,7 @@ declare namespace java {
              *           NaN; {@code false} otherwise.
              */
             // @ts-ignore
-            isNaN(): boolean
+            public isNaN(): boolean
             /**
              * Returns {@code true} if this {@code Float} value is
              * infinitely large in magnitude, {@code false} otherwise.
@@ -435,7 +435,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            isInfinite(): boolean
+            public isInfinite(): boolean
             /**
              * Returns a string representation of this {@code Float} object.
              * The primitive {@code float} value represented by this object
@@ -445,7 +445,7 @@ declare namespace java {
              * @see java.lang.Float#toString(float)
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the value of this {@code Float} as a {@code byte} after
              * a narrowing primitive conversion.
@@ -454,7 +454,7 @@ declare namespace java {
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of this {@code Float} as a {@code short}
              * after a narrowing primitive conversion.
@@ -464,7 +464,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
             /**
              * Returns the value of this {@code Float} as an {@code int} after
              * a narrowing primitive conversion.
@@ -473,7 +473,7 @@ declare namespace java {
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Returns value of this {@code Float} as a {@code long} after a
              * narrowing primitive conversion.
@@ -482,13 +482,13 @@ declare namespace java {
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Returns the {@code float} value of this {@code Float} object.
              * @return the {#code float} value represented by this object
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Returns the value of this {@code Float} as a {@code double}
              * after a widening primitive conversion.
@@ -497,7 +497,7 @@ declare namespace java {
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns a hash code for this {@code Float} object. The
              * result is the integer bit representation, exactly as produced
@@ -507,7 +507,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code float} value; compatible with
              * {@code Float.hashCode()}.
@@ -516,7 +516,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hashCode(value: number /*float*/): int
+            public static hashCode(value: number /*float*/): number /*int*/
             /**
              * Compares this object against the specified object.  The result
              * is {@code true} if and only if the argument is not
@@ -552,7 +552,7 @@ declare namespace java {
              * @see java.lang.Float#floatToIntBits(float)
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a representation of the specified floating-point value
              * according to the IEEE 754 floating-point "single format" bit
@@ -579,7 +579,7 @@ declare namespace java {
              * @return the bits that represent the floating-point number.
              */
             // @ts-ignore
-            floatToIntBits(value: number /*float*/): int
+            public static floatToIntBits(value: number /*float*/): number /*int*/
             /**
              * Returns a representation of the specified floating-point value
              * according to the IEEE 754 floating-point "single format" bit
@@ -610,7 +610,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            floatToRawIntBits(value: number /*float*/): int
+            public static floatToRawIntBits(value: number /*float*/): number /*int*/
             /**
              * Returns the {@code float} value corresponding to a given
              * bit representation.
@@ -663,7 +663,7 @@ declare namespace java {
              *           pattern.
              */
             // @ts-ignore
-            intBitsToFloat(bits: number /*int*/): float
+            public static intBitsToFloat(bits: number /*int*/): number /*float*/
             /**
              * Compares two {@code Float} objects numerically.  There are
              * two ways in which comparisons performed by this method differ
@@ -693,7 +693,7 @@ declare namespace java {
              * @see Comparable#compareTo(Object)
              */
             // @ts-ignore
-            compareTo(anotherFloat: number): int
+            public compareTo(anotherFloat: java.lang.Float | number): number /*int*/
             /**
              * Compares the two specified {@code float} values. The sign
              * of the integer value returned is the same as that of the
@@ -712,7 +712,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            compare(f1: number /*float*/, f2: number /*float*/): int
+            public static compare(f1: number /*float*/, f2: number /*float*/): number /*int*/
             /**
              * Adds two {@code float} values together as per the + operator.
              * @param a the first operand
@@ -723,7 +723,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            sum(a: number /*float*/, b: number /*float*/): float
+            public static sum(a: number /*float*/, b: number /*float*/): number /*float*/
             /**
              * Returns the greater of two {@code float} values
              * as if by calling {@link Math#max(float, float) Math.max}.
@@ -734,7 +734,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            max(a: number /*float*/, b: number /*float*/): float
+            public static max(a: number /*float*/, b: number /*float*/): number /*float*/
             /**
              * Returns the smaller of two {@code float} values
              * as if by calling {@link Math#min(float, float) Math.min}.
@@ -745,7 +745,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            min(a: number /*float*/, b: number /*float*/): float
+            public static min(a: number /*float*/, b: number /*float*/): number /*float*/
         }
     }
 }

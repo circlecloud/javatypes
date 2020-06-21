@@ -26,7 +26,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(cacheManager: org.springframework.cache.CacheManager)
                     // @ts-ignore
-                    getCacheNames(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): java.util.Collection<java.lang.String>
+                    getCacheNames(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): Array<java.lang.String | string>
                 }
             }
         }

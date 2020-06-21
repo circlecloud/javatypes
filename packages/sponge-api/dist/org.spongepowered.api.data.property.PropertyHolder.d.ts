@@ -27,7 +27,7 @@ declare namespace org {
                          * @return An immutable collection of all known {#link Property}s
                          */
                         // @ts-ignore
-                        getApplicableProperties(): java.util.Collection<org.spongepowered.api.data.Property<?, ?>>
+                        getApplicableProperties(): Array<org.spongepowered.api.data.Property<any, any>>
                     }
                 }
             }

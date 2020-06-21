@@ -47,7 +47,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getStatement(): java.sql.PreparedStatement
+            public getStatement(): java.sql.PreparedStatement
             /**
              * Returns the <code>SQLException</code> the driver is about to throw
              * <p>
@@ -56,7 +56,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getSQLException(): java.sql.SQLException
+            public getSQLException(): java.sql.SQLException
         }
     }
 }

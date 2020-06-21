@@ -90,7 +90,7 @@ declare namespace javax {
                      * Return the set of all possible CSS attribute keys.
                      */
                     // @ts-ignore
-                    getAllAttributeKeys(): javax.swing.text.html.CSS.Attribute[]
+                    public static getAllAttributeKeys(): javax.swing.text.html.CSS.Attribute[]
                     /**
                      * Translates a string to a <code>CSS.Attribute</code> object.
                      * This will return <code>null</code> if there is no attribute
@@ -102,7 +102,7 @@ declare namespace javax {
                      *   doesn't represent a valid attribute key
                      */
                     // @ts-ignore
-                    getAttribute(name: string): javax.swing.text.html.CSS.Attribute
+                    public static getAttribute(name: java.lang.String | string): javax.swing.text.html.CSS.Attribute
                 }
             }
         }

@@ -18,7 +18,7 @@ declare namespace org {
                              * @return The selected value
                              */
                             // @ts-ignore
-                            get(random: java.util.Random): java.util.List<E>
+                            get(random: java.util.Random): Array<E>
                         }
                     }
                 }

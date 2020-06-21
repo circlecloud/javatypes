@@ -36,14 +36,14 @@ declare namespace org {
                      * @return The cause stack manager, for chaining
                      */
                     // @ts-ignore
-                    pushCause(obj: any): org.spongepowered.api.event.CauseStackManager
+                    pushCause(obj: java.lang.Object | any): org.spongepowered.api.event.CauseStackManager
                     /**
                      * Pops the most recently pushed cause object off of the stack and returns
                      * it.
                      * @return The last pushed object
                      */
                     // @ts-ignore
-                    popCause(): java.lang.Object
+                    popCause(): any
                     /**
                      * Pops the most recently <b>n</b> pushed cause objects off of the stack.
                      * @param n The number of causes to pop
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return The last pushed object
                      */
                     // @ts-ignore
-                    peekCause(): java.lang.Object
+                    peekCause(): any
                     /**
                      * Pushes a frame of the current cause stack and context state.
                      * @return A handle for the frame which must be passed back to pop the frame

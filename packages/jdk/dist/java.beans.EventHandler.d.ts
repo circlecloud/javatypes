@@ -240,14 +240,14 @@ declare namespace java {
              * @see #getListenerMethodName
              */
             // @ts-ignore
-            constructor(target: any, action: string, eventPropertyName: string, listenerMethodName: string)
+            constructor(target: java.lang.Object | any, action: java.lang.String | string, eventPropertyName: java.lang.String | string, listenerMethodName: java.lang.String | string)
             /**
              * Returns the object to which this event handler will send a message.
              * @return the target of this event handler
              * @see #EventHandler(Object, String, String, String)
              */
             // @ts-ignore
-            getTarget(): java.lang.Object
+            public getTarget(): any
             /**
              * Returns the name of the target's writable property
              * that this event handler will set,
@@ -257,7 +257,7 @@ declare namespace java {
              * @see #EventHandler(Object, String, String, String)
              */
             // @ts-ignore
-            getAction(): java.lang.String
+            public getAction(): string
             /**
              * Returns the property of the event that should be
              * used in the action applied to the target.
@@ -265,7 +265,7 @@ declare namespace java {
              * @see #EventHandler(Object, String, String, String)
              */
             // @ts-ignore
-            getEventPropertyName(): java.lang.String
+            public getEventPropertyName(): string
             /**
              * Returns the name of the method that will trigger the action.
              * A return value of <code>null</code> signifies that all methods in the
@@ -274,7 +274,7 @@ declare namespace java {
              * @see #EventHandler(Object, String, String, String)
              */
             // @ts-ignore
-            getListenerMethodName(): java.lang.String
+            public getListenerMethodName(): string
             /**
              * Extract the appropriate property value from the event and
              * pass it to the action associated with
@@ -285,7 +285,7 @@ declare namespace java {
              * @see EventHandler
              */
             // @ts-ignore
-            invoke(proxy: any, method: java.lang.reflect.Method, arguments: any[]): java.lang.Object
+            public invoke(proxy: java.lang.Object | any, method: java.lang.reflect.Method, arguments: java.lang.Object[] | any[]): any
             /**
              * Creates an implementation of <code>listenerInterface</code> in which
              * <em>all</em> of the methods in the listener interface apply
@@ -318,7 +318,7 @@ declare namespace java {
              * @see #create(Class, Object, String, String)
              */
             // @ts-ignore
-            create<T>(listenerInterface: java.lang.Class<T>, target: any, action: string): T
+            public static create<T>(listenerInterface: java.lang.Class<T>, target: java.lang.Object | any, action: java.lang.String | string): T
             /**
              * /**
              * Creates an implementation of <code>listenerInterface</code> in which
@@ -366,7 +366,7 @@ declare namespace java {
              * @see #create(Class, Object, String, String, String)
              */
             // @ts-ignore
-            create<T>(listenerInterface: java.lang.Class<T>, target: any, action: string, eventPropertyName: string): T
+            public static create<T>(listenerInterface: java.lang.Class<T>, target: java.lang.Object | any, action: java.lang.String | string, eventPropertyName: java.lang.String | string): T
             /**
              * Creates an implementation of <code>listenerInterface</code> in which
              * the method named <code>listenerMethodName</code>
@@ -446,7 +446,7 @@ declare namespace java {
              * @see EventHandler
              */
             // @ts-ignore
-            create<T>(listenerInterface: java.lang.Class<T>, target: any, action: string, eventPropertyName: string, listenerMethodName: string): T
+            public static create<T>(listenerInterface: java.lang.Class<T>, target: java.lang.Object | any, action: java.lang.String | string, eventPropertyName: java.lang.String | string, listenerMethodName: java.lang.String | string): T
         }
     }
 }

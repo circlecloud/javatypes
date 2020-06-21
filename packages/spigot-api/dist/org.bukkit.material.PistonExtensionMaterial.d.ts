@@ -18,25 +18,25 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 /**
                  * Checks if this piston extension is sticky, and returns true if so
                  * @return true if this piston is "sticky", or false
                  */
                 // @ts-ignore
-                isSticky(): boolean
+                public isSticky(): boolean
                 /**
                  * Sets whether or not this extension is sticky
                  * @param sticky true if sticky, otherwise false
                  */
                 // @ts-ignore
-                setSticky(sticky: boolean): void
+                public setSticky(sticky: boolean): void
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                clone(): org.bukkit.material.PistonExtensionMaterial
+                public clone(): org.bukkit.material.PistonExtensionMaterial
             }
         }
     }

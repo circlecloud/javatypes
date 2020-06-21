@@ -34,13 +34,13 @@ declare namespace javax {
                      * @param a the alignment &gt;= 0
                      */
                     // @ts-ignore
-                    constructor(nm: string, a: number /*int*/)
+                    constructor(nm: java.lang.String | string, a: number /*int*/)
                     /**
                      * Sets the alignment.
                      * @param e the action event
                      */
                     // @ts-ignore
-                    actionPerformed(e: java.awt.event.ActionEvent): void
+                    public actionPerformed(e: java.awt.event.ActionEvent): void
                 }
             }
         }

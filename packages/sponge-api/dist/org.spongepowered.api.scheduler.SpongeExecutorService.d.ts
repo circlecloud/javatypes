@@ -12,13 +12,13 @@ declare namespace org {
                 // @ts-ignore
                 interface SpongeExecutorService extends java.util.concurrent.ScheduledExecutorService {
                     // @ts-ignore
-                    schedule(command: java.lang.Runnable, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<?>
+                    schedule(command: java.lang.Runnable, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<any>
                     // @ts-ignore
                     schedule<V>(callable: java.util.concurrent.Callable<V>, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<V>
                     // @ts-ignore
-                    scheduleAtFixedRate(command: java.lang.Runnable, initialDelay: number /*long*/, period: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<?>
+                    scheduleAtFixedRate(command: java.lang.Runnable, initialDelay: number /*long*/, period: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<any>
                     // @ts-ignore
-                    scheduleWithFixedDelay(command: java.lang.Runnable, initialDelay: number /*long*/, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<?>
+                    scheduleWithFixedDelay(command: java.lang.Runnable, initialDelay: number /*long*/, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): org.spongepowered.api.scheduler.SpongeExecutorService.SpongeFuture<any>
                 }
             }
         }

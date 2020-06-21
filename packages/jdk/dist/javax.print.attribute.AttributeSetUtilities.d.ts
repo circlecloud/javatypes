@@ -47,7 +47,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null. Null is never a
                  */
                 // @ts-ignore
-                unmodifiableView(attributeSet: javax.print.attribute.AttributeSet): javax.print.attribute.AttributeSet
+                public static unmodifiableView(attributeSet: javax.print.attribute.AttributeSet): javax.print.attribute.AttributeSet
                 /**
                  * Creates an unmodifiable view of the given doc attribute set.
                  * @param attributeSet  Underlying doc attribute set.
@@ -56,7 +56,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                unmodifiableView(attributeSet: javax.print.attribute.DocAttributeSet): javax.print.attribute.DocAttributeSet
+                public static unmodifiableView(attributeSet: javax.print.attribute.DocAttributeSet): javax.print.attribute.DocAttributeSet
                 /**
                  * Creates an unmodifiable view of the given print request attribute set.
                  * @param attributeSet  Underlying print request attribute set.
@@ -65,7 +65,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                unmodifiableView(attributeSet: javax.print.attribute.PrintRequestAttributeSet): javax.print.attribute.PrintRequestAttributeSet
+                public static unmodifiableView(attributeSet: javax.print.attribute.PrintRequestAttributeSet): javax.print.attribute.PrintRequestAttributeSet
                 /**
                  * Creates an unmodifiable view of the given print job attribute set.
                  * @param attributeSet  Underlying print job attribute set.
@@ -74,7 +74,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                unmodifiableView(attributeSet: javax.print.attribute.PrintJobAttributeSet): javax.print.attribute.PrintJobAttributeSet
+                public static unmodifiableView(attributeSet: javax.print.attribute.PrintJobAttributeSet): javax.print.attribute.PrintJobAttributeSet
                 /**
                  * Creates an unmodifiable view of the given print service attribute set.
                  * @param attributeSet  Underlying print service attribute set.
@@ -83,7 +83,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                unmodifiableView(attributeSet: javax.print.attribute.PrintServiceAttributeSet): javax.print.attribute.PrintServiceAttributeSet
+                public static unmodifiableView(attributeSet: javax.print.attribute.PrintServiceAttributeSet): javax.print.attribute.PrintServiceAttributeSet
                 /**
                  * Creates a synchronized view of the given attribute set.
                  * @param attributeSet  Underlying attribute set.
@@ -92,7 +92,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                synchronizedView(attributeSet: javax.print.attribute.AttributeSet): javax.print.attribute.AttributeSet
+                public static synchronizedView(attributeSet: javax.print.attribute.AttributeSet): javax.print.attribute.AttributeSet
                 /**
                  * Creates a synchronized view of the given doc attribute set.
                  * @param attributeSet  Underlying doc attribute set.
@@ -101,7 +101,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                synchronizedView(attributeSet: javax.print.attribute.DocAttributeSet): javax.print.attribute.DocAttributeSet
+                public static synchronizedView(attributeSet: javax.print.attribute.DocAttributeSet): javax.print.attribute.DocAttributeSet
                 /**
                  * Creates a synchronized view of the given print request attribute set.
                  * @param attributeSet  Underlying print request attribute set.
@@ -110,7 +110,7 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                synchronizedView(attributeSet: javax.print.attribute.PrintRequestAttributeSet): javax.print.attribute.PrintRequestAttributeSet
+                public static synchronizedView(attributeSet: javax.print.attribute.PrintRequestAttributeSet): javax.print.attribute.PrintRequestAttributeSet
                 /**
                  * Creates a synchronized view of the given print job attribute set.
                  * @param attributeSet  Underlying print job attribute set.
@@ -119,14 +119,14 @@ declare namespace javax {
                  *      Thrown if <CODE>attributeSet</CODE> is null.
                  */
                 // @ts-ignore
-                synchronizedView(attributeSet: javax.print.attribute.PrintJobAttributeSet): javax.print.attribute.PrintJobAttributeSet
+                public static synchronizedView(attributeSet: javax.print.attribute.PrintJobAttributeSet): javax.print.attribute.PrintJobAttributeSet
                 /**
                  * Creates a synchronized view of the given print service attribute set.
                  * @param attributeSet  Underlying print service attribute set.
                  * @return Synchronized view of <CODE>attributeSet</CODE>.
                  */
                 // @ts-ignore
-                synchronizedView(attributeSet: javax.print.attribute.PrintServiceAttributeSet): javax.print.attribute.PrintServiceAttributeSet
+                public static synchronizedView(attributeSet: javax.print.attribute.PrintServiceAttributeSet): javax.print.attribute.PrintServiceAttributeSet
                 /**
                  * Verify that the given object is a {@link java.lang.Class Class} that
                  * implements the given interface, which is assumed to be interface {@link
@@ -145,7 +145,7 @@ declare namespace javax {
                  *      <CODE>interfaceName</CODE>.
                  */
                 // @ts-ignore
-                verifyAttributeCategory(object: any, interfaceName: java.lang.Class<any>): java.lang.Class<?>
+                public static verifyAttributeCategory(object: java.lang.Object | any, interfaceName: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Verify that the given object is an instance of the given interface, which
                  * is assumed to be interface {@link Attribute Attribute} or a subinterface
@@ -163,7 +163,7 @@ declare namespace javax {
                  *      instance of <CODE>interfaceName</CODE>.
                  */
                 // @ts-ignore
-                verifyAttributeValue(object: any, interfaceName: java.lang.Class<any>): javax.print.attribute.Attribute
+                public static verifyAttributeValue(object: java.lang.Object | any, interfaceName: java.lang.Class<any>): javax.print.attribute.Attribute
                 /**
                  * Verify that the given attribute category object is equal to the
                  * category of the given attribute value object. If so, this method
@@ -178,7 +178,7 @@ declare namespace javax {
                  *      equal to the category of the <CODE>attribute</CODE>.
                  */
                 // @ts-ignore
-                verifyCategoryForValue(category: java.lang.Class<any>, attribute: javax.print.attribute.Attribute): void
+                public static verifyCategoryForValue(category: java.lang.Class<any>, attribute: javax.print.attribute.Attribute): void
             }
         }
     }

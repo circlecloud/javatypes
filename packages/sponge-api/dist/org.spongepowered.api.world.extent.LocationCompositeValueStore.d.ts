@@ -18,7 +18,7 @@ declare namespace org {
                          * @return The data, if available
                          */
                         // @ts-ignore
-                        get<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): java.util.Optional<E>
+                        get<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<any>): java.util.Optional<E>
                         /**
                          * Gets the value of data that is keyed to the provided {@link Key} at the
                          * give block location.
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return The data, if available
                          */
                         // @ts-ignore
-                        get<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): java.util.Optional<E>
+                        get<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<any>): java.util.Optional<E>
                         /**
                          * Gets an instance of the given data class for given block at the location.
                          * <p>If there is no pre-existing data that can be represented by the given
@@ -97,7 +97,7 @@ declare namespace org {
                          * @return The data or null
                          */
                         // @ts-ignore
-                        getOrNull<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): E
+                        getOrNull<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<any>): E
                         /**
                          * Gets the value of data that is keyed to the provided {@link Key} at the
                          * give block location. The data may not exist, or may not be compatible in
@@ -110,7 +110,7 @@ declare namespace org {
                          * @return The data or null
                          */
                         // @ts-ignore
-                        getOrNull<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): E
+                        getOrNull<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<any>): E
                         /**
                          * Gets the value of data that is keyed to the provided {@link Key} at the
                          * give block location. The data may not exist, or may not be compatible in
@@ -122,7 +122,7 @@ declare namespace org {
                          * @return The data or null
                          */
                         // @ts-ignore
-                        getOrElse<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, defaultValue: E): E
+                        getOrElse<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<any>, defaultValue: E): E
                         /**
                          * Gets the value of data that is keyed to the provided {@link Key} at the
                          * give block location. The data may not exist, or may not be compatible in
@@ -136,7 +136,7 @@ declare namespace org {
                          * @return The data or null
                          */
                         // @ts-ignore
-                        getOrElse<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, defaultValue: E): E
+                        getOrElse<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<any>, defaultValue: E): E
                         /**
                          * Gets the value of data that is keyed to the provided {@link Key} at the
                          * give block location. The data may not exist, or may not be compatible in
@@ -211,7 +211,7 @@ declare namespace org {
                          *          {#link DataManipulator} object
                          */
                         // @ts-ignore
-                        supports(coordinates: Vector3i, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): boolean
+                        supports(coordinates: Vector3i, manipulatorClass: java.lang.Class<any>): boolean
                         /**
                          * Checks if the given {@link DataManipulator} class is able to represent
                          * data within the block at the given position.
@@ -223,7 +223,7 @@ declare namespace org {
                          *          {#link DataManipulator} object
                          */
                         // @ts-ignore
-                        supports(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): boolean
+                        supports(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulatorClass: java.lang.Class<any>): boolean
                         /**
                          * Checks if the given {@link DataManipulator} class is able to represent
                          * data within the block at the given position.
@@ -233,7 +233,7 @@ declare namespace org {
                          *          {#link DataManipulator} object
                          */
                         // @ts-ignore
-                        supports(coordinates: Vector3i, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): boolean
+                        supports(coordinates: Vector3i, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): boolean
                         /**
                          * Checks if the given {@link DataManipulator} class is able to represent
                          * data within the block at the given position.
@@ -245,7 +245,7 @@ declare namespace org {
                          *          {#link DataManipulator} object
                          */
                         // @ts-ignore
-                        supports(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): boolean
+                        supports(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): boolean
                         /**
                          * Gets an {@link ImmutableSet} of {@link Key}s for the block at the given
                          * location.
@@ -253,7 +253,7 @@ declare namespace org {
                          * @return The immutable set of values for the block
                          */
                         // @ts-ignore
-                        getKeys(coordinates: Vector3i): java.util.Set<org.spongepowered.api.data.key.Key<?>>
+                        getKeys(coordinates: Vector3i): Array<org.spongepowered.api.data.key.Key<any>>
                         /**
                          * Gets an {@link ImmutableSet} of {@link Key}s for the block at the given
                          * location.
@@ -263,7 +263,7 @@ declare namespace org {
                          * @return The immutable set of values for the block
                          */
                         // @ts-ignore
-                        getKeys(x: number /*int*/, y: number /*int*/, z: number /*int*/): java.util.Set<org.spongepowered.api.data.key.Key<?>>
+                        getKeys(x: number /*int*/, y: number /*int*/, z: number /*int*/): Array<org.spongepowered.api.data.key.Key<any>>
                         /**
                          * Gets an {@link ImmutableSet} of {@link ImmutableValue}s for the block at
                          * the given location.
@@ -271,7 +271,7 @@ declare namespace org {
                          * @return The immutable set of values for the block
                          */
                         // @ts-ignore
-                        getValues(coordinates: Vector3i): java.util.Set<org.spongepowered.api.data.value.immutable.ImmutableValue<?>>
+                        getValues(coordinates: Vector3i): Array<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>
                         /**
                          * Gets an {@link ImmutableSet} of {@link ImmutableValue}s for the block at
                          * the given location.
@@ -281,7 +281,7 @@ declare namespace org {
                          * @return The immutable set of values for the block
                          */
                         // @ts-ignore
-                        getValues(x: number /*int*/, y: number /*int*/, z: number /*int*/): java.util.Set<org.spongepowered.api.data.value.immutable.ImmutableValue<?>>
+                        getValues(x: number /*int*/, y: number /*int*/, z: number /*int*/): Array<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>
                         /**
                          * Applies a transformation on the pre-existing value of the data keyed by
                          * the provided {@link Key} and returns a {@link DataTransactionResult} of
@@ -293,7 +293,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        transform<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): org.spongepowered.api.data.DataTransactionResult
+                        transform<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Function<E, E>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Applies a transformation on the pre-existing value of the data keyed by
                          * the provided {@link Key} and returns a {@link DataTransactionResult} of
@@ -307,7 +307,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        transform<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): org.spongepowered.api.data.DataTransactionResult
+                        transform<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Function<E, E>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the given <code>E</code> value that is keyed by the provided
                          * {@link Key} to the block at the provided location.
@@ -321,7 +321,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataTransactionResult
+                        offer<E>(coordinates: Vector3i, key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the given <code>E</code> value that is keyed by the provided
                          * {@link Key} to the block at the provided location.
@@ -337,7 +337,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataTransactionResult
+                        offer<E>(x: number /*int*/, y: number /*int*/, z: number /*int*/, key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the given {@link BaseValue} to the block at the given position.
                          * <p>If any data is rejected or existing data is replaced, the
@@ -375,7 +375,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(coordinates: Vector3i, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): org.spongepowered.api.data.DataTransactionResult
+                        offer(coordinates: Vector3i, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the given {@link DataManipulator} to the block at the given
                          * position.
@@ -389,7 +389,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): org.spongepowered.api.data.DataTransactionResult
+                        offer(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the given {@link DataManipulator} to the block at the given
                          * position.
@@ -402,7 +402,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(coordinates: Vector3i, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
+                        offer(coordinates: Vector3i, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the given {@link DataManipulator} to the block at the given
                          * position.
@@ -417,7 +417,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
+                        offer(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the provided {@link DataManipulator}s to the block at the given
                          * position.
@@ -429,7 +429,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(coordinates: Vector3i, manipulators: java.lang.Iterable<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): org.spongepowered.api.data.DataTransactionResult
+                        offer(coordinates: Vector3i, manipulators: java.lang.Iterable<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the provided {@link DataManipulator}s to the block at the given
                          * position.
@@ -443,7 +443,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulators: java.lang.Iterable<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): org.spongepowered.api.data.DataTransactionResult
+                        offer(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulators: java.lang.Iterable<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Offers the provided {@link DataManipulator}s to the block at the given
                          * position. If there's any overlaps of data, the provided
@@ -459,7 +459,7 @@ declare namespace org {
                          * @return The transaction result
                          */
                         // @ts-ignore
-                        offer(blockPosition: Vector3i, values: java.lang.Iterable<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
+                        offer(blockPosition: Vector3i, values: java.lang.Iterable<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Attempts to remove the given {@link DataManipulator} represented by the
                          * block at the given location if possible.
@@ -470,7 +470,7 @@ declare namespace org {
                          * @return If the manipulator was removed
                          */
                         // @ts-ignore
-                        remove(coordinates: Vector3i, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): org.spongepowered.api.data.DataTransactionResult
+                        remove(coordinates: Vector3i, manipulatorClass: java.lang.Class<any>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Attempts to remove the given {@link DataManipulator} represented by the
                          * block at the given location if possible.
@@ -483,7 +483,7 @@ declare namespace org {
                          * @return If the manipulator was removed
                          */
                         // @ts-ignore
-                        remove(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): org.spongepowered.api.data.DataTransactionResult
+                        remove(x: number /*int*/, y: number /*int*/, z: number /*int*/, manipulatorClass: java.lang.Class<any>): org.spongepowered.api.data.DataTransactionResult
                         /**
                          * Attempts to remove the data associated with the provided {@link Key} from
                          * the block at the provided location.
@@ -628,7 +628,7 @@ declare namespace org {
                          *          at the given position
                          */
                         // @ts-ignore
-                        getManipulators(coordinates: Vector3i): java.util.Collection<org.spongepowered.api.data.manipulator.DataManipulator<?, ?>>
+                        getManipulators(coordinates: Vector3i): Array<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>
                         /**
                          * Gets an copied collection of all known {@link DataManipulator}s belonging
                          * to the block at the given position. An individual {@link DataManipulator}
@@ -641,7 +641,7 @@ declare namespace org {
                          *          at the given position
                          */
                         // @ts-ignore
-                        getManipulators(x: number /*int*/, y: number /*int*/, z: number /*int*/): java.util.Collection<org.spongepowered.api.data.manipulator.DataManipulator<?, ?>>
+                        getManipulators(x: number /*int*/, y: number /*int*/, z: number /*int*/): Array<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>
                         /**
                          * Validates the container with known data required to set the raw data to
                          * the block at the given position. If the container is incomplete or

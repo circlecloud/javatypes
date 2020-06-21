@@ -39,7 +39,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the end of day flag is true when the time is not midnight
                  */
                 // @ts-ignore
-                of(month: java.time.Month, dayOfMonthIndicator: number /*int*/, dayOfWeek: java.time.DayOfWeek, time: java.time.LocalTime, timeEndOfDay: boolean, timeDefnition: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition, standardOffset: java.time.ZoneOffset, offsetBefore: java.time.ZoneOffset, offsetAfter: java.time.ZoneOffset): java.time.zone.ZoneOffsetTransitionRule
+                public static of(month: java.time.Month, dayOfMonthIndicator: number /*int*/, dayOfWeek: java.time.DayOfWeek, time: java.time.LocalTime, timeEndOfDay: boolean, timeDefnition: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition, standardOffset: java.time.ZoneOffset, offsetBefore: java.time.ZoneOffset, offsetAfter: java.time.ZoneOffset): java.time.zone.ZoneOffsetTransitionRule
                 /**
                  * Gets the month of the transition.
                  * <p>
@@ -50,7 +50,7 @@ declare namespace java {
                  * @return the month of the transition, not null
                  */
                 // @ts-ignore
-                getMonth(): java.time.Month
+                public getMonth(): java.time.Month
                 /**
                  * Gets the indicator of the day-of-month of the transition.
                  * <p>
@@ -69,7 +69,7 @@ declare namespace java {
                  * @return the day-of-month indicator, from -28 to 31 excluding 0
                  */
                 // @ts-ignore
-                getDayOfMonthIndicator(): int
+                public getDayOfMonthIndicator(): number /*int*/
                 /**
                  * Gets the day-of-week of the transition.
                  * <p>
@@ -82,7 +82,7 @@ declare namespace java {
                  * @return the day-of-week that the transition occurs, null if the rule defines an exact date
                  */
                 // @ts-ignore
-                getDayOfWeek(): java.time.DayOfWeek
+                public getDayOfWeek(): java.time.DayOfWeek
                 /**
                  * Gets the local time of day of the transition which must be checked with
                  * {@link #isMidnightEndOfDay()}.
@@ -91,7 +91,7 @@ declare namespace java {
                  * @return the local time of day of the transition, not null
                  */
                 // @ts-ignore
-                getLocalTime(): java.time.LocalTime
+                public getLocalTime(): java.time.LocalTime
                 /**
                  * Is the transition local time midnight at the end of day.
                  * <p>
@@ -99,7 +99,7 @@ declare namespace java {
                  * @return whether a local time of midnight is at the start or end of the day
                  */
                 // @ts-ignore
-                isMidnightEndOfDay(): boolean
+                public isMidnightEndOfDay(): boolean
                 /**
                  * Gets the time definition, specifying how to convert the time to an instant.
                  * <p>
@@ -108,25 +108,25 @@ declare namespace java {
                  * @return the time definition, not null
                  */
                 // @ts-ignore
-                getTimeDefinition(): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
+                public getTimeDefinition(): java.time.zone.ZoneOffsetTransitionRule.TimeDefinition
                 /**
                  * Gets the standard offset in force at the transition.
                  * @return the standard offset, not null
                  */
                 // @ts-ignore
-                getStandardOffset(): java.time.ZoneOffset
+                public getStandardOffset(): java.time.ZoneOffset
                 /**
                  * Gets the offset before the transition.
                  * @return the offset before, not null
                  */
                 // @ts-ignore
-                getOffsetBefore(): java.time.ZoneOffset
+                public getOffsetBefore(): java.time.ZoneOffset
                 /**
                  * Gets the offset after the transition.
                  * @return the offset after, not null
                  */
                 // @ts-ignore
-                getOffsetAfter(): java.time.ZoneOffset
+                public getOffsetAfter(): java.time.ZoneOffset
                 /**
                  * Creates a transition instance for the specified year.
                  * <p>
@@ -135,7 +135,7 @@ declare namespace java {
                  * @return the transition instance, not null
                  */
                 // @ts-ignore
-                createTransition(year: number /*int*/): java.time.zone.ZoneOffsetTransition
+                public createTransition(year: number /*int*/): java.time.zone.ZoneOffsetTransition
                 /**
                  * Checks if this object equals another.
                  * <p>
@@ -144,19 +144,19 @@ declare namespace java {
                  * @return true if equal
                  */
                 // @ts-ignore
-                equals(otherRule: any): boolean
+                public equals(otherRule: java.lang.Object | any): boolean
                 /**
                  * Returns a suitable hash code.
                  * @return the hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this object.
                  * @return a string for debugging, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

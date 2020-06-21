@@ -44,30 +44,30 @@ declare namespace org {
                          * The default max size for aggregating messages.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_MESSAGE_MAX_SIZE: number /*int*/
+                        static readonly DEFAULT_MESSAGE_MAX_SIZE: number /*int*/
                         /**
                          * The max size allowed per message.
                          * <p>By default, this is set to 256K.
                          * @param maxMessageSize the max size per message, or -1 for unlimited
                          */
                         // @ts-ignore
-                        setMaxMessageSize(maxMessageSize: number /*int*/): void
+                        public setMaxMessageSize(maxMessageSize: number /*int*/): void
                         /**
                          * Return the {@link #setMaxMessageSize configured} message size limit.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getMaxMessageSize(): int
+                        public getMaxMessageSize(): number /*int*/
                         // @ts-ignore
-                        canDecode(elementType: ResolvableType, mimeType: MimeType): boolean
+                        public canDecode(elementType: ResolvableType, mimeType: MimeType): boolean
                         // @ts-ignore
-                        decode(inputStream: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decode(inputStream: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        decodeToMono(inputStream: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decodeToMono(inputStream: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        decode(dataBuffer: DataBuffer, targetType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): Message
+                        public decode(dataBuffer: DataBuffer, targetType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): Message
                         // @ts-ignore
-                        getDecodableMimeTypes(): java.util.List<MimeType>
+                        public getDecodableMimeTypes(): Array<MimeType>
                     }
                 }
             }

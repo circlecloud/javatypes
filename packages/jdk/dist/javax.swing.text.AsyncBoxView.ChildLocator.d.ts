@@ -44,19 +44,19 @@ declare namespace javax {
                      * called by multiple threads.
                      */
                     // @ts-ignore
-                    childChanged(cs: javax.swing.text.AsyncBoxView.ChildState): void
+                    public childChanged(cs: javax.swing.text.AsyncBoxView.ChildState): void
                     /**
                      * Paint the children that intersect the clip area.
                      */
                     // @ts-ignore
-                    paintChildren(g: java.awt.Graphics): void
+                    public paintChildren(g: java.awt.Graphics): void
                     /**
                      * Fetch the allocation to use for a child view.
                      * This will update the offsets for all children
                      * not yet updated before the given index.
                      */
                     // @ts-ignore
-                    getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
+                    public getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
                     /**
                      * Fetches the child view index at the given point.
                      * This is called by the various View methods that
@@ -71,7 +71,7 @@ declare namespace javax {
                      * @return the nearest child index
                      */
                     // @ts-ignore
-                    getViewIndexAtPoint(x: number /*float*/, y: number /*float*/, a: java.awt.Shape): int
+                    public getViewIndexAtPoint(x: number /*float*/, y: number /*float*/, a: java.awt.Shape): number /*int*/
                     /**
                      * Fetch the allocation to use for a child view.
                      * <em>This does not update the offsets in the ChildState
@@ -96,7 +96,7 @@ declare namespace javax {
                      *    that location
                      */
                     // @ts-ignore
-                    getViewIndexAtVisualOffset(targetOffset: number /*float*/): int
+                    getViewIndexAtVisualOffset(targetOffset: number /*float*/): number /*int*/
                 }
             }
         }

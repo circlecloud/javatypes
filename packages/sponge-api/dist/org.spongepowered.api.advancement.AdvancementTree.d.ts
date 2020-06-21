@@ -25,7 +25,7 @@ declare namespace org {
                      * @return The background texture
                      */
                     // @ts-ignore
-                    getBackgroundPath(): java.lang.String
+                    getBackgroundPath(): string
                 }
             }
         }

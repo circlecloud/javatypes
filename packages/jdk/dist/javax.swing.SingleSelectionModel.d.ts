@@ -12,7 +12,7 @@ declare namespace javax {
              * @see #setSelectedIndex
              */
             // @ts-ignore
-            getSelectedIndex(): int
+            getSelectedIndex(): number /*int*/
             /**
              * Sets the model's selected index to <I>index</I>.
              * Notifies any listeners if the model changes

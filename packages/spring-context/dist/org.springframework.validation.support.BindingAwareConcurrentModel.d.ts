@@ -21,7 +21,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    put(key: string, value: any): java.lang.Object
+                    public put(key: java.lang.String | string, value: java.lang.Object | any): any
                 }
             }
         }

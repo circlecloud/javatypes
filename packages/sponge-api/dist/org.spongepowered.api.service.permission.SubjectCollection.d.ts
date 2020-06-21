@@ -24,7 +24,7 @@ declare namespace org {
                          * @return The identifier
                          */
                         // @ts-ignore
-                        getIdentifier(): java.lang.String
+                        getIdentifier(): string
                         /**
                          * Returns a predicate which determines whether or not a given identifier is
                          * valid for a subject held by this collection.
@@ -34,7 +34,7 @@ declare namespace org {
                          * @return The predicate
                          */
                         // @ts-ignore
-                        getIdentifierValidityPredicate(): java.util.function.Predicate<java.lang.String>
+                        getIdentifierValidityPredicate(): java.util.function$.Predicate<java.lang.String | string>
                         /**
                          * Loads and returns a subject with the given identifier.
                          * <p>The returned future will complete exceptionally if the subject with
@@ -49,7 +49,7 @@ declare namespace org {
                          *                                   collection.
                          */
                         // @ts-ignore
-                        loadSubject(identifier: string): java.util.concurrent.CompletableFuture<org.spongepowered.api.service.permission.Subject>
+                        loadSubject(identifier: java.lang.String | string): java.util.concurrent.CompletableFuture<org.spongepowered.api.service.permission.Subject>
                         /**
                          * Returns a subject with the given identifier, if the subject is already
                          * loaded within this collection.
@@ -63,7 +63,7 @@ declare namespace org {
                          * @return A subject for the given identifier
                          */
                         // @ts-ignore
-                        getSubject(identifier: string): java.util.Optional<org.spongepowered.api.service.permission.Subject>
+                        getSubject(identifier: java.lang.String | string): java.util.Optional<org.spongepowered.api.service.permission.Subject>
                         /**
                          * Returns whether a subject with the given identifier currently exists.
                          * <p>The return value of this function does not influence whether or
@@ -72,7 +72,7 @@ declare namespace org {
                          * @return If the subject currently exists
                          */
                         // @ts-ignore
-                        hasSubject(identifier: string): java.util.concurrent.CompletableFuture<java.lang.Boolean>
+                        hasSubject(identifier: java.lang.String | string): java.util.concurrent.CompletableFuture<java.lang.Boolean>
                         /**
                          * Gets a map of subjects from the provided set of identifiers.
                          * <p>If any of the identifiers do not pass the collections
@@ -82,7 +82,7 @@ declare namespace org {
                          * @return a map of subjects corresponding to the identifiers passed
                          */
                         // @ts-ignore
-                        loadSubjects(identifiers: Array<java.lang.String>): java.util.concurrent.CompletableFuture<java.util.Map<java.lang.String, org.spongepowered.api.service.permission.Subject>>
+                        loadSubjects(identifiers: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): java.util.concurrent.CompletableFuture<java.util.Map<java.lang.String | string, org.spongepowered.api.service.permission.Subject>>
                         /**
                          * Returns an immutable copy of all subjects currently loaded in this
                          * collection.
@@ -90,7 +90,7 @@ declare namespace org {
                          *          subject collection.
                          */
                         // @ts-ignore
-                        getLoadedSubjects(): java.util.Collection<org.spongepowered.api.service.permission.Subject>
+                        getLoadedSubjects(): Array<org.spongepowered.api.service.permission.Subject>
                         /**
                          * Gets a set of Subject identifiers being stored in the collection. This
                          * method must return a complete list, including identifiers of subjects not
@@ -105,7 +105,7 @@ declare namespace org {
                          *          collection
                          */
                         // @ts-ignore
-                        getAllIdentifiers(): java.util.concurrent.CompletableFuture<java.util.Set<java.lang.String>>
+                        getAllIdentifiers(): java.util.concurrent.CompletableFuture<java.util.Set<java.lang.String | string> | Array<java.lang.String | string>>
                         /**
                          * Creates a new subject reference to represent the expressed subject.
                          * <p>Note that instances of SubjectReference must be capable of resolving
@@ -121,7 +121,7 @@ declare namespace org {
                          *                                   collection.
                          */
                         // @ts-ignore
-                        newSubjectReference(subjectIdentifier: string): org.spongepowered.api.service.permission.SubjectReference
+                        newSubjectReference(subjectIdentifier: java.lang.String | string): org.spongepowered.api.service.permission.SubjectReference
                         /**
                          * Performs an action on each Subject in the collection.
                          * <p>Subjects are loaded, supplied to the consumer, and then allowed to be
@@ -136,7 +136,7 @@ declare namespace org {
                          * @return A future which will complete when the operation has finished
                          */
                         // @ts-ignore
-                        applyToAll(action: java.util.function.Consumer<org.spongepowered.api.service.permission.Subject> | java.util.function$.Consumer<org.spongepowered.api.service.permission.Subject>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                        applyToAll(action: java.util.function$.Consumer<org.spongepowered.api.service.permission.Subject>): java.util.concurrent.CompletableFuture<java.lang.Void>
                         /**
                          * Performs an action on each Subject in the provided set.
                          * <p>Subjects are loaded, supplied to the consumer, and then allowed to be
@@ -152,7 +152,7 @@ declare namespace org {
                          * @return A future which will complete when the operation has finished
                          */
                         // @ts-ignore
-                        applyToAll(action: java.util.function.Consumer<org.spongepowered.api.service.permission.Subject> | java.util.function$.Consumer<org.spongepowered.api.service.permission.Subject>, identifiers: Array<java.lang.String>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                        applyToAll(action: java.util.function$.Consumer<org.spongepowered.api.service.permission.Subject>, identifiers: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): java.util.concurrent.CompletableFuture<java.lang.Void>
                         /**
                          * Return the identifiers of all known subjects with the given permission
                          * set.
@@ -169,7 +169,7 @@ declare namespace org {
                          *          set, and the value this permission is set to
                          */
                         // @ts-ignore
-                        getAllWithPermission(permission: string): java.util.concurrent.CompletableFuture<java.util.Map<org.spongepowered.api.service.permission.SubjectReference, java.lang.Boolean>>
+                        getAllWithPermission(permission: java.lang.String | string): java.util.concurrent.CompletableFuture<java.util.Map<org.spongepowered.api.service.permission.SubjectReference, java.lang.Boolean>>
                         /**
                          * Return the identifiers of all known subjects with the given permission
                          * set.
@@ -182,7 +182,7 @@ declare namespace org {
                          *          set, and the value this permission is set to
                          */
                         // @ts-ignore
-                        getAllWithPermission(contexts: Array<org.spongepowered.api.service.context.Context>, permission: string): java.util.concurrent.CompletableFuture<java.util.Map<org.spongepowered.api.service.permission.SubjectReference, java.lang.Boolean>>
+                        getAllWithPermission(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, permission: java.lang.String | string): java.util.concurrent.CompletableFuture<java.util.Map<org.spongepowered.api.service.permission.SubjectReference, java.lang.Boolean>>
                         /**
                          * Return all loaded subjects with the given permission set.
                          * <p>This method <p>DOES NOT</p> consider inheritance, and will only query
@@ -198,7 +198,7 @@ declare namespace org {
                          *          and the value this permission is set to
                          */
                         // @ts-ignore
-                        getLoadedWithPermission(permission: string): java.util.Map<org.spongepowered.api.service.permission.Subject, java.lang.Boolean>
+                        getLoadedWithPermission(permission: java.lang.String | string): java.util.Map<org.spongepowered.api.service.permission.Subject, java.lang.Boolean>
                         /**
                          * Return all loaded subjects with the given permission set.
                          * <p>This method <p>DOES NOT</p> consider inheritance, and will only query
@@ -210,7 +210,7 @@ declare namespace org {
                          *          and the value this permission is set to
                          */
                         // @ts-ignore
-                        getLoadedWithPermission(contexts: Array<org.spongepowered.api.service.context.Context>, permission: string): java.util.Map<org.spongepowered.api.service.permission.Subject, java.lang.Boolean>
+                        getLoadedWithPermission(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, permission: java.lang.String | string): java.util.Map<org.spongepowered.api.service.permission.Subject, java.lang.Boolean>
                         /**
                          * Gets the subject holding data that is applied by default to all
                          * subjects in this collection.
@@ -237,7 +237,7 @@ declare namespace org {
                          * @param identifier The subject to be unloaded
                          */
                         // @ts-ignore
-                        suggestUnload(identifier: string): void
+                        suggestUnload(identifier: java.lang.String | string): void
                     }
                 }
             }

@@ -13,20 +13,20 @@ declare namespace org {
                      * @param command The command that was queried for
                      */
                     // @ts-ignore
-                    constructor(command: string)
+                    constructor(command: java.lang.String | string)
                     /**
                      * Create an exception with a custom message.
                      * @param message The message
                      * @param command The command that was queried for
                      */
                     // @ts-ignore
-                    constructor(message: org.spongepowered.api.text.Text, command: string)
+                    constructor(message: org.spongepowered.api.text.Text, command: java.lang.String | string)
                     /**
                      * Returns the command that was queried for.
                      * @return The command
                      */
                     // @ts-ignore
-                    getCommand(): java.lang.String
+                    getCommand(): string
                 }
             }
         }

@@ -21,7 +21,7 @@ declare namespace java {
                  * @see java.awt.Toolkit#getSystemClipboard
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 // @ts-ignore
                 owner: java.awt.datatransfer.ClipboardOwner
                 // @ts-ignore
@@ -31,7 +31,7 @@ declare namespace java {
                  * @see java.awt.Toolkit#getSystemClipboard
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Sets the current contents of the clipboard to the specified
                  * transferable object and registers the specified clipboard owner
@@ -57,7 +57,7 @@ declare namespace java {
                  * @see java.awt.Toolkit#getSystemClipboard
                  */
                 // @ts-ignore
-                setContents(contents: java.awt.datatransfer.Transferable, owner: java.awt.datatransfer.ClipboardOwner): void
+                public setContents(contents: java.awt.datatransfer.Transferable, owner: java.awt.datatransfer.ClipboardOwner): void
                 /**
                  * Returns a transferable object representing the current contents
                  * of the clipboard.  If the clipboard currently has no contents,
@@ -72,7 +72,7 @@ declare namespace java {
                  * @see java.awt.Toolkit#getSystemClipboard
                  */
                 // @ts-ignore
-                getContents(requestor: any): java.awt.datatransfer.Transferable
+                public getContents(requestor: java.lang.Object | any): java.awt.datatransfer.Transferable
                 /**
                  * Returns an array of <code>DataFlavor</code>s in which the current
                  * contents of this clipboard can be provided. If there are no
@@ -84,7 +84,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getAvailableDataFlavors(): java.awt.datatransfer.DataFlavor[]
+                public getAvailableDataFlavors(): java.awt.datatransfer.DataFlavor[]
                 /**
                  * Returns whether or not the current contents of this clipboard can be
                  * provided in the specified <code>DataFlavor</code>.
@@ -97,7 +97,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isDataFlavorAvailable(flavor: java.awt.datatransfer.DataFlavor): boolean
+                public isDataFlavorAvailable(flavor: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * Returns an object representing the current contents of this clipboard
                  * in the specified <code>DataFlavor</code>.
@@ -116,7 +116,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getData(flavor: java.awt.datatransfer.DataFlavor): java.lang.Object
+                public getData(flavor: java.awt.datatransfer.DataFlavor): any
                 /**
                  * Registers the specified <code>FlavorListener</code> to receive
                  * <code>FlavorEvent</code>s from this clipboard.
@@ -130,7 +130,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                addFlavorListener(listener: java.awt.datatransfer.FlavorListener): void
+                public addFlavorListener(listener: java.awt.datatransfer.FlavorListener): void
                 /**
                  * Removes the specified <code>FlavorListener</code> so that it no longer
                  * receives <code>FlavorEvent</code>s from this <code>Clipboard</code>.
@@ -147,7 +147,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                removeFlavorListener(listener: java.awt.datatransfer.FlavorListener): void
+                public removeFlavorListener(listener: java.awt.datatransfer.FlavorListener): void
                 /**
                  * Returns an array of all the <code>FlavorListener</code>s currently
                  * registered on this <code>Clipboard</code>.
@@ -160,7 +160,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getFlavorListeners(): java.awt.datatransfer.FlavorListener[]
+                public getFlavorListeners(): java.awt.datatransfer.FlavorListener[]
             }
         }
     }

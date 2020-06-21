@@ -35,7 +35,7 @@ declare namespace java {
                  * @return the object identifier as a String
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                getId(): string
                 /**
                  * Gets the extension's criticality setting.
                  * @return true if this is a critical extension.
@@ -50,7 +50,7 @@ declare namespace java {
                  *     extension value is present.
                  */
                 // @ts-ignore
-                getValue(): byte[]
+                getValue(): number /*byte*/[]
                 /**
                  * Generates the extension's DER encoding and writes it to the output
                  * stream.

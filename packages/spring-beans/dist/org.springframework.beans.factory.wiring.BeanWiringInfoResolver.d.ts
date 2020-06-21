@@ -25,7 +25,7 @@ declare namespace org {
                          * @return the BeanWiringInfo, or {#code null} if not found
                          */
                         // @ts-ignore
-                        resolveWiringInfo(beanInstance: any): org.springframework.beans.factory.wiring.BeanWiringInfo
+                        resolveWiringInfo(beanInstance: java.lang.Object | any): org.springframework.beans.factory.wiring.BeanWiringInfo
                     }
                 }
             }

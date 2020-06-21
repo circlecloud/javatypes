@@ -18,7 +18,7 @@ declare namespace java {
                  * @see TextArea#insert(String, int)
                  */
                 // @ts-ignore
-                insert(text: string, pos: number /*int*/): void
+                insert(text: java.lang.String | string, pos: number /*int*/): void
                 /**
                  * Replaces a range of text by the specified string.
                  * @param text the replacement string
@@ -27,7 +27,7 @@ declare namespace java {
                  * @see TextArea#replaceRange(String, int, int)
                  */
                 // @ts-ignore
-                replaceRange(text: string, start: number /*int*/, end: number /*int*/): void
+                replaceRange(text: java.lang.String | string, start: number /*int*/, end: number /*int*/): void
                 /**
                  * Returns the preferred size of a textarea with the specified number of
                  * columns and rows.

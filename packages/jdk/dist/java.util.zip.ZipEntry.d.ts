@@ -16,7 +16,7 @@ declare namespace java {
                  *          0xFFFF bytes
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new zip entry with fields taken from the specified
                  * zip entry.
@@ -30,18 +30,18 @@ declare namespace java {
                  * Compression method for uncompressed entries.
                  */
                 // @ts-ignore
-                readonly STORED: number /*int*/
+                public static readonly STORED: number /*int*/
                 /**
                  * Compression method for compressed (deflated) entries.
                  */
                 // @ts-ignore
-                readonly DEFLATED: number /*int*/
+                public static readonly DEFLATED: number /*int*/
                 /**
                  * Returns the name of the entry.
                  * @return the name of the entry
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Sets the last modification time of the entry.
                  * <p> If the entry is output to a ZIP file or ZIP file formatted
@@ -57,7 +57,7 @@ declare namespace java {
                  * @see #getLastModifiedTime()
                  */
                 // @ts-ignore
-                setTime(time: number /*long*/): void
+                public setTime(time: number /*long*/): void
                 /**
                  * Returns the last modification time of the entry.
                  * <p> If the entry is read from a ZIP file or ZIP file formatted
@@ -72,7 +72,7 @@ declare namespace java {
                  * @see #setLastModifiedTime(FileTime)
                  */
                 // @ts-ignore
-                getTime(): long
+                public getTime(): number /*long*/
                 /**
                  * Sets the last modification time of the entry.
                  * <p> When output to a ZIP file or ZIP file formatted output stream
@@ -88,7 +88,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setLastModifiedTime(time: java.nio.file.attribute.FileTime): java.util.zip.ZipEntry
+                public setLastModifiedTime(time: java.nio.file.attribute.FileTime): java.util.zip.ZipEntry
                 /**
                  * Returns the last modification time of the entry.
                  * <p> If the entry is read from a ZIP file or ZIP file formatted
@@ -103,7 +103,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getLastModifiedTime(): java.nio.file.attribute.FileTime
+                public getLastModifiedTime(): java.nio.file.attribute.FileTime
                 /**
                  * Sets the last access time of the entry.
                  * <p> If set, the last access time will be stored into the extended
@@ -117,7 +117,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setLastAccessTime(time: java.nio.file.attribute.FileTime): java.util.zip.ZipEntry
+                public setLastAccessTime(time: java.nio.file.attribute.FileTime): java.util.zip.ZipEntry
                 /**
                  * Returns the last access time of the entry.
                  * <p> The last access time is from the extended timestamp fields
@@ -128,7 +128,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getLastAccessTime(): java.nio.file.attribute.FileTime
+                public getLastAccessTime(): java.nio.file.attribute.FileTime
                 /**
                  * Sets the creation time of the entry.
                  * <p> If set, the creation time will be stored into the extended
@@ -142,7 +142,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setCreationTime(time: java.nio.file.attribute.FileTime): java.util.zip.ZipEntry
+                public setCreationTime(time: java.nio.file.attribute.FileTime): java.util.zip.ZipEntry
                 /**
                  * Returns the creation time of the entry.
                  * <p> The creation time is from the extended timestamp fields of
@@ -153,7 +153,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getCreationTime(): java.nio.file.attribute.FileTime
+                public getCreationTime(): java.nio.file.attribute.FileTime
                 /**
                  * Sets the uncompressed size of the entry data.
                  * @param size the uncompressed size in bytes
@@ -164,14 +164,14 @@ declare namespace java {
                  * @see #getSize()
                  */
                 // @ts-ignore
-                setSize(size: number /*long*/): void
+                public setSize(size: number /*long*/): void
                 /**
                  * Returns the uncompressed size of the entry data.
                  * @return the uncompressed size of the entry data, or -1 if not known
                  * @see #setSize(long)
                  */
                 // @ts-ignore
-                getSize(): long
+                public getSize(): number /*long*/
                 /**
                  * Returns the size of the compressed entry data.
                  * <p> In the case of a stored entry, the compressed size will be the same
@@ -180,14 +180,14 @@ declare namespace java {
                  * @see #setCompressedSize(long)
                  */
                 // @ts-ignore
-                getCompressedSize(): long
+                public getCompressedSize(): number /*long*/
                 /**
                  * Sets the size of the compressed entry data.
                  * @param csize the compressed size to set to
                  * @see #getCompressedSize()
                  */
                 // @ts-ignore
-                setCompressedSize(csize: number /*long*/): void
+                public setCompressedSize(csize: number /*long*/): void
                 /**
                  * Sets the CRC-32 checksum of the uncompressed entry data.
                  * @param crc the CRC-32 value
@@ -196,7 +196,7 @@ declare namespace java {
                  * @see #getCrc()
                  */
                 // @ts-ignore
-                setCrc(crc: number /*long*/): void
+                public setCrc(crc: number /*long*/): void
                 /**
                  * Returns the CRC-32 checksum of the uncompressed entry data.
                  * @return the CRC-32 checksum of the uncompressed entry data, or -1 if
@@ -204,7 +204,7 @@ declare namespace java {
                  * @see #setCrc(long)
                  */
                 // @ts-ignore
-                getCrc(): long
+                public getCrc(): number /*long*/
                 /**
                  * Sets the compression method for the entry.
                  * @param method the compression method, either STORED or DEFLATED
@@ -213,14 +213,14 @@ declare namespace java {
                  * @see #getMethod()
                  */
                 // @ts-ignore
-                setMethod(method: number /*int*/): void
+                public setMethod(method: number /*int*/): void
                 /**
                  * Returns the compression method of the entry.
                  * @return the compression method of the entry, or -1 if not specified
                  * @see #setMethod(int)
                  */
                 // @ts-ignore
-                getMethod(): int
+                public getMethod(): number /*int*/
                 /**
                  * Sets the optional extra field data for the entry.
                  * <p> Invoking this method may change this entry's last modification
@@ -236,14 +236,14 @@ declare namespace java {
                  * @see #getExtra()
                  */
                 // @ts-ignore
-                setExtra(extra: number /*byte*/[]): void
+                public setExtra(extra: number /*byte*/[]): void
                 /**
                  * Returns the extra field data for the entry.
                  * @return the extra field data for the entry, or null if none
                  * @see #setExtra(byte[])
                  */
                 // @ts-ignore
-                getExtra(): byte[]
+                public getExtra(): number /*byte*/[]
                 /**
                  * Sets the optional comment string for the entry.
                  * <p>ZIP entry comments have maximum length of 0xffff. If the length of the
@@ -253,36 +253,36 @@ declare namespace java {
                  * @see #getComment()
                  */
                 // @ts-ignore
-                setComment(comment: string): void
+                public setComment(comment: java.lang.String | string): void
                 /**
                  * Returns the comment string for the entry.
                  * @return the comment string for the entry, or null if none
                  * @see #setComment(String)
                  */
                 // @ts-ignore
-                getComment(): java.lang.String
+                public getComment(): string
                 /**
                  * Returns true if this is a directory entry. A directory entry is
                  * defined to be one whose name ends with a '/'.
                  * @return true if this is a directory entry
                  */
                 // @ts-ignore
-                isDirectory(): boolean
+                public isDirectory(): boolean
                 /**
                  * Returns a string representation of the ZIP entry.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns the hash code value for this entry.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a copy of this entry.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

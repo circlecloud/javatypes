@@ -14,7 +14,7 @@ declare namespace javax {
          * @author JSR 268 Expert Group
          */
         // @ts-ignore
-        class CardTerminal extends java.lang.Object {
+        abstract class CardTerminal extends java.lang.Object {
             /**
              * Constructs a new CardTerminal object.
              * <p>This constructor is called by subclasses only. Application should
@@ -29,7 +29,7 @@ declare namespace javax {
              * @return the unique name of this terminal.
              */
             // @ts-ignore
-            abstract getName(): java.lang.String
+            public abstract getName(): string
             /**
              * Establishes a connection to the card.
              * If a connection has previously established using
@@ -49,14 +49,14 @@ declare namespace javax {
              *    {#linkplain CardPermission permission}
              */
             // @ts-ignore
-            abstract connect(protocol: string): javax.smartcardio.Card
+            public abstract connect(protocol: java.lang.String | string): javax.smartcardio.Card
             /**
              * Returns whether a card is present in this terminal.
              * @return whether a card is present in this terminal.
              * @throws CardException if the status could not be determined
              */
             // @ts-ignore
-            abstract isCardPresent(): boolean
+            public abstract isCardPresent(): boolean
             /**
              * Waits until a card is present in this terminal or the timeout
              * expires. If the method returns due to an expired timeout, it returns
@@ -71,7 +71,7 @@ declare namespace javax {
              * @throws CardException if the operation failed
              */
             // @ts-ignore
-            abstract waitForCardPresent(timeout: number /*long*/): boolean
+            public abstract waitForCardPresent(timeout: number /*long*/): boolean
             /**
              * Waits until a card is absent in this terminal or the timeout
              * expires. If the method returns due to an expired timeout, it returns
@@ -86,7 +86,7 @@ declare namespace javax {
              * @throws CardException if the operation failed
              */
             // @ts-ignore
-            abstract waitForCardAbsent(timeout: number /*long*/): boolean
+            public abstract waitForCardAbsent(timeout: number /*long*/): boolean
         }
     }
 }

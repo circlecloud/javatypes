@@ -156,7 +156,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class CipherSpi extends java.lang.Object {
+        abstract class CipherSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -166,7 +166,7 @@ declare namespace javax {
              *  not exist
              */
             // @ts-ignore
-            abstract engineSetMode(mode: string): void
+            abstract engineSetMode(mode: java.lang.String | string): void
             /**
              * Sets the padding mechanism of this cipher.
              * @param padding the padding mechanism
@@ -174,14 +174,14 @@ declare namespace javax {
              *  does not exist
              */
             // @ts-ignore
-            abstract engineSetPadding(padding: string): void
+            abstract engineSetPadding(padding: java.lang.String | string): void
             /**
              * Returns the block size (in bytes).
              * @return the block size (in bytes), or 0 if the underlying algorithm is
              *  not a block cipher
              */
             // @ts-ignore
-            abstract engineGetBlockSize(): int
+            abstract engineGetBlockSize(): number /*int*/
             /**
              * Returns the length in bytes that an output buffer would
              * need to be in order to hold the result of the next <code>update</code>
@@ -196,7 +196,7 @@ declare namespace javax {
              * @return the required output buffer size (in bytes)
              */
             // @ts-ignore
-            abstract engineGetOutputSize(inputLen: number /*int*/): int
+            abstract engineGetOutputSize(inputLen: number /*int*/): number /*int*/
             /**
              * Returns the initialization vector (IV) in a new buffer.
              * <p> This is useful in the context of password-based encryption or
@@ -206,7 +206,7 @@ declare namespace javax {
              *  been set.
              */
             // @ts-ignore
-            abstract engineGetIV(): byte[]
+            abstract engineGetIV(): number /*byte*/[]
             /**
              * Returns the parameters used with this cipher.
              * <p>The returned parameters may be the same that were used to initialize
@@ -369,7 +369,7 @@ declare namespace javax {
              *  new block.
              */
             // @ts-ignore
-            abstract engineUpdate(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): byte[]
+            abstract engineUpdate(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): number /*byte*/[]
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -392,7 +392,7 @@ declare namespace javax {
              *  to hold the result
              */
             // @ts-ignore
-            abstract engineUpdate(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): int
+            abstract engineUpdate(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -417,7 +417,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            engineUpdate(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): int
+            engineUpdate(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): number /*int*/
             /**
              * Encrypts or decrypts data in a single-part operation,
              * or finishes a multiple-part operation.
@@ -457,7 +457,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            abstract engineDoFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): byte[]
+            abstract engineDoFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): number /*byte*/[]
             /**
              * Encrypts or decrypts data in a single-part operation,
              * or finishes a multiple-part operation.
@@ -505,7 +505,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            abstract engineDoFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): int
+            abstract engineDoFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
             /**
              * Encrypts or decrypts data in a single-part operation,
              * or finishes a multiple-part operation.
@@ -553,7 +553,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            engineDoFinal(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): int
+            engineDoFinal(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): number /*int*/
             /**
              * Wrap a key.
              * <p>This concrete method has been added to this previously-defined
@@ -575,7 +575,7 @@ declare namespace javax {
              * @throws UnsupportedOperationException if this method is not supported.
              */
             // @ts-ignore
-            engineWrap(key: java.security.Key): byte[]
+            engineWrap(key: java.security.Key): number /*byte*/[]
             /**
              * Unwrap a previously wrapped key.
              * <p>This concrete method has been added to this previously-defined
@@ -601,7 +601,7 @@ declare namespace javax {
              * @throws UnsupportedOperationException if this method is not supported.
              */
             // @ts-ignore
-            engineUnwrap(wrappedKey: number /*byte*/[], wrappedKeyAlgorithm: string, wrappedKeyType: number /*int*/): java.security.Key
+            engineUnwrap(wrappedKey: number /*byte*/[], wrappedKeyAlgorithm: java.lang.String | string, wrappedKeyType: number /*int*/): java.security.Key
             /**
              * Returns the key size of the given key object in bits.
              * <p>This concrete method has been added to this previously-defined
@@ -612,7 +612,7 @@ declare namespace javax {
              * @exception InvalidKeyException if <code>key</code> is invalid.
              */
             // @ts-ignore
-            engineGetKeySize(key: java.security.Key): int
+            engineGetKeySize(key: java.security.Key): number /*int*/
             /**
              * Continues a multi-part update of the Additional Authentication
              * Data (AAD), using a subset of the provided buffer.

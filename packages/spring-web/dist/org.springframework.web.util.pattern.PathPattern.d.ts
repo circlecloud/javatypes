@@ -55,12 +55,12 @@ declare namespace org {
                          * </ol>
                          */
                         // @ts-ignore
-                        readonly SPECIFICITY_COMPARATOR: java.util.Comparator<org.springframework.web.util.pattern.PathPattern>
+                        public static readonly SPECIFICITY_COMPARATOR: java.util.Comparator<org.springframework.web.util.pattern.PathPattern>
                         /**
                          * Return the original String that was parsed to create this PathPattern.
                          */
                         // @ts-ignore
-                        getPatternString(): java.lang.String
+                        public getPatternString(): string
                         /**
                          * Whether the pattern string contains pattern syntax that would require
                          * use of {@link #matches(PathContainer)}, or if it is a regular String that
@@ -68,14 +68,14 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        hasPatternSyntax(): boolean
+                        public hasPatternSyntax(): boolean
                         /**
                          * Whether this pattern matches the given path.
                          * @param pathContainer the candidate path to attempt to match against
                          * @return {#code true} if the path matches this pattern
                          */
                         // @ts-ignore
-                        matches(pathContainer: org.springframework.http.server.PathContainer): boolean
+                        public matches(pathContainer: org.springframework.http.server.PathContainer): boolean
                         /**
                          * Match this pattern to the given URI path and return extracted URI template
                          * variables as well as path parameters (matrix variables).
@@ -83,7 +83,7 @@ declare namespace org {
                          * @return info object with the extracted variables, or {#code null} for no match
                          */
                         // @ts-ignore
-                        matchAndExtract(pathContainer: org.springframework.http.server.PathContainer): org.springframework.web.util.pattern.PathPattern.PathMatchInfo
+                        public matchAndExtract(pathContainer: org.springframework.http.server.PathContainer): org.springframework.web.util.pattern.PathPattern.PathMatchInfo
                         /**
                          * Match the beginning of the given path and return the remaining portion
                          * not covered by this pattern. This is useful for matching nested routes
@@ -92,7 +92,7 @@ declare namespace org {
                          * @return info object with the match result or {#code null} for no match
                          */
                         // @ts-ignore
-                        matchStartOfPath(pathContainer: org.springframework.http.server.PathContainer): org.springframework.web.util.pattern.PathPattern.PathRemainingMatchInfo
+                        public matchStartOfPath(pathContainer: org.springframework.http.server.PathContainer): org.springframework.web.util.pattern.PathPattern.PathRemainingMatchInfo
                         /**
                          * Determine the pattern-mapped part for the given path.
                          * <p>For example: <ul>
@@ -113,25 +113,25 @@ declare namespace org {
                          *  of it is matched by pattern elements
                          */
                         // @ts-ignore
-                        extractPathWithinPattern(path: org.springframework.http.server.PathContainer): org.springframework.http.server.PathContainer
+                        public extractPathWithinPattern(path: org.springframework.http.server.PathContainer): org.springframework.http.server.PathContainer
                         /**
                          * Compare this pattern with a supplied pattern: return -1,0,+1 if this pattern
                          * is more specific, the same or less specific than the supplied pattern.
                          * The aim is to sort more specific patterns first.
                          */
                         // @ts-ignore
-                        compareTo(otherPattern: org.springframework.web.util.pattern.PathPattern): int
+                        public compareTo(otherPattern: org.springframework.web.util.pattern.PathPattern): number /*int*/
                         /**
                          * Combine this pattern with another.
                          */
                         // @ts-ignore
-                        combine(pattern2string: org.springframework.web.util.pattern.PathPattern): org.springframework.web.util.pattern.PathPattern
+                        public combine(pattern2string: org.springframework.web.util.pattern.PathPattern): org.springframework.web.util.pattern.PathPattern
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

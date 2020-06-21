@@ -18,7 +18,7 @@ declare namespace org {
                      * @return the damage
                      */
                     // @ts-ignore
-                    getDamage(): int
+                    getDamage(): number /*int*/
                     /**
                      * Sets the damage
                      * @param damage item damage

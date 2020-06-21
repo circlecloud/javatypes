@@ -30,7 +30,7 @@ declare namespace java {
                  * @throws NullPointerException if {#code after} is null
                  */
                 // @ts-ignore
-                andThen(after: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.function.Consumer<T>
+                andThen(after: java.util.function$.Consumer<any>): java.util.function$.Consumer<T>
             }
         }
     }

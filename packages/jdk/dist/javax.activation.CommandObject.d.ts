@@ -21,7 +21,7 @@ declare namespace javax {
              * @param dh The DataHandler.
              */
             // @ts-ignore
-            setCommandContext(verb: string, dh: javax.activation.DataHandler): void
+            setCommandContext(verb: java.lang.String | string, dh: javax.activation.DataHandler): void
         }
     }
 }

@@ -85,7 +85,7 @@ declare namespace java {
                  * @return the offset of the insert position
                  */
                 // @ts-ignore
-                getInsertPositionOffset(): int
+                getInsertPositionOffset(): number /*int*/
                 /**
                  * Gets an iterator providing access to the entire text and attributes
                  * contained in the text editing component except for uncommitted
@@ -111,7 +111,7 @@ declare namespace java {
                  * @return the length of the text except for uncommitted text
                  */
                 // @ts-ignore
-                getCommittedTextLength(): int
+                getCommittedTextLength(): number /*int*/
                 /**
                  * Gets the latest committed text from the text editing component and
                  * removes it from the component's text body.

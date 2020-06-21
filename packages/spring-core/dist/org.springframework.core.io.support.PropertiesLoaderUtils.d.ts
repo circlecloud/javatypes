@@ -14,7 +14,7 @@ declare namespace org {
                      * @see PropertiesLoaderSupport
                      */
                     // @ts-ignore
-                    class PropertiesLoaderUtils extends java.lang.Object {
+                    abstract class PropertiesLoaderUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -23,7 +23,7 @@ declare namespace org {
                          * @see #fillProperties(java.util.Properties, EncodedResource)
                          */
                         // @ts-ignore
-                        loadProperties(resource: org.springframework.core.io.support.EncodedResource): java.util.Properties
+                        public static loadProperties(resource: org.springframework.core.io.support.EncodedResource): java.util.Properties
                         /**
                          * Fill the given properties from the given EncodedResource,
                          * potentially defining a specific encoding for the properties file.
@@ -32,7 +32,7 @@ declare namespace org {
                          * @throws IOException in case of I/O errors
                          */
                         // @ts-ignore
-                        fillProperties(props: java.util.Properties, resource: org.springframework.core.io.support.EncodedResource): void
+                        public static fillProperties(props: java.util.Properties, resource: org.springframework.core.io.support.EncodedResource): void
                         /**
                          * Load properties from the given resource (in ISO-8859-1 encoding).
                          * @param resource the resource to load from
@@ -41,7 +41,7 @@ declare namespace org {
                          * @see #fillProperties(java.util.Properties, Resource)
                          */
                         // @ts-ignore
-                        loadProperties(resource: org.springframework.core.io.Resource): java.util.Properties
+                        public static loadProperties(resource: org.springframework.core.io.Resource): java.util.Properties
                         /**
                          * Fill the given properties from the given resource (in ISO-8859-1 encoding).
                          * @param props the Properties instance to fill
@@ -49,7 +49,7 @@ declare namespace org {
                          * @throws IOException if loading failed
                          */
                         // @ts-ignore
-                        fillProperties(props: java.util.Properties, resource: org.springframework.core.io.Resource): void
+                        public static fillProperties(props: java.util.Properties, resource: org.springframework.core.io.Resource): void
                         /**
                          * Load all properties from the specified class path resource
                          * (in ISO-8859-1 encoding), using the default class loader.
@@ -60,7 +60,7 @@ declare namespace org {
                          * @throws IOException if loading failed
                          */
                         // @ts-ignore
-                        loadAllProperties(resourceName: string): java.util.Properties
+                        public static loadAllProperties(resourceName: java.lang.String | string): java.util.Properties
                         /**
                          * Load all properties from the specified class path resource
                          * (in ISO-8859-1 encoding), using the given class loader.
@@ -73,7 +73,7 @@ declare namespace org {
                          * @throws IOException if loading failed
                          */
                         // @ts-ignore
-                        loadAllProperties(resourceName: string, classLoader: java.lang.ClassLoader): java.util.Properties
+                        public static loadAllProperties(resourceName: java.lang.String | string, classLoader: java.lang.ClassLoader): java.util.Properties
                     }
                 }
             }

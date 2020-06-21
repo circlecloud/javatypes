@@ -60,7 +60,7 @@ declare namespace javax {
                          *     empty list.
                          */
                         // @ts-ignore
-                        getContent(): java.util.List
+                        getContent(): Array<any>
                         /**
                          * Return the optional Id attribute of this <code>KeyInfo</code>, which
                          * may be useful for referencing this <code>KeyInfo</code> from other
@@ -69,7 +69,7 @@ declare namespace javax {
                          *     <code>null</code> if not specified)
                          */
                         // @ts-ignore
-                        getId(): java.lang.String
+                        getId(): string
                         /**
                          * Marshals the key info to XML.
                          * @param parent a mechanism-specific structure containing the parent node

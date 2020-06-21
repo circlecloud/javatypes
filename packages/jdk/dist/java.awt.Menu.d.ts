@@ -43,7 +43,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(label: string)
+            constructor(label: java.lang.String | string)
             /**
              * Constructs a new menu with the specified label,
              * indicating whether the menu can be torn off.
@@ -61,19 +61,19 @@ declare namespace java {
              * @since JDK1.0.
              */
             // @ts-ignore
-            constructor(label: string, tearOff: boolean)
+            constructor(label: java.lang.String | string, tearOff: boolean)
             /**
              * Creates the menu's peer.  The peer allows us to modify the
              * appearance of the menu without changing its functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Removes the menu's peer.  The peer allows us to modify the appearance
              * of the menu without changing its functionality.
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Indicates whether this menu is a tear-off menu.
              * <p>
@@ -84,27 +84,27 @@ declare namespace java {
              *                          <code>false</code> otherwise.
              */
             // @ts-ignore
-            isTearOff(): boolean
+            public isTearOff(): boolean
             /**
              * Get the number of items in this menu.
              * @return the number of items in this menu.
              * @since JDK1.1
              */
             // @ts-ignore
-            getItemCount(): int
+            public getItemCount(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getItemCount()</code>.
              */
             // @ts-ignore
-            countItems(): int
+            public countItems(): number /*int*/
             /**
              * Gets the item located at the specified index of this menu.
              * @param index the position of the item to be returned.
              * @return the item located at the specified index.
              */
             // @ts-ignore
-            getItem(index: number /*int*/): java.awt.MenuItem
+            public getItem(index: number /*int*/): java.awt.MenuItem
             /**
              * Adds the specified menu item to this menu. If the
              * menu item has been part of another menu, removes it
@@ -115,7 +115,7 @@ declare namespace java {
              * @see java.awt.Menu#insert(java.awt.MenuItem, int)
              */
             // @ts-ignore
-            add(mi: java.awt.MenuItem): java.awt.MenuItem
+            public add(mi: java.awt.MenuItem): java.awt.MenuItem
             /**
              * Adds an item with the specified label to this menu.
              * @param label   the text on the item
@@ -123,7 +123,7 @@ declare namespace java {
              * @see java.awt.Menu#insert(java.awt.MenuItem, int)
              */
             // @ts-ignore
-            add(label: string): void
+            public add(label: java.lang.String | string): void
             /**
              * Inserts a menu item into this menu
              * at the specified position.
@@ -137,7 +137,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            insert(menuitem: java.awt.MenuItem, index: number /*int*/): void
+            public insert(menuitem: java.awt.MenuItem, index: number /*int*/): void
             /**
              * Inserts a menu item with the specified label into this menu
              * at the specified position.  This is a convenience method for
@@ -152,13 +152,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            insert(label: string, index: number /*int*/): void
+            public insert(label: java.lang.String | string, index: number /*int*/): void
             /**
              * Adds a separator line, or a hypen, to the menu at the current position.
              * @see java.awt.Menu#insertSeparator(int)
              */
             // @ts-ignore
-            addSeparator(): void
+            public addSeparator(): void
             /**
              * Inserts a separator at the specified position.
              * @param index the position at which the
@@ -169,13 +169,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            insertSeparator(index: number /*int*/): void
+            public insertSeparator(index: number /*int*/): void
             /**
              * Removes the menu item at the specified index from this menu.
              * @param index the position of the item to be removed.
              */
             // @ts-ignore
-            remove(index: number /*int*/): void
+            public remove(index: number /*int*/): void
             /**
              * Removes the specified menu item from this menu.
              * @param item the item to be removed from the menu.
@@ -184,13 +184,13 @@ declare namespace java {
              *          nothing.
              */
             // @ts-ignore
-            remove(item: java.awt.MenuComponent): void
+            public remove(item: java.awt.MenuComponent): void
             /**
              * Removes all items from this menu.
              * @since JDK1.0.
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Returns a string representing the state of this <code>Menu</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -200,7 +200,7 @@ declare namespace java {
              * @return the parameter string of this menu
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            public paramString(): string
             /**
              * Gets the AccessibleContext associated with this Menu.
              * For menus, the AccessibleContext takes the form of an
@@ -211,7 +211,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

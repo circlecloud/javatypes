@@ -19,7 +19,7 @@ declare namespace java {
                  * @param <T> The type of the object holding the updatable field
                  */
                 // @ts-ignore
-                class AtomicIntegerFieldUpdater<T> extends java.lang.Object {
+                abstract class AtomicIntegerFieldUpdater<T> extends java.lang.Object {
                     /**
                      * Protected do-nothing constructor for use by subclasses.
                      */
@@ -41,7 +41,7 @@ declare namespace java {
                      *  access control
                      */
                     // @ts-ignore
-                    newUpdater<U>(tclass: java.lang.Class<U>, fieldName: string): java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>
+                    public static newUpdater<U>(tclass: java.lang.Class<U>, fieldName: java.lang.String | string): java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given updated value if the current value {@code ==} the
@@ -56,7 +56,7 @@ declare namespace java {
                      *  of the class possessing the field established in the constructor
                      */
                     // @ts-ignore
-                    abstract compareAndSet(obj: T, expect: number /*int*/, update: number /*int*/): boolean
+                    public abstract compareAndSet(obj: T, expect: number /*int*/, update: number /*int*/): boolean
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given updated value if the current value {@code ==} the
@@ -74,7 +74,7 @@ declare namespace java {
                      *  of the class possessing the field established in the constructor
                      */
                     // @ts-ignore
-                    abstract weakCompareAndSet(obj: T, expect: number /*int*/, update: number /*int*/): boolean
+                    public abstract weakCompareAndSet(obj: T, expect: number /*int*/, update: number /*int*/): boolean
                     /**
                      * Sets the field of the given object managed by this updater to the
                      * given updated value. This operation is guaranteed to act as a volatile
@@ -83,7 +83,7 @@ declare namespace java {
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    abstract set(obj: T, newValue: number /*int*/): void
+                    public abstract set(obj: T, newValue: number /*int*/): void
                     /**
                      * Eventually sets the field of the given object managed by this
                      * updater to the given updated value.
@@ -92,7 +92,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    abstract lazySet(obj: T, newValue: number /*int*/): void
+                    public abstract lazySet(obj: T, newValue: number /*int*/): void
                     /**
                      * Gets the current value held in the field of the given object managed
                      * by this updater.
@@ -100,7 +100,7 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    abstract get(obj: T): int
+                    public abstract get(obj: T): number /*int*/
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given value and returns the old value.
@@ -109,7 +109,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(obj: T, newValue: number /*int*/): int
+                    public getAndSet(obj: T, newValue: number /*int*/): number /*int*/
                     /**
                      * Atomically increments by one the current value of the field of the
                      * given object managed by this updater.
@@ -117,7 +117,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndIncrement(obj: T): int
+                    public getAndIncrement(obj: T): number /*int*/
                     /**
                      * Atomically decrements by one the current value of the field of the
                      * given object managed by this updater.
@@ -125,7 +125,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndDecrement(obj: T): int
+                    public getAndDecrement(obj: T): number /*int*/
                     /**
                      * Atomically adds the given value to the current value of the field of
                      * the given object managed by this updater.
@@ -134,7 +134,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndAdd(obj: T, delta: number /*int*/): int
+                    public getAndAdd(obj: T, delta: number /*int*/): number /*int*/
                     /**
                      * Atomically increments by one the current value of the field of the
                      * given object managed by this updater.
@@ -142,7 +142,7 @@ declare namespace java {
                      * @return the updated value
                      */
                     // @ts-ignore
-                    incrementAndGet(obj: T): int
+                    public incrementAndGet(obj: T): number /*int*/
                     /**
                      * Atomically decrements by one the current value of the field of the
                      * given object managed by this updater.
@@ -150,7 +150,7 @@ declare namespace java {
                      * @return the updated value
                      */
                     // @ts-ignore
-                    decrementAndGet(obj: T): int
+                    public decrementAndGet(obj: T): number /*int*/
                     /**
                      * Atomically adds the given value to the current value of the field of
                      * the given object managed by this updater.
@@ -159,7 +159,7 @@ declare namespace java {
                      * @return the updated value
                      */
                     // @ts-ignore
-                    addAndGet(obj: T, delta: number /*int*/): int
+                    public addAndGet(obj: T, delta: number /*int*/): number /*int*/
                     /**
                      * Atomically updates the field of the given object managed by this updater
                      * with the results of applying the given function, returning the previous
@@ -171,7 +171,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndUpdate(obj: T, updateFunction: java.util.function.IntUnaryOperator | java.util.function$.IntUnaryOperator): int
+                    public getAndUpdate(obj: T, updateFunction: java.util.function$.IntUnaryOperator): number /*int*/
                     /**
                      * Atomically updates the field of the given object managed by this updater
                      * with the results of applying the given function, returning the updated
@@ -183,7 +183,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    updateAndGet(obj: T, updateFunction: java.util.function.IntUnaryOperator | java.util.function$.IntUnaryOperator): int
+                    public updateAndGet(obj: T, updateFunction: java.util.function$.IntUnaryOperator): number /*int*/
                     /**
                      * Atomically updates the field of the given object managed by this
                      * updater with the results of applying the given function to the
@@ -199,7 +199,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndAccumulate(obj: T, x: number /*int*/, accumulatorFunction: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): int
+                    public getAndAccumulate(obj: T, x: number /*int*/, accumulatorFunction: java.util.function$.IntBinaryOperator): number /*int*/
                     /**
                      * Atomically updates the field of the given object managed by this
                      * updater with the results of applying the given function to the
@@ -215,7 +215,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    accumulateAndGet(obj: T, x: number /*int*/, accumulatorFunction: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): int
+                    public accumulateAndGet(obj: T, x: number /*int*/, accumulatorFunction: java.util.function$.IntBinaryOperator): number /*int*/
                 }
             }
         }

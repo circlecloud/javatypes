@@ -35,19 +35,19 @@ declare namespace javax {
                  * it is available only for efficiency.
                  */
                 // @ts-ignore
-                array: string[]
+                public array: string[]
                 /**
                  * This is the offset into the array that
                  * the desired text begins.
                  */
                 // @ts-ignore
-                offset: number /*int*/
+                public offset: number /*int*/
                 /**
                  * This is the number of array elements that
                  * make up the text of interest.
                  */
                 // @ts-ignore
-                count: number /*int*/
+                public count: number /*int*/
                 /**
                  * Flag to indicate that partial returns are valid.  If the flag is true,
                  * an implementation of the interface method Document.getText(position,length,Segment)
@@ -59,20 +59,20 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                setPartialReturn(p: boolean): void
+                public setPartialReturn(p: boolean): void
                 /**
                  * Flag to indicate that partial returns are valid.
                  * @return whether or not partial returns are valid.
                  * @since 1.4
                  */
                 // @ts-ignore
-                isPartialReturn(): boolean
+                public isPartialReturn(): boolean
                 /**
                  * Converts a segment into a String.
                  * @return the string
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Sets the position to getBeginIndex() and returns the character at that
                  * position.
@@ -81,7 +81,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                first(): char
+                public first(): string
                 /**
                  * Sets the position to getEndIndex()-1 (getEndIndex() if the text is empty)
                  * and returns the character at that position.
@@ -90,7 +90,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                last(): char
+                public last(): string
                 /**
                  * Gets the character at the current position (as returned by getIndex()).
                  * @return the character at the current position or DONE if the current
@@ -99,7 +99,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                current(): char
+                public current(): string
                 /**
                  * Increments the iterator's index by one and returns the character
                  * at the new index.  If the resulting index is greater or equal
@@ -110,7 +110,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                next(): char
+                public next(): string
                 /**
                  * Decrements the iterator's index by one and returns the character
                  * at the new index. If the current index is getBeginIndex(), the index
@@ -120,7 +120,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                previous(): char
+                public previous(): string
                 /**
                  * Sets the position to the specified position in the text and returns that
                  * character.
@@ -131,14 +131,14 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setIndex(position: number /*int*/): char
+                public setIndex(position: number /*int*/): string
                 /**
                  * Returns the start index of the text.
                  * @return the index at which the text begins.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getBeginIndex(): int
+                public getBeginIndex(): number /*int*/
                 /**
                  * Returns the end index of the text.  This index is the index of the first
                  * character following the end of the text.
@@ -146,38 +146,38 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getEndIndex(): int
+                public getEndIndex(): number /*int*/
                 /**
                  * Returns the current index.
                  * @return the current index.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getIndex(): int
+                public getIndex(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                charAt(index: number /*int*/): char
+                public charAt(index: number /*int*/): string
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                length(): int
+                public length(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
+                public subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
                 /**
                  * Creates a shallow copy.
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

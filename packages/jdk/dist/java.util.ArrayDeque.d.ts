@@ -64,14 +64,14 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Inserts the specified element at the front of this deque.
              * @param e the element to add
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            addFirst(e: E): void
+            public addFirst(e: E): void
             /**
              * Inserts the specified element at the end of this deque.
              * <p>This method is equivalent to {@link #add}.
@@ -79,7 +79,7 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            addLast(e: E): void
+            public addLast(e: E): void
             /**
              * Inserts the specified element at the front of this deque.
              * @param e the element to add
@@ -87,7 +87,7 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            offerFirst(e: E): boolean
+            public offerFirst(e: E): boolean
             /**
              * Inserts the specified element at the end of this deque.
              * @param e the element to add
@@ -95,35 +95,35 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            offerLast(e: E): boolean
+            public offerLast(e: E): boolean
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            removeFirst(): E
+            public removeFirst(): E
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            removeLast(): E
+            public removeLast(): E
             // @ts-ignore
-            pollFirst(): E
+            public pollFirst(): E
             // @ts-ignore
-            pollLast(): E
+            public pollLast(): E
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            getFirst(): E
+            public getFirst(): E
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            getLast(): E
+            public getLast(): E
             // @ts-ignore
-            peekFirst(): E
+            public peekFirst(): E
             // @ts-ignore
-            peekLast(): E
+            public peekLast(): E
             /**
              * Removes the first occurrence of the specified element in this
              * deque (when traversing the deque from head to tail).
@@ -136,7 +136,7 @@ declare namespace java {
              * @return {#code true} if the deque contained the specified element
              */
             // @ts-ignore
-            removeFirstOccurrence(o: any): boolean
+            public removeFirstOccurrence(o: java.lang.Object | any): boolean
             /**
              * Removes the last occurrence of the specified element in this
              * deque (when traversing the deque from head to tail).
@@ -149,7 +149,7 @@ declare namespace java {
              * @return {#code true} if the deque contained the specified element
              */
             // @ts-ignore
-            removeLastOccurrence(o: any): boolean
+            public removeLastOccurrence(o: java.lang.Object | any): boolean
             /**
              * Inserts the specified element at the end of this deque.
              * <p>This method is equivalent to {@link #addLast}.
@@ -158,7 +158,7 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Inserts the specified element at the end of this deque.
              * <p>This method is equivalent to {@link #offerLast}.
@@ -167,7 +167,7 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            offer(e: E): boolean
+            public offer(e: E): boolean
             /**
              * Retrieves and removes the head of the queue represented by this deque.
              * This method differs from {@link #poll poll} only in that it throws an
@@ -177,7 +177,7 @@ declare namespace java {
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            remove(): E
+            public remove(): E
             /**
              * Retrieves and removes the head of the queue represented by this deque
              * (in other words, the first element of this deque), or returns
@@ -187,7 +187,7 @@ declare namespace java {
              *          {#code null} if this deque is empty
              */
             // @ts-ignore
-            poll(): E
+            public poll(): E
             /**
              * Retrieves, but does not remove, the head of the queue represented by
              * this deque.  This method differs from {@link #peek peek} only in
@@ -197,7 +197,7 @@ declare namespace java {
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            element(): E
+            public element(): E
             /**
              * Retrieves, but does not remove, the head of the queue represented by
              * this deque, or returns {@code null} if this deque is empty.
@@ -206,7 +206,7 @@ declare namespace java {
              *          {#code null} if this deque is empty
              */
             // @ts-ignore
-            peek(): E
+            public peek(): E
             /**
              * Pushes an element onto the stack represented by this deque.  In other
              * words, inserts the element at the front of this deque.
@@ -215,7 +215,7 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            push(e: E): void
+            public push(e: E): void
             /**
              * Pops an element from the stack represented by this deque.  In other
              * words, removes and returns the first element of this deque.
@@ -225,19 +225,19 @@ declare namespace java {
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            pop(): E
+            public pop(): E
             /**
              * Returns the number of elements in this deque.
              * @return the number of elements in this deque
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns {@code true} if this deque contains no elements.
              * @return {#code true} if this deque contains no elements
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns an iterator over the elements in this deque.  The elements
              * will be ordered from first (head) to last (tail).  This is the same
@@ -246,9 +246,9 @@ declare namespace java {
              * @return an iterator over the elements in this deque
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             // @ts-ignore
-            descendingIterator(): java.util.Iterator<E>
+            public descendingIterator(): java.util.Iterator<E>
             /**
              * Returns {@code true} if this deque contains the specified element.
              * More formally, returns {@code true} if and only if this deque contains
@@ -257,7 +257,7 @@ declare namespace java {
              * @return {#code true} if this deque contains the specified element
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Removes a single instance of the specified element from this deque.
              * If the deque does not contain the element, it is unchanged.
@@ -270,13 +270,13 @@ declare namespace java {
              * @return {#code true} if this deque contained the specified element
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Removes all of the elements from this deque.
              * The deque will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns an array containing all of the elements in this deque
              * in proper sequence (from first to last element).
@@ -288,7 +288,7 @@ declare namespace java {
              * @return an array containing all of the elements in this deque
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * Returns an array containing all of the elements in this deque in
              * proper sequence (from first to last element); the runtime type of the
@@ -320,13 +320,13 @@ declare namespace java {
              * @throws NullPointerException if the specified array is null
              */
             // @ts-ignore
-            toArray<T>(a: T[]): T
+            public toArray<T>(a: T[]): T
             /**
              * Returns a copy of this deque.
              * @return a copy of this deque
              */
             // @ts-ignore
-            clone(): java.util.ArrayDeque<E>
+            public clone(): java.util.ArrayDeque<E>
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -339,7 +339,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

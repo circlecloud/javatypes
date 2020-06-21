@@ -46,36 +46,36 @@ declare namespace org {
                      * <p><b>This setting can be modified at runtime, for example through JMX.</b>
                      */
                     // @ts-ignore
-                    setCorePoolSize(corePoolSize: number /*int*/): void
+                    public setCorePoolSize(corePoolSize: number /*int*/): void
                     /**
                      * Return the ThreadPoolExecutor's core pool size.
                      */
                     // @ts-ignore
-                    getCorePoolSize(): int
+                    public getCorePoolSize(): number /*int*/
                     /**
                      * Set the ThreadPoolExecutor's maximum pool size.
                      * Default is {@code Integer.MAX_VALUE}.
                      * <p><b>This setting can be modified at runtime, for example through JMX.</b>
                      */
                     // @ts-ignore
-                    setMaxPoolSize(maxPoolSize: number /*int*/): void
+                    public setMaxPoolSize(maxPoolSize: number /*int*/): void
                     /**
                      * Return the ThreadPoolExecutor's maximum pool size.
                      */
                     // @ts-ignore
-                    getMaxPoolSize(): int
+                    public getMaxPoolSize(): number /*int*/
                     /**
                      * Set the ThreadPoolExecutor's keep-alive seconds.
                      * Default is 60.
                      * <p><b>This setting can be modified at runtime, for example through JMX.</b>
                      */
                     // @ts-ignore
-                    setKeepAliveSeconds(keepAliveSeconds: number /*int*/): void
+                    public setKeepAliveSeconds(keepAliveSeconds: number /*int*/): void
                     /**
                      * Return the ThreadPoolExecutor's keep-alive seconds.
                      */
                     // @ts-ignore
-                    getKeepAliveSeconds(): int
+                    public getKeepAliveSeconds(): number /*int*/
                     /**
                      * Set the capacity for the ThreadPoolExecutor's BlockingQueue.
                      * Default is {@code Integer.MAX_VALUE}.
@@ -85,7 +85,7 @@ declare namespace org {
                      * @see java.util.concurrent.SynchronousQueue
                      */
                     // @ts-ignore
-                    setQueueCapacity(queueCapacity: number /*int*/): void
+                    public setQueueCapacity(queueCapacity: number /*int*/): void
                     /**
                      * Specify whether to allow core threads to time out. This enables dynamic
                      * growing and shrinking even in combination with a non-zero queue (since
@@ -94,7 +94,7 @@ declare namespace org {
                      * @see java.util.concurrent.ThreadPoolExecutor#allowCoreThreadTimeOut(boolean)
                      */
                     // @ts-ignore
-                    setAllowCoreThreadTimeOut(allowCoreThreadTimeOut: boolean): void
+                    public setAllowCoreThreadTimeOut(allowCoreThreadTimeOut: boolean): void
                     /**
                      * Specify a custom {@link TaskDecorator} to be applied to any {@link Runnable}
                      * about to be executed.
@@ -106,7 +106,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setTaskDecorator(taskDecorator: TaskDecorator): void
+                    public setTaskDecorator(taskDecorator: TaskDecorator): void
                     /**
                      * Note: This method exposes an {@link ExecutorService} to its base class
                      * but stores the actual {@link ThreadPoolExecutor} handle internally.
@@ -132,31 +132,31 @@ declare namespace org {
                      * @throws IllegalStateException if the ThreadPoolTaskExecutor hasn't been initialized yet
                      */
                     // @ts-ignore
-                    getThreadPoolExecutor(): java.util.concurrent.ThreadPoolExecutor
+                    public getThreadPoolExecutor(): java.util.concurrent.ThreadPoolExecutor
                     /**
                      * Return the current pool size.
                      * @see java.util.concurrent.ThreadPoolExecutor#getPoolSize()
                      */
                     // @ts-ignore
-                    getPoolSize(): int
+                    public getPoolSize(): number /*int*/
                     /**
                      * Return the number of currently active threads.
                      * @see java.util.concurrent.ThreadPoolExecutor#getActiveCount()
                      */
                     // @ts-ignore
-                    getActiveCount(): int
+                    public getActiveCount(): number /*int*/
                     // @ts-ignore
-                    execute(task: java.lang.Runnable): void
+                    public execute(task: java.lang.Runnable): void
                     // @ts-ignore
-                    execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
+                    public execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
                     // @ts-ignore
-                    submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                    public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                     // @ts-ignore
-                    submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                    public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                     // @ts-ignore
-                    submitListenable(task: java.lang.Runnable): <any>
+                    public submitListenable(task: java.lang.Runnable): object
                     // @ts-ignore
-                    submitListenable<T>(task: java.util.concurrent.Callable<T>): <any>
+                    public submitListenable<T>(task: java.util.concurrent.Callable<T>): object
                     // @ts-ignore
                     cancelRemainingTask(task: java.lang.Runnable): void
                 }

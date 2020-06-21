@@ -26,17 +26,17 @@ declare namespace org {
                  * @return NetherWartsState of this nether wart
                  */
                 // @ts-ignore
-                getState(): org.bukkit.NetherWartsState
+                public getState(): org.bukkit.NetherWartsState
                 /**
                  * Sets the growth state of this nether wart
                  * @param state New growth state of this nether wart
                  */
                 // @ts-ignore
-                setState(state: org.bukkit.NetherWartsState): void
+                public setState(state: org.bukkit.NetherWartsState): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.NetherWarts
+                public clone(): org.bukkit.material.NetherWarts
             }
         }
     }

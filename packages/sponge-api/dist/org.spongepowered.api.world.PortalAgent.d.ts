@@ -16,7 +16,7 @@ declare namespace org {
                      * @return The search radius
                      */
                     // @ts-ignore
-                    getSearchRadius(): int
+                    getSearchRadius(): number /*int*/
                     /**
                      * Sets the search radius before a new acceptable "portal" location is
                      * created.
@@ -30,7 +30,7 @@ declare namespace org {
                      * @return The radius of where a portal can be created
                      */
                     // @ts-ignore
-                    getCreationRadius(): int
+                    getCreationRadius(): number /*int*/
                     /**
                      * Sets the creation radius of where a portal may be created.
                      * @param radius The new radius

@@ -129,7 +129,7 @@ declare namespace javax {
                  *  or -1 if time-stamping is not supported by the device.
                  */
                 // @ts-ignore
-                getMicrosecondPosition(): long
+                getMicrosecondPosition(): number /*long*/
                 /**
                  * Obtains the maximum number of MIDI IN connections available on this
                  * MIDI device for receiving MIDI data.
@@ -137,7 +137,7 @@ declare namespace javax {
                  *  or -1 if an unlimited number of connections is available.
                  */
                 // @ts-ignore
-                getMaxReceivers(): int
+                getMaxReceivers(): number /*int*/
                 /**
                  * Obtains the maximum number of MIDI OUT connections available on this
                  * MIDI device for transmitting MIDI data.
@@ -145,7 +145,7 @@ declare namespace javax {
                  *  or -1 if an unlimited number of connections is available.
                  */
                 // @ts-ignore
-                getMaxTransmitters(): int
+                getMaxTransmitters(): number /*int*/
                 /**
                  * Obtains a MIDI IN receiver through which the MIDI device may receive
                  * MIDI data.  The returned receiver must be closed when the application
@@ -175,7 +175,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getReceivers(): java.util.List<javax.sound.midi.Receiver>
+                getReceivers(): Array<javax.sound.midi.Receiver>
                 /**
                  * Obtains a MIDI OUT connection from which the MIDI device will transmit
                  * MIDI data  The returned transmitter must be closed when the application
@@ -205,7 +205,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTransmitters(): java.util.List<javax.sound.midi.Transmitter>
+                getTransmitters(): Array<javax.sound.midi.Transmitter>
             }
         }
     }

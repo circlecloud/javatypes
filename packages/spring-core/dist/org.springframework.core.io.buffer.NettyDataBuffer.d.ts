@@ -17,49 +17,49 @@ declare namespace org {
                          * @return the wrapped byte buffer
                          */
                         // @ts-ignore
-                        getNativeBuffer(): ByteBuf
+                        public getNativeBuffer(): ByteBuf
                         // @ts-ignore
-                        factory(): org.springframework.core.io.buffer.NettyDataBufferFactory
+                        public factory(): org.springframework.core.io.buffer.NettyDataBufferFactory
                         // @ts-ignore
-                        indexOf(predicate: java.util.function.IntPredicate | java.util.function$.IntPredicate, fromIndex: number /*int*/): int
+                        public indexOf(predicate: java.util.function$.IntPredicate, fromIndex: number /*int*/): number /*int*/
                         // @ts-ignore
-                        lastIndexOf(predicate: java.util.function.IntPredicate | java.util.function$.IntPredicate, fromIndex: number /*int*/): int
+                        public lastIndexOf(predicate: java.util.function$.IntPredicate, fromIndex: number /*int*/): number /*int*/
                         // @ts-ignore
-                        readableByteCount(): int
+                        public readableByteCount(): number /*int*/
                         // @ts-ignore
-                        writableByteCount(): int
+                        public writableByteCount(): number /*int*/
                         // @ts-ignore
-                        readPosition(): int
+                        public readPosition(): number /*int*/
                         // @ts-ignore
-                        readPosition(readPosition: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public readPosition(readPosition: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        writePosition(): int
+                        public writePosition(): number /*int*/
                         // @ts-ignore
-                        writePosition(writePosition: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public writePosition(writePosition: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        getByte(index: number /*int*/): byte
+                        public getByte(index: number /*int*/): number /*byte*/
                         // @ts-ignore
-                        capacity(): int
+                        public capacity(): number /*int*/
                         // @ts-ignore
-                        capacity(capacity: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public capacity(capacity: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        ensureCapacity(capacity: number /*int*/): org.springframework.core.io.buffer.DataBuffer
+                        public ensureCapacity(capacity: number /*int*/): org.springframework.core.io.buffer.DataBuffer
                         // @ts-ignore
-                        read(): byte
+                        public read(): number /*byte*/
                         // @ts-ignore
-                        read(destination: number /*byte*/[]): org.springframework.core.io.buffer.NettyDataBuffer
+                        public read(destination: number /*byte*/[]): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        read(destination: number /*byte*/[], offset: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public read(destination: number /*byte*/[], offset: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        write(b: number /*byte*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public write(b: number /*byte*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        write(source: number /*byte*/[]): org.springframework.core.io.buffer.NettyDataBuffer
+                        public write(source: number /*byte*/[]): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        write(source: number /*byte*/[], offset: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public write(source: number /*byte*/[], offset: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        write(...buffers: org.springframework.core.io.buffer.DataBuffer[]): org.springframework.core.io.buffer.NettyDataBuffer
+                        public write(...buffers: org.springframework.core.io.buffer.DataBuffer[]): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        write(...buffers: java.nio.ByteBuffer[]): org.springframework.core.io.buffer.NettyDataBuffer
+                        public write(...buffers: java.nio.ByteBuffer[]): org.springframework.core.io.buffer.NettyDataBuffer
                         /**
                          * Writes one or more Netty {@link ByteBuf ByteBufs} to this buffer,
                          * starting at the current writing position.
@@ -67,39 +67,39 @@ declare namespace org {
                          * @return this buffer
                          */
                         // @ts-ignore
-                        write(...byteBufs: ByteBuf[]): org.springframework.core.io.buffer.NettyDataBuffer
+                        public write(...byteBufs: ByteBuf[]): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        write(charSequence: java.lang.CharSequence, charset: java.nio.charset.Charset): org.springframework.core.io.buffer.DataBuffer
+                        public write(charSequence: java.lang.CharSequence, charset: java.nio.charset.Charset): org.springframework.core.io.buffer.DataBuffer
                         // @ts-ignore
-                        slice(index: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public slice(index: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        retainedSlice(index: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public retainedSlice(index: number /*int*/, length: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        asByteBuffer(): java.nio.ByteBuffer
+                        public asByteBuffer(): java.nio.ByteBuffer
                         // @ts-ignore
-                        asByteBuffer(index: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
+                        public asByteBuffer(index: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
                         // @ts-ignore
-                        asInputStream(): java.io.InputStream
+                        public asInputStream(): java.io.InputStream
                         // @ts-ignore
-                        asInputStream(releaseOnClose: boolean): java.io.InputStream
+                        public asInputStream(releaseOnClose: boolean): java.io.InputStream
                         // @ts-ignore
-                        asOutputStream(): java.io.OutputStream
+                        public asOutputStream(): java.io.OutputStream
                         // @ts-ignore
-                        toString(charset: java.nio.charset.Charset): java.lang.String
+                        public toString(charset: java.nio.charset.Charset): string
                         // @ts-ignore
-                        toString(index: number /*int*/, length: number /*int*/, charset: java.nio.charset.Charset): java.lang.String
+                        public toString(index: number /*int*/, length: number /*int*/, charset: java.nio.charset.Charset): string
                         // @ts-ignore
-                        isAllocated(): boolean
+                        public isAllocated(): boolean
                         // @ts-ignore
-                        retain(): org.springframework.core.io.buffer.PooledDataBuffer
+                        public retain(): org.springframework.core.io.buffer.PooledDataBuffer
                         // @ts-ignore
-                        release(): boolean
+                        public release(): boolean
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

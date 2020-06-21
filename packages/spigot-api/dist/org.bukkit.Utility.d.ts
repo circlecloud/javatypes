@@ -8,7 +8,7 @@ declare namespace org {
          * overridden / handled manually.
          */
         // @ts-ignore
-        class Utility implements java.lang.annotation.Annotation {
+        abstract class Utility implements java.lang.annotation.Annotation {
         }
     }
 }

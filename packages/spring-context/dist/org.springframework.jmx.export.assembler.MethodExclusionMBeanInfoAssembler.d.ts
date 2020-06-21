@@ -38,7 +38,7 @@ declare namespace org {
                          * @see #setIgnoredMethodMappings(java.util.Properties)
                          */
                         // @ts-ignore
-                        setIgnoredMethods(...ignoredMethodNames: string[]): void
+                        public setIgnoredMethods(...ignoredMethodNames: java.lang.String[] | string[]): void
                         /**
                          * Set the mappings of bean keys to a comma-separated list of method names.
                          * <p>These method names are <b>ignored</b> when creating the management interface.
@@ -47,13 +47,13 @@ declare namespace org {
                          * Spring will check these mappings first.
                          */
                         // @ts-ignore
-                        setIgnoredMethodMappings(mappings: java.util.Properties): void
+                        public setIgnoredMethodMappings(mappings: java.util.Properties): void
                         // @ts-ignore
-                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         // @ts-ignore
-                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         // @ts-ignore
-                        includeOperation(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeOperation(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Determine whether the given method is supposed to be included,
                          * that is, not configured as to be ignored.
@@ -62,7 +62,7 @@ declare namespace org {
                          *  of the {#code MBeanExporter}
                          */
                         // @ts-ignore
-                        isNotIgnored(method: java.lang.reflect.Method, beanKey: string): boolean
+                        isNotIgnored(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                     }
                 }
             }

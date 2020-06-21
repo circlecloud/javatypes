@@ -25,7 +25,7 @@ declare namespace javax {
                  *  does not fall within the array boundary of {@code choices}
                  */
                 // @ts-ignore
-                constructor(prompt: string, choices: string[], defaultChoice: number /*int*/, multiple: boolean)
+                constructor(prompt: java.lang.String | string, choices: java.lang.String[] | string[], defaultChoice: number /*int*/, multiple: boolean)
             }
         }
     }

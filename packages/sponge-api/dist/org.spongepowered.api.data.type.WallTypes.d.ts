@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class WallTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly MOSSY: org.spongepowered.api.data.type.WallType
+                        public static readonly MOSSY: org.spongepowered.api.data.type.WallType
                         // @ts-ignore
-                        readonly NORMAL: org.spongepowered.api.data.type.WallType
+                        public static readonly NORMAL: org.spongepowered.api.data.type.WallType
                     }
                 }
             }

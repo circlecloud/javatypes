@@ -23,17 +23,17 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    class CrossOrigin implements java.lang.annotation.Annotation {
+                    abstract class CrossOrigin implements java.lang.annotation.Annotation {
                         /**
                          * @deprecated as of Spring 5.0, in favor of {#link CorsConfiguration#applyPermitDefaultValues}
                          */
                         // @ts-ignore
-                        readonly DEFAULT_ORIGINS: string[]
+                        readonly DEFAULT_ORIGINS: java.lang.String[] | string[]
                         /**
                          * @deprecated as of Spring 5.0, in favor of {#link CorsConfiguration#applyPermitDefaultValues}
                          */
                         // @ts-ignore
-                        readonly DEFAULT_ALLOWED_HEADERS: string[]
+                        readonly DEFAULT_ALLOWED_HEADERS: java.lang.String[] | string[]
                         /**
                          * @deprecated as of Spring 5.0, in favor of {#link CorsConfiguration#applyPermitDefaultValues}
                          */

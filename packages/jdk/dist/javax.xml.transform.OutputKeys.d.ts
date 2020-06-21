@@ -25,7 +25,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly METHOD: string
+                public static readonly METHOD: java.lang.String | string
                 /**
                  * version = <var>nmtoken</var>.
                  * <p><code>version</code> specifies the version of the output
@@ -42,7 +42,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly VERSION: string
+                public static readonly VERSION: java.lang.String | string
                 /**
                  * encoding = <var>string</var>.
                  * <p><code>encoding</code> specifies the preferred character
@@ -58,7 +58,7 @@ declare namespace javax {
                  *  section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly ENCODING: string
+                public static readonly ENCODING: java.lang.String | string
                 /**
                  * omit-xml-declaration = "yes" | "no".
                  * <p><code>omit-xml-declaration</code> specifies whether the XSLT
@@ -68,7 +68,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly OMIT_XML_DECLARATION: string
+                public static readonly OMIT_XML_DECLARATION: java.lang.String | string
                 /**
                  * standalone = "yes" | "no".
                  * <p><code>standalone</code> specifies whether the Transformer
@@ -78,7 +78,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly STANDALONE: string
+                public static readonly STANDALONE: java.lang.String | string
                 /**
                  * doctype-public = <var>string</var>.
                  * <p>See the documentation for the {@link #DOCTYPE_SYSTEM} property
@@ -87,7 +87,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly DOCTYPE_PUBLIC: string
+                public static readonly DOCTYPE_PUBLIC: java.lang.String | string
                 /**
                  * doctype-system = <var>string</var>.
                  * <p><code>doctype-system</code> specifies the system identifier
@@ -117,7 +117,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly DOCTYPE_SYSTEM: string
+                public static readonly DOCTYPE_SYSTEM: java.lang.String | string
                 /**
                  * cdata-section-elements = <var>expanded names</var>.
                  * <p><code>cdata-section-elements</code> specifies a whitespace delimited
@@ -129,7 +129,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation.</a>
                  */
                 // @ts-ignore
-                readonly CDATA_SECTION_ELEMENTS: string
+                public static readonly CDATA_SECTION_ELEMENTS: java.lang.String | string
                 /**
                  * indent = "yes" | "no".
                  * <p><code>indent</code> specifies whether the Transformer may
@@ -139,7 +139,7 @@ declare namespace javax {
                  *   section 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly INDENT: string
+                public static readonly INDENT: java.lang.String | string
                 /**
                  * media-type = <var>string</var>.
                  * <p><code>media-type</code> specifies the media type (MIME
@@ -153,7 +153,7 @@ declare namespace javax {
                  *  ection 16 of the XSL Transformations (XSLT) W3C Recommendation</a>
                  */
                 // @ts-ignore
-                readonly MEDIA_TYPE: string
+                public static readonly MEDIA_TYPE: java.lang.String | string
             }
         }
     }

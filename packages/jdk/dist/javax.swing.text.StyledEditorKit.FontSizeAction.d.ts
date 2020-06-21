@@ -25,13 +25,13 @@ declare namespace javax {
                      * @param size the font size
                      */
                     // @ts-ignore
-                    constructor(nm: string, size: number /*int*/)
+                    constructor(nm: java.lang.String | string, size: number /*int*/)
                     /**
                      * Sets the font size.
                      * @param e the action event
                      */
                     // @ts-ignore
-                    actionPerformed(e: java.awt.event.ActionEvent): void
+                    public actionPerformed(e: java.awt.event.ActionEvent): void
                 }
             }
         }

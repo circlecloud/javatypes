@@ -23,7 +23,7 @@ declare namespace org {
                          * @param beanName the name of the bean, as specified for the bean definition
                          */
                         // @ts-ignore
-                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: string)
+                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: java.lang.String | string)
                         /**
                          * Create a new BeanDefinitionHolder.
                          * @param beanDefinition the BeanDefinition to wrap
@@ -31,7 +31,7 @@ declare namespace org {
                          * @param aliases alias names for the bean, or {#code null} if none
                          */
                         // @ts-ignore
-                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: string, aliases: string[])
+                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: java.lang.String | string, aliases: java.lang.String[] | string[])
                         /**
                          * Copy constructor: Create a new BeanDefinitionHolder with the
                          * same contents as the given BeanDefinitionHolder instance.
@@ -45,37 +45,37 @@ declare namespace org {
                          * Return the wrapped BeanDefinition.
                          */
                         // @ts-ignore
-                        getBeanDefinition(): org.springframework.beans.factory.config.BeanDefinition
+                        public getBeanDefinition(): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Return the primary name of the bean, as specified for the bean definition.
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Return the alias names for the bean, as specified directly for the bean definition.
                          * @return the array of alias names, or {#code null} if none
                          */
                         // @ts-ignore
-                        getAliases(): java.lang.String[]
+                        public getAliases(): string[]
                         /**
                          * Expose the bean definition's source object.
                          * @see BeanDefinition#getSource()
                          */
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         /**
                          * Determine whether the given candidate name matches the bean name
                          * or the aliases stored in this bean definition.
                          */
                         // @ts-ignore
-                        matchesName(candidateName: string): boolean
+                        public matchesName(candidateName: java.lang.String | string): boolean
                         /**
                          * Return a friendly, short description for the bean, stating name and aliases.
                          * @see #getBeanName()
                          * @see #getAliases()
                          */
                         // @ts-ignore
-                        getShortDescription(): java.lang.String
+                        public getShortDescription(): string
                         /**
                          * Return a long description for the bean, including name and aliases
                          * as well as a description of the contained {@link BeanDefinition}.
@@ -83,7 +83,7 @@ declare namespace org {
                          * @see #getBeanDefinition()
                          */
                         // @ts-ignore
-                        getLongDescription(): java.lang.String
+                        public getLongDescription(): string
                         /**
                          * This implementation returns the long description. Can be overridden
                          * to return the short description or any kind of custom description instead.
@@ -91,11 +91,11 @@ declare namespace org {
                          * @see #getShortDescription()
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

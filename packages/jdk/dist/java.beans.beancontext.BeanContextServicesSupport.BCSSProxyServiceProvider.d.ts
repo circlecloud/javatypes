@@ -5,13 +5,13 @@ declare namespace java {
                 // @ts-ignore
                 class BCSSProxyServiceProvider extends java.lang.Object implements java.beans.beancontext.BeanContextServiceProvider, java.beans.beancontext.BeanContextServiceRevokedListener {
                     // @ts-ignore
-                    getService(bcs: java.beans.beancontext.BeanContextServices, requestor: any, serviceClass: java.lang.Class, serviceSelector: any): java.lang.Object
+                    public getService(bcs: java.beans.beancontext.BeanContextServices, requestor: java.lang.Object | any, serviceClass: java.lang.Class<any>, serviceSelector: java.lang.Object | any): any
                     // @ts-ignore
-                    releaseService(bcs: java.beans.beancontext.BeanContextServices, requestor: any, service: any): void
+                    public releaseService(bcs: java.beans.beancontext.BeanContextServices, requestor: java.lang.Object | any, service: java.lang.Object | any): void
                     // @ts-ignore
-                    getCurrentServiceSelectors(bcs: java.beans.beancontext.BeanContextServices, serviceClass: java.lang.Class): java.util.Iterator
+                    public getCurrentServiceSelectors(bcs: java.beans.beancontext.BeanContextServices, serviceClass: java.lang.Class<any>): java.util.Iterator<any>
                     // @ts-ignore
-                    serviceRevoked(bcsre: java.beans.beancontext.BeanContextServiceRevokedEvent): void
+                    public serviceRevoked(bcsre: java.beans.beancontext.BeanContextServiceRevokedEvent): void
                 }
             }
         }

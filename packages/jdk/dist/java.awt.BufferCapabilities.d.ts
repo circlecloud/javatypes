@@ -26,13 +26,13 @@ declare namespace java {
              * @return the image capabilities of the front (displayed) buffer
              */
             // @ts-ignore
-            getFrontBufferCapabilities(): java.awt.ImageCapabilities
+            public getFrontBufferCapabilities(): java.awt.ImageCapabilities
             /**
              * @return the image capabilities of all back buffers (intermediate buffers
              *  are considered back buffers)
              */
             // @ts-ignore
-            getBackBufferCapabilities(): java.awt.ImageCapabilities
+            public getBackBufferCapabilities(): java.awt.ImageCapabilities
             /**
              * @return whether or not the buffer strategy uses page flipping; a set of
              *  buffers that uses page flipping
@@ -44,7 +44,7 @@ declare namespace java {
              *  <code>null</code>
              */
             // @ts-ignore
-            isPageFlipping(): boolean
+            public isPageFlipping(): boolean
             /**
              * @return the resulting contents of the back buffer after page-flipping.
              *  This value is <code>null</code> when the <code>isPageFlipping</code>
@@ -60,7 +60,7 @@ declare namespace java {
              * @see FlipContents#COPIED
              */
             // @ts-ignore
-            getFlipContents(): java.awt.BufferCapabilities.FlipContents
+            public getFlipContents(): java.awt.BufferCapabilities.FlipContents
             /**
              * @return whether page flipping is only available in full-screen mode.  If this
              *  is <code>true</code>, full-screen exclusive mode is required for
@@ -69,7 +69,7 @@ declare namespace java {
              * @see GraphicsDevice#setFullScreenWindow
              */
             // @ts-ignore
-            isFullScreenRequired(): boolean
+            public isFullScreenRequired(): boolean
             /**
              * @return whether or not
              *  page flipping can be performed using more than two buffers (one or more
@@ -77,12 +77,12 @@ declare namespace java {
              * @see #isPageFlipping
              */
             // @ts-ignore
-            isMultiBufferAvailable(): boolean
+            public isMultiBufferAvailable(): boolean
             /**
              * @return a copy of this BufferCapabilities object.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

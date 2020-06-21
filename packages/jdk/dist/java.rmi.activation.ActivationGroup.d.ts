@@ -54,7 +54,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class ActivationGroup extends java.rmi.server.UnicastRemoteObject implements java.rmi.activation.ActivationInstantiator {
+            abstract class ActivationGroup extends java.rmi.server.UnicastRemoteObject implements java.rmi.activation.ActivationInstantiator {
                 /**
                  * Constructs an activation group with the given activation group
                  * identifier.  The group is exported as a
@@ -102,7 +102,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                inactiveObject(id: java.rmi.activation.ActivationID): boolean
+                public inactiveObject(id: java.rmi.activation.ActivationID): boolean
                 /**
                  * The group's <code>activeObject</code> method is called when an
                  * object is exported (either by <code>Activatable</code> object
@@ -119,7 +119,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract activeObject(id: java.rmi.activation.ActivationID, obj: java.rmi.Remote): void
+                public abstract activeObject(id: java.rmi.activation.ActivationID, obj: java.rmi.Remote): void
                 /**
                  * Create and set the activation group for the current VM.  The
                  * activation group can only be set if it is not currently set.
@@ -179,7 +179,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                createGroup(id: java.rmi.activation.ActivationGroupID, desc: java.rmi.activation.ActivationGroupDesc, incarnation: number /*long*/): java.rmi.activation.ActivationGroup
+                public static createGroup(id: java.rmi.activation.ActivationGroupID, desc: java.rmi.activation.ActivationGroupDesc, incarnation: number /*long*/): java.rmi.activation.ActivationGroup
                 /**
                  * Returns the current activation group's identifier.  Returns null
                  * if no group is currently active for this VM.
@@ -189,7 +189,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                currentGroupID(): java.rmi.activation.ActivationGroupID
+                public static currentGroupID(): java.rmi.activation.ActivationGroupID
                 /**
                  * Set the activation system for the VM.  The activation system can
                  * only be set it if no group is currently active. If the activation
@@ -217,7 +217,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setSystem(system: java.rmi.activation.ActivationSystem): void
+                public static setSystem(system: java.rmi.activation.ActivationSystem): void
                 /**
                  * Returns the activation system for the VM. The activation system
                  * may be set by the <code>setSystem</code> method. If the
@@ -240,7 +240,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getSystem(): java.rmi.activation.ActivationSystem
+                public static getSystem(): java.rmi.activation.ActivationSystem
                 /**
                  * This protected method is necessary for subclasses to
                  * make the <code>activeObject</code> callback to the group's
@@ -254,7 +254,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                activeObject(id: java.rmi.activation.ActivationID, mobj: java.rmi.MarshalledObject<java.rmi.Remote>): void
+                activeObject(id: java.rmi.activation.ActivationID, mobj: java.rmi.MarshalledObject<any>): void
                 /**
                  * This protected method is necessary for subclasses to
                  * make the <code>inactiveGroup</code> callback to the group's

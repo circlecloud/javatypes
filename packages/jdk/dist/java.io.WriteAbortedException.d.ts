@@ -25,7 +25,7 @@ declare namespace java {
              * @param ex  Exception causing the abort.
              */
             // @ts-ignore
-            constructor(s: string, ex: java.lang.Exception)
+            constructor(s: java.lang.String | string, ex: java.lang.Exception)
             /**
              * Exception that was caught while writing the ObjectStream.
              * <p>This field predates the general-purpose exception chaining facility.
@@ -40,7 +40,7 @@ declare namespace java {
              * exception, if there is one.
              */
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
             /**
              * Returns the exception that terminated the operation (the <i>cause</i>).
              * @return the exception that terminated the operation (the <i>cause</i>),
@@ -48,7 +48,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
         }
     }
 }

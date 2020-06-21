@@ -24,7 +24,7 @@ declare namespace java {
          * @param <E> the type of elements held in this collection
          */
         // @ts-ignore
-        class AbstractQueue<E> extends java.util.AbstractCollection<E> implements java.util.Queue<E> {
+        abstract class AbstractQueue<E> extends java.util.AbstractCollection<E> implements java.util.Queue<E> {
             /**
              * Constructor for use by subclasses.
              */
@@ -49,7 +49,7 @@ declare namespace java {
              *          prevents it from being added to this queue
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Retrieves and removes the head of this queue.  This method differs
              * from {@link #poll poll} only in that it throws an exception if this
@@ -60,7 +60,7 @@ declare namespace java {
              * @throws NoSuchElementException if this queue is empty
              */
             // @ts-ignore
-            remove(): E
+            public remove(): E
             /**
              * Retrieves, but does not remove, the head of this queue.  This method
              * differs from {@link #peek peek} only in that it throws an exception if
@@ -71,7 +71,7 @@ declare namespace java {
              * @throws NoSuchElementException if this queue is empty
              */
             // @ts-ignore
-            element(): E
+            public element(): E
             /**
              * Removes all of the elements from this queue.
              * The queue will be empty after this call returns.
@@ -79,7 +79,7 @@ declare namespace java {
              * returns <tt>null</tt>.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Adds all of the elements in the specified collection to this
              * queue.  Attempts to addAll of a queue to itself result in
@@ -108,7 +108,7 @@ declare namespace java {
              * @see #add(Object)
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
         }
     }
 }

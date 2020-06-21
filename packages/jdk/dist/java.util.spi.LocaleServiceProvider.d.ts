@@ -112,7 +112,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class LocaleServiceProvider extends java.lang.Object {
+            abstract class LocaleServiceProvider extends java.lang.Object {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -130,7 +130,7 @@ declare namespace java {
                  *  can provide localized objects or names.
                  */
                 // @ts-ignore
-                abstract getAvailableLocales(): java.util.Locale[]
+                public abstract getAvailableLocales(): java.util.Locale[]
                 /**
                  * Returns {@code true} if the given {@code locale} is supported by
                  * this locale service provider. The given {@code locale} may contain
@@ -157,7 +157,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                isSupportedLocale(locale: java.util.Locale): boolean
+                public isSupportedLocale(locale: java.util.Locale): boolean
             }
         }
     }

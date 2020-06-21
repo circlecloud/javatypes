@@ -27,7 +27,7 @@ declare namespace org {
                      *      plugin instance
                      */
                     // @ts-ignore
-                    setProvider<T>(plugin: any, service: java.lang.Class<T>, provider: T): void
+                    setProvider<T>(plugin: java.lang.Object | any, service: java.lang.Class<T>, provider: T): void
                     /**
                      * Return a provider for the given service, if one is available.
                      * <p>The returned provider may be a proxy to the real underlying proxy,

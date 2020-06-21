@@ -27,7 +27,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class RMIClassLoaderSpi extends java.lang.Object {
+            abstract class RMIClassLoaderSpi extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -57,7 +57,7 @@ declare namespace java {
                  *  could not be found at the specified location
                  */
                 // @ts-ignore
-                abstract loadClass(codebase: string, name: string, defaultLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public abstract loadClass(codebase: java.lang.String | string, name: java.lang.String | string, defaultLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Provides the implementation for
                  * {@link RMIClassLoader#loadProxyClass(String,String[],ClassLoader)}.
@@ -85,7 +85,7 @@ declare namespace java {
                  *  interface list)
                  */
                 // @ts-ignore
-                abstract loadProxyClass(codebase: string, interfaces: string[], defaultLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public abstract loadProxyClass(codebase: java.lang.String | string, interfaces: java.lang.String[] | string[], defaultLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Provides the implementation for
                  * {@link RMIClassLoader#getClassLoader(String)}.
@@ -112,7 +112,7 @@ declare namespace java {
                  *  URLs in the codebase URL path
                  */
                 // @ts-ignore
-                abstract getClassLoader(codebase: string): java.lang.ClassLoader
+                public abstract getClassLoader(codebase: java.lang.String | string): java.lang.ClassLoader
                 /**
                  * Provides the implementation for
                  * {@link RMIClassLoader#getClassAnnotation(Class)}.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>cl</code> is <code>null</code>
                  */
                 // @ts-ignore
-                abstract getClassAnnotation(cl: java.lang.Class<any>): java.lang.String
+                public abstract getClassAnnotation(cl: java.lang.Class<any>): string
             }
         }
     }

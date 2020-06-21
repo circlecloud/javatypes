@@ -131,7 +131,7 @@ declare namespace javax {
                  * @see java.security.Security security properties
                  */
                 // @ts-ignore
-                class Configuration extends java.lang.Object {
+                abstract class Configuration extends java.lang.Object {
                     /**
                      * Sole constructor.  (For invocation by subclass constructors, typically
                      * implicit.)
@@ -150,7 +150,7 @@ declare namespace javax {
                      * @see #setConfiguration
                      */
                     // @ts-ignore
-                    getConfiguration(): javax.security.auth.login.Configuration
+                    public static getConfiguration(): javax.security.auth.login.Configuration
                     /**
                      * Set the login {@code Configuration}.
                      * <p>
@@ -160,7 +160,7 @@ declare namespace javax {
                      * @see #getConfiguration
                      */
                     // @ts-ignore
-                    setConfiguration(configuration: javax.security.auth.login.Configuration): void
+                    public static setConfiguration(configuration: javax.security.auth.login.Configuration): void
                     /**
                      * Returns a Configuration object of the specified type.
                      * <p> This method traverses the list of registered security providers,
@@ -189,7 +189,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getInstance(type: string, params: javax.security.auth.login.Configuration.Parameters): javax.security.auth.login.Configuration
+                    public static getInstance(type: java.lang.String | string, params: javax.security.auth.login.Configuration.Parameters): javax.security.auth.login.Configuration
                     /**
                      * Returns a Configuration object of the specified type.
                      * <p> A new Configuration object encapsulating the
@@ -222,7 +222,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getInstance(type: string, params: javax.security.auth.login.Configuration.Parameters, provider: string): javax.security.auth.login.Configuration
+                    public static getInstance(type: java.lang.String | string, params: javax.security.auth.login.Configuration.Parameters, provider: java.lang.String | string): javax.security.auth.login.Configuration
                     /**
                      * Returns a Configuration object of the specified type.
                      * <p> A new Configuration object encapsulating the
@@ -250,7 +250,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getInstance(type: string, params: javax.security.auth.login.Configuration.Parameters, provider: java.security.Provider): javax.security.auth.login.Configuration
+                    public static getInstance(type: java.lang.String | string, params: javax.security.auth.login.Configuration.Parameters, provider: java.security.Provider): javax.security.auth.login.Configuration
                     /**
                      * Return the Provider of this Configuration.
                      * <p> This Configuration instance will only have a Provider if it
@@ -260,7 +260,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getProvider(): java.security.Provider
+                    public getProvider(): java.security.Provider
                     /**
                      * Return the type of this Configuration.
                      * <p> This Configuration instance will only have a type if it
@@ -270,7 +270,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getType(): java.lang.String
+                    public getType(): string
                     /**
                      * Return Configuration parameters.
                      * <p> This Configuration instance will only have parameters if it
@@ -280,7 +280,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getParameters(): javax.security.auth.login.Configuration.Parameters
+                    public getParameters(): javax.security.auth.login.Configuration.Parameters
                     /**
                      * Retrieve the AppConfigurationEntries for the specified <i>name</i>
                      * from this Configuration.
@@ -291,7 +291,7 @@ declare namespace javax {
                      *           for the specified <i>name</i>
                      */
                     // @ts-ignore
-                    abstract getAppConfigurationEntry(name: string): javax.security.auth.login.AppConfigurationEntry[]
+                    public abstract getAppConfigurationEntry(name: java.lang.String | string): javax.security.auth.login.AppConfigurationEntry[]
                     /**
                      * Refresh and reload the Configuration.
                      * <p> This method causes this Configuration object to refresh/reload its
@@ -305,7 +305,7 @@ declare namespace javax {
                      *                           to refresh its Configuration.
                      */
                     // @ts-ignore
-                    refresh(): void
+                    public refresh(): void
                 }
             }
         }

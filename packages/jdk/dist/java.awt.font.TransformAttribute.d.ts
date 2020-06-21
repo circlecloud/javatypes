@@ -23,14 +23,14 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly IDENTITY: java.awt.font.TransformAttribute
+                public static readonly IDENTITY: java.awt.font.TransformAttribute
                 /**
                  * Returns a copy of the wrapped transform.
                  * @return a <code>AffineTransform</code> that is a copy of the wrapped
                  *  transform of this <code>TransformAttribute</code>.
                  */
                 // @ts-ignore
-                getTransform(): java.awt.geom.AffineTransform
+                public getTransform(): java.awt.geom.AffineTransform
                 /**
                  * Returns <code>true</code> if the wrapped transform is
                  * an identity transform.
@@ -39,12 +39,12 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                isIdentity(): boolean
+                public isIdentity(): boolean
                 /**
                  * @since 1.6
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns <code>true</code> if rhs is a <code>TransformAttribute</code>
                  * whose transform is equal to this <code>TransformAttribute</code>'s
@@ -56,7 +56,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                equals(rhs: any): boolean
+                public equals(rhs: java.lang.Object | any): boolean
             }
         }
     }

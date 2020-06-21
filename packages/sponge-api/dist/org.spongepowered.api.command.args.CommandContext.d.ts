@@ -19,12 +19,12 @@ declare namespace org {
                          * during tab completion, of type {@link Location Location&lt;World&gt;}.
                          */
                         // @ts-ignore
-                        readonly TARGET_BLOCK_ARG: string
+                        public static readonly TARGET_BLOCK_ARG: java.lang.String | string
                         /**
                          * The argument key to indicate that a tab completion is taking place.
                          */
                         // @ts-ignore
-                        readonly TAB_COMPLETION: string
+                        public static readonly TAB_COMPLETION: java.lang.String | string
                         /**
                          * Gets all values for the given argument. May return an empty list if no
                          * values are present.
@@ -33,7 +33,7 @@ declare namespace org {
                          * @return the collection of all values
                          */
                         // @ts-ignore
-                        getAll<T>(key: string): java.util.Collection<T>
+                        public getAll<T>(key: java.lang.String | string): Array<T>
                         /**
                          * Gets all values for the given argument. May return an empty list if no
                          * values are present.
@@ -42,7 +42,7 @@ declare namespace org {
                          * @return the collection of all values
                          */
                         // @ts-ignore
-                        getAll<T>(key: org.spongepowered.api.text.Text): java.util.Collection<T>
+                        public getAll<T>(key: org.spongepowered.api.text.Text): Array<T>
                         /**
                          * Gets the value for the given key if the key has only one value.
                          * <p>An empty {@link Optional} indicates that there are either zero or more
@@ -53,7 +53,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        getOne<T>(key: string): java.util.Optional<T>
+                        public getOne<T>(key: java.lang.String | string): java.util.Optional<T>
                         /**
                          * Gets the value for the given key if the key has only one value.
                          * <p>An empty {@link Optional} indicates that there are either zero or more
@@ -64,7 +64,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        getOne<T>(key: org.spongepowered.api.text.Text): java.util.Optional<T>
+                        public getOne<T>(key: org.spongepowered.api.text.Text): java.util.Optional<T>
                         /**
                          * Gets the value for the given key if the key has only one value, throws an
                          * exception otherwise.
@@ -80,7 +80,7 @@ declare namespace org {
                          *       by the caller
                          */
                         // @ts-ignore
-                        requireOne<T>(key: string): T
+                        public requireOne<T>(key: java.lang.String | string): T
                         /**
                          * Gets the value for the given key if the key has only one value, throws an
                          * exception otherwise.
@@ -95,21 +95,21 @@ declare namespace org {
                          * @throws ClassCastException if the element type is not what is expected
                          */
                         // @ts-ignore
-                        requireOne<T>(key: org.spongepowered.api.text.Text): T
+                        public requireOne<T>(key: org.spongepowered.api.text.Text): T
                         /**
                          * Insert an argument into this context.
                          * @param key the key to store the arg under
                          * @param value the value for this argument
                          */
                         // @ts-ignore
-                        putArg(key: string, value: any): void
+                        public putArg(key: java.lang.String | string, value: java.lang.Object | any): void
                         /**
                          * Insert an argument into this context.
                          * @param key the key to store the arg under
                          * @param value the value for this argument
                          */
                         // @ts-ignore
-                        putArg(key: org.spongepowered.api.text.Text, value: any): void
+                        public putArg(key: org.spongepowered.api.text.Text, value: java.lang.Object | any): void
                         /**
                          * Perform a permissions check, throwing an exception if the required
                          * permissions are not present.
@@ -118,21 +118,21 @@ declare namespace org {
                          * @throws CommandException if the source does not have permission
                          */
                         // @ts-ignore
-                        checkPermission(commander: org.spongepowered.api.command.CommandSource, permission: string): void
+                        public checkPermission(commander: org.spongepowered.api.command.CommandSource, permission: java.lang.String | string): void
                         /**
                          * Returns whether this context has any value for the given argument key.
                          * @param key The key to look up
                          * @return whether there are any values present
                          */
                         // @ts-ignore
-                        hasAny(key: string): boolean
+                        public hasAny(key: java.lang.String | string): boolean
                         /**
                          * Returns whether this context has any value for the given argument key.
                          * @param key The key to look up
                          * @return whether there are any values present
                          */
                         // @ts-ignore
-                        hasAny(key: org.spongepowered.api.text.Text): boolean
+                        public hasAny(key: org.spongepowered.api.text.Text): boolean
                         /**
                          * Gets a snapshot of the data inside this context to allow it to be
                          * restored later.
@@ -144,14 +144,14 @@ declare namespace org {
                          *       {@link CommandContext}
                          */
                         // @ts-ignore
-                        createSnapshot(): org.spongepowered.api.command.args.CommandContext.Snapshot
+                        public createSnapshot(): org.spongepowered.api.command.args.CommandContext.Snapshot
                         /**
                          * Resets a {@link CommandContext} to a previous state using a previously
                          * created {@link Snapshot}.
                          * @param snapshot The {#link Snapshot} to restore this context with
                          */
                         // @ts-ignore
-                        applySnapshot(snapshot: org.spongepowered.api.command.args.CommandContext.Snapshot): void
+                        public applySnapshot(snapshot: org.spongepowered.api.command.args.CommandContext.Snapshot): void
                     }
                 }
             }

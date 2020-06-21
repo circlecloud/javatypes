@@ -11,7 +11,7 @@ declare namespace org {
                      * being used.
                      */
                     // @ts-ignore
-                    class OverrideRegistration implements java.lang.annotation.Annotation {
+                    abstract class OverrideRegistration implements java.lang.annotation.Annotation {
                     }
                 }
             }

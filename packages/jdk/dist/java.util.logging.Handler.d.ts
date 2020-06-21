@@ -17,7 +17,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class Handler extends java.lang.Object {
+            abstract class Handler extends java.lang.Object {
                 /**
                  * Default constructor.  The resulting <tt>Handler</tt> has a log
                  * level of <tt>Level.ALL</tt>, no <tt>Formatter</tt>, and no
@@ -38,12 +38,12 @@ declare namespace java {
                  *                  silently ignored and is not published
                  */
                 // @ts-ignore
-                abstract publish(record: java.util.logging.LogRecord): void
+                public abstract publish(record: java.util.logging.LogRecord): void
                 /**
                  * Flush any buffered output.
                  */
                 // @ts-ignore
-                abstract flush(): void
+                public abstract flush(): void
                 /**
                  * Close the <tt>Handler</tt> and free all associated resources.
                  * <p>
@@ -55,7 +55,7 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                abstract close(): void
+                public abstract close(): void
                 /**
                  * Set a <tt>Formatter</tt>.  This <tt>Formatter</tt> will be used
                  * to format <tt>LogRecords</tt> for this <tt>Handler</tt>.
@@ -68,13 +68,13 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                setFormatter(newFormatter: java.util.logging.Formatter): void
+                public setFormatter(newFormatter: java.util.logging.Formatter): void
                 /**
                  * Return the <tt>Formatter</tt> for this <tt>Handler</tt>.
                  * @return the <tt>Formatter</tt> (may be null).
                  */
                 // @ts-ignore
-                getFormatter(): java.util.logging.Formatter
+                public getFormatter(): java.util.logging.Formatter
                 /**
                  * Set the character encoding used by this <tt>Handler</tt>.
                  * <p>
@@ -88,14 +88,14 @@ declare namespace java {
                  *           not supported.
                  */
                 // @ts-ignore
-                setEncoding(encoding: string): void
+                public setEncoding(encoding: java.lang.String | string): void
                 /**
                  * Return the character encoding for this <tt>Handler</tt>.
                  * @return The encoding name.  May be null, which indicates the
                  *           default encoding should be used.
                  */
                 // @ts-ignore
-                getEncoding(): java.lang.String
+                public getEncoding(): string
                 /**
                  * Set a <tt>Filter</tt> to control output on this <tt>Handler</tt>.
                  * <P>
@@ -107,13 +107,13 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                setFilter(newFilter: java.util.logging.Filter): void
+                public setFilter(newFilter: java.util.logging.Filter): void
                 /**
                  * Get the current <tt>Filter</tt> for this <tt>Handler</tt>.
                  * @return a <tt>Filter</tt> object (may be null)
                  */
                 // @ts-ignore
-                getFilter(): java.util.logging.Filter
+                public getFilter(): java.util.logging.Filter
                 /**
                  * Define an ErrorManager for this Handler.
                  * <p>
@@ -124,7 +124,7 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                setErrorManager(em: java.util.logging.ErrorManager): void
+                public setErrorManager(em: java.util.logging.ErrorManager): void
                 /**
                  * Retrieves the ErrorManager for this Handler.
                  * @return the ErrorManager for this Handler
@@ -132,7 +132,7 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                getErrorManager(): java.util.logging.ErrorManager
+                public getErrorManager(): java.util.logging.ErrorManager
                 /**
                  * Protected convenience method to report an error to this Handler's
                  * ErrorManager.  Note that this method retrieves and uses the ErrorManager
@@ -143,7 +143,7 @@ declare namespace java {
                  * @param code   an error code defined in ErrorManager
                  */
                 // @ts-ignore
-                reportError(msg: string, ex: java.lang.Exception, code: number /*int*/): void
+                reportError(msg: java.lang.String | string, ex: java.lang.Exception, code: number /*int*/): void
                 /**
                  * Set the log level specifying which message levels will be
                  * logged by this <tt>Handler</tt>.  Message levels lower than this
@@ -157,7 +157,7 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                setLevel(newLevel: java.util.logging.Level): void
+                public setLevel(newLevel: java.util.logging.Level): void
                 /**
                  * Get the log level specifying which messages will be
                  * logged by this <tt>Handler</tt>.  Message levels lower
@@ -165,7 +165,7 @@ declare namespace java {
                  * @return the level of messages being logged.
                  */
                 // @ts-ignore
-                getLevel(): java.util.logging.Level
+                public getLevel(): java.util.logging.Level
                 /**
                  * Check if this <tt>Handler</tt> would actually log a given <tt>LogRecord</tt>.
                  * <p>
@@ -179,7 +179,7 @@ declare namespace java {
                  * @return true if the <tt>LogRecord</tt> would be logged.
                  */
                 // @ts-ignore
-                isLoggable(record: java.util.logging.LogRecord): boolean
+                public isLoggable(record: java.util.logging.LogRecord): boolean
             }
         }
     }

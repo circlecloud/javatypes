@@ -116,13 +116,13 @@ declare namespace java {
              * @throws NullPointerException if the specified map is null
              */
             // @ts-ignore
-            constructor(m: java.util.Map<K, V>)
+            constructor(m: java.util.Map<any, any>)
             /**
              * Returns the number of key-value mappings in this identity hash map.
              * @return the number of key-value mappings in this map
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this identity hash map contains no key-value
              * mappings.
@@ -130,7 +130,7 @@ declare namespace java {
              *          mappings
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -146,7 +146,7 @@ declare namespace java {
              * @see #put(Object, Object)
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             /**
              * Tests whether the specified object reference is a key in this identity
              * hash map.
@@ -156,7 +156,7 @@ declare namespace java {
              * @see #containsValue(Object)
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * Tests whether the specified object reference is a value in this identity
              * hash map.
@@ -166,7 +166,7 @@ declare namespace java {
              * @see #containsKey(Object)
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Associates the specified value with the specified key in this identity
              * hash map.  If the map previously contained a mapping for the key, the
@@ -182,7 +182,7 @@ declare namespace java {
              * @see #containsKey(Object)
              */
             // @ts-ignore
-            put(key: K, value: V): V
+            public put(key: K, value: V): V
             /**
              * Copies all of the mappings from the specified map to this map.
              * These mappings will replace any mappings that this map had for
@@ -191,7 +191,7 @@ declare namespace java {
              * @throws NullPointerException if the specified map is null
              */
             // @ts-ignore
-            putAll(m: java.util.Map<K, V>): void
+            public putAll(m: java.util.Map<any, any>): void
             /**
              * Removes the mapping for this key from this map if present.
              * @param key key whose mapping is to be removed from the map
@@ -201,13 +201,13 @@ declare namespace java {
              *          previously associated <tt>null</tt> with <tt>key</tt>.)
              */
             // @ts-ignore
-            remove(key: any): V
+            public remove(key: java.lang.Object | any): V
             /**
              * Removes all of the mappings from this map.
              * The map will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Compares the specified object with this map for equality.  Returns
              * <tt>true</tt> if the given object is also a map and the two maps
@@ -224,7 +224,7 @@ declare namespace java {
              * @see Object#equals(Object)
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this map.  The hash code of a map is
              * defined to be the sum of the hash codes of each entry in the map's
@@ -243,14 +243,14 @@ declare namespace java {
              * @see #equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a shallow copy of this identity hash map: the keys and values
              * themselves are not cloned.
              * @return a shallow copy of this map
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns an identity-based set view of the keys contained in this map.
              * The set is backed by the map, so changes to the map are reflected in
@@ -286,7 +286,7 @@ declare namespace java {
              * @see System#identityHashCode(Object)
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The collection is backed by the map, so changes to the map are
@@ -307,7 +307,7 @@ declare namespace java {
              * <tt>containsAll</tt> methods.</b>
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * Each element in the returned set is a reference-equality-based
@@ -344,11 +344,11 @@ declare namespace java {
              * @return a set view of the identity-mappings contained in this map
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public entrySet(): Array<java.util.Map.Entry<K, V>>
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+            public forEach(action: java.util.function$.BiConsumer<any, any>): void
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+            public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
         }
     }
 }

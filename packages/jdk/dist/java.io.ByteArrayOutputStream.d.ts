@@ -44,7 +44,7 @@ declare namespace java {
              * @param b   the byte to be written.
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>len</code> bytes from the specified byte array
              * starting at offset <code>off</code> to this byte array output stream.
@@ -53,7 +53,7 @@ declare namespace java {
              * @param len   the number of bytes to write.
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Writes the complete contents of this byte array output stream to
              * the specified output stream argument, as if by calling the output
@@ -62,7 +62,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeTo(out: java.io.OutputStream): void
+            public writeTo(out: java.io.OutputStream): void
             /**
              * Resets the <code>count</code> field of this byte array output
              * stream to zero, so that all currently accumulated output in the
@@ -71,7 +71,7 @@ declare namespace java {
              * @see java.io.ByteArrayInputStream#count
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Creates a newly allocated byte array. Its size is the current
              * size of this output stream and the valid contents of the buffer
@@ -80,7 +80,7 @@ declare namespace java {
              * @see java.io.ByteArrayOutputStream#size()
              */
             // @ts-ignore
-            toByteArray(): byte[]
+            public toByteArray(): number /*byte*/[]
             /**
              * Returns the current size of the buffer.
              * @return the value of the <code>count</code> field, which is the number
@@ -88,7 +88,7 @@ declare namespace java {
              * @see java.io.ByteArrayOutputStream#count
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Converts the buffer's contents into a string decoding bytes using the
              * platform's default character set. The length of the new <tt>String</tt>
@@ -103,7 +103,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Converts the buffer's contents into a string by decoding the bytes using
              * the named {@link java.nio.charset.Charset charset}. The length of the new
@@ -121,7 +121,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            toString(charsetName: string): java.lang.String
+            public toString(charsetName: java.lang.String | string): string
             /**
              * Creates a newly allocated string. Its size is the current size of
              * the output stream and the valid contents of the buffer have been
@@ -143,14 +143,14 @@ declare namespace java {
              * @see java.io.ByteArrayOutputStream#toString()
              */
             // @ts-ignore
-            toString(hibyte: number /*int*/): java.lang.String
+            public toString(hibyte: number /*int*/): string
             /**
              * Closing a <tt>ByteArrayOutputStream</tt> has no effect. The methods in
              * this class can be called after the stream has been closed without
              * generating an <tt>IOException</tt>.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

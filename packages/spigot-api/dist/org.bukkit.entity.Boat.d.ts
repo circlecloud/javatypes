@@ -25,7 +25,7 @@ declare namespace org {
                  * @deprecated boats are complex and many of these methods do not work correctly across multiple versions.
                  */
                 // @ts-ignore
-                getMaxSpeed(): double
+                getMaxSpeed(): number /*double*/
                 /**
                  * Sets the maximum speed of a boat. Must be nonnegative. Default is 0.4D.
                  * @param speed The max speed.
@@ -40,7 +40,7 @@ declare namespace org {
                  * @deprecated boats are complex and many of these methods do not work correctly across multiple versions.
                  */
                 // @ts-ignore
-                getOccupiedDeceleration(): double
+                getOccupiedDeceleration(): number /*double*/
                 /**
                  * Sets the deceleration rate (newSpeed = curSpeed * rate) of occupied
                  * boats. Setting this to a higher value allows for quicker acceleration.
@@ -58,7 +58,7 @@ declare namespace org {
                  * @deprecated boats are complex and many of these methods do not work correctly across multiple versions.
                  */
                 // @ts-ignore
-                getUnoccupiedDeceleration(): double
+                getUnoccupiedDeceleration(): number /*double*/
                 /**
                  * Sets the deceleration rate (newSpeed = curSpeed * rate) of unoccupied
                  * boats. Setting this to a higher value allows for quicker deceleration

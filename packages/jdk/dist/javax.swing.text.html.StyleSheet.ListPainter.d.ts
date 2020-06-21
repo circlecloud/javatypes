@@ -25,7 +25,7 @@ declare namespace javax {
                          *   is a number greater than or equal to 0.
                          */
                         // @ts-ignore
-                        paint(g: java.awt.Graphics, x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/, v: javax.swing.text.View, item: number /*int*/): void
+                        public paint(g: java.awt.Graphics, x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/, v: javax.swing.text.View, item: number /*int*/): void
                     }
                 }
             }

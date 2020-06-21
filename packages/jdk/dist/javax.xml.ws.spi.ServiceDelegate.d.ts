@@ -14,7 +14,7 @@ declare namespace javax {
                  * @since JAX-WS 2.0
                  */
                 // @ts-ignore
-                class ServiceDelegate extends java.lang.Object {
+                abstract class ServiceDelegate extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -45,7 +45,7 @@ declare namespace javax {
                      * @see java.lang.reflect.InvocationHandler
                      */
                     // @ts-ignore
-                    abstract getPort<T>(portName: javax.xml.namespace.QName, serviceEndpointInterface: java.lang.Class<T>): T
+                    public abstract getPort<T>(portName: javax.xml.namespace.QName, serviceEndpointInterface: java.lang.Class<T>): T
                     /**
                      * The <code>getPort</code> method returns a proxy. A service client
                      * uses this proxy to invoke operations on the target
@@ -81,7 +81,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract getPort<T>(portName: javax.xml.namespace.QName, serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
+                    public abstract getPort<T>(portName: javax.xml.namespace.QName, serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
                     /**
                      * The <code>getPort</code> method returns a proxy.
                      * The parameter <code>endpointReference</code> specifies the
@@ -153,7 +153,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract getPort<T>(endpointReference: javax.xml.ws.EndpointReference, serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
+                    public abstract getPort<T>(endpointReference: javax.xml.ws.EndpointReference, serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
                     /**
                      * The <code>getPort</code> method returns a proxy. The parameter
                      * <code>serviceEndpointInterface</code> specifies the service
@@ -177,7 +177,7 @@ declare namespace javax {
                      *                   </UL>
                      */
                     // @ts-ignore
-                    abstract getPort<T>(serviceEndpointInterface: java.lang.Class<T>): T
+                    public abstract getPort<T>(serviceEndpointInterface: java.lang.Class<T>): T
                     /**
                      * The <code>getPort</code> method returns a proxy. The parameter
                      * <code>serviceEndpointInterface</code> specifies the service
@@ -208,7 +208,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract getPort<T>(serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
+                    public abstract getPort<T>(serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
                     /**
                      * Creates a new port for the service. Ports created in this way contain
                      * no WSDL port type information and can only be used for creating
@@ -223,7 +223,7 @@ declare namespace javax {
                      * @see javax.xml.ws.http.HTTPBinding#HTTP_BINDING
                      */
                     // @ts-ignore
-                    abstract addPort(portName: javax.xml.namespace.QName, bindingId: string, endpointAddress: string): void
+                    public abstract addPort(portName: javax.xml.namespace.QName, bindingId: java.lang.String | string, endpointAddress: java.lang.String | string): void
                     /**
                      * Creates a <code>Dispatch</code> instance for use with objects of
                      * the user's choosing.
@@ -244,7 +244,7 @@ declare namespace javax {
                      * @see javax.xml.soap.SOAPMessage
                      */
                     // @ts-ignore
-                    abstract createDispatch<T>(portName: javax.xml.namespace.QName, type: java.lang.Class<T>, mode: javax.xml.ws.Service.Mode): javax.xml.ws.Dispatch<T>
+                    public abstract createDispatch<T>(portName: javax.xml.namespace.QName, type: java.lang.Class<T>, mode: javax.xml.ws.Service.Mode): javax.xml.ws.Dispatch<T>
                     /**
                      * Creates a <code>Dispatch</code> instance for use with objects of
                      * the user's choosing.
@@ -272,7 +272,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract createDispatch<T>(portName: javax.xml.namespace.QName, type: java.lang.Class<T>, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<T>
+                    public abstract createDispatch<T>(portName: javax.xml.namespace.QName, type: java.lang.Class<T>, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<T>
                     /**
                      * Creates a <code>Dispatch</code> instance for use with objects of
                      * the user's choosing. If there
@@ -339,7 +339,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract createDispatch<T>(endpointReference: javax.xml.ws.EndpointReference, type: java.lang.Class<T>, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<T>
+                    public abstract createDispatch<T>(endpointReference: javax.xml.ws.EndpointReference, type: java.lang.Class<T>, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<T>
                     /**
                      * Creates a <code>Dispatch</code> instance for use with JAXB
                      * generated objects.
@@ -357,7 +357,7 @@ declare namespace javax {
                      * @see javax.xml.bind.JAXBContext
                      */
                     // @ts-ignore
-                    abstract createDispatch(portName: javax.xml.namespace.QName, context: javax.xml.bind.JAXBContext, mode: javax.xml.ws.Service.Mode): javax.xml.ws.Dispatch<java.lang.Object>
+                    public abstract createDispatch(portName: javax.xml.namespace.QName, context: javax.xml.bind.JAXBContext, mode: javax.xml.ws.Service.Mode): javax.xml.ws.Dispatch<java.lang.Object | any>
                     /**
                      * Creates a <code>Dispatch</code> instance for use with JAXB
                      * generated objects.
@@ -382,7 +382,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract createDispatch(portName: javax.xml.namespace.QName, context: javax.xml.bind.JAXBContext, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<java.lang.Object>
+                    public abstract createDispatch(portName: javax.xml.namespace.QName, context: javax.xml.bind.JAXBContext, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<java.lang.Object | any>
                     /**
                      * Creates a <code>Dispatch</code> instance for use with JAXB
                      * generated objects. If there
@@ -447,13 +447,13 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract createDispatch(endpointReference: javax.xml.ws.EndpointReference, context: javax.xml.bind.JAXBContext, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<java.lang.Object>
+                    public abstract createDispatch(endpointReference: javax.xml.ws.EndpointReference, context: javax.xml.bind.JAXBContext, mode: javax.xml.ws.Service.Mode, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Dispatch<java.lang.Object | any>
                     /**
                      * Gets the name of this service.
                      * @return Qualified name of this service
                      */
                     // @ts-ignore
-                    abstract getServiceName(): javax.xml.namespace.QName
+                    public abstract getServiceName(): javax.xml.namespace.QName
                     /**
                      * Returns an <code>Iterator</code> for the list of
                      * <code>QName</code>s of service endpoints grouped by this
@@ -464,14 +464,14 @@ declare namespace javax {
                      *          have access to the required WSDL metadata
                      */
                     // @ts-ignore
-                    abstract getPorts(): java.util.Iterator<javax.xml.namespace.QName>
+                    public abstract getPorts(): java.util.Iterator<javax.xml.namespace.QName>
                     /**
                      * Gets the location of the WSDL document for this Service.
                      * @return URL for the location of the WSDL document for
                      *          this service
                      */
                     // @ts-ignore
-                    abstract getWSDLDocumentLocation(): java.net.URL
+                    public abstract getWSDLDocumentLocation(): java.net.URL
                     /**
                      * Returns the configured handler resolver.
                      * @return HandlerResolver The <code>HandlerResolver</code> being
@@ -479,7 +479,7 @@ declare namespace javax {
                      *          if there isn't one.
                      */
                     // @ts-ignore
-                    abstract getHandlerResolver(): javax.xml.ws.handler.HandlerResolver
+                    public abstract getHandlerResolver(): javax.xml.ws.handler.HandlerResolver
                     /**
                      * Sets the <code>HandlerResolver</code> for this <code>Service</code>
                      * instance.
@@ -492,7 +492,7 @@ declare namespace javax {
                      * @see javax.xml.ws.handler.HandlerResolver
                      */
                     // @ts-ignore
-                    abstract setHandlerResolver(handlerResolver: javax.xml.ws.handler.HandlerResolver): void
+                    public abstract setHandlerResolver(handlerResolver: javax.xml.ws.handler.HandlerResolver): void
                     /**
                      * Returns the executor for this <code>Service</code>instance.
                      * The executor is used for all asynchronous invocations that
@@ -502,7 +502,7 @@ declare namespace javax {
                      * @see java.util.concurrent.Executor
                      */
                     // @ts-ignore
-                    abstract getExecutor(): java.util.concurrent.Executor
+                    public abstract getExecutor(): java.util.concurrent.Executor
                     /**
                      * Sets the executor for this <code>Service</code> instance.
                      * The executor is used for all asynchronous invocations that
@@ -515,7 +515,7 @@ declare namespace javax {
                      * @see java.util.concurrent.Executor
                      */
                     // @ts-ignore
-                    abstract setExecutor(executor: java.util.concurrent.Executor): void
+                    public abstract setExecutor(executor: java.util.concurrent.Executor): void
                 }
             }
         }

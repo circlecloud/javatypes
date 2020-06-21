@@ -39,7 +39,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class DoubleBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.DoubleBuffer> {
+        abstract class DoubleBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.DoubleBuffer> {
             /**
              * Allocates a new double buffer.
              * <p> The new buffer's position will be zero, its limit will be its
@@ -53,7 +53,7 @@ declare namespace java {
              *           If the <tt>capacity</tt> is a negative integer
              */
             // @ts-ignore
-            allocate(capacity: number /*int*/): java.nio.DoubleBuffer
+            public static allocate(capacity: number /*int*/): java.nio.DoubleBuffer
             /**
              * Wraps a double array into a buffer.
              * <p> The new buffer will be backed by the given double array;
@@ -80,7 +80,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            wrap(array: number /*double*/[], offset: number /*int*/, length: number /*int*/): java.nio.DoubleBuffer
+            public static wrap(array: number /*double*/[], offset: number /*int*/, length: number /*int*/): java.nio.DoubleBuffer
             /**
              * Wraps a double array into a buffer.
              * <p> The new buffer will be backed by the given double array;
@@ -95,7 +95,7 @@ declare namespace java {
              * @return The new double buffer
              */
             // @ts-ignore
-            wrap(array: number /*double*/[]): java.nio.DoubleBuffer
+            public static wrap(array: number /*double*/[]): java.nio.DoubleBuffer
             /**
              * Creates a new double buffer whose content is a shared subsequence of
              * this buffer's content.
@@ -111,7 +111,7 @@ declare namespace java {
              * @return The new double buffer
              */
             // @ts-ignore
-            abstract slice(): java.nio.DoubleBuffer
+            public abstract slice(): java.nio.DoubleBuffer
             /**
              * Creates a new double buffer that shares this buffer's content.
              * <p> The content of the new buffer will be that of this buffer.  Changes
@@ -125,7 +125,7 @@ declare namespace java {
              * @return The new double buffer
              */
             // @ts-ignore
-            abstract duplicate(): java.nio.DoubleBuffer
+            public abstract duplicate(): java.nio.DoubleBuffer
             /**
              * Creates a new, read-only double buffer that shares this buffer's
              * content.
@@ -141,7 +141,7 @@ declare namespace java {
              * @return The new, read-only double buffer
              */
             // @ts-ignore
-            abstract asReadOnlyBuffer(): java.nio.DoubleBuffer
+            public abstract asReadOnlyBuffer(): java.nio.DoubleBuffer
             /**
              * Relative <i>get</i> method.  Reads the double at this buffer's
              * current position, and then increments the position.
@@ -150,7 +150,7 @@ declare namespace java {
              *           If the buffer's current position is not smaller than its limit
              */
             // @ts-ignore
-            abstract get(): double
+            public abstract get(): number /*double*/
             /**
              * Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given double into this buffer at the current
@@ -164,7 +164,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(d: number /*double*/): java.nio.DoubleBuffer
+            public abstract put(d: number /*double*/): java.nio.DoubleBuffer
             /**
              * Absolute <i>get</i> method.  Reads the double at the given
              * index.
@@ -176,7 +176,7 @@ declare namespace java {
              *           or not smaller than the buffer's limit
              */
             // @ts-ignore
-            abstract get(index: number /*int*/): double
+            public abstract get(index: number /*int*/): number /*double*/
             /**
              * Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given double into this buffer at the given
@@ -193,7 +193,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(index: number /*int*/, d: number /*double*/): java.nio.DoubleBuffer
+            public abstract put(index: number /*int*/, d: number /*double*/): java.nio.DoubleBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers doubles from this buffer into the given
@@ -234,7 +234,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            get(dst: number /*double*/[], offset: number /*int*/, length: number /*int*/): java.nio.DoubleBuffer
+            public get(dst: number /*double*/[], offset: number /*int*/, length: number /*int*/): java.nio.DoubleBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers doubles from this buffer into the given
@@ -250,7 +250,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            get(dst: number /*double*/[]): java.nio.DoubleBuffer
+            public get(dst: number /*double*/[]): java.nio.DoubleBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the doubles remaining in the given source
@@ -283,7 +283,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: java.nio.DoubleBuffer): java.nio.DoubleBuffer
+            public put(src: java.nio.DoubleBuffer): java.nio.DoubleBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers doubles into this buffer from the given
@@ -324,7 +324,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: number /*double*/[], offset: number /*int*/, length: number /*int*/): java.nio.DoubleBuffer
+            public put(src: number /*double*/[], offset: number /*int*/, length: number /*int*/): java.nio.DoubleBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the entire content of the given source
@@ -342,7 +342,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: number /*double*/[]): java.nio.DoubleBuffer
+            public put(src: number /*double*/[]): java.nio.DoubleBuffer
             /**
              * Tells whether or not this buffer is backed by an accessible double
              * array.
@@ -353,7 +353,7 @@ declare namespace java {
              *           is backed by an array and is not read-only
              */
             // @ts-ignore
-            hasArray(): boolean
+            public hasArray(): boolean
             /**
              * Returns the double array that backs this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -369,7 +369,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            array(): double[]
+            public array(): number /*double*/[]
             /**
              * Returns the offset within this buffer's backing array of the first
              * element of the buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -386,7 +386,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            arrayOffset(): int
+            public arrayOffset(): number /*int*/
             /**
              * Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> The doubles between the buffer's current position and its limit,
@@ -407,19 +407,19 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract compact(): java.nio.DoubleBuffer
+            public abstract compact(): java.nio.DoubleBuffer
             /**
              * Tells whether or not this double buffer is direct.
              * @return <tt>true</tt> if, and only if, this buffer is direct
              */
             // @ts-ignore
-            abstract isDirect(): boolean
+            public abstract isDirect(): boolean
             /**
              * Returns a string summarizing the state of this buffer.
              * @return A summary string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the current hash code of this buffer.
              * <p> The hash code of a double buffer depends only upon its remaining
@@ -431,7 +431,7 @@ declare namespace java {
              * @return The current hash code of this buffer
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tells whether or not this buffer is equal to another object.
              * <p> Two double buffers are equal if, and only if,
@@ -454,7 +454,7 @@ declare namespace java {
              *            given object
              */
             // @ts-ignore
-            equals(ob: any): boolean
+            public equals(ob: java.lang.Object | any): boolean
             /**
              * Compares this buffer to another.
              * <p> Two double buffers are compared by comparing their sequences of
@@ -471,7 +471,7 @@ declare namespace java {
              *           is less than, equal to, or greater than the given buffer
              */
             // @ts-ignore
-            compareTo(that: java.nio.DoubleBuffer): int
+            public compareTo(that: java.nio.DoubleBuffer): number /*int*/
             /**
              * Retrieves this buffer's byte order.
              * <p> The byte order of a double buffer created by allocation or by
@@ -483,7 +483,7 @@ declare namespace java {
              * @return This buffer's byte order
              */
             // @ts-ignore
-            abstract order(): java.nio.ByteOrder
+            public abstract order(): java.nio.ByteOrder
         }
     }
 }

@@ -22,7 +22,7 @@ declare namespace org {
                      *  from the specified source
                      */
                     // @ts-ignore
-                    constructor(source: any, delegate: org.springframework.context.ApplicationListener<any>)
+                    constructor(source: java.lang.Object | any, delegate: org.springframework.context.ApplicationListener<any>)
                     /**
                      * Create a SourceFilteringListener for the given event source,
                      * expecting subclasses to override the {@link #onApplicationEventInternal}
@@ -31,15 +31,15 @@ declare namespace org {
                      *  only processing events from this source
                      */
                     // @ts-ignore
-                    constructor(source: any)
+                    constructor(source: java.lang.Object | any)
                     // @ts-ignore
-                    onApplicationEvent(event: org.springframework.context.ApplicationEvent): void
+                    public onApplicationEvent(event: org.springframework.context.ApplicationEvent): void
                     // @ts-ignore
-                    supportsEventType(eventType: ResolvableType): boolean
+                    public supportsEventType(eventType: ResolvableType): boolean
                     // @ts-ignore
-                    supportsSourceType(sourceType: java.lang.Class<any>): boolean
+                    public supportsSourceType(sourceType: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     /**
                      * Actually process the event, after having filtered according to the
                      * desired event source already.

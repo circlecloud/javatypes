@@ -15,15 +15,15 @@ declare namespace javax {
              * @param fileObject delegate to this file object
              */
             // @ts-ignore
-            constructor(fileObject: F extends javax.tools.JavaFileObject)
+            constructor(fileObject: F)
             // @ts-ignore
-            getKind(): javax.tools.JavaFileObject.Kind
+            public getKind(): javax.tools.JavaFileObject.Kind
             // @ts-ignore
-            isNameCompatible(simpleName: string, kind: javax.tools.JavaFileObject.Kind): boolean
+            public isNameCompatible(simpleName: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind): boolean
             // @ts-ignore
-            getNestingKind(): javax.lang.model.element.NestingKind
+            public getNestingKind(): javax.lang.model.element.NestingKind
             // @ts-ignore
-            getAccessLevel(): javax.lang.model.element.Modifier
+            public getAccessLevel(): javax.lang.model.element.Modifier
         }
     }
 }

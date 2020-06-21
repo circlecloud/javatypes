@@ -11,19 +11,19 @@ declare namespace org {
                 // @ts-ignore
                 class AmqpMessageReturnedException extends org.springframework.amqp.AmqpException {
                     // @ts-ignore
-                    constructor(message: string, returnedMessage: org.springframework.amqp.core.Message, replyCode: number /*int*/, replyText: string, exchange: string, routingKey: string)
+                    constructor(message: java.lang.String | string, returnedMessage: org.springframework.amqp.core.Message, replyCode: number /*int*/, replyText: java.lang.String | string, exchange: java.lang.String | string, routingKey: java.lang.String | string)
                     // @ts-ignore
                     getReturnedMessage(): org.springframework.amqp.core.Message
                     // @ts-ignore
-                    getReplyCode(): int
+                    getReplyCode(): number /*int*/
                     // @ts-ignore
-                    getReplyText(): java.lang.String
+                    getReplyText(): string
                     // @ts-ignore
-                    getExchange(): java.lang.String
+                    getExchange(): string
                     // @ts-ignore
-                    getRoutingKey(): java.lang.String
+                    getRoutingKey(): string
                     // @ts-ignore
-                    toString(): java.lang.String
+                    toString(): string
                 }
             }
         }

@@ -36,7 +36,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        constructor(factory: org.springframework.http.client.reactive.ReactorResourceFactory, mapper: java.util.function.Function<HttpClient, HttpClient> | java.util.function$.Function<HttpClient, HttpClient>)
+                        constructor(factory: org.springframework.http.client.reactive.ReactorResourceFactory, mapper: java.util.function$.Function<HttpClient, HttpClient>)
                         /**
                          * Constructor with a pre-configured {@code HttpClient} instance.
                          * @param httpClient the client to use
@@ -45,7 +45,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(httpClient: HttpClient)
                         // @ts-ignore
-                        connect(method: org.springframework.http.HttpMethod, uri: java.net.URI, requestCallback: java.util.function.Function<any super org.springframework.http.client.reactive.ClientHttpRequest, <any>> | java.util.function$.Function<? super org.springframework.http.client.reactive.ClientHttpRequest, <any>>): <any>
+                        public connect(method: org.springframework.http.HttpMethod, uri: java.net.URI, requestCallback: java.util.function$.Function<any, object>): object
                     }
                 }
             }

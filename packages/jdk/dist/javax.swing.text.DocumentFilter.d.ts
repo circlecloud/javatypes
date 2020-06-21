@@ -52,7 +52,7 @@ declare namespace javax {
                  *    is the first bad position encountered.
                  */
                 // @ts-ignore
-                remove(fb: javax.swing.text.DocumentFilter.FilterBypass, offset: number /*int*/, length: number /*int*/): void
+                public remove(fb: javax.swing.text.DocumentFilter.FilterBypass, offset: number /*int*/, length: number /*int*/): void
                 /**
                  * Invoked prior to insertion of text into the
                  * specified Document. Subclasses that want to conditionally allow
@@ -69,7 +69,7 @@ declare namespace javax {
                  *    valid position within the document
                  */
                 // @ts-ignore
-                insertString(fb: javax.swing.text.DocumentFilter.FilterBypass, offset: number /*int*/, string: string, attr: javax.swing.text.AttributeSet): void
+                public insertString(fb: javax.swing.text.DocumentFilter.FilterBypass, offset: number /*int*/, string: java.lang.String | string, attr: javax.swing.text.AttributeSet): void
                 /**
                  * Invoked prior to replacing a region of text in the
                  * specified Document. Subclasses that want to conditionally allow
@@ -85,7 +85,7 @@ declare namespace javax {
                  *    valid position within the document
                  */
                 // @ts-ignore
-                replace(fb: javax.swing.text.DocumentFilter.FilterBypass, offset: number /*int*/, length: number /*int*/, text: string, attrs: javax.swing.text.AttributeSet): void
+                public replace(fb: javax.swing.text.DocumentFilter.FilterBypass, offset: number /*int*/, length: number /*int*/, text: java.lang.String | string, attrs: javax.swing.text.AttributeSet): void
             }
         }
     }

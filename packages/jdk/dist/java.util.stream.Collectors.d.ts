@@ -49,7 +49,7 @@ declare namespace java {
                  *  {@code Collection}, in encounter order
                  */
                 // @ts-ignore
-                toCollection<T, C extends java.util.Collection<T>>(collectionFactory: java.util.function.Supplier<C> | java.util.function$.Supplier<C>): java.util.stream.Collector<T, ?, C>
+                public static toCollection<T, C extends java.util.Collection<T>>(collectionFactory: java.util.function$.Supplier<C>): java.util.stream.Collector<T, any, C>
                 /**
                  * Returns a {@code Collector} that accumulates the input elements into a
                  * new {@code List}. There are no guarantees on the type, mutability,
@@ -60,7 +60,7 @@ declare namespace java {
                  *  {@code List}, in encounter order
                  */
                 // @ts-ignore
-                toList<T>(): java.util.stream.Collector<T, ?, java.util.List<T>>
+                public static toList<T>(): java.util.stream.Collector<T, any, java.util.List<T> | Array<T>>
                 /**
                  * Returns a {@code Collector} that accumulates the input elements into a
                  * new {@code Set}. There are no guarantees on the type, mutability,
@@ -74,7 +74,7 @@ declare namespace java {
                  *  {@code Set}
                  */
                 // @ts-ignore
-                toSet<T>(): java.util.stream.Collector<T, ?, java.util.Set<T>>
+                public static toSet<T>(): java.util.stream.Collector<T, any, java.util.Set<T> | Array<T>>
                 /**
                  * Returns a {@code Collector} that concatenates the input elements into a
                  * {@code String}, in encounter order.
@@ -82,7 +82,7 @@ declare namespace java {
                  *  {@code String}, in encounter order
                  */
                 // @ts-ignore
-                joining(): java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>
+                public static joining(): java.util.stream.Collector<java.lang.CharSequence, any, java.lang.String | string>
                 /**
                  * Returns a {@code Collector} that concatenates the input elements,
                  * separated by the specified delimiter, in encounter order.
@@ -91,7 +91,7 @@ declare namespace java {
                  *  separated by the specified delimiter, in encounter order
                  */
                 // @ts-ignore
-                joining(delimiter: java.lang.CharSequence): java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>
+                public static joining(delimiter: java.lang.CharSequence): java.util.stream.Collector<java.lang.CharSequence, any, java.lang.String | string>
                 /**
                  * Returns a {@code Collector} that concatenates the input elements,
                  * separated by the specified delimiter, with the specified prefix and
@@ -105,7 +105,7 @@ declare namespace java {
                  *  separated by the specified delimiter, in encounter order
                  */
                 // @ts-ignore
-                joining(delimiter: java.lang.CharSequence, prefix: java.lang.CharSequence, suffix: java.lang.CharSequence): java.util.stream.Collector<java.lang.CharSequence, ?, java.lang.String>
+                public static joining(delimiter: java.lang.CharSequence, prefix: java.lang.CharSequence, suffix: java.lang.CharSequence): java.util.stream.Collector<java.lang.CharSequence, any, java.lang.String | string>
                 /**
                  * Adapts a {@code Collector} accepting elements of type {@code U} to one
                  * accepting elements of type {@code T} by applying a mapping function to
@@ -129,7 +129,7 @@ declare namespace java {
                  *  elements and provides the mapped results to the downstream collector
                  */
                 // @ts-ignore
-                mapping<T, U, A, R>(mapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, downstream: java.util.stream.Collector<any super U, A, R>): java.util.stream.Collector<T, ?, R>
+                public static mapping<T, U, A, R>(mapper: java.util.function$.Function<any, any>, downstream: java.util.stream.Collector<any, A, R>): java.util.stream.Collector<T, any, R>
                 /**
                  * Adapts a {@code Collector} to perform an additional finishing
                  * transformation.  For example, one could adapt the {@link #toList()}
@@ -148,7 +148,7 @@ declare namespace java {
                  *  followed by an additional finishing step
                  */
                 // @ts-ignore
-                collectingAndThen<T, A, R, RR>(downstream: java.util.stream.Collector<T, A, R>, finisher: java.util.function.Function<R, RR> | java.util.function$.Function<R, RR>): java.util.stream.Collector<T, A, RR>
+                public static collectingAndThen<T, A, R, RR>(downstream: java.util.stream.Collector<T, A, R>, finisher: java.util.function$.Function<R, RR>): java.util.stream.Collector<T, A, RR>
                 /**
                  * Returns a {@code Collector} accepting elements of type {@code T} that
                  * counts the number of input elements.  If no elements are present, the
@@ -161,7 +161,7 @@ declare namespace java {
                  * @return a {#code Collector} that counts the input elements
                  */
                 // @ts-ignore
-                counting<T>(): java.util.stream.Collector<T, ?, java.lang.Long>
+                public static counting<T>(): java.util.stream.Collector<T, any, java.lang.Long | number>
                 /**
                  * Returns a {@code Collector} that produces the minimal element according
                  * to a given {@code Comparator}, described as an {@code Optional<T>}.
@@ -174,7 +174,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the minimal value
                  */
                 // @ts-ignore
-                minBy<T>(comparator: java.util.Comparator<any super T>): java.util.stream.Collector<T, ?, java.util.Optional<T>>
+                public static minBy<T>(comparator: java.util.Comparator<any>): java.util.stream.Collector<T, any, java.util.Optional<T>>
                 /**
                  * Returns a {@code Collector} that produces the maximal element according
                  * to a given {@code Comparator}, described as an {@code Optional<T>}.
@@ -187,7 +187,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the maximal value
                  */
                 // @ts-ignore
-                maxBy<T>(comparator: java.util.Comparator<any super T>): java.util.stream.Collector<T, ?, java.util.Optional<T>>
+                public static maxBy<T>(comparator: java.util.Comparator<any>): java.util.stream.Collector<T, any, java.util.Optional<T>>
                 /**
                  * Returns a {@code Collector} that produces the sum of a integer-valued
                  * function applied to the input elements.  If no elements are present,
@@ -197,7 +197,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the sum of a derived property
                  */
                 // @ts-ignore
-                summingInt<T>(mapper: java.util.function.ToIntFunction<any super T> | java.util.function$.ToIntFunction<? super T>): java.util.stream.Collector<T, ?, java.lang.Integer>
+                public static summingInt<T>(mapper: java.util.function$.ToIntFunction<any>): java.util.stream.Collector<T, any, java.lang.Integer | number>
                 /**
                  * Returns a {@code Collector} that produces the sum of a long-valued
                  * function applied to the input elements.  If no elements are present,
@@ -207,7 +207,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the sum of a derived property
                  */
                 // @ts-ignore
-                summingLong<T>(mapper: java.util.function.ToLongFunction<any super T> | java.util.function$.ToLongFunction<? super T>): java.util.stream.Collector<T, ?, java.lang.Long>
+                public static summingLong<T>(mapper: java.util.function$.ToLongFunction<any>): java.util.stream.Collector<T, any, java.lang.Long | number>
                 /**
                  * Returns a {@code Collector} that produces the sum of a double-valued
                  * function applied to the input elements.  If no elements are present,
@@ -223,7 +223,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the sum of a derived property
                  */
                 // @ts-ignore
-                summingDouble<T>(mapper: java.util.function.ToDoubleFunction<any super T> | java.util.function$.ToDoubleFunction<? super T>): java.util.stream.Collector<T, ?, java.lang.Double>
+                public static summingDouble<T>(mapper: java.util.function$.ToDoubleFunction<any>): java.util.stream.Collector<T, any, java.lang.Double | number>
                 /**
                  * Returns a {@code Collector} that produces the arithmetic mean of an integer-valued
                  * function applied to the input elements.  If no elements are present,
@@ -233,7 +233,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the sum of a derived property
                  */
                 // @ts-ignore
-                averagingInt<T>(mapper: java.util.function.ToIntFunction<any super T> | java.util.function$.ToIntFunction<? super T>): java.util.stream.Collector<T, ?, java.lang.Double>
+                public static averagingInt<T>(mapper: java.util.function$.ToIntFunction<any>): java.util.stream.Collector<T, any, java.lang.Double | number>
                 /**
                  * Returns a {@code Collector} that produces the arithmetic mean of a long-valued
                  * function applied to the input elements.  If no elements are present,
@@ -243,7 +243,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the sum of a derived property
                  */
                 // @ts-ignore
-                averagingLong<T>(mapper: java.util.function.ToLongFunction<any super T> | java.util.function$.ToLongFunction<? super T>): java.util.stream.Collector<T, ?, java.lang.Double>
+                public static averagingLong<T>(mapper: java.util.function$.ToLongFunction<any>): java.util.stream.Collector<T, any, java.lang.Double | number>
                 /**
                  * Returns a {@code Collector} that produces the arithmetic mean of a double-valued
                  * function applied to the input elements.  If no elements are present,
@@ -264,7 +264,7 @@ declare namespace java {
                  * @return a {#code Collector} that produces the sum of a derived property
                  */
                 // @ts-ignore
-                averagingDouble<T>(mapper: java.util.function.ToDoubleFunction<any super T> | java.util.function$.ToDoubleFunction<? super T>): java.util.stream.Collector<T, ?, java.lang.Double>
+                public static averagingDouble<T>(mapper: java.util.function$.ToDoubleFunction<any>): java.util.stream.Collector<T, any, java.lang.Double | number>
                 /**
                  * Returns a {@code Collector} which performs a reduction of its
                  * input elements under a specified {@code BinaryOperator} using the
@@ -282,7 +282,7 @@ declare namespace java {
                  * @see #reducing(Object, Function, BinaryOperator)
                  */
                 // @ts-ignore
-                reducing<T>(identity: T, op: java.util.function.BinaryOperator<T> | java.util.function$.BinaryOperator<T>): java.util.stream.Collector<T, ?, T>
+                public static reducing<T>(identity: T, op: java.util.function$.BinaryOperator<T>): java.util.stream.Collector<T, any, T>
                 /**
                  * Returns a {@code Collector} which performs a reduction of its
                  * input elements under a specified {@code BinaryOperator}.  The result
@@ -306,7 +306,7 @@ declare namespace java {
                  * @see #reducing(Object, Function, BinaryOperator)
                  */
                 // @ts-ignore
-                reducing<T>(op: java.util.function.BinaryOperator<T> | java.util.function$.BinaryOperator<T>): java.util.stream.Collector<T, ?, java.util.Optional<T>>
+                public static reducing<T>(op: java.util.function$.BinaryOperator<T>): java.util.stream.Collector<T, any, java.util.Optional<T>>
                 /**
                  * Returns a {@code Collector} which performs a reduction of its
                  * input elements under a specified mapping function and
@@ -338,7 +338,7 @@ declare namespace java {
                  * @see #reducing(BinaryOperator)
                  */
                 // @ts-ignore
-                reducing<T, U>(identity: U, mapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, op: java.util.function.BinaryOperator<U> | java.util.function$.BinaryOperator<U>): java.util.stream.Collector<T, ?, U>
+                public static reducing<T, U>(identity: U, mapper: java.util.function$.Function<any, any>, op: java.util.function$.BinaryOperator<U>): java.util.stream.Collector<T, any, U>
                 /**
                  * Returns a {@code Collector} implementing a "group by" operation on
                  * input elements of type {@code T}, grouping elements according to a
@@ -370,7 +370,7 @@ declare namespace java {
                  * @see #groupingByConcurrent(Function)
                  */
                 // @ts-ignore
-                groupingBy<T, K>(classifier: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>): java.util.stream.Collector<T, ?, java.util.Map<K, java.util.List<T>>>
+                public static groupingBy<T, K>(classifier: java.util.function$.Function<any, any>): java.util.stream.Collector<T, any, java.util.Map<K, java.util.List<T> | Array<T>>>
                 /**
                  * Returns a {@code Collector} implementing a cascaded "group by" operation
                  * on input elements of type {@code T}, grouping elements according to a
@@ -407,7 +407,7 @@ declare namespace java {
                  * @see #groupingByConcurrent(Function, Collector)
                  */
                 // @ts-ignore
-                groupingBy<T, K, A, D>(classifier: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, downstream: java.util.stream.Collector<any super T, A, D>): java.util.stream.Collector<T, ?, java.util.Map<K, D>>
+                public static groupingBy<T, K, A, D>(classifier: java.util.function$.Function<any, any>, downstream: java.util.stream.Collector<any, A, D>): java.util.stream.Collector<T, any, java.util.Map<K, D>>
                 /**
                  * Returns a {@code Collector} implementing a cascaded "group by" operation
                  * on input elements of type {@code T}, grouping elements according to a
@@ -447,7 +447,7 @@ declare namespace java {
                  * @see #groupingByConcurrent(Function, Supplier, Collector)
                  */
                 // @ts-ignore
-                groupingBy<T, K, D, A, M extends java.util.Map<K, D>>(classifier: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, mapFactory: java.util.function.Supplier<M> | java.util.function$.Supplier<M>, downstream: java.util.stream.Collector<any super T, A, D>): java.util.stream.Collector<T, ?, M>
+                public static groupingBy<T, K, D, A, M extends java.util.Map<K, D>>(classifier: java.util.function$.Function<any, any>, mapFactory: java.util.function$.Supplier<M>, downstream: java.util.stream.Collector<any, A, D>): java.util.stream.Collector<T, any, M>
                 /**
                  * Returns a concurrent {@code Collector} implementing a "group by"
                  * operation on input elements of type {@code T}, grouping elements
@@ -476,7 +476,7 @@ declare namespace java {
                  * @see #groupingByConcurrent(Function, Supplier, Collector)
                  */
                 // @ts-ignore
-                groupingByConcurrent<T, K>(classifier: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>): java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, java.util.List<T>>>
+                public static groupingByConcurrent<T, K>(classifier: java.util.function$.Function<any, any>): java.util.stream.Collector<T, any, java.util.concurrent.ConcurrentMap<K, java.util.List<T> | Array<T>>>
                 /**
                  * Returns a concurrent {@code Collector} implementing a cascaded "group by"
                  * operation on input elements of type {@code T}, grouping elements
@@ -508,7 +508,7 @@ declare namespace java {
                  * @see #groupingByConcurrent(Function, Supplier, Collector)
                  */
                 // @ts-ignore
-                groupingByConcurrent<T, K, A, D>(classifier: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, downstream: java.util.stream.Collector<any super T, A, D>): java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, D>>
+                public static groupingByConcurrent<T, K, A, D>(classifier: java.util.function$.Function<any, any>, downstream: java.util.stream.Collector<any, A, D>): java.util.stream.Collector<T, any, java.util.concurrent.ConcurrentMap<K, D>>
                 /**
                  * Returns a concurrent {@code Collector} implementing a cascaded "group by"
                  * operation on input elements of type {@code T}, grouping elements
@@ -544,7 +544,7 @@ declare namespace java {
                  * @see #groupingBy(Function, Supplier, Collector)
                  */
                 // @ts-ignore
-                groupingByConcurrent<T, K, A, D, M extends java.util.concurrent.ConcurrentMap<K, D>>(classifier: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, mapFactory: java.util.function.Supplier<M> | java.util.function$.Supplier<M>, downstream: java.util.stream.Collector<any super T, A, D>): java.util.stream.Collector<T, ?, M>
+                public static groupingByConcurrent<T, K, A, D, M extends java.util.concurrent.ConcurrentMap<K, D>>(classifier: java.util.function$.Function<any, any>, mapFactory: java.util.function$.Supplier<M>, downstream: java.util.stream.Collector<any, A, D>): java.util.stream.Collector<T, any, M>
                 /**
                  * Returns a {@code Collector} which partitions the input elements according
                  * to a {@code Predicate}, and organizes them into a
@@ -557,7 +557,7 @@ declare namespace java {
                  * @see #partitioningBy(Predicate, Collector)
                  */
                 // @ts-ignore
-                partitioningBy<T>(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): java.util.stream.Collector<T, ?, java.util.Map<java.lang.Boolean, java.util.List<T>>>
+                public static partitioningBy<T>(predicate: java.util.function$.Predicate<any>): java.util.stream.Collector<T, any, java.util.Map<java.lang.Boolean, java.util.List<T> | Array<T>>>
                 /**
                  * Returns a {@code Collector} which partitions the input elements according
                  * to a {@code Predicate}, reduces the values in each partition according to
@@ -577,7 +577,7 @@ declare namespace java {
                  * @see #partitioningBy(Predicate)
                  */
                 // @ts-ignore
-                partitioningBy<T, D, A>(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>, downstream: java.util.stream.Collector<any super T, A, D>): java.util.stream.Collector<T, ?, java.util.Map<java.lang.Boolean, D>>
+                public static partitioningBy<T, D, A>(predicate: java.util.function$.Predicate<any>, downstream: java.util.stream.Collector<any, A, D>): java.util.stream.Collector<T, any, java.util.Map<java.lang.Boolean, D>>
                 /**
                  * Returns a {@code Collector} that accumulates elements into a
                  * {@code Map} whose keys and values are the result of applying the provided
@@ -623,7 +623,7 @@ declare namespace java {
                  * @see #toConcurrentMap(Function, Function)
                  */
                 // @ts-ignore
-                toMap<T, K, U>(keyMapper: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, valueMapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.stream.Collector<T, ?, java.util.Map<K, U>>
+                public static toMap<T, K, U>(keyMapper: java.util.function$.Function<any, any>, valueMapper: java.util.function$.Function<any, any>): java.util.stream.Collector<T, any, java.util.Map<K, U>>
                 /**
                  * Returns a {@code Collector} that accumulates elements into a
                  * {@code Map} whose keys and values are the result of applying the provided
@@ -670,7 +670,7 @@ declare namespace java {
                  * @see #toConcurrentMap(Function, Function, BinaryOperator)
                  */
                 // @ts-ignore
-                toMap<T, K, U>(keyMapper: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, valueMapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, mergeFunction: java.util.function.BinaryOperator<U> | java.util.function$.BinaryOperator<U>): java.util.stream.Collector<T, ?, java.util.Map<K, U>>
+                public static toMap<T, K, U>(keyMapper: java.util.function$.Function<any, any>, valueMapper: java.util.function$.Function<any, any>, mergeFunction: java.util.function$.BinaryOperator<U>): java.util.stream.Collector<T, any, java.util.Map<K, U>>
                 /**
                  * Returns a {@code Collector} that accumulates elements into a
                  * {@code Map} whose keys and values are the result of applying the provided
@@ -707,7 +707,7 @@ declare namespace java {
                  * @see #toConcurrentMap(Function, Function, BinaryOperator, Supplier)
                  */
                 // @ts-ignore
-                toMap<T, K, U, M extends java.util.Map<K, U>>(keyMapper: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, valueMapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, mergeFunction: java.util.function.BinaryOperator<U> | java.util.function$.BinaryOperator<U>, mapSupplier: java.util.function.Supplier<M> | java.util.function$.Supplier<M>): java.util.stream.Collector<T, ?, M>
+                public static toMap<T, K, U, M extends java.util.Map<K, U>>(keyMapper: java.util.function$.Function<any, any>, valueMapper: java.util.function$.Function<any, any>, mergeFunction: java.util.function$.BinaryOperator<U>, mapSupplier: java.util.function$.Supplier<M>): java.util.stream.Collector<T, any, M>
                 /**
                  * Returns a concurrent {@code Collector} that accumulates elements into a
                  * {@code ConcurrentMap} whose keys and values are the result of applying
@@ -751,7 +751,7 @@ declare namespace java {
                  * @see #toConcurrentMap(Function, Function, BinaryOperator, Supplier)
                  */
                 // @ts-ignore
-                toConcurrentMap<T, K, U>(keyMapper: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, valueMapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, U>>
+                public static toConcurrentMap<T, K, U>(keyMapper: java.util.function$.Function<any, any>, valueMapper: java.util.function$.Function<any, any>): java.util.stream.Collector<T, any, java.util.concurrent.ConcurrentMap<K, U>>
                 /**
                  * Returns a concurrent {@code Collector} that accumulates elements into a
                  * {@code ConcurrentMap} whose keys and values are the result of applying
@@ -794,7 +794,7 @@ declare namespace java {
                  * @see #toMap(Function, Function, BinaryOperator)
                  */
                 // @ts-ignore
-                toConcurrentMap<T, K, U>(keyMapper: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, valueMapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, mergeFunction: java.util.function.BinaryOperator<U> | java.util.function$.BinaryOperator<U>): java.util.stream.Collector<T, ?, java.util.concurrent.ConcurrentMap<K, U>>
+                public static toConcurrentMap<T, K, U>(keyMapper: java.util.function$.Function<any, any>, valueMapper: java.util.function$.Function<any, any>, mergeFunction: java.util.function$.BinaryOperator<U>): java.util.stream.Collector<T, any, java.util.concurrent.ConcurrentMap<K, U>>
                 /**
                  * Returns a concurrent {@code Collector} that accumulates elements into a
                  * {@code ConcurrentMap} whose keys and values are the result of applying
@@ -826,7 +826,7 @@ declare namespace java {
                  * @see #toMap(Function, Function, BinaryOperator, Supplier)
                  */
                 // @ts-ignore
-                toConcurrentMap<T, K, U, M extends java.util.concurrent.ConcurrentMap<K, U>>(keyMapper: java.util.function.Function<any super T, K> | java.util.function$.Function<? super T, K>, valueMapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, mergeFunction: java.util.function.BinaryOperator<U> | java.util.function$.BinaryOperator<U>, mapSupplier: java.util.function.Supplier<M> | java.util.function$.Supplier<M>): java.util.stream.Collector<T, ?, M>
+                public static toConcurrentMap<T, K, U, M extends java.util.concurrent.ConcurrentMap<K, U>>(keyMapper: java.util.function$.Function<any, any>, valueMapper: java.util.function$.Function<any, any>, mergeFunction: java.util.function$.BinaryOperator<U>, mapSupplier: java.util.function$.Supplier<M>): java.util.stream.Collector<T, any, M>
                 /**
                  * Returns a {@code Collector} which applies an {@code int}-producing
                  * mapping function to each input element, and returns summary statistics
@@ -838,7 +838,7 @@ declare namespace java {
                  * @see #summarizingLong(ToLongFunction)
                  */
                 // @ts-ignore
-                summarizingInt<T>(mapper: java.util.function.ToIntFunction<any super T> | java.util.function$.ToIntFunction<? super T>): java.util.stream.Collector<T, ?, java.util.IntSummaryStatistics>
+                public static summarizingInt<T>(mapper: java.util.function$.ToIntFunction<any>): java.util.stream.Collector<T, any, java.util.IntSummaryStatistics>
                 /**
                  * Returns a {@code Collector} which applies an {@code long}-producing
                  * mapping function to each input element, and returns summary statistics
@@ -850,7 +850,7 @@ declare namespace java {
                  * @see #summarizingInt(ToIntFunction)
                  */
                 // @ts-ignore
-                summarizingLong<T>(mapper: java.util.function.ToLongFunction<any super T> | java.util.function$.ToLongFunction<? super T>): java.util.stream.Collector<T, ?, java.util.LongSummaryStatistics>
+                public static summarizingLong<T>(mapper: java.util.function$.ToLongFunction<any>): java.util.stream.Collector<T, any, java.util.LongSummaryStatistics>
                 /**
                  * Returns a {@code Collector} which applies an {@code double}-producing
                  * mapping function to each input element, and returns summary statistics
@@ -862,7 +862,7 @@ declare namespace java {
                  * @see #summarizingInt(ToIntFunction)
                  */
                 // @ts-ignore
-                summarizingDouble<T>(mapper: java.util.function.ToDoubleFunction<any super T> | java.util.function$.ToDoubleFunction<? super T>): java.util.stream.Collector<T, ?, java.util.DoubleSummaryStatistics>
+                public static summarizingDouble<T>(mapper: java.util.function$.ToDoubleFunction<any>): java.util.stream.Collector<T, any, java.util.DoubleSummaryStatistics>
             }
         }
     }

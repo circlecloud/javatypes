@@ -44,7 +44,7 @@ declare namespace javax {
                  *  describing the MBean constructor.
                  */
                 // @ts-ignore
-                constructor(description: string, constructorMethod: java.lang.reflect.Constructor<any>)
+                constructor(description: java.lang.String | string, constructorMethod: java.lang.reflect.Constructor<any>)
                 /**
                  * Constructs a ModelMBeanConstructorInfo object.  The {@link
                  * Descriptor} of the constructed object will include fields
@@ -68,7 +68,7 @@ declare namespace javax {
                  *  present but not equal to "constructor".
                  */
                 // @ts-ignore
-                constructor(description: string, constructorMethod: java.lang.reflect.Constructor<any>, descriptor: javax.management.Descriptor)
+                constructor(description: java.lang.String | string, constructorMethod: java.lang.reflect.Constructor<any>, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs a ModelMBeanConstructorInfo object with a default descriptor.
                  * @param name The name of the constructor.
@@ -76,7 +76,7 @@ declare namespace javax {
                  * @param signature MBeanParameterInfo object array describing the parameters(arguments) of the constructor.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[])
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[])
                 /**
                  * Constructs a ModelMBeanConstructorInfo object.
                  * @param name The name of the constructor.
@@ -94,12 +94,12 @@ declare namespace javax {
                  *  present but not equal to "constructor".
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[], descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[], descriptor: javax.management.Descriptor)
                 /**
                  * Creates and returns a new ModelMBeanConstructorInfo which is a duplicate of this ModelMBeanConstructorInfo.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a copy of the associated Descriptor.
                  * @return Descriptor associated with the
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @see #setDescriptor
                  */
                 // @ts-ignore
-                getDescriptor(): javax.management.Descriptor
+                public getDescriptor(): javax.management.Descriptor
                 /**
                  * Sets associated Descriptor (full replace) of
                  * ModelMBeanConstructorInfo.  If the new Descriptor is null,
@@ -129,12 +129,12 @@ declare namespace javax {
                  * @see #getDescriptor
                  */
                 // @ts-ignore
-                setDescriptor(inDescriptor: javax.management.Descriptor): void
+                public setDescriptor(inDescriptor: javax.management.Descriptor): void
                 /**
                  * Returns a string containing the entire contents of the ModelMBeanConstructorInfo in human readable form.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

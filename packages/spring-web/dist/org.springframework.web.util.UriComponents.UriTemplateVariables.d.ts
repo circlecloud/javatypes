@@ -15,7 +15,7 @@ declare namespace org {
                          * but not all URI variables.
                          */
                         // @ts-ignore
-                        
+                        readonly SKIP_VALUE: java.lang.Object | any
                         /**
                          * Get the value for the given URI variable name.
                          * If the value is {@code null}, an empty String is expanded.
@@ -24,7 +24,7 @@ declare namespace org {
                          * @return the variable value, possibly {#code null} or {@link #SKIP_VALUE}
                          */
                         // @ts-ignore
-                        getValue(name: string): java.lang.Object
+                        getValue(name: java.lang.String | string): any
                     }
                 }
             }

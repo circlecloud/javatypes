@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return the UI
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Fetches the name used as a key to lookup properties through the
                      * UIManager.  This is used as a prefix to all the standard
@@ -36,19 +36,19 @@ declare namespace javax {
                      * @return the name ("EditorPane")
                      */
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     /**
                      * {@inheritDoc}
                      * @since 1.5
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * {@inheritDoc}
                      * @since 1.5
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Fetches the EditorKit for the UI.  This is whatever is
                      * currently set in the associated JEditorPane.
@@ -56,7 +56,7 @@ declare namespace javax {
                      * @see TextUI#getEditorKit
                      */
                     // @ts-ignore
-                    getEditorKit(tc: javax.swing.text.JTextComponent): javax.swing.text.EditorKit
+                    public getEditorKit(tc: javax.swing.text.JTextComponent): javax.swing.text.EditorKit
                     /**
                      * This method gets called when a bound property is changed
                      * on the associated JTextComponent.  This is a hook

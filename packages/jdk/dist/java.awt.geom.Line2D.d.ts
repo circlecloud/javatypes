@@ -18,7 +18,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Line2D extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
+            abstract class Line2D extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -38,7 +38,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getX1(): double
+                public abstract getX1(): number /*double*/
                 /**
                  * Returns the Y coordinate of the start point in double precision.
                  * @return the Y coordinate of the start point of this
@@ -46,14 +46,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getY1(): double
+                public abstract getY1(): number /*double*/
                 /**
                  * Returns the start <code>Point2D</code> of this <code>Line2D</code>.
                  * @return the start <code>Point2D</code> of this <code>Line2D</code>.
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getP1(): java.awt.geom.Point2D
+                public abstract getP1(): java.awt.geom.Point2D
                 /**
                  * Returns the X coordinate of the end point in double precision.
                  * @return the X coordinate of the end point of this
@@ -61,7 +61,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getX2(): double
+                public abstract getX2(): number /*double*/
                 /**
                  * Returns the Y coordinate of the end point in double precision.
                  * @return the Y coordinate of the end point of this
@@ -69,14 +69,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getY2(): double
+                public abstract getY2(): number /*double*/
                 /**
                  * Returns the end <code>Point2D</code> of this <code>Line2D</code>.
                  * @return the end <code>Point2D</code> of this <code>Line2D</code>.
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getP2(): java.awt.geom.Point2D
+                public abstract getP2(): java.awt.geom.Point2D
                 /**
                  * Sets the location of the end points of this <code>Line2D</code> to
                  * the specified double coordinates.
@@ -87,7 +87,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                public abstract setLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                 /**
                  * Sets the location of the end points of this <code>Line2D</code> to
                  * the specified <code>Point2D</code> coordinates.
@@ -96,7 +96,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setLine(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
+                public setLine(p1: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
                 /**
                  * Sets the location of the end points of this <code>Line2D</code> to
                  * the same as those end points of the specified <code>Line2D</code>.
@@ -104,7 +104,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setLine(l: java.awt.geom.Line2D): void
+                public setLine(l: java.awt.geom.Line2D): void
                 /**
                  * Returns an indicator of where the specified point
                  * {@code (px,py)} lies with respect to the line segment from
@@ -147,7 +147,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                relativeCCW(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): int
+                public static relativeCCW(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): number /*int*/
                 /**
                  * Returns an indicator of where the specified point
                  * {@code (px,py)} lies with respect to this line segment.
@@ -164,7 +164,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                relativeCCW(px: number /*double*/, py: number /*double*/): int
+                public relativeCCW(px: number /*double*/, py: number /*double*/): number /*int*/
                 /**
                  * Returns an indicator of where the specified <code>Point2D</code>
                  * lies with respect to this line segment.
@@ -179,7 +179,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                relativeCCW(p: java.awt.geom.Point2D): int
+                public relativeCCW(p: java.awt.geom.Point2D): number /*int*/
                 /**
                  * Tests if the line segment from {@code (x1,y1)} to
                  * {@code (x2,y2)} intersects the line segment from {@code (x3,y3)}
@@ -206,7 +206,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                linesIntersect(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, x3: number /*double*/, y3: number /*double*/, x4: number /*double*/, y4: number /*double*/): boolean
+                public static linesIntersect(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, x3: number /*double*/, y3: number /*double*/, x4: number /*double*/, y4: number /*double*/): boolean
                 /**
                  * Tests if the line segment from {@code (x1,y1)} to
                  * {@code (x2,y2)} intersects this line segment.
@@ -223,7 +223,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersectsLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): boolean
+                public intersectsLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): boolean
                 /**
                  * Tests if the specified line segment intersects this line segment.
                  * @param l the specified <code>Line2D</code>
@@ -233,7 +233,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersectsLine(l: java.awt.geom.Line2D): boolean
+                public intersectsLine(l: java.awt.geom.Line2D): boolean
                 /**
                  * Returns the square of the distance from a point to a line segment.
                  * The distance measured is the distance between the specified
@@ -258,7 +258,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptSegDistSq(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): double
+                public static ptSegDistSq(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the distance from a point to a line segment.
                  * The distance measured is the distance between the specified
@@ -283,7 +283,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptSegDist(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): double
+                public static ptSegDist(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the distance from a point to this line segment.
                  * The distance measured is the distance between the specified
@@ -300,7 +300,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptSegDistSq(px: number /*double*/, py: number /*double*/): double
+                public ptSegDistSq(px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the distance from a <code>Point2D</code> to
                  * this line segment.
@@ -317,7 +317,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptSegDistSq(pt: java.awt.geom.Point2D): double
+                public ptSegDistSq(pt: java.awt.geom.Point2D): number /*double*/
                 /**
                  * Returns the distance from a point to this line segment.
                  * The distance measured is the distance between the specified
@@ -334,7 +334,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptSegDist(px: number /*double*/, py: number /*double*/): double
+                public ptSegDist(px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the distance from a <code>Point2D</code> to this line
                  * segment.
@@ -351,7 +351,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptSegDist(pt: java.awt.geom.Point2D): double
+                public ptSegDist(pt: java.awt.geom.Point2D): number /*double*/
                 /**
                  * Returns the square of the distance from a point to a line.
                  * The distance measured is the distance between the specified
@@ -372,7 +372,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptLineDistSq(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): double
+                public static ptLineDistSq(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the distance from a point to a line.
                  * The distance measured is the distance between the specified
@@ -393,7 +393,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptLineDist(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): double
+                public static ptLineDist(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the distance from a point to this line.
                  * The distance measured is the distance between the specified
@@ -410,7 +410,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptLineDistSq(px: number /*double*/, py: number /*double*/): double
+                public ptLineDistSq(px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the distance from a specified
                  * <code>Point2D</code> to this line.
@@ -427,7 +427,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptLineDistSq(pt: java.awt.geom.Point2D): double
+                public ptLineDistSq(pt: java.awt.geom.Point2D): number /*double*/
                 /**
                  * Returns the distance from a point to this line.
                  * The distance measured is the distance between the specified
@@ -444,7 +444,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptLineDist(px: number /*double*/, py: number /*double*/): double
+                public ptLineDist(px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the distance from a <code>Point2D</code> to this line.
                  * The distance measured is the distance between the specified
@@ -458,7 +458,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                ptLineDist(pt: java.awt.geom.Point2D): double
+                public ptLineDist(pt: java.awt.geom.Point2D): number /*double*/
                 /**
                  * Tests if a specified coordinate is inside the boundary of this
                  * <code>Line2D</code>.  This method is required to implement the
@@ -472,7 +472,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * Tests if a given <code>Point2D</code> is inside the boundary of
                  * this <code>Line2D</code>.
@@ -485,19 +485,19 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(p: java.awt.geom.Point2D): boolean
+                public contains(p: java.awt.geom.Point2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(r: java.awt.geom.Rectangle2D): boolean
+                public intersects(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * Tests if the interior of this <code>Line2D</code> entirely contains
                  * the specified set of rectangular coordinates.
@@ -515,7 +515,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Tests if the interior of this <code>Line2D</code> entirely contains
                  * the specified <code>Rectangle2D</code>.
@@ -528,13 +528,13 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(r: java.awt.geom.Rectangle2D): boolean
+                public contains(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds(): java.awt.Rectangle
+                public getBounds(): java.awt.Rectangle
                 /**
                  * Returns an iteration object that defines the boundary of this
                  * <code>Line2D</code>.
@@ -549,7 +549,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                 /**
                  * Returns an iteration object that defines the boundary of this
                  * flattened <code>Line2D</code>.
@@ -569,7 +569,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
                 /**
                  * Creates a new object of the same class as this object.
                  * @return a clone of this instance.
@@ -578,7 +578,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

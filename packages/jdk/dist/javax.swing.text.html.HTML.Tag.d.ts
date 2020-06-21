@@ -24,7 +24,7 @@ declare namespace javax {
                          * @param id  the id of the new tag
                          */
                         // @ts-ignore
-                        constructor(id: string)
+                        constructor(id: java.lang.String | string)
                         /**
                          * Creates a new <code>Tag</code> with the specified <code>id</code>;
                          * <code>causesBreak</code> and <code>isBlock</code> are defined
@@ -36,153 +36,153 @@ declare namespace javax {
                          *     to add structure to a document
                          */
                         // @ts-ignore
-                        constructor(id: string, causesBreak: boolean, isBlock: boolean)
+                        constructor(id: java.lang.String | string, causesBreak: boolean, isBlock: boolean)
                         // @ts-ignore
-                        readonly A: javax.swing.text.html.HTML.Tag
+                        public static readonly A: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly ADDRESS: javax.swing.text.html.HTML.Tag
+                        public static readonly ADDRESS: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly APPLET: javax.swing.text.html.HTML.Tag
+                        public static readonly APPLET: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly AREA: javax.swing.text.html.HTML.Tag
+                        public static readonly AREA: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly B: javax.swing.text.html.HTML.Tag
+                        public static readonly B: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly BASE: javax.swing.text.html.HTML.Tag
+                        public static readonly BASE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly BASEFONT: javax.swing.text.html.HTML.Tag
+                        public static readonly BASEFONT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly BIG: javax.swing.text.html.HTML.Tag
+                        public static readonly BIG: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly BLOCKQUOTE: javax.swing.text.html.HTML.Tag
+                        public static readonly BLOCKQUOTE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly BODY: javax.swing.text.html.HTML.Tag
+                        public static readonly BODY: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly BR: javax.swing.text.html.HTML.Tag
+                        public static readonly BR: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly CAPTION: javax.swing.text.html.HTML.Tag
+                        public static readonly CAPTION: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly CENTER: javax.swing.text.html.HTML.Tag
+                        public static readonly CENTER: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly CITE: javax.swing.text.html.HTML.Tag
+                        public static readonly CITE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly CODE: javax.swing.text.html.HTML.Tag
+                        public static readonly CODE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly DD: javax.swing.text.html.HTML.Tag
+                        public static readonly DD: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly DFN: javax.swing.text.html.HTML.Tag
+                        public static readonly DFN: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly DIR: javax.swing.text.html.HTML.Tag
+                        public static readonly DIR: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly DIV: javax.swing.text.html.HTML.Tag
+                        public static readonly DIV: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly DL: javax.swing.text.html.HTML.Tag
+                        public static readonly DL: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly DT: javax.swing.text.html.HTML.Tag
+                        public static readonly DT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly EM: javax.swing.text.html.HTML.Tag
+                        public static readonly EM: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly FONT: javax.swing.text.html.HTML.Tag
+                        public static readonly FONT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly FORM: javax.swing.text.html.HTML.Tag
+                        public static readonly FORM: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly FRAME: javax.swing.text.html.HTML.Tag
+                        public static readonly FRAME: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly FRAMESET: javax.swing.text.html.HTML.Tag
+                        public static readonly FRAMESET: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly H1: javax.swing.text.html.HTML.Tag
+                        public static readonly H1: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly H2: javax.swing.text.html.HTML.Tag
+                        public static readonly H2: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly H3: javax.swing.text.html.HTML.Tag
+                        public static readonly H3: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly H4: javax.swing.text.html.HTML.Tag
+                        public static readonly H4: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly H5: javax.swing.text.html.HTML.Tag
+                        public static readonly H5: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly H6: javax.swing.text.html.HTML.Tag
+                        public static readonly H6: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly HEAD: javax.swing.text.html.HTML.Tag
+                        public static readonly HEAD: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly HR: javax.swing.text.html.HTML.Tag
+                        public static readonly HR: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly HTML: javax.swing.text.html.HTML.Tag
+                        public static readonly HTML: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly I: javax.swing.text.html.HTML.Tag
+                        public static readonly I: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly IMG: javax.swing.text.html.HTML.Tag
+                        public static readonly IMG: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly INPUT: javax.swing.text.html.HTML.Tag
+                        public static readonly INPUT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly ISINDEX: javax.swing.text.html.HTML.Tag
+                        public static readonly ISINDEX: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly KBD: javax.swing.text.html.HTML.Tag
+                        public static readonly KBD: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly LI: javax.swing.text.html.HTML.Tag
+                        public static readonly LI: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly LINK: javax.swing.text.html.HTML.Tag
+                        public static readonly LINK: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly MAP: javax.swing.text.html.HTML.Tag
+                        public static readonly MAP: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly MENU: javax.swing.text.html.HTML.Tag
+                        public static readonly MENU: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly META: javax.swing.text.html.HTML.Tag
+                        public static readonly META: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly NOFRAMES: javax.swing.text.html.HTML.Tag
+                        public static readonly NOFRAMES: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly OBJECT: javax.swing.text.html.HTML.Tag
+                        public static readonly OBJECT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly OL: javax.swing.text.html.HTML.Tag
+                        public static readonly OL: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly OPTION: javax.swing.text.html.HTML.Tag
+                        public static readonly OPTION: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly P: javax.swing.text.html.HTML.Tag
+                        public static readonly P: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly PARAM: javax.swing.text.html.HTML.Tag
+                        public static readonly PARAM: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly PRE: javax.swing.text.html.HTML.Tag
+                        public static readonly PRE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SAMP: javax.swing.text.html.HTML.Tag
+                        public static readonly SAMP: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SCRIPT: javax.swing.text.html.HTML.Tag
+                        public static readonly SCRIPT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SELECT: javax.swing.text.html.HTML.Tag
+                        public static readonly SELECT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SMALL: javax.swing.text.html.HTML.Tag
+                        public static readonly SMALL: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SPAN: javax.swing.text.html.HTML.Tag
+                        public static readonly SPAN: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly STRIKE: javax.swing.text.html.HTML.Tag
+                        public static readonly STRIKE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly S: javax.swing.text.html.HTML.Tag
+                        public static readonly S: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly STRONG: javax.swing.text.html.HTML.Tag
+                        public static readonly STRONG: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly STYLE: javax.swing.text.html.HTML.Tag
+                        public static readonly STYLE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SUB: javax.swing.text.html.HTML.Tag
+                        public static readonly SUB: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly SUP: javax.swing.text.html.HTML.Tag
+                        public static readonly SUP: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TABLE: javax.swing.text.html.HTML.Tag
+                        public static readonly TABLE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TD: javax.swing.text.html.HTML.Tag
+                        public static readonly TD: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TEXTAREA: javax.swing.text.html.HTML.Tag
+                        public static readonly TEXTAREA: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TH: javax.swing.text.html.HTML.Tag
+                        public static readonly TH: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TITLE: javax.swing.text.html.HTML.Tag
+                        public static readonly TITLE: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TR: javax.swing.text.html.HTML.Tag
+                        public static readonly TR: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly TT: javax.swing.text.html.HTML.Tag
+                        public static readonly TT: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly U: javax.swing.text.html.HTML.Tag
+                        public static readonly U: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly UL: javax.swing.text.html.HTML.Tag
+                        public static readonly UL: javax.swing.text.html.HTML.Tag
                         // @ts-ignore
-                        readonly VAR: javax.swing.text.html.HTML.Tag
+                        public static readonly VAR: javax.swing.text.html.HTML.Tag
                         /**
                          * All text content must be in a paragraph element.
                          * If a paragraph didn't exist when content was
@@ -194,7 +194,7 @@ declare namespace javax {
                          * that were manufactured.
                          */
                         // @ts-ignore
-                        readonly IMPLIED: javax.swing.text.html.HTML.Tag
+                        public static readonly IMPLIED: javax.swing.text.html.HTML.Tag
                         /**
                          * All text content is labeled with this tag.
                          * <p>
@@ -204,7 +204,7 @@ declare namespace javax {
                          * that were manufactured.
                          */
                         // @ts-ignore
-                        readonly CONTENT: javax.swing.text.html.HTML.Tag
+                        public static readonly CONTENT: javax.swing.text.html.HTML.Tag
                         /**
                          * All comments are labeled with this tag.
                          * <p>
@@ -214,7 +214,7 @@ declare namespace javax {
                          * that were manufactured.
                          */
                         // @ts-ignore
-                        readonly COMMENT: javax.swing.text.html.HTML.Tag
+                        public static readonly COMMENT: javax.swing.text.html.HTML.Tag
                         /**
                          * Returns <code>true</code> if this tag is a block
                          * tag, which is a tag used to add structure to a
@@ -223,7 +223,7 @@ declare namespace javax {
                          *    tag, otherwise returns <code>false</code>
                          */
                         // @ts-ignore
-                        isBlock(): boolean
+                        public isBlock(): boolean
                         /**
                          * Returns <code>true</code> if this tag causes a
                          * line break to the flow of data, otherwise returns
@@ -233,7 +233,7 @@ declare namespace javax {
                          *    <code>false</code>
                          */
                         // @ts-ignore
-                        breaksFlow(): boolean
+                        public breaksFlow(): boolean
                         /**
                          * Returns <code>true</code> if this tag is pre-formatted,
                          * which is true if the tag is either <code>PRE</code> or
@@ -242,14 +242,14 @@ declare namespace javax {
                          *    otherwise returns <code>false</code>
                          */
                         // @ts-ignore
-                        isPreformatted(): boolean
+                        public isPreformatted(): boolean
                         /**
                          * Returns the string representation of the
                          * tag.
                          * @return the <code>String</code> representation of the tag
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

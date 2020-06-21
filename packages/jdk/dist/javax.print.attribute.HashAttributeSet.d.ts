@@ -139,7 +139,7 @@ declare namespace javax {
                  *      Attribute Attribute}.
                  */
                 // @ts-ignore
-                get(category: java.lang.Class<any>): javax.print.attribute.Attribute
+                public get(category: java.lang.Class<any>): javax.print.attribute.Attribute
                 /**
                  * Adds the specified attribute to this attribute set if it is not
                  * already present, first removing any existing in the same
@@ -155,7 +155,7 @@ declare namespace javax {
                  *      the <CODE>add()</CODE> operation.
                  */
                 // @ts-ignore
-                add(attribute: javax.print.attribute.Attribute): boolean
+                public add(attribute: javax.print.attribute.Attribute): boolean
                 /**
                  * Removes any attribute for this category from this attribute set if
                  * present. If <CODE>category</CODE> is null, then
@@ -170,7 +170,7 @@ declare namespace javax {
                  *      support the <CODE>remove()</CODE> operation.
                  */
                 // @ts-ignore
-                remove(category: java.lang.Class<any>): boolean
+                public remove(category: java.lang.Class<any>): boolean
                 /**
                  * Removes the specified attribute from this attribute set if
                  * present. If <CODE>attribute</CODE> is null, then
@@ -184,7 +184,7 @@ declare namespace javax {
                  *      support the <CODE>remove()</CODE> operation.
                  */
                 // @ts-ignore
-                remove(attribute: javax.print.attribute.Attribute): boolean
+                public remove(attribute: javax.print.attribute.Attribute): boolean
                 /**
                  * Returns <tt>true</tt> if this attribute set contains an
                  * attribute for the specified category.
@@ -194,7 +194,7 @@ declare namespace javax {
                  *          value for the specified category.
                  */
                 // @ts-ignore
-                containsKey(category: java.lang.Class<any>): boolean
+                public containsKey(category: java.lang.Class<any>): boolean
                 /**
                  * Returns <tt>true</tt> if this attribute set contains the given
                  * attribute.
@@ -204,7 +204,7 @@ declare namespace javax {
                  *       attribute    value.
                  */
                 // @ts-ignore
-                containsValue(attribute: javax.print.attribute.Attribute): boolean
+                public containsValue(attribute: javax.print.attribute.Attribute): boolean
                 /**
                  * Adds all of the elements in the specified set to this attribute.
                  * The outcome is the same as if the
@@ -232,7 +232,7 @@ declare namespace javax {
                  * @see #add(Attribute)
                  */
                 // @ts-ignore
-                addAll(attributes: javax.print.attribute.AttributeSet): boolean
+                public addAll(attributes: javax.print.attribute.AttributeSet): boolean
                 /**
                  * Returns the number of attributes in this attribute set. If this
                  * attribute set contains more than <tt>Integer.MAX_VALUE</tt> elements,
@@ -240,13 +240,13 @@ declare namespace javax {
                  * @return The number of attributes in this attribute set.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * @return the Attributes contained in this set as an array, zero length
                  *  if the AttributeSet is empty.
                  */
                 // @ts-ignore
-                toArray(): javax.print.attribute.Attribute[]
+                public toArray(): javax.print.attribute.Attribute[]
                 /**
                  * Removes all attributes from this attribute set.
                  * @throws UnmodifiableSetException
@@ -254,13 +254,13 @@ declare namespace javax {
                  *      the <CODE>clear()</CODE> operation.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Returns true if this attribute set contains no attributes.
                  * @return true if this attribute set contains no attributes.
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Compares the specified object with this attribute set for equality.
                  * Returns <tt>true</tt> if the given object is also an attribute set and
@@ -273,7 +273,7 @@ declare namespace javax {
                  *        attribute   set.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this attribute set.
                  * The hash code of an attribute set is defined to be the sum
@@ -285,7 +285,7 @@ declare namespace javax {
                  * @return The hash code value for this attribute set.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

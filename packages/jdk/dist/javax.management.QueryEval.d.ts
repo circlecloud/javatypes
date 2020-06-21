@@ -5,7 +5,7 @@ declare namespace javax {
          * @since 1.5
          */
         // @ts-ignore
-        class QueryEval extends java.lang.Object implements java.io.Serializable {
+        abstract class QueryEval extends java.lang.Object implements java.io.Serializable {
             // @ts-ignore
             constructor()
             /**
@@ -20,7 +20,7 @@ declare namespace javax {
              * @see #getMBeanServer
              */
             // @ts-ignore
-            setMBeanServer(s: javax.management.MBeanServer): void
+            public setMBeanServer(s: javax.management.MBeanServer): void
             /**
              * <p>Return the MBean server that was most recently given to the
              * {@link #setMBeanServer setMBeanServer} method by this thread.
@@ -32,7 +32,7 @@ declare namespace javax {
              * @see #setMBeanServer
              */
             // @ts-ignore
-            getMBeanServer(): javax.management.MBeanServer
+            public static getMBeanServer(): javax.management.MBeanServer
         }
     }
 }

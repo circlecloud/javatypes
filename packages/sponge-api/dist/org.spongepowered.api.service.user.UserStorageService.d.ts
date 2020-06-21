@@ -24,7 +24,7 @@ declare namespace org {
                          * @return {#link User} or Optional.empty() if not found
                          */
                         // @ts-ignore
-                        get(lastKnownName: string): java.util.Optional<org.spongepowered.api.entity.living.player.User>
+                        get(lastKnownName: java.lang.String | string): java.util.Optional<org.spongepowered.api.entity.living.player.User>
                         /**
                          * Gets the data of a {@link User} by their {@link GameProfile}.
                          * @param profile The profile
@@ -52,7 +52,7 @@ declare namespace org {
                          * @return A {#link Collection} of {@link GameProfile}s
                          */
                         // @ts-ignore
-                        getAll(): java.util.Collection<org.spongepowered.api.profile.GameProfile>
+                        getAll(): Array<org.spongepowered.api.profile.GameProfile>
                         /**
                          * Deletes the data associated with a {@link User}.
                          * <p>This may not work if the user is logged in.</p>
@@ -79,7 +79,7 @@ declare namespace org {
                          * @return The result of the request
                          */
                         // @ts-ignore
-                        match(lastKnownName: string): java.util.Collection<org.spongepowered.api.profile.GameProfile>
+                        match(lastKnownName: java.lang.String | string): Array<org.spongepowered.api.profile.GameProfile>
                     }
                 }
             }

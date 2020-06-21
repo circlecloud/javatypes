@@ -55,26 +55,26 @@ declare namespace javax {
                  * @return a cloned ElementIterator Object.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Fetches the first element.
                  * @return an Element.
                  */
                 // @ts-ignore
-                first(): javax.swing.text.Element
+                public first(): javax.swing.text.Element
                 /**
                  * Fetches the current depth of element tree.
                  * @return the depth.
                  */
                 // @ts-ignore
-                depth(): int
+                public depth(): number /*int*/
                 /**
                  * Fetches the current Element.
                  * @return element on top of the stack or
                  *           <code>null</code> if the root element is <code>null</code>
                  */
                 // @ts-ignore
-                current(): javax.swing.text.Element
+                public current(): javax.swing.text.Element
                 /**
                  * Fetches the next Element. The strategy
                  * used to locate the next element is
@@ -83,7 +83,7 @@ declare namespace javax {
                  *           at the end of the list.
                  */
                 // @ts-ignore
-                next(): javax.swing.text.Element
+                public next(): javax.swing.text.Element
                 /**
                  * Fetches the previous Element. If however the current
                  * element is the last element, or the current element
@@ -91,7 +91,7 @@ declare namespace javax {
                  * @return previous <code>Element</code> if available
                  */
                 // @ts-ignore
-                previous(): javax.swing.text.Element
+                public previous(): javax.swing.text.Element
             }
         }
     }

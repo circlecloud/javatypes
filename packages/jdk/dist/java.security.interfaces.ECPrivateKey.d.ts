@@ -15,7 +15,7 @@ declare namespace java {
                  * serialization compatibility.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Returns the private value S.
                  * @return the private value S.

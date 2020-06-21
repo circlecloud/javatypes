@@ -23,7 +23,7 @@ declare namespace org {
                          * @see ServerHttpRequest#mutate()
                          */
                         // @ts-ignore
-                        request(requestBuilderConsumer: java.util.function.Consumer<org.springframework.http.server.reactive.ServerHttpRequest.Builder> | java.util.function$.Consumer<org.springframework.http.server.reactive.ServerHttpRequest.Builder>): org.springframework.web.server.ServerWebExchange.Builder
+                        request(requestBuilderConsumer: java.util.function$.Consumer<org.springframework.http.server.reactive.ServerHttpRequest.Builder>): org.springframework.web.server.ServerWebExchange.Builder
                         /**
                          * Set the request to use especially when there is a need to override
                          * {@link ServerHttpRequest} methods. To simply mutate request properties

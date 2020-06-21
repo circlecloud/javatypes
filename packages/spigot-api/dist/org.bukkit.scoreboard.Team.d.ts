@@ -14,14 +14,14 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Gets the name displayed to entries for this team
                  * @return Team display name
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                getDisplayName(): java.lang.String
+                getDisplayName(): string
                 /**
                  * Sets the name displayed to entries for this team
                  * @param displayName New display name
@@ -30,14 +30,14 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                setDisplayName(displayName: string): void
+                setDisplayName(displayName: java.lang.String | string): void
                 /**
                  * Gets the prefix prepended to the display of entries on this team.
                  * @return Team prefix
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                getPrefix(): string
                 /**
                  * Sets the prefix prepended to the display of entries on this team.
                  * @param prefix New prefix
@@ -47,14 +47,14 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                setPrefix(prefix: string): void
+                setPrefix(prefix: java.lang.String | string): void
                 /**
                  * Gets the suffix appended to the display of entries on this team.
                  * @return the team's current suffix
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                getSuffix(): java.lang.String
+                getSuffix(): string
                 /**
                  * Sets the suffix appended to the display of entries on this team.
                  * @param suffix the new suffix for this team.
@@ -64,7 +64,7 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                setSuffix(suffix: string): void
+                setSuffix(suffix: java.lang.String | string): void
                 /**
                  * Gets the color of the team.
                  * <br>
@@ -140,21 +140,21 @@ declare namespace org {
                  * @see #getEntries()
                  */
                 // @ts-ignore
-                getPlayers(): java.util.Set<org.bukkit.OfflinePlayer>
+                getPlayers(): Array<org.bukkit.OfflinePlayer>
                 /**
                  * Gets the Set of entries on the team
                  * @return entries on the team
                  * @throws IllegalStateException if this entries has been unregistered\
                  */
                 // @ts-ignore
-                getEntries(): java.util.Set<java.lang.String>
+                getEntries(): Array<java.lang.String | string>
                 /**
                  * Gets the size of the team
                  * @return number of entries on the team
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                getSize(): int
+                getSize(): number /*int*/
                 /**
                  * Gets the Scoreboard to which this team is attached
                  * @return Owning scoreboard, or null if this team has been {#link
@@ -183,7 +183,7 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                addEntry(entry: string): void
+                addEntry(entry: java.lang.String | string): void
                 /**
                  * Removes the player from this team.
                  * @param player the player to remove
@@ -203,7 +203,7 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                removeEntry(entry: string): boolean
+                removeEntry(entry: java.lang.String | string): boolean
                 /**
                  * Unregisters this team from the Scoreboard
                  * @throws IllegalStateException if this team has been unregistered
@@ -229,7 +229,7 @@ declare namespace org {
                  * @throws IllegalStateException if this team has been unregistered
                  */
                 // @ts-ignore
-                hasEntry(entry: string): boolean
+                hasEntry(entry: java.lang.String | string): boolean
                 /**
                  * Get an option for this team
                  * @param option the option to get

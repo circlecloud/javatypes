@@ -28,7 +28,7 @@ declare namespace org {
                          * handle the given method parameter.
                          */
                         // @ts-ignore
-                        
+                        readonly UNRESOLVED: java.lang.Object | any
                         /**
                          * Resolve an argument for the given handler method parameter within the given web request.
                          * @param methodParameter the handler method parameter to resolve
@@ -37,7 +37,7 @@ declare namespace org {
                          * @throws Exception in case of resolution failure
                          */
                         // @ts-ignore
-                        resolveArgument(methodParameter: MethodParameter, webRequest: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        resolveArgument(methodParameter: MethodParameter, webRequest: org.springframework.web.context.request.NativeWebRequest): any
                     }
                 }
             }

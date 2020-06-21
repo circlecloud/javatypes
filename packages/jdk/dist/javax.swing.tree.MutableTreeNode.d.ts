@@ -33,7 +33,7 @@ declare namespace javax {
                  * Resets the user object of the receiver to <code>object</code>.
                  */
                 // @ts-ignore
-                setUserObject(object: any): void
+                setUserObject(object: java.lang.Object | any): void
                 /**
                  * Removes the receiver from its parent.
                  */

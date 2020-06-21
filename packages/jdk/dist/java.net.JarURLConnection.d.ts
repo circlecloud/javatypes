@@ -69,7 +69,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class JarURLConnection extends java.net.URLConnection {
+        abstract class JarURLConnection extends java.net.URLConnection {
             /**
              * Creates the new JarURLConnection to the specified URL.
              * @param url the URL
@@ -90,7 +90,7 @@ declare namespace java {
              * @return the URL for the Jar file for this connection.
              */
             // @ts-ignore
-            getJarFileURL(): java.net.URL
+            public getJarFileURL(): java.net.URL
             /**
              * Return the entry name for this connection. This method
              * returns null if the JAR file URL corresponding to this
@@ -98,7 +98,7 @@ declare namespace java {
              * @return the entry name for this connection, if any.
              */
             // @ts-ignore
-            getEntryName(): java.lang.String
+            public getEntryName(): string
             /**
              * Return the JAR file for this connection.
              * @return the JAR file for this connection. If the connection is
@@ -109,7 +109,7 @@ declare namespace java {
              * @see #connect
              */
             // @ts-ignore
-            abstract getJarFile(): java.util.jar.JarFile
+            public abstract getJarFile(): java.util.jar.JarFile
             /**
              * Returns the Manifest for this connection, or null if none.
              * @return the manifest object corresponding to the JAR file object
@@ -119,7 +119,7 @@ declare namespace java {
              * @see #getJarFile
              */
             // @ts-ignore
-            getManifest(): java.util.jar.Manifest
+            public getManifest(): java.util.jar.Manifest
             /**
              * Return the JAR entry object for this connection, if any. This
              * method returns null if the JAR file URL corresponding to this
@@ -132,7 +132,7 @@ declare namespace java {
              * @see #getJarEntry
              */
             // @ts-ignore
-            getJarEntry(): java.util.jar.JarEntry
+            public getJarEntry(): java.util.jar.JarEntry
             /**
              * Return the Attributes object for this connection if the URL
              * for it points to a JAR file entry, null otherwise.
@@ -143,7 +143,7 @@ declare namespace java {
              * @see #getJarEntry
              */
             // @ts-ignore
-            getAttributes(): java.util.jar.Attributes
+            public getAttributes(): java.util.jar.Attributes
             /**
              * Returns the main Attributes for the JAR file for this
              * connection.
@@ -155,7 +155,7 @@ declare namespace java {
              * @see #getManifest
              */
             // @ts-ignore
-            getMainAttributes(): java.util.jar.Attributes
+            public getMainAttributes(): java.util.jar.Attributes
             /**
              * Return the Certificate object for this connection if the URL
              * for it points to a JAR file entry, null otherwise. This method
@@ -170,7 +170,7 @@ declare namespace java {
              * @see #getJarEntry
              */
             // @ts-ignore
-            getCertificates(): java.security.cert.Certificate[]
+            public getCertificates(): java.security.cert.Certificate[]
         }
     }
 }

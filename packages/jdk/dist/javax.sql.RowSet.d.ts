@@ -63,7 +63,7 @@ declare namespace javax {
              * @see #setUrl
              */
             // @ts-ignore
-            getUrl(): java.lang.String
+            getUrl(): string
             /**
              * Sets the URL this <code>RowSet</code> object will use when it uses the
              * <code>DriverManager</code> to create a connection.
@@ -78,7 +78,7 @@ declare namespace javax {
              * @see #getUrl
              */
             // @ts-ignore
-            setUrl(url: string): void
+            setUrl(url: java.lang.String | string): void
             /**
              * Retrieves the logical name that identifies the data source for this
              * <code>RowSet</code> object.
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see #setUrl
              */
             // @ts-ignore
-            getDataSourceName(): java.lang.String
+            getDataSourceName(): string
             /**
              * Sets the data source name property for this <code>RowSet</code> object to the
              * given <code>String</code>.
@@ -102,7 +102,7 @@ declare namespace javax {
              * @see #getDataSourceName
              */
             // @ts-ignore
-            setDataSourceName(name: string): void
+            setDataSourceName(name: java.lang.String | string): void
             /**
              * Retrieves the username used to create a database connection for this
              * <code>RowSet</code> object.
@@ -113,7 +113,7 @@ declare namespace javax {
              * @see #setUsername
              */
             // @ts-ignore
-            getUsername(): java.lang.String
+            getUsername(): string
             /**
              * Sets the username property for this <code>RowSet</code> object to the
              * given <code>String</code>.
@@ -122,7 +122,7 @@ declare namespace javax {
              * @see #getUsername
              */
             // @ts-ignore
-            setUsername(name: string): void
+            setUsername(name: java.lang.String | string): void
             /**
              * Retrieves the password used to create a database connection.
              * The password property is set at run time before calling the method
@@ -132,7 +132,7 @@ declare namespace javax {
              * @see #setPassword
              */
             // @ts-ignore
-            getPassword(): java.lang.String
+            getPassword(): string
             /**
              * Sets the database password for this <code>RowSet</code> object to
              * the given <code>String</code>.
@@ -141,7 +141,7 @@ declare namespace javax {
              * @see #getPassword
              */
             // @ts-ignore
-            setPassword(password: string): void
+            setPassword(password: java.lang.String | string): void
             /**
              * Retrieves the transaction isolation level set for this
              * <code>RowSet</code> object.
@@ -153,7 +153,7 @@ declare namespace javax {
              * @see #setTransactionIsolation
              */
             // @ts-ignore
-            getTransactionIsolation(): int
+            getTransactionIsolation(): number /*int*/
             /**
              * Sets the transaction isolation level for this <code>RowSet</code> object.
              * @param level the transaction isolation level; one of
@@ -178,7 +178,7 @@ declare namespace javax {
              * @see #setTypeMap
              */
             // @ts-ignore
-            getTypeMap(): java.util.Map<java.lang.String, java.lang.Class<?>>
+            getTypeMap(): java.util.Map<java.lang.String | string, java.lang.Class<any>>
             /**
              * Installs the given <code>java.util.Map</code> object as the default
              * type map for this <code>RowSet</code> object. This type map will be
@@ -190,7 +190,7 @@ declare namespace javax {
              * @see #getTypeMap
              */
             // @ts-ignore
-            setTypeMap(map: java.util.Map<java.lang.String, java.lang.Class<any>>): void
+            setTypeMap(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): void
             /**
              * Retrieves this <code>RowSet</code> object's command property.
              * The command property contains a command string, which must be an SQL
@@ -200,7 +200,7 @@ declare namespace javax {
              * @see #setCommand
              */
             // @ts-ignore
-            getCommand(): java.lang.String
+            getCommand(): string
             /**
              * Sets this <code>RowSet</code> object's command property to the given
              * SQL query.
@@ -213,7 +213,7 @@ declare namespace javax {
              * @see #getCommand
              */
             // @ts-ignore
-            setCommand(cmd: string): void
+            setCommand(cmd: java.lang.String | string): void
             /**
              * Retrieves whether this <code>RowSet</code> object is read-only.
              * If updates are possible, the default is for a rowset to be
@@ -251,7 +251,7 @@ declare namespace javax {
              * @see #setMaxFieldSize
              */
             // @ts-ignore
-            getMaxFieldSize(): int
+            getMaxFieldSize(): number /*int*/
             /**
              * Sets the maximum number of bytes that can be returned for a column
              * value to the given number of bytes.
@@ -277,7 +277,7 @@ declare namespace javax {
              * @see #setMaxRows
              */
             // @ts-ignore
-            getMaxRows(): int
+            getMaxRows(): number /*int*/
             /**
              * Sets the maximum number of rows that this <code>RowSet</code>
              * object can contain to the specified number.
@@ -321,7 +321,7 @@ declare namespace javax {
              * @see #setQueryTimeout
              */
             // @ts-ignore
-            getQueryTimeout(): int
+            getQueryTimeout(): number /*int*/
             /**
              * Sets the maximum time the driver will wait for
              * a statement to execute to the given number of seconds.
@@ -380,7 +380,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setNull(parameterName: string, sqlType: number /*int*/): void
+            setNull(parameterName: java.lang.String | string, sqlType: number /*int*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's SQL
              * command to SQL <code>NULL</code>. This version of the method <code>setNull</code>
@@ -406,7 +406,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setNull(paramIndex: number /*int*/, sqlType: number /*int*/, typeName: string): void
+            setNull(paramIndex: number /*int*/, sqlType: number /*int*/, typeName: java.lang.String | string): void
             /**
              * Sets the designated parameter to SQL <code>NULL</code>.
              * This version of the method <code>setNull</code> should
@@ -436,7 +436,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setNull(parameterName: string, sqlType: number /*int*/, typeName: string): void
+            setNull(parameterName: java.lang.String | string, sqlType: number /*int*/, typeName: java.lang.String | string): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>boolean</code> value. The driver converts this to
@@ -461,7 +461,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setBoolean(parameterName: string, x: boolean): void
+            setBoolean(parameterName: java.lang.String | string, x: boolean): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>byte</code> value. The driver converts this to
@@ -486,7 +486,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setByte(parameterName: string, x: number /*byte*/): void
+            setByte(parameterName: java.lang.String | string, x: number /*byte*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>short</code> value. The driver converts this to
@@ -511,7 +511,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setShort(parameterName: string, x: number /*short*/): void
+            setShort(parameterName: java.lang.String | string, x: number /*short*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>int</code> value. The driver converts this to
@@ -536,7 +536,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setInt(parameterName: string, x: number /*int*/): void
+            setInt(parameterName: java.lang.String | string, x: number /*int*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>long</code> value. The driver converts this to
@@ -561,7 +561,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setLong(parameterName: string, x: number /*long*/): void
+            setLong(parameterName: java.lang.String | string, x: number /*long*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>float</code> value. The driver converts this to
@@ -586,7 +586,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setFloat(parameterName: string, x: number /*float*/): void
+            setFloat(parameterName: java.lang.String | string, x: number /*float*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>double</code> value. The driver converts this to
@@ -611,7 +611,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setDouble(parameterName: string, x: number /*double*/): void
+            setDouble(parameterName: java.lang.String | string, x: number /*double*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given <code>java.math.BigDeciaml</code> value.
@@ -638,7 +638,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setBigDecimal(parameterName: string, x: java.math.BigDecimal): void
+            setBigDecimal(parameterName: java.lang.String | string, x: java.math.BigDecimal): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java <code>String</code> value. Before sending it to the
@@ -650,7 +650,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setString(parameterIndex: number /*int*/, x: string): void
+            setString(parameterIndex: number /*int*/, x: java.lang.String | string): void
             /**
              * Sets the designated parameter to the given Java <code>String</code> value.
              * The driver converts this
@@ -668,7 +668,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setString(parameterName: string, x: string): void
+            setString(parameterName: java.lang.String | string, x: java.lang.String | string): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given Java array of <code>byte</code> values. Before sending it to the
@@ -697,7 +697,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setBytes(parameterName: string, x: number /*byte*/[]): void
+            setBytes(parameterName: java.lang.String | string, x: number /*byte*/[]): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given <code>java.sql.Date</code> value. The driver converts this to
@@ -746,7 +746,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setTimestamp(parameterName: string, x: java.sql.Timestamp): void
+            setTimestamp(parameterName: java.lang.String | string, x: java.sql.Timestamp): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given <code>java.io.InputStream</code> value.
@@ -785,7 +785,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setAsciiStream(parameterName: string, x: java.io.InputStream, length: number /*int*/): void
+            setAsciiStream(parameterName: java.lang.String | string, x: java.io.InputStream, length: number /*int*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given <code>java.io.InputStream</code> value.
@@ -823,7 +823,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setBinaryStream(parameterName: string, x: java.io.InputStream, length: number /*int*/): void
+            setBinaryStream(parameterName: java.lang.String | string, x: java.io.InputStream, length: number /*int*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given <code>java.io.Reader</code> value.
@@ -864,7 +864,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setCharacterStream(parameterName: string, reader: java.io.Reader, length: number /*int*/): void
+            setCharacterStream(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*int*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given input stream.
@@ -909,7 +909,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setAsciiStream(parameterName: string, x: java.io.InputStream): void
+            setAsciiStream(parameterName: java.lang.String | string, x: java.io.InputStream): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given input stream.
@@ -952,7 +952,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setBinaryStream(parameterName: string, x: java.io.InputStream): void
+            setBinaryStream(parameterName: java.lang.String | string, x: java.io.InputStream): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to the given <code>Reader</code>
@@ -1001,7 +1001,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setCharacterStream(parameterName: string, reader: java.io.Reader): void
+            setCharacterStream(parameterName: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * to a <code>Reader</code> object. The
@@ -1063,7 +1063,7 @@ declare namespace javax {
              * @see java.sql.Types
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any, targetSqlType: number /*int*/, scaleOrLength: number /*int*/): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: number /*int*/, scaleOrLength: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object. The second
              * argument must be an object type; for integral values, the
@@ -1103,7 +1103,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any, targetSqlType: number /*int*/, scale: number /*int*/): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any, targetSqlType: number /*int*/, scale: number /*int*/): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with a Java <code>Object</code>.  For integral values, the
@@ -1121,7 +1121,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any, targetSqlType: number /*int*/): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * This method is like the method <code>setObject</code>
@@ -1143,7 +1143,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any, targetSqlType: number /*int*/): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any, targetSqlType: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * The second parameter must be of type <code>Object</code>; therefore, the
@@ -1177,7 +1177,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with a Java <code>Object</code>.  For integral values, the
@@ -1204,7 +1204,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with the given  <code>Ref</code> value.  The driver will convert this
@@ -1298,7 +1298,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setBlob(parameterName: string, inputStream: java.io.InputStream, length: number /*long*/): void
+            setBlob(parameterName: java.lang.String | string, inputStream: java.io.InputStream, length: number /*long*/): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Blob</code> object.
              * The driver converts this to an SQL <code>BLOB</code> value when it
@@ -1312,7 +1312,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setBlob(parameterName: string, x: java.sql.Blob): void
+            setBlob(parameterName: java.lang.String | string, x: java.sql.Blob): void
             /**
              * Sets the designated parameter to a <code>InputStream</code> object.
              * This method differs from the <code>setBinaryStream (int, InputStream)</code>
@@ -1332,7 +1332,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setBlob(parameterName: string, inputStream: java.io.InputStream): void
+            setBlob(parameterName: java.lang.String | string, inputStream: java.io.InputStream): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with the given  <code>Clob</code> value.  The driver will convert this
@@ -1405,7 +1405,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setClob(parameterName: string, reader: java.io.Reader, length: number /*long*/): void
+            setClob(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Clob</code> object.
              * The driver converts this to an SQL <code>CLOB</code> value when it
@@ -1419,7 +1419,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setClob(parameterName: string, x: java.sql.Clob): void
+            setClob(parameterName: java.lang.String | string, x: java.sql.Clob): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.
              * This method differs from the <code>setCharacterStream (int, Reader)</code> method
@@ -1438,7 +1438,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setClob(parameterName: string, reader: java.io.Reader): void
+            setClob(parameterName: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with the given  <code>Array</code> value.  The driver will convert this
@@ -1478,7 +1478,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setDate(parameterName: string, x: java.sql.Date): void
+            setDate(parameterName: java.lang.String | string, x: java.sql.Date): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Date</code> value,
              * using the given <code>Calendar</code> object.  The driver uses
@@ -1500,7 +1500,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setDate(parameterName: string, x: java.sql.Date, cal: java.util.Calendar): void
+            setDate(parameterName: java.lang.String | string, x: java.sql.Date, cal: java.util.Calendar): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with the given  <code>java.sql.Time</code> value.  The driver will convert this
@@ -1527,7 +1527,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setTime(parameterName: string, x: java.sql.Time): void
+            setTime(parameterName: java.lang.String | string, x: java.sql.Time): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Time</code> value,
              * using the given <code>Calendar</code> object.  The driver uses
@@ -1549,7 +1549,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setTime(parameterName: string, x: java.sql.Time, cal: java.util.Calendar): void
+            setTime(parameterName: java.lang.String | string, x: java.sql.Time, cal: java.util.Calendar): void
             /**
              * Sets the designated parameter in this <code>RowSet</code> object's command
              * with the given  <code>java.sql.Timestamp</code> value.  The driver will
@@ -1585,7 +1585,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setTimestamp(parameterName: string, x: java.sql.Timestamp, cal: java.util.Calendar): void
+            setTimestamp(parameterName: java.lang.String | string, x: java.sql.Timestamp, cal: java.util.Calendar): void
             /**
              * Clears the parameters set for this <code>RowSet</code> object's command.
              * <P>In general, parameter values remain in force for repeated use of a
@@ -1677,7 +1677,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setSQLXML(parameterName: string, xmlObject: java.sql.SQLXML): void
+            setSQLXML(parameterName: java.lang.String | string, xmlObject: java.sql.SQLXML): void
             /**
              * Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
              * driver converts this to a SQL <code>ROWID</code> value when it sends it
@@ -1699,7 +1699,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setRowId(parameterName: string, x: java.sql.RowId): void
+            setRowId(parameterName: java.lang.String | string, x: java.sql.RowId): void
             /**
              * Sets the designated parameter to the given <code>String</code> object.
              * The driver converts this to a SQL <code>NCHAR</code> or
@@ -1715,7 +1715,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNString(parameterIndex: number /*int*/, value: string): void
+            setNString(parameterIndex: number /*int*/, value: java.lang.String | string): void
             /**
              * Sets the designated parameter to the given <code>String</code> object.
              * The driver converts this to a SQL <code>NCHAR</code> or
@@ -1728,7 +1728,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNString(parameterName: string, value: string): void
+            setNString(parameterName: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object. The
              * <code>Reader</code> reads the data till end-of-file is reached. The
@@ -1758,7 +1758,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNCharacterStream(parameterName: string, value: java.io.Reader, length: number /*long*/): void
+            setNCharacterStream(parameterName: java.lang.String | string, value: java.io.Reader, length: number /*long*/): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object. The
              * <code>Reader</code> reads the data till end-of-file is reached. The
@@ -1780,7 +1780,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNCharacterStream(parameterName: string, value: java.io.Reader): void
+            setNCharacterStream(parameterName: java.lang.String | string, value: java.io.Reader): void
             /**
              * Sets the designated parameter to a <code>java.sql.NClob</code> object. The object
              * implements the <code>java.sql.NClob</code> interface. This <code>NClob</code>
@@ -1793,7 +1793,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNClob(parameterName: string, value: java.sql.NClob): void
+            setNClob(parameterName: java.lang.String | string, value: java.sql.NClob): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain  the number
              * of characters specified by length otherwise a <code>SQLException</code> will be
@@ -1817,7 +1817,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNClob(parameterName: string, reader: java.io.Reader, length: number /*long*/): void
+            setNClob(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.
              * This method differs from the <code>setCharacterStream (int, Reader)</code> method
@@ -1838,7 +1838,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setNClob(parameterName: string, reader: java.io.Reader): void
+            setNClob(parameterName: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.  The reader must contain  the number
              * of characters specified by length otherwise a <code>SQLException</code> will be

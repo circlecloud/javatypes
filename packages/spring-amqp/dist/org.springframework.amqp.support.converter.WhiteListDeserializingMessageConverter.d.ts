@@ -9,7 +9,7 @@ declare namespace org {
                      * @since 1.5.5
                      */
                     // @ts-ignore
-                    class WhiteListDeserializingMessageConverter extends org.springframework.amqp.support.converter.AbstractMessageConverter {
+                    abstract class WhiteListDeserializingMessageConverter extends org.springframework.amqp.support.converter.AbstractMessageConverter {
                         // @ts-ignore
                         constructor()
                         /**
@@ -21,7 +21,7 @@ declare namespace org {
                          * @param whiteListPatterns the patterns.
                          */
                         // @ts-ignore
-                        setWhiteListPatterns(whiteListPatterns: Array<java.lang.String>): void
+                        public setWhiteListPatterns(whiteListPatterns: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                         /**
                          * Add package/class patterns to the white list.
                          * @param patterns the patterns to add.
@@ -29,7 +29,7 @@ declare namespace org {
                          * @see #setWhiteListPatterns(List)
                          */
                         // @ts-ignore
-                        addWhiteListPatterns(...patterns: string[]): void
+                        public addWhiteListPatterns(...patterns: java.lang.String[] | string[]): void
                         // @ts-ignore
                         checkWhiteList(clazz: java.lang.Class<any>): void
                     }

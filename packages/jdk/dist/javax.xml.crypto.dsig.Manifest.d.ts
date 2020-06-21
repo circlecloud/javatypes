@@ -39,14 +39,14 @@ declare namespace javax {
                      * {@link Reference} class to identify the referent's type).
                      */
                     // @ts-ignore
-                    
+                    readonly TYPE: java.lang.String | string
                     /**
                      * Returns the Id of this <code>Manifest</code>.
                      * @return the Id  of this <code>Manifest</code> (or <code>null</code>
                      *     if not specified)
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable
                      * list} of one or more {@link Reference}s that are contained in this
@@ -54,7 +54,7 @@ declare namespace javax {
                      * @return an unmodifiable list of one or more <code>Reference</code>s
                      */
                     // @ts-ignore
-                    getReferences(): java.util.List
+                    getReferences(): Array<any>
                 }
             }
         }

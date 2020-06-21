@@ -16,9 +16,9 @@ declare namespace org {
                  * @param name a descriptive name for this ThreadLocal
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -16,126 +16,126 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly CONTENT_TYPE_BYTES: string
+                    public static readonly CONTENT_TYPE_BYTES: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_TYPE_TEXT_PLAIN: string
+                    public static readonly CONTENT_TYPE_TEXT_PLAIN: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_TYPE_SERIALIZED_OBJECT: string
+                    public static readonly CONTENT_TYPE_SERIALIZED_OBJECT: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_TYPE_JSON: string
+                    public static readonly CONTENT_TYPE_JSON: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_TYPE_JSON_ALT: string
+                    public static readonly CONTENT_TYPE_JSON_ALT: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_TYPE_XML: string
+                    public static readonly CONTENT_TYPE_XML: java.lang.String | string
                     // @ts-ignore
-                    readonly SPRING_BATCH_FORMAT: string
+                    public static readonly SPRING_BATCH_FORMAT: java.lang.String | string
                     // @ts-ignore
-                    readonly BATCH_FORMAT_LENGTH_HEADER4: string
+                    public static readonly BATCH_FORMAT_LENGTH_HEADER4: java.lang.String | string
                     // @ts-ignore
-                    readonly SPRING_AUTO_DECOMPRESS: string
+                    public static readonly SPRING_AUTO_DECOMPRESS: java.lang.String | string
                     // @ts-ignore
-                    readonly X_DELAY: string
+                    public static readonly X_DELAY: java.lang.String | string
                     // @ts-ignore
-                    readonly DEFAULT_CONTENT_TYPE: string
+                    public static readonly DEFAULT_CONTENT_TYPE: java.lang.String | string
                     // @ts-ignore
-                    readonly DEFAULT_DELIVERY_MODE: org.springframework.amqp.core.MessageDeliveryMode
+                    public static readonly DEFAULT_DELIVERY_MODE: org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    readonly DEFAULT_PRIORITY: number
+                    public static readonly DEFAULT_PRIORITY: java.lang.Integer | number
                     // @ts-ignore
-                    setHeader(key: string, value: any): void
+                    public setHeader(key: java.lang.String | string, value: java.lang.Object | any): void
                     // @ts-ignore
-                    getHeaders(): java.util.Map<java.lang.String, java.lang.Object>
+                    public getHeaders(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    setTimestamp(timestamp: java.util.Date): void
+                    public setTimestamp(timestamp: java.util.Date): void
                     // @ts-ignore
-                    getTimestamp(): java.util.Date
+                    public getTimestamp(): java.util.Date
                     // @ts-ignore
-                    setMessageId(messageId: string): void
+                    public setMessageId(messageId: java.lang.String | string): void
                     // @ts-ignore
-                    getMessageId(): java.lang.String
+                    public getMessageId(): string
                     // @ts-ignore
-                    setUserId(userId: string): void
+                    public setUserId(userId: java.lang.String | string): void
                     // @ts-ignore
-                    getUserId(): java.lang.String
+                    public getUserId(): string
                     /**
                      * Return the user id from an incoming message.
                      * @return the user id.
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getReceivedUserId(): java.lang.String
+                    public getReceivedUserId(): string
                     // @ts-ignore
-                    setReceivedUserId(receivedUserId: string): void
+                    public setReceivedUserId(receivedUserId: java.lang.String | string): void
                     // @ts-ignore
-                    setAppId(appId: string): void
+                    public setAppId(appId: java.lang.String | string): void
                     // @ts-ignore
-                    getAppId(): java.lang.String
+                    public getAppId(): string
                     // @ts-ignore
-                    setClusterId(clusterId: string): void
+                    public setClusterId(clusterId: java.lang.String | string): void
                     // @ts-ignore
-                    getClusterId(): java.lang.String
+                    public getClusterId(): string
                     // @ts-ignore
-                    setType(type: string): void
+                    public setType(type: java.lang.String | string): void
                     // @ts-ignore
-                    getType(): java.lang.String
+                    public getType(): string
                     /**
                      * Set the correlation id.
                      * @param correlationId the id.
                      */
                     // @ts-ignore
-                    setCorrelationId(correlationId: string): void
+                    public setCorrelationId(correlationId: java.lang.String | string): void
                     /**
                      * Get the correlation id.
                      * @return the id.
                      */
                     // @ts-ignore
-                    getCorrelationId(): java.lang.String
+                    public getCorrelationId(): string
                     // @ts-ignore
-                    setReplyTo(replyTo: string): void
+                    public setReplyTo(replyTo: java.lang.String | string): void
                     // @ts-ignore
-                    getReplyTo(): java.lang.String
+                    public getReplyTo(): string
                     // @ts-ignore
-                    setReplyToAddress(replyTo: org.springframework.amqp.core.Address): void
+                    public setReplyToAddress(replyTo: org.springframework.amqp.core.Address): void
                     // @ts-ignore
-                    getReplyToAddress(): org.springframework.amqp.core.Address
+                    public getReplyToAddress(): org.springframework.amqp.core.Address
                     // @ts-ignore
-                    setContentType(contentType: string): void
+                    public setContentType(contentType: java.lang.String | string): void
                     // @ts-ignore
-                    getContentType(): java.lang.String
+                    public getContentType(): string
                     // @ts-ignore
-                    setContentEncoding(contentEncoding: string): void
+                    public setContentEncoding(contentEncoding: java.lang.String | string): void
                     // @ts-ignore
-                    getContentEncoding(): java.lang.String
+                    public getContentEncoding(): string
                     // @ts-ignore
-                    setContentLength(contentLength: number /*long*/): void
+                    public setContentLength(contentLength: number /*long*/): void
                     // @ts-ignore
-                    getContentLength(): long
+                    public getContentLength(): number /*long*/
                     // @ts-ignore
                     isContentLengthSet(): boolean
                     // @ts-ignore
-                    setDeliveryMode(deliveryMode: org.springframework.amqp.core.MessageDeliveryMode): void
+                    public setDeliveryMode(deliveryMode: org.springframework.amqp.core.MessageDeliveryMode): void
                     // @ts-ignore
-                    getDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
+                    public getDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    getReceivedDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
+                    public getReceivedDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    setReceivedDeliveryMode(receivedDeliveryMode: org.springframework.amqp.core.MessageDeliveryMode): void
+                    public setReceivedDeliveryMode(receivedDeliveryMode: org.springframework.amqp.core.MessageDeliveryMode): void
                     // @ts-ignore
-                    setExpiration(expiration: string): void
+                    public setExpiration(expiration: java.lang.String | string): void
                     // @ts-ignore
-                    getExpiration(): java.lang.String
+                    public getExpiration(): string
                     // @ts-ignore
-                    setPriority(priority: number): void
+                    public setPriority(priority: java.lang.Integer | number): void
                     // @ts-ignore
-                    getPriority(): java.lang.Integer
+                    public getPriority(): number
                     // @ts-ignore
-                    setReceivedExchange(receivedExchange: string): void
+                    public setReceivedExchange(receivedExchange: java.lang.String | string): void
                     // @ts-ignore
-                    getReceivedExchange(): java.lang.String
+                    public getReceivedExchange(): string
                     // @ts-ignore
-                    setReceivedRoutingKey(receivedRoutingKey: string): void
+                    public setReceivedRoutingKey(receivedRoutingKey: java.lang.String | string): void
                     // @ts-ignore
-                    getReceivedRoutingKey(): java.lang.String
+                    public getReceivedRoutingKey(): string
                     /**
                      * When a delayed message exchange is used the x-delay header on a
                      * received message contains the delay.
@@ -144,7 +144,7 @@ declare namespace org {
                      * @see #getDelay()
                      */
                     // @ts-ignore
-                    getReceivedDelay(): java.lang.Integer
+                    public getReceivedDelay(): number
                     /**
                      * When a delayed message exchange is used the x-delay header on a
                      * received message contains the delay.
@@ -152,17 +152,17 @@ declare namespace org {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    setReceivedDelay(receivedDelay: number): void
+                    public setReceivedDelay(receivedDelay: java.lang.Integer | number): void
                     // @ts-ignore
-                    setRedelivered(redelivered: java.lang.Boolean): void
+                    public setRedelivered(redelivered: java.lang.Boolean): void
                     // @ts-ignore
-                    isRedelivered(): java.lang.Boolean
+                    public isRedelivered(): java.lang.Boolean
                     // @ts-ignore
-                    getRedelivered(): java.lang.Boolean
+                    public getRedelivered(): java.lang.Boolean
                     // @ts-ignore
-                    setDeliveryTag(deliveryTag: number /*long*/): void
+                    public setDeliveryTag(deliveryTag: number /*long*/): void
                     // @ts-ignore
-                    getDeliveryTag(): long
+                    public getDeliveryTag(): number /*long*/
                     // @ts-ignore
                     isDeliveryTagSet(): boolean
                     /**
@@ -171,22 +171,22 @@ declare namespace org {
                      * @see #getMessageCount()
                      */
                     // @ts-ignore
-                    setMessageCount(messageCount: number): void
+                    public setMessageCount(messageCount: java.lang.Integer | number): void
                     /**
                      * Return the server's most recent estimate of the number of messages remaining on the queue.
                      * Only applies to messages retrieved via {@code basicGet}.
                      * @return the count.
                      */
                     // @ts-ignore
-                    getMessageCount(): java.lang.Integer
+                    public getMessageCount(): number
                     // @ts-ignore
-                    getConsumerTag(): java.lang.String
+                    public getConsumerTag(): string
                     // @ts-ignore
-                    setConsumerTag(consumerTag: string): void
+                    public setConsumerTag(consumerTag: java.lang.String | string): void
                     // @ts-ignore
-                    getConsumerQueue(): java.lang.String
+                    public getConsumerQueue(): string
                     // @ts-ignore
-                    setConsumerQueue(consumerQueue: string): void
+                    public setConsumerQueue(consumerQueue: java.lang.String | string): void
                     /**
                      * The x-delay header (outbound).
                      * @return the delay.
@@ -194,32 +194,32 @@ declare namespace org {
                      * @see #getReceivedDelay()
                      */
                     // @ts-ignore
-                    getDelay(): java.lang.Integer
+                    public getDelay(): number
                     /**
                      * Set the x-delay header.
                      * @param delay the delay.
                      * @since 1.6
                      */
                     // @ts-ignore
-                    setDelay(delay: number): void
+                    public setDelay(delay: java.lang.Integer | number): void
                     // @ts-ignore
-                    isFinalRetryForMessageWithNoId(): boolean
+                    public isFinalRetryForMessageWithNoId(): boolean
                     // @ts-ignore
-                    setFinalRetryForMessageWithNoId(finalRetryForMessageWithNoId: boolean): void
+                    public setFinalRetryForMessageWithNoId(finalRetryForMessageWithNoId: boolean): void
                     /**
                      * Return the publish sequence number if publisher confirms are enabled; set by the template.
                      * @return the sequence number.
                      * @since 2.1
                      */
                     // @ts-ignore
-                    getPublishSequenceNumber(): long
+                    public getPublishSequenceNumber(): number /*long*/
                     /**
                      * Set the publish sequence number, if publisher confirms are enabled; set by the template.
                      * @param publishSequenceNumber the sequence number.
                      * @since 2.1
                      */
                     // @ts-ignore
-                    setPublishSequenceNumber(publishSequenceNumber: number /*long*/): void
+                    public setPublishSequenceNumber(publishSequenceNumber: number /*long*/): void
                     /**
                      * The inferred target argument type when using a method-level
                      * {@code @RabbitListener}.
@@ -227,7 +227,7 @@ declare namespace org {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getInferredArgumentType(): java.lang.reflect.Type
+                    public getInferredArgumentType(): java.lang.reflect.Type
                     /**
                      * Set the inferred target argument type when using a method-level
                      * {@code @RabbitListener}.
@@ -235,47 +235,47 @@ declare namespace org {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    setInferredArgumentType(inferredArgumentType: java.lang.reflect.Type): void
+                    public setInferredArgumentType(inferredArgumentType: java.lang.reflect.Type): void
                     /**
                      * The target method when using a method-level {@code @RabbitListener}.
                      * @return the method.
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getTargetMethod(): java.lang.reflect.Method
+                    public getTargetMethod(): java.lang.reflect.Method
                     /**
                      * Set the target method when using a method-level {@code @RabbitListener}.
                      * @param targetMethod the target method.
                      * @since 1.6
                      */
                     // @ts-ignore
-                    setTargetMethod(targetMethod: java.lang.reflect.Method): void
+                    public setTargetMethod(targetMethod: java.lang.reflect.Method): void
                     /**
                      * The target bean when using {@code @RabbitListener}.
                      * @return the bean.
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getTargetBean(): java.lang.Object
+                    public getTargetBean(): any
                     /**
                      * Set the target bean when using {@code @RabbitListener}.
                      * @param targetBean the bean.
                      * @since 1.6
                      */
                     // @ts-ignore
-                    setTargetBean(targetBean: any): void
+                    public setTargetBean(targetBean: java.lang.Object | any): void
                     /**
                      * Return the x-death header.
                      * @return the header.
                      */
                     // @ts-ignore
-                    getXDeathHeader(): java.util.List<java.util.Map<java.lang.String, ?>>
+                    public getXDeathHeader(): Array<java.util.Map<java.lang.String | string, any>>
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

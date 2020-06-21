@@ -23,7 +23,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class AbstractProcessor extends java.lang.Object implements javax.annotation.processing.Processor {
+            abstract class AbstractProcessor extends java.lang.Object implements javax.annotation.processing.Processor {
                 /**
                  * Constructor for subclasses to call.
                  */
@@ -43,7 +43,7 @@ declare namespace javax {
                  *  set if none
                  */
                 // @ts-ignore
-                getSupportedOptions(): java.util.Set<java.lang.String>
+                public getSupportedOptions(): Array<java.lang.String | string>
                 /**
                  * If the processor class is annotated with {@link
                  * SupportedAnnotationTypes}, return an unmodifiable set with the
@@ -53,7 +53,7 @@ declare namespace javax {
                  *  processor, or an empty set if none
                  */
                 // @ts-ignore
-                getSupportedAnnotationTypes(): java.util.Set<java.lang.String>
+                public getSupportedAnnotationTypes(): Array<java.lang.String | string>
                 /**
                  * If the processor class is annotated with {@link
                  * SupportedSourceVersion}, return the source version in the
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return the latest source version supported by this processor
                  */
                 // @ts-ignore
-                getSupportedSourceVersion(): javax.lang.model.SourceVersion
+                public getSupportedSourceVersion(): javax.lang.model.SourceVersion
                 /**
                  * Initializes the processor with the processing environment by
                  * setting the {@code processingEnv} field to the value of the
@@ -74,12 +74,12 @@ declare namespace javax {
                  * @throws IllegalStateException if this method is called more than once.
                  */
                 // @ts-ignore
-                init(processingEnv: javax.annotation.processing.ProcessingEnvironment): void
+                public init(processingEnv: javax.annotation.processing.ProcessingEnvironment): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                abstract process(annotations: Array<javax.lang.model.element.TypeElement>, roundEnv: javax.annotation.processing.RoundEnvironment): boolean
+                public abstract process(annotations: java.util.Set<any> | Array<any>, roundEnv: javax.annotation.processing.RoundEnvironment): boolean
                 /**
                  * Returns an empty iterable of completions.
                  * @param element {#inheritDoc}
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @param userText {#inheritDoc}
                  */
                 // @ts-ignore
-                getCompletions(element: javax.lang.model.element.Element, annotation: javax.lang.model.element.AnnotationMirror, member: javax.lang.model.element.ExecutableElement, userText: string): java.lang.Iterable<? extends javax.annotation.processing.Completion>
+                public getCompletions(element: javax.lang.model.element.Element, annotation: javax.lang.model.element.AnnotationMirror, member: javax.lang.model.element.ExecutableElement, userText: java.lang.String | string): java.lang.Iterable<any>
                 /**
                  * Returns {@code true} if this object has been {@linkplain #init
                  * initialized}, {@code false} otherwise.

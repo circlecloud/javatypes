@@ -16,20 +16,20 @@ declare namespace org {
                          * @return The child Archetypes
                          */
                         // @ts-ignore
-                        getChildArchetypes(): java.util.List<org.spongepowered.api.item.inventory.InventoryArchetype>
+                        getChildArchetypes(): Array<org.spongepowered.api.item.inventory.InventoryArchetype>
                         /**
                          * Returns all properties defined on this Archetype.
                          * @return The properties
                          */
                         // @ts-ignore
-                        getProperties(): java.util.Map<java.lang.String, org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String, ?>>
+                        getProperties(): java.util.Map<java.lang.String | string, org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String | string, any>>
                         /**
                          * Returns the Property with given key.
                          * @param key The key
                          * @return The matching Property or Optional.empty() if not found
                          */
                         // @ts-ignore
-                        getProperty(key: string): java.util.Optional<org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String, ?>>
+                        getProperty(key: java.lang.String | string): java.util.Optional<org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String | string, any>>
                         /**
                          * Returns the property with the Properties default key.
                          * @param type The type of Property to query for
@@ -46,7 +46,7 @@ declare namespace org {
                          * @return The matching Property or Optional.empty() if not found
                          */
                         // @ts-ignore
-                        getProperty<T extends org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String, ?>>(type: java.lang.Class<T>, key: string): java.util.Optional<T>
+                        getProperty<T extends org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String, ?>>(type: java.lang.Class<T>, key: java.lang.String | string): java.util.Optional<T>
                     }
                 }
             }

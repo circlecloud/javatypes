@@ -17,27 +17,27 @@ declare namespace org {
                      * @param code the code to be used to resolve this message
                      */
                     // @ts-ignore
-                    constructor(code: string)
+                    constructor(code: java.lang.String | string)
                     /**
                      * Create a new DefaultMessageSourceResolvable.
                      * @param codes the codes to be used to resolve this message
                      */
                     // @ts-ignore
-                    constructor(codes: string[])
+                    constructor(codes: java.lang.String[] | string[])
                     /**
                      * Create a new DefaultMessageSourceResolvable.
                      * @param codes the codes to be used to resolve this message
                      * @param defaultMessage the default message to be used to resolve this message
                      */
                     // @ts-ignore
-                    constructor(codes: string[], defaultMessage: string)
+                    constructor(codes: java.lang.String[] | string[], defaultMessage: java.lang.String | string)
                     /**
                      * Create a new DefaultMessageSourceResolvable.
                      * @param codes the codes to be used to resolve this message
                      * @param arguments the array of arguments to be used to resolve this message
                      */
                     // @ts-ignore
-                    constructor(codes: string[], arguments: any[])
+                    constructor(codes: java.lang.String[] | string[], arguments: java.lang.Object[] | any[])
                     /**
                      * Create a new DefaultMessageSourceResolvable.
                      * @param codes the codes to be used to resolve this message
@@ -45,7 +45,7 @@ declare namespace org {
                      * @param defaultMessage the default message to be used to resolve this message
                      */
                     // @ts-ignore
-                    constructor(codes: string[], arguments: any[], defaultMessage: string)
+                    constructor(codes: java.lang.String[] | string[], arguments: java.lang.Object[] | any[], defaultMessage: java.lang.String | string)
                     /**
                      * Copy constructor: Create a new instance from another resolvable.
                      * @param resolvable the resolvable to copy from
@@ -57,13 +57,13 @@ declare namespace org {
                      * the last one in the codes array.
                      */
                     // @ts-ignore
-                    getCode(): java.lang.String
+                    public getCode(): string
                     // @ts-ignore
-                    getCodes(): java.lang.String[]
+                    public getCodes(): string[]
                     // @ts-ignore
-                    getArguments(): java.lang.Object[]
+                    public getArguments(): any[]
                     // @ts-ignore
-                    getDefaultMessage(): java.lang.String
+                    public getDefaultMessage(): string
                     /**
                      * Indicate whether the specified default message needs to be rendered for
                      * substituting placeholders and/or {@link java.text.MessageFormat} escaping.
@@ -76,13 +76,13 @@ declare namespace org {
                      * @see AbstractMessageSource#renderDefaultMessage
                      */
                     // @ts-ignore
-                    shouldRenderDefaultMessage(): boolean
+                    public shouldRenderDefaultMessage(): boolean
                     /**
                      * Build a default String representation for this MessageSourceResolvable:
                      * including codes, arguments, and default message.
                      */
                     // @ts-ignore
-                    resolvableToString(): java.lang.String
+                    resolvableToString(): string
                     /**
                      * The default implementation exposes the attributes of this MessageSourceResolvable.
                      * <p>To be overridden in more specific subclasses, potentially including the
@@ -90,11 +90,11 @@ declare namespace org {
                      * @see #resolvableToString()
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

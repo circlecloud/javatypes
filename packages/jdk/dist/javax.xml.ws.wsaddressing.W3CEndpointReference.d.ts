@@ -36,12 +36,12 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(source: javax.xml.transform.Source)
                     // @ts-ignore
-                    readonly NS: string
+                    static readonly NS: java.lang.String | string
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    writeTo(result: javax.xml.transform.Result): void
+                    public writeTo(result: javax.xml.transform.Result): void
                 }
             }
         }

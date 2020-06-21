@@ -28,13 +28,13 @@ declare namespace org {
                          * @return 
                          */
                         // @ts-ignore
-                        getVolume(): float
+                        getVolume(): number /*float*/
                         /**
                          * Gets the pitch of the sound being played
                          * @return 
                          */
                         // @ts-ignore
-                        getPitch(): float
+                        getPitch(): number /*float*/
                     }
                 }
             }

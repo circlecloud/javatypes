@@ -16,7 +16,7 @@ declare namespace java {
              * 					the name of the new permission.
              */
             // @ts-ignore
-            constructor(permissionName: string)
+            constructor(permissionName: java.lang.String | string)
             /**
              * Creates an instance of this class with the given name and
              * action list. The action list is ignored.
@@ -28,7 +28,7 @@ declare namespace java {
              * 					ignored.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
         }
     }
 }

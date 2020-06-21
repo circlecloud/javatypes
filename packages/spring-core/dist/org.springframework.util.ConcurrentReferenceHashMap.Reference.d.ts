@@ -19,7 +19,7 @@ declare namespace org {
                      * Return the hash for the reference.
                      */
                     // @ts-ignore
-                    getHash(): int
+                    getHash(): number /*int*/
                     /**
                      * Return the next reference in the chain, or {@code null} if none.
                      */

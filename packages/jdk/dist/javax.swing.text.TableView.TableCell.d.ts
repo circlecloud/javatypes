@@ -20,31 +20,31 @@ declare namespace javax {
                      * @return the number of columns
                      */
                     // @ts-ignore
-                    getColumnCount(): int
+                    public getColumnCount(): number /*int*/
                     /**
                      * Gets the number of rows this cell spans (that is, the
                      * grid height).
                      * @return the number of rows
                      */
                     // @ts-ignore
-                    getRowCount(): int
+                    public getRowCount(): number /*int*/
                     /**
                      * Sets the grid location.
                      * @param row the row &gt;= 0
                      * @param col the column &gt;= 0
                      */
                     // @ts-ignore
-                    setGridLocation(row: number /*int*/, col: number /*int*/): void
+                    public setGridLocation(row: number /*int*/, col: number /*int*/): void
                     /**
                      * Gets the row of the grid location
                      */
                     // @ts-ignore
-                    getGridRow(): int
+                    public getGridRow(): number /*int*/
                     /**
                      * Gets the column of the grid location
                      */
                     // @ts-ignore
-                    getGridColumn(): int
+                    public getGridColumn(): number /*int*/
                 }
             }
         }

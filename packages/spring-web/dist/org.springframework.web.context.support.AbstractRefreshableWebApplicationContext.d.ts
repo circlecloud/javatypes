@@ -42,25 +42,25 @@ declare namespace org {
                      * @see XmlWebApplicationContext
                      */
                     // @ts-ignore
-                    class AbstractRefreshableWebApplicationContext extends AbstractRefreshableConfigApplicationContext implements org.springframework.web.context.ConfigurableWebApplicationContext {
+                    abstract class AbstractRefreshableWebApplicationContext extends AbstractRefreshableConfigApplicationContext implements org.springframework.web.context.ConfigurableWebApplicationContext {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                         // @ts-ignore
-                        getServletContext(): ServletContext
+                        public getServletContext(): ServletContext
                         // @ts-ignore
-                        setServletConfig(servletConfig: ServletConfig): void
+                        public setServletConfig(servletConfig: ServletConfig): void
                         // @ts-ignore
-                        getServletConfig(): ServletConfig
+                        public getServletConfig(): ServletConfig
                         // @ts-ignore
-                        setNamespace(namespace: string): void
+                        public setNamespace(namespace: java.lang.String | string): void
                         // @ts-ignore
-                        getNamespace(): java.lang.String
+                        public getNamespace(): string
                         // @ts-ignore
-                        getConfigLocations(): java.lang.String[]
+                        public getConfigLocations(): string[]
                         // @ts-ignore
-                        getApplicationName(): java.lang.String
+                        public getApplicationName(): string
                         /**
                          * Create and return a new {@link StandardServletEnvironment}. Subclasses may override
                          * in order to configure the environment or specialize the environment type returned.
@@ -77,7 +77,7 @@ declare namespace org {
                          * @see ServletContextResource
                          */
                         // @ts-ignore
-                        getResourceByPath(path: string): Resource
+                        getResourceByPath(path: java.lang.String | string): Resource
                         /**
                          * This implementation supports pattern matching in unexpanded WARs too.
                          * @see ServletContextResourcePatternResolver
@@ -96,7 +96,7 @@ declare namespace org {
                         // @ts-ignore
                         initPropertySources(): void
                         // @ts-ignore
-                        getTheme(themeName: string): Theme
+                        public getTheme(themeName: java.lang.String | string): Theme
                     }
                 }
             }

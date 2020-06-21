@@ -32,7 +32,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Determines the preferred span for this view along an
                  * axis.
@@ -44,7 +44,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the desired alignment for this view along an
                  * axis.  This is implemented to give the alignment to the
@@ -58,7 +58,7 @@ declare namespace javax {
                  *    center of the view.
                  */
                 // @ts-ignore
-                getAlignment(axis: number /*int*/): float
+                public getAlignment(axis: number /*int*/): number /*float*/
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -70,7 +70,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
             }
         }
     }

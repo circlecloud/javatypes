@@ -16,14 +16,14 @@ declare namespace org {
                  * @param payload the payload object (never {#code null})
                  */
                 // @ts-ignore
-                constructor(source: any, payload: T)
+                constructor(source: java.lang.Object | any, payload: T)
                 // @ts-ignore
-                getResolvableType(): ResolvableType
+                public getResolvableType(): ResolvableType
                 /**
                  * Return the payload of the event.
                  */
                 // @ts-ignore
-                getPayload(): T
+                public getPayload(): T
             }
         }
     }

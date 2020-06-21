@@ -12,11 +12,11 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                 }
             }
         }

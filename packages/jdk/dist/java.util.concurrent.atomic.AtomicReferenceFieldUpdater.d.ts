@@ -34,7 +34,7 @@ declare namespace java {
                  * @param <V> The type of the field
                  */
                 // @ts-ignore
-                class AtomicReferenceFieldUpdater<T, V> extends java.lang.Object {
+                abstract class AtomicReferenceFieldUpdater<T, V> extends java.lang.Object {
                     /**
                      * Protected do-nothing constructor for use by subclasses.
                      */
@@ -58,7 +58,7 @@ declare namespace java {
                      *  access control
                      */
                     // @ts-ignore
-                    newUpdater<U, W>(tclass: java.lang.Class<U>, vclass: java.lang.Class<W>, fieldName: string): java.util.concurrent.atomic.AtomicReferenceFieldUpdater<U, W>
+                    public static newUpdater<U, W>(tclass: java.lang.Class<U>, vclass: java.lang.Class<W>, fieldName: java.lang.String | string): java.util.concurrent.atomic.AtomicReferenceFieldUpdater<U, W>
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given updated value if the current value {@code ==} the
@@ -71,7 +71,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    abstract compareAndSet(obj: T, expect: V, update: V): boolean
+                    public abstract compareAndSet(obj: T, expect: V, update: V): boolean
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given updated value if the current value {@code ==} the
@@ -87,7 +87,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    abstract weakCompareAndSet(obj: T, expect: V, update: V): boolean
+                    public abstract weakCompareAndSet(obj: T, expect: V, update: V): boolean
                     /**
                      * Sets the field of the given object managed by this updater to the
                      * given updated value. This operation is guaranteed to act as a volatile
@@ -96,7 +96,7 @@ declare namespace java {
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    abstract set(obj: T, newValue: V): void
+                    public abstract set(obj: T, newValue: V): void
                     /**
                      * Eventually sets the field of the given object managed by this
                      * updater to the given updated value.
@@ -105,7 +105,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    abstract lazySet(obj: T, newValue: V): void
+                    public abstract lazySet(obj: T, newValue: V): void
                     /**
                      * Gets the current value held in the field of the given object managed
                      * by this updater.
@@ -113,7 +113,7 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    abstract get(obj: T): V
+                    public abstract get(obj: T): V
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given value and returns the old value.
@@ -122,7 +122,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(obj: T, newValue: V): V
+                    public getAndSet(obj: T, newValue: V): V
                     /**
                      * Atomically updates the field of the given object managed by this updater
                      * with the results of applying the given function, returning the previous
@@ -134,7 +134,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndUpdate(obj: T, updateFunction: java.util.function.UnaryOperator<V> | java.util.function$.UnaryOperator<V>): V
+                    public getAndUpdate(obj: T, updateFunction: java.util.function$.UnaryOperator<V>): V
                     /**
                      * Atomically updates the field of the given object managed by this updater
                      * with the results of applying the given function, returning the updated
@@ -146,7 +146,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    updateAndGet(obj: T, updateFunction: java.util.function.UnaryOperator<V> | java.util.function$.UnaryOperator<V>): V
+                    public updateAndGet(obj: T, updateFunction: java.util.function$.UnaryOperator<V>): V
                     /**
                      * Atomically updates the field of the given object managed by this
                      * updater with the results of applying the given function to the
@@ -162,7 +162,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndAccumulate(obj: T, x: V, accumulatorFunction: java.util.function.BinaryOperator<V> | java.util.function$.BinaryOperator<V>): V
+                    public getAndAccumulate(obj: T, x: V, accumulatorFunction: java.util.function$.BinaryOperator<V>): V
                     /**
                      * Atomically updates the field of the given object managed by this
                      * updater with the results of applying the given function to the
@@ -178,7 +178,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    accumulateAndGet(obj: T, x: V, accumulatorFunction: java.util.function.BinaryOperator<V> | java.util.function$.BinaryOperator<V>): V
+                    public accumulateAndGet(obj: T, x: V, accumulatorFunction: java.util.function$.BinaryOperator<V>): V
                 }
             }
         }

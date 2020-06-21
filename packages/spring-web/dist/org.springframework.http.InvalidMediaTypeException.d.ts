@@ -15,12 +15,12 @@ declare namespace org {
                  * @param message a detail message indicating the invalid part
                  */
                 // @ts-ignore
-                constructor(mediaType: string, message: string)
+                constructor(mediaType: java.lang.String | string, message: java.lang.String | string)
                 /**
                  * Return the offending media type.
                  */
                 // @ts-ignore
-                getMediaType(): java.lang.String
+                getMediaType(): string
             }
         }
     }

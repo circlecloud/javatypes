@@ -25,7 +25,7 @@ declare namespace java {
              * other source of PropertyChangeEvents.
              */
             // @ts-ignore
-            
+            readonly PROPERTYNAME: java.lang.String | string
             /**
              * Sets the "value" of the "designTime" property.
              * <p>

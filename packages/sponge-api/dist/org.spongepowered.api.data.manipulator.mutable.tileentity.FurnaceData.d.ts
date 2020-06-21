@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#PASSED_BURN_TIME
                                  */
                                 // @ts-ignore
-                                passedBurnTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                passedBurnTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the maximum amount of fuel that
                                  * can be supplied with the used fuel item.
@@ -30,7 +30,7 @@ declare namespace org {
                                  * @see Keys#MAX_BURN_TIME
                                  */
                                 // @ts-ignore
-                                maxBurnTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                maxBurnTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the already passed cook time of
                                  * the {@link ItemStack} in the {@link Furnace}. When this is equal to the
@@ -39,7 +39,7 @@ declare namespace org {
                                  * @see Keys#PASSED_COOK_TIME
                                  */
                                 // @ts-ignore
-                                passedCookTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                passedCookTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the total time the
                                  * {@link ItemStack} has to cook until it is cooked.
@@ -50,7 +50,7 @@ declare namespace org {
                                  * @see Keys#MAX_COOK_TIME
                                  */
                                 // @ts-ignore
-                                maxCookTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                maxCookTime(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

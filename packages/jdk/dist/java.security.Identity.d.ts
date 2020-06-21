@@ -24,7 +24,7 @@ declare namespace java {
          *  {@code java.security.Principal}.
          */
         // @ts-ignore
-        class Identity extends java.lang.Object implements java.security.Principal, java.io.Serializable {
+        abstract class Identity extends java.lang.Object implements java.security.Principal, java.io.Serializable {
             /**
              * Constructor for serialization only.
              */
@@ -38,32 +38,32 @@ declare namespace java {
              *  with the same name in the scope.
              */
             // @ts-ignore
-            constructor(name: string, scope: java.security.IdentityScope)
+            constructor(name: java.lang.String | string, scope: java.security.IdentityScope)
             /**
              * Constructs an identity with the specified name and no scope.
              * @param name the identity name.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Returns this identity's name.
              * @return the name of this identity.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns this identity's scope.
              * @return the scope of this identity.
              */
             // @ts-ignore
-            getScope(): java.security.IdentityScope
+            public getScope(): java.security.IdentityScope
             /**
              * Returns this identity's public key.
              * @return the public key for this identity.
              * @see #setPublicKey
              */
             // @ts-ignore
-            getPublicKey(): java.security.PublicKey
+            public getPublicKey(): java.security.PublicKey
             /**
              * Sets this identity's public key. The old key and all of this
              * identity's certificates are removed by this operation.
@@ -80,7 +80,7 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            setPublicKey(key: java.security.PublicKey): void
+            public setPublicKey(key: java.security.PublicKey): void
             /**
              * Specifies a general information string for this identity.
              * <p>First, if there is a security manager, its {@code checkSecurityAccess}
@@ -94,14 +94,14 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            setInfo(info: string): void
+            public setInfo(info: java.lang.String | string): void
             /**
              * Returns general information previously specified for this identity.
              * @return general information about this identity.
              * @see #setInfo
              */
             // @ts-ignore
-            getInfo(): java.lang.String
+            public getInfo(): string
             /**
              * Adds a certificate for this identity. If the identity has a public
              * key, the public key in the certificate must be the same, and if
@@ -120,7 +120,7 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            addCertificate(certificate: java.security.Certificate): void
+            public addCertificate(certificate: java.security.Certificate): void
             /**
              * Removes a certificate from this identity.
              * <p>First, if there is a security manager, its {@code checkSecurityAccess}
@@ -135,13 +135,13 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            removeCertificate(certificate: java.security.Certificate): void
+            public removeCertificate(certificate: java.security.Certificate): void
             /**
              * Returns a copy of all the certificates for this identity.
              * @return a copy of all the certificates for this identity.
              */
             // @ts-ignore
-            certificates(): java.security.Certificate[]
+            public certificates(): java.security.Certificate[]
             /**
              * Tests for equality between the specified object and this identity.
              * This first tests to see if the entities actually refer to the same
@@ -155,7 +155,7 @@ declare namespace java {
              * @see #identityEquals
              */
             // @ts-ignore
-            equals(identity: any): boolean
+            public equals(identity: java.lang.Object | any): boolean
             /**
              * Tests for equality between the specified identity and this identity.
              * This method should be overriden by subclasses to test for equality.
@@ -182,7 +182,7 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a string representation of this identity, with
              * optionally more details than that provided by the
@@ -201,13 +201,13 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            toString(detailed: boolean): java.lang.String
+            public toString(detailed: boolean): string
             /**
              * Returns a hashcode for this identity.
              * @return a hashcode for this identity.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

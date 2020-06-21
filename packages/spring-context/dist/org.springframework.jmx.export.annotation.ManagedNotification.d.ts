@@ -11,7 +11,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.metadata.ManagedNotification
                      */
                     // @ts-ignore
-                    class ManagedNotification implements java.lang.annotation.Annotation {
+                    abstract class ManagedNotification implements java.lang.annotation.Annotation {
                     }
                 }
             }

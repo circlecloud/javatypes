@@ -131,7 +131,7 @@ declare namespace java {
              * @throws NullPointerException if the argument is null
              */
             // @ts-ignore
-            constructor(command: Array<java.lang.String>)
+            constructor(command: java.util.List<java.lang.String | string> | Array<java.lang.String | string>)
             /**
              * Constructs a process builder with the specified operating
              * system program and arguments.  This is a convenience
@@ -143,7 +143,7 @@ declare namespace java {
              * @param command a string array containing the program and its arguments
              */
             // @ts-ignore
-            constructor(...command: string[])
+            constructor(...command: java.lang.String[] | string[])
             /**
              * Sets this process builder's operating system program and
              * arguments.  This method does <i>not</i> make a copy of the
@@ -156,7 +156,7 @@ declare namespace java {
              * @throws NullPointerException if the argument is null
              */
             // @ts-ignore
-            command(command: Array<java.lang.String>): java.lang.ProcessBuilder
+            public command(command: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): java.lang.ProcessBuilder
             /**
              * Sets this process builder's operating system program and
              * arguments.  This is a convenience method that sets the command
@@ -168,7 +168,7 @@ declare namespace java {
              * @return this process builder
              */
             // @ts-ignore
-            command(...command: string[]): java.lang.ProcessBuilder
+            public command(...command: java.lang.String[] | string[]): java.lang.ProcessBuilder
             /**
              * Returns this process builder's operating system program and
              * arguments.  The returned list is <i>not</i> a copy.  Subsequent
@@ -177,7 +177,7 @@ declare namespace java {
              * @return this process builder's program and its arguments
              */
             // @ts-ignore
-            command(): java.util.List<java.lang.String>
+            public command(): Array<java.lang.String | string>
             /**
              * Returns a string map view of this process builder's environment.
              * Whenever a process builder is created, the environment is
@@ -234,7 +234,7 @@ declare namespace java {
              * @see System#getenv()
              */
             // @ts-ignore
-            environment(): java.util.Map<java.lang.String, java.lang.String>
+            public environment(): java.util.Map<java.lang.String | string, java.lang.String | string>
             /**
              * Returns this process builder's working directory.
              * Subprocesses subsequently started by this object's {@link
@@ -246,7 +246,7 @@ declare namespace java {
              * @return this process builder's working directory
              */
             // @ts-ignore
-            directory(): java.io.File
+            public directory(): java.io.File
             /**
              * Sets this process builder's working directory.
              * Subprocesses subsequently started by this object's {@link
@@ -259,7 +259,7 @@ declare namespace java {
              * @return this process builder
              */
             // @ts-ignore
-            directory(directory: java.io.File): java.lang.ProcessBuilder
+            public directory(directory: java.io.File): java.lang.ProcessBuilder
             /**
              * Sets this process builder's standard input source.
              * Subprocesses subsequently started by this object's {@link #start()}
@@ -281,7 +281,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectInput(source: java.lang.ProcessBuilder.Redirect): java.lang.ProcessBuilder
+            public redirectInput(source: java.lang.ProcessBuilder.Redirect): java.lang.ProcessBuilder
             /**
              * Sets this process builder's standard output destination.
              * Subprocesses subsequently started by this object's {@link #start()}
@@ -302,7 +302,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectOutput(destination: java.lang.ProcessBuilder.Redirect): java.lang.ProcessBuilder
+            public redirectOutput(destination: java.lang.ProcessBuilder.Redirect): java.lang.ProcessBuilder
             /**
              * Sets this process builder's standard error destination.
              * Subprocesses subsequently started by this object's {@link #start()}
@@ -326,7 +326,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectError(destination: java.lang.ProcessBuilder.Redirect): java.lang.ProcessBuilder
+            public redirectError(destination: java.lang.ProcessBuilder.Redirect): java.lang.ProcessBuilder
             /**
              * Sets this process builder's standard input source to a file.
              * <p>This is a convenience method.  An invocation of the form
@@ -339,7 +339,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectInput(file: java.io.File): java.lang.ProcessBuilder
+            public redirectInput(file: java.io.File): java.lang.ProcessBuilder
             /**
              * Sets this process builder's standard output destination to a file.
              * <p>This is a convenience method.  An invocation of the form
@@ -352,7 +352,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectOutput(file: java.io.File): java.lang.ProcessBuilder
+            public redirectOutput(file: java.io.File): java.lang.ProcessBuilder
             /**
              * Sets this process builder's standard error destination to a file.
              * <p>This is a convenience method.  An invocation of the form
@@ -365,7 +365,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectError(file: java.io.File): java.lang.ProcessBuilder
+            public redirectError(file: java.io.File): java.lang.ProcessBuilder
             /**
              * Returns this process builder's standard input source.
              * Subprocesses subsequently started by this object's {@link #start()}
@@ -375,7 +375,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectInput(): java.lang.ProcessBuilder.Redirect
+            public redirectInput(): java.lang.ProcessBuilder.Redirect
             /**
              * Returns this process builder's standard output destination.
              * Subprocesses subsequently started by this object's {@link #start()}
@@ -385,7 +385,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectOutput(): java.lang.ProcessBuilder.Redirect
+            public redirectOutput(): java.lang.ProcessBuilder.Redirect
             /**
              * Returns this process builder's standard error destination.
              * Subprocesses subsequently started by this object's {@link #start()}
@@ -395,7 +395,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            redirectError(): java.lang.ProcessBuilder.Redirect
+            public redirectError(): java.lang.ProcessBuilder.Redirect
             /**
              * Sets the source and destination for subprocess standard I/O
              * to be the same as those of the current Java process.
@@ -416,7 +416,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            inheritIO(): java.lang.ProcessBuilder
+            public inheritIO(): java.lang.ProcessBuilder
             /**
              * Tells whether this process builder merges standard error and
              * standard output.
@@ -430,7 +430,7 @@ declare namespace java {
              * @return this process builder's {#code redirectErrorStream} property
              */
             // @ts-ignore
-            redirectErrorStream(): boolean
+            public redirectErrorStream(): boolean
             /**
              * Sets this process builder's {@code redirectErrorStream} property.
              * <p>If this property is {@code true}, then any error output
@@ -444,7 +444,7 @@ declare namespace java {
              * @return this process builder
              */
             // @ts-ignore
-            redirectErrorStream(redirectErrorStream: boolean): java.lang.ProcessBuilder
+            public redirectErrorStream(redirectErrorStream: boolean): java.lang.ProcessBuilder
             /**
              * Starts a new process using the attributes of this process builder.
              * <p>The new process will
@@ -507,7 +507,7 @@ declare namespace java {
              * @see Runtime#exec(String[], String[], java.io.File)
              */
             // @ts-ignore
-            start(): java.lang.Process
+            public start(): java.lang.Process
         }
     }
 }

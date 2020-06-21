@@ -23,7 +23,7 @@ declare namespace javax {
                  * @param msg The error message for the exception.
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Create a new <code>FactoryConfigurationError</code> with a
                  * given <code>Exception</code> base cause of the error.
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @param msg The detail message.
                  */
                 // @ts-ignore
-                constructor(e: java.lang.Exception, msg: string)
+                constructor(e: java.lang.Exception, msg: java.lang.String | string)
                 /**
                  * Return the message (if any) for this error . If there is no
                  * message for the exception and there is an encapsulated
@@ -50,7 +50,7 @@ declare namespace javax {
                  * @return The error message.
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 /**
                  * Return the actual exception (if any) that caused this exception to
                  * be raised.
@@ -62,7 +62,7 @@ declare namespace javax {
                  * use the exception chaining mechanism of JDK1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

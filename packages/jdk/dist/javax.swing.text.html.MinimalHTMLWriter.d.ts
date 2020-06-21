@@ -60,7 +60,7 @@ declare namespace javax {
                      *             location within the document.
                      */
                     // @ts-ignore
-                    write(): void
+                    public write(): void
                     /**
                      * Writes out all the attributes for the
                      * following types:
@@ -86,14 +86,14 @@ declare namespace javax {
                      * @exception IOException on any I/O error
                      */
                     // @ts-ignore
-                    writeStartTag(tag: string): void
+                    writeStartTag(tag: java.lang.String | string): void
                     /**
                      * Writes out an end tag appropriately
                      * indented.  Also decrements the indent level.
                      * @exception IOException on any I/O error
                      */
                     // @ts-ignore
-                    writeEndTag(endTag: string): void
+                    writeEndTag(endTag: java.lang.String | string): void
                     /**
                      * Writes out the &lt;head&gt; and &lt;style&gt;
                      * tags, and then invokes writeStyles() to write
@@ -225,7 +225,7 @@ declare namespace javax {
                      * @exception IOException on any I/O error
                      */
                     // @ts-ignore
-                    startFontTag(style: string): void
+                    startFontTag(style: java.lang.String | string): void
                 }
             }
         }

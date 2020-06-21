@@ -52,7 +52,7 @@ declare namespace javax {
              *  not supported.
              */
             // @ts-ignore
-            constructor(algName: string, encryptedData: number /*byte*/[])
+            constructor(algName: java.lang.String | string, encryptedData: number /*byte*/[])
             /**
              * Constructs an <code>EncryptedPrivateKeyInfo</code> from the
              * encryption algorithm parameters and the encrypted data.
@@ -85,20 +85,20 @@ declare namespace javax {
              * @return the encryption algorithm name.
              */
             // @ts-ignore
-            getAlgName(): java.lang.String
+            public getAlgName(): string
             /**
              * Returns the algorithm parameters used by the encryption algorithm.
              * @return the algorithm parameters.
              */
             // @ts-ignore
-            getAlgParameters(): java.security.AlgorithmParameters
+            public getAlgParameters(): java.security.AlgorithmParameters
             /**
              * Returns the encrypted data.
              * @return the encrypted data. Returns a new array
              *  each time this method is called.
              */
             // @ts-ignore
-            getEncryptedData(): byte[]
+            public getEncryptedData(): number /*byte*/[]
             /**
              * Extract the enclosed PKCS8EncodedKeySpec object from the
              * encrypted data and return it.
@@ -117,7 +117,7 @@ declare namespace javax {
              *  data is corrupted and cannot be decrypted.
              */
             // @ts-ignore
-            getKeySpec(cipher: javax.crypto.Cipher): java.security.spec.PKCS8EncodedKeySpec
+            public getKeySpec(cipher: javax.crypto.Cipher): java.security.spec.PKCS8EncodedKeySpec
             /**
              * Extract the enclosed PKCS8EncodedKeySpec object from the
              * encrypted data and return it.
@@ -133,7 +133,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getKeySpec(decryptKey: java.security.Key): java.security.spec.PKCS8EncodedKeySpec
+            public getKeySpec(decryptKey: java.security.Key): java.security.spec.PKCS8EncodedKeySpec
             /**
              * Extract the enclosed PKCS8EncodedKeySpec object from the
              * encrypted data and return it.
@@ -153,7 +153,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getKeySpec(decryptKey: java.security.Key, providerName: string): java.security.spec.PKCS8EncodedKeySpec
+            public getKeySpec(decryptKey: java.security.Key, providerName: java.lang.String | string): java.security.spec.PKCS8EncodedKeySpec
             /**
              * Extract the enclosed PKCS8EncodedKeySpec object from the
              * encrypted data and return it.
@@ -171,7 +171,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getKeySpec(decryptKey: java.security.Key, provider: java.security.Provider): java.security.spec.PKCS8EncodedKeySpec
+            public getKeySpec(decryptKey: java.security.Key, provider: java.security.Provider): java.security.spec.PKCS8EncodedKeySpec
             /**
              * Returns the ASN.1 encoding of this object.
              * @return the ASN.1 encoding. Returns a new array
@@ -180,7 +180,7 @@ declare namespace javax {
              *  ASN.1 encoding.
              */
             // @ts-ignore
-            getEncoded(): byte[]
+            public getEncoded(): number /*byte*/[]
         }
     }
 }

@@ -11,7 +11,7 @@ declare namespace org {
                      * The default {@link Charset} that is used for reading {@link Asset}s.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFAULT_CHARSET: java.nio.charset.Charset
                     /**
                      * Returns the original {@link Plugin} owner of this Asset.
                      * @return Original owner of asset
@@ -77,7 +77,7 @@ declare namespace org {
                      * @return The file name
                      */
                     // @ts-ignore
-                    getFileName(): java.lang.String
+                    getFileName(): string
                     /**
                      * Reads this Asset in it's entirety as a {@link String} and returns the
                      * result.
@@ -85,7 +85,7 @@ declare namespace org {
                      * @throws IOException If any file exception is thrown
                      */
                     // @ts-ignore
-                    readString(): java.lang.String
+                    readString(): string
                     /**
                      * Reads this Asset in it's entirety as a {@link String} and returns the
                      * result.
@@ -94,14 +94,14 @@ declare namespace org {
                      * @throws IOException If any file exception is thrown
                      */
                     // @ts-ignore
-                    readString(charset: java.nio.charset.Charset): java.lang.String
+                    readString(charset: java.nio.charset.Charset): string
                     /**
                      * Reads all lines from the asset and returns the result.
                      * @return The lines read from the asset
                      * @throws IOException If any file exception is thrown
                      */
                     // @ts-ignore
-                    readLines(): java.util.List<java.lang.String>
+                    readLines(): Array<java.lang.String | string>
                     /**
                      * Reads all lines from the asset and returns the result.
                      * @param charset The charset to read the asset with
@@ -109,7 +109,7 @@ declare namespace org {
                      * @throws IOException If any file exception is thrown
                      */
                     // @ts-ignore
-                    readLines(charset: java.nio.charset.Charset): java.util.List<java.lang.String>
+                    readLines(charset: java.nio.charset.Charset): Array<java.lang.String | string>
                     /**
                      * Reads this Asset in it's entirety as a byte array and returns the
                      * result.
@@ -117,7 +117,7 @@ declare namespace org {
                      * @throws IOException If any file exception is thrown
                      */
                     // @ts-ignore
-                    readBytes(): byte[]
+                    readBytes(): number /*byte*/[]
                 }
             }
         }

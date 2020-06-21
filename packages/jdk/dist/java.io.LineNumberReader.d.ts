@@ -44,14 +44,14 @@ declare namespace java {
              * @see #getLineNumber
              */
             // @ts-ignore
-            setLineNumber(lineNumber: number /*int*/): void
+            public setLineNumber(lineNumber: number /*int*/): void
             /**
              * Get the current line number.
              * @return The current line number
              * @see #setLineNumber
              */
             // @ts-ignore
-            getLineNumber(): int
+            public getLineNumber(): number /*int*/
             /**
              * Read a single character.  <a href="#lt">Line terminators</a> are
              * compressed into single newline ('\n') characters.  Whenever a line
@@ -62,7 +62,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Read characters into a portion of an array.  Whenever a <a
              * href="#lt">line terminator</a> is read the current line number is
@@ -79,7 +79,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Read a line of text.  Whenever a <a href="#lt">line terminator</a> is
              * read the current line number is incremented.
@@ -90,7 +90,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            public readLine(): string
             /**
              * Skip characters.
              * @param n
@@ -102,7 +102,7 @@ declare namespace java {
              *           If <tt>n</tt> is negative
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Mark the present position in the stream.  Subsequent calls to reset()
              * will attempt to reposition the stream to this point, and will also reset
@@ -115,7 +115,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Reset the stream to the most recent mark.
              * @throws IOException
@@ -123,7 +123,7 @@ declare namespace java {
              *           invalidated
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
         }
     }
 }

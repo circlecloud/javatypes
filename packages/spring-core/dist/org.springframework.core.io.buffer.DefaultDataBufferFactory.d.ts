@@ -42,24 +42,24 @@ declare namespace org {
                          * @see #DefaultDataBufferFactory(boolean)
                          */
                         // @ts-ignore
-                        readonly DEFAULT_INITIAL_CAPACITY: number /*int*/
+                        public static readonly DEFAULT_INITIAL_CAPACITY: number /*int*/
                         // @ts-ignore
-                        allocateBuffer(): org.springframework.core.io.buffer.DefaultDataBuffer
+                        public allocateBuffer(): org.springframework.core.io.buffer.DefaultDataBuffer
                         // @ts-ignore
-                        allocateBuffer(initialCapacity: number /*int*/): org.springframework.core.io.buffer.DefaultDataBuffer
+                        public allocateBuffer(initialCapacity: number /*int*/): org.springframework.core.io.buffer.DefaultDataBuffer
                         // @ts-ignore
-                        wrap(byteBuffer: java.nio.ByteBuffer): org.springframework.core.io.buffer.DefaultDataBuffer
+                        public wrap(byteBuffer: java.nio.ByteBuffer): org.springframework.core.io.buffer.DefaultDataBuffer
                         // @ts-ignore
-                        wrap(bytes: number /*byte*/[]): org.springframework.core.io.buffer.DefaultDataBuffer
+                        public wrap(bytes: number /*byte*/[]): org.springframework.core.io.buffer.DefaultDataBuffer
                         /**
                          * {@inheritDoc}
                          * <p>This implementation creates a single {@link DefaultDataBuffer}
                          * to contain the data in {@code dataBuffers}.
                          */
                         // @ts-ignore
-                        join(dataBuffers: Array<org.springframework.core.io.buffer.DataBuffer>): org.springframework.core.io.buffer.DefaultDataBuffer
+                        public join(dataBuffers: java.util.List<any> | Array<any>): org.springframework.core.io.buffer.DefaultDataBuffer
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

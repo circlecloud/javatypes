@@ -50,7 +50,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            lookup(name: string): java.rmi.Remote
+            public static lookup(name: java.lang.String | string): java.rmi.Remote
             /**
              * Binds the specified <code>name</code> to a remote object.
              * @param name a name in URL format (without the scheme component)
@@ -64,7 +64,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            bind(name: string, obj: java.rmi.Remote): void
+            public static bind(name: java.lang.String | string, obj: java.rmi.Remote): void
             /**
              * Destroys the binding for the specified name that is associated
              * with a remote object.
@@ -78,7 +78,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            unbind(name: string): void
+            public static unbind(name: java.lang.String | string): void
             /**
              * Rebinds the specified name to a new remote object. Any existing
              * binding for the name is replaced.
@@ -92,7 +92,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            rebind(name: string, obj: java.rmi.Remote): void
+            public static rebind(name: java.lang.String | string, obj: java.rmi.Remote): void
             /**
              * Returns an array of the names bound in the registry.  The names are
              * URL-formatted (without the scheme component) strings. The array contains
@@ -108,7 +108,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            list(name: string): java.lang.String[]
+            public static list(name: java.lang.String | string): string[]
         }
     }
 }

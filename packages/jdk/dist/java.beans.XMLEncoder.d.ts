@@ -208,28 +208,28 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            constructor(out: java.io.OutputStream, charset: string, declaration: boolean, indentation: number /*int*/)
+            constructor(out: java.io.OutputStream, charset: java.lang.String | string, declaration: boolean, indentation: number /*int*/)
             /**
              * Sets the owner of this encoder to <code>owner</code>.
              * @param owner The owner of this encoder.
              * @see #getOwner
              */
             // @ts-ignore
-            setOwner(owner: any): void
+            public setOwner(owner: java.lang.Object | any): void
             /**
              * Gets the owner of this encoder.
              * @return The owner of this encoder.
              * @see #setOwner
              */
             // @ts-ignore
-            getOwner(): java.lang.Object
+            public getOwner(): any
             /**
              * Write an XML representation of the specified object to the output.
              * @param o The object to be written to the stream.
              * @see XMLDecoder#readObject
              */
             // @ts-ignore
-            writeObject(o: any): void
+            public writeObject(o: java.lang.Object | any): void
             /**
              * Records the Statement so that the Encoder will
              * produce the actual output when the stream is flushed.
@@ -241,7 +241,7 @@ declare namespace java {
              * @see java.beans.PersistenceDelegate#initialize
              */
             // @ts-ignore
-            writeStatement(oldStm: java.beans.Statement): void
+            public writeStatement(oldStm: java.beans.Statement): void
             /**
              * Records the Expression so that the Encoder will
              * produce the actual output when the stream is flushed.
@@ -258,7 +258,7 @@ declare namespace java {
              * @see java.beans.PersistenceDelegate#initialize
              */
             // @ts-ignore
-            writeExpression(oldExp: java.beans.Expression): void
+            public writeExpression(oldExp: java.beans.Expression): void
             /**
              * This method writes out the preamble associated with the
              * XML encoding if it has not been written already and
@@ -268,14 +268,14 @@ declare namespace java {
              * values that were written to this stream are cleared.
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * This method calls <code>flush</code>, writes the closing
              * postamble and then closes the output stream associated
              * with this stream.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

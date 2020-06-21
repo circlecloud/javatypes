@@ -46,7 +46,7 @@ declare namespace java {
                  * @return an enumeration of the group members.
                  */
                 // @ts-ignore
-                members(): java.util.Enumeration<? extends java.security.Principal>
+                members(): java.util.Enumeration<any>
             }
         }
     }

@@ -7,7 +7,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class RootPaneUI extends javax.swing.plaf.ComponentUI {
+            abstract class RootPaneUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

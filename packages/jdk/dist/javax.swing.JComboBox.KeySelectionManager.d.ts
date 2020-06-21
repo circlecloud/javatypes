@@ -22,7 +22,7 @@ declare namespace javax {
                  *          first item and -1 is none.
                  */
                 // @ts-ignore
-                selectionForKey(aKey: string, aModel: javax.swing.ComboBoxModel): int
+                selectionForKey(aKey: string, aModel: javax.swing.ComboBoxModel<any>): number /*int*/
             }
         }
     }

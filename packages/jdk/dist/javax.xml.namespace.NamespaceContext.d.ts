@@ -110,7 +110,7 @@ declare namespace javax {
                  *    <code>null</code>
                  */
                 // @ts-ignore
-                getNamespaceURI(prefix: string): java.lang.String
+                getNamespaceURI(prefix: java.lang.String | string): string
                 /**
                  * <p>Get prefix bound to Namespace URI in the current scope.</p>
                  * <p>To get all prefixes bound to a Namespace URI in the current
@@ -170,7 +170,7 @@ declare namespace javax {
                  *    <code>null</code>
                  */
                 // @ts-ignore
-                getPrefix(namespaceURI: string): java.lang.String
+                getPrefix(namespaceURI: java.lang.String | string): string
                 /**
                  * <p>Get all prefixes bound to a Namespace URI in the current
                  * scope.</p>
@@ -235,7 +235,7 @@ declare namespace javax {
                  *    <code>null</code>
                  */
                 // @ts-ignore
-                getPrefixes(namespaceURI: string): java.util.Iterator
+                getPrefixes(namespaceURI: java.lang.String | string): java.util.Iterator<any>
             }
         }
     }

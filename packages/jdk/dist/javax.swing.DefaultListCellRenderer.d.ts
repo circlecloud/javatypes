@@ -31,7 +31,7 @@ declare namespace javax {
          * @author Hans Muller
          */
         // @ts-ignore
-        class DefaultListCellRenderer extends javax.swing.JLabel implements javax.swing.ListCellRenderer<java.lang.Object>, java.io.Serializable {
+        class DefaultListCellRenderer extends javax.swing.JLabel implements javax.swing.ListCellRenderer<java.lang.Object | any>, java.io.Serializable {
             /**
              * Constructs a default renderer object for an item
              * in a list.
@@ -39,9 +39,9 @@ declare namespace javax {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            noFocusBorder: javax.swing.border.Border
+            static noFocusBorder: javax.swing.border.Border
             // @ts-ignore
-            getListCellRendererComponent(list: javax.swing.JList<any>, value: any, index: number /*int*/, isSelected: boolean, cellHasFocus: boolean): java.awt.Component
+            public getListCellRendererComponent(list: javax.swing.JList<any>, value: java.lang.Object | any, index: number /*int*/, isSelected: boolean, cellHasFocus: boolean): java.awt.Component
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
@@ -52,22 +52,14 @@ declare namespace javax {
              *          <code>false</code> otherwise
              */
             // @ts-ignore
-            isOpaque(): boolean
+            public isOpaque(): boolean
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            validate(): void
-            /**
-             * Overridden for performance reasons.
-             * See the <a href="#override">Implementation Note</a>
-             * for more information.
-             * @since 1.5
-             */
-            // @ts-ignore
-            invalidate(): void
+            public validate(): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
@@ -75,91 +67,99 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            repaint(): void
+            public invalidate(): void
+            /**
+             * Overridden for performance reasons.
+             * See the <a href="#override">Implementation Note</a>
+             * for more information.
+             * @since 1.5
+             */
+            // @ts-ignore
+            public repaint(): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            revalidate(): void
+            public revalidate(): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            repaint(r: java.awt.Rectangle): void
+            public repaint(r: java.awt.Rectangle): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*byte*/, newValue: number /*byte*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*byte*/, newValue: number /*byte*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: string, newValue: string): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: string, newValue: string): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*short*/, newValue: number /*short*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*short*/, newValue: number /*short*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*int*/, newValue: number /*int*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*int*/, newValue: number /*int*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*long*/, newValue: number /*long*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*long*/, newValue: number /*long*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*float*/, newValue: number /*float*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*float*/, newValue: number /*float*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*double*/, newValue: number /*double*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*double*/, newValue: number /*double*/): void
             /**
              * Overridden for performance reasons.
              * See the <a href="#override">Implementation Note</a>
              * for more information.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
         }
     }
 }

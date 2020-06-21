@@ -145,7 +145,7 @@ declare namespace javax {
                  * @see DataLine#available
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             }
         }
     }

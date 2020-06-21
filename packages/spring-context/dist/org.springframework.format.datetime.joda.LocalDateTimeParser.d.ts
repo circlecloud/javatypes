@@ -18,7 +18,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(formatter: DateTimeFormatter)
                         // @ts-ignore
-                        parse(text: string, locale: java.util.Locale): LocalDateTime
+                        public parse(text: java.lang.String | string, locale: java.util.Locale): LocalDateTime
                     }
                 }
             }

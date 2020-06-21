@@ -25,7 +25,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            flag(...specs: string[]): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public flag(...specs: java.lang.String[] | string[]): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * Allow a flag with any of the provided specifications that has no
                              * value but requires the source to have a specific permission to
@@ -36,7 +36,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            permissionFlag(flagPermission: string, ...specs: string[]): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public permissionFlag(flagPermission: java.lang.String | string, ...specs: java.lang.String[] | string[]): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * Allow a flag with any of the provided specifications, with the given
                              * command element. The flag may be present multiple times, and may
@@ -48,7 +48,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            valueFlag(value: org.spongepowered.api.command.args.CommandElement, ...specs: string[]): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public valueFlag(value: org.spongepowered.api.command.args.CommandElement, ...specs: java.lang.String[] | string[]): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * If this is true, any long flag (--) will be accepted and added as a
                              * flag. If false, unknown long flags are considered errors.
@@ -58,7 +58,7 @@ declare namespace org {
                              *          {#link #setUnknownLongFlagBehavior(UnknownFlagBehavior)}.
                              */
                             // @ts-ignore
-                            setAcceptsArbitraryLongFlags(acceptsArbitraryLongFlags: boolean): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public setAcceptsArbitraryLongFlags(acceptsArbitraryLongFlags: boolean): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * Sets how long flags that are not registered should be handled when
                              * encountered.
@@ -66,7 +66,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            setUnknownLongFlagBehavior(behavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public setUnknownLongFlagBehavior(behavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * Sets how long flags that are not registered should be handled when
                              * encountered.
@@ -79,7 +79,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            setUnknownShortFlagBehavior(behavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public setUnknownShortFlagBehavior(behavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * Whether flags should be anchored to the beginning of the text (so
                              * flags will only be picked up if they are at the beginning of the
@@ -88,7 +88,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            setAnchorFlags(anchorFlags: boolean): org.spongepowered.api.command.args.CommandFlags.Builder
+                            public setAnchorFlags(anchorFlags: boolean): org.spongepowered.api.command.args.CommandFlags.Builder
                             /**
                              * Build a flag command element using the given command element to
                              * handle all non-flag arguments.
@@ -98,7 +98,7 @@ declare namespace org {
                              * @return the new command element
                              */
                             // @ts-ignore
-                            buildWith(wrapped: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
+                            public buildWith(wrapped: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
                         }
                     }
                 }

@@ -18,25 +18,25 @@ declare namespace java {
                  * which has the value -1.
                  */
                 // @ts-ignore
-                readonly MEIJI: java.time.chrono.JapaneseEra
+                public static readonly MEIJI: java.time.chrono.JapaneseEra
                 /**
                  * The singleton instance for the 'Taisho' era (1912-07-30 - 1926-12-24)
                  * which has the value 0.
                  */
                 // @ts-ignore
-                readonly TAISHO: java.time.chrono.JapaneseEra
+                public static readonly TAISHO: java.time.chrono.JapaneseEra
                 /**
                  * The singleton instance for the 'Showa' era (1926-12-25 - 1989-01-07)
                  * which has the value 1.
                  */
                 // @ts-ignore
-                readonly SHOWA: java.time.chrono.JapaneseEra
+                public static readonly SHOWA: java.time.chrono.JapaneseEra
                 /**
                  * The singleton instance for the 'Heisei' era (1989-01-08 - current)
                  * which has the value 2.
                  */
                 // @ts-ignore
-                readonly HEISEI: java.time.chrono.JapaneseEra
+                public static readonly HEISEI: java.time.chrono.JapaneseEra
                 /**
                  * Obtains an instance of {@code JapaneseEra} from an {@code int} value.
                  * <p>
@@ -48,7 +48,7 @@ declare namespace java {
                  * @throws DateTimeException if the value is invalid
                  */
                 // @ts-ignore
-                of(japaneseEra: number /*int*/): java.time.chrono.JapaneseEra
+                public static of(japaneseEra: number /*int*/): java.time.chrono.JapaneseEra
                 /**
                  * Returns the {@code JapaneseEra} with the name.
                  * <p>
@@ -59,7 +59,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if there is not JapaneseEra with the specified name
                  */
                 // @ts-ignore
-                valueOf(japaneseEra: string): java.time.chrono.JapaneseEra
+                public static valueOf(japaneseEra: java.lang.String | string): java.time.chrono.JapaneseEra
                 /**
                  * Returns an array of JapaneseEras.
                  * <p>
@@ -71,14 +71,14 @@ declare namespace java {
                  * @return an array of JapaneseEras
                  */
                 // @ts-ignore
-                values(): java.time.chrono.JapaneseEra[]
+                public static values(): java.time.chrono.JapaneseEra[]
                 /**
                  * {@inheritDoc}
                  * @param style {#inheritDoc}
                  * @param locale {#inheritDoc}
                  */
                 // @ts-ignore
-                getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): java.lang.String
+                public getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
                 /**
                  * Gets the numeric era {@code int} value.
                  * <p>
@@ -88,7 +88,7 @@ declare namespace java {
                  * @return the era value
                  */
                 // @ts-ignore
-                getValue(): int
+                public getValue(): number /*int*/
                 /**
                  * Gets the range of valid values for the specified field.
                  * <p>
@@ -114,9 +114,9 @@ declare namespace java {
                  * @throws UnsupportedTemporalTypeException if the unit is not supported
                  */
                 // @ts-ignore
-                range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

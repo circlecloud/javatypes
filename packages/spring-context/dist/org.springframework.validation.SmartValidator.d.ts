@@ -27,7 +27,7 @@ declare namespace org {
                  * @see javax.validation.Validator#validate(Object, Class[])
                  */
                 // @ts-ignore
-                validate(target: any, errors: org.springframework.validation.Errors, ...validationHints: any[]): void
+                validate(target: java.lang.Object | any, errors: org.springframework.validation.Errors, ...validationHints: java.lang.Object[] | any[]): void
                 /**
                  * Validate the supplied value for the specified field on the target type,
                  * reporting the same validation errors as if the value would be bound to
@@ -41,7 +41,7 @@ declare namespace org {
                  * @see javax.validation.Validator#validateValue(Class, String, Object, Class[])
                  */
                 // @ts-ignore
-                validateValue(targetType: java.lang.Class<any>, fieldName: string, value: any, errors: org.springframework.validation.Errors, ...validationHints: any[]): void
+                validateValue(targetType: java.lang.Class<any>, fieldName: java.lang.String | string, value: java.lang.Object | any, errors: org.springframework.validation.Errors, ...validationHints: java.lang.Object[] | any[]): void
             }
         }
     }

@@ -20,11 +20,11 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                isPressed(): boolean
+                public isPressed(): boolean
                 // @ts-ignore
-                setPressed(isPressed: boolean): void
+                public setPressed(isPressed: boolean): void
                 // @ts-ignore
-                clone(): org.bukkit.material.DetectorRail
+                public clone(): org.bukkit.material.DetectorRail
             }
         }
     }

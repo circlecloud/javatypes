@@ -192,7 +192,7 @@ declare namespace java {
                  * @param m the map
                  */
                 // @ts-ignore
-                constructor(m: java.util.Map<K, V>)
+                constructor(m: java.util.Map<any, any>)
                 /**
                  * Creates a new, empty map with an initial table size based on
                  * the given number of elements ({@code initialCapacity}) and
@@ -231,12 +231,12 @@ declare namespace java {
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Returns the value to which the specified key is mapped,
                  * or {@code null} if this map contains no mapping for the key.
@@ -247,7 +247,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                get(key: any): V
+                public get(key: java.lang.Object | any): V
                 /**
                  * Tests if the specified object is a key in this table.
                  * @param key possible key
@@ -257,7 +257,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 /**
                  * Returns {@code true} if this map maps one or more keys to the
                  * specified value. Note: This method may require a full traversal
@@ -268,7 +268,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified value is null
                  */
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 /**
                  * Maps the specified key to the specified value in this table.
                  * Neither the key nor the value can be null.
@@ -281,7 +281,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key or value is null
                  */
                 // @ts-ignore
-                put(key: K, value: V): V
+                public put(key: K, value: V): V
                 /**
                  * Copies all of the mappings from the specified map to this one.
                  * These mappings replace any mappings that this map had for any of the
@@ -289,7 +289,7 @@ declare namespace java {
                  * @param m mappings to be stored in this map
                  */
                 // @ts-ignore
-                putAll(m: java.util.Map<K, V>): void
+                public putAll(m: java.util.Map<any, any>): void
                 /**
                  * Removes the key (and its corresponding value) from this map.
                  * This method does nothing if the key is not in the map.
@@ -299,12 +299,12 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                remove(key: any): V
+                public remove(key: java.lang.Object | any): V
                 /**
                  * Removes all of the mappings from this map.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Returns a {@link Set} view of the keys contained in this map.
                  * The set is backed by the map, so changes to the map are
@@ -321,7 +321,7 @@ declare namespace java {
                  * @return the set view
                  */
                 // @ts-ignore
-                keySet(): java.util.concurrent.ConcurrentHashMap.KeySetView<K, V>
+                public keySet(): java.util.concurrent.ConcurrentHashMap.KeySetView<K, V>
                 /**
                  * Returns a {@link Collection} view of the values contained in this map.
                  * The collection is backed by the map, so changes to the map are
@@ -338,7 +338,7 @@ declare namespace java {
                  * @return the collection view
                  */
                 // @ts-ignore
-                values(): java.util.Collection<V>
+                public values(): Array<V>
                 /**
                  * Returns a {@link Set} view of the mappings contained in this map.
                  * The set is backed by the map, so changes to the map are
@@ -354,7 +354,7 @@ declare namespace java {
                  * @return the set view
                  */
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+                public entrySet(): Array<java.util.Map.Entry<K, V>>
                 /**
                  * Returns the hash code value for this {@link Map}, i.e.,
                  * the sum of, for each key-value pair in the map,
@@ -362,7 +362,7 @@ declare namespace java {
                  * @return the hash code value for this map
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this map.  The string
                  * representation consists of a list of key-value mappings (in no
@@ -374,7 +374,7 @@ declare namespace java {
                  * @return a string representation of this map
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Compares the specified object with this map for equality.
                  * Returns {@code true} if the given object is a map with the same
@@ -385,7 +385,7 @@ declare namespace java {
                  * @return {#code true} if the specified object is equal to this map
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * {@inheritDoc}
                  * @return the previous value associated with the specified key,
@@ -393,19 +393,19 @@ declare namespace java {
                  * @throws NullPointerException if the specified key or value is null
                  */
                 // @ts-ignore
-                putIfAbsent(key: K, value: V): V
+                public putIfAbsent(key: K, value: V): V
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                remove(key: any, value: any): boolean
+                public remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException if any of the arguments are null
                  */
                 // @ts-ignore
-                replace(key: K, oldValue: V, newValue: V): boolean
+                public replace(key: K, oldValue: V, newValue: V): boolean
                 /**
                  * {@inheritDoc}
                  * @return the previous value associated with the specified key,
@@ -413,7 +413,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key or value is null
                  */
                 // @ts-ignore
-                replace(key: K, value: V): V
+                public replace(key: K, value: V): V
                 /**
                  * Returns the value to which the specified key is mapped, or the
                  * given default value if this map contains no mapping for the
@@ -425,11 +425,11 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                getOrDefault(key: any, defaultValue: V): V
+                public getOrDefault(key: java.lang.Object | any, defaultValue: V): V
                 // @ts-ignore
-                forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+                public forEach(action: java.util.function$.BiConsumer<any, any>): void
                 // @ts-ignore
-                replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+                public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
                 /**
                  * If the specified key is not already associated with a value,
                  * attempts to compute its value using the given mapping function
@@ -452,7 +452,7 @@ declare namespace java {
                  *          in which case the mapping is left unestablished
                  */
                 // @ts-ignore
-                computeIfAbsent(key: K, mappingFunction: java.util.function.Function<any super K, V> | java.util.function$.Function<? super K, V>): V
+                public computeIfAbsent(key: K, mappingFunction: java.util.function$.Function<any, any>): V
                 /**
                  * If the value for the specified key is present, attempts to
                  * compute a new mapping given the key and its current mapped
@@ -473,7 +473,7 @@ declare namespace java {
                  *          in which case the mapping is unchanged
                  */
                 // @ts-ignore
-                computeIfPresent(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+                public computeIfPresent(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * Attempts to compute a mapping for the specified key and its
                  * current mapped value (or {@code null} if there is no current
@@ -494,7 +494,7 @@ declare namespace java {
                  *          in which case the mapping is unchanged
                  */
                 // @ts-ignore
-                compute(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+                public compute(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * If the specified key is not already associated with a
                  * (non-null) value, associates it with the given value.
@@ -515,7 +515,7 @@ declare namespace java {
                  *          in which case the mapping is unchanged
                  */
                 // @ts-ignore
-                merge(key: K, value: V, remappingFunction: java.util.function.BiFunction<any super V, ? super V, V> | java.util.function$.BiFunction<? super V, ? super V, V>): V
+                public merge(key: K, value: V, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * Legacy method testing if some key maps into the specified value
                  * in this table.  This method is identical in functionality to
@@ -531,21 +531,21 @@ declare namespace java {
                  * @throws NullPointerException if the specified value is null
                  */
                 // @ts-ignore
-                contains(value: any): boolean
+                public contains(value: java.lang.Object | any): boolean
                 /**
                  * Returns an enumeration of the keys in this table.
                  * @return an enumeration of the keys in this table
                  * @see #keySet()
                  */
                 // @ts-ignore
-                keys(): java.util.Enumeration<K>
+                public keys(): java.util.Enumeration<K>
                 /**
                  * Returns an enumeration of the values in this table.
                  * @return an enumeration of the values in this table
                  * @see #values()
                  */
                 // @ts-ignore
-                elements(): java.util.Enumeration<V>
+                public elements(): java.util.Enumeration<V>
                 /**
                  * Returns the number of mappings. This method should be used
                  * instead of {@link #size} because a ConcurrentHashMap may
@@ -556,7 +556,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                mappingCount(): long
+                public mappingCount(): number /*long*/
                 /**
                  * Creates a new {@link Set} backed by a ConcurrentHashMap
                  * from the given type to {@code Boolean.TRUE}.
@@ -565,7 +565,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                newKeySet<K>(): java.util.concurrent.ConcurrentHashMap.KeySetView<K, java.lang.Boolean>
+                public static newKeySet<K>(): java.util.concurrent.ConcurrentHashMap.KeySetView<K, java.lang.Boolean>
                 /**
                  * Creates a new {@link Set} backed by a ConcurrentHashMap
                  * from the given type to {@code Boolean.TRUE}.
@@ -578,7 +578,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                newKeySet<K>(initialCapacity: number /*int*/): java.util.concurrent.ConcurrentHashMap.KeySetView<K, java.lang.Boolean>
+                public static newKeySet<K>(initialCapacity: number /*int*/): java.util.concurrent.ConcurrentHashMap.KeySetView<K, java.lang.Boolean>
                 /**
                  * Returns a {@link Set} view of the keys in this map, using the
                  * given common mapped value for any additions (i.e., {@link
@@ -590,7 +590,7 @@ declare namespace java {
                  * @throws NullPointerException if the mappedValue is null
                  */
                 // @ts-ignore
-                keySet(mappedValue: V): java.util.concurrent.ConcurrentHashMap.KeySetView<K, V>
+                public keySet(mappedValue: V): java.util.concurrent.ConcurrentHashMap.KeySetView<K, V>
                 /**
                  * Performs the given action for each (key, value).
                  * @param parallelismThreshold the (estimated) number of elements
@@ -599,7 +599,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEach(parallelismThreshold: number /*long*/, action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+                public forEach(parallelismThreshold: number /*long*/, action: java.util.function$.BiConsumer<any, any>): void
                 /**
                  * Performs the given action for each non-null transformation
                  * of each (key, value).
@@ -613,7 +613,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEach<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.BiFunction<any super K, ? super V, U> | java.util.function$.BiFunction<? super K, ? super V, U>, action: java.util.function.Consumer<any super U> | java.util.function$.Consumer<? super U>): void
+                public forEach<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.BiFunction<any, any, any>, action: java.util.function$.Consumer<any>): void
                 /**
                  * Returns a non-null result from applying the given search
                  * function on each (key, value), or null if none.  Upon
@@ -630,7 +630,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                search<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function.BiFunction<any super K, ? super V, U> | java.util.function$.BiFunction<? super K, ? super V, U>): U
+                public search<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function$.BiFunction<any, any, any>): U
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all (key, value) pairs using the given reducer to
@@ -647,7 +647,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduce<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.BiFunction<any super K, ? super V, U> | java.util.function$.BiFunction<? super K, ? super V, U>, reducer: java.util.function.BiFunction<any super U, ? super U, U> | java.util.function$.BiFunction<? super U, ? super U, U>): U
+                public reduce<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.BiFunction<any, any, any>, reducer: java.util.function$.BiFunction<any, any, any>): U
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all (key, value) pairs using the given reducer to
@@ -663,7 +663,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function.ToDoubleBiFunction<any super K, ? super V> | java.util.function$.ToDoubleBiFunction<? super K, ? super V>, basis: number /*double*/, reducer: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): double
+                public reduceToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToDoubleBiFunction<any, any>, basis: number /*double*/, reducer: java.util.function$.DoubleBinaryOperator): number /*double*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all (key, value) pairs using the given reducer to
@@ -679,7 +679,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceToLong(parallelismThreshold: number /*long*/, transformer: java.util.function.ToLongBiFunction<any super K, ? super V> | java.util.function$.ToLongBiFunction<? super K, ? super V>, basis: number /*long*/, reducer: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                public reduceToLong(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToLongBiFunction<any, any>, basis: number /*long*/, reducer: java.util.function$.LongBinaryOperator): number /*long*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all (key, value) pairs using the given reducer to
@@ -695,7 +695,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceToInt(parallelismThreshold: number /*long*/, transformer: java.util.function.ToIntBiFunction<any super K, ? super V> | java.util.function$.ToIntBiFunction<? super K, ? super V>, basis: number /*int*/, reducer: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): int
+                public reduceToInt(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToIntBiFunction<any, any>, basis: number /*int*/, reducer: java.util.function$.IntBinaryOperator): number /*int*/
                 /**
                  * Performs the given action for each key.
                  * @param parallelismThreshold the (estimated) number of elements
@@ -704,7 +704,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEachKey(parallelismThreshold: number /*long*/, action: java.util.function.Consumer<any super K> | java.util.function$.Consumer<? super K>): void
+                public forEachKey(parallelismThreshold: number /*long*/, action: java.util.function$.Consumer<any>): void
                 /**
                  * Performs the given action for each non-null transformation
                  * of each key.
@@ -718,7 +718,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEachKey<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.Function<any super K, U> | java.util.function$.Function<? super K, U>, action: java.util.function.Consumer<any super U> | java.util.function$.Consumer<? super U>): void
+                public forEachKey<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.Function<any, any>, action: java.util.function$.Consumer<any>): void
                 /**
                  * Returns a non-null result from applying the given search
                  * function on each key, or null if none. Upon success,
@@ -735,7 +735,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                searchKeys<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function.Function<any super K, U> | java.util.function$.Function<? super K, U>): U
+                public searchKeys<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function$.Function<any, any>): U
                 /**
                  * Returns the result of accumulating all keys using the given
                  * reducer to combine values, or null if none.
@@ -747,7 +747,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceKeys(parallelismThreshold: number /*long*/, reducer: java.util.function.BiFunction<any super K, ? super K, K> | java.util.function$.BiFunction<? super K, ? super K, K>): K
+                public reduceKeys(parallelismThreshold: number /*long*/, reducer: java.util.function$.BiFunction<any, any, any>): K
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all keys using the given reducer to combine values, or
@@ -764,7 +764,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceKeys<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.Function<any super K, U> | java.util.function$.Function<? super K, U>, reducer: java.util.function.BiFunction<any super U, ? super U, U> | java.util.function$.BiFunction<? super U, ? super U, U>): U
+                public reduceKeys<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.Function<any, any>, reducer: java.util.function$.BiFunction<any, any, any>): U
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all keys using the given reducer to combine values, and
@@ -780,7 +780,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceKeysToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function.ToDoubleFunction<any super K> | java.util.function$.ToDoubleFunction<? super K>, basis: number /*double*/, reducer: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): double
+                public reduceKeysToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToDoubleFunction<any>, basis: number /*double*/, reducer: java.util.function$.DoubleBinaryOperator): number /*double*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all keys using the given reducer to combine values, and
@@ -796,7 +796,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceKeysToLong(parallelismThreshold: number /*long*/, transformer: java.util.function.ToLongFunction<any super K> | java.util.function$.ToLongFunction<? super K>, basis: number /*long*/, reducer: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                public reduceKeysToLong(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToLongFunction<any>, basis: number /*long*/, reducer: java.util.function$.LongBinaryOperator): number /*long*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all keys using the given reducer to combine values, and
@@ -812,7 +812,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceKeysToInt(parallelismThreshold: number /*long*/, transformer: java.util.function.ToIntFunction<any super K> | java.util.function$.ToIntFunction<? super K>, basis: number /*int*/, reducer: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): int
+                public reduceKeysToInt(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToIntFunction<any>, basis: number /*int*/, reducer: java.util.function$.IntBinaryOperator): number /*int*/
                 /**
                  * Performs the given action for each value.
                  * @param parallelismThreshold the (estimated) number of elements
@@ -821,7 +821,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEachValue(parallelismThreshold: number /*long*/, action: java.util.function.Consumer<any super V> | java.util.function$.Consumer<? super V>): void
+                public forEachValue(parallelismThreshold: number /*long*/, action: java.util.function$.Consumer<any>): void
                 /**
                  * Performs the given action for each non-null transformation
                  * of each value.
@@ -835,7 +835,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEachValue<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.Function<any super V, U> | java.util.function$.Function<? super V, U>, action: java.util.function.Consumer<any super U> | java.util.function$.Consumer<? super U>): void
+                public forEachValue<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.Function<any, any>, action: java.util.function$.Consumer<any>): void
                 /**
                  * Returns a non-null result from applying the given search
                  * function on each value, or null if none.  Upon success,
@@ -852,7 +852,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                searchValues<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function.Function<any super V, U> | java.util.function$.Function<? super V, U>): U
+                public searchValues<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function$.Function<any, any>): U
                 /**
                  * Returns the result of accumulating all values using the
                  * given reducer to combine values, or null if none.
@@ -863,7 +863,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceValues(parallelismThreshold: number /*long*/, reducer: java.util.function.BiFunction<any super V, ? super V, V> | java.util.function$.BiFunction<? super V, ? super V, V>): V
+                public reduceValues(parallelismThreshold: number /*long*/, reducer: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all values using the given reducer to combine values, or
@@ -880,7 +880,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceValues<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.Function<any super V, U> | java.util.function$.Function<? super V, U>, reducer: java.util.function.BiFunction<any super U, ? super U, U> | java.util.function$.BiFunction<? super U, ? super U, U>): U
+                public reduceValues<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.Function<any, any>, reducer: java.util.function$.BiFunction<any, any, any>): U
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all values using the given reducer to combine values,
@@ -896,7 +896,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceValuesToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function.ToDoubleFunction<any super V> | java.util.function$.ToDoubleFunction<? super V>, basis: number /*double*/, reducer: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): double
+                public reduceValuesToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToDoubleFunction<any>, basis: number /*double*/, reducer: java.util.function$.DoubleBinaryOperator): number /*double*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all values using the given reducer to combine values,
@@ -912,7 +912,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceValuesToLong(parallelismThreshold: number /*long*/, transformer: java.util.function.ToLongFunction<any super V> | java.util.function$.ToLongFunction<? super V>, basis: number /*long*/, reducer: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                public reduceValuesToLong(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToLongFunction<any>, basis: number /*long*/, reducer: java.util.function$.LongBinaryOperator): number /*long*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all values using the given reducer to combine values,
@@ -928,7 +928,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceValuesToInt(parallelismThreshold: number /*long*/, transformer: java.util.function.ToIntFunction<any super V> | java.util.function$.ToIntFunction<? super V>, basis: number /*int*/, reducer: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): int
+                public reduceValuesToInt(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToIntFunction<any>, basis: number /*int*/, reducer: java.util.function$.IntBinaryOperator): number /*int*/
                 /**
                  * Performs the given action for each entry.
                  * @param parallelismThreshold the (estimated) number of elements
@@ -937,7 +937,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEachEntry(parallelismThreshold: number /*long*/, action: java.util.function.Consumer<any super java.util.Map.Entry<K, V>> | java.util.function$.Consumer<? super java.util.Map.Entry<K, V>>): void
+                public forEachEntry(parallelismThreshold: number /*long*/, action: java.util.function$.Consumer<any>): void
                 /**
                  * Performs the given action for each non-null transformation
                  * of each entry.
@@ -951,7 +951,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEachEntry<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.Function<java.util.Map.Entry<K, V>, U> | java.util.function$.Function<java.util.Map.Entry<K, V>, U>, action: java.util.function.Consumer<any super U> | java.util.function$.Consumer<? super U>): void
+                public forEachEntry<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.Function<java.util.Map.Entry<K, V>, any>, action: java.util.function$.Consumer<any>): void
                 /**
                  * Returns a non-null result from applying the given search
                  * function on each entry, or null if none.  Upon success,
@@ -968,7 +968,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                searchEntries<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function.Function<java.util.Map.Entry<K, V>, U> | java.util.function$.Function<java.util.Map.Entry<K, V>, U>): U
+                public searchEntries<U>(parallelismThreshold: number /*long*/, searchFunction: java.util.function$.Function<java.util.Map.Entry<K, V>, any>): U
                 /**
                  * Returns the result of accumulating all entries using the
                  * given reducer to combine values, or null if none.
@@ -979,7 +979,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceEntries(parallelismThreshold: number /*long*/, reducer: java.util.function.BiFunction<java.util.Map.Entry<K, V>, java.util.Map.Entry<K, V>, java.util.Map.Entry<K, V>> | java.util.function$.BiFunction<java.util.Map.Entry<K, V>, java.util.Map.Entry<K, V>, java.util.Map.Entry<K, V>>): java.util.Map.Entry<K, V>
+                public reduceEntries(parallelismThreshold: number /*long*/, reducer: java.util.function$.BiFunction<java.util.Map.Entry<K, V>, java.util.Map.Entry<K, V>, any>): java.util.Map.Entry<K, V>
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all entries using the given reducer to combine values,
@@ -996,7 +996,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceEntries<U>(parallelismThreshold: number /*long*/, transformer: java.util.function.Function<java.util.Map.Entry<K, V>, U> | java.util.function$.Function<java.util.Map.Entry<K, V>, U>, reducer: java.util.function.BiFunction<any super U, ? super U, U> | java.util.function$.BiFunction<? super U, ? super U, U>): U
+                public reduceEntries<U>(parallelismThreshold: number /*long*/, transformer: java.util.function$.Function<java.util.Map.Entry<K, V>, any>, reducer: java.util.function$.BiFunction<any, any, any>): U
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all entries using the given reducer to combine values,
@@ -1012,7 +1012,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceEntriesToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function.ToDoubleFunction<java.util.Map.Entry<K, V>> | java.util.function$.ToDoubleFunction<java.util.Map.Entry<K, V>>, basis: number /*double*/, reducer: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): double
+                public reduceEntriesToDouble(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToDoubleFunction<java.util.Map.Entry<K, V>>, basis: number /*double*/, reducer: java.util.function$.DoubleBinaryOperator): number /*double*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all entries using the given reducer to combine values,
@@ -1028,7 +1028,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceEntriesToLong(parallelismThreshold: number /*long*/, transformer: java.util.function.ToLongFunction<java.util.Map.Entry<K, V>> | java.util.function$.ToLongFunction<java.util.Map.Entry<K, V>>, basis: number /*long*/, reducer: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                public reduceEntriesToLong(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToLongFunction<java.util.Map.Entry<K, V>>, basis: number /*long*/, reducer: java.util.function$.LongBinaryOperator): number /*long*/
                 /**
                  * Returns the result of accumulating the given transformation
                  * of all entries using the given reducer to combine values,
@@ -1044,7 +1044,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                reduceEntriesToInt(parallelismThreshold: number /*long*/, transformer: java.util.function.ToIntFunction<java.util.Map.Entry<K, V>> | java.util.function$.ToIntFunction<java.util.Map.Entry<K, V>>, basis: number /*int*/, reducer: java.util.function.IntBinaryOperator | java.util.function$.IntBinaryOperator): int
+                public reduceEntriesToInt(parallelismThreshold: number /*long*/, transformer: java.util.function$.ToIntFunction<java.util.Map.Entry<K, V>>, basis: number /*int*/, reducer: java.util.function$.IntBinaryOperator): number /*int*/
             }
         }
     }

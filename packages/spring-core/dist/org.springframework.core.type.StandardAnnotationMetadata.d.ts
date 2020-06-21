@@ -40,17 +40,17 @@ declare namespace org {
                     // @ts-ignore
                     constructor(introspectedClass: java.lang.Class<any>, nestedAnnotationsAsMap: boolean)
                     // @ts-ignore
-                    getAnnotations(): org.springframework.core.annotation.MergedAnnotations
+                    public getAnnotations(): org.springframework.core.annotation.MergedAnnotations
                     // @ts-ignore
-                    getAnnotationTypes(): java.util.Set<java.lang.String>
+                    public getAnnotationTypes(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getAnnotationAttributes(annotationName: string, classValuesAsString: boolean): java.util.Map<java.lang.String, java.lang.Object>
+                    public getAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    getAllAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                    public getAllAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    hasAnnotatedMethods(annotationName: string): boolean
+                    public hasAnnotatedMethods(annotationName: java.lang.String | string): boolean
                     // @ts-ignore
-                    getAnnotatedMethods(annotationName: string): java.util.Set<org.springframework.core.type.MethodMetadata>
+                    public getAnnotatedMethods(annotationName: java.lang.String | string): Array<org.springframework.core.type.MethodMetadata>
                 }
             }
         }

@@ -32,7 +32,7 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                shape(...shape: string[]): org.bukkit.inventory.ShapedRecipe
+                public shape(...shape: java.lang.String[] | string[]): org.bukkit.inventory.ShapedRecipe
                 /**
                  * Sets the material that a character in the recipe shape refers to.
                  * @param key The character that represents the ingredient in the shape.
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                setIngredient(key: string, ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapedRecipe
+                public setIngredient(key: string, ingredient: org.bukkit.material.MaterialData): org.bukkit.inventory.ShapedRecipe
                 /**
                  * Sets the material that a character in the recipe shape refers to.
                  * @param key The character that represents the ingredient in the shape.
@@ -48,7 +48,7 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                setIngredient(key: string, ingredient: org.bukkit.Material): org.bukkit.inventory.ShapedRecipe
+                public setIngredient(key: string, ingredient: org.bukkit.Material): org.bukkit.inventory.ShapedRecipe
                 /**
                  * Sets the material that a character in the recipe shape refers to.
                  * @param key The character that represents the ingredient in the shape.
@@ -58,39 +58,39 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                setIngredient(key: string, ingredient: org.bukkit.Material, raw: number /*int*/): org.bukkit.inventory.ShapedRecipe
+                public setIngredient(key: string, ingredient: org.bukkit.Material, raw: number /*int*/): org.bukkit.inventory.ShapedRecipe
                 // @ts-ignore
-                setIngredient(key: string, ingredient: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.ShapedRecipe
+                public setIngredient(key: string, ingredient: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.ShapedRecipe
                 /**
                  * Get a copy of the ingredients map.
                  * @return The mapping of character to ingredients.
                  */
                 // @ts-ignore
-                getIngredientMap(): java.util.Map<java.lang.Character, org.bukkit.inventory.ItemStack>
+                public getIngredientMap(): java.util.Map<java.lang.Character, org.bukkit.inventory.ItemStack>
                 // @ts-ignore
-                getChoiceMap(): java.util.Map<java.lang.Character, org.bukkit.inventory.RecipeChoice>
+                public getChoiceMap(): java.util.Map<java.lang.Character, org.bukkit.inventory.RecipeChoice>
                 /**
                  * Get the shape.
                  * @return The recipe's shape.
                  * @throws NullPointerException when not set yet
                  */
                 // @ts-ignore
-                getShape(): java.lang.String[]
+                public getShape(): string[]
                 /**
                  * Get the result.
                  * @return The result stack.
                  */
                 // @ts-ignore
-                getResult(): org.bukkit.inventory.ItemStack
+                public getResult(): org.bukkit.inventory.ItemStack
                 // @ts-ignore
-                getKey(): org.bukkit.NamespacedKey
+                public getKey(): org.bukkit.NamespacedKey
                 /**
                  * Get the group of this recipe. Recipes with the same group may be grouped
                  * together when displayed in the client.
                  * @return recipe group. An empty string denotes no group. May not be null.
                  */
                 // @ts-ignore
-                getGroup(): java.lang.String
+                public getGroup(): string
                 /**
                  * Set the group of this recipe. Recipes with the same group may be grouped
                  * together when displayed in the client.
@@ -98,7 +98,7 @@ declare namespace org {
                  *  null.
                  */
                 // @ts-ignore
-                setGroup(group: string): void
+                public setGroup(group: java.lang.String | string): void
             }
         }
     }

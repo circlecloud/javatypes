@@ -18,7 +18,7 @@ declare namespace org {
                          * @return the generated bean name
                          */
                         // @ts-ignore
-                        generateBeanName(definition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): java.lang.String
+                        generateBeanName(definition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): string
                     }
                 }
             }

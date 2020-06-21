@@ -18,7 +18,7 @@ declare namespace javax {
                  * @since JAXB1.0
                  */
                 // @ts-ignore
-                class AbstractUnmarshallerImpl extends java.lang.Object implements javax.xml.bind.Unmarshaller {
+                abstract class AbstractUnmarshallerImpl extends java.lang.Object implements javax.xml.bind.Unmarshaller {
                     // @ts-ignore
                     constructor()
                     /**
@@ -36,24 +36,24 @@ declare namespace javax {
                     // @ts-ignore
                     getXMLReader(): org.xml.sax.XMLReader
                     // @ts-ignore
-                    unmarshal(source: javax.xml.transform.Source): java.lang.Object
+                    public unmarshal(source: javax.xml.transform.Source): any
                     /**
                      * Unmarshals an object by using the specified XMLReader and the InputSource.
                      * The callee should call the setErrorHandler method of the XMLReader
                      * so that errors are passed to the client-specified ValidationEventHandler.
                      */
                     // @ts-ignore
-                    abstract unmarshal(reader: org.xml.sax.XMLReader, source: org.xml.sax.InputSource): java.lang.Object
+                    abstract unmarshal(reader: org.xml.sax.XMLReader, source: org.xml.sax.InputSource): any
                     // @ts-ignore
-                    unmarshal(source: org.xml.sax.InputSource): java.lang.Object
+                    public unmarshal(source: org.xml.sax.InputSource): any
                     // @ts-ignore
-                    unmarshal(url: java.net.URL): java.lang.Object
+                    public unmarshal(url: java.net.URL): any
                     // @ts-ignore
-                    unmarshal(f: java.io.File): java.lang.Object
+                    public unmarshal(f: java.io.File): any
                     // @ts-ignore
-                    unmarshal(jis: java.io.InputStream): java.lang.Object
+                    public unmarshal(jis: java.io.InputStream): any
                     // @ts-ignore
-                    unmarshal(reader: java.io.Reader): java.lang.Object
+                    public unmarshal(reader: java.io.Reader): any
                     /**
                      * Indicates whether or not the Unmarshaller is configured to validate
                      * during unmarshal operations.
@@ -66,7 +66,7 @@ declare namespace javax {
                      *         flag
                      */
                     // @ts-ignore
-                    isValidating(): boolean
+                    public isValidating(): boolean
                     /**
                      * Allow an application to register a validation event handler.
                      * <p>
@@ -81,7 +81,7 @@ declare namespace javax {
                      *         event handler
                      */
                     // @ts-ignore
-                    setEventHandler(handler: javax.xml.bind.ValidationEventHandler): void
+                    public setEventHandler(handler: javax.xml.bind.ValidationEventHandler): void
                     /**
                      * Specifies whether or not the Unmarshaller should validate during
                      * unmarshal operations.  By default, the <tt>Unmarshaller</tt> does
@@ -95,7 +95,7 @@ declare namespace javax {
                      *  validation at unmarshal time
                      */
                     // @ts-ignore
-                    setValidating(validating: boolean): void
+                    public setValidating(validating: boolean): void
                     /**
                      * Return the current event handler or the default event handler if one
                      * hasn't been set.
@@ -105,7 +105,7 @@ declare namespace javax {
                      *         current event handler
                      */
                     // @ts-ignore
-                    getEventHandler(): javax.xml.bind.ValidationEventHandler
+                    public getEventHandler(): javax.xml.bind.ValidationEventHandler
                     /**
                      * Creates an UnmarshalException from a SAXException.
                      * This is an utility method provided for the derived classes.
@@ -130,7 +130,7 @@ declare namespace javax {
                      * properties, it should override this method in a derived class.
                      */
                     // @ts-ignore
-                    setProperty(name: string, value: any): void
+                    public setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                     /**
                      * Default implementation of the getProperty method always
                      * throws PropertyException since there are no required
@@ -138,37 +138,37 @@ declare namespace javax {
                      * properties, it should override this method in a derived class.
                      */
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                     // @ts-ignore
-                    unmarshal(reader: javax.xml.stream.XMLEventReader): java.lang.Object
+                    public unmarshal(reader: javax.xml.stream.XMLEventReader): any
                     // @ts-ignore
-                    unmarshal(reader: javax.xml.stream.XMLStreamReader): java.lang.Object
+                    public unmarshal(reader: javax.xml.stream.XMLStreamReader): any
                     // @ts-ignore
-                    unmarshal<T>(node: org.w3c.dom.Node, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
+                    public unmarshal<T>(node: org.w3c.dom.Node, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
                     // @ts-ignore
-                    unmarshal<T>(source: javax.xml.transform.Source, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
+                    public unmarshal<T>(source: javax.xml.transform.Source, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
                     // @ts-ignore
-                    unmarshal<T>(reader: javax.xml.stream.XMLStreamReader, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
+                    public unmarshal<T>(reader: javax.xml.stream.XMLStreamReader, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
                     // @ts-ignore
-                    unmarshal<T>(reader: javax.xml.stream.XMLEventReader, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
+                    public unmarshal<T>(reader: javax.xml.stream.XMLEventReader, expectedType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
                     // @ts-ignore
-                    setSchema(schema: javax.xml.validation.Schema): void
+                    public setSchema(schema: javax.xml.validation.Schema): void
                     // @ts-ignore
-                    getSchema(): javax.xml.validation.Schema
+                    public getSchema(): javax.xml.validation.Schema
                     // @ts-ignore
-                    setAdapter(adapter: javax.xml.bind.annotation.adapters.XmlAdapter): void
+                    public setAdapter(adapter: javax.xml.bind.annotation.adapters.XmlAdapter<any>): void
                     // @ts-ignore
-                    setAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>, adapter: A extends javax.xml.bind.annotation.adapters.XmlAdapter): void
+                    public setAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>, adapter: A): void
                     // @ts-ignore
-                    getAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>): A
+                    public getAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>): A
                     // @ts-ignore
-                    setAttachmentUnmarshaller(au: javax.xml.bind.attachment.AttachmentUnmarshaller): void
+                    public setAttachmentUnmarshaller(au: javax.xml.bind.attachment.AttachmentUnmarshaller): void
                     // @ts-ignore
-                    getAttachmentUnmarshaller(): javax.xml.bind.attachment.AttachmentUnmarshaller
+                    public getAttachmentUnmarshaller(): javax.xml.bind.attachment.AttachmentUnmarshaller
                     // @ts-ignore
-                    setListener(listener: javax.xml.bind.Unmarshaller.Listener): void
+                    public setListener(listener: javax.xml.bind.Unmarshaller.Listener): void
                     // @ts-ignore
-                    getListener(): javax.xml.bind.Unmarshaller.Listener
+                    public getListener(): javax.xml.bind.Unmarshaller.Listener
                 }
             }
         }

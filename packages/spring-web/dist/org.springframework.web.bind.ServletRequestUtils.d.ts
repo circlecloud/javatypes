@@ -12,7 +12,7 @@ declare namespace org {
                  * @since 2.0
                  */
                 // @ts-ignore
-                class ServletRequestUtils extends java.lang.Object {
+                abstract class ServletRequestUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -25,7 +25,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getIntParameter(request: ServletRequest, name: string): java.lang.Integer
+                    public static getIntParameter(request: ServletRequest, name: java.lang.String | string): number
                     /**
                      * Get an int parameter, with a fallback value. Never throws an exception.
                      * Can pass a distinguished value as default to enable checks of whether it was supplied.
@@ -34,14 +34,14 @@ declare namespace org {
                      * @param defaultVal the default value to use as fallback
                      */
                     // @ts-ignore
-                    getIntParameter(request: ServletRequest, name: string, defaultVal: number /*int*/): int
+                    public static getIntParameter(request: ServletRequest, name: java.lang.String | string, defaultVal: number /*int*/): number /*int*/
                     /**
                      * Get an array of int parameters, return an empty array if not found.
                      * @param request current HTTP request
                      * @param name the name of the parameter with multiple possible values
                      */
                     // @ts-ignore
-                    getIntParameters(request: ServletRequest, name: string): int[]
+                    public static getIntParameters(request: ServletRequest, name: java.lang.String | string): number /*int*/[]
                     /**
                      * Get an int parameter, throwing an exception if it isn't found or isn't a number.
                      * @param request current HTTP request
@@ -50,7 +50,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredIntParameter(request: ServletRequest, name: string): int
+                    public static getRequiredIntParameter(request: ServletRequest, name: java.lang.String | string): number /*int*/
                     /**
                      * Get an array of int parameters, throwing an exception if not found or one is not a number..
                      * @param request current HTTP request
@@ -59,7 +59,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredIntParameters(request: ServletRequest, name: string): int[]
+                    public static getRequiredIntParameters(request: ServletRequest, name: java.lang.String | string): number /*int*/[]
                     /**
                      * Get a Long parameter, or {@code null} if not present.
                      * Throws an exception if it the parameter value isn't a number.
@@ -70,7 +70,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getLongParameter(request: ServletRequest, name: string): java.lang.Long
+                    public static getLongParameter(request: ServletRequest, name: java.lang.String | string): number
                     /**
                      * Get a long parameter, with a fallback value. Never throws an exception.
                      * Can pass a distinguished value as default to enable checks of whether it was supplied.
@@ -79,14 +79,14 @@ declare namespace org {
                      * @param defaultVal the default value to use as fallback
                      */
                     // @ts-ignore
-                    getLongParameter(request: ServletRequest, name: string, defaultVal: number /*long*/): long
+                    public static getLongParameter(request: ServletRequest, name: java.lang.String | string, defaultVal: number /*long*/): number /*long*/
                     /**
                      * Get an array of long parameters, return an empty array if not found.
                      * @param request current HTTP request
                      * @param name the name of the parameter with multiple possible values
                      */
                     // @ts-ignore
-                    getLongParameters(request: ServletRequest, name: string): long[]
+                    public static getLongParameters(request: ServletRequest, name: java.lang.String | string): number /*long*/[]
                     /**
                      * Get a long parameter, throwing an exception if it isn't found or isn't a number.
                      * @param request current HTTP request
@@ -95,7 +95,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredLongParameter(request: ServletRequest, name: string): long
+                    public static getRequiredLongParameter(request: ServletRequest, name: java.lang.String | string): number /*long*/
                     /**
                      * Get an array of long parameters, throwing an exception if not found or one is not a number.
                      * @param request current HTTP request
@@ -104,7 +104,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredLongParameters(request: ServletRequest, name: string): long[]
+                    public static getRequiredLongParameters(request: ServletRequest, name: java.lang.String | string): number /*long*/[]
                     /**
                      * Get a Float parameter, or {@code null} if not present.
                      * Throws an exception if it the parameter value isn't a number.
@@ -115,7 +115,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getFloatParameter(request: ServletRequest, name: string): java.lang.Float
+                    public static getFloatParameter(request: ServletRequest, name: java.lang.String | string): number
                     /**
                      * Get a float parameter, with a fallback value. Never throws an exception.
                      * Can pass a distinguished value as default to enable checks of whether it was supplied.
@@ -124,14 +124,14 @@ declare namespace org {
                      * @param defaultVal the default value to use as fallback
                      */
                     // @ts-ignore
-                    getFloatParameter(request: ServletRequest, name: string, defaultVal: number /*float*/): float
+                    public static getFloatParameter(request: ServletRequest, name: java.lang.String | string, defaultVal: number /*float*/): number /*float*/
                     /**
                      * Get an array of float parameters, return an empty array if not found.
                      * @param request current HTTP request
                      * @param name the name of the parameter with multiple possible values
                      */
                     // @ts-ignore
-                    getFloatParameters(request: ServletRequest, name: string): float[]
+                    public static getFloatParameters(request: ServletRequest, name: java.lang.String | string): number /*float*/[]
                     /**
                      * Get a float parameter, throwing an exception if it isn't found or isn't a number.
                      * @param request current HTTP request
@@ -140,7 +140,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredFloatParameter(request: ServletRequest, name: string): float
+                    public static getRequiredFloatParameter(request: ServletRequest, name: java.lang.String | string): number /*float*/
                     /**
                      * Get an array of float parameters, throwing an exception if not found or one is not a number.
                      * @param request current HTTP request
@@ -149,7 +149,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredFloatParameters(request: ServletRequest, name: string): float[]
+                    public static getRequiredFloatParameters(request: ServletRequest, name: java.lang.String | string): number /*float*/[]
                     /**
                      * Get a Double parameter, or {@code null} if not present.
                      * Throws an exception if it the parameter value isn't a number.
@@ -160,7 +160,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getDoubleParameter(request: ServletRequest, name: string): java.lang.Double
+                    public static getDoubleParameter(request: ServletRequest, name: java.lang.String | string): number
                     /**
                      * Get a double parameter, with a fallback value. Never throws an exception.
                      * Can pass a distinguished value as default to enable checks of whether it was supplied.
@@ -169,14 +169,14 @@ declare namespace org {
                      * @param defaultVal the default value to use as fallback
                      */
                     // @ts-ignore
-                    getDoubleParameter(request: ServletRequest, name: string, defaultVal: number /*double*/): double
+                    public static getDoubleParameter(request: ServletRequest, name: java.lang.String | string, defaultVal: number /*double*/): number /*double*/
                     /**
                      * Get an array of double parameters, return an empty array if not found.
                      * @param request current HTTP request
                      * @param name the name of the parameter with multiple possible values
                      */
                     // @ts-ignore
-                    getDoubleParameters(request: ServletRequest, name: string): double[]
+                    public static getDoubleParameters(request: ServletRequest, name: java.lang.String | string): number /*double*/[]
                     /**
                      * Get a double parameter, throwing an exception if it isn't found or isn't a number.
                      * @param request current HTTP request
@@ -185,7 +185,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredDoubleParameter(request: ServletRequest, name: string): double
+                    public static getRequiredDoubleParameter(request: ServletRequest, name: java.lang.String | string): number /*double*/
                     /**
                      * Get an array of double parameters, throwing an exception if not found or one is not a number.
                      * @param request current HTTP request
@@ -194,7 +194,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredDoubleParameters(request: ServletRequest, name: string): double[]
+                    public static getRequiredDoubleParameters(request: ServletRequest, name: java.lang.String | string): number /*double*/[]
                     /**
                      * Get a Boolean parameter, or {@code null} if not present.
                      * Throws an exception if it the parameter value isn't a boolean.
@@ -207,7 +207,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getBooleanParameter(request: ServletRequest, name: string): java.lang.Boolean
+                    public static getBooleanParameter(request: ServletRequest, name: java.lang.String | string): java.lang.Boolean
                     /**
                      * Get a boolean parameter, with a fallback value. Never throws an exception.
                      * Can pass a distinguished value as default to enable checks of whether it was supplied.
@@ -218,7 +218,7 @@ declare namespace org {
                      * @param defaultVal the default value to use as fallback
                      */
                     // @ts-ignore
-                    getBooleanParameter(request: ServletRequest, name: string, defaultVal: boolean): boolean
+                    public static getBooleanParameter(request: ServletRequest, name: java.lang.String | string, defaultVal: boolean): boolean
                     /**
                      * Get an array of boolean parameters, return an empty array if not found.
                      * <p>Accepts "true", "on", "yes" (any case) and "1" as values for true;
@@ -227,7 +227,7 @@ declare namespace org {
                      * @param name the name of the parameter with multiple possible values
                      */
                     // @ts-ignore
-                    getBooleanParameters(request: ServletRequest, name: string): boolean[]
+                    public static getBooleanParameters(request: ServletRequest, name: java.lang.String | string): boolean[]
                     /**
                      * Get a boolean parameter, throwing an exception if it isn't found
                      * or isn't a boolean.
@@ -239,7 +239,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredBooleanParameter(request: ServletRequest, name: string): boolean
+                    public static getRequiredBooleanParameter(request: ServletRequest, name: java.lang.String | string): boolean
                     /**
                      * Get an array of boolean parameters, throwing an exception if not found
                      * or one isn't a boolean.
@@ -251,7 +251,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredBooleanParameters(request: ServletRequest, name: string): boolean[]
+                    public static getRequiredBooleanParameters(request: ServletRequest, name: java.lang.String | string): boolean[]
                     /**
                      * Get a String parameter, or {@code null} if not present.
                      * @param request current HTTP request
@@ -261,7 +261,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getStringParameter(request: ServletRequest, name: string): java.lang.String
+                    public static getStringParameter(request: ServletRequest, name: java.lang.String | string): string
                     /**
                      * Get a String parameter, with a fallback value. Never throws an exception.
                      * Can pass a distinguished value to default to enable checks of whether it was supplied.
@@ -270,14 +270,14 @@ declare namespace org {
                      * @param defaultVal the default value to use as fallback
                      */
                     // @ts-ignore
-                    getStringParameter(request: ServletRequest, name: string, defaultVal: string): java.lang.String
+                    public static getStringParameter(request: ServletRequest, name: java.lang.String | string, defaultVal: java.lang.String | string): string
                     /**
                      * Get an array of String parameters, return an empty array if not found.
                      * @param request current HTTP request
                      * @param name the name of the parameter with multiple possible values
                      */
                     // @ts-ignore
-                    getStringParameters(request: ServletRequest, name: string): java.lang.String[]
+                    public static getStringParameters(request: ServletRequest, name: java.lang.String | string): string[]
                     /**
                      * Get a String parameter, throwing an exception if it isn't found.
                      * @param request current HTTP request
@@ -286,7 +286,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredStringParameter(request: ServletRequest, name: string): java.lang.String
+                    public static getRequiredStringParameter(request: ServletRequest, name: java.lang.String | string): string
                     /**
                      * Get an array of String parameters, throwing an exception if not found.
                      * @param request current HTTP request
@@ -295,7 +295,7 @@ declare namespace org {
                      *  so it doesn't need to be caught
                      */
                     // @ts-ignore
-                    getRequiredStringParameters(request: ServletRequest, name: string): java.lang.String[]
+                    public static getRequiredStringParameters(request: ServletRequest, name: java.lang.String | string): string[]
                 }
             }
         }

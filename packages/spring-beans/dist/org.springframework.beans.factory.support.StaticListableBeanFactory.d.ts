@@ -38,7 +38,7 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        constructor(beans: java.util.Map<java.lang.String, java.lang.Object>)
+                        constructor(beans: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                         /**
                          * Add a new singleton bean.
                          * Will overwrite any existing instance for the given name.
@@ -46,55 +46,55 @@ declare namespace org {
                          * @param bean the bean instance
                          */
                         // @ts-ignore
-                        addBean(name: string, bean: any): void
+                        public addBean(name: java.lang.String | string, bean: java.lang.Object | any): void
                         // @ts-ignore
-                        getBean(name: string): java.lang.Object
+                        public getBean(name: java.lang.String | string): any
                         // @ts-ignore
-                        getBean<T>(name: string, requiredType: java.lang.Class<T>): T
+                        public getBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>): T
                         // @ts-ignore
-                        getBean(name: string, ...args: any[]): java.lang.Object
+                        public getBean(name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
                         // @ts-ignore
-                        getBean<T>(requiredType: java.lang.Class<T>): T
+                        public getBean<T>(requiredType: java.lang.Class<T>): T
                         // @ts-ignore
-                        getBean<T>(requiredType: java.lang.Class<T>, ...args: any[]): T
+                        public getBean<T>(requiredType: java.lang.Class<T>, ...args: java.lang.Object[] | any[]): T
                         // @ts-ignore
-                        getBeanProvider<T>(requiredType: java.lang.Class<T>): org.springframework.beans.factory.ObjectProvider<T>
+                        public getBeanProvider<T>(requiredType: java.lang.Class<T>): org.springframework.beans.factory.ObjectProvider<T>
                         // @ts-ignore
-                        getBeanProvider<T>(requiredType: ResolvableType): org.springframework.beans.factory.ObjectProvider<T>
+                        public getBeanProvider<T>(requiredType: ResolvableType): org.springframework.beans.factory.ObjectProvider<T>
                         // @ts-ignore
-                        containsBean(name: string): boolean
+                        public containsBean(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isSingleton(name: string): boolean
+                        public isSingleton(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isPrototype(name: string): boolean
+                        public isPrototype(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        isTypeMatch(name: string, typeToMatch: ResolvableType): boolean
+                        public isTypeMatch(name: java.lang.String | string, typeToMatch: ResolvableType): boolean
                         // @ts-ignore
-                        getType(name: string): java.lang.Class<?>
+                        public getType(name: java.lang.String | string): java.lang.Class<any>
                         // @ts-ignore
-                        getType(name: string, allowFactoryBeanInit: boolean): java.lang.Class<?>
+                        public getType(name: java.lang.String | string, allowFactoryBeanInit: boolean): java.lang.Class<any>
                         // @ts-ignore
-                        getAliases(name: string): java.lang.String[]
+                        public getAliases(name: java.lang.String | string): string[]
                         // @ts-ignore
-                        containsBeanDefinition(name: string): boolean
+                        public containsBeanDefinition(name: java.lang.String | string): boolean
                         // @ts-ignore
-                        getBeanDefinitionCount(): int
+                        public getBeanDefinitionCount(): number /*int*/
                         // @ts-ignore
-                        getBeanDefinitionNames(): java.lang.String[]
+                        public getBeanDefinitionNames(): string[]
                         // @ts-ignore
-                        getBeanNamesForType(type: ResolvableType): java.lang.String[]
+                        public getBeanNamesForType(type: ResolvableType): string[]
                         // @ts-ignore
-                        getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): java.lang.String[]
+                        public getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): string[]
                         // @ts-ignore
-                        getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String, T>
+                        public getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String | string, T>
                         // @ts-ignore
-                        getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String, T>
+                        public getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String | string, T>
                         // @ts-ignore
-                        getBeanNamesForAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.lang.String[]
+                        public getBeanNamesForAnnotation(annotationType: java.lang.Class<any>): string[]
                         // @ts-ignore
-                        getBeansWithAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Map<java.lang.String, java.lang.Object>
+                        public getBeansWithAnnotation(annotationType: java.lang.Class<any>): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: string, annotationType: java.lang.Class<A>): A
+                        public findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: java.lang.String | string, annotationType: java.lang.Class<A>): A
                     }
                 }
             }

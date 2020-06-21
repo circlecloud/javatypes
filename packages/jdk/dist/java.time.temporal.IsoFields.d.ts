@@ -104,7 +104,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly DAY_OF_QUARTER: java.time.temporal.TemporalField
+                public static readonly DAY_OF_QUARTER: java.time.temporal.TemporalField
                 /**
                  * The field that represents the quarter-of-year.
                  * <p>
@@ -120,7 +120,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly QUARTER_OF_YEAR: java.time.temporal.TemporalField
+                public static readonly QUARTER_OF_YEAR: java.time.temporal.TemporalField
                 /**
                  * The field that represents the week-of-week-based-year.
                  * <p>
@@ -151,7 +151,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly WEEK_OF_WEEK_BASED_YEAR: java.time.temporal.TemporalField
+                public static readonly WEEK_OF_WEEK_BASED_YEAR: java.time.temporal.TemporalField
                 /**
                  * The field that represents the week-based-year.
                  * <p>
@@ -166,7 +166,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly WEEK_BASED_YEAR: java.time.temporal.TemporalField
+                public static readonly WEEK_BASED_YEAR: java.time.temporal.TemporalField
                 /**
                  * The unit that represents week-based-years for the purpose of addition and subtraction.
                  * <p>
@@ -182,7 +182,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly WEEK_BASED_YEARS: java.time.temporal.TemporalUnit
+                public static readonly WEEK_BASED_YEARS: java.time.temporal.TemporalUnit
                 /**
                  * Unit that represents the concept of a quarter-year.
                  * For the ISO calendar system, it is equal to 3 months.
@@ -191,7 +191,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly QUARTER_YEARS: java.time.temporal.TemporalUnit
+                public static readonly QUARTER_YEARS: java.time.temporal.TemporalUnit
             }
         }
     }

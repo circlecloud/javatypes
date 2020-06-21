@@ -20,7 +20,7 @@ declare namespace java {
                      * @throws RejectedExecutionException always
                      */
                     // @ts-ignore
-                    rejectedExecution(r: java.lang.Runnable, e: java.util.concurrent.ThreadPoolExecutor): void
+                    public rejectedExecution(r: java.lang.Runnable, e: java.util.concurrent.ThreadPoolExecutor): void
                 }
             }
         }

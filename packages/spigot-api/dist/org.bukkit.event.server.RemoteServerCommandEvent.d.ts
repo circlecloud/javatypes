@@ -9,11 +9,11 @@ declare namespace org {
                 // @ts-ignore
                 class RemoteServerCommandEvent extends org.bukkit.event.server.ServerCommandEvent {
                     // @ts-ignore
-                    constructor(sender: org.bukkit.command.CommandSender, command: string)
+                    constructor(sender: org.bukkit.command.CommandSender, command: java.lang.String | string)
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

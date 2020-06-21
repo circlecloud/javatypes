@@ -22,15 +22,15 @@ declare namespace org {
                              * @param stack The stack
                              */
                             // @ts-ignore
-                            setCustom(stack: org.spongepowered.api.item.inventory.ItemStack): void
+                            public setCustom(stack: org.spongepowered.api.item.inventory.ItemStack): void
                             /**
                              * Gets the {@link Slot} of this {@link SlotTransaction}.
                              * @return The slot of this transaction
                              */
                             // @ts-ignore
-                            getSlot(): org.spongepowered.api.item.inventory.Slot
+                            public getSlot(): org.spongepowered.api.item.inventory.Slot
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

@@ -24,7 +24,7 @@ declare namespace javax {
                  * @param warning a <code>String</code> containing the warning.
                  */
                 // @ts-ignore
-                warningOccurred(source: javax.imageio.ImageReader, warning: string): void
+                warningOccurred(source: javax.imageio.ImageReader, warning: java.lang.String | string): void
             }
         }
     }

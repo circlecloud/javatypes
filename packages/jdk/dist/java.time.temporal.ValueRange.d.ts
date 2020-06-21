@@ -31,7 +31,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the minimum is greater than the maximum
                  */
                 // @ts-ignore
-                of(min: number /*long*/, max: number /*long*/): java.time.temporal.ValueRange
+                public static of(min: number /*long*/, max: number /*long*/): java.time.temporal.ValueRange
                 /**
                  * Obtains a variable value range.
                  * <p>
@@ -46,7 +46,7 @@ declare namespace java {
                  *   or the smallest maximum is greater than the largest maximum
                  */
                 // @ts-ignore
-                of(min: number /*long*/, maxSmallest: number /*long*/, maxLargest: number /*long*/): java.time.temporal.ValueRange
+                public static of(min: number /*long*/, maxSmallest: number /*long*/, maxLargest: number /*long*/): java.time.temporal.ValueRange
                 /**
                  * Obtains a fully variable value range.
                  * <p>
@@ -62,7 +62,7 @@ declare namespace java {
                  *   or the largest minimum is greater than the largest maximum
                  */
                 // @ts-ignore
-                of(minSmallest: number /*long*/, minLargest: number /*long*/, maxSmallest: number /*long*/, maxLargest: number /*long*/): java.time.temporal.ValueRange
+                public static of(minSmallest: number /*long*/, minLargest: number /*long*/, maxSmallest: number /*long*/, maxLargest: number /*long*/): java.time.temporal.ValueRange
                 /**
                  * Is the value range fixed and fully known.
                  * <p>
@@ -72,7 +72,7 @@ declare namespace java {
                  * @return true if the set of values is fixed
                  */
                 // @ts-ignore
-                isFixed(): boolean
+                public isFixed(): boolean
                 /**
                  * Gets the minimum value that the field can take.
                  * <p>
@@ -81,7 +81,7 @@ declare namespace java {
                  * @return the minimum value for this field
                  */
                 // @ts-ignore
-                getMinimum(): long
+                public getMinimum(): number /*long*/
                 /**
                  * Gets the largest possible minimum value that the field can take.
                  * <p>
@@ -90,7 +90,7 @@ declare namespace java {
                  * @return the largest possible minimum value for this field
                  */
                 // @ts-ignore
-                getLargestMinimum(): long
+                public getLargestMinimum(): number /*long*/
                 /**
                  * Gets the smallest possible maximum value that the field can take.
                  * <p>
@@ -99,7 +99,7 @@ declare namespace java {
                  * @return the smallest possible maximum value for this field
                  */
                 // @ts-ignore
-                getSmallestMaximum(): long
+                public getSmallestMaximum(): number /*long*/
                 /**
                  * Gets the maximum value that the field can take.
                  * <p>
@@ -108,7 +108,7 @@ declare namespace java {
                  * @return the maximum value for this field
                  */
                 // @ts-ignore
-                getMaximum(): long
+                public getMaximum(): number /*long*/
                 /**
                  * Checks if all values in the range fit in an {@code int}.
                  * <p>
@@ -121,7 +121,7 @@ declare namespace java {
                  * @return true if a valid value always fits in an {#code int}
                  */
                 // @ts-ignore
-                isIntValue(): boolean
+                public isIntValue(): boolean
                 /**
                  * Checks if the value is within the valid range.
                  * <p>
@@ -130,7 +130,7 @@ declare namespace java {
                  * @return true if the value is valid
                  */
                 // @ts-ignore
-                isValidValue(value: number /*long*/): boolean
+                public isValidValue(value: number /*long*/): boolean
                 /**
                  * Checks if the value is within the valid range and that all values
                  * in the range fit in an {@code int}.
@@ -140,7 +140,7 @@ declare namespace java {
                  * @return true if the value is valid and fits in an {#code int}
                  */
                 // @ts-ignore
-                isValidIntValue(value: number /*long*/): boolean
+                public isValidIntValue(value: number /*long*/): boolean
                 /**
                  * Checks that the specified value is valid.
                  * <p>
@@ -152,7 +152,7 @@ declare namespace java {
                  * @see #isValidValue(long)
                  */
                 // @ts-ignore
-                checkValidValue(value: number /*long*/, field: java.time.temporal.TemporalField): long
+                public checkValidValue(value: number /*long*/, field: java.time.temporal.TemporalField): number /*long*/
                 /**
                  * Checks that the specified value is valid and fits in an {@code int}.
                  * <p>
@@ -165,7 +165,7 @@ declare namespace java {
                  * @see #isValidIntValue(long)
                  */
                 // @ts-ignore
-                checkValidIntValue(value: number /*long*/, field: java.time.temporal.TemporalField): int
+                public checkValidIntValue(value: number /*long*/, field: java.time.temporal.TemporalField): number /*int*/
                 /**
                  * Checks if this range is equal to another range.
                  * <p>
@@ -176,13 +176,13 @@ declare namespace java {
                  * @return true if this is equal to the other range
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this range.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Outputs this range as a {@code String}.
                  * <p>
@@ -192,7 +192,7 @@ declare namespace java {
                  * @return a string representation of this range, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

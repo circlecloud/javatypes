@@ -52,7 +52,7 @@ declare namespace javax {
                  *          <tt>ExtendedResponse.responseName</tt> component.
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                getID(): string
                 /**
                  * Retrieves the ASN.1 BER encoded value of the LDAP extended operation
                  * response. Null is returned if the value is absent from the response
@@ -64,7 +64,7 @@ declare namespace javax {
                  *          component.
                  */
                 // @ts-ignore
-                getEncodedValue(): byte[]
+                getEncodedValue(): number /*byte*/[]
             }
         }
     }

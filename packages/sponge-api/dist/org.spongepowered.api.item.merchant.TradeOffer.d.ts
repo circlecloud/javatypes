@@ -58,7 +58,7 @@ declare namespace org {
                          * @return The current uses of this trade offer
                          */
                         // @ts-ignore
-                        getUses(): int
+                        getUses(): number /*int*/
                         /**
                          * <p>Gets the current maximum uses of this offer.</p>
                          * <p>Usually, the uses of an offer are limited by the amount of maximum
@@ -67,7 +67,7 @@ declare namespace org {
                          * @return The maximum uses of this trade offer
                          */
                         // @ts-ignore
-                        getMaxUses(): int
+                        getMaxUses(): number /*int*/
                         /**
                          * Checks if this trade offer has indeed passed the time of which the uses
                          * surpassed the maximum uses.

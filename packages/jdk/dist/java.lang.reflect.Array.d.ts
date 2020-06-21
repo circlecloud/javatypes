@@ -24,7 +24,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                get(array: any, index: number /*int*/): java.lang.Object
+                public static get(array: java.lang.Object | any, index: number /*int*/): any
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a boolean if possible.
@@ -40,7 +40,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getBoolean(array: any, index: number /*int*/): boolean
+                public static getBoolean(array: java.lang.Object | any, index: number /*int*/): boolean
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a byte if possible.
@@ -56,7 +56,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getByte(array: any, index: number /*int*/): byte
+                public static getByte(array: java.lang.Object | any, index: number /*int*/): number /*byte*/
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a char if possible.
@@ -72,7 +72,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getChar(array: any, index: number /*int*/): char
+                public static getChar(array: java.lang.Object | any, index: number /*int*/): string
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a double if possible.
@@ -88,7 +88,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getDouble(array: any, index: number /*int*/): double
+                public static getDouble(array: java.lang.Object | any, index: number /*int*/): number /*double*/
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a float if possible.
@@ -104,7 +104,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getFloat(array: any, index: number /*int*/): float
+                public static getFloat(array: java.lang.Object | any, index: number /*int*/): number /*float*/
                 /**
                  * Return the element of the array at the specified index,
                  * converted to an int if possible.
@@ -120,7 +120,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getInt(array: any, index: number /*int*/): int
+                public static getInt(array: java.lang.Object | any, index: number /*int*/): number /*int*/
                 /**
                  * Return the length of the array.
                  * This reproduces the effect of <code>array.length</code>
@@ -132,7 +132,7 @@ declare namespace java {
                  * 					if the array is not an array
                  */
                 // @ts-ignore
-                getLength(array: any): int
+                public static getLength(array: java.lang.Object | any): number /*int*/
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a long if possible.
@@ -148,7 +148,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getLong(array: any, index: number /*int*/): long
+                public static getLong(array: java.lang.Object | any, index: number /*int*/): number /*long*/
                 /**
                  * Return the element of the array at the specified index,
                  * converted to a short if possible.
@@ -164,7 +164,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                getShort(array: any, index: number /*int*/): short
+                public static getShort(array: java.lang.Object | any, index: number /*int*/): number /*short*/
                 /**
                  * Return a new multidimensional array of the specified component type and dimensions.
                  * This reproduces the effect of <code>new componentType[d0][d1]...[dn]</code>
@@ -181,7 +181,7 @@ declare namespace java {
                  * 					the number of dimension for an array (currently 255)
                  */
                 // @ts-ignore
-                newInstance(componentType: java.lang.Class<any>, ...dimensions: number /*int*/[]): java.lang.Object
+                public static newInstance(componentType: java.lang.Class<any>, ...dimensions: number /*int*/[]): any
                 /**
                  * Return a new array of the specified component type and length.
                  * This reproduces the effect of <code>new componentType[size]</code>
@@ -197,7 +197,7 @@ declare namespace java {
                  * 					the number of dimension for an array (currently 255)
                  */
                 // @ts-ignore
-                newInstance(componentType: java.lang.Class<any>, size: number /*int*/): java.lang.Object
+                public static newInstance(componentType: java.lang.Class<any>, size: number /*int*/): any
                 /**
                  * Set the element of the array at the specified index to the value.
                  * This reproduces the effect of <code>array[index] = value</code>
@@ -214,7 +214,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                set(array: any, index: number /*int*/, value: any): void
+                public static set(array: java.lang.Object | any, index: number /*int*/, value: java.lang.Object | any): void
                 /**
                  * Set the element of the array at the specified index to the boolean
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -229,7 +229,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setBoolean(array: any, index: number /*int*/, value: boolean): void
+                public static setBoolean(array: java.lang.Object | any, index: number /*int*/, value: boolean): void
                 /**
                  * Set the element of the array at the specified index to the byte
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -244,7 +244,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setByte(array: any, index: number /*int*/, value: number /*byte*/): void
+                public static setByte(array: java.lang.Object | any, index: number /*int*/, value: number /*byte*/): void
                 /**
                  * Set the element of the array at the specified index to the char
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -259,7 +259,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setChar(array: any, index: number /*int*/, value: string): void
+                public static setChar(array: java.lang.Object | any, index: number /*int*/, value: string): void
                 /**
                  * Set the element of the array at the specified index to the double
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -274,7 +274,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setDouble(array: any, index: number /*int*/, value: number /*double*/): void
+                public static setDouble(array: java.lang.Object | any, index: number /*int*/, value: number /*double*/): void
                 /**
                  * Set the element of the array at the specified index to the float
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -289,7 +289,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setFloat(array: any, index: number /*int*/, value: number /*float*/): void
+                public static setFloat(array: java.lang.Object | any, index: number /*int*/, value: number /*float*/): void
                 /**
                  * Set the element of the array at the specified index to the int
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -304,7 +304,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setInt(array: any, index: number /*int*/, value: number /*int*/): void
+                public static setInt(array: java.lang.Object | any, index: number /*int*/, value: number /*int*/): void
                 /**
                  * Set the element of the array at the specified index to the long
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -319,7 +319,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setLong(array: any, index: number /*int*/, value: number /*long*/): void
+                public static setLong(array: java.lang.Object | any, index: number /*int*/, value: number /*long*/): void
                 /**
                  * Set the element of the array at the specified index to the short
                  * value. This reproduces the effect of <code>array[index] = value</code>
@@ -334,7 +334,7 @@ declare namespace java {
                  * 					if the index is out of bounds -- negative or greater than or equal to the array length
                  */
                 // @ts-ignore
-                setShort(array: any, index: number /*int*/, value: number /*short*/): void
+                public static setShort(array: java.lang.Object | any, index: number /*int*/, value: number /*short*/): void
             }
         }
     }

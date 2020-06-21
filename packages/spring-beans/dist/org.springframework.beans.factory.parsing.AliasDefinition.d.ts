@@ -17,7 +17,7 @@ declare namespace org {
                          * @param alias the alias registered for the bean
                          */
                         // @ts-ignore
-                        constructor(beanName: string, alias: string)
+                        constructor(beanName: java.lang.String | string, alias: java.lang.String | string)
                         /**
                          * Create a new AliasDefinition.
                          * @param beanName the canonical name of the bean
@@ -25,19 +25,19 @@ declare namespace org {
                          * @param source the source object (may be {#code null})
                          */
                         // @ts-ignore
-                        constructor(beanName: string, alias: string, source: any)
+                        constructor(beanName: java.lang.String | string, alias: java.lang.String | string, source: java.lang.Object | any)
                         /**
                          * Return the canonical name of the bean.
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Return the alias registered for the bean.
                          */
                         // @ts-ignore
-                        getAlias(): java.lang.String
+                        public getAlias(): string
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                     }
                 }
             }

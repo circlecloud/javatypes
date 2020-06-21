@@ -8,7 +8,7 @@ declare namespace org {
                          * A single injected element.
                          */
                         // @ts-ignore
-                        class InjectedElement extends java.lang.Object {
+                        abstract class InjectedElement extends java.lang.Object {
                             // @ts-ignore
                             constructor(member: java.lang.reflect.Member, pd: java.beans.PropertyDescriptor)
                             // @ts-ignore
@@ -20,16 +20,16 @@ declare namespace org {
                             // @ts-ignore
                             skip: java.lang.Boolean
                             // @ts-ignore
-                            getMember(): java.lang.reflect.Member
+                            public getMember(): java.lang.reflect.Member
                             // @ts-ignore
-                            getResourceType(): java.lang.Class<?>
+                            getResourceType(): java.lang.Class<any>
                             // @ts-ignore
                             checkResourceType(resourceType: java.lang.Class<any>): void
                             /**
                              * Either this or {@link #getResourceToInject} needs to be overridden.
                              */
                             // @ts-ignore
-                            inject(target: any, requestingBeanName: string, pvs: org.springframework.beans.PropertyValues): void
+                            inject(target: java.lang.Object | any, requestingBeanName: java.lang.String | string, pvs: org.springframework.beans.PropertyValues): void
                             /**
                              * Check whether this injector's property needs to be skipped due to
                              * an explicit property value having been specified. Also marks the
@@ -47,13 +47,13 @@ declare namespace org {
                              * Either this or {@link #inject} needs to be overridden.
                              */
                             // @ts-ignore
-                            getResourceToInject(target: any, requestingBeanName: string): java.lang.Object
+                            getResourceToInject(target: java.lang.Object | any, requestingBeanName: java.lang.String | string): any
                             // @ts-ignore
-                            equals(other: any): boolean
+                            public equals(other: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

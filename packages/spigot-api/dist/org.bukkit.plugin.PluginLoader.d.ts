@@ -43,7 +43,7 @@ declare namespace org {
                  * @return The registered listeners.
                  */
                 // @ts-ignore
-                createRegisteredListeners(listener: org.bukkit.event.Listener, plugin: org.bukkit.plugin.Plugin): java.util.Map<java.lang.Class<? extends org.bukkit.event.Event>, java.util.Set<org.bukkit.plugin.RegisteredListener>>
+                createRegisteredListeners(listener: org.bukkit.event.Listener, plugin: org.bukkit.plugin.Plugin): java.util.Map<java.lang.Class<any>, java.util.Set<org.bukkit.plugin.RegisteredListener> | Array<org.bukkit.plugin.RegisteredListener>>
                 /**
                  * Enables the specified plugin
                  * <p>

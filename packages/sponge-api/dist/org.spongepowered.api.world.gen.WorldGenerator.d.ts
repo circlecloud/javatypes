@@ -69,7 +69,7 @@ declare namespace org {
                          * @return The generator populators
                          */
                         // @ts-ignore
-                        getGenerationPopulators(): java.util.List<org.spongepowered.api.world.gen.GenerationPopulator>
+                        getGenerationPopulators(): Array<org.spongepowered.api.world.gen.GenerationPopulator>
                         /**
                          * Gets an immutable list of {@link GenerationPopulator}s which match the
                          * given class type.
@@ -77,7 +77,7 @@ declare namespace org {
                          * @return The generation populator which match the type
                          */
                         // @ts-ignore
-                        getGenerationPopulators(type: java.lang.Class<org.spongepowered.api.world.gen.GenerationPopulator>): java.util.List<org.spongepowered.api.world.gen.GenerationPopulator>
+                        getGenerationPopulators(type: java.lang.Class<any>): Array<org.spongepowered.api.world.gen.GenerationPopulator>
                         /**
                          * Gets a mutable list of {@link Populator}s which are applied globally (in
                          * the whole world).
@@ -85,7 +85,7 @@ declare namespace org {
                          * @return The populators
                          */
                         // @ts-ignore
-                        getPopulators(): java.util.List<org.spongepowered.api.world.gen.Populator>
+                        getPopulators(): Array<org.spongepowered.api.world.gen.Populator>
                         /**
                          * Gets an immutable list of {@link Populator}s which match the given class
                          * type.
@@ -93,7 +93,7 @@ declare namespace org {
                          * @return The populators which match the type
                          */
                         // @ts-ignore
-                        getPopulators(type: java.lang.Class<org.spongepowered.api.world.gen.Populator>): java.util.List<org.spongepowered.api.world.gen.Populator>
+                        getPopulators(type: java.lang.Class<any>): Array<org.spongepowered.api.world.gen.Populator>
                         /**
                          * Gets the {@link BiomeGenerator} for this world generator.
                          * @return The biome generator

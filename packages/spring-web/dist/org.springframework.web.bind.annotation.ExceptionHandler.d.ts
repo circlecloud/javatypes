@@ -77,7 +77,7 @@ declare namespace org {
                      * @see org.springframework.web.context.request.WebRequest
                      */
                     // @ts-ignore
-                    class ExceptionHandler implements java.lang.annotation.Annotation {
+                    abstract class ExceptionHandler implements java.lang.annotation.Annotation {
                     }
                 }
             }

@@ -34,13 +34,13 @@ declare namespace javax {
                          * the passed in MouseEvent.
                          */
                         // @ts-ignore
-                        positionForMouseEvent(e: java.awt.event.MouseEvent): int
+                        positionForMouseEvent(e: java.awt.event.MouseEvent): number /*int*/
                         /**
                          * Returns the x argument, since this is used for horizontal
                          * splits.
                          */
                         // @ts-ignore
-                        getNeededLocation(x: number /*int*/, y: number /*int*/): int
+                        getNeededLocation(x: number /*int*/, y: number /*int*/): number /*int*/
                         // @ts-ignore
                         continueDrag(newX: number /*int*/, newY: number /*int*/): void
                         /**

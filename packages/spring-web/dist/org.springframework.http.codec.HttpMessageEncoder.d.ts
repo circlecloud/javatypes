@@ -16,7 +16,7 @@ declare namespace org {
                      * automatically vs at the end of the input stream.
                      */
                     // @ts-ignore
-                    getStreamingMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    getStreamingMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Get decoding hints based on the server request or annotations on the
                      * target controller method parameter.
@@ -30,7 +30,7 @@ declare namespace org {
                      * @return a Map with hints, possibly empty
                      */
                     // @ts-ignore
-                    getEncodeHints(actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                    getEncodeHints(actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

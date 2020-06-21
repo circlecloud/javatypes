@@ -21,7 +21,7 @@ declare namespace org {
                             // @ts-ignore
                             readonly delegate: org.spongepowered.api.text.channel.MessageChannel
                             // @ts-ignore
-                            transformMessage(sender: any, recipient: org.spongepowered.api.text.channel.MessageReceiver, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): java.util.Optional<org.spongepowered.api.text.Text>
+                            public transformMessage(sender: java.lang.Object | any, recipient: org.spongepowered.api.text.channel.MessageReceiver, original: org.spongepowered.api.text.Text, type: org.spongepowered.api.text.chat.ChatType): java.util.Optional<org.spongepowered.api.text.Text>
                         }
                     }
                 }

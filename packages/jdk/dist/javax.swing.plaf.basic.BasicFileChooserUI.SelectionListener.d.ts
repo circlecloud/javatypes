@@ -8,7 +8,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        valueChanged(e: javax.swing.event.ListSelectionEvent): void
+                        public valueChanged(e: javax.swing.event.ListSelectionEvent): void
                     }
                 }
             }

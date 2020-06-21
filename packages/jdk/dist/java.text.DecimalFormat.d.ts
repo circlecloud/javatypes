@@ -327,7 +327,7 @@ declare namespace java {
              * @see java.text.NumberFormat#getPercentInstance
              */
             // @ts-ignore
-            constructor(pattern: string)
+            constructor(pattern: java.lang.String | string)
             /**
              * Creates a DecimalFormat using the given pattern and symbols.
              * Use this constructor when you need to completely customize the
@@ -349,7 +349,7 @@ declare namespace java {
              * @see java.text.DecimalFormatSymbols
              */
             // @ts-ignore
-            constructor(pattern: string, symbols: java.text.DecimalFormatSymbols)
+            constructor(pattern: java.lang.String | string, symbols: java.text.DecimalFormatSymbols)
             /**
              * Formats a number and appends the resulting text to the given string
              * buffer.
@@ -371,7 +371,7 @@ declare namespace java {
              * @see java.text.FieldPosition
              */
             // @ts-ignore
-            format(number: any, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public format(number: java.lang.Object | any, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats a double to produce a string.
              * @param number    The double to format
@@ -384,7 +384,7 @@ declare namespace java {
              * @see java.text.FieldPosition
              */
             // @ts-ignore
-            format(number: number /*double*/, result: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
+            public format(number: number /*double*/, result: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Format a long to produce a string.
              * @param number    The long to format
@@ -397,7 +397,7 @@ declare namespace java {
              * @see java.text.FieldPosition
              */
             // @ts-ignore
-            format(number: number /*long*/, result: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
+            public format(number: number /*long*/, result: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats an Object producing an <code>AttributedCharacterIterator</code>.
              * You can use the returned <code>AttributedCharacterIterator</code>
@@ -417,7 +417,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            formatToCharacterIterator(obj: any): java.text.AttributedCharacterIterator
+            public formatToCharacterIterator(obj: java.lang.Object | any): java.text.AttributedCharacterIterator
             /**
              * Parses text from a string to produce a <code>Number</code>.
              * <p>
@@ -474,7 +474,7 @@ declare namespace java {
              *              <code>pos</code> is null.
              */
             // @ts-ignore
-            parse(text: string, pos: java.text.ParsePosition): java.lang.Number
+            public parse(text: java.lang.String | string, pos: java.text.ParsePosition): java.lang.Number
             /**
              * Returns a copy of the decimal format symbols, which is generally not
              * changed by the programmer or user.
@@ -482,7 +482,7 @@ declare namespace java {
              * @see java.text.DecimalFormatSymbols
              */
             // @ts-ignore
-            getDecimalFormatSymbols(): java.text.DecimalFormatSymbols
+            public getDecimalFormatSymbols(): java.text.DecimalFormatSymbols
             /**
              * Sets the decimal format symbols, which is generally not changed
              * by the programmer or user.
@@ -490,63 +490,63 @@ declare namespace java {
              * @see java.text.DecimalFormatSymbols
              */
             // @ts-ignore
-            setDecimalFormatSymbols(newSymbols: java.text.DecimalFormatSymbols): void
+            public setDecimalFormatSymbols(newSymbols: java.text.DecimalFormatSymbols): void
             /**
              * Get the positive prefix.
              * <P>Examples: +123, $123, sFr123
              * @return the positive prefix
              */
             // @ts-ignore
-            getPositivePrefix(): java.lang.String
+            public getPositivePrefix(): string
             /**
              * Set the positive prefix.
              * <P>Examples: +123, $123, sFr123
              * @param newValue the new positive prefix
              */
             // @ts-ignore
-            setPositivePrefix(newValue: string): void
+            public setPositivePrefix(newValue: java.lang.String | string): void
             /**
              * Get the negative prefix.
              * <P>Examples: -123, ($123) (with negative suffix), sFr-123
              * @return the negative prefix
              */
             // @ts-ignore
-            getNegativePrefix(): java.lang.String
+            public getNegativePrefix(): string
             /**
              * Set the negative prefix.
              * <P>Examples: -123, ($123) (with negative suffix), sFr-123
              * @param newValue the new negative prefix
              */
             // @ts-ignore
-            setNegativePrefix(newValue: string): void
+            public setNegativePrefix(newValue: java.lang.String | string): void
             /**
              * Get the positive suffix.
              * <P>Example: 123%
              * @return the positive suffix
              */
             // @ts-ignore
-            getPositiveSuffix(): java.lang.String
+            public getPositiveSuffix(): string
             /**
              * Set the positive suffix.
              * <P>Example: 123%
              * @param newValue the new positive suffix
              */
             // @ts-ignore
-            setPositiveSuffix(newValue: string): void
+            public setPositiveSuffix(newValue: java.lang.String | string): void
             /**
              * Get the negative suffix.
              * <P>Examples: -123%, ($123) (with positive suffixes)
              * @return the negative suffix
              */
             // @ts-ignore
-            getNegativeSuffix(): java.lang.String
+            public getNegativeSuffix(): string
             /**
              * Set the negative suffix.
              * <P>Examples: 123%
              * @param newValue the new negative suffix
              */
             // @ts-ignore
-            setNegativeSuffix(newValue: string): void
+            public setNegativeSuffix(newValue: java.lang.String | string): void
             /**
              * Gets the multiplier for use in percent, per mille, and similar
              * formats.
@@ -554,7 +554,7 @@ declare namespace java {
              * @see #setMultiplier(int)
              */
             // @ts-ignore
-            getMultiplier(): int
+            public getMultiplier(): number /*int*/
             /**
              * Sets the multiplier for use in percent, per mille, and similar
              * formats.
@@ -568,12 +568,12 @@ declare namespace java {
              * @see #getMultiplier
              */
             // @ts-ignore
-            setMultiplier(newValue: number /*int*/): void
+            public setMultiplier(newValue: number /*int*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setGroupingUsed(newValue: boolean): void
+            public setGroupingUsed(newValue: boolean): void
             /**
              * Return the grouping size. Grouping size is the number of digits between
              * grouping separators in the integer portion of a number.  For example,
@@ -584,7 +584,7 @@ declare namespace java {
              * @see java.text.DecimalFormatSymbols#getGroupingSeparator
              */
             // @ts-ignore
-            getGroupingSize(): int
+            public getGroupingSize(): number /*int*/
             /**
              * Set the grouping size. Grouping size is the number of digits between
              * grouping separators in the integer portion of a number.  For example,
@@ -597,7 +597,7 @@ declare namespace java {
              * @see java.text.DecimalFormatSymbols#setGroupingSeparator
              */
             // @ts-ignore
-            setGroupingSize(newValue: number /*int*/): void
+            public setGroupingSize(newValue: number /*int*/): void
             /**
              * Allows you to get the behavior of the decimal separator with integers.
              * (The decimal separator will always appear with decimals.)
@@ -606,7 +606,7 @@ declare namespace java {
              *          {@code false} otherwise
              */
             // @ts-ignore
-            isDecimalSeparatorAlwaysShown(): boolean
+            public isDecimalSeparatorAlwaysShown(): boolean
             /**
              * Allows you to set the behavior of the decimal separator with integers.
              * (The decimal separator will always appear with decimals.)
@@ -615,7 +615,7 @@ declare namespace java {
              *                  {@code false} otherwise
              */
             // @ts-ignore
-            setDecimalSeparatorAlwaysShown(newValue: boolean): void
+            public setDecimalSeparatorAlwaysShown(newValue: boolean): void
             /**
              * Returns whether the {@link #parse(java.lang.String, java.text.ParsePosition)}
              * method returns <code>BigDecimal</code>. The default value is false.
@@ -625,7 +625,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isParseBigDecimal(): boolean
+            public isParseBigDecimal(): boolean
             /**
              * Sets whether the {@link #parse(java.lang.String, java.text.ParsePosition)}
              * method returns <code>BigDecimal</code>.
@@ -635,22 +635,22 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setParseBigDecimal(newValue: boolean): void
+            public setParseBigDecimal(newValue: boolean): void
             /**
              * Standard override; no change in semantics.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Overrides equals
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Overrides hashCode
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Synthesizes a pattern string that represents the current state
              * of this Format object.
@@ -658,7 +658,7 @@ declare namespace java {
              * @see #applyPattern
              */
             // @ts-ignore
-            toPattern(): java.lang.String
+            public toPattern(): string
             /**
              * Synthesizes a localized pattern string that represents the current
              * state of this Format object.
@@ -666,7 +666,7 @@ declare namespace java {
              * @see #applyPattern
              */
             // @ts-ignore
-            toLocalizedPattern(): java.lang.String
+            public toLocalizedPattern(): string
             /**
              * Apply the given pattern to this Format object.  A pattern is a
              * short-hand specification for the various formatting properties.
@@ -689,7 +689,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid.
              */
             // @ts-ignore
-            applyPattern(pattern: string): void
+            public applyPattern(pattern: java.lang.String | string): void
             /**
              * Apply the given pattern to this Format object.  The pattern
              * is assumed to be in a localized notation. A pattern is a
@@ -713,7 +713,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid.
              */
             // @ts-ignore
-            applyLocalizedPattern(pattern: string): void
+            public applyLocalizedPattern(pattern: java.lang.String | string): void
             /**
              * Sets the maximum number of digits allowed in the integer portion of a
              * number.
@@ -723,7 +723,7 @@ declare namespace java {
              * @see NumberFormat#setMaximumIntegerDigits
              */
             // @ts-ignore
-            setMaximumIntegerDigits(newValue: number /*int*/): void
+            public setMaximumIntegerDigits(newValue: number /*int*/): void
             /**
              * Sets the minimum number of digits allowed in the integer portion of a
              * number.
@@ -733,7 +733,7 @@ declare namespace java {
              * @see NumberFormat#setMinimumIntegerDigits
              */
             // @ts-ignore
-            setMinimumIntegerDigits(newValue: number /*int*/): void
+            public setMinimumIntegerDigits(newValue: number /*int*/): void
             /**
              * Sets the maximum number of digits allowed in the fraction portion of a
              * number.
@@ -743,7 +743,7 @@ declare namespace java {
              * @see NumberFormat#setMaximumFractionDigits
              */
             // @ts-ignore
-            setMaximumFractionDigits(newValue: number /*int*/): void
+            public setMaximumFractionDigits(newValue: number /*int*/): void
             /**
              * Sets the minimum number of digits allowed in the fraction portion of a
              * number.
@@ -753,7 +753,7 @@ declare namespace java {
              * @see NumberFormat#setMinimumFractionDigits
              */
             // @ts-ignore
-            setMinimumFractionDigits(newValue: number /*int*/): void
+            public setMinimumFractionDigits(newValue: number /*int*/): void
             /**
              * Gets the maximum number of digits allowed in the integer portion of a
              * number.
@@ -763,7 +763,7 @@ declare namespace java {
              * @see #setMaximumIntegerDigits
              */
             // @ts-ignore
-            getMaximumIntegerDigits(): int
+            public getMaximumIntegerDigits(): number /*int*/
             /**
              * Gets the minimum number of digits allowed in the integer portion of a
              * number.
@@ -773,7 +773,7 @@ declare namespace java {
              * @see #setMinimumIntegerDigits
              */
             // @ts-ignore
-            getMinimumIntegerDigits(): int
+            public getMinimumIntegerDigits(): number /*int*/
             /**
              * Gets the maximum number of digits allowed in the fraction portion of a
              * number.
@@ -783,7 +783,7 @@ declare namespace java {
              * @see #setMaximumFractionDigits
              */
             // @ts-ignore
-            getMaximumFractionDigits(): int
+            public getMaximumFractionDigits(): number /*int*/
             /**
              * Gets the minimum number of digits allowed in the fraction portion of a
              * number.
@@ -793,7 +793,7 @@ declare namespace java {
              * @see #setMinimumFractionDigits
              */
             // @ts-ignore
-            getMinimumFractionDigits(): int
+            public getMinimumFractionDigits(): number /*int*/
             /**
              * Gets the currency used by this decimal format when formatting
              * currency values.
@@ -804,7 +804,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCurrency(): java.util.Currency
+            public getCurrency(): java.util.Currency
             /**
              * Sets the currency used by this number format when formatting
              * currency values. This does not update the minimum or maximum
@@ -817,7 +817,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setCurrency(currency: java.util.Currency): void
+            public setCurrency(currency: java.util.Currency): void
             /**
              * Gets the {@link java.math.RoundingMode} used in this DecimalFormat.
              * @return The <code>RoundingMode</code> used for this DecimalFormat.
@@ -825,7 +825,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getRoundingMode(): java.math.RoundingMode
+            public getRoundingMode(): java.math.RoundingMode
             /**
              * Sets the {@link java.math.RoundingMode} used in this DecimalFormat.
              * @param roundingMode The <code>RoundingMode</code> to be used
@@ -834,7 +834,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setRoundingMode(roundingMode: java.math.RoundingMode): void
+            public setRoundingMode(roundingMode: java.math.RoundingMode): void
         }
     }
 }

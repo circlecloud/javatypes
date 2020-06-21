@@ -15,40 +15,40 @@ declare namespace org {
                 // @ts-ignore
                 class TabCompleteEvent extends org.bukkit.event.Event implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(sender: org.bukkit.command.CommandSender, buffer: string, completions: Array<java.lang.String>)
+                    constructor(sender: org.bukkit.command.CommandSender, buffer: java.lang.String | string, completions: java.util.List<java.lang.String | string> | Array<java.lang.String | string>)
                     /**
                      * Get the sender completing this command.
                      * @return the {#link CommandSender} instance
                      */
                     // @ts-ignore
-                    getSender(): org.bukkit.command.CommandSender
+                    public getSender(): org.bukkit.command.CommandSender
                     /**
                      * Return the entire buffer which formed the basis of this completion.
                      * @return command buffer, as entered
                      */
                     // @ts-ignore
-                    getBuffer(): java.lang.String
+                    public getBuffer(): string
                     /**
                      * The list of completions which will be offered to the sender, in order.
                      * This list is mutable and reflects what will be offered.
                      * @return a list of offered completions
                      */
                     // @ts-ignore
-                    getCompletions(): java.util.List<java.lang.String>
+                    public getCompletions(): Array<java.lang.String | string>
                     /**
                      * Set the completions offered, overriding any already set.
                      * @param completions the new completions
                      */
                     // @ts-ignore
-                    setCompletions(completions: Array<java.lang.String>): void
+                    public setCompletions(completions: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

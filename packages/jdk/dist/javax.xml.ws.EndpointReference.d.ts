@@ -51,7 +51,7 @@ declare namespace javax {
              * @since JAX-WS 2.1
              */
             // @ts-ignore
-            class EndpointReference extends java.lang.Object {
+            abstract class EndpointReference extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -68,7 +68,7 @@ declare namespace javax {
                  *      if the <code>null</code> <code>eprInfoset</code> value is given.
                  */
                 // @ts-ignore
-                readFrom(eprInfoset: javax.xml.transform.Source): javax.xml.ws.EndpointReference
+                public static readFrom(eprInfoset: javax.xml.transform.Source): javax.xml.ws.EndpointReference
                 /**
                  * write this <code>EndpointReference</code> to the specified infoset format
                  * @param result for writing infoset
@@ -79,7 +79,7 @@ declare namespace javax {
                  *       If the <code>null</code> <code>result</code> value is given.
                  */
                 // @ts-ignore
-                abstract writeTo(result: javax.xml.transform.Result): void
+                public abstract writeTo(result: javax.xml.transform.Result): void
                 /**
                  * The <code>getPort</code> method returns a proxy. If there
                  * are any reference parameters in the
@@ -130,12 +130,12 @@ declare namespace javax {
                  * @see WebServiceFeature
                  */
                 // @ts-ignore
-                getPort<T>(serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
+                public getPort<T>(serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
                 /**
                  * Displays EPR infoset for debugging convenience.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

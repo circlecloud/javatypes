@@ -129,7 +129,7 @@ declare namespace java {
              * @see Locale#getUnicodeLocaleType(String)
              */
             // @ts-ignore
-            class CalendarNameProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class CalendarNameProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor. (For invocation by subclass constructors, typically
                  * implicit.)
@@ -190,7 +190,7 @@ declare namespace java {
                  * @see java.util.Calendar#getDisplayName(int, int, Locale)
                  */
                 // @ts-ignore
-                abstract getDisplayName(calendarType: string, field: number /*int*/, value: number /*int*/, style: number /*int*/, locale: java.util.Locale): java.lang.String
+                public abstract getDisplayName(calendarType: java.lang.String | string, field: number /*int*/, value: number /*int*/, style: number /*int*/, locale: java.util.Locale): string
                 /**
                  * Returns a {@code Map} containing all string representations (display
                  * names) of the {@code Calendar} {@code field} in the given {@code style}
@@ -237,7 +237,7 @@ declare namespace java {
                  * @see Calendar#getDisplayNames(int, int, Locale)
                  */
                 // @ts-ignore
-                abstract getDisplayNames(calendarType: string, field: number /*int*/, style: number /*int*/, locale: java.util.Locale): java.util.Map<java.lang.String, java.lang.Integer>
+                public abstract getDisplayNames(calendarType: java.lang.String | string, field: number /*int*/, style: number /*int*/, locale: java.util.Locale): java.util.Map<java.lang.String | string, java.lang.Integer | number>
             }
         }
     }

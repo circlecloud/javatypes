@@ -15,7 +15,7 @@ declare namespace java {
                  *             0xFFFF bytes.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new <code>JarEntry</code> with fields taken from the
                  * specified <code>ZipEntry</code> object.
@@ -39,7 +39,7 @@ declare namespace java {
                  * @throws IOException  if an I/O error has occurred
                  */
                 // @ts-ignore
-                getAttributes(): java.util.jar.Attributes
+                public getAttributes(): java.util.jar.Attributes
                 /**
                  * Returns the <code>Certificate</code> objects for this entry, or
                  * <code>null</code> if none. This method can only be called once
@@ -56,7 +56,7 @@ declare namespace java {
                  *  <code>null</code> if none.
                  */
                 // @ts-ignore
-                getCertificates(): java.security.cert.Certificate[]
+                public getCertificates(): java.security.cert.Certificate[]
                 /**
                  * Returns the <code>CodeSigner</code> objects for this entry, or
                  * <code>null</code> if none. This method can only be called once
@@ -70,7 +70,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getCodeSigners(): java.security.CodeSigner[]
+                public getCodeSigners(): java.security.CodeSigner[]
             }
         }
     }

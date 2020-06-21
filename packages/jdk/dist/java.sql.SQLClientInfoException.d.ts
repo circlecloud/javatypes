@@ -52,7 +52,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>)
+            constructor(failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with
              * a given <code>cause</code> and <code>failedProperties</code>.
@@ -72,7 +72,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>, cause: Error)
+            constructor(failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with a
              * given <code>reason</code> and <code>failedProperties</code>.
@@ -93,7 +93,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>)
+            constructor(reason: java.lang.String | string, failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with a
              * given <code>reason</code>, <code>cause</code> and
@@ -114,7 +114,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>, cause: Error)
+            constructor(reason: java.lang.String | string, failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with a
              * given  <code>reason</code>, <code>SQLState</code>  and
@@ -136,7 +136,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with a
              * given  <code>reason</code>, <code>SQLState</code>, <code>cause</code>
@@ -156,7 +156,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>, cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with a
              * given  <code>reason</code>, <code>SQLState</code>,
@@ -178,7 +178,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>)
             /**
              * Constructs a <code>SQLClientInfoException</code> object initialized with a
              * given  <code>reason</code>, <code>SQLState</code>,
@@ -200,7 +200,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, failedProperties: java.util.Map<java.lang.String, java.sql.ClientInfoStatus>, cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, failedProperties: java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>, cause: java.lang.Throwable | Error)
             /**
              * Returns the list of client info properties that could not be set.  The
              * keys in the Map  contain the names of the client info
@@ -213,7 +213,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getFailedProperties(): java.util.Map<java.lang.String, java.sql.ClientInfoStatus>
+            getFailedProperties(): java.util.Map<java.lang.String | string, java.sql.ClientInfoStatus>
         }
     }
 }

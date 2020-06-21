@@ -23,15 +23,15 @@ declare namespace org {
                          * @since 5.0
                          */
                         // @ts-ignore
-                        getTargetType(): java.lang.Class<?>
+                        public getTargetType(): java.lang.Class<any>
                         // @ts-ignore
-                        matchClassName(className: string): boolean
+                        matchClassName(className: java.lang.String | string): boolean
                         // @ts-ignore
-                        matchSuperClass(superClassName: string): java.lang.Boolean
+                        matchSuperClass(superClassName: java.lang.String | string): java.lang.Boolean
                         // @ts-ignore
-                        matchInterface(interfaceName: string): java.lang.Boolean
+                        matchInterface(interfaceName: java.lang.String | string): java.lang.Boolean
                         // @ts-ignore
-                        matchTargetType(typeName: string): java.lang.Boolean
+                        matchTargetType(typeName: java.lang.String | string): java.lang.Boolean
                     }
                 }
             }

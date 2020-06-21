@@ -16,7 +16,7 @@ declare namespace javax {
          * @see javax.imageio.spi.ImageWriterSpi
          */
         // @ts-ignore
-        class ImageWriter extends java.lang.Object implements javax.imageio.ImageTranscoder {
+        abstract class ImageWriter extends java.lang.Object implements javax.imageio.ImageTranscoder {
             /**
              * Constructs an <code>ImageWriter</code> and sets its
              * <code>originatingProvider</code> instance variable to the
@@ -45,7 +45,7 @@ declare namespace javax {
              * <code>null</code>.
              */
             // @ts-ignore
-            output: any
+            output: java.lang.Object | any
             /**
              * An array of <code>Locale</code>s that may be used to localize
              * warning messages and compression setting values, or
@@ -68,7 +68,7 @@ declare namespace javax {
              * <code>List</code>.
              */
             // @ts-ignore
-            warningListeners: Array<javax.imageio.event.IIOWriteWarningListener>
+            warningListeners: java.util.List<javax.imageio.event.IIOWriteWarningListener> | Array<javax.imageio.event.IIOWriteWarningListener>
             /**
              * A <code>List</code> of <code>Locale</code>s, one for each
              * element of <code>warningListeners</code>, initialized by default
@@ -76,7 +76,7 @@ declare namespace javax {
              * <code>List</code>.
              */
             // @ts-ignore
-            warningLocales: Array<java.util.Locale>
+            warningLocales: java.util.List<java.util.Locale> | Array<java.util.Locale>
             /**
              * A <code>List</code> of currently registered
              * <code>IIOWriteProgressListener</code>s, initialized by default
@@ -84,7 +84,7 @@ declare namespace javax {
              * <code>List</code>.
              */
             // @ts-ignore
-            progressListeners: Array<javax.imageio.event.IIOWriteProgressListener>
+            progressListeners: java.util.List<javax.imageio.event.IIOWriteProgressListener> | Array<javax.imageio.event.IIOWriteProgressListener>
             /**
              * Returns the <code>ImageWriterSpi</code> object that created
              * this <code>ImageWriter</code>, or <code>null</code> if this
@@ -95,7 +95,7 @@ declare namespace javax {
              * @see ImageWriterSpi
              */
             // @ts-ignore
-            getOriginatingProvider(): javax.imageio.spi.ImageWriterSpi
+            public getOriginatingProvider(): javax.imageio.spi.ImageWriterSpi
             /**
              * Sets the destination to the given
              * <code>ImageOutputStream</code> or other <code>Object</code>.
@@ -137,7 +137,7 @@ declare namespace javax {
              * @see #getOutput
              */
             // @ts-ignore
-            setOutput(output: any): void
+            public setOutput(output: java.lang.Object | any): void
             /**
              * Returns the <code>ImageOutputStream</code> or other
              * <code>Object</code> set by the most recent call to the
@@ -150,7 +150,7 @@ declare namespace javax {
              * @see #setOutput
              */
             // @ts-ignore
-            getOutput(): java.lang.Object
+            public getOutput(): any
             /**
              * Returns an array of <code>Locale</code>s that may be used to
              * localize warning listeners and compression settings.  A return
@@ -163,7 +163,7 @@ declare namespace javax {
              *  arguments to <code>setLocale</code>, or <code>null</code>.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public getAvailableLocales(): java.util.Locale[]
             /**
              * Sets the current <code>Locale</code> of this
              * <code>ImageWriter</code> to the given value.  A value of
@@ -183,7 +183,7 @@ declare namespace javax {
              * @see #getLocale
              */
             // @ts-ignore
-            setLocale(locale: java.util.Locale): void
+            public setLocale(locale: java.util.Locale): void
             /**
              * Returns the currently set <code>Locale</code>, or
              * <code>null</code> if none has been set.
@@ -193,7 +193,7 @@ declare namespace javax {
              * @see #setLocale
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Returns a new <code>ImageWriteParam</code> object of the
              * appropriate type for this file format containing default
@@ -215,7 +215,7 @@ declare namespace javax {
              *  default values.
              */
             // @ts-ignore
-            getDefaultWriteParam(): javax.imageio.ImageWriteParam
+            public getDefaultWriteParam(): javax.imageio.ImageWriteParam
             /**
              * Returns an <code>IIOMetadata</code> object containing default
              * values for encoding a stream of images.  The contents of the
@@ -240,7 +240,7 @@ declare namespace javax {
              * @return an <code>IIOMetadata</code> object.
              */
             // @ts-ignore
-            abstract getDefaultStreamMetadata(param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
+            public abstract getDefaultStreamMetadata(param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
             /**
              * Returns an <code>IIOMetadata</code> object containing default
              * values for encoding an image of the given type.  The contents
@@ -264,11 +264,11 @@ declare namespace javax {
              * @return an <code>IIOMetadata</code> object.
              */
             // @ts-ignore
-            abstract getDefaultImageMetadata(imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
+            public abstract getDefaultImageMetadata(imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
             // @ts-ignore
-            abstract convertStreamMetadata(inData: javax.imageio.metadata.IIOMetadata, param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
+            public abstract convertStreamMetadata(inData: javax.imageio.metadata.IIOMetadata, param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
             // @ts-ignore
-            abstract convertImageMetadata(inData: javax.imageio.metadata.IIOMetadata, imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
+            public abstract convertImageMetadata(inData: javax.imageio.metadata.IIOMetadata, imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam): javax.imageio.metadata.IIOMetadata
             /**
              * Returns the number of thumbnails supported by the format being
              * written, given the image type and any additional write
@@ -295,7 +295,7 @@ declare namespace javax {
              *  information is available.
              */
             // @ts-ignore
-            getNumThumbnailsSupported(imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam, streamMetadata: javax.imageio.metadata.IIOMetadata, imageMetadata: javax.imageio.metadata.IIOMetadata): int
+            public getNumThumbnailsSupported(imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam, streamMetadata: javax.imageio.metadata.IIOMetadata, imageMetadata: javax.imageio.metadata.IIOMetadata): number /*int*/
             /**
              * Returns an array of <code>Dimension</code>s indicating the
              * legal size ranges for thumbnail images as they will be encoded
@@ -328,7 +328,7 @@ declare namespace javax {
              *  of at least two, or <code>null</code>.
              */
             // @ts-ignore
-            getPreferredThumbnailSizes(imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam, streamMetadata: javax.imageio.metadata.IIOMetadata, imageMetadata: javax.imageio.metadata.IIOMetadata): java.awt.Dimension[]
+            public getPreferredThumbnailSizes(imageType: javax.imageio.ImageTypeSpecifier, param: javax.imageio.ImageWriteParam, streamMetadata: javax.imageio.metadata.IIOMetadata, imageMetadata: javax.imageio.metadata.IIOMetadata): java.awt.Dimension[]
             /**
              * Returns <code>true</code> if the methods that take an
              * <code>IIOImage</code> parameter are capable of dealing with a
@@ -342,7 +342,7 @@ declare namespace javax {
              *  supported.
              */
             // @ts-ignore
-            canWriteRasters(): boolean
+            public canWriteRasters(): boolean
             /**
              * Appends a complete image stream containing a single image and
              * associated stream and image metadata and thumbnails to the
@@ -387,7 +387,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            abstract write(streamMetadata: javax.imageio.metadata.IIOMetadata, image: javax.imageio.IIOImage, param: javax.imageio.ImageWriteParam): void
+            public abstract write(streamMetadata: javax.imageio.metadata.IIOMetadata, image: javax.imageio.IIOImage, param: javax.imageio.ImageWriteParam): void
             /**
              * Appends a complete image stream containing a single image with
              * default metadata and thumbnails to the output.  This method is
@@ -404,7 +404,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            write(image: javax.imageio.IIOImage): void
+            public write(image: javax.imageio.IIOImage): void
             /**
              * Appends a complete image stream consisting of a single image
              * with default metadata and thumbnails to the output.  This
@@ -418,7 +418,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            write(image: java.awt.image.RenderedImage): void
+            public write(image: java.awt.image.RenderedImage): void
             /**
              * Returns <code>true</code> if the writer is able to append an
              * image to an image stream that already contains header
@@ -430,7 +430,7 @@ declare namespace javax {
              * @return <code>true</code> if images may be appended sequentially.
              */
             // @ts-ignore
-            canWriteSequence(): boolean
+            public canWriteSequence(): boolean
             /**
              * Prepares a stream to accept a series of subsequent
              * <code>writeToSequence</code> calls, using the provided stream
@@ -463,7 +463,7 @@ declare namespace javax {
              *  metadata.
              */
             // @ts-ignore
-            prepareWriteSequence(streamMetadata: javax.imageio.metadata.IIOMetadata): void
+            public prepareWriteSequence(streamMetadata: javax.imageio.metadata.IIOMetadata): void
             /**
              * Appends a single image and possibly associated metadata and
              * thumbnails, to the output.  If the output is an
@@ -515,7 +515,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            writeToSequence(image: javax.imageio.IIOImage, param: javax.imageio.ImageWriteParam): void
+            public writeToSequence(image: javax.imageio.IIOImage, param: javax.imageio.ImageWriteParam): void
             /**
              * Completes the writing of a sequence of images begun with
              * <code>prepareWriteSequence</code>.  Any stream metadata that
@@ -539,7 +539,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            endWriteSequence(): void
+            public endWriteSequence(): void
             /**
              * Returns <code>true</code> if it is possible to replace the
              * stream metadata already present in the output.
@@ -553,7 +553,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during the query.
              */
             // @ts-ignore
-            canReplaceStreamMetadata(): boolean
+            public canReplaceStreamMetadata(): boolean
             /**
              * Replaces the stream metadata in the output with new
              * information.  If the output is an
@@ -578,7 +578,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            replaceStreamMetadata(streamMetadata: javax.imageio.metadata.IIOMetadata): void
+            public replaceStreamMetadata(streamMetadata: javax.imageio.metadata.IIOMetadata): void
             /**
              * Returns <code>true</code> if it is possible to replace the
              * image metadata associated with an existing image with index
@@ -606,7 +606,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during the query.
              */
             // @ts-ignore
-            canReplaceImageMetadata(imageIndex: number /*int*/): boolean
+            public canReplaceImageMetadata(imageIndex: number /*int*/): boolean
             /**
              * Replaces the image metadata associated with an existing image.
              * <p> If <code>canReplaceImageMetadata(imageIndex)</code> returns
@@ -630,7 +630,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            replaceImageMetadata(imageIndex: number /*int*/, imageMetadata: javax.imageio.metadata.IIOMetadata): void
+            public replaceImageMetadata(imageIndex: number /*int*/, imageMetadata: javax.imageio.metadata.IIOMetadata): void
             /**
              * Returns <code>true</code> if the writer supports the insertion
              * of a new image at the given index.  Existing images with
@@ -657,7 +657,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during the query.
              */
             // @ts-ignore
-            canInsertImage(imageIndex: number /*int*/): boolean
+            public canInsertImage(imageIndex: number /*int*/): boolean
             /**
              * Inserts a new image into an existing image stream.  Existing
              * images with an index greater than <code>imageIndex</code> are
@@ -701,7 +701,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during writing.
              */
             // @ts-ignore
-            writeInsert(imageIndex: number /*int*/, image: javax.imageio.IIOImage, param: javax.imageio.ImageWriteParam): void
+            public writeInsert(imageIndex: number /*int*/, image: javax.imageio.IIOImage, param: javax.imageio.ImageWriteParam): void
             /**
              * Returns <code>true</code> if the writer supports the removal
              * of an existing image at the given index.  Existing images with
@@ -726,7 +726,7 @@ declare namespace javax {
              *  query.
              */
             // @ts-ignore
-            canRemoveImage(imageIndex: number /*int*/): boolean
+            public canRemoveImage(imageIndex: number /*int*/): boolean
             /**
              * Removes an image from the stream.
              * <p> If <code>canRemoveImage(imageIndex)</code> returns false,
@@ -748,7 +748,7 @@ declare namespace javax {
              *  removal.
              */
             // @ts-ignore
-            removeImage(imageIndex: number /*int*/): void
+            public removeImage(imageIndex: number /*int*/): void
             /**
              * Returns <code>true</code> if the writer supports the writing of
              * a complete image stream consisting of a single image with
@@ -769,7 +769,7 @@ declare namespace javax {
              *  query.
              */
             // @ts-ignore
-            canWriteEmpty(): boolean
+            public canWriteEmpty(): boolean
             /**
              * Begins the writing of a complete image stream, consisting of a
              * single image with undefined pixel values and associated
@@ -832,7 +832,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            prepareWriteEmpty(streamMetadata: javax.imageio.metadata.IIOMetadata, imageType: javax.imageio.ImageTypeSpecifier, width: number /*int*/, height: number /*int*/, imageMetadata: javax.imageio.metadata.IIOMetadata, thumbnails: Array<java.awt.image.BufferedImage>, param: javax.imageio.ImageWriteParam): void
+            public prepareWriteEmpty(streamMetadata: javax.imageio.metadata.IIOMetadata, imageType: javax.imageio.ImageTypeSpecifier, width: number /*int*/, height: number /*int*/, imageMetadata: javax.imageio.metadata.IIOMetadata, thumbnails: java.util.List<any> | Array<any>, param: javax.imageio.ImageWriteParam): void
             /**
              * Completes the writing of a new image that was begun with a
              * prior call to <code>prepareWriteEmpty</code>.
@@ -859,7 +859,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            endWriteEmpty(): void
+            public endWriteEmpty(): void
             /**
              * Returns <code>true</code> if the writer supports the insertion
              * of a new, empty image at the given index.  The pixel values of
@@ -889,7 +889,7 @@ declare namespace javax {
              *  query.
              */
             // @ts-ignore
-            canInsertEmpty(imageIndex: number /*int*/): boolean
+            public canInsertEmpty(imageIndex: number /*int*/): boolean
             /**
              * Begins the insertion of a new image with undefined pixel values
              * into an existing image stream.  Existing images with an index
@@ -960,7 +960,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            prepareInsertEmpty(imageIndex: number /*int*/, imageType: javax.imageio.ImageTypeSpecifier, width: number /*int*/, height: number /*int*/, imageMetadata: javax.imageio.metadata.IIOMetadata, thumbnails: Array<java.awt.image.BufferedImage>, param: javax.imageio.ImageWriteParam): void
+            public prepareInsertEmpty(imageIndex: number /*int*/, imageType: javax.imageio.ImageTypeSpecifier, width: number /*int*/, height: number /*int*/, imageMetadata: javax.imageio.metadata.IIOMetadata, thumbnails: java.util.List<any> | Array<any>, param: javax.imageio.ImageWriteParam): void
             /**
              * Completes the insertion of a new image that was begun with a
              * prior call to <code>prepareInsertEmpty</code>.
@@ -985,7 +985,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            endInsertEmpty(): void
+            public endInsertEmpty(): void
             /**
              * Returns <code>true</code> if the writer allows pixels of the
              * given image to be replaced using the <code>replacePixels</code>
@@ -1009,7 +1009,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during the query.
              */
             // @ts-ignore
-            canReplacePixels(imageIndex: number /*int*/): boolean
+            public canReplacePixels(imageIndex: number /*int*/): boolean
             /**
              * Prepares the writer to handle a series of calls to the
              * <code>replacePixels</code> methods.  The affected pixel area
@@ -1042,7 +1042,7 @@ declare namespace javax {
              *  preparation.
              */
             // @ts-ignore
-            prepareReplacePixels(imageIndex: number /*int*/, region: java.awt.Rectangle): void
+            public prepareReplacePixels(imageIndex: number /*int*/, region: java.awt.Rectangle): void
             /**
              * Replaces a portion of an image already present in the output
              * with a portion of the given image.  The image data must match,
@@ -1090,7 +1090,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            replacePixels(image: java.awt.image.RenderedImage, param: javax.imageio.ImageWriteParam): void
+            public replacePixels(image: java.awt.image.RenderedImage, param: javax.imageio.ImageWriteParam): void
             /**
              * Replaces a portion of an image already present in the output
              * with a portion of the given <code>Raster</code>.  The image
@@ -1141,7 +1141,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            replacePixels(raster: java.awt.image.Raster, param: javax.imageio.ImageWriteParam): void
+            public replacePixels(raster: java.awt.image.Raster, param: javax.imageio.ImageWriteParam): void
             /**
              * Terminates a sequence of calls to <code>replacePixels</code>.
              * <p> If <code>canReplacePixels</code> returns
@@ -1162,7 +1162,7 @@ declare namespace javax {
              * @exception IOException if an I/O error occurs during writing.
              */
             // @ts-ignore
-            endReplacePixels(): void
+            public endReplacePixels(): void
             /**
              * Requests that any current write operation be aborted.  The
              * contents of the output following the abort will be undefined.
@@ -1171,7 +1171,7 @@ declare namespace javax {
              * <code>abortRequested</code> regularly during the write.
              */
             // @ts-ignore
-            abort(): void
+            public abort(): void
             /**
              * Returns <code>true</code> if a request to abort the current
              * write operation has been made since the writer was instantiated or
@@ -1205,7 +1205,7 @@ declare namespace javax {
              * @see #removeIIOWriteWarningListener
              */
             // @ts-ignore
-            addIIOWriteWarningListener(listener: javax.imageio.event.IIOWriteWarningListener): void
+            public addIIOWriteWarningListener(listener: javax.imageio.event.IIOWriteWarningListener): void
             /**
              * Removes an <code>IIOWriteWarningListener</code> from the list
              * of registered warning listeners.  If the listener was not
@@ -1217,7 +1217,7 @@ declare namespace javax {
              * @see #addIIOWriteWarningListener
              */
             // @ts-ignore
-            removeIIOWriteWarningListener(listener: javax.imageio.event.IIOWriteWarningListener): void
+            public removeIIOWriteWarningListener(listener: javax.imageio.event.IIOWriteWarningListener): void
             /**
              * Removes all currently registered
              * <code>IIOWriteWarningListener</code> objects.
@@ -1226,7 +1226,7 @@ declare namespace javax {
              * instance variables to <code>null</code>.
              */
             // @ts-ignore
-            removeAllIIOWriteWarningListeners(): void
+            public removeAllIIOWriteWarningListeners(): void
             /**
              * Adds an <code>IIOWriteProgressListener</code> to the list of
              * registered progress listeners.  If <code>listener</code> is
@@ -1237,7 +1237,7 @@ declare namespace javax {
              * @see #removeIIOWriteProgressListener
              */
             // @ts-ignore
-            addIIOWriteProgressListener(listener: javax.imageio.event.IIOWriteProgressListener): void
+            public addIIOWriteProgressListener(listener: javax.imageio.event.IIOWriteProgressListener): void
             /**
              * Removes an <code>IIOWriteProgressListener</code> from the list
              * of registered progress listeners.  If the listener was not
@@ -1249,7 +1249,7 @@ declare namespace javax {
              * @see #addIIOWriteProgressListener
              */
             // @ts-ignore
-            removeIIOWriteProgressListener(listener: javax.imageio.event.IIOWriteProgressListener): void
+            public removeIIOWriteProgressListener(listener: javax.imageio.event.IIOWriteProgressListener): void
             /**
              * Removes all currently registered
              * <code>IIOWriteProgressListener</code> objects.
@@ -1258,7 +1258,7 @@ declare namespace javax {
              * <code>null</code>.
              */
             // @ts-ignore
-            removeAllIIOWriteProgressListeners(): void
+            public removeAllIIOWriteProgressListeners(): void
             /**
              * Broadcasts the start of an image write to all registered
              * <code>IIOWriteProgressListener</code>s by calling their
@@ -1335,7 +1335,7 @@ declare namespace javax {
              *  is <code>null</code>.
              */
             // @ts-ignore
-            processWarningOccurred(imageIndex: number /*int*/, warning: string): void
+            processWarningOccurred(imageIndex: number /*int*/, warning: java.lang.String | string): void
             /**
              * Broadcasts a localized warning message to all registered
              * <code>IIOWriteWarningListener</code>s by calling their
@@ -1362,7 +1362,7 @@ declare namespace javax {
              *  <code>String</code>.
              */
             // @ts-ignore
-            processWarningOccurred(imageIndex: number /*int*/, baseName: string, keyword: string): void
+            processWarningOccurred(imageIndex: number /*int*/, baseName: java.lang.String | string, keyword: java.lang.String | string): void
             /**
              * Restores the <code>ImageWriter</code> to its initial state.
              * <p> The default implementation calls
@@ -1372,7 +1372,7 @@ declare namespace javax {
              * <code>clearAbortRequest</code>.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Allows any resources held by this object to be released.  The
              * result of calling any other method (other than
@@ -1387,7 +1387,7 @@ declare namespace javax {
              * especially native resources, are released.
              */
             // @ts-ignore
-            dispose(): void
+            public dispose(): void
         }
     }
 }

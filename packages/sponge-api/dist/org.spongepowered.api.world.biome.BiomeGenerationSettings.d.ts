@@ -19,7 +19,7 @@ declare namespace org {
                          * @return The min height
                          */
                         // @ts-ignore
-                        getMinHeight(): float
+                        getMinHeight(): number /*float*/
                         /**
                          * Sets the minimum terrain height of this biome.
                          * @param height The new min height
@@ -31,7 +31,7 @@ declare namespace org {
                          * @return The max height
                          */
                         // @ts-ignore
-                        getMaxHeight(): float
+                        getMaxHeight(): number /*float*/
                         /**
                          * Sets the maximum terrain height of this biome.
                          * @param height The new max height
@@ -45,7 +45,7 @@ declare namespace org {
                          * @return The ground cover layers
                          */
                         // @ts-ignore
-                        getGroundCoverLayers(): java.util.List<org.spongepowered.api.world.biome.GroundCoverLayer>
+                        getGroundCoverLayers(): Array<org.spongepowered.api.world.biome.GroundCoverLayer>
                         /**
                          * Gets a mutable list of {@link GenerationPopulator}s. These populators
                          * work strictly on a single chunk. They will be executed directly after the
@@ -55,7 +55,7 @@ declare namespace org {
                          * @return The generation populators
                          */
                         // @ts-ignore
-                        getGenerationPopulators(): java.util.List<org.spongepowered.api.world.gen.GenerationPopulator>
+                        getGenerationPopulators(): Array<org.spongepowered.api.world.gen.GenerationPopulator>
                         /**
                          * Gets an immutable list of {@link GenerationPopulator}s matching the given
                          * class type.
@@ -63,14 +63,14 @@ declare namespace org {
                          * @return The generation populators
                          */
                         // @ts-ignore
-                        getGenerationPopulators(type: java.lang.Class<org.spongepowered.api.world.gen.GenerationPopulator>): java.util.List<org.spongepowered.api.world.gen.GenerationPopulator>
+                        getGenerationPopulators(type: java.lang.Class<any>): Array<org.spongepowered.api.world.gen.GenerationPopulator>
                         /**
                          * Returns a mutable list of {@link Populator}s specific to this biome.
                          * Changing this list will affect population of all new chunks.
                          * @return The populators
                          */
                         // @ts-ignore
-                        getPopulators(): java.util.List<org.spongepowered.api.world.gen.Populator>
+                        getPopulators(): Array<org.spongepowered.api.world.gen.Populator>
                         /**
                          * Returns an immutable list of {@link Populator}s specific to this biome
                          * which match the given class type.
@@ -79,7 +79,7 @@ declare namespace org {
                          * @return The populators
                          */
                         // @ts-ignore
-                        getPopulators<T extends org.spongepowered.api.world.gen.Populator>(type: java.lang.Class<T>): java.util.List<T>
+                        getPopulators<T extends org.spongepowered.api.world.gen.Populator>(type: java.lang.Class<T>): Array<T>
                         /**
                          * Returns a new biome generation settings which is a copy of this set of
                          * generation settings at this point in time.

@@ -28,16 +28,16 @@ declare namespace org {
                          *  Set are eligible for exposure as attributes)
                          */
                         // @ts-ignore
-                        constructor(originalRequest: HttpServletRequest, context: org.springframework.web.context.WebApplicationContext, exposedContextBeanNames: Array<java.lang.String>)
+                        constructor(originalRequest: HttpServletRequest, context: org.springframework.web.context.WebApplicationContext, exposedContextBeanNames: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>)
                         /**
                          * Return the WebApplicationContext that this request runs in.
                          */
                         // @ts-ignore
-                        getWebApplicationContext(): org.springframework.web.context.WebApplicationContext
+                        public getWebApplicationContext(): org.springframework.web.context.WebApplicationContext
                         // @ts-ignore
-                        getAttribute(name: string): java.lang.Object
+                        public getAttribute(name: java.lang.String | string): any
                         // @ts-ignore
-                        setAttribute(name: string, value: any): void
+                        public setAttribute(name: java.lang.String | string, value: java.lang.Object | any): void
                     }
                 }
             }

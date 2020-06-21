@@ -14,11 +14,11 @@ declare namespace org {
                      * @return completed advancement
                      */
                     // @ts-ignore
-                    getAdvancement(): org.bukkit.advancement.Advancement
+                    public getAdvancement(): org.bukkit.advancement.Advancement
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

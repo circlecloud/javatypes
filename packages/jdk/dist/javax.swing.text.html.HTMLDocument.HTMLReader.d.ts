@@ -162,33 +162,33 @@ declare namespace javax {
                          * set of changes are pushed in at this point.
                          */
                         // @ts-ignore
-                        flush(): void
+                        public flush(): void
                         /**
                          * Called by the parser to indicate a block of text was
                          * encountered.
                          */
                         // @ts-ignore
-                        handleText(data: string[], pos: number /*int*/): void
+                        public handleText(data: string[], pos: number /*int*/): void
                         /**
                          * Callback from the parser.  Route to the appropriate
                          * handler for the tag.
                          */
                         // @ts-ignore
-                        handleStartTag(t: javax.swing.text.html.HTML.Tag, a: javax.swing.text.MutableAttributeSet, pos: number /*int*/): void
+                        public handleStartTag(t: javax.swing.text.html.HTML.Tag, a: javax.swing.text.MutableAttributeSet, pos: number /*int*/): void
                         // @ts-ignore
-                        handleComment(data: string[], pos: number /*int*/): void
+                        public handleComment(data: string[], pos: number /*int*/): void
                         /**
                          * Callback from the parser.  Route to the appropriate
                          * handler for the tag.
                          */
                         // @ts-ignore
-                        handleEndTag(t: javax.swing.text.html.HTML.Tag, pos: number /*int*/): void
+                        public handleEndTag(t: javax.swing.text.html.HTML.Tag, pos: number /*int*/): void
                         /**
                          * Callback from the parser.  Route to the appropriate
                          * handler for the tag.
                          */
                         // @ts-ignore
-                        handleSimpleTag(t: javax.swing.text.html.HTML.Tag, a: javax.swing.text.MutableAttributeSet, pos: number /*int*/): void
+                        public handleSimpleTag(t: javax.swing.text.html.HTML.Tag, a: javax.swing.text.MutableAttributeSet, pos: number /*int*/): void
                         /**
                          * This is invoked after the stream has been parsed, but before
                          * <code>flush</code>. <code>eol</code> will be one of \n, \r
@@ -197,7 +197,7 @@ declare namespace javax {
                          * @since 1.3
                          */
                         // @ts-ignore
-                        handleEndOfLineString(eol: string): void
+                        public handleEndOfLineString(eol: java.lang.String | string): void
                         /**
                          * Registers a handler for the given tag.  By default
                          * all of the well-known tags will have been registered.

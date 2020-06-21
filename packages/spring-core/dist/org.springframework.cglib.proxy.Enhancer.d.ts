@@ -35,7 +35,7 @@ declare namespace org {
                  * <code>java.lang.reflect.Proxy</code>, see the {@link Proxy} class.
                  */
                 // @ts-ignore
-                class Enhancer extends org.springframework.cglib.core.AbstractClassGenerator {
+                class Enhancer extends org.springframework.cglib.core.AbstractClassGenerator<any> {
                     /**
                      * Create a new <code>Enhancer</code>. A new <code>Enhancer</code>
                      * object should be used for each generated object, and should not
@@ -55,7 +55,7 @@ declare namespace org {
                      * @see #setInterfaces(Class[])
                      */
                     // @ts-ignore
-                    setSuperclass(superclass: java.lang.Class): void
+                    public setSuperclass(superclass: java.lang.Class<any>): void
                     /**
                      * Set the interfaces to implement. The <code>Factory</code> interface will
                      * always be implemented regardless of what is specified here.
@@ -63,7 +63,7 @@ declare namespace org {
                      * @see Factory
                      */
                     // @ts-ignore
-                    setInterfaces(interfaces: java.lang.Class[]): void
+                    public setInterfaces(interfaces: java.lang.Class<any>[]): void
                     /**
                      * Set the {@link CallbackFilter} used to map the generated class' methods
                      * to a particular callback index.
@@ -73,7 +73,7 @@ declare namespace org {
                      * @see #setCallbacks
                      */
                     // @ts-ignore
-                    setCallbackFilter(filter: CallbackFilter): void
+                    public setCallbackFilter(filter: CallbackFilter): void
                     /**
                      * Set the single {@link Callback} to use.
                      * Ignored if you use {@link #createClass}.
@@ -81,7 +81,7 @@ declare namespace org {
                      * @see #setCallbacks
                      */
                     // @ts-ignore
-                    setCallback(callback: Callback): void
+                    public setCallback(callback: Callback): void
                     /**
                      * Set the array of callbacks to use.
                      * Ignored if you use {@link #createClass}.
@@ -92,7 +92,7 @@ declare namespace org {
                      * @see #setCallback
                      */
                     // @ts-ignore
-                    setCallbacks(callbacks: Callback[]): void
+                    public setCallbacks(callbacks: Callback[]): void
                     /**
                      * Set whether the enhanced object instances should implement
                      * the {@link Factory} interface.
@@ -103,7 +103,7 @@ declare namespace org {
                      * @param useFactory whether to implement <code>Factory</code>; default is <code>true</code>
                      */
                     // @ts-ignore
-                    setUseFactory(useFactory: boolean): void
+                    public setUseFactory(useFactory: boolean): void
                     /**
                      * Set whether methods called from within the proxy's constructer
                      * will be intercepted. The default value is true. Unintercepted methods
@@ -111,7 +111,7 @@ declare namespace org {
                      * @param interceptDuringConstruction whether to intercept methods called from the constructor
                      */
                     // @ts-ignore
-                    setInterceptDuringConstruction(interceptDuringConstruction: boolean): void
+                    public setInterceptDuringConstruction(interceptDuringConstruction: boolean): void
                     /**
                      * Set the single type of {@link Callback} to use.
                      * This may be used instead of {@link #setCallback} when calling
@@ -121,7 +121,7 @@ declare namespace org {
                      * @see #setCallbackTypes
                      */
                     // @ts-ignore
-                    setCallbackType(callbackType: java.lang.Class): void
+                    public setCallbackType(callbackType: java.lang.Class<any>): void
                     /**
                      * Set the array of callback types to use.
                      * This may be used instead of {@link #setCallbacks} when calling
@@ -132,7 +132,7 @@ declare namespace org {
                      * @param callbackTypes the array of callback types
                      */
                     // @ts-ignore
-                    setCallbackTypes(callbackTypes: java.lang.Class[]): void
+                    public setCallbackTypes(callbackTypes: java.lang.Class<any>[]): void
                     /**
                      * Generate a new class if necessary and uses the specified
                      * callbacks (if any) to create a new object instance.
@@ -140,7 +140,7 @@ declare namespace org {
                      * @return a new instance
                      */
                     // @ts-ignore
-                    create(): java.lang.Object
+                    public create(): any
                     /**
                      * Generate a new class if necessary and uses the specified
                      * callbacks (if any) to create a new object instance.
@@ -151,7 +151,7 @@ declare namespace org {
                      * @return a new instance
                      */
                     // @ts-ignore
-                    create(argumentTypes: java.lang.Class[], arguments: any[]): java.lang.Object
+                    public create(argumentTypes: java.lang.Class<any>[], arguments: java.lang.Object[] | any[]): any
                     /**
                      * Generate a new class if necessary and return it without creating a new instance.
                      * This ignores any callbacks that have been set.
@@ -161,15 +161,15 @@ declare namespace org {
                      * @see #create(Class[], Object[])
                      */
                     // @ts-ignore
-                    createClass(): java.lang.Class
+                    public createClass(): java.lang.Class<any>
                     /**
                      * Insert a static serialVersionUID field into the generated class.
                      * @param sUID the field value, or null to avoid generating field.
                      */
                     // @ts-ignore
-                    setSerialVersionUID(sUID: number): void
+                    public setSerialVersionUID(sUID: java.lang.Long | number): void
                     // @ts-ignore
-                    generate(data: org.springframework.cglib.core.AbstractClassGenerator.ClassLoaderData): java.lang.Class
+                    generate(data: org.springframework.cglib.core.AbstractClassGenerator.ClassLoaderData): java.lang.Class<any>
                     // @ts-ignore
                     getDefaultClassLoader(): java.lang.ClassLoader
                     // @ts-ignore
@@ -188,9 +188,9 @@ declare namespace org {
                      * @param methods the list into which to copy the applicable methods
                      */
                     // @ts-ignore
-                    getMethods(superclass: java.lang.Class, interfaces: java.lang.Class[], methods: Array): void
+                    public static getMethods(superclass: java.lang.Class<any>, interfaces: java.lang.Class<any>[], methods: java.util.List<any> | Array<any>): void
                     // @ts-ignore
-                    generateClass(v: org.springframework.asm.ClassVisitor): void
+                    public generateClass(v: org.springframework.asm.ClassVisitor): void
                     /**
                      * Filter the list of constructors from the superclass. The
                      * constructors which remain will be included in the generated
@@ -202,7 +202,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if there are no non-private constructors
                      */
                     // @ts-ignore
-                    filterConstructors(sc: java.lang.Class, constructors: Array): void
+                    filterConstructors(sc: java.lang.Class<any>, constructors: java.util.List<any> | Array<any>): void
                     /**
                      * This method should not be called in regular flow.
                      * Technically speaking {@link #wrapCachedClass(Class)} uses {@link Enhancer.EnhancerFactoryData} as a cache value,
@@ -213,13 +213,13 @@ declare namespace org {
                      * @throws Exception if something goes wrong
                      */
                     // @ts-ignore
-                    firstInstance(type: java.lang.Class): java.lang.Object
+                    firstInstance(type: java.lang.Class<any>): any
                     // @ts-ignore
-                    nextInstance(instance: any): java.lang.Object
+                    nextInstance(instance: java.lang.Object | any): any
                     // @ts-ignore
-                    wrapCachedClass(klass: java.lang.Class): java.lang.Object
+                    wrapCachedClass(klass: java.lang.Class<any>): any
                     // @ts-ignore
-                    unwrapCachedValue(cached: any): java.lang.Object
+                    unwrapCachedValue(cached: java.lang.Object | any): any
                     /**
                      * Call this method to register the {@link Callback} array to use before
                      * creating a new instance of the generated class via reflection. If you are using
@@ -244,7 +244,7 @@ declare namespace org {
                      * @see #setUseFactory
                      */
                     // @ts-ignore
-                    registerCallbacks(generatedClass: java.lang.Class, callbacks: Callback[]): void
+                    public static registerCallbacks(generatedClass: java.lang.Class<any>, callbacks: Callback[]): void
                     /**
                      * Similar to {@link #registerCallbacks}, but suitable for use
                      * when multiple threads will be creating instances of the generated class.
@@ -255,14 +255,14 @@ declare namespace org {
                      *  class are created
                      */
                     // @ts-ignore
-                    registerStaticCallbacks(generatedClass: java.lang.Class, callbacks: Callback[]): void
+                    public static registerStaticCallbacks(generatedClass: java.lang.Class<any>, callbacks: Callback[]): void
                     /**
                      * Determine if a class was generated using <code>Enhancer</code>.
                      * @param type any class
                      * @return whether the class was generated  using <code>Enhancer</code>
                      */
                     // @ts-ignore
-                    isEnhanced(type: java.lang.Class): boolean
+                    public static isEnhanced(type: java.lang.Class<any>): boolean
                     /**
                      * Helper method to create an intercepted object.
                      * For finer control over the generated instance, use a new instance of <code>Enhancer</code>
@@ -271,7 +271,7 @@ declare namespace org {
                      * @param callback the callback to use for all methods
                      */
                     // @ts-ignore
-                    create(type: java.lang.Class, callback: Callback): java.lang.Object
+                    public static create(type: java.lang.Class<any>, callback: Callback): any
                     /**
                      * Helper method to create an intercepted object.
                      * For finer control over the generated instance, use a new instance of <code>Enhancer</code>
@@ -281,7 +281,7 @@ declare namespace org {
                      * @param callback the callback to use for all methods
                      */
                     // @ts-ignore
-                    create(superclass: java.lang.Class, interfaces: java.lang.Class[], callback: Callback): java.lang.Object
+                    public static create(superclass: java.lang.Class<any>, interfaces: java.lang.Class<any>[], callback: Callback): any
                     /**
                      * Helper method to create an intercepted object.
                      * For finer control over the generated instance, use a new instance of <code>Enhancer</code>
@@ -292,7 +292,7 @@ declare namespace org {
                      * @param callbacks callback implementations to use for the enhanced object
                      */
                     // @ts-ignore
-                    create(superclass: java.lang.Class, interfaces: java.lang.Class[], filter: CallbackFilter, callbacks: Callback[]): java.lang.Object
+                    public static create(superclass: java.lang.Class<any>, interfaces: java.lang.Class<any>[], filter: CallbackFilter, callbacks: Callback[]): any
                 }
             }
         }

@@ -26,12 +26,12 @@ declare namespace org {
                  *  collections are empty
                  */
                 // @ts-ignore
-                constructor(includes: Array<T>, excludes: Array<T>, matchIfEmpty: boolean)
+                constructor(includes: java.util.Collection<any> | Array<any>, excludes: java.util.Collection<any> | Array<any>, matchIfEmpty: boolean)
                 /**
                  * Determine if the specified {code instance} matches this filter.
                  */
                 // @ts-ignore
-                match(instance: T): boolean
+                public match(instance: T): boolean
                 /**
                  * Determine if the specified {@code instance} is equal to the
                  * specified {@code candidate}.
@@ -49,9 +49,9 @@ declare namespace org {
                  * @return {#code true} if the instance match or the candidates collection is null
                  */
                 // @ts-ignore
-                match(instance: T, candidates: Array<T>): boolean
+                match(instance: T, candidates: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

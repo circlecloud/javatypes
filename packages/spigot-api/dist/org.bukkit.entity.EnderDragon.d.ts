@@ -34,7 +34,7 @@ declare namespace org {
                  * @return this dragon's death animation ticks
                  */
                 // @ts-ignore
-                getDeathAnimationTicks(): int
+                getDeathAnimationTicks(): number /*int*/
             }
         }
     }

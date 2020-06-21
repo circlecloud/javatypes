@@ -9,7 +9,7 @@ declare namespace org {
                          * to create a {@link Enchantment}.
                          */
                         // @ts-ignore
-                        interface RandomListBuilder extends org.spongepowered.api.util.ResettableBuilder<java.util.List<org.spongepowered.api.item.enchantment.Enchantment>, org.spongepowered.api.item.enchantment.Enchantment.RandomListBuilder> {
+                        interface RandomListBuilder extends org.spongepowered.api.util.ResettableBuilder<java.util.List<org.spongepowered.api.item.enchantment.Enchantment> | Array<org.spongepowered.api.item.enchantment.Enchantment>, org.spongepowered.api.item.enchantment.Enchantment.RandomListBuilder> {
                             /**
                              * Sets the random seed.
                              * @param seed the random seed
@@ -45,7 +45,7 @@ declare namespace org {
                              * @return The modified builder, for chaining
                              */
                             // @ts-ignore
-                            fixedPool(pool: Array<org.spongepowered.api.item.enchantment.Enchantment>): org.spongepowered.api.item.enchantment.Enchantment.RandomListBuilder
+                            fixedPool(pool: java.util.List<org.spongepowered.api.item.enchantment.Enchantment> | Array<org.spongepowered.api.item.enchantment.Enchantment>): org.spongepowered.api.item.enchantment.Enchantment.RandomListBuilder
                             /**
                              * Sets the item for which the enchantments are chosen
                              * @param item the item for which the enchantments are chosen
@@ -60,7 +60,7 @@ declare namespace org {
                              * @throws IllegalStateException If a required value was not specified
                              */
                             // @ts-ignore
-                            build(): java.util.List<org.spongepowered.api.item.enchantment.Enchantment>
+                            build(): Array<org.spongepowered.api.item.enchantment.Enchantment>
                         }
                     }
                 }

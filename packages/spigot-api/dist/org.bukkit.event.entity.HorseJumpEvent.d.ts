@@ -10,14 +10,14 @@ declare namespace org {
                     // @ts-ignore
                     constructor(horse: org.bukkit.entity.AbstractHorse, power: number /*float*/)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     /**
                      * @deprecated horse jumping was moved client side.
                      */
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.AbstractHorse
+                    public getEntity(): org.bukkit.entity.AbstractHorse
                     /**
                      * Gets the power of the jump.
                      * <p>
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return jump strength
                      */
                     // @ts-ignore
-                    getPower(): float
+                    public getPower(): number /*float*/
                     /**
                      * Sets the power of the jump.
                      * <p>
@@ -49,11 +49,11 @@ declare namespace org {
                      * @deprecated horse jumping was moved client side.
                      */
                     // @ts-ignore
-                    setPower(power: number /*float*/): void
+                    public setPower(power: number /*float*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

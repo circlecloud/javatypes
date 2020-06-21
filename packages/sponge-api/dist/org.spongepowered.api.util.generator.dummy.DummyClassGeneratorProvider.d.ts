@@ -11,7 +11,7 @@ declare namespace org {
                              * @param targetPackage The target package
                              */
                             // @ts-ignore
-                            constructor(targetPackage: string)
+                            constructor(targetPackage: java.lang.String | string)
                             /**
                              * Creates a new class extended based on the provided {@code type} with the
                              * provided {@code exceptionType} to throw for all methods provided by the
@@ -22,7 +22,7 @@ declare namespace org {
                              * @return The generated class
                              */
                             // @ts-ignore
-                            create<T>(type: java.lang.Class<T>, exceptionType: java.lang.Class<java.lang.Throwable>): java.lang.Class<T>
+                            public create<T>(type: java.lang.Class<T>, exceptionType: java.lang.Class<any>): java.lang.Class<T>
                         }
                     }
                 }

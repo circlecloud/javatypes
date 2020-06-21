@@ -18,26 +18,26 @@ declare namespace java {
                  * @param invalidate <code>true</code> for immediate revocation
                  */
                 // @ts-ignore
-                constructor(bcs: java.beans.beancontext.BeanContextServices, sc: java.lang.Class, invalidate: boolean)
+                constructor(bcs: java.beans.beancontext.BeanContextServices, sc: java.lang.Class<any>, invalidate: boolean)
                 /**
                  * A <code>Class</code> reference to the service that is being revoked.
                  */
                 // @ts-ignore
-                serviceClass: java.lang.Class
+                serviceClass: java.lang.Class<any>
                 /**
                  * Gets the source as a reference of type <code>BeanContextServices</code>
                  * @return the <code>BeanContextServices</code> from which
                  *  this service is being revoked
                  */
                 // @ts-ignore
-                getSourceAsBeanContextServices(): java.beans.beancontext.BeanContextServices
+                public getSourceAsBeanContextServices(): java.beans.beancontext.BeanContextServices
                 /**
                  * Gets the service class that is the subject of this notification
                  * @return A <code>Class</code> reference to the
                  *  service that is being revoked
                  */
                 // @ts-ignore
-                getServiceClass(): java.lang.Class
+                public getServiceClass(): java.lang.Class<any>
                 /**
                  * Checks this event to determine whether or not
                  * the service being revoked is of a particular class.
@@ -46,14 +46,14 @@ declare namespace java {
                  *  same class as the specified service
                  */
                 // @ts-ignore
-                isServiceClass(service: java.lang.Class): boolean
+                public isServiceClass(service: java.lang.Class<any>): boolean
                 /**
                  * Reports if the current service is being forcibly revoked,
                  * in which case the references are now invalidated and unusable.
                  * @return <code>true</code> if current service is being forcibly revoked
                  */
                 // @ts-ignore
-                isCurrentServiceInvalidNow(): boolean
+                public isCurrentServiceInvalidNow(): boolean
             }
         }
     }

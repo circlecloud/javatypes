@@ -15,36 +15,36 @@ declare namespace javax {
                  * <p>Maps to Java {@link Double}.</p>
                  */
                 // @ts-ignore
-                readonly NUMBER: javax.xml.namespace.QName
+                public static readonly NUMBER: javax.xml.namespace.QName
                 /**
                  * <p>The XPath 1.0 string data type.</p>
                  * <p>Maps to Java {@link String}.</p>
                  */
                 // @ts-ignore
-                readonly STRING: javax.xml.namespace.QName
+                public static readonly STRING: javax.xml.namespace.QName
                 /**
                  * <p>The XPath 1.0 boolean data type.</p>
                  * <p>Maps to Java {@link Boolean}.</p>
                  */
                 // @ts-ignore
-                readonly BOOLEAN: javax.xml.namespace.QName
+                public static readonly BOOLEAN: javax.xml.namespace.QName
                 /**
                  * <p>The XPath 1.0 NodeSet data type.</p>
                  * <p>Maps to Java {@link org.w3c.dom.NodeList}.</p>
                  */
                 // @ts-ignore
-                readonly NODESET: javax.xml.namespace.QName
+                public static readonly NODESET: javax.xml.namespace.QName
                 /**
                  * <p>The XPath 1.0 NodeSet data type.
                  * <p>Maps to Java {@link org.w3c.dom.Node}.</p>
                  */
                 // @ts-ignore
-                readonly NODE: javax.xml.namespace.QName
+                public static readonly NODE: javax.xml.namespace.QName
                 /**
                  * <p>The URI for the DOM object model, "http://java.sun.com/jaxp/xpath/dom".</p>
                  */
                 // @ts-ignore
-                readonly DOM_OBJECT_MODEL: string
+                public static readonly DOM_OBJECT_MODEL: java.lang.String | string
             }
         }
     }

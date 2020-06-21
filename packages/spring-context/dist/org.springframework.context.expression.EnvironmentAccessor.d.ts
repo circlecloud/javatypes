@@ -13,29 +13,29 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getSpecificTargetClasses(): java.lang.Class[]
+                    public getSpecificTargetClasses(): java.lang.Class<any>[]
                     /**
                      * Can read any {@link Environment}, thus always returns true.
                      * @return true
                      */
                     // @ts-ignore
-                    canRead(context: EvaluationContext, target: any, name: string): boolean
+                    public canRead(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string): boolean
                     /**
                      * Access the given target object by resolving the given property name against the given target
                      * environment.
                      */
                     // @ts-ignore
-                    read(context: EvaluationContext, target: any, name: string): TypedValue
+                    public read(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string): TypedValue
                     /**
                      * Read-only: returns {@code false}.
                      */
                     // @ts-ignore
-                    canWrite(context: EvaluationContext, target: any, name: string): boolean
+                    public canWrite(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string): boolean
                     /**
                      * Read-only: no-op.
                      */
                     // @ts-ignore
-                    write(context: EvaluationContext, target: any, name: string, newValue: any): void
+                    public write(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string, newValue: java.lang.Object | any): void
                 }
             }
         }

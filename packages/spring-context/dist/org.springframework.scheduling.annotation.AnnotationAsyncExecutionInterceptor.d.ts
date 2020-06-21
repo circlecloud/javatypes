@@ -48,7 +48,7 @@ declare namespace org {
                      * @see #determineAsyncExecutor(Method)
                      */
                     // @ts-ignore
-                    getExecutorQualifier(method: java.lang.reflect.Method): java.lang.String
+                    getExecutorQualifier(method: java.lang.reflect.Method): string
                 }
             }
         }

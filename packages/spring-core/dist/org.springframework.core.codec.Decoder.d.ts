@@ -33,7 +33,7 @@ declare namespace org {
                      * @return the output stream with decoded elements
                      */
                     // @ts-ignore
-                    decode(inputStream: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    decode(inputStream: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Decode a {@link DataBuffer} input stream into a Mono of {@code T}.
                      * @param inputStream the {#code DataBuffer} input stream to decode
@@ -45,12 +45,12 @@ declare namespace org {
                      * @return the output stream with the decoded element
                      */
                     // @ts-ignore
-                    decodeToMono(inputStream: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    decodeToMono(inputStream: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Return the list of MIME types this decoder supports.
                      */
                     // @ts-ignore
-                    getDecodableMimeTypes(): java.util.List<org.springframework.util.MimeType>
+                    getDecodableMimeTypes(): Array<org.springframework.util.MimeType>
                 }
             }
         }

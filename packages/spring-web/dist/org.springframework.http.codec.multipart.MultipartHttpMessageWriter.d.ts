@@ -22,7 +22,7 @@ declare namespace org {
                      * @see FormHttpMessageWriter
                      */
                     // @ts-ignore
-                    class MultipartHttpMessageWriter extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageWriter<<any>> {
+                    class MultipartHttpMessageWriter extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageWriter<object> {
                         /**
                          * Constructor with a default list of part writers (String and Resource).
                          */
@@ -32,7 +32,7 @@ declare namespace org {
                          * Constructor with explicit list of writers for serializing parts.
                          */
                         // @ts-ignore
-                        constructor(partWriters: Array<org.springframework.http.codec.HttpMessageWriter<any>>)
+                        constructor(partWriters: java.util.List<org.springframework.http.codec.HttpMessageWriter<any>> | Array<org.springframework.http.codec.HttpMessageWriter<any>>)
                         /**
                          * Constructor with explicit list of writers for serializing parts and a
                          * writer for plain form data to fall back when no media type is specified
@@ -41,48 +41,48 @@ declare namespace org {
                          * @param formWriter the fallback writer for form data, {#code null} by default
                          */
                         // @ts-ignore
-                        constructor(partWriters: Array<org.springframework.http.codec.HttpMessageWriter<any>>, formWriter: org.springframework.http.codec.HttpMessageWriter<<any>>)
+                        constructor(partWriters: java.util.List<org.springframework.http.codec.HttpMessageWriter<any>> | Array<org.springframework.http.codec.HttpMessageWriter<any>>, formWriter: org.springframework.http.codec.HttpMessageWriter<object>)
                         /**
                          * THe default charset used by the writer.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                        public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                         /**
                          * Return the configured part writers.
                          * @since 5.0.7
                          */
                         // @ts-ignore
-                        getPartWriters(): java.util.List<org.springframework.http.codec.HttpMessageWriter<?>>
+                        public getPartWriters(): Array<org.springframework.http.codec.HttpMessageWriter<any>>
                         /**
                          * Return the configured form writer.
                          * @since 5.1.13
                          */
                         // @ts-ignore
-                        getFormWriter(): org.springframework.http.codec.HttpMessageWriter<<any>>
+                        public getFormWriter(): org.springframework.http.codec.HttpMessageWriter<object>
                         /**
                          * Set the character set to use for part headers such as
                          * "Content-Disposition" (and its filename parameter).
                          * <p>By default this is set to "UTF-8".
                          */
                         // @ts-ignore
-                        setCharset(charset: java.nio.charset.Charset): void
+                        public setCharset(charset: java.nio.charset.Charset): void
                         /**
                          * Return the configured charset for part headers.
                          */
                         // @ts-ignore
-                        getCharset(): java.nio.charset.Charset
+                        public getCharset(): java.nio.charset.Charset
                         // @ts-ignore
-                        getWritableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                        public getWritableMediaTypes(): Array<org.springframework.http.MediaType>
                         // @ts-ignore
-                        canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                        public canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, outputMessage: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, outputMessage: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         /**
                          * Generate a multipart boundary.
                          * <p>By default delegates to {@link MimeTypeUtils#generateMultipartBoundary()}.
                          */
                         // @ts-ignore
-                        generateMultipartBoundary(): byte[]
+                        generateMultipartBoundary(): number /*byte*/[]
                     }
                 }
             }

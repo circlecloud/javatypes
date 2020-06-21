@@ -33,17 +33,17 @@ declare namespace org {
                         // @ts-ignore
                         constructor(request: HttpServletRequest, lazyParsing: boolean)
                         // @ts-ignore
-                        handleParseFailure(ex: Error): void
+                        handleParseFailure(ex: java.lang.Throwable | Error): void
                         // @ts-ignore
                         initializeMultipart(): void
                         // @ts-ignore
-                        getParameterNames(): java.util.Enumeration<java.lang.String>
+                        public getParameterNames(): java.util.Enumeration<java.lang.String | string>
                         // @ts-ignore
-                        getParameterMap(): java.util.Map<java.lang.String, java.lang.String[]>
+                        public getParameterMap(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                         // @ts-ignore
-                        getMultipartContentType(paramOrFileName: string): java.lang.String
+                        public getMultipartContentType(paramOrFileName: java.lang.String | string): string
                         // @ts-ignore
-                        getMultipartHeaders(paramOrFileName: string): org.springframework.http.HttpHeaders
+                        public getMultipartHeaders(paramOrFileName: java.lang.String | string): org.springframework.http.HttpHeaders
                     }
                 }
             }

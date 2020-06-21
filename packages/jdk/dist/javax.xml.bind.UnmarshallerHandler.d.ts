@@ -40,7 +40,7 @@ declare namespace javax {
                  * @return always return a non-null valid object which was unmarshalled.
                  */
                 // @ts-ignore
-                getResult(): java.lang.Object
+                getResult(): any
             }
         }
     }

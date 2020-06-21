@@ -25,14 +25,14 @@ declare namespace org {
                      * Create an instance with the given extension-to-MediaType lookup.
                      */
                     // @ts-ignore
-                    constructor(servletContext: ServletContext, mediaTypes: java.util.Map<java.lang.String, org.springframework.http.MediaType>)
+                    constructor(servletContext: ServletContext, mediaTypes: java.util.Map<java.lang.String | string, org.springframework.http.MediaType>)
                     /**
                      * Resolve file extension via {@link ServletContext#getMimeType(String)}
                      * and also delegate to base class for a potential
                      * {@link org.springframework.http.MediaTypeFactory} lookup.
                      */
                     // @ts-ignore
-                    handleNoMatch(webRequest: org.springframework.web.context.request.NativeWebRequest, extension: string): org.springframework.http.MediaType
+                    handleNoMatch(webRequest: org.springframework.web.context.request.NativeWebRequest, extension: java.lang.String | string): org.springframework.http.MediaType
                     /**
                      * Extends the base class
                      * {@link PathExtensionContentNegotiationStrategy#getMediaTypeForResource}
@@ -42,7 +42,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getMediaTypeForResource(resource: Resource): org.springframework.http.MediaType
+                    public getMediaTypeForResource(resource: Resource): org.springframework.http.MediaType
                 }
             }
         }

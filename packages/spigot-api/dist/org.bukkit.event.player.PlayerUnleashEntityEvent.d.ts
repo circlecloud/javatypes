@@ -14,11 +14,11 @@ declare namespace org {
                      * @return The player
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                 }
             }
         }

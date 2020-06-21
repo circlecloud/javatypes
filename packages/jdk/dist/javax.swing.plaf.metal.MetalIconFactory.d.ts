@@ -28,68 +28,68 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly DARK: boolean
+                    public static readonly DARK: boolean
                     // @ts-ignore
-                    readonly LIGHT: boolean
+                    public static readonly LIGHT: boolean
                     // @ts-ignore
-                    getFileChooserDetailViewIcon(): javax.swing.Icon
+                    public static getFileChooserDetailViewIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getFileChooserHomeFolderIcon(): javax.swing.Icon
+                    public static getFileChooserHomeFolderIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getFileChooserListViewIcon(): javax.swing.Icon
+                    public static getFileChooserListViewIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getFileChooserNewFolderIcon(): javax.swing.Icon
+                    public static getFileChooserNewFolderIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getFileChooserUpFolderIcon(): javax.swing.Icon
+                    public static getFileChooserUpFolderIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getInternalFrameAltMaximizeIcon(size: number /*int*/): javax.swing.Icon
+                    public static getInternalFrameAltMaximizeIcon(size: number /*int*/): javax.swing.Icon
                     // @ts-ignore
-                    getInternalFrameCloseIcon(size: number /*int*/): javax.swing.Icon
+                    public static getInternalFrameCloseIcon(size: number /*int*/): javax.swing.Icon
                     // @ts-ignore
-                    getInternalFrameDefaultMenuIcon(): javax.swing.Icon
+                    public static getInternalFrameDefaultMenuIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getInternalFrameMaximizeIcon(size: number /*int*/): javax.swing.Icon
+                    public static getInternalFrameMaximizeIcon(size: number /*int*/): javax.swing.Icon
                     // @ts-ignore
-                    getInternalFrameMinimizeIcon(size: number /*int*/): javax.swing.Icon
+                    public static getInternalFrameMinimizeIcon(size: number /*int*/): javax.swing.Icon
                     // @ts-ignore
-                    getRadioButtonIcon(): javax.swing.Icon
+                    public static getRadioButtonIcon(): javax.swing.Icon
                     /**
                      * Returns a checkbox icon.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getCheckBoxIcon(): javax.swing.Icon
+                    public static getCheckBoxIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getTreeComputerIcon(): javax.swing.Icon
+                    public static getTreeComputerIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getTreeFloppyDriveIcon(): javax.swing.Icon
+                    public static getTreeFloppyDriveIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getTreeFolderIcon(): javax.swing.Icon
+                    public static getTreeFolderIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getTreeHardDriveIcon(): javax.swing.Icon
+                    public static getTreeHardDriveIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getTreeLeafIcon(): javax.swing.Icon
+                    public static getTreeLeafIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getTreeControlIcon(isCollapsed: boolean): javax.swing.Icon
+                    public static getTreeControlIcon(isCollapsed: boolean): javax.swing.Icon
                     // @ts-ignore
-                    getMenuArrowIcon(): javax.swing.Icon
+                    public static getMenuArrowIcon(): javax.swing.Icon
                     /**
                      * Returns an icon to be used by <code>JCheckBoxMenuItem</code>.
                      * @return the default icon for check box menu items,
                      *          or <code>null</code> if no default exists
                      */
                     // @ts-ignore
-                    getMenuItemCheckIcon(): javax.swing.Icon
+                    public static getMenuItemCheckIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getMenuItemArrowIcon(): javax.swing.Icon
+                    public static getMenuItemArrowIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getCheckBoxMenuItemIcon(): javax.swing.Icon
+                    public static getCheckBoxMenuItemIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getRadioButtonMenuItemIcon(): javax.swing.Icon
+                    public static getRadioButtonMenuItemIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getHorizontalSliderThumbIcon(): javax.swing.Icon
+                    public static getHorizontalSliderThumbIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getVerticalSliderThumbIcon(): javax.swing.Icon
+                    public static getVerticalSliderThumbIcon(): javax.swing.Icon
                 }
             }
         }

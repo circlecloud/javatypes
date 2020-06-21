@@ -28,7 +28,7 @@ declare namespace org {
                              * @param operator the operator to use when comparing with other properties
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                             /**
                              * Create a SlotIndex property which matches SlotIndex properties with
                              * equal value.
@@ -36,7 +36,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(value: any): org.spongepowered.api.item.inventory.property.SlotIndex
+                            public static of(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotIndex
                             /**
                              * Create a SlotIndex property which matches SlotIndex properties with
                              * unequal value.
@@ -44,7 +44,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            not(value: any): org.spongepowered.api.item.inventory.property.SlotIndex
+                            public static not(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotIndex
                             /**
                              * Create a SlotIndex property which matches SlotIndex properties with
                              * value greater than this value.
@@ -52,7 +52,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThan(value: any): org.spongepowered.api.item.inventory.property.SlotIndex
+                            public static greaterThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotIndex
                             /**
                              * Create a SlotIndex property which matches SlotIndex properties with
                              * value greater than or equal to this value.
@@ -60,7 +60,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.SlotIndex
+                            public static greaterThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotIndex
                             /**
                              * Create a SlotIndex property which matches SlotIndex properties with
                              * value less than this value.
@@ -68,7 +68,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThan(value: any): org.spongepowered.api.item.inventory.property.SlotIndex
+                            public static lessThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotIndex
                             /**
                              * Create a SlotIndex property which matches SlotIndex properties with
                              * value less than or equal to this value.
@@ -76,7 +76,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.SlotIndex
+                            public static lessThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotIndex
                         }
                     }
                 }

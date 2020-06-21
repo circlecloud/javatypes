@@ -36,7 +36,7 @@ declare namespace org {
                          * @param payload A consumer to write the data to
                          */
                         // @ts-ignore
-                        sendTo(player: org.spongepowered.api.entity.living.player.Player, payload: java.util.function.Consumer<org.spongepowered.api.network.ChannelBuf> | java.util.function$.Consumer<org.spongepowered.api.network.ChannelBuf>): void
+                        sendTo(player: org.spongepowered.api.entity.living.player.Player, payload: java.util.function$.Consumer<org.spongepowered.api.network.ChannelBuf>): void
                         /**
                          * Sends the raw payload to the server. The data may not be sent if
                          * there is no registered handler. This <strong>must</strong> be called
@@ -44,13 +44,13 @@ declare namespace org {
                          * @param payload A consumer to write the data to
                          */
                         // @ts-ignore
-                        sendToServer(payload: java.util.function.Consumer<org.spongepowered.api.network.ChannelBuf> | java.util.function$.Consumer<org.spongepowered.api.network.ChannelBuf>): void
+                        sendToServer(payload: java.util.function$.Consumer<org.spongepowered.api.network.ChannelBuf>): void
                         /**
                          * Sends the raw payload to all players on the server.
                          * @param payload A consumer to write the data to
                          */
                         // @ts-ignore
-                        sendToAll(payload: java.util.function.Consumer<org.spongepowered.api.network.ChannelBuf> | java.util.function$.Consumer<org.spongepowered.api.network.ChannelBuf>): void
+                        sendToAll(payload: java.util.function$.Consumer<org.spongepowered.api.network.ChannelBuf>): void
                     }
                 }
             }

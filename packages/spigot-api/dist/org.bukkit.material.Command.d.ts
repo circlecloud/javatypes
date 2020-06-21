@@ -25,18 +25,18 @@ declare namespace org {
                  * @return true if powered, otherwise false
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 /**
                  * Sets the current state of this Material
                  * @param bool
                  *             whether or not the command block is powered
                  */
                 // @ts-ignore
-                setPowered(bool: boolean): void
+                public setPowered(bool: boolean): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Command
+                public clone(): org.bukkit.material.Command
             }
         }
     }

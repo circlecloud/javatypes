@@ -23,7 +23,7 @@ declare namespace javax {
                  * @see #setBaseURI(String)
                  */
                 // @ts-ignore
-                getBaseURI(): java.lang.String
+                getBaseURI(): string
                 /**
                  * Sets the base URI.
                  * @param baseURI the base URI, or <code>null</code> to remove current
@@ -33,7 +33,7 @@ declare namespace javax {
                  * @see #getBaseURI
                  */
                 // @ts-ignore
-                setBaseURI(baseURI: string): void
+                setBaseURI(baseURI: java.lang.String | string): void
                 /**
                  * Returns the key selector for finding a key.
                  * @return the key selector, or <code>null</code> if not specified
@@ -87,7 +87,7 @@ declare namespace javax {
                  * @see #putNamespacePrefix(String, String)
                  */
                 // @ts-ignore
-                getNamespacePrefix(namespaceURI: string, defaultPrefix: string): java.lang.String
+                getNamespacePrefix(namespaceURI: java.lang.String | string, defaultPrefix: java.lang.String | string): string
                 /**
                  * Maps the specified namespace URI to the specified prefix. If there is
                  * already a prefix associated with the specified namespace URI, the old
@@ -103,7 +103,7 @@ declare namespace javax {
                  * @see #getNamespacePrefix(String, String)
                  */
                 // @ts-ignore
-                putNamespacePrefix(namespaceURI: string, prefix: string): java.lang.String
+                putNamespacePrefix(namespaceURI: java.lang.String | string, prefix: java.lang.String | string): string
                 /**
                  * Returns the default namespace prefix. The default namespace prefix
                  * is the prefix for all namespace URIs not explicitly set by the
@@ -113,7 +113,7 @@ declare namespace javax {
                  * @see #setDefaultNamespacePrefix(String)
                  */
                 // @ts-ignore
-                getDefaultNamespacePrefix(): java.lang.String
+                getDefaultNamespacePrefix(): string
                 /**
                  * Sets the default namespace prefix. This sets the namespace prefix for
                  * all namespace URIs not explicitly set by the {@link #putNamespacePrefix
@@ -124,7 +124,7 @@ declare namespace javax {
                  * @see #getDefaultNamespacePrefix
                  */
                 // @ts-ignore
-                setDefaultNamespacePrefix(defaultPrefix: string): void
+                setDefaultNamespacePrefix(defaultPrefix: java.lang.String | string): void
                 /**
                  * Sets the specified property.
                  * @param name the name of the property
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @see #getProperty(String)
                  */
                 // @ts-ignore
-                setProperty(name: string, value: any): java.lang.Object
+                setProperty(name: java.lang.String | string, value: java.lang.Object | any): any
                 /**
                  * Returns the value of the specified property.
                  * @param name the name of the property
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @see #setProperty(String, Object)
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
                 /**
                  * Returns the value to which this context maps the specified key.
                  * <p>More formally, if this context contains a mapping from a key
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @see #put(Object, Object)
                  */
                 // @ts-ignore
-                get(key: any): java.lang.Object
+                get(key: java.lang.Object | any): any
                 /**
                  * Associates the specified value with the specified key in this context.
                  * If the context previously contained a mapping for this key, the old
@@ -177,7 +177,7 @@ declare namespace javax {
                  * @see #get(Object)
                  */
                 // @ts-ignore
-                put(key: any, value: any): java.lang.Object
+                put(key: java.lang.Object | any, value: java.lang.Object | any): any
             }
         }
     }

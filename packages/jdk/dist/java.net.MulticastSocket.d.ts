@@ -129,7 +129,7 @@ declare namespace java {
              * @see #getTTL()
              */
             // @ts-ignore
-            setTTL(ttl: number /*byte*/): void
+            public setTTL(ttl: number /*byte*/): void
             /**
              * Set the default time-to-live for multicast packets sent out
              * on this {@code MulticastSocket} in order to control the
@@ -146,7 +146,7 @@ declare namespace java {
              * @see #getTimeToLive()
              */
             // @ts-ignore
-            setTimeToLive(ttl: number /*int*/): void
+            public setTimeToLive(ttl: number /*int*/): void
             /**
              * Get the default time-to-live for multicast packets sent out on
              * the socket.
@@ -158,7 +158,7 @@ declare namespace java {
              * @see #setTTL(byte)
              */
             // @ts-ignore
-            getTTL(): byte
+            public getTTL(): number /*byte*/
             /**
              * Get the default time-to-live for multicast packets sent out on
              * the socket.
@@ -168,7 +168,7 @@ declare namespace java {
              * @see #setTimeToLive(int)
              */
             // @ts-ignore
-            getTimeToLive(): int
+            public getTimeToLive(): number /*int*/
             /**
              * Joins a multicast group. Its behavior may be affected by
              * {@code setInterface} or {@code setNetworkInterface}.
@@ -184,7 +184,7 @@ declare namespace java {
              * @see SecurityManager#checkMulticast(InetAddress)
              */
             // @ts-ignore
-            joinGroup(mcastaddr: java.net.InetAddress): void
+            public joinGroup(mcastaddr: java.net.InetAddress): void
             /**
              * Leave a multicast group. Its behavior may be affected by
              * {@code setInterface} or {@code setNetworkInterface}.
@@ -200,7 +200,7 @@ declare namespace java {
              * @see SecurityManager#checkMulticast(InetAddress)
              */
             // @ts-ignore
-            leaveGroup(mcastaddr: java.net.InetAddress): void
+            public leaveGroup(mcastaddr: java.net.InetAddress): void
             /**
              * Joins the specified multicast group at the specified interface.
              * <p>If there is a security manager, this method first
@@ -222,7 +222,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            joinGroup(mcastaddr: java.net.SocketAddress, netIf: java.net.NetworkInterface): void
+            public joinGroup(mcastaddr: java.net.SocketAddress, netIf: java.net.NetworkInterface): void
             /**
              * Leave a multicast group on a specified local interface.
              * <p>If there is a security manager, this method first
@@ -244,7 +244,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            leaveGroup(mcastaddr: java.net.SocketAddress, netIf: java.net.NetworkInterface): void
+            public leaveGroup(mcastaddr: java.net.SocketAddress, netIf: java.net.NetworkInterface): void
             /**
              * Set the multicast network interface used by methods
              * whose behavior would be affected by the value of the
@@ -255,7 +255,7 @@ declare namespace java {
              * @see #getInterface()
              */
             // @ts-ignore
-            setInterface(inf: java.net.InetAddress): void
+            public setInterface(inf: java.net.InetAddress): void
             /**
              * Retrieve the address of the network interface used for
              * multicast packets.
@@ -267,7 +267,7 @@ declare namespace java {
              * @see #setInterface(java.net.InetAddress)
              */
             // @ts-ignore
-            getInterface(): java.net.InetAddress
+            public getInterface(): java.net.InetAddress
             /**
              * Specify the network interface for outgoing multicast datagrams
              * sent on this socket.
@@ -278,7 +278,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setNetworkInterface(netIf: java.net.NetworkInterface): void
+            public setNetworkInterface(netIf: java.net.NetworkInterface): void
             /**
              * Get the multicast network interface set.
              * @exception SocketException if there is an error in
@@ -288,7 +288,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getNetworkInterface(): java.net.NetworkInterface
+            public getNetworkInterface(): java.net.NetworkInterface
             /**
              * Disable/Enable local loopback of multicast datagrams
              * The option is used by the platform's networking code as a hint
@@ -303,7 +303,7 @@ declare namespace java {
              * @see #getLoopbackMode
              */
             // @ts-ignore
-            setLoopbackMode(disable: boolean): void
+            public setLoopbackMode(disable: boolean): void
             /**
              * Get the setting for local loopback of multicast datagrams.
              * @throws SocketException  if an error occurs while getting the value
@@ -312,7 +312,7 @@ declare namespace java {
              * @see #setLoopbackMode
              */
             // @ts-ignore
-            getLoopbackMode(): boolean
+            public getLoopbackMode(): boolean
             /**
              * Sends a datagram packet to the destination, with a TTL (time-
              * to-live) other than the default for the socket.  This method
@@ -356,7 +356,7 @@ declare namespace java {
              * @see SecurityManager#checkConnect
              */
             // @ts-ignore
-            send(p: java.net.DatagramPacket, ttl: number /*byte*/): void
+            public send(p: java.net.DatagramPacket, ttl: number /*byte*/): void
         }
     }
 }

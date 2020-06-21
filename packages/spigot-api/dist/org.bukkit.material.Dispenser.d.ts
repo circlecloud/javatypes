@@ -22,11 +22,11 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                clone(): org.bukkit.material.Dispenser
+                public clone(): org.bukkit.material.Dispenser
             }
         }
     }

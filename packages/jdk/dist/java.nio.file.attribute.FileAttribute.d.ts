@@ -18,7 +18,7 @@ declare namespace java {
                      * @return The attribute name
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * Returns the attribute value.
                      * @return The attribute value

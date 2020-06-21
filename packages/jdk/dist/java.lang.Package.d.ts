@@ -55,13 +55,13 @@ declare namespace java {
              *           for example, {#code java.lang}
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Return the title of the specification that this package implements.
              * @return the specification title, null is returned if it is not known.
              */
             // @ts-ignore
-            getSpecificationTitle(): java.lang.String
+            public getSpecificationTitle(): string
             /**
              * Returns the version number of the specification
              * that this package implements.
@@ -72,7 +72,7 @@ declare namespace java {
              * @return the specification version, null is returned if it is not known.
              */
             // @ts-ignore
-            getSpecificationVersion(): java.lang.String
+            public getSpecificationVersion(): string
             /**
              * Return the name of the organization, vendor,
              * or company that owns and maintains the specification
@@ -80,13 +80,13 @@ declare namespace java {
              * @return the specification vendor, null is returned if it is not known.
              */
             // @ts-ignore
-            getSpecificationVendor(): java.lang.String
+            public getSpecificationVendor(): string
             /**
              * Return the title of this package.
              * @return the title of the implementation, null is returned if it is not known.
              */
             // @ts-ignore
-            getImplementationTitle(): java.lang.String
+            public getImplementationTitle(): string
             /**
              * Return the version of this implementation. It consists of any string
              * assigned by the vendor of this implementation and does
@@ -97,20 +97,20 @@ declare namespace java {
              * @return the version of the implementation, null is returned if it is not known.
              */
             // @ts-ignore
-            getImplementationVersion(): java.lang.String
+            public getImplementationVersion(): string
             /**
              * Returns the name of the organization,
              * vendor or company that provided this implementation.
              * @return the vendor that implemented this package..
              */
             // @ts-ignore
-            getImplementationVendor(): java.lang.String
+            public getImplementationVendor(): string
             /**
              * Returns true if this package is sealed.
              * @return true if the package is sealed, false otherwise
              */
             // @ts-ignore
-            isSealed(): boolean
+            public isSealed(): boolean
             /**
              * Returns true if this package is sealed with respect to the specified
              * code source url.
@@ -118,7 +118,7 @@ declare namespace java {
              * @return true if this package is sealed with respect to url
              */
             // @ts-ignore
-            isSealed(url: java.net.URL): boolean
+            public isSealed(url: java.net.URL): boolean
             /**
              * Compare this package's specification version with a
              * desired version. It returns true if
@@ -139,7 +139,7 @@ declare namespace java {
              *           is not of the correct dotted form.
              */
             // @ts-ignore
-            isCompatibleWith(desired: string): boolean
+            public isCompatibleWith(desired: java.lang.String | string): boolean
             /**
              * Find a package by name in the callers {@code ClassLoader} instance.
              * The callers {@code ClassLoader} instance is used to find the package
@@ -155,7 +155,7 @@ declare namespace java {
              *           information is available from the archive or codebase.
              */
             // @ts-ignore
-            getPackage(name: string): java.lang.Package
+            public static getPackage(name: java.lang.String | string): java.lang.Package
             /**
              * Get all the packages currently known for the caller's {@code ClassLoader}
              * instance.  Those packages correspond to classes loaded via or accessible by
@@ -168,13 +168,13 @@ declare namespace java {
              *  instance.  An zero length array is returned if none are known.
              */
             // @ts-ignore
-            getPackages(): java.lang.Package[]
+            public static getPackages(): java.lang.Package[]
             /**
              * Return the hash code computed from the package name.
              * @return the hash code computed from the package name.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the string representation of this Package.
              * Its value is the string "package " and the package name.
@@ -183,48 +183,48 @@ declare namespace java {
              * @return the string representation of the package.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * @throws NullPointerException {#inheritDoc}
              * @since 1.5
              */
             // @ts-ignore
-            getAnnotation<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
+            public getAnnotation<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
             /**
              * {@inheritDoc}
              * @throws NullPointerException {#inheritDoc}
              * @since 1.5
              */
             // @ts-ignore
-            isAnnotationPresent(annotationClass: java.lang.Class<java.lang.annotation.Annotation>): boolean
+            public isAnnotationPresent(annotationClass: java.lang.Class<any>): boolean
             /**
              * @throws NullPointerException {#inheritDoc}
              * @since 1.8
              */
             // @ts-ignore
-            getAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
+            public getAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
             /**
              * @since 1.5
              */
             // @ts-ignore
-            getAnnotations(): java.lang.annotation.Annotation[]
+            public getAnnotations(): java.lang.annotation.Annotation[]
             /**
              * @throws NullPointerException {#inheritDoc}
              * @since 1.8
              */
             // @ts-ignore
-            getDeclaredAnnotation<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
+            public getDeclaredAnnotation<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
             /**
              * @throws NullPointerException {#inheritDoc}
              * @since 1.8
              */
             // @ts-ignore
-            getDeclaredAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
+            public getDeclaredAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
             /**
              * @since 1.5
              */
             // @ts-ignore
-            getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+            public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
         }
     }
 }

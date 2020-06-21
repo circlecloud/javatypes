@@ -25,22 +25,22 @@ declare namespace javax {
                      *                   or if {@code message} has a length of 0.
                      */
                     // @ts-ignore
-                    constructor(messageType: number /*int*/, message: string)
+                    constructor(messageType: number /*int*/, message: java.lang.String | string)
                     /**
                      * Information message.
                      */
                     // @ts-ignore
-                    readonly INFORMATION: number /*int*/
+                    public static readonly INFORMATION: number /*int*/
                     /**
                      * Warning message.
                      */
                     // @ts-ignore
-                    readonly WARNING: number /*int*/
+                    public static readonly WARNING: number /*int*/
                     /**
                      * Error message.
                      */
                     // @ts-ignore
-                    readonly ERROR: number /*int*/
+                    public static readonly ERROR: number /*int*/
                     /**
                      * Get the message type.
                      * <p>
@@ -48,14 +48,14 @@ declare namespace javax {
                      *                   {@code WARNING} or {@code ERROR}).
                      */
                     // @ts-ignore
-                    getMessageType(): int
+                    public getMessageType(): number /*int*/
                     /**
                      * Get the message to be displayed.
                      * <p>
                      * @return the message to be displayed.
                      */
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                 }
             }
         }

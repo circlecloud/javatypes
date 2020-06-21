@@ -46,12 +46,12 @@ declare namespace javax {
                          *     of type <code>String</code>
                          */
                         // @ts-ignore
-                        constructor(prefixList: Array)
+                        constructor(prefixList: java.util.List<any> | Array<any>)
                         /**
                          * Indicates the default namespace ("#default").
                          */
                         // @ts-ignore
-                        readonly DEFAULT: string
+                        public static readonly DEFAULT: java.lang.String | string
                         /**
                          * Returns the inclusive namespace prefix list. Each entry in the list
                          * is a <code>String</code> that represents a namespace prefix.
@@ -61,7 +61,7 @@ declare namespace javax {
                          *     <code>null</code>)
                          */
                         // @ts-ignore
-                        getPrefixList(): java.util.List
+                        public getPrefixList(): Array<any>
                     }
                 }
             }

@@ -22,7 +22,7 @@ declare namespace javax {
              * @param obj the <code>Object</code> to be removed
              */
             // @ts-ignore
-            removeElement(obj: any): void
+            removeElement(obj: java.lang.Object | any): void
             /**
              * Adds an item at a specific index.  The implementation of this method
              * should notify all registered <code>ListDataListener</code>s that the

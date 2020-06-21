@@ -16,7 +16,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    applyTo(builder: BlockHound.Builder): void
+                    public applyTo(builder: BlockHound.Builder): void
                 }
             }
         }

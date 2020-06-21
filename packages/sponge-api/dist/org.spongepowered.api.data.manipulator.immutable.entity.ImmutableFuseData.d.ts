@@ -16,7 +16,7 @@ declare namespace org {
                                  * @return Amount of ticks before detonation when primed
                                  */
                                 // @ts-ignore
-                                fuseDuration(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer>
+                                fuseDuration(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer | number>
                                 /**
                                  * The amount of ticks before {@link FusedExplosive} detonates. This value
                                  * may be zero if the {@link FusedExplosive} is not currently primed nor
@@ -25,7 +25,7 @@ declare namespace org {
                                  * @return Amount of ticks before impending detonation
                                  */
                                 // @ts-ignore
-                                ticksRemaining(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer>
+                                ticksRemaining(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer | number>
                             }
                         }
                     }

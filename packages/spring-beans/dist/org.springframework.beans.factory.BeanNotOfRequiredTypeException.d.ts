@@ -17,22 +17,22 @@ declare namespace org {
                      *  the expected type
                      */
                     // @ts-ignore
-                    constructor(beanName: string, requiredType: java.lang.Class<any>, actualType: java.lang.Class<any>)
+                    constructor(beanName: java.lang.String | string, requiredType: java.lang.Class<any>, actualType: java.lang.Class<any>)
                     /**
                      * Return the name of the instance that was of the wrong type.
                      */
                     // @ts-ignore
-                    getBeanName(): java.lang.String
+                    public getBeanName(): string
                     /**
                      * Return the expected type for the bean.
                      */
                     // @ts-ignore
-                    getRequiredType(): java.lang.Class<?>
+                    public getRequiredType(): java.lang.Class<any>
                     /**
                      * Return the actual type of the instance found.
                      */
                     // @ts-ignore
-                    getActualType(): java.lang.Class<?>
+                    public getActualType(): java.lang.Class<any>
                 }
             }
         }

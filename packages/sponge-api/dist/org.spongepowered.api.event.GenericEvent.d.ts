@@ -15,7 +15,7 @@ declare namespace org {
                      * @return The type token
                      */
                     // @ts-ignore
-                    getGenericType(): <any>
+                    getGenericType(): object
                 }
             }
         }

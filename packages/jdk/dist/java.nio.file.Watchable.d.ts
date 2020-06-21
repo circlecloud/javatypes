@@ -51,7 +51,7 @@ declare namespace java {
                  *           this interface should specify the permission checks.
                  */
                 // @ts-ignore
-                register(watcher: java.nio.file.WatchService, events: java.nio.file.WatchEvent.Kind[], ...modifiers: java.nio.file.WatchEvent.Modifier[]): java.nio.file.WatchKey
+                register(watcher: java.nio.file.WatchService, events: java.nio.file.WatchEvent.Kind<any>[], ...modifiers: java.nio.file.WatchEvent.Modifier[]): java.nio.file.WatchKey
                 /**
                  * Registers an object with a watch service.
                  * <p> An invocation of this method behaves in exactly the same way as the
@@ -79,7 +79,7 @@ declare namespace java {
                  *           this interface should specify the permission checks.
                  */
                 // @ts-ignore
-                register(watcher: java.nio.file.WatchService, ...events: java.nio.file.WatchEvent.Kind[]): java.nio.file.WatchKey
+                register(watcher: java.nio.file.WatchService, ...events: java.nio.file.WatchEvent.Kind<any>[]): java.nio.file.WatchKey
             }
         }
     }

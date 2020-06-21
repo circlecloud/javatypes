@@ -50,7 +50,7 @@ declare namespace org {
                          * once the application attempts to obtain multipart files or parameters.
                          */
                         // @ts-ignore
-                        setResolveLazily(resolveLazily: boolean): void
+                        public setResolveLazily(resolveLazily: boolean): void
                         /**
                          * Initialize the underlying {@code org.apache.commons.fileupload.servlet.ServletFileUpload}
                          * instance. Can be overridden to use a custom subclass, e.g. for testing purposes.
@@ -60,11 +60,11 @@ declare namespace org {
                         // @ts-ignore
                         newFileUpload(fileItemFactory: FileItemFactory): FileUpload
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                         // @ts-ignore
-                        isMultipart(request: HttpServletRequest): boolean
+                        public isMultipart(request: HttpServletRequest): boolean
                         // @ts-ignore
-                        resolveMultipart(request: HttpServletRequest): org.springframework.web.multipart.MultipartHttpServletRequest
+                        public resolveMultipart(request: HttpServletRequest): org.springframework.web.multipart.MultipartHttpServletRequest
                         /**
                          * Parse the given servlet request, resolving its multipart elements.
                          * @param request the request to parse
@@ -84,9 +84,9 @@ declare namespace org {
                          * @see #setDefaultEncoding
                          */
                         // @ts-ignore
-                        determineEncoding(request: HttpServletRequest): java.lang.String
+                        determineEncoding(request: HttpServletRequest): string
                         // @ts-ignore
-                        cleanupMultipart(request: org.springframework.web.multipart.MultipartHttpServletRequest): void
+                        public cleanupMultipart(request: org.springframework.web.multipart.MultipartHttpServletRequest): void
                     }
                 }
             }

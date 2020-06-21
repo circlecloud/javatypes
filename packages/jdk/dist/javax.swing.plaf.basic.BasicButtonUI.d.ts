@@ -15,11 +15,11 @@ declare namespace javax {
                     // @ts-ignore
                     defaultTextShiftOffset: number /*int*/
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
@@ -27,7 +27,7 @@ declare namespace javax {
                     // @ts-ignore
                     installKeyboardActions(b: javax.swing.AbstractButton): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallKeyboardActions(b: javax.swing.AbstractButton): void
                     // @ts-ignore
@@ -37,9 +37,9 @@ declare namespace javax {
                     // @ts-ignore
                     createButtonListener(b: javax.swing.AbstractButton): javax.swing.plaf.basic.BasicButtonListener
                     // @ts-ignore
-                    getDefaultTextIconGap(b: javax.swing.AbstractButton): int
+                    public getDefaultTextIconGap(b: javax.swing.AbstractButton): number /*int*/
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintIcon(g: java.awt.Graphics, c: javax.swing.JComponent, iconRect: java.awt.Rectangle): void
                     /**
@@ -47,7 +47,7 @@ declare namespace javax {
                      * Use the paintText method which takes the AbstractButton argument.
                      */
                     // @ts-ignore
-                    paintText(g: java.awt.Graphics, c: javax.swing.JComponent, textRect: java.awt.Rectangle, text: string): void
+                    paintText(g: java.awt.Graphics, c: javax.swing.JComponent, textRect: java.awt.Rectangle, text: java.lang.String | string): void
                     /**
                      * Method which renders the text of the current button.
                      * <p>
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    paintText(g: java.awt.Graphics, b: javax.swing.AbstractButton, textRect: java.awt.Rectangle, text: string): void
+                    paintText(g: java.awt.Graphics, b: javax.swing.AbstractButton, textRect: java.awt.Rectangle, text: java.lang.String | string): void
                     // @ts-ignore
                     paintFocus(g: java.awt.Graphics, b: javax.swing.AbstractButton, viewRect: java.awt.Rectangle, textRect: java.awt.Rectangle, iconRect: java.awt.Rectangle): void
                     // @ts-ignore
@@ -68,13 +68,13 @@ declare namespace javax {
                     // @ts-ignore
                     setTextShiftOffset(): void
                     // @ts-ignore
-                    getTextShiftOffset(): int
+                    getTextShiftOffset(): number /*int*/
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -83,7 +83,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -92,7 +92,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 }
             }
         }

@@ -13,7 +13,7 @@ declare namespace org {
                          * @return An expectation of no arguments
                          */
                         // @ts-ignore
-                        none(): org.spongepowered.api.command.args.CommandElement
+                        public static none(): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expects no arguments. Adds 'true' to the context when parsed.
                          * <p>This will return only one value.</p>
@@ -21,7 +21,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        markTrue(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static markTrue(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent online players, or if nothing matches
                          * and the source is a {@link Player}, give the player. If nothing matches
@@ -40,7 +40,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        playerOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static playerOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent online players. Returns values of type
                          * {@link Player}.
@@ -57,7 +57,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        player(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static player(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent players who have been online at some
                          * point, as a {@link User}.
@@ -77,7 +77,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        user(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static user(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent players who have been online at some
                          * point, as a {@link User}, or if nothing matches and the source is a
@@ -99,7 +99,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        userOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static userOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent a world. This returns
                          * {@link WorldProperties} objects rather than an actual {@link World} in
@@ -117,7 +117,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        world(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static world(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent a dimension. Returns values of type
                          * {@link DimensionType}.
@@ -134,7 +134,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        dimension(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static dimension(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent a {@link Vector3d}.
                          * <p>This will return one value.</p>
@@ -142,7 +142,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        vector3d(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static vector3d(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent a {@link Location}.
                          * <p>This will return one value.</p>
@@ -150,7 +150,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        location(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static location(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument that is a member of the specified {@link CatalogType}
                          * T.
@@ -167,7 +167,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        catalogedElement<T extends org.spongepowered.api.CatalogType>(key: org.spongepowered.api.text.Text, catalogType: java.lang.Class<T>): org.spongepowered.api.command.args.CommandElement
+                        public static catalogedElement<T extends org.spongepowered.api.CatalogType>(key: org.spongepowered.api.text.Text, catalogType: java.lang.Class<T>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent a {@link PluginContainer}'s id.
                          * <p>This argument accepts the following inputs:</p>
@@ -182,7 +182,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        plugin(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static plugin(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Gets a builder to create a command element that parses flags.
                          * <p>There should only be ONE of these in a command element sequence if you
@@ -196,14 +196,14 @@ declare namespace org {
                          * @return the newly created builder
                          */
                         // @ts-ignore
-                        flags(): org.spongepowered.api.command.args.CommandFlags.Builder
+                        public static flags(): org.spongepowered.api.command.args.CommandFlags.Builder
                         /**
                          * Consumes a series of arguments. Usage is the elements concatenated
                          * @param elements The series of arguments to expect
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        seq(...elements: org.spongepowered.api.command.args.CommandElement[]): org.spongepowered.api.command.args.CommandElement
+                        public static seq(...elements: org.spongepowered.api.command.args.CommandElement[]): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Return an argument that allows selecting from a limited set of values.
                          * <p>If there are 5 or fewer choices available, the choices will be shown
@@ -220,7 +220,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        choices(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String, any>): org.spongepowered.api.command.args.CommandElement
+                        public static choices(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String | string, any>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Return an argument that allows selecting from a limited set of values.
                          * <p>If there are 5 or fewer choices available, the choices will be shown
@@ -237,7 +237,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        choicesInsensitive(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String, any>): org.spongepowered.api.command.args.CommandElement
+                        public static choicesInsensitive(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String | string, any>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Return an argument that allows selecting from a limited set of values.
                          * <p>Unless {@code choicesInUsage} is true, general command usage will only
@@ -253,7 +253,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        choices(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String, any>, choicesInUsage: boolean): org.spongepowered.api.command.args.CommandElement
+                        public static choices(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String | string, any>, choicesInUsage: boolean): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Return an argument that allows selecting from a limited set of values.
                          * <p>Unless {@code choicesInUsage} is true, general command usage will only
@@ -268,7 +268,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        choices(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String, any>, choicesInUsage: boolean, caseSensitive: boolean): org.spongepowered.api.command.args.CommandElement
+                        public static choices(key: org.spongepowered.api.text.Text, choices: java.util.Map<java.lang.String | string, any>, choicesInUsage: boolean, caseSensitive: boolean): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Return an argument that allows selecting from a limited set of values.
                          * <p>If there are 5 or fewer choices available, the choices will be shown
@@ -284,7 +284,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        choices(key: org.spongepowered.api.text.Text, keys: java.util.function.Supplier<java.util.Collection<java.lang.String>> | java.util.function$.Supplier<java.util.Collection<java.lang.String>>, values: java.util.function.Function<java.lang.String, any> | java.util.function$.Function<java.lang.String, ?>): org.spongepowered.api.command.args.CommandElement
+                        public static choices(key: org.spongepowered.api.text.Text, keys: java.util.function$.Supplier<java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>>, values: java.util.function$.Function<java.lang.String | string, any>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Return an argument that allows selecting from a limited set of values.
                          * Unless {@code choicesInUsage} is true, general command usage will only
@@ -299,7 +299,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        choices(key: org.spongepowered.api.text.Text, keys: java.util.function.Supplier<java.util.Collection<java.lang.String>> | java.util.function$.Supplier<java.util.Collection<java.lang.String>>, values: java.util.function.Function<java.lang.String, any> | java.util.function$.Function<java.lang.String, ?>, choicesInUsage: boolean): org.spongepowered.api.command.args.CommandElement
+                        public static choices(key: org.spongepowered.api.text.Text, keys: java.util.function$.Supplier<java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>>, values: java.util.function$.Function<java.lang.String | string, any>, choicesInUsage: boolean): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Returns a command element that matches the first of the provided elements
                          * that parses tab completion matches from all options.
@@ -308,7 +308,7 @@ declare namespace org {
                          *       provided
                          */
                         // @ts-ignore
-                        firstParsing(...elements: org.spongepowered.api.command.args.CommandElement[]): org.spongepowered.api.command.args.CommandElement
+                        public static firstParsing(...elements: org.spongepowered.api.command.args.CommandElement[]): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Make the provided command element optional.
                          * <p>This means the command element is not required. However, if the
@@ -318,7 +318,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        optional(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
+                        public static optional(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Make the provided command element optional.
                          * <p>This means the command element is not required. However, if the
@@ -331,7 +331,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        optional(element: org.spongepowered.api.command.args.CommandElement, value: any): org.spongepowered.api.command.args.CommandElement
+                        public static optional(element: org.spongepowered.api.command.args.CommandElement, value: java.lang.Object | any): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Make the provided command element optional
                          * This means the command element is not required.
@@ -340,7 +340,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        optionalWeak(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
+                        public static optionalWeak(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
                         /**
                          * <p>Make the provided command element optional.</p>
                          * <p>This means the command element is not required.</p>
@@ -356,7 +356,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        optionalWeak(element: org.spongepowered.api.command.args.CommandElement, value: any): org.spongepowered.api.command.args.CommandElement
+                        public static optionalWeak(element: org.spongepowered.api.command.args.CommandElement, value: java.lang.Object | any): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require a given command element to be provided a certain number of times.
                          * <p>Command values will be stored under their provided keys in the
@@ -366,7 +366,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        repeated(element: org.spongepowered.api.command.args.CommandElement, times: number /*int*/): org.spongepowered.api.command.args.CommandElement
+                        public static repeated(element: org.spongepowered.api.command.args.CommandElement, times: number /*int*/): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require all remaining args to match as many instances of
                          * {@link CommandElement} as will fit. Command element values will be stored
@@ -375,7 +375,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        allOf(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
+                        public static allOf(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require an argument to be a string. Any provided argument will fit in
                          * under this argument.
@@ -385,7 +385,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        string(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static string(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require an argument to be an integer (base 10).
                          * <p>Gives values of type {@link Integer}. This will return only one value.
@@ -394,7 +394,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        integer(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static integer(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require an argument to be a long (base 10).
                          * <p>Gives values of type {@link Long}. This will return only one value.
@@ -403,7 +403,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        longNum(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static longNum(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require an argument to be an double-precision floating point number.
                          * <p>Gives values of type {@link Double}. This will return only one value.
@@ -412,7 +412,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        doubleNum(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static doubleNum(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require an argument to be a boolean.
                          * <p>The recognized true values are:</p>
@@ -437,7 +437,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        bool(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static bool(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require the argument to be a key under the provided enum.
                          * <p>Gives values of type <tt>T</tt>. This will return only one value.</p>
@@ -447,7 +447,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        enumValue<T extends java.lang.Enum<T>>(key: org.spongepowered.api.text.Text, type: java.lang.Class<T>): org.spongepowered.api.command.args.CommandElement
+                        public static enumValue<T extends java.lang.Enum<T>>(key: org.spongepowered.api.text.Text, type: java.lang.Class<T>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require one or more strings, which are combined into a single,
                          * space-separated string.
@@ -457,7 +457,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        remainingJoinedStrings(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static remainingJoinedStrings(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Require one or more strings, without any processing, which are combined
                          * into a single, space-separated string.
@@ -467,7 +467,7 @@ declare namespace org {
                          * @return the element to match the input
                          */
                         // @ts-ignore
-                        remainingRawJoinedStrings(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static remainingRawJoinedStrings(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect a literal sequence of arguments. This element matches the input
                          * against a predefined array of arguments expected to be present,
@@ -479,7 +479,7 @@ declare namespace org {
                          * @return the appropriate command element
                          */
                         // @ts-ignore
-                        literal(key: org.spongepowered.api.text.Text, ...expectedArgs: string[]): org.spongepowered.api.command.args.CommandElement
+                        public static literal(key: org.spongepowered.api.text.Text, ...expectedArgs: java.lang.String[] | string[]): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect a literal sequence of arguments. This element matches the input
                          * against a predefined array of arguments expected to be present,
@@ -492,7 +492,7 @@ declare namespace org {
                          * @return the appropriate command element
                          */
                         // @ts-ignore
-                        literal(key: org.spongepowered.api.text.Text, putValue: any, ...expectedArgs: string[]): org.spongepowered.api.command.args.CommandElement
+                        public static literal(key: org.spongepowered.api.text.Text, putValue: java.lang.Object | any, ...expectedArgs: java.lang.String[] | string[]): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Restricts the given command element to only insert one value into the
                          * context at the provided key.
@@ -503,7 +503,7 @@ declare namespace org {
                          * @return the restricted element
                          */
                         // @ts-ignore
-                        onlyOne(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
+                        public static onlyOne(element: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Checks a permission for a given command argument to be used.
                          * <p>If the element attempts to parse an argument and the user does not
@@ -513,7 +513,7 @@ declare namespace org {
                          * @return the element
                          */
                         // @ts-ignore
-                        requiringPermission(element: org.spongepowered.api.command.args.CommandElement, permission: string): org.spongepowered.api.command.args.CommandElement
+                        public static requiringPermission(element: org.spongepowered.api.command.args.CommandElement, permission: java.lang.String | string): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity}.
                          * <p>This argument accepts the following inputs:</p>
@@ -529,7 +529,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entity(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static entity(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity} of the specified type.
                          * <p>This argument accepts the following inputs:</p>
@@ -546,7 +546,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entity(key: org.spongepowered.api.text.Text, clazz: java.lang.Class<org.spongepowered.api.entity.Entity>): org.spongepowered.api.command.args.CommandElement
+                        public static entity(key: org.spongepowered.api.text.Text, clazz: java.lang.Class<any>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity} of the specified
                          * {@link EntityType}.
@@ -564,7 +564,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entity(key: org.spongepowered.api.text.Text, type: org.spongepowered.api.entity.EntityType): org.spongepowered.api.command.args.CommandElement
+                        public static entity(key: org.spongepowered.api.text.Text, type: org.spongepowered.api.entity.EntityType): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity}, or if the argument is
                          * not present and the {@link CommandSource} is an entity, return the
@@ -582,7 +582,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entityOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static entityOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity}, or if the argument is
                          * not present and the {@link CommandSource} is looking at an entity,
@@ -600,7 +600,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entityOrTarget(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static entityOrTarget(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity} of the specified type,
                          * or if the argument is not present and the {@link CommandSource} is
@@ -619,7 +619,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entityOrTarget(key: org.spongepowered.api.text.Text, clazz: java.lang.Class<org.spongepowered.api.entity.Entity>): org.spongepowered.api.command.args.CommandElement
+                        public static entityOrTarget(key: org.spongepowered.api.text.Text, clazz: java.lang.Class<any>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent an {@link Entity} of the specified
                          * {@link EntityType}, or if the argument is not present and the
@@ -639,7 +639,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        entityOrTarget(key: org.spongepowered.api.text.Text, type: org.spongepowered.api.entity.EntityType): org.spongepowered.api.command.args.CommandElement
+                        public static entityOrTarget(key: org.spongepowered.api.text.Text, type: org.spongepowered.api.entity.EntityType): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to represent a {@link URL}.
                          * <p>This will return only one value.</p>
@@ -647,7 +647,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        url(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static url(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to return an IP address, in the form of an
                          * {@link InetAddress}.
@@ -656,7 +656,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        ip(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static ip(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to return an IP address, in the form of an
                          * {@link InetAddress}, or if nothing matches and the source is a
@@ -666,14 +666,14 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        ipOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static ipOrSource(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to return a {@link BigDecimal}.
                          * @param key The key to store under
                          * @return the argument
                          */
                         // @ts-ignore
-                        bigDecimal(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static bigDecimal(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to return a {@link BigInteger}.
                          * <p>This will return only one value.</p>
@@ -681,7 +681,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        bigInteger(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static bigInteger(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to be a valid {@link DataContainer}.
                          * <p>This will return only one value.</p>
@@ -689,7 +689,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        dataContainer(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static dataContainer(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to be a {@link UUID}.
                          * <p>This will return only one value.</p>
@@ -697,7 +697,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        uuid(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static uuid(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to be valid {@link Text}.
                          * <p>This will return only one value.</p>
@@ -708,7 +708,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        text(key: org.spongepowered.api.text.Text, serializer: org.spongepowered.api.text.serializer.TextSerializer, allRemaining: boolean): org.spongepowered.api.command.args.CommandElement
+                        public static text(key: org.spongepowered.api.text.Text, serializer: org.spongepowered.api.text.serializer.TextSerializer, allRemaining: boolean): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to be a date-time, in the form of a
                          * {@link LocalDateTime}. If no date is specified, {@link LocalDate#now()}
@@ -720,7 +720,7 @@ declare namespace org {
                          * @see <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO-8601</a>
                          */
                         // @ts-ignore
-                        dateTime(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static dateTime(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to be a date-time, in the form of a
                          * {@link LocalDateTime}. If no date is specified, {@link LocalDate#now()}
@@ -733,7 +733,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        dateTimeOrNow(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static dateTimeOrNow(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Expect an argument to be a {@link Duration}.
                          * <p>Durations are expected in the following format: {@code #D#H#M#S}.
@@ -743,7 +743,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        duration(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
+                        public static duration(key: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Uses a custom set of suggestions for an argument. The provided
                          * suggestions will replace the regular ones.
@@ -752,7 +752,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.lang.Iterable<java.lang.String>): org.spongepowered.api.command.args.CommandElement
+                        public static withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.lang.Iterable<java.lang.String | string>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Uses a custom set of suggestions for an argument. The provided
                          * suggestions will replace the regular ones.
@@ -765,7 +765,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.lang.Iterable<java.lang.String>, requireBegin: boolean): org.spongepowered.api.command.args.CommandElement
+                        public static withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.lang.Iterable<java.lang.String | string>, requireBegin: boolean): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Uses a custom set of suggestions for an argument. The provided
                          * suggestions will replace the regular ones.
@@ -774,7 +774,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.util.function.Function<org.spongepowered.api.command.CommandSource, java.lang.Iterable<java.lang.String>> | java.util.function$.Function<org.spongepowered.api.command.CommandSource, java.lang.Iterable<java.lang.String>>): org.spongepowered.api.command.args.CommandElement
+                        public static withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.util.function$.Function<org.spongepowered.api.command.CommandSource, java.lang.Iterable<java.lang.String | string>>): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Uses a custom set of suggestions for an argument. The provided
                          * suggestions will replace the regular ones.
@@ -787,7 +787,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.util.function.Function<org.spongepowered.api.command.CommandSource, java.lang.Iterable<java.lang.String>> | java.util.function$.Function<org.spongepowered.api.command.CommandSource, java.lang.Iterable<java.lang.String>>, requireBegin: boolean): org.spongepowered.api.command.args.CommandElement
+                        public static withSuggestions(argument: org.spongepowered.api.command.args.CommandElement, suggestions: java.util.function$.Function<org.spongepowered.api.command.CommandSource, java.lang.Iterable<java.lang.String | string>>, requireBegin: boolean): org.spongepowered.api.command.args.CommandElement
                         /**
                          * Filters an argument's suggestions. A suggestion will only be used if it
                          * matches the predicate.
@@ -796,7 +796,7 @@ declare namespace org {
                          * @return the argument
                          */
                         // @ts-ignore
-                        withConstrainedSuggestions(argument: org.spongepowered.api.command.args.CommandElement, predicate: java.util.function.Predicate<java.lang.String> | java.util.function$.Predicate<java.lang.String>): org.spongepowered.api.command.args.CommandElement
+                        public static withConstrainedSuggestions(argument: org.spongepowered.api.command.args.CommandElement, predicate: java.util.function$.Predicate<java.lang.String | string>): org.spongepowered.api.command.args.CommandElement
                     }
                 }
             }

@@ -82,7 +82,7 @@ declare namespace javax {
              * @since JAX-WS 2.1
              */
             // @ts-ignore
-            class Action implements java.lang.annotation.Annotation {
+            abstract class Action implements java.lang.annotation.Annotation {
             }
         }
     }

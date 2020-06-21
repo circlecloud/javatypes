@@ -18,7 +18,7 @@ declare namespace org {
                  * @param cause the NamingException root cause
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: javax.naming.NamingException)
+                constructor(msg: java.lang.String | string, cause: javax.naming.NamingException)
             }
         }
     }

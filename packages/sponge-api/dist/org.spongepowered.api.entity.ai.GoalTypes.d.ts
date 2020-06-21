@@ -9,7 +9,7 @@ declare namespace org {
                          * {@link Goal} that is the default set of tasks for most {@link Agent}s.
                          */
                         // @ts-ignore
-                        readonly NORMAL: org.spongepowered.api.entity.ai.GoalType
+                        public static readonly NORMAL: org.spongepowered.api.entity.ai.GoalType
                         /**
                          * {@link Goal} that is the "target" set of tasks.
                          * <p>In this goal, the objective is to formulate the target so that the
@@ -18,7 +18,7 @@ declare namespace org {
                          * their normal goal sees that they have a target, they act accordingly.</p>
                          */
                         // @ts-ignore
-                        readonly TARGET: org.spongepowered.api.entity.ai.GoalType
+                        public static readonly TARGET: org.spongepowered.api.entity.ai.GoalType
                     }
                 }
             }

@@ -15,7 +15,7 @@ declare namespace java {
                  *  <code>ImagingOpException</code> is thrown
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
             }
         }
     }

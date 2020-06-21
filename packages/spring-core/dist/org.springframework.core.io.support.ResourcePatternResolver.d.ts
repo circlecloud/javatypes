@@ -38,7 +38,7 @@ declare namespace org {
                          * @see org.springframework.core.io.ResourceLoader#CLASSPATH_URL_PREFIX
                          */
                         // @ts-ignore
-                        
+                        readonly CLASSPATH_ALL_URL_PREFIX: java.lang.String | string
                         /**
                          * Resolve the given location pattern into Resource objects.
                          * <p>Overlapping resource entries that point to the same physical
@@ -49,7 +49,7 @@ declare namespace org {
                          * @throws IOException in case of I/O errors
                          */
                         // @ts-ignore
-                        getResources(locationPattern: string): org.springframework.core.io.Resource[]
+                        getResources(locationPattern: java.lang.String | string): org.springframework.core.io.Resource[]
                     }
                 }
             }

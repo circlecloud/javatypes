@@ -14,33 +14,33 @@ declare namespace org {
                      * @return the egg involved in this event
                      */
                     // @ts-ignore
-                    getEgg(): org.bukkit.entity.Egg
+                    public getEgg(): org.bukkit.entity.Egg
                     /**
                      * Gets whether the egg is hatching or not. Will be what the server
                      * would've done without interaction.
                      * @return boolean Whether the egg is going to hatch or not
                      */
                     // @ts-ignore
-                    isHatching(): boolean
+                    public isHatching(): boolean
                     /**
                      * Sets whether the egg will hatch or not.
                      * @param hatching true if you want the egg to hatch, false if you want it
                      *      not to
                      */
                     // @ts-ignore
-                    setHatching(hatching: boolean): void
+                    public setHatching(hatching: boolean): void
                     /**
                      * Get the type of the mob being hatched (EntityType.CHICKEN by default)
                      * @return The type of the mob being hatched by the egg
                      */
                     // @ts-ignore
-                    getHatchingType(): org.bukkit.entity.EntityType
+                    public getHatchingType(): org.bukkit.entity.EntityType
                     /**
                      * Change the type of mob being hatched by the egg
                      * @param hatchType The type of the mob being hatched by the egg
                      */
                     // @ts-ignore
-                    setHatchingType(hatchType: org.bukkit.entity.EntityType): void
+                    public setHatchingType(hatchType: org.bukkit.entity.EntityType): void
                     /**
                      * Get the number of mob hatches from the egg. By default the number will
                      * be the number the server would've done
@@ -52,7 +52,7 @@ declare namespace org {
                      * @return The number of mobs going to be hatched by the egg
                      */
                     // @ts-ignore
-                    getNumHatches(): byte
+                    public getNumHatches(): number /*byte*/
                     /**
                      * Change the number of mobs coming out of the hatched egg
                      * <p>
@@ -61,11 +61,11 @@ declare namespace org {
                      * @param numHatches The number of mobs coming out of the egg
                      */
                     // @ts-ignore
-                    setNumHatches(numHatches: number /*byte*/): void
+                    public setNumHatches(numHatches: number /*byte*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

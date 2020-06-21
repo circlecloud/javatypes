@@ -23,7 +23,7 @@ declare namespace org {
                      * Default path that cookies will be visible to: "/", i.e. the entire server.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_COOKIE_PATH: string
+                    public static readonly DEFAULT_COOKIE_PATH: java.lang.String | string
                     // @ts-ignore
                     readonly logger: Log
                     /**
@@ -31,36 +31,36 @@ declare namespace org {
                      * @see javax.servlet.http.Cookie#getName()
                      */
                     // @ts-ignore
-                    setCookieName(cookieName: string): void
+                    public setCookieName(cookieName: java.lang.String | string): void
                     /**
                      * Return the given name for cookies created by this generator.
                      */
                     // @ts-ignore
-                    getCookieName(): java.lang.String
+                    public getCookieName(): string
                     /**
                      * Use the given domain for cookies created by this generator.
                      * The cookie is only visible to servers in this domain.
                      * @see javax.servlet.http.Cookie#setDomain
                      */
                     // @ts-ignore
-                    setCookieDomain(cookieDomain: string): void
+                    public setCookieDomain(cookieDomain: java.lang.String | string): void
                     /**
                      * Return the domain for cookies created by this generator, if any.
                      */
                     // @ts-ignore
-                    getCookieDomain(): java.lang.String
+                    public getCookieDomain(): string
                     /**
                      * Use the given path for cookies created by this generator.
                      * The cookie is only visible to URLs in this path and below.
                      * @see javax.servlet.http.Cookie#setPath
                      */
                     // @ts-ignore
-                    setCookiePath(cookiePath: string): void
+                    public setCookiePath(cookiePath: java.lang.String | string): void
                     /**
                      * Return the path for cookies created by this generator.
                      */
                     // @ts-ignore
-                    getCookiePath(): java.lang.String
+                    public getCookiePath(): string
                     /**
                      * Use the given maximum age (in seconds) for cookies created by this generator.
                      * Useful special value: -1 ... not persistent, deleted when client shuts down.
@@ -69,12 +69,12 @@ declare namespace org {
                      * @see javax.servlet.http.Cookie#setMaxAge
                      */
                     // @ts-ignore
-                    setCookieMaxAge(cookieMaxAge: number): void
+                    public setCookieMaxAge(cookieMaxAge: java.lang.Integer | number): void
                     /**
                      * Return the maximum age for cookies created by this generator.
                      */
                     // @ts-ignore
-                    getCookieMaxAge(): java.lang.Integer
+                    public getCookieMaxAge(): number
                     /**
                      * Set whether the cookie should only be sent using a secure protocol,
                      * such as HTTPS (SSL). This is an indication to the receiving browser,
@@ -83,25 +83,25 @@ declare namespace org {
                      * @see javax.servlet.http.Cookie#setSecure
                      */
                     // @ts-ignore
-                    setCookieSecure(cookieSecure: boolean): void
+                    public setCookieSecure(cookieSecure: boolean): void
                     /**
                      * Return whether the cookie should only be sent using a secure protocol,
                      * such as HTTPS (SSL).
                      */
                     // @ts-ignore
-                    isCookieSecure(): boolean
+                    public isCookieSecure(): boolean
                     /**
                      * Set whether the cookie is supposed to be marked with the "HttpOnly" attribute.
                      * <p>Default is "false".
                      * @see javax.servlet.http.Cookie#setHttpOnly
                      */
                     // @ts-ignore
-                    setCookieHttpOnly(cookieHttpOnly: boolean): void
+                    public setCookieHttpOnly(cookieHttpOnly: boolean): void
                     /**
                      * Return whether the cookie is supposed to be marked with the "HttpOnly" attribute.
                      */
                     // @ts-ignore
-                    isCookieHttpOnly(): boolean
+                    public isCookieHttpOnly(): boolean
                     /**
                      * Add a cookie with the given value to the response,
                      * using the cookie descriptor settings of this generator.
@@ -114,7 +114,7 @@ declare namespace org {
                      * @see #setCookieMaxAge
                      */
                     // @ts-ignore
-                    addCookie(response: HttpServletResponse, cookieValue: string): void
+                    public addCookie(response: HttpServletResponse, cookieValue: java.lang.String | string): void
                     /**
                      * Remove the cookie that this generator describes from the response.
                      * Will generate a cookie with empty value and max age 0.
@@ -125,7 +125,7 @@ declare namespace org {
                      * @see #setCookiePath
                      */
                     // @ts-ignore
-                    removeCookie(response: HttpServletResponse): void
+                    public removeCookie(response: HttpServletResponse): void
                     /**
                      * Create a cookie with the given value, using the cookie descriptor
                      * settings of this generator (except for "cookieMaxAge").
@@ -136,7 +136,7 @@ declare namespace org {
                      * @see #setCookiePath
                      */
                     // @ts-ignore
-                    createCookie(cookieValue: string): Cookie
+                    createCookie(cookieValue: java.lang.String | string): Cookie
                 }
             }
         }

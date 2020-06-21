@@ -24,19 +24,19 @@ declare namespace org {
                     // @ts-ignore
                     getValueStyler(): org.springframework.core.style.ValueStyler
                     // @ts-ignore
-                    styleStart(buffer: java.lang.StringBuilder, obj: any): void
+                    public styleStart(buffer: java.lang.StringBuilder, obj: java.lang.Object | any): void
                     // @ts-ignore
-                    styleEnd(buffer: java.lang.StringBuilder, o: any): void
+                    public styleEnd(buffer: java.lang.StringBuilder, o: java.lang.Object | any): void
                     // @ts-ignore
-                    styleField(buffer: java.lang.StringBuilder, fieldName: string, value: any): void
+                    public styleField(buffer: java.lang.StringBuilder, fieldName: java.lang.String | string, value: java.lang.Object | any): void
                     // @ts-ignore
-                    styleFieldStart(buffer: java.lang.StringBuilder, fieldName: string): void
+                    styleFieldStart(buffer: java.lang.StringBuilder, fieldName: java.lang.String | string): void
                     // @ts-ignore
-                    styleFieldEnd(buffer: java.lang.StringBuilder, fieldName: string): void
+                    styleFieldEnd(buffer: java.lang.StringBuilder, fieldName: java.lang.String | string): void
                     // @ts-ignore
-                    styleValue(buffer: java.lang.StringBuilder, value: any): void
+                    public styleValue(buffer: java.lang.StringBuilder, value: java.lang.Object | any): void
                     // @ts-ignore
-                    styleFieldSeparator(buffer: java.lang.StringBuilder): void
+                    public styleFieldSeparator(buffer: java.lang.StringBuilder): void
                 }
             }
         }

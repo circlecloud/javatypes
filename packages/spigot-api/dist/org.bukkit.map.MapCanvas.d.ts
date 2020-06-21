@@ -43,7 +43,7 @@ declare namespace org {
                  * @return The color. See {#link MapPalette}.
                  */
                 // @ts-ignore
-                getPixel(x: number /*int*/, y: number /*int*/): byte
+                getPixel(x: number /*int*/, y: number /*int*/): number /*byte*/
                 /**
                  * Get a pixel from the layers below this canvas.
                  * @param x The x coordinate, from 0 to 127.
@@ -51,7 +51,7 @@ declare namespace org {
                  * @return The color. See {#link MapPalette}.
                  */
                 // @ts-ignore
-                getBasePixel(x: number /*int*/, y: number /*int*/): byte
+                getBasePixel(x: number /*int*/, y: number /*int*/): number /*byte*/
                 /**
                  * Draw an image to the map. The image will be clipped if necessary.
                  * @param x The x coordinate of the image.
@@ -71,7 +71,7 @@ declare namespace org {
                  * @param text The formatted text to render.
                  */
                 // @ts-ignore
-                drawText(x: number /*int*/, y: number /*int*/, font: org.bukkit.map.MapFont, text: string): void
+                drawText(x: number /*int*/, y: number /*int*/, font: org.bukkit.map.MapFont, text: java.lang.String | string): void
             }
         }
     }

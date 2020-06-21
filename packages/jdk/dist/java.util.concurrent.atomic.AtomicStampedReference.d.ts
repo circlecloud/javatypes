@@ -27,13 +27,13 @@ declare namespace java {
                      * @return the current value of the reference
                      */
                     // @ts-ignore
-                    getReference(): V
+                    public getReference(): V
                     /**
                      * Returns the current value of the stamp.
                      * @return the current value of the stamp
                      */
                     // @ts-ignore
-                    getStamp(): int
+                    public getStamp(): number /*int*/
                     /**
                      * Returns the current values of both the reference and the stamp.
                      * Typical usage is {@code int[1] holder; ref = v.get(holder); }.
@@ -42,7 +42,7 @@ declare namespace java {
                      * @return the current value of the reference
                      */
                     // @ts-ignore
-                    get(stampHolder: number /*int*/[]): V
+                    public get(stampHolder: number /*int*/[]): V
                     /**
                      * Atomically sets the value of both the reference and stamp
                      * to the given update values if the
@@ -58,7 +58,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    weakCompareAndSet(expectedReference: V, newReference: V, expectedStamp: number /*int*/, newStamp: number /*int*/): boolean
+                    public weakCompareAndSet(expectedReference: V, newReference: V, expectedStamp: number /*int*/, newStamp: number /*int*/): boolean
                     /**
                      * Atomically sets the value of both the reference and stamp
                      * to the given update values if the
@@ -71,14 +71,14 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    compareAndSet(expectedReference: V, newReference: V, expectedStamp: number /*int*/, newStamp: number /*int*/): boolean
+                    public compareAndSet(expectedReference: V, newReference: V, expectedStamp: number /*int*/, newStamp: number /*int*/): boolean
                     /**
                      * Unconditionally sets the value of both the reference and stamp.
                      * @param newReference the new value for the reference
                      * @param newStamp the new value for the stamp
                      */
                     // @ts-ignore
-                    set(newReference: V, newStamp: number /*int*/): void
+                    public set(newReference: V, newStamp: number /*int*/): void
                     /**
                      * Atomically sets the value of the stamp to the given update value
                      * if the current reference is {@code ==} to the expected
@@ -92,7 +92,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    attemptStamp(expectedReference: V, newStamp: number /*int*/): boolean
+                    public attemptStamp(expectedReference: V, newStamp: number /*int*/): boolean
                 }
             }
         }

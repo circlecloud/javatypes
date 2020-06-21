@@ -23,21 +23,21 @@ declare namespace org {
                      * @param scheme the URI scheme
                      */
                     // @ts-ignore
-                    scheme(scheme: string): org.springframework.web.util.UriBuilder
+                    scheme(scheme: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Set the URI user info which may contain URI template variables, and
                      * may also be {@code null} to clear the user info of this builder.
                      * @param userInfo the URI user info
                      */
                     // @ts-ignore
-                    userInfo(userInfo: string): org.springframework.web.util.UriBuilder
+                    userInfo(userInfo: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Set the URI host which may contain URI template variables, and may also
                      * be {@code null} to clear the host of this builder.
                      * @param host the URI host
                      */
                     // @ts-ignore
-                    host(host: string): org.springframework.web.util.UriBuilder
+                    host(host: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Set the URI port. Passing {@code -1} will clear the port of this builder.
                      * @param port the URI port
@@ -51,20 +51,20 @@ declare namespace org {
                      * @param port the URI port
                      */
                     // @ts-ignore
-                    port(port: string): org.springframework.web.util.UriBuilder
+                    port(port: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Append the given path to the existing path of this builder.
                      * The given path may contain URI template variables.
                      * @param path the URI path
                      */
                     // @ts-ignore
-                    path(path: string): org.springframework.web.util.UriBuilder
+                    path(path: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Set the path of this builder overriding the existing path values.
                      * @param path the URI path, or {#code null} for an empty path
                      */
                     // @ts-ignore
-                    replacePath(path: string): org.springframework.web.util.UriBuilder
+                    replacePath(path: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Append path segments to the existing path. Each path segment may contain
                      * URI template variables and should not contain any slashes.
@@ -72,7 +72,7 @@ declare namespace org {
                      * @param pathSegments the URI path segments
                      */
                     // @ts-ignore
-                    pathSegment(...pathSegments: string[]): org.springframework.web.util.UriBuilder
+                    pathSegment(...pathSegments: java.lang.String[] | string[]): org.springframework.web.util.UriBuilder
                     /**
                      * Parse the given query string into query parameters where parameters are
                      * separated with {@code '&'} and their values, if any, with {@code '='}.
@@ -83,7 +83,7 @@ declare namespace org {
                      * @param query the query string
                      */
                     // @ts-ignore
-                    query(query: string): org.springframework.web.util.UriBuilder
+                    query(query: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Clear existing query parameters and then delegate to {@link #query(String)}.
                      * <p><strong>Note: </strong> please, review the Javadoc of
@@ -92,7 +92,7 @@ declare namespace org {
                      * @param query the query string; a {#code null} value removes all query parameters.
                      */
                     // @ts-ignore
-                    replaceQuery(query: string): org.springframework.web.util.UriBuilder
+                    replaceQuery(query: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Append the given query parameter. Both the parameter name and values may
                      * contain URI template variables to be expanded later from values. If no
@@ -113,7 +113,7 @@ declare namespace org {
                      * @see #queryParam(String, Collection)
                      */
                     // @ts-ignore
-                    queryParam(name: string, ...values: any[]): org.springframework.web.util.UriBuilder
+                    queryParam(name: java.lang.String | string, ...values: java.lang.Object[] | any[]): org.springframework.web.util.UriBuilder
                     /**
                      * Variant of {@link #queryParam(String, Object...)} with a Collection.
                      * <p><strong>Note: </strong> please, review the Javadoc of
@@ -125,7 +125,7 @@ declare namespace org {
                      * @see #queryParam(String, Object...)
                      */
                     // @ts-ignore
-                    queryParam(name: string, values: Array<any>): org.springframework.web.util.UriBuilder
+                    queryParam(name: java.lang.String | string, values: java.util.Collection<any> | Array<any>): org.springframework.web.util.UriBuilder
                     /**
                      * Add multiple query parameters and values.
                      * <p><strong>Note: </strong> please, review the Javadoc of
@@ -146,7 +146,7 @@ declare namespace org {
                      * @see #replaceQueryParam(String, Collection)
                      */
                     // @ts-ignore
-                    replaceQueryParam(name: string, ...values: any[]): org.springframework.web.util.UriBuilder
+                    replaceQueryParam(name: java.lang.String | string, ...values: java.lang.Object[] | any[]): org.springframework.web.util.UriBuilder
                     /**
                      * Variant of {@link #replaceQueryParam(String, Object...)} with a Collection.
                      * <p><strong>Note: </strong> please, review the Javadoc of
@@ -158,7 +158,7 @@ declare namespace org {
                      * @see #replaceQueryParam(String, Object...)
                      */
                     // @ts-ignore
-                    replaceQueryParam(name: string, values: Array<any>): org.springframework.web.util.UriBuilder
+                    replaceQueryParam(name: java.lang.String | string, values: java.util.Collection<any> | Array<any>): org.springframework.web.util.UriBuilder
                     /**
                      * Set the query parameter values after removing all existing ones.
                      * <p><strong>Note: </strong> please, review the Javadoc of
@@ -174,7 +174,7 @@ declare namespace org {
                      * @param fragment the URI fragment
                      */
                     // @ts-ignore
-                    fragment(fragment: string): org.springframework.web.util.UriBuilder
+                    fragment(fragment: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Build a {@link URI} instance and replaces URI template variables
                      * with the values from an array.
@@ -182,7 +182,7 @@ declare namespace org {
                      * @return the URI
                      */
                     // @ts-ignore
-                    build(...uriVariables: any[]): java.net.URI
+                    build(...uriVariables: java.lang.Object[] | any[]): java.net.URI
                     /**
                      * Build a {@link URI} instance and replaces URI template variables
                      * with the values from a map.
@@ -190,7 +190,7 @@ declare namespace org {
                      * @return the URI
                      */
                     // @ts-ignore
-                    build(uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    build(uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                 }
             }
         }

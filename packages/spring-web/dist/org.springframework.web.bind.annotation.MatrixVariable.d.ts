@@ -19,7 +19,7 @@ declare namespace org {
                      * @since 3.2
                      */
                     // @ts-ignore
-                    class MatrixVariable implements java.lang.annotation.Annotation {
+                    abstract class MatrixVariable implements java.lang.annotation.Annotation {
                     }
                 }
             }

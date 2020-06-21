@@ -23,7 +23,7 @@ declare namespace javax {
                  * @param message the detail message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * <p>Constructs a <code>JMXProviderException</code> with the
                  * specified detail message and nested exception.</p>
@@ -31,9 +31,9 @@ declare namespace javax {
                  * @param cause the nested exception
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

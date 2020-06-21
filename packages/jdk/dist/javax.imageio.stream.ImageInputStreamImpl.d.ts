@@ -10,7 +10,7 @@ declare namespace javax {
              * closing, and disposing.
              */
             // @ts-ignore
-            class ImageInputStreamImpl extends java.lang.Object implements javax.imageio.stream.ImageInputStream {
+            abstract class ImageInputStreamImpl extends java.lang.Object implements javax.imageio.stream.ImageInputStream {
                 /**
                  * Constructs an <code>ImageInputStreamImpl</code>.
                  */
@@ -56,9 +56,9 @@ declare namespace javax {
                 // @ts-ignore
                 checkClosed(): void
                 // @ts-ignore
-                setByteOrder(byteOrder: java.nio.ByteOrder): void
+                public setByteOrder(byteOrder: java.nio.ByteOrder): void
                 // @ts-ignore
-                getByteOrder(): java.nio.ByteOrder
+                public getByteOrder(): java.nio.ByteOrder
                 /**
                  * Reads a single byte from the stream and returns it as an
                  * <code>int</code> between 0 and 255.  If EOF is reached,
@@ -73,7 +73,7 @@ declare namespace javax {
                  * @exception IOException if the stream has been closed.
                  */
                 // @ts-ignore
-                abstract read(): int
+                public abstract read(): number /*int*/
                 /**
                  * A convenience method that calls <code>read(b, 0, b.length)</code>.
                  * <p> The bit offset within the stream is reset to zero before
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[]): int
+                public read(b: number /*byte*/[]): number /*int*/
                 /**
                  * Reads up to <code>len</code> bytes from the stream, and stores
                  * them into <code>b</code> starting at index <code>off</code>.
@@ -109,61 +109,61 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                abstract read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public abstract read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 // @ts-ignore
-                readBytes(buf: javax.imageio.stream.IIOByteBuffer, len: number /*int*/): void
+                public readBytes(buf: javax.imageio.stream.IIOByteBuffer, len: number /*int*/): void
                 // @ts-ignore
-                readBoolean(): boolean
+                public readBoolean(): boolean
                 // @ts-ignore
-                readByte(): byte
+                public readByte(): number /*byte*/
                 // @ts-ignore
-                readUnsignedByte(): int
+                public readUnsignedByte(): number /*int*/
                 // @ts-ignore
-                readShort(): short
+                public readShort(): number /*short*/
                 // @ts-ignore
-                readUnsignedShort(): int
+                public readUnsignedShort(): number /*int*/
                 // @ts-ignore
-                readChar(): char
+                public readChar(): string
                 // @ts-ignore
-                readInt(): int
+                public readInt(): number /*int*/
                 // @ts-ignore
-                readUnsignedInt(): long
+                public readUnsignedInt(): number /*long*/
                 // @ts-ignore
-                readLong(): long
+                public readLong(): number /*long*/
                 // @ts-ignore
-                readFloat(): float
+                public readFloat(): number /*float*/
                 // @ts-ignore
-                readDouble(): double
+                public readDouble(): number /*double*/
                 // @ts-ignore
-                readLine(): java.lang.String
+                public readLine(): string
                 // @ts-ignore
-                readUTF(): java.lang.String
+                public readUTF(): string
                 // @ts-ignore
-                readFully(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public readFully(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                readFully(b: number /*byte*/[]): void
+                public readFully(b: number /*byte*/[]): void
                 // @ts-ignore
-                readFully(s: number /*short*/[], off: number /*int*/, len: number /*int*/): void
+                public readFully(s: number /*short*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                readFully(c: string[], off: number /*int*/, len: number /*int*/): void
+                public readFully(c: string[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                readFully(i: number /*int*/[], off: number /*int*/, len: number /*int*/): void
+                public readFully(i: number /*int*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                readFully(l: number /*long*/[], off: number /*int*/, len: number /*int*/): void
+                public readFully(l: number /*long*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                readFully(f: number /*float*/[], off: number /*int*/, len: number /*int*/): void
+                public readFully(f: number /*float*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                readFully(d: number /*double*/[], off: number /*int*/, len: number /*int*/): void
+                public readFully(d: number /*double*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                getStreamPosition(): long
+                public getStreamPosition(): number /*long*/
                 // @ts-ignore
-                getBitOffset(): int
+                public getBitOffset(): number /*int*/
                 // @ts-ignore
-                setBitOffset(bitOffset: number /*int*/): void
+                public setBitOffset(bitOffset: number /*int*/): void
                 // @ts-ignore
-                readBit(): int
+                public readBit(): number /*int*/
                 // @ts-ignore
-                readBits(numBits: number /*int*/): long
+                public readBits(numBits: number /*int*/): number /*long*/
                 /**
                  * Returns <code>-1L</code> to indicate that the stream has unknown
                  * length.  Subclasses must override this method to provide actual
@@ -171,7 +171,7 @@ declare namespace javax {
                  * @return -1L to indicate unknown length.
                  */
                 // @ts-ignore
-                length(): long
+                public length(): number /*long*/
                 /**
                  * Advances the current stream position by calling
                  * <code>seek(getStreamPosition() + n)</code>.
@@ -184,7 +184,7 @@ declare namespace javax {
                  *  the starting or ending position.
                  */
                 // @ts-ignore
-                skipBytes(n: number /*int*/): int
+                public skipBytes(n: number /*int*/): number /*int*/
                 /**
                  * Advances the current stream position by calling
                  * <code>seek(getStreamPosition() + n)</code>.
@@ -197,15 +197,15 @@ declare namespace javax {
                  *  the starting or ending position.
                  */
                 // @ts-ignore
-                skipBytes(n: number /*long*/): long
+                public skipBytes(n: number /*long*/): number /*long*/
                 // @ts-ignore
-                seek(pos: number /*long*/): void
+                public seek(pos: number /*long*/): void
                 /**
                  * Pushes the current stream position onto a stack of marked
                  * positions.
                  */
                 // @ts-ignore
-                mark(): void
+                public mark(): void
                 /**
                  * Resets the current stream byte and bit positions from the stack
                  * of marked positions.
@@ -214,33 +214,33 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 // @ts-ignore
-                flushBefore(pos: number /*long*/): void
+                public flushBefore(pos: number /*long*/): void
                 // @ts-ignore
-                flush(): void
+                public flush(): void
                 // @ts-ignore
-                getFlushedPosition(): long
+                public getFlushedPosition(): number /*long*/
                 /**
                  * Default implementation returns false.  Subclasses should
                  * override this if they cache data.
                  */
                 // @ts-ignore
-                isCached(): boolean
+                public isCached(): boolean
                 /**
                  * Default implementation returns false.  Subclasses should
                  * override this if they cache data in main memory.
                  */
                 // @ts-ignore
-                isCachedMemory(): boolean
+                public isCachedMemory(): boolean
                 /**
                  * Default implementation returns false.  Subclasses should
                  * override this if they cache data in a temporary file.
                  */
                 // @ts-ignore
-                isCachedFile(): boolean
+                public isCachedFile(): boolean
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Finalizes this object prior to garbage collection.  The
                  * <code>close</code> method is called to close any open input

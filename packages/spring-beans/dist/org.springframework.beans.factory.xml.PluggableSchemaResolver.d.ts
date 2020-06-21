@@ -41,17 +41,17 @@ declare namespace org {
                          * @see PropertiesLoaderUtils#loadAllProperties(String, ClassLoader)
                          */
                         // @ts-ignore
-                        constructor(classLoader: java.lang.ClassLoader, schemaMappingsLocation: string)
+                        constructor(classLoader: java.lang.ClassLoader, schemaMappingsLocation: java.lang.String | string)
                         /**
                          * The location of the file that defines schema mappings.
                          * Can be present in multiple JAR files.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_SCHEMA_MAPPINGS_LOCATION: string
+                        public static readonly DEFAULT_SCHEMA_MAPPINGS_LOCATION: java.lang.String | string
                         // @ts-ignore
-                        resolveEntity(publicId: string, systemId: string): org.xml.sax.InputSource
+                        public resolveEntity(publicId: java.lang.String | string, systemId: java.lang.String | string): org.xml.sax.InputSource
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

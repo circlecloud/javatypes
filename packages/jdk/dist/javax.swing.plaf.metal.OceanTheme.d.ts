@@ -30,13 +30,13 @@ declare namespace javax {
                      * @throws NullPointerException if {#code table} is {@code null}
                      */
                     // @ts-ignore
-                    addCustomEntriesToTable(table: javax.swing.UIDefaults): void
+                    public addCustomEntriesToTable(table: javax.swing.UIDefaults): void
                     /**
                      * Return the name of this theme, "Ocean".
                      * @return "Ocean"
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns the primary 1 color. This returns a color with an rgb hex value
                      * of {@code 0x6382BF}.
@@ -100,28 +100,28 @@ declare namespace javax {
                      * @see java.awt.Color#decode
                      */
                     // @ts-ignore
-                    getDesktopColor(): javax.swing.plaf.ColorUIResource
+                    public getDesktopColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the inactive control text color. This returns a color with an
                      * rgb hex value of {@code 0x999999}.
                      * @return the inactive control text color
                      */
                     // @ts-ignore
-                    getInactiveControlTextColor(): javax.swing.plaf.ColorUIResource
+                    public getInactiveControlTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the control text color. This returns a color with an
                      * rgb hex value of {@code 0x333333}.
                      * @return the control text color
                      */
                     // @ts-ignore
-                    getControlTextColor(): javax.swing.plaf.ColorUIResource
+                    public getControlTextColor(): javax.swing.plaf.ColorUIResource
                     /**
                      * Returns the menu disabled foreground color. This returns a color with an
                      * rgb hex value of {@code 0x999999}.
                      * @return the menu disabled foreground color
                      */
                     // @ts-ignore
-                    getMenuDisabledForeground(): javax.swing.plaf.ColorUIResource
+                    public getMenuDisabledForeground(): javax.swing.plaf.ColorUIResource
                 }
             }
         }

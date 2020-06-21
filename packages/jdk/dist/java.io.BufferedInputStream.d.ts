@@ -131,7 +131,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads bytes from this byte-input stream into the specified byte array,
              * starting at the given offset.
@@ -163,7 +163,7 @@ declare namespace java {
              *                           or an I/O error occurs.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * See the general contract of the <code>skip</code>
              * method of <code>InputStream</code>.
@@ -173,7 +173,7 @@ declare namespace java {
              *                           I/O error occurs.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns an estimate of the number of bytes that can be read (or
              * skipped over) from this input stream without blocking by the next
@@ -191,7 +191,7 @@ declare namespace java {
              *                           or an I/O error occurs.
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * See the general contract of the <code>mark</code>
              * method of <code>InputStream</code>.
@@ -200,7 +200,7 @@ declare namespace java {
              * @see java.io.BufferedInputStream#reset()
              */
             // @ts-ignore
-            mark(readlimit: number /*int*/): void
+            public mark(readlimit: number /*int*/): void
             /**
              * See the general contract of the <code>reset</code>
              * method of <code>InputStream</code>.
@@ -217,7 +217,7 @@ declare namespace java {
              * @see java.io.BufferedInputStream#mark(int)
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Tests if this input stream supports the <code>mark</code>
              * and <code>reset</code> methods. The <code>markSupported</code>
@@ -229,7 +229,7 @@ declare namespace java {
              * @see java.io.InputStream#reset()
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Closes this input stream and releases any system resources
              * associated with the stream.
@@ -239,7 +239,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

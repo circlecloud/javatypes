@@ -63,7 +63,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            forName(className: string): java.lang.Class<?>
+            public static forName(className: java.lang.String | string): java.lang.Class<any>
             /**
              * Answers a Class object which represents the class
              * named by the argument. The name should be the name
@@ -80,7 +80,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            forName(className: string, initializeBoolean: boolean, classLoader: java.lang.ClassLoader): java.lang.Class<?>
+            public static forName(className: java.lang.String | string, initializeBoolean: boolean, classLoader: java.lang.ClassLoader): java.lang.Class<any>
             /**
              * Answers an array containing all public class members
              * of the class which the receiver represents and its
@@ -90,7 +90,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            getClasses(): java.lang.Class[]
+            public getClasses(): java.lang.Class<any>[]
             /**
              * Answers the classloader which was used to load the
              * class represented by the receiver. Answer null if the
@@ -99,7 +99,7 @@ declare namespace java {
              * @see java.lang.ClassLoader
              */
             // @ts-ignore
-            getClassLoader(): java.lang.ClassLoader
+            public getClassLoader(): java.lang.ClassLoader
             /**
              * Answers a Class object which represents the receiver's
              * component type if the receiver represents an array type.
@@ -109,7 +109,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            getComponentType(): java.lang.Class<?>
+            public getComponentType(): java.lang.Class<any>
             /**
              * Answers a public Constructor object which represents the
              * constructor described by the arguments.
@@ -120,7 +120,7 @@ declare namespace java {
              * @see #getConstructors
              */
             // @ts-ignore
-            getConstructor(...parameterTypes: java.lang.Class[]): java.lang.reflect.Constructor<T>
+            public getConstructor(...parameterTypes: java.lang.Class<any>[]): java.lang.reflect.Constructor<T>
             /**
              * Answers an array containing Constructor objects describing
              * all constructors which are visible from the current execution
@@ -130,7 +130,7 @@ declare namespace java {
              * @see #getMethods
              */
             // @ts-ignore
-            getConstructors(): java.lang.reflect.Constructor[]
+            public getConstructors(): java.lang.reflect.Constructor<any>[]
             /**
              * Answers an array containing all class members of the class
              * which the receiver represents. Note that some of the fields
@@ -141,7 +141,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            getDeclaredClasses(): java.lang.Class[]
+            public getDeclaredClasses(): java.lang.Class<any>[]
             /**
              * Answers a Constructor object which represents the
              * constructor described by the arguments.
@@ -152,7 +152,7 @@ declare namespace java {
              * @see #getConstructors
              */
             // @ts-ignore
-            getDeclaredConstructor(...parameterTypes: java.lang.Class[]): java.lang.reflect.Constructor<T>
+            public getDeclaredConstructor(...parameterTypes: java.lang.Class<any>[]): java.lang.reflect.Constructor<T>
             /**
              * Answers an array containing Constructor objects describing
              * all constructor which are defined by the receiver. Note that
@@ -163,7 +163,7 @@ declare namespace java {
              * @see #getMethods
              */
             // @ts-ignore
-            getDeclaredConstructors(): java.lang.reflect.Constructor[]
+            public getDeclaredConstructors(): java.lang.reflect.Constructor<any>[]
             /**
              * Answers a Field object describing the field in the receiver
              * named by the argument. Note that the Constructor may not be
@@ -175,7 +175,7 @@ declare namespace java {
              * @see #getDeclaredFields
              */
             // @ts-ignore
-            getDeclaredField(name: string): java.lang.reflect.Field
+            public getDeclaredField(name: java.lang.String | string): java.lang.reflect.Field
             /**
              * Answers an array containing Field objects describing
              * all fields which are defined by the receiver. Note that
@@ -186,7 +186,7 @@ declare namespace java {
              * @see #getFields
              */
             // @ts-ignore
-            getDeclaredFields(): java.lang.reflect.Field[]
+            public getDeclaredFields(): java.lang.reflect.Field[]
             /**
              * Answers a Method object which represents the method
              * described by the arguments. Note that the associated
@@ -200,7 +200,7 @@ declare namespace java {
              * @see #getMethods
              */
             // @ts-ignore
-            getDeclaredMethod(name: string, ...parameterTypes: java.lang.Class[]): java.lang.reflect.Method
+            public getDeclaredMethod(name: java.lang.String | string, ...parameterTypes: java.lang.Class<any>[]): java.lang.reflect.Method
             /**
              * Answers an array containing Method objects describing
              * all methods which are defined by the receiver. Note that
@@ -211,7 +211,7 @@ declare namespace java {
              * @see #getMethods
              */
             // @ts-ignore
-            getDeclaredMethods(): java.lang.reflect.Method[]
+            public getDeclaredMethods(): java.lang.reflect.Method[]
             /**
              * Answers the class which declared the class represented
              * by the receiver. This will return null if the receiver
@@ -219,7 +219,7 @@ declare namespace java {
              * @return the declaring class of the receiver.
              */
             // @ts-ignore
-            getDeclaringClass(): java.lang.Class<?>
+            public getDeclaringClass(): java.lang.Class<any>
             /**
              * Answers a Field object describing the field in the receiver
              * named by the argument which must be visible from the current
@@ -231,7 +231,7 @@ declare namespace java {
              * @see #getDeclaredFields
              */
             // @ts-ignore
-            getField(name: string): java.lang.reflect.Field
+            public getField(name: java.lang.String | string): java.lang.reflect.Field
             /**
              * Answers an array containing Field objects describing
              * all fields which are visible from the current execution
@@ -241,7 +241,7 @@ declare namespace java {
              * @see #getDeclaredFields
              */
             // @ts-ignore
-            getFields(): java.lang.reflect.Field[]
+            public getFields(): java.lang.reflect.Field[]
             /**
              * Answers an array of Class objects which match the interfaces
              * specified in the receiver classes <code>implements</code>
@@ -250,7 +250,7 @@ declare namespace java {
              * 					the interfaces the receiver claims to implement.
              */
             // @ts-ignore
-            getInterfaces(): java.lang.Class[]
+            public getInterfaces(): java.lang.Class<any>[]
             /**
              * Answers a Method object which represents the method
              * described by the arguments.
@@ -267,7 +267,7 @@ declare namespace java {
              * @see #getMethods
              */
             // @ts-ignore
-            getMethod(name: string, ...parameterTypes: java.lang.Class[]): java.lang.reflect.Method
+            public getMethod(name: java.lang.String | string, ...parameterTypes: java.lang.Class<any>[]): java.lang.reflect.Method
             /**
              * Answers an array containing Method objects describing
              * all methods which are visible from the current execution
@@ -279,7 +279,7 @@ declare namespace java {
              * @see #getDeclaredMethods
              */
             // @ts-ignore
-            getMethods(): java.lang.reflect.Method[]
+            public getMethods(): java.lang.reflect.Method[]
             /**
              * Answers an integer which which is the receiver's modifiers.
              * Note that the constants which describe the bits which are
@@ -288,7 +288,7 @@ declare namespace java {
              * @return the receiver's modifiers
              */
             // @ts-ignore
-            getModifiers(): int
+            public getModifiers(): number /*int*/
             /**
              * Answers the name of the class which the receiver represents.
              * For a description of the format which is used, see the class
@@ -297,7 +297,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Answers the ProtectionDomain of the receiver.
              * <p>
@@ -311,7 +311,7 @@ declare namespace java {
              * @see java.lang.Class
              */
             // @ts-ignore
-            getProtectionDomain(): java.security.ProtectionDomain
+            public getProtectionDomain(): java.security.ProtectionDomain
             /**
              * Answers a URL referring to the
              * resource specified by resName. The mapping between
@@ -322,7 +322,7 @@ declare namespace java {
              * @see java.lang.ClassLoader
              */
             // @ts-ignore
-            getResource(resName: string): java.net.URL
+            public getResource(resName: java.lang.String | string): java.net.URL
             /**
              * Answers a read-only stream on the contents of the
              * resource specified by resName. The mapping between
@@ -333,7 +333,7 @@ declare namespace java {
              * @see java.lang.ClassLoader
              */
             // @ts-ignore
-            getResourceAsStream(resName: string): java.io.InputStream
+            public getResourceAsStream(resName: java.lang.String | string): java.io.InputStream
             /**
              * Answers the signers for the class represented by the
              * receiver, or null if there are no signers.
@@ -341,7 +341,7 @@ declare namespace java {
              * @see #getMethods
              */
             // @ts-ignore
-            getSigners(): java.lang.Object[]
+            public getSigners(): any[]
             /**
              * Answers the Class which represents the receiver's
              * superclass. For Classes which represent base types,
@@ -350,7 +350,7 @@ declare namespace java {
              * @return the receiver's superclass.
              */
             // @ts-ignore
-            getSuperclass(): java.lang.Class<? super T>
+            public getSuperclass(): java.lang.Class<any>
             /**
              * Answers true if the receiver represents an array class.
              * @return <code>true</code>
@@ -359,7 +359,7 @@ declare namespace java {
              *                   if it does not represent an array class
              */
             // @ts-ignore
-            isArray(): boolean
+            public isArray(): boolean
             /**
              * Answers true if the type represented by the argument
              * can be converted via an identity conversion or a widening
@@ -376,7 +376,7 @@ declare namespace java {
              * 					if the parameter is null
              */
             // @ts-ignore
-            isAssignableFrom(cls: java.lang.Class<any>): boolean
+            public isAssignableFrom(cls: java.lang.Class<any>): boolean
             /**
              * Answers true if the argument is non-null and can be
              * cast to the type of the receiver. This is the runtime
@@ -390,7 +390,7 @@ declare namespace java {
              * 					the object to test
              */
             // @ts-ignore
-            isInstance(object: any): boolean
+            public isInstance(object: java.lang.Object | any): boolean
             /**
              * Answers true if the receiver represents an interface.
              * @return <code>true</code>
@@ -399,7 +399,7 @@ declare namespace java {
              *                   if it does not represent an interface
              */
             // @ts-ignore
-            isInterface(): boolean
+            public isInterface(): boolean
             /**
              * Answers true if the receiver represents a base type.
              * @return <code>true</code>
@@ -408,7 +408,7 @@ declare namespace java {
              *                   if it does not represent a base type
              */
             // @ts-ignore
-            isPrimitive(): boolean
+            public isPrimitive(): boolean
             /**
              * Answers a new instance of the class represented by the
              * receiver, created by invoking the default (i.e. zero-argument)
@@ -423,14 +423,14 @@ declare namespace java {
              * @throws InstantiationException if the instance could not be created.
              */
             // @ts-ignore
-            newInstance(): T
+            public newInstance(): T
             /**
              * Answers a string containing a concise, human-readable
              * description of the receiver.
              * @return a printable representation for the receiver.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a formatted string describing this Class. The string has
              * the following format:
@@ -443,7 +443,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toGenericString(): java.lang.String
+            public toGenericString(): string
             /**
              * Returns the Package of which this class is a member.
              * A class has a Package iff it was loaded from a SecureClassLoader.
@@ -451,7 +451,7 @@ declare namespace java {
              *  or null in the case of primitive or array types
              */
             // @ts-ignore
-            getPackage(): java.lang.Package
+            public getPackage(): java.lang.Package
             /**
              * Returns the assertion status for this class.
              * Assertion is enabled/disabled based on
@@ -460,7 +460,7 @@ declare namespace java {
              * @return the assertion status for this class
              */
             // @ts-ignore
-            desiredAssertionStatus(): boolean
+            public desiredAssertionStatus(): boolean
             /**
              * Return the specified Annotation for this Class. Inherited Annotations
              * are searched.
@@ -469,7 +469,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getAnnotation<A extends java.lang.annotation.Annotation>(annotation: java.lang.Class<A>): A
+            public getAnnotation<A extends java.lang.annotation.Annotation>(annotation: java.lang.Class<A>): A
             /**
              * Return the directly declared Annotations for this Class, including the Annotations
              * inherited from superclasses.
@@ -481,7 +481,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getAnnotations(): java.lang.annotation.Annotation[]
+            public getAnnotations(): java.lang.annotation.Annotation[]
             /**
              * Looks through directly declared annotations for this class, not including Annotations inherited from superclasses.
              * @param annotation the Annotation to search for
@@ -489,26 +489,26 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getDeclaredAnnotation<A extends java.lang.annotation.Annotation>(annotation: java.lang.Class<A>): A
+            public getDeclaredAnnotation<A extends java.lang.annotation.Annotation>(annotation: java.lang.Class<A>): A
             /**
              * Return the annotated types for the implemented interfaces.
              * @return array, possibly empty, of AnnotatedTypes
              */
             // @ts-ignore
-            getAnnotatedInterfaces(): java.lang.reflect.AnnotatedType[]
+            public getAnnotatedInterfaces(): java.lang.reflect.AnnotatedType[]
             /**
              * Return the annotated superclass of this class.
              * @return null if this class is Object, an interface, a primitive type, or an array type.  Otherwise return (possibly empty) AnnotatedType.
              */
             // @ts-ignore
-            getAnnotatedSuperclass(): java.lang.reflect.AnnotatedType
+            public getAnnotatedSuperclass(): java.lang.reflect.AnnotatedType
             /**
              * Answers the type name of the class which the receiver represents.
              * @return the fully qualified type name, with brackets if an array class
              * @since 1.8
              */
             // @ts-ignore
-            getTypeName(): java.lang.String
+            public getTypeName(): string
             /**
              * Returns the annotations only for this Class, not including Annotations inherited from superclasses.
              * It includes all the directly declared annotations.
@@ -517,7 +517,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+            public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
             /**
              * Terms used for annotations :
              * Repeatable Annotation :
@@ -549,7 +549,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getDeclaredAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
+            public getDeclaredAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
             /**
              * Gets the specified type annotations of this class.
              * If the specified type is not repeatable annotation, then returned array size will be 0 or 1.
@@ -560,14 +560,14 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
+            public getAnnotationsByType<A extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<A>): A
             /**
              * Answer if this class is an Annotation.
              * @return true if this class is an Annotation
              * @since 1.5
              */
             // @ts-ignore
-            isAnnotation(): boolean
+            public isAnnotation(): boolean
             /**
              * Answer if the specified Annotation exists for this Class. Inherited
              * Annotations are searched.
@@ -576,7 +576,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isAnnotationPresent(annotation: java.lang.Class<java.lang.annotation.Annotation>): boolean
+            public isAnnotationPresent(annotation: java.lang.Class<any>): boolean
             /**
              * Cast this Class to a subclass of the specified Class.
              * @param <U> cls the Class to cast to
@@ -586,7 +586,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            asSubclass<U>(cls: java.lang.Class<U>): java.lang.Class<? extends U>
+            public asSubclass<U>(cls: java.lang.Class<U>): java.lang.Class<any>
             /**
              * Cast the specified object to this Class.
              * @param object the object to cast
@@ -596,14 +596,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            cast(object: any): T
+            public cast(object: java.lang.Object | any): T
             /**
              * Answer if this Class is an enum.
              * @return true if this Class is an enum
              * @since 1.5
              */
             // @ts-ignore
-            isEnum(): boolean
+            public isEnum(): boolean
             /**
              * Answer the array of enum constants for this Class. Returns null if
              * this class is not an enum.
@@ -611,7 +611,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getEnumConstants(): T
+            public getEnumConstants(): T
             /**
              * Answer if this Class is synthetic. A synthetic Class is created by
              * the compiler.
@@ -619,7 +619,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isSynthetic(): boolean
+            public isSynthetic(): boolean
             /**
              * Answers an array of TypeVariable for the generic parameters declared
              * on this Class.
@@ -627,7 +627,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getTypeParameters(): java.lang.reflect.TypeVariable[]
+            public getTypeParameters(): java.lang.reflect.TypeVariable<java.lang.Class<T>>[]
             /**
              * Answers an array of Type for the Class objects which match the
              * interfaces specified in the receiver classes <code>implements</code>
@@ -637,7 +637,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getGenericInterfaces(): java.lang.reflect.Type[]
+            public getGenericInterfaces(): java.lang.reflect.Type[]
             /**
              * Answers the Type for the Class which represents the receiver's
              * superclass. For classes which represent base types,
@@ -647,7 +647,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getGenericSuperclass(): java.lang.reflect.Type
+            public getGenericSuperclass(): java.lang.reflect.Type
             /**
              * If this Class is defined inside a constructor, return the Constructor.
              * @return the enclosing Constructor or null
@@ -657,7 +657,7 @@ declare namespace java {
              * @see #isLocalClass()
              */
             // @ts-ignore
-            getEnclosingConstructor(): java.lang.reflect.Constructor<?>
+            public getEnclosingConstructor(): java.lang.reflect.Constructor<any>
             /**
              * If this Class is defined inside a method, return the Method.
              * @return the enclosing Method or null
@@ -667,7 +667,7 @@ declare namespace java {
              * @see #isLocalClass()
              */
             // @ts-ignore
-            getEnclosingMethod(): java.lang.reflect.Method
+            public getEnclosingMethod(): java.lang.reflect.Method
             /**
              * Return the enclosing Class of this Class. Unlike getDeclaringClass(),
              * this method works on any nested Class, not just classes nested directly
@@ -681,7 +681,7 @@ declare namespace java {
              * @see #isMemberClass()
              */
             // @ts-ignore
-            getEnclosingClass(): java.lang.Class<?>
+            public getEnclosingClass(): java.lang.Class<any>
             /**
              * Return the simple name of this Class. The simple name does not include
              * the package or the name of the enclosing class. The simple name of an
@@ -691,7 +691,7 @@ declare namespace java {
              * @see #isAnonymousClass()
              */
             // @ts-ignore
-            getSimpleName(): java.lang.String
+            public getSimpleName(): string
             /**
              * Return the canonical name of this Class. The canonical name is null
              * for a local or anonymous class. The canonical name includes the package
@@ -702,7 +702,7 @@ declare namespace java {
              * @see #isLocalClass()
              */
             // @ts-ignore
-            getCanonicalName(): java.lang.String
+            public getCanonicalName(): string
             /**
              * Answer if this Class is anonymous. An unnamed Class defined
              * inside a method.
@@ -711,7 +711,7 @@ declare namespace java {
              * @see #isLocalClass()
              */
             // @ts-ignore
-            isAnonymousClass(): boolean
+            public isAnonymousClass(): boolean
             /**
              * Answer if this Class is local. A named Class defined inside
              * a method.
@@ -720,7 +720,7 @@ declare namespace java {
              * @see #isAnonymousClass()
              */
             // @ts-ignore
-            isLocalClass(): boolean
+            public isLocalClass(): boolean
             /**
              * Answer if this Class is a member Class. A Class defined inside another
              * Class.
@@ -729,7 +729,7 @@ declare namespace java {
              * @see #isLocalClass()
              */
             // @ts-ignore
-            isMemberClass(): boolean
+            public isMemberClass(): boolean
         }
     }
 }

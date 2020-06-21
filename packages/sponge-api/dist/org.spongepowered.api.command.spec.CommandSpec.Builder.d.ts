@@ -15,7 +15,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            permission(permission: string): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public permission(permission: java.lang.String | string): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Sets the callback that will handle this command's execution.
                              * @param executor The executor that will be called with this command's
@@ -23,7 +23,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            executor(executor: org.spongepowered.api.command.spec.CommandExecutor): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public executor(executor: org.spongepowered.api.command.spec.CommandExecutor): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Adds more child arguments for this command.
                              * If an executor or arguments are set, they are used as fallbacks.
@@ -31,7 +31,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            children(children: java.util.Map<java.util.List<java.lang.String>, org.spongepowered.api.command.CommandCallable>): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public children(children: java.util.Map<java.util.List<java.lang.String | string> | Array<java.lang.String | string>, any>): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Add a single child command to this command.
                              * @param child The child to add
@@ -41,7 +41,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            child(child: org.spongepowered.api.command.CommandCallable, ...aliases: string[]): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public child(child: org.spongepowered.api.command.CommandCallable, ...aliases: java.lang.String[] | string[]): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Add a single child command to this command.
                              * @param child The child to add.
@@ -51,14 +51,14 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            child(child: org.spongepowered.api.command.CommandCallable, aliases: Array<java.lang.String>): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public child(child: org.spongepowered.api.command.CommandCallable, aliases: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * A short, one-line description of this command's purpose.
                              * @param description The description to set
                              * @return this
                              */
                             // @ts-ignore
-                            description(description: org.spongepowered.api.text.Text): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public description(description: org.spongepowered.api.text.Text): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Sets an extended description to use in longer help listings for this
                              * command. Will be appended to the short description and the command's
@@ -67,7 +67,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            extendedDescription(extendedDescription: org.spongepowered.api.text.Text): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public extendedDescription(extendedDescription: org.spongepowered.api.text.Text): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * If a child command is selected but fails to parse arguments passed to
                              * it, the following determines the behavior.
@@ -86,7 +86,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            childArgumentParseExceptionFallback(childCommandFallback: boolean): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public childArgumentParseExceptionFallback(childCommandFallback: boolean): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Sets the argument specification for this command. Generally, for a
                              * multi-argument command the {@link GenericArguments#seq(CommandElement...)}
@@ -96,7 +96,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            arguments(args: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public arguments(args: org.spongepowered.api.command.args.CommandElement): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Sets the argument specification for this command. This method accepts
                              * a sequence of arguments. This is equivalent to calling {@code
@@ -106,7 +106,7 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            arguments(...args: org.spongepowered.api.command.args.CommandElement[]): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public arguments(...args: org.spongepowered.api.command.args.CommandElement[]): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Sets the input tokenizer to be used to convert input from a string
                              * into a list of argument tokens.
@@ -115,14 +115,14 @@ declare namespace org {
                              * @return this
                              */
                             // @ts-ignore
-                            inputTokenizer(parser: org.spongepowered.api.command.args.parsing.InputTokenizer): org.spongepowered.api.command.spec.CommandSpec.Builder
+                            public inputTokenizer(parser: org.spongepowered.api.command.args.parsing.InputTokenizer): org.spongepowered.api.command.spec.CommandSpec.Builder
                             /**
                              * Create a new {@link CommandSpec} based on the data provided in this
                              * builder.
                              * @return the new spec
                              */
                             // @ts-ignore
-                            build(): org.spongepowered.api.command.spec.CommandSpec
+                            public build(): org.spongepowered.api.command.spec.CommandSpec
                         }
                     }
                 }

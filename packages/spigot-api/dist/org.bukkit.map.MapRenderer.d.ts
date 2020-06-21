@@ -5,7 +5,7 @@ declare namespace org {
              * Represents a renderer for a map.
              */
             // @ts-ignore
-            class MapRenderer extends java.lang.Object {
+            abstract class MapRenderer extends java.lang.Object {
                 /**
                  * Initialize the map renderer base to be non-contextual. See {@link
                  * #isContextual()}.
@@ -25,13 +25,13 @@ declare namespace org {
                  * @return True if contextual, false otherwise.
                  */
                 // @ts-ignore
-                isContextual(): boolean
+                public isContextual(): boolean
                 /**
                  * Initialize this MapRenderer for the given map.
                  * @param map The MapView being initialized.
                  */
                 // @ts-ignore
-                initialize(map: org.bukkit.map.MapView): void
+                public initialize(map: org.bukkit.map.MapView): void
                 /**
                  * Render to the given map.
                  * @param map The MapView being rendered to.
@@ -39,7 +39,7 @@ declare namespace org {
                  * @param player The player who triggered the rendering.
                  */
                 // @ts-ignore
-                abstract render(map: org.bukkit.map.MapView, canvas: org.bukkit.map.MapCanvas, player: org.bukkit.entity.Player): void
+                public abstract render(map: org.bukkit.map.MapView, canvas: org.bukkit.map.MapCanvas, player: org.bukkit.entity.Player): void
             }
         }
     }

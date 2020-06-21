@@ -30,7 +30,7 @@ declare namespace java {
                  *  {@code null}
                  */
                 // @ts-ignore
-                constructor(serverName: string, port: number /*int*/)
+                constructor(serverName: java.lang.String | string, port: number /*int*/)
                 /**
                  * Creates an instance of {@code LDAPCertStoreParameters} with the
                  * specified server name and a default port of 389.
@@ -39,7 +39,7 @@ declare namespace java {
                  *  {@code null}
                  */
                 // @ts-ignore
-                constructor(serverName: string)
+                constructor(serverName: java.lang.String | string)
                 /**
                  * Creates an instance of {@code LDAPCertStoreParameters} with the
                  * default parameter values (server name "localhost", port 389).
@@ -51,13 +51,13 @@ declare namespace java {
                  * @return the name (not {#code null})
                  */
                 // @ts-ignore
-                getServerName(): java.lang.String
+                public getServerName(): string
                 /**
                  * Returns the port number of the LDAP server.
                  * @return the port number
                  */
                 // @ts-ignore
-                getPort(): int
+                public getPort(): number /*int*/
                 /**
                  * Returns a copy of this object. Changes to the copy will not affect
                  * the original and vice versa.
@@ -69,13 +69,13 @@ declare namespace java {
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a formatted string describing the parameters.
                  * @return a formatted string describing the parameters
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

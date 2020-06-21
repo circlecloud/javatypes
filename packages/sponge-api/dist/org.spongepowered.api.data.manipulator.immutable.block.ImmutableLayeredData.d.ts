@@ -18,7 +18,7 @@ declare namespace org {
                                  * @return The immutable bounded value for the "layer" state
                                  */
                                 // @ts-ignore
-                                layer(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                layer(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

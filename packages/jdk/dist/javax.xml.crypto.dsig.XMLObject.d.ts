@@ -45,7 +45,7 @@ declare namespace javax {
                      * {@link Reference} class to identify the referent's type).
                      */
                     // @ts-ignore
-                    
+                    readonly TYPE: java.lang.String | string
                     /**
                      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable
                      * list} of {@link XMLStructure}s contained in this <code>XMLObject</code>,
@@ -58,13 +58,13 @@ declare namespace javax {
                      *     but never <code>null</code>)
                      */
                     // @ts-ignore
-                    getContent(): java.util.List
+                    getContent(): Array<any>
                     /**
                      * Returns the Id of this <code>XMLObject</code>.
                      * @return the Id (or <code>null</code> if not specified)
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Returns the mime type of this <code>XMLObject</code>. The
                      * mime type is an optional attribute which describes the data within this
@@ -72,14 +72,14 @@ declare namespace javax {
                      * @return the mime type (or <code>null</code> if not specified)
                      */
                     // @ts-ignore
-                    getMimeType(): java.lang.String
+                    getMimeType(): string
                     /**
                      * Returns the encoding URI of this <code>XMLObject</code>. The encoding
                      * URI identifies the method by which the object is encoded.
                      * @return the encoding URI (or <code>null</code> if not specified)
                      */
                     // @ts-ignore
-                    getEncoding(): java.lang.String
+                    getEncoding(): string
                 }
             }
         }

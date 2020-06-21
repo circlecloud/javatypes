@@ -58,7 +58,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getKey(): int
+            public getKey(): number /*int*/
             /**
              * Returns whether this MenuShortcut must be invoked using the SHIFT key.
              * @return <code>true</code> if this MenuShortcut must be invoked using the
@@ -66,7 +66,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            usesShiftModifier(): boolean
+            public usesShiftModifier(): boolean
             /**
              * Returns whether this MenuShortcut is the same as another:
              * equality is defined to mean that both MenuShortcuts use the same key
@@ -77,7 +77,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            equals(s: java.awt.MenuShortcut): boolean
+            public equals(s: java.awt.MenuShortcut): boolean
             /**
              * Returns whether this MenuShortcut is the same as another:
              * equality is defined to mean that both MenuShortcuts use the same key
@@ -88,21 +88,21 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hashcode for this MenuShortcut.
              * @return the hashcode for this MenuShortcut.
              * @since 1.2
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns an internationalized description of the MenuShortcut.
              * @return a string representation of this MenuShortcut.
              * @since JDK1.1
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the parameter string representing the state of this
              * MenuShortcut. This string is useful for debugging.
@@ -110,7 +110,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
         }
     }
 }

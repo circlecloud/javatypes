@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/spring-context",
-    "version": "5.2.6",
+    "version": "5.2.6.RELEASE",
     "description": "java spring-context types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",

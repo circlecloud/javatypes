@@ -11,7 +11,7 @@ declare namespace org {
                          * @see Cause#after(Class)
                          */
                         // @ts-ignore
-                        class After implements java.lang.annotation.Annotation {
+                        abstract class After implements java.lang.annotation.Annotation {
                         }
                     }
                 }

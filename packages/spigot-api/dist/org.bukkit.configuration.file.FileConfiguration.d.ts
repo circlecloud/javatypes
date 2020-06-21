@@ -7,7 +7,7 @@ declare namespace org {
                  * Configuration}
                  */
                 // @ts-ignore
-                class FileConfiguration extends org.bukkit.configuration.MemoryConfiguration {
+                abstract class FileConfiguration extends org.bukkit.configuration.MemoryConfiguration {
                     /**
                      * Creates an empty {@link FileConfiguration} with no default values.
                      */
@@ -35,7 +35,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown when file is null.
                      */
                     // @ts-ignore
-                    save(file: java.io.File): void
+                    public save(file: java.io.File): void
                     /**
                      * Saves this {@link FileConfiguration} to the specified location.
                      * <p>
@@ -51,13 +51,13 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown when file is null.
                      */
                     // @ts-ignore
-                    save(file: string): void
+                    public save(file: java.lang.String | string): void
                     /**
                      * Saves this {@link FileConfiguration} to a string, and returns it.
                      * @return String containing this configuration.
                      */
                     // @ts-ignore
-                    abstract saveToString(): java.lang.String
+                    public abstract saveToString(): string
                     /**
                      * Loads this {@link FileConfiguration} from the specified location.
                      * <p>
@@ -76,7 +76,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown when file is null.
                      */
                     // @ts-ignore
-                    load(file: java.io.File): void
+                    public load(file: java.io.File): void
                     /**
                      * Loads this {@link FileConfiguration} from the specified reader.
                      * <p>
@@ -90,7 +90,7 @@ declare namespace org {
                      * @throws IllegalArgumentException thrown when reader is null
                      */
                     // @ts-ignore
-                    load(reader: java.io.Reader): void
+                    public load(reader: java.io.Reader): void
                     /**
                      * Loads this {@link FileConfiguration} from the specified location.
                      * <p>
@@ -109,7 +109,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown when file is null.
                      */
                     // @ts-ignore
-                    load(file: string): void
+                    public load(file: java.lang.String | string): void
                     /**
                      * Loads this {@link FileConfiguration} from the specified string, as
                      * opposed to from file.
@@ -125,7 +125,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if contents is null.
                      */
                     // @ts-ignore
-                    abstract loadFromString(contents: string): void
+                    public abstract loadFromString(contents: java.lang.String | string): void
                     /**
                      * Compiles the header for this {@link FileConfiguration} and returns the
                      * result.
@@ -136,9 +136,9 @@ declare namespace org {
                      * @return Compiled header
                      */
                     // @ts-ignore
-                    abstract buildHeader(): java.lang.String
+                    abstract buildHeader(): string
                     // @ts-ignore
-                    options(): org.bukkit.configuration.file.FileConfigurationOptions
+                    public options(): org.bukkit.configuration.file.FileConfigurationOptions
                 }
             }
         }

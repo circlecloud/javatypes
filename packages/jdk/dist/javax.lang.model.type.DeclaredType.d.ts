@@ -49,7 +49,7 @@ declare namespace javax {
                      *            if none
                      */
                     // @ts-ignore
-                    getTypeArguments(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getTypeArguments(): Array<any>
                 }
             }
         }

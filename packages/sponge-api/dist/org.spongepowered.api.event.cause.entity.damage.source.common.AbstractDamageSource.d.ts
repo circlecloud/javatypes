@@ -15,25 +15,25 @@ declare namespace org {
                                      * damage sources as not doing so will simply not work.</p>
                                      */
                                     // @ts-ignore
-                                    class AbstractDamageSource extends java.lang.Object implements org.spongepowered.api.event.cause.entity.damage.source.DamageSource {
+                                    abstract class AbstractDamageSource extends java.lang.Object implements org.spongepowered.api.event.cause.entity.damage.source.DamageSource {
                                         // @ts-ignore
-                                        constructor(builder: org.spongepowered.api.event.cause.entity.damage.source.common.AbstractDamageSourceBuilder<any, ?>)
+                                        constructor(builder: org.spongepowered.api.event.cause.entity.damage.source.common.AbstractDamageSourceBuilder<any, any>)
                                         // @ts-ignore
-                                        getType(): org.spongepowered.api.event.cause.entity.damage.DamageType
+                                        public getType(): org.spongepowered.api.event.cause.entity.damage.DamageType
                                         // @ts-ignore
-                                        isAbsolute(): boolean
+                                        public isAbsolute(): boolean
                                         // @ts-ignore
-                                        isBypassingArmor(): boolean
+                                        public isBypassingArmor(): boolean
                                         // @ts-ignore
-                                        isScaledByDifficulty(): boolean
+                                        public isScaledByDifficulty(): boolean
                                         // @ts-ignore
-                                        isExplosive(): boolean
+                                        public isExplosive(): boolean
                                         // @ts-ignore
-                                        isMagic(): boolean
+                                        public isMagic(): boolean
                                         // @ts-ignore
-                                        doesAffectCreative(): boolean
+                                        public doesAffectCreative(): boolean
                                         // @ts-ignore
-                                        getExhaustion(): double
+                                        public getExhaustion(): number /*double*/
                                     }
                                 }
                             }

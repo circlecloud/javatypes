@@ -29,9 +29,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor(input: java.io.InputStream, classLoader: java.lang.ClassLoader, acceptProxyClasses: boolean)
                 // @ts-ignore
-                resolveClass(classDesc: java.io.ObjectStreamClass): java.lang.Class<?>
+                resolveClass(classDesc: java.io.ObjectStreamClass): java.lang.Class<any>
                 // @ts-ignore
-                resolveProxyClass(interfaces: string[]): java.lang.Class<?>
+                resolveProxyClass(interfaces: java.lang.String[] | string[]): java.lang.Class<any>
                 /**
                  * Resolve the given class name against a fallback class loader.
                  * <p>The default implementation simply rethrows the original exception,
@@ -41,7 +41,7 @@ declare namespace org {
                  * @return the newly resolved class (never {#code null})
                  */
                 // @ts-ignore
-                resolveFallbackIfPossible(className: string, ex: java.lang.ClassNotFoundException): java.lang.Class<?>
+                resolveFallbackIfPossible(className: java.lang.String | string, ex: java.lang.ClassNotFoundException): java.lang.Class<any>
                 /**
                  * Return the fallback ClassLoader to use when no ClassLoader was specified
                  * and ObjectInputStream's own default class loader failed.

@@ -24,7 +24,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class ResponseCache extends java.lang.Object {
+        abstract class ResponseCache extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -37,7 +37,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getDefault(): java.net.ResponseCache
+            public static getDefault(): java.net.ResponseCache
             /**
              * Sets (or unsets) the system-wide cache.
              * Note: non-standard procotol handlers may ignore this setting.
@@ -50,7 +50,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setDefault(responseCache: java.net.ResponseCache): void
+            public static setDefault(responseCache: java.net.ResponseCache): void
             /**
              * Retrieve the cached response based on the requesting uri,
              * request method and request headers. Typically this method is
@@ -74,7 +74,7 @@ declare namespace java {
              * @see java.net.URLConnection#getDefaultUseCaches()
              */
             // @ts-ignore
-            abstract get(uri: java.net.URI, rqstMethod: string, rqstHeaders: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): java.net.CacheResponse
+            public abstract get(uri: java.net.URI, rqstMethod: java.lang.String | string, rqstHeaders: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): java.net.CacheResponse
             /**
              * The protocol handler calls this method after a resource has
              * been retrieved, and the ResponseCache must decide whether or
@@ -95,7 +95,7 @@ declare namespace java {
              *             null
              */
             // @ts-ignore
-            abstract put(uri: java.net.URI, conn: java.net.URLConnection): java.net.CacheRequest
+            public abstract put(uri: java.net.URI, conn: java.net.URLConnection): java.net.CacheRequest
         }
     }
 }

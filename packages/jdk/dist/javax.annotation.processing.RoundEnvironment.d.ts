@@ -38,7 +38,7 @@ declare namespace javax {
                  *  by the prior round, or an empty set if there were none
                  */
                 // @ts-ignore
-                getRootElements(): java.util.Set<? extends javax.lang.model.element.Element>
+                getRootElements(): Array<any>
                 /**
                  * Returns the elements annotated with the given annotation type.
                  * The annotation may appear directly or be inherited.  Only
@@ -57,7 +57,7 @@ declare namespace javax {
                  *  represent an annotation type
                  */
                 // @ts-ignore
-                getElementsAnnotatedWith(a: javax.lang.model.element.TypeElement): java.util.Set<? extends javax.lang.model.element.Element>
+                getElementsAnnotatedWith(a: javax.lang.model.element.TypeElement): Array<any>
                 /**
                  * Returns the elements annotated with the given annotation type.
                  * The annotation may appear directly or be inherited.  Only
@@ -76,7 +76,7 @@ declare namespace javax {
                  *  represent an annotation type
                  */
                 // @ts-ignore
-                getElementsAnnotatedWith(a: java.lang.Class<java.lang.annotation.Annotation>): java.util.Set<? extends javax.lang.model.element.Element>
+                getElementsAnnotatedWith(a: java.lang.Class<any>): Array<any>
             }
         }
     }

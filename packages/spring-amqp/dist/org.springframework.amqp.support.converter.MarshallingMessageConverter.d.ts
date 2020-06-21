@@ -47,31 +47,31 @@ declare namespace org {
                          * @param contentType The content type.
                          */
                         // @ts-ignore
-                        setContentType(contentType: string): void
+                        public setContentType(contentType: java.lang.String | string): void
                         /**
                          * Set the {@link Marshaller} to be used by this message converter.
                          * @param marshaller The marshaller.
                          */
                         // @ts-ignore
-                        setMarshaller(marshaller: Marshaller): void
+                        public setMarshaller(marshaller: Marshaller): void
                         /**
                          * Set the {@link Unmarshaller} to be used by this message converter.
                          * @param unmarshaller The unmarshaller.
                          */
                         // @ts-ignore
-                        setUnmarshaller(unmarshaller: Unmarshaller): void
+                        public setUnmarshaller(unmarshaller: Unmarshaller): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Marshals the given object to a {@link Message}.
                          */
                         // @ts-ignore
-                        createMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        createMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         /**
                          * Unmarshals the given {@link Message} into an object.
                          */
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                     }
                 }
             }

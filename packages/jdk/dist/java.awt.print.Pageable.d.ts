@@ -18,7 +18,7 @@ declare namespace java {
                  * the number of pages in its set.
                  */
                 // @ts-ignore
-                
+                readonly UNKNOWN_NUMBER_OF_PAGES: number /*int*/
                 /**
                  * Returns the number of pages in the set.
                  * To enable advanced printing features,
@@ -29,7 +29,7 @@ declare namespace java {
                  * @return the number of pages in this <code>Pageable</code>.
                  */
                 // @ts-ignore
-                getNumberOfPages(): int
+                getNumberOfPages(): number /*int*/
                 /**
                  * Returns the <code>PageFormat</code> of the page specified by
                  * <code>pageIndex</code>.

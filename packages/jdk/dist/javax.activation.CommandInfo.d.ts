@@ -22,13 +22,13 @@ declare namespace javax {
              * @param className The command's fully qualified class name.
              */
             // @ts-ignore
-            constructor(verb: string, className: string)
+            constructor(verb: java.lang.String | string, className: java.lang.String | string)
             /**
              * Return the command verb.
              * @return the command verb.
              */
             // @ts-ignore
-            getCommandName(): java.lang.String
+            public getCommandName(): string
             /**
              * Return the command's class name. <i>This method MAY return null in
              * cases where a CommandMap subclassed CommandInfo for its
@@ -39,7 +39,7 @@ declare namespace javax {
              * @return The class name of the command, or <i>null</i>
              */
             // @ts-ignore
-            getCommandClass(): java.lang.String
+            public getCommandClass(): string
             /**
              * Return the instantiated JavaBean component.
              * <p>
@@ -70,7 +70,7 @@ declare namespace javax {
              * @see javax.activation.CommandObject
              */
             // @ts-ignore
-            getCommandObject(dh: javax.activation.DataHandler, loader: java.lang.ClassLoader): java.lang.Object
+            public getCommandObject(dh: javax.activation.DataHandler, loader: java.lang.ClassLoader): any
         }
     }
 }

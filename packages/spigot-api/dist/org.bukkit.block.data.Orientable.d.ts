@@ -28,7 +28,7 @@ declare namespace org {
                      * @return the allowed 'axis' values
                      */
                     // @ts-ignore
-                    getAxes(): java.util.Set<org.bukkit.Axis>
+                    getAxes(): Array<org.bukkit.Axis>
                 }
             }
         }

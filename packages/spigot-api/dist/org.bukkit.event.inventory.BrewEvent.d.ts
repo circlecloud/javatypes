@@ -15,21 +15,21 @@ declare namespace org {
                      * @return the contents
                      */
                     // @ts-ignore
-                    getContents(): org.bukkit.inventory.BrewerInventory
+                    public getContents(): org.bukkit.inventory.BrewerInventory
                     /**
                      * Gets the remaining fuel level.
                      * @return the remaining fuel
                      */
                     // @ts-ignore
-                    getFuelLevel(): int
+                    public getFuelLevel(): number /*int*/
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

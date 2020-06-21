@@ -18,21 +18,21 @@ declare namespace java {
              *          The conversion
              */
             // @ts-ignore
-            constructor(f: string, c: string)
+            constructor(f: java.lang.String | string, c: string)
             /**
              * Returns the incompatible flag.
              * @return The flag
              */
             // @ts-ignore
-            getFlags(): java.lang.String
+            getFlags(): string
             /**
              * Returns the incompatible conversion.
              * @return The conversion
              */
             // @ts-ignore
-            getConversion(): char
+            getConversion(): string
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

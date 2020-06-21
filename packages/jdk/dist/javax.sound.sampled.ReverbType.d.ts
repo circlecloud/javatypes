@@ -118,14 +118,14 @@ declare namespace javax {
                  * @param decayTime the new type's decay time in microseconds
                  */
                 // @ts-ignore
-                constructor(name: string, earlyReflectionDelay: number /*int*/, earlyReflectionIntensity: number /*float*/, lateReflectionDelay: number /*int*/, lateReflectionIntensity: number /*float*/, decayTime: number /*int*/)
+                constructor(name: java.lang.String | string, earlyReflectionDelay: number /*int*/, earlyReflectionIntensity: number /*float*/, lateReflectionDelay: number /*int*/, lateReflectionIntensity: number /*float*/, decayTime: number /*int*/)
                 /**
                  * Obtains the name of this reverb type.
                  * @return the name of this reverb type
                  * @since 1.5
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the early reflection delay time in microseconds.
                  * This is the amount of time between when the direct signal is
@@ -133,7 +133,7 @@ declare namespace javax {
                  * @return early reflection delay time for this reverb type, in microseconds
                  */
                 // @ts-ignore
-                getEarlyReflectionDelay(): int
+                public getEarlyReflectionDelay(): number /*int*/
                 /**
                  * Returns the early reflection intensity in decibels.
                  * This is the amplitude attenuation of the first early reflections
@@ -141,7 +141,7 @@ declare namespace javax {
                  * @return early reflection intensity for this reverb type, in dB
                  */
                 // @ts-ignore
-                getEarlyReflectionIntensity(): float
+                public getEarlyReflectionIntensity(): number /*float*/
                 /**
                  * Returns the late reflection delay time in microseconds.
                  * This is the amount of time between when the first early reflections
@@ -149,7 +149,7 @@ declare namespace javax {
                  * @return late reflection delay time for this reverb type, in microseconds
                  */
                 // @ts-ignore
-                getLateReflectionDelay(): int
+                public getLateReflectionDelay(): number /*int*/
                 /**
                  * Returns the late reflection intensity in decibels.
                  * This is the amplitude attenuation of the first late reflections
@@ -157,7 +157,7 @@ declare namespace javax {
                  * @return late reflection intensity for this reverb type, in dB
                  */
                 // @ts-ignore
-                getLateReflectionIntensity(): float
+                public getLateReflectionIntensity(): number /*float*/
                 /**
                  * Obtains the decay time, which is the amount of time over which the
                  * late reflections attenuate to effective zero.  The effective zero
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @return the decay time of the late reflections, in microseconds
                  */
                 // @ts-ignore
-                getDecayTime(): int
+                public getDecayTime(): number /*int*/
                 /**
                  * Indicates whether the specified object is equal to this reverb type,
                  * returning <code>true</code> if the objects are identical.
@@ -174,12 +174,12 @@ declare namespace javax {
                  *  <code>obj</code>; <code>false</code> otherwise
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Finalizes the hashcode method.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Provides a <code>String</code> representation of the reverb type,
                  * including its name and its parameter settings.
@@ -188,7 +188,7 @@ declare namespace javax {
                  * @return reverberation type name and description
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

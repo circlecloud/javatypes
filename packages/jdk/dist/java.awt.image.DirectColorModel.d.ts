@@ -179,7 +179,7 @@ declare namespace java {
                  *          pixel representation contain the red color sample.
                  */
                 // @ts-ignore
-                getRedMask(): int
+                public getRedMask(): number /*int*/
                 /**
                  * Returns the mask indicating which bits in an <code>int</code> pixel
                  * representation contain the green color component.
@@ -187,7 +187,7 @@ declare namespace java {
                  *          pixel representation contain the green color sample.
                  */
                 // @ts-ignore
-                getGreenMask(): int
+                public getGreenMask(): number /*int*/
                 /**
                  * Returns the mask indicating which bits in an <code>int</code> pixel
                  * representation contain the blue color component.
@@ -195,7 +195,7 @@ declare namespace java {
                  *          pixel representation contain the blue color sample.
                  */
                 // @ts-ignore
-                getBlueMask(): int
+                public getBlueMask(): number /*int*/
                 /**
                  * Returns the mask indicating which bits in an <code>int</code> pixel
                  * representation contain the alpha component.
@@ -203,7 +203,7 @@ declare namespace java {
                  *          pixel representation contain the alpha sample.
                  */
                 // @ts-ignore
-                getAlphaMask(): int
+                public getAlphaMask(): number /*int*/
                 /**
                  * Returns the red color component for the specified pixel, scaled
                  * from 0 to 255 in the default RGB <code>ColorSpace</code>, sRGB.  A
@@ -218,7 +218,7 @@ declare namespace java {
                  *          0 to 255 in the sRGB <code>ColorSpace</code>.
                  */
                 // @ts-ignore
-                getRed(pixel: number /*int*/): int
+                public getRed(pixel: number /*int*/): number /*int*/
                 /**
                  * Returns the green color component for the specified pixel, scaled
                  * from 0 to 255 in the default RGB <code>ColorSpace</code>, sRGB.  A
@@ -233,7 +233,7 @@ declare namespace java {
                  *          0 to 255 in the sRGB <code>ColorSpace</code>.
                  */
                 // @ts-ignore
-                getGreen(pixel: number /*int*/): int
+                public getGreen(pixel: number /*int*/): number /*int*/
                 /**
                  * Returns the blue color component for the specified pixel, scaled
                  * from 0 to 255 in the default RGB <code>ColorSpace</code>, sRGB.  A
@@ -248,7 +248,7 @@ declare namespace java {
                  *          0 to 255 in the sRGB <code>ColorSpace</code>.
                  */
                 // @ts-ignore
-                getBlue(pixel: number /*int*/): int
+                public getBlue(pixel: number /*int*/): number /*int*/
                 /**
                  * Returns the alpha component for the specified pixel, scaled
                  * from 0 to 255.  The pixel value is specified as an <code>int</code>.
@@ -257,7 +257,7 @@ declare namespace java {
                  *          from 0 to 255.
                  */
                 // @ts-ignore
-                getAlpha(pixel: number /*int*/): int
+                public getAlpha(pixel: number /*int*/): number /*int*/
                 /**
                  * Returns the color/alpha components of the pixel in the default
                  * RGB color model format.  A color conversion is done if necessary.
@@ -272,7 +272,7 @@ declare namespace java {
                  * @see ColorModel#getRGBdefault
                  */
                 // @ts-ignore
-                getRGB(pixel: number /*int*/): int
+                public getRGB(pixel: number /*int*/): number /*int*/
                 /**
                  * Returns the red color component for the specified pixel, scaled
                  * from 0 to 255 in the default RGB <code>ColorSpace</code>, sRGB.  A
@@ -305,7 +305,7 @@ declare namespace java {
                  *          is not supported by this color model
                  */
                 // @ts-ignore
-                getRed(inData: any): int
+                public getRed(inData: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the green color component for the specified pixel, scaled
                  * from 0 to 255 in the default RGB <code>ColorSpace</code>, sRGB.  A
@@ -337,7 +337,7 @@ declare namespace java {
                  *          is not supported by this color model
                  */
                 // @ts-ignore
-                getGreen(inData: any): int
+                public getGreen(inData: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the blue color component for the specified pixel, scaled
                  * from 0 to 255 in the default RGB <code>ColorSpace</code>, sRGB.  A
@@ -369,7 +369,7 @@ declare namespace java {
                  *          is not supported by this color model
                  */
                 // @ts-ignore
-                getBlue(inData: any): int
+                public getBlue(inData: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the alpha component for the specified pixel, scaled
                  * from 0 to 255.  The pixel value is specified by an array of data
@@ -399,7 +399,7 @@ declare namespace java {
                  *   <code>ColorModel</code>
                  */
                 // @ts-ignore
-                getAlpha(inData: any): int
+                public getAlpha(inData: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the color/alpha components for the specified pixel in the
                  * default RGB color model format.  A color conversion is done if
@@ -426,7 +426,7 @@ declare namespace java {
                  * @see ColorModel#getRGBdefault
                  */
                 // @ts-ignore
-                getRGB(inData: any): int
+                public getRGB(inData: java.lang.Object | any): number /*int*/
                 /**
                  * Returns a data element array representation of a pixel in this
                  * <code>ColorModel</code>, given an integer pixel representation in the
@@ -461,7 +461,7 @@ declare namespace java {
                  * @see SampleModel#setDataElements
                  */
                 // @ts-ignore
-                getDataElements(rgb: number /*int*/, pixel: any): java.lang.Object
+                public getDataElements(rgb: number /*int*/, pixel: java.lang.Object | any): any
                 /**
                  * Returns an array of unnormalized color/alpha components given a pixel
                  * in this <code>ColorModel</code>.  The pixel value is specified as an
@@ -483,7 +483,7 @@ declare namespace java {
                  *  specified pixel starting at the specified offset.
                  */
                 // @ts-ignore
-                getComponents(pixel: number /*int*/, components: number /*int*/[], offset: number /*int*/): int[]
+                public getComponents(pixel: number /*int*/, components: number /*int*/[], offset: number /*int*/): number /*int*/[]
                 /**
                  * Returns an array of unnormalized color/alpha components given a pixel
                  * in this <code>ColorModel</code>.  The pixel value is specified by an
@@ -524,7 +524,7 @@ declare namespace java {
                  *             color model
                  */
                 // @ts-ignore
-                getComponents(pixel: any, components: number /*int*/[], offset: number /*int*/): int[]
+                public getComponents(pixel: java.lang.Object | any, components: number /*int*/[], offset: number /*int*/): number /*int*/[]
                 /**
                  * Creates a <code>WritableRaster</code> with the specified width and
                  * height that has a data layout (<code>SampleModel</code>) compatible
@@ -539,7 +539,7 @@ declare namespace java {
                  * @see SampleModel
                  */
                 // @ts-ignore
-                createCompatibleWritableRaster(w: number /*int*/, h: number /*int*/): java.awt.image.WritableRaster
+                public createCompatibleWritableRaster(w: number /*int*/, h: number /*int*/): java.awt.image.WritableRaster
                 /**
                  * Returns a pixel value represented as an <code>int</code> in this
                  * <code>ColorModel</code>, given an array of unnormalized color/alpha
@@ -559,7 +559,7 @@ declare namespace java {
                  *   <code>offset</code>
                  */
                 // @ts-ignore
-                getDataElement(components: number /*int*/[], offset: number /*int*/): int
+                public getDataElement(components: number /*int*/[], offset: number /*int*/): number /*int*/
                 /**
                  * Returns a data element array representation of a pixel in this
                  * <code>ColorModel</code>, given an array of unnormalized color/alpha
@@ -603,7 +603,7 @@ declare namespace java {
                  * @see SampleModel#setDataElements
                  */
                 // @ts-ignore
-                getDataElements(components: number /*int*/[], offset: number /*int*/, obj: any): java.lang.Object
+                public getDataElements(components: number /*int*/[], offset: number /*int*/, obj: java.lang.Object | any): any
                 /**
                  * Forces the raster data to match the state specified in the
                  * <code>isAlphaPremultiplied</code> variable, assuming the data is
@@ -628,7 +628,7 @@ declare namespace java {
                  *             color model
                  */
                 // @ts-ignore
-                coerceData(raster: java.awt.image.WritableRaster, isAlphaPremultiplied: boolean): java.awt.image.ColorModel
+                public coerceData(raster: java.awt.image.WritableRaster, isAlphaPremultiplied: boolean): java.awt.image.ColorModel
                 /**
                  * Returns <code>true</code> if <code>raster</code> is compatible
                  * with this <code>ColorModel</code> and <code>false</code> if it is
@@ -638,7 +638,7 @@ declare namespace java {
                  *  with this <code>ColorModel</code>; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isCompatibleRaster(raster: java.awt.image.Raster): boolean
+                public isCompatibleRaster(raster: java.awt.image.Raster): boolean
                 /**
                  * Returns a <code>String</code> that represents this
                  * <code>DirectColorModel</code>.
@@ -646,7 +646,7 @@ declare namespace java {
                  *  <code>DirectColorModel</code>.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

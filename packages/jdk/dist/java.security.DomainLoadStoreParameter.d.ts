@@ -90,13 +90,13 @@ declare namespace java {
              *      {@code protectionParams} is {@code null}
              */
             // @ts-ignore
-            constructor(configuration: java.net.URI, protectionParams: java.util.Map<java.lang.String, java.security.KeyStore.ProtectionParameter>)
+            constructor(configuration: java.net.URI, protectionParams: java.util.Map<java.lang.String | string, java.security.KeyStore.ProtectionParameter>)
             /**
              * Gets the identifier for the domain configuration data.
              * @return the identifier for the configuration data
              */
             // @ts-ignore
-            getConfiguration(): java.net.URI
+            public getConfiguration(): java.net.URI
             /**
              * Gets the keystore protection parameters for keystores in this
              * domain.
@@ -104,14 +104,14 @@ declare namespace java {
              *      parameters
              */
             // @ts-ignore
-            getProtectionParams(): java.util.Map<java.lang.String, java.security.KeyStore.ProtectionParameter>
+            public getProtectionParams(): java.util.Map<java.lang.String | string, java.security.KeyStore.ProtectionParameter>
             /**
              * Gets the keystore protection parameters for this domain.
              * Keystore domains do not support a protection parameter.
              * @return always returns {#code null}
              */
             // @ts-ignore
-            getProtectionParameter(): java.security.KeyStore.ProtectionParameter
+            public getProtectionParameter(): java.security.KeyStore.ProtectionParameter
         }
     }
 }

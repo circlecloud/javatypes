@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                class MergedAnnotationPredicates extends java.lang.Object {
+                abstract class MergedAnnotationPredicates extends java.lang.Object {
                     /**
                      * Create a new {@link Predicate} that evaluates to {@code true} if the name of the
                      * {@linkplain MergedAnnotation#getType() merged annotation type} is contained in
@@ -19,7 +19,7 @@ declare namespace org {
                      * @return a {#link Predicate} to test the annotation type
                      */
                     // @ts-ignore
-                    typeIn<A extends java.lang.annotation.Annotation>(...typeNames: string[]): java.util.function.Predicate<org.springframework.core.annotation.MergedAnnotation<? extends A>>
+                    public static typeIn<A extends java.lang.annotation.Annotation>(...typeNames: java.lang.String[] | string[]): java.util.function$.Predicate<org.springframework.core.annotation.MergedAnnotation<any>>
                     /**
                      * Create a new {@link Predicate} that evaluates to {@code true} if the
                      * {@linkplain MergedAnnotation#getType() merged annotation type} is contained in
@@ -29,7 +29,7 @@ declare namespace org {
                      * @return a {#link Predicate} to test the annotation type
                      */
                     // @ts-ignore
-                    typeIn<A extends java.lang.annotation.Annotation>(...types: java.lang.Class[]): java.util.function.Predicate<org.springframework.core.annotation.MergedAnnotation<? extends A>>
+                    public static typeIn<A extends java.lang.annotation.Annotation>(...types: java.lang.Class<any>[]): java.util.function$.Predicate<org.springframework.core.annotation.MergedAnnotation<any>>
                     /**
                      * Create a new {@link Predicate} that evaluates to {@code true} if the
                      * {@linkplain MergedAnnotation#getType() merged annotation type} is contained in
@@ -39,7 +39,7 @@ declare namespace org {
                      * @return a {#link Predicate} to test the annotation type
                      */
                     // @ts-ignore
-                    typeIn<A extends java.lang.annotation.Annotation>(types: Array<any>): java.util.function.Predicate<org.springframework.core.annotation.MergedAnnotation<? extends A>>
+                    public static typeIn<A extends java.lang.annotation.Annotation>(types: java.util.Collection<any> | Array<any>): java.util.function$.Predicate<org.springframework.core.annotation.MergedAnnotation<any>>
                     /**
                      * Create a new stateful, single use {@link Predicate} that matches only
                      * the first run of an extracted value. For example,
@@ -55,7 +55,7 @@ declare namespace org {
                      *  values
                      */
                     // @ts-ignore
-                    firstRunOf<A extends java.lang.annotation.Annotation>(valueExtractor: java.util.function.Function<any super org.springframework.core.annotation.MergedAnnotation<A>, ?> | java.util.function$.Function<? super org.springframework.core.annotation.MergedAnnotation<A>, ?>): java.util.function.Predicate<org.springframework.core.annotation.MergedAnnotation<A>>
+                    public static firstRunOf<A extends java.lang.annotation.Annotation>(valueExtractor: java.util.function$.Function<any, any>): java.util.function$.Predicate<org.springframework.core.annotation.MergedAnnotation<A>>
                     /**
                      * Create a new stateful, single use {@link Predicate} that matches
                      * annotations that are unique based on the extracted key. For example
@@ -67,7 +67,7 @@ declare namespace org {
                      *  extracted key
                      */
                     // @ts-ignore
-                    unique<A extends java.lang.annotation.Annotation, K>(keyExtractor: java.util.function.Function<any super org.springframework.core.annotation.MergedAnnotation<A>, K> | java.util.function$.Function<? super org.springframework.core.annotation.MergedAnnotation<A>, K>): java.util.function.Predicate<org.springframework.core.annotation.MergedAnnotation<A>>
+                    public static unique<A extends java.lang.annotation.Annotation, K>(keyExtractor: java.util.function$.Function<any, K>): java.util.function$.Predicate<org.springframework.core.annotation.MergedAnnotation<A>>
                 }
             }
         }

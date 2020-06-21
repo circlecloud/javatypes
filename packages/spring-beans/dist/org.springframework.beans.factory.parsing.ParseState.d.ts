@@ -24,29 +24,29 @@ declare namespace org {
                          * Add a new {@link Entry} to the {@link LinkedList}.
                          */
                         // @ts-ignore
-                        push(entry: org.springframework.beans.factory.parsing.ParseState.Entry): void
+                        public push(entry: org.springframework.beans.factory.parsing.ParseState.Entry): void
                         /**
                          * Remove an {@link Entry} from the {@link LinkedList}.
                          */
                         // @ts-ignore
-                        pop(): void
+                        public pop(): void
                         /**
                          * Return the {@link Entry} currently at the top of the {@link LinkedList} or
                          * {@code null} if the {@link LinkedList} is empty.
                          */
                         // @ts-ignore
-                        peek(): org.springframework.beans.factory.parsing.ParseState.Entry
+                        public peek(): org.springframework.beans.factory.parsing.ParseState.Entry
                         /**
                          * Create a new instance of {@link ParseState} which is an independent snapshot
                          * of this instance.
                          */
                         // @ts-ignore
-                        snapshot(): org.springframework.beans.factory.parsing.ParseState
+                        public snapshot(): org.springframework.beans.factory.parsing.ParseState
                         /**
                          * Returns a tree-style representation of the current {@code ParseState}.
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

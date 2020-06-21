@@ -18,9 +18,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(targetInterpolator: MessageInterpolator)
                     // @ts-ignore
-                    interpolate(message: string, context: Context): java.lang.String
+                    public interpolate(message: java.lang.String | string, context: Context): string
                     // @ts-ignore
-                    interpolate(message: string, context: Context, locale: java.util.Locale): java.lang.String
+                    public interpolate(message: java.lang.String | string, context: Context, locale: java.util.Locale): string
                 }
             }
         }

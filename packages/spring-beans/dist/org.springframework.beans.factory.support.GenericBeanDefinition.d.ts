@@ -38,15 +38,15 @@ declare namespace org {
                         // @ts-ignore
                         constructor(original: org.springframework.beans.factory.config.BeanDefinition)
                         // @ts-ignore
-                        setParentName(parentName: string): void
+                        public setParentName(parentName: java.lang.String | string): void
                         // @ts-ignore
-                        getParentName(): java.lang.String
+                        public getParentName(): string
                         // @ts-ignore
-                        cloneBeanDefinition(): org.springframework.beans.factory.support.AbstractBeanDefinition
+                        public cloneBeanDefinition(): org.springframework.beans.factory.support.AbstractBeanDefinition
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

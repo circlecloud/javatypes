@@ -30,19 +30,19 @@ declare namespace javax {
                  * The value of this constant is <tt>true</tt>.
                  */
                 // @ts-ignore
-                
+                readonly CRITICAL: boolean
                 /**
                  * Indicates a non-critical control.
                  * The value of this constant is <tt>false</tt>.
                  */
                 // @ts-ignore
-                
+                readonly NONCRITICAL: boolean
                 /**
                  * Retrieves the object identifier assigned for the LDAP control.
                  * @return The non-null object identifier string.
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                getID(): string
                 /**
                  * Determines the criticality of the LDAP control.
                  * A critical control must not be ignored by the server.
@@ -63,7 +63,7 @@ declare namespace javax {
                  *          value of the LDAP control.
                  */
                 // @ts-ignore
-                getEncodedValue(): byte[]
+                getEncodedValue(): number /*byte*/[]
             }
         }
     }

@@ -18,7 +18,7 @@ declare namespace javax {
              * @param description A human readable description of the operation.
              */
             // @ts-ignore
-            constructor(description: string, method: java.lang.reflect.Method)
+            constructor(description: java.lang.String | string, method: java.lang.reflect.Method)
             /**
              * Constructs an <CODE>MBeanOperationInfo</CODE> object.
              * @param name The name of the method.
@@ -32,7 +32,7 @@ declare namespace javax {
              *  {@link #UNKNOWN}.
              */
             // @ts-ignore
-            constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[], type: string, impact: number /*int*/)
+            constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[], type: java.lang.String | string, impact: number /*int*/)
             /**
              * Constructs an <CODE>MBeanOperationInfo</CODE> object.
              * @param name The name of the method.
@@ -49,31 +49,31 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[], type: string, impact: number /*int*/, descriptor: javax.management.Descriptor)
+            constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[], type: java.lang.String | string, impact: number /*int*/, descriptor: javax.management.Descriptor)
             /**
              * Indicates that the operation is read-like:
              * it returns information but does not change any state.
              */
             // @ts-ignore
-            readonly INFO: number /*int*/
+            public static readonly INFO: number /*int*/
             /**
              * Indicates that the operation is write-like: it has an effect but does
              * not return any information from the MBean.
              */
             // @ts-ignore
-            readonly ACTION: number /*int*/
+            public static readonly ACTION: number /*int*/
             /**
              * Indicates that the operation is both read-like and write-like:
              * it has an effect, and it also returns information from the MBean.
              */
             // @ts-ignore
-            readonly ACTION_INFO: number /*int*/
+            public static readonly ACTION_INFO: number /*int*/
             /**
              * Indicates that the impact of the operation is unknown or cannot be
              * expressed using one of the other values.
              */
             // @ts-ignore
-            readonly UNKNOWN: number /*int*/
+            public static readonly UNKNOWN: number /*int*/
             /**
              * <p>Returns a shallow clone of this instance.
              * The clone is obtained by simply calling <tt>super.clone()</tt>,
@@ -84,13 +84,13 @@ declare namespace javax {
              * to subclasses.</p>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the type of the method's return value.
              * @return the return type.
              */
             // @ts-ignore
-            getReturnType(): java.lang.String
+            public getReturnType(): string
             /**
              * <p>Returns the list of parameters for this operation.  Each
              * parameter is described by an <CODE>MBeanParameterInfo</CODE>
@@ -103,16 +103,16 @@ declare namespace javax {
              * @return An array of <CODE>MBeanParameterInfo</CODE> objects.
              */
             // @ts-ignore
-            getSignature(): javax.management.MBeanParameterInfo[]
+            public getSignature(): javax.management.MBeanParameterInfo[]
             /**
              * Returns the impact of the method, one of
              * <CODE>INFO</CODE>, <CODE>ACTION</CODE>, <CODE>ACTION_INFO</CODE>, <CODE>UNKNOWN</CODE>.
              * @return the impact code.
              */
             // @ts-ignore
-            getImpact(): int
+            public getImpact(): number /*int*/
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compare this MBeanOperationInfo to another.
              * @param o the object to compare to.
@@ -124,9 +124,9 @@ declare namespace javax {
              *  are equal if their elements are pairwise equal.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

@@ -33,7 +33,7 @@ declare namespace org {
                              * @param callable the callable for concurrent handling
                              */
                             // @ts-ignore
-                            constructor(timeout: number, executorName: string, callable: java.util.concurrent.Callable<V>)
+                            constructor(timeout: java.lang.Long | number, executorName: java.lang.String | string, callable: java.util.concurrent.Callable<V>)
                             /**
                              * Create a {@code WebAsyncTask} with a timeout value, an executor instance, and a Callable.
                              * @param timeout the timeout value in milliseconds; ignored if {#code null}
@@ -41,30 +41,30 @@ declare namespace org {
                              * @param callable the callable for concurrent handling
                              */
                             // @ts-ignore
-                            constructor(timeout: number, executor: AsyncTaskExecutor, callable: java.util.concurrent.Callable<V>)
+                            constructor(timeout: java.lang.Long | number, executor: AsyncTaskExecutor, callable: java.util.concurrent.Callable<V>)
                             /**
                              * Return the {@link Callable} to use for concurrent handling (never {@code null}).
                              */
                             // @ts-ignore
-                            getCallable(): java.util.concurrent.Callable<?>
+                            public getCallable(): java.util.concurrent.Callable<any>
                             /**
                              * Return the timeout value in milliseconds, or {@code null} if no timeout is set.
                              */
                             // @ts-ignore
-                            getTimeout(): java.lang.Long
+                            public getTimeout(): number
                             /**
                              * A {@link BeanFactory} to use for resolving an executor name.
                              * <p>This factory reference will automatically be set when
                              * {@code WebAsyncTask} is used within a Spring MVC controller.
                              */
                             // @ts-ignore
-                            setBeanFactory(beanFactory: BeanFactory): void
+                            public setBeanFactory(beanFactory: BeanFactory): void
                             /**
                              * Return the AsyncTaskExecutor to use for concurrent handling,
                              * or {@code null} if none specified.
                              */
                             // @ts-ignore
-                            getExecutor(): AsyncTaskExecutor
+                            public getExecutor(): AsyncTaskExecutor
                             /**
                              * Register code to invoke when the async request times out.
                              * <p>This method is called from a container thread when an async request times
@@ -74,7 +74,7 @@ declare namespace org {
                              * {@link CallableProcessingInterceptor#RESULT_NONE RESULT_NONE}.
                              */
                             // @ts-ignore
-                            onTimeout(callback: java.util.concurrent.Callable<V>): void
+                            public onTimeout(callback: java.util.concurrent.Callable<V>): void
                             /**
                              * Register code to invoke for an error during async request processing.
                              * <p>This method is called from a container thread when an error occurred
@@ -86,14 +86,14 @@ declare namespace org {
                              * @since 5.0
                              */
                             // @ts-ignore
-                            onError(callback: java.util.concurrent.Callable<V>): void
+                            public onError(callback: java.util.concurrent.Callable<V>): void
                             /**
                              * Register code to invoke when the async request completes.
                              * <p>This method is called from a container thread when an async request
                              * completed for any reason, including timeout and network error.
                              */
                             // @ts-ignore
-                            onCompletion(callback: java.lang.Runnable): void
+                            public onCompletion(callback: java.lang.Runnable): void
                         }
                     }
                 }

@@ -11,7 +11,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(entity: org.bukkit.entity.Entity, target: org.bukkit.entity.LivingEntity, reason: org.bukkit.event.entity.EntityTargetEvent.TargetReason)
                     // @ts-ignore
-                    getTarget(): org.bukkit.entity.LivingEntity
+                    public getTarget(): org.bukkit.entity.LivingEntity
                     /**
                      * Set the Entity that you want the mob to target.
                      * <p>
@@ -22,7 +22,7 @@ declare namespace org {
                      * @param target The entity to target
                      */
                     // @ts-ignore
-                    setTarget(target: org.bukkit.entity.Entity): void
+                    public setTarget(target: org.bukkit.entity.Entity): void
                 }
             }
         }

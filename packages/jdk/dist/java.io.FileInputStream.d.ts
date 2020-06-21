@@ -43,7 +43,7 @@ declare namespace java {
              * @see java.lang.SecurityManager#checkRead(java.lang.String)
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a <code>FileInputStream</code> by
              * opening a connection to an actual file,
@@ -105,7 +105,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>b.length</code> bytes of data from this input
              * stream into an array of bytes. This method blocks until some input
@@ -117,7 +117,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this input stream
              * into an array of bytes. If <code>len</code> is not zero, the method
@@ -136,7 +136,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips over and discards <code>n</code> bytes of data from the
              * input stream.
@@ -159,7 +159,7 @@ declare namespace java {
              *              support seek, or if an I/O error occurs.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns an estimate of the number of remaining bytes that can be read (or
              * skipped over) from this input stream without blocking by the next
@@ -176,7 +176,7 @@ declare namespace java {
              *              {#code close} or an I/O error occurs.
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Closes this file input stream and releases any system resources
              * associated with the stream.
@@ -187,7 +187,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns the <code>FileDescriptor</code>
              * object  that represents the connection to
@@ -198,7 +198,7 @@ declare namespace java {
              * @see java.io.FileDescriptor
              */
             // @ts-ignore
-            getFD(): java.io.FileDescriptor
+            public getFD(): java.io.FileDescriptor
             /**
              * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
              * object associated with this file input stream.
@@ -213,7 +213,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getChannel(): java.nio.channels.FileChannel
+            public getChannel(): java.nio.channels.FileChannel
             /**
              * Ensures that the <code>close</code> method of this file input stream is
              * called when there are no more references to it.

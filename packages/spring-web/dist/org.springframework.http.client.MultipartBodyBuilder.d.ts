@@ -64,7 +64,7 @@ declare namespace org {
                      * @return builder that allows for further customization of part headers
                      */
                     // @ts-ignore
-                    part(name: string, part: any): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                    public part(name: java.lang.String | string, part: java.lang.Object | any): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                     /**
                      * Variant of {@link #part(String, Object)} that also accepts a MediaType.
                      * @param name the name of the part to add
@@ -73,7 +73,7 @@ declare namespace org {
                      * @return builder that allows for further customization of part headers
                      */
                     // @ts-ignore
-                    part(name: string, part: any, contentType: org.springframework.http.MediaType): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                    public part(name: java.lang.String | string, part: java.lang.Object | any, contentType: org.springframework.http.MediaType): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                     /**
                      * Add a part from {@link Publisher} content.
                      * @param name the name of the part to add
@@ -82,7 +82,7 @@ declare namespace org {
                      * @return builder that allows for further customization of part headers
                      */
                     // @ts-ignore
-                    asyncPart<T, P extends <any>>(name: string, publisher: P extends <any>, elementClass: java.lang.Class<T>): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                    public asyncPart<T, P extends java.lang.Object>(name: java.lang.String | string, publisher: P, elementClass: java.lang.Class<T>): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                     /**
                      * Variant of {@link #asyncPart(String, Publisher, Class)} with a
                      * {@link ParameterizedTypeReference} for the element type information.
@@ -92,12 +92,12 @@ declare namespace org {
                      * @return builder that allows for further customization of part headers
                      */
                     // @ts-ignore
-                    asyncPart<T, P extends <any>>(name: string, publisher: P extends <any>, typeReference: object): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                    public asyncPart<T, P extends java.lang.Object>(name: java.lang.String | string, publisher: P, typeReference: object): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                     /**
                      * Return a {@code MultiValueMap} with the configured parts.
                      */
                     // @ts-ignore
-                    build(): <any>
+                    public build(): object
                 }
             }
         }

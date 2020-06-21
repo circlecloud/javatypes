@@ -8,32 +8,32 @@ declare namespace org {
                      * or setter method, supporting @Resource and related annotations.
                      */
                     // @ts-ignore
-                    class LookupElement extends InjectionMetadata.InjectedElement {
+                    abstract class LookupElement extends InjectionMetadata.InjectedElement {
                         // @ts-ignore
                         constructor(member: java.lang.reflect.Member, pd: java.beans.PropertyDescriptor)
                         // @ts-ignore
-                        name: string
+                        name: java.lang.String | string
                         // @ts-ignore
                         isDefaultName: boolean
                         // @ts-ignore
                         lookupType: java.lang.Class<any>
                         // @ts-ignore
-                        mappedName: string
+                        mappedName: java.lang.String | string
                         /**
                          * Return the resource name for the lookup.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Return the desired type for the lookup.
                          */
                         // @ts-ignore
-                        getLookupType(): java.lang.Class<?>
+                        public getLookupType(): java.lang.Class<any>
                         /**
                          * Build a DependencyDescriptor for the underlying field/method.
                          */
                         // @ts-ignore
-                        getDependencyDescriptor(): DependencyDescriptor
+                        public getDependencyDescriptor(): DependencyDescriptor
                     }
                 }
             }

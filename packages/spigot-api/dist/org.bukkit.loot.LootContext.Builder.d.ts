@@ -22,7 +22,7 @@ declare namespace org {
                      * @return the Builder
                      */
                     // @ts-ignore
-                    luck(luck: number /*float*/): org.bukkit.loot.LootContext.Builder
+                    public luck(luck: number /*float*/): org.bukkit.loot.LootContext.Builder
                     /**
                      * Set the {@link org.bukkit.enchantments.Enchantment#LOOT_BONUS_MOBS}
                      * level equivalent to use when generating loot. Values less than or
@@ -32,14 +32,14 @@ declare namespace org {
                      * @return the Builder
                      */
                     // @ts-ignore
-                    lootingModifier(modifier: number /*int*/): org.bukkit.loot.LootContext.Builder
+                    public lootingModifier(modifier: number /*int*/): org.bukkit.loot.LootContext.Builder
                     /**
                      * The entity that was killed.
                      * @param lootedEntity the looted entity
                      * @return the Builder
                      */
                     // @ts-ignore
-                    lootedEntity(lootedEntity: org.bukkit.entity.Entity): org.bukkit.loot.LootContext.Builder
+                    public lootedEntity(lootedEntity: org.bukkit.entity.Entity): org.bukkit.loot.LootContext.Builder
                     /**
                      * Set the {@link org.bukkit.entity.HumanEntity} that killed
                      * {@link #getLootedEntity()}. This entity will be used to get the
@@ -48,14 +48,14 @@ declare namespace org {
                      * @return the Builder
                      */
                     // @ts-ignore
-                    killer(killer: org.bukkit.entity.HumanEntity): org.bukkit.loot.LootContext.Builder
+                    public killer(killer: org.bukkit.entity.HumanEntity): org.bukkit.loot.LootContext.Builder
                     /**
                      * Create a new {@link LootContext} instance using the supplied
                      * parameters.
                      * @return a new {#link LootContext} instance
                      */
                     // @ts-ignore
-                    build(): org.bukkit.loot.LootContext
+                    public build(): org.bukkit.loot.LootContext
                 }
             }
         }

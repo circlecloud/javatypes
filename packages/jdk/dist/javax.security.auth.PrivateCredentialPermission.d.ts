@@ -72,7 +72,7 @@ declare namespace javax {
                  *           to the correct syntax or if {@code actions} is not "read".
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
                 /**
                  * Returns the Class name of the Credential associated with this
                  * {@code PrivateCredentialPermission}.
@@ -81,7 +81,7 @@ declare namespace javax {
                  *           {#code PrivateCredentialPermission}.
                  */
                 // @ts-ignore
-                getCredentialClass(): java.lang.String
+                public getCredentialClass(): string
                 /**
                  * Returns the {@code Principal} classes and names
                  * associated with this {@code PrivateCredentialPermission}.
@@ -99,7 +99,7 @@ declare namespace javax {
                  *           with this {@code PrivateCredentialPermission}.
                  */
                 // @ts-ignore
-                getPrincipals(): java.lang.String[][]
+                public getPrincipals(): string[][]
                 /**
                  * Checks if this {@code PrivateCredentialPermission} implies
                  * the specified {@code Permission}.
@@ -121,7 +121,7 @@ declare namespace javax {
                  *  the specified {@code Permission}, false if not.
                  */
                 // @ts-ignore
-                implies(p: java.security.Permission): boolean
+                public implies(p: java.security.Permission): boolean
                 /**
                  * Checks two {@code PrivateCredentialPermission} objects for
                  * equality.  Checks that <i>obj</i> is a
@@ -137,13 +137,13 @@ declare namespace javax {
                  *           and has the same Principals as this object.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this object.
                  * @return a hash code value for this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the "canonical string representation" of the actions.
                  * This method always returns the String, "read".
@@ -151,7 +151,7 @@ declare namespace javax {
                  * @return the actions (always returns "read").
                  */
                 // @ts-ignore
-                getActions(): java.lang.String
+                public getActions(): string
                 /**
                  * Return a homogeneous collection of PrivateCredentialPermissions
                  * in a {@code PermissionCollection}.
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @return null in all cases.
                  */
                 // @ts-ignore
-                newPermissionCollection(): java.security.PermissionCollection
+                public newPermissionCollection(): java.security.PermissionCollection
             }
         }
     }

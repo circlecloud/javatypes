@@ -33,7 +33,7 @@ declare namespace java {
                  *  mediaWhitePointTag in the ICC profile.
                  */
                 // @ts-ignore
-                getMediaWhitePoint(): float[]
+                public getMediaWhitePoint(): number /*float*/[]
                 /**
                  * Returns a gamma value representing the tone reproduction
                  * curve (TRC).  If the profile represents the TRC as a table rather
@@ -49,7 +49,7 @@ declare namespace java {
                  *             the TRC as a single gamma value.
                  */
                 // @ts-ignore
-                getGamma(): float
+                public getGamma(): number /*float*/
                 /**
                  * Returns the TRC as an array of shorts.  If the profile has
                  * specified the TRC as linear (gamma = 1.0) or as a simple gamma
@@ -69,7 +69,7 @@ declare namespace java {
                  *             the TRC as a table.
                  */
                 // @ts-ignore
-                getTRC(): short[]
+                public getTRC(): number /*short*/[]
             }
         }
     }

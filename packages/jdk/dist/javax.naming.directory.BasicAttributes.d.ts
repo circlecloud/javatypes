@@ -64,7 +64,7 @@ declare namespace javax {
                  *         value is added to the attribute.
                  */
                 // @ts-ignore
-                constructor(attrID: string, val: any)
+                constructor(attrID: java.lang.String | string, val: java.lang.Object | any)
                 /**
                  * Constructs a new instance of Attributes with one attribute.
                  * The attribute specified by attrID and val are added to the newly
@@ -83,25 +83,25 @@ declare namespace javax {
                  *                    false means case is respected.
                  */
                 // @ts-ignore
-                constructor(attrID: string, val: any, ignoreCase: boolean)
+                constructor(attrID: java.lang.String | string, val: java.lang.Object | any, ignoreCase: boolean)
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 // @ts-ignore
-                isCaseIgnored(): boolean
+                public isCaseIgnored(): boolean
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                get(attrID: string): javax.naming.directory.Attribute
+                public get(attrID: java.lang.String | string): javax.naming.directory.Attribute
                 // @ts-ignore
-                getAll(): javax.naming.NamingEnumeration<javax.naming.directory.Attribute>
+                public getAll(): javax.naming.NamingEnumeration<javax.naming.directory.Attribute>
                 // @ts-ignore
-                getIDs(): javax.naming.NamingEnumeration<java.lang.String>
+                public getIDs(): javax.naming.NamingEnumeration<java.lang.String | string>
                 // @ts-ignore
-                put(attrID: string, val: any): javax.naming.directory.Attribute
+                public put(attrID: java.lang.String | string, val: java.lang.Object | any): javax.naming.directory.Attribute
                 // @ts-ignore
-                put(attr: javax.naming.directory.Attribute): javax.naming.directory.Attribute
+                public put(attr: javax.naming.directory.Attribute): javax.naming.directory.Attribute
                 // @ts-ignore
-                remove(attrID: string): javax.naming.directory.Attribute
+                public remove(attrID: java.lang.String | string): javax.naming.directory.Attribute
                 /**
                  * Generates the string representation of this attribute set.
                  * The string consists of each attribute identifier and the contents
@@ -110,7 +110,7 @@ declare namespace javax {
                  * @return A non-null string listing the contents of this attribute set.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Determines whether this <tt>BasicAttributes</tt> is equal to another
                  * <tt>Attributes</tt>
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @see #hashCode
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Calculates the hash code of this BasicAttributes.
                  * <p>
@@ -144,7 +144,7 @@ declare namespace javax {
                  * @see #equals
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

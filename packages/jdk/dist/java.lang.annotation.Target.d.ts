@@ -44,7 +44,7 @@ declare namespace java {
              * @jls 9.7.4 Where Annotations May Appear
              */
             // @ts-ignore
-            class Target implements java.lang.annotation.Annotation {
+            abstract class Target implements java.lang.annotation.Annotation {
             }
         }
     }

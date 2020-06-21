@@ -41,7 +41,7 @@ declare namespace org {
                         // @ts-ignore
                         getImmutableBiomeCopy(): org.spongepowered.api.world.extent.ImmutableBiomeVolume
                         // @ts-ignore
-                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.BiomeVolumeWorker<? extends org.spongepowered.api.world.extent.ImmutableBiomeVolume>
+                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.BiomeVolumeWorker<any>
                     }
                 }
             }

@@ -16,7 +16,7 @@ declare namespace org {
                                  * @return The original priority
                                  */
                                 // @ts-ignore
-                                getOriginalPriority(): int
+                                getOriginalPriority(): number /*int*/
                                 /**
                                  * Sets the priority the task will be assigned to. See
                                  * {@link AITaskEvent#getPriority()}.

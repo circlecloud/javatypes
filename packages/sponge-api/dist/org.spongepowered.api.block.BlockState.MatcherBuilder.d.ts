@@ -16,7 +16,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        type(type: org.spongepowered.api.block.BlockType): org.spongepowered.api.block.BlockState.MatcherBuilder
+                        public type(type: org.spongepowered.api.block.BlockType): org.spongepowered.api.block.BlockState.MatcherBuilder
                         /**
                          * Adds the desired {@link BlockTrait} and {code value} to this
                          * builder, if the desired {@link BlockTrait} does not belong to the
@@ -33,18 +33,18 @@ declare namespace org {
                          *      with the desired block type
                          */
                         // @ts-ignore
-                        trait<T extends java.lang.Comparable<T>>(trait: org.spongepowered.api.block.trait.BlockTrait<T>, value: T extends java.lang.Comparable<T>): org.spongepowered.api.block.BlockState.MatcherBuilder
+                        public trait<T extends java.lang.Comparable<T>>(trait: org.spongepowered.api.block.trait.BlockTrait<T>, value: T): org.spongepowered.api.block.BlockState.MatcherBuilder
                         /**
                          * Creates a new {@link StateMatcher}.
                          * @return The new state matcher
                          * @throws IllegalStateException If there is no block type
                          */
                         // @ts-ignore
-                        build(): org.spongepowered.api.block.BlockState.StateMatcher
+                        public build(): org.spongepowered.api.block.BlockState.StateMatcher
                         // @ts-ignore
-                        from(value: org.spongepowered.api.block.BlockState.StateMatcher): org.spongepowered.api.block.BlockState.MatcherBuilder
+                        public from(value: org.spongepowered.api.block.BlockState.StateMatcher): org.spongepowered.api.block.BlockState.MatcherBuilder
                         // @ts-ignore
-                        reset(): org.spongepowered.api.block.BlockState.MatcherBuilder
+                        public reset(): org.spongepowered.api.block.BlockState.MatcherBuilder
                     }
                 }
             }

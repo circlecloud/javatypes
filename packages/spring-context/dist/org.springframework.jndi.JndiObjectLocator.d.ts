@@ -23,7 +23,7 @@ declare namespace org {
              * @see #lookup()
              */
             // @ts-ignore
-            class JndiObjectLocator extends org.springframework.jndi.JndiLocatorSupport {
+            abstract class JndiObjectLocator extends org.springframework.jndi.JndiLocatorSupport {
                 // @ts-ignore
                 constructor()
                 /**
@@ -33,26 +33,26 @@ declare namespace org {
                  * @see #setResourceRef
                  */
                 // @ts-ignore
-                setJndiName(jndiName: string): void
+                public setJndiName(jndiName: java.lang.String | string): void
                 /**
                  * Return the JNDI name to look up.
                  */
                 // @ts-ignore
-                getJndiName(): java.lang.String
+                public getJndiName(): string
                 /**
                  * Specify the type that the located JNDI object is supposed
                  * to be assignable to, if any.
                  */
                 // @ts-ignore
-                setExpectedType(expectedType: java.lang.Class<any>): void
+                public setExpectedType(expectedType: java.lang.Class<any>): void
                 /**
                  * Return the type that the located JNDI object is supposed
                  * to be assignable to, if any.
                  */
                 // @ts-ignore
-                getExpectedType(): java.lang.Class<?>
+                public getExpectedType(): java.lang.Class<any>
                 // @ts-ignore
-                afterPropertiesSet(): void
+                public afterPropertiesSet(): void
                 /**
                  * Perform the actual JNDI lookup for this locator's target resource.
                  * @return the located target object
@@ -63,7 +63,7 @@ declare namespace org {
                  * @see #lookup(String, Class)
                  */
                 // @ts-ignore
-                lookup(): java.lang.Object
+                lookup(): any
             }
         }
     }

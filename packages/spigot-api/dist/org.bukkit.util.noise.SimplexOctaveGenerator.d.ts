@@ -29,19 +29,19 @@ declare namespace org {
                     // @ts-ignore
                     constructor(rand: java.util.Random, octaves: number /*int*/)
                     // @ts-ignore
-                    setScale(scale: number /*double*/): void
+                    public setScale(scale: number /*double*/): void
                     /**
                      * Gets the scale used for each W-coordinates passed
                      * @return W scale
                      */
                     // @ts-ignore
-                    getWScale(): double
+                    public getWScale(): number /*double*/
                     /**
                      * Sets the scale used for each W-coordinates passed
                      * @param scale New W scale
                      */
                     // @ts-ignore
-                    setWScale(scale: number /*double*/): void
+                    public setWScale(scale: number /*double*/): void
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -54,7 +54,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -68,7 +68,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                 }
             }
         }

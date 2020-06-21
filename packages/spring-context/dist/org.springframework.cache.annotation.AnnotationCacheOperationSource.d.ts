@@ -48,13 +48,13 @@ declare namespace org {
                      * @param annotationParsers the CacheAnnotationParser to use
                      */
                     // @ts-ignore
-                    constructor(annotationParsers: Array<org.springframework.cache.annotation.CacheAnnotationParser>)
+                    constructor(annotationParsers: java.util.Set<org.springframework.cache.annotation.CacheAnnotationParser> | Array<org.springframework.cache.annotation.CacheAnnotationParser>)
                     // @ts-ignore
-                    isCandidateClass(targetClass: java.lang.Class<any>): boolean
+                    public isCandidateClass(targetClass: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    findCacheOperations(clazz: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    findCacheOperations(clazz: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                     // @ts-ignore
-                    findCacheOperations(method: java.lang.reflect.Method): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    findCacheOperations(method: java.lang.reflect.Method): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * Determine the cache operation(s) for the given {@link CacheOperationProvider}.
                      * <p>This implementation delegates to configured
@@ -65,16 +65,16 @@ declare namespace org {
                      * @return the configured caching operations, or {#code null} if none found
                      */
                     // @ts-ignore
-                    determineCacheOperations(provider: org.springframework.cache.annotation.AnnotationCacheOperationSource.CacheOperationProvider): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    determineCacheOperations(provider: org.springframework.cache.annotation.AnnotationCacheOperationSource.CacheOperationProvider): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * By default, only public methods can be made cacheable.
                      */
                     // @ts-ignore
                     allowPublicMethodsOnly(): boolean
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

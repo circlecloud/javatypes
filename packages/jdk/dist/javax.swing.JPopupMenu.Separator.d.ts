@@ -15,7 +15,7 @@ declare namespace javax {
                  * @see UIDefaults#getUI
                  */
                 // @ts-ignore
-                getUIClassID(): java.lang.String
+                public getUIClassID(): string
             }
         }
     }

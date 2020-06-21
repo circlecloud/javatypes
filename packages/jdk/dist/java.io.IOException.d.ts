@@ -24,7 +24,7 @@ declare namespace java {
              *         by the {#link #getMessage()} method)
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs an {@code IOException} with the specified detail message
              * and cause.
@@ -41,7 +41,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs an {@code IOException} with the specified cause and a
              * detail message of {@code (cause==null ? null : cause.toString())}
@@ -55,7 +55,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
         }
     }
 }

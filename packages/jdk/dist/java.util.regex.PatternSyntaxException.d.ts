@@ -21,26 +21,26 @@ declare namespace java {
                  *          or <tt>-1</tt> if the index is not known
                  */
                 // @ts-ignore
-                constructor(desc: string, regex: string, index: number /*int*/)
+                constructor(desc: java.lang.String | string, regex: java.lang.String | string, index: number /*int*/)
                 /**
                  * Retrieves the error index.
                  * @return The approximate index in the pattern of the error,
                  *          or <tt>-1</tt> if the index is not known
                  */
                 // @ts-ignore
-                getIndex(): int
+                getIndex(): number /*int*/
                 /**
                  * Retrieves the description of the error.
                  * @return The description of the error
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                getDescription(): string
                 /**
                  * Retrieves the erroneous regular-expression pattern.
                  * @return The erroneous pattern
                  */
                 // @ts-ignore
-                getPattern(): java.lang.String
+                getPattern(): string
                 /**
                  * Returns a multi-line string containing the description of the syntax
                  * error and its index, the erroneous regular-expression pattern, and a
@@ -48,7 +48,7 @@ declare namespace java {
                  * @return The full detail message
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

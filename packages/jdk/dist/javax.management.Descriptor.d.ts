@@ -317,7 +317,7 @@ declare namespace javax {
              * @exception RuntimeOperationsException if the field name is illegal.
              */
             // @ts-ignore
-            getFieldValue(fieldName: string): java.lang.Object
+            getFieldValue(fieldName: java.lang.String | string): any
             /**
              * <p>Sets the value for a specific field name. This will
              * modify an existing field or add a new field.</p>
@@ -334,7 +334,7 @@ declare namespace javax {
              *  {@link UnsupportedOperationException}).
              */
             // @ts-ignore
-            setField(fieldName: string, fieldValue: any): void
+            setField(fieldName: java.lang.String | string, fieldValue: java.lang.Object | any): void
             /**
              * Returns all of the fields contained in this descriptor as a string array.
              * @return String array of fields in the format <i>fieldName=fieldValue</i>
@@ -347,14 +347,14 @@ declare namespace javax {
              * @see #setFields
              */
             // @ts-ignore
-            getFields(): java.lang.String[]
+            getFields(): string[]
             /**
              * Returns all the field names in the descriptor.
              * @return String array of field names. If the descriptor is empty,
              *  you will get an empty array.
              */
             // @ts-ignore
-            getFieldNames(): java.lang.String[]
+            getFieldNames(): string[]
             /**
              * Returns all the field values in the descriptor as an array of Objects. The
              * returned values are in the same order as the {@code fieldNames} String array parameter.
@@ -370,7 +370,7 @@ declare namespace javax {
              *  is empty, you will get an empty array.
              */
             // @ts-ignore
-            getFieldValues(...fieldNames: string[]): java.lang.Object[]
+            getFieldValues(...fieldNames: java.lang.String[] | string[]): any[]
             /**
              * Removes a field from the descriptor.
              * @param fieldName String name of the field to be removed.
@@ -381,7 +381,7 @@ declare namespace javax {
              *  be an {#link UnsupportedOperationException}.
              */
             // @ts-ignore
-            removeField(fieldName: string): void
+            removeField(fieldName: java.lang.String | string): void
             /**
              * <p>Sets all fields in the field names array to the new value with
              * the same index in the field values array. Array sizes must match.</p>
@@ -403,7 +403,7 @@ declare namespace javax {
              * @see #getFields
              */
             // @ts-ignore
-            setFields(fieldNames: string[], fieldValues: any[]): void
+            setFields(fieldNames: java.lang.String[] | string[], fieldValues: java.lang.Object[] | any[]): void
             /**
              * <p>Returns a descriptor which is equal to this descriptor.
              * Changes to the returned descriptor will have no effect on this
@@ -416,7 +416,7 @@ declare namespace javax {
              * @return A descriptor which is equal to this descriptor.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
             /**
              * Returns true if all of the fields have legal values given their
              * names.
@@ -448,7 +448,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            equals(obj: java.lang.Object | any): boolean
             /**
              * <p>Returns the hash code value for this descriptor.  The hash
              * code is computed as the sum of the hash codes for each field in
@@ -468,7 +468,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
         }
     }
 }

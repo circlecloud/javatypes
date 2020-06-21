@@ -21,14 +21,14 @@ declare namespace javax {
                     // @ts-ignore
                     spPropertyChangeListener: java.beans.PropertyChangeListener
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * @return new Dimension(Short.MAX_VALUE, Short.MAX_VALUE)
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
                     installDefaults(scrollpane: javax.swing.JScrollPane): void
                     // @ts-ignore
@@ -36,7 +36,7 @@ declare namespace javax {
                     // @ts-ignore
                     installKeyboardActions(c: javax.swing.JScrollPane): void
                     // @ts-ignore
-                    installUI(x: javax.swing.JComponent): void
+                    public installUI(x: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallDefaults(c: javax.swing.JScrollPane): void
                     // @ts-ignore
@@ -44,7 +44,7 @@ declare namespace javax {
                     // @ts-ignore
                     uninstallKeyboardActions(c: javax.swing.JScrollPane): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     syncScrollPaneWithViewport(): void
                     /**
@@ -55,7 +55,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -64,7 +64,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     // @ts-ignore
                     createViewportChangeListener(): javax.swing.event.ChangeListener
                     // @ts-ignore

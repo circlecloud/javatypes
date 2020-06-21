@@ -100,7 +100,7 @@ declare namespace java {
              *          being compared by this comparator.
              */
             // @ts-ignore
-            compare(o1: T, o2: T): int
+            compare(o1: T, o2: T): number /*int*/
             /**
              * Indicates whether some other object is &quot;equal to&quot; this
              * comparator.  This method must obey the general contract of
@@ -122,7 +122,7 @@ declare namespace java {
              * @see Object#hashCode()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a comparator that imposes the reverse ordering of this
              * comparator.
@@ -154,7 +154,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            thenComparing(other: java.util.Comparator<any super T>): java.util.Comparator<T>
+            thenComparing(other: java.util.Comparator<any>): java.util.Comparator<T>
             /**
              * Returns a lexicographic-order comparator with a function that
              * extracts a key to be compared with the given {@code Comparator}.
@@ -171,7 +171,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            thenComparing<U>(keyExtractor: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, keyComparator: java.util.Comparator<any super U>): java.util.Comparator<T>
+            thenComparing<U>(keyExtractor: java.util.function$.Function<any, any>, keyComparator: java.util.Comparator<any>): java.util.Comparator<T>
             /**
              * Returns a lexicographic-order comparator with a function that
              * extracts a {@code Comparable} sort key.
@@ -188,7 +188,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            thenComparing<U extends java.lang.Comparable<? super U>>(keyExtractor: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.Comparator<T>
+            thenComparing<U extends java.lang.Comparable>(keyExtractor: java.util.function$.Function<any, any>): java.util.Comparator<T>
             /**
              * Returns a lexicographic-order comparator with a function that
              * extracts a {@code int} sort key.
@@ -203,7 +203,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            thenComparingInt(keyExtractor: java.util.function.ToIntFunction<any super T> | java.util.function$.ToIntFunction<? super T>): java.util.Comparator<T>
+            thenComparingInt(keyExtractor: java.util.function$.ToIntFunction<any>): java.util.Comparator<T>
             /**
              * Returns a lexicographic-order comparator with a function that
              * extracts a {@code long} sort key.
@@ -218,7 +218,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            thenComparingLong(keyExtractor: java.util.function.ToLongFunction<any super T> | java.util.function$.ToLongFunction<? super T>): java.util.Comparator<T>
+            thenComparingLong(keyExtractor: java.util.function$.ToLongFunction<any>): java.util.Comparator<T>
             /**
              * Returns a lexicographic-order comparator with a function that
              * extracts a {@code double} sort key.
@@ -233,7 +233,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            thenComparingDouble(keyExtractor: java.util.function.ToDoubleFunction<any super T> | java.util.function$.ToDoubleFunction<? super T>): java.util.Comparator<T>
+            thenComparingDouble(keyExtractor: java.util.function$.ToDoubleFunction<any>): java.util.Comparator<T>
             /**
              * Returns a comparator that imposes the reverse of the <em>natural
              * ordering</em>.
@@ -246,7 +246,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            reverseOrder<T extends java.lang.Comparable<? super T>>(): java.util.Comparator<T>
+            reverseOrder<T extends java.lang.Comparable>(): java.util.Comparator<T>
             /**
              * Returns a comparator that compares {@link Comparable} objects in natural
              * order.
@@ -259,7 +259,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            naturalOrder<T extends java.lang.Comparable<? super T>>(): java.util.Comparator<T>
+            naturalOrder<T extends java.lang.Comparable>(): java.util.Comparator<T>
             /**
              * Returns a null-friendly comparator that considers {@code null} to be
              * less than non-null. When both are {@code null}, they are considered
@@ -276,7 +276,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            nullsFirst<T>(comparator: java.util.Comparator<any super T>): java.util.Comparator<T>
+            nullsFirst<T>(comparator: java.util.Comparator<any>): java.util.Comparator<T>
             /**
              * Returns a null-friendly comparator that considers {@code null} to be
              * greater than non-null. When both are {@code null}, they are considered
@@ -293,7 +293,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            nullsLast<T>(comparator: java.util.Comparator<any super T>): java.util.Comparator<T>
+            nullsLast<T>(comparator: java.util.Comparator<any>): java.util.Comparator<T>
             /**
              * Accepts a function that extracts a sort key from a type {@code T}, and
              * returns a {@code Comparator<T>} that compares by that sort key using
@@ -318,7 +318,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            comparing<T, U>(keyExtractor: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, keyComparator: java.util.Comparator<any super U>): java.util.Comparator<T>
+            comparing<T, U>(keyExtractor: java.util.function$.Function<any, any>, keyComparator: java.util.Comparator<any>): java.util.Comparator<T>
             /**
              * Accepts a function that extracts a {@link java.lang.Comparable
              * Comparable} sort key from a type {@code T}, and returns a {@code
@@ -340,7 +340,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            comparing<T, U extends java.lang.Comparable<? super U>>(keyExtractor: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.Comparator<T>
+            comparing<T, U extends java.lang.Comparable>(keyExtractor: java.util.function$.Function<any, any>): java.util.Comparator<T>
             /**
              * Accepts a function that extracts an {@code int} sort key from a type
              * {@code T}, and returns a {@code Comparator<T>} that compares by that
@@ -355,7 +355,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            comparingInt<T>(keyExtractor: java.util.function.ToIntFunction<any super T> | java.util.function$.ToIntFunction<? super T>): java.util.Comparator<T>
+            comparingInt<T>(keyExtractor: java.util.function$.ToIntFunction<any>): java.util.Comparator<T>
             /**
              * Accepts a function that extracts a {@code long} sort key from a type
              * {@code T}, and returns a {@code Comparator<T>} that compares by that
@@ -370,7 +370,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            comparingLong<T>(keyExtractor: java.util.function.ToLongFunction<any super T> | java.util.function$.ToLongFunction<? super T>): java.util.Comparator<T>
+            comparingLong<T>(keyExtractor: java.util.function$.ToLongFunction<any>): java.util.Comparator<T>
             /**
              * Accepts a function that extracts a {@code double} sort key from a type
              * {@code T}, and returns a {@code Comparator<T>} that compares by that
@@ -385,7 +385,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            comparingDouble<T>(keyExtractor: java.util.function.ToDoubleFunction<any super T> | java.util.function$.ToDoubleFunction<? super T>): java.util.Comparator<T>
+            comparingDouble<T>(keyExtractor: java.util.function$.ToDoubleFunction<any>): java.util.Comparator<T>
         }
     }
 }

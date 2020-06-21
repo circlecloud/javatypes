@@ -14,7 +14,7 @@ declare namespace org {
                              * @return The slot being currently held as an integer from 0-8, inclusive
                              */
                             // @ts-ignore
-                            getSelectedSlotIndex(): int
+                            getSelectedSlotIndex(): number /*int*/
                             /**
                              * Sets the slot selected by the Humanoid.
                              * @param index The slot to hold as an integer from 0-8, inclusive

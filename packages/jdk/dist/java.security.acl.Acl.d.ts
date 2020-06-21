@@ -61,14 +61,14 @@ declare namespace java {
                  * @see #getName
                  */
                 // @ts-ignore
-                setName(caller: java.security.Principal, name: string): void
+                setName(caller: java.security.Principal, name: java.lang.String | string): void
                 /**
                  * Returns the name of this ACL.
                  * @return the name of this ACL.
                  * @see #setName
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Adds an ACL entry to this ACL. An entry associates a principal
                  * (e.g., an individual or a group) with a set of
@@ -167,7 +167,7 @@ declare namespace java {
                  * @return a string representation of the ACL contents.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

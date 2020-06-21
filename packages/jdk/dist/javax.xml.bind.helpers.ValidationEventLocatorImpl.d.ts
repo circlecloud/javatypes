@@ -65,80 +65,80 @@ declare namespace javax {
                      * @throws IllegalArgumentException if the Object is null
                      */
                     // @ts-ignore
-                    constructor(_object: any)
+                    constructor(_object: java.lang.Object | any)
                     /**
                      * @see javax.xml.bind.ValidationEventLocator#getURL()
                      */
                     // @ts-ignore
-                    getURL(): java.net.URL
+                    public getURL(): java.net.URL
                     /**
                      * Set the URL field on this event locator.  Null values are allowed.
                      * @param _url the url
                      */
                     // @ts-ignore
-                    setURL(_url: java.net.URL): void
+                    public setURL(_url: java.net.URL): void
                     /**
                      * @see javax.xml.bind.ValidationEventLocator#getOffset()
                      */
                     // @ts-ignore
-                    getOffset(): int
+                    public getOffset(): number /*int*/
                     /**
                      * Set the offset field on this event locator.
                      * @param _offset the offset
                      */
                     // @ts-ignore
-                    setOffset(_offset: number /*int*/): void
+                    public setOffset(_offset: number /*int*/): void
                     /**
                      * @see javax.xml.bind.ValidationEventLocator#getLineNumber()
                      */
                     // @ts-ignore
-                    getLineNumber(): int
+                    public getLineNumber(): number /*int*/
                     /**
                      * Set the lineNumber field on this event locator.
                      * @param _lineNumber the line number
                      */
                     // @ts-ignore
-                    setLineNumber(_lineNumber: number /*int*/): void
+                    public setLineNumber(_lineNumber: number /*int*/): void
                     /**
                      * @see javax.xml.bind.ValidationEventLocator#getColumnNumber()
                      */
                     // @ts-ignore
-                    getColumnNumber(): int
+                    public getColumnNumber(): number /*int*/
                     /**
                      * Set the columnNumber field on this event locator.
                      * @param _columnNumber the column number
                      */
                     // @ts-ignore
-                    setColumnNumber(_columnNumber: number /*int*/): void
+                    public setColumnNumber(_columnNumber: number /*int*/): void
                     /**
                      * @see javax.xml.bind.ValidationEventLocator#getObject()
                      */
                     // @ts-ignore
-                    getObject(): java.lang.Object
+                    public getObject(): any
                     /**
                      * Set the Object field on this event locator.  Null values are allowed.
                      * @param _object the java content object
                      */
                     // @ts-ignore
-                    setObject(_object: any): void
+                    public setObject(_object: java.lang.Object | any): void
                     /**
                      * @see javax.xml.bind.ValidationEventLocator#getNode()
                      */
                     // @ts-ignore
-                    getNode(): org.w3c.dom.Node
+                    public getNode(): org.w3c.dom.Node
                     /**
                      * Set the Node field on this event locator.  Null values are allowed.
                      * @param _node the Node
                      */
                     // @ts-ignore
-                    setNode(_node: org.w3c.dom.Node): void
+                    public setNode(_node: org.w3c.dom.Node): void
                     /**
                      * Returns a string representation of this object in a format
                      * helpful to debugging.
                      * @see Object#equals(Object)
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

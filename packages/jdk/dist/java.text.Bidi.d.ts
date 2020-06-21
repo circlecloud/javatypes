@@ -31,7 +31,7 @@ declare namespace java {
              *  Other values are reserved.
              */
             // @ts-ignore
-            constructor(paragraph: string, flags: number /*int*/)
+            constructor(paragraph: java.lang.String | string, flags: number /*int*/)
             /**
              * Create Bidi from the given paragraph of text.
              * <p>
@@ -80,12 +80,12 @@ declare namespace java {
              * Constant indicating base direction is left-to-right.
              */
             // @ts-ignore
-            readonly DIRECTION_LEFT_TO_RIGHT: number /*int*/
+            public static readonly DIRECTION_LEFT_TO_RIGHT: number /*int*/
             /**
              * Constant indicating base direction is right-to-left.
              */
             // @ts-ignore
-            readonly DIRECTION_RIGHT_TO_LEFT: number /*int*/
+            public static readonly DIRECTION_RIGHT_TO_LEFT: number /*int*/
             /**
              * Constant indicating that the base direction depends on the first strong
              * directional character in the text according to the Unicode
@@ -93,7 +93,7 @@ declare namespace java {
              * the base direction is left-to-right.
              */
             // @ts-ignore
-            readonly DIRECTION_DEFAULT_LEFT_TO_RIGHT: number /*int*/
+            public static readonly DIRECTION_DEFAULT_LEFT_TO_RIGHT: number /*int*/
             /**
              * Constant indicating that the base direction depends on the first strong
              * directional character in the text according to the Unicode
@@ -101,7 +101,7 @@ declare namespace java {
              * the base direction is right-to-left.
              */
             // @ts-ignore
-            readonly DIRECTION_DEFAULT_RIGHT_TO_LEFT: number /*int*/
+            public static readonly DIRECTION_DEFAULT_RIGHT_TO_LEFT: number /*int*/
             /**
              * Create a Bidi object representing the bidi information on a line of text within
              * the paragraph represented by the current Bidi.  This call is not required if the
@@ -111,44 +111,44 @@ declare namespace java {
              * @return a {#code Bidi} object
              */
             // @ts-ignore
-            createLineBidi(lineStart: number /*int*/, lineLimit: number /*int*/): java.text.Bidi
+            public createLineBidi(lineStart: number /*int*/, lineLimit: number /*int*/): java.text.Bidi
             /**
              * Return true if the line is not left-to-right or right-to-left.  This means it either has mixed runs of left-to-right
              * and right-to-left text, or the base direction differs from the direction of the only run of text.
              * @return true if the line is not left-to-right or right-to-left.
              */
             // @ts-ignore
-            isMixed(): boolean
+            public isMixed(): boolean
             /**
              * Return true if the line is all left-to-right text and the base direction is left-to-right.
              * @return true if the line is all left-to-right text and the base direction is left-to-right
              */
             // @ts-ignore
-            isLeftToRight(): boolean
+            public isLeftToRight(): boolean
             /**
              * Return true if the line is all right-to-left text, and the base direction is right-to-left.
              * @return true if the line is all right-to-left text, and the base direction is right-to-left
              */
             // @ts-ignore
-            isRightToLeft(): boolean
+            public isRightToLeft(): boolean
             /**
              * Return the length of text in the line.
              * @return the length of text in the line
              */
             // @ts-ignore
-            getLength(): int
+            public getLength(): number /*int*/
             /**
              * Return true if the base direction is left-to-right.
              * @return true if the base direction is left-to-right
              */
             // @ts-ignore
-            baseIsLeftToRight(): boolean
+            public baseIsLeftToRight(): boolean
             /**
              * Return the base level (0 if left-to-right, 1 if right-to-left).
              * @return the base level
              */
             // @ts-ignore
-            getBaseLevel(): int
+            public getBaseLevel(): number /*int*/
             /**
              * Return the resolved level of the character at offset.  If offset is
              * {@literal <} 0 or &ge; the length of the line, return the base direction
@@ -157,20 +157,20 @@ declare namespace java {
              * @return the resolved level of the character at offset
              */
             // @ts-ignore
-            getLevelAt(offset: number /*int*/): int
+            public getLevelAt(offset: number /*int*/): number /*int*/
             /**
              * Return the number of level runs.
              * @return the number of level runs
              */
             // @ts-ignore
-            getRunCount(): int
+            public getRunCount(): number /*int*/
             /**
              * Return the level of the nth logical run in this line.
              * @param run the index of the run, between 0 and <code>getRunCount()</code>
              * @return the level of the run
              */
             // @ts-ignore
-            getRunLevel(run: number /*int*/): int
+            public getRunLevel(run: number /*int*/): number /*int*/
             /**
              * Return the index of the character at the start of the nth logical run in this line, as
              * an offset from the start of the line.
@@ -178,7 +178,7 @@ declare namespace java {
              * @return the start of the run
              */
             // @ts-ignore
-            getRunStart(run: number /*int*/): int
+            public getRunStart(run: number /*int*/): number /*int*/
             /**
              * Return the index of the character past the end of the nth logical run in this line, as
              * an offset from the start of the line.  For example, this will return the length
@@ -187,7 +187,7 @@ declare namespace java {
              * @return limit the limit of the run
              */
             // @ts-ignore
-            getRunLimit(run: number /*int*/): int
+            public getRunLimit(run: number /*int*/): number /*int*/
             /**
              * Return true if the specified text requires bidi analysis.  If this returns false,
              * the text will display left-to-right.  Clients can then avoid constructing a Bidi object.
@@ -199,7 +199,7 @@ declare namespace java {
              * @return true if the range of characters requires bidi analysis
              */
             // @ts-ignore
-            requiresBidi(text: string[], start: number /*int*/, limit: number /*int*/): boolean
+            public static requiresBidi(text: string[], start: number /*int*/, limit: number /*int*/): boolean
             /**
              * Reorder the objects in the array into visual order based on their levels.
              * This is a utility function to use when you have a collection of objects
@@ -216,12 +216,12 @@ declare namespace java {
              * @param count the number of objects to reorder
              */
             // @ts-ignore
-            reorderVisually(levels: number /*byte*/[], levelStart: number /*int*/, objects: any[], objectStart: number /*int*/, count: number /*int*/): void
+            public static reorderVisually(levels: number /*byte*/[], levelStart: number /*int*/, objects: java.lang.Object[] | any[], objectStart: number /*int*/, count: number /*int*/): void
             /**
              * Display the bidi internal state, used in debugging.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

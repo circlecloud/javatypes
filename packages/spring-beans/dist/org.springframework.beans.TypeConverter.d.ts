@@ -29,7 +29,7 @@ declare namespace org {
                  * @see org.springframework.core.convert.converter.Converter
                  */
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>): T
+                convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>): T
                 /**
                  * Convert the value to the required type (if necessary from a String).
                  * <p>Conversions from String to any type will typically use the {@code setAsText}
@@ -47,7 +47,7 @@ declare namespace org {
                  * @see org.springframework.core.convert.converter.Converter
                  */
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>, methodParam: MethodParameter): T
+                convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>, methodParam: MethodParameter): T
                 /**
                  * Convert the value to the required type (if necessary from a String).
                  * <p>Conversions from String to any type will typically use the {@code setAsText}
@@ -65,7 +65,7 @@ declare namespace org {
                  * @see org.springframework.core.convert.converter.Converter
                  */
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>, typeDescriptor: TypeDescriptor): T
+                convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>, typeDescriptor: TypeDescriptor): T
             }
         }
     }

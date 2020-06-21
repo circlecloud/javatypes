@@ -18,7 +18,7 @@ declare namespace java {
                  * @return the function result
                  */
                 // @ts-ignore
-                applyAsDouble(value: T): double
+                applyAsDouble(value: T): number /*double*/
             }
         }
     }

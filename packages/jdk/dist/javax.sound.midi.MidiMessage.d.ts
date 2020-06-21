@@ -45,7 +45,7 @@ declare namespace javax {
              * @author Kara Kytle
              */
             // @ts-ignore
-            class MidiMessage extends java.lang.Object implements java.lang.Cloneable {
+            abstract class MidiMessage extends java.lang.Object implements java.lang.Cloneable {
                 /**
                  * Constructs a new <code>MidiMessage</code>.  This protected
                  * constructor is called by concrete subclasses, which should
@@ -94,7 +94,7 @@ declare namespace javax {
                  * @return the byte array containing the complete <code>MidiMessage</code> data
                  */
                 // @ts-ignore
-                getMessage(): byte[]
+                public getMessage(): number /*byte*/[]
                 /**
                  * Obtains the status byte for the MIDI message.  The status "byte" is
                  * represented as an integer; see the
@@ -103,7 +103,7 @@ declare namespace javax {
                  * @return the integer representation of this event's status byte
                  */
                 // @ts-ignore
-                getStatus(): int
+                public getStatus(): number /*int*/
                 /**
                  * Obtains the total length of the MIDI message in bytes.  A
                  * MIDI message consists of one status byte and zero or more
@@ -113,14 +113,14 @@ declare namespace javax {
                  * @return the length of the message in bytes
                  */
                 // @ts-ignore
-                getLength(): int
+                public getLength(): number /*int*/
                 /**
                  * Creates a new object of the same class and with the same contents
                  * as this object.
                  * @return a clone of this instance.
                  */
                 // @ts-ignore
-                abstract clone(): java.lang.Object
+                public abstract clone(): any
             }
         }
     }

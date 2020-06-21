@@ -20,7 +20,7 @@ declare namespace org {
                          * @return the located {#link NamespaceHandler} (may be {@code null})
                          */
                         // @ts-ignore
-                        resolve(namespaceUri: string): org.springframework.beans.factory.xml.NamespaceHandler
+                        resolve(namespaceUri: java.lang.String | string): org.springframework.beans.factory.xml.NamespaceHandler
                     }
                 }
             }

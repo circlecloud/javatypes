@@ -23,20 +23,20 @@ declare namespace org {
                      * Create an instance from a bean instance and a method.
                      */
                     // @ts-ignore
-                    constructor(bean: any, method: java.lang.reflect.Method)
+                    constructor(bean: java.lang.Object | any, method: java.lang.reflect.Method)
                     /**
                      * Create an instance from a bean instance, method name, and parameter types.
                      * @throws NoSuchMethodException when the method cannot be found
                      */
                     // @ts-ignore
-                    constructor(bean: any, methodName: string, ...parameterTypes: java.lang.Class[])
+                    constructor(bean: java.lang.Object | any, methodName: java.lang.String | string, ...parameterTypes: java.lang.Class<any>[])
                     /**
                      * Create an instance from a bean name, a method, and a {@code BeanFactory}.
                      * The method {@link #createWithResolvedBean()} may be used later to
                      * re-create the {@code HandlerMethod} with an initialized bean.
                      */
                     // @ts-ignore
-                    constructor(beanName: string, beanFactory: BeanFactory, method: java.lang.reflect.Method)
+                    constructor(beanName: java.lang.String | string, beanFactory: BeanFactory, method: java.lang.reflect.Method)
                     /**
                      * Copy constructor for use in subclasses.
                      */
@@ -51,19 +51,19 @@ declare namespace org {
                      * Return the bean for this handler method.
                      */
                     // @ts-ignore
-                    getBean(): java.lang.Object
+                    public getBean(): any
                     /**
                      * Return the method for this handler method.
                      */
                     // @ts-ignore
-                    getMethod(): java.lang.reflect.Method
+                    public getMethod(): java.lang.reflect.Method
                     /**
                      * This method returns the type of the handler for this handler method.
                      * <p>Note that if the bean type is a CGLIB-generated class, the original
                      * user-defined class is returned.
                      */
                     // @ts-ignore
-                    getBeanType(): java.lang.Class<?>
+                    public getBeanType(): java.lang.Class<any>
                     /**
                      * If the bean method is a bridge method, this method returns the bridged
                      * (user-defined) method. Otherwise it returns the same method as {@link #getMethod()}.
@@ -74,7 +74,7 @@ declare namespace org {
                      * Return the method parameters for this handler method.
                      */
                     // @ts-ignore
-                    getMethodParameters(): MethodParameter[]
+                    public getMethodParameters(): MethodParameter[]
                     /**
                      * Return the specified response status, if any.
                      * @since 4.3.8
@@ -88,22 +88,22 @@ declare namespace org {
                      * @see ResponseStatus#reason()
                      */
                     // @ts-ignore
-                    getResponseStatusReason(): java.lang.String
+                    getResponseStatusReason(): string
                     /**
                      * Return the HandlerMethod return type.
                      */
                     // @ts-ignore
-                    getReturnType(): MethodParameter
+                    public getReturnType(): MethodParameter
                     /**
                      * Return the actual return value type.
                      */
                     // @ts-ignore
-                    getReturnValueType(returnValue: any): MethodParameter
+                    public getReturnValueType(returnValue: java.lang.Object | any): MethodParameter
                     /**
                      * Return {@code true} if the method return type is void, {@code false} otherwise.
                      */
                     // @ts-ignore
-                    isVoid(): boolean
+                    public isVoid(): boolean
                     /**
                      * Return a single annotation on the underlying method traversing its super methods
                      * if no annotation can be found on the given method itself.
@@ -114,7 +114,7 @@ declare namespace org {
                      * @see AnnotatedElementUtils#findMergedAnnotation
                      */
                     // @ts-ignore
-                    getMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
+                    public getMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
                     /**
                      * Return whether the parameter is declared with the given annotation type.
                      * @param annotationType the annotation type to look for
@@ -122,35 +122,35 @@ declare namespace org {
                      * @see AnnotatedElementUtils#hasAnnotation
                      */
                     // @ts-ignore
-                    hasMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): boolean
+                    public hasMethodAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): boolean
                     /**
                      * Return the HandlerMethod from which this HandlerMethod instance was
                      * resolved via {@link #createWithResolvedBean()}.
                      */
                     // @ts-ignore
-                    getResolvedFromHandlerMethod(): org.springframework.web.method.HandlerMethod
+                    public getResolvedFromHandlerMethod(): org.springframework.web.method.HandlerMethod
                     /**
                      * If the provided instance contains a bean name rather than an object instance,
                      * the bean name is resolved before a {@link HandlerMethod} is created and returned.
                      */
                     // @ts-ignore
-                    createWithResolvedBean(): org.springframework.web.method.HandlerMethod
+                    public createWithResolvedBean(): org.springframework.web.method.HandlerMethod
                     /**
                      * Return a short representation of this handler method for log message purposes.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getShortLogMessage(): java.lang.String
+                    public getShortLogMessage(): string
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    findProvidedArgument(parameter: MethodParameter, ...providedArgs: any[]): java.lang.Object
+                    static findProvidedArgument(parameter: MethodParameter, ...providedArgs: java.lang.Object[] | any[]): any
                     // @ts-ignore
-                    formatArgumentError(param: MethodParameter, message: string): java.lang.String
+                    static formatArgumentError(param: MethodParameter, message: java.lang.String | string): string
                     /**
                      * Assert that the target bean class is an instance of the class where the given
                      * method is declared. In some cases the actual controller instance at request-
@@ -159,9 +159,9 @@ declare namespace org {
                      * class-based proxy mechanisms.
                      */
                     // @ts-ignore
-                    assertTargetBean(method: java.lang.reflect.Method, targetBean: any, args: any[]): void
+                    assertTargetBean(method: java.lang.reflect.Method, targetBean: java.lang.Object | any, args: java.lang.Object[] | any[]): void
                     // @ts-ignore
-                    formatInvokeError(text: string, args: any[]): java.lang.String
+                    formatInvokeError(text: java.lang.String | string, args: java.lang.Object[] | any[]): string
                 }
             }
         }

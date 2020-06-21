@@ -86,7 +86,7 @@ declare namespace java {
                      * @return the file size, in bytes
                      */
                     // @ts-ignore
-                    size(): long
+                    size(): number /*long*/
                     /**
                      * Returns an object that uniquely identifies the given file, or {@code
                      * null} if a file key is not available. On some platforms or file systems
@@ -109,7 +109,7 @@ declare namespace java {
                      * @see java.nio.file.Files#walkFileTree
                      */
                     // @ts-ignore
-                    fileKey(): java.lang.Object
+                    fileKey(): any
                 }
             }
         }

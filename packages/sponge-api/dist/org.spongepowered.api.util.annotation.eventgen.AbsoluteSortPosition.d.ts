@@ -15,7 +15,7 @@ declare namespace org {
                          * each other.</p>
                          */
                         // @ts-ignore
-                        class AbsoluteSortPosition implements java.lang.annotation.Annotation {
+                        abstract class AbsoluteSortPosition implements java.lang.annotation.Annotation {
                         }
                     }
                 }

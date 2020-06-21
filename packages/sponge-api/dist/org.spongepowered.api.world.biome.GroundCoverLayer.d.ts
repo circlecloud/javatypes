@@ -15,7 +15,7 @@ declare namespace org {
                          * @param depth The depth of the layer
                          */
                         // @ts-ignore
-                        constructor(block: org.spongepowered.api.block.BlockState, depth: org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double>)
+                        constructor(block: org.spongepowered.api.block.BlockState, depth: org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double | number>)
                         /**
                          * Creates a new {@link GroundCoverLayer}.
                          * @param block The function which is used to determine the blockstate to
@@ -23,33 +23,33 @@ declare namespace org {
                          * @param depth The depth of the layer
                          */
                         // @ts-ignore
-                        constructor(block: java.util.function.Function<java.lang.Double, org.spongepowered.api.block.BlockState> | java.util.function$.Function<java.lang.Double, org.spongepowered.api.block.BlockState>, depth: org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double>)
+                        constructor(block: java.util.function$.Function<java.lang.Double | number, org.spongepowered.api.block.BlockState>, depth: org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double | number>)
                         /**
                          * Gets the {@link BlockState} for this layer.
                          * @return The block state
                          */
                         // @ts-ignore
-                        getBlockState(): java.util.function.Function<java.lang.Double, org.spongepowered.api.block.BlockState>
+                        public getBlockState(): java.util.function$.Function<java.lang.Double | number, org.spongepowered.api.block.BlockState>
                         /**
                          * Sets the function which is used to determine the blockstate to place at
                          * this layer. The input to the function is a noise value.
                          * @param block The block state function
                          */
                         // @ts-ignore
-                        setBlockState(block: java.util.function.Function<java.lang.Double, org.spongepowered.api.block.BlockState> | java.util.function$.Function<java.lang.Double, org.spongepowered.api.block.BlockState>): void
+                        public setBlockState(block: java.util.function$.Function<java.lang.Double | number, org.spongepowered.api.block.BlockState>): void
                         /**
                          * Sets the {@link BlockState} for this layer.
                          * @param block The block state
                          */
                         // @ts-ignore
-                        setBlockState(block: org.spongepowered.api.block.BlockState): void
+                        public setBlockState(block: org.spongepowered.api.block.BlockState): void
                         /**
                          * Gets a representation of the depth of this layer. The variable amount
                          * will be seeded with the stone noise at generation time.
                          * @return The depth
                          */
                         // @ts-ignore
-                        getDepth(): org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double>
+                        public getDepth(): org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double | number>
                         /**
                          * Gets a representation of the depth of this layer. The variable amount
                          * will be seeded with the stone noise at generation time. This depth may
@@ -59,7 +59,7 @@ declare namespace org {
                          * @return The depth
                          */
                         // @ts-ignore
-                        getDepth(topYCoordinate: number /*int*/): org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double>
+                        public getDepth(topYCoordinate: number /*int*/): org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double | number>
                         /**
                          * Sets the {@link SeededVariableAmount} representing the depth of this
                          * layer. The variable amount will be seeded with the stone noise at
@@ -67,25 +67,25 @@ declare namespace org {
                          * @param depth The new variable amount
                          */
                         // @ts-ignore
-                        setDepth(depth: org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double>): void
+                        public setDepth(depth: org.spongepowered.api.util.weighted.SeededVariableAmount<java.lang.Double | number>): void
                         /**
                          * Sets the {@link VariableAmount} representing the depth of this layer.
                          * @param depth The new variable amount
                          */
                         // @ts-ignore
-                        setDepth(depth: org.spongepowered.api.util.weighted.VariableAmount): void
+                        public setDepth(depth: org.spongepowered.api.util.weighted.VariableAmount): void
                         /**
                          * Sets the depth of this layer to the given constant value.
                          * @param depth The new depth
                          */
                         // @ts-ignore
-                        setDepth(depth: number /*double*/): void
+                        public setDepth(depth: number /*double*/): void
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        equals(obj: any): boolean
+                        public equals(obj: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

@@ -20,7 +20,7 @@ declare namespace java {
                  * @return the operator result
                  */
                 // @ts-ignore
-                applyAsLong(left: number /*long*/, right: number /*long*/): long
+                applyAsLong(left: number /*long*/, right: number /*long*/): number /*long*/
             }
         }
     }

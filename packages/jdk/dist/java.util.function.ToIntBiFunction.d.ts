@@ -21,7 +21,7 @@ declare namespace java {
                  * @return the function result
                  */
                 // @ts-ignore
-                applyAsInt(t: T, u: U): int
+                applyAsInt(t: T, u: U): number /*int*/
             }
         }
     }

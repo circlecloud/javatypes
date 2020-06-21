@@ -24,7 +24,7 @@ declare namespace javax {
                  *          <code>null</code>
                  */
                 // @ts-ignore
-                constructor(source: javax.swing.RowSorter)
+                constructor(source: javax.swing.RowSorter<any>)
                 /**
                  * Creates a <code>RowSorterEvent</code>.
                  * @param source the source of the change
@@ -35,19 +35,19 @@ declare namespace javax {
                  *          <code>null</code>
                  */
                 // @ts-ignore
-                constructor(source: javax.swing.RowSorter, type: javax.swing.event.RowSorterEvent.Type, previousRowIndexToModel: number /*int*/[])
+                constructor(source: javax.swing.RowSorter<any>, type: javax.swing.event.RowSorterEvent.Type, previousRowIndexToModel: number /*int*/[])
                 /**
                  * Returns the source of the event as a <code>RowSorter</code>.
                  * @return the source of the event as a <code>RowSorter</code>
                  */
                 // @ts-ignore
-                getSource(): javax.swing.RowSorter
+                public getSource(): javax.swing.RowSorter<any>
                 /**
                  * Returns the type of event.
                  * @return the type of event
                  */
                 // @ts-ignore
-                getType(): javax.swing.event.RowSorterEvent.Type
+                public getType(): javax.swing.event.RowSorterEvent.Type
                 /**
                  * Returns the location of <code>index</code> in terms of the
                  * model prior to the sort.  This method is only useful for events
@@ -59,7 +59,7 @@ declare namespace javax {
                  *          the location is not valid or the mapping was not provided.
                  */
                 // @ts-ignore
-                convertPreviousRowIndexToModel(index: number /*int*/): int
+                public convertPreviousRowIndexToModel(index: number /*int*/): number /*int*/
                 /**
                  * Returns the number of rows before the sort.  This method is only
                  * useful for events of type <code>SORTED</code> and if the
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @return the number of rows in terms of the view prior to the sort
                  */
                 // @ts-ignore
-                getPreviousRowCount(): int
+                public getPreviousRowCount(): number /*int*/
             }
         }
     }

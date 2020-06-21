@@ -86,13 +86,13 @@ declare namespace javax {
                  *    description: The table associated with this header.
                  */
                 // @ts-ignore
-                setTable(table: javax.swing.JTable): void
+                public setTable(table: javax.swing.JTable): void
                 /**
                  * Returns the table associated with this header.
                  * @return the <code>table</code> property
                  */
                 // @ts-ignore
-                getTable(): javax.swing.JTable
+                public getTable(): javax.swing.JTable
                 /**
                  * Sets whether the user can drag column headers to reorder columns.
                  * @param reorderingAllowed       true if the table view should allow
@@ -102,7 +102,7 @@ declare namespace javax {
                  *   description: Whether the user can drag column headers to reorder columns.
                  */
                 // @ts-ignore
-                setReorderingAllowed(reorderingAllowed: boolean): void
+                public setReorderingAllowed(reorderingAllowed: boolean): void
                 /**
                  * Returns true if the user is allowed to rearrange columns by
                  * dragging their headers, false otherwise. The default is true. You can
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see #setReorderingAllowed
                  */
                 // @ts-ignore
-                getReorderingAllowed(): boolean
+                public getReorderingAllowed(): boolean
                 /**
                  * Sets whether the user can resize columns by dragging between headers.
                  * @param resizingAllowed         true if table view should allow
@@ -121,7 +121,7 @@ declare namespace javax {
                  *   description: Whether the user can resize columns by dragging between headers.
                  */
                 // @ts-ignore
-                setResizingAllowed(resizingAllowed: boolean): void
+                public setResizingAllowed(resizingAllowed: boolean): void
                 /**
                  * Returns true if the user is allowed to resize columns by dragging
                  * between their headers, false otherwise. The default is true. You can
@@ -130,7 +130,7 @@ declare namespace javax {
                  * @see #setResizingAllowed
                  */
                 // @ts-ignore
-                getResizingAllowed(): boolean
+                public getResizingAllowed(): boolean
                 /**
                  * Returns the the dragged column, if and only if, a drag is in
                  * process, otherwise returns <code>null</code>.
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @see #getDraggedDistance
                  */
                 // @ts-ignore
-                getDraggedColumn(): javax.swing.table.TableColumn
+                public getDraggedColumn(): javax.swing.table.TableColumn
                 /**
                  * Returns the column's horizontal distance from its original
                  * position, if and only if, a drag is in process. Otherwise, the
@@ -150,7 +150,7 @@ declare namespace javax {
                  * @see #getDraggedColumn
                  */
                 // @ts-ignore
-                getDraggedDistance(): int
+                public getDraggedDistance(): number /*int*/
                 /**
                  * Returns the resizing column.  If no column is being
                  * resized this method returns <code>null</code>.
@@ -158,19 +158,19 @@ declare namespace javax {
                  *           returns <code>null</code>
                  */
                 // @ts-ignore
-                getResizingColumn(): javax.swing.table.TableColumn
+                public getResizingColumn(): javax.swing.table.TableColumn
                 /**
                  * Obsolete as of Java 2 platform v1.3.  Real time repaints, in response to
                  * column dragging or resizing, are now unconditional.
                  */
                 // @ts-ignore
-                setUpdateTableInRealTime(flag: boolean): void
+                public setUpdateTableInRealTime(flag: boolean): void
                 /**
                  * Obsolete as of Java 2 platform v1.3.  Real time repaints, in response to
                  * column dragging or resizing, are now unconditional.
                  */
                 // @ts-ignore
-                getUpdateTableInRealTime(): boolean
+                public getUpdateTableInRealTime(): boolean
                 /**
                  * Sets the default renderer to be used when no <code>headerRenderer</code>
                  * is defined by a <code>TableColumn</code>.
@@ -178,7 +178,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setDefaultRenderer(defaultRenderer: javax.swing.table.TableCellRenderer): void
+                public setDefaultRenderer(defaultRenderer: javax.swing.table.TableCellRenderer): void
                 /**
                  * Returns the default renderer used when no <code>headerRenderer</code>
                  * is defined by a <code>TableColumn</code>.
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getDefaultRenderer(): javax.swing.table.TableCellRenderer
+                public getDefaultRenderer(): javax.swing.table.TableCellRenderer
                 /**
                  * Returns the index of the column that <code>point</code> lies in, or -1 if it
                  * lies out of bounds.
@@ -194,7 +194,7 @@ declare namespace javax {
                  *           lies out of bounds
                  */
                 // @ts-ignore
-                columnAtPoint(point: java.awt.Point): int
+                public columnAtPoint(point: java.awt.Point): number /*int*/
                 /**
                  * Returns the rectangle containing the header tile at <code>column</code>.
                  * When the <code>column</code> parameter is out of bounds this method uses the
@@ -203,7 +203,7 @@ declare namespace javax {
                  * @see JTable#getCellRect
                  */
                 // @ts-ignore
-                getHeaderRect(column: number /*int*/): java.awt.Rectangle
+                public getHeaderRect(column: number /*int*/): java.awt.Rectangle
                 /**
                  * Allows the renderer's tips to be used if there is text set.
                  * @param event  the location of the event identifies the proper
@@ -211,20 +211,20 @@ declare namespace javax {
                  * @return the tool tip for this component
                  */
                 // @ts-ignore
-                getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+                public getToolTipText(event: java.awt.event.MouseEvent): string
                 /**
                  * Returns the look and feel (L&amp;F) object that renders this component.
                  * @return the <code>TableHeaderUI</code> object that renders this component
                  */
                 // @ts-ignore
-                getUI(): javax.swing.plaf.TableHeaderUI
+                public getUI(): javax.swing.plaf.TableHeaderUI
                 /**
                  * Sets the look and feel (L&amp;F) object that renders this component.
                  * @param ui  the <code>TableHeaderUI</code> L&amp;F object
                  * @see UIDefaults#getUI
                  */
                 // @ts-ignore
-                setUI(ui: javax.swing.plaf.TableHeaderUI): void
+                public setUI(ui: javax.swing.plaf.TableHeaderUI): void
                 /**
                  * Notification from the <code>UIManager</code> that the look and feel
                  * (L&amp;F) has changed.
@@ -233,7 +233,7 @@ declare namespace javax {
                  * @see JComponent#updateUI
                  */
                 // @ts-ignore
-                updateUI(): void
+                public updateUI(): void
                 /**
                  * Returns the suffix used to construct the name of the look and feel
                  * (L&amp;F) class used to render this component.
@@ -243,7 +243,7 @@ declare namespace javax {
                  * @see UIDefaults#getUI
                  */
                 // @ts-ignore
-                getUIClassID(): java.lang.String
+                public getUIClassID(): string
                 /**
                  * Sets the column model for this table to <code>newModel</code> and registers
                  * for listener notifications from the new column model.
@@ -255,7 +255,7 @@ declare namespace javax {
                  *   description: The object governing the way columns appear in the view.
                  */
                 // @ts-ignore
-                setColumnModel(columnModel: javax.swing.table.TableColumnModel): void
+                public setColumnModel(columnModel: javax.swing.table.TableColumnModel): void
                 /**
                  * Returns the <code>TableColumnModel</code> that contains all column information
                  * of this table header.
@@ -263,7 +263,7 @@ declare namespace javax {
                  * @see #setColumnModel
                  */
                 // @ts-ignore
-                getColumnModel(): javax.swing.table.TableColumnModel
+                public getColumnModel(): javax.swing.table.TableColumnModel
                 /**
                  * Invoked when a column is added to the table column model.
                  * <p>
@@ -273,7 +273,7 @@ declare namespace javax {
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnAdded(e: javax.swing.event.TableColumnModelEvent): void
+                public columnAdded(e: javax.swing.event.TableColumnModelEvent): void
                 /**
                  * Invoked when a column is removed from the table column model.
                  * <p>
@@ -283,7 +283,7 @@ declare namespace javax {
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnRemoved(e: javax.swing.event.TableColumnModelEvent): void
+                public columnRemoved(e: javax.swing.event.TableColumnModelEvent): void
                 /**
                  * Invoked when a column is repositioned.
                  * <p>
@@ -293,7 +293,7 @@ declare namespace javax {
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnMoved(e: javax.swing.event.TableColumnModelEvent): void
+                public columnMoved(e: javax.swing.event.TableColumnModelEvent): void
                 /**
                  * Invoked when a column is moved due to a margin change.
                  * <p>
@@ -303,7 +303,7 @@ declare namespace javax {
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnMarginChanged(e: javax.swing.event.ChangeEvent): void
+                public columnMarginChanged(e: javax.swing.event.ChangeEvent): void
                 /**
                  * Invoked when the selection model of the <code>TableColumnModel</code>
                  * is changed.  This method currently has no effect (the header is not
@@ -315,7 +315,7 @@ declare namespace javax {
                  * @see TableColumnModelListener
                  */
                 // @ts-ignore
-                columnSelectionChanged(e: javax.swing.event.ListSelectionEvent): void
+                public columnSelectionChanged(e: javax.swing.event.ListSelectionEvent): void
                 /**
                  * Returns the default column model object which is
                  * a <code>DefaultTableColumnModel</code>.  A subclass can override this
@@ -343,7 +343,7 @@ declare namespace javax {
                  * to <code>revalidate</code> followed by <code>repaint</code>.
                  */
                 // @ts-ignore
-                resizeAndRepaint(): void
+                public resizeAndRepaint(): void
                 /**
                  * Sets the header's <code>draggedColumn</code> to <code>aColumn</code>.
                  * <p>
@@ -353,13 +353,13 @@ declare namespace javax {
                  *                  no column is being dragged
                  */
                 // @ts-ignore
-                setDraggedColumn(aColumn: javax.swing.table.TableColumn): void
+                public setDraggedColumn(aColumn: javax.swing.table.TableColumn): void
                 /**
                  * Sets the header's <code>draggedDistance</code> to <code>distance</code>.
                  * @param distance  the distance dragged
                  */
                 // @ts-ignore
-                setDraggedDistance(distance: number /*int*/): void
+                public setDraggedDistance(distance: number /*int*/): void
                 /**
                  * Sets the header's <code>resizingColumn</code> to <code>aColumn</code>.
                  * <p>
@@ -369,7 +369,7 @@ declare namespace javax {
                  *                  no column is being resized
                  */
                 // @ts-ignore
-                setResizingColumn(aColumn: javax.swing.table.TableColumn): void
+                public setResizingColumn(aColumn: javax.swing.table.TableColumn): void
                 /**
                  * Returns a string representation of this <code>JTableHeader</code>. This method
                  * is intended to be used only for debugging purposes, and the
@@ -382,7 +382,7 @@ declare namespace javax {
                  * @return a string representation of this <code>JTableHeader</code>
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                paramString(): string
                 /**
                  * Gets the AccessibleContext associated with this JTableHeader.
                  * For JTableHeaders, the AccessibleContext takes the form of an
@@ -392,7 +392,7 @@ declare namespace javax {
                  *          AccessibleContext of this JTableHeader
                  */
                 // @ts-ignore
-                getAccessibleContext(): javax.accessibility.AccessibleContext
+                public getAccessibleContext(): javax.accessibility.AccessibleContext
             }
         }
     }

@@ -18,7 +18,7 @@ declare namespace org {
                      * @return The latency
                      */
                     // @ts-ignore
-                    getLatency(): int
+                    getLatency(): number /*int*/
                 }
             }
         }

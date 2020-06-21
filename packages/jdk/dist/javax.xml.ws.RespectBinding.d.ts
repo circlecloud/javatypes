@@ -22,7 +22,7 @@ declare namespace javax {
              * @since JAX-WS 2.1
              */
             // @ts-ignore
-            class RespectBinding implements java.lang.annotation.Annotation {
+            abstract class RespectBinding implements java.lang.annotation.Annotation {
             }
         }
     }

@@ -25,14 +25,14 @@ declare namespace javax {
                  * toggle button changes.
                  */
                 // @ts-ignore
-                itemStateChanged(e: java.awt.event.ItemEvent): void
+                public itemStateChanged(e: java.awt.event.ItemEvent): void
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
                  *  object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
             }
         }
     }

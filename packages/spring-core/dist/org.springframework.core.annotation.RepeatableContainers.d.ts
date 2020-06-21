@@ -14,7 +14,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                class RepeatableContainers extends java.lang.Object {
+                abstract class RepeatableContainers extends java.lang.Object {
                     /**
                      * Add an additional explicit relationship between a contained and
                      * repeatable annotation.
@@ -23,18 +23,18 @@ declare namespace org {
                      * @return a new {#link RepeatableContainers} instance
                      */
                     // @ts-ignore
-                    and(container: java.lang.Class<java.lang.annotation.Annotation>, repeatable: java.lang.Class<java.lang.annotation.Annotation>): org.springframework.core.annotation.RepeatableContainers
+                    public and(container: java.lang.Class<any>, repeatable: java.lang.Class<any>): org.springframework.core.annotation.RepeatableContainers
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Create a {@link RepeatableContainers} instance that searches using Java's
                      * {@link Repeatable @Repeatable} annotation.
                      * @return a {#link RepeatableContainers} instance
                      */
                     // @ts-ignore
-                    standardRepeatables(): org.springframework.core.annotation.RepeatableContainers
+                    public static standardRepeatables(): org.springframework.core.annotation.RepeatableContainers
                     /**
                      * Create a {@link RepeatableContainers} instance that uses a defined
                      * container and repeatable type.
@@ -47,14 +47,14 @@ declare namespace org {
                      * @return a {#link RepeatableContainers} instance
                      */
                     // @ts-ignore
-                    of(repeatable: java.lang.Class<java.lang.annotation.Annotation>, container: java.lang.Class<java.lang.annotation.Annotation>): org.springframework.core.annotation.RepeatableContainers
+                    public static of(repeatable: java.lang.Class<any>, container: java.lang.Class<any>): org.springframework.core.annotation.RepeatableContainers
                     /**
                      * Create a {@link RepeatableContainers} instance that does not expand any
                      * repeatable annotations.
                      * @return a {#link RepeatableContainers} instance
                      */
                     // @ts-ignore
-                    none(): org.springframework.core.annotation.RepeatableContainers
+                    public static none(): org.springframework.core.annotation.RepeatableContainers
                 }
             }
         }

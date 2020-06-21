@@ -19,7 +19,7 @@ declare namespace org {
                                  * @return This Builder, for chaining
                                  */
                                 // @ts-ignore
-                                with(predicate: java.util.function.Predicate<org.spongepowered.api.item.inventory.ItemStack> | java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStack>): org.spongepowered.api.item.recipe.crafting.Ingredient.Builder
+                                with(predicate: java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStack>): org.spongepowered.api.item.recipe.crafting.Ingredient.Builder
                                 /**
                                  * Adds a GameDictionary Entry as Predicate for matching the ingredient.
                                  * Also clears all previously set {@link #withDisplay} items and then

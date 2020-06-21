@@ -18,7 +18,7 @@ declare namespace javax {
                  * @param algorithm the algorithm
                  */
                 // @ts-ignore
-                constructor(factorySpi: javax.net.ssl.TrustManagerFactorySpi, provider: java.security.Provider, algorithm: string)
+                constructor(factorySpi: javax.net.ssl.TrustManagerFactorySpi, provider: java.security.Provider, algorithm: java.lang.String | string)
                 /**
                  * Obtains the default TrustManagerFactory algorithm name.
                  * <p>The default TrustManager can be changed at runtime by setting
@@ -30,7 +30,7 @@ declare namespace javax {
                  *  implementation-specific default if no such property exists.
                  */
                 // @ts-ignore
-                getDefaultAlgorithm(): java.lang.String
+                public static getDefaultAlgorithm(): string
                 /**
                  * Returns the algorithm name of this <code>TrustManagerFactory</code>
                  * object.
@@ -41,7 +41,7 @@ declare namespace javax {
                  *           object
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
                 /**
                  * Returns a <code>TrustManagerFactory</code> object that acts as a
                  * factory for trust managers.
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string): javax.net.ssl.TrustManagerFactory
+                public static getInstance(algorithm: java.lang.String | string): javax.net.ssl.TrustManagerFactory
                 /**
                  * Returns a <code>TrustManagerFactory</code> object that acts as a
                  * factory for trust managers.
@@ -92,7 +92,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: string): javax.net.ssl.TrustManagerFactory
+                public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.net.ssl.TrustManagerFactory
                 /**
                  * Returns a <code>TrustManagerFactory</code> object that acts as a
                  * factory for trust managers.
@@ -115,13 +115,13 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: java.security.Provider): javax.net.ssl.TrustManagerFactory
+                public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.net.ssl.TrustManagerFactory
                 /**
                  * Returns the provider of this <code>TrustManagerFactory</code> object.
                  * @return the provider of this <code>TrustManagerFactory</code> object
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Initializes this factory with a source of certificate
                  * authorities and related trust material.
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @throws KeyStoreException if this operation fails
                  */
                 // @ts-ignore
-                init(ks: java.security.KeyStore): void
+                public init(ks: java.security.KeyStore): void
                 /**
                  * Initializes this factory with a source of provider-specific
                  * trust material.
@@ -153,14 +153,14 @@ declare namespace javax {
                  *           encountered
                  */
                 // @ts-ignore
-                init(spec: javax.net.ssl.ManagerFactoryParameters): void
+                public init(spec: javax.net.ssl.ManagerFactoryParameters): void
                 /**
                  * Returns one trust manager for each type of trust material.
                  * @throws IllegalStateException if the factory is not initialized.
                  * @return the trust managers
                  */
                 // @ts-ignore
-                getTrustManagers(): javax.net.ssl.TrustManager[]
+                public getTrustManagers(): javax.net.ssl.TrustManager[]
             }
         }
     }

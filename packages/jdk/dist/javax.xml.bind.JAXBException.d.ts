@@ -17,7 +17,7 @@ declare namespace javax {
                  * @param message a description of the exception
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Construct a JAXBException with the specified detail message and vendor
                  * specific errorCode.  The linkedException will default to null.
@@ -25,14 +25,14 @@ declare namespace javax {
                  * @param errorCode a string specifying the vendor specific error code
                  */
                 // @ts-ignore
-                constructor(message: string, errorCode: string)
+                constructor(message: java.lang.String | string, errorCode: java.lang.String | string)
                 /**
                  * Construct a JAXBException with a linkedException.  The detail message and
                  * vendor specific errorCode will default to null.
                  * @param exception the linked exception
                  */
                 // @ts-ignore
-                constructor(exception: Error)
+                constructor(exception: java.lang.Throwable | Error)
                 /**
                  * Construct a JAXBException with the specified detail message and
                  * linkedException.  The errorCode will default to null.
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @param exception the linked exception
                  */
                 // @ts-ignore
-                constructor(message: string, exception: Error)
+                constructor(message: java.lang.String | string, exception: java.lang.Throwable | Error)
                 /**
                  * Construct a JAXBException with the specified detail message, vendor
                  * specific errorCode, and linkedException.
@@ -49,19 +49,19 @@ declare namespace javax {
                  * @param exception the linked exception
                  */
                 // @ts-ignore
-                constructor(message: string, errorCode: string, exception: Error)
+                constructor(message: java.lang.String | string, errorCode: java.lang.String | string, exception: java.lang.Throwable | Error)
                 /**
                  * Get the vendor specific error code
                  * @return a string specifying the vendor specific error code
                  */
                 // @ts-ignore
-                getErrorCode(): java.lang.String
+                getErrorCode(): string
                 /**
                  * Get the linked exception
                  * @return the linked Exception, null if none exists
                  */
                 // @ts-ignore
-                getLinkedException(): java.lang.Throwable
+                getLinkedException(): Error
                 /**
                  * Add a linked Exception.
                  * @param exception the linked Exception (A null value is permitted and
@@ -69,12 +69,12 @@ declare namespace javax {
                  *                   is unknown).
                  */
                 // @ts-ignore
-                setLinkedException(exception: Error): void
+                setLinkedException(exception: java.lang.Throwable | Error): void
                 /**
                  * Returns a short description of this JAXBException.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
                 /**
                  * Prints this JAXBException and its stack trace (including the stack trace
                  * of the linkedException if it is non-null) to the PrintStream.
@@ -96,7 +96,7 @@ declare namespace javax {
                 // @ts-ignore
                 printStackTrace(s: java.io.PrintWriter): void
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

@@ -10,7 +10,7 @@ declare namespace org {
                          * represented as an {@link ItemStack}.
                          */
                         // @ts-ignore
-                        class HeldItemProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, org.spongepowered.api.item.ItemType> {
+                        class HeldItemProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, org.spongepowered.api.item.ItemType> {
                             /**
                              * Creates a new {@link HeldItemProperty} with the provided {@link ItemType}.
                              * @param value The item type value for the block
@@ -26,7 +26,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(value: org.spongepowered.api.item.ItemType, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

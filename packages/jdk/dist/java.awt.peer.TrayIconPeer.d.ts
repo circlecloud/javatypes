@@ -19,7 +19,7 @@ declare namespace java {
                  * @see TrayIcon#setToolTip(String)
                  */
                 // @ts-ignore
-                setToolTip(tooltip: string): void
+                setToolTip(tooltip: java.lang.String | string): void
                 /**
                  * Updates the icon image. This is supposed to display the current icon
                  * from the TrayIcon component in the actual tray icon.
@@ -36,7 +36,7 @@ declare namespace java {
                  * @see TrayIcon#displayMessage(String, String, java.awt.TrayIcon.MessageType)
                  */
                 // @ts-ignore
-                displayMessage(caption: string, text: string, messageType: string): void
+                displayMessage(caption: java.lang.String | string, text: java.lang.String | string, messageType: java.lang.String | string): void
                 /**
                  * Shows the popup menu of this tray icon at the specified position.
                  * @param x the X location for the popup menu

@@ -7,7 +7,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class TabularDataSupport extends java.lang.Object implements javax.management.openmbean.TabularData, java.util.Map<java.lang.Object, java.lang.Object>, java.lang.Cloneable, java.io.Serializable {
+            class TabularDataSupport extends java.lang.Object implements javax.management.openmbean.TabularData, java.util.Map<java.lang.Object | any, java.lang.Object | any>, java.lang.Cloneable, java.io.Serializable {
                 /**
                  * Creates an empty <tt>TabularDataSupport</tt> instance whose open-type is <var>tabularType</var>,
                  * and whose underlying <tt>HashMap</tt> has a default initial capacity (101) and default load factor (0.75).
@@ -36,7 +36,7 @@ declare namespace javax {
                  * Returns the <i>tabular type</i> describing this <tt>TabularData</tt> instance.
                  */
                 // @ts-ignore
-                getTabularType(): javax.management.openmbean.TabularType
+                public getTabularType(): javax.management.openmbean.TabularType
                 /**
                  * Calculates the index that would be used in this <tt>TabularData</tt> instance to refer to the specified
                  * composite data <var>value</var> parameter if it were added to this instance.
@@ -52,7 +52,7 @@ declare namespace javax {
                  *                                     row type definition.
                  */
                 // @ts-ignore
-                calculateIndex(value: javax.management.openmbean.CompositeData): java.lang.Object[]
+                public calculateIndex(value: javax.management.openmbean.CompositeData): any[]
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains a <tt>CompositeData</tt> value
                  * (ie a row) whose index is the specified <var>key</var>. If <var>key</var> cannot be cast to a one dimension array
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return <tt>true</tt> if this <tt>TabularData</tt> indexes a row value with the specified key.
                  */
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains a <tt>CompositeData</tt> value
                  * (ie a row) whose index is the specified <var>key</var>. If <var>key</var> is <tt>null</tt> or does not conform to
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @return <tt>true</tt> if this <tt>TabularData</tt> indexes a row value with the specified key.
                  */
                 // @ts-ignore
-                containsKey(key: any[]): boolean
+                public containsKey(key: java.lang.Object[] | any[]): boolean
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains the specified
                  * <tt>CompositeData</tt> value. If <var>value</var> is <tt>null</tt> or does not conform to
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @return <tt>true</tt> if this <tt>TabularData</tt> instance contains the specified row value.
                  */
                 // @ts-ignore
-                containsValue(value: javax.management.openmbean.CompositeData): boolean
+                public containsValue(value: javax.management.openmbean.CompositeData): boolean
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains the specified
                  * value.
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @return <tt>true</tt> if this <tt>TabularData</tt> instance contains the specified row value.
                  */
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 /**
                  * This method simply calls <tt>get((Object[]) key)</tt>.
                  * @throws NullPointerException  if the <var>key</var> is <tt>null</tt>
@@ -97,7 +97,7 @@ declare namespace javax {
                  *                                <tt>TabularType</tt> definition
                  */
                 // @ts-ignore
-                get(key: any): java.lang.Object
+                public get(key: java.lang.Object | any): any
                 /**
                  * Returns the <tt>CompositeData</tt> value whose index is
                  * <var>key</var>, or <tt>null</tt> if there is no value mapping
@@ -112,7 +112,7 @@ declare namespace javax {
                  *                                <tt>TabularType</tt> type definition.
                  */
                 // @ts-ignore
-                get(key: any[]): javax.management.openmbean.CompositeData
+                public get(key: java.lang.Object[] | any[]): javax.management.openmbean.CompositeData
                 /**
                  * This method simply calls <tt>put((CompositeData) value)</tt> and
                  * therefore ignores its <var>key</var> parameter which can be <tt>null</tt>.
@@ -131,9 +131,9 @@ declare namespace javax {
                  *  already maps to an existing value
                  */
                 // @ts-ignore
-                put(key: any, value: any): java.lang.Object
+                public put(key: java.lang.Object | any, value: java.lang.Object | any): any
                 // @ts-ignore
-                put(value: javax.management.openmbean.CompositeData): void
+                public put(value: javax.management.openmbean.CompositeData): void
                 /**
                  * This method simply calls <tt>remove((Object[]) key)</tt>.
                  * @param key an <tt>Object[]</tt> representing the key to remove.
@@ -145,7 +145,7 @@ declare namespace javax {
                  *                                <tt>TabularType</tt> definition
                  */
                 // @ts-ignore
-                remove(key: any): java.lang.Object
+                public remove(key: java.lang.Object | any): any
                 /**
                  * Removes the <tt>CompositeData</tt> value whose index is <var>key</var> from this <tt>TabularData</tt> instance,
                  * and returns the removed value, or returns <tt>null</tt> if there is no value whose index is <var>key</var>.
@@ -159,7 +159,7 @@ declare namespace javax {
                  *                                <tt>TabularType</tt> definition
                  */
                 // @ts-ignore
-                remove(key: any[]): javax.management.openmbean.CompositeData
+                public remove(key: java.lang.Object[] | any[]): javax.management.openmbean.CompositeData
                 /**
                  * Add all the values contained in the specified map <var>t</var>
                  * to this <tt>TabularData</tt> instance.  This method converts
@@ -188,7 +188,7 @@ declare namespace javax {
                  *  values in <var>t</var> have the same index.
                  */
                 // @ts-ignore
-                putAll(t: java.util.Map<any, ?>): void
+                public putAll(t: java.util.Map<any, any>): void
                 /**
                  * Add all the elements in <var>values</var> to this
                  * <tt>TabularData</tt> instance.  If any element in
@@ -217,24 +217,24 @@ declare namespace javax {
                  *  elements of <var>values</var> have the same index
                  */
                 // @ts-ignore
-                putAll(values: javax.management.openmbean.CompositeData[]): void
+                public putAll(values: javax.management.openmbean.CompositeData[]): void
                 /**
                  * Removes all rows from this <code>TabularDataSupport</code> instance.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Returns the number of rows in this <code>TabularDataSupport</code> instance.
                  * @return the number of rows in this <code>TabularDataSupport</code> instance.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns <tt>true</tt> if this <code>TabularDataSupport</code> instance contains no rows.
                  * @return <tt>true</tt> if this <code>TabularDataSupport</code> instance contains no rows.
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Returns a set view of the keys contained in the underlying map of this
                  * {@code TabularDataSupport} instance used to index the rows.
@@ -254,7 +254,7 @@ declare namespace javax {
                  *  the rows of this {@code TabularDataSupport} instance.
                  */
                 // @ts-ignore
-                keySet(): java.util.Set<java.lang.Object>
+                public keySet(): Array<java.lang.Object | any>
                 /**
                  * Returns a collection view of the rows contained in this
                  * {@code TabularDataSupport} instance. The returned {@code Collection}
@@ -274,7 +274,7 @@ declare namespace javax {
                  *  the values contained in this {@code TabularDataSupport} instance.
                  */
                 // @ts-ignore
-                values(): java.util.Collection<java.lang.Object>
+                public values(): Array<java.lang.Object | any>
                 /**
                  * Returns a collection view of the index to row mappings
                  * contained in this {@code TabularDataSupport} instance.
@@ -304,14 +304,14 @@ declare namespace javax {
                  * @see java.util.Map.Entry
                  */
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<java.lang.Object, java.lang.Object>>
+                public entrySet(): Array<java.util.Map.Entry<java.lang.Object | any, java.lang.Object | any>>
                 /**
                  * Returns a clone of this <code>TabularDataSupport</code> instance:
                  * the clone is obtained by calling <tt>super.clone()</tt>, and then cloning the underlying map.
                  * Only a shallow clone of the underlying map is made, i.e. no cloning of the indexes and row values is made as they are immutable.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Compares the specified <var>obj</var> parameter with this <code>TabularDataSupport</code> instance for equality.
                  * <p>
@@ -329,7 +329,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>TabularDataSupport</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>TabularDataSupport</code> instance.
                  * <p>
@@ -348,7 +348,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>TabularDataSupport</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>TabularDataSupport</code> instance.
                  * <p>
@@ -359,7 +359,7 @@ declare namespace javax {
                  * @return a string representation of this <code>TabularDataSupport</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

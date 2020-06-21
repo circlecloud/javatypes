@@ -14,7 +14,7 @@ declare namespace org {
                      * @param cause The cause
                      */
                     // @ts-ignore
-                    constructor(message: org.spongepowered.api.text.Text, cause: Error)
+                    constructor(message: org.spongepowered.api.text.Text, cause: java.lang.Throwable | Error)
                 }
             }
         }

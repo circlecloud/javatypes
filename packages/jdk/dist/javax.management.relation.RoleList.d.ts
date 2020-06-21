@@ -9,7 +9,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class RoleList extends java.util.ArrayList<java.lang.Object> {
+            class RoleList extends java.util.ArrayList<java.lang.Object | any> {
                 /**
                  * Constructs an empty RoleList.
                  */
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see ArrayList#ArrayList(java.util.Collection)
                  */
                 // @ts-ignore
-                constructor(list: Array<javax.management.relation.Role>)
+                constructor(list: java.util.List<javax.management.relation.Role> | Array<javax.management.relation.Role>)
                 /**
                  * Return a view of this list as a {@code List<Role>}.
                  * Changes to the returned value are reflected by changes
@@ -56,14 +56,14 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                asList(): java.util.List<javax.management.relation.Role>
+                public asList(): Array<javax.management.relation.Role>
                 /**
                  * Adds the Role specified as the last element of the list.
                  * @param role  the role to be added.
                  * @exception IllegalArgumentException  if the role is null.
                  */
                 // @ts-ignore
-                add(role: javax.management.relation.Role): void
+                public add(role: javax.management.relation.Role): void
                 /**
                  * Inserts the role specified as an element at the position specified.
                  * Elements with an index greater than or equal to the current position are
@@ -76,7 +76,7 @@ declare namespace javax {
                  *  outside of the list.
                  */
                 // @ts-ignore
-                add(index: number /*int*/, role: javax.management.relation.Role): void
+                public add(index: number /*int*/, role: javax.management.relation.Role): void
                 /**
                  * Sets the element at the position specified to be the role
                  * specified.
@@ -88,7 +88,7 @@ declare namespace javax {
                  *  outside of the list.
                  */
                 // @ts-ignore
-                set(index: number /*int*/, role: javax.management.relation.Role): void
+                public set(index: number /*int*/, role: javax.management.relation.Role): void
                 /**
                  * Appends all the elements in the RoleList specified to the end
                  * of the list, in the order in which they are returned by the Iterator of
@@ -100,7 +100,7 @@ declare namespace javax {
                  * @see ArrayList#addAll(Collection)
                  */
                 // @ts-ignore
-                addAll(roleList: javax.management.relation.RoleList): boolean
+                public addAll(roleList: javax.management.relation.RoleList): boolean
                 /**
                  * Inserts all of the elements in the RoleList specified into this
                  * list, starting at the specified position, in the order in which they are
@@ -115,17 +115,17 @@ declare namespace javax {
                  * @see ArrayList#addAll(int, Collection)
                  */
                 // @ts-ignore
-                addAll(index: number /*int*/, roleList: javax.management.relation.RoleList): boolean
+                public addAll(index: number /*int*/, roleList: javax.management.relation.RoleList): boolean
                 // @ts-ignore
-                add(o: any): boolean
+                public add(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                add(index: number /*int*/, element: any): void
+                public add(index: number /*int*/, element: java.lang.Object | any): void
                 // @ts-ignore
-                addAll(c: Array<any>): boolean
+                public addAll(c: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                addAll(index: number /*int*/, c: Array<any>): boolean
+                public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                set(index: number /*int*/, element: any): java.lang.Object
+                public set(index: number /*int*/, element: java.lang.Object | any): any
             }
         }
     }

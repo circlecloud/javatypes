@@ -61,7 +61,7 @@ declare namespace java {
                  *  {@code java.security.cert.TrustAnchor}
                  */
                 // @ts-ignore
-                constructor(trustAnchors: Array<java.security.cert.TrustAnchor>, targetConstraints: java.security.cert.CertSelector)
+                constructor(trustAnchors: java.util.Set<java.security.cert.TrustAnchor> | Array<java.security.cert.TrustAnchor>, targetConstraints: java.security.cert.CertSelector)
                 /**
                  * Creates an instance of {@code PKIXBuilderParameters} that
                  * populates the set of most-trusted CAs from the trusted
@@ -108,7 +108,7 @@ declare namespace java {
                  * @see #getMaxPathLength
                  */
                 // @ts-ignore
-                setMaxPathLength(maxPathLength: number /*int*/): void
+                public setMaxPathLength(maxPathLength: number /*int*/): void
                 /**
                  * Returns the value of the maximum number of intermediate non-self-issued
                  * certificates that may exist in a certification path. See
@@ -118,13 +118,13 @@ declare namespace java {
                  * @see #setMaxPathLength
                  */
                 // @ts-ignore
-                getMaxPathLength(): int
+                public getMaxPathLength(): number /*int*/
                 /**
                  * Returns a formatted string describing the parameters.
                  * @return a formatted string describing the parameters
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -8,9 +8,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(shadow: java.awt.Color, darkShadow: java.awt.Color, highlight: java.awt.Color, lightHighlight: java.awt.Color)
                         // @ts-ignore
-                        paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                        public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                         // @ts-ignore
-                        getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                        public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                     }
                 }
             }

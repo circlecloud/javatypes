@@ -102,7 +102,7 @@ declare namespace javax {
              * tabs will not fit within a single run.
              */
             // @ts-ignore
-            readonly WRAP_TAB_LAYOUT: number /*int*/
+            public static readonly WRAP_TAB_LAYOUT: number /*int*/
             /**
              * Tab layout policy for providing a subset of available tabs when all
              * the tabs will not fit within a single run.  If all the tabs do
@@ -110,7 +110,7 @@ declare namespace javax {
              * to navigate to hidden tabs.
              */
             // @ts-ignore
-            readonly SCROLL_TAB_LAYOUT: number /*int*/
+            public static readonly SCROLL_TAB_LAYOUT: number /*int*/
             /**
              * Where the tabs are placed.
              * @see #setTabPlacement
@@ -142,7 +142,7 @@ declare namespace javax {
              * @see #setUI
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.TabbedPaneUI
+            public getUI(): javax.swing.plaf.TabbedPaneUI
             /**
              * Sets the UI object which implements the L&amp;F for this component.
              * @param ui the new UI object
@@ -153,13 +153,13 @@ declare namespace javax {
              *   description: The UI object that implements the tabbedpane's LookAndFeel
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.TabbedPaneUI): void
+            public setUI(ui: javax.swing.plaf.TabbedPaneUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the UI class that implements the
              * L&amp;F for this component.
@@ -168,7 +168,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Subclasses that want to handle <code>ChangeEvents</code> differently
              * can override this to return a subclass of <code>ModelListener</code> or
@@ -184,7 +184,7 @@ declare namespace javax {
              * @see #removeChangeListener
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a <code>ChangeListener</code> from this tabbedpane.
              * @param l the <code>ChangeListener</code> to remove
@@ -192,7 +192,7 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this <code>JTabbedPane</code> with <code>addChangeListener</code>.
@@ -201,7 +201,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Sends a {@code ChangeEvent}, with this {@code JTabbedPane} as the source,
              * to each registered listener. This method is called each time there is
@@ -222,7 +222,7 @@ declare namespace javax {
              * @see #setModel
              */
             // @ts-ignore
-            getModel(): javax.swing.SingleSelectionModel
+            public getModel(): javax.swing.SingleSelectionModel
             /**
              * Sets the model to be used with this tabbedpane.
              * @param model the model to be used
@@ -231,13 +231,13 @@ declare namespace javax {
              *  description: The tabbedpane's SingleSelectionModel.
              */
             // @ts-ignore
-            setModel(model: javax.swing.SingleSelectionModel): void
+            public setModel(model: javax.swing.SingleSelectionModel): void
             /**
              * Returns the placement of the tabs for this tabbedpane.
              * @see #setTabPlacement
              */
             // @ts-ignore
-            getTabPlacement(): int
+            public getTabPlacement(): number /*int*/
             /**
              * Sets the tab placement for this tabbedpane.
              * Possible values are:<ul>
@@ -260,7 +260,7 @@ declare namespace javax {
              *   description: The tabbedpane's tab placement.
              */
             // @ts-ignore
-            setTabPlacement(tabPlacement: number /*int*/): void
+            public setTabPlacement(tabPlacement: number /*int*/): void
             /**
              * Returns the policy used by the tabbedpane to layout the tabs when all the
              * tabs will not fit within a single run.
@@ -268,7 +268,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getTabLayoutPolicy(): int
+            public getTabLayoutPolicy(): number /*int*/
             /**
              * Sets the policy which the tabbedpane will use in laying out the tabs
              * when all the tabs will not fit within a single run.
@@ -295,7 +295,7 @@ declare namespace javax {
              *   description: The tabbedpane's policy for laying out the tabs
              */
             // @ts-ignore
-            setTabLayoutPolicy(tabLayoutPolicy: number /*int*/): void
+            public setTabLayoutPolicy(tabLayoutPolicy: number /*int*/): void
             /**
              * Returns the currently selected index for this tabbedpane.
              * Returns -1 if there is no currently selected tab.
@@ -303,7 +303,7 @@ declare namespace javax {
              * @see #setSelectedIndex
              */
             // @ts-ignore
-            getSelectedIndex(): int
+            public getSelectedIndex(): number /*int*/
             /**
              * Sets the selected index for this tabbedpane. The index must be
              * a valid tab index or -1, which indicates that no tab should be selected
@@ -319,7 +319,7 @@ declare namespace javax {
              *  description: The tabbedpane's selected tab index.
              */
             // @ts-ignore
-            setSelectedIndex(index: number /*int*/): void
+            public setSelectedIndex(index: number /*int*/): void
             /**
              * Returns the currently selected component for this tabbedpane.
              * Returns <code>null</code> if there is no currently selected tab.
@@ -327,7 +327,7 @@ declare namespace javax {
              * @see #setSelectedComponent
              */
             // @ts-ignore
-            getSelectedComponent(): java.awt.Component
+            public getSelectedComponent(): java.awt.Component
             /**
              * Sets the selected component for this tabbedpane.  This
              * will automatically set the <code>selectedIndex</code> to the index
@@ -339,7 +339,7 @@ declare namespace javax {
              *  description: The tabbedpane's selected component.
              */
             // @ts-ignore
-            setSelectedComponent(c: java.awt.Component): void
+            public setSelectedComponent(c: java.awt.Component): void
             /**
              * Inserts a new tab for the given component, at the given index,
              * represented by the given title and/or icon, either of which may
@@ -356,7 +356,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            insertTab(title: string, icon: javax.swing.Icon, component: java.awt.Component, tip: string, index: number /*int*/): void
+            public insertTab(title: java.lang.String | string, icon: javax.swing.Icon, component: java.awt.Component, tip: java.lang.String | string, index: number /*int*/): void
             /**
              * Adds a <code>component</code> and <code>tip</code>
              * represented by a <code>title</code> and/or <code>icon</code>,
@@ -370,7 +370,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            addTab(title: string, icon: javax.swing.Icon, component: java.awt.Component, tip: string): void
+            public addTab(title: java.lang.String | string, icon: javax.swing.Icon, component: java.awt.Component, tip: java.lang.String | string): void
             /**
              * Adds a <code>component</code> represented by a <code>title</code>
              * and/or <code>icon</code>, either of which can be <code>null</code>.
@@ -382,7 +382,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            addTab(title: string, icon: javax.swing.Icon, component: java.awt.Component): void
+            public addTab(title: java.lang.String | string, icon: javax.swing.Icon, component: java.awt.Component): void
             /**
              * Adds a <code>component</code> represented by a <code>title</code>
              * and no icon.
@@ -393,7 +393,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            addTab(title: string, component: java.awt.Component): void
+            public addTab(title: java.lang.String | string, component: java.awt.Component): void
             /**
              * Adds a <code>component</code> with a tab title defaulting to
              * the name of the component which is the result of calling
@@ -405,7 +405,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            add(component: java.awt.Component): java.awt.Component
+            public add(component: java.awt.Component): java.awt.Component
             /**
              * Adds a <code>component</code> with the specified tab title.
              * Cover method for <code>insertTab</code>.
@@ -416,7 +416,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            add(title: string, component: java.awt.Component): java.awt.Component
+            public add(title: java.lang.String | string, component: java.awt.Component): java.awt.Component
             /**
              * Adds a <code>component</code> at the specified tab index with a tab
              * title defaulting to the name of the component.
@@ -428,7 +428,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            add(component: java.awt.Component, index: number /*int*/): java.awt.Component
+            public add(component: java.awt.Component, index: number /*int*/): java.awt.Component
             /**
              * Adds a <code>component</code> to the tabbed pane.
              * If <code>constraints</code> is a <code>String</code> or an
@@ -441,7 +441,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            add(component: java.awt.Component, constraints: any): void
+            public add(component: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Adds a <code>component</code> at the specified tab index.
              * If <code>constraints</code> is a <code>String</code> or an
@@ -455,7 +455,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            add(component: java.awt.Component, constraints: any, index: number /*int*/): void
+            public add(component: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the tab at <code>index</code>.
              * After the component associated with <code>index</code> is removed,
@@ -468,7 +468,7 @@ declare namespace javax {
              * @see #insertTab
              */
             // @ts-ignore
-            removeTabAt(index: number /*int*/): void
+            public removeTabAt(index: number /*int*/): void
             /**
              * Removes the specified <code>Component</code> from the
              * <code>JTabbedPane</code>. The method does nothing
@@ -478,7 +478,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            remove(component: java.awt.Component): void
+            public remove(component: java.awt.Component): void
             /**
              * Removes the tab and component which corresponds to the specified index.
              * @param index the index of the component to remove from the
@@ -489,7 +489,7 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            remove(index: number /*int*/): void
+            public remove(index: number /*int*/): void
             /**
              * Removes all the tabs and their corresponding components
              * from the <code>tabbedpane</code>.
@@ -497,13 +497,13 @@ declare namespace javax {
              * @see #removeTabAt
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Returns the number of tabs in this <code>tabbedpane</code>.
              * @return an integer specifying the number of tabbed pages
              */
             // @ts-ignore
-            getTabCount(): int
+            public getTabCount(): number /*int*/
             /**
              * Returns the number of tab runs currently used to display
              * the tabs.
@@ -516,7 +516,7 @@ declare namespace javax {
              *           or 0 if there is no UI set on this <code>tabbedpane</code>
              */
             // @ts-ignore
-            getTabRunCount(): int
+            public getTabRunCount(): number /*int*/
             /**
              * Returns the tab title at <code>index</code>.
              * @param index  the index of the item being queried
@@ -526,7 +526,7 @@ declare namespace javax {
              * @see #setTitleAt
              */
             // @ts-ignore
-            getTitleAt(index: number /*int*/): java.lang.String
+            public getTitleAt(index: number /*int*/): string
             /**
              * Returns the tab icon at <code>index</code>.
              * @param index  the index of the item being queried
@@ -536,7 +536,7 @@ declare namespace javax {
              * @see #setIconAt
              */
             // @ts-ignore
-            getIconAt(index: number /*int*/): javax.swing.Icon
+            public getIconAt(index: number /*int*/): javax.swing.Icon
             /**
              * Returns the tab disabled icon at <code>index</code>.
              * If the tab disabled icon doesn't exist at <code>index</code>
@@ -551,7 +551,7 @@ declare namespace javax {
              * @see #setDisabledIconAt
              */
             // @ts-ignore
-            getDisabledIconAt(index: number /*int*/): javax.swing.Icon
+            public getDisabledIconAt(index: number /*int*/): javax.swing.Icon
             /**
              * Returns the tab tooltip text at <code>index</code>.
              * @param index  the index of the item being queried
@@ -562,7 +562,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getToolTipTextAt(index: number /*int*/): java.lang.String
+            public getToolTipTextAt(index: number /*int*/): string
             /**
              * Returns the tab background color at <code>index</code>.
              * @param index  the index of the item being queried
@@ -573,7 +573,7 @@ declare namespace javax {
              * @see #setBackgroundAt
              */
             // @ts-ignore
-            getBackgroundAt(index: number /*int*/): java.awt.Color
+            public getBackgroundAt(index: number /*int*/): java.awt.Color
             /**
              * Returns the tab foreground color at <code>index</code>.
              * @param index  the index of the item being queried
@@ -584,7 +584,7 @@ declare namespace javax {
              * @see #setForegroundAt
              */
             // @ts-ignore
-            getForegroundAt(index: number /*int*/): java.awt.Color
+            public getForegroundAt(index: number /*int*/): java.awt.Color
             /**
              * Returns whether or not the tab at <code>index</code> is
              * currently enabled.
@@ -596,7 +596,7 @@ declare namespace javax {
              * @see #setEnabledAt
              */
             // @ts-ignore
-            isEnabledAt(index: number /*int*/): boolean
+            public isEnabledAt(index: number /*int*/): boolean
             /**
              * Returns the component at <code>index</code>.
              * @param index  the index of the item being queried
@@ -606,7 +606,7 @@ declare namespace javax {
              * @see #setComponentAt
              */
             // @ts-ignore
-            getComponentAt(index: number /*int*/): java.awt.Component
+            public getComponentAt(index: number /*int*/): java.awt.Component
             /**
              * Returns the keyboard mnemonic for accessing the specified tab.
              * The mnemonic is the key which when combined with the look and feel's
@@ -623,7 +623,7 @@ declare namespace javax {
              * @see #setMnemonicAt(int,int)
              */
             // @ts-ignore
-            getMnemonicAt(tabIndex: number /*int*/): int
+            public getMnemonicAt(tabIndex: number /*int*/): number /*int*/
             /**
              * Returns the character, as an index, that the look and feel should
              * provide decoration for as representing the mnemonic character.
@@ -638,7 +638,7 @@ declare namespace javax {
              * @see #setMnemonicAt(int,int)
              */
             // @ts-ignore
-            getDisplayedMnemonicIndexAt(tabIndex: number /*int*/): int
+            public getDisplayedMnemonicIndexAt(tabIndex: number /*int*/): number /*int*/
             /**
              * Returns the tab bounds at <code>index</code>.  If the tab at
              * this index is not currently visible in the UI, then returns
@@ -654,7 +654,7 @@ declare namespace javax {
              *             {#code (index < 0 || index >= tab count)}
              */
             // @ts-ignore
-            getBoundsAt(index: number /*int*/): java.awt.Rectangle
+            public getBoundsAt(index: number /*int*/): java.awt.Rectangle
             /**
              * Sets the title at <code>index</code> to <code>title</code> which
              * can be <code>null</code>.
@@ -671,7 +671,7 @@ declare namespace javax {
              *   description: The title at the specified tab index.
              */
             // @ts-ignore
-            setTitleAt(index: number /*int*/, title: string): void
+            public setTitleAt(index: number /*int*/, title: java.lang.String | string): void
             /**
              * Sets the icon at <code>index</code> to <code>icon</code> which can be
              * <code>null</code>. This does not set disabled icon at <code>icon</code>.
@@ -693,7 +693,7 @@ declare namespace javax {
              *   description: The icon at the specified tab index.
              */
             // @ts-ignore
-            setIconAt(index: number /*int*/, icon: javax.swing.Icon): void
+            public setIconAt(index: number /*int*/, icon: javax.swing.Icon): void
             /**
              * Sets the disabled icon at <code>index</code> to <code>icon</code>
              * which can be <code>null</code>.
@@ -708,7 +708,7 @@ declare namespace javax {
              *   description: The disabled icon at the specified tab index.
              */
             // @ts-ignore
-            setDisabledIconAt(index: number /*int*/, disabledIcon: javax.swing.Icon): void
+            public setDisabledIconAt(index: number /*int*/, disabledIcon: javax.swing.Icon): void
             /**
              * Sets the tooltip text at <code>index</code> to <code>toolTipText</code>
              * which can be <code>null</code>.
@@ -723,7 +723,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setToolTipTextAt(index: number /*int*/, toolTipText: string): void
+            public setToolTipTextAt(index: number /*int*/, toolTipText: java.lang.String | string): void
             /**
              * Sets the background color at <code>index</code> to
              * <code>background</code>
@@ -743,7 +743,7 @@ declare namespace javax {
              *   description: The background color at the specified tab index.
              */
             // @ts-ignore
-            setBackgroundAt(index: number /*int*/, background: java.awt.Color): void
+            public setBackgroundAt(index: number /*int*/, background: java.awt.Color): void
             /**
              * Sets the foreground color at <code>index</code> to
              * <code>foreground</code> which can be
@@ -763,7 +763,7 @@ declare namespace javax {
              *   description: The foreground color at the specified tab index.
              */
             // @ts-ignore
-            setForegroundAt(index: number /*int*/, foreground: java.awt.Color): void
+            public setForegroundAt(index: number /*int*/, foreground: java.awt.Color): void
             /**
              * Sets whether or not the tab at <code>index</code> is enabled.
              * An internal exception is raised if there is no tab at that index.
@@ -774,7 +774,7 @@ declare namespace javax {
              * @see #isEnabledAt
              */
             // @ts-ignore
-            setEnabledAt(index: number /*int*/, enabled: boolean): void
+            public setEnabledAt(index: number /*int*/, enabled: boolean): void
             /**
              * Sets the component at <code>index</code> to <code>component</code>.
              * An internal exception is raised if there is no tab at that index.
@@ -787,7 +787,7 @@ declare namespace javax {
              *   description: The component at the specified tab index.
              */
             // @ts-ignore
-            setComponentAt(index: number /*int*/, component: java.awt.Component): void
+            public setComponentAt(index: number /*int*/, component: java.awt.Component): void
             /**
              * Provides a hint to the look and feel as to which character in the
              * text should be decorated to represent the mnemonic. Not all look and
@@ -824,7 +824,7 @@ declare namespace javax {
              *                mnemonic at
              */
             // @ts-ignore
-            setDisplayedMnemonicIndexAt(tabIndex: number /*int*/, mnemonicIndex: number /*int*/): void
+            public setDisplayedMnemonicIndexAt(tabIndex: number /*int*/, mnemonicIndex: number /*int*/): void
             /**
              * Sets the keyboard mnemonic for accessing the specified tab.
              * The mnemonic is the key which when combined with the look and feel's
@@ -855,7 +855,7 @@ declare namespace javax {
              *                for the specified tab
              */
             // @ts-ignore
-            setMnemonicAt(tabIndex: number /*int*/, mnemonic: number /*int*/): void
+            public setMnemonicAt(tabIndex: number /*int*/, mnemonic: number /*int*/): void
             /**
              * Returns the first tab index with a given <code>title</code>,  or
              * -1 if no tab has this title.
@@ -864,7 +864,7 @@ declare namespace javax {
              *           -1 if no tab has this title
              */
             // @ts-ignore
-            indexOfTab(title: string): int
+            public indexOfTab(title: java.lang.String | string): number /*int*/
             /**
              * Returns the first tab index with a given <code>icon</code>,
              * or -1 if no tab has this icon.
@@ -873,7 +873,7 @@ declare namespace javax {
              *           or -1 if no tab has this icon
              */
             // @ts-ignore
-            indexOfTab(icon: javax.swing.Icon): int
+            public indexOfTab(icon: javax.swing.Icon): number /*int*/
             /**
              * Returns the index of the tab for the specified component.
              * Returns -1 if there is no tab for this component.
@@ -882,7 +882,7 @@ declare namespace javax {
              *           if there is no tab for this component
              */
             // @ts-ignore
-            indexOfComponent(component: java.awt.Component): int
+            public indexOfComponent(component: java.awt.Component): number /*int*/
             /**
              * Returns the tab index corresponding to the tab whose bounds
              * intersect the specified location.  Returns -1 if no tab
@@ -894,7 +894,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            indexAtLocation(x: number /*int*/, y: number /*int*/): int
+            public indexAtLocation(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the tooltip text for the component determined by the
              * mouse event location.
@@ -903,7 +903,7 @@ declare namespace javax {
              * @return the <code>String</code> containing the tooltip text
              */
             // @ts-ignore
-            getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+            public getToolTipText(event: java.awt.event.MouseEvent): string
             /**
              * Returns a string representation of this <code>JTabbedPane</code>.
              * This method
@@ -914,7 +914,7 @@ declare namespace javax {
              * @return a string representation of this JTabbedPane.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JTabbedPane.
              * For tabbed panes, the AccessibleContext takes the form of an
@@ -924,7 +924,7 @@ declare namespace javax {
              *          AccessibleContext of this JTabbedPane
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
             /**
              * Sets the component that is responsible for rendering the
              * title for the specified tab.  A null value means
@@ -949,7 +949,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setTabComponentAt(index: number /*int*/, component: java.awt.Component): void
+            public setTabComponentAt(index: number /*int*/, component: java.awt.Component): void
             /**
              * Returns the tab component at <code>index</code>.
              * @param index  the index of the item being queried
@@ -960,7 +960,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getTabComponentAt(index: number /*int*/): java.awt.Component
+            public getTabComponentAt(index: number /*int*/): java.awt.Component
             /**
              * Returns the index of the tab for the specified tab component.
              * Returns -1 if there is no tab for this tab component.
@@ -972,7 +972,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            indexOfTabComponent(tabComponent: java.awt.Component): int
+            public indexOfTabComponent(tabComponent: java.awt.Component): number /*int*/
         }
     }
 }

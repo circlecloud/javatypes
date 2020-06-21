@@ -9,17 +9,17 @@ declare namespace org {
                     // @ts-ignore
                     class BodyParts extends java.lang.Object {
                         // @ts-ignore
-                        readonly CHEST: org.spongepowered.api.data.type.BodyPart
+                        public static readonly CHEST: org.spongepowered.api.data.type.BodyPart
                         // @ts-ignore
-                        readonly HEAD: org.spongepowered.api.data.type.BodyPart
+                        public static readonly HEAD: org.spongepowered.api.data.type.BodyPart
                         // @ts-ignore
-                        readonly LEFT_ARM: org.spongepowered.api.data.type.BodyPart
+                        public static readonly LEFT_ARM: org.spongepowered.api.data.type.BodyPart
                         // @ts-ignore
-                        readonly LEFT_LEG: org.spongepowered.api.data.type.BodyPart
+                        public static readonly LEFT_LEG: org.spongepowered.api.data.type.BodyPart
                         // @ts-ignore
-                        readonly RIGHT_ARM: org.spongepowered.api.data.type.BodyPart
+                        public static readonly RIGHT_ARM: org.spongepowered.api.data.type.BodyPart
                         // @ts-ignore
-                        readonly RIGHT_LEG: org.spongepowered.api.data.type.BodyPart
+                        public static readonly RIGHT_LEG: org.spongepowered.api.data.type.BodyPart
                     }
                 }
             }

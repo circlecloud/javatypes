@@ -26,7 +26,7 @@ declare namespace javax {
              * @return the description of the icon
              */
             // @ts-ignore
-            getAccessibleIconDescription(): java.lang.String
+            getAccessibleIconDescription(): string
             /**
              * Sets the description of the icon.  This is meant to be a brief
              * textual description of the object.  For example, it might be
@@ -35,19 +35,19 @@ declare namespace javax {
              * @param description the description of the icon
              */
             // @ts-ignore
-            setAccessibleIconDescription(description: string): void
+            setAccessibleIconDescription(description: java.lang.String | string): void
             /**
              * Gets the width of the icon
              * @return the width of the icon.
              */
             // @ts-ignore
-            getAccessibleIconWidth(): int
+            getAccessibleIconWidth(): number /*int*/
             /**
              * Gets the height of the icon
              * @return the height of the icon.
              */
             // @ts-ignore
-            getAccessibleIconHeight(): int
+            getAccessibleIconHeight(): number /*int*/
         }
     }
 }

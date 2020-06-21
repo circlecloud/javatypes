@@ -19,13 +19,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObject(): java.time.format.DateTimeFormatter
+                        public getObject(): java.time.format.DateTimeFormatter
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

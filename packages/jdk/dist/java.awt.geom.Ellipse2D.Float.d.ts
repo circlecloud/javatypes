@@ -36,7 +36,7 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*float*/
+                    public x: number /*float*/
                     /**
                      * The Y coordinate of the upper-left corner of the
                      * framing rectangle of this {@code Ellipse2D}.
@@ -44,51 +44,51 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*float*/
+                    public y: number /*float*/
                     /**
                      * The overall width of this <code>Ellipse2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    width: number /*float*/
+                    public width: number /*float*/
                     /**
                      * The overall height of this <code>Ellipse2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    height: number /*float*/
+                    public height: number /*float*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getWidth(): double
+                    public getWidth(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getHeight(): double
+                    public getHeight(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     /**
                      * Sets the location and size of the framing rectangle of this
                      * <code>Shape</code> to the specified rectangular values.
@@ -101,19 +101,19 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setFrame(x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/): void
+                    public setFrame(x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                    public setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                 }
             }
         }

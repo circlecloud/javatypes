@@ -21,13 +21,13 @@ declare namespace org {
                          * The canonical instance for the autowired marker value.
                          */
                         // @ts-ignore
-                        readonly INSTANCE: any
+                        public static readonly INSTANCE: java.lang.Object | any
                         // @ts-ignore
-                        equals(obj: any): boolean
+                        public equals(obj: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

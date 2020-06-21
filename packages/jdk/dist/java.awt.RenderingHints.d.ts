@@ -46,7 +46,7 @@ declare namespace java {
          * which subclass the {@code Key} class and defining the associated values.
          */
         // @ts-ignore
-        class RenderingHints extends java.lang.Object implements java.util.Map<java.lang.Object, java.lang.Object>, java.lang.Cloneable {
+        class RenderingHints extends java.lang.Object implements java.util.Map<java.lang.Object | any, java.lang.Object | any>, java.lang.Cloneable {
             /**
              * Constructs a new object with keys and values initialized
              * from the specified Map object which may be null.
@@ -62,7 +62,7 @@ declare namespace java {
              *  <code>key</code>
              */
             // @ts-ignore
-            constructor(key: java.awt.RenderingHints.Key, value: any)
+            constructor(key: java.awt.RenderingHints.Key, value: java.lang.Object | any)
             /**
              * Antialiasing hint key.
              * The {@code ANTIALIASING} hint controls whether or not the
@@ -83,26 +83,26 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_ANTIALIASING: java.awt.RenderingHints.Key
+            public static readonly KEY_ANTIALIASING: java.awt.RenderingHints.Key
             /**
              * Antialiasing hint value -- rendering is done with antialiasing.
              * @see #KEY_ANTIALIASING
              */
             // @ts-ignore
-            readonly VALUE_ANTIALIAS_ON: any
+            public static readonly VALUE_ANTIALIAS_ON: java.lang.Object | any
             /**
              * Antialiasing hint value -- rendering is done without antialiasing.
              * @see #KEY_ANTIALIASING
              */
             // @ts-ignore
-            readonly VALUE_ANTIALIAS_OFF: any
+            public static readonly VALUE_ANTIALIAS_OFF: java.lang.Object | any
             /**
              * Antialiasing hint value -- rendering is done with a default
              * antialiasing mode chosen by the implementation.
              * @see #KEY_ANTIALIASING
              */
             // @ts-ignore
-            readonly VALUE_ANTIALIAS_DEFAULT: any
+            public static readonly VALUE_ANTIALIAS_DEFAULT: java.lang.Object | any
             /**
              * Rendering hint key.
              * The {@code RENDERING} hint is a general hint that provides
@@ -120,21 +120,21 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_RENDERING: java.awt.RenderingHints.Key
+            public static readonly KEY_RENDERING: java.awt.RenderingHints.Key
             /**
              * Rendering hint value -- rendering algorithms are chosen
              * with a preference for output speed.
              * @see #KEY_RENDERING
              */
             // @ts-ignore
-            readonly VALUE_RENDER_SPEED: any
+            public static readonly VALUE_RENDER_SPEED: java.lang.Object | any
             /**
              * Rendering hint value -- rendering algorithms are chosen
              * with a preference for output quality.
              * @see #KEY_RENDERING
              */
             // @ts-ignore
-            readonly VALUE_RENDER_QUALITY: any
+            public static readonly VALUE_RENDER_QUALITY: java.lang.Object | any
             /**
              * Rendering hint value -- rendering algorithms are chosen
              * by the implementation for a good tradeoff of performance
@@ -142,7 +142,7 @@ declare namespace java {
              * @see #KEY_RENDERING
              */
             // @ts-ignore
-            readonly VALUE_RENDER_DEFAULT: any
+            public static readonly VALUE_RENDER_DEFAULT: java.lang.Object | any
             /**
              * Dithering hint key.
              * The {@code DITHERING} hint controls how closely to approximate
@@ -167,26 +167,26 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_DITHERING: java.awt.RenderingHints.Key
+            public static readonly KEY_DITHERING: java.awt.RenderingHints.Key
             /**
              * Dithering hint value -- do not dither when rendering geometry.
              * @see #KEY_DITHERING
              */
             // @ts-ignore
-            readonly VALUE_DITHER_DISABLE: any
+            public static readonly VALUE_DITHER_DISABLE: java.lang.Object | any
             /**
              * Dithering hint value -- dither when rendering geometry, if needed.
              * @see #KEY_DITHERING
              */
             // @ts-ignore
-            readonly VALUE_DITHER_ENABLE: any
+            public static readonly VALUE_DITHER_ENABLE: java.lang.Object | any
             /**
              * Dithering hint value -- use a default for dithering chosen by
              * the implementation.
              * @see #KEY_DITHERING
              */
             // @ts-ignore
-            readonly VALUE_DITHER_DEFAULT: any
+            public static readonly VALUE_DITHER_DEFAULT: java.lang.Object | any
             /**
              * Text antialiasing hint key.
              * The {@code TEXT_ANTIALIASING} hint can control the use of
@@ -216,21 +216,21 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_TEXT_ANTIALIASING: java.awt.RenderingHints.Key
+            public static readonly KEY_TEXT_ANTIALIASING: java.awt.RenderingHints.Key
             /**
              * Text antialiasing hint value -- text rendering is done with
              * some form of antialiasing.
              * @see #KEY_TEXT_ANTIALIASING
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_ON: any
+            public static readonly VALUE_TEXT_ANTIALIAS_ON: java.lang.Object | any
             /**
              * Text antialiasing hint value -- text rendering is done without
              * any form of antialiasing.
              * @see #KEY_TEXT_ANTIALIASING
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_OFF: any
+            public static readonly VALUE_TEXT_ANTIALIAS_OFF: java.lang.Object | any
             /**
              * Text antialiasing hint value -- text rendering is done according
              * to the {@link #KEY_ANTIALIASING} hint or a default chosen by the
@@ -238,7 +238,7 @@ declare namespace java {
              * @see #KEY_TEXT_ANTIALIASING
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_DEFAULT: any
+            public static readonly VALUE_TEXT_ANTIALIAS_DEFAULT: java.lang.Object | any
             /**
              * Text antialiasing hint value -- text rendering is requested to
              * use information in the font resource which specifies for each point
@@ -263,7 +263,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_GASP: any
+            public static readonly VALUE_TEXT_ANTIALIAS_GASP: java.lang.Object | any
             /**
              * Text antialiasing hint value -- request that text be displayed
              * optimised for an LCD display with subpixels in order from display
@@ -308,7 +308,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_LCD_HRGB: any
+            public static readonly VALUE_TEXT_ANTIALIAS_LCD_HRGB: java.lang.Object | any
             /**
              * Text antialiasing hint value -- request that text be displayed
              * optimised for an LCD display with subpixels in order from display
@@ -323,7 +323,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_LCD_HBGR: any
+            public static readonly VALUE_TEXT_ANTIALIAS_LCD_HBGR: java.lang.Object | any
             /**
              * Text antialiasing hint value -- request that text be displayed
              * optimised for an LCD display with subpixel organisation from display
@@ -339,7 +339,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_LCD_VRGB: any
+            public static readonly VALUE_TEXT_ANTIALIAS_LCD_VRGB: java.lang.Object | any
             /**
              * Text antialiasing hint value -- request that text be displayed
              * optimised for an LCD display with subpixel organisation from display
@@ -355,7 +355,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly VALUE_TEXT_ANTIALIAS_LCD_VBGR: any
+            public static readonly VALUE_TEXT_ANTIALIAS_LCD_VBGR: java.lang.Object | any
             /**
              * LCD text contrast rendering hint key.
              * The value is an <code>Integer</code> object which is used as a text
@@ -384,7 +384,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly KEY_TEXT_LCD_CONTRAST: java.awt.RenderingHints.Key
+            public static readonly KEY_TEXT_LCD_CONTRAST: java.awt.RenderingHints.Key
             /**
              * Font fractional metrics hint key.
              * The {@code FRACTIONALMETRICS} hint controls whether the positioning
@@ -471,28 +471,28 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_FRACTIONALMETRICS: java.awt.RenderingHints.Key
+            public static readonly KEY_FRACTIONALMETRICS: java.awt.RenderingHints.Key
             /**
              * Font fractional metrics hint value -- character glyphs are
              * positioned with advance widths rounded to pixel boundaries.
              * @see #KEY_FRACTIONALMETRICS
              */
             // @ts-ignore
-            readonly VALUE_FRACTIONALMETRICS_OFF: any
+            public static readonly VALUE_FRACTIONALMETRICS_OFF: java.lang.Object | any
             /**
              * Font fractional metrics hint value -- character glyphs are
              * positioned with sub-pixel accuracy.
              * @see #KEY_FRACTIONALMETRICS
              */
             // @ts-ignore
-            readonly VALUE_FRACTIONALMETRICS_ON: any
+            public static readonly VALUE_FRACTIONALMETRICS_ON: java.lang.Object | any
             /**
              * Font fractional metrics hint value -- character glyphs are
              * positioned with accuracy chosen by the implementation.
              * @see #KEY_FRACTIONALMETRICS
              */
             // @ts-ignore
-            readonly VALUE_FRACTIONALMETRICS_DEFAULT: any
+            public static readonly VALUE_FRACTIONALMETRICS_DEFAULT: java.lang.Object | any
             /**
              * Interpolation hint key.
              * The {@code INTERPOLATION} hint controls how image pixels are
@@ -524,7 +524,7 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_INTERPOLATION: java.awt.RenderingHints.Key
+            public static readonly KEY_INTERPOLATION: java.awt.RenderingHints.Key
             /**
              * Interpolation hint value -- the color sample of the nearest
              * neighboring integer coordinate sample in the image is used.
@@ -539,7 +539,7 @@ declare namespace java {
              * @see #KEY_INTERPOLATION
              */
             // @ts-ignore
-            readonly VALUE_INTERPOLATION_NEAREST_NEIGHBOR: any
+            public static readonly VALUE_INTERPOLATION_NEAREST_NEIGHBOR: java.lang.Object | any
             /**
              * Interpolation hint value -- the color samples of the 4 nearest
              * neighboring integer coordinate samples in the image are
@@ -564,7 +564,7 @@ declare namespace java {
              * @see #KEY_INTERPOLATION
              */
             // @ts-ignore
-            readonly VALUE_INTERPOLATION_BILINEAR: any
+            public static readonly VALUE_INTERPOLATION_BILINEAR: java.lang.Object | any
             /**
              * Interpolation hint value -- the color samples of 9 nearby
              * integer coordinate samples in the image are interpolated using
@@ -585,7 +585,7 @@ declare namespace java {
              * @see #KEY_INTERPOLATION
              */
             // @ts-ignore
-            readonly VALUE_INTERPOLATION_BICUBIC: any
+            public static readonly VALUE_INTERPOLATION_BICUBIC: java.lang.Object | any
             /**
              * Alpha interpolation hint key.
              * The {@code ALPHA_INTERPOLATION} hint is a general hint that
@@ -609,21 +609,21 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_ALPHA_INTERPOLATION: java.awt.RenderingHints.Key
+            public static readonly KEY_ALPHA_INTERPOLATION: java.awt.RenderingHints.Key
             /**
              * Alpha interpolation hint value -- alpha blending algorithms
              * are chosen with a preference for calculation speed.
              * @see #KEY_ALPHA_INTERPOLATION
              */
             // @ts-ignore
-            readonly VALUE_ALPHA_INTERPOLATION_SPEED: any
+            public static readonly VALUE_ALPHA_INTERPOLATION_SPEED: java.lang.Object | any
             /**
              * Alpha interpolation hint value -- alpha blending algorithms
              * are chosen with a preference for precision and visual quality.
              * @see #KEY_ALPHA_INTERPOLATION
              */
             // @ts-ignore
-            readonly VALUE_ALPHA_INTERPOLATION_QUALITY: any
+            public static readonly VALUE_ALPHA_INTERPOLATION_QUALITY: java.lang.Object | any
             /**
              * Alpha interpolation hint value -- alpha blending algorithms
              * are chosen by the implementation for a good tradeoff of
@@ -631,7 +631,7 @@ declare namespace java {
              * @see #KEY_ALPHA_INTERPOLATION
              */
             // @ts-ignore
-            readonly VALUE_ALPHA_INTERPOLATION_DEFAULT: any
+            public static readonly VALUE_ALPHA_INTERPOLATION_DEFAULT: java.lang.Object | any
             /**
              * Color rendering hint key.
              * The {@code COLOR_RENDERING} hint controls the accuracy of
@@ -681,21 +681,21 @@ declare namespace java {
              * </ul>
              */
             // @ts-ignore
-            readonly KEY_COLOR_RENDERING: java.awt.RenderingHints.Key
+            public static readonly KEY_COLOR_RENDERING: java.awt.RenderingHints.Key
             /**
              * Color rendering hint value -- perform the fastest color
              * conversion to the format of the output device.
              * @see #KEY_COLOR_RENDERING
              */
             // @ts-ignore
-            readonly VALUE_COLOR_RENDER_SPEED: any
+            public static readonly VALUE_COLOR_RENDER_SPEED: java.lang.Object | any
             /**
              * Color rendering hint value -- perform the color conversion
              * calculations with the highest accuracy and visual quality.
              * @see #KEY_COLOR_RENDERING
              */
             // @ts-ignore
-            readonly VALUE_COLOR_RENDER_QUALITY: any
+            public static readonly VALUE_COLOR_RENDER_QUALITY: java.lang.Object | any
             /**
              * Color rendering hint value -- perform color conversion
              * calculations as chosen by the implementation to represent
@@ -704,7 +704,7 @@ declare namespace java {
              * @see #KEY_COLOR_RENDERING
              */
             // @ts-ignore
-            readonly VALUE_COLOR_RENDER_DEFAULT: any
+            public static readonly VALUE_COLOR_RENDER_DEFAULT: java.lang.Object | any
             /**
              * Stroke normalization control hint key.
              * The {@code STROKE_CONTROL} hint controls whether a rendering
@@ -732,7 +732,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            readonly KEY_STROKE_CONTROL: java.awt.RenderingHints.Key
+            public static readonly KEY_STROKE_CONTROL: java.awt.RenderingHints.Key
             /**
              * Stroke normalization control hint value -- geometry may be
              * modified or left pure depending on the tradeoffs in a given
@@ -745,7 +745,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            readonly VALUE_STROKE_DEFAULT: any
+            public static readonly VALUE_STROKE_DEFAULT: java.lang.Object | any
             /**
              * Stroke normalization control hint value -- geometry should
              * be normalized to improve uniformity or spacing of lines and
@@ -756,7 +756,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            readonly VALUE_STROKE_NORMALIZE: any
+            public static readonly VALUE_STROKE_NORMALIZE: java.lang.Object | any
             /**
              * Stroke normalization control hint value -- geometry should
              * be left unmodified and rendered with sub-pixel accuracy.
@@ -764,7 +764,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            readonly VALUE_STROKE_PURE: any
+            public static readonly VALUE_STROKE_PURE: java.lang.Object | any
             /**
              * Returns the number of key-value mappings in this
              * <code>RenderingHints</code>.
@@ -772,7 +772,7 @@ declare namespace java {
              *  <code>RenderingHints</code>.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns <code>true</code> if this
              * <code>RenderingHints</code> contains no key-value mappings.
@@ -780,7 +780,7 @@ declare namespace java {
              *  <code>RenderingHints</code> contains no key-value mappings.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns {@code true} if this {@code RenderingHints}
              * contains a mapping for the specified key.
@@ -792,7 +792,7 @@ declare namespace java {
              *             be cast to {#code RenderingHints.Key}
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * Returns true if this RenderingHints maps one or more keys to the
              * specified value.
@@ -811,7 +811,7 @@ declare namespace java {
              *            maps one or more keys to the specified value.
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Returns the value to which the specified key is mapped.
              * @param key   a rendering hint key
@@ -823,7 +823,7 @@ declare namespace java {
              * @see #put(Object, Object)
              */
             // @ts-ignore
-            get(key: any): java.lang.Object
+            public get(key: java.lang.Object | any): any
             /**
              * Maps the specified {@code key} to the specified
              * {@code value} in this {@code RenderingHints} object.
@@ -846,7 +846,7 @@ declare namespace java {
              * @see #get(Object)
              */
             // @ts-ignore
-            put(key: any, value: any): java.lang.Object
+            public put(key: java.lang.Object | any, value: java.lang.Object | any): any
             /**
              * Adds all of the keys and corresponding values from the specified
              * <code>RenderingHints</code> object to this
@@ -857,13 +857,13 @@ declare namespace java {
              *  <code>RenderingHints</code> object
              */
             // @ts-ignore
-            add(hints: java.awt.RenderingHints): void
+            public add(hints: java.awt.RenderingHints): void
             /**
              * Clears this <code>RenderingHints</code> object of all key/value
              * pairs.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Removes the key and its corresponding value from this
              * {@code RenderingHints} object. This method does nothing if the
@@ -876,7 +876,7 @@ declare namespace java {
              *           if the key did not have a mapping.
              */
             // @ts-ignore
-            remove(key: any): java.lang.Object
+            public remove(key: java.lang.Object | any): any
             /**
              * Copies all of the mappings from the specified {@code Map}
              * to this {@code RenderingHints}.  These mappings replace
@@ -892,7 +892,7 @@ declare namespace java {
              *             this {@code RenderingHints}.
              */
             // @ts-ignore
-            putAll(m: java.util.Map<any, ?>): void
+            public putAll(m: java.util.Map<any, any>): void
             /**
              * Returns a <code>Set</code> view of the Keys contained in this
              * <code>RenderingHints</code>.  The Set is backed by the
@@ -911,7 +911,7 @@ declare namespace java {
              *  in this <code>RenderingHints</code>.
              */
             // @ts-ignore
-            keySet(): java.util.Set<java.lang.Object>
+            public keySet(): Array<java.lang.Object | any>
             /**
              * Returns a <code>Collection</code> view of the values
              * contained in this <code>RenderinHints</code>.
@@ -934,7 +934,7 @@ declare namespace java {
              *           contained in this <code>RenderingHints</code>.
              */
             // @ts-ignore
-            values(): java.util.Collection<java.lang.Object>
+            public values(): Array<java.lang.Object | any>
             /**
              * Returns a <code>Set</code> view of the mappings contained
              * in this <code>RenderingHints</code>.  Each element in the
@@ -952,7 +952,7 @@ declare namespace java {
              *  this <code>RenderingHints</code>.
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<java.lang.Object, java.lang.Object>>
+            public entrySet(): Array<java.util.Map.Entry<java.lang.Object | any, java.lang.Object | any>>
             /**
              * Compares the specified <code>Object</code> with this
              * <code>RenderingHints</code> for equality.
@@ -973,7 +973,7 @@ declare namespace java {
              *  is equal to this <code>RenderingHints</code>.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this <code>RenderingHints</code>.
              * The hash code of a <code>RenderingHints</code> is defined to be
@@ -990,7 +990,7 @@ declare namespace java {
              * @see #equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Creates a clone of this <code>RenderingHints</code> object
              * that has the same contents as this <code>RenderingHints</code>
@@ -998,7 +998,7 @@ declare namespace java {
              * @return a clone of this instance.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns a rather long string representation of the hashmap
              * which contains the mappings of keys to values for this
@@ -1006,7 +1006,7 @@ declare namespace java {
              * @return a string representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

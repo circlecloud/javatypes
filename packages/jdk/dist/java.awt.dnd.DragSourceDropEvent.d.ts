@@ -79,7 +79,7 @@ declare namespace java {
                  *          a drop action.
                  */
                 // @ts-ignore
-                getDropSuccess(): boolean
+                public getDropSuccess(): boolean
                 /**
                  * This method returns an <code>int</code> representing
                  * the action performed by the target on the subject of the drop.
@@ -89,7 +89,7 @@ declare namespace java {
                  *          <code>DnDConstants.ACTION_NONE</code>.
                  */
                 // @ts-ignore
-                getDropAction(): int
+                public getDropAction(): number /*int*/
             }
         }
     }

@@ -27,7 +27,7 @@ declare namespace javax {
              * @param explanation Possibly null detail about this exception.
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
         }
     }
 }

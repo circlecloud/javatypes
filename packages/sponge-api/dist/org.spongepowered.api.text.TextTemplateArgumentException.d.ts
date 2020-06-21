@@ -13,7 +13,7 @@ declare namespace org {
                      * @param msg Exception message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                 }
             }
         }

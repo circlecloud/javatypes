@@ -11,17 +11,17 @@ declare namespace org {
                      * Represents a nether based dimension.
                      */
                     // @ts-ignore
-                    readonly NETHER: org.spongepowered.api.world.DimensionType
+                    public static readonly NETHER: org.spongepowered.api.world.DimensionType
                     /**
                      * Represents the default dimension type of a {@link World}.
                      */
                     // @ts-ignore
-                    readonly OVERWORLD: org.spongepowered.api.world.DimensionType
+                    public static readonly OVERWORLD: org.spongepowered.api.world.DimensionType
                     /**
                      * Represents an "end" based dimension.
                      */
                     // @ts-ignore
-                    readonly THE_END: org.spongepowered.api.world.DimensionType
+                    public static readonly THE_END: org.spongepowered.api.world.DimensionType
                 }
             }
         }

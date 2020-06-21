@@ -18,7 +18,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            class AccessibleAbstractButton extends javax.swing.JComponent.AccessibleJComponent implements javax.accessibility.AccessibleAction, javax.accessibility.AccessibleValue, javax.accessibility.AccessibleText, javax.accessibility.AccessibleExtendedComponent {
+            abstract class AccessibleAbstractButton extends javax.swing.JComponent.AccessibleJComponent implements javax.accessibility.AccessibleAction, javax.accessibility.AccessibleValue, javax.accessibility.AccessibleText, javax.accessibility.AccessibleExtendedComponent {
                 // @ts-ignore
                 constructor()
                 /**
@@ -28,14 +28,14 @@ declare namespace javax {
                  *               object does not have a name
                  */
                 // @ts-ignore
-                getAccessibleName(): java.lang.String
+                public getAccessibleName(): string
                 /**
                  * Get the AccessibleIcons associated with this object if one
                  * or more exist.  Otherwise return null.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleIcon(): javax.accessibility.AccessibleIcon[]
+                public getAccessibleIcon(): javax.accessibility.AccessibleIcon[]
                 /**
                  * Get the state set of this object.
                  * @return an instance of AccessibleState containing the current state
@@ -43,7 +43,7 @@ declare namespace javax {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Get the AccessibleRelationSet associated with this object if one
                  * exists.  Otherwise return null.
@@ -51,7 +51,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleRelationSet(): javax.accessibility.AccessibleRelationSet
+                public getAccessibleRelationSet(): javax.accessibility.AccessibleRelationSet
                 /**
                  * Get the AccessibleAction associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleAction(): javax.accessibility.AccessibleAction
+                public getAccessibleAction(): javax.accessibility.AccessibleAction
                 /**
                  * Get the AccessibleValue associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleValue(): javax.accessibility.AccessibleValue
+                public getAccessibleValue(): javax.accessibility.AccessibleValue
                 /**
                  * Returns the number of Actions available in this object.  The
                  * default behavior of a button is to have one action - toggle
@@ -77,20 +77,20 @@ declare namespace javax {
                  * @return 1, the number of Actions in this object
                  */
                 // @ts-ignore
-                getAccessibleActionCount(): int
+                public getAccessibleActionCount(): number /*int*/
                 /**
                  * Return a description of the specified action of the object.
                  * @param i zero-based index of the actions
                  */
                 // @ts-ignore
-                getAccessibleActionDescription(i: number /*int*/): java.lang.String
+                public getAccessibleActionDescription(i: number /*int*/): string
                 /**
                  * Perform the specified Action on the object
                  * @param i zero-based index of actions
                  * @return true if the the action was performed; else false.
                  */
                 // @ts-ignore
-                doAccessibleAction(i: number /*int*/): boolean
+                public doAccessibleAction(i: number /*int*/): boolean
                 /**
                  * Get the value of this object as a Number.
                  * @return An Integer of 0 if this isn't selected or an Integer of 1 if
@@ -98,27 +98,27 @@ declare namespace javax {
                  * @see AbstractButton#isSelected
                  */
                 // @ts-ignore
-                getCurrentAccessibleValue(): java.lang.Number
+                public getCurrentAccessibleValue(): java.lang.Number
                 /**
                  * Set the value of this object as a Number.
                  * @return True if the value was set.
                  */
                 // @ts-ignore
-                setCurrentAccessibleValue(n: java.lang.Number): boolean
+                public setCurrentAccessibleValue(n: java.lang.Number): boolean
                 /**
                  * Get the minimum value of this object as a Number.
                  * @return an Integer of 0.
                  */
                 // @ts-ignore
-                getMinimumAccessibleValue(): java.lang.Number
+                public getMinimumAccessibleValue(): java.lang.Number
                 /**
                  * Get the maximum value of this object as a Number.
                  * @return An Integer of 1.
                  */
                 // @ts-ignore
-                getMaximumAccessibleValue(): java.lang.Number
+                public getMaximumAccessibleValue(): java.lang.Number
                 // @ts-ignore
-                getAccessibleText(): javax.accessibility.AccessibleText
+                public getAccessibleText(): javax.accessibility.AccessibleText
                 /**
                  * Given a point in local coordinates, return the zero-based index
                  * of the character under that Point.  If the point is invalid,
@@ -133,7 +133,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getIndexAtPoint(p: java.awt.Point): int
+                public getIndexAtPoint(p: java.awt.Point): number /*int*/
                 /**
                  * Determine the bounding box of the character at the given
                  * index into the string.  The bounds are returned in local
@@ -149,14 +149,14 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getCharacterBounds(i: number /*int*/): java.awt.Rectangle
+                public getCharacterBounds(i: number /*int*/): java.awt.Rectangle
                 /**
                  * Return the number of characters (valid indicies)
                  * @return the number of characters
                  * @since 1.3
                  */
                 // @ts-ignore
-                getCharCount(): int
+                public getCharCount(): number /*int*/
                 /**
                  * Return the zero-based offset of the caret.
                  * Note: That to the right of the caret will have the same index
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getCaretPosition(): int
+                public getCaretPosition(): number /*int*/
                 /**
                  * Returns the String at a given index.
                  * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
@@ -176,7 +176,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAtIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getAtIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the String after a given index.
                  * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
@@ -187,7 +187,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAfterIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getAfterIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the String before a given index.
                  * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
@@ -198,7 +198,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getBeforeIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getBeforeIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Return the AttributeSet for a given character at a given index
                  * @param i the zero-based index into the text
@@ -206,7 +206,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getCharacterAttribute(i: number /*int*/): javax.swing.text.AttributeSet
+                public getCharacterAttribute(i: number /*int*/): javax.swing.text.AttributeSet
                 /**
                  * Returns the start offset within the selected text.
                  * If there is no selection, but there is
@@ -215,7 +215,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getSelectionStart(): int
+                public getSelectionStart(): number /*int*/
                 /**
                  * Returns the end offset within the selected text.
                  * If there is no selection, but there is
@@ -224,14 +224,14 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getSelectionEnd(): int
+                public getSelectionEnd(): number /*int*/
                 /**
                  * Returns the portion of the text that is selected.
                  * @return the String portion of the text that is selected
                  * @since 1.3
                  */
                 // @ts-ignore
-                getSelectedText(): java.lang.String
+                public getSelectedText(): string
                 /**
                  * Returns the tool tip text
                  * @return the tool tip text, if supported, of the object;
@@ -239,7 +239,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getToolTipText(): java.lang.String
+                public getToolTipText(): string
                 /**
                  * Returns the titled border text
                  * @return the titled border text, if supported, of the object;
@@ -247,7 +247,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getTitledBorderText(): java.lang.String
+                public getTitledBorderText(): string
                 /**
                  * Returns key bindings associated with this object
                  * @return the key bindings, if supported, of the object;
@@ -256,7 +256,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAccessibleKeyBinding(): javax.accessibility.AccessibleKeyBinding
+                public getAccessibleKeyBinding(): javax.accessibility.AccessibleKeyBinding
             }
         }
     }

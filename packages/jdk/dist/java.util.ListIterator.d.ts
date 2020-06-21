@@ -85,7 +85,7 @@ declare namespace java {
              *          iterator is at the end of the list
              */
             // @ts-ignore
-            nextIndex(): int
+            nextIndex(): number /*int*/
             /**
              * Returns the index of the element that would be returned by a
              * subsequent call to {@link #previous}. (Returns -1 if the list
@@ -95,7 +95,7 @@ declare namespace java {
              *          iterator is at the beginning of the list
              */
             // @ts-ignore
-            previousIndex(): int
+            previousIndex(): number /*int*/
             /**
              * Removes from the list the last element that was returned by {@link
              * #next} or {@link #previous} (optional operation).  This call can

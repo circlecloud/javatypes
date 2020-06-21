@@ -53,7 +53,7 @@ declare namespace javax {
                      *  JAXBSource or if either of the parameters are null.
                      */
                     // @ts-ignore
-                    constructor(context: javax.xml.bind.JAXBContext, contentObject: any)
+                    constructor(context: javax.xml.bind.JAXBContext, contentObject: java.lang.Object | any)
                     /**
                      * Creates a new {@link javax.xml.transform.Source} for the given content object.
                      * @param marshaller
@@ -69,7 +69,7 @@ declare namespace javax {
                      *  JAXBSource or if either of the parameters are null.
                      */
                     // @ts-ignore
-                    constructor(marshaller: javax.xml.bind.Marshaller, contentObject: any)
+                    constructor(marshaller: javax.xml.bind.Marshaller, contentObject: java.lang.Object | any)
                 }
             }
         }

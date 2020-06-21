@@ -24,7 +24,7 @@ declare namespace org {
                      * @return the collection.
                      */
                     // @ts-ignore
-                    getDeclaringAdmins(): java.util.Collection<?>
+                    getDeclaringAdmins(): Array<any>
                     /**
                      * Should ignore exceptions (such as mismatched args) when declaring.
                      * @return true if should ignore.

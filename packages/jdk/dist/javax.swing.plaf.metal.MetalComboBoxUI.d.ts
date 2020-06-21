@@ -22,9 +22,9 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * If necessary paints the currently selected item.
                      * @param g Graphics to paint to
@@ -34,7 +34,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    paintCurrentValue(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
+                    public paintCurrentValue(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
                     /**
                      * If necessary paints the background of the currently selected item.
                      * @param g Graphics to paint to
@@ -44,7 +44,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    paintCurrentValueBackground(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
+                    public paintCurrentValueBackground(g: java.awt.Graphics, bounds: java.awt.Rectangle, hasFocus: boolean): void
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -53,7 +53,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     // @ts-ignore
                     createEditor(): javax.swing.ComboBoxEditor
                     // @ts-ignore
@@ -61,7 +61,7 @@ declare namespace javax {
                     // @ts-ignore
                     createArrowButton(): javax.swing.JButton
                     // @ts-ignore
-                    createPropertyChangeListener(): java.beans.PropertyChangeListener
+                    public createPropertyChangeListener(): java.beans.PropertyChangeListener
                     /**
                      * As of Java 2 platform v1.4 this method is no longer used. Do not call or
                      * override. All the functionality of this method is in the
@@ -73,7 +73,7 @@ declare namespace javax {
                     // @ts-ignore
                     createLayoutManager(): java.awt.LayoutManager
                     // @ts-ignore
-                    layoutComboBox(parent: java.awt.Container, manager: javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxLayoutManager): void
+                    public layoutComboBox(parent: java.awt.Container, manager: javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxLayoutManager): void
                     /**
                      * As of Java 2 platform v1.4 this method is no
                      * longer used.
@@ -82,11 +82,11 @@ declare namespace javax {
                     // @ts-ignore
                     removeListeners(): void
                     // @ts-ignore
-                    configureEditor(): void
+                    public configureEditor(): void
                     // @ts-ignore
-                    unconfigureEditor(): void
+                    public unconfigureEditor(): void
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                 }
             }
         }

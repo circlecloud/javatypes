@@ -19,13 +19,13 @@ declare namespace javax {
                      * production in the XML 1.0 specification
                      */
                     // @ts-ignore
-                    getDocumentTypeDeclaration(): java.lang.String
+                    getDocumentTypeDeclaration(): string
                     /**
                      * Returns an implementation defined representation of the DTD.
                      * This method may return null if no representation is available.
                      */
                     // @ts-ignore
-                    getProcessedDTD(): java.lang.Object
+                    getProcessedDTD(): any
                     /**
                      * Return a List containing the notations declared in the DTD.
                      * This list must contain NotationDeclaration events.
@@ -33,7 +33,7 @@ declare namespace javax {
                      * @return an unordered list of NotationDeclaration events
                      */
                     // @ts-ignore
-                    getNotations(): java.util.List
+                    getNotations(): Array<any>
                     /**
                      * Return a List containing the general entities,
                      * both external and internal, declared in the DTD.
@@ -42,7 +42,7 @@ declare namespace javax {
                      * @return an unordered list of EntityDeclaration events
                      */
                     // @ts-ignore
-                    getEntities(): java.util.List
+                    getEntities(): Array<any>
                 }
             }
         }

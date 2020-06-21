@@ -18,12 +18,12 @@ declare namespace org {
                      * The original path from which this instance was parsed.
                      */
                     // @ts-ignore
-                    value(): java.lang.String
+                    value(): string
                     /**
                      * The contained path elements, either {@link Separator} or {@link PathSegment}.
                      */
                     // @ts-ignore
-                    elements(): java.util.List<org.springframework.http.server.PathContainer.Element>
+                    elements(): Array<org.springframework.http.server.PathContainer.Element>
                     /**
                      * Extract a sub-path from the given offset into the elements list.
                      * @param index the start element index (inclusive)
@@ -47,7 +47,7 @@ declare namespace org {
                      * @return the parsed path
                      */
                     // @ts-ignore
-                    parsePath(path: string): org.springframework.http.server.PathContainer
+                    parsePath(path: java.lang.String | string): org.springframework.http.server.PathContainer
                     /**
                      * Parse the path value into a sequence of {@link Separator Separator} and
                      * {@link PathSegment PathSegment} elements.
@@ -57,7 +57,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    parsePath(path: string, options: org.springframework.http.server.PathContainer.Options): org.springframework.http.server.PathContainer
+                    parsePath(path: java.lang.String | string, options: org.springframework.http.server.PathContainer.Options): org.springframework.http.server.PathContainer
                 }
             }
         }

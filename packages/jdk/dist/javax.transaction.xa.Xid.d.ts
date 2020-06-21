@@ -15,32 +15,32 @@ declare namespace javax {
                  * Maximum number of bytes returned by getGtrid.
                  */
                 // @ts-ignore
-                
+                readonly MAXGTRIDSIZE: number /*int*/
                 /**
                  * Maximum number of bytes returned by getBqual.
                  */
                 // @ts-ignore
-                
+                readonly MAXBQUALSIZE: number /*int*/
                 /**
                  * Obtain the format identifier part of the XID.
                  * @return Format identifier. O means the OSI CCR format.
                  */
                 // @ts-ignore
-                getFormatId(): int
+                getFormatId(): number /*int*/
                 /**
                  * Obtain the global transaction identifier part of XID as an array
                  * of bytes.
                  * @return Global transaction identifier.
                  */
                 // @ts-ignore
-                getGlobalTransactionId(): byte[]
+                getGlobalTransactionId(): number /*byte*/[]
                 /**
                  * Obtain the transaction branch identifier part of XID as an array
                  * of bytes.
                  * @return Global transaction identifier.
                  */
                 // @ts-ignore
-                getBranchQualifier(): byte[]
+                getBranchQualifier(): number /*byte*/[]
             }
         }
     }

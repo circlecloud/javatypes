@@ -33,25 +33,25 @@ declare namespace java {
                  * @return the X origin.
                  */
                 // @ts-ignore
-                getXOrigin(): int
+                public getXOrigin(): number /*int*/
                 /**
                  * Returns the Y origin of this <code>Kernel</code>.
                  * @return the Y origin.
                  */
                 // @ts-ignore
-                getYOrigin(): int
+                public getYOrigin(): number /*int*/
                 /**
                  * Returns the width of this <code>Kernel</code>.
                  * @return the width of this <code>Kernel</code>.
                  */
                 // @ts-ignore
-                getWidth(): int
+                public getWidth(): number /*int*/
                 /**
                  * Returns the height of this <code>Kernel</code>.
                  * @return the height of this <code>Kernel</code>.
                  */
                 // @ts-ignore
-                getHeight(): int
+                public getHeight(): number /*int*/
                 /**
                  * Returns the kernel data in row major order.
                  * The <code>data</code> array is returned.  If <code>data</code>
@@ -65,13 +65,13 @@ declare namespace java {
                  *          than the size of this <code>Kernel</code>
                  */
                 // @ts-ignore
-                getKernelData(data: number /*float*/[]): float[]
+                public getKernelData(data: number /*float*/[]): number /*float*/[]
                 /**
                  * Clones this object.
                  * @return a clone of this object.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

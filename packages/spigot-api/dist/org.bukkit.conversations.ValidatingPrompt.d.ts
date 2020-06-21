@@ -7,7 +7,7 @@ declare namespace org {
              * a valid response.
              */
             // @ts-ignore
-            class ValidatingPrompt extends java.lang.Object implements org.bukkit.conversations.Prompt {
+            abstract class ValidatingPrompt extends java.lang.Object implements org.bukkit.conversations.Prompt {
                 // @ts-ignore
                 constructor()
                 /**
@@ -19,14 +19,14 @@ declare namespace org {
                  * @return This prompt or the next Prompt in the prompt graph.
                  */
                 // @ts-ignore
-                acceptInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                public acceptInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
                 /**
                  * Ensures that the prompt waits for the user to provide input.
                  * @param context Context information about the conversation.
                  * @return True.
                  */
                 // @ts-ignore
-                blocksForInput(context: org.bukkit.conversations.ConversationContext): boolean
+                public blocksForInput(context: org.bukkit.conversations.ConversationContext): boolean
                 /**
                  * Override this method to check the validity of the player's input.
                  * @param context Context information about the conversation.
@@ -34,7 +34,7 @@ declare namespace org {
                  * @return True or false depending on the validity of the input.
                  */
                 // @ts-ignore
-                abstract isInputValid(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                abstract isInputValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 /**
                  * Override this method to accept and processes the validated input from
                  * the user. Using the input, the next Prompt in the prompt graph should
@@ -44,7 +44,7 @@ declare namespace org {
                  * @return The next Prompt in the prompt graph.
                  */
                 // @ts-ignore
-                abstract acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                abstract acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
                 /**
                  * Optionally override this method to display an additional message if the
                  * user enters an invalid input.
@@ -53,7 +53,7 @@ declare namespace org {
                  * @return A message explaining how to correct the input.
                  */
                 // @ts-ignore
-                getFailedValidationText(context: org.bukkit.conversations.ConversationContext, invalidInput: string): java.lang.String
+                getFailedValidationText(context: org.bukkit.conversations.ConversationContext, invalidInput: java.lang.String | string): string
             }
         }
     }

@@ -111,7 +111,7 @@ declare namespace javax {
          * @author Arnaud Weber
          */
         // @ts-ignore
-        class JComponent extends java.awt.Container implements java.io.Serializable, javax.swing.TransferHandler.HasGetTransferHandler {
+        abstract class JComponent extends java.awt.Container implements java.io.Serializable, javax.swing.TransferHandler.HasGetTransferHandler {
             /**
              * Default <code>JComponent</code> constructor.  This constructor does
              * very little initialization beyond calling the <code>Container</code>
@@ -139,7 +139,7 @@ declare namespace javax {
              * the component has the focus.
              */
             // @ts-ignore
-            readonly WHEN_FOCUSED: number /*int*/
+            public static readonly WHEN_FOCUSED: number /*int*/
             /**
              * Constant used for <code>registerKeyboardAction</code> that
              * means that the command should be invoked when the receiving
@@ -147,7 +147,7 @@ declare namespace javax {
              * itself the focused component.
              */
             // @ts-ignore
-            readonly WHEN_ANCESTOR_OF_FOCUSED_COMPONENT: number /*int*/
+            public static readonly WHEN_ANCESTOR_OF_FOCUSED_COMPONENT: number /*int*/
             /**
              * Constant used for <code>registerKeyboardAction</code> that
              * means that the command should be invoked when
@@ -155,18 +155,18 @@ declare namespace javax {
              * or is itself the focused component.
              */
             // @ts-ignore
-            readonly WHEN_IN_FOCUSED_WINDOW: number /*int*/
+            public static readonly WHEN_IN_FOCUSED_WINDOW: number /*int*/
             /**
              * Constant used by some of the APIs to mean that no condition is defined.
              */
             // @ts-ignore
-            readonly UNDEFINED_CONDITION: number /*int*/
+            public static readonly UNDEFINED_CONDITION: number /*int*/
             /**
              * The comment to display when the cursor is over the component,
              * also known as a "value tip", "flyover help", or "flyover label".
              */
             // @ts-ignore
-            readonly TOOL_TIP_TEXT_KEY: string
+            public static readonly TOOL_TIP_TEXT_KEY: java.lang.String | string
             /**
              * Sets whether or not <code>getComponentPopupMenu</code> should delegate
              * to the parent if this component does not have a <code>JPopupMenu</code>
@@ -184,14 +184,14 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            setInheritsPopupMenu(value: boolean): void
+            public setInheritsPopupMenu(value: boolean): void
             /**
              * Returns true if the JPopupMenu should be inherited from the parent.
              * @see #setComponentPopupMenu
              * @since 1.5
              */
             // @ts-ignore
-            getInheritsPopupMenu(): boolean
+            public getInheritsPopupMenu(): boolean
             /**
              * Sets the <code>JPopupMenu</code> for this <code>JComponent</code>.
              * The UI is responsible for registering bindings and adding the necessary
@@ -215,7 +215,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            setComponentPopupMenu(popup: javax.swing.JPopupMenu): void
+            public setComponentPopupMenu(popup: javax.swing.JPopupMenu): void
             /**
              * Returns <code>JPopupMenu</code> that assigned for this component.
              * If this component does not have a <code>JPopupMenu</code> assigned
@@ -228,7 +228,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getComponentPopupMenu(): javax.swing.JPopupMenu
+            public getComponentPopupMenu(): javax.swing.JPopupMenu
             /**
              * Resets the UI property to a value from the current look and feel.
              * <code>JComponent</code> subclasses must override this method
@@ -243,7 +243,7 @@ declare namespace javax {
              * @see UIManager#getUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Sets the look and feel delegate for this component.
              * <code>JComponent</code> subclasses generally override this method
@@ -288,7 +288,7 @@ declare namespace javax {
              *  description: UIClassID
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the graphics object used to paint this component.
              * If <code>DebugGraphics</code> is turned on we create a new
@@ -368,7 +368,7 @@ declare namespace javax {
              * @see javax.swing.plaf.ComponentUI
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Invoked by Swing to draw components.
              * Applications should not invoke <code>paint</code> directly,
@@ -394,7 +394,7 @@ declare namespace javax {
              * @see #repaint
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Invoke this method to print the component. This method invokes
              * <code>print</code> on the component.
@@ -405,7 +405,7 @@ declare namespace javax {
              * @see #printChildren
              */
             // @ts-ignore
-            printAll(g: java.awt.Graphics): void
+            public printAll(g: java.awt.Graphics): void
             /**
              * Invoke this method to print the component to the specified
              * <code>Graphics</code>. This method will result in invocations
@@ -448,7 +448,7 @@ declare namespace javax {
              * @see #isPaintingForPrint
              */
             // @ts-ignore
-            print(g: java.awt.Graphics): void
+            public print(g: java.awt.Graphics): void
             /**
              * This is invoked during a printing operation. This is implemented to
              * invoke <code>paintComponent</code> on the component. Override this
@@ -489,7 +489,7 @@ declare namespace javax {
              *           false otherwise
              */
             // @ts-ignore
-            isPaintingTile(): boolean
+            public isPaintingTile(): boolean
             /**
              * Returns <code>true</code> if the current painting operation on this
              * component is part of a <code>print</code> operation. This method is
@@ -516,7 +516,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            isPaintingForPrint(): boolean
+            public isPaintingForPrint(): boolean
             /**
              * In release 1.4, the focus subsystem was rearchitected.
              * For more information, see
@@ -535,7 +535,7 @@ declare namespace javax {
              *    <code>Container.setFocusCycleRoot(boolean)</code>.
              */
             // @ts-ignore
-            isManagingFocus(): boolean
+            public isManagingFocus(): boolean
             /**
              * In release 1.4, the focus subsystem was rearchitected.
              * For more information, see
@@ -556,7 +556,7 @@ declare namespace javax {
              * @deprecated As of 1.4, replaced by <code>FocusTraversalPolicy</code>
              */
             // @ts-ignore
-            setNextFocusableComponent(aComponent: java.awt.Component): void
+            public setNextFocusableComponent(aComponent: java.awt.Component): void
             /**
              * In release 1.4, the focus subsystem was rearchitected.
              * For more information, see
@@ -574,7 +574,7 @@ declare namespace javax {
              * @deprecated As of 1.4, replaced by <code>FocusTraversalPolicy</code>.
              */
             // @ts-ignore
-            getNextFocusableComponent(): java.awt.Component
+            public getNextFocusableComponent(): java.awt.Component
             /**
              * Provides a hint as to whether or not this <code>JComponent</code>
              * should get focus. This is only a hint, and it is up to consumers that
@@ -598,7 +598,7 @@ declare namespace javax {
              * @see java.awt.Component#setFocusable
              */
             // @ts-ignore
-            setRequestFocusEnabled(requestFocusEnabled: boolean): void
+            public setRequestFocusEnabled(requestFocusEnabled: boolean): void
             /**
              * Returns <code>true</code> if this <code>JComponent</code> should
              * get focus; otherwise returns <code>false</code>.
@@ -616,7 +616,7 @@ declare namespace javax {
              * @see java.awt.Component#isFocusable
              */
             // @ts-ignore
-            isRequestFocusEnabled(): boolean
+            public isRequestFocusEnabled(): boolean
             /**
              * Requests that this <code>Component</code> gets the input focus.
              * Refer to {@link java.awt.Component#requestFocus()
@@ -635,7 +635,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            requestFocus(): void
+            public requestFocus(): void
             /**
              * Requests that this <code>Component</code> gets the input focus.
              * Refer to {@link java.awt.Component#requestFocus(boolean)
@@ -658,7 +658,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            requestFocus(temporary: boolean): boolean
+            public requestFocus(temporary: boolean): boolean
             /**
              * Requests that this <code>Component</code> gets the input focus.
              * Refer to {@link java.awt.Component#requestFocusInWindow()
@@ -676,7 +676,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            requestFocusInWindow(): boolean
+            public requestFocusInWindow(): boolean
             /**
              * Requests that this <code>Component</code> gets the input focus.
              * Refer to {@link java.awt.Component#requestFocusInWindow(boolean)
@@ -708,7 +708,7 @@ declare namespace javax {
              * @see #requestFocusInWindow()
              */
             // @ts-ignore
-            grabFocus(): void
+            public grabFocus(): void
             /**
              * Sets the value to indicate whether input verifier for the
              * current focus owner will be called before this component requests
@@ -728,7 +728,7 @@ declare namespace javax {
              *               focus.
              */
             // @ts-ignore
-            setVerifyInputWhenFocusTarget(verifyInputWhenFocusTarget: boolean): void
+            public setVerifyInputWhenFocusTarget(verifyInputWhenFocusTarget: boolean): void
             /**
              * Returns the value that indicates whether the input verifier for the
              * current focus owner will be called before this component requests
@@ -741,7 +741,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getVerifyInputWhenFocusTarget(): boolean
+            public getVerifyInputWhenFocusTarget(): boolean
             /**
              * Gets the <code>FontMetrics</code> for the specified <code>Font</code>.
              * @param font the font for which font metrics is to be
@@ -751,7 +751,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getFontMetrics(font: java.awt.Font): java.awt.FontMetrics
+            public getFontMetrics(font: java.awt.Font): java.awt.FontMetrics
             /**
              * Sets the preferred size of this component.
              * If <code>preferredSize</code> is <code>null</code>, the UI will
@@ -761,7 +761,7 @@ declare namespace javax {
              *  description: The preferred size of the component.
              */
             // @ts-ignore
-            setPreferredSize(preferredSize: java.awt.Dimension): void
+            public setPreferredSize(preferredSize: java.awt.Dimension): void
             /**
              * If the <code>preferredSize</code> has been set to a
              * non-<code>null</code> value just returns it.
@@ -773,7 +773,7 @@ declare namespace javax {
              * @see ComponentUI
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * Sets the maximum size of this component to a constant
              * value.  Subsequent calls to <code>getMaximumSize</code> will always
@@ -787,7 +787,7 @@ declare namespace javax {
              *  description: The maximum size of the component.
              */
             // @ts-ignore
-            setMaximumSize(maximumSize: java.awt.Dimension): void
+            public setMaximumSize(maximumSize: java.awt.Dimension): void
             /**
              * If the maximum size has been set to a non-<code>null</code> value
              * just returns it.  If the UI delegate's <code>getMaximumSize</code>
@@ -798,7 +798,7 @@ declare namespace javax {
              * @see ComponentUI
              */
             // @ts-ignore
-            getMaximumSize(): java.awt.Dimension
+            public getMaximumSize(): java.awt.Dimension
             /**
              * Sets the minimum size of this component to a constant
              * value.  Subsequent calls to <code>getMinimumSize</code> will always
@@ -811,7 +811,7 @@ declare namespace javax {
              *  description: The minimum size of the component.
              */
             // @ts-ignore
-            setMinimumSize(minimumSize: java.awt.Dimension): void
+            public setMinimumSize(minimumSize: java.awt.Dimension): void
             /**
              * If the minimum size has been set to a non-<code>null</code> value
              * just returns it.  If the UI delegate's <code>getMinimumSize</code>
@@ -822,7 +822,7 @@ declare namespace javax {
              * @see ComponentUI
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * Gives the UI delegate an opportunity to define the precise
              * shape of this component for the sake of mouse processing.
@@ -831,7 +831,7 @@ declare namespace javax {
              * @see ComponentUI
              */
             // @ts-ignore
-            contains(x: number /*int*/, y: number /*int*/): boolean
+            public contains(x: number /*int*/, y: number /*int*/): boolean
             /**
              * Sets the border of this component.  The <code>Border</code> object is
              * responsible for defining the insets for the component
@@ -862,7 +862,7 @@ declare namespace javax {
              *   description: The component's border.
              */
             // @ts-ignore
-            setBorder(border: javax.swing.border.Border): void
+            public setBorder(border: javax.swing.border.Border): void
             /**
              * Returns the border of this component or <code>null</code> if no
              * border is currently set.
@@ -870,7 +870,7 @@ declare namespace javax {
              * @see #setBorder
              */
             // @ts-ignore
-            getBorder(): javax.swing.border.Border
+            public getBorder(): javax.swing.border.Border
             /**
              * If a border has been set on this component, returns the
              * border's insets; otherwise calls <code>super.getInsets</code>.
@@ -878,7 +878,7 @@ declare namespace javax {
              * @see #setBorder
              */
             // @ts-ignore
-            getInsets(): java.awt.Insets
+            public getInsets(): java.awt.Insets
             /**
              * Returns an <code>Insets</code> object containing this component's inset
              * values.  The passed-in <code>Insets</code> object will be reused
@@ -892,7 +892,7 @@ declare namespace javax {
              * @beaninfo expert: true
              */
             // @ts-ignore
-            getInsets(insets: java.awt.Insets): java.awt.Insets
+            public getInsets(insets: java.awt.Insets): java.awt.Insets
             /**
              * Overrides <code>Container.getAlignmentY</code> to return
              * the horizontal alignment.
@@ -901,7 +901,7 @@ declare namespace javax {
              * @see java.awt.Component#getAlignmentY
              */
             // @ts-ignore
-            getAlignmentY(): float
+            public getAlignmentY(): number /*float*/
             /**
              * Sets the the horizontal alignment.
              * @param alignmentY  the new horizontal alignment
@@ -909,7 +909,7 @@ declare namespace javax {
              * @beaninfo description: The preferred vertical alignment of the component.
              */
             // @ts-ignore
-            setAlignmentY(alignmentY: number /*float*/): void
+            public setAlignmentY(alignmentY: number /*float*/): void
             /**
              * Overrides <code>Container.getAlignmentX</code> to return
              * the vertical alignment.
@@ -918,7 +918,7 @@ declare namespace javax {
              * @see java.awt.Component#getAlignmentX
              */
             // @ts-ignore
-            getAlignmentX(): float
+            public getAlignmentX(): number /*float*/
             /**
              * Sets the the vertical alignment.
              * @param alignmentX  the new vertical alignment
@@ -926,7 +926,7 @@ declare namespace javax {
              * @beaninfo description: The preferred horizontal alignment of the component.
              */
             // @ts-ignore
-            setAlignmentX(alignmentX: number /*float*/): void
+            public setAlignmentX(alignmentX: number /*float*/): void
             /**
              * Sets the input verifier for this component.
              * @param inputVerifier the new input verifier
@@ -936,7 +936,7 @@ declare namespace javax {
              *  description: The component's input verifier.
              */
             // @ts-ignore
-            setInputVerifier(inputVerifier: javax.swing.InputVerifier): void
+            public setInputVerifier(inputVerifier: javax.swing.InputVerifier): void
             /**
              * Returns the input verifier for this component.
              * @return the <code>inputVerifier</code> property
@@ -944,7 +944,7 @@ declare namespace javax {
              * @see InputVerifier
              */
             // @ts-ignore
-            getInputVerifier(): javax.swing.InputVerifier
+            public getInputVerifier(): javax.swing.InputVerifier
             /**
              * Returns this component's graphics context, which lets you draw
              * on a component. Use this method to get a <code>Graphics</code> object and
@@ -952,7 +952,7 @@ declare namespace javax {
              * @return this components graphics context
              */
             // @ts-ignore
-            getGraphics(): java.awt.Graphics
+            public getGraphics(): java.awt.Graphics
             /**
              * Enables or disables diagnostic information about every graphics
              * operation performed within the component or one of its children.
@@ -977,7 +977,7 @@ declare namespace javax {
              *  description: Diagnostic options for graphics operations.
              */
             // @ts-ignore
-            setDebugGraphicsOptions(debugOptions: number /*int*/): void
+            public setDebugGraphicsOptions(debugOptions: number /*int*/): void
             /**
              * Returns the state of graphics debugging.
              * @return a bitwise OR'd flag of zero or more of the following options:
@@ -994,7 +994,7 @@ declare namespace javax {
              * @see #setDebugGraphicsOptions
              */
             // @ts-ignore
-            getDebugGraphicsOptions(): int
+            public getDebugGraphicsOptions(): number /*int*/
             /**
              * This method is now obsolete, please use a combination of
              * <code>getActionMap()</code> and <code>getInputMap()</code> for
@@ -1059,14 +1059,14 @@ declare namespace javax {
              * @see KeyStroke
              */
             // @ts-ignore
-            registerKeyboardAction(anAction: java.awt.event.ActionListener, aCommand: string, aKeyStroke: javax.swing.KeyStroke, aCondition: number /*int*/): void
+            public registerKeyboardAction(anAction: java.awt.event.ActionListener, aCommand: java.lang.String | string, aKeyStroke: javax.swing.KeyStroke, aCondition: number /*int*/): void
             /**
              * This method is now obsolete, please use a combination of
              * <code>getActionMap()</code> and <code>getInputMap()</code> for
              * similar behavior.
              */
             // @ts-ignore
-            registerKeyboardAction(anAction: java.awt.event.ActionListener, aKeyStroke: javax.swing.KeyStroke, aCondition: number /*int*/): void
+            public registerKeyboardAction(anAction: java.awt.event.ActionListener, aKeyStroke: javax.swing.KeyStroke, aCondition: number /*int*/): void
             /**
              * This method is now obsolete. To unregister an existing binding
              * you can either remove the binding from the
@@ -1082,7 +1082,7 @@ declare namespace javax {
              * (if it exists) as well as the <code>InputMap</code>s.
              */
             // @ts-ignore
-            unregisterKeyboardAction(aKeyStroke: javax.swing.KeyStroke): void
+            public unregisterKeyboardAction(aKeyStroke: javax.swing.KeyStroke): void
             /**
              * Returns the <code>KeyStrokes</code> that will initiate
              * registered actions.
@@ -1090,7 +1090,7 @@ declare namespace javax {
              * @see #registerKeyboardAction
              */
             // @ts-ignore
-            getRegisteredKeyStrokes(): javax.swing.KeyStroke[]
+            public getRegisteredKeyStrokes(): javax.swing.KeyStroke[]
             /**
              * Returns the condition that determines whether a registered action
              * occurs in response to the specified keystroke.
@@ -1103,7 +1103,7 @@ declare namespace javax {
              * @return the action-keystroke condition
              */
             // @ts-ignore
-            getConditionForKeyStroke(aKeyStroke: javax.swing.KeyStroke): int
+            public getConditionForKeyStroke(aKeyStroke: javax.swing.KeyStroke): number /*int*/
             /**
              * Returns the object that will perform the action registered for a
              * given keystroke.
@@ -1111,7 +1111,7 @@ declare namespace javax {
              *           object invoked when the keystroke occurs
              */
             // @ts-ignore
-            getActionForKeyStroke(aKeyStroke: javax.swing.KeyStroke): java.awt.event.ActionListener
+            public getActionForKeyStroke(aKeyStroke: javax.swing.KeyStroke): java.awt.event.ActionListener
             /**
              * Unregisters all the bindings in the first tier <code>InputMaps</code>
              * and <code>ActionMap</code>. This has the effect of removing any
@@ -1120,7 +1120,7 @@ declare namespace javax {
              * (the UI is usually defined in the second tier) to persist.
              */
             // @ts-ignore
-            resetKeyboardActions(): void
+            public resetKeyboardActions(): void
             /**
              * Sets the <code>InputMap</code> to use under the condition
              * <code>condition</code> to
@@ -1148,7 +1148,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setInputMap(condition: number /*int*/, map: javax.swing.InputMap): void
+            public setInputMap(condition: number /*int*/, map: javax.swing.InputMap): void
             /**
              * Returns the <code>InputMap</code> that is used during
              * <code>condition</code>.
@@ -1159,7 +1159,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getInputMap(condition: number /*int*/): javax.swing.InputMap
+            public getInputMap(condition: number /*int*/): javax.swing.InputMap
             /**
              * Returns the <code>InputMap</code> that is used when the
              * component has focus.
@@ -1168,7 +1168,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getInputMap(): javax.swing.InputMap
+            public getInputMap(): javax.swing.InputMap
             /**
              * Sets the <code>ActionMap</code> to <code>am</code>. This does not set
              * the parent of the <code>am</code> to be the <code>ActionMap</code>
@@ -1177,7 +1177,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setActionMap(am: javax.swing.ActionMap): void
+            public setActionMap(am: javax.swing.ActionMap): void
             /**
              * Returns the <code>ActionMap</code> used to determine what
              * <code>Action</code> to fire for particular <code>KeyStroke</code>
@@ -1187,7 +1187,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getActionMap(): javax.swing.ActionMap
+            public getActionMap(): javax.swing.ActionMap
             /**
              * Returns the baseline.  The baseline is measured from the top of
              * the component.  This method is primarily meant for
@@ -1209,7 +1209,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getBaseline(width: number /*int*/, height: number /*int*/): int
+            public getBaseline(width: number /*int*/, height: number /*int*/): number /*int*/
             /**
              * Returns an enum indicating how the baseline of the component
              * changes as the size changes.  This method is primarily meant for
@@ -1231,7 +1231,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getBaselineResizeBehavior(): java.awt.Component.BaselineResizeBehavior
+            public getBaselineResizeBehavior(): java.awt.Component.BaselineResizeBehavior
             /**
              * In release 1.4, the focus subsystem was rearchitected.
              * For more information, see
@@ -1250,7 +1250,7 @@ declare namespace javax {
              *  <code>FocusTraversalPolicy.getDefaultComponent(Container).requestFocus()</code>
              */
             // @ts-ignore
-            requestDefaultFocus(): boolean
+            public requestDefaultFocus(): boolean
             /**
              * Makes the component visible or invisible.
              * Overrides <code>Component.setVisible</code>.
@@ -1259,7 +1259,7 @@ declare namespace javax {
              * @beaninfo attribute: visualUpdate true
              */
             // @ts-ignore
-            setVisible(aFlag: boolean): void
+            public setVisible(aFlag: boolean): void
             /**
              * Sets whether or not this component is enabled.
              * A component that is enabled may respond to user input,
@@ -1279,7 +1279,7 @@ declare namespace javax {
              *   description: The enabled state of the component.
              */
             // @ts-ignore
-            setEnabled(enabled: boolean): void
+            public setEnabled(enabled: boolean): void
             /**
              * Sets the foreground color of this component.  It is up to the
              * look and feel to honor this property, some may choose to ignore
@@ -1292,7 +1292,7 @@ declare namespace javax {
              *   description: The foreground color of the component.
              */
             // @ts-ignore
-            setForeground(fg: java.awt.Color): void
+            public setForeground(fg: java.awt.Color): void
             /**
              * Sets the background color of this component.  The background
              * color is used only if the component is opaque, and only
@@ -1312,7 +1312,7 @@ declare namespace javax {
              *   description: The background color of the component.
              */
             // @ts-ignore
-            setBackground(bg: java.awt.Color): void
+            public setBackground(bg: java.awt.Color): void
             /**
              * Sets the font for this component.
              * @param font the desired <code>Font</code> for this component
@@ -1323,7 +1323,7 @@ declare namespace javax {
              *   description: The font for the component.
              */
             // @ts-ignore
-            setFont(font: java.awt.Font): void
+            public setFont(font: java.awt.Font): void
             /**
              * Returns the default locale used to initialize each JComponent's
              * locale property upon creation.
@@ -1338,7 +1338,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDefaultLocale(): java.util.Locale
+            public static getDefaultLocale(): java.util.Locale
             /**
              * Sets the default locale used to initialize each JComponent's locale
              * property upon creation.  The initial value is the VM's default locale.
@@ -1353,7 +1353,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setDefaultLocale(l: java.util.Locale): void
+            public static setDefaultLocale(l: java.util.Locale): void
             /**
              * Processes any key events that the component itself
              * recognizes.  This is called after the focus
@@ -1411,7 +1411,7 @@ declare namespace javax {
              *  description: The text to display in a tool tip.
              */
             // @ts-ignore
-            setToolTipText(text: string): void
+            public setToolTipText(text: java.lang.String | string): void
             /**
              * Returns the tooltip string that has been set with
              * <code>setToolTipText</code>.
@@ -1419,7 +1419,7 @@ declare namespace javax {
              * @see #TOOL_TIP_TEXT_KEY
              */
             // @ts-ignore
-            getToolTipText(): java.lang.String
+            public getToolTipText(): string
             /**
              * Returns the string to be used as the tooltip for <i>event</i>.
              * By default this returns any string set using
@@ -1428,7 +1428,7 @@ declare namespace javax {
              * this method should be overridden.
              */
             // @ts-ignore
-            getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+            public getToolTipText(event: java.awt.event.MouseEvent): string
             /**
              * Returns the tooltip location in this component's coordinate system.
              * If <code>null</code> is returned, Swing will choose a location.
@@ -1438,7 +1438,7 @@ declare namespace javax {
              * @return always returns <code>null</code>
              */
             // @ts-ignore
-            getToolTipLocation(event: java.awt.event.MouseEvent): java.awt.Point
+            public getToolTipLocation(event: java.awt.event.MouseEvent): java.awt.Point
             /**
              * Returns the preferred location to display the popup menu in this
              * component's coordinate system. It is up to the look and feel to
@@ -1451,7 +1451,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getPopupLocation(event: java.awt.event.MouseEvent): java.awt.Point
+            public getPopupLocation(event: java.awt.event.MouseEvent): java.awt.Point
             /**
              * Returns the instance of <code>JToolTip</code> that should be used
              * to display the tooltip.
@@ -1461,7 +1461,7 @@ declare namespace javax {
              * @return the <code>JToolTip</code> used to display this toolTip
              */
             // @ts-ignore
-            createToolTip(): javax.swing.JToolTip
+            public createToolTip(): javax.swing.JToolTip
             /**
              * Forwards the <code>scrollRectToVisible()</code> message to the
              * <code>JComponent</code>'s parent. Components that can service
@@ -1471,7 +1471,7 @@ declare namespace javax {
              * @see JViewport
              */
             // @ts-ignore
-            scrollRectToVisible(aRect: java.awt.Rectangle): void
+            public scrollRectToVisible(aRect: java.awt.Rectangle): void
             /**
              * Sets the <code>autoscrolls</code> property.
              * If <code>true</code> mouse dragged events will be
@@ -1514,7 +1514,7 @@ declare namespace javax {
              *  description: Determines if this component automatically scrolls its contents when dragged.
              */
             // @ts-ignore
-            setAutoscrolls(autoscrolls: boolean): void
+            public setAutoscrolls(autoscrolls: boolean): void
             /**
              * Gets the <code>autoscrolls</code> property.
              * @return the value of the <code>autoscrolls</code> property
@@ -1522,7 +1522,7 @@ declare namespace javax {
              * @see #setAutoscrolls
              */
             // @ts-ignore
-            getAutoscrolls(): boolean
+            public getAutoscrolls(): boolean
             /**
              * Sets the {@code TransferHandler}, which provides support for transfer
              * of data into and out of this component via cut/copy/paste and drag
@@ -1560,7 +1560,7 @@ declare namespace javax {
              *   description: Mechanism for transfer of data to and from the component
              */
             // @ts-ignore
-            setTransferHandler(newHandler: javax.swing.TransferHandler): void
+            public setTransferHandler(newHandler: javax.swing.TransferHandler): void
             /**
              * Gets the <code>transferHandler</code> property.
              * @return the value of the <code>transferHandler</code> property
@@ -1569,7 +1569,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getTransferHandler(): javax.swing.TransferHandler
+            public getTransferHandler(): javax.swing.TransferHandler
             /**
              * Processes mouse events occurring on this component by
              * dispatching them to any registered
@@ -1594,13 +1594,13 @@ declare namespace javax {
              *  replaced by <code>java.awt.Component.setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            enable(): void
+            public enable(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>java.awt.Component.setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            disable(): void
+            public disable(): void
             /**
              * Returns the value of the property with the specified key.  Only
              * properties added with <code>putClientProperty</code> will return
@@ -1610,7 +1610,7 @@ declare namespace javax {
              * @see #putClientProperty
              */
             // @ts-ignore
-            getClientProperty(key: any): java.lang.Object
+            public getClientProperty(key: java.lang.Object | any): any
             /**
              * Adds an arbitrary key/value "client property" to this component.
              * <p>
@@ -1639,7 +1639,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            putClientProperty(key: any, value: any): void
+            public putClientProperty(key: java.lang.Object | any, value: java.lang.Object | any): void
             /**
              * Sets the focus traversal keys for a given traversal operation for this
              * Component.
@@ -1667,14 +1667,14 @@ declare namespace javax {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusTraversalKeys(id: number /*int*/, keystrokes: Array<java.awt.AWTKeyStroke>): void
+            public setFocusTraversalKeys(id: number /*int*/, keystrokes: java.util.Set<any> | Array<any>): void
             /**
              * Returns true if this component is lightweight, that is, if it doesn't
              * have a native window system peer.
              * @return true if this component is lightweight
              */
             // @ts-ignore
-            isLightweightComponent(c: java.awt.Component): boolean
+            public static isLightweightComponent(c: java.awt.Component): boolean
             /**
              * @deprecated As of JDK 5,
              *  replaced by <code>Component.setBounds(int, int, int, int)</code>.
@@ -1687,7 +1687,7 @@ declare namespace javax {
              * @see java.awt.Component#setBounds
              */
             // @ts-ignore
-            reshape(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public reshape(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Stores the bounds of this component into "return value"
              * <code>rv</code> and returns <code>rv</code>.
@@ -1701,7 +1701,7 @@ declare namespace javax {
              *           component's bounds
              */
             // @ts-ignore
-            getBounds(rv: java.awt.Rectangle): java.awt.Rectangle
+            public getBounds(rv: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Stores the width/height of this component into "return value"
              * <code>rv</code> and returns <code>rv</code>.
@@ -1713,7 +1713,7 @@ declare namespace javax {
              * @return <code>rv</code>
              */
             // @ts-ignore
-            getSize(rv: java.awt.Dimension): java.awt.Dimension
+            public getSize(rv: java.awt.Dimension): java.awt.Dimension
             /**
              * Stores the x,y origin of this component into "return value"
              * <code>rv</code> and returns <code>rv</code>.
@@ -1725,7 +1725,7 @@ declare namespace javax {
              * @return <code>rv</code>
              */
             // @ts-ignore
-            getLocation(rv: java.awt.Point): java.awt.Point
+            public getLocation(rv: java.awt.Point): java.awt.Point
             /**
              * Returns the current x coordinate of the component's origin.
              * This method is preferable to writing
@@ -1735,7 +1735,7 @@ declare namespace javax {
              * @return the current x coordinate of the component's origin
              */
             // @ts-ignore
-            getX(): int
+            public getX(): number /*int*/
             /**
              * Returns the current y coordinate of the component's origin.
              * This method is preferable to writing
@@ -1745,7 +1745,7 @@ declare namespace javax {
              * @return the current y coordinate of the component's origin
              */
             // @ts-ignore
-            getY(): int
+            public getY(): number /*int*/
             /**
              * Returns the current width of this component.
              * This method is preferable to writing
@@ -1755,7 +1755,7 @@ declare namespace javax {
              * @return the current width of this component
              */
             // @ts-ignore
-            getWidth(): int
+            public getWidth(): number /*int*/
             /**
              * Returns the current height of this component.
              * This method is preferable to writing
@@ -1765,7 +1765,7 @@ declare namespace javax {
              * @return the current height of this component
              */
             // @ts-ignore
-            getHeight(): int
+            public getHeight(): number /*int*/
             /**
              * Returns true if this component is completely opaque.
              * <p>
@@ -1781,7 +1781,7 @@ declare namespace javax {
              * @see #setOpaque
              */
             // @ts-ignore
-            isOpaque(): boolean
+            public isOpaque(): boolean
             /**
              * If true the component paints every pixel within its bounds.
              * Otherwise, the component may not paint some or all of its
@@ -1798,7 +1798,7 @@ declare namespace javax {
              *   description: The component's opacity
              */
             // @ts-ignore
-            setOpaque(isOpaque: boolean): void
+            public setOpaque(isOpaque: boolean): void
             /**
              * Returns the <code>Component</code>'s "visible rect rectangle" -  the
              * intersection of the visible rectangles for this component
@@ -1811,7 +1811,7 @@ declare namespace javax {
              * @see #getVisibleRect
              */
             // @ts-ignore
-            computeVisibleRect(visibleRect: java.awt.Rectangle): void
+            public computeVisibleRect(visibleRect: java.awt.Rectangle): void
             /**
              * Returns the <code>Component</code>'s "visible rectangle" -  the
              * intersection of this component's visible rectangle,
@@ -1820,7 +1820,7 @@ declare namespace javax {
              * @return the visible rectangle
              */
             // @ts-ignore
-            getVisibleRect(): java.awt.Rectangle
+            public getVisibleRect(): java.awt.Rectangle
             /**
              * Support for reporting bound property changes for boolean properties.
              * This method can be called when a bound property has changed and it will
@@ -1831,7 +1831,7 @@ declare namespace javax {
              * @param newValue the property's new value
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
             /**
              * Support for reporting bound property changes for integer properties.
              * This method can be called when a bound property has changed and it will
@@ -1842,9 +1842,9 @@ declare namespace javax {
              * @param newValue the property's new value
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*int*/, newValue: number /*int*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*int*/, newValue: number /*int*/): void
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: string, newValue: string): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: string, newValue: string): void
             /**
              * Supports reporting constrained property changes.
              * This method can be called when a constrained property has changed
@@ -1857,14 +1857,14 @@ declare namespace javax {
              *           property is vetoed by the component
              */
             // @ts-ignore
-            fireVetoableChange(propertyName: string, oldValue: any, newValue: any): void
+            fireVetoableChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Adds a <code>VetoableChangeListener</code> to the listener list.
              * The listener is registered for all properties.
              * @param listener  the <code>VetoableChangeListener</code> to be added
              */
             // @ts-ignore
-            addVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
+            public addVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
             /**
              * Removes a <code>VetoableChangeListener</code> from the listener list.
              * This removes a <code>VetoableChangeListener</code> that was registered
@@ -1872,7 +1872,7 @@ declare namespace javax {
              * @param listener  the <code>VetoableChangeListener</code> to be removed
              */
             // @ts-ignore
-            removeVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
+            public removeVetoableChangeListener(listener: java.beans.VetoableChangeListener): void
             /**
              * Returns an array of all the vetoable change listeners
              * registered on this component.
@@ -1884,7 +1884,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getVetoableChangeListeners(): java.beans.VetoableChangeListener[]
+            public getVetoableChangeListeners(): java.beans.VetoableChangeListener[]
             /**
              * Returns the top-level ancestor of this component (either the
              * containing <code>Window</code> or <code>Applet</code>),
@@ -1894,7 +1894,7 @@ declare namespace javax {
              *           or <code>null</code> if not in any container
              */
             // @ts-ignore
-            getTopLevelAncestor(): java.awt.Container
+            public getTopLevelAncestor(): java.awt.Container
             /**
              * Registers <code>listener</code> so that it will receive
              * <code>AncestorEvents</code> when it or any of its ancestors
@@ -1905,7 +1905,7 @@ declare namespace javax {
              * @see AncestorEvent
              */
             // @ts-ignore
-            addAncestorListener(listener: javax.swing.event.AncestorListener): void
+            public addAncestorListener(listener: javax.swing.event.AncestorListener): void
             /**
              * Unregisters <code>listener</code> so that it will no longer receive
              * <code>AncestorEvents</code>.
@@ -1913,7 +1913,7 @@ declare namespace javax {
              * @see #addAncestorListener
              */
             // @ts-ignore
-            removeAncestorListener(listener: javax.swing.event.AncestorListener): void
+            public removeAncestorListener(listener: javax.swing.event.AncestorListener): void
             /**
              * Returns an array of all the ancestor listeners
              * registered on this component.
@@ -1925,7 +1925,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getAncestorListeners(): javax.swing.event.AncestorListener[]
+            public getAncestorListeners(): javax.swing.event.AncestorListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -1957,7 +1957,7 @@ declare namespace javax {
              * @see #getAncestorListeners
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Notifies this component that it now has a parent component.
              * When this method is invoked, the chain of parent components is
@@ -1967,7 +1967,7 @@ declare namespace javax {
              * @see #registerKeyboardAction
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Notifies this component that it no longer has a parent component.
              * When this method is invoked, any <code>KeyboardAction</code>s
@@ -1977,7 +1977,7 @@ declare namespace javax {
              * @see #registerKeyboardAction
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Adds the specified region to the dirty region list if the component
              * is showing.  The component will be repainted after all of the
@@ -1992,7 +1992,7 @@ declare namespace javax {
              * @see RepaintManager#addDirtyRegion
              */
             // @ts-ignore
-            repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Adds the specified region to the dirty region list if the component
              * is showing.  The component will be repainted after all of the
@@ -2003,7 +2003,7 @@ declare namespace javax {
              * @see RepaintManager#addDirtyRegion
              */
             // @ts-ignore
-            repaint(r: java.awt.Rectangle): void
+            public repaint(r: java.awt.Rectangle): void
             /**
              * Supports deferred automatic layout.
              * <p>
@@ -2029,7 +2029,7 @@ declare namespace javax {
              * @see RepaintManager#addInvalidComponent
              */
             // @ts-ignore
-            revalidate(): void
+            public revalidate(): void
             /**
              * If this method returns true, <code>revalidate</code> calls by
              * descendants of this component will cause the entire tree
@@ -2043,7 +2043,7 @@ declare namespace javax {
              * @see java.awt.Container#isValidateRoot
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * Returns true if this component tiles its children -- that is, if
              * it can guarantee that the children will not overlap.  The
@@ -2054,7 +2054,7 @@ declare namespace javax {
              * @return always returns true
              */
             // @ts-ignore
-            isOptimizedDrawingEnabled(): boolean
+            public isOptimizedDrawingEnabled(): boolean
             /**
              * Returns {@code true} if a paint triggered on a child component should cause
              * painting to originate from this Component, or one of its ancestors.
@@ -2091,13 +2091,13 @@ declare namespace javax {
              * @see #isPaintingOrigin()
              */
             // @ts-ignore
-            paintImmediately(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public paintImmediately(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Paints the specified region now.
              * @param r a <code>Rectangle</code> containing the region to be painted
              */
             // @ts-ignore
-            paintImmediately(r: java.awt.Rectangle): void
+            public paintImmediately(r: java.awt.Rectangle): void
             /**
              * Sets whether this component should use a buffer to paint.
              * If set to true, all the drawing from this component will be done
@@ -2108,20 +2108,20 @@ declare namespace javax {
              * @param aFlag if true, set this component to be double buffered
              */
             // @ts-ignore
-            setDoubleBuffered(aFlag: boolean): void
+            public setDoubleBuffered(aFlag: boolean): void
             /**
              * Returns whether this component should use a buffer to paint.
              * @return true if this component is double buffered, otherwise false
              */
             // @ts-ignore
-            isDoubleBuffered(): boolean
+            public isDoubleBuffered(): boolean
             /**
              * Returns the <code>JRootPane</code> ancestor for this component.
              * @return the <code>JRootPane</code> that contains this component,
              *           or <code>null</code> if no <code>JRootPane</code> is found
              */
             // @ts-ignore
-            getRootPane(): javax.swing.JRootPane
+            public getRootPane(): javax.swing.JRootPane
             /**
              * Returns a string representation of this <code>JComponent</code>.
              * This method
@@ -2132,12 +2132,12 @@ declare namespace javax {
              * @return a string representation of this <code>JComponent</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            hide(): void
+            public hide(): void
         }
     }
 }

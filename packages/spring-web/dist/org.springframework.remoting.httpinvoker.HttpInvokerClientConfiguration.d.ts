@@ -15,7 +15,7 @@ declare namespace org {
                      * Return the HTTP URL of the target service.
                      */
                     // @ts-ignore
-                    getServiceUrl(): java.lang.String
+                    getServiceUrl(): string
                     /**
                      * Return the codebase URL to download classes from if not found locally.
                      * Can consist of multiple URLs, separated by spaces.
@@ -23,7 +23,7 @@ declare namespace org {
                      * @see java.rmi.server.RMIClassLoader
                      */
                     // @ts-ignore
-                    getCodebaseUrl(): java.lang.String
+                    getCodebaseUrl(): string
                 }
             }
         }

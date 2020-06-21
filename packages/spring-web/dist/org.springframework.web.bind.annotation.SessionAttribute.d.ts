@@ -20,7 +20,7 @@ declare namespace org {
                      * @see RequestAttribute
                      */
                     // @ts-ignore
-                    class SessionAttribute implements java.lang.annotation.Annotation {
+                    abstract class SessionAttribute implements java.lang.annotation.Annotation {
                     }
                 }
             }

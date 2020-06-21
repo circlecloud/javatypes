@@ -106,7 +106,7 @@ declare namespace java {
              * @see AWTPermission
              */
             // @ts-ignore
-            getSystemTray(): java.awt.SystemTray
+            public static getSystemTray(): java.awt.SystemTray
             /**
              * Returns whether the system tray is supported on the current
              * platform.  In addition to displaying the tray icon, minimal
@@ -130,7 +130,7 @@ declare namespace java {
              *  functionality is supported for the current platform
              */
             // @ts-ignore
-            isSupported(): boolean
+            public static isSupported(): boolean
             /**
              * Adds a <code>TrayIcon</code> to the <code>SystemTray</code>.
              * The tray icon becomes visible in the system tray once it is
@@ -151,7 +151,7 @@ declare namespace java {
              * @see java.awt.Image
              */
             // @ts-ignore
-            add(trayIcon: java.awt.TrayIcon): void
+            public add(trayIcon: java.awt.TrayIcon): void
             /**
              * Removes the specified <code>TrayIcon</code> from the
              * <code>SystemTray</code>.
@@ -166,7 +166,7 @@ declare namespace java {
              * @see TrayIcon
              */
             // @ts-ignore
-            remove(trayIcon: java.awt.TrayIcon): void
+            public remove(trayIcon: java.awt.TrayIcon): void
             /**
              * Returns an array of all icons added to the tray by this
              * application.  You can't access the icons added by another
@@ -185,7 +185,7 @@ declare namespace java {
              * @see TrayIcon
              */
             // @ts-ignore
-            getTrayIcons(): java.awt.TrayIcon[]
+            public getTrayIcons(): java.awt.TrayIcon[]
             /**
              * Returns the size, in pixels, of the space that a tray icon will
              * occupy in the system tray.  Developers may use this methods to
@@ -198,7 +198,7 @@ declare namespace java {
              * @see TrayIcon#getSize()
              */
             // @ts-ignore
-            getTrayIconSize(): java.awt.Dimension
+            public getTrayIconSize(): java.awt.Dimension
             /**
              * Adds a {@code PropertyChangeListener} to the list of listeners for the
              * specific property. The following properties are currently supported:
@@ -235,7 +235,7 @@ declare namespace java {
              * @see #getPropertyChangeListeners
              */
             // @ts-ignore
-            addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a {@code PropertyChangeListener} from the listener list
              * for a specific property.
@@ -250,7 +250,7 @@ declare namespace java {
              * @see #getPropertyChangeListeners
              */
             // @ts-ignore
-            removePropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the listeners that have been associated
              * with the named property.
@@ -265,7 +265,7 @@ declare namespace java {
              * @see #removePropertyChangeListener
              */
             // @ts-ignore
-            getPropertyChangeListeners(propertyName: string): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(propertyName: java.lang.String | string): java.beans.PropertyChangeListener[]
         }
     }
 }

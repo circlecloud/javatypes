@@ -24,102 +24,102 @@ declare namespace java {
                  *         that don't correspond to legal <code>Calendar</code> values
                  */
                 // @ts-ignore
-                constructor(name: string, calendarField: number /*int*/)
+                constructor(name: java.lang.String | string, calendarField: number /*int*/)
                 /**
                  * Constant identifying the era field.
                  */
                 // @ts-ignore
-                readonly ERA: java.text.DateFormat.Field
+                public static readonly ERA: java.text.DateFormat.Field
                 /**
                  * Constant identifying the year field.
                  */
                 // @ts-ignore
-                readonly YEAR: java.text.DateFormat.Field
+                public static readonly YEAR: java.text.DateFormat.Field
                 /**
                  * Constant identifying the month field.
                  */
                 // @ts-ignore
-                readonly MONTH: java.text.DateFormat.Field
+                public static readonly MONTH: java.text.DateFormat.Field
                 /**
                  * Constant identifying the day of month field.
                  */
                 // @ts-ignore
-                readonly DAY_OF_MONTH: java.text.DateFormat.Field
+                public static readonly DAY_OF_MONTH: java.text.DateFormat.Field
                 /**
                  * Constant identifying the hour of day field, where the legal values
                  * are 1 to 24.
                  */
                 // @ts-ignore
-                readonly HOUR_OF_DAY1: java.text.DateFormat.Field
+                public static readonly HOUR_OF_DAY1: java.text.DateFormat.Field
                 /**
                  * Constant identifying the hour of day field, where the legal values
                  * are 0 to 23.
                  */
                 // @ts-ignore
-                readonly HOUR_OF_DAY0: java.text.DateFormat.Field
+                public static readonly HOUR_OF_DAY0: java.text.DateFormat.Field
                 /**
                  * Constant identifying the minute field.
                  */
                 // @ts-ignore
-                readonly MINUTE: java.text.DateFormat.Field
+                public static readonly MINUTE: java.text.DateFormat.Field
                 /**
                  * Constant identifying the second field.
                  */
                 // @ts-ignore
-                readonly SECOND: java.text.DateFormat.Field
+                public static readonly SECOND: java.text.DateFormat.Field
                 /**
                  * Constant identifying the millisecond field.
                  */
                 // @ts-ignore
-                readonly MILLISECOND: java.text.DateFormat.Field
+                public static readonly MILLISECOND: java.text.DateFormat.Field
                 /**
                  * Constant identifying the day of week field.
                  */
                 // @ts-ignore
-                readonly DAY_OF_WEEK: java.text.DateFormat.Field
+                public static readonly DAY_OF_WEEK: java.text.DateFormat.Field
                 /**
                  * Constant identifying the day of year field.
                  */
                 // @ts-ignore
-                readonly DAY_OF_YEAR: java.text.DateFormat.Field
+                public static readonly DAY_OF_YEAR: java.text.DateFormat.Field
                 /**
                  * Constant identifying the day of week field.
                  */
                 // @ts-ignore
-                readonly DAY_OF_WEEK_IN_MONTH: java.text.DateFormat.Field
+                public static readonly DAY_OF_WEEK_IN_MONTH: java.text.DateFormat.Field
                 /**
                  * Constant identifying the week of year field.
                  */
                 // @ts-ignore
-                readonly WEEK_OF_YEAR: java.text.DateFormat.Field
+                public static readonly WEEK_OF_YEAR: java.text.DateFormat.Field
                 /**
                  * Constant identifying the week of month field.
                  */
                 // @ts-ignore
-                readonly WEEK_OF_MONTH: java.text.DateFormat.Field
+                public static readonly WEEK_OF_MONTH: java.text.DateFormat.Field
                 /**
                  * Constant identifying the time of day indicator
                  * (e.g. "a.m." or "p.m.") field.
                  */
                 // @ts-ignore
-                readonly AM_PM: java.text.DateFormat.Field
+                public static readonly AM_PM: java.text.DateFormat.Field
                 /**
                  * Constant identifying the hour field, where the legal values are
                  * 1 to 12.
                  */
                 // @ts-ignore
-                readonly HOUR1: java.text.DateFormat.Field
+                public static readonly HOUR1: java.text.DateFormat.Field
                 /**
                  * Constant identifying the hour field, where the legal values are
                  * 0 to 11.
                  */
                 // @ts-ignore
-                readonly HOUR0: java.text.DateFormat.Field
+                public static readonly HOUR0: java.text.DateFormat.Field
                 /**
                  * Constant identifying the time zone field.
                  */
                 // @ts-ignore
-                readonly TIME_ZONE: java.text.DateFormat.Field
+                public static readonly TIME_ZONE: java.text.DateFormat.Field
                 /**
                  * Returns the <code>Field</code> constant that corresponds to
                  * the <code>Calendar</code> constant <code>calendarField</code>.
@@ -132,7 +132,7 @@ declare namespace java {
                  * @see java.util.Calendar
                  */
                 // @ts-ignore
-                ofCalendarField(calendarField: number /*int*/): java.text.DateFormat.Field
+                public static ofCalendarField(calendarField: number /*int*/): java.text.DateFormat.Field
                 /**
                  * Returns the <code>Calendar</code> field associated with this
                  * attribute. For example, if this represents the hours field of
@@ -143,7 +143,7 @@ declare namespace java {
                  * @see java.util.Calendar
                  */
                 // @ts-ignore
-                getCalendarField(): int
+                public getCalendarField(): number /*int*/
                 /**
                  * Resolves instances being deserialized to the predefined constants.
                  * @throws InvalidObjectException if the constant could not be
@@ -151,7 +151,7 @@ declare namespace java {
                  * @return resolved DateFormat.Field constant
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                readResolve(): any
             }
         }
     }

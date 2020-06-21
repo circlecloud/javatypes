@@ -87,7 +87,7 @@ declare namespace java {
              *          of its keys
              */
             // @ts-ignore
-            comparator(): java.util.Comparator<? super K>
+            comparator(): java.util.Comparator<any>
             /**
              * Returns a view of the portion of this map whose keys range from
              * {@code fromKey}, inclusive, to {@code toKey}, exclusive.  (If
@@ -198,7 +198,7 @@ declare namespace java {
              *          ascending order
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            keySet(): Array<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The collection's iterator returns the values in ascending order
@@ -217,7 +217,7 @@ declare namespace java {
              *          sorted in ascending key order
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * The set's iterator returns the entries in ascending key order.
@@ -236,7 +236,7 @@ declare namespace java {
              *          sorted in ascending key order
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            entrySet(): Array<java.util.Map.Entry<K, V>>
         }
     }
 }

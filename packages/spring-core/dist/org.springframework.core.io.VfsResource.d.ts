@@ -22,33 +22,33 @@ declare namespace org {
                      *  (untyped in order to avoid a static dependency on the VFS API)
                      */
                     // @ts-ignore
-                    constructor(resource: any)
+                    constructor(resource: java.lang.Object | any)
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     // @ts-ignore
-                    isReadable(): boolean
+                    public isReadable(): boolean
                     // @ts-ignore
-                    getURL(): java.net.URL
+                    public getURL(): java.net.URL
                     // @ts-ignore
-                    getURI(): java.net.URI
+                    public getURI(): java.net.URI
                     // @ts-ignore
-                    getFile(): java.io.File
+                    public getFile(): java.io.File
                     // @ts-ignore
-                    contentLength(): long
+                    public contentLength(): number /*long*/
                     // @ts-ignore
-                    lastModified(): long
+                    public lastModified(): number /*long*/
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     // @ts-ignore
-                    getFilename(): java.lang.String
+                    public getFilename(): string
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

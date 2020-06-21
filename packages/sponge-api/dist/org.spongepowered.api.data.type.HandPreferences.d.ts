@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class HandPreferences extends java.lang.Object {
                         // @ts-ignore
-                        readonly LEFT: org.spongepowered.api.data.type.HandPreference
+                        public static readonly LEFT: org.spongepowered.api.data.type.HandPreference
                         // @ts-ignore
-                        readonly RIGHT: org.spongepowered.api.data.type.HandPreference
+                        public static readonly RIGHT: org.spongepowered.api.data.type.HandPreference
                     }
                 }
             }

@@ -203,7 +203,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                retransformClasses(...classes: java.lang.Class[]): void
+                retransformClasses(...classes: java.lang.Class<any>[]): void
                 /**
                  * Returns whether or not the current JVM configuration supports redefinition
                  * of classes.
@@ -312,7 +312,7 @@ declare namespace java {
                  * @return an array containing all the classes loaded by the JVM, zero-length if there are none
                  */
                 // @ts-ignore
-                getAllLoadedClasses(): java.lang.Class[]
+                getAllLoadedClasses(): java.lang.Class<any>[]
                 /**
                  * Returns an array of all classes for which <code>loader</code> is an initiating loader.
                  * If the supplied loader is <code>null</code>, classes initiated by the bootstrap class
@@ -322,7 +322,7 @@ declare namespace java {
                  *           zero-length if there are none
                  */
                 // @ts-ignore
-                getInitiatedClasses(loader: java.lang.ClassLoader): java.lang.Class[]
+                getInitiatedClasses(loader: java.lang.ClassLoader): java.lang.Class<any>[]
                 /**
                  * Returns an implementation-specific approximation of the amount of storage consumed by
                  * the specified object. The result may include some or all of the object's overhead,
@@ -333,7 +333,7 @@ declare namespace java {
                  * @throws java.lang.NullPointerException if the supplied Object is <code>null</code>.
                  */
                 // @ts-ignore
-                getObjectSize(objectToSize: any): long
+                getObjectSize(objectToSize: java.lang.Object | any): number /*long*/
                 /**
                  * Specifies a JAR file with instrumentation classes to be defined by the
                  * bootstrap class loader.
@@ -558,7 +558,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setNativeMethodPrefix(transformer: java.lang.instrument.ClassFileTransformer, prefix: string): void
+                setNativeMethodPrefix(transformer: java.lang.instrument.ClassFileTransformer, prefix: java.lang.String | string): void
             }
         }
     }

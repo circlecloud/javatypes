@@ -9,15 +9,15 @@ declare namespace org {
                     // @ts-ignore
                     class ExpressionKey extends java.lang.Object implements java.lang.Comparable<org.springframework.context.expression.CachedExpressionEvaluator.ExpressionKey> {
                         // @ts-ignore
-                        constructor(element: org.springframework.context.expression.AnnotatedElementKey, expression: string)
+                        constructor(element: org.springframework.context.expression.AnnotatedElementKey, expression: java.lang.String | string)
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        compareTo(other: org.springframework.context.expression.CachedExpressionEvaluator.ExpressionKey): int
+                        public compareTo(other: org.springframework.context.expression.CachedExpressionEvaluator.ExpressionKey): number /*int*/
                     }
                 }
             }

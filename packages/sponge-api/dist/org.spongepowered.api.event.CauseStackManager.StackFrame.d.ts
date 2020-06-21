@@ -29,7 +29,7 @@ declare namespace org {
                          * @see CauseStackManager#pushCause(Object)
                          */
                         // @ts-ignore
-                        pushCause(obj: any): org.spongepowered.api.event.CauseStackManager.StackFrame
+                        pushCause(obj: java.lang.Object | any): org.spongepowered.api.event.CauseStackManager.StackFrame
                         /**
                          * Pops the most recently pushed cause object off of the stack and
                          * returns it.
@@ -37,7 +37,7 @@ declare namespace org {
                          * @see CauseStackManager#popCause()
                          */
                         // @ts-ignore
-                        popCause(): java.lang.Object
+                        popCause(): any
                         /**
                          * Adds the given object to the current context under the given key.
                          * @param key The context key

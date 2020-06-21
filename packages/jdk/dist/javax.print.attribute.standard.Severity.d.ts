@@ -54,7 +54,7 @@ declare namespace javax {
                      * that could affect the printed output.
                      */
                     // @ts-ignore
-                    readonly REPORT: javax.print.attribute.standard.Severity
+                    public static readonly REPORT: javax.print.attribute.standard.Severity
                     /**
                      * Indicates that the {@link PrinterStateReason PrinterStateReason} is a
                      * "warning." An implementation may choose to omit some or all warnings.
@@ -63,7 +63,7 @@ declare namespace javax {
                      * output may be of lower quality.
                      */
                     // @ts-ignore
-                    readonly WARNING: javax.print.attribute.standard.Severity
+                    public static readonly WARNING: javax.print.attribute.standard.Severity
                     /**
                      * Indicates that the {@link PrinterStateReason PrinterStateReason} is an
                      * "error" (most severe). An implementation must include all errors.
@@ -71,12 +71,12 @@ declare namespace javax {
                      * {@link PrinterState PrinterState} must be STOPPED.
                      */
                     // @ts-ignore
-                    readonly ERROR: javax.print.attribute.standard.Severity
+                    public static readonly ERROR: javax.print.attribute.standard.Severity
                     /**
                      * Returns the string table for class Severity.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class Severity.
                      */
@@ -91,7 +91,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -100,7 +100,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

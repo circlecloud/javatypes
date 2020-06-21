@@ -52,7 +52,7 @@ declare namespace javax {
                      * Returns the direction of the arrow.
                      */
                     // @ts-ignore
-                    getDirection(): int
+                    public getDirection(): number /*int*/
                     /**
                      * Sets the direction of the arrow.
                      * @param direction the direction of the arrow; one of
@@ -61,27 +61,27 @@ declare namespace javax {
                      *         {@code SwingConstants.EAST} or {@code SwingConstants.WEST}
                      */
                     // @ts-ignore
-                    setDirection(direction: number /*int*/): void
+                    public setDirection(direction: number /*int*/): void
                     // @ts-ignore
-                    paint(g: java.awt.Graphics): void
+                    public paint(g: java.awt.Graphics): void
                     /**
                      * Returns the preferred size of the {@code BasicArrowButton}.
                      * @return the preferred size
                      */
                     // @ts-ignore
-                    getPreferredSize(): java.awt.Dimension
+                    public getPreferredSize(): java.awt.Dimension
                     /**
                      * Returns the minimum size of the {@code BasicArrowButton}.
                      * @return the minimum size
                      */
                     // @ts-ignore
-                    getMinimumSize(): java.awt.Dimension
+                    public getMinimumSize(): java.awt.Dimension
                     /**
                      * Returns the maximum size of the {@code BasicArrowButton}.
                      * @return the maximum size
                      */
                     // @ts-ignore
-                    getMaximumSize(): java.awt.Dimension
+                    public getMaximumSize(): java.awt.Dimension
                     /**
                      * Returns whether the arrow button should get the focus.
                      * {@code BasicArrowButton}s are used as a child component of
@@ -91,7 +91,7 @@ declare namespace javax {
                      * @return {#code false}
                      */
                     // @ts-ignore
-                    isFocusTraversable(): boolean
+                    public isFocusTraversable(): boolean
                     /**
                      * Paints a triangle.
                      * @param g the {#code Graphics} to draw to
@@ -105,7 +105,7 @@ declare namespace javax {
                      * @param isEnabled whether or not the arrow is drawn enabled
                      */
                     // @ts-ignore
-                    paintTriangle(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, size: number /*int*/, direction: number /*int*/, isEnabled: boolean): void
+                    public paintTriangle(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, size: number /*int*/, direction: number /*int*/, isEnabled: boolean): void
                 }
             }
         }

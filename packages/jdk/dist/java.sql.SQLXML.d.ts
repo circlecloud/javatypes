@@ -273,7 +273,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getString(): java.lang.String
+            getString(): string
             /**
              * Sets the XML value designated by this SQLXML instance to the given String representation.
              * The format of this String is defined by org.xml.sax.InputSource,
@@ -296,7 +296,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setString(value: string): void
+            setString(value: java.lang.String | string): void
             /**
              * Returns a Source for reading the XML value designated by this SQLXML instance.
              * Sources are used as inputs to XML parsers and XSLT transformers.

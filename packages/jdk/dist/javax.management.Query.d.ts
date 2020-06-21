@@ -35,55 +35,55 @@ declare namespace javax {
              * of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly GT: number /*int*/
+            public static readonly GT: number /*int*/
             /**
              * A code representing the {@link Query#lt} query.  This is chiefly
              * of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly LT: number /*int*/
+            public static readonly LT: number /*int*/
             /**
              * A code representing the {@link Query#geq} query.  This is chiefly
              * of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly GE: number /*int*/
+            public static readonly GE: number /*int*/
             /**
              * A code representing the {@link Query#leq} query.  This is chiefly
              * of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly LE: number /*int*/
+            public static readonly LE: number /*int*/
             /**
              * A code representing the {@link Query#eq} query.  This is chiefly
              * of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly EQ: number /*int*/
+            public static readonly EQ: number /*int*/
             /**
              * A code representing the {@link Query#plus} expression.  This
              * is chiefly of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly PLUS: number /*int*/
+            public static readonly PLUS: number /*int*/
             /**
              * A code representing the {@link Query#minus} expression.  This
              * is chiefly of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly MINUS: number /*int*/
+            public static readonly MINUS: number /*int*/
             /**
              * A code representing the {@link Query#times} expression.  This
              * is chiefly of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly TIMES: number /*int*/
+            public static readonly TIMES: number /*int*/
             /**
              * A code representing the {@link Query#div} expression.  This is
              * chiefly of interest for the serialized form of queries.
              */
             // @ts-ignore
-            readonly DIV: number /*int*/
+            public static readonly DIV: number /*int*/
             /**
              * Returns a query expression that is the conjunction of two other query
              * expressions.
@@ -95,7 +95,7 @@ declare namespace javax {
              *  javax.management.AndQueryExp</a>.
              */
             // @ts-ignore
-            and(q1: javax.management.QueryExp, q2: javax.management.QueryExp): javax.management.QueryExp
+            public static and(q1: javax.management.QueryExp, q2: javax.management.QueryExp): javax.management.QueryExp
             /**
              * Returns a query expression that is the disjunction of two other query
              * expressions.
@@ -107,7 +107,7 @@ declare namespace javax {
              *  javax.management.OrQueryExp</a>.
              */
             // @ts-ignore
-            or(q1: javax.management.QueryExp, q2: javax.management.QueryExp): javax.management.QueryExp
+            public static or(q1: javax.management.QueryExp, q2: javax.management.QueryExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a "greater than" constraint on
              * two values.
@@ -121,7 +121,7 @@ declare namespace javax {
              *  to {@link #GT}.
              */
             // @ts-ignore
-            gt(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
+            public static gt(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a "greater than or equal
              * to" constraint on two values.
@@ -135,7 +135,7 @@ declare namespace javax {
              *  to {@link #GE}.
              */
             // @ts-ignore
-            geq(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
+            public static geq(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a "less than or equal to"
              * constraint on two values.
@@ -149,7 +149,7 @@ declare namespace javax {
              *  to {@link #LE}.
              */
             // @ts-ignore
-            leq(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
+            public static leq(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a "less than" constraint on
              * two values.
@@ -163,7 +163,7 @@ declare namespace javax {
              *  to {@link #LT}.
              */
             // @ts-ignore
-            lt(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
+            public static lt(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents an equality constraint on
              * two values.
@@ -177,7 +177,7 @@ declare namespace javax {
              *  to {@link #EQ}.
              */
             // @ts-ignore
-            eq(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
+            public static eq(v1: javax.management.ValueExp, v2: javax.management.ValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents the constraint that one
              * value is between two other values.
@@ -191,7 +191,7 @@ declare namespace javax {
              *  javax.management.BetweenQueryExp</a>.
              */
             // @ts-ignore
-            between(v1: javax.management.ValueExp, v2: javax.management.ValueExp, v3: javax.management.ValueExp): javax.management.QueryExp
+            public static between(v1: javax.management.ValueExp, v2: javax.management.ValueExp, v3: javax.management.ValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a matching constraint on
              * a string argument. The matching syntax is consistent with file globbing:
@@ -215,7 +215,7 @@ declare namespace javax {
              *  javax.management.MatchQueryExp</a>.
              */
             // @ts-ignore
-            match(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
+            public static match(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
             /**
              * <p>Returns a new attribute expression.  See {@link AttributeValueExp}
              * for a detailed description of the semantics of the expression.</p>
@@ -227,7 +227,7 @@ declare namespace javax {
              * @return An attribute expression for the attribute named {#code name}.
              */
             // @ts-ignore
-            attr(name: string): javax.management.AttributeValueExp
+            public static attr(name: java.lang.String | string): javax.management.AttributeValueExp
             /**
              * <p>Returns a new qualified attribute expression.</p>
              * <p>Evaluating this expression for a given
@@ -245,7 +245,7 @@ declare namespace javax {
              *  javax.management.QualifiedAttributeValueExp</a>.
              */
             // @ts-ignore
-            attr(className: string, name: string): javax.management.AttributeValueExp
+            public static attr(className: java.lang.String | string, name: java.lang.String | string): javax.management.AttributeValueExp
             /**
              * <p>Returns a new class attribute expression which can be used in any
              * Query call that expects a ValueExp.</p>
@@ -259,7 +259,7 @@ declare namespace javax {
              *  javax.management.ClassAttributeValueExp</a>.
              */
             // @ts-ignore
-            classattr(): javax.management.AttributeValueExp
+            public static classattr(): javax.management.AttributeValueExp
             /**
              * Returns a constraint that is the negation of its argument.
              * @param queryExp The constraint to negate.
@@ -269,7 +269,7 @@ declare namespace javax {
              *  javax.management.NotQueryExp</a>.
              */
             // @ts-ignore
-            not(queryExp: javax.management.QueryExp): javax.management.QueryExp
+            public static not(queryExp: javax.management.QueryExp): javax.management.QueryExp
             /**
              * Returns an expression constraining a value to be one of an explicit list.
              * @param val A value to be constrained.
@@ -281,14 +281,14 @@ declare namespace javax {
              *  javax.management.InQueryExp</a>.
              */
             // @ts-ignore
-            in(val: javax.management.ValueExp, valueList: javax.management.ValueExp[]): javax.management.QueryExp
+            public static in(val: javax.management.ValueExp, valueList: javax.management.ValueExp[]): javax.management.QueryExp
             /**
              * Returns a new string expression.
              * @param val The string value.
              * @return A ValueExp object containing the string argument.
              */
             // @ts-ignore
-            value(val: string): javax.management.StringValueExp
+            public static value(val: java.lang.String | string): javax.management.StringValueExp
             /**
              * Returns a numeric value expression that can be used in any Query call
              * that expects a ValueExp.
@@ -300,7 +300,7 @@ declare namespace javax {
              *  javax.management.NumericValueExp</a>.
              */
             // @ts-ignore
-            value(val: java.lang.Number): javax.management.ValueExp
+            public static value(val: java.lang.Number): javax.management.ValueExp
             /**
              * Returns a numeric value expression that can be used in any Query call
              * that expects a ValueExp.
@@ -312,7 +312,7 @@ declare namespace javax {
              *  javax.management.NumericValueExp</a>.
              */
             // @ts-ignore
-            value(val: number /*int*/): javax.management.ValueExp
+            public static value(val: number /*int*/): javax.management.ValueExp
             /**
              * Returns a numeric value expression that can be used in any Query call
              * that expects a ValueExp.
@@ -324,7 +324,7 @@ declare namespace javax {
              *  javax.management.NumericValueExp</a>.
              */
             // @ts-ignore
-            value(val: number /*long*/): javax.management.ValueExp
+            public static value(val: number /*long*/): javax.management.ValueExp
             /**
              * Returns a numeric value expression that can be used in any Query call
              * that expects a ValueExp.
@@ -336,7 +336,7 @@ declare namespace javax {
              *  javax.management.NumericValueExp</a>.
              */
             // @ts-ignore
-            value(val: number /*float*/): javax.management.ValueExp
+            public static value(val: number /*float*/): javax.management.ValueExp
             /**
              * Returns a numeric value expression that can be used in any Query call
              * that expects a ValueExp.
@@ -348,7 +348,7 @@ declare namespace javax {
              *  javax.management.NumericValueExp</a>.
              */
             // @ts-ignore
-            value(val: number /*double*/): javax.management.ValueExp
+            public static value(val: number /*double*/): javax.management.ValueExp
             /**
              * Returns a boolean value expression that can be used in any Query call
              * that expects a ValueExp.
@@ -360,7 +360,7 @@ declare namespace javax {
              *  javax.management.BooleanValueExp</a>.
              */
             // @ts-ignore
-            value(val: boolean): javax.management.ValueExp
+            public static value(val: boolean): javax.management.ValueExp
             /**
              * Returns a binary expression representing the sum of two numeric values,
              * or the concatenation of two string values.
@@ -374,7 +374,7 @@ declare namespace javax {
              *  {@link #PLUS}.
              */
             // @ts-ignore
-            plus(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
+            public static plus(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
             /**
              * Returns a binary expression representing the product of two numeric values.
              * @param value1 The first '*' operand.
@@ -387,7 +387,7 @@ declare namespace javax {
              *  {@link #TIMES}.
              */
             // @ts-ignore
-            times(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
+            public static times(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
             /**
              * Returns a binary expression representing the difference between two numeric
              * values.
@@ -401,7 +401,7 @@ declare namespace javax {
              *  {@link #MINUS}.
              */
             // @ts-ignore
-            minus(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
+            public static minus(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
             /**
              * Returns a binary expression representing the quotient of two numeric
              * values.
@@ -415,7 +415,7 @@ declare namespace javax {
              *  {@link #DIV}.
              */
             // @ts-ignore
-            div(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
+            public static div(value1: javax.management.ValueExp, value2: javax.management.ValueExp): javax.management.ValueExp
             /**
              * Returns a query expression that represents a matching constraint on
              * a string argument. The value must start with the given literal string
@@ -430,7 +430,7 @@ declare namespace javax {
              *  javax.management.MatchQueryExp</a>.
              */
             // @ts-ignore
-            initialSubString(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
+            public static initialSubString(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a matching constraint on
              * a string argument. The value must contain the given literal string
@@ -444,7 +444,7 @@ declare namespace javax {
              *  javax.management.MatchQueryExp</a>.
              */
             // @ts-ignore
-            anySubString(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
+            public static anySubString(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents a matching constraint on
              * a string argument. The value must end with the given literal string
@@ -459,7 +459,7 @@ declare namespace javax {
              *  javax.management.MatchQueryExp</a>.
              */
             // @ts-ignore
-            finalSubString(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
+            public static finalSubString(a: javax.management.AttributeValueExp, s: javax.management.StringValueExp): javax.management.QueryExp
             /**
              * Returns a query expression that represents an inheritance constraint
              * on an MBean class.
@@ -481,7 +481,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            isInstanceOf(classNameValue: javax.management.StringValueExp): javax.management.QueryExp
+            public static isInstanceOf(classNameValue: javax.management.StringValueExp): javax.management.QueryExp
         }
     }
 }

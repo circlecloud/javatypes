@@ -16,7 +16,7 @@ declare namespace javax {
                      *  if there are none
                      */
                     // @ts-ignore
-                    getTypeParameters(): java.util.List<? extends javax.lang.model.element.TypeParameterElement>
+                    getTypeParameters(): Array<any>
                 }
             }
         }

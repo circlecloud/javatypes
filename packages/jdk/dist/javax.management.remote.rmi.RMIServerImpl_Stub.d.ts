@@ -7,9 +7,9 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(ref: java.rmi.server.RemoteRef)
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    public getVersion(): string
                     // @ts-ignore
-                    newClient($param_Object_1: any): javax.management.remote.rmi.RMIConnection
+                    public newClient($param_Object_1: java.lang.Object | any): javax.management.remote.rmi.RMIConnection
                 }
             }
         }

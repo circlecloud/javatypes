@@ -61,7 +61,7 @@ declare namespace javax {
                  *  <code>ThreadGroup</code>.
                  */
                 // @ts-ignore
-                getDefaultInstance(): javax.imageio.spi.IIORegistry
+                public static getDefaultInstance(): javax.imageio.spi.IIORegistry
                 /**
                  * Registers all available service providers found on the
                  * application class path, using the default
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @see ClassLoader#getResources
                  */
                 // @ts-ignore
-                registerApplicationClasspathSpis(): void
+                public registerApplicationClasspathSpis(): void
             }
         }
     }

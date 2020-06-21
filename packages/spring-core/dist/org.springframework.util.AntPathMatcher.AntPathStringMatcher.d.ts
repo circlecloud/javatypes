@@ -10,15 +10,15 @@ declare namespace org {
                 // @ts-ignore
                 class AntPathStringMatcher extends java.lang.Object {
                     // @ts-ignore
-                    constructor(pattern: string)
+                    constructor(pattern: java.lang.String | string)
                     // @ts-ignore
-                    constructor(pattern: string, caseSensitive: boolean)
+                    constructor(pattern: java.lang.String | string, caseSensitive: boolean)
                     /**
                      * Main entry point.
                      * @return {#code true} if the string matches against the pattern, or {@code false} otherwise.
                      */
                     // @ts-ignore
-                    matchStrings(str: string, uriTemplateVariables: java.util.Map<java.lang.String, java.lang.String>): boolean
+                    public matchStrings(str: java.lang.String | string, uriTemplateVariables: java.util.Map<java.lang.String | string, java.lang.String | string>): boolean
                 }
             }
         }

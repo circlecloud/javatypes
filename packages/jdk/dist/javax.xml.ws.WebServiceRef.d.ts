@@ -40,7 +40,7 @@ declare namespace javax {
              * @since JAX-WS 2.0
              */
             // @ts-ignore
-            class WebServiceRef implements java.lang.annotation.Annotation {
+            abstract class WebServiceRef implements java.lang.annotation.Annotation {
             }
         }
     }

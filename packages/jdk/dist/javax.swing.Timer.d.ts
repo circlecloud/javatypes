@@ -120,13 +120,13 @@ declare namespace javax {
              * @see #Timer
              */
             // @ts-ignore
-            addActionListener(listener: java.awt.event.ActionListener): void
+            public addActionListener(listener: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener from the <code>Timer</code>.
              * @param listener the listener to remove
              */
             // @ts-ignore
-            removeActionListener(listener: java.awt.event.ActionListener): void
+            public removeActionListener(listener: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners registered
              * on this timer.
@@ -137,7 +137,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.
@@ -179,7 +179,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Enables or disables the timer log. When enabled, a message
              * is posted to <code>System.out</code> whenever the timer goes off.
@@ -187,14 +187,14 @@ declare namespace javax {
              * @see #getLogTimers
              */
             // @ts-ignore
-            setLogTimers(flag: boolean): void
+            public static setLogTimers(flag: boolean): void
             /**
              * Returns <code>true</code> if logging is enabled.
              * @return <code>true</code> if logging is enabled; otherwise, false
              * @see #setLogTimers
              */
             // @ts-ignore
-            getLogTimers(): boolean
+            public static getLogTimers(): boolean
             /**
              * Sets the <code>Timer</code>'s between-event delay, the number of milliseconds
              * between successive action events. This does not affect the initial delay
@@ -203,7 +203,7 @@ declare namespace javax {
              * @see #setInitialDelay
              */
             // @ts-ignore
-            setDelay(delay: number /*int*/): void
+            public setDelay(delay: number /*int*/): void
             /**
              * Returns the delay, in milliseconds,
              * between firings of action events.
@@ -211,7 +211,7 @@ declare namespace javax {
              * @see #getInitialDelay
              */
             // @ts-ignore
-            getDelay(): int
+            public getDelay(): number /*int*/
             /**
              * Sets the <code>Timer</code>'s initial delay, the time
              * in milliseconds to wait after the timer is started
@@ -223,14 +223,14 @@ declare namespace javax {
              * @see #setDelay
              */
             // @ts-ignore
-            setInitialDelay(initialDelay: number /*int*/): void
+            public setInitialDelay(initialDelay: number /*int*/): void
             /**
              * Returns the <code>Timer</code>'s initial delay.
              * @see #setInitialDelay
              * @see #setDelay
              */
             // @ts-ignore
-            getInitialDelay(): int
+            public getInitialDelay(): number /*int*/
             /**
              * If <code>flag</code> is <code>false</code>,
              * instructs the <code>Timer</code> to send only one
@@ -239,7 +239,7 @@ declare namespace javax {
              *              stop after sending its first action event
              */
             // @ts-ignore
-            setRepeats(flag: boolean): void
+            public setRepeats(flag: boolean): void
             /**
              * Returns <code>true</code> (the default)
              * if the <code>Timer</code> will send
@@ -248,7 +248,7 @@ declare namespace javax {
              * @see #setRepeats
              */
             // @ts-ignore
-            isRepeats(): boolean
+            public isRepeats(): boolean
             /**
              * Sets whether the <code>Timer</code> coalesces multiple pending
              * <code>ActionEvent</code> firings.
@@ -265,14 +265,14 @@ declare namespace javax {
              * @param flag specify <code>false</code> to turn off coalescing
              */
             // @ts-ignore
-            setCoalesce(flag: boolean): void
+            public setCoalesce(flag: boolean): void
             /**
              * Returns <code>true</code> if the <code>Timer</code> coalesces
              * multiple pending action events.
              * @see #setCoalesce
              */
             // @ts-ignore
-            isCoalesce(): boolean
+            public isCoalesce(): boolean
             /**
              * Sets the string that will be delivered as the action command
              * in <code>ActionEvent</code>s fired by this timer.
@@ -281,7 +281,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setActionCommand(command: string): void
+            public setActionCommand(command: java.lang.String | string): void
             /**
              * Returns the string that will be delivered as the action command
              * in <code>ActionEvent</code>s fired by this timer. May be
@@ -290,7 +290,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * Starts the <code>Timer</code>,
              * causing it to start sending action events
@@ -298,13 +298,13 @@ declare namespace javax {
              * @see #stop
              */
             // @ts-ignore
-            start(): void
+            public start(): void
             /**
              * Returns <code>true</code> if the <code>Timer</code> is running.
              * @see #start
              */
             // @ts-ignore
-            isRunning(): boolean
+            public isRunning(): boolean
             /**
              * Stops the <code>Timer</code>,
              * causing it to stop sending action events
@@ -312,14 +312,14 @@ declare namespace javax {
              * @see #start
              */
             // @ts-ignore
-            stop(): void
+            public stop(): void
             /**
              * Restarts the <code>Timer</code>,
              * canceling any pending firings and causing
              * it to fire with its initial delay.
              */
             // @ts-ignore
-            restart(): void
+            public restart(): void
         }
     }
 }

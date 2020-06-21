@@ -8,9 +8,9 @@ declare namespace org {
                  * @since 1.5
                  */
                 // @ts-ignore
-                class AmqpEvent extends ApplicationEvent {
+                abstract class AmqpEvent extends ApplicationEvent {
                     // @ts-ignore
-                    constructor(source: any)
+                    constructor(source: java.lang.Object | any)
                 }
             }
         }

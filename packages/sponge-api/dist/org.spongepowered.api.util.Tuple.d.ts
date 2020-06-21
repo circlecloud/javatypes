@@ -26,25 +26,25 @@ declare namespace org {
                      * @return The new Tuple
                      */
                     // @ts-ignore
-                    of<K, V>(first: K, second: V): org.spongepowered.api.util.Tuple<K, V>
+                    public static of<K, V>(first: K, second: V): org.spongepowered.api.util.Tuple<K, V>
                     /**
                      * Gets the first object, otherwise known as "key".
                      * @return The first object
                      */
                     // @ts-ignore
-                    getFirst(): K
+                    public getFirst(): K
                     /**
                      * Gets the second object, otherwise known as "value".
                      * @return The value
                      */
                     // @ts-ignore
-                    getSecond(): V
+                    public getSecond(): V
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                 }
             }
         }

@@ -19,7 +19,7 @@ declare namespace java {
                  * @see Choice#add(String)
                  */
                 // @ts-ignore
-                add(item: string, index: number /*int*/): void
+                add(item: java.lang.String | string, index: number /*int*/): void
                 /**
                  * Removes the item at index {@code index} from the combo box list.
                  * @param index the index where to remove the item

@@ -33,12 +33,12 @@ declare namespace org {
                      * for example to hold a single shared EJB instance.
                      */
                     // @ts-ignore
-                    invokeInContext(invocation: MethodInvocation): java.lang.Object
+                    public invokeInContext(invocation: MethodInvocation): any
                     /**
                      * Check for EJB3-style home object that serves as EJB component directly.
                      */
                     // @ts-ignore
-                    getCreateMethod(home: any): java.lang.reflect.Method
+                    getCreateMethod(home: java.lang.Object | any): java.lang.reflect.Method
                     /**
                      * Return an EJB instance to delegate the call to.
                      * Default implementation delegates to newSessionBeanInstance.
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see #newSessionBeanInstance
                      */
                     // @ts-ignore
-                    getSessionBeanInstance(): java.lang.Object
+                    getSessionBeanInstance(): any
                     /**
                      * Release the given EJB instance.
                      * Default implementation delegates to removeSessionBeanInstance.
@@ -64,7 +64,7 @@ declare namespace org {
                      * @see #create
                      */
                     // @ts-ignore
-                    newSessionBeanInstance(): java.lang.Object
+                    newSessionBeanInstance(): any
                     /**
                      * Remove the given EJB instance.
                      * @param ejb the EJB instance to remove

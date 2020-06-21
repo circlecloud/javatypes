@@ -15,13 +15,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        isAutowireCandidate(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public isAutowireCandidate(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         // @ts-ignore
-                        isRequired(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public isRequired(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         // @ts-ignore
-                        getSuggestedValue(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.lang.Object
+                        public getSuggestedValue(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): any
                         // @ts-ignore
-                        getLazyResolutionProxyIfNecessary(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, beanName: string): java.lang.Object
+                        public getLazyResolutionProxyIfNecessary(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, beanName: java.lang.String | string): any
                     }
                 }
             }

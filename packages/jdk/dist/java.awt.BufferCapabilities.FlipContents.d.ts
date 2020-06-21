@@ -18,7 +18,7 @@ declare namespace java {
                  * @see #COPIED
                  */
                 // @ts-ignore
-                readonly UNDEFINED: java.awt.BufferCapabilities.FlipContents
+                public static readonly UNDEFINED: java.awt.BufferCapabilities.FlipContents
                 /**
                  * When flip contents are <code>BACKGROUND</code>, the
                  * contents of the back buffer are cleared with the background color after
@@ -30,7 +30,7 @@ declare namespace java {
                  * @see #COPIED
                  */
                 // @ts-ignore
-                readonly BACKGROUND: java.awt.BufferCapabilities.FlipContents
+                public static readonly BACKGROUND: java.awt.BufferCapabilities.FlipContents
                 /**
                  * When flip contents are <code>PRIOR</code>, the
                  * contents of the back buffer are the prior contents of the front buffer
@@ -42,7 +42,7 @@ declare namespace java {
                  * @see #COPIED
                  */
                 // @ts-ignore
-                readonly PRIOR: java.awt.BufferCapabilities.FlipContents
+                public static readonly PRIOR: java.awt.BufferCapabilities.FlipContents
                 /**
                  * When flip contents are <code>COPIED</code>, the
                  * contents of the back buffer are copied to the front buffer when
@@ -54,7 +54,7 @@ declare namespace java {
                  * @see #PRIOR
                  */
                 // @ts-ignore
-                readonly COPIED: java.awt.BufferCapabilities.FlipContents
+                public static readonly COPIED: java.awt.BufferCapabilities.FlipContents
             }
         }
     }

@@ -34,7 +34,7 @@ declare namespace org {
                      * @return the list of supported media types, potentially an immutable copy
                      */
                     // @ts-ignore
-                    getSupportedMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    getSupportedMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Read an object of the given type from the given input message, and returns it.
                      * @param clazz the type of object to return. This type must have previously been passed to the
@@ -45,7 +45,7 @@ declare namespace org {
                      * @throws HttpMessageNotReadableException in case of conversion errors
                      */
                     // @ts-ignore
-                    read(clazz: java.lang.Class<T>, inputMessage: org.springframework.http.HttpInputMessage): T
+                    read(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): T
                     /**
                      * Write an given object to the given output message.
                      * @param t the object to write to the output message. The type of this object must have previously been

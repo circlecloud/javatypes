@@ -15,18 +15,18 @@ declare namespace org {
                      * @see RssChannelHttpMessageConverter
                      */
                     // @ts-ignore
-                    class AbstractWireFeedHttpMessageConverter<T extends WireFeed> extends org.springframework.http.converter.AbstractHttpMessageConverter<T> {
+                    abstract class AbstractWireFeedHttpMessageConverter<T extends WireFeed> extends org.springframework.http.converter.AbstractHttpMessageConverter<T> {
                         // @ts-ignore
                         constructor(supportedMediaType: org.springframework.http.MediaType)
                         /**
                          * The default charset used by the converter.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                        public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                         // @ts-ignore
-                        readInternal(clazz: java.lang.Class<T>, inputMessage: org.springframework.http.HttpInputMessage): T
+                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): T
                         // @ts-ignore
-                        writeInternal(wireFeed: T extends WireFeed, outputMessage: org.springframework.http.HttpOutputMessage): void
+                        writeInternal(wireFeed: T, outputMessage: org.springframework.http.HttpOutputMessage): void
                     }
                 }
             }

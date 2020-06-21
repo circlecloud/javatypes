@@ -7,9 +7,13 @@ declare namespace org {
             // @ts-ignore
             class MainHand extends java.lang.Enum<org.bukkit.inventory.MainHand> {
                 // @ts-ignore
+                readonly LEFT: org.bukkit.inventory.MainHand
+                // @ts-ignore
+                readonly RIGHT: org.bukkit.inventory.MainHand
+                // @ts-ignore
                 values(): org.bukkit.inventory.MainHand[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.inventory.MainHand
+                valueOf(name: java.lang.String | string): org.bukkit.inventory.MainHand
             }
         }
     }

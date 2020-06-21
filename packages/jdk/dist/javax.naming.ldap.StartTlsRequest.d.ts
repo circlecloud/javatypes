@@ -46,13 +46,13 @@ declare namespace javax {
                  * is 1.3.6.1.4.1.1466.20037.
                  */
                 // @ts-ignore
-                readonly OID: string
+                public static readonly OID: java.lang.String | string
                 /**
                  * Retrieves the StartTLS request's object identifier string.
                  * @return The object identifier string, "1.3.6.1.4.1.1466.20037".
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                public getID(): string
                 /**
                  * Retrieves the StartTLS request's ASN.1 BER encoded value.
                  * Since the request has no defined value, null is always
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @return The null value.
                  */
                 // @ts-ignore
-                getEncodedValue(): byte[]
+                public getEncodedValue(): number /*byte*/[]
                 /**
                  * Creates an extended response object that corresponds to the
                  * LDAP StartTLS extended request.
@@ -111,7 +111,7 @@ declare namespace javax {
                  *                    while creating the StartTLS extended response object.
                  */
                 // @ts-ignore
-                createExtendedResponse(id: string, berValue: number /*byte*/[], offset: number /*int*/, length: number /*int*/): javax.naming.ldap.ExtendedResponse
+                public createExtendedResponse(id: java.lang.String | string, berValue: number /*byte*/[], offset: number /*int*/, length: number /*int*/): javax.naming.ldap.ExtendedResponse
             }
         }
     }

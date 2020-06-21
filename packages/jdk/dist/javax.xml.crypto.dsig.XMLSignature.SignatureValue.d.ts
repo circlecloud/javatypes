@@ -32,7 +32,7 @@ declare namespace javax {
                          *     not specified)
                          */
                         // @ts-ignore
-                        getId(): java.lang.String
+                        getId(): string
                         /**
                          * Returns the signature value of this <code>SignatureValue</code>.
                          * @return the signature value (may be <code>null</code> if the
@@ -41,7 +41,7 @@ declare namespace javax {
                          *     prevent subsequent modification.
                          */
                         // @ts-ignore
-                        getValue(): byte[]
+                        getValue(): number /*byte*/[]
                         /**
                          * Validates the signature value. This method performs a
                          * cryptographic validation of the signature calculated over the

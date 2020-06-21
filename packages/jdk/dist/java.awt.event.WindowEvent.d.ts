@@ -140,13 +140,13 @@ declare namespace java {
                  * The first number in the range of ids used for window events.
                  */
                 // @ts-ignore
-                readonly WINDOW_FIRST: number /*int*/
+                public static readonly WINDOW_FIRST: number /*int*/
                 /**
                  * The window opened event.  This event is delivered only
                  * the first time a window is made visible.
                  */
                 // @ts-ignore
-                readonly WINDOW_OPENED: number /*int*/
+                public static readonly WINDOW_OPENED: number /*int*/
                 /**
                  * The "window is closing" event. This event is delivered when
                  * the user attempts to close the window from the window's system menu.
@@ -155,7 +155,7 @@ declare namespace java {
                  * cancelled.
                  */
                 // @ts-ignore
-                readonly WINDOW_CLOSING: number /*int*/
+                public static readonly WINDOW_CLOSING: number /*int*/
                 /**
                  * The window closed event. This event is delivered after the displayable
                  * window has been closed as the result of a call to dispose.
@@ -163,7 +163,7 @@ declare namespace java {
                  * @see Window#dispose
                  */
                 // @ts-ignore
-                readonly WINDOW_CLOSED: number /*int*/
+                public static readonly WINDOW_CLOSED: number /*int*/
                 /**
                  * The window iconified event. This event is delivered when
                  * the window has been changed from a normal to a minimized state.
@@ -172,13 +172,13 @@ declare namespace java {
                  * @see java.awt.Frame#setIconImage
                  */
                 // @ts-ignore
-                readonly WINDOW_ICONIFIED: number /*int*/
+                public static readonly WINDOW_ICONIFIED: number /*int*/
                 /**
                  * The window deiconified event type. This event is delivered when
                  * the window has been changed from a minimized to a normal state.
                  */
                 // @ts-ignore
-                readonly WINDOW_DEICONIFIED: number /*int*/
+                public static readonly WINDOW_DEICONIFIED: number /*int*/
                 /**
                  * The window-activated event type. This event is delivered when the Window
                  * becomes the active Window. Only a Frame or a Dialog can be the active
@@ -188,7 +188,7 @@ declare namespace java {
                  * Dialog that is an owner of the focused Window.
                  */
                 // @ts-ignore
-                readonly WINDOW_ACTIVATED: number /*int*/
+                public static readonly WINDOW_ACTIVATED: number /*int*/
                 /**
                  * The window-deactivated event type. This event is delivered when the
                  * Window is no longer the active Window. Only a Frame or a Dialog can be
@@ -198,21 +198,21 @@ declare namespace java {
                  * first Frame or Dialog that is an owner of the focused Window.
                  */
                 // @ts-ignore
-                readonly WINDOW_DEACTIVATED: number /*int*/
+                public static readonly WINDOW_DEACTIVATED: number /*int*/
                 /**
                  * The window-gained-focus event type. This event is delivered when the
                  * Window becomes the focused Window, which means that the Window, or one
                  * of its subcomponents, will receive keyboard events.
                  */
                 // @ts-ignore
-                readonly WINDOW_GAINED_FOCUS: number /*int*/
+                public static readonly WINDOW_GAINED_FOCUS: number /*int*/
                 /**
                  * The window-lost-focus event type. This event is delivered when a Window
                  * is no longer the focused Window, which means keyboard events will no
                  * longer be delivered to the Window or any of its subcomponents.
                  */
                 // @ts-ignore
-                readonly WINDOW_LOST_FOCUS: number /*int*/
+                public static readonly WINDOW_LOST_FOCUS: number /*int*/
                 /**
                  * The window-state-changed event type.  This event is delivered
                  * when a Window's state is changed by virtue of it being
@@ -220,18 +220,18 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly WINDOW_STATE_CHANGED: number /*int*/
+                public static readonly WINDOW_STATE_CHANGED: number /*int*/
                 /**
                  * The last number in the range of ids used for window events.
                  */
                 // @ts-ignore
-                readonly WINDOW_LAST: number /*int*/
+                public static readonly WINDOW_LAST: number /*int*/
                 /**
                  * Returns the originator of the event.
                  * @return the Window object that originated the event
                  */
                 // @ts-ignore
-                getWindow(): java.awt.Window
+                public getWindow(): java.awt.Window
                 /**
                  * Returns the other Window involved in this focus or activation change.
                  * For a WINDOW_ACTIVATED or WINDOW_GAINED_FOCUS event, this is the Window
@@ -245,7 +245,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getOppositeWindow(): java.awt.Window
+                public getOppositeWindow(): java.awt.Window
                 /**
                  * For <code>WINDOW_STATE_CHANGED</code> events returns the
                  * previous state of the window. The state is
@@ -265,7 +265,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getOldState(): int
+                public getOldState(): number /*int*/
                 /**
                  * For <code>WINDOW_STATE_CHANGED</code> events returns the
                  * new state of the window. The state is
@@ -285,14 +285,14 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getNewState(): int
+                public getNewState(): number /*int*/
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

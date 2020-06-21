@@ -26,7 +26,7 @@ declare namespace javax {
                  *               <code>TreeSelectionModel</code>
                  */
                 // @ts-ignore
-                valueChanged(e: javax.swing.event.TreeSelectionEvent): void
+                public valueChanged(e: javax.swing.event.TreeSelectionEvent): void
             }
         }
     }

@@ -34,7 +34,7 @@ declare namespace java {
                  * @return the display name for the locale or a suitable default, not null
                  */
                 // @ts-ignore
-                getDisplayName(locale: java.util.Locale): java.lang.String
+                getDisplayName(locale: java.util.Locale): string
                 /**
                  * Gets the unit that the field is measured in.
                  * <p>
@@ -177,7 +177,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                getFrom(temporal: java.time.temporal.TemporalAccessor): long
+                getFrom(temporal: java.time.temporal.TemporalAccessor): number /*long*/
                 /**
                  * Returns a copy of the specified temporal object with the value of this field set.
                  * <p>
@@ -219,7 +219,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                adjustInto<R extends java.time.temporal.Temporal>(temporal: R extends java.time.temporal.Temporal, newValue: number /*long*/): R
+                adjustInto<R extends java.time.temporal.Temporal>(temporal: R, newValue: number /*long*/): R
                 /**
                  * Resolves this field to provide a simpler alternative or a date.
                  * <p>
@@ -284,7 +284,7 @@ declare namespace java {
                  *   by querying a field on the temporal without first checking if it is supported
                  */
                 // @ts-ignore
-                resolve(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, partialTemporal: java.time.temporal.TemporalAccessor, resolverStyle: java.time.format.ResolverStyle): java.time.temporal.TemporalAccessor
+                resolve(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, partialTemporal: java.time.temporal.TemporalAccessor, resolverStyle: java.time.format.ResolverStyle): java.time.temporal.TemporalAccessor
                 /**
                  * Gets a descriptive name for the field.
                  * <p>
@@ -294,7 +294,7 @@ declare namespace java {
                  * @return the name of the field, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

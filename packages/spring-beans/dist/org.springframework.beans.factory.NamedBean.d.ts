@@ -16,7 +16,7 @@ declare namespace org {
                      * Return the name of this bean in a Spring bean factory, if known.
                      */
                     // @ts-ignore
-                    getBeanName(): java.lang.String
+                    getBeanName(): string
                 }
             }
         }

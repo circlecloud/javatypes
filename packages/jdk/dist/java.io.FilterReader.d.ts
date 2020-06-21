@@ -11,7 +11,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class FilterReader extends java.io.Reader {
+        abstract class FilterReader extends java.io.Reader {
             /**
              * Creates a new filtered reader.
              * @param in  a Reader object providing the underlying stream.
@@ -29,44 +29,44 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads characters into a portion of an array.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips characters.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Tells whether this stream is ready to be read.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             /**
              * Tells whether this stream supports the mark() operation.
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Marks the present position in the stream.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Resets the stream.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

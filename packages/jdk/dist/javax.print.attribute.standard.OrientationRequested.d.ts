@@ -46,7 +46,7 @@ declare namespace javax {
                      * The content will be imaged across the short edge of the medium.
                      */
                     // @ts-ignore
-                    readonly PORTRAIT: javax.print.attribute.standard.OrientationRequested
+                    public static readonly PORTRAIT: javax.print.attribute.standard.OrientationRequested
                     /**
                      * The content will be imaged across the long edge of the medium.
                      * Landscape is defined to be a rotation of the print-stream page to be
@@ -57,7 +57,7 @@ declare namespace javax {
                      * landscape.
                      */
                     // @ts-ignore
-                    readonly LANDSCAPE: javax.print.attribute.standard.OrientationRequested
+                    public static readonly LANDSCAPE: javax.print.attribute.standard.OrientationRequested
                     /**
                      * The content will be imaged across the long edge of the medium, but in
                      * the opposite manner from landscape. Reverse-landscape is defined to be
@@ -68,7 +68,7 @@ declare namespace javax {
                      * +90 degrees.
                      */
                     // @ts-ignore
-                    readonly REVERSE_LANDSCAPE: javax.print.attribute.standard.OrientationRequested
+                    public static readonly REVERSE_LANDSCAPE: javax.print.attribute.standard.OrientationRequested
                     /**
                      * The content will be imaged across the short edge of the medium, but in
                      * the opposite manner from portrait. Reverse-portrait is defined to be a
@@ -83,12 +83,12 @@ declare namespace javax {
                      * Middle Eastern languages such as Hebrew.
                      */
                     // @ts-ignore
-                    readonly REVERSE_PORTRAIT: javax.print.attribute.standard.OrientationRequested
+                    public static readonly REVERSE_PORTRAIT: javax.print.attribute.standard.OrientationRequested
                     /**
                      * Returns the string table for class OrientationRequested.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class OrientationRequested.
                      */
@@ -98,7 +98,7 @@ declare namespace javax {
                      * Returns the lowest integer value used by class OrientationRequested.
                      */
                     // @ts-ignore
-                    getOffset(): int
+                    getOffset(): number /*int*/
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -109,7 +109,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -119,7 +119,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

@@ -16,7 +16,7 @@ declare namespace org {
                  * @see JndiRmiServiceExporter
                  */
                 // @ts-ignore
-                class RmiBasedExporter extends org.springframework.remoting.support.RemoteInvocationBasedExporter {
+                abstract class RmiBasedExporter extends org.springframework.remoting.support.RemoteInvocationBasedExporter {
                     // @ts-ignore
                     constructor()
                     /**
@@ -33,7 +33,7 @@ declare namespace org {
                      * Simply delegates to the corresponding superclass method.
                      */
                     // @ts-ignore
-                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: any): java.lang.Object
+                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: java.lang.Object | any): any
                 }
             }
         }

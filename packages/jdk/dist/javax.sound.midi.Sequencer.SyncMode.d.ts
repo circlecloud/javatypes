@@ -33,14 +33,14 @@ declare namespace javax {
                      * @param name name of the synchronization mode
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * A master synchronization mode that makes the sequencer get
                      * its timing information from its internal clock.  This is not
                      * a legal slave sync mode.
                      */
                     // @ts-ignore
-                    readonly INTERNAL_CLOCK: javax.sound.midi.Sequencer.SyncMode
+                    public static readonly INTERNAL_CLOCK: javax.sound.midi.Sequencer.SyncMode
                     /**
                      * A master or slave synchronization mode that specifies the
                      * use of MIDI clock
@@ -53,7 +53,7 @@ declare namespace javax {
                      * of 24 per quarter note.
                      */
                     // @ts-ignore
-                    readonly MIDI_SYNC: javax.sound.midi.Sequencer.SyncMode
+                    public static readonly MIDI_SYNC: javax.sound.midi.Sequencer.SyncMode
                     /**
                      * A master or slave synchronization mode that specifies the
                      * use of MIDI Time Code.
@@ -67,14 +67,14 @@ declare namespace javax {
                      * Specification for a description of MIDI Time Code.)
                      */
                     // @ts-ignore
-                    readonly MIDI_TIME_CODE: javax.sound.midi.Sequencer.SyncMode
+                    public static readonly MIDI_TIME_CODE: javax.sound.midi.Sequencer.SyncMode
                     /**
                      * A slave synchronization mode indicating that no timing information
                      * should be sent to the receiver.  This is not a legal master sync
                      * mode.
                      */
                     // @ts-ignore
-                    readonly NO_SYNC: javax.sound.midi.Sequencer.SyncMode
+                    public static readonly NO_SYNC: javax.sound.midi.Sequencer.SyncMode
                     /**
                      * Determines whether two objects are equal.
                      * Returns <code>true</code> if the objects are identical
@@ -83,19 +83,19 @@ declare namespace javax {
                      *  <code>obj</code> argument, <code>false</code> otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashcode method.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Provides this synchronization mode's name as the string
                      * representation of the mode.
                      * @return the name of this synchronization mode
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

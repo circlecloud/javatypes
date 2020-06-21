@@ -72,7 +72,7 @@ declare namespace org {
                      * @see Value
                      */
                     // @ts-ignore
-                    class Autowired implements java.lang.annotation.Annotation {
+                    abstract class Autowired implements java.lang.annotation.Annotation {
                     }
                 }
             }

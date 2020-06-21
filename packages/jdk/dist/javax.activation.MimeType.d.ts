@@ -17,7 +17,7 @@ declare namespace javax {
              * @param rawdata   the MIME type string
              */
             // @ts-ignore
-            constructor(rawdata: string)
+            constructor(rawdata: java.lang.String | string)
             /**
              * Constructor that builds a MimeType with the given primary and sub type
              * but has an empty parameter list.
@@ -27,13 +27,13 @@ declare namespace javax {
              *                                           is not a valid token
              */
             // @ts-ignore
-            constructor(primary: string, sub: string)
+            constructor(primary: java.lang.String | string, sub: java.lang.String | string)
             /**
              * Retrieve the primary type of this object.
              * @return the primary MIME type
              */
             // @ts-ignore
-            getPrimaryType(): java.lang.String
+            public getPrimaryType(): string
             /**
              * Set the primary type for this object to the given String.
              * @param primary   the primary MIME type
@@ -41,13 +41,13 @@ declare namespace javax {
              *                                           is not a valid token
              */
             // @ts-ignore
-            setPrimaryType(primary: string): void
+            public setPrimaryType(primary: java.lang.String | string): void
             /**
              * Retrieve the subtype of this object.
              * @return the MIME subtype
              */
             // @ts-ignore
-            getSubType(): java.lang.String
+            public getSubType(): string
             /**
              * Set the subtype for this object to the given String.
              * @param sub       the MIME subtype
@@ -55,13 +55,13 @@ declare namespace javax {
              *                                           is not a valid token
              */
             // @ts-ignore
-            setSubType(sub: string): void
+            public setSubType(sub: java.lang.String | string): void
             /**
              * Retrieve this object's parameter list.
              * @return a MimeTypeParameterList object representing the parameters
              */
             // @ts-ignore
-            getParameters(): javax.activation.MimeTypeParameterList
+            public getParameters(): javax.activation.MimeTypeParameterList
             /**
              * Retrieve the value associated with the given name, or null if there
              * is no current association.
@@ -69,7 +69,7 @@ declare namespace javax {
              * @return the paramter's value
              */
             // @ts-ignore
-            getParameter(name: string): java.lang.String
+            public getParameter(name: java.lang.String | string): string
             /**
              * Set the value to be associated with the given name, replacing
              * any previous association.
@@ -77,25 +77,25 @@ declare namespace javax {
              * @param value     the paramter's value
              */
             // @ts-ignore
-            setParameter(name: string, value: string): void
+            public setParameter(name: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Remove any value associated with the given name.
              * @param name      the parameter name
              */
             // @ts-ignore
-            removeParameter(name: string): void
+            public removeParameter(name: java.lang.String | string): void
             /**
              * Return the String representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Return a String representation of this object
              * without the parameter list.
              * @return the MIME type and sub-type
              */
             // @ts-ignore
-            getBaseType(): java.lang.String
+            public getBaseType(): string
             /**
              * Determine if the primary and sub type of this object is
              * the same as what is in the given type.
@@ -103,7 +103,7 @@ declare namespace javax {
              * @return true if they match
              */
             // @ts-ignore
-            match(type: javax.activation.MimeType): boolean
+            public match(type: javax.activation.MimeType): boolean
             /**
              * Determine if the primary and sub type of this object is
              * the same as the content type described in rawdata.
@@ -111,7 +111,7 @@ declare namespace javax {
              * @return true if they match
              */
             // @ts-ignore
-            match(rawdata: string): boolean
+            public match(rawdata: java.lang.String | string): boolean
             /**
              * The object implements the writeExternal method to save its contents
              * by calling the methods of DataOutput for its primitive values or
@@ -121,7 +121,7 @@ declare namespace javax {
              * @exception IOException Includes any I/O exceptions that may occur
              */
             // @ts-ignore
-            writeExternal(out: java.io.ObjectOutput): void
+            public writeExternal(out: java.io.ObjectOutput): void
             /**
              * The object implements the readExternal method to restore its
              * contents by calling the methods of DataInput for primitive
@@ -133,7 +133,7 @@ declare namespace javax {
              *               restored cannot be found.
              */
             // @ts-ignore
-            readExternal(input: java.io.ObjectInput): void
+            public readExternal(input: java.io.ObjectInput): void
         }
     }
 }

@@ -33,14 +33,14 @@ declare namespace org {
                     // @ts-ignore
                     constructor(classLoader: org.springframework.instrument.classloading.SimpleInstrumentableClassLoader)
                     // @ts-ignore
-                    addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
+                    public addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
                     // @ts-ignore
-                    getInstrumentableClassLoader(): java.lang.ClassLoader
+                    public getInstrumentableClassLoader(): java.lang.ClassLoader
                     /**
                      * This implementation builds a {@link SimpleThrowawayClassLoader}.
                      */
                     // @ts-ignore
-                    getThrowawayClassLoader(): java.lang.ClassLoader
+                    public getThrowawayClassLoader(): java.lang.ClassLoader
                 }
             }
         }

@@ -11,7 +11,7 @@ declare namespace org {
              * @see HttpHeaders#getRange()
              */
             // @ts-ignore
-            class HttpRange extends java.lang.Object {
+            abstract class HttpRange extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -22,21 +22,21 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                toResourceRegion(resource: Resource): ResourceRegion
+                public toResourceRegion(resource: Resource): ResourceRegion
                 /**
                  * Return the start of the range given the total length of a representation.
                  * @param length the length of the representation
                  * @return the start of this range for the representation
                  */
                 // @ts-ignore
-                abstract getRangeStart(length: number /*long*/): long
+                public abstract getRangeStart(length: number /*long*/): number /*long*/
                 /**
                  * Return the end of the range (inclusive) given the total length of a representation.
                  * @param length the length of the representation
                  * @return the end of the range for the representation
                  */
                 // @ts-ignore
-                abstract getRangeEnd(length: number /*long*/): long
+                public abstract getRangeEnd(length: number /*long*/): number /*long*/
                 /**
                  * Create an {@code HttpRange} from the given position to the end.
                  * @param firstBytePos the first byte position
@@ -44,7 +44,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-2.1">Byte Ranges</a>
                  */
                 // @ts-ignore
-                createByteRange(firstBytePos: number /*long*/): org.springframework.http.HttpRange
+                public static createByteRange(firstBytePos: number /*long*/): org.springframework.http.HttpRange
                 /**
                  * Create a {@code HttpRange} from the given fist to last position.
                  * @param firstBytePos the first byte position
@@ -53,7 +53,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-2.1">Byte Ranges</a>
                  */
                 // @ts-ignore
-                createByteRange(firstBytePos: number /*long*/, lastBytePos: number /*long*/): org.springframework.http.HttpRange
+                public static createByteRange(firstBytePos: number /*long*/, lastBytePos: number /*long*/): org.springframework.http.HttpRange
                 /**
                  * Create an {@code HttpRange} that ranges over the last given number of bytes.
                  * @param suffixLength the number of bytes for the range
@@ -61,7 +61,7 @@ declare namespace org {
                  * @see <a href="https://tools.ietf.org/html/rfc7233#section-2.1">Byte Ranges</a>
                  */
                 // @ts-ignore
-                createSuffixRange(suffixLength: number /*long*/): org.springframework.http.HttpRange
+                public static createSuffixRange(suffixLength: number /*long*/): org.springframework.http.HttpRange
                 /**
                  * Parse the given, comma-separated string into a list of {@code HttpRange} objects.
                  * <p>This method can be used to parse an {@code Range} header.
@@ -71,7 +71,7 @@ declare namespace org {
                  *  or if the number of ranges is greater than 100
                  */
                 // @ts-ignore
-                parseRanges(ranges: string): java.util.List<org.springframework.http.HttpRange>
+                public static parseRanges(ranges: java.lang.String | string): Array<org.springframework.http.HttpRange>
                 /**
                  * Convert each {@code HttpRange} into a {@code ResourceRegion}, selecting the
                  * appropriate segment of the given {@code Resource} using HTTP Range information.
@@ -82,7 +82,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                toResourceRegions(ranges: Array<org.springframework.http.HttpRange>, resource: Resource): java.util.List<ResourceRegion>
+                public static toResourceRegions(ranges: java.util.List<org.springframework.http.HttpRange> | Array<org.springframework.http.HttpRange>, resource: Resource): Array<ResourceRegion>
                 /**
                  * Return a string representation of the given list of {@code HttpRange} objects.
                  * <p>This method can be used to for an {@code Range} header.
@@ -90,7 +90,7 @@ declare namespace org {
                  * @return the string representation
                  */
                 // @ts-ignore
-                toString(ranges: Array<org.springframework.http.HttpRange>): java.lang.String
+                public static toString(ranges: java.util.Collection<org.springframework.http.HttpRange> | Array<org.springframework.http.HttpRange>): string
             }
         }
     }

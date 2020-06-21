@@ -18,24 +18,24 @@ declare namespace org {
                      * @return velocity of entity before entering the portal
                      */
                     // @ts-ignore
-                    getBefore(): org.bukkit.util.Vector
+                    public getBefore(): org.bukkit.util.Vector
                     /**
                      * Gets a copy of the velocity that the entity will have after exiting the
                      * portal.
                      * @return velocity of entity after exiting the portal
                      */
                     // @ts-ignore
-                    getAfter(): org.bukkit.util.Vector
+                    public getAfter(): org.bukkit.util.Vector
                     /**
                      * Sets the velocity that the entity will have after exiting the portal.
                      * @param after the velocity after exiting the portal
                      */
                     // @ts-ignore
-                    setAfter(after: org.bukkit.util.Vector): void
+                    public setAfter(after: org.bukkit.util.Vector): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

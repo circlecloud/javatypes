@@ -62,7 +62,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(label: string)
+            constructor(label: java.lang.String | string)
             /**
              * Creates a check box with the specified label
              * and sets the specified state.
@@ -76,7 +76,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(label: string, state: boolean)
+            constructor(label: java.lang.String | string, state: boolean)
             /**
              * Constructs a Checkbox with the specified label, set to the
              * specified state, and in the specified check box group.
@@ -92,7 +92,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(label: string, state: boolean, group: java.awt.CheckboxGroup)
+            constructor(label: java.lang.String | string, state: boolean, group: java.awt.CheckboxGroup)
             /**
              * Creates a check box with the specified label, in the specified
              * check box group, and set to the specified state.
@@ -108,7 +108,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(label: string, group: java.awt.CheckboxGroup, state: boolean)
+            constructor(label: java.lang.String | string, group: java.awt.CheckboxGroup, state: boolean)
             /**
              * Creates the peer of the Checkbox. The peer allows you to change the
              * look of the Checkbox without changing its functionality.
@@ -116,7 +116,7 @@ declare namespace java {
              * @see java.awt.Component#getToolkit()
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the label of this check box.
              * @return the label of this check box, or <code>null</code>
@@ -124,7 +124,7 @@ declare namespace java {
              * @see #setLabel(String)
              */
             // @ts-ignore
-            getLabel(): java.lang.String
+            public getLabel(): string
             /**
              * Sets this check box's label to be the string argument.
              * @param label   a string to set as the new label, or
@@ -132,7 +132,7 @@ declare namespace java {
              * @see #getLabel
              */
             // @ts-ignore
-            setLabel(label: string): void
+            public setLabel(label: java.lang.String | string): void
             /**
              * Determines whether this check box is in the "on" or "off" state.
              * The boolean value <code>true</code> indicates the "on" state,
@@ -141,7 +141,7 @@ declare namespace java {
              * @see #setState
              */
             // @ts-ignore
-            getState(): boolean
+            public getState(): boolean
             /**
              * Sets the state of this check box to the specified state.
              * The boolean value <code>true</code> indicates the "on" state,
@@ -155,14 +155,14 @@ declare namespace java {
              * @see #getState
              */
             // @ts-ignore
-            setState(state: boolean): void
+            public setState(state: boolean): void
             /**
              * Returns an array (length 1) containing the checkbox
              * label or null if the checkbox is not selected.
              * @see ItemSelectable
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * Determines this check box's group.
              * @return this check box's group, or <code>null</code>
@@ -170,7 +170,7 @@ declare namespace java {
              * @see #setCheckboxGroup(CheckboxGroup)
              */
             // @ts-ignore
-            getCheckboxGroup(): java.awt.CheckboxGroup
+            public getCheckboxGroup(): java.awt.CheckboxGroup
             /**
              * Sets this check box's group to the specified check box group.
              * If this check box is already in a different check box group,
@@ -187,7 +187,7 @@ declare namespace java {
              * @see #getCheckboxGroup
              */
             // @ts-ignore
-            setCheckboxGroup(g: java.awt.CheckboxGroup): void
+            public setCheckboxGroup(g: java.awt.CheckboxGroup): void
             /**
              * Adds the specified item listener to receive item events from
              * this check box.  Item events are sent to listeners in response
@@ -204,7 +204,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addItemListener(l: java.awt.event.ItemListener): void
+            public addItemListener(l: java.awt.event.ItemListener): void
             /**
              * Removes the specified item listener so that the item listener
              * no longer receives item events from this check box.
@@ -219,7 +219,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeItemListener(l: java.awt.event.ItemListener): void
+            public removeItemListener(l: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the item listeners
              * registered on this checkbox.
@@ -233,7 +233,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -263,7 +263,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this check box.
              * If the event is an instance of <code>ItemEvent</code>,
@@ -313,7 +313,7 @@ declare namespace java {
              * @return the parameter string of this check box
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this Checkbox.
              * For checkboxes, the AccessibleContext takes the form of an
@@ -324,7 +324,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

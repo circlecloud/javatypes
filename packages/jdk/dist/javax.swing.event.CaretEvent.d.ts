@@ -16,19 +16,19 @@ declare namespace javax {
              * @author Timothy Prinzing
              */
             // @ts-ignore
-            class CaretEvent extends java.util.EventObject {
+            abstract class CaretEvent extends java.util.EventObject {
                 /**
                  * Creates a new CaretEvent object.
                  * @param source the object responsible for the event
                  */
                 // @ts-ignore
-                constructor(source: any)
+                constructor(source: java.lang.Object | any)
                 /**
                  * Fetches the location of the caret.
                  * @return the dot &gt;= 0
                  */
                 // @ts-ignore
-                abstract getDot(): int
+                public abstract getDot(): number /*int*/
                 /**
                  * Fetches the location of other end of a logical
                  * selection.  If there is no selection, this
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @return the mark &gt;= 0
                  */
                 // @ts-ignore
-                abstract getMark(): int
+                public abstract getMark(): number /*int*/
             }
         }
     }

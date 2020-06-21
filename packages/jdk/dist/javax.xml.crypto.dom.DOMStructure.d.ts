@@ -31,12 +31,12 @@ declare namespace javax {
                      * @return the node
                      */
                     // @ts-ignore
-                    getNode(): org.w3c.dom.Node
+                    public getNode(): org.w3c.dom.Node
                     /**
                      * @throws NullPointerException {#inheritDoc}
                      */
                     // @ts-ignore
-                    isFeatureSupported(feature: string): boolean
+                    public isFeatureSupported(feature: java.lang.String | string): boolean
                 }
             }
         }

@@ -47,7 +47,7 @@ declare namespace javax {
                      * @param systemId Must be a String that conforms to the URI syntax.
                      */
                     // @ts-ignore
-                    constructor(inputStream: java.io.InputStream, systemId: string)
+                    constructor(inputStream: java.io.InputStream, systemId: java.lang.String | string)
                     /**
                      * Construct a StreamSource from a character reader.  Normally,
                      * a stream should be used rather than a reader, so that
@@ -70,13 +70,13 @@ declare namespace javax {
                      * @param systemId Must be a String that conforms to the URI syntax.
                      */
                     // @ts-ignore
-                    constructor(reader: java.io.Reader, systemId: string)
+                    constructor(reader: java.io.Reader, systemId: java.lang.String | string)
                     /**
                      * Construct a StreamSource from a URL.
                      * @param systemId Must be a String that conforms to the URI syntax.
                      */
                     // @ts-ignore
-                    constructor(systemId: string)
+                    constructor(systemId: java.lang.String | string)
                     /**
                      * Construct a StreamSource from a File.
                      * @param f Must a non-null File reference.
@@ -89,7 +89,7 @@ declare namespace javax {
                      * the Transformer supports Source input of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * Set the byte stream to be used as input.  Normally,
                      * a stream should be used rather than a reader, so that
@@ -101,14 +101,14 @@ declare namespace javax {
                      * @param inputStream A valid InputStream reference to an XML stream.
                      */
                     // @ts-ignore
-                    setInputStream(inputStream: java.io.InputStream): void
+                    public setInputStream(inputStream: java.io.InputStream): void
                     /**
                      * Get the byte stream that was set with setByteStream.
                      * @return The byte stream that was set with setByteStream, or null
                      *  if setByteStream or the ByteStream constructor was not called.
                      */
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     /**
                      * Set the input to be a character reader.  Normally,
                      * a stream should be used rather than a reader, so that
@@ -119,14 +119,14 @@ declare namespace javax {
                      * @param reader A valid Reader reference to an XML CharacterStream.
                      */
                     // @ts-ignore
-                    setReader(reader: java.io.Reader): void
+                    public setReader(reader: java.io.Reader): void
                     /**
                      * Get the character stream that was set with setReader.
                      * @return The character stream that was set with setReader, or null
                      *  if setReader or the Reader constructor was not called.
                      */
                     // @ts-ignore
-                    getReader(): java.io.Reader
+                    public getReader(): java.io.Reader
                     /**
                      * Set the public identifier for this Source.
                      * <p>The public identifier is always optional: if the application
@@ -135,14 +135,14 @@ declare namespace javax {
                      * @param publicId The public identifier as a string.
                      */
                     // @ts-ignore
-                    setPublicId(publicId: string): void
+                    public setPublicId(publicId: java.lang.String | string): void
                     /**
                      * Get the public identifier that was set with setPublicId.
                      * @return The public identifier that was set with setPublicId, or null
                      *  if setPublicId was not called.
                      */
                     // @ts-ignore
-                    getPublicId(): java.lang.String
+                    public getPublicId(): string
                     /**
                      * Set the system identifier for this Source.
                      * <p>The system identifier is optional if there is a byte stream
@@ -154,20 +154,20 @@ declare namespace javax {
                      * @param systemId The system identifier as a URL string.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * Get the system identifier that was set with setSystemId.
                      * @return The system identifier that was set with setSystemId, or null
                      *  if setSystemId was not called.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                     /**
                      * Set the system ID from a File reference.
                      * @param f Must a non-null File reference.
                      */
                     // @ts-ignore
-                    setSystemId(f: java.io.File): void
+                    public setSystemId(f: java.io.File): void
                 }
             }
         }

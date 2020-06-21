@@ -43,7 +43,7 @@ declare namespace java {
          * @see java.security.Security security properties
          */
         // @ts-ignore
-        class Policy extends java.lang.Object {
+        abstract class Policy extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -51,7 +51,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly UNSUPPORTED_EMPTY_COLLECTION: java.security.PermissionCollection
+            public static readonly UNSUPPORTED_EMPTY_COLLECTION: java.security.PermissionCollection
             /**
              * Returns the installed Policy object. This value should not be cached,
              * as it may be changed by a call to {@code setPolicy}.
@@ -68,7 +68,7 @@ declare namespace java {
              * @see #setPolicy(java.security.Policy)
              */
             // @ts-ignore
-            getPolicy(): java.security.Policy
+            public static getPolicy(): java.security.Policy
             /**
              * Sets the system-wide Policy object. This method first calls
              * {@code SecurityManager.checkPermission} with a
@@ -83,7 +83,7 @@ declare namespace java {
              * @see #getPolicy()
              */
             // @ts-ignore
-            setPolicy(p: java.security.Policy): void
+            public static setPolicy(p: java.security.Policy): void
             /**
              * Returns a Policy object of the specified type.
              * <p> This method traverses the list of registered security providers,
@@ -112,7 +112,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(type: string, params: java.security.Policy.Parameters): java.security.Policy
+            public static getInstance(type: java.lang.String | string, params: java.security.Policy.Parameters): java.security.Policy
             /**
              * Returns a Policy object of the specified type.
              * <p> A new Policy object encapsulating the
@@ -144,7 +144,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(type: string, params: java.security.Policy.Parameters, provider: string): java.security.Policy
+            public static getInstance(type: java.lang.String | string, params: java.security.Policy.Parameters, provider: java.lang.String | string): java.security.Policy
             /**
              * Returns a Policy object of the specified type.
              * <p> A new Policy object encapsulating the
@@ -171,7 +171,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(type: string, params: java.security.Policy.Parameters, provider: java.security.Provider): java.security.Policy
+            public static getInstance(type: java.lang.String | string, params: java.security.Policy.Parameters, provider: java.security.Provider): java.security.Policy
             /**
              * Return the Provider of this Policy.
              * <p> This Policy instance will only have a Provider if it
@@ -181,7 +181,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Return the type of this Policy.
              * <p> This Policy instance will only have a type if it
@@ -191,7 +191,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             /**
              * Return Policy parameters.
              * <p> This Policy instance will only have parameters if it
@@ -201,7 +201,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getParameters(): java.security.Policy.Parameters
+            public getParameters(): java.security.Policy.Parameters
             /**
              * Return a PermissionCollection object containing the set of
              * permissions granted to the specified CodeSource.
@@ -225,7 +225,7 @@ declare namespace java {
              *           Policy.UNSUPPORTED_EMPTY_COLLECTION is returned.
              */
             // @ts-ignore
-            getPermissions(codesource: java.security.CodeSource): java.security.PermissionCollection
+            public getPermissions(codesource: java.security.CodeSource): java.security.PermissionCollection
             /**
              * Return a PermissionCollection object containing the set of
              * permissions granted to the specified ProtectionDomain.
@@ -255,7 +255,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPermissions(domain: java.security.ProtectionDomain): java.security.PermissionCollection
+            public getPermissions(domain: java.security.ProtectionDomain): java.security.PermissionCollection
             /**
              * Evaluates the global policy for the permissions granted to
              * the ProtectionDomain and tests whether the permission is
@@ -268,7 +268,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            implies(domain: java.security.ProtectionDomain, permission: java.security.Permission): boolean
+            public implies(domain: java.security.ProtectionDomain, permission: java.security.Permission): boolean
             /**
              * Refreshes/reloads the policy configuration. The behavior of this method
              * depends on the implementation. For example, calling {@code refresh}
@@ -278,7 +278,7 @@ declare namespace java {
              * by the policy implementation.
              */
             // @ts-ignore
-            refresh(): void
+            public refresh(): void
         }
     }
 }

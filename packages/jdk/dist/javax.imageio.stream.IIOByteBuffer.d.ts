@@ -35,7 +35,7 @@ declare namespace javax {
                  * @see #setData
                  */
                 // @ts-ignore
-                getData(): byte[]
+                public getData(): number /*byte*/[]
                 /**
                  * Updates the array reference that will be returned by subsequent calls
                  * to the <code>getData</code> method.
@@ -43,7 +43,7 @@ declare namespace javax {
                  * @see #getData
                  */
                 // @ts-ignore
-                setData(data: number /*byte*/[]): void
+                public setData(data: number /*byte*/[]): void
                 /**
                  * Returns the offset within the byte array returned by
                  * <code>getData</code> at which the data of interest start.
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @see #setOffset
                  */
                 // @ts-ignore
-                getOffset(): int
+                public getOffset(): number /*int*/
                 /**
                  * Updates the value that will be returned by subsequent calls
                  * to the <code>getOffset</code> method.
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @see #getOffset
                  */
                 // @ts-ignore
-                setOffset(offset: number /*int*/): void
+                public setOffset(offset: number /*int*/): void
                 /**
                  * Returns the length of the data of interest within the byte
                  * array returned by <code>getData</code>.
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @see #setLength
                  */
                 // @ts-ignore
-                getLength(): int
+                public getLength(): number /*int*/
                 /**
                  * Updates the value that will be returned by subsequent calls
                  * to the <code>getLength</code> method.
@@ -79,7 +79,7 @@ declare namespace javax {
                  * @see #getLength
                  */
                 // @ts-ignore
-                setLength(length: number /*int*/): void
+                public setLength(length: number /*int*/): void
             }
         }
     }

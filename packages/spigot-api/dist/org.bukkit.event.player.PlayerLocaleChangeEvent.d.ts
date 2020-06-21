@@ -8,17 +8,17 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerLocaleChangeEvent extends org.bukkit.event.player.PlayerEvent {
                     // @ts-ignore
-                    constructor(who: org.bukkit.entity.Player, locale: string)
+                    constructor(who: org.bukkit.entity.Player, locale: java.lang.String | string)
                     /**
                      * @see Player#getLocale()
                      * @return the player's new locale
                      */
                     // @ts-ignore
-                    getLocale(): java.lang.String
+                    public getLocale(): string
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -18,11 +18,11 @@ declare namespace org {
                      * @return the context in which the server was loaded
                      */
                     // @ts-ignore
-                    getType(): org.bukkit.event.server.ServerLoadEvent.LoadType
+                    public getType(): org.bukkit.event.server.ServerLoadEvent.LoadType
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

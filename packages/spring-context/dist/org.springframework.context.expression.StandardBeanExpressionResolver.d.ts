@@ -30,35 +30,35 @@ declare namespace org {
                      * Default expression prefix: "#{".
                      */
                     // @ts-ignore
-                    readonly DEFAULT_EXPRESSION_PREFIX: string
+                    public static readonly DEFAULT_EXPRESSION_PREFIX: java.lang.String | string
                     /**
                      * Default expression suffix: "}".
                      */
                     // @ts-ignore
-                    readonly DEFAULT_EXPRESSION_SUFFIX: string
+                    public static readonly DEFAULT_EXPRESSION_SUFFIX: java.lang.String | string
                     /**
                      * Set the prefix that an expression string starts with.
                      * The default is "#{".
                      * @see #DEFAULT_EXPRESSION_PREFIX
                      */
                     // @ts-ignore
-                    setExpressionPrefix(expressionPrefix: string): void
+                    public setExpressionPrefix(expressionPrefix: java.lang.String | string): void
                     /**
                      * Set the suffix that an expression string ends with.
                      * The default is "}".
                      * @see #DEFAULT_EXPRESSION_SUFFIX
                      */
                     // @ts-ignore
-                    setExpressionSuffix(expressionSuffix: string): void
+                    public setExpressionSuffix(expressionSuffix: java.lang.String | string): void
                     /**
                      * Specify the EL parser to use for expression parsing.
                      * <p>Default is a {@link org.springframework.expression.spel.standard.SpelExpressionParser},
                      * compatible with standard Unified EL style expression syntax.
                      */
                     // @ts-ignore
-                    setExpressionParser(expressionParser: ExpressionParser): void
+                    public setExpressionParser(expressionParser: ExpressionParser): void
                     // @ts-ignore
-                    evaluate(value: string, evalContext: BeanExpressionContext): java.lang.Object
+                    public evaluate(value: java.lang.String | string, evalContext: BeanExpressionContext): any
                     /**
                      * Template method for customizing the expression evaluation context.
                      * <p>The default implementation is empty.

@@ -15,9 +15,9 @@ declare namespace org {
                          * @param beanDefinitionName the name of the associated bean definition
                          */
                         // @ts-ignore
-                        constructor(beanDefinitionName: string)
+                        constructor(beanDefinitionName: java.lang.String | string)
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

@@ -14,11 +14,11 @@ declare namespace org {
                      * @return Reason
                      */
                     // @ts-ignore
-                    getReason(): org.bukkit.event.raid.RaidStopEvent.Reason
+                    public getReason(): org.bukkit.event.raid.RaidStopEvent.Reason
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

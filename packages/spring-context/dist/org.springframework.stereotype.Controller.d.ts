@@ -15,7 +15,7 @@ declare namespace org {
              * @see org.springframework.context.annotation.ClassPathBeanDefinitionScanner
              */
             // @ts-ignore
-            class Controller implements java.lang.annotation.Annotation {
+            abstract class Controller implements java.lang.annotation.Annotation {
             }
         }
     }

@@ -21,7 +21,7 @@ declare namespace java {
              * compatibility with a previous version of the class.
              */
             // @ts-ignore
-            
+            readonly serialVersionUID: number /*long*/
         }
     }
 }

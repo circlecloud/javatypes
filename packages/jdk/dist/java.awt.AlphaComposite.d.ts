@@ -283,7 +283,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly CLEAR: number /*int*/
+            public static readonly CLEAR: number /*int*/
             /**
              * The source is copied to the destination
              * (Porter-Duff Source rule).
@@ -296,7 +296,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly SRC: number /*int*/
+            public static readonly SRC: number /*int*/
             /**
              * The destination is left untouched
              * (Porter-Duff Destination rule).
@@ -309,7 +309,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly DST: number /*int*/
+            public static readonly DST: number /*int*/
             /**
              * The source is composited over the destination
              * (Porter-Duff Source Over Destination rule).
@@ -321,7 +321,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly SRC_OVER: number /*int*/
+            public static readonly SRC_OVER: number /*int*/
             /**
              * The destination is composited over the source and
              * the result replaces the destination
@@ -334,7 +334,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly DST_OVER: number /*int*/
+            public static readonly DST_OVER: number /*int*/
             /**
              * The part of the source lying inside of the destination replaces
              * the destination
@@ -347,7 +347,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly SRC_IN: number /*int*/
+            public static readonly SRC_IN: number /*int*/
             /**
              * The part of the destination lying inside of the source
              * replaces the destination
@@ -360,7 +360,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly DST_IN: number /*int*/
+            public static readonly DST_IN: number /*int*/
             /**
              * The part of the source lying outside of the destination
              * replaces the destination
@@ -373,7 +373,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly SRC_OUT: number /*int*/
+            public static readonly SRC_OUT: number /*int*/
             /**
              * The part of the destination lying outside of the source
              * replaces the destination
@@ -386,7 +386,7 @@ declare namespace java {
              * </pre>
              */
             // @ts-ignore
-            readonly DST_OUT: number /*int*/
+            public static readonly DST_OUT: number /*int*/
             /**
              * The part of the source lying inside of the destination
              * is composited onto the destination
@@ -400,7 +400,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly SRC_ATOP: number /*int*/
+            public static readonly SRC_ATOP: number /*int*/
             /**
              * The part of the destination lying inside of the source
              * is composited over the source and replaces the destination
@@ -414,7 +414,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly DST_ATOP: number /*int*/
+            public static readonly DST_ATOP: number /*int*/
             /**
              * The part of the source that lies outside of the destination
              * is combined with the part of the destination that lies outside
@@ -429,21 +429,21 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly XOR: number /*int*/
+            public static readonly XOR: number /*int*/
             /**
              * <code>AlphaComposite</code> object that implements the opaque CLEAR rule
              * with an alpha of 1.0f.
              * @see #CLEAR
              */
             // @ts-ignore
-            readonly Clear: java.awt.AlphaComposite
+            public static readonly Clear: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque SRC rule
              * with an alpha of 1.0f.
              * @see #SRC
              */
             // @ts-ignore
-            readonly Src: java.awt.AlphaComposite
+            public static readonly Src: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque DST rule
              * with an alpha of 1.0f.
@@ -451,49 +451,49 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly Dst: java.awt.AlphaComposite
+            public static readonly Dst: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque SRC_OVER rule
              * with an alpha of 1.0f.
              * @see #SRC_OVER
              */
             // @ts-ignore
-            readonly SrcOver: java.awt.AlphaComposite
+            public static readonly SrcOver: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque DST_OVER rule
              * with an alpha of 1.0f.
              * @see #DST_OVER
              */
             // @ts-ignore
-            readonly DstOver: java.awt.AlphaComposite
+            public static readonly DstOver: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque SRC_IN rule
              * with an alpha of 1.0f.
              * @see #SRC_IN
              */
             // @ts-ignore
-            readonly SrcIn: java.awt.AlphaComposite
+            public static readonly SrcIn: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque DST_IN rule
              * with an alpha of 1.0f.
              * @see #DST_IN
              */
             // @ts-ignore
-            readonly DstIn: java.awt.AlphaComposite
+            public static readonly DstIn: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque SRC_OUT rule
              * with an alpha of 1.0f.
              * @see #SRC_OUT
              */
             // @ts-ignore
-            readonly SrcOut: java.awt.AlphaComposite
+            public static readonly SrcOut: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque DST_OUT rule
              * with an alpha of 1.0f.
              * @see #DST_OUT
              */
             // @ts-ignore
-            readonly DstOut: java.awt.AlphaComposite
+            public static readonly DstOut: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque SRC_ATOP rule
              * with an alpha of 1.0f.
@@ -501,7 +501,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly SrcAtop: java.awt.AlphaComposite
+            public static readonly SrcAtop: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque DST_ATOP rule
              * with an alpha of 1.0f.
@@ -509,7 +509,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly DstAtop: java.awt.AlphaComposite
+            public static readonly DstAtop: java.awt.AlphaComposite
             /**
              * <code>AlphaComposite</code> object that implements the opaque XOR rule
              * with an alpha of 1.0f.
@@ -517,7 +517,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly Xor: java.awt.AlphaComposite
+            public static readonly Xor: java.awt.AlphaComposite
             /**
              * Creates an <code>AlphaComposite</code> object with the specified rule.
              * @param rule the compositing rule
@@ -528,7 +528,7 @@ declare namespace java {
              *          {@link #SRC_ATOP}, {@link #DST_ATOP}, or {@link #XOR}
              */
             // @ts-ignore
-            getInstance(rule: number /*int*/): java.awt.AlphaComposite
+            public static getInstance(rule: number /*int*/): java.awt.AlphaComposite
             /**
              * Creates an <code>AlphaComposite</code> object with the specified rule and
              * the constant alpha to multiply with the alpha of the source.
@@ -547,7 +547,7 @@ declare namespace java {
              *          {@link #SRC_ATOP}, {@link #DST_ATOP}, or {@link #XOR}
              */
             // @ts-ignore
-            getInstance(rule: number /*int*/, alpha: number /*float*/): java.awt.AlphaComposite
+            public static getInstance(rule: number /*int*/, alpha: number /*float*/): java.awt.AlphaComposite
             /**
              * Creates a context for the compositing operation.
              * The context contains state that is used in performing
@@ -558,20 +558,20 @@ declare namespace java {
              *  compositing operations.
              */
             // @ts-ignore
-            createContext(srcColorModel: java.awt.image.ColorModel, dstColorModel: java.awt.image.ColorModel, hints: java.awt.RenderingHints): java.awt.CompositeContext
+            public createContext(srcColorModel: java.awt.image.ColorModel, dstColorModel: java.awt.image.ColorModel, hints: java.awt.RenderingHints): java.awt.CompositeContext
             /**
              * Returns the alpha value of this <code>AlphaComposite</code>.  If this
              * <code>AlphaComposite</code> does not have an alpha value, 1.0 is returned.
              * @return the alpha value of this <code>AlphaComposite</code>.
              */
             // @ts-ignore
-            getAlpha(): float
+            public getAlpha(): number /*float*/
             /**
              * Returns the compositing rule of this <code>AlphaComposite</code>.
              * @return the compositing rule of this <code>AlphaComposite</code>.
              */
             // @ts-ignore
-            getRule(): int
+            public getRule(): number /*int*/
             /**
              * Returns a similar <code>AlphaComposite</code> object that uses
              * the specified compositing rule.
@@ -589,7 +589,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            derive(rule: number /*int*/): java.awt.AlphaComposite
+            public derive(rule: number /*int*/): java.awt.AlphaComposite
             /**
              * Returns a similar <code>AlphaComposite</code> object that uses
              * the specified alpha value.
@@ -605,13 +605,13 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            derive(alpha: number /*float*/): java.awt.AlphaComposite
+            public derive(alpha: number /*float*/): java.awt.AlphaComposite
             /**
              * Returns the hashcode for this composite.
              * @return a hash code for this composite.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Determines whether the specified object is equal to this
              * <code>AlphaComposite</code>.
@@ -625,7 +625,7 @@ declare namespace java {
              *  <code>AlphaComposite</code>; <code>false</code> otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

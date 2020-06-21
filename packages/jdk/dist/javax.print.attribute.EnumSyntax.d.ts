@@ -74,7 +74,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class EnumSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class EnumSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Construct a new enumeration value with the given integer value.
                  * @param value  Integer value.
@@ -86,25 +86,25 @@ declare namespace javax {
                  * @return the value
                  */
                 // @ts-ignore
-                getValue(): int
+                public getValue(): number /*int*/
                 /**
                  * Returns a clone of this enumeration value, which to preserve the
                  * semantics of enumeration values is the same object as this enumeration
                  * value.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a hash code value for this enumeration value. The hash code is
                  * just this enumeration value's integer value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string value corresponding to this enumeration value.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * During object input, convert this deserialized enumeration instance to
                  * the proper enumeration value defined in the enumeration attribute class.
@@ -125,7 +125,7 @@ declare namespace javax {
                  *      <CODE>readResolve()</CODE> is declared to throw.)
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                readResolve(): any
                 /**
                  * Returns the string table for this enumeration value's enumeration class.
                  * The enumeration class's integer values are assumed to lie in the range
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @return the string table
                  */
                 // @ts-ignore
-                getStringTable(): java.lang.String[]
+                getStringTable(): string[]
                 /**
                  * Returns the enumeration value table for this enumeration value's
                  * enumeration class. The enumeration class's integer values are assumed to
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @return the offset of the lowest enumeration value.
                  */
                 // @ts-ignore
-                getOffset(): int
+                getOffset(): number /*int*/
             }
         }
     }

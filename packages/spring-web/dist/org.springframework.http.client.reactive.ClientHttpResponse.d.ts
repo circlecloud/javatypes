@@ -29,12 +29,12 @@ declare namespace org {
                          * @see HttpStatus#resolve(int)
                          */
                         // @ts-ignore
-                        getRawStatusCode(): int
+                        getRawStatusCode(): number /*int*/
                         /**
                          * Return a read-only map of response cookies received from the server.
                          */
                         // @ts-ignore
-                        getCookies(): <any>
+                        getCookies(): object
                     }
                 }
             }

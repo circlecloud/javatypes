@@ -28,7 +28,7 @@ declare namespace javax {
                          * @exception IllegalArgumentException for an invalid direction
                          */
                         // @ts-ignore
-                        getInset(side: number /*int*/, v: javax.swing.text.View): float
+                        public getInset(side: number /*int*/, v: javax.swing.text.View): number /*float*/
                         /**
                          * Paints the CSS box according to the attributes
                          * given.  This should paint the border, padding,
@@ -45,7 +45,7 @@ declare namespace javax {
                          *   resolve percentage arguments.
                          */
                         // @ts-ignore
-                        paint(g: java.awt.Graphics, x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/, v: javax.swing.text.View): void
+                        public paint(g: java.awt.Graphics, x: number /*float*/, y: number /*float*/, w: number /*float*/, h: number /*float*/, v: javax.swing.text.View): void
                     }
                 }
             }

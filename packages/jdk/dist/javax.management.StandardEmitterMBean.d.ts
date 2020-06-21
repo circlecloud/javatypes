@@ -154,13 +154,13 @@ declare namespace javax {
             // @ts-ignore
             constructor(mbeanInterface: java.lang.Class<any>, isMXBean: boolean, emitter: javax.management.NotificationEmitter)
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener): void
+            public removeNotificationListener(listener: javax.management.NotificationListener): void
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            public removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
-            addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            public addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
-            getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+            public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
             /**
              * <p>Sends a notification.</p>
              * <p>If the {@code emitter} parameter to the constructor was an
@@ -173,7 +173,7 @@ declare namespace javax {
              *  constructor was not a {@code NotificationBroadcasterSupport}.
              */
             // @ts-ignore
-            sendNotification(n: javax.management.Notification): void
+            public sendNotification(n: javax.management.Notification): void
         }
     }
 }

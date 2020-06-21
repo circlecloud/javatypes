@@ -25,7 +25,7 @@ declare namespace java {
              * @param comp the component to be added
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Removes the specified component from the layout.
              * @param comp the component to be removed

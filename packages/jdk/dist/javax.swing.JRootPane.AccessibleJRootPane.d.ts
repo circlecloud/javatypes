@@ -25,13 +25,13 @@ declare namespace javax {
                  *  the object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Returns the number of accessible children of the object.
                  * @return the number of accessible children of the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the specified Accessible child of the object.  The Accessible
                  * children of an Accessible object are zero-based, so the first child
@@ -42,7 +42,7 @@ declare namespace javax {
                  * @see #getAccessibleChildrenCount
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
             }
         }
     }

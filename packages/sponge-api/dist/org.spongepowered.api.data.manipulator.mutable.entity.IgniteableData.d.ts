@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#FIRE_TICKS
                                  */
                                 // @ts-ignore
-                                fireTicks(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                fireTicks(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the remaining amount of
                                  * "ticks" before the fire will damage the owning {@link Entity}.
@@ -26,7 +26,7 @@ declare namespace org {
                                  * @see Keys#FIRE_DAMAGE_DELAY
                                  */
                                 // @ts-ignore
-                                fireDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                fireDelay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

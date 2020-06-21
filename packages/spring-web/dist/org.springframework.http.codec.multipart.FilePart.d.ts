@@ -16,7 +16,7 @@ declare namespace org {
                          * Return the original filename in the client's filesystem.
                          */
                         // @ts-ignore
-                        filename(): java.lang.String
+                        filename(): string
                         /**
                          * Convenience method to copy the content of the file in this part to the
                          * given destination file. If the destination file already exists, it will
@@ -28,7 +28,7 @@ declare namespace org {
                          * @see #transferTo(Path)
                          */
                         // @ts-ignore
-                        transferTo(dest: java.io.File): <any>
+                        transferTo(dest: java.io.File): object
                         /**
                          * Convenience method to copy the content of the file in this part to the
                          * given destination file. If the destination file already exists, it will
@@ -40,7 +40,7 @@ declare namespace org {
                          * @see #transferTo(File)
                          */
                         // @ts-ignore
-                        transferTo(dest: java.nio.file.Path): <any>
+                        transferTo(dest: java.nio.file.Path): object
                     }
                 }
             }

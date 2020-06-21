@@ -8,19 +8,19 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        internalFrameClosing(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameClosing(e: javax.swing.event.InternalFrameEvent): void
                         // @ts-ignore
-                        internalFrameClosed(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameClosed(e: javax.swing.event.InternalFrameEvent): void
                         // @ts-ignore
-                        internalFrameOpened(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameOpened(e: javax.swing.event.InternalFrameEvent): void
                         // @ts-ignore
-                        internalFrameIconified(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameIconified(e: javax.swing.event.InternalFrameEvent): void
                         // @ts-ignore
-                        internalFrameDeiconified(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameDeiconified(e: javax.swing.event.InternalFrameEvent): void
                         // @ts-ignore
-                        internalFrameActivated(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameActivated(e: javax.swing.event.InternalFrameEvent): void
                         // @ts-ignore
-                        internalFrameDeactivated(e: javax.swing.event.InternalFrameEvent): void
+                        public internalFrameDeactivated(e: javax.swing.event.InternalFrameEvent): void
                     }
                 }
             }

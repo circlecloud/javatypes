@@ -37,14 +37,14 @@ declare namespace javax {
                  * to paragraphs.
                  */
                 // @ts-ignore
-                readonly DEFAULT_STYLE: string
+                public static readonly DEFAULT_STYLE: java.lang.String | string
                 /**
                  * Returns default AttributeContext shared by all documents that
                  * don't bother to define/supply their own context.
                  * @return the context
                  */
                 // @ts-ignore
-                getDefaultStyleContext(): javax.swing.text.StyleContext
+                public static getDefaultStyleContext(): javax.swing.text.StyleContext
                 /**
                  * Adds a new style into the style hierarchy.  Style attributes
                  * resolve from bottom up so an attribute specified in a child
@@ -61,40 +61,40 @@ declare namespace javax {
                  * @return the created style
                  */
                 // @ts-ignore
-                addStyle(nm: string, parent: javax.swing.text.Style): javax.swing.text.Style
+                public addStyle(nm: java.lang.String | string, parent: javax.swing.text.Style): javax.swing.text.Style
                 /**
                  * Removes a named style previously added to the document.
                  * @param nm  the name of the style to remove
                  */
                 // @ts-ignore
-                removeStyle(nm: string): void
+                public removeStyle(nm: java.lang.String | string): void
                 /**
                  * Fetches a named style previously added to the document
                  * @param nm  the name of the style
                  * @return the style
                  */
                 // @ts-ignore
-                getStyle(nm: string): javax.swing.text.Style
+                public getStyle(nm: java.lang.String | string): javax.swing.text.Style
                 /**
                  * Fetches the names of the styles defined.
                  * @return the list of names as an enumeration
                  */
                 // @ts-ignore
-                getStyleNames(): java.util.Enumeration<?>
+                public getStyleNames(): java.util.Enumeration<any>
                 /**
                  * Adds a listener to track when styles are added
                  * or removed.
                  * @param l the change listener
                  */
                 // @ts-ignore
-                addChangeListener(l: javax.swing.event.ChangeListener): void
+                public addChangeListener(l: javax.swing.event.ChangeListener): void
                 /**
                  * Removes a listener that was tracking styles being
                  * added or removed.
                  * @param l the change listener
                  */
                 // @ts-ignore
-                removeChangeListener(l: javax.swing.event.ChangeListener): void
+                public removeChangeListener(l: javax.swing.event.ChangeListener): void
                 /**
                  * Returns an array of all the <code>ChangeListener</code>s added
                  * to this StyleContext with addChangeListener().
@@ -103,7 +103,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getChangeListeners(): javax.swing.event.ChangeListener[]
+                public getChangeListeners(): javax.swing.event.ChangeListener[]
                 /**
                  * Gets the font from an attribute set.  This is
                  * implemented to try and fetch a cached font
@@ -114,7 +114,7 @@ declare namespace javax {
                  * @return the font
                  */
                 // @ts-ignore
-                getFont(attr: javax.swing.text.AttributeSet): java.awt.Font
+                public getFont(attr: javax.swing.text.AttributeSet): java.awt.Font
                 /**
                  * Takes a set of attributes and turn it into a foreground color
                  * specification.  This might be used to specify things
@@ -124,7 +124,7 @@ declare namespace javax {
                  * @return the color
                  */
                 // @ts-ignore
-                getForeground(attr: javax.swing.text.AttributeSet): java.awt.Color
+                public getForeground(attr: javax.swing.text.AttributeSet): java.awt.Color
                 /**
                  * Takes a set of attributes and turn it into a background color
                  * specification.  This might be used to specify things
@@ -134,7 +134,7 @@ declare namespace javax {
                  * @return the color
                  */
                 // @ts-ignore
-                getBackground(attr: javax.swing.text.AttributeSet): java.awt.Color
+                public getBackground(attr: javax.swing.text.AttributeSet): java.awt.Color
                 /**
                  * Gets a new font.  This returns a Font from a cache
                  * if a cached font exists.  If not, a Font is added to
@@ -146,14 +146,14 @@ declare namespace javax {
                  * @return the new font
                  */
                 // @ts-ignore
-                getFont(family: string, style: number /*int*/, size: number /*int*/): java.awt.Font
+                public getFont(family: java.lang.String | string, style: number /*int*/, size: number /*int*/): java.awt.Font
                 /**
                  * Returns font metrics for a font.
                  * @param f the font
                  * @return the metrics
                  */
                 // @ts-ignore
-                getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
+                public getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
                 /**
                  * Adds an attribute to the given set, and returns
                  * the new representative set.
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @see MutableAttributeSet#addAttribute
                  */
                 // @ts-ignore
-                addAttribute(old: javax.swing.text.AttributeSet, name: any, value: any): javax.swing.text.AttributeSet
+                public addAttribute(old: javax.swing.text.AttributeSet, name: java.lang.Object | any, value: java.lang.Object | any): javax.swing.text.AttributeSet
                 /**
                  * Adds a set of attributes to the element.
                  * <p>
@@ -183,7 +183,7 @@ declare namespace javax {
                  * @see MutableAttributeSet#addAttribute
                  */
                 // @ts-ignore
-                addAttributes(old: javax.swing.text.AttributeSet, attr: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
+                public addAttributes(old: javax.swing.text.AttributeSet, attr: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
                 /**
                  * Removes an attribute from the set.
                  * <p>
@@ -197,7 +197,7 @@ declare namespace javax {
                  * @see MutableAttributeSet#removeAttribute
                  */
                 // @ts-ignore
-                removeAttribute(old: javax.swing.text.AttributeSet, name: any): javax.swing.text.AttributeSet
+                public removeAttribute(old: javax.swing.text.AttributeSet, name: java.lang.Object | any): javax.swing.text.AttributeSet
                 /**
                  * Removes a set of attributes for the element.
                  * <p>
@@ -211,7 +211,7 @@ declare namespace javax {
                  * @see MutableAttributeSet#removeAttributes
                  */
                 // @ts-ignore
-                removeAttributes(old: javax.swing.text.AttributeSet, names: java.util.Enumeration<any>): javax.swing.text.AttributeSet
+                public removeAttributes(old: javax.swing.text.AttributeSet, names: java.util.Enumeration<any>): javax.swing.text.AttributeSet
                 /**
                  * Removes a set of attributes for the element.
                  * <p>
@@ -225,13 +225,13 @@ declare namespace javax {
                  * @see MutableAttributeSet#removeAttributes
                  */
                 // @ts-ignore
-                removeAttributes(old: javax.swing.text.AttributeSet, attrs: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
+                public removeAttributes(old: javax.swing.text.AttributeSet, attrs: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
                 /**
                  * Fetches an empty AttributeSet.
                  * @return the set
                  */
                 // @ts-ignore
-                getEmptySet(): javax.swing.text.AttributeSet
+                public getEmptySet(): javax.swing.text.AttributeSet
                 /**
                  * Returns a set no longer needed by the MutableAttributeSet implementation.
                  * This is useful for operation under 1.1 where there are no weak
@@ -245,7 +245,7 @@ declare namespace javax {
                  * @param a the set to reclaim
                  */
                 // @ts-ignore
-                reclaim(a: javax.swing.text.AttributeSet): void
+                public reclaim(a: javax.swing.text.AttributeSet): void
                 /**
                  * Returns the maximum number of key/value pairs to try and
                  * compress into unique/immutable sets.  Any sets above this
@@ -253,7 +253,7 @@ declare namespace javax {
                  * @return the threshold
                  */
                 // @ts-ignore
-                getCompressionThreshold(): int
+                getCompressionThreshold(): number /*int*/
                 /**
                  * Create a compact set of attributes that might be shared.
                  * This is a hook for subclasses that want to alter the
@@ -283,17 +283,17 @@ declare namespace javax {
                  * @return the string
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Context-specific handling of writing out attributes
                  */
                 // @ts-ignore
-                writeAttributes(out: java.io.ObjectOutputStream, a: javax.swing.text.AttributeSet): void
+                public writeAttributes(out: java.io.ObjectOutputStream, a: javax.swing.text.AttributeSet): void
                 /**
                  * Context-specific handling of reading in attributes
                  */
                 // @ts-ignore
-                readAttributes(input: java.io.ObjectInputStream, a: javax.swing.text.MutableAttributeSet): void
+                public readAttributes(input: java.io.ObjectInputStream, a: javax.swing.text.MutableAttributeSet): void
                 /**
                  * Writes a set of attributes to the given object stream
                  * for the purpose of serialization.  This will take
@@ -308,7 +308,7 @@ declare namespace javax {
                  * @exception IOException on any I/O error
                  */
                 // @ts-ignore
-                writeAttributeSet(out: java.io.ObjectOutputStream, a: javax.swing.text.AttributeSet): void
+                public static writeAttributeSet(out: java.io.ObjectOutputStream, a: javax.swing.text.AttributeSet): void
                 /**
                  * Reads a set of attributes from the given object input
                  * stream that have been previously written out with
@@ -328,7 +328,7 @@ declare namespace javax {
                  *   reading the object stream.
                  */
                 // @ts-ignore
-                readAttributeSet(input: java.io.ObjectInputStream, a: javax.swing.text.MutableAttributeSet): void
+                public static readAttributeSet(input: java.io.ObjectInputStream, a: javax.swing.text.MutableAttributeSet): void
                 /**
                  * Registers an object as a static object that is being
                  * used as a key in attribute sets.  This allows the key
@@ -344,20 +344,20 @@ declare namespace javax {
                  * @param key the non-null object key
                  */
                 // @ts-ignore
-                registerStaticAttributeKey(key: any): void
+                public static registerStaticAttributeKey(key: java.lang.Object | any): void
                 /**
                  * Returns the object previously registered with
                  * <code>registerStaticAttributeKey</code>.
                  */
                 // @ts-ignore
-                getStaticAttribute(key: any): java.lang.Object
+                public static getStaticAttribute(key: java.lang.Object | any): any
                 /**
                  * Returns the String that <code>key</code> will be registered with
                  * @see #getStaticAttribute
                  * @see #registerStaticAttributeKey
                  */
                 // @ts-ignore
-                getStaticAttributeKey(key: any): java.lang.Object
+                public static getStaticAttributeKey(key: java.lang.Object | any): any
             }
         }
     }

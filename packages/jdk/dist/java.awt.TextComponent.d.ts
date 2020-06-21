@@ -35,9 +35,9 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            enableInputMethods(enable: boolean): void
+            public enableInputMethods(enable: boolean): void
             // @ts-ignore
-            getInputMethodRequests(): java.awt.im.InputMethodRequests
+            public getInputMethodRequests(): java.awt.im.InputMethodRequests
             /**
              * Makes this Component displayable by connecting it to a
              * native screen resource.
@@ -46,7 +46,7 @@ declare namespace java {
              * @see java.awt.TextComponent#removeNotify
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Removes the <code>TextComponent</code>'s peer.
              * The peer allows us to modify the appearance of the
@@ -54,7 +54,7 @@ declare namespace java {
              * functionality.
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Sets the text that is presented by this
              * text component to be the specified text.
@@ -64,7 +64,7 @@ declare namespace java {
              * @see java.awt.TextComponent#getText
              */
             // @ts-ignore
-            setText(t: string): void
+            public setText(t: java.lang.String | string): void
             /**
              * Returns the text that is presented by this text component.
              * By default, this is an empty string.
@@ -72,7 +72,7 @@ declare namespace java {
              * @see java.awt.TextComponent#setText
              */
             // @ts-ignore
-            getText(): java.lang.String
+            public getText(): string
             /**
              * Returns the selected text from the text that is
              * presented by this text component.
@@ -80,7 +80,7 @@ declare namespace java {
              * @see java.awt.TextComponent#select
              */
             // @ts-ignore
-            getSelectedText(): java.lang.String
+            public getSelectedText(): string
             /**
              * Indicates whether or not this text component is editable.
              * @return <code>true</code> if this text component is
@@ -89,7 +89,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isEditable(): boolean
+            public isEditable(): boolean
             /**
              * Sets the flag that determines whether or not this
              * text component is editable.
@@ -106,7 +106,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            setEditable(b: boolean): void
+            public setEditable(b: boolean): void
             /**
              * Gets the background color of this text component.
              * By default, non-editable text components have a background color
@@ -119,7 +119,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getBackground(): java.awt.Color
+            public getBackground(): java.awt.Color
             /**
              * Sets the background color of this text component.
              * @param c The color to become this text component's color.
@@ -129,7 +129,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            setBackground(c: java.awt.Color): void
+            public setBackground(c: java.awt.Color): void
             /**
              * Gets the start position of the selected text in
              * this text component.
@@ -138,7 +138,7 @@ declare namespace java {
              * @see java.awt.TextComponent#getSelectionEnd
              */
             // @ts-ignore
-            getSelectionStart(): int
+            public getSelectionStart(): number /*int*/
             /**
              * Sets the selection start for this text component to
              * the specified position. The new start point is constrained
@@ -155,7 +155,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setSelectionStart(selectionStart: number /*int*/): void
+            public setSelectionStart(selectionStart: number /*int*/): void
             /**
              * Gets the end position of the selected text in
              * this text component.
@@ -164,7 +164,7 @@ declare namespace java {
              * @see java.awt.TextComponent#getSelectionStart
              */
             // @ts-ignore
-            getSelectionEnd(): int
+            public getSelectionEnd(): number /*int*/
             /**
              * Sets the selection end for this text component to
              * the specified position. The new end point is constrained
@@ -180,7 +180,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setSelectionEnd(selectionEnd: number /*int*/): void
+            public setSelectionEnd(selectionEnd: number /*int*/): void
             /**
              * Selects the text between the specified start and end positions.
              * <p>
@@ -213,13 +213,13 @@ declare namespace java {
              * @see java.awt.TextComponent#selectAll
              */
             // @ts-ignore
-            select(selectionStart: number /*int*/, selectionEnd: number /*int*/): void
+            public select(selectionStart: number /*int*/, selectionEnd: number /*int*/): void
             /**
              * Selects all the text in this text component.
              * @see java.awt.TextComponent#select
              */
             // @ts-ignore
-            selectAll(): void
+            public selectAll(): void
             /**
              * Sets the position of the text insertion caret.
              * The caret position is constrained to be between 0
@@ -236,7 +236,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setCaretPosition(position: number /*int*/): void
+            public setCaretPosition(position: number /*int*/): void
             /**
              * Returns the position of the text insertion caret.
              * The caret position is constrained to be between 0
@@ -248,7 +248,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getCaretPosition(): int
+            public getCaretPosition(): number /*int*/
             /**
              * Adds the specified text event listener to receive text events
              * from this text component.
@@ -262,7 +262,7 @@ declare namespace java {
              * @see java.awt.event.TextListener
              */
             // @ts-ignore
-            addTextListener(l: java.awt.event.TextListener): void
+            public addTextListener(l: java.awt.event.TextListener): void
             /**
              * Removes the specified text event listener so that it no longer
              * receives text events from this text component
@@ -277,7 +277,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeTextListener(l: java.awt.event.TextListener): void
+            public removeTextListener(l: java.awt.event.TextListener): void
             /**
              * Returns an array of all the text listeners
              * registered on this text component.
@@ -289,7 +289,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getTextListeners(): java.awt.event.TextListener[]
+            public getTextListeners(): java.awt.event.TextListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -319,7 +319,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this text component. If the event is a
              * <code>TextEvent</code>, it invokes the <code>processTextEvent</code>
@@ -361,7 +361,7 @@ declare namespace java {
              * @return the parameter string of this text component
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this TextComponent.
              * For text components, the AccessibleContext takes the form of an
@@ -372,7 +372,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

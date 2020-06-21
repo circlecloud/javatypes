@@ -8,7 +8,7 @@ declare namespace org {
              * full of treasure
              */
             // @ts-ignore
-            class BlockPopulator extends java.lang.Object {
+            abstract class BlockPopulator extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -24,7 +24,7 @@ declare namespace org {
                  * @param source The chunk to generate for
                  */
                 // @ts-ignore
-                abstract populate(world: org.bukkit.World, random: java.util.Random, source: org.bukkit.Chunk): void
+                public abstract populate(world: org.bukkit.World, random: java.util.Random, source: org.bukkit.Chunk): void
             }
         }
     }

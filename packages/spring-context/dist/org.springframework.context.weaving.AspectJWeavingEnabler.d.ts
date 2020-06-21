@@ -19,22 +19,22 @@ declare namespace org {
                      * The {@code aop.xml} resource location.
                      */
                     // @ts-ignore
-                    readonly ASPECTJ_AOP_XML_RESOURCE: string
+                    public static readonly ASPECTJ_AOP_XML_RESOURCE: java.lang.String | string
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    setLoadTimeWeaver(loadTimeWeaver: org.springframework.instrument.classloading.LoadTimeWeaver): void
+                    public setLoadTimeWeaver(loadTimeWeaver: org.springframework.instrument.classloading.LoadTimeWeaver): void
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     // @ts-ignore
-                    postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
+                    public postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
                     /**
                      * Enable AspectJ weaving with the given {@link LoadTimeWeaver}.
                      * @param weaverToUse the LoadTimeWeaver to apply to (or {#code null} for a default weaver)
                      * @param beanClassLoader the class loader to create a default weaver for (if necessary)
                      */
                     // @ts-ignore
-                    enableAspectJWeaving(weaverToUse: org.springframework.instrument.classloading.LoadTimeWeaver, beanClassLoader: java.lang.ClassLoader): void
+                    public static enableAspectJWeaving(weaverToUse: org.springframework.instrument.classloading.LoadTimeWeaver, beanClassLoader: java.lang.ClassLoader): void
                 }
             }
         }

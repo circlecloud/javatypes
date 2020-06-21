@@ -19,11 +19,11 @@ declare namespace javax {
                      * @exception IOException if the RMI object cannot be created.
                      */
                     // @ts-ignore
-                    constructor(env: java.util.Map<java.lang.String, any>)
+                    constructor(env: java.util.Map<java.lang.String | string, any>)
                     // @ts-ignore
                     export(): void
                     // @ts-ignore
-                    getProtocol(): java.lang.String
+                    getProtocol(): string
                     /**
                      * <p>Returns an IIOP stub.</p>
                      * The stub might not yet be connected to the ORB. The stub will
@@ -33,7 +33,7 @@ declare namespace javax {
                      *             RMIIIOPServerImpl has not been exported yet.
                      */
                     // @ts-ignore
-                    toStub(): java.rmi.Remote
+                    public toStub(): java.rmi.Remote
                     /**
                      * <p>Creates a new client connection as an RMI object exported
                      * through IIOP.
@@ -47,7 +47,7 @@ declare namespace javax {
                      *  created or exported.
                      */
                     // @ts-ignore
-                    makeClient(connectionId: string, subject: javax.security.auth.Subject): javax.management.remote.rmi.RMIConnection
+                    makeClient(connectionId: java.lang.String | string, subject: javax.security.auth.Subject): javax.management.remote.rmi.RMIConnection
                     // @ts-ignore
                     closeClient(client: javax.management.remote.rmi.RMIConnection): void
                     /**

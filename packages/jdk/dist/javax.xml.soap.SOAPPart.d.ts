@@ -38,7 +38,7 @@ declare namespace javax {
              * <P>
              */
             // @ts-ignore
-            class SOAPPart extends java.lang.Object implements org.w3c.dom.Document, javax.xml.soap.Node {
+            abstract class SOAPPart extends java.lang.Object implements org.w3c.dom.Document, javax.xml.soap.Node {
                 // @ts-ignore
                 constructor()
                 /**
@@ -50,7 +50,7 @@ declare namespace javax {
                  * @exception SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                abstract getEnvelope(): javax.xml.soap.SOAPEnvelope
+                public abstract getEnvelope(): javax.xml.soap.SOAPEnvelope
                 /**
                  * Retrieves the value of the MIME header whose name is "Content-Id".
                  * @return a <code>String</code> giving the value of the MIME header
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @see #setContentId
                  */
                 // @ts-ignore
-                getContentId(): java.lang.String
+                public getContentId(): string
                 /**
                  * Retrieves the value of the MIME header whose name is "Content-Location".
                  * @return a <code>String</code> giving the value of the MIME header whose
@@ -66,7 +66,7 @@ declare namespace javax {
                  * @see #setContentLocation
                  */
                 // @ts-ignore
-                getContentLocation(): java.lang.String
+                public getContentLocation(): string
                 /**
                  * Sets the value of the MIME header named "Content-Id"
                  * to the given <code>String</code>.
@@ -77,7 +77,7 @@ declare namespace javax {
                  * @see #getContentId
                  */
                 // @ts-ignore
-                setContentId(contentId: string): void
+                public setContentId(contentId: java.lang.String | string): void
                 /**
                  * Sets the value of the MIME header "Content-Location"
                  * to the given <code>String</code>.
@@ -89,20 +89,20 @@ declare namespace javax {
                  * @see #getContentLocation
                  */
                 // @ts-ignore
-                setContentLocation(contentLocation: string): void
+                public setContentLocation(contentLocation: java.lang.String | string): void
                 /**
                  * Removes all MIME headers that match the given name.
                  * @param header a <code>String</code> giving the name of the MIME header(s) to
                  *                be removed
                  */
                 // @ts-ignore
-                abstract removeMimeHeader(header: string): void
+                public abstract removeMimeHeader(header: java.lang.String | string): void
                 /**
                  * Removes all the <code>MimeHeader</code> objects for this
                  * <code>SOAPEnvelope</code> object.
                  */
                 // @ts-ignore
-                abstract removeAllMimeHeaders(): void
+                public abstract removeAllMimeHeaders(): void
                 /**
                  * Gets all the values of the <code>MimeHeader</code> object
                  * in this <code>SOAPPart</code> object that
@@ -113,7 +113,7 @@ declare namespace javax {
                  * @see #setMimeHeader
                  */
                 // @ts-ignore
-                abstract getMimeHeader(name: string): java.lang.String[]
+                public abstract getMimeHeader(name: java.lang.String | string): string[]
                 /**
                  * Changes the first header entry that matches the given header name
                  * so that its value is the given value, adding a new header with the
@@ -137,7 +137,7 @@ declare namespace javax {
                  * @see #getMimeHeader
                  */
                 // @ts-ignore
-                abstract setMimeHeader(name: string, value: string): void
+                public abstract setMimeHeader(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Creates a <code>MimeHeader</code> object with the specified
                  * name and value and adds it to this <code>SOAPPart</code> object.
@@ -153,7 +153,7 @@ declare namespace javax {
                  *             the specified mime header name or value
                  */
                 // @ts-ignore
-                abstract addMimeHeader(name: string, value: string): void
+                public abstract addMimeHeader(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Retrieves all the headers for this <code>SOAPPart</code> object
                  * as an iterator over the <code>MimeHeader</code> objects.
@@ -161,7 +161,7 @@ declare namespace javax {
                  *           headers for this <code>SOAPPart</code> object
                  */
                 // @ts-ignore
-                abstract getAllMimeHeaders(): java.util.Iterator
+                public abstract getAllMimeHeaders(): java.util.Iterator<any>
                 /**
                  * Retrieves all <code>MimeHeader</code> objects that match a name in
                  * the given array.
@@ -171,7 +171,7 @@ declare namespace javax {
                  *            given array, returned as an <code>Iterator</code> object
                  */
                 // @ts-ignore
-                abstract getMatchingMimeHeaders(names: string[]): java.util.Iterator
+                public abstract getMatchingMimeHeaders(names: java.lang.String[] | string[]): java.util.Iterator<any>
                 /**
                  * Retrieves all <code>MimeHeader</code> objects whose name does
                  * not match a name in the given array.
@@ -183,7 +183,7 @@ declare namespace javax {
                  *            <code>Iterator</code> object.
                  */
                 // @ts-ignore
-                abstract getNonMatchingMimeHeaders(names: string[]): java.util.Iterator
+                public abstract getNonMatchingMimeHeaders(names: java.lang.String[] | string[]): java.util.Iterator<any>
                 /**
                  * Sets the content of the <code>SOAPEnvelope</code> object with the data
                  * from the given <code>Source</code> object. This <code>Source</code>
@@ -194,7 +194,7 @@ declare namespace javax {
                  * @see #getContent
                  */
                 // @ts-ignore
-                abstract setContent(source: javax.xml.transform.Source): void
+                public abstract setContent(source: javax.xml.transform.Source): void
                 /**
                  * Returns the content of the SOAPEnvelope as a JAXP <code>Source</code>
                  * object.
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @see #setContent
                  */
                 // @ts-ignore
-                abstract getContent(): javax.xml.transform.Source
+                public abstract getContent(): javax.xml.transform.Source
             }
         }
     }

@@ -49,14 +49,14 @@ declare namespace javax {
                  *       Reads the entire file as XML.
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: java.io.File, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: java.io.File, type: java.lang.Class<T>): T
                 /**
                  * Reads in a Java object tree from the given XML input.
                  * @param xml
                  *       The resource pointed by the URL is read in its entirety.
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: java.net.URL, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: java.net.URL, type: java.lang.Class<T>): T
                 /**
                  * Reads in a Java object tree from the given XML input.
                  * @param xml
@@ -64,7 +64,7 @@ declare namespace javax {
                  *       follows the handling of <tt>URL</tt>.
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: java.net.URI, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: java.net.URI, type: java.lang.Class<T>): T
                 /**
                  * Reads in a Java object tree from the given XML input.
                  * @param xml
@@ -73,7 +73,7 @@ declare namespace javax {
                  *       then it's interpreted as a <tt>File</tt>
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: string, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: java.lang.String | string, type: java.lang.Class<T>): T
                 /**
                  * Reads in a Java object tree from the given XML input.
                  * @param xml
@@ -81,7 +81,7 @@ declare namespace javax {
                  *       Upon a successful completion, the stream will be closed by this method.
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: java.io.InputStream, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: java.io.InputStream, type: java.lang.Class<T>): T
                 /**
                  * Reads in a Java object tree from the given XML input.
                  * @param xml
@@ -90,14 +90,14 @@ declare namespace javax {
                  *       Upon a successful completion, the stream will be closed by this method.
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: java.io.Reader, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: java.io.Reader, type: java.lang.Class<T>): T
                 /**
                  * Reads in a Java object tree from the given XML input.
                  * @param xml
                  *       The XML infoset that the {#link Source} represents is read.
                  */
                 // @ts-ignore
-                unmarshal<T>(xml: javax.xml.transform.Source, type: java.lang.Class<T>): T
+                public static unmarshal<T>(xml: javax.xml.transform.Source, type: java.lang.Class<T>): T
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -116,7 +116,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: java.io.File): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: java.io.File): void
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -138,7 +138,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: java.net.URL): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: java.net.URL): void
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -157,7 +157,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: java.net.URI): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: java.net.URI): void
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -177,7 +177,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: string): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: java.lang.String | string): void
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -196,7 +196,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: java.io.OutputStream): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: java.io.OutputStream): void
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -215,7 +215,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: java.io.Writer): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: java.io.Writer): void
                 /**
                  * Writes a Java object tree to XML and store it to the specified location.
                  * @param jaxbObject
@@ -233,7 +233,7 @@ declare namespace javax {
                  *       If the operation fails, such as due to I/O error, unbindable classes.
                  */
                 // @ts-ignore
-                marshal(jaxbObject: any, xml: javax.xml.transform.Result): void
+                public static marshal(jaxbObject: java.lang.Object | any, xml: javax.xml.transform.Result): void
             }
         }
     }

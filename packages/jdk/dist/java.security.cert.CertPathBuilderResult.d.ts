@@ -37,7 +37,7 @@ declare namespace java {
                  * @return a copy of this {#code CertPathBuilderResult}
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

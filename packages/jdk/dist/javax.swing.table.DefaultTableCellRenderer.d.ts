@@ -52,21 +52,21 @@ declare namespace javax {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                noFocusBorder: javax.swing.border.Border
+                static noFocusBorder: javax.swing.border.Border
                 /**
                  * Overrides <code>JComponent.setForeground</code> to assign
                  * the unselected-foreground color to the specified color.
                  * @param c set the foreground color to this value
                  */
                 // @ts-ignore
-                setForeground(c: java.awt.Color): void
+                public setForeground(c: java.awt.Color): void
                 /**
                  * Overrides <code>JComponent.setBackground</code> to assign
                  * the unselected-background color to the specified color.
                  * @param c set the background color to this value
                  */
                 // @ts-ignore
-                setBackground(c: java.awt.Color): void
+                public setBackground(c: java.awt.Color): void
                 /**
                  * Notification from the <code>UIManager</code> that the look and feel
                  * [L&amp;F] has changed.
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @see JComponent#updateUI
                  */
                 // @ts-ignore
-                updateUI(): void
+                public updateUI(): void
                 /**
                  * Returns the default table cell renderer.
                  * <p>
@@ -96,50 +96,14 @@ declare namespace javax {
                  * @see javax.swing.JComponent#isPaintingForPrint()
                  */
                 // @ts-ignore
-                getTableCellRendererComponent(table: javax.swing.JTable, value: any, isSelected: boolean, hasFocus: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
+                public getTableCellRendererComponent(table: javax.swing.JTable, value: java.lang.Object | any, isSelected: boolean, hasFocus: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                isOpaque(): boolean
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 * @since 1.5
-                 */
-                // @ts-ignore
-                invalidate(): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                validate(): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                revalidate(): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                repaint(r: java.awt.Rectangle): void
+                public isOpaque(): boolean
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
@@ -147,21 +111,57 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                repaint(): void
+                public invalidate(): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+                public validate(): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+                public revalidate(): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                public repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                public repaint(r: java.awt.Rectangle): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 * @since 1.5
+                 */
+                // @ts-ignore
+                public repaint(): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
                 /**
                  * Sets the <code>String</code> object for the cell being rendered to
                  * <code>value</code>.
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @see JLabel#setText
                  */
                 // @ts-ignore
-                setValue(value: any): void
+                setValue(value: java.lang.Object | any): void
             }
         }
     }

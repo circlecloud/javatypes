@@ -29,7 +29,7 @@ declare namespace org {
                      * <p>By default this is set to "false".
                      */
                     // @ts-ignore
-                    setAlwaysUseFullPath(alwaysUseFullPath: boolean): void
+                    public setAlwaysUseFullPath(alwaysUseFullPath: boolean): void
                     /**
                      * Whether the context path and request URI should be decoded -- both of
                      * which are returned <i>undecoded</i> by the Servlet API, in contrast to
@@ -49,24 +49,24 @@ declare namespace org {
                      * @see java.net.URLDecoder#decode(String, String)
                      */
                     // @ts-ignore
-                    setUrlDecode(urlDecode: boolean): void
+                    public setUrlDecode(urlDecode: boolean): void
                     /**
                      * Whether to decode the request URI when determining the lookup path.
                      * @since 4.3.13
                      */
                     // @ts-ignore
-                    isUrlDecode(): boolean
+                    public isUrlDecode(): boolean
                     /**
                      * Set if ";" (semicolon) content should be stripped from the request URI.
                      * <p>Default is "true".
                      */
                     // @ts-ignore
-                    setRemoveSemicolonContent(removeSemicolonContent: boolean): void
+                    public setRemoveSemicolonContent(removeSemicolonContent: boolean): void
                     /**
                      * Whether configured to remove ";" (semicolon) content from the request URI.
                      */
                     // @ts-ignore
-                    shouldRemoveSemicolonContent(): boolean
+                    public shouldRemoveSemicolonContent(): boolean
                     /**
                      * Set the default character encoding to use for URL decoding.
                      * Default is ISO-8859-1, according to the Servlet spec.
@@ -81,12 +81,12 @@ declare namespace org {
                      * @see WebUtils#DEFAULT_CHARACTER_ENCODING
                      */
                     // @ts-ignore
-                    setDefaultEncoding(defaultEncoding: string): void
+                    public setDefaultEncoding(defaultEncoding: java.lang.String | string): void
                     /**
                      * Return the default character encoding to use for URL decoding.
                      */
                     // @ts-ignore
-                    getDefaultEncoding(): java.lang.String
+                    getDefaultEncoding(): string
                     /**
                      * Return the mapping lookup path for the given request, within the current
                      * servlet mapping if applicable, else within the web application.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @see #getPathWithinApplication
                      */
                     // @ts-ignore
-                    getLookupPathForRequest(request: HttpServletRequest): java.lang.String
+                    public getLookupPathForRequest(request: HttpServletRequest): string
                     /**
                      * Variant of {@link #getLookupPathForRequest(HttpServletRequest)} that
                      * automates checking for a previously computed lookupPath saved as a
@@ -109,7 +109,7 @@ declare namespace org {
                      * @see org.springframework.web.servlet.HandlerMapping#LOOKUP_PATH
                      */
                     // @ts-ignore
-                    getLookupPathForRequest(request: HttpServletRequest, lookupPathAttributeName: string): java.lang.String
+                    public getLookupPathForRequest(request: HttpServletRequest, lookupPathAttributeName: java.lang.String | string): string
                     /**
                      * Return the path within the servlet mapping for the given request,
                      * i.e. the part of the request's URL beyond the part that called the servlet,
@@ -125,7 +125,7 @@ declare namespace org {
                      * @see #getLookupPathForRequest
                      */
                     // @ts-ignore
-                    getPathWithinServletMapping(request: HttpServletRequest): java.lang.String
+                    public getPathWithinServletMapping(request: HttpServletRequest): string
                     /**
                      * Return the path within the web application for the given request.
                      * <p>Detects include request URL if called within a RequestDispatcher include.
@@ -134,7 +134,7 @@ declare namespace org {
                      * @see #getLookupPathForRequest
                      */
                     // @ts-ignore
-                    getPathWithinApplication(request: HttpServletRequest): java.lang.String
+                    public getPathWithinApplication(request: HttpServletRequest): string
                     /**
                      * Return the request URI for the given request, detecting an include request
                      * URL if called within a RequestDispatcher include.
@@ -147,7 +147,7 @@ declare namespace org {
                      * @return the request URI
                      */
                     // @ts-ignore
-                    getRequestUri(request: HttpServletRequest): java.lang.String
+                    public getRequestUri(request: HttpServletRequest): string
                     /**
                      * Return the context path for the given request, detecting an include request
                      * URL if called within a RequestDispatcher include.
@@ -157,7 +157,7 @@ declare namespace org {
                      * @return the context path
                      */
                     // @ts-ignore
-                    getContextPath(request: HttpServletRequest): java.lang.String
+                    public getContextPath(request: HttpServletRequest): string
                     /**
                      * Return the servlet path for the given request, regarding an include request
                      * URL if called within a RequestDispatcher include.
@@ -167,13 +167,13 @@ declare namespace org {
                      * @return the servlet path
                      */
                     // @ts-ignore
-                    getServletPath(request: HttpServletRequest): java.lang.String
+                    public getServletPath(request: HttpServletRequest): string
                     /**
                      * Return the request URI for the given request. If this is a forwarded request,
                      * correctly resolves to the request URI of the original request.
                      */
                     // @ts-ignore
-                    getOriginatingRequestUri(request: HttpServletRequest): java.lang.String
+                    public getOriginatingRequestUri(request: HttpServletRequest): string
                     /**
                      * Return the context path for the given request, detecting an include request
                      * URL if called within a RequestDispatcher include.
@@ -183,7 +183,7 @@ declare namespace org {
                      * @return the context path
                      */
                     // @ts-ignore
-                    getOriginatingContextPath(request: HttpServletRequest): java.lang.String
+                    public getOriginatingContextPath(request: HttpServletRequest): string
                     /**
                      * Return the servlet path for the given request, detecting an include request
                      * URL if called within a RequestDispatcher include.
@@ -191,7 +191,7 @@ declare namespace org {
                      * @return the servlet path
                      */
                     // @ts-ignore
-                    getOriginatingServletPath(request: HttpServletRequest): java.lang.String
+                    public getOriginatingServletPath(request: HttpServletRequest): string
                     /**
                      * Return the query string part of the given request's URL. If this is a forwarded request,
                      * correctly resolves to the query string of the original request.
@@ -199,7 +199,7 @@ declare namespace org {
                      * @return the query string
                      */
                     // @ts-ignore
-                    getOriginatingQueryString(request: HttpServletRequest): java.lang.String
+                    public getOriginatingQueryString(request: HttpServletRequest): string
                     /**
                      * Decode the given source string with a URLDecoder. The encoding will be taken
                      * from the request, falling back to the default "ISO-8859-1".
@@ -213,7 +213,7 @@ declare namespace org {
                      * @see java.net.URLDecoder#decode(String)
                      */
                     // @ts-ignore
-                    decodeRequestString(request: HttpServletRequest, source: string): java.lang.String
+                    public decodeRequestString(request: HttpServletRequest, source: java.lang.String | string): string
                     /**
                      * Determine the encoding for the given request.
                      * Can be overridden in subclasses.
@@ -225,7 +225,7 @@ declare namespace org {
                      * @see #setDefaultEncoding
                      */
                     // @ts-ignore
-                    determineEncoding(request: HttpServletRequest): java.lang.String
+                    determineEncoding(request: HttpServletRequest): string
                     /**
                      * Remove ";" (semicolon) content from the given request URI if the
                      * {@linkplain #setRemoveSemicolonContent removeSemicolonContent}
@@ -234,7 +234,7 @@ declare namespace org {
                      * @return the updated URI string
                      */
                     // @ts-ignore
-                    removeSemicolonContent(requestUri: string): java.lang.String
+                    public removeSemicolonContent(requestUri: java.lang.String | string): string
                     /**
                      * Decode the given URI path variables via {@link #decodeRequestString} unless
                      * {@link #setUrlDecode} is set to {@code true} in which case it is assumed
@@ -245,7 +245,7 @@ declare namespace org {
                      * @return the same Map or a new Map instance
                      */
                     // @ts-ignore
-                    decodePathVariables(request: HttpServletRequest, vars: java.util.Map<java.lang.String, java.lang.String>): java.util.Map<java.lang.String, java.lang.String>
+                    public decodePathVariables(request: HttpServletRequest, vars: java.util.Map<java.lang.String | string, java.lang.String | string>): java.util.Map<java.lang.String | string, java.lang.String | string>
                     /**
                      * Decode the given matrix variables via {@link #decodeRequestString} unless
                      * {@link #setUrlDecode} is set to {@code true} in which case it is assumed
@@ -256,7 +256,7 @@ declare namespace org {
                      * @return the same Map or a new Map instance
                      */
                     // @ts-ignore
-                    decodeMatrixVariables(request: HttpServletRequest, vars: object): <any>
+                    public decodeMatrixVariables(request: HttpServletRequest, vars: object): object
                 }
             }
         }

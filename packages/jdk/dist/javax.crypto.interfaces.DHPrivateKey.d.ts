@@ -15,7 +15,7 @@ declare namespace javax {
                  * compatibility since J2SE 1.4.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Returns the private value, <code>x</code>.
                  * @return the private value, <code>x</code>

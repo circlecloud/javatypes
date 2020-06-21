@@ -20,7 +20,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(formatter: java.time.format.DateTimeFormatter)
                         // @ts-ignore
-                        print(partial: java.time.temporal.TemporalAccessor, locale: java.util.Locale): java.lang.String
+                        public print(partial: java.time.temporal.TemporalAccessor, locale: java.util.Locale): string
                     }
                 }
             }

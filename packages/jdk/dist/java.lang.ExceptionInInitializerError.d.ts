@@ -32,7 +32,7 @@ declare namespace java {
              * @param thrown The exception thrown
              */
             // @ts-ignore
-            constructor(thrown: Error)
+            constructor(thrown: java.lang.Throwable | Error)
             /**
              * Constructs an ExceptionInInitializerError with the specified detail
              * message string.  A detail message is a String that describes this
@@ -42,7 +42,7 @@ declare namespace java {
              * @param s the detail message
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Returns the exception that occurred during a static initialization that
              * caused this error to be created.
@@ -55,7 +55,7 @@ declare namespace java {
              *          throwable object.
              */
             // @ts-ignore
-            getException(): java.lang.Throwable
+            getException(): Error
             /**
              * Returns the cause of this error (the exception that occurred
              * during a static initialization that caused this error to be created).
@@ -64,7 +64,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
         }
     }
 }

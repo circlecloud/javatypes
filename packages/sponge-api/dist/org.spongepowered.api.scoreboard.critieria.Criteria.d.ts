@@ -13,13 +13,13 @@ declare namespace org {
                          * to have a score for a player incremented when they die.
                          */
                         // @ts-ignore
-                        readonly DEATHS: org.spongepowered.api.scoreboard.critieria.Criterion
+                        public static readonly DEATHS: org.spongepowered.api.scoreboard.critieria.Criterion
                         /**
                          * Represents a {@link Criterion} which causes an {@link Objective}
                          * is only updated manually, through commands or plugins.
                          */
                         // @ts-ignore
-                        readonly DUMMY: org.spongepowered.api.scoreboard.critieria.Criterion
+                        public static readonly DUMMY: org.spongepowered.api.scoreboard.critieria.Criterion
                         /**
                          * Represents a {@link Criteria} which causes an {@link Objective} to have
                          * a score for a player represent their current health, on a scale of 0-20
@@ -27,26 +27,26 @@ declare namespace org {
                          * {@link PotionEffectTypes#HEALTH_BOOST}).
                          */
                         // @ts-ignore
-                        readonly HEALTH: org.spongepowered.api.scoreboard.critieria.Criterion
+                        public static readonly HEALTH: org.spongepowered.api.scoreboard.critieria.Criterion
                         /**
                          * Represents a {@link Criteria} which causes an {@link Objective}
                          * to have a score for a player incremented when they kill a player.
                          */
                         // @ts-ignore
-                        readonly PLAYER_KILLS: org.spongepowered.api.scoreboard.critieria.Criterion
+                        public static readonly PLAYER_KILLS: org.spongepowered.api.scoreboard.critieria.Criterion
                         /**
                          * Represents a {@link Criteria} which causes an {@link Objective}
                          * to have a score for a player incremented when they kill an entity.
                          */
                         // @ts-ignore
-                        readonly TOTAL_KILLS: org.spongepowered.api.scoreboard.critieria.Criterion
+                        public static readonly TOTAL_KILLS: org.spongepowered.api.scoreboard.critieria.Criterion
                         /**
                          * Represents a {@link Criterion} which causes an {@link Objective}
                          * to have a score for a player updated by the <code>/trigger</code>
                          * command.
                          */
                         // @ts-ignore
-                        readonly TRIGGER: org.spongepowered.api.scoreboard.critieria.Criterion
+                        public static readonly TRIGGER: org.spongepowered.api.scoreboard.critieria.Criterion
                     }
                 }
             }

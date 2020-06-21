@@ -17,7 +17,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class AbstractSelectableChannel extends java.nio.channels.SelectableChannel {
+                abstract class AbstractSelectableChannel extends java.nio.channels.SelectableChannel {
                     /**
                      * Initializes a new instance of this class.
                      * @param provider
@@ -30,11 +30,11 @@ declare namespace java {
                      * @return The provider that created this channel
                      */
                     // @ts-ignore
-                    provider(): java.nio.channels.spi.SelectorProvider
+                    public provider(): java.nio.channels.spi.SelectorProvider
                     // @ts-ignore
-                    isRegistered(): boolean
+                    public isRegistered(): boolean
                     // @ts-ignore
-                    keyFor(sel: java.nio.channels.Selector): java.nio.channels.SelectionKey
+                    public keyFor(sel: java.nio.channels.Selector): java.nio.channels.SelectionKey
                     /**
                      * Registers this channel with the given selector, returning a selection key.
                      * <p>  This method first verifies that this channel is open and that the
@@ -54,7 +54,7 @@ declare namespace java {
                      * @throws IllegalArgumentException {#inheritDoc}
                      */
                     // @ts-ignore
-                    register(sel: java.nio.channels.Selector, ops: number /*int*/, att: any): java.nio.channels.SelectionKey
+                    public register(sel: java.nio.channels.Selector, ops: number /*int*/, att: java.lang.Object | any): java.nio.channels.SelectionKey
                     /**
                      * Closes this channel.
                      * <p> This method, which is specified in the {@link
@@ -82,9 +82,9 @@ declare namespace java {
                     // @ts-ignore
                     abstract implCloseSelectableChannel(): void
                     // @ts-ignore
-                    isBlocking(): boolean
+                    public isBlocking(): boolean
                     // @ts-ignore
-                    blockingLock(): java.lang.Object
+                    public blockingLock(): any
                     /**
                      * Adjusts this channel's blocking mode.
                      * <p> If the given blocking mode is different from the current blocking
@@ -93,7 +93,7 @@ declare namespace java {
                      * order to change the mode.  </p>
                      */
                     // @ts-ignore
-                    configureBlocking(block: boolean): java.nio.channels.SelectableChannel
+                    public configureBlocking(block: boolean): java.nio.channels.SelectableChannel
                     /**
                      * Adjusts this channel's blocking mode.
                      * <p> This method is invoked by the {@link #configureBlocking

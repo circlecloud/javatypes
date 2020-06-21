@@ -10,27 +10,27 @@ declare namespace org {
                     // @ts-ignore
                     constructor(sheep: org.bukkit.entity.Sheep, color: org.bukkit.DyeColor)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Sheep
+                    public getEntity(): org.bukkit.entity.Sheep
                     /**
                      * Gets the DyeColor the sheep is being dyed
                      * @return the DyeColor the sheep is being dyed
                      */
                     // @ts-ignore
-                    getColor(): org.bukkit.DyeColor
+                    public getColor(): org.bukkit.DyeColor
                     /**
                      * Sets the DyeColor the sheep is being dyed
                      * @param color the DyeColor the sheep will be dyed
                      */
                     // @ts-ignore
-                    setColor(color: org.bukkit.DyeColor): void
+                    public setColor(color: org.bukkit.DyeColor): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

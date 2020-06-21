@@ -17,9 +17,9 @@ declare namespace org {
                          *  or consists wholly of whitespace
                          */
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

@@ -22,7 +22,7 @@ declare namespace javax {
                  * @param message a string containing the error detail message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
             }
         }
     }

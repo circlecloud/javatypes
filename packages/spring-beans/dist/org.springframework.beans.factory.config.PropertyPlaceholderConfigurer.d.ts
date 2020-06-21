@@ -35,19 +35,19 @@ declare namespace org {
                          * Never check system properties.
                          */
                         // @ts-ignore
-                        readonly SYSTEM_PROPERTIES_MODE_NEVER: number /*int*/
+                        public static readonly SYSTEM_PROPERTIES_MODE_NEVER: number /*int*/
                         /**
                          * Check system properties if not resolvable in the specified properties.
                          * This is the default.
                          */
                         // @ts-ignore
-                        readonly SYSTEM_PROPERTIES_MODE_FALLBACK: number /*int*/
+                        public static readonly SYSTEM_PROPERTIES_MODE_FALLBACK: number /*int*/
                         /**
                          * Check system properties first, before trying the specified properties.
                          * This allows system properties to override any other property source.
                          */
                         // @ts-ignore
-                        readonly SYSTEM_PROPERTIES_MODE_OVERRIDE: number /*int*/
+                        public static readonly SYSTEM_PROPERTIES_MODE_OVERRIDE: number /*int*/
                         /**
                          * Set the system property mode by the name of the corresponding constant,
                          * e.g. "SYSTEM_PROPERTIES_MODE_OVERRIDE".
@@ -55,7 +55,7 @@ declare namespace org {
                          * @see #setSystemPropertiesMode
                          */
                         // @ts-ignore
-                        setSystemPropertiesModeName(constantName: string): void
+                        public setSystemPropertiesModeName(constantName: java.lang.String | string): void
                         /**
                          * Set how to check system properties: as fallback, as override, or never.
                          * For example, will resolve ${user.dir} to the "user.dir" system property.
@@ -69,7 +69,7 @@ declare namespace org {
                          * @see #setSystemPropertiesModeName
                          */
                         // @ts-ignore
-                        setSystemPropertiesMode(systemPropertiesMode: number /*int*/): void
+                        public setSystemPropertiesMode(systemPropertiesMode: number /*int*/): void
                         /**
                          * Set whether to search for a matching system environment variable
                          * if no matching system property has been found. Only applied when
@@ -84,7 +84,7 @@ declare namespace org {
                          * @see System#getenv(String)
                          */
                         // @ts-ignore
-                        setSearchSystemEnvironment(searchSystemEnvironment: boolean): void
+                        public setSearchSystemEnvironment(searchSystemEnvironment: boolean): void
                         /**
                          * Resolve the given placeholder using the given properties, performing
                          * a system properties check according to the given mode.
@@ -102,7 +102,7 @@ declare namespace org {
                          * @see #resolvePlaceholder(String, java.util.Properties)
                          */
                         // @ts-ignore
-                        resolvePlaceholder(placeholder: string, props: java.util.Properties, systemPropertiesMode: number /*int*/): java.lang.String
+                        resolvePlaceholder(placeholder: java.lang.String | string, props: java.util.Properties, systemPropertiesMode: number /*int*/): string
                         /**
                          * Resolve the given placeholder using the given properties.
                          * The default implementation simply checks for a corresponding property key.
@@ -117,7 +117,7 @@ declare namespace org {
                          * @see #setSystemPropertiesMode
                          */
                         // @ts-ignore
-                        resolvePlaceholder(placeholder: string, props: java.util.Properties): java.lang.String
+                        resolvePlaceholder(placeholder: java.lang.String | string, props: java.util.Properties): string
                         /**
                          * Resolve the given key as JVM system property, and optionally also as
                          * system environment variable if no matching system property has been found.
@@ -128,7 +128,7 @@ declare namespace org {
                          * @see System#getenv(String)
                          */
                         // @ts-ignore
-                        resolveSystemProperty(key: string): java.lang.String
+                        resolveSystemProperty(key: java.lang.String | string): string
                         /**
                          * Visit each bean definition in the given bean factory and attempt to replace ${...} property
                          * placeholders with values from the given properties.

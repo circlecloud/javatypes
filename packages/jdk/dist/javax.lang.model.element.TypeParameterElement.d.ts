@@ -32,7 +32,7 @@ declare namespace javax {
                      *  there are none
                      */
                     // @ts-ignore
-                    getBounds(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getBounds(): Array<any>
                     /**
                      * Returns the {@linkplain TypeParameterElement#getGenericElement generic element} of this type parameter.
                      * @return the generic element of this type parameter

@@ -77,7 +77,7 @@ declare namespace java {
              * @see java.util.Calendar
              */
             // @ts-ignore
-            setTime(time: number /*long*/): void
+            public setTime(time: number /*long*/): void
             /**
              * Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT
              * represented by this <code>Timestamp</code> object.
@@ -86,7 +86,7 @@ declare namespace java {
              * @see #setTime
              */
             // @ts-ignore
-            getTime(): long
+            public getTime(): number /*long*/
             /**
              * Converts a <code>String</code> object in JDBC timestamp escape format to a
              * <code>Timestamp</code> value.
@@ -98,7 +98,7 @@ declare namespace java {
              *  does not have the format <code>yyyy-[m]m-[d]d hh:mm:ss[.f...]</code>
              */
             // @ts-ignore
-            valueOf(s: string): java.sql.Timestamp
+            public static valueOf(s: java.lang.String | string): java.sql.Timestamp
             /**
              * Formats a timestamp in JDBC timestamp escape format.
              * <code>yyyy-mm-dd hh:mm:ss.fffffffff</code>,
@@ -108,14 +108,14 @@ declare namespace java {
              *            <code>yyyy-mm-dd hh:mm:ss.fffffffff</code> format
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Gets this <code>Timestamp</code> object's <code>nanos</code> value.
              * @return this <code>Timestamp</code> object's fractional seconds component
              * @see #setNanos
              */
             // @ts-ignore
-            getNanos(): int
+            public getNanos(): number /*int*/
             /**
              * Sets this <code>Timestamp</code> object's <code>nanos</code> field
              * to the given value.
@@ -125,7 +125,7 @@ declare namespace java {
              * @see #getNanos
              */
             // @ts-ignore
-            setNanos(n: number /*int*/): void
+            public setNanos(n: number /*int*/): void
             /**
              * Tests to see if this <code>Timestamp</code> object is
              * equal to the given <code>Timestamp</code> object.
@@ -135,7 +135,7 @@ declare namespace java {
              *          <code>false</code> otherwise
              */
             // @ts-ignore
-            equals(ts: java.sql.Timestamp): boolean
+            public equals(ts: java.sql.Timestamp): boolean
             /**
              * Tests to see if this <code>Timestamp</code> object is
              * equal to the given object.
@@ -152,7 +152,7 @@ declare namespace java {
              *          <code>false</code> otherwise
              */
             // @ts-ignore
-            equals(ts: any): boolean
+            public equals(ts: java.lang.Object | any): boolean
             /**
              * Indicates whether this <code>Timestamp</code> object is
              * earlier than the given <code>Timestamp</code> object.
@@ -161,7 +161,7 @@ declare namespace java {
              *         <code>false</code> otherwise
              */
             // @ts-ignore
-            before(ts: java.sql.Timestamp): boolean
+            public before(ts: java.sql.Timestamp): boolean
             /**
              * Indicates whether this <code>Timestamp</code> object is
              * later than the given <code>Timestamp</code> object.
@@ -170,7 +170,7 @@ declare namespace java {
              *         <code>false</code> otherwise
              */
             // @ts-ignore
-            after(ts: java.sql.Timestamp): boolean
+            public after(ts: java.sql.Timestamp): boolean
             /**
              * Compares this <code>Timestamp</code> object to the given
              * <code>Timestamp</code> object.
@@ -184,7 +184,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            compareTo(ts: java.sql.Timestamp): int
+            public compareTo(ts: java.sql.Timestamp): number /*int*/
             /**
              * Compares this <code>Timestamp</code> object to the given
              * <code>Date</code> object.
@@ -198,14 +198,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            compareTo(o: java.util.Date): int
+            public compareTo(o: java.util.Date): number /*int*/
             /**
              * {@inheritDoc}
              * The {@code hashCode} method uses the underlying {@code java.util.Date}
              * implementation and therefore does not include nanos in its computation.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Obtains an instance of {@code Timestamp} from a {@code LocalDateTime}
              * object, with the same year, month, day of month, hours, minutes,
@@ -219,7 +219,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            valueOf(dateTime: java.time.LocalDateTime): java.sql.Timestamp
+            public static valueOf(dateTime: java.time.LocalDateTime): java.sql.Timestamp
             /**
              * Converts this {@code Timestamp} object to a {@code LocalDateTime}.
              * <p>
@@ -230,7 +230,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toLocalDateTime(): java.time.LocalDateTime
+            public toLocalDateTime(): java.time.LocalDateTime
             /**
              * Obtains an instance of {@code Timestamp} from an {@link Instant} object.
              * <p>
@@ -246,7 +246,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            from(instant: java.time.Instant): java.sql.Timestamp
+            public static from(instant: java.time.Instant): java.sql.Timestamp
             /**
              * Converts this {@code Timestamp} object to an {@code Instant}.
              * <p>
@@ -256,7 +256,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toInstant(): java.time.Instant
+            public toInstant(): java.time.Instant
         }
     }
 }

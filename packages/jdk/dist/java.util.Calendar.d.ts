@@ -217,7 +217,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class Calendar extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable, java.lang.Comparable<java.util.Calendar> {
+        abstract class Calendar extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable, java.lang.Comparable<java.util.Calendar> {
             /**
              * Constructs a Calendar with the default time zone
              * and the default {@link java.util.Locale.Category#FORMAT FORMAT}
@@ -241,13 +241,13 @@ declare namespace java {
              * @see GregorianCalendar#BC
              */
             // @ts-ignore
-            readonly ERA: number /*int*/
+            public static readonly ERA: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * year. This is a calendar-specific value; see subclass documentation.
              */
             // @ts-ignore
-            readonly YEAR: number /*int*/
+            public static readonly YEAR: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * month. This is a calendar-specific value. The first month of
@@ -269,7 +269,7 @@ declare namespace java {
              * @see #UNDECIMBER
              */
             // @ts-ignore
-            readonly MONTH: number /*int*/
+            public static readonly MONTH: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * week number within the current year.  The first week of the year, as
@@ -281,7 +281,7 @@ declare namespace java {
              * @see #getMinimalDaysInFirstWeek
              */
             // @ts-ignore
-            readonly WEEK_OF_YEAR: number /*int*/
+            public static readonly WEEK_OF_YEAR: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * week number within the current month.  The first week of the month, as
@@ -293,7 +293,7 @@ declare namespace java {
              * @see #getMinimalDaysInFirstWeek
              */
             // @ts-ignore
-            readonly WEEK_OF_MONTH: number /*int*/
+            public static readonly WEEK_OF_MONTH: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * day of the month. This is a synonym for <code>DAY_OF_MONTH</code>.
@@ -301,7 +301,7 @@ declare namespace java {
              * @see #DAY_OF_MONTH
              */
             // @ts-ignore
-            readonly DATE: number /*int*/
+            public static readonly DATE: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * day of the month. This is a synonym for <code>DATE</code>.
@@ -309,13 +309,13 @@ declare namespace java {
              * @see #DATE
              */
             // @ts-ignore
-            readonly DAY_OF_MONTH: number /*int*/
+            public static readonly DAY_OF_MONTH: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the day
              * number within the current year.  The first day of the year has value 1.
              */
             // @ts-ignore
-            readonly DAY_OF_YEAR: number /*int*/
+            public static readonly DAY_OF_YEAR: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the day
              * of the week.  This field takes values <code>SUNDAY</code>,
@@ -330,7 +330,7 @@ declare namespace java {
              * @see #SATURDAY
              */
             // @ts-ignore
-            readonly DAY_OF_WEEK: number /*int*/
+            public static readonly DAY_OF_WEEK: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * ordinal number of the day of the week within the current month. Together
@@ -354,7 +354,7 @@ declare namespace java {
              * @see #WEEK_OF_MONTH
              */
             // @ts-ignore
-            readonly DAY_OF_WEEK_IN_MONTH: number /*int*/
+            public static readonly DAY_OF_WEEK_IN_MONTH: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating
              * whether the <code>HOUR</code> is before or after noon.
@@ -364,7 +364,7 @@ declare namespace java {
              * @see #HOUR
              */
             // @ts-ignore
-            readonly AM_PM: number /*int*/
+            public static readonly AM_PM: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * hour of the morning or afternoon. <code>HOUR</code> is used for the
@@ -374,7 +374,7 @@ declare namespace java {
              * @see #HOUR_OF_DAY
              */
             // @ts-ignore
-            readonly HOUR: number /*int*/
+            public static readonly HOUR: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * hour of the day. <code>HOUR_OF_DAY</code> is used for the 24-hour clock.
@@ -382,28 +382,28 @@ declare namespace java {
              * @see #HOUR
              */
             // @ts-ignore
-            readonly HOUR_OF_DAY: number /*int*/
+            public static readonly HOUR_OF_DAY: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * minute within the hour.
              * E.g., at 10:04:15.250 PM the <code>MINUTE</code> is 4.
              */
             // @ts-ignore
-            readonly MINUTE: number /*int*/
+            public static readonly MINUTE: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * second within the minute.
              * E.g., at 10:04:15.250 PM the <code>SECOND</code> is 15.
              */
             // @ts-ignore
-            readonly SECOND: number /*int*/
+            public static readonly SECOND: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * millisecond within the second.
              * E.g., at 10:04:15.250 PM the <code>MILLISECOND</code> is 250.
              */
             // @ts-ignore
-            readonly MILLISECOND: number /*int*/
+            public static readonly MILLISECOND: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code>
              * indicating the raw offset from GMT in milliseconds.
@@ -414,7 +414,7 @@ declare namespace java {
              * historical GMT offset changes.
              */
             // @ts-ignore
-            readonly ZONE_OFFSET: number /*int*/
+            public static readonly ZONE_OFFSET: number /*int*/
             /**
              * Field number for <code>get</code> and <code>set</code> indicating the
              * daylight saving offset in milliseconds.
@@ -425,146 +425,146 @@ declare namespace java {
              * historical Daylight Saving Time schedule changes.
              */
             // @ts-ignore
-            readonly DST_OFFSET: number /*int*/
+            public static readonly DST_OFFSET: number /*int*/
             /**
              * The number of distinct fields recognized by <code>get</code> and <code>set</code>.
              * Field numbers range from <code>0..FIELD_COUNT-1</code>.
              */
             // @ts-ignore
-            readonly FIELD_COUNT: number /*int*/
+            public static readonly FIELD_COUNT: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Sunday.
              */
             // @ts-ignore
-            readonly SUNDAY: number /*int*/
+            public static readonly SUNDAY: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Monday.
              */
             // @ts-ignore
-            readonly MONDAY: number /*int*/
+            public static readonly MONDAY: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Tuesday.
              */
             // @ts-ignore
-            readonly TUESDAY: number /*int*/
+            public static readonly TUESDAY: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Wednesday.
              */
             // @ts-ignore
-            readonly WEDNESDAY: number /*int*/
+            public static readonly WEDNESDAY: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Thursday.
              */
             // @ts-ignore
-            readonly THURSDAY: number /*int*/
+            public static readonly THURSDAY: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Friday.
              */
             // @ts-ignore
-            readonly FRIDAY: number /*int*/
+            public static readonly FRIDAY: number /*int*/
             /**
              * Value of the {@link #DAY_OF_WEEK} field indicating
              * Saturday.
              */
             // @ts-ignore
-            readonly SATURDAY: number /*int*/
+            public static readonly SATURDAY: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * first month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly JANUARY: number /*int*/
+            public static readonly JANUARY: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * second month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly FEBRUARY: number /*int*/
+            public static readonly FEBRUARY: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * third month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly MARCH: number /*int*/
+            public static readonly MARCH: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * fourth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly APRIL: number /*int*/
+            public static readonly APRIL: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * fifth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly MAY: number /*int*/
+            public static readonly MAY: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * sixth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly JUNE: number /*int*/
+            public static readonly JUNE: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * seventh month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly JULY: number /*int*/
+            public static readonly JULY: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * eighth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly AUGUST: number /*int*/
+            public static readonly AUGUST: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * ninth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly SEPTEMBER: number /*int*/
+            public static readonly SEPTEMBER: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * tenth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly OCTOBER: number /*int*/
+            public static readonly OCTOBER: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * eleventh month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly NOVEMBER: number /*int*/
+            public static readonly NOVEMBER: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * twelfth month of the year in the Gregorian and Julian calendars.
              */
             // @ts-ignore
-            readonly DECEMBER: number /*int*/
+            public static readonly DECEMBER: number /*int*/
             /**
              * Value of the {@link #MONTH} field indicating the
              * thirteenth month of the year. Although <code>GregorianCalendar</code>
              * does not use this value, lunar calendars do.
              */
             // @ts-ignore
-            readonly UNDECIMBER: number /*int*/
+            public static readonly UNDECIMBER: number /*int*/
             /**
              * Value of the {@link #AM_PM} field indicating the
              * period of the day from midnight to just before noon.
              */
             // @ts-ignore
-            readonly AM: number /*int*/
+            public static readonly AM: number /*int*/
             /**
              * Value of the {@link #AM_PM} field indicating the
              * period of the day from noon to just before midnight.
              */
             // @ts-ignore
-            readonly PM: number /*int*/
+            public static readonly PM: number /*int*/
             /**
              * A style specifier for {@link #getDisplayNames(int, int, Locale)
              * getDisplayNames} indicating names in all styles, such as
@@ -578,7 +578,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly ALL_STYLES: number /*int*/
+            public static readonly ALL_STYLES: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -588,7 +588,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly SHORT: number /*int*/
+            public static readonly SHORT: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -598,7 +598,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly LONG: number /*int*/
+            public static readonly LONG: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -610,7 +610,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly NARROW_FORMAT: number /*int*/
+            public static readonly NARROW_FORMAT: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -622,7 +622,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly NARROW_STANDALONE: number /*int*/
+            public static readonly NARROW_STANDALONE: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -633,7 +633,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly SHORT_FORMAT: number /*int*/
+            public static readonly SHORT_FORMAT: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -644,7 +644,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly LONG_FORMAT: number /*int*/
+            public static readonly LONG_FORMAT: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -656,7 +656,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly SHORT_STANDALONE: number /*int*/
+            public static readonly SHORT_STANDALONE: number /*int*/
             /**
              * A style specifier for {@link #getDisplayName(int, int, Locale)
              * getDisplayName} and {@link #getDisplayNames(int, int, Locale)
@@ -668,7 +668,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly LONG_STANDALONE: number /*int*/
+            public static readonly LONG_STANDALONE: number /*int*/
             /**
              * The calendar field values for the currently set time for this calendar.
              * This is an array of <code>FIELD_COUNT</code> integers, with index values
@@ -710,7 +710,7 @@ declare namespace java {
              * @return a Calendar.
              */
             // @ts-ignore
-            getInstance(): java.util.Calendar
+            public static getInstance(): java.util.Calendar
             /**
              * Gets a calendar using the specified time zone and default locale.
              * The <code>Calendar</code> returned is based on the current time
@@ -720,7 +720,7 @@ declare namespace java {
              * @return a Calendar.
              */
             // @ts-ignore
-            getInstance(zone: java.util.TimeZone): java.util.Calendar
+            public static getInstance(zone: java.util.TimeZone): java.util.Calendar
             /**
              * Gets a calendar using the default time zone and specified locale.
              * The <code>Calendar</code> returned is based on the current time
@@ -729,7 +729,7 @@ declare namespace java {
              * @return a Calendar.
              */
             // @ts-ignore
-            getInstance(aLocale: java.util.Locale): java.util.Calendar
+            public static getInstance(aLocale: java.util.Locale): java.util.Calendar
             /**
              * Gets a calendar with the specified time zone and locale.
              * The <code>Calendar</code> returned is based on the current time
@@ -739,7 +739,7 @@ declare namespace java {
              * @return a Calendar.
              */
             // @ts-ignore
-            getInstance(zone: java.util.TimeZone, aLocale: java.util.Locale): java.util.Calendar
+            public static getInstance(zone: java.util.TimeZone, aLocale: java.util.Locale): java.util.Calendar
             /**
              * Returns an array of all locales for which the <code>getInstance</code>
              * methods of this class can return localized instances.
@@ -749,7 +749,7 @@ declare namespace java {
              *          <code>Calendar</code> instances are available.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Converts the current calendar field values in {@link #fields fields[]}
              * to the millisecond time value
@@ -779,7 +779,7 @@ declare namespace java {
              * @see #getTimeInMillis()
              */
             // @ts-ignore
-            getTime(): java.util.Date
+            public getTime(): java.util.Date
             /**
              * Sets this Calendar's time with the given <code>Date</code>.
              * <p>
@@ -791,7 +791,7 @@ declare namespace java {
              * @see #setTimeInMillis(long)
              */
             // @ts-ignore
-            setTime(date: java.util.Date): void
+            public setTime(date: java.util.Date): void
             /**
              * Returns this Calendar's time value in milliseconds.
              * @return the current time as UTC milliseconds from the epoch.
@@ -799,7 +799,7 @@ declare namespace java {
              * @see #setTimeInMillis(long)
              */
             // @ts-ignore
-            getTimeInMillis(): long
+            public getTimeInMillis(): number /*long*/
             /**
              * Sets this Calendar's current time from the given long value.
              * @param millis the new time in UTC milliseconds from the epoch.
@@ -807,7 +807,7 @@ declare namespace java {
              * @see #getTimeInMillis()
              */
             // @ts-ignore
-            setTimeInMillis(millis: number /*long*/): void
+            public setTimeInMillis(millis: number /*long*/): void
             /**
              * Returns the value of the given calendar field. In lenient mode,
              * all calendar fields are normalized. In non-lenient mode, all
@@ -824,7 +824,7 @@ declare namespace java {
              * @see #complete()
              */
             // @ts-ignore
-            get(field: number /*int*/): int
+            public get(field: number /*int*/): number /*int*/
             /**
              * Returns the value of the given calendar field. This method does
              * not involve normalization or validation of the field value.
@@ -833,7 +833,7 @@ declare namespace java {
              * @see #get(int)
              */
             // @ts-ignore
-            internalGet(field: number /*int*/): int
+            internalGet(field: number /*int*/): number /*int*/
             /**
              * Sets the given calendar field to the given value. The value is not
              * interpreted by this method regardless of the leniency mode.
@@ -848,7 +848,7 @@ declare namespace java {
              * @see #get(int)
              */
             // @ts-ignore
-            set(field: number /*int*/, value: number /*int*/): void
+            public set(field: number /*int*/, value: number /*int*/): void
             /**
              * Sets the values for the calendar fields <code>YEAR</code>,
              * <code>MONTH</code>, and <code>DAY_OF_MONTH</code>.
@@ -863,7 +863,7 @@ declare namespace java {
              * @see #set(int,int,int,int,int,int)
              */
             // @ts-ignore
-            set(year: number /*int*/, month: number /*int*/, date: number /*int*/): void
+            public set(year: number /*int*/, month: number /*int*/, date: number /*int*/): void
             /**
              * Sets the values for the calendar fields <code>YEAR</code>,
              * <code>MONTH</code>, <code>DAY_OF_MONTH</code>,
@@ -881,7 +881,7 @@ declare namespace java {
              * @see #set(int,int,int,int,int,int)
              */
             // @ts-ignore
-            set(year: number /*int*/, month: number /*int*/, date: number /*int*/, hourOfDay: number /*int*/, minute: number /*int*/): void
+            public set(year: number /*int*/, month: number /*int*/, date: number /*int*/, hourOfDay: number /*int*/, minute: number /*int*/): void
             /**
              * Sets the values for the fields <code>YEAR</code>, <code>MONTH</code>,
              * <code>DAY_OF_MONTH</code>, <code>HOUR_OF_DAY</code>, <code>MINUTE</code>, and
@@ -900,7 +900,7 @@ declare namespace java {
              * @see #set(int,int,int,int,int)
              */
             // @ts-ignore
-            set(year: number /*int*/, month: number /*int*/, date: number /*int*/, hourOfDay: number /*int*/, minute: number /*int*/, second: number /*int*/): void
+            public set(year: number /*int*/, month: number /*int*/, date: number /*int*/, hourOfDay: number /*int*/, minute: number /*int*/, second: number /*int*/): void
             /**
              * Sets all the calendar field values and the time value
              * (millisecond offset from the <a href="#Epoch">Epoch</a>) of
@@ -915,7 +915,7 @@ declare namespace java {
              * @see #clear(int)
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Sets the given calendar field value and the time value
              * (millisecond offset from the <a href="#Epoch">Epoch</a>) of
@@ -936,7 +936,7 @@ declare namespace java {
              * @see #clear()
              */
             // @ts-ignore
-            clear(field: number /*int*/): void
+            public clear(field: number /*int*/): void
             /**
              * Determines if the given calendar field has a value set,
              * including cases that the value has been set by internal fields
@@ -946,7 +946,7 @@ declare namespace java {
              *  <code>false</code> otherwise.
              */
             // @ts-ignore
-            isSet(field: number /*int*/): boolean
+            public isSet(field: number /*int*/): boolean
             /**
              * Returns the string representation of the calendar
              * <code>field</code> value in the given <code>style</code> and
@@ -989,7 +989,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getDisplayName(field: number /*int*/, style: number /*int*/, locale: java.util.Locale): java.lang.String
+            public getDisplayName(field: number /*int*/, style: number /*int*/, locale: java.util.Locale): string
             /**
              * Returns a {@code Map} containing all names of the calendar
              * {@code field} in the given {@code style} and
@@ -1036,7 +1036,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getDisplayNames(field: number /*int*/, style: number /*int*/, locale: java.util.Locale): java.util.Map<java.lang.String, java.lang.Integer>
+            public getDisplayNames(field: number /*int*/, style: number /*int*/, locale: java.util.Locale): java.util.Map<java.lang.String | string, java.lang.Integer | number>
             /**
              * Fills in any unset fields in the calendar fields. First, the {@link
              * #computeTime()} method is called if the time value (millisecond offset
@@ -1061,7 +1061,7 @@ declare namespace java {
              * @see Locale#getUnicodeLocaleType(String)
              */
             // @ts-ignore
-            getAvailableCalendarTypes(): java.util.Set<java.lang.String>
+            public static getAvailableCalendarTypes(): Array<java.lang.String | string>
             /**
              * Returns the calendar type of this {@code Calendar}. Calendar types are
              * defined by the <em>Unicode Locale Data Markup Language (LDML)</em>
@@ -1078,7 +1078,7 @@ declare namespace java {
              * @see Locale.Builder#setUnicodeLocaleKeyword(String, String)
              */
             // @ts-ignore
-            getCalendarType(): java.lang.String
+            public getCalendarType(): string
             /**
              * Compares this <code>Calendar</code> to the specified
              * <code>Object</code>.  The result is <code>true</code> if and only if
@@ -1099,14 +1099,14 @@ declare namespace java {
              *  <code>false</code> otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hash code for this calendar.
              * @return a hash code value for this object.
              * @since 1.2
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns whether this <code>Calendar</code> represents a time
              * before the time represented by the specified
@@ -1123,7 +1123,7 @@ declare namespace java {
              * @see #compareTo(Calendar)
              */
             // @ts-ignore
-            before(when: any): boolean
+            public before(when: java.lang.Object | any): boolean
             /**
              * Returns whether this <code>Calendar</code> represents a time
              * after the time represented by the specified
@@ -1140,7 +1140,7 @@ declare namespace java {
              * @see #compareTo(Calendar)
              */
             // @ts-ignore
-            after(when: any): boolean
+            public after(when: java.lang.Object | any): boolean
             /**
              * Compares the time values (millisecond offsets from the <a
              * href="#Epoch">Epoch</a>) represented by two
@@ -1160,7 +1160,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            compareTo(anotherCalendar: java.util.Calendar): int
+            public compareTo(anotherCalendar: java.util.Calendar): number /*int*/
             /**
              * Adds or subtracts the specified amount of time to the given calendar field,
              * based on the calendar's rules. For example, to subtract 5 days from
@@ -1172,7 +1172,7 @@ declare namespace java {
              * @see #set(int,int)
              */
             // @ts-ignore
-            abstract add(field: number /*int*/, amount: number /*int*/): void
+            public abstract add(field: number /*int*/, amount: number /*int*/): void
             /**
              * Adds or subtracts (up/down) a single unit of time on the given time
              * field without changing larger fields. For example, to roll the current
@@ -1193,7 +1193,7 @@ declare namespace java {
              * @see Calendar#set(int,int)
              */
             // @ts-ignore
-            abstract roll(field: number /*int*/, up: boolean): void
+            public abstract roll(field: number /*int*/, up: boolean): void
             /**
              * Adds the specified (signed) amount to the specified calendar field
              * without changing larger fields.  A negative amount means to roll
@@ -1212,19 +1212,19 @@ declare namespace java {
              * @see #set(int,int)
              */
             // @ts-ignore
-            roll(field: number /*int*/, amount: number /*int*/): void
+            public roll(field: number /*int*/, amount: number /*int*/): void
             /**
              * Sets the time zone with the given time zone value.
              * @param value the given time zone.
              */
             // @ts-ignore
-            setTimeZone(value: java.util.TimeZone): void
+            public setTimeZone(value: java.util.TimeZone): void
             /**
              * Gets the time zone.
              * @return the time zone object associated with this calendar.
              */
             // @ts-ignore
-            getTimeZone(): java.util.TimeZone
+            public getTimeZone(): java.util.TimeZone
             /**
              * Specifies whether or not date/time interpretation is to be lenient.  With
              * lenient interpretation, a date such as "February 942, 1996" will be
@@ -1237,7 +1237,7 @@ declare namespace java {
              * @see java.text.DateFormat#setLenient
              */
             // @ts-ignore
-            setLenient(lenient: boolean): void
+            public setLenient(lenient: boolean): void
             /**
              * Tells whether date/time interpretation is to be lenient.
              * @return <code>true</code> if the interpretation mode of this calendar is lenient;
@@ -1245,7 +1245,7 @@ declare namespace java {
              * @see #setLenient(boolean)
              */
             // @ts-ignore
-            isLenient(): boolean
+            public isLenient(): boolean
             /**
              * Sets what the first day of the week is; e.g., <code>SUNDAY</code> in the U.S.,
              * <code>MONDAY</code> in France.
@@ -1254,7 +1254,7 @@ declare namespace java {
              * @see #getMinimalDaysInFirstWeek()
              */
             // @ts-ignore
-            setFirstDayOfWeek(value: number /*int*/): void
+            public setFirstDayOfWeek(value: number /*int*/): void
             /**
              * Gets what the first day of the week is; e.g., <code>SUNDAY</code> in the U.S.,
              * <code>MONDAY</code> in France.
@@ -1263,7 +1263,7 @@ declare namespace java {
              * @see #getMinimalDaysInFirstWeek()
              */
             // @ts-ignore
-            getFirstDayOfWeek(): int
+            public getFirstDayOfWeek(): number /*int*/
             /**
              * Sets what the minimal days required in the first week of the year are;
              * For example, if the first week is defined as one that contains the first
@@ -1274,7 +1274,7 @@ declare namespace java {
              * @see #getMinimalDaysInFirstWeek()
              */
             // @ts-ignore
-            setMinimalDaysInFirstWeek(value: number /*int*/): void
+            public setMinimalDaysInFirstWeek(value: number /*int*/): void
             /**
              * Gets what the minimal days required in the first week of the year are;
              * e.g., if the first week is defined as one that contains the first day
@@ -1285,7 +1285,7 @@ declare namespace java {
              * @see #setMinimalDaysInFirstWeek(int)
              */
             // @ts-ignore
-            getMinimalDaysInFirstWeek(): int
+            public getMinimalDaysInFirstWeek(): number /*int*/
             /**
              * Returns whether this {@code Calendar} supports week dates.
              * <p>The default implementation of this method returns {@code false}.
@@ -1297,7 +1297,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isWeekDateSupported(): boolean
+            public isWeekDateSupported(): boolean
             /**
              * Returns the week year represented by this {@code Calendar}. The
              * week year is in sync with the week cycle. The {@linkplain
@@ -1315,7 +1315,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getWeekYear(): int
+            public getWeekYear(): number /*int*/
             /**
              * Sets the date of this {@code Calendar} with the the given date
              * specifiers - week year, week of year, and day of week.
@@ -1345,7 +1345,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setWeekDate(weekYear: number /*int*/, weekOfYear: number /*int*/, dayOfWeek: number /*int*/): void
+            public setWeekDate(weekYear: number /*int*/, weekOfYear: number /*int*/, dayOfWeek: number /*int*/): void
             /**
              * Returns the number of weeks in the week year represented by this
              * {@code Calendar}.
@@ -1362,7 +1362,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getWeeksInWeekYear(): int
+            public getWeeksInWeekYear(): number /*int*/
             /**
              * Returns the minimum value for the given calendar field of this
              * <code>Calendar</code> instance. The minimum value is defined as
@@ -1378,7 +1378,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            abstract getMinimum(field: number /*int*/): int
+            public abstract getMinimum(field: number /*int*/): number /*int*/
             /**
              * Returns the maximum value for the given calendar field of this
              * <code>Calendar</code> instance. The maximum value is defined as
@@ -1394,7 +1394,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            abstract getMaximum(field: number /*int*/): int
+            public abstract getMaximum(field: number /*int*/): number /*int*/
             /**
              * Returns the highest minimum value for the given calendar field
              * of this <code>Calendar</code> instance. The highest minimum
@@ -1411,7 +1411,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            abstract getGreatestMinimum(field: number /*int*/): int
+            public abstract getGreatestMinimum(field: number /*int*/): number /*int*/
             /**
              * Returns the lowest maximum value for the given calendar field
              * of this <code>Calendar</code> instance. The lowest maximum
@@ -1432,7 +1432,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            abstract getLeastMaximum(field: number /*int*/): int
+            public abstract getLeastMaximum(field: number /*int*/): number /*int*/
             /**
              * Returns the minimum value that the specified calendar field
              * could have, given the time value of this <code>Calendar</code>.
@@ -1452,7 +1452,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getActualMinimum(field: number /*int*/): int
+            public getActualMinimum(field: number /*int*/): number /*int*/
             /**
              * Returns the maximum value that the specified calendar field
              * could have, given the time value of this
@@ -1474,13 +1474,13 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getActualMaximum(field: number /*int*/): int
+            public getActualMaximum(field: number /*int*/): number /*int*/
             /**
              * Creates and returns a copy of this object.
              * @return a copy of this object.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Return a string representation of this calendar. This method
              * is intended to be used only for debugging purposes, and the
@@ -1489,7 +1489,7 @@ declare namespace java {
              * @return a string representation of this calendar.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Converts this object to an {@link Instant}.
              * <p>
@@ -1499,7 +1499,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toInstant(): java.time.Instant
+            public toInstant(): java.time.Instant
         }
     }
 }

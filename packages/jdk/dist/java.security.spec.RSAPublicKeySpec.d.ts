@@ -25,13 +25,13 @@ declare namespace java {
                  * @return the modulus
                  */
                 // @ts-ignore
-                getModulus(): java.math.BigInteger
+                public getModulus(): java.math.BigInteger
                 /**
                  * Returns the public exponent.
                  * @return the public exponent
                  */
                 // @ts-ignore
-                getPublicExponent(): java.math.BigInteger
+                public getPublicExponent(): java.math.BigInteger
             }
         }
     }

@@ -12,7 +12,7 @@ declare namespace org {
                  * @return a unmodifiable copy of all criteria
                  */
                 // @ts-ignore
-                getCriteria(): java.util.Collection<java.lang.String>
+                getCriteria(): Array<java.lang.String | string>
             }
         }
     }

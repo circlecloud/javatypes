@@ -25,9 +25,9 @@ declare namespace java {
              * @return The illegal Unicode code point
              */
             // @ts-ignore
-            getCodePoint(): int
+            getCodePoint(): number /*int*/
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

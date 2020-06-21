@@ -19,7 +19,7 @@ declare namespace java {
                  * @param <T> The type of the object holding the updatable field
                  */
                 // @ts-ignore
-                class AtomicLongFieldUpdater<T> extends java.lang.Object {
+                abstract class AtomicLongFieldUpdater<T> extends java.lang.Object {
                     /**
                      * Protected do-nothing constructor for use by subclasses.
                      */
@@ -41,7 +41,7 @@ declare namespace java {
                      *  access control
                      */
                     // @ts-ignore
-                    newUpdater<U>(tclass: java.lang.Class<U>, fieldName: string): java.util.concurrent.atomic.AtomicLongFieldUpdater<U>
+                    public static newUpdater<U>(tclass: java.lang.Class<U>, fieldName: java.lang.String | string): java.util.concurrent.atomic.AtomicLongFieldUpdater<U>
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given updated value if the current value {@code ==} the
@@ -56,7 +56,7 @@ declare namespace java {
                      *  of the class possessing the field established in the constructor
                      */
                     // @ts-ignore
-                    abstract compareAndSet(obj: T, expect: number /*long*/, update: number /*long*/): boolean
+                    public abstract compareAndSet(obj: T, expect: number /*long*/, update: number /*long*/): boolean
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given updated value if the current value {@code ==} the
@@ -74,7 +74,7 @@ declare namespace java {
                      *  of the class possessing the field established in the constructor
                      */
                     // @ts-ignore
-                    abstract weakCompareAndSet(obj: T, expect: number /*long*/, update: number /*long*/): boolean
+                    public abstract weakCompareAndSet(obj: T, expect: number /*long*/, update: number /*long*/): boolean
                     /**
                      * Sets the field of the given object managed by this updater to the
                      * given updated value. This operation is guaranteed to act as a volatile
@@ -83,7 +83,7 @@ declare namespace java {
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    abstract set(obj: T, newValue: number /*long*/): void
+                    public abstract set(obj: T, newValue: number /*long*/): void
                     /**
                      * Eventually sets the field of the given object managed by this
                      * updater to the given updated value.
@@ -92,7 +92,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    abstract lazySet(obj: T, newValue: number /*long*/): void
+                    public abstract lazySet(obj: T, newValue: number /*long*/): void
                     /**
                      * Gets the current value held in the field of the given object managed
                      * by this updater.
@@ -100,7 +100,7 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    abstract get(obj: T): long
+                    public abstract get(obj: T): number /*long*/
                     /**
                      * Atomically sets the field of the given object managed by this updater
                      * to the given value and returns the old value.
@@ -109,7 +109,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(obj: T, newValue: number /*long*/): long
+                    public getAndSet(obj: T, newValue: number /*long*/): number /*long*/
                     /**
                      * Atomically increments by one the current value of the field of the
                      * given object managed by this updater.
@@ -117,7 +117,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndIncrement(obj: T): long
+                    public getAndIncrement(obj: T): number /*long*/
                     /**
                      * Atomically decrements by one the current value of the field of the
                      * given object managed by this updater.
@@ -125,7 +125,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndDecrement(obj: T): long
+                    public getAndDecrement(obj: T): number /*long*/
                     /**
                      * Atomically adds the given value to the current value of the field of
                      * the given object managed by this updater.
@@ -134,7 +134,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndAdd(obj: T, delta: number /*long*/): long
+                    public getAndAdd(obj: T, delta: number /*long*/): number /*long*/
                     /**
                      * Atomically increments by one the current value of the field of the
                      * given object managed by this updater.
@@ -142,7 +142,7 @@ declare namespace java {
                      * @return the updated value
                      */
                     // @ts-ignore
-                    incrementAndGet(obj: T): long
+                    public incrementAndGet(obj: T): number /*long*/
                     /**
                      * Atomically decrements by one the current value of the field of the
                      * given object managed by this updater.
@@ -150,7 +150,7 @@ declare namespace java {
                      * @return the updated value
                      */
                     // @ts-ignore
-                    decrementAndGet(obj: T): long
+                    public decrementAndGet(obj: T): number /*long*/
                     /**
                      * Atomically adds the given value to the current value of the field of
                      * the given object managed by this updater.
@@ -159,7 +159,7 @@ declare namespace java {
                      * @return the updated value
                      */
                     // @ts-ignore
-                    addAndGet(obj: T, delta: number /*long*/): long
+                    public addAndGet(obj: T, delta: number /*long*/): number /*long*/
                     /**
                      * Atomically updates the field of the given object managed by this updater
                      * with the results of applying the given function, returning the previous
@@ -171,7 +171,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndUpdate(obj: T, updateFunction: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): long
+                    public getAndUpdate(obj: T, updateFunction: java.util.function$.LongUnaryOperator): number /*long*/
                     /**
                      * Atomically updates the field of the given object managed by this updater
                      * with the results of applying the given function, returning the updated
@@ -183,7 +183,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    updateAndGet(obj: T, updateFunction: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): long
+                    public updateAndGet(obj: T, updateFunction: java.util.function$.LongUnaryOperator): number /*long*/
                     /**
                      * Atomically updates the field of the given object managed by this
                      * updater with the results of applying the given function to the
@@ -199,7 +199,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndAccumulate(obj: T, x: number /*long*/, accumulatorFunction: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                    public getAndAccumulate(obj: T, x: number /*long*/, accumulatorFunction: java.util.function$.LongBinaryOperator): number /*long*/
                     /**
                      * Atomically updates the field of the given object managed by this
                      * updater with the results of applying the given function to the
@@ -215,7 +215,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    accumulateAndGet(obj: T, x: number /*long*/, accumulatorFunction: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                    public accumulateAndGet(obj: T, x: number /*long*/, accumulatorFunction: java.util.function$.LongBinaryOperator): number /*long*/
                 }
             }
         }

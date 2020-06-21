@@ -21,7 +21,7 @@ declare namespace java {
                  * @return the function result
                  */
                 // @ts-ignore
-                applyAsDouble(t: T, u: U): double
+                applyAsDouble(t: T, u: U): number /*double*/
             }
         }
     }

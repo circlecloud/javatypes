@@ -18,7 +18,7 @@ declare namespace org {
                          * @return The type token for this translator
                          */
                         // @ts-ignore
-                        getToken(): <any>
+                        getToken(): object
                         /**
                          * Attempts to translate the {@code T} object from the provided
                          * {@link DataView}.

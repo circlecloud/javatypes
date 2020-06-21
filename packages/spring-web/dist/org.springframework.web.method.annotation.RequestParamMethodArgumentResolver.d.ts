@@ -61,17 +61,17 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         // @ts-ignore
                         createNamedValueInfo(parameter: MethodParameter): org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.NamedValueInfo
                         // @ts-ignore
-                        resolveName(name: string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        resolveName(name: java.lang.String | string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): any
                         // @ts-ignore
-                        handleMissingValue(name: string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): void
+                        handleMissingValue(name: java.lang.String | string, parameter: MethodParameter, request: org.springframework.web.context.request.NativeWebRequest): void
                         // @ts-ignore
-                        contributeMethodArgument(parameter: MethodParameter, value: any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String, java.lang.Object>, conversionService: ConversionService): void
+                        public contributeMethodArgument(parameter: MethodParameter, value: java.lang.Object | any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String | string, java.lang.Object | any>, conversionService: ConversionService): void
                         // @ts-ignore
-                        formatUriValue(cs: ConversionService, sourceType: TypeDescriptor, value: any): java.lang.String
+                        formatUriValue(cs: ConversionService, sourceType: TypeDescriptor, value: java.lang.Object | any): string
                     }
                 }
             }

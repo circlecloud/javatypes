@@ -18,7 +18,7 @@ declare namespace org {
                      * @return The current score value
                      */
                     // @ts-ignore
-                    getScore(): int
+                    getScore(): number /*int*/
                     /**
                      * Sets the current score value.
                      * @param score The new score value
@@ -32,7 +32,7 @@ declare namespace org {
                      *          registered to
                      */
                     // @ts-ignore
-                    getObjectives(): java.util.Set<org.spongepowered.api.scoreboard.objective.Objective>
+                    getObjectives(): Array<org.spongepowered.api.scoreboard.objective.Objective>
                 }
             }
         }

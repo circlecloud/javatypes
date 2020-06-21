@@ -20,7 +20,7 @@ declare namespace org {
                          * @param registry the target registry
                          */
                         // @ts-ignore
-                        registerConverters(converters: Array<any>, registry: org.springframework.core.convert.converter.ConverterRegistry): void
+                        public static registerConverters(converters: java.util.Set<any> | Array<any>, registry: org.springframework.core.convert.converter.ConverterRegistry): void
                     }
                 }
             }

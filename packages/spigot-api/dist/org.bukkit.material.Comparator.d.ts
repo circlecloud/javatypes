@@ -49,53 +49,53 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
+                static readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly DEFAULT_SUBTRACTION_MODE: boolean
+                static readonly DEFAULT_SUBTRACTION_MODE: boolean
                 // @ts-ignore
-                readonly DEFAULT_STATE: boolean
+                static readonly DEFAULT_STATE: boolean
                 /**
                  * Sets whether the comparator is in subtraction mode.
                  * @param isSubtraction True if the comparator is in subtraction mode, false for normal comparator operation
                  */
                 // @ts-ignore
-                setSubtractionMode(isSubtraction: boolean): void
+                public setSubtractionMode(isSubtraction: boolean): void
                 /**
                  * Checks whether the comparator is in subtraction mode
                  * @return True if the comparator is in subtraction mode, false if normal comparator operation
                  */
                 // @ts-ignore
-                isSubtractionMode(): boolean
+                public isSubtractionMode(): boolean
                 /**
                  * Sets the direction this comparator is facing
                  * @param face The direction to set this comparator to
                  * @see BlockFace
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 /**
                  * Gets the direction this comparator is facing
                  * @return The direction this comparator is facing
                  * @see BlockFace
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Comparator
+                public clone(): org.bukkit.material.Comparator
                 /**
                  * Checks if the comparator is powered
                  * @return true if the comparator is powered
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 /**
                  * Checks if the comparator is being powered
                  * @return true if the comparator is being powered
                  */
                 // @ts-ignore
-                isBeingPowered(): boolean
+                public isBeingPowered(): boolean
             }
         }
     }

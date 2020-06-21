@@ -97,21 +97,21 @@ declare namespace org {
                          * will be created using its default constructor.
                          */
                         // @ts-ignore
-                        setObjectMapper(objectMapper: ObjectMapper): void
+                        public setObjectMapper(objectMapper: ObjectMapper): void
                         /**
                          * If set to true and no custom {@link ObjectMapper} has been set, a {@link XmlMapper}
                          * will be created using its default constructor.
                          * @since 4.1
                          */
                         // @ts-ignore
-                        setCreateXmlMapper(createXmlMapper: boolean): void
+                        public setCreateXmlMapper(createXmlMapper: boolean): void
                         /**
                          * Define the {@link JsonFactory} to be used to create the {@link ObjectMapper}
                          * instance.
                          * @since 5.0
                          */
                         // @ts-ignore
-                        setFactory(factory: JsonFactory): void
+                        public setFactory(factory: JsonFactory): void
                         /**
                          * Define the format for date/time with the given {@link DateFormat}.
                          * <p>Note: Setting this property makes the exposed {@link ObjectMapper}
@@ -119,7 +119,7 @@ declare namespace org {
                          * @see #setSimpleDateFormat(String)
                          */
                         // @ts-ignore
-                        setDateFormat(dateFormat: java.text.DateFormat): void
+                        public setDateFormat(dateFormat: java.text.DateFormat): void
                         /**
                          * Define the date/time format with a {@link SimpleDateFormat}.
                          * <p>Note: Setting this property makes the exposed {@link ObjectMapper}
@@ -127,52 +127,52 @@ declare namespace org {
                          * @see #setDateFormat(DateFormat)
                          */
                         // @ts-ignore
-                        setSimpleDateFormat(format: string): void
+                        public setSimpleDateFormat(format: java.lang.String | string): void
                         /**
                          * Override the default {@link Locale} to use for formatting.
                          * Default value used is {@link Locale#getDefault()}.
                          * @since 4.1.5
                          */
                         // @ts-ignore
-                        setLocale(locale: java.util.Locale): void
+                        public setLocale(locale: java.util.Locale): void
                         /**
                          * Override the default {@link TimeZone} to use for formatting.
                          * Default value used is UTC (NOT local timezone).
                          * @since 4.1.5
                          */
                         // @ts-ignore
-                        setTimeZone(timeZone: java.util.TimeZone): void
+                        public setTimeZone(timeZone: java.util.TimeZone): void
                         /**
                          * Set an {@link AnnotationIntrospector} for both serialization and deserialization.
                          */
                         // @ts-ignore
-                        setAnnotationIntrospector(annotationIntrospector: AnnotationIntrospector): void
+                        public setAnnotationIntrospector(annotationIntrospector: AnnotationIntrospector): void
                         /**
                          * Specify a {@link com.fasterxml.jackson.databind.PropertyNamingStrategy} to
                          * configure the {@link ObjectMapper} with.
                          * @since 4.0.2
                          */
                         // @ts-ignore
-                        setPropertyNamingStrategy(propertyNamingStrategy: PropertyNamingStrategy): void
+                        public setPropertyNamingStrategy(propertyNamingStrategy: PropertyNamingStrategy): void
                         /**
                          * Specify a {@link TypeResolverBuilder} to use for Jackson's default typing.
                          * @since 4.2.2
                          */
                         // @ts-ignore
-                        setDefaultTyping(typeResolverBuilder: object): void
+                        public setDefaultTyping(typeResolverBuilder: object): void
                         /**
                          * Set a custom inclusion strategy for serialization.
                          * @see com.fasterxml.jackson.annotation.JsonInclude.Include
                          */
                         // @ts-ignore
-                        setSerializationInclusion(serializationInclusion: JsonInclude.Include): void
+                        public setSerializationInclusion(serializationInclusion: JsonInclude.Include): void
                         /**
                          * Set the global filters to use in order to support {@link JsonFilter @JsonFilter} annotated POJO.
                          * @since 4.2
                          * @see Jackson2ObjectMapperBuilder#filters(FilterProvider)
                          */
                         // @ts-ignore
-                        setFilters(filters: FilterProvider): void
+                        public setFilters(filters: FilterProvider): void
                         /**
                          * Add mix-in annotations to use for augmenting specified class or interface.
                          * @param mixIns a Map of entries with target classes (or interface) whose annotations
@@ -182,20 +182,20 @@ declare namespace org {
                          * @see com.fasterxml.jackson.databind.ObjectMapper#addMixInAnnotations(Class, Class)
                          */
                         // @ts-ignore
-                        setMixIns(mixIns: java.util.Map<java.lang.Class<any>, java.lang.Class<?>>): void
+                        public setMixIns(mixIns: java.util.Map<java.lang.Class<any>, java.lang.Class<any>>): void
                         /**
                          * Configure custom serializers. Each serializer is registered for the type
                          * returned by {@link JsonSerializer#handledType()}, which must not be {@code null}.
                          * @see #setSerializersByType(Map)
                          */
                         // @ts-ignore
-                        setSerializers(...serializers: any[]): void
+                        public setSerializers(...serializers: object[]): void
                         /**
                          * Configure custom serializers for the given types.
                          * @see #setSerializers(JsonSerializer...)
                          */
                         // @ts-ignore
-                        setSerializersByType(serializers: java.util.Map<java.lang.Class<any>, <any>>): void
+                        public setSerializersByType(serializers: java.util.Map<java.lang.Class<any>, object>): void
                         /**
                          * Configure custom deserializers. Each deserializer is registered for the type
                          * returned by {@link JsonDeserializer#handledType()}, which must not be {@code null}.
@@ -203,53 +203,53 @@ declare namespace org {
                          * @see #setDeserializersByType(Map)
                          */
                         // @ts-ignore
-                        setDeserializers(...deserializers: any[]): void
+                        public setDeserializers(...deserializers: object[]): void
                         /**
                          * Configure custom deserializers for the given types.
                          */
                         // @ts-ignore
-                        setDeserializersByType(deserializers: java.util.Map<java.lang.Class<any>, <any>>): void
+                        public setDeserializersByType(deserializers: java.util.Map<java.lang.Class<any>, object>): void
                         /**
                          * Shortcut for {@link MapperFeature#AUTO_DETECT_FIELDS} option.
                          */
                         // @ts-ignore
-                        setAutoDetectFields(autoDetectFields: boolean): void
+                        public setAutoDetectFields(autoDetectFields: boolean): void
                         /**
                          * Shortcut for {@link MapperFeature#AUTO_DETECT_SETTERS}/
                          * {@link MapperFeature#AUTO_DETECT_GETTERS}/{@link MapperFeature#AUTO_DETECT_IS_GETTERS}
                          * options.
                          */
                         // @ts-ignore
-                        setAutoDetectGettersSetters(autoDetectGettersSetters: boolean): void
+                        public setAutoDetectGettersSetters(autoDetectGettersSetters: boolean): void
                         /**
                          * Shortcut for {@link MapperFeature#DEFAULT_VIEW_INCLUSION} option.
                          * @since 4.1
                          */
                         // @ts-ignore
-                        setDefaultViewInclusion(defaultViewInclusion: boolean): void
+                        public setDefaultViewInclusion(defaultViewInclusion: boolean): void
                         /**
                          * Shortcut for {@link DeserializationFeature#FAIL_ON_UNKNOWN_PROPERTIES} option.
                          * @since 4.1.1
                          */
                         // @ts-ignore
-                        setFailOnUnknownProperties(failOnUnknownProperties: boolean): void
+                        public setFailOnUnknownProperties(failOnUnknownProperties: boolean): void
                         /**
                          * Shortcut for {@link SerializationFeature#FAIL_ON_EMPTY_BEANS} option.
                          */
                         // @ts-ignore
-                        setFailOnEmptyBeans(failOnEmptyBeans: boolean): void
+                        public setFailOnEmptyBeans(failOnEmptyBeans: boolean): void
                         /**
                          * Shortcut for {@link SerializationFeature#INDENT_OUTPUT} option.
                          */
                         // @ts-ignore
-                        setIndentOutput(indentOutput: boolean): void
+                        public setIndentOutput(indentOutput: boolean): void
                         /**
                          * Define if a wrapper will be used for indexed (List, array) properties or not by
                          * default (only applies to {@link XmlMapper}).
                          * @since 4.3
                          */
                         // @ts-ignore
-                        setDefaultUseWrapper(defaultUseWrapper: boolean): void
+                        public setDefaultUseWrapper(defaultUseWrapper: boolean): void
                         /**
                          * Specify features to enable.
                          * @see com.fasterxml.jackson.core.JsonParser.Feature
@@ -259,7 +259,7 @@ declare namespace org {
                          * @see com.fasterxml.jackson.databind.MapperFeature
                          */
                         // @ts-ignore
-                        setFeaturesToEnable(...featuresToEnable: any[]): void
+                        public setFeaturesToEnable(...featuresToEnable: java.lang.Object[] | any[]): void
                         /**
                          * Specify features to disable.
                          * @see com.fasterxml.jackson.core.JsonParser.Feature
@@ -269,7 +269,7 @@ declare namespace org {
                          * @see com.fasterxml.jackson.databind.MapperFeature
                          */
                         // @ts-ignore
-                        setFeaturesToDisable(...featuresToDisable: any[]): void
+                        public setFeaturesToDisable(...featuresToDisable: java.lang.Object[] | any[]): void
                         /**
                          * Set a complete list of modules to be registered with the {@link ObjectMapper}.
                          * <p>Note: If this is set, no finding of modules is going to happen - not by
@@ -281,7 +281,7 @@ declare namespace org {
                          * @see com.fasterxml.jackson.databind.Module
                          */
                         // @ts-ignore
-                        setModules(modules: Array<Module>): void
+                        public setModules(modules: java.util.List<Module> | Array<Module>): void
                         /**
                          * Specify one or more modules by class (or class name in XML)
                          * to be registered with the {@link ObjectMapper}.
@@ -294,7 +294,7 @@ declare namespace org {
                          * @see com.fasterxml.jackson.databind.Module
                          */
                         // @ts-ignore
-                        setModulesToInstall(...modules: java.lang.Class[]): void
+                        public setModulesToInstall(...modules: java.lang.Class<any>[]): void
                         /**
                          * Set whether to let Jackson find available modules via the JDK ServiceLoader,
                          * based on META-INF metadata in the classpath. Requires Jackson 2.2 or higher.
@@ -305,9 +305,9 @@ declare namespace org {
                          * @see com.fasterxml.jackson.databind.ObjectMapper#findModules()
                          */
                         // @ts-ignore
-                        setFindModulesViaServiceLoader(findModules: boolean): void
+                        public setFindModulesViaServiceLoader(findModules: boolean): void
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         /**
                          * Customize the construction of Jackson handlers
                          * ({@link JsonSerializer}, {@link JsonDeserializer}, {@link KeyDeserializer},
@@ -316,7 +316,7 @@ declare namespace org {
                          * @see Jackson2ObjectMapperFactoryBean#setApplicationContext(ApplicationContext)
                          */
                         // @ts-ignore
-                        setHandlerInstantiator(handlerInstantiator: HandlerInstantiator): void
+                        public setHandlerInstantiator(handlerInstantiator: HandlerInstantiator): void
                         /**
                          * Set the builder {@link ApplicationContext} in order to autowire Jackson handlers
                          * ({@link JsonSerializer}, {@link JsonDeserializer}, {@link KeyDeserializer},
@@ -326,18 +326,18 @@ declare namespace org {
                          * @see SpringHandlerInstantiator
                          */
                         // @ts-ignore
-                        setApplicationContext(applicationContext: ApplicationContext): void
+                        public setApplicationContext(applicationContext: ApplicationContext): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Return the singleton ObjectMapper.
                          */
                         // @ts-ignore
-                        getObject(): ObjectMapper
+                        public getObject(): ObjectMapper
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

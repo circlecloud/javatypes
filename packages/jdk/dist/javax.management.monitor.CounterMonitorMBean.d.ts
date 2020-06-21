@@ -20,7 +20,7 @@ declare namespace javax {
                  * @deprecated As of JMX 1.2, replaced by {#link #getDerivedGaugeTimeStamp(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(): long
+                getDerivedGaugeTimeStamp(): number /*long*/
                 /**
                  * Gets the threshold value.
                  * @return The threshold value.
@@ -53,7 +53,7 @@ declare namespace javax {
                  *          is in the set of observed MBeans, or <code>null</code> otherwise.
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): long
+                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): number /*long*/
                 /**
                  * Gets the threshold value for the specified MBean.
                  * @param object the MBean for which the threshold value is to be returned

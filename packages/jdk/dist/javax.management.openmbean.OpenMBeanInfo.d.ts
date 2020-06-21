@@ -28,14 +28,14 @@ declare namespace javax {
                  * @return the class name.
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                getClassName(): string
                 /**
                  * Returns a human readable description of the type of open MBean
                  * instances this <tt>OpenMBeanInfo</tt> describes.
                  * @return the description.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                getDescription(): string
                 /**
                  * Returns an array of <tt>OpenMBeanAttributeInfo</tt> instances
                  * describing each attribute in the open MBean described by this
@@ -97,7 +97,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>OpenMBeanInfo</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>OpenMBeanInfo</code> instance.
                  * <p>
@@ -115,7 +115,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>OpenMBeanInfo</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>OpenMBeanInfo</code> instance.
                  * <p>
@@ -125,7 +125,7 @@ declare namespace javax {
                  * @return a string representation of this <code>OpenMBeanInfo</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

@@ -73,7 +73,7 @@ declare namespace javax {
                  *             <code>faultCode</code> to the underlying XML tree.
                  */
                 // @ts-ignore
-                setFaultCode(faultCode: string): void
+                setFaultCode(faultCode: java.lang.String | string): void
                 /**
                  * Gets the mandatory SOAP 1.1 fault code for this
                  * <code>SOAPFault</code> object as a SAAJ <code>Name</code> object.
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getFaultSubcodes(): java.util.Iterator
+                getFaultSubcodes(): java.util.Iterator<any>
                 /**
                  * Removes any Subcodes that may be contained by this
                  * <code>SOAPFault</code>. Subsequent calls to
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @see #setFaultCode
                  */
                 // @ts-ignore
-                getFaultCode(): java.lang.String
+                getFaultCode(): string
                 /**
                  * Sets this <code>SOAPFault</code> object with the given fault actor.
                  * <P>
@@ -159,7 +159,7 @@ declare namespace javax {
                  *             <code>faultActor</code> to the underlying XML tree.
                  */
                 // @ts-ignore
-                setFaultActor(faultActor: string): void
+                setFaultActor(faultActor: java.lang.String | string): void
                 /**
                  * Gets the fault actor for this <code>SOAPFault</code> object.
                  * <P>
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @see #setFaultActor
                  */
                 // @ts-ignore
-                getFaultActor(): java.lang.String
+                getFaultActor(): string
                 /**
                  * Sets the fault string for this <code>SOAPFault</code> object
                  * to the given string.
@@ -188,7 +188,7 @@ declare namespace javax {
                  *             <code>faultString</code> to the underlying XML tree.
                  */
                 // @ts-ignore
-                setFaultString(faultString: string): void
+                setFaultString(faultString: java.lang.String | string): void
                 /**
                  * Sets the fault string for this <code>SOAPFault</code> object
                  * to the given string and localized to the given locale.
@@ -209,7 +209,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                setFaultString(faultString: string, locale: java.util.Locale): void
+                setFaultString(faultString: java.lang.String | string, locale: java.util.Locale): void
                 /**
                  * Gets the fault string for this <code>SOAPFault</code> object.
                  * <P>
@@ -229,7 +229,7 @@ declare namespace javax {
                  * @see #setFaultString(String, Locale)
                  */
                 // @ts-ignore
-                getFaultString(): java.lang.String
+                getFaultString(): string
                 /**
                  * Gets the locale of the fault string for this <code>SOAPFault</code>
                  * object.
@@ -304,7 +304,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getFaultReasonLocales(): java.util.Iterator
+                getFaultReasonLocales(): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over a sequence of
                  * <code>String</code> objects containing all of the Reason Text items for
@@ -317,7 +317,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getFaultReasonTexts(): java.util.Iterator
+                getFaultReasonTexts(): java.util.Iterator<any>
                 /**
                  * Returns the Reason Text associated with the given <code>Locale</code>.
                  * If more than one such Reason Text exists the first matching Text is
@@ -333,7 +333,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getFaultReasonText(locale: java.util.Locale): java.lang.String
+                getFaultReasonText(locale: java.util.Locale): string
                 /**
                  * Appends or replaces a Reason Text item containing the specified
                  * text message and an <i>xml:lang</i> derived from
@@ -356,7 +356,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addFaultReasonText(text: string, locale: java.util.Locale): void
+                addFaultReasonText(text: java.lang.String | string, locale: java.util.Locale): void
                 /**
                  * Returns the optional Node element value for this
                  * <code>SOAPFault</code> object. The Node element is
@@ -368,7 +368,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getFaultNode(): java.lang.String
+                getFaultNode(): string
                 /**
                  * Creates or replaces any existing Node element value for
                  * this <code>SOAPFault</code> object. The Node element
@@ -380,7 +380,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                setFaultNode(uri: string): void
+                setFaultNode(uri: java.lang.String | string): void
                 /**
                  * Returns the optional Role element value for this
                  * <code>SOAPFault</code> object. The Role element is
@@ -392,7 +392,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getFaultRole(): java.lang.String
+                getFaultRole(): string
                 /**
                  * Creates or replaces any existing Role element value for
                  * this <code>SOAPFault</code> object. The Role element
@@ -405,7 +405,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                setFaultRole(uri: string): void
+                setFaultRole(uri: java.lang.String | string): void
             }
         }
     }

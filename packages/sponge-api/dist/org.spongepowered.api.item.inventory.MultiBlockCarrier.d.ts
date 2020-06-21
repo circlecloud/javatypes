@@ -14,7 +14,7 @@ declare namespace org {
                          * @return The Locations of the Blocks
                          */
                         // @ts-ignore
-                        getLocations(): java.util.List<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
+                        getLocations(): Array<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
                         /**
                          * Returns the Inventory at given location if owned by this Carrier.
                          * @param at The location

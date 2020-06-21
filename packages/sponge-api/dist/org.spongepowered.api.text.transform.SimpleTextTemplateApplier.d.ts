@@ -23,17 +23,17 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly params: java.util.Map<java.lang.String, org.spongepowered.api.text.TextElement>
+                        readonly params: java.util.Map<java.lang.String | string, org.spongepowered.api.text.TextElement>
                         // @ts-ignore
                         template: org.spongepowered.api.text.TextTemplate
                         // @ts-ignore
-                        getParameters(): <any>
+                        public getParameters(): object
                         // @ts-ignore
-                        setParameter(key: string, value: org.spongepowered.api.text.TextElement): void
+                        public setParameter(key: java.lang.String | string, value: org.spongepowered.api.text.TextElement): void
                         // @ts-ignore
-                        getTemplate(): org.spongepowered.api.text.TextTemplate
+                        public getTemplate(): org.spongepowered.api.text.TextTemplate
                         // @ts-ignore
-                        setTemplate(template: org.spongepowered.api.text.TextTemplate): void
+                        public setTemplate(template: org.spongepowered.api.text.TextTemplate): void
                     }
                 }
             }

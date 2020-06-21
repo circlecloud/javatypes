@@ -21,13 +21,13 @@ declare namespace java {
                  * @return the length of the input
                  */
                 // @ts-ignore
-                getInputLength(): int
+                getInputLength(): number /*int*/
                 /**
                  * Returns the message.
                  * @return the message
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

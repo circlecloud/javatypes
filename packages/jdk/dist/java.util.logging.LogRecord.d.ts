@@ -50,19 +50,19 @@ declare namespace java {
                  * @param msg  the raw non-localized logging message (may be null)
                  */
                 // @ts-ignore
-                constructor(level: java.util.logging.Level, msg: string)
+                constructor(level: java.util.logging.Level, msg: java.lang.String | string)
                 /**
                  * Get the source Logger's name.
                  * @return source logger name (may be null)
                  */
                 // @ts-ignore
-                getLoggerName(): java.lang.String
+                public getLoggerName(): string
                 /**
                  * Set the source Logger's name.
                  * @param name   the source logger name (may be null)
                  */
                 // @ts-ignore
-                setLoggerName(name: string): void
+                public setLoggerName(name: java.lang.String | string): void
                 /**
                  * Get the localization resource bundle
                  * <p>
@@ -73,13 +73,13 @@ declare namespace java {
                  * @return the localization resource bundle
                  */
                 // @ts-ignore
-                getResourceBundle(): java.util.ResourceBundle
+                public getResourceBundle(): java.util.ResourceBundle
                 /**
                  * Set the localization resource bundle.
                  * @param bundle  localization bundle (may be null)
                  */
                 // @ts-ignore
-                setResourceBundle(bundle: java.util.ResourceBundle): void
+                public setResourceBundle(bundle: java.util.ResourceBundle): void
                 /**
                  * Get the localization resource bundle name
                  * <p>
@@ -89,25 +89,25 @@ declare namespace java {
                  * @return the localization resource bundle name
                  */
                 // @ts-ignore
-                getResourceBundleName(): java.lang.String
+                public getResourceBundleName(): string
                 /**
                  * Set the localization resource bundle name.
                  * @param name  localization bundle name (may be null)
                  */
                 // @ts-ignore
-                setResourceBundleName(name: string): void
+                public setResourceBundleName(name: java.lang.String | string): void
                 /**
                  * Get the logging message level, for example Level.SEVERE.
                  * @return the logging message level
                  */
                 // @ts-ignore
-                getLevel(): java.util.logging.Level
+                public getLevel(): java.util.logging.Level
                 /**
                  * Set the logging message level, for example Level.SEVERE.
                  * @param level the logging message level
                  */
                 // @ts-ignore
-                setLevel(level: java.util.logging.Level): void
+                public setLevel(level: java.util.logging.Level): void
                 /**
                  * Get the sequence number.
                  * <p>
@@ -117,7 +117,7 @@ declare namespace java {
                  * @return the sequence number
                  */
                 // @ts-ignore
-                getSequenceNumber(): long
+                public getSequenceNumber(): number /*long*/
                 /**
                  * Set the sequence number.
                  * <p>
@@ -126,7 +126,7 @@ declare namespace java {
                  * @param seq the sequence number
                  */
                 // @ts-ignore
-                setSequenceNumber(seq: number /*long*/): void
+                public setSequenceNumber(seq: number /*long*/): void
                 /**
                  * Get the  name of the class that (allegedly) issued the logging request.
                  * <p>
@@ -141,13 +141,13 @@ declare namespace java {
                  * @return the source class name
                  */
                 // @ts-ignore
-                getSourceClassName(): java.lang.String
+                public getSourceClassName(): string
                 /**
                  * Set the name of the class that (allegedly) issued the logging request.
                  * @param sourceClassName the source class name (may be null)
                  */
                 // @ts-ignore
-                setSourceClassName(sourceClassName: string): void
+                public setSourceClassName(sourceClassName: java.lang.String | string): void
                 /**
                  * Get the  name of the method that (allegedly) issued the logging request.
                  * <p>
@@ -162,13 +162,13 @@ declare namespace java {
                  * @return the source method name
                  */
                 // @ts-ignore
-                getSourceMethodName(): java.lang.String
+                public getSourceMethodName(): string
                 /**
                  * Set the name of the method that (allegedly) issued the logging request.
                  * @param sourceMethodName the source method name (may be null)
                  */
                 // @ts-ignore
-                setSourceMethodName(sourceMethodName: string): void
+                public setSourceMethodName(sourceMethodName: java.lang.String | string): void
                 /**
                  * Get the "raw" log message, before localization or formatting.
                  * <p>
@@ -183,26 +183,26 @@ declare namespace java {
                  * @return the raw message string
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                public getMessage(): string
                 /**
                  * Set the "raw" log message, before localization or formatting.
                  * @param message the raw message string (may be null)
                  */
                 // @ts-ignore
-                setMessage(message: string): void
+                public setMessage(message: java.lang.String | string): void
                 /**
                  * Get the parameters to the log message.
                  * @return the log message parameters.  May be null if
                  *                   there are no parameters.
                  */
                 // @ts-ignore
-                getParameters(): java.lang.Object[]
+                public getParameters(): any[]
                 /**
                  * Set the parameters to the log message.
                  * @param parameters the log message parameters. (may be null)
                  */
                 // @ts-ignore
-                setParameters(parameters: any[]): void
+                public setParameters(parameters: java.lang.Object[] | any[]): void
                 /**
                  * Get an identifier for the thread where the message originated.
                  * <p>
@@ -211,25 +211,25 @@ declare namespace java {
                  * @return thread ID
                  */
                 // @ts-ignore
-                getThreadID(): int
+                public getThreadID(): number /*int*/
                 /**
                  * Set an identifier for the thread where the message originated.
                  * @param threadID  the thread ID
                  */
                 // @ts-ignore
-                setThreadID(threadID: number /*int*/): void
+                public setThreadID(threadID: number /*int*/): void
                 /**
                  * Get event time in milliseconds since 1970.
                  * @return event time in millis since 1970
                  */
                 // @ts-ignore
-                getMillis(): long
+                public getMillis(): number /*long*/
                 /**
                  * Set event time.
                  * @param millis event time in millis since 1970
                  */
                 // @ts-ignore
-                setMillis(millis: number /*long*/): void
+                public setMillis(millis: number /*long*/): void
                 /**
                  * Get any throwable associated with the log record.
                  * <p>
@@ -238,13 +238,13 @@ declare namespace java {
                  * @return a throwable
                  */
                 // @ts-ignore
-                getThrown(): java.lang.Throwable
+                public getThrown(): Error
                 /**
                  * Set a throwable associated with the log event.
                  * @param thrown  a throwable (may be null)
                  */
                 // @ts-ignore
-                setThrown(thrown: Error): void
+                public setThrown(thrown: java.lang.Throwable | Error): void
             }
         }
     }

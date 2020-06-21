@@ -27,7 +27,7 @@ declare namespace org {
                      * @param separator the separator to use for splitting a {#link String}
                      */
                     // @ts-ignore
-                    constructor(separator: string)
+                    constructor(separator: java.lang.String | string)
                     /**
                      * Create a new {@code StringArrayPropertyEditor} with the given separator.
                      * @param separator the separator to use for splitting a {#link String}
@@ -35,7 +35,7 @@ declare namespace org {
                      *  is to be transformed into {@code null}
                      */
                     // @ts-ignore
-                    constructor(separator: string, emptyArrayAsNull: boolean)
+                    constructor(separator: java.lang.String | string, emptyArrayAsNull: boolean)
                     /**
                      * Create a new {@code StringArrayPropertyEditor} with the given separator.
                      * @param separator the separator to use for splitting a {#link String}
@@ -45,7 +45,7 @@ declare namespace org {
                      *  are to be trimmed of whitespace (default is true)
                      */
                     // @ts-ignore
-                    constructor(separator: string, emptyArrayAsNull: boolean, trimValues: boolean)
+                    constructor(separator: java.lang.String | string, emptyArrayAsNull: boolean, trimValues: boolean)
                     /**
                      * Create a new {@code StringArrayPropertyEditor} with the given separator.
                      * @param separator the separator to use for splitting a {#link String}
@@ -56,7 +56,7 @@ declare namespace org {
                      *  is to be transformed into {@code null}
                      */
                     // @ts-ignore
-                    constructor(separator: string, charsToDelete: string, emptyArrayAsNull: boolean)
+                    constructor(separator: java.lang.String | string, charsToDelete: java.lang.String | string, emptyArrayAsNull: boolean)
                     /**
                      * Create a new {@code StringArrayPropertyEditor} with the given separator.
                      * @param separator the separator to use for splitting a {#link String}
@@ -69,16 +69,16 @@ declare namespace org {
                      *  are to be trimmed of whitespace (default is true)
                      */
                     // @ts-ignore
-                    constructor(separator: string, charsToDelete: string, emptyArrayAsNull: boolean, trimValues: boolean)
+                    constructor(separator: java.lang.String | string, charsToDelete: java.lang.String | string, emptyArrayAsNull: boolean, trimValues: boolean)
                     /**
                      * Default separator for splitting a String: a comma (",").
                      */
                     // @ts-ignore
-                    readonly DEFAULT_SEPARATOR: string
+                    public static readonly DEFAULT_SEPARATOR: java.lang.String | string
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

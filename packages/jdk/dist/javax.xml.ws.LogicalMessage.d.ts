@@ -48,7 +48,7 @@ declare namespace javax {
                  *      the WebServiceException is the original JAXBException.
                  */
                 // @ts-ignore
-                getPayload(context: javax.xml.bind.JAXBContext): java.lang.Object
+                getPayload(context: javax.xml.bind.JAXBContext): any
                 /**
                  * Sets the message payload
                  * @param payload message payload
@@ -61,7 +61,7 @@ declare namespace javax {
                  *      the WebServiceException is the original JAXBException.
                  */
                 // @ts-ignore
-                setPayload(payload: any, context: javax.xml.bind.JAXBContext): void
+                setPayload(payload: java.lang.Object | any, context: javax.xml.bind.JAXBContext): void
             }
         }
     }

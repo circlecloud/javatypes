@@ -43,19 +43,19 @@ declare namespace javax {
                  * appropriate (which is determined by the subclass).
                  */
                 // @ts-ignore
-                allocateArray(len: number /*int*/): java.lang.Object
+                allocateArray(len: number /*int*/): any
                 /**
                  * Get the length of the allocated array.
                  */
                 // @ts-ignore
-                getArrayLength(): int
+                getArrayLength(): number /*int*/
                 /**
                  * Returns the length of the content.
                  * @return the length &gt;= 1
                  * @see AbstractDocument.Content#length
                  */
                 // @ts-ignore
-                length(): int
+                public length(): number /*int*/
                 /**
                  * Inserts a string into the content.
                  * @param where the starting position &gt;= 0, &lt; length()
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @see AbstractDocument.Content#insertString
                  */
                 // @ts-ignore
-                insertString(where: number /*int*/, str: string): javax.swing.undo.UndoableEdit
+                public insertString(where: number /*int*/, str: java.lang.String | string): javax.swing.undo.UndoableEdit
                 /**
                  * Removes part of the content.
                  * @param where the starting position &gt;= 0, where + nitems &lt; length()
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @see AbstractDocument.Content#remove
                  */
                 // @ts-ignore
-                remove(where: number /*int*/, nitems: number /*int*/): javax.swing.undo.UndoableEdit
+                public remove(where: number /*int*/, nitems: number /*int*/): javax.swing.undo.UndoableEdit
                 /**
                  * Retrieves a portion of the content.
                  * @param where the starting position &gt;= 0
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @see AbstractDocument.Content#getString
                  */
                 // @ts-ignore
-                getString(where: number /*int*/, len: number /*int*/): java.lang.String
+                public getString(where: number /*int*/, len: number /*int*/): string
                 /**
                  * Retrieves a portion of the content.  If the desired content spans
                  * the gap, we copy the content.  If the desired content does not
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @see AbstractDocument.Content#getChars
                  */
                 // @ts-ignore
-                getChars(where: number /*int*/, len: number /*int*/, chars: javax.swing.text.Segment): void
+                public getChars(where: number /*int*/, len: number /*int*/, chars: javax.swing.text.Segment): void
                 /**
                  * Creates a position within the content that will
                  * track change as the content is mutated.
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @exception BadLocationException if the specified position is invalid
                  */
                 // @ts-ignore
-                createPosition(offset: number /*int*/): javax.swing.text.Position
+                public createPosition(offset: number /*int*/): javax.swing.text.Position
                 /**
                  * Make the gap bigger, moving any necessary data and updating
                  * the appropriate marks
@@ -160,7 +160,7 @@ declare namespace javax {
                  * @return the set of instances
                  */
                 // @ts-ignore
-                getPositionsInRange(v: java.util.Vector, offset: number /*int*/, length: number /*int*/): java.util.Vector
+                getPositionsInRange(v: java.util.Vector<any>, offset: number /*int*/, length: number /*int*/): java.util.Vector<any>
                 /**
                  * Resets the location for all the UndoPosRef instances
                  * in <code>positions</code>.
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @param positions the UndoPosRef instances to reset
                  */
                 // @ts-ignore
-                updateUndoPositions(positions: java.util.Vector, offset: number /*int*/, length: number /*int*/): void
+                updateUndoPositions(positions: java.util.Vector<any>, offset: number /*int*/, length: number /*int*/): void
             }
         }
     }

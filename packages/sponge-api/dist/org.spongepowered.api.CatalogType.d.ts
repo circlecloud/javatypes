@@ -25,7 +25,7 @@ declare namespace org {
                  * @return The unique identifier of this dummy type
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                getId(): string
                 /**
                  * Gets the human-readable name of this individual {@link CatalogType}. This
                  * name is not guaranteed to be unique. This value should not be used for
@@ -33,7 +33,7 @@ declare namespace org {
                  * @return The human-readable name of this dummy type
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
             }
         }
     }

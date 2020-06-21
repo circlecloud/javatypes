@@ -58,7 +58,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(out: java.io.OutputStream, autoFlush: boolean, encoding: string)
+            constructor(out: java.io.OutputStream, autoFlush: boolean, encoding: java.lang.String | string)
             /**
              * Creates a new print stream, without automatic line flushing, with the
              * specified file name.  This convenience constructor creates
@@ -83,7 +83,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(fileName: string)
+            constructor(fileName: java.lang.String | string)
             /**
              * Creates a new print stream, without automatic line flushing, with the
              * specified file name and charset.  This convenience constructor creates
@@ -112,7 +112,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(fileName: string, csn: string)
+            constructor(fileName: java.lang.String | string, csn: java.lang.String | string)
             /**
              * Creates a new print stream, without automatic line flushing, with the
              * specified file.  This convenience constructor creates the necessary
@@ -166,21 +166,21 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(file: java.io.File, csn: string)
+            constructor(file: java.io.File, csn: java.lang.String | string)
             /**
              * Flushes the stream.  This is done by writing any buffered output bytes to
              * the underlying output stream and then flushing that stream.
              * @see java.io.OutputStream#flush()
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Closes the stream.  This is done by flushing the stream and then closing
              * the underlying output stream.
              * @see java.io.OutputStream#close()
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Flushes the stream and checks its error state. The internal error state
              * is set to <code>true</code> when the underlying output stream throws an
@@ -199,7 +199,7 @@ declare namespace java {
              *          <code>setError</code> method has been invoked
              */
             // @ts-ignore
-            checkError(): boolean
+            public checkError(): boolean
             /**
              * Sets the error state of the stream to <code>true</code>.
              * <p> This method will cause subsequent invocations of {@link
@@ -231,7 +231,7 @@ declare namespace java {
              * @see #println(char)
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>len</code> bytes from the specified byte array starting at
              * offset <code>off</code> to this stream.  If automatic flushing is
@@ -245,7 +245,7 @@ declare namespace java {
              * @param len   Number of bytes to write
              */
             // @ts-ignore
-            write(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Prints a boolean value.  The string produced by <code>{@link
              * java.lang.String#valueOf(boolean)}</code> is translated into bytes
@@ -255,7 +255,7 @@ declare namespace java {
              * @param b   The <code>boolean</code> to be printed
              */
             // @ts-ignore
-            print(b: boolean): void
+            public print(b: boolean): void
             /**
              * Prints a character.  The character is translated into one or more bytes
              * according to the platform's default character encoding, and these bytes
@@ -264,7 +264,7 @@ declare namespace java {
              * @param c   The <code>char</code> to be printed
              */
             // @ts-ignore
-            print(c: string): void
+            public print(c: string): void
             /**
              * Prints an integer.  The string produced by <code>{@link
              * java.lang.String#valueOf(int)}</code> is translated into bytes
@@ -275,7 +275,7 @@ declare namespace java {
              * @see java.lang.Integer#toString(int)
              */
             // @ts-ignore
-            print(i: number /*int*/): void
+            public print(i: number /*int*/): void
             /**
              * Prints a long integer.  The string produced by <code>{@link
              * java.lang.String#valueOf(long)}</code> is translated into bytes
@@ -286,7 +286,7 @@ declare namespace java {
              * @see java.lang.Long#toString(long)
              */
             // @ts-ignore
-            print(l: number /*long*/): void
+            public print(l: number /*long*/): void
             /**
              * Prints a floating-point number.  The string produced by <code>{@link
              * java.lang.String#valueOf(float)}</code> is translated into bytes
@@ -297,7 +297,7 @@ declare namespace java {
              * @see java.lang.Float#toString(float)
              */
             // @ts-ignore
-            print(f: number /*float*/): void
+            public print(f: number /*float*/): void
             /**
              * Prints a double-precision floating-point number.  The string produced by
              * <code>{@link java.lang.String#valueOf(double)}</code> is translated into
@@ -308,7 +308,7 @@ declare namespace java {
              * @see java.lang.Double#toString(double)
              */
             // @ts-ignore
-            print(d: number /*double*/): void
+            public print(d: number /*double*/): void
             /**
              * Prints an array of characters.  The characters are converted into bytes
              * according to the platform's default character encoding, and these bytes
@@ -318,7 +318,7 @@ declare namespace java {
              * @throws NullPointerException  If <code>s</code> is <code>null</code>
              */
             // @ts-ignore
-            print(s: string[]): void
+            public print(s: string[]): void
             /**
              * Prints a string.  If the argument is <code>null</code> then the string
              * <code>"null"</code> is printed.  Otherwise, the string's characters are
@@ -328,7 +328,7 @@ declare namespace java {
              * @param s   The <code>String</code> to be printed
              */
             // @ts-ignore
-            print(s: string): void
+            public print(s: java.lang.String | string): void
             /**
              * Prints an object.  The string produced by the <code>{@link
              * java.lang.String#valueOf(Object)}</code> method is translated into bytes
@@ -339,7 +339,7 @@ declare namespace java {
              * @see java.lang.Object#toString()
              */
             // @ts-ignore
-            print(obj: any): void
+            public print(obj: java.lang.Object | any): void
             /**
              * Terminates the current line by writing the line separator string.  The
              * line separator string is defined by the system property
@@ -347,7 +347,7 @@ declare namespace java {
              * character (<code>'\n'</code>).
              */
             // @ts-ignore
-            println(): void
+            public println(): void
             /**
              * Prints a boolean and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(boolean)}</code> and then
@@ -355,7 +355,7 @@ declare namespace java {
              * @param x  The <code>boolean</code> to be printed
              */
             // @ts-ignore
-            println(x: boolean): void
+            public println(x: boolean): void
             /**
              * Prints a character and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(char)}</code> and then
@@ -363,7 +363,7 @@ declare namespace java {
              * @param x  The <code>char</code> to be printed.
              */
             // @ts-ignore
-            println(x: string): void
+            public println(x: string): void
             /**
              * Prints an integer and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(int)}</code> and then
@@ -371,7 +371,7 @@ declare namespace java {
              * @param x  The <code>int</code> to be printed.
              */
             // @ts-ignore
-            println(x: number /*int*/): void
+            public println(x: number /*int*/): void
             /**
              * Prints a long and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(long)}</code> and then
@@ -379,7 +379,7 @@ declare namespace java {
              * @param x  a The <code>long</code> to be printed.
              */
             // @ts-ignore
-            println(x: number /*long*/): void
+            public println(x: number /*long*/): void
             /**
              * Prints a float and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(float)}</code> and then
@@ -387,7 +387,7 @@ declare namespace java {
              * @param x  The <code>float</code> to be printed.
              */
             // @ts-ignore
-            println(x: number /*float*/): void
+            public println(x: number /*float*/): void
             /**
              * Prints a double and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(double)}</code> and then
@@ -395,7 +395,7 @@ declare namespace java {
              * @param x  The <code>double</code> to be printed.
              */
             // @ts-ignore
-            println(x: number /*double*/): void
+            public println(x: number /*double*/): void
             /**
              * Prints an array of characters and then terminate the line.  This method
              * behaves as though it invokes <code>{@link #print(char[])}</code> and
@@ -403,7 +403,7 @@ declare namespace java {
              * @param x  an array of chars to print.
              */
             // @ts-ignore
-            println(x: string[]): void
+            public println(x: string[]): void
             /**
              * Prints a String and then terminate the line.  This method behaves as
              * though it invokes <code>{@link #print(String)}</code> and then
@@ -411,7 +411,7 @@ declare namespace java {
              * @param x  The <code>String</code> to be printed.
              */
             // @ts-ignore
-            println(x: string): void
+            public println(x: java.lang.String | string): void
             /**
              * Prints an Object and then terminate the line.  This method calls
              * at first String.valueOf(x) to get the printed object's string value,
@@ -421,7 +421,7 @@ declare namespace java {
              * @param x  The <code>Object</code> to be printed.
              */
             // @ts-ignore
-            println(x: any): void
+            public println(x: java.lang.Object | any): void
             /**
              * A convenience method to write a formatted string to this output stream
              * using the specified format string and arguments.
@@ -456,7 +456,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            printf(format: string, ...args: any[]): java.io.PrintStream
+            public printf(format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.io.PrintStream
             /**
              * A convenience method to write a formatted string to this output stream
              * using the specified format string and arguments.
@@ -495,7 +495,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            printf(l: java.util.Locale, format: string, ...args: any[]): java.io.PrintStream
+            public printf(l: java.util.Locale, format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.io.PrintStream
             /**
              * Writes a formatted string to this output stream using the specified
              * format string and arguments.
@@ -529,7 +529,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            format(format: string, ...args: any[]): java.io.PrintStream
+            public format(format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.io.PrintStream
             /**
              * Writes a formatted string to this output stream using the specified
              * format string and arguments.
@@ -564,7 +564,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            format(l: java.util.Locale, format: string, ...args: any[]): java.io.PrintStream
+            public format(l: java.util.Locale, format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.io.PrintStream
             /**
              * Appends the specified character sequence to this output stream.
              * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
@@ -584,7 +584,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence): java.io.PrintStream
+            public append(csq: java.lang.CharSequence): java.io.PrintStream
             /**
              * Appends a subsequence of the specified character sequence to this output
              * stream.
@@ -611,7 +611,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.PrintStream
+            public append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.PrintStream
             /**
              * Appends the specified character to this output stream.
              * <p> An invocation of this method of the form <tt>out.append(c)</tt>
@@ -624,7 +624,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(c: string): java.io.PrintStream
+            public append(c: string): java.io.PrintStream
         }
     }
 }

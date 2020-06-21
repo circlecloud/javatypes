@@ -19,7 +19,7 @@ declare namespace org {
                      * @return The tree layout elements
                      */
                     // @ts-ignore
-                    getElements(): java.util.Collection<org.spongepowered.api.advancement.TreeLayoutElement>
+                    getElements(): Array<org.spongepowered.api.advancement.TreeLayoutElement>
                     /**
                      * Gets the {@link TreeLayoutElement} for the specified {@link Advancement},
                      * {@link Optional#empty()} will be returned if the advancement is not present

@@ -64,7 +64,7 @@ declare namespace javax {
                  * @see SSLSocket#setNeedClientAuth
                  */
                 // @ts-ignore
-                constructor(enabledCipherSuites: string[], enabledProtocols: string[], needClientAuth: boolean)
+                constructor(enabledCipherSuites: java.lang.String[] | string[], enabledProtocols: java.lang.String[] | string[], needClientAuth: boolean)
                 /**
                  * <p>Creates a new <code>SslRMIServerSocketFactory</code> with the
                  * specified <code>SSLContext</code> and SSL socket configuration.</p>
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                constructor(context: javax.net.ssl.SSLContext, enabledCipherSuites: string[], enabledProtocols: string[], needClientAuth: boolean)
+                constructor(context: javax.net.ssl.SSLContext, enabledCipherSuites: java.lang.String[] | string[], enabledProtocols: java.lang.String[] | string[], needClientAuth: boolean)
                 /**
                  * <p>Returns the names of the cipher suites enabled on SSL
                  * connections accepted by server sockets created by this factory,
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @see SSLSocket#setEnabledCipherSuites
                  */
                 // @ts-ignore
-                getEnabledCipherSuites(): java.lang.String[]
+                public getEnabledCipherSuites(): string[]
                 /**
                  * <p>Returns the names of the protocol versions enabled on SSL
                  * connections accepted by server sockets created by this factory,
@@ -119,7 +119,7 @@ declare namespace javax {
                  * @see SSLSocket#setEnabledProtocols
                  */
                 // @ts-ignore
-                getEnabledProtocols(): java.lang.String[]
+                public getEnabledProtocols(): string[]
                 /**
                  * <p>Returns <code>true</code> if client authentication is
                  * required on SSL connections accepted by server sockets created
@@ -128,14 +128,14 @@ declare namespace javax {
                  * @see SSLSocket#setNeedClientAuth
                  */
                 // @ts-ignore
-                getNeedClientAuth(): boolean
+                public getNeedClientAuth(): boolean
                 /**
                  * <p>Creates a server socket that accepts SSL connections
                  * configured according to this factory's SSL socket configuration
                  * parameters.</p>
                  */
                 // @ts-ignore
-                createServerSocket(port: number /*int*/): java.net.ServerSocket
+                public createServerSocket(port: number /*int*/): java.net.ServerSocket
                 /**
                  * <p>Indicates whether some other object is "equal to" this one.</p>
                  * <p>Two <code>SslRMIServerSocketFactory</code> objects are equal
@@ -146,7 +146,7 @@ declare namespace javax {
                  * equality.</p>
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns a hash code value for this
                  * <code>SslRMIServerSocketFactory</code>.</p>
@@ -154,7 +154,7 @@ declare namespace javax {
                  *  <code>SslRMIServerSocketFactory</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

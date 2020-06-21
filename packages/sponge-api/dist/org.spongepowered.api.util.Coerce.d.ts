@@ -13,14 +13,14 @@ declare namespace org {
                      * @return Object as a string, empty string if the object is null
                      */
                     // @ts-ignore
-                    toString(obj: any): java.lang.String
+                    public static toString(obj: java.lang.Object | any): string
                     /**
                      * Gets the given object as a {@link String}.
                      * @param obj The object to translate
                      * @return The string value, if available
                      */
                     // @ts-ignore
-                    asString(obj: any): java.util.Optional<java.lang.String>
+                    public static asString(obj: java.lang.Object | any): java.util.Optional<java.lang.String | string>
                     /**
                      * Coerce the supplied object to a list. Accepts lists and all types of 1D
                      * arrays. Also (naively) supports lists in Strings in a format like
@@ -29,14 +29,14 @@ declare namespace org {
                      * @return Some kind of List filled with unimaginable horrors
                      */
                     // @ts-ignore
-                    toList(obj: any): java.util.List<?>
+                    public static toList(obj: java.lang.Object | any): Array<any>
                     /**
                      * Gets the given object as a {@link List}.
                      * @param obj The object to translate
                      * @return The list, if available
                      */
                     // @ts-ignore
-                    asList(obj: any): java.util.Optional<java.util.List<?>>
+                    public static asList(obj: java.lang.Object | any): java.util.Optional<java.util.List<any> | Array<any>>
                     /**
                      * Coerce the specified object to a list containing only objects of type
                      * specified by <code>ofClass</code>. Also coerces list values where
@@ -47,7 +47,7 @@ declare namespace org {
                      * @return List of coerced values
                      */
                     // @ts-ignore
-                    toListOf<T>(obj: any, ofClass: java.lang.Class<T>): java.util.List<T>
+                    public static toListOf<T>(obj: java.lang.Object | any, ofClass: java.lang.Class<T>): Array<T>
                     /**
                      * Coerce the supplied object to a boolean, matches strings such as "yes" as
                      * well as literal boolean values.
@@ -55,14 +55,14 @@ declare namespace org {
                      * @return Object as a boolean, <code>false</code> if the object is null
                      */
                     // @ts-ignore
-                    toBoolean(obj: any): boolean
+                    public static toBoolean(obj: java.lang.Object | any): boolean
                     /**
                      * Gets the given object as a {@link Boolean}.
                      * @param obj The object to translate
                      * @return The boolean, if available
                      */
                     // @ts-ignore
-                    asBoolean(obj: any): java.util.Optional<java.lang.Boolean>
+                    public static asBoolean(obj: java.lang.Object | any): java.util.Optional<java.lang.Boolean>
                     /**
                      * Coerce the supplied object to an integer, parse it if necessary.
                      * @param obj Object to coerce
@@ -70,7 +70,7 @@ declare namespace org {
                      *          cannot be parsed
                      */
                     // @ts-ignore
-                    toInteger(obj: any): int
+                    public static toInteger(obj: java.lang.Object | any): number /*int*/
                     /**
                      * Gets the given object as a {@link Integer}.
                      * <p>Note that this does not translate numbers spelled out as strings.</p>
@@ -78,7 +78,7 @@ declare namespace org {
                      * @return The integer value, if available
                      */
                     // @ts-ignore
-                    asInteger(obj: any): java.util.Optional<java.lang.Integer>
+                    public static asInteger(obj: java.lang.Object | any): java.util.Optional<java.lang.Integer | number>
                     /**
                      * Coerce the supplied object to a double-precision floating-point number,
                      * parse it if necessary.
@@ -87,7 +87,7 @@ declare namespace org {
                      *          cannot be parsed
                      */
                     // @ts-ignore
-                    toDouble(obj: any): double
+                    public static toDouble(obj: java.lang.Object | any): number /*double*/
                     /**
                      * Gets the given object as a {@link Double}.
                      * <p>Note that this does not translate numbers spelled out as strings.</p>
@@ -95,7 +95,7 @@ declare namespace org {
                      * @return The double value, if available
                      */
                     // @ts-ignore
-                    asDouble(obj: any): java.util.Optional<java.lang.Double>
+                    public static asDouble(obj: java.lang.Object | any): java.util.Optional<java.lang.Double | number>
                     /**
                      * Coerce the supplied object to a single-precision floating-point number,
                      * parse it if necessary.
@@ -104,7 +104,7 @@ declare namespace org {
                      *          cannot be parsed
                      */
                     // @ts-ignore
-                    toFloat(obj: any): float
+                    public static toFloat(obj: java.lang.Object | any): number /*float*/
                     /**
                      * Gets the given object as a {@link Float}.
                      * <p>Note that this does not translate numbers spelled out as strings.</p>
@@ -112,7 +112,7 @@ declare namespace org {
                      * @return The float value, if available
                      */
                     // @ts-ignore
-                    asFloat(obj: any): java.util.Optional<java.lang.Float>
+                    public static asFloat(obj: java.lang.Object | any): java.util.Optional<java.lang.Float | number>
                     /**
                      * Coerce the supplied object to a short number, parse it if necessary.
                      * @param obj Object to coerce
@@ -120,7 +120,7 @@ declare namespace org {
                      *          be parsed
                      */
                     // @ts-ignore
-                    toShort(obj: any): short
+                    public static toShort(obj: java.lang.Object | any): number /*short*/
                     /**
                      * Gets the given object as a {@link Short}.
                      * <p>Note that this does not translate numbers spelled out as strings.</p>
@@ -128,7 +128,7 @@ declare namespace org {
                      * @return The short value, if available
                      */
                     // @ts-ignore
-                    asShort(obj: any): java.util.Optional<java.lang.Short>
+                    public static asShort(obj: java.lang.Object | any): java.util.Optional<java.lang.Short | number>
                     /**
                      * Coerce the supplied object to a byte number, parse it if necessary.
                      * @param obj Object to coerce
@@ -136,7 +136,7 @@ declare namespace org {
                      *          be parsed
                      */
                     // @ts-ignore
-                    toByte(obj: any): byte
+                    public static toByte(obj: java.lang.Object | any): number /*byte*/
                     /**
                      * Gets the given object as a {@link Byte}.
                      * <p>Note that this does not translate numbers spelled out as strings.</p>
@@ -144,7 +144,7 @@ declare namespace org {
                      * @return The byte value, if available
                      */
                     // @ts-ignore
-                    asByte(obj: any): java.util.Optional<java.lang.Byte>
+                    public static asByte(obj: java.lang.Object | any): java.util.Optional<java.lang.Byte | number>
                     /**
                      * Coerce the supplied object to a long number, parse it if necessary.
                      * @param obj Object to coerce
@@ -152,7 +152,7 @@ declare namespace org {
                      *          be parsed
                      */
                     // @ts-ignore
-                    toLong(obj: any): long
+                    public static toLong(obj: java.lang.Object | any): number /*long*/
                     /**
                      * Gets the given object as a {@link Long}.
                      * <p>Note that this does not translate numbers spelled out as strings.</p>
@@ -160,7 +160,7 @@ declare namespace org {
                      * @return The long value, if available
                      */
                     // @ts-ignore
-                    asLong(obj: any): java.util.Optional<java.lang.Long>
+                    public static asLong(obj: java.lang.Object | any): java.util.Optional<java.lang.Long | number>
                     /**
                      * Coerce the supplied object to a character, parse it if necessary.
                      * @param obj Object to coerce
@@ -168,14 +168,14 @@ declare namespace org {
                      *          null or cannot be parsed
                      */
                     // @ts-ignore
-                    toChar(obj: any): char
+                    public static toChar(obj: java.lang.Object | any): string
                     /**
                      * Gets the given object as a {@link Character}.
                      * @param obj The object to translate
                      * @return The character, if available
                      */
                     // @ts-ignore
-                    asChar(obj: any): java.util.Optional<java.lang.Character>
+                    public static asChar(obj: java.lang.Object | any): java.util.Optional<java.lang.Character>
                     /**
                      * Coerce the specified object to an enum of the supplied type, returns the
                      * first enum constant in the enum if parsing fails.
@@ -185,7 +185,7 @@ declare namespace org {
                      * @return Coerced enum value
                      */
                     // @ts-ignore
-                    toEnum<E extends java.lang.Enum<E>>(obj: any, enumClass: java.lang.Class<E>): E
+                    public static toEnum<E extends java.lang.Enum<E>>(obj: java.lang.Object | any, enumClass: java.lang.Class<E>): E
                     /**
                      * Coerce the specified object to an enum of the supplied type, returns the
                      * specified default value if parsing fails.
@@ -196,7 +196,7 @@ declare namespace org {
                      * @return Coerced enum value
                      */
                     // @ts-ignore
-                    toEnum<E extends java.lang.Enum<E>>(obj: any, enumClass: java.lang.Class<E>, defaultValue: E extends java.lang.Enum<E>): E
+                    public static toEnum<E extends java.lang.Enum<E>>(obj: java.lang.Object | any, enumClass: java.lang.Class<E>, defaultValue: E): E
                     /**
                      * Coerce the specified object to the specified pseudo-enum type using the
                      * supplied pseudo-enum dictionary class.
@@ -208,14 +208,14 @@ declare namespace org {
                      * @return Coerced value or default if coercion fails
                      */
                     // @ts-ignore
-                    toPseudoEnum<T>(obj: any, pseudoEnumClass: java.lang.Class<T>, dictionaryClass: java.lang.Class<any>, defaultValue: T): T
+                    public static toPseudoEnum<T>(obj: java.lang.Object | any, pseudoEnumClass: java.lang.Class<T>, dictionaryClass: java.lang.Class<any>, defaultValue: T): T
                     /**
                      * Coerce the supplied object to a Vector2i.
                      * @param obj Object to coerce
                      * @return Vector2i, returns Vector2i.ZERO if coercion failed
                      */
                     // @ts-ignore
-                    toVector2i(obj: any): Vector2i
+                    public static toVector2i(obj: java.lang.Object | any): Vector2i
                 }
             }
         }

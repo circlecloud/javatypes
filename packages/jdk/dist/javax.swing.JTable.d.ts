@@ -225,7 +225,7 @@ declare namespace javax {
              * @param columnNames       names of each column
              */
             // @ts-ignore
-            constructor(rowData: java.util.Vector, columnNames: java.util.Vector)
+            constructor(rowData: java.util.Vector<any>, columnNames: java.util.Vector<any>)
             /**
              * Constructs a <code>JTable</code> to display the values in the two dimensional array,
              * <code>rowData</code>, with column names, <code>columnNames</code>.
@@ -239,33 +239,33 @@ declare namespace javax {
              * @param columnNames       names of each column
              */
             // @ts-ignore
-            constructor(rowData: any[][], columnNames: any[])
+            constructor(rowData: java.lang.Object[][] | any[][], columnNames: java.lang.Object[] | any[])
             /**
              * Do not adjust column widths automatically; use a horizontal scrollbar instead.
              */
             // @ts-ignore
-            readonly AUTO_RESIZE_OFF: number /*int*/
+            public static readonly AUTO_RESIZE_OFF: number /*int*/
             /**
              * When a column is adjusted in the UI, adjust the next column the opposite way.
              */
             // @ts-ignore
-            readonly AUTO_RESIZE_NEXT_COLUMN: number /*int*/
+            public static readonly AUTO_RESIZE_NEXT_COLUMN: number /*int*/
             /**
              * During UI adjustment, change subsequent columns to preserve the total width;
              * this is the default behavior.
              */
             // @ts-ignore
-            readonly AUTO_RESIZE_SUBSEQUENT_COLUMNS: number /*int*/
+            public static readonly AUTO_RESIZE_SUBSEQUENT_COLUMNS: number /*int*/
             /**
              * During all resize operations, apply adjustments to the last column only.
              */
             // @ts-ignore
-            readonly AUTO_RESIZE_LAST_COLUMN: number /*int*/
+            public static readonly AUTO_RESIZE_LAST_COLUMN: number /*int*/
             /**
              * During all resize operations, proportionately resize all columns.
              */
             // @ts-ignore
-            readonly AUTO_RESIZE_ALL_COLUMNS: number /*int*/
+            public static readonly AUTO_RESIZE_ALL_COLUMNS: number /*int*/
             /**
              * The <code>TableModel</code> of the table.
              */
@@ -371,14 +371,14 @@ declare namespace javax {
              * in the <code>TableModel</code> interface.
              */
             // @ts-ignore
-            defaultRenderersByColumnClass: java.util.Hashtable
+            defaultRenderersByColumnClass: java.util.Hashtable<any>
             /**
              * A table of objects that display and edit the contents of a cell,
              * indexed by class as declared in <code>getColumnClass</code>
              * in the <code>TableModel</code> interface.
              */
             // @ts-ignore
-            defaultEditorsByColumnClass: java.util.Hashtable
+            defaultEditorsByColumnClass: java.util.Hashtable<any>
             /**
              * The foreground color of selected cells.
              */
@@ -394,7 +394,7 @@ declare namespace javax {
              * @see #configureEnclosingScrollPane
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * If this <code>JTable</code> is the <code>viewportView</code> of an enclosing <code>JScrollPane</code>
              * (the usual situation), configure this <code>ScrollPane</code> by, amongst other things,
@@ -414,7 +414,7 @@ declare namespace javax {
              * @see #unconfigureEnclosingScrollPane
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Reverses the effect of <code>configureEnclosingScrollPane</code>
              * by replacing the <code>columnHeaderView</code> of the enclosing
@@ -434,7 +434,7 @@ declare namespace javax {
              *  replaced by <code>new JScrollPane(aTable)</code>.
              */
             // @ts-ignore
-            createScrollPaneForTable(aTable: javax.swing.JTable): javax.swing.JScrollPane
+            public static createScrollPaneForTable(aTable: javax.swing.JTable): javax.swing.JScrollPane
             /**
              * Sets the <code>tableHeader</code> working with this <code>JTable</code> to <code>newHeader</code>.
              * It is legal to have a <code>null</code> <code>tableHeader</code>.
@@ -444,14 +444,14 @@ declare namespace javax {
              *   description: The JTableHeader instance which renders the column headers.
              */
             // @ts-ignore
-            setTableHeader(tableHeader: javax.swing.table.JTableHeader): void
+            public setTableHeader(tableHeader: javax.swing.table.JTableHeader): void
             /**
              * Returns the <code>tableHeader</code> used by this <code>JTable</code>.
              * @return the <code>tableHeader</code> used by this table
              * @see #setTableHeader
              */
             // @ts-ignore
-            getTableHeader(): javax.swing.table.JTableHeader
+            public getTableHeader(): javax.swing.table.JTableHeader
             /**
              * Sets the height, in pixels, of all cells to <code>rowHeight</code>,
              * revalidates, and repaints.
@@ -465,14 +465,14 @@ declare namespace javax {
              *   description: The height of the specified row.
              */
             // @ts-ignore
-            setRowHeight(rowHeight: number /*int*/): void
+            public setRowHeight(rowHeight: number /*int*/): void
             /**
              * Returns the height of a table row, in pixels.
              * @return the height in pixels of a table row
              * @see #setRowHeight
              */
             // @ts-ignore
-            getRowHeight(): int
+            public getRowHeight(): number /*int*/
             /**
              * Sets the height for <code>row</code> to <code>rowHeight</code>,
              * revalidates, and repaints. The height of the cells in this row
@@ -487,7 +487,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setRowHeight(row: number /*int*/, rowHeight: number /*int*/): void
+            public setRowHeight(row: number /*int*/, rowHeight: number /*int*/): void
             /**
              * Returns the height, in pixels, of the cells in <code>row</code>.
              * @param row              the row whose height is to be returned
@@ -495,7 +495,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getRowHeight(row: number /*int*/): int
+            public getRowHeight(row: number /*int*/): number /*int*/
             /**
              * Sets the amount of empty space between cells in adjacent rows.
              * @param rowMargin  the number of pixels between cells in a row
@@ -504,7 +504,7 @@ declare namespace javax {
              *   description: The amount of space between cells.
              */
             // @ts-ignore
-            setRowMargin(rowMargin: number /*int*/): void
+            public setRowMargin(rowMargin: number /*int*/): void
             /**
              * Gets the amount of empty space, in pixels, between cells. Equivalent to:
              * <code>getIntercellSpacing().height</code>.
@@ -512,7 +512,7 @@ declare namespace javax {
              * @see #setRowMargin
              */
             // @ts-ignore
-            getRowMargin(): int
+            public getRowMargin(): number /*int*/
             /**
              * Sets the <code>rowMargin</code> and the <code>columnMargin</code> --
              * the height and width of the space between cells -- to
@@ -525,7 +525,7 @@ declare namespace javax {
              *                drawn in the background color of the JTable.
              */
             // @ts-ignore
-            setIntercellSpacing(intercellSpacing: java.awt.Dimension): void
+            public setIntercellSpacing(intercellSpacing: java.awt.Dimension): void
             /**
              * Returns the horizontal and vertical space between cells.
              * The default spacing is look and feel dependent.
@@ -533,7 +533,7 @@ declare namespace javax {
              * @see #setIntercellSpacing
              */
             // @ts-ignore
-            getIntercellSpacing(): java.awt.Dimension
+            public getIntercellSpacing(): java.awt.Dimension
             /**
              * Sets the color used to draw grid lines to <code>gridColor</code> and redisplays.
              * The default color is look and feel dependent.
@@ -544,7 +544,7 @@ declare namespace javax {
              *   description: The grid color.
              */
             // @ts-ignore
-            setGridColor(gridColor: java.awt.Color): void
+            public setGridColor(gridColor: java.awt.Color): void
             /**
              * Returns the color used to draw grid lines.
              * The default color is look and feel dependent.
@@ -552,7 +552,7 @@ declare namespace javax {
              * @see #setGridColor
              */
             // @ts-ignore
-            getGridColor(): java.awt.Color
+            public getGridColor(): java.awt.Color
             /**
              * Sets whether the table draws grid lines around cells.
              * If <code>showGrid</code> is true it does; if it is false it doesn't.
@@ -565,7 +565,7 @@ declare namespace javax {
              * @beaninfo description: The color used to draw the grid lines.
              */
             // @ts-ignore
-            setShowGrid(showGrid: boolean): void
+            public setShowGrid(showGrid: boolean): void
             /**
              * Sets whether the table draws horizontal lines between cells.
              * If <code>showHorizontalLines</code> is true it does; if it is false it doesn't.
@@ -577,7 +577,7 @@ declare namespace javax {
              *   description: Whether horizontal lines should be drawn in between the cells.
              */
             // @ts-ignore
-            setShowHorizontalLines(showHorizontalLines: boolean): void
+            public setShowHorizontalLines(showHorizontalLines: boolean): void
             /**
              * Sets whether the table draws vertical lines between cells.
              * If <code>showVerticalLines</code> is true it does; if it is false it doesn't.
@@ -589,7 +589,7 @@ declare namespace javax {
              *   description: Whether vertical lines should be drawn in between the cells.
              */
             // @ts-ignore
-            setShowVerticalLines(showVerticalLines: boolean): void
+            public setShowVerticalLines(showVerticalLines: boolean): void
             /**
              * Returns true if the table draws horizontal lines between cells, false if it
              * doesn't. The default value is look and feel dependent.
@@ -598,7 +598,7 @@ declare namespace javax {
              * @see #setShowHorizontalLines
              */
             // @ts-ignore
-            getShowHorizontalLines(): boolean
+            public getShowHorizontalLines(): boolean
             /**
              * Returns true if the table draws vertical lines between cells, false if it
              * doesn't. The default value is look and feel dependent.
@@ -607,7 +607,7 @@ declare namespace javax {
              * @see #setShowVerticalLines
              */
             // @ts-ignore
-            getShowVerticalLines(): boolean
+            public getShowVerticalLines(): boolean
             /**
              * Sets the table's auto resize mode when the table is resized.  For further
              * information on how the different resize modes work, see
@@ -629,7 +629,7 @@ declare namespace javax {
              *               AUTO_RESIZE_ALL_COLUMNS        JTable.AUTO_RESIZE_ALL_COLUMNS
              */
             // @ts-ignore
-            setAutoResizeMode(mode: number /*int*/): void
+            public setAutoResizeMode(mode: number /*int*/): void
             /**
              * Returns the auto resize mode of the table.  The default mode
              * is AUTO_RESIZE_SUBSEQUENT_COLUMNS.
@@ -638,7 +638,7 @@ declare namespace javax {
              * @see #doLayout
              */
             // @ts-ignore
-            getAutoResizeMode(): int
+            public getAutoResizeMode(): number /*int*/
             /**
              * Sets this table's <code>autoCreateColumnsFromModel</code> flag.
              * This method calls <code>createDefaultColumnsFromModel</code> if
@@ -650,7 +650,7 @@ declare namespace javax {
              *   description: Automatically populates the columnModel when a new TableModel is submitted.
              */
             // @ts-ignore
-            setAutoCreateColumnsFromModel(autoCreateColumnsFromModel: boolean): void
+            public setAutoCreateColumnsFromModel(autoCreateColumnsFromModel: boolean): void
             /**
              * Determines whether the table will create default columns from the model.
              * If true, <code>setModel</code> will clear any existing columns and
@@ -663,7 +663,7 @@ declare namespace javax {
              * @see #createDefaultColumnsFromModel
              */
             // @ts-ignore
-            getAutoCreateColumnsFromModel(): boolean
+            public getAutoCreateColumnsFromModel(): boolean
             /**
              * Creates default columns for the table from
              * the data model using the <code>getColumnCount</code> method
@@ -674,7 +674,7 @@ declare namespace javax {
              * @see #getAutoCreateColumnsFromModel
              */
             // @ts-ignore
-            createDefaultColumnsFromModel(): void
+            public createDefaultColumnsFromModel(): void
             /**
              * Sets a default cell renderer to be used if no renderer has been set in
              * a <code>TableColumn</code>. If renderer is <code>null</code>,
@@ -686,7 +686,7 @@ declare namespace javax {
              * @see #setDefaultEditor
              */
             // @ts-ignore
-            setDefaultRenderer(columnClass: java.lang.Class<any>, renderer: javax.swing.table.TableCellRenderer): void
+            public setDefaultRenderer(columnClass: java.lang.Class<any>, renderer: javax.swing.table.TableCellRenderer): void
             /**
              * Returns the cell renderer to be used when no renderer has been set in
              * a <code>TableColumn</code>. During the rendering of cells the renderer is fetched from
@@ -702,7 +702,7 @@ declare namespace javax {
              * @see #getColumnClass
              */
             // @ts-ignore
-            getDefaultRenderer(columnClass: java.lang.Class<any>): javax.swing.table.TableCellRenderer
+            public getDefaultRenderer(columnClass: java.lang.Class<any>): javax.swing.table.TableCellRenderer
             /**
              * Sets a default cell editor to be used if no editor has been set in
              * a <code>TableColumn</code>. If no editing is required in a table, or a
@@ -718,7 +718,7 @@ declare namespace javax {
              * @see #setDefaultRenderer
              */
             // @ts-ignore
-            setDefaultEditor(columnClass: java.lang.Class<any>, editor: javax.swing.table.TableCellEditor): void
+            public setDefaultEditor(columnClass: java.lang.Class<any>, editor: javax.swing.table.TableCellEditor): void
             /**
              * Returns the editor to be used when no editor has been set in
              * a <code>TableColumn</code>. During the editing of cells the editor is fetched from
@@ -733,7 +733,7 @@ declare namespace javax {
              * @see #getColumnClass
              */
             // @ts-ignore
-            getDefaultEditor(columnClass: java.lang.Class<any>): javax.swing.table.TableCellEditor
+            public getDefaultEditor(columnClass: java.lang.Class<any>): javax.swing.table.TableCellEditor
             /**
              * Turns on or off automatic drag handling. In order to enable automatic
              * drag handling, this property should be set to {@code true}, and the
@@ -766,7 +766,7 @@ declare namespace javax {
              *         bound: false
              */
             // @ts-ignore
-            setDragEnabled(b: boolean): void
+            public setDragEnabled(b: boolean): void
             /**
              * Returns whether or not automatic drag handling is enabled.
              * @return the value of the {#code dragEnabled} property
@@ -774,7 +774,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDragEnabled(): boolean
+            public getDragEnabled(): boolean
             /**
              * Sets the drop mode for this component. For backward compatibility,
              * the default for this property is <code>DropMode.USE_SELECTION</code>.
@@ -807,7 +807,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setDropMode(dropMode: javax.swing.DropMode): void
+            public setDropMode(dropMode: javax.swing.DropMode): void
             /**
              * Returns the drop mode for this component.
              * @return the drop mode for this component
@@ -815,7 +815,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDropMode(): javax.swing.DropMode
+            public getDropMode(): javax.swing.DropMode
             /**
              * Returns the location that this component should visually indicate
              * as the drop location during a DnD operation over the component,
@@ -834,7 +834,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDropLocation(): javax.swing.JTable.DropLocation
+            public getDropLocation(): javax.swing.JTable.DropLocation
             /**
              * Specifies whether a {@code RowSorter} should be created for the
              * table whenever its model changes.
@@ -855,7 +855,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setAutoCreateRowSorter(autoCreateRowSorter: boolean): void
+            public setAutoCreateRowSorter(autoCreateRowSorter: boolean): void
             /**
              * Returns {@code true} if whenever the model changes, a new
              * {@code RowSorter} should be created and installed
@@ -865,7 +865,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getAutoCreateRowSorter(): boolean
+            public getAutoCreateRowSorter(): boolean
             /**
              * Specifies whether the selection should be updated after sorting.
              * If true, on sorting the selection is reset such that
@@ -878,14 +878,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setUpdateSelectionOnSort(update: boolean): void
+            public setUpdateSelectionOnSort(update: boolean): void
             /**
              * Returns true if the selection should be updated after sorting.
              * @return whether to update the selection on a sort
              * @since 1.6
              */
             // @ts-ignore
-            getUpdateSelectionOnSort(): boolean
+            public getUpdateSelectionOnSort(): boolean
             /**
              * Sets the <code>RowSorter</code>.  <code>RowSorter</code> is used
              * to provide sorting and filtering to a <code>JTable</code>.
@@ -907,14 +907,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setRowSorter(sorter: javax.swing.RowSorter<javax.swing.table.TableModel>): void
+            public setRowSorter(sorter: javax.swing.RowSorter<any>): void
             /**
              * Returns the object responsible for sorting.
              * @return the object responsible for sorting
              * @since 1.6
              */
             // @ts-ignore
-            getRowSorter(): javax.swing.RowSorter<? extends javax.swing.table.TableModel>
+            public getRowSorter(): javax.swing.RowSorter<any>
             /**
              * Sets the table's selection mode to allow only single selections, a single
              * contiguous interval, or multiple intervals.
@@ -940,7 +940,7 @@ declare namespace javax {
              *               MULTIPLE_INTERVAL_SELECTION ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
              */
             // @ts-ignore
-            setSelectionMode(selectionMode: number /*int*/): void
+            public setSelectionMode(selectionMode: number /*int*/): void
             /**
              * Sets whether the rows in this model can be selected.
              * @param rowSelectionAllowed   true if this model will allow row selection
@@ -950,14 +950,14 @@ declare namespace javax {
              *   description: If true, an entire row is selected for each selected cell.
              */
             // @ts-ignore
-            setRowSelectionAllowed(rowSelectionAllowed: boolean): void
+            public setRowSelectionAllowed(rowSelectionAllowed: boolean): void
             /**
              * Returns true if rows can be selected.
              * @return true if rows can be selected, otherwise false
              * @see #setRowSelectionAllowed
              */
             // @ts-ignore
-            getRowSelectionAllowed(): boolean
+            public getRowSelectionAllowed(): boolean
             /**
              * Sets whether the columns in this model can be selected.
              * @param columnSelectionAllowed   true if this model will allow column selection
@@ -967,14 +967,14 @@ declare namespace javax {
              *   description: If true, an entire column is selected for each selected cell.
              */
             // @ts-ignore
-            setColumnSelectionAllowed(columnSelectionAllowed: boolean): void
+            public setColumnSelectionAllowed(columnSelectionAllowed: boolean): void
             /**
              * Returns true if columns can be selected.
              * @return true if columns can be selected, otherwise false
              * @see #setColumnSelectionAllowed
              */
             // @ts-ignore
-            getColumnSelectionAllowed(): boolean
+            public getColumnSelectionAllowed(): boolean
             /**
              * Sets whether this table allows both a column selection and a
              * row selection to exist simultaneously. When set,
@@ -994,7 +994,7 @@ declare namespace javax {
              *                rows or columns.
              */
             // @ts-ignore
-            setCellSelectionEnabled(cellSelectionEnabled: boolean): void
+            public setCellSelectionEnabled(cellSelectionEnabled: boolean): void
             /**
              * Returns true if both row and column selection models are enabled.
              * Equivalent to <code>getRowSelectionAllowed() &amp;&amp;
@@ -1003,17 +1003,17 @@ declare namespace javax {
              * @see #setCellSelectionEnabled
              */
             // @ts-ignore
-            getCellSelectionEnabled(): boolean
+            public getCellSelectionEnabled(): boolean
             /**
              * Selects all rows, columns, and cells in the table.
              */
             // @ts-ignore
-            selectAll(): void
+            public selectAll(): void
             /**
              * Deselects all selected columns and rows.
              */
             // @ts-ignore
-            clearSelection(): void
+            public clearSelection(): void
             /**
              * Selects the rows from <code>index0</code> to <code>index1</code>,
              * inclusive.
@@ -1024,7 +1024,7 @@ declare namespace javax {
              * @param index1 the other end of the interval
              */
             // @ts-ignore
-            setRowSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public setRowSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Selects the columns from <code>index0</code> to <code>index1</code>,
              * inclusive.
@@ -1035,7 +1035,7 @@ declare namespace javax {
              * @param index1 the other end of the interval
              */
             // @ts-ignore
-            setColumnSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public setColumnSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Adds the rows from <code>index0</code> to <code>index1</code>, inclusive, to
              * the current selection.
@@ -1045,7 +1045,7 @@ declare namespace javax {
              * @param index1 the other end of the interval
              */
             // @ts-ignore
-            addRowSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public addRowSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Adds the columns from <code>index0</code> to <code>index1</code>,
              * inclusive, to the current selection.
@@ -1056,7 +1056,7 @@ declare namespace javax {
              * @param index1 the other end of the interval
              */
             // @ts-ignore
-            addColumnSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public addColumnSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Deselects the rows from <code>index0</code> to <code>index1</code>, inclusive.
              * @exception IllegalArgumentException      if <code>index0</code> or
@@ -1066,7 +1066,7 @@ declare namespace javax {
              * @param index1 the other end of the interval
              */
             // @ts-ignore
-            removeRowSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public removeRowSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Deselects the columns from <code>index0</code> to <code>index1</code>, inclusive.
              * @exception IllegalArgumentException      if <code>index0</code> or
@@ -1076,20 +1076,20 @@ declare namespace javax {
              * @param index1 the other end of the interval
              */
             // @ts-ignore
-            removeColumnSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public removeColumnSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Returns the index of the first selected row, -1 if no row is selected.
              * @return the index of the first selected row
              */
             // @ts-ignore
-            getSelectedRow(): int
+            public getSelectedRow(): number /*int*/
             /**
              * Returns the index of the first selected column,
              * -1 if no column is selected.
              * @return the index of the first selected column
              */
             // @ts-ignore
-            getSelectedColumn(): int
+            public getSelectedColumn(): number /*int*/
             /**
              * Returns the indices of all selected rows.
              * @return an array of integers containing the indices of all selected rows,
@@ -1097,7 +1097,7 @@ declare namespace javax {
              * @see #getSelectedRow
              */
             // @ts-ignore
-            getSelectedRows(): int[]
+            public getSelectedRows(): number /*int*/[]
             /**
              * Returns the indices of all selected columns.
              * @return an array of integers containing the indices of all selected columns,
@@ -1105,19 +1105,19 @@ declare namespace javax {
              * @see #getSelectedColumn
              */
             // @ts-ignore
-            getSelectedColumns(): int[]
+            public getSelectedColumns(): number /*int*/[]
             /**
              * Returns the number of selected rows.
              * @return the number of selected rows, 0 if no rows are selected
              */
             // @ts-ignore
-            getSelectedRowCount(): int
+            public getSelectedRowCount(): number /*int*/
             /**
              * Returns the number of selected columns.
              * @return the number of selected columns, 0 if no columns are selected
              */
             // @ts-ignore
-            getSelectedColumnCount(): int
+            public getSelectedColumnCount(): number /*int*/
             /**
              * Returns true if the specified index is in the valid range of rows,
              * and the row at that index is selected.
@@ -1125,7 +1125,7 @@ declare namespace javax {
              *               that index is selected (where 0 is the first row)
              */
             // @ts-ignore
-            isRowSelected(row: number /*int*/): boolean
+            public isRowSelected(row: number /*int*/): boolean
             /**
              * Returns true if the specified index is in the valid range of columns,
              * and the column at that index is selected.
@@ -1134,7 +1134,7 @@ declare namespace javax {
              *               that index is selected (where 0 is the first column)
              */
             // @ts-ignore
-            isColumnSelected(column: number /*int*/): boolean
+            public isColumnSelected(column: number /*int*/): boolean
             /**
              * Returns true if the specified indices are in the valid range of rows
              * and columns and the cell at the specified position is selected.
@@ -1145,7 +1145,7 @@ declare namespace javax {
              *               where the first row and first column are at index 0
              */
             // @ts-ignore
-            isCellSelected(row: number /*int*/, column: number /*int*/): boolean
+            public isCellSelected(row: number /*int*/, column: number /*int*/): boolean
             /**
              * Updates the selection models of the table, depending on the state of the
              * two flags: <code>toggle</code> and <code>extend</code>. Most changes
@@ -1175,7 +1175,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            changeSelection(rowIndex: number /*int*/, columnIndex: number /*int*/, toggle: boolean, extend: boolean): void
+            public changeSelection(rowIndex: number /*int*/, columnIndex: number /*int*/, toggle: boolean, extend: boolean): void
             /**
              * Returns the foreground color for selected cells.
              * @return the <code>Color</code> object for the foreground property
@@ -1183,7 +1183,7 @@ declare namespace javax {
              * @see #setSelectionBackground
              */
             // @ts-ignore
-            getSelectionForeground(): java.awt.Color
+            public getSelectionForeground(): java.awt.Color
             /**
              * Sets the foreground color for selected cells.  Cell renderers
              * can use this color to render text and graphics for selected
@@ -1204,7 +1204,7 @@ declare namespace javax {
              *  description: A default foreground color for selected cells.
              */
             // @ts-ignore
-            setSelectionForeground(selectionForeground: java.awt.Color): void
+            public setSelectionForeground(selectionForeground: java.awt.Color): void
             /**
              * Returns the background color for selected cells.
              * @return the <code>Color</code> used for the background of selected list items
@@ -1212,7 +1212,7 @@ declare namespace javax {
              * @see #setSelectionForeground
              */
             // @ts-ignore
-            getSelectionBackground(): java.awt.Color
+            public getSelectionBackground(): java.awt.Color
             /**
              * Sets the background color for selected cells.  Cell renderers
              * can use this color to the fill selected cells.
@@ -1232,7 +1232,7 @@ declare namespace javax {
              *  description: A default background color for selected cells.
              */
             // @ts-ignore
-            setSelectionBackground(selectionBackground: java.awt.Color): void
+            public setSelectionBackground(selectionBackground: java.awt.Color): void
             /**
              * Returns the <code>TableColumn</code> object for the column in the table
              * whose identifier is equal to <code>identifier</code>, when compared using
@@ -1242,7 +1242,7 @@ declare namespace javax {
              * @param identifier                      the identifier object
              */
             // @ts-ignore
-            getColumn(identifier: any): javax.swing.table.TableColumn
+            public getColumn(identifier: java.lang.Object | any): javax.swing.table.TableColumn
             /**
              * Maps the index of the column in the view at
              * <code>viewColumnIndex</code> to the index of the column
@@ -1254,7 +1254,7 @@ declare namespace javax {
              * @see #convertColumnIndexToView
              */
             // @ts-ignore
-            convertColumnIndexToModel(viewColumnIndex: number /*int*/): int
+            public convertColumnIndexToModel(viewColumnIndex: number /*int*/): number /*int*/
             /**
              * Maps the index of the column in the table model at
              * <code>modelColumnIndex</code> to the index of the column
@@ -1267,7 +1267,7 @@ declare namespace javax {
              * @see #convertColumnIndexToModel
              */
             // @ts-ignore
-            convertColumnIndexToView(modelColumnIndex: number /*int*/): int
+            public convertColumnIndexToView(modelColumnIndex: number /*int*/): number /*int*/
             /**
              * Maps the index of the row in terms of the
              * <code>TableModel</code> to the view.  If the contents of the
@@ -1281,7 +1281,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            convertRowIndexToView(modelRowIndex: number /*int*/): int
+            public convertRowIndexToView(modelRowIndex: number /*int*/): number /*int*/
             /**
              * Maps the index of the row in terms of the view to the
              * underlying <code>TableModel</code>.  If the contents of the
@@ -1296,7 +1296,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            convertRowIndexToModel(viewRowIndex: number /*int*/): int
+            public convertRowIndexToModel(viewRowIndex: number /*int*/): number /*int*/
             /**
              * Returns the number of rows that can be shown in the
              * <code>JTable</code>, given unlimited space.  If a
@@ -1307,7 +1307,7 @@ declare namespace javax {
              * @see #getColumnCount
              */
             // @ts-ignore
-            getRowCount(): int
+            public getRowCount(): number /*int*/
             /**
              * Returns the number of columns in the column model. Note that this may
              * be different from the number of columns in the table model.
@@ -1316,7 +1316,7 @@ declare namespace javax {
              * @see #removeColumn
              */
             // @ts-ignore
-            getColumnCount(): int
+            public getColumnCount(): number /*int*/
             /**
              * Returns the name of the column appearing in the view at
              * column position <code>column</code>.
@@ -1325,7 +1325,7 @@ declare namespace javax {
              *                         in the view where the first column is column 0
              */
             // @ts-ignore
-            getColumnName(column: number /*int*/): java.lang.String
+            public getColumnName(column: number /*int*/): string
             /**
              * Returns the type of the column appearing in the view at
              * column position <code>column</code>.
@@ -1334,7 +1334,7 @@ declare namespace javax {
              *           in the view where the first column is column 0
              */
             // @ts-ignore
-            getColumnClass(column: number /*int*/): java.lang.Class<?>
+            public getColumnClass(column: number /*int*/): java.lang.Class<any>
             /**
              * Returns the cell value at <code>row</code> and <code>column</code>.
              * <p>
@@ -1350,7 +1350,7 @@ declare namespace javax {
              * @return the Object at the specified cell
              */
             // @ts-ignore
-            getValueAt(row: number /*int*/, column: number /*int*/): java.lang.Object
+            public getValueAt(row: number /*int*/, column: number /*int*/): any
             /**
              * Sets the value for the cell in the table model at <code>row</code>
              * and <code>column</code>.
@@ -1369,7 +1369,7 @@ declare namespace javax {
              * @see #getValueAt
              */
             // @ts-ignore
-            setValueAt(aValue: any, row: number /*int*/, column: number /*int*/): void
+            public setValueAt(aValue: java.lang.Object | any, row: number /*int*/, column: number /*int*/): void
             /**
              * Returns true if the cell at <code>row</code> and <code>column</code>
              * is editable.  Otherwise, invoking <code>setValueAt</code> on the cell
@@ -1388,7 +1388,7 @@ declare namespace javax {
              * @see #setValueAt
              */
             // @ts-ignore
-            isCellEditable(row: number /*int*/, column: number /*int*/): boolean
+            public isCellEditable(row: number /*int*/, column: number /*int*/): boolean
             /**
              * Appends <code>aColumn</code> to the end of the array of columns held by
              * this <code>JTable</code>'s column model.
@@ -1413,7 +1413,7 @@ declare namespace javax {
              * @see #removeColumn
              */
             // @ts-ignore
-            addColumn(aColumn: javax.swing.table.TableColumn): void
+            public addColumn(aColumn: javax.swing.table.TableColumn): void
             /**
              * Removes <code>aColumn</code> from this <code>JTable</code>'s
              * array of columns.  Note: this method does not remove the column
@@ -1423,7 +1423,7 @@ declare namespace javax {
              * @see #addColumn
              */
             // @ts-ignore
-            removeColumn(aColumn: javax.swing.table.TableColumn): void
+            public removeColumn(aColumn: javax.swing.table.TableColumn): void
             /**
              * Moves the column <code>column</code> to the position currently
              * occupied by the column <code>targetColumn</code> in the view.
@@ -1433,7 +1433,7 @@ declare namespace javax {
              * @param targetColumn            the new index of the column
              */
             // @ts-ignore
-            moveColumn(column: number /*int*/, targetColumn: number /*int*/): void
+            public moveColumn(column: number /*int*/, targetColumn: number /*int*/): void
             /**
              * Returns the index of the column that <code>point</code> lies in,
              * or -1 if the result is not in the range
@@ -1445,7 +1445,7 @@ declare namespace javax {
              * @see #rowAtPoint
              */
             // @ts-ignore
-            columnAtPoint(point: java.awt.Point): int
+            public columnAtPoint(point: java.awt.Point): number /*int*/
             /**
              * Returns the index of the row that <code>point</code> lies in,
              * or -1 if the result is not in the range
@@ -1457,7 +1457,7 @@ declare namespace javax {
              * @see #columnAtPoint
              */
             // @ts-ignore
-            rowAtPoint(point: java.awt.Point): int
+            public rowAtPoint(point: java.awt.Point): number /*int*/
             /**
              * Returns a rectangle for the cell that lies at the intersection of
              * <code>row</code> and <code>column</code>.
@@ -1501,7 +1501,7 @@ declare namespace javax {
              * @see #getIntercellSpacing
              */
             // @ts-ignore
-            getCellRect(row: number /*int*/, column: number /*int*/, includeSpacing: boolean): java.awt.Rectangle
+            public getCellRect(row: number /*int*/, column: number /*int*/, includeSpacing: boolean): java.awt.Rectangle
             /**
              * Causes this table to lay out its rows and columns.  Overridden so
              * that columns can be resized to accommodate a change in the size of
@@ -1629,7 +1629,7 @@ declare namespace javax {
              * (maximum or minimum).
              */
             // @ts-ignore
-            doLayout(): void
+            public doLayout(): void
             /**
              * Sizes the table columns to fit the available space.
              * @deprecated As of Swing version 1.0.3,
@@ -1637,7 +1637,7 @@ declare namespace javax {
              * @see #doLayout
              */
             // @ts-ignore
-            sizeColumnsToFit(lastColumnOnly: boolean): void
+            public sizeColumnsToFit(lastColumnOnly: boolean): void
             /**
              * Obsolete as of Java 2 platform v1.4.  Please use the
              * <code>doLayout()</code> method instead.
@@ -1646,7 +1646,7 @@ declare namespace javax {
              * @see #doLayout
              */
             // @ts-ignore
-            sizeColumnsToFit(resizingColumn: number /*int*/): void
+            public sizeColumnsToFit(resizingColumn: number /*int*/): void
             /**
              * Overrides <code>JComponent</code>'s <code>getToolTipText</code>
              * method in order to allow the renderer's tips to be used
@@ -1663,7 +1663,7 @@ declare namespace javax {
              * @see JComponent#getToolTipText
              */
             // @ts-ignore
-            getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+            public getToolTipText(event: java.awt.event.MouseEvent): string
             /**
              * Sets whether editors in this JTable get the keyboard focus
              * when an editor is activated as a result of the JTable
@@ -1677,7 +1677,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setSurrendersFocusOnKeystroke(surrendersFocusOnKeystroke: boolean): void
+            public setSurrendersFocusOnKeystroke(surrendersFocusOnKeystroke: boolean): void
             /**
              * Returns true if the editor should get the focus
              * when keystrokes cause the editor to be activated
@@ -1688,7 +1688,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getSurrendersFocusOnKeystroke(): boolean
+            public getSurrendersFocusOnKeystroke(): boolean
             /**
              * Programmatically starts editing the cell at <code>row</code> and
              * <code>column</code>, if those indices are in the valid range, and
@@ -1701,7 +1701,7 @@ declare namespace javax {
              *                 or if the indices are invalid
              */
             // @ts-ignore
-            editCellAt(row: number /*int*/, column: number /*int*/): boolean
+            public editCellAt(row: number /*int*/, column: number /*int*/): boolean
             /**
              * Programmatically starts editing the cell at <code>row</code> and
              * <code>column</code>, if those indices are in the valid range, and
@@ -1719,7 +1719,7 @@ declare namespace javax {
              *                 or if the indices are invalid
              */
             // @ts-ignore
-            editCellAt(row: number /*int*/, column: number /*int*/, e: java.util.EventObject): boolean
+            public editCellAt(row: number /*int*/, column: number /*int*/, e: java.util.EventObject): boolean
             /**
              * Returns true if a cell is being edited.
              * @return true if the table is editing a cell
@@ -1727,14 +1727,14 @@ declare namespace javax {
              * @see #editingRow
              */
             // @ts-ignore
-            isEditing(): boolean
+            public isEditing(): boolean
             /**
              * Returns the component that is handling the editing session.
              * If nothing is being edited, returns null.
              * @return Component handling editing session
              */
             // @ts-ignore
-            getEditorComponent(): java.awt.Component
+            public getEditorComponent(): java.awt.Component
             /**
              * Returns the index of the column that contains the cell currently
              * being edited.  If nothing is being edited, returns -1.
@@ -1743,7 +1743,7 @@ declare namespace javax {
              * @see #editingRow
              */
             // @ts-ignore
-            getEditingColumn(): int
+            public getEditingColumn(): number /*int*/
             /**
              * Returns the index of the row that contains the cell currently
              * being edited.  If nothing is being edited, returns -1.
@@ -1752,13 +1752,13 @@ declare namespace javax {
              * @see #editingColumn
              */
             // @ts-ignore
-            getEditingRow(): int
+            public getEditingRow(): number /*int*/
             /**
              * Returns the L&amp;F object that renders this component.
              * @return the <code>TableUI</code> object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.TableUI
+            public getUI(): javax.swing.plaf.TableUI
             /**
              * Sets the L&amp;F object that renders this component and repaints.
              * @param ui  the TableUI L&amp;F object
@@ -1769,7 +1769,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.TableUI): void
+            public setUI(ui: javax.swing.plaf.TableUI): void
             /**
              * Notification from the <code>UIManager</code> that the L&amp;F has changed.
              * Replaces the current UI object with the latest version from the
@@ -1777,7 +1777,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the suffix used to construct the name of the L&amp;F class used to
              * render this component.
@@ -1786,7 +1786,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the data model for this table to <code>newModel</code> and registers
              * with it for listener notifications from the new data model.
@@ -1797,7 +1797,7 @@ declare namespace javax {
              *   description: The model that is the source of the data for this view.
              */
             // @ts-ignore
-            setModel(dataModel: javax.swing.table.TableModel): void
+            public setModel(dataModel: javax.swing.table.TableModel): void
             /**
              * Returns the <code>TableModel</code> that provides the data displayed by this
              * <code>JTable</code>.
@@ -1805,7 +1805,7 @@ declare namespace javax {
              * @see #setModel
              */
             // @ts-ignore
-            getModel(): javax.swing.table.TableModel
+            public getModel(): javax.swing.table.TableModel
             /**
              * Sets the column model for this table to <code>newModel</code> and registers
              * for listener notifications from the new column model. Also sets
@@ -1817,7 +1817,7 @@ declare namespace javax {
              *   description: The object governing the way columns appear in the view.
              */
             // @ts-ignore
-            setColumnModel(columnModel: javax.swing.table.TableColumnModel): void
+            public setColumnModel(columnModel: javax.swing.table.TableColumnModel): void
             /**
              * Returns the <code>TableColumnModel</code> that contains all column information
              * of this table.
@@ -1825,7 +1825,7 @@ declare namespace javax {
              * @see #setColumnModel
              */
             // @ts-ignore
-            getColumnModel(): javax.swing.table.TableColumnModel
+            public getColumnModel(): javax.swing.table.TableColumnModel
             /**
              * Sets the row selection model for this table to <code>newModel</code>
              * and registers for listener notifications from the new selection model.
@@ -1836,7 +1836,7 @@ declare namespace javax {
              *       description: The selection model for rows.
              */
             // @ts-ignore
-            setSelectionModel(newModel: javax.swing.ListSelectionModel): void
+            public setSelectionModel(newModel: javax.swing.ListSelectionModel): void
             /**
              * Returns the <code>ListSelectionModel</code> that is used to maintain row
              * selection state.
@@ -1845,7 +1845,7 @@ declare namespace javax {
              * @see #setSelectionModel
              */
             // @ts-ignore
-            getSelectionModel(): javax.swing.ListSelectionModel
+            public getSelectionModel(): javax.swing.ListSelectionModel
             /**
              * <code>RowSorterListener</code> notification that the
              * <code>RowSorter</code> has changed in some way.
@@ -1854,7 +1854,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            sorterChanged(e: javax.swing.event.RowSorterEvent): void
+            public sorterChanged(e: javax.swing.event.RowSorterEvent): void
             /**
              * Invoked when this table's <code>TableModel</code> generates
              * a <code>TableModelEvent</code>.
@@ -1869,7 +1869,7 @@ declare namespace javax {
              * Note that as of 1.3, this method clears the selection, if any.
              */
             // @ts-ignore
-            tableChanged(e: javax.swing.event.TableModelEvent): void
+            public tableChanged(e: javax.swing.event.TableModelEvent): void
             /**
              * Invoked when a column is added to the table column model.
              * <p>
@@ -1878,7 +1878,7 @@ declare namespace javax {
              * @see TableColumnModelListener
              */
             // @ts-ignore
-            columnAdded(e: javax.swing.event.TableColumnModelEvent): void
+            public columnAdded(e: javax.swing.event.TableColumnModelEvent): void
             /**
              * Invoked when a column is removed from the table column model.
              * <p>
@@ -1887,7 +1887,7 @@ declare namespace javax {
              * @see TableColumnModelListener
              */
             // @ts-ignore
-            columnRemoved(e: javax.swing.event.TableColumnModelEvent): void
+            public columnRemoved(e: javax.swing.event.TableColumnModelEvent): void
             /**
              * Invoked when a column is repositioned. If a cell is being
              * edited, then editing is stopped and the cell is redrawn.
@@ -1898,7 +1898,7 @@ declare namespace javax {
              * @see TableColumnModelListener
              */
             // @ts-ignore
-            columnMoved(e: javax.swing.event.TableColumnModelEvent): void
+            public columnMoved(e: javax.swing.event.TableColumnModelEvent): void
             /**
              * Invoked when a column is moved due to a margin change.
              * If a cell is being edited, then editing is stopped and the cell
@@ -1910,7 +1910,7 @@ declare namespace javax {
              * @see TableColumnModelListener
              */
             // @ts-ignore
-            columnMarginChanged(e: javax.swing.event.ChangeEvent): void
+            public columnMarginChanged(e: javax.swing.event.ChangeEvent): void
             /**
              * Invoked when the selection model of the <code>TableColumnModel</code>
              * is changed.
@@ -1921,7 +1921,7 @@ declare namespace javax {
              * @see TableColumnModelListener
              */
             // @ts-ignore
-            columnSelectionChanged(e: javax.swing.event.ListSelectionEvent): void
+            public columnSelectionChanged(e: javax.swing.event.ListSelectionEvent): void
             /**
              * Invoked when the row selection changes -- repaints to show the new
              * selection.
@@ -1932,7 +1932,7 @@ declare namespace javax {
              * @see ListSelectionListener
              */
             // @ts-ignore
-            valueChanged(e: javax.swing.event.ListSelectionEvent): void
+            public valueChanged(e: javax.swing.event.ListSelectionEvent): void
             /**
              * Invoked when editing is finished. The changes are saved and the
              * editor is discarded.
@@ -1943,7 +1943,7 @@ declare namespace javax {
              * @see CellEditorListener
              */
             // @ts-ignore
-            editingStopped(e: javax.swing.event.ChangeEvent): void
+            public editingStopped(e: javax.swing.event.ChangeEvent): void
             /**
              * Invoked when editing is canceled. The editor object is discarded
              * and the cell is rendered once again.
@@ -1954,7 +1954,7 @@ declare namespace javax {
              * @see CellEditorListener
              */
             // @ts-ignore
-            editingCanceled(e: javax.swing.event.ChangeEvent): void
+            public editingCanceled(e: javax.swing.event.ChangeEvent): void
             /**
              * Sets the preferred size of the viewport for this table.
              * @param size  a <code>Dimension</code> object specifying the <code>preferredSize</code> of a
@@ -1963,7 +1963,7 @@ declare namespace javax {
              * @beaninfo description: The preferred size of the viewport.
              */
             // @ts-ignore
-            setPreferredScrollableViewportSize(size: java.awt.Dimension): void
+            public setPreferredScrollableViewportSize(size: java.awt.Dimension): void
             /**
              * Returns the preferred size of the viewport for this table.
              * @return a <code>Dimension</code> object containing the <code>preferredSize</code> of the <code>JViewport</code>
@@ -1971,7 +1971,7 @@ declare namespace javax {
              * @see Scrollable#getPreferredScrollableViewportSize
              */
             // @ts-ignore
-            getPreferredScrollableViewportSize(): java.awt.Dimension
+            public getPreferredScrollableViewportSize(): java.awt.Dimension
             /**
              * Returns the scroll increment (in pixels) that completely exposes one new
              * row or column (depending on the orientation).
@@ -1986,7 +1986,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableUnitIncrement
              */
             // @ts-ignore
-            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns <code>visibleRect.height</code> or
              * <code>visibleRect.width</code>,
@@ -2000,7 +2000,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableBlockIncrement
              */
             // @ts-ignore
-            getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns false if <code>autoResizeMode</code> is set to
              * <code>AUTO_RESIZE_OFF</code>, which indicates that the
@@ -2011,7 +2011,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableTracksViewportWidth
              */
             // @ts-ignore
-            getScrollableTracksViewportWidth(): boolean
+            public getScrollableTracksViewportWidth(): boolean
             /**
              * Returns {@code false} to indicate that the height of the viewport does
              * not determine the height of the table, unless
@@ -2025,7 +2025,7 @@ declare namespace javax {
              * @see #getFillsViewportHeight
              */
             // @ts-ignore
-            getScrollableTracksViewportHeight(): boolean
+            public getScrollableTracksViewportHeight(): boolean
             /**
              * Sets whether or not this table is always made large enough
              * to fill the height of an enclosing viewport. If the preferred
@@ -2044,7 +2044,7 @@ declare namespace javax {
              *                    to fill the height of an enclosing viewport
              */
             // @ts-ignore
-            setFillsViewportHeight(fillsViewportHeight: boolean): void
+            public setFillsViewportHeight(fillsViewportHeight: boolean): void
             /**
              * Returns whether or not this table is always made large enough
              * to fill the height of an enclosing viewport.
@@ -2054,7 +2054,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getFillsViewportHeight(): boolean
+            public getFillsViewportHeight(): boolean
             // @ts-ignore
             processKeyBinding(ks: javax.swing.KeyStroke, e: java.awt.event.KeyEvent, condition: number /*int*/, pressed: boolean): boolean
             /**
@@ -2125,7 +2125,7 @@ declare namespace javax {
              * @see #getCellEditor(int, int)
              */
             // @ts-ignore
-            getCellEditor(): javax.swing.table.TableCellEditor
+            public getCellEditor(): javax.swing.table.TableCellEditor
             /**
              * Sets the active cell editor.
              * @param anEditor the active cell editor
@@ -2134,21 +2134,21 @@ declare namespace javax {
              *   description: The table's active cell editor.
              */
             // @ts-ignore
-            setCellEditor(anEditor: javax.swing.table.TableCellEditor): void
+            public setCellEditor(anEditor: javax.swing.table.TableCellEditor): void
             /**
              * Sets the <code>editingColumn</code> variable.
              * @param aColumn  the column of the cell to be edited
              * @see #editingColumn
              */
             // @ts-ignore
-            setEditingColumn(aColumn: number /*int*/): void
+            public setEditingColumn(aColumn: number /*int*/): void
             /**
              * Sets the <code>editingRow</code> variable.
              * @param aRow  the row of the cell to be edited
              * @see #editingRow
              */
             // @ts-ignore
-            setEditingRow(aRow: number /*int*/): void
+            public setEditingRow(aRow: number /*int*/): void
             /**
              * Returns an appropriate renderer for the cell specified by this row and
              * column. If the <code>TableColumn</code> for this column has a non-null
@@ -2171,7 +2171,7 @@ declare namespace javax {
              * @see #setDefaultRenderer
              */
             // @ts-ignore
-            getCellRenderer(row: number /*int*/, column: number /*int*/): javax.swing.table.TableCellRenderer
+            public getCellRenderer(row: number /*int*/, column: number /*int*/): javax.swing.table.TableCellRenderer
             /**
              * Prepares the renderer by querying the data model for the
              * value and selection state
@@ -2198,7 +2198,7 @@ declare namespace javax {
              * @return the <code>Component</code> under the event location
              */
             // @ts-ignore
-            prepareRenderer(renderer: javax.swing.table.TableCellRenderer, row: number /*int*/, column: number /*int*/): java.awt.Component
+            public prepareRenderer(renderer: javax.swing.table.TableCellRenderer, row: number /*int*/, column: number /*int*/): java.awt.Component
             /**
              * Returns an appropriate editor for the cell specified by
              * <code>row</code> and <code>column</code>. If the
@@ -2220,7 +2220,7 @@ declare namespace javax {
              * @see DefaultCellEditor
              */
             // @ts-ignore
-            getCellEditor(row: number /*int*/, column: number /*int*/): javax.swing.table.TableCellEditor
+            public getCellEditor(row: number /*int*/, column: number /*int*/): javax.swing.table.TableCellEditor
             /**
              * Prepares the editor by querying the data model for the value and
              * selection state of the cell at <code>row</code>, <code>column</code>.
@@ -2237,13 +2237,13 @@ declare namespace javax {
              * @return the <code>Component</code> being edited
              */
             // @ts-ignore
-            prepareEditor(editor: javax.swing.table.TableCellEditor, row: number /*int*/, column: number /*int*/): java.awt.Component
+            public prepareEditor(editor: javax.swing.table.TableCellEditor, row: number /*int*/, column: number /*int*/): java.awt.Component
             /**
              * Discards the editor object and frees the real estate it used for
              * cell rendering.
              */
             // @ts-ignore
-            removeEditor(): void
+            public removeEditor(): void
             /**
              * Returns a string representation of this table. This method
              * is intended to be used only for debugging purposes, and the
@@ -2253,7 +2253,7 @@ declare namespace javax {
              * @return a string representation of this table
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * A convenience method that displays a printing dialog, and then prints
              * this <code>JTable</code> in mode <code>PrintMode.FIT_WIDTH</code>,
@@ -2273,7 +2273,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            print(): boolean
+            public print(): boolean
             /**
              * A convenience method that displays a printing dialog, and then prints
              * this <code>JTable</code> in the given printing mode,
@@ -2294,7 +2294,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            print(printMode: javax.swing.JTable.PrintMode): boolean
+            public print(printMode: javax.swing.JTable.PrintMode): boolean
             /**
              * A convenience method that displays a printing dialog, and then prints
              * this <code>JTable</code> in the given printing mode,
@@ -2321,7 +2321,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            print(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): boolean
+            public print(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): boolean
             /**
              * Prints this table, as specified by the fully featured
              * {@link #print(JTable.PrintMode, MessageFormat, MessageFormat,
@@ -2354,7 +2354,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            print(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat, showPrintDialog: boolean, attr: javax.print.attribute.PrintRequestAttributeSet, interactive: boolean): boolean
+            public print(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat, showPrintDialog: boolean, attr: javax.print.attribute.PrintRequestAttributeSet, interactive: boolean): boolean
             /**
              * Prints this <code>JTable</code>. Takes steps that the majority of
              * developers would take in order to print a <code>JTable</code>.
@@ -2432,7 +2432,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            print(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat, showPrintDialog: boolean, attr: javax.print.attribute.PrintRequestAttributeSet, interactive: boolean, service: javax.print.PrintService): boolean
+            public print(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat, showPrintDialog: boolean, attr: javax.print.attribute.PrintRequestAttributeSet, interactive: boolean, service: javax.print.PrintService): boolean
             /**
              * Return a <code>Printable</code> for use in printing this JTable.
              * <p>
@@ -2532,7 +2532,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getPrintable(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): java.awt.print.Printable
+            public getPrintable(printMode: javax.swing.JTable.PrintMode, headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): java.awt.print.Printable
             /**
              * Gets the AccessibleContext associated with this JTable.
              * For tables, the AccessibleContext takes the form of an
@@ -2542,7 +2542,7 @@ declare namespace javax {
              *          AccessibleContext of this JTable
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

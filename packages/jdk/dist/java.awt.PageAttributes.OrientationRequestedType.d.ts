@@ -13,13 +13,13 @@ declare namespace java {
                  * portrait orientation.
                  */
                 // @ts-ignore
-                readonly PORTRAIT: java.awt.PageAttributes.OrientationRequestedType
+                public static readonly PORTRAIT: java.awt.PageAttributes.OrientationRequestedType
                 /**
                  * The OrientationRequestedType instance to use for specifying a
                  * landscape orientation.
                  */
                 // @ts-ignore
-                readonly LANDSCAPE: java.awt.PageAttributes.OrientationRequestedType
+                public static readonly LANDSCAPE: java.awt.PageAttributes.OrientationRequestedType
             }
         }
     }

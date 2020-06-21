@@ -39,7 +39,7 @@ declare namespace javax {
              *     <code>null</code> or zero size
              */
             // @ts-ignore
-            constructor(values: Array<any>)
+            constructor(values: java.util.List<any> | Array<any>)
             /**
              * Constructs a <code>SpinnerModel</code> whose sequence of values
              * is defined by the specified array.  The initial value of the model
@@ -51,7 +51,7 @@ declare namespace javax {
              *     <code>null</code> or zero length
              */
             // @ts-ignore
-            constructor(values: any[])
+            constructor(values: java.lang.Object[] | any[])
             /**
              * Constructs an effectively empty <code>SpinnerListModel</code>.
              * The model's list will contain a single
@@ -65,7 +65,7 @@ declare namespace javax {
              * @see #setList
              */
             // @ts-ignore
-            getList(): java.util.List<?>
+            public getList(): Array<any>
             /**
              * Changes the list that defines this sequence and resets the index
              * of the models <code>value</code> to zero.  Note that <code>list</code>
@@ -79,7 +79,7 @@ declare namespace javax {
              * @see #getList
              */
             // @ts-ignore
-            setList(list: Array<any>): void
+            public setList(list: java.util.List<any> | Array<any>): void
             /**
              * Returns the current element of the sequence.
              * @return the <code>value</code> property
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see #setValue
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Changes the current element of the sequence and notifies
              * <code>ChangeListeners</code>.  If the specified
@@ -106,7 +106,7 @@ declare namespace javax {
              * @see #getValue
              */
             // @ts-ignore
-            setValue(elt: any): void
+            public setValue(elt: java.lang.Object | any): void
             /**
              * Returns the next legal value of the underlying sequence or
              * <code>null</code> if value is already the last element.
@@ -116,7 +116,7 @@ declare namespace javax {
              * @see #getPreviousValue
              */
             // @ts-ignore
-            getNextValue(): java.lang.Object
+            public getNextValue(): any
             /**
              * Returns the previous element of the underlying sequence or
              * <code>null</code> if value is already the first element.
@@ -126,7 +126,7 @@ declare namespace javax {
              * @see #getNextValue
              */
             // @ts-ignore
-            getPreviousValue(): java.lang.Object
+            public getPreviousValue(): any
         }
     }
 }

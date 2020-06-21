@@ -16,9 +16,9 @@ declare namespace org {
                     // @ts-ignore
                     class ContextPathCompositeHandler extends java.lang.Object implements org.springframework.http.server.reactive.HttpHandler {
                         // @ts-ignore
-                        constructor(handlerMap: java.util.Map<java.lang.String, org.springframework.http.server.reactive.HttpHandler>)
+                        constructor(handlerMap: java.util.Map<java.lang.String | string, any>)
                         // @ts-ignore
-                        handle(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): <any>
+                        public handle(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): object
                     }
                 }
             }

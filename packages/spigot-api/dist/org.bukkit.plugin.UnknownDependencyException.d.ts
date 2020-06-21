@@ -12,13 +12,13 @@ declare namespace org {
                  * @param throwable Exception that triggered this Exception
                  */
                 // @ts-ignore
-                constructor(throwable: Error)
+                constructor(throwable: java.lang.Throwable | Error)
                 /**
                  * Constructs a new UnknownDependencyException with the given message
                  * @param message Brief message explaining the cause of the exception
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a new UnknownDependencyException based on the given
                  * Exception
@@ -26,7 +26,7 @@ declare namespace org {
                  * @param throwable Exception that triggered this Exception
                  */
                 // @ts-ignore
-                constructor(throwable: Error, message: string)
+                constructor(throwable: java.lang.Throwable | Error, message: java.lang.String | string)
                 /**
                  * Constructs a new UnknownDependencyException
                  */

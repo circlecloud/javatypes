@@ -71,7 +71,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    moveTo(x: number /*double*/, y: number /*double*/): void
+                    public moveTo(x: number /*double*/, y: number /*double*/): void
                     /**
                      * Adds a point to the path by moving to the specified
                      * coordinates specified in float precision.
@@ -85,13 +85,13 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    moveTo(x: number /*float*/, y: number /*float*/): void
+                    public moveTo(x: number /*float*/, y: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    lineTo(x: number /*double*/, y: number /*double*/): void
+                    public lineTo(x: number /*double*/, y: number /*double*/): void
                     /**
                      * Adds a point to the path by drawing a straight line from the
                      * current coordinates to the new specified coordinates
@@ -106,13 +106,13 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    lineTo(x: number /*float*/, y: number /*float*/): void
+                    public lineTo(x: number /*float*/, y: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    quadTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                    public quadTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                     /**
                      * Adds a curved segment, defined by two new points, to the path by
                      * drawing a Quadratic curve that intersects both the current
@@ -132,13 +132,13 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    quadTo(x1: number /*float*/, y1: number /*float*/, x2: number /*float*/, y2: number /*float*/): void
+                    public quadTo(x1: number /*float*/, y1: number /*float*/, x2: number /*float*/, y2: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    curveTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, x3: number /*double*/, y3: number /*double*/): void
+                    public curveTo(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/, x3: number /*double*/, y3: number /*double*/): void
                     /**
                      * Adds a curved segment, defined by three new points, to the path by
                      * drawing a B&eacute;zier curve that intersects both the current
@@ -160,25 +160,25 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    curveTo(x1: number /*float*/, y1: number /*float*/, x2: number /*float*/, y2: number /*float*/, x3: number /*float*/, y3: number /*float*/): void
+                    public curveTo(x1: number /*float*/, y1: number /*float*/, x2: number /*float*/, y2: number /*float*/, x3: number /*float*/, y3: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    append(pi: java.awt.geom.PathIterator, connect: boolean): void
+                    public append(pi: java.awt.geom.PathIterator, connect: boolean): void
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    transform(at: java.awt.geom.AffineTransform): void
+                    public transform(at: java.awt.geom.AffineTransform): void
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                     /**
                      * {@inheritDoc}
                      * <p>
@@ -190,7 +190,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                    public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                     /**
                      * Creates a new object of the same class as this object.
                      * @return a clone of this instance.
@@ -199,7 +199,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

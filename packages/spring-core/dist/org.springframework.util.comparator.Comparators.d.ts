@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                class Comparators extends java.lang.Object {
+                abstract class Comparators extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -17,35 +17,35 @@ declare namespace org {
                      * @see ComparableComparator#INSTANCE
                      */
                     // @ts-ignore
-                    comparable<T>(): java.util.Comparator<T>
+                    public static comparable<T>(): java.util.Comparator<T>
                     /**
                      * Return a {@link Comparable} adapter which accepts
                      * null values and sorts them lower than non-null values.
                      * @see NullSafeComparator#NULLS_LOW
                      */
                     // @ts-ignore
-                    nullsLow<T>(): java.util.Comparator<T>
+                    public static nullsLow<T>(): java.util.Comparator<T>
                     /**
                      * Return a decorator for the given comparator which accepts
                      * null values and sorts them lower than non-null values.
                      * @see NullSafeComparator#NullSafeComparator(boolean)
                      */
                     // @ts-ignore
-                    nullsLow<T>(comparator: java.util.Comparator<T>): java.util.Comparator<T>
+                    public static nullsLow<T>(comparator: java.util.Comparator<T>): java.util.Comparator<T>
                     /**
                      * Return a {@link Comparable} adapter which accepts
                      * null values and sorts them higher than non-null values.
                      * @see NullSafeComparator#NULLS_HIGH
                      */
                     // @ts-ignore
-                    nullsHigh<T>(): java.util.Comparator<T>
+                    public static nullsHigh<T>(): java.util.Comparator<T>
                     /**
                      * Return a decorator for the given comparator which accepts
                      * null values and sorts them higher than non-null values.
                      * @see NullSafeComparator#NullSafeComparator(boolean)
                      */
                     // @ts-ignore
-                    nullsHigh<T>(comparator: java.util.Comparator<T>): java.util.Comparator<T>
+                    public static nullsHigh<T>(comparator: java.util.Comparator<T>): java.util.Comparator<T>
                 }
             }
         }

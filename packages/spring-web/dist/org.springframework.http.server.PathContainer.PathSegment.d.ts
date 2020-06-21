@@ -12,17 +12,17 @@ declare namespace org {
                          * Return the path segment value, decoded and sanitized, for path matching.
                          */
                         // @ts-ignore
-                        valueToMatch(): java.lang.String
+                        valueToMatch(): string
                         /**
                          * Expose {@link #valueToMatch()} as a character array.
                          */
                         // @ts-ignore
-                        valueToMatchAsChars(): char[]
+                        valueToMatchAsChars(): string[]
                         /**
                          * Path parameters associated with this path segment.
                          */
                         // @ts-ignore
-                        parameters(): <any>
+                        parameters(): object
                     }
                 }
             }

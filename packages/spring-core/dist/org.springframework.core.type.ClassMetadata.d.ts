@@ -17,7 +17,7 @@ declare namespace org {
                      * Return the name of the underlying class.
                      */
                     // @ts-ignore
-                    getClassName(): java.lang.String
+                    getClassName(): string
                     /**
                      * Return whether the underlying class represents an interface.
                      */
@@ -66,7 +66,7 @@ declare namespace org {
                      * or {@code null} if the underlying class is a top-level class.
                      */
                     // @ts-ignore
-                    getEnclosingClassName(): java.lang.String
+                    getEnclosingClassName(): string
                     /**
                      * Return whether the underlying class has a super class.
                      */
@@ -77,13 +77,13 @@ declare namespace org {
                      * or {@code null} if there is no super class defined.
                      */
                     // @ts-ignore
-                    getSuperClassName(): java.lang.String
+                    getSuperClassName(): string
                     /**
                      * Return the names of all interfaces that the underlying class
                      * implements, or an empty array if there are none.
                      */
                     // @ts-ignore
-                    getInterfaceNames(): java.lang.String[]
+                    getInterfaceNames(): string[]
                     /**
                      * Return the names of all classes declared as members of the class represented by
                      * this ClassMetadata object. This includes public, protected, default (package)
@@ -93,7 +93,7 @@ declare namespace org {
                      * @since 3.1
                      */
                     // @ts-ignore
-                    getMemberClassNames(): java.lang.String[]
+                    getMemberClassNames(): string[]
                 }
             }
         }

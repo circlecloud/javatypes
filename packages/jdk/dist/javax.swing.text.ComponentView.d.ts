@@ -58,7 +58,7 @@ declare namespace javax {
                  * Fetch the component associated with the view.
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * The real paint behavior occurs naturally from the association
                  * that the component has with its parent container (the same
@@ -68,7 +68,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Determines the preferred span for this view along an
                  * axis.  This is implemented to return the value
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the minimum span for this view along an
                  * axis.  This is implemented to return the value
@@ -96,7 +96,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getMinimumSpan(axis: number /*int*/): float
+                public getMinimumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the maximum span for this view along an
                  * axis.  This is implemented to return the value
@@ -110,7 +110,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getMaximumSpan(axis: number /*int*/): float
+                public getMaximumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the desired alignment for this view along an
                  * axis.  This is implemented to give the alignment of the
@@ -123,7 +123,7 @@ declare namespace javax {
                  *    center of the view.
                  */
                 // @ts-ignore
-                getAlignment(axis: number /*int*/): float
+                public getAlignment(axis: number /*int*/): number /*float*/
                 /**
                  * Sets the parent for a child view.
                  * The parent calls this on the child to tell it who its
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @param p the parent
                  */
                 // @ts-ignore
-                setParent(p: javax.swing.text.View): void
+                public setParent(p: javax.swing.text.View): void
                 /**
                  * Provides a mapping from the coordinate space of the model to
                  * that of the view.
@@ -158,7 +158,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
             }
         }
     }

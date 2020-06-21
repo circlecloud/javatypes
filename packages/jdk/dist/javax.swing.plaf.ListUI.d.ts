@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Hans Muller
              */
             // @ts-ignore
-            class ListUI extends javax.swing.plaf.ComponentUI {
+            abstract class ListUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
                 /**
@@ -21,7 +21,7 @@ declare namespace javax {
                  * @throws NullPointerException if {#code location} is null
                  */
                 // @ts-ignore
-                abstract locationToIndex(list: javax.swing.JList, location: java.awt.Point): int
+                public abstract locationToIndex(list: javax.swing.JList<any>, location: java.awt.Point): number /*int*/
                 /**
                  * Returns the origin in the given {@code JList}, of the specified item,
                  * in the list's coordinate system.
@@ -31,7 +31,7 @@ declare namespace javax {
                  * @return the origin of the cell, or {#code null}
                  */
                 // @ts-ignore
-                abstract indexToLocation(list: javax.swing.JList, index: number /*int*/): java.awt.Point
+                public abstract indexToLocation(list: javax.swing.JList<any>, index: number /*int*/): java.awt.Point
                 /**
                  * Returns the bounding rectangle, in the given list's coordinate system,
                  * for the range of cells specified by the two indices.
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @return the bounding rectangle for the range of cells, or {#code null}
                  */
                 // @ts-ignore
-                abstract getCellBounds(list: javax.swing.JList, index1: number /*int*/, index2: number /*int*/): java.awt.Rectangle
+                public abstract getCellBounds(list: javax.swing.JList<any>, index1: number /*int*/, index2: number /*int*/): java.awt.Rectangle
             }
         }
     }

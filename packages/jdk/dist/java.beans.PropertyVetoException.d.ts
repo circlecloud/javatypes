@@ -13,7 +13,7 @@ declare namespace java {
              * @param evt A PropertyChangeEvent describing the vetoed change.
              */
             // @ts-ignore
-            constructor(mess: string, evt: java.beans.PropertyChangeEvent)
+            constructor(mess: java.lang.String | string, evt: java.beans.PropertyChangeEvent)
             /**
              * Gets the vetoed <code>PropertyChangeEvent</code>.
              * @return A PropertyChangeEvent describing the vetoed change.

@@ -52,7 +52,7 @@ declare namespace javax {
                  *  is defined.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
             }
         }
     }

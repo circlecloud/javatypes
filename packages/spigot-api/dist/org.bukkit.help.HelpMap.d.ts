@@ -22,13 +22,13 @@ declare namespace org {
                  *      none can be found.
                  */
                 // @ts-ignore
-                getHelpTopic(topicName: string): org.bukkit.help.HelpTopic
+                getHelpTopic(topicName: java.lang.String | string): org.bukkit.help.HelpTopic
                 /**
                  * Returns a collection of all the registered help topics.
                  * @return All the registered help topics.
                  */
                 // @ts-ignore
-                getHelpTopics(): java.util.Collection<org.bukkit.help.HelpTopic>
+                getHelpTopics(): Array<org.bukkit.help.HelpTopic>
                 /**
                  * Adds a topic to the server's help index.
                  * @param topic The new help topic to add.
@@ -69,7 +69,7 @@ declare namespace org {
                  * @return A list of plugins that should be excluded from the help index.
                  */
                 // @ts-ignore
-                getIgnoredPlugins(): java.util.List<java.lang.String>
+                getIgnoredPlugins(): Array<java.lang.String | string>
             }
         }
     }

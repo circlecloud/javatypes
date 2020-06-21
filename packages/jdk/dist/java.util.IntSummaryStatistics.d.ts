@@ -44,50 +44,50 @@ declare namespace java {
              * @param value the input value
              */
             // @ts-ignore
-            accept(value: number /*int*/): void
+            public accept(value: number /*int*/): void
             /**
              * Combines the state of another {@code IntSummaryStatistics} into this one.
              * @param other another {#code IntSummaryStatistics}
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            combine(other: java.util.IntSummaryStatistics): void
+            public combine(other: java.util.IntSummaryStatistics): void
             /**
              * Returns the count of values recorded.
              * @return the count of values
              */
             // @ts-ignore
-            getCount(): long
+            public getCount(): number /*long*/
             /**
              * Returns the sum of values recorded, or zero if no values have been
              * recorded.
              * @return the sum of values, or zero if none
              */
             // @ts-ignore
-            getSum(): long
+            public getSum(): number /*long*/
             /**
              * Returns the minimum value recorded, or {@code Integer.MAX_VALUE} if no
              * values have been recorded.
              * @return the minimum value, or {#code Integer.MAX_VALUE} if none
              */
             // @ts-ignore
-            getMin(): int
+            public getMin(): number /*int*/
             /**
              * Returns the maximum value recorded, or {@code Integer.MIN_VALUE} if no
              * values have been recorded.
              * @return the maximum value, or {#code Integer.MIN_VALUE} if none
              */
             // @ts-ignore
-            getMax(): int
+            public getMax(): number /*int*/
             /**
              * Returns the arithmetic mean of values recorded, or zero if no values have been
              * recorded.
              * @return the arithmetic mean of values, or zero if none
              */
             // @ts-ignore
-            getAverage(): double
+            public getAverage(): number /*double*/
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

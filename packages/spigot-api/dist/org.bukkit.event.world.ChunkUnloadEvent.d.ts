@@ -16,17 +16,17 @@ declare namespace org {
                      * @return chunk save status
                      */
                     // @ts-ignore
-                    isSaveChunk(): boolean
+                    public isSaveChunk(): boolean
                     /**
                      * Set whether this chunk will be saved to disk.
                      * @param saveChunk chunk save status
                      */
                     // @ts-ignore
-                    setSaveChunk(saveChunk: boolean): void
+                    public setSaveChunk(saveChunk: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

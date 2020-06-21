@@ -26,23 +26,23 @@ declare namespace org {
                  * @return size
                  */
                 // @ts-ignore
-                getSize(): org.bukkit.material.CocoaPlant.CocoaPlantSize
+                public getSize(): org.bukkit.material.CocoaPlant.CocoaPlantSize
                 /**
                  * Set size of plant
                  * @param sz - size of plant
                  */
                 // @ts-ignore
-                setSize(sz: org.bukkit.material.CocoaPlant.CocoaPlantSize): void
+                public setSize(sz: org.bukkit.material.CocoaPlant.CocoaPlantSize): void
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                clone(): org.bukkit.material.CocoaPlant
+                public clone(): org.bukkit.material.CocoaPlant
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

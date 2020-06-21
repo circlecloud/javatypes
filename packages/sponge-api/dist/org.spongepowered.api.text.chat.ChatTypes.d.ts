@@ -14,19 +14,19 @@ declare namespace org {
                          * etc. bars.
                          */
                         // @ts-ignore
-                        readonly ACTION_BAR: org.spongepowered.api.text.chat.ChatType
+                        public static readonly ACTION_BAR: org.spongepowered.api.text.chat.ChatType
                         /**
                          * The standard chat position in prompt at the bottom-left.
                          */
                         // @ts-ignore
-                        readonly CHAT: org.spongepowered.api.text.chat.ChatType
+                        public static readonly CHAT: org.spongepowered.api.text.chat.ChatType
                         /**
                          * The same position as the {@link #CHAT} position, except messages sent to
                          * this position are still seen when chat is turned off on the Minecraft
                          * client.
                          */
                         // @ts-ignore
-                        readonly SYSTEM: org.spongepowered.api.text.chat.ChatType
+                        public static readonly SYSTEM: org.spongepowered.api.text.chat.ChatType
                     }
                 }
             }

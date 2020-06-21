@@ -21,7 +21,7 @@ declare namespace org {
                  * @see java.text.NumberFormat
                  */
                 // @ts-ignore
-                class NumberFormat implements java.lang.annotation.Annotation {
+                abstract class NumberFormat implements java.lang.annotation.Annotation {
                 }
             }
         }

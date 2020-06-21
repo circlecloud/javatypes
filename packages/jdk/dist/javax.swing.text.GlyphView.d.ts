@@ -41,19 +41,19 @@ declare namespace javax {
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
                 /**
                  * Fetch the currently installed glyph painter.
                  * If a painter has not yet been installed, and
                  * a default was not yet needed, null is returned.
                  */
                 // @ts-ignore
-                getGlyphPainter(): javax.swing.text.GlyphView.GlyphPainter
+                public getGlyphPainter(): javax.swing.text.GlyphView.GlyphPainter
                 /**
                  * Sets the painter to use for rendering glyphs.
                  */
                 // @ts-ignore
-                setGlyphPainter(p: javax.swing.text.GlyphView.GlyphPainter): void
+                public setGlyphPainter(p: javax.swing.text.GlyphView.GlyphPainter): void
                 /**
                  * Fetch a reference to the text that occupies
                  * the given range.  This is normally used by
@@ -64,7 +64,7 @@ declare namespace javax {
                  * @return the <code>Segment</code> containing the text
                  */
                 // @ts-ignore
-                getText(p0: number /*int*/, p1: number /*int*/): javax.swing.text.Segment
+                public getText(p0: number /*int*/, p1: number /*int*/): javax.swing.text.Segment
                 /**
                  * Fetch the background color to use to render the
                  * glyphs.  If there is no background color, null should
@@ -73,7 +73,7 @@ declare namespace javax {
                  * document is a styled document, otherwise it returns null.
                  */
                 // @ts-ignore
-                getBackground(): java.awt.Color
+                public getBackground(): java.awt.Color
                 /**
                  * Fetch the foreground color to use to render the
                  * glyphs.  If there is no foreground color, null should
@@ -85,7 +85,7 @@ declare namespace javax {
                  * is returned.
                  */
                 // @ts-ignore
-                getForeground(): java.awt.Color
+                public getForeground(): java.awt.Color
                 /**
                  * Fetch the font that the glyphs should be based
                  * upon.  This is implemented to call
@@ -96,35 +96,35 @@ declare namespace javax {
                  * is returned.
                  */
                 // @ts-ignore
-                getFont(): java.awt.Font
+                public getFont(): java.awt.Font
                 /**
                  * Determine if the glyphs should be underlined.  If true,
                  * an underline should be drawn through the baseline.
                  */
                 // @ts-ignore
-                isUnderline(): boolean
+                public isUnderline(): boolean
                 /**
                  * Determine if the glyphs should have a strikethrough
                  * line.  If true, a line should be drawn through the center
                  * of the glyphs.
                  */
                 // @ts-ignore
-                isStrikeThrough(): boolean
+                public isStrikeThrough(): boolean
                 /**
                  * Determine if the glyphs should be rendered as superscript.
                  */
                 // @ts-ignore
-                isSubscript(): boolean
+                public isSubscript(): boolean
                 /**
                  * Determine if the glyphs should be rendered as subscript.
                  */
                 // @ts-ignore
-                isSuperscript(): boolean
+                public isSuperscript(): boolean
                 /**
                  * Fetch the TabExpander to use if tabs are present in this view.
                  */
                 // @ts-ignore
-                getTabExpander(): javax.swing.text.TabExpander
+                public getTabExpander(): javax.swing.text.TabExpander
                 /**
                  * Check to see that a glyph painter exists.  If a painter
                  * doesn't exist, a default glyph painter will be installed.
@@ -141,7 +141,7 @@ declare namespace javax {
                  * @see TabableView#getTabbedSpan
                  */
                 // @ts-ignore
-                getTabbedSpan(x: number /*float*/, e: javax.swing.text.TabExpander): float
+                public getTabbedSpan(x: number /*float*/, e: javax.swing.text.TabExpander): number /*float*/
                 /**
                  * Determines the span along the same axis as tab
                  * expansion for a portion of the view.  This is
@@ -161,28 +161,28 @@ declare namespace javax {
                  * @return the span &gt;= 0
                  */
                 // @ts-ignore
-                getPartialSpan(p0: number /*int*/, p1: number /*int*/): float
+                public getPartialSpan(p0: number /*int*/, p1: number /*int*/): number /*float*/
                 /**
                  * Fetches the portion of the model that this view is responsible for.
                  * @return the starting offset into the model
                  * @see View#getStartOffset
                  */
                 // @ts-ignore
-                getStartOffset(): int
+                public getStartOffset(): number /*int*/
                 /**
                  * Fetches the portion of the model that this view is responsible for.
                  * @return the ending offset into the model
                  * @see View#getEndOffset
                  */
                 // @ts-ignore
-                getEndOffset(): int
+                public getEndOffset(): number /*int*/
                 /**
                  * Renders a portion of a text style run.
                  * @param g the rendering surface to use
                  * @param a the allocated region to render into
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Determines the minimum span for this view along an axis.
                  * <p>This implementation returns the longest non-breakable area within
@@ -193,7 +193,7 @@ declare namespace javax {
                  * @see javax.swing.text.View#getMinimumSpan
                  */
                 // @ts-ignore
-                getMinimumSpan(axis: number /*int*/): float
+                public getMinimumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the preferred span for this view along an
                  * axis.
@@ -204,7 +204,7 @@ declare namespace javax {
                  *            The parent may choose to resize or break the view.
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the desired alignment for this view along an
                  * axis.  For the label, the alignment is along the font
@@ -218,7 +218,7 @@ declare namespace javax {
                  *    center of the view.
                  */
                 // @ts-ignore
-                getAlignment(axis: number /*int*/): float
+                public getAlignment(axis: number /*int*/): number /*float*/
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -232,7 +232,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -247,7 +247,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, biasReturn: javax.swing.text.Position.Bias[]): int
+                public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, biasReturn: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Determines how attractive a break opportunity in
                  * this view is.  This can be used for determining which
@@ -291,7 +291,7 @@ declare namespace javax {
                  * @see View#ForcedBreakWeight
                  */
                 // @ts-ignore
-                getBreakWeight(axis: number /*int*/, pos: number /*float*/, len: number /*float*/): int
+                public getBreakWeight(axis: number /*int*/, pos: number /*float*/, len: number /*float*/): number /*int*/
                 /**
                  * Breaks this view on the given axis at the given length.
                  * This is implemented to attempt to break on a whitespace
@@ -313,7 +313,7 @@ declare namespace javax {
                  * @see View#breakView
                  */
                 // @ts-ignore
-                breakView(axis: number /*int*/, p0: number /*int*/, pos: number /*float*/, len: number /*float*/): javax.swing.text.View
+                public breakView(axis: number /*int*/, p0: number /*int*/, pos: number /*float*/, len: number /*float*/): javax.swing.text.View
                 /**
                  * Creates a view that represents a portion of the element.
                  * This is potentially useful during formatting operations
@@ -335,7 +335,7 @@ declare namespace javax {
                  * @see LabelView
                  */
                 // @ts-ignore
-                createFragment(p0: number /*int*/, p1: number /*int*/): javax.swing.text.View
+                public createFragment(p0: number /*int*/, p1: number /*int*/): javax.swing.text.View
                 /**
                  * Provides a way to determine the next visually represented model
                  * location that one might place a caret.  Some views may not be
@@ -359,7 +359,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid direction
                  */
                 // @ts-ignore
-                getNextVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                public getNextVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Gives notification that something was inserted into
                  * the document in a location that this view is responsible for.
@@ -371,7 +371,7 @@ declare namespace javax {
                  * @see View#insertUpdate
                  */
                 // @ts-ignore
-                insertUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public insertUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification that something was removed from the document
                  * in a location that this view is responsible for.
@@ -383,7 +383,7 @@ declare namespace javax {
                  * @see View#removeUpdate
                  */
                 // @ts-ignore
-                removeUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public removeUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification from the document that attributes were changed
                  * in a location that this view is responsible for.
@@ -395,7 +395,7 @@ declare namespace javax {
                  * @see View#changedUpdate
                  */
                 // @ts-ignore
-                changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
             }
         }
     }

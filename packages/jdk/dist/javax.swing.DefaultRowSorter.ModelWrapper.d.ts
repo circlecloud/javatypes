@@ -23,7 +23,7 @@ declare namespace javax {
              * @see RowFilter.Entry
              */
             // @ts-ignore
-            class ModelWrapper<M, I> extends java.lang.Object {
+            abstract class ModelWrapper<M, I> extends java.lang.Object {
                 /**
                  * Creates a new <code>ModelWrapper</code>.
                  */
@@ -35,19 +35,19 @@ declare namespace javax {
                  * @return the underlying model
                  */
                 // @ts-ignore
-                abstract getModel(): M
+                public abstract getModel(): M
                 /**
                  * Returns the number of columns in the model.
                  * @return the number of columns in the model
                  */
                 // @ts-ignore
-                abstract getColumnCount(): int
+                public abstract getColumnCount(): number /*int*/
                 /**
                  * Returns the number of rows in the model.
                  * @return the number of rows in the model
                  */
                 // @ts-ignore
-                abstract getRowCount(): int
+                public abstract getRowCount(): number /*int*/
                 /**
                  * Returns the value at the specified index.
                  * @param row the row index
@@ -57,7 +57,7 @@ declare namespace javax {
                  *          the range of the model
                  */
                 // @ts-ignore
-                abstract getValueAt(row: number /*int*/, column: number /*int*/): java.lang.Object
+                public abstract getValueAt(row: number /*int*/, column: number /*int*/): any
                 /**
                  * Returns the value as a <code>String</code> at the specified
                  * index.  This implementation uses <code>toString</code> on
@@ -71,7 +71,7 @@ declare namespace javax {
                  *          the range of the model
                  */
                 // @ts-ignore
-                getStringValueAt(row: number /*int*/, column: number /*int*/): java.lang.String
+                public getStringValueAt(row: number /*int*/, column: number /*int*/): string
                 /**
                  * Returns the identifier for the specified row.  The return value
                  * of this is used as the identifier for the
@@ -83,7 +83,7 @@ declare namespace javax {
                  * @see RowFilter.Entry#getIdentifier
                  */
                 // @ts-ignore
-                abstract getIdentifier(row: number /*int*/): I
+                public abstract getIdentifier(row: number /*int*/): I
             }
         }
     }

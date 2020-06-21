@@ -38,7 +38,7 @@ declare namespace org {
                          *          data about this plugin
                          */
                         // @ts-ignore
-                        areMetricsEnabled(plugin: any): boolean
+                        areMetricsEnabled(plugin: java.lang.Object | any): boolean
                         /**
                          * Gets the current <em>global</em> state of collection. The collection state determines
                          * how data collection should be handled.

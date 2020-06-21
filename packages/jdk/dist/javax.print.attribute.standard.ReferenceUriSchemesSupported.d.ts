@@ -46,47 +46,47 @@ declare namespace javax {
                      * File Transfer Protocol (FTP).
                      */
                     // @ts-ignore
-                    readonly FTP: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly FTP: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * HyperText Transfer Protocol (HTTP).
                      */
                     // @ts-ignore
-                    readonly HTTP: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly HTTP: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * Secure HyperText Transfer Protocol (HTTPS).
                      */
                     // @ts-ignore
-                    readonly HTTPS: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly HTTPS: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * Gopher Protocol.
                      */
                     // @ts-ignore
-                    readonly GOPHER: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly GOPHER: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * USENET news.
                      */
                     // @ts-ignore
-                    readonly NEWS: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly NEWS: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * USENET news using Network News Transfer Protocol (NNTP).
                      */
                     // @ts-ignore
-                    readonly NNTP: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly NNTP: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * Wide Area Information Server (WAIS) protocol.
                      */
                     // @ts-ignore
-                    readonly WAIS: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly WAIS: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * Host-specific file names.
                      */
                     // @ts-ignore
-                    readonly FILE: javax.print.attribute.standard.ReferenceUriSchemesSupported
+                    public static readonly FILE: javax.print.attribute.standard.ReferenceUriSchemesSupported
                     /**
                      * Returns the string table for class ReferenceUriSchemesSupported.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class
                      * ReferenceUriSchemesSupported.
@@ -103,7 +103,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -114,7 +114,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

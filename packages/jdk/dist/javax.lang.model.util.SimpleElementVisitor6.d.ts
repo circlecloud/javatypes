@@ -88,7 +88,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPackage(e: javax.lang.model.element.PackageElement, p: P): R
+                    public visitPackage(e: javax.lang.model.element.PackageElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param e {#inheritDoc}
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitType(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitType(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * {@inheritDoc}
                      * This implementation calls {@code defaultAction}, unless the
@@ -107,7 +107,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction} or {@code visitUnknown}
                      */
                     // @ts-ignore
-                    visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param e {#inheritDoc}
@@ -115,7 +115,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitExecutable(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutable(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param e {#inheritDoc}
@@ -123,7 +123,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitTypeParameter(e: javax.lang.model.element.TypeParameterElement, p: P): R
+                    public visitTypeParameter(e: javax.lang.model.element.TypeParameterElement, p: P): R
                 }
             }
         }

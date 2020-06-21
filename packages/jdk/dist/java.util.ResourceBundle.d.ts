@@ -198,7 +198,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class ResourceBundle extends java.lang.Object {
+        abstract class ResourceBundle extends java.lang.Object {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -223,7 +223,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getBaseBundleName(): java.lang.String
+            public getBaseBundleName(): string
             /**
              * Gets a string for the given key from this resource bundle or one of its parents.
              * Calling this method is equivalent to calling
@@ -237,7 +237,7 @@ declare namespace java {
              * @return the string for the given key
              */
             // @ts-ignore
-            getString(key: string): java.lang.String
+            public getString(key: java.lang.String | string): string
             /**
              * Gets a string array for the given key from this resource bundle or one of its parents.
              * Calling this method is equivalent to calling
@@ -251,7 +251,7 @@ declare namespace java {
              * @return the string array for the given key
              */
             // @ts-ignore
-            getStringArray(key: string): java.lang.String[]
+            public getStringArray(key: java.lang.String | string): string[]
             /**
              * Gets an object for the given key from this resource bundle or one of its parents.
              * This method first tries to obtain the object from this resource bundle using
@@ -265,7 +265,7 @@ declare namespace java {
              * @return the object for the given key
              */
             // @ts-ignore
-            getObject(key: string): java.lang.Object
+            public getObject(key: java.lang.String | string): any
             /**
              * Returns the locale of this resource bundle. This method can be used after a
              * call to getBundle() to determine whether the resource bundle returned really
@@ -273,7 +273,7 @@ declare namespace java {
              * @return the locale of this resource bundle
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Sets the parent bundle of this bundle.
              * The parent bundle is searched by {@link #getObject getObject}
@@ -300,7 +300,7 @@ declare namespace java {
              * @return a resource bundle for the given base name and the default locale
              */
             // @ts-ignore
-            getBundle(baseName: string): java.util.ResourceBundle
+            public static getBundle(baseName: java.lang.String | string): java.util.ResourceBundle
             /**
              * Returns a resource bundle using the specified base name, the
              * default locale and the specified control. Calling this method
@@ -335,7 +335,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getBundle(baseName: string, control: java.util.ResourceBundle.Control): java.util.ResourceBundle
+            public static getBundle(baseName: java.lang.String | string, control: java.util.ResourceBundle.Control): java.util.ResourceBundle
             /**
              * Gets a resource bundle using the specified base name and locale,
              * and the caller's class loader. Calling this method is equivalent to calling
@@ -357,7 +357,7 @@ declare namespace java {
              * @return a resource bundle for the given base name and locale
              */
             // @ts-ignore
-            getBundle(baseName: string, locale: java.util.Locale): java.util.ResourceBundle
+            public static getBundle(baseName: java.lang.String | string, locale: java.util.Locale): java.util.ResourceBundle
             /**
              * Returns a resource bundle using the specified base name, target
              * locale and control, and the caller's class loader. Calling this
@@ -395,7 +395,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getBundle(baseName: string, targetLocale: java.util.Locale, control: java.util.ResourceBundle.Control): java.util.ResourceBundle
+            public static getBundle(baseName: java.lang.String | string, targetLocale: java.util.Locale, control: java.util.ResourceBundle.Control): java.util.ResourceBundle
             /**
              * Gets a resource bundle using the specified base name, locale, and class
              * loader.
@@ -552,7 +552,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBundle(baseName: string, locale: java.util.Locale, loader: java.lang.ClassLoader): java.util.ResourceBundle
+            public static getBundle(baseName: java.lang.String | string, locale: java.util.Locale, loader: java.lang.ClassLoader): java.util.ResourceBundle
             /**
              * Returns a resource bundle using the specified base name, target
              * locale, class loader and control. Unlike the {@linkplain
@@ -745,7 +745,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getBundle(baseName: string, targetLocale: java.util.Locale, loader: java.lang.ClassLoader, control: java.util.ResourceBundle.Control): java.util.ResourceBundle
+            public static getBundle(baseName: java.lang.String | string, targetLocale: java.util.Locale, loader: java.lang.ClassLoader, control: java.util.ResourceBundle.Control): java.util.ResourceBundle
             /**
              * Removes all resource bundles from the cache that have been loaded
              * using the caller's class loader.
@@ -753,7 +753,7 @@ declare namespace java {
              * @see ResourceBundle.Control#getTimeToLive(String,Locale)
              */
             // @ts-ignore
-            clearCache(): void
+            public static clearCache(): void
             /**
              * Removes all resource bundles from the cache that have been loaded
              * using the given class loader.
@@ -763,7 +763,7 @@ declare namespace java {
              * @see ResourceBundle.Control#getTimeToLive(String,Locale)
              */
             // @ts-ignore
-            clearCache(loader: java.lang.ClassLoader): void
+            public static clearCache(loader: java.lang.ClassLoader): void
             /**
              * Gets an object for the given key from this resource bundle.
              * Returns null if this resource bundle does not contain an
@@ -773,14 +773,14 @@ declare namespace java {
              * @return the object for the given key, or null
              */
             // @ts-ignore
-            abstract handleGetObject(key: string): java.lang.Object
+            abstract handleGetObject(key: java.lang.String | string): any
             /**
              * Returns an enumeration of the keys.
              * @return an <code>Enumeration</code> of the keys contained in
              *          this <code>ResourceBundle</code> and its parent bundles.
              */
             // @ts-ignore
-            abstract getKeys(): java.util.Enumeration<java.lang.String>
+            public abstract getKeys(): java.util.Enumeration<java.lang.String | string>
             /**
              * Determines whether the given <code>key</code> is contained in
              * this <code>ResourceBundle</code> or its parent bundles.
@@ -794,7 +794,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            containsKey(key: string): boolean
+            public containsKey(key: java.lang.String | string): boolean
             /**
              * Returns a <code>Set</code> of all keys contained in this
              * <code>ResourceBundle</code> and its parent bundles.
@@ -803,7 +803,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            keySet(): java.util.Set<java.lang.String>
+            public keySet(): Array<java.lang.String | string>
             /**
              * Returns a <code>Set</code> of the keys contained <em>only</em>
              * in this <code>ResourceBundle</code>.
@@ -820,7 +820,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            handleKeySet(): java.util.Set<java.lang.String>
+            handleKeySet(): Array<java.lang.String | string>
         }
     }
 }

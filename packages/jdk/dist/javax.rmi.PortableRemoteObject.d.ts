@@ -30,7 +30,7 @@ declare namespace javax {
              * @exception RemoteException if export fails.
              */
             // @ts-ignore
-            exportObject(obj: java.rmi.Remote): void
+            public static exportObject(obj: java.rmi.Remote): void
             /**
              * Returns a stub for the given server object.
              * @param obj the server object for which a stub is required. Must either be a subclass
@@ -40,7 +40,7 @@ declare namespace javax {
              * @exception NoSuchObjectException if a stub cannot be located for the given server object.
              */
             // @ts-ignore
-            toStub(obj: java.rmi.Remote): java.rmi.Remote
+            public static toStub(obj: java.rmi.Remote): java.rmi.Remote
             /**
              * Deregisters a server object from the runtime, allowing the object to become
              * available for garbage collection.
@@ -49,7 +49,7 @@ declare namespace javax {
              *  currently exported.
              */
             // @ts-ignore
-            unexportObject(obj: java.rmi.Remote): void
+            public static unexportObject(obj: java.rmi.Remote): void
             /**
              * Checks to ensure that an object of a remote or abstract interface type
              * can be cast to a desired type.
@@ -59,7 +59,7 @@ declare namespace javax {
              * @throws ClassCastException if narrowFrom cannot be cast to narrowTo.
              */
             // @ts-ignore
-            narrow(narrowFrom: any, narrowTo: java.lang.Class): java.lang.Object
+            public static narrow(narrowFrom: java.lang.Object | any, narrowTo: java.lang.Class<any>): any
             /**
              * Makes a Remote object ready for remote communication. This normally
              * happens implicitly when the object is sent or received as an argument
@@ -73,7 +73,7 @@ declare namespace javax {
              *  <code>source</code>.
              */
             // @ts-ignore
-            connect(target: java.rmi.Remote, source: java.rmi.Remote): void
+            public static connect(target: java.rmi.Remote, source: java.rmi.Remote): void
         }
     }
 }

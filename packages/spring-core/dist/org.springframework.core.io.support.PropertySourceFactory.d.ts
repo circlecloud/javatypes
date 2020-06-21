@@ -21,7 +21,7 @@ declare namespace org {
                          * @throws IOException if resource resolution failed
                          */
                         // @ts-ignore
-                        createPropertySource(name: string, resource: org.springframework.core.io.support.EncodedResource): org.springframework.core.env.PropertySource<?>
+                        createPropertySource(name: java.lang.String | string, resource: org.springframework.core.io.support.EncodedResource): org.springframework.core.env.PropertySource<any>
                     }
                 }
             }

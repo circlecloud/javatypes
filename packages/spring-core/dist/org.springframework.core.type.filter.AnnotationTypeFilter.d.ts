@@ -29,7 +29,7 @@ declare namespace org {
                          * @param annotationType the annotation type to match
                          */
                         // @ts-ignore
-                        constructor(annotationType: java.lang.Class<java.lang.annotation.Annotation>)
+                        constructor(annotationType: java.lang.Class<any>)
                         /**
                          * Create a new {@code AnnotationTypeFilter} for the given annotation type.
                          * <p>The filter will not match interfaces.
@@ -37,7 +37,7 @@ declare namespace org {
                          * @param considerMetaAnnotations whether to also match on meta-annotations
                          */
                         // @ts-ignore
-                        constructor(annotationType: java.lang.Class<java.lang.annotation.Annotation>, considerMetaAnnotations: boolean)
+                        constructor(annotationType: java.lang.Class<any>, considerMetaAnnotations: boolean)
                         /**
                          * Create a new {@code AnnotationTypeFilter} for the given annotation type.
                          * @param annotationType the annotation type to match
@@ -45,22 +45,22 @@ declare namespace org {
                          * @param considerInterfaces whether to also match interfaces
                          */
                         // @ts-ignore
-                        constructor(annotationType: java.lang.Class<java.lang.annotation.Annotation>, considerMetaAnnotations: boolean, considerInterfaces: boolean)
+                        constructor(annotationType: java.lang.Class<any>, considerMetaAnnotations: boolean, considerInterfaces: boolean)
                         /**
                          * Return the {@link Annotation} that this instance is using to filter
                          * candidates.
                          * @since 5.0
                          */
                         // @ts-ignore
-                        getAnnotationType(): java.lang.Class<? extends java.lang.annotation.Annotation>
+                        public getAnnotationType(): java.lang.Class<any>
                         // @ts-ignore
                         matchSelf(metadataReader: org.springframework.core.type.classreading.MetadataReader): boolean
                         // @ts-ignore
-                        matchSuperClass(superClassName: string): java.lang.Boolean
+                        matchSuperClass(superClassName: java.lang.String | string): java.lang.Boolean
                         // @ts-ignore
-                        matchInterface(interfaceName: string): java.lang.Boolean
+                        matchInterface(interfaceName: java.lang.String | string): java.lang.Boolean
                         // @ts-ignore
-                        hasAnnotation(typeName: string): java.lang.Boolean
+                        hasAnnotation(typeName: java.lang.String | string): java.lang.Boolean
                     }
                 }
             }

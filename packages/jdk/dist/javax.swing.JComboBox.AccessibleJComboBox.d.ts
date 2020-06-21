@@ -16,7 +16,7 @@ declare namespace javax {
              * Please see {@link java.beans.XMLEncoder}.
              */
             // @ts-ignore
-            class E>.AccessibleJComboBox extends javax.swing.JComponent.AccessibleJComponent implements javax.accessibility.AccessibleAction, javax.accessibility.AccessibleSelection {
+            class AccessibleJComboBox extends javax.swing.JComponent.AccessibleJComponent implements javax.accessibility.AccessibleAction, javax.accessibility.AccessibleSelection {
                 /**
                  * Returns an AccessibleJComboBox instance
                  * @since 1.4
@@ -30,7 +30,7 @@ declare namespace javax {
                  * @return the number of accessible children in the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the nth Accessible child of the object.
                  * The child at index zero represents the popup.
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -48,7 +48,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Gets the state set of this object.  The AccessibleStateSet of
                  * an object is composed of a set of unique AccessibleStates.
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @see #addPropertyChangeListener
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Get the AccessibleAction associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -71,27 +71,27 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleAction(): javax.accessibility.AccessibleAction
+                public getAccessibleAction(): javax.accessibility.AccessibleAction
                 /**
                  * Return a description of the specified action of the object.
                  * @param i zero-based index of the actions
                  */
                 // @ts-ignore
-                getAccessibleActionDescription(i: number /*int*/): java.lang.String
+                public getAccessibleActionDescription(i: number /*int*/): string
                 /**
                  * Returns the number of Actions available in this object.  The
                  * default behavior of a combo box is to have one action.
                  * @return 1, the number of Actions in this object
                  */
                 // @ts-ignore
-                getAccessibleActionCount(): int
+                public getAccessibleActionCount(): number /*int*/
                 /**
                  * Perform the specified Action on the object
                  * @param i zero-based index of actions
                  * @return true if the the action was performed; else false.
                  */
                 // @ts-ignore
-                doAccessibleAction(i: number /*int*/): boolean
+                public doAccessibleAction(i: number /*int*/): boolean
                 /**
                  * Get the AccessibleSelection associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -100,7 +100,7 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                 /**
                  * Returns the number of Accessible children currently selected.
                  * If no children are selected, the return value will be 0.
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleSelectionCount(): int
+                public getAccessibleSelectionCount(): number /*int*/
                 /**
                  * Returns an Accessible representing the specified selected child
                  * in the popup.  If there isn't a selection, or there are
@@ -122,7 +122,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Determines if the current child of this object is selected.
                  * @return true if the current child of this object is selected;
@@ -133,7 +133,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isAccessibleChildSelected(i: number /*int*/): boolean
+                public isAccessibleChildSelected(i: number /*int*/): boolean
                 /**
                  * Adds the specified Accessible child of the object to the object's
                  * selection.  If the object supports multiple selections,
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                addAccessibleSelection(i: number /*int*/): void
+                public addAccessibleSelection(i: number /*int*/): void
                 /**
                  * Removes the specified child of the object from the object's
                  * selection.  If the specified item isn't currently selected, this
@@ -155,21 +155,21 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                removeAccessibleSelection(i: number /*int*/): void
+                public removeAccessibleSelection(i: number /*int*/): void
                 /**
                  * Clears the selection in the object, so that no children in the
                  * object are selected.
                  * @since 1.3
                  */
                 // @ts-ignore
-                clearAccessibleSelection(): void
+                public clearAccessibleSelection(): void
                 /**
                  * Causes every child of the object to be selected
                  * if the object supports multiple selections.
                  * @since 1.3
                  */
                 // @ts-ignore
-                selectAllAccessibleSelection(): void
+                public selectAllAccessibleSelection(): void
             }
         }
     }

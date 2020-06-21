@@ -16,37 +16,37 @@ declare namespace org {
                      * @return the replenished recipe
                      */
                     // @ts-ignore
-                    getRecipe(): org.bukkit.inventory.MerchantRecipe
+                    public getRecipe(): org.bukkit.inventory.MerchantRecipe
                     /**
                      * Set the recipe to replenish.
                      * @param recipe the replenished recipe
                      */
                     // @ts-ignore
-                    setRecipe(recipe: org.bukkit.inventory.MerchantRecipe): void
+                    public setRecipe(recipe: org.bukkit.inventory.MerchantRecipe): void
                     /**
                      * Get the bonus uses added. The maximum uses of the recipe will be
                      * increased by this number.
                      * @return the extra uses added
                      */
                     // @ts-ignore
-                    getBonus(): int
+                    public getBonus(): number /*int*/
                     /**
                      * Set the bonus uses added.
                      * @param bonus the extra uses added
                      * @see VillagerReplenishTradeEvent#getBonus()
                      */
                     // @ts-ignore
-                    setBonus(bonus: number /*int*/): void
+                    public setBonus(bonus: number /*int*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.AbstractVillager
+                    public getEntity(): org.bukkit.entity.AbstractVillager
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

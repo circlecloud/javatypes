@@ -14,7 +14,7 @@ declare namespace org {
                             // @ts-ignore
                             with(value: java.util.Optional<E>): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<E>
                             // @ts-ignore
-                            transform(func: java.util.function.Function<java.util.Optional<E>, java.util.Optional<E>> | java.util.function$.Function<java.util.Optional<E>, java.util.Optional<E>>): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<E>
+                            transform(func: java.util.function$.Function<java.util.Optional<E>, java.util.Optional<E>>): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<E>
                             /**
                              * Creates a new {@link ImmutableOptionalValue} with the provided value,
                              * may be null.

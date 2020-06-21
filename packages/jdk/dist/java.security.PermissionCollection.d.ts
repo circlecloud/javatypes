@@ -56,7 +56,7 @@ declare namespace java {
          * @author Roland Schemers
          */
         // @ts-ignore
-        class PermissionCollection extends java.lang.Object implements java.io.Serializable {
+        abstract class PermissionCollection extends java.lang.Object implements java.io.Serializable {
             // @ts-ignore
             constructor()
             /**
@@ -69,7 +69,7 @@ declare namespace java {
              *                 is not of the correct type.
              */
             // @ts-ignore
-            abstract add(permission: java.security.Permission): void
+            public abstract add(permission: java.security.Permission): void
             /**
              * Checks to see if the specified permission is implied by
              * the collection of Permission objects held in this PermissionCollection.
@@ -78,13 +78,13 @@ declare namespace java {
              *  the collection, false if not.
              */
             // @ts-ignore
-            abstract implies(permission: java.security.Permission): boolean
+            public abstract implies(permission: java.security.Permission): boolean
             /**
              * Returns an enumeration of all the Permission objects in the collection.
              * @return an enumeration of all the Permissions.
              */
             // @ts-ignore
-            abstract elements(): java.util.Enumeration<java.security.Permission>
+            public abstract elements(): java.util.Enumeration<java.security.Permission>
             /**
              * Marks this PermissionCollection object as "readonly". After
              * a PermissionCollection object
@@ -92,7 +92,7 @@ declare namespace java {
              * using {@code add}.
              */
             // @ts-ignore
-            setReadOnly(): void
+            public setReadOnly(): void
             /**
              * Returns true if this PermissionCollection object is marked as readonly.
              * If it is readonly, no new Permission objects can be added to it
@@ -103,7 +103,7 @@ declare namespace java {
              *  false otherwise.
              */
             // @ts-ignore
-            isReadOnly(): boolean
+            public isReadOnly(): boolean
             /**
              * Returns a string describing this PermissionCollection object,
              * providing information about all the permissions it contains.
@@ -124,7 +124,7 @@ declare namespace java {
              *          as described above.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

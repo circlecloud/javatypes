@@ -8,9 +8,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(t: javax.swing.JToolBar)
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

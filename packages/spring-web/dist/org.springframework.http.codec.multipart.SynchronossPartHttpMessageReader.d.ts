@@ -34,13 +34,13 @@ declare namespace org {
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        setMaxInMemorySize(byteCount: number /*int*/): void
+                        public setMaxInMemorySize(byteCount: number /*int*/): void
                         /**
                          * Get the {@link #setMaxInMemorySize configured} maximum in-memory size.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getMaxInMemorySize(): int
+                        public getMaxInMemorySize(): number /*int*/
                         /**
                          * Configure the maximum amount of disk space allowed for file parts.
                          * <p>By default this is set to -1.
@@ -48,33 +48,33 @@ declare namespace org {
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        setMaxDiskUsagePerPart(maxDiskUsagePerPart: number /*long*/): void
+                        public setMaxDiskUsagePerPart(maxDiskUsagePerPart: number /*long*/): void
                         /**
                          * Get the {@link #setMaxDiskUsagePerPart configured} maximum disk usage.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getMaxDiskUsagePerPart(): long
+                        public getMaxDiskUsagePerPart(): number /*long*/
                         /**
                          * Specify the maximum number of parts allowed in a given multipart request.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        setMaxParts(maxParts: number /*int*/): void
+                        public setMaxParts(maxParts: number /*int*/): void
                         /**
                          * Return the {@link #setMaxParts configured} limit on the number of parts.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getMaxParts(): int
+                        public getMaxParts(): number /*int*/
                         // @ts-ignore
-                        getReadableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                        public getReadableMediaTypes(): Array<org.springframework.http.MediaType>
                         // @ts-ignore
-                        canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                        public canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     }
                 }
             }

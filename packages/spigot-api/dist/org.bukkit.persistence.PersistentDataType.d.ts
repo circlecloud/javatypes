@@ -40,27 +40,27 @@ declare namespace org {
             // @ts-ignore
             interface PersistentDataType<T, Z> {
                 // @ts-ignore
-                
+                readonly BYTE: org.bukkit.persistence.PersistentDataType<java.lang.Byte | number, java.lang.Byte | number>
                 // @ts-ignore
-                
+                readonly SHORT: org.bukkit.persistence.PersistentDataType<java.lang.Short | number, java.lang.Short | number>
                 // @ts-ignore
-                
+                readonly INTEGER: org.bukkit.persistence.PersistentDataType<java.lang.Integer | number, java.lang.Integer | number>
                 // @ts-ignore
-                
+                readonly LONG: org.bukkit.persistence.PersistentDataType<java.lang.Long | number, java.lang.Long | number>
                 // @ts-ignore
-                
+                readonly FLOAT: org.bukkit.persistence.PersistentDataType<java.lang.Float | number, java.lang.Float | number>
                 // @ts-ignore
-                
+                readonly DOUBLE: org.bukkit.persistence.PersistentDataType<java.lang.Double | number, java.lang.Double | number>
                 // @ts-ignore
-                
+                readonly STRING: org.bukkit.persistence.PersistentDataType<java.lang.String | string, java.lang.String | string>
                 // @ts-ignore
-                
+                readonly BYTE_ARRAY: org.bukkit.persistence.PersistentDataType<number /*byte*/[], number /*byte*/[]>
                 // @ts-ignore
-                
+                readonly INTEGER_ARRAY: org.bukkit.persistence.PersistentDataType<number /*int*/[], number /*int*/[]>
                 // @ts-ignore
-                
+                readonly LONG_ARRAY: org.bukkit.persistence.PersistentDataType<number /*long*/[], number /*long*/[]>
                 // @ts-ignore
-                
+                readonly TAG_CONTAINER: org.bukkit.persistence.PersistentDataType<org.bukkit.persistence.PersistentDataContainer, org.bukkit.persistence.PersistentDataContainer>
                 /**
                  * Returns the primitive data type of this tag.
                  * @return the class

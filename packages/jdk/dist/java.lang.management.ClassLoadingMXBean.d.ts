@@ -27,21 +27,21 @@ declare namespace java {
                  * @return the number of loaded classes
                  */
                 // @ts-ignore
-                getLoadedClassCount(): int
+                getLoadedClassCount(): number /*int*/
                 /**
                  * Returns a figure for the total number of classes that have been
                  * loaded by the virtual machine during its lifetime.
                  * @return the total number of classes that have been loaded
                  */
                 // @ts-ignore
-                getTotalLoadedClassCount(): long
+                getTotalLoadedClassCount(): number /*long*/
                 /**
                  * Returns a figure for the total number of classes that have
                  * been unloaded by the virtual machine over its lifetime.
                  * @return the total number of unloaded classes
                  */
                 // @ts-ignore
-                getUnloadedClassCount(): long
+                getUnloadedClassCount(): number /*long*/
                 /**
                  * Returns a boolean indication of whether the virtual
                  * machine's class loading system is producing verbose output.

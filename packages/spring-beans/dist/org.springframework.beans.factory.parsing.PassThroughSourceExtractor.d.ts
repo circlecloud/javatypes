@@ -24,7 +24,7 @@ declare namespace org {
                          * @return the supplied {#code sourceCandidate}
                          */
                         // @ts-ignore
-                        extractSource(sourceCandidate: any, definingResource: Resource): java.lang.Object
+                        public extractSource(sourceCandidate: java.lang.Object | any, definingResource: Resource): any
                     }
                 }
             }

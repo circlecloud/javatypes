@@ -49,7 +49,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.support.AbstractBeanDefinition#getFactoryMethodName()
                          */
                         // @ts-ignore
-                        postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: string): java.lang.Object
+                        postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): any
                         /**
                          * Perform operations after the bean has been instantiated, via a constructor or factory method,
                          * but before Spring property population (from explicit properties or autowiring) occurs.
@@ -66,7 +66,7 @@ declare namespace org {
                          * @see #postProcessBeforeInstantiation
                          */
                         // @ts-ignore
-                        postProcessAfterInstantiation(bean: any, beanName: string): boolean
+                        postProcessAfterInstantiation(bean: java.lang.Object | any, beanName: java.lang.String | string): boolean
                         /**
                          * Post-process the given property values before the factory applies them
                          * to the given bean, without any need for property descriptors.
@@ -86,7 +86,7 @@ declare namespace org {
                          * @see #postProcessPropertyValues
                          */
                         // @ts-ignore
-                        postProcessProperties(pvs: org.springframework.beans.PropertyValues, bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        postProcessProperties(pvs: org.springframework.beans.PropertyValues, bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                         /**
                          * Post-process the given property values before the factory applies them
                          * to the given bean. Allows for checking whether all dependencies have been
@@ -108,7 +108,7 @@ declare namespace org {
                          * @deprecated as of 5.1, in favor of {#link #postProcessProperties(PropertyValues, Object, String)}
                          */
                         // @ts-ignore
-                        postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                     }
                 }
             }

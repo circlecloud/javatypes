@@ -34,13 +34,13 @@ declare namespace javax {
                  *          DirContext.REMOVE_ATTRIBUTE
                  */
                 // @ts-ignore
-                getModificationOp(): int
+                public getModificationOp(): number /*int*/
                 /**
                  * Retrieves the attribute associated with this modification item.
                  * @return The non-null attribute to use for the modification.
                  */
                 // @ts-ignore
-                getAttribute(): javax.naming.directory.Attribute
+                public getAttribute(): javax.naming.directory.Attribute
                 /**
                  * Generates the string representation of this modification item,
                  * which consists of the modification operation and its related attribute.
@@ -49,7 +49,7 @@ declare namespace javax {
                  * @return The non-null string representation of this modification item.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

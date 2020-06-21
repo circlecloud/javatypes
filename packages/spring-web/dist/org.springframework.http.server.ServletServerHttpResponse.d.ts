@@ -20,17 +20,17 @@ declare namespace org {
                      * Return the {@code HttpServletResponse} this object is based on.
                      */
                     // @ts-ignore
-                    getServletResponse(): HttpServletResponse
+                    public getServletResponse(): HttpServletResponse
                     // @ts-ignore
-                    setStatusCode(status: org.springframework.http.HttpStatus): void
+                    public setStatusCode(status: org.springframework.http.HttpStatus): void
                     // @ts-ignore
-                    getHeaders(): org.springframework.http.HttpHeaders
+                    public getHeaders(): org.springframework.http.HttpHeaders
                     // @ts-ignore
-                    getBody(): java.io.OutputStream
+                    public getBody(): java.io.OutputStream
                     // @ts-ignore
-                    flush(): void
+                    public flush(): void
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                 }
             }
         }

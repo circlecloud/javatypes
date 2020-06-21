@@ -42,19 +42,19 @@ declare namespace org {
                  * @see ResizableByteArrayOutputStream#size()
                  */
                 // @ts-ignore
-                resize(targetCapacity: number /*int*/): void
+                public resize(targetCapacity: number /*int*/): void
                 /**
                  * Grow the internal buffer size.
                  * @param additionalCapacity the number of bytes to add to the current buffer size
                  * @see ResizableByteArrayOutputStream#size()
                  */
                 // @ts-ignore
-                grow(additionalCapacity: number /*int*/): void
+                public grow(additionalCapacity: number /*int*/): void
                 /**
                  * Return the current size of this stream's internal buffer.
                  */
                 // @ts-ignore
-                capacity(): int
+                public capacity(): number /*int*/
             }
         }
     }

@@ -16,25 +16,25 @@ declare namespace org {
                  *      compute the constant value at runtime.
                  */
                 // @ts-ignore
-                constructor(name: string, descriptor: string, bootstrapMethod: org.springframework.asm.Handle, ...bootstrapMethodArguments: any[])
+                constructor(name: java.lang.String | string, descriptor: java.lang.String | string, bootstrapMethod: org.springframework.asm.Handle, ...bootstrapMethodArguments: java.lang.Object[] | any[])
                 /**
                  * Returns the name of this constant.
                  * @return the name of this constant.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the type of this constant.
                  * @return the type of this constant, as a field descriptor.
                  */
                 // @ts-ignore
-                getDescriptor(): java.lang.String
+                public getDescriptor(): string
                 /**
                  * Returns the bootstrap method used to compute the value of this constant.
                  * @return the bootstrap method used to compute the value of this constant.
                  */
                 // @ts-ignore
-                getBootstrapMethod(): org.springframework.asm.Handle
+                public getBootstrapMethod(): org.springframework.asm.Handle
                 /**
                  * Returns the number of arguments passed to the bootstrap method, in order to compute the value
                  * of this constant.
@@ -42,7 +42,7 @@ declare namespace org {
                  *      of this constant.
                  */
                 // @ts-ignore
-                getBootstrapMethodArgumentCount(): int
+                public getBootstrapMethodArgumentCount(): number /*int*/
                 /**
                  * Returns an argument passed to the bootstrap method, in order to compute the value of this
                  * constant.
@@ -51,19 +51,19 @@ declare namespace org {
                  * @return the argument passed to the bootstrap method, with the given index.
                  */
                 // @ts-ignore
-                getBootstrapMethodArgument(index: number /*int*/): java.lang.Object
+                public getBootstrapMethodArgument(index: number /*int*/): any
                 /**
                  * Returns the size of this constant.
                  * @return the size of this constant, i.e., 2 for {#code long} and {@code double}, 1 otherwise.
                  */
                 // @ts-ignore
-                getSize(): int
+                public getSize(): number /*int*/
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

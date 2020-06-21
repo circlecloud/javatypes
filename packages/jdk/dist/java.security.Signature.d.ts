@@ -53,7 +53,7 @@ declare namespace java {
          * @author Benjamin Renaud
          */
         // @ts-ignore
-        class Signature extends java.security.SignatureSpi {
+        abstract class Signature extends java.security.SignatureSpi {
             /**
              * Creates a Signature object for the specified algorithm.
              * @param algorithm the standard string name of the algorithm.
@@ -63,25 +63,25 @@ declare namespace java {
              *  for information about standard algorithm names.
              */
             // @ts-ignore
-            constructor(algorithm: string)
+            constructor(algorithm: java.lang.String | string)
             /**
              * Possible {@link #state} value, signifying that
              * this signature object has not yet been initialized.
              */
             // @ts-ignore
-            readonly UNINITIALIZED: number /*int*/
+            static readonly UNINITIALIZED: number /*int*/
             /**
              * Possible {@link #state} value, signifying that
              * this signature object has been initialized for signing.
              */
             // @ts-ignore
-            readonly SIGN: number /*int*/
+            static readonly SIGN: number /*int*/
             /**
              * Possible {@link #state} value, signifying that
              * this signature object has been initialized for verification.
              */
             // @ts-ignore
-            readonly VERIFY: number /*int*/
+            static readonly VERIFY: number /*int*/
             /**
              * Current state of this signature object.
              */
@@ -109,7 +109,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.Signature
+            public static getInstance(algorithm: java.lang.String | string): java.security.Signature
             /**
              * Returns a Signature object that implements the specified signature
              * algorithm.
@@ -136,7 +136,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.Signature
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.Signature
             /**
              * Returns a Signature object that implements the specified
              * signature algorithm.
@@ -159,13 +159,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.Signature
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.Signature
             /**
              * Returns the provider of this signature object.
              * @return the provider of this signature object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Initializes this object for verification. If this method is called
              * again with a different argument, it negates the effect
@@ -175,7 +175,7 @@ declare namespace java {
              * @exception InvalidKeyException if the key is invalid.
              */
             // @ts-ignore
-            initVerify(publicKey: java.security.PublicKey): void
+            public initVerify(publicKey: java.security.PublicKey): void
             /**
              * Initializes this object for verification, using the public key from
              * the given certificate.
@@ -193,7 +193,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            initVerify(certificate: java.security.cert.Certificate): void
+            public initVerify(certificate: java.security.cert.Certificate): void
             /**
              * Initialize this object for signing. If this method is called
              * again with a different argument, it negates the effect
@@ -203,7 +203,7 @@ declare namespace java {
              * @exception InvalidKeyException if the key is invalid.
              */
             // @ts-ignore
-            initSign(privateKey: java.security.PrivateKey): void
+            public initSign(privateKey: java.security.PrivateKey): void
             /**
              * Initialize this object for signing. If this method is called
              * again with a different argument, it negates the effect
@@ -214,7 +214,7 @@ declare namespace java {
              * @exception InvalidKeyException if the key is invalid.
              */
             // @ts-ignore
-            initSign(privateKey: java.security.PrivateKey, random: java.security.SecureRandom): void
+            public initSign(privateKey: java.security.PrivateKey, random: java.security.SecureRandom): void
             /**
              * Returns the signature bytes of all the data updated.
              * The format of the signature depends on the underlying
@@ -231,7 +231,7 @@ declare namespace java {
              *  process the input data provided.
              */
             // @ts-ignore
-            sign(): byte[]
+            public sign(): number /*byte*/[]
             /**
              * Finishes the signature operation and stores the resulting signature
              * bytes in the provided buffer {@code outbuf}, starting at
@@ -254,7 +254,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            sign(outbuf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): int
+            public sign(outbuf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Verifies the passed-in signature.
              * <p>A call to this method resets this signature object to the state
@@ -270,7 +270,7 @@ declare namespace java {
              *  process the input data provided, etc.
              */
             // @ts-ignore
-            verify(signature: number /*byte*/[]): boolean
+            public verify(signature: number /*byte*/[]): boolean
             /**
              * Verifies the passed-in signature in the specified array
              * of bytes, starting at the specified offset.
@@ -295,7 +295,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            verify(signature: number /*byte*/[], offset: number /*int*/, length: number /*int*/): boolean
+            public verify(signature: number /*byte*/[], offset: number /*int*/, length: number /*int*/): boolean
             /**
              * Updates the data to be signed or verified by a byte.
              * @param b the byte to use for the update.
@@ -303,7 +303,7 @@ declare namespace java {
              *  initialized properly.
              */
             // @ts-ignore
-            update(b: number /*byte*/): void
+            public update(b: number /*byte*/): void
             /**
              * Updates the data to be signed or verified, using the specified
              * array of bytes.
@@ -312,7 +312,7 @@ declare namespace java {
              *  initialized properly.
              */
             // @ts-ignore
-            update(data: number /*byte*/[]): void
+            public update(data: number /*byte*/[]): void
             /**
              * Updates the data to be signed or verified, using the specified
              * array of bytes, starting at the specified offset.
@@ -323,7 +323,7 @@ declare namespace java {
              *  initialized properly.
              */
             // @ts-ignore
-            update(data: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public update(data: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Updates the data to be signed or verified using the specified
              * ByteBuffer. Processes the {@code data.remaining()} bytes
@@ -336,13 +336,13 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            update(data: java.nio.ByteBuffer): void
+            public update(data: java.nio.ByteBuffer): void
             /**
              * Returns the name of the algorithm for this signature object.
              * @return the name of the algorithm for this signature object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns a string representation of this signature object,
              * providing information that includes the state of the object
@@ -350,7 +350,7 @@ declare namespace java {
              * @return a string representation of this signature object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Sets the specified algorithm parameter to the specified value.
              * This method supplies a general-purpose mechanism through
@@ -373,7 +373,7 @@ declare namespace java {
              *  setParameter}.
              */
             // @ts-ignore
-            setParameter(param: string, value: any): void
+            public setParameter(param: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * Initializes this signature engine with the specified parameter set.
              * @param params the parameters
@@ -382,7 +382,7 @@ declare namespace java {
              * @see #getParameters
              */
             // @ts-ignore
-            setParameter(params: java.security.spec.AlgorithmParameterSpec): void
+            public setParameter(params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Returns the parameters used with this signature object.
              * <p>The returned parameters may be the same that were used to initialize
@@ -396,7 +396,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getParameters(): java.security.AlgorithmParameters
+            public getParameters(): java.security.AlgorithmParameters
             /**
              * Gets the value of the specified algorithm parameter. This method
              * supplies a general-purpose mechanism through which it is possible to
@@ -416,7 +416,7 @@ declare namespace java {
              * @deprecated 
              */
             // @ts-ignore
-            getParameter(param: string): java.lang.Object
+            public getParameter(param: java.lang.String | string): any
             /**
              * Returns a clone if the implementation is cloneable.
              * @return a clone if the implementation is cloneable.
@@ -424,7 +424,7 @@ declare namespace java {
              *  on an implementation that does not support {#code Cloneable}.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

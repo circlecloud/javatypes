@@ -8,10 +8,15 @@ declare namespace java {
              */
             // @ts-ignore
             class FileVisitOption extends java.lang.Enum<java.nio.file.FileVisitOption> {
+                /**
+                 * Follow symbolic links.
+                 */
+                // @ts-ignore
+                readonly FOLLOW_LINKS: java.nio.file.FileVisitOption
                 // @ts-ignore
                 values(): java.nio.file.FileVisitOption[]
                 // @ts-ignore
-                valueOf(name: string): java.nio.file.FileVisitOption
+                valueOf(name: java.lang.String | string): java.nio.file.FileVisitOption
             }
         }
     }

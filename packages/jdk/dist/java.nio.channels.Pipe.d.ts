@@ -17,7 +17,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class Pipe extends java.lang.Object {
+            abstract class Pipe extends java.lang.Object {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -28,13 +28,13 @@ declare namespace java {
                  * @return This pipe's source channel
                  */
                 // @ts-ignore
-                abstract source(): java.nio.channels.Pipe.SourceChannel
+                public abstract source(): java.nio.channels.Pipe.SourceChannel
                 /**
                  * Returns this pipe's sink channel.
                  * @return This pipe's sink channel
                  */
                 // @ts-ignore
-                abstract sink(): java.nio.channels.Pipe.SinkChannel
+                public abstract sink(): java.nio.channels.Pipe.SinkChannel
                 /**
                  * Opens a pipe.
                  * <p> The new pipe is created by invoking the {@link
@@ -46,7 +46,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.Pipe
+                public static open(): java.nio.channels.Pipe
             }
         }
     }

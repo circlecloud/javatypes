@@ -88,7 +88,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitive(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitive(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitNull(t: javax.lang.model.type.NullType, p: P): R
+                    public visitNull(t: javax.lang.model.type.NullType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -104,7 +104,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitArray(t: javax.lang.model.type.ArrayType, p: P): R
+                    public visitArray(t: javax.lang.model.type.ArrayType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -112,7 +112,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitDeclared(t: javax.lang.model.type.DeclaredType, p: P): R
+                    public visitDeclared(t: javax.lang.model.type.DeclaredType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -120,7 +120,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitError(t: javax.lang.model.type.ErrorType, p: P): R
+                    public visitError(t: javax.lang.model.type.ErrorType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -128,7 +128,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitTypeVariable(t: javax.lang.model.type.TypeVariable, p: P): R
+                    public visitTypeVariable(t: javax.lang.model.type.TypeVariable, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -136,7 +136,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitWildcard(t: javax.lang.model.type.WildcardType, p: P): R
+                    public visitWildcard(t: javax.lang.model.type.WildcardType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -144,7 +144,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitExecutable(t: javax.lang.model.type.ExecutableType, p: P): R
+                    public visitExecutable(t: javax.lang.model.type.ExecutableType, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -152,7 +152,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitNoType(t: javax.lang.model.type.NoType, p: P): R
+                    public visitNoType(t: javax.lang.model.type.NoType, p: P): R
                 }
             }
         }

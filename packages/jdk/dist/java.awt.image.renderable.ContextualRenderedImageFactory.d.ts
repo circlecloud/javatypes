@@ -77,13 +77,13 @@ declare namespace java {
                      * @return an object reference to the value of the property requested.
                      */
                     // @ts-ignore
-                    getProperty(paramBlock: java.awt.image.renderable.ParameterBlock, name: string): java.lang.Object
+                    getProperty(paramBlock: java.awt.image.renderable.ParameterBlock, name: java.lang.String | string): any
                     /**
                      * Returns a list of names recognized by getProperty.
                      * @return the list of property names.
                      */
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    getPropertyNames(): string[]
                     /**
                      * Returns true if successive renderings (that is, calls to
                      * create(RenderContext, ParameterBlock)) with the same arguments

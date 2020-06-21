@@ -18,14 +18,14 @@ declare namespace java {
                  * @see AccessibleContext#setAccessibleName
                  */
                 // @ts-ignore
-                getAccessibleName(): java.lang.String
+                public getAccessibleName(): string
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the object
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
             }
         }
     }

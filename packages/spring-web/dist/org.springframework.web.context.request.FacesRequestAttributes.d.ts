@@ -47,23 +47,23 @@ declare namespace org {
                          * @see #SCOPE_SESSION
                          */
                         // @ts-ignore
-                        getAttributeMap(scope: number /*int*/): java.util.Map<java.lang.String, java.lang.Object>
+                        getAttributeMap(scope: number /*int*/): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        getAttribute(name: string, scope: number /*int*/): java.lang.Object
+                        public getAttribute(name: java.lang.String | string, scope: number /*int*/): any
                         // @ts-ignore
-                        setAttribute(name: string, value: any, scope: number /*int*/): void
+                        public setAttribute(name: java.lang.String | string, value: java.lang.Object | any, scope: number /*int*/): void
                         // @ts-ignore
-                        removeAttribute(name: string, scope: number /*int*/): void
+                        public removeAttribute(name: java.lang.String | string, scope: number /*int*/): void
                         // @ts-ignore
-                        getAttributeNames(scope: number /*int*/): java.lang.String[]
+                        public getAttributeNames(scope: number /*int*/): string[]
                         // @ts-ignore
-                        registerDestructionCallback(name: string, callback: java.lang.Runnable, scope: number /*int*/): void
+                        public registerDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable, scope: number /*int*/): void
                         // @ts-ignore
-                        resolveReference(key: string): java.lang.Object
+                        public resolveReference(key: java.lang.String | string): any
                         // @ts-ignore
-                        getSessionId(): java.lang.String
+                        public getSessionId(): string
                         // @ts-ignore
-                        getSessionMutex(): java.lang.Object
+                        public getSessionMutex(): any
                     }
                 }
             }

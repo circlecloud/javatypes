@@ -14,27 +14,27 @@ declare namespace org {
                      * @return The leash holder
                      */
                     // @ts-ignore
-                    getLeashHolder(): org.bukkit.entity.Entity
+                    public getLeashHolder(): org.bukkit.entity.Entity
                     /**
                      * Returns the entity being leashed.
                      * @return The entity
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     /**
                      * Returns the player involved in this event
                      * @return Player who is involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                 }
             }
         }

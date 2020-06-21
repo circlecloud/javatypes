@@ -335,7 +335,7 @@ declare namespace java {
              *          representation of a {@code BigDecimal}.
              */
             // @ts-ignore
-            constructor(val: string)
+            constructor(val: java.lang.String | string)
             /**
              * Translates the string representation of a {@code BigDecimal}
              * into a {@code BigDecimal}, accepting the same strings as the
@@ -350,7 +350,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(val: string, mc: java.math.MathContext)
+            constructor(val: java.lang.String | string, mc: java.math.MathContext)
             /**
              * Translates a {@code double} into a {@code BigDecimal} which
              * is the exact decimal representation of the {@code double}'s
@@ -505,33 +505,33 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly ZERO: java.math.BigDecimal
+            public static readonly ZERO: java.math.BigDecimal
             /**
              * The value 1, with a scale of 0.
              * @since 1.5
              */
             // @ts-ignore
-            readonly ONE: java.math.BigDecimal
+            public static readonly ONE: java.math.BigDecimal
             /**
              * The value 10, with a scale of 0.
              * @since 1.5
              */
             // @ts-ignore
-            readonly TEN: java.math.BigDecimal
+            public static readonly TEN: java.math.BigDecimal
             /**
              * Rounding mode to round away from zero.  Always increments the
              * digit prior to a nonzero discarded fraction.  Note that this rounding
              * mode never decreases the magnitude of the calculated value.
              */
             // @ts-ignore
-            readonly ROUND_UP: number /*int*/
+            public static readonly ROUND_UP: number /*int*/
             /**
              * Rounding mode to round towards zero.  Never increments the digit
              * prior to a discarded fraction (i.e., truncates).  Note that this
              * rounding mode never increases the magnitude of the calculated value.
              */
             // @ts-ignore
-            readonly ROUND_DOWN: number /*int*/
+            public static readonly ROUND_DOWN: number /*int*/
             /**
              * Rounding mode to round towards positive infinity.  If the
              * {@code BigDecimal} is positive, behaves as for
@@ -540,7 +540,7 @@ declare namespace java {
              * decreases the calculated value.
              */
             // @ts-ignore
-            readonly ROUND_CEILING: number /*int*/
+            public static readonly ROUND_CEILING: number /*int*/
             /**
              * Rounding mode to round towards negative infinity.  If the
              * {@code BigDecimal} is positive, behave as for
@@ -549,7 +549,7 @@ declare namespace java {
              * increases the calculated value.
              */
             // @ts-ignore
-            readonly ROUND_FLOOR: number /*int*/
+            public static readonly ROUND_FLOOR: number /*int*/
             /**
              * Rounding mode to round towards {@literal "nearest neighbor"}
              * unless both neighbors are equidistant, in which case round up.
@@ -559,7 +559,7 @@ declare namespace java {
              * grade school.
              */
             // @ts-ignore
-            readonly ROUND_HALF_UP: number /*int*/
+            public static readonly ROUND_HALF_UP: number /*int*/
             /**
              * Rounding mode to round towards {@literal "nearest neighbor"}
              * unless both neighbors are equidistant, in which case round
@@ -568,7 +568,7 @@ declare namespace java {
              * {@code ROUND_DOWN}.
              */
             // @ts-ignore
-            readonly ROUND_HALF_DOWN: number /*int*/
+            public static readonly ROUND_HALF_DOWN: number /*int*/
             /**
              * Rounding mode to round towards the {@literal "nearest neighbor"}
              * unless both neighbors are equidistant, in which case, round
@@ -580,7 +580,7 @@ declare namespace java {
              * repeatedly over a sequence of calculations.
              */
             // @ts-ignore
-            readonly ROUND_HALF_EVEN: number /*int*/
+            public static readonly ROUND_HALF_EVEN: number /*int*/
             /**
              * Rounding mode to assert that the requested operation has an exact
              * result, hence no rounding is necessary.  If this rounding mode is
@@ -588,7 +588,7 @@ declare namespace java {
              * {@code ArithmeticException} is thrown.
              */
             // @ts-ignore
-            readonly ROUND_UNNECESSARY: number /*int*/
+            public static readonly ROUND_UNNECESSARY: number /*int*/
             /**
              * Translates a {@code long} unscaled value and an
              * {@code int} scale into a {@code BigDecimal}.  This
@@ -601,7 +601,7 @@ declare namespace java {
              *          <tt>(unscaledVal &times; 10<sup>-scale</sup>)</tt>.
              */
             // @ts-ignore
-            valueOf(unscaledVal: number /*long*/, scale: number /*int*/): java.math.BigDecimal
+            public static valueOf(unscaledVal: number /*long*/, scale: number /*int*/): java.math.BigDecimal
             /**
              * Translates a {@code long} value into a {@code BigDecimal}
              * with a scale of zero.  This {@literal "static factory method"}
@@ -612,7 +612,7 @@ declare namespace java {
              * @return a {#code BigDecimal} whose value is {@code val}.
              */
             // @ts-ignore
-            valueOf(val: number /*long*/): java.math.BigDecimal
+            public static valueOf(val: number /*long*/): java.math.BigDecimal
             /**
              * Translates a {@code double} into a {@code BigDecimal}, using
              * the {@code double}'s canonical string representation provided
@@ -629,7 +629,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(val: number /*double*/): java.math.BigDecimal
+            public static valueOf(val: number /*double*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this +
              * augend)}, and whose scale is {@code max(this.scale(),
@@ -638,7 +638,7 @@ declare namespace java {
              * @return {#code this + augend}
              */
             // @ts-ignore
-            add(augend: java.math.BigDecimal): java.math.BigDecimal
+            public add(augend: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this + augend)},
              * with rounding according to the context settings.
@@ -652,7 +652,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            add(augend: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
+            public add(augend: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this -
              * subtrahend)}, and whose scale is {@code max(this.scale(),
@@ -661,7 +661,7 @@ declare namespace java {
              * @return {#code this - subtrahend}
              */
             // @ts-ignore
-            subtract(subtrahend: java.math.BigDecimal): java.math.BigDecimal
+            public subtract(subtrahend: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this - subtrahend)},
              * with rounding according to the context settings.
@@ -675,7 +675,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            subtract(subtrahend: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
+            public subtract(subtrahend: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is <tt>(this &times;
              * multiplicand)</tt>, and whose scale is {@code (this.scale() +
@@ -684,7 +684,7 @@ declare namespace java {
              * @return {#code this * multiplicand}
              */
             // @ts-ignore
-            multiply(multiplicand: java.math.BigDecimal): java.math.BigDecimal
+            public multiply(multiplicand: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is <tt>(this &times;
              * multiplicand)</tt>, with rounding according to the context settings.
@@ -696,7 +696,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            multiply(multiplicand: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
+            public multiply(multiplicand: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this /
              * divisor)}, and whose scale is as specified.  If rounding must
@@ -724,7 +724,7 @@ declare namespace java {
              * @see #ROUND_UNNECESSARY
              */
             // @ts-ignore
-            divide(divisor: java.math.BigDecimal, scale: number /*int*/, roundingMode: number /*int*/): java.math.BigDecimal
+            public divide(divisor: java.math.BigDecimal, scale: number /*int*/, roundingMode: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this /
              * divisor)}, and whose scale is as specified.  If rounding must
@@ -741,7 +741,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            divide(divisor: java.math.BigDecimal, scale: number /*int*/, roundingMode: java.math.RoundingMode): java.math.BigDecimal
+            public divide(divisor: java.math.BigDecimal, scale: number /*int*/, roundingMode: java.math.RoundingMode): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this /
              * divisor)}, and whose scale is {@code this.scale()}.  If
@@ -768,7 +768,7 @@ declare namespace java {
              * @see #ROUND_UNNECESSARY
              */
             // @ts-ignore
-            divide(divisor: java.math.BigDecimal, roundingMode: number /*int*/): java.math.BigDecimal
+            public divide(divisor: java.math.BigDecimal, roundingMode: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this /
              * divisor)}, and whose scale is {@code this.scale()}.  If
@@ -784,7 +784,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            divide(divisor: java.math.BigDecimal, roundingMode: java.math.RoundingMode): java.math.BigDecimal
+            public divide(divisor: java.math.BigDecimal, roundingMode: java.math.RoundingMode): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this /
              * divisor)}, and whose preferred scale is {@code (this.scale() -
@@ -799,7 +799,7 @@ declare namespace java {
              * @author Joseph D. Darcy
              */
             // @ts-ignore
-            divide(divisor: java.math.BigDecimal): java.math.BigDecimal
+            public divide(divisor: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this /
              * divisor)}, with rounding according to the context settings.
@@ -813,7 +813,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            divide(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
+            public divide(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is the integer part
              * of the quotient {@code (this / divisor)} rounded down.  The
@@ -825,7 +825,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            divideToIntegralValue(divisor: java.math.BigDecimal): java.math.BigDecimal
+            public divideToIntegralValue(divisor: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is the integer part
              * of {@code (this / divisor)}.  Since the integer part of the
@@ -846,7 +846,7 @@ declare namespace java {
              * @author Joseph D. Darcy
              */
             // @ts-ignore
-            divideToIntegralValue(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
+            public divideToIntegralValue(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this % divisor)}.
              * <p>The remainder is given by
@@ -859,7 +859,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            remainder(divisor: java.math.BigDecimal): java.math.BigDecimal
+            public remainder(divisor: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (this %
              * divisor)}, with rounding according to the context settings.
@@ -883,7 +883,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            remainder(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
+            public remainder(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a two-element {@code BigDecimal} array containing the
              * result of {@code divideToIntegralValue} followed by the result of
@@ -903,7 +903,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            divideAndRemainder(divisor: java.math.BigDecimal): java.math.BigDecimal[]
+            public divideAndRemainder(divisor: java.math.BigDecimal): java.math.BigDecimal[]
             /**
              * Returns a two-element {@code BigDecimal} array containing the
              * result of {@code divideToIntegralValue} followed by the result of
@@ -929,7 +929,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            divideAndRemainder(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal[]
+            public divideAndRemainder(divisor: java.math.BigDecimal, mc: java.math.MathContext): java.math.BigDecimal[]
             /**
              * Returns a {@code BigDecimal} whose value is
              * <tt>(this<sup>n</sup>)</tt>, The power is computed exactly, to
@@ -945,7 +945,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            pow(n: number /*int*/): java.math.BigDecimal
+            public pow(n: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is
              * <tt>(this<sup>n</sup>)</tt>.  The current implementation uses
@@ -991,7 +991,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            pow(n: number /*int*/, mc: java.math.MathContext): java.math.BigDecimal
+            public pow(n: number /*int*/, mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is the absolute value
              * of this {@code BigDecimal}, and whose scale is
@@ -999,7 +999,7 @@ declare namespace java {
              * @return {#code abs(this)}
              */
             // @ts-ignore
-            abs(): java.math.BigDecimal
+            public abs(): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is the absolute value
              * of this {@code BigDecimal}, with rounding according to the
@@ -1011,14 +1011,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            abs(mc: java.math.MathContext): java.math.BigDecimal
+            public abs(mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (-this)},
              * and whose scale is {@code this.scale()}.
              * @return {#code -this}.
              */
             // @ts-ignore
-            negate(): java.math.BigDecimal
+            public negate(): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (-this)},
              * with rounding according to the context settings.
@@ -1029,7 +1029,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            negate(mc: java.math.MathContext): java.math.BigDecimal
+            public negate(mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (+this)}, and whose
              * scale is {@code this.scale()}.
@@ -1041,7 +1041,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            plus(): java.math.BigDecimal
+            public plus(): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose value is {@code (+this)},
              * with rounding according to the context settings.
@@ -1056,14 +1056,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            plus(mc: java.math.MathContext): java.math.BigDecimal
+            public plus(mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns the signum function of this {@code BigDecimal}.
              * @return -1, 0, or 1 as the value of this {#code BigDecimal}
              *          is negative, zero, or positive.
              */
             // @ts-ignore
-            signum(): int
+            public signum(): number /*int*/
             /**
              * Returns the <i>scale</i> of this {@code BigDecimal}.  If zero
              * or positive, the scale is the number of digits to the right of
@@ -1074,7 +1074,7 @@ declare namespace java {
              * @return the scale of this {#code BigDecimal}.
              */
             // @ts-ignore
-            scale(): int
+            public scale(): number /*int*/
             /**
              * Returns the <i>precision</i> of this {@code BigDecimal}.  (The
              * precision is the number of digits in the unscaled value.)
@@ -1083,7 +1083,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            precision(): int
+            public precision(): number /*int*/
             /**
              * Returns a {@code BigInteger} whose value is the <i>unscaled
              * value</i> of this {@code BigDecimal}.  (Computes <tt>(this *
@@ -1092,7 +1092,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            unscaledValue(): java.math.BigInteger
+            public unscaledValue(): java.math.BigInteger
             /**
              * Returns a {@code BigDecimal} rounded according to the
              * {@code MathContext} settings.  If the precision setting is 0 then
@@ -1109,7 +1109,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            round(mc: java.math.MathContext): java.math.BigDecimal
+            public round(mc: java.math.MathContext): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose scale is the specified
              * value, and whose unscaled value is determined by multiplying or
@@ -1138,7 +1138,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setScale(newScale: number /*int*/, roundingMode: java.math.RoundingMode): java.math.BigDecimal
+            public setScale(newScale: number /*int*/, roundingMode: java.math.RoundingMode): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose scale is the specified
              * value, and whose unscaled value is determined by multiplying or
@@ -1177,7 +1177,7 @@ declare namespace java {
              * @see #ROUND_UNNECESSARY
              */
             // @ts-ignore
-            setScale(newScale: number /*int*/, roundingMode: number /*int*/): java.math.BigDecimal
+            public setScale(newScale: number /*int*/, roundingMode: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} whose scale is the specified
              * value, and whose value is numerically equal to this
@@ -1211,7 +1211,7 @@ declare namespace java {
              * @see #setScale(int, RoundingMode)
              */
             // @ts-ignore
-            setScale(newScale: number /*int*/): java.math.BigDecimal
+            public setScale(newScale: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} which is equivalent to this one
              * with the decimal point moved {@code n} places to the left.  If
@@ -1227,7 +1227,7 @@ declare namespace java {
              * @throws ArithmeticException if scale overflows.
              */
             // @ts-ignore
-            movePointLeft(n: number /*int*/): java.math.BigDecimal
+            public movePointLeft(n: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} which is equivalent to this one
              * with the decimal point moved {@code n} places to the right.
@@ -1243,7 +1243,7 @@ declare namespace java {
              * @throws ArithmeticException if scale overflows.
              */
             // @ts-ignore
-            movePointRight(n: number /*int*/): java.math.BigDecimal
+            public movePointRight(n: number /*int*/): java.math.BigDecimal
             /**
              * Returns a BigDecimal whose numerical value is equal to
              * ({@code this} * 10<sup>n</sup>).  The scale of
@@ -1256,7 +1256,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            scaleByPowerOfTen(n: number /*int*/): java.math.BigDecimal
+            public scaleByPowerOfTen(n: number /*int*/): java.math.BigDecimal
             /**
              * Returns a {@code BigDecimal} which is numerically equal to
              * this one but with any trailing zeros removed from the
@@ -1272,7 +1272,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            stripTrailingZeros(): java.math.BigDecimal
+            public stripTrailingZeros(): java.math.BigDecimal
             /**
              * Compares this {@code BigDecimal} with the specified
              * {@code BigDecimal}.  Two {@code BigDecimal} objects that are
@@ -1290,7 +1290,7 @@ declare namespace java {
              *           less than, equal to, or greater than {@code val}.
              */
             // @ts-ignore
-            compareTo(val: java.math.BigDecimal): int
+            public compareTo(val: java.math.BigDecimal): number /*int*/
             /**
              * Compares this {@code BigDecimal} with the specified
              * {@code Object} for equality.  Unlike {@link
@@ -1307,7 +1307,7 @@ declare namespace java {
              * @see #hashCode
              */
             // @ts-ignore
-            equals(x: any): boolean
+            public equals(x: java.lang.Object | any): boolean
             /**
              * Returns the minimum of this {@code BigDecimal} and
              * {@code val}.
@@ -1319,7 +1319,7 @@ declare namespace java {
              * @see #compareTo(java.math.BigDecimal)
              */
             // @ts-ignore
-            min(val: java.math.BigDecimal): java.math.BigDecimal
+            public min(val: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns the maximum of this {@code BigDecimal} and {@code val}.
              * @param val value with which the maximum is to be computed.
@@ -1330,7 +1330,7 @@ declare namespace java {
              * @see #compareTo(java.math.BigDecimal)
              */
             // @ts-ignore
-            max(val: java.math.BigDecimal): java.math.BigDecimal
+            public max(val: java.math.BigDecimal): java.math.BigDecimal
             /**
              * Returns the hash code for this {@code BigDecimal}.  Note that
              * two {@code BigDecimal} objects that are numerically equal but
@@ -1340,7 +1340,7 @@ declare namespace java {
              * @see #equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the string representation of this {@code BigDecimal},
              * using scientific notation if an exponent is needed.
@@ -1428,7 +1428,7 @@ declare namespace java {
              * @see #BigDecimal(java.lang.String)
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a string representation of this {@code BigDecimal},
              * using engineering notation if an exponent is needed.
@@ -1452,7 +1452,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toEngineeringString(): java.lang.String
+            public toEngineeringString(): string
             /**
              * Returns a string representation of this {@code BigDecimal}
              * without an exponent field.  For values with a positive scale,
@@ -1483,7 +1483,7 @@ declare namespace java {
              * @see #toEngineeringString()
              */
             // @ts-ignore
-            toPlainString(): java.lang.String
+            public toPlainString(): string
             /**
              * Converts this {@code BigDecimal} to a {@code BigInteger}.
              * This conversion is analogous to the
@@ -1501,7 +1501,7 @@ declare namespace java {
              * @return this {#code BigDecimal} converted to a {@code BigInteger}.
              */
             // @ts-ignore
-            toBigInteger(): java.math.BigInteger
+            public toBigInteger(): java.math.BigInteger
             /**
              * Converts this {@code BigDecimal} to a {@code BigInteger},
              * checking for lost information.  An exception is thrown if this
@@ -1512,7 +1512,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toBigIntegerExact(): java.math.BigInteger
+            public toBigIntegerExact(): java.math.BigInteger
             /**
              * Converts this {@code BigDecimal} to a {@code long}.
              * This conversion is analogous to the
@@ -1529,7 +1529,7 @@ declare namespace java {
              * @return this {#code BigDecimal} converted to a {@code long}.
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Converts this {@code BigDecimal} to a {@code long}, checking
              * for lost information.  If this {@code BigDecimal} has a
@@ -1542,7 +1542,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            longValueExact(): long
+            public longValueExact(): number /*long*/
             /**
              * Converts this {@code BigDecimal} to an {@code int}.
              * This conversion is analogous to the
@@ -1559,7 +1559,7 @@ declare namespace java {
              * @return this {#code BigDecimal} converted to an {@code int}.
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Converts this {@code BigDecimal} to an {@code int}, checking
              * for lost information.  If this {@code BigDecimal} has a
@@ -1572,7 +1572,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            intValueExact(): int
+            public intValueExact(): number /*int*/
             /**
              * Converts this {@code BigDecimal} to a {@code short}, checking
              * for lost information.  If this {@code BigDecimal} has a
@@ -1585,7 +1585,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            shortValueExact(): short
+            public shortValueExact(): number /*short*/
             /**
              * Converts this {@code BigDecimal} to a {@code byte}, checking
              * for lost information.  If this {@code BigDecimal} has a
@@ -1598,7 +1598,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            byteValueExact(): byte
+            public byteValueExact(): number /*byte*/
             /**
              * Converts this {@code BigDecimal} to a {@code float}.
              * This conversion is similar to the
@@ -1615,7 +1615,7 @@ declare namespace java {
              * @return this {#code BigDecimal} converted to a {@code float}.
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Converts this {@code BigDecimal} to a {@code double}.
              * This conversion is similar to the
@@ -1632,7 +1632,7 @@ declare namespace java {
              * @return this {#code BigDecimal} converted to a {@code double}.
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns the size of an ulp, a unit in the last place, of this
              * {@code BigDecimal}.  An ulp of a nonzero {@code BigDecimal}
@@ -1647,7 +1647,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            ulp(): java.math.BigDecimal
+            public ulp(): java.math.BigDecimal
         }
     }
 }

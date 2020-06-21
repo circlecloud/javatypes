@@ -24,7 +24,7 @@ declare namespace org {
                  * @return {#code true} if the given {@code path} represents a pattern
                  */
                 // @ts-ignore
-                isPattern(path: string): boolean
+                isPattern(path: java.lang.String | string): boolean
                 /**
                  * Match the given {@code path} against the given {@code pattern},
                  * according to this PathMatcher's matching strategy.
@@ -34,7 +34,7 @@ declare namespace org {
                  *  {@code false} if it didn't
                  */
                 // @ts-ignore
-                match(pattern: string, path: string): boolean
+                match(pattern: java.lang.String | string, path: java.lang.String | string): boolean
                 /**
                  * Match the given {@code path} against the corresponding part of the given
                  * {@code pattern}, according to this PathMatcher's matching strategy.
@@ -46,7 +46,7 @@ declare namespace org {
                  *  {@code false} if it didn't
                  */
                 // @ts-ignore
-                matchStart(pattern: string, path: string): boolean
+                matchStart(pattern: java.lang.String | string, path: java.lang.String | string): boolean
                 /**
                  * Given a pattern and a full path, determine the pattern-mapped part.
                  * <p>This method is supposed to find out which part of the path is matched
@@ -68,7 +68,7 @@ declare namespace org {
                  *  (never {@code null})
                  */
                 // @ts-ignore
-                extractPathWithinPattern(pattern: string, path: string): java.lang.String
+                extractPathWithinPattern(pattern: java.lang.String | string, path: java.lang.String | string): string
                 /**
                  * Given a pattern and a full path, extract the URI template variables. URI template
                  * variables are expressed through curly brackets ('{' and '}').
@@ -79,7 +79,7 @@ declare namespace org {
                  * @return a map, containing variable names as keys; variables values as values
                  */
                 // @ts-ignore
-                extractUriTemplateVariables(pattern: string, path: string): java.util.Map<java.lang.String, java.lang.String>
+                extractUriTemplateVariables(pattern: java.lang.String | string, path: java.lang.String | string): java.util.Map<java.lang.String | string, java.lang.String | string>
                 /**
                  * Given a full path, returns a {@link Comparator} suitable for sorting patterns
                  * in order of explicitness for that path.
@@ -91,7 +91,7 @@ declare namespace org {
                  * @return a comparator capable of sorting patterns in order of explicitness
                  */
                 // @ts-ignore
-                getPatternComparator(path: string): java.util.Comparator<java.lang.String>
+                getPatternComparator(path: java.lang.String | string): java.util.Comparator<java.lang.String | string>
                 /**
                  * Combines two patterns into a new pattern that is returned.
                  * <p>The full algorithm used for combining the two pattern depends on the underlying implementation.
@@ -101,7 +101,7 @@ declare namespace org {
                  * @throws IllegalArgumentException when the two patterns cannot be combined
                  */
                 // @ts-ignore
-                combine(pattern1: string, pattern2: string): java.lang.String
+                combine(pattern1: java.lang.String | string, pattern2: java.lang.String | string): string
             }
         }
     }

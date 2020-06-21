@@ -16,17 +16,17 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                addAttribute(attributeName: string, attributeValue: any): org.springframework.ui.ExtendedModelMap
+                public addAttribute(attributeName: java.lang.String | string, attributeValue: java.lang.Object | any): org.springframework.ui.ExtendedModelMap
                 // @ts-ignore
-                addAttribute(attributeValue: any): org.springframework.ui.ExtendedModelMap
+                public addAttribute(attributeValue: java.lang.Object | any): org.springframework.ui.ExtendedModelMap
                 // @ts-ignore
-                addAllAttributes(attributeValues: Array<any>): org.springframework.ui.ExtendedModelMap
+                public addAllAttributes(attributeValues: java.util.Collection<any> | Array<any>): org.springframework.ui.ExtendedModelMap
                 // @ts-ignore
-                addAllAttributes(attributes: java.util.Map<java.lang.String, any>): org.springframework.ui.ExtendedModelMap
+                public addAllAttributes(attributes: java.util.Map<java.lang.String | string, any>): org.springframework.ui.ExtendedModelMap
                 // @ts-ignore
-                mergeAttributes(attributes: java.util.Map<java.lang.String, any>): org.springframework.ui.ExtendedModelMap
+                public mergeAttributes(attributes: java.util.Map<java.lang.String | string, any>): org.springframework.ui.ExtendedModelMap
                 // @ts-ignore
-                asMap(): java.util.Map<java.lang.String, java.lang.Object>
+                public asMap(): java.util.Map<java.lang.String | string, java.lang.Object | any>
             }
         }
     }

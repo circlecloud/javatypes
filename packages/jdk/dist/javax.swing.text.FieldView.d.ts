@@ -51,7 +51,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Determines the preferred span for this view along an
                  * axis.
@@ -62,7 +62,7 @@ declare namespace javax {
                  *            The parent may choose to resize or break the view.
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the resizability of the view along the
                  * given axis.  A value of 0 or less is not resizable.
@@ -70,7 +70,7 @@ declare namespace javax {
                  * @return the weight -&gt; 1 for View.X_AXIS, else 0
                  */
                 // @ts-ignore
-                getResizeWeight(axis: number /*int*/): int
+                public getResizeWeight(axis: number /*int*/): number /*int*/
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -94,7 +94,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(fx: number /*float*/, fy: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(fx: number /*float*/, fy: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Gives notification that something was inserted into the document
                  * in a location that this view is responsible for.
@@ -104,7 +104,7 @@ declare namespace javax {
                  * @see View#insertUpdate
                  */
                 // @ts-ignore
-                insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification that something was removed from the document
                  * in a location that this view is responsible for.
@@ -114,7 +114,7 @@ declare namespace javax {
                  * @see View#removeUpdate
                  */
                 // @ts-ignore
-                removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
             }
         }
     }

@@ -83,13 +83,13 @@ declare namespace javax {
                      * factor by which to multiply inches to yield &#181;m (25400).
                      */
                     // @ts-ignore
-                    readonly INCH: number /*int*/
+                    public static readonly INCH: number /*int*/
                     /**
                      * Value to indicate units of millimeters (mm). It is actually the
                      * conversion factor by which to multiply mm to yield &#181;m (1000).
                      */
                     // @ts-ignore
-                    readonly MM: number /*int*/
+                    public static readonly MM: number /*int*/
                     /**
                      * Get the printable area as an array of 4 values in the order
                      * x, y, w, h. The values returned are in the given units.
@@ -101,7 +101,7 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if {#code units < 1}.
                      */
                     // @ts-ignore
-                    getPrintableArea(units: number /*int*/): float[]
+                    public getPrintableArea(units: number /*int*/): number /*float*/[]
                     /**
                      * Get the x location of the origin of the printable area in the
                      * specified units.
@@ -114,7 +114,7 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if {#code units < 1}.
                      */
                     // @ts-ignore
-                    getX(units: number /*int*/): float
+                    public getX(units: number /*int*/): number /*float*/
                     /**
                      * Get the y location of the origin of the printable area in the
                      * specified units.
@@ -127,7 +127,7 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if {#code units < 1}.
                      */
                     // @ts-ignore
-                    getY(units: number /*int*/): float
+                    public getY(units: number /*int*/): number /*float*/
                     /**
                      * Get the width of the printable area in the specified units.
                      * @param units
@@ -138,7 +138,7 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if {#code units < 1}.
                      */
                     // @ts-ignore
-                    getWidth(units: number /*int*/): float
+                    public getWidth(units: number /*int*/): number /*float*/
                     /**
                      * Get the height of the printable area in the specified units.
                      * @param units
@@ -149,7 +149,7 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if {#code units < 1}.
                      */
                     // @ts-ignore
-                    getHeight(units: number /*int*/): float
+                    public getHeight(units: number /*int*/): number /*float*/
                     /**
                      * Returns whether this media margins attribute is equivalent to the passed
                      * in object.
@@ -167,7 +167,7 @@ declare namespace javax {
                      *           attribute, false otherwise.
                      */
                     // @ts-ignore
-                    equals(object: any): boolean
+                    public equals(object: java.lang.Object | any): boolean
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -178,7 +178,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -189,7 +189,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns a string version of this rectangular size attribute in the
                      * given units.
@@ -204,17 +204,17 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if {#code units < 1}.
                      */
                     // @ts-ignore
-                    toString(units: number /*int*/, unitsName: string): java.lang.String
+                    public toString(units: number /*int*/, unitsName: java.lang.String | string): string
                     /**
                      * Returns a string version of this rectangular size attribute in mm.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns a hash code value for this attribute.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

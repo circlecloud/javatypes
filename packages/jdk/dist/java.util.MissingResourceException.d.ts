@@ -17,19 +17,19 @@ declare namespace java {
              * @param key the key for the missing resource.
              */
             // @ts-ignore
-            constructor(s: string, className: string, key: string)
+            constructor(s: java.lang.String | string, className: java.lang.String | string, key: java.lang.String | string)
             /**
              * Gets parameter passed by constructor.
              * @return the name of the resource class
              */
             // @ts-ignore
-            getClassName(): java.lang.String
+            getClassName(): string
             /**
              * Gets parameter passed by constructor.
              * @return the key for the missing resource
              */
             // @ts-ignore
-            getKey(): java.lang.String
+            getKey(): string
         }
     }
 }

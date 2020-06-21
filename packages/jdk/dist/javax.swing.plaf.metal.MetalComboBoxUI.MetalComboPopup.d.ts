@@ -14,9 +14,9 @@ declare namespace javax {
                     // @ts-ignore
                     class MetalComboPopup extends javax.swing.plaf.basic.BasicComboPopup {
                         // @ts-ignore
-                        constructor(cBox: javax.swing.JComboBox)
+                        constructor(cBox: javax.swing.JComboBox<any>)
                         // @ts-ignore
-                        delegateFocus(e: java.awt.event.MouseEvent): void
+                        public delegateFocus(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

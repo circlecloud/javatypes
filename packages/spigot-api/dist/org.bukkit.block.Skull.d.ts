@@ -18,7 +18,7 @@ declare namespace org {
                  * @deprecated See {#link #getOwningPlayer()}.
                  */
                 // @ts-ignore
-                getOwner(): java.lang.String
+                getOwner(): string
                 /**
                  * Sets the owner of the skull
                  * <p>
@@ -29,7 +29,7 @@ declare namespace org {
                  * @deprecated see {#link #setOwningPlayer(org.bukkit.OfflinePlayer)}.
                  */
                 // @ts-ignore
-                setOwner(name: string): boolean
+                setOwner(name: java.lang.String | string): boolean
                 /**
                  * Get the player which owns the skull. This player may appear as the
                  * texture depending on skull type.

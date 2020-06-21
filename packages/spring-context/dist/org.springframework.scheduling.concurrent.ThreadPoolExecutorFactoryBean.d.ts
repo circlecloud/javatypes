@@ -39,19 +39,19 @@ declare namespace org {
                      * Default is 1.
                      */
                     // @ts-ignore
-                    setCorePoolSize(corePoolSize: number /*int*/): void
+                    public setCorePoolSize(corePoolSize: number /*int*/): void
                     /**
                      * Set the ThreadPoolExecutor's maximum pool size.
                      * Default is {@code Integer.MAX_VALUE}.
                      */
                     // @ts-ignore
-                    setMaxPoolSize(maxPoolSize: number /*int*/): void
+                    public setMaxPoolSize(maxPoolSize: number /*int*/): void
                     /**
                      * Set the ThreadPoolExecutor's keep-alive seconds.
                      * Default is 60.
                      */
                     // @ts-ignore
-                    setKeepAliveSeconds(keepAliveSeconds: number /*int*/): void
+                    public setKeepAliveSeconds(keepAliveSeconds: number /*int*/): void
                     /**
                      * Specify whether to allow core threads to time out. This enables dynamic
                      * growing and shrinking even in combination with a non-zero queue (since
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see java.util.concurrent.ThreadPoolExecutor#allowCoreThreadTimeOut(boolean)
                      */
                     // @ts-ignore
-                    setAllowCoreThreadTimeOut(allowCoreThreadTimeOut: boolean): void
+                    public setAllowCoreThreadTimeOut(allowCoreThreadTimeOut: boolean): void
                     /**
                      * Set the capacity for the ThreadPoolExecutor's BlockingQueue.
                      * Default is {@code Integer.MAX_VALUE}.
@@ -70,7 +70,7 @@ declare namespace org {
                      * @see java.util.concurrent.SynchronousQueue
                      */
                     // @ts-ignore
-                    setQueueCapacity(queueCapacity: number /*int*/): void
+                    public setQueueCapacity(queueCapacity: number /*int*/): void
                     /**
                      * Specify whether this FactoryBean should expose an unconfigurable
                      * decorator for the created executor.
@@ -80,7 +80,7 @@ declare namespace org {
                      * @see java.util.concurrent.Executors#unconfigurableExecutorService
                      */
                     // @ts-ignore
-                    setExposeUnconfigurableExecutor(exposeUnconfigurableExecutor: boolean): void
+                    public setExposeUnconfigurableExecutor(exposeUnconfigurableExecutor: boolean): void
                     // @ts-ignore
                     initializeExecutor(threadFactory: java.util.concurrent.ThreadFactory, rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): java.util.concurrent.ExecutorService
                     /**
@@ -110,11 +110,11 @@ declare namespace org {
                     // @ts-ignore
                     createQueue(queueCapacity: number /*int*/): java.util.concurrent.BlockingQueue<java.lang.Runnable>
                     // @ts-ignore
-                    getObject(): java.util.concurrent.ExecutorService
+                    public getObject(): java.util.concurrent.ExecutorService
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends java.util.concurrent.ExecutorService>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

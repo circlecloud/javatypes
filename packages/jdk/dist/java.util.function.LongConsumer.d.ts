@@ -31,7 +31,7 @@ declare namespace java {
                  * @throws NullPointerException if {#code after} is null
                  */
                 // @ts-ignore
-                andThen(after: java.util.function.LongConsumer | java.util.function$.LongConsumer): java.util.function.LongConsumer
+                andThen(after: java.util.function$.LongConsumer): java.util.function$.LongConsumer
             }
         }
     }

@@ -39,7 +39,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                class AbstractTypeVisitor7<R, P> extends javax.lang.model.util.AbstractTypeVisitor6<R, P> {
+                abstract class AbstractTypeVisitor7<R, P> extends javax.lang.model.util.AbstractTypeVisitor6<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */
@@ -52,7 +52,7 @@ declare namespace javax {
                      * @return the result of the visit as defined by a subclass
                      */
                     // @ts-ignore
-                    abstract visitUnion(t: javax.lang.model.type.UnionType, p: P): R
+                    public abstract visitUnion(t: javax.lang.model.type.UnionType, p: P): R
                 }
             }
         }

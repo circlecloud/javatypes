@@ -16,7 +16,7 @@ declare namespace org {
                          * @deprecated Use {#link Inventory#totalItems()} instead.
                          */
                         // @ts-ignore
-                        getStackSize(): int
+                        getStackSize(): number /*int*/
                         /**
                          * Transforms this Slot into given Type.
                          * <dl>

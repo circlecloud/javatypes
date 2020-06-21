@@ -24,95 +24,95 @@ declare namespace java {
              * @see java.awt.Toolkit#createCustomCursor
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * The default cursor type (gets set if no cursor is defined).
              */
             // @ts-ignore
-            readonly DEFAULT_CURSOR: number /*int*/
+            public static readonly DEFAULT_CURSOR: number /*int*/
             /**
              * The crosshair cursor type.
              */
             // @ts-ignore
-            readonly CROSSHAIR_CURSOR: number /*int*/
+            public static readonly CROSSHAIR_CURSOR: number /*int*/
             /**
              * The text cursor type.
              */
             // @ts-ignore
-            readonly TEXT_CURSOR: number /*int*/
+            public static readonly TEXT_CURSOR: number /*int*/
             /**
              * The wait cursor type.
              */
             // @ts-ignore
-            readonly WAIT_CURSOR: number /*int*/
+            public static readonly WAIT_CURSOR: number /*int*/
             /**
              * The south-west-resize cursor type.
              */
             // @ts-ignore
-            readonly SW_RESIZE_CURSOR: number /*int*/
+            public static readonly SW_RESIZE_CURSOR: number /*int*/
             /**
              * The south-east-resize cursor type.
              */
             // @ts-ignore
-            readonly SE_RESIZE_CURSOR: number /*int*/
+            public static readonly SE_RESIZE_CURSOR: number /*int*/
             /**
              * The north-west-resize cursor type.
              */
             // @ts-ignore
-            readonly NW_RESIZE_CURSOR: number /*int*/
+            public static readonly NW_RESIZE_CURSOR: number /*int*/
             /**
              * The north-east-resize cursor type.
              */
             // @ts-ignore
-            readonly NE_RESIZE_CURSOR: number /*int*/
+            public static readonly NE_RESIZE_CURSOR: number /*int*/
             /**
              * The north-resize cursor type.
              */
             // @ts-ignore
-            readonly N_RESIZE_CURSOR: number /*int*/
+            public static readonly N_RESIZE_CURSOR: number /*int*/
             /**
              * The south-resize cursor type.
              */
             // @ts-ignore
-            readonly S_RESIZE_CURSOR: number /*int*/
+            public static readonly S_RESIZE_CURSOR: number /*int*/
             /**
              * The west-resize cursor type.
              */
             // @ts-ignore
-            readonly W_RESIZE_CURSOR: number /*int*/
+            public static readonly W_RESIZE_CURSOR: number /*int*/
             /**
              * The east-resize cursor type.
              */
             // @ts-ignore
-            readonly E_RESIZE_CURSOR: number /*int*/
+            public static readonly E_RESIZE_CURSOR: number /*int*/
             /**
              * The hand cursor type.
              */
             // @ts-ignore
-            readonly HAND_CURSOR: number /*int*/
+            public static readonly HAND_CURSOR: number /*int*/
             /**
              * The move cursor type.
              */
             // @ts-ignore
-            readonly MOVE_CURSOR: number /*int*/
+            public static readonly MOVE_CURSOR: number /*int*/
             /**
              * @deprecated As of JDK version 1.7, the {#link #getPredefinedCursor(int)}
              *  method should be used instead.
              */
             // @ts-ignore
-            predefined: java.awt.Cursor[]
+            static predefined: java.awt.Cursor[]
             /**
              * The type associated with all custom cursors.
              */
             // @ts-ignore
-            readonly CUSTOM_CURSOR: number /*int*/
+            public static readonly CUSTOM_CURSOR: number /*int*/
             /**
              * The user-visible name of the cursor.
              * @serial 
              * @see #getName()
              */
             // @ts-ignore
-            name: string
+            name: java.lang.String | string
             /**
              * Returns a cursor object with the specified predefined type.
              * @param type the type of predefined cursor
@@ -121,7 +121,7 @@ declare namespace java {
              *          invalid
              */
             // @ts-ignore
-            getPredefinedCursor(type: number /*int*/): java.awt.Cursor
+            public static getPredefinedCursor(type: number /*int*/): java.awt.Cursor
             /**
              * Returns a system-specific custom cursor object matching the
              * specified name.  Cursor names are, for example: "Invalid.16x16"
@@ -131,31 +131,31 @@ declare namespace java {
              *  <code>GraphicsEnvironment.isHeadless</code> returns true
              */
             // @ts-ignore
-            getSystemCustomCursor(name: string): java.awt.Cursor
+            public static getSystemCustomCursor(name: java.lang.String | string): java.awt.Cursor
             /**
              * Return the system default cursor.
              */
             // @ts-ignore
-            getDefaultCursor(): java.awt.Cursor
+            public static getDefaultCursor(): java.awt.Cursor
             /**
              * Returns the type for this cursor.
              */
             // @ts-ignore
-            getType(): int
+            public getType(): number /*int*/
             /**
              * Returns the name of this cursor.
              * @return a localized description of this cursor.
              * @since 1.2
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns a string representation of this cursor.
              * @return a string representation of this cursor.
              * @since 1.2
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

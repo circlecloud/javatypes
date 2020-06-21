@@ -28,7 +28,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(index: number /*int*/)
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

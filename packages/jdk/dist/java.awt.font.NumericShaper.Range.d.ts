@@ -27,10 +27,187 @@ declare namespace java {
                  */
                 // @ts-ignore
                 class Range extends java.lang.Enum<java.awt.font.NumericShaper.Range> {
+                    /**
+                     * The Latin (European) range with the Latin (ASCII) digits.
+                     */
+                    // @ts-ignore
+                    readonly EUROPEAN: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Arabic range with the Arabic-Indic digits.
+                     */
+                    // @ts-ignore
+                    readonly ARABIC: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Arabic range with the Eastern Arabic-Indic digits.
+                     */
+                    // @ts-ignore
+                    readonly EASTERN_ARABIC: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Devanagari range with the Devanagari digits.
+                     */
+                    // @ts-ignore
+                    readonly DEVANAGARI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Bengali range with the Bengali digits.
+                     */
+                    // @ts-ignore
+                    readonly BENGALI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Gurmukhi range with the Gurmukhi digits.
+                     */
+                    // @ts-ignore
+                    readonly GURMUKHI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Gujarati range with the Gujarati digits.
+                     */
+                    // @ts-ignore
+                    readonly GUJARATI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Oriya range with the Oriya digits.
+                     */
+                    // @ts-ignore
+                    readonly ORIYA: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Tamil range with the Tamil digits.
+                     */
+                    // @ts-ignore
+                    readonly TAMIL: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Telugu range with the Telugu digits.
+                     */
+                    // @ts-ignore
+                    readonly TELUGU: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Kannada range with the Kannada digits.
+                     */
+                    // @ts-ignore
+                    readonly KANNADA: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Malayalam range with the Malayalam digits.
+                     */
+                    // @ts-ignore
+                    readonly MALAYALAM: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Thai range with the Thai digits.
+                     */
+                    // @ts-ignore
+                    readonly THAI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Lao range with the Lao digits.
+                     */
+                    // @ts-ignore
+                    readonly LAO: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Tibetan range with the Tibetan digits.
+                     */
+                    // @ts-ignore
+                    readonly TIBETAN: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Myanmar range with the Myanmar digits.
+                     */
+                    // @ts-ignore
+                    readonly MYANMAR: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Ethiopic range with the Ethiopic digits. Ethiopic
+                     * does not have a decimal digit 0 so Latin (European) 0 is
+                     * used.
+                     */
+                    // @ts-ignore
+                    readonly ETHIOPIC: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Khmer range with the Khmer digits.
+                     */
+                    // @ts-ignore
+                    readonly KHMER: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Mongolian range with the Mongolian digits.
+                     */
+                    // @ts-ignore
+                    readonly MONGOLIAN: java.awt.font.NumericShaper.Range
+                    /**
+                     * The N'Ko range with the N'Ko digits.
+                     */
+                    // @ts-ignore
+                    readonly NKO: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Myanmar range with the Myanmar Shan digits.
+                     */
+                    // @ts-ignore
+                    readonly MYANMAR_SHAN: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Limbu range with the Limbu digits.
+                     */
+                    // @ts-ignore
+                    readonly LIMBU: java.awt.font.NumericShaper.Range
+                    /**
+                     * The New Tai Lue range with the New Tai Lue digits.
+                     */
+                    // @ts-ignore
+                    readonly NEW_TAI_LUE: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Balinese range with the Balinese digits.
+                     */
+                    // @ts-ignore
+                    readonly BALINESE: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Sundanese range with the Sundanese digits.
+                     */
+                    // @ts-ignore
+                    readonly SUNDANESE: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Lepcha range with the Lepcha digits.
+                     */
+                    // @ts-ignore
+                    readonly LEPCHA: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Ol Chiki range with the Ol Chiki digits.
+                     */
+                    // @ts-ignore
+                    readonly OL_CHIKI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Vai range with the Vai digits.
+                     */
+                    // @ts-ignore
+                    readonly VAI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Saurashtra range with the Saurashtra digits.
+                     */
+                    // @ts-ignore
+                    readonly SAURASHTRA: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Kayah Li range with the Kayah Li digits.
+                     */
+                    // @ts-ignore
+                    readonly KAYAH_LI: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Cham range with the Cham digits.
+                     */
+                    // @ts-ignore
+                    readonly CHAM: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Tai Tham Hora range with the Tai Tham Hora digits.
+                     */
+                    // @ts-ignore
+                    readonly TAI_THAM_HORA: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Tai Tham Tham range with the Tai Tham Tham digits.
+                     */
+                    // @ts-ignore
+                    readonly TAI_THAM_THAM: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Javanese range with the Javanese digits.
+                     */
+                    // @ts-ignore
+                    readonly JAVANESE: java.awt.font.NumericShaper.Range
+                    /**
+                     * The Meetei Mayek range with the Meetei Mayek digits.
+                     */
+                    // @ts-ignore
+                    readonly MEETEI_MAYEK: java.awt.font.NumericShaper.Range
                     // @ts-ignore
                     values(): java.awt.font.NumericShaper.Range[]
                     // @ts-ignore
-                    valueOf(name: string): java.awt.font.NumericShaper.Range
+                    valueOf(name: java.lang.String | string): java.awt.font.NumericShaper.Range
                 }
             }
         }

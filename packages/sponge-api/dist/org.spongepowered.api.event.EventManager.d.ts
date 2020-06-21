@@ -18,7 +18,7 @@ declare namespace org {
                      *          instance
                      */
                     // @ts-ignore
-                    registerListeners(plugin: any, obj: any): void
+                    registerListeners(plugin: java.lang.Object | any, obj: java.lang.Object | any): void
                     /**
                      * Registers an event listener for a specific event class.
                      * <p>Normally, the annotation-based way in
@@ -31,7 +31,7 @@ declare namespace org {
                      * @param <T> The type of the event
                      */
                     // @ts-ignore
-                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: any, eventClass: java.lang.Class<T>, listener: org.spongepowered.api.event.EventListener<any super T>): void
+                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: java.lang.Object | any, eventClass: java.lang.Class<T>, listener: org.spongepowered.api.event.EventListener<any>): void
                     /**
                      * Registers an event listener for a specific event {@link TypeToken}.
                      * <p>Normally, the annotation-based way in
@@ -44,7 +44,7 @@ declare namespace org {
                      * @param <T> The type of the event
                      */
                     // @ts-ignore
-                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: any, eventType: object, listener: org.spongepowered.api.event.EventListener<any super T>): void
+                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: java.lang.Object | any, eventType: object, listener: org.spongepowered.api.event.EventListener<any>): void
                     /**
                      * Registers an event listener with the specified order for a specific event
                      * class.
@@ -59,7 +59,7 @@ declare namespace org {
                      * @param <T> The type of the event
                      */
                     // @ts-ignore
-                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: any, eventClass: java.lang.Class<T>, order: org.spongepowered.api.event.Order, listener: org.spongepowered.api.event.EventListener<any super T>): void
+                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: java.lang.Object | any, eventClass: java.lang.Class<T>, order: org.spongepowered.api.event.Order, listener: org.spongepowered.api.event.EventListener<any>): void
                     /**
                      * Registers an event listener with the specified order for a specific event
                      * {@link TypeToken}.
@@ -74,7 +74,7 @@ declare namespace org {
                      * @param <T> The type of the event
                      */
                     // @ts-ignore
-                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: any, eventType: object, order: org.spongepowered.api.event.Order, listener: org.spongepowered.api.event.EventListener<any super T>): void
+                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: java.lang.Object | any, eventType: object, order: org.spongepowered.api.event.Order, listener: org.spongepowered.api.event.EventListener<any>): void
                     /**
                      * Registers an event listener with the specified order for a specific event
                      * class.
@@ -91,7 +91,7 @@ declare namespace org {
                      * @param <T> The type of the event
                      */
                     // @ts-ignore
-                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: any, eventClass: java.lang.Class<T>, order: org.spongepowered.api.event.Order, beforeModifications: boolean, listener: org.spongepowered.api.event.EventListener<any super T>): void
+                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: java.lang.Object | any, eventClass: java.lang.Class<T>, order: org.spongepowered.api.event.Order, beforeModifications: boolean, listener: org.spongepowered.api.event.EventListener<any>): void
                     /**
                      * Registers an event listener with the specified order for a specific event
                      * class.
@@ -108,19 +108,19 @@ declare namespace org {
                      * @param <T> The type of the event
                      */
                     // @ts-ignore
-                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: any, eventType: object, order: org.spongepowered.api.event.Order, beforeModifications: boolean, listener: org.spongepowered.api.event.EventListener<any super T>): void
+                    registerListener<T extends org.spongepowered.api.event.Event>(plugin: java.lang.Object | any, eventType: object, order: org.spongepowered.api.event.Order, beforeModifications: boolean, listener: org.spongepowered.api.event.EventListener<any>): void
                     /**
                      * Un-registers an object from receiving {@link Event}s.
                      * @param obj The object
                      */
                     // @ts-ignore
-                    unregisterListeners(obj: any): void
+                    unregisterListeners(obj: java.lang.Object | any): void
                     /**
                      * Un-registers all event listeners of a plugin.
                      * @param plugin The plugin instance
                      */
                     // @ts-ignore
-                    unregisterPluginListeners(plugin: any): void
+                    unregisterPluginListeners(plugin: java.lang.Object | any): void
                     /**
                      * Calls a {@link Event} to all listeners that listen to it.
                      * @param event The event

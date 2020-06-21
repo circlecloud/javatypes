@@ -29,7 +29,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class AbstractSelector extends java.nio.channels.Selector {
+                abstract class AbstractSelector extends java.nio.channels.Selector {
                     /**
                      * Initializes a new instance of this class.
                      * @param provider
@@ -47,7 +47,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     /**
                      * Closes this selector.
                      * <p> This method is invoked by the {@link #close close} method in order
@@ -64,20 +64,20 @@ declare namespace java {
                     // @ts-ignore
                     abstract implCloseSelector(): void
                     // @ts-ignore
-                    isOpen(): boolean
+                    public isOpen(): boolean
                     /**
                      * Returns the provider that created this channel.
                      * @return The provider that created this channel
                      */
                     // @ts-ignore
-                    provider(): java.nio.channels.spi.SelectorProvider
+                    public provider(): java.nio.channels.spi.SelectorProvider
                     /**
                      * Retrieves this selector's cancelled-key set.
                      * <p> This set should only be used while synchronized upon it.  </p>
                      * @return The cancelled-key set
                      */
                     // @ts-ignore
-                    cancelledKeys(): java.util.Set<java.nio.channels.SelectionKey>
+                    cancelledKeys(): Array<java.nio.channels.SelectionKey>
                     /**
                      * Registers the given channel with this selector.
                      * <p> This method is invoked by a channel's {@link
@@ -93,7 +93,7 @@ declare namespace java {
                      *           with this selector
                      */
                     // @ts-ignore
-                    abstract register(ch: java.nio.channels.spi.AbstractSelectableChannel, ops: number /*int*/, att: any): java.nio.channels.SelectionKey
+                    abstract register(ch: java.nio.channels.spi.AbstractSelectableChannel, ops: number /*int*/, att: java.lang.Object | any): java.nio.channels.SelectionKey
                     /**
                      * Removes the given key from its channel's key set.
                      * <p> This method must be invoked by the selector for each channel that it

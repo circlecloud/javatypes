@@ -27,7 +27,7 @@ declare namespace javax {
                  * @see #setAccessibleName
                  */
                 // @ts-ignore
-                getAccessibleName(): java.lang.String
+                public getAccessibleName(): string
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -35,7 +35,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Gets the AccessibleValue associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -44,34 +44,34 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleValue(): javax.accessibility.AccessibleValue
+                public getAccessibleValue(): javax.accessibility.AccessibleValue
                 /**
                  * Get the value of this object as a Number.
                  * @return value of the object -- can be <code>null</code> if this object does not
                  *  have a value
                  */
                 // @ts-ignore
-                getCurrentAccessibleValue(): java.lang.Number
+                public getCurrentAccessibleValue(): java.lang.Number
                 /**
                  * Set the value of this object as a Number.
                  * @return <code>true</code> if the value was set
                  */
                 // @ts-ignore
-                setCurrentAccessibleValue(n: java.lang.Number): boolean
+                public setCurrentAccessibleValue(n: java.lang.Number): boolean
                 /**
                  * Get the minimum value of this object as a Number.
                  * @return Minimum value of the object; <code>null</code> if this object does not
                  *  have a minimum value
                  */
                 // @ts-ignore
-                getMinimumAccessibleValue(): java.lang.Number
+                public getMinimumAccessibleValue(): java.lang.Number
                 /**
                  * Get the maximum value of this object as a Number.
                  * @return Maximum value of the object; <code>null</code> if this object does not
                  *  have a maximum value
                  */
                 // @ts-ignore
-                getMaximumAccessibleValue(): java.lang.Number
+                public getMaximumAccessibleValue(): java.lang.Number
             }
         }
     }

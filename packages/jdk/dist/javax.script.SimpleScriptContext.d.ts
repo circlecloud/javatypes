@@ -70,7 +70,7 @@ declare namespace javax {
              *  the specified <code>Bindings</code> is null.
              */
             // @ts-ignore
-            setBindings(bindings: javax.script.Bindings, scope: number /*int*/): void
+            public setBindings(bindings: javax.script.Bindings, scope: number /*int*/): void
             /**
              * Retrieves the value of the attribute with the given name in
              * the scope occurring earliest in the search order.  The order
@@ -84,7 +84,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if the name is empty.
              */
             // @ts-ignore
-            getAttribute(name: string): java.lang.Object
+            public getAttribute(name: java.lang.String | string): any
             /**
              * Gets the value of an attribute in a given scope.
              * @param name The name of the attribute to retrieve.
@@ -96,7 +96,7 @@ declare namespace javax {
              * @throws NullPointerException if the name is null.
              */
             // @ts-ignore
-            getAttribute(name: string, scope: number /*int*/): java.lang.Object
+            public getAttribute(name: java.lang.String | string, scope: number /*int*/): any
             /**
              * Remove an attribute in a given scope.
              * @param name The name of the attribute to remove
@@ -107,7 +107,7 @@ declare namespace javax {
              * @throws NullPointerException if the name is null.
              */
             // @ts-ignore
-            removeAttribute(name: string, scope: number /*int*/): java.lang.Object
+            public removeAttribute(name: java.lang.String | string, scope: number /*int*/): any
             /**
              * Sets the value of an attribute in a given scope.
              * @param name The name of the attribute to set
@@ -118,37 +118,37 @@ declare namespace javax {
              * @throws NullPointerException if the name is null.
              */
             // @ts-ignore
-            setAttribute(name: string, value: any, scope: number /*int*/): void
+            public setAttribute(name: java.lang.String | string, value: java.lang.Object | any, scope: number /*int*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getWriter(): java.io.Writer
+            public getWriter(): java.io.Writer
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getReader(): java.io.Reader
+            public getReader(): java.io.Reader
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setReader(reader: java.io.Reader): void
+            public setReader(reader: java.io.Reader): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setWriter(writer: java.io.Writer): void
+            public setWriter(writer: java.io.Writer): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getErrorWriter(): java.io.Writer
+            public getErrorWriter(): java.io.Writer
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setErrorWriter(writer: java.io.Writer): void
+            public setErrorWriter(writer: java.io.Writer): void
             /**
              * Get the lowest scope in which an attribute is defined.
              * @param name Name of the attribute
@@ -159,7 +159,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if name is empty.
              */
             // @ts-ignore
-            getAttributesScope(name: string): int
+            public getAttributesScope(name: java.lang.String | string): number /*int*/
             /**
              * Returns the value of the <code>engineScope</code> field if specified scope is
              * <code>ENGINE_SCOPE</code>.  Returns the value of the <code>globalScope</code> field if the specified scope is
@@ -169,12 +169,12 @@ declare namespace javax {
              * @throws IllegalArgumentException if the value of scope is invalid.
              */
             // @ts-ignore
-            getBindings(scope: number /*int*/): javax.script.Bindings
+            public getBindings(scope: number /*int*/): javax.script.Bindings
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getScopes(): java.util.List<java.lang.Integer>
+            public getScopes(): Array<java.lang.Integer | number>
         }
     }
 }

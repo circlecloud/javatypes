@@ -30,22 +30,22 @@ declare namespace org {
                      * @see Comparators#nullsLow()
                      */
                     // @ts-ignore
-                    readonly NULLS_LOW: org.springframework.util.comparator.NullSafeComparator
+                    public static readonly NULLS_LOW: org.springframework.util.comparator.NullSafeComparator<any>
                     /**
                      * A shared default instance of this comparator, treating nulls higher
                      * than non-null objects.
                      * @see Comparators#nullsHigh()
                      */
                     // @ts-ignore
-                    readonly NULLS_HIGH: org.springframework.util.comparator.NullSafeComparator
+                    public static readonly NULLS_HIGH: org.springframework.util.comparator.NullSafeComparator<any>
                     // @ts-ignore
-                    compare(o1: T, o2: T): int
+                    public compare(o1: T, o2: T): number /*int*/
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

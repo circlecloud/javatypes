@@ -48,12 +48,12 @@ declare namespace javax {
                  * Raised bevel type.
                  */
                 // @ts-ignore
-                readonly RAISED: number /*int*/
+                public static readonly RAISED: number /*int*/
                 /**
                  * Lowered bevel type.
                  */
                 // @ts-ignore
-                readonly LOWERED: number /*int*/
+                public static readonly LOWERED: number /*int*/
                 // @ts-ignore
                 bevelType: number /*int*/
                 // @ts-ignore
@@ -75,14 +75,14 @@ declare namespace javax {
                  * @param height the height of the painted border
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitialize the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
                  * @param insets the object to be reinitialized
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns the outer highlight color of the bevel border
                  * when rendered on the specified component.  If no highlight
@@ -92,7 +92,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getHighlightOuterColor(c: java.awt.Component): java.awt.Color
+                public getHighlightOuterColor(c: java.awt.Component): java.awt.Color
                 /**
                  * Returns the inner highlight color of the bevel border
                  * when rendered on the specified component.  If no highlight
@@ -102,7 +102,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getHighlightInnerColor(c: java.awt.Component): java.awt.Color
+                public getHighlightInnerColor(c: java.awt.Component): java.awt.Color
                 /**
                  * Returns the inner shadow color of the bevel border
                  * when rendered on the specified component.  If no shadow
@@ -112,7 +112,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getShadowInnerColor(c: java.awt.Component): java.awt.Color
+                public getShadowInnerColor(c: java.awt.Component): java.awt.Color
                 /**
                  * Returns the outer shadow color of the bevel border
                  * when rendered on the specified component.  If no shadow
@@ -122,7 +122,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getShadowOuterColor(c: java.awt.Component): java.awt.Color
+                public getShadowOuterColor(c: java.awt.Component): java.awt.Color
                 /**
                  * Returns the outer highlight color of the bevel border.
                  * Will return null if no highlight color was specified
@@ -130,7 +130,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getHighlightOuterColor(): java.awt.Color
+                public getHighlightOuterColor(): java.awt.Color
                 /**
                  * Returns the inner highlight color of the bevel border.
                  * Will return null if no highlight color was specified
@@ -138,7 +138,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getHighlightInnerColor(): java.awt.Color
+                public getHighlightInnerColor(): java.awt.Color
                 /**
                  * Returns the inner shadow color of the bevel border.
                  * Will return null if no shadow color was specified
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getShadowInnerColor(): java.awt.Color
+                public getShadowInnerColor(): java.awt.Color
                 /**
                  * Returns the outer shadow color of the bevel border.
                  * Will return null if no shadow color was specified
@@ -154,17 +154,17 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getShadowOuterColor(): java.awt.Color
+                public getShadowOuterColor(): java.awt.Color
                 /**
                  * Returns the type of the bevel border.
                  */
                 // @ts-ignore
-                getBevelType(): int
+                public getBevelType(): number /*int*/
                 /**
                  * Returns whether or not the border is opaque.
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
                 // @ts-ignore
                 paintRaisedBevel(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 // @ts-ignore

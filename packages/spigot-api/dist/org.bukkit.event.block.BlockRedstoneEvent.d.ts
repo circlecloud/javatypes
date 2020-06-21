@@ -14,23 +14,23 @@ declare namespace org {
                      * @return The previous current
                      */
                     // @ts-ignore
-                    getOldCurrent(): int
+                    public getOldCurrent(): number /*int*/
                     /**
                      * Gets the new current of this block
                      * @return The new current
                      */
                     // @ts-ignore
-                    getNewCurrent(): int
+                    public getNewCurrent(): number /*int*/
                     /**
                      * Sets the new current of this block
                      * @param newCurrent The new current to set
                      */
                     // @ts-ignore
-                    setNewCurrent(newCurrent: number /*int*/): void
+                    public setNewCurrent(newCurrent: number /*int*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

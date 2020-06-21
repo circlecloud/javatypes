@@ -46,7 +46,7 @@ declare namespace java {
              * @see Selector
              */
             // @ts-ignore
-            class SelectableChannel extends java.nio.channels.spi.AbstractInterruptibleChannel implements java.nio.channels.Channel {
+            abstract class SelectableChannel extends java.nio.channels.spi.AbstractInterruptibleChannel implements java.nio.channels.Channel {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -57,7 +57,7 @@ declare namespace java {
                  * @return The provider that created this channel
                  */
                 // @ts-ignore
-                abstract provider(): java.nio.channels.spi.SelectorProvider
+                public abstract provider(): java.nio.channels.spi.SelectorProvider
                 /**
                  * Returns an <a href="SelectionKey.html#opsets">operation set</a>
                  * identifying this channel's supported operations.  The bits that are set
@@ -67,7 +67,7 @@ declare namespace java {
                  * @return The valid-operation set
                  */
                 // @ts-ignore
-                abstract validOps(): int
+                public abstract validOps(): number /*int*/
                 /**
                  * Tells whether or not this channel is currently registered with any
                  * selectors.  A newly-created channel is not registered.
@@ -78,7 +78,7 @@ declare namespace java {
                  * @return <tt>true</tt> if, and only if, this channel is registered
                  */
                 // @ts-ignore
-                abstract isRegistered(): boolean
+                public abstract isRegistered(): boolean
                 /**
                  * Retrieves the key representing the channel's registration with the given
                  * selector.
@@ -89,7 +89,7 @@ declare namespace java {
                  *           currently registered with that selector
                  */
                 // @ts-ignore
-                abstract keyFor(sel: java.nio.channels.Selector): java.nio.channels.SelectionKey
+                public abstract keyFor(sel: java.nio.channels.Selector): java.nio.channels.SelectionKey
                 /**
                  * Registers this channel with the given selector, returning a selection
                  * key.
@@ -140,7 +140,7 @@ declare namespace java {
                  *           the given selector
                  */
                 // @ts-ignore
-                abstract register(sel: java.nio.channels.Selector, ops: number /*int*/, att: any): java.nio.channels.SelectionKey
+                public abstract register(sel: java.nio.channels.Selector, ops: number /*int*/, att: java.lang.Object | any): java.nio.channels.SelectionKey
                 /**
                  * Registers this channel with the given selector, returning a selection
                  * key.
@@ -174,7 +174,7 @@ declare namespace java {
                  *           the given selector
                  */
                 // @ts-ignore
-                register(sel: java.nio.channels.Selector, ops: number /*int*/): java.nio.channels.SelectionKey
+                public register(sel: java.nio.channels.Selector, ops: number /*int*/): java.nio.channels.SelectionKey
                 /**
                  * Adjusts this channel's blocking mode.
                  * <p> If this channel is registered with one or more selectors then an
@@ -200,7 +200,7 @@ declare namespace java {
                  *          If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract configureBlocking(block: boolean): java.nio.channels.SelectableChannel
+                public abstract configureBlocking(block: boolean): java.nio.channels.SelectableChannel
                 /**
                  * Tells whether or not every I/O operation on this channel will block
                  * until it completes.  A newly-created channel is always in blocking mode.
@@ -209,7 +209,7 @@ declare namespace java {
                  * @return <tt>true</tt> if, and only if, this channel is in blocking mode
                  */
                 // @ts-ignore
-                abstract isBlocking(): boolean
+                public abstract isBlocking(): boolean
                 /**
                  * Retrieves the object upon which the {@link #configureBlocking
                  * configureBlocking} and {@link #register register} methods synchronize.
@@ -218,7 +218,7 @@ declare namespace java {
                  * @return The blocking-mode lock object
                  */
                 // @ts-ignore
-                abstract blockingLock(): java.lang.Object
+                public abstract blockingLock(): any
             }
         }
     }

@@ -12,14 +12,14 @@ declare namespace org {
                     // @ts-ignore
                     constructor(spawnee: org.bukkit.entity.LivingEntity, spawnReason: org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets the reason for why the creature is being spawned.
                      * @return A SpawnReason value detailing the reason for the creature being
                      *      spawned
                      */
                     // @ts-ignore
-                    getSpawnReason(): org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason
+                    public getSpawnReason(): org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason
                 }
             }
         }

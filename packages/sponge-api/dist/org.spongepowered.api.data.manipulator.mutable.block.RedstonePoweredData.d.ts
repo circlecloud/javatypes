@@ -24,7 +24,7 @@ declare namespace org {
                                  * @see Keys#POWER
                                  */
                                 // @ts-ignore
-                                power(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                power(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

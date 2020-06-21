@@ -20,7 +20,7 @@ declare namespace java {
                  * TextListener notification of a text value change.
                  */
                 // @ts-ignore
-                textValueChanged(textEvent: java.awt.event.TextEvent): void
+                public textValueChanged(textEvent: java.awt.event.TextEvent): void
                 /**
                  * Gets the state set of the TextComponent.
                  * The AccessibleStateSet of an object is composed of a set of
@@ -34,7 +34,7 @@ declare namespace java {
                  * @see #addPropertyChangeListener
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Gets the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -42,7 +42,7 @@ declare namespace java {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Get the AccessibleText associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -51,7 +51,7 @@ declare namespace java {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleText(): javax.accessibility.AccessibleText
+                public getAccessibleText(): javax.accessibility.AccessibleText
                 /**
                  * Given a point in local coordinates, return the zero-based index
                  * of the character under that Point.  If the point is invalid,
@@ -60,7 +60,7 @@ declare namespace java {
                  * @return the zero-based index of the character under Point p.
                  */
                 // @ts-ignore
-                getIndexAtPoint(p: java.awt.Point): int
+                public getIndexAtPoint(p: java.awt.Point): number /*int*/
                 /**
                  * Determines the bounding box of the character at the given
                  * index into the string.  The bounds are returned in local
@@ -70,13 +70,13 @@ declare namespace java {
                  * @return the screen coordinates of the character's bounding box
                  */
                 // @ts-ignore
-                getCharacterBounds(i: number /*int*/): java.awt.Rectangle
+                public getCharacterBounds(i: number /*int*/): java.awt.Rectangle
                 /**
                  * Returns the number of characters (valid indicies)
                  * @return the number of characters &gt;= 0
                  */
                 // @ts-ignore
-                getCharCount(): int
+                public getCharCount(): number /*int*/
                 /**
                  * Returns the zero-based offset of the caret.
                  * Note: The character to the right of the caret will have the
@@ -85,14 +85,14 @@ declare namespace java {
                  * @return the zero-based offset of the caret.
                  */
                 // @ts-ignore
-                getCaretPosition(): int
+                public getCaretPosition(): number /*int*/
                 /**
                  * Returns the AttributeSet for a given character (at a given index).
                  * @param i the zero-based index into the text
                  * @return the AttributeSet of the character
                  */
                 // @ts-ignore
-                getCharacterAttribute(i: number /*int*/): javax.swing.text.AttributeSet
+                public getCharacterAttribute(i: number /*int*/): javax.swing.text.AttributeSet
                 /**
                  * Returns the start offset within the selected text.
                  * If there is no selection, but there is
@@ -102,7 +102,7 @@ declare namespace java {
                  * @return the index into the text of the start of the selection &gt;= 0
                  */
                 // @ts-ignore
-                getSelectionStart(): int
+                public getSelectionStart(): number /*int*/
                 /**
                  * Returns the end offset within the selected text.
                  * If there is no selection, but there is
@@ -112,13 +112,13 @@ declare namespace java {
                  * @return the index into the text of the end of the selection &gt;= 0
                  */
                 // @ts-ignore
-                getSelectionEnd(): int
+                public getSelectionEnd(): number /*int*/
                 /**
                  * Returns the portion of the text that is selected.
                  * @return the text, null if no selection
                  */
                 // @ts-ignore
-                getSelectedText(): java.lang.String
+                public getSelectedText(): string
                 /**
                  * Returns the String at a given index.
                  * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
@@ -128,7 +128,7 @@ declare namespace java {
                  *    null for an invalid index or part
                  */
                 // @ts-ignore
-                getAtIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getAtIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the String after a given index.
                  * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
@@ -138,7 +138,7 @@ declare namespace java {
                  *   index or part
                  */
                 // @ts-ignore
-                getAfterIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getAfterIndex(part: number /*int*/, index: number /*int*/): string
                 /**
                  * Returns the String before a given index.
                  * @param part the AccessibleText.CHARACTER, AccessibleText.WORD,
@@ -148,7 +148,7 @@ declare namespace java {
                  *   or part
                  */
                 // @ts-ignore
-                getBeforeIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                public getBeforeIndex(part: number /*int*/, index: number /*int*/): string
             }
         }
     }

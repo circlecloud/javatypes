@@ -44,14 +44,14 @@ declare namespace javax {
                  * The constant which defines the length of a DES key in bytes.
                  */
                 // @ts-ignore
-                readonly DES_KEY_LEN: number /*int*/
+                public static readonly DES_KEY_LEN: number /*int*/
                 /**
                  * Returns the DES key material.
                  * @return the DES key material. Returns a new array
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getKey(): byte[]
+                public getKey(): number /*byte*/[]
                 /**
                  * Checks if the given DES key material, starting at <code>offset</code>
                  * inclusive, is parity-adjusted.
@@ -65,7 +65,7 @@ declare namespace javax {
                  *  shorter than 8 bytes.
                  */
                 // @ts-ignore
-                isParityAdjusted(key: number /*byte*/[], offset: number /*int*/): boolean
+                public static isParityAdjusted(key: number /*byte*/[], offset: number /*int*/): boolean
                 /**
                  * Checks if the given DES key material is weak or semi-weak.
                  * @param key the buffer with the DES key material.
@@ -78,7 +78,7 @@ declare namespace javax {
                  *  shorter than 8 bytes.
                  */
                 // @ts-ignore
-                isWeak(key: number /*byte*/[], offset: number /*int*/): boolean
+                public static isWeak(key: number /*byte*/[], offset: number /*int*/): boolean
             }
         }
     }

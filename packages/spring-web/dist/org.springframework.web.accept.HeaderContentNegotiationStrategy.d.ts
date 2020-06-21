@@ -17,7 +17,7 @@ declare namespace org {
                      * @throws HttpMediaTypeNotAcceptableException if the 'Accept' header cannot be parsed
                      */
                     // @ts-ignore
-                    resolveMediaTypes(request: org.springframework.web.context.request.NativeWebRequest): java.util.List<org.springframework.http.MediaType>
+                    public resolveMediaTypes(request: org.springframework.web.context.request.NativeWebRequest): Array<org.springframework.http.MediaType>
                 }
             }
         }

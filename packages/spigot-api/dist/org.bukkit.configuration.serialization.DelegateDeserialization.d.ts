@@ -7,7 +7,7 @@ declare namespace org {
                  * deserialization to another {@link ConfigurationSerializable}.
                  */
                 // @ts-ignore
-                class DelegateDeserialization implements java.lang.annotation.Annotation {
+                abstract class DelegateDeserialization implements java.lang.annotation.Annotation {
                 }
             }
         }

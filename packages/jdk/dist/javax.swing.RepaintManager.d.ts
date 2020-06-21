@@ -29,7 +29,7 @@ declare namespace javax {
              * @return the RepaintManager object
              */
             // @ts-ignore
-            currentManager(c: java.awt.Component): javax.swing.RepaintManager
+            public static currentManager(c: java.awt.Component): javax.swing.RepaintManager
             /**
              * Return the RepaintManager for the calling thread given a JComponent.
              * <p>
@@ -40,7 +40,7 @@ declare namespace javax {
              * @return the RepaintManager object
              */
             // @ts-ignore
-            currentManager(c: javax.swing.JComponent): javax.swing.RepaintManager
+            public static currentManager(c: javax.swing.JComponent): javax.swing.RepaintManager
             /**
              * Set the RepaintManager that should be used for the calling
              * thread. <b>aRepaintManager</b> will become the current RepaintManager
@@ -48,7 +48,7 @@ declare namespace javax {
              * @param aRepaintManager  the RepaintManager object to use
              */
             // @ts-ignore
-            setCurrentManager(aRepaintManager: javax.swing.RepaintManager): void
+            public static setCurrentManager(aRepaintManager: javax.swing.RepaintManager): void
             /**
              * Mark the component as in need of layout and queue a runnable
              * for the event dispatching thread that will validate the components
@@ -57,13 +57,13 @@ declare namespace javax {
              * @see #removeInvalidComponent
              */
             // @ts-ignore
-            addInvalidComponent(invalidComponent: javax.swing.JComponent): void
+            public addInvalidComponent(invalidComponent: javax.swing.JComponent): void
             /**
              * Remove a component from the list of invalid components.
              * @see #addInvalidComponent
              */
             // @ts-ignore
-            removeInvalidComponent(component: javax.swing.JComponent): void
+            public removeInvalidComponent(component: javax.swing.JComponent): void
             /**
              * Add a component in the list of components that should be refreshed.
              * If <i>c</i> already has a dirty region, the rectangle <i>(x,y,w,h)</i>
@@ -76,7 +76,7 @@ declare namespace javax {
              * @see JComponent#repaint
              */
             // @ts-ignore
-            addDirtyRegion(c: javax.swing.JComponent, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public addDirtyRegion(c: javax.swing.JComponent, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Adds <code>window</code> to the list of <code>Component</code>s that
              * need to be repainted.
@@ -91,7 +91,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            addDirtyRegion(window: java.awt.Window, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public addDirtyRegion(window: java.awt.Window, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Adds <code>applet</code> to the list of <code>Component</code>s that
              * need to be repainted.
@@ -104,26 +104,26 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            addDirtyRegion(applet: java.applet.Applet, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public addDirtyRegion(applet: java.applet.Applet, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Return the current dirty region for a component.
              * Return an empty rectangle if the component is not
              * dirty.
              */
             // @ts-ignore
-            getDirtyRegion(aComponent: javax.swing.JComponent): java.awt.Rectangle
+            public getDirtyRegion(aComponent: javax.swing.JComponent): java.awt.Rectangle
             /**
              * Mark a component completely dirty. <b>aComponent</b> will be
              * completely painted during the next paintDirtyRegions() call.
              */
             // @ts-ignore
-            markCompletelyDirty(aComponent: javax.swing.JComponent): void
+            public markCompletelyDirty(aComponent: javax.swing.JComponent): void
             /**
              * Mark a component completely clean. <b>aComponent</b> will not
              * get painted during the next paintDirtyRegions() call.
              */
             // @ts-ignore
-            markCompletelyClean(aComponent: javax.swing.JComponent): void
+            public markCompletelyClean(aComponent: javax.swing.JComponent): void
             /**
              * Convenience method that returns true if <b>aComponent</b> will be completely
              * painted during the next paintDirtyRegions(). If computing dirty regions is
@@ -131,26 +131,26 @@ declare namespace javax {
              * if it return true.
              */
             // @ts-ignore
-            isCompletelyDirty(aComponent: javax.swing.JComponent): boolean
+            public isCompletelyDirty(aComponent: javax.swing.JComponent): boolean
             /**
              * Validate all of the components that have been marked invalid.
              * @see #addInvalidComponent
              */
             // @ts-ignore
-            validateInvalidComponents(): void
+            public validateInvalidComponents(): void
             /**
              * Paint all of the components that have been marked dirty.
              * @see #addDirtyRegion
              */
             // @ts-ignore
-            paintDirtyRegions(): void
+            public paintDirtyRegions(): void
             /**
              * Returns a string that displays and identifies this
              * object's properties.
              * @return a String representation of this object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Return the offscreen buffer that should be used as a double buffer with
              * the component <code>c</code>.
@@ -160,7 +160,7 @@ declare namespace javax {
              * repaint manager.
              */
             // @ts-ignore
-            getOffscreenBuffer(c: java.awt.Component, proposedWidth: number /*int*/, proposedHeight: number /*int*/): java.awt.Image
+            public getOffscreenBuffer(c: java.awt.Component, proposedWidth: number /*int*/, proposedHeight: number /*int*/): java.awt.Image
             /**
              * Return a volatile offscreen buffer that should be used as a
              * double buffer with the specified component <code>c</code>.
@@ -173,18 +173,18 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getVolatileOffscreenBuffer(c: java.awt.Component, proposedWidth: number /*int*/, proposedHeight: number /*int*/): java.awt.Image
+            public getVolatileOffscreenBuffer(c: java.awt.Component, proposedWidth: number /*int*/, proposedHeight: number /*int*/): java.awt.Image
             /**
              * Set the maximum double buffer size.
              */
             // @ts-ignore
-            setDoubleBufferMaximumSize(d: java.awt.Dimension): void
+            public setDoubleBufferMaximumSize(d: java.awt.Dimension): void
             /**
              * Returns the maximum double buffer size.
              * @return a Dimension object representing the maximum size
              */
             // @ts-ignore
-            getDoubleBufferMaximumSize(): java.awt.Dimension
+            public getDoubleBufferMaximumSize(): java.awt.Dimension
             /**
              * Enables or disables double buffering in this RepaintManager.
              * CAUTION: The default value for this property is set for optimal
@@ -194,7 +194,7 @@ declare namespace javax {
              * @see #isDoubleBufferingEnabled
              */
             // @ts-ignore
-            setDoubleBufferingEnabled(aFlag: boolean): void
+            public setDoubleBufferingEnabled(aFlag: boolean): void
             /**
              * Returns true if this RepaintManager is double buffered.
              * The default value for this property may vary from platform
@@ -206,7 +206,7 @@ declare namespace javax {
              * @return true if this object is double buffered
              */
             // @ts-ignore
-            isDoubleBufferingEnabled(): boolean
+            public isDoubleBufferingEnabled(): boolean
         }
     }
 }

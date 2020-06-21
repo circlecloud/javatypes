@@ -38,7 +38,7 @@ declare namespace org {
                              * </ul>
                              */
                             // @ts-ignore
-                            path(path: string): org.springframework.http.server.reactive.ServerHttpRequest.Builder
+                            path(path: java.lang.String | string): org.springframework.http.server.reactive.ServerHttpRequest.Builder
                             /**
                              * Set the contextPath to use.
                              * <p>The given value must be a valid {@link RequestPath#contextPath()
@@ -47,7 +47,7 @@ declare namespace org {
                              * changing the path via {@link #path(String)}.
                              */
                             // @ts-ignore
-                            contextPath(contextPath: string): org.springframework.http.server.reactive.ServerHttpRequest.Builder
+                            contextPath(contextPath: java.lang.String | string): org.springframework.http.server.reactive.ServerHttpRequest.Builder
                             /**
                              * Set or override the specified header values under the given name.
                              * <p>If you need to add header values, remove headers, etc., use
@@ -58,7 +58,7 @@ declare namespace org {
                              * @see #headers(Consumer)
                              */
                             // @ts-ignore
-                            header(headerName: string, ...headerValues: string[]): org.springframework.http.server.reactive.ServerHttpRequest.Builder
+                            header(headerName: java.lang.String | string, ...headerValues: java.lang.String[] | string[]): org.springframework.http.server.reactive.ServerHttpRequest.Builder
                             /**
                              * Manipulate request headers. The provided {@code HttpHeaders} contains
                              * current request headers, so that the {@code Consumer} can
@@ -68,7 +68,7 @@ declare namespace org {
                              * @see #header(String, String...)
                              */
                             // @ts-ignore
-                            headers(headersConsumer: java.util.function.Consumer<org.springframework.http.HttpHeaders> | java.util.function$.Consumer<org.springframework.http.HttpHeaders>): org.springframework.http.server.reactive.ServerHttpRequest.Builder
+                            headers(headersConsumer: java.util.function$.Consumer<org.springframework.http.HttpHeaders>): org.springframework.http.server.reactive.ServerHttpRequest.Builder
                             /**
                              * Set the SSL session information. This may be useful in environments
                              * where TLS termination is done at the router, but SSL information is

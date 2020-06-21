@@ -23,13 +23,13 @@ declare namespace java {
              * @return The timestamp's date and time.
              */
             // @ts-ignore
-            getTimestamp(): java.util.Date
+            public getTimestamp(): java.util.Date
             /**
              * Returns the certificate path for the Timestamping Authority.
              * @return The TSA's certificate path.
              */
             // @ts-ignore
-            getSignerCertPath(): java.security.cert.CertPath
+            public getSignerCertPath(): java.security.cert.CertPath
             /**
              * Returns the hash code value for this timestamp.
              * The hash code is generated using the date and time of the timestamp
@@ -37,7 +37,7 @@ declare namespace java {
              * @return a hash code value for this timestamp.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tests for equality between the specified object and this
              * timestamp. Two timestamps are considered equal if the date and time of
@@ -46,14 +46,14 @@ declare namespace java {
              * @return true if the timestamp are considered equal, false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a string describing this timestamp.
              * @return A string comprising the date and time of the timestamp and
              *          its signer's certificate.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

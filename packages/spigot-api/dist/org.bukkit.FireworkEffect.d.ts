@@ -10,52 +10,52 @@ declare namespace org {
              * @return A utility object for building a firework effect
              */
             // @ts-ignore
-            builder(): org.bukkit.FireworkEffect.Builder
+            public static builder(): org.bukkit.FireworkEffect.Builder
             /**
              * Get whether the firework effect flickers.
              * @return true if it flickers, false if not
              */
             // @ts-ignore
-            hasFlicker(): boolean
+            public hasFlicker(): boolean
             /**
              * Get whether the firework effect has a trail.
              * @return true if it has a trail, false if not
              */
             // @ts-ignore
-            hasTrail(): boolean
+            public hasTrail(): boolean
             /**
              * Get the primary colors of the firework effect.
              * @return An immutable list of the primary colors
              */
             // @ts-ignore
-            getColors(): java.util.List<org.bukkit.Color>
+            public getColors(): Array<org.bukkit.Color>
             /**
              * Get the fade colors of the firework effect.
              * @return An immutable list of the fade colors
              */
             // @ts-ignore
-            getFadeColors(): java.util.List<org.bukkit.Color>
+            public getFadeColors(): Array<org.bukkit.Color>
             /**
              * Get the type of the firework effect.
              * @return The effect type
              */
             // @ts-ignore
-            getType(): org.bukkit.FireworkEffect.Type
+            public getType(): org.bukkit.FireworkEffect.Type
             /**
              * @see ConfigurationSerializable
              * @param map the map to deserialize
              * @return the resulting serializable
              */
             // @ts-ignore
-            deserialize(map: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.configuration.serialization.ConfigurationSerializable
+            public static deserialize(map: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.configuration.serialization.ConfigurationSerializable
             // @ts-ignore
-            serialize(): java.util.Map<java.lang.String, java.lang.Object>
+            public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

@@ -31,7 +31,7 @@ declare namespace org {
                  * @see org.springframework.context.annotation.Bean
                  */
                 // @ts-ignore
-                class Scope implements java.lang.annotation.Annotation {
+                abstract class Scope implements java.lang.annotation.Annotation {
                 }
             }
         }

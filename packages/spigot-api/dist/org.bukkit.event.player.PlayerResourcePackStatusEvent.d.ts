@@ -15,11 +15,11 @@ declare namespace org {
                      * @return the current status
                      */
                     // @ts-ignore
-                    getStatus(): org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
+                    public getStatus(): org.bukkit.event.player.PlayerResourcePackStatusEvent.Status
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

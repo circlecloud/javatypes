@@ -128,7 +128,7 @@ declare namespace javax {
              * @see #setLookAndFeel
              */
             // @ts-ignore
-            getInstalledLookAndFeels(): javax.swing.UIManager.LookAndFeelInfo[]
+            public static getInstalledLookAndFeels(): javax.swing.UIManager.LookAndFeelInfo[]
             /**
              * Sets the set of available look and feels. While this method does
              * not check to ensure all of the {@code LookAndFeelInfos} are
@@ -140,7 +140,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code infos} is {@code null}
              */
             // @ts-ignore
-            setInstalledLookAndFeels(infos: javax.swing.UIManager.LookAndFeelInfo[]): void
+            public static setInstalledLookAndFeels(infos: javax.swing.UIManager.LookAndFeelInfo[]): void
             /**
              * Adds the specified look and feel to the set of available look
              * and feels. While this method allows a {@code null} {@code info},
@@ -150,7 +150,7 @@ declare namespace javax {
              * @see #setInstalledLookAndFeels
              */
             // @ts-ignore
-            installLookAndFeel(info: javax.swing.UIManager.LookAndFeelInfo): void
+            public static installLookAndFeel(info: javax.swing.UIManager.LookAndFeelInfo): void
             /**
              * Adds the specified look and feel to the set of available look
              * and feels. While this method does not check the
@@ -161,14 +161,14 @@ declare namespace javax {
              * @see #setInstalledLookAndFeels
              */
             // @ts-ignore
-            installLookAndFeel(name: string, className: string): void
+            public static installLookAndFeel(name: java.lang.String | string, className: java.lang.String | string): void
             /**
              * Returns the current look and feel or <code>null</code>.
              * @return current look and feel, or <code>null</code>
              * @see #setLookAndFeel
              */
             // @ts-ignore
-            getLookAndFeel(): javax.swing.LookAndFeel
+            public static getLookAndFeel(): javax.swing.LookAndFeel
             /**
              * Sets the current look and feel to {@code newLookAndFeel}.
              * If the current look and feel is {@code non-null} {@code
@@ -193,7 +193,7 @@ declare namespace javax {
              * @see #getLookAndFeel
              */
             // @ts-ignore
-            setLookAndFeel(newLookAndFeel: javax.swing.LookAndFeel): void
+            public static setLookAndFeel(newLookAndFeel: javax.swing.LookAndFeel): void
             /**
              * Loads the {@code LookAndFeel} specified by the given class
              * name, using the current thread's context class loader, and
@@ -211,7 +211,7 @@ declare namespace javax {
              *          a class that extends {@code LookAndFeel}
              */
             // @ts-ignore
-            setLookAndFeel(className: string): void
+            public static setLookAndFeel(className: java.lang.String | string): void
             /**
              * Returns the name of the <code>LookAndFeel</code> class that implements
              * the native system look and feel if there is one, otherwise
@@ -224,7 +224,7 @@ declare namespace javax {
              * @see #getCrossPlatformLookAndFeelClassName
              */
             // @ts-ignore
-            getSystemLookAndFeelClassName(): java.lang.String
+            public static getSystemLookAndFeelClassName(): string
             /**
              * Returns the name of the <code>LookAndFeel</code> class that implements
              * the default cross platform look and feel -- the Java
@@ -235,14 +235,14 @@ declare namespace javax {
              * @see #getSystemLookAndFeelClassName
              */
             // @ts-ignore
-            getCrossPlatformLookAndFeelClassName(): java.lang.String
+            public static getCrossPlatformLookAndFeelClassName(): string
             /**
              * Returns the defaults. The returned defaults resolve using the
              * logic specified in the class documentation.
              * @return a <code>UIDefaults</code> object containing the default values
              */
             // @ts-ignore
-            getDefaults(): javax.swing.UIDefaults
+            public static getDefaults(): javax.swing.UIDefaults
             /**
              * Returns a font from the defaults. If the value for {@code key} is
              * not a {@code Font}, {@code null} is returned.
@@ -251,7 +251,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getFont(key: any): java.awt.Font
+            public static getFont(key: java.lang.Object | any): java.awt.Font
             /**
              * Returns a font from the defaults that is appropriate
              * for the given locale. If the value for {@code key} is
@@ -265,7 +265,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getFont(key: any, l: java.util.Locale): java.awt.Font
+            public static getFont(key: java.lang.Object | any, l: java.util.Locale): java.awt.Font
             /**
              * Returns a color from the defaults. If the value for {@code key} is
              * not a {@code Color}, {@code null} is returned.
@@ -274,7 +274,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getColor(key: any): java.awt.Color
+            public static getColor(key: java.lang.Object | any): java.awt.Color
             /**
              * Returns a color from the defaults that is appropriate
              * for the given locale. If the value for {@code key} is
@@ -288,7 +288,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getColor(key: any, l: java.util.Locale): java.awt.Color
+            public static getColor(key: java.lang.Object | any, l: java.util.Locale): java.awt.Color
             /**
              * Returns an <code>Icon</code> from the defaults. If the value for
              * {@code key} is not an {@code Icon}, {@code null} is returned.
@@ -297,7 +297,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getIcon(key: any): javax.swing.Icon
+            public static getIcon(key: java.lang.Object | any): javax.swing.Icon
             /**
              * Returns an <code>Icon</code> from the defaults that is appropriate
              * for the given locale. If the value for
@@ -311,7 +311,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getIcon(key: any, l: java.util.Locale): javax.swing.Icon
+            public static getIcon(key: java.lang.Object | any, l: java.util.Locale): javax.swing.Icon
             /**
              * Returns a border from the defaults. If the value for
              * {@code key} is not a {@code Border}, {@code null} is returned.
@@ -320,7 +320,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getBorder(key: any): javax.swing.border.Border
+            public static getBorder(key: java.lang.Object | any): javax.swing.border.Border
             /**
              * Returns a border from the defaults that is appropriate
              * for the given locale.  If the value for
@@ -334,7 +334,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getBorder(key: any, l: java.util.Locale): javax.swing.border.Border
+            public static getBorder(key: java.lang.Object | any, l: java.util.Locale): javax.swing.border.Border
             /**
              * Returns a string from the defaults. If the value for
              * {@code key} is not a {@code String}, {@code null} is returned.
@@ -343,7 +343,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getString(key: any): java.lang.String
+            public static getString(key: java.lang.Object | any): string
             /**
              * Returns a string from the defaults that is appropriate for the
              * given locale.  If the value for
@@ -357,7 +357,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getString(key: any, l: java.util.Locale): java.lang.String
+            public static getString(key: java.lang.Object | any, l: java.util.Locale): string
             /**
              * Returns an integer from the defaults. If the value for
              * {@code key} is not an {@code Integer}, or does not exist,
@@ -367,7 +367,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getInt(key: any): int
+            public static getInt(key: java.lang.Object | any): number /*int*/
             /**
              * Returns an integer from the defaults that is appropriate
              * for the given locale. If the value for
@@ -382,7 +382,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getInt(key: any, l: java.util.Locale): int
+            public static getInt(key: java.lang.Object | any, l: java.util.Locale): number /*int*/
             /**
              * Returns a boolean from the defaults which is associated with
              * the key value. If the key is not found or the key doesn't represent
@@ -393,7 +393,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getBoolean(key: any): boolean
+            public static getBoolean(key: java.lang.Object | any): boolean
             /**
              * Returns a boolean from the defaults which is associated with
              * the key value and the given <code>Locale</code>. If the key is not
@@ -409,7 +409,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getBoolean(key: any, l: java.util.Locale): boolean
+            public static getBoolean(key: java.lang.Object | any, l: java.util.Locale): boolean
             /**
              * Returns an <code>Insets</code> object from the defaults. If the value
              * for {@code key} is not an {@code Insets}, {@code null} is returned.
@@ -418,7 +418,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getInsets(key: any): java.awt.Insets
+            public static getInsets(key: java.lang.Object | any): java.awt.Insets
             /**
              * Returns an <code>Insets</code> object from the defaults that is
              * appropriate for the given locale. If the value
@@ -432,7 +432,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getInsets(key: any, l: java.util.Locale): java.awt.Insets
+            public static getInsets(key: java.lang.Object | any, l: java.util.Locale): java.awt.Insets
             /**
              * Returns a dimension from the defaults. If the value
              * for {@code key} is not a {@code Dimension}, {@code null} is returned.
@@ -441,7 +441,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            getDimension(key: any): java.awt.Dimension
+            public static getDimension(key: java.lang.Object | any): java.awt.Dimension
             /**
              * Returns a dimension from the defaults that is appropriate
              * for the given locale. If the value
@@ -455,7 +455,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDimension(key: any, l: java.util.Locale): java.awt.Dimension
+            public static getDimension(key: java.lang.Object | any, l: java.util.Locale): java.awt.Dimension
             /**
              * Returns an object from the defaults.
              * @param key  an <code>Object</code> specifying the desired object
@@ -463,7 +463,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code key} is {@code null}
              */
             // @ts-ignore
-            get(key: any): java.lang.Object
+            public static get(key: java.lang.Object | any): any
             /**
              * Returns an object from the defaults that is appropriate for
              * the given locale.
@@ -476,7 +476,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            get(key: any, l: java.util.Locale): java.lang.Object
+            public static get(key: java.lang.Object | any, l: java.util.Locale): any
             /**
              * Stores an object in the developer defaults. This is a cover method
              * for {@code getDefaults().put(key, value)}. This only effects the
@@ -490,7 +490,7 @@ declare namespace javax {
              * @see UIDefaults#put
              */
             // @ts-ignore
-            put(key: any, value: any): java.lang.Object
+            public static put(key: java.lang.Object | any, value: java.lang.Object | any): any
             /**
              * Returns the appropriate {@code ComponentUI} implementation for
              * {@code target}. Typically, this is a cover for
@@ -505,7 +505,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUI(target: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+            public static getUI(target: javax.swing.JComponent): javax.swing.plaf.ComponentUI
             /**
              * Returns the {@code UIDefaults} from the current look and feel,
              * that were obtained at the time the look and feel was installed.
@@ -520,7 +520,7 @@ declare namespace javax {
              * @see LookAndFeel#getDefaults
              */
             // @ts-ignore
-            getLookAndFeelDefaults(): javax.swing.UIDefaults
+            public static getLookAndFeelDefaults(): javax.swing.UIDefaults
             /**
              * Adds a <code>LookAndFeel</code> to the list of auxiliary look and feels.
              * The auxiliary look and feels tell the multiplexing look and feel what
@@ -537,7 +537,7 @@ declare namespace javax {
              * @see #getInstalledLookAndFeels
              */
             // @ts-ignore
-            addAuxiliaryLookAndFeel(laf: javax.swing.LookAndFeel): void
+            public static addAuxiliaryLookAndFeel(laf: javax.swing.LookAndFeel): void
             /**
              * Removes a <code>LookAndFeel</code> from the list of auxiliary look and feels.
              * The auxiliary look and feels tell the multiplexing look and feel what
@@ -554,7 +554,7 @@ declare namespace javax {
              * @see #getInstalledLookAndFeels
              */
             // @ts-ignore
-            removeAuxiliaryLookAndFeel(laf: javax.swing.LookAndFeel): boolean
+            public static removeAuxiliaryLookAndFeel(laf: javax.swing.LookAndFeel): boolean
             /**
              * Returns the list of auxiliary look and feels (can be <code>null</code>).
              * The auxiliary look and feels tell the multiplexing look and feel what
@@ -569,7 +569,7 @@ declare namespace javax {
              * @see #getInstalledLookAndFeels
              */
             // @ts-ignore
-            getAuxiliaryLookAndFeels(): javax.swing.LookAndFeel[]
+            public static getAuxiliaryLookAndFeels(): javax.swing.LookAndFeel[]
             /**
              * Adds a <code>PropertyChangeListener</code> to the listener list.
              * The listener is registered for all properties.
@@ -577,7 +577,7 @@ declare namespace javax {
              * @see java.beans.PropertyChangeSupport
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public static addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a <code>PropertyChangeListener</code> from the listener list.
              * This removes a <code>PropertyChangeListener</code> that was registered
@@ -586,7 +586,7 @@ declare namespace javax {
              * @see java.beans.PropertyChangeSupport
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public static removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the <code>PropertyChangeListener</code>s added
              * to this UIManager with addPropertyChangeListener().
@@ -595,7 +595,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public static getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
         }
     }
 }

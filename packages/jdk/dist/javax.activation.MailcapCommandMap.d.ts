@@ -91,7 +91,7 @@ declare namespace javax {
              * @exception IOException     if the file can't be accessed
              */
             // @ts-ignore
-            constructor(fileName: string)
+            constructor(fileName: java.lang.String | string)
             /**
              * Constructor that allows the caller to specify an <i>InputStream</i>
              * containing a mailcap file.
@@ -111,7 +111,7 @@ declare namespace javax {
              * @return the CommandInfo objects representing the preferred commands.
              */
             // @ts-ignore
-            getPreferredCommands(mimeType: string): javax.activation.CommandInfo[]
+            public getPreferredCommands(mimeType: java.lang.String | string): javax.activation.CommandInfo[]
             /**
              * Get all the available commands in all mailcap files known to
              * this instance of MailcapCommandMap for this MIME type.
@@ -119,7 +119,7 @@ declare namespace javax {
              * @return the CommandInfo objects representing all the commands.
              */
             // @ts-ignore
-            getAllCommands(mimeType: string): javax.activation.CommandInfo[]
+            public getAllCommands(mimeType: java.lang.String | string): javax.activation.CommandInfo[]
             /**
              * Get the command corresponding to <code>cmdName</code> for the MIME type.
              * @param mimeType  the MIME type
@@ -127,7 +127,7 @@ declare namespace javax {
              * @return the CommandInfo object corresponding to the command.
              */
             // @ts-ignore
-            getCommand(mimeType: string, cmdName: string): javax.activation.CommandInfo
+            public getCommand(mimeType: java.lang.String | string, cmdName: java.lang.String | string): javax.activation.CommandInfo
             /**
              * Add entries to the registry.  Programmatically
              * added entries are searched before other entries.<p>
@@ -136,21 +136,21 @@ declare namespace javax {
              * @param mail_cap a correctly formatted mailcap string
              */
             // @ts-ignore
-            addMailcap(mail_cap: string): void
+            public addMailcap(mail_cap: java.lang.String | string): void
             /**
              * Return the DataContentHandler for the specified MIME type.
              * @param mimeType  the MIME type
              * @return the DataContentHandler
              */
             // @ts-ignore
-            createDataContentHandler(mimeType: string): javax.activation.DataContentHandler
+            public createDataContentHandler(mimeType: java.lang.String | string): javax.activation.DataContentHandler
             /**
              * Get all the MIME types known to this command map.
              * @return array of MIME types as strings
              * @since JAF 1.1
              */
             // @ts-ignore
-            getMimeTypes(): java.lang.String[]
+            public getMimeTypes(): string[]
             /**
              * Get the native commands for the given MIME type.
              * Returns an array of strings where each string is
@@ -165,7 +165,7 @@ declare namespace javax {
              * @since JAF 1.1
              */
             // @ts-ignore
-            getNativeCommands(mimeType: string): java.lang.String[]
+            public getNativeCommands(mimeType: java.lang.String | string): string[]
         }
     }
 }

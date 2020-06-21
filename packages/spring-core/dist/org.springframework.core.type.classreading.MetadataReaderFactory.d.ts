@@ -20,7 +20,7 @@ declare namespace org {
                          * @throws IOException in case of I/O failure
                          */
                         // @ts-ignore
-                        getMetadataReader(className: string): org.springframework.core.type.classreading.MetadataReader
+                        getMetadataReader(className: java.lang.String | string): org.springframework.core.type.classreading.MetadataReader
                         /**
                          * Obtain a MetadataReader for the given resource.
                          * @param resource the resource (pointing to a ".class" file)

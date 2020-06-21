@@ -9,17 +9,17 @@ declare namespace org {
                  * applied before generation.
                  */
                 // @ts-ignore
-                class AbstractClassGenerator<T> extends java.lang.Object {
+                abstract class AbstractClassGenerator<T> extends java.lang.Object {
                     // @ts-ignore
                     constructor(source: org.springframework.cglib.core.AbstractClassGenerator.Source)
                     // @ts-ignore
-                    wrapCachedClass(klass: java.lang.Class): T
+                    wrapCachedClass(klass: java.lang.Class<any>): T
                     // @ts-ignore
-                    unwrapCachedValue(cached: T): java.lang.Object
+                    unwrapCachedValue(cached: T): any
                     // @ts-ignore
-                    setNamePrefix(namePrefix: string): void
+                    setNamePrefix(namePrefix: java.lang.String | string): void
                     // @ts-ignore
-                    getClassName(): java.lang.String
+                    getClassName(): string
                     /**
                      * Set the <code>ClassLoader</code> in which the class will be generated.
                      * Concrete subclasses of <code>AbstractClassGenerator</code> (such as <code>Enhancer</code>)
@@ -30,60 +30,60 @@ declare namespace org {
                      * @param classLoader the loader to generate the new class with, or null to use the default
                      */
                     // @ts-ignore
-                    setClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    setContextClass(contextClass: java.lang.Class): void
+                    public setContextClass(contextClass: java.lang.Class<any>): void
                     /**
                      * Override the default naming policy.
                      * @param namingPolicy the custom policy, or null to use the default
                      * @see DefaultNamingPolicy
                      */
                     // @ts-ignore
-                    setNamingPolicy(namingPolicy: NamingPolicy): void
+                    public setNamingPolicy(namingPolicy: NamingPolicy): void
                     /**
                      * @see #setNamingPolicy
                      */
                     // @ts-ignore
-                    getNamingPolicy(): NamingPolicy
+                    public getNamingPolicy(): NamingPolicy
                     /**
                      * Whether use and update the static cache of generated classes
                      * for a class with the same properties. Default is <code>true</code>.
                      */
                     // @ts-ignore
-                    setUseCache(useCache: boolean): void
+                    public setUseCache(useCache: boolean): void
                     /**
                      * @see #setUseCache
                      */
                     // @ts-ignore
-                    getUseCache(): boolean
+                    public getUseCache(): boolean
                     /**
                      * If set, CGLIB will attempt to load classes from the specified
                      * <code>ClassLoader</code> before generating them. Because generated
                      * class names are not guaranteed to be unique, the default is <code>false</code>.
                      */
                     // @ts-ignore
-                    setAttemptLoad(attemptLoad: boolean): void
+                    public setAttemptLoad(attemptLoad: boolean): void
                     // @ts-ignore
-                    getAttemptLoad(): boolean
+                    public getAttemptLoad(): boolean
                     /**
                      * Set the strategy to use to create the bytecode from this generator.
                      * By default an instance of {@link DefaultGeneratorStrategy} is used.
                      */
                     // @ts-ignore
-                    setStrategy(strategy: GeneratorStrategy): void
+                    public setStrategy(strategy: GeneratorStrategy): void
                     /**
                      * @see #setStrategy
                      */
                     // @ts-ignore
-                    getStrategy(): GeneratorStrategy
+                    public getStrategy(): GeneratorStrategy
                     /**
                      * Used internally by CGLIB. Returns the <code>AbstractClassGenerator</code>
                      * that is being used to generate a class in the current thread.
                      */
                     // @ts-ignore
-                    getCurrent(): org.springframework.cglib.core.AbstractClassGenerator
+                    public static getCurrent(): org.springframework.cglib.core.AbstractClassGenerator<any>
                     // @ts-ignore
-                    getClassLoader(): java.lang.ClassLoader
+                    public getClassLoader(): java.lang.ClassLoader
                     // @ts-ignore
                     abstract getDefaultClassLoader(): java.lang.ClassLoader
                     /**
@@ -97,13 +97,13 @@ declare namespace org {
                     // @ts-ignore
                     getProtectionDomain(): java.security.ProtectionDomain
                     // @ts-ignore
-                    create(key: any): java.lang.Object
+                    create(key: java.lang.Object | any): any
                     // @ts-ignore
-                    generate(data: org.springframework.cglib.core.AbstractClassGenerator.ClassLoaderData): java.lang.Class
+                    generate(data: org.springframework.cglib.core.AbstractClassGenerator.ClassLoaderData): java.lang.Class<any>
                     // @ts-ignore
-                    abstract firstInstance(type: java.lang.Class): java.lang.Object
+                    abstract firstInstance(type: java.lang.Class<any>): any
                     // @ts-ignore
-                    abstract nextInstance(instance: any): java.lang.Object
+                    abstract nextInstance(instance: java.lang.Object | any): any
                 }
             }
         }

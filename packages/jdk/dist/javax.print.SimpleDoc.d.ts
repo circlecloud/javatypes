@@ -42,14 +42,14 @@ declare namespace javax {
              *          <code>DocFlavor</code>.
              */
             // @ts-ignore
-            constructor(printData: any, flavor: javax.print.DocFlavor, attributes: javax.print.attribute.DocAttributeSet)
+            constructor(printData: java.lang.Object | any, flavor: javax.print.DocFlavor, attributes: javax.print.attribute.DocAttributeSet)
             /**
              * Determines the doc flavor in which this doc object will supply its
              * piece of print data.
              * @return Doc flavor.
              */
             // @ts-ignore
-            getDocFlavor(): javax.print.DocFlavor
+            public getDocFlavor(): javax.print.DocFlavor
             /**
              * Obtains the set of printing attributes for this doc object. If the
              * returned attribute set includes an instance of a particular attribute
@@ -66,9 +66,9 @@ declare namespace javax {
              *           set.
              */
             // @ts-ignore
-            getAttributes(): javax.print.attribute.DocAttributeSet
+            public getAttributes(): javax.print.attribute.DocAttributeSet
             // @ts-ignore
-            getPrintData(): java.lang.Object
+            public getPrintData(): any
             /**
              * Obtains a reader for extracting character print data from this doc.
              * The <code>Doc</code> implementation is required to support this
@@ -95,7 +95,7 @@ declare namespace javax {
              *              the reader.
              */
             // @ts-ignore
-            getReaderForText(): java.io.Reader
+            public getReaderForText(): java.io.Reader
             /**
              * Obtains an input stream for extracting byte print data from
              * this doc.
@@ -123,7 +123,7 @@ declare namespace javax {
              *      if there was an I/O error while creating the input stream.
              */
             // @ts-ignore
-            getStreamForBytes(): java.io.InputStream
+            public getStreamForBytes(): java.io.InputStream
         }
     }
 }

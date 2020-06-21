@@ -145,7 +145,7 @@ declare namespace java {
                  *          <code>h</code> is not greater than 0
                  */
                 // @ts-ignore
-                createCompatibleSampleModel(w: number /*int*/, h: number /*int*/): java.awt.image.SampleModel
+                public createCompatibleSampleModel(w: number /*int*/, h: number /*int*/): java.awt.image.SampleModel
                 /**
                  * Creates a new ComponentSampleModel with a subset of the bands
                  * of this ComponentSampleModel.  The new ComponentSampleModel can be
@@ -159,7 +159,7 @@ declare namespace java {
                  *           of bands from this <code>ComponentSampleModel</code>.
                  */
                 // @ts-ignore
-                createSubsetSampleModel(bands: number /*int*/[]): java.awt.image.SampleModel
+                public createSubsetSampleModel(bands: number /*int*/[]): java.awt.image.SampleModel
                 /**
                  * Creates a <code>DataBuffer</code> that corresponds to this
                  * <code>ComponentSampleModel</code>.
@@ -170,7 +170,7 @@ declare namespace java {
                  *          <code>ComponentSampleModel</code>.
                  */
                 // @ts-ignore
-                createDataBuffer(): java.awt.image.DataBuffer
+                public createDataBuffer(): java.awt.image.DataBuffer
                 /**
                  * Gets the offset for the first band of pixel (x,y).
                  * A sample of the first band can be retrieved from a
@@ -185,7 +185,7 @@ declare namespace java {
                  * @return the offset for the first band of the specified pixel.
                  */
                 // @ts-ignore
-                getOffset(x: number /*int*/, y: number /*int*/): int
+                public getOffset(x: number /*int*/, y: number /*int*/): number /*int*/
                 /**
                  * Gets the offset for band b of pixel (x,y).
                  * A sample of band <code>b</code> can be retrieved from a
@@ -200,7 +200,7 @@ declare namespace java {
                  * @return the offset for the specified band of the specified pixel.
                  */
                 // @ts-ignore
-                getOffset(x: number /*int*/, y: number /*int*/, b: number /*int*/): int
+                public getOffset(x: number /*int*/, y: number /*int*/, b: number /*int*/): number /*int*/
                 /**
                  * Returns the number of bits per sample for all bands.
                  * @return an array containing the number of bits per sample
@@ -208,38 +208,38 @@ declare namespace java {
                  *           represents a band.
                  */
                 // @ts-ignore
-                getSampleSize(): int[]
+                public getSampleSize(): number /*int*/[]
                 /**
                  * Returns the number of bits per sample for the specified band.
                  * @param band the specified band
                  * @return the number of bits per sample for the specified band.
                  */
                 // @ts-ignore
-                getSampleSize(band: number /*int*/): int
+                public getSampleSize(band: number /*int*/): number /*int*/
                 /**
                  * Returns the bank indices for all bands.
                  * @return the bank indices for all bands.
                  */
                 // @ts-ignore
-                getBankIndices(): int[]
+                public getBankIndices(): number /*int*/[]
                 /**
                  * Returns the band offset for all bands.
                  * @return the band offsets for all bands.
                  */
                 // @ts-ignore
-                getBandOffsets(): int[]
+                public getBandOffsets(): number /*int*/[]
                 /**
                  * Returns the scanline stride of this ComponentSampleModel.
                  * @return the scanline stride of this <code>ComponentSampleModel</code>.
                  */
                 // @ts-ignore
-                getScanlineStride(): int
+                public getScanlineStride(): number /*int*/
                 /**
                  * Returns the pixel stride of this ComponentSampleModel.
                  * @return the pixel stride of this <code>ComponentSampleModel</code>.
                  */
                 // @ts-ignore
-                getPixelStride(): int
+                public getPixelStride(): number /*int*/
                 /**
                  * Returns the number of data elements needed to transfer a pixel
                  * with the
@@ -255,7 +255,7 @@ declare namespace java {
                  * @see #getNumBands
                  */
                 // @ts-ignore
-                getNumDataElements(): int
+                public getNumDataElements(): number /*int*/
                 /**
                  * Returns data for a single pixel in a primitive array of type
                  * <code>TransferType</code>.  For a <code>ComponentSampleModel</code>,
@@ -302,7 +302,7 @@ declare namespace java {
                  *  not in bounds, or if obj is too small to hold the output.
                  */
                 // @ts-ignore
-                getDataElements(x: number /*int*/, y: number /*int*/, obj: any, data: java.awt.image.DataBuffer): java.lang.Object
+                public getDataElements(x: number /*int*/, y: number /*int*/, obj: java.lang.Object | any, data: java.awt.image.DataBuffer): any
                 /**
                  * Returns all samples for the specified pixel in an int array,
                  * one sample per array element.
@@ -319,7 +319,7 @@ declare namespace java {
                  *  not in bounds, or if iArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): int[]
+                public getPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): number /*int*/[]
                 /**
                  * Returns all samples for the specified rectangle of pixels in
                  * an int array, one sample per array element.
@@ -335,7 +335,7 @@ declare namespace java {
                  * @see #setPixels(int, int, int, int, int[], DataBuffer)
                  */
                 // @ts-ignore
-                getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): int[]
+                public getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): number /*int*/[]
                 /**
                  * Returns as int the sample in a specified band for the pixel
                  * located at (x,y).
@@ -349,7 +349,7 @@ declare namespace java {
                  * @see #setSample(int, int, int, int, DataBuffer)
                  */
                 // @ts-ignore
-                getSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, data: java.awt.image.DataBuffer): int
+                public getSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, data: java.awt.image.DataBuffer): number /*int*/
                 /**
                  * Returns the sample in a specified band
                  * for the pixel located at (x,y) as a float.
@@ -363,7 +363,7 @@ declare namespace java {
                  *  band for the specified pixel.
                  */
                 // @ts-ignore
-                getSampleFloat(x: number /*int*/, y: number /*int*/, b: number /*int*/, data: java.awt.image.DataBuffer): float
+                public getSampleFloat(x: number /*int*/, y: number /*int*/, b: number /*int*/, data: java.awt.image.DataBuffer): number /*float*/
                 /**
                  * Returns the sample in a specified band
                  * for a pixel located at (x,y) as a double.
@@ -377,7 +377,7 @@ declare namespace java {
                  *  band for the specified pixel.
                  */
                 // @ts-ignore
-                getSampleDouble(x: number /*int*/, y: number /*int*/, b: number /*int*/, data: java.awt.image.DataBuffer): double
+                public getSampleDouble(x: number /*int*/, y: number /*int*/, b: number /*int*/, data: java.awt.image.DataBuffer): number /*double*/
                 /**
                  * Returns the samples in a specified band for the specified rectangle
                  * of pixels in an int array, one sample per data array element.
@@ -395,7 +395,7 @@ declare namespace java {
                  * @see #setSamples(int, int, int, int, int, int[], DataBuffer)
                  */
                 // @ts-ignore
-                getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): int[]
+                public getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): number /*int*/[]
                 /**
                  * Sets the data for a single pixel in the specified
                  * <code>DataBuffer</code> from a primitive array of type
@@ -434,7 +434,7 @@ declare namespace java {
                  * @see #getDataElements(int, int, Object, DataBuffer)
                  */
                 // @ts-ignore
-                setDataElements(x: number /*int*/, y: number /*int*/, obj: any, data: java.awt.image.DataBuffer): void
+                public setDataElements(x: number /*int*/, y: number /*int*/, obj: java.lang.Object | any, data: java.awt.image.DataBuffer): void
                 /**
                  * Sets a pixel in the <code>DataBuffer</code> using an int array of
                  * samples for input.  An <code>ArrayIndexOutOfBoundsException</code>
@@ -447,7 +447,7 @@ declare namespace java {
                  * @see #getPixel(int, int, int[], DataBuffer)
                  */
                 // @ts-ignore
-                setPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): void
+                public setPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): void
                 /**
                  * Sets all samples for a rectangle of pixels from an int array containing
                  * one sample per array element.
@@ -462,7 +462,7 @@ declare namespace java {
                  * @see #getPixels(int, int, int, int, int[], DataBuffer)
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): void
                 /**
                  * Sets a sample in the specified band for the pixel located at (x,y)
                  * in the <code>DataBuffer</code> using an int for input.
@@ -476,7 +476,7 @@ declare namespace java {
                  * @see #getSample(int, int, int, DataBuffer)
                  */
                 // @ts-ignore
-                setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*int*/, data: java.awt.image.DataBuffer): void
+                public setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*int*/, data: java.awt.image.DataBuffer): void
                 /**
                  * Sets a sample in the specified band for the pixel located at (x,y)
                  * in the <code>DataBuffer</code> using a float for input.
@@ -490,7 +490,7 @@ declare namespace java {
                  * @see #getSample(int, int, int, DataBuffer)
                  */
                 // @ts-ignore
-                setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*float*/, data: java.awt.image.DataBuffer): void
+                public setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*float*/, data: java.awt.image.DataBuffer): void
                 /**
                  * Sets a sample in the specified band for the pixel located at (x,y)
                  * in the <code>DataBuffer</code> using a double for input.
@@ -504,7 +504,7 @@ declare namespace java {
                  * @see #getSample(int, int, int, DataBuffer)
                  */
                 // @ts-ignore
-                setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*double*/, data: java.awt.image.DataBuffer): void
+                public setSample(x: number /*int*/, y: number /*int*/, b: number /*int*/, s: number /*double*/, data: java.awt.image.DataBuffer): void
                 /**
                  * Sets the samples in the specified band for the specified rectangle
                  * of pixels from an int array containing one sample per data array element.
@@ -520,11 +520,11 @@ declare namespace java {
                  * @see #getSamples(int, int, int, int, int, int[], DataBuffer)
                  */
                 // @ts-ignore
-                setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): void
+                public setSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[], data: java.awt.image.DataBuffer): void
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

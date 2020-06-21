@@ -14,7 +14,7 @@ declare namespace org {
              * @since 1.2.2
              */
             // @ts-ignore
-            class ReflectionUtils extends java.lang.Object {
+            abstract class ReflectionUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -23,12 +23,12 @@ declare namespace org {
                  * @since 3.0.5
                  */
                 // @ts-ignore
-                readonly USER_DECLARED_METHODS: org.springframework.util.ReflectionUtils.MethodFilter
+                public static readonly USER_DECLARED_METHODS: org.springframework.util.ReflectionUtils.MethodFilter
                 /**
                  * Pre-built FieldFilter that matches all non-static, non-final fields.
                  */
                 // @ts-ignore
-                readonly COPYABLE_FIELDS: org.springframework.util.ReflectionUtils.FieldFilter
+                public static readonly COPYABLE_FIELDS: org.springframework.util.ReflectionUtils.FieldFilter
                 /**
                  * Handle the given reflection exception.
                  * <p>Should only be called if no checked exception is expected to be thrown
@@ -40,7 +40,7 @@ declare namespace org {
                  * @param ex the reflection exception to handle
                  */
                 // @ts-ignore
-                handleReflectionException(ex: java.lang.Exception): void
+                public static handleReflectionException(ex: java.lang.Exception): void
                 /**
                  * Handle the given invocation target exception. Should only be called if no
                  * checked exception is expected to be thrown by the target method.
@@ -49,7 +49,7 @@ declare namespace org {
                  * @param ex the invocation target exception to handle
                  */
                 // @ts-ignore
-                handleInvocationTargetException(ex: java.lang.reflect.InvocationTargetException): void
+                public static handleInvocationTargetException(ex: java.lang.reflect.InvocationTargetException): void
                 /**
                  * Rethrow the given {@link Throwable exception}, which is presumably the
                  * <em>target exception</em> of an {@link InvocationTargetException}.
@@ -62,7 +62,7 @@ declare namespace org {
                  * @throws RuntimeException the rethrown exception
                  */
                 // @ts-ignore
-                rethrowRuntimeException(ex: Error): void
+                public static rethrowRuntimeException(ex: java.lang.Throwable | Error): void
                 /**
                  * Rethrow the given {@link Throwable exception}, which is presumably the
                  * <em>target exception</em> of an {@link InvocationTargetException}.
@@ -75,7 +75,7 @@ declare namespace org {
                  * @throws Exception the rethrown exception (in case of a checked exception)
                  */
                 // @ts-ignore
-                rethrowException(ex: Error): void
+                public static rethrowException(ex: java.lang.Throwable | Error): void
                 /**
                  * Obtain an accessible constructor for the given class and parameters.
                  * @param clazz the clazz to check
@@ -85,7 +85,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                accessibleConstructor<T>(clazz: java.lang.Class<T>, ...parameterTypes: java.lang.Class[]): java.lang.reflect.Constructor<T>
+                public static accessibleConstructor<T>(clazz: java.lang.Class<T>, ...parameterTypes: java.lang.Class<any>[]): java.lang.reflect.Constructor<T>
                 /**
                  * Make the given constructor accessible, explicitly setting it accessible
                  * if necessary. The {@code setAccessible(true)} method is only called
@@ -95,7 +95,7 @@ declare namespace org {
                  * @see java.lang.reflect.Constructor#setAccessible
                  */
                 // @ts-ignore
-                makeAccessible(ctor: java.lang.reflect.Constructor<any>): void
+                public static makeAccessible(ctor: java.lang.reflect.Constructor<any>): void
                 /**
                  * Attempt to find a {@link Method} on the supplied class with the supplied name
                  * and no parameters. Searches all superclasses up to {@code Object}.
@@ -105,7 +105,7 @@ declare namespace org {
                  * @return the Method object, or {#code null} if none found
                  */
                 // @ts-ignore
-                findMethod(clazz: java.lang.Class<any>, name: string): java.lang.reflect.Method
+                public static findMethod(clazz: java.lang.Class<any>, name: java.lang.String | string): java.lang.reflect.Method
                 /**
                  * Attempt to find a {@link Method} on the supplied class with the supplied name
                  * and parameter types. Searches all superclasses up to {@code Object}.
@@ -117,7 +117,7 @@ declare namespace org {
                  * @return the Method object, or {#code null} if none found
                  */
                 // @ts-ignore
-                findMethod(clazz: java.lang.Class<any>, name: string, ...paramTypes: java.lang.Class[]): java.lang.reflect.Method
+                public static findMethod(clazz: java.lang.Class<any>, name: java.lang.String | string, ...paramTypes: java.lang.Class<any>[]): java.lang.reflect.Method
                 /**
                  * Invoke the specified {@link Method} against the supplied target object with no arguments.
                  * The target object can be {@code null} when invoking a static {@link Method}.
@@ -128,7 +128,7 @@ declare namespace org {
                  * @see #invokeMethod(java.lang.reflect.Method, Object, Object[])
                  */
                 // @ts-ignore
-                invokeMethod(method: java.lang.reflect.Method, target: any): java.lang.Object
+                public static invokeMethod(method: java.lang.reflect.Method, target: java.lang.Object | any): any
                 /**
                  * Invoke the specified {@link Method} against the supplied target object with the
                  * supplied arguments. The target object can be {@code null} when invoking a
@@ -140,7 +140,7 @@ declare namespace org {
                  * @return the invocation result, if any
                  */
                 // @ts-ignore
-                invokeMethod(method: java.lang.reflect.Method, target: any, ...args: any[]): java.lang.Object
+                public static invokeMethod(method: java.lang.reflect.Method, target: java.lang.Object | any, ...args: java.lang.Object[] | any[]): any
                 /**
                  * Determine whether the given method explicitly declares the given
                  * exception or one of its superclasses, which means that an exception
@@ -151,7 +151,7 @@ declare namespace org {
                  *  {@code false} if it needs to be wrapped
                  */
                 // @ts-ignore
-                declaresException(method: java.lang.reflect.Method, exceptionType: java.lang.Class<any>): boolean
+                public static declaresException(method: java.lang.reflect.Method, exceptionType: java.lang.Class<any>): boolean
                 /**
                  * Perform the given callback operation on all matching methods of the given
                  * class, as locally declared or equivalent thereof (such as default methods
@@ -163,7 +163,7 @@ declare namespace org {
                  * @see #doWithMethods
                  */
                 // @ts-ignore
-                doWithLocalMethods(clazz: java.lang.Class<any>, mc: org.springframework.util.ReflectionUtils.MethodCallback): void
+                public static doWithLocalMethods(clazz: java.lang.Class<any>, mc: org.springframework.util.ReflectionUtils.MethodCallback): void
                 /**
                  * Perform the given callback operation on all matching methods of the given
                  * class and superclasses.
@@ -175,7 +175,7 @@ declare namespace org {
                  * @see #doWithMethods(Class, MethodCallback, MethodFilter)
                  */
                 // @ts-ignore
-                doWithMethods(clazz: java.lang.Class<any>, mc: org.springframework.util.ReflectionUtils.MethodCallback): void
+                public static doWithMethods(clazz: java.lang.Class<any>, mc: org.springframework.util.ReflectionUtils.MethodCallback): void
                 /**
                  * Perform the given callback operation on all matching methods of the given
                  * class and superclasses (or given interface and super-interfaces).
@@ -187,7 +187,7 @@ declare namespace org {
                  * @throws IllegalStateException if introspection fails
                  */
                 // @ts-ignore
-                doWithMethods(clazz: java.lang.Class<any>, mc: org.springframework.util.ReflectionUtils.MethodCallback, mf: org.springframework.util.ReflectionUtils.MethodFilter): void
+                public static doWithMethods(clazz: java.lang.Class<any>, mc: org.springframework.util.ReflectionUtils.MethodCallback, mf: org.springframework.util.ReflectionUtils.MethodFilter): void
                 /**
                  * Get all declared methods on the leaf class and all superclasses.
                  * Leaf class methods are included first.
@@ -195,7 +195,7 @@ declare namespace org {
                  * @throws IllegalStateException if introspection fails
                  */
                 // @ts-ignore
-                getAllDeclaredMethods(leafClass: java.lang.Class<any>): java.lang.reflect.Method[]
+                public static getAllDeclaredMethods(leafClass: java.lang.Class<any>): java.lang.reflect.Method[]
                 /**
                  * Get the unique set of declared methods on the leaf class and all superclasses.
                  * Leaf class methods are included first and while traversing the superclass hierarchy
@@ -204,7 +204,7 @@ declare namespace org {
                  * @throws IllegalStateException if introspection fails
                  */
                 // @ts-ignore
-                getUniqueDeclaredMethods(leafClass: java.lang.Class<any>): java.lang.reflect.Method[]
+                public static getUniqueDeclaredMethods(leafClass: java.lang.Class<any>): java.lang.reflect.Method[]
                 /**
                  * Get the unique set of declared methods on the leaf class and all superclasses.
                  * Leaf class methods are included first and while traversing the superclass hierarchy
@@ -215,7 +215,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                getUniqueDeclaredMethods(leafClass: java.lang.Class<any>, mf: org.springframework.util.ReflectionUtils.MethodFilter): java.lang.reflect.Method[]
+                public static getUniqueDeclaredMethods(leafClass: java.lang.Class<any>, mf: org.springframework.util.ReflectionUtils.MethodFilter): java.lang.reflect.Method[]
                 /**
                  * Variant of {@link Class#getDeclaredMethods()} that uses a local cache in
                  * order to avoid the JVM's SecurityManager check and new Method instances.
@@ -229,37 +229,37 @@ declare namespace org {
                  * @see Class#getDeclaredMethods()
                  */
                 // @ts-ignore
-                getDeclaredMethods(clazz: java.lang.Class<any>): java.lang.reflect.Method[]
+                public static getDeclaredMethods(clazz: java.lang.Class<any>): java.lang.reflect.Method[]
                 /**
                  * Determine whether the given method is an "equals" method.
                  * @see java.lang.Object#equals(Object)
                  */
                 // @ts-ignore
-                isEqualsMethod(method: java.lang.reflect.Method): boolean
+                public static isEqualsMethod(method: java.lang.reflect.Method): boolean
                 /**
                  * Determine whether the given method is a "hashCode" method.
                  * @see java.lang.Object#hashCode()
                  */
                 // @ts-ignore
-                isHashCodeMethod(method: java.lang.reflect.Method): boolean
+                public static isHashCodeMethod(method: java.lang.reflect.Method): boolean
                 /**
                  * Determine whether the given method is a "toString" method.
                  * @see java.lang.Object#toString()
                  */
                 // @ts-ignore
-                isToStringMethod(method: java.lang.reflect.Method): boolean
+                public static isToStringMethod(method: java.lang.reflect.Method): boolean
                 /**
                  * Determine whether the given method is originally declared by {@link java.lang.Object}.
                  */
                 // @ts-ignore
-                isObjectMethod(method: java.lang.reflect.Method): boolean
+                public static isObjectMethod(method: java.lang.reflect.Method): boolean
                 /**
                  * Determine whether the given method is a CGLIB 'renamed' method,
                  * following the pattern "CGLIB$methodName$0".
                  * @param renamedMethod the method to check
                  */
                 // @ts-ignore
-                isCglibRenamedMethod(renamedMethod: java.lang.reflect.Method): boolean
+                public static isCglibRenamedMethod(renamedMethod: java.lang.reflect.Method): boolean
                 /**
                  * Make the given method accessible, explicitly setting it accessible if
                  * necessary. The {@code setAccessible(true)} method is only called
@@ -269,7 +269,7 @@ declare namespace org {
                  * @see java.lang.reflect.Method#setAccessible
                  */
                 // @ts-ignore
-                makeAccessible(method: java.lang.reflect.Method): void
+                public static makeAccessible(method: java.lang.reflect.Method): void
                 /**
                  * Attempt to find a {@link Field field} on the supplied {@link Class} with the
                  * supplied {@code name}. Searches all superclasses up to {@link Object}.
@@ -278,7 +278,7 @@ declare namespace org {
                  * @return the corresponding Field object, or {#code null} if not found
                  */
                 // @ts-ignore
-                findField(clazz: java.lang.Class<any>, name: string): java.lang.reflect.Field
+                public static findField(clazz: java.lang.Class<any>, name: java.lang.String | string): java.lang.reflect.Field
                 /**
                  * Attempt to find a {@link Field field} on the supplied {@link Class} with the
                  * supplied {@code name} and/or {@link Class type}. Searches all superclasses
@@ -289,7 +289,7 @@ declare namespace org {
                  * @return the corresponding Field object, or {#code null} if not found
                  */
                 // @ts-ignore
-                findField(clazz: java.lang.Class<any>, name: string, type: java.lang.Class<any>): java.lang.reflect.Field
+                public static findField(clazz: java.lang.Class<any>, name: java.lang.String | string, type: java.lang.Class<any>): java.lang.reflect.Field
                 /**
                  * Set the field represented by the supplied {@linkplain Field field object} on
                  * the specified {@linkplain Object target object} to the specified {@code value}.
@@ -302,7 +302,7 @@ declare namespace org {
                  * @param value the value to set (may be {#code null})
                  */
                 // @ts-ignore
-                setField(field: java.lang.reflect.Field, target: any, value: any): void
+                public static setField(field: java.lang.reflect.Field, target: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Get the field represented by the supplied {@link Field field object} on the
                  * specified {@link Object target object}. In accordance with {@link Field#get(Object)}
@@ -314,7 +314,7 @@ declare namespace org {
                  * @return the field's current value
                  */
                 // @ts-ignore
-                getField(field: java.lang.reflect.Field, target: any): java.lang.Object
+                public static getField(field: java.lang.reflect.Field, target: java.lang.Object | any): any
                 /**
                  * Invoke the given callback on all locally declared fields in the given class.
                  * @param clazz the target class to analyze
@@ -324,7 +324,7 @@ declare namespace org {
                  * @see #doWithFields
                  */
                 // @ts-ignore
-                doWithLocalFields(clazz: java.lang.Class<any>, fc: org.springframework.util.ReflectionUtils.FieldCallback): void
+                public static doWithLocalFields(clazz: java.lang.Class<any>, fc: org.springframework.util.ReflectionUtils.FieldCallback): void
                 /**
                  * Invoke the given callback on all fields in the target class, going up the
                  * class hierarchy to get all declared fields.
@@ -333,7 +333,7 @@ declare namespace org {
                  * @throws IllegalStateException if introspection fails
                  */
                 // @ts-ignore
-                doWithFields(clazz: java.lang.Class<any>, fc: org.springframework.util.ReflectionUtils.FieldCallback): void
+                public static doWithFields(clazz: java.lang.Class<any>, fc: org.springframework.util.ReflectionUtils.FieldCallback): void
                 /**
                  * Invoke the given callback on all fields in the target class, going up the
                  * class hierarchy to get all declared fields.
@@ -343,7 +343,7 @@ declare namespace org {
                  * @throws IllegalStateException if introspection fails
                  */
                 // @ts-ignore
-                doWithFields(clazz: java.lang.Class<any>, fc: org.springframework.util.ReflectionUtils.FieldCallback, ff: org.springframework.util.ReflectionUtils.FieldFilter): void
+                public static doWithFields(clazz: java.lang.Class<any>, fc: org.springframework.util.ReflectionUtils.FieldCallback, ff: org.springframework.util.ReflectionUtils.FieldFilter): void
                 /**
                  * Given the source object and the destination, which must be the same class
                  * or a subclass, copy all fields, including inherited fields. Designed to
@@ -351,13 +351,13 @@ declare namespace org {
                  * @throws IllegalStateException if introspection fails
                  */
                 // @ts-ignore
-                shallowCopyFieldState(src: any, dest: any): void
+                public static shallowCopyFieldState(src: java.lang.Object | any, dest: java.lang.Object | any): void
                 /**
                  * Determine whether the given field is a "public static final" constant.
                  * @param field the field to check
                  */
                 // @ts-ignore
-                isPublicStaticFinal(field: java.lang.reflect.Field): boolean
+                public static isPublicStaticFinal(field: java.lang.reflect.Field): boolean
                 /**
                  * Make the given field accessible, explicitly setting it accessible if
                  * necessary. The {@code setAccessible(true)} method is only called
@@ -367,13 +367,13 @@ declare namespace org {
                  * @see java.lang.reflect.Field#setAccessible
                  */
                 // @ts-ignore
-                makeAccessible(field: java.lang.reflect.Field): void
+                public static makeAccessible(field: java.lang.reflect.Field): void
                 /**
                  * Clear the internal method/field cache.
                  * @since 4.2.4
                  */
                 // @ts-ignore
-                clearCache(): void
+                public static clearCache(): void
             }
         }
     }

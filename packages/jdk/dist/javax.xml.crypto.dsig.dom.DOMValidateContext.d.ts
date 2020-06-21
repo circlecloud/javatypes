@@ -53,14 +53,14 @@ declare namespace javax {
                          * @see #getNode
                          */
                         // @ts-ignore
-                        setNode(node: org.w3c.dom.Node): void
+                        public setNode(node: org.w3c.dom.Node): void
                         /**
                          * Returns the node.
                          * @return the node (never <code>null</code>)
                          * @see #setNode(Node)
                          */
                         // @ts-ignore
-                        getNode(): org.w3c.dom.Node
+                        public getNode(): org.w3c.dom.Node
                     }
                 }
             }

@@ -31,19 +31,19 @@ declare namespace javax {
                      * @return Hosting Component
                      */
                     // @ts-ignore
-                    getComponent(): javax.swing.JComponent
+                    public getComponent(): javax.swing.JComponent
                     /**
                      * Returns the Region identifying this state.
                      * @return Region of the hosting component
                      */
                     // @ts-ignore
-                    getRegion(): javax.swing.plaf.synth.Region
+                    public getRegion(): javax.swing.plaf.synth.Region
                     /**
                      * Returns the style associated with this Region.
                      * @return SynthStyle associated with the region.
                      */
                     // @ts-ignore
-                    getStyle(): javax.swing.plaf.synth.SynthStyle
+                    public getStyle(): javax.swing.plaf.synth.SynthStyle
                     /**
                      * Returns the state of the widget, which is a bitmask of the
                      * values defined in <code>SynthConstants</code>. A region will at least
@@ -54,7 +54,7 @@ declare namespace javax {
                      * @return State of Component
                      */
                     // @ts-ignore
-                    getComponentState(): int
+                    public getComponentState(): number /*int*/
                 }
             }
         }

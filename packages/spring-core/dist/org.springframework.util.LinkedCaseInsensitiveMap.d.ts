@@ -13,7 +13,7 @@ declare namespace org {
              * @param <V> the value type
              */
             // @ts-ignore
-            class LinkedCaseInsensitiveMap<V> extends java.lang.Object implements java.util.Map<java.lang.String, V>, java.io.Serializable, java.lang.Cloneable {
+            class LinkedCaseInsensitiveMap<V> extends java.lang.Object implements java.util.Map<java.lang.String | string, V>, java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Create a new LinkedCaseInsensitiveMap that stores case-insensitive keys
                  * according to the default Locale (by default in lower case).
@@ -49,43 +49,43 @@ declare namespace org {
                 // @ts-ignore
                 constructor(initialCapacity: number /*int*/, locale: java.util.Locale)
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 // @ts-ignore
-                get(key: any): V
+                public get(key: java.lang.Object | any): V
                 // @ts-ignore
-                getOrDefault(key: any, defaultValue: V): V
+                public getOrDefault(key: java.lang.Object | any, defaultValue: V): V
                 // @ts-ignore
-                put(key: string, value: V): V
+                public put(key: java.lang.String | string, value: V): V
                 // @ts-ignore
-                putAll(map: java.util.Map<java.lang.String, V>): void
+                public putAll(map: java.util.Map<any, any>): void
                 // @ts-ignore
-                putIfAbsent(key: string, value: V): V
+                public putIfAbsent(key: java.lang.String | string, value: V): V
                 // @ts-ignore
-                computeIfAbsent(key: string, mappingFunction: java.util.function.Function<any super java.lang.String, V> | java.util.function$.Function<? super java.lang.String, V>): V
+                public computeIfAbsent(key: java.lang.String | string, mappingFunction: java.util.function$.Function<any, any>): V
                 // @ts-ignore
-                remove(key: any): V
+                public remove(key: java.lang.Object | any): V
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 // @ts-ignore
-                keySet(): java.util.Set<java.lang.String>
+                public keySet(): Array<java.lang.String | string>
                 // @ts-ignore
-                values(): java.util.Collection<V>
+                public values(): Array<V>
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<java.lang.String, V>>
+                public entrySet(): Array<java.util.Map.Entry<java.lang.String | string, V>>
                 // @ts-ignore
-                clone(): org.springframework.util.LinkedCaseInsensitiveMap<V>
+                public clone(): org.springframework.util.LinkedCaseInsensitiveMap<V>
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return the locale used by this {@code LinkedCaseInsensitiveMap}.
                  * Used for case-insensitive key conversion.
@@ -94,7 +94,7 @@ declare namespace org {
                  * @see #convertKey(String)
                  */
                 // @ts-ignore
-                getLocale(): java.util.Locale
+                public getLocale(): java.util.Locale
                 /**
                  * Convert the given key to a case-insensitive key.
                  * <p>The default implementation converts the key
@@ -104,7 +104,7 @@ declare namespace org {
                  * @see String#toLowerCase(Locale)
                  */
                 // @ts-ignore
-                convertKey(key: string): java.lang.String
+                convertKey(key: java.lang.String | string): string
                 /**
                  * Determine whether this map should remove the given eldest entry.
                  * @param eldest the candidate entry
@@ -112,7 +112,7 @@ declare namespace org {
                  * @see LinkedHashMap#removeEldestEntry
                  */
                 // @ts-ignore
-                removeEldestEntry(eldest: java.util.Map.Entry<java.lang.String, V>): boolean
+                removeEldestEntry(eldest: java.util.Map.Entry<java.lang.String | string, V>): boolean
             }
         }
     }

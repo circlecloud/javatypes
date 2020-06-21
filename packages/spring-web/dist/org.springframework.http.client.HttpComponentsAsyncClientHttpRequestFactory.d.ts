@@ -59,7 +59,7 @@ declare namespace org {
                      * @see #setHttpClient(HttpClient)
                      */
                     // @ts-ignore
-                    setAsyncClient(asyncClient: HttpAsyncClient): void
+                    public setAsyncClient(asyncClient: HttpAsyncClient): void
                     /**
                      * Return the {@code HttpAsyncClient} used for
                      * {@linkplain #createAsyncRequest(URI, HttpMethod) synchronous execution}.
@@ -67,27 +67,27 @@ declare namespace org {
                      * @see #getHttpClient()
                      */
                     // @ts-ignore
-                    getAsyncClient(): HttpAsyncClient
+                    public getAsyncClient(): HttpAsyncClient
                     /**
                      * Set the {@code CloseableHttpAsyncClient} used for
                      * {@linkplain #createAsyncRequest(URI, HttpMethod) asynchronous execution}.
                      * @deprecated as of 4.3.10, in favor of {#link #setAsyncClient(HttpAsyncClient)}
                      */
                     // @ts-ignore
-                    setHttpAsyncClient(asyncClient: CloseableHttpAsyncClient): void
+                    public setHttpAsyncClient(asyncClient: CloseableHttpAsyncClient): void
                     /**
                      * Return the {@code CloseableHttpAsyncClient} used for
                      * {@linkplain #createAsyncRequest(URI, HttpMethod) asynchronous execution}.
                      * @deprecated as of 4.3.10, in favor of {#link #getAsyncClient()}
                      */
                     // @ts-ignore
-                    getHttpAsyncClient(): CloseableHttpAsyncClient
+                    public getHttpAsyncClient(): CloseableHttpAsyncClient
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
+                    public createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

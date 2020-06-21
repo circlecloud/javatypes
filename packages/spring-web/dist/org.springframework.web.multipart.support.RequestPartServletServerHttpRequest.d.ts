@@ -22,11 +22,11 @@ declare namespace org {
                          * @throws MultipartException if MultipartHttpServletRequest cannot be initialized
                          */
                         // @ts-ignore
-                        constructor(request: HttpServletRequest, partName: string)
+                        constructor(request: HttpServletRequest, partName: java.lang.String | string)
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getBody(): java.io.InputStream
+                        public getBody(): java.io.InputStream
                     }
                 }
             }

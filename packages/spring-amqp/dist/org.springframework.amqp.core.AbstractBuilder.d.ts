@@ -8,7 +8,7 @@ declare namespace org {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class AbstractBuilder extends java.lang.Object {
+                abstract class AbstractBuilder extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -16,9 +16,9 @@ declare namespace org {
                      * @return the arguments.
                      */
                     // @ts-ignore
-                    getOrCreateArguments(): java.util.Map<java.lang.String, java.lang.Object>
+                    getOrCreateArguments(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    getArguments(): java.util.Map<java.lang.String, java.lang.Object>
+                    getArguments(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

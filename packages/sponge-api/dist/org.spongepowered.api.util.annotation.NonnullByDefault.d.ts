@@ -4,7 +4,7 @@ declare namespace org {
             namespace util {
                 namespace annotation {
                     // @ts-ignore
-                    class NonnullByDefault implements java.lang.annotation.Annotation {
+                    abstract class NonnullByDefault implements java.lang.annotation.Annotation {
                     }
                 }
             }

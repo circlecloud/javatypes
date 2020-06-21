@@ -40,7 +40,7 @@ declare namespace java {
                  *           method is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                newInputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.InputStream
+                public static newInputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.InputStream
                 /**
                  * Opens or creates a file, returning an output stream that may be used to
                  * write bytes to the file. The resulting stream will not be buffered. The
@@ -91,7 +91,7 @@ declare namespace java {
                  *           {@code DELETE_ON_CLOSE} option.
                  */
                 // @ts-ignore
-                newOutputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.OutputStream
+                public static newOutputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.OutputStream
                 /**
                  * Opens or creates a file, returning a seekable byte channel to access the
                  * file.
@@ -216,7 +216,7 @@ declare namespace java {
                  * @see java.nio.channels.FileChannel#open(Path,Set,FileAttribute[])
                  */
                 // @ts-ignore
-                newByteChannel(path: java.nio.file.Path, options: Array<java.nio.file.OpenOption>, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.SeekableByteChannel
+                public static newByteChannel(path: java.nio.file.Path, options: java.util.Set<any> | Array<any>, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.SeekableByteChannel
                 /**
                  * Opens or creates a file, returning a seekable byte channel to access the
                  * file.
@@ -251,7 +251,7 @@ declare namespace java {
                  * @see java.nio.channels.FileChannel#open(Path,OpenOption[])
                  */
                 // @ts-ignore
-                newByteChannel(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.nio.channels.SeekableByteChannel
+                public static newByteChannel(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.nio.channels.SeekableByteChannel
                 /**
                  * Opens a directory, returning a {@link DirectoryStream} to iterate over
                  * all entries in the directory. The elements returned by the directory
@@ -279,7 +279,7 @@ declare namespace java {
                  *           method is invoked to check read access to the directory.
                  */
                 // @ts-ignore
-                newDirectoryStream(dir: java.nio.file.Path): java.nio.file.DirectoryStream<java.nio.file.Path>
+                public static newDirectoryStream(dir: java.nio.file.Path): java.nio.file.DirectoryStream<java.nio.file.Path>
                 /**
                  * Opens a directory, returning a {@link DirectoryStream} to iterate over
                  * the entries in the directory. The elements returned by the directory
@@ -323,7 +323,7 @@ declare namespace java {
                  *           method is invoked to check read access to the directory.
                  */
                 // @ts-ignore
-                newDirectoryStream(dir: java.nio.file.Path, glob: string): java.nio.file.DirectoryStream<java.nio.file.Path>
+                public static newDirectoryStream(dir: java.nio.file.Path, glob: java.lang.String | string): java.nio.file.DirectoryStream<java.nio.file.Path>
                 /**
                  * Opens a directory, returning a {@link DirectoryStream} to iterate over
                  * the entries in the directory. The elements returned by the directory
@@ -375,7 +375,7 @@ declare namespace java {
                  *           method is invoked to check read access to the directory.
                  */
                 // @ts-ignore
-                newDirectoryStream(dir: java.nio.file.Path, filter: java.nio.file.DirectoryStream.Filter<any super java.nio.file.Path>): java.nio.file.DirectoryStream<java.nio.file.Path>
+                public static newDirectoryStream(dir: java.nio.file.Path, filter: java.nio.file.DirectoryStream.Filter<any>): java.nio.file.DirectoryStream<java.nio.file.Path>
                 /**
                  * Creates a new and empty file, failing if the file already exists. The
                  * check for the existence of the file and the creation of the new file if
@@ -406,7 +406,7 @@ declare namespace java {
                  *           method is invoked to check write access to the new file.
                  */
                 // @ts-ignore
-                createFile(path: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createFile(path: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a new directory. The check for the existence of the file and the
                  * creation of the directory if it does not exist are a single operation
@@ -439,7 +439,7 @@ declare namespace java {
                  *           method is invoked to check write access to the new directory.
                  */
                 // @ts-ignore
-                createDirectory(dir: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createDirectory(dir: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a directory by creating all nonexistent parent directories first.
                  * Unlike the {@link #createDirectory createDirectory} method, an exception
@@ -479,7 +479,7 @@ declare namespace java {
                  *           method to check access to the system property {@code user.dir}
                  */
                 // @ts-ignore
-                createDirectories(dir: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createDirectories(dir: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a new empty file in the specified directory, using the given
                  * prefix and suffix strings to generate its name. The resulting
@@ -533,7 +533,7 @@ declare namespace java {
                  *           method is invoked to check write access to the file.
                  */
                 // @ts-ignore
-                createTempFile(dir: java.nio.file.Path, prefix: string, suffix: string, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createTempFile(dir: java.nio.file.Path, prefix: java.lang.String | string, suffix: java.lang.String | string, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates an empty file in the default temporary-file directory, using
                  * the given prefix and suffix to generate its name. The resulting {@code
@@ -567,7 +567,7 @@ declare namespace java {
                  *           method is invoked to check write access to the file.
                  */
                 // @ts-ignore
-                createTempFile(prefix: string, suffix: string, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createTempFile(prefix: java.lang.String | string, suffix: java.lang.String | string, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a new directory in the specified directory, using the given
                  * prefix to generate its name.  The resulting {@code Path} is associated
@@ -608,7 +608,7 @@ declare namespace java {
                  *           directory.
                  */
                 // @ts-ignore
-                createTempDirectory(dir: java.nio.file.Path, prefix: string, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createTempDirectory(dir: java.nio.file.Path, prefix: java.lang.String | string, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a new directory in the default temporary-file directory, using
                  * the given prefix to generate its name. The resulting {@code Path} is
@@ -639,7 +639,7 @@ declare namespace java {
                  *           directory.
                  */
                 // @ts-ignore
-                createTempDirectory(prefix: string, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createTempDirectory(prefix: java.lang.String | string, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a symbolic link to a target <i>(optional operation)</i>.
                  * <p> The {@code target} parameter is the target of the link. It may be an
@@ -680,7 +680,7 @@ declare namespace java {
                  *           method denies write access to the path of the symbolic link.
                  */
                 // @ts-ignore
-                createSymbolicLink(link: java.nio.file.Path, target: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.file.Path
+                public static createSymbolicLink(link: java.nio.file.Path, target: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.file.Path
                 /**
                  * Creates a new link (directory entry) for an existing file <i>(optional
                  * operation)</i>.
@@ -716,7 +716,7 @@ declare namespace java {
                  *           existing file.
                  */
                 // @ts-ignore
-                createLink(link: java.nio.file.Path, existing: java.nio.file.Path): java.nio.file.Path
+                public static createLink(link: java.nio.file.Path, existing: java.nio.file.Path): java.nio.file.Path
                 /**
                  * Deletes a file.
                  * <p> An implementation may require to examine the file to determine if the
@@ -748,7 +748,7 @@ declare namespace java {
                  *           is invoked to check delete access to the file
                  */
                 // @ts-ignore
-                delete(path: java.nio.file.Path): void
+                public static delete(path: java.nio.file.Path): void
                 /**
                  * Deletes a file if it exists.
                  * <p> As with the {@link #delete(Path) delete(Path)} method, an
@@ -779,7 +779,7 @@ declare namespace java {
                  *           is invoked to check delete access to the file.
                  */
                 // @ts-ignore
-                deleteIfExists(path: java.nio.file.Path): boolean
+                public static deleteIfExists(path: java.nio.file.Path): boolean
                 /**
                  * Copy a file to a target file.
                  * <p> This method copies a file to the target file with the {@code
@@ -870,7 +870,7 @@ declare namespace java {
                  *           LinkPermission}{@code ("symbolic")}.
                  */
                 // @ts-ignore
-                copy(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): java.nio.file.Path
+                public static copy(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): java.nio.file.Path
                 /**
                  * Move or rename a file to a target file.
                  * <p> By default, this method attempts to move the file to the target
@@ -970,7 +970,7 @@ declare namespace java {
                  *           target file.
                  */
                 // @ts-ignore
-                move(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): java.nio.file.Path
+                public static move(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): java.nio.file.Path
                 /**
                  * Reads the target of a symbolic link <i>(optional operation)</i>.
                  * <p> If the file system supports <a href="package-summary.html#links">symbolic
@@ -994,7 +994,7 @@ declare namespace java {
                  *           granted with the "{@code readlink}" action to read the link.
                  */
                 // @ts-ignore
-                readSymbolicLink(link: java.nio.file.Path): java.nio.file.Path
+                public static readSymbolicLink(link: java.nio.file.Path): java.nio.file.Path
                 /**
                  * Returns the {@link FileStore} representing the file store where a file
                  * is located.
@@ -1017,7 +1017,7 @@ declare namespace java {
                  *           ("getFileStoreAttributes")</tt>
                  */
                 // @ts-ignore
-                getFileStore(path: java.nio.file.Path): java.nio.file.FileStore
+                public static getFileStore(path: java.nio.file.Path): java.nio.file.FileStore
                 /**
                  * Tests if two paths locate the same file.
                  * <p> If both {@code Path} objects are {@link Path#equals(Object) equal}
@@ -1052,7 +1052,7 @@ declare namespace java {
                  * @see java.nio.file.attribute.BasicFileAttributes#fileKey
                  */
                 // @ts-ignore
-                isSameFile(path: java.nio.file.Path, path2: java.nio.file.Path): boolean
+                public static isSameFile(path: java.nio.file.Path, path2: java.nio.file.Path): boolean
                 /**
                  * Tells whether or not a file is considered <em>hidden</em>. The exact
                  * definition of hidden is platform or provider dependent. On UNIX for
@@ -1073,7 +1073,7 @@ declare namespace java {
                  *           method is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                isHidden(path: java.nio.file.Path): boolean
+                public static isHidden(path: java.nio.file.Path): boolean
                 /**
                  * Probes the content type of a file.
                  * <p> This method uses the installed {@link FileTypeDetector} implementations
@@ -1116,7 +1116,7 @@ declare namespace java {
                  *           permission required by a file type detector implementation.
                  */
                 // @ts-ignore
-                probeContentType(path: java.nio.file.Path): java.lang.String
+                public static probeContentType(path: java.nio.file.Path): string
                 /**
                  * Returns a file attribute view of a given type.
                  * <p> A file attribute view provides a read-only or updatable view of a
@@ -1155,7 +1155,7 @@ declare namespace java {
                  *           the attribute view type is not available
                  */
                 // @ts-ignore
-                getFileAttributeView<V extends java.nio.file.attribute.FileAttributeView>(path: java.nio.file.Path, type: java.lang.Class<V>, ...options: java.nio.file.LinkOption[]): V
+                public static getFileAttributeView<V extends java.nio.file.attribute.FileAttributeView>(path: java.nio.file.Path, type: java.lang.Class<V>, ...options: java.nio.file.LinkOption[]): V
                 /**
                  * Reads a file's attributes as a bulk operation.
                  * <p> The {@code type} parameter is the type of the attributes required
@@ -1204,7 +1204,7 @@ declare namespace java {
                  *           security manager may be invoke to check for additional permissions.
                  */
                 // @ts-ignore
-                readAttributes<A extends java.nio.file.attribute.BasicFileAttributes>(path: java.nio.file.Path, type: java.lang.Class<A>, ...options: java.nio.file.LinkOption[]): A
+                public static readAttributes<A extends java.nio.file.attribute.BasicFileAttributes>(path: java.nio.file.Path, type: java.lang.Class<A>, ...options: java.nio.file.LinkOption[]): A
                 /**
                  * Sets the value of a file attribute.
                  * <p> The {@code attribute} parameter identifies the attribute to be set
@@ -1260,7 +1260,7 @@ declare namespace java {
                  *           may be invoked to check for additional permissions.
                  */
                 // @ts-ignore
-                setAttribute(path: java.nio.file.Path, attribute: string, value: any, ...options: java.nio.file.LinkOption[]): java.nio.file.Path
+                public static setAttribute(path: java.nio.file.Path, attribute: java.lang.String | string, value: java.lang.Object | any, ...options: java.nio.file.LinkOption[]): java.nio.file.Path
                 /**
                  * Reads the value of a file attribute.
                  * <p> The {@code attribute} parameter identifies the attribute to be read
@@ -1308,7 +1308,7 @@ declare namespace java {
                  *           may be invoked to check for additional permissions.
                  */
                 // @ts-ignore
-                getAttribute(path: java.nio.file.Path, attribute: string, ...options: java.nio.file.LinkOption[]): java.lang.Object
+                public static getAttribute(path: java.nio.file.Path, attribute: java.lang.String | string, ...options: java.nio.file.LinkOption[]): any
                 /**
                  * Reads a set of file attributes as a bulk operation.
                  * <p> The {@code attributes} parameter identifies the attributes to be read
@@ -1380,7 +1380,7 @@ declare namespace java {
                  *           may be invoke to check for additional permissions.
                  */
                 // @ts-ignore
-                readAttributes(path: java.nio.file.Path, attributes: string, ...options: java.nio.file.LinkOption[]): java.util.Map<java.lang.String, java.lang.Object>
+                public static readAttributes(path: java.nio.file.Path, attributes: java.lang.String | string, ...options: java.nio.file.LinkOption[]): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Returns a file's POSIX file permissions.
                  * <p> The {@code path} parameter is associated with a {@code FileSystem}
@@ -1410,7 +1410,7 @@ declare namespace java {
                  *           denies read access to the file.
                  */
                 // @ts-ignore
-                getPosixFilePermissions(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): java.util.Set<java.nio.file.attribute.PosixFilePermission>
+                public static getPosixFilePermissions(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): Array<java.nio.file.attribute.PosixFilePermission>
                 /**
                  * Sets a file's POSIX permissions.
                  * <p> The {@code path} parameter is associated with a {@code FileSystem}
@@ -1438,7 +1438,7 @@ declare namespace java {
                  *           method denies write access to the file.
                  */
                 // @ts-ignore
-                setPosixFilePermissions(path: java.nio.file.Path, perms: Array<java.nio.file.attribute.PosixFilePermission>): java.nio.file.Path
+                public static setPosixFilePermissions(path: java.nio.file.Path, perms: java.util.Set<java.nio.file.attribute.PosixFilePermission> | Array<java.nio.file.attribute.PosixFilePermission>): java.nio.file.Path
                 /**
                  * Returns the owner of a file.
                  * <p> The {@code path} parameter is associated with a file system that
@@ -1461,7 +1461,7 @@ declare namespace java {
                  *           denies read access to the file.
                  */
                 // @ts-ignore
-                getOwner(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): java.nio.file.attribute.UserPrincipal
+                public static getOwner(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): java.nio.file.attribute.UserPrincipal
                 /**
                  * Updates the file owner.
                  * <p> The {@code path} parameter is associated with a file system that
@@ -1495,7 +1495,7 @@ declare namespace java {
                  * @see java.nio.file.attribute.UserPrincipalLookupService
                  */
                 // @ts-ignore
-                setOwner(path: java.nio.file.Path, owner: java.nio.file.attribute.UserPrincipal): java.nio.file.Path
+                public static setOwner(path: java.nio.file.Path, owner: java.nio.file.attribute.UserPrincipal): java.nio.file.Path
                 /**
                  * Tests whether a file is a symbolic link.
                  * <p> Where it is required to distinguish an I/O exception from the case
@@ -1513,7 +1513,7 @@ declare namespace java {
                  *           method denies read access to the file.
                  */
                 // @ts-ignore
-                isSymbolicLink(path: java.nio.file.Path): boolean
+                public static isSymbolicLink(path: java.nio.file.Path): boolean
                 /**
                  * Tests whether a file is a directory.
                  * <p> The {@code options} array may be used to indicate how symbolic links
@@ -1539,7 +1539,7 @@ declare namespace java {
                  *           method denies read access to the file.
                  */
                 // @ts-ignore
-                isDirectory(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
+                public static isDirectory(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
                 /**
                  * Tests whether a file is a regular file with opaque content.
                  * <p> The {@code options} array may be used to indicate how symbolic links
@@ -1565,7 +1565,7 @@ declare namespace java {
                  *           method denies read access to the file.
                  */
                 // @ts-ignore
-                isRegularFile(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
+                public static isRegularFile(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
                 /**
                  * Returns a file's last modified time.
                  * <p> The {@code options} array may be used to indicate how symbolic links
@@ -1590,7 +1590,7 @@ declare namespace java {
                  * @see BasicFileAttributes#lastModifiedTime
                  */
                 // @ts-ignore
-                getLastModifiedTime(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): java.nio.file.attribute.FileTime
+                public static getLastModifiedTime(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): java.nio.file.attribute.FileTime
                 /**
                  * Updates a file's last modified time attribute. The file time is converted
                  * to the epoch and precision supported by the file system. Converting from
@@ -1620,7 +1620,7 @@ declare namespace java {
                  * @see BasicFileAttributeView#setTimes
                  */
                 // @ts-ignore
-                setLastModifiedTime(path: java.nio.file.Path, time: java.nio.file.attribute.FileTime): java.nio.file.Path
+                public static setLastModifiedTime(path: java.nio.file.Path, time: java.nio.file.attribute.FileTime): java.nio.file.Path
                 /**
                  * Returns the size of a file (in bytes). The size may differ from the
                  * actual size on the file system due to compression, support for sparse
@@ -1639,7 +1639,7 @@ declare namespace java {
                  * @see BasicFileAttributes#size
                  */
                 // @ts-ignore
-                size(path: java.nio.file.Path): long
+                public static size(path: java.nio.file.Path): number /*long*/
                 /**
                  * Tests whether a file exists.
                  * <p> The {@code options} parameter may be used to indicate how symbolic links
@@ -1664,7 +1664,7 @@ declare namespace java {
                  * @see #notExists
                  */
                 // @ts-ignore
-                exists(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
+                public static exists(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
                 /**
                  * Tests whether the file located by this path does not exist. This method
                  * is intended for cases where it is required to take action when it can be
@@ -1692,7 +1692,7 @@ declare namespace java {
                  *           read access to the file.
                  */
                 // @ts-ignore
-                notExists(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
+                public static notExists(path: java.nio.file.Path, ...options: java.nio.file.LinkOption[]): boolean
                 /**
                  * Tests whether a file is readable. This method checks that a file exists
                  * and that this Java virtual machine has appropriate privileges that would
@@ -1717,7 +1717,7 @@ declare namespace java {
                  *           is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                isReadable(path: java.nio.file.Path): boolean
+                public static isReadable(path: java.nio.file.Path): boolean
                 /**
                  * Tests whether a file is writable. This method checks that a file exists
                  * and that this Java virtual machine has appropriate privileges that would
@@ -1742,7 +1742,7 @@ declare namespace java {
                  *           is invoked to check write access to the file.
                  */
                 // @ts-ignore
-                isWritable(path: java.nio.file.Path): boolean
+                public static isWritable(path: java.nio.file.Path): boolean
                 /**
                  * Tests whether a file is executable. This method checks that a file exists
                  * and that this Java virtual machine has appropriate privileges to {@link
@@ -1770,7 +1770,7 @@ declare namespace java {
                  *           checkExec} is invoked to check execute access to the file.
                  */
                 // @ts-ignore
-                isExecutable(path: java.nio.file.Path): boolean
+                public static isExecutable(path: java.nio.file.Path): boolean
                 /**
                  * Walks a file tree.
                  * <p> This method walks a file tree rooted at a given starting file. The
@@ -1850,7 +1850,7 @@ declare namespace java {
                  *           if an I/O error is thrown by a visitor method
                  */
                 // @ts-ignore
-                walkFileTree(start: java.nio.file.Path, options: Array<java.nio.file.FileVisitOption>, maxDepth: number /*int*/, visitor: java.nio.file.FileVisitor<any super java.nio.file.Path>): java.nio.file.Path
+                public static walkFileTree(start: java.nio.file.Path, options: java.util.Set<java.nio.file.FileVisitOption> | Array<java.nio.file.FileVisitOption>, maxDepth: number /*int*/, visitor: java.nio.file.FileVisitor<any>): java.nio.file.Path
                 /**
                  * Walks a file tree.
                  * <p> This method works as if invoking it were equivalent to evaluating the
@@ -1874,7 +1874,7 @@ declare namespace java {
                  *           if an I/O error is thrown by a visitor method
                  */
                 // @ts-ignore
-                walkFileTree(start: java.nio.file.Path, visitor: java.nio.file.FileVisitor<any super java.nio.file.Path>): java.nio.file.Path
+                public static walkFileTree(start: java.nio.file.Path, visitor: java.nio.file.FileVisitor<any>): java.nio.file.Path
                 /**
                  * Opens a file for reading, returning a {@code BufferedReader} that may be
                  * used to read text from the file in an efficient manner. Bytes from the
@@ -1897,7 +1897,7 @@ declare namespace java {
                  * @see #readAllLines
                  */
                 // @ts-ignore
-                newBufferedReader(path: java.nio.file.Path, cs: java.nio.charset.Charset): java.io.BufferedReader
+                public static newBufferedReader(path: java.nio.file.Path, cs: java.nio.charset.Charset): java.io.BufferedReader
                 /**
                  * Opens a file for reading, returning a {@code BufferedReader} to read text
                  * from the file in an efficient manner. Bytes from the file are decoded into
@@ -1921,7 +1921,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                newBufferedReader(path: java.nio.file.Path): java.io.BufferedReader
+                public static newBufferedReader(path: java.nio.file.Path): java.io.BufferedReader
                 /**
                  * Opens or creates a file for writing, returning a {@code BufferedWriter}
                  * that may be used to write text to the file in an efficient manner.
@@ -1954,7 +1954,7 @@ declare namespace java {
                  * @see #write(Path,Iterable,Charset,OpenOption[])
                  */
                 // @ts-ignore
-                newBufferedWriter(path: java.nio.file.Path, cs: java.nio.charset.Charset, ...options: java.nio.file.OpenOption[]): java.io.BufferedWriter
+                public static newBufferedWriter(path: java.nio.file.Path, cs: java.nio.charset.Charset, ...options: java.nio.file.OpenOption[]): java.io.BufferedWriter
                 /**
                  * Opens or creates a file for writing, returning a {@code BufferedWriter}
                  * to write text to the file in an efficient manner. The text is encoded
@@ -1982,7 +1982,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                newBufferedWriter(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.BufferedWriter
+                public static newBufferedWriter(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.BufferedWriter
                 /**
                  * Copies all bytes from an input stream to a file. On return, the input
                  * stream will be at end of stream.
@@ -2042,7 +2042,7 @@ declare namespace java {
                  *           method is invoked to check that an existing file can be deleted.
                  */
                 // @ts-ignore
-                copy(input: java.io.InputStream, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): long
+                public static copy(input: java.io.InputStream, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): number /*long*/
                 /**
                  * Copies all bytes from a file to an output stream.
                  * <p> If an I/O error occurs reading from the file or writing to the output
@@ -2071,7 +2071,7 @@ declare namespace java {
                  *           method is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                copy(source: java.nio.file.Path, out: java.io.OutputStream): long
+                public static copy(source: java.nio.file.Path, out: java.io.OutputStream): number /*long*/
                 /**
                  * Reads all the bytes from a file. The method ensures that the file is
                  * closed when all bytes have been read or an I/O error, or other runtime
@@ -2093,7 +2093,7 @@ declare namespace java {
                  *           method is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                readAllBytes(path: java.nio.file.Path): byte[]
+                public static readAllBytes(path: java.nio.file.Path): number /*byte*/[]
                 /**
                  * Read all lines from a file. This method ensures that the file is
                  * closed when all bytes have been read or an I/O error, or other runtime
@@ -2128,7 +2128,7 @@ declare namespace java {
                  * @see #newBufferedReader
                  */
                 // @ts-ignore
-                readAllLines(path: java.nio.file.Path, cs: java.nio.charset.Charset): java.util.List<java.lang.String>
+                public static readAllLines(path: java.nio.file.Path, cs: java.nio.charset.Charset): Array<java.lang.String | string>
                 /**
                  * Read all lines from a file. Bytes from the file are decoded into characters
                  * using the {@link StandardCharsets#UTF_8 UTF-8} {@link Charset charset}.
@@ -2152,7 +2152,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                readAllLines(path: java.nio.file.Path): java.util.List<java.lang.String>
+                public static readAllLines(path: java.nio.file.Path): Array<java.lang.String | string>
                 /**
                  * Writes bytes to a file. The {@code options} parameter specifies how the
                  * the file is created or opened. If no options are present then this method
@@ -2191,7 +2191,7 @@ declare namespace java {
                  *           method is invoked to check write access to the file.
                  */
                 // @ts-ignore
-                write(path: java.nio.file.Path, bytes: number /*byte*/[], ...options: java.nio.file.OpenOption[]): java.nio.file.Path
+                public static write(path: java.nio.file.Path, bytes: number /*byte*/[], ...options: java.nio.file.OpenOption[]): java.nio.file.Path
                 /**
                  * Write lines of text to a file. Each line is a char sequence and is
                  * written to the file in sequence with each line terminated by the
@@ -2229,7 +2229,7 @@ declare namespace java {
                  *           method is invoked to check write access to the file.
                  */
                 // @ts-ignore
-                write(path: java.nio.file.Path, lines: java.lang.Iterable<java.lang.CharSequence>, cs: java.nio.charset.Charset, ...options: java.nio.file.OpenOption[]): java.nio.file.Path
+                public static write(path: java.nio.file.Path, lines: java.lang.Iterable<any>, cs: java.nio.charset.Charset, ...options: java.nio.file.OpenOption[]): java.nio.file.Path
                 /**
                  * Write lines of text to a file. Characters are encoded into bytes using
                  * the {@link StandardCharsets#UTF_8 UTF-8} {@link Charset charset}.
@@ -2257,7 +2257,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                write(path: java.nio.file.Path, lines: java.lang.Iterable<java.lang.CharSequence>, ...options: java.nio.file.OpenOption[]): java.nio.file.Path
+                public static write(path: java.nio.file.Path, lines: java.lang.Iterable<any>, ...options: java.nio.file.OpenOption[]): java.nio.file.Path
                 /**
                  * Return a lazily populated {@code Stream}, the elements of
                  * which are the entries in the directory.  The listing is not recursive.
@@ -2298,7 +2298,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                list(dir: java.nio.file.Path): java.util.stream.Stream<java.nio.file.Path>
+                public static list(dir: java.nio.file.Path): java.util.stream.Stream<java.nio.file.Path>
                 /**
                  * Return a {@code Stream} that is lazily populated with {@code
                  * Path} by walking the file tree rooted at a given starting file.  The
@@ -2369,7 +2369,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                walk(start: java.nio.file.Path, maxDepth: number /*int*/, ...options: java.nio.file.FileVisitOption[]): java.util.stream.Stream<java.nio.file.Path>
+                public static walk(start: java.nio.file.Path, maxDepth: number /*int*/, ...options: java.nio.file.FileVisitOption[]): java.util.stream.Stream<java.nio.file.Path>
                 /**
                  * Return a {@code Stream} that is lazily populated with {@code
                  * Path} by walking the file tree rooted at a given starting file.  The
@@ -2404,7 +2404,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                walk(start: java.nio.file.Path, ...options: java.nio.file.FileVisitOption[]): java.util.stream.Stream<java.nio.file.Path>
+                public static walk(start: java.nio.file.Path, ...options: java.nio.file.FileVisitOption[]): java.util.stream.Stream<java.nio.file.Path>
                 /**
                  * Return a {@code Stream} that is lazily populated with {@code
                  * Path} by searching for files in a file tree rooted at a given starting
@@ -2452,7 +2452,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                find(start: java.nio.file.Path, maxDepth: number /*int*/, matcher: java.util.function.BiPredicate<java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes> | java.util.function$.BiPredicate<java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes>, ...options: java.nio.file.FileVisitOption[]): java.util.stream.Stream<java.nio.file.Path>
+                public static find(start: java.nio.file.Path, maxDepth: number /*int*/, matcher: java.util.function$.BiPredicate<java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes>, ...options: java.nio.file.FileVisitOption[]): java.util.stream.Stream<java.nio.file.Path>
                 /**
                  * Read all lines from a file as a {@code Stream}. Unlike {@link
                  * #readAllLines(Path, Charset) readAllLines}, this method does not read
@@ -2490,7 +2490,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                lines(path: java.nio.file.Path, cs: java.nio.charset.Charset): java.util.stream.Stream<java.lang.String>
+                public static lines(path: java.nio.file.Path, cs: java.nio.charset.Charset): java.util.stream.Stream<java.lang.String | string>
                 /**
                  * Read all lines from a file as a {@code Stream}. Bytes from the file are
                  * decoded into characters using the {@link StandardCharsets#UTF_8 UTF-8}
@@ -2512,7 +2512,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                lines(path: java.nio.file.Path): java.util.stream.Stream<java.lang.String>
+                public static lines(path: java.nio.file.Path): java.util.stream.Stream<java.lang.String | string>
             }
         }
     }

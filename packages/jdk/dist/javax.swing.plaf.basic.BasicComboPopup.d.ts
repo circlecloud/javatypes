@@ -26,9 +26,9 @@ declare namespace javax {
                 // @ts-ignore
                 class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swing.plaf.basic.ComboPopup {
                     // @ts-ignore
-                    constructor(combo: javax.swing.JComboBox)
+                    constructor(combo: javax.swing.JComboBox<any>)
                     // @ts-ignore
-                    comboBox: javax.swing.JComboBox
+                    comboBox: javax.swing.JComboBox<any>
                     /**
                      * This protected field is implementation specific. Do not access directly
                      * or override. Use the accessor methods instead.
@@ -36,7 +36,7 @@ declare namespace javax {
                      * @see #createList
                      */
                     // @ts-ignore
-                    list: javax.swing.JList
+                    list: javax.swing.JList<any>
                     /**
                      * This protected field is implementation specific. Do not access directly
                      * or override. Use the create method instead
@@ -129,59 +129,59 @@ declare namespace javax {
                     // @ts-ignore
                     scrollDirection: number /*int*/
                     // @ts-ignore
-                    readonly SCROLL_UP: number /*int*/
+                    static readonly SCROLL_UP: number /*int*/
                     // @ts-ignore
-                    readonly SCROLL_DOWN: number /*int*/
+                    static readonly SCROLL_DOWN: number /*int*/
                     /**
                      * Implementation of ComboPopup.show().
                      */
                     // @ts-ignore
-                    show(): void
+                    public show(): void
                     /**
                      * Implementation of ComboPopup.hide().
                      */
                     // @ts-ignore
-                    hide(): void
+                    public hide(): void
                     /**
                      * Implementation of ComboPopup.getList().
                      */
                     // @ts-ignore
-                    getList(): javax.swing.JList
+                    public getList(): javax.swing.JList<any>
                     /**
                      * Implementation of ComboPopup.getMouseListener().
                      * @return a <code>MouseListener</code> or null
                      * @see ComboPopup#getMouseListener
                      */
                     // @ts-ignore
-                    getMouseListener(): java.awt.event.MouseListener
+                    public getMouseListener(): java.awt.event.MouseListener
                     /**
                      * Implementation of ComboPopup.getMouseMotionListener().
                      * @return a <code>MouseMotionListener</code> or null
                      * @see ComboPopup#getMouseMotionListener
                      */
                     // @ts-ignore
-                    getMouseMotionListener(): java.awt.event.MouseMotionListener
+                    public getMouseMotionListener(): java.awt.event.MouseMotionListener
                     /**
                      * Implementation of ComboPopup.getKeyListener().
                      * @return a <code>KeyListener</code> or null
                      * @see ComboPopup#getKeyListener
                      */
                     // @ts-ignore
-                    getKeyListener(): java.awt.event.KeyListener
+                    public getKeyListener(): java.awt.event.KeyListener
                     /**
                      * Called when the UI is uninstalling.  Since this popup isn't in the component
                      * tree, it won't get it's uninstallUI() called.  It removes the listeners that
                      * were added in addComboBoxListeners().
                      */
                     // @ts-ignore
-                    uninstallingUI(): void
+                    public uninstallingUI(): void
                     /**
                      * Removes the listeners from the combo box model
                      * @param model The combo box model to install listeners
                      * @see #installComboBoxModelListeners
                      */
                     // @ts-ignore
-                    uninstallComboBoxModelListeners(model: javax.swing.ComboBoxModel): void
+                    uninstallComboBoxModelListeners(model: javax.swing.ComboBoxModel<any>): void
                     // @ts-ignore
                     uninstallKeyboardActions(): void
                     // @ts-ignore
@@ -277,7 +277,7 @@ declare namespace javax {
                      * @return a <code>JList</code> used to display the combo box items
                      */
                     // @ts-ignore
-                    createList(): javax.swing.JList
+                    createList(): javax.swing.JList<any>
                     /**
                      * Configures the list which is used to hold the combo box items in the
                      * popup. This method is called when the UI class
@@ -322,14 +322,14 @@ declare namespace javax {
                      * @see #uninstallComboBoxModelListeners
                      */
                     // @ts-ignore
-                    installComboBoxModelListeners(model: javax.swing.ComboBoxModel): void
+                    installComboBoxModelListeners(model: javax.swing.ComboBoxModel<any>): void
                     // @ts-ignore
                     installKeyboardActions(): void
                     /**
                      * Overridden to unconditionally return false.
                      */
                     // @ts-ignore
-                    isFocusTraversable(): boolean
+                    public isFocusTraversable(): boolean
                     /**
                      * This protected method is implementation specific and should be private.
                      * do not call or override.
@@ -361,7 +361,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getAccessibleContext(): javax.accessibility.AccessibleContext
+                    public getAccessibleContext(): javax.accessibility.AccessibleContext
                     /**
                      * This is is a utility method that helps event handlers figure out where to
                      * send the focus when the popup is brought up.  The standard implementation
@@ -383,7 +383,7 @@ declare namespace javax {
                      * ListCellRenderer and the maximum row count.
                      */
                     // @ts-ignore
-                    getPopupHeightForRowCount(maxRowCount: number /*int*/): int
+                    getPopupHeightForRowCount(maxRowCount: number /*int*/): number /*int*/
                     /**
                      * Calculate the placement and size of the popup portion of the combo box based
                      * on the combo box location and the enclosing screen bounds. If

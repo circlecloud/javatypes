@@ -16,20 +16,20 @@ declare namespace java {
                  * @param message the detail message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a {@code LambdaConversionException} with a message and cause.
                  * @param message the detail message
                  * @param cause the cause
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a {@code LambdaConversionException} with a cause.
                  * @param cause the cause
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a {@code LambdaConversionException} with a message,
                  * cause, and other settings.
@@ -39,7 +39,7 @@ declare namespace java {
                  * @param writableStackTrace whether or not the stack trace is writable
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error, enableSuppression: boolean, writableStackTrace: boolean)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, enableSuppression: boolean, writableStackTrace: boolean)
             }
         }
     }

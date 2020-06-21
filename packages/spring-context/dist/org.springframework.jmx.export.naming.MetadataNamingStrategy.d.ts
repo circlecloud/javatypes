@@ -38,7 +38,7 @@ declare namespace org {
                          * when reading the source-level metadata.
                          */
                         // @ts-ignore
-                        setAttributeSource(attributeSource: org.springframework.jmx.export.metadata.JmxAttributeSource): void
+                        public setAttributeSource(attributeSource: org.springframework.jmx.export.metadata.JmxAttributeSource): void
                         /**
                          * Specify the default domain to be used for generating ObjectNames
                          * when no source-level metadata has been specified.
@@ -47,15 +47,15 @@ declare namespace org {
                          * the package name of the managed bean class.
                          */
                         // @ts-ignore
-                        setDefaultDomain(defaultDomain: string): void
+                        public setDefaultDomain(defaultDomain: java.lang.String | string): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Reads the {@code ObjectName} from the source-level metadata associated
                          * with the managed resource's {@code Class}.
                          */
                         // @ts-ignore
-                        getObjectName(managedBean: any, beanKey: string): javax.management.ObjectName
+                        public getObjectName(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.ObjectName
                     }
                 }
             }

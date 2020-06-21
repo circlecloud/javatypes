@@ -31,7 +31,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(capacity: number /*int*/): org.spongepowered.api.item.inventory.property.InventoryCapacity
+                            public static of(capacity: number /*int*/): org.spongepowered.api.item.inventory.property.InventoryCapacity
                         }
                     }
                 }

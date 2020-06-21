@@ -23,11 +23,11 @@ declare namespace javax {
                 // @ts-ignore
                 constructor(stream: java.io.InputStream)
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 // @ts-ignore
-                flushBefore(pos: number /*long*/): void
+                public flushBefore(pos: number /*long*/): void
                 /**
                  * Returns <code>true</code> since this
                  * <code>ImageInputStream</code> caches data in order to allow
@@ -37,7 +37,7 @@ declare namespace javax {
                  * @see #isCachedFile
                  */
                 // @ts-ignore
-                isCached(): boolean
+                public isCached(): boolean
                 /**
                  * Returns <code>false</code> since this
                  * <code>ImageInputStream</code> does not maintain a file cache.
@@ -46,7 +46,7 @@ declare namespace javax {
                  * @see #isCachedMemory
                  */
                 // @ts-ignore
-                isCachedFile(): boolean
+                public isCachedFile(): boolean
                 /**
                  * Returns <code>true</code> since this
                  * <code>ImageInputStream</code> maintains a main memory cache.
@@ -55,13 +55,13 @@ declare namespace javax {
                  * @see #isCachedFile
                  */
                 // @ts-ignore
-                isCachedMemory(): boolean
+                public isCachedMemory(): boolean
                 /**
                  * Closes this <code>MemoryCacheImageInputStream</code>, freeing
                  * the cache.  The source <code>InputStream</code> is not closed.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * {@inheritDoc}
                  */

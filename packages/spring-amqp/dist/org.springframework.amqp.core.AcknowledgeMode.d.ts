@@ -9,10 +9,28 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class AcknowledgeMode extends java.lang.Enum<org.springframework.amqp.core.AcknowledgeMode> {
+                    /**
+                     * No acks - {@code autoAck=true} in {@code Channel.basicConsume()}.
+                     */
+                    // @ts-ignore
+                    readonly NONE: org.springframework.amqp.core.AcknowledgeMode
+                    /**
+                     * Manual acks - user must ack/nack via a channel aware listener.
+                     */
+                    // @ts-ignore
+                    readonly MANUAL: org.springframework.amqp.core.AcknowledgeMode
+                    /**
+                     * Auto - the container will issue the ack/nack based on whether
+                     * the listener returns normally, or throws an exception.
+                     * <p><em>Do not confuse with RabbitMQ {@code autoAck} which is
+                     * represented by {@link #NONE} here</em>.
+                     */
+                    // @ts-ignore
+                    readonly AUTO: org.springframework.amqp.core.AcknowledgeMode
                     // @ts-ignore
                     values(): org.springframework.amqp.core.AcknowledgeMode[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.amqp.core.AcknowledgeMode
+                    valueOf(name: java.lang.String | string): org.springframework.amqp.core.AcknowledgeMode
                     /**
                      * Return if transactions are allowed - if the mode is {@link #AUTO} or
                      * {@link #MANUAL}.

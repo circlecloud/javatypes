@@ -41,52 +41,52 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class MouseAdapter extends java.lang.Object implements java.awt.event.MouseListener, java.awt.event.MouseWheelListener, java.awt.event.MouseMotionListener {
+            abstract class MouseAdapter extends java.lang.Object implements java.awt.event.MouseListener, java.awt.event.MouseWheelListener, java.awt.event.MouseMotionListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                mouseClicked(e: java.awt.event.MouseEvent): void
+                public mouseClicked(e: java.awt.event.MouseEvent): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                mousePressed(e: java.awt.event.MouseEvent): void
+                public mousePressed(e: java.awt.event.MouseEvent): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                mouseReleased(e: java.awt.event.MouseEvent): void
+                public mouseReleased(e: java.awt.event.MouseEvent): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                mouseEntered(e: java.awt.event.MouseEvent): void
+                public mouseEntered(e: java.awt.event.MouseEvent): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                mouseExited(e: java.awt.event.MouseEvent): void
-                /**
-                 * {@inheritDoc}
-                 * @since 1.6
-                 */
-                // @ts-ignore
-                mouseWheelMoved(e: java.awt.event.MouseWheelEvent): void
+                public mouseExited(e: java.awt.event.MouseEvent): void
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                mouseDragged(e: java.awt.event.MouseEvent): void
+                public mouseWheelMoved(e: java.awt.event.MouseWheelEvent): void
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                mouseMoved(e: java.awt.event.MouseEvent): void
+                public mouseDragged(e: java.awt.event.MouseEvent): void
+                /**
+                 * {@inheritDoc}
+                 * @since 1.6
+                 */
+                // @ts-ignore
+                public mouseMoved(e: java.awt.event.MouseEvent): void
             }
         }
     }

@@ -13,11 +13,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getFieldTypes(): java.util.Set<java.lang.Class<?>>
+                    public getFieldTypes(): Array<java.lang.Class<any>>
                     // @ts-ignore
-                    getPrinter(annotation: org.springframework.format.annotation.DateTimeFormat, fieldType: java.lang.Class<any>): org.springframework.format.Printer<?>
+                    public getPrinter(annotation: org.springframework.format.annotation.DateTimeFormat, fieldType: java.lang.Class<any>): org.springframework.format.Printer<any>
                     // @ts-ignore
-                    getParser(annotation: org.springframework.format.annotation.DateTimeFormat, fieldType: java.lang.Class<any>): org.springframework.format.Parser<?>
+                    public getParser(annotation: org.springframework.format.annotation.DateTimeFormat, fieldType: java.lang.Class<any>): org.springframework.format.Parser<any>
                     // @ts-ignore
                     getFormatter(annotation: org.springframework.format.annotation.DateTimeFormat, fieldType: java.lang.Class<any>): org.springframework.format.Formatter<java.util.Date>
                 }

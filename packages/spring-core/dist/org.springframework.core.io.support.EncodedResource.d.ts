@@ -31,7 +31,7 @@ declare namespace org {
                          * @param encoding the encoding to use for reading from the resource
                          */
                         // @ts-ignore
-                        constructor(resource: org.springframework.core.io.Resource, encoding: string)
+                        constructor(resource: org.springframework.core.io.Resource, encoding: java.lang.String | string)
                         /**
                          * Create a new {@code EncodedResource} for the given {@code Resource},
                          * using the specified {@code Charset}.
@@ -44,19 +44,19 @@ declare namespace org {
                          * Return the {@code Resource} held by this {@code EncodedResource}.
                          */
                         // @ts-ignore
-                        getResource(): org.springframework.core.io.Resource
+                        public getResource(): org.springframework.core.io.Resource
                         /**
                          * Return the encoding to use for reading from the {@linkplain #getResource() resource},
                          * or {@code null} if none specified.
                          */
                         // @ts-ignore
-                        getEncoding(): java.lang.String
+                        public getEncoding(): string
                         /**
                          * Return the {@code Charset} to use for reading from the {@linkplain #getResource() resource},
                          * or {@code null} if none specified.
                          */
                         // @ts-ignore
-                        getCharset(): java.nio.charset.Charset
+                        public getCharset(): java.nio.charset.Charset
                         /**
                          * Determine whether a {@link Reader} is required as opposed to an {@link InputStream},
                          * i.e. whether an {@linkplain #getEncoding() encoding} or a {@link #getCharset() Charset}
@@ -65,7 +65,7 @@ declare namespace org {
                          * @see #getInputStream()
                          */
                         // @ts-ignore
-                        requiresReader(): boolean
+                        public requiresReader(): boolean
                         /**
                          * Open a {@code java.io.Reader} for the specified resource, using the specified
                          * {@link #getCharset() Charset} or {@linkplain #getEncoding() encoding}
@@ -75,7 +75,7 @@ declare namespace org {
                          * @see #getInputStream()
                          */
                         // @ts-ignore
-                        getReader(): java.io.Reader
+                        public getReader(): java.io.Reader
                         /**
                          * Open an {@code InputStream} for the specified resource, ignoring any specified
                          * {@link #getCharset() Charset} or {@linkplain #getEncoding() encoding}.
@@ -84,13 +84,13 @@ declare namespace org {
                          * @see #getReader()
                          */
                         // @ts-ignore
-                        getInputStream(): java.io.InputStream
+                        public getInputStream(): java.io.InputStream
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

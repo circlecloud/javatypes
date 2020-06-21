@@ -17,7 +17,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class SchemaFactoryLoader extends java.lang.Object {
+            abstract class SchemaFactoryLoader extends java.lang.Object {
                 /**
                  * A do-nothing constructor.
                  */
@@ -34,7 +34,7 @@ declare namespace javax {
                  * @return <code>null</code> if the callee fails to create one.
                  */
                 // @ts-ignore
-                abstract newFactory(schemaLanguage: string): javax.xml.validation.SchemaFactory
+                public abstract newFactory(schemaLanguage: java.lang.String | string): javax.xml.validation.SchemaFactory
             }
         }
     }

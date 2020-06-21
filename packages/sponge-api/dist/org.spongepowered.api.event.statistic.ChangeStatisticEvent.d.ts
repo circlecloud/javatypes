@@ -20,13 +20,13 @@ declare namespace org {
                          * @return The original value
                          */
                         // @ts-ignore
-                        getOriginalValue(): long
+                        getOriginalValue(): number /*long*/
                         /**
                          * Gets the new value of the statistic.
                          * @return The new value
                          */
                         // @ts-ignore
-                        getValue(): long
+                        getValue(): number /*long*/
                         /**
                          * Sets the new value of the statistic to the given value.
                          * @param value The new value

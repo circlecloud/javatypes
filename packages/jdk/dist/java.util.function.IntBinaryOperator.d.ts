@@ -20,7 +20,7 @@ declare namespace java {
                  * @return the operator result
                  */
                 // @ts-ignore
-                applyAsInt(left: number /*int*/, right: number /*int*/): int
+                applyAsInt(left: number /*int*/, right: number /*int*/): number /*int*/
             }
         }
     }

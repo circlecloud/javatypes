@@ -21,7 +21,7 @@ declare namespace javax {
                      * @return the index &gt;= 0
                      */
                     // @ts-ignore
-                    getIndex(): int
+                    getIndex(): number /*int*/
                     /**
                      * Gets the child elements that were removed from the
                      * given parent element.  The element array returned is

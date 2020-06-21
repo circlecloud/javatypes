@@ -84,7 +84,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class CertPath extends java.lang.Object implements java.io.Serializable {
+            abstract class CertPath extends java.lang.Object implements java.io.Serializable {
                 /**
                  * Creates a {@code CertPath} of the specified type.
                  * <p>
@@ -94,7 +94,7 @@ declare namespace java {
                  *  {#code Certificate}s in this path
                  */
                 // @ts-ignore
-                constructor(type: string)
+                constructor(type: java.lang.String | string)
                 /**
                  * Returns the type of {@code Certificate}s in this certification
                  * path. This is the same string that would be returned by
@@ -104,7 +104,7 @@ declare namespace java {
                  *  path (never null)
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Returns an iteration of the encodings supported by this certification
                  * path, with the default encoding first. Attempts to modify the returned
@@ -114,7 +114,7 @@ declare namespace java {
                  *          encodings (as Strings)
                  */
                 // @ts-ignore
-                abstract getEncodings(): java.util.Iterator<java.lang.String>
+                public abstract getEncodings(): java.util.Iterator<java.lang.String | string>
                 /**
                  * Compares this certification path for equality with the specified
                  * object. Two {@code CertPath}s are equal if and only if their
@@ -130,7 +130,7 @@ declare namespace java {
                  *  false otherwise
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns the hashcode for this certification path. The hash code of
                  * a certification path is defined to be the result of the following
@@ -146,7 +146,7 @@ declare namespace java {
                  * @return the hashcode value for this certification path
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this certification path.
                  * This calls the {@code toString} method on each of the
@@ -154,7 +154,7 @@ declare namespace java {
                  * @return a string representation of this certification path
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns the encoded form of this certification path, using the default
                  * encoding.
@@ -162,7 +162,7 @@ declare namespace java {
                  * @exception CertificateEncodingException if an encoding error occurs
                  */
                 // @ts-ignore
-                abstract getEncoded(): byte[]
+                public abstract getEncoded(): number /*byte*/[]
                 /**
                  * Returns the encoded form of this certification path, using the
                  * specified encoding.
@@ -172,7 +172,7 @@ declare namespace java {
                  *    the encoding requested is not supported
                  */
                 // @ts-ignore
-                abstract getEncoded(encoding: string): byte[]
+                public abstract getEncoded(encoding: java.lang.String | string): number /*byte*/[]
                 /**
                  * Returns the list of certificates in this certification path.
                  * The {@code List} returned must be immutable and thread-safe.
@@ -180,7 +180,7 @@ declare namespace java {
                  *          (may be empty, but not null)
                  */
                 // @ts-ignore
-                abstract getCertificates(): java.util.List<? extends java.security.cert.Certificate>
+                public abstract getCertificates(): Array<any>
                 /**
                  * Replaces the {@code CertPath} to be serialized with a
                  * {@code CertPathRep} object.
@@ -189,7 +189,7 @@ declare namespace java {
                  *  representing this certification path could not be created
                  */
                 // @ts-ignore
-                writeReplace(): java.lang.Object
+                writeReplace(): any
             }
         }
     }

@@ -14,59 +14,59 @@ declare namespace org {
                  * @see UriComponentsBuilder
                  */
                 // @ts-ignore
-                class UriComponents extends java.lang.Object implements java.io.Serializable {
+                abstract class UriComponents extends java.lang.Object implements java.io.Serializable {
                     // @ts-ignore
-                    constructor(scheme: string, fragment: string)
+                    constructor(scheme: java.lang.String | string, fragment: java.lang.String | string)
                     /**
                      * Return the scheme. Can be {@code null}.
                      */
                     // @ts-ignore
-                    getScheme(): java.lang.String
+                    public getScheme(): string
                     /**
                      * Return the fragment. Can be {@code null}.
                      */
                     // @ts-ignore
-                    getFragment(): java.lang.String
+                    public getFragment(): string
                     /**
                      * Return the scheme specific part. Can be {@code null}.
                      */
                     // @ts-ignore
-                    abstract getSchemeSpecificPart(): java.lang.String
+                    public abstract getSchemeSpecificPart(): string
                     /**
                      * Return the user info. Can be {@code null}.
                      */
                     // @ts-ignore
-                    abstract getUserInfo(): java.lang.String
+                    public abstract getUserInfo(): string
                     /**
                      * Return the host. Can be {@code null}.
                      */
                     // @ts-ignore
-                    abstract getHost(): java.lang.String
+                    public abstract getHost(): string
                     /**
                      * Return the port. {@code -1} if no port has been set.
                      */
                     // @ts-ignore
-                    abstract getPort(): int
+                    public abstract getPort(): number /*int*/
                     /**
                      * Return the path. Can be {@code null}.
                      */
                     // @ts-ignore
-                    abstract getPath(): java.lang.String
+                    public abstract getPath(): string
                     /**
                      * Return the list of path segments. Empty if no path has been set.
                      */
                     // @ts-ignore
-                    abstract getPathSegments(): java.util.List<java.lang.String>
+                    public abstract getPathSegments(): Array<java.lang.String | string>
                     /**
                      * Return the query. Can be {@code null}.
                      */
                     // @ts-ignore
-                    abstract getQuery(): java.lang.String
+                    public abstract getQuery(): string
                     /**
                      * Return the map of query parameters. Empty if no query has been set.
                      */
                     // @ts-ignore
-                    abstract getQueryParams(): <any>
+                    public abstract getQueryParams(): object
                     /**
                      * Invoke this <em>after</em> expanding URI variables to encode the
                      * resulting URI component values.
@@ -78,14 +78,14 @@ declare namespace org {
                      * @see UriComponentsBuilder#encode()
                      */
                     // @ts-ignore
-                    encode(): org.springframework.web.util.UriComponents
+                    public encode(): org.springframework.web.util.UriComponents
                     /**
                      * A variant of {@link #encode()} with a charset other than "UTF-8".
                      * @param charset the charset to use for encoding
                      * @see UriComponentsBuilder#encode(Charset)
                      */
                     // @ts-ignore
-                    abstract encode(charset: java.nio.charset.Charset): org.springframework.web.util.UriComponents
+                    public abstract encode(charset: java.nio.charset.Charset): org.springframework.web.util.UriComponents
                     /**
                      * Replace all URI template variables with the values from a given map.
                      * <p>The given map keys represent variable names; the corresponding values
@@ -94,7 +94,7 @@ declare namespace org {
                      * @return the expanded URI components
                      */
                     // @ts-ignore
-                    expand(uriVariables: java.util.Map<java.lang.String, any>): org.springframework.web.util.UriComponents
+                    public expand(uriVariables: java.util.Map<java.lang.String | string, any>): org.springframework.web.util.UriComponents
                     /**
                      * Replace all URI template variables with the values from a given array.
                      * <p>The given array represents variable values. The order of variables is significant.
@@ -102,7 +102,7 @@ declare namespace org {
                      * @return the expanded URI components
                      */
                     // @ts-ignore
-                    expand(...uriVariableValues: any[]): org.springframework.web.util.UriComponents
+                    public expand(...uriVariableValues: java.lang.Object[] | any[]): org.springframework.web.util.UriComponents
                     /**
                      * Replace all URI template variables with the values from the given
                      * {@link UriTemplateVariables}.
@@ -110,7 +110,7 @@ declare namespace org {
                      * @return the expanded URI components
                      */
                     // @ts-ignore
-                    expand(uriVariables: org.springframework.web.util.UriComponents.UriTemplateVariables): org.springframework.web.util.UriComponents
+                    public expand(uriVariables: org.springframework.web.util.UriComponents.UriTemplateVariables): org.springframework.web.util.UriComponents
                     /**
                      * Normalize the path removing sequences like "path/..". Note that
                      * normalization is applied to the full path, and not to individual path
@@ -118,7 +118,7 @@ declare namespace org {
                      * @see org.springframework.util.StringUtils#cleanPath(String)
                      */
                     // @ts-ignore
-                    abstract normalize(): org.springframework.web.util.UriComponents
+                    public abstract normalize(): org.springframework.web.util.UriComponents
                     /**
                      * Concatenate all URI components to return the fully formed URI String.
                      * <p>This method does nothing more than a simple concatenation based on
@@ -127,7 +127,7 @@ declare namespace org {
                      * {@code encode}, {@code expand}, or {@code normalize}.
                      */
                     // @ts-ignore
-                    abstract toUriString(): java.lang.String
+                    public abstract toUriString(): string
                     /**
                      * Create a {@link URI} from this instance as follows:
                      * <p>If the current instance is {@link #encode() encoded}, form the full
@@ -138,12 +138,12 @@ declare namespace org {
                      * that cannot appear in their respective URI component.
                      */
                     // @ts-ignore
-                    abstract toUri(): java.net.URI
+                    public abstract toUri(): java.net.URI
                     /**
                      * A simple pass-through to {@link #toUriString()}.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Set all components of the given UriComponentsBuilder.
                      * @since 4.2

@@ -26,21 +26,21 @@ declare namespace org {
                      * @return The BlockFace that the block is moving to
                      */
                     // @ts-ignore
-                    getFace(): org.bukkit.block.BlockFace
+                    public getFace(): org.bukkit.block.BlockFace
                     /**
                      * Convenience method for getting the faced Block.
                      * @return The faced Block
                      */
                     // @ts-ignore
-                    getToBlock(): org.bukkit.block.Block
+                    public getToBlock(): org.bukkit.block.Block
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

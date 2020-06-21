@@ -17,14 +17,14 @@ declare namespace org {
                                  * @see Keys#WALKING_SPEED
                                  */
                                 // @ts-ignore
-                                walkSpeed(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double>
+                                walkSpeed(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the "flying" speed.
                                  * @return The value for the flying speed
                                  * @see Keys#FLYING_SPEED
                                  */
                                 // @ts-ignore
-                                flySpeed(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double>
+                                flySpeed(): org.spongepowered.api.data.value.mutable.Value<java.lang.Double | number>
                             }
                         }
                     }

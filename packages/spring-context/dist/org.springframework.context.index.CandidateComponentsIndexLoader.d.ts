@@ -14,7 +14,7 @@ declare namespace org {
                      * <p>Can be present in multiple JAR files.
                      */
                     // @ts-ignore
-                    readonly COMPONENTS_RESOURCE_LOCATION: string
+                    public static readonly COMPONENTS_RESOURCE_LOCATION: java.lang.String | string
                     /**
                      * System property that instructs Spring to ignore the index, i.e.
                      * to always return {@code null} from {@link #loadIndex(ClassLoader)}.
@@ -25,7 +25,7 @@ declare namespace org {
                      * classpath arrangement (i.e. as no index was present at all).
                      */
                     // @ts-ignore
-                    readonly IGNORE_INDEX: string
+                    public static readonly IGNORE_INDEX: java.lang.String | string
                     /**
                      * Load and instantiate the {@link CandidateComponentsIndex} from
                      * {@value #COMPONENTS_RESOURCE_LOCATION}, using the given class loader. If no
@@ -36,7 +36,7 @@ declare namespace org {
                      *  be loaded or if an error occurs while creating {#link CandidateComponentsIndex}
                      */
                     // @ts-ignore
-                    loadIndex(classLoader: java.lang.ClassLoader): org.springframework.context.index.CandidateComponentsIndex
+                    public static loadIndex(classLoader: java.lang.ClassLoader): org.springframework.context.index.CandidateComponentsIndex
                 }
             }
         }

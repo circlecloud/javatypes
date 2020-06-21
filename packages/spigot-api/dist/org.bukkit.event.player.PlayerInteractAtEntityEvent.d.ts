@@ -16,11 +16,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(who: org.bukkit.entity.Player, clickedEntity: org.bukkit.entity.Entity, position: org.bukkit.util.Vector, hand: org.bukkit.inventory.EquipmentSlot)
                     // @ts-ignore
-                    getClickedPosition(): org.bukkit.util.Vector
+                    public getClickedPosition(): org.bukkit.util.Vector
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -34,7 +34,7 @@ declare namespace java {
              * @return a <code>BufferedImage</code>.
              */
             // @ts-ignore
-            getImage(): java.awt.image.BufferedImage
+            public getImage(): java.awt.image.BufferedImage
             /**
              * Returns a copy of the anchor rectangle which positions and
              * sizes the textured image.
@@ -42,7 +42,7 @@ declare namespace java {
              *  size this <code>TexturePaint</code>.
              */
             // @ts-ignore
-            getAnchorRect(): java.awt.geom.Rectangle2D
+            public getAnchorRect(): java.awt.geom.Rectangle2D
             /**
              * Creates and returns a {@link PaintContext} used to
              * generate a tiled image pattern.
@@ -71,7 +71,7 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, xform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
+            public createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, xform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
             /**
              * Returns the transparency mode for this <code>TexturePaint</code>.
              * @return the transparency mode for this <code>TexturePaint</code>
@@ -79,7 +79,7 @@ declare namespace java {
              * @see Transparency
              */
             // @ts-ignore
-            getTransparency(): int
+            public getTransparency(): number /*int*/
         }
     }
 }

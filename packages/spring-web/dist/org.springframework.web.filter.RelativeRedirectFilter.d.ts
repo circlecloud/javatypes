@@ -25,12 +25,12 @@ declare namespace org {
                      * @param status the 3xx redirect status to use
                      */
                     // @ts-ignore
-                    setRedirectStatus(status: org.springframework.http.HttpStatus): void
+                    public setRedirectStatus(status: org.springframework.http.HttpStatus): void
                     /**
                      * Return the configured redirect status.
                      */
                     // @ts-ignore
-                    getRedirectStatus(): org.springframework.http.HttpStatus
+                    public getRedirectStatus(): org.springframework.http.HttpStatus
                     // @ts-ignore
                     doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain): void
                 }

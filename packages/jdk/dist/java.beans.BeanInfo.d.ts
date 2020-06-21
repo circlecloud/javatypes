@@ -28,22 +28,22 @@ declare namespace java {
              * Constant to indicate a 16 x 16 color icon.
              */
             // @ts-ignore
-            
+            readonly ICON_COLOR_16x16: number /*int*/
             /**
              * Constant to indicate a 32 x 32 color icon.
              */
             // @ts-ignore
-            
+            readonly ICON_COLOR_32x32: number /*int*/
             /**
              * Constant to indicate a 16 x 16 monochrome icon.
              */
             // @ts-ignore
-            
+            readonly ICON_MONO_16x16: number /*int*/
             /**
              * Constant to indicate a 32 x 32 monochrome icon.
              */
             // @ts-ignore
-            
+            readonly ICON_MONO_32x32: number /*int*/
             /**
              * Returns the bean descriptor
              * that provides overall information about the bean,
@@ -70,7 +70,7 @@ declare namespace java {
              *           or -1 if there is no default event
              */
             // @ts-ignore
-            getDefaultEventIndex(): int
+            getDefaultEventIndex(): number /*int*/
             /**
              * Returns descriptors for all properties of the bean.
              * <p>
@@ -94,7 +94,7 @@ declare namespace java {
              *           or -1 if there is no default property
              */
             // @ts-ignore
-            getDefaultPropertyIndex(): int
+            getDefaultPropertyIndex(): number /*int*/
             /**
              * Returns the method descriptors of the bean
              * that define the externally visible methods supported by this bean.

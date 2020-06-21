@@ -23,7 +23,7 @@ declare namespace java {
                  * @throws NullPointerException if either parameter is {#code null}
                  */
                 // @ts-ignore
-                constructor(annotationType: java.lang.Class<java.lang.annotation.Annotation>, elementName: string)
+                constructor(annotationType: java.lang.Class<any>, elementName: java.lang.String | string)
                 /**
                  * Returns the Class object for the annotation type with the
                  * missing element.
@@ -31,13 +31,13 @@ declare namespace java {
                  *      missing element
                  */
                 // @ts-ignore
-                annotationType(): java.lang.Class<? extends java.lang.annotation.Annotation>
+                annotationType(): java.lang.Class<any>
                 /**
                  * Returns the name of the missing element.
                  * @return the name of the missing element
                  */
                 // @ts-ignore
-                elementName(): java.lang.String
+                elementName(): string
             }
         }
     }

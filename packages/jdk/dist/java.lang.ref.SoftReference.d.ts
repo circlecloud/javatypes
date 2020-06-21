@@ -16,7 +16,7 @@ declare namespace java {
                  * @param q	queue to register to the reference object with.
                  */
                 // @ts-ignore
-                constructor(r: T, q: java.lang.ref.ReferenceQueue<any super T>)
+                constructor(r: T, q: java.lang.ref.ReferenceQueue<any>)
                 /**
                  * Constructs a new instance of this class.
                  * @param r	referent to track.
@@ -29,7 +29,7 @@ declare namespace java {
                  * 			or null if object has been cleared.
                  */
                 // @ts-ignore
-                get(): T
+                public get(): T
             }
         }
     }

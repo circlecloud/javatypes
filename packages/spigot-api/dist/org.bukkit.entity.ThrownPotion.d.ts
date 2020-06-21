@@ -11,7 +11,7 @@ declare namespace org {
                  * @return The potion effects
                  */
                 // @ts-ignore
-                getEffects(): java.util.Collection<org.bukkit.potion.PotionEffect>
+                getEffects(): Array<org.bukkit.potion.PotionEffect>
                 /**
                  * Returns a copy of the ItemStack for this thrown potion.
                  * <p>

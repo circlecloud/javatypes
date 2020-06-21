@@ -18,19 +18,19 @@ declare namespace org {
                          * @return The key of this argument type
                          */
                         // @ts-ignore
-                        getKey(): java.lang.String
+                        getKey(): string
                         /**
                          * Returns 1.
                          * @return 1
                          */
                         // @ts-ignore
-                        getCount(): int
+                        getCount(): number /*int*/
                         /**
                          * Returns a set containing this {@link ArgumentType}.
                          * @return A set containing this {#link ArgumentType}
                          */
                         // @ts-ignore
-                        getTypes(): java.util.Set<org.spongepowered.api.text.selector.ArgumentType<T>>
+                        getTypes(): Array<org.spongepowered.api.text.selector.ArgumentType<T>>
                     }
                 }
             }

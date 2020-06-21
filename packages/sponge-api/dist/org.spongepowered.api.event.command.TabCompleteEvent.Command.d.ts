@@ -19,7 +19,7 @@ declare namespace org {
                              * @return The commands
                              */
                             // @ts-ignore
-                            getCommand(): java.lang.String
+                            getCommand(): string
                             /**
                              * Gets the arguments as a string.
                              * <p>For example, if the message was {@code /example bob 3 -f},
@@ -27,7 +27,7 @@ declare namespace org {
                              * @return The arguments
                              */
                             // @ts-ignore
-                            getArguments(): java.lang.String
+                            getArguments(): string
                         }
                     }
                 }

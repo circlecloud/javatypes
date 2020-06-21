@@ -33,7 +33,7 @@ declare namespace org {
                  * @see javax.annotation.Priority
                  */
                 // @ts-ignore
-                class Order implements java.lang.annotation.Annotation {
+                abstract class Order implements java.lang.annotation.Annotation {
                 }
             }
         }

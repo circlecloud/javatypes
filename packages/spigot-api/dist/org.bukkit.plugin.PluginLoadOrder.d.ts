@@ -6,10 +6,21 @@ declare namespace org {
              */
             // @ts-ignore
             class PluginLoadOrder extends java.lang.Enum<org.bukkit.plugin.PluginLoadOrder> {
+                /**
+                 * Indicates that the plugin will be loaded at startup
+                 */
+                // @ts-ignore
+                readonly STARTUP: org.bukkit.plugin.PluginLoadOrder
+                /**
+                 * Indicates that the plugin will be loaded after the first/default world
+                 * was created
+                 */
+                // @ts-ignore
+                readonly POSTWORLD: org.bukkit.plugin.PluginLoadOrder
                 // @ts-ignore
                 values(): org.bukkit.plugin.PluginLoadOrder[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.plugin.PluginLoadOrder
+                valueOf(name: java.lang.String | string): org.bukkit.plugin.PluginLoadOrder
             }
         }
     }

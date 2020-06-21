@@ -21,7 +21,7 @@ declare namespace java {
              * @see java.lang.Thread#currentThread
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Constructs a new ThreadGroup with the name provided, as child of
              * the ThreadGroup <code>parent</code>
@@ -32,21 +32,21 @@ declare namespace java {
              * @throws IllegalThreadStateException 	if <code>parent</code> has been destroyed already
              */
             // @ts-ignore
-            constructor(parent: java.lang.ThreadGroup, name: string)
+            constructor(parent: java.lang.ThreadGroup, name: java.lang.String | string)
             /**
              * Returns the number of Threads which are children of
              * the receiver, directly or indirectly.
              * @return Number of children Threads
              */
             // @ts-ignore
-            activeCount(): int
+            public activeCount(): number /*int*/
             /**
              * Returns the number of ThreadGroups which are children of
              * the receiver, directly or indirectly.
              * @return Number of children ThreadGroups
              */
             // @ts-ignore
-            activeGroupCount(): int
+            public activeGroupCount(): number /*int*/
             /**
              * The definition of this method depends on the deprecated method <code>suspend()</code>.
              * The behavior of this call was never specified.
@@ -55,13 +55,13 @@ declare namespace java {
              * @deprecated Required deprecated method suspend().
              */
             // @ts-ignore
-            allowThreadSuspension(b: boolean): boolean
+            public allowThreadSuspension(b: boolean): boolean
             /**
              * If there is a SecurityManager installed, call <code>checkAccess</code>
              * in it passing the receiver as parameter, otherwise do nothing.
              */
             // @ts-ignore
-            checkAccess(): void
+            public checkAccess(): void
             /**
              * Destroys the receiver and recursively all its subgroups. It is only legal
              * to destroy a ThreadGroup that has no Threads.
@@ -71,7 +71,7 @@ declare namespace java {
              * @throws SecurityException 				if <code>this.checkAccess()</code> fails with a SecurityException
              */
             // @ts-ignore
-            destroy(): void
+            public destroy(): void
             /**
              * Copies an array with all Threads which are children of
              * the receiver (directly or indirectly) into the array <code>threads</code>
@@ -81,7 +81,7 @@ declare namespace java {
              * @return How many Threads were copied over
              */
             // @ts-ignore
-            enumerate(threads: java.lang.Thread[]): int
+            public enumerate(threads: java.lang.Thread[]): number /*int*/
             /**
              * Copies an array with all Threads which are children of
              * the receiver into the array <code>threads</code>
@@ -94,7 +94,7 @@ declare namespace java {
              * @return How many Threads were copied over
              */
             // @ts-ignore
-            enumerate(threads: java.lang.Thread[], recurse: boolean): int
+            public enumerate(threads: java.lang.Thread[], recurse: boolean): number /*int*/
             /**
              * Copies an array with all ThreadGroups which are children of
              * the receiver (directly or indirectly) into the array <code>groups</code>
@@ -104,7 +104,7 @@ declare namespace java {
              * @return How many ThreadGroups were copied over
              */
             // @ts-ignore
-            enumerate(groups: java.lang.ThreadGroup[]): int
+            public enumerate(groups: java.lang.ThreadGroup[]): number /*int*/
             /**
              * Copies an array with all ThreadGroups which are children of
              * the receiver into the array <code>groups</code>
@@ -117,34 +117,34 @@ declare namespace java {
              * @return How many ThreadGroups were copied over
              */
             // @ts-ignore
-            enumerate(groups: java.lang.ThreadGroup[], recurse: boolean): int
+            public enumerate(groups: java.lang.ThreadGroup[], recurse: boolean): number /*int*/
             /**
              * Answers the maximum allowed priority for a Thread in the receiver.
              * @return the maximum priority (an <code>int</code>)
              * @see #setMaxPriority
              */
             // @ts-ignore
-            getMaxPriority(): int
+            public getMaxPriority(): number /*int*/
             /**
              * Answers the name of the receiver.
              * @return the receiver's name (a java.lang.String)
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Answers the receiver's parent ThreadGroup. It can be null if the receiver
              * is the the root ThreadGroup.
              * @return the parent ThreadGroup
              */
             // @ts-ignore
-            getParent(): java.lang.ThreadGroup
+            public getParent(): java.lang.ThreadGroup
             /**
              * Interrupts every Thread in the receiver and recursively in all its subgroups.
              * @throws SecurityException 	if <code>this.checkAccess()</code> fails with a SecurityException
              * @see Thread#interrupt
              */
             // @ts-ignore
-            interrupt(): void
+            public interrupt(): void
             /**
              * Answers true if the receiver is a daemon ThreadGroup, false otherwise.
              * @return if the receiver is a daemon ThreadGroup
@@ -152,21 +152,21 @@ declare namespace java {
              * @see #destroy
              */
             // @ts-ignore
-            isDaemon(): boolean
+            public isDaemon(): boolean
             /**
              * Answers true if the receiver has been destroyed already, false otherwise.
              * @return if the receiver has been destroyed already
              * @see #destroy
              */
             // @ts-ignore
-            isDestroyed(): boolean
+            public isDestroyed(): boolean
             /**
              * Outputs to <code>System.out</code> a text representation of the hierarchy of
              * Threads and ThreadGroups in the receiver (and recursively). Proper indentation
              * is done to suggest the nesting of groups inside groups and threads inside groups.
              */
             // @ts-ignore
-            list(): void
+            public list(): void
             /**
              * Answers true if the receiver is a direct or indirect parent group of
              * ThreadGroup <code>g</code>, false otherwise.
@@ -174,7 +174,7 @@ declare namespace java {
              * @return if the receiver is parent of the ThreadGroup passed as parameter
              */
             // @ts-ignore
-            parentOf(g: java.lang.ThreadGroup): boolean
+            public parentOf(g: java.lang.ThreadGroup): boolean
             /**
              * Resumes every Thread in the receiver and recursively in all its subgroups.
              * @throws SecurityException 	if <code>this.checkAccess()</code> fails with a SecurityException
@@ -183,7 +183,7 @@ declare namespace java {
              * @deprecated Requires deprecated method Thread.resume().
              */
             // @ts-ignore
-            resume(): void
+            public resume(): void
             /**
              * Configures the receiver to be a daemon ThreadGroup or not.
              * Daemon ThreadGroups are automatically destroyed when they become empty.
@@ -193,7 +193,7 @@ declare namespace java {
              * @see #destroy
              */
             // @ts-ignore
-            setDaemon(isDaemon: boolean): void
+            public setDaemon(isDaemon: boolean): void
             /**
              * Configures the maximum allowed priority for a Thread in the receiver
              * and recursively in all its subgroups.
@@ -207,7 +207,7 @@ declare namespace java {
              * @see #getMaxPriority
              */
             // @ts-ignore
-            setMaxPriority(newMax: number /*int*/): void
+            public setMaxPriority(newMax: number /*int*/): void
             /**
              * Stops every Thread in the receiver and recursively in all its subgroups.
              * @throws SecurityException 	if <code>this.checkAccess()</code> fails with a SecurityException
@@ -217,7 +217,7 @@ declare namespace java {
              * @deprecated Requires deprecated method Thread.stop().
              */
             // @ts-ignore
-            stop(): void
+            public stop(): void
             /**
              * Suspends every Thread in the receiver and recursively in all its subgroups.
              * @throws SecurityException 	if <code>this.checkAccess()</code> fails with a SecurityException
@@ -226,14 +226,14 @@ declare namespace java {
              * @deprecated Requires deprecated method Thread.suspend().
              */
             // @ts-ignore
-            suspend(): void
+            public suspend(): void
             /**
              * Answers a string containing a concise, human-readable
              * description of the receiver.
              * @return a printable representation for the receiver.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Any uncaught exception in any Thread has to be forwarded (by the VM) to the Thread's ThreadGroup
              * by sending this message (uncaughtException). This allows users to define custom ThreadGroup classes
@@ -245,7 +245,7 @@ declare namespace java {
              * @see ThreadDeath
              */
             // @ts-ignore
-            uncaughtException(t: java.lang.Thread, e: Error): void
+            public uncaughtException(t: java.lang.Thread, e: java.lang.Throwable | Error): void
         }
     }
 }

@@ -69,21 +69,21 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class XMLOutputFactory extends java.lang.Object {
+            abstract class XMLOutputFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Property used to set prefix defaulting on the output side
                  */
                 // @ts-ignore
-                readonly IS_REPAIRING_NAMESPACES: string
+                public static readonly IS_REPAIRING_NAMESPACES: java.lang.String | string
                 /**
                  * Creates a new instance of the factory in exactly the same manner as the
                  * {@link #newFactory()} method.
                  * @throws FactoryConfigurationError if an instance of this factory cannot be loaded
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.stream.XMLOutputFactory
+                public static newInstance(): javax.xml.stream.XMLOutputFactory
                 /**
                  * Create a new instance of the factory.
                  * <p>
@@ -129,7 +129,7 @@ declare namespace javax {
                  *    the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newFactory(): javax.xml.stream.XMLOutputFactory
+                public static newFactory(): javax.xml.stream.XMLOutputFactory
                 /**
                  * Create a new instance of the factory.
                  * @param factoryId             Name of the factory to find, same as
@@ -143,7 +143,7 @@ declare namespace javax {
                  *               java.lang.ClassLoader)} instead.
                  */
                 // @ts-ignore
-                newInstance(factoryId: string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLInputFactory
+                public static newInstance(factoryId: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLInputFactory
                 /**
                  * Create a new instance of the factory.
                  * If the classLoader argument is null, then the ContextClassLoader is used.
@@ -198,21 +198,21 @@ declare namespace javax {
                  *    the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newFactory(factoryId: string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLOutputFactory
+                public static newFactory(factoryId: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLOutputFactory
                 /**
                  * Create a new XMLStreamWriter that writes to a writer
                  * @param stream the writer to write to
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamWriter(stream: java.io.Writer): javax.xml.stream.XMLStreamWriter
+                public abstract createXMLStreamWriter(stream: java.io.Writer): javax.xml.stream.XMLStreamWriter
                 /**
                  * Create a new XMLStreamWriter that writes to a stream
                  * @param stream the stream to write to
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamWriter(stream: java.io.OutputStream): javax.xml.stream.XMLStreamWriter
+                public abstract createXMLStreamWriter(stream: java.io.OutputStream): javax.xml.stream.XMLStreamWriter
                 /**
                  * Create a new XMLStreamWriter that writes to a stream
                  * @param stream the stream to write to
@@ -220,7 +220,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamWriter(stream: java.io.OutputStream, encoding: string): javax.xml.stream.XMLStreamWriter
+                public abstract createXMLStreamWriter(stream: java.io.OutputStream, encoding: java.lang.String | string): javax.xml.stream.XMLStreamWriter
                 /**
                  * Create a new XMLStreamWriter that writes to a JAXP result.  This method is optional.
                  * @param result the result to write to
@@ -229,7 +229,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLStreamWriter
+                public abstract createXMLStreamWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLStreamWriter
                 /**
                  * Create a new XMLEventWriter that writes to a JAXP result.  This method is optional.
                  * @param result the result to write to
@@ -238,14 +238,14 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLEventWriter
+                public abstract createXMLEventWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLEventWriter
                 /**
                  * Create a new XMLEventWriter that writes to a stream
                  * @param stream the stream to write to
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventWriter(stream: java.io.OutputStream): javax.xml.stream.XMLEventWriter
+                public abstract createXMLEventWriter(stream: java.io.OutputStream): javax.xml.stream.XMLEventWriter
                 /**
                  * Create a new XMLEventWriter that writes to a stream
                  * @param stream the stream to write to
@@ -253,14 +253,14 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventWriter(stream: java.io.OutputStream, encoding: string): javax.xml.stream.XMLEventWriter
+                public abstract createXMLEventWriter(stream: java.io.OutputStream, encoding: java.lang.String | string): javax.xml.stream.XMLEventWriter
                 /**
                  * Create a new XMLEventWriter that writes to a writer
                  * @param stream the stream to write to
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventWriter(stream: java.io.Writer): javax.xml.stream.XMLEventWriter
+                public abstract createXMLEventWriter(stream: java.io.Writer): javax.xml.stream.XMLEventWriter
                 /**
                  * Allows the user to set specific features/properties on the underlying implementation.
                  * @param name The name of the property
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @throws java.lang.IllegalArgumentException if the property is not supported
                  */
                 // @ts-ignore
-                abstract setProperty(name: string, value: any): void
+                public abstract setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get a feature/property on the underlying implementation
                  * @param name The name of the property
@@ -276,14 +276,14 @@ declare namespace javax {
                  * @throws java.lang.IllegalArgumentException if the property is not supported
                  */
                 // @ts-ignore
-                abstract getProperty(name: string): java.lang.Object
+                public abstract getProperty(name: java.lang.String | string): any
                 /**
                  * Query the set of properties that this factory supports.
                  * @param name The name of the property (may not be null)
                  * @return true if the property is supported and false otherwise
                  */
                 // @ts-ignore
-                abstract isPropertySupported(name: string): boolean
+                public abstract isPropertySupported(name: java.lang.String | string): boolean
             }
         }
     }

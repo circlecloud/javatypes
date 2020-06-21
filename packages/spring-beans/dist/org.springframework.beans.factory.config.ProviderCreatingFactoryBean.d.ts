@@ -18,7 +18,7 @@ declare namespace org {
                      * @see ObjectFactoryCreatingFactoryBean
                      */
                     // @ts-ignore
-                    class ProviderCreatingFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<<any>> {
+                    class ProviderCreatingFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<object> {
                         // @ts-ignore
                         constructor()
                         /**
@@ -29,13 +29,13 @@ declare namespace org {
                          * the need for the extra level of indirection afforded by this factory approach).
                          */
                         // @ts-ignore
-                        setTargetBeanName(targetBeanName: string): void
+                        public setTargetBeanName(targetBeanName: java.lang.String | string): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        createInstance(): <any>
+                        createInstance(): object
                     }
                 }
             }

@@ -26,11 +26,11 @@ declare namespace javax {
                     // @ts-ignore
                     disabledTextColor: java.awt.Color
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installDefaults(b: javax.swing.AbstractButton): void
+                    public installDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
-                    uninstallDefaults(b: javax.swing.AbstractButton): void
+                    public uninstallDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
                     createButtonListener(b: javax.swing.AbstractButton): javax.swing.plaf.basic.BasicButtonListener
                     // @ts-ignore
@@ -51,13 +51,13 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintButtonPressed(g: java.awt.Graphics, b: javax.swing.AbstractButton): void
                     // @ts-ignore
                     paintFocus(g: java.awt.Graphics, b: javax.swing.AbstractButton, viewRect: java.awt.Rectangle, textRect: java.awt.Rectangle, iconRect: java.awt.Rectangle): void
                     // @ts-ignore
-                    paintText(g: java.awt.Graphics, c: javax.swing.JComponent, textRect: java.awt.Rectangle, text: string): void
+                    paintText(g: java.awt.Graphics, c: javax.swing.JComponent, textRect: java.awt.Rectangle, text: java.lang.String | string): void
                 }
             }
         }

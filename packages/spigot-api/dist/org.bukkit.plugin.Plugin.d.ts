@@ -37,7 +37,7 @@ declare namespace org {
                  * @return File if found, otherwise null
                  */
                 // @ts-ignore
-                getResource(filename: string): java.io.InputStream
+                getResource(filename: java.lang.String | string): java.io.InputStream
                 /**
                  * Saves the {@link FileConfiguration} retrievable by {@link #getConfig()}.
                  */
@@ -65,7 +65,7 @@ declare namespace org {
                  *      or points to a nonexistent resource.
                  */
                 // @ts-ignore
-                saveResource(resourcePath: string, replace: boolean): void
+                saveResource(resourcePath: java.lang.String | string, replace: boolean): void
                 /**
                  * Discards any data in {@link #getConfig()} and reloads from disk.
                  */
@@ -129,7 +129,7 @@ declare namespace org {
                  * @return ChunkGenerator for use in the default world generation
                  */
                 // @ts-ignore
-                getDefaultWorldGenerator(worldName: string, id: string): org.bukkit.generator.ChunkGenerator
+                getDefaultWorldGenerator(worldName: java.lang.String | string, id: java.lang.String | string): org.bukkit.generator.ChunkGenerator
                 /**
                  * Returns the plugin logger associated with this server's logger. The
                  * returned logger automatically tags all log messages with the plugin's
@@ -146,7 +146,7 @@ declare namespace org {
                  * @return name of the plugin
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
             }
         }
     }

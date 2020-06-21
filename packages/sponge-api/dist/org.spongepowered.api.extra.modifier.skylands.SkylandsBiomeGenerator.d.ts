@@ -13,7 +13,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            generateBiomes(buffer: org.spongepowered.api.world.extent.MutableBiomeVolume): void
+                            public generateBiomes(buffer: org.spongepowered.api.world.extent.MutableBiomeVolume): void
                         }
                     }
                 }

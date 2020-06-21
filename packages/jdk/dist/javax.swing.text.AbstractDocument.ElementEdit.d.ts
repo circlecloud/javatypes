@@ -24,37 +24,37 @@ declare namespace javax {
                      * @return the element
                      */
                     // @ts-ignore
-                    getElement(): javax.swing.text.Element
+                    public getElement(): javax.swing.text.Element
                     /**
                      * Returns the index into the list of elements.
                      * @return the index &gt;= 0
                      */
                     // @ts-ignore
-                    getIndex(): int
+                    public getIndex(): number /*int*/
                     /**
                      * Gets a list of children that were removed.
                      * @return the list
                      */
                     // @ts-ignore
-                    getChildrenRemoved(): javax.swing.text.Element[]
+                    public getChildrenRemoved(): javax.swing.text.Element[]
                     /**
                      * Gets a list of children that were added.
                      * @return the list
                      */
                     // @ts-ignore
-                    getChildrenAdded(): javax.swing.text.Element[]
+                    public getChildrenAdded(): javax.swing.text.Element[]
                     /**
                      * Redoes a change.
                      * @exception CannotRedoException if the change cannot be redone
                      */
                     // @ts-ignore
-                    redo(): void
+                    public redo(): void
                     /**
                      * Undoes a change.
                      * @exception CannotUndoException if the change cannot be undone
                      */
                     // @ts-ignore
-                    undo(): void
+                    public undo(): void
                 }
             }
         }

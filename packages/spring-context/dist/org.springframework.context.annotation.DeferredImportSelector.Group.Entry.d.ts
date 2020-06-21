@@ -11,24 +11,24 @@ declare namespace org {
                         // @ts-ignore
                         class Entry extends java.lang.Object {
                             // @ts-ignore
-                            constructor(metadata: AnnotationMetadata, importClassName: string)
+                            constructor(metadata: AnnotationMetadata, importClassName: java.lang.String | string)
                             /**
                              * Return the {@link AnnotationMetadata} of the importing
                              * {@link Configuration} class.
                              */
                             // @ts-ignore
-                            getMetadata(): AnnotationMetadata
+                            public getMetadata(): AnnotationMetadata
                             /**
                              * Return the fully qualified name of the class to import.
                              */
                             // @ts-ignore
-                            getImportClassName(): java.lang.String
+                            public getImportClassName(): string
                             // @ts-ignore
-                            equals(other: any): boolean
+                            public equals(other: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

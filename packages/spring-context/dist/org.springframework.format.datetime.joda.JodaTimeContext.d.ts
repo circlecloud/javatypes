@@ -19,12 +19,12 @@ declare namespace org {
                          * Set the user's chronology (calendar system).
                          */
                         // @ts-ignore
-                        setChronology(chronology: Chronology): void
+                        public setChronology(chronology: Chronology): void
                         /**
                          * Return the user's chronology (calendar system), if any.
                          */
                         // @ts-ignore
-                        getChronology(): Chronology
+                        public getChronology(): Chronology
                         /**
                          * Set the user's time zone.
                          * <p>Alternatively, set a {@link TimeZoneAwareLocaleContext} on
@@ -34,12 +34,12 @@ declare namespace org {
                          * @see org.springframework.context.i18n.LocaleContextHolder#setLocaleContext
                          */
                         // @ts-ignore
-                        setTimeZone(timeZone: DateTimeZone): void
+                        public setTimeZone(timeZone: DateTimeZone): void
                         /**
                          * Return the user's time zone, if any.
                          */
                         // @ts-ignore
-                        getTimeZone(): DateTimeZone
+                        public getTimeZone(): DateTimeZone
                         /**
                          * Get the DateTimeFormatter with the this context's settings
                          * applied to the base {@code formatter}.
@@ -48,7 +48,7 @@ declare namespace org {
                          * @return the contextual DateTimeFormatter
                          */
                         // @ts-ignore
-                        getFormatter(formatter: DateTimeFormatter): DateTimeFormatter
+                        public getFormatter(formatter: DateTimeFormatter): DateTimeFormatter
                     }
                 }
             }

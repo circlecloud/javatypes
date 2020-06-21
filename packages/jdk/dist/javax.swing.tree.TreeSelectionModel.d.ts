@@ -54,20 +54,20 @@ declare namespace javax {
                  * Selection can only contain one path at a time.
                  */
                 // @ts-ignore
-                
+                readonly SINGLE_TREE_SELECTION: number /*int*/
                 /**
                  * Selection can only be contiguous. This will only be enforced if
                  * a RowMapper instance is provided. That is, if no RowMapper is set
                  * this behaves the same as DISCONTIGUOUS_TREE_SELECTION.
                  */
                 // @ts-ignore
-                
+                readonly CONTIGUOUS_TREE_SELECTION: number /*int*/
                 /**
                  * Selection can contain any number of items that are not necessarily
                  * contiguous.
                  */
                 // @ts-ignore
-                
+                readonly DISCONTIGUOUS_TREE_SELECTION: number /*int*/
                 /**
                  * Sets the selection model, which must be one of SINGLE_TREE_SELECTION,
                  * CONTIGUOUS_TREE_SELECTION or DISCONTIGUOUS_TREE_SELECTION.
@@ -87,7 +87,7 @@ declare namespace javax {
                  * <code>DISCONTIGUOUS_TREE_SELECTION</code>.
                  */
                 // @ts-ignore
-                getSelectionMode(): int
+                getSelectionMode(): number /*int*/
                 /**
                  * Sets the selection to path. If this represents a change, then
                  * the TreeSelectionListeners are notified. If <code>path</code> is
@@ -156,7 +156,7 @@ declare namespace javax {
                  * Returns the number of paths that are selected.
                  */
                 // @ts-ignore
-                getSelectionCount(): int
+                getSelectionCount(): number /*int*/
                 /**
                  * Returns true if the path, <code>path</code>, is in the current
                  * selection.
@@ -192,21 +192,21 @@ declare namespace javax {
                  * a RowMapper has not been set.
                  */
                 // @ts-ignore
-                getSelectionRows(): int[]
+                getSelectionRows(): number /*int*/[]
                 /**
                  * Returns the smallest value obtained from the RowMapper for the
                  * current set of selected TreePaths. If nothing is selected,
                  * or there is no RowMapper, this will return -1.
                  */
                 // @ts-ignore
-                getMinSelectionRow(): int
+                getMinSelectionRow(): number /*int*/
                 /**
                  * Returns the largest value obtained from the RowMapper for the
                  * current set of selected TreePaths. If nothing is selected,
                  * or there is no RowMapper, this will return -1.
                  */
                 // @ts-ignore
-                getMaxSelectionRow(): int
+                getMaxSelectionRow(): number /*int*/
                 /**
                  * Returns true if the row identified by <code>row</code> is selected.
                  */
@@ -228,7 +228,7 @@ declare namespace javax {
                  * added.
                  */
                 // @ts-ignore
-                getLeadSelectionRow(): int
+                getLeadSelectionRow(): number /*int*/
                 /**
                  * Returns the last path that was added. This may differ from the
                  * leadSelectionPath property maintained by the JTree.

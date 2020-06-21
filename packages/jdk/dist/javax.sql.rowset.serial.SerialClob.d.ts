@@ -75,7 +75,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    length(): long
+                    public length(): number /*long*/
                     /**
                      * Returns this <code>SerialClob</code> object's data as a stream
                      * of Unicode characters. Unlike the related method, <code>getAsciiStream</code>,
@@ -87,7 +87,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getCharacterStream(): java.io.Reader
+                    public getCharacterStream(): java.io.Reader
                     /**
                      * Retrieves the <code>CLOB</code> value designated by this <code>SerialClob</code>
                      * object as an ascii stream. This method forwards the <code>getAsciiStream</code>
@@ -105,7 +105,7 @@ declare namespace javax {
                      *  that was used to create this <code>SerialClob</code> object
                      */
                     // @ts-ignore
-                    getAsciiStream(): java.io.InputStream
+                    public getAsciiStream(): java.io.InputStream
                     /**
                      * Returns a copy of the substring contained in this
                      * <code>SerialClob</code> object, starting at the given position
@@ -131,7 +131,7 @@ declare namespace javax {
                      *  if {#code free} had previously been called on this object
                      */
                     // @ts-ignore
-                    getSubString(pos: number /*long*/, length: number /*int*/): java.lang.String
+                    public getSubString(pos: number /*long*/, length: number /*int*/): string
                     /**
                      * Returns the position in this <code>SerialClob</code> object
                      * where the given <code>String</code> object begins, starting
@@ -154,7 +154,7 @@ declare namespace javax {
                      *          from the database.
                      */
                     // @ts-ignore
-                    position(searchStr: string, start: number /*long*/): long
+                    public position(searchStr: java.lang.String | string, start: number /*long*/): number /*long*/
                     /**
                      * Returns the position in this <code>SerialClob</code> object
                      * where the given <code>Clob</code> signature begins, starting
@@ -174,7 +174,7 @@ declare namespace javax {
                      *          from the database
                      */
                     // @ts-ignore
-                    position(searchStr: java.sql.Clob, start: number /*long*/): long
+                    public position(searchStr: java.sql.Clob, start: number /*long*/): number /*long*/
                     /**
                      * Writes the given Java <code>String</code> to the <code>CLOB</code>
                      * value that this <code>SerialClob</code> object represents, at the position
@@ -194,7 +194,7 @@ declare namespace javax {
                      *  if the {#code free} method had been previously called on this object
                      */
                     // @ts-ignore
-                    setString(pos: number /*long*/, str: string): int
+                    public setString(pos: number /*long*/, str: java.lang.String | string): number /*int*/
                     /**
                      * Writes <code>len</code> characters of <code>str</code>, starting
                      * at character <code>offset</code>, to the <code>CLOB</code> value
@@ -217,7 +217,7 @@ declare namespace javax {
                      *  if the {#code free} method had been previously called on this object
                      */
                     // @ts-ignore
-                    setString(pos: number /*long*/, str: string, offset: number /*int*/, length: number /*int*/): int
+                    public setString(pos: number /*long*/, str: java.lang.String | string, offset: number /*int*/, length: number /*int*/): number /*int*/
                     /**
                      * Retrieves a stream to be used to write Ascii characters to the
                      * <code>CLOB</code> value that this <code>SerialClob</code> object represents,
@@ -237,7 +237,7 @@ declare namespace javax {
                      * @see #getAsciiStream
                      */
                     // @ts-ignore
-                    setAsciiStream(pos: number /*long*/): java.io.OutputStream
+                    public setAsciiStream(pos: number /*long*/): java.io.OutputStream
                     /**
                      * Retrieves a stream to be used to write a stream of Unicode characters
                      * to the <code>CLOB</code> value that this <code>SerialClob</code> object
@@ -257,7 +257,7 @@ declare namespace javax {
                      * @see #getCharacterStream
                      */
                     // @ts-ignore
-                    setCharacterStream(pos: number /*long*/): java.io.Writer
+                    public setCharacterStream(pos: number /*long*/): java.io.Writer
                     /**
                      * Truncates the <code>CLOB</code> value that this <code>SerialClob</code>
                      * object represents so that it has a length of <code>len</code>
@@ -272,7 +272,7 @@ declare namespace javax {
                      *  if the {#code free} method had been previously called on this object
                      */
                     // @ts-ignore
-                    truncate(length: number /*long*/): void
+                    public truncate(length: number /*long*/): void
                     /**
                      * Returns a {@code Reader} object that contains a partial
                      * {@code SerialClob} value, starting
@@ -290,7 +290,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getCharacterStream(pos: number /*long*/, length: number /*long*/): java.io.Reader
+                    public getCharacterStream(pos: number /*long*/, length: number /*long*/): java.io.Reader
                     /**
                      * This method frees the {@code SeriableClob} object and releases the
                      * resources that it holds.
@@ -304,7 +304,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    free(): void
+                    public free(): void
                     /**
                      * Compares this SerialClob to the specified object.  The result is {@code
                      * true} if and only if the argument is not {@code null} and is a {@code
@@ -315,13 +315,13 @@ declare namespace javax {
                      *           equivalent to this SerialClob, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this {@code SerialClob}.
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialClob}. The copy will contain a
                      * reference to a clone of the internal character array, not a reference
@@ -330,7 +330,7 @@ declare namespace javax {
                      * @return a clone of this SerialClob
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

@@ -15,45 +15,45 @@ declare namespace javax {
              * @author Thomas Ball
              */
             // @ts-ignore
-            class InternalFrameAdapter extends java.lang.Object implements javax.swing.event.InternalFrameListener {
+            abstract class InternalFrameAdapter extends java.lang.Object implements javax.swing.event.InternalFrameListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * Invoked when an internal frame has been opened.
                  */
                 // @ts-ignore
-                internalFrameOpened(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameOpened(e: javax.swing.event.InternalFrameEvent): void
                 /**
                  * Invoked when an internal frame is in the process of being closed.
                  * The close operation can be overridden at this point.
                  */
                 // @ts-ignore
-                internalFrameClosing(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameClosing(e: javax.swing.event.InternalFrameEvent): void
                 /**
                  * Invoked when an internal frame has been closed.
                  */
                 // @ts-ignore
-                internalFrameClosed(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameClosed(e: javax.swing.event.InternalFrameEvent): void
                 /**
                  * Invoked when an internal frame is iconified.
                  */
                 // @ts-ignore
-                internalFrameIconified(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameIconified(e: javax.swing.event.InternalFrameEvent): void
                 /**
                  * Invoked when an internal frame is de-iconified.
                  */
                 // @ts-ignore
-                internalFrameDeiconified(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameDeiconified(e: javax.swing.event.InternalFrameEvent): void
                 /**
                  * Invoked when an internal frame is activated.
                  */
                 // @ts-ignore
-                internalFrameActivated(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameActivated(e: javax.swing.event.InternalFrameEvent): void
                 /**
                  * Invoked when an internal frame is de-activated.
                  */
                 // @ts-ignore
-                internalFrameDeactivated(e: javax.swing.event.InternalFrameEvent): void
+                public internalFrameDeactivated(e: javax.swing.event.InternalFrameEvent): void
             }
         }
     }

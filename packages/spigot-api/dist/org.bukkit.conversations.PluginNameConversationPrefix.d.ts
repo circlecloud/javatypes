@@ -10,9 +10,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor(plugin: org.bukkit.plugin.Plugin)
                 // @ts-ignore
-                constructor(plugin: org.bukkit.plugin.Plugin, separator: string, prefixColor: org.bukkit.ChatColor)
+                constructor(plugin: org.bukkit.plugin.Plugin, separator: java.lang.String | string, prefixColor: org.bukkit.ChatColor)
                 // @ts-ignore
-                separator: string
+                separator: java.lang.String | string
                 // @ts-ignore
                 prefixColor: org.bukkit.ChatColor
                 // @ts-ignore
@@ -23,7 +23,7 @@ declare namespace org {
                  * @return An empty string.
                  */
                 // @ts-ignore
-                getPrefix(context: org.bukkit.conversations.ConversationContext): java.lang.String
+                public getPrefix(context: org.bukkit.conversations.ConversationContext): string
             }
         }
     }

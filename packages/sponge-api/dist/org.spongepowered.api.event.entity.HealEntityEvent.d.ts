@@ -15,7 +15,7 @@ declare namespace org {
                          * @return The original heal amount
                          */
                         // @ts-ignore
-                        getOriginalHealAmount(): double
+                        getOriginalHealAmount(): number /*double*/
                         /**
                          * Gets the original "final" amount of healing after all original
                          * {@link HealthModifier}s are applied to {@link #getOriginalHealAmount()}.
@@ -24,14 +24,14 @@ declare namespace org {
                          * @return The final amount of healing to originally deal
                          */
                         // @ts-ignore
-                        getOriginalFinalHealAmount(): double
+                        getOriginalFinalHealAmount(): number /*double*/
                         /**
                          * Gets an {@link Map} of all original {@link HealthModifier}s and their
                          * associated "modified" heal amount. Note that ordering is not retained.
                          * @return An immutable map of the original modified heal amounts
                          */
                         // @ts-ignore
-                        getOriginalHealingAmounts(): java.util.Map<org.spongepowered.api.event.cause.entity.health.HealthModifier, java.lang.Double>
+                        getOriginalHealingAmounts(): java.util.Map<org.spongepowered.api.event.cause.entity.health.HealthModifier, java.lang.Double | number>
                         /**
                          * Gets the final heal amount that will be applied to the entity. The final
                          * heal amount is the end result of the {@link #getBaseHealAmount()} being
@@ -41,7 +41,7 @@ declare namespace org {
                          * @return The final heal amount to deal
                          */
                         // @ts-ignore
-                        getFinalHealAmount(): double
+                        getFinalHealAmount(): number /*double*/
                         /**
                          * Gets the original healing amount for the provided {@link HealthModifier}.
                          * If the provided {@link HealthModifier} was not included in
@@ -51,14 +51,14 @@ declare namespace org {
                          * @return The original healing change
                          */
                         // @ts-ignore
-                        getOriginalHealingModifierAmount(healthModifier: org.spongepowered.api.event.cause.entity.health.HealthModifier): double
+                        getOriginalHealingModifierAmount(healthModifier: org.spongepowered.api.event.cause.entity.health.HealthModifier): number /*double*/
                         /**
                          * Gets the original {@link List} of {@link HealthFunction}s that was
                          * originally passed into the event.
                          * @return The list of heal amount modifier functions
                          */
                         // @ts-ignore
-                        getOriginalFunctions(): java.util.List<org.spongepowered.api.event.cause.entity.health.HealthFunction>
+                        getOriginalFunctions(): Array<org.spongepowered.api.event.cause.entity.health.HealthFunction>
                         /**
                          * Gets the "base" healing amount to apply to the targeted {@link Entity}.
                          * The "base" heal amount is the original value before passing along the
@@ -67,7 +67,7 @@ declare namespace org {
                          * @return The base heal amount
                          */
                         // @ts-ignore
-                        getBaseHealAmount(): double
+                        getBaseHealAmount(): number /*double*/
                         /**
                          * Sets the "base" healing amount to apply to the targeted {@link Entity}.
                          * The "base" heal amount is the original value passed along the chain of
@@ -93,7 +93,7 @@ declare namespace org {
                          * @return The modifier
                          */
                         // @ts-ignore
-                        getHealAmount(healthModifier: org.spongepowered.api.event.cause.entity.health.HealthModifier): double
+                        getHealAmount(healthModifier: org.spongepowered.api.event.cause.entity.health.HealthModifier): number /*double*/
                         /**
                          * Sets the provided {@link DoubleUnaryOperator} to be used for the given
                          * {@link HealthModifier}. If the {@link HealthModifier} is already included
@@ -110,7 +110,7 @@ declare namespace org {
                          * @param function The function to map to the modifier
                          */
                         // @ts-ignore
-                        setHealAmount(healthModifier: org.spongepowered.api.event.cause.entity.health.HealthModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): void
+                        setHealAmount(healthModifier: org.spongepowered.api.event.cause.entity.health.HealthModifier, func: java.util.function$.DoubleUnaryOperator): void
                         /**
                          * Gets a list of simple {@link HealthFunction}s. All {@link HealthModifier}
                          * s are applicable to the entity based on the {@link HealingSource} and any
@@ -118,7 +118,7 @@ declare namespace org {
                          * @return A list of heal amount modifiers to functions
                          */
                         // @ts-ignore
-                        getModifiers(): java.util.List<org.spongepowered.api.event.cause.entity.health.HealthFunction>
+                        getModifiers(): Array<org.spongepowered.api.event.cause.entity.health.HealthFunction>
                     }
                 }
             }

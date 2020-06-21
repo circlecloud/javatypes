@@ -63,7 +63,7 @@ declare namespace javax {
                  *          empty, or contains a {@code null} value
                  */
                 // @ts-ignore
-                constructor(path: any[])
+                constructor(path: java.lang.Object[] | any[])
                 /**
                  * Creates a {@code TreePath} containing a single element. This is
                  * used to construct a {@code TreePath} identifying the root.
@@ -73,7 +73,7 @@ declare namespace javax {
                  *          {@code null}
                  */
                 // @ts-ignore
-                constructor(lastPathComponent: any)
+                constructor(lastPathComponent: java.lang.Object | any)
                 /**
                  * Creates a {@code TreePath} with the specified parent and element.
                  * @param parent the path to the parent, or {#code null} to indicate
@@ -83,7 +83,7 @@ declare namespace javax {
                  *          {@code null}
                  */
                 // @ts-ignore
-                constructor(parent: javax.swing.tree.TreePath, lastPathComponent: any)
+                constructor(parent: javax.swing.tree.TreePath, lastPathComponent: java.lang.Object | any)
                 /**
                  * Creates a {@code TreePath} from an array. The returned
                  * {@code TreePath} represents the elements of the array from
@@ -101,7 +101,7 @@ declare namespace javax {
                  *          {#code 0} to {@code length - 1} are {@code null}
                  */
                 // @ts-ignore
-                constructor(path: any[], length: number /*int*/)
+                constructor(path: java.lang.Object[] | any[], length: number /*int*/)
                 /**
                  * Creates an empty {@code TreePath}.  This is provided for
                  * subclasses that represent paths in a different
@@ -116,19 +116,19 @@ declare namespace javax {
                  * @return an array of the elements in this {#code TreePath}
                  */
                 // @ts-ignore
-                getPath(): java.lang.Object[]
+                public getPath(): any[]
                 /**
                  * Returns the last element of this path.
                  * @return the last element in the path
                  */
                 // @ts-ignore
-                getLastPathComponent(): java.lang.Object
+                public getLastPathComponent(): any
                 /**
                  * Returns the number of elements in the path.
                  * @return the number of elements in the path
                  */
                 // @ts-ignore
-                getPathCount(): int
+                public getPathCount(): number /*int*/
                 /**
                  * Returns the path element at the specified index.
                  * @param index the index of the element requested
@@ -137,7 +137,7 @@ declare namespace javax {
                  *          range of this path
                  */
                 // @ts-ignore
-                getPathComponent(index: number /*int*/): java.lang.Object
+                public getPathComponent(index: number /*int*/): any
                 /**
                  * Compares this {@code TreePath} to the specified object. This returns
                  * {@code true} if {@code o} is a {@code TreePath} with the exact
@@ -146,14 +146,14 @@ declare namespace javax {
                  * @param o the object to compare
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code of this {@code TreePath}. The hash code of a
                  * {@code TreePath} is the hash code of the last element in the path.
                  * @return the hashCode for the object
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns true if <code>aTreePath</code> is a
                  * descendant of this
@@ -173,7 +173,7 @@ declare namespace javax {
                  * @return true if <code>aTreePath</code> is a descendant of this path
                  */
                 // @ts-ignore
-                isDescendant(aTreePath: javax.swing.tree.TreePath): boolean
+                public isDescendant(aTreePath: javax.swing.tree.TreePath): boolean
                 /**
                  * Returns a new path containing all the elements of this path
                  * plus <code>child</code>. <code>child</code> is the last element
@@ -182,21 +182,21 @@ declare namespace javax {
                  * @throws NullPointerException if {#code child} is {@code null}
                  */
                 // @ts-ignore
-                pathByAddingChild(child: any): javax.swing.tree.TreePath
+                public pathByAddingChild(child: java.lang.Object | any): javax.swing.tree.TreePath
                 /**
                  * Returns the {@code TreePath} of the parent. A return value of
                  * {@code null} indicates this is the root node.
                  * @return the parent path
                  */
                 // @ts-ignore
-                getParentPath(): javax.swing.tree.TreePath
+                public getParentPath(): javax.swing.tree.TreePath
                 /**
                  * Returns a string that displays and identifies this
                  * object's properties.
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

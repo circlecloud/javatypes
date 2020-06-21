@@ -12,11 +12,11 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintIcon(g: java.awt.Graphics, b: javax.swing.AbstractButton, iconRect: java.awt.Rectangle): void
                     /**
@@ -24,7 +24,7 @@ declare namespace javax {
                      * Toggle buttons and subclasses.
                      */
                     // @ts-ignore
-                    getTextShiftOffset(): int
+                    getTextShiftOffset(): number /*int*/
                 }
             }
         }

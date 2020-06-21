@@ -39,7 +39,7 @@ declare namespace java {
                  * with the filtering operation.
                  */
                 // @ts-ignore
-                setProperties(props: java.util.Hashtable<any, ?>): void
+                public setProperties(props: java.util.Hashtable<any, any>): void
                 /**
                  * Override the source image's dimensions and pass the dimensions
                  * of the rectangular cropped region to the ImageConsumer.
@@ -53,7 +53,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                setDimensions(w: number /*int*/, h: number /*int*/): void
+                public setDimensions(w: number /*int*/, h: number /*int*/): void
                 /**
                  * Determine whether the delivered byte pixels intersect the region to
                  * be extracted and passes through only that subset of pixels that
@@ -67,7 +67,7 @@ declare namespace java {
                  * with the filtering operation.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Determine if the delivered int pixels intersect the region to
                  * be extracted and pass through only that subset of pixels that
@@ -81,7 +81,7 @@ declare namespace java {
                  * with the filtering operation.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
             }
         }
     }

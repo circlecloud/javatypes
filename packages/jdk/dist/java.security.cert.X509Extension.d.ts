@@ -71,7 +71,7 @@ declare namespace java {
                  *  null.
                  */
                 // @ts-ignore
-                getCriticalExtensionOIDs(): java.util.Set<java.lang.String>
+                getCriticalExtensionOIDs(): Array<java.lang.String | string>
                 /**
                  * Gets a Set of the OID strings for the extension(s) marked
                  * NON-CRITICAL in the certificate/CRL managed by the object
@@ -104,7 +104,7 @@ declare namespace java {
                  *  null.
                  */
                 // @ts-ignore
-                getNonCriticalExtensionOIDs(): java.util.Set<java.lang.String>
+                getNonCriticalExtensionOIDs(): Array<java.lang.String | string>
                 /**
                  * Gets the DER-encoded OCTET string for the extension value
                  * (<em>extnValue</em>) identified by the passed-in {@code oid}
@@ -143,7 +143,7 @@ declare namespace java {
                  *  null if it is not present.
                  */
                 // @ts-ignore
-                getExtensionValue(oid: string): byte[]
+                getExtensionValue(oid: java.lang.String | string): number /*byte*/[]
             }
         }
     }

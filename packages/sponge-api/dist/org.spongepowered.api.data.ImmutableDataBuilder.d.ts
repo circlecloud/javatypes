@@ -19,14 +19,14 @@ declare namespace org {
                      * @return This builder, for chaining
                      */
                     // @ts-ignore
-                    add(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): E
+                    add(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): E
                     /**
                      * Adds the given {@link ImmutableDataManipulator} to the builder.
                      * @param manipulator The manipulator to add
                      * @return This builder, for chaining
                      */
                     // @ts-ignore
-                    add(manipulator: org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, ?>): E
+                    add(manipulator: org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, any>): E
                     /**
                      * Adds the given {@link Key} with the given value.
                      * @param key The key to assign the value with
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return This builder, for chaining
                      */
                     // @ts-ignore
-                    add<V>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<V>>, value: V): E
+                    add<V>(key: org.spongepowered.api.data.key.Key<any>, value: V): E
                     /**
                      * Copies all known {@link DataManipulator}s from the given
                      * {@link ImmutableDataHolder}. This is a defensive copy as
@@ -44,7 +44,7 @@ declare namespace org {
                      * @return This builder for chaining
                      */
                     // @ts-ignore
-                    from(holder: H extends org.spongepowered.api.data.ImmutableDataHolder<H>): E
+                    from(holder: H): E
                     /**
                      * Attempts to build a new {@link ImmutableDataHolder}.
                      * @return The new immutable data holder

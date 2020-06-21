@@ -54,7 +54,7 @@ declare namespace java {
              * @return A randomly generated {#code UUID}
              */
             // @ts-ignore
-            randomUUID(): java.util.UUID
+            public static randomUUID(): java.util.UUID
             /**
              * Static factory to retrieve a type 3 (name based) {@code UUID} based on
              * the specified byte array.
@@ -63,7 +63,7 @@ declare namespace java {
              * @return A {#code UUID} generated from the specified array
              */
             // @ts-ignore
-            nameUUIDFromBytes(name: number /*byte*/[]): java.util.UUID
+            public static nameUUIDFromBytes(name: number /*byte*/[]): java.util.UUID
             /**
              * Creates a {@code UUID} from the string standard representation as
              * described in the {@link #toString} method.
@@ -75,19 +75,19 @@ declare namespace java {
              *           described in {#link #toString}
              */
             // @ts-ignore
-            fromString(name: string): java.util.UUID
+            public static fromString(name: java.lang.String | string): java.util.UUID
             /**
              * Returns the least significant 64 bits of this UUID's 128 bit value.
              * @return The least significant 64 bits of this UUID's 128 bit value
              */
             // @ts-ignore
-            getLeastSignificantBits(): long
+            public getLeastSignificantBits(): number /*long*/
             /**
              * Returns the most significant 64 bits of this UUID's 128 bit value.
              * @return The most significant 64 bits of this UUID's 128 bit value
              */
             // @ts-ignore
-            getMostSignificantBits(): long
+            public getMostSignificantBits(): number /*long*/
             /**
              * The version number associated with this {@code UUID}.  The version
              * number describes how this {@code UUID} was generated.
@@ -101,7 +101,7 @@ declare namespace java {
              * @return The version number of this {#code UUID}
              */
             // @ts-ignore
-            version(): int
+            public version(): number /*int*/
             /**
              * The variant number associated with this {@code UUID}.  The variant
              * number describes the layout of the {@code UUID}.
@@ -116,7 +116,7 @@ declare namespace java {
              * @return The variant number of this {#code UUID}
              */
             // @ts-ignore
-            variant(): int
+            public variant(): number /*int*/
             /**
              * The timestamp value associated with this UUID.
              * <p> The 60 bit timestamp value is constructed from the time_low,
@@ -131,7 +131,7 @@ declare namespace java {
              * @return The timestamp of this {#code UUID}.
              */
             // @ts-ignore
-            timestamp(): long
+            public timestamp(): number /*long*/
             /**
              * The clock sequence value associated with this UUID.
              * <p> The 14 bit clock sequence value is constructed from the clock
@@ -145,7 +145,7 @@ declare namespace java {
              *           If this UUID is not a version 1 UUID
              */
             // @ts-ignore
-            clockSequence(): int
+            public clockSequence(): number /*int*/
             /**
              * The node value associated with this UUID.
              * <p> The 48 bit node value is constructed from the node field of this
@@ -159,7 +159,7 @@ declare namespace java {
              *           If this UUID is not a version 1 UUID
              */
             // @ts-ignore
-            node(): long
+            public node(): number /*long*/
             /**
              * Returns a {@code String} object representing this {@code UUID}.
              * <p> The UUID string representation is as described by this BNF:
@@ -183,13 +183,13 @@ declare namespace java {
              * @return A string representation of this {#code UUID}
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this {@code UUID}.
              * @return A hash code value for this {#code UUID}
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this object to the specified object.  The result is {@code
              * true} if and only if the argument is not {@code null}, is a {@code UUID}
@@ -201,7 +201,7 @@ declare namespace java {
              *           otherwise
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Compares this UUID with the specified UUID.
              * <p> The first of two UUIDs is greater than the second if the most
@@ -213,7 +213,7 @@ declare namespace java {
              *           greater than {@code val}
              */
             // @ts-ignore
-            compareTo(val: java.util.UUID): int
+            public compareTo(val: java.util.UUID): number /*int*/
         }
     }
 }

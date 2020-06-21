@@ -25,7 +25,7 @@ declare namespace org {
                      *  or register the MBean
                      */
                     // @ts-ignore
-                    registerManagedResource(managedResource: any): javax.management.ObjectName
+                    registerManagedResource(managedResource: java.lang.Object | any): javax.management.ObjectName
                     /**
                      * Register the supplied resource with JMX. If the resource is not a valid MBean already,
                      * Spring will generate a management interface for it. The exact interface generated will
@@ -35,7 +35,7 @@ declare namespace org {
                      * @throws MBeanExportException if Spring is unable to register the MBean
                      */
                     // @ts-ignore
-                    registerManagedResource(managedResource: any, objectName: javax.management.ObjectName): void
+                    registerManagedResource(managedResource: java.lang.Object | any, objectName: javax.management.ObjectName): void
                     /**
                      * Remove the specified MBean from the underlying MBeanServer registry.
                      * @param objectName the {#link ObjectName} of the resource to remove

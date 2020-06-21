@@ -26,7 +26,7 @@ declare namespace org {
                          * @see ConfigurableBeanFactory#SCOPE_SINGLETON
                          */
                         // @ts-ignore
-                        
+                        readonly SCOPE_SINGLETON: java.lang.String | string
                         /**
                          * Scope identifier for the standard prototype scope: {@value}.
                          * <p>Note that extended bean factories might support further scopes.
@@ -34,13 +34,13 @@ declare namespace org {
                          * @see ConfigurableBeanFactory#SCOPE_PROTOTYPE
                          */
                         // @ts-ignore
-                        
+                        readonly SCOPE_PROTOTYPE: java.lang.String | string
                         /**
                          * Role hint indicating that a {@code BeanDefinition} is a major part
                          * of the application. Typically corresponds to a user-defined bean.
                          */
                         // @ts-ignore
-                        
+                        readonly ROLE_APPLICATION: number /*int*/
                         /**
                          * Role hint indicating that a {@code BeanDefinition} is a supporting
                          * part of some larger configuration, typically an outer
@@ -51,7 +51,7 @@ declare namespace org {
                          * but not when looking at the overall configuration of an application.
                          */
                         // @ts-ignore
-                        
+                        readonly ROLE_SUPPORT: number /*int*/
                         /**
                          * Role hint indicating that a {@code BeanDefinition} is providing an
                          * entirely background role and has no relevance to the end-user. This hint is
@@ -59,17 +59,17 @@ declare namespace org {
                          * of a {@link org.springframework.beans.factory.parsing.ComponentDefinition}.
                          */
                         // @ts-ignore
-                        
+                        readonly ROLE_INFRASTRUCTURE: number /*int*/
                         /**
                          * Set the name of the parent definition of this bean definition, if any.
                          */
                         // @ts-ignore
-                        setParentName(parentName: string): void
+                        setParentName(parentName: java.lang.String | string): void
                         /**
                          * Return the name of the parent definition of this bean definition, if any.
                          */
                         // @ts-ignore
-                        getParentName(): java.lang.String
+                        getParentName(): string
                         /**
                          * Specify the bean class name of this bean definition.
                          * <p>The class name can be modified during bean factory post-processing,
@@ -79,7 +79,7 @@ declare namespace org {
                          * @see #setFactoryMethodName
                          */
                         // @ts-ignore
-                        setBeanClassName(beanClassName: string): void
+                        setBeanClassName(beanClassName: java.lang.String | string): void
                         /**
                          * Return the current bean class name of this bean definition.
                          * <p>Note that this does not have to be the actual class name used at runtime, in
@@ -93,20 +93,20 @@ declare namespace org {
                          * @see #getFactoryMethodName()
                          */
                         // @ts-ignore
-                        getBeanClassName(): java.lang.String
+                        getBeanClassName(): string
                         /**
                          * Override the target scope of this bean, specifying a new scope name.
                          * @see #SCOPE_SINGLETON
                          * @see #SCOPE_PROTOTYPE
                          */
                         // @ts-ignore
-                        setScope(scope: string): void
+                        setScope(scope: java.lang.String | string): void
                         /**
                          * Return the name of the current target scope for this bean,
                          * or {@code null} if not known yet.
                          */
                         // @ts-ignore
-                        getScope(): java.lang.String
+                        getScope(): string
                         /**
                          * Set whether this bean should be lazily initialized.
                          * <p>If {@code false}, the bean will get instantiated on startup by bean
@@ -125,12 +125,12 @@ declare namespace org {
                          * The bean factory will guarantee that these beans get initialized first.
                          */
                         // @ts-ignore
-                        setDependsOn(...dependsOn: string[]): void
+                        setDependsOn(...dependsOn: java.lang.String[] | string[]): void
                         /**
                          * Return the bean names that this bean depends on.
                          */
                         // @ts-ignore
-                        getDependsOn(): java.lang.String[]
+                        getDependsOn(): string[]
                         /**
                          * Set whether this bean is a candidate for getting autowired into some other bean.
                          * <p>Note that this flag is designed to only affect type-based autowiring.
@@ -163,12 +163,12 @@ declare namespace org {
                          * @see #setFactoryMethodName
                          */
                         // @ts-ignore
-                        setFactoryBeanName(factoryBeanName: string): void
+                        setFactoryBeanName(factoryBeanName: java.lang.String | string): void
                         /**
                          * Return the factory bean name, if any.
                          */
                         // @ts-ignore
-                        getFactoryBeanName(): java.lang.String
+                        getFactoryBeanName(): string
                         /**
                          * Specify a factory method, if any. This method will be invoked with
                          * constructor arguments, or with no arguments if none are specified.
@@ -178,12 +178,12 @@ declare namespace org {
                          * @see #setBeanClassName
                          */
                         // @ts-ignore
-                        setFactoryMethodName(factoryMethodName: string): void
+                        setFactoryMethodName(factoryMethodName: java.lang.String | string): void
                         /**
                          * Return a factory method, if any.
                          */
                         // @ts-ignore
-                        getFactoryMethodName(): java.lang.String
+                        getFactoryMethodName(): string
                         /**
                          * Return the constructor argument values for this bean.
                          * <p>The returned instance can be modified during bean factory post-processing.
@@ -215,25 +215,25 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        setInitMethodName(initMethodName: string): void
+                        setInitMethodName(initMethodName: java.lang.String | string): void
                         /**
                          * Return the name of the initializer method.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        getInitMethodName(): java.lang.String
+                        getInitMethodName(): string
                         /**
                          * Set the name of the destroy method.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        setDestroyMethodName(destroyMethodName: string): void
+                        setDestroyMethodName(destroyMethodName: java.lang.String | string): void
                         /**
                          * Return the name of the destroy method.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        getDestroyMethodName(): java.lang.String
+                        getDestroyMethodName(): string
                         /**
                          * Set the role hint for this {@code BeanDefinition}. The role hint
                          * provides the frameworks as well as tools an indication of
@@ -254,18 +254,18 @@ declare namespace org {
                          * @see #ROLE_INFRASTRUCTURE
                          */
                         // @ts-ignore
-                        getRole(): int
+                        getRole(): number /*int*/
                         /**
                          * Set a human-readable description of this bean definition.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        setDescription(description: string): void
+                        setDescription(description: java.lang.String | string): void
                         /**
                          * Return a human-readable description of this bean definition.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        getDescription(): string
                         /**
                          * Return a resolvable type for this bean definition,
                          * based on the bean class or other specific metadata.
@@ -302,7 +302,7 @@ declare namespace org {
                          * came from (for the purpose of showing context in case of errors).
                          */
                         // @ts-ignore
-                        getResourceDescription(): java.lang.String
+                        getResourceDescription(): string
                         /**
                          * Return the originating BeanDefinition, or {@code null} if none.
                          * <p>Allows for retrieving the decorated bean definition, if any.

@@ -26,15 +26,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    get(name: string, objectFactory: object): java.lang.Object
+                    public get(name: java.lang.String | string, objectFactory: object): any
                     // @ts-ignore
-                    remove(name: string): java.lang.Object
+                    public remove(name: java.lang.String | string): any
                     // @ts-ignore
-                    registerDestructionCallback(name: string, callback: java.lang.Runnable): void
+                    public registerDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable): void
                     // @ts-ignore
-                    resolveContextualObject(key: string): java.lang.Object
+                    public resolveContextualObject(key: java.lang.String | string): any
                     // @ts-ignore
-                    getConversationId(): java.lang.String
+                    public getConversationId(): string
                 }
             }
         }

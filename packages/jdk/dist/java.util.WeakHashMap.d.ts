@@ -125,7 +125,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            constructor(m: java.util.Map<K, V>)
+            constructor(m: java.util.Map<any, any>)
             /**
              * Returns the number of key-value mappings in this map.
              * This result is a snapshot, and may not reflect unprocessed
@@ -133,7 +133,7 @@ declare namespace java {
              * because they are no longer referenced.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this map contains no key-value mappings.
              * This result is a snapshot, and may not reflect unprocessed
@@ -141,7 +141,7 @@ declare namespace java {
              * because they are no longer referenced.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -157,7 +157,7 @@ declare namespace java {
              * @see #put(Object, Object)
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             /**
              * Returns <tt>true</tt> if this map contains a mapping for the
              * specified key.
@@ -166,7 +166,7 @@ declare namespace java {
              *          <tt>false</tt> otherwise
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * Associates the specified value with the specified key in this map.
              * If the map previously contained a mapping for this key, the old
@@ -179,7 +179,7 @@ declare namespace java {
              *          previously associated <tt>null</tt> with <tt>key</tt>.)
              */
             // @ts-ignore
-            put(key: K, value: V): V
+            public put(key: K, value: V): V
             /**
              * Copies all of the mappings from the specified map to this map.
              * These mappings will replace any mappings that this map had for any
@@ -188,7 +188,7 @@ declare namespace java {
              * @throws NullPointerException if the specified map is null.
              */
             // @ts-ignore
-            putAll(m: java.util.Map<K, V>): void
+            public putAll(m: java.util.Map<any, any>): void
             /**
              * Removes the mapping for a key from this weak hash map if it is present.
              * More formally, if this map contains a mapping from key <tt>k</tt> to
@@ -207,13 +207,13 @@ declare namespace java {
              *          <tt>null</tt> if there was no mapping for <tt>key</tt>
              */
             // @ts-ignore
-            remove(key: any): V
+            public remove(key: java.lang.Object | any): V
             /**
              * Removes all of the mappings from this map.
              * The map will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns <tt>true</tt> if this map maps one or more keys to the
              * specified value.
@@ -222,7 +222,7 @@ declare namespace java {
              *          specified value
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Returns a {@link Set} view of the keys contained in this map.
              * The set is backed by the map, so changes to the map are
@@ -237,7 +237,7 @@ declare namespace java {
              * operations.
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The collection is backed by the map, so changes to the map are
@@ -252,7 +252,7 @@ declare namespace java {
              * support the <tt>add</tt> or <tt>addAll</tt> operations.
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * The set is backed by the map, so changes to the map are
@@ -268,11 +268,11 @@ declare namespace java {
              * <tt>add</tt> or <tt>addAll</tt> operations.
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public entrySet(): Array<java.util.Map.Entry<K, V>>
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+            public forEach(action: java.util.function$.BiConsumer<any, any>): void
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+            public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
         }
     }
 }

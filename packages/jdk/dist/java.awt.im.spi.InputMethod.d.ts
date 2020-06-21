@@ -335,7 +335,7 @@ declare namespace java {
                      * @return a control object from this input method, or null
                      */
                     // @ts-ignore
-                    getControlObject(): java.lang.Object
+                    getControlObject(): any
                 }
             }
         }

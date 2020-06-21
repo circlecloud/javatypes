@@ -14,9 +14,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setComplete(): void
+                        public setComplete(): void
                         // @ts-ignore
-                        isComplete(): boolean
+                        public isComplete(): boolean
                     }
                 }
             }

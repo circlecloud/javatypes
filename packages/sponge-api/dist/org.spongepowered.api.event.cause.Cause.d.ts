@@ -16,13 +16,13 @@ declare namespace org {
                      * this event would be too complicated and thus may not be attempted.</p>
                      */
                     // @ts-ignore
-                    class Cause extends java.lang.Object implements java.lang.Iterable<java.lang.Object> {
+                    class Cause extends java.lang.Object implements java.lang.Iterable<java.lang.Object | any> {
                         /**
                          * Creates a new {@link Builder} to make a new {@link Cause}.
                          * @return The new builder
                          */
                         // @ts-ignore
-                        builder(): org.spongepowered.api.event.cause.Cause.Builder
+                        public static builder(): org.spongepowered.api.event.cause.Cause.Builder
                         /**
                          * Constructs a new cause with the specified event context and cause.
                          * @param ctx The event context
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return The constructed cause
                          */
                         // @ts-ignore
-                        of(ctx: org.spongepowered.api.event.cause.EventContext, cause: any): org.spongepowered.api.event.cause.Cause
+                        public static of(ctx: org.spongepowered.api.event.cause.EventContext, cause: java.lang.Object | any): org.spongepowered.api.event.cause.Cause
                         /**
                          * Constructs a new cause with the specified event context and causes.
                          * @param ctx The event context
@@ -39,7 +39,7 @@ declare namespace org {
                          * @return The built cause
                          */
                         // @ts-ignore
-                        of(ctx: org.spongepowered.api.event.cause.EventContext, cause: any, ...causes: any[]): org.spongepowered.api.event.cause.Cause
+                        public static of(ctx: org.spongepowered.api.event.cause.EventContext, cause: java.lang.Object | any, ...causes: java.lang.Object[] | any[]): org.spongepowered.api.event.cause.Cause
                         /**
                          * Constructs a new cause with the specified event context and causes.
                          * @param ctx The event context
@@ -47,19 +47,19 @@ declare namespace org {
                          * @return The built cause
                          */
                         // @ts-ignore
-                        of(ctx: org.spongepowered.api.event.cause.EventContext, iterable: java.lang.Iterable<java.lang.Object>): org.spongepowered.api.event.cause.Cause
+                        public static of(ctx: org.spongepowered.api.event.cause.EventContext, iterable: java.lang.Iterable<java.lang.Object | any>): org.spongepowered.api.event.cause.Cause
                         /**
                          * Gets the event context relating to this cause.
                          * @return The event context
                          */
                         // @ts-ignore
-                        getContext(): org.spongepowered.api.event.cause.EventContext
+                        public getContext(): org.spongepowered.api.event.cause.EventContext
                         /**
                          * Gets the root {@link Object} of this cause.
                          * @return The root object cause for this cause
                          */
                         // @ts-ignore
-                        root(): java.lang.Object
+                        public root(): any
                         /**
                          * Gets the first <code>T</code> object of this {@link Cause}, if available.
                          * @param target The class of the target type
@@ -67,7 +67,7 @@ declare namespace org {
                          * @return The first element of the type, if available
                          */
                         // @ts-ignore
-                        first<T>(target: java.lang.Class<T>): java.util.Optional<T>
+                        public first<T>(target: java.lang.Class<T>): java.util.Optional<T>
                         /**
                          * Gets the last object instance of the {@link Class} of type
                          * <code>T</code>.
@@ -76,7 +76,7 @@ declare namespace org {
                          * @return The last element of the type, if available
                          */
                         // @ts-ignore
-                        last<T>(target: java.lang.Class<T>): java.util.Optional<T>
+                        public last<T>(target: java.lang.Class<T>): java.util.Optional<T>
                         /**
                          * Gets the object immediately before the object that is an instance of the
                          * {@link Class} passed in.
@@ -84,7 +84,7 @@ declare namespace org {
                          * @return The object
                          */
                         // @ts-ignore
-                        before(clazz: java.lang.Class<any>): java.util.Optional<?>
+                        public before(clazz: java.lang.Class<any>): java.util.Optional<any>
                         /**
                          * Gets the object immediately after the object that is an instance of the
                          * {@link Class} passed in.
@@ -92,7 +92,7 @@ declare namespace org {
                          * @return The object after, if available
                          */
                         // @ts-ignore
-                        after(clazz: java.lang.Class<any>): java.util.Optional<?>
+                        public after(clazz: java.lang.Class<any>): java.util.Optional<any>
                         /**
                          * Returns whether the target class matches any object of this {@link Cause}
                          * .
@@ -100,7 +100,7 @@ declare namespace org {
                          * @return True if found, false otherwise
                          */
                         // @ts-ignore
-                        containsType(target: java.lang.Class<any>): boolean
+                        public containsType(target: java.lang.Class<any>): boolean
                         /**
                          * Checks if this cause contains of any of the provided {@link Object}. This
                          * is the equivalent to checking based on {@link #equals(Object)} for each
@@ -109,7 +109,7 @@ declare namespace org {
                          * @return True if the object is contained within this cause
                          */
                         // @ts-ignore
-                        contains(object: any): boolean
+                        public contains(object: java.lang.Object | any): boolean
                         /**
                          * Gets an {@link ImmutableList} of all objects that are instances of the
                          * given {@link Class} type <code>T</code>.
@@ -118,7 +118,7 @@ declare namespace org {
                          * @return An immutable list of the objects queried
                          */
                         // @ts-ignore
-                        allOf<T>(target: java.lang.Class<T>): java.util.List<T>
+                        public allOf<T>(target: java.lang.Class<T>): Array<T>
                         /**
                          * Gets an immutable {@link List} with all object causes that are not
                          * instances of the provided {@link Class}.
@@ -126,13 +126,13 @@ declare namespace org {
                          * @return The list of objects not an instance of the provided class
                          */
                         // @ts-ignore
-                        noneOf(ignoredClass: java.lang.Class<any>): java.util.List<java.lang.Object>
+                        public noneOf(ignoredClass: java.lang.Class<any>): Array<java.lang.Object | any>
                         /**
                          * Gets an {@link List} of all causes within this {@link Cause}.
                          * @return An immutable list of all the causes
                          */
                         // @ts-ignore
-                        all(): java.util.List<java.lang.Object>
+                        public all(): Array<java.lang.Object | any>
                         /**
                          * Creates a new {@link Cause} where the objects are added at the end of the
                          * cause array of objects.
@@ -140,7 +140,7 @@ declare namespace org {
                          * @return The new cause
                          */
                         // @ts-ignore
-                        with(additional: any): org.spongepowered.api.event.cause.Cause
+                        public with(additional: java.lang.Object | any): org.spongepowered.api.event.cause.Cause
                         /**
                          * Creates a new {@link Cause} where the objects are added at the end of the
                          * cause array of objects.
@@ -149,7 +149,7 @@ declare namespace org {
                          * @return The new cause
                          */
                         // @ts-ignore
-                        with(additional: any, ...additionals: any[]): org.spongepowered.api.event.cause.Cause
+                        public with(additional: java.lang.Object | any, ...additionals: java.lang.Object[] | any[]): org.spongepowered.api.event.cause.Cause
                         /**
                          * Creates a new {@link Cause} where the objects are added at the end of the
                          * cause array of objects.
@@ -157,22 +157,22 @@ declare namespace org {
                          * @return The new cause
                          */
                         // @ts-ignore
-                        with(iterable: java.lang.Iterable<java.lang.Object>): org.spongepowered.api.event.cause.Cause
+                        public with(iterable: java.lang.Iterable<java.lang.Object | any>): org.spongepowered.api.event.cause.Cause
                         /**
                          * Merges this cause with the other cause.
                          * @param cause The cause to merge with this
                          * @return The new merged cause
                          */
                         // @ts-ignore
-                        with(cause: org.spongepowered.api.event.cause.Cause): org.spongepowered.api.event.cause.Cause
+                        public with(cause: org.spongepowered.api.event.cause.Cause): org.spongepowered.api.event.cause.Cause
                         // @ts-ignore
-                        iterator(): java.util.Iterator<java.lang.Object>
+                        public iterator(): java.util.Iterator<java.lang.Object | any>
                         // @ts-ignore
-                        equals(object: any): boolean
+                        public equals(object: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

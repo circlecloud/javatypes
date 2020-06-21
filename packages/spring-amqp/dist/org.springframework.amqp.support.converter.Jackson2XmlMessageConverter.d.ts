@@ -24,7 +24,7 @@ declare namespace org {
                          * @see DefaultJackson2JavaTypeMapper#setTrustedPackages(String...)
                          */
                         // @ts-ignore
-                        constructor(...trustedPackages: string[])
+                        constructor(...trustedPackages: java.lang.String[] | string[])
                         /**
                          * Construct with the provided {@link XmlMapper} instance
                          * and trusted packed to all ({@code *}).
@@ -39,7 +39,7 @@ declare namespace org {
                          * @see DefaultJackson2JavaTypeMapper#setTrustedPackages(String...)
                          */
                         // @ts-ignore
-                        constructor(xmlMapper: XmlMapper, ...trustedPackages: string[])
+                        constructor(xmlMapper: XmlMapper, ...trustedPackages: java.lang.String[] | string[])
                     }
                 }
             }

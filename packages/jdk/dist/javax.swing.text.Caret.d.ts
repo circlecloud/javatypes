@@ -121,13 +121,13 @@ declare namespace javax {
                  *   zero the caret will not blink.
                  */
                 // @ts-ignore
-                getBlinkRate(): int
+                getBlinkRate(): number /*int*/
                 /**
                  * Fetches the current position of the caret.
                  * @return the position &gt;=0
                  */
                 // @ts-ignore
-                getDot(): int
+                getDot(): number /*int*/
                 /**
                  * Fetches the current position of the mark.  If there
                  * is a selection, the mark will not be the same as
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @return the position &gt;=0
                  */
                 // @ts-ignore
-                getMark(): int
+                getMark(): number /*int*/
                 /**
                  * Sets the caret position to some position.  This
                  * causes the mark to become the same as the dot,

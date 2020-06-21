@@ -87,14 +87,14 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Trims the capacity of this <tt>ArrayList</tt> instance to be the
              * list's current size.  An application can use this operation to minimize
              * the storage of an <tt>ArrayList</tt> instance.
              */
             // @ts-ignore
-            trimToSize(): void
+            public trimToSize(): void
             /**
              * Increases the capacity of this <tt>ArrayList</tt> instance, if
              * necessary, to ensure that it can hold at least the number of elements
@@ -102,19 +102,19 @@ declare namespace java {
              * @param minCapacity   the desired minimum capacity
              */
             // @ts-ignore
-            ensureCapacity(minCapacity: number /*int*/): void
+            public ensureCapacity(minCapacity: number /*int*/): void
             /**
              * Returns the number of elements in this list.
              * @return the number of elements in this list
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this list contains no elements.
              * @return <tt>true</tt> if this list contains no elements
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns <tt>true</tt> if this list contains the specified element.
              * More formally, returns <tt>true</tt> if and only if this list contains
@@ -124,7 +124,7 @@ declare namespace java {
              * @return <tt>true</tt> if this list contains the specified element
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Returns the index of the first occurrence of the specified element
              * in this list, or -1 if this list does not contain the element.
@@ -133,7 +133,7 @@ declare namespace java {
              * or -1 if there is no such index.
              */
             // @ts-ignore
-            indexOf(o: any): int
+            public indexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns the index of the last occurrence of the specified element
              * in this list, or -1 if this list does not contain the element.
@@ -142,14 +142,14 @@ declare namespace java {
              * or -1 if there is no such index.
              */
             // @ts-ignore
-            lastIndexOf(o: any): int
+            public lastIndexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns a shallow copy of this <tt>ArrayList</tt> instance.  (The
              * elements themselves are not copied.)
              * @return a clone of this <tt>ArrayList</tt> instance
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns an array containing all of the elements in this list
              * in proper sequence (from first to last element).
@@ -162,7 +162,7 @@ declare namespace java {
              *          proper sequence
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * Returns an array containing all of the elements in this list in proper
              * sequence (from first to last element); the runtime type of the returned
@@ -186,7 +186,7 @@ declare namespace java {
              * @throws NullPointerException if the specified array is null
              */
             // @ts-ignore
-            toArray<T>(a: T[]): T
+            public toArray<T>(a: T[]): T
             /**
              * Returns the element at the specified position in this list.
              * @param index index of the element to return
@@ -194,7 +194,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            get(index: number /*int*/): E
+            public get(index: number /*int*/): E
             /**
              * Replaces the element at the specified position in this list with
              * the specified element.
@@ -204,14 +204,14 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            set(index: number /*int*/, element: E): E
+            public set(index: number /*int*/, element: E): E
             /**
              * Appends the specified element to the end of this list.
              * @param e element to be appended to this list
              * @return <tt>true</tt> (as specified by {#link Collection#add})
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Inserts the specified element at the specified position in this
              * list. Shifts the element currently at that position (if any) and
@@ -221,7 +221,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            add(index: number /*int*/, element: E): void
+            public add(index: number /*int*/, element: E): void
             /**
              * Removes the element at the specified position in this list.
              * Shifts any subsequent elements to the left (subtracts one from their
@@ -231,7 +231,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            remove(index: number /*int*/): E
+            public remove(index: number /*int*/): E
             /**
              * Removes the first occurrence of the specified element from this list,
              * if it is present.  If the list does not contain the element, it is
@@ -245,13 +245,13 @@ declare namespace java {
              * @return <tt>true</tt> if this list contained the specified element
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Removes all of the elements from this list.  The list will
              * be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Appends all of the elements in the specified collection to the end of
              * this list, in the order that they are returned by the
@@ -265,7 +265,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Inserts all of the elements in the specified collection into this
              * list, starting at the specified position.  Shifts the element
@@ -281,7 +281,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<E>): boolean
+            public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes from this list all of the elements whose index is between
              * {@code fromIndex}, inclusive, and {@code toIndex}, exclusive.
@@ -312,7 +312,7 @@ declare namespace java {
              * @see Collection#contains(Object)
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            public removeAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Retains only the elements in this list that are contained in the
              * specified collection.  In other words, removes from this list all
@@ -329,7 +329,7 @@ declare namespace java {
              * @see Collection#contains(Object)
              */
             // @ts-ignore
-            retainAll(c: Array<any>): boolean
+            public retainAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Returns a list iterator over the elements in this list (in proper
              * sequence), starting at the specified position in the list.
@@ -341,7 +341,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            listIterator(index: number /*int*/): java.util.ListIterator<E>
+            public listIterator(index: number /*int*/): java.util.ListIterator<E>
             /**
              * Returns a list iterator over the elements in this list (in proper
              * sequence).
@@ -349,14 +349,14 @@ declare namespace java {
              * @see #listIterator(int)
              */
             // @ts-ignore
-            listIterator(): java.util.ListIterator<E>
+            public listIterator(): java.util.ListIterator<E>
             /**
              * Returns an iterator over the elements in this list in proper sequence.
              * <p>The returned iterator is <a href="#fail-fast"><i>fail-fast</i></a>.
              * @return an iterator over the elements in this list in proper sequence
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             /**
              * Returns a view of the portion of this list between the specified
              * {@code fromIndex}, inclusive, and {@code toIndex}, exclusive.  (If
@@ -384,9 +384,9 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            subList(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.List<E>
+            public subList(fromIndex: number /*int*/, toIndex: number /*int*/): Array<E>
             // @ts-ignore
-            forEach(action: java.util.function.Consumer<any super E> | java.util.function$.Consumer<? super E>): void
+            public forEach(action: java.util.function$.Consumer<any>): void
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -399,13 +399,13 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
             // @ts-ignore
-            removeIf(filter: java.util.function.Predicate<any super E> | java.util.function$.Predicate<? super E>): boolean
+            public removeIf(filter: java.util.function$.Predicate<any>): boolean
             // @ts-ignore
-            replaceAll(operator: java.util.function.UnaryOperator<E> | java.util.function$.UnaryOperator<E>): void
+            public replaceAll(operator: java.util.function$.UnaryOperator<E>): void
             // @ts-ignore
-            sort(c: java.util.Comparator<any super E>): void
+            public sort(c: java.util.Comparator<any>): void
         }
     }
 }

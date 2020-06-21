@@ -14,7 +14,7 @@ declare namespace org {
                  * @since 3.2
                  */
                 // @ts-ignore
-                class AbstractContextLoaderInitializer extends java.lang.Object implements org.springframework.web.WebApplicationInitializer {
+                abstract class AbstractContextLoaderInitializer extends java.lang.Object implements org.springframework.web.WebApplicationInitializer {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,7 +23,7 @@ declare namespace org {
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    onStartup(servletContext: ServletContext): void
+                    public onStartup(servletContext: ServletContext): void
                     /**
                      * Register a {@link ContextLoaderListener} against the given servlet context. The
                      * {@code ContextLoaderListener} is initialized with the application context returned
@@ -53,7 +53,7 @@ declare namespace org {
                      * @see ContextLoaderListener#setContextInitializers
                      */
                     // @ts-ignore
-                    getRootApplicationContextInitializers(): <any>[]
+                    getRootApplicationContextInitializers(): object[]
                 }
             }
         }

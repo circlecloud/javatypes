@@ -44,7 +44,7 @@ declare namespace java {
                  * @throws UnsupportedTemporalTypeException if the {#code unit} is not supported
                  */
                 // @ts-ignore
-                get(unit: java.time.temporal.TemporalUnit): long
+                get(unit: java.time.temporal.TemporalUnit): number /*long*/
                 /**
                  * Returns the list of units uniquely defining the value of this TemporalAmount.
                  * The list of {@code TemporalUnits} is defined by the implementation class.
@@ -58,7 +58,7 @@ declare namespace java {
                  * @return the List of {#code TemporalUnits}; not null
                  */
                 // @ts-ignore
-                getUnits(): java.util.List<java.time.temporal.TemporalUnit>
+                getUnits(): Array<java.time.temporal.TemporalUnit>
                 /**
                  * Adds to the specified temporal object.
                  * <p>

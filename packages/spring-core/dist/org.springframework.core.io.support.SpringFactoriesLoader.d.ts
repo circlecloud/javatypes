@@ -26,7 +26,7 @@ declare namespace org {
                          * <p>Can be present in multiple JAR files.
                          */
                         // @ts-ignore
-                        readonly FACTORIES_RESOURCE_LOCATION: string
+                        public static readonly FACTORIES_RESOURCE_LOCATION: java.lang.String | string
                         /**
                          * Load and instantiate the factory implementations of the given type from
                          * {@value #FACTORIES_RESOURCE_LOCATION}, using the given class loader.
@@ -40,7 +40,7 @@ declare namespace org {
                          * @see #loadFactoryNames
                          */
                         // @ts-ignore
-                        loadFactories<T>(factoryType: java.lang.Class<T>, classLoader: java.lang.ClassLoader): java.util.List<T>
+                        public static loadFactories<T>(factoryType: java.lang.Class<T>, classLoader: java.lang.ClassLoader): Array<T>
                         /**
                          * Load the fully qualified class names of factory implementations of the
                          * given type from {@value #FACTORIES_RESOURCE_LOCATION}, using the given
@@ -52,7 +52,7 @@ declare namespace org {
                          * @see #loadFactories
                          */
                         // @ts-ignore
-                        loadFactoryNames(factoryType: java.lang.Class<any>, classLoader: java.lang.ClassLoader): java.util.List<java.lang.String>
+                        public static loadFactoryNames(factoryType: java.lang.Class<any>, classLoader: java.lang.ClassLoader): Array<java.lang.String | string>
                     }
                 }
             }

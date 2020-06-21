@@ -19,7 +19,7 @@ declare namespace org {
                          * Return the target bean name that this reference points to (never {@code null}).
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        getBeanName(): string
                     }
                 }
             }

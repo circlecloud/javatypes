@@ -37,7 +37,7 @@ declare namespace java {
                  * @return the <code>DropTargetContext</code>
                  */
                 // @ts-ignore
-                getDropTargetContext(): java.awt.dnd.DropTargetContext
+                public getDropTargetContext(): java.awt.dnd.DropTargetContext
             }
         }
     }

@@ -9,13 +9,13 @@ declare namespace javax {
                      * @return the starting offset &gt;= 0
                      */
                     // @ts-ignore
-                    getStartOffset(): int
+                    getStartOffset(): number /*int*/
                     /**
                      * Gets the ending model offset for the highlight.
                      * @return the ending offset &gt;= 0
                      */
                     // @ts-ignore
-                    getEndOffset(): int
+                    getEndOffset(): number /*int*/
                     /**
                      * Gets the painter for the highlighter.
                      * @return the painter

@@ -131,7 +131,7 @@ declare namespace java {
              * @see #setString
              */
             // @ts-ignore
-            getString(parameterIndex: number /*int*/): java.lang.String
+            getString(parameterIndex: number /*int*/): string
             /**
              * Retrieves the value of the designated JDBC <code>BIT</code>
              * or <code>BOOLEAN</code> parameter as a
@@ -160,7 +160,7 @@ declare namespace java {
              * @see #setByte
              */
             // @ts-ignore
-            getByte(parameterIndex: number /*int*/): byte
+            getByte(parameterIndex: number /*int*/): number /*byte*/
             /**
              * Retrieves the value of the designated JDBC <code>SMALLINT</code> parameter
              * as a <code>short</code> in the Java programming language.
@@ -174,7 +174,7 @@ declare namespace java {
              * @see #setShort
              */
             // @ts-ignore
-            getShort(parameterIndex: number /*int*/): short
+            getShort(parameterIndex: number /*int*/): number /*short*/
             /**
              * Retrieves the value of the designated JDBC <code>INTEGER</code> parameter
              * as an <code>int</code> in the Java programming language.
@@ -188,7 +188,7 @@ declare namespace java {
              * @see #setInt
              */
             // @ts-ignore
-            getInt(parameterIndex: number /*int*/): int
+            getInt(parameterIndex: number /*int*/): number /*int*/
             /**
              * Retrieves the value of the designated JDBC <code>BIGINT</code> parameter
              * as a <code>long</code> in the Java programming language.
@@ -202,7 +202,7 @@ declare namespace java {
              * @see #setLong
              */
             // @ts-ignore
-            getLong(parameterIndex: number /*int*/): long
+            getLong(parameterIndex: number /*int*/): number /*long*/
             /**
              * Retrieves the value of the designated JDBC <code>FLOAT</code> parameter
              * as a <code>float</code> in the Java programming language.
@@ -216,7 +216,7 @@ declare namespace java {
              * @see #setFloat
              */
             // @ts-ignore
-            getFloat(parameterIndex: number /*int*/): float
+            getFloat(parameterIndex: number /*int*/): number /*float*/
             /**
              * Retrieves the value of the designated JDBC <code>DOUBLE</code> parameter as a <code>double</code>
              * in the Java programming language.
@@ -230,7 +230,7 @@ declare namespace java {
              * @see #setDouble
              */
             // @ts-ignore
-            getDouble(parameterIndex: number /*int*/): double
+            getDouble(parameterIndex: number /*int*/): number /*double*/
             /**
              * Retrieves the value of the designated JDBC <code>NUMERIC</code> parameter as a
              * <code>java.math.BigDecimal</code> object with <i>scale</i> digits to
@@ -265,7 +265,7 @@ declare namespace java {
              * @see #setBytes
              */
             // @ts-ignore
-            getBytes(parameterIndex: number /*int*/): byte[]
+            getBytes(parameterIndex: number /*int*/): number /*byte*/[]
             /**
              * Retrieves the value of the designated JDBC <code>DATE</code> parameter as a
              * <code>java.sql.Date</code> object.
@@ -328,7 +328,7 @@ declare namespace java {
              * @see #setObject
              */
             // @ts-ignore
-            getObject(parameterIndex: number /*int*/): java.lang.Object
+            getObject(parameterIndex: number /*int*/): any
             /**
              * Retrieves the value of the designated JDBC <code>NUMERIC</code> parameter as a
              * <code>java.math.BigDecimal</code> object with as many digits to the
@@ -367,7 +367,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getObject(parameterIndex: number /*int*/, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getObject(parameterIndex: number /*int*/, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves the value of the designated JDBC <code>REF(&lt;structured-type&gt;)</code>
              * parameter as a {@link java.sql.Ref} object in the Java programming language.
@@ -545,7 +545,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            registerOutParameter(parameterIndex: number /*int*/, sqlType: number /*int*/, typeName: string): void
+            registerOutParameter(parameterIndex: number /*int*/, sqlType: number /*int*/, typeName: java.lang.String | string): void
             /**
              * Registers the OUT parameter named
              * <code>parameterName</code> to the JDBC type
@@ -581,7 +581,7 @@ declare namespace java {
              * @see Types
              */
             // @ts-ignore
-            registerOutParameter(parameterName: string, sqlType: number /*int*/): void
+            registerOutParameter(parameterName: java.lang.String | string, sqlType: number /*int*/): void
             /**
              * Registers the parameter named
              * <code>parameterName</code> to be of JDBC type
@@ -614,7 +614,7 @@ declare namespace java {
              * @see Types
              */
             // @ts-ignore
-            registerOutParameter(parameterName: string, sqlType: number /*int*/, scale: number /*int*/): void
+            registerOutParameter(parameterName: java.lang.String | string, sqlType: number /*int*/, scale: number /*int*/): void
             /**
              * Registers the designated output parameter.  This version of
              * the method <code>registerOutParameter</code>
@@ -657,7 +657,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            registerOutParameter(parameterName: string, sqlType: number /*int*/, typeName: string): void
+            registerOutParameter(parameterName: java.lang.String | string, sqlType: number /*int*/, typeName: java.lang.String | string): void
             /**
              * Retrieves the value of the designated JDBC <code>DATALINK</code> parameter as a
              * <code>java.net.URL</code> object.
@@ -693,7 +693,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setURL(parameterName: string, val: java.net.URL): void
+            setURL(parameterName: java.lang.String | string, val: java.net.URL): void
             /**
              * Sets the designated parameter to SQL <code>NULL</code>.
              * <P><B>Note:</B> You must specify the parameter's SQL type.
@@ -707,7 +707,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setNull(parameterName: string, sqlType: number /*int*/): void
+            setNull(parameterName: java.lang.String | string, sqlType: number /*int*/): void
             /**
              * Sets the designated parameter to the given Java <code>boolean</code> value.
              * The driver converts this
@@ -723,7 +723,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setBoolean(parameterName: string, x: boolean): void
+            setBoolean(parameterName: java.lang.String | string, x: boolean): void
             /**
              * Sets the designated parameter to the given Java <code>byte</code> value.
              * The driver converts this
@@ -739,7 +739,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setByte(parameterName: string, x: number /*byte*/): void
+            setByte(parameterName: java.lang.String | string, x: number /*byte*/): void
             /**
              * Sets the designated parameter to the given Java <code>short</code> value.
              * The driver converts this
@@ -755,7 +755,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setShort(parameterName: string, x: number /*short*/): void
+            setShort(parameterName: java.lang.String | string, x: number /*short*/): void
             /**
              * Sets the designated parameter to the given Java <code>int</code> value.
              * The driver converts this
@@ -771,7 +771,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setInt(parameterName: string, x: number /*int*/): void
+            setInt(parameterName: java.lang.String | string, x: number /*int*/): void
             /**
              * Sets the designated parameter to the given Java <code>long</code> value.
              * The driver converts this
@@ -787,7 +787,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setLong(parameterName: string, x: number /*long*/): void
+            setLong(parameterName: java.lang.String | string, x: number /*long*/): void
             /**
              * Sets the designated parameter to the given Java <code>float</code> value.
              * The driver converts this
@@ -803,7 +803,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setFloat(parameterName: string, x: number /*float*/): void
+            setFloat(parameterName: java.lang.String | string, x: number /*float*/): void
             /**
              * Sets the designated parameter to the given Java <code>double</code> value.
              * The driver converts this
@@ -819,7 +819,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setDouble(parameterName: string, x: number /*double*/): void
+            setDouble(parameterName: java.lang.String | string, x: number /*double*/): void
             /**
              * Sets the designated parameter to the given
              * <code>java.math.BigDecimal</code> value.
@@ -836,7 +836,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setBigDecimal(parameterName: string, x: java.math.BigDecimal): void
+            setBigDecimal(parameterName: java.lang.String | string, x: java.math.BigDecimal): void
             /**
              * Sets the designated parameter to the given Java <code>String</code> value.
              * The driver converts this
@@ -855,7 +855,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setString(parameterName: string, x: string): void
+            setString(parameterName: java.lang.String | string, x: java.lang.String | string): void
             /**
              * Sets the designated parameter to the given Java array of bytes.
              * The driver converts this to an SQL <code>VARBINARY</code> or
@@ -873,7 +873,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setBytes(parameterName: string, x: number /*byte*/[]): void
+            setBytes(parameterName: java.lang.String | string, x: number /*byte*/[]): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Date</code> value
              * using the default time zone of the virtual machine that is running
@@ -891,7 +891,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setDate(parameterName: string, x: java.sql.Date): void
+            setDate(parameterName: java.lang.String | string, x: java.sql.Date): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Time</code> value.
              * The driver converts this
@@ -907,7 +907,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setTime(parameterName: string, x: java.sql.Time): void
+            setTime(parameterName: java.lang.String | string, x: java.sql.Time): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Timestamp</code> value.
              * The driver
@@ -924,7 +924,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setTimestamp(parameterName: string, x: java.sql.Timestamp): void
+            setTimestamp(parameterName: java.lang.String | string, x: java.sql.Timestamp): void
             /**
              * Sets the designated parameter to the given input stream, which will have
              * the specified number of bytes.
@@ -947,7 +947,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setAsciiStream(parameterName: string, x: java.io.InputStream, length: number /*int*/): void
+            setAsciiStream(parameterName: java.lang.String | string, x: java.io.InputStream, length: number /*int*/): void
             /**
              * Sets the designated parameter to the given input stream, which will have
              * the specified number of bytes.
@@ -969,7 +969,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setBinaryStream(parameterName: string, x: java.io.InputStream, length: number /*int*/): void
+            setBinaryStream(parameterName: java.lang.String | string, x: java.io.InputStream, length: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * <p>The given Java object will be converted to the given targetSqlType
@@ -1003,7 +1003,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any, targetSqlType: number /*int*/, scale: number /*int*/): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any, targetSqlType: number /*int*/, scale: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * This method is similar to {@link #setObject(String parameterName,
@@ -1022,7 +1022,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any, targetSqlType: number /*int*/): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any, targetSqlType: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * <p>The JDBC specification specifies a standard mapping from
@@ -1062,7 +1062,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any): void
             /**
              * Sets the designated parameter to the given <code>Reader</code>
              * object, which is the given number of characters long.
@@ -1086,7 +1086,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setCharacterStream(parameterName: string, reader: java.io.Reader, length: number /*int*/): void
+            setCharacterStream(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*int*/): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Date</code> value,
              * using the given <code>Calendar</code> object.  The driver uses
@@ -1109,7 +1109,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setDate(parameterName: string, x: java.sql.Date, cal: java.util.Calendar): void
+            setDate(parameterName: java.lang.String | string, x: java.sql.Date, cal: java.util.Calendar): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Time</code> value,
              * using the given <code>Calendar</code> object.  The driver uses
@@ -1132,7 +1132,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setTime(parameterName: string, x: java.sql.Time, cal: java.util.Calendar): void
+            setTime(parameterName: java.lang.String | string, x: java.sql.Time, cal: java.util.Calendar): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Timestamp</code> value,
              * using the given <code>Calendar</code> object.  The driver uses
@@ -1155,7 +1155,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setTimestamp(parameterName: string, x: java.sql.Timestamp, cal: java.util.Calendar): void
+            setTimestamp(parameterName: java.lang.String | string, x: java.sql.Timestamp, cal: java.util.Calendar): void
             /**
              * Sets the designated parameter to SQL <code>NULL</code>.
              * This version of the method <code>setNull</code> should
@@ -1185,7 +1185,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setNull(parameterName: string, sqlType: number /*int*/, typeName: string): void
+            setNull(parameterName: java.lang.String | string, sqlType: number /*int*/, typeName: java.lang.String | string): void
             /**
              * Retrieves the value of a JDBC <code>CHAR</code>, <code>VARCHAR</code>,
              * or <code>LONGVARCHAR</code> parameter as a <code>String</code> in
@@ -1208,7 +1208,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getString(parameterName: string): java.lang.String
+            getString(parameterName: java.lang.String | string): string
             /**
              * Retrieves the value of a JDBC <code>BIT</code> or <code>BOOLEAN</code>
              * parameter as a
@@ -1225,7 +1225,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBoolean(parameterName: string): boolean
+            getBoolean(parameterName: java.lang.String | string): boolean
             /**
              * Retrieves the value of a JDBC <code>TINYINT</code> parameter as a <code>byte</code>
              * in the Java programming language.
@@ -1241,7 +1241,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getByte(parameterName: string): byte
+            getByte(parameterName: java.lang.String | string): number /*byte*/
             /**
              * Retrieves the value of a JDBC <code>SMALLINT</code> parameter as a <code>short</code>
              * in the Java programming language.
@@ -1257,7 +1257,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getShort(parameterName: string): short
+            getShort(parameterName: java.lang.String | string): number /*short*/
             /**
              * Retrieves the value of a JDBC <code>INTEGER</code> parameter as an <code>int</code>
              * in the Java programming language.
@@ -1273,7 +1273,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInt(parameterName: string): int
+            getInt(parameterName: java.lang.String | string): number /*int*/
             /**
              * Retrieves the value of a JDBC <code>BIGINT</code> parameter as a <code>long</code>
              * in the Java programming language.
@@ -1289,7 +1289,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getLong(parameterName: string): long
+            getLong(parameterName: java.lang.String | string): number /*long*/
             /**
              * Retrieves the value of a JDBC <code>FLOAT</code> parameter as a <code>float</code>
              * in the Java programming language.
@@ -1305,7 +1305,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFloat(parameterName: string): float
+            getFloat(parameterName: java.lang.String | string): number /*float*/
             /**
              * Retrieves the value of a JDBC <code>DOUBLE</code> parameter as a <code>double</code>
              * in the Java programming language.
@@ -1321,7 +1321,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDouble(parameterName: string): double
+            getDouble(parameterName: java.lang.String | string): number /*double*/
             /**
              * Retrieves the value of a JDBC <code>BINARY</code> or <code>VARBINARY</code>
              * parameter as an array of <code>byte</code> values in the Java
@@ -1338,7 +1338,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBytes(parameterName: string): byte[]
+            getBytes(parameterName: java.lang.String | string): number /*byte*/[]
             /**
              * Retrieves the value of a JDBC <code>DATE</code> parameter as a
              * <code>java.sql.Date</code> object.
@@ -1354,7 +1354,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDate(parameterName: string): java.sql.Date
+            getDate(parameterName: java.lang.String | string): java.sql.Date
             /**
              * Retrieves the value of a JDBC <code>TIME</code> parameter as a
              * <code>java.sql.Time</code> object.
@@ -1370,7 +1370,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getTime(parameterName: string): java.sql.Time
+            getTime(parameterName: java.lang.String | string): java.sql.Time
             /**
              * Retrieves the value of a JDBC <code>TIMESTAMP</code> parameter as a
              * <code>java.sql.Timestamp</code> object.
@@ -1386,7 +1386,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getTimestamp(parameterName: string): java.sql.Timestamp
+            getTimestamp(parameterName: java.lang.String | string): java.sql.Timestamp
             /**
              * Retrieves the value of a parameter as an <code>Object</code> in the Java
              * programming language. If the value is an SQL <code>NULL</code>, the
@@ -1409,7 +1409,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getObject(parameterName: string): java.lang.Object
+            getObject(parameterName: java.lang.String | string): any
             /**
              * Retrieves the value of a JDBC <code>NUMERIC</code> parameter as a
              * <code>java.math.BigDecimal</code> object with as many digits to the
@@ -1426,7 +1426,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBigDecimal(parameterName: string): java.math.BigDecimal
+            getBigDecimal(parameterName: java.lang.String | string): java.math.BigDecimal
             /**
              * Returns an object representing the value of OUT parameter
              * <code>parameterName</code> and uses <code>map</code> for the custom
@@ -1449,7 +1449,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getObject(parameterName: string, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getObject(parameterName: java.lang.String | string, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves the value of a JDBC <code>REF(&lt;structured-type&gt;)</code>
              * parameter as a {@link java.sql.Ref} object in the Java programming language.
@@ -1465,7 +1465,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getRef(parameterName: string): java.sql.Ref
+            getRef(parameterName: java.lang.String | string): java.sql.Ref
             /**
              * Retrieves the value of a JDBC <code>BLOB</code> parameter as a
              * {@link java.sql.Blob} object in the Java programming language.
@@ -1481,7 +1481,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBlob(parameterName: string): java.sql.Blob
+            getBlob(parameterName: java.lang.String | string): java.sql.Blob
             /**
              * Retrieves the value of a JDBC <code>CLOB</code> parameter as a
              * <code>java.sql.Clob</code> object in the Java programming language.
@@ -1497,7 +1497,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getClob(parameterName: string): java.sql.Clob
+            getClob(parameterName: java.lang.String | string): java.sql.Clob
             /**
              * Retrieves the value of a JDBC <code>ARRAY</code> parameter as an
              * {@link java.sql.Array} object in the Java programming language.
@@ -1513,7 +1513,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getArray(parameterName: string): java.sql.Array
+            getArray(parameterName: java.lang.String | string): java.sql.Array
             /**
              * Retrieves the value of a JDBC <code>DATE</code> parameter as a
              * <code>java.sql.Date</code> object, using
@@ -1537,7 +1537,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDate(parameterName: string, cal: java.util.Calendar): java.sql.Date
+            getDate(parameterName: java.lang.String | string, cal: java.util.Calendar): java.sql.Date
             /**
              * Retrieves the value of a JDBC <code>TIME</code> parameter as a
              * <code>java.sql.Time</code> object, using
@@ -1561,7 +1561,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getTime(parameterName: string, cal: java.util.Calendar): java.sql.Time
+            getTime(parameterName: java.lang.String | string, cal: java.util.Calendar): java.sql.Time
             /**
              * Retrieves the value of a JDBC <code>TIMESTAMP</code> parameter as a
              * <code>java.sql.Timestamp</code> object, using
@@ -1585,7 +1585,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getTimestamp(parameterName: string, cal: java.util.Calendar): java.sql.Timestamp
+            getTimestamp(parameterName: java.lang.String | string, cal: java.util.Calendar): java.sql.Timestamp
             /**
              * Retrieves the value of a JDBC <code>DATALINK</code> parameter as a
              * <code>java.net.URL</code> object.
@@ -1603,7 +1603,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getURL(parameterName: string): java.net.URL
+            getURL(parameterName: java.lang.String | string): java.net.URL
             /**
              * Retrieves the value of the designated JDBC <code>ROWID</code> parameter as a
              * <code>java.sql.RowId</code> object.
@@ -1635,7 +1635,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getRowId(parameterName: string): java.sql.RowId
+            getRowId(parameterName: java.lang.String | string): java.sql.RowId
             /**
              * Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
              * driver converts this to a SQL <code>ROWID</code> when it sends it to the
@@ -1650,7 +1650,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setRowId(parameterName: string, x: java.sql.RowId): void
+            setRowId(parameterName: java.lang.String | string, x: java.sql.RowId): void
             /**
              * Sets the designated parameter to the given <code>String</code> object.
              * The driver converts this to a SQL <code>NCHAR</code> or
@@ -1667,7 +1667,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNString(parameterName: string, value: string): void
+            setNString(parameterName: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object. The
              * <code>Reader</code> reads the data till end-of-file is reached. The
@@ -1686,7 +1686,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNCharacterStream(parameterName: string, value: java.io.Reader, length: number /*long*/): void
+            setNCharacterStream(parameterName: java.lang.String | string, value: java.io.Reader, length: number /*long*/): void
             /**
              * Sets the designated parameter to a <code>java.sql.NClob</code> object. The object
              * implements the <code>java.sql.NClob</code> interface. This <code>NClob</code>
@@ -1703,7 +1703,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNClob(parameterName: string, value: java.sql.NClob): void
+            setNClob(parameterName: java.lang.String | string, value: java.sql.NClob): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain  the number
              * of characters specified by length otherwise a <code>SQLException</code> will be
@@ -1725,7 +1725,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setClob(parameterName: string, reader: java.io.Reader, length: number /*long*/): void
+            setClob(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Sets the designated parameter to a <code>InputStream</code> object.  The <code>inputstream</code> must contain  the number
              * of characters specified by length, otherwise a <code>SQLException</code> will be
@@ -1750,7 +1750,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBlob(parameterName: string, inputStream: java.io.InputStream, length: number /*long*/): void
+            setBlob(parameterName: java.lang.String | string, inputStream: java.io.InputStream, length: number /*long*/): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain  the number
              * of characters specified by length otherwise a <code>SQLException</code> will be
@@ -1774,7 +1774,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNClob(parameterName: string, reader: java.io.Reader, length: number /*long*/): void
+            setNClob(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Retrieves the value of the designated JDBC <code>NCLOB</code> parameter as a
              * <code>java.sql.NClob</code> object in the Java programming language.
@@ -1811,7 +1811,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getNClob(parameterName: string): java.sql.NClob
+            getNClob(parameterName: java.lang.String | string): java.sql.NClob
             /**
              * Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
              * <code>SQL XML</code> value when it sends it to the database.
@@ -1827,7 +1827,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setSQLXML(parameterName: string, xmlObject: java.sql.SQLXML): void
+            setSQLXML(parameterName: java.lang.String | string, xmlObject: java.sql.SQLXML): void
             /**
              * Retrieves the value of the designated <code>SQL XML</code> parameter as a
              * <code>java.sql.SQLXML</code> object in the Java programming language.
@@ -1855,7 +1855,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getSQLXML(parameterName: string): java.sql.SQLXML
+            getSQLXML(parameterName: java.lang.String | string): java.sql.SQLXML
             /**
              * Retrieves the value of the designated <code>NCHAR</code>,
              * <code>NVARCHAR</code>
@@ -1879,7 +1879,7 @@ declare namespace java {
              * @see #setNString
              */
             // @ts-ignore
-            getNString(parameterIndex: number /*int*/): java.lang.String
+            getNString(parameterIndex: number /*int*/): string
             /**
              * Retrieves the value of the designated <code>NCHAR</code>,
              * <code>NVARCHAR</code>
@@ -1904,7 +1904,7 @@ declare namespace java {
              * @see #setNString
              */
             // @ts-ignore
-            getNString(parameterName: string): java.lang.String
+            getNString(parameterName: java.lang.String | string): string
             /**
              * Retrieves the value of the designated parameter as a
              * <code>java.io.Reader</code> object in the Java programming language.
@@ -1942,7 +1942,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getNCharacterStream(parameterName: string): java.io.Reader
+            getNCharacterStream(parameterName: java.lang.String | string): java.io.Reader
             /**
              * Retrieves the value of the designated parameter as a
              * <code>java.io.Reader</code> object in the Java programming language.
@@ -1971,7 +1971,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getCharacterStream(parameterName: string): java.io.Reader
+            getCharacterStream(parameterName: java.lang.String | string): java.io.Reader
             /**
              * Sets the designated parameter to the given <code>java.sql.Blob</code> object.
              * The driver converts this to an SQL <code>BLOB</code> value when it
@@ -1986,7 +1986,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBlob(parameterName: string, x: java.sql.Blob): void
+            setBlob(parameterName: java.lang.String | string, x: java.sql.Blob): void
             /**
              * Sets the designated parameter to the given <code>java.sql.Clob</code> object.
              * The driver converts this to an SQL <code>CLOB</code> value when it
@@ -2001,7 +2001,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setClob(parameterName: string, x: java.sql.Clob): void
+            setClob(parameterName: java.lang.String | string, x: java.sql.Clob): void
             /**
              * Sets the designated parameter to the given input stream, which will have
              * the specified number of bytes.
@@ -2024,7 +2024,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setAsciiStream(parameterName: string, x: java.io.InputStream, length: number /*long*/): void
+            setAsciiStream(parameterName: java.lang.String | string, x: java.io.InputStream, length: number /*long*/): void
             /**
              * Sets the designated parameter to the given input stream, which will have
              * the specified number of bytes.
@@ -2046,7 +2046,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBinaryStream(parameterName: string, x: java.io.InputStream, length: number /*long*/): void
+            setBinaryStream(parameterName: java.lang.String | string, x: java.io.InputStream, length: number /*long*/): void
             /**
              * Sets the designated parameter to the given <code>Reader</code>
              * object, which is the given number of characters long.
@@ -2070,7 +2070,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setCharacterStream(parameterName: string, reader: java.io.Reader, length: number /*long*/): void
+            setCharacterStream(parameterName: java.lang.String | string, reader: java.io.Reader, length: number /*long*/): void
             /**
              * Sets the designated parameter to the given input stream.
              * When a very large ASCII value is input to a <code>LONGVARCHAR</code>
@@ -2093,7 +2093,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setAsciiStream(parameterName: string, x: java.io.InputStream): void
+            setAsciiStream(parameterName: java.lang.String | string, x: java.io.InputStream): void
             /**
              * Sets the designated parameter to the given input stream.
              * When a very large binary value is input to a <code>LONGVARBINARY</code>
@@ -2115,7 +2115,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBinaryStream(parameterName: string, x: java.io.InputStream): void
+            setBinaryStream(parameterName: java.lang.String | string, x: java.io.InputStream): void
             /**
              * Sets the designated parameter to the given <code>Reader</code>
              * object.
@@ -2140,7 +2140,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setCharacterStream(parameterName: string, reader: java.io.Reader): void
+            setCharacterStream(parameterName: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object. The
              * <code>Reader</code> reads the data till end-of-file is reached. The
@@ -2163,7 +2163,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNCharacterStream(parameterName: string, value: java.io.Reader): void
+            setNCharacterStream(parameterName: java.lang.String | string, value: java.io.Reader): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.
              * This method differs from the <code>setCharacterStream (int, Reader)</code> method
@@ -2183,7 +2183,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setClob(parameterName: string, reader: java.io.Reader): void
+            setClob(parameterName: java.lang.String | string, reader: java.io.Reader): void
             /**
              * Sets the designated parameter to a <code>InputStream</code> object.
              * This method differs from the <code>setBinaryStream (int, InputStream)</code>
@@ -2204,7 +2204,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBlob(parameterName: string, inputStream: java.io.InputStream): void
+            setBlob(parameterName: java.lang.String | string, inputStream: java.io.InputStream): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object.
              * This method differs from the <code>setCharacterStream (int, Reader)</code> method
@@ -2226,7 +2226,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNClob(parameterName: string, reader: java.io.Reader): void
+            setNClob(parameterName: java.lang.String | string, reader: java.io.Reader): void
             /**
              * <p>Returns an object representing the value of OUT parameter
              * {@code parameterIndex} and will convert from the
@@ -2281,7 +2281,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getObject<T>(parameterName: string, type: java.lang.Class<T>): T
+            getObject<T>(parameterName: java.lang.String | string, type: java.lang.Class<T>): T
             /**
              * <p>Sets the value of the designated parameter with the given object.
              * If the second argument is an {@code InputStream} then the stream
@@ -2330,7 +2330,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * This method is similar to {@link #setObject(String parameterName,
@@ -2351,7 +2351,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setObject(parameterName: string, x: any, targetSqlType: java.sql.SQLType): void
+            setObject(parameterName: java.lang.String | string, x: java.lang.Object | any, targetSqlType: java.sql.SQLType): void
             /**
              * Registers the OUT parameter in ordinal position
              * {@code parameterIndex} to the JDBC type
@@ -2461,7 +2461,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            registerOutParameter(parameterIndex: number /*int*/, sqlType: java.sql.SQLType, typeName: string): void
+            registerOutParameter(parameterIndex: number /*int*/, sqlType: java.sql.SQLType, typeName: java.lang.String | string): void
             /**
              * Registers the OUT parameter named
              * <code>parameterName</code> to the JDBC type
@@ -2498,7 +2498,7 @@ declare namespace java {
              * @see SQLType
              */
             // @ts-ignore
-            registerOutParameter(parameterName: string, sqlType: java.sql.SQLType): void
+            registerOutParameter(parameterName: java.lang.String | string, sqlType: java.sql.SQLType): void
             /**
              * Registers the parameter named
              * <code>parameterName</code> to be of JDBC type
@@ -2531,7 +2531,7 @@ declare namespace java {
              * @see SQLType
              */
             // @ts-ignore
-            registerOutParameter(parameterName: string, sqlType: java.sql.SQLType, scale: number /*int*/): void
+            registerOutParameter(parameterName: java.lang.String | string, sqlType: java.sql.SQLType, scale: number /*int*/): void
             /**
              * Registers the designated output parameter.  This version of
              * the method {@code  registerOutParameter}
@@ -2573,7 +2573,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            registerOutParameter(parameterName: string, sqlType: java.sql.SQLType, typeName: string): void
+            registerOutParameter(parameterName: java.lang.String | string, sqlType: java.sql.SQLType, typeName: java.lang.String | string): void
         }
     }
 }

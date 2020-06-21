@@ -21,13 +21,13 @@ declare namespace javax {
              * @return The name of the engine implementation.
              */
             // @ts-ignore
-            getEngineName(): java.lang.String
+            getEngineName(): string
             /**
              * Returns the version of the <code>ScriptEngine</code>.
              * @return The <code>ScriptEngine</code> implementation version.
              */
             // @ts-ignore
-            getEngineVersion(): java.lang.String
+            getEngineVersion(): string
             /**
              * Returns an immutable list of filename extensions, which generally identify scripts
              * written in the language supported by this <code>ScriptEngine</code>.
@@ -36,7 +36,7 @@ declare namespace javax {
              * @return The list of extensions.
              */
             // @ts-ignore
-            getExtensions(): java.util.List<java.lang.String>
+            getExtensions(): Array<java.lang.String | string>
             /**
              * Returns an immutable list of mimetypes, associated with scripts that
              * can be executed by the engine.  The list is used by the
@@ -45,7 +45,7 @@ declare namespace javax {
              * @return The list of mime types.
              */
             // @ts-ignore
-            getMimeTypes(): java.util.List<java.lang.String>
+            getMimeTypes(): Array<java.lang.String | string>
             /**
              * Returns an immutable list of  short names for the <code>ScriptEngine</code>, which may be used to
              * identify the <code>ScriptEngine</code> by the <code>ScriptEngineManager</code>.
@@ -54,21 +54,21 @@ declare namespace javax {
              * @return an immutable list of short names
              */
             // @ts-ignore
-            getNames(): java.util.List<java.lang.String>
+            getNames(): Array<java.lang.String | string>
             /**
              * Returns the name of the scripting language supported by this
              * <code>ScriptEngine</code>.
              * @return The name of the supported language.
              */
             // @ts-ignore
-            getLanguageName(): java.lang.String
+            getLanguageName(): string
             /**
              * Returns the version of the scripting language supported by this
              * <code>ScriptEngine</code>.
              * @return The version of the supported language.
              */
             // @ts-ignore
-            getLanguageVersion(): java.lang.String
+            getLanguageVersion(): string
             /**
              * Returns the value of an attribute whose meaning may be implementation-specific.
              * Keys for which the value is defined in all implementations are:
@@ -109,7 +109,7 @@ declare namespace javax {
              *  value is assigned to the key.
              */
             // @ts-ignore
-            getParameter(key: string): java.lang.Object
+            getParameter(key: java.lang.String | string): any
             /**
              * Returns a String which can be used to invoke a method of a  Java object using the syntax
              * of the supported scripting language.  For instance, an implementation for a Javascript
@@ -141,7 +141,7 @@ declare namespace javax {
              * @return The String used to invoke the method in the syntax of the scripting language.
              */
             // @ts-ignore
-            getMethodCallSyntax(obj: string, m: string, ...args: string[]): java.lang.String
+            getMethodCallSyntax(obj: java.lang.String | string, m: java.lang.String | string, ...args: java.lang.String[] | string[]): string
             /**
              * Returns a String that can be used as a statement to display the specified String  using
              * the syntax of the supported scripting language.  For instance, the implementation for a Perl
@@ -155,7 +155,7 @@ declare namespace javax {
              * @return The string used to display the String in the syntax of the scripting language.
              */
             // @ts-ignore
-            getOutputStatement(toDisplay: string): java.lang.String
+            getOutputStatement(toDisplay: java.lang.String | string): string
             /**
              * Returns a valid scripting language executable program with given statements.
              * For instance an implementation for a PHP engine might be:
@@ -174,7 +174,7 @@ declare namespace javax {
              * @return The Program
              */
             // @ts-ignore
-            getProgram(...statements: string[]): java.lang.String
+            getProgram(...statements: java.lang.String[] | string[]): string
             /**
              * Returns an instance of the <code>ScriptEngine</code> associated with this
              * <code>ScriptEngineFactory</code>. A new ScriptEngine is generally

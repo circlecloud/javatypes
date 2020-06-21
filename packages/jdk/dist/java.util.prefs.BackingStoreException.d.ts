@@ -15,13 +15,13 @@ declare namespace java {
                  * @param s the detail message.
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Constructs a BackingStoreException with the specified cause.
                  * @param cause the cause
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

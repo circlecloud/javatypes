@@ -11,21 +11,21 @@ declare namespace org {
                     // @ts-ignore
                     class Rotations extends java.lang.Object {
                         // @ts-ignore
-                        readonly BOTTOM: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly BOTTOM: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly BOTTOM_LEFT: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly BOTTOM_LEFT: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly BOTTOM_RIGHT: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly BOTTOM_RIGHT: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly LEFT: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly LEFT: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly RIGHT: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly RIGHT: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly TOP: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly TOP: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly TOP_LEFT: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly TOP_LEFT: org.spongepowered.api.util.rotation.Rotation
                         // @ts-ignore
-                        readonly TOP_RIGHT: org.spongepowered.api.util.rotation.Rotation
+                        public static readonly TOP_RIGHT: org.spongepowered.api.util.rotation.Rotation
                     }
                 }
             }

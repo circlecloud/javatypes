@@ -12,17 +12,17 @@ declare namespace org {
                     // @ts-ignore
                     constructor(key: K, value: V)
                     // @ts-ignore
-                    getKey(): K
+                    public getKey(): K
                     // @ts-ignore
-                    getValue(): V
+                    public getValue(): V
                     // @ts-ignore
-                    setValue(value: V): V
+                    public setValue(value: V): V
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

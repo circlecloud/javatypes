@@ -31,7 +31,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            class AbstractFormatter extends java.lang.Object implements java.io.Serializable {
+            abstract class AbstractFormatter extends java.lang.Object implements java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -67,7 +67,7 @@ declare namespace javax {
                  *             uninstall from current JFormattedTextField.
                  */
                 // @ts-ignore
-                install(ftf: javax.swing.JFormattedTextField): void
+                public install(ftf: javax.swing.JFormattedTextField): void
                 /**
                  * Uninstalls any state the <code>AbstractFormatter</code> may have
                  * installed on the <code>JFormattedTextField</code>. This resets the
@@ -76,7 +76,7 @@ declare namespace javax {
                  * <code>JFormattedTextField</code>.
                  */
                 // @ts-ignore
-                uninstall(): void
+                public uninstall(): void
                 /**
                  * Parses <code>text</code> returning an arbitrary Object. Some
                  * formatters may return null.
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @return Object representation of text
                  */
                 // @ts-ignore
-                abstract stringToValue(text: string): java.lang.Object
+                public abstract stringToValue(text: java.lang.String | string): any
                 /**
                  * Returns the string value to display for <code>value</code>.
                  * @throws ParseException if there is an error in the conversion
@@ -93,7 +93,7 @@ declare namespace javax {
                  * @return String representation of value
                  */
                 // @ts-ignore
-                abstract valueToString(value: any): java.lang.String
+                public abstract valueToString(value: java.lang.Object | any): string
                 /**
                  * Returns the current <code>JFormattedTextField</code> the
                  * <code>AbstractFormatter</code> is installed on.
@@ -148,7 +148,7 @@ declare namespace javax {
                  * @return Copy of the AbstractFormatter
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

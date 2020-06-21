@@ -18,11 +18,11 @@ declare namespace javax {
                     // @ts-ignore
                     menuListener: javax.swing.event.MenuListener
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
                     installListeners(): void
                     // @ts-ignore
@@ -46,7 +46,7 @@ declare namespace javax {
                     // @ts-ignore
                     createMenuKeyListener(c: javax.swing.JComponent): javax.swing.event.MenuKeyListener
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
                     setupPostTimer(menu: javax.swing.JMenu): void
                 }

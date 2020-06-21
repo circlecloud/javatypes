@@ -12,7 +12,7 @@ declare namespace org {
                  * @since 26.12.2003
                  */
                 // @ts-ignore
-                class RemoteExporter extends org.springframework.remoting.support.RemotingSupport {
+                abstract class RemoteExporter extends org.springframework.remoting.support.RemotingSupport {
                     // @ts-ignore
                     constructor()
                     /**
@@ -20,23 +20,23 @@ declare namespace org {
                      * Typically populated via a bean reference.
                      */
                     // @ts-ignore
-                    setService(service: any): void
+                    public setService(service: java.lang.Object | any): void
                     /**
                      * Return the service to export.
                      */
                     // @ts-ignore
-                    getService(): java.lang.Object
+                    public getService(): any
                     /**
                      * Set the interface of the service to export.
                      * The interface must be suitable for the particular service and remoting strategy.
                      */
                     // @ts-ignore
-                    setServiceInterface(serviceInterface: java.lang.Class<any>): void
+                    public setServiceInterface(serviceInterface: java.lang.Class<any>): void
                     /**
                      * Return the interface of the service to export.
                      */
                     // @ts-ignore
-                    getServiceInterface(): java.lang.Class<?>
+                    public getServiceInterface(): java.lang.Class<any>
                     /**
                      * Set whether to register a RemoteInvocationTraceInterceptor for exported
                      * services. Only applied when a subclass uses {@code getProxyForService}
@@ -50,7 +50,7 @@ declare namespace org {
                      * @see RemoteInvocationTraceInterceptor
                      */
                     // @ts-ignore
-                    setRegisterTraceInterceptor(registerTraceInterceptor: boolean): void
+                    public setRegisterTraceInterceptor(registerTraceInterceptor: boolean): void
                     /**
                      * Set additional interceptors (or advisors) to be applied before the
                      * remote endpoint, e.g. a PerformanceMonitorInterceptor.
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see org.springframework.aop.interceptor.PerformanceMonitorInterceptor
                      */
                     // @ts-ignore
-                    setInterceptors(interceptors: any[]): void
+                    public setInterceptors(interceptors: java.lang.Object[] | any[]): void
                     /**
                      * Check whether the service reference has been set.
                      * @see #setService
@@ -87,7 +87,7 @@ declare namespace org {
                      * @see RemoteInvocationTraceInterceptor
                      */
                     // @ts-ignore
-                    getProxyForService(): java.lang.Object
+                    getProxyForService(): any
                     /**
                      * Return a short name for this exporter.
                      * Used for tracing of remote invocations.
@@ -98,7 +98,7 @@ declare namespace org {
                      * @see org.springframework.util.ClassUtils#getShortName
                      */
                     // @ts-ignore
-                    getExporterName(): java.lang.String
+                    getExporterName(): string
                 }
             }
         }

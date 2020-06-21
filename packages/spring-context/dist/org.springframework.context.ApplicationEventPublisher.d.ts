@@ -47,7 +47,7 @@ declare namespace org {
                  * @see PayloadApplicationEvent
                  */
                 // @ts-ignore
-                publishEvent(event: any): void
+                publishEvent(event: java.lang.Object | any): void
             }
         }
     }

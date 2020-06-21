@@ -35,14 +35,14 @@ declare namespace javax {
                      *                   or OPTIONAL, or if {@code options} is null.
                      */
                     // @ts-ignore
-                    constructor(loginModuleName: string, controlFlag: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag, options: java.util.Map<java.lang.String, any>)
+                    constructor(loginModuleName: java.lang.String | string, controlFlag: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag, options: java.util.Map<java.lang.String | string, any>)
                     /**
                      * Get the class name of the configured {@code LoginModule}.
                      * @return the class name of the configured {#code LoginModule} as
                      *           a String.
                      */
                     // @ts-ignore
-                    getLoginModuleName(): java.lang.String
+                    public getLoginModuleName(): string
                     /**
                      * Return the controlFlag
                      * (either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL)
@@ -52,14 +52,14 @@ declare namespace javax {
                      *           for this {#code LoginModule}.
                      */
                     // @ts-ignore
-                    getControlFlag(): javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
+                    public getControlFlag(): javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
                     /**
                      * Get the options configured for this {@code LoginModule}.
                      * @return the options configured for this {#code LoginModule}
                      *           as an unmodifiable {@code Map}.
                      */
                     // @ts-ignore
-                    getOptions(): java.util.Map<java.lang.String, ?>
+                    public getOptions(): java.util.Map<java.lang.String | string, any>
                 }
             }
         }

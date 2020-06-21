@@ -11,7 +11,7 @@ declare namespace org {
                  * @return current puff state
                  */
                 // @ts-ignore
-                getPuffState(): int
+                getPuffState(): number /*int*/
                 /**
                  * Sets the current puff state of this fish (i.e. how inflated it is).
                  * @param state new puff state

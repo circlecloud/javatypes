@@ -16,24 +16,24 @@ declare namespace javax {
                      * @param name  the name of the new control type.
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Finalizes the equals method
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashCode method
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Provides the <code>String</code> representation of the control type.  This <code>String</code> is
                      * the same name that was passed to the constructor.
                      * @return the control type name
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

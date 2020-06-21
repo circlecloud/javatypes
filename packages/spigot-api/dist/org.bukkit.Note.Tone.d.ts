@@ -6,6 +6,20 @@ declare namespace org {
              */
             // @ts-ignore
             class Tone extends java.lang.Enum<org.bukkit.Note.Tone> {
+                // @ts-ignore
+                readonly G: org.bukkit.Note.Tone
+                // @ts-ignore
+                readonly A: org.bukkit.Note.Tone
+                // @ts-ignore
+                readonly B: org.bukkit.Note.Tone
+                // @ts-ignore
+                readonly C: org.bukkit.Note.Tone
+                // @ts-ignore
+                readonly D: org.bukkit.Note.Tone
+                // @ts-ignore
+                readonly E: org.bukkit.Note.Tone
+                // @ts-ignore
+                readonly F: org.bukkit.Note.Tone
                 /**
                  * The number of tones including sharped tones.
                  */
@@ -14,14 +28,14 @@ declare namespace org {
                 // @ts-ignore
                 values(): org.bukkit.Note.Tone[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.Note.Tone
+                valueOf(name: java.lang.String | string): org.bukkit.Note.Tone
                 /**
                  * Returns the not sharped id of this tone.
                  * @return the not sharped id of this tone.
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getId(): byte
+                getId(): number /*byte*/
                 /**
                  * Returns the id of this tone. These method allows to return the
                  * sharped id of the tone. If the tone couldn't be sharped it always
@@ -31,7 +45,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getId(sharped: boolean): byte
+                getId(sharped: boolean): number /*byte*/
                 /**
                  * Returns if this tone could be sharped.
                  * @return if this tone could be sharped.

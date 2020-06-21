@@ -100,7 +100,7 @@ declare namespace javax {
              *      error while constructing the stream.
              */
             // @ts-ignore
-            getPrintData(): java.lang.Object
+            getPrintData(): any
             /**
              * Obtains the set of printing attributes for this doc object. If the
              * returned attribute set includes an instance of a particular attribute

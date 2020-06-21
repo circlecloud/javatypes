@@ -19,7 +19,7 @@ declare namespace org {
                      *  the expected type
                      */
                     // @ts-ignore
-                    constructor(name: string, actualType: java.lang.Class<any>)
+                    constructor(name: java.lang.String | string, actualType: java.lang.Class<any>)
                 }
             }
         }

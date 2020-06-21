@@ -42,9 +42,9 @@ declare namespace org {
                  * @return The changed recipe, so you can chain calls.
                  */
                 // @ts-ignore
-                setInput(input: org.bukkit.material.MaterialData): org.bukkit.inventory.FurnaceRecipe
+                public setInput(input: org.bukkit.material.MaterialData): org.bukkit.inventory.FurnaceRecipe
                 // @ts-ignore
-                setInput(input: org.bukkit.Material): org.bukkit.inventory.FurnaceRecipe
+                public setInput(input: org.bukkit.Material): org.bukkit.inventory.FurnaceRecipe
                 /**
                  * Sets the input of this furnace recipe.
                  * @param input The input material.
@@ -54,9 +54,9 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                setInput(input: org.bukkit.Material, data: number /*int*/): org.bukkit.inventory.FurnaceRecipe
+                public setInput(input: org.bukkit.Material, data: number /*int*/): org.bukkit.inventory.FurnaceRecipe
                 // @ts-ignore
-                setInputChoice(input: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.FurnaceRecipe
+                public setInputChoice(input: org.bukkit.inventory.RecipeChoice): org.bukkit.inventory.FurnaceRecipe
             }
         }
     }

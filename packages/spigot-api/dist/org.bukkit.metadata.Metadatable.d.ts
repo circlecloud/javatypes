@@ -15,7 +15,7 @@ declare namespace org {
                  *      is null
                  */
                 // @ts-ignore
-                setMetadata(metadataKey: string, newMetadataValue: org.bukkit.metadata.MetadataValue): void
+                setMetadata(metadataKey: java.lang.String | string, newMetadataValue: org.bukkit.metadata.MetadataValue): void
                 /**
                  * Returns a list of previously set metadata values from the implementing
                  * object's metadata store.
@@ -24,7 +24,7 @@ declare namespace org {
                  *      requested value.
                  */
                 // @ts-ignore
-                getMetadata(metadataKey: string): java.util.List<org.bukkit.metadata.MetadataValue>
+                getMetadata(metadataKey: java.lang.String | string): Array<org.bukkit.metadata.MetadataValue>
                 /**
                  * Tests to see whether the implementing object contains the given
                  * metadata value in its metadata store.
@@ -32,7 +32,7 @@ declare namespace org {
                  * @return the existence of the metadataKey within subject.
                  */
                 // @ts-ignore
-                hasMetadata(metadataKey: string): boolean
+                hasMetadata(metadataKey: java.lang.String | string): boolean
                 /**
                  * Removes the given metadata value from the implementing object's
                  * metadata store.
@@ -43,7 +43,7 @@ declare namespace org {
                  * @throws IllegalArgumentException If plugin is null
                  */
                 // @ts-ignore
-                removeMetadata(metadataKey: string, owningPlugin: org.bukkit.plugin.Plugin): void
+                removeMetadata(metadataKey: java.lang.String | string, owningPlugin: org.bukkit.plugin.Plugin): void
             }
         }
     }

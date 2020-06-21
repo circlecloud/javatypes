@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 1.1
                  */
                 // @ts-ignore
-                class RmiClientInterceptorUtils extends java.lang.Object {
+                abstract class RmiClientInterceptorUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -22,7 +22,7 @@ declare namespace org {
                      * @throws InvocationTargetException if thrown by reflection
                      */
                     // @ts-ignore
-                    invokeRemoteMethod(invocation: MethodInvocation, stub: any): java.lang.Object
+                    public static invokeRemoteMethod(invocation: MethodInvocation, stub: java.lang.Object | any): any
                     /**
                      * Wrap the given arbitrary exception that happened during remote access
                      * in either a RemoteException or a Spring RemoteAccessException (if the
@@ -37,7 +37,7 @@ declare namespace org {
                      * @return the exception to be thrown to the caller
                      */
                     // @ts-ignore
-                    convertRmiAccessException(method: java.lang.reflect.Method, ex: Error, message: string): java.lang.Exception
+                    public static convertRmiAccessException(method: java.lang.reflect.Method, ex: java.lang.Throwable | Error, message: java.lang.String | string): java.lang.Exception
                     /**
                      * Convert the given RemoteException that happened during remote access
                      * to Spring's RemoteAccessException if the method signature does not
@@ -48,7 +48,7 @@ declare namespace org {
                      * @return the exception to be thrown to the caller
                      */
                     // @ts-ignore
-                    convertRmiAccessException(method: java.lang.reflect.Method, ex: java.rmi.RemoteException, serviceName: string): java.lang.Exception
+                    public static convertRmiAccessException(method: java.lang.reflect.Method, ex: java.rmi.RemoteException, serviceName: java.lang.String | string): java.lang.Exception
                     /**
                      * Convert the given RemoteException that happened during remote access
                      * to Spring's RemoteAccessException if the method signature does not
@@ -61,7 +61,7 @@ declare namespace org {
                      * @return the exception to be thrown to the caller
                      */
                     // @ts-ignore
-                    convertRmiAccessException(method: java.lang.reflect.Method, ex: java.rmi.RemoteException, isConnectFailure: boolean, serviceName: string): java.lang.Exception
+                    public static convertRmiAccessException(method: java.lang.reflect.Method, ex: java.rmi.RemoteException, isConnectFailure: boolean, serviceName: java.lang.String | string): java.lang.Exception
                     /**
                      * Determine whether the given RMI exception indicates a connect failure.
                      * <p>Treats RMI's ConnectException, ConnectIOException, UnknownHostException,
@@ -75,7 +75,7 @@ declare namespace org {
                      * @see java.rmi.StubNotFoundException
                      */
                     // @ts-ignore
-                    isConnectFailure(ex: java.rmi.RemoteException): boolean
+                    public static isConnectFailure(ex: java.rmi.RemoteException): boolean
                 }
             }
         }

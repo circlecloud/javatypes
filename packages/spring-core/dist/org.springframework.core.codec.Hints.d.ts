@@ -9,21 +9,21 @@ declare namespace org {
                  * @see ResourceRegionEncoder#BOUNDARY_STRING_HINT
                  */
                 // @ts-ignore
-                class Hints extends java.lang.Object {
+                abstract class Hints extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
                      * Name of hint exposing a prefix to use for correlating log messages.
                      */
                     // @ts-ignore
-                    readonly LOG_PREFIX_HINT: string
+                    public static readonly LOG_PREFIX_HINT: java.lang.String | string
                     /**
                      * Name of boolean hint whether to avoid logging data either because it's
                      * potentially sensitive, or because it has been logged by a composite
                      * encoder, e.g. for multipart requests.
                      */
                     // @ts-ignore
-                    readonly SUPPRESS_LOGGING_HINT: string
+                    public static readonly SUPPRESS_LOGGING_HINT: java.lang.String | string
                     /**
                      * Create a map wit a single hint via {@link Collections#singletonMap}.
                      * @param hintName the hint name
@@ -31,13 +31,13 @@ declare namespace org {
                      * @return the created map
                      */
                     // @ts-ignore
-                    from(hintName: string, value: any): java.util.Map<java.lang.String, java.lang.Object>
+                    public static from(hintName: java.lang.String | string, value: java.lang.Object | any): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Return an empty map of hints via {@link Collections#emptyMap()}.
                      * @return the empty map
                      */
                     // @ts-ignore
-                    none(): java.util.Map<java.lang.String, java.lang.Object>
+                    public static none(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Obtain the value for a required hint.
                      * @param hints the hints map
@@ -47,21 +47,21 @@ declare namespace org {
                      * @throws IllegalArgumentException if the hint is not found
                      */
                     // @ts-ignore
-                    getRequiredHint<T>(hints: java.util.Map<java.lang.String, java.lang.Object>, hintName: string): T
+                    public static getRequiredHint<T>(hints: java.util.Map<java.lang.String | string, java.lang.Object | any>, hintName: java.lang.String | string): T
                     /**
                      * Obtain the hint {@link #LOG_PREFIX_HINT}, if present, or an empty String.
                      * @param hints the hints passed to the encode method
                      * @return the log prefix
                      */
                     // @ts-ignore
-                    getLogPrefix(hints: java.util.Map<java.lang.String, java.lang.Object>): java.lang.String
+                    public static getLogPrefix(hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): string
                     /**
                      * Whether to suppress logging based on the hint {@link #SUPPRESS_LOGGING_HINT}.
                      * @param hints the hints map
                      * @return whether logging of data is allowed
                      */
                     // @ts-ignore
-                    isLoggingSuppressed(hints: java.util.Map<java.lang.String, java.lang.Object>): boolean
+                    public static isLoggingSuppressed(hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): boolean
                     /**
                      * Merge two maps of hints, creating and copying into a new map if both have
                      * values, or returning the non-empty map, or an empty map if both are empty.
@@ -70,7 +70,7 @@ declare namespace org {
                      * @return a single map with hints from both
                      */
                     // @ts-ignore
-                    merge(hints1: java.util.Map<java.lang.String, java.lang.Object>, hints2: java.util.Map<java.lang.String, java.lang.Object>): java.util.Map<java.lang.String, java.lang.Object>
+                    public static merge(hints1: java.util.Map<java.lang.String | string, java.lang.Object | any>, hints2: java.util.Map<java.lang.String | string, java.lang.Object | any>): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Merge a single hint into a map of hints, possibly creating and copying
                      * all hints into a new map, or otherwise if the map of hints is empty,
@@ -81,7 +81,7 @@ declare namespace org {
                      * @return a single map with all hints
                      */
                     // @ts-ignore
-                    merge(hints: java.util.Map<java.lang.String, java.lang.Object>, hintName: string, hintValue: any): java.util.Map<java.lang.String, java.lang.Object>
+                    public static merge(hints: java.util.Map<java.lang.String | string, java.lang.Object | any>, hintName: java.lang.String | string, hintValue: java.lang.Object | any): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

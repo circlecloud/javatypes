@@ -20,7 +20,7 @@ declare namespace org {
                  * @param input The input message into the conversation
                  */
                 // @ts-ignore
-                acceptConversationInput(input: string): void
+                acceptConversationInput(input: java.lang.String | string): void
                 /**
                  * Enters into a dialog with a Conversation object.
                  * @param conversation The conversation to begin
@@ -47,7 +47,7 @@ declare namespace org {
                  * @param message Message to be displayed
                  */
                 // @ts-ignore
-                sendRawMessage(message: string): void
+                sendRawMessage(message: java.lang.String | string): void
             }
         }
     }

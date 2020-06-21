@@ -17,13 +17,13 @@ declare namespace org {
                              * @return The list of living targets
                              */
                             // @ts-ignore
-                            getTargets(): java.util.List<org.spongepowered.api.entity.living.Living>
+                            getTargets(): Array<org.spongepowered.api.entity.living.Living>
                             /**
                              * Sets the list of living targets.
                              * @param targets The targets
                              */
                             // @ts-ignore
-                            setTargets(targets: Array<org.spongepowered.api.entity.living.Living>): void
+                            setTargets(targets: java.util.List<org.spongepowered.api.entity.living.Living> | Array<org.spongepowered.api.entity.living.Living>): void
                             /**
                              * Gets the boss bar this wither uses.
                              * @return The boss bar

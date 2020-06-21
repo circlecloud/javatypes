@@ -19,13 +19,13 @@ declare namespace java {
              * @param password the user's password
              */
             // @ts-ignore
-            constructor(userName: string, password: string[])
+            constructor(userName: java.lang.String | string, password: string[])
             /**
              * Returns the user name.
              * @return the user name
              */
             // @ts-ignore
-            getUserName(): java.lang.String
+            public getUserName(): string
             /**
              * Returns the user password.
              * <p> Note that this method returns a reference to the password. It is
@@ -34,7 +34,7 @@ declare namespace java {
              * @return the password
              */
             // @ts-ignore
-            getPassword(): char[]
+            public getPassword(): string[]
         }
     }
 }

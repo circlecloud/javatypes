@@ -24,19 +24,19 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class FocusAdapter extends java.lang.Object implements java.awt.event.FocusListener {
+            abstract class FocusAdapter extends java.lang.Object implements java.awt.event.FocusListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * Invoked when a component gains the keyboard focus.
                  */
                 // @ts-ignore
-                focusGained(e: java.awt.event.FocusEvent): void
+                public focusGained(e: java.awt.event.FocusEvent): void
                 /**
                  * Invoked when a component loses the keyboard focus.
                  */
                 // @ts-ignore
-                focusLost(e: java.awt.event.FocusEvent): void
+                public focusLost(e: java.awt.event.FocusEvent): void
             }
         }
     }

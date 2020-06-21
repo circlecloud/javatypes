@@ -26,9 +26,9 @@ declare namespace javax {
                     // @ts-ignore
                     createMouseInputListener(): javax.swing.event.MouseInputListener
                     // @ts-ignore
-                    createUI(h: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(h: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Initializes JTableHeader properties such as font, foreground, and background.
                      * The font, foreground, and background properties are only set if their
@@ -49,7 +49,7 @@ declare namespace javax {
                     // @ts-ignore
                     installKeyboardActions(): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallDefaults(): void
                     // @ts-ignore
@@ -68,7 +68,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getRolloverColumn(): int
+                    getRolloverColumn(): number /*int*/
                     /**
                      * This method gets called every time when a rollover column in the table
                      * header is updated. Every look and feel that supports a rollover effect
@@ -91,15 +91,15 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Return the minimum size of the header. The minimum width is the sum
                      * of the minimum widths of each column (plus inter-cell spacing).
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Return the preferred size of the header. The preferred height is the
                      * maximum of the preferred heights of all of the components provided
@@ -107,13 +107,13 @@ declare namespace javax {
                      * preferred widths of each column (plus inter-cell spacing).
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Return the maximum size of the header. The maximum width is the sum
                      * of the maximum widths of each column (plus inter-cell spacing).
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                 }
             }
         }

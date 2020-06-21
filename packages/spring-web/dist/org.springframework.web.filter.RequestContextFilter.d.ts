@@ -37,7 +37,7 @@ declare namespace org {
                      * since this will expose the inherited context to such a pooled thread.
                      */
                     // @ts-ignore
-                    setThreadContextInheritable(threadContextInheritable: boolean): void
+                    public setThreadContextInheritable(threadContextInheritable: boolean): void
                     /**
                      * Returns "false" so that the filter may set up the request context in each
                      * asynchronously dispatched thread.

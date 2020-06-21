@@ -49,7 +49,7 @@ declare namespace java {
          * @jls 9.6.3.7 #SafeVarargs
          */
         // @ts-ignore
-        class SafeVarargs implements java.lang.annotation.Annotation {
+        abstract class SafeVarargs implements java.lang.annotation.Annotation {
         }
     }
 }

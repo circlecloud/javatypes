@@ -15,7 +15,7 @@ declare namespace java {
              * @return the {#code InetAddress} for this address.
              */
             // @ts-ignore
-            getAddress(): java.net.InetAddress
+            public getAddress(): java.net.InetAddress
             /**
              * Returns an {@code InetAddress} for the broadcast address
              * for this InterfaceAddress.
@@ -26,7 +26,7 @@ declare namespace java {
              *          address or {@code null} if there is no broadcast address.
              */
             // @ts-ignore
-            getBroadcast(): java.net.InetAddress
+            public getBroadcast(): java.net.InetAddress
             /**
              * Returns the network prefix length for this address. This is also known
              * as the subnet mask in the context of IPv4 addresses.
@@ -37,7 +37,7 @@ declare namespace java {
              *          subnet of that address.
              */
             // @ts-ignore
-            getNetworkPrefixLength(): short
+            public getNetworkPrefixLength(): number /*short*/
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -53,20 +53,20 @@ declare namespace java {
              * @see java.net.InterfaceAddress#hashCode()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hashcode for this Interface address.
              * @return a hash code value for this Interface address.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Converts this Interface address to a {@code String}. The
              * string returned is of the form: InetAddress / prefix length [ broadcast address ].
              * @return a string representation of this Interface address.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

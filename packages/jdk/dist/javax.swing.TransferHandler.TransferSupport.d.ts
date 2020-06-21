@@ -40,13 +40,13 @@ declare namespace javax {
                  *          <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isDrop(): boolean
+                public isDrop(): boolean
                 /**
                  * Returns the target component of this transfer.
                  * @return the target component
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * Returns the current (non-{@code null}) drop location for the component,
                  * when this {@code TransferSupport} represents a drop.
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @see #isDrop()
                  */
                 // @ts-ignore
-                getDropLocation(): javax.swing.TransferHandler.DropLocation
+                public getDropLocation(): javax.swing.TransferHandler.DropLocation
                 /**
                  * Sets whether or not the drop location should be visually indicated
                  * for the transfer - which must represent a drop. This is applicable to
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see #isDrop()
                  */
                 // @ts-ignore
-                setShowDropLocation(showDropLocation: boolean): void
+                public setShowDropLocation(showDropLocation: boolean): void
                 /**
                  * Sets the drop action for the transfer - which must represent a drop
                  * - to the given action,
@@ -102,7 +102,7 @@ declare namespace javax {
                  * @see #isDrop()
                  */
                 // @ts-ignore
-                setDropAction(dropAction: number /*int*/): void
+                public setDropAction(dropAction: number /*int*/): void
                 /**
                  * Returns the action chosen for the drop, when this
                  * {@code TransferSupport} represents a drop.
@@ -125,7 +125,7 @@ declare namespace javax {
                  * @see #isDrop()
                  */
                 // @ts-ignore
-                getDropAction(): int
+                public getDropAction(): number /*int*/
                 /**
                  * Returns the user drop action for the drop, when this
                  * {@code TransferSupport} represents a drop.
@@ -150,7 +150,7 @@ declare namespace javax {
                  * @see #isDrop()
                  */
                 // @ts-ignore
-                getUserDropAction(): int
+                public getUserDropAction(): number /*int*/
                 /**
                  * Returns the drag source's supported drop actions, when this
                  * {@code TransferSupport} represents a drop.
@@ -176,20 +176,20 @@ declare namespace javax {
                  * @see #isDrop()
                  */
                 // @ts-ignore
-                getSourceDropActions(): int
+                public getSourceDropActions(): number /*int*/
                 /**
                  * Returns the data flavors for this transfer.
                  * @return the data flavors for this transfer
                  */
                 // @ts-ignore
-                getDataFlavors(): java.awt.datatransfer.DataFlavor[]
+                public getDataFlavors(): java.awt.datatransfer.DataFlavor[]
                 /**
                  * Returns whether or not the given data flavor is supported.
                  * @param df the <code>DataFlavor</code> to test
                  * @return whether or not the given flavor is supported.
                  */
                 // @ts-ignore
-                isDataFlavorSupported(df: java.awt.datatransfer.DataFlavor): boolean
+                public isDataFlavorSupported(df: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * Returns the <code>Transferable</code> associated with this transfer.
                  * <p>
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @return the <code>Transferable</code> associated with this transfer
                  */
                 // @ts-ignore
-                getTransferable(): java.awt.datatransfer.Transferable
+                public getTransferable(): java.awt.datatransfer.Transferable
             }
         }
     }

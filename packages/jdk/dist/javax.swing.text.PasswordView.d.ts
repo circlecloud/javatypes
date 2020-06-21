@@ -31,7 +31,7 @@ declare namespace javax {
                  * @exception BadLocationException if p0 or p1 are out of range
                  */
                 // @ts-ignore
-                drawUnselectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): int
+                drawUnselectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Renders the given range in the model as selected text.  This
                  * is implemented to render the text in the color specified in
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @exception BadLocationException if p0 or p1 are out of range
                  */
                 // @ts-ignore
-                drawSelectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): int
+                drawSelectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Renders the echo character, or whatever graphic should be used
                  * to display the password characters.  The color in the Graphics
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @return the updated X position &gt;= 0
                  */
                 // @ts-ignore
-                drawEchoCharacter(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, c: string): int
+                drawEchoCharacter(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, c: string): number /*int*/
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -84,7 +84,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(fx: number /*float*/, fy: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(fx: number /*float*/, fy: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Determines the preferred span for this view along an
                  * axis.
@@ -95,7 +95,7 @@ declare namespace javax {
                  *            The parent may choose to resize or break the view.
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
             }
         }
     }

@@ -34,7 +34,7 @@ declare namespace java {
                  * @throws NullPointerException if {#code baseName} is {@code null}
                  */
                 // @ts-ignore
-                getControl(baseName: string): java.util.ResourceBundle.Control
+                getControl(baseName: java.lang.String | string): java.util.ResourceBundle.Control
             }
         }
     }

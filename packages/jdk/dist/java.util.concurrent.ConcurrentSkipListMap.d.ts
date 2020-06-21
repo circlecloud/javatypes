@@ -63,7 +63,7 @@ declare namespace java {
                  *         ordering} of the keys will be used.
                  */
                 // @ts-ignore
-                constructor(comparator: java.util.Comparator<any super K>)
+                constructor(comparator: java.util.Comparator<any>)
                 /**
                  * Constructs a new map containing the same mappings as the given map,
                  * sorted according to the {@linkplain Comparable natural ordering} of
@@ -75,7 +75,7 @@ declare namespace java {
                  *          or values are null
                  */
                 // @ts-ignore
-                constructor(m: java.util.Map<K, V>)
+                constructor(m: java.util.Map<any, any>)
                 /**
                  * Constructs a new map containing the same mappings and using the
                  * same ordering as the specified sorted map.
@@ -85,14 +85,14 @@ declare namespace java {
                  *          its keys or values are null
                  */
                 // @ts-ignore
-                constructor(m: java.util.SortedMap<K, V>)
+                constructor(m: java.util.SortedMap<K, any>)
                 /**
                  * Returns a shallow copy of this {@code ConcurrentSkipListMap}
                  * instance. (The keys and values themselves are not cloned.)
                  * @return a shallow copy of this map
                  */
                 // @ts-ignore
-                clone(): java.util.concurrent.ConcurrentSkipListMap<K, V>
+                public clone(): java.util.concurrent.ConcurrentSkipListMap<K, V>
                 /**
                  * Returns {@code true} if this map contains a mapping for the specified
                  * key.
@@ -103,7 +103,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 /**
                  * Returns the value to which the specified key is mapped,
                  * or {@code null} if this map contains no mapping for the key.
@@ -117,7 +117,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                get(key: any): V
+                public get(key: java.lang.Object | any): V
                 /**
                  * Returns the value to which the specified key is mapped,
                  * or the given defaultValue if this map contains no mapping for the key.
@@ -129,7 +129,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getOrDefault(key: any, defaultValue: V): V
+                public getOrDefault(key: java.lang.Object | any, defaultValue: V): V
                 /**
                  * Associates the specified value with the specified key in this map.
                  * If the map previously contained a mapping for the key, the old
@@ -143,7 +143,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key or value is null
                  */
                 // @ts-ignore
-                put(key: K, value: V): V
+                public put(key: K, value: V): V
                 /**
                  * Removes the mapping for the specified key from this map if present.
                  * @param key key for which mapping should be removed
@@ -154,7 +154,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                remove(key: any): V
+                public remove(key: java.lang.Object | any): V
                 /**
                  * Returns {@code true} if this map maps one or more keys to the
                  * specified value.  This operation requires time linear in the
@@ -167,7 +167,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified value is null
                  */
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 /**
                  * Returns the number of key-value mappings in this map.  If this map
                  * contains more than {@code Integer.MAX_VALUE} elements, it
@@ -183,18 +183,18 @@ declare namespace java {
                  * @return the number of elements in this map
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns {@code true} if this map contains no key-value mappings.
                  * @return {#code true} if this map contains no key-value mappings
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Removes all of the mappings from this map.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * If the specified key is not already associated with a value,
                  * attempts to compute its value using the given mapping function
@@ -210,7 +210,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                computeIfAbsent(key: K, mappingFunction: java.util.function.Function<any super K, V> | java.util.function$.Function<? super K, V>): V
+                public computeIfAbsent(key: K, mappingFunction: java.util.function$.Function<any, any>): V
                 /**
                  * If the value for the specified key is present, attempts to
                  * compute a new mapping given the key and its current mapped
@@ -224,7 +224,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                computeIfPresent(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+                public computeIfPresent(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * Attempts to compute a mapping for the specified key and its
                  * current mapped value (or {@code null} if there is no current
@@ -238,7 +238,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                compute(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+                public compute(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * If the specified key is not already associated with a value,
                  * associates it with the given value.  Otherwise, replaces the
@@ -254,7 +254,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                merge(key: K, value: V, remappingFunction: java.util.function.BiFunction<any super V, ? super V, V> | java.util.function$.BiFunction<? super V, ? super V, V>): V
+                public merge(key: K, value: V, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * Returns a {@link NavigableSet} view of the keys contained in this map.
                  * <p>The set's iterator returns the keys in ascending order.
@@ -279,9 +279,9 @@ declare namespace java {
                  * @return a navigable set view of the keys in this map
                  */
                 // @ts-ignore
-                keySet(): java.util.NavigableSet<K>
+                public keySet(): java.util.NavigableSet<K>
                 // @ts-ignore
-                navigableKeySet(): java.util.NavigableSet<K>
+                public navigableKeySet(): java.util.NavigableSet<K>
                 /**
                  * Returns a {@link Collection} view of the values contained in this map.
                  * <p>The collection's iterator returns the values in ascending order
@@ -300,7 +300,7 @@ declare namespace java {
                  * <a href="package-summary.html#Weakly"><i>weakly consistent</i></a>.
                  */
                 // @ts-ignore
-                values(): java.util.Collection<V>
+                public values(): Array<V>
                 /**
                  * Returns a {@link Set} view of the mappings contained in this map.
                  * <p>The set's iterator returns the entries in ascending key order.  The
@@ -324,11 +324,11 @@ declare namespace java {
                  *          sorted in ascending key order
                  */
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+                public entrySet(): Array<java.util.Map.Entry<K, V>>
                 // @ts-ignore
-                descendingMap(): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public descendingMap(): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 // @ts-ignore
-                descendingKeySet(): java.util.NavigableSet<K>
+                public descendingKeySet(): java.util.NavigableSet<K>
                 /**
                  * Compares the specified object with this map for equality.
                  * Returns {@code true} if the given object is also a map and the
@@ -341,7 +341,7 @@ declare namespace java {
                  * @return {#code true} if the specified object is equal to this map
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * {@inheritDoc}
                  * @return the previous value associated with the specified key,
@@ -351,7 +351,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key or value is null
                  */
                 // @ts-ignore
-                putIfAbsent(key: K, value: V): V
+                public putIfAbsent(key: K, value: V): V
                 /**
                  * {@inheritDoc}
                  * @throws ClassCastException if the specified key cannot be compared
@@ -359,7 +359,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                remove(key: any, value: any): boolean
+                public remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
                 /**
                  * {@inheritDoc}
                  * @throws ClassCastException if the specified key cannot be compared
@@ -367,7 +367,7 @@ declare namespace java {
                  * @throws NullPointerException if any of the arguments are null
                  */
                 // @ts-ignore
-                replace(key: K, oldValue: V, newValue: V): boolean
+                public replace(key: K, oldValue: V, newValue: V): boolean
                 /**
                  * {@inheritDoc}
                  * @return the previous value associated with the specified key,
@@ -377,61 +377,61 @@ declare namespace java {
                  * @throws NullPointerException if the specified key or value is null
                  */
                 // @ts-ignore
-                replace(key: K, value: V): V
+                public replace(key: K, value: V): V
                 // @ts-ignore
-                comparator(): java.util.Comparator<? super K>
+                public comparator(): java.util.Comparator<any>
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                firstKey(): K
+                public firstKey(): K
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                lastKey(): K
+                public lastKey(): K
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if {#code fromKey} or {@code toKey} is null
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                subMap(fromKey: K, fromInclusive: boolean, toKey: K, toInclusive: boolean): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public subMap(fromKey: K, fromInclusive: boolean, toKey: K, toInclusive: boolean): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if {#code toKey} is null
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                headMap(toKey: K, inclusive: boolean): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public headMap(toKey: K, inclusive: boolean): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if {#code fromKey} is null
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                tailMap(fromKey: K, inclusive: boolean): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public tailMap(fromKey: K, inclusive: boolean): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if {#code fromKey} or {@code toKey} is null
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                subMap(fromKey: K, toKey: K): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public subMap(fromKey: K, toKey: K): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if {#code toKey} is null
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                headMap(toKey: K): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public headMap(toKey: K): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if {#code fromKey} is null
                  * @throws IllegalArgumentException {#inheritDoc}
                  */
                 // @ts-ignore
-                tailMap(fromKey: K): java.util.concurrent.ConcurrentNavigableMap<K, V>
+                public tailMap(fromKey: K): java.util.concurrent.ConcurrentNavigableMap<K, V>
                 /**
                  * Returns a key-value mapping associated with the greatest key
                  * strictly less than the given key, or {@code null} if there is
@@ -441,13 +441,13 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                lowerEntry(key: K): java.util.Map.Entry<K, V>
+                public lowerEntry(key: K): java.util.Map.Entry<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                lowerKey(key: K): K
+                public lowerKey(key: K): K
                 /**
                  * Returns a key-value mapping associated with the greatest key
                  * less than or equal to the given key, or {@code null} if there
@@ -458,14 +458,14 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                floorEntry(key: K): java.util.Map.Entry<K, V>
+                public floorEntry(key: K): java.util.Map.Entry<K, V>
                 /**
                  * @param key the key
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                floorKey(key: K): K
+                public floorKey(key: K): K
                 /**
                  * Returns a key-value mapping associated with the least key
                  * greater than or equal to the given key, or {@code null} if
@@ -475,13 +475,13 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                ceilingEntry(key: K): java.util.Map.Entry<K, V>
+                public ceilingEntry(key: K): java.util.Map.Entry<K, V>
                 /**
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                ceilingKey(key: K): K
+                public ceilingKey(key: K): K
                 /**
                  * Returns a key-value mapping associated with the least key
                  * strictly greater than the given key, or {@code null} if there
@@ -492,14 +492,14 @@ declare namespace java {
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                higherEntry(key: K): java.util.Map.Entry<K, V>
+                public higherEntry(key: K): java.util.Map.Entry<K, V>
                 /**
                  * @param key the key
                  * @throws ClassCastException {#inheritDoc}
                  * @throws NullPointerException if the specified key is null
                  */
                 // @ts-ignore
-                higherKey(key: K): K
+                public higherKey(key: K): K
                 /**
                  * Returns a key-value mapping associated with the least
                  * key in this map, or {@code null} if the map is empty.
@@ -507,7 +507,7 @@ declare namespace java {
                  * the {@code Entry.setValue} method.
                  */
                 // @ts-ignore
-                firstEntry(): java.util.Map.Entry<K, V>
+                public firstEntry(): java.util.Map.Entry<K, V>
                 /**
                  * Returns a key-value mapping associated with the greatest
                  * key in this map, or {@code null} if the map is empty.
@@ -515,7 +515,7 @@ declare namespace java {
                  * the {@code Entry.setValue} method.
                  */
                 // @ts-ignore
-                lastEntry(): java.util.Map.Entry<K, V>
+                public lastEntry(): java.util.Map.Entry<K, V>
                 /**
                  * Removes and returns a key-value mapping associated with
                  * the least key in this map, or {@code null} if the map is empty.
@@ -523,7 +523,7 @@ declare namespace java {
                  * the {@code Entry.setValue} method.
                  */
                 // @ts-ignore
-                pollFirstEntry(): java.util.Map.Entry<K, V>
+                public pollFirstEntry(): java.util.Map.Entry<K, V>
                 /**
                  * Removes and returns a key-value mapping associated with
                  * the greatest key in this map, or {@code null} if the map is empty.
@@ -531,11 +531,11 @@ declare namespace java {
                  * the {@code Entry.setValue} method.
                  */
                 // @ts-ignore
-                pollLastEntry(): java.util.Map.Entry<K, V>
+                public pollLastEntry(): java.util.Map.Entry<K, V>
                 // @ts-ignore
-                forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+                public forEach(action: java.util.function$.BiConsumer<any, any>): void
                 // @ts-ignore
-                replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+                public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
             }
         }
     }

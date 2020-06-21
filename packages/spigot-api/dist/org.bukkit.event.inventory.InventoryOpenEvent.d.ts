@@ -14,7 +14,7 @@ declare namespace org {
                      * @return Player who is involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.HumanEntity
+                    public getPlayer(): org.bukkit.entity.HumanEntity
                     /**
                      * Gets the cancellation state of this event. A cancelled event will not
                      * be executed in the server, but will still pass to other plugins.
@@ -24,7 +24,7 @@ declare namespace org {
                      * @return true if this event is cancelled
                      */
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     /**
                      * Sets the cancellation state of this event. A cancelled event will not
                      * be executed in the server, but will still pass to other plugins.
@@ -34,11 +34,11 @@ declare namespace org {
                      * @param cancel true if you wish to cancel this event
                      */
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

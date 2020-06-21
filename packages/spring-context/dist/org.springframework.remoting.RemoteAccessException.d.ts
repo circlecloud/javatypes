@@ -32,7 +32,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Constructor for RemoteAccessException.
                  * @param msg the detail message
@@ -40,7 +40,7 @@ declare namespace org {
                  *  remoting API such as RMI)
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

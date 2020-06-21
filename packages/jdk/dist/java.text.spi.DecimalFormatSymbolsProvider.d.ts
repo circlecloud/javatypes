@@ -17,7 +17,7 @@ declare namespace java {
              * @see Locale#getExtension(char)
              */
             // @ts-ignore
-            class DecimalFormatSymbolsProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class DecimalFormatSymbolsProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -37,7 +37,7 @@ declare namespace java {
                  * @see java.text.DecimalFormatSymbols#getInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getInstance(locale: java.util.Locale): java.text.DecimalFormatSymbols
+                public abstract getInstance(locale: java.util.Locale): java.text.DecimalFormatSymbols
             }
         }
     }

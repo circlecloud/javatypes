@@ -44,102 +44,102 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*double*/
+                    public x: number /*double*/
                     /**
                      * The Y coordinate of this <code>RoundRectangle2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*double*/
+                    public y: number /*double*/
                     /**
                      * The width of this <code>RoundRectangle2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    width: number /*double*/
+                    public width: number /*double*/
                     /**
                      * The height of this <code>RoundRectangle2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    height: number /*double*/
+                    public height: number /*double*/
                     /**
                      * The width of the arc that rounds off the corners.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    arcwidth: number /*double*/
+                    public arcwidth: number /*double*/
                     /**
                      * The height of the arc that rounds off the corners.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    archeight: number /*double*/
+                    public archeight: number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getWidth(): double
+                    public getWidth(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getHeight(): double
+                    public getHeight(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getArcWidth(): double
+                    public getArcWidth(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getArcHeight(): double
+                    public getArcHeight(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setRoundRect(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/, arcw: number /*double*/, arch: number /*double*/): void
+                    public setRoundRect(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/, arcw: number /*double*/, arch: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setRoundRect(rr: java.awt.geom.RoundRectangle2D): void
+                    public setRoundRect(rr: java.awt.geom.RoundRectangle2D): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                 }
             }
         }

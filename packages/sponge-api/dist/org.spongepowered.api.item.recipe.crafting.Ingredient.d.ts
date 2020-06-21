@@ -15,7 +15,7 @@ declare namespace org {
                              * An empty ingredient.
                              */
                             // @ts-ignore
-                            
+                            readonly NONE: org.spongepowered.api.item.recipe.crafting.Ingredient
                             // @ts-ignore
                             test(itemStack: org.spongepowered.api.item.inventory.ItemStack): boolean
                             /**
@@ -24,7 +24,7 @@ declare namespace org {
                              * @return The list of items to display the Ingredient in a recipe.
                              */
                             // @ts-ignore
-                            displayedItems(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                            displayedItems(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             /**
                              * Creates a new {@link Builder} to build an {@link Ingredient}.
                              * @return The new builder

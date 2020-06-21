@@ -15,7 +15,7 @@ declare namespace javax {
             // @ts-ignore
             class LazyInputMap extends java.lang.Object implements javax.swing.UIDefaults.LazyValue {
                 // @ts-ignore
-                constructor(bindings: any[])
+                constructor(bindings: java.lang.Object[] | any[])
                 /**
                  * Creates an <code>InputMap</code> with the bindings that are
                  * passed in.
@@ -23,7 +23,7 @@ declare namespace javax {
                  * @return the <code>InputMap</code>
                  */
                 // @ts-ignore
-                createValue(table: javax.swing.UIDefaults): java.lang.Object
+                public createValue(table: javax.swing.UIDefaults): any
             }
         }
     }

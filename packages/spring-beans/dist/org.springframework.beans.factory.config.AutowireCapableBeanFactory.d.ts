@@ -42,7 +42,7 @@ declare namespace org {
                          * @see #autowireBeanProperties
                          */
                         // @ts-ignore
-                        
+                        readonly AUTOWIRE_NO: number /*int*/
                         /**
                          * Constant that indicates autowiring bean properties by name
                          * (applying to all bean property setters).
@@ -51,7 +51,7 @@ declare namespace org {
                          * @see #autowireBeanProperties
                          */
                         // @ts-ignore
-                        
+                        readonly AUTOWIRE_BY_NAME: number /*int*/
                         /**
                          * Constant that indicates autowiring bean properties by type
                          * (applying to all bean property setters).
@@ -60,7 +60,7 @@ declare namespace org {
                          * @see #autowireBeanProperties
                          */
                         // @ts-ignore
-                        
+                        readonly AUTOWIRE_BY_TYPE: number /*int*/
                         /**
                          * Constant that indicates autowiring the greediest constructor that
                          * can be satisfied (involves resolving the appropriate constructor).
@@ -68,7 +68,7 @@ declare namespace org {
                          * @see #autowire
                          */
                         // @ts-ignore
-                        
+                        readonly AUTOWIRE_CONSTRUCTOR: number /*int*/
                         /**
                          * Constant that indicates determining an appropriate autowire strategy
                          * through introspection of the bean class.
@@ -78,7 +78,7 @@ declare namespace org {
                          *  prefer annotation-based autowiring for clearer demarcation of autowiring needs.
                          */
                         // @ts-ignore
-                        
+                        readonly AUTOWIRE_AUTODETECT: number /*int*/
                         /**
                          * Suffix for the "original instance" convention when initializing an existing
                          * bean instance: to be appended to the fully-qualified bean class name,
@@ -90,7 +90,7 @@ declare namespace org {
                          * @see #applyBeanPostProcessorsAfterInitialization(Object, String)
                          */
                         // @ts-ignore
-                        
+                        readonly ORIGINAL_INSTANCE_SUFFIX: java.lang.String | string
                         /**
                          * Fully create a new bean instance of the given class.
                          * <p>Performs full initialization of the bean, including all applicable
@@ -116,7 +116,7 @@ declare namespace org {
                          * @throws BeansException if wiring failed
                          */
                         // @ts-ignore
-                        autowireBean(existingBean: any): void
+                        autowireBean(existingBean: java.lang.Object | any): void
                         /**
                          * Configure the given raw bean: autowiring bean properties, applying
                          * bean property values, applying factory callbacks such as {@code setBeanName}
@@ -135,7 +135,7 @@ declare namespace org {
                          * @see #initializeBean
                          */
                         // @ts-ignore
-                        configureBean(existingBean: any, beanName: string): java.lang.Object
+                        configureBean(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         /**
                          * Fully create a new bean instance of the given class with the specified
                          * autowire strategy. All constants defined in this interface are supported here.
@@ -154,7 +154,7 @@ declare namespace org {
                          * @see #AUTOWIRE_CONSTRUCTOR
                          */
                         // @ts-ignore
-                        createBean(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): java.lang.Object
+                        createBean(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): any
                         /**
                          * Instantiate a new bean instance of the given class with the specified autowire
                          * strategy. All constants defined in this interface are supported here.
@@ -182,7 +182,7 @@ declare namespace org {
                          * @see #applyBeanPostProcessorsAfterInitialization
                          */
                         // @ts-ignore
-                        autowire(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): java.lang.Object
+                        autowire(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): any
                         /**
                          * Autowire the bean properties of the given bean instance by name or type.
                          * Can also be invoked with {@code AUTOWIRE_NO} in order to just apply
@@ -202,7 +202,7 @@ declare namespace org {
                          * @see #AUTOWIRE_NO
                          */
                         // @ts-ignore
-                        autowireBeanProperties(existingBean: any, autowireMode: number /*int*/, dependencyCheck: boolean): void
+                        autowireBeanProperties(existingBean: java.lang.Object | any, autowireMode: number /*int*/, dependencyCheck: boolean): void
                         /**
                          * Apply the property values of the bean definition with the given name to
                          * the given bean instance. The bean definition can either define a fully
@@ -226,7 +226,7 @@ declare namespace org {
                          * @see #autowireBeanProperties
                          */
                         // @ts-ignore
-                        applyBeanPropertyValues(existingBean: any, beanName: string): void
+                        applyBeanPropertyValues(existingBean: java.lang.Object | any, beanName: java.lang.String | string): void
                         /**
                          * Initialize the given raw bean, applying factory callbacks
                          * such as {@code setBeanName} and {@code setBeanFactory},
@@ -245,7 +245,7 @@ declare namespace org {
                          * @see #ORIGINAL_INSTANCE_SUFFIX
                          */
                         // @ts-ignore
-                        initializeBean(existingBean: any, beanName: string): java.lang.Object
+                        initializeBean(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         /**
                          * Apply {@link BeanPostProcessor BeanPostProcessors} to the given existing bean
                          * instance, invoking their {@code postProcessBeforeInitialization} methods.
@@ -261,7 +261,7 @@ declare namespace org {
                          * @see #ORIGINAL_INSTANCE_SUFFIX
                          */
                         // @ts-ignore
-                        applyBeanPostProcessorsBeforeInitialization(existingBean: any, beanName: string): java.lang.Object
+                        applyBeanPostProcessorsBeforeInitialization(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         /**
                          * Apply {@link BeanPostProcessor BeanPostProcessors} to the given existing bean
                          * instance, invoking their {@code postProcessAfterInitialization} methods.
@@ -277,7 +277,7 @@ declare namespace org {
                          * @see #ORIGINAL_INSTANCE_SUFFIX
                          */
                         // @ts-ignore
-                        applyBeanPostProcessorsAfterInitialization(existingBean: any, beanName: string): java.lang.Object
+                        applyBeanPostProcessorsAfterInitialization(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         /**
                          * Destroy the given bean instance (typically coming from {@link #createBean}),
                          * applying the {@link org.springframework.beans.factory.DisposableBean} contract as well as
@@ -287,7 +287,7 @@ declare namespace org {
                          * @param existingBean the bean instance to destroy
                          */
                         // @ts-ignore
-                        destroyBean(existingBean: any): void
+                        destroyBean(existingBean: java.lang.Object | any): void
                         /**
                          * Resolve the bean instance that uniquely matches the given object type, if any,
                          * including its bean name.
@@ -318,7 +318,7 @@ declare namespace org {
                          * @see #getBean(String, Class)
                          */
                         // @ts-ignore
-                        resolveBeanByName(name: string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.lang.Object
+                        resolveBeanByName(name: java.lang.String | string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): any
                         /**
                          * Resolve the specified dependency against the beans defined in this factory.
                          * @param descriptor the descriptor for the dependency (field/method/constructor)
@@ -331,7 +331,7 @@ declare namespace org {
                          * @see #resolveDependency(DependencyDescriptor, String, Set, TypeConverter)
                          */
                         // @ts-ignore
-                        resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: string): java.lang.Object
+                        resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: java.lang.String | string): any
                         /**
                          * Resolve the specified dependency against the beans defined in this factory.
                          * @param descriptor the descriptor for the dependency (field/method/constructor)
@@ -347,7 +347,7 @@ declare namespace org {
                          * @see DependencyDescriptor
                          */
                         // @ts-ignore
-                        resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: string, autowiredBeanNames: Array<java.lang.String>, typeConverter: org.springframework.beans.TypeConverter): java.lang.Object
+                        resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: java.lang.String | string, autowiredBeanNames: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>, typeConverter: org.springframework.beans.TypeConverter): any
                     }
                 }
             }

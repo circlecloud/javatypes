@@ -13,7 +13,7 @@ declare namespace org {
                          * @return The tile class for this type
                          */
                         // @ts-ignore
-                        getTileEntityType(): java.lang.Class<? extends org.spongepowered.api.block.tileentity.TileEntity>
+                        getTileEntityType(): java.lang.Class<any>
                     }
                 }
             }

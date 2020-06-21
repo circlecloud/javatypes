@@ -31,7 +31,7 @@ declare namespace java {
              * @see #clone()
              */
             // @ts-ignore
-            top: number /*int*/
+            public top: number /*int*/
             /**
              * The inset from the left.
              * This value is added to the Left of the rectangle
@@ -40,7 +40,7 @@ declare namespace java {
              * @see #clone()
              */
             // @ts-ignore
-            left: number /*int*/
+            public left: number /*int*/
             /**
              * The inset from the bottom.
              * This value is subtracted from the Bottom of the rectangle
@@ -49,7 +49,7 @@ declare namespace java {
              * @see #clone()
              */
             // @ts-ignore
-            bottom: number /*int*/
+            public bottom: number /*int*/
             /**
              * The inset from the right.
              * This value is subtracted from the Right of the rectangle
@@ -58,7 +58,7 @@ declare namespace java {
              * @see #clone()
              */
             // @ts-ignore
-            right: number /*int*/
+            public right: number /*int*/
             /**
              * Set top, left, bottom, and right to the specified values
              * @param top   the inset from the top.
@@ -68,7 +68,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            set(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/): void
+            public set(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/): void
             /**
              * Checks whether two insets objects are equal. Two instances
              * of <code>Insets</code> are equal if the four integer values
@@ -79,13 +79,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code for this Insets.
              * @return a hash code for this Insets.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of this <code>Insets</code> object.
              * This method is intended to be used only for debugging purposes, and
@@ -95,13 +95,13 @@ declare namespace java {
              * @return a string representation of this <code>Insets</code> object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Create a copy of this object.
              * @return a copy of this <code>Insets</code> object.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

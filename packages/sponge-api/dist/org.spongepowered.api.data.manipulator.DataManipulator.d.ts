@@ -71,7 +71,7 @@ declare namespace org {
                          * @return This manipulator, for chaining
                          */
                         // @ts-ignore
-                        set<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): M
+                        set<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): M
                         /**
                          * Sets the supported {@link BaseValue} onto this {@link DataManipulator}.
                          * The requirement for this to succeed is that the {@link BaseValue} is
@@ -95,7 +95,7 @@ declare namespace org {
                          * @return This manipulator, for chaining
                          */
                         // @ts-ignore
-                        set(...values: org.spongepowered.api.data.value.BaseValue[]): M
+                        set(...values: org.spongepowered.api.data.value.BaseValue<any>[]): M
                         /**
                          * Sets the supported {@link BaseValue}s onto this {@link DataManipulator}.
                          * The requirement for this to succeed is that the {@link BaseValue} is
@@ -107,7 +107,7 @@ declare namespace org {
                          * @return This manipulator, for chaining
                          */
                         // @ts-ignore
-                        set(values: java.lang.Iterable<org.spongepowered.api.data.value.BaseValue<any>>): M
+                        set(values: java.lang.Iterable<any>): M
                         /**
                          * Applies a transformation on the provided value if available. This is
                          * the same as {@link CompositeValueStore#transform(Key, Function)}.
@@ -117,7 +117,7 @@ declare namespace org {
                          * @return This manipulator, for chaining
                          */
                         // @ts-ignore
-                        transform<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): M
+                        transform<E>(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Function<E, E>): M
                         // @ts-ignore
                         copy(): M
                         /**

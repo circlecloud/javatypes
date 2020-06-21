@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#ATTACK_DAMAGE
                                  */
                                 // @ts-ignore
-                                damage(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                damage(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link MapValue} for representing the custom damage
                                  * values to use if the owner strikes an entity of that type.
@@ -30,7 +30,7 @@ declare namespace org {
                                  * @see Keys#DAMAGE_ENTITY_MAP
                                  */
                                 // @ts-ignore
-                                damageForEntity(): org.spongepowered.api.data.value.mutable.MapValue<org.spongepowered.api.entity.EntityType, java.lang.Double>
+                                damageForEntity(): org.spongepowered.api.data.value.mutable.MapValue<org.spongepowered.api.entity.EntityType, java.lang.Double | number>
                             }
                         }
                     }

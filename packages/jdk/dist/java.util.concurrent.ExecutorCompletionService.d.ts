@@ -89,15 +89,15 @@ declare namespace java {
                 // @ts-ignore
                 constructor(executor: java.util.concurrent.Executor, completionQueue: java.util.concurrent.BlockingQueue<java.util.concurrent.Future<V>>)
                 // @ts-ignore
-                submit(task: java.util.concurrent.Callable<V>): java.util.concurrent.Future<V>
+                public submit(task: java.util.concurrent.Callable<V>): java.util.concurrent.Future<V>
                 // @ts-ignore
-                submit(task: java.lang.Runnable, result: V): java.util.concurrent.Future<V>
+                public submit(task: java.lang.Runnable, result: V): java.util.concurrent.Future<V>
                 // @ts-ignore
-                take(): java.util.concurrent.Future<V>
+                public take(): java.util.concurrent.Future<V>
                 // @ts-ignore
-                poll(): java.util.concurrent.Future<V>
+                public poll(): java.util.concurrent.Future<V>
                 // @ts-ignore
-                poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.Future<V>
+                public poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.Future<V>
             }
         }
     }

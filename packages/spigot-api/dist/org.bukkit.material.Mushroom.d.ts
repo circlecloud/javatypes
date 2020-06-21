@@ -53,7 +53,7 @@ declare namespace org {
                  * @return Whether this is a mushroom stem.
                  */
                 // @ts-ignore
-                isStem(): boolean
+                public isStem(): boolean
                 /**
                  * Sets this to be a mushroom stem.
                  * @see MushroomBlockTexture#STEM_SIDES
@@ -64,26 +64,26 @@ declare namespace org {
                  *  {@link MushroomBlockTexture#ALL_STEM}
                  */
                 // @ts-ignore
-                setStem(): void
+                public setStem(): void
                 /**
                  * Gets the mushroom texture of this block.
                  * @return The mushroom texture of this block
                  */
                 // @ts-ignore
-                getBlockTexture(): org.bukkit.material.types.MushroomBlockTexture
+                public getBlockTexture(): org.bukkit.material.types.MushroomBlockTexture
                 /**
                  * Sets the mushroom texture of this block.
                  * @param texture The mushroom texture to set
                  */
                 // @ts-ignore
-                setBlockTexture(texture: org.bukkit.material.types.MushroomBlockTexture): void
+                public setBlockTexture(texture: org.bukkit.material.types.MushroomBlockTexture): void
                 /**
                  * Checks whether a face of the block is painted with cap texture.
                  * @param face The face to check.
                  * @return True if it is painted.
                  */
                 // @ts-ignore
-                isFacePainted(face: org.bukkit.block.BlockFace): boolean
+                public isFacePainted(face: org.bukkit.block.BlockFace): boolean
                 /**
                  * Set a face of the block to be painted or not. Note that due to the
                  * nature of how the data is stored, setting a face painted or not is not
@@ -94,17 +94,17 @@ declare namespace org {
                  * @deprecated Use MushroomBlockType cap options
                  */
                 // @ts-ignore
-                setFacePainted(face: org.bukkit.block.BlockFace, painted: boolean): void
+                public setFacePainted(face: org.bukkit.block.BlockFace, painted: boolean): void
                 /**
                  * @return A set of all faces that are currently painted (an empty set if
                  *      it is a stem)
                  */
                 // @ts-ignore
-                getPaintedFaces(): java.util.Set<org.bukkit.block.BlockFace>
+                public getPaintedFaces(): Array<org.bukkit.block.BlockFace>
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Mushroom
+                public clone(): org.bukkit.material.Mushroom
             }
         }
     }

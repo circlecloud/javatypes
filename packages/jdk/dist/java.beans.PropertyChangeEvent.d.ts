@@ -28,34 +28,34 @@ declare namespace java {
              * @throws IllegalArgumentException if {#code source} is {@code null}
              */
             // @ts-ignore
-            constructor(source: any, propertyName: string, oldValue: any, newValue: any)
+            constructor(source: java.lang.Object | any, propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any)
             /**
              * Gets the programmatic name of the property that was changed.
              * @return The programmatic name of the property that was changed.
              *           May be null if multiple properties have changed.
              */
             // @ts-ignore
-            getPropertyName(): java.lang.String
+            public getPropertyName(): string
             /**
              * Gets the new value for the property, expressed as an Object.
              * @return The new value for the property, expressed as an Object.
              *           May be null if multiple properties have changed.
              */
             // @ts-ignore
-            getNewValue(): java.lang.Object
+            public getNewValue(): any
             /**
              * Gets the old value for the property, expressed as an Object.
              * @return The old value for the property, expressed as an Object.
              *           May be null if multiple properties have changed.
              */
             // @ts-ignore
-            getOldValue(): java.lang.Object
+            public getOldValue(): any
             /**
              * Sets the propagationId object for the event.
              * @param propagationId  The propagationId object for the event.
              */
             // @ts-ignore
-            setPropagationId(propagationId: any): void
+            public setPropagationId(propagationId: java.lang.Object | any): void
             /**
              * The "propagationId" field is reserved for future use.  In Beans 1.0
              * the sole requirement is that if a listener catches a PropertyChangeEvent
@@ -66,14 +66,14 @@ declare namespace java {
              *           property update.
              */
             // @ts-ignore
-            getPropagationId(): java.lang.Object
+            public getPropagationId(): any
             /**
              * Returns a string representation of the object.
              * @return a string representation of the object
              * @since 1.7
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

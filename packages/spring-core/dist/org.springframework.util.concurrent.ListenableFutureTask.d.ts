@@ -27,11 +27,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(runnable: java.lang.Runnable, result: T)
                     // @ts-ignore
-                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any super T>): void
+                    public addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any>): void
                     // @ts-ignore
-                    addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any super T>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
+                    public addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
                     // @ts-ignore
-                    completable(): java.util.concurrent.CompletableFuture<T>
+                    public completable(): java.util.concurrent.CompletableFuture<T>
                     // @ts-ignore
                     done(): void
                 }

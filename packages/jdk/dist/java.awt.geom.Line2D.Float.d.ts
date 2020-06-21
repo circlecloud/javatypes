@@ -39,70 +39,70 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x1: number /*float*/
+                    public x1: number /*float*/
                     /**
                      * The Y coordinate of the start point of the line segment.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y1: number /*float*/
+                    public y1: number /*float*/
                     /**
                      * The X coordinate of the end point of the line segment.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    x2: number /*float*/
+                    public x2: number /*float*/
                     /**
                      * The Y coordinate of the end point of the line segment.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y2: number /*float*/
+                    public y2: number /*float*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX1(): double
+                    public getX1(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY1(): double
+                    public getY1(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getP1(): java.awt.geom.Point2D
+                    public getP1(): java.awt.geom.Point2D
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX2(): double
+                    public getX2(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY2(): double
+                    public getY2(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getP2(): java.awt.geom.Point2D
+                    public getP2(): java.awt.geom.Point2D
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                    public setLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                     /**
                      * Sets the location of the end points of this <code>Line2D</code>
                      * to the specified float coordinates.
@@ -113,13 +113,13 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setLine(x1: number /*float*/, y1: number /*float*/, x2: number /*float*/, y2: number /*float*/): void
+                    public setLine(x1: number /*float*/, y1: number /*float*/, x2: number /*float*/, y2: number /*float*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                 }
             }
         }

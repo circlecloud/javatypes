@@ -15,33 +15,33 @@ declare namespace org {
                      * @return item in the main hand
                      */
                     // @ts-ignore
-                    getMainHandItem(): org.bukkit.inventory.ItemStack
+                    public getMainHandItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Sets the item in the main hand.
                      * @param mainHandItem new item in the main hand
                      */
                     // @ts-ignore
-                    setMainHandItem(mainHandItem: org.bukkit.inventory.ItemStack): void
+                    public setMainHandItem(mainHandItem: org.bukkit.inventory.ItemStack): void
                     /**
                      * Gets the item switched to the off hand.
                      * @return item in the off hand
                      */
                     // @ts-ignore
-                    getOffHandItem(): org.bukkit.inventory.ItemStack
+                    public getOffHandItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Sets the item in the off hand.
                      * @param offHandItem new item in the off hand
                      */
                     // @ts-ignore
-                    setOffHandItem(offHandItem: org.bukkit.inventory.ItemStack): void
+                    public setOffHandItem(offHandItem: org.bukkit.inventory.ItemStack): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

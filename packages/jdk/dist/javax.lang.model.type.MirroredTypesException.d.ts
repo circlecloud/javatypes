@@ -19,7 +19,7 @@ declare namespace javax {
                      * @param types  the types being accessed
                      */
                     // @ts-ignore
-                    constructor(types: Array<javax.lang.model.type.TypeMirror>)
+                    constructor(types: java.util.List<any> | Array<any>)
                     /**
                      * Returns the type mirrors corresponding to the types being accessed.
                      * The type mirrors may be unavailable if this exception has been
@@ -27,7 +27,7 @@ declare namespace javax {
                      * @return the type mirrors in construction order, or {#code null} if unavailable
                      */
                     // @ts-ignore
-                    getTypeMirrors(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getTypeMirrors(): Array<any>
                 }
             }
         }

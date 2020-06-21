@@ -13,7 +13,7 @@ declare namespace java {
              * @param reason  String describing the reason for the exception.
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
             /**
              * Create a StreamCorruptedException and list no reason why thrown.
              */

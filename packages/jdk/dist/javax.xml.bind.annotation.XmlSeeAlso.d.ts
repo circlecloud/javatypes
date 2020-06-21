@@ -37,7 +37,7 @@ declare namespace javax {
                  * @since JAXB2.1
                  */
                 // @ts-ignore
-                class XmlSeeAlso implements java.lang.annotation.Annotation {
+                abstract class XmlSeeAlso implements java.lang.annotation.Annotation {
                 }
             }
         }

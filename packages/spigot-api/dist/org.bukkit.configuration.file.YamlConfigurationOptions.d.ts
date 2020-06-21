@@ -11,15 +11,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor(configuration: org.bukkit.configuration.file.YamlConfiguration)
                     // @ts-ignore
-                    configuration(): org.bukkit.configuration.file.YamlConfiguration
+                    public configuration(): org.bukkit.configuration.file.YamlConfiguration
                     // @ts-ignore
-                    copyDefaults(value: boolean): org.bukkit.configuration.file.YamlConfigurationOptions
+                    public copyDefaults(value: boolean): org.bukkit.configuration.file.YamlConfigurationOptions
                     // @ts-ignore
-                    pathSeparator(value: string): org.bukkit.configuration.file.YamlConfigurationOptions
+                    public pathSeparator(value: string): org.bukkit.configuration.file.YamlConfigurationOptions
                     // @ts-ignore
-                    header(value: string): org.bukkit.configuration.file.YamlConfigurationOptions
+                    public header(value: java.lang.String | string): org.bukkit.configuration.file.YamlConfigurationOptions
                     // @ts-ignore
-                    copyHeader(value: boolean): org.bukkit.configuration.file.YamlConfigurationOptions
+                    public copyHeader(value: boolean): org.bukkit.configuration.file.YamlConfigurationOptions
                     /**
                      * Gets how much spaces should be used to indent each line.
                      * <p>
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return How much to indent by
                      */
                     // @ts-ignore
-                    indent(): int
+                    public indent(): number /*int*/
                     /**
                      * Sets how much spaces should be used to indent each line.
                      * <p>
@@ -36,7 +36,7 @@ declare namespace org {
                      * @return This object, for chaining
                      */
                     // @ts-ignore
-                    indent(value: number /*int*/): org.bukkit.configuration.file.YamlConfigurationOptions
+                    public indent(value: number /*int*/): org.bukkit.configuration.file.YamlConfigurationOptions
                 }
             }
         }

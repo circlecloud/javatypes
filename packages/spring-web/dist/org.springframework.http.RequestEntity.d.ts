@@ -99,26 +99,26 @@ declare namespace org {
                  * @return the HTTP method as an {#code HttpMethod} enum value
                  */
                 // @ts-ignore
-                getMethod(): org.springframework.http.HttpMethod
+                public getMethod(): org.springframework.http.HttpMethod
                 /**
                  * Return the URL of the request.
                  * @return the URL as a {#code URI}
                  */
                 // @ts-ignore
-                getUrl(): java.net.URI
+                public getUrl(): java.net.URI
                 /**
                  * Return the type of the request's body.
                  * @return the request's body type, or {#code null} if not known
                  * @since 4.3
                  */
                 // @ts-ignore
-                getType(): java.lang.reflect.Type
+                public getType(): java.lang.reflect.Type
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Create a builder with the given method and url.
                  * @param method the HTTP method (GET, POST, etc)
@@ -126,56 +126,56 @@ declare namespace org {
                  * @return the created builder
                  */
                 // @ts-ignore
-                method(method: org.springframework.http.HttpMethod, url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
+                public static method(method: org.springframework.http.HttpMethod, url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
                 /**
                  * Create an HTTP GET builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                get(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<?>
+                public static get(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<any>
                 /**
                  * Create an HTTP HEAD builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                head(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<?>
+                public static head(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<any>
                 /**
                  * Create an HTTP POST builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                post(url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
+                public static post(url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
                 /**
                  * Create an HTTP PUT builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                put(url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
+                public static put(url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
                 /**
                  * Create an HTTP PATCH builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                patch(url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
+                public static patch(url: java.net.URI): org.springframework.http.RequestEntity.BodyBuilder
                 /**
                  * Create an HTTP DELETE builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                delete(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<?>
+                public static delete(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<any>
                 /**
                  * Creates an HTTP OPTIONS builder with the given url.
                  * @param url the URL
                  * @return the created builder
                  */
                 // @ts-ignore
-                options(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<?>
+                public static options(url: java.net.URI): org.springframework.http.RequestEntity.HeadersBuilder<any>
             }
         }
     }

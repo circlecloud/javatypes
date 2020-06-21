@@ -21,9 +21,9 @@ declare namespace org {
                          * Attribute name under which the exchange is saved in the context.
                          */
                         // @ts-ignore
-                        readonly EXCHANGE_CONTEXT_ATTRIBUTE: string
+                        public static readonly EXCHANGE_CONTEXT_ATTRIBUTE: java.lang.String | string
                         // @ts-ignore
-                        filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): <any>
+                        public filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): object
                         /**
                          * Access the {@link ServerWebExchange} from the Reactor Context, if available,
                          * which is if {@link ServerWebExchangeContextFilter} is configured for use
@@ -32,7 +32,7 @@ declare namespace org {
                          * @return the exchange
                          */
                         // @ts-ignore
-                        get(context: Context): java.util.Optional<org.springframework.web.server.ServerWebExchange>
+                        public static get(context: Context): java.util.Optional<org.springframework.web.server.ServerWebExchange>
                     }
                 }
             }

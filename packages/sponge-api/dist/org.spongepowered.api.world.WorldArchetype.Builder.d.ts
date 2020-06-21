@@ -168,7 +168,7 @@ declare namespace org {
                          * @return The settings
                          */
                         // @ts-ignore
-                        build(id: string, name: string): org.spongepowered.api.world.WorldArchetype
+                        build(id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.world.WorldArchetype
                     }
                 }
             }

@@ -11,7 +11,7 @@ declare namespace org {
                             // @ts-ignore
                             interface NumberPress extends org.spongepowered.api.event.item.inventory.ClickInventoryEvent {
                                 // @ts-ignore
-                                getNumber(): int
+                                getNumber(): number /*int*/
                             }
                         }
                     }

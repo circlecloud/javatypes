@@ -19,19 +19,19 @@ declare namespace org {
              * @see java.io.Serializable
              */
             // @ts-ignore
-            class ConcurrencyThrottleSupport extends java.lang.Object implements java.io.Serializable {
+            abstract class ConcurrencyThrottleSupport extends java.lang.Object implements java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 /**
                  * Permit any number of concurrent invocations: that is, don't throttle concurrency.
                  */
                 // @ts-ignore
-                readonly UNBOUNDED_CONCURRENCY: number /*int*/
+                public static readonly UNBOUNDED_CONCURRENCY: number /*int*/
                 /**
                  * Switch concurrency 'off': that is, don't allow any concurrent invocations.
                  */
                 // @ts-ignore
-                readonly NO_CONCURRENCY: number /*int*/
+                public static readonly NO_CONCURRENCY: number /*int*/
                 /**
                  * Transient to optimize serialization.
                  */
@@ -47,19 +47,19 @@ declare namespace org {
                  * of -1 effectively turns off concurrency counting completely.
                  */
                 // @ts-ignore
-                setConcurrencyLimit(concurrencyLimit: number /*int*/): void
+                public setConcurrencyLimit(concurrencyLimit: number /*int*/): void
                 /**
                  * Return the maximum number of concurrent access attempts allowed.
                  */
                 // @ts-ignore
-                getConcurrencyLimit(): int
+                public getConcurrencyLimit(): number /*int*/
                 /**
                  * Return whether this throttle is currently active.
                  * @return {#code true} if the concurrency limit for this instance is active
                  * @see #getConcurrencyLimit()
                  */
                 // @ts-ignore
-                isThrottleActive(): boolean
+                public isThrottleActive(): boolean
                 /**
                  * To be invoked before the main execution logic of concrete subclasses.
                  * <p>This implementation applies the concurrency throttle.

@@ -17,7 +17,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class XMLEventFactory extends java.lang.Object {
+            abstract class XMLEventFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -26,7 +26,7 @@ declare namespace javax {
                  * @throws FactoryConfigurationError if an instance of this factory cannot be loaded
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.stream.XMLEventFactory
+                public static newInstance(): javax.xml.stream.XMLEventFactory
                 /**
                  * Create a new instance of the factory.
                  * <p>
@@ -73,7 +73,7 @@ declare namespace javax {
                  *    the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newFactory(): javax.xml.stream.XMLEventFactory
+                public static newFactory(): javax.xml.stream.XMLEventFactory
                 /**
                  * Create a new instance of the factory
                  * @param factoryId             Name of the factory to find, same as
@@ -88,7 +88,7 @@ declare namespace javax {
                  *               method defines no changes in behavior.
                  */
                 // @ts-ignore
-                newInstance(factoryId: string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLEventFactory
+                public static newInstance(factoryId: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLEventFactory
                 /**
                  * Create a new instance of the factory.
                  * If the classLoader argument is null, then the ContextClassLoader is used.
@@ -143,7 +143,7 @@ declare namespace javax {
                  *    the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newFactory(factoryId: string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLEventFactory
+                public static newFactory(factoryId: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLEventFactory
                 /**
                  * This method allows setting of the Location on each event that
                  * is created by this factory.  The values are copied by value into
@@ -152,7 +152,7 @@ declare namespace javax {
                  * @param location the location to set on each event created
                  */
                 // @ts-ignore
-                abstract setLocation(location: javax.xml.stream.Location): void
+                public abstract setLocation(location: javax.xml.stream.Location): void
                 /**
                  * Create a new Attribute
                  * @param prefix the prefix of this attribute, may not be null
@@ -162,7 +162,7 @@ declare namespace javax {
                  * @return the Attribute with specified values
                  */
                 // @ts-ignore
-                abstract createAttribute(prefix: string, namespaceURI: string, localName: string, value: string): javax.xml.stream.events.Attribute
+                public abstract createAttribute(prefix: java.lang.String | string, namespaceURI: java.lang.String | string, localName: java.lang.String | string, value: java.lang.String | string): javax.xml.stream.events.Attribute
                 /**
                  * Create a new Attribute
                  * @param localName the local name of the XML name of the attribute, localName cannot be null
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @return the Attribute with specified values
                  */
                 // @ts-ignore
-                abstract createAttribute(localName: string, value: string): javax.xml.stream.events.Attribute
+                public abstract createAttribute(localName: java.lang.String | string, value: java.lang.String | string): javax.xml.stream.events.Attribute
                 /**
                  * Create a new Attribute
                  * @param name the qualified name of the attribute, may not be null
@@ -178,14 +178,14 @@ declare namespace javax {
                  * @return the Attribute with specified values
                  */
                 // @ts-ignore
-                abstract createAttribute(name: javax.xml.namespace.QName, value: string): javax.xml.stream.events.Attribute
+                public abstract createAttribute(name: javax.xml.namespace.QName, value: java.lang.String | string): javax.xml.stream.events.Attribute
                 /**
                  * Create a new default Namespace
                  * @param namespaceURI the default namespace uri
                  * @return the Namespace with the specified value
                  */
                 // @ts-ignore
-                abstract createNamespace(namespaceURI: string): javax.xml.stream.events.Namespace
+                public abstract createNamespace(namespaceURI: java.lang.String | string): javax.xml.stream.events.Namespace
                 /**
                  * Create a new Namespace
                  * @param prefix the prefix of this namespace, may not be null
@@ -193,7 +193,7 @@ declare namespace javax {
                  * @return the Namespace with the specified values
                  */
                 // @ts-ignore
-                abstract createNamespace(prefix: string, namespaceUri: string): javax.xml.stream.events.Namespace
+                public abstract createNamespace(prefix: java.lang.String | string, namespaceUri: java.lang.String | string): javax.xml.stream.events.Namespace
                 /**
                  * Create a new StartElement.  Namespaces can be added to this StartElement
                  * by passing in an Iterator that walks over a set of Namespace interfaces.
@@ -207,7 +207,7 @@ declare namespace javax {
                  * @return an instance of the requested StartElement
                  */
                 // @ts-ignore
-                abstract createStartElement(name: javax.xml.namespace.QName, attributes: java.util.Iterator, namespaces: java.util.Iterator): javax.xml.stream.events.StartElement
+                public abstract createStartElement(name: javax.xml.namespace.QName, attributes: java.util.Iterator<any>, namespaces: java.util.Iterator<any>): javax.xml.stream.events.StartElement
                 /**
                  * Create a new StartElement.  This defaults the NamespaceContext to
                  * an empty NamespaceContext.  Querying this event for its namespaces or
@@ -218,7 +218,7 @@ declare namespace javax {
                  * @return an instance of the requested StartElement
                  */
                 // @ts-ignore
-                abstract createStartElement(prefix: string, namespaceUri: string, localName: string): javax.xml.stream.events.StartElement
+                public abstract createStartElement(prefix: java.lang.String | string, namespaceUri: java.lang.String | string, localName: java.lang.String | string): javax.xml.stream.events.StartElement
                 /**
                  * Create a new StartElement.  Namespaces can be added to this StartElement
                  * by passing in an Iterator that walks over a set of Namespace interfaces.
@@ -234,7 +234,7 @@ declare namespace javax {
                  * @return an instance of the requested StartElement
                  */
                 // @ts-ignore
-                abstract createStartElement(prefix: string, namespaceUri: string, localName: string, attributes: java.util.Iterator, namespaces: java.util.Iterator): javax.xml.stream.events.StartElement
+                public abstract createStartElement(prefix: java.lang.String | string, namespaceUri: java.lang.String | string, localName: java.lang.String | string, attributes: java.util.Iterator<any>, namespaces: java.util.Iterator<any>): javax.xml.stream.events.StartElement
                 /**
                  * Create a new StartElement.  Namespaces can be added to this StartElement
                  * by passing in an Iterator that walks over a set of Namespace interfaces.
@@ -251,7 +251,7 @@ declare namespace javax {
                  * @return an instance of the requested StartElement
                  */
                 // @ts-ignore
-                abstract createStartElement(prefix: string, namespaceUri: string, localName: string, attributes: java.util.Iterator, namespaces: java.util.Iterator, context: javax.xml.namespace.NamespaceContext): javax.xml.stream.events.StartElement
+                public abstract createStartElement(prefix: java.lang.String | string, namespaceUri: java.lang.String | string, localName: java.lang.String | string, attributes: java.util.Iterator<any>, namespaces: java.util.Iterator<any>, context: javax.xml.namespace.NamespaceContext): javax.xml.stream.events.StartElement
                 /**
                  * Create a new EndElement
                  * @param name the qualified name of the EndElement
@@ -260,7 +260,7 @@ declare namespace javax {
                  * @return an instance of the requested EndElement
                  */
                 // @ts-ignore
-                abstract createEndElement(name: javax.xml.namespace.QName, namespaces: java.util.Iterator): javax.xml.stream.events.EndElement
+                public abstract createEndElement(name: javax.xml.namespace.QName, namespaces: java.util.Iterator<any>): javax.xml.stream.events.EndElement
                 /**
                  * Create a new EndElement
                  * @param namespaceUri the uri of the QName of the new StartElement
@@ -269,7 +269,7 @@ declare namespace javax {
                  * @return an instance of the requested EndElement
                  */
                 // @ts-ignore
-                abstract createEndElement(prefix: string, namespaceUri: string, localName: string): javax.xml.stream.events.EndElement
+                public abstract createEndElement(prefix: java.lang.String | string, namespaceUri: java.lang.String | string, localName: java.lang.String | string): javax.xml.stream.events.EndElement
                 /**
                  * Create a new EndElement
                  * @param namespaceUri the uri of the QName of the new StartElement
@@ -280,7 +280,7 @@ declare namespace javax {
                  * @return an instance of the requested EndElement
                  */
                 // @ts-ignore
-                abstract createEndElement(prefix: string, namespaceUri: string, localName: string, namespaces: java.util.Iterator): javax.xml.stream.events.EndElement
+                public abstract createEndElement(prefix: java.lang.String | string, namespaceUri: java.lang.String | string, localName: java.lang.String | string, namespaces: java.util.Iterator<any>): javax.xml.stream.events.EndElement
                 /**
                  * Create a Characters event, this method does not check if the content
                  * is all whitespace.  To create a space event use #createSpace(String)
@@ -288,34 +288,34 @@ declare namespace javax {
                  * @return a Characters event
                  */
                 // @ts-ignore
-                abstract createCharacters(content: string): javax.xml.stream.events.Characters
+                public abstract createCharacters(content: java.lang.String | string): javax.xml.stream.events.Characters
                 /**
                  * Create a Characters event with the CData flag set to true
                  * @param content the string to create
                  * @return a Characters event
                  */
                 // @ts-ignore
-                abstract createCData(content: string): javax.xml.stream.events.Characters
+                public abstract createCData(content: java.lang.String | string): javax.xml.stream.events.Characters
                 /**
                  * Create a Characters event with the isSpace flag set to true
                  * @param content the content of the space to create
                  * @return a Characters event
                  */
                 // @ts-ignore
-                abstract createSpace(content: string): javax.xml.stream.events.Characters
+                public abstract createSpace(content: java.lang.String | string): javax.xml.stream.events.Characters
                 /**
                  * Create an ignorable space
                  * @param content the space to create
                  * @return a Characters event
                  */
                 // @ts-ignore
-                abstract createIgnorableSpace(content: string): javax.xml.stream.events.Characters
+                public abstract createIgnorableSpace(content: java.lang.String | string): javax.xml.stream.events.Characters
                 /**
                  * Creates a new instance of a StartDocument event
                  * @return a StartDocument event
                  */
                 // @ts-ignore
-                abstract createStartDocument(): javax.xml.stream.events.StartDocument
+                public abstract createStartDocument(): javax.xml.stream.events.StartDocument
                 /**
                  * Creates a new instance of a StartDocument event
                  * @param encoding the encoding style
@@ -324,7 +324,7 @@ declare namespace javax {
                  * @return a StartDocument event
                  */
                 // @ts-ignore
-                abstract createStartDocument(encoding: string, version: string, standalone: boolean): javax.xml.stream.events.StartDocument
+                public abstract createStartDocument(encoding: java.lang.String | string, version: java.lang.String | string, standalone: boolean): javax.xml.stream.events.StartDocument
                 /**
                  * Creates a new instance of a StartDocument event
                  * @param encoding the encoding style
@@ -332,20 +332,20 @@ declare namespace javax {
                  * @return a StartDocument event
                  */
                 // @ts-ignore
-                abstract createStartDocument(encoding: string, version: string): javax.xml.stream.events.StartDocument
+                public abstract createStartDocument(encoding: java.lang.String | string, version: java.lang.String | string): javax.xml.stream.events.StartDocument
                 /**
                  * Creates a new instance of a StartDocument event
                  * @param encoding the encoding style
                  * @return a StartDocument event
                  */
                 // @ts-ignore
-                abstract createStartDocument(encoding: string): javax.xml.stream.events.StartDocument
+                public abstract createStartDocument(encoding: java.lang.String | string): javax.xml.stream.events.StartDocument
                 /**
                  * Creates a new instance of an EndDocument event
                  * @return an EndDocument event
                  */
                 // @ts-ignore
-                abstract createEndDocument(): javax.xml.stream.events.EndDocument
+                public abstract createEndDocument(): javax.xml.stream.events.EndDocument
                 /**
                  * Creates a new instance of a EntityReference event
                  * @param name The name of the reference
@@ -353,14 +353,14 @@ declare namespace javax {
                  * @return an EntityReference event
                  */
                 // @ts-ignore
-                abstract createEntityReference(name: string, declaration: javax.xml.stream.events.EntityDeclaration): javax.xml.stream.events.EntityReference
+                public abstract createEntityReference(name: java.lang.String | string, declaration: javax.xml.stream.events.EntityDeclaration): javax.xml.stream.events.EntityReference
                 /**
                  * Create a comment
                  * @param text The text of the comment
                  *  a Comment event
                  */
                 // @ts-ignore
-                abstract createComment(text: string): javax.xml.stream.events.Comment
+                public abstract createComment(text: java.lang.String | string): javax.xml.stream.events.Comment
                 /**
                  * Create a processing instruction
                  * @param target The target of the processing instruction
@@ -368,7 +368,7 @@ declare namespace javax {
                  * @return a ProcessingInstruction event
                  */
                 // @ts-ignore
-                abstract createProcessingInstruction(target: string, data: string): javax.xml.stream.events.ProcessingInstruction
+                public abstract createProcessingInstruction(target: java.lang.String | string, data: java.lang.String | string): javax.xml.stream.events.ProcessingInstruction
                 /**
                  * Create a document type definition event
                  * This string contains the entire document type declaration that matches
@@ -377,7 +377,7 @@ declare namespace javax {
                  * @return a DTD event
                  */
                 // @ts-ignore
-                abstract createDTD(dtd: string): javax.xml.stream.events.DTD
+                public abstract createDTD(dtd: java.lang.String | string): javax.xml.stream.events.DTD
             }
         }
     }

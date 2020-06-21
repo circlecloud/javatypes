@@ -32,7 +32,7 @@ declare namespace java {
                  *  arguments are invalid.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

@@ -52,17 +52,17 @@ declare namespace javax {
                      * The printer has detected an error other than ones listed below.
                      */
                     // @ts-ignore
-                    readonly OTHER: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly OTHER: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * A tray has run out of media.
                      */
                     // @ts-ignore
-                    readonly MEDIA_NEEDED: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MEDIA_NEEDED: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device has a media jam.
                      */
                     // @ts-ignore
-                    readonly MEDIA_JAM: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MEDIA_JAM: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * Someone has paused the printer, but the device(s) are taking an
                      * appreciable time to stop. Later, when all output has stopped,
@@ -74,7 +74,7 @@ declare namespace javax {
                      * pause a device in certain circumstances.
                      */
                     // @ts-ignore
-                    readonly MOVING_TO_PAUSED: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MOVING_TO_PAUSED: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * Someone has paused the printer and the printer's {@link PrinterState
                      * PrinterState} is STOPPED. In this state, a printer must not produce
@@ -86,7 +86,7 @@ declare namespace javax {
                      * This value must be supported if the printer can be paused.
                      */
                     // @ts-ignore
-                    readonly PAUSED: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly PAUSED: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * Someone has removed a printer from service, and the device may be
                      * powered down or physically removed.
@@ -102,7 +102,7 @@ declare namespace javax {
                      * shutdown.
                      */
                     // @ts-ignore
-                    readonly SHUTDOWN: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly SHUTDOWN: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The printer has scheduled a job on the output device and is in the
                      * process of connecting to a shared network output device (and might not
@@ -111,13 +111,13 @@ declare namespace javax {
                      * network).
                      */
                     // @ts-ignore
-                    readonly CONNECTING_TO_DEVICE: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly CONNECTING_TO_DEVICE: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The server was able to connect to the output device (or is always
                      * connected), but was unable to get a response from the output device.
                      */
                     // @ts-ignore
-                    readonly TIMED_OUT: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly TIMED_OUT: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The printer is in the process of stopping the device and will be
                      * stopped in a while.
@@ -129,7 +129,7 @@ declare namespace javax {
                      * the output device completes printing.
                      */
                     // @ts-ignore
-                    readonly STOPPING: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly STOPPING: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * When a printer controls more than one output device, this reason
                      * indicates that one or more output devices are stopped. If the reason's
@@ -139,17 +139,17 @@ declare namespace javax {
                      * all of the output devices are stopped.
                      */
                     // @ts-ignore
-                    readonly STOPPED_PARTLY: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly STOPPED_PARTLY: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device is low on toner.
                      */
                     // @ts-ignore
-                    readonly TONER_LOW: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly TONER_LOW: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device is out of toner.
                      */
                     // @ts-ignore
-                    readonly TONER_EMPTY: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly TONER_EMPTY: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The limit of persistent storage allocated for spooling has been
                      * reached.
@@ -160,115 +160,115 @@ declare namespace javax {
                      * jobs at a time or a spooling printer that has filled the spool space.
                      */
                     // @ts-ignore
-                    readonly SPOOL_AREA_FULL: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly SPOOL_AREA_FULL: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more covers on the device are open.
                      */
                     // @ts-ignore
-                    readonly COVER_OPEN: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly COVER_OPEN: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more interlock devices on the printer are unlocked.
                      */
                     // @ts-ignore
-                    readonly INTERLOCK_OPEN: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly INTERLOCK_OPEN: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more doors on the device are open.
                      */
                     // @ts-ignore
-                    readonly DOOR_OPEN: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly DOOR_OPEN: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more input trays are not in the device.
                      */
                     // @ts-ignore
-                    readonly INPUT_TRAY_MISSING: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly INPUT_TRAY_MISSING: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * At least one input tray is low on media.
                      */
                     // @ts-ignore
-                    readonly MEDIA_LOW: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MEDIA_LOW: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * At least one input tray is empty.
                      */
                     // @ts-ignore
-                    readonly MEDIA_EMPTY: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MEDIA_EMPTY: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more output trays are not in the device.
                      */
                     // @ts-ignore
-                    readonly OUTPUT_TRAY_MISSING: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly OUTPUT_TRAY_MISSING: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more output areas are almost full
                      * (e.g. tray, stacker, collator).
                      */
                     // @ts-ignore
-                    readonly OUTPUT_AREA_ALMOST_FULL: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly OUTPUT_AREA_ALMOST_FULL: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * One or more output areas are full (e.g. tray, stacker, collator).
                      */
                     // @ts-ignore
-                    readonly OUTPUT_AREA_FULL: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly OUTPUT_AREA_FULL: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device is low on at least one marker supply (e.g. toner, ink,
                      * ribbon).
                      */
                     // @ts-ignore
-                    readonly MARKER_SUPPLY_LOW: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MARKER_SUPPLY_LOW: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device is out of at least one marker supply (e.g. toner, ink,
                      * ribbon).
                      */
                     // @ts-ignore
-                    readonly MARKER_SUPPLY_EMPTY: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MARKER_SUPPLY_EMPTY: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device marker supply waste receptacle is almost full.
                      */
                     // @ts-ignore
-                    readonly MARKER_WASTE_ALMOST_FULL: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MARKER_WASTE_ALMOST_FULL: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device marker supply waste receptacle is full.
                      */
                     // @ts-ignore
-                    readonly MARKER_WASTE_FULL: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly MARKER_WASTE_FULL: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The fuser temperature is above normal.
                      */
                     // @ts-ignore
-                    readonly FUSER_OVER_TEMP: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly FUSER_OVER_TEMP: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The fuser temperature is below normal.
                      */
                     // @ts-ignore
-                    readonly FUSER_UNDER_TEMP: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly FUSER_UNDER_TEMP: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The optical photo conductor is near end of life.
                      */
                     // @ts-ignore
-                    readonly OPC_NEAR_EOL: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly OPC_NEAR_EOL: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The optical photo conductor is no longer functioning.
                      */
                     // @ts-ignore
-                    readonly OPC_LIFE_OVER: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly OPC_LIFE_OVER: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device is low on developer.
                      */
                     // @ts-ignore
-                    readonly DEVELOPER_LOW: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly DEVELOPER_LOW: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * The device is out of developer.
                      */
                     // @ts-ignore
-                    readonly DEVELOPER_EMPTY: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly DEVELOPER_EMPTY: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * An interpreter resource is unavailable (e.g., font, form).
                      */
                     // @ts-ignore
-                    readonly INTERPRETER_RESOURCE_UNAVAILABLE: javax.print.attribute.standard.PrinterStateReason
+                    public static readonly INTERPRETER_RESOURCE_UNAVAILABLE: javax.print.attribute.standard.PrinterStateReason
                     /**
                      * Returns the string table for class PrinterStateReason.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class PrinterStateReason.
                      */
@@ -284,7 +284,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -294,7 +294,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

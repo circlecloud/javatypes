@@ -22,7 +22,7 @@ declare namespace javax {
                      * @return this object
                      */
                     // @ts-ignore
-                    getAccessibleContext(): javax.accessibility.AccessibleContext
+                    public getAccessibleContext(): javax.accessibility.AccessibleContext
                     /**
                      * Gets the AccessibleContext for the table cell renderer.
                      * @return the <code>AccessibleContext</code> for the table
@@ -46,13 +46,13 @@ declare namespace javax {
                      *      if this object does not have a name
                      */
                     // @ts-ignore
-                    getAccessibleName(): java.lang.String
+                    public getAccessibleName(): string
                     /**
                      * Sets the localized accessible name of this object.
                      * @param s the new localized name of the object
                      */
                     // @ts-ignore
-                    setAccessibleName(s: string): void
+                    public setAccessibleName(s: java.lang.String | string): void
                     /**
                      * Gets the accessible description of this object.
                      * @return the localized description of the object;
@@ -60,13 +60,13 @@ declare namespace javax {
                      *      a description
                      */
                     // @ts-ignore
-                    getAccessibleDescription(): java.lang.String
+                    public getAccessibleDescription(): string
                     /**
                      * Sets the accessible description of this object.
                      * @param s the new localized description of the object
                      */
                     // @ts-ignore
-                    setAccessibleDescription(s: string): void
+                    public setAccessibleDescription(s: java.lang.String | string): void
                     /**
                      * Gets the role of this object.
                      * @return an instance of <code>AccessibleRole</code>
@@ -74,7 +74,7 @@ declare namespace javax {
                      * @see AccessibleRole
                      */
                     // @ts-ignore
-                    getAccessibleRole(): javax.accessibility.AccessibleRole
+                    public getAccessibleRole(): javax.accessibility.AccessibleRole
                     /**
                      * Gets the state set of this object.
                      * @return an instance of <code>AccessibleStateSet</code>
@@ -82,7 +82,7 @@ declare namespace javax {
                      * @see AccessibleState
                      */
                     // @ts-ignore
-                    getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                    public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                     /**
                      * Gets the <code>Accessible</code> parent of this object.
                      * @return the Accessible parent of this object;
@@ -90,7 +90,7 @@ declare namespace javax {
                      *      have an <code>Accessible</code> parent
                      */
                     // @ts-ignore
-                    getAccessibleParent(): javax.accessibility.Accessible
+                    public getAccessibleParent(): javax.accessibility.Accessible
                     /**
                      * Gets the index of this object in its accessible parent.
                      * @return the index of this object in its parent; -1 if this
@@ -98,13 +98,13 @@ declare namespace javax {
                      * @see #getAccessibleParent
                      */
                     // @ts-ignore
-                    getAccessibleIndexInParent(): int
+                    public getAccessibleIndexInParent(): number /*int*/
                     /**
                      * Returns the number of accessible children in the object.
                      * @return the number of accessible children in the object
                      */
                     // @ts-ignore
-                    getAccessibleChildrenCount(): int
+                    public getAccessibleChildrenCount(): number /*int*/
                     /**
                      * Returns the specified <code>Accessible</code> child of the
                      * object.
@@ -112,7 +112,7 @@ declare namespace javax {
                      * @return the <code>Accessible</code> child of the object
                      */
                     // @ts-ignore
-                    getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                    public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                     /**
                      * Gets the locale of the component. If the component
                      * does not have a locale, then the locale of its parent
@@ -127,7 +127,7 @@ declare namespace javax {
                      * @see #setLocale
                      */
                     // @ts-ignore
-                    getLocale(): java.util.Locale
+                    public getLocale(): java.util.Locale
                     /**
                      * Adds a <code>PropertyChangeListener</code> to the listener list.
                      * The listener is registered for all properties.
@@ -135,7 +135,7 @@ declare namespace javax {
                      *      to be added
                      */
                     // @ts-ignore
-                    addPropertyChangeListener(l: java.beans.PropertyChangeListener): void
+                    public addPropertyChangeListener(l: java.beans.PropertyChangeListener): void
                     /**
                      * Removes a <code>PropertyChangeListener</code> from the
                      * listener list. This removes a <code>PropertyChangeListener</code>
@@ -144,14 +144,14 @@ declare namespace javax {
                      *     to be removed
                      */
                     // @ts-ignore
-                    removePropertyChangeListener(l: java.beans.PropertyChangeListener): void
+                    public removePropertyChangeListener(l: java.beans.PropertyChangeListener): void
                     /**
                      * Gets the <code>AccessibleAction</code> associated with this
                      * object if one exists.  Otherwise returns <code>null</code>.
                      * @return the <code>AccessibleAction</code>, or <code>null</code>
                      */
                     // @ts-ignore
-                    getAccessibleAction(): javax.accessibility.AccessibleAction
+                    public getAccessibleAction(): javax.accessibility.AccessibleAction
                     /**
                      * Gets the <code>AccessibleComponent</code> associated with
                      * this object if one exists.  Otherwise returns <code>null</code>.
@@ -159,7 +159,7 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    getAccessibleComponent(): javax.accessibility.AccessibleComponent
+                    public getAccessibleComponent(): javax.accessibility.AccessibleComponent
                     /**
                      * Gets the <code>AccessibleSelection</code> associated with
                      * this object if one exists.  Otherwise returns <code>null</code>.
@@ -167,73 +167,73 @@ declare namespace javax {
                      *     <code>null</code>
                      */
                     // @ts-ignore
-                    getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                    public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                     /**
                      * Gets the <code>AccessibleText</code> associated with this
                      * object if one exists.  Otherwise returns <code>null</code>.
                      * @return the <code>AccessibleText</code>, or <code>null</code>
                      */
                     // @ts-ignore
-                    getAccessibleText(): javax.accessibility.AccessibleText
+                    public getAccessibleText(): javax.accessibility.AccessibleText
                     /**
                      * Gets the <code>AccessibleValue</code> associated with
                      * this object if one exists.  Otherwise returns <code>null</code>.
                      * @return the <code>AccessibleValue</code>, or <code>null</code>
                      */
                     // @ts-ignore
-                    getAccessibleValue(): javax.accessibility.AccessibleValue
+                    public getAccessibleValue(): javax.accessibility.AccessibleValue
                     /**
                      * Gets the background color of this object.
                      * @return the background color, if supported, of the object;
                      *      otherwise, <code>null</code>
                      */
                     // @ts-ignore
-                    getBackground(): java.awt.Color
+                    public getBackground(): java.awt.Color
                     /**
                      * Sets the background color of this object.
                      * @param c the new <code>Color</code> for the background
                      */
                     // @ts-ignore
-                    setBackground(c: java.awt.Color): void
+                    public setBackground(c: java.awt.Color): void
                     /**
                      * Gets the foreground color of this object.
                      * @return the foreground color, if supported, of the object;
                      *      otherwise, <code>null</code>
                      */
                     // @ts-ignore
-                    getForeground(): java.awt.Color
+                    public getForeground(): java.awt.Color
                     /**
                      * Sets the foreground color of this object.
                      * @param c the new <code>Color</code> for the foreground
                      */
                     // @ts-ignore
-                    setForeground(c: java.awt.Color): void
+                    public setForeground(c: java.awt.Color): void
                     /**
                      * Gets the <code>Cursor</code> of this object.
                      * @return the <code>Cursor</code>, if supported,
                      *     of the object; otherwise, <code>null</code>
                      */
                     // @ts-ignore
-                    getCursor(): java.awt.Cursor
+                    public getCursor(): java.awt.Cursor
                     /**
                      * Sets the <code>Cursor</code> of this object.
                      * @param c the new <code>Cursor</code> for the object
                      */
                     // @ts-ignore
-                    setCursor(c: java.awt.Cursor): void
+                    public setCursor(c: java.awt.Cursor): void
                     /**
                      * Gets the <code>Font</code> of this object.
                      * @return the <code>Font</code>,if supported,
                      *    for the object; otherwise, <code>null</code>
                      */
                     // @ts-ignore
-                    getFont(): java.awt.Font
+                    public getFont(): java.awt.Font
                     /**
                      * Sets the <code>Font</code> of this object.
                      * @param f the new <code>Font</code> for the object
                      */
                     // @ts-ignore
-                    setFont(f: java.awt.Font): void
+                    public setFont(f: java.awt.Font): void
                     /**
                      * Gets the <code>FontMetrics</code> of this object.
                      * @param f the <code>Font</code>
@@ -242,19 +242,19 @@ declare namespace javax {
                      * @see #getFont
                      */
                     // @ts-ignore
-                    getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
+                    public getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
                     /**
                      * Determines if the object is enabled.
                      * @return true if object is enabled; otherwise, false
                      */
                     // @ts-ignore
-                    isEnabled(): boolean
+                    public isEnabled(): boolean
                     /**
                      * Sets the enabled state of the object.
                      * @param b if true, enables this object; otherwise, disables it
                      */
                     // @ts-ignore
-                    setEnabled(b: boolean): void
+                    public setEnabled(b: boolean): void
                     /**
                      * Determines if this object is visible.  Note: this means that the
                      * object intends to be visible; however, it may not in fact be
@@ -264,13 +264,13 @@ declare namespace javax {
                      * @return true if object is visible; otherwise, false
                      */
                     // @ts-ignore
-                    isVisible(): boolean
+                    public isVisible(): boolean
                     /**
                      * Sets the visible state of the object.
                      * @param b if true, shows this object; otherwise, hides it
                      */
                     // @ts-ignore
-                    setVisible(b: boolean): void
+                    public setVisible(b: boolean): void
                     /**
                      * Determines if the object is showing.  This is determined
                      * by checking the visibility of the object and ancestors
@@ -280,7 +280,7 @@ declare namespace javax {
                      * @return true if the object is showing; otherwise, false
                      */
                     // @ts-ignore
-                    isShowing(): boolean
+                    public isShowing(): boolean
                     /**
                      * Checks whether the specified point is within this
                      * object's bounds, where the point's x and y coordinates
@@ -292,14 +292,14 @@ declare namespace javax {
                      *     otherwise false
                      */
                     // @ts-ignore
-                    contains(p: java.awt.Point): boolean
+                    public contains(p: java.awt.Point): boolean
                     /**
                      * Returns the location of the object on the screen.
                      * @return location of object on screen -- can be
                      *     <code>null</code> if this object is not on the screen
                      */
                     // @ts-ignore
-                    getLocationOnScreen(): java.awt.Point
+                    public getLocationOnScreen(): java.awt.Point
                     /**
                      * Gets the location of the object relative to the parent
                      * in the form of a point specifying the object's
@@ -310,30 +310,30 @@ declare namespace javax {
                      *     this object or its parent are not on the screen
                      */
                     // @ts-ignore
-                    getLocation(): java.awt.Point
+                    public getLocation(): java.awt.Point
                     /**
                      * Sets the location of the object relative to the parent.
                      */
                     // @ts-ignore
-                    setLocation(p: java.awt.Point): void
+                    public setLocation(p: java.awt.Point): void
                     // @ts-ignore
-                    getBounds(): java.awt.Rectangle
+                    public getBounds(): java.awt.Rectangle
                     // @ts-ignore
-                    setBounds(r: java.awt.Rectangle): void
+                    public setBounds(r: java.awt.Rectangle): void
                     // @ts-ignore
-                    getSize(): java.awt.Dimension
+                    public getSize(): java.awt.Dimension
                     // @ts-ignore
-                    setSize(d: java.awt.Dimension): void
+                    public setSize(d: java.awt.Dimension): void
                     // @ts-ignore
-                    getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                    public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                     // @ts-ignore
-                    isFocusTraversable(): boolean
+                    public isFocusTraversable(): boolean
                     // @ts-ignore
-                    requestFocus(): void
+                    public requestFocus(): void
                     // @ts-ignore
-                    addFocusListener(l: java.awt.event.FocusListener): void
+                    public addFocusListener(l: java.awt.event.FocusListener): void
                     // @ts-ignore
-                    removeFocusListener(l: java.awt.event.FocusListener): void
+                    public removeFocusListener(l: java.awt.event.FocusListener): void
                 }
             }
         }

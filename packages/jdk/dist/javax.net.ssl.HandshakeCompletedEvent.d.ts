@@ -29,7 +29,7 @@ declare namespace javax {
                  * @return the <code>SSLSession</code> for this handshake
                  */
                 // @ts-ignore
-                getSession(): javax.net.ssl.SSLSession
+                public getSession(): javax.net.ssl.SSLSession
                 /**
                  * Returns the cipher suite in use by the session which was produced
                  * by the handshake.  (This is a convenience method for
@@ -37,7 +37,7 @@ declare namespace javax {
                  * @return the name of the cipher suite negotiated during this session.
                  */
                 // @ts-ignore
-                getCipherSuite(): java.lang.String
+                public getCipherSuite(): string
                 /**
                  * Returns the certificate(s) that were sent to the peer during
                  * handshaking.
@@ -55,7 +55,7 @@ declare namespace javax {
                  * @see #getLocalPrincipal()
                  */
                 // @ts-ignore
-                getLocalCertificates(): java.security.cert.Certificate[]
+                public getLocalCertificates(): java.security.cert.Certificate[]
                 /**
                  * Returns the identity of the peer which was established as part
                  * of defining the session.
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @see #getPeerPrincipal()
                  */
                 // @ts-ignore
-                getPeerCertificates(): java.security.cert.Certificate[]
+                public getPeerCertificates(): java.security.cert.Certificate[]
                 /**
                  * Returns the identity of the peer which was identified as part
                  * of defining the session.
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @see #getPeerPrincipal()
                  */
                 // @ts-ignore
-                getPeerCertificateChain(): javax.security.cert.X509Certificate[]
+                public getPeerCertificateChain(): javax.security.cert.X509Certificate[]
                 /**
                  * Returns the identity of the peer which was established as part of
                  * defining the session.
@@ -102,7 +102,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getPeerPrincipal(): java.security.Principal
+                public getPeerPrincipal(): java.security.Principal
                 /**
                  * Returns the principal that was sent to the peer during handshaking.
                  * @return the principal sent to the peer. Returns an X500Principal
@@ -114,7 +114,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLocalPrincipal(): java.security.Principal
+                public getLocalPrincipal(): java.security.Principal
                 /**
                  * Returns the socket which is the source of this event.
                  * (This is a convenience function, to let applications
@@ -122,7 +122,7 @@ declare namespace javax {
                  * @return the socket on which the connection was made.
                  */
                 // @ts-ignore
-                getSocket(): javax.net.ssl.SSLSocket
+                public getSocket(): javax.net.ssl.SSLSocket
             }
         }
     }

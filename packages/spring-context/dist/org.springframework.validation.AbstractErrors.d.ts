@@ -10,29 +10,29 @@ declare namespace org {
              * @since 2.5.3
              */
             // @ts-ignore
-            class AbstractErrors extends java.lang.Object implements org.springframework.validation.Errors, java.io.Serializable {
+            abstract class AbstractErrors extends java.lang.Object implements org.springframework.validation.Errors, java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                setNestedPath(nestedPath: string): void
+                public setNestedPath(nestedPath: java.lang.String | string): void
                 // @ts-ignore
-                getNestedPath(): java.lang.String
+                public getNestedPath(): string
                 // @ts-ignore
-                pushNestedPath(subPath: string): void
+                public pushNestedPath(subPath: java.lang.String | string): void
                 // @ts-ignore
-                popNestedPath(): void
+                public popNestedPath(): void
                 /**
                  * Actually set the nested path.
                  * Delegated to by setNestedPath and pushNestedPath.
                  */
                 // @ts-ignore
-                doSetNestedPath(nestedPath: string): void
+                doSetNestedPath(nestedPath: java.lang.String | string): void
                 /**
                  * Transform the given field into its full path,
                  * regarding the nested path of this instance.
                  */
                 // @ts-ignore
-                fixedField(field: string): java.lang.String
+                fixedField(field: java.lang.String | string): string
                 /**
                  * Determine the canonical field name for the given field.
                  * <p>The default implementation simply returns the field name as-is.
@@ -40,43 +40,43 @@ declare namespace org {
                  * @return the canonical field name
                  */
                 // @ts-ignore
-                canonicalFieldName(field: string): java.lang.String
+                canonicalFieldName(field: java.lang.String | string): string
                 // @ts-ignore
-                reject(errorCode: string): void
+                public reject(errorCode: java.lang.String | string): void
                 // @ts-ignore
-                reject(errorCode: string, defaultMessage: string): void
+                public reject(errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string): void
+                public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string): void
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string, defaultMessage: string): void
+                public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 // @ts-ignore
-                hasErrors(): boolean
+                public hasErrors(): boolean
                 // @ts-ignore
-                getErrorCount(): int
+                public getErrorCount(): number /*int*/
                 // @ts-ignore
-                getAllErrors(): java.util.List<org.springframework.validation.ObjectError>
+                public getAllErrors(): Array<org.springframework.validation.ObjectError>
                 // @ts-ignore
-                hasGlobalErrors(): boolean
+                public hasGlobalErrors(): boolean
                 // @ts-ignore
-                getGlobalErrorCount(): int
+                public getGlobalErrorCount(): number /*int*/
                 // @ts-ignore
-                getGlobalError(): org.springframework.validation.ObjectError
+                public getGlobalError(): org.springframework.validation.ObjectError
                 // @ts-ignore
-                hasFieldErrors(): boolean
+                public hasFieldErrors(): boolean
                 // @ts-ignore
-                getFieldErrorCount(): int
+                public getFieldErrorCount(): number /*int*/
                 // @ts-ignore
-                getFieldError(): org.springframework.validation.FieldError
+                public getFieldError(): org.springframework.validation.FieldError
                 // @ts-ignore
-                hasFieldErrors(field: string): boolean
+                public hasFieldErrors(field: java.lang.String | string): boolean
                 // @ts-ignore
-                getFieldErrorCount(field: string): int
+                public getFieldErrorCount(field: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getFieldErrors(field: string): java.util.List<org.springframework.validation.FieldError>
+                public getFieldErrors(field: java.lang.String | string): Array<org.springframework.validation.FieldError>
                 // @ts-ignore
-                getFieldError(field: string): org.springframework.validation.FieldError
+                public getFieldError(field: java.lang.String | string): org.springframework.validation.FieldError
                 // @ts-ignore
-                getFieldType(field: string): java.lang.Class<?>
+                public getFieldType(field: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Check whether the given FieldError matches the given field.
                  * @param field the field that we are looking up FieldErrors for
@@ -84,9 +84,9 @@ declare namespace org {
                  * @return whether the FieldError matches the given field
                  */
                 // @ts-ignore
-                isMatchingFieldError(field: string, fieldError: org.springframework.validation.FieldError): boolean
+                isMatchingFieldError(field: java.lang.String | string, fieldError: org.springframework.validation.FieldError): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -27,7 +27,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if an illegal severity field is supplied
                      */
                     // @ts-ignore
-                    constructor(_severity: number /*int*/, _message: string, _locator: javax.xml.bind.ValidationEventLocator)
+                    constructor(_severity: number /*int*/, _message: java.lang.String | string, _locator: javax.xml.bind.ValidationEventLocator)
                     /**
                      * Create a new ValidationEventImpl.
                      * @param _severity The severity value for this event.  Must be one of
@@ -40,9 +40,9 @@ declare namespace javax {
                      * @throws IllegalArgumentException if an illegal severity field is supplied
                      */
                     // @ts-ignore
-                    constructor(_severity: number /*int*/, _message: string, _locator: javax.xml.bind.ValidationEventLocator, _linkedException: Error)
+                    constructor(_severity: number /*int*/, _message: java.lang.String | string, _locator: javax.xml.bind.ValidationEventLocator, _linkedException: java.lang.Throwable | Error)
                     // @ts-ignore
-                    getSeverity(): int
+                    public getSeverity(): number /*int*/
                     /**
                      * Set the severity field of this event.
                      * @param _severity Must be one of ValidationEvent.WARNING,
@@ -50,38 +50,38 @@ declare namespace javax {
                      * @throws IllegalArgumentException if an illegal severity field is supplied
                      */
                     // @ts-ignore
-                    setSeverity(_severity: number /*int*/): void
+                    public setSeverity(_severity: number /*int*/): void
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Set the message field of this event.
                      * @param _message String message - may be null.
                      */
                     // @ts-ignore
-                    setMessage(_message: string): void
+                    public setMessage(_message: java.lang.String | string): void
                     // @ts-ignore
-                    getLinkedException(): java.lang.Throwable
+                    public getLinkedException(): Error
                     /**
                      * Set the linked exception field of this event.
                      * @param _linkedException Optional linked exception - may be null.
                      */
                     // @ts-ignore
-                    setLinkedException(_linkedException: Error): void
+                    public setLinkedException(_linkedException: java.lang.Throwable | Error): void
                     // @ts-ignore
-                    getLocator(): javax.xml.bind.ValidationEventLocator
+                    public getLocator(): javax.xml.bind.ValidationEventLocator
                     /**
                      * Set the locator object for this event.
                      * @param _locator The locator - may be null.
                      */
                     // @ts-ignore
-                    setLocator(_locator: javax.xml.bind.ValidationEventLocator): void
+                    public setLocator(_locator: javax.xml.bind.ValidationEventLocator): void
                     /**
                      * Returns a string representation of this object in a format
                      * helpful to debugging.
                      * @see Object#equals(Object)
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

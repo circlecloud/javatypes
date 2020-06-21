@@ -12,7 +12,7 @@ declare namespace org {
                          * @see DataHolder#get(Class)
                          */
                         // @ts-ignore
-                        class Has implements java.lang.annotation.Annotation {
+                        abstract class Has implements java.lang.annotation.Annotation {
                         }
                     }
                 }

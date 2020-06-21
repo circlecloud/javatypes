@@ -16,7 +16,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class FileTypeMap extends java.lang.Object {
+        abstract class FileTypeMap extends java.lang.Object {
             /**
              * The default constructor.
              */
@@ -29,7 +29,7 @@ declare namespace javax {
              * @return The content type.
              */
             // @ts-ignore
-            abstract getContentType(file: java.io.File): java.lang.String
+            public abstract getContentType(file: java.io.File): string
             /**
              * Return the type of the file passed in.  This method should
              * always return a valid MIME type.
@@ -37,7 +37,7 @@ declare namespace javax {
              * @return The content type.
              */
             // @ts-ignore
-            abstract getContentType(filename: string): java.lang.String
+            public abstract getContentType(filename: java.lang.String | string): string
             /**
              * Sets the default FileTypeMap for the system. This instance
              * will be returned to callers of getDefaultFileTypeMap.
@@ -46,7 +46,7 @@ declare namespace javax {
              *                                   to change the default
              */
             // @ts-ignore
-            setDefaultFileTypeMap(fileTypeMap: javax.activation.FileTypeMap): void
+            public static setDefaultFileTypeMap(fileTypeMap: javax.activation.FileTypeMap): void
             /**
              * Return the default FileTypeMap for the system.
              * If setDefaultFileTypeMap was called, return
@@ -56,7 +56,7 @@ declare namespace javax {
              * @see javax.activation.FileTypeMap#setDefaultFileTypeMap
              */
             // @ts-ignore
-            getDefaultFileTypeMap(): javax.activation.FileTypeMap
+            public static getDefaultFileTypeMap(): javax.activation.FileTypeMap
         }
     }
 }

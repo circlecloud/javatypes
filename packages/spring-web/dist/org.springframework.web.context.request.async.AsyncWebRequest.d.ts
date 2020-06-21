@@ -19,7 +19,7 @@ declare namespace org {
                              *  	timeout, i.e. rely on the default timeout of the container.
                              */
                             // @ts-ignore
-                            setTimeout(timeout: number): void
+                            setTimeout(timeout: java.lang.Long | number): void
                             /**
                              * Add a handler to invoke when concurrent handling has timed out.
                              */
@@ -31,7 +31,7 @@ declare namespace org {
                              * @since 5.0
                              */
                             // @ts-ignore
-                            addErrorHandler(exceptionHandler: java.util.function.Consumer<java.lang.Throwable> | java.util.function$.Consumer<java.lang.Throwable>): void
+                            addErrorHandler(exceptionHandler: java.util.function$.Consumer<java.lang.Throwable | Error>): void
                             /**
                              * Add a handler to invoke when request processing completes.
                              */

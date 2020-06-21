@@ -44,7 +44,7 @@ declare namespace javax {
                  * Use serialVersionUID from JNDI 1.1.1 for interoperability.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Retrieves an enumeration of the attribute's values.
                  * The behaviour of this enumeration is unspecified
@@ -64,7 +64,7 @@ declare namespace javax {
                  * @see #isOrdered
                  */
                 // @ts-ignore
-                getAll(): javax.naming.NamingEnumeration<?>
+                getAll(): javax.naming.NamingEnumeration<any>
                 /**
                  * Retrieves one of this attribute's values.
                  * If the attribute has more than one value and is unordered, any one of
@@ -81,19 +81,19 @@ declare namespace javax {
                  *          If this attribute has no values.
                  */
                 // @ts-ignore
-                get(): java.lang.Object
+                get(): any
                 /**
                  * Retrieves the number of values in this attribute.
                  * @return The nonnegative number of values in this attribute.
                  */
                 // @ts-ignore
-                size(): int
+                size(): number /*int*/
                 /**
                  * Retrieves the id of this attribute.
                  * @return The id of this attribute. It cannot be null.
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                getID(): string
                 /**
                  * Determines whether a value is in the attribute.
                  * Equality is determined by the implementation, which may use
@@ -105,7 +105,7 @@ declare namespace javax {
                  * @see BasicAttribute#equals
                  */
                 // @ts-ignore
-                contains(attrVal: any): boolean
+                contains(attrVal: java.lang.Object | any): boolean
                 /**
                  * Adds a new value to the attribute.
                  * If the attribute values are unordered and
@@ -120,7 +120,7 @@ declare namespace javax {
                  * @return true if a value was added; false otherwise.
                  */
                 // @ts-ignore
-                add(attrVal: any): boolean
+                add(attrVal: java.lang.Object | any): boolean
                 /**
                  * Removes a specified value from the attribute.
                  * If <tt>attrval</tt> is not in the attribute, this method does nothing.
@@ -137,7 +137,7 @@ declare namespace javax {
                  * @return true if the value was removed; false otherwise.
                  */
                 // @ts-ignore
-                remove(attrval: any): boolean
+                remove(attrval: java.lang.Object | any): boolean
                 /**
                  * Removes all values from this attribute.
                  */
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @return A non-null copy of the attribute.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
                 /**
                  * Determines whether this attribute's values are ordered.
                  * If an attribute's values are ordered, duplicate values are allowed.
@@ -233,7 +233,7 @@ declare namespace javax {
                  * @exception IndexOutOfBoundsException If <tt>ix</tt> is outside the specified range.
                  */
                 // @ts-ignore
-                get(ix: number /*int*/): java.lang.Object
+                get(ix: number /*int*/): any
                 /**
                  * Removes an attribute value from the ordered list of attribute values.
                  * This method removes the value at the <tt>ix</tt> index of the list of
@@ -249,7 +249,7 @@ declare namespace javax {
                  * @exception IndexOutOfBoundsException If <tt>ix</tt> is outside the specified range.
                  */
                 // @ts-ignore
-                remove(ix: number /*int*/): java.lang.Object
+                remove(ix: number /*int*/): any
                 /**
                  * Adds an attribute value to the ordered list of attribute values.
                  * This method adds <tt>attrVal</tt> to the list of attribute values at
@@ -268,7 +268,7 @@ declare namespace javax {
                  *  <tt>attrVal</tt> is one of those values.
                  */
                 // @ts-ignore
-                add(ix: number /*int*/, attrVal: any): void
+                add(ix: number /*int*/, attrVal: java.lang.Object | any): void
                 /**
                  * Sets an attribute value in the ordered list of attribute values.
                  * This method sets the value at the <tt>ix</tt> index of the list of
@@ -288,7 +288,7 @@ declare namespace javax {
                  *     attribute values are unordered.
                  */
                 // @ts-ignore
-                set(ix: number /*int*/, attrVal: any): java.lang.Object
+                set(ix: number /*int*/, attrVal: java.lang.Object | any): any
             }
         }
     }

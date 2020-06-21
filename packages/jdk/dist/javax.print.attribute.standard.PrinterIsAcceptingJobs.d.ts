@@ -33,17 +33,17 @@ declare namespace javax {
                      * The printer is currently rejecting any jobs sent to it.
                      */
                     // @ts-ignore
-                    readonly NOT_ACCEPTING_JOBS: javax.print.attribute.standard.PrinterIsAcceptingJobs
+                    public static readonly NOT_ACCEPTING_JOBS: javax.print.attribute.standard.PrinterIsAcceptingJobs
                     /**
                      * The printer is currently accepting jobs.
                      */
                     // @ts-ignore
-                    readonly ACCEPTING_JOBS: javax.print.attribute.standard.PrinterIsAcceptingJobs
+                    public static readonly ACCEPTING_JOBS: javax.print.attribute.standard.PrinterIsAcceptingJobs
                     /**
                      * Returns the string table for class PrinterIsAcceptingJobs.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class PrinterIsAcceptingJobs.
                      */
@@ -59,7 +59,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

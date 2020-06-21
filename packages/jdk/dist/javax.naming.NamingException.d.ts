@@ -39,7 +39,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new NamingException.
              * All fields are set to null.
@@ -69,7 +69,7 @@ declare namespace javax {
              * @see #setResolvedObj
              */
             // @ts-ignore
-            resolvedObj: any
+            resolvedObj: java.lang.Object | any
             /**
              * Contains the remaining name that has not been resolved yet.
              * It is a composite name and can be null.
@@ -102,7 +102,7 @@ declare namespace javax {
              * @see #getCause
              */
             // @ts-ignore
-            rootException: Error
+            rootException: java.lang.Throwable | Error
             /**
              * Retrieves the leading portion of the name that was resolved
              * successfully.
@@ -134,7 +134,7 @@ declare namespace javax {
              * @see #setResolvedObj
              */
             // @ts-ignore
-            getResolvedObj(): java.lang.Object
+            getResolvedObj(): any
             /**
              * Retrieves the explanation associated with this exception.
              * @return The possibly null detail string explaining more
@@ -143,7 +143,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            getExplanation(): java.lang.String
+            getExplanation(): string
             /**
              * Sets the resolved name field of this exception.
              * <p>
@@ -189,7 +189,7 @@ declare namespace javax {
              * @see #getResolvedObj
              */
             // @ts-ignore
-            setResolvedObj(obj: any): void
+            setResolvedObj(obj: java.lang.Object | any): void
             /**
              * Add name as the last component in remaining name.
              * @param name The component to add.
@@ -199,7 +199,7 @@ declare namespace javax {
              * @see #appendRemainingName
              */
             // @ts-ignore
-            appendRemainingComponent(name: string): void
+            appendRemainingComponent(name: java.lang.String | string): void
             /**
              * Add components from 'name' as the last components in
              * remaining name.
@@ -236,7 +236,7 @@ declare namespace javax {
              * @see #getCause
              */
             // @ts-ignore
-            getRootCause(): java.lang.Throwable
+            getRootCause(): Error
             /**
              * Records the root cause of this NamingException.
              * If <tt>e</tt> is <tt>this</tt>, this method does not do anything.
@@ -252,7 +252,7 @@ declare namespace javax {
              * @see #initCause
              */
             // @ts-ignore
-            setRootCause(e: Error): void
+            setRootCause(e: java.lang.Throwable | Error): void
             /**
              * Returns the cause of this exception.  The cause is the
              * throwable that caused this naming exception to be thrown.
@@ -264,7 +264,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
             /**
              * Initializes the cause of this exception to the specified value.
              * The cause is the throwable that caused this naming exception to be
@@ -283,7 +283,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            initCause(cause: Error): java.lang.Throwable
+            initCause(cause: java.lang.Throwable | Error): Error
             /**
              * Generates the string representation of this exception.
              * The string representation consists of this exception's class name,
@@ -296,7 +296,7 @@ declare namespace javax {
              *  of this exception.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
             /**
              * Generates the string representation in more detail.
              * This string representation consists of the information returned
@@ -309,7 +309,7 @@ declare namespace javax {
              * @return The non-null string containing the string representation.
              */
             // @ts-ignore
-            toString(detail: boolean): java.lang.String
+            toString(detail: boolean): string
         }
     }
 }

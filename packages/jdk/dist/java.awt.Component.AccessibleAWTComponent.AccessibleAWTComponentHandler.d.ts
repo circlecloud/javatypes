@@ -12,13 +12,13 @@ declare namespace java {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    componentHidden(e: java.awt.event.ComponentEvent): void
+                    public componentHidden(e: java.awt.event.ComponentEvent): void
                     // @ts-ignore
-                    componentShown(e: java.awt.event.ComponentEvent): void
+                    public componentShown(e: java.awt.event.ComponentEvent): void
                     // @ts-ignore
-                    componentMoved(e: java.awt.event.ComponentEvent): void
+                    public componentMoved(e: java.awt.event.ComponentEvent): void
                     // @ts-ignore
-                    componentResized(e: java.awt.event.ComponentEvent): void
+                    public componentResized(e: java.awt.event.ComponentEvent): void
                 }
             }
         }

@@ -35,35 +35,35 @@ declare namespace javax {
                  * visible objects (made visible), and is currently being displayed.
                  */
                 // @ts-ignore
-                readonly ANCESTOR_ADDED: number /*int*/
+                public static readonly ANCESTOR_ADDED: number /*int*/
                 /**
                  * An ancestor-component was removed from the hierarchy
                  * of visible objects (hidden) and is no longer being displayed.
                  */
                 // @ts-ignore
-                readonly ANCESTOR_REMOVED: number /*int*/
+                public static readonly ANCESTOR_REMOVED: number /*int*/
                 /**
                  * An ancestor-component changed its position on the screen.
                  */
                 // @ts-ignore
-                readonly ANCESTOR_MOVED: number /*int*/
+                public static readonly ANCESTOR_MOVED: number /*int*/
                 /**
                  * Returns the ancestor that the event actually occurred on.
                  */
                 // @ts-ignore
-                getAncestor(): java.awt.Container
+                public getAncestor(): java.awt.Container
                 /**
                  * Returns the parent of the ancestor the event actually occurred on.
                  * This is most interesting in an ANCESTOR_REMOVED event, as
                  * the ancestor may no longer be in the component hierarchy.
                  */
                 // @ts-ignore
-                getAncestorParent(): java.awt.Container
+                public getAncestorParent(): java.awt.Container
                 /**
                  * Returns the component that the listener was added to.
                  */
                 // @ts-ignore
-                getComponent(): javax.swing.JComponent
+                public getComponent(): javax.swing.JComponent
             }
         }
     }

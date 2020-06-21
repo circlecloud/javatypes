@@ -21,9 +21,9 @@ declare namespace javax {
                      * @return an instance of {#code BasicRadioButtonUI}
                      */
                     // @ts-ignore
-                    createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
                     installDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
@@ -33,7 +33,7 @@ declare namespace javax {
                      * @return the default icon
                      */
                     // @ts-ignore
-                    getDefaultIcon(): javax.swing.Icon
+                    public getDefaultIcon(): javax.swing.Icon
                     // @ts-ignore
                     installListeners(button: javax.swing.AbstractButton): void
                     // @ts-ignore
@@ -42,7 +42,7 @@ declare namespace javax {
                      * paint the radio button
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints focused radio button.
                      * @param g an instance of {#code Graphics}
@@ -55,7 +55,7 @@ declare namespace javax {
                      * The preferred size of the radio button
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                 }
             }
         }

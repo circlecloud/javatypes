@@ -34,23 +34,23 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        setTaskDecorator(taskDecorator: org.springframework.core.task.TaskDecorator): void
+                        public setTaskDecorator(taskDecorator: org.springframework.core.task.TaskDecorator): void
                         /**
                          * Delegates to the specified JDK concurrent executor.
                          * @see java.util.concurrent.Executor#execute(Runnable)
                          */
                         // @ts-ignore
-                        execute(task: java.lang.Runnable): void
+                        public execute(task: java.lang.Runnable): void
                         // @ts-ignore
-                        execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
+                        public execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
                         // @ts-ignore
-                        submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                        public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                         // @ts-ignore
-                        submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                        public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                         // @ts-ignore
-                        submitListenable(task: java.lang.Runnable): org.springframework.util.concurrent.ListenableFuture<?>
+                        public submitListenable(task: java.lang.Runnable): org.springframework.util.concurrent.ListenableFuture<any>
                         // @ts-ignore
-                        submitListenable<T>(task: java.util.concurrent.Callable<T>): org.springframework.util.concurrent.ListenableFuture<T>
+                        public submitListenable<T>(task: java.util.concurrent.Callable<T>): org.springframework.util.concurrent.ListenableFuture<T>
                         /**
                          * Actually execute the given {@code Runnable} (which may be a user-supplied task
                          * or a wrapper around a user-supplied task) with the given executor.

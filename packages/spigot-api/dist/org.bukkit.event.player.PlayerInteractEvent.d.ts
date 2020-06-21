@@ -33,7 +33,7 @@ declare namespace org {
                      * @return Action returns the type of interaction
                      */
                     // @ts-ignore
-                    getAction(): org.bukkit.event.block.Action
+                    public getAction(): org.bukkit.event.block.Action
                     /**
                      * Gets the cancellation state of this event. Set to true if you want to
                      * prevent buckets from placing water and so forth
@@ -45,7 +45,7 @@ declare namespace org {
                      *  relevant methods individually.
                      */
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     /**
                      * Sets the cancellation state of this event. A canceled event will not be
                      * executed in the server, but will still pass to other plugins
@@ -56,51 +56,51 @@ declare namespace org {
                      * @param cancel true if you wish to cancel this event
                      */
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Returns the item in hand represented by this event
                      * @return ItemStack the item used
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Convenience method. Returns the material of the item represented by
                      * this event
                      * @return Material the material of the item used
                      */
                     // @ts-ignore
-                    getMaterial(): org.bukkit.Material
+                    public getMaterial(): org.bukkit.Material
                     /**
                      * Check if this event involved a block
                      * @return boolean true if it did
                      */
                     // @ts-ignore
-                    hasBlock(): boolean
+                    public hasBlock(): boolean
                     /**
                      * Check if this event involved an item
                      * @return boolean true if it did
                      */
                     // @ts-ignore
-                    hasItem(): boolean
+                    public hasItem(): boolean
                     /**
                      * Convenience method to inform the user whether this was a block
                      * placement event.
                      * @return boolean true if the item in hand was a block
                      */
                     // @ts-ignore
-                    isBlockInHand(): boolean
+                    public isBlockInHand(): boolean
                     /**
                      * Returns the clicked block
                      * @return Block returns the block clicked with this item.
                      */
                     // @ts-ignore
-                    getClickedBlock(): org.bukkit.block.Block
+                    public getClickedBlock(): org.bukkit.block.Block
                     /**
                      * Returns the face of the block that was clicked
                      * @return BlockFace returns the face of the block that was clicked
                      */
                     // @ts-ignore
-                    getBlockFace(): org.bukkit.block.BlockFace
+                    public getBlockFace(): org.bukkit.block.BlockFace
                     /**
                      * This controls the action to take with the block (if any) that was
                      * clicked on. This event gets processed for all blocks, but most don't
@@ -108,12 +108,12 @@ declare namespace org {
                      * @return the action to take with the interacted block
                      */
                     // @ts-ignore
-                    useInteractedBlock(): org.bukkit.event.Event.Result
+                    public useInteractedBlock(): org.bukkit.event.Event.Result
                     /**
                      * @param useInteractedBlock the action to take with the interacted block
                      */
                     // @ts-ignore
-                    setUseInteractedBlock(useInteractedBlock: org.bukkit.event.Event.Result): void
+                    public setUseInteractedBlock(useInteractedBlock: org.bukkit.event.Event.Result): void
                     /**
                      * This controls the action to take with the item the player is holding.
                      * This includes both blocks and items (such as flint and steel or
@@ -122,23 +122,23 @@ declare namespace org {
                      * @return the action to take with the item in hand
                      */
                     // @ts-ignore
-                    useItemInHand(): org.bukkit.event.Event.Result
+                    public useItemInHand(): org.bukkit.event.Event.Result
                     /**
                      * @param useItemInHand the action to take with the item in hand
                      */
                     // @ts-ignore
-                    setUseItemInHand(useItemInHand: org.bukkit.event.Event.Result): void
+                    public setUseItemInHand(useItemInHand: org.bukkit.event.Event.Result): void
                     /**
                      * The hand used to perform this interaction. May be null in the case of
                      * {@link Action#PHYSICAL}.
                      * @return the hand used to interact. May be null.
                      */
                     // @ts-ignore
-                    getHand(): org.bukkit.inventory.EquipmentSlot
+                    public getHand(): org.bukkit.inventory.EquipmentSlot
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

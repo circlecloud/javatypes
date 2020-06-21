@@ -8,7 +8,7 @@ declare namespace org {
                      * {@link FoodRestorationProperty}, {@link SaturationProperty} etc.
                      */
                     // @ts-ignore
-                    class DoubleProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, java.lang.Double> {
+                    class DoubleProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, java.lang.Double | number> {
                         /**
                          * Create a new integer property with the specified value.
                          * @param value value to match
@@ -32,9 +32,9 @@ declare namespace org {
                          *       properties
                          */
                         // @ts-ignore
-                        constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                        constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                         // @ts-ignore
-                        compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                        public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                     }
                 }
             }

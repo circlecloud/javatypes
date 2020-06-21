@@ -19,84 +19,84 @@ declare namespace org {
              * @see org.springframework.core.io.ResourceLoader
              */
             // @ts-ignore
-            class ResourceUtils extends java.lang.Object {
+            abstract class ResourceUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Pseudo URL prefix for loading from the class path: "classpath:".
                  */
                 // @ts-ignore
-                readonly CLASSPATH_URL_PREFIX: string
+                public static readonly CLASSPATH_URL_PREFIX: java.lang.String | string
                 /**
                  * URL prefix for loading from the file system: "file:".
                  */
                 // @ts-ignore
-                readonly FILE_URL_PREFIX: string
+                public static readonly FILE_URL_PREFIX: java.lang.String | string
                 /**
                  * URL prefix for loading from a jar file: "jar:".
                  */
                 // @ts-ignore
-                readonly JAR_URL_PREFIX: string
+                public static readonly JAR_URL_PREFIX: java.lang.String | string
                 /**
                  * URL prefix for loading from a war file on Tomcat: "war:".
                  */
                 // @ts-ignore
-                readonly WAR_URL_PREFIX: string
+                public static readonly WAR_URL_PREFIX: java.lang.String | string
                 /**
                  * URL protocol for a file in the file system: "file".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_FILE: string
+                public static readonly URL_PROTOCOL_FILE: java.lang.String | string
                 /**
                  * URL protocol for an entry from a jar file: "jar".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_JAR: string
+                public static readonly URL_PROTOCOL_JAR: java.lang.String | string
                 /**
                  * URL protocol for an entry from a war file: "war".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_WAR: string
+                public static readonly URL_PROTOCOL_WAR: java.lang.String | string
                 /**
                  * URL protocol for an entry from a zip file: "zip".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_ZIP: string
+                public static readonly URL_PROTOCOL_ZIP: java.lang.String | string
                 /**
                  * URL protocol for an entry from a WebSphere jar file: "wsjar".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_WSJAR: string
+                public static readonly URL_PROTOCOL_WSJAR: java.lang.String | string
                 /**
                  * URL protocol for an entry from a JBoss jar file: "vfszip".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_VFSZIP: string
+                public static readonly URL_PROTOCOL_VFSZIP: java.lang.String | string
                 /**
                  * URL protocol for a JBoss file system resource: "vfsfile".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_VFSFILE: string
+                public static readonly URL_PROTOCOL_VFSFILE: java.lang.String | string
                 /**
                  * URL protocol for a general JBoss VFS resource: "vfs".
                  */
                 // @ts-ignore
-                readonly URL_PROTOCOL_VFS: string
+                public static readonly URL_PROTOCOL_VFS: java.lang.String | string
                 /**
                  * File extension for a regular jar file: ".jar".
                  */
                 // @ts-ignore
-                readonly JAR_FILE_EXTENSION: string
+                public static readonly JAR_FILE_EXTENSION: java.lang.String | string
                 /**
                  * Separator between JAR URL and file path within the JAR: "!/".
                  */
                 // @ts-ignore
-                readonly JAR_URL_SEPARATOR: string
+                public static readonly JAR_URL_SEPARATOR: java.lang.String | string
                 /**
                  * Special separator between WAR URL and jar part on Tomcat.
                  */
                 // @ts-ignore
-                readonly WAR_URL_SEPARATOR: string
+                public static readonly WAR_URL_SEPARATOR: java.lang.String | string
                 /**
                  * Return whether the given resource location is a URL:
                  * either a special "classpath" pseudo URL or a standard URL.
@@ -106,7 +106,7 @@ declare namespace org {
                  * @see java.net.URL
                  */
                 // @ts-ignore
-                isUrl(resourceLocation: string): boolean
+                public static isUrl(resourceLocation: java.lang.String | string): boolean
                 /**
                  * Resolve the given resource location to a {@code java.net.URL}.
                  * <p>Does not check whether the URL actually exists; simply returns
@@ -117,7 +117,7 @@ declare namespace org {
                  * @throws FileNotFoundException if the resource cannot be resolved to a URL
                  */
                 // @ts-ignore
-                getURL(resourceLocation: string): java.net.URL
+                public static getURL(resourceLocation: java.lang.String | string): java.net.URL
                 /**
                  * Resolve the given resource location to a {@code java.io.File},
                  * i.e. to a file in the file system.
@@ -130,7 +130,7 @@ declare namespace org {
                  *  a file in the file system
                  */
                 // @ts-ignore
-                getFile(resourceLocation: string): java.io.File
+                public static getFile(resourceLocation: java.lang.String | string): java.io.File
                 /**
                  * Resolve the given resource URL to a {@code java.io.File},
                  * i.e. to a file in the file system.
@@ -140,7 +140,7 @@ declare namespace org {
                  *  a file in the file system
                  */
                 // @ts-ignore
-                getFile(resourceUrl: java.net.URL): java.io.File
+                public static getFile(resourceUrl: java.net.URL): java.io.File
                 /**
                  * Resolve the given resource URL to a {@code java.io.File},
                  * i.e. to a file in the file system.
@@ -152,7 +152,7 @@ declare namespace org {
                  *  a file in the file system
                  */
                 // @ts-ignore
-                getFile(resourceUrl: java.net.URL, description: string): java.io.File
+                public static getFile(resourceUrl: java.net.URL, description: java.lang.String | string): java.io.File
                 /**
                  * Resolve the given resource URI to a {@code java.io.File},
                  * i.e. to a file in the file system.
@@ -163,7 +163,7 @@ declare namespace org {
                  * @since 2.5
                  */
                 // @ts-ignore
-                getFile(resourceUri: java.net.URI): java.io.File
+                public static getFile(resourceUri: java.net.URI): java.io.File
                 /**
                  * Resolve the given resource URI to a {@code java.io.File},
                  * i.e. to a file in the file system.
@@ -176,7 +176,7 @@ declare namespace org {
                  * @since 2.5
                  */
                 // @ts-ignore
-                getFile(resourceUri: java.net.URI, description: string): java.io.File
+                public static getFile(resourceUri: java.net.URI, description: java.lang.String | string): java.io.File
                 /**
                  * Determine whether the given URL points to a resource in the file system,
                  * i.e. has protocol "file", "vfsfile" or "vfs".
@@ -184,7 +184,7 @@ declare namespace org {
                  * @return whether the URL has been identified as a file system URL
                  */
                 // @ts-ignore
-                isFileURL(url: java.net.URL): boolean
+                public static isFileURL(url: java.net.URL): boolean
                 /**
                  * Determine whether the given URL points to a resource in a jar file.
                  * i.e. has protocol "jar", "war, ""zip", "vfszip" or "wsjar".
@@ -192,7 +192,7 @@ declare namespace org {
                  * @return whether the URL has been identified as a JAR URL
                  */
                 // @ts-ignore
-                isJarURL(url: java.net.URL): boolean
+                public static isJarURL(url: java.net.URL): boolean
                 /**
                  * Determine whether the given URL points to a jar file itself,
                  * that is, has protocol "file" and ends with the ".jar" extension.
@@ -201,7 +201,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                isJarFileURL(url: java.net.URL): boolean
+                public static isJarFileURL(url: java.net.URL): boolean
                 /**
                  * Extract the URL for the actual jar file from the given URL
                  * (which may point to a resource in a jar file or to a jar file itself).
@@ -210,7 +210,7 @@ declare namespace org {
                  * @throws MalformedURLException if no valid jar file URL could be extracted
                  */
                 // @ts-ignore
-                extractJarFileURL(jarUrl: java.net.URL): java.net.URL
+                public static extractJarFileURL(jarUrl: java.net.URL): java.net.URL
                 /**
                  * Extract the URL for the outermost archive from the given jar/war URL
                  * (which may point to a resource in a jar file or to a jar file itself).
@@ -223,7 +223,7 @@ declare namespace org {
                  * @see #extractJarFileURL(URL)
                  */
                 // @ts-ignore
-                extractArchiveURL(jarUrl: java.net.URL): java.net.URL
+                public static extractArchiveURL(jarUrl: java.net.URL): java.net.URL
                 /**
                  * Create a URI instance for the given URL,
                  * replacing spaces with "%20" URI encoding first.
@@ -233,7 +233,7 @@ declare namespace org {
                  * @see java.net.URL#toURI()
                  */
                 // @ts-ignore
-                toURI(url: java.net.URL): java.net.URI
+                public static toURI(url: java.net.URL): java.net.URI
                 /**
                  * Create a URI instance for the given location String,
                  * replacing spaces with "%20" URI encoding first.
@@ -242,7 +242,7 @@ declare namespace org {
                  * @throws URISyntaxException if the location wasn't a valid URI
                  */
                 // @ts-ignore
-                toURI(location: string): java.net.URI
+                public static toURI(location: java.lang.String | string): java.net.URI
                 /**
                  * Set the {@link URLConnection#setUseCaches "useCaches"} flag on the
                  * given connection, preferring {@code false} but leaving the
@@ -250,7 +250,7 @@ declare namespace org {
                  * @param con the URLConnection to set the flag on
                  */
                 // @ts-ignore
-                useCachesIfNecessary(con: java.net.URLConnection): void
+                public static useCachesIfNecessary(con: java.net.URLConnection): void
             }
         }
     }

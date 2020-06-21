@@ -19,11 +19,11 @@ declare namespace org {
                  * discoverers that this {@code PrioritizedParameterNameDiscoverer} checks.
                  */
                 // @ts-ignore
-                addDiscoverer(pnd: org.springframework.core.ParameterNameDiscoverer): void
+                public addDiscoverer(pnd: org.springframework.core.ParameterNameDiscoverer): void
                 // @ts-ignore
-                getParameterNames(method: java.lang.reflect.Method): java.lang.String[]
+                public getParameterNames(method: java.lang.reflect.Method): string[]
                 // @ts-ignore
-                getParameterNames(ctor: java.lang.reflect.Constructor<any>): java.lang.String[]
+                public getParameterNames(ctor: java.lang.reflect.Constructor<any>): string[]
             }
         }
     }

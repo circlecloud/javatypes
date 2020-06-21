@@ -18,17 +18,17 @@ declare namespace org {
                      * Create an instance with the given map of file extensions and media types.
                      */
                     // @ts-ignore
-                    constructor(mediaTypes: java.util.Map<java.lang.String, org.springframework.http.MediaType>)
+                    constructor(mediaTypes: java.util.Map<java.lang.String | string, org.springframework.http.MediaType>)
                     /**
                      * Set the name of the parameter to use to determine requested media types.
                      * <p>By default this is set to {@code "format"}.
                      */
                     // @ts-ignore
-                    setParameterName(parameterName: string): void
+                    public setParameterName(parameterName: java.lang.String | string): void
                     // @ts-ignore
-                    getParameterName(): java.lang.String
+                    public getParameterName(): string
                     // @ts-ignore
-                    getMediaTypeKey(request: org.springframework.web.context.request.NativeWebRequest): java.lang.String
+                    getMediaTypeKey(request: org.springframework.web.context.request.NativeWebRequest): string
                 }
             }
         }

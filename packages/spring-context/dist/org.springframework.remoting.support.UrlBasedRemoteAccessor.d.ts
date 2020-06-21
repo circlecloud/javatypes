@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 15.12.2003
                  */
                 // @ts-ignore
-                class UrlBasedRemoteAccessor extends org.springframework.remoting.support.RemoteAccessor {
+                abstract class UrlBasedRemoteAccessor extends org.springframework.remoting.support.RemoteAccessor {
                     // @ts-ignore
                     constructor()
                     /**
@@ -17,14 +17,14 @@ declare namespace org {
                      * The URL must be compatible with the rules of the particular remoting provider.
                      */
                     // @ts-ignore
-                    setServiceUrl(serviceUrl: string): void
+                    public setServiceUrl(serviceUrl: java.lang.String | string): void
                     /**
                      * Return the URL of this remote accessor's target service.
                      */
                     // @ts-ignore
-                    getServiceUrl(): java.lang.String
+                    public getServiceUrl(): string
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                 }
             }
         }

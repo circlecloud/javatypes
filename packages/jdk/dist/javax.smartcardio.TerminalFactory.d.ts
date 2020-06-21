@@ -66,7 +66,7 @@ declare namespace javax {
              * @return the default TerminalFactory type
              */
             // @ts-ignore
-            getDefaultType(): java.lang.String
+            public static getDefaultType(): string
             /**
              * Returns the default TerminalFactory instance. See
              * {@linkplain #getDefaultType} for more information.
@@ -75,7 +75,7 @@ declare namespace javax {
              * @return the default TerminalFactory
              */
             // @ts-ignore
-            getDefault(): javax.smartcardio.TerminalFactory
+            public static getDefault(): javax.smartcardio.TerminalFactory
             /**
              * Returns a TerminalFactory of the specified type that is initialized
              * with the specified parameters.
@@ -98,7 +98,7 @@ declare namespace javax {
              *    TerminalFactorySpi of the specified type
              */
             // @ts-ignore
-            getInstance(type: string, params: any): javax.smartcardio.TerminalFactory
+            public static getInstance(type: java.lang.String | string, params: java.lang.Object | any): javax.smartcardio.TerminalFactory
             /**
              * Returns a TerminalFactory of the specified type that is initialized
              * with the specified parameters.
@@ -126,7 +126,7 @@ declare namespace javax {
              *    be found
              */
             // @ts-ignore
-            getInstance(type: string, params: any, provider: string): javax.smartcardio.TerminalFactory
+            public static getInstance(type: java.lang.String | string, params: java.lang.Object | any, provider: java.lang.String | string): javax.smartcardio.TerminalFactory
             /**
              * Returns a TerminalFactory of the specified type that is initialized
              * with the specified parameters.
@@ -148,20 +148,20 @@ declare namespace javax {
              *    of the specified type is not available from the specified Provider
              */
             // @ts-ignore
-            getInstance(type: string, params: any, provider: java.security.Provider): javax.smartcardio.TerminalFactory
+            public static getInstance(type: java.lang.String | string, params: java.lang.Object | any, provider: java.security.Provider): javax.smartcardio.TerminalFactory
             /**
              * Returns the provider of this TerminalFactory.
              * @return the provider of this TerminalFactory.
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns the type of this TerminalFactory. This is the value that was
              * specified in the getInstance() method that returned this object.
              * @return the type of this TerminalFactory
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             /**
              * Returns a new CardTerminals object encapsulating the terminals
              * supported by this factory.
@@ -171,13 +171,13 @@ declare namespace javax {
              *  supported by this factory.
              */
             // @ts-ignore
-            terminals(): javax.smartcardio.CardTerminals
+            public terminals(): javax.smartcardio.CardTerminals
             /**
              * Returns a string representation of this TerminalFactory.
              * @return a string representation of this TerminalFactory.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

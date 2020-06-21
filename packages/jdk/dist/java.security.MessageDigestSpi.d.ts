@@ -14,7 +14,7 @@ declare namespace java {
          * @see MessageDigest
          */
         // @ts-ignore
-        class MessageDigestSpi extends java.lang.Object {
+        abstract class MessageDigestSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -28,7 +28,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            engineGetDigestLength(): int
+            engineGetDigestLength(): number /*int*/
             /**
              * Updates the digest using the specified byte.
              * @param input the byte to use for the update.
@@ -66,7 +66,7 @@ declare namespace java {
              * @return the array of bytes for the resulting hash value.
              */
             // @ts-ignore
-            abstract engineDigest(): byte[]
+            abstract engineDigest(): number /*byte*/[]
             /**
              * Completes the hash computation by performing final
              * operations such as padding. Once {@code engineDigest} has
@@ -91,7 +91,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            engineDigest(buf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): int
+            engineDigest(buf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Resets the digest for further use.
              */
@@ -104,7 +104,7 @@ declare namespace java {
              *  implementation that does not support {#code Cloneable}.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

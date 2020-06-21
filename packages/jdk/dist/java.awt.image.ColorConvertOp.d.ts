@@ -113,7 +113,7 @@ declare namespace java {
                  *          array of <code>ICC_Profile</code> objects.
                  */
                 // @ts-ignore
-                getICC_Profiles(): java.awt.color.ICC_Profile[]
+                public getICC_Profiles(): java.awt.color.ICC_Profile[]
                 /**
                  * ColorConverts the source BufferedImage.
                  * If the destination image is null,
@@ -129,7 +129,7 @@ declare namespace java {
                  *              RenderingHints argument, since the operation is ill defined.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.BufferedImage, dest: java.awt.image.BufferedImage): java.awt.image.BufferedImage
+                public filter(src: java.awt.image.BufferedImage, dest: java.awt.image.BufferedImage): java.awt.image.BufferedImage
                 /**
                  * ColorConverts the image data in the source Raster.
                  * If the destination Raster is null, a new Raster will be created.
@@ -151,7 +151,7 @@ declare namespace java {
                  *              operations on BufferedImages.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.Raster, dest: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public filter(src: java.awt.image.Raster, dest: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Returns the bounding box of the destination, given this source.
                  * Note that this will be the same as the the bounding box of the
@@ -161,7 +161,7 @@ declare namespace java {
                  *          of the destination, given the specified <code>src</code>
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
                 /**
                  * Returns the bounding box of the destination, given this source.
                  * Note that this will be the same as the the bounding box of the
@@ -171,7 +171,7 @@ declare namespace java {
                  *          of the destination, given the specified <code>src</code>
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
                 /**
                  * Creates a zeroed destination image with the correct size and number of
                  * bands, given this source.
@@ -186,7 +186,7 @@ declare namespace java {
                  *          <code>ColorSpace</code> defined for the destination
                  */
                 // @ts-ignore
-                createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
+                public createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
                 /**
                  * Creates a zeroed destination Raster with the correct size and number of
                  * bands, given this source.
@@ -198,7 +198,7 @@ declare namespace java {
                  *          <code>dst</code> and <code>src</code> color spaces
                  */
                 // @ts-ignore
-                createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
+                public createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
                 /**
                  * Returns the location of the destination point given a
                  * point in the source.  If <code>dstPt</code> is non-null,
@@ -211,14 +211,14 @@ declare namespace java {
                  *          the same as <code>srcPt</code>
                  */
                 // @ts-ignore
-                getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Returns the rendering hints used by this op.
                  * @return the <code>RenderingHints</code> object of this
                  *          <code>ColorConvertOp</code>
                  */
                 // @ts-ignore
-                getRenderingHints(): java.awt.RenderingHints
+                public getRenderingHints(): java.awt.RenderingHints
             }
         }
     }

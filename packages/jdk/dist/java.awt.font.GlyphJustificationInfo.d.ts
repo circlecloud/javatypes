@@ -66,71 +66,71 @@ declare namespace java {
                  * The highest justification priority.
                  */
                 // @ts-ignore
-                readonly PRIORITY_KASHIDA: number /*int*/
+                public static readonly PRIORITY_KASHIDA: number /*int*/
                 /**
                  * The second highest justification priority.
                  */
                 // @ts-ignore
-                readonly PRIORITY_WHITESPACE: number /*int*/
+                public static readonly PRIORITY_WHITESPACE: number /*int*/
                 /**
                  * The second lowest justification priority.
                  */
                 // @ts-ignore
-                readonly PRIORITY_INTERCHAR: number /*int*/
+                public static readonly PRIORITY_INTERCHAR: number /*int*/
                 /**
                  * The lowest justification priority.
                  */
                 // @ts-ignore
-                readonly PRIORITY_NONE: number /*int*/
+                public static readonly PRIORITY_NONE: number /*int*/
                 /**
                  * The weight of this glyph.
                  */
                 // @ts-ignore
-                readonly weight: number /*float*/
+                public readonly weight: number /*float*/
                 /**
                  * The priority level of this glyph as it is growing.
                  */
                 // @ts-ignore
-                readonly growPriority: number /*int*/
+                public readonly growPriority: number /*int*/
                 /**
                  * If <code>true</code>, this glyph absorbs all extra
                  * space at this and lower priority levels when it grows.
                  */
                 // @ts-ignore
-                readonly growAbsorb: boolean
+                public readonly growAbsorb: boolean
                 /**
                  * The maximum amount by which the left side of this glyph can grow.
                  */
                 // @ts-ignore
-                readonly growLeftLimit: number /*float*/
+                public readonly growLeftLimit: number /*float*/
                 /**
                  * The maximum amount by which the right side of this glyph can grow.
                  */
                 // @ts-ignore
-                readonly growRightLimit: number /*float*/
+                public readonly growRightLimit: number /*float*/
                 /**
                  * The priority level of this glyph as it is shrinking.
                  */
                 // @ts-ignore
-                readonly shrinkPriority: number /*int*/
+                public readonly shrinkPriority: number /*int*/
                 /**
                  * If <code>true</code>,this glyph absorbs all remaining shrinkage at
                  * this and lower priority levels as it shrinks.
                  */
                 // @ts-ignore
-                readonly shrinkAbsorb: boolean
+                public readonly shrinkAbsorb: boolean
                 /**
                  * The maximum amount by which the left side of this glyph can shrink
                  * (a positive number).
                  */
                 // @ts-ignore
-                readonly shrinkLeftLimit: number /*float*/
+                public readonly shrinkLeftLimit: number /*float*/
                 /**
                  * The maximum amount by which the right side of this glyph can shrink
                  * (a positive number).
                  */
                 // @ts-ignore
-                readonly shrinkRightLimit: number /*float*/
+                public readonly shrinkRightLimit: number /*float*/
             }
         }
     }

@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 2.5.2
                  */
                 // @ts-ignore
-                class RemotingSupport extends java.lang.Object {
+                abstract class RemotingSupport extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -18,7 +18,7 @@ declare namespace org {
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Return the ClassLoader that this accessor operates in,
                      * to be used for deserializing and for generating proxies.

@@ -11,7 +11,7 @@ declare namespace java {
              * {@code equals()} method.
              */
             // @ts-ignore
-            class Key extends java.lang.Object {
+            abstract class Key extends java.lang.Object {
                 /**
                  * Construct a key using the indicated private key.  Each
                  * subclass of Key maintains its own unique domain of integer
@@ -32,7 +32,7 @@ declare namespace java {
                  *          <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                abstract isCompatibleValue(val: any): boolean
+                public abstract isCompatibleValue(val: java.lang.Object | any): boolean
                 /**
                  * Returns the private integer key that the subclass
                  * instantiated this Key with.
@@ -40,20 +40,20 @@ declare namespace java {
                  *  instantiated this Key with.
                  */
                 // @ts-ignore
-                intKey(): int
+                intKey(): number /*int*/
                 /**
                  * The hash code for all Key objects will be the same as the
                  * system identity code of the object as defined by the
                  * System.identityHashCode() method.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * The equals method for all Key objects will return the same
                  * result as the equality operator '=='.
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
             }
         }
     }

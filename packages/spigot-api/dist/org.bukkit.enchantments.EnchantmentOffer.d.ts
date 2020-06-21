@@ -13,39 +13,39 @@ declare namespace org {
                  * @return type of enchantment
                  */
                 // @ts-ignore
-                getEnchantment(): org.bukkit.enchantments.Enchantment
+                public getEnchantment(): org.bukkit.enchantments.Enchantment
                 /**
                  * Sets the type of the enchantment.
                  * @param enchantment type of the enchantment
                  */
                 // @ts-ignore
-                setEnchantment(enchantment: org.bukkit.enchantments.Enchantment): void
+                public setEnchantment(enchantment: org.bukkit.enchantments.Enchantment): void
                 /**
                  * Gets the level of the enchantment.
                  * @return level of the enchantment
                  */
                 // @ts-ignore
-                getEnchantmentLevel(): int
+                public getEnchantmentLevel(): number /*int*/
                 /**
                  * Sets the level of the enchantment.
                  * @param enchantmentLevel level of the enchantment
                  */
                 // @ts-ignore
-                setEnchantmentLevel(enchantmentLevel: number /*int*/): void
+                public setEnchantmentLevel(enchantmentLevel: number /*int*/): void
                 /**
                  * Gets the cost (minimum level) which is displayed as a number on the right
                  * hand side of the enchantment offer.
                  * @return cost for this enchantment
                  */
                 // @ts-ignore
-                getCost(): int
+                public getCost(): number /*int*/
                 /**
                  * Sets the cost (minimum level) which is displayed as a number on the right
                  * hand side of the enchantment offer.
                  * @param cost cost for this enchantment
                  */
                 // @ts-ignore
-                setCost(cost: number /*int*/): void
+                public setCost(cost: number /*int*/): void
             }
         }
     }

@@ -83,7 +83,7 @@ declare namespace javax {
                  * @throws SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                createName(localName: string, prefix: string, uri: string): javax.xml.soap.Name
+                createName(localName: java.lang.String | string, prefix: java.lang.String | string, uri: java.lang.String | string): javax.xml.soap.Name
                 /**
                  * Creates a new <code>Name</code> object initialized with the
                  * given local name.
@@ -96,7 +96,7 @@ declare namespace javax {
                  * @throws SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                createName(localName: string): javax.xml.soap.Name
+                createName(localName: java.lang.String | string): javax.xml.soap.Name
                 /**
                  * Returns the <code>SOAPHeader</code> object for
                  * this <code>SOAPEnvelope</code> object.

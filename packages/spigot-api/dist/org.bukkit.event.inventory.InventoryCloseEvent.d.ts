@@ -14,11 +14,11 @@ declare namespace org {
                      * @return Player who is involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.HumanEntity
+                    public getPlayer(): org.bukkit.entity.HumanEntity
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

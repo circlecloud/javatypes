@@ -21,56 +21,56 @@ declare namespace org {
                     // @ts-ignore
                     constructor(response: HttpServletResponse)
                     // @ts-ignore
-                    sendError(sc: number /*int*/): void
+                    public sendError(sc: number /*int*/): void
                     // @ts-ignore
-                    sendError(sc: number /*int*/, msg: string): void
+                    public sendError(sc: number /*int*/, msg: java.lang.String | string): void
                     // @ts-ignore
-                    sendRedirect(location: string): void
+                    public sendRedirect(location: java.lang.String | string): void
                     // @ts-ignore
-                    getOutputStream(): ServletOutputStream
+                    public getOutputStream(): ServletOutputStream
                     // @ts-ignore
-                    getWriter(): java.io.PrintWriter
+                    public getWriter(): java.io.PrintWriter
                     // @ts-ignore
-                    flushBuffer(): void
+                    public flushBuffer(): void
                     // @ts-ignore
-                    setContentLength(len: number /*int*/): void
+                    public setContentLength(len: number /*int*/): void
                     // @ts-ignore
-                    setContentLengthLong(len: number /*long*/): void
+                    public setContentLengthLong(len: number /*long*/): void
                     // @ts-ignore
-                    setBufferSize(size: number /*int*/): void
+                    public setBufferSize(size: number /*int*/): void
                     // @ts-ignore
-                    resetBuffer(): void
+                    public resetBuffer(): void
                     // @ts-ignore
-                    reset(): void
+                    public reset(): void
                     /**
                      * Return the status code as specified on the response.
                      * @deprecated as of 5.2 in favor of {#link HttpServletResponse#getStatus()}
                      */
                     // @ts-ignore
-                    getStatusCode(): int
+                    public getStatusCode(): number /*int*/
                     /**
                      * Return the cached response content as a byte array.
                      */
                     // @ts-ignore
-                    getContentAsByteArray(): byte[]
+                    public getContentAsByteArray(): number /*byte*/[]
                     /**
                      * Return an {@link InputStream} to the cached content.
                      * @since 4.2
                      */
                     // @ts-ignore
-                    getContentInputStream(): java.io.InputStream
+                    public getContentInputStream(): java.io.InputStream
                     /**
                      * Return the current size of the cached content.
                      * @since 4.2
                      */
                     // @ts-ignore
-                    getContentSize(): int
+                    public getContentSize(): number /*int*/
                     /**
                      * Copy the complete cached body content to the response.
                      * @since 4.2
                      */
                     // @ts-ignore
-                    copyBodyToResponse(): void
+                    public copyBodyToResponse(): void
                     /**
                      * Copy the cached body content to the response.
                      * @param complete whether to set a corresponding content length

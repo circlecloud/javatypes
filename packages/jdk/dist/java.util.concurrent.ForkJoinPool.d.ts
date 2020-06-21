@@ -162,7 +162,7 @@ declare namespace java {
                  * overridden in ForkJoinPool constructors.
                  */
                 // @ts-ignore
-                readonly defaultForkJoinWorkerThreadFactory: java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory
+                public static readonly defaultForkJoinWorkerThreadFactory: java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory
                 /**
                  * Returns the common pool instance. This pool is statically
                  * constructed; its run state is unaffected by attempts to {@link
@@ -176,7 +176,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                commonPool(): java.util.concurrent.ForkJoinPool
+                public static commonPool(): java.util.concurrent.ForkJoinPool
                 /**
                  * Performs the given task, returning its result upon completion.
                  * If the computation encounters an unchecked Exception or Error,
@@ -194,7 +194,7 @@ declare namespace java {
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                invoke<T>(task: java.util.concurrent.ForkJoinTask<T>): T
+                public invoke<T>(task: java.util.concurrent.ForkJoinTask<T>): T
                 /**
                  * Arranges for (asynchronous) execution of the given task.
                  * @param task the task
@@ -203,14 +203,14 @@ declare namespace java {
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                execute(task: java.util.concurrent.ForkJoinTask<any>): void
+                public execute(task: java.util.concurrent.ForkJoinTask<any>): void
                 /**
                  * @throws NullPointerException if the task is null
                  * @throws RejectedExecutionException if the task cannot be
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                execute(task: java.lang.Runnable): void
+                public execute(task: java.lang.Runnable): void
                 /**
                  * Submits a ForkJoinTask for execution.
                  * @param task the task to submit
@@ -221,60 +221,60 @@ declare namespace java {
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                submit<T>(task: java.util.concurrent.ForkJoinTask<T>): java.util.concurrent.ForkJoinTask<T>
+                public submit<T>(task: java.util.concurrent.ForkJoinTask<T>): java.util.concurrent.ForkJoinTask<T>
                 /**
                  * @throws NullPointerException if the task is null
                  * @throws RejectedExecutionException if the task cannot be
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.ForkJoinTask<T>
+                public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.ForkJoinTask<T>
                 /**
                  * @throws NullPointerException if the task is null
                  * @throws RejectedExecutionException if the task cannot be
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                submit<T>(task: java.lang.Runnable, result: T): java.util.concurrent.ForkJoinTask<T>
+                public submit<T>(task: java.lang.Runnable, result: T): java.util.concurrent.ForkJoinTask<T>
                 /**
                  * @throws NullPointerException if the task is null
                  * @throws RejectedExecutionException if the task cannot be
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                submit(task: java.lang.Runnable): java.util.concurrent.ForkJoinTask<?>
+                public submit(task: java.lang.Runnable): java.util.concurrent.ForkJoinTask<any>
                 /**
                  * @throws NullPointerException       {#inheritDoc}
                  * @throws RejectedExecutionException {#inheritDoc}
                  */
                 // @ts-ignore
-                invokeAll<T>(tasks: Array<java.util.concurrent.Callable<T>>): java.util.List<java.util.concurrent.Future<T>>
+                public invokeAll<T>(tasks: java.util.Collection<any> | Array<any>): Array<java.util.concurrent.Future<T>>
                 /**
                  * Returns the factory used for constructing new workers.
                  * @return the factory used for constructing new workers
                  */
                 // @ts-ignore
-                getFactory(): java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory
+                public getFactory(): java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory
                 /**
                  * Returns the handler for internal worker threads that terminate
                  * due to unrecoverable errors encountered while executing tasks.
                  * @return the handler, or {#code null} if none
                  */
                 // @ts-ignore
-                getUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler
+                public getUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler
                 /**
                  * Returns the targeted parallelism level of this pool.
                  * @return the targeted parallelism level of this pool
                  */
                 // @ts-ignore
-                getParallelism(): int
+                public getParallelism(): number /*int*/
                 /**
                  * Returns the targeted parallelism level of the common pool.
                  * @return the targeted parallelism level of the common pool
                  * @since 1.8
                  */
                 // @ts-ignore
-                getCommonPoolParallelism(): int
+                public static getCommonPoolParallelism(): number /*int*/
                 /**
                  * Returns the number of worker threads that have started but not
                  * yet terminated.  The result returned by this method may differ
@@ -283,14 +283,14 @@ declare namespace java {
                  * @return the number of worker threads
                  */
                 // @ts-ignore
-                getPoolSize(): int
+                public getPoolSize(): number /*int*/
                 /**
                  * Returns {@code true} if this pool uses local first-in-first-out
                  * scheduling mode for forked tasks that are never joined.
                  * @return {#code true} if this pool uses async mode
                  */
                 // @ts-ignore
-                getAsyncMode(): boolean
+                public getAsyncMode(): boolean
                 /**
                  * Returns an estimate of the number of worker threads that are
                  * not blocked waiting to join tasks or for other managed
@@ -299,7 +299,7 @@ declare namespace java {
                  * @return the number of worker threads
                  */
                 // @ts-ignore
-                getRunningThreadCount(): int
+                public getRunningThreadCount(): number /*int*/
                 /**
                  * Returns an estimate of the number of threads that are currently
                  * stealing or executing tasks. This method may overestimate the
@@ -307,7 +307,7 @@ declare namespace java {
                  * @return the number of active threads
                  */
                 // @ts-ignore
-                getActiveThreadCount(): int
+                public getActiveThreadCount(): number /*int*/
                 /**
                  * Returns {@code true} if all worker threads are currently idle.
                  * An idle worker is one that cannot obtain a task to execute
@@ -319,7 +319,7 @@ declare namespace java {
                  * @return {#code true} if all threads are currently idle
                  */
                 // @ts-ignore
-                isQuiescent(): boolean
+                public isQuiescent(): boolean
                 /**
                  * Returns an estimate of the total number of tasks stolen from
                  * one thread's work queue by another. The reported value
@@ -331,7 +331,7 @@ declare namespace java {
                  * @return the number of steals
                  */
                 // @ts-ignore
-                getStealCount(): long
+                public getStealCount(): number /*long*/
                 /**
                  * Returns an estimate of the total number of tasks currently held
                  * in queues by worker threads (but not including tasks submitted
@@ -342,7 +342,7 @@ declare namespace java {
                  * @return the number of queued tasks
                  */
                 // @ts-ignore
-                getQueuedTaskCount(): long
+                public getQueuedTaskCount(): number /*long*/
                 /**
                  * Returns an estimate of the number of tasks submitted to this
                  * pool that have not yet begun executing.  This method may take
@@ -350,14 +350,14 @@ declare namespace java {
                  * @return the number of queued submissions
                  */
                 // @ts-ignore
-                getQueuedSubmissionCount(): int
+                public getQueuedSubmissionCount(): number /*int*/
                 /**
                  * Returns {@code true} if there are any tasks submitted to this
                  * pool that have not yet begun executing.
                  * @return {#code true} if there are any queued submissions
                  */
                 // @ts-ignore
-                hasQueuedSubmissions(): boolean
+                public hasQueuedSubmissions(): boolean
                 /**
                  * Removes and returns the next unexecuted submission if one is
                  * available.  This method may be useful in extensions to this
@@ -365,7 +365,7 @@ declare namespace java {
                  * @return the next submission, or {#code null} if none
                  */
                 // @ts-ignore
-                pollSubmission(): java.util.concurrent.ForkJoinTask<?>
+                pollSubmission(): java.util.concurrent.ForkJoinTask<any>
                 /**
                  * Removes all available unexecuted submitted and forked tasks
                  * from scheduling queues and adds them to the given collection,
@@ -383,7 +383,7 @@ declare namespace java {
                  * @return the number of elements transferred
                  */
                 // @ts-ignore
-                drainTasksTo(c: Array<any super java.util.concurrent.ForkJoinTask<?>>): int
+                drainTasksTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * Returns a string identifying this pool, as well as its state,
                  * including indications of run state, parallelism level, and
@@ -391,7 +391,7 @@ declare namespace java {
                  * @return a string identifying this pool, as well as its state
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Possibly initiates an orderly shutdown in which previously
                  * submitted tasks are executed, but no new tasks will be
@@ -406,7 +406,7 @@ declare namespace java {
                  *          java.lang.RuntimePermission}{@code ("modifyThread")}
                  */
                 // @ts-ignore
-                shutdown(): void
+                public shutdown(): void
                 /**
                  * Possibly attempts to cancel and/or stop all tasks, and reject
                  * all subsequently submitted tasks.  Invocation has no effect on
@@ -425,13 +425,13 @@ declare namespace java {
                  *          java.lang.RuntimePermission}{@code ("modifyThread")}
                  */
                 // @ts-ignore
-                shutdownNow(): java.util.List<java.lang.Runnable>
+                public shutdownNow(): Array<java.lang.Runnable>
                 /**
                  * Returns {@code true} if all tasks have completed following shut down.
                  * @return {#code true} if all tasks have completed following shut down
                  */
                 // @ts-ignore
-                isTerminated(): boolean
+                public isTerminated(): boolean
                 /**
                  * Returns {@code true} if the process of termination has
                  * commenced but not yet completed.  This method may be useful for
@@ -445,13 +445,13 @@ declare namespace java {
                  * @return {#code true} if terminating but not yet terminated
                  */
                 // @ts-ignore
-                isTerminating(): boolean
+                public isTerminating(): boolean
                 /**
                  * Returns {@code true} if this pool has been shut down.
                  * @return {#code true} if this pool has been shut down
                  */
                 // @ts-ignore
-                isShutdown(): boolean
+                public isShutdown(): boolean
                 /**
                  * Blocks until all tasks have completed execution after a
                  * shutdown request, or the timeout occurs, or the current thread
@@ -466,7 +466,7 @@ declare namespace java {
                  * @throws InterruptedException if interrupted while waiting
                  */
                 // @ts-ignore
-                awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * If called by a ForkJoinTask operating in this pool, equivalent
                  * in effect to {@link ForkJoinTask#helpQuiesce}. Otherwise,
@@ -478,7 +478,7 @@ declare namespace java {
                  *  timeout elapsed.
                  */
                 // @ts-ignore
-                awaitQuiescence(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public awaitQuiescence(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Runs the given possibly blocking task.  When {@linkplain
                  * ForkJoinTask#inForkJoinPool() running in a ForkJoinPool}, this
@@ -502,7 +502,7 @@ declare namespace java {
                  * @throws InterruptedException if {#code blocker.block()} did so
                  */
                 // @ts-ignore
-                managedBlock(blocker: java.util.concurrent.ForkJoinPool.ManagedBlocker): void
+                public static managedBlock(blocker: java.util.concurrent.ForkJoinPool.ManagedBlocker): void
                 // @ts-ignore
                 newTaskFor<T>(runnable: java.lang.Runnable, value: T): java.util.concurrent.RunnableFuture<T>
                 // @ts-ignore

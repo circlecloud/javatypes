@@ -133,7 +133,7 @@ declare namespace org {
                          * @return The biome worker
                          */
                         // @ts-ignore
-                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.BiomeVolumeWorker<? extends org.spongepowered.api.world.extent.BiomeVolume>
+                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.BiomeVolumeWorker<any>
                     }
                 }
             }

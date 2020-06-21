@@ -12,7 +12,7 @@ declare namespace org {
                      * @return The entity class for this type
                      */
                     // @ts-ignore
-                    getEntityClass(): java.lang.Class<? extends org.spongepowered.api.entity.Entity>
+                    getEntityClass(): java.lang.Class<any>
                 }
             }
         }

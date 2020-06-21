@@ -12,7 +12,7 @@ declare namespace org {
                          * @see Base
                          */
                         // @ts-ignore
-                        class Base extends org.spongepowered.api.text.format.TextStyle implements org.spongepowered.api.CatalogType {
+                        abstract class Base extends org.spongepowered.api.text.format.TextStyle implements org.spongepowered.api.CatalogType {
                             /**
                              * Constructs a new {@link Base}.
                              * @param bold Whether text where this style is applied is bolded
@@ -27,7 +27,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(bold: java.lang.Boolean, italic: java.lang.Boolean, underline: java.lang.Boolean, strikethrough: java.lang.Boolean, obfuscated: java.lang.Boolean)
                             // @ts-ignore
-                            isComposite(): boolean
+                            public isComposite(): boolean
                         }
                     }
                 }

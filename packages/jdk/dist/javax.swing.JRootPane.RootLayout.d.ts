@@ -25,7 +25,7 @@ declare namespace javax {
                  * @return a Dimension object containing the layout's preferred size
                  */
                 // @ts-ignore
-                preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+                public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
                 /**
                  * Returns the minimum amount of space the layout needs.
                  * @param parent the Container for which this layout manager
@@ -33,7 +33,7 @@ declare namespace javax {
                  * @return a Dimension object containing the layout's minimum size
                  */
                 // @ts-ignore
-                minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+                public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
                 /**
                  * Returns the maximum amount of space the layout can use.
                  * @param target the Container for which this layout manager
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @return a Dimension object containing the layout's maximum size
                  */
                 // @ts-ignore
-                maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
+                public maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
                 /**
                  * Instructs the layout manager to perform the layout for the specified
                  * container.
@@ -49,19 +49,19 @@ declare namespace javax {
                  *  is being used
                  */
                 // @ts-ignore
-                layoutContainer(parent: java.awt.Container): void
+                public layoutContainer(parent: java.awt.Container): void
                 // @ts-ignore
-                addLayoutComponent(name: string, comp: java.awt.Component): void
+                public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
                 // @ts-ignore
-                removeLayoutComponent(comp: java.awt.Component): void
+                public removeLayoutComponent(comp: java.awt.Component): void
                 // @ts-ignore
-                addLayoutComponent(comp: java.awt.Component, constraints: any): void
+                public addLayoutComponent(comp: java.awt.Component, constraints: java.lang.Object | any): void
                 // @ts-ignore
-                getLayoutAlignmentX(target: java.awt.Container): float
+                public getLayoutAlignmentX(target: java.awt.Container): number /*float*/
                 // @ts-ignore
-                getLayoutAlignmentY(target: java.awt.Container): float
+                public getLayoutAlignmentY(target: java.awt.Container): number /*float*/
                 // @ts-ignore
-                invalidateLayout(target: java.awt.Container): void
+                public invalidateLayout(target: java.awt.Container): void
             }
         }
     }

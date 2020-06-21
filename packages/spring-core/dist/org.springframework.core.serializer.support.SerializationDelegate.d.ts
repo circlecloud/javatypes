@@ -11,7 +11,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    class SerializationDelegate extends java.lang.Object implements org.springframework.core.serializer.Serializer<java.lang.Object>, org.springframework.core.serializer.Deserializer<java.lang.Object> {
+                    class SerializationDelegate extends java.lang.Object implements org.springframework.core.serializer.Serializer<java.lang.Object | any>, org.springframework.core.serializer.Deserializer<java.lang.Object | any> {
                         /**
                          * Create a {@code SerializationDelegate} with a default serializer/deserializer
                          * for the given {@code ClassLoader}.
@@ -26,11 +26,11 @@ declare namespace org {
                          * @param deserializer the {#link Deserializer} to use (never {@code null)}
                          */
                         // @ts-ignore
-                        constructor(serializer: org.springframework.core.serializer.Serializer<java.lang.Object>, deserializer: org.springframework.core.serializer.Deserializer<java.lang.Object>)
+                        constructor(serializer: org.springframework.core.serializer.Serializer<java.lang.Object | any>, deserializer: org.springframework.core.serializer.Deserializer<java.lang.Object | any>)
                         // @ts-ignore
-                        serialize(object: any, outputStream: java.io.OutputStream): void
+                        public serialize(object: java.lang.Object | any, outputStream: java.io.OutputStream): void
                         // @ts-ignore
-                        deserialize(inputStream: java.io.InputStream): java.lang.Object
+                        public deserialize(inputStream: java.io.InputStream): any
                     }
                 }
             }

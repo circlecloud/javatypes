@@ -43,7 +43,7 @@ declare namespace java {
                  * GZIP header magic number.
                  */
                 // @ts-ignore
-                readonly GZIP_MAGIC: number /*int*/
+                public static readonly GZIP_MAGIC: number /*int*/
                 /**
                  * Reads uncompressed data into an array of bytes. If <code>len</code> is not
                  * zero, the method will block until some input can be decompressed; otherwise,
@@ -61,14 +61,14 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred.
                  */
                 // @ts-ignore
-                read(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Closes this input stream and releases any system resources associated
                  * with the stream.
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
             }
         }
     }

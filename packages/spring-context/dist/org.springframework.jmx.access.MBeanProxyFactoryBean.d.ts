@@ -33,21 +33,21 @@ declare namespace org {
                      * @see #setObjectName
                      */
                     // @ts-ignore
-                    setProxyInterface(proxyInterface: java.lang.Class<any>): void
+                    public setProxyInterface(proxyInterface: java.lang.Class<any>): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Checks that the {@code proxyInterface} has been specified and then
                      * generates the proxy for the target MBean.
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): java.lang.Object
+                    public getObject(): any
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

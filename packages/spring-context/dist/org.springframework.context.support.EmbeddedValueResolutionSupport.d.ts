@@ -13,7 +13,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setEmbeddedValueResolver(resolver: StringValueResolver): void
+                    public setEmbeddedValueResolver(resolver: StringValueResolver): void
                     /**
                      * Resolve the given embedded value through this instance's {@link StringValueResolver}.
                      * @param value the value to resolve
@@ -21,7 +21,7 @@ declare namespace org {
                      * @see #setEmbeddedValueResolver
                      */
                     // @ts-ignore
-                    resolveEmbeddedValue(value: string): java.lang.String
+                    resolveEmbeddedValue(value: java.lang.String | string): string
                 }
             }
         }

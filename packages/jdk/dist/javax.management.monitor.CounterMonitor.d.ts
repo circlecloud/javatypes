@@ -48,12 +48,12 @@ declare namespace javax {
                  * Starts the counter monitor.
                  */
                 // @ts-ignore
-                start(): void
+                public start(): void
                 /**
                  * Stops the counter monitor.
                  */
                 // @ts-ignore
-                stop(): void
+                public stop(): void
                 /**
                  * Gets the derived gauge of the specified object, if this object is
                  * contained in the set of observed MBeans, or <code>null</code> otherwise.
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return The derived gauge of the specified object.
                  */
                 // @ts-ignore
-                getDerivedGauge(object: javax.management.ObjectName): java.lang.Number
+                public getDerivedGauge(object: javax.management.ObjectName): java.lang.Number
                 /**
                  * Gets the derived gauge timestamp of the specified object, if
                  * this object is contained in the set of observed MBeans, or
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @return The derived gauge timestamp of the specified object.
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): long
+                public getDerivedGaugeTimeStamp(object: javax.management.ObjectName): number /*long*/
                 /**
                  * Gets the current threshold value of the specified object, if
                  * this object is contained in the set of observed MBeans, or
@@ -82,14 +82,14 @@ declare namespace javax {
                  * @return The threshold value of the specified object.
                  */
                 // @ts-ignore
-                getThreshold(object: javax.management.ObjectName): java.lang.Number
+                public getThreshold(object: javax.management.ObjectName): java.lang.Number
                 /**
                  * Gets the initial threshold value common to all observed objects.
                  * @return The initial threshold.
                  * @see #setInitThreshold
                  */
                 // @ts-ignore
-                getInitThreshold(): java.lang.Number
+                public getInitThreshold(): java.lang.Number
                 /**
                  * Sets the initial threshold value common to all observed objects.
                  * <BR>The current threshold of every object in the set of
@@ -100,7 +100,7 @@ declare namespace javax {
                  * @see #getInitThreshold
                  */
                 // @ts-ignore
-                setInitThreshold(value: java.lang.Number): void
+                public setInitThreshold(value: java.lang.Number): void
                 /**
                  * Returns the derived gauge of the first object in the set of
                  * observed MBeans.
@@ -109,7 +109,7 @@ declare namespace javax {
                  *  {#link #getDerivedGauge(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGauge(): java.lang.Number
+                public getDerivedGauge(): java.lang.Number
                 /**
                  * Gets the derived gauge timestamp of the first object in the set
                  * of observed MBeans.
@@ -118,7 +118,7 @@ declare namespace javax {
                  *  {#link #getDerivedGaugeTimeStamp(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(): long
+                public getDerivedGaugeTimeStamp(): number /*long*/
                 /**
                  * Gets the threshold value of the first object in the set of
                  * observed MBeans.
@@ -127,7 +127,7 @@ declare namespace javax {
                  * @deprecated As of JMX 1.2, replaced by {#link #getThreshold(ObjectName)}
                  */
                 // @ts-ignore
-                getThreshold(): java.lang.Number
+                public getThreshold(): java.lang.Number
                 /**
                  * Sets the initial threshold value.
                  * @param value The initial threshold value.
@@ -137,14 +137,14 @@ declare namespace javax {
                  * @deprecated As of JMX 1.2, replaced by {#link #setInitThreshold}
                  */
                 // @ts-ignore
-                setThreshold(value: java.lang.Number): void
+                public setThreshold(value: java.lang.Number): void
                 /**
                  * Gets the offset value common to all observed MBeans.
                  * @return The offset value.
                  * @see #setOffset
                  */
                 // @ts-ignore
-                getOffset(): java.lang.Number
+                public getOffset(): java.lang.Number
                 /**
                  * Sets the offset value common to all observed MBeans.
                  * @param value The offset value.
@@ -153,14 +153,14 @@ declare namespace javax {
                  * @see #getOffset
                  */
                 // @ts-ignore
-                setOffset(value: java.lang.Number): void
+                public setOffset(value: java.lang.Number): void
                 /**
                  * Gets the modulus value common to all observed MBeans.
                  * @see #setModulus
                  * @return The modulus value.
                  */
                 // @ts-ignore
-                getModulus(): java.lang.Number
+                public getModulus(): java.lang.Number
                 /**
                  * Sets the modulus value common to all observed MBeans.
                  * @param value The modulus value.
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @see #getModulus
                  */
                 // @ts-ignore
-                setModulus(value: java.lang.Number): void
+                public setModulus(value: java.lang.Number): void
                 /**
                  * Gets the notification's on/off switch value common to all
                  * observed MBeans.
@@ -178,7 +178,7 @@ declare namespace javax {
                  * @see #setNotify
                  */
                 // @ts-ignore
-                getNotify(): boolean
+                public getNotify(): boolean
                 /**
                  * Sets the notification's on/off switch value common to all
                  * observed MBeans.
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @see #getNotify
                  */
                 // @ts-ignore
-                setNotify(value: boolean): void
+                public setNotify(value: boolean): void
                 /**
                  * Gets the difference mode flag value common to all observed MBeans.
                  * @return <CODE>true</CODE> if the difference mode is used,
@@ -194,21 +194,21 @@ declare namespace javax {
                  * @see #setDifferenceMode
                  */
                 // @ts-ignore
-                getDifferenceMode(): boolean
+                public getDifferenceMode(): boolean
                 /**
                  * Sets the difference mode flag value common to all observed MBeans.
                  * @param value The difference mode flag value.
                  * @see #getDifferenceMode
                  */
                 // @ts-ignore
-                setDifferenceMode(value: boolean): void
+                public setDifferenceMode(value: boolean): void
                 /**
                  * Returns a <CODE>NotificationInfo</CODE> object containing the
                  * name of the Java class of the notification and the notification
                  * types sent by the counter monitor.
                  */
                 // @ts-ignore
-                getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+                public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
             }
         }
     }

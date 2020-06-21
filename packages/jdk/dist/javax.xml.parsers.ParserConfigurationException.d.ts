@@ -19,7 +19,7 @@ declare namespace javax {
                  * @param msg The error message for the exception.
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
             }
         }
     }

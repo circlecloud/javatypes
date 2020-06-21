@@ -23,7 +23,7 @@ declare namespace org {
                      * @return the 'level' value
                      */
                     // @ts-ignore
-                    getLevel(): int
+                    getLevel(): number /*int*/
                     /**
                      * Sets the value of the 'level' property.
                      * @param level the new 'level' value
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return the maximum 'level' value
                      */
                     // @ts-ignore
-                    getMaximumLevel(): int
+                    getMaximumLevel(): number /*int*/
                 }
             }
         }

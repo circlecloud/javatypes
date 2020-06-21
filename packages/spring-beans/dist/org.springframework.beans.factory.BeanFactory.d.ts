@@ -96,7 +96,7 @@ declare namespace org {
                      * will return the factory, not the instance returned by the factory.
                      */
                     // @ts-ignore
-                    
+                    readonly FACTORY_BEAN_PREFIX: java.lang.String | string
                     /**
                      * Return an instance, which may be shared or independent, of the specified bean.
                      * <p>This method allows a Spring BeanFactory to be used as a replacement for the
@@ -110,7 +110,7 @@ declare namespace org {
                      * @throws BeansException if the bean could not be obtained
                      */
                     // @ts-ignore
-                    getBean(name: string): java.lang.Object
+                    getBean(name: java.lang.String | string): any
                     /**
                      * Return an instance, which may be shared or independent, of the specified bean.
                      * <p>Behaves the same as {@link #getBean(String)}, but provides a measure of type
@@ -127,7 +127,7 @@ declare namespace org {
                      * @throws BeansException if the bean could not be created
                      */
                     // @ts-ignore
-                    getBean<T>(name: string, requiredType: java.lang.Class<T>): T
+                    getBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>): T
                     /**
                      * Return an instance, which may be shared or independent, of the specified bean.
                      * <p>Allows for specifying explicit constructor arguments / factory method arguments,
@@ -143,7 +143,7 @@ declare namespace org {
                      * @since 2.5
                      */
                     // @ts-ignore
-                    getBean(name: string, ...args: any[]): java.lang.Object
+                    getBean(name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
                     /**
                      * Return the bean instance that uniquely matches the given object type, if any.
                      * <p>This method goes into {@link ListableBeanFactory} by-type lookup territory
@@ -179,7 +179,7 @@ declare namespace org {
                      * @since 4.1
                      */
                     // @ts-ignore
-                    getBean<T>(requiredType: java.lang.Class<T>, ...args: any[]): T
+                    getBean<T>(requiredType: java.lang.Class<T>, ...args: java.lang.Object[] | any[]): T
                     /**
                      * Return a provider for the specified bean, allowing for lazy on-demand retrieval
                      * of instances, including availability and uniqueness options.
@@ -222,7 +222,7 @@ declare namespace org {
                      * @return whether a bean with the given name is present
                      */
                     // @ts-ignore
-                    containsBean(name: string): boolean
+                    containsBean(name: java.lang.String | string): boolean
                     /**
                      * Is this bean a shared singleton? That is, will {@link #getBean} always
                      * return the same instance?
@@ -239,7 +239,7 @@ declare namespace org {
                      * @see #isPrototype
                      */
                     // @ts-ignore
-                    isSingleton(name: string): boolean
+                    isSingleton(name: java.lang.String | string): boolean
                     /**
                      * Is this bean a prototype? That is, will {@link #getBean} always return
                      * independent instances?
@@ -257,7 +257,7 @@ declare namespace org {
                      * @see #isSingleton
                      */
                     // @ts-ignore
-                    isPrototype(name: string): boolean
+                    isPrototype(name: java.lang.String | string): boolean
                     /**
                      * Check whether the bean with the given name matches the specified type.
                      * More specifically, check whether a {@link #getBean} call for the given name
@@ -274,7 +274,7 @@ declare namespace org {
                      * @see #getType
                      */
                     // @ts-ignore
-                    isTypeMatch(name: string, typeToMatch: ResolvableType): boolean
+                    isTypeMatch(name: java.lang.String | string, typeToMatch: ResolvableType): boolean
                     /**
                      * Determine the type of the bean with the given name. More specifically,
                      * determine the type of object that {@link #getBean} would return for the given name.
@@ -291,7 +291,7 @@ declare namespace org {
                      * @see #isTypeMatch
                      */
                     // @ts-ignore
-                    getType(name: string): java.lang.Class<?>
+                    getType(name: java.lang.String | string): java.lang.Class<any>
                     /**
                      * Determine the type of the bean with the given name. More specifically,
                      * determine the type of object that {@link #getBean} would return for the given name.
@@ -311,7 +311,7 @@ declare namespace org {
                      * @see #isTypeMatch
                      */
                     // @ts-ignore
-                    getType(name: string, allowFactoryBeanInit: boolean): java.lang.Class<?>
+                    getType(name: java.lang.String | string, allowFactoryBeanInit: boolean): java.lang.Class<any>
                     /**
                      * Return the aliases for the given bean name, if any.
                      * <p>All of those aliases point to the same bean when used in a {@link #getBean} call.
@@ -324,7 +324,7 @@ declare namespace org {
                      * @see #getBean
                      */
                     // @ts-ignore
-                    getAliases(name: string): java.lang.String[]
+                    getAliases(name: java.lang.String | string): string[]
                 }
             }
         }

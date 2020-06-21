@@ -7,7 +7,7 @@ declare namespace javax {
              * @author Scott Violet
              */
             // @ts-ignore
-            class TreeUI extends javax.swing.plaf.ComponentUI {
+            abstract class TreeUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
                 /**
@@ -16,25 +16,25 @@ declare namespace javax {
                  * any component in path is currently valid.
                  */
                 // @ts-ignore
-                abstract getPathBounds(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): java.awt.Rectangle
+                public abstract getPathBounds(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): java.awt.Rectangle
                 /**
                  * Returns the path for passed in row.  If row is not visible
                  * null is returned.
                  */
                 // @ts-ignore
-                abstract getPathForRow(tree: javax.swing.JTree, row: number /*int*/): javax.swing.tree.TreePath
+                public abstract getPathForRow(tree: javax.swing.JTree, row: number /*int*/): javax.swing.tree.TreePath
                 /**
                  * Returns the row that the last item identified in path is visible
                  * at.  Will return -1 if any of the elements in path are not
                  * currently visible.
                  */
                 // @ts-ignore
-                abstract getRowForPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): int
+                public abstract getRowForPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): number /*int*/
                 /**
                  * Returns the number of rows that are being displayed.
                  */
                 // @ts-ignore
-                abstract getRowCount(tree: javax.swing.JTree): int
+                public abstract getRowCount(tree: javax.swing.JTree): number /*int*/
                 /**
                  * Returns the path to the node that is closest to x,y.  If
                  * there is nothing currently visible this will return null, otherwise
@@ -43,38 +43,38 @@ declare namespace javax {
                  * the returned path and test x, y against that.
                  */
                 // @ts-ignore
-                abstract getClosestPathForLocation(tree: javax.swing.JTree, x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
+                public abstract getClosestPathForLocation(tree: javax.swing.JTree, x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
                 /**
                  * Returns true if the tree is being edited.  The item that is being
                  * edited can be returned by getEditingPath().
                  */
                 // @ts-ignore
-                abstract isEditing(tree: javax.swing.JTree): boolean
+                public abstract isEditing(tree: javax.swing.JTree): boolean
                 /**
                  * Stops the current editing session.  This has no effect if the
                  * tree isn't being edited.  Returns true if the editor allows the
                  * editing session to stop.
                  */
                 // @ts-ignore
-                abstract stopEditing(tree: javax.swing.JTree): boolean
+                public abstract stopEditing(tree: javax.swing.JTree): boolean
                 /**
                  * Cancels the current editing session. This has no effect if the
                  * tree isn't being edited.  Returns true if the editor allows the
                  * editing session to stop.
                  */
                 // @ts-ignore
-                abstract cancelEditing(tree: javax.swing.JTree): void
+                public abstract cancelEditing(tree: javax.swing.JTree): void
                 /**
                  * Selects the last item in path and tries to edit it.  Editing will
                  * fail if the CellEditor won't allow it for the selected item.
                  */
                 // @ts-ignore
-                abstract startEditingAtPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): void
+                public abstract startEditingAtPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): void
                 /**
                  * Returns the path to the element that is being edited.
                  */
                 // @ts-ignore
-                abstract getEditingPath(tree: javax.swing.JTree): javax.swing.tree.TreePath
+                public abstract getEditingPath(tree: javax.swing.JTree): javax.swing.tree.TreePath
             }
         }
     }

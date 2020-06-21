@@ -17,37 +17,37 @@ declare namespace org {
                     // @ts-ignore
                     constructor(theBlock: org.bukkit.block.Block, cause: org.bukkit.event.block.BlockIgniteEvent.IgniteCause, ignitingEntity: org.bukkit.entity.Entity, ignitingBlock: org.bukkit.block.Block)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the cause of block ignite.
                      * @return An IgniteCause value detailing the cause of block ignition
                      */
                     // @ts-ignore
-                    getCause(): org.bukkit.event.block.BlockIgniteEvent.IgniteCause
+                    public getCause(): org.bukkit.event.block.BlockIgniteEvent.IgniteCause
                     /**
                      * Gets the player who ignited this block
                      * @return The Player that placed/ignited the fire block, or null if not ignited by a Player.
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Gets the entity who ignited this block
                      * @return The Entity that placed/ignited the fire block, or null if not ignited by a Entity.
                      */
                     // @ts-ignore
-                    getIgnitingEntity(): org.bukkit.entity.Entity
+                    public getIgnitingEntity(): org.bukkit.entity.Entity
                     /**
                      * Gets the block which ignited this block
                      * @return The Block that placed/ignited the fire block, or null if not ignited by a Block.
                      */
                     // @ts-ignore
-                    getIgnitingBlock(): org.bukkit.block.Block
+                    public getIgnitingBlock(): org.bukkit.block.Block
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

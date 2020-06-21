@@ -22,7 +22,7 @@ declare namespace org {
                          * @return The Rcon password for this service
                          */
                         // @ts-ignore
-                        getRconPassword(): java.lang.String
+                        getRconPassword(): string
                     }
                 }
             }

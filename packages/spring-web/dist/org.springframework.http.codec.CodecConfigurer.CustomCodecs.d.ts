@@ -20,7 +20,7 @@ declare namespace org {
                          * @since 5.1.13
                          */
                         // @ts-ignore
-                        register(codec: any): void
+                        register(codec: java.lang.Object | any): void
                         /**
                          * Variant of {@link #register(Object)} that also applies the below
                          * properties, if configured, via {@link #defaultCodecs()}:
@@ -35,7 +35,7 @@ declare namespace org {
                          * @since 5.1.13
                          */
                         // @ts-ignore
-                        registerWithDefaultConfig(codec: any): void
+                        registerWithDefaultConfig(codec: java.lang.Object | any): void
                         /**
                          * Variant of {@link #register(Object)} that also allows the caller to
                          * apply the properties from {@link DefaultCodecConfig} to the given
@@ -49,7 +49,7 @@ declare namespace org {
                          * @since 5.1.13
                          */
                         // @ts-ignore
-                        registerWithDefaultConfig(codec: any, configConsumer: java.util.function.Consumer<org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig> | java.util.function$.Consumer<org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig>): void
+                        registerWithDefaultConfig(codec: java.lang.Object | any, configConsumer: java.util.function$.Consumer<org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig>): void
                         /**
                          * Add a custom {@code Decoder} internally wrapped with
                          * {@link DecoderHttpMessageReader}).
@@ -98,7 +98,7 @@ declare namespace org {
                          *  or {@link #registerWithDefaultConfig(Object, Consumer)} instead.
                          */
                         // @ts-ignore
-                        withDefaultCodecConfig(codecsConfigConsumer: java.util.function.Consumer<org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig> | java.util.function$.Consumer<org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig>): void
+                        withDefaultCodecConfig(codecsConfigConsumer: java.util.function$.Consumer<org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig>): void
                     }
                 }
             }

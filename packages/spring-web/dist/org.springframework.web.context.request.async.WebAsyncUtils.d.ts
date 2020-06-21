@@ -11,20 +11,20 @@ declare namespace org {
                          * @since 3.2
                          */
                         // @ts-ignore
-                        class WebAsyncUtils extends java.lang.Object {
+                        abstract class WebAsyncUtils extends java.lang.Object {
                             // @ts-ignore
                             constructor()
                             /**
                              * The name attribute containing the {@link WebAsyncManager}.
                              */
                             // @ts-ignore
-                            readonly WEB_ASYNC_MANAGER_ATTRIBUTE: string
+                            public static readonly WEB_ASYNC_MANAGER_ATTRIBUTE: java.lang.String | string
                             /**
                              * Obtain the {@link WebAsyncManager} for the current request, or if not
                              * found, create and associate it with the request.
                              */
                             // @ts-ignore
-                            getAsyncManager(servletRequest: ServletRequest): org.springframework.web.context.request.async.WebAsyncManager
+                            public static getAsyncManager(servletRequest: ServletRequest): org.springframework.web.context.request.async.WebAsyncManager
                             /**
                              * Create an AsyncWebRequest instance. By default, an instance of
                              * {@link StandardServletAsyncWebRequest} gets created.
@@ -33,7 +33,7 @@ declare namespace org {
                              * @return an AsyncWebRequest instance (never {#code null})
                              */
                             // @ts-ignore
-                            createAsyncWebRequest(request: HttpServletRequest, response: HttpServletResponse): org.springframework.web.context.request.async.AsyncWebRequest
+                            public static createAsyncWebRequest(request: HttpServletRequest, response: HttpServletResponse): org.springframework.web.context.request.async.AsyncWebRequest
                         }
                     }
                 }

@@ -20,11 +20,11 @@ declare namespace org {
                                 // @ts-ignore
                                 class HealingSources extends java.lang.Object {
                                     // @ts-ignore
-                                    readonly FOOD: org.spongepowered.api.event.cause.entity.health.source.HealingSource
+                                    public static readonly FOOD: org.spongepowered.api.event.cause.entity.health.source.HealingSource
                                     // @ts-ignore
-                                    readonly GENERIC: org.spongepowered.api.event.cause.entity.health.source.HealingSource
+                                    public static readonly GENERIC: org.spongepowered.api.event.cause.entity.health.source.HealingSource
                                     // @ts-ignore
-                                    readonly MAGIC: org.spongepowered.api.event.cause.entity.health.source.HealingSource
+                                    public static readonly MAGIC: org.spongepowered.api.event.cause.entity.health.source.HealingSource
                                 }
                             }
                         }

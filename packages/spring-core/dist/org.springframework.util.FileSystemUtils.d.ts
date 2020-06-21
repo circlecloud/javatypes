@@ -11,7 +11,7 @@ declare namespace org {
              * @see java.nio.file.Files
              */
             // @ts-ignore
-            class FileSystemUtils extends java.lang.Object {
+            abstract class FileSystemUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -27,7 +27,7 @@ declare namespace org {
                  *  otherwise {@code false}
                  */
                 // @ts-ignore
-                deleteRecursively(root: java.io.File): boolean
+                public static deleteRecursively(root: java.io.File): boolean
                 /**
                  * Delete the supplied {@link File} &mdash; for directories,
                  * recursively delete any nested directories or files as well.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                deleteRecursively(root: java.nio.file.Path): boolean
+                public static deleteRecursively(root: java.nio.file.Path): boolean
                 /**
                  * Recursively copy the contents of the {@code src} file/directory
                  * to the {@code dest} file/directory.
@@ -47,7 +47,7 @@ declare namespace org {
                  * @throws IOException in the case of I/O errors
                  */
                 // @ts-ignore
-                copyRecursively(src: java.io.File, dest: java.io.File): void
+                public static copyRecursively(src: java.io.File, dest: java.io.File): void
                 /**
                  * Recursively copy the contents of the {@code src} file/directory
                  * to the {@code dest} file/directory.
@@ -57,7 +57,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                copyRecursively(src: java.nio.file.Path, dest: java.nio.file.Path): void
+                public static copyRecursively(src: java.nio.file.Path, dest: java.nio.file.Path): void
             }
         }
     }

@@ -8,7 +8,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                        public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                     }
                 }
             }

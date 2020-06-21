@@ -13,7 +13,7 @@ declare namespace org {
                      * @see Autowired
                      */
                     // @ts-ignore
-                    class Qualifier implements java.lang.annotation.Annotation {
+                    abstract class Qualifier implements java.lang.annotation.Annotation {
                     }
                 }
             }

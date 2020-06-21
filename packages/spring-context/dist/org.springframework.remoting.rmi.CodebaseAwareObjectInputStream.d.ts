@@ -36,7 +36,7 @@ declare namespace org {
                      * @see java.io.ObjectInputStream#ObjectInputStream(java.io.InputStream)
                      */
                     // @ts-ignore
-                    constructor(input: java.io.InputStream, codebaseUrl: string)
+                    constructor(input: java.io.InputStream, codebaseUrl: java.lang.String | string)
                     /**
                      * Create a new CodebaseAwareObjectInputStream for the given InputStream and codebase.
                      * @param in the InputStream to read from
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see java.io.ObjectInputStream#ObjectInputStream(java.io.InputStream)
                      */
                     // @ts-ignore
-                    constructor(input: java.io.InputStream, classLoader: java.lang.ClassLoader, codebaseUrl: string)
+                    constructor(input: java.io.InputStream, classLoader: java.lang.ClassLoader, codebaseUrl: java.lang.String | string)
                     /**
                      * Create a new CodebaseAwareObjectInputStream for the given InputStream and codebase.
                      * @param in the InputStream to read from
@@ -60,7 +60,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(input: java.io.InputStream, classLoader: java.lang.ClassLoader, acceptProxyClasses: boolean)
                     // @ts-ignore
-                    resolveFallbackIfPossible(className: string, ex: java.lang.ClassNotFoundException): java.lang.Class<?>
+                    resolveFallbackIfPossible(className: java.lang.String | string, ex: java.lang.ClassNotFoundException): java.lang.Class<any>
                     // @ts-ignore
                     getFallbackClassLoader(): java.lang.ClassLoader
                 }

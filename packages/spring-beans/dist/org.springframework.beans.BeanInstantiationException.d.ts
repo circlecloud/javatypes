@@ -15,7 +15,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, msg: string)
+                constructor(beanClass: java.lang.Class<any>, msg: java.lang.String | string)
                 /**
                  * Create a new BeanInstantiationException.
                  * @param beanClass the offending bean class
@@ -23,7 +23,7 @@ declare namespace org {
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, msg: string, cause: Error)
+                constructor(beanClass: java.lang.Class<any>, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Create a new BeanInstantiationException.
                  * @param constructor the offending constructor
@@ -32,7 +32,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                constructor(constructor: java.lang.reflect.Constructor<any>, msg: string, cause: Error)
+                constructor(constructor: java.lang.reflect.Constructor<any>, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Create a new BeanInstantiationException.
                  * @param constructingMethod the delegate for bean construction purposes
@@ -42,13 +42,13 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                constructor(constructingMethod: java.lang.reflect.Method, msg: string, cause: Error)
+                constructor(constructingMethod: java.lang.reflect.Method, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Return the offending bean class (never {@code null}).
                  * @return the class that was to be instantiated
                  */
                 // @ts-ignore
-                getBeanClass(): java.lang.Class<?>
+                public getBeanClass(): java.lang.Class<any>
                 /**
                  * Return the offending constructor, if known.
                  * @return the constructor in use, or {#code null} in case of a
@@ -56,7 +56,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                getConstructor(): java.lang.reflect.Constructor<?>
+                public getConstructor(): java.lang.reflect.Constructor<any>
                 /**
                  * Return the delegate for bean construction purposes, if known.
                  * @return the method in use (typically a static factory method),
@@ -64,7 +64,7 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                getConstructingMethod(): java.lang.reflect.Method
+                public getConstructingMethod(): java.lang.reflect.Method
             }
         }
     }

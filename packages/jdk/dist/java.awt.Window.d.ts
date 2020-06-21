@@ -166,7 +166,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getIconImages(): java.util.List<java.awt.Image>
+            public getIconImages(): Array<java.awt.Image>
             /**
              * Sets the sequence of images to be displayed as the icon
              * for this window. Subsequent calls to {@code getIconImages} will
@@ -195,7 +195,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setIconImages(icons: Array<java.awt.Image>): void
+            public setIconImages(icons: java.util.List<any> | Array<any>): void
             /**
              * Sets the image to be displayed as the icon for this window.
              * <p>
@@ -223,7 +223,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setIconImage(image: java.awt.Image): void
+            public setIconImage(image: java.awt.Image): void
             /**
              * Makes this Window displayable by creating the connection to its
              * native screen resource.
@@ -234,12 +234,12 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Causes this Window to be sized to fit the preferred size
              * and layouts of its subcomponents. The resulting width and
@@ -255,7 +255,7 @@ declare namespace java {
              * @see #setMinimumSize
              */
             // @ts-ignore
-            pack(): void
+            public pack(): void
             /**
              * Sets the minimum size of this window to a constant
              * value.  Subsequent calls to {@code getMinimumSize}
@@ -285,7 +285,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setMinimumSize(minimumSize: java.awt.Dimension): void
+            public setMinimumSize(minimumSize: java.awt.Dimension): void
             /**
              * {@inheritDoc}
              * <p>
@@ -304,7 +304,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setSize(d: java.awt.Dimension): void
+            public setSize(d: java.awt.Dimension): void
             /**
              * {@inheritDoc}
              * <p>
@@ -323,7 +323,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setSize(width: number /*int*/, height: number /*int*/): void
+            public setSize(width: number /*int*/, height: number /*int*/): void
             /**
              * {@inheritDoc}
              * <p>
@@ -333,7 +333,7 @@ declare namespace java {
              * in a way that corresponds closely to the desktop settings.
              */
             // @ts-ignore
-            setLocation(x: number /*int*/, y: number /*int*/): void
+            public setLocation(x: number /*int*/, y: number /*int*/): void
             /**
              * {@inheritDoc}
              * <p>
@@ -343,13 +343,13 @@ declare namespace java {
              * in a way that corresponds closely to the desktop settings.
              */
             // @ts-ignore
-            setLocation(p: java.awt.Point): void
+            public setLocation(p: java.awt.Point): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by {#code setBounds(int, int, int, int)}.
              */
             // @ts-ignore
-            reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Shows or hides this {@code Window} depending on the value of parameter
              * {@code b}.
@@ -387,7 +387,7 @@ declare namespace java {
              * @see java.awt.Window#isFocusableWindow
              */
             // @ts-ignore
-            setVisible(b: boolean): void
+            public setVisible(b: boolean): void
             /**
              * Makes the Window visible. If the Window and/or its owner
              * are not yet displayable, both are made displayable.  The
@@ -400,7 +400,7 @@ declare namespace java {
              *  {#link #setVisible(boolean)}.
              */
             // @ts-ignore
-            show(): void
+            public show(): void
             /**
              * Hide this Window, its subcomponents, and all of its owned children.
              * The Window and its subcomponents can be made visible again
@@ -411,7 +411,7 @@ declare namespace java {
              *  {#link #setVisible(boolean)}.
              */
             // @ts-ignore
-            hide(): void
+            public hide(): void
             /**
              * Releases all of the native screen resources used by this
              * {@code Window}, its subcomponents, and all of its owned
@@ -436,7 +436,7 @@ declare namespace java {
              * @see #show
              */
             // @ts-ignore
-            dispose(): void
+            public dispose(): void
             /**
              * If this Window is visible, brings this Window to the front and may make
              * it the focused Window.
@@ -480,7 +480,7 @@ declare namespace java {
              * @see #isFocusableWindow
              */
             // @ts-ignore
-            toFront(): void
+            public toFront(): void
             /**
              * If this Window is visible, sends this Window to the back and may cause
              * it to lose focus or activation if it is the focused or active Window.
@@ -506,7 +506,7 @@ declare namespace java {
              * @see #toFront
              */
             // @ts-ignore
-            toBack(): void
+            public toBack(): void
             /**
              * Returns the toolkit of this frame.
              * @return the toolkit of this window.
@@ -515,7 +515,7 @@ declare namespace java {
              * @see Component#getToolkit
              */
             // @ts-ignore
-            getToolkit(): java.awt.Toolkit
+            public getToolkit(): java.awt.Toolkit
             /**
              * Gets the warning string that is displayed with this window.
              * If this window is insecure, the warning string is displayed
@@ -532,7 +532,7 @@ declare namespace java {
              * @return the warning string for this window.
              */
             // @ts-ignore
-            getWarningString(): java.lang.String
+            public getWarningString(): string
             /**
              * Gets the {@code Locale} object that is associated
              * with this window, if the locale has been set.
@@ -543,7 +543,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Gets the input context for this window. A window always has an input context,
              * which is shared by subcomponents unless they create and set their own.
@@ -551,7 +551,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getInputContext(): java.awt.im.InputContext
+            public getInputContext(): java.awt.im.InputContext
             /**
              * Set the cursor image to a specified cursor.
              * <p>
@@ -567,20 +567,20 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setCursor(cursor: java.awt.Cursor): void
+            public setCursor(cursor: java.awt.Cursor): void
             /**
              * Returns the owner of this window.
              * @since 1.2
              */
             // @ts-ignore
-            getOwner(): java.awt.Window
+            public getOwner(): java.awt.Window
             /**
              * Return an array containing all the windows this
              * window currently owns.
              * @since 1.2
              */
             // @ts-ignore
-            getOwnedWindows(): java.awt.Window[]
+            public getOwnedWindows(): java.awt.Window[]
             /**
              * Returns an array of all {@code Window}s, both owned and ownerless,
              * created by this application.
@@ -597,7 +597,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getWindows(): java.awt.Window[]
+            public static getWindows(): java.awt.Window[]
             /**
              * Returns an array of all {@code Window}s created by this application
              * that have no owner. They include {@code Frame}s and ownerless
@@ -615,7 +615,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getOwnerlessWindows(): java.awt.Window[]
+            public static getOwnerlessWindows(): java.awt.Window[]
             /**
              * Specifies the modal exclusion type for this window. If a window is modal
              * excluded, it is not blocked by some modal dialogs. See {@link
@@ -638,7 +638,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setModalExclusionType(exclusionType: java.awt.Dialog.ModalExclusionType): void
+            public setModalExclusionType(exclusionType: java.awt.Dialog.ModalExclusionType): void
             /**
              * Returns the modal exclusion type of this window.
              * @return the modal exclusion type of this window
@@ -647,7 +647,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getModalExclusionType(): java.awt.Dialog.ModalExclusionType
+            public getModalExclusionType(): java.awt.Dialog.ModalExclusionType
             /**
              * Adds the specified window listener to receive window events from
              * this window.
@@ -659,7 +659,7 @@ declare namespace java {
              * @see #getWindowListeners
              */
             // @ts-ignore
-            addWindowListener(l: java.awt.event.WindowListener): void
+            public addWindowListener(l: java.awt.event.WindowListener): void
             /**
              * Adds the specified window state listener to receive window
              * events from this window.  If {@code l} is {@code null},
@@ -672,7 +672,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            addWindowStateListener(l: java.awt.event.WindowStateListener): void
+            public addWindowStateListener(l: java.awt.event.WindowStateListener): void
             /**
              * Adds the specified window focus listener to receive window events
              * from this window.
@@ -685,7 +685,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            addWindowFocusListener(l: java.awt.event.WindowFocusListener): void
+            public addWindowFocusListener(l: java.awt.event.WindowFocusListener): void
             /**
              * Removes the specified window listener so that it no longer
              * receives window events from this window.
@@ -697,7 +697,7 @@ declare namespace java {
              * @see #getWindowListeners
              */
             // @ts-ignore
-            removeWindowListener(l: java.awt.event.WindowListener): void
+            public removeWindowListener(l: java.awt.event.WindowListener): void
             /**
              * Removes the specified window state listener so that it no
              * longer receives window events from this window.  If
@@ -711,7 +711,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            removeWindowStateListener(l: java.awt.event.WindowStateListener): void
+            public removeWindowStateListener(l: java.awt.event.WindowStateListener): void
             /**
              * Removes the specified window focus listener so that it no longer
              * receives window events from this window.
@@ -724,7 +724,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            removeWindowFocusListener(l: java.awt.event.WindowFocusListener): void
+            public removeWindowFocusListener(l: java.awt.event.WindowFocusListener): void
             /**
              * Returns an array of all the window listeners
              * registered on this window.
@@ -736,7 +736,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getWindowListeners(): java.awt.event.WindowListener[]
+            public getWindowListeners(): java.awt.event.WindowListener[]
             /**
              * Returns an array of all the window focus listeners
              * registered on this window.
@@ -748,7 +748,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getWindowFocusListeners(): java.awt.event.WindowFocusListener[]
+            public getWindowFocusListeners(): java.awt.event.WindowFocusListener[]
             /**
              * Returns an array of all the window state listeners
              * registered on this window.
@@ -760,7 +760,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getWindowStateListeners(): java.awt.event.WindowStateListener[]
+            public getWindowStateListeners(): java.awt.event.WindowStateListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -791,7 +791,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this window. If the event is an
              * {@code WindowEvent}, it invokes the
@@ -919,7 +919,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setAlwaysOnTop(alwaysOnTop: boolean): void
+            public setAlwaysOnTop(alwaysOnTop: boolean): void
             /**
              * Returns whether the always-on-top mode is supported for this
              * window. Some platforms may not support always-on-top windows, some
@@ -934,7 +934,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            isAlwaysOnTopSupported(): boolean
+            public isAlwaysOnTopSupported(): boolean
             /**
              * Returns whether this window is an always-on-top window.
              * @return {#code true}, if the window is in always-on-top state,
@@ -943,7 +943,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isAlwaysOnTop(): boolean
+            public isAlwaysOnTop(): boolean
             /**
              * Returns the child Component of this Window that has focus if this Window
              * is focused; returns null otherwise.
@@ -953,7 +953,7 @@ declare namespace java {
              * @see #isFocused
              */
             // @ts-ignore
-            getFocusOwner(): java.awt.Component
+            public getFocusOwner(): java.awt.Component
             /**
              * Returns the child Component of this Window that will receive the focus
              * when this Window is focused. If this Window is currently focused, this
@@ -971,7 +971,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMostRecentFocusOwner(): java.awt.Component
+            public getMostRecentFocusOwner(): java.awt.Component
             /**
              * Returns whether this Window is active. Only a Frame or a Dialog may be
              * active. The native windowing system may denote the active Window or its
@@ -983,7 +983,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isActive(): boolean
+            public isActive(): boolean
             /**
              * Returns whether this Window is focused. If there exists a focus owner,
              * the focused Window is the Window that is, or contains, that focus owner.
@@ -997,7 +997,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocused(): boolean
+            public isFocused(): boolean
             /**
              * Gets a focus traversal key for this Window. (See {@code
              * setFocusTraversalKeys} for a full description of each key.)
@@ -1025,7 +1025,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusTraversalKeys(id: number /*int*/): java.util.Set<java.awt.AWTKeyStroke>
+            public getFocusTraversalKeys(id: number /*int*/): Array<java.awt.AWTKeyStroke>
             /**
              * Does nothing because Windows must always be roots of a focus traversal
              * cycle. The passed-in value is ignored.
@@ -1036,7 +1036,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setFocusCycleRoot(focusCycleRoot: boolean): void
+            public setFocusCycleRoot(focusCycleRoot: boolean): void
             /**
              * Always returns {@code true} because all Windows must be roots of a
              * focus traversal cycle.
@@ -1047,7 +1047,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusCycleRoot(): boolean
+            public isFocusCycleRoot(): boolean
             /**
              * Always returns {@code null} because Windows have no ancestors; they
              * represent the top of the Component hierarchy.
@@ -1056,7 +1056,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusCycleRootAncestor(): java.awt.Container
+            public getFocusCycleRootAncestor(): java.awt.Container
             /**
              * Returns whether this Window can become the focused Window, that is,
              * whether this Window or any of its subcomponents can become the focus
@@ -1077,7 +1077,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusableWindow(): boolean
+            public isFocusableWindow(): boolean
             /**
              * Returns whether this Window can become the focused Window if it meets
              * the other requirements outlined in {@code isFocusableWindow}. If
@@ -1098,7 +1098,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusableWindowState(): boolean
+            public getFocusableWindowState(): boolean
             /**
              * Sets whether this Window can become the focused Window if it meets
              * the other requirements outlined in {@code isFocusableWindow}. If
@@ -1128,7 +1128,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setFocusableWindowState(focusableWindowState: boolean): void
+            public setFocusableWindowState(focusableWindowState: boolean): void
             /**
              * Sets whether this window should receive focus on
              * subsequently being shown (with a call to {@link #setVisible setVisible(true)}),
@@ -1150,7 +1150,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setAutoRequestFocus(autoRequestFocus: boolean): void
+            public setAutoRequestFocus(autoRequestFocus: boolean): void
             /**
              * Returns whether this window should receive focus on subsequently being shown
              * (with a call to {@link #setVisible setVisible(true)}), or being moved to the front
@@ -1162,7 +1162,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isAutoRequestFocus(): boolean
+            public isAutoRequestFocus(): boolean
             /**
              * Adds a PropertyChangeListener to the listener list. The listener is
              * registered for all bound properties of this class, including the
@@ -1197,7 +1197,7 @@ declare namespace java {
              * @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Adds a PropertyChangeListener to the listener list for a specific
              * property. The specified property may be user-defined, or one of the
@@ -1233,7 +1233,7 @@ declare namespace java {
              * @see Component#removePropertyChangeListener
              */
             // @ts-ignore
-            addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Indicates if this container is a validate root.
              * <p>
@@ -1244,31 +1244,31 @@ declare namespace java {
              * @see java.awt.Container#isValidateRoot
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * @deprecated As of JDK version 1.1
              *  replaced by {#code dispatchEvent(AWTEvent)}.
              */
             // @ts-ignore
-            postEvent(e: java.awt.Event): boolean
+            public postEvent(e: java.awt.Event): boolean
             /**
              * Checks if this Window is showing on screen.
              * @see Component#setVisible
              */
             // @ts-ignore
-            isShowing(): boolean
+            public isShowing(): boolean
             /**
              * @deprecated As of J2SE 1.4, replaced by
              *  {#link Component#applyComponentOrientation Component.applyComponentOrientation}.
              */
             // @ts-ignore
-            applyResourceBundle(rb: java.util.ResourceBundle): void
+            public applyResourceBundle(rb: java.util.ResourceBundle): void
             /**
              * @deprecated As of J2SE 1.4, replaced by
              *  {#link Component#applyComponentOrientation Component.applyComponentOrientation}.
              */
             // @ts-ignore
-            applyResourceBundle(rbName: string): void
+            public applyResourceBundle(rbName: java.lang.String | string): void
             /**
              * Sets the type of the window.
              * This method can only be called while the window is not displayable.
@@ -1280,14 +1280,14 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setType(type: java.awt.Window.Type): void
+            public setType(type: java.awt.Window.Type): void
             /**
              * Returns the type of the window.
              * @see #setType
              * @since 1.7
              */
             // @ts-ignore
-            getType(): java.awt.Window.Type
+            public getType(): java.awt.Window.Type
             /**
              * Gets the AccessibleContext associated with this Window.
              * For windows, the AccessibleContext takes the form of an
@@ -1298,7 +1298,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
             /**
              * Sets the location of the window relative to the specified
              * component according to the following scenarios.
@@ -1355,7 +1355,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setLocationRelativeTo(c: java.awt.Component): void
+            public setLocationRelativeTo(c: java.awt.Component): void
             /**
              * Creates a new strategy for multi-buffering on this component.
              * Multi-buffering is useful for rendering performance.  This method
@@ -1376,7 +1376,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createBufferStrategy(numBuffers: number /*int*/): void
+            public createBufferStrategy(numBuffers: number /*int*/): void
             /**
              * Creates a new strategy for multi-buffering on this component with the
              * required buffer capabilities.  This is useful, for example, if only
@@ -1398,7 +1398,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createBufferStrategy(numBuffers: number /*int*/, caps: java.awt.BufferCapabilities): void
+            public createBufferStrategy(numBuffers: number /*int*/, caps: java.awt.BufferCapabilities): void
             /**
              * Returns the {@code BufferStrategy} used by this component.  This
              * method will return null if a {@code BufferStrategy} has not yet
@@ -1408,7 +1408,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBufferStrategy(): java.awt.image.BufferStrategy
+            public getBufferStrategy(): java.awt.image.BufferStrategy
             /**
              * Sets whether this Window should appear at the default location for the
              * native windowing system or at the current location (returned by
@@ -1456,7 +1456,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setLocationByPlatform(locationByPlatform: boolean): void
+            public setLocationByPlatform(locationByPlatform: boolean): void
             /**
              * Returns {@code true} if this Window will appear at the default location
              * for the native windowing system the next time this Window is made visible.
@@ -1468,7 +1468,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isLocationByPlatform(): boolean
+            public isLocationByPlatform(): boolean
             /**
              * {@inheritDoc}
              * <p>
@@ -1492,7 +1492,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBounds(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public setBounds(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * {@inheritDoc}
              * <p>
@@ -1516,7 +1516,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setBounds(r: java.awt.Rectangle): void
+            public setBounds(r: java.awt.Rectangle): void
             /**
              * Returns the opacity of the window.
              * @return the opacity of the window
@@ -1525,7 +1525,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getOpacity(): float
+            public getOpacity(): number /*float*/
             /**
              * Sets the opacity of the window.
              * <p>
@@ -1572,7 +1572,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setOpacity(opacity: number /*float*/): void
+            public setOpacity(opacity: number /*float*/): void
             /**
              * Returns the shape of the window.
              * The value returned by this method may not be the same as
@@ -1585,7 +1585,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getShape(): java.awt.Shape
+            public getShape(): java.awt.Shape
             /**
              * Sets the shape of the window.
              * <p>
@@ -1632,7 +1632,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setShape(shape: java.awt.Shape): void
+            public setShape(shape: java.awt.Shape): void
             /**
              * Gets the background color of this window.
              * <p>
@@ -1644,7 +1644,7 @@ declare namespace java {
              * @see GraphicsDevice.WindowTranslucency
              */
             // @ts-ignore
-            getBackground(): java.awt.Color
+            public getBackground(): java.awt.Color
             /**
              * Sets the background color of this window.
              * <p>
@@ -1718,7 +1718,7 @@ declare namespace java {
              * @see GraphicsConfiguration#isTranslucencyCapable()
              */
             // @ts-ignore
-            setBackground(bgColor: java.awt.Color): void
+            public setBackground(bgColor: java.awt.Color): void
             /**
              * Indicates if the window is currently opaque.
              * <p>
@@ -1731,13 +1731,13 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isOpaque(): boolean
+            public isOpaque(): boolean
             /**
              * {@inheritDoc}
              * @since 1.7
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
         }
     }
 }

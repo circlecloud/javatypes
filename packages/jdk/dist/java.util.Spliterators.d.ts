@@ -19,7 +19,7 @@ declare namespace java {
              * @return An empty spliterator
              */
             // @ts-ignore
-            emptySpliterator<T>(): java.util.Spliterator<T>
+            public static emptySpliterator<T>(): java.util.Spliterator<T>
             /**
              * Creates an empty {@code Spliterator.OfInt}
              * <p>The empty spliterator reports {@link Spliterator#SIZED} and
@@ -28,7 +28,7 @@ declare namespace java {
              * @return An empty spliterator
              */
             // @ts-ignore
-            emptyIntSpliterator(): java.util.Spliterator.OfInt
+            public static emptyIntSpliterator(): java.util.Spliterator.OfInt
             /**
              * Creates an empty {@code Spliterator.OfLong}
              * <p>The empty spliterator reports {@link Spliterator#SIZED} and
@@ -37,7 +37,7 @@ declare namespace java {
              * @return An empty spliterator
              */
             // @ts-ignore
-            emptyLongSpliterator(): java.util.Spliterator.OfLong
+            public static emptyLongSpliterator(): java.util.Spliterator.OfLong
             /**
              * Creates an empty {@code Spliterator.OfDouble}
              * <p>The empty spliterator reports {@link Spliterator#SIZED} and
@@ -46,7 +46,7 @@ declare namespace java {
              * @return An empty spliterator
              */
             // @ts-ignore
-            emptyDoubleSpliterator(): java.util.Spliterator.OfDouble
+            public static emptyDoubleSpliterator(): java.util.Spliterator.OfDouble
             /**
              * Creates a {@code Spliterator} covering the elements of a given array,
              * using a customized set of spliterator characteristics.
@@ -69,7 +69,7 @@ declare namespace java {
              * @see Arrays#spliterator(Object[])
              */
             // @ts-ignore
-            spliterator<T>(array: any[], additionalCharacteristics: number /*int*/): java.util.Spliterator<T>
+            public static spliterator<T>(array: java.lang.Object[] | any[], additionalCharacteristics: number /*int*/): java.util.Spliterator<T>
             /**
              * Creates a {@code Spliterator} covering a range of elements of a given
              * array, using a customized set of spliterator characteristics.
@@ -97,7 +97,7 @@ declare namespace java {
              * @see Arrays#spliterator(Object[], int, int)
              */
             // @ts-ignore
-            spliterator<T>(array: any[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator<T>
+            public static spliterator<T>(array: java.lang.Object[] | any[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator<T>
             /**
              * Creates a {@code Spliterator.OfInt} covering the elements of a given array,
              * using a customized set of spliterator characteristics.
@@ -119,7 +119,7 @@ declare namespace java {
              * @see Arrays#spliterator(int[])
              */
             // @ts-ignore
-            spliterator(array: number /*int*/[], additionalCharacteristics: number /*int*/): java.util.Spliterator.OfInt
+            public static spliterator(array: number /*int*/[], additionalCharacteristics: number /*int*/): java.util.Spliterator.OfInt
             /**
              * Creates a {@code Spliterator.OfInt} covering a range of elements of a
              * given array, using a customized set of spliterator characteristics.
@@ -146,7 +146,7 @@ declare namespace java {
              * @see Arrays#spliterator(int[], int, int)
              */
             // @ts-ignore
-            spliterator(array: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator.OfInt
+            public static spliterator(array: number /*int*/[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator.OfInt
             /**
              * Creates a {@code Spliterator.OfLong} covering the elements of a given array,
              * using a customized set of spliterator characteristics.
@@ -168,7 +168,7 @@ declare namespace java {
              * @see Arrays#spliterator(long[])
              */
             // @ts-ignore
-            spliterator(array: number /*long*/[], additionalCharacteristics: number /*int*/): java.util.Spliterator.OfLong
+            public static spliterator(array: number /*long*/[], additionalCharacteristics: number /*int*/): java.util.Spliterator.OfLong
             /**
              * Creates a {@code Spliterator.OfLong} covering a range of elements of a
              * given array, using a customized set of spliterator characteristics.
@@ -199,7 +199,7 @@ declare namespace java {
              * @see Arrays#spliterator(long[], int, int)
              */
             // @ts-ignore
-            spliterator(array: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator.OfLong
+            public static spliterator(array: number /*long*/[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator.OfLong
             /**
              * Creates a {@code Spliterator.OfDouble} covering the elements of a given array,
              * using a customized set of spliterator characteristics.
@@ -221,7 +221,7 @@ declare namespace java {
              * @see Arrays#spliterator(double[])
              */
             // @ts-ignore
-            spliterator(array: number /*double*/[], additionalCharacteristics: number /*int*/): java.util.Spliterator.OfDouble
+            public static spliterator(array: number /*double*/[], additionalCharacteristics: number /*int*/): java.util.Spliterator.OfDouble
             /**
              * Creates a {@code Spliterator.OfDouble} covering a range of elements of a
              * given array, using a customized set of spliterator characteristics.
@@ -252,7 +252,7 @@ declare namespace java {
              * @see Arrays#spliterator(double[], int, int)
              */
             // @ts-ignore
-            spliterator(array: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator.OfDouble
+            public static spliterator(array: number /*double*/[], fromIndex: number /*int*/, toIndex: number /*int*/, additionalCharacteristics: number /*int*/): java.util.Spliterator.OfDouble
             /**
              * Creates a {@code Spliterator} using the given collection's
              * {@link java.util.Collection#iterator()} as the source of elements, and
@@ -270,7 +270,7 @@ declare namespace java {
              * @throws NullPointerException if the given collection is {#code null}
              */
             // @ts-ignore
-            spliterator<T>(c: Array<T>, characteristics: number /*int*/): java.util.Spliterator<T>
+            public static spliterator<T>(c: java.util.Collection<any> | Array<any>, characteristics: number /*int*/): java.util.Spliterator<T>
             /**
              * Creates a {@code Spliterator} using a given {@code Iterator}
              * as the source of elements, and with a given initially reported size.
@@ -293,7 +293,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliterator<T>(iterator: java.util.Iterator<T>, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator<T>
+            public static spliterator<T>(iterator: java.util.Iterator<any>, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator<T>
             /**
              * Creates a {@code Spliterator} using a given {@code Iterator}
              * as the source of elements, with no initial size estimate.
@@ -313,7 +313,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliteratorUnknownSize<T>(iterator: java.util.Iterator<T>, characteristics: number /*int*/): java.util.Spliterator<T>
+            public static spliteratorUnknownSize<T>(iterator: java.util.Iterator<any>, characteristics: number /*int*/): java.util.Spliterator<T>
             /**
              * Creates a {@code Spliterator.OfInt} using a given
              * {@code IntStream.IntIterator} as the source of elements, and with a given
@@ -336,7 +336,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliterator(iterator: java.util.PrimitiveIterator.OfInt, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator.OfInt
+            public static spliterator(iterator: java.util.PrimitiveIterator.OfInt, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator.OfInt
             /**
              * Creates a {@code Spliterator.OfInt} using a given
              * {@code IntStream.IntIterator} as the source of elements, with no initial
@@ -356,7 +356,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliteratorUnknownSize(iterator: java.util.PrimitiveIterator.OfInt, characteristics: number /*int*/): java.util.Spliterator.OfInt
+            public static spliteratorUnknownSize(iterator: java.util.PrimitiveIterator.OfInt, characteristics: number /*int*/): java.util.Spliterator.OfInt
             /**
              * Creates a {@code Spliterator.OfLong} using a given
              * {@code LongStream.LongIterator} as the source of elements, and with a
@@ -379,7 +379,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliterator(iterator: java.util.PrimitiveIterator.OfLong, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator.OfLong
+            public static spliterator(iterator: java.util.PrimitiveIterator.OfLong, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator.OfLong
             /**
              * Creates a {@code Spliterator.OfLong} using a given
              * {@code LongStream.LongIterator} as the source of elements, with no
@@ -399,7 +399,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliteratorUnknownSize(iterator: java.util.PrimitiveIterator.OfLong, characteristics: number /*int*/): java.util.Spliterator.OfLong
+            public static spliteratorUnknownSize(iterator: java.util.PrimitiveIterator.OfLong, characteristics: number /*int*/): java.util.Spliterator.OfLong
             /**
              * Creates a {@code Spliterator.OfDouble} using a given
              * {@code DoubleStream.DoubleIterator} as the source of elements, and with a
@@ -422,7 +422,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliterator(iterator: java.util.PrimitiveIterator.OfDouble, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator.OfDouble
+            public static spliterator(iterator: java.util.PrimitiveIterator.OfDouble, size: number /*long*/, characteristics: number /*int*/): java.util.Spliterator.OfDouble
             /**
              * Creates a {@code Spliterator.OfDouble} using a given
              * {@code DoubleStream.DoubleIterator} as the source of elements, with no
@@ -442,7 +442,7 @@ declare namespace java {
              * @throws NullPointerException if the given iterator is {#code null}
              */
             // @ts-ignore
-            spliteratorUnknownSize(iterator: java.util.PrimitiveIterator.OfDouble, characteristics: number /*int*/): java.util.Spliterator.OfDouble
+            public static spliteratorUnknownSize(iterator: java.util.PrimitiveIterator.OfDouble, characteristics: number /*int*/): java.util.Spliterator.OfDouble
             /**
              * Creates an {@code Iterator} from a {@code Spliterator}.
              * <p>Traversal of elements should be accomplished through the iterator.
@@ -454,7 +454,7 @@ declare namespace java {
              * @throws NullPointerException if the given spliterator is {#code null}
              */
             // @ts-ignore
-            iterator<T>(spliterator: java.util.Spliterator<T>): java.util.Iterator<T>
+            public static iterator<T>(spliterator: java.util.Spliterator<any>): java.util.Iterator<T>
             /**
              * Creates an {@code PrimitiveIterator.OfInt} from a
              * {@code Spliterator.OfInt}.
@@ -466,7 +466,7 @@ declare namespace java {
              * @throws NullPointerException if the given spliterator is {#code null}
              */
             // @ts-ignore
-            iterator(spliterator: java.util.Spliterator.OfInt): java.util.PrimitiveIterator.OfInt
+            public static iterator(spliterator: java.util.Spliterator.OfInt): java.util.PrimitiveIterator.OfInt
             /**
              * Creates an {@code PrimitiveIterator.OfLong} from a
              * {@code Spliterator.OfLong}.
@@ -478,7 +478,7 @@ declare namespace java {
              * @throws NullPointerException if the given spliterator is {#code null}
              */
             // @ts-ignore
-            iterator(spliterator: java.util.Spliterator.OfLong): java.util.PrimitiveIterator.OfLong
+            public static iterator(spliterator: java.util.Spliterator.OfLong): java.util.PrimitiveIterator.OfLong
             /**
              * Creates an {@code PrimitiveIterator.OfDouble} from a
              * {@code Spliterator.OfDouble}.
@@ -490,7 +490,7 @@ declare namespace java {
              * @throws NullPointerException if the given spliterator is {#code null}
              */
             // @ts-ignore
-            iterator(spliterator: java.util.Spliterator.OfDouble): java.util.PrimitiveIterator.OfDouble
+            public static iterator(spliterator: java.util.Spliterator.OfDouble): java.util.PrimitiveIterator.OfDouble
         }
     }
 }

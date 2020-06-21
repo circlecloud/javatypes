@@ -71,7 +71,7 @@ declare namespace java {
              * @see CharsetEncoder
              */
             // @ts-ignore
-            class CharsetDecoder extends java.lang.Object {
+            abstract class CharsetDecoder extends java.lang.Object {
                 /**
                  * Initializes a new decoder.  The new decoder will have the given
                  * chars-per-byte values and its replacement will be the
@@ -94,14 +94,14 @@ declare namespace java {
                  * @return This decoder's charset
                  */
                 // @ts-ignore
-                charset(): java.nio.charset.Charset
+                public charset(): java.nio.charset.Charset
                 /**
                  * Returns this decoder's replacement value.
                  * @return This decoder's current replacement,
                  *           which is never <tt>null</tt> and is never empty
                  */
                 // @ts-ignore
-                replacement(): java.lang.String
+                public replacement(): string
                 /**
                  * Changes this decoder's replacement value.
                  * <p> This method invokes the {@link #implReplaceWith implReplaceWith}
@@ -117,7 +117,7 @@ declare namespace java {
                  *           If the preconditions on the parameter do not hold
                  */
                 // @ts-ignore
-                replaceWith(newReplacement: string): java.nio.charset.CharsetDecoder
+                public replaceWith(newReplacement: java.lang.String | string): java.nio.charset.CharsetDecoder
                 /**
                  * Reports a change to this decoder's replacement value.
                  * <p> The default implementation of this method does nothing.  This method
@@ -126,13 +126,13 @@ declare namespace java {
                  * @param newReplacement    The replacement value
                  */
                 // @ts-ignore
-                implReplaceWith(newReplacement: string): void
+                implReplaceWith(newReplacement: java.lang.String | string): void
                 /**
                  * Returns this decoder's current action for malformed-input errors.
                  * @return The current malformed-input action, which is never <tt>null</tt>
                  */
                 // @ts-ignore
-                malformedInputAction(): java.nio.charset.CodingErrorAction
+                public malformedInputAction(): java.nio.charset.CodingErrorAction
                 /**
                  * Changes this decoder's action for malformed-input errors.
                  * <p> This method invokes the {@link #implOnMalformedInput
@@ -143,7 +143,7 @@ declare namespace java {
                  *          If the precondition on the parameter does not hold
                  */
                 // @ts-ignore
-                onMalformedInput(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetDecoder
+                public onMalformedInput(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetDecoder
                 /**
                  * Reports a change to this decoder's malformed-input action.
                  * <p> The default implementation of this method does nothing.  This method
@@ -159,7 +159,7 @@ declare namespace java {
                  *          <tt>null</tt>
                  */
                 // @ts-ignore
-                unmappableCharacterAction(): java.nio.charset.CodingErrorAction
+                public unmappableCharacterAction(): java.nio.charset.CodingErrorAction
                 /**
                  * Changes this decoder's action for unmappable-character errors.
                  * <p> This method invokes the {@link #implOnUnmappableCharacter
@@ -170,7 +170,7 @@ declare namespace java {
                  *          If the precondition on the parameter does not hold
                  */
                 // @ts-ignore
-                onUnmappableCharacter(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetDecoder
+                public onUnmappableCharacter(newAction: java.nio.charset.CodingErrorAction): java.nio.charset.CharsetDecoder
                 /**
                  * Reports a change to this decoder's unmappable-character action.
                  * <p> The default implementation of this method does nothing.  This method
@@ -188,7 +188,7 @@ declare namespace java {
                  *           per byte of input
                  */
                 // @ts-ignore
-                averageCharsPerByte(): float
+                public averageCharsPerByte(): number /*float*/
                 /**
                  * Returns the maximum number of characters that will be produced for each
                  * byte of input.  This value may be used to compute the worst-case size
@@ -197,7 +197,7 @@ declare namespace java {
                  *           byte of input
                  */
                 // @ts-ignore
-                maxCharsPerByte(): float
+                public maxCharsPerByte(): number /*float*/
                 /**
                  * Decodes as many bytes as possible from the given input buffer,
                  * writing the results to the given output buffer.
@@ -279,7 +279,7 @@ declare namespace java {
                  *           an unexpected exception
                  */
                 // @ts-ignore
-                decode(input: java.nio.ByteBuffer, out: java.nio.CharBuffer, endOfInput: boolean): java.nio.charset.CoderResult
+                public decode(input: java.nio.ByteBuffer, out: java.nio.CharBuffer, endOfInput: boolean): java.nio.charset.CoderResult
                 /**
                  * Flushes this decoder.
                  * <p> Some decoders maintain internal state and may need to write some
@@ -312,7 +312,7 @@ declare namespace java {
                  *           parameter
                  */
                 // @ts-ignore
-                flush(out: java.nio.CharBuffer): java.nio.charset.CoderResult
+                public flush(out: java.nio.CharBuffer): java.nio.charset.CoderResult
                 /**
                  * Flushes this decoder.
                  * <p> The default implementation of this method does nothing, and always
@@ -334,7 +334,7 @@ declare namespace java {
                  * @return This decoder
                  */
                 // @ts-ignore
-                reset(): java.nio.charset.CharsetDecoder
+                public reset(): java.nio.charset.CharsetDecoder
                 /**
                  * Resets this decoder, clearing any charset-specific internal state.
                  * <p> The default implementation of this method does nothing.  This method
@@ -398,7 +398,7 @@ declare namespace java {
                  *           CodingErrorAction#REPORT}
                  */
                 // @ts-ignore
-                decode(input: java.nio.ByteBuffer): java.nio.CharBuffer
+                public decode(input: java.nio.ByteBuffer): java.nio.CharBuffer
                 /**
                  * Tells whether or not this decoder implements an auto-detecting charset.
                  * <p> The default implementation of this method always returns
@@ -408,7 +408,7 @@ declare namespace java {
                  *           auto-detecting charset
                  */
                 // @ts-ignore
-                isAutoDetecting(): boolean
+                public isAutoDetecting(): boolean
                 /**
                  * Tells whether or not this decoder has yet detected a
                  * charset&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -431,7 +431,7 @@ declare namespace java {
                  *           If this decoder does not implement an auto-detecting charset
                  */
                 // @ts-ignore
-                isCharsetDetected(): boolean
+                public isCharsetDetected(): boolean
                 /**
                  * Retrieves the charset that was detected by this
                  * decoder&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -452,7 +452,7 @@ declare namespace java {
                  *           If this decoder does not implement an auto-detecting charset
                  */
                 // @ts-ignore
-                detectedCharset(): java.nio.charset.Charset
+                public detectedCharset(): java.nio.charset.Charset
             }
         }
     }

@@ -33,7 +33,7 @@ declare namespace java {
              * @param title    the title of the dialog
              */
             // @ts-ignore
-            constructor(parent: java.awt.Frame, title: string)
+            constructor(parent: java.awt.Frame, title: java.lang.String | string)
             /**
              * Creates a file dialog window with the specified title for loading
              * or saving a file.
@@ -53,7 +53,7 @@ declare namespace java {
              * @see java.awt.FileDialog#SAVE
              */
             // @ts-ignore
-            constructor(parent: java.awt.Frame, title: string, mode: number /*int*/)
+            constructor(parent: java.awt.Frame, title: java.lang.String | string, mode: number /*int*/)
             /**
              * Creates a file dialog for loading a file.  The title of the
              * file dialog is initially empty.  This is a convenience method for
@@ -91,7 +91,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(parent: java.awt.Dialog, title: string)
+            constructor(parent: java.awt.Dialog, title: java.lang.String | string)
             /**
              * Creates a file dialog window with the specified title for loading
              * or saving a file.
@@ -122,25 +122,25 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(parent: java.awt.Dialog, title: string, mode: number /*int*/)
+            constructor(parent: java.awt.Dialog, title: java.lang.String | string, mode: number /*int*/)
             /**
              * This constant value indicates that the purpose of the file
              * dialog window is to locate a file from which to read.
              */
             // @ts-ignore
-            readonly LOAD: number /*int*/
+            public static readonly LOAD: number /*int*/
             /**
              * This constant value indicates that the purpose of the file
              * dialog window is to locate a file to which to write.
              */
             // @ts-ignore
-            readonly SAVE: number /*int*/
+            public static readonly SAVE: number /*int*/
             /**
              * Creates the file dialog's peer.  The peer allows us to change the look
              * of the file dialog without changing its functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Indicates whether this file dialog box is for loading from a file
              * or for saving to a file.
@@ -152,7 +152,7 @@ declare namespace java {
              * @see java.awt.FileDialog#setMode
              */
             // @ts-ignore
-            getMode(): int
+            public getMode(): number /*int*/
             /**
              * Sets the mode of the file dialog.  If <code>mode</code> is not
              * a legal value, an exception will be thrown and <code>mode</code>
@@ -168,7 +168,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setMode(mode: number /*int*/): void
+            public setMode(mode: number /*int*/): void
             /**
              * Gets the directory of this file dialog.
              * @return the (potentially <code>null</code> or invalid)
@@ -176,7 +176,7 @@ declare namespace java {
              * @see java.awt.FileDialog#setDirectory
              */
             // @ts-ignore
-            getDirectory(): java.lang.String
+            public getDirectory(): string
             /**
              * Sets the directory of this file dialog window to be the
              * specified directory. Specifying a <code>null</code> or an
@@ -191,7 +191,7 @@ declare namespace java {
              * @see java.awt.FileDialog#getDirectory
              */
             // @ts-ignore
-            setDirectory(dir: string): void
+            public setDirectory(dir: java.lang.String | string): void
             /**
              * Gets the selected file of this file dialog.  If the user
              * selected <code>CANCEL</code>, the returned file is <code>null</code>.
@@ -200,7 +200,7 @@ declare namespace java {
              * @see java.awt.FileDialog#setFile
              */
             // @ts-ignore
-            getFile(): java.lang.String
+            public getFile(): string
             /**
              * Returns files that the user selects.
              * <p>
@@ -213,7 +213,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getFiles(): java.io.File[]
+            public getFiles(): java.io.File[]
             /**
              * Sets the selected file for this file dialog window to be the
              * specified file. This file becomes the default file if it is set
@@ -234,7 +234,7 @@ declare namespace java {
              * @see #getFiles
              */
             // @ts-ignore
-            setFile(file: string): void
+            public setFile(file: java.lang.String | string): void
             /**
              * Enables or disables multiple file selection for the file dialog.
              * @param enable    if {#code true}, multiple file selection is enabled;
@@ -243,7 +243,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setMultipleMode(enable: boolean): void
+            public setMultipleMode(enable: boolean): void
             /**
              * Returns whether the file dialog allows the multiple file selection.
              * @return {#code true} if the file dialog allows the multiple
@@ -252,7 +252,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isMultipleMode(): boolean
+            public isMultipleMode(): boolean
             /**
              * Determines this file dialog's filename filter. A filename filter
              * allows the user to specify which files appear in the file dialog
@@ -263,7 +263,7 @@ declare namespace java {
              * @see java.awt.FileDialog#setFilenameFilter
              */
             // @ts-ignore
-            getFilenameFilter(): java.io.FilenameFilter
+            public getFilenameFilter(): java.io.FilenameFilter
             /**
              * Sets the filename filter for this file dialog window to the
              * specified filter.
@@ -274,7 +274,7 @@ declare namespace java {
              * @see java.awt.FileDialog#getFilenameFilter
              */
             // @ts-ignore
-            setFilenameFilter(filter: java.io.FilenameFilter): void
+            public setFilenameFilter(filter: java.io.FilenameFilter): void
             /**
              * Returns a string representing the state of this <code>FileDialog</code>
              * window. This method is intended to be used only for debugging purposes,
@@ -284,7 +284,7 @@ declare namespace java {
              * @return the parameter string of this file dialog window
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
         }
     }
 }

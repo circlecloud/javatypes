@@ -13,7 +13,7 @@ declare namespace org {
                  * @since 2.5.5
                  */
                 // @ts-ignore
-                class MessageSourceSupport extends java.lang.Object {
+                abstract class MessageSourceSupport extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -36,7 +36,7 @@ declare namespace org {
                      * @see java.text.MessageFormat
                      */
                     // @ts-ignore
-                    setAlwaysUseMessageFormat(alwaysUseMessageFormat: boolean): void
+                    public setAlwaysUseMessageFormat(alwaysUseMessageFormat: boolean): void
                     /**
                      * Return whether to always apply the MessageFormat rules, parsing even
                      * messages without arguments.
@@ -58,7 +58,7 @@ declare namespace org {
                      * @see #formatMessage(String, Object[], java.util.Locale)
                      */
                     // @ts-ignore
-                    renderDefaultMessage(defaultMessage: string, args: any[], locale: java.util.Locale): java.lang.String
+                    renderDefaultMessage(defaultMessage: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     /**
                      * Format the given message String, using cached MessageFormats.
                      * By default invoked for passed-in default messages, to resolve
@@ -70,7 +70,7 @@ declare namespace org {
                      * @return the formatted message (with resolved arguments)
                      */
                     // @ts-ignore
-                    formatMessage(msg: string, args: any[], locale: java.util.Locale): java.lang.String
+                    formatMessage(msg: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     /**
                      * Create a MessageFormat for the given message and Locale.
                      * @param msg the message to create a MessageFormat for
@@ -78,7 +78,7 @@ declare namespace org {
                      * @return the MessageFormat instance
                      */
                     // @ts-ignore
-                    createMessageFormat(msg: string, locale: java.util.Locale): java.text.MessageFormat
+                    createMessageFormat(msg: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                     /**
                      * Template method for resolving argument objects.
                      * <p>The default implementation simply returns the given argument array as-is.
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return the resolved argument array
                      */
                     // @ts-ignore
-                    resolveArguments(args: any[], locale: java.util.Locale): java.lang.Object[]
+                    resolveArguments(args: java.lang.Object[] | any[], locale: java.util.Locale): any[]
                 }
             }
         }

@@ -160,7 +160,7 @@ declare namespace java {
              * @throws IllegalArgumentException if <code>name</code> is empty.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a new <code>AWTPermission</code> object with the specified name.
              * The name is the symbolic name of the <code>AWTPermission</code>, and the
@@ -171,7 +171,7 @@ declare namespace java {
              * @throws IllegalArgumentException if <code>name</code> is empty.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
         }
     }
 }

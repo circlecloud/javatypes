@@ -16,26 +16,26 @@ declare namespace org {
                  *      map.
                  */
                 // @ts-ignore
-                constructor(plugin: org.bukkit.plugin.Plugin, forWhom: org.bukkit.conversations.Conversable, initialSessionData: java.util.Map<java.lang.Object, java.lang.Object>)
+                constructor(plugin: org.bukkit.plugin.Plugin, forWhom: org.bukkit.conversations.Conversable, initialSessionData: java.util.Map<java.lang.Object | any, java.lang.Object | any>)
                 /**
                  * Gets the plugin that owns this conversation.
                  * @return The owning plugin.
                  */
                 // @ts-ignore
-                getPlugin(): org.bukkit.plugin.Plugin
+                public getPlugin(): org.bukkit.plugin.Plugin
                 /**
                  * Gets the subject of the conversation.
                  * @return The subject of the conversation.
                  */
                 // @ts-ignore
-                getForWhom(): org.bukkit.conversations.Conversable
+                public getForWhom(): org.bukkit.conversations.Conversable
                 /**
                  * Gets the underlying sessionData map.
                  * May be directly modified to manipulate session data.
                  * @return The full sessionData map.
                  */
                 // @ts-ignore
-                getAllSessionData(): java.util.Map<java.lang.Object, java.lang.Object>
+                public getAllSessionData(): java.util.Map<java.lang.Object | any, java.lang.Object | any>
                 /**
                  * Gets session data shared between all {@link Prompt} invocations. Use
                  * this as a way to pass data through each Prompt as the conversation
@@ -44,7 +44,7 @@ declare namespace org {
                  * @return The requested session data.
                  */
                 // @ts-ignore
-                getSessionData(key: any): java.lang.Object
+                public getSessionData(key: java.lang.Object | any): any
                 /**
                  * Sets session data shared between all {@link Prompt} invocations. Use
                  * this as a way to pass data through each prompt as the conversation
@@ -53,7 +53,7 @@ declare namespace org {
                  * @param value The session data value.
                  */
                 // @ts-ignore
-                setSessionData(key: any, value: any): void
+                public setSessionData(key: java.lang.Object | any, value: java.lang.Object | any): void
             }
         }
     }

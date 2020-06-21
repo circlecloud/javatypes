@@ -51,12 +51,12 @@ declare namespace org {
                      * existing {@code MBeanServer} if none is supplied.
                      */
                     // @ts-ignore
-                    setServer(server: javax.management.MBeanServer): void
+                    public setServer(server: javax.management.MBeanServer): void
                     /**
                      * Return the {@code MBeanServer} that the beans will be registered with.
                      */
                     // @ts-ignore
-                    getServer(): javax.management.MBeanServer
+                    public getServer(): javax.management.MBeanServer
                     /**
                      * The policy to use when attempting to register an MBean
                      * under an {@link javax.management.ObjectName} that already exists.
@@ -64,7 +64,7 @@ declare namespace org {
                      * @since 3.2
                      */
                     // @ts-ignore
-                    setRegistrationPolicy(registrationPolicy: org.springframework.jmx.support.RegistrationPolicy): void
+                    public setRegistrationPolicy(registrationPolicy: org.springframework.jmx.support.RegistrationPolicy): void
                     /**
                      * Actually register the MBean with the server. The behavior when encountering
                      * an existing MBean can be configured using {@link #setRegistrationPolicy}.
@@ -73,7 +73,7 @@ declare namespace org {
                      * @throws JMException if the registration failed
                      */
                     // @ts-ignore
-                    doRegister(mbean: any, objectName: javax.management.ObjectName): void
+                    doRegister(mbean: java.lang.Object | any, objectName: javax.management.ObjectName): void
                     /**
                      * Unregisters all beans that have been registered by an instance of this class.
                      */
@@ -98,7 +98,7 @@ declare namespace org {
                      * @param mbean the registered MBean instance
                      */
                     // @ts-ignore
-                    onRegister(objectName: javax.management.ObjectName, mbean: any): void
+                    onRegister(objectName: javax.management.ObjectName, mbean: java.lang.Object | any): void
                     /**
                      * Called when an MBean is registered under the given {@link ObjectName}. Allows
                      * subclasses to perform additional processing when an MBean is registered.

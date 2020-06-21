@@ -13,21 +13,21 @@ declare namespace javax {
                          * @since 1.6
                          */
                         // @ts-ignore
-                        getOrientation(): int
+                        public getOrientation(): number /*int*/
                         // @ts-ignore
-                        setOrientation(o: number /*int*/): void
+                        public setOrientation(o: number /*int*/): void
                         // @ts-ignore
-                        getOffset(): java.awt.Point
+                        public getOffset(): java.awt.Point
                         // @ts-ignore
-                        setOffset(p: java.awt.Point): void
+                        public setOffset(p: java.awt.Point): void
                         // @ts-ignore
-                        setBorderColor(c: java.awt.Color): void
+                        public setBorderColor(c: java.awt.Color): void
                         // @ts-ignore
-                        getBorderColor(): java.awt.Color
+                        public getBorderColor(): java.awt.Color
                         // @ts-ignore
-                        paint(g: java.awt.Graphics): void
+                        public paint(g: java.awt.Graphics): void
                         // @ts-ignore
-                        getInsets(): java.awt.Insets
+                        public getInsets(): java.awt.Insets
                     }
                 }
             }

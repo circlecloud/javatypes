@@ -115,7 +115,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class URLConnection extends java.lang.Object {
+        abstract class URLConnection extends java.lang.Object {
             /**
              * Constructs a URL connection to the specified URL. A connection to
              * the object referenced by the URL is not created.
@@ -235,7 +235,7 @@ declare namespace java {
              * @see #setFileNameMap(java.net.FileNameMap)
              */
             // @ts-ignore
-            getFileNameMap(): java.net.FileNameMap
+            public static getFileNameMap(): java.net.FileNameMap
             /**
              * Sets the FileNameMap.
              * <p>
@@ -251,7 +251,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setFileNameMap(map: java.net.FileNameMap): void
+            public static setFileNameMap(map: java.net.FileNameMap): void
             /**
              * Opens a communications link to the resource referenced by this
              * URL, if such a connection has not already been established.
@@ -276,7 +276,7 @@ declare namespace java {
              * @see #setConnectTimeout(int)
              */
             // @ts-ignore
-            abstract connect(): void
+            public abstract connect(): void
             /**
              * Sets a specified timeout value, in milliseconds, to be used
              * when opening a communications link to the resource referenced
@@ -295,7 +295,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setConnectTimeout(timeout: number /*int*/): void
+            public setConnectTimeout(timeout: number /*int*/): void
             /**
              * Returns setting for connect timeout.
              * <p>
@@ -308,7 +308,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getConnectTimeout(): int
+            public getConnectTimeout(): number /*int*/
             /**
              * Sets the read timeout to a specified timeout, in
              * milliseconds. A non-zero value specifies the timeout when
@@ -327,7 +327,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setReadTimeout(timeout: number /*int*/): void
+            public setReadTimeout(timeout: number /*int*/): void
             /**
              * Returns setting for read timeout. 0 return implies that the
              * option is disabled (i.e., timeout of infinity).
@@ -338,7 +338,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getReadTimeout(): int
+            public getReadTimeout(): number /*int*/
             /**
              * Returns the value of this {@code URLConnection}'s {@code URL}
              * field.
@@ -347,7 +347,7 @@ declare namespace java {
              * @see java.net.URLConnection#url
              */
             // @ts-ignore
-            getURL(): java.net.URL
+            public getURL(): java.net.URL
             /**
              * Returns the value of the {@code content-length} header field.
              * <P>
@@ -359,7 +359,7 @@ declare namespace java {
              *           or if the content length is greater than Integer.MAX_VALUE.
              */
             // @ts-ignore
-            getContentLength(): int
+            public getContentLength(): number /*int*/
             /**
              * Returns the value of the {@code content-length} header field as a
              * long.
@@ -369,7 +369,7 @@ declare namespace java {
              * @since 7.0
              */
             // @ts-ignore
-            getContentLengthLong(): long
+            public getContentLengthLong(): number /*long*/
             /**
              * Returns the value of the {@code content-type} header field.
              * @return the content type of the resource that the URL references,
@@ -377,7 +377,7 @@ declare namespace java {
              * @see java.net.URLConnection#getHeaderField(java.lang.String)
              */
             // @ts-ignore
-            getContentType(): java.lang.String
+            public getContentType(): string
             /**
              * Returns the value of the {@code content-encoding} header field.
              * @return the content encoding of the resource that the URL references,
@@ -385,7 +385,7 @@ declare namespace java {
              * @see java.net.URLConnection#getHeaderField(java.lang.String)
              */
             // @ts-ignore
-            getContentEncoding(): java.lang.String
+            public getContentEncoding(): string
             /**
              * Returns the value of the {@code expires} header field.
              * @return the expiration date of the resource that this URL references,
@@ -394,7 +394,7 @@ declare namespace java {
              * @see java.net.URLConnection#getHeaderField(java.lang.String)
              */
             // @ts-ignore
-            getExpiration(): long
+            public getExpiration(): number /*long*/
             /**
              * Returns the value of the {@code date} header field.
              * @return the sending date of the resource that the URL references,
@@ -403,7 +403,7 @@ declare namespace java {
              * @see java.net.URLConnection#getHeaderField(java.lang.String)
              */
             // @ts-ignore
-            getDate(): long
+            public getDate(): number /*long*/
             /**
              * Returns the value of the {@code last-modified} header field.
              * The result is the number of milliseconds since January 1, 1970 GMT.
@@ -412,7 +412,7 @@ declare namespace java {
              * @see java.net.URLConnection#getHeaderField(java.lang.String)
              */
             // @ts-ignore
-            getLastModified(): long
+            public getLastModified(): number /*long*/
             /**
              * Returns the value of the named header field.
              * <p>
@@ -423,7 +423,7 @@ declare namespace java {
              *           if there is no such field in the header.
              */
             // @ts-ignore
-            getHeaderField(name: string): java.lang.String
+            public getHeaderField(name: java.lang.String | string): string
             /**
              * Returns an unmodifiable Map of the header fields.
              * The Map keys are Strings that represent the
@@ -434,7 +434,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getHeaderFields(): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+            public getHeaderFields(): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
             /**
              * Returns the value of the named field parsed as a number.
              * <p>
@@ -449,7 +449,7 @@ declare namespace java {
              *           missing or malformed.
              */
             // @ts-ignore
-            getHeaderFieldInt(name: string, Default: number /*int*/): int
+            public getHeaderFieldInt(name: java.lang.String | string, Default: number /*int*/): number /*int*/
             /**
              * Returns the value of the named field parsed as a number.
              * <p>
@@ -465,7 +465,7 @@ declare namespace java {
              * @since 7.0
              */
             // @ts-ignore
-            getHeaderFieldLong(name: string, Default: number /*long*/): long
+            public getHeaderFieldLong(name: java.lang.String | string, Default: number /*long*/): number /*long*/
             /**
              * Returns the value of the named field parsed as date.
              * The result is the number of milliseconds since January 1, 1970 GMT
@@ -482,7 +482,7 @@ declare namespace java {
              *           missing or malformed.
              */
             // @ts-ignore
-            getHeaderFieldDate(name: string, Default: number /*long*/): long
+            public getHeaderFieldDate(name: java.lang.String | string, Default: number /*long*/): number /*long*/
             /**
              * Returns the key for the {@code n}<sup>th</sup> header field.
              * It returns {@code null} if there are fewer than {@code n+1} fields.
@@ -492,7 +492,7 @@ declare namespace java {
              *           fields.
              */
             // @ts-ignore
-            getHeaderFieldKey(n: number /*int*/): java.lang.String
+            public getHeaderFieldKey(n: number /*int*/): string
             /**
              * Returns the value for the {@code n}<sup>th</sup> header field.
              * It returns {@code null} if there are fewer than
@@ -507,7 +507,7 @@ declare namespace java {
              * @see java.net.URLConnection#getHeaderFieldKey(int)
              */
             // @ts-ignore
-            getHeaderField(n: number /*int*/): java.lang.String
+            public getHeaderField(n: number /*int*/): string
             /**
              * Retrieves the contents of this URL connection.
              * <p>
@@ -551,7 +551,7 @@ declare namespace java {
              * @see java.net.URLConnection#setContentHandlerFactory(java.net.ContentHandlerFactory)
              */
             // @ts-ignore
-            getContent(): java.lang.Object
+            public getContent(): any
             /**
              * Retrieves the contents of this URL connection.
              * @param classes the {#code Class} array
@@ -572,7 +572,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getContent(classes: java.lang.Class[]): java.lang.Object
+            public getContent(classes: java.lang.Class<any>[]): any
             /**
              * Returns a permission object representing the permission
              * necessary to make the connection represented by this
@@ -609,7 +609,7 @@ declare namespace java {
              *  computing it.
              */
             // @ts-ignore
-            getPermission(): java.security.Permission
+            public getPermission(): java.security.Permission
             /**
              * Returns an input stream that reads from this open connection.
              * A SocketTimeoutException can be thrown when reading from the
@@ -624,7 +624,7 @@ declare namespace java {
              * @see #getReadTimeout()
              */
             // @ts-ignore
-            getInputStream(): java.io.InputStream
+            public getInputStream(): java.io.InputStream
             /**
              * Returns an output stream that writes to this connection.
              * @return an output stream that writes to this connection.
@@ -634,13 +634,13 @@ declare namespace java {
              *                output.
              */
             // @ts-ignore
-            getOutputStream(): java.io.OutputStream
+            public getOutputStream(): java.io.OutputStream
             /**
              * Returns a {@code String} representation of this URL connection.
              * @return a string representation of this {#code URLConnection}.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Sets the value of the {@code doInput} field for this
              * {@code URLConnection} to the specified value.
@@ -654,7 +654,7 @@ declare namespace java {
              * @see #getDoInput()
              */
             // @ts-ignore
-            setDoInput(doinput: boolean): void
+            public setDoInput(doinput: boolean): void
             /**
              * Returns the value of this {@code URLConnection}'s
              * {@code doInput} flag.
@@ -663,7 +663,7 @@ declare namespace java {
              * @see #setDoInput(boolean)
              */
             // @ts-ignore
-            getDoInput(): boolean
+            public getDoInput(): boolean
             /**
              * Sets the value of the {@code doOutput} field for this
              * {@code URLConnection} to the specified value.
@@ -676,7 +676,7 @@ declare namespace java {
              * @see #getDoOutput()
              */
             // @ts-ignore
-            setDoOutput(dooutput: boolean): void
+            public setDoOutput(dooutput: boolean): void
             /**
              * Returns the value of this {@code URLConnection}'s
              * {@code doOutput} flag.
@@ -685,7 +685,7 @@ declare namespace java {
              * @see #setDoOutput(boolean)
              */
             // @ts-ignore
-            getDoOutput(): boolean
+            public getDoOutput(): boolean
             /**
              * Set the value of the {@code allowUserInteraction} field of
              * this {@code URLConnection}.
@@ -694,7 +694,7 @@ declare namespace java {
              * @see #getAllowUserInteraction()
              */
             // @ts-ignore
-            setAllowUserInteraction(allowuserinteraction: boolean): void
+            public setAllowUserInteraction(allowuserinteraction: boolean): void
             /**
              * Returns the value of the {@code allowUserInteraction} field for
              * this object.
@@ -703,7 +703,7 @@ declare namespace java {
              * @see #setAllowUserInteraction(boolean)
              */
             // @ts-ignore
-            getAllowUserInteraction(): boolean
+            public getAllowUserInteraction(): boolean
             /**
              * Sets the default value of the
              * {@code allowUserInteraction} field for all future
@@ -712,7 +712,7 @@ declare namespace java {
              * @see #getDefaultAllowUserInteraction()
              */
             // @ts-ignore
-            setDefaultAllowUserInteraction(defaultallowuserinteraction: boolean): void
+            public static setDefaultAllowUserInteraction(defaultallowuserinteraction: boolean): void
             /**
              * Returns the default value of the {@code allowUserInteraction}
              * field.
@@ -725,7 +725,7 @@ declare namespace java {
              * @see #setDefaultAllowUserInteraction(boolean)
              */
             // @ts-ignore
-            getDefaultAllowUserInteraction(): boolean
+            public static getDefaultAllowUserInteraction(): boolean
             /**
              * Sets the value of the {@code useCaches} field of this
              * {@code URLConnection} to the specified value.
@@ -743,7 +743,7 @@ declare namespace java {
              * @see #getUseCaches()
              */
             // @ts-ignore
-            setUseCaches(usecaches: boolean): void
+            public setUseCaches(usecaches: boolean): void
             /**
              * Returns the value of this {@code URLConnection}'s
              * {@code useCaches} field.
@@ -752,7 +752,7 @@ declare namespace java {
              * @see #setUseCaches(boolean)
              */
             // @ts-ignore
-            getUseCaches(): boolean
+            public getUseCaches(): boolean
             /**
              * Sets the value of the {@code ifModifiedSince} field of
              * this {@code URLConnection} to the specified value.
@@ -761,14 +761,14 @@ declare namespace java {
              * @see #getIfModifiedSince()
              */
             // @ts-ignore
-            setIfModifiedSince(ifmodifiedsince: number /*long*/): void
+            public setIfModifiedSince(ifmodifiedsince: number /*long*/): void
             /**
              * Returns the value of this object's {@code ifModifiedSince} field.
              * @return the value of this object's {#code ifModifiedSince} field.
              * @see #setIfModifiedSince(long)
              */
             // @ts-ignore
-            getIfModifiedSince(): long
+            public getIfModifiedSince(): number /*long*/
             /**
              * Returns the default value of a {@code URLConnection}'s
              * {@code useCaches} flag.
@@ -781,7 +781,7 @@ declare namespace java {
              * @see #setDefaultUseCaches(boolean)
              */
             // @ts-ignore
-            getDefaultUseCaches(): boolean
+            public getDefaultUseCaches(): boolean
             /**
              * Sets the default value of the {@code useCaches} field to the
              * specified value.
@@ -789,7 +789,7 @@ declare namespace java {
              * @see #getDefaultUseCaches()
              */
             // @ts-ignore
-            setDefaultUseCaches(defaultusecaches: boolean): void
+            public setDefaultUseCaches(defaultusecaches: boolean): void
             /**
              * Sets the general request property. If a property with the key already
              * exists, overwrite its value with the new value.
@@ -805,7 +805,7 @@ declare namespace java {
              * @see #getRequestProperty(java.lang.String)
              */
             // @ts-ignore
-            setRequestProperty(key: string, value: string): void
+            public setRequestProperty(key: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Adds a general request property specified by a
              * key-value pair.  This method will not overwrite
@@ -819,7 +819,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            addRequestProperty(key: string, value: string): void
+            public addRequestProperty(key: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Returns the value of the named general request property for this
              * connection.
@@ -830,7 +830,7 @@ declare namespace java {
              * @see #setRequestProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getRequestProperty(key: string): java.lang.String
+            public getRequestProperty(key: java.lang.String | string): string
             /**
              * Returns an unmodifiable Map of general request
              * properties for this connection. The Map keys
@@ -843,7 +843,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getRequestProperties(): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+            public getRequestProperties(): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
             /**
              * Sets the default value of a general request property. When a
              * {@code URLConnection} is created, it is initialized with
@@ -858,7 +858,7 @@ declare namespace java {
              * @see #getDefaultRequestProperty(java.lang.String)
              */
             // @ts-ignore
-            setDefaultRequestProperty(key: string, value: string): void
+            public static setDefaultRequestProperty(key: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Returns the value of the default request property. Default request
              * properties are set for every connection.
@@ -872,7 +872,7 @@ declare namespace java {
              * @see #setDefaultRequestProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getDefaultRequestProperty(key: string): java.lang.String
+            public static getDefaultRequestProperty(key: java.lang.String | string): string
             /**
              * Sets the {@code ContentHandlerFactory} of an
              * application. It can be called at most once by an application.
@@ -893,7 +893,7 @@ declare namespace java {
              * @see SecurityManager#checkSetFactory
              */
             // @ts-ignore
-            setContentHandlerFactory(fac: java.net.ContentHandlerFactory): void
+            public static setContentHandlerFactory(fac: java.net.ContentHandlerFactory): void
             /**
              * Tries to determine the content type of an object, based
              * on the specified "file" component of a URL.
@@ -905,7 +905,7 @@ declare namespace java {
              * @see java.net.URLConnection#getContentType()
              */
             // @ts-ignore
-            guessContentTypeFromName(fname: string): java.lang.String
+            public static guessContentTypeFromName(fname: java.lang.String | string): string
             /**
              * Tries to determine the type of an input stream based on the
              * characters at the beginning of the input stream. This method can
@@ -927,7 +927,7 @@ declare namespace java {
              * @see java.net.URLConnection#getContentType()
              */
             // @ts-ignore
-            guessContentTypeFromStream(jis: java.io.InputStream): java.lang.String
+            public static guessContentTypeFromStream(jis: java.io.InputStream): string
         }
     }
 }

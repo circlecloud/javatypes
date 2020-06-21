@@ -10,7 +10,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(block: org.bukkit.block.Block, length: number /*int*/, direction: org.bukkit.block.BlockFace)
                     // @ts-ignore
-                    constructor(block: org.bukkit.block.Block, blocks: Array<org.bukkit.block.Block>, direction: org.bukkit.block.BlockFace)
+                    constructor(block: org.bukkit.block.Block, blocks: java.util.List<org.bukkit.block.Block> | Array<org.bukkit.block.Block>, direction: org.bukkit.block.BlockFace)
                     /**
                      * Get the amount of blocks which will be moved while extending.
                      * @return the amount of moving blocks
@@ -18,18 +18,18 @@ declare namespace org {
                      *           inaccurate due to blocks being pushed at the side
                      */
                     // @ts-ignore
-                    getLength(): int
+                    public getLength(): number /*int*/
                     /**
                      * Get an immutable list of the blocks which will be moved by the
                      * extending.
                      * @return Immutable list of the moved blocks.
                      */
                     // @ts-ignore
-                    getBlocks(): java.util.List<org.bukkit.block.Block>
+                    public getBlocks(): Array<org.bukkit.block.Block>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

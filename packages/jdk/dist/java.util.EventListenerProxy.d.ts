@@ -25,19 +25,19 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class EventListenerProxy<T extends java.util.EventListener> extends java.lang.Object implements java.util.EventListener {
+        abstract class EventListenerProxy<T extends java.util.EventListener> extends java.lang.Object implements java.util.EventListener {
             /**
              * Creates a proxy for the specified listener.
              * @param listener  the listener object
              */
             // @ts-ignore
-            constructor(listener: T extends java.util.EventListener)
+            constructor(listener: T)
             /**
              * Returns the listener associated with the proxy.
              * @return the listener associated with the proxy
              */
             // @ts-ignore
-            getListener(): T
+            public getListener(): T
         }
     }
 }

@@ -18,9 +18,9 @@ declare namespace javax {
             // @ts-ignore
             class ColorChooserComponentFactory extends java.lang.Object {
                 // @ts-ignore
-                getDefaultChooserPanels(): javax.swing.colorchooser.AbstractColorChooserPanel[]
+                public static getDefaultChooserPanels(): javax.swing.colorchooser.AbstractColorChooserPanel[]
                 // @ts-ignore
-                getPreviewPanel(): javax.swing.JComponent
+                public static getPreviewPanel(): javax.swing.JComponent
             }
         }
     }

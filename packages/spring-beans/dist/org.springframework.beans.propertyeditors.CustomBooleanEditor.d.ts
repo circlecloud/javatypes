@@ -47,51 +47,51 @@ declare namespace org {
                      * @see #VALUE_NO
                      */
                     // @ts-ignore
-                    constructor(trueString: string, falseString: string, allowEmpty: boolean)
+                    constructor(trueString: java.lang.String | string, falseString: java.lang.String | string, allowEmpty: boolean)
                     /**
                      * Value of {@code "true"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_TRUE: string
+                    public static readonly VALUE_TRUE: java.lang.String | string
                     /**
                      * Value of {@code "false"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_FALSE: string
+                    public static readonly VALUE_FALSE: java.lang.String | string
                     /**
                      * Value of {@code "on"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_ON: string
+                    public static readonly VALUE_ON: java.lang.String | string
                     /**
                      * Value of {@code "off"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_OFF: string
+                    public static readonly VALUE_OFF: java.lang.String | string
                     /**
                      * Value of {@code "yes"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_YES: string
+                    public static readonly VALUE_YES: java.lang.String | string
                     /**
                      * Value of {@code "no"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_NO: string
+                    public static readonly VALUE_NO: java.lang.String | string
                     /**
                      * Value of {@code "1"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_1: string
+                    public static readonly VALUE_1: java.lang.String | string
                     /**
                      * Value of {@code "0"}.
                      */
                     // @ts-ignore
-                    readonly VALUE_0: string
+                    public static readonly VALUE_0: java.lang.String | string
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

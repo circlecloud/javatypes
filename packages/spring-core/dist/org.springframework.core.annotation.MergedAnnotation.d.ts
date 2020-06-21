@@ -31,7 +31,7 @@ declare namespace org {
                      * The attribute name for annotations with a single element.
                      */
                     // @ts-ignore
-                    
+                    readonly VALUE: java.lang.String | string
                     /**
                      * Get the {@code Class} reference for the actual annotation type.
                      * @return the annotation type
@@ -75,7 +75,7 @@ declare namespace org {
                      * @return the annotation distance or {#code -1} if the annotation is missing
                      */
                     // @ts-ignore
-                    getDistance(): int
+                    getDistance(): number /*int*/
                     /**
                      * Get the index of the aggregate collection containing this annotation.
                      * <p>Can be used to reorder a stream of annotations, for example, to give a
@@ -86,7 +86,7 @@ declare namespace org {
                      *  annotation is missing
                      */
                     // @ts-ignore
-                    getAggregateIndex(): int
+                    getAggregateIndex(): number /*int*/
                     /**
                      * Get the source that ultimately declared the root annotation, or
                      * {@code null} if the source is not known.
@@ -100,7 +100,7 @@ declare namespace org {
                      * @return the source, or {#code null}
                      */
                     // @ts-ignore
-                    getSource(): java.lang.Object
+                    getSource(): any
                     /**
                      * Get the source of the meta-annotation, or {@code null} if the
                      * annotation is not {@linkplain #isMetaPresent() meta-present}.
@@ -110,7 +110,7 @@ declare namespace org {
                      * @see #getRoot()
                      */
                     // @ts-ignore
-                    getMetaSource(): org.springframework.core.annotation.MergedAnnotation<?>
+                    getMetaSource(): org.springframework.core.annotation.MergedAnnotation<any>
                     /**
                      * Get the root annotation, i.e. the {@link #getDistance() distance} {@code 0}
                      * annotation as directly declared on the source.
@@ -118,7 +118,7 @@ declare namespace org {
                      * @see #getMetaSource()
                      */
                     // @ts-ignore
-                    getRoot(): org.springframework.core.annotation.MergedAnnotation<?>
+                    getRoot(): org.springframework.core.annotation.MergedAnnotation<any>
                     /**
                      * Get the complete list of annotation types within the annotation hierarchy
                      * from this annotation to the {@link #getRoot() root}.
@@ -129,7 +129,7 @@ declare namespace org {
                      * @see #getMetaSource()
                      */
                     // @ts-ignore
-                    getMetaTypes(): java.util.List<java.lang.Class<? extends java.lang.annotation.Annotation>>
+                    getMetaTypes(): Array<java.lang.Class<any>>
                     /**
                      * Determine if the specified attribute name has a non-default value when
                      * compared to the annotation declaration.
@@ -138,7 +138,7 @@ declare namespace org {
                      *  value
                      */
                     // @ts-ignore
-                    hasNonDefaultValue(attributeName: string): boolean
+                    hasNonDefaultValue(attributeName: java.lang.String | string): boolean
                     /**
                      * Determine if the specified attribute name has a default value when compared
                      * to the annotation declaration.
@@ -147,7 +147,7 @@ declare namespace org {
                      *  value
                      */
                     // @ts-ignore
-                    hasDefaultValue(attributeName: string): boolean
+                    hasDefaultValue(attributeName: java.lang.String | string): boolean
                     /**
                      * Get a required byte attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -155,7 +155,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getByte(attributeName: string): byte
+                    getByte(attributeName: java.lang.String | string): number /*byte*/
                     /**
                      * Get a required byte array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -163,7 +163,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getByteArray(attributeName: string): byte[]
+                    getByteArray(attributeName: java.lang.String | string): number /*byte*/[]
                     /**
                      * Get a required boolean attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -171,7 +171,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getBoolean(attributeName: string): boolean
+                    getBoolean(attributeName: java.lang.String | string): boolean
                     /**
                      * Get a required boolean array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -179,7 +179,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getBooleanArray(attributeName: string): boolean[]
+                    getBooleanArray(attributeName: java.lang.String | string): boolean[]
                     /**
                      * Get a required char attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -187,7 +187,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getChar(attributeName: string): char
+                    getChar(attributeName: java.lang.String | string): string
                     /**
                      * Get a required char array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -195,7 +195,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getCharArray(attributeName: string): char[]
+                    getCharArray(attributeName: java.lang.String | string): string[]
                     /**
                      * Get a required short attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -203,7 +203,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getShort(attributeName: string): short
+                    getShort(attributeName: java.lang.String | string): number /*short*/
                     /**
                      * Get a required short array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -211,7 +211,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getShortArray(attributeName: string): short[]
+                    getShortArray(attributeName: java.lang.String | string): number /*short*/[]
                     /**
                      * Get a required int attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -219,7 +219,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getInt(attributeName: string): int
+                    getInt(attributeName: java.lang.String | string): number /*int*/
                     /**
                      * Get a required int array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -227,7 +227,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getIntArray(attributeName: string): int[]
+                    getIntArray(attributeName: java.lang.String | string): number /*int*/[]
                     /**
                      * Get a required long attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -235,7 +235,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getLong(attributeName: string): long
+                    getLong(attributeName: java.lang.String | string): number /*long*/
                     /**
                      * Get a required long array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -243,7 +243,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getLongArray(attributeName: string): long[]
+                    getLongArray(attributeName: java.lang.String | string): number /*long*/[]
                     /**
                      * Get a required double attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -251,7 +251,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getDouble(attributeName: string): double
+                    getDouble(attributeName: java.lang.String | string): number /*double*/
                     /**
                      * Get a required double array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -259,7 +259,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getDoubleArray(attributeName: string): double[]
+                    getDoubleArray(attributeName: java.lang.String | string): number /*double*/[]
                     /**
                      * Get a required float attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -267,7 +267,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getFloat(attributeName: string): float
+                    getFloat(attributeName: java.lang.String | string): number /*float*/
                     /**
                      * Get a required float array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -275,7 +275,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getFloatArray(attributeName: string): float[]
+                    getFloatArray(attributeName: java.lang.String | string): number /*float*/[]
                     /**
                      * Get a required string attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -283,7 +283,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getString(attributeName: string): java.lang.String
+                    getString(attributeName: java.lang.String | string): string
                     /**
                      * Get a required string array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -291,7 +291,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getStringArray(attributeName: string): java.lang.String[]
+                    getStringArray(attributeName: java.lang.String | string): string[]
                     /**
                      * Get a required class attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -299,7 +299,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getClass(attributeName: string): java.lang.Class<?>
+                    getClass(attributeName: java.lang.String | string): java.lang.Class<any>
                     /**
                      * Get a required class array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -307,7 +307,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getClassArray(attributeName: string): java.lang.Class[]
+                    getClassArray(attributeName: java.lang.String | string): java.lang.Class<any>[]
                     /**
                      * Get a required enum attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -316,7 +316,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getEnum<E extends java.lang.Enum<E>>(attributeName: string, type: java.lang.Class<E>): E
+                    getEnum<E extends java.lang.Enum<E>>(attributeName: java.lang.String | string, type: java.lang.Class<E>): E
                     /**
                      * Get a required enum array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -325,7 +325,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getEnumArray<E extends java.lang.Enum<E>>(attributeName: string, type: java.lang.Class<E>): E
+                    getEnumArray<E extends java.lang.Enum<E>>(attributeName: java.lang.String | string, type: java.lang.Class<E>): E
                     /**
                      * Get a required annotation attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -334,7 +334,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getAnnotation<T extends java.lang.annotation.Annotation>(attributeName: string, type: java.lang.Class<T>): org.springframework.core.annotation.MergedAnnotation<T>
+                    getAnnotation<T extends java.lang.annotation.Annotation>(attributeName: java.lang.String | string, type: java.lang.Class<T>): org.springframework.core.annotation.MergedAnnotation<T>
                     /**
                      * Get a required annotation array attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -343,7 +343,7 @@ declare namespace org {
                      * @throws NoSuchElementException if there is no matching attribute
                      */
                     // @ts-ignore
-                    getAnnotationArray<T extends java.lang.annotation.Annotation>(attributeName: string, type: java.lang.Class<T>): org.springframework.core.annotation.MergedAnnotation[]
+                    getAnnotationArray<T extends java.lang.annotation.Annotation>(attributeName: java.lang.String | string, type: java.lang.Class<T>): org.springframework.core.annotation.MergedAnnotation<T>[]
                     /**
                      * Get an optional attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -351,7 +351,7 @@ declare namespace org {
                      *  matching attribute
                      */
                     // @ts-ignore
-                    getValue(attributeName: string): java.util.Optional<java.lang.Object>
+                    getValue(attributeName: java.lang.String | string): java.util.Optional<java.lang.Object | any>
                     /**
                      * Get an optional attribute value from the annotation.
                      * @param attributeName the attribute name
@@ -361,7 +361,7 @@ declare namespace org {
                      *  matching attribute
                      */
                     // @ts-ignore
-                    getValue<T>(attributeName: string, type: java.lang.Class<T>): java.util.Optional<T>
+                    getValue<T>(attributeName: java.lang.String | string, type: java.lang.Class<T>): java.util.Optional<T>
                     /**
                      * Get the default attribute value from the annotation as specified in
                      * the annotation declaration.
@@ -370,7 +370,7 @@ declare namespace org {
                      *  there is no matching attribute or no defined default
                      */
                     // @ts-ignore
-                    getDefaultValue(attributeName: string): java.util.Optional<java.lang.Object>
+                    getDefaultValue(attributeName: java.lang.String | string): java.util.Optional<java.lang.Object | any>
                     /**
                      * Get the default attribute value from the annotation as specified in
                      * the annotation declaration.
@@ -381,7 +381,7 @@ declare namespace org {
                      *  there is no matching attribute or no defined default
                      */
                     // @ts-ignore
-                    getDefaultValue<T>(attributeName: string, type: java.lang.Class<T>): java.util.Optional<T>
+                    getDefaultValue<T>(attributeName: java.lang.String | string, type: java.lang.Class<T>): java.util.Optional<T>
                     /**
                      * Create a new view of the annotation with all attributes that have default
                      * values removed.
@@ -400,7 +400,7 @@ declare namespace org {
                      * @see MergedAnnotationPredicates
                      */
                     // @ts-ignore
-                    filterAttributes(predicate: java.util.function.Predicate<java.lang.String> | java.util.function$.Predicate<java.lang.String>): org.springframework.core.annotation.MergedAnnotation<A>
+                    filterAttributes(predicate: java.util.function$.Predicate<java.lang.String | string>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Create a new view of the annotation that exposes non-merged attribute values.
                      * <p>Methods from this view will return attribute values with only alias mirroring
@@ -427,7 +427,7 @@ declare namespace org {
                      * @return an immutable map containing the attributes and values
                      */
                     // @ts-ignore
-                    asMap(...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): java.util.Map<java.lang.String, java.lang.Object>
+                    asMap(...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Create a new {@link Map} instance of the given type that contains all the annotation
                      * attributes.
@@ -437,7 +437,7 @@ declare namespace org {
                      * @return a map containing the attributes and values
                      */
                     // @ts-ignore
-                    asMap<T extends java.util.Map<java.lang.String, java.lang.Object>>(factory: java.util.function.Function<org.springframework.core.annotation.MergedAnnotation<any>, T> | java.util.function$.Function<org.springframework.core.annotation.MergedAnnotation<?>, T>, ...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): T
+                    asMap<T extends java.util.Map<java.lang.String, java.lang.Object>>(factory: java.util.function$.Function<org.springframework.core.annotation.MergedAnnotation<any>, T>, ...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): T
                     /**
                      * Create a type-safe synthesized version of this merged annotation that can
                      * be used directly in code.
@@ -474,7 +474,7 @@ declare namespace org {
                      * @see MergedAnnotationPredicates
                      */
                     // @ts-ignore
-                    synthesize(condition: java.util.function.Predicate<any super org.springframework.core.annotation.MergedAnnotation<A>> | java.util.function$.Predicate<? super org.springframework.core.annotation.MergedAnnotation<A>>): java.util.Optional<A>
+                    synthesize(condition: java.util.function$.Predicate<any>): java.util.Optional<A>
                     /**
                      * Create a {@link MergedAnnotation} that represents a missing annotation
                      * (i.e. one that is not present).
@@ -489,7 +489,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotation} instance containing the annotation
                      */
                     // @ts-ignore
-                    from<A extends java.lang.annotation.Annotation>(annotation: A extends java.lang.annotation.Annotation): org.springframework.core.annotation.MergedAnnotation<A>
+                    from<A extends java.lang.annotation.Annotation>(annotation: A): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Create a new {@link MergedAnnotation} instance from the specified
                      * annotation.
@@ -500,7 +500,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotation} instance for the annotation
                      */
                     // @ts-ignore
-                    from<A extends java.lang.annotation.Annotation>(source: any, annotation: A extends java.lang.annotation.Annotation): org.springframework.core.annotation.MergedAnnotation<A>
+                    from<A extends java.lang.annotation.Annotation>(source: java.lang.Object | any, annotation: A): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Create a new {@link MergedAnnotation} instance of the specified
                      * annotation type. The resulting annotation will not have any attribute
@@ -520,7 +520,7 @@ declare namespace org {
                      * @see #of(AnnotatedElement, Class, Map)
                      */
                     // @ts-ignore
-                    of<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>, attributes: java.util.Map<java.lang.String, any>): org.springframework.core.annotation.MergedAnnotation<A>
+                    of<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>, attributes: java.util.Map<java.lang.String | string, any>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Create a new {@link MergedAnnotation} instance of the specified
                      * annotation type with attribute values supplied by a map.
@@ -533,7 +533,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotation} instance for the annotation and attributes
                      */
                     // @ts-ignore
-                    of<A extends java.lang.annotation.Annotation>(source: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, attributes: java.util.Map<java.lang.String, any>): org.springframework.core.annotation.MergedAnnotation<A>
+                    of<A extends java.lang.annotation.Annotation>(source: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, attributes: java.util.Map<java.lang.String | string, any>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Create a new {@link MergedAnnotation} instance of the specified
                      * annotation type with attribute values supplied by a map.
@@ -547,7 +547,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotation} instance for the annotation and attributes
                      */
                     // @ts-ignore
-                    of<A extends java.lang.annotation.Annotation>(classLoader: java.lang.ClassLoader, source: any, annotationType: java.lang.Class<A>, attributes: java.util.Map<java.lang.String, any>): org.springframework.core.annotation.MergedAnnotation<A>
+                    of<A extends java.lang.annotation.Annotation>(classLoader: java.lang.ClassLoader, source: java.lang.Object | any, annotationType: java.lang.Class<A>, attributes: java.util.Map<java.lang.String | string, any>): org.springframework.core.annotation.MergedAnnotation<A>
                 }
             }
         }

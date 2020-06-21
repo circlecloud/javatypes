@@ -50,7 +50,7 @@ declare namespace org {
                  * @deprecated this method uses an ambiguous data byte object
                  */
                 // @ts-ignore
-                constructor(type: org.bukkit.Material, amount: number /*int*/, damage: number /*short*/, data: number)
+                constructor(type: org.bukkit.Material, amount: number /*int*/, damage: number /*short*/, data: java.lang.Byte | number)
                 /**
                  * Creates a new item stack derived from the specified stack
                  * @param stack the stack to copy
@@ -64,7 +64,7 @@ declare namespace org {
                  * @return Type of the items in this stack
                  */
                 // @ts-ignore
-                getType(): org.bukkit.Material
+                public getType(): org.bukkit.Material
                 /**
                  * Sets the type of this item
                  * <p>
@@ -76,31 +76,31 @@ declare namespace org {
                  * @param type New type to set the items in this stack to
                  */
                 // @ts-ignore
-                setType(type: org.bukkit.Material): void
+                public setType(type: org.bukkit.Material): void
                 /**
                  * Gets the amount of items in this stack
                  * @return Amount of items in this stack
                  */
                 // @ts-ignore
-                getAmount(): int
+                public getAmount(): number /*int*/
                 /**
                  * Sets the amount of items in this stack
                  * @param amount New amount of items in this stack
                  */
                 // @ts-ignore
-                setAmount(amount: number /*int*/): void
+                public setAmount(amount: number /*int*/): void
                 /**
                  * Gets the MaterialData for this stack of items
                  * @return MaterialData for this item
                  */
                 // @ts-ignore
-                getData(): org.bukkit.material.MaterialData
+                public getData(): org.bukkit.material.MaterialData
                 /**
                  * Sets the MaterialData for this stack of items
                  * @param data New MaterialData for this item
                  */
                 // @ts-ignore
-                setData(data: org.bukkit.material.MaterialData): void
+                public setData(data: org.bukkit.material.MaterialData): void
                 /**
                  * Sets the durability of this item
                  * @param durability Durability of this item
@@ -111,25 +111,25 @@ declare namespace org {
                  *  ItemMeta which was created before this call.
                  */
                 // @ts-ignore
-                setDurability(durability: number /*short*/): void
+                public setDurability(durability: number /*short*/): void
                 /**
                  * Gets the durability of this item
                  * @return Durability of this item
                  * @deprecated see {#link #setDurability(short)}
                  */
                 // @ts-ignore
-                getDurability(): short
+                public getDurability(): number /*short*/
                 /**
                  * Get the maximum stacksize for the material hold in this ItemStack.
                  * (Returns -1 if it has no idea)
                  * @return The maximum you can stack this material to.
                  */
                 // @ts-ignore
-                getMaxStackSize(): int
+                public getMaxStackSize(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * This method is the same as equals, but does not consider stack size
                  * (amount).
@@ -137,31 +137,31 @@ declare namespace org {
                  * @return true if the two stacks are equal, ignoring the amount
                  */
                 // @ts-ignore
-                isSimilar(stack: org.bukkit.inventory.ItemStack): boolean
+                public isSimilar(stack: org.bukkit.inventory.ItemStack): boolean
                 // @ts-ignore
-                clone(): org.bukkit.inventory.ItemStack
+                public clone(): org.bukkit.inventory.ItemStack
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Checks if this ItemStack contains the given {@link Enchantment}
                  * @param ench Enchantment to test
                  * @return True if this has the given enchantment
                  */
                 // @ts-ignore
-                containsEnchantment(ench: org.bukkit.enchantments.Enchantment): boolean
+                public containsEnchantment(ench: org.bukkit.enchantments.Enchantment): boolean
                 /**
                  * Gets the level of the specified enchantment on this item stack
                  * @param ench Enchantment to check
                  * @return Level of the enchantment, or 0
                  */
                 // @ts-ignore
-                getEnchantmentLevel(ench: org.bukkit.enchantments.Enchantment): int
+                public getEnchantmentLevel(ench: org.bukkit.enchantments.Enchantment): number /*int*/
                 /**
                  * Gets a map containing all enchantments and their levels on this item.
                  * @return Map of enchantments.
                  */
                 // @ts-ignore
-                getEnchantments(): java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer>
+                public getEnchantments(): java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer | number>
                 /**
                  * Adds the specified enchantments to this item stack.
                  * <p>
@@ -175,7 +175,7 @@ declare namespace org {
                  *      exception is thrown.
                  */
                 // @ts-ignore
-                addEnchantments(enchantments: java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer>): void
+                public addEnchantments(enchantments: java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer | number>): void
                 /**
                  * Adds the specified {@link Enchantment} to this item stack.
                  * <p>
@@ -187,7 +187,7 @@ declare namespace org {
                  *      not applicable
                  */
                 // @ts-ignore
-                addEnchantment(ench: org.bukkit.enchantments.Enchantment, level: number /*int*/): void
+                public addEnchantment(ench: org.bukkit.enchantments.Enchantment, level: number /*int*/): void
                 /**
                  * Adds the specified enchantments to this item stack in an unsafe manner.
                  * <p>
@@ -197,7 +197,7 @@ declare namespace org {
                  * @param enchantments Enchantments to add
                  */
                 // @ts-ignore
-                addUnsafeEnchantments(enchantments: java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer>): void
+                public addUnsafeEnchantments(enchantments: java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer | number>): void
                 /**
                  * Adds the specified {@link Enchantment} to this item stack.
                  * <p>
@@ -210,7 +210,7 @@ declare namespace org {
                  * @param level Level of the enchantment
                  */
                 // @ts-ignore
-                addUnsafeEnchantment(ench: org.bukkit.enchantments.Enchantment, level: number /*int*/): void
+                public addUnsafeEnchantment(ench: org.bukkit.enchantments.Enchantment, level: number /*int*/): void
                 /**
                  * Removes the specified {@link Enchantment} if it exists on this
                  * ItemStack
@@ -218,9 +218,9 @@ declare namespace org {
                  * @return Previous level, or 0
                  */
                 // @ts-ignore
-                removeEnchantment(ench: org.bukkit.enchantments.Enchantment): int
+                public removeEnchantment(ench: org.bukkit.enchantments.Enchantment): number /*int*/
                 // @ts-ignore
-                serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Required method for configuration serialization
                  * @param args map to deserialize
@@ -228,19 +228,19 @@ declare namespace org {
                  * @see ConfigurationSerializable
                  */
                 // @ts-ignore
-                deserialize(args: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.inventory.ItemStack
+                public static deserialize(args: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.inventory.ItemStack
                 /**
                  * Get a copy of this ItemStack's {@link ItemMeta}.
                  * @return a copy of the current ItemStack's ItemData
                  */
                 // @ts-ignore
-                getItemMeta(): org.bukkit.inventory.meta.ItemMeta
+                public getItemMeta(): org.bukkit.inventory.meta.ItemMeta
                 /**
                  * Checks to see if any meta data has been defined.
                  * @return Returns true if some meta data has been set for this item
                  */
                 // @ts-ignore
-                hasItemMeta(): boolean
+                public hasItemMeta(): boolean
                 /**
                  * Set the ItemMeta of this ItemStack.
                  * @param itemMeta new ItemMeta, or null to indicate meta data be cleared.
@@ -250,7 +250,7 @@ declare namespace org {
                  *      the {#link ItemFactory}
                  */
                 // @ts-ignore
-                setItemMeta(itemMeta: org.bukkit.inventory.meta.ItemMeta): boolean
+                public setItemMeta(itemMeta: org.bukkit.inventory.meta.ItemMeta): boolean
             }
         }
     }

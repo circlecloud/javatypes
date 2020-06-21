@@ -18,7 +18,7 @@ declare namespace org {
                      * @param cause the cause of the conversion failure
                      */
                     // @ts-ignore
-                    constructor(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor, value: any, cause: Error)
+                    constructor(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor, value: java.lang.Object | any, cause: java.lang.Throwable | Error)
                     /**
                      * Return the source type we tried to convert the value from.
                      */
@@ -33,7 +33,7 @@ declare namespace org {
                      * Return the offending value.
                      */
                     // @ts-ignore
-                    getValue(): java.lang.Object
+                    getValue(): any
                 }
             }
         }

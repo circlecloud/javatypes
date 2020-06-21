@@ -133,7 +133,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if name is null
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
                 /**
                  * Get next parsing event - a processor may return all contiguous
                  * character data in a single chunk, or it may split it into several chunks.
@@ -163,7 +163,7 @@ declare namespace javax {
                  * @throws XMLStreamException  if there is an error processing the underlying XML source
                  */
                 // @ts-ignore
-                next(): int
+                next(): number /*int*/
                 /**
                  * Test if the current event is of the given type and if the namespace and name match the current
                  * namespace and name of the current event.  If the namespaceURI is null it is not checked for equality,
@@ -174,7 +174,7 @@ declare namespace javax {
                  * @throws XMLStreamException if the required values are not matched.
                  */
                 // @ts-ignore
-                require(type: number /*int*/, namespaceURI: string, localName: string): void
+                require(type: number /*int*/, namespaceURI: java.lang.String | string, localName: java.lang.String | string): void
                 /**
                  * Reads the content of a text-only element, an exception is thrown if this is
                  * not a text-only element.
@@ -217,7 +217,7 @@ declare namespace javax {
                  *  or if a non text element is encountered
                  */
                 // @ts-ignore
-                getElementText(): java.lang.String
+                getElementText(): string
                 /**
                  * Skips any white space (isWhiteSpace() returns true), COMMENT,
                  * or PROCESSING_INSTRUCTION,
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @throws NoSuchElementException if this is called when hasNext() returns false
                  */
                 // @ts-ignore
-                nextTag(): int
+                nextTag(): number /*int*/
                 /**
                  * Returns true if there are more parsing events and false
                  * if there are no more events.  This method will return
@@ -283,7 +283,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if the prefix is null
                  */
                 // @ts-ignore
-                getNamespaceURI(prefix: string): java.lang.String
+                getNamespaceURI(prefix: java.lang.String | string): string
                 /**
                  * Returns true if the cursor points to a start tag (otherwise false)
                  * @return true if the cursor points to a start tag, false otherwise
@@ -320,7 +320,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributeValue(namespaceURI: string, localName: string): java.lang.String
+                getAttributeValue(namespaceURI: java.lang.String | string, localName: java.lang.String | string): string
                 /**
                  * Returns the count of attributes on this START_ELEMENT,
                  * this method is only valid on a START_ELEMENT or ATTRIBUTE.  This
@@ -330,7 +330,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributeCount(): int
+                getAttributeCount(): number /*int*/
                 /**
                  * Returns the qname of the attribute at the provided index
                  * @param index the position of the attribute
@@ -347,7 +347,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributeNamespace(index: number /*int*/): java.lang.String
+                getAttributeNamespace(index: number /*int*/): string
                 /**
                  * Returns the localName of the attribute at the provided
                  * index
@@ -356,7 +356,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributeLocalName(index: number /*int*/): java.lang.String
+                getAttributeLocalName(index: number /*int*/): string
                 /**
                  * Returns the prefix of this attribute at the
                  * provided index
@@ -365,7 +365,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributePrefix(index: number /*int*/): java.lang.String
+                getAttributePrefix(index: number /*int*/): string
                 /**
                  * Returns the XML type of the attribute at the provided
                  * index
@@ -374,7 +374,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributeType(index: number /*int*/): java.lang.String
+                getAttributeType(index: number /*int*/): string
                 /**
                  * Returns the value of the attribute at the
                  * index
@@ -383,7 +383,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT or ATTRIBUTE
                  */
                 // @ts-ignore
-                getAttributeValue(index: number /*int*/): java.lang.String
+                getAttributeValue(index: number /*int*/): string
                 /**
                  * Returns a boolean which indicates if this
                  * attribute was created by default
@@ -403,7 +403,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
                  */
                 // @ts-ignore
-                getNamespaceCount(): int
+                getNamespaceCount(): number /*int*/
                 /**
                  * Returns the prefix for the namespace declared at the
                  * index.  Returns null if this is the default namespace
@@ -413,7 +413,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
                  */
                 // @ts-ignore
-                getNamespacePrefix(index: number /*int*/): java.lang.String
+                getNamespacePrefix(index: number /*int*/): string
                 /**
                  * Returns the uri for the namespace declared at the
                  * index.
@@ -422,7 +422,7 @@ declare namespace javax {
                  * @throws IllegalStateException if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE
                  */
                 // @ts-ignore
-                getNamespaceURI(index: number /*int*/): java.lang.String
+                getNamespaceURI(index: number /*int*/): string
                 /**
                  * Returns a read only namespace context for the current
                  * position.  The context is transient and only valid until
@@ -436,7 +436,7 @@ declare namespace javax {
                  * of the event the cursor is pointing to.
                  */
                 // @ts-ignore
-                getEventType(): int
+                getEventType(): number /*int*/
                 /**
                  * Returns the current value of the parse event as a string,
                  * this returns the string value of a CHARACTERS event,
@@ -451,7 +451,7 @@ declare namespace javax {
                  *  a valid text state.
                  */
                 // @ts-ignore
-                getText(): java.lang.String
+                getText(): string
                 /**
                  * Returns an array which contains the characters from this event.
                  * This array should be treated as read-only and transient. I.e. the array will
@@ -463,7 +463,7 @@ declare namespace javax {
                  *  a valid text state.
                  */
                 // @ts-ignore
-                getTextCharacters(): char[]
+                getTextCharacters(): string[]
                 /**
                  * Gets the the text associated with a CHARACTERS, SPACE or CDATA event.
                  * Text starting a "sourceStart" is copied into "target" starting at "targetStart".
@@ -497,7 +497,7 @@ declare namespace javax {
                  * @throws NullPointerException is if target is null
                  */
                 // @ts-ignore
-                getTextCharacters(sourceStart: number /*int*/, target: string[], targetStart: number /*int*/, length: number /*int*/): int
+                getTextCharacters(sourceStart: number /*int*/, target: string[], targetStart: number /*int*/, length: number /*int*/): number /*int*/
                 /**
                  * Returns the offset into the text character array where the first
                  * character (of this text event) is stored.
@@ -505,7 +505,7 @@ declare namespace javax {
                  *  a valid text state.
                  */
                 // @ts-ignore
-                getTextStart(): int
+                getTextStart(): number /*int*/
                 /**
                  * Returns the length of the sequence of characters for this
                  * Text event within the text character array.
@@ -513,13 +513,13 @@ declare namespace javax {
                  *  a valid text state.
                  */
                 // @ts-ignore
-                getTextLength(): int
+                getTextLength(): number /*int*/
                 /**
                  * Return input encoding if known or null if unknown.
                  * @return the encoding of this instance or null
                  */
                 // @ts-ignore
-                getEncoding(): java.lang.String
+                getEncoding(): string
                 /**
                  * Return true if the current event has text, false otherwise
                  * The following events have text:
@@ -556,7 +556,7 @@ declare namespace javax {
                  *  END_ELEMENT or ENTITY_REFERENCE
                  */
                 // @ts-ignore
-                getLocalName(): java.lang.String
+                getLocalName(): string
                 /**
                  * returns true if the current event has a name (is a START_ELEMENT or END_ELEMENT)
                  * returns false otherwise
@@ -570,20 +570,20 @@ declare namespace javax {
                  * @return the URI bound to this elements prefix, the default namespace, or null
                  */
                 // @ts-ignore
-                getNamespaceURI(): java.lang.String
+                getNamespaceURI(): string
                 /**
                  * Returns the prefix of the current event or null if the event does not have a prefix
                  * @return the prefix or null
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                getPrefix(): string
                 /**
                  * Get the xml version declared on the xml declaration
                  * Returns null if none was declared
                  * @return the XML version or null
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                getVersion(): string
                 /**
                  * Get the standalone declaration from the xml declaration
                  * @return true if this is standalone, or false otherwise
@@ -602,19 +602,19 @@ declare namespace javax {
                  * @return the encoding declared in the document or null
                  */
                 // @ts-ignore
-                getCharacterEncodingScheme(): java.lang.String
+                getCharacterEncodingScheme(): string
                 /**
                  * Get the target of a processing instruction
                  * @return the target or null
                  */
                 // @ts-ignore
-                getPITarget(): java.lang.String
+                getPITarget(): string
                 /**
                  * Get the data section of a processing instruction
                  * @return the data or null
                  */
                 // @ts-ignore
-                getPIData(): java.lang.String
+                getPIData(): string
             }
         }
     }

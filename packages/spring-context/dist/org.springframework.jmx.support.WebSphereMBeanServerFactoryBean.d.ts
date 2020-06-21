@@ -24,13 +24,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): javax.management.MBeanServer
+                    public getObject(): javax.management.MBeanServer
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends javax.management.MBeanServer>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

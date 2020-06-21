@@ -22,35 +22,35 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly parts: Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>
+                        readonly parts: java.util.List<org.spongepowered.api.text.transform.SimpleTextTemplateApplier> | Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>
                         // @ts-ignore
-                        getAll(): <any>
+                        public getAll(): object
                         // @ts-ignore
-                        get(i: number /*int*/): org.spongepowered.api.text.transform.SimpleTextTemplateApplier
+                        public get(i: number /*int*/): org.spongepowered.api.text.transform.SimpleTextTemplateApplier
                         // @ts-ignore
-                        set(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): org.spongepowered.api.text.transform.SimpleTextTemplateApplier
+                        public set(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): org.spongepowered.api.text.transform.SimpleTextTemplateApplier
                         // @ts-ignore
-                        size(): int
+                        public size(): number /*int*/
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         // @ts-ignore
-                        contains(element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): boolean
+                        public contains(element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): boolean
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         // @ts-ignore
-                        add(element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): boolean
+                        public add(element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): boolean
                         // @ts-ignore
-                        add(elements: Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): boolean
+                        public add(elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextTemplateApplier> | Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): boolean
                         // @ts-ignore
-                        insert(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): void
+                        public insert(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): void
                         // @ts-ignore
-                        insert(i: number /*int*/, elements: Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): void
+                        public insert(i: number /*int*/, elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextTemplateApplier> | Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): void
                         // @ts-ignore
-                        remove(element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): boolean
+                        public remove(element: org.spongepowered.api.text.transform.SimpleTextTemplateApplier): boolean
                         // @ts-ignore
-                        remove(elements: Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): boolean
+                        public remove(elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextTemplateApplier> | Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): boolean
                         // @ts-ignore
-                        retain(elements: Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): boolean
+                        public retain(elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextTemplateApplier> | Array<org.spongepowered.api.text.transform.SimpleTextTemplateApplier>): boolean
                     }
                 }
             }

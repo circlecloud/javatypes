@@ -11,7 +11,7 @@ declare namespace java {
              * @return the name of the protocol family
              */
             // @ts-ignore
-            name(): java.lang.String
+            name(): string
         }
     }
 }

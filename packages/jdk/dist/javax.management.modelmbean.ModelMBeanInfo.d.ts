@@ -38,7 +38,7 @@ declare namespace javax {
                  * @see #setDescriptors
                  */
                 // @ts-ignore
-                getDescriptors(inDescriptorType: string): javax.management.Descriptor[]
+                getDescriptors(inDescriptorType: java.lang.String | string): javax.management.Descriptor[]
                 /**
                  * Adds or replaces descriptors in the ModelMBeanInfo.
                  * @param inDescriptors The descriptors to be set in the ModelMBeanInfo. Null
@@ -66,7 +66,7 @@ declare namespace javax {
                  * @see #setDescriptor
                  */
                 // @ts-ignore
-                getDescriptor(inDescriptorName: string, inDescriptorType: string): javax.management.Descriptor
+                getDescriptor(inDescriptorName: java.lang.String | string, inDescriptorType: java.lang.String | string): javax.management.Descriptor
                 /**
                  * Sets descriptors in the info array of type inDescriptorType
                  * for the ModelMBean.  The setDescriptor method of the
@@ -91,7 +91,7 @@ declare namespace javax {
                  * @see #getDescriptor
                  */
                 // @ts-ignore
-                setDescriptor(inDescriptor: javax.management.Descriptor, inDescriptorType: string): void
+                setDescriptor(inDescriptor: javax.management.Descriptor, inDescriptorType: java.lang.String | string): void
                 /**
                  * <p>Returns the ModelMBean's descriptor which contains MBean wide
                  * policies.  This descriptor contains metadata about the MBean and default
@@ -183,7 +183,7 @@ declare namespace javax {
                  *  IllegalArgumentException for a null attribute name.
                  */
                 // @ts-ignore
-                getAttribute(inName: string): javax.management.modelmbean.ModelMBeanAttributeInfo
+                getAttribute(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanAttributeInfo
                 /**
                  * Returns a ModelMBeanOperationInfo requested by name.
                  * @param inName The name of the ModelMBeanOperationInfo to get.
@@ -194,7 +194,7 @@ declare namespace javax {
                  * @exception RuntimeOperationsException Wraps an IllegalArgumentException for a null operation name.
                  */
                 // @ts-ignore
-                getOperation(inName: string): javax.management.modelmbean.ModelMBeanOperationInfo
+                getOperation(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanOperationInfo
                 /**
                  * Returns a ModelMBeanNotificationInfo requested by name.
                  * @param inName The name of the ModelMBeanNotificationInfo to get.
@@ -205,12 +205,12 @@ declare namespace javax {
                  * @exception RuntimeOperationsException Wraps an IllegalArgumentException for a null notification name.
                  */
                 // @ts-ignore
-                getNotification(inName: string): javax.management.modelmbean.ModelMBeanNotificationInfo
+                getNotification(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanNotificationInfo
                 /**
                  * Creates and returns a copy of this object.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
                 /**
                  * Returns the list of attributes exposed for management.
                  * Each attribute is described by an <CODE>MBeanAttributeInfo</CODE> object.
@@ -224,7 +224,7 @@ declare namespace javax {
                  * @return the Java class name.
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                getClassName(): string
                 /**
                  * Returns the list of the public constructors  of the MBean.
                  * Each constructor is described by an <CODE>MBeanConstructorInfo</CODE> object.
@@ -237,7 +237,7 @@ declare namespace javax {
                  * @return the description.
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                getDescription(): string
                 /**
                  * Returns the list of the notifications emitted by the MBean.
                  * Each notification is described by an <CODE>MBeanNotificationInfo</CODE> object.

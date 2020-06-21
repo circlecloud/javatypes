@@ -13,7 +13,7 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class StaxUtils extends java.lang.Object {
+                abstract class StaxUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,7 +23,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    createDefensiveInputFactory(): javax.xml.stream.XMLInputFactory
+                    public static createDefensiveInputFactory(): javax.xml.stream.XMLInputFactory
                     /**
                      * Variant of {@link #createDefensiveInputFactory()} with a custom instance.
                      * @param instanceSupplier supplier for the input factory instance
@@ -31,35 +31,35 @@ declare namespace org {
                      * @since 5.0.12
                      */
                     // @ts-ignore
-                    createDefensiveInputFactory<T extends javax.xml.stream.XMLInputFactory>(instanceSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): T
+                    public static createDefensiveInputFactory<T extends javax.xml.stream.XMLInputFactory>(instanceSupplier: java.util.function$.Supplier<T>): T
                     /**
                      * Create a JAXP 1.4 {@link StAXSource} for the given {@link XMLStreamReader}.
                      * @param streamReader the StAX stream reader
                      * @return a source wrapping the {#code streamReader}
                      */
                     // @ts-ignore
-                    createStaxSource(streamReader: javax.xml.stream.XMLStreamReader): javax.xml.transform.Source
+                    public static createStaxSource(streamReader: javax.xml.stream.XMLStreamReader): javax.xml.transform.Source
                     /**
                      * Create a JAXP 1.4 {@link StAXSource} for the given {@link XMLEventReader}.
                      * @param eventReader the StAX event reader
                      * @return a source wrapping the {#code eventReader}
                      */
                     // @ts-ignore
-                    createStaxSource(eventReader: javax.xml.stream.XMLEventReader): javax.xml.transform.Source
+                    public static createStaxSource(eventReader: javax.xml.stream.XMLEventReader): javax.xml.transform.Source
                     /**
                      * Create a custom, non-JAXP 1.4 StAX {@link Source} for the given {@link XMLStreamReader}.
                      * @param streamReader the StAX stream reader
                      * @return a source wrapping the {#code streamReader}
                      */
                     // @ts-ignore
-                    createCustomStaxSource(streamReader: javax.xml.stream.XMLStreamReader): javax.xml.transform.Source
+                    public static createCustomStaxSource(streamReader: javax.xml.stream.XMLStreamReader): javax.xml.transform.Source
                     /**
                      * Create a custom, non-JAXP 1.4 StAX {@link Source} for the given {@link XMLEventReader}.
                      * @param eventReader the StAX event reader
                      * @return a source wrapping the {#code eventReader}
                      */
                     // @ts-ignore
-                    createCustomStaxSource(eventReader: javax.xml.stream.XMLEventReader): javax.xml.transform.Source
+                    public static createCustomStaxSource(eventReader: javax.xml.stream.XMLEventReader): javax.xml.transform.Source
                     /**
                      * Indicate whether the given {@link Source} is a JAXP 1.4 StAX Source or
                      * custom StAX Source.
@@ -67,7 +67,7 @@ declare namespace org {
                      *  custom StAX Source; {@code false} otherwise
                      */
                     // @ts-ignore
-                    isStaxSource(source: javax.xml.transform.Source): boolean
+                    public static isStaxSource(source: javax.xml.transform.Source): boolean
                     /**
                      * Return the {@link XMLStreamReader} for the given StAX Source.
                      * @param source a JAXP 1.4 {#link StAXSource}
@@ -76,7 +76,7 @@ declare namespace org {
                      *  or custom StAX Source
                      */
                     // @ts-ignore
-                    getXMLStreamReader(source: javax.xml.transform.Source): javax.xml.stream.XMLStreamReader
+                    public static getXMLStreamReader(source: javax.xml.transform.Source): javax.xml.stream.XMLStreamReader
                     /**
                      * Return the {@link XMLEventReader} for the given StAX Source.
                      * @param source a JAXP 1.4 {#link StAXSource}
@@ -85,35 +85,35 @@ declare namespace org {
                      *  or custom StAX Source
                      */
                     // @ts-ignore
-                    getXMLEventReader(source: javax.xml.transform.Source): javax.xml.stream.XMLEventReader
+                    public static getXMLEventReader(source: javax.xml.transform.Source): javax.xml.stream.XMLEventReader
                     /**
                      * Create a JAXP 1.4 {@link StAXResult} for the given {@link XMLStreamWriter}.
                      * @param streamWriter the StAX stream writer
                      * @return a result wrapping the {#code streamWriter}
                      */
                     // @ts-ignore
-                    createStaxResult(streamWriter: javax.xml.stream.XMLStreamWriter): javax.xml.transform.Result
+                    public static createStaxResult(streamWriter: javax.xml.stream.XMLStreamWriter): javax.xml.transform.Result
                     /**
                      * Create a JAXP 1.4 {@link StAXResult} for the given {@link XMLEventWriter}.
                      * @param eventWriter the StAX event writer
                      * @return a result wrapping {#code streamReader}
                      */
                     // @ts-ignore
-                    createStaxResult(eventWriter: javax.xml.stream.XMLEventWriter): javax.xml.transform.Result
+                    public static createStaxResult(eventWriter: javax.xml.stream.XMLEventWriter): javax.xml.transform.Result
                     /**
                      * Create a custom, non-JAXP 1.4 StAX {@link Result} for the given {@link XMLStreamWriter}.
                      * @param streamWriter the StAX stream writer
                      * @return a source wrapping the {#code streamWriter}
                      */
                     // @ts-ignore
-                    createCustomStaxResult(streamWriter: javax.xml.stream.XMLStreamWriter): javax.xml.transform.Result
+                    public static createCustomStaxResult(streamWriter: javax.xml.stream.XMLStreamWriter): javax.xml.transform.Result
                     /**
                      * Create a custom, non-JAXP 1.4 StAX {@link Result} for the given {@link XMLEventWriter}.
                      * @param eventWriter the StAX event writer
                      * @return a source wrapping the {#code eventWriter}
                      */
                     // @ts-ignore
-                    createCustomStaxResult(eventWriter: javax.xml.stream.XMLEventWriter): javax.xml.transform.Result
+                    public static createCustomStaxResult(eventWriter: javax.xml.stream.XMLEventWriter): javax.xml.transform.Result
                     /**
                      * Indicate whether the given {@link Result} is a JAXP 1.4 StAX Result or
                      * custom StAX Result.
@@ -121,7 +121,7 @@ declare namespace org {
                      *  custom StAX Result; {@code false} otherwise
                      */
                     // @ts-ignore
-                    isStaxResult(result: javax.xml.transform.Result): boolean
+                    public static isStaxResult(result: javax.xml.transform.Result): boolean
                     /**
                      * Return the {@link XMLStreamWriter} for the given StAX Result.
                      * @param result a JAXP 1.4 {#link StAXResult}
@@ -130,7 +130,7 @@ declare namespace org {
                      *  or custom StAX Result
                      */
                     // @ts-ignore
-                    getXMLStreamWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLStreamWriter
+                    public static getXMLStreamWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLStreamWriter
                     /**
                      * Return the {@link XMLEventWriter} for the given StAX Result.
                      * @param result a JAXP 1.4 {#link StAXResult}
@@ -139,7 +139,7 @@ declare namespace org {
                      *  or custom StAX Result
                      */
                     // @ts-ignore
-                    getXMLEventWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLEventWriter
+                    public static getXMLEventWriter(result: javax.xml.transform.Result): javax.xml.stream.XMLEventWriter
                     /**
                      * Create a {@link XMLEventReader} from the given list of {@link XMLEvent}.
                      * @param events the list of {#link XMLEvent XMLEvents}.
@@ -147,35 +147,35 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    createXMLEventReader(events: Array<javax.xml.stream.events.XMLEvent>): javax.xml.stream.XMLEventReader
+                    public static createXMLEventReader(events: java.util.List<javax.xml.stream.events.XMLEvent> | Array<javax.xml.stream.events.XMLEvent>): javax.xml.stream.XMLEventReader
                     /**
                      * Create a SAX {@link ContentHandler} that writes to the given StAX {@link XMLStreamWriter}.
                      * @param streamWriter the StAX stream writer
                      * @return a content handler writing to the {#code streamWriter}
                      */
                     // @ts-ignore
-                    createContentHandler(streamWriter: javax.xml.stream.XMLStreamWriter): org.xml.sax.ContentHandler
+                    public static createContentHandler(streamWriter: javax.xml.stream.XMLStreamWriter): org.xml.sax.ContentHandler
                     /**
                      * Create a SAX {@link ContentHandler} that writes events to the given StAX {@link XMLEventWriter}.
                      * @param eventWriter the StAX event writer
                      * @return a content handler writing to the {#code eventWriter}
                      */
                     // @ts-ignore
-                    createContentHandler(eventWriter: javax.xml.stream.XMLEventWriter): org.xml.sax.ContentHandler
+                    public static createContentHandler(eventWriter: javax.xml.stream.XMLEventWriter): org.xml.sax.ContentHandler
                     /**
                      * Create a SAX {@link XMLReader} that reads from the given StAX {@link XMLStreamReader}.
                      * @param streamReader the StAX stream reader
                      * @return a XMLReader reading from the {#code streamWriter}
                      */
                     // @ts-ignore
-                    createXMLReader(streamReader: javax.xml.stream.XMLStreamReader): org.xml.sax.XMLReader
+                    public static createXMLReader(streamReader: javax.xml.stream.XMLStreamReader): org.xml.sax.XMLReader
                     /**
                      * Create a SAX {@link XMLReader} that reads from the given StAX {@link XMLEventReader}.
                      * @param eventReader the StAX event reader
                      * @return a XMLReader reading from the {#code eventWriter}
                      */
                     // @ts-ignore
-                    createXMLReader(eventReader: javax.xml.stream.XMLEventReader): org.xml.sax.XMLReader
+                    public static createXMLReader(eventReader: javax.xml.stream.XMLEventReader): org.xml.sax.XMLReader
                     /**
                      * Return a {@link XMLStreamReader} that reads from a {@link XMLEventReader}.
                      * Useful because the StAX {@code XMLInputFactory} allows one to create an
@@ -183,21 +183,21 @@ declare namespace org {
                      * @return a stream reader that reads from an event reader
                      */
                     // @ts-ignore
-                    createEventStreamReader(eventReader: javax.xml.stream.XMLEventReader): javax.xml.stream.XMLStreamReader
+                    public static createEventStreamReader(eventReader: javax.xml.stream.XMLEventReader): javax.xml.stream.XMLStreamReader
                     /**
                      * Return a {@link XMLStreamWriter} that writes to a {@link XMLEventWriter}.
                      * @return a stream writer that writes to an event writer
                      * @since 3.2
                      */
                     // @ts-ignore
-                    createEventStreamWriter(eventWriter: javax.xml.stream.XMLEventWriter): javax.xml.stream.XMLStreamWriter
+                    public static createEventStreamWriter(eventWriter: javax.xml.stream.XMLEventWriter): javax.xml.stream.XMLStreamWriter
                     /**
                      * Return a {@link XMLStreamWriter} that writes to a {@link XMLEventWriter}.
                      * @return a stream writer that writes to an event writer
                      * @since 3.0.5
                      */
                     // @ts-ignore
-                    createEventStreamWriter(eventWriter: javax.xml.stream.XMLEventWriter, eventFactory: javax.xml.stream.XMLEventFactory): javax.xml.stream.XMLStreamWriter
+                    public static createEventStreamWriter(eventWriter: javax.xml.stream.XMLEventWriter, eventFactory: javax.xml.stream.XMLEventFactory): javax.xml.stream.XMLStreamWriter
                 }
             }
         }

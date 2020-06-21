@@ -9,11 +9,11 @@ declare namespace org {
                     // @ts-ignore
                     class GenericArgumentsConfigurer extends java.lang.Object {
                         // @ts-ignore
-                        constructor(configurer: org.springframework.amqp.core.BindingBuilder.GenericExchangeRoutingKeyConfigurer, routingKey: string)
+                        constructor(configurer: org.springframework.amqp.core.BindingBuilder.GenericExchangeRoutingKeyConfigurer, routingKey: java.lang.String | string)
                         // @ts-ignore
-                        and(map: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.amqp.core.Binding
+                        public and(map: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.amqp.core.Binding
                         // @ts-ignore
-                        noargs(): org.springframework.amqp.core.Binding
+                        public noargs(): org.springframework.amqp.core.Binding
                     }
                 }
             }

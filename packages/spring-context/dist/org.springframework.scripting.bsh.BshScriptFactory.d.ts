@@ -24,7 +24,7 @@ declare namespace org {
                      *  Interpreted by the post-processor that actually creates the script.
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string)
+                    constructor(scriptSourceLocator: java.lang.String | string)
                     /**
                      * Create a new BshScriptFactory for the given script source.
                      * <p>The script may either be a simple script that needs a corresponding proxy
@@ -37,30 +37,30 @@ declare namespace org {
                      *  is supposed to implement (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string, ...scriptInterfaces: java.lang.Class[])
+                    constructor(scriptSourceLocator: java.lang.String | string, ...scriptInterfaces: java.lang.Class<any>[])
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    getScriptSourceLocator(): java.lang.String
+                    public getScriptSourceLocator(): string
                     // @ts-ignore
-                    getScriptInterfaces(): java.lang.Class[]
+                    public getScriptInterfaces(): java.lang.Class<any>[]
                     /**
                      * BeanShell scripts do require a config interface.
                      */
                     // @ts-ignore
-                    requiresConfigInterface(): boolean
+                    public requiresConfigInterface(): boolean
                     /**
                      * Load and parse the BeanShell script via {@link BshScriptUtils}.
                      * @see BshScriptUtils#createBshObject(String, Class[], ClassLoader)
                      */
                     // @ts-ignore
-                    getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class[]): java.lang.Object
+                    public getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class<any>[]): any
                     // @ts-ignore
-                    getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<?>
+                    public getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<any>
                     // @ts-ignore
-                    requiresScriptedObjectRefresh(scriptSource: org.springframework.scripting.ScriptSource): boolean
+                    public requiresScriptedObjectRefresh(scriptSource: org.springframework.scripting.ScriptSource): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -13,13 +13,13 @@ declare namespace org {
                      * @return The number of bytes this buffer can contain
                      */
                     // @ts-ignore
-                    getCapacity(): int
+                    getCapacity(): number /*int*/
                     /**
                      * Gets the number of bytes available between the reader and the writer.
                      * @return The number of available bytes
                      */
                     // @ts-ignore
-                    available(): int
+                    available(): number /*int*/
                     /**
                      * Returns a buffer with the specified endianness which shares the whole
                      * region, indexes, and marks of this buffer. Modifying the content, the
@@ -45,7 +45,7 @@ declare namespace org {
                      * @return The current read index
                      */
                     // @ts-ignore
-                    readerIndex(): int
+                    readerIndex(): number /*int*/
                     /**
                      * Sets the readerIndex of this buffer.
                      * @param index The new index
@@ -58,7 +58,7 @@ declare namespace org {
                      * @return The current write index
                      */
                     // @ts-ignore
-                    writerIndex(): int
+                    writerIndex(): number /*int*/
                     /**
                      * Sets the writerIndex of this buffer.
                      * @param index The new index
@@ -145,7 +145,7 @@ declare namespace org {
                      * @throws UnsupportedOperationException if there is no backing byte array
                      */
                     // @ts-ignore
-                    array(): byte[]
+                    array(): number /*byte*/[]
                     /**
                      * Sets the specified boolean at the current writerIndex and increases
                      * the writerIndex by 1 in this buffer.
@@ -202,14 +202,14 @@ declare namespace org {
                      * @return The byte
                      */
                     // @ts-ignore
-                    readByte(): byte
+                    readByte(): number /*byte*/
                     /**
                      * Gets a byte at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The byte
                      */
                     // @ts-ignore
-                    getByte(index: number /*int*/): byte
+                    getByte(index: number /*int*/): number /*byte*/
                     /**
                      * Sets the specified byte array at the current writerIndex and increases
                      * the writerIndex by the number of bytes and the size of the length as a
@@ -264,7 +264,7 @@ declare namespace org {
                      * @return The byte array
                      */
                     // @ts-ignore
-                    readByteArray(): byte[]
+                    readByteArray(): number /*byte*/[]
                     /**
                      * Gets a byte array at the specified absolute index in this buffer.
                      * <p>The length of the array is expected to be preceding the array as a
@@ -273,7 +273,7 @@ declare namespace org {
                      * @return The byte array
                      */
                     // @ts-ignore
-                    readByteArray(index: number /*int*/): byte[]
+                    readByteArray(index: number /*int*/): number /*byte*/[]
                     /**
                      * Sets the specified byte array at the current writerIndex and increases
                      * the writerIndex by the number of bytes.
@@ -321,7 +321,7 @@ declare namespace org {
                      * @return The byte array
                      */
                     // @ts-ignore
-                    readBytes(length: number /*int*/): byte[]
+                    readBytes(length: number /*int*/): number /*byte*/[]
                     /**
                      * Gets a byte array at the specified absolute index in this buffer.
                      * @param index The index of this channel buff to read from
@@ -329,7 +329,7 @@ declare namespace org {
                      * @return The byte array
                      */
                     // @ts-ignore
-                    readBytes(index: number /*int*/, length: number /*int*/): byte[]
+                    readBytes(index: number /*int*/, length: number /*int*/): number /*byte*/[]
                     /**
                      * Sets the specified short integer at the current writerIndex and
                      * increases the writerIndex by 2 in this buffer.
@@ -354,14 +354,14 @@ declare namespace org {
                      * @return The short integer
                      */
                     // @ts-ignore
-                    readShort(): short
+                    readShort(): number /*short*/
                     /**
                      * Gets a short integer at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The short integer
                      */
                     // @ts-ignore
-                    getShort(index: number /*int*/): short
+                    getShort(index: number /*int*/): number /*short*/
                     /**
                      * Sets the specified character at the current writerIndex and
                      * increases the writerIndex by 2 in this buffer.
@@ -386,14 +386,14 @@ declare namespace org {
                      * @return The character
                      */
                     // @ts-ignore
-                    readChar(): char
+                    readChar(): string
                     /**
                      * Gets a character at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The character
                      */
                     // @ts-ignore
-                    getChar(index: number /*int*/): char
+                    getChar(index: number /*int*/): string
                     /**
                      * Sets the specified integer at the current writerIndex and increases
                      * the writerIndex by 4 in this buffer.
@@ -418,14 +418,14 @@ declare namespace org {
                      * @return The integer
                      */
                     // @ts-ignore
-                    readInteger(): int
+                    readInteger(): number /*int*/
                     /**
                      * Gets an integer at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The integer
                      */
                     // @ts-ignore
-                    getInteger(index: number /*int*/): int
+                    getInteger(index: number /*int*/): number /*int*/
                     /**
                      * Sets the specified long integer at the current writerIndex and
                      * increases the writerIndex by 8 in this buffer.
@@ -450,14 +450,14 @@ declare namespace org {
                      * @return The long integer
                      */
                     // @ts-ignore
-                    readLong(): long
+                    readLong(): number /*long*/
                     /**
                      * Gets a long integer at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The long integer
                      */
                     // @ts-ignore
-                    getLong(index: number /*int*/): long
+                    getLong(index: number /*int*/): number /*long*/
                     /**
                      * Sets the specified float at the current writerIndex and increases
                      * the writerIndex by 4 in this buffer.
@@ -482,14 +482,14 @@ declare namespace org {
                      * @return The float
                      */
                     // @ts-ignore
-                    readFloat(): float
+                    readFloat(): number /*float*/
                     /**
                      * Gets a float at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The string
                      */
                     // @ts-ignore
-                    getFloat(index: number /*int*/): float
+                    getFloat(index: number /*int*/): number /*float*/
                     /**
                      * Sets the specified double at the current writerIndex and increases
                      * the writerIndex by 8 in this buffer.
@@ -514,14 +514,14 @@ declare namespace org {
                      * @return The double
                      */
                     // @ts-ignore
-                    readDouble(): double
+                    readDouble(): number /*double*/
                     /**
                      * Gets a double at the specified absolute index in this buffer.
                      * @param index The index
                      * @return The double
                      */
                     // @ts-ignore
-                    getDouble(index: number /*int*/): double
+                    getDouble(index: number /*int*/): number /*double*/
                     /**
                      * Sets the specified varint at the current writerIndex and increases the
                      * writerIndex by the number of bytes written.
@@ -560,7 +560,7 @@ declare namespace org {
                      * @return The varint
                      */
                     // @ts-ignore
-                    readVarInt(): int
+                    readVarInt(): number /*int*/
                     /**
                      * Gets a varint at the specified absolute index in this buffer.
                      * <p>The number of bytes read depends on the size of the value, see <a
@@ -572,7 +572,7 @@ declare namespace org {
                      * @return The double
                      */
                     // @ts-ignore
-                    getVarInt(index: number /*int*/): int
+                    getVarInt(index: number /*int*/): number /*int*/
                     /**
                      * Sets the specified string at the current writerIndex and increases the
                      * writerIndex by the length of the string.
@@ -582,7 +582,7 @@ declare namespace org {
                      * @return This stream for chaining
                      */
                     // @ts-ignore
-                    writeString(data: string): org.spongepowered.api.network.ChannelBuf
+                    writeString(data: java.lang.String | string): org.spongepowered.api.network.ChannelBuf
                     /**
                      * Sets the string at the specified absolute index in this
                      * buffer. This method does not modify readerIndex or writerIndex
@@ -594,7 +594,7 @@ declare namespace org {
                      * @return This stream for chaining
                      */
                     // @ts-ignore
-                    setString(index: number /*int*/, data: string): org.spongepowered.api.network.ChannelBuf
+                    setString(index: number /*int*/, data: java.lang.String | string): org.spongepowered.api.network.ChannelBuf
                     /**
                      * Gets a string at the current readerIndex and increases the readerIndex by
                      * the length of a varint followed by the utf-8 bytes of the string.
@@ -603,7 +603,7 @@ declare namespace org {
                      * @return The string
                      */
                     // @ts-ignore
-                    readString(): java.lang.String
+                    readString(): string
                     /**
                      * Gets a string at the specified absolute index in this buffer.
                      * <p>The string will be encoded as the utf length as a varint followed by
@@ -612,7 +612,7 @@ declare namespace org {
                      * @return The string
                      */
                     // @ts-ignore
-                    getString(index: number /*int*/): java.lang.String
+                    getString(index: number /*int*/): string
                     /**
                      * Sets the specified string at the current writerIndex and increases the
                      * writerIndex by the length of the string.
@@ -622,7 +622,7 @@ declare namespace org {
                      * @return This stream for chaining
                      */
                     // @ts-ignore
-                    writeUTF(data: string): org.spongepowered.api.network.ChannelBuf
+                    writeUTF(data: java.lang.String | string): org.spongepowered.api.network.ChannelBuf
                     /**
                      * Sets the string at the specified absolute index in this
                      * buffer. This method does not modify readerIndex or writerIndex
@@ -634,7 +634,7 @@ declare namespace org {
                      * @return This stream for chaining
                      */
                     // @ts-ignore
-                    setUTF(index: number /*int*/, data: string): org.spongepowered.api.network.ChannelBuf
+                    setUTF(index: number /*int*/, data: java.lang.String | string): org.spongepowered.api.network.ChannelBuf
                     /**
                      * Gets a string at the current readerIndex and increases the readerIndex by
                      * the length of a varint followed by the utf-8 bytes of the string.
@@ -643,7 +643,7 @@ declare namespace org {
                      * @return The string
                      */
                     // @ts-ignore
-                    readUTF(): java.lang.String
+                    readUTF(): string
                     /**
                      * Gets a string at the specified absolute index in this buffer.
                      * <p>The string will be encoded as the utf length as a short followed by
@@ -652,7 +652,7 @@ declare namespace org {
                      * @return The string
                      */
                     // @ts-ignore
-                    getUTF(index: number /*int*/): java.lang.String
+                    getUTF(index: number /*int*/): string
                     /**
                      * Sets the specified {@link UUID} at the current writerIndex and
                      * increases the writerIndex by 16 in this buffer.

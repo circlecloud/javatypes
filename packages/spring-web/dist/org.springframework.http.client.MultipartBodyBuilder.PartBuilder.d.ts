@@ -25,7 +25,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        filename(filename: string): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                        filename(filename: java.lang.String | string): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                         /**
                          * Add part header values.
                          * @param headerName the part header name
@@ -34,14 +34,14 @@ declare namespace org {
                          * @see HttpHeaders#addAll(String, List)
                          */
                         // @ts-ignore
-                        header(headerName: string, ...headerValues: string[]): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                        header(headerName: java.lang.String | string, ...headerValues: java.lang.String[] | string[]): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                         /**
                          * Manipulate the part headers through the given consumer.
                          * @param headersConsumer consumer to manipulate the part headers with
                          * @return this builder
                          */
                         // @ts-ignore
-                        headers(headersConsumer: java.util.function.Consumer<org.springframework.http.HttpHeaders> | java.util.function$.Consumer<org.springframework.http.HttpHeaders>): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
+                        headers(headersConsumer: java.util.function$.Consumer<org.springframework.http.HttpHeaders>): org.springframework.http.client.MultipartBodyBuilder.PartBuilder
                     }
                 }
             }

@@ -146,7 +146,7 @@ declare namespace javax {
                  * @see javax.naming.Context#removeFromEnvironment
                  */
                 // @ts-ignore
-                
+                readonly CONTROL_FACTORIES: java.lang.String | string
                 /**
                  * Performs an extended operation.
                  * This method is used to support LDAPv3 extended operations.

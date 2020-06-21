@@ -35,9 +35,9 @@ declare namespace org {
                          * Of course, it is also possible to define plain values to export.
                          */
                         // @ts-ignore
-                        setAttributes(attributes: java.util.Map<java.lang.String, java.lang.Object>): void
+                        public setAttributes(attributes: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                     }
                 }
             }

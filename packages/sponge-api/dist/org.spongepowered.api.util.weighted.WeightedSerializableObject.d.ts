@@ -17,15 +17,15 @@ declare namespace org {
                          * @param weight The weight
                          */
                         // @ts-ignore
-                        constructor(object: T extends org.spongepowered.api.data.DataSerializable, weight: number /*int*/)
+                        constructor(object: T, weight: number /*int*/)
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        getContentVersion(): int
+                        public getContentVersion(): number /*int*/
                         // @ts-ignore
-                        toContainer(): org.spongepowered.api.data.DataContainer
+                        public toContainer(): org.spongepowered.api.data.DataContainer
                     }
                 }
             }

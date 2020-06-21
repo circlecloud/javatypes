@@ -37,7 +37,7 @@ declare namespace javax {
              * @see javax.imageio.ImageWriter
              */
             // @ts-ignore
-            class ImageWriterSpi extends javax.imageio.spi.ImageReaderWriterSpi {
+            abstract class ImageWriterSpi extends javax.imageio.spi.ImageReaderWriterSpi {
                 /**
                  * Constructs a blank <code>ImageWriterSpi</code>.  It is up to
                  * the subclass to initialize instance variables and/or override
@@ -123,7 +123,7 @@ declare namespace javax {
                  *  is <code>null</code> or has length 0.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string, names: string[], suffixes: string[], MIMETypes: string[], writerClassName: string, outputTypes: java.lang.Class[], readerSpiNames: string[], supportsStandardStreamMetadataFormat: boolean, nativeStreamMetadataFormatName: string, nativeStreamMetadataFormatClassName: string, extraStreamMetadataFormatNames: string[], extraStreamMetadataFormatClassNames: string[], supportsStandardImageMetadataFormat: boolean, nativeImageMetadataFormatName: string, nativeImageMetadataFormatClassName: string, extraImageMetadataFormatNames: string[], extraImageMetadataFormatClassNames: string[])
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string, names: java.lang.String[] | string[], suffixes: java.lang.String[] | string[], MIMETypes: java.lang.String[] | string[], writerClassName: java.lang.String | string, outputTypes: java.lang.Class<any>[], readerSpiNames: java.lang.String[] | string[], supportsStandardStreamMetadataFormat: boolean, nativeStreamMetadataFormatName: java.lang.String | string, nativeStreamMetadataFormatClassName: java.lang.String | string, extraStreamMetadataFormatNames: java.lang.String[] | string[], extraStreamMetadataFormatClassNames: java.lang.String[] | string[], supportsStandardImageMetadataFormat: boolean, nativeImageMetadataFormatName: java.lang.String | string, nativeImageMetadataFormatClassName: java.lang.String | string, extraImageMetadataFormatNames: java.lang.String[] | string[], extraImageMetadataFormatClassNames: java.lang.String[] | string[])
                 /**
                  * A single-element array, initially containing
                  * <code>ImageOutputStream.class</code>, to be returned from
@@ -132,20 +132,20 @@ declare namespace javax {
                  *  the equivalent array <code>{ ImageOutputStream.class }</code>.
                  */
                 // @ts-ignore
-                readonly STANDARD_OUTPUT_TYPE: java.lang.Class[]
+                public static readonly STANDARD_OUTPUT_TYPE: java.lang.Class<any>[]
                 /**
                  * An array of <code>Class</code> objects to be returned from
                  * <code>getOutputTypes</code>, initially <code>null</code>.
                  */
                 // @ts-ignore
-                outputTypes: java.lang.Class[]
+                outputTypes: java.lang.Class<any>[]
                 /**
                  * An array of strings to be returned from
                  * <code>getImageReaderSpiNames</code>, initially
                  * <code>null</code>.
                  */
                 // @ts-ignore
-                readerSpiNames: string[]
+                readerSpiNames: java.lang.String[] | string[]
                 /**
                  * Returns <code>true</code> if the format that this writer
                  * outputs preserves pixel data bit-accurately.  The default
@@ -154,7 +154,7 @@ declare namespace javax {
                  *  accuracy.
                  */
                 // @ts-ignore
-                isFormatLossless(): boolean
+                public isFormatLossless(): boolean
                 /**
                  * Returns an array of <code>Class</code> objects indicating what
                  * types of objects may be used as arguments to the writer's
@@ -167,7 +167,7 @@ declare namespace javax {
                  *  <code>Class</code>objects of length at least 1.
                  */
                 // @ts-ignore
-                getOutputTypes(): java.lang.Class[]
+                public getOutputTypes(): java.lang.Class<any>[]
                 /**
                  * Returns <code>true</code> if the <code>ImageWriter</code>
                  * implementation associated with this service provider is able to
@@ -200,7 +200,7 @@ declare namespace javax {
                  *  is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract canEncodeImage(type: javax.imageio.ImageTypeSpecifier): boolean
+                public abstract canEncodeImage(type: javax.imageio.ImageTypeSpecifier): boolean
                 /**
                  * Returns <code>true</code> if the <code>ImageWriter</code>
                  * implementation associated with this service provider is able to
@@ -217,7 +217,7 @@ declare namespace javax {
                  *  is <code>null</code>.
                  */
                 // @ts-ignore
-                canEncodeImage(im: java.awt.image.RenderedImage): boolean
+                public canEncodeImage(im: java.awt.image.RenderedImage): boolean
                 /**
                  * Returns an instance of the <code>ImageWriter</code>
                  * implementation associated with this service provider.
@@ -231,7 +231,7 @@ declare namespace javax {
                  *  or initialization of the writer object.
                  */
                 // @ts-ignore
-                createWriterInstance(): javax.imageio.ImageWriter
+                public createWriterInstance(): javax.imageio.ImageWriter
                 /**
                  * Returns an instance of the <code>ImageWriter</code>
                  * implementation associated with this service provider.
@@ -253,7 +253,7 @@ declare namespace javax {
                  *  extension object is unsuitable.
                  */
                 // @ts-ignore
-                abstract createWriterInstance(extension: any): javax.imageio.ImageWriter
+                public abstract createWriterInstance(extension: java.lang.Object | any): javax.imageio.ImageWriter
                 /**
                  * Returns <code>true</code> if the <code>ImageWriter</code> object
                  * passed in is an instance of the <code>ImageWriter</code>
@@ -264,7 +264,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                isOwnWriter(writer: javax.imageio.ImageWriter): boolean
+                public isOwnWriter(writer: javax.imageio.ImageWriter): boolean
                 /**
                  * Returns an array of <code>String</code>s containing all the
                  * fully qualified names of all the <code>ImageReaderSpi</code>
@@ -296,7 +296,7 @@ declare namespace javax {
                  * @see ImageReaderSpi#getImageWriterSpiNames()
                  */
                 // @ts-ignore
-                getImageReaderSpiNames(): java.lang.String[]
+                public getImageReaderSpiNames(): string[]
             }
         }
     }

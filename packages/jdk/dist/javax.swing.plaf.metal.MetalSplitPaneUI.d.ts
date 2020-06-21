@@ -23,12 +23,12 @@ declare namespace javax {
                      * Creates a new MetalSplitPaneUI instance
                      */
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Creates the default divider.
                      */
                     // @ts-ignore
-                    createDefaultDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
+                    public createDefaultDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
                 }
             }
         }

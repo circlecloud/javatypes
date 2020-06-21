@@ -26,7 +26,7 @@ declare namespace javax {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Get the AccessibleValue associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -35,31 +35,31 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleValue(): javax.accessibility.AccessibleValue
+                public getAccessibleValue(): javax.accessibility.AccessibleValue
                 /**
                  * Gets the accessible value of this object.
                  * @return a localized String describing the value of this object
                  */
                 // @ts-ignore
-                getCurrentAccessibleValue(): java.lang.Number
+                public getCurrentAccessibleValue(): java.lang.Number
                 /**
                  * Sets the value of this object as a Number.
                  * @return True if the value was set.
                  */
                 // @ts-ignore
-                setCurrentAccessibleValue(n: java.lang.Number): boolean
+                public setCurrentAccessibleValue(n: java.lang.Number): boolean
                 /**
                  * Gets the minimum accessible value of this object.
                  * @return The minimum value of this object.
                  */
                 // @ts-ignore
-                getMinimumAccessibleValue(): java.lang.Number
+                public getMinimumAccessibleValue(): java.lang.Number
                 /**
                  * Gets the maximum accessible value of this object.
                  * @return The maximum value of this object.
                  */
                 // @ts-ignore
-                getMaximumAccessibleValue(): java.lang.Number
+                public getMaximumAccessibleValue(): java.lang.Number
                 /**
                  * Gets the role of this object.
                  * @return an instance of AccessibleRole describing the role of
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
             }
         }
     }

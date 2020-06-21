@@ -22,19 +22,19 @@ declare namespace org {
                      * Set the service URL of the remote {@code MBeanServer}.
                      */
                     // @ts-ignore
-                    setServiceUrl(url: string): void
+                    public setServiceUrl(url: java.lang.String | string): void
                     /**
                      * Set the environment properties used to construct the {@code JMXConnector}
                      * as {@code java.util.Properties} (String key/value pairs).
                      */
                     // @ts-ignore
-                    setEnvironment(environment: java.util.Properties): void
+                    public setEnvironment(environment: java.util.Properties): void
                     /**
                      * Set the environment properties used to construct the {@code JMXConnector}
                      * as a {@code Map} of String keys and arbitrary Object values.
                      */
                     // @ts-ignore
-                    setEnvironmentMap(environment: java.util.Map<java.lang.String, any>): void
+                    public setEnvironmentMap(environment: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Set whether to connect to the server on startup.
                      * <p>Default is {@code true}.
@@ -42,26 +42,26 @@ declare namespace org {
                      * In this case, the JMX connector will be fetched on first access.
                      */
                     // @ts-ignore
-                    setConnectOnStartup(connectOnStartup: boolean): void
+                    public setConnectOnStartup(connectOnStartup: boolean): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Creates a {@code JMXConnector} for the given settings
                      * and exposes the associated {@code MBeanServerConnection}.
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): javax.management.MBeanServerConnection
+                    public getObject(): javax.management.MBeanServerConnection
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends javax.management.MBeanServerConnection>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                     /**
                      * Closes the underlying {@code JMXConnector}.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

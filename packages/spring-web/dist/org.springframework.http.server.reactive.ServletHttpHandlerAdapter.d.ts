@@ -20,12 +20,12 @@ declare namespace org {
                          * <p>By default this is set to 8192.
                          */
                         // @ts-ignore
-                        setBufferSize(bufferSize: number /*int*/): void
+                        public setBufferSize(bufferSize: number /*int*/): void
                         /**
                          * Return the configured input buffer size.
                          */
                         // @ts-ignore
-                        getBufferSize(): int
+                        public getBufferSize(): number /*int*/
                         /**
                          * Return the Servlet path under which the Servlet is deployed by checking
                          * the Servlet registration from {@link #init(ServletConfig)}.
@@ -34,25 +34,25 @@ declare namespace org {
                          *  before the {@link #init(ServletConfig)} Servlet container callback.
                          */
                         // @ts-ignore
-                        getServletPath(): java.lang.String
+                        public getServletPath(): string
                         // @ts-ignore
-                        setDataBufferFactory(dataBufferFactory: DataBufferFactory): void
+                        public setDataBufferFactory(dataBufferFactory: DataBufferFactory): void
                         // @ts-ignore
-                        getDataBufferFactory(): DataBufferFactory
+                        public getDataBufferFactory(): DataBufferFactory
                         // @ts-ignore
-                        init(config: ServletConfig): void
+                        public init(config: ServletConfig): void
                         // @ts-ignore
-                        service(request: ServletRequest, response: ServletResponse): void
+                        public service(request: ServletRequest, response: ServletResponse): void
                         // @ts-ignore
                         createRequest(request: HttpServletRequest, context: AsyncContext): org.springframework.http.server.reactive.ServletServerHttpRequest
                         // @ts-ignore
                         createResponse(response: HttpServletResponse, context: AsyncContext, request: org.springframework.http.server.reactive.ServletServerHttpRequest): org.springframework.http.server.reactive.ServletServerHttpResponse
                         // @ts-ignore
-                        getServletInfo(): java.lang.String
+                        public getServletInfo(): string
                         // @ts-ignore
-                        getServletConfig(): ServletConfig
+                        public getServletConfig(): ServletConfig
                         // @ts-ignore
-                        destroy(): void
+                        public destroy(): void
                     }
                 }
             }

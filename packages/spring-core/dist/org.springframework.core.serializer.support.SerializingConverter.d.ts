@@ -12,7 +12,7 @@ declare namespace org {
                      * @since 3.0.5
                      */
                     // @ts-ignore
-                    class SerializingConverter extends java.lang.Object implements org.springframework.core.convert.converter.Converter<java.lang.Object, byte[]> {
+                    class SerializingConverter extends java.lang.Object implements org.springframework.core.convert.converter.Converter<java.lang.Object | any, number /*byte*/[]> {
                         /**
                          * Create a default {@code SerializingConverter} that uses standard Java serialization.
                          */
@@ -22,12 +22,12 @@ declare namespace org {
                          * Create a {@code SerializingConverter} that delegates to the provided {@link Serializer}.
                          */
                         // @ts-ignore
-                        constructor(serializer: org.springframework.core.serializer.Serializer<java.lang.Object>)
+                        constructor(serializer: org.springframework.core.serializer.Serializer<java.lang.Object | any>)
                         /**
                          * Serializes the source object and returns the byte array result.
                          */
                         // @ts-ignore
-                        convert(source: any): byte[]
+                        public convert(source: java.lang.Object | any): number /*byte*/[]
                     }
                 }
             }

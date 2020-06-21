@@ -25,7 +25,7 @@ declare namespace javax {
              * Returns the string representing the object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
         }
     }
 }

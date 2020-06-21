@@ -27,7 +27,7 @@ declare namespace org {
                      * @see #hasError(int)
                      */
                     // @ts-ignore
-                    hasError(response: org.springframework.http.client.ClientHttpResponse): boolean
+                    public hasError(response: org.springframework.http.client.ClientHttpResponse): boolean
                     /**
                      * Template method called from {@link #hasError(ClientHttpResponse)}.
                      * <p>The default implementation checks {@link HttpStatus#isError()}.
@@ -59,7 +59,7 @@ declare namespace org {
                      * @see #handleError(ClientHttpResponse, HttpStatus)
                      */
                     // @ts-ignore
-                    handleError(response: org.springframework.http.client.ClientHttpResponse): void
+                    public handleError(response: org.springframework.http.client.ClientHttpResponse): void
                     /**
                      * Handle the error in the given response with the given resolved status code.
                      * <p>The default implementation throws an {@link HttpClientErrorException}
@@ -93,7 +93,7 @@ declare namespace org {
                      * @since 4.3.8
                      */
                     // @ts-ignore
-                    getResponseBody(response: org.springframework.http.client.ClientHttpResponse): byte[]
+                    getResponseBody(response: org.springframework.http.client.ClientHttpResponse): number /*byte*/[]
                     /**
                      * Determine the charset of the response (for inclusion in a status exception).
                      * @param response the response to inspect

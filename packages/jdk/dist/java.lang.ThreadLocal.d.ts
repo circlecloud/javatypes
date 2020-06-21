@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            withInitial<S>(supplier: java.util.function.Supplier<S> | java.util.function$.Supplier<S>): java.lang.ThreadLocal<S>
+            public static withInitial<S>(supplier: java.util.function$.Supplier<any>): java.lang.ThreadLocal<S>
             /**
              * Returns the value in the current thread's copy of this
              * thread-local variable.  If the variable has no value for the
@@ -82,7 +82,7 @@ declare namespace java {
              * @return the current thread's value of this thread-local
              */
             // @ts-ignore
-            get(): T
+            public get(): T
             /**
              * Sets the current thread's copy of this thread-local variable
              * to the specified value.  Most subclasses will have no need to
@@ -92,7 +92,7 @@ declare namespace java {
              *         this thread-local.
              */
             // @ts-ignore
-            set(value: T): void
+            public set(value: T): void
             /**
              * Removes the current thread's value for this thread-local
              * variable.  If this thread-local variable is subsequently
@@ -104,7 +104,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            remove(): void
+            public remove(): void
         }
     }
 }

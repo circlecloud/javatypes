@@ -50,7 +50,7 @@ declare namespace javax {
                          * class to describe a remote <code>PGPData</code> structure.
                          */
                         // @ts-ignore
-                        
+                        readonly TYPE: java.lang.String | string
                         /**
                          * Returns the PGP public key identifier of this <code>PGPData</code> as
                          * defined in <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC 2440</a>,
@@ -60,7 +60,7 @@ declare namespace javax {
                          *     to protect against subsequent modification.
                          */
                         // @ts-ignore
-                        getKeyId(): byte[]
+                        getKeyId(): number /*byte*/[]
                         /**
                          * Returns the PGP key material packet of this <code>PGPData</code> as
                          * defined in <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC 2440</a>,
@@ -70,7 +70,7 @@ declare namespace javax {
                          *     protect against subsequent modification.
                          */
                         // @ts-ignore
-                        getKeyPacket(): byte[]
+                        getKeyPacket(): number /*byte*/[]
                         /**
                          * Returns an {@link Collections#unmodifiableList unmodifiable list}
                          * of {@link XMLStructure}s representing elements from an external
@@ -79,7 +79,7 @@ declare namespace javax {
                          *     empty, but never <code>null</code>)
                          */
                         // @ts-ignore
-                        getExternalElements(): java.util.List
+                        getExternalElements(): Array<any>
                     }
                 }
             }

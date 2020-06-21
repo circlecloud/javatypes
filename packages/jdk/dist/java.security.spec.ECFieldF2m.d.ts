@@ -77,7 +77,7 @@ declare namespace java {
                  * @return the field size in bits.
                  */
                 // @ts-ignore
-                getFieldSize(): int
+                public getFieldSize(): number /*int*/
                 /**
                  * Returns the value {@code m} of this characteristic
                  * 2 finite field.
@@ -85,7 +85,7 @@ declare namespace java {
                  *  number of elements.
                  */
                 // @ts-ignore
-                getM(): int
+                public getM(): number /*int*/
                 /**
                  * Returns a BigInteger whose i-th bit corresponds to the
                  * i-th coefficient of the reduction polynomial for polynomial
@@ -95,7 +95,7 @@ declare namespace java {
                  *  basis or null for normal basis.
                  */
                 // @ts-ignore
-                getReductionPolynomial(): java.math.BigInteger
+                public getReductionPolynomial(): java.math.BigInteger
                 /**
                  * Returns an integer array which contains the order of the
                  * middle term(s) of the reduction polynomial for polynomial
@@ -106,7 +106,7 @@ declare namespace java {
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getMidTermsOfReductionPolynomial(): int[]
+                public getMidTermsOfReductionPolynomial(): number /*int*/[]
                 /**
                  * Compares this finite field for equality with the
                  * specified object.
@@ -116,14 +116,14 @@ declare namespace java {
                  *  polynomial match, false otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this characteristic 2
                  * finite field.
                  * @return a hash code value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

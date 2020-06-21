@@ -116,7 +116,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@code Spliterator} over the elements in this set.
@@ -133,7 +133,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

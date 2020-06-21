@@ -17,14 +17,14 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Constructor for MultipartException.
                      * @param msg the detail message
                      * @param cause the root cause from the multipart parsing API in use
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 }
             }
         }

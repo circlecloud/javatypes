@@ -24,14 +24,14 @@ declare namespace javax {
                      * The encoding input P whose value equals byte[0].
                      */
                     // @ts-ignore
-                    readonly DEFAULT: javax.crypto.spec.PSource.PSpecified
+                    public static readonly DEFAULT: javax.crypto.spec.PSource.PSpecified
                     /**
                      * Returns the value of encoding input P.
                      * @return the value of encoding input P. A new array is
                      *  returned each time this method is called.
                      */
                     // @ts-ignore
-                    getValue(): byte[]
+                    public getValue(): number /*byte*/[]
                 }
             }
         }

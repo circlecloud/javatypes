@@ -52,7 +52,7 @@ declare namespace org {
                  * @see EventListenerMethodProcessor
                  */
                 // @ts-ignore
-                class EventListener implements java.lang.annotation.Annotation {
+                abstract class EventListener implements java.lang.annotation.Annotation {
                 }
             }
         }

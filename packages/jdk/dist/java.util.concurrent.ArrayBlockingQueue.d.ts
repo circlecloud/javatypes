@@ -68,7 +68,7 @@ declare namespace java {
                  *          of its elements are null
                  */
                 // @ts-ignore
-                constructor(capacity: number /*int*/, fair: boolean, c: Array<E>)
+                constructor(capacity: number /*int*/, fair: boolean, c: java.util.Collection<any> | Array<any>)
                 /**
                  * Inserts the specified element at the tail of this queue if it is
                  * possible to do so immediately without exceeding the queue's capacity,
@@ -80,7 +80,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                add(e: E): boolean
+                public add(e: E): boolean
                 /**
                  * Inserts the specified element at the tail of this queue if it is
                  * possible to do so immediately without exceeding the queue's capacity,
@@ -90,7 +90,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E): boolean
+                public offer(e: E): boolean
                 /**
                  * Inserts the specified element at the tail of this queue, waiting
                  * for space to become available if the queue is full.
@@ -98,7 +98,7 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                put(e: E): void
+                public put(e: E): void
                 /**
                  * Inserts the specified element at the tail of this queue, waiting
                  * up to the specified wait time for space to become available if
@@ -107,21 +107,21 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 // @ts-ignore
-                poll(): E
+                public poll(): E
                 // @ts-ignore
-                take(): E
+                public take(): E
                 // @ts-ignore
-                poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 // @ts-ignore
-                peek(): E
+                public peek(): E
                 /**
                  * Returns the number of elements in this queue.
                  * @return the number of elements in this queue
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns the number of additional elements that this queue can ideally
                  * (in the absence of memory or resource constraints) accept without
@@ -133,7 +133,7 @@ declare namespace java {
                  * insert or remove an element.
                  */
                 // @ts-ignore
-                remainingCapacity(): int
+                public remainingCapacity(): number /*int*/
                 /**
                  * Removes a single instance of the specified element from this queue,
                  * if it is present.  More formally, removes an element {@code e} such
@@ -150,7 +150,7 @@ declare namespace java {
                  * @return {#code true} if this queue changed as a result of the call
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Returns {@code true} if this queue contains the specified element.
                  * More formally, returns {@code true} if and only if this queue contains
@@ -159,7 +159,7 @@ declare namespace java {
                  * @return {#code true} if this queue contains the specified element
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Returns an array containing all of the elements in this queue, in
                  * proper sequence.
@@ -171,7 +171,7 @@ declare namespace java {
                  * @return an array containing all of the elements in this queue
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Returns an array containing all of the elements in this queue, in
                  * proper sequence; the runtime type of the returned array is that of
@@ -202,15 +202,15 @@ declare namespace java {
                  * @throws NullPointerException if the specified array is null
                  */
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Atomically removes all of the elements from this queue.
                  * The queue will be empty after this call returns.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -218,7 +218,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>): int
+                public drainTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -226,7 +226,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>, maxElements: number /*int*/): int
+                public drainTo(c: java.util.Collection<any> | Array<any>, maxElements: number /*int*/): number /*int*/
                 /**
                  * Returns an iterator over the elements in this queue in proper sequence.
                  * The elements will be returned in order from first (head) to last (tail).
@@ -235,7 +235,7 @@ declare namespace java {
                  * @return an iterator over the elements in this queue in proper sequence
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 /**
                  * Returns a {@link Spliterator} over the elements in this queue.
                  * <p>The returned spliterator is
@@ -248,7 +248,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<E>
+                public spliterator(): java.util.Spliterator<E>
             }
         }
     }

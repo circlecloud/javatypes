@@ -16,17 +16,17 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class AbstractRequestAttributesScope extends java.lang.Object {
+                    abstract class AbstractRequestAttributesScope extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        get(name: string, objectFactory: object): java.lang.Object
+                        public get(name: java.lang.String | string, objectFactory: object): any
                         // @ts-ignore
-                        remove(name: string): java.lang.Object
+                        public remove(name: java.lang.String | string): any
                         // @ts-ignore
-                        registerDestructionCallback(name: string, callback: java.lang.Runnable): void
+                        public registerDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable): void
                         // @ts-ignore
-                        resolveContextualObject(key: string): java.lang.Object
+                        public resolveContextualObject(key: java.lang.String | string): any
                         /**
                          * Template method that determines the actual target scope.
                          * @return the target scope, in the form of an appropriate
@@ -35,7 +35,7 @@ declare namespace org {
                          * @see RequestAttributes#SCOPE_SESSION
                          */
                         // @ts-ignore
-                        abstract getScope(): int
+                        abstract getScope(): number /*int*/
                     }
                 }
             }

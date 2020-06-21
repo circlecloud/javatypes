@@ -73,7 +73,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            connect(src: java.io.PipedWriter): void
+            public connect(src: java.io.PipedWriter): void
             /**
              * Reads the next character of data from this piped stream.
              * If no character is available because the end of the stream
@@ -88,7 +88,7 @@ declare namespace java {
              *           or an I/O error occurs.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>len</code> characters of data from this piped
              * stream into an array of characters. Less than <code>len</code> characters
@@ -107,7 +107,7 @@ declare namespace java {
              *                   or an I/O error occurs.
              */
             // @ts-ignore
-            read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Tell whether this stream is ready to be read.  A piped character
              * stream is ready if the circular buffer is not empty.
@@ -116,14 +116,14 @@ declare namespace java {
              *                   {#link #connect(java.io.PipedWriter) unconnected}, or closed.
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             /**
              * Closes this piped stream and releases any system resources
              * associated with the stream.
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 3.1
                  */
                 // @ts-ignore
-                class CacheOperation extends java.lang.Object implements org.springframework.cache.interceptor.BasicOperation {
+                abstract class CacheOperation extends java.lang.Object implements org.springframework.cache.interceptor.BasicOperation {
                     /**
                      * Create a new {@link CacheOperation} instance from the given builder.
                      * @since 4.3
@@ -18,31 +18,31 @@ declare namespace org {
                     // @ts-ignore
                     constructor(b: org.springframework.cache.interceptor.CacheOperation.Builder)
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     // @ts-ignore
-                    getCacheNames(): java.util.Set<java.lang.String>
+                    public getCacheNames(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getKey(): java.lang.String
+                    public getKey(): string
                     // @ts-ignore
-                    getKeyGenerator(): java.lang.String
+                    public getKeyGenerator(): string
                     // @ts-ignore
-                    getCacheManager(): java.lang.String
+                    public getCacheManager(): string
                     // @ts-ignore
-                    getCacheResolver(): java.lang.String
+                    public getCacheResolver(): string
                     // @ts-ignore
-                    getCondition(): java.lang.String
+                    public getCondition(): string
                     /**
                      * This implementation compares the {@code toString()} results.
                      * @see #toString()
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns {@code toString()}'s hash code.
                      * @see #toString()
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Return an identifying description for this cache operation.
                      * <p>Returned value is produced by calling {@link Builder#getOperationDescription()}
@@ -51,7 +51,7 @@ declare namespace org {
                      * @see Builder#getOperationDescription()
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -20,7 +20,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            skipFilter(skipFilter: java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>> | java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public skipFilter(skipFilter: java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Adds filters to the block ray.
                              * The block ray will skip over blocks that do not pass this predicate.
@@ -30,7 +30,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            skipFilter(...skipFilters: java.util.function.Predicate[] | java.util.function$.Predicate[]): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public skipFilter(...skipFilters: java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>[]): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Adds the filter to the block ray.
                              * The block ray will end if a block does not pass this predicate.
@@ -40,7 +40,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            stopFilter(stopFilter: java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>> | java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public stopFilter(stopFilter: java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Adds filters to the block ray.
                              * The block ray will end if a block does not pass this predicate.
@@ -50,7 +50,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            stopFilter(...stopFilters: java.util.function.Predicate[] | java.util.function$.Predicate[]): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public stopFilter(...stopFilters: java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>[]): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Sets the direction and ending location. This or setting the direction
                              * is required and can only be done once.
@@ -58,7 +58,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            to(end: Vector3d): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public to(end: Vector3d): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Sets the direction. This or setting the ending location is required
                              * and can only be done once.
@@ -66,7 +66,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            direction(direction: Vector3d): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public direction(direction: Vector3d): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Sets the maximum distance before stopping.
                              * This is a safeguard to prevent infinite iteration.
@@ -75,7 +75,7 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            distanceLimit(distanceLimit: number /*double*/): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public distanceLimit(distanceLimit: number /*double*/): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Sets whether or not to perform narrow phase intersections. The
                              * narrow phase performs intersections with the block selection boxes
@@ -86,23 +86,23 @@ declare namespace org {
                              * @return This for chained calls
                              */
                             // @ts-ignore
-                            narrowPhase(enable: boolean): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                            public narrowPhase(enable: boolean): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                             /**
                              * Gets the starting position of the block ray. Given here since some
                              * filters might require it.
                              * @return The position of the block ray
                              */
                             // @ts-ignore
-                            position(): Vector3d
+                            public position(): Vector3d
                             /**
                              * Returns a block ray build from the settings. An ending location or
                              * direction needs to have been set.
                              * @return A block ray
                              */
                             // @ts-ignore
-                            build(): org.spongepowered.api.util.blockray.BlockRay<E>
+                            public build(): org.spongepowered.api.util.blockray.BlockRay<E>
                             // @ts-ignore
-                            iterator(): java.util.Iterator<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                            public iterator(): java.util.Iterator<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                             /**
                              * Iterates the built block ray until the end
                              * and returns the last hit, if any.
@@ -111,7 +111,7 @@ declare namespace org {
                              * @see BlockRay#end()
                              */
                             // @ts-ignore
-                            end(): java.util.Optional<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                            public end(): java.util.Optional<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                         }
                     }
                 }

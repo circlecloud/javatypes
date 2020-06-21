@@ -20,7 +20,7 @@ declare namespace javax {
                      * @return the UI object
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * {@inheritDoc}
                      */
@@ -45,7 +45,7 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getContext(c: javax.swing.JComponent): javax.swing.plaf.synth.SynthContext
+                    public getContext(c: javax.swing.JComponent): javax.swing.plaf.synth.SynthContext
                     /**
                      * {@inheritDoc}
                      */
@@ -55,7 +55,7 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                     /**
                      * {@inheritDoc}
                      * Overridden to keep track of whether the selected tab is also pressed.
@@ -66,12 +66,12 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getTabLabelShiftX(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): int
+                    getTabLabelShiftX(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): number /*int*/
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getTabLabelShiftY(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): int
+                    getTabLabelShiftY(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): number /*int*/
                     /**
                      * Notifies this UI delegate to repaint the specified component.
                      * This method paints the component background, then calls
@@ -83,17 +83,17 @@ declare namespace javax {
                      * @see #paint(SynthContext,Graphics)
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getBaseline(tab: number /*int*/): int
+                    getBaseline(tab: number /*int*/): number /*int*/
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+                    public paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
                     /**
                      * Paints the specified component according to the Look and Feel.
                      * <p>This method is not used by Synth Look and Feel.
@@ -103,7 +103,7 @@ declare namespace javax {
                      * @see #paint(SynthContext,Graphics)
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the specified component.
                      * @param context context for the component being painted
@@ -123,17 +123,17 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    calculateMaxTabHeight(tabPlacement: number /*int*/): int
+                    calculateMaxTabHeight(tabPlacement: number /*int*/): number /*int*/
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    calculateTabWidth(tabPlacement: number /*int*/, tabIndex: number /*int*/, metrics: java.awt.FontMetrics): int
+                    calculateTabWidth(tabPlacement: number /*int*/, tabIndex: number /*int*/, metrics: java.awt.FontMetrics): number /*int*/
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    calculateMaxTabWidth(tabPlacement: number /*int*/): int
+                    calculateMaxTabWidth(tabPlacement: number /*int*/): number /*int*/
                     /**
                      * {@inheritDoc}
                      */

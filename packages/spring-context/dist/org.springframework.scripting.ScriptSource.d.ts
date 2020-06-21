@@ -16,7 +16,7 @@ declare namespace org {
                  * @throws IOException if script retrieval failed
                  */
                 // @ts-ignore
-                getScriptAsString(): java.lang.String
+                getScriptAsString(): string
                 /**
                  * Indicate whether the underlying script data has been modified since
                  * the last time {@link #getScriptAsString()} was called.
@@ -30,7 +30,7 @@ declare namespace org {
                  * @return the suggested class name, or {#code null} if none available
                  */
                 // @ts-ignore
-                suggestedClassName(): java.lang.String
+                suggestedClassName(): string
             }
         }
     }

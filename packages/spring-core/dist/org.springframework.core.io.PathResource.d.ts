@@ -40,7 +40,7 @@ declare namespace org {
                      * @see java.nio.file.Paths#get(String, String...)
                      */
                     // @ts-ignore
-                    constructor(path: string)
+                    constructor(path: java.lang.String | string)
                     /**
                      * Create a new PathResource from a Path handle.
                      * <p>Note: Unlike {@link FileSystemResource}, when building relative resources
@@ -55,13 +55,13 @@ declare namespace org {
                      * Return the file path for this resource.
                      */
                     // @ts-ignore
-                    getPath(): java.lang.String
+                    public getPath(): string
                     /**
                      * This implementation returns whether the underlying file exists.
                      * @see java.nio.file.Files#exists(Path, java.nio.file.LinkOption...)
                      */
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     /**
                      * This implementation checks whether the underlying file is marked as readable
                      * (and corresponds to an actual file with content, not to a directory).
@@ -69,13 +69,13 @@ declare namespace org {
                      * @see java.nio.file.Files#isDirectory(Path, java.nio.file.LinkOption...)
                      */
                     // @ts-ignore
-                    isReadable(): boolean
+                    public isReadable(): boolean
                     /**
                      * This implementation opens a InputStream for the underlying file.
                      * @see java.nio.file.spi.FileSystemProvider#newInputStream(Path, OpenOption...)
                      */
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     /**
                      * This implementation checks whether the underlying file is marked as writable
                      * (and corresponds to an actual file with content, not to a directory).
@@ -83,84 +83,84 @@ declare namespace org {
                      * @see java.nio.file.Files#isDirectory(Path, java.nio.file.LinkOption...)
                      */
                     // @ts-ignore
-                    isWritable(): boolean
+                    public isWritable(): boolean
                     /**
                      * This implementation opens a OutputStream for the underlying file.
                      * @see java.nio.file.spi.FileSystemProvider#newOutputStream(Path, OpenOption...)
                      */
                     // @ts-ignore
-                    getOutputStream(): java.io.OutputStream
+                    public getOutputStream(): java.io.OutputStream
                     /**
                      * This implementation returns a URL for the underlying file.
                      * @see java.nio.file.Path#toUri()
                      * @see java.net.URI#toURL()
                      */
                     // @ts-ignore
-                    getURL(): java.net.URL
+                    public getURL(): java.net.URL
                     /**
                      * This implementation returns a URI for the underlying file.
                      * @see java.nio.file.Path#toUri()
                      */
                     // @ts-ignore
-                    getURI(): java.net.URI
+                    public getURI(): java.net.URI
                     /**
                      * This implementation always indicates a file.
                      */
                     // @ts-ignore
-                    isFile(): boolean
+                    public isFile(): boolean
                     /**
                      * This implementation returns the underlying File reference.
                      */
                     // @ts-ignore
-                    getFile(): java.io.File
+                    public getFile(): java.io.File
                     /**
                      * This implementation opens a Channel for the underlying file.
                      * @see Files#newByteChannel(Path, OpenOption...)
                      */
                     // @ts-ignore
-                    readableChannel(): java.nio.channels.ReadableByteChannel
+                    public readableChannel(): java.nio.channels.ReadableByteChannel
                     /**
                      * This implementation opens a Channel for the underlying file.
                      * @see Files#newByteChannel(Path, OpenOption...)
                      */
                     // @ts-ignore
-                    writableChannel(): java.nio.channels.WritableByteChannel
+                    public writableChannel(): java.nio.channels.WritableByteChannel
                     /**
                      * This implementation returns the underlying file's length.
                      */
                     // @ts-ignore
-                    contentLength(): long
+                    public contentLength(): number /*long*/
                     /**
                      * This implementation returns the underlying File's timestamp.
                      * @see java.nio.file.Files#getLastModifiedTime(Path, java.nio.file.LinkOption...)
                      */
                     // @ts-ignore
-                    lastModified(): long
+                    public lastModified(): number /*long*/
                     /**
                      * This implementation creates a PathResource, applying the given path
                      * relative to the path of the underlying file of this resource descriptor.
                      * @see java.nio.file.Path#resolve(String)
                      */
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * This implementation returns the name of the file.
                      * @see java.nio.file.Path#getFileName()
                      */
                     // @ts-ignore
-                    getFilename(): java.lang.String
+                    public getFilename(): string
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * This implementation compares the underlying Path references.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the hash code of the underlying Path reference.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

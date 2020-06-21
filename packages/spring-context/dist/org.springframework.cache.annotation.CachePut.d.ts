@@ -20,7 +20,7 @@ declare namespace org {
                  * @see CacheConfig
                  */
                 // @ts-ignore
-                class CachePut implements java.lang.annotation.Annotation {
+                abstract class CachePut implements java.lang.annotation.Annotation {
                 }
             }
         }

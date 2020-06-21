@@ -35,12 +35,12 @@ declare namespace javax {
                  * Starts the string monitor.
                  */
                 // @ts-ignore
-                start(): void
+                public start(): void
                 /**
                  * Stops the string monitor.
                  */
                 // @ts-ignore
-                stop(): void
+                public stop(): void
                 /**
                  * Gets the derived gauge of the specified object, if this object is
                  * contained in the set of observed MBeans, or <code>null</code> otherwise.
@@ -48,7 +48,7 @@ declare namespace javax {
                  * @return The derived gauge of the specified object.
                  */
                 // @ts-ignore
-                getDerivedGauge(object: javax.management.ObjectName): java.lang.String
+                public getDerivedGauge(object: javax.management.ObjectName): string
                 /**
                  * Gets the derived gauge timestamp of the specified object, if
                  * this object is contained in the set of observed MBeans, or
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @return The derived gauge timestamp of the specified object.
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): long
+                public getDerivedGaugeTimeStamp(object: javax.management.ObjectName): number /*long*/
                 /**
                  * Returns the derived gauge of the first object in the set of
                  * observed MBeans.
@@ -67,7 +67,7 @@ declare namespace javax {
                  *  {#link #getDerivedGauge(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGauge(): java.lang.String
+                public getDerivedGauge(): string
                 /**
                  * Gets the derived gauge timestamp of the first object in the set
                  * of observed MBeans.
@@ -76,7 +76,7 @@ declare namespace javax {
                  *  {#link #getDerivedGaugeTimeStamp(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(): long
+                public getDerivedGaugeTimeStamp(): number /*long*/
                 /**
                  * Gets the string to compare with the observed attribute common
                  * to all observed MBeans.
@@ -84,7 +84,7 @@ declare namespace javax {
                  * @see #setStringToCompare
                  */
                 // @ts-ignore
-                getStringToCompare(): java.lang.String
+                public getStringToCompare(): string
                 /**
                  * Sets the string to compare with the observed attribute common
                  * to all observed MBeans.
@@ -94,7 +94,7 @@ declare namespace javax {
                  * @see #getStringToCompare
                  */
                 // @ts-ignore
-                setStringToCompare(value: string): void
+                public setStringToCompare(value: java.lang.String | string): void
                 /**
                  * Gets the matching notification's on/off switch value common to
                  * all observed MBeans.
@@ -103,7 +103,7 @@ declare namespace javax {
                  * @see #setNotifyMatch
                  */
                 // @ts-ignore
-                getNotifyMatch(): boolean
+                public getNotifyMatch(): boolean
                 /**
                  * Sets the matching notification's on/off switch value common to
                  * all observed MBeans.
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see #getNotifyMatch
                  */
                 // @ts-ignore
-                setNotifyMatch(value: boolean): void
+                public setNotifyMatch(value: boolean): void
                 /**
                  * Gets the differing notification's on/off switch value common to
                  * all observed MBeans.
@@ -120,7 +120,7 @@ declare namespace javax {
                  * @see #setNotifyDiffer
                  */
                 // @ts-ignore
-                getNotifyDiffer(): boolean
+                public getNotifyDiffer(): boolean
                 /**
                  * Sets the differing notification's on/off switch value common to
                  * all observed MBeans.
@@ -128,14 +128,14 @@ declare namespace javax {
                  * @see #getNotifyDiffer
                  */
                 // @ts-ignore
-                setNotifyDiffer(value: boolean): void
+                public setNotifyDiffer(value: boolean): void
                 /**
                  * Returns a <CODE>NotificationInfo</CODE> object containing the name of
                  * the Java class of the notification and the notification types sent by
                  * the string monitor.
                  */
                 // @ts-ignore
-                getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+                public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
             }
         }
     }

@@ -10,7 +10,7 @@ declare namespace org {
                          * slot may have multiple parent inventories.
                          */
                         // @ts-ignore
-                        class SlotPos extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, Vector2i> {
+                        class SlotPos extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, Vector2i> {
                             /**
                              * Create a new SlotPos property for matching the specified value.
                              * @param value the value to match
@@ -46,15 +46,15 @@ declare namespace org {
                              * @return slot x coordinate
                              */
                             // @ts-ignore
-                            getX(): int
+                            public getX(): number /*int*/
                             /**
                              * Gets the Y position of this slot within the queried parent.
                              * @return slot y coordinate
                              */
                             // @ts-ignore
-                            getY(): int
+                            public getY(): number /*int*/
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                             /**
                              * Create an SlotPos property which matches SlotPos properties with equal
                              * value.
@@ -62,7 +62,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(value: any): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static of(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotPos
                             /**
                              * Create an SlotPos property which matches SlotPos properties with equal
                              * value.
@@ -71,7 +71,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(x: number /*int*/, y: number /*int*/): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static of(x: number /*int*/, y: number /*int*/): org.spongepowered.api.item.inventory.property.SlotPos
                             /**
                              * Create an SlotPos property which matches SlotPos properties with unequal
                              * value.
@@ -79,7 +79,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            not(value: any): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static not(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotPos
                             /**
                              * Create an SlotPos property which matches SlotPos properties with value
                              * greater than this value.
@@ -87,7 +87,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThan(value: any): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static greaterThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotPos
                             /**
                              * Create an SlotPos property which matches SlotPos properties with value
                              * greater than or equal to this value.
@@ -95,7 +95,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static greaterThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotPos
                             /**
                              * Create an SlotPos property which matches SlotPos properties with value
                              * less than this value.
@@ -103,7 +103,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThan(value: any): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static lessThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotPos
                             /**
                              * Create an SlotPos property which matches SlotPos properties with value
                              * less than or equal to this value.
@@ -111,7 +111,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.SlotPos
+                            public static lessThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.SlotPos
                         }
                     }
                 }

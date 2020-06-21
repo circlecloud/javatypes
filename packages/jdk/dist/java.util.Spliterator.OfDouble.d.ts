@@ -6,13 +6,13 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface OfDouble extends java.util.Spliterator.OfPrimitive<java.lang.Double, java.util.function.DoubleConsumer, java.util.Spliterator.OfDouble> {
+            interface OfDouble extends java.util.Spliterator.OfPrimitive<java.lang.Double | number, java.util.function$.DoubleConsumer, java.util.Spliterator.OfDouble> {
                 // @ts-ignore
                 trySplit(): java.util.Spliterator.OfDouble
                 // @ts-ignore
-                tryAdvance(action: java.util.function.DoubleConsumer | java.util.function$.DoubleConsumer): boolean
+                tryAdvance(action: java.util.function$.DoubleConsumer): boolean
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.DoubleConsumer | java.util.function$.DoubleConsumer): void
+                forEachRemaining(action: java.util.function$.DoubleConsumer): void
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code DoubleConsumer} then it is
@@ -23,7 +23,7 @@ declare namespace java {
                  *  {@link #tryAdvance(java.util.function.DoubleConsumer)}.
                  */
                 // @ts-ignore
-                tryAdvance(action: java.util.function.Consumer<any super java.lang.Double> | java.util.function$.Consumer<? super java.lang.Double>): boolean
+                tryAdvance(action: java.util.function$.Consumer<any>): boolean
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code DoubleConsumer} then it is
@@ -35,7 +35,7 @@ declare namespace java {
                  *  {@link #forEachRemaining(java.util.function.DoubleConsumer)}.
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.Consumer<any super java.lang.Double> | java.util.function$.Consumer<? super java.lang.Double>): void
+                forEachRemaining(action: java.util.function$.Consumer<any>): void
             }
         }
     }

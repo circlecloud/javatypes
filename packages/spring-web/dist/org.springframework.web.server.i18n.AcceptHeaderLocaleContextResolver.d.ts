@@ -24,29 +24,29 @@ declare namespace org {
                          * @param locales the supported locales
                          */
                         // @ts-ignore
-                        setSupportedLocales(locales: Array<java.util.Locale>): void
+                        public setSupportedLocales(locales: java.util.List<java.util.Locale> | Array<java.util.Locale>): void
                         /**
                          * Return the configured list of supported locales.
                          */
                         // @ts-ignore
-                        getSupportedLocales(): java.util.List<java.util.Locale>
+                        public getSupportedLocales(): Array<java.util.Locale>
                         /**
                          * Configure a fixed default locale to fall back on if the request does not
                          * have an "Accept-Language" header (not set by default).
                          * @param defaultLocale the default locale to use
                          */
                         // @ts-ignore
-                        setDefaultLocale(defaultLocale: java.util.Locale): void
+                        public setDefaultLocale(defaultLocale: java.util.Locale): void
                         /**
                          * The configured default locale, if any.
                          * <p>This method may be overridden in subclasses.
                          */
                         // @ts-ignore
-                        getDefaultLocale(): java.util.Locale
+                        public getDefaultLocale(): java.util.Locale
                         // @ts-ignore
-                        resolveLocaleContext(exchange: org.springframework.web.server.ServerWebExchange): LocaleContext
+                        public resolveLocaleContext(exchange: org.springframework.web.server.ServerWebExchange): LocaleContext
                         // @ts-ignore
-                        setLocaleContext(exchange: org.springframework.web.server.ServerWebExchange, locale: LocaleContext): void
+                        public setLocaleContext(exchange: org.springframework.web.server.ServerWebExchange, locale: LocaleContext): void
                     }
                 }
             }

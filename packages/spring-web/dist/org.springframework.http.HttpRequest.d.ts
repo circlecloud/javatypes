@@ -25,7 +25,7 @@ declare namespace org {
                  * @see #getMethod()
                  */
                 // @ts-ignore
-                getMethodValue(): java.lang.String
+                getMethodValue(): string
                 /**
                  * Return the URI of the request (including a query string if any,
                  * but only if it is well-formed for a URI representation).

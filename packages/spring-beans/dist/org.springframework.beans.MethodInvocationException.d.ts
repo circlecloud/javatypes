@@ -14,14 +14,14 @@ declare namespace org {
                  * @param cause the Throwable raised by the invoked method
                  */
                 // @ts-ignore
-                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, cause: Error)
+                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, cause: java.lang.Throwable | Error)
                 /**
                  * Error code that a method invocation error will be registered with.
                  */
                 // @ts-ignore
-                readonly ERROR_CODE: string
+                public static readonly ERROR_CODE: java.lang.String | string
                 // @ts-ignore
-                getErrorCode(): java.lang.String
+                public getErrorCode(): string
             }
         }
     }

@@ -22,7 +22,7 @@ declare namespace javax {
                      * @since JAXB2.0
                      */
                     // @ts-ignore
-                    class XmlJavaTypeAdapters implements java.lang.annotation.Annotation {
+                    abstract class XmlJavaTypeAdapters implements java.lang.annotation.Annotation {
                     }
                 }
             }

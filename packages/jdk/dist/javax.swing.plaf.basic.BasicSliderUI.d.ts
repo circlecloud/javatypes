@@ -11,13 +11,13 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(b: javax.swing.JSlider)
                     // @ts-ignore
-                    readonly POSITIVE_SCROLL: number /*int*/
+                    public static readonly POSITIVE_SCROLL: number /*int*/
                     // @ts-ignore
-                    readonly NEGATIVE_SCROLL: number /*int*/
+                    public static readonly NEGATIVE_SCROLL: number /*int*/
                     // @ts-ignore
-                    readonly MIN_SCROLL: number /*int*/
+                    public static readonly MIN_SCROLL: number /*int*/
                     // @ts-ignore
-                    readonly MAX_SCROLL: number /*int*/
+                    public static readonly MAX_SCROLL: number /*int*/
                     // @ts-ignore
                     scrollTimer: javax.swing.Timer
                     // @ts-ignore
@@ -68,11 +68,11 @@ declare namespace javax {
                     // @ts-ignore
                     isDragging(): boolean
                     // @ts-ignore
-                    createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(slider: javax.swing.JSlider): void
                     // @ts-ignore
@@ -105,7 +105,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -114,7 +114,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     /**
                      * Returns true if all the labels from the label table have the same
                      * baseline.
@@ -125,19 +125,19 @@ declare namespace javax {
                     // @ts-ignore
                     labelsHaveSameBaselines(): boolean
                     // @ts-ignore
-                    getPreferredHorizontalSize(): java.awt.Dimension
+                    public getPreferredHorizontalSize(): java.awt.Dimension
                     // @ts-ignore
-                    getPreferredVerticalSize(): java.awt.Dimension
+                    public getPreferredVerticalSize(): java.awt.Dimension
                     // @ts-ignore
-                    getMinimumHorizontalSize(): java.awt.Dimension
+                    public getMinimumHorizontalSize(): java.awt.Dimension
                     // @ts-ignore
-                    getMinimumVerticalSize(): java.awt.Dimension
+                    public getMinimumVerticalSize(): java.awt.Dimension
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
                     calculateGeometry(): void
                     // @ts-ignore
@@ -159,7 +159,7 @@ declare namespace javax {
                      * make this larger than you need and paint your ticks away from the sides in paintTicks().
                      */
                     // @ts-ignore
-                    getTickLength(): int
+                    getTickLength(): number /*int*/
                     // @ts-ignore
                     calculateTickRect(): void
                     // @ts-ignore
@@ -167,17 +167,17 @@ declare namespace javax {
                     // @ts-ignore
                     getThumbSize(): java.awt.Dimension
                     // @ts-ignore
-                    getWidthOfWidestLabel(): int
+                    getWidthOfWidestLabel(): number /*int*/
                     // @ts-ignore
-                    getHeightOfTallestLabel(): int
+                    getHeightOfTallestLabel(): number /*int*/
                     // @ts-ignore
-                    getWidthOfHighValueLabel(): int
+                    getWidthOfHighValueLabel(): number /*int*/
                     // @ts-ignore
-                    getWidthOfLowValueLabel(): int
+                    getWidthOfLowValueLabel(): number /*int*/
                     // @ts-ignore
-                    getHeightOfHighValueLabel(): int
+                    getHeightOfHighValueLabel(): number /*int*/
                     // @ts-ignore
-                    getHeightOfLowValueLabel(): int
+                    getHeightOfLowValueLabel(): number /*int*/
                     // @ts-ignore
                     drawInverted(): boolean
                     /**
@@ -187,7 +187,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getHighestValue(): java.lang.Integer
+                    getHighestValue(): number
                     /**
                      * Returns the smallest value that has an entry in the label table.
                      * @return smallest value that has an entry in the label table, or
@@ -195,7 +195,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getLowestValue(): java.lang.Integer
+                    getLowestValue(): number
                     /**
                      * Returns the label that corresponds to the highest slider value in the label table.
                      * @see JSlider#setLabelTable
@@ -209,17 +209,17 @@ declare namespace javax {
                     // @ts-ignore
                     getHighestValueLabel(): java.awt.Component
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     recalculateIfInsetsChanged(): void
                     // @ts-ignore
                     recalculateIfOrientationChanged(): void
                     // @ts-ignore
-                    paintFocus(g: java.awt.Graphics): void
+                    public paintFocus(g: java.awt.Graphics): void
                     // @ts-ignore
-                    paintTrack(g: java.awt.Graphics): void
+                    public paintTrack(g: java.awt.Graphics): void
                     // @ts-ignore
-                    paintTicks(g: java.awt.Graphics): void
+                    public paintTicks(g: java.awt.Graphics): void
                     // @ts-ignore
                     paintMinorTickForHorizSlider(g: java.awt.Graphics, tickBounds: java.awt.Rectangle, x: number /*int*/): void
                     // @ts-ignore
@@ -229,7 +229,7 @@ declare namespace javax {
                     // @ts-ignore
                     paintMajorTickForVertSlider(g: java.awt.Graphics, tickBounds: java.awt.Rectangle, y: number /*int*/): void
                     // @ts-ignore
-                    paintLabels(g: java.awt.Graphics): void
+                    public paintLabels(g: java.awt.Graphics): void
                     /**
                      * Called for every label in the label table.  Used to draw the labels for horizontal sliders.
                      * The graphics have been translated to labelRect.y already.
@@ -245,13 +245,13 @@ declare namespace javax {
                     // @ts-ignore
                     paintVerticalLabel(g: java.awt.Graphics, value: number /*int*/, label: java.awt.Component): void
                     // @ts-ignore
-                    paintThumb(g: java.awt.Graphics): void
+                    public paintThumb(g: java.awt.Graphics): void
                     // @ts-ignore
-                    setThumbLocation(x: number /*int*/, y: number /*int*/): void
+                    public setThumbLocation(x: number /*int*/, y: number /*int*/): void
                     // @ts-ignore
-                    scrollByBlock(direction: number /*int*/): void
+                    public scrollByBlock(direction: number /*int*/): void
                     // @ts-ignore
-                    scrollByUnit(direction: number /*int*/): void
+                    public scrollByUnit(direction: number /*int*/): void
                     /**
                      * This function is called when a mousePressed was detected in the track, not
                      * in the thumb.  The default behavior is to scroll by block.  You can
@@ -260,9 +260,9 @@ declare namespace javax {
                     // @ts-ignore
                     scrollDueToClickInTrack(dir: number /*int*/): void
                     // @ts-ignore
-                    xPositionForValue(value: number /*int*/): int
+                    xPositionForValue(value: number /*int*/): number /*int*/
                     // @ts-ignore
-                    yPositionForValue(value: number /*int*/): int
+                    yPositionForValue(value: number /*int*/): number /*int*/
                     /**
                      * Returns the y location for the specified value.  No checking is
                      * done on the arguments.  In particular if <code>trackHeight</code> is
@@ -273,7 +273,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    yPositionForValue(value: number /*int*/, trackY: number /*int*/, trackHeight: number /*int*/): int
+                    yPositionForValue(value: number /*int*/, trackY: number /*int*/, trackHeight: number /*int*/): number /*int*/
                     /**
                      * Returns the value at the y position. If {@code yPos} is beyond the
                      * track at the the bottom or the top, this method sets the value to either
@@ -281,7 +281,7 @@ declare namespace javax {
                      * is inverted or not.
                      */
                     // @ts-ignore
-                    valueForYPosition(yPos: number /*int*/): int
+                    public valueForYPosition(yPos: number /*int*/): number /*int*/
                     /**
                      * Returns the value at the x position.  If {@code xPos} is beyond the
                      * track at the left or the right, this method sets the value to either the
@@ -289,7 +289,7 @@ declare namespace javax {
                      * inverted or not.
                      */
                     // @ts-ignore
-                    valueForXPosition(xPos: number /*int*/): int
+                    public valueForXPosition(xPos: number /*int*/): number /*int*/
                 }
             }
         }

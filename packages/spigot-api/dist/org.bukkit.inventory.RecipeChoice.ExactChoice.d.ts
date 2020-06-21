@@ -16,21 +16,21 @@ declare namespace org {
                     // @ts-ignore
                     constructor(...stacks: org.bukkit.inventory.ItemStack[])
                     // @ts-ignore
-                    constructor(choices: Array<org.bukkit.inventory.ItemStack>)
+                    constructor(choices: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>)
                     // @ts-ignore
-                    getItemStack(): org.bukkit.inventory.ItemStack
+                    public getItemStack(): org.bukkit.inventory.ItemStack
                     // @ts-ignore
-                    getChoices(): java.util.List<org.bukkit.inventory.ItemStack>
+                    public getChoices(): Array<org.bukkit.inventory.ItemStack>
                     // @ts-ignore
-                    clone(): org.bukkit.inventory.RecipeChoice.ExactChoice
+                    public clone(): org.bukkit.inventory.RecipeChoice.ExactChoice
                     // @ts-ignore
-                    test(t: org.bukkit.inventory.ItemStack): boolean
+                    public test(t: org.bukkit.inventory.ItemStack): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

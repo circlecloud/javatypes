@@ -14,31 +14,31 @@ declare namespace org {
                         // @ts-ignore
                         constructor(delegate: org.springframework.http.server.reactive.ServerHttpResponse)
                         // @ts-ignore
-                        getDelegate(): org.springframework.http.server.reactive.ServerHttpResponse
+                        public getDelegate(): org.springframework.http.server.reactive.ServerHttpResponse
                         // @ts-ignore
-                        setStatusCode(status: org.springframework.http.HttpStatus): boolean
+                        public setStatusCode(status: org.springframework.http.HttpStatus): boolean
                         // @ts-ignore
-                        getStatusCode(): org.springframework.http.HttpStatus
+                        public getStatusCode(): org.springframework.http.HttpStatus
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         // @ts-ignore
-                        addCookie(cookie: org.springframework.http.ResponseCookie): void
+                        public addCookie(cookie: org.springframework.http.ResponseCookie): void
                         // @ts-ignore
-                        bufferFactory(): DataBufferFactory
+                        public bufferFactory(): DataBufferFactory
                         // @ts-ignore
-                        beforeCommit(action: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): void
+                        public beforeCommit(action: java.util.function$.Supplier<any>): void
                         // @ts-ignore
-                        isCommitted(): boolean
+                        public isCommitted(): boolean
                         // @ts-ignore
-                        writeWith(body: object): <any>
+                        public writeWith(body: object): object
                         // @ts-ignore
-                        writeAndFlushWith(body: object): <any>
+                        public writeAndFlushWith(body: object): object
                         // @ts-ignore
-                        setComplete(): <any>
+                        public setComplete(): object
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

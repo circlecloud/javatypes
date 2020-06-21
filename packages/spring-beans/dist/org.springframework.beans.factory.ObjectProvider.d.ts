@@ -27,7 +27,7 @@ declare namespace org {
                      * @see #getObject()
                      */
                     // @ts-ignore
-                    getObject(...args: any[]): T
+                    getObject(...args: java.lang.Object[] | any[]): T
                     /**
                      * Return an instance (possibly shared or independent) of the object
                      * managed by this factory.
@@ -49,7 +49,7 @@ declare namespace org {
                      * @see #getIfAvailable()
                      */
                     // @ts-ignore
-                    getIfAvailable(defaultSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): T
+                    getIfAvailable(defaultSupplier: java.util.function$.Supplier<T>): T
                     /**
                      * Consume an instance (possibly shared or independent) of the object
                      * managed by this factory, if available.
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see #getIfAvailable()
                      */
                     // @ts-ignore
-                    ifAvailable(dependencyConsumer: java.util.function.Consumer<T> | java.util.function$.Consumer<T>): void
+                    ifAvailable(dependencyConsumer: java.util.function$.Consumer<T>): void
                     /**
                      * Return an instance (possibly shared or independent) of the object
                      * managed by this factory.
@@ -84,7 +84,7 @@ declare namespace org {
                      * @see #getIfUnique()
                      */
                     // @ts-ignore
-                    getIfUnique(defaultSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): T
+                    getIfUnique(defaultSupplier: java.util.function$.Supplier<T>): T
                     /**
                      * Consume an instance (possibly shared or independent) of the object
                      * managed by this factory, if unique.
@@ -95,7 +95,7 @@ declare namespace org {
                      * @see #getIfAvailable()
                      */
                     // @ts-ignore
-                    ifUnique(dependencyConsumer: java.util.function.Consumer<T> | java.util.function$.Consumer<T>): void
+                    ifUnique(dependencyConsumer: java.util.function$.Consumer<T>): void
                     /**
                      * Return an {@link Iterator} over all matching object instances,
                      * without specific ordering guarantees (but typically in registration order).

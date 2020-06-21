@@ -13,9 +13,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(serviceProvider: org.bukkit.plugin.RegisteredServiceProvider<any>)
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

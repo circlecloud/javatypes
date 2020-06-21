@@ -15,7 +15,7 @@ declare namespace org {
                  * @see java.util.concurrent.ScheduledThreadPoolExecutor
                  */
                 // @ts-ignore
-                class ExecutorConfigurationSupport extends org.springframework.scheduling.concurrent.CustomizableThreadFactory {
+                abstract class ExecutorConfigurationSupport extends org.springframework.scheduling.concurrent.CustomizableThreadFactory {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
@@ -35,16 +35,16 @@ declare namespace org {
                      * @see DefaultManagedAwareThreadFactory
                      */
                     // @ts-ignore
-                    setThreadFactory(threadFactory: java.util.concurrent.ThreadFactory): void
+                    public setThreadFactory(threadFactory: java.util.concurrent.ThreadFactory): void
                     // @ts-ignore
-                    setThreadNamePrefix(threadNamePrefix: string): void
+                    public setThreadNamePrefix(threadNamePrefix: java.lang.String | string): void
                     /**
                      * Set the RejectedExecutionHandler to use for the ExecutorService.
                      * Default is the ExecutorService's default abort policy.
                      * @see java.util.concurrent.ThreadPoolExecutor.AbortPolicy
                      */
                     // @ts-ignore
-                    setRejectedExecutionHandler(rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): void
+                    public setRejectedExecutionHandler(rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): void
                     /**
                      * Set whether to wait for scheduled tasks to complete on shutdown,
                      * not interrupting running tasks and executing all tasks in the queue.
@@ -61,7 +61,7 @@ declare namespace org {
                      * @see java.util.concurrent.ExecutorService#shutdownNow()
                      */
                     // @ts-ignore
-                    setWaitForTasksToCompleteOnShutdown(waitForJobsToCompleteOnShutdown: boolean): void
+                    public setWaitForTasksToCompleteOnShutdown(waitForJobsToCompleteOnShutdown: boolean): void
                     /**
                      * Set the maximum number of seconds that this executor is supposed to block
                      * on shutdown in order to wait for remaining tasks to complete their execution
@@ -87,27 +87,27 @@ declare namespace org {
                      * @see java.util.concurrent.ExecutorService#awaitTermination
                      */
                     // @ts-ignore
-                    setAwaitTerminationSeconds(awaitTerminationSeconds: number /*int*/): void
+                    public setAwaitTerminationSeconds(awaitTerminationSeconds: number /*int*/): void
                     /**
                      * Variant of {@link #setAwaitTerminationSeconds} with millisecond precision.
                      * @since 5.2.4
                      * @see #setAwaitTerminationSeconds
                      */
                     // @ts-ignore
-                    setAwaitTerminationMillis(awaitTerminationMillis: number /*long*/): void
+                    public setAwaitTerminationMillis(awaitTerminationMillis: number /*long*/): void
                     // @ts-ignore
-                    setBeanName(name: string): void
+                    public setBeanName(name: java.lang.String | string): void
                     /**
                      * Calls {@code initialize()} after the container applied all property values.
                      * @see #initialize()
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Set up the ExecutorService.
                      */
                     // @ts-ignore
-                    initialize(): void
+                    public initialize(): void
                     /**
                      * Create the target {@link java.util.concurrent.ExecutorService} instance.
                      * Called by {@code afterPropertiesSet}.
@@ -124,14 +124,14 @@ declare namespace org {
                      * @see #shutdown()
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Perform a shutdown on the underlying ExecutorService.
                      * @see java.util.concurrent.ExecutorService#shutdown()
                      * @see java.util.concurrent.ExecutorService#shutdownNow()
                      */
                     // @ts-ignore
-                    shutdown(): void
+                    public shutdown(): void
                     /**
                      * Cancel the given remaining task which never commended execution,
                      * as returned from {@link ExecutorService#shutdownNow()}.

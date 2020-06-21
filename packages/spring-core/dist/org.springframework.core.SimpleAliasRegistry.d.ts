@@ -20,7 +20,7 @@ declare namespace org {
                 // @ts-ignore
                 readonly logger: Log
                 // @ts-ignore
-                registerAlias(name: string, alias: string): void
+                public registerAlias(name: java.lang.String | string, alias: java.lang.String | string): void
                 /**
                  * Determine whether alias overriding is allowed.
                  * <p>Default is {@code true}.
@@ -34,13 +34,13 @@ declare namespace org {
                  * @since 4.2.1
                  */
                 // @ts-ignore
-                hasAlias(name: string, alias: string): boolean
+                public hasAlias(name: java.lang.String | string, alias: java.lang.String | string): boolean
                 // @ts-ignore
-                removeAlias(alias: string): void
+                public removeAlias(alias: java.lang.String | string): void
                 // @ts-ignore
-                isAlias(name: string): boolean
+                public isAlias(name: java.lang.String | string): boolean
                 // @ts-ignore
-                getAliases(name: string): java.lang.String[]
+                public getAliases(name: java.lang.String | string): string[]
                 /**
                  * Resolve all alias target names and aliases registered in this
                  * registry, applying the given {@link StringValueResolver} to them.
@@ -49,7 +49,7 @@ declare namespace org {
                  * @param valueResolver the StringValueResolver to apply
                  */
                 // @ts-ignore
-                resolveAliases(valueResolver: org.springframework.util.StringValueResolver): void
+                public resolveAliases(valueResolver: org.springframework.util.StringValueResolver): void
                 /**
                  * Check whether the given name points back to the given alias as an alias
                  * in the other direction already, catching a circular reference upfront
@@ -60,14 +60,14 @@ declare namespace org {
                  * @see #hasAlias
                  */
                 // @ts-ignore
-                checkForAliasCircle(name: string, alias: string): void
+                checkForAliasCircle(name: java.lang.String | string, alias: java.lang.String | string): void
                 /**
                  * Determine the raw name, resolving aliases to canonical names.
                  * @param name the user-specified name
                  * @return the transformed name
                  */
                 // @ts-ignore
-                canonicalName(name: string): java.lang.String
+                public canonicalName(name: java.lang.String | string): string
             }
         }
     }

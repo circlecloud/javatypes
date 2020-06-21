@@ -63,20 +63,20 @@ declare namespace org {
                  * The separator that this implementation uses when resolving message codes.
                  */
                 // @ts-ignore
-                readonly CODE_SEPARATOR: string
+                public static readonly CODE_SEPARATOR: java.lang.String | string
                 /**
                  * Specify a prefix to be applied to any code built by this resolver.
                  * <p>Default is none. Specify, for example, "validation." to get
                  * error codes like "validation.typeMismatch.name".
                  */
                 // @ts-ignore
-                setPrefix(prefix: string): void
+                public setPrefix(prefix: java.lang.String | string): void
                 /**
                  * Return the prefix to be applied to any code built by this resolver.
                  * <p>Returns an empty String in case of no prefix.
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                getPrefix(): string
                 /**
                  * Specify the format for message codes built by this resolver.
                  * <p>The default is {@link Format#PREFIX_ERROR_CODE}.
@@ -84,9 +84,9 @@ declare namespace org {
                  * @see Format
                  */
                 // @ts-ignore
-                setMessageCodeFormatter(formatter: org.springframework.validation.MessageCodeFormatter): void
+                public setMessageCodeFormatter(formatter: org.springframework.validation.MessageCodeFormatter): void
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string, objectName: string): java.lang.String[]
+                public resolveMessageCodes(errorCode: java.lang.String | string, objectName: java.lang.String | string): string[]
                 /**
                  * Build the code list for the given code and field: an
                  * object/field-specific code, a field-specific code, a plain error code.
@@ -97,13 +97,13 @@ declare namespace org {
                  * @return the list of codes
                  */
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string, objectName: string, field: string, fieldType: java.lang.Class<any>): java.lang.String[]
+                public resolveMessageCodes(errorCode: java.lang.String | string, objectName: java.lang.String | string, field: java.lang.String | string, fieldType: java.lang.Class<any>): string[]
                 /**
                  * Add both keyed and non-keyed entries for the supplied {@code field}
                  * to the supplied field list.
                  */
                 // @ts-ignore
-                buildFieldList(field: string, fieldList: Array<java.lang.String>): void
+                buildFieldList(field: java.lang.String | string, fieldList: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Post-process the given message code, built by this resolver.
                  * <p>The default implementation applies the specified prefix, if any.
@@ -112,7 +112,7 @@ declare namespace org {
                  * @see #setPrefix
                  */
                 // @ts-ignore
-                postProcessMessageCode(code: string): java.lang.String
+                postProcessMessageCode(code: java.lang.String | string): string
             }
         }
     }

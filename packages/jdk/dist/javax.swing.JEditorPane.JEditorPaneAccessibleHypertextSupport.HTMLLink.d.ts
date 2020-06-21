@@ -14,7 +14,7 @@ declare namespace javax {
                      *          respect to the AccessibleHypertext it belongs to
                      */
                     // @ts-ignore
-                    isValid(): boolean
+                    public isValid(): boolean
                     /**
                      * Returns the number of accessible actions available in this Link
                      * If there are more than one, the first one is NOT considered the
@@ -23,7 +23,7 @@ declare namespace javax {
                      * @return the zero-based number of Actions in this object
                      */
                     // @ts-ignore
-                    getAccessibleActionCount(): int
+                    public getAccessibleActionCount(): number /*int*/
                     /**
                      * Perform the specified Action on the object
                      * @param i zero-based index of actions
@@ -31,7 +31,7 @@ declare namespace javax {
                      * @see #getAccessibleActionCount
                      */
                     // @ts-ignore
-                    doAccessibleAction(i: number /*int*/): boolean
+                    public doAccessibleAction(i: number /*int*/): boolean
                     /**
                      * Return a String description of this particular
                      * link action.  The string returned is the text
@@ -42,7 +42,7 @@ declare namespace javax {
                      * @see #getAccessibleActionCount
                      */
                     // @ts-ignore
-                    getAccessibleActionDescription(i: number /*int*/): java.lang.String
+                    public getAccessibleActionDescription(i: number /*int*/): string
                     /**
                      * Returns a URL object that represents the link.
                      * @param i zero-based index of the actions
@@ -50,7 +50,7 @@ declare namespace javax {
                      * @see #getAccessibleActionCount
                      */
                     // @ts-ignore
-                    getAccessibleActionObject(i: number /*int*/): java.lang.Object
+                    public getAccessibleActionObject(i: number /*int*/): any
                     /**
                      * Return an object that represents the link anchor,
                      * as appropriate for that link.  E.g. from HTML:
@@ -65,21 +65,21 @@ declare namespace javax {
                      * @see #getAccessibleActionCount
                      */
                     // @ts-ignore
-                    getAccessibleActionAnchor(i: number /*int*/): java.lang.Object
+                    public getAccessibleActionAnchor(i: number /*int*/): any
                     /**
                      * Get the index with the hypertext document at which this
                      * link begins
                      * @return index of start of link
                      */
                     // @ts-ignore
-                    getStartIndex(): int
+                    public getStartIndex(): number /*int*/
                     /**
                      * Get the index with the hypertext document at which this
                      * link ends
                      * @return index of end of link
                      */
                     // @ts-ignore
-                    getEndIndex(): int
+                    public getEndIndex(): number /*int*/
                 }
             }
         }

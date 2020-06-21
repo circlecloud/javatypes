@@ -14,17 +14,17 @@ declare namespace org {
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            add<T>(key: org.spongepowered.api.event.cause.EventContextKey<T>, value: T): org.spongepowered.api.event.cause.EventContext.Builder
+                            public add<T>(key: org.spongepowered.api.event.cause.EventContextKey<T>, value: T): org.spongepowered.api.event.cause.EventContext.Builder
                             // @ts-ignore
-                            from(value: org.spongepowered.api.event.cause.EventContext): org.spongepowered.api.event.cause.EventContext.Builder
+                            public from(value: org.spongepowered.api.event.cause.EventContext): org.spongepowered.api.event.cause.EventContext.Builder
                             // @ts-ignore
-                            reset(): org.spongepowered.api.event.cause.EventContext.Builder
+                            public reset(): org.spongepowered.api.event.cause.EventContext.Builder
                             /**
                              * Creates a new {@link EventContext}.
                              * @return The EventContext
                              */
                             // @ts-ignore
-                            build(): org.spongepowered.api.event.cause.EventContext
+                            public build(): org.spongepowered.api.event.cause.EventContext
                         }
                     }
                 }

@@ -9,7 +9,7 @@ declare namespace org {
                          * for the inventory.
                          */
                         // @ts-ignore
-                        class GuiIdProperty extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, org.spongepowered.api.item.inventory.property.GuiId> {
+                        class GuiIdProperty extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, org.spongepowered.api.item.inventory.property.GuiId> {
                             /**
                              * Creates a GuiID property from the specified GUI ID.
                              * @param value The GUI ID to create the property with
@@ -17,7 +17,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(value: org.spongepowered.api.item.inventory.property.GuiId)
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

@@ -30,13 +30,13 @@ declare namespace org {
                 // @ts-ignore
                 firstPrompt: org.bukkit.conversations.Prompt
                 // @ts-ignore
-                initialSessionData: java.util.Map<java.lang.Object, java.lang.Object>
+                initialSessionData: java.util.Map<java.lang.Object | any, java.lang.Object | any>
                 // @ts-ignore
-                playerOnlyMessage: string
+                playerOnlyMessage: java.lang.String | string
                 // @ts-ignore
-                cancellers: Array<org.bukkit.conversations.ConversationCanceller>
+                cancellers: java.util.List<org.bukkit.conversations.ConversationCanceller> | Array<org.bukkit.conversations.ConversationCanceller>
                 // @ts-ignore
-                abandonedListeners: Array<org.bukkit.conversations.ConversationAbandonedListener>
+                abandonedListeners: java.util.List<org.bukkit.conversations.ConversationAbandonedListener> | Array<org.bukkit.conversations.ConversationAbandonedListener>
                 /**
                  * Sets the modality of all {@link Conversation}s created by this factory.
                  * If a conversation is modal, all messages directed to the player are
@@ -47,7 +47,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withModality(modal: boolean): org.bukkit.conversations.ConversationFactory
+                public withModality(modal: boolean): org.bukkit.conversations.ConversationFactory
                 /**
                  * Sets the local echo status for all {@link Conversation}s created by
                  * this factory. If local echo is enabled, any text submitted to a
@@ -56,7 +56,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withLocalEcho(localEchoEnabled: boolean): org.bukkit.conversations.ConversationFactory
+                public withLocalEcho(localEchoEnabled: boolean): org.bukkit.conversations.ConversationFactory
                 /**
                  * Sets the {@link ConversationPrefix} that prepends all output from all
                  * generated conversations.
@@ -66,7 +66,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withPrefix(prefix: org.bukkit.conversations.ConversationPrefix): org.bukkit.conversations.ConversationFactory
+                public withPrefix(prefix: org.bukkit.conversations.ConversationPrefix): org.bukkit.conversations.ConversationFactory
                 /**
                  * Sets the number of inactive seconds to wait before automatically
                  * abandoning all generated conversations.
@@ -76,7 +76,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withTimeout(timeoutSeconds: number /*int*/): org.bukkit.conversations.ConversationFactory
+                public withTimeout(timeoutSeconds: number /*int*/): org.bukkit.conversations.ConversationFactory
                 /**
                  * Sets the first prompt to use in all generated conversations.
                  * <p>
@@ -85,7 +85,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withFirstPrompt(firstPrompt: org.bukkit.conversations.Prompt): org.bukkit.conversations.ConversationFactory
+                public withFirstPrompt(firstPrompt: org.bukkit.conversations.Prompt): org.bukkit.conversations.ConversationFactory
                 /**
                  * Sets any initial data with which to populate the conversation context
                  * sessionData map.
@@ -94,7 +94,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withInitialSessionData(initialSessionData: java.util.Map<java.lang.Object, java.lang.Object>): org.bukkit.conversations.ConversationFactory
+                public withInitialSessionData(initialSessionData: java.util.Map<java.lang.Object | any, java.lang.Object | any>): org.bukkit.conversations.ConversationFactory
                 /**
                  * Sets the player input that, when received, will immediately terminate
                  * the conversation.
@@ -102,14 +102,14 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                withEscapeSequence(escapeSequence: string): org.bukkit.conversations.ConversationFactory
+                public withEscapeSequence(escapeSequence: java.lang.String | string): org.bukkit.conversations.ConversationFactory
                 /**
                  * Adds a {@link ConversationCanceller} to constructed conversations.
                  * @param canceller The {#link ConversationCanceller} to add.
                  * @return This object.
                  */
                 // @ts-ignore
-                withConversationCanceller(canceller: org.bukkit.conversations.ConversationCanceller): org.bukkit.conversations.ConversationFactory
+                public withConversationCanceller(canceller: org.bukkit.conversations.ConversationCanceller): org.bukkit.conversations.ConversationFactory
                 /**
                  * Prevents this factory from creating a conversation for non-player
                  * {@link Conversable} objects.
@@ -118,7 +118,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                thatExcludesNonPlayersWithMessage(playerOnlyMessage: string): org.bukkit.conversations.ConversationFactory
+                public thatExcludesNonPlayersWithMessage(playerOnlyMessage: java.lang.String | string): org.bukkit.conversations.ConversationFactory
                 /**
                  * Adds a {@link ConversationAbandonedListener} to all conversations
                  * constructed by this factory.
@@ -126,7 +126,7 @@ declare namespace org {
                  * @return This object.
                  */
                 // @ts-ignore
-                addConversationAbandonedListener(listener: org.bukkit.conversations.ConversationAbandonedListener): org.bukkit.conversations.ConversationFactory
+                public addConversationAbandonedListener(listener: org.bukkit.conversations.ConversationAbandonedListener): org.bukkit.conversations.ConversationFactory
                 /**
                  * Constructs a {@link Conversation} in accordance with the defaults set
                  * for this factory.
@@ -134,7 +134,7 @@ declare namespace org {
                  * @return A new conversation.
                  */
                 // @ts-ignore
-                buildConversation(forWhom: org.bukkit.conversations.Conversable): org.bukkit.conversations.Conversation
+                public buildConversation(forWhom: org.bukkit.conversations.Conversable): org.bukkit.conversations.Conversation
             }
         }
     }

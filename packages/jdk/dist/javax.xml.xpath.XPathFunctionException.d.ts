@@ -19,7 +19,7 @@ declare namespace javax {
                  *    <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * <p>Constructs a new <code>XPathFunctionException</code> with the specified <code>cause</code>.</p>
                  * <p>If <code>cause</code> is <code>null</code>,
@@ -28,7 +28,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>cause</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

@@ -25,7 +25,7 @@ declare namespace org {
                      * @return The diameter being changed to
                      */
                     // @ts-ignore
-                    getNewDiameter(): double
+                    getNewDiameter(): number /*double*/
                     /**
                      * Gets the diameter of the world border.
                      * <p>The returned diameter applies to the x and z axis. The world border
@@ -33,7 +33,7 @@ declare namespace org {
                      * @return The diameter
                      */
                     // @ts-ignore
-                    getDiameter(): double
+                    getDiameter(): number /*double*/
                     /**
                      * Sets the diameter of the world border.
                      * <p>The specified diameter applies to the x and z axis. The world border
@@ -70,7 +70,7 @@ declare namespace org {
                      * @return The time remaining, in milliseconds
                      */
                     // @ts-ignore
-                    getTimeRemaining(): long
+                    getTimeRemaining(): number /*long*/
                     /**
                      * Sets the center of the world border.
                      * @param x The x-axis center of the world border
@@ -95,7 +95,7 @@ declare namespace org {
                      * @return The time, in seconds
                      */
                     // @ts-ignore
-                    getWarningTime(): int
+                    getWarningTime(): number /*int*/
                     /**
                      * Sets the time when a contracting world border will warn a player for whom
                      * the world border will reach in {@code time} seconds.
@@ -113,7 +113,7 @@ declare namespace org {
                      * @return The distance, in blocks
                      */
                     // @ts-ignore
-                    getWarningDistance(): int
+                    getWarningDistance(): number /*int*/
                     /**
                      * Sets the distance when a contracting world border will warn a player for
                      * whom the world border is {@code distance} blocks away.
@@ -129,7 +129,7 @@ declare namespace org {
                      * @return The distance
                      */
                     // @ts-ignore
-                    getDamageThreshold(): double
+                    getDamageThreshold(): number /*double*/
                     /**
                      * Sets the distance a player may be be outside the world border before
                      * taking damage.
@@ -143,7 +143,7 @@ declare namespace org {
                      * @return The damage amount
                      */
                     // @ts-ignore
-                    getDamageAmount(): double
+                    getDamageAmount(): number /*double*/
                     /**
                      * Sets the damage done to a player per block per tick when outside the
                      * buffer.

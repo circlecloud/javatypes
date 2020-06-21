@@ -13,17 +13,17 @@ declare namespace org {
                     // @ts-ignore
                     class MethodArgumentTypeMismatchException extends TypeMismatchException {
                         // @ts-ignore
-                        constructor(value: any, requiredType: java.lang.Class<any>, name: string, param: MethodParameter, cause: Error)
+                        constructor(value: java.lang.Object | any, requiredType: java.lang.Class<any>, name: java.lang.String | string, param: MethodParameter, cause: java.lang.Throwable | Error)
                         /**
                          * Return the name of the method argument.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Return the target method parameter.
                          */
                         // @ts-ignore
-                        getParameter(): MethodParameter
+                        public getParameter(): MethodParameter
                     }
                 }
             }

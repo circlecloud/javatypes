@@ -16,13 +16,13 @@ declare namespace org {
                                  * @return The original level of the human
                                  */
                                 // @ts-ignore
-                                getOriginalLevel(): int
+                                getOriginalLevel(): number /*int*/
                                 /**
                                  * Gets the new level of the human.
                                  * @return The new level of the human
                                  */
                                 // @ts-ignore
-                                getLevel(): int
+                                getLevel(): number /*int*/
                                 /**
                                  * Sets the new level of the human.
                                  * <p>Technically, this can be set to the same level to

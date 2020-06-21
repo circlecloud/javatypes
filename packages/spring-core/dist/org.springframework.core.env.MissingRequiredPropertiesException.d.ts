@@ -15,7 +15,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    getMessage(): string
                     /**
                      * Return the set of properties marked as required but not present
                      * upon validation.
@@ -23,7 +23,7 @@ declare namespace org {
                      * @see ConfigurablePropertyResolver#validateRequiredProperties()
                      */
                     // @ts-ignore
-                    getMissingRequiredProperties(): java.util.Set<java.lang.String>
+                    getMissingRequiredProperties(): Array<java.lang.String | string>
                 }
             }
         }

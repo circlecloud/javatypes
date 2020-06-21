@@ -35,7 +35,7 @@ declare namespace javax {
              * @param description A human readable description of the data.
              */
             // @ts-ignore
-            constructor(notifTypes: string[], name: string, description: string)
+            constructor(notifTypes: java.lang.String[] | string[], name: java.lang.String | string, description: java.lang.String | string)
             /**
              * Constructs an <CODE>MBeanNotificationInfo</CODE> object.
              * @param notifTypes The array of strings (in dot notation)
@@ -49,7 +49,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(notifTypes: string[], name: string, description: string, descriptor: javax.management.Descriptor)
+            constructor(notifTypes: java.lang.String[] | string[], name: java.lang.String | string, description: java.lang.String | string, descriptor: javax.management.Descriptor)
             /**
              * Returns a shallow clone of this instance.
              * The clone is obtained by simply calling <tt>super.clone()</tt>,
@@ -58,7 +58,7 @@ declare namespace javax {
              * No deeper cloning of any internal field is made.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the array of strings (in dot notation) containing the
              * notification types that the MBean may emit.
@@ -66,9 +66,9 @@ declare namespace javax {
              *  effect on this MBeanNotificationInfo.
              */
             // @ts-ignore
-            getNotifTypes(): java.lang.String[]
+            public getNotifTypes(): string[]
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compare this MBeanNotificationInfo to another.
              * @param o the object to compare to.
@@ -82,9 +82,9 @@ declare namespace javax {
              *  elements but in a different order.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

@@ -21,7 +21,7 @@ declare namespace javax {
                  * @throws XPathFunctionException If <code>args</code> cannot be evaluated with this <code>XPath</code> function.
                  */
                 // @ts-ignore
-                evaluate(args: Array): java.lang.Object
+                evaluate(args: java.util.List<any> | Array<any>): any
             }
         }
     }

@@ -14,7 +14,7 @@ declare namespace org {
                          * {@link #value()}.</p>
                          */
                         // @ts-ignore
-                        class TransformResult implements java.lang.annotation.Annotation {
+                        abstract class TransformResult implements java.lang.annotation.Annotation {
                         }
                     }
                 }

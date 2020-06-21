@@ -20,15 +20,15 @@ declare namespace org {
                      * Return the wrapped JAX-WS SOAPFault.
                      */
                     // @ts-ignore
-                    getFault(): javax.xml.soap.SOAPFault
+                    public getFault(): javax.xml.soap.SOAPFault
                     // @ts-ignore
-                    getFaultCode(): java.lang.String
+                    public getFaultCode(): string
                     // @ts-ignore
-                    getFaultCodeAsQName(): javax.xml.namespace.QName
+                    public getFaultCodeAsQName(): javax.xml.namespace.QName
                     // @ts-ignore
-                    getFaultString(): java.lang.String
+                    public getFaultString(): string
                     // @ts-ignore
-                    getFaultActor(): java.lang.String
+                    public getFaultActor(): string
                 }
             }
         }

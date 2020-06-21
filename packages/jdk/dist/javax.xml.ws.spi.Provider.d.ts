@@ -9,7 +9,7 @@ declare namespace javax {
                  * @since JAX-WS 2.0
                  */
                 // @ts-ignore
-                class Provider extends java.lang.Object {
+                abstract class Provider extends java.lang.Object {
                     /**
                      * Creates a new instance of Provider
                      */
@@ -21,7 +21,7 @@ declare namespace javax {
                      * class.
                      */
                     // @ts-ignore
-                    readonly JAXWSPROVIDER_PROPERTY: string
+                    public static readonly JAXWSPROVIDER_PROPERTY: java.lang.String | string
                     /**
                      * Creates a new provider object.
                      * <p>
@@ -51,7 +51,7 @@ declare namespace javax {
                      * </ul>
                      */
                     // @ts-ignore
-                    provider(): javax.xml.ws.spi.Provider
+                    public static provider(): javax.xml.ws.spi.Provider
                     /**
                      * Creates a service delegate object.
                      * <p>
@@ -63,7 +63,7 @@ declare namespace javax {
                      * @return The newly created service delegate.
                      */
                     // @ts-ignore
-                    abstract createServiceDelegate(wsdlDocumentLocation: java.net.URL, serviceName: javax.xml.namespace.QName, serviceClass: java.lang.Class<javax.xml.ws.Service>): javax.xml.ws.spi.ServiceDelegate
+                    public abstract createServiceDelegate(wsdlDocumentLocation: java.net.URL, serviceName: javax.xml.namespace.QName, serviceClass: java.lang.Class<any>): javax.xml.ws.spi.ServiceDelegate
                     /**
                      * Creates a service delegate object.
                      * <p>
@@ -79,7 +79,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    createServiceDelegate(wsdlDocumentLocation: java.net.URL, serviceName: javax.xml.namespace.QName, serviceClass: java.lang.Class<javax.xml.ws.Service>, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.spi.ServiceDelegate
+                    public createServiceDelegate(wsdlDocumentLocation: java.net.URL, serviceName: javax.xml.namespace.QName, serviceClass: java.lang.Class<any>, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.spi.ServiceDelegate
                     /**
                      * Creates an endpoint object with the provided binding and implementation
                      * object.
@@ -91,7 +91,7 @@ declare namespace javax {
                      * @return The newly created endpoint.
                      */
                     // @ts-ignore
-                    abstract createEndpoint(bindingId: string, implementor: any): javax.xml.ws.Endpoint
+                    public abstract createEndpoint(bindingId: java.lang.String | string, implementor: java.lang.Object | any): javax.xml.ws.Endpoint
                     /**
                      * Creates and publishes an endpoint object with the specified
                      * address and implementation object.
@@ -106,7 +106,7 @@ declare namespace javax {
                      * @return The newly created endpoint.
                      */
                     // @ts-ignore
-                    abstract createAndPublishEndpoint(address: string, implementor: any): javax.xml.ws.Endpoint
+                    public abstract createAndPublishEndpoint(address: java.lang.String | string, implementor: java.lang.Object | any): javax.xml.ws.Endpoint
                     /**
                      * read an EndpointReference from the infoset contained in
                      * <code>eprInfoset</code>.
@@ -120,7 +120,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract readEndpointReference(eprInfoset: javax.xml.transform.Source): javax.xml.ws.EndpointReference
+                    public abstract readEndpointReference(eprInfoset: javax.xml.transform.Source): javax.xml.ws.EndpointReference
                     /**
                      * The getPort method returns a proxy.  If there
                      * are any reference parameters in the
@@ -168,7 +168,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract getPort<T>(endpointReference: javax.xml.ws.EndpointReference, serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
+                    public abstract getPort<T>(endpointReference: javax.xml.ws.EndpointReference, serviceEndpointInterface: java.lang.Class<T>, ...features: javax.xml.ws.WebServiceFeature[]): T
                     /**
                      * Factory method to create a <code>W3CEndpointReference</code>.
                      * <p>
@@ -223,7 +223,7 @@ declare namespace javax {
                      * @since JAX-WS 2.1
                      */
                     // @ts-ignore
-                    abstract createW3CEndpointReference(address: string, serviceName: javax.xml.namespace.QName, portName: javax.xml.namespace.QName, metadata: Array<org.w3c.dom.Element>, wsdlDocumentLocation: string, referenceParameters: Array<org.w3c.dom.Element>): javax.xml.ws.wsaddressing.W3CEndpointReference
+                    public abstract createW3CEndpointReference(address: java.lang.String | string, serviceName: javax.xml.namespace.QName, portName: javax.xml.namespace.QName, metadata: java.util.List<org.w3c.dom.Element> | Array<org.w3c.dom.Element>, wsdlDocumentLocation: java.lang.String | string, referenceParameters: java.util.List<org.w3c.dom.Element> | Array<org.w3c.dom.Element>): javax.xml.ws.wsaddressing.W3CEndpointReference
                     /**
                      * Factory method to create a <code>W3CEndpointReference</code>.
                      * Using this method, a <code>W3CEndpointReference</code> instance
@@ -291,7 +291,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    createW3CEndpointReference(address: string, interfaceName: javax.xml.namespace.QName, serviceName: javax.xml.namespace.QName, portName: javax.xml.namespace.QName, metadata: Array<org.w3c.dom.Element>, wsdlDocumentLocation: string, referenceParameters: Array<org.w3c.dom.Element>, elements: Array<org.w3c.dom.Element>, attributes: java.util.Map<javax.xml.namespace.QName, java.lang.String>): javax.xml.ws.wsaddressing.W3CEndpointReference
+                    public createW3CEndpointReference(address: java.lang.String | string, interfaceName: javax.xml.namespace.QName, serviceName: javax.xml.namespace.QName, portName: javax.xml.namespace.QName, metadata: java.util.List<org.w3c.dom.Element> | Array<org.w3c.dom.Element>, wsdlDocumentLocation: java.lang.String | string, referenceParameters: java.util.List<org.w3c.dom.Element> | Array<org.w3c.dom.Element>, elements: java.util.List<org.w3c.dom.Element> | Array<org.w3c.dom.Element>, attributes: java.util.Map<javax.xml.namespace.QName, java.lang.String | string>): javax.xml.ws.wsaddressing.W3CEndpointReference
                     /**
                      * Creates and publishes an endpoint object with the specified
                      * address, implementation object and web service features.
@@ -312,7 +312,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    createAndPublishEndpoint(address: string, implementor: any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
+                    public createAndPublishEndpoint(address: java.lang.String | string, implementor: java.lang.Object | any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
                     /**
                      * Creates an endpoint object with the provided binding, implementation
                      * object and web service features. <code>Provider</code> implementations
@@ -329,7 +329,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    createEndpoint(bindingId: string, implementor: any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
+                    public createEndpoint(bindingId: java.lang.String | string, implementor: java.lang.Object | any, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
                     /**
                      * Creates an endpoint object with the provided binding, implementation
                      * class, invoker and web service features. Containers typically use
@@ -348,7 +348,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    createEndpoint(bindingId: string, implementorClass: java.lang.Class<any>, invoker: javax.xml.ws.spi.Invoker, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
+                    public createEndpoint(bindingId: java.lang.String | string, implementorClass: java.lang.Class<any>, invoker: javax.xml.ws.spi.Invoker, ...features: javax.xml.ws.WebServiceFeature[]): javax.xml.ws.Endpoint
                 }
             }
         }

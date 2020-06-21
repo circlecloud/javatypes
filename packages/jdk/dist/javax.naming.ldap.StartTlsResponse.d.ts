@@ -36,7 +36,7 @@ declare namespace javax {
              * @author Vincent Ryan
              */
             // @ts-ignore
-            class StartTlsResponse extends java.lang.Object implements javax.naming.ldap.ExtendedResponse {
+            abstract class StartTlsResponse extends java.lang.Object implements javax.naming.ldap.ExtendedResponse {
                 /**
                  * Constructs a StartTLS extended response.
                  * A concrete subclass must have a public no-arg constructor.
@@ -48,13 +48,13 @@ declare namespace javax {
                  * is 1.3.6.1.4.1.1466.20037.
                  */
                 // @ts-ignore
-                readonly OID: string
+                public static readonly OID: java.lang.String | string
                 /**
                  * Retrieves the StartTLS response's object identifier string.
                  * @return The object identifier string, "1.3.6.1.4.1.1466.20037".
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                public getID(): string
                 /**
                  * Retrieves the StartTLS response's ASN.1 BER encoded value.
                  * Since the response has no defined value, null is always
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return The null value.
                  */
                 // @ts-ignore
-                getEncodedValue(): byte[]
+                public getEncodedValue(): number /*byte*/[]
                 /**
                  * Overrides the default list of cipher suites enabled for use on the
                  * TLS connection. The cipher suites must have already been listed by
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @see #negotiate
                  */
                 // @ts-ignore
-                abstract setEnabledCipherSuites(suites: string[]): void
+                public abstract setEnabledCipherSuites(suites: java.lang.String[] | string[]): void
                 /**
                  * Sets the hostname verifier used by <tt>negotiate()</tt>
                  * after the TLS handshake has completed and the default hostname
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @see #negotiate
                  */
                 // @ts-ignore
-                abstract setHostnameVerifier(verifier: javax.net.ssl.HostnameVerifier): void
+                public abstract setHostnameVerifier(verifier: javax.net.ssl.HostnameVerifier): void
                 /**
                  * Negotiates a TLS session using the default SSL socket factory.
                  * <p>
@@ -100,7 +100,7 @@ declare namespace javax {
                  * @see #setHostnameVerifier
                  */
                 // @ts-ignore
-                abstract negotiate(): javax.net.ssl.SSLSession
+                public abstract negotiate(): javax.net.ssl.SSLSession
                 /**
                  * Negotiates a TLS session using an SSL socket factory.
                  * <p>
@@ -131,7 +131,7 @@ declare namespace javax {
                  * @see #setHostnameVerifier
                  */
                 // @ts-ignore
-                abstract negotiate(factory: javax.net.ssl.SSLSocketFactory): javax.net.ssl.SSLSession
+                public abstract negotiate(factory: javax.net.ssl.SSLSocketFactory): javax.net.ssl.SSLSession
                 /**
                  * Closes the TLS connection gracefully and reverts back to the underlying
                  * connection.
@@ -139,7 +139,7 @@ declare namespace javax {
                  *  TLS connection
                  */
                 // @ts-ignore
-                abstract close(): void
+                public abstract close(): void
             }
         }
     }

@@ -14,21 +14,21 @@ declare namespace org {
                          * {@code z} selector keys.</p>
                          */
                         // @ts-ignore
-                        readonly POSITION: org.spongepowered.api.text.selector.ArgumentHolder.Vector3<Vector3i, java.lang.Integer>
+                        public static readonly POSITION: org.spongepowered.api.text.selector.ArgumentHolder.Vector3<Vector3i, java.lang.Integer | number>
                         /**
                          * The argument types representing the radius of the selector.
                          * <p>In Vanilla, this is represented by the {@code r} (for minimum) and
                          * {@code rm} (for maximum) selector keys.</p>
                          */
                         // @ts-ignore
-                        readonly RADIUS: org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer>>
+                        public static readonly RADIUS: org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer | number>>
                         /**
                          * The argument type filtering based on the {@link GameMode} of a player.
                          * <p>In Vanilla, this is represented by the {@code m} selector key.</p>
                          * <p>Note that this element is of type {@link ArgumentType.Invertible}.</p>
                          */
                         // @ts-ignore
-                        readonly GAME_MODE: org.spongepowered.api.text.selector.ArgumentType<org.spongepowered.api.entity.living.player.gamemode.GameMode>
+                        public static readonly GAME_MODE: org.spongepowered.api.text.selector.ArgumentType<org.spongepowered.api.entity.living.player.gamemode.GameMode>
                         /**
                          * The argument type limiting the number of results of a {@link Selector}.
                          * Negative values will reverse the order of targets - for example the
@@ -39,7 +39,7 @@ declare namespace org {
                          * <p>In Vanilla, this is represented by the {@code c} selector key.</p>
                          */
                         // @ts-ignore
-                        readonly COUNT: org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer>
+                        public static readonly COUNT: org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer | number>
                         /**
                          * The argument types filtering based on the number of experience levels of
                          * the target.
@@ -47,7 +47,7 @@ declare namespace org {
                          * {@code lm} (for minimum) selector keys.</p>
                          */
                         // @ts-ignore
-                        readonly LEVEL: org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer>>
+                        public static readonly LEVEL: org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer | number>>
                         /**
                          * The argument type filtering based on the {@link Team} of the target.
                          * Inverting this argument type will search for all targets not on the
@@ -56,7 +56,7 @@ declare namespace org {
                          * the {@code !} prefix for inverted values.</p>
                          */
                         // @ts-ignore
-                        readonly TEAM: org.spongepowered.api.text.selector.ArgumentType.Invertible<java.lang.String>
+                        public static readonly TEAM: org.spongepowered.api.text.selector.ArgumentType.Invertible<java.lang.String | string>
                         /**
                          * The argument type filtering based on the name of the target. Inverting
                          * this argument type will search for all targets without the specified name
@@ -65,14 +65,14 @@ declare namespace org {
                          * the {@code !} prefix for inverted values.</p>
                          */
                         // @ts-ignore
-                        readonly NAME: org.spongepowered.api.text.selector.ArgumentType.Invertible<java.lang.String>
+                        public static readonly NAME: org.spongepowered.api.text.selector.ArgumentType.Invertible<java.lang.String | string>
                         /**
                          * The argument type filtering targets which aren't in the specified volume.
                          * <p>In Vanilla, this is represented by the {@code dx}, {@code dy} and
                          * {@code dz} selector keys.</p>
                          */
                         // @ts-ignore
-                        readonly DIMENSION: org.spongepowered.api.text.selector.ArgumentHolder.Vector3<Vector3i, java.lang.Integer>
+                        public static readonly DIMENSION: org.spongepowered.api.text.selector.ArgumentHolder.Vector3<Vector3i, java.lang.Integer | number>
                         /**
                          * The argument type filtering targets within a specific rotation range.
                          * <p>In Vanilla, the {@link Double}s will be floored to {@link Integer}s
@@ -81,13 +81,13 @@ declare namespace org {
                          * keys.</p>
                          */
                         // @ts-ignore
-                        readonly ROTATION: org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentHolder.Vector3<Vector3d, java.lang.Double>>
+                        public static readonly ROTATION: org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentHolder.Vector3<Vector3d, java.lang.Double | number>>
                         /**
                          * The argument type filtering targets based on the {@link EntityType}.
                          * <p>In Vanilla, this is represented by the {@code type} selector key.</p>
                          */
                         // @ts-ignore
-                        readonly ENTITY_TYPE: org.spongepowered.api.text.selector.ArgumentType.Invertible<org.spongepowered.api.entity.EntityType>
+                        public static readonly ENTITY_TYPE: org.spongepowered.api.text.selector.ArgumentType.Invertible<org.spongepowered.api.entity.EntityType>
                         /**
                          * Creates a minimum and maximum {@link ArgumentType} filtering depending on
                          * the score of the specified objective.
@@ -95,7 +95,7 @@ declare namespace org {
                          * @return The created argument type
                          */
                         // @ts-ignore
-                        score(name: string): org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer>>
+                        public static score(name: java.lang.String | string): org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer | number>>
                         /**
                          * Gets the {@link ArgumentType} with the provided name.
                          * @param name The name of the argument type
@@ -103,20 +103,20 @@ declare namespace org {
                          *          if not found
                          */
                         // @ts-ignore
-                        valueOf(name: string): java.util.Optional<org.spongepowered.api.text.selector.ArgumentType<?>>
+                        public static valueOf(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.text.selector.ArgumentType<any>>
                         /**
                          * Gets a {@link Collection} of all possible {@link ArgumentType}s.
                          * @return The list of all available {#link ArgumentType}s
                          */
                         // @ts-ignore
-                        values(): java.util.Collection<org.spongepowered.api.text.selector.ArgumentType<?>>
+                        public static values(): Array<org.spongepowered.api.text.selector.ArgumentType<any>>
                         /**
                          * Creates a custom {@link ArgumentType} with the specified key.
                          * @param key The key to use for the argument
                          * @return The created argument type
                          */
                         // @ts-ignore
-                        create(key: string): org.spongepowered.api.text.selector.ArgumentType<java.lang.String>
+                        public static create(key: java.lang.String | string): org.spongepowered.api.text.selector.ArgumentType<java.lang.String | string>
                         /**
                          * Creates a custom {@link ArgumentType} with the specified key and value.
                          * @param key The key to use for the argument
@@ -125,7 +125,7 @@ declare namespace org {
                          * @return The created argument type
                          */
                         // @ts-ignore
-                        create<T>(key: string, type: java.lang.Class<T>): org.spongepowered.api.text.selector.ArgumentType<T>
+                        public static create<T>(key: java.lang.String | string, type: java.lang.Class<T>): org.spongepowered.api.text.selector.ArgumentType<T>
                     }
                 }
             }

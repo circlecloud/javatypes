@@ -17,7 +17,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class CookieHandler extends java.lang.Object {
+        abstract class CookieHandler extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -30,7 +30,7 @@ declare namespace java {
              * @see #setDefault(CookieHandler)
              */
             // @ts-ignore
-            getDefault(): java.net.CookieHandler
+            public static getDefault(): java.net.CookieHandler
             /**
              * Sets (or unsets) the system-wide cookie handler.
              * Note: non-standard http protocol handlers may ignore this setting.
@@ -42,7 +42,7 @@ declare namespace java {
              * @see #getDefault()
              */
             // @ts-ignore
-            setDefault(cHandler: java.net.CookieHandler): void
+            public static setDefault(cHandler: java.net.CookieHandler): void
             /**
              * Gets all the applicable cookies from a cookie cache for the
              * specified uri in the request header.
@@ -70,7 +70,7 @@ declare namespace java {
              * @see #put(URI, Map)
              */
             // @ts-ignore
-            abstract get(uri: java.net.URI, requestHeaders: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+            public abstract get(uri: java.net.URI, requestHeaders: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
             /**
              * Sets all the applicable cookies, examples are response header
              * fields that are named Set-Cookie2, present in the response
@@ -84,7 +84,7 @@ declare namespace java {
              * @see #get(URI, Map)
              */
             // @ts-ignore
-            abstract put(uri: java.net.URI, responseHeaders: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): void
+            public abstract put(uri: java.net.URI, responseHeaders: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): void
         }
     }
 }

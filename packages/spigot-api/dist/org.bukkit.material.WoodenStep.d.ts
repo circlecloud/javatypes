@@ -36,26 +36,26 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_TYPE: org.bukkit.Material
+                static readonly DEFAULT_TYPE: org.bukkit.Material
                 // @ts-ignore
-                readonly DEFAULT_INVERTED: boolean
+                static readonly DEFAULT_INVERTED: boolean
                 /**
                  * Test if step is inverted
                  * @return true if inverted (top half), false if normal (bottom half)
                  */
                 // @ts-ignore
-                isInverted(): boolean
+                public isInverted(): boolean
                 /**
                  * Set step inverted state
                  * @param inv - true if step is inverted (top half), false if step is normal
                  *  (bottom half)
                  */
                 // @ts-ignore
-                setInverted(inv: boolean): void
+                public setInverted(inv: boolean): void
                 // @ts-ignore
-                clone(): org.bukkit.material.WoodenStep
+                public clone(): org.bukkit.material.WoodenStep
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

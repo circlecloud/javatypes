@@ -16,7 +16,7 @@ declare namespace org {
                              * @return The generated class
                              */
                             // @ts-ignore
-                            createClass(type: java.lang.Class<any>, name: string, exceptionType: java.lang.Class<any>): byte[]
+                            public createClass(type: java.lang.Class<any>, name: java.lang.String | string, exceptionType: java.lang.Class<any>): number /*byte*/[]
                         }
                     }
                 }

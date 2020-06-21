@@ -20,11 +20,11 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(b: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    public getPropertyPrefix(): string
                     // @ts-ignore
-                    installDefaults(b: javax.swing.AbstractButton): void
+                    public installDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
                     uninstallDefaults(b: javax.swing.AbstractButton): void
                 }

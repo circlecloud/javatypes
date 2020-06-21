@@ -363,7 +363,7 @@ declare namespace java {
          * @see java.awt.RenderingHints
          */
         // @ts-ignore
-        class Graphics2D extends java.awt.Graphics {
+        abstract class Graphics2D extends java.awt.Graphics {
             /**
              * Constructs a new <code>Graphics2D</code> object.  Since
              * <code>Graphics2D</code> is an abstract class, and since it must be
@@ -400,7 +400,7 @@ declare namespace java {
              * @see java.awt.Graphics#fill3DRect
              */
             // @ts-ignore
-            draw3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
+            public draw3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
             /**
              * Paints a 3-D highlighted rectangle filled with the current color.
              * The edges of the rectangle are highlighted so that it appears
@@ -419,7 +419,7 @@ declare namespace java {
              * @see java.awt.Graphics#draw3DRect
              */
             // @ts-ignore
-            fill3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
+            public fill3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
             /**
              * Strokes the outline of a <code>Shape</code> using the settings of the
              * current <code>Graphics2D</code> context.  The rendering attributes
@@ -437,7 +437,7 @@ declare namespace java {
              * @see #setComposite
              */
             // @ts-ignore
-            abstract draw(s: java.awt.Shape): void
+            public abstract draw(s: java.awt.Shape): void
             /**
              * Renders an image, applying a transform from image space into user space
              * before drawing.
@@ -465,7 +465,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, xform: java.awt.geom.AffineTransform, obs: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, xform: java.awt.geom.AffineTransform, obs: java.awt.image.ImageObserver): boolean
             /**
              * Renders a <code>BufferedImage</code> that is
              * filtered with a
@@ -491,7 +491,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.image.BufferedImage, op: java.awt.image.BufferedImageOp, x: number /*int*/, y: number /*int*/): void
+            public abstract drawImage(img: java.awt.image.BufferedImage, op: java.awt.image.BufferedImageOp, x: number /*int*/, y: number /*int*/): void
             /**
              * Renders a {@link RenderedImage},
              * applying a transform from image
@@ -514,7 +514,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawRenderedImage(img: java.awt.image.RenderedImage, xform: java.awt.geom.AffineTransform): void
+            public abstract drawRenderedImage(img: java.awt.image.RenderedImage, xform: java.awt.geom.AffineTransform): void
             /**
              * Renders a
              * {@link RenderableImage},
@@ -547,7 +547,7 @@ declare namespace java {
              * @see #drawRenderedImage
              */
             // @ts-ignore
-            abstract drawRenderableImage(img: java.awt.image.renderable.RenderableImage, xform: java.awt.geom.AffineTransform): void
+            public abstract drawRenderableImage(img: java.awt.image.renderable.RenderableImage, xform: java.awt.geom.AffineTransform): void
             /**
              * Renders the text of the specified <code>String</code>, using the
              * current text attribute state in the <code>Graphics2D</code> context.
@@ -572,7 +572,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            abstract drawString(str: string, x: number /*int*/, y: number /*int*/): void
+            public abstract drawString(str: java.lang.String | string, x: number /*int*/, y: number /*int*/): void
             /**
              * Renders the text specified by the specified <code>String</code>,
              * using the current text attribute state in the <code>Graphics2D</code> context.
@@ -599,7 +599,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawString(str: string, x: number /*float*/, y: number /*float*/): void
+            public abstract drawString(str: java.lang.String | string, x: number /*float*/, y: number /*float*/): void
             /**
              * Renders the text of the specified iterator applying its attributes
              * in accordance with the specification of the {@link TextAttribute} class.
@@ -624,7 +624,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawString(iterator: java.text.AttributedCharacterIterator, x: number /*int*/, y: number /*int*/): void
+            public abstract drawString(iterator: java.text.AttributedCharacterIterator, x: number /*int*/, y: number /*int*/): void
             /**
              * Renders the text of the specified iterator applying its attributes
              * in accordance with the specification of the {@link TextAttribute} class.
@@ -649,7 +649,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawString(iterator: java.text.AttributedCharacterIterator, x: number /*float*/, y: number /*float*/): void
+            public abstract drawString(iterator: java.text.AttributedCharacterIterator, x: number /*float*/, y: number /*float*/): void
             /**
              * Renders the text of the specified
              * {@link GlyphVector} using
@@ -676,7 +676,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract drawGlyphVector(g: java.awt.font.GlyphVector, x: number /*float*/, y: number /*float*/): void
+            public abstract drawGlyphVector(g: java.awt.font.GlyphVector, x: number /*float*/, y: number /*float*/): void
             /**
              * Fills the interior of a <code>Shape</code> using the settings of the
              * <code>Graphics2D</code> context. The rendering attributes applied
@@ -692,7 +692,7 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract fill(s: java.awt.Shape): void
+            public abstract fill(s: java.awt.Shape): void
             /**
              * Checks whether or not the specified <code>Shape</code> intersects
              * the specified {@link Rectangle}, which is in device
@@ -723,14 +723,14 @@ declare namespace java {
              * @see #setClip
              */
             // @ts-ignore
-            abstract hit(rect: java.awt.Rectangle, s: java.awt.Shape, onStroke: boolean): boolean
+            public abstract hit(rect: java.awt.Rectangle, s: java.awt.Shape, onStroke: boolean): boolean
             /**
              * Returns the device configuration associated with this
              * <code>Graphics2D</code>.
              * @return the device configuration of this <code>Graphics2D</code>.
              */
             // @ts-ignore
-            abstract getDeviceConfiguration(): java.awt.GraphicsConfiguration
+            public abstract getDeviceConfiguration(): java.awt.GraphicsConfiguration
             /**
              * Sets the <code>Composite</code> for the <code>Graphics2D</code> context.
              * The <code>Composite</code> is used in all drawing methods such as
@@ -759,7 +759,7 @@ declare namespace java {
              * @see java.awt.AWTPermission
              */
             // @ts-ignore
-            abstract setComposite(comp: java.awt.Composite): void
+            public abstract setComposite(comp: java.awt.Composite): void
             /**
              * Sets the <code>Paint</code> attribute for the
              * <code>Graphics2D</code> context.  Calling this method
@@ -774,7 +774,7 @@ declare namespace java {
              * @see TexturePaint
              */
             // @ts-ignore
-            abstract setPaint(paint: java.awt.Paint): void
+            public abstract setPaint(paint: java.awt.Paint): void
             /**
              * Sets the <code>Stroke</code> for the <code>Graphics2D</code> context.
              * @param s the <code>Stroke</code> object to be used to stroke a
@@ -783,7 +783,7 @@ declare namespace java {
              * @see #getStroke
              */
             // @ts-ignore
-            abstract setStroke(s: java.awt.Stroke): void
+            public abstract setStroke(s: java.awt.Stroke): void
             /**
              * Sets the value of a single preference for the rendering algorithms.
              * Hint categories include controls for rendering quality and overall
@@ -797,7 +797,7 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            abstract setRenderingHint(hintKey: java.awt.RenderingHints.Key, hintValue: any): void
+            public abstract setRenderingHint(hintKey: java.awt.RenderingHints.Key, hintValue: java.lang.Object | any): void
             /**
              * Returns the value of a single preference for the rendering algorithms.
              * Hint categories include controls for rendering quality and overall
@@ -812,7 +812,7 @@ declare namespace java {
              * @see #setRenderingHint(RenderingHints.Key, Object)
              */
             // @ts-ignore
-            abstract getRenderingHint(hintKey: java.awt.RenderingHints.Key): java.lang.Object
+            public abstract getRenderingHint(hintKey: java.awt.RenderingHints.Key): any
             /**
              * Replaces the values of all preferences for the rendering
              * algorithms with the specified <code>hints</code>.
@@ -828,7 +828,7 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            abstract setRenderingHints(hints: java.util.Map<any, ?>): void
+            public abstract setRenderingHints(hints: java.util.Map<any, any>): void
             /**
              * Sets the values of an arbitrary number of preferences for the
              * rendering algorithms.
@@ -844,7 +844,7 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            abstract addRenderingHints(hints: java.util.Map<any, ?>): void
+            public abstract addRenderingHints(hints: java.util.Map<any, any>): void
             /**
              * Gets the preferences for the rendering algorithms.  Hint categories
              * include controls for rendering quality and overall time/quality
@@ -859,7 +859,7 @@ declare namespace java {
              * @see #setRenderingHints(Map)
              */
             // @ts-ignore
-            abstract getRenderingHints(): java.awt.RenderingHints
+            public abstract getRenderingHints(): java.awt.RenderingHints
             /**
              * Translates the origin of the <code>Graphics2D</code> context to the
              * point (<i>x</i>,&nbsp;<i>y</i>) in the current coordinate system.
@@ -873,7 +873,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            abstract translate(x: number /*int*/, y: number /*int*/): void
+            public abstract translate(x: number /*int*/, y: number /*int*/): void
             /**
              * Concatenates the current
              * <code>Graphics2D</code> <code>Transform</code>
@@ -891,7 +891,7 @@ declare namespace java {
              * @param ty the distance to translate along the y-axis
              */
             // @ts-ignore
-            abstract translate(tx: number /*double*/, ty: number /*double*/): void
+            public abstract translate(tx: number /*double*/, ty: number /*double*/): void
             /**
              * Concatenates the current <code>Graphics2D</code>
              * <code>Transform</code> with a rotation transform.
@@ -909,7 +909,7 @@ declare namespace java {
              * @param theta the angle of rotation in radians
              */
             // @ts-ignore
-            abstract rotate(theta: number /*double*/): void
+            public abstract rotate(theta: number /*double*/): void
             /**
              * Concatenates the current <code>Graphics2D</code>
              * <code>Transform</code> with a translated rotation
@@ -930,7 +930,7 @@ declare namespace java {
              * @param y the y coordinate of the origin of the rotation
              */
             // @ts-ignore
-            abstract rotate(theta: number /*double*/, x: number /*double*/, y: number /*double*/): void
+            public abstract rotate(theta: number /*double*/, x: number /*double*/, y: number /*double*/): void
             /**
              * Concatenates the current <code>Graphics2D</code>
              * <code>Transform</code> with a scaling transformation
@@ -951,7 +951,7 @@ declare namespace java {
              *  rendering operations.
              */
             // @ts-ignore
-            abstract scale(sx: number /*double*/, sy: number /*double*/): void
+            public abstract scale(sx: number /*double*/, sy: number /*double*/): void
             /**
              * Concatenates the current <code>Graphics2D</code>
              * <code>Transform</code> with a shearing transform.
@@ -971,7 +971,7 @@ declare namespace java {
              *  the positive Y axis direction as a function of their X coordinate
              */
             // @ts-ignore
-            abstract shear(shx: number /*double*/, shy: number /*double*/): void
+            public abstract shear(shx: number /*double*/, shy: number /*double*/): void
             /**
              * Composes an <code>AffineTransform</code> object with the
              * <code>Transform</code> in this <code>Graphics2D</code> according
@@ -990,7 +990,7 @@ declare namespace java {
              * @see AffineTransform
              */
             // @ts-ignore
-            abstract transform(Tx: java.awt.geom.AffineTransform): void
+            public abstract transform(Tx: java.awt.geom.AffineTransform): void
             /**
              * Overwrites the Transform in the <code>Graphics2D</code> context.
              * WARNING: This method should <b>never</b> be used to apply a new
@@ -1022,7 +1022,7 @@ declare namespace java {
              * @see AffineTransform
              */
             // @ts-ignore
-            abstract setTransform(Tx: java.awt.geom.AffineTransform): void
+            public abstract setTransform(Tx: java.awt.geom.AffineTransform): void
             /**
              * Returns a copy of the current <code>Transform</code> in the
              * <code>Graphics2D</code> context.
@@ -1032,7 +1032,7 @@ declare namespace java {
              * @see #setTransform
              */
             // @ts-ignore
-            abstract getTransform(): java.awt.geom.AffineTransform
+            public abstract getTransform(): java.awt.geom.AffineTransform
             /**
              * Returns the current <code>Paint</code> of the
              * <code>Graphics2D</code> context.
@@ -1042,7 +1042,7 @@ declare namespace java {
              * @see java.awt.Graphics#setColor
              */
             // @ts-ignore
-            abstract getPaint(): java.awt.Paint
+            public abstract getPaint(): java.awt.Paint
             /**
              * Returns the current <code>Composite</code> in the
              * <code>Graphics2D</code> context.
@@ -1051,7 +1051,7 @@ declare namespace java {
              * @see #setComposite
              */
             // @ts-ignore
-            abstract getComposite(): java.awt.Composite
+            public abstract getComposite(): java.awt.Composite
             /**
              * Sets the background color for the <code>Graphics2D</code> context.
              * The background color is used for clearing a region.
@@ -1069,7 +1069,7 @@ declare namespace java {
              * @see java.awt.Graphics#clearRect
              */
             // @ts-ignore
-            abstract setBackground(color: java.awt.Color): void
+            public abstract setBackground(color: java.awt.Color): void
             /**
              * Returns the background color used for clearing a region.
              * @return the current <code>Graphics2D</code> <code>Color</code>,
@@ -1077,7 +1077,7 @@ declare namespace java {
              * @see #setBackground
              */
             // @ts-ignore
-            abstract getBackground(): java.awt.Color
+            public abstract getBackground(): java.awt.Color
             /**
              * Returns the current <code>Stroke</code> in the
              * <code>Graphics2D</code> context.
@@ -1086,7 +1086,7 @@ declare namespace java {
              * @see #setStroke
              */
             // @ts-ignore
-            abstract getStroke(): java.awt.Stroke
+            public abstract getStroke(): java.awt.Stroke
             /**
              * Intersects the current <code>Clip</code> with the interior of the
              * specified <code>Shape</code> and sets the <code>Clip</code> to the
@@ -1107,7 +1107,7 @@ declare namespace java {
              *           this method clears the current <code>Clip</code>.
              */
             // @ts-ignore
-            abstract clip(s: java.awt.Shape): void
+            public abstract clip(s: java.awt.Shape): void
             /**
              * Get the rendering context of the <code>Font</code> within this
              * <code>Graphics2D</code> context.
@@ -1129,7 +1129,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            abstract getFontRenderContext(): java.awt.font.FontRenderContext
+            public abstract getFontRenderContext(): java.awt.font.FontRenderContext
         }
     }
 }

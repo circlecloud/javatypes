@@ -18,11 +18,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
                         getBeanFactory(): org.springframework.beans.factory.BeanFactory
                         // @ts-ignore
-                        isAutowireCandidate(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public isAutowireCandidate(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         /**
                          * Match the given dependency type with its generic type information against the given
                          * candidate bean definition.

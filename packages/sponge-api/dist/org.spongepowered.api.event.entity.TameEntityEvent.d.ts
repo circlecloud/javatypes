@@ -14,7 +14,7 @@ declare namespace org {
                          *              {#link org.spongepowered.api.event.cause.EventContextKeys#USED_ITEM}
                          */
                         // @ts-ignore
-                        
+                        readonly USED_ITEM: java.lang.String | string
                     }
                 }
             }

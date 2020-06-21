@@ -35,7 +35,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlAttachmentRef implements java.lang.annotation.Annotation {
+                abstract class XmlAttachmentRef implements java.lang.annotation.Annotation {
                 }
             }
         }

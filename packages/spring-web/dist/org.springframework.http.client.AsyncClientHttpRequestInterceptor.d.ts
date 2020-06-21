@@ -46,7 +46,7 @@ declare namespace org {
                      * @throws IOException in case of I/O errors
                      */
                     // @ts-ignore
-                    intercept(request: org.springframework.http.HttpRequest, body: number /*byte*/[], execution: org.springframework.http.client.AsyncClientHttpRequestExecution): <any>
+                    intercept(request: org.springframework.http.HttpRequest, body: number /*byte*/[], execution: org.springframework.http.client.AsyncClientHttpRequestExecution): object
                 }
             }
         }

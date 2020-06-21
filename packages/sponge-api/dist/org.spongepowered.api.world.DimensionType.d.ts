@@ -12,7 +12,7 @@ declare namespace org {
                      * @return The dimension class for this type
                      */
                     // @ts-ignore
-                    getDimensionClass(): java.lang.Class<? extends org.spongepowered.api.world.Dimension>
+                    getDimensionClass(): java.lang.Class<any>
                 }
             }
         }

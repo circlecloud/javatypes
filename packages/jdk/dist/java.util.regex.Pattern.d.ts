@@ -631,7 +631,7 @@ declare namespace java {
                  * expression&nbsp;<tt>(?d)</tt>.
                  */
                 // @ts-ignore
-                readonly UNIX_LINES: number /*int*/
+                public static readonly UNIX_LINES: number /*int*/
                 /**
                  * Enables case-insensitive matching.
                  * <p> By default, case-insensitive matching assumes that only characters
@@ -643,7 +643,7 @@ declare namespace java {
                  * <p> Specifying this flag may impose a slight performance penalty.  </p>
                  */
                 // @ts-ignore
-                readonly CASE_INSENSITIVE: number /*int*/
+                public static readonly CASE_INSENSITIVE: number /*int*/
                 /**
                  * Permits whitespace and comments in pattern.
                  * <p> In this mode, whitespace is ignored, and embedded comments starting
@@ -652,7 +652,7 @@ declare namespace java {
                  * expression&nbsp;<tt>(?x)</tt>.
                  */
                 // @ts-ignore
-                readonly COMMENTS: number /*int*/
+                public static readonly COMMENTS: number /*int*/
                 /**
                  * Enables multiline mode.
                  * <p> In multiline mode the expressions <tt>^</tt> and <tt>$</tt> match
@@ -663,7 +663,7 @@ declare namespace java {
                  * expression&nbsp;<tt>(?m)</tt>.  </p>
                  */
                 // @ts-ignore
-                readonly MULTILINE: number /*int*/
+                public static readonly MULTILINE: number /*int*/
                 /**
                  * Enables literal parsing of the pattern.
                  * <p> When this flag is specified then the input string that specifies
@@ -677,7 +677,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly LITERAL: number /*int*/
+                public static readonly LITERAL: number /*int*/
                 /**
                  * Enables dotall mode.
                  * <p> In dotall mode, the expression <tt>.</tt> matches any character,
@@ -688,7 +688,7 @@ declare namespace java {
                  * "single-line" mode, which is what this is called in Perl.)  </p>
                  */
                 // @ts-ignore
-                readonly DOTALL: number /*int*/
+                public static readonly DOTALL: number /*int*/
                 /**
                  * Enables Unicode-aware case folding.
                  * <p> When this flag is specified then case-insensitive matching, when
@@ -701,7 +701,7 @@ declare namespace java {
                  * <p> Specifying this flag may impose a performance penalty.  </p>
                  */
                 // @ts-ignore
-                readonly UNICODE_CASE: number /*int*/
+                public static readonly UNICODE_CASE: number /*int*/
                 /**
                  * Enables canonical equivalence.
                  * <p> When this flag is specified then two characters will be considered
@@ -714,7 +714,7 @@ declare namespace java {
                  * <p> Specifying this flag may impose a performance penalty.  </p>
                  */
                 // @ts-ignore
-                readonly CANON_EQ: number /*int*/
+                public static readonly CANON_EQ: number /*int*/
                 /**
                  * Enables the Unicode version of <i>Predefined character classes</i> and
                  * <i>POSIX character classes</i>.
@@ -735,7 +735,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                readonly UNICODE_CHARACTER_CLASS: number /*int*/
+                public static readonly UNICODE_CHARACTER_CLASS: number /*int*/
                 /**
                  * Compiles the given regular expression into a pattern.
                  * @param regex
@@ -745,7 +745,7 @@ declare namespace java {
                  *           If the expression's syntax is invalid
                  */
                 // @ts-ignore
-                compile(regex: string): java.util.regex.Pattern
+                public static compile(regex: java.lang.String | string): java.util.regex.Pattern
                 /**
                  * Compiles the given regular expression into a pattern with the given
                  * flags.
@@ -765,13 +765,13 @@ declare namespace java {
                  *           If the expression's syntax is invalid
                  */
                 // @ts-ignore
-                compile(regex: string, flags: number /*int*/): java.util.regex.Pattern
+                public static compile(regex: java.lang.String | string, flags: number /*int*/): java.util.regex.Pattern
                 /**
                  * Returns the regular expression from which this pattern was compiled.
                  * @return The source of this pattern
                  */
                 // @ts-ignore
-                pattern(): java.lang.String
+                public pattern(): string
                 /**
                  * <p>Returns the string representation of this pattern. This
                  * is the regular expression from which this pattern was
@@ -780,7 +780,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Creates a matcher that will match the given input against this pattern.
                  * @param input
@@ -788,13 +788,13 @@ declare namespace java {
                  * @return A new matcher for this pattern
                  */
                 // @ts-ignore
-                matcher(input: java.lang.CharSequence): java.util.regex.Matcher
+                public matcher(input: java.lang.CharSequence): java.util.regex.Matcher
                 /**
                  * Returns this pattern's match flags.
                  * @return The match flags specified when this pattern was compiled
                  */
                 // @ts-ignore
-                flags(): int
+                public flags(): number /*int*/
                 /**
                  * Compiles the given regular expression and attempts to match the given
                  * input against it.
@@ -815,7 +815,7 @@ declare namespace java {
                  *           If the expression's syntax is invalid
                  */
                 // @ts-ignore
-                matches(regex: string, input: java.lang.CharSequence): boolean
+                public static matches(regex: java.lang.String | string, input: java.lang.CharSequence): boolean
                 /**
                  * Splits the given input sequence around matches of this pattern.
                  * <p> The array returned by this method contains each substring of the
@@ -873,7 +873,7 @@ declare namespace java {
                  *           around matches of this pattern
                  */
                 // @ts-ignore
-                split(input: java.lang.CharSequence, limit: number /*int*/): java.lang.String[]
+                public split(input: java.lang.CharSequence, limit: number /*int*/): string[]
                 /**
                  * Splits the given input sequence around matches of this pattern.
                  * <p> This method works as if by invoking the two-argument {@link
@@ -897,7 +897,7 @@ declare namespace java {
                  *           around matches of this pattern
                  */
                 // @ts-ignore
-                split(input: java.lang.CharSequence): java.lang.String[]
+                public split(input: java.lang.CharSequence): string[]
                 /**
                  * Returns a literal pattern <code>String</code> for the specified
                  * <code>String</code>.
@@ -911,14 +911,14 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                quote(s: string): java.lang.String
+                public static quote(s: java.lang.String | string): string
                 /**
                  * Creates a predicate which can be used to match a string.
                  * @return The predicate which can be used for matching on a string
                  * @since 1.8
                  */
                 // @ts-ignore
-                asPredicate(): java.util.function.Predicate<java.lang.String>
+                public asPredicate(): java.util.function$.Predicate<java.lang.String | string>
                 /**
                  * Creates a stream from the given input sequence around matches of this
                  * pattern.
@@ -946,7 +946,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                splitAsStream(input: java.lang.CharSequence): java.util.stream.Stream<java.lang.String>
+                public splitAsStream(input: java.lang.CharSequence): java.util.stream.Stream<java.lang.String | string>
             }
         }
     }

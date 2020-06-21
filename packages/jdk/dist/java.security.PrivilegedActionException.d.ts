@@ -52,9 +52,9 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
         }
     }
 }

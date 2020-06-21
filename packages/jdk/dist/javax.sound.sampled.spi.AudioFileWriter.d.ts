@@ -10,7 +10,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class AudioFileWriter extends java.lang.Object {
+                abstract class AudioFileWriter extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -20,7 +20,7 @@ declare namespace javax {
                      *  an array of length 0 is returned.
                      */
                     // @ts-ignore
-                    abstract getAudioFileTypes(): javax.sound.sampled.AudioFileFormat.Type[]
+                    public abstract getAudioFileTypes(): javax.sound.sampled.AudioFileFormat.Type[]
                     /**
                      * Indicates whether file writing support for the specified file type is provided
                      * by this audio file writer.
@@ -29,7 +29,7 @@ declare namespace javax {
                      *  otherwise <code>false</code>
                      */
                     // @ts-ignore
-                    isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type): boolean
+                    public isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type): boolean
                     /**
                      * Obtains the file types that this audio file writer can write from the
                      * audio input stream specified.
@@ -39,7 +39,7 @@ declare namespace javax {
                      *  an array of length 0 is returned.
                      */
                     // @ts-ignore
-                    abstract getAudioFileTypes(stream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioFileFormat.Type[]
+                    public abstract getAudioFileTypes(stream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioFileFormat.Type[]
                     /**
                      * Indicates whether an audio file of the type specified can be written
                      * from the audio input stream indicated.
@@ -49,7 +49,7 @@ declare namespace javax {
                      *  otherwise <code>false</code>
                      */
                     // @ts-ignore
-                    isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type, stream: javax.sound.sampled.AudioInputStream): boolean
+                    public isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type, stream: javax.sound.sampled.AudioInputStream): boolean
                     /**
                      * Writes a stream of bytes representing an audio file of the file type
                      * indicated to the output stream provided.  Some file types require that
@@ -70,7 +70,7 @@ declare namespace javax {
                      * @see #getAudioFileTypes
                      */
                     // @ts-ignore
-                    abstract write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.OutputStream): int
+                    public abstract write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.OutputStream): number /*int*/
                     /**
                      * Writes a stream of bytes representing an audio file of the file format
                      * indicated to the external file provided.
@@ -86,7 +86,7 @@ declare namespace javax {
                      * @see #getAudioFileTypes
                      */
                     // @ts-ignore
-                    abstract write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.File): int
+                    public abstract write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.File): number /*int*/
                 }
             }
         }

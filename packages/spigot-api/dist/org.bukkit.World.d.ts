@@ -29,7 +29,7 @@ declare namespace org {
              * @return Y-coordinate of the highest non-empty block
              */
             // @ts-ignore
-            getHighestBlockYAt(x: number /*int*/, z: number /*int*/): int
+            getHighestBlockYAt(x: number /*int*/, z: number /*int*/): number /*int*/
             /**
              * Gets the highest non-empty (impassable) coordinate at the given
              * {@link Location}.
@@ -37,7 +37,7 @@ declare namespace org {
              * @return Y-coordinate of the highest non-empty block
              */
             // @ts-ignore
-            getHighestBlockYAt(location: org.bukkit.Location): int
+            getHighestBlockYAt(location: org.bukkit.Location): number /*int*/
             /**
              * Gets the highest non-empty (impassable) block at the given coordinates.
              * @param x X-coordinate of the block
@@ -64,7 +64,7 @@ declare namespace org {
              *  {#link HeightMap}
              */
             // @ts-ignore
-            getHighestBlockYAt(x: number /*int*/, z: number /*int*/, heightMap: org.bukkit.HeightMap): int
+            getHighestBlockYAt(x: number /*int*/, z: number /*int*/, heightMap: org.bukkit.HeightMap): number /*int*/
             /**
              * Gets the highest coordinate corresponding to the {@link HeightMap} at the
              * given {@link Location}.
@@ -75,7 +75,7 @@ declare namespace org {
              *  {#link HeightMap}
              */
             // @ts-ignore
-            getHighestBlockYAt(location: org.bukkit.Location, heightMap: org.bukkit.HeightMap): int
+            getHighestBlockYAt(location: org.bukkit.Location, heightMap: org.bukkit.HeightMap): number /*int*/
             /**
              * Gets the highest block corresponding to the {@link HeightMap} at the
              * given coordinates.
@@ -290,7 +290,7 @@ declare namespace org {
              * @return unmodifiable collection of force loaded chunks
              */
             // @ts-ignore
-            getForceLoadedChunks(): java.util.Collection<org.bukkit.Chunk>
+            getForceLoadedChunks(): Array<org.bukkit.Chunk>
             /**
              * Adds a plugin ticket for the specified chunk, loading the chunk if it is
              * not already loaded.
@@ -355,7 +355,7 @@ declare namespace org {
              * @see #removePluginChunkTicket(int, int, Plugin)
              */
             // @ts-ignore
-            getPluginChunkTickets(x: number /*int*/, z: number /*int*/): java.util.Collection<org.bukkit.plugin.Plugin>
+            getPluginChunkTickets(x: number /*int*/, z: number /*int*/): Array<org.bukkit.plugin.Plugin>
             /**
              * Returns a map of which plugins have tickets for what chunks. The returned
              * map is not updated when plugin tickets are added or removed to chunks. If
@@ -371,7 +371,7 @@ declare namespace org {
              * @see #removePluginChunkTicket(int, int, Plugin)
              */
             // @ts-ignore
-            getPluginChunkTickets(): java.util.Map<org.bukkit.plugin.Plugin, java.util.Collection<org.bukkit.Chunk>>
+            getPluginChunkTickets(): java.util.Map<org.bukkit.plugin.Plugin, java.util.Collection<org.bukkit.Chunk> | Array<org.bukkit.Chunk>>
             /**
              * Drops an item at the specified {@link Location}
              * @param location Location to drop the item
@@ -456,13 +456,13 @@ declare namespace org {
              * @return A List of all Entities currently residing in this world
              */
             // @ts-ignore
-            getEntities(): java.util.List<org.bukkit.entity.Entity>
+            getEntities(): Array<org.bukkit.entity.Entity>
             /**
              * Get a list of all living entities in this World
              * @return A List of all LivingEntities currently residing in this world
              */
             // @ts-ignore
-            getLivingEntities(): java.util.List<org.bukkit.entity.LivingEntity>
+            getLivingEntities(): Array<org.bukkit.entity.LivingEntity>
             /**
              * Get a collection of all entities in this World matching the given
              * class/interface
@@ -472,7 +472,7 @@ declare namespace org {
              *      match the given class/interface
              */
             // @ts-ignore
-            getEntitiesByClass<T extends org.bukkit.entity.Entity>(...classes: java.lang.Class[]): java.util.Collection<T>
+            getEntitiesByClass<T extends org.bukkit.entity.Entity>(...classes: java.lang.Class<T>[]): Array<T>
             /**
              * Get a collection of all entities in this World matching the given
              * class/interface
@@ -482,7 +482,7 @@ declare namespace org {
              *      match the given class/interface
              */
             // @ts-ignore
-            getEntitiesByClass<T extends org.bukkit.entity.Entity>(cls: java.lang.Class<T>): java.util.Collection<T>
+            getEntitiesByClass<T extends org.bukkit.entity.Entity>(cls: java.lang.Class<T>): Array<T>
             /**
              * Get a collection of all entities in this World matching any of the
              * given classes/interfaces
@@ -491,13 +491,13 @@ declare namespace org {
              *      match one or more of the given classes/interfaces
              */
             // @ts-ignore
-            getEntitiesByClasses(...classes: java.lang.Class[]): java.util.Collection<org.bukkit.entity.Entity>
+            getEntitiesByClasses(...classes: java.lang.Class<any>[]): Array<org.bukkit.entity.Entity>
             /**
              * Get a list of all players in this World
              * @return A list of all Players currently residing in this world
              */
             // @ts-ignore
-            getPlayers(): java.util.List<org.bukkit.entity.Player>
+            getPlayers(): Array<org.bukkit.entity.Player>
             /**
              * Returns a list of entities within a bounding box centered around a
              * Location.
@@ -513,7 +513,7 @@ declare namespace org {
              *       non-null collection.
              */
             // @ts-ignore
-            getNearbyEntities(location: org.bukkit.Location, x: number /*double*/, y: number /*double*/, z: number /*double*/): java.util.Collection<org.bukkit.entity.Entity>
+            getNearbyEntities(location: org.bukkit.Location, x: number /*double*/, y: number /*double*/, z: number /*double*/): Array<org.bukkit.entity.Entity>
             /**
              * Returns a list of entities within a bounding box centered around a
              * Location.
@@ -531,7 +531,7 @@ declare namespace org {
              *      non-null collection.
              */
             // @ts-ignore
-            getNearbyEntities(location: org.bukkit.Location, x: number /*double*/, y: number /*double*/, z: number /*double*/, filter: java.util.function.Predicate<org.bukkit.entity.Entity> | java.util.function$.Predicate<org.bukkit.entity.Entity>): java.util.Collection<org.bukkit.entity.Entity>
+            getNearbyEntities(location: org.bukkit.Location, x: number /*double*/, y: number /*double*/, z: number /*double*/, filter: java.util.function$.Predicate<org.bukkit.entity.Entity>): Array<org.bukkit.entity.Entity>
             /**
              * Returns a list of entities within the given bounding box.
              * <p>
@@ -543,7 +543,7 @@ declare namespace org {
              *      be a non-null collection
              */
             // @ts-ignore
-            getNearbyEntities(boundingBox: org.bukkit.util.BoundingBox): java.util.Collection<org.bukkit.entity.Entity>
+            getNearbyEntities(boundingBox: org.bukkit.util.BoundingBox): Array<org.bukkit.entity.Entity>
             /**
              * Returns a list of entities within the given bounding box.
              * <p>
@@ -557,7 +557,7 @@ declare namespace org {
              *      be a non-null collection
              */
             // @ts-ignore
-            getNearbyEntities(boundingBox: org.bukkit.util.BoundingBox, filter: java.util.function.Predicate<org.bukkit.entity.Entity> | java.util.function$.Predicate<org.bukkit.entity.Entity>): java.util.Collection<org.bukkit.entity.Entity>
+            getNearbyEntities(boundingBox: org.bukkit.util.BoundingBox, filter: java.util.function$.Predicate<org.bukkit.entity.Entity>): Array<org.bukkit.entity.Entity>
             /**
              * Performs a ray trace that checks for entity collisions.
              * <p>
@@ -606,7 +606,7 @@ declare namespace org {
              * @see #rayTraceEntities(Location, Vector, double, double, Predicate)
              */
             // @ts-ignore
-            rayTraceEntities(start: org.bukkit.Location, direction: org.bukkit.util.Vector, maxDistance: number /*double*/, filter: java.util.function.Predicate<org.bukkit.entity.Entity> | java.util.function$.Predicate<org.bukkit.entity.Entity>): org.bukkit.util.RayTraceResult
+            rayTraceEntities(start: org.bukkit.Location, direction: org.bukkit.util.Vector, maxDistance: number /*double*/, filter: java.util.function$.Predicate<org.bukkit.entity.Entity>): org.bukkit.util.RayTraceResult
             /**
              * Performs a ray trace that checks for entity collisions.
              * <p>
@@ -624,7 +624,7 @@ declare namespace org {
              *      is no hit
              */
             // @ts-ignore
-            rayTraceEntities(start: org.bukkit.Location, direction: org.bukkit.util.Vector, maxDistance: number /*double*/, raySize: number /*double*/, filter: java.util.function.Predicate<org.bukkit.entity.Entity> | java.util.function$.Predicate<org.bukkit.entity.Entity>): org.bukkit.util.RayTraceResult
+            rayTraceEntities(start: org.bukkit.Location, direction: org.bukkit.util.Vector, maxDistance: number /*double*/, raySize: number /*double*/, filter: java.util.function$.Predicate<org.bukkit.entity.Entity>): org.bukkit.util.RayTraceResult
             /**
              * Performs a ray trace that checks for block collisions using the blocks'
              * precise collision shapes.
@@ -712,13 +712,13 @@ declare namespace org {
              *      entity, or <code>null</code> if there is no hit
              */
             // @ts-ignore
-            rayTrace(start: org.bukkit.Location, direction: org.bukkit.util.Vector, maxDistance: number /*double*/, fluidCollisionMode: org.bukkit.FluidCollisionMode, ignorePassableBlocks: boolean, raySize: number /*double*/, filter: java.util.function.Predicate<org.bukkit.entity.Entity> | java.util.function$.Predicate<org.bukkit.entity.Entity>): org.bukkit.util.RayTraceResult
+            rayTrace(start: org.bukkit.Location, direction: org.bukkit.util.Vector, maxDistance: number /*double*/, fluidCollisionMode: org.bukkit.FluidCollisionMode, ignorePassableBlocks: boolean, raySize: number /*double*/, filter: java.util.function$.Predicate<org.bukkit.entity.Entity>): org.bukkit.util.RayTraceResult
             /**
              * Gets the unique name of this world
              * @return Name of this world
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             /**
              * Gets the Unique ID of this world
              * @return Unique ID of this world.
@@ -757,7 +757,7 @@ declare namespace org {
              * @see #getFullTime() Returns an absolute time of this world
              */
             // @ts-ignore
-            getTime(): long
+            getTime(): number /*long*/
             /**
              * Sets the relative in-game time on the server.
              * <p>
@@ -778,7 +778,7 @@ declare namespace org {
              * @see #getTime() Returns a relative time of this world
              */
             // @ts-ignore
-            getFullTime(): long
+            getFullTime(): number /*long*/
             /**
              * Sets the in-game time on the server
              * <p>
@@ -807,7 +807,7 @@ declare namespace org {
              * @return Time in ticks
              */
             // @ts-ignore
-            getWeatherDuration(): int
+            getWeatherDuration(): number /*int*/
             /**
              * Set the remaining time in ticks of the current conditions.
              * @param duration Time in ticks
@@ -831,7 +831,7 @@ declare namespace org {
              * @return Duration in ticks
              */
             // @ts-ignore
-            getThunderDuration(): int
+            getThunderDuration(): number /*int*/
             /**
              * Set the thundering duration.
              * @param duration Duration in ticks
@@ -939,7 +939,7 @@ declare namespace org {
              * @return This worlds Seed
              */
             // @ts-ignore
-            getSeed(): long
+            getSeed(): number /*long*/
             /**
              * Gets the current PVP setting for this world.
              * @return True if PVP is enabled
@@ -968,7 +968,7 @@ declare namespace org {
              * @return List containing any or none BlockPopulators
              */
             // @ts-ignore
-            getPopulators(): java.util.List<org.bukkit.generator.BlockPopulator>
+            getPopulators(): Array<org.bukkit.generator.BlockPopulator>
             /**
              * Spawn an entity of a specific class at the given {@link Location}
              * @param location the {#link Location} to spawn the entity at
@@ -1171,7 +1171,7 @@ declare namespace org {
              * @deprecated biomes are now 3-dimensional
              */
             // @ts-ignore
-            getTemperature(x: number /*int*/, z: number /*int*/): double
+            getTemperature(x: number /*int*/, z: number /*int*/): number /*double*/
             /**
              * Gets the temperature for the given block coordinates.
              * <p>
@@ -1186,7 +1186,7 @@ declare namespace org {
              * @return Temperature of the requested block
              */
             // @ts-ignore
-            getTemperature(x: number /*int*/, y: number /*int*/, z: number /*int*/): double
+            getTemperature(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*double*/
             /**
              * Gets the humidity for the given block coordinates.
              * <p>
@@ -1198,7 +1198,7 @@ declare namespace org {
              * @deprecated biomes are now 3-dimensional
              */
             // @ts-ignore
-            getHumidity(x: number /*int*/, z: number /*int*/): double
+            getHumidity(x: number /*int*/, z: number /*int*/): number /*double*/
             /**
              * Gets the humidity for the given block coordinates.
              * <p>
@@ -1210,7 +1210,7 @@ declare namespace org {
              * @return Humidity of the requested block
              */
             // @ts-ignore
-            getHumidity(x: number /*int*/, y: number /*int*/, z: number /*int*/): double
+            getHumidity(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*double*/
             /**
              * Gets the maximum height of this world.
              * <p>
@@ -1218,7 +1218,7 @@ declare namespace org {
              * @return Maximum height of the world
              */
             // @ts-ignore
-            getMaxHeight(): int
+            getMaxHeight(): number /*int*/
             /**
              * Gets the sea level for this world.
              * <p>
@@ -1226,7 +1226,7 @@ declare namespace org {
              * @return Sea level
              */
             // @ts-ignore
-            getSeaLevel(): int
+            getSeaLevel(): number /*int*/
             /**
              * Gets whether the world's spawn area should be kept loaded into memory
              * or not.
@@ -1323,7 +1323,7 @@ declare namespace org {
              * @return The world's ticks per animal spawns value
              */
             // @ts-ignore
-            getTicksPerAnimalSpawns(): long
+            getTicksPerAnimalSpawns(): number /*long*/
             /**
              * Sets the world's ticks per animal spawns value
              * <p>
@@ -1374,7 +1374,7 @@ declare namespace org {
              * @return The world's ticks per monster spawns value
              */
             // @ts-ignore
-            getTicksPerMonsterSpawns(): long
+            getTicksPerMonsterSpawns(): number /*long*/
             /**
              * Sets the world's ticks per monster spawns value
              * <p>
@@ -1423,7 +1423,7 @@ declare namespace org {
              * @return The world's ticks per water mob spawns value
              */
             // @ts-ignore
-            getTicksPerWaterSpawns(): long
+            getTicksPerWaterSpawns(): number /*long*/
             /**
              * Sets the world's ticks per water mob spawns value
              * <p>
@@ -1470,7 +1470,7 @@ declare namespace org {
              * @return The world's ticks per ambient mob spawns value
              */
             // @ts-ignore
-            getTicksPerAmbientSpawns(): long
+            getTicksPerAmbientSpawns(): number /*long*/
             /**
              * Sets the world's ticks per ambient mob spawns value
              * <p>
@@ -1501,7 +1501,7 @@ declare namespace org {
              * @return The monster spawn limit
              */
             // @ts-ignore
-            getMonsterSpawnLimit(): int
+            getMonsterSpawnLimit(): number /*int*/
             /**
              * Sets the limit for number of monsters that can spawn in a chunk in this
              * world
@@ -1518,7 +1518,7 @@ declare namespace org {
              * @return The animal spawn limit
              */
             // @ts-ignore
-            getAnimalSpawnLimit(): int
+            getAnimalSpawnLimit(): number /*int*/
             /**
              * Sets the limit for number of animals that can spawn in a chunk in this
              * world
@@ -1535,7 +1535,7 @@ declare namespace org {
              * @return The water animal spawn limit
              */
             // @ts-ignore
-            getWaterAnimalSpawnLimit(): int
+            getWaterAnimalSpawnLimit(): number /*int*/
             /**
              * Sets the limit for number of water animals that can spawn in a chunk in
              * this world
@@ -1552,7 +1552,7 @@ declare namespace org {
              * @return The ambient spawn limit
              */
             // @ts-ignore
-            getAmbientSpawnLimit(): int
+            getAmbientSpawnLimit(): number /*int*/
             /**
              * Sets the limit for number of ambient mobs that can spawn in a chunk in
              * this world
@@ -1586,7 +1586,7 @@ declare namespace org {
              * @param pitch the pitch of the sound
              */
             // @ts-ignore
-            playSound(location: org.bukkit.Location, sound: string, volume: number /*float*/, pitch: number /*float*/): void
+            playSound(location: org.bukkit.Location, sound: java.lang.String | string, volume: number /*float*/, pitch: number /*float*/): void
             /**
              * Play a Sound at the provided Location in the World.
              * <p>
@@ -1612,13 +1612,13 @@ declare namespace org {
              * @param pitch the pitch of the sound
              */
             // @ts-ignore
-            playSound(location: org.bukkit.Location, sound: string, category: org.bukkit.SoundCategory, volume: number /*float*/, pitch: number /*float*/): void
+            playSound(location: org.bukkit.Location, sound: java.lang.String | string, category: org.bukkit.SoundCategory, volume: number /*float*/, pitch: number /*float*/): void
             /**
              * Get an array containing the names of all the {@link GameRule}s.
              * @return An array of {#link GameRule} names.
              */
             // @ts-ignore
-            getGameRules(): java.lang.String[]
+            getGameRules(): string[]
             /**
              * Gets the current state of the specified rule
              * <p>
@@ -1628,7 +1628,7 @@ declare namespace org {
              * @deprecated use {#link #getGameRuleValue(GameRule)} instead
              */
             // @ts-ignore
-            getGameRuleValue(rule: string): java.lang.String
+            getGameRuleValue(rule: java.lang.String | string): string
             /**
              * Set the specified gamerule to specified value.
              * <p>
@@ -1642,14 +1642,14 @@ declare namespace org {
              * @deprecated use {#link #setGameRule(GameRule, Object)} instead.
              */
             // @ts-ignore
-            setGameRuleValue(rule: string, value: string): boolean
+            setGameRuleValue(rule: java.lang.String | string, value: java.lang.String | string): boolean
             /**
              * Checks if string is a valid game rule
              * @param rule Rule to check
              * @return True if rule exists
              */
             // @ts-ignore
-            isGameRule(rule: string): boolean
+            isGameRule(rule: java.lang.String | string): boolean
             /**
              * Get the current value for a given {@link GameRule}.
              * @param rule the GameRule to check
@@ -1944,7 +1944,7 @@ declare namespace org {
              * @return the view distance used for this world
              */
             // @ts-ignore
-            getViewDistance(): int
+            getViewDistance(): number /*int*/
             // @ts-ignore
             spigot(): org.bukkit.World.Spigot
             /**
@@ -1960,7 +1960,7 @@ declare namespace org {
              * @return the list of all active raids
              */
             // @ts-ignore
-            getRaids(): java.util.List<org.bukkit.Raid>
+            getRaids(): Array<org.bukkit.Raid>
             /**
              * Get the {@link DragonBattle} associated with this world.
              * If this world's environment is not {@link Environment#THE_END}, null will

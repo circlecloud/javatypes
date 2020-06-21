@@ -18,7 +18,7 @@ declare namespace org {
                      * @param script the script String
                      */
                     // @ts-ignore
-                    constructor(script: string)
+                    constructor(script: java.lang.String | string)
                     /**
                      * Create a new StaticScriptSource for the given script.
                      * @param script the script String
@@ -26,21 +26,21 @@ declare namespace org {
                      *  (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(script: string, className: string)
+                    constructor(script: java.lang.String | string, className: java.lang.String | string)
                     /**
                      * Set a fresh script String, overriding the previous script.
                      * @param script the script String
                      */
                     // @ts-ignore
-                    setScript(script: string): void
+                    public setScript(script: java.lang.String | string): void
                     // @ts-ignore
-                    getScriptAsString(): java.lang.String
+                    public getScriptAsString(): string
                     // @ts-ignore
-                    isModified(): boolean
+                    public isModified(): boolean
                     // @ts-ignore
-                    suggestedClassName(): java.lang.String
+                    public suggestedClassName(): string
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -21,20 +21,20 @@ declare namespace javax {
              * @author Jeff Dinkins
              */
             // @ts-ignore
-            class FileFilter extends java.lang.Object {
+            abstract class FileFilter extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Whether the given file is accepted by this filter.
                  */
                 // @ts-ignore
-                abstract accept(f: java.io.File): boolean
+                public abstract accept(f: java.io.File): boolean
                 /**
                  * The description of this filter. For example: "JPG and GIF Images"
                  * @see FileView#getName
                  */
                 // @ts-ignore
-                abstract getDescription(): java.lang.String
+                public abstract getDescription(): string
             }
         }
     }

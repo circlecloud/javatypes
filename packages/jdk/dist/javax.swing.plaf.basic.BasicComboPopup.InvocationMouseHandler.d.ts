@@ -31,14 +31,14 @@ declare namespace javax {
                          * @param e the mouse-press event to be handled
                          */
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         /**
                          * Responds to the user terminating
                          * a click or drag that began on the combo box.
                          * @param e the mouse-release event to be handled
                          */
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

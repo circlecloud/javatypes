@@ -17,7 +17,7 @@ declare namespace org {
                      * @return the entity that removed the hanging entity
                      */
                     // @ts-ignore
-                    getRemover(): org.bukkit.entity.Entity
+                    public getRemover(): org.bukkit.entity.Entity
                 }
             }
         }

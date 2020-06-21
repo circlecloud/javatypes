@@ -21,9 +21,9 @@ declare namespace org {
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        setParentThemeSource(parent: org.springframework.ui.context.ThemeSource): void
+                        public setParentThemeSource(parent: org.springframework.ui.context.ThemeSource): void
                         // @ts-ignore
-                        getParentThemeSource(): org.springframework.ui.context.ThemeSource
+                        public getParentThemeSource(): org.springframework.ui.context.ThemeSource
                         /**
                          * Set the prefix that gets applied to the ResourceBundle basenames,
                          * i.e. the theme names.
@@ -35,7 +35,7 @@ declare namespace org {
                          * @see java.util.ResourceBundle#getBundle(String)
                          */
                         // @ts-ignore
-                        setBasenamePrefix(basenamePrefix: string): void
+                        public setBasenamePrefix(basenamePrefix: java.lang.String | string): void
                         /**
                          * Set the default charset to use for parsing resource bundle files.
                          * <p>{@link ResourceBundleMessageSource}'s default is the
@@ -44,7 +44,7 @@ declare namespace org {
                          * @see ResourceBundleMessageSource#setDefaultEncoding
                          */
                         // @ts-ignore
-                        setDefaultEncoding(defaultEncoding: string): void
+                        public setDefaultEncoding(defaultEncoding: java.lang.String | string): void
                         /**
                          * Set whether to fall back to the system Locale if no files for a
                          * specific Locale have been found.
@@ -53,9 +53,9 @@ declare namespace org {
                          * @see ResourceBundleMessageSource#setFallbackToSystemLocale
                          */
                         // @ts-ignore
-                        setFallbackToSystemLocale(fallbackToSystemLocale: boolean): void
+                        public setFallbackToSystemLocale(fallbackToSystemLocale: boolean): void
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         /**
                          * This implementation returns a SimpleTheme instance, holding a
                          * ResourceBundle-based MessageSource whose basename corresponds to
@@ -66,7 +66,7 @@ declare namespace org {
                          * @see #createMessageSource
                          */
                         // @ts-ignore
-                        getTheme(themeName: string): org.springframework.ui.context.Theme
+                        public getTheme(themeName: java.lang.String | string): org.springframework.ui.context.Theme
                         /**
                          * Create a MessageSource for the given basename,
                          * to be used as MessageSource for the corresponding theme.
@@ -79,7 +79,7 @@ declare namespace org {
                          * @see org.springframework.context.support.ReloadableResourceBundleMessageSource
                          */
                         // @ts-ignore
-                        createMessageSource(basename: string): org.springframework.context.MessageSource
+                        createMessageSource(basename: java.lang.String | string): org.springframework.context.MessageSource
                         /**
                          * Initialize the MessageSource of the given theme with the
                          * one from the corresponding parent of this ThemeSource.

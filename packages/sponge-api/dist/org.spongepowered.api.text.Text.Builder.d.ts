@@ -8,14 +8,14 @@ declare namespace org {
                      * @see Text
                      */
                     // @ts-ignore
-                    class Builder extends java.lang.Object implements org.spongepowered.api.text.TextRepresentable {
+                    abstract class Builder extends java.lang.Object implements org.spongepowered.api.text.TextRepresentable {
                         /**
                          * Returns the current format of the {@link Text} in this builder.
                          * @return The current format
                          * @see Text#getFormat()
                          */
                         // @ts-ignore
-                        getFormat(): org.spongepowered.api.text.format.TextFormat
+                        public getFormat(): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Sets the {@link TextFormat} of this text.
                          * @param format The new text format for this text
@@ -23,14 +23,14 @@ declare namespace org {
                          * @see Text#getFormat()
                          */
                         // @ts-ignore
-                        format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.Text.Builder
+                        public format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.Text.Builder
                         /**
                          * Returns the current color of the {@link Text} in this builder.
                          * @return The current color
                          * @see Text#getColor()
                          */
                         // @ts-ignore
-                        getColor(): org.spongepowered.api.text.format.TextColor
+                        public getColor(): org.spongepowered.api.text.format.TextColor
                         /**
                          * Sets the {@link TextColor} of this text.
                          * @param color The new text color for this text
@@ -38,14 +38,14 @@ declare namespace org {
                          * @see Text#getColor()
                          */
                         // @ts-ignore
-                        color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.Text.Builder
+                        public color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.Text.Builder
                         /**
                          * Returns the current style of the {@link Text} in this builder.
                          * @return The current style
                          * @see Text#getStyle()
                          */
                         // @ts-ignore
-                        getStyle(): org.spongepowered.api.text.format.TextStyle
+                        public getStyle(): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Sets the text styles of this text. This will construct a composite
                          * {@link TextStyle} of the current style and the specified styles first
@@ -55,14 +55,14 @@ declare namespace org {
                          * @see Text#getStyle()
                          */
                         // @ts-ignore
-                        style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.Text.Builder
+                        public style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.Text.Builder
                         /**
                          * Returns the current {@link ClickAction} of this builder.
                          * @return The current click action or {#link Optional#empty()} if none
                          * @see Text#getClickAction()
                          */
                         // @ts-ignore
-                        getClickAction(): java.util.Optional<org.spongepowered.api.text.action.ClickAction<?>>
+                        public getClickAction(): java.util.Optional<org.spongepowered.api.text.action.ClickAction<any>>
                         /**
                          * Sets the {@link ClickAction} that will be executed if the text is
                          * clicked in the chat.
@@ -71,14 +71,14 @@ declare namespace org {
                          * @see Text#getClickAction()
                          */
                         // @ts-ignore
-                        onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.Text.Builder
+                        public onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Returns the current {@link HoverAction} of this builder.
                          * @return The current hover action or {#link Optional#empty()} if none
                          * @see Text#getHoverAction()
                          */
                         // @ts-ignore
-                        getHoverAction(): java.util.Optional<org.spongepowered.api.text.action.HoverAction<?>>
+                        public getHoverAction(): java.util.Optional<org.spongepowered.api.text.action.HoverAction<any>>
                         /**
                          * Sets the {@link HoverAction} that will be executed if the text is
                          * hovered in the chat.
@@ -87,7 +87,7 @@ declare namespace org {
                          * @see Text#getHoverAction()
                          */
                         // @ts-ignore
-                        onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.Text.Builder
+                        public onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Returns the current {@link ShiftClickAction} of this builder.
                          * @return The current shift click action or {#link Optional#empty()} if
@@ -95,7 +95,7 @@ declare namespace org {
                          * @see Text#getShiftClickAction()
                          */
                         // @ts-ignore
-                        getShiftClickAction(): java.util.Optional<org.spongepowered.api.text.action.ShiftClickAction<?>>
+                        public getShiftClickAction(): java.util.Optional<org.spongepowered.api.text.action.ShiftClickAction<any>>
                         /**
                          * Sets the {@link ShiftClickAction} that will be executed if the text
                          * is shift-clicked in the chat.
@@ -104,7 +104,7 @@ declare namespace org {
                          * @see Text#getShiftClickAction()
                          */
                         // @ts-ignore
-                        onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.Text.Builder
+                        public onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Returns a view of the current children of this builder.
                          * <p>The returned list is unmodifiable, but not immutable. It will
@@ -113,7 +113,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        getChildren(): java.util.List<org.spongepowered.api.text.Text>
+                        public getChildren(): Array<org.spongepowered.api.text.Text>
                         /**
                          * Appends the specified {@link Text} to the end of this text.
                          * @param children The texts to append
@@ -121,7 +121,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text.Builder
+                        public append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text.Builder
                         /**
                          * Appends the specified {@link Text} to the end of this text.
                          * @param children The texts to append
@@ -129,7 +129,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        append(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public append(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Appends the specified {@link Text} to the end of this text.
                          * @param children The texts to append
@@ -137,7 +137,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        append(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public append(children: java.lang.Iterable<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Appends the specified {@link Text} to the end of this text.
                          * @param children The texts to append
@@ -145,7 +145,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        append(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public append(children: java.util.Iterator<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Inserts the specified {@link Text} at the given position of this
                          * builder.
@@ -156,7 +156,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text.Builder
+                        public insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text.Builder
                         /**
                          * Inserts the specified {@link Text} at the given position of this
                          * builder.
@@ -167,7 +167,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public insert(pos: number /*int*/, children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Inserts the specified {@link Text} at the given position of this
                          * builder.
@@ -178,7 +178,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public insert(pos: number /*int*/, children: java.lang.Iterable<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Inserts the specified {@link Text} at the given position of this
                          * builder.
@@ -189,14 +189,14 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public insert(pos: number /*int*/, children: java.util.Iterator<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes the last child in this builder.
                          * @return This text builder
                          * @see #remove(int)
                          */
                         // @ts-ignore
-                        removeLastChild(): org.spongepowered.api.text.Text.Builder
+                        public removeLastChild(): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes the child at the given index.
                          * @param index The index of the child
@@ -204,7 +204,7 @@ declare namespace org {
                          * @throws IndexOutOfBoundsException if the given index is out of bounds
                          */
                         // @ts-ignore
-                        remove(index: number /*int*/): org.spongepowered.api.text.Text.Builder
+                        public remove(index: number /*int*/): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes the specified {@link Text} from this builder.
                          * @param children The texts to remove
@@ -212,7 +212,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text.Builder
+                        public remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes the specified {@link Text} from this builder.
                          * @param children The texts to remove
@@ -220,7 +220,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        remove(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public remove(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes the specified {@link Text} from this builder.
                          * @param children The texts to remove
@@ -228,7 +228,7 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        remove(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public remove(children: java.lang.Iterable<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes the specified {@link Text} from this builder.
                          * @param children The texts to remove
@@ -236,21 +236,21 @@ declare namespace org {
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        remove(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.Text.Builder
+                        public remove(children: java.util.Iterator<any>): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes all children from this builder.
                          * @return This text builder
                          * @see Text#getChildren()
                          */
                         // @ts-ignore
-                        removeAll(): org.spongepowered.api.text.Text.Builder
+                        public removeAll(): org.spongepowered.api.text.Text.Builder
                         /**
                          * Removes all empty texts from the beginning and end of this
                          * builder.
                          * @return This builder
                          */
                         // @ts-ignore
-                        trim(): org.spongepowered.api.text.Text.Builder
+                        public trim(): org.spongepowered.api.text.Text.Builder
                         /**
                          * Builds an immutable instance of the current state of this text
                          * builder.
@@ -258,15 +258,15 @@ declare namespace org {
                          *          builder
                          */
                         // @ts-ignore
-                        abstract build(): org.spongepowered.api.text.Text
+                        public abstract build(): org.spongepowered.api.text.Text
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        toText(): org.spongepowered.api.text.Text
+                        public toText(): org.spongepowered.api.text.Text
                     }
                 }
             }

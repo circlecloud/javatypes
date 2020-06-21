@@ -25,13 +25,13 @@ declare namespace java {
              * @return A certificate path.
              */
             // @ts-ignore
-            getSignerCertPath(): java.security.cert.CertPath
+            public getSignerCertPath(): java.security.cert.CertPath
             /**
              * Returns the signature timestamp.
              * @return The timestamp or {#code null} if none is present.
              */
             // @ts-ignore
-            getTimestamp(): java.security.Timestamp
+            public getTimestamp(): java.security.Timestamp
             /**
              * Returns the hash code value for this code signer.
              * The hash code is generated using the signer's certificate path and the
@@ -39,7 +39,7 @@ declare namespace java {
              * @return a hash code value for this code signer.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tests for equality between the specified object and this
              * code signer. Two code signers are considered equal if their
@@ -49,14 +49,14 @@ declare namespace java {
              * @return true if the objects are considered equal, false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a string describing this code signer.
              * @return A string comprising the signer's certificate and a timestamp,
              *          if present.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

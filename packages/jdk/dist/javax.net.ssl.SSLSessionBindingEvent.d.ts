@@ -24,21 +24,21 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if <code>session</code> is null.
                  */
                 // @ts-ignore
-                constructor(session: javax.net.ssl.SSLSession, name: string)
+                constructor(session: javax.net.ssl.SSLSession, name: java.lang.String | string)
                 /**
                  * Returns the name to which the object is being bound, or the name
                  * from which the object is being unbound.
                  * @return the name to which the object is being bound or unbound
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the SSLSession into which the listener is being bound or
                  * from which the listener is being unbound.
                  * @return the <code>SSLSession</code>
                  */
                 // @ts-ignore
-                getSession(): javax.net.ssl.SSLSession
+                public getSession(): javax.net.ssl.SSLSession
             }
         }
     }

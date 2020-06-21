@@ -24,11 +24,11 @@ declare namespace org {
                  * @return BlockFace attached to
                  */
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                clone(): org.bukkit.material.Torch
+                public clone(): org.bukkit.material.Torch
             }
         }
     }

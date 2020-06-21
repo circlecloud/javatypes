@@ -31,14 +31,14 @@ declare namespace org {
                          * Set CORS configuration based on URL patterns.
                          */
                         // @ts-ignore
-                        setCorsConfigurations(corsConfigurations: java.util.Map<java.lang.String, org.springframework.web.cors.CorsConfiguration>): void
+                        public setCorsConfigurations(corsConfigurations: java.util.Map<java.lang.String | string, org.springframework.web.cors.CorsConfiguration>): void
                         /**
                          * Register a {@link CorsConfiguration} for the specified path pattern.
                          */
                         // @ts-ignore
-                        registerCorsConfiguration(path: string, config: org.springframework.web.cors.CorsConfiguration): void
+                        public registerCorsConfiguration(path: java.lang.String | string, config: org.springframework.web.cors.CorsConfiguration): void
                         // @ts-ignore
-                        getCorsConfiguration(exchange: org.springframework.web.server.ServerWebExchange): org.springframework.web.cors.CorsConfiguration
+                        public getCorsConfiguration(exchange: org.springframework.web.server.ServerWebExchange): org.springframework.web.cors.CorsConfiguration
                     }
                 }
             }

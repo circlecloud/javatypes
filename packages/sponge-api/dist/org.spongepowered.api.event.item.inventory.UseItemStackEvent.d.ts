@@ -11,13 +11,13 @@ declare namespace org {
                              * @return The original remaining duration
                              */
                             // @ts-ignore
-                            getOriginalRemainingDuration(): int
+                            getOriginalRemainingDuration(): number /*int*/
                             /**
                              * Gets the remaining duration of {@link ItemStack} in use.
                              * @return The remaining duration
                              */
                             // @ts-ignore
-                            getRemainingDuration(): int
+                            getRemainingDuration(): number /*int*/
                             /**
                              * Sets the remaining duration of {@link ItemStack} in use.
                              * @param duration The remaining duration to set

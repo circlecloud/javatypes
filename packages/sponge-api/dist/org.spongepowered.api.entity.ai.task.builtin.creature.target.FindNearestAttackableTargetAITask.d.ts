@@ -20,21 +20,21 @@ declare namespace org {
                                          * @return The entity class that can be targeted
                                          */
                                         // @ts-ignore
-                                        getTargetClass(): java.lang.Class<? extends org.spongepowered.api.entity.living.Living>
+                                        getTargetClass(): java.lang.Class<any>
                                         /**
                                          * Sets the {@link Class entity class} that can be targeted.
                                          * @param targetClass The entity class to target
                                          * @return This task, for chaining
                                          */
                                         // @ts-ignore
-                                        setTargetClass(targetClass: java.lang.Class<org.spongepowered.api.entity.living.Living>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask
+                                        setTargetClass(targetClass: java.lang.Class<any>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask
                                         /**
                                          * Gets the chance that this task will go through and attempt to find a
                                          * new target.
                                          * @return The chance that this task will go through and find a target
                                          */
                                         // @ts-ignore
-                                        getChance(): int
+                                        getChance(): number /*int*/
                                         /**
                                          * Sets the chance that this task will go through and attempt to find a
                                          * new target.
@@ -50,14 +50,14 @@ declare namespace org {
                                          * @return This task, for chaining
                                          */
                                         // @ts-ignore
-                                        filter(predicate: java.util.function.Predicate<org.spongepowered.api.entity.living.Living> | java.util.function$.Predicate<org.spongepowered.api.entity.living.Living>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask
+                                        filter(predicate: java.util.function$.Predicate<org.spongepowered.api.entity.living.Living>): org.spongepowered.api.entity.ai.task.builtin.creature.target.FindNearestAttackableTargetAITask
                                         /**
                                          * Gets the {@link Predicate} filter to determine whether a {@link Living living entity}
                                          * can be targeted.
                                          * @return The predicate to filter living entities for targeting
                                          */
                                         // @ts-ignore
-                                        getFilter(): java.util.function.Predicate<org.spongepowered.api.entity.living.Living>
+                                        getFilter(): java.util.function$.Predicate<org.spongepowered.api.entity.living.Living>
                                     }
                                 }
                             }

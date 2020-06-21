@@ -65,7 +65,7 @@ declare namespace java {
              * @see Selector
              */
             // @ts-ignore
-            class SelectionKey extends java.lang.Object {
+            abstract class SelectionKey extends java.lang.Object {
                 /**
                  * Constructs an instance of this class.
                  */
@@ -82,7 +82,7 @@ declare namespace java {
                  * ready-operation set and add the key to its selected-key&nbsp;set.  </p>
                  */
                 // @ts-ignore
-                readonly OP_READ: number /*int*/
+                public static readonly OP_READ: number /*int*/
                 /**
                  * Operation-set bit for write operations.
                  * <p> Suppose that a selection key's interest set contains
@@ -94,7 +94,7 @@ declare namespace java {
                  * selected-key&nbsp;set.  </p>
                  */
                 // @ts-ignore
-                readonly OP_WRITE: number /*int*/
+                public static readonly OP_WRITE: number /*int*/
                 /**
                  * Operation-set bit for socket-connect operations.
                  * <p> Suppose that a selection key's interest set contains
@@ -106,7 +106,7 @@ declare namespace java {
                  * selected-key&nbsp;set.  </p>
                  */
                 // @ts-ignore
-                readonly OP_CONNECT: number /*int*/
+                public static readonly OP_CONNECT: number /*int*/
                 /**
                  * Operation-set bit for socket-accept operations.
                  * <p> Suppose that a selection key's interest set contains
@@ -118,21 +118,21 @@ declare namespace java {
                  * selected-key&nbsp;set.  </p>
                  */
                 // @ts-ignore
-                readonly OP_ACCEPT: number /*int*/
+                public static readonly OP_ACCEPT: number /*int*/
                 /**
                  * Returns the channel for which this key was created.  This method will
                  * continue to return the channel even after the key is cancelled.
                  * @return This key's channel
                  */
                 // @ts-ignore
-                abstract channel(): java.nio.channels.SelectableChannel
+                public abstract channel(): java.nio.channels.SelectableChannel
                 /**
                  * Returns the selector for which this key was created.  This method will
                  * continue to return the selector even after the key is cancelled.
                  * @return This key's selector
                  */
                 // @ts-ignore
-                abstract selector(): java.nio.channels.Selector
+                public abstract selector(): java.nio.channels.Selector
                 /**
                  * Tells whether or not this key is valid.
                  * <p> A key is valid upon creation and remains so until it is cancelled,
@@ -140,7 +140,7 @@ declare namespace java {
                  * @return <tt>true</tt> if, and only if, this key is valid
                  */
                 // @ts-ignore
-                abstract isValid(): boolean
+                public abstract isValid(): boolean
                 /**
                  * Requests that the registration of this key's channel with its selector
                  * be cancelled.  Upon return the key will be invalid and will have been
@@ -154,7 +154,7 @@ declare namespace java {
                  * same selector.  </p>
                  */
                 // @ts-ignore
-                abstract cancel(): void
+                public abstract cancel(): void
                 /**
                  * Retrieves this key's interest set.
                  * <p> It is guaranteed that the returned set will only contain operation
@@ -166,7 +166,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                abstract interestOps(): int
+                public abstract interestOps(): number /*int*/
                 /**
                  * Sets this key's interest set to the given value.
                  * <p> This method may be invoked at any time.  Whether or not it blocks,
@@ -181,7 +181,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                abstract interestOps(ops: number /*int*/): java.nio.channels.SelectionKey
+                public abstract interestOps(ops: number /*int*/): java.nio.channels.SelectionKey
                 /**
                  * Retrieves this key's ready-operation set.
                  * <p> It is guaranteed that the returned set will only contain operation
@@ -191,7 +191,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                abstract readyOps(): int
+                public abstract readyOps(): number /*int*/
                 /**
                  * Tests whether this key's channel is ready for reading.
                  * <p> An invocation of this method of the form <tt>k.isReadable()</tt>
@@ -207,7 +207,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                isReadable(): boolean
+                public isReadable(): boolean
                 /**
                  * Tests whether this key's channel is ready for writing.
                  * <p> An invocation of this method of the form <tt>k.isWritable()</tt>
@@ -223,7 +223,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                isWritable(): boolean
+                public isWritable(): boolean
                 /**
                  * Tests whether this key's channel has either finished, or failed to
                  * finish, its socket-connection operation.
@@ -240,7 +240,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                isConnectable(): boolean
+                public isConnectable(): boolean
                 /**
                  * Tests whether this key's channel is ready to accept a new socket
                  * connection.
@@ -257,7 +257,7 @@ declare namespace java {
                  *           If this key has been cancelled
                  */
                 // @ts-ignore
-                isAcceptable(): boolean
+                public isAcceptable(): boolean
                 /**
                  * Attaches the given object to this key.
                  * <p> An attached object may later be retrieved via the {@link #attachment()
@@ -270,14 +270,14 @@ declare namespace java {
                  *           otherwise <tt>null</tt>
                  */
                 // @ts-ignore
-                attach(ob: any): java.lang.Object
+                public attach(ob: java.lang.Object | any): any
                 /**
                  * Retrieves the current attachment.
                  * @return The object currently attached to this key,
                  *           or <tt>null</tt> if there is no attachment
                  */
                 // @ts-ignore
-                attachment(): java.lang.Object
+                public attachment(): any
             }
         }
     }

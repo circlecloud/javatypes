@@ -97,7 +97,7 @@ declare namespace org {
                              * @return True if the class is supported
                              */
                             // @ts-ignore
-                            supports(containerClass: java.lang.Class<H>): boolean
+                            supports(containerClass: java.lang.Class<any>): boolean
                             /**
                              * Applies a transformation on the provided {@link BaseValue} such that
                              * the return value of {@link Function#apply(Object)} will become the end
@@ -108,7 +108,7 @@ declare namespace org {
                              * @return The newly created immutable value store
                              */
                             // @ts-ignore
-                            transform<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): java.util.Optional<I>
+                            transform<E>(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Function<E, E>): java.util.Optional<I>
                             /**
                              * Creates a new {@link ImmutableValueStore} with the provided
                              * value by {@link Key}. If the key is supported by this value store,
@@ -119,7 +119,7 @@ declare namespace org {
                              * @return The new immutable value store
                              */
                             // @ts-ignore
-                            with<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): java.util.Optional<I>
+                            with<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): java.util.Optional<I>
                             /**
                              * Offers the given {@code value} as defined by the provided {@link Key}
                              * such that if the {@link Key} is supported, a new
@@ -137,7 +137,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            with(valueContainer: H extends org.spongepowered.api.data.value.ValueContainer<any>): java.util.Optional<I>
+                            with(valueContainer: H): java.util.Optional<I>
                             /**
                              * Gets an altered copy of this {@link ImmutableValueStore} with the given
                              * {@link DataManipulator} modified data. If the data is not compatible for
@@ -158,7 +158,7 @@ declare namespace org {
                              * @return A new immutable data holder without the given manipulator
                              */
                             // @ts-ignore
-                            without(containerClass: java.lang.Class<H>): java.util.Optional<I>
+                            without(containerClass: java.lang.Class<any>): java.util.Optional<I>
                             /**
                              * Attempts to merge the {@link ImmutableValue}s from this
                              * {@link ImmutableValueStore} and the given {@link ImmutableValueStore} to
@@ -167,7 +167,7 @@ declare namespace org {
                              * @return The new immutable value store instance
                              */
                             // @ts-ignore
-                            merge(that: I extends org.spongepowered.api.data.value.immutable.ImmutableValueStore<I, H>): I
+                            merge(that: I): I
                             /**
                              * Attempts to merge the {@link ImmutableValue}s from this
                              * {@link ImmutableValueStore} and the given {@link ImmutableValueStore} to
@@ -178,7 +178,7 @@ declare namespace org {
                              * @return The new immutable value store instance
                              */
                             // @ts-ignore
-                            merge(that: I extends org.spongepowered.api.data.value.immutable.ImmutableValueStore<I, H>, func: org.spongepowered.api.data.merge.MergeFunction): I
+                            merge(that: I, func: org.spongepowered.api.data.merge.MergeFunction): I
                             /**
                              * Gets an copied collection of all known {@link ValueContainer}s
                              * belonging to this {@link ImmutableValueStore}. An individual
@@ -188,7 +188,7 @@ declare namespace org {
                              *      from this value store
                              */
                             // @ts-ignore
-                            getContainers(): java.util.List<H>
+                            getContainers(): Array<H>
                         }
                     }
                 }

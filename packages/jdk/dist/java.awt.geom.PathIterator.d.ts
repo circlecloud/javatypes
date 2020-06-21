@@ -41,7 +41,7 @@ declare namespace java {
                  * infinity is crossed by path segments an odd number of times.
                  */
                 // @ts-ignore
-                
+                readonly WIND_EVEN_ODD: number /*int*/
                 /**
                  * The winding rule constant for specifying a non-zero rule
                  * for determining the interior of a path.
@@ -52,20 +52,20 @@ declare namespace java {
                  * clockwise direction.
                  */
                 // @ts-ignore
-                
+                readonly WIND_NON_ZERO: number /*int*/
                 /**
                  * The segment type constant for a point that specifies the
                  * starting location for a new subpath.
                  */
                 // @ts-ignore
-                
+                readonly SEG_MOVETO: number /*int*/
                 /**
                  * The segment type constant for a point that specifies the
                  * end point of a line to be drawn from the most recently
                  * specified point.
                  */
                 // @ts-ignore
-                
+                readonly SEG_LINETO: number /*int*/
                 /**
                  * The segment type constant for the pair of points that specify
                  * a quadratic parametric curve to be drawn from the most recently
@@ -86,7 +86,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                
+                readonly SEG_QUADTO: number /*int*/
                 /**
                  * The segment type constant for the set of 3 points that specify
                  * a cubic parametric curve to be drawn from the most recently
@@ -109,14 +109,14 @@ declare namespace java {
                  * This form of curve is commonly known as a B&eacute;zier curve.
                  */
                 // @ts-ignore
-                
+                readonly SEG_CUBICTO: number /*int*/
                 /**
                  * The segment type constant that specifies that
                  * the preceding subpath should be closed by appending a line segment
                  * back to the point corresponding to the most recent SEG_MOVETO.
                  */
                 // @ts-ignore
-                
+                readonly SEG_CLOSE: number /*int*/
                 /**
                  * Returns the winding rule for determining the interior of the
                  * path.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @see #WIND_NON_ZERO
                  */
                 // @ts-ignore
-                getWindingRule(): int
+                getWindingRule(): number /*int*/
                 /**
                  * Tests if the iteration is complete.
                  * @return <code>true</code> if all the segments have
@@ -162,7 +162,7 @@ declare namespace java {
                  * @see #SEG_CLOSE
                  */
                 // @ts-ignore
-                currentSegment(coords: number /*float*/[]): int
+                currentSegment(coords: number /*float*/[]): number /*int*/
                 /**
                  * Returns the coordinates and type of the current path segment in
                  * the iteration.
@@ -185,7 +185,7 @@ declare namespace java {
                  * @see #SEG_CLOSE
                  */
                 // @ts-ignore
-                currentSegment(coords: number /*double*/[]): int
+                currentSegment(coords: number /*double*/[]): number /*int*/
             }
         }
     }

@@ -67,7 +67,7 @@ declare namespace java {
              * @author Charlton Innovations, Inc.
              */
             // @ts-ignore
-            class GlyphVector extends java.lang.Object implements java.lang.Cloneable {
+            abstract class GlyphVector extends java.lang.Object implements java.lang.Cloneable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -76,7 +76,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly FLAG_HAS_TRANSFORMS: number /*int*/
+                public static readonly FLAG_HAS_TRANSFORMS: number /*int*/
                 /**
                  * A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
                  * position adjustments.  When this is true, the glyph positions don't match the
@@ -84,7 +84,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly FLAG_HAS_POSITION_ADJUSTMENTS: number /*int*/
+                public static readonly FLAG_HAS_POSITION_ADJUSTMENTS: number /*int*/
                 /**
                  * A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
                  * a right-to-left run direction.  This refers to the glyph-to-char mapping and does
@@ -93,7 +93,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly FLAG_RUN_RTL: number /*int*/
+                public static readonly FLAG_RUN_RTL: number /*int*/
                 /**
                  * A flag used with getLayoutFlags that indicates that this <code>GlyphVector</code> has
                  * a complex glyph-to-char mapping (one that does not map glyphs to chars one-to-one in
@@ -101,14 +101,14 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly FLAG_COMPLEX_GLYPHS: number /*int*/
+                public static readonly FLAG_COMPLEX_GLYPHS: number /*int*/
                 /**
                  * A mask for supported flags from getLayoutFlags.  Only bits covered by the mask
                  * should be tested.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly FLAG_MASK: number /*int*/
+                public static readonly FLAG_MASK: number /*int*/
                 /**
                  * Returns the <code>Font</code> associated with this
                  * <code>GlyphVector</code>.
@@ -117,7 +117,7 @@ declare namespace java {
                  * @see Font
                  */
                 // @ts-ignore
-                abstract getFont(): java.awt.Font
+                public abstract getFont(): java.awt.Font
                 /**
                  * Returns the {@link FontRenderContext} associated with this
                  * <code>GlyphVector</code>.
@@ -127,20 +127,20 @@ declare namespace java {
                  * @see Font
                  */
                 // @ts-ignore
-                abstract getFontRenderContext(): java.awt.font.FontRenderContext
+                public abstract getFontRenderContext(): java.awt.font.FontRenderContext
                 /**
                  * Assigns default positions to each glyph in this
                  * <code>GlyphVector</code>. This can destroy information
                  * generated during initial layout of this <code>GlyphVector</code>.
                  */
                 // @ts-ignore
-                abstract performDefaultLayout(): void
+                public abstract performDefaultLayout(): void
                 /**
                  * Returns the number of glyphs in this <code>GlyphVector</code>.
                  * @return number of glyphs in this <code>GlyphVector</code>.
                  */
                 // @ts-ignore
-                abstract getNumGlyphs(): int
+                public abstract getNumGlyphs(): number /*int*/
                 /**
                  * Returns the glyphcode of the specified glyph.
                  * This return value is meaningless to anything other
@@ -156,7 +156,7 @@ declare namespace java {
                  *  number of glyphs in this <code>GlyphVector</code>
                  */
                 // @ts-ignore
-                abstract getGlyphCode(glyphIndex: number /*int*/): int
+                public abstract getGlyphCode(glyphIndex: number /*int*/): number /*int*/
                 /**
                  * Returns an array of glyphcodes for the specified glyphs.
                  * The contents of this return value are meaningless to anything other
@@ -180,7 +180,7 @@ declare namespace java {
                  *    <code>GlyphVector</code>
                  */
                 // @ts-ignore
-                abstract getGlyphCodes(beginGlyphIndex: number /*int*/, numEntries: number /*int*/, codeReturn: number /*int*/[]): int[]
+                public abstract getGlyphCodes(beginGlyphIndex: number /*int*/, numEntries: number /*int*/, codeReturn: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns the character index of the specified glyph.
                  * The character index is the index of the first logical
@@ -192,7 +192,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getGlyphCharIndex(glyphIndex: number /*int*/): int
+                public getGlyphCharIndex(glyphIndex: number /*int*/): number /*int*/
                 /**
                  * Returns the character indices of the specified glyphs.
                  * The character index is the index of the first logical
@@ -210,7 +210,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getGlyphCharIndices(beginGlyphIndex: number /*int*/, numEntries: number /*int*/, codeReturn: number /*int*/[]): int[]
+                public getGlyphCharIndices(beginGlyphIndex: number /*int*/, numEntries: number /*int*/, codeReturn: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns the logical bounds of this <code>GlyphVector</code>.
                  * This method is used when positioning this <code>GlyphVector</code>
@@ -219,7 +219,7 @@ declare namespace java {
                  *  <code>GlyphVector</code>.
                  */
                 // @ts-ignore
-                abstract getLogicalBounds(): java.awt.geom.Rectangle2D
+                public abstract getLogicalBounds(): java.awt.geom.Rectangle2D
                 /**
                  * Returns the visual bounds of this <code>GlyphVector</code>
                  * The visual bounds is the bounding box of the outline of this
@@ -230,7 +230,7 @@ declare namespace java {
                  *  of this <code>GlyphVector</code>.
                  */
                 // @ts-ignore
-                abstract getVisualBounds(): java.awt.geom.Rectangle2D
+                public abstract getVisualBounds(): java.awt.geom.Rectangle2D
                 /**
                  * Returns the pixel bounds of this <code>GlyphVector</code> when
                  * rendered in a graphics with the given
@@ -250,7 +250,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getPixelBounds(renderFRC: java.awt.font.FontRenderContext, x: number /*float*/, y: number /*float*/): java.awt.Rectangle
+                public getPixelBounds(renderFRC: java.awt.font.FontRenderContext, x: number /*float*/, y: number /*float*/): java.awt.Rectangle
                 /**
                  * Returns a <code>Shape</code> whose interior corresponds to the
                  * visual representation of this <code>GlyphVector</code>.
@@ -258,7 +258,7 @@ declare namespace java {
                  *  <code>GlyphVector</code>.
                  */
                 // @ts-ignore
-                abstract getOutline(): java.awt.Shape
+                public abstract getOutline(): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> whose interior corresponds to the
                  * visual representation of this <code>GlyphVector</code> when
@@ -270,7 +270,7 @@ declare namespace java {
                  *    coordinates.
                  */
                 // @ts-ignore
-                abstract getOutline(x: number /*float*/, y: number /*float*/): java.awt.Shape
+                public abstract getOutline(x: number /*float*/, y: number /*float*/): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> whose interior corresponds to the
                  * visual representation of the specified glyph
@@ -286,7 +286,7 @@ declare namespace java {
                  *    of glyphs in this <code>GlyphVector</code>
                  */
                 // @ts-ignore
-                abstract getGlyphOutline(glyphIndex: number /*int*/): java.awt.Shape
+                public abstract getGlyphOutline(glyphIndex: number /*int*/): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> whose interior corresponds to the
                  * visual representation of the specified glyph
@@ -306,7 +306,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getGlyphOutline(glyphIndex: number /*int*/, x: number /*float*/, y: number /*float*/): java.awt.Shape
+                public getGlyphOutline(glyphIndex: number /*int*/, x: number /*float*/, y: number /*float*/): java.awt.Shape
                 /**
                  * Returns the position of the specified glyph relative to the
                  * origin of this <code>GlyphVector</code>.
@@ -323,7 +323,7 @@ declare namespace java {
                  * @see #setGlyphPosition
                  */
                 // @ts-ignore
-                abstract getGlyphPosition(glyphIndex: number /*int*/): java.awt.geom.Point2D
+                public abstract getGlyphPosition(glyphIndex: number /*int*/): java.awt.geom.Point2D
                 /**
                  * Sets the position of the specified glyph within this
                  * <code>GlyphVector</code>.
@@ -340,7 +340,7 @@ declare namespace java {
                  * @see #getGlyphPosition
                  */
                 // @ts-ignore
-                abstract setGlyphPosition(glyphIndex: number /*int*/, newPos: java.awt.geom.Point2D): void
+                public abstract setGlyphPosition(glyphIndex: number /*int*/, newPos: java.awt.geom.Point2D): void
                 /**
                  * Returns the transform of the specified glyph within this
                  * <code>GlyphVector</code>.  The transform is relative to the
@@ -356,7 +356,7 @@ declare namespace java {
                  * @see #setGlyphTransform
                  */
                 // @ts-ignore
-                abstract getGlyphTransform(glyphIndex: number /*int*/): java.awt.geom.AffineTransform
+                public abstract getGlyphTransform(glyphIndex: number /*int*/): java.awt.geom.AffineTransform
                 /**
                  * Sets the transform of the specified glyph within this
                  * <code>GlyphVector</code>.  The transform is relative to the glyph
@@ -373,7 +373,7 @@ declare namespace java {
                  * @see #getGlyphTransform
                  */
                 // @ts-ignore
-                abstract setGlyphTransform(glyphIndex: number /*int*/, newTX: java.awt.geom.AffineTransform): void
+                public abstract setGlyphTransform(glyphIndex: number /*int*/, newTX: java.awt.geom.AffineTransform): void
                 /**
                  * Returns flags describing the global state of the GlyphVector.
                  * Flags not described below are reserved.  The default
@@ -391,7 +391,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getLayoutFlags(): int
+                public getLayoutFlags(): number /*int*/
                 /**
                  * Returns an array of glyph positions for the specified glyphs.
                  * This method is used for convenience and performance when
@@ -422,7 +422,7 @@ declare namespace java {
                  *    <code>GlyphVector</code> plus one
                  */
                 // @ts-ignore
-                abstract getGlyphPositions(beginGlyphIndex: number /*int*/, numEntries: number /*int*/, positionReturn: number /*float*/[]): float[]
+                public abstract getGlyphPositions(beginGlyphIndex: number /*int*/, numEntries: number /*int*/, positionReturn: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the logical bounds of the specified glyph within this
                  * <code>GlyphVector</code>.
@@ -443,7 +443,7 @@ declare namespace java {
                  * @see #getGlyphVisualBounds
                  */
                 // @ts-ignore
-                abstract getGlyphLogicalBounds(glyphIndex: number /*int*/): java.awt.Shape
+                public abstract getGlyphLogicalBounds(glyphIndex: number /*int*/): java.awt.Shape
                 /**
                  * Returns the visual bounds of the specified glyph within the
                  * <code>GlyphVector</code>.
@@ -460,7 +460,7 @@ declare namespace java {
                  * @see #getGlyphLogicalBounds
                  */
                 // @ts-ignore
-                abstract getGlyphVisualBounds(glyphIndex: number /*int*/): java.awt.Shape
+                public abstract getGlyphVisualBounds(glyphIndex: number /*int*/): java.awt.Shape
                 /**
                  * Returns the pixel bounds of the glyph at index when this
                  * <code>GlyphVector</code> is rendered in a <code>Graphics</code> with the
@@ -480,7 +480,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getGlyphPixelBounds(index: number /*int*/, renderFRC: java.awt.font.FontRenderContext, x: number /*float*/, y: number /*float*/): java.awt.Rectangle
+                public getGlyphPixelBounds(index: number /*int*/, renderFRC: java.awt.font.FontRenderContext, x: number /*float*/, y: number /*float*/): java.awt.Rectangle
                 /**
                  * Returns the metrics of the glyph at the specified index into
                  * this <code>GlyphVector</code>.
@@ -494,7 +494,7 @@ declare namespace java {
                  *    of glyphs in this <code>GlyphVector</code>
                  */
                 // @ts-ignore
-                abstract getGlyphMetrics(glyphIndex: number /*int*/): java.awt.font.GlyphMetrics
+                public abstract getGlyphMetrics(glyphIndex: number /*int*/): java.awt.font.GlyphMetrics
                 /**
                  * Returns the justification information for the glyph at
                  * the specified index into this <code>GlyphVector</code>.
@@ -510,7 +510,7 @@ declare namespace java {
                  *    of glyphs in this <code>GlyphVector</code>
                  */
                 // @ts-ignore
-                abstract getGlyphJustificationInfo(glyphIndex: number /*int*/): java.awt.font.GlyphJustificationInfo
+                public abstract getGlyphJustificationInfo(glyphIndex: number /*int*/): java.awt.font.GlyphJustificationInfo
                 /**
                  * Tests if the specified <code>GlyphVector</code> exactly
                  * equals this <code>GlyphVector</code>.
@@ -520,7 +520,7 @@ declare namespace java {
                  *    <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                abstract equals(set: java.awt.font.GlyphVector): boolean
+                public abstract equals(set: java.awt.font.GlyphVector): boolean
             }
         }
     }

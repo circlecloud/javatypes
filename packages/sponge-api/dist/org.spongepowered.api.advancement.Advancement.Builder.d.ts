@@ -31,7 +31,7 @@ declare namespace org {
                         // @ts-ignore
                         displayInfo(displayInfo: org.spongepowered.api.advancement.DisplayInfo): org.spongepowered.api.advancement.Advancement.Builder
                         // @ts-ignore
-                        id(id: string): org.spongepowered.api.advancement.Advancement.Builder
+                        id(id: java.lang.String | string): org.spongepowered.api.advancement.Advancement.Builder
                         /**
                          * Sets the name of the {@link Advancement}. Defaults to
                          * the plain {@link DisplayInfo#getTitle()} if the
@@ -41,7 +41,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        name(name: string): org.spongepowered.api.advancement.Advancement.Builder
+                        name(name: java.lang.String | string): org.spongepowered.api.advancement.Advancement.Builder
                         // @ts-ignore
                         build(): org.spongepowered.api.advancement.Advancement
                         // @ts-ignore

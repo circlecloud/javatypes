@@ -20,25 +20,25 @@ declare namespace org {
                  * A EulerAngle with every axis set to 0
                  */
                 // @ts-ignore
-                readonly ZERO: org.bukkit.util.EulerAngle
+                public static readonly ZERO: org.bukkit.util.EulerAngle
                 /**
                  * Returns the angle on the x axis in radians
                  * @return the angle in radians
                  */
                 // @ts-ignore
-                getX(): double
+                public getX(): number /*double*/
                 /**
                  * Returns the angle on the y axis in radians
                  * @return the angle in radians
                  */
                 // @ts-ignore
-                getY(): double
+                public getY(): number /*double*/
                 /**
                  * Returns the angle on the z axis in radians
                  * @return the angle in radians
                  */
                 // @ts-ignore
-                getZ(): double
+                public getZ(): number /*double*/
                 /**
                  * Return a EulerAngle which is the result of changing
                  * the x axis to the passed angle
@@ -46,7 +46,7 @@ declare namespace org {
                  * @return the resultant EulerAngle
                  */
                 // @ts-ignore
-                setX(x: number /*double*/): org.bukkit.util.EulerAngle
+                public setX(x: number /*double*/): org.bukkit.util.EulerAngle
                 /**
                  * Return a EulerAngle which is the result of changing
                  * the y axis to the passed angle
@@ -54,7 +54,7 @@ declare namespace org {
                  * @return the resultant EulerAngle
                  */
                 // @ts-ignore
-                setY(y: number /*double*/): org.bukkit.util.EulerAngle
+                public setY(y: number /*double*/): org.bukkit.util.EulerAngle
                 /**
                  * Return a EulerAngle which is the result of changing
                  * the z axis to the passed angle
@@ -62,7 +62,7 @@ declare namespace org {
                  * @return the resultant EulerAngle
                  */
                 // @ts-ignore
-                setZ(z: number /*double*/): org.bukkit.util.EulerAngle
+                public setZ(z: number /*double*/): org.bukkit.util.EulerAngle
                 /**
                  * Creates a new EulerAngle which is the result of adding
                  * the x, y, z components to this EulerAngle
@@ -72,7 +72,7 @@ declare namespace org {
                  * @return the resultant EulerAngle
                  */
                 // @ts-ignore
-                add(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.EulerAngle
+                public add(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.EulerAngle
                 /**
                  * Creates a new EulerAngle which is the result of subtracting
                  * the x, y, z components to this EulerAngle
@@ -82,11 +82,11 @@ declare namespace org {
                  * @return the resultant EulerAngle
                  */
                 // @ts-ignore
-                subtract(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.EulerAngle
+                public subtract(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.EulerAngle
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

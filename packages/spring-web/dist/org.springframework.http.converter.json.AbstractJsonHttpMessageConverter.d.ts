@@ -15,20 +15,20 @@ declare namespace org {
                      * @see #writeInternal(Object, Type, Writer)
                      */
                     // @ts-ignore
-                    class AbstractJsonHttpMessageConverter extends org.springframework.http.converter.AbstractGenericHttpMessageConverter<java.lang.Object> {
+                    abstract class AbstractJsonHttpMessageConverter extends org.springframework.http.converter.AbstractGenericHttpMessageConverter<java.lang.Object | any> {
                         // @ts-ignore
                         constructor()
                         /**
                          * The default charset used by the converter.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                        public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                         /**
                          * Specify a custom prefix to use for JSON output. Default is none.
                          * @see #setPrefixJson
                          */
                         // @ts-ignore
-                        setJsonPrefix(jsonPrefix: string): void
+                        public setJsonPrefix(jsonPrefix: java.lang.String | string): void
                         /**
                          * Indicate whether the JSON output by this view should be prefixed with ")]}', ".
                          * Default is {@code false}.
@@ -39,13 +39,13 @@ declare namespace org {
                          * @see #setJsonPrefix
                          */
                         // @ts-ignore
-                        setPrefixJson(prefixJson: boolean): void
+                        public setPrefixJson(prefixJson: boolean): void
                         // @ts-ignore
-                        read(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.Object
+                        public read(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): any
                         // @ts-ignore
-                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.Object
+                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): any
                         // @ts-ignore
-                        writeInternal(o: any, type: java.lang.reflect.Type, outputMessage: org.springframework.http.HttpOutputMessage): void
+                        writeInternal(o: java.lang.Object | any, type: java.lang.reflect.Type, outputMessage: org.springframework.http.HttpOutputMessage): void
                         /**
                          * Template method that reads the JSON-bound object from the given {@link Reader}.
                          * @param resolvedType the resolved generic type
@@ -54,7 +54,7 @@ declare namespace org {
                          * @throws Exception in case of read/parse failures
                          */
                         // @ts-ignore
-                        abstract readInternal(resolvedType: java.lang.reflect.Type, reader: java.io.Reader): java.lang.Object
+                        abstract readInternal(resolvedType: java.lang.reflect.Type, reader: java.io.Reader): any
                         /**
                          * Template method that writes the JSON-bound object to the given {@link Writer}.
                          * @param o the object to write to the output message
@@ -63,7 +63,7 @@ declare namespace org {
                          * @throws Exception in case of write failures
                          */
                         // @ts-ignore
-                        abstract writeInternal(o: any, type: java.lang.reflect.Type, writer: java.io.Writer): void
+                        abstract writeInternal(o: java.lang.Object | any, type: java.lang.reflect.Type, writer: java.io.Writer): void
                     }
                 }
             }

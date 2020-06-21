@@ -17,7 +17,7 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(beanName: string, msg: string)
+                    constructor(beanName: java.lang.String | string, msg: java.lang.String | string)
                 }
             }
         }

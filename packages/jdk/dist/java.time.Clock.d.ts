@@ -59,7 +59,7 @@ declare namespace java {
          * @since 1.8
          */
         // @ts-ignore
-        class Clock extends java.lang.Object {
+        abstract class Clock extends java.lang.Object {
             /**
              * Constructor accessible by subclasses.
              */
@@ -83,7 +83,7 @@ declare namespace java {
              * @return a clock that uses the best available system clock in the UTC zone, not null
              */
             // @ts-ignore
-            systemUTC(): java.time.Clock
+            public static systemUTC(): java.time.Clock
             /**
              * Obtains a clock that returns the current instant using the best available
              * system clock, converting to date and time using the default time-zone.
@@ -103,7 +103,7 @@ declare namespace java {
              * @see ZoneId#systemDefault()
              */
             // @ts-ignore
-            systemDefaultZone(): java.time.Clock
+            public static systemDefaultZone(): java.time.Clock
             /**
              * Obtains a clock that returns the current instant using best available
              * system clock.
@@ -119,7 +119,7 @@ declare namespace java {
              * @return a clock that uses the best available system clock in the specified zone, not null
              */
             // @ts-ignore
-            system(zone: java.time.ZoneId): java.time.Clock
+            public static system(zone: java.time.ZoneId): java.time.Clock
             /**
              * Obtains a clock that returns the current instant ticking in whole seconds
              * using best available system clock.
@@ -139,7 +139,7 @@ declare namespace java {
              * @return a clock that ticks in whole seconds using the specified zone, not null
              */
             // @ts-ignore
-            tickSeconds(zone: java.time.ZoneId): java.time.Clock
+            public static tickSeconds(zone: java.time.ZoneId): java.time.Clock
             /**
              * Obtains a clock that returns the current instant ticking in whole minutes
              * using best available system clock.
@@ -159,7 +159,7 @@ declare namespace java {
              * @return a clock that ticks in whole minutes using the specified zone, not null
              */
             // @ts-ignore
-            tickMinutes(zone: java.time.ZoneId): java.time.Clock
+            public static tickMinutes(zone: java.time.ZoneId): java.time.Clock
             /**
              * Obtains a clock that returns instants from the specified clock truncated
              * to the nearest occurrence of the specified duration.
@@ -191,7 +191,7 @@ declare namespace java {
              * @throws ArithmeticException if the duration is too large to be represented as nanos
              */
             // @ts-ignore
-            tick(baseClock: java.time.Clock, tickDuration: java.time.Duration): java.time.Clock
+            public static tick(baseClock: java.time.Clock, tickDuration: java.time.Duration): java.time.Clock
             /**
              * Obtains a clock that always returns the same instant.
              * <p>
@@ -206,7 +206,7 @@ declare namespace java {
              * @return a clock that always returns the same instant, not null
              */
             // @ts-ignore
-            fixed(fixedInstant: java.time.Instant, zone: java.time.ZoneId): java.time.Clock
+            public static fixed(fixedInstant: java.time.Instant, zone: java.time.ZoneId): java.time.Clock
             /**
              * Obtains a clock that returns instants from the specified clock with the
              * specified duration added
@@ -226,7 +226,7 @@ declare namespace java {
              * @return a clock based on the base clock with the duration added, not null
              */
             // @ts-ignore
-            offset(baseClock: java.time.Clock, offsetDuration: java.time.Duration): java.time.Clock
+            public static offset(baseClock: java.time.Clock, offsetDuration: java.time.Duration): java.time.Clock
             /**
              * Gets the time-zone being used to create dates and times.
              * <p>
@@ -235,7 +235,7 @@ declare namespace java {
              * @return the time-zone being used to interpret instants, not null
              */
             // @ts-ignore
-            abstract getZone(): java.time.ZoneId
+            public abstract getZone(): java.time.ZoneId
             /**
              * Returns a copy of this clock with a different time-zone.
              * <p>
@@ -246,7 +246,7 @@ declare namespace java {
              * @return a clock based on this clock with the specified time-zone, not null
              */
             // @ts-ignore
-            abstract withZone(zone: java.time.ZoneId): java.time.Clock
+            public abstract withZone(zone: java.time.ZoneId): java.time.Clock
             /**
              * Gets the current millisecond instant of the clock.
              * <p>
@@ -264,7 +264,7 @@ declare namespace java {
              * @throws DateTimeException if the instant cannot be obtained, not thrown by most implementations
              */
             // @ts-ignore
-            millis(): long
+            public millis(): number /*long*/
             /**
              * Gets the current instant of the clock.
              * <p>
@@ -273,7 +273,7 @@ declare namespace java {
              * @throws DateTimeException if the instant cannot be obtained, not thrown by most implementations
              */
             // @ts-ignore
-            abstract instant(): java.time.Instant
+            public abstract instant(): java.time.Instant
             /**
              * Checks if this clock is equal to another clock.
              * <p>
@@ -284,7 +284,7 @@ declare namespace java {
              * @return true if this is equal to the other clock
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this clock.
              * <p>
@@ -294,7 +294,7 @@ declare namespace java {
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

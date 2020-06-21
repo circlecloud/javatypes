@@ -37,37 +37,37 @@ declare namespace javax {
              * @param newValue An object representing value of the attribute after the change.
              */
             // @ts-ignore
-            constructor(source: any, sequenceNumber: number /*long*/, timeStamp: number /*long*/, msg: string, attributeName: string, attributeType: string, oldValue: any, newValue: any)
+            constructor(source: java.lang.Object | any, sequenceNumber: number /*long*/, timeStamp: number /*long*/, msg: java.lang.String | string, attributeName: java.lang.String | string, attributeType: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any)
             /**
              * Notification type which indicates that the observed MBean attribute value has changed.
              * <BR>The value of this type string is <CODE>jmx.attribute.change</CODE>.
              */
             // @ts-ignore
-            readonly ATTRIBUTE_CHANGE: string
+            public static readonly ATTRIBUTE_CHANGE: java.lang.String | string
             /**
              * Gets the name of the attribute which has changed.
              * @return A String containing the name of the attribute.
              */
             // @ts-ignore
-            getAttributeName(): java.lang.String
+            public getAttributeName(): string
             /**
              * Gets the type of the attribute which has changed.
              * @return A String containing the type of the attribute.
              */
             // @ts-ignore
-            getAttributeType(): java.lang.String
+            public getAttributeType(): string
             /**
              * Gets the old value of the attribute which has changed.
              * @return An Object containing the old value of the attribute.
              */
             // @ts-ignore
-            getOldValue(): java.lang.Object
+            public getOldValue(): any
             /**
              * Gets the new value of the attribute which has changed.
              * @return An Object containing the new value of the attribute.
              */
             // @ts-ignore
-            getNewValue(): java.lang.Object
+            public getNewValue(): any
         }
     }
 }

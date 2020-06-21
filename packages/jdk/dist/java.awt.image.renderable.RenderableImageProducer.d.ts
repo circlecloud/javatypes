@@ -30,14 +30,14 @@ declare namespace java {
                      * @param rc the new RenderContext.
                      */
                     // @ts-ignore
-                    setRenderContext(rc: java.awt.image.renderable.RenderContext): void
+                    public setRenderContext(rc: java.awt.image.renderable.RenderContext): void
                     /**
                      * Adds an ImageConsumer to the list of consumers interested in
                      * data for this image.
                      * @param ic an ImageConsumer to be added to the interest list.
                      */
                     // @ts-ignore
-                    addConsumer(ic: java.awt.image.ImageConsumer): void
+                    public addConsumer(ic: java.awt.image.ImageConsumer): void
                     /**
                      * Determine if an ImageConsumer is on the list of consumers
                      * currently interested in data for this image.
@@ -45,14 +45,14 @@ declare namespace java {
                      * @return true if the ImageConsumer is on the list; false otherwise.
                      */
                     // @ts-ignore
-                    isConsumer(ic: java.awt.image.ImageConsumer): boolean
+                    public isConsumer(ic: java.awt.image.ImageConsumer): boolean
                     /**
                      * Remove an ImageConsumer from the list of consumers interested in
                      * data for this image.
                      * @param ic the ImageConsumer to be removed.
                      */
                     // @ts-ignore
-                    removeConsumer(ic: java.awt.image.ImageConsumer): void
+                    public removeConsumer(ic: java.awt.image.ImageConsumer): void
                     /**
                      * Adds an ImageConsumer to the list of consumers interested in
                      * data for this image, and immediately starts delivery of the
@@ -60,21 +60,21 @@ declare namespace java {
                      * @param ic the ImageConsumer to be added to the list of consumers.
                      */
                     // @ts-ignore
-                    startProduction(ic: java.awt.image.ImageConsumer): void
+                    public startProduction(ic: java.awt.image.ImageConsumer): void
                     /**
                      * Requests that a given ImageConsumer have the image data delivered
                      * one more time in top-down, left-right order.
                      * @param ic the ImageConsumer requesting the resend.
                      */
                     // @ts-ignore
-                    requestTopDownLeftRightResend(ic: java.awt.image.ImageConsumer): void
+                    public requestTopDownLeftRightResend(ic: java.awt.image.ImageConsumer): void
                     /**
                      * The runnable method for this class. This will produce an image using
                      * the current RenderableImage and RenderContext and send it to all the
                      * ImageConsumer currently registered with this class.
                      */
                     // @ts-ignore
-                    run(): void
+                    public run(): void
                 }
             }
         }

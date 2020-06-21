@@ -12,23 +12,23 @@ declare namespace org {
             // @ts-ignore
             class HttpCookie extends java.lang.Object {
                 // @ts-ignore
-                constructor(name: string, value: string)
+                constructor(name: java.lang.String | string, value: java.lang.String | string)
                 /**
                  * Return the cookie name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Return the cookie value or an empty string (never {@code null}).
                  */
                 // @ts-ignore
-                getValue(): java.lang.String
+                public getValue(): string
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

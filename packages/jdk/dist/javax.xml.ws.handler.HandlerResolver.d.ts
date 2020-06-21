@@ -24,7 +24,7 @@ declare namespace javax {
                      * @return java.util.List&lt;Handler> chain
                      */
                     // @ts-ignore
-                    getHandlerChain(portInfo: javax.xml.ws.handler.PortInfo): java.util.List<javax.xml.ws.handler.Handler>
+                    getHandlerChain(portInfo: javax.xml.ws.handler.PortInfo): Array<javax.xml.ws.handler.Handler<any>>
                 }
             }
         }

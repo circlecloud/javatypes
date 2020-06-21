@@ -27,7 +27,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class Authenticator extends java.lang.Object {
+        abstract class Authenticator extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -48,7 +48,7 @@ declare namespace java {
              * @see java.net.NetPermission
              */
             // @ts-ignore
-            setDefault(a: java.net.Authenticator): void
+            public static setDefault(a: java.net.Authenticator): void
             /**
              * Ask the authenticator that has been registered with the system
              * for a password.
@@ -73,7 +73,7 @@ declare namespace java {
              * @see java.net.NetPermission
              */
             // @ts-ignore
-            requestPasswordAuthentication(addr: java.net.InetAddress, port: number /*int*/, protocol: string, prompt: string, scheme: string): java.net.PasswordAuthentication
+            public static requestPasswordAuthentication(addr: java.net.InetAddress, port: number /*int*/, protocol: java.lang.String | string, prompt: java.lang.String | string, scheme: java.lang.String | string): java.net.PasswordAuthentication
             /**
              * Ask the authenticator that has been registered with the system
              * for a password. This is the preferred method for requesting a password
@@ -102,7 +102,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            requestPasswordAuthentication(host: string, addr: java.net.InetAddress, port: number /*int*/, protocol: string, prompt: string, scheme: string): java.net.PasswordAuthentication
+            public static requestPasswordAuthentication(host: java.lang.String | string, addr: java.net.InetAddress, port: number /*int*/, protocol: java.lang.String | string, prompt: java.lang.String | string, scheme: java.lang.String | string): java.net.PasswordAuthentication
             /**
              * Ask the authenticator that has been registered with the system
              * for a password.
@@ -132,7 +132,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            requestPasswordAuthentication(host: string, addr: java.net.InetAddress, port: number /*int*/, protocol: string, prompt: string, scheme: string, url: java.net.URL, reqType: java.net.Authenticator.RequestorType): java.net.PasswordAuthentication
+            public static requestPasswordAuthentication(host: java.lang.String | string, addr: java.net.InetAddress, port: number /*int*/, protocol: java.lang.String | string, prompt: java.lang.String | string, scheme: java.lang.String | string, url: java.net.URL, reqType: java.net.Authenticator.RequestorType): java.net.PasswordAuthentication
             /**
              * Gets the {@code hostname} of the
              * site or proxy requesting authentication, or {@code null}
@@ -142,7 +142,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getRequestingHost(): java.lang.String
+            getRequestingHost(): string
             /**
              * Gets the {@code InetAddress} of the
              * site requesting authorization, or {@code null}
@@ -158,7 +158,7 @@ declare namespace java {
              *  port for the requested connection.
              */
             // @ts-ignore
-            getRequestingPort(): int
+            getRequestingPort(): number /*int*/
             /**
              * Give the protocol that's requesting the connection.  Often this
              * will be based on a URL, but in a future JDK it could be, for
@@ -168,21 +168,21 @@ declare namespace java {
              * @see java.net.URL#getProtocol()
              */
             // @ts-ignore
-            getRequestingProtocol(): java.lang.String
+            getRequestingProtocol(): string
             /**
              * Gets the prompt string given by the requestor.
              * @return the prompt string given by the requestor (realm for
              *           http requests)
              */
             // @ts-ignore
-            getRequestingPrompt(): java.lang.String
+            getRequestingPrompt(): string
             /**
              * Gets the scheme of the requestor (the HTTP scheme
              * for an HTTP firewall, for example).
              * @return the scheme of the requestor
              */
             // @ts-ignore
-            getRequestingScheme(): java.lang.String
+            getRequestingScheme(): string
             /**
              * Called when password authorization is needed.  Subclasses should
              * override the default implementation, which returns null.

@@ -14,14 +14,14 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        successCount(successCount: number): org.spongepowered.api.command.CommandResult.Builder
+                        public successCount(successCount: java.lang.Integer | number): org.spongepowered.api.command.CommandResult.Builder
                         /**
                          * Sets the amount of blocks affected by the command.
                          * @param affectedBlocks The amount of blocks affected by the command
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        affectedBlocks(affectedBlocks: number): org.spongepowered.api.command.CommandResult.Builder
+                        public affectedBlocks(affectedBlocks: java.lang.Integer | number): org.spongepowered.api.command.CommandResult.Builder
                         /**
                          * Sets the amount of entities affected by the command.
                          * @param affectedEntities The amount of entities affected by the
@@ -29,14 +29,14 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        affectedEntities(affectedEntities: number): org.spongepowered.api.command.CommandResult.Builder
+                        public affectedEntities(affectedEntities: java.lang.Integer | number): org.spongepowered.api.command.CommandResult.Builder
                         /**
                          * Sets the amount of items affected by the command.
                          * @param affectedItems The amount of items affected by the command
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        affectedItems(affectedItems: number): org.spongepowered.api.command.CommandResult.Builder
+                        public affectedItems(affectedItems: java.lang.Integer | number): org.spongepowered.api.command.CommandResult.Builder
                         /**
                          * Sets the query result of the command, e.g. the time of the day,
                          * an amount of money or a player's amount of XP.
@@ -44,13 +44,13 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        queryResult(queryResult: number): org.spongepowered.api.command.CommandResult.Builder
+                        public queryResult(queryResult: java.lang.Integer | number): org.spongepowered.api.command.CommandResult.Builder
                         /**
                          * Builds the {@link CommandResult}.
                          * @return A CommandResult with the specified settings
                          */
                         // @ts-ignore
-                        build(): org.spongepowered.api.command.CommandResult
+                        public build(): org.spongepowered.api.command.CommandResult
                     }
                 }
             }

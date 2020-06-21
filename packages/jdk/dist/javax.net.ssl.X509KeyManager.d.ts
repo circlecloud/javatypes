@@ -33,7 +33,7 @@ declare namespace javax {
                  *           were no matches.
                  */
                 // @ts-ignore
-                getClientAliases(keyType: string, issuers: java.security.Principal[]): java.lang.String[]
+                getClientAliases(keyType: java.lang.String | string, issuers: java.security.Principal[]): string[]
                 /**
                  * Choose an alias to authenticate the client side of a secure
                  * socket given the public key type and the list of
@@ -50,7 +50,7 @@ declare namespace javax {
                  *           are no matches.
                  */
                 // @ts-ignore
-                chooseClientAlias(keyType: string[], issuers: java.security.Principal[], socket: java.net.Socket): java.lang.String
+                chooseClientAlias(keyType: java.lang.String[] | string[], issuers: java.security.Principal[], socket: java.net.Socket): string
                 /**
                  * Get the matching aliases for authenticating the server side of a secure
                  * socket given the public key type and the list of
@@ -62,7 +62,7 @@ declare namespace javax {
                  *           if there were no matches.
                  */
                 // @ts-ignore
-                getServerAliases(keyType: string, issuers: java.security.Principal[]): java.lang.String[]
+                getServerAliases(keyType: java.lang.String | string, issuers: java.security.Principal[]): string[]
                 /**
                  * Choose an alias to authenticate the server side of a secure
                  * socket given the public key type and the list of
@@ -78,7 +78,7 @@ declare namespace javax {
                  *           are no matches.
                  */
                 // @ts-ignore
-                chooseServerAlias(keyType: string, issuers: java.security.Principal[], socket: java.net.Socket): java.lang.String
+                chooseServerAlias(keyType: java.lang.String | string, issuers: java.security.Principal[], socket: java.net.Socket): string
                 /**
                  * Returns the certificate chain associated with the given alias.
                  * @param alias the alias name
@@ -87,14 +87,14 @@ declare namespace javax {
                  *           if the alias can't be found.
                  */
                 // @ts-ignore
-                getCertificateChain(alias: string): java.security.cert.X509Certificate[]
+                getCertificateChain(alias: java.lang.String | string): java.security.cert.X509Certificate[]
                 /**
                  * Returns the key associated with the given alias.
                  * @param alias the alias name
                  * @return the requested key, or null if the alias can't be found.
                  */
                 // @ts-ignore
-                getPrivateKey(alias: string): java.security.PrivateKey
+                getPrivateKey(alias: java.lang.String | string): java.security.PrivateKey
             }
         }
     }

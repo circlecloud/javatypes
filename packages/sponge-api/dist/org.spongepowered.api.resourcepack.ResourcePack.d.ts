@@ -22,13 +22,13 @@ declare namespace org {
                      *          .zip, with all non-word characters removed
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the ID of this resource pack.
                      * @return the ID of this resource pack
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * If this resource pack was initialized through
                      * {@link ResourcePackFactory#fromUri(URI)}, the hash, as calculated with
@@ -38,7 +38,7 @@ declare namespace org {
                      * @return The hash of this pack, if present
                      */
                     // @ts-ignore
-                    getHash(): java.util.Optional<java.lang.String>
+                    getHash(): java.util.Optional<java.lang.String | string>
                 }
             }
         }

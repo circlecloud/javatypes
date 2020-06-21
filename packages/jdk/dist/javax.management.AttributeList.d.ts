@@ -15,7 +15,7 @@ declare namespace javax {
          * @since 1.5
          */
         // @ts-ignore
-        class AttributeList extends java.util.ArrayList<java.lang.Object> {
+        class AttributeList extends java.util.ArrayList<java.lang.Object | any> {
             /**
              * Constructs an empty <CODE>AttributeList</CODE>.
              */
@@ -56,7 +56,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(list: Array<javax.management.Attribute>)
+            constructor(list: java.util.List<javax.management.Attribute> | Array<javax.management.Attribute>)
             /**
              * Return a view of this list as a {@code List<Attribute>}.
              * Changes to the returned value are reflected by changes
@@ -76,13 +76,13 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            asList(): java.util.List<javax.management.Attribute>
+            public asList(): Array<javax.management.Attribute>
             /**
              * Adds the {@code Attribute} specified as the last element of the list.
              * @param object  The attribute to be added.
              */
             // @ts-ignore
-            add(object: javax.management.Attribute): void
+            public add(object: javax.management.Attribute): void
             /**
              * Inserts the attribute specified as an element at the position specified.
              * Elements with an index greater than or equal to the current position are
@@ -94,7 +94,7 @@ declare namespace javax {
              *  object is to be inserted.
              */
             // @ts-ignore
-            add(index: number /*int*/, object: javax.management.Attribute): void
+            public add(index: number /*int*/, object: javax.management.Attribute): void
             /**
              * Sets the element at the position specified to be the attribute specified.
              * The previous element at that position is discarded. If the index is
@@ -104,7 +104,7 @@ declare namespace javax {
              * @param index  The position specified.
              */
             // @ts-ignore
-            set(index: number /*int*/, object: javax.management.Attribute): void
+            public set(index: number /*int*/, object: javax.management.Attribute): void
             /**
              * Appends all the elements in the <CODE>AttributeList</CODE> specified to
              * the end of the list, in the order in which they are returned by the
@@ -114,7 +114,7 @@ declare namespace javax {
              * @see ArrayList#addAll(java.util.Collection)
              */
             // @ts-ignore
-            addAll(list: javax.management.AttributeList): boolean
+            public addAll(list: javax.management.AttributeList): boolean
             /**
              * Inserts all of the elements in the <CODE>AttributeList</CODE> specified
              * into this list, starting at the specified position, in the order in which
@@ -129,7 +129,7 @@ declare namespace javax {
              * @see ArrayList#addAll(int, java.util.Collection)
              */
             // @ts-ignore
-            addAll(index: number /*int*/, list: javax.management.AttributeList): boolean
+            public addAll(index: number /*int*/, list: javax.management.AttributeList): boolean
             /**
              * {@inheritDoc}
              * @throws IllegalArgumentException if this {#code AttributeList} is
@@ -137,7 +137,7 @@ declare namespace javax {
              *  {@code Attribute}.
              */
             // @ts-ignore
-            add(element: any): boolean
+            public add(element: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              * @throws IllegalArgumentException if this {#code AttributeList} is
@@ -145,7 +145,7 @@ declare namespace javax {
              *  {@code Attribute}.
              */
             // @ts-ignore
-            add(index: number /*int*/, element: any): void
+            public add(index: number /*int*/, element: java.lang.Object | any): void
             /**
              * {@inheritDoc}
              * @throws IllegalArgumentException if this {#code AttributeList} is
@@ -153,7 +153,7 @@ declare namespace javax {
              *  element that is not an {@code Attribute}.
              */
             // @ts-ignore
-            addAll(c: Array<any>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * {@inheritDoc}
              * @throws IllegalArgumentException if this {#code AttributeList} is
@@ -161,7 +161,7 @@ declare namespace javax {
              *  element that is not an {@code Attribute}.
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<any>): boolean
+            public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * {@inheritDoc}
              * @throws IllegalArgumentException if this {#code AttributeList} is
@@ -169,7 +169,7 @@ declare namespace javax {
              *  {@code Attribute}.
              */
             // @ts-ignore
-            set(index: number /*int*/, element: any): java.lang.Object
+            public set(index: number /*int*/, element: java.lang.Object | any): any
         }
     }
 }

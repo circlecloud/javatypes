@@ -16,17 +16,17 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setParentMessageSource(parent: org.springframework.context.MessageSource): void
+                    public setParentMessageSource(parent: org.springframework.context.MessageSource): void
                     // @ts-ignore
-                    getParentMessageSource(): org.springframework.context.MessageSource
+                    public getParentMessageSource(): org.springframework.context.MessageSource
                     // @ts-ignore
-                    getMessage(code: string, args: any[], defaultMessage: string, locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], defaultMessage: java.lang.String | string, locale: java.util.Locale): string
                     // @ts-ignore
-                    getMessage(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     // @ts-ignore
-                    getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): java.lang.String
+                    public getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): string
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

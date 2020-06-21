@@ -157,19 +157,19 @@ declare namespace javax {
                      * name.
                      */
                     // @ts-ignore
-                    readonly ROWSET_SYNC_PROVIDER: string
+                    public static readonly ROWSET_SYNC_PROVIDER: java.lang.String | string
                     /**
                      * The standard property-id for a synchronization provider implementation
                      * vendor name.
                      */
                     // @ts-ignore
-                    readonly ROWSET_SYNC_VENDOR: string
+                    public static readonly ROWSET_SYNC_VENDOR: java.lang.String | string
                     /**
                      * The standard property-id for a synchronization provider implementation
                      * version tag.
                      */
                     // @ts-ignore
-                    readonly ROWSET_SYNC_PROVIDER_VERSION: string
+                    public static readonly ROWSET_SYNC_PROVIDER_VERSION: java.lang.String | string
                     /**
                      * Adds the the given synchronization provider to the factory register. Guidelines
                      * are provided in the <code>SyncProvider</code> specification for the
@@ -196,13 +196,13 @@ declare namespace javax {
                      * @see #setJNDIContext
                      */
                     // @ts-ignore
-                    registerProvider(providerID: string): void
+                    public static registerProvider(providerID: java.lang.String | string): void
                     /**
                      * Returns the <code>SyncFactory</code> singleton.
                      * @return the <code>SyncFactory</code> instance
                      */
                     // @ts-ignore
-                    getSyncFactory(): javax.sql.rowset.spi.SyncFactory
+                    public static getSyncFactory(): javax.sql.rowset.spi.SyncFactory
                     /**
                      * Removes the designated currently registered synchronization provider from the
                      * Factory SPI register.
@@ -211,7 +211,7 @@ declare namespace javax {
                      *  unregister a SyncProvider implementation that was not registered.
                      */
                     // @ts-ignore
-                    unregisterProvider(providerID: string): void
+                    public static unregisterProvider(providerID: java.lang.String | string): void
                     /**
                      * Returns the <code>SyncProvider</code> instance identified by <i>providerID</i>.
                      * @param providerID the unique identifier of the provider
@@ -221,7 +221,7 @@ declare namespace javax {
                      *  some error was encountered when trying to invoke this provider.
                      */
                     // @ts-ignore
-                    getInstance(providerID: string): javax.sql.rowset.spi.SyncProvider
+                    public static getInstance(providerID: java.lang.String | string): javax.sql.rowset.spi.SyncProvider
                     /**
                      * Returns an Enumeration of currently registered synchronization
                      * providers.  A <code>RowSet</code> implementation may use any provider in
@@ -236,7 +236,7 @@ declare namespace javax {
                      *  providers
                      */
                     // @ts-ignore
-                    getRegisteredProviders(): java.util.Enumeration<javax.sql.rowset.spi.SyncProvider>
+                    public static getRegisteredProviders(): java.util.Enumeration<javax.sql.rowset.spi.SyncProvider>
                     /**
                      * Sets the logging object to be used by the <code>SyncProvider</code>
                      * implementation provided by the <code>SyncFactory</code>. All
@@ -258,7 +258,7 @@ declare namespace javax {
                      * @see SecurityManager#checkPermission
                      */
                     // @ts-ignore
-                    setLogger(logger: java.util.logging.Logger): void
+                    public static setLogger(logger: java.util.logging.Logger): void
                     /**
                      * Sets the logging object that is used by <code>SyncProvider</code>
                      * implementations provided by the <code>SyncFactory</code> SPI. All
@@ -283,7 +283,7 @@ declare namespace javax {
                      * @see LoggingPermission
                      */
                     // @ts-ignore
-                    setLogger(logger: java.util.logging.Logger, level: java.util.logging.Level): void
+                    public static setLogger(logger: java.util.logging.Logger, level: java.util.logging.Level): void
                     /**
                      * Returns the logging object for applications to retrieve
                      * synchronization events posted by SyncProvider implementations.
@@ -292,7 +292,7 @@ declare namespace javax {
                      * @throws SyncFactoryException if no logging object has been set.
                      */
                     // @ts-ignore
-                    getLogger(): java.util.logging.Logger
+                    public static getLogger(): java.util.logging.Logger
                     /**
                      * Sets the initial JNDI context from which SyncProvider implementations
                      * can be retrieved from a JNDI namespace
@@ -311,7 +311,7 @@ declare namespace javax {
                      * @see SecurityManager#checkPermission
                      */
                     // @ts-ignore
-                    setJNDIContext(ctx: javax.naming.Context): void
+                    public static setJNDIContext(ctx: javax.naming.Context): void
                 }
             }
         }

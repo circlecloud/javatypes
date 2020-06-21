@@ -19,7 +19,7 @@ declare namespace org {
                              * @return The class
                              */
                             // @ts-ignore
-                            defineClass(name: string, b: number /*byte*/[]): java.lang.Class<?>
+                            public defineClass(name: java.lang.String | string, b: number /*byte*/[]): java.lang.Class<any>
                         }
                     }
                 }

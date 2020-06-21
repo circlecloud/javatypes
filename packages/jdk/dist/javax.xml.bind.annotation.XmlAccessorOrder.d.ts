@@ -35,7 +35,7 @@ declare namespace javax {
                  * @see XmlAccessOrder
                  */
                 // @ts-ignore
-                class XmlAccessorOrder implements java.lang.annotation.Annotation {
+                abstract class XmlAccessorOrder implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -59,7 +59,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            constructor(label: string)
+            constructor(label: java.lang.String | string)
             /**
              * Create a menu item with an associated keyboard shortcut.
              * Note that use of "-" in a label is reserved to indicate
@@ -74,13 +74,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(label: string, s: java.awt.MenuShortcut)
+            constructor(label: java.lang.String | string, s: java.awt.MenuShortcut)
             /**
              * Creates the menu item's peer.  The peer allows us to modify the
              * appearance of the menu item without changing its functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the label for this menu item.
              * @return the label of this menu item, or <code>null</code>
@@ -89,7 +89,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getLabel(): java.lang.String
+            public getLabel(): string
             /**
              * Sets the label for this menu item to the specified label.
              * @param label   the new label, or <code>null</code> for no label.
@@ -97,14 +97,14 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            setLabel(label: string): void
+            public setLabel(label: java.lang.String | string): void
             /**
              * Checks whether this menu item is enabled.
              * @see java.awt.MenuItem#setEnabled
              * @since JDK1.0
              */
             // @ts-ignore
-            isEnabled(): boolean
+            public isEnabled(): boolean
             /**
              * Sets whether or not this menu item can be chosen.
              * @param b  if <code>true</code>, enables this menu item;
@@ -113,25 +113,25 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setEnabled(b: boolean): void
+            public setEnabled(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            enable(): void
+            public enable(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            enable(b: boolean): void
+            public enable(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            disable(): void
+            public disable(): void
             /**
              * Get the <code>MenuShortcut</code> object associated with this
              * menu item,
@@ -141,7 +141,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getShortcut(): java.awt.MenuShortcut
+            public getShortcut(): java.awt.MenuShortcut
             /**
              * Set the <code>MenuShortcut</code> object associated with this
              * menu item. If a menu shortcut is already associated with
@@ -152,14 +152,14 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setShortcut(s: java.awt.MenuShortcut): void
+            public setShortcut(s: java.awt.MenuShortcut): void
             /**
              * Delete any <code>MenuShortcut</code> object associated
              * with this menu item.
              * @since JDK1.1
              */
             // @ts-ignore
-            deleteShortcut(): void
+            public deleteShortcut(): void
             /**
              * Enables event delivery to this menu item for events
              * to be defined by the specified event mask parameter
@@ -200,7 +200,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setActionCommand(command: string): void
+            public setActionCommand(command: java.lang.String | string): void
             /**
              * Gets the command name of the action event that is fired
              * by this menu item.
@@ -208,7 +208,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * Adds the specified action listener to receive action events
              * from this menu item.
@@ -223,7 +223,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener so it no longer receives
              * action events from this menu item.
@@ -238,7 +238,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this menu item.
@@ -252,7 +252,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -282,7 +282,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this menu item. If the event is an
              * instance of <code>ActionEvent</code>, it invokes
@@ -331,7 +331,7 @@ declare namespace java {
              * @return the parameter string of this menu item
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            public paramString(): string
             /**
              * Gets the AccessibleContext associated with this MenuItem.
              * For menu items, the AccessibleContext takes the form of an
@@ -342,7 +342,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

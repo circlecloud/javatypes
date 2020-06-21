@@ -31,7 +31,7 @@ declare namespace java {
              * @param vendorCode a database vendor-specific warning code
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/)
             /**
              * Constructs a <code>SQLWarning</code> object
              * with a given <code>reason</code> and <code>SQLState</code>.
@@ -44,7 +44,7 @@ declare namespace java {
              * @param SQLState an XOPEN or SQL:2003 code identifying the warning
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string)
             /**
              * Constructs a <code>SQLWarning</code> object
              * with a given <code>reason</code>. The <code>SQLState</code>
@@ -57,7 +57,7 @@ declare namespace java {
              * @param reason a description of the warning
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
             /**
              * Constructs a  <code>SQLWarning</code> object.
              * The <code>reason</code>, <code>SQLState</code> are initialized
@@ -81,7 +81,7 @@ declare namespace java {
              *      the cause is non-existent or unknown.
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLWarning</code> object
              * with a given
@@ -95,7 +95,7 @@ declare namespace java {
              *  may be null indicating the cause is non-existent or unknown.
              */
             // @ts-ignore
-            constructor(reason: string, cause: Error)
+            constructor(reason: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLWarning</code> object
              * with a given
@@ -108,7 +108,7 @@ declare namespace java {
              *      the cause is non-existent or unknown.
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a<code>SQLWarning</code> object
              * with a given
@@ -122,7 +122,7 @@ declare namespace java {
              *      the cause is non-existent or unknown.
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, cause: java.lang.Throwable | Error)
             /**
              * Retrieves the warning chained to this <code>SQLWarning</code> object by
              * <code>setNextWarning</code>.

@@ -8,7 +8,7 @@ declare namespace org {
              * @see BindingResult#MODEL_KEY_PREFIX
              */
             // @ts-ignore
-            class BindingResultUtils extends java.lang.Object {
+            abstract class BindingResultUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -19,7 +19,7 @@ declare namespace org {
                  * @throws IllegalStateException if the attribute found is not of type BindingResult
                  */
                 // @ts-ignore
-                getBindingResult(model: java.util.Map<any, ?>, name: string): org.springframework.validation.BindingResult
+                public static getBindingResult(model: java.util.Map<any, any>, name: java.lang.String | string): org.springframework.validation.BindingResult
                 /**
                  * Find a required BindingResult for the given name in the given model.
                  * @param model the model to search
@@ -28,7 +28,7 @@ declare namespace org {
                  * @throws IllegalStateException if no BindingResult found
                  */
                 // @ts-ignore
-                getRequiredBindingResult(model: java.util.Map<any, ?>, name: string): org.springframework.validation.BindingResult
+                public static getRequiredBindingResult(model: java.util.Map<any, any>, name: java.lang.String | string): org.springframework.validation.BindingResult
             }
         }
     }

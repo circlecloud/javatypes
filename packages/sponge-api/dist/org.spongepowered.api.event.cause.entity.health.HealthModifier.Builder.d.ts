@@ -17,7 +17,7 @@ declare namespace org {
                                      * @return The new builder instance
                                      */
                                     // @ts-ignore
-                                    builder(): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
+                                    public static builder(): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
                                     /**
                                      * Sets the {@link HealthModifierType} for the {@link HealthModifier} to
                                      * build.
@@ -25,25 +25,25 @@ declare namespace org {
                                      * @return This builder, for chaining
                                      */
                                     // @ts-ignore
-                                    type(healthModifierType: org.spongepowered.api.event.cause.entity.health.HealthModifierType): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
+                                    public type(healthModifierType: org.spongepowered.api.event.cause.entity.health.HealthModifierType): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
                                     /**
                                      * Sets the {@link Cause} for the {@link HealthModifier} to build.
                                      * @param cause The cause for the health modifier
                                      * @return This builder, for chaining
                                      */
                                     // @ts-ignore
-                                    cause(cause: org.spongepowered.api.event.cause.Cause): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
+                                    public cause(cause: org.spongepowered.api.event.cause.Cause): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
                                     /**
                                      * Creates a new {@link HealthModifier} with this builder's provided
                                      * {@link Cause} and {@link HealthModifierType}.
                                      * @return The newly created health modifier
                                      */
                                     // @ts-ignore
-                                    build(): org.spongepowered.api.event.cause.entity.health.HealthModifier
+                                    public build(): org.spongepowered.api.event.cause.entity.health.HealthModifier
                                     // @ts-ignore
-                                    from(value: org.spongepowered.api.event.cause.entity.health.HealthModifier): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
+                                    public from(value: org.spongepowered.api.event.cause.entity.health.HealthModifier): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
                                     // @ts-ignore
-                                    reset(): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
+                                    public reset(): org.spongepowered.api.event.cause.entity.health.HealthModifier.Builder
                                 }
                             }
                         }

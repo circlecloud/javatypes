@@ -58,7 +58,7 @@ declare namespace java {
              * @see java.awt.Component#getToolkit()
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Returns the number of items in this <code>Choice</code> menu.
              * @return the number of items in this <code>Choice</code> menu
@@ -66,13 +66,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getItemCount(): int
+            public getItemCount(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getItemCount()</code>.
              */
             // @ts-ignore
-            countItems(): int
+            public countItems(): number /*int*/
             /**
              * Gets the string at the specified index in this
              * <code>Choice</code> menu.
@@ -80,7 +80,7 @@ declare namespace java {
              * @see #getItemCount
              */
             // @ts-ignore
-            getItem(index: number /*int*/): java.lang.String
+            public getItem(index: number /*int*/): string
             /**
              * Adds an item to this <code>Choice</code> menu.
              * @param item    the item to be added
@@ -89,7 +89,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            add(item: string): void
+            public add(item: java.lang.String | string): void
             /**
              * Obsolete as of Java 2 platform v1.1.  Please use the
              * <code>add</code> method instead.
@@ -100,7 +100,7 @@ declare namespace java {
              *           <code>null</code>
              */
             // @ts-ignore
-            addItem(item: string): void
+            public addItem(item: java.lang.String | string): void
             /**
              * Inserts the item into this choice at the specified position.
              * Existing items at an index greater than or equal to
@@ -120,7 +120,7 @@ declare namespace java {
              * @exception IllegalArgumentException if index is less than 0
              */
             // @ts-ignore
-            insert(item: string, index: number /*int*/): void
+            public insert(item: java.lang.String | string, index: number /*int*/): void
             /**
              * Removes the first occurrence of <code>item</code>
              * from the <code>Choice</code> menu.  If the item
@@ -135,7 +135,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            remove(item: string): void
+            public remove(item: java.lang.String | string): void
             /**
              * Removes an item from the choice menu
              * at the specified position.  If the item
@@ -150,14 +150,14 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            remove(position: number /*int*/): void
+            public remove(position: number /*int*/): void
             /**
              * Removes all items from the choice menu.
              * @see #remove
              * @since JDK1.1
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Gets a representation of the current choice as a string.
              * @return a string representation of the currently
@@ -165,14 +165,14 @@ declare namespace java {
              * @see #getSelectedIndex
              */
             // @ts-ignore
-            getSelectedItem(): java.lang.String
+            public getSelectedItem(): string
             /**
              * Returns an array (length 1) containing the currently selected
              * item.  If this choice has no items, returns <code>null</code>.
              * @see ItemSelectable
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * Returns the index of the currently selected item.
              * If nothing is selected, returns -1.
@@ -181,7 +181,7 @@ declare namespace java {
              * @see #getSelectedItem
              */
             // @ts-ignore
-            getSelectedIndex(): int
+            public getSelectedIndex(): number /*int*/
             /**
              * Sets the selected item in this <code>Choice</code> menu to be the
              * item at the specified position.
@@ -198,7 +198,7 @@ declare namespace java {
              * @see #getSelectedIndex
              */
             // @ts-ignore
-            select(pos: number /*int*/): void
+            public select(pos: number /*int*/): void
             /**
              * Sets the selected item in this <code>Choice</code> menu
              * to be the item whose name is equal to the specified string.
@@ -214,7 +214,7 @@ declare namespace java {
              * @see #getSelectedIndex
              */
             // @ts-ignore
-            select(str: string): void
+            public select(str: java.lang.String | string): void
             /**
              * Adds the specified item listener to receive item events from
              * this <code>Choice</code> menu.  Item events are sent in response
@@ -232,7 +232,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addItemListener(l: java.awt.event.ItemListener): void
+            public addItemListener(l: java.awt.event.ItemListener): void
             /**
              * Removes the specified item listener so that it no longer receives
              * item events from this <code>Choice</code> menu.
@@ -248,7 +248,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeItemListener(l: java.awt.event.ItemListener): void
+            public removeItemListener(l: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the item listeners
              * registered on this choice.
@@ -262,7 +262,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -292,7 +292,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this choice. If the event is an
              * instance of <code>ItemEvent</code>, it invokes the
@@ -342,7 +342,7 @@ declare namespace java {
              * @return the parameter string of this <code>Choice</code> menu
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>Choice</code>. For <code>Choice</code> components,
@@ -354,7 +354,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

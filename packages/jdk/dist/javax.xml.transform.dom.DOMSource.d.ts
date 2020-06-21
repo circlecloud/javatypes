@@ -41,40 +41,40 @@ declare namespace javax {
                      * @param systemID Specifies the base URI associated with node.
                      */
                     // @ts-ignore
-                    constructor(node: org.w3c.dom.Node, systemID: string)
+                    constructor(node: org.w3c.dom.Node, systemID: java.lang.String | string)
                     /**
                      * If {@link javax.xml.transform.TransformerFactory#getFeature}
                      * returns true when passed this value as an argument,
                      * the Transformer supports Source input of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * Set the node that will represents a Source DOM tree.
                      * @param node The node that is to be transformed.
                      */
                     // @ts-ignore
-                    setNode(node: org.w3c.dom.Node): void
+                    public setNode(node: org.w3c.dom.Node): void
                     /**
                      * Get the node that represents a Source DOM tree.
                      * @return The node that is to be transformed.
                      */
                     // @ts-ignore
-                    getNode(): org.w3c.dom.Node
+                    public getNode(): org.w3c.dom.Node
                     /**
                      * Set the base ID (URL or system ID) from where URLs
                      * will be resolved.
                      * @param systemID Base URL for this DOM tree.
                      */
                     // @ts-ignore
-                    setSystemId(systemID: string): void
+                    public setSystemId(systemID: java.lang.String | string): void
                     /**
                      * Get the base ID (URL or system ID) from where URLs
                      * will be resolved.
                      * @return Base URL for this DOM tree.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                 }
             }
         }

@@ -23,7 +23,7 @@ declare namespace org {
                          * @param beanName the name of the bean in the bean factory
                          */
                         // @ts-ignore
-                        includeBean(beanClass: java.lang.Class<any>, beanName: string): boolean
+                        includeBean(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): boolean
                     }
                 }
             }

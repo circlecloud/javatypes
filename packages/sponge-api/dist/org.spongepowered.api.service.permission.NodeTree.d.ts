@@ -24,7 +24,7 @@ declare namespace org {
                          * @return The new node tree
                          */
                         // @ts-ignore
-                        of(values: java.util.Map<java.lang.String, java.lang.Boolean>): org.spongepowered.api.service.permission.NodeTree
+                        public static of(values: java.util.Map<java.lang.String | string, java.lang.Boolean>): org.spongepowered.api.service.permission.NodeTree
                         /**
                          * Create a new node tree with the given values, and the specified root
                          * fallback value.
@@ -33,7 +33,7 @@ declare namespace org {
                          * @return The newly created node tree
                          */
                         // @ts-ignore
-                        of(values: java.util.Map<java.lang.String, java.lang.Boolean>, defaultValue: org.spongepowered.api.util.Tristate): org.spongepowered.api.service.permission.NodeTree
+                        public static of(values: java.util.Map<java.lang.String | string, java.lang.Boolean>, defaultValue: org.spongepowered.api.util.Tristate): org.spongepowered.api.service.permission.NodeTree
                         /**
                          * Returns the value assigned to a specific node, or the nearest parent
                          * value in the tree if the node itself is undefined.
@@ -41,13 +41,13 @@ declare namespace org {
                          * @return The tristate value for the given node
                          */
                         // @ts-ignore
-                        get(node: string): org.spongepowered.api.util.Tristate
+                        public get(node: java.lang.String | string): org.spongepowered.api.util.Tristate
                         /**
                          * Convert this node tree into a map of the defined nodes in this tree.
                          * @return An immutable map representation of the nodes defined in this tree
                          */
                         // @ts-ignore
-                        asMap(): java.util.Map<java.lang.String, java.lang.Boolean>
+                        public asMap(): java.util.Map<java.lang.String | string, java.lang.Boolean>
                         /**
                          * Return a new NodeTree instance with a single changed value.
                          * @param node The node path to change the value of
@@ -55,14 +55,14 @@ declare namespace org {
                          * @return The new, modified node tree
                          */
                         // @ts-ignore
-                        withValue(node: string, value: org.spongepowered.api.util.Tristate): org.spongepowered.api.service.permission.NodeTree
+                        public withValue(node: java.lang.String | string, value: org.spongepowered.api.util.Tristate): org.spongepowered.api.service.permission.NodeTree
                         /**
                          * Return a modified new node tree with the specified values set.
                          * @param values The values to set
                          * @return The new node tree
                          */
                         // @ts-ignore
-                        withAll(values: java.util.Map<java.lang.String, org.spongepowered.api.util.Tristate>): org.spongepowered.api.service.permission.NodeTree
+                        public withAll(values: java.util.Map<java.lang.String | string, org.spongepowered.api.util.Tristate>): org.spongepowered.api.service.permission.NodeTree
                     }
                 }
             }

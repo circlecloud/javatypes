@@ -27,48 +27,48 @@ declare namespace javax {
              * {@inheritDoc}
              */
             // @ts-ignore
-            getMinSelectionIndex(): int
+            public getMinSelectionIndex(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getMaxSelectionIndex(): int
+            public getMaxSelectionIndex(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getSelectionMode(): int
+            public getSelectionMode(): number /*int*/
             /**
              * {@inheritDoc}
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            setSelectionMode(selectionMode: number /*int*/): void
+            public setSelectionMode(selectionMode: number /*int*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isSelectedIndex(index: number /*int*/): boolean
+            public isSelectedIndex(index: number /*int*/): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isSelectionEmpty(): boolean
+            public isSelectionEmpty(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            addListSelectionListener(l: javax.swing.event.ListSelectionListener): void
+            public addListSelectionListener(l: javax.swing.event.ListSelectionListener): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeListSelectionListener(l: javax.swing.event.ListSelectionListener): void
+            public removeListSelectionListener(l: javax.swing.event.ListSelectionListener): void
             /**
              * Returns an array of all the list selection listeners
              * registered on this <code>DefaultListSelectionModel</code>.
@@ -80,7 +80,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getListSelectionListeners(): javax.swing.event.ListSelectionListener[]
+            public getListSelectionListeners(): javax.swing.event.ListSelectionListener[]
             /**
              * Notifies listeners that we have ended a series of adjustments.
              */
@@ -133,13 +133,13 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Sets the value of the leadAnchorNotificationEnabled flag.
              * @see #isLeadAnchorNotificationEnabled()
              */
             // @ts-ignore
-            setLeadAnchorNotificationEnabled(flag: boolean): void
+            public setLeadAnchorNotificationEnabled(flag: boolean): void
             /**
              * Returns the value of the <code>leadAnchorNotificationEnabled</code> flag.
              * When <code>leadAnchorNotificationEnabled</code> is true the model
@@ -158,12 +158,12 @@ declare namespace javax {
              * @see #setLeadAnchorNotificationEnabled(boolean)
              */
             // @ts-ignore
-            isLeadAnchorNotificationEnabled(): boolean
+            public isLeadAnchorNotificationEnabled(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            clearSelection(): void
+            public clearSelection(): void
             /**
              * Changes the selection to be between {@code index0} and {@code index1}
              * inclusive. {@code index0} doesn't have to be less than or equal to
@@ -185,7 +185,7 @@ declare namespace javax {
              * @see #addListSelectionListener
              */
             // @ts-ignore
-            setSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public setSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Changes the selection to be the set union of the current selection
              * and the indices between {@code index0} and {@code index1} inclusive.
@@ -212,7 +212,7 @@ declare namespace javax {
              * @see #setSelectionInterval
              */
             // @ts-ignore
-            addSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public addSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Changes the selection to be the set difference of the current selection
              * and the indices between {@code index0} and {@code index1} inclusive.
@@ -237,7 +237,7 @@ declare namespace javax {
              * @see #addListSelectionListener
              */
             // @ts-ignore
-            removeSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public removeSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Insert length indices beginning before/after index. If the value
              * at index is itself selected and the selection mode is not
@@ -247,7 +247,7 @@ declare namespace javax {
              * in the data model.
              */
             // @ts-ignore
-            insertIndexInterval(index: number /*int*/, length: number /*int*/, before: boolean): void
+            public insertIndexInterval(index: number /*int*/, length: number /*int*/, before: boolean): void
             /**
              * Remove the indices in the interval index0,index1 (inclusive) from
              * the selection model.  This is typically called to sync the selection
@@ -255,19 +255,19 @@ declare namespace javax {
              * that (as always) index0 need not be &lt;= index1.
              */
             // @ts-ignore
-            removeIndexInterval(index0: number /*int*/, index1: number /*int*/): void
+            public removeIndexInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setValueIsAdjusting(isAdjusting: boolean): void
+            public setValueIsAdjusting(isAdjusting: boolean): void
             /**
              * Returns a string that displays and identifies this
              * object's properties.
              * @return a <code>String</code> representation of this object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a clone of this selection model with the same selection.
              * <code>listenerLists</code> are not duplicated.
@@ -276,17 +276,17 @@ declare namespace javax {
              *     <code>clone</code> method.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getAnchorSelectionIndex(): int
+            public getAnchorSelectionIndex(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getLeadSelectionIndex(): int
+            public getLeadSelectionIndex(): number /*int*/
             /**
              * Set the anchor selection index, leaving all selection values unchanged.
              * If leadAnchorNotificationEnabled is true, send a notification covering
@@ -295,7 +295,7 @@ declare namespace javax {
              * @see #setLeadSelectionIndex
              */
             // @ts-ignore
-            setAnchorSelectionIndex(anchorIndex: number /*int*/): void
+            public setAnchorSelectionIndex(anchorIndex: number /*int*/): void
             /**
              * Set the lead selection index, leaving all selection values unchanged.
              * If leadAnchorNotificationEnabled is true, send a notification covering
@@ -307,7 +307,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            moveLeadSelectionIndex(leadIndex: number /*int*/): void
+            public moveLeadSelectionIndex(leadIndex: number /*int*/): void
             /**
              * Sets the lead selection index, ensuring that values between the
              * anchor and the new lead are either all selected or all deselected.
@@ -336,7 +336,7 @@ declare namespace javax {
              * @see #setAnchorSelectionIndex
              */
             // @ts-ignore
-            setLeadSelectionIndex(leadIndex: number /*int*/): void
+            public setLeadSelectionIndex(leadIndex: number /*int*/): void
         }
     }
 }

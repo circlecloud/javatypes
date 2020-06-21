@@ -24,7 +24,7 @@ declare namespace javax {
                  *  &lt;PARAM&gt; tags.
                  */
                 // @ts-ignore
-                constructor(url: java.net.URL, attributes: java.util.Map<java.lang.String, java.lang.String>, types: Array<java.lang.String>, values: Array<java.lang.String>)
+                constructor(url: java.net.URL, attributes: java.util.Map<java.lang.String | string, java.lang.String | string>, types: java.util.List<java.lang.String | string> | Array<java.lang.String | string>, values: java.util.List<java.lang.String | string> | Array<java.lang.String | string>)
                 /**
                  * Gets the attributes of the <CODE>MLET</CODE> tag.  The keys in
                  * the returned map are the attribute names in lowercase, for
@@ -34,26 +34,26 @@ declare namespace javax {
                  *  and their values.
                  */
                 // @ts-ignore
-                getAttributes(): java.util.Map<java.lang.String, java.lang.String>
+                public getAttributes(): java.util.Map<java.lang.String | string, java.lang.String | string>
                 /**
                  * Gets the MLet text file's base URL.
                  * @return The MLet text file's base URL.
                  */
                 // @ts-ignore
-                getDocumentBase(): java.net.URL
+                public getDocumentBase(): java.net.URL
                 /**
                  * Gets the code base URL.
                  * @return The code base URL.
                  */
                 // @ts-ignore
-                getCodeBase(): java.net.URL
+                public getCodeBase(): java.net.URL
                 /**
                  * Gets the list of <CODE>.jar</CODE> files specified by the <CODE>ARCHIVE</CODE>
                  * attribute of the <CODE>MLET</CODE> tag.
                  * @return A comma-separated list of <CODE>.jar</CODE> file names.
                  */
                 // @ts-ignore
-                getJarFiles(): java.lang.String
+                public getJarFiles(): string
                 /**
                  * Gets the value of the <CODE>CODE</CODE>
                  * attribute of the <CODE>MLET</CODE> tag.
@@ -61,7 +61,7 @@ declare namespace javax {
                  *  attribute of the <CODE>MLET</CODE> tag.
                  */
                 // @ts-ignore
-                getCode(): java.lang.String
+                public getCode(): string
                 /**
                  * Gets the value of the <CODE>OBJECT</CODE>
                  * attribute of the <CODE>MLET</CODE> tag.
@@ -69,7 +69,7 @@ declare namespace javax {
                  *  attribute of the <CODE>MLET</CODE> tag.
                  */
                 // @ts-ignore
-                getSerializedObject(): java.lang.String
+                public getSerializedObject(): string
                 /**
                  * Gets the value of the <CODE>NAME</CODE>
                  * attribute of the <CODE>MLET</CODE> tag.
@@ -77,7 +77,7 @@ declare namespace javax {
                  *  attribute of the <CODE>MLET</CODE> tag.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Gets the value of the <CODE>VERSION</CODE>
                  * attribute of the <CODE>MLET</CODE> tag.
@@ -85,7 +85,7 @@ declare namespace javax {
                  *  attribute of the <CODE>MLET</CODE> tag.
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                public getVersion(): string
                 /**
                  * Gets the list of values of the <code>TYPE</code> attribute in
                  * each nested &lt;PARAM&gt; tag within the <code>MLET</code>
@@ -93,7 +93,7 @@ declare namespace javax {
                  * @return the list of types.
                  */
                 // @ts-ignore
-                getParameterTypes(): java.util.List<java.lang.String>
+                public getParameterTypes(): Array<java.lang.String | string>
                 /**
                  * Gets the list of values of the <code>VALUE</code> attribute in
                  * each nested &lt;PARAM&gt; tag within the <code>MLET</code>
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @return the list of values.
                  */
                 // @ts-ignore
-                getParameterValues(): java.util.List<java.lang.String>
+                public getParameterValues(): Array<java.lang.String | string>
             }
         }
     }

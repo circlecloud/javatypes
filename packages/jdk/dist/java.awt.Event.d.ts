@@ -52,7 +52,7 @@ declare namespace java {
              * @param arg        the specified argument.
              */
             // @ts-ignore
-            constructor(target: any, when: number /*long*/, id: number /*int*/, x: number /*int*/, y: number /*int*/, key: number /*int*/, modifiers: number /*int*/, arg: any)
+            constructor(target: java.lang.Object | any, when: number /*long*/, id: number /*int*/, x: number /*int*/, y: number /*int*/, key: number /*int*/, modifiers: number /*int*/, arg: java.lang.Object | any)
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -71,7 +71,7 @@ declare namespace java {
              * @param modifiers  the state of the modifier keys.
              */
             // @ts-ignore
-            constructor(target: any, when: number /*long*/, id: number /*int*/, x: number /*int*/, y: number /*int*/, key: number /*int*/, modifiers: number /*int*/)
+            constructor(target: java.lang.Object | any, when: number /*long*/, id: number /*int*/, x: number /*int*/, y: number /*int*/, key: number /*int*/, modifiers: number /*int*/)
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -84,223 +84,223 @@ declare namespace java {
              * @param arg        the specified argument.
              */
             // @ts-ignore
-            constructor(target: any, id: number /*int*/, arg: any)
+            constructor(target: java.lang.Object | any, id: number /*int*/, arg: java.lang.Object | any)
             /**
              * This flag indicates that the Shift key was down when the event
              * occurred.
              */
             // @ts-ignore
-            readonly SHIFT_MASK: number /*int*/
+            public static readonly SHIFT_MASK: number /*int*/
             /**
              * This flag indicates that the Control key was down when the event
              * occurred.
              */
             // @ts-ignore
-            readonly CTRL_MASK: number /*int*/
+            public static readonly CTRL_MASK: number /*int*/
             /**
              * This flag indicates that the Meta key was down when the event
              * occurred. For mouse events, this flag indicates that the right
              * button was pressed or released.
              */
             // @ts-ignore
-            readonly META_MASK: number /*int*/
+            public static readonly META_MASK: number /*int*/
             /**
              * This flag indicates that the Alt key was down when
              * the event occurred. For mouse events, this flag indicates that the
              * middle mouse button was pressed or released.
              */
             // @ts-ignore
-            readonly ALT_MASK: number /*int*/
+            public static readonly ALT_MASK: number /*int*/
             /**
              * The Home key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly HOME: number /*int*/
+            public static readonly HOME: number /*int*/
             /**
              * The End key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly END: number /*int*/
+            public static readonly END: number /*int*/
             /**
              * The Page Up key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly PGUP: number /*int*/
+            public static readonly PGUP: number /*int*/
             /**
              * The Page Down key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly PGDN: number /*int*/
+            public static readonly PGDN: number /*int*/
             /**
              * The Up Arrow key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly UP: number /*int*/
+            public static readonly UP: number /*int*/
             /**
              * The Down Arrow key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly DOWN: number /*int*/
+            public static readonly DOWN: number /*int*/
             /**
              * The Left Arrow key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly LEFT: number /*int*/
+            public static readonly LEFT: number /*int*/
             /**
              * The Right Arrow key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly RIGHT: number /*int*/
+            public static readonly RIGHT: number /*int*/
             /**
              * The F1 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F1: number /*int*/
+            public static readonly F1: number /*int*/
             /**
              * The F2 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F2: number /*int*/
+            public static readonly F2: number /*int*/
             /**
              * The F3 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F3: number /*int*/
+            public static readonly F3: number /*int*/
             /**
              * The F4 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F4: number /*int*/
+            public static readonly F4: number /*int*/
             /**
              * The F5 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F5: number /*int*/
+            public static readonly F5: number /*int*/
             /**
              * The F6 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F6: number /*int*/
+            public static readonly F6: number /*int*/
             /**
              * The F7 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F7: number /*int*/
+            public static readonly F7: number /*int*/
             /**
              * The F8 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F8: number /*int*/
+            public static readonly F8: number /*int*/
             /**
              * The F9 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F9: number /*int*/
+            public static readonly F9: number /*int*/
             /**
              * The F10 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F10: number /*int*/
+            public static readonly F10: number /*int*/
             /**
              * The F11 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F11: number /*int*/
+            public static readonly F11: number /*int*/
             /**
              * The F12 function key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly F12: number /*int*/
+            public static readonly F12: number /*int*/
             /**
              * The Print Screen key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly PRINT_SCREEN: number /*int*/
+            public static readonly PRINT_SCREEN: number /*int*/
             /**
              * The Scroll Lock key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly SCROLL_LOCK: number /*int*/
+            public static readonly SCROLL_LOCK: number /*int*/
             /**
              * The Caps Lock key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly CAPS_LOCK: number /*int*/
+            public static readonly CAPS_LOCK: number /*int*/
             /**
              * The Num Lock key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly NUM_LOCK: number /*int*/
+            public static readonly NUM_LOCK: number /*int*/
             /**
              * The Pause key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly PAUSE: number /*int*/
+            public static readonly PAUSE: number /*int*/
             /**
              * The Insert key, a non-ASCII action key.
              */
             // @ts-ignore
-            readonly INSERT: number /*int*/
+            public static readonly INSERT: number /*int*/
             /**
              * The Enter key.
              */
             // @ts-ignore
-            readonly ENTER: number /*int*/
+            public static readonly ENTER: number /*int*/
             /**
              * The BackSpace key.
              */
             // @ts-ignore
-            readonly BACK_SPACE: number /*int*/
+            public static readonly BACK_SPACE: number /*int*/
             /**
              * The Tab key.
              */
             // @ts-ignore
-            readonly TAB: number /*int*/
+            public static readonly TAB: number /*int*/
             /**
              * The Escape key.
              */
             // @ts-ignore
-            readonly ESCAPE: number /*int*/
+            public static readonly ESCAPE: number /*int*/
             /**
              * The Delete key.
              */
             // @ts-ignore
-            readonly DELETE: number /*int*/
+            public static readonly DELETE: number /*int*/
             /**
              * The user has asked the window manager to kill the window.
              */
             // @ts-ignore
-            readonly WINDOW_DESTROY: number /*int*/
+            public static readonly WINDOW_DESTROY: number /*int*/
             /**
              * The user has asked the window manager to expose the window.
              */
             // @ts-ignore
-            readonly WINDOW_EXPOSE: number /*int*/
+            public static readonly WINDOW_EXPOSE: number /*int*/
             /**
              * The user has asked the window manager to iconify the window.
              */
             // @ts-ignore
-            readonly WINDOW_ICONIFY: number /*int*/
+            public static readonly WINDOW_ICONIFY: number /*int*/
             /**
              * The user has asked the window manager to de-iconify the window.
              */
             // @ts-ignore
-            readonly WINDOW_DEICONIFY: number /*int*/
+            public static readonly WINDOW_DEICONIFY: number /*int*/
             /**
              * The user has asked the window manager to move the window.
              */
             // @ts-ignore
-            readonly WINDOW_MOVED: number /*int*/
+            public static readonly WINDOW_MOVED: number /*int*/
             /**
              * The user has pressed a normal key.
              */
             // @ts-ignore
-            readonly KEY_PRESS: number /*int*/
+            public static readonly KEY_PRESS: number /*int*/
             /**
              * The user has released a normal key.
              */
             // @ts-ignore
-            readonly KEY_RELEASE: number /*int*/
+            public static readonly KEY_RELEASE: number /*int*/
             /**
              * The user has pressed a non-ASCII <em>action</em> key.
              * The <code>key</code> field contains a value that indicates
@@ -310,7 +310,7 @@ declare namespace java {
              * Caps Lock, Num Lock, Pause, and Insert.
              */
             // @ts-ignore
-            readonly KEY_ACTION: number /*int*/
+            public static readonly KEY_ACTION: number /*int*/
             /**
              * The user has released a non-ASCII <em>action</em> key.
              * The <code>key</code> field contains a value that indicates
@@ -320,7 +320,7 @@ declare namespace java {
              * Caps Lock, Num Lock, Pause, and Insert.
              */
             // @ts-ignore
-            readonly KEY_ACTION_RELEASE: number /*int*/
+            public static readonly KEY_ACTION_RELEASE: number /*int*/
             /**
              * The user has pressed the mouse button. The <code>ALT_MASK</code>
              * flag indicates that the middle button has been pressed.
@@ -330,7 +330,7 @@ declare namespace java {
              * @see java.awt.Event#META_MASK
              */
             // @ts-ignore
-            readonly MOUSE_DOWN: number /*int*/
+            public static readonly MOUSE_DOWN: number /*int*/
             /**
              * The user has released the mouse button. The <code>ALT_MASK</code>
              * flag indicates that the middle button has been released.
@@ -340,22 +340,22 @@ declare namespace java {
              * @see java.awt.Event#META_MASK
              */
             // @ts-ignore
-            readonly MOUSE_UP: number /*int*/
+            public static readonly MOUSE_UP: number /*int*/
             /**
              * The mouse has moved with no button pressed.
              */
             // @ts-ignore
-            readonly MOUSE_MOVE: number /*int*/
+            public static readonly MOUSE_MOVE: number /*int*/
             /**
              * The mouse has entered a component.
              */
             // @ts-ignore
-            readonly MOUSE_ENTER: number /*int*/
+            public static readonly MOUSE_ENTER: number /*int*/
             /**
              * The mouse has exited a component.
              */
             // @ts-ignore
-            readonly MOUSE_EXIT: number /*int*/
+            public static readonly MOUSE_EXIT: number /*int*/
             /**
              * The user has moved the mouse with a button pressed. The
              * <code>ALT_MASK</code> flag indicates that the middle
@@ -365,83 +365,83 @@ declare namespace java {
              * @see java.awt.Event#META_MASK
              */
             // @ts-ignore
-            readonly MOUSE_DRAG: number /*int*/
+            public static readonly MOUSE_DRAG: number /*int*/
             /**
              * The user has activated the <em>line up</em>
              * area of a scroll bar.
              */
             // @ts-ignore
-            readonly SCROLL_LINE_UP: number /*int*/
+            public static readonly SCROLL_LINE_UP: number /*int*/
             /**
              * The user has activated the <em>line down</em>
              * area of a scroll bar.
              */
             // @ts-ignore
-            readonly SCROLL_LINE_DOWN: number /*int*/
+            public static readonly SCROLL_LINE_DOWN: number /*int*/
             /**
              * The user has activated the <em>page up</em>
              * area of a scroll bar.
              */
             // @ts-ignore
-            readonly SCROLL_PAGE_UP: number /*int*/
+            public static readonly SCROLL_PAGE_UP: number /*int*/
             /**
              * The user has activated the <em>page down</em>
              * area of a scroll bar.
              */
             // @ts-ignore
-            readonly SCROLL_PAGE_DOWN: number /*int*/
+            public static readonly SCROLL_PAGE_DOWN: number /*int*/
             /**
              * The user has moved the bubble (thumb) in a scroll bar,
              * moving to an "absolute" position, rather than to
              * an offset from the last position.
              */
             // @ts-ignore
-            readonly SCROLL_ABSOLUTE: number /*int*/
+            public static readonly SCROLL_ABSOLUTE: number /*int*/
             /**
              * The scroll begin event.
              */
             // @ts-ignore
-            readonly SCROLL_BEGIN: number /*int*/
+            public static readonly SCROLL_BEGIN: number /*int*/
             /**
              * The scroll end event.
              */
             // @ts-ignore
-            readonly SCROLL_END: number /*int*/
+            public static readonly SCROLL_END: number /*int*/
             /**
              * An item in a list has been selected.
              */
             // @ts-ignore
-            readonly LIST_SELECT: number /*int*/
+            public static readonly LIST_SELECT: number /*int*/
             /**
              * An item in a list has been deselected.
              */
             // @ts-ignore
-            readonly LIST_DESELECT: number /*int*/
+            public static readonly LIST_DESELECT: number /*int*/
             /**
              * This event indicates that the user wants some action to occur.
              */
             // @ts-ignore
-            readonly ACTION_EVENT: number /*int*/
+            public static readonly ACTION_EVENT: number /*int*/
             /**
              * A file loading event.
              */
             // @ts-ignore
-            readonly LOAD_FILE: number /*int*/
+            public static readonly LOAD_FILE: number /*int*/
             /**
              * A file saving event.
              */
             // @ts-ignore
-            readonly SAVE_FILE: number /*int*/
+            public static readonly SAVE_FILE: number /*int*/
             /**
              * A component gained the focus.
              */
             // @ts-ignore
-            readonly GOT_FOCUS: number /*int*/
+            public static readonly GOT_FOCUS: number /*int*/
             /**
              * A component lost the focus.
              */
             // @ts-ignore
-            readonly LOST_FOCUS: number /*int*/
+            public static readonly LOST_FOCUS: number /*int*/
             /**
              * The target component. This indicates the component over which the
              * event occurred or with which the event is associated.
@@ -450,7 +450,7 @@ declare namespace java {
              * @see java.awt.AWTEvent#getSource()
              */
             // @ts-ignore
-            target: any
+            public target: java.lang.Object | any
             /**
              * The time stamp.
              * Replaced by InputEvent.getWhen().
@@ -458,7 +458,7 @@ declare namespace java {
              * @see java.awt.event.InputEvent#getWhen()
              */
             // @ts-ignore
-            when: number /*long*/
+            public when: number /*long*/
             /**
              * Indicates which type of event the event is, and which
              * other <code>Event</code> variables are relevant for the event.
@@ -467,7 +467,7 @@ declare namespace java {
              * @see java.awt.AWTEvent#getID()
              */
             // @ts-ignore
-            id: number /*int*/
+            public id: number /*int*/
             /**
              * The <i>x</i> coordinate of the event.
              * Replaced by MouseEvent.getX()
@@ -475,7 +475,7 @@ declare namespace java {
              * @see java.awt.event.MouseEvent#getX()
              */
             // @ts-ignore
-            x: number /*int*/
+            public x: number /*int*/
             /**
              * The <i>y</i> coordinate of the event.
              * Replaced by MouseEvent.getY()
@@ -483,7 +483,7 @@ declare namespace java {
              * @see java.awt.event.MouseEvent#getY()
              */
             // @ts-ignore
-            y: number /*int*/
+            public y: number /*int*/
             /**
              * The key code of the key that was pressed in a keyboard event.
              * This has been replaced by KeyEvent.getKeyCode()
@@ -491,7 +491,7 @@ declare namespace java {
              * @see java.awt.event.KeyEvent#getKeyCode()
              */
             // @ts-ignore
-            key: number /*int*/
+            public key: number /*int*/
             /**
              * The state of the modifier keys.
              * This is replaced with InputEvent.getModifiers()
@@ -501,7 +501,7 @@ declare namespace java {
              * @see java.awt.event.InputEvent#getModifiers()
              */
             // @ts-ignore
-            modifiers: number /*int*/
+            public modifiers: number /*int*/
             /**
              * For <code>MOUSE_DOWN</code> events, this field indicates the
              * number of consecutive clicks. For other events, its value is
@@ -511,7 +511,7 @@ declare namespace java {
              * @see java.awt.event.MouseEvent#getClickCount()
              */
             // @ts-ignore
-            clickCount: number /*int*/
+            public clickCount: number /*int*/
             /**
              * An arbitrary argument of the event. The value of this field
              * depends on the type of event.
@@ -519,7 +519,7 @@ declare namespace java {
              * @serial 
              */
             // @ts-ignore
-            arg: any
+            public arg: java.lang.Object | any
             /**
              * The next event. This field is set when putting events into a
              * linked list.
@@ -528,7 +528,7 @@ declare namespace java {
              * @see java.awt.EventQueue
              */
             // @ts-ignore
-            evt: java.awt.Event
+            public evt: java.awt.Event
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -546,7 +546,7 @@ declare namespace java {
              * @param dy     the distance to translate the <i>y</i> coordinate.
              */
             // @ts-ignore
-            translate(dx: number /*int*/, dy: number /*int*/): void
+            public translate(dx: number /*int*/, dy: number /*int*/): void
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -560,7 +560,7 @@ declare namespace java {
              * @see java.awt.Event#metaDown
              */
             // @ts-ignore
-            shiftDown(): boolean
+            public shiftDown(): boolean
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -574,7 +574,7 @@ declare namespace java {
              * @see java.awt.Event#metaDown
              */
             // @ts-ignore
-            controlDown(): boolean
+            public controlDown(): boolean
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -588,7 +588,7 @@ declare namespace java {
              * @see java.awt.Event#controlDown
              */
             // @ts-ignore
-            metaDown(): boolean
+            public metaDown(): boolean
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -602,7 +602,7 @@ declare namespace java {
              * @return the parameter string of this event
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * <b>NOTE:</b> The <code>Event</code> class is obsolete and is
              * available only for backwards compatibility.  It has been replaced
@@ -615,7 +615,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

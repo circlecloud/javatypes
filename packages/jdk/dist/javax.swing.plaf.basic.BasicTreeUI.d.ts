@@ -154,27 +154,27 @@ declare namespace javax {
                     // @ts-ignore
                     editorHasDifferentSize: boolean
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
                     getHashColor(): java.awt.Color
                     // @ts-ignore
                     setHashColor(color: java.awt.Color): void
                     // @ts-ignore
-                    setLeftChildIndent(newAmount: number /*int*/): void
+                    public setLeftChildIndent(newAmount: number /*int*/): void
                     // @ts-ignore
-                    getLeftChildIndent(): int
+                    public getLeftChildIndent(): number /*int*/
                     // @ts-ignore
-                    setRightChildIndent(newAmount: number /*int*/): void
+                    public setRightChildIndent(newAmount: number /*int*/): void
                     // @ts-ignore
-                    getRightChildIndent(): int
+                    public getRightChildIndent(): number /*int*/
                     // @ts-ignore
-                    setExpandedIcon(newG: javax.swing.Icon): void
+                    public setExpandedIcon(newG: javax.swing.Icon): void
                     // @ts-ignore
-                    getExpandedIcon(): javax.swing.Icon
+                    public getExpandedIcon(): javax.swing.Icon
                     // @ts-ignore
-                    setCollapsedIcon(newG: javax.swing.Icon): void
+                    public setCollapsedIcon(newG: javax.swing.Icon): void
                     // @ts-ignore
-                    getCollapsedIcon(): javax.swing.Icon
+                    public getCollapsedIcon(): javax.swing.Icon
                     /**
                      * Updates the componentListener, if necessary.
                      */
@@ -188,7 +188,7 @@ declare namespace javax {
                     // @ts-ignore
                     setRowHeight(rowHeight: number /*int*/): void
                     // @ts-ignore
-                    getRowHeight(): int
+                    getRowHeight(): number /*int*/
                     /**
                      * Sets the TreeCellRenderer to <code>tcr</code>. This invokes
                      * <code>updateRenderer</code>.
@@ -250,25 +250,25 @@ declare namespace javax {
                      * any component in path is currently valid.
                      */
                     // @ts-ignore
-                    getPathBounds(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): java.awt.Rectangle
+                    public getPathBounds(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): java.awt.Rectangle
                     /**
                      * Returns the path for passed in row.  If row is not visible
                      * null is returned.
                      */
                     // @ts-ignore
-                    getPathForRow(tree: javax.swing.JTree, row: number /*int*/): javax.swing.tree.TreePath
+                    public getPathForRow(tree: javax.swing.JTree, row: number /*int*/): javax.swing.tree.TreePath
                     /**
                      * Returns the row that the last item identified in path is visible
                      * at.  Will return -1 if any of the elements in path are not
                      * currently visible.
                      */
                     // @ts-ignore
-                    getRowForPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): int
+                    public getRowForPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): number /*int*/
                     /**
                      * Returns the number of rows that are being displayed.
                      */
                     // @ts-ignore
-                    getRowCount(tree: javax.swing.JTree): int
+                    public getRowCount(tree: javax.swing.JTree): number /*int*/
                     /**
                      * Returns the path to the node that is closest to x,y.  If
                      * there is nothing currently visible this will return null, otherwise
@@ -277,38 +277,38 @@ declare namespace javax {
                      * the returned path and test x, y against that.
                      */
                     // @ts-ignore
-                    getClosestPathForLocation(tree: javax.swing.JTree, x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
+                    public getClosestPathForLocation(tree: javax.swing.JTree, x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
                     /**
                      * Returns true if the tree is being edited.  The item that is being
                      * edited can be returned by getEditingPath().
                      */
                     // @ts-ignore
-                    isEditing(tree: javax.swing.JTree): boolean
+                    public isEditing(tree: javax.swing.JTree): boolean
                     /**
                      * Stops the current editing session.  This has no effect if the
                      * tree isn't being edited.  Returns true if the editor allows the
                      * editing session to stop.
                      */
                     // @ts-ignore
-                    stopEditing(tree: javax.swing.JTree): boolean
+                    public stopEditing(tree: javax.swing.JTree): boolean
                     /**
                      * Cancels the current editing session.
                      */
                     // @ts-ignore
-                    cancelEditing(tree: javax.swing.JTree): void
+                    public cancelEditing(tree: javax.swing.JTree): void
                     /**
                      * Selects the last item in path and tries to edit it.  Editing will
                      * fail if the CellEditor won't allow it for the selected item.
                      */
                     // @ts-ignore
-                    startEditingAtPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): void
+                    public startEditingAtPath(tree: javax.swing.JTree, path: javax.swing.tree.TreePath): void
                     /**
                      * Returns the path to the element that is being edited.
                      */
                     // @ts-ignore
-                    getEditingPath(tree: javax.swing.JTree): javax.swing.tree.TreePath
+                    public getEditingPath(tree: javax.swing.JTree): javax.swing.tree.TreePath
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Invoked after the <code>tree</code> instance variable has been
                      * set, but before any defaults/listeners have been installed.
@@ -420,7 +420,7 @@ declare namespace javax {
                     // @ts-ignore
                     createTreeModelListener(): javax.swing.event.TreeModelListener
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     prepareForUIUninstall(): void
                     // @ts-ignore
@@ -444,7 +444,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -453,9 +453,9 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Tells if a {@code DropLocation} should be indicated by a line between
                      * nodes. This is meant for {@code javax.swing.DropMode.INSERT} and
@@ -527,14 +527,14 @@ declare namespace javax {
                      * parent node by default.  This method makes the leg start below that.
                      */
                     // @ts-ignore
-                    getVerticalLegBuffer(): int
+                    getVerticalLegBuffer(): number /*int*/
                     /**
                      * The horizontal element of legs between nodes starts at the
                      * right of the left-hand side of the child node by default.  This
                      * method makes the leg end before that.
                      */
                     // @ts-ignore
-                    getHorizontalLegBuffer(): int
+                    getHorizontalLegBuffer(): number /*int*/
                     // @ts-ignore
                     drawCentered(c: java.awt.Component, graphics: java.awt.Graphics, icon: javax.swing.Icon, x: number /*int*/, y: number /*int*/): void
                     // @ts-ignore
@@ -553,7 +553,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getRowX(row: number /*int*/, depth: number /*int*/): int
+                    getRowX(row: number /*int*/, depth: number /*int*/): number /*int*/
                     /**
                      * Makes all the nodes that are expanded in JTree expanded in LayoutCache.
                      * This invokes updateExpandedDescendants with the root path.
@@ -630,37 +630,37 @@ declare namespace javax {
                      * Sets the preferred minimum size.
                      */
                     // @ts-ignore
-                    setPreferredMinSize(newSize: java.awt.Dimension): void
+                    public setPreferredMinSize(newSize: java.awt.Dimension): void
                     /**
                      * Returns the minimum preferred size.
                      */
                     // @ts-ignore
-                    getPreferredMinSize(): java.awt.Dimension
+                    public getPreferredMinSize(): java.awt.Dimension
                     /**
                      * Returns the preferred size to properly display the tree,
                      * this is a cover method for getPreferredSize(c, true).
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the preferred size to represent the tree in
                      * <I>c</I>.  If <I>checkConsistency</I> is true
                      * <b>checkConsistency</b> is messaged first.
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent, checkConsistency: boolean): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent, checkConsistency: boolean): java.awt.Dimension
                     /**
                      * Returns the minimum size for this component.  Which will be
                      * the min preferred size or 0, 0.
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the maximum size for this component, which will be the
                      * preferred size if the instance is currently in a JTree, or 0, 0.
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Messages to stop the editing session. If the UI the receiver
                      * is providing the look and feel for returns true from
@@ -760,7 +760,7 @@ declare namespace javax {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    getLeadSelectionRow(): int
+                    getLeadSelectionRow(): number /*int*/
                 }
             }
         }

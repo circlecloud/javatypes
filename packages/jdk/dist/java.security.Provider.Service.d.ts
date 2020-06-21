@@ -39,32 +39,32 @@ declare namespace java {
                  *  className is null
                  */
                 // @ts-ignore
-                constructor(provider: java.security.Provider, type: string, algorithm: string, className: string, aliases: Array<java.lang.String>, attributes: java.util.Map<java.lang.String, java.lang.String>)
+                constructor(provider: java.security.Provider, type: java.lang.String | string, algorithm: java.lang.String | string, className: java.lang.String | string, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>, attributes: java.util.Map<java.lang.String | string, java.lang.String | string>)
                 /**
                  * Get the type of this service. For example, {@code MessageDigest}.
                  * @return the type of this service
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Return the name of the algorithm of this service. For example,
                  * {@code SHA-1}.
                  * @return the algorithm of this service
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
                 /**
                  * Return the Provider of this service.
                  * @return the Provider of this service
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Return the name of the class implementing this service.
                  * @return the name of the class implementing this service
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Return the value of the specified attribute or null if this
                  * attribute is not set for this Service.
@@ -74,7 +74,7 @@ declare namespace java {
                  * @throws NullPointerException if name is null
                  */
                 // @ts-ignore
-                getAttribute(name: string): java.lang.String
+                public getAttribute(name: java.lang.String | string): string
                 /**
                  * Return a new instance of the implementation described by this
                  * service. The security provider framework uses this method to
@@ -98,7 +98,7 @@ declare namespace java {
                  *  any other reason.
                  */
                 // @ts-ignore
-                newInstance(constructorParameter: any): java.lang.Object
+                public newInstance(constructorParameter: java.lang.Object | any): any
                 /**
                  * Test whether this Service can use the specified parameter.
                  * Returns false if this service cannot use the parameter. Returns
@@ -122,13 +122,13 @@ declare namespace java {
                  *  used with this type of service
                  */
                 // @ts-ignore
-                supportsParameter(parameter: any): boolean
+                public supportsParameter(parameter: java.lang.Object | any): boolean
                 /**
                  * Return a String representation of this service.
                  * @return a String representation of this service.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

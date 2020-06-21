@@ -35,32 +35,32 @@ declare namespace org {
                          * defaults, to be overridden by properties loaded from files.
                          */
                         // @ts-ignore
-                        setMappings(mappings: java.util.Properties): void
+                        public setMappings(mappings: java.util.Properties): void
                         /**
                          * Set a location of a properties file to be loaded,
                          * containing object name mappings.
                          */
                         // @ts-ignore
-                        setMappingLocation(location: Resource): void
+                        public setMappingLocation(location: Resource): void
                         /**
                          * Set location of properties files to be loaded,
                          * containing object name mappings.
                          */
                         // @ts-ignore
-                        setMappingLocations(...mappingLocations: Resource[]): void
+                        public setMappingLocations(...mappingLocations: Resource[]): void
                         /**
                          * Merges the {@code Properties} configured in the {@code mappings} and
                          * {@code mappingLocations} into the final {@code Properties} instance
                          * used for {@code ObjectName} resolution.
                          */
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Attempts to retrieve the {@code ObjectName} via the given key, trying to
                          * find a mapped value in the mappings first.
                          */
                         // @ts-ignore
-                        getObjectName(managedBean: any, beanKey: string): javax.management.ObjectName
+                        public getObjectName(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.ObjectName
                     }
                 }
             }

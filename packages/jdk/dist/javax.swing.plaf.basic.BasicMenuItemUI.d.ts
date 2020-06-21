@@ -30,7 +30,7 @@ declare namespace javax {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    acceleratorDelimiter: string
+                    acceleratorDelimiter: java.lang.String | string
                     // @ts-ignore
                     defaultTextIconGap: number /*int*/
                     // @ts-ignore
@@ -59,9 +59,9 @@ declare namespace javax {
                     // @ts-ignore
                     oldBorderPainted: boolean
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     /**
@@ -70,13 +70,13 @@ declare namespace javax {
                     // @ts-ignore
                     installComponents(menuItem: javax.swing.JMenuItem): void
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
                     installListeners(): void
                     // @ts-ignore
                     installKeyboardActions(): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallDefaults(): void
                     /**
@@ -104,11 +104,11 @@ declare namespace javax {
                     // @ts-ignore
                     createPropertyChangeListener(c: javax.swing.JComponent): java.beans.PropertyChangeListener
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
                     getPreferredMenuItemSize(c: javax.swing.JComponent, checkIcon: javax.swing.Icon, arrowIcon: javax.swing.Icon, defaultTextIconGap: number /*int*/): java.awt.Dimension
                     /**
@@ -117,9 +117,9 @@ declare namespace javax {
                      * components by default) to just call paint().
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintMenuItem(g: java.awt.Graphics, c: javax.swing.JComponent, checkIcon: javax.swing.Icon, arrowIcon: javax.swing.Icon, background: java.awt.Color, foreground: java.awt.Color, defaultTextIconGap: number /*int*/): void
                     /**
@@ -141,9 +141,9 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    paintText(g: java.awt.Graphics, menuItem: javax.swing.JMenuItem, textRect: java.awt.Rectangle, text: string): void
+                    paintText(g: java.awt.Graphics, menuItem: javax.swing.JMenuItem, textRect: java.awt.Rectangle, text: java.lang.String | string): void
                     // @ts-ignore
-                    getPath(): javax.swing.MenuElement[]
+                    public getPath(): javax.swing.MenuElement[]
                     /**
                      * Call this method when a menu item is to be activated.
                      * This method handles some of the details of menu item activation

@@ -14,21 +14,21 @@ declare namespace org {
                     // @ts-ignore
                     constructor(despawnee: org.bukkit.entity.Item, loc: org.bukkit.Location)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Item
+                    public getEntity(): org.bukkit.entity.Item
                     /**
                      * Gets the location at which the item is despawning.
                      * @return The location at which the item is despawning
                      */
                     // @ts-ignore
-                    getLocation(): org.bukkit.Location
+                    public getLocation(): org.bukkit.Location
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

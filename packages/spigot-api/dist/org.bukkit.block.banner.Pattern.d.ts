@@ -17,25 +17,25 @@ declare namespace org {
                      * @param map the map to deserialize from
                      */
                     // @ts-ignore
-                    constructor(map: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(map: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     // @ts-ignore
-                    serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                    public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Returns the color of the pattern
                      * @return the color of the pattern
                      */
                     // @ts-ignore
-                    getColor(): org.bukkit.DyeColor
+                    public getColor(): org.bukkit.DyeColor
                     /**
                      * Returns the type of pattern
                      * @return the pattern type
                      */
                     // @ts-ignore
-                    getPattern(): org.bukkit.block.banner.PatternType
+                    public getPattern(): org.bukkit.block.banner.PatternType
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                 }
             }
         }

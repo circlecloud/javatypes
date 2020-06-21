@@ -27,7 +27,7 @@ declare namespace org {
                          * @throws IllegalArgumentException if any of the parameters is {#code null}
                          */
                         // @ts-ignore
-                        constructor(modelMBean: javax.management.modelmbean.ModelMBeanNotificationBroadcaster, objectName: javax.management.ObjectName, managedResource: any)
+                        constructor(modelMBean: javax.management.modelmbean.ModelMBeanNotificationBroadcaster, objectName: javax.management.ObjectName, managedResource: java.lang.Object | any)
                         /**
                          * Send the supplied {@link Notification} using the wrapped
                          * {@link ModelMBean} instance.
@@ -36,7 +36,7 @@ declare namespace org {
                          * @throws UnableToSendNotificationException if the supplied {#code notification} could not be sent
                          */
                         // @ts-ignore
-                        sendNotification(notification: javax.management.Notification): void
+                        public sendNotification(notification: javax.management.Notification): void
                     }
                 }
             }

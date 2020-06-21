@@ -18,7 +18,7 @@ declare namespace org {
                              * @param <I> The immutable data manipulator type
                              */
                             // @ts-ignore
-                            class AbstractData<M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends java.lang.Object implements org.spongepowered.api.data.manipulator.DataManipulator<M, I> {
+                            abstract class AbstractData<M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends java.lang.Object implements org.spongepowered.api.data.manipulator.DataManipulator<M, I> {
                                 // @ts-ignore
                                 constructor()
                                 /**
@@ -29,7 +29,7 @@ declare namespace org {
                                  * @param function The function for getting the value
                                  */
                                 // @ts-ignore
-                                registerKeyValue(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function.Supplier<org.spongepowered.api.data.value.mutable.Value<any>> | java.util.function$.Supplier<org.spongepowered.api.data.value.mutable.Value<?>>): void
+                                registerKeyValue(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Supplier<org.spongepowered.api.data.value.mutable.Value<any>>): void
                                 /**
                                  * Simple registration method for the keys to field getter methods.
                                  * <p>Note that this is still usable with Java 8 method references.
@@ -38,7 +38,7 @@ declare namespace org {
                                  * @param function The function for getting the field
                                  */
                                 // @ts-ignore
-                                registerFieldGetter(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function.Supplier<any> | java.util.function$.Supplier<?>): void
+                                registerFieldGetter(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Supplier<any>): void
                                 /**
                                  * Simple registration method for the keys to field setter methods.
                                  * <p>Note that this is still usable with Java 8 method references.
@@ -47,7 +47,7 @@ declare namespace org {
                                  * @param function The function for setting the field
                                  */
                                 // @ts-ignore
-                                registerFieldSetter<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Consumer<E> | java.util.function$.Consumer<E>): void
+                                registerFieldSetter<E>(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Consumer<E>): void
                                 /**
                                  * A required registration method for registering the various fields and
                                  * value getters. It's suggested that if multiple fields are used, each
@@ -57,25 +57,25 @@ declare namespace org {
                                 // @ts-ignore
                                 abstract registerGettersAndSetters(): void
                                 // @ts-ignore
-                                set<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): M
+                                public set<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): M
                                 // @ts-ignore
-                                transform<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): M
+                                public transform<E>(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Function<E, E>): M
                                 // @ts-ignore
-                                get<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): java.util.Optional<E>
+                                public get<E>(key: org.spongepowered.api.data.key.Key<any>): java.util.Optional<E>
                                 // @ts-ignore
-                                getValue<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(key: org.spongepowered.api.data.key.Key<V>): java.util.Optional<V>
+                                public getValue<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(key: org.spongepowered.api.data.key.Key<V>): java.util.Optional<V>
                                 // @ts-ignore
-                                supports(key: org.spongepowered.api.data.key.Key<any>): boolean
+                                public supports(key: org.spongepowered.api.data.key.Key<any>): boolean
                                 // @ts-ignore
-                                getKeys(): java.util.Set<org.spongepowered.api.data.key.Key<?>>
+                                public getKeys(): Array<org.spongepowered.api.data.key.Key<any>>
                                 // @ts-ignore
-                                getValues(): java.util.Set<org.spongepowered.api.data.value.immutable.ImmutableValue<?>>
+                                public getValues(): Array<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>
                                 // @ts-ignore
-                                hashCode(): int
+                                public hashCode(): number /*int*/
                                 // @ts-ignore
-                                equals(obj: any): boolean
+                                public equals(obj: java.lang.Object | any): boolean
                                 // @ts-ignore
-                                toContainer(): org.spongepowered.api.data.DataContainer
+                                public toContainer(): org.spongepowered.api.data.DataContainer
                                 /**
                                  * Implement this method to add the data to be persisted.
                                  * @param dataContainer The data container

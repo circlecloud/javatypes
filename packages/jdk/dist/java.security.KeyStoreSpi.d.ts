@@ -11,7 +11,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class KeyStoreSpi extends java.lang.Object {
+        abstract class KeyStoreSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -30,7 +30,7 @@ declare namespace java {
              *  (e.g., the given password is wrong).
              */
             // @ts-ignore
-            abstract engineGetKey(alias: string, password: string[]): java.security.Key
+            public abstract engineGetKey(alias: java.lang.String | string, password: string[]): java.security.Key
             /**
              * Returns the certificate chain associated with the given alias.
              * The certificate chain must have been associated with the alias
@@ -43,7 +43,7 @@ declare namespace java {
              *  does not exist or does not contain a certificate chain
              */
             // @ts-ignore
-            abstract engineGetCertificateChain(alias: string): java.security.cert.Certificate[]
+            public abstract engineGetCertificateChain(alias: java.lang.String | string): java.security.cert.Certificate[]
             /**
              * Returns the certificate associated with the given alias.
              * <p> If the given alias name identifies an entry
@@ -62,7 +62,7 @@ declare namespace java {
              *  does not contain a certificate.
              */
             // @ts-ignore
-            abstract engineGetCertificate(alias: string): java.security.cert.Certificate
+            public abstract engineGetCertificate(alias: java.lang.String | string): java.security.cert.Certificate
             /**
              * Returns the creation date of the entry identified by the given alias.
              * @param alias the alias name
@@ -70,7 +70,7 @@ declare namespace java {
              *  not exist
              */
             // @ts-ignore
-            abstract engineGetCreationDate(alias: string): java.util.Date
+            public abstract engineGetCreationDate(alias: java.lang.String | string): java.util.Date
             /**
              * Assigns the given key to the given alias, protecting it with the given
              * password.
@@ -90,7 +90,7 @@ declare namespace java {
              *  this operation fails for some other reason
              */
             // @ts-ignore
-            abstract engineSetKeyEntry(alias: string, key: java.security.Key, password: string[], chain: java.security.cert.Certificate[]): void
+            public abstract engineSetKeyEntry(alias: java.lang.String | string, key: java.security.Key, password: string[], chain: java.security.cert.Certificate[]): void
             /**
              * Assigns the given key (that has already been protected) to the given
              * alias.
@@ -109,7 +109,7 @@ declare namespace java {
              * @exception KeyStoreException if this operation fails.
              */
             // @ts-ignore
-            abstract engineSetKeyEntry(alias: string, key: number /*byte*/[], chain: java.security.cert.Certificate[]): void
+            public abstract engineSetKeyEntry(alias: java.lang.String | string, key: number /*byte*/[], chain: java.security.cert.Certificate[]): void
             /**
              * Assigns the given certificate to the given alias.
              * <p> If the given alias identifies an existing entry
@@ -125,33 +125,33 @@ declare namespace java {
              *  or this operation fails for some other reason.
              */
             // @ts-ignore
-            abstract engineSetCertificateEntry(alias: string, cert: java.security.cert.Certificate): void
+            public abstract engineSetCertificateEntry(alias: java.lang.String | string, cert: java.security.cert.Certificate): void
             /**
              * Deletes the entry identified by the given alias from this keystore.
              * @param alias the alias name
              * @exception KeyStoreException if the entry cannot be removed.
              */
             // @ts-ignore
-            abstract engineDeleteEntry(alias: string): void
+            public abstract engineDeleteEntry(alias: java.lang.String | string): void
             /**
              * Lists all the alias names of this keystore.
              * @return enumeration of the alias names
              */
             // @ts-ignore
-            abstract engineAliases(): java.util.Enumeration<java.lang.String>
+            public abstract engineAliases(): java.util.Enumeration<java.lang.String | string>
             /**
              * Checks if the given alias exists in this keystore.
              * @param alias the alias name
              * @return true if the alias exists, false otherwise
              */
             // @ts-ignore
-            abstract engineContainsAlias(alias: string): boolean
+            public abstract engineContainsAlias(alias: java.lang.String | string): boolean
             /**
              * Retrieves the number of entries in this keystore.
              * @return the number of entries in this keystore
              */
             // @ts-ignore
-            abstract engineSize(): int
+            public abstract engineSize(): number /*int*/
             /**
              * Returns true if the entry identified by the given alias
              * was created by a call to {@code setKeyEntry},
@@ -162,7 +162,7 @@ declare namespace java {
              *  key-related, false otherwise.
              */
             // @ts-ignore
-            abstract engineIsKeyEntry(alias: string): boolean
+            public abstract engineIsKeyEntry(alias: java.lang.String | string): boolean
             /**
              * Returns true if the entry identified by the given alias
              * was created by a call to {@code setCertificateEntry},
@@ -173,7 +173,7 @@ declare namespace java {
              *  trusted certificate, false otherwise.
              */
             // @ts-ignore
-            abstract engineIsCertificateEntry(alias: string): boolean
+            public abstract engineIsCertificateEntry(alias: java.lang.String | string): boolean
             /**
              * Returns the (alias) name of the first keystore entry whose certificate
              * matches the given certificate.
@@ -194,7 +194,7 @@ declare namespace java {
              *  or null if no such entry exists in this keystore.
              */
             // @ts-ignore
-            abstract engineGetCertificateAlias(cert: java.security.cert.Certificate): java.lang.String
+            public abstract engineGetCertificateAlias(cert: java.security.cert.Certificate): string
             /**
              * Stores this keystore to the given output stream, and protects its
              * integrity with the given password.
@@ -207,7 +207,7 @@ declare namespace java {
              *  the keystore data could not be stored
              */
             // @ts-ignore
-            abstract engineStore(stream: java.io.OutputStream, password: string[]): void
+            public abstract engineStore(stream: java.io.OutputStream, password: string[]): void
             /**
              * Stores this keystore using the given
              * {@code KeyStore.LoadStoreParmeter}.
@@ -225,7 +225,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            engineStore(param: java.security.KeyStore.LoadStoreParameter): void
+            public engineStore(param: java.security.KeyStore.LoadStoreParameter): void
             /**
              * Loads the keystore from the given input stream.
              * <p>A password may be given to unlock the keystore
@@ -250,7 +250,7 @@ declare namespace java {
              *  keystore could not be loaded
              */
             // @ts-ignore
-            abstract engineLoad(stream: java.io.InputStream, password: string[]): void
+            public abstract engineLoad(stream: java.io.InputStream, password: string[]): void
             /**
              * Loads the keystore using the given
              * {@code KeyStore.LoadStoreParameter}.
@@ -275,7 +275,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            engineLoad(param: java.security.KeyStore.LoadStoreParameter): void
+            public engineLoad(param: java.security.KeyStore.LoadStoreParameter): void
             /**
              * Gets a {@code KeyStore.Entry} for the specified alias
              * with the specified protection parameter.
@@ -297,7 +297,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            engineGetEntry(alias: string, protParam: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Entry
+            public engineGetEntry(alias: java.lang.String | string, protParam: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Entry
             /**
              * Saves a {@code KeyStore.Entry} under the specified alias.
              * The specified protection parameter is used to protect the
@@ -313,7 +313,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            engineSetEntry(alias: string, entry: java.security.KeyStore.Entry, protParam: java.security.KeyStore.ProtectionParameter): void
+            public engineSetEntry(alias: java.lang.String | string, entry: java.security.KeyStore.Entry, protParam: java.security.KeyStore.ProtectionParameter): void
             /**
              * Determines if the keystore {@code Entry} for the specified
              * {@code alias} is an instance or subclass of the specified
@@ -326,7 +326,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            engineEntryInstanceOf(alias: string, entryClass: java.lang.Class<java.security.KeyStore.Entry>): boolean
+            public engineEntryInstanceOf(alias: java.lang.String | string, entryClass: java.lang.Class<any>): boolean
         }
     }
 }

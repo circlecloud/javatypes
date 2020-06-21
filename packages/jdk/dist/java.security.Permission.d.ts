@@ -31,13 +31,13 @@ declare namespace java {
          * @author Roland Schemers
          */
         // @ts-ignore
-        class Permission extends java.lang.Object implements java.security.Guard, java.io.Serializable {
+        abstract class Permission extends java.lang.Object implements java.security.Guard, java.io.Serializable {
             /**
              * Constructs a permission with the specified name.
              * @param name name of the Permission object being created.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Implements the guard interface for a permission. The
              * {@code SecurityManager.checkPermission} method is called,
@@ -53,7 +53,7 @@ declare namespace java {
              * @see SecurityManager#checkPermission
              */
             // @ts-ignore
-            checkGuard(object: any): void
+            public checkGuard(object: java.lang.Object | any): void
             /**
              * Checks if the specified permission's actions are "implied by"
              * this object's actions.
@@ -68,7 +68,7 @@ declare namespace java {
              *  false if not.
              */
             // @ts-ignore
-            abstract implies(permission: java.security.Permission): boolean
+            public abstract implies(permission: java.security.Permission): boolean
             /**
              * Checks two Permission objects for equality.
              * <P>
@@ -78,7 +78,7 @@ declare namespace java {
              * @return true if both Permission objects are equivalent.
              */
             // @ts-ignore
-            abstract equals(obj: any): boolean
+            public abstract equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this Permission object.
              * <P>
@@ -99,7 +99,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            abstract hashCode(): int
+            public abstract hashCode(): number /*int*/
             /**
              * Returns the name of this Permission.
              * For example, in the case of a {@code java.io.FilePermission},
@@ -107,7 +107,7 @@ declare namespace java {
              * @return the name of this Permission.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns the actions as a String. This is abstract
              * so subclasses can defer creating a String representation until
@@ -124,7 +124,7 @@ declare namespace java {
              * @return the actions of this Permission.
              */
             // @ts-ignore
-            abstract getActions(): java.lang.String
+            public abstract getActions(): string
             /**
              * Returns an empty PermissionCollection for a given Permission object, or null if
              * one is not defined. Subclasses of class Permission should
@@ -139,7 +139,7 @@ declare namespace java {
              *  null if one is not defined.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
             /**
              * Returns a string describing this Permission.  The convention is to
              * specify the class name, the permission name, and the actions in
@@ -148,7 +148,7 @@ declare namespace java {
              * @return information about this Permission.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

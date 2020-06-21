@@ -11,7 +11,7 @@ declare namespace org {
                             // @ts-ignore
                             interface DeferredResultHandler {
                                 // @ts-ignore
-                                handleResult(result: any): void
+                                handleResult(result: java.lang.Object | any): void
                             }
                         }
                     }

@@ -23,21 +23,21 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Returns the name of this principal.
                  * <p>
                  * @return the name of this <code>JMXPrincipal</code>.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns a string representation of this <code>JMXPrincipal</code>.
                  * <p>
                  * @return a string representation of this <code>JMXPrincipal</code>.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Compares the specified Object with this <code>JMXPrincipal</code>
                  * for equality.  Returns true if the given object is also a
@@ -50,14 +50,14 @@ declare namespace javax {
                  *  <code>JMXPrincipal</code>.
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code for this <code>JMXPrincipal</code>.
                  * <p>
                  * @return a hash code for this <code>JMXPrincipal</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

@@ -82,7 +82,7 @@ declare namespace java {
              *          of its elements
              */
             // @ts-ignore
-            comparator(): java.util.Comparator<? super E>
+            comparator(): java.util.Comparator<any>
             /**
              * Returns a view of the portion of this set whose elements range
              * from <tt>fromElement</tt>, inclusive, to <tt>toElement</tt>,

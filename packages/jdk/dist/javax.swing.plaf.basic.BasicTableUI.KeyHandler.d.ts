@@ -16,11 +16,11 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        keyPressed(e: java.awt.event.KeyEvent): void
+                        public keyPressed(e: java.awt.event.KeyEvent): void
                         // @ts-ignore
-                        keyReleased(e: java.awt.event.KeyEvent): void
+                        public keyReleased(e: java.awt.event.KeyEvent): void
                         // @ts-ignore
-                        keyTyped(e: java.awt.event.KeyEvent): void
+                        public keyTyped(e: java.awt.event.KeyEvent): void
                     }
                 }
             }

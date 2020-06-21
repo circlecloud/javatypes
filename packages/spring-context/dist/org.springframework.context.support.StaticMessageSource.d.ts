@@ -15,9 +15,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    resolveCodeWithoutArguments(code: string, locale: java.util.Locale): java.lang.String
+                    resolveCodeWithoutArguments(code: java.lang.String | string, locale: java.util.Locale): string
                     // @ts-ignore
-                    resolveCode(code: string, locale: java.util.Locale): java.text.MessageFormat
+                    resolveCode(code: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                     /**
                      * Associate the given message with the given code.
                      * @param code the lookup code
@@ -25,7 +25,7 @@ declare namespace org {
                      * @param msg the message associated with this lookup code
                      */
                     // @ts-ignore
-                    addMessage(code: string, locale: java.util.Locale, msg: string): void
+                    public addMessage(code: java.lang.String | string, locale: java.util.Locale, msg: java.lang.String | string): void
                     /**
                      * Associate the given message values with the given keys as codes.
                      * @param messages the messages to register, with messages codes
@@ -33,9 +33,9 @@ declare namespace org {
                      * @param locale the locale that the messages should be found within
                      */
                     // @ts-ignore
-                    addMessages(messages: java.util.Map<java.lang.String, java.lang.String>, locale: java.util.Locale): void
+                    public addMessages(messages: java.util.Map<java.lang.String | string, java.lang.String | string>, locale: java.util.Locale): void
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

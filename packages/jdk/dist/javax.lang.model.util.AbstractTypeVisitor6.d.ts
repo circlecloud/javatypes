@@ -42,7 +42,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class AbstractTypeVisitor6<R, P> extends java.lang.Object implements javax.lang.model.type.TypeVisitor<R, P> {
+                abstract class AbstractTypeVisitor6<R, P> extends java.lang.Object implements javax.lang.model.type.TypeVisitor<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @return a visitor-specified result
                      */
                     // @ts-ignore
-                    visit(t: javax.lang.model.type.TypeMirror, p: P): R
+                    public visit(t: javax.lang.model.type.TypeMirror, p: P): R
                     /**
                      * Visits any type mirror as if by passing itself to that type
                      * mirror's {@link TypeMirror#accept accept} method and passing
@@ -68,7 +68,7 @@ declare namespace javax {
                      * @return a visitor-specified result
                      */
                     // @ts-ignore
-                    visit(t: javax.lang.model.type.TypeMirror): R
+                    public visit(t: javax.lang.model.type.TypeMirror): R
                     /**
                      * Visits a {@code UnionType} element by calling {@code
                      * visitUnknown}.
@@ -78,7 +78,7 @@ declare namespace javax {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    visitUnion(t: javax.lang.model.type.UnionType, p: P): R
+                    public visitUnion(t: javax.lang.model.type.UnionType, p: P): R
                     /**
                      * Visits an {@code IntersectionType} element by calling {@code
                      * visitUnknown}.
@@ -88,7 +88,7 @@ declare namespace javax {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    visitIntersection(t: javax.lang.model.type.IntersectionType, p: P): R
+                    public visitIntersection(t: javax.lang.model.type.IntersectionType, p: P): R
                     /**
                      * {@inheritDoc}
                      * <p> The default implementation of this method in {@code
@@ -101,7 +101,7 @@ declare namespace javax {
                      *   a visitor implementation may optionally throw this exception
                      */
                     // @ts-ignore
-                    visitUnknown(t: javax.lang.model.type.TypeMirror, p: P): R
+                    public visitUnknown(t: javax.lang.model.type.TypeMirror, p: P): R
                 }
             }
         }

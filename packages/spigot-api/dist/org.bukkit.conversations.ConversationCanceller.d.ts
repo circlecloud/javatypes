@@ -20,7 +20,7 @@ declare namespace org {
                  * @return True to cancel the conversation, False otherwise.
                  */
                 // @ts-ignore
-                cancelBasedOnInput(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                cancelBasedOnInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 /**
                  * Allows the {@link ConversationFactory} to duplicate this
                  * ConversationCanceller when creating a new {@link Conversation}.

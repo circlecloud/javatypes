@@ -40,20 +40,20 @@ declare namespace javax {
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getSalt(): byte[]
+                public getSalt(): number /*byte*/[]
                 /**
                  * Returns the iteration count.
                  * @return the iteration count
                  */
                 // @ts-ignore
-                getIterationCount(): int
+                public getIterationCount(): number /*int*/
                 /**
                  * Returns the cipher algorithm parameter specification.
                  * @return the parameter specification, or null if none was set.
                  * @since 1.8
                  */
                 // @ts-ignore
-                getParameterSpec(): java.security.spec.AlgorithmParameterSpec
+                public getParameterSpec(): java.security.spec.AlgorithmParameterSpec
             }
         }
     }

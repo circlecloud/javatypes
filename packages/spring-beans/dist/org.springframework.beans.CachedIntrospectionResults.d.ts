@@ -48,7 +48,7 @@ declare namespace org {
                  * @see Introspector#getBeanInfo(Class, int)
                  */
                 // @ts-ignore
-                readonly IGNORE_BEANINFO_PROPERTY_NAME: string
+                public static readonly IGNORE_BEANINFO_PROPERTY_NAME: java.lang.String | string
                 /**
                  * Accept the given ClassLoader as cache-safe, even if its classes would
                  * not qualify as cache-safe in this CachedIntrospectionResults class.
@@ -62,7 +62,7 @@ declare namespace org {
                  * @param classLoader the ClassLoader to accept
                  */
                 // @ts-ignore
-                acceptClassLoader(classLoader: java.lang.ClassLoader): void
+                public static acceptClassLoader(classLoader: java.lang.ClassLoader): void
                 /**
                  * Clear the introspection cache for the given ClassLoader, removing the
                  * introspection results for all classes underneath that ClassLoader, and
@@ -70,7 +70,7 @@ declare namespace org {
                  * @param classLoader the ClassLoader to clear the cache for
                  */
                 // @ts-ignore
-                clearClassLoader(classLoader: java.lang.ClassLoader): void
+                public static clearClassLoader(classLoader: java.lang.ClassLoader): void
             }
         }
     }

@@ -7,15 +7,15 @@ declare namespace org {
             // @ts-ignore
             class MultipleCommandAlias extends org.bukkit.command.Command {
                 // @ts-ignore
-                constructor(name: string, commands: org.bukkit.command.Command[])
+                constructor(name: java.lang.String | string, commands: org.bukkit.command.Command[])
                 /**
                  * Gets the commands associated with the multi-command alias.
                  * @return commands associated with alias
                  */
                 // @ts-ignore
-                getCommands(): org.bukkit.command.Command[]
+                public getCommands(): org.bukkit.command.Command[]
                 // @ts-ignore
-                execute(sender: org.bukkit.command.CommandSender, commandLabel: string, args: string[]): boolean
+                public execute(sender: org.bukkit.command.CommandSender, commandLabel: java.lang.String | string, args: java.lang.String[] | string[]): boolean
             }
         }
     }

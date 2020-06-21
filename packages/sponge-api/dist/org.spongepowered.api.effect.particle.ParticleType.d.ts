@@ -26,7 +26,7 @@ declare namespace org {
                          * @return The default options
                          */
                         // @ts-ignore
-                        getDefaultOptions(): java.util.Map<org.spongepowered.api.effect.particle.ParticleOption<?>, java.lang.Object>
+                        getDefaultOptions(): java.util.Map<org.spongepowered.api.effect.particle.ParticleOption<any>, java.lang.Object | any>
                     }
                 }
             }

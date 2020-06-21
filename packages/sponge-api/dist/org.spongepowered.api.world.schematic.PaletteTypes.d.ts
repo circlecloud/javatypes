@@ -8,13 +8,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly GLOBAL_BLOCKS: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.block.BlockState>
+                        public static readonly GLOBAL_BLOCKS: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.block.BlockState>
                         // @ts-ignore
-                        readonly LOCAL_BLOCKS: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.block.BlockState>
+                        public static readonly LOCAL_BLOCKS: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.block.BlockState>
                         // @ts-ignore
-                        readonly LOCAL_BIOMES: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.world.biome.BiomeType>
+                        public static readonly LOCAL_BIOMES: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.world.biome.BiomeType>
                         // @ts-ignore
-                        readonly GLOBAL_BIOMES: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.world.biome.BiomeType>
+                        public static readonly GLOBAL_BIOMES: org.spongepowered.api.world.schematic.PaletteType<org.spongepowered.api.world.biome.BiomeType>
                     }
                 }
             }

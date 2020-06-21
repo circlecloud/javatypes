@@ -61,7 +61,7 @@ declare namespace javax {
                  *              objects in this <code>Detail</code> object
                  */
                 // @ts-ignore
-                getDetailEntries(): java.util.Iterator
+                getDetailEntries(): java.util.Iterator<any>
             }
         }
     }

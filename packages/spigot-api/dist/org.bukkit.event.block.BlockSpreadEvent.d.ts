@@ -26,11 +26,11 @@ declare namespace org {
                      * @return the Block for the source block involved in this event.
                      */
                     // @ts-ignore
-                    getSource(): org.bukkit.block.Block
+                    public getSource(): org.bukkit.block.Block
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -28,7 +28,7 @@ declare namespace javax {
                      *     fault message processing.
                      */
                     // @ts-ignore
-                    handleMessage(context: C extends javax.xml.ws.handler.MessageContext): boolean
+                    handleMessage(context: C): boolean
                     /**
                      * The <code>handleFault</code> method is invoked for fault message
                      * processing.  Refer to the description of the handler
@@ -48,7 +48,7 @@ declare namespace javax {
                      *     handler fault processing and dispatch the fault.
                      */
                     // @ts-ignore
-                    handleFault(context: C extends javax.xml.ws.handler.MessageContext): boolean
+                    handleFault(context: C): boolean
                     /**
                      * Called at the conclusion of a message exchange pattern just prior to
                      * the JAX-WS runtime dispatching a message, fault or exception.  Refer to

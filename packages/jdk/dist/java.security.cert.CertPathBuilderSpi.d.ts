@@ -26,7 +26,7 @@ declare namespace java {
              * @author Sean Mullan
              */
             // @ts-ignore
-            class CertPathBuilderSpi extends java.lang.Object {
+            abstract class CertPathBuilderSpi extends java.lang.Object {
                 /**
                  * The default constructor.
                  */
@@ -43,7 +43,7 @@ declare namespace java {
                  *  are inappropriate for this {#code CertPathBuilder}
                  */
                 // @ts-ignore
-                abstract engineBuild(params: java.security.cert.CertPathParameters): java.security.cert.CertPathBuilderResult
+                public abstract engineBuild(params: java.security.cert.CertPathParameters): java.security.cert.CertPathBuilderResult
                 /**
                  * Returns a {@code CertPathChecker} that this implementation uses to
                  * check the revocation status of certificates. A PKIX implementation
@@ -61,7 +61,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                engineGetRevocationChecker(): java.security.cert.CertPathChecker
+                public engineGetRevocationChecker(): java.security.cert.CertPathChecker
             }
         }
     }

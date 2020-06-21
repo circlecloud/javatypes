@@ -8,7 +8,7 @@ declare namespace org {
                 // @ts-ignore
                 class RaidFinishEvent extends org.bukkit.event.raid.RaidEvent {
                     // @ts-ignore
-                    constructor(raid: org.bukkit.Raid, world: org.bukkit.World, winners: Array<org.bukkit.entity.Player>)
+                    constructor(raid: org.bukkit.Raid, world: org.bukkit.World, winners: java.util.List<org.bukkit.entity.Player> | Array<org.bukkit.entity.Player>)
                     /**
                      * Returns an immutable list contains all winners.
                      * <br>
@@ -17,11 +17,11 @@ declare namespace org {
                      * @return winners
                      */
                     // @ts-ignore
-                    getWinners(): java.util.List<org.bukkit.entity.Player>
+                    public getWinners(): Array<org.bukkit.entity.Player>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -16,13 +16,13 @@ declare namespace javax {
                      * @return a non-null valid String constant.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * <p>Get id of this Field.</p>
                      * @return Id of field.
                      */
                     // @ts-ignore
-                    getId(): int
+                    public getId(): number /*int*/
                 }
             }
         }

@@ -23,7 +23,7 @@ declare namespace org {
                  * @param event the event to respond to
                  */
                 // @ts-ignore
-                onApplicationEvent(event: E extends org.springframework.context.ApplicationEvent): void
+                onApplicationEvent(event: E): void
             }
         }
     }

@@ -7,7 +7,7 @@ declare namespace javax {
              * @see javax.xml.ws.Provider
              */
             // @ts-ignore
-            class WebServiceProvider implements java.lang.annotation.Annotation {
+            abstract class WebServiceProvider implements java.lang.annotation.Annotation {
             }
         }
     }

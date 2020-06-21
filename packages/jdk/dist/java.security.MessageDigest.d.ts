@@ -56,7 +56,7 @@ declare namespace java {
          * @see DigestOutputStream
          */
         // @ts-ignore
-        class MessageDigest extends java.security.MessageDigestSpi {
+        abstract class MessageDigest extends java.security.MessageDigestSpi {
             /**
              * Creates a message digest with the specified algorithm name.
              * @param algorithm the standard name of the digest algorithm.
@@ -66,7 +66,7 @@ declare namespace java {
              *  for information about standard algorithm names.
              */
             // @ts-ignore
-            constructor(algorithm: string)
+            constructor(algorithm: java.lang.String | string)
             /**
              * Returns a MessageDigest object that implements the specified digest
              * algorithm.
@@ -89,7 +89,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.MessageDigest
+            public static getInstance(algorithm: java.lang.String | string): java.security.MessageDigest
             /**
              * Returns a MessageDigest object that implements the specified digest
              * algorithm.
@@ -116,7 +116,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.MessageDigest
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.MessageDigest
             /**
              * Returns a MessageDigest object that implements the specified digest
              * algorithm.
@@ -139,19 +139,19 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.MessageDigest
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.MessageDigest
             /**
              * Returns the provider of this message digest object.
              * @return the provider of this message digest object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Updates the digest using the specified byte.
              * @param input the byte with which to update the digest.
              */
             // @ts-ignore
-            update(input: number /*byte*/): void
+            public update(input: number /*byte*/): void
             /**
              * Updates the digest using the specified array of bytes, starting
              * at the specified offset.
@@ -161,13 +161,13 @@ declare namespace java {
              *  {#code offset}.
              */
             // @ts-ignore
-            update(input: number /*byte*/[], offset: number /*int*/, len: number /*int*/): void
+            public update(input: number /*byte*/[], offset: number /*int*/, len: number /*int*/): void
             /**
              * Updates the digest using the specified array of bytes.
              * @param input the array of bytes.
              */
             // @ts-ignore
-            update(input: number /*byte*/[]): void
+            public update(input: number /*byte*/[]): void
             /**
              * Update the digest using the specified ByteBuffer. The digest is
              * updated using the {@code input.remaining()} bytes starting
@@ -178,14 +178,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            update(input: java.nio.ByteBuffer): void
+            public update(input: java.nio.ByteBuffer): void
             /**
              * Completes the hash computation by performing final operations
              * such as padding. The digest is reset after this call is made.
              * @return the array of bytes for the resulting hash value.
              */
             // @ts-ignore
-            digest(): byte[]
+            public digest(): number /*byte*/[]
             /**
              * Completes the hash computation by performing final operations
              * such as padding. The digest is reset after this call is made.
@@ -196,7 +196,7 @@ declare namespace java {
              * @exception DigestException if an error occurs.
              */
             // @ts-ignore
-            digest(buf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): int
+            public digest(buf: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Performs a final update on the digest using the specified array
              * of bytes, then completes the digest computation. That is, this
@@ -208,12 +208,12 @@ declare namespace java {
              * @return the array of bytes for the resulting hash value.
              */
             // @ts-ignore
-            digest(input: number /*byte*/[]): byte[]
+            public digest(input: number /*byte*/[]): number /*byte*/[]
             /**
              * Returns a string representation of this message digest object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares two digests for equality. Does a simple byte compare.
              * @param digesta one of the digests to compare.
@@ -221,12 +221,12 @@ declare namespace java {
              * @return true if the digests are equal, false otherwise.
              */
             // @ts-ignore
-            isEqual(digesta: number /*byte*/[], digestb: number /*byte*/[]): boolean
+            public static isEqual(digesta: number /*byte*/[], digestb: number /*byte*/[]): boolean
             /**
              * Resets the digest for further use.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Returns a string that identifies the algorithm, independent of
              * implementation details. The name should be a standard
@@ -238,7 +238,7 @@ declare namespace java {
              * @return the name of the algorithm
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns the length of the digest in bytes, or 0 if this operation is
              * not supported by the provider and the implementation is not cloneable.
@@ -247,7 +247,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getDigestLength(): int
+            public getDigestLength(): number /*int*/
             /**
              * Returns a clone if the implementation is cloneable.
              * @return a clone if the implementation is cloneable.
@@ -255,7 +255,7 @@ declare namespace java {
              *  implementation that does not support {#code Cloneable}.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

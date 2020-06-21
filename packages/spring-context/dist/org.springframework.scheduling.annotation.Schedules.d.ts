@@ -15,7 +15,7 @@ declare namespace org {
                  * @see Scheduled
                  */
                 // @ts-ignore
-                class Schedules implements java.lang.annotation.Annotation {
+                abstract class Schedules implements java.lang.annotation.Annotation {
                 }
             }
         }

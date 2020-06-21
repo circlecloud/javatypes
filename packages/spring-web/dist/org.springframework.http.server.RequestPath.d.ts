@@ -33,12 +33,12 @@ declare namespace org {
                      * @return a new {#code RequestPath} instance
                      */
                     // @ts-ignore
-                    modifyContextPath(contextPath: string): org.springframework.http.server.RequestPath
+                    modifyContextPath(contextPath: java.lang.String | string): org.springframework.http.server.RequestPath
                     /**
                      * Create a new {@code RequestPath} with the given parameters.
                      */
                     // @ts-ignore
-                    parse(uri: java.net.URI, contextPath: string): org.springframework.http.server.RequestPath
+                    parse(uri: java.net.URI, contextPath: java.lang.String | string): org.springframework.http.server.RequestPath
                 }
             }
         }

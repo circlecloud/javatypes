@@ -13,7 +13,7 @@ declare namespace javax {
              * @see javax.xml.ws.WebServiceClient
              */
             // @ts-ignore
-            class WebEndpoint implements java.lang.annotation.Annotation {
+            abstract class WebEndpoint implements java.lang.annotation.Annotation {
             }
         }
     }

@@ -9,17 +9,17 @@ declare namespace org {
                     // @ts-ignore
                     class SkullTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly CREEPER: org.spongepowered.api.data.type.SkullType
+                        public static readonly CREEPER: org.spongepowered.api.data.type.SkullType
                         // @ts-ignore
-                        readonly ENDER_DRAGON: org.spongepowered.api.data.type.SkullType
+                        public static readonly ENDER_DRAGON: org.spongepowered.api.data.type.SkullType
                         // @ts-ignore
-                        readonly PLAYER: org.spongepowered.api.data.type.SkullType
+                        public static readonly PLAYER: org.spongepowered.api.data.type.SkullType
                         // @ts-ignore
-                        readonly SKELETON: org.spongepowered.api.data.type.SkullType
+                        public static readonly SKELETON: org.spongepowered.api.data.type.SkullType
                         // @ts-ignore
-                        readonly WITHER_SKELETON: org.spongepowered.api.data.type.SkullType
+                        public static readonly WITHER_SKELETON: org.spongepowered.api.data.type.SkullType
                         // @ts-ignore
-                        readonly ZOMBIE: org.spongepowered.api.data.type.SkullType
+                        public static readonly ZOMBIE: org.spongepowered.api.data.type.SkullType
                     }
                 }
             }

@@ -16,7 +16,7 @@ declare namespace org {
                              * @return The current fuel time in ticks
                              */
                             // @ts-ignore
-                            getFuel(): int
+                            getFuel(): number /*int*/
                             /**
                              * Sets the fuel time in ticks.
                              * <p>Usually, the fuel time will decay until reaching 0. At zero, the fuel

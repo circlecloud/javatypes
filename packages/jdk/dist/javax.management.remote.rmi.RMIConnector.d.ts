@@ -45,7 +45,7 @@ declare namespace javax {
                      *  is null.
                      */
                     // @ts-ignore
-                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>)
+                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>)
                     /**
                      * <p>Constructs an <code>RMIConnector</code> using the given RMI stub.
                      * @param rmiServer an RMI stub representing the RMI connector server.
@@ -56,7 +56,7 @@ declare namespace javax {
                      *  is null.
                      */
                     // @ts-ignore
-                    constructor(rmiServer: javax.management.remote.rmi.RMIServer, environment: java.util.Map<java.lang.String, any>)
+                    constructor(rmiServer: javax.management.remote.rmi.RMIServer, environment: java.util.Map<java.lang.String | string, any>)
                     /**
                      * <p>Returns a string representation of this object.  In general,
                      * the <code>toString</code> method returns a string that
@@ -66,7 +66,7 @@ declare namespace javax {
                      * @return a String representation of this object.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * <p>The address of this connector.</p>
                      * @return the address of this connector, or null if it
@@ -74,35 +74,35 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getAddress(): javax.management.remote.JMXServiceURL
+                    public getAddress(): javax.management.remote.JMXServiceURL
                     /**
                      * @throws IOException if the connection could not be made because of a
                      *    communication problem, or in the case of the {#code iiop} protocol,
                      *    that RMI/IIOP is not supported
                      */
                     // @ts-ignore
-                    connect(): void
+                    public connect(): void
                     /**
                      * @throws IOException if the connection could not be made because of a
                      *    communication problem, or in the case of the {#code iiop} protocol,
                      *    that RMI/IIOP is not supported
                      */
                     // @ts-ignore
-                    connect(environment: java.util.Map<java.lang.String, any>): void
+                    public connect(environment: java.util.Map<java.lang.String | string, any>): void
                     // @ts-ignore
-                    getConnectionId(): java.lang.String
+                    public getConnectionId(): string
                     // @ts-ignore
-                    getMBeanServerConnection(): javax.management.MBeanServerConnection
+                    public getMBeanServerConnection(): javax.management.MBeanServerConnection
                     // @ts-ignore
-                    getMBeanServerConnection(delegationSubject: javax.security.auth.Subject): javax.management.MBeanServerConnection
+                    public getMBeanServerConnection(delegationSubject: javax.security.auth.Subject): javax.management.MBeanServerConnection
                     // @ts-ignore
-                    addConnectionNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+                    public addConnectionNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
                     // @ts-ignore
-                    removeConnectionNotificationListener(listener: javax.management.NotificationListener): void
+                    public removeConnectionNotificationListener(listener: javax.management.NotificationListener): void
                     // @ts-ignore
-                    removeConnectionNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+                    public removeConnectionNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                 }
             }
         }

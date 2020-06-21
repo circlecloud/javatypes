@@ -13,7 +13,7 @@ declare namespace org {
                          * saving or loading structures.
                          */
                         // @ts-ignore
-                        readonly CORNER: org.spongepowered.api.data.type.StructureMode
+                        public static readonly CORNER: org.spongepowered.api.data.type.StructureMode
                         /**
                          * Data mode can only be used during natural generation.
                          * <p>They mark the location to run a function specified by its metadata
@@ -23,18 +23,18 @@ declare namespace org {
                          * placed.</p>
                          */
                         // @ts-ignore
-                        readonly DATA: org.spongepowered.api.data.type.StructureMode
+                        public static readonly DATA: org.spongepowered.api.data.type.StructureMode
                         /**
                          * Load mode allows a player to load and rotate saved structure files.
                          */
                         // @ts-ignore
-                        readonly LOAD: org.spongepowered.api.data.type.StructureMode
+                        public static readonly LOAD: org.spongepowered.api.data.type.StructureMode
                         /**
                          * Save mode allows a player to highlight a structure in the world and
                          * save it to a file.
                          */
                         // @ts-ignore
-                        readonly SAVE: org.spongepowered.api.data.type.StructureMode
+                        public static readonly SAVE: org.spongepowered.api.data.type.StructureMode
                     }
                 }
             }

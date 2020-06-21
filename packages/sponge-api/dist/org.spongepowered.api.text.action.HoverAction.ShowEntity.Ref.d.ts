@@ -18,21 +18,21 @@ declare namespace org {
                                  * @param type The type of the entity
                                  */
                                 // @ts-ignore
-                                constructor(uuid: java.util.UUID, name: string, type: org.spongepowered.api.entity.EntityType)
+                                constructor(uuid: java.util.UUID, name: java.lang.String | string, type: org.spongepowered.api.entity.EntityType)
                                 /**
                                  * Constructs a Ref to an entity.
                                  * @param uuid The UUID of the entity
                                  * @param name The name of the entity
                                  */
                                 // @ts-ignore
-                                constructor(uuid: java.util.UUID, name: string)
+                                constructor(uuid: java.util.UUID, name: java.lang.String | string)
                                 /**
                                  * Constructs a Ref, given an {@link Entity}.
                                  * @param entity The entity
                                  * @param name The name of the entity
                                  */
                                 // @ts-ignore
-                                constructor(entity: org.spongepowered.api.entity.Entity, name: string)
+                                constructor(entity: org.spongepowered.api.entity.Entity, name: java.lang.String | string)
                                 /**
                                  * Constructs a Ref directly.
                                  * @param uuid The UUID
@@ -40,31 +40,31 @@ declare namespace org {
                                  * @param type The type
                                  */
                                 // @ts-ignore
-                                constructor(uuid: java.util.UUID, name: string, type: java.util.Optional<org.spongepowered.api.entity.EntityType>)
+                                constructor(uuid: java.util.UUID, name: java.lang.String | string, type: java.util.Optional<org.spongepowered.api.entity.EntityType>)
                                 /**
                                  * Retrieves the UUID that this {@link Ref} refers to.
                                  * @return The UUID
                                  */
                                 // @ts-ignore
-                                getUniqueId(): java.util.UUID
+                                public getUniqueId(): java.util.UUID
                                 /**
                                  * Retrieves the name that this {@link Ref} refers to.
                                  * @return The name
                                  */
                                 // @ts-ignore
-                                getName(): java.lang.String
+                                public getName(): string
                                 /**
                                  * Retrieves the type that this {@link Ref} refers to, if it exists.
                                  * @return The type, or {#link Optional#empty()}
                                  */
                                 // @ts-ignore
-                                getType(): java.util.Optional<org.spongepowered.api.entity.EntityType>
+                                public getType(): java.util.Optional<org.spongepowered.api.entity.EntityType>
                                 // @ts-ignore
-                                equals(obj: any): boolean
+                                public equals(obj: java.lang.Object | any): boolean
                                 // @ts-ignore
-                                hashCode(): int
+                                public hashCode(): number /*int*/
                                 // @ts-ignore
-                                toString(): java.lang.String
+                                public toString(): string
                             }
                         }
                     }

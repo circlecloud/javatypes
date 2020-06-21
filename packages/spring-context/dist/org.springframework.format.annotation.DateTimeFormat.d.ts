@@ -27,7 +27,7 @@ declare namespace org {
                  * @see org.joda.time.format.DateTimeFormat
                  */
                 // @ts-ignore
-                class DateTimeFormat implements java.lang.annotation.Annotation {
+                abstract class DateTimeFormat implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -43,7 +43,7 @@ declare namespace javax {
              * @author Timothy Prinzing
              */
             // @ts-ignore
-            class CompositeView extends javax.swing.text.View {
+            abstract class CompositeView extends javax.swing.text.View {
                 /**
                  * Constructs a <code>CompositeView</code> for the given element.
                  * @param elem  the element this view is responsible for
@@ -77,21 +77,21 @@ declare namespace javax {
                  * @param parent the parent of the view, <code>null</code> if none
                  */
                 // @ts-ignore
-                setParent(parent: javax.swing.text.View): void
+                public setParent(parent: javax.swing.text.View): void
                 /**
                  * Returns the number of child views of this view.
                  * @return the number of views &gt;= 0
                  * @see #getView
                  */
                 // @ts-ignore
-                getViewCount(): int
+                public getViewCount(): number /*int*/
                 /**
                  * Returns the n-th view in this container.
                  * @param n the number of the desired view, &gt;= 0 &amp;&amp; &lt; getViewCount()
                  * @return the view at index <code>n</code>
                  */
                 // @ts-ignore
-                getView(n: number /*int*/): javax.swing.text.View
+                public getView(n: number /*int*/): javax.swing.text.View
                 /**
                  * Replaces child views.  If there are no views to remove
                  * this acts as an insert.  If there are no views to
@@ -108,7 +108,7 @@ declare namespace javax {
                  *    to indicate no children are being added (useful to remove)
                  */
                 // @ts-ignore
-                replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
+                public replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
                 /**
                  * Fetches the allocation for the given child view to
                  * render into. This enables finding out where various views
@@ -118,7 +118,7 @@ declare namespace javax {
                  * @return the allocation to the child
                  */
                 // @ts-ignore
-                getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
+                public getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -154,7 +154,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                modelToView(p0: number /*int*/, b0: javax.swing.text.Position.Bias, p1: number /*int*/, b1: javax.swing.text.Position.Bias, a: java.awt.Shape): java.awt.Shape
+                public modelToView(p0: number /*int*/, b0: javax.swing.text.Position.Bias, p1: number /*int*/, b1: javax.swing.text.Position.Bias, a: java.awt.Shape): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -168,7 +168,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Provides a way to determine the next visually represented model
                  * location that one might place a caret.  Some views may not be visible,
@@ -201,7 +201,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException if <code>direction</code> is invalid
                  */
                 // @ts-ignore
-                getNextVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                public getNextVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Returns the child view index representing the given
                  * position in the model.  This is implemented to call the
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getViewIndex(pos: number /*int*/, b: javax.swing.text.Position.Bias): int
+                public getViewIndex(pos: number /*int*/, b: javax.swing.text.Position.Bias): number /*int*/
                 /**
                  * Tests whether a point lies before the rectangle range.
                  * @param x the X coordinate &gt;= 0
@@ -271,7 +271,7 @@ declare namespace javax {
                  *    -1 if no view represents that position
                  */
                 // @ts-ignore
-                getViewIndexAtPosition(pos: number /*int*/): int
+                getViewIndexAtPosition(pos: number /*int*/): number /*int*/
                 /**
                  * Translates the immutable allocation given to the view
                  * to a mutable allocation that represents the interior
@@ -312,25 +312,25 @@ declare namespace javax {
                  * @return the inset &gt;= 0
                  */
                 // @ts-ignore
-                getLeftInset(): short
+                getLeftInset(): number /*short*/
                 /**
                  * Gets the right inset.
                  * @return the inset &gt;= 0
                  */
                 // @ts-ignore
-                getRightInset(): short
+                getRightInset(): number /*short*/
                 /**
                  * Gets the top inset.
                  * @return the inset &gt;= 0
                  */
                 // @ts-ignore
-                getTopInset(): short
+                getTopInset(): number /*short*/
                 /**
                  * Gets the bottom inset.
                  * @return the inset &gt;= 0
                  */
                 // @ts-ignore
-                getBottomInset(): short
+                getBottomInset(): number /*short*/
                 /**
                  * Returns the next visual position for the cursor, in either the
                  * north or south direction.
@@ -354,7 +354,7 @@ declare namespace javax {
                  * @return the next position west of the passed in position
                  */
                 // @ts-ignore
-                getNextNorthSouthVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                getNextNorthSouthVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Returns the next visual position for the cursor, in either the
                  * east or west direction.
@@ -377,7 +377,7 @@ declare namespace javax {
                  * @see #getNextVisualPositionFrom
                  */
                 // @ts-ignore
-                getNextEastWestVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                getNextEastWestVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Determines in which direction the next view lays.
                  * Consider the <code>View</code> at index n. Typically the

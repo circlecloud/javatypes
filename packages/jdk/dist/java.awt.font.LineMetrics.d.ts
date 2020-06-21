@@ -16,7 +16,7 @@ declare namespace java {
              * returned by {@link #getNumChars}.
              */
             // @ts-ignore
-            class LineMetrics extends java.lang.Object {
+            abstract class LineMetrics extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -27,7 +27,7 @@ declare namespace java {
                  *          this <code>LineMetrics</code> was created.
                  */
                 // @ts-ignore
-                abstract getNumChars(): int
+                public abstract getNumChars(): number /*int*/
                 /**
                  * Returns the ascent of the text.  The ascent
                  * is the distance from the baseline
@@ -37,7 +37,7 @@ declare namespace java {
                  * @return the ascent of the text.
                  */
                 // @ts-ignore
-                abstract getAscent(): float
+                public abstract getAscent(): number /*float*/
                 /**
                  * Returns the descent of the text.  The descent
                  * is the distance from the baseline
@@ -48,7 +48,7 @@ declare namespace java {
                  * @return the descent of the text.
                  */
                 // @ts-ignore
-                abstract getDescent(): float
+                public abstract getDescent(): number /*float*/
                 /**
                  * Returns the leading of the text. The
                  * leading is the recommended
@@ -57,7 +57,7 @@ declare namespace java {
                  * @return the leading of the text.
                  */
                 // @ts-ignore
-                abstract getLeading(): float
+                public abstract getLeading(): number /*float*/
                 /**
                  * Returns the height of the text.  The
                  * height is equal to the sum of the ascent, the
@@ -65,7 +65,7 @@ declare namespace java {
                  * @return the height of the text.
                  */
                 // @ts-ignore
-                abstract getHeight(): float
+                public abstract getHeight(): number /*float*/
                 /**
                  * Returns the baseline index of the text.
                  * The index is one of
@@ -75,7 +75,7 @@ declare namespace java {
                  * @return the baseline of the text.
                  */
                 // @ts-ignore
-                abstract getBaselineIndex(): int
+                public abstract getBaselineIndex(): number /*int*/
                 /**
                  * Returns the baseline offsets of the text,
                  * relative to the baseline of the text.  The
@@ -89,33 +89,33 @@ declare namespace java {
                  * @return the baseline offsets of the text.
                  */
                 // @ts-ignore
-                abstract getBaselineOffsets(): float[]
+                public abstract getBaselineOffsets(): number /*float*/[]
                 /**
                  * Returns the position of the strike-through line
                  * relative to the baseline.
                  * @return the position of the strike-through line.
                  */
                 // @ts-ignore
-                abstract getStrikethroughOffset(): float
+                public abstract getStrikethroughOffset(): number /*float*/
                 /**
                  * Returns the thickness of the strike-through line.
                  * @return the thickness of the strike-through line.
                  */
                 // @ts-ignore
-                abstract getStrikethroughThickness(): float
+                public abstract getStrikethroughThickness(): number /*float*/
                 /**
                  * Returns the position of the underline relative to
                  * the baseline.
                  * @return the position of the underline.
                  */
                 // @ts-ignore
-                abstract getUnderlineOffset(): float
+                public abstract getUnderlineOffset(): number /*float*/
                 /**
                  * Returns the thickness of the underline.
                  * @return the thickness of the underline.
                  */
                 // @ts-ignore
-                abstract getUnderlineThickness(): float
+                public abstract getUnderlineThickness(): number /*float*/
             }
         }
     }

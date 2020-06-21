@@ -29,7 +29,7 @@ declare namespace javax {
                      * @throws SerialException if the object is found not to be serializable
                      */
                     // @ts-ignore
-                    constructor(obj: any)
+                    constructor(obj: java.lang.Object | any)
                     /**
                      * Returns an <code>Object</code> that is a copy of this <code>SerialJavaObject</code>
                      * object.
@@ -38,7 +38,7 @@ declare namespace javax {
                      * @throws SerialException if the instance is corrupt
                      */
                     // @ts-ignore
-                    getObject(): java.lang.Object
+                    public getObject(): any
                     /**
                      * Returns an array of <code>Field</code> objects that contains each
                      * field of the object that this helper class is serializing.
@@ -55,7 +55,7 @@ declare namespace javax {
                      * @see Class#getFields
                      */
                     // @ts-ignore
-                    getFields(): java.lang.reflect.Field[]
+                    public getFields(): java.lang.reflect.Field[]
                     /**
                      * Compares this SerialJavaObject to the specified object.
                      * The result is {@code true} if and only if the argument
@@ -66,7 +66,7 @@ declare namespace javax {
                      *           equivalent to this SerialJavaObject, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this SerialJavaObject. The hash code for a
                      * {@code SerialJavaObject} object is taken as the hash code of
@@ -74,13 +74,13 @@ declare namespace javax {
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialJavaObject}.
                      * @return a clone of this SerialJavaObject
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

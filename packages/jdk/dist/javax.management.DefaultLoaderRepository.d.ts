@@ -32,7 +32,7 @@ declare namespace javax {
              * @exception ClassNotFoundException The specified class could not be found.
              */
             // @ts-ignore
-            loadClass(className: string): java.lang.Class<?>
+            public static loadClass(className: java.lang.String | string): java.lang.Class<any>
             /**
              * Go through the list of class loaders but exclude the given class loader, then try to load
              * the requested class.
@@ -45,7 +45,7 @@ declare namespace javax {
              * @exception ClassNotFoundException The specified class could not be found.
              */
             // @ts-ignore
-            loadClassWithout(loader: java.lang.ClassLoader, className: string): java.lang.Class<?>
+            public static loadClassWithout(loader: java.lang.ClassLoader, className: java.lang.String | string): java.lang.Class<any>
         }
     }
 }

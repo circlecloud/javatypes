@@ -14,14 +14,14 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         /**
                          * Set the order.
                          * @param order the order.
                          * @see Ordered
                          */
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         /**
                          * Add a message post processor to the map of decompressing MessageProcessors.
                          * @param contentEncoding the content encoding; messages will be decompressed with this post processor
@@ -29,7 +29,7 @@ declare namespace org {
                          * @param decompressor the decompressing {#link MessagePostProcessor}.
                          */
                         // @ts-ignore
-                        addDecompressor(contentEncoding: string, decompressor: org.springframework.amqp.core.MessagePostProcessor): void
+                        public addDecompressor(contentEncoding: java.lang.String | string, decompressor: org.springframework.amqp.core.MessagePostProcessor): void
                         /**
                          * Remove the decompressor for this encoding; content will not be decompressed even if the
                          * {@link org.springframework.amqp.core.MessageProperties#SPRING_AUTO_DECOMPRESS} header is true.
@@ -37,15 +37,15 @@ declare namespace org {
                          * @return the decompressor if it was present.
                          */
                         // @ts-ignore
-                        removeDecompressor(contentEncoding: string): org.springframework.amqp.core.MessagePostProcessor
+                        public removeDecompressor(contentEncoding: java.lang.String | string): org.springframework.amqp.core.MessagePostProcessor
                         /**
                          * Replace all the decompressors.
                          * @param decompressors the decompressors.
                          */
                         // @ts-ignore
-                        setDecompressors(decompressors: java.util.Map<java.lang.String, org.springframework.amqp.core.MessagePostProcessor>): void
+                        public setDecompressors(decompressors: java.util.Map<java.lang.String | string, org.springframework.amqp.core.MessagePostProcessor>): void
                         // @ts-ignore
-                        postProcessMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
+                        public postProcessMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
                     }
                 }
             }

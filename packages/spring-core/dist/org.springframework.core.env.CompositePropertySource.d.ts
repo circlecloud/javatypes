@@ -15,40 +15,40 @@ declare namespace org {
                  * @since 3.1.1
                  */
                 // @ts-ignore
-                class CompositePropertySource extends org.springframework.core.env.EnumerablePropertySource<java.lang.Object> {
+                class CompositePropertySource extends org.springframework.core.env.EnumerablePropertySource<java.lang.Object | any> {
                     /**
                      * Create a new {@code CompositePropertySource}.
                      * @param name the name of the property source
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                     // @ts-ignore
-                    containsProperty(name: string): boolean
+                    public containsProperty(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    public getPropertyNames(): string[]
                     /**
                      * Add the given {@link PropertySource} to the end of the chain.
                      * @param propertySource the PropertySource to add
                      */
                     // @ts-ignore
-                    addPropertySource(propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public addPropertySource(propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Add the given {@link PropertySource} to the start of the chain.
                      * @param propertySource the PropertySource to add
                      * @since 4.1
                      */
                     // @ts-ignore
-                    addFirstPropertySource(propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public addFirstPropertySource(propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Return all property sources that this composite source holds.
                      * @since 4.1.1
                      */
                     // @ts-ignore
-                    getPropertySources(): java.util.Collection<org.springframework.core.env.PropertySource<?>>
+                    public getPropertySources(): Array<org.springframework.core.env.PropertySource<any>>
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

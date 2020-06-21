@@ -64,7 +64,7 @@ declare namespace java {
                  * @throws NullPointerException if command is null
                  */
                 // @ts-ignore
-                schedule(command: java.lang.Runnable, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<?>
+                schedule(command: java.lang.Runnable, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Creates and executes a ScheduledFuture that becomes enabled after the
                  * given delay.
@@ -104,7 +104,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if period less than or equal to zero
                  */
                 // @ts-ignore
-                scheduleAtFixedRate(command: java.lang.Runnable, initialDelay: number /*long*/, period: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<?>
+                scheduleAtFixedRate(command: java.lang.Runnable, initialDelay: number /*long*/, period: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>
                 /**
                  * Creates and executes a periodic action that becomes enabled first
                  * after the given initial delay, and subsequently with the
@@ -127,7 +127,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if delay less than or equal to zero
                  */
                 // @ts-ignore
-                scheduleWithFixedDelay(command: java.lang.Runnable, initialDelay: number /*long*/, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<?>
+                scheduleWithFixedDelay(command: java.lang.Runnable, initialDelay: number /*long*/, delay: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.concurrent.ScheduledFuture<any>
             }
         }
     }

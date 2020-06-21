@@ -14,9 +14,9 @@ declare namespace javax {
                         // @ts-ignore
                         repaintCellFocus(): void
                         // @ts-ignore
-                        focusGained(e: java.awt.event.FocusEvent): void
+                        public focusGained(e: java.awt.event.FocusEvent): void
                         // @ts-ignore
-                        focusLost(e: java.awt.event.FocusEvent): void
+                        public focusLost(e: java.awt.event.FocusEvent): void
                     }
                 }
             }

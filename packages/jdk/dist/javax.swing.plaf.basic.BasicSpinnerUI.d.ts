@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return a new BasicSpinnerUI object
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Calls <code>installDefaults</code>, <code>installListeners</code>,
                      * and then adds the components returned by <code>createNextButton</code>,
@@ -41,14 +41,14 @@ declare namespace javax {
                      * @see #createEditor
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Calls <code>uninstallDefaults</code>, <code>uninstallListeners</code>,
                      * and then removes all of the spinners children.
                      * @param c the JSpinner (not used)
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Initializes <code>PropertyChangeListener</code> with
                      * a shared object that delegates interesting PropertyChangeEvents
@@ -217,7 +217,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -226,7 +226,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 }
             }
         }

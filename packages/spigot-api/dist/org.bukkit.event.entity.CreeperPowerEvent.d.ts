@@ -14,27 +14,27 @@ declare namespace org {
                     // @ts-ignore
                     constructor(creeper: org.bukkit.entity.Creeper, cause: org.bukkit.event.entity.CreeperPowerEvent.PowerCause)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Creeper
+                    public getEntity(): org.bukkit.entity.Creeper
                     /**
                      * Gets the lightning bolt which is striking the Creeper.
                      * @return The Entity for the lightning bolt which is striking the Creeper
                      */
                     // @ts-ignore
-                    getLightning(): org.bukkit.entity.LightningStrike
+                    public getLightning(): org.bukkit.entity.LightningStrike
                     /**
                      * Gets the cause of the creeper being (un)powered.
                      * @return A PowerCause value detailing the cause of change in power.
                      */
                     // @ts-ignore
-                    getCause(): org.bukkit.event.entity.CreeperPowerEvent.PowerCause
+                    public getCause(): org.bukkit.event.entity.CreeperPowerEvent.PowerCause
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -19,7 +19,7 @@ declare namespace org {
                              * @return The size of this map
                              */
                             // @ts-ignore
-                            size(): int
+                            size(): number /*int*/
                             /**
                              * Associates the provided key to the provided value. If there already
                              * exists a value for the provided key, the value is replaced.
@@ -59,7 +59,7 @@ declare namespace org {
                              * @return This map value, for chaining
                              */
                             // @ts-ignore
-                            removeAll(predicate: java.util.function.Predicate<java.util.Map.Entry<K, V>> | java.util.function$.Predicate<java.util.Map.Entry<K, V>>): org.spongepowered.api.data.value.mutable.MapValue<K, V>
+                            removeAll(predicate: java.util.function$.Predicate<java.util.Map.Entry<K, V>>): org.spongepowered.api.data.value.mutable.MapValue<K, V>
                             /**
                              * Checks if the provided key is contained within this map.
                              * @param key The key to check
@@ -79,23 +79,23 @@ declare namespace org {
                              * @return The set of keys
                              */
                             // @ts-ignore
-                            keySet(): <any>
+                            keySet(): object
                             /**
                              * Retrieves an {@link ImmutableSet} of the {@link Entry}s contained
                              * within this map value.
                              * @return The immutable set of entries
                              */
                             // @ts-ignore
-                            entrySet(): <any>
+                            entrySet(): object
                             /**
                              * Retrieves an {@link ImmutableCollection} of all available values within
                              * this map.
                              * @return The collection of values
                              */
                             // @ts-ignore
-                            values(): <any>
+                            values(): object
                             // @ts-ignore
-                            transform(func: java.util.function.Function<java.util.Map<K, V>, java.util.Map<K, V>> | java.util.function$.Function<java.util.Map<K, V>, java.util.Map<K, V>>): org.spongepowered.api.data.value.mutable.MapValue<K, V>
+                            transform(func: java.util.function$.Function<java.util.Map<K, V>, java.util.Map<K, V>>): org.spongepowered.api.data.value.mutable.MapValue<K, V>
                             // @ts-ignore
                             asImmutable(): org.spongepowered.api.data.value.immutable.ImmutableMapValue<K, V>
                             // @ts-ignore

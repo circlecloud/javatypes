@@ -26,7 +26,7 @@ declare namespace org {
                  * @param action the action to apply
                  */
                 // @ts-ignore
-                beforeCommit(action: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): void
+                beforeCommit(action: java.util.function$.Supplier<any>): void
                 /**
                  * Whether the HttpOutputMessage is committed.
                  */
@@ -39,7 +39,7 @@ declare namespace org {
                  * @return a {#link Mono} that indicates completion or error
                  */
                 // @ts-ignore
-                writeWith(body: object): <any>
+                writeWith(body: object): object
                 /**
                  * Use the given {@link Publisher} of {@code Publishers} to write the body
                  * of the HttpOutputMessage to the underlying HTTP layer, flushing after
@@ -48,7 +48,7 @@ declare namespace org {
                  * @return a {#link Mono} that indicates completion or error
                  */
                 // @ts-ignore
-                writeAndFlushWith(body: object): <any>
+                writeAndFlushWith(body: object): object
                 /**
                  * Indicate that message handling is complete, allowing for any cleanup or
                  * end-of-processing tasks to be performed such as applying header changes
@@ -60,7 +60,7 @@ declare namespace org {
                  * @return a {#link Mono} that indicates completion or error
                  */
                 // @ts-ignore
-                setComplete(): <any>
+                setComplete(): object
             }
         }
     }

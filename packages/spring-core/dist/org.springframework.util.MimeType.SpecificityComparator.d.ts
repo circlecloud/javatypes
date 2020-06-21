@@ -11,9 +11,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    compare(mimeType1: T extends org.springframework.util.MimeType, mimeType2: T extends org.springframework.util.MimeType): int
+                    public compare(mimeType1: T, mimeType2: T): number /*int*/
                     // @ts-ignore
-                    compareParameters(mimeType1: T extends org.springframework.util.MimeType, mimeType2: T extends org.springframework.util.MimeType): int
+                    compareParameters(mimeType1: T, mimeType2: T): number /*int*/
                 }
             }
         }

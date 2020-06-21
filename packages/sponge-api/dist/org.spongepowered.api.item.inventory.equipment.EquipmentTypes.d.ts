@@ -14,34 +14,34 @@ declare namespace org {
                              * checks to succeed.
                              */
                             // @ts-ignore
-                            readonly ANY: org.spongepowered.api.item.inventory.equipment.EquipmentType
+                            public static readonly ANY: org.spongepowered.api.item.inventory.equipment.EquipmentType
                             /**
                              * Held or otherwise equipped items.
                              */
                             // @ts-ignore
-                            readonly EQUIPPED: org.spongepowered.api.item.inventory.equipment.EquipmentType
+                            public static readonly EQUIPPED: org.spongepowered.api.item.inventory.equipment.EquipmentType
                             /**
                              * Any held types like MAINHAND and OFFHAND.
                              */
                             // @ts-ignore
-                            readonly HELD: org.spongepowered.api.item.inventory.equipment.HeldEquipmentType
+                            public static readonly HELD: org.spongepowered.api.item.inventory.equipment.HeldEquipmentType
                             // @ts-ignore
-                            readonly MAIN_HAND: org.spongepowered.api.item.inventory.equipment.HeldEquipmentType
+                            public static readonly MAIN_HAND: org.spongepowered.api.item.inventory.equipment.HeldEquipmentType
                             // @ts-ignore
-                            readonly OFF_HAND: org.spongepowered.api.item.inventory.equipment.HeldEquipmentType
+                            public static readonly OFF_HAND: org.spongepowered.api.item.inventory.equipment.HeldEquipmentType
                             /**
                              * Any worn types like HEADWEAR, CHESTPLATE, LEGGINGS and BOOTS.
                              */
                             // @ts-ignore
-                            readonly WORN: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
+                            public static readonly WORN: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
                             // @ts-ignore
-                            readonly BOOTS: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
+                            public static readonly BOOTS: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
                             // @ts-ignore
-                            readonly CHESTPLATE: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
+                            public static readonly CHESTPLATE: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
                             // @ts-ignore
-                            readonly HEADWEAR: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
+                            public static readonly HEADWEAR: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
                             // @ts-ignore
-                            readonly LEGGINGS: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
+                            public static readonly LEGGINGS: org.spongepowered.api.item.inventory.equipment.WornEquipmentType
                         }
                     }
                 }

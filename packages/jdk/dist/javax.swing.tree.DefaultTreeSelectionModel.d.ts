@@ -34,7 +34,7 @@ declare namespace javax {
                  * Property name for selectionMode.
                  */
                 // @ts-ignore
-                readonly SELECTION_MODE_PROPERTY: string
+                public static readonly SELECTION_MODE_PROPERTY: java.lang.String | string
                 /**
                  * Used to messaged registered listeners.
                  */
@@ -88,13 +88,13 @@ declare namespace javax {
                  * the row for a particular TreePath.
                  */
                 // @ts-ignore
-                setRowMapper(newMapper: javax.swing.tree.RowMapper): void
+                public setRowMapper(newMapper: javax.swing.tree.RowMapper): void
                 /**
                  * Returns the RowMapper instance that is able to map a TreePath to a
                  * row.
                  */
                 // @ts-ignore
-                getRowMapper(): javax.swing.tree.RowMapper
+                public getRowMapper(): javax.swing.tree.RowMapper
                 /**
                  * Sets the selection model, which must be one of SINGLE_TREE_SELECTION,
                  * CONTIGUOUS_TREE_SELECTION or DISCONTIGUOUS_TREE_SELECTION. If mode
@@ -110,14 +110,14 @@ declare namespace javax {
                  * result in the mode becoming <code>DISCONTIGUOUS_TREE_SELECTION</code>.
                  */
                 // @ts-ignore
-                setSelectionMode(mode: number /*int*/): void
+                public setSelectionMode(mode: number /*int*/): void
                 /**
                  * Returns the selection mode, one of <code>SINGLE_TREE_SELECTION</code>,
                  * <code>DISCONTIGUOUS_TREE_SELECTION</code> or
                  * <code>CONTIGUOUS_TREE_SELECTION</code>.
                  */
                 // @ts-ignore
-                getSelectionMode(): int
+                public getSelectionMode(): number /*int*/
                 /**
                  * Sets the selection to path. If this represents a change, then
                  * the TreeSelectionListeners are notified. If <code>path</code> is
@@ -125,7 +125,7 @@ declare namespace javax {
                  * @param path new path to select
                  */
                 // @ts-ignore
-                setSelectionPath(path: javax.swing.tree.TreePath): void
+                public setSelectionPath(path: javax.swing.tree.TreePath): void
                 /**
                  * Sets the selection. Whether the supplied paths are taken as the
                  * new selection depends upon the selection mode. If the supplied
@@ -149,7 +149,7 @@ declare namespace javax {
                  * @param pPaths the new selection
                  */
                 // @ts-ignore
-                setSelectionPaths(pPaths: javax.swing.tree.TreePath[]): void
+                public setSelectionPaths(pPaths: javax.swing.tree.TreePath[]): void
                 /**
                  * Adds path to the current selection. If path is not currently
                  * in the selection the TreeSelectionListeners are notified. This has
@@ -157,7 +157,7 @@ declare namespace javax {
                  * @param path the new path to add to the current selection
                  */
                 // @ts-ignore
-                addSelectionPath(path: javax.swing.tree.TreePath): void
+                public addSelectionPath(path: javax.swing.tree.TreePath): void
                 /**
                  * Adds paths to the current selection. If any of the paths in
                  * paths are not currently in the selection the TreeSelectionListeners
@@ -173,7 +173,7 @@ declare namespace javax {
                  * @param paths the new path to add to the current selection
                  */
                 // @ts-ignore
-                addSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+                public addSelectionPaths(paths: javax.swing.tree.TreePath[]): void
                 /**
                  * Removes path from the selection. If path is in the selection
                  * The TreeSelectionListeners are notified. This has no effect if
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @param path the path to remove from the selection
                  */
                 // @ts-ignore
-                removeSelectionPath(path: javax.swing.tree.TreePath): void
+                public removeSelectionPath(path: javax.swing.tree.TreePath): void
                 /**
                  * Removes paths from the selection.  If any of the paths in paths
                  * are in the selection the TreeSelectionListeners are notified.
@@ -189,55 +189,55 @@ declare namespace javax {
                  * @param paths the paths to remove from the selection
                  */
                 // @ts-ignore
-                removeSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+                public removeSelectionPaths(paths: javax.swing.tree.TreePath[]): void
                 /**
                  * Returns the first path in the selection. This is useful if there
                  * if only one item currently selected.
                  */
                 // @ts-ignore
-                getSelectionPath(): javax.swing.tree.TreePath
+                public getSelectionPath(): javax.swing.tree.TreePath
                 /**
                  * Returns the selection.
                  * @return the selection
                  */
                 // @ts-ignore
-                getSelectionPaths(): javax.swing.tree.TreePath[]
+                public getSelectionPaths(): javax.swing.tree.TreePath[]
                 /**
                  * Returns the number of paths that are selected.
                  */
                 // @ts-ignore
-                getSelectionCount(): int
+                public getSelectionCount(): number /*int*/
                 /**
                  * Returns true if the path, <code>path</code>,
                  * is in the current selection.
                  */
                 // @ts-ignore
-                isPathSelected(path: javax.swing.tree.TreePath): boolean
+                public isPathSelected(path: javax.swing.tree.TreePath): boolean
                 /**
                  * Returns true if the selection is currently empty.
                  */
                 // @ts-ignore
-                isSelectionEmpty(): boolean
+                public isSelectionEmpty(): boolean
                 /**
                  * Empties the current selection.  If this represents a change in the
                  * current selection, the selection listeners are notified.
                  */
                 // @ts-ignore
-                clearSelection(): void
+                public clearSelection(): void
                 /**
                  * Adds x to the list of listeners that are notified each time the
                  * set of selected TreePaths changes.
                  * @param x the new listener to be added
                  */
                 // @ts-ignore
-                addTreeSelectionListener(x: javax.swing.event.TreeSelectionListener): void
+                public addTreeSelectionListener(x: javax.swing.event.TreeSelectionListener): void
                 /**
                  * Removes x from the list of listeners that are notified each time
                  * the set of selected TreePaths changes.
                  * @param x the listener to remove
                  */
                 // @ts-ignore
-                removeTreeSelectionListener(x: javax.swing.event.TreeSelectionListener): void
+                public removeTreeSelectionListener(x: javax.swing.event.TreeSelectionListener): void
                 /**
                  * Returns an array of all the tree selection listeners
                  * registered on this model.
@@ -249,7 +249,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getTreeSelectionListeners(): javax.swing.event.TreeSelectionListener[]
+                public getTreeSelectionListeners(): javax.swing.event.TreeSelectionListener[]
                 /**
                  * Notifies all listeners that are registered for
                  * tree selection events on this object.
@@ -289,7 +289,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
                 /**
                  * Returns the selection in terms of rows. There is not
                  * necessarily a one-to-one mapping between the {@code TreePath}s
@@ -304,26 +304,26 @@ declare namespace javax {
                  * @return the selection in terms of rows
                  */
                 // @ts-ignore
-                getSelectionRows(): int[]
+                public getSelectionRows(): number /*int*/[]
                 /**
                  * Returns the smallest value obtained from the RowMapper for the
                  * current set of selected TreePaths. If nothing is selected,
                  * or there is no RowMapper, this will return -1.
                  */
                 // @ts-ignore
-                getMinSelectionRow(): int
+                public getMinSelectionRow(): number /*int*/
                 /**
                  * Returns the largest value obtained from the RowMapper for the
                  * current set of selected TreePaths. If nothing is selected,
                  * or there is no RowMapper, this will return -1.
                  */
                 // @ts-ignore
-                getMaxSelectionRow(): int
+                public getMaxSelectionRow(): number /*int*/
                 /**
                  * Returns true if the row identified by <code>row</code> is selected.
                  */
                 // @ts-ignore
-                isRowSelected(row: number /*int*/): boolean
+                public isRowSelected(row: number /*int*/): boolean
                 /**
                  * Updates this object's mapping from TreePath to rows. This should
                  * be invoked when the mapping from TreePaths to integers has changed
@@ -336,19 +336,19 @@ declare namespace javax {
                  * selection mode.
                  */
                 // @ts-ignore
-                resetRowSelection(): void
+                public resetRowSelection(): void
                 /**
                  * Returns the lead selection index. That is the last index that was
                  * added.
                  */
                 // @ts-ignore
-                getLeadSelectionRow(): int
+                public getLeadSelectionRow(): number /*int*/
                 /**
                  * Returns the last path that was added. This may differ from the
                  * leadSelectionPath property maintained by the JTree.
                  */
                 // @ts-ignore
-                getLeadSelectionPath(): javax.swing.tree.TreePath
+                public getLeadSelectionPath(): javax.swing.tree.TreePath
                 /**
                  * Adds a PropertyChangeListener to the listener list.
                  * The listener is registered for all properties.
@@ -358,7 +358,7 @@ declare namespace javax {
                  * @param listener  the PropertyChangeListener to be added
                  */
                 // @ts-ignore
-                addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Removes a PropertyChangeListener from the listener list.
                  * This removes a PropertyChangeListener that was registered
@@ -366,7 +366,7 @@ declare namespace javax {
                  * @param listener  the PropertyChangeListener to be removed
                  */
                 // @ts-ignore
-                removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Returns an array of all the property change listeners
                  * registered on this <code>DefaultTreeSelectionModel</code>.
@@ -378,7 +378,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+                public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
                 /**
                  * Makes sure the currently selected <code>TreePath</code>s are valid
                  * for the current selection mode.
@@ -443,7 +443,7 @@ declare namespace javax {
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a clone of this object with the same selection.
                  * This method does not duplicate
@@ -452,7 +452,7 @@ declare namespace javax {
                  *                                        this class
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

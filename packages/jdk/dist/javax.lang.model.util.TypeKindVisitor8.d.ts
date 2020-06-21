@@ -71,7 +71,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitIntersection(t: javax.lang.model.type.IntersectionType, p: P): R
+                    public visitIntersection(t: javax.lang.model.type.IntersectionType, p: P): R
                 }
             }
         }

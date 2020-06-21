@@ -16,11 +16,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    cacheAdvisor(): org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor
+                    public cacheAdvisor(): org.springframework.cache.interceptor.BeanFactoryCacheOperationSourceAdvisor
                     // @ts-ignore
-                    cacheOperationSource(): org.springframework.cache.interceptor.CacheOperationSource
+                    public cacheOperationSource(): org.springframework.cache.interceptor.CacheOperationSource
                     // @ts-ignore
-                    cacheInterceptor(): org.springframework.cache.interceptor.CacheInterceptor
+                    public cacheInterceptor(): org.springframework.cache.interceptor.CacheInterceptor
                 }
             }
         }

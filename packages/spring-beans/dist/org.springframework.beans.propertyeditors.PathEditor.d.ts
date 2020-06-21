@@ -35,9 +35,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(resourceEditor: ResourceEditor)
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

@@ -21,35 +21,35 @@ declare namespace org {
                      * @param callback the callback to add
                      */
                     // @ts-ignore
-                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any super T>): void
+                    public addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any>): void
                     /**
                      * Add the given success callback to this registry.
                      * @param callback the success callback to add
                      * @since 4.1
                      */
                     // @ts-ignore
-                    addSuccessCallback(callback: org.springframework.util.concurrent.SuccessCallback<any super T>): void
+                    public addSuccessCallback(callback: org.springframework.util.concurrent.SuccessCallback<any>): void
                     /**
                      * Add the given failure callback to this registry.
                      * @param callback the failure callback to add
                      * @since 4.1
                      */
                     // @ts-ignore
-                    addFailureCallback(callback: org.springframework.util.concurrent.FailureCallback): void
+                    public addFailureCallback(callback: org.springframework.util.concurrent.FailureCallback): void
                     /**
                      * Trigger a {@link ListenableFutureCallback#onSuccess(Object)} call on all
                      * added callbacks with the given result.
                      * @param result the result to trigger the callbacks with
                      */
                     // @ts-ignore
-                    success(result: T): void
+                    public success(result: T): void
                     /**
                      * Trigger a {@link ListenableFutureCallback#onFailure(Throwable)} call on all
                      * added callbacks with the given {@code Throwable}.
                      * @param ex the exception to trigger the callbacks with
                      */
                     // @ts-ignore
-                    failure(ex: Error): void
+                    public failure(ex: java.lang.Throwable | Error): void
                 }
             }
         }

@@ -49,7 +49,7 @@ declare namespace java {
                  * @see ImageConsumer#setHints
                  */
                 // @ts-ignore
-                setHints(hints: number /*int*/): void
+                public setHints(hints: number /*int*/): void
                 /**
                  * Combine the components for the delivered byte pixels into the
                  * accumulation arrays and send on any averaged data for rows of
@@ -67,7 +67,7 @@ declare namespace java {
                  * @see ReplicateScaleFilter
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Combine the components for the delivered int pixels into the
                  * accumulation arrays and send on any averaged data for rows of
@@ -85,7 +85,7 @@ declare namespace java {
                  * @see ReplicateScaleFilter
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
             }
         }
     }

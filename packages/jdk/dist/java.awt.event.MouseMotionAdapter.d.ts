@@ -27,7 +27,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class MouseMotionAdapter extends java.lang.Object implements java.awt.event.MouseMotionListener {
+            abstract class MouseMotionAdapter extends java.lang.Object implements java.awt.event.MouseMotionListener {
                 // @ts-ignore
                 constructor()
                 /**
@@ -38,13 +38,13 @@ declare namespace java {
                  * bounds of the component).
                  */
                 // @ts-ignore
-                mouseDragged(e: java.awt.event.MouseEvent): void
+                public mouseDragged(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when the mouse button has been moved on a component
                  * (with no buttons no down).
                  */
                 // @ts-ignore
-                mouseMoved(e: java.awt.event.MouseEvent): void
+                public mouseMoved(e: java.awt.event.MouseEvent): void
             }
         }
     }

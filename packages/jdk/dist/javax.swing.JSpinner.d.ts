@@ -98,14 +98,14 @@ declare namespace javax {
              * @return the <code>SpinnerUI</code> object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.SpinnerUI
+            public getUI(): javax.swing.plaf.SpinnerUI
             /**
              * Sets the look and feel (L&amp;F) object that renders this component.
              * @param ui  the <code>SpinnerUI</code> L&amp;F object
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.SpinnerUI): void
+            public setUI(ui: javax.swing.plaf.SpinnerUI): void
             /**
              * Returns the suffix used to construct the name of the look and feel
              * (L&amp;F) class used to render this component.
@@ -114,13 +114,13 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Resets the UI property with the value from the current look and feel.
              * @see UIManager#getUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * This method is called by the constructors to create the
              * <code>JComponent</code>
@@ -167,7 +167,7 @@ declare namespace javax {
              *   description: Model that represents the value of this spinner.
              */
             // @ts-ignore
-            setModel(model: javax.swing.SpinnerModel): void
+            public setModel(model: javax.swing.SpinnerModel): void
             /**
              * Returns the <code>SpinnerModel</code> that defines
              * this spinners sequence of values.
@@ -175,7 +175,7 @@ declare namespace javax {
              * @see #setModel
              */
             // @ts-ignore
-            getModel(): javax.swing.SpinnerModel
+            public getModel(): javax.swing.SpinnerModel
             /**
              * Returns the current value of the model, typically
              * this value is displayed by the <code>editor</code>. If the
@@ -193,7 +193,7 @@ declare namespace javax {
              * @see SpinnerModel#getValue
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Changes current value of the model, typically
              * this value is displayed by the <code>editor</code>.
@@ -211,7 +211,7 @@ declare namespace javax {
              * @see SpinnerModel#setValue
              */
             // @ts-ignore
-            setValue(value: any): void
+            public setValue(value: java.lang.Object | any): void
             /**
              * Returns the object in the sequence that comes after the object returned
              * by <code>getValue()</code>. If the end of the sequence has been reached
@@ -229,7 +229,7 @@ declare namespace javax {
              * @see SpinnerModel#getNextValue
              */
             // @ts-ignore
-            getNextValue(): java.lang.Object
+            public getNextValue(): any
             /**
              * Adds a listener to the list that is notified each time a change
              * to the model occurs.  The source of <code>ChangeEvents</code>
@@ -244,7 +244,7 @@ declare namespace javax {
              * @see #getModel
              */
             // @ts-ignore
-            addChangeListener(listener: javax.swing.event.ChangeListener): void
+            public addChangeListener(listener: javax.swing.event.ChangeListener): void
             /**
              * Removes a <code>ChangeListener</code> from this spinner.
              * @param listener the <code>ChangeListener</code> to remove
@@ -252,7 +252,7 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            removeChangeListener(listener: javax.swing.event.ChangeListener): void
+            public removeChangeListener(listener: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this JSpinner with addChangeListener().
@@ -261,7 +261,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Sends a <code>ChangeEvent</code>, whose source is this
              * <code>JSpinner</code>, to each <code>ChangeListener</code>.
@@ -293,7 +293,7 @@ declare namespace javax {
              * @see SpinnerModel#getPreviousValue
              */
             // @ts-ignore
-            getPreviousValue(): java.lang.Object
+            public getPreviousValue(): any
             /**
              * Changes the <code>JComponent</code> that displays the current value
              * of the <code>SpinnerModel</code>.  It is the responsibility of this
@@ -311,7 +311,7 @@ declare namespace javax {
              *   description: JComponent that displays the current value of the model
              */
             // @ts-ignore
-            setEditor(editor: javax.swing.JComponent): void
+            public setEditor(editor: javax.swing.JComponent): void
             /**
              * Returns the component that displays and potentially
              * changes the model's value.
@@ -321,7 +321,7 @@ declare namespace javax {
              * @see #createEditor
              */
             // @ts-ignore
-            getEditor(): javax.swing.JComponent
+            public getEditor(): javax.swing.JComponent
             /**
              * Commits the currently edited value to the <code>SpinnerModel</code>.
              * <p>
@@ -331,14 +331,14 @@ declare namespace javax {
              *          be committed.
              */
             // @ts-ignore
-            commitEdit(): void
+            public commitEdit(): void
             /**
              * Gets the <code>AccessibleContext</code> for the <code>JSpinner</code>
              * @return the <code>AccessibleContext</code> for the <code>JSpinner</code>
              * @since 1.5
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -296,7 +296,7 @@ declare namespace java {
              *  (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            removeFirstOccurrence(o: any): boolean
+            removeFirstOccurrence(o: java.lang.Object | any): boolean
             /**
              * Removes the last occurrence of the specified element from this deque.
              * If the deque does not contain the element, it is unchanged.
@@ -315,7 +315,7 @@ declare namespace java {
              *  (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            removeLastOccurrence(o: any): boolean
+            removeLastOccurrence(o: java.lang.Object | any): boolean
             /**
              * Inserts the specified element into the queue represented by this deque
              * (in other words, at the tail of this deque) if it is possible to do so
@@ -448,7 +448,7 @@ declare namespace java {
              *  (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            remove(o: any): boolean
+            remove(o: java.lang.Object | any): boolean
             /**
              * Returns {@code true} if this deque contains the specified element.
              * More formally, returns {@code true} if and only if this deque contains
@@ -464,13 +464,13 @@ declare namespace java {
              *  (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            contains(o: any): boolean
+            contains(o: java.lang.Object | any): boolean
             /**
              * Returns the number of elements in this deque.
              * @return the number of elements in this deque
              */
             // @ts-ignore
-            size(): int
+            size(): number /*int*/
             /**
              * Returns an iterator over the elements in this deque in proper sequence.
              * The elements will be returned in order from first (head) to last (tail).

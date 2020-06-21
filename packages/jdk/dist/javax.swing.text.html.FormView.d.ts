@@ -87,7 +87,7 @@ declare namespace javax {
                      *              FormView.submitButtonText
                      */
                     // @ts-ignore
-                    readonly SUBMIT: string
+                    public static readonly SUBMIT: java.lang.String | string
                     /**
                      * If a value attribute is not specified for a FORM input element
                      * of type "reset", then this default string is used.
@@ -95,7 +95,7 @@ declare namespace javax {
                      *              FormView.resetButtonText
                      */
                     // @ts-ignore
-                    readonly RESET: string
+                    public static readonly RESET: java.lang.String | string
                     /**
                      * Create the component.  This is basically a
                      * big switch statement based upon the tag type
@@ -117,7 +117,7 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid axis
                      */
                     // @ts-ignore
-                    getMaximumSpan(axis: number /*int*/): float
+                    public getMaximumSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Responsible for processing the ActionEvent.
                      * If the element associated with the FormView,
@@ -132,13 +132,13 @@ declare namespace javax {
                      * @param evt the ActionEvent.
                      */
                     // @ts-ignore
-                    actionPerformed(evt: java.awt.event.ActionEvent): void
+                    public actionPerformed(evt: java.awt.event.ActionEvent): void
                     /**
                      * This method is responsible for submitting the form data.
                      * A thread is forked to undertake the submission.
                      */
                     // @ts-ignore
-                    submitData(data: string): void
+                    submitData(data: java.lang.String | string): void
                     /**
                      * This method is called to submit a form in response
                      * to a click on an image -- an &lt;INPUT&gt; form
@@ -146,7 +146,7 @@ declare namespace javax {
                      * @param imageData the mouse click coordinates.
                      */
                     // @ts-ignore
-                    imageSubmit(imageData: string): void
+                    imageSubmit(imageData: java.lang.String | string): void
                 }
             }
         }

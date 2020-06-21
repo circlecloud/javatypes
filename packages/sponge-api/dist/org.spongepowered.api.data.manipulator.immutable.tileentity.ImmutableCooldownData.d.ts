@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable value for the cooldown remaining
                                  */
                                 // @ts-ignore
-                                cooldown(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer>
+                                cooldown(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer | number>
                             }
                         }
                     }

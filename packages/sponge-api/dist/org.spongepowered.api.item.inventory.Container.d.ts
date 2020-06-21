@@ -15,7 +15,7 @@ declare namespace org {
                          * @return The current viewers of this inventory
                          */
                         // @ts-ignore
-                        getViewers(): java.util.Set<org.spongepowered.api.entity.living.player.Player>
+                        getViewers(): Array<org.spongepowered.api.entity.living.player.Player>
                         /**
                          * Checks for whether this Inventory currently has viewers.
                          * @return True if viewers are currently looking at this inventory

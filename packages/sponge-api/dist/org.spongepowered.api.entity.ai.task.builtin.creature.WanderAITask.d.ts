@@ -21,7 +21,7 @@ declare namespace org {
                                      * @return The speed modifier
                                      */
                                     // @ts-ignore
-                                    getSpeed(): double
+                                    getSpeed(): number /*double*/
                                     /**
                                      * Sets the speed modifier at which the owning {@link Entity}
                                      * will move around to appear to "wander".
@@ -35,7 +35,7 @@ declare namespace org {
                                      * @return The chance that the owning entity will "wander"
                                      */
                                     // @ts-ignore
-                                    getExecutionChance(): int
+                                    getExecutionChance(): number /*int*/
                                     /**
                                      * Sets the chance that the owning {@link Entity} will perform
                                      * a "wander".

@@ -14,11 +14,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getFieldTypes(): java.util.Set<java.lang.Class<?>>
+                    public getFieldTypes(): Array<java.lang.Class<any>>
                     // @ts-ignore
-                    getPrinter(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Printer<java.lang.Number>
+                    public getPrinter(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Printer<java.lang.Number>
                     // @ts-ignore
-                    getParser(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Parser<java.lang.Number>
+                    public getParser(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Parser<java.lang.Number>
                 }
             }
         }

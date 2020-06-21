@@ -18,11 +18,11 @@ declare namespace org {
                  * @param value the value assigned to this metadata value
                  */
                 // @ts-ignore
-                constructor(owningPlugin: org.bukkit.plugin.Plugin, value: any)
+                constructor(owningPlugin: org.bukkit.plugin.Plugin, value: java.lang.Object | any)
                 // @ts-ignore
-                invalidate(): void
+                public invalidate(): void
                 // @ts-ignore
-                value(): java.lang.Object
+                public value(): any
             }
         }
     }

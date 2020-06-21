@@ -18,7 +18,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(mapper: ObjectMapper, ...mimeTypes: MimeType[])
                         // @ts-ignore
-                        decode(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decode(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     }
                 }
             }

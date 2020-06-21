@@ -12,7 +12,7 @@ declare namespace java {
              * @param s  String providing the character stream.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Reads a single character.
              * @return The character read, or -1 if the end of the stream has been
@@ -20,7 +20,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads characters into a portion of an array.
              * @param cbuf  Destination buffer
@@ -31,7 +31,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips the specified number of characters in the stream. Returns
              * the number of characters that were skipped.
@@ -46,19 +46,19 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            skip(ns: number /*long*/): long
+            public skip(ns: number /*long*/): number /*long*/
             /**
              * Tells whether this stream is ready to be read.
              * @return True if the next read() is guaranteed not to block for input
              * @exception IOException  If the stream is closed
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             /**
              * Tells whether this stream supports the mark() operation, which it does.
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Marks the present position in the stream.  Subsequent calls to reset()
              * will reposition the stream to this point.
@@ -71,14 +71,14 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Resets the stream to the most recent mark, or to the beginning of the
              * string if it has never been marked.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Closes the stream and releases any system resources associated with
              * it. Once the stream has been closed, further read(),
@@ -86,7 +86,7 @@ declare namespace java {
              * Closing a previously closed stream has no effect.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

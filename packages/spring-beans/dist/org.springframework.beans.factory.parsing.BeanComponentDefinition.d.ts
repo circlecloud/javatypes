@@ -18,7 +18,7 @@ declare namespace org {
                          * @param beanName the name of the bean
                          */
                         // @ts-ignore
-                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: string)
+                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: java.lang.String | string)
                         /**
                          * Create a new BeanComponentDefinition for the given bean.
                          * @param beanDefinition the BeanDefinition
@@ -26,7 +26,7 @@ declare namespace org {
                          * @param aliases alias names for the bean, or {#code null} if none
                          */
                         // @ts-ignore
-                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: string, aliases: string[])
+                        constructor(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, beanName: java.lang.String | string, aliases: java.lang.String[] | string[])
                         /**
                          * Create a new BeanComponentDefinition for the given bean.
                          * @param beanDefinitionHolder the BeanDefinitionHolder encapsulating
@@ -35,27 +35,27 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanDefinitionHolder: org.springframework.beans.factory.config.BeanDefinitionHolder)
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                         // @ts-ignore
-                        getBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
+                        public getBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
                         // @ts-ignore
-                        getInnerBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
+                        public getInnerBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
                         // @ts-ignore
-                        getBeanReferences(): org.springframework.beans.factory.config.BeanReference[]
+                        public getBeanReferences(): org.springframework.beans.factory.config.BeanReference[]
                         /**
                          * This implementation returns this ComponentDefinition's description.
                          * @see #getDescription()
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         /**
                          * This implementations expects the other object to be of type BeanComponentDefinition
                          * as well, in addition to the superclass's equality requirements.
                          */
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                     }
                 }
             }

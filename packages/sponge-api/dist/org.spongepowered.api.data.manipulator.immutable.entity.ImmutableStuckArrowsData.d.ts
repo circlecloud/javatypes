@@ -16,7 +16,7 @@ declare namespace org {
                                  * @return The immutable value of stuck arrows
                                  */
                                 // @ts-ignore
-                                stuckArrows(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                stuckArrows(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

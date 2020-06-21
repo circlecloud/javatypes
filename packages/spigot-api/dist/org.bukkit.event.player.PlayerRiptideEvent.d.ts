@@ -18,11 +18,11 @@ declare namespace org {
                      * @return held enchanted item
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

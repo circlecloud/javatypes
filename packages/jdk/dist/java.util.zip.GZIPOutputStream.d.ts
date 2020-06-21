@@ -74,7 +74,7 @@ declare namespace java {
                  * @exception IOException If an I/O error has occurred.
                  */
                 // @ts-ignore
-                write(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Finishes writing compressed data to the output stream without closing
                  * the underlying stream. Use this method when applying multiple filters
@@ -82,7 +82,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                finish(): void
+                public finish(): void
             }
         }
     }

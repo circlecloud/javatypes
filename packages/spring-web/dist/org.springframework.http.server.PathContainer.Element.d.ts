@@ -12,7 +12,7 @@ declare namespace org {
                          * The unmodified, original value of this element.
                          */
                         // @ts-ignore
-                        value(): java.lang.String
+                        value(): string
                     }
                 }
             }

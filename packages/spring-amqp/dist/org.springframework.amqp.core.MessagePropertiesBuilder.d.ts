@@ -14,7 +14,7 @@ declare namespace org {
                      * @return The builder.
                      */
                     // @ts-ignore
-                    newInstance(): org.springframework.amqp.core.MessagePropertiesBuilder
+                    public static newInstance(): org.springframework.amqp.core.MessagePropertiesBuilder
                     /**
                      * Initializes the builder with the supplied properties; the same
                      * object will be returned by {@link #build()}.
@@ -22,18 +22,18 @@ declare namespace org {
                      * @return The builder.
                      */
                     // @ts-ignore
-                    fromProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessagePropertiesBuilder
+                    public static fromProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessagePropertiesBuilder
                     /**
                      * Performs a shallow copy of the properties for the initial value.
                      * @param properties The properties.
                      * @return The builder.
                      */
                     // @ts-ignore
-                    fromClonedProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessagePropertiesBuilder
+                    public static fromClonedProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessagePropertiesBuilder
                     // @ts-ignore
-                    copyProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessagePropertiesBuilder
+                    public copyProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessagePropertiesBuilder
                     // @ts-ignore
-                    build(): org.springframework.amqp.core.MessageProperties
+                    public build(): org.springframework.amqp.core.MessageProperties
                 }
             }
         }

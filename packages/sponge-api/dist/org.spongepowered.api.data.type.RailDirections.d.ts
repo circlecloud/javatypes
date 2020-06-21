@@ -6,25 +6,25 @@ declare namespace org {
                     // @ts-ignore
                     class RailDirections extends java.lang.Object {
                         // @ts-ignore
-                        readonly ASCENDING_EAST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly ASCENDING_EAST: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly ASCENDING_NORTH: org.spongepowered.api.data.type.RailDirection
+                        public static readonly ASCENDING_NORTH: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly ASCENDING_SOUTH: org.spongepowered.api.data.type.RailDirection
+                        public static readonly ASCENDING_SOUTH: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly ASCENDING_WEST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly ASCENDING_WEST: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly EAST_WEST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly EAST_WEST: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly NORTH_EAST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly NORTH_EAST: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly NORTH_SOUTH: org.spongepowered.api.data.type.RailDirection
+                        public static readonly NORTH_SOUTH: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly NORTH_WEST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly NORTH_WEST: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly SOUTH_EAST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly SOUTH_EAST: org.spongepowered.api.data.type.RailDirection
                         // @ts-ignore
-                        readonly SOUTH_WEST: org.spongepowered.api.data.type.RailDirection
+                        public static readonly SOUTH_WEST: org.spongepowered.api.data.type.RailDirection
                     }
                 }
             }

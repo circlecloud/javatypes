@@ -37,9 +37,9 @@ declare namespace javax {
                     // @ts-ignore
                     createMouseInputListener(): javax.swing.event.MouseInputListener
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Initialize JTable properties, e.g. font, foreground, and background.
                      * The font, foreground, and background properties are only set if their
@@ -60,7 +60,7 @@ declare namespace javax {
                     // @ts-ignore
                     installKeyboardActions(): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallDefaults(): void
                     // @ts-ignore
@@ -75,7 +75,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -84,34 +84,34 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     /**
                      * Return the minimum size of the table. The minimum height is the
                      * row height times the number of rows.
                      * The minimum width is the sum of the minimum widths of each column.
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Return the preferred size of the table. The preferred height is the
                      * row height times the number of rows.
                      * The preferred width is the sum of the preferred widths of each column.
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Return the maximum size of the table. The maximum height is the
                      * row heighttimes the number of rows.
                      * The maximum width is the sum of the maximum widths of each column.
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Paint a representation of the <code>table</code> instance
                      * that was set in installUI().
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                 }
             }
         }

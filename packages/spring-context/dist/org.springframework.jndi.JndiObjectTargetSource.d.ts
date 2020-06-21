@@ -43,7 +43,7 @@ declare namespace org {
                  * @see #setCache
                  */
                 // @ts-ignore
-                setLookupOnStartup(lookupOnStartup: boolean): void
+                public setLookupOnStartup(lookupOnStartup: boolean): void
                 /**
                  * Set whether to cache the JNDI object once it has been located.
                  * Default is "true".
@@ -52,17 +52,17 @@ declare namespace org {
                  * @see #setLookupOnStartup
                  */
                 // @ts-ignore
-                setCache(cache: boolean): void
+                public setCache(cache: boolean): void
                 // @ts-ignore
-                afterPropertiesSet(): void
+                public afterPropertiesSet(): void
                 // @ts-ignore
-                getTargetClass(): java.lang.Class<?>
+                public getTargetClass(): java.lang.Class<any>
                 // @ts-ignore
-                isStatic(): boolean
+                public isStatic(): boolean
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                public getTarget(): any
                 // @ts-ignore
-                releaseTarget(target: any): void
+                public releaseTarget(target: java.lang.Object | any): void
             }
         }
     }

@@ -12,9 +12,9 @@ declare namespace java {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                actionPerformed(event: java.awt.event.ActionEvent): void
+                public actionPerformed(event: java.awt.event.ActionEvent): void
                 // @ts-ignore
-                itemStateChanged(event: java.awt.event.ItemEvent): void
+                public itemStateChanged(event: java.awt.event.ItemEvent): void
                 /**
                  * Get the state set of this object.
                  * @return an instance of AccessibleState containing the current state
@@ -22,7 +22,7 @@ declare namespace java {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -30,14 +30,14 @@ declare namespace java {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Returns the Accessible child contained at the local coordinate
                  * Point, if one exists.
                  * @return the Accessible at the specified location, if it exists
                  */
                 // @ts-ignore
-                getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                 /**
                  * Returns the number of accessible children in the object.  If all
                  * of the children of this object implement Accessible, than this
@@ -45,14 +45,14 @@ declare namespace java {
                  * @return the number of accessible children in the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Return the nth Accessible child of the object.
                  * @param i zero-based index of child
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Get the AccessibleSelection associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -61,14 +61,14 @@ declare namespace java {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                 /**
                  * Returns the number of items currently selected.
                  * If no items are selected, the return value will be 0.
                  * @return the number of items currently selected.
                  */
                 // @ts-ignore
-                getAccessibleSelectionCount(): int
+                public getAccessibleSelectionCount(): number /*int*/
                 /**
                  * Returns an Accessible representing the specified selected item
                  * in the object.  If there isn't a selection, or there are
@@ -78,7 +78,7 @@ declare namespace java {
                  * @return an Accessible containing the selected item
                  */
                 // @ts-ignore
-                getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns true if the current child of this object is selected.
                  * @param i the zero-based index of the child in this Accessible
@@ -86,7 +86,7 @@ declare namespace java {
                  * @see AccessibleContext#getAccessibleChild
                  */
                 // @ts-ignore
-                isAccessibleChildSelected(i: number /*int*/): boolean
+                public isAccessibleChildSelected(i: number /*int*/): boolean
                 /**
                  * Adds the specified selected item in the object to the object's
                  * selection.  If the object supports multiple selections,
@@ -96,7 +96,7 @@ declare namespace java {
                  * @param i the zero-based index of selectable items
                  */
                 // @ts-ignore
-                addAccessibleSelection(i: number /*int*/): void
+                public addAccessibleSelection(i: number /*int*/): void
                 /**
                  * Removes the specified selected item in the object from the object's
                  * selection.  If the specified item isn't currently selected, this
@@ -104,19 +104,19 @@ declare namespace java {
                  * @param i the zero-based index of selectable items
                  */
                 // @ts-ignore
-                removeAccessibleSelection(i: number /*int*/): void
+                public removeAccessibleSelection(i: number /*int*/): void
                 /**
                  * Clears the selection in the object, so that nothing in the
                  * object is selected.
                  */
                 // @ts-ignore
-                clearAccessibleSelection(): void
+                public clearAccessibleSelection(): void
                 /**
                  * Causes every selected item in the object to be selected
                  * if the object supports multiple selections.
                  */
                 // @ts-ignore
-                selectAllAccessibleSelection(): void
+                public selectAllAccessibleSelection(): void
             }
         }
     }

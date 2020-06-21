@@ -9,7 +9,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class ObjectStreamField extends java.lang.Object implements java.lang.Comparable<java.lang.Object> {
+        class ObjectStreamField extends java.lang.Object implements java.lang.Comparable<java.lang.Object | any> {
             /**
              * Create a Serializable field with the specified type.  This field should
              * be documented with a <code>serialField</code> tag.
@@ -17,7 +17,7 @@ declare namespace java {
              * @param type the <code>Class</code> object of the serializable field
              */
             // @ts-ignore
-            constructor(name: string, type: java.lang.Class<any>)
+            constructor(name: java.lang.String | string, type: java.lang.Class<any>)
             /**
              * Creates an ObjectStreamField representing a serializable field with the
              * given name and type.  If unshared is false, values of the represented
@@ -35,14 +35,14 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(name: string, type: java.lang.Class<any>, unshared: boolean)
+            constructor(name: java.lang.String | string, type: java.lang.Class<any>, unshared: boolean)
             /**
              * Get the name of this field.
              * @return a <code>String</code> representing the name of the serializable
              *           field
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Get the type of the field.  If the type is non-primitive and this
              * <code>ObjectStreamField</code> was obtained from a deserialized {@link
@@ -53,7 +53,7 @@ declare namespace java {
              *           serializable field
              */
             // @ts-ignore
-            getType(): java.lang.Class<?>
+            public getType(): java.lang.Class<any>
             /**
              * Returns character encoding of field type.  The encoding is as follows:
              * <blockquote><pre>
@@ -71,20 +71,20 @@ declare namespace java {
              * @return the typecode of the serializable field
              */
             // @ts-ignore
-            getTypeCode(): char
+            public getTypeCode(): string
             /**
              * Return the JVM type signature.
              * @return null if this field has a primitive type.
              */
             // @ts-ignore
-            getTypeString(): java.lang.String
+            public getTypeString(): string
             /**
              * Offset of field within instance data.
              * @return the offset of this field
              * @see #setOffset
              */
             // @ts-ignore
-            getOffset(): int
+            public getOffset(): number /*int*/
             /**
              * Offset within instance data.
              * @param offset the offset of the field
@@ -97,7 +97,7 @@ declare namespace java {
              * @return true if and only if this field corresponds to a primitive type
              */
             // @ts-ignore
-            isPrimitive(): boolean
+            public isPrimitive(): boolean
             /**
              * Returns boolean value indicating whether or not the serializable field
              * represented by this ObjectStreamField instance is unshared.
@@ -105,7 +105,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isUnshared(): boolean
+            public isUnshared(): boolean
             /**
              * Compare this field with another <code>ObjectStreamField</code>.  Return
              * -1 if this is smaller, 0 if equal, 1 if greater.  Types that are
@@ -113,12 +113,12 @@ declare namespace java {
              * are compared.
              */
             // @ts-ignore
-            compareTo(obj: any): int
+            public compareTo(obj: java.lang.Object | any): number /*int*/
             /**
              * Return a string that describes this field.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

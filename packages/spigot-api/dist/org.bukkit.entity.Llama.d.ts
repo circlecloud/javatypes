@@ -24,7 +24,7 @@ declare namespace org {
                  * @return llama strength [1,5]
                  */
                 // @ts-ignore
-                getStrength(): int
+                getStrength(): number /*int*/
                 /**
                  * Sets the llama's strength. A higher strength llama will have more
                  * inventory slots and be more threatening to entities. Inventory slots are

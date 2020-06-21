@@ -21,13 +21,13 @@ declare namespace javax {
                         // @ts-ignore
                         isLight: boolean
                         // @ts-ignore
-                        paintIcon(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
+                        public paintIcon(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
                         // @ts-ignore
-                        paintMe(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
+                        public paintMe(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
                         // @ts-ignore
-                        getIconWidth(): int
+                        public getIconWidth(): number /*int*/
                         // @ts-ignore
-                        getIconHeight(): int
+                        public getIconHeight(): number /*int*/
                     }
                 }
             }

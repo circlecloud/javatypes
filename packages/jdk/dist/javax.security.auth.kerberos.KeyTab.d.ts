@@ -55,7 +55,7 @@ declare namespace javax {
                      * @throws NullPointerException if the {#code file} argument is null
                      */
                     // @ts-ignore
-                    getInstance(file: java.io.File): javax.security.auth.kerberos.KeyTab
+                    public static getInstance(file: java.io.File): javax.security.auth.kerberos.KeyTab
                     /**
                      * Returns an unbound {@code KeyTab} instance from a {@code File}
                      * object.
@@ -68,7 +68,7 @@ declare namespace javax {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getUnboundInstance(file: java.io.File): javax.security.auth.kerberos.KeyTab
+                    public static getUnboundInstance(file: java.io.File): javax.security.auth.kerberos.KeyTab
                     /**
                      * Returns a {@code KeyTab} instance from a {@code File} object
                      * that is bound to the specified service principal.
@@ -82,7 +82,7 @@ declare namespace javax {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getInstance(princ: javax.security.auth.kerberos.KerberosPrincipal, file: java.io.File): javax.security.auth.kerberos.KeyTab
+                    public static getInstance(princ: javax.security.auth.kerberos.KerberosPrincipal, file: java.io.File): javax.security.auth.kerberos.KeyTab
                     /**
                      * Returns the default {@code KeyTab} instance that is bound
                      * to an unknown service principal.
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @return the default keytab instance.
                      */
                     // @ts-ignore
-                    getInstance(): javax.security.auth.kerberos.KeyTab
+                    public static getInstance(): javax.security.auth.kerberos.KeyTab
                     /**
                      * Returns the default unbound {@code KeyTab} instance.
                      * <p>
@@ -107,7 +107,7 @@ declare namespace javax {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getUnboundInstance(): javax.security.auth.kerberos.KeyTab
+                    public static getUnboundInstance(): javax.security.auth.kerberos.KeyTab
                     /**
                      * Returns the default {@code KeyTab} instance that is bound
                      * to the specified service principal.
@@ -121,7 +121,7 @@ declare namespace javax {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getInstance(princ: javax.security.auth.kerberos.KerberosPrincipal): javax.security.auth.kerberos.KeyTab
+                    public static getInstance(princ: javax.security.auth.kerberos.KerberosPrincipal): javax.security.auth.kerberos.KeyTab
                     /**
                      * Returns fresh keys for the given Kerberos principal.
                      * <p>
@@ -163,7 +163,7 @@ declare namespace javax {
                      *  access to the keytab file is not permitted
                      */
                     // @ts-ignore
-                    getKeys(principal: javax.security.auth.kerberos.KerberosPrincipal): javax.security.auth.kerberos.KerberosKey[]
+                    public getKeys(principal: javax.security.auth.kerberos.KerberosPrincipal): javax.security.auth.kerberos.KerberosKey[]
                     /**
                      * Checks if the keytab file exists. Implementation of this method
                      * should make sure that the result matches the latest status of the
@@ -176,15 +176,15 @@ declare namespace javax {
                      *  access to the keytab file is not permitted
                      */
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns a hashcode for this KeyTab.
                      * @return a hashCode() for the {#code KeyTab}
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Compares the specified Object with this KeyTab for equality.
                      * Returns true if the given object is also a
@@ -194,7 +194,7 @@ declare namespace javax {
                      * @return true if the specified object is equal to this KeyTab
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * Returns the service principal this {@code KeyTab} object
                      * is bound to. Returns {@code null} if it's not bound.
@@ -206,14 +206,14 @@ declare namespace javax {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getPrincipal(): javax.security.auth.kerberos.KerberosPrincipal
+                    public getPrincipal(): javax.security.auth.kerberos.KerberosPrincipal
                     /**
                      * Returns if the keytab is bound to a principal
                      * @return if the keytab is bound to a principal
                      * @since 1.8
                      */
                     // @ts-ignore
-                    isBound(): boolean
+                    public isBound(): boolean
                 }
             }
         }

@@ -38,7 +38,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    getConnectionId(): java.lang.String
+                    getConnectionId(): string
                     /**
                      * <p>Closes this connection.  On return from this method, the RMI
                      * object implementing this interface is unexported, so further
@@ -88,7 +88,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    createMBean(className: java.lang.String | string, name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#createMBean(String,
@@ -130,7 +130,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#createMBean(String,
@@ -177,7 +177,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, params: java.rmi.MarshalledObject, signature: string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    createMBean(className: java.lang.String | string, name: javax.management.ObjectName, params: java.rmi.MarshalledObject<any>, signature: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#createMBean(String,
@@ -228,7 +228,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: java.rmi.MarshalledObject, signature: string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: java.rmi.MarshalledObject<any>, signature: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     /**
                      * Handles the method
                      * {@link javax.management.MBeanServerConnection#unregisterMBean(ObjectName)}.
@@ -297,7 +297,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    queryMBeans(name: javax.management.ObjectName, query: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): java.util.Set<javax.management.ObjectInstance>
+                    queryMBeans(name: javax.management.ObjectName, query: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): Array<javax.management.ObjectInstance>
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#queryNames(ObjectName,
@@ -321,7 +321,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    queryNames(name: javax.management.ObjectName, query: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): java.util.Set<javax.management.ObjectName>
+                    queryNames(name: javax.management.ObjectName, query: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): Array<javax.management.ObjectName>
                     /**
                      * Handles the method
                      * {@link javax.management.MBeanServerConnection#isRegistered(ObjectName)}.
@@ -352,7 +352,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    getMBeanCount(delegationSubject: javax.security.auth.Subject): java.lang.Integer
+                    getMBeanCount(delegationSubject: javax.security.auth.Subject): number
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#getAttribute(ObjectName,
@@ -386,7 +386,7 @@ declare namespace javax {
                      * @see #setAttribute
                      */
                     // @ts-ignore
-                    getAttribute(name: javax.management.ObjectName, attribute: string, delegationSubject: javax.security.auth.Subject): java.lang.Object
+                    getAttribute(name: javax.management.ObjectName, attribute: java.lang.String | string, delegationSubject: javax.security.auth.Subject): any
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#getAttributes(ObjectName,
@@ -411,7 +411,7 @@ declare namespace javax {
                      * @see #setAttributes
                      */
                     // @ts-ignore
-                    getAttributes(name: javax.management.ObjectName, attributes: string[], delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
+                    getAttributes(name: javax.management.ObjectName, attributes: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#setAttribute(ObjectName,
@@ -446,7 +446,7 @@ declare namespace javax {
                      * @see #getAttribute
                      */
                     // @ts-ignore
-                    setAttribute(name: javax.management.ObjectName, attribute: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): void
+                    setAttribute(name: javax.management.ObjectName, attribute: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): void
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#setAttributes(ObjectName,
@@ -475,7 +475,7 @@ declare namespace javax {
                      * @see #getAttributes
                      */
                     // @ts-ignore
-                    setAttributes(name: javax.management.ObjectName, attributes: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
+                    setAttributes(name: javax.management.ObjectName, attributes: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#invoke(ObjectName,
@@ -513,7 +513,7 @@ declare namespace javax {
                      *  <code>operationName</code> is null.
                      */
                     // @ts-ignore
-                    invoke(name: javax.management.ObjectName, operationName: string, params: java.rmi.MarshalledObject, signature: string[], delegationSubject: javax.security.auth.Subject): java.lang.Object
+                    invoke(name: javax.management.ObjectName, operationName: java.lang.String | string, params: java.rmi.MarshalledObject<any>, signature: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): any
                     /**
                      * Handles the method
                      * {@link javax.management.MBeanServerConnection#getDefaultDomain()}.
@@ -526,7 +526,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    getDefaultDomain(delegationSubject: javax.security.auth.Subject): java.lang.String
+                    getDefaultDomain(delegationSubject: javax.security.auth.Subject): string
                     /**
                      * Handles the method
                      * {@link javax.management.MBeanServerConnection#getDomains()}.
@@ -539,7 +539,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    getDomains(delegationSubject: javax.security.auth.Subject): java.lang.String[]
+                    getDomains(delegationSubject: javax.security.auth.Subject): string[]
                     /**
                      * Handles the method
                      * {@link javax.management.MBeanServerConnection#getMBeanInfo(ObjectName)}.
@@ -585,7 +585,7 @@ declare namespace javax {
                      *  name in parameter is null.
                      */
                     // @ts-ignore
-                    isInstanceOf(name: javax.management.ObjectName, className: string, delegationSubject: javax.security.auth.Subject): boolean
+                    isInstanceOf(name: javax.management.ObjectName, className: java.lang.String | string, delegationSubject: javax.security.auth.Subject): boolean
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#addNotificationListener(ObjectName,
@@ -624,7 +624,7 @@ declare namespace javax {
                      *  MarshalledObject, MarshalledObject, Subject)
                      */
                     // @ts-ignore
-                    addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject, handback: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): void
+                    addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject<any>, handback: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): void
                     /**
                      * Handles the method {@link
                      * javax.management.MBeanServerConnection#removeNotificationListener(ObjectName,
@@ -681,7 +681,7 @@ declare namespace javax {
                      * @see #addNotificationListener
                      */
                     // @ts-ignore
-                    removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject, handback: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): void
+                    removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject<any>, handback: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): void
                     /**
                      * <p>Handles the method {@link
                      * javax.management.MBeanServerConnection#addNotificationListener(ObjectName,
@@ -729,7 +729,7 @@ declare namespace javax {
                      * @throws IOException if a general communication exception occurred.
                      */
                     // @ts-ignore
-                    addNotificationListeners(names: javax.management.ObjectName[], filters: java.rmi.MarshalledObject[], delegationSubjects: javax.security.auth.Subject[]): java.lang.Integer[]
+                    addNotificationListeners(names: javax.management.ObjectName[], filters: java.rmi.MarshalledObject<any>[], delegationSubjects: javax.security.auth.Subject[]): number[]
                     /**
                      * <p>Handles the
                      * {@link javax.management.MBeanServerConnection#removeNotificationListener(ObjectName,NotificationListener)
@@ -764,7 +764,7 @@ declare namespace javax {
                      *  contains a null element.
                      */
                     // @ts-ignore
-                    removeNotificationListeners(name: javax.management.ObjectName, listenerIDs: number[], delegationSubject: javax.security.auth.Subject): void
+                    removeNotificationListeners(name: javax.management.ObjectName, listenerIDs: java.lang.Integer[] | number[], delegationSubject: javax.security.auth.Subject): void
                     /**
                      * <p>Retrieves notifications from the connector server.  This
                      * method can block until there is at least one notification or

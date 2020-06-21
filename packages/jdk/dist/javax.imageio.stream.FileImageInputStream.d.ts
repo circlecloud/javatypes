@@ -39,9 +39,9 @@ declare namespace javax {
                 // @ts-ignore
                 constructor(raf: java.io.RandomAccessFile)
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Returns the length of the underlying file, or <code>-1</code>
                  * if it is unknown.
@@ -49,11 +49,11 @@ declare namespace javax {
                  *  <code>-1</code>.
                  */
                 // @ts-ignore
-                length(): long
+                public length(): number /*long*/
                 // @ts-ignore
-                seek(pos: number /*long*/): void
+                public seek(pos: number /*long*/): void
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * {@inheritDoc}
                  */

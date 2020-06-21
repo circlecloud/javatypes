@@ -13,22 +13,22 @@ declare namespace javax {
                          * Required {@code LoginModule}.
                          */
                         // @ts-ignore
-                        readonly REQUIRED: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
+                        public static readonly REQUIRED: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
                         /**
                          * Requisite {@code LoginModule}.
                          */
                         // @ts-ignore
-                        readonly REQUISITE: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
+                        public static readonly REQUISITE: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
                         /**
                          * Sufficient {@code LoginModule}.
                          */
                         // @ts-ignore
-                        readonly SUFFICIENT: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
+                        public static readonly SUFFICIENT: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
                         /**
                          * Optional {@code LoginModule}.
                          */
                         // @ts-ignore
-                        readonly OPTIONAL: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
+                        public static readonly OPTIONAL: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag
                         /**
                          * Return a String representation of this controlFlag.
                          * <p> The String has the format, "LoginModuleControlFlag: <i>flag</i>",
@@ -37,7 +37,7 @@ declare namespace javax {
                          * @return a String representation of this controlFlag.
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

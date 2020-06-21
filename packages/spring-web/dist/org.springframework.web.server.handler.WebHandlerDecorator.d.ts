@@ -20,11 +20,11 @@ declare namespace org {
                          * Return the wrapped delegate.
                          */
                         // @ts-ignore
-                        getDelegate(): org.springframework.web.server.WebHandler
+                        public getDelegate(): org.springframework.web.server.WebHandler
                         // @ts-ignore
-                        handle(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public handle(exchange: org.springframework.web.server.ServerWebExchange): object
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

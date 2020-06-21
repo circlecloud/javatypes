@@ -16,7 +16,7 @@ declare namespace javax {
              * @since JAXB2.0
              */
             // @ts-ignore
-            class JAXBIntrospector extends java.lang.Object {
+            abstract class JAXBIntrospector extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -31,7 +31,7 @@ declare namespace javax {
                  * @see #getElementName(Object)
                  */
                 // @ts-ignore
-                abstract isElement(object: any): boolean
+                public abstract isElement(object: java.lang.Object | any): boolean
                 /**
                  * <p>Get xml element qname for <code>jaxbElement</code>.</p>
                  * @param jaxbElement is an object that {#link #isElement(Object)} returned true.
@@ -39,7 +39,7 @@ declare namespace javax {
                  *          null if <code>jaxbElement</code> is not a JAXB Element.
                  */
                 // @ts-ignore
-                abstract getElementName(jaxbElement: any): javax.xml.namespace.QName
+                public abstract getElementName(jaxbElement: java.lang.Object | any): javax.xml.namespace.QName
                 /**
                  * <p>Get the element value of a JAXB element.</p>
                  * <p>Convenience method to abstract whether working with either
@@ -49,7 +49,7 @@ declare namespace javax {
                  * @return The element value of the <code>jaxbElement</code>.
                  */
                 // @ts-ignore
-                getValue(jaxbElement: any): java.lang.Object
+                public static getValue(jaxbElement: java.lang.Object | any): any
             }
         }
     }

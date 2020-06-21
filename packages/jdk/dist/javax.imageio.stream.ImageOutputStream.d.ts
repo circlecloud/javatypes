@@ -259,7 +259,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                writeBytes(s: string): void
+                writeBytes(s: java.lang.String | string): void
                 /**
                  * Writes a string to the output stream. For every character in
                  * the string <code>s</code>, taken in order, two bytes are
@@ -283,7 +283,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                writeChars(s: string): void
+                writeChars(s: java.lang.String | string): void
                 /**
                  * Writes two bytes of length information to the output stream in
                  * network byte order, followed by the
@@ -342,7 +342,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                writeUTF(s: string): void
+                writeUTF(s: java.lang.String | string): void
                 /**
                  * Writes a sequence of shorts to the stream at the current
                  * position.  If <code>len</code> is 0, nothing is written.

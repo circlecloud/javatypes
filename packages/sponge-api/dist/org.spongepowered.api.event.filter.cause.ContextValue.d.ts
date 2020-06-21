@@ -11,7 +11,7 @@ declare namespace org {
                          * @see EventContext#get(EventContextKey)
                          */
                         // @ts-ignore
-                        class ContextValue implements java.lang.annotation.Annotation {
+                        abstract class ContextValue implements java.lang.annotation.Annotation {
                         }
                     }
                 }

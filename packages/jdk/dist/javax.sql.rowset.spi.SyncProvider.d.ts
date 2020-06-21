@@ -177,7 +177,7 @@ declare namespace javax {
                  * @see javax.sql.rowset.spi.SyncFactoryException
                  */
                 // @ts-ignore
-                class SyncProvider extends java.lang.Object {
+                abstract class SyncProvider extends java.lang.Object {
                     /**
                      * Creates a default <code>SyncProvider</code> object.
                      */
@@ -191,7 +191,7 @@ declare namespace javax {
                      * source without checking the validity of any data.
                      */
                     // @ts-ignore
-                    readonly GRADE_NONE: number /*int*/
+                    public static readonly GRADE_NONE: number /*int*/
                     /**
                      * Indicates a low level optimistic synchronization grade with
                      * respect to the originating data source.
@@ -199,7 +199,7 @@ declare namespace javax {
                      * returning this grade will check only rows that have changed.
                      */
                     // @ts-ignore
-                    readonly GRADE_CHECK_MODIFIED_AT_COMMIT: number /*int*/
+                    public static readonly GRADE_CHECK_MODIFIED_AT_COMMIT: number /*int*/
                     /**
                      * Indicates a high level optimistic synchronization grade with
                      * respect to the originating data source.
@@ -208,7 +208,7 @@ declare namespace javax {
                      * changed.
                      */
                     // @ts-ignore
-                    readonly GRADE_CHECK_ALL_AT_COMMIT: number /*int*/
+                    public static readonly GRADE_CHECK_ALL_AT_COMMIT: number /*int*/
                     /**
                      * Indicates a pessimistic synchronization grade with
                      * respect to the originating data source.
@@ -217,7 +217,7 @@ declare namespace javax {
                      * data source.
                      */
                     // @ts-ignore
-                    readonly GRADE_LOCK_WHEN_MODIFIED: number /*int*/
+                    public static readonly GRADE_LOCK_WHEN_MODIFIED: number /*int*/
                     /**
                      * Indicates the most pessimistic synchronization grade with
                      * respect to the originating
@@ -227,63 +227,63 @@ declare namespace javax {
                      * <code>RowSet</code> object.
                      */
                     // @ts-ignore
-                    readonly GRADE_LOCK_WHEN_LOADED: number /*int*/
+                    public static readonly GRADE_LOCK_WHEN_LOADED: number /*int*/
                     /**
                      * Indicates that no locks remain on the originating data source. This is the default
                      * lock setting for all <code>SyncProvider</code> implementations unless
                      * otherwise directed by a <code>RowSet</code> object.
                      */
                     // @ts-ignore
-                    readonly DATASOURCE_NO_LOCK: number /*int*/
+                    public static readonly DATASOURCE_NO_LOCK: number /*int*/
                     /**
                      * Indicates that a lock is placed on the rows that are touched by the original
                      * SQL statement used to populate the <code>RowSet</code> object
                      * that is using this <code>SyncProvider</code> object.
                      */
                     // @ts-ignore
-                    readonly DATASOURCE_ROW_LOCK: number /*int*/
+                    public static readonly DATASOURCE_ROW_LOCK: number /*int*/
                     /**
                      * Indicates that a lock is placed on all tables that are touched by the original
                      * SQL statement used to populate the <code>RowSet</code> object
                      * that is using this <code>SyncProvider</code> object.
                      */
                     // @ts-ignore
-                    readonly DATASOURCE_TABLE_LOCK: number /*int*/
+                    public static readonly DATASOURCE_TABLE_LOCK: number /*int*/
                     /**
                      * Indicates that a lock is placed on the entire data source that is the source of
                      * data for the <code>RowSet</code> object
                      * that is using this <code>SyncProvider</code> object.
                      */
                     // @ts-ignore
-                    readonly DATASOURCE_DB_LOCK: number /*int*/
+                    public static readonly DATASOURCE_DB_LOCK: number /*int*/
                     /**
                      * Indicates that a <code>SyncProvider</code> implementation
                      * supports synchronization between a <code>RowSet</code> object and
                      * the SQL <code>VIEW</code> used to populate it.
                      */
                     // @ts-ignore
-                    readonly UPDATABLE_VIEW_SYNC: number /*int*/
+                    public static readonly UPDATABLE_VIEW_SYNC: number /*int*/
                     /**
                      * Indicates that a <code>SyncProvider</code> implementation
                      * does <B>not</B> support synchronization between a <code>RowSet</code>
                      * object and the SQL <code>VIEW</code> used to populate it.
                      */
                     // @ts-ignore
-                    readonly NONUPDATABLE_VIEW_SYNC: number /*int*/
+                    public static readonly NONUPDATABLE_VIEW_SYNC: number /*int*/
                     /**
                      * Returns the unique identifier for this <code>SyncProvider</code> object.
                      * @return a <code>String</code> object with the fully qualified class name of
                      *          this <code>SyncProvider</code> object
                      */
                     // @ts-ignore
-                    abstract getProviderID(): java.lang.String
+                    public abstract getProviderID(): string
                     /**
                      * Returns a <code>javax.sql.RowSetReader</code> object, which can be used to
                      * populate a <code>RowSet</code> object with data.
                      * @return a <code>javax.sql.RowSetReader</code> object
                      */
                     // @ts-ignore
-                    abstract getRowSetReader(): javax.sql.RowSetReader
+                    public abstract getRowSetReader(): javax.sql.RowSetReader
                     /**
                      * Returns a <code>javax.sql.RowSetWriter</code> object, which can be
                      * used to write a <code>RowSet</code> object's data back to the
@@ -291,7 +291,7 @@ declare namespace javax {
                      * @return a <code>javax.sql.RowSetWriter</code> object
                      */
                     // @ts-ignore
-                    abstract getRowSetWriter(): javax.sql.RowSetWriter
+                    public abstract getRowSetWriter(): javax.sql.RowSetWriter
                     /**
                      * Returns a constant indicating the
                      * grade of synchronization a <code>RowSet</code> object can expect from
@@ -304,7 +304,7 @@ declare namespace javax {
                      *            SyncProvider.GRADE_LOCK_WHEN_LOADED
                      */
                     // @ts-ignore
-                    abstract getProviderGrade(): int
+                    public abstract getProviderGrade(): number /*int*/
                     /**
                      * Sets a lock on the underlying data source at the level indicated by
                      * <i>datasource_lock</i>. This should cause the
@@ -324,7 +324,7 @@ declare namespace javax {
                      * @see #getDataSourceLock
                      */
                     // @ts-ignore
-                    abstract setDataSourceLock(datasource_lock: number /*int*/): void
+                    public abstract setDataSourceLock(datasource_lock: number /*int*/): void
                     /**
                      * Returns the current data source lock severity level active in this
                      * <code>SyncProvider</code> implementation.
@@ -342,7 +342,7 @@ declare namespace javax {
                      * @see #setDataSourceLock
                      */
                     // @ts-ignore
-                    abstract getDataSourceLock(): int
+                    public abstract getDataSourceLock(): number /*int*/
                     /**
                      * Returns whether this <code>SyncProvider</code> implementation
                      * can perform synchronization between a <code>RowSet</code> object
@@ -355,21 +355,21 @@ declare namespace javax {
                      *             SyncProvider.NONUPDATABLE_VIEW_SYNC
                      */
                     // @ts-ignore
-                    abstract supportsUpdatableView(): int
+                    public abstract supportsUpdatableView(): number /*int*/
                     /**
                      * Returns the release version of this <code>SyncProvider</code> instance.
                      * @return a <code>String</code> detailing the release version of the
                      *      <code>SyncProvider</code> implementation
                      */
                     // @ts-ignore
-                    abstract getVersion(): java.lang.String
+                    public abstract getVersion(): string
                     /**
                      * Returns the vendor name of this <code>SyncProvider</code> instance
                      * @return a <code>String</code> detailing the vendor name of this
                      *      <code>SyncProvider</code> implementation
                      */
                     // @ts-ignore
-                    abstract getVendor(): java.lang.String
+                    public abstract getVendor(): string
                 }
             }
         }

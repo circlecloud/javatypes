@@ -21,7 +21,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getSavepointId(): int
+            getSavepointId(): number /*int*/
             /**
              * Retrieves the name of the savepoint that this <code>Savepoint</code>
              * object represents.
@@ -30,7 +30,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getSavepointName(): java.lang.String
+            getSavepointName(): string
         }
     }
 }

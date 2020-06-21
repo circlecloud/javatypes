@@ -44,13 +44,13 @@ declare namespace java {
              * @param value the input value
              */
             // @ts-ignore
-            accept(value: number /*int*/): void
+            public accept(value: number /*int*/): void
             /**
              * Records a new {@code long} value into the summary information.
              * @param value the input value
              */
             // @ts-ignore
-            accept(value: number /*long*/): void
+            public accept(value: number /*long*/): void
             /**
              * Combines the state of another {@code LongSummaryStatistics} into this
              * one.
@@ -58,43 +58,43 @@ declare namespace java {
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            combine(other: java.util.LongSummaryStatistics): void
+            public combine(other: java.util.LongSummaryStatistics): void
             /**
              * Returns the count of values recorded.
              * @return the count of values
              */
             // @ts-ignore
-            getCount(): long
+            public getCount(): number /*long*/
             /**
              * Returns the sum of values recorded, or zero if no values have been
              * recorded.
              * @return the sum of values, or zero if none
              */
             // @ts-ignore
-            getSum(): long
+            public getSum(): number /*long*/
             /**
              * Returns the minimum value recorded, or {@code Long.MAX_VALUE} if no
              * values have been recorded.
              * @return the minimum value, or {#code Long.MAX_VALUE} if none
              */
             // @ts-ignore
-            getMin(): long
+            public getMin(): number /*long*/
             /**
              * Returns the maximum value recorded, or {@code Long.MIN_VALUE} if no
              * values have been recorded
              * @return the maximum value, or {#code Long.MIN_VALUE} if none
              */
             // @ts-ignore
-            getMax(): long
+            public getMax(): number /*long*/
             /**
              * Returns the arithmetic mean of values recorded, or zero if no values have been
              * recorded.
              * @return The arithmetic mean of values, or zero if none
              */
             // @ts-ignore
-            getAverage(): double
+            public getAverage(): number /*double*/
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

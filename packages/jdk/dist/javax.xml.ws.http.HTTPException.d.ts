@@ -22,7 +22,7 @@ declare namespace javax {
                      * @return HTTP status code
                      */
                     // @ts-ignore
-                    getStatusCode(): int
+                    getStatusCode(): number /*int*/
                 }
             }
         }

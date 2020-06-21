@@ -194,7 +194,7 @@ declare namespace javax {
              * @since JAXB1.0
              */
             // @ts-ignore
-            class JAXBContext extends java.lang.Object {
+            abstract class JAXBContext extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -202,7 +202,7 @@ declare namespace javax {
                  * of creating new <tt>JAXBContext</tt> objects.
                  */
                 // @ts-ignore
-                readonly JAXB_CONTEXT_FACTORY: string
+                public static readonly JAXB_CONTEXT_FACTORY: java.lang.String | string
                 /**
                  * <p>
                  * Obtain a new instance of a <tt>JAXBContext</tt> class.
@@ -220,7 +220,7 @@ declare namespace javax {
                  *  </ol>
                  */
                 // @ts-ignore
-                newInstance(contextPath: string): javax.xml.bind.JAXBContext
+                public static newInstance(contextPath: java.lang.String | string): javax.xml.bind.JAXBContext
                 /**
                  * <p>
                  * Obtain a new instance of a <tt>JAXBContext</tt> class.
@@ -304,7 +304,7 @@ declare namespace javax {
                  *  </ol>
                  */
                 // @ts-ignore
-                newInstance(contextPath: string, classLoader: java.lang.ClassLoader): javax.xml.bind.JAXBContext
+                public static newInstance(contextPath: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.bind.JAXBContext
                 /**
                  * <p>
                  * Obtain a new instance of a <tt>JAXBContext</tt> class.
@@ -333,7 +333,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                newInstance(contextPath: string, classLoader: java.lang.ClassLoader, properties: java.util.Map<java.lang.String, any>): javax.xml.bind.JAXBContext
+                public static newInstance(contextPath: java.lang.String | string, classLoader: java.lang.ClassLoader, properties: java.util.Map<java.lang.String | string, any>): javax.xml.bind.JAXBContext
                 /**
                  * <p>
                  * Obtain a new instance of a <tt>JAXBContext</tt> class.
@@ -386,7 +386,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                newInstance(...classesToBeBound: java.lang.Class[]): javax.xml.bind.JAXBContext
+                public static newInstance(...classesToBeBound: java.lang.Class<any>[]): javax.xml.bind.JAXBContext
                 /**
                  * <p>
                  * Obtain a new instance of a <tt>JAXBContext</tt> class.
@@ -420,7 +420,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                newInstance(classesToBeBound: java.lang.Class[], properties: java.util.Map<java.lang.String, any>): javax.xml.bind.JAXBContext
+                public static newInstance(classesToBeBound: java.lang.Class<any>[], properties: java.util.Map<java.lang.String | string, any>): javax.xml.bind.JAXBContext
                 /**
                  * Create an <tt>Unmarshaller</tt> object that can be used to convert XML
                  * data into a java content tree.
@@ -429,7 +429,7 @@ declare namespace javax {
                  *                        <tt>Unmarshaller</tt> object
                  */
                 // @ts-ignore
-                abstract createUnmarshaller(): javax.xml.bind.Unmarshaller
+                public abstract createUnmarshaller(): javax.xml.bind.Unmarshaller
                 /**
                  * Create a <tt>Marshaller</tt> object that can be used to convert a
                  * java content tree into XML data.
@@ -438,7 +438,7 @@ declare namespace javax {
                  *                        <tt>Marshaller</tt> object
                  */
                 // @ts-ignore
-                abstract createMarshaller(): javax.xml.bind.Marshaller
+                public abstract createMarshaller(): javax.xml.bind.Marshaller
                 /**
                  * {@link Validator} has been made optional and deprecated in JAXB 2.0.  Please
                  * refer to the javadoc for {@link Validator} for more detail.
@@ -451,7 +451,7 @@ declare namespace javax {
                  * @deprecated since JAXB2.0
                  */
                 // @ts-ignore
-                abstract createValidator(): javax.xml.bind.Validator
+                public abstract createValidator(): javax.xml.bind.Validator
                 /**
                  * Creates a <tt>Binder</tt> object that can be used for
                  * associative/in-place unmarshalling/marshalling.
@@ -463,14 +463,14 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                createBinder<T>(domType: java.lang.Class<T>): javax.xml.bind.Binder<T>
+                public createBinder<T>(domType: java.lang.Class<T>): javax.xml.bind.Binder<T>
                 /**
                  * Creates a <tt>Binder</tt> for W3C DOM.
                  * @return always a new valid <tt>Binder</tt> object.
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                createBinder(): javax.xml.bind.Binder<org.w3c.dom.Node>
+                public createBinder(): javax.xml.bind.Binder<org.w3c.dom.Node>
                 /**
                  * Creates a <tt>JAXBIntrospector</tt> object that can be used to
                  * introspect JAXB objects.
@@ -481,7 +481,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                createJAXBIntrospector(): javax.xml.bind.JAXBIntrospector
+                public createJAXBIntrospector(): javax.xml.bind.JAXBIntrospector
                 /**
                  * Generates the schema documents for this context.
                  * @param outputResolver
@@ -495,7 +495,7 @@ declare namespace javax {
                  * @since JAXB 2.0
                  */
                 // @ts-ignore
-                generateSchema(outputResolver: javax.xml.bind.SchemaOutputResolver): void
+                public generateSchema(outputResolver: javax.xml.bind.SchemaOutputResolver): void
             }
         }
     }

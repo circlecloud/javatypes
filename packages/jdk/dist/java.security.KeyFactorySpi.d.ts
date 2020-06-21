@@ -31,7 +31,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class KeyFactorySpi extends java.lang.Object {
+        abstract class KeyFactorySpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**

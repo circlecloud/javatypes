@@ -55,7 +55,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlID implements java.lang.annotation.Annotation {
+                abstract class XmlID implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -26,27 +26,27 @@ declare namespace javax {
                  *     <code>null</code>
                  */
                 // @ts-ignore
-                constructor(octetStream: java.io.InputStream, uri: string, mimeType: string)
+                constructor(octetStream: java.io.InputStream, uri: java.lang.String | string, mimeType: java.lang.String | string)
                 /**
                  * Returns the input stream of this <code>OctetStreamData</code>.
                  * @return the input stream of this <code>OctetStreamData</code>.
                  */
                 // @ts-ignore
-                getOctetStream(): java.io.InputStream
+                public getOctetStream(): java.io.InputStream
                 /**
                  * Returns the URI String identifying the data object represented by this
                  * <code>OctetStreamData</code>.
                  * @return the URI String or <code>null</code> if not applicable
                  */
                 // @ts-ignore
-                getURI(): java.lang.String
+                public getURI(): string
                 /**
                  * Returns the MIME type associated with the data object represented by this
                  * <code>OctetStreamData</code>.
                  * @return the MIME type or <code>null</code> if not applicable
                  */
                 // @ts-ignore
-                getMimeType(): java.lang.String
+                public getMimeType(): string
             }
         }
     }

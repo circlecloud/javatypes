@@ -33,13 +33,13 @@ declare namespace org {
                  * @param provider The service provider implementation
                  */
                 // @ts-ignore
-                unregister(service: java.lang.Class<any>, provider: any): void
+                unregister(service: java.lang.Class<any>, provider: java.lang.Object | any): void
                 /**
                  * Unregister a particular provider.
                  * @param provider The service provider implementation
                  */
                 // @ts-ignore
-                unregister(provider: any): void
+                unregister(provider: java.lang.Object | any): void
                 /**
                  * Queries for a provider. This may return if no provider has been
                  * registered for a service. The highest priority provider is returned.
@@ -64,7 +64,7 @@ declare namespace org {
                  * @return provider registrations
                  */
                 // @ts-ignore
-                getRegistrations(plugin: org.bukkit.plugin.Plugin): java.util.List<org.bukkit.plugin.RegisteredServiceProvider<?>>
+                getRegistrations(plugin: org.bukkit.plugin.Plugin): Array<org.bukkit.plugin.RegisteredServiceProvider<any>>
                 /**
                  * Get registrations of providers for a service. The returned list is
                  * unmodifiable.
@@ -73,14 +73,14 @@ declare namespace org {
                  * @return list of registrations
                  */
                 // @ts-ignore
-                getRegistrations<T>(service: java.lang.Class<T>): java.util.Collection<org.bukkit.plugin.RegisteredServiceProvider<T>>
+                getRegistrations<T>(service: java.lang.Class<T>): Array<org.bukkit.plugin.RegisteredServiceProvider<T>>
                 /**
                  * Get a list of known services. A service is known if it has registered
                  * providers for it.
                  * @return list of known services
                  */
                 // @ts-ignore
-                getKnownServices(): java.util.Collection<java.lang.Class<?>>
+                getKnownServices(): Array<java.lang.Class<any>>
                 /**
                  * Returns whether a provider has been registered for a service. Do not
                  * check this first only to call <code>load(service)</code> later, as that

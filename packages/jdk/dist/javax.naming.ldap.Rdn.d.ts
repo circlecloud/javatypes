@@ -59,7 +59,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class Rdn extends java.lang.Object implements java.io.Serializable, java.lang.Comparable<java.lang.Object> {
+            class Rdn extends java.lang.Object implements java.io.Serializable, java.lang.Comparable<java.lang.Object | any> {
                 /**
                  * Constructs an Rdn from the given attribute set. See
                  * {@link javax.naming.directory.Attributes Attributes}.
@@ -86,7 +86,7 @@ declare namespace javax {
                  *                   parsing of the rdnString.
                  */
                 // @ts-ignore
-                constructor(rdnString: string)
+                constructor(rdnString: java.lang.String | string)
                 /**
                  * Constructs an Rdn from the given <tt>rdn</tt>.
                  * The contents of the <tt>rdn</tt> are simply copied into the newly
@@ -109,7 +109,7 @@ declare namespace javax {
                  * @see #toString()
                  */
                 // @ts-ignore
-                constructor(type: string, value: any)
+                constructor(type: java.lang.String | string, value: java.lang.Object | any)
                 /**
                  * Retrieves one of this Rdn's value.
                  * This is a convenience method for obtaining the value,
@@ -121,7 +121,7 @@ declare namespace javax {
                  * @return The non-null attribute value.
                  */
                 // @ts-ignore
-                getValue(): java.lang.Object
+                public getValue(): any
                 /**
                  * Retrieves one of this Rdn's type.
                  * This is a convenience method for obtaining the type,
@@ -136,7 +136,7 @@ declare namespace javax {
                  * @return The non-null attribute type.
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Returns this Rdn as a string represented in a format defined by
                  * <a href="http://www.ietf.org/rfc/rfc2253.txt">RFC 2253</a> and described
@@ -144,7 +144,7 @@ declare namespace javax {
                  * @return The string representation of the Rdn.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Compares this Rdn with the specified Object for order.
                  * Returns a negative integer, zero, or a positive integer as this
@@ -163,7 +163,7 @@ declare namespace javax {
                  * @exception ClassCastException if obj is null or not a Rdn.
                  */
                 // @ts-ignore
-                compareTo(obj: any): int
+                public compareTo(obj: java.lang.Object | any): number /*int*/
                 /**
                  * Compares the specified Object with this Rdn for equality.
                  * Returns true if the given object is also a Rdn and the two Rdns
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @see #hashCode()
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code of this RDN. Two RDNs that are
                  * equal (according to the equals method) will have the same
@@ -195,7 +195,7 @@ declare namespace javax {
                  * @see #equals
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Retrieves the {@link javax.naming.directory.Attributes Attributes}
                  * view of the type/value mappings contained in this Rdn.
@@ -203,13 +203,13 @@ declare namespace javax {
                  *           mappings of this Rdn.
                  */
                 // @ts-ignore
-                toAttributes(): javax.naming.directory.Attributes
+                public toAttributes(): javax.naming.directory.Attributes
                 /**
                  * Retrieves the number of attribute type/value pairs in this Rdn.
                  * @return The non-negative number of type/value pairs in this Rdn.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Given the value of an attribute, returns a string escaped according
                  * to the rules specified in
@@ -225,7 +225,7 @@ declare namespace javax {
                  * @throws ClassCastException if val is is not a String or byte array.
                  */
                 // @ts-ignore
-                escapeValue(val: any): java.lang.String
+                public static escapeValue(val: java.lang.Object | any): string
                 /**
                  * Given an attribute value string formated according to the rules
                  * specified in
@@ -246,7 +246,7 @@ declare namespace javax {
                  *                   is provided.
                  */
                 // @ts-ignore
-                unescapeValue(val: string): java.lang.Object
+                public static unescapeValue(val: java.lang.String | string): any
             }
         }
     }

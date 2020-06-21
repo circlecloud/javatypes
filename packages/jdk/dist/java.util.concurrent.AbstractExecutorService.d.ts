@@ -30,7 +30,7 @@ declare namespace java {
              * @author Doug Lea
              */
             // @ts-ignore
-            class AbstractExecutorService extends java.lang.Object implements java.util.concurrent.ExecutorService {
+            abstract class AbstractExecutorService extends java.lang.Object implements java.util.concurrent.ExecutorService {
                 // @ts-ignore
                 constructor()
                 /**
@@ -64,27 +64,27 @@ declare namespace java {
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                submit<T>(task: java.lang.Runnable, result: T): java.util.concurrent.Future<T>
+                public submit<T>(task: java.lang.Runnable, result: T): java.util.concurrent.Future<T>
                 /**
                  * @throws RejectedExecutionException {#inheritDoc}
                  * @throws NullPointerException       {#inheritDoc}
                  */
                 // @ts-ignore
-                submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                 // @ts-ignore
-                invokeAny<T>(tasks: Array<java.util.concurrent.Callable<T>>): T
+                public invokeAny<T>(tasks: java.util.Collection<any> | Array<any>): T
                 // @ts-ignore
-                invokeAny<T>(tasks: Array<java.util.concurrent.Callable<T>>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+                public invokeAny<T>(tasks: java.util.Collection<any> | Array<any>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
                 // @ts-ignore
-                invokeAll<T>(tasks: Array<java.util.concurrent.Callable<T>>): java.util.List<java.util.concurrent.Future<T>>
+                public invokeAll<T>(tasks: java.util.Collection<any> | Array<any>): Array<java.util.concurrent.Future<T>>
                 // @ts-ignore
-                invokeAll<T>(tasks: Array<java.util.concurrent.Callable<T>>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.List<java.util.concurrent.Future<T>>
+                public invokeAll<T>(tasks: java.util.Collection<any> | Array<any>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): Array<java.util.concurrent.Future<T>>
             }
         }
     }

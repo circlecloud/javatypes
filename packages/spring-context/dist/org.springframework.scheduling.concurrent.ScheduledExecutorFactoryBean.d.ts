@@ -46,7 +46,7 @@ declare namespace org {
                      * Default is 1.
                      */
                     // @ts-ignore
-                    setPoolSize(poolSize: number /*int*/): void
+                    public setPoolSize(poolSize: number /*int*/): void
                     /**
                      * Register a list of ScheduledExecutorTask objects with the ScheduledExecutorService
                      * that this FactoryBean creates. Depending on each ScheduledExecutorTask's settings,
@@ -56,14 +56,14 @@ declare namespace org {
                      * @see java.util.concurrent.ScheduledExecutorService#scheduleAtFixedRate(java.lang.Runnable, long, long, java.util.concurrent.TimeUnit)
                      */
                     // @ts-ignore
-                    setScheduledExecutorTasks(...scheduledExecutorTasks: org.springframework.scheduling.concurrent.ScheduledExecutorTask[]): void
+                    public setScheduledExecutorTasks(...scheduledExecutorTasks: org.springframework.scheduling.concurrent.ScheduledExecutorTask[]): void
                     /**
                      * Set the remove-on-cancel mode on {@link ScheduledThreadPoolExecutor}.
                      * <p>Default is {@code false}. If set to {@code true}, the target executor will be
                      * switched into remove-on-cancel mode (if possible, with a soft fallback otherwise).
                      */
                     // @ts-ignore
-                    setRemoveOnCancelPolicy(removeOnCancelPolicy: boolean): void
+                    public setRemoveOnCancelPolicy(removeOnCancelPolicy: boolean): void
                     /**
                      * Specify whether to continue the execution of a scheduled task
                      * after it threw an exception.
@@ -74,7 +74,7 @@ declare namespace org {
                      * @see java.util.concurrent.ScheduledExecutorService#scheduleAtFixedRate
                      */
                     // @ts-ignore
-                    setContinueScheduledExecutionAfterException(continueScheduledExecutionAfterException: boolean): void
+                    public setContinueScheduledExecutionAfterException(continueScheduledExecutionAfterException: boolean): void
                     /**
                      * Specify whether this FactoryBean should expose an unconfigurable
                      * decorator for the created executor.
@@ -84,7 +84,7 @@ declare namespace org {
                      * @see java.util.concurrent.Executors#unconfigurableScheduledExecutorService
                      */
                     // @ts-ignore
-                    setExposeUnconfigurableExecutor(exposeUnconfigurableExecutor: boolean): void
+                    public setExposeUnconfigurableExecutor(exposeUnconfigurableExecutor: boolean): void
                     // @ts-ignore
                     initializeExecutor(threadFactory: java.util.concurrent.ThreadFactory, rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): java.util.concurrent.ExecutorService
                     /**
@@ -122,11 +122,11 @@ declare namespace org {
                     // @ts-ignore
                     getRunnableToSchedule(task: org.springframework.scheduling.concurrent.ScheduledExecutorTask): java.lang.Runnable
                     // @ts-ignore
-                    getObject(): java.util.concurrent.ScheduledExecutorService
+                    public getObject(): java.util.concurrent.ScheduledExecutorService
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends java.util.concurrent.ScheduledExecutorService>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

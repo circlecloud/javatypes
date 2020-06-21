@@ -32,7 +32,7 @@ declare namespace java {
              * appearance of the panel without changing its functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the AccessibleContext associated with this Panel.
              * For panels, the AccessibleContext takes the form of an
@@ -43,7 +43,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

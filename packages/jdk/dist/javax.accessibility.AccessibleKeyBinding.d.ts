@@ -21,7 +21,7 @@ declare namespace javax {
              * @return the zero-based number of key bindings for this object
              */
             // @ts-ignore
-            getAccessibleKeyBindingCount(): int
+            getAccessibleKeyBindingCount(): number /*int*/
             /**
              * Returns a key binding for this object.  The value returned is an
              * java.lang.Object which must be cast to appropriate type depending
@@ -31,7 +31,7 @@ declare namespace javax {
              * @see #getAccessibleKeyBindingCount
              */
             // @ts-ignore
-            getAccessibleKeyBinding(i: number /*int*/): java.lang.Object
+            getAccessibleKeyBinding(i: number /*int*/): any
         }
     }
 }

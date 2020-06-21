@@ -14,20 +14,20 @@ declare namespace org {
                      * @return The translation of this text
                      */
                     // @ts-ignore
-                    getTranslation(): org.spongepowered.api.text.translation.Translation
+                    public getTranslation(): org.spongepowered.api.text.translation.Translation
                     /**
                      * Returns the list of {@link Translation} arguments used to format this
                      * {@link Text}.
                      * @return The list of translation arguments
                      */
                     // @ts-ignore
-                    getArguments(): <any>
+                    public getArguments(): object
                     // @ts-ignore
-                    toBuilder(): org.spongepowered.api.text.TranslatableText.Builder
+                    public toBuilder(): org.spongepowered.api.text.TranslatableText.Builder
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

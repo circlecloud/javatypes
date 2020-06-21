@@ -158,7 +158,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class SwingWorker<T, V> extends java.lang.Object implements java.util.concurrent.RunnableFuture<T> {
+        abstract class SwingWorker<T, V> extends java.lang.Object implements java.util.concurrent.RunnableFuture<T> {
             /**
              * Constructs this {@code SwingWorker}.
              */
@@ -180,7 +180,7 @@ declare namespace javax {
              * it has been cancelled.
              */
             // @ts-ignore
-            run(): void
+            public run(): void
             /**
              * Sends data chunks to the {@link #process} method. This method is to be
              * used from inside the {@code doInBackground} method to deliver
@@ -248,7 +248,7 @@ declare namespace javax {
              * @see #publish
              */
             // @ts-ignore
-            process(chunks: Array<V>): void
+            process(chunks: java.util.List<V> | Array<V>): void
             /**
              * Executed on the <i>Event Dispatch Thread</i> after the {@code doInBackground}
              * method is finished. The default
@@ -291,7 +291,7 @@ declare namespace javax {
              * @return the progress bound property.
              */
             // @ts-ignore
-            getProgress(): int
+            public getProgress(): number /*int*/
             /**
              * Schedules this {@code SwingWorker} for execution on a <i>worker</i>
              * thread. There are a number of <i>worker</i> threads available. In the
@@ -305,22 +305,22 @@ declare namespace javax {
              * {@code doInBackground} method twice.
              */
             // @ts-ignore
-            execute(): void
+            public execute(): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            cancel(mayInterruptIfRunning: boolean): boolean
+            public cancel(mayInterruptIfRunning: boolean): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isCancelled(): boolean
+            public isCancelled(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isDone(): boolean
+            public isDone(): boolean
             /**
              * {@inheritDoc}
              * <p>
@@ -355,14 +355,14 @@ declare namespace javax {
              * </pre>
              */
             // @ts-ignore
-            get(): T
+            public get(): T
             /**
              * {@inheritDoc}
              * <p>
              * Please refer to {@link #get} for more details.
              */
             // @ts-ignore
-            get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+            public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
             /**
              * Adds a {@code PropertyChangeListener} to the listener list. The listener
              * is registered for all properties. The same listener object may be added
@@ -374,7 +374,7 @@ declare namespace javax {
              * @param listener the {#code PropertyChangeListener} to be added
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a {@code PropertyChangeListener} from the listener list. This
              * removes a {@code PropertyChangeListener} that was registered for all
@@ -388,7 +388,7 @@ declare namespace javax {
              * @param listener the {#code PropertyChangeListener} to be removed
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Reports a bound property update to any registered listeners. No event is
              * fired if {@code old} and {@code new} are equal and non-null.
@@ -408,7 +408,7 @@ declare namespace javax {
              * @param newValue the new value of the property
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Returns the {@code PropertyChangeSupport} for this {@code SwingWorker}.
              * This method is used when flexible access to bound properties support is
@@ -425,13 +425,13 @@ declare namespace javax {
              * @return {#code PropertyChangeSupport} for this {@code SwingWorker}
              */
             // @ts-ignore
-            getPropertyChangeSupport(): java.beans.PropertyChangeSupport
+            public getPropertyChangeSupport(): java.beans.PropertyChangeSupport
             /**
              * Returns the {@code SwingWorker} state bound property.
              * @return the current state
              */
             // @ts-ignore
-            getState(): javax.swing.SwingWorker.StateValue
+            public getState(): javax.swing.SwingWorker.StateValue
         }
     }
 }

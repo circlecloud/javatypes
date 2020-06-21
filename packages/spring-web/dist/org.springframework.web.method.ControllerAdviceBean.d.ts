@@ -21,7 +21,7 @@ declare namespace org {
                      * @param bean the bean instance
                      */
                     // @ts-ignore
-                    constructor(bean: any)
+                    constructor(bean: java.lang.Object | any)
                     /**
                      * Create a {@code ControllerAdviceBean} using the given bean name and
                      * {@code BeanFactory}.
@@ -30,7 +30,7 @@ declare namespace org {
                      *  and later to resolve the actual bean
                      */
                     // @ts-ignore
-                    constructor(beanName: string, beanFactory: BeanFactory)
+                    constructor(beanName: java.lang.String | string, beanFactory: BeanFactory)
                     /**
                      * Create a {@code ControllerAdviceBean} using the given bean name,
                      * {@code BeanFactory}, and {@link ControllerAdvice @ControllerAdvice}
@@ -43,7 +43,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    constructor(beanName: string, beanFactory: BeanFactory, controllerAdvice: org.springframework.web.bind.annotation.ControllerAdvice)
+                    constructor(beanName: java.lang.String | string, beanFactory: BeanFactory, controllerAdvice: org.springframework.web.bind.annotation.ControllerAdvice)
                     /**
                      * Get the order value for the contained bean.
                      * <p>As of Spring Framework 5.2, the order value is lazily retrieved using
@@ -64,14 +64,14 @@ declare namespace org {
                      * @see #resolveBean()
                      */
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     /**
                      * Return the type of the contained bean.
                      * <p>If the bean type is a CGLIB-generated class, the original user-defined
                      * class is returned.
                      */
                     // @ts-ignore
-                    getBeanType(): java.lang.Class<?>
+                    public getBeanType(): java.lang.Class<any>
                     /**
                      * Get the bean instance for this {@code ControllerAdviceBean}, if necessary
                      * resolving the bean name through the {@link BeanFactory}.
@@ -80,7 +80,7 @@ declare namespace org {
                      * the {@code BeanFactory}.
                      */
                     // @ts-ignore
-                    resolveBean(): java.lang.Object
+                    public resolveBean(): any
                     /**
                      * Check whether the given bean type should be advised by this
                      * {@code ControllerAdviceBean}.
@@ -89,13 +89,13 @@ declare namespace org {
                      * @see ControllerAdvice
                      */
                     // @ts-ignore
-                    isApplicableToBeanType(beanType: java.lang.Class<any>): boolean
+                    public isApplicableToBeanType(beanType: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Find beans annotated with {@link ControllerAdvice @ControllerAdvice} in the
                      * given {@link ApplicationContext} and wrap them as {@code ControllerAdviceBean}
@@ -107,7 +107,7 @@ declare namespace org {
                      * @see Ordered
                      */
                     // @ts-ignore
-                    findAnnotatedBeans(context: ApplicationContext): java.util.List<org.springframework.web.method.ControllerAdviceBean>
+                    public static findAnnotatedBeans(context: ApplicationContext): Array<org.springframework.web.method.ControllerAdviceBean>
                 }
             }
         }

@@ -29,12 +29,12 @@ declare namespace org {
                          *  (may be {#code null})
                          */
                         // @ts-ignore
-                        constructor(resource: Resource, source: any)
+                        constructor(resource: Resource, source: java.lang.Object | any)
                         /**
                          * Get the resource with which this location is associated.
                          */
                         // @ts-ignore
-                        getResource(): Resource
+                        public getResource(): Resource
                         /**
                          * Get the actual location within the associated {@link #getResource() resource}
                          * (may be {@code null}).
@@ -42,7 +42,7 @@ declare namespace org {
                          * of what the actual type of the returned object may be.
                          */
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                     }
                 }
             }

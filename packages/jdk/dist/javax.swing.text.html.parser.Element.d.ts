@@ -15,86 +15,86 @@ declare namespace javax {
                     // @ts-ignore
                     class Element extends java.lang.Object implements javax.swing.text.html.parser.DTDConstants, java.io.Serializable {
                         // @ts-ignore
-                        index: number /*int*/
+                        public index: number /*int*/
                         // @ts-ignore
-                        name: string
+                        public name: java.lang.String | string
                         // @ts-ignore
-                        oStart: boolean
+                        public oStart: boolean
                         // @ts-ignore
-                        oEnd: boolean
+                        public oEnd: boolean
                         // @ts-ignore
-                        inclusions: java.util.BitSet
+                        public inclusions: java.util.BitSet
                         // @ts-ignore
-                        exclusions: java.util.BitSet
+                        public exclusions: java.util.BitSet
                         // @ts-ignore
-                        type: number /*int*/
+                        public type: number /*int*/
                         // @ts-ignore
-                        content: javax.swing.text.html.parser.ContentModel
+                        public content: javax.swing.text.html.parser.ContentModel
                         // @ts-ignore
-                        atts: javax.swing.text.html.parser.AttributeList
+                        public atts: javax.swing.text.html.parser.AttributeList
                         /**
                          * A field to store user data. Mostly used to store
                          * style sheets.
                          */
                         // @ts-ignore
-                        data: any
+                        public data: java.lang.Object | any
                         /**
                          * Get the name of the element.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Return true if the start tag can be omitted.
                          */
                         // @ts-ignore
-                        omitStart(): boolean
+                        public omitStart(): boolean
                         /**
                          * Return true if the end tag can be omitted.
                          */
                         // @ts-ignore
-                        omitEnd(): boolean
+                        public omitEnd(): boolean
                         /**
                          * Get type.
                          */
                         // @ts-ignore
-                        getType(): int
+                        public getType(): number /*int*/
                         /**
                          * Get content model
                          */
                         // @ts-ignore
-                        getContent(): javax.swing.text.html.parser.ContentModel
+                        public getContent(): javax.swing.text.html.parser.ContentModel
                         /**
                          * Get the attributes.
                          */
                         // @ts-ignore
-                        getAttributes(): javax.swing.text.html.parser.AttributeList
+                        public getAttributes(): javax.swing.text.html.parser.AttributeList
                         /**
                          * Get index.
                          */
                         // @ts-ignore
-                        getIndex(): int
+                        public getIndex(): number /*int*/
                         /**
                          * Check if empty
                          */
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         /**
                          * Convert to a string.
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         /**
                          * Get an attribute by name.
                          */
                         // @ts-ignore
-                        getAttribute(name: string): javax.swing.text.html.parser.AttributeList
+                        public getAttribute(name: java.lang.String | string): javax.swing.text.html.parser.AttributeList
                         /**
                          * Get an attribute by value.
                          */
                         // @ts-ignore
-                        getAttributeByValue(name: string): javax.swing.text.html.parser.AttributeList
+                        public getAttributeByValue(name: java.lang.String | string): javax.swing.text.html.parser.AttributeList
                         // @ts-ignore
-                        name2type(nm: string): int
+                        public static name2type(nm: java.lang.String | string): number /*int*/
                     }
                 }
             }

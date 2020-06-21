@@ -21,9 +21,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        deserialize(type: object, value: ConfigurationNode): org.spongepowered.api.text.Text
+                        public deserialize(type: object, value: ConfigurationNode): org.spongepowered.api.text.Text
                         // @ts-ignore
-                        serialize(type: object, obj: org.spongepowered.api.text.Text, value: ConfigurationNode): void
+                        public serialize(type: object, obj: org.spongepowered.api.text.Text, value: ConfigurationNode): void
                         // @ts-ignore
                         buildContent(container: org.spongepowered.api.data.DataView): java.util.Optional<org.spongepowered.api.text.Text>
                     }

@@ -33,7 +33,7 @@ declare namespace javax {
              * @return a user-friendly name
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             /**
              * Gets an InputStream for this file object.
              * @return an InputStream
@@ -106,7 +106,7 @@ declare namespace javax {
              *  the operation is not supported
              */
             // @ts-ignore
-            getLastModified(): long
+            getLastModified(): number /*long*/
             /**
              * Deletes this file object.  In case of errors, returns false.
              * @return true if and only if this file object is successfully

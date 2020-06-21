@@ -21,7 +21,7 @@ declare namespace org {
                              * @return The size
                              */
                             // @ts-ignore
-                            size(): int
+                            size(): number /*int*/
                             /**
                              * Checks if the backed {@link Collection} is empty.
                              * @see Collection#isEmpty()
@@ -30,7 +30,7 @@ declare namespace org {
                             // @ts-ignore
                             isEmpty(): boolean
                             // @ts-ignore
-                            with(collection: C extends java.util.Collection<E>): I
+                            with(collection: C): I
                             /**
                              * Creates a new {@link ImmutableCollectionValue} with the given values
                              * along with any pre-existing values within this value.
@@ -40,7 +40,7 @@ declare namespace org {
                             // @ts-ignore
                             withElement(elements: E): I
                             // @ts-ignore
-                            transform(func: java.util.function.Function<C, C> | java.util.function$.Function<C, C>): I
+                            transform(func: java.util.function$.Function<C, C>): I
                             /**
                              * Creates a new {@link ImmutableCollectionValue} with the given elements
                              * along with any pre-existing values within this value.
@@ -75,7 +75,7 @@ declare namespace org {
                              * @return The new value
                              */
                             // @ts-ignore
-                            withoutAll(predicate: java.util.function.Predicate<E> | java.util.function$.Predicate<E>): I
+                            withoutAll(predicate: java.util.function$.Predicate<E>): I
                             /**
                              * Checks if the given <code>E</code> element is contained within the
                              * backed {@link Collection}.

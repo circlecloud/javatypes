@@ -59,7 +59,7 @@ declare namespace java {
          * @author Philip Milne
          */
         // @ts-ignore
-        class PersistenceDelegate extends java.lang.Object {
+        abstract class PersistenceDelegate extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -82,7 +82,7 @@ declare namespace java {
              * @throws NullPointerException if {#code out} is {@code null}
              */
             // @ts-ignore
-            writeObject(oldInstance: any, out: java.beans.Encoder): void
+            public writeObject(oldInstance: java.lang.Object | any, out: java.beans.Encoder): void
             /**
              * Returns true if an <em>equivalent</em> copy of <code>oldInstance</code> may be
              * created by applying a series of statements to <code>newInstance</code>.
@@ -102,7 +102,7 @@ declare namespace java {
              *          created by applying a series of mutations to <code>oldInstance</code>.
              */
             // @ts-ignore
-            mutatesTo(oldInstance: any, newInstance: any): boolean
+            mutatesTo(oldInstance: java.lang.Object | any, newInstance: java.lang.Object | any): boolean
             /**
              * Returns an expression whose value is <code>oldInstance</code>.
              * This method is used to characterize the constructor
@@ -123,7 +123,7 @@ declare namespace java {
              *                               and this value is used in the method
              */
             // @ts-ignore
-            abstract instantiate(oldInstance: any, out: java.beans.Encoder): java.beans.Expression
+            abstract instantiate(oldInstance: java.lang.Object | any, out: java.beans.Encoder): java.beans.Expression
             /**
              * Produce a series of statements with side effects on <code>newInstance</code>
              * so that the new instance becomes <em>equivalent</em> to <code>oldInstance</code>.
@@ -162,7 +162,7 @@ declare namespace java {
              * @throws NullPointerException if {#code out} is {@code null}
              */
             // @ts-ignore
-            initialize(type: java.lang.Class<any>, oldInstance: any, newInstance: any, out: java.beans.Encoder): void
+            initialize(type: java.lang.Class<any>, oldInstance: java.lang.Object | any, newInstance: java.lang.Object | any, out: java.beans.Encoder): void
         }
     }
 }

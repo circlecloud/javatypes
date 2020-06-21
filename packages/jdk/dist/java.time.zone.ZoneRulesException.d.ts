@@ -16,14 +16,14 @@ declare namespace java {
                  * @param message  the message to use for this exception, may be null
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a new date-time exception with the specified message and cause.
                  * @param message  the message to use for this exception, may be null
                  * @param cause  the cause of the exception, may be null
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

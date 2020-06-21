@@ -30,11 +30,11 @@ declare namespace org {
                      *  (to be used as context information in log messages)
                      */
                     // @ts-ignore
-                    constructor(exporterName: string)
+                    constructor(exporterName: java.lang.String | string)
                     // @ts-ignore
-                    readonly logger: Log
+                    static readonly logger: Log
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                 }
             }
         }

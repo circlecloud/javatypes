@@ -20,7 +20,7 @@ declare namespace java {
              * @return uri the URI.
              */
             // @ts-ignore
-            getURI(): java.net.URI
+            public getURI(): java.net.URI
         }
     }
 }

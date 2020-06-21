@@ -45,7 +45,7 @@ declare namespace org {
                      * @return the message
                      */
                     // @ts-ignore
-                    getMessage(code: string, defaultMessage: string): java.lang.String
+                    public getMessage(code: java.lang.String | string, defaultMessage: java.lang.String | string): string
                     /**
                      * Retrieve the message for the given code and the given Locale.
                      * @param code the code of the message
@@ -54,7 +54,7 @@ declare namespace org {
                      * @return the message
                      */
                     // @ts-ignore
-                    getMessage(code: string, defaultMessage: string, locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, defaultMessage: java.lang.String | string, locale: java.util.Locale): string
                     /**
                      * Retrieve the message for the given code and the default Locale.
                      * @param code the code of the message
@@ -63,7 +63,7 @@ declare namespace org {
                      * @return the message
                      */
                     // @ts-ignore
-                    getMessage(code: string, args: any[], defaultMessage: string): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): string
                     /**
                      * Retrieve the message for the given code and the given Locale.
                      * @param code the code of the message
@@ -73,7 +73,7 @@ declare namespace org {
                      * @return the message
                      */
                     // @ts-ignore
-                    getMessage(code: string, args: any[], defaultMessage: string, locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], defaultMessage: java.lang.String | string, locale: java.util.Locale): string
                     /**
                      * Retrieve the message for the given code and the default Locale.
                      * @param code the code of the message
@@ -81,7 +81,7 @@ declare namespace org {
                      * @throws org.springframework.context.NoSuchMessageException if not found
                      */
                     // @ts-ignore
-                    getMessage(code: string): java.lang.String
+                    public getMessage(code: java.lang.String | string): string
                     /**
                      * Retrieve the message for the given code and the given Locale.
                      * @param code the code of the message
@@ -90,7 +90,7 @@ declare namespace org {
                      * @throws org.springframework.context.NoSuchMessageException if not found
                      */
                     // @ts-ignore
-                    getMessage(code: string, locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, locale: java.util.Locale): string
                     /**
                      * Retrieve the message for the given code and the default Locale.
                      * @param code the code of the message
@@ -99,7 +99,7 @@ declare namespace org {
                      * @throws org.springframework.context.NoSuchMessageException if not found
                      */
                     // @ts-ignore
-                    getMessage(code: string, args: any[]): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[]): string
                     /**
                      * Retrieve the message for the given code and the given Locale.
                      * @param code the code of the message
@@ -109,7 +109,7 @@ declare namespace org {
                      * @throws org.springframework.context.NoSuchMessageException if not found
                      */
                     // @ts-ignore
-                    getMessage(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     /**
                      * Retrieve the given MessageSourceResolvable (e.g. an ObjectError instance)
                      * in the default Locale.
@@ -118,7 +118,7 @@ declare namespace org {
                      * @throws org.springframework.context.NoSuchMessageException if not found
                      */
                     // @ts-ignore
-                    getMessage(resolvable: org.springframework.context.MessageSourceResolvable): java.lang.String
+                    public getMessage(resolvable: org.springframework.context.MessageSourceResolvable): string
                     /**
                      * Retrieve the given MessageSourceResolvable (e.g. an ObjectError instance)
                      * in the given Locale.
@@ -128,7 +128,7 @@ declare namespace org {
                      * @throws org.springframework.context.NoSuchMessageException if not found
                      */
                     // @ts-ignore
-                    getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): java.lang.String
+                    public getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): string
                 }
             }
         }

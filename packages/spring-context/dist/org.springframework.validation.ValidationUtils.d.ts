@@ -13,7 +13,7 @@ declare namespace org {
              * @see Errors
              */
             // @ts-ignore
-            class ValidationUtils extends java.lang.Object {
+            abstract class ValidationUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -27,7 +27,7 @@ declare namespace org {
                  *  {@link Validator#supports(Class) support} the validation of the supplied object's type
                  */
                 // @ts-ignore
-                invokeValidator(validator: org.springframework.validation.Validator, target: any, errors: org.springframework.validation.Errors): void
+                public static invokeValidator(validator: org.springframework.validation.Validator, target: java.lang.Object | any, errors: org.springframework.validation.Errors): void
                 /**
                  * Invoke the given {@link Validator}/{@link SmartValidator} for the supplied object and
                  * {@link Errors} instance.
@@ -40,7 +40,7 @@ declare namespace org {
                  *  {@link Validator#supports(Class) support} the validation of the supplied object's type
                  */
                 // @ts-ignore
-                invokeValidator(validator: org.springframework.validation.Validator, target: any, errors: org.springframework.validation.Errors, ...validationHints: any[]): void
+                public static invokeValidator(validator: org.springframework.validation.Validator, target: java.lang.Object | any, errors: org.springframework.validation.Errors, ...validationHints: java.lang.Object[] | any[]): void
                 /**
                  * Reject the given field with the given error code if the value is empty.
                  * <p>An 'empty' value in this context means either {@code null} or
@@ -53,7 +53,7 @@ declare namespace org {
                  * @param errorCode the error code, interpretable as message key
                  */
                 // @ts-ignore
-                rejectIfEmpty(errors: org.springframework.validation.Errors, field: string, errorCode: string): void
+                public static rejectIfEmpty(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string): void
                 /**
                  * Reject the given field with the given error code and default message
                  * if the value is empty.
@@ -68,7 +68,7 @@ declare namespace org {
                  * @param defaultMessage fallback default message
                  */
                 // @ts-ignore
-                rejectIfEmpty(errors: org.springframework.validation.Errors, field: string, errorCode: string, defaultMessage: string): void
+                public static rejectIfEmpty(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 /**
                  * Reject the given field with the given error code and error arguments
                  * if the value is empty.
@@ -84,7 +84,7 @@ declare namespace org {
                  *  (can be {#code null})
                  */
                 // @ts-ignore
-                rejectIfEmpty(errors: org.springframework.validation.Errors, field: string, errorCode: string, errorArgs: any[]): void
+                public static rejectIfEmpty(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[]): void
                 /**
                  * Reject the given field with the given error code, error arguments
                  * and default message if the value is empty.
@@ -101,7 +101,7 @@ declare namespace org {
                  * @param defaultMessage fallback default message
                  */
                 // @ts-ignore
-                rejectIfEmpty(errors: org.springframework.validation.Errors, field: string, errorCode: string, errorArgs: any[], defaultMessage: string): void
+                public static rejectIfEmpty(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                 /**
                  * Reject the given field with the given error code if the value is empty
                  * or just contains whitespace.
@@ -115,7 +115,7 @@ declare namespace org {
                  * @param errorCode the error code, interpretable as message key
                  */
                 // @ts-ignore
-                rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: string, errorCode: string): void
+                public static rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string): void
                 /**
                  * Reject the given field with the given error code and default message
                  * if the value is empty or just contains whitespace.
@@ -130,7 +130,7 @@ declare namespace org {
                  * @param defaultMessage fallback default message
                  */
                 // @ts-ignore
-                rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: string, errorCode: string, defaultMessage: string): void
+                public static rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 /**
                  * Reject the given field with the given error code and error arguments
                  * if the value is empty or just contains whitespace.
@@ -146,7 +146,7 @@ declare namespace org {
                  *  (can be {#code null})
                  */
                 // @ts-ignore
-                rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: string, errorCode: string, errorArgs: any[]): void
+                public static rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[]): void
                 /**
                  * Reject the given field with the given error code, error arguments
                  * and default message if the value is empty or just contains whitespace.
@@ -163,7 +163,7 @@ declare namespace org {
                  * @param defaultMessage fallback default message
                  */
                 // @ts-ignore
-                rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: string, errorCode: string, errorArgs: any[], defaultMessage: string): void
+                public static rejectIfEmptyOrWhitespace(errors: org.springframework.validation.Errors, field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
             }
         }
     }

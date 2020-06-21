@@ -20,7 +20,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        world(world: org.spongepowered.api.world.World): org.spongepowered.api.util.RespawnLocation.Builder
+                        public world(world: org.spongepowered.api.world.World): org.spongepowered.api.util.RespawnLocation.Builder
                         /**
                          * Sets the {@link UUID} of the desired {@link World}. There are no
                          * validation checks to whether a world exists with the provided uuid,
@@ -29,7 +29,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        world(worldId: java.util.UUID): org.spongepowered.api.util.RespawnLocation.Builder
+                        public world(worldId: java.util.UUID): org.spongepowered.api.util.RespawnLocation.Builder
                         /**
                          * Sets the {@link UUID} of the {@link Location} provided {@link World},
                          * and the {@link Vector3d} position to respawn at.
@@ -38,14 +38,14 @@ declare namespace org {
                          * @throws IllegalStateException If the location's extent is null
                          */
                         // @ts-ignore
-                        location(location: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): org.spongepowered.api.util.RespawnLocation.Builder
+                        public location(location: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): org.spongepowered.api.util.RespawnLocation.Builder
                         /**
                          * Sets the {@link Vector3d} position of where to respawn at.
                          * @param position The position to respawn at
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        position(position: Vector3d): org.spongepowered.api.util.RespawnLocation.Builder
+                        public position(position: Vector3d): org.spongepowered.api.util.RespawnLocation.Builder
                         /**
                          * Sets whether the position to respawn at is forced or can be varied
                          * for safety.
@@ -53,19 +53,19 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        forceSpawn(isForced: boolean): org.spongepowered.api.util.RespawnLocation.Builder
+                        public forceSpawn(isForced: boolean): org.spongepowered.api.util.RespawnLocation.Builder
                         // @ts-ignore
                         buildContent(container: org.spongepowered.api.data.DataView): java.util.Optional<org.spongepowered.api.util.RespawnLocation>
                         // @ts-ignore
-                        reset(): org.spongepowered.api.util.RespawnLocation.Builder
+                        public reset(): org.spongepowered.api.util.RespawnLocation.Builder
                         // @ts-ignore
-                        from(value: org.spongepowered.api.util.RespawnLocation): org.spongepowered.api.util.RespawnLocation.Builder
+                        public from(value: org.spongepowered.api.util.RespawnLocation): org.spongepowered.api.util.RespawnLocation.Builder
                         /**
                          * Creates a new {@link RespawnLocation} from this builder.
                          * @return The new respawn location
                          */
                         // @ts-ignore
-                        build(): org.spongepowered.api.util.RespawnLocation
+                        public build(): org.spongepowered.api.util.RespawnLocation
                     }
                 }
             }

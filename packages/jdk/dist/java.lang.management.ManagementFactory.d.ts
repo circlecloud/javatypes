@@ -11,13 +11,13 @@ declare namespace java {
                  * machine's singleton {@link ClassLoadingMXBean}.
                  */
                 // @ts-ignore
-                readonly CLASS_LOADING_MXBEAN_NAME: string
+                public static readonly CLASS_LOADING_MXBEAN_NAME: java.lang.String | string
                 /**
                  * The unique <code>ObjectName</code> string identifier for the virtual
                  * machine's singleton {@link CompilationMXBean}.
                  */
                 // @ts-ignore
-                readonly COMPILATION_MXBEAN_NAME: string
+                public static readonly COMPILATION_MXBEAN_NAME: java.lang.String | string
                 /**
                  * The prefix for all <code>ObjectName</code> strings which represent a
                  * {@link GarbageCollectorMXBean}. The unique <code>ObjectName</code> for
@@ -25,7 +25,7 @@ declare namespace java {
                  * &quot;,name= <i>collector name </i>&quot; to this constant.
                  */
                 // @ts-ignore
-                readonly GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE: string
+                public static readonly GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE: java.lang.String | string
                 /**
                  * The prefix for all <code>ObjectName</code> strings which represent a
                  * {@link MemoryManagerMXBean}. The unique <code>ObjectName</code> for a
@@ -33,13 +33,13 @@ declare namespace java {
                  * &quot;,name=<i>manager name</i>&quot; to this constant.
                  */
                 // @ts-ignore
-                readonly MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE: string
+                public static readonly MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE: java.lang.String | string
                 /**
                  * The unique <code>ObjectName</code> string identifier for the virtual
                  * machine's singleton {@link MemoryMXBean}.
                  */
                 // @ts-ignore
-                readonly MEMORY_MXBEAN_NAME: string
+                public static readonly MEMORY_MXBEAN_NAME: java.lang.String | string
                 /**
                  * The prefix for all <code>ObjectName</code> strings which represent a
                  * {@link MemoryPoolMXBean}. The unique <code>ObjectName</code> for a
@@ -47,32 +47,32 @@ declare namespace java {
                  * <i>memory pool name </i>&quot; to this constant.
                  */
                 // @ts-ignore
-                readonly MEMORY_POOL_MXBEAN_DOMAIN_TYPE: string
+                public static readonly MEMORY_POOL_MXBEAN_DOMAIN_TYPE: java.lang.String | string
                 /**
                  * The unique <code>ObjectName</code> string identifier for the virtual
                  * machine's singleton {@link OperatingSystemMXBean}.
                  */
                 // @ts-ignore
-                readonly OPERATING_SYSTEM_MXBEAN_NAME: string
+                public static readonly OPERATING_SYSTEM_MXBEAN_NAME: java.lang.String | string
                 /**
                  * The unique <code>ObjectName</code> string identifier for the virtual
                  * machine's singleton {@link RuntimeMXBean}.
                  */
                 // @ts-ignore
-                readonly RUNTIME_MXBEAN_NAME: string
+                public static readonly RUNTIME_MXBEAN_NAME: java.lang.String | string
                 /**
                  * The unique <code>ObjectName</code> string identifier for the virtual
                  * machine's singleton {@link ThreadMXBean}.
                  */
                 // @ts-ignore
-                readonly THREAD_MXBEAN_NAME: string
+                public static readonly THREAD_MXBEAN_NAME: java.lang.String | string
                 /**
                  * Returns the singleton <code>MXBean</code> for the virtual machine's
                  * class loading system.
                  * @return the virtual machine's {#link ClassLoadingMXBean}
                  */
                 // @ts-ignore
-                getClassLoadingMXBean(): java.lang.management.ClassLoadingMXBean
+                public static getClassLoadingMXBean(): java.lang.management.ClassLoadingMXBean
                 /**
                  * Returns the singleton <code>MXBean</code> for the virtual machine's
                  * compilation system <i>if and only if the virtual machine has a
@@ -83,7 +83,7 @@ declare namespace java {
                  *          virtual machine.
                  */
                 // @ts-ignore
-                getCompilationMXBean(): java.lang.management.CompilationMXBean
+                public static getCompilationMXBean(): java.lang.management.CompilationMXBean
                 /**
                  * Returns a list of all of the instances of {@link GarbageCollectorMXBean}
                  * in this virtual machine. Owing to the dynamic nature of this kind of
@@ -93,7 +93,7 @@ declare namespace java {
                  *          this virtual machine.
                  */
                 // @ts-ignore
-                getGarbageCollectorMXBeans(): java.util.List<java.lang.management.GarbageCollectorMXBean>
+                public static getGarbageCollectorMXBeans(): Array<java.lang.management.GarbageCollectorMXBean>
                 /**
                  * Returns a list of all of the instances of {@link MemoryManagerMXBean} in
                  * this virtual machine. Owing to the dynamic nature of this kind of
@@ -108,14 +108,14 @@ declare namespace java {
                  *          virtual machine.
                  */
                 // @ts-ignore
-                getMemoryManagerMXBeans(): java.util.List<java.lang.management.MemoryManagerMXBean>
+                public static getMemoryManagerMXBeans(): Array<java.lang.management.MemoryManagerMXBean>
                 /**
                  * Returns the singleton <code>MXBean</code> for the virtual machine's
                  * memory system.
                  * @return the virtual machine's {#link MemoryMXBean}
                  */
                 // @ts-ignore
-                getMemoryMXBean(): java.lang.management.MemoryMXBean
+                public static getMemoryMXBean(): java.lang.management.MemoryMXBean
                 /**
                  * Returns a list of all of the instances of {@link MemoryPoolMXBean} in
                  * this virtual machine. Owing to the dynamic nature of this kind of
@@ -125,14 +125,14 @@ declare namespace java {
                  *          virtual machine.
                  */
                 // @ts-ignore
-                getMemoryPoolMXBeans(): java.util.List<java.lang.management.MemoryPoolMXBean>
+                public static getMemoryPoolMXBeans(): Array<java.lang.management.MemoryPoolMXBean>
                 /**
                  * Returns the singleton <code>MXBean</code> for the operating system
                  * which the virtual machine runs on.
                  * @return the virtual machine's {#link OperatingSystemMXBean}
                  */
                 // @ts-ignore
-                getOperatingSystemMXBean(): java.lang.management.OperatingSystemMXBean
+                public static getOperatingSystemMXBean(): java.lang.management.OperatingSystemMXBean
                 /**
                  * Returns the virtual machine's platform
                  * <code>MBeanServer</code>. This <code>MBeanServer</code> will have
@@ -161,21 +161,21 @@ declare namespace java {
                  * @see javax.management.MBeanServerPermission
                  */
                 // @ts-ignore
-                getPlatformMBeanServer(): javax.management.MBeanServer
+                public static getPlatformMBeanServer(): javax.management.MBeanServer
                 /**
                  * Returns the singleton <code>MXBean</code> for the virtual machine's
                  * runtime system.
                  * @return the virtual machine's {#link RuntimeMXBean}
                  */
                 // @ts-ignore
-                getRuntimeMXBean(): java.lang.management.RuntimeMXBean
+                public static getRuntimeMXBean(): java.lang.management.RuntimeMXBean
                 /**
                  * Returns the singleton <code>MXBean</code> for the virtual machine's
                  * threading system.
                  * @return the virtual machine's {#link ThreadMXBean}
                  */
                 // @ts-ignore
-                getThreadMXBean(): java.lang.management.ThreadMXBean
+                public static getThreadMXBean(): java.lang.management.ThreadMXBean
                 /**
                  * Return a proxy for the named <code>MXBean</code>.
                  * @param <T> the type of the platform <code>MXBean</code>
@@ -189,7 +189,7 @@ declare namespace java {
                  *  occurs with the {#code MBeanServerConnection}
                  */
                 // @ts-ignore
-                newPlatformMXBeanProxy<T>(connection: javax.management.MBeanServerConnection, mxbeanName: string, mxbeanInterface: java.lang.Class<T>): T
+                public static newPlatformMXBeanProxy<T>(connection: javax.management.MBeanServerConnection, mxbeanName: java.lang.String | string, mxbeanInterface: java.lang.Class<T>): T
                 /**
                  * Returns the platform MXBean implementing
                  * the given {@code mxbeanInterface} which is specified
@@ -214,7 +214,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getPlatformMXBean<T extends java.lang.management.PlatformManagedObject>(mxbeanInterface: java.lang.Class<T>): T
+                public static getPlatformMXBean<T extends java.lang.management.PlatformManagedObject>(mxbeanInterface: java.lang.Class<T>): T
                 /**
                  * Returns a list of all of the platform <code>MXBean</code>
                  * objects which implement the specified management interface.
@@ -226,7 +226,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getPlatformMXBeans<T extends java.lang.management.PlatformManagedObject>(mxbeanInterface: java.lang.Class<T>): java.util.List<T>
+                public static getPlatformMXBeans<T extends java.lang.management.PlatformManagedObject>(mxbeanInterface: java.lang.Class<T>): Array<T>
                 /**
                  * Returns the platform MXBean proxy for
                  * {@code mxbeanInterface} which is specified to have one single
@@ -259,7 +259,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getPlatformMXBean<T extends java.lang.management.PlatformManagedObject>(connection: javax.management.MBeanServerConnection, mxbeanInterface: java.lang.Class<T>): T
+                public static getPlatformMXBean<T extends java.lang.management.PlatformManagedObject>(connection: javax.management.MBeanServerConnection, mxbeanInterface: java.lang.Class<T>): T
                 /**
                  * Return a list of MXBean proxies that can proxy the <code>mxbeanInterface</code>
                  * using the specified <code>MBeanServerConnection</code>.
@@ -273,14 +273,14 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getPlatformMXBeans<T extends java.lang.management.PlatformManagedObject>(connection: javax.management.MBeanServerConnection, mxbeanInterface: java.lang.Class<T>): java.util.List<T>
+                public static getPlatformMXBeans<T extends java.lang.management.PlatformManagedObject>(connection: javax.management.MBeanServerConnection, mxbeanInterface: java.lang.Class<T>): Array<T>
                 /**
                  * Return the set of all platform <code>MXBean</code> interface classes.
                  * @return Set of all platform <code>MXBean</code> interface classes.
                  * @since 1.7
                  */
                 // @ts-ignore
-                getPlatformManagementInterfaces(): java.util.Set<java.lang.Class<? extends java.lang.management.PlatformManagedObject>>
+                public static getPlatformManagementInterfaces(): Array<java.lang.Class<any>>
             }
         }
     }

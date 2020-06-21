@@ -64,7 +64,7 @@ declare namespace java {
                  * @return the new CompletableFuture
                  */
                 // @ts-ignore
-                supplyAsync<U>(supplier: java.util.function.Supplier<U> | java.util.function$.Supplier<U>): java.util.concurrent.CompletableFuture<U>
+                public static supplyAsync<U>(supplier: java.util.function$.Supplier<U>): java.util.concurrent.CompletableFuture<U>
                 /**
                  * Returns a new CompletableFuture that is asynchronously completed
                  * by a task running in the given executor with the value obtained
@@ -76,7 +76,7 @@ declare namespace java {
                  * @return the new CompletableFuture
                  */
                 // @ts-ignore
-                supplyAsync<U>(supplier: java.util.function.Supplier<U> | java.util.function$.Supplier<U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
+                public static supplyAsync<U>(supplier: java.util.function$.Supplier<U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
                 /**
                  * Returns a new CompletableFuture that is asynchronously completed
                  * by a task running in the {@link ForkJoinPool#commonPool()} after
@@ -86,7 +86,7 @@ declare namespace java {
                  * @return the new CompletableFuture
                  */
                 // @ts-ignore
-                runAsync(runnable: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public static runAsync(runnable: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 /**
                  * Returns a new CompletableFuture that is asynchronously completed
                  * by a task running in the given executor after it runs the given
@@ -97,7 +97,7 @@ declare namespace java {
                  * @return the new CompletableFuture
                  */
                 // @ts-ignore
-                runAsync(runnable: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public static runAsync(runnable: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 /**
                  * Returns a new CompletableFuture that is already completed with
                  * the given value.
@@ -106,14 +106,14 @@ declare namespace java {
                  * @return the completed CompletableFuture
                  */
                 // @ts-ignore
-                completedFuture<U>(value: U): java.util.concurrent.CompletableFuture<U>
+                public static completedFuture<U>(value: U): java.util.concurrent.CompletableFuture<U>
                 /**
                  * Returns {@code true} if completed in any fashion: normally,
                  * exceptionally, or via cancellation.
                  * @return {#code true} if completed
                  */
                 // @ts-ignore
-                isDone(): boolean
+                public isDone(): boolean
                 /**
                  * Waits if necessary for this future to complete, and then
                  * returns its result.
@@ -124,7 +124,7 @@ declare namespace java {
                  *  while waiting
                  */
                 // @ts-ignore
-                get(): T
+                public get(): T
                 /**
                  * Waits if necessary for at most the given time for this future
                  * to complete, and then returns its result, if available.
@@ -138,7 +138,7 @@ declare namespace java {
                  * @throws TimeoutException if the wait timed out
                  */
                 // @ts-ignore
-                get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+                public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
                 /**
                  * Returns the result value when complete, or throws an
                  * (unchecked) exception if completed exceptionally. To better
@@ -153,7 +153,7 @@ declare namespace java {
                  *  exceptionally or a completion computation threw an exception
                  */
                 // @ts-ignore
-                join(): T
+                public join(): T
                 /**
                  * Returns the result value (or throws any encountered exception)
                  * if completed, else returns the given valueIfAbsent.
@@ -164,7 +164,7 @@ declare namespace java {
                  *  exceptionally or a completion computation threw an exception
                  */
                 // @ts-ignore
-                getNow(valueIfAbsent: T): T
+                public getNow(valueIfAbsent: T): T
                 /**
                  * If not already completed, sets the value returned by {@link
                  * #get()} and related methods to the given value.
@@ -173,7 +173,7 @@ declare namespace java {
                  *  to transition to a completed state, else {@code false}
                  */
                 // @ts-ignore
-                complete(value: T): boolean
+                public complete(value: T): boolean
                 /**
                  * If not already completed, causes invocations of {@link #get()}
                  * and related methods to throw the given exception.
@@ -182,85 +182,85 @@ declare namespace java {
                  *  to transition to a completed state, else {@code false}
                  */
                 // @ts-ignore
-                completeExceptionally(ex: Error): boolean
+                public completeExceptionally(ex: java.lang.Throwable | Error): boolean
                 // @ts-ignore
-                thenApply<U>(fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletableFuture<U>
+                public thenApply<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                thenApplyAsync<U>(fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletableFuture<U>
+                public thenApplyAsync<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                thenApplyAsync<U>(fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
+                public thenApplyAsync<U>(fn: java.util.function$.Function<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                thenAccept(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenAccept(action: java.util.function$.Consumer<any>): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenAcceptAsync(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenAcceptAsync(action: java.util.function$.Consumer<any>): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenAcceptAsync(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenAcceptAsync(action: java.util.function$.Consumer<any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenRun(action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenRun(action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenRunAsync(action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenRunAsync(action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenRunAsync(action: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenRunAsync(action: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenCombine<U, V>(other: java.util.concurrent.CompletionStage<U>, fn: java.util.function.BiFunction<any super T, ? super U, V> | java.util.function$.BiFunction<? super T, ? super U, V>): java.util.concurrent.CompletableFuture<V>
+                public thenCombine<U, V>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.BiFunction<any, any, any>): java.util.concurrent.CompletableFuture<V>
                 // @ts-ignore
-                thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<U>, fn: java.util.function.BiFunction<any super T, ? super U, V> | java.util.function$.BiFunction<? super T, ? super U, V>): java.util.concurrent.CompletableFuture<V>
+                public thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.BiFunction<any, any, any>): java.util.concurrent.CompletableFuture<V>
                 // @ts-ignore
-                thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<U>, fn: java.util.function.BiFunction<any super T, ? super U, V> | java.util.function$.BiFunction<? super T, ? super U, V>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<V>
+                public thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.BiFunction<any, any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<V>
                 // @ts-ignore
-                thenAcceptBoth<U>(other: java.util.concurrent.CompletionStage<U>, action: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenAcceptBoth<U>(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<U>, action: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<U>, action: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.BiConsumer<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                runAfterBoth(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public runAfterBoth(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                runAfterBothAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public runAfterBothAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                runAfterBothAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public runAfterBothAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                applyToEither<U>(other: java.util.concurrent.CompletionStage<T>, fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletableFuture<U>
+                public applyToEither<U>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.Function<any, U>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<T>, fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletableFuture<U>
+                public applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.Function<any, U>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<T>, fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
+                public applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.Function<any, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                acceptEither(other: java.util.concurrent.CompletionStage<T>, action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public acceptEither(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.Consumer<any>): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                acceptEitherAsync(other: java.util.concurrent.CompletionStage<T>, action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public acceptEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.Consumer<any>): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                acceptEitherAsync(other: java.util.concurrent.CompletionStage<T>, action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public acceptEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.Consumer<any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                runAfterEither(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public runAfterEither(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                runAfterEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public runAfterEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                runAfterEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public runAfterEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.lang.Runnable, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<java.lang.Void>
                 // @ts-ignore
-                thenCompose<U>(fn: java.util.function.Function<any super T, java.util.concurrent.CompletionStage<U>> | java.util.function$.Function<? super T, java.util.concurrent.CompletionStage<U>>): java.util.concurrent.CompletableFuture<U>
+                public thenCompose<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                thenComposeAsync<U>(fn: java.util.function.Function<any super T, java.util.concurrent.CompletionStage<U>> | java.util.function$.Function<? super T, java.util.concurrent.CompletionStage<U>>): java.util.concurrent.CompletableFuture<U>
+                public thenComposeAsync<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                thenComposeAsync<U>(fn: java.util.function.Function<any super T, java.util.concurrent.CompletionStage<U>> | java.util.function$.Function<? super T, java.util.concurrent.CompletionStage<U>>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
+                public thenComposeAsync<U>(fn: java.util.function$.Function<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                whenComplete(action: java.util.function.BiConsumer<any super T, ? super java.lang.Throwable> | java.util.function$.BiConsumer<? super T, ? super java.lang.Throwable>): java.util.concurrent.CompletableFuture<T>
+                public whenComplete(action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletableFuture<T>
                 // @ts-ignore
-                whenCompleteAsync(action: java.util.function.BiConsumer<any super T, ? super java.lang.Throwable> | java.util.function$.BiConsumer<? super T, ? super java.lang.Throwable>): java.util.concurrent.CompletableFuture<T>
+                public whenCompleteAsync(action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletableFuture<T>
                 // @ts-ignore
-                whenCompleteAsync(action: java.util.function.BiConsumer<any super T, ? super java.lang.Throwable> | java.util.function$.BiConsumer<? super T, ? super java.lang.Throwable>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<T>
+                public whenCompleteAsync(action: java.util.function$.BiConsumer<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<T>
                 // @ts-ignore
-                handle<U>(fn: java.util.function.BiFunction<any super T, java.lang.Throwable, U> | java.util.function$.BiFunction<? super T, java.lang.Throwable, U>): java.util.concurrent.CompletableFuture<U>
+                public handle<U>(fn: java.util.function$.BiFunction<any, java.lang.Throwable | Error, any>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                handleAsync<U>(fn: java.util.function.BiFunction<any super T, java.lang.Throwable, U> | java.util.function$.BiFunction<? super T, java.lang.Throwable, U>): java.util.concurrent.CompletableFuture<U>
+                public handleAsync<U>(fn: java.util.function$.BiFunction<any, java.lang.Throwable | Error, any>): java.util.concurrent.CompletableFuture<U>
                 // @ts-ignore
-                handleAsync<U>(fn: java.util.function.BiFunction<any super T, java.lang.Throwable, U> | java.util.function$.BiFunction<? super T, java.lang.Throwable, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
+                public handleAsync<U>(fn: java.util.function$.BiFunction<any, java.lang.Throwable | Error, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<U>
                 /**
                  * Returns this CompletableFuture.
                  * @return this CompletableFuture
                  */
                 // @ts-ignore
-                toCompletableFuture(): java.util.concurrent.CompletableFuture<T>
+                public toCompletableFuture(): java.util.concurrent.CompletableFuture<T>
                 /**
                  * Returns a new CompletableFuture that is completed when this
                  * CompletableFuture completes, with the result of the given
@@ -276,7 +276,7 @@ declare namespace java {
                  * @return the new CompletableFuture
                  */
                 // @ts-ignore
-                exceptionally(fn: java.util.function.Function<java.lang.Throwable, T> | java.util.function$.Function<java.lang.Throwable, T>): java.util.concurrent.CompletableFuture<T>
+                public exceptionally(fn: java.util.function$.Function<java.lang.Throwable | Error, any>): java.util.concurrent.CompletableFuture<T>
                 /**
                  * Returns a new CompletableFuture that is completed when all of
                  * the given CompletableFutures complete.  If any of the given
@@ -299,7 +299,7 @@ declare namespace java {
                  *  {#code null}
                  */
                 // @ts-ignore
-                allOf(...cfs: java.util.concurrent.CompletableFuture[]): java.util.concurrent.CompletableFuture<java.lang.Void>
+                public static allOf(...cfs: java.util.concurrent.CompletableFuture<any>[]): java.util.concurrent.CompletableFuture<java.lang.Void>
                 /**
                  * Returns a new CompletableFuture that is completed when any of
                  * the given CompletableFutures complete, with the same result.
@@ -315,7 +315,7 @@ declare namespace java {
                  *  {#code null}
                  */
                 // @ts-ignore
-                anyOf(...cfs: java.util.concurrent.CompletableFuture[]): java.util.concurrent.CompletableFuture<java.lang.Object>
+                public static anyOf(...cfs: java.util.concurrent.CompletableFuture<any>[]): java.util.concurrent.CompletableFuture<java.lang.Object | any>
                 /**
                  * If not already completed, completes this CompletableFuture with
                  * a {@link CancellationException}. Dependent CompletableFutures
@@ -328,7 +328,7 @@ declare namespace java {
                  * @return {#code true} if this task is now cancelled
                  */
                 // @ts-ignore
-                cancel(mayInterruptIfRunning: boolean): boolean
+                public cancel(mayInterruptIfRunning: boolean): boolean
                 /**
                  * Returns {@code true} if this CompletableFuture was cancelled
                  * before it completed normally.
@@ -336,7 +336,7 @@ declare namespace java {
                  *  before it completed normally
                  */
                 // @ts-ignore
-                isCancelled(): boolean
+                public isCancelled(): boolean
                 /**
                  * Returns {@code true} if this CompletableFuture completed
                  * exceptionally, in any way. Possible causes include
@@ -347,7 +347,7 @@ declare namespace java {
                  *  exceptionally
                  */
                 // @ts-ignore
-                isCompletedExceptionally(): boolean
+                public isCompletedExceptionally(): boolean
                 /**
                  * Forcibly sets or resets the value subsequently returned by
                  * method {@link #get()} and related methods, whether or not
@@ -358,7 +358,7 @@ declare namespace java {
                  * @param value the completion value
                  */
                 // @ts-ignore
-                obtrudeValue(value: T): void
+                public obtrudeValue(value: T): void
                 /**
                  * Forcibly causes subsequent invocations of method {@link #get()}
                  * and related methods to throw the given exception, whether or
@@ -370,7 +370,7 @@ declare namespace java {
                  * @throws NullPointerException if the exception is null
                  */
                 // @ts-ignore
-                obtrudeException(ex: Error): void
+                public obtrudeException(ex: java.lang.Throwable | Error): void
                 /**
                  * Returns the estimated number of CompletableFutures whose
                  * completions are awaiting completion of this CompletableFuture.
@@ -379,7 +379,7 @@ declare namespace java {
                  * @return the number of dependent CompletableFutures
                  */
                 // @ts-ignore
-                getNumberOfDependents(): int
+                public getNumberOfDependents(): number /*int*/
                 /**
                  * Returns a string identifying this CompletableFuture, as well as
                  * its completion state.  The state, in brackets, contains the
@@ -390,7 +390,7 @@ declare namespace java {
                  * @return a string identifying this CompletableFuture, as well as its state
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

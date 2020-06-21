@@ -24,14 +24,14 @@ declare namespace javax {
                  * @return the value read from the stream.
                  */
                 // @ts-ignore
-                readValue(input: org.omg.CORBA.portable.InputStream, offset: number /*int*/, clz: java.lang.Class, repositoryID: string, sender: org.omg.SendingContext.RunTime): java.io.Serializable
+                readValue(input: org.omg.CORBA.portable.InputStream, offset: number /*int*/, clz: java.lang.Class<any>, repositoryID: java.lang.String | string, sender: org.omg.SendingContext.RunTime): java.io.Serializable
                 /**
                  * Returns the CORBA RepositoryId for the given Java class.
                  * @param clz a Java class.
                  * @return the CORBA RepositoryId for the class.
                  */
                 // @ts-ignore
-                getRMIRepositoryID(clz: java.lang.Class): java.lang.String
+                getRMIRepositoryID(clz: java.lang.Class<any>): string
                 /**
                  * Indicates whether the given class performs custom or
                  * default marshaling.
@@ -40,7 +40,7 @@ declare namespace javax {
                  *  if it does not.
                  */
                 // @ts-ignore
-                isCustomMarshaled(clz: java.lang.Class): boolean
+                isCustomMarshaled(clz: java.lang.Class<any>): boolean
                 /**
                  * Returns the CodeBase for this ValueHandler.  This is used by
                  * the ORB runtime.  The server sends the service context containing

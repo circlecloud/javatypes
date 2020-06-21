@@ -17,7 +17,7 @@ declare namespace org {
                      * @param t a throwable; may be null.
                      */
                     // @ts-ignore
-                    log(logger: Log, message: string, t: Error): void
+                    log(logger: Log, message: java.lang.String | string, t: java.lang.Throwable | Error): void
                 }
             }
         }

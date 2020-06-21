@@ -17,24 +17,24 @@ declare namespace java {
              * @exception IllegalArgumentException  if source is null.
              */
             // @ts-ignore
-            constructor(source: any)
+            constructor(source: java.lang.Object | any)
             /**
              * The object on which the Event initially occurred.
              */
             // @ts-ignore
-            source: any
+            source: java.lang.Object | any
             /**
              * The object on which the Event initially occurred.
              * @return The object on which the Event initially occurred.
              */
             // @ts-ignore
-            getSource(): java.lang.Object
+            public getSource(): any
             /**
              * Returns a String representation of this EventObject.
              * @return A a String representation of this EventObject.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

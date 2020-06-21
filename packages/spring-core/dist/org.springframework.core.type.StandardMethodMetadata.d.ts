@@ -35,30 +35,30 @@ declare namespace org {
                     // @ts-ignore
                     constructor(introspectedMethod: java.lang.reflect.Method, nestedAnnotationsAsMap: boolean)
                     // @ts-ignore
-                    getAnnotations(): org.springframework.core.annotation.MergedAnnotations
+                    public getAnnotations(): org.springframework.core.annotation.MergedAnnotations
                     /**
                      * Return the underlying Method.
                      */
                     // @ts-ignore
-                    getIntrospectedMethod(): java.lang.reflect.Method
+                    public getIntrospectedMethod(): java.lang.reflect.Method
                     // @ts-ignore
-                    getMethodName(): java.lang.String
+                    public getMethodName(): string
                     // @ts-ignore
-                    getDeclaringClassName(): java.lang.String
+                    public getDeclaringClassName(): string
                     // @ts-ignore
-                    getReturnTypeName(): java.lang.String
+                    public getReturnTypeName(): string
                     // @ts-ignore
-                    isAbstract(): boolean
+                    public isAbstract(): boolean
                     // @ts-ignore
-                    isStatic(): boolean
+                    public isStatic(): boolean
                     // @ts-ignore
-                    isFinal(): boolean
+                    public isFinal(): boolean
                     // @ts-ignore
-                    isOverridable(): boolean
+                    public isOverridable(): boolean
                     // @ts-ignore
-                    getAnnotationAttributes(annotationName: string, classValuesAsString: boolean): java.util.Map<java.lang.String, java.lang.Object>
+                    public getAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    getAllAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                    public getAllAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

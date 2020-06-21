@@ -149,7 +149,7 @@ declare namespace java {
              * @throws NullPointerException if the specified map is null
              */
             // @ts-ignore
-            constructor(m: java.util.Map<K, V>)
+            constructor(m: java.util.Map<any, any>)
             /**
              * Constructs an empty <tt>LinkedHashMap</tt> instance with the
              * specified initial capacity, load factor and ordering mode.
@@ -170,7 +170,7 @@ declare namespace java {
              *          specified value
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -185,17 +185,17 @@ declare namespace java {
              * distinguish these two cases.
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getOrDefault(key: any, defaultValue: V): V
+            public getOrDefault(key: java.lang.Object | any, defaultValue: V): V
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns <tt>true</tt> if this map should remove its eldest entry.
              * This method is invoked by <tt>put</tt> and <tt>putAll</tt> after
@@ -252,7 +252,7 @@ declare namespace java {
              * @return a set view of the keys contained in this map
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The collection is backed by the map, so changes to the map are
@@ -271,7 +271,7 @@ declare namespace java {
              * @return a view of the values contained in this map
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * The set is backed by the map, so changes to the map are
@@ -291,11 +291,11 @@ declare namespace java {
              * @return a set view of the mappings contained in this map
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public entrySet(): Array<java.util.Map.Entry<K, V>>
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+            public forEach(action: java.util.function$.BiConsumer<any, any>): void
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+            public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
         }
     }
 }

@@ -45,16 +45,16 @@ declare namespace org {
                          * @see JsonbBuilder
                          */
                         // @ts-ignore
-                        setJsonb(jsonb: Jsonb): void
+                        public setJsonb(jsonb: Jsonb): void
                         /**
                          * Return the configured {@code Jsonb} instance for this converter.
                          */
                         // @ts-ignore
-                        getJsonb(): Jsonb
+                        public getJsonb(): Jsonb
                         // @ts-ignore
-                        readInternal(resolvedType: java.lang.reflect.Type, reader: java.io.Reader): java.lang.Object
+                        readInternal(resolvedType: java.lang.reflect.Type, reader: java.io.Reader): any
                         // @ts-ignore
-                        writeInternal(o: any, type: java.lang.reflect.Type, writer: java.io.Writer): void
+                        writeInternal(o: java.lang.Object | any, type: java.lang.reflect.Type, writer: java.io.Writer): void
                     }
                 }
             }

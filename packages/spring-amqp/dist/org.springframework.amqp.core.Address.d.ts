@@ -29,7 +29,7 @@ declare namespace org {
                      * @param address a structured string.
                      */
                     // @ts-ignore
-                    constructor(address: string)
+                    constructor(address: java.lang.String | string)
                     /**
                      * Create an Address given the exchange name and routing key.
                      * This will set the exchange type, name and the routing key explicitly.
@@ -37,23 +37,23 @@ declare namespace org {
                      * @param routingKey The routing key.
                      */
                     // @ts-ignore
-                    constructor(exchangeName: string, routingKey: string)
+                    constructor(exchangeName: java.lang.String | string, routingKey: java.lang.String | string)
                     /**
                      * Use this value in {@code RabbitTemplate#setReplyAddress(String)} to explicitly
                      * indicate that direct reply-to is to be used.
                      */
                     // @ts-ignore
-                    readonly AMQ_RABBITMQ_REPLY_TO: string
+                    public static readonly AMQ_RABBITMQ_REPLY_TO: java.lang.String | string
                     // @ts-ignore
-                    getExchangeName(): java.lang.String
+                    public getExchangeName(): string
                     // @ts-ignore
-                    getRoutingKey(): java.lang.String
+                    public getRoutingKey(): string
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

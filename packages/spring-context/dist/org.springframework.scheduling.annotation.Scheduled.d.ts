@@ -25,7 +25,7 @@ declare namespace org {
                  * @see Schedules
                  */
                 // @ts-ignore
-                class Scheduled implements java.lang.annotation.Annotation {
+                abstract class Scheduled implements java.lang.annotation.Annotation {
                     /**
                      * A special cron expression value that indicates a disabled trigger: {@value}.
                      * <p>This is primarily meant for use with <code>${...}</code> placeholders,
@@ -34,7 +34,7 @@ declare namespace org {
                      * @see ScheduledTaskRegistrar#CRON_DISABLED
                      */
                     // @ts-ignore
-                    readonly CRON_DISABLED: string
+                    readonly CRON_DISABLED: java.lang.String | string
                 }
             }
         }

@@ -65,7 +65,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>b.length</code> bytes from the specified byte array
              * to this output stream.
@@ -81,7 +81,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            write(b: number /*byte*/[]): void
+            public write(b: number /*byte*/[]): void
             /**
              * Writes <code>len</code> bytes from the specified byte array
              * starting at offset <code>off</code> to this output stream.
@@ -92,7 +92,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes this output stream by forcing any buffered output bytes
              * that have already been processed by the encapsulated cipher object
@@ -106,7 +106,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Closes this output stream and releases any system resources
              * associated with this stream.
@@ -123,7 +123,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

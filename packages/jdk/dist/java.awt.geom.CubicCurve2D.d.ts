@@ -13,7 +13,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class CubicCurve2D extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
+            abstract class CubicCurve2D extends java.lang.Object implements java.awt.Shape, java.lang.Cloneable {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -33,7 +33,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getX1(): double
+                public abstract getX1(): number /*double*/
                 /**
                  * Returns the Y coordinate of the start point in double precision.
                  * @return the Y coordinate of the start point of the
@@ -41,7 +41,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getY1(): double
+                public abstract getY1(): number /*double*/
                 /**
                  * Returns the start point.
                  * @return a {#code Point2D} that is the start point of
@@ -49,7 +49,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getP1(): java.awt.geom.Point2D
+                public abstract getP1(): java.awt.geom.Point2D
                 /**
                  * Returns the X coordinate of the first control point in double precision.
                  * @return the X coordinate of the first control point of the
@@ -57,7 +57,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getCtrlX1(): double
+                public abstract getCtrlX1(): number /*double*/
                 /**
                  * Returns the Y coordinate of the first control point in double precision.
                  * @return the Y coordinate of the first control point of the
@@ -65,7 +65,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getCtrlY1(): double
+                public abstract getCtrlY1(): number /*double*/
                 /**
                  * Returns the first control point.
                  * @return a {#code Point2D} that is the first control point of
@@ -73,7 +73,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getCtrlP1(): java.awt.geom.Point2D
+                public abstract getCtrlP1(): java.awt.geom.Point2D
                 /**
                  * Returns the X coordinate of the second control point
                  * in double precision.
@@ -82,7 +82,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getCtrlX2(): double
+                public abstract getCtrlX2(): number /*double*/
                 /**
                  * Returns the Y coordinate of the second control point
                  * in double precision.
@@ -91,7 +91,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getCtrlY2(): double
+                public abstract getCtrlY2(): number /*double*/
                 /**
                  * Returns the second control point.
                  * @return a {#code Point2D} that is the second control point of
@@ -99,7 +99,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getCtrlP2(): java.awt.geom.Point2D
+                public abstract getCtrlP2(): java.awt.geom.Point2D
                 /**
                  * Returns the X coordinate of the end point in double precision.
                  * @return the X coordinate of the end point of the
@@ -107,7 +107,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getX2(): double
+                public abstract getX2(): number /*double*/
                 /**
                  * Returns the Y coordinate of the end point in double precision.
                  * @return the Y coordinate of the end point of the
@@ -115,7 +115,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getY2(): double
+                public abstract getY2(): number /*double*/
                 /**
                  * Returns the end point.
                  * @return a {#code Point2D} that is the end point of
@@ -123,7 +123,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getP2(): java.awt.geom.Point2D
+                public abstract getP2(): java.awt.geom.Point2D
                 /**
                  * Sets the location of the end points and control points of this curve
                  * to the specified double coordinates.
@@ -146,7 +146,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setCurve(x1: number /*double*/, y1: number /*double*/, ctrlx1: number /*double*/, ctrly1: number /*double*/, ctrlx2: number /*double*/, ctrly2: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                public abstract setCurve(x1: number /*double*/, y1: number /*double*/, ctrlx1: number /*double*/, ctrly1: number /*double*/, ctrlx2: number /*double*/, ctrly2: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                 /**
                  * Sets the location of the end points and control points of this curve
                  * to the double coordinates at the specified offset in the specified
@@ -158,7 +158,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setCurve(coords: number /*double*/[], offset: number /*int*/): void
+                public setCurve(coords: number /*double*/[], offset: number /*int*/): void
                 /**
                  * Sets the location of the end points and control points of this curve
                  * to the specified <code>Point2D</code> coordinates.
@@ -173,7 +173,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setCurve(p1: java.awt.geom.Point2D, cp1: java.awt.geom.Point2D, cp2: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
+                public setCurve(p1: java.awt.geom.Point2D, cp1: java.awt.geom.Point2D, cp2: java.awt.geom.Point2D, p2: java.awt.geom.Point2D): void
                 /**
                  * Sets the location of the end points and control points of this curve
                  * to the coordinates of the <code>Point2D</code> objects at the specified
@@ -185,7 +185,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setCurve(pts: java.awt.geom.Point2D[], offset: number /*int*/): void
+                public setCurve(pts: java.awt.geom.Point2D[], offset: number /*int*/): void
                 /**
                  * Sets the location of the end points and control points of this curve
                  * to the same as those in the specified <code>CubicCurve2D</code>.
@@ -193,7 +193,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setCurve(c: java.awt.geom.CubicCurve2D): void
+                public setCurve(c: java.awt.geom.CubicCurve2D): void
                 /**
                  * Returns the square of the flatness of the cubic curve specified
                  * by the indicated control points. The flatness is the maximum distance
@@ -219,7 +219,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFlatnessSq(x1: number /*double*/, y1: number /*double*/, ctrlx1: number /*double*/, ctrly1: number /*double*/, ctrlx2: number /*double*/, ctrly2: number /*double*/, x2: number /*double*/, y2: number /*double*/): double
+                public static getFlatnessSq(x1: number /*double*/, y1: number /*double*/, ctrlx1: number /*double*/, ctrly1: number /*double*/, ctrlx2: number /*double*/, ctrly2: number /*double*/, x2: number /*double*/, y2: number /*double*/): number /*double*/
                 /**
                  * Returns the flatness of the cubic curve specified
                  * by the indicated control points. The flatness is the maximum distance
@@ -245,7 +245,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFlatness(x1: number /*double*/, y1: number /*double*/, ctrlx1: number /*double*/, ctrly1: number /*double*/, ctrlx2: number /*double*/, ctrly2: number /*double*/, x2: number /*double*/, y2: number /*double*/): double
+                public static getFlatness(x1: number /*double*/, y1: number /*double*/, ctrlx1: number /*double*/, ctrly1: number /*double*/, ctrlx2: number /*double*/, ctrly2: number /*double*/, x2: number /*double*/, y2: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the flatness of the cubic curve specified
                  * by the control points stored in the indicated array at the
@@ -260,7 +260,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFlatnessSq(coords: number /*double*/[], offset: number /*int*/): double
+                public static getFlatnessSq(coords: number /*double*/[], offset: number /*int*/): number /*double*/
                 /**
                  * Returns the flatness of the cubic curve specified
                  * by the control points stored in the indicated array at the
@@ -275,7 +275,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFlatness(coords: number /*double*/[], offset: number /*int*/): double
+                public static getFlatness(coords: number /*double*/[], offset: number /*int*/): number /*double*/
                 /**
                  * Returns the square of the flatness of this curve.  The flatness is the
                  * maximum distance of a control point from the line connecting the
@@ -284,7 +284,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFlatnessSq(): double
+                public getFlatnessSq(): number /*double*/
                 /**
                  * Returns the flatness of this curve.  The flatness is the
                  * maximum distance of a control point from the line connecting the
@@ -293,7 +293,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getFlatness(): double
+                public getFlatness(): number /*double*/
                 /**
                  * Subdivides this cubic curve and stores the resulting two
                  * subdivided curves into the left and right curve parameters.
@@ -306,7 +306,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                subdivide(left: java.awt.geom.CubicCurve2D, right: java.awt.geom.CubicCurve2D): void
+                public subdivide(left: java.awt.geom.CubicCurve2D, right: java.awt.geom.CubicCurve2D): void
                 /**
                  * Subdivides the cubic curve specified by the <code>src</code> parameter
                  * and stores the resulting two subdivided curves into the
@@ -321,7 +321,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                subdivide(src: java.awt.geom.CubicCurve2D, left: java.awt.geom.CubicCurve2D, right: java.awt.geom.CubicCurve2D): void
+                public static subdivide(src: java.awt.geom.CubicCurve2D, left: java.awt.geom.CubicCurve2D, right: java.awt.geom.CubicCurve2D): void
                 /**
                  * Subdivides the cubic curve specified by the coordinates
                  * stored in the <code>src</code> array at indices <code>srcoff</code>
@@ -351,7 +351,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                subdivide(src: number /*double*/[], srcoff: number /*int*/, left: number /*double*/[], leftoff: number /*int*/, right: number /*double*/[], rightoff: number /*int*/): void
+                public static subdivide(src: number /*double*/[], srcoff: number /*int*/, left: number /*double*/[], leftoff: number /*int*/, right: number /*double*/[], rightoff: number /*int*/): void
                 /**
                  * Solves the cubic whose coefficients are in the <code>eqn</code>
                  * array and places the non-complex roots back into the same array,
@@ -369,7 +369,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                solveCubic(eqn: number /*double*/[]): int
+                public static solveCubic(eqn: number /*double*/[]): number /*int*/
                 /**
                  * Solve the cubic whose coefficients are in the <code>eqn</code>
                  * array and place the non-complex roots into the <code>res</code>
@@ -388,49 +388,49 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                solveCubic(eqn: number /*double*/[], res: number /*double*/[]): int
+                public static solveCubic(eqn: number /*double*/[], res: number /*double*/[]): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(p: java.awt.geom.Point2D): boolean
+                public contains(p: java.awt.geom.Point2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(r: java.awt.geom.Rectangle2D): boolean
+                public intersects(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(r: java.awt.geom.Rectangle2D): boolean
+                public contains(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds(): java.awt.Rectangle
+                public getBounds(): java.awt.Rectangle
                 /**
                  * Returns an iteration object that defines the boundary of the
                  * shape.
@@ -448,7 +448,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                 /**
                  * Return an iteration object that defines the boundary of the
                  * flattened shape.
@@ -469,7 +469,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
                 /**
                  * Creates a new object of the same class as this object.
                  * @return a clone of this instance.
@@ -478,7 +478,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

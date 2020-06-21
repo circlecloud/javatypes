@@ -42,7 +42,7 @@ declare namespace org {
                  * @see org.springframework.context.MessageSource
                  */
                 // @ts-ignore
-                class AbstractApplicationContext extends DefaultResourceLoader implements org.springframework.context.ConfigurableApplicationContext {
+                abstract class AbstractApplicationContext extends DefaultResourceLoader implements org.springframework.context.ConfigurableApplicationContext {
                     /**
                      * Create a new AbstractApplicationContext with no parent.
                      */
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see MessageSource
                      */
                     // @ts-ignore
-                    readonly MESSAGE_SOURCE_BEAN_NAME: string
+                    public static readonly MESSAGE_SOURCE_BEAN_NAME: java.lang.String | string
                     /**
                      * Name of the LifecycleProcessor bean in the factory.
                      * If none is supplied, a DefaultLifecycleProcessor is used.
@@ -68,7 +68,7 @@ declare namespace org {
                      * @see org.springframework.context.support.DefaultLifecycleProcessor
                      */
                     // @ts-ignore
-                    readonly LIFECYCLE_PROCESSOR_BEAN_NAME: string
+                    public static readonly LIFECYCLE_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * Name of the ApplicationEventMulticaster bean in the factory.
                      * If none is supplied, a default SimpleApplicationEventMulticaster is used.
@@ -76,7 +76,7 @@ declare namespace org {
                      * @see org.springframework.context.event.SimpleApplicationEventMulticaster
                      */
                     // @ts-ignore
-                    readonly APPLICATION_EVENT_MULTICASTER_BEAN_NAME: string
+                    public static readonly APPLICATION_EVENT_MULTICASTER_BEAN_NAME: java.lang.String | string
                     /**
                      * Logger used by this class. Available to subclasses.
                      */
@@ -89,30 +89,30 @@ declare namespace org {
                      * @param id the unique id of the context
                      */
                     // @ts-ignore
-                    setId(id: string): void
+                    public setId(id: java.lang.String | string): void
                     // @ts-ignore
-                    getId(): java.lang.String
+                    public getId(): string
                     // @ts-ignore
-                    getApplicationName(): java.lang.String
+                    public getApplicationName(): string
                     /**
                      * Set a friendly name for this context.
                      * Typically done during initialization of concrete context implementations.
                      * <p>Default is the object id of the context instance.
                      */
                     // @ts-ignore
-                    setDisplayName(displayName: string): void
+                    public setDisplayName(displayName: java.lang.String | string): void
                     /**
                      * Return a friendly name for this context.
                      * @return a display name for this context (never {#code null})
                      */
                     // @ts-ignore
-                    getDisplayName(): java.lang.String
+                    public getDisplayName(): string
                     /**
                      * Return the parent context, or {@code null} if there is no parent
                      * (that is, this context is the root of the context hierarchy).
                      */
                     // @ts-ignore
-                    getParent(): org.springframework.context.ApplicationContext
+                    public getParent(): org.springframework.context.ApplicationContext
                     /**
                      * Set the {@code Environment} for this application context.
                      * <p>Default value is determined by {@link #createEnvironment()}. Replacing the
@@ -122,7 +122,7 @@ declare namespace org {
                      * @see org.springframework.context.support.AbstractApplicationContext#createEnvironment
                      */
                     // @ts-ignore
-                    setEnvironment(environment: ConfigurableEnvironment): void
+                    public setEnvironment(environment: ConfigurableEnvironment): void
                     /**
                      * Return the {@code Environment} for this application context in configurable
                      * form, allowing for further customization.
@@ -130,7 +130,7 @@ declare namespace org {
                      * {@link #createEnvironment()}.
                      */
                     // @ts-ignore
-                    getEnvironment(): ConfigurableEnvironment
+                    public getEnvironment(): ConfigurableEnvironment
                     /**
                      * Create and return a new {@link StandardEnvironment}.
                      * <p>Subclasses may override this method in order to supply
@@ -144,12 +144,12 @@ declare namespace org {
                      * @see #getBeanFactory()
                      */
                     // @ts-ignore
-                    getAutowireCapableBeanFactory(): AutowireCapableBeanFactory
+                    public getAutowireCapableBeanFactory(): AutowireCapableBeanFactory
                     /**
                      * Return the timestamp (ms) when this context was first loaded.
                      */
                     // @ts-ignore
-                    getStartupDate(): long
+                    public getStartupDate(): number /*long*/
                     /**
                      * Publish the given event to all listeners.
                      * <p>Note: Listeners get initialized after the MessageSource, to be able
@@ -159,7 +159,7 @@ declare namespace org {
                      *  standard framework event)
                      */
                     // @ts-ignore
-                    publishEvent(event: org.springframework.context.ApplicationEvent): void
+                    public publishEvent(event: org.springframework.context.ApplicationEvent): void
                     /**
                      * Publish the given event to all listeners.
                      * <p>Note: Listeners get initialized after the MessageSource, to be able
@@ -169,7 +169,7 @@ declare namespace org {
                      *  or a payload object to be turned into a {@link PayloadApplicationEvent})
                      */
                     // @ts-ignore
-                    publishEvent(event: any): void
+                    public publishEvent(event: java.lang.Object | any): void
                     /**
                      * Publish the given event to all listeners.
                      * @param event the event to publish (may be an {#link ApplicationEvent}
@@ -178,7 +178,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    publishEvent(event: any, eventType: ResolvableType): void
+                    publishEvent(event: java.lang.Object | any, eventType: ResolvableType): void
                     /**
                      * Return the ResourcePatternResolver to use for resolving location patterns
                      * into Resource instances. Default is a
@@ -204,24 +204,24 @@ declare namespace org {
                      * @see ConfigurableEnvironment#merge(ConfigurableEnvironment)
                      */
                     // @ts-ignore
-                    setParent(parent: org.springframework.context.ApplicationContext): void
+                    public setParent(parent: org.springframework.context.ApplicationContext): void
                     // @ts-ignore
-                    addBeanFactoryPostProcessor(postProcessor: BeanFactoryPostProcessor): void
+                    public addBeanFactoryPostProcessor(postProcessor: BeanFactoryPostProcessor): void
                     /**
                      * Return the list of BeanFactoryPostProcessors that will get applied
                      * to the internal BeanFactory.
                      */
                     // @ts-ignore
-                    getBeanFactoryPostProcessors(): java.util.List<BeanFactoryPostProcessor>
+                    public getBeanFactoryPostProcessors(): Array<BeanFactoryPostProcessor>
                     // @ts-ignore
-                    addApplicationListener(listener: org.springframework.context.ApplicationListener<any>): void
+                    public addApplicationListener(listener: org.springframework.context.ApplicationListener<any>): void
                     /**
                      * Return the list of statically specified ApplicationListeners.
                      */
                     // @ts-ignore
-                    getApplicationListeners(): java.util.Collection<org.springframework.context.ApplicationListener<?>>
+                    public getApplicationListeners(): Array<org.springframework.context.ApplicationListener<any>>
                     // @ts-ignore
-                    refresh(): void
+                    public refresh(): void
                     /**
                      * Prepare this context for refreshing, setting its startup date and
                      * active flag as well as performing any initialization of property sources.
@@ -351,7 +351,7 @@ declare namespace org {
                      * @see #doClose()
                      */
                     // @ts-ignore
-                    registerShutdownHook(): void
+                    public registerShutdownHook(): void
                     /**
                      * Callback for destruction of this instance, originally attached
                      * to a {@code DisposableBean} implementation (not anymore in 5.0).
@@ -360,7 +360,7 @@ declare namespace org {
                      * @deprecated as of Spring Framework 5.0, in favor of {#link #close()}
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Close this application context, destroying all beans in its bean factory.
                      * <p>Delegates to {@code doClose()} for the actual closing procedure.
@@ -369,7 +369,7 @@ declare namespace org {
                      * @see #registerShutdownHook()
                      */
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     /**
                      * Actually performs context closing: publishes a ContextClosedEvent and
                      * destroys the singletons in the bean factory of this application context.
@@ -405,7 +405,7 @@ declare namespace org {
                     // @ts-ignore
                     onClose(): void
                     // @ts-ignore
-                    isActive(): boolean
+                    public isActive(): boolean
                     /**
                      * Assert that this context's BeanFactory is currently active,
                      * throwing an {@link IllegalStateException} if it isn't.
@@ -418,57 +418,57 @@ declare namespace org {
                     // @ts-ignore
                     assertBeanFactoryActive(): void
                     // @ts-ignore
-                    getBean(name: string): java.lang.Object
+                    public getBean(name: java.lang.String | string): any
                     // @ts-ignore
-                    getBean<T>(name: string, requiredType: java.lang.Class<T>): T
+                    public getBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>): T
                     // @ts-ignore
-                    getBean(name: string, ...args: any[]): java.lang.Object
+                    public getBean(name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
                     // @ts-ignore
-                    getBean<T>(requiredType: java.lang.Class<T>): T
+                    public getBean<T>(requiredType: java.lang.Class<T>): T
                     // @ts-ignore
-                    getBean<T>(requiredType: java.lang.Class<T>, ...args: any[]): T
+                    public getBean<T>(requiredType: java.lang.Class<T>, ...args: java.lang.Object[] | any[]): T
                     // @ts-ignore
-                    getBeanProvider<T>(requiredType: java.lang.Class<T>): <any>
+                    public getBeanProvider<T>(requiredType: java.lang.Class<T>): object
                     // @ts-ignore
-                    getBeanProvider<T>(requiredType: ResolvableType): <any>
+                    public getBeanProvider<T>(requiredType: ResolvableType): object
                     // @ts-ignore
-                    containsBean(name: string): boolean
+                    public containsBean(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    isSingleton(name: string): boolean
+                    public isSingleton(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    isPrototype(name: string): boolean
+                    public isPrototype(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    isTypeMatch(name: string, typeToMatch: ResolvableType): boolean
+                    public isTypeMatch(name: java.lang.String | string, typeToMatch: ResolvableType): boolean
                     // @ts-ignore
-                    getType(name: string): java.lang.Class<?>
+                    public getType(name: java.lang.String | string): java.lang.Class<any>
                     // @ts-ignore
-                    getType(name: string, allowFactoryBeanInit: boolean): java.lang.Class<?>
+                    public getType(name: java.lang.String | string, allowFactoryBeanInit: boolean): java.lang.Class<any>
                     // @ts-ignore
-                    getAliases(name: string): java.lang.String[]
+                    public getAliases(name: java.lang.String | string): string[]
                     // @ts-ignore
-                    containsBeanDefinition(beanName: string): boolean
+                    public containsBeanDefinition(beanName: java.lang.String | string): boolean
                     // @ts-ignore
-                    getBeanDefinitionCount(): int
+                    public getBeanDefinitionCount(): number /*int*/
                     // @ts-ignore
-                    getBeanDefinitionNames(): java.lang.String[]
+                    public getBeanDefinitionNames(): string[]
                     // @ts-ignore
-                    getBeanNamesForType(type: ResolvableType): java.lang.String[]
+                    public getBeanNamesForType(type: ResolvableType): string[]
                     // @ts-ignore
-                    getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): java.lang.String[]
+                    public getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): string[]
                     // @ts-ignore
-                    getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String, T>
+                    public getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String | string, T>
                     // @ts-ignore
-                    getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String, T>
+                    public getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String | string, T>
                     // @ts-ignore
-                    getBeanNamesForAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.lang.String[]
+                    public getBeanNamesForAnnotation(annotationType: java.lang.Class<any>): string[]
                     // @ts-ignore
-                    getBeansWithAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Map<java.lang.String, java.lang.Object>
+                    public getBeansWithAnnotation(annotationType: java.lang.Class<any>): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: string, annotationType: java.lang.Class<A>): A
+                    public findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: java.lang.String | string, annotationType: java.lang.Class<A>): A
                     // @ts-ignore
-                    getParentBeanFactory(): BeanFactory
+                    public getParentBeanFactory(): BeanFactory
                     // @ts-ignore
-                    containsLocalBean(name: string): boolean
+                    public containsLocalBean(name: java.lang.String | string): boolean
                     /**
                      * Return the internal bean factory of the parent context if it implements
                      * ConfigurableApplicationContext; else, return the parent context itself.
@@ -477,11 +477,11 @@ declare namespace org {
                     // @ts-ignore
                     getInternalParentBeanFactory(): BeanFactory
                     // @ts-ignore
-                    getMessage(code: string, args: any[], defaultMessage: string, locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], defaultMessage: java.lang.String | string, locale: java.util.Locale): string
                     // @ts-ignore
-                    getMessage(code: string, args: any[], locale: java.util.Locale): java.lang.String
+                    public getMessage(code: java.lang.String | string, args: java.lang.Object[] | any[], locale: java.util.Locale): string
                     // @ts-ignore
-                    getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): java.lang.String
+                    public getMessage(resolvable: org.springframework.context.MessageSourceResolvable, locale: java.util.Locale): string
                     /**
                      * Return the internal message source of the parent context if it is an
                      * AbstractApplicationContext too; else, return the parent context itself.
@@ -489,13 +489,13 @@ declare namespace org {
                     // @ts-ignore
                     getInternalParentMessageSource(): org.springframework.context.MessageSource
                     // @ts-ignore
-                    getResources(locationPattern: string): Resource[]
+                    public getResources(locationPattern: java.lang.String | string): Resource[]
                     // @ts-ignore
-                    start(): void
+                    public start(): void
                     // @ts-ignore
-                    stop(): void
+                    public stop(): void
                     // @ts-ignore
-                    isRunning(): boolean
+                    public isRunning(): boolean
                     /**
                      * Subclasses must implement this method to perform the actual configuration load.
                      * The method is invoked by {@link #refresh()} before any other initialization work.
@@ -529,12 +529,12 @@ declare namespace org {
                      * @see #closeBeanFactory()
                      */
                     // @ts-ignore
-                    abstract getBeanFactory(): ConfigurableListableBeanFactory
+                    public abstract getBeanFactory(): ConfigurableListableBeanFactory
                     /**
                      * Return information about this context.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

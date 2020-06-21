@@ -33,41 +33,41 @@ declare namespace org {
                     // @ts-ignore
                     constructor(rand: java.util.Random)
                     // @ts-ignore
-                    readonly SQRT_3: number /*double*/
+                    static readonly SQRT_3: number /*double*/
                     // @ts-ignore
-                    readonly SQRT_5: number /*double*/
+                    static readonly SQRT_5: number /*double*/
                     // @ts-ignore
-                    readonly F2: number /*double*/
+                    static readonly F2: number /*double*/
                     // @ts-ignore
-                    readonly G2: number /*double*/
+                    static readonly G2: number /*double*/
                     // @ts-ignore
-                    readonly G22: number /*double*/
+                    static readonly G22: number /*double*/
                     // @ts-ignore
-                    readonly F3: number /*double*/
+                    static readonly F3: number /*double*/
                     // @ts-ignore
-                    readonly G3: number /*double*/
+                    static readonly G3: number /*double*/
                     // @ts-ignore
-                    readonly F4: number /*double*/
+                    static readonly F4: number /*double*/
                     // @ts-ignore
-                    readonly G4: number /*double*/
+                    static readonly G4: number /*double*/
                     // @ts-ignore
-                    readonly G42: number /*double*/
+                    static readonly G42: number /*double*/
                     // @ts-ignore
-                    readonly G43: number /*double*/
+                    static readonly G43: number /*double*/
                     // @ts-ignore
-                    readonly G44: number /*double*/
+                    static readonly G44: number /*double*/
                     // @ts-ignore
-                    readonly grad4: number /*int*/[][]
+                    static readonly grad4: number /*int*/[][]
                     // @ts-ignore
-                    readonly simplex: number /*int*/[][]
+                    static readonly simplex: number /*int*/[][]
                     // @ts-ignore
                     offsetW: number /*double*/
                     // @ts-ignore
-                    dot(g: number /*int*/[], x: number /*double*/, y: number /*double*/): double
+                    static dot(g: number /*int*/[], x: number /*double*/, y: number /*double*/): number /*double*/
                     // @ts-ignore
-                    dot(g: number /*int*/[], x: number /*double*/, y: number /*double*/, z: number /*double*/): double
+                    static dot(g: number /*int*/[], x: number /*double*/, y: number /*double*/, z: number /*double*/): number /*double*/
                     // @ts-ignore
-                    dot(g: number /*int*/[], x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/): double
+                    static dot(g: number /*int*/[], x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 1D unseeded simplex noise for the given
                      * coordinates in 1D space
@@ -75,7 +75,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(xin: number /*double*/): double
+                    public static getNoise(xin: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 2D unseeded simplex noise for the given
                      * coordinates in 2D space
@@ -84,7 +84,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(xin: number /*double*/, yin: number /*double*/): double
+                    public static getNoise(xin: number /*double*/, yin: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 3D unseeded simplex noise for the given
                      * coordinates in 3D space
@@ -94,7 +94,7 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(xin: number /*double*/, yin: number /*double*/, zin: number /*double*/): double
+                    public static getNoise(xin: number /*double*/, yin: number /*double*/, zin: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 4D simplex noise for the given coordinates in
                      * 4D space
@@ -105,11 +105,11 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    getNoise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/): double
+                    public static getNoise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/): number /*double*/
                     // @ts-ignore
-                    noise(xin: number /*double*/, yin: number /*double*/, zin: number /*double*/): double
+                    public noise(xin: number /*double*/, yin: number /*double*/, zin: number /*double*/): number /*double*/
                     // @ts-ignore
-                    noise(xin: number /*double*/, yin: number /*double*/): double
+                    public noise(xin: number /*double*/, yin: number /*double*/): number /*double*/
                     /**
                      * Computes and returns the 4D simplex noise for the given coordinates in
                      * 4D space
@@ -120,13 +120,13 @@ declare namespace org {
                      * @return Noise at given location, from range -1 to 1
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, w: number /*double*/): number /*double*/
                     /**
                      * Gets the singleton unseeded instance of this generator
                      * @return Singleton
                      */
                     // @ts-ignore
-                    getInstance(): org.bukkit.util.noise.SimplexNoiseGenerator
+                    public static getInstance(): org.bukkit.util.noise.SimplexNoiseGenerator
                 }
             }
         }

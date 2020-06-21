@@ -24,12 +24,12 @@ declare namespace java {
                  * that declares the field represented by this {@code Field} object.
                  */
                 // @ts-ignore
-                getDeclaringClass(): java.lang.Class<?>
+                public getDeclaringClass(): java.lang.Class<any>
                 /**
                  * Returns the name of the field represented by this {@code Field} object.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the Java language modifiers for the field represented
                  * by this {@code Field} object, as an integer. The {@code Modifier} class should
@@ -37,7 +37,7 @@ declare namespace java {
                  * @see Modifier
                  */
                 // @ts-ignore
-                getModifiers(): int
+                public getModifiers(): number /*int*/
                 /**
                  * Returns {@code true} if this field represents an element of
                  * an enumerated type; returns {@code false} otherwise.
@@ -46,7 +46,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isEnumConstant(): boolean
+                public isEnumConstant(): boolean
                 /**
                  * Returns {@code true} if this field is a synthetic
                  * field; returns {@code false} otherwise.
@@ -55,7 +55,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isSynthetic(): boolean
+                public isSynthetic(): boolean
                 /**
                  * Returns a {@code Class} object that identifies the
                  * declared type for the field represented by this
@@ -64,7 +64,7 @@ declare namespace java {
                  *  type of the field represented by this object
                  */
                 // @ts-ignore
-                getType(): java.lang.Class<?>
+                public getType(): java.lang.Class<any>
                 /**
                  * Returns a {@code Type} object that represents the declared type for
                  * the field represented by this {@code Field} object.
@@ -87,7 +87,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getGenericType(): java.lang.reflect.Type
+                public getGenericType(): java.lang.reflect.Type
                 /**
                  * Compares this {@code Field} against the specified object.  Returns
                  * true if the objects are the same.  Two {@code Field} objects are the same if
@@ -95,14 +95,14 @@ declare namespace java {
                  * and type.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode for this {@code Field}.  This is computed as the
                  * exclusive-or of the hashcodes for the underlying field's
                  * declaring class name and its name.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this {@code Field}.  The format is
                  * the access modifiers for the field, if any, followed
@@ -123,7 +123,7 @@ declare namespace java {
                  * @jls 8.3.1 Field Modifiers
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a string describing this {@code Field}, including
                  * its generic type.  The format is the access modifiers for the
@@ -142,7 +142,7 @@ declare namespace java {
                  * @jls 8.3.1 Field Modifiers
                  */
                 // @ts-ignore
-                toGenericString(): java.lang.String
+                public toGenericString(): string
                 /**
                  * Returns the value of the field represented by this {@code Field}, on
                  * the specified object. The value is automatically wrapped in an
@@ -183,7 +183,7 @@ declare namespace java {
                  *               by this method fails.
                  */
                 // @ts-ignore
-                get(obj: any): java.lang.Object
+                public get(obj: java.lang.Object | any): any
                 /**
                  * Gets the value of a static or instance {@code boolean} field.
                  * @param obj the object to extract the {#code boolean} value
@@ -205,7 +205,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getBoolean(obj: any): boolean
+                public getBoolean(obj: java.lang.Object | any): boolean
                 /**
                  * Gets the value of a static or instance {@code byte} field.
                  * @param obj the object to extract the {#code byte} value
@@ -227,7 +227,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getByte(obj: any): byte
+                public getByte(obj: java.lang.Object | any): number /*byte*/
                 /**
                  * Gets the value of a static or instance field of type
                  * {@code char} or of another primitive type convertible to
@@ -251,7 +251,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getChar(obj: any): char
+                public getChar(obj: java.lang.Object | any): string
                 /**
                  * Gets the value of a static or instance field of type
                  * {@code short} or of another primitive type convertible to
@@ -275,7 +275,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getShort(obj: any): short
+                public getShort(obj: java.lang.Object | any): number /*short*/
                 /**
                  * Gets the value of a static or instance field of type
                  * {@code int} or of another primitive type convertible to
@@ -299,7 +299,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getInt(obj: any): int
+                public getInt(obj: java.lang.Object | any): number /*int*/
                 /**
                  * Gets the value of a static or instance field of type
                  * {@code long} or of another primitive type convertible to
@@ -323,7 +323,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getLong(obj: any): long
+                public getLong(obj: java.lang.Object | any): number /*long*/
                 /**
                  * Gets the value of a static or instance field of type
                  * {@code float} or of another primitive type convertible to
@@ -347,7 +347,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getFloat(obj: any): float
+                public getFloat(obj: java.lang.Object | any): number /*float*/
                 /**
                  * Gets the value of a static or instance field of type
                  * {@code double} or of another primitive type convertible to
@@ -371,7 +371,7 @@ declare namespace java {
                  * @see Field#get
                  */
                 // @ts-ignore
-                getDouble(obj: any): double
+                public getDouble(obj: java.lang.Object | any): number /*double*/
                 /**
                  * Sets the field represented by this {@code Field} object on the
                  * specified object argument to the specified new value. The new
@@ -427,7 +427,7 @@ declare namespace java {
                  *               by this method fails.
                  */
                 // @ts-ignore
-                set(obj: any, value: any): void
+                public set(obj: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Sets the value of a field as a {@code boolean} on the specified object.
                  * This method is equivalent to
@@ -451,7 +451,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setBoolean(obj: any, z: boolean): void
+                public setBoolean(obj: java.lang.Object | any, z: boolean): void
                 /**
                  * Sets the value of a field as a {@code byte} on the specified object.
                  * This method is equivalent to
@@ -475,7 +475,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setByte(obj: any, b: number /*byte*/): void
+                public setByte(obj: java.lang.Object | any, b: number /*byte*/): void
                 /**
                  * Sets the value of a field as a {@code char} on the specified object.
                  * This method is equivalent to
@@ -499,7 +499,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setChar(obj: any, c: string): void
+                public setChar(obj: java.lang.Object | any, c: string): void
                 /**
                  * Sets the value of a field as a {@code short} on the specified object.
                  * This method is equivalent to
@@ -523,7 +523,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setShort(obj: any, s: number /*short*/): void
+                public setShort(obj: java.lang.Object | any, s: number /*short*/): void
                 /**
                  * Sets the value of a field as an {@code int} on the specified object.
                  * This method is equivalent to
@@ -547,7 +547,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setInt(obj: any, i: number /*int*/): void
+                public setInt(obj: java.lang.Object | any, i: number /*int*/): void
                 /**
                  * Sets the value of a field as a {@code long} on the specified object.
                  * This method is equivalent to
@@ -571,7 +571,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setLong(obj: any, l: number /*long*/): void
+                public setLong(obj: java.lang.Object | any, l: number /*long*/): void
                 /**
                  * Sets the value of a field as a {@code float} on the specified object.
                  * This method is equivalent to
@@ -595,7 +595,7 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setFloat(obj: any, f: number /*float*/): void
+                public setFloat(obj: java.lang.Object | any, f: number /*float*/): void
                 /**
                  * Sets the value of a field as a {@code double} on the specified object.
                  * This method is equivalent to
@@ -619,25 +619,25 @@ declare namespace java {
                  * @see Field#set
                  */
                 // @ts-ignore
-                setDouble(obj: any, d: number /*double*/): void
+                public setDouble(obj: java.lang.Object | any, d: number /*double*/): void
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+                public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * Returns an AnnotatedType object that represents the use of a type to specify
                  * the declared type of the field represented by this Field.
@@ -646,7 +646,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAnnotatedType(): java.lang.reflect.AnnotatedType
+                public getAnnotatedType(): java.lang.reflect.AnnotatedType
             }
         }
     }

@@ -16,7 +16,7 @@ declare namespace org {
                          * @return The location in this extent
                          */
                         // @ts-ignore
-                        getLocation(position: Vector3i): org.spongepowered.api.world.Location<? extends org.spongepowered.api.world.extent.Extent>
+                        getLocation(position: Vector3i): org.spongepowered.api.world.Location<any>
                         /**
                          * Gets a location in this extent at the given position. Essentially, this
                          * is a 3D pointer in the extent.
@@ -26,7 +26,7 @@ declare namespace org {
                          * @return The location in this extent
                          */
                         // @ts-ignore
-                        getLocation(x: number /*int*/, y: number /*int*/, z: number /*int*/): org.spongepowered.api.world.Location<? extends org.spongepowered.api.world.extent.Extent>
+                        getLocation(x: number /*int*/, y: number /*int*/, z: number /*int*/): org.spongepowered.api.world.Location<any>
                         /**
                          * Gets a location in this extent at the given position. Essentially, this
                          * is a 3D pointer in the extent. This method supports sub-block positions.
@@ -35,7 +35,7 @@ declare namespace org {
                          * @return The location in this extent
                          */
                         // @ts-ignore
-                        getLocation(position: Vector3d): org.spongepowered.api.world.Location<? extends org.spongepowered.api.world.extent.Extent>
+                        getLocation(position: Vector3d): org.spongepowered.api.world.Location<any>
                         /**
                          * Gets a location in this extent at the given position. Essentially, this
                          * is a 3D pointer in the extent. This method supports sub-block positions.
@@ -46,7 +46,7 @@ declare namespace org {
                          * @return The location in this extent
                          */
                         // @ts-ignore
-                        getLocation(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.spongepowered.api.world.Location<? extends org.spongepowered.api.world.extent.Extent>
+                        getLocation(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.spongepowered.api.world.Location<any>
                         /**
                          * Get the y value of the highest block that sunlight can reach in the given
                          * column.
@@ -57,7 +57,7 @@ declare namespace org {
                          * @return The y value of the highest opaque block
                          */
                         // @ts-ignore
-                        getHighestYAt(x: number /*int*/, z: number /*int*/): int
+                        getHighestYAt(x: number /*int*/, z: number /*int*/): number /*int*/
                         /**
                          * Get the y value of the highest block that sunlight can reach in the given
                          * column.
@@ -67,7 +67,7 @@ declare namespace org {
                          * @return The y value of the highest opaque block
                          */
                         // @ts-ignore
-                        getHighestYAt(column: Vector2i): int
+                        getHighestYAt(column: Vector2i): number /*int*/
                         /**
                          * Get the {@link Location} of the highest block that sunlight can reach in
                          * the given column.
@@ -87,7 +87,7 @@ declare namespace org {
                          * @return The y level that precipitation ends
                          */
                         // @ts-ignore
-                        getPrecipitationLevelAt(x: number /*int*/, z: number /*int*/): int
+                        getPrecipitationLevelAt(x: number /*int*/, z: number /*int*/): number /*int*/
                         /**
                          * Returns the y level that precipitation ends falling in the given column.
                          * <p>A value is still returned for columns in biomes which do not
@@ -96,7 +96,7 @@ declare namespace org {
                          * @return The y level that precipitation ends
                          */
                         // @ts-ignore
-                        getPrecipitationLevelAt(column: Vector2i): int
+                        getPrecipitationLevelAt(column: Vector2i): number /*int*/
                         /**
                          * Returns the position that precipitation ends falling in the column
                          * of the given position.
@@ -231,7 +231,7 @@ declare namespace org {
                          * @return A list of ScheduledBlockUpdates on this block
                          */
                         // @ts-ignore
-                        getScheduledUpdates(position: Vector3i): java.util.Collection<org.spongepowered.api.block.ScheduledBlockUpdate>
+                        getScheduledUpdates(position: Vector3i): Array<org.spongepowered.api.block.ScheduledBlockUpdate>
                         /**
                          * Gets a list of {@link ScheduledBlockUpdate}s on this block.
                          * @param x The X position
@@ -240,7 +240,7 @@ declare namespace org {
                          * @return A list of ScheduledBlockUpdates on this block
                          */
                         // @ts-ignore
-                        getScheduledUpdates(x: number /*int*/, y: number /*int*/, z: number /*int*/): java.util.Collection<org.spongepowered.api.block.ScheduledBlockUpdate>
+                        getScheduledUpdates(x: number /*int*/, y: number /*int*/, z: number /*int*/): Array<org.spongepowered.api.block.ScheduledBlockUpdate>
                         /**
                          * Adds a new {@link ScheduledBlockUpdate} to this block.
                          * @param position The position of the block
@@ -295,9 +295,9 @@ declare namespace org {
                         // @ts-ignore
                         getExtentView(newMin: Vector3i, newMax: Vector3i): org.spongepowered.api.world.extent.Extent
                         // @ts-ignore
-                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.MutableBiomeVolumeWorker<? extends org.spongepowered.api.world.extent.Extent>
+                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.MutableBiomeVolumeWorker<any>
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<? extends org.spongepowered.api.world.extent.Extent>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<any>
                         /**
                          * Gets the {@link UUID}, if available, of the user who created the
                          * {@link BlockSnapshot} at passed block position.
@@ -395,7 +395,7 @@ declare namespace org {
                          * @return All the intersecting block collision boxes
                          */
                         // @ts-ignore
-                        getIntersectingBlockCollisionBoxes(box: org.spongepowered.api.util.AABB): java.util.Set<org.spongepowered.api.util.AABB>
+                        getIntersectingBlockCollisionBoxes(box: org.spongepowered.api.util.AABB): Array<org.spongepowered.api.util.AABB>
                         /**
                          * Gets all the collision boxes that intersect the bounding box owned by
                          * the entity, in no particular order. There may be more than one box per
@@ -405,7 +405,7 @@ declare namespace org {
                          * @return All the intersecting collision boxes
                          */
                         // @ts-ignore
-                        getIntersectingCollisionBoxes(owner: org.spongepowered.api.entity.Entity): java.util.Set<org.spongepowered.api.util.AABB>
+                        getIntersectingCollisionBoxes(owner: org.spongepowered.api.entity.Entity): Array<org.spongepowered.api.util.AABB>
                         /**
                          * Gets all the collision boxes that intersect the bounding box owned by
                          * the entity, in no particular order. There may be more than one box per
@@ -415,7 +415,7 @@ declare namespace org {
                          * @return All the intersecting collision boxes
                          */
                         // @ts-ignore
-                        getIntersectingCollisionBoxes(owner: org.spongepowered.api.entity.Entity, box: org.spongepowered.api.util.AABB): java.util.Set<org.spongepowered.api.util.AABB>
+                        getIntersectingCollisionBoxes(owner: org.spongepowered.api.entity.Entity, box: org.spongepowered.api.util.AABB): Array<org.spongepowered.api.util.AABB>
                         /**
                          * Creates a new archetype volume from the specified section of this extent.
                          * The archetype's volume will be shifted such that the position given in

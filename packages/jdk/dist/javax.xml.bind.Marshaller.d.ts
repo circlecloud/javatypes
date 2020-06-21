@@ -264,32 +264,32 @@ declare namespace javax {
                  * the marshalled XML data.
                  */
                 // @ts-ignore
-                
+                readonly JAXB_ENCODING: java.lang.String | string
                 /**
                  * The name of the property used to specify whether or not the marshalled
                  * XML data is formatted with linefeeds and indentation.
                  */
                 // @ts-ignore
-                
+                readonly JAXB_FORMATTED_OUTPUT: java.lang.String | string
                 /**
                  * The name of the property used to specify the xsi:schemaLocation
                  * attribute value to place in the marshalled XML output.
                  */
                 // @ts-ignore
-                
+                readonly JAXB_SCHEMA_LOCATION: java.lang.String | string
                 /**
                  * The name of the property used to specify the
                  * xsi:noNamespaceSchemaLocation attribute value to place in the marshalled
                  * XML output.
                  */
                 // @ts-ignore
-                
+                readonly JAXB_NO_NAMESPACE_SCHEMA_LOCATION: java.lang.String | string
                 /**
                  * The name of the property used to specify whether or not the marshaller
                  * will generate document level events (ie calling startDocument or endDocument).
                  */
                 // @ts-ignore
-                
+                readonly JAXB_FRAGMENT: java.lang.String | string
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into the specified
                  * <tt>javax.xml.transform.Result</tt>.
@@ -315,7 +315,7 @@ declare namespace javax {
                  *       If any of the method parameters are null
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, result: javax.xml.transform.Result): void
+                marshal(jaxbElement: java.lang.Object | any, result: javax.xml.transform.Result): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into an output stream.
                  * @param jaxbElement
@@ -334,7 +334,7 @@ declare namespace javax {
                  *       If any of the method parameters are null
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, os: java.io.OutputStream): void
+                marshal(jaxbElement: java.lang.Object | any, os: java.io.OutputStream): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into a file.
                  * @param jaxbElement
@@ -354,7 +354,7 @@ declare namespace javax {
                  * @since JAXB2.1
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, output: java.io.File): void
+                marshal(jaxbElement: java.lang.Object | any, output: java.io.File): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into a Writer.
                  * @param jaxbElement
@@ -373,7 +373,7 @@ declare namespace javax {
                  *       If any of the method parameters are null
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, writer: java.io.Writer): void
+                marshal(jaxbElement: java.lang.Object | any, writer: java.io.Writer): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into SAX2 events.
                  * @param jaxbElement
@@ -392,7 +392,7 @@ declare namespace javax {
                  *       If any of the method parameters are null
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, handler: org.xml.sax.ContentHandler): void
+                marshal(jaxbElement: java.lang.Object | any, handler: org.xml.sax.ContentHandler): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into a DOM tree.
                  * @param jaxbElement
@@ -415,7 +415,7 @@ declare namespace javax {
                  *       If any of the method parameters are null
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, node: org.w3c.dom.Node): void
+                marshal(jaxbElement: java.lang.Object | any, node: org.w3c.dom.Node): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into a
                  * {@link javax.xml.stream.XMLStreamWriter}.
@@ -436,7 +436,7 @@ declare namespace javax {
                  * @since JAXB 2.0
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, writer: javax.xml.stream.XMLStreamWriter): void
+                marshal(jaxbElement: java.lang.Object | any, writer: javax.xml.stream.XMLStreamWriter): void
                 /**
                  * Marshal the content tree rooted at <tt>jaxbElement</tt> into a
                  * {@link javax.xml.stream.XMLEventWriter}.
@@ -457,7 +457,7 @@ declare namespace javax {
                  * @since JAXB 2.0
                  */
                 // @ts-ignore
-                marshal(jaxbElement: any, writer: javax.xml.stream.XMLEventWriter): void
+                marshal(jaxbElement: java.lang.Object | any, writer: javax.xml.stream.XMLEventWriter): void
                 /**
                  * Get a DOM tree view of the content tree(Optional).
                  * If the returned DOM tree is updated, these changes are also
@@ -475,7 +475,7 @@ declare namespace javax {
                  *       If any unexpected problem occurs
                  */
                 // @ts-ignore
-                getNode(contentTree: any): org.w3c.dom.Node
+                getNode(contentTree: java.lang.Object | any): org.w3c.dom.Node
                 /**
                  * Set the particular property in the underlying implementation of
                  * <tt>Marshaller</tt>.  This method can only be used to set one of
@@ -493,7 +493,7 @@ declare namespace javax {
                  *       If the name parameter is null
                  */
                 // @ts-ignore
-                setProperty(name: string, value: any): void
+                setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get the particular property in the underlying implementation of
                  * <tt>Marshaller</tt>.  This method can only be used to get one of
@@ -510,7 +510,7 @@ declare namespace javax {
                  *       If the name parameter is null
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
                 /**
                  * Allow an application to register a validation event handler.
                  * <p>
@@ -551,7 +551,7 @@ declare namespace javax {
                  * @since JAXB 2.0
                  */
                 // @ts-ignore
-                setAdapter(adapter: javax.xml.bind.annotation.adapters.XmlAdapter): void
+                setAdapter(adapter: javax.xml.bind.annotation.adapters.XmlAdapter<any>): void
                 /**
                  * Associates a configured instance of {@link XmlAdapter} with this marshaller.
                  * <p>
@@ -577,7 +577,7 @@ declare namespace javax {
                  * @since JAXB 2.0
                  */
                 // @ts-ignore
-                setAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>, adapter: A extends javax.xml.bind.annotation.adapters.XmlAdapter): void
+                setAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>, adapter: A): void
                 /**
                  * Gets the adapter associated with the specified type.
                  * This is the reverse operation of the {@link #setAdapter} method.

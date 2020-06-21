@@ -8,7 +8,7 @@ declare namespace org {
                      * necessary.
                      */
                     // @ts-ignore
-                    class AbstractEvent extends java.lang.Object implements org.spongepowered.api.event.Event {
+                    abstract class AbstractEvent extends java.lang.Object implements org.spongepowered.api.event.Event {
                         // @ts-ignore
                         constructor()
                         /**
@@ -18,7 +18,7 @@ declare namespace org {
                          * it will be set to <code>null</code>
                          */
                         // @ts-ignore
-                        currentOrder: org.spongepowered.api.event.Order
+                        public currentOrder: org.spongepowered.api.event.Order
                         /**
                          * Called once all fields have been set by the generated
                          * constructor in a subclass.

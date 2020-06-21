@@ -17,14 +17,14 @@ declare namespace java {
                  * @see ScrollPane#getHScrollbarHeight()
                  */
                 // @ts-ignore
-                getHScrollbarHeight(): int
+                getHScrollbarHeight(): number /*int*/
                 /**
                  * Returns the width of the vertical scroll bar.
                  * @return the width of the vertical scroll bar
                  * @see ScrollPane#getVScrollbarWidth()
                  */
                 // @ts-ignore
-                getVScrollbarWidth(): int
+                getVScrollbarWidth(): number /*int*/
                 /**
                  * Sets the scroll position of the child.
                  * @param x the X coordinate of the scroll position

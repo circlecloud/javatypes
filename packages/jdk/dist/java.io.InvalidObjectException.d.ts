@@ -16,7 +16,7 @@ declare namespace java {
              * @see ObjectInputValidation
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
         }
     }
 }

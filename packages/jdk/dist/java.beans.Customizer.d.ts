@@ -17,7 +17,7 @@ declare namespace java {
              * @param bean  The object to be customized.
              */
             // @ts-ignore
-            setObject(bean: any): void
+            setObject(bean: java.lang.Object | any): void
             /**
              * Register a listener for the PropertyChange event.  The customizer
              * should fire a PropertyChange event whenever it changes the target

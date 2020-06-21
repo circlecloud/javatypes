@@ -48,14 +48,14 @@ declare namespace java {
                  * @return an iterator over the children of this node
                  */
                 // @ts-ignore
-                getChildren(): java.util.Iterator<? extends java.security.cert.PolicyNode>
+                getChildren(): java.util.Iterator<any>
                 /**
                  * Returns the depth of this node in the valid policy tree.
                  * @return the depth of this node (0 for the root node, 1 for its
                  *  children, and so on)
                  */
                 // @ts-ignore
-                getDepth(): int
+                getDepth(): number /*int*/
                 /**
                  * Returns the valid policy represented by this node.
                  * @return the {#code String} OID of the valid policy
@@ -63,7 +63,7 @@ declare namespace java {
                  *  the special anyPolicy OID: "2.5.29.32.0".
                  */
                 // @ts-ignore
-                getValidPolicy(): java.lang.String
+                getValidPolicy(): string
                 /**
                  * Returns the set of policy qualifiers associated with the
                  * valid policy represented by this node.
@@ -72,7 +72,7 @@ declare namespace java {
                  *  is always an empty {@code Set}.
                  */
                 // @ts-ignore
-                getPolicyQualifiers(): java.util.Set<? extends java.security.cert.PolicyQualifierInfo>
+                getPolicyQualifiers(): Array<any>
                 /**
                  * Returns the set of expected policies that would satisfy this
                  * node's valid policy in the next certificate to be processed.
@@ -82,7 +82,7 @@ declare namespace java {
                  *  special anyPolicy OID: "2.5.29.32.0".
                  */
                 // @ts-ignore
-                getExpectedPolicies(): java.util.Set<java.lang.String>
+                getExpectedPolicies(): Array<java.lang.String | string>
                 /**
                  * Returns the criticality indicator of the certificate policy extension
                  * in the most recently processed certificate.

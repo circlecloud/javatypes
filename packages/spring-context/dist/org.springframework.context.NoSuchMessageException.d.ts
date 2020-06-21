@@ -13,13 +13,13 @@ declare namespace org {
                  * @param locale the locale that was used to search for the code within
                  */
                 // @ts-ignore
-                constructor(code: string, locale: java.util.Locale)
+                constructor(code: java.lang.String | string, locale: java.util.Locale)
                 /**
                  * Create a new exception.
                  * @param code the code that could not be resolved for given locale
                  */
                 // @ts-ignore
-                constructor(code: string)
+                constructor(code: java.lang.String | string)
             }
         }
     }

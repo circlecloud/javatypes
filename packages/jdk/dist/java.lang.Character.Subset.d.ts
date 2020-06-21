@@ -17,7 +17,7 @@ declare namespace java {
                  * @exception NullPointerException if name is {#code null}
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Compares two {@code Subset} objects for equality.
                  * This method returns {@code true} if and only if
@@ -26,7 +26,7 @@ declare namespace java {
                  * guarantee holds for all subclasses.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the standard hash code as defined by the
                  * {@link Object#hashCode} method.  This method
@@ -35,12 +35,12 @@ declare namespace java {
                  * be consistent in all subclasses.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the name of this subset.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

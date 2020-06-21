@@ -17,7 +17,7 @@ declare namespace org {
                      * @param <T> the type of element signaled
                      */
                     // @ts-ignore
-                    class AbstractListenerReadPublisher<T> extends java.lang.Object {
+                    abstract class AbstractListenerReadPublisher<T> extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -25,7 +25,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        constructor(logPrefix: string)
+                        constructor(logPrefix: java.lang.String | string)
                         /**
                          * Special logger for debugging Reactive Streams signals.
                          * @see LogDelegateFactory#getHiddenLog(Class)
@@ -34,33 +34,33 @@ declare namespace org {
                          * @see WriteResultPublisher#rsWriteResultLogger
                          */
                         // @ts-ignore
-                        rsReadLogger: Log
+                        static rsReadLogger: Log
                         /**
                          * Return the configured log message prefix.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        getLogPrefix(): java.lang.String
+                        public getLogPrefix(): string
                         // @ts-ignore
-                        subscribe(subscriber: object): void
+                        public subscribe(subscriber: object): void
                         /**
                          * Invoked when reading is possible, either in the same thread after a check
                          * via {@link #checkOnDataAvailable()}, or as a callback from the underlying
                          * container.
                          */
                         // @ts-ignore
-                        onDataAvailable(): void
+                        public onDataAvailable(): void
                         /**
                          * Sub-classes can call this method to delegate a contain notification when
                          * all data has been read.
                          */
                         // @ts-ignore
-                        onAllDataRead(): void
+                        public onAllDataRead(): void
                         /**
                          * Sub-classes can call this to delegate container error notifications.
                          */
                         // @ts-ignore
-                        onError(ex: Error): void
+                        public onError(ex: java.lang.Throwable | Error): void
                         /**
                          * Check if data is available and either call {@link #onDataAvailable()}
                          * immediately or schedule a notification.

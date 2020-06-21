@@ -41,7 +41,7 @@ declare namespace org {
                          * @since 2.1
                          */
                         // @ts-ignore
-                        addTrustedPackages(...packages: string[]): void
+                        addTrustedPackages(...packages: java.lang.String[] | string[]): void
                     }
                 }
             }

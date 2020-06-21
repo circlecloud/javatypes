@@ -57,7 +57,7 @@ declare namespace javax {
                  * enable.</p>
                  */
                 // @ts-ignore
-                createSocket(host: string, port: number /*int*/): java.net.Socket
+                public createSocket(host: java.lang.String | string, port: number /*int*/): java.net.Socket
                 /**
                  * <p>Indicates whether some other object is "equal to" this one.</p>
                  * <p>Because all instances of this class are functionally equivalent
@@ -69,7 +69,7 @@ declare namespace javax {
                  * functionally equivalent.</p>
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns a hash code value for this
                  * <code>SslRMIClientSocketFactory</code>.</p>
@@ -77,7 +77,7 @@ declare namespace javax {
                  *  <code>SslRMIClientSocketFactory</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

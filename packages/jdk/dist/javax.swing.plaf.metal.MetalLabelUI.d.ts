@@ -19,9 +19,9 @@ declare namespace javax {
                      * name in defaults table under the key "LabelUI".
                      */
                     // @ts-ignore
-                    metalLabelUI: javax.swing.plaf.metal.MetalLabelUI
+                    static metalLabelUI: javax.swing.plaf.metal.MetalLabelUI
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Just paint the text gray (Label.disabledForeground) rather than
                      * in the labels foreground color.
@@ -29,7 +29,7 @@ declare namespace javax {
                      * @see #paintEnabledText
                      */
                     // @ts-ignore
-                    paintDisabledText(l: javax.swing.JLabel, g: java.awt.Graphics, s: string, textX: number /*int*/, textY: number /*int*/): void
+                    paintDisabledText(l: javax.swing.JLabel, g: java.awt.Graphics, s: java.lang.String | string, textX: number /*int*/, textY: number /*int*/): void
                 }
             }
         }

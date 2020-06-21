@@ -66,7 +66,7 @@ declare namespace java {
                  * @param algorithm the algorithm name
                  */
                 // @ts-ignore
-                constructor(validatorSpi: java.security.cert.CertPathValidatorSpi, provider: java.security.Provider, algorithm: string)
+                constructor(validatorSpi: java.security.cert.CertPathValidatorSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
                 /**
                  * Returns a {@code CertPathValidator} object that implements the
                  * specified algorithm.
@@ -90,7 +90,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string): java.security.cert.CertPathValidator
+                public static getInstance(algorithm: java.lang.String | string): java.security.cert.CertPathValidator
                 /**
                  * Returns a {@code CertPathValidator} object that implements the
                  * specified algorithm.
@@ -118,7 +118,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: string): java.security.cert.CertPathValidator
+                public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.cert.CertPathValidator
                 /**
                  * Returns a {@code CertPathValidator} object that implements the
                  * specified algorithm.
@@ -142,20 +142,20 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: java.security.Provider): java.security.cert.CertPathValidator
+                public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.cert.CertPathValidator
                 /**
                  * Returns the {@code Provider} of this
                  * {@code CertPathValidator}.
                  * @return the {#code Provider} of this {@code CertPathValidator}
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Returns the algorithm name of this {@code CertPathValidator}.
                  * @return the algorithm name of this {#code CertPathValidator}
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
                 /**
                  * Validates the specified certification path using the specified
                  * algorithm parameter set.
@@ -175,7 +175,7 @@ declare namespace java {
                  *  inappropriate for this {@code CertPathValidator}
                  */
                 // @ts-ignore
-                validate(certPath: java.security.cert.CertPath, params: java.security.cert.CertPathParameters): java.security.cert.CertPathValidatorResult
+                public validate(certPath: java.security.cert.CertPath, params: java.security.cert.CertPathParameters): java.security.cert.CertPathValidatorResult
                 /**
                  * Returns the default {@code CertPathValidator} type as specified by
                  * the {@code certpathvalidator.type} security property, or the string
@@ -193,7 +193,7 @@ declare namespace java {
                  *  {@literal "PKIX"} if no such property exists.
                  */
                 // @ts-ignore
-                getDefaultType(): java.lang.String
+                public static getDefaultType(): string
                 /**
                  * Returns a {@code CertPathChecker} that the encapsulated
                  * {@code CertPathValidatorSpi} implementation uses to check the revocation
@@ -209,7 +209,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getRevocationChecker(): java.security.cert.CertPathChecker
+                public getRevocationChecker(): java.security.cert.CertPathChecker
             }
         }
     }

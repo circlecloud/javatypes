@@ -123,7 +123,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class ByteBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.ByteBuffer> {
+        abstract class ByteBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.ByteBuffer> {
             /**
              * Allocates a new direct byte buffer.
              * <p> The new buffer's position will be zero, its limit will be its
@@ -137,7 +137,7 @@ declare namespace java {
              *           If the <tt>capacity</tt> is a negative integer
              */
             // @ts-ignore
-            allocateDirect(capacity: number /*int*/): java.nio.ByteBuffer
+            public static allocateDirect(capacity: number /*int*/): java.nio.ByteBuffer
             /**
              * Allocates a new byte buffer.
              * <p> The new buffer's position will be zero, its limit will be its
@@ -151,7 +151,7 @@ declare namespace java {
              *           If the <tt>capacity</tt> is a negative integer
              */
             // @ts-ignore
-            allocate(capacity: number /*int*/): java.nio.ByteBuffer
+            public static allocate(capacity: number /*int*/): java.nio.ByteBuffer
             /**
              * Wraps a byte array into a buffer.
              * <p> The new buffer will be backed by the given byte array;
@@ -178,7 +178,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            wrap(array: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
+            public static wrap(array: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
             /**
              * Wraps a byte array into a buffer.
              * <p> The new buffer will be backed by the given byte array;
@@ -193,7 +193,7 @@ declare namespace java {
              * @return The new byte buffer
              */
             // @ts-ignore
-            wrap(array: number /*byte*/[]): java.nio.ByteBuffer
+            public static wrap(array: number /*byte*/[]): java.nio.ByteBuffer
             /**
              * Creates a new byte buffer whose content is a shared subsequence of
              * this buffer's content.
@@ -209,7 +209,7 @@ declare namespace java {
              * @return The new byte buffer
              */
             // @ts-ignore
-            abstract slice(): java.nio.ByteBuffer
+            public abstract slice(): java.nio.ByteBuffer
             /**
              * Creates a new byte buffer that shares this buffer's content.
              * <p> The content of the new buffer will be that of this buffer.  Changes
@@ -223,7 +223,7 @@ declare namespace java {
              * @return The new byte buffer
              */
             // @ts-ignore
-            abstract duplicate(): java.nio.ByteBuffer
+            public abstract duplicate(): java.nio.ByteBuffer
             /**
              * Creates a new, read-only byte buffer that shares this buffer's
              * content.
@@ -239,7 +239,7 @@ declare namespace java {
              * @return The new, read-only byte buffer
              */
             // @ts-ignore
-            abstract asReadOnlyBuffer(): java.nio.ByteBuffer
+            public abstract asReadOnlyBuffer(): java.nio.ByteBuffer
             /**
              * Relative <i>get</i> method.  Reads the byte at this buffer's
              * current position, and then increments the position.
@@ -248,7 +248,7 @@ declare namespace java {
              *           If the buffer's current position is not smaller than its limit
              */
             // @ts-ignore
-            abstract get(): byte
+            public abstract get(): number /*byte*/
             /**
              * Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given byte into this buffer at the current
@@ -262,7 +262,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(b: number /*byte*/): java.nio.ByteBuffer
+            public abstract put(b: number /*byte*/): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method.  Reads the byte at the given
              * index.
@@ -274,7 +274,7 @@ declare namespace java {
              *           or not smaller than the buffer's limit
              */
             // @ts-ignore
-            abstract get(index: number /*int*/): byte
+            public abstract get(index: number /*int*/): number /*byte*/
             /**
              * Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given byte into this buffer at the given
@@ -291,7 +291,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(index: number /*int*/, b: number /*byte*/): java.nio.ByteBuffer
+            public abstract put(index: number /*int*/, b: number /*byte*/): java.nio.ByteBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers bytes from this buffer into the given
@@ -332,7 +332,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            get(dst: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
+            public get(dst: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers bytes from this buffer into the given
@@ -348,7 +348,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            get(dst: number /*byte*/[]): java.nio.ByteBuffer
+            public get(dst: number /*byte*/[]): java.nio.ByteBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the bytes remaining in the given source
@@ -381,7 +381,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: java.nio.ByteBuffer): java.nio.ByteBuffer
+            public put(src: java.nio.ByteBuffer): java.nio.ByteBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers bytes into this buffer from the given
@@ -422,7 +422,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
+            public put(src: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.nio.ByteBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the entire content of the given source
@@ -440,7 +440,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: number /*byte*/[]): java.nio.ByteBuffer
+            public put(src: number /*byte*/[]): java.nio.ByteBuffer
             /**
              * Tells whether or not this buffer is backed by an accessible byte
              * array.
@@ -451,7 +451,7 @@ declare namespace java {
              *           is backed by an array and is not read-only
              */
             // @ts-ignore
-            hasArray(): boolean
+            public hasArray(): boolean
             /**
              * Returns the byte array that backs this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -467,7 +467,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            array(): byte[]
+            public array(): number /*byte*/[]
             /**
              * Returns the offset within this buffer's backing array of the first
              * element of the buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -484,7 +484,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            arrayOffset(): int
+            public arrayOffset(): number /*int*/
             /**
              * Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> The bytes between the buffer's current position and its limit,
@@ -516,19 +516,19 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract compact(): java.nio.ByteBuffer
+            public abstract compact(): java.nio.ByteBuffer
             /**
              * Tells whether or not this byte buffer is direct.
              * @return <tt>true</tt> if, and only if, this buffer is direct
              */
             // @ts-ignore
-            abstract isDirect(): boolean
+            public abstract isDirect(): boolean
             /**
              * Returns a string summarizing the state of this buffer.
              * @return A summary string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the current hash code of this buffer.
              * <p> The hash code of a byte buffer depends only upon its remaining
@@ -540,7 +540,7 @@ declare namespace java {
              * @return The current hash code of this buffer
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tells whether or not this buffer is equal to another object.
              * <p> Two byte buffers are equal if, and only if,
@@ -558,7 +558,7 @@ declare namespace java {
              *            given object
              */
             // @ts-ignore
-            equals(ob: any): boolean
+            public equals(ob: java.lang.Object | any): boolean
             /**
              * Compares this buffer to another.
              * <p> Two byte buffers are compared by comparing their sequences of
@@ -571,7 +571,7 @@ declare namespace java {
              *           is less than, equal to, or greater than the given buffer
              */
             // @ts-ignore
-            compareTo(that: java.nio.ByteBuffer): int
+            public compareTo(that: java.nio.ByteBuffer): number /*int*/
             /**
              * Retrieves this buffer's byte order.
              * <p> The byte order is used when reading or writing multibyte values, and
@@ -581,7 +581,7 @@ declare namespace java {
              * @return This buffer's byte order
              */
             // @ts-ignore
-            order(): java.nio.ByteOrder
+            public order(): java.nio.ByteOrder
             /**
              * Modifies this buffer's byte order.
              * @param bo
@@ -591,7 +591,7 @@ declare namespace java {
              * @return This buffer
              */
             // @ts-ignore
-            order(bo: java.nio.ByteOrder): java.nio.ByteBuffer
+            public order(bo: java.nio.ByteOrder): java.nio.ByteBuffer
             /**
              * Relative <i>get</i> method for reading a char value.
              * <p> Reads the next two bytes at this buffer's current position,
@@ -603,7 +603,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            abstract getChar(): char
+            public abstract getChar(): string
             /**
              * Relative <i>put</i> method for writing a char
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -620,7 +620,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putChar(value: string): java.nio.ByteBuffer
+            public abstract putChar(value: string): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method for reading a char value.
              * <p> Reads two bytes at the given index, composing them into a
@@ -634,7 +634,7 @@ declare namespace java {
              *           minus one
              */
             // @ts-ignore
-            abstract getChar(index: number /*int*/): char
+            public abstract getChar(index: number /*int*/): string
             /**
              * Absolute <i>put</i> method for writing a char
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -653,7 +653,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putChar(index: number /*int*/, value: string): java.nio.ByteBuffer
+            public abstract putChar(index: number /*int*/, value: string): java.nio.ByteBuffer
             /**
              * Creates a view of this byte buffer as a char buffer.
              * <p> The content of the new buffer will start at this buffer's current
@@ -668,7 +668,7 @@ declare namespace java {
              * @return A new char buffer
              */
             // @ts-ignore
-            abstract asCharBuffer(): java.nio.CharBuffer
+            public abstract asCharBuffer(): java.nio.CharBuffer
             /**
              * Relative <i>get</i> method for reading a short value.
              * <p> Reads the next two bytes at this buffer's current position,
@@ -680,7 +680,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            abstract getShort(): short
+            public abstract getShort(): number /*short*/
             /**
              * Relative <i>put</i> method for writing a short
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -697,7 +697,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putShort(value: number /*short*/): java.nio.ByteBuffer
+            public abstract putShort(value: number /*short*/): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method for reading a short value.
              * <p> Reads two bytes at the given index, composing them into a
@@ -711,7 +711,7 @@ declare namespace java {
              *           minus one
              */
             // @ts-ignore
-            abstract getShort(index: number /*int*/): short
+            public abstract getShort(index: number /*int*/): number /*short*/
             /**
              * Absolute <i>put</i> method for writing a short
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -730,7 +730,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putShort(index: number /*int*/, value: number /*short*/): java.nio.ByteBuffer
+            public abstract putShort(index: number /*int*/, value: number /*short*/): java.nio.ByteBuffer
             /**
              * Creates a view of this byte buffer as a short buffer.
              * <p> The content of the new buffer will start at this buffer's current
@@ -745,7 +745,7 @@ declare namespace java {
              * @return A new short buffer
              */
             // @ts-ignore
-            abstract asShortBuffer(): java.nio.ShortBuffer
+            public abstract asShortBuffer(): java.nio.ShortBuffer
             /**
              * Relative <i>get</i> method for reading an int value.
              * <p> Reads the next four bytes at this buffer's current position,
@@ -757,7 +757,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            abstract getInt(): int
+            public abstract getInt(): number /*int*/
             /**
              * Relative <i>put</i> method for writing an int
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -774,7 +774,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putInt(value: number /*int*/): java.nio.ByteBuffer
+            public abstract putInt(value: number /*int*/): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method for reading an int value.
              * <p> Reads four bytes at the given index, composing them into a
@@ -788,7 +788,7 @@ declare namespace java {
              *           minus three
              */
             // @ts-ignore
-            abstract getInt(index: number /*int*/): int
+            public abstract getInt(index: number /*int*/): number /*int*/
             /**
              * Absolute <i>put</i> method for writing an int
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -807,7 +807,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putInt(index: number /*int*/, value: number /*int*/): java.nio.ByteBuffer
+            public abstract putInt(index: number /*int*/, value: number /*int*/): java.nio.ByteBuffer
             /**
              * Creates a view of this byte buffer as an int buffer.
              * <p> The content of the new buffer will start at this buffer's current
@@ -822,7 +822,7 @@ declare namespace java {
              * @return A new int buffer
              */
             // @ts-ignore
-            abstract asIntBuffer(): java.nio.IntBuffer
+            public abstract asIntBuffer(): java.nio.IntBuffer
             /**
              * Relative <i>get</i> method for reading a long value.
              * <p> Reads the next eight bytes at this buffer's current position,
@@ -834,7 +834,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            abstract getLong(): long
+            public abstract getLong(): number /*long*/
             /**
              * Relative <i>put</i> method for writing a long
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -851,7 +851,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putLong(value: number /*long*/): java.nio.ByteBuffer
+            public abstract putLong(value: number /*long*/): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method for reading a long value.
              * <p> Reads eight bytes at the given index, composing them into a
@@ -865,7 +865,7 @@ declare namespace java {
              *           minus seven
              */
             // @ts-ignore
-            abstract getLong(index: number /*int*/): long
+            public abstract getLong(index: number /*int*/): number /*long*/
             /**
              * Absolute <i>put</i> method for writing a long
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -884,7 +884,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putLong(index: number /*int*/, value: number /*long*/): java.nio.ByteBuffer
+            public abstract putLong(index: number /*int*/, value: number /*long*/): java.nio.ByteBuffer
             /**
              * Creates a view of this byte buffer as a long buffer.
              * <p> The content of the new buffer will start at this buffer's current
@@ -899,7 +899,7 @@ declare namespace java {
              * @return A new long buffer
              */
             // @ts-ignore
-            abstract asLongBuffer(): java.nio.LongBuffer
+            public abstract asLongBuffer(): java.nio.LongBuffer
             /**
              * Relative <i>get</i> method for reading a float value.
              * <p> Reads the next four bytes at this buffer's current position,
@@ -911,7 +911,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            abstract getFloat(): float
+            public abstract getFloat(): number /*float*/
             /**
              * Relative <i>put</i> method for writing a float
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -928,7 +928,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putFloat(value: number /*float*/): java.nio.ByteBuffer
+            public abstract putFloat(value: number /*float*/): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method for reading a float value.
              * <p> Reads four bytes at the given index, composing them into a
@@ -942,7 +942,7 @@ declare namespace java {
              *           minus three
              */
             // @ts-ignore
-            abstract getFloat(index: number /*int*/): float
+            public abstract getFloat(index: number /*int*/): number /*float*/
             /**
              * Absolute <i>put</i> method for writing a float
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -961,7 +961,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putFloat(index: number /*int*/, value: number /*float*/): java.nio.ByteBuffer
+            public abstract putFloat(index: number /*int*/, value: number /*float*/): java.nio.ByteBuffer
             /**
              * Creates a view of this byte buffer as a float buffer.
              * <p> The content of the new buffer will start at this buffer's current
@@ -976,7 +976,7 @@ declare namespace java {
              * @return A new float buffer
              */
             // @ts-ignore
-            abstract asFloatBuffer(): java.nio.FloatBuffer
+            public abstract asFloatBuffer(): java.nio.FloatBuffer
             /**
              * Relative <i>get</i> method for reading a double value.
              * <p> Reads the next eight bytes at this buffer's current position,
@@ -988,7 +988,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            abstract getDouble(): double
+            public abstract getDouble(): number /*double*/
             /**
              * Relative <i>put</i> method for writing a double
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -1005,7 +1005,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putDouble(value: number /*double*/): java.nio.ByteBuffer
+            public abstract putDouble(value: number /*double*/): java.nio.ByteBuffer
             /**
              * Absolute <i>get</i> method for reading a double value.
              * <p> Reads eight bytes at the given index, composing them into a
@@ -1019,7 +1019,7 @@ declare namespace java {
              *           minus seven
              */
             // @ts-ignore
-            abstract getDouble(index: number /*int*/): double
+            public abstract getDouble(index: number /*int*/): number /*double*/
             /**
              * Absolute <i>put</i> method for writing a double
              * value&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -1038,7 +1038,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract putDouble(index: number /*int*/, value: number /*double*/): java.nio.ByteBuffer
+            public abstract putDouble(index: number /*int*/, value: number /*double*/): java.nio.ByteBuffer
             /**
              * Creates a view of this byte buffer as a double buffer.
              * <p> The content of the new buffer will start at this buffer's current
@@ -1053,7 +1053,7 @@ declare namespace java {
              * @return A new double buffer
              */
             // @ts-ignore
-            abstract asDoubleBuffer(): java.nio.DoubleBuffer
+            public abstract asDoubleBuffer(): java.nio.DoubleBuffer
         }
     }
 }

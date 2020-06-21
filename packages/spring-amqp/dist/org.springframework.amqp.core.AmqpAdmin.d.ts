@@ -23,7 +23,7 @@ declare namespace org {
                      * @return true if the exchange existed and was deleted
                      */
                     // @ts-ignore
-                    deleteExchange(exchangeName: string): boolean
+                    deleteExchange(exchangeName: java.lang.String | string): boolean
                     /**
                      * Declare a queue whose name is automatically named. It is created with exclusive = true, autoDelete=true, and
                      * durable = false.
@@ -37,14 +37,14 @@ declare namespace org {
                      * @return the name of the queue.
                      */
                     // @ts-ignore
-                    declareQueue(queue: org.springframework.amqp.core.Queue): java.lang.String
+                    declareQueue(queue: org.springframework.amqp.core.Queue): string
                     /**
                      * Delete a queue, without regard for whether it is in use or has messages on it.
                      * @param queueName the name of the queue.
                      * @return true if the queue existed and was deleted.
                      */
                     // @ts-ignore
-                    deleteQueue(queueName: string): boolean
+                    deleteQueue(queueName: java.lang.String | string): boolean
                     /**
                      * Delete a queue.
                      * @param queueName the name of the queue.
@@ -52,14 +52,14 @@ declare namespace org {
                      * @param empty true if the queue should be deleted only if empty.
                      */
                     // @ts-ignore
-                    deleteQueue(queueName: string, unused: boolean, empty: boolean): void
+                    deleteQueue(queueName: java.lang.String | string, unused: boolean, empty: boolean): void
                     /**
                      * Purges the contents of the given queue.
                      * @param queueName the name of the queue.
                      * @param noWait true to not await completion of the purge.
                      */
                     // @ts-ignore
-                    purgeQueue(queueName: string, noWait: boolean): void
+                    purgeQueue(queueName: java.lang.String | string, noWait: boolean): void
                     /**
                      * Purges the contents of the given queue.
                      * @param queueName the name of the queue.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @since 2.1
                      */
                     // @ts-ignore
-                    purgeQueue(queueName: string): int
+                    purgeQueue(queueName: java.lang.String | string): number /*int*/
                     /**
                      * Declare a binding of a queue to an exchange.
                      * @param binding a description of the binding to declare.
@@ -87,7 +87,7 @@ declare namespace org {
                      * @return the properties or null if the queue doesn't exist.
                      */
                     // @ts-ignore
-                    getQueueProperties(queueName: string): java.util.Properties
+                    getQueueProperties(queueName: java.lang.String | string): java.util.Properties
                     /**
                      * Initialize the admin.
                      * @since 2.1

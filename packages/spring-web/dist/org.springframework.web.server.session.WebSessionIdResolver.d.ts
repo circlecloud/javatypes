@@ -19,14 +19,14 @@ declare namespace org {
                          * @return the session id's or an empty list
                          */
                         // @ts-ignore
-                        resolveSessionIds(exchange: org.springframework.web.server.ServerWebExchange): java.util.List<java.lang.String>
+                        resolveSessionIds(exchange: org.springframework.web.server.ServerWebExchange): Array<java.lang.String | string>
                         /**
                          * Send the given session id to the client.
                          * @param exchange the current exchange
                          * @param sessionId the session id
                          */
                         // @ts-ignore
-                        setSessionId(exchange: org.springframework.web.server.ServerWebExchange, sessionId: string): void
+                        setSessionId(exchange: org.springframework.web.server.ServerWebExchange, sessionId: java.lang.String | string): void
                         /**
                          * Instruct the client to end the current session.
                          * @param exchange the current exchange

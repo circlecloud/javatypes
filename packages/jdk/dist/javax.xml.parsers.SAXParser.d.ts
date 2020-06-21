@@ -31,7 +31,7 @@ declare namespace javax {
              * @author <a href="mailto:Jeff.Suttor#Sun.com">Jeff Suttor</a>
              */
             // @ts-ignore
-            class SAXParser extends java.lang.Object {
+            abstract class SAXParser extends java.lang.Object {
                 /**
                  * <p>Protected constructor to prevent instaniation.
                  * Use {@link javax.xml.parsers.SAXParserFactory#newSAXParser()}.</p>
@@ -52,7 +52,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * <p>Parse the content of the given {@link java.io.InputStream}
                  * instance as XML using the specified {@link org.xml.sax.HandlerBase}.
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(jis: java.io.InputStream, hb: org.xml.sax.HandlerBase): void
+                public parse(jis: java.io.InputStream, hb: org.xml.sax.HandlerBase): void
                 /**
                  * <p>Parse the content of the given {@link java.io.InputStream}
                  * instance as XML using the specified {@link org.xml.sax.HandlerBase}.
@@ -84,7 +84,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler version of this method instead.
                  */
                 // @ts-ignore
-                parse(jis: java.io.InputStream, hb: org.xml.sax.HandlerBase, systemId: string): void
+                public parse(jis: java.io.InputStream, hb: org.xml.sax.HandlerBase, systemId: java.lang.String | string): void
                 /**
                  * Parse the content of the given {@link java.io.InputStream}
                  * instance as XML using the specified
@@ -97,7 +97,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(jis: java.io.InputStream, dh: org.xml.sax.helpers.DefaultHandler): void
+                public parse(jis: java.io.InputStream, dh: org.xml.sax.helpers.DefaultHandler): void
                 /**
                  * Parse the content of the given {@link java.io.InputStream}
                  * instance as XML using the specified
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler version of this method instead.
                  */
                 // @ts-ignore
-                parse(jis: java.io.InputStream, dh: org.xml.sax.helpers.DefaultHandler, systemId: string): void
+                public parse(jis: java.io.InputStream, dh: org.xml.sax.helpers.DefaultHandler, systemId: java.lang.String | string): void
                 /**
                  * Parse the content described by the giving Uniform Resource
                  * Identifier (URI) as XML using the specified
@@ -126,7 +126,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(uri: string, hb: org.xml.sax.HandlerBase): void
+                public parse(uri: java.lang.String | string, hb: org.xml.sax.HandlerBase): void
                 /**
                  * Parse the content described by the giving Uniform Resource
                  * Identifier (URI) as XML using the specified
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(uri: string, dh: org.xml.sax.helpers.DefaultHandler): void
+                public parse(uri: java.lang.String | string, dh: org.xml.sax.helpers.DefaultHandler): void
                 /**
                  * Parse the content of the file specified as XML using the
                  * specified {@link org.xml.sax.HandlerBase}.
@@ -153,7 +153,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(f: java.io.File, hb: org.xml.sax.HandlerBase): void
+                public parse(f: java.io.File, hb: org.xml.sax.HandlerBase): void
                 /**
                  * Parse the content of the file specified as XML using the
                  * specified {@link org.xml.sax.helpers.DefaultHandler}.
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(f: java.io.File, dh: org.xml.sax.helpers.DefaultHandler): void
+                public parse(f: java.io.File, dh: org.xml.sax.helpers.DefaultHandler): void
                 /**
                  * Parse the content given {@link org.xml.sax.InputSource}
                  * as XML using the specified
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(jis: org.xml.sax.InputSource, hb: org.xml.sax.HandlerBase): void
+                public parse(jis: org.xml.sax.InputSource, hb: org.xml.sax.HandlerBase): void
                 /**
                  * Parse the content given {@link org.xml.sax.InputSource}
                  * as XML using the specified
@@ -195,7 +195,7 @@ declare namespace javax {
                  * @see org.xml.sax.DocumentHandler
                  */
                 // @ts-ignore
-                parse(jis: org.xml.sax.InputSource, dh: org.xml.sax.helpers.DefaultHandler): void
+                public parse(jis: org.xml.sax.InputSource, dh: org.xml.sax.helpers.DefaultHandler): void
                 /**
                  * Returns the SAX parser that is encapsultated by the
                  * implementation of this class.
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @throws SAXException If any SAX errors occur during processing.
                  */
                 // @ts-ignore
-                abstract getParser(): org.xml.sax.Parser
+                public abstract getParser(): org.xml.sax.Parser
                 /**
                  * Returns the {@link org.xml.sax.XMLReader} that is encapsulated by the
                  * implementation of this class.
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @throws SAXException If any SAX errors occur during processing.
                  */
                 // @ts-ignore
-                abstract getXMLReader(): org.xml.sax.XMLReader
+                public abstract getXMLReader(): org.xml.sax.XMLReader
                 /**
                  * Indicates whether or not this parser is configured to
                  * understand namespaces.
@@ -221,7 +221,7 @@ declare namespace javax {
                  *          understand namespaces; false otherwise.
                  */
                 // @ts-ignore
-                abstract isNamespaceAware(): boolean
+                public abstract isNamespaceAware(): boolean
                 /**
                  * Indicates whether or not this parser is configured to
                  * validate XML documents.
@@ -229,7 +229,7 @@ declare namespace javax {
                  *          validate XML documents; false otherwise.
                  */
                 // @ts-ignore
-                abstract isValidating(): boolean
+                public abstract isValidating(): boolean
                 /**
                  * <p>Sets the particular property in the underlying implementation of
                  * {@link org.xml.sax.XMLReader}.
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @see org.xml.sax.XMLReader#setProperty
                  */
                 // @ts-ignore
-                abstract setProperty(name: string, value: any): void
+                public abstract setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * <p>Returns the particular property requested for in the underlying
                  * implementation of {@link org.xml.sax.XMLReader}.</p>
@@ -281,7 +281,7 @@ declare namespace javax {
                  * @see org.xml.sax.XMLReader#getProperty
                  */
                 // @ts-ignore
-                abstract getProperty(name: string): java.lang.Object
+                public abstract getProperty(name: java.lang.String | string): any
                 /**
                  * <p>Get a reference to the the {@link Schema} being used by
                  * the XML processor.</p>
@@ -293,7 +293,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSchema(): javax.xml.validation.Schema
+                public getSchema(): javax.xml.validation.Schema
                 /**
                  * <p>Get the XInclude processing mode for this parser.</p>
                  * @return the return value of
@@ -305,7 +305,7 @@ declare namespace javax {
                  * @see SAXParserFactory#setXIncludeAware(boolean)
                  */
                 // @ts-ignore
-                isXIncludeAware(): boolean
+                public isXIncludeAware(): boolean
             }
         }
     }

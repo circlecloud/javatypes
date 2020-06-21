@@ -18,7 +18,7 @@ declare namespace org {
                  * @see AnnotatedElementUtils
                  */
                 // @ts-ignore
-                class AnnotationAttributes extends java.util.LinkedHashMap<java.lang.String, java.lang.Object> {
+                class AnnotationAttributes extends java.util.LinkedHashMap<java.lang.String | string, java.lang.Object | any> {
                     /**
                      * Create a new, empty {@link AnnotationAttributes} instance.
                      */
@@ -38,7 +38,7 @@ declare namespace org {
                      * @see #fromMap(Map)
                      */
                     // @ts-ignore
-                    constructor(map: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(map: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     /**
                      * Create a new {@link AnnotationAttributes} instance, wrapping the provided
                      * map and all its <em>key-value</em> pairs.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    constructor(annotationType: java.lang.Class<java.lang.annotation.Annotation>)
+                    constructor(annotationType: java.lang.Class<any>)
                     /**
                      * Create a new, empty {@link AnnotationAttributes} instance for the
                      * specified {@code annotationType}.
@@ -66,14 +66,14 @@ declare namespace org {
                      * @since 4.3.2
                      */
                     // @ts-ignore
-                    constructor(annotationType: string, classLoader: java.lang.ClassLoader)
+                    constructor(annotationType: java.lang.String | string, classLoader: java.lang.ClassLoader)
                     /**
                      * Get the type of annotation represented by this {@code AnnotationAttributes}.
                      * @return the annotation type, or {#code null} if unknown
                      * @since 4.2
                      */
                     // @ts-ignore
-                    annotationType(): java.lang.Class<? extends java.lang.annotation.Annotation>
+                    public annotationType(): java.lang.Class<any>
                     /**
                      * Get the value stored under the specified {@code attributeName} as a string.
                      * @param attributeName the name of the attribute to get;
@@ -83,7 +83,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getString(attributeName: string): java.lang.String
+                    public getString(attributeName: java.lang.String | string): string
                     /**
                      * Get the value stored under the specified {@code attributeName} as an
                      * array of strings.
@@ -97,7 +97,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getStringArray(attributeName: string): java.lang.String[]
+                    public getStringArray(attributeName: java.lang.String | string): string[]
                     /**
                      * Get the value stored under the specified {@code attributeName} as a boolean.
                      * @param attributeName the name of the attribute to get;
@@ -107,7 +107,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getBoolean(attributeName: string): boolean
+                    public getBoolean(attributeName: java.lang.String | string): boolean
                     /**
                      * Get the value stored under the specified {@code attributeName} as a number.
                      * @param attributeName the name of the attribute to get;
@@ -117,7 +117,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getNumber<N extends java.lang.Number>(attributeName: string): N
+                    public getNumber<N extends java.lang.Number>(attributeName: java.lang.String | string): N
                     /**
                      * Get the value stored under the specified {@code attributeName} as an enum.
                      * @param attributeName the name of the attribute to get;
@@ -127,7 +127,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getEnum<E extends java.lang.Enum<?>>(attributeName: string): E
+                    public getEnum<E extends java.lang.Enum<?>>(attributeName: java.lang.String | string): E
                     /**
                      * Get the value stored under the specified {@code attributeName} as a class.
                      * @param attributeName the name of the attribute to get;
@@ -137,7 +137,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getClass<T>(attributeName: string): java.lang.Class<? extends T>
+                    public getClass<T>(attributeName: java.lang.String | string): java.lang.Class<any>
                     /**
                      * Get the value stored under the specified {@code attributeName} as an
                      * array of classes.
@@ -150,7 +150,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getClassArray(attributeName: string): java.lang.Class[]
+                    public getClassArray(attributeName: java.lang.String | string): java.lang.Class<any>[]
                     /**
                      * Get the {@link AnnotationAttributes} stored under the specified
                      * {@code attributeName}.
@@ -163,7 +163,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getAnnotation(attributeName: string): org.springframework.core.annotation.AnnotationAttributes
+                    public getAnnotation(attributeName: java.lang.String | string): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Get the annotation of type {@code annotationType} stored under the
                      * specified {@code attributeName}.
@@ -176,7 +176,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    getAnnotation<A extends java.lang.annotation.Annotation>(attributeName: string, annotationType: java.lang.Class<A>): A
+                    public getAnnotation<A extends java.lang.annotation.Annotation>(attributeName: java.lang.String | string, annotationType: java.lang.Class<A>): A
                     /**
                      * Get the array of {@link AnnotationAttributes} stored under the specified
                      * {@code attributeName}.
@@ -192,7 +192,7 @@ declare namespace org {
                      *  if it is not of the expected type
                      */
                     // @ts-ignore
-                    getAnnotationArray(attributeName: string): org.springframework.core.annotation.AnnotationAttributes[]
+                    public getAnnotationArray(attributeName: java.lang.String | string): org.springframework.core.annotation.AnnotationAttributes[]
                     /**
                      * Get the array of type {@code annotationType} stored under the specified
                      * {@code attributeName}.
@@ -208,9 +208,9 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    getAnnotationArray<A extends java.lang.annotation.Annotation>(attributeName: string, annotationType: java.lang.Class<A>): A
+                    public getAnnotationArray<A extends java.lang.annotation.Annotation>(attributeName: java.lang.String | string, annotationType: java.lang.Class<A>): A
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Return an {@link AnnotationAttributes} instance based on the given map.
                      * <p>If the map is already an {@code AnnotationAttributes} instance, it
@@ -220,7 +220,7 @@ declare namespace org {
                      * @param map original source of annotation attribute <em>key-value</em> pairs
                      */
                     // @ts-ignore
-                    fromMap(map: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.core.annotation.AnnotationAttributes
+                    public static fromMap(map: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.core.annotation.AnnotationAttributes
                 }
             }
         }

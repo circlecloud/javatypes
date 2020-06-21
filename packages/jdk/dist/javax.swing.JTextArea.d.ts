@@ -94,7 +94,7 @@ declare namespace javax {
              * @param text the text to be displayed, or null
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs a new empty TextArea with the specified number of
              * rows and columns.  A default model is created, and the initial
@@ -116,7 +116,7 @@ declare namespace javax {
              *   arguments are negative.
              */
             // @ts-ignore
-            constructor(text: string, rows: number /*int*/, columns: number /*int*/)
+            constructor(text: java.lang.String | string, rows: number /*int*/, columns: number /*int*/)
             /**
              * Constructs a new JTextArea with the given document model, and defaults
              * for all of the other arguments (null, 0, 0).
@@ -136,7 +136,7 @@ declare namespace javax {
              *   arguments are negative.
              */
             // @ts-ignore
-            constructor(doc: javax.swing.text.Document, text: string, rows: number /*int*/, columns: number /*int*/)
+            constructor(doc: javax.swing.text.Document, text: java.lang.String | string, rows: number /*int*/, columns: number /*int*/)
             /**
              * Returns the class ID for the UI.
              * @return the ID ("TextAreaUI")
@@ -144,7 +144,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Creates the default implementation of the model
              * to be used at construction if one isn't explicitly
@@ -165,14 +165,14 @@ declare namespace javax {
              *  description: the number of characters to expand tabs to
              */
             // @ts-ignore
-            setTabSize(size: number /*int*/): void
+            public setTabSize(size: number /*int*/): void
             /**
              * Gets the number of characters used to expand tabs.  If the document is
              * null or doesn't have a tab setting, return a default of 8.
              * @return the number of characters
              */
             // @ts-ignore
-            getTabSize(): int
+            public getTabSize(): number /*int*/
             /**
              * Sets the line-wrapping policy of the text area.  If set
              * to true the lines will be wrapped if they are too long
@@ -187,7 +187,7 @@ declare namespace javax {
              *  description: should lines be wrapped
              */
             // @ts-ignore
-            setLineWrap(wrap: boolean): void
+            public setLineWrap(wrap: boolean): void
             /**
              * Gets the line-wrapping policy of the text area.  If set
              * to true the lines will be wrapped if they are too long
@@ -196,7 +196,7 @@ declare namespace javax {
              * @return if lines will be wrapped
              */
             // @ts-ignore
-            getLineWrap(): boolean
+            public getLineWrap(): boolean
             /**
              * Sets the style of wrapping used if the text area is wrapping
              * lines.  If set to true the lines will be wrapped at word
@@ -212,7 +212,7 @@ declare namespace javax {
              *  description: should wrapping occur at word boundaries
              */
             // @ts-ignore
-            setWrapStyleWord(word: boolean): void
+            public setWrapStyleWord(word: boolean): void
             /**
              * Gets the style of wrapping used if the text area is wrapping
              * lines.  If set to true the lines will be wrapped at word
@@ -224,7 +224,7 @@ declare namespace javax {
              * @see #setWrapStyleWord
              */
             // @ts-ignore
-            getWrapStyleWord(): boolean
+            public getWrapStyleWord(): boolean
             /**
              * Translates an offset into the components text to a
              * line number.
@@ -234,13 +234,13 @@ declare namespace javax {
              *    less than zero or greater than the document length.
              */
             // @ts-ignore
-            getLineOfOffset(offset: number /*int*/): int
+            public getLineOfOffset(offset: number /*int*/): number /*int*/
             /**
              * Determines the number of lines contained in the area.
              * @return the number of lines &gt; 0
              */
             // @ts-ignore
-            getLineCount(): int
+            public getLineCount(): number /*int*/
             /**
              * Determines the offset of the start of the given line.
              * @param line  the line number to translate &gt;= 0
@@ -251,7 +251,7 @@ declare namespace javax {
              *  getLineCount).
              */
             // @ts-ignore
-            getLineStartOffset(line: number /*int*/): int
+            public getLineStartOffset(line: number /*int*/): number /*int*/
             /**
              * Determines the offset of the end of the given line.
              * @param line  the line &gt;= 0
@@ -262,7 +262,7 @@ declare namespace javax {
              *  getLineCount).
              */
             // @ts-ignore
-            getLineEndOffset(line: number /*int*/): int
+            public getLineEndOffset(line: number /*int*/): number /*int*/
             /**
              * Inserts the specified text at the specified position.  Does nothing
              * if the model is null or if the text is null or empty.
@@ -274,7 +274,7 @@ declare namespace javax {
              * @see #replaceRange
              */
             // @ts-ignore
-            insert(str: string, pos: number /*int*/): void
+            public insert(str: java.lang.String | string, pos: number /*int*/): void
             /**
              * Appends the given text to the end of the document.  Does nothing if
              * the model is null or the string is null or empty.
@@ -282,7 +282,7 @@ declare namespace javax {
              * @see #insert
              */
             // @ts-ignore
-            append(str: string): void
+            public append(str: java.lang.String | string): void
             /**
              * Replaces text from the indicated start to end position with the
              * new text specified.  Does nothing if the model is null.  Simply
@@ -295,13 +295,13 @@ declare namespace javax {
              * @see #insert
              */
             // @ts-ignore
-            replaceRange(str: string, start: number /*int*/, end: number /*int*/): void
+            public replaceRange(str: java.lang.String | string, start: number /*int*/, end: number /*int*/): void
             /**
              * Returns the number of rows in the TextArea.
              * @return the number of rows &gt;= 0
              */
             // @ts-ignore
-            getRows(): int
+            public getRows(): number /*int*/
             /**
              * Sets the number of rows for this TextArea.  Calls invalidate() after
              * setting the new value.
@@ -311,20 +311,20 @@ declare namespace javax {
              * @beaninfo description: the number of rows preferred for display
              */
             // @ts-ignore
-            setRows(rows: number /*int*/): void
+            public setRows(rows: number /*int*/): void
             /**
              * Defines the meaning of the height of a row.  This defaults to
              * the height of the font.
              * @return the height &gt;= 1
              */
             // @ts-ignore
-            getRowHeight(): int
+            getRowHeight(): number /*int*/
             /**
              * Returns the number of columns in the TextArea.
              * @return number of columns &gt;= 0
              */
             // @ts-ignore
-            getColumns(): int
+            public getColumns(): number /*int*/
             /**
              * Sets the number of columns for this TextArea.  Does an invalidate()
              * after setting the new value.
@@ -334,7 +334,7 @@ declare namespace javax {
              * @beaninfo description: the number of columns preferred for display
              */
             // @ts-ignore
-            setColumns(columns: number /*int*/): void
+            public setColumns(columns: number /*int*/): void
             /**
              * Gets column width.
              * The meaning of what a column is can be considered a fairly weak
@@ -345,7 +345,7 @@ declare namespace javax {
              * @return the column width &gt;= 1
              */
             // @ts-ignore
-            getColumnWidth(): int
+            getColumnWidth(): number /*int*/
             /**
              * Returns the preferred size of the TextArea.  This is the
              * maximum of the size needed to display the text and the
@@ -353,14 +353,14 @@ declare namespace javax {
              * @return the size
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * Sets the current font.  This removes cached row height and column
              * width so the new font will be reflected, and calls revalidate().
              * @param f the font to use as the current font
              */
             // @ts-ignore
-            setFont(f: java.awt.Font): void
+            public setFont(f: java.awt.Font): void
             /**
              * Returns a string representation of this JTextArea. This method
              * is intended to be used only for debugging purposes, and the
@@ -370,7 +370,7 @@ declare namespace javax {
              * @return a string representation of this JTextArea.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns true if a viewport should always force the width of this
              * Scrollable to match the width of the viewport.  This is implemented
@@ -380,7 +380,7 @@ declare namespace javax {
              *  to match its own.
              */
             // @ts-ignore
-            getScrollableTracksViewportWidth(): boolean
+            public getScrollableTracksViewportWidth(): boolean
             /**
              * Returns the preferred size of the viewport if this component
              * is embedded in a JScrollPane.  This uses the desired column
@@ -390,7 +390,7 @@ declare namespace javax {
              * @see JViewport#getPreferredSize
              */
             // @ts-ignore
-            getPreferredScrollableViewportSize(): java.awt.Dimension
+            public getPreferredScrollableViewportSize(): java.awt.Dimension
             /**
              * Components that display logical rows or columns should compute
              * the scroll increment that will completely expose one new row
@@ -412,7 +412,7 @@ declare namespace javax {
              * @see #getColumnWidth
              */
             // @ts-ignore
-            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Gets the AccessibleContext associated with this JTextArea.
              * For JTextAreas, the AccessibleContext takes the form of an
@@ -422,7 +422,7 @@ declare namespace javax {
              *          AccessibleContext of this JTextArea
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

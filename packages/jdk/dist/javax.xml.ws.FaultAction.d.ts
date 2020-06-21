@@ -105,7 +105,7 @@ declare namespace javax {
              * @since JAX-WS 2.1
              */
             // @ts-ignore
-            class FaultAction implements java.lang.annotation.Annotation {
+            abstract class FaultAction implements java.lang.annotation.Annotation {
             }
         }
     }

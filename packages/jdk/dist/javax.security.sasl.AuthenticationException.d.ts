@@ -33,7 +33,7 @@ declare namespace javax {
                  * @see java.lang.Throwable#getMessage
                  */
                 // @ts-ignore
-                constructor(detail: string)
+                constructor(detail: java.lang.String | string)
                 /**
                  * Constructs a new instance of {@code AuthenticationException} with a detailed message
                  * and a root exception.
@@ -43,7 +43,7 @@ declare namespace javax {
                  * @see #getCause
                  */
                 // @ts-ignore
-                constructor(detail: string, ex: Error)
+                constructor(detail: java.lang.String | string, ex: java.lang.Throwable | Error)
             }
         }
     }

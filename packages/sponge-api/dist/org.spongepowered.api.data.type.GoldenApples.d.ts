@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class GoldenApples extends java.lang.Object {
                         // @ts-ignore
-                        readonly ENCHANTED_GOLDEN_APPLE: org.spongepowered.api.data.type.GoldenApple
+                        public static readonly ENCHANTED_GOLDEN_APPLE: org.spongepowered.api.data.type.GoldenApple
                         // @ts-ignore
-                        readonly GOLDEN_APPLE: org.spongepowered.api.data.type.GoldenApple
+                        public static readonly GOLDEN_APPLE: org.spongepowered.api.data.type.GoldenApple
                     }
                 }
             }

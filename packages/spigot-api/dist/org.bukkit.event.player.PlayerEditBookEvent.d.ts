@@ -18,7 +18,7 @@ declare namespace org {
                      * @return the book meta currently on the book
                      */
                     // @ts-ignore
-                    getPreviousBookMeta(): org.bukkit.inventory.meta.BookMeta
+                    public getPreviousBookMeta(): org.bukkit.inventory.meta.BookMeta
                     /**
                      * Gets the book meta that the player is attempting to add to the book.
                      * <p>
@@ -28,7 +28,7 @@ declare namespace org {
                      * @return the book meta that the player is attempting to add
                      */
                     // @ts-ignore
-                    getNewBookMeta(): org.bukkit.inventory.meta.BookMeta
+                    public getNewBookMeta(): org.bukkit.inventory.meta.BookMeta
                     /**
                      * Gets the inventory slot number for the book item that triggered this
                      * event.
@@ -39,36 +39,36 @@ declare namespace org {
                      * @deprecated books may be signed from off hand
                      */
                     // @ts-ignore
-                    getSlot(): int
+                    public getSlot(): number /*int*/
                     /**
                      * Sets the book meta that will actually be added to the book.
                      * @param newBookMeta new book meta
                      * @throws IllegalArgumentException if the new book meta is null
                      */
                     // @ts-ignore
-                    setNewBookMeta(newBookMeta: org.bukkit.inventory.meta.BookMeta): void
+                    public setNewBookMeta(newBookMeta: org.bukkit.inventory.meta.BookMeta): void
                     /**
                      * Gets whether or not the book is being signed. If a book is signed the
                      * Material changes from BOOK_AND_QUILL to WRITTEN_BOOK.
                      * @return true if the book is being signed
                      */
                     // @ts-ignore
-                    isSigning(): boolean
+                    public isSigning(): boolean
                     /**
                      * Sets whether or not the book is being signed. If a book is signed the
                      * Material changes from BOOK_AND_QUILL to WRITTEN_BOOK.
                      * @param signing whether or not the book is being signed.
                      */
                     // @ts-ignore
-                    setSigning(signing: boolean): void
+                    public setSigning(signing: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                 }
             }
         }

@@ -8,35 +8,35 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    class Builder extends java.lang.Object {
+                    abstract class Builder extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setName(name: string): void
+                        public setName(name: java.lang.String | string): void
                         // @ts-ignore
-                        setCacheName(cacheName: string): void
+                        public setCacheName(cacheName: java.lang.String | string): void
                         // @ts-ignore
-                        setCacheNames(...cacheNames: string[]): void
+                        public setCacheNames(...cacheNames: java.lang.String[] | string[]): void
                         // @ts-ignore
-                        getCacheNames(): java.util.Set<java.lang.String>
+                        public getCacheNames(): Array<java.lang.String | string>
                         // @ts-ignore
-                        setKey(key: string): void
+                        public setKey(key: java.lang.String | string): void
                         // @ts-ignore
-                        getKey(): java.lang.String
+                        public getKey(): string
                         // @ts-ignore
-                        getKeyGenerator(): java.lang.String
+                        public getKeyGenerator(): string
                         // @ts-ignore
-                        getCacheManager(): java.lang.String
+                        public getCacheManager(): string
                         // @ts-ignore
-                        getCacheResolver(): java.lang.String
+                        public getCacheResolver(): string
                         // @ts-ignore
-                        setKeyGenerator(keyGenerator: string): void
+                        public setKeyGenerator(keyGenerator: java.lang.String | string): void
                         // @ts-ignore
-                        setCacheManager(cacheManager: string): void
+                        public setCacheManager(cacheManager: java.lang.String | string): void
                         // @ts-ignore
-                        setCacheResolver(cacheResolver: string): void
+                        public setCacheResolver(cacheResolver: java.lang.String | string): void
                         // @ts-ignore
-                        setCondition(condition: string): void
+                        public setCondition(condition: java.lang.String | string): void
                         /**
                          * Return an identifying description for this caching operation.
                          * <p>Available to subclasses, for inclusion in their {@code toString()} result.
@@ -44,7 +44,7 @@ declare namespace org {
                         // @ts-ignore
                         getOperationDescription(): java.lang.StringBuilder
                         // @ts-ignore
-                        abstract build(): org.springframework.cache.interceptor.CacheOperation
+                        public abstract build(): org.springframework.cache.interceptor.CacheOperation
                     }
                 }
             }

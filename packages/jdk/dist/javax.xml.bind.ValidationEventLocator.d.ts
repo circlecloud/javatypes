@@ -29,26 +29,26 @@ declare namespace javax {
                  * @return the byte offset into the input source or -1 if unavailable
                  */
                 // @ts-ignore
-                getOffset(): int
+                getOffset(): number /*int*/
                 /**
                  * Return the line number if available
                  * @return the line number or -1 if unavailable
                  */
                 // @ts-ignore
-                getLineNumber(): int
+                getLineNumber(): number /*int*/
                 /**
                  * Return the column number if available
                  * @return the column number or -1 if unavailable
                  */
                 // @ts-ignore
-                getColumnNumber(): int
+                getColumnNumber(): number /*int*/
                 /**
                  * Return a reference to the object in the Java content tree if available
                  * @return a reference to the object in the Java content tree or null if
                  *          unavailable
                  */
                 // @ts-ignore
-                getObject(): java.lang.Object
+                getObject(): any
                 /**
                  * Return a reference to the DOM Node if available
                  * @return a reference to the DOM Node or null if unavailable

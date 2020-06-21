@@ -17,7 +17,7 @@ declare namespace javax {
              * @author <a href="Jeff.Suttor#Sun.com">Jeff Suttor</a>
              */
             // @ts-ignore
-            class Transformer extends java.lang.Object {
+            abstract class Transformer extends java.lang.Object {
                 /**
                  * Default constructor is protected on purpose.
                  */
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * <p>Transform the XML <code>Source</code> to a <code>Result</code>.
                  * Specific transformation behavior is determined by the settings of the
@@ -59,7 +59,7 @@ declare namespace javax {
                  *    during the course of the transformation.
                  */
                 // @ts-ignore
-                abstract transform(xmlSource: javax.xml.transform.Source, outputTarget: javax.xml.transform.Result): void
+                public abstract transform(xmlSource: javax.xml.transform.Source, outputTarget: javax.xml.transform.Result): void
                 /**
                  * Add a parameter for the transformation.
                  * <p>Pass a qualified name as a two-part string, the namespace URI
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @throws NullPointerException If value is null.
                  */
                 // @ts-ignore
-                abstract setParameter(name: string, value: any): void
+                public abstract setParameter(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get a parameter that was explicitly set with setParameter.
                  * <p>This method does not return a default parameter value, which
@@ -90,12 +90,12 @@ declare namespace javax {
                  * @return A parameter that has been set with setParameter.
                  */
                 // @ts-ignore
-                abstract getParameter(name: string): java.lang.Object
+                public abstract getParameter(name: java.lang.String | string): any
                 /**
                  * Clear all parameters set with setParameter.
                  */
                 // @ts-ignore
-                abstract clearParameters(): void
+                public abstract clearParameters(): void
                 /**
                  * Set an object that will be used to resolve URIs used in
                  * document().
@@ -105,7 +105,7 @@ declare namespace javax {
                  *  or null.
                  */
                 // @ts-ignore
-                abstract setURIResolver(resolver: javax.xml.transform.URIResolver): void
+                public abstract setURIResolver(resolver: javax.xml.transform.URIResolver): void
                 /**
                  * Get an object that will be used to resolve URIs used in
                  * document().
@@ -113,7 +113,7 @@ declare namespace javax {
                  *  or null.
                  */
                 // @ts-ignore
-                abstract getURIResolver(): javax.xml.transform.URIResolver
+                public abstract getURIResolver(): javax.xml.transform.URIResolver
                 /**
                  * Set the output properties for the transformation.  These
                  * properties will override properties set in the Templates
@@ -142,7 +142,7 @@ declare namespace javax {
                  * @see java.util.Properties
                  */
                 // @ts-ignore
-                abstract setOutputProperties(oformat: java.util.Properties): void
+                public abstract setOutputProperties(oformat: java.util.Properties): void
                 /**
                  * <p>Get a copy of the output properties for the transformation.</p>
                  * <p>The properties returned should contain properties set by the user,
@@ -174,7 +174,7 @@ declare namespace javax {
                  *    XSL Transformations (XSLT) Version 1.0</a>
                  */
                 // @ts-ignore
-                abstract getOutputProperties(): java.util.Properties
+                public abstract getOutputProperties(): java.util.Properties
                 /**
                  * Set an output property that will be in effect for the
                  * transformation.
@@ -198,7 +198,7 @@ declare namespace javax {
                  * @see javax.xml.transform.OutputKeys
                  */
                 // @ts-ignore
-                abstract setOutputProperty(name: string, value: string): void
+                public abstract setOutputProperty(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * <p>Get an output property that is in effect for the transformer.</p>
                  * <p>If a property has been set using {@link #setOutputProperty},
@@ -216,21 +216,21 @@ declare namespace javax {
                  * @see javax.xml.transform.OutputKeys
                  */
                 // @ts-ignore
-                abstract getOutputProperty(name: string): java.lang.String
+                public abstract getOutputProperty(name: java.lang.String | string): string
                 /**
                  * Set the error event listener in effect for the transformation.
                  * @param listener The new error listener.
                  * @throws IllegalArgumentException if listener is null.
                  */
                 // @ts-ignore
-                abstract setErrorListener(listener: javax.xml.transform.ErrorListener): void
+                public abstract setErrorListener(listener: javax.xml.transform.ErrorListener): void
                 /**
                  * Get the error event handler in effect for the transformation.
                  * Implementations must provide a default error listener.
                  * @return The current error handler, which should never be null.
                  */
                 // @ts-ignore
-                abstract getErrorListener(): javax.xml.transform.ErrorListener
+                public abstract getErrorListener(): javax.xml.transform.ErrorListener
             }
         }
     }

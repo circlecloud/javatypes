@@ -13,13 +13,13 @@ declare namespace org {
                          * @param value The id and value
                          */
                         // @ts-ignore
-                        constructor(value: string)
+                        constructor(value: java.lang.String | string)
                         // @ts-ignore
-                        getId(): java.lang.String
+                        public getId(): string
                         // @ts-ignore
-                        get(locale: java.util.Locale): java.lang.String
+                        public get(locale: java.util.Locale): string
                         // @ts-ignore
-                        get(locale: java.util.Locale, ...args: any[]): java.lang.String
+                        public get(locale: java.util.Locale, ...args: java.lang.Object[] | any[]): string
                     }
                 }
             }

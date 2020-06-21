@@ -39,7 +39,7 @@ declare namespace org {
                              * @param timeoutValue timeout value in milliseconds
                              */
                             // @ts-ignore
-                            constructor(timeoutValue: number)
+                            constructor(timeoutValue: java.lang.Long | number)
                             /**
                              * Create a DeferredResult with a timeout value and a default result to use
                              * in case of timeout.
@@ -47,7 +47,7 @@ declare namespace org {
                              * @param timeoutResult the result to use
                              */
                             // @ts-ignore
-                            constructor(timeoutValue: number, timeoutResult: any)
+                            constructor(timeoutValue: java.lang.Long | number, timeoutResult: java.lang.Object | any)
                             /**
                              * Variant of {@link #DeferredResult(Long, Object)} that accepts a dynamic
                              * fallback value based on a {@link Supplier}.
@@ -56,7 +56,7 @@ declare namespace org {
                              * @since 5.1.1
                              */
                             // @ts-ignore
-                            constructor(timeoutValue: number, timeoutResult: java.util.function.Supplier<any> | java.util.function$.Supplier<?>)
+                            constructor(timeoutValue: java.lang.Long | number, timeoutResult: java.util.function$.Supplier<any>)
                             /**
                              * Return {@code true} if this DeferredResult is no longer usable either
                              * because it was previously set or because the underlying request expired.
@@ -66,13 +66,13 @@ declare namespace org {
                              * expire due to a timeout or network error.
                              */
                             // @ts-ignore
-                            isSetOrExpired(): boolean
+                            public isSetOrExpired(): boolean
                             /**
                              * Return {@code true} if the DeferredResult has been set.
                              * @since 4.0
                              */
                             // @ts-ignore
-                            hasResult(): boolean
+                            public hasResult(): boolean
                             /**
                              * Return the result, or {@code null} if the result wasn't set. Since the result
                              * can also be {@code null}, it is recommended to use {@link #hasResult()} first
@@ -80,7 +80,7 @@ declare namespace org {
                              * @since 4.0
                              */
                             // @ts-ignore
-                            getResult(): java.lang.Object
+                            public getResult(): any
                             /**
                              * Register code to invoke when the async request times out.
                              * <p>This method is called from a container thread when an async request
@@ -89,7 +89,7 @@ declare namespace org {
                              * {@link DeferredResult#setErrorResult setErrorResult} to resume processing.
                              */
                             // @ts-ignore
-                            onTimeout(callback: java.lang.Runnable): void
+                            public onTimeout(callback: java.lang.Runnable): void
                             /**
                              * Register code to invoke when an error occurred during the async request.
                              * <p>This method is called from a container thread when an error occurs
@@ -100,7 +100,7 @@ declare namespace org {
                              * @since 5.0
                              */
                             // @ts-ignore
-                            onError(callback: java.util.function.Consumer<java.lang.Throwable> | java.util.function$.Consumer<java.lang.Throwable>): void
+                            public onError(callback: java.util.function$.Consumer<java.lang.Throwable | Error>): void
                             /**
                              * Register code to invoke when the async request completes.
                              * <p>This method is called from a container thread when an async request
@@ -108,14 +108,14 @@ declare namespace org {
                              * for detecting that a {@code DeferredResult} instance is no longer usable.
                              */
                             // @ts-ignore
-                            onCompletion(callback: java.lang.Runnable): void
+                            public onCompletion(callback: java.lang.Runnable): void
                             /**
                              * Provide a handler to use to handle the result value.
                              * @param resultHandler the handler
                              * @see DeferredResultProcessingInterceptor
                              */
                             // @ts-ignore
-                            setResultHandler(resultHandler: org.springframework.web.context.request.async.DeferredResult.DeferredResultHandler): void
+                            public setResultHandler(resultHandler: org.springframework.web.context.request.async.DeferredResult.DeferredResultHandler): void
                             /**
                              * Set the value for the DeferredResult and handle it.
                              * @param result the value to set
@@ -124,7 +124,7 @@ declare namespace org {
                              * @see #isSetOrExpired()
                              */
                             // @ts-ignore
-                            setResult(result: T): boolean
+                            public setResult(result: T): boolean
                             /**
                              * Set an error value for the {@link DeferredResult} and handle it.
                              * The value may be an {@link Exception} or {@link Throwable} in which case
@@ -136,7 +136,7 @@ declare namespace org {
                              * @see #isSetOrExpired()
                              */
                             // @ts-ignore
-                            setErrorResult(result: any): boolean
+                            public setErrorResult(result: java.lang.Object | any): boolean
                         }
                     }
                 }

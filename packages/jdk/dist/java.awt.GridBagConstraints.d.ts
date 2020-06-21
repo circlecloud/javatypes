@@ -60,82 +60,82 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#gridy
              */
             // @ts-ignore
-            readonly RELATIVE: number /*int*/
+            public static readonly RELATIVE: number /*int*/
             /**
              * Specifies that this component is the
              * last component in its column or row.
              */
             // @ts-ignore
-            readonly REMAINDER: number /*int*/
+            public static readonly REMAINDER: number /*int*/
             /**
              * Do not resize the component.
              */
             // @ts-ignore
-            readonly NONE: number /*int*/
+            public static readonly NONE: number /*int*/
             /**
              * Resize the component both horizontally and vertically.
              */
             // @ts-ignore
-            readonly BOTH: number /*int*/
+            public static readonly BOTH: number /*int*/
             /**
              * Resize the component horizontally but not vertically.
              */
             // @ts-ignore
-            readonly HORIZONTAL: number /*int*/
+            public static readonly HORIZONTAL: number /*int*/
             /**
              * Resize the component vertically but not horizontally.
              */
             // @ts-ignore
-            readonly VERTICAL: number /*int*/
+            public static readonly VERTICAL: number /*int*/
             /**
              * Put the component in the center of its display area.
              */
             // @ts-ignore
-            readonly CENTER: number /*int*/
+            public static readonly CENTER: number /*int*/
             /**
              * Put the component at the top of its display area,
              * centered horizontally.
              */
             // @ts-ignore
-            readonly NORTH: number /*int*/
+            public static readonly NORTH: number /*int*/
             /**
              * Put the component at the top-right corner of its display area.
              */
             // @ts-ignore
-            readonly NORTHEAST: number /*int*/
+            public static readonly NORTHEAST: number /*int*/
             /**
              * Put the component on the right side of its display area,
              * centered vertically.
              */
             // @ts-ignore
-            readonly EAST: number /*int*/
+            public static readonly EAST: number /*int*/
             /**
              * Put the component at the bottom-right corner of its display area.
              */
             // @ts-ignore
-            readonly SOUTHEAST: number /*int*/
+            public static readonly SOUTHEAST: number /*int*/
             /**
              * Put the component at the bottom of its display area, centered
              * horizontally.
              */
             // @ts-ignore
-            readonly SOUTH: number /*int*/
+            public static readonly SOUTH: number /*int*/
             /**
              * Put the component at the bottom-left corner of its display area.
              */
             // @ts-ignore
-            readonly SOUTHWEST: number /*int*/
+            public static readonly SOUTHWEST: number /*int*/
             /**
              * Put the component on the left side of its display area,
              * centered vertically.
              */
             // @ts-ignore
-            readonly WEST: number /*int*/
+            public static readonly WEST: number /*int*/
             /**
              * Put the component at the top-left corner of its display area.
              */
             // @ts-ignore
-            readonly NORTHWEST: number /*int*/
+            public static readonly NORTHWEST: number /*int*/
             /**
              * Place the component centered along the edge of its display area
              * associated with the start of a page for the current
@@ -143,7 +143,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly PAGE_START: number /*int*/
+            public static readonly PAGE_START: number /*int*/
             /**
              * Place the component centered along the edge of its display area
              * associated with the end of a page for the current
@@ -151,7 +151,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly PAGE_END: number /*int*/
+            public static readonly PAGE_END: number /*int*/
             /**
              * Place the component centered along the edge of its display area where
              * lines of text would normally begin for the current
@@ -160,7 +160,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly LINE_START: number /*int*/
+            public static readonly LINE_START: number /*int*/
             /**
              * Place the component centered along the edge of its display area where
              * lines of text would normally end for the current
@@ -169,7 +169,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly LINE_END: number /*int*/
+            public static readonly LINE_END: number /*int*/
             /**
              * Place the component in the corner of its display area where
              * the first line of text on a page would normally begin for the current
@@ -178,7 +178,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly FIRST_LINE_START: number /*int*/
+            public static readonly FIRST_LINE_START: number /*int*/
             /**
              * Place the component in the corner of its display area where
              * the first line of text on a page would normally end for the current
@@ -187,7 +187,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly FIRST_LINE_END: number /*int*/
+            public static readonly FIRST_LINE_END: number /*int*/
             /**
              * Place the component in the corner of its display area where
              * the last line of text on a page would normally start for the current
@@ -196,7 +196,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly LAST_LINE_START: number /*int*/
+            public static readonly LAST_LINE_START: number /*int*/
             /**
              * Place the component in the corner of its display area where
              * the last line of text on a page would normally end for the current
@@ -205,7 +205,7 @@ declare namespace java {
              * orientations.
              */
             // @ts-ignore
-            readonly LAST_LINE_END: number /*int*/
+            public static readonly LAST_LINE_END: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally centered and
@@ -215,7 +215,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly BASELINE: number /*int*/
+            public static readonly BASELINE: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally placed along the
@@ -227,7 +227,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly BASELINE_LEADING: number /*int*/
+            public static readonly BASELINE_LEADING: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally placed along the
@@ -239,7 +239,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly BASELINE_TRAILING: number /*int*/
+            public static readonly BASELINE_TRAILING: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally centered.  Vertically
@@ -249,7 +249,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly ABOVE_BASELINE: number /*int*/
+            public static readonly ABOVE_BASELINE: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally placed along the
@@ -261,7 +261,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly ABOVE_BASELINE_LEADING: number /*int*/
+            public static readonly ABOVE_BASELINE_LEADING: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally placed along the
@@ -273,7 +273,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly ABOVE_BASELINE_TRAILING: number /*int*/
+            public static readonly ABOVE_BASELINE_TRAILING: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally centered.  Vertically
@@ -283,7 +283,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly BELOW_BASELINE: number /*int*/
+            public static readonly BELOW_BASELINE: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally placed along the
@@ -295,7 +295,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly BELOW_BASELINE_LEADING: number /*int*/
+            public static readonly BELOW_BASELINE_LEADING: number /*int*/
             /**
              * Possible value for the <code>anchor</code> field.  Specifies
              * that the component should be horizontally placed along the
@@ -307,7 +307,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly BELOW_BASELINE_TRAILING: number /*int*/
+            public static readonly BELOW_BASELINE_TRAILING: number /*int*/
             /**
              * Specifies the cell containing the leading edge of the component's
              * display area, where the first cell in a row has <code>gridx=0</code>.
@@ -327,7 +327,7 @@ declare namespace java {
              * @see java.awt.ComponentOrientation
              */
             // @ts-ignore
-            gridx: number /*int*/
+            public gridx: number /*int*/
             /**
              * Specifies the cell at the top of the component's display area,
              * where the topmost cell has <code>gridy=0</code>. The value
@@ -342,7 +342,7 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#gridx
              */
             // @ts-ignore
-            gridy: number /*int*/
+            public gridy: number /*int*/
             /**
              * Specifies the number of cells in a row for the component's
              * display area.
@@ -361,7 +361,7 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#gridheight
              */
             // @ts-ignore
-            gridwidth: number /*int*/
+            public gridwidth: number /*int*/
             /**
              * Specifies the number of cells in a column for the component's
              * display area.
@@ -380,7 +380,7 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#gridwidth
              */
             // @ts-ignore
-            gridheight: number /*int*/
+            public gridheight: number /*int*/
             /**
              * Specifies how to distribute extra horizontal space.
              * <p>
@@ -401,7 +401,7 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#weighty
              */
             // @ts-ignore
-            weightx: number /*double*/
+            public weightx: number /*double*/
             /**
              * Specifies how to distribute extra vertical space.
              * <p>
@@ -422,7 +422,7 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#weightx
              */
             // @ts-ignore
-            weighty: number /*double*/
+            public weighty: number /*double*/
             /**
              * This field is used when the component is smaller than its
              * display area. It determines where, within the display area, to
@@ -454,7 +454,7 @@ declare namespace java {
              * @see java.awt.ComponentOrientation
              */
             // @ts-ignore
-            anchor: number /*int*/
+            public anchor: number /*int*/
             /**
              * This field is used when the component's display area is larger
              * than the component's requested size. It determines whether to
@@ -480,7 +480,7 @@ declare namespace java {
              * @see #clone()
              */
             // @ts-ignore
-            fill: number /*int*/
+            public fill: number /*int*/
             /**
              * This field specifies the external padding of the component, the
              * minimum amount of space between the component and the edges of its
@@ -491,7 +491,7 @@ declare namespace java {
              * @see #clone()
              */
             // @ts-ignore
-            insets: java.awt.Insets
+            public insets: java.awt.Insets
             /**
              * This field specifies the internal padding of the component, how much
              * space to add to the minimum width of the component. The width of
@@ -504,7 +504,7 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#ipady
              */
             // @ts-ignore
-            ipadx: number /*int*/
+            public ipadx: number /*int*/
             /**
              * This field specifies the internal padding, that is, how much
              * space to add to the minimum height of the component. The height of
@@ -517,13 +517,13 @@ declare namespace java {
              * @see java.awt.GridBagConstraints#ipadx
              */
             // @ts-ignore
-            ipady: number /*int*/
+            public ipady: number /*int*/
             /**
              * Creates a copy of this grid bag constraint.
              * @return a copy of this grid bag constraint
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

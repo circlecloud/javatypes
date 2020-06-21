@@ -12,19 +12,19 @@ declare namespace org {
                     // @ts-ignore
                     block: org.bukkit.block.Block
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Returns the involved block
                      * @return the block clicked with this item.
                      */
                     // @ts-ignore
-                    getBlock(): org.bukkit.block.Block
+                    public getBlock(): org.bukkit.block.Block
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -25,13 +25,13 @@ declare namespace javax {
                      * @param family the font family
                      */
                     // @ts-ignore
-                    constructor(nm: string, family: string)
+                    constructor(nm: java.lang.String | string, family: java.lang.String | string)
                     /**
                      * Sets the font family.
                      * @param e the event
                      */
                     // @ts-ignore
-                    actionPerformed(e: java.awt.event.ActionEvent): void
+                    public actionPerformed(e: java.awt.event.ActionEvent): void
                 }
             }
         }

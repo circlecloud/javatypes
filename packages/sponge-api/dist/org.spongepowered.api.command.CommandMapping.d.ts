@@ -14,7 +14,7 @@ declare namespace org {
                      * @return The primary alias
                      */
                     // @ts-ignore
-                    getPrimaryAlias(): java.lang.String
+                    getPrimaryAlias(): string
                     /**
                      * Gets an immutable list of all aliases.
                      * <p>The returned list must contain at least one entry, of which one must
@@ -25,7 +25,7 @@ declare namespace org {
                      * @return A set of aliases
                      */
                     // @ts-ignore
-                    getAllAliases(): java.util.Set<java.lang.String>
+                    getAllAliases(): Array<java.lang.String | string>
                     /**
                      * Gets the callable.
                      * @return The callable

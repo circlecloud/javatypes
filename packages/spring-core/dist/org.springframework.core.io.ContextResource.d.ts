@@ -20,7 +20,7 @@ declare namespace org {
                      * e.g. a ServletContext root or a PortletContext root.
                      */
                     // @ts-ignore
-                    getPathWithinContext(): java.lang.String
+                    getPathWithinContext(): string
                 }
             }
         }

@@ -44,43 +44,43 @@ declare namespace javax {
                      * @param description String description of the ColorType.
                      */
                     // @ts-ignore
-                    constructor(description: string)
+                    constructor(description: java.lang.String | string)
                     /**
                      * ColorType for the foreground of a region.
                      */
                     // @ts-ignore
-                    readonly FOREGROUND: javax.swing.plaf.synth.ColorType
+                    public static readonly FOREGROUND: javax.swing.plaf.synth.ColorType
                     /**
                      * ColorType for the background of a region.
                      */
                     // @ts-ignore
-                    readonly BACKGROUND: javax.swing.plaf.synth.ColorType
+                    public static readonly BACKGROUND: javax.swing.plaf.synth.ColorType
                     /**
                      * ColorType for the foreground of a region.
                      */
                     // @ts-ignore
-                    readonly TEXT_FOREGROUND: javax.swing.plaf.synth.ColorType
+                    public static readonly TEXT_FOREGROUND: javax.swing.plaf.synth.ColorType
                     /**
                      * ColorType for the background of a region.
                      */
                     // @ts-ignore
-                    readonly TEXT_BACKGROUND: javax.swing.plaf.synth.ColorType
+                    public static readonly TEXT_BACKGROUND: javax.swing.plaf.synth.ColorType
                     /**
                      * ColorType for the focus.
                      */
                     // @ts-ignore
-                    readonly FOCUS: javax.swing.plaf.synth.ColorType
+                    public static readonly FOCUS: javax.swing.plaf.synth.ColorType
                     /**
                      * Maximum number of <code>ColorType</code>s.
                      */
                     // @ts-ignore
-                    readonly MAX_COUNT: number /*int*/
+                    public static readonly MAX_COUNT: number /*int*/
                     /**
                      * Returns a unique id, as an integer, for this ColorType.
                      * @return a unique id, as an integer, for this ColorType.
                      */
                     // @ts-ignore
-                    getID(): int
+                    public getID(): number /*int*/
                     /**
                      * Returns the textual description of this <code>ColorType</code>.
                      * This is the same value that the <code>ColorType</code> was created
@@ -88,7 +88,7 @@ declare namespace javax {
                      * @return the description of the string
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

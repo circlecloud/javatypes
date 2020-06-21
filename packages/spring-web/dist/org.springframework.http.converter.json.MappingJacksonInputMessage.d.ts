@@ -16,13 +16,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor(body: java.io.InputStream, headers: org.springframework.http.HttpHeaders, deserializationView: java.lang.Class<any>)
                         // @ts-ignore
-                        getBody(): java.io.InputStream
+                        public getBody(): java.io.InputStream
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        setDeserializationView(deserializationView: java.lang.Class<any>): void
+                        public setDeserializationView(deserializationView: java.lang.Class<any>): void
                         // @ts-ignore
-                        getDeserializationView(): java.lang.Class<?>
+                        public getDeserializationView(): java.lang.Class<any>
                     }
                 }
             }

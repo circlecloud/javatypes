@@ -12,7 +12,7 @@ declare namespace org {
              * @since 3.0
              */
             // @ts-ignore
-            class DigestUtils extends java.lang.Object {
+            abstract class DigestUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -21,7 +21,7 @@ declare namespace org {
                  * @return the digest
                  */
                 // @ts-ignore
-                md5Digest(bytes: number /*byte*/[]): byte[]
+                public static md5Digest(bytes: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Calculate the MD5 digest of the given stream.
                  * <p>This method does <strong>not</strong> close the input stream.
@@ -30,14 +30,14 @@ declare namespace org {
                  * @since 4.2
                  */
                 // @ts-ignore
-                md5Digest(inputStream: java.io.InputStream): byte[]
+                public static md5Digest(inputStream: java.io.InputStream): number /*byte*/[]
                 /**
                  * Return a hexadecimal string representation of the MD5 digest of the given bytes.
                  * @param bytes the bytes to calculate the digest over
                  * @return a hexadecimal digest string
                  */
                 // @ts-ignore
-                md5DigestAsHex(bytes: number /*byte*/[]): java.lang.String
+                public static md5DigestAsHex(bytes: number /*byte*/[]): string
                 /**
                  * Return a hexadecimal string representation of the MD5 digest of the given stream.
                  * <p>This method does <strong>not</strong> close the input stream.
@@ -46,7 +46,7 @@ declare namespace org {
                  * @since 4.2
                  */
                 // @ts-ignore
-                md5DigestAsHex(inputStream: java.io.InputStream): java.lang.String
+                public static md5DigestAsHex(inputStream: java.io.InputStream): string
                 /**
                  * Append a hexadecimal string representation of the MD5 digest of the given
                  * bytes to the given {@link StringBuilder}.
@@ -55,7 +55,7 @@ declare namespace org {
                  * @return the given string builder
                  */
                 // @ts-ignore
-                appendMd5DigestAsHex(bytes: number /*byte*/[], builder: java.lang.StringBuilder): java.lang.StringBuilder
+                public static appendMd5DigestAsHex(bytes: number /*byte*/[], builder: java.lang.StringBuilder): java.lang.StringBuilder
                 /**
                  * Append a hexadecimal string representation of the MD5 digest of the given
                  * inputStream to the given {@link StringBuilder}.
@@ -66,7 +66,7 @@ declare namespace org {
                  * @since 4.2
                  */
                 // @ts-ignore
-                appendMd5DigestAsHex(inputStream: java.io.InputStream, builder: java.lang.StringBuilder): java.lang.StringBuilder
+                public static appendMd5DigestAsHex(inputStream: java.io.InputStream, builder: java.lang.StringBuilder): java.lang.StringBuilder
             }
         }
     }

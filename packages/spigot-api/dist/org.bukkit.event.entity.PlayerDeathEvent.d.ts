@@ -8,25 +8,25 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerDeathEvent extends org.bukkit.event.entity.EntityDeathEvent {
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, drops: Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/, deathMessage: string)
+                    constructor(player: org.bukkit.entity.Player, drops: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/, deathMessage: java.lang.String | string)
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, drops: Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/, newExp: number /*int*/, deathMessage: string)
+                    constructor(player: org.bukkit.entity.Player, drops: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/, newExp: number /*int*/, deathMessage: java.lang.String | string)
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, drops: Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/, newExp: number /*int*/, newTotalExp: number /*int*/, newLevel: number /*int*/, deathMessage: string)
+                    constructor(player: org.bukkit.entity.Player, drops: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/, newExp: number /*int*/, newTotalExp: number /*int*/, newLevel: number /*int*/, deathMessage: java.lang.String | string)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Player
+                    public getEntity(): org.bukkit.entity.Player
                     /**
                      * Set the death message that will appear to everyone on the server.
                      * @param deathMessage Message to appear to other players on the server.
                      */
                     // @ts-ignore
-                    setDeathMessage(deathMessage: string): void
+                    public setDeathMessage(deathMessage: java.lang.String | string): void
                     /**
                      * Get the death message that will appear to everyone on the server.
                      * @return Message to appear to other players on the server.
                      */
                     // @ts-ignore
-                    getDeathMessage(): java.lang.String
+                    public getDeathMessage(): string
                     /**
                      * Gets how much EXP the Player should have at respawn.
                      * <p>
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return New EXP of the respawned player
                      */
                     // @ts-ignore
-                    getNewExp(): int
+                    public getNewExp(): number /*int*/
                     /**
                      * Sets how much EXP the Player should have at respawn.
                      * <p>
@@ -44,31 +44,31 @@ declare namespace org {
                      * @param exp New EXP of the respawned player
                      */
                     // @ts-ignore
-                    setNewExp(exp: number /*int*/): void
+                    public setNewExp(exp: number /*int*/): void
                     /**
                      * Gets the Level the Player should have at respawn.
                      * @return New Level of the respawned player
                      */
                     // @ts-ignore
-                    getNewLevel(): int
+                    public getNewLevel(): number /*int*/
                     /**
                      * Sets the Level the Player should have at respawn.
                      * @param level New Level of the respawned player
                      */
                     // @ts-ignore
-                    setNewLevel(level: number /*int*/): void
+                    public setNewLevel(level: number /*int*/): void
                     /**
                      * Gets the Total EXP the Player should have at respawn.
                      * @return New Total EXP of the respawned player
                      */
                     // @ts-ignore
-                    getNewTotalExp(): int
+                    public getNewTotalExp(): number /*int*/
                     /**
                      * Sets the Total EXP the Player should have at respawn.
                      * @param totalExp New Total EXP of the respawned player
                      */
                     // @ts-ignore
-                    setNewTotalExp(totalExp: number /*int*/): void
+                    public setNewTotalExp(totalExp: number /*int*/): void
                     /**
                      * Gets if the Player should keep all EXP at respawn.
                      * <p>
@@ -76,7 +76,7 @@ declare namespace org {
                      * @return True if Player should keep all pre-death exp
                      */
                     // @ts-ignore
-                    getKeepLevel(): boolean
+                    public getKeepLevel(): boolean
                     /**
                      * Sets if the Player should keep all EXP at respawn.
                      * <p>
@@ -88,7 +88,7 @@ declare namespace org {
                      * @param keepLevel True to keep all current value levels
                      */
                     // @ts-ignore
-                    setKeepLevel(keepLevel: boolean): void
+                    public setKeepLevel(keepLevel: boolean): void
                     /**
                      * Sets if the Player keeps inventory on death.
                      * <p>
@@ -98,13 +98,13 @@ declare namespace org {
                      * @param keepInventory True to keep the inventory
                      */
                     // @ts-ignore
-                    setKeepInventory(keepInventory: boolean): void
+                    public setKeepInventory(keepInventory: boolean): void
                     /**
                      * Gets if the Player keeps inventory on death.
                      * @return True if the player keeps inventory on death
                      */
                     // @ts-ignore
-                    getKeepInventory(): boolean
+                    public getKeepInventory(): boolean
                 }
             }
         }

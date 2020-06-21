@@ -21,13 +21,13 @@ declare namespace org {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class SimpleAmqpHeaderMapper extends <any> implements org.springframework.amqp.support.AmqpHeaderMapper {
+                class SimpleAmqpHeaderMapper extends java.lang.Object implements org.springframework.amqp.support.AmqpHeaderMapper {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    fromHeaders(headers: MessageHeaders, amqpMessageProperties: org.springframework.amqp.core.MessageProperties): void
+                    public fromHeaders(headers: MessageHeaders, amqpMessageProperties: org.springframework.amqp.core.MessageProperties): void
                     // @ts-ignore
-                    toHeaders(amqpMessageProperties: org.springframework.amqp.core.MessageProperties): MessageHeaders
+                    public toHeaders(amqpMessageProperties: org.springframework.amqp.core.MessageProperties): MessageHeaders
                 }
             }
         }

@@ -16,7 +16,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly WIDTH: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * the height of the base image is now available and can be taken
@@ -25,7 +25,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly HEIGHT: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * the properties of the image are now available.
@@ -33,7 +33,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly PROPERTIES: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * more pixels needed for drawing a scaled variation of the image
@@ -44,7 +44,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly SOMEBITS: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * another complete frame of a multi-frame image which was previously
@@ -54,7 +54,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly FRAMEBITS: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * a static image which was previously drawn is now complete and can
@@ -64,7 +64,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly ALLBITS: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * an image which was being tracked asynchronously has encountered
@@ -75,7 +75,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly ERROR: number /*int*/
                 /**
                  * This flag in the infoflags argument to imageUpdate indicates that
                  * an image which was being tracked asynchronously was aborted before
@@ -87,7 +87,7 @@ declare namespace java {
                  * @see #imageUpdate
                  */
                 // @ts-ignore
-                
+                readonly ABORT: number /*int*/
                 /**
                  * This method is called when information about an image which was
                  * previously requested using an asynchronous interface becomes

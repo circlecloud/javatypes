@@ -11,7 +11,7 @@ declare namespace org {
              * @return name of the mob/block or null
              */
             // @ts-ignore
-            getCustomName(): java.lang.String
+            getCustomName(): string
             /**
              * Sets a custom name on a mob or block. This name will be used in death
              * messages and can be sent to the client as a nameplate over the mob.
@@ -23,7 +23,7 @@ declare namespace org {
              * @param name the name to set
              */
             // @ts-ignore
-            setCustomName(name: string): void
+            setCustomName(name: java.lang.String | string): void
         }
     }
 }

@@ -24,7 +24,7 @@ declare namespace java {
              * @param listener      the listener object
              */
             // @ts-ignore
-            constructor(propertyName: string, listener: java.beans.VetoableChangeListener)
+            constructor(propertyName: java.lang.String | string, listener: java.beans.VetoableChangeListener)
             /**
              * Forwards the property change event to the listener delegate.
              * @param event  the property change event
@@ -32,13 +32,13 @@ declare namespace java {
              *                                   change to be rolled back
              */
             // @ts-ignore
-            vetoableChange(event: java.beans.PropertyChangeEvent): void
+            public vetoableChange(event: java.beans.PropertyChangeEvent): void
             /**
              * Returns the name of the named property associated with the listener.
              * @return the name of the named property associated with the listener
              */
             // @ts-ignore
-            getPropertyName(): java.lang.String
+            public getPropertyName(): string
         }
     }
 }

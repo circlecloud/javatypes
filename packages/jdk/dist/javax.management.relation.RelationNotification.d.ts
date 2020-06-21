@@ -47,7 +47,7 @@ declare namespace javax {
                  *  <P>- no relation type name
                  */
                 // @ts-ignore
-                constructor(notifType: string, sourceObj: any, sequence: number /*long*/, timeStamp: number /*long*/, message: string, id: string, typeName: string, objectName: javax.management.ObjectName, unregMBeanList: Array<javax.management.ObjectName>)
+                constructor(notifType: java.lang.String | string, sourceObj: java.lang.Object | any, sequence: number /*long*/, timeStamp: number /*long*/, message: java.lang.String | string, id: java.lang.String | string, typeName: java.lang.String | string, objectName: javax.management.ObjectName, unregMBeanList: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>)
                 /**
                  * Creates a notification for a role update in a relation.
                  * @param notifType  type of the notification; either:
@@ -71,81 +71,81 @@ declare namespace javax {
                  * @exception IllegalArgumentException  if null parameter
                  */
                 // @ts-ignore
-                constructor(notifType: string, sourceObj: any, sequence: number /*long*/, timeStamp: number /*long*/, message: string, id: string, typeName: string, objectName: javax.management.ObjectName, name: string, newValue: Array<javax.management.ObjectName>, oldValue: Array<javax.management.ObjectName>)
+                constructor(notifType: java.lang.String | string, sourceObj: java.lang.Object | any, sequence: number /*long*/, timeStamp: number /*long*/, message: java.lang.String | string, id: java.lang.String | string, typeName: java.lang.String | string, objectName: javax.management.ObjectName, name: java.lang.String | string, newValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>, oldValue: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>)
                 /**
                  * Type for the creation of an internal relation.
                  */
                 // @ts-ignore
-                readonly RELATION_BASIC_CREATION: string
+                public static readonly RELATION_BASIC_CREATION: java.lang.String | string
                 /**
                  * Type for the relation MBean added into the Relation Service.
                  */
                 // @ts-ignore
-                readonly RELATION_MBEAN_CREATION: string
+                public static readonly RELATION_MBEAN_CREATION: java.lang.String | string
                 /**
                  * Type for an update of an internal relation.
                  */
                 // @ts-ignore
-                readonly RELATION_BASIC_UPDATE: string
+                public static readonly RELATION_BASIC_UPDATE: java.lang.String | string
                 /**
                  * Type for the update of a relation MBean.
                  */
                 // @ts-ignore
-                readonly RELATION_MBEAN_UPDATE: string
+                public static readonly RELATION_MBEAN_UPDATE: java.lang.String | string
                 /**
                  * Type for the removal from the Relation Service of an internal relation.
                  */
                 // @ts-ignore
-                readonly RELATION_BASIC_REMOVAL: string
+                public static readonly RELATION_BASIC_REMOVAL: java.lang.String | string
                 /**
                  * Type for the removal from the Relation Service of a relation MBean.
                  */
                 // @ts-ignore
-                readonly RELATION_MBEAN_REMOVAL: string
+                public static readonly RELATION_MBEAN_REMOVAL: java.lang.String | string
                 /**
                  * Returns the relation identifier of created/removed/updated relation.
                  * @return the relation id.
                  */
                 // @ts-ignore
-                getRelationId(): java.lang.String
+                public getRelationId(): string
                 /**
                  * Returns the relation type name of created/removed/updated relation.
                  * @return the relation type name.
                  */
                 // @ts-ignore
-                getRelationTypeName(): java.lang.String
+                public getRelationTypeName(): string
                 /**
                  * Returns the ObjectName of the
                  * created/removed/updated relation.
                  * @return the ObjectName if the relation is an MBean, otherwise null.
                  */
                 // @ts-ignore
-                getObjectName(): javax.management.ObjectName
+                public getObjectName(): javax.management.ObjectName
                 /**
                  * Returns the list of ObjectNames of MBeans expected to be unregistered
                  * due to a relation removal (only for relation removal).
                  * @return a {#link List} of {@link ObjectName}.
                  */
                 // @ts-ignore
-                getMBeansToUnregister(): java.util.List<javax.management.ObjectName>
+                public getMBeansToUnregister(): Array<javax.management.ObjectName>
                 /**
                  * Returns name of updated role of updated relation (only for role update).
                  * @return the name of the updated role.
                  */
                 // @ts-ignore
-                getRoleName(): java.lang.String
+                public getRoleName(): string
                 /**
                  * Returns old value of updated role (only for role update).
                  * @return the old value of the updated role.
                  */
                 // @ts-ignore
-                getOldRoleValue(): java.util.List<javax.management.ObjectName>
+                public getOldRoleValue(): Array<javax.management.ObjectName>
                 /**
                  * Returns new value of updated role (only for role update).
                  * @return the new value of the updated role.
                  */
                 // @ts-ignore
-                getNewRoleValue(): java.util.List<javax.management.ObjectName>
+                public getNewRoleValue(): Array<javax.management.ObjectName>
             }
         }
     }

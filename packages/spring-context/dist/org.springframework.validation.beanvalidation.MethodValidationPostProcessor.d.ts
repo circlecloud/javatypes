@@ -34,13 +34,13 @@ declare namespace org {
                      * @param validatedAnnotationType the desired annotation type
                      */
                     // @ts-ignore
-                    setValidatedAnnotationType(validatedAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                    public setValidatedAnnotationType(validatedAnnotationType: java.lang.Class<any>): void
                     /**
                      * Set the JSR-303 Validator to delegate to for validating methods.
                      * <p>Default is the default ValidatorFactory's default Validator.
                      */
                     // @ts-ignore
-                    setValidator(validator: Validator): void
+                    public setValidator(validator: Validator): void
                     /**
                      * Set the JSR-303 ValidatorFactory to delegate to for validating methods,
                      * using its default Validator.
@@ -48,9 +48,9 @@ declare namespace org {
                      * @see javax.validation.ValidatorFactory#getValidator()
                      */
                     // @ts-ignore
-                    setValidatorFactory(validatorFactory: ValidatorFactory): void
+                    public setValidatorFactory(validatorFactory: ValidatorFactory): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Create AOP advice for method validation purposes, to be applied
                      * with a pointcut for the specified 'validated' annotation.

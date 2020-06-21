@@ -33,7 +33,7 @@ declare namespace org {
                      * @see CookieValue
                      */
                     // @ts-ignore
-                    class RequestParam implements java.lang.annotation.Annotation {
+                    abstract class RequestParam implements java.lang.annotation.Annotation {
                     }
                 }
             }

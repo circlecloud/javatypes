@@ -15,9 +15,9 @@ declare namespace org {
                      * @return A copy of the current recipe on the crafting matrix.
                      */
                     // @ts-ignore
-                    getRecipe(): org.bukkit.inventory.Recipe
+                    public getRecipe(): org.bukkit.inventory.Recipe
                     // @ts-ignore
-                    getInventory(): org.bukkit.inventory.CraftingInventory
+                    public getInventory(): org.bukkit.inventory.CraftingInventory
                 }
             }
         }

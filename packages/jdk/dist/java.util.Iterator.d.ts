@@ -70,7 +70,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            forEachRemaining(action: java.util.function.Consumer<any super E> | java.util.function$.Consumer<? super E>): void
+            forEachRemaining(action: java.util.function$.Consumer<any>): void
         }
     }
 }

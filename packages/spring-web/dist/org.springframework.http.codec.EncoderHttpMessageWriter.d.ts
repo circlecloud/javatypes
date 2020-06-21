@@ -26,22 +26,22 @@ declare namespace org {
                      * Return the {@code Encoder} of this writer.
                      */
                     // @ts-ignore
-                    getEncoder(): <any>
+                    public getEncoder(): object
                     // @ts-ignore
-                    getWritableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getWritableMediaTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public write(inputStream: object, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, message: org.springframework.http.ReactiveHttpOutputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    write(inputStream: object, actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public write(inputStream: object, actualType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Get additional hints for encoding for example based on the server request
                      * or annotations from controller method parameters. By default, delegate to
                      * the encoder if it is an instance of {@link HttpMessageEncoder}.
                      */
                     // @ts-ignore
-                    getWriteHints(streamType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String, java.lang.Object>
+                    getWriteHints(streamType: ResolvableType, elementType: ResolvableType, mediaType: org.springframework.http.MediaType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

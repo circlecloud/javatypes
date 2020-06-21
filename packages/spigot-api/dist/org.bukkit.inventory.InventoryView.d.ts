@@ -10,29 +10,29 @@ declare namespace org {
              * as it should.
              */
             // @ts-ignore
-            class InventoryView extends java.lang.Object {
+            abstract class InventoryView extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                readonly OUTSIDE: number /*int*/
+                public static readonly OUTSIDE: number /*int*/
                 /**
                  * Get the upper inventory involved in this transaction.
                  * @return the inventory
                  */
                 // @ts-ignore
-                abstract getTopInventory(): org.bukkit.inventory.Inventory
+                public abstract getTopInventory(): org.bukkit.inventory.Inventory
                 /**
                  * Get the lower inventory involved in this transaction.
                  * @return the inventory
                  */
                 // @ts-ignore
-                abstract getBottomInventory(): org.bukkit.inventory.Inventory
+                public abstract getBottomInventory(): org.bukkit.inventory.Inventory
                 /**
                  * Get the player viewing.
                  * @return the player
                  */
                 // @ts-ignore
-                abstract getPlayer(): org.bukkit.entity.HumanEntity
+                public abstract getPlayer(): org.bukkit.entity.HumanEntity
                 /**
                  * Determine the type of inventory involved in the transaction. This
                  * indicates the window style being shown. It will never return PLAYER,
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return the inventory type
                  */
                 // @ts-ignore
-                abstract getType(): org.bukkit.event.inventory.InventoryType
+                public abstract getType(): org.bukkit.event.inventory.InventoryType
                 /**
                  * Sets one item in this inventory view by its raw slot ID.
                  * <p>
@@ -50,28 +50,28 @@ declare namespace org {
                  * @param item The new item to put in the slot, or null to clear it.
                  */
                 // @ts-ignore
-                setItem(slot: number /*int*/, item: org.bukkit.inventory.ItemStack): void
+                public setItem(slot: number /*int*/, item: org.bukkit.inventory.ItemStack): void
                 /**
                  * Gets one item in this inventory view by its raw slot ID.
                  * @param slot The ID as returned by InventoryClickEvent.getRawSlot()
                  * @return The item currently in the slot.
                  */
                 // @ts-ignore
-                getItem(slot: number /*int*/): org.bukkit.inventory.ItemStack
+                public getItem(slot: number /*int*/): org.bukkit.inventory.ItemStack
                 /**
                  * Sets the item on the cursor of one of the viewing players.
                  * @param item The item to put on the cursor, or null to remove the item
                  *      on their cursor.
                  */
                 // @ts-ignore
-                setCursor(item: org.bukkit.inventory.ItemStack): void
+                public setCursor(item: org.bukkit.inventory.ItemStack): void
                 /**
                  * Get the item on the cursor of one of the viewing players.
                  * @return The item on the player's cursor, or null if they aren't holding
                  *      one.
                  */
                 // @ts-ignore
-                getCursor(): org.bukkit.inventory.ItemStack
+                public getCursor(): org.bukkit.inventory.ItemStack
                 /**
                  * Gets the inventory corresponding to the given raw slot ID.
                  * If the slot ID is {@link #OUTSIDE} null will be returned, otherwise
@@ -82,7 +82,7 @@ declare namespace org {
                  * @return corresponding inventory, or null
                  */
                 // @ts-ignore
-                getInventory(rawSlot: number /*int*/): org.bukkit.inventory.Inventory
+                public getInventory(rawSlot: number /*int*/): org.bukkit.inventory.Inventory
                 /**
                  * Converts a raw slot ID into its local slot ID into whichever of the two
                  * inventories the slot points to.
@@ -95,7 +95,7 @@ declare namespace org {
                  * @return The converted slot ID.
                  */
                 // @ts-ignore
-                convertSlot(rawSlot: number /*int*/): int
+                public convertSlot(rawSlot: number /*int*/): number /*int*/
                 /**
                  * Determine the type of the slot by its raw slot ID.
                  * <p>
@@ -105,12 +105,12 @@ declare namespace org {
                  * @return the slot type
                  */
                 // @ts-ignore
-                getSlotType(slot: number /*int*/): org.bukkit.event.inventory.InventoryType.SlotType
+                public getSlotType(slot: number /*int*/): org.bukkit.event.inventory.InventoryType.SlotType
                 /**
                  * Closes the inventory view.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Check the total number of slots in this view, combining the upper and
                  * lower inventories.
@@ -120,7 +120,7 @@ declare namespace org {
                  * @return The total size
                  */
                 // @ts-ignore
-                countSlots(): int
+                public countSlots(): number /*int*/
                 /**
                  * Sets an extra property of this inventory if supported by that
                  * inventory, for example the state of a progress bar.
@@ -130,13 +130,13 @@ declare namespace org {
                  *      property is not supported by that inventory
                  */
                 // @ts-ignore
-                setProperty(prop: org.bukkit.inventory.InventoryView.Property, value: number /*int*/): boolean
+                public setProperty(prop: org.bukkit.inventory.InventoryView.Property, value: number /*int*/): boolean
                 /**
                  * Get the title of this inventory window.
                  * @return The title.
                  */
                 // @ts-ignore
-                abstract getTitle(): java.lang.String
+                public abstract getTitle(): string
             }
         }
     }

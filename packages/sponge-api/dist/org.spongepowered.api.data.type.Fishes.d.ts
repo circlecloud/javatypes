@@ -9,13 +9,13 @@ declare namespace org {
                     // @ts-ignore
                     class Fishes extends java.lang.Object {
                         // @ts-ignore
-                        readonly CLOWNFISH: org.spongepowered.api.data.type.Fish
+                        public static readonly CLOWNFISH: org.spongepowered.api.data.type.Fish
                         // @ts-ignore
-                        readonly COD: org.spongepowered.api.data.type.Fish
+                        public static readonly COD: org.spongepowered.api.data.type.Fish
                         // @ts-ignore
-                        readonly PUFFERFISH: org.spongepowered.api.data.type.Fish
+                        public static readonly PUFFERFISH: org.spongepowered.api.data.type.Fish
                         // @ts-ignore
-                        readonly SALMON: org.spongepowered.api.data.type.Fish
+                        public static readonly SALMON: org.spongepowered.api.data.type.Fish
                     }
                 }
             }

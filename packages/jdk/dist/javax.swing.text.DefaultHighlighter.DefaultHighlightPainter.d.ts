@@ -20,7 +20,7 @@ declare namespace javax {
                      * @return the color
                      */
                     // @ts-ignore
-                    getColor(): java.awt.Color
+                    public getColor(): java.awt.Color
                     /**
                      * Paints a highlight.
                      * @param g the graphics context
@@ -30,7 +30,7 @@ declare namespace javax {
                      * @param c the editor
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, offs0: number /*int*/, offs1: number /*int*/, bounds: java.awt.Shape, c: javax.swing.text.JTextComponent): void
+                    public paint(g: java.awt.Graphics, offs0: number /*int*/, offs1: number /*int*/, bounds: java.awt.Shape, c: javax.swing.text.JTextComponent): void
                     /**
                      * Paints a portion of a highlight.
                      * @param g the graphics context
@@ -43,7 +43,7 @@ declare namespace javax {
                      * @return region drawing occurred in
                      */
                     // @ts-ignore
-                    paintLayer(g: java.awt.Graphics, offs0: number /*int*/, offs1: number /*int*/, bounds: java.awt.Shape, c: javax.swing.text.JTextComponent, view: javax.swing.text.View): java.awt.Shape
+                    public paintLayer(g: java.awt.Graphics, offs0: number /*int*/, offs1: number /*int*/, bounds: java.awt.Shape, c: javax.swing.text.JTextComponent, view: javax.swing.text.View): java.awt.Shape
                 }
             }
         }

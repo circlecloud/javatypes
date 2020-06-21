@@ -18,7 +18,7 @@ declare namespace org {
                      * @see MarshallingHttpMessageConverter
                      */
                     // @ts-ignore
-                    class Jaxb2RootElementHttpMessageConverter extends org.springframework.http.converter.xml.AbstractJaxb2HttpMessageConverter<java.lang.Object> {
+                    class Jaxb2RootElementHttpMessageConverter extends org.springframework.http.converter.xml.AbstractJaxb2HttpMessageConverter<java.lang.Object | any> {
                         // @ts-ignore
                         constructor()
                         /**
@@ -26,12 +26,12 @@ declare namespace org {
                          * <p>Default is {@code false} meaning that DTD is disabled.
                          */
                         // @ts-ignore
-                        setSupportDtd(supportDtd: boolean): void
+                        public setSupportDtd(supportDtd: boolean): void
                         /**
                          * Return whether DTD parsing is supported.
                          */
                         // @ts-ignore
-                        isSupportDtd(): boolean
+                        public isSupportDtd(): boolean
                         /**
                          * Indicate whether external XML entities are processed when converting to a Source.
                          * <p>Default is {@code false}, meaning that external entities are not resolved.
@@ -39,24 +39,24 @@ declare namespace org {
                          * automatically sets {@link #setSupportDtd} to {@code true}.
                          */
                         // @ts-ignore
-                        setProcessExternalEntities(processExternalEntities: boolean): void
+                        public setProcessExternalEntities(processExternalEntities: boolean): void
                         /**
                          * Return whether XML external entities are allowed.
                          */
                         // @ts-ignore
-                        isProcessExternalEntities(): boolean
+                        public isProcessExternalEntities(): boolean
                         // @ts-ignore
-                        canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
                         supports(clazz: java.lang.Class<any>): boolean
                         // @ts-ignore
-                        readFromSource(clazz: java.lang.Class<any>, headers: org.springframework.http.HttpHeaders, source: javax.xml.transform.Source): java.lang.Object
+                        readFromSource(clazz: java.lang.Class<any>, headers: org.springframework.http.HttpHeaders, source: javax.xml.transform.Source): any
                         // @ts-ignore
                         processSource(source: javax.xml.transform.Source): javax.xml.transform.Source
                         // @ts-ignore
-                        writeToResult(o: any, headers: org.springframework.http.HttpHeaders, result: javax.xml.transform.Result): void
+                        writeToResult(o: java.lang.Object | any, headers: org.springframework.http.HttpHeaders, result: javax.xml.transform.Result): void
                     }
                 }
             }

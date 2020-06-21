@@ -32,27 +32,27 @@ declare namespace java {
                      * @return the current value
                      */
                     // @ts-ignore
-                    get(): long
+                    public get(): number /*long*/
                     /**
                      * Sets to the given value.
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    set(newValue: number /*long*/): void
+                    public set(newValue: number /*long*/): void
                     /**
                      * Eventually sets to the given value.
                      * @param newValue the new value
                      * @since 1.6
                      */
                     // @ts-ignore
-                    lazySet(newValue: number /*long*/): void
+                    public lazySet(newValue: number /*long*/): void
                     /**
                      * Atomically sets to the given value and returns the old value.
                      * @param newValue the new value
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(newValue: number /*long*/): long
+                    public getAndSet(newValue: number /*long*/): number /*long*/
                     /**
                      * Atomically sets the value to the given updated value
                      * if the current value {@code ==} the expected value.
@@ -62,7 +62,7 @@ declare namespace java {
                      *  the actual value was not equal to the expected value.
                      */
                     // @ts-ignore
-                    compareAndSet(expect: number /*long*/, update: number /*long*/): boolean
+                    public compareAndSet(expect: number /*long*/, update: number /*long*/): boolean
                     /**
                      * Atomically sets the value to the given updated value
                      * if the current value {@code ==} the expected value.
@@ -74,45 +74,45 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    weakCompareAndSet(expect: number /*long*/, update: number /*long*/): boolean
+                    public weakCompareAndSet(expect: number /*long*/, update: number /*long*/): boolean
                     /**
                      * Atomically increments by one the current value.
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndIncrement(): long
+                    public getAndIncrement(): number /*long*/
                     /**
                      * Atomically decrements by one the current value.
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndDecrement(): long
+                    public getAndDecrement(): number /*long*/
                     /**
                      * Atomically adds the given value to the current value.
                      * @param delta the value to add
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndAdd(delta: number /*long*/): long
+                    public getAndAdd(delta: number /*long*/): number /*long*/
                     /**
                      * Atomically increments by one the current value.
                      * @return the updated value
                      */
                     // @ts-ignore
-                    incrementAndGet(): long
+                    public incrementAndGet(): number /*long*/
                     /**
                      * Atomically decrements by one the current value.
                      * @return the updated value
                      */
                     // @ts-ignore
-                    decrementAndGet(): long
+                    public decrementAndGet(): number /*long*/
                     /**
                      * Atomically adds the given value to the current value.
                      * @param delta the value to add
                      * @return the updated value
                      */
                     // @ts-ignore
-                    addAndGet(delta: number /*long*/): long
+                    public addAndGet(delta: number /*long*/): number /*long*/
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function, returning the previous value. The
@@ -123,7 +123,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndUpdate(updateFunction: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): long
+                    public getAndUpdate(updateFunction: java.util.function$.LongUnaryOperator): number /*long*/
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function, returning the updated value. The
@@ -134,7 +134,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    updateAndGet(updateFunction: java.util.function.LongUnaryOperator | java.util.function$.LongUnaryOperator): long
+                    public updateAndGet(updateFunction: java.util.function$.LongUnaryOperator): number /*long*/
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function to the current and given values,
@@ -149,7 +149,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndAccumulate(x: number /*long*/, accumulatorFunction: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                    public getAndAccumulate(x: number /*long*/, accumulatorFunction: java.util.function$.LongBinaryOperator): number /*long*/
                     /**
                      * Atomically updates the current value with the results of
                      * applying the given function to the current and given values,
@@ -164,39 +164,39 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    accumulateAndGet(x: number /*long*/, accumulatorFunction: java.util.function.LongBinaryOperator | java.util.function$.LongBinaryOperator): long
+                    public accumulateAndGet(x: number /*long*/, accumulatorFunction: java.util.function$.LongBinaryOperator): number /*long*/
                     /**
                      * Returns the String representation of the current value.
                      * @return the String representation of the current value
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns the value of this {@code AtomicLong} as an {@code int}
                      * after a narrowing primitive conversion.
                      * @jls 5.1.3 Narrowing Primitive Conversions
                      */
                     // @ts-ignore
-                    intValue(): int
+                    public intValue(): number /*int*/
                     /**
                      * Returns the value of this {@code AtomicLong} as a {@code long}.
                      */
                     // @ts-ignore
-                    longValue(): long
+                    public longValue(): number /*long*/
                     /**
                      * Returns the value of this {@code AtomicLong} as a {@code float}
                      * after a widening primitive conversion.
                      * @jls 5.1.2 Widening Primitive Conversions
                      */
                     // @ts-ignore
-                    floatValue(): float
+                    public floatValue(): number /*float*/
                     /**
                      * Returns the value of this {@code AtomicLong} as a {@code double}
                      * after a widening primitive conversion.
                      * @jls 5.1.2 Widening Primitive Conversions
                      */
                     // @ts-ignore
-                    doubleValue(): double
+                    public doubleValue(): number /*double*/
                 }
             }
         }

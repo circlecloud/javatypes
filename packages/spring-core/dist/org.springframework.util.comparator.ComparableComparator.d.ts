@@ -20,9 +20,9 @@ declare namespace org {
                      * @see Comparators#comparable()
                      */
                     // @ts-ignore
-                    readonly INSTANCE: org.springframework.util.comparator.ComparableComparator
+                    public static readonly INSTANCE: org.springframework.util.comparator.ComparableComparator<any>
                     // @ts-ignore
-                    compare(o1: T extends java.lang.Comparable<T>, o2: T extends java.lang.Comparable<T>): int
+                    public compare(o1: T, o2: T): number /*int*/
                 }
             }
         }

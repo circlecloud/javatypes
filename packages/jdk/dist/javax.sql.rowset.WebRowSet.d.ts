@@ -380,13 +380,13 @@ declare namespace javax {
                  * tags and their valid values for a {@code WebRowSet} implementation.
                  */
                 // @ts-ignore
-                
+                readonly PUBLIC_XML_SCHEMA: java.lang.String | string
                 /**
                  * The URL for the XML Schema definition file that defines the XML tags and
                  * their valid values for a {@code WebRowSet} implementation.
                  */
                 // @ts-ignore
-                
+                readonly SCHEMA_SYSTEM_ID: java.lang.String | string
                 /**
                  * Reads a {@code WebRowSet} object in its XML format from the given
                  * {@code Reader} object.

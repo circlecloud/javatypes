@@ -34,7 +34,7 @@ declare namespace org {
                      * @see #setEncoding
                      */
                     // @ts-ignore
-                    constructor(encoding: string)
+                    constructor(encoding: java.lang.String | string)
                     /**
                      * Create a {@code CharacterEncodingFilter} for the given encoding.
                      * @param encoding the encoding to apply
@@ -45,7 +45,7 @@ declare namespace org {
                      * @see #setForceEncoding
                      */
                     // @ts-ignore
-                    constructor(encoding: string, forceEncoding: boolean)
+                    constructor(encoding: java.lang.String | string, forceEncoding: boolean)
                     /**
                      * Create a {@code CharacterEncodingFilter} for the given encoding.
                      * @param encoding the encoding to apply
@@ -59,7 +59,7 @@ declare namespace org {
                      * @see #setForceResponseEncoding(boolean)
                      */
                     // @ts-ignore
-                    constructor(encoding: string, forceRequestEncoding: boolean, forceResponseEncoding: boolean)
+                    constructor(encoding: java.lang.String | string, forceRequestEncoding: boolean, forceResponseEncoding: boolean)
                     /**
                      * Set the encoding to use for requests. This encoding will be passed into a
                      * {@link javax.servlet.http.HttpServletRequest#setCharacterEncoding} call.
@@ -68,13 +68,13 @@ declare namespace org {
                      * depends on the {@link #setForceEncoding "forceEncoding"} flag.
                      */
                     // @ts-ignore
-                    setEncoding(encoding: string): void
+                    public setEncoding(encoding: java.lang.String | string): void
                     /**
                      * Return the configured encoding for requests and/or responses.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getEncoding(): java.lang.String
+                    public getEncoding(): string
                     /**
                      * Set whether the configured {@link #setEncoding encoding} of this filter
                      * is supposed to override existing request and response encodings.
@@ -88,7 +88,7 @@ declare namespace org {
                      * @see #setForceResponseEncoding(boolean)
                      */
                     // @ts-ignore
-                    setForceEncoding(forceEncoding: boolean): void
+                    public setForceEncoding(forceEncoding: boolean): void
                     /**
                      * Set whether the configured {@link #setEncoding encoding} of this filter
                      * is supposed to override existing request encodings.
@@ -99,13 +99,13 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setForceRequestEncoding(forceRequestEncoding: boolean): void
+                    public setForceRequestEncoding(forceRequestEncoding: boolean): void
                     /**
                      * Return whether the encoding should be forced on requests.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    isForceRequestEncoding(): boolean
+                    public isForceRequestEncoding(): boolean
                     /**
                      * Set whether the configured {@link #setEncoding encoding} of this filter
                      * is supposed to override existing response encodings.
@@ -115,13 +115,13 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setForceResponseEncoding(forceResponseEncoding: boolean): void
+                    public setForceResponseEncoding(forceResponseEncoding: boolean): void
                     /**
                      * Return whether the encoding should be forced on responses.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    isForceResponseEncoding(): boolean
+                    public isForceResponseEncoding(): boolean
                     // @ts-ignore
                     doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain): void
                 }

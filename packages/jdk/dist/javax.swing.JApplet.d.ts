@@ -120,7 +120,7 @@ declare namespace javax {
              *   description: Mechanism for transfer of data into the component
              */
             // @ts-ignore
-            setTransferHandler(newHandler: javax.swing.TransferHandler): void
+            public setTransferHandler(newHandler: javax.swing.TransferHandler): void
             /**
              * Gets the <code>transferHandler</code> property.
              * @return the value of the <code>transferHandler</code> property
@@ -129,13 +129,13 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getTransferHandler(): javax.swing.TransferHandler
+            public getTransferHandler(): javax.swing.TransferHandler
             /**
              * Just calls <code>paint(g)</code>.  This method was overridden to
              * prevent an unnecessary call to clear the background.
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Sets the menubar for this applet.
              * @param menuBar the menubar being placed in the applet
@@ -144,13 +144,13 @@ declare namespace javax {
              *  description: The menubar for accessing pulldown menus from this applet.
              */
             // @ts-ignore
-            setJMenuBar(menuBar: javax.swing.JMenuBar): void
+            public setJMenuBar(menuBar: javax.swing.JMenuBar): void
             /**
              * Returns the menubar set on this applet.
              * @see #setJMenuBar
              */
             // @ts-ignore
-            getJMenuBar(): javax.swing.JMenuBar
+            public getJMenuBar(): javax.swing.JMenuBar
             /**
              * Returns whether calls to <code>add</code> and
              * <code>setLayout</code> are forwarded to the <code>contentPane</code>.
@@ -196,7 +196,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the specified component from the container. If
              * <code>comp</code> is not the <code>rootPane</code>, this will forward
@@ -209,7 +209,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * Sets the <code>LayoutManager</code>.
              * Overridden to conditionally forward the call to the
@@ -221,14 +221,14 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            setLayout(manager: java.awt.LayoutManager): void
+            public setLayout(manager: java.awt.LayoutManager): void
             /**
              * Returns the rootPane object for this applet.
              * @see #setRootPane
              * @see RootPaneContainer#getRootPane
              */
             // @ts-ignore
-            getRootPane(): javax.swing.JRootPane
+            public getRootPane(): javax.swing.JRootPane
             /**
              * Sets the rootPane property.  This method is called by the constructor.
              * @param root the rootPane object for this applet
@@ -244,7 +244,7 @@ declare namespace javax {
              * @see RootPaneContainer#getContentPane
              */
             // @ts-ignore
-            getContentPane(): java.awt.Container
+            public getContentPane(): java.awt.Container
             /**
              * Sets the contentPane property.  This method is called by the constructor.
              * @param contentPane the contentPane object for this applet
@@ -257,7 +257,7 @@ declare namespace javax {
              *                   components are normally inserted.
              */
             // @ts-ignore
-            setContentPane(contentPane: java.awt.Container): void
+            public setContentPane(contentPane: java.awt.Container): void
             /**
              * Returns the layeredPane object for this applet.
              * @exception java.awt.IllegalComponentStateException (a runtime
@@ -266,7 +266,7 @@ declare namespace javax {
              * @see RootPaneContainer#getLayeredPane
              */
             // @ts-ignore
-            getLayeredPane(): javax.swing.JLayeredPane
+            public getLayeredPane(): javax.swing.JLayeredPane
             /**
              * Sets the layeredPane property.  This method is called by the constructor.
              * @param layeredPane the layeredPane object for this applet
@@ -276,14 +276,14 @@ declare namespace javax {
              *      description: The pane which holds the various applet layers.
              */
             // @ts-ignore
-            setLayeredPane(layeredPane: javax.swing.JLayeredPane): void
+            public setLayeredPane(layeredPane: javax.swing.JLayeredPane): void
             /**
              * Returns the glassPane object for this applet.
              * @see #setGlassPane
              * @see RootPaneContainer#getGlassPane
              */
             // @ts-ignore
-            getGlassPane(): java.awt.Component
+            public getGlassPane(): java.awt.Component
             /**
              * Sets the glassPane property.
              * This method is called by the constructor.
@@ -294,13 +294,13 @@ declare namespace javax {
              *      description: A transparent pane used for menu rendering.
              */
             // @ts-ignore
-            setGlassPane(glassPane: java.awt.Component): void
+            public setGlassPane(glassPane: java.awt.Component): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            getGraphics(): java.awt.Graphics
+            public getGraphics(): java.awt.Graphics
             /**
              * Repaints the specified rectangle of this component within
              * <code>time</code> milliseconds.  Refer to <code>RepaintManager</code>
@@ -314,7 +314,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            repaint(time: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(time: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Returns a string representation of this JApplet. This method
              * is intended to be used only for debugging purposes, and the
@@ -324,7 +324,7 @@ declare namespace javax {
              * @return a string representation of this JApplet.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JApplet.
              * For JApplets, the AccessibleContext takes the form of an
@@ -334,7 +334,7 @@ declare namespace javax {
              *          AccessibleContext of this JApplet
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

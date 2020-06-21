@@ -29,7 +29,7 @@ declare namespace javax {
                  * @return a clone of the CertPathParameters encapsulated by this class.
                  */
                 // @ts-ignore
-                getParameters(): java.security.cert.CertPathParameters
+                public getParameters(): java.security.cert.CertPathParameters
             }
         }
     }

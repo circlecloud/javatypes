@@ -179,7 +179,7 @@ declare namespace javax {
              * @return the SliderUI object that implements the Slider L&amp;F
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.SliderUI
+            public getUI(): javax.swing.plaf.SliderUI
             /**
              * Sets the UI object which implements the L&amp;F for this component.
              * @param ui the SliderUI L&amp;F object
@@ -190,13 +190,13 @@ declare namespace javax {
              *   description: The UI object that implements the slider's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.SliderUI): void
+            public setUI(ui: javax.swing.plaf.SliderUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return "SliderUI"
@@ -204,7 +204,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Subclasses that want to handle {@code ChangeEvent}s
              * from the model differently
@@ -228,7 +228,7 @@ declare namespace javax {
              * @see #removeChangeListener
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a ChangeListener from the slider.
              * @param l the ChangeListener to remove
@@ -236,7 +236,7 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this JSlider with addChangeListener().
@@ -245,7 +245,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Send a {@code ChangeEvent}, whose source is this {@code JSlider}, to
              * all {@code ChangeListener}s that have registered interest in
@@ -268,7 +268,7 @@ declare namespace javax {
              * @see BoundedRangeModel
              */
             // @ts-ignore
-            getModel(): javax.swing.BoundedRangeModel
+            public getModel(): javax.swing.BoundedRangeModel
             /**
              * Sets the {@code BoundedRangeModel} that handles the slider's three
              * fundamental properties: minimum, maximum, value.
@@ -282,7 +282,7 @@ declare namespace javax {
              *  description: The sliders BoundedRangeModel.
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.BoundedRangeModel): void
+            public setModel(newModel: javax.swing.BoundedRangeModel): void
             /**
              * Returns the slider's current value
              * from the {@code BoundedRangeModel}.
@@ -291,7 +291,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getValue
              */
             // @ts-ignore
-            getValue(): int
+            public getValue(): number /*int*/
             /**
              * Sets the slider's current value to {@code n}.  This method
              * forwards the new value to the model.
@@ -311,7 +311,7 @@ declare namespace javax {
              *  description: The sliders current value.
              */
             // @ts-ignore
-            setValue(n: number /*int*/): void
+            public setValue(n: number /*int*/): void
             /**
              * Returns the minimum value supported by the slider
              * from the <code>BoundedRangeModel</code>.
@@ -320,7 +320,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getMinimum
              */
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * Sets the slider's minimum value to {@code minimum}.  This method
              * forwards the new minimum value to the model.
@@ -341,7 +341,7 @@ declare namespace javax {
              *  description: The sliders minimum value.
              */
             // @ts-ignore
-            setMinimum(minimum: number /*int*/): void
+            public setMinimum(minimum: number /*int*/): void
             /**
              * Returns the maximum value supported by the slider
              * from the <code>BoundedRangeModel</code>.
@@ -350,7 +350,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getMaximum
              */
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             /**
              * Sets the slider's maximum value to {@code maximum}.  This method
              * forwards the new maximum value to the model.
@@ -371,7 +371,7 @@ declare namespace javax {
              *  description: The sliders maximum value.
              */
             // @ts-ignore
-            setMaximum(maximum: number /*int*/): void
+            public setMaximum(maximum: number /*int*/): void
             /**
              * Returns the {@code valueIsAdjusting} property from the model.  For
              * details on how this is used, see the {@code setValueIsAdjusting}
@@ -380,7 +380,7 @@ declare namespace javax {
              * @see #setValueIsAdjusting
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * Sets the model's {@code valueIsAdjusting} property.  Slider look and
              * feel implementations should set this property to {@code true} when
@@ -392,7 +392,7 @@ declare namespace javax {
              *  description: True if the slider knob is being dragged.
              */
             // @ts-ignore
-            setValueIsAdjusting(b: boolean): void
+            public setValueIsAdjusting(b: boolean): void
             /**
              * Returns the "extent" from the <code>BoundedRangeModel</code>.
              * This represents the range of values "covered" by the knob.
@@ -401,7 +401,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getExtent
              */
             // @ts-ignore
-            getExtent(): int
+            public getExtent(): number /*int*/
             /**
              * Sets the size of the range "covered" by the knob.  Most look
              * and feel implementations will change the value by this amount
@@ -422,7 +422,7 @@ declare namespace javax {
              *  description: Size of the range covered by the knob.
              */
             // @ts-ignore
-            setExtent(extent: number /*int*/): void
+            public setExtent(extent: number /*int*/): void
             /**
              * Return this slider's vertical or horizontal orientation.
              * @return {#code SwingConstants.VERTICAL} or
@@ -430,7 +430,7 @@ declare namespace javax {
              * @see #setOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Set the slider's orientation to either {@code SwingConstants.VERTICAL} or
              * {@code SwingConstants.HORIZONTAL}.
@@ -445,26 +445,26 @@ declare namespace javax {
              *                HORIZONTAL JSlider.HORIZONTAL
              */
             // @ts-ignore
-            setOrientation(orientation: number /*int*/): void
+            public setOrientation(orientation: number /*int*/): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            setFont(font: java.awt.Font): void
+            public setFont(font: java.awt.Font): void
             /**
              * {@inheritDoc}
              * @since 1.7
              */
             // @ts-ignore
-            imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
+            public imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
             /**
              * Returns the dictionary of what labels to draw at which values.
              * @return the <code>Dictionary</code> containing labels and
              *     where to draw them
              */
             // @ts-ignore
-            getLabelTable(): java.util.Dictionary
+            public getLabelTable(): java.util.Dictionary<any>
             /**
              * Used to specify what label will be drawn at any given value.
              * The key-value pairs are of this format:
@@ -487,7 +487,7 @@ declare namespace javax {
              *   description: Specifies what labels will be drawn for any given value.
              */
             // @ts-ignore
-            setLabelTable(labels: java.util.Dictionary): void
+            public setLabelTable(labels: java.util.Dictionary<any>): void
             /**
              * Updates the UIs for the labels in the label table by calling
              * {@code updateUI} on each label.  The UIs are updated from
@@ -519,7 +519,7 @@ declare namespace javax {
              *           equal to zero
              */
             // @ts-ignore
-            createStandardLabels(increment: number /*int*/): java.util.Hashtable
+            public createStandardLabels(increment: number /*int*/): java.util.Hashtable<any>
             /**
              * Creates a {@code Hashtable} of numerical text labels, starting at the
              * starting point specified, and using the increment specified.
@@ -543,14 +543,14 @@ declare namespace javax {
              *           to zero
              */
             // @ts-ignore
-            createStandardLabels(increment: number /*int*/, start: number /*int*/): java.util.Hashtable
+            public createStandardLabels(increment: number /*int*/, start: number /*int*/): java.util.Hashtable<any>
             /**
              * Returns true if the value-range shown for the slider is reversed,
              * @return true if the slider values are reversed from their normal order
              * @see #setInverted
              */
             // @ts-ignore
-            getInverted(): boolean
+            public getInverted(): boolean
             /**
              * Specify true to reverse the value-range shown for the slider and false to
              * put the value range in the normal order.  The order depends on the
@@ -569,7 +569,7 @@ declare namespace javax {
              *   description: If true reverses the slider values from their normal order
              */
             // @ts-ignore
-            setInverted(b: boolean): void
+            public setInverted(b: boolean): void
             /**
              * This method returns the major tick spacing.  The number that is returned
              * represents the distance, measured in values, between each major tick mark.
@@ -580,7 +580,7 @@ declare namespace javax {
              * @see #setMajorTickSpacing
              */
             // @ts-ignore
-            getMajorTickSpacing(): int
+            public getMajorTickSpacing(): number /*int*/
             /**
              * This method sets the major tick spacing.  The number that is passed in
              * represents the distance, measured in values, between each major tick mark.
@@ -610,7 +610,7 @@ declare namespace javax {
              *   description: Sets the number of values between major tick marks.
              */
             // @ts-ignore
-            setMajorTickSpacing(n: number /*int*/): void
+            public setMajorTickSpacing(n: number /*int*/): void
             /**
              * This method returns the minor tick spacing.  The number that is returned
              * represents the distance, measured in values, between each minor tick mark.
@@ -621,7 +621,7 @@ declare namespace javax {
              * @see #getMinorTickSpacing
              */
             // @ts-ignore
-            getMinorTickSpacing(): int
+            public getMinorTickSpacing(): number /*int*/
             /**
              * This method sets the minor tick spacing.  The number that is passed in
              * represents the distance, measured in values, between each minor tick mark.
@@ -639,7 +639,7 @@ declare namespace javax {
              *   description: Sets the number of values between minor tick marks.
              */
             // @ts-ignore
-            setMinorTickSpacing(n: number /*int*/): void
+            public setMinorTickSpacing(n: number /*int*/): void
             /**
              * Returns true if the knob (and the data value it represents)
              * resolve to the closest tick mark next to where the user
@@ -648,7 +648,7 @@ declare namespace javax {
              * @see #setSnapToTicks
              */
             // @ts-ignore
-            getSnapToTicks(): boolean
+            public getSnapToTicks(): boolean
             /**
              * Specifying true makes the knob (and the data value it represents)
              * resolve to the closest tick mark next to where the user
@@ -660,14 +660,14 @@ declare namespace javax {
              *  description: If true snap the knob to the nearest tick mark.
              */
             // @ts-ignore
-            setSnapToTicks(b: boolean): void
+            public setSnapToTicks(b: boolean): void
             /**
              * Tells if tick marks are to be painted.
              * @return true if tick marks are painted, else false
              * @see #setPaintTicks
              */
             // @ts-ignore
-            getPaintTicks(): boolean
+            public getPaintTicks(): boolean
             /**
              * Determines whether tick marks are painted on the slider.
              * By default, this property is {@code false}.
@@ -678,14 +678,14 @@ declare namespace javax {
              *   description: If true tick marks are painted on the slider.
              */
             // @ts-ignore
-            setPaintTicks(b: boolean): void
+            public setPaintTicks(b: boolean): void
             /**
              * Tells if the track (area the slider slides in) is to be painted.
              * @return true if track is painted, else false
              * @see #setPaintTrack
              */
             // @ts-ignore
-            getPaintTrack(): boolean
+            public getPaintTrack(): boolean
             /**
              * Determines whether the track is painted on the slider.
              * By default, this property is {@code true}.
@@ -696,14 +696,14 @@ declare namespace javax {
              *   description: If true, the track is painted on the slider.
              */
             // @ts-ignore
-            setPaintTrack(b: boolean): void
+            public setPaintTrack(b: boolean): void
             /**
              * Tells if labels are to be painted.
              * @return true if labels are painted, else false
              * @see #setPaintLabels
              */
             // @ts-ignore
-            getPaintLabels(): boolean
+            public getPaintLabels(): boolean
             /**
              * Determines whether labels are painted on the slider.
              * <p>
@@ -725,7 +725,7 @@ declare namespace javax {
              *   description: If true labels are painted on the slider.
              */
             // @ts-ignore
-            setPaintLabels(b: boolean): void
+            public setPaintLabels(b: boolean): void
             /**
              * Returns a string representation of this JSlider. This method
              * is intended to be used only for debugging purposes, and the
@@ -735,7 +735,7 @@ declare namespace javax {
              * @return a string representation of this JSlider.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JSlider.
              * For sliders, the AccessibleContext takes the form of an
@@ -745,7 +745,7 @@ declare namespace javax {
              *          AccessibleContext of this JSlider
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

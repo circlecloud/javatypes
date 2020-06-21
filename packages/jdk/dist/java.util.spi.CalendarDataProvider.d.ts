@@ -9,7 +9,7 @@ declare namespace java {
              * @see CalendarNameProvider
              */
             // @ts-ignore
-            class CalendarDataProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class CalendarDataProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor. (For invocation by subclass constructors, typically
                  * implicit.)
@@ -31,7 +31,7 @@ declare namespace java {
                  * @see <a href="../Calendar.html#first_week">First Week</a>
                  */
                 // @ts-ignore
-                abstract getFirstDayOfWeek(locale: java.util.Locale): int
+                public abstract getFirstDayOfWeek(locale: java.util.Locale): number /*int*/
                 /**
                  * Returns the minimal number of days required in the first week of a
                  * year. This information is required by {@link Calendar} to determine the
@@ -47,7 +47,7 @@ declare namespace java {
                  * @see java.util.Calendar#getMinimalDaysInFirstWeek()
                  */
                 // @ts-ignore
-                abstract getMinimalDaysInFirstWeek(locale: java.util.Locale): int
+                public abstract getMinimalDaysInFirstWeek(locale: java.util.Locale): number /*int*/
             }
         }
     }

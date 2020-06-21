@@ -17,7 +17,7 @@ declare namespace org {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    class AbstractMBeanInfoAssembler extends java.lang.Object implements org.springframework.jmx.export.assembler.MBeanInfoAssembler {
+                    abstract class AbstractMBeanInfoAssembler extends java.lang.Object implements org.springframework.jmx.export.assembler.MBeanInfoAssembler {
                         // @ts-ignore
                         constructor()
                         /**
@@ -35,7 +35,7 @@ declare namespace org {
                          * @see #populateMBeanDescriptor(javax.management.Descriptor, Object, String)
                          */
                         // @ts-ignore
-                        getMBeanInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanInfo
+                        public getMBeanInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanInfo
                         /**
                          * Check the given bean instance, throwing an IllegalArgumentException
                          * if it is not eligible for exposure with this assembler.
@@ -44,7 +44,7 @@ declare namespace org {
                          * @throws IllegalArgumentException the bean is not valid for exposure
                          */
                         // @ts-ignore
-                        checkManagedBean(managedBean: any): void
+                        checkManagedBean(managedBean: java.lang.Object | any): void
                         /**
                          * Return the actual bean class of the given bean instance.
                          * This is the class exposed to description-style JMX properties.
@@ -55,7 +55,7 @@ declare namespace org {
                          * @see org.springframework.aop.support.AopUtils#getTargetClass(Object)
                          */
                         // @ts-ignore
-                        getTargetClass(managedBean: any): java.lang.Class<?>
+                        getTargetClass(managedBean: java.lang.Object | any): java.lang.Class<any>
                         /**
                          * Return the class or interface to expose for the given bean.
                          * This is the class that will be searched for attributes and operations
@@ -65,7 +65,7 @@ declare namespace org {
                          * @see JmxUtils#getClassToExpose(Object)
                          */
                         // @ts-ignore
-                        getClassToExpose(managedBean: any): java.lang.Class<?>
+                        getClassToExpose(managedBean: java.lang.Object | any): java.lang.Class<any>
                         /**
                          * Return the class or interface to expose for the given bean class.
                          * This is the class that will be searched for attributes and operations
@@ -74,7 +74,7 @@ declare namespace org {
                          * @see JmxUtils#getClassToExpose(Class)
                          */
                         // @ts-ignore
-                        getClassToExpose(beanClass: java.lang.Class<any>): java.lang.Class<?>
+                        getClassToExpose(beanClass: java.lang.Class<any>): java.lang.Class<any>
                         /**
                          * Get the class name of the MBean resource.
                          * <p>Default implementation returns a simple description for the MBean
@@ -86,7 +86,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        getClassName(managedBean: any, beanKey: string): java.lang.String
+                        getClassName(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): string
                         /**
                          * Get the description of the MBean resource.
                          * <p>Default implementation returns a simple description for the MBean
@@ -97,7 +97,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        getDescription(managedBean: any, beanKey: string): java.lang.String
+                        getDescription(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): string
                         /**
                          * Called after the {@code ModelMBeanInfo} instance has been constructed but
                          * before it is passed to the {@code MBeanExporter}.
@@ -110,7 +110,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        populateMBeanDescriptor(descriptor: javax.management.Descriptor, managedBean: any, beanKey: string): void
+                        populateMBeanDescriptor(descriptor: javax.management.Descriptor, managedBean: java.lang.Object | any, beanKey: java.lang.String | string): void
                         /**
                          * Get the constructor metadata for the MBean resource. Subclasses should implement
                          * this method to return the appropriate metadata for all constructors that should
@@ -123,7 +123,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        getConstructorInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanConstructorInfo[]
+                        getConstructorInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanConstructorInfo[]
                         /**
                          * Get the notification metadata for the MBean resource. Subclasses should implement
                          * this method to return the appropriate metadata for all notifications that should
@@ -136,7 +136,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        getNotificationInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanNotificationInfo[]
+                        getNotificationInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanNotificationInfo[]
                         /**
                          * Get the attribute metadata for the MBean resource. Subclasses should implement
                          * this method to return the appropriate metadata for all the attributes that should
@@ -148,7 +148,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        abstract getAttributeInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanAttributeInfo[]
+                        abstract getAttributeInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanAttributeInfo[]
                         /**
                          * Get the operation metadata for the MBean resource. Subclasses should implement
                          * this method to return the appropriate metadata for all operations that should
@@ -160,7 +160,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        abstract getOperationInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanOperationInfo[]
+                        abstract getOperationInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanOperationInfo[]
                     }
                 }
             }

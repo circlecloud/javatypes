@@ -16,7 +16,7 @@ declare namespace javax {
                      * @param name  the name of the new float control type
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Represents a control for the overall gain on a line.
                      * <p>
@@ -52,21 +52,21 @@ declare namespace javax {
                      * @see #VOLUME
                      */
                     // @ts-ignore
-                    readonly MASTER_GAIN: javax.sound.sampled.FloatControl.Type
+                    public static readonly MASTER_GAIN: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the auxiliary send gain on a line.
                      * @see #MASTER_GAIN
                      * @see #AUX_RETURN
                      */
                     // @ts-ignore
-                    readonly AUX_SEND: javax.sound.sampled.FloatControl.Type
+                    public static readonly AUX_SEND: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the auxiliary return gain on a line.
                      * @see #MASTER_GAIN
                      * @see #AUX_SEND
                      */
                     // @ts-ignore
-                    readonly AUX_RETURN: javax.sound.sampled.FloatControl.Type
+                    public static readonly AUX_RETURN: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the pre-reverb gain on a line.
                      * This control may be used to affect how much
@@ -76,7 +76,7 @@ declare namespace javax {
                      * @see EnumControl.Type#REVERB
                      */
                     // @ts-ignore
-                    readonly REVERB_SEND: javax.sound.sampled.FloatControl.Type
+                    public static readonly REVERB_SEND: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the post-reverb gain on a line.
                      * This control may be used to control the relative amplitude
@@ -85,12 +85,12 @@ declare namespace javax {
                      * @see #REVERB_SEND
                      */
                     // @ts-ignore
-                    readonly REVERB_RETURN: javax.sound.sampled.FloatControl.Type
+                    public static readonly REVERB_RETURN: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the volume on a line.
                      */
                     // @ts-ignore
-                    readonly VOLUME: javax.sound.sampled.FloatControl.Type
+                    public static readonly VOLUME: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the relative pan (left-right positioning)
                      * of the signal.  The signal may be mono; the pan setting affects how
@@ -100,7 +100,7 @@ declare namespace javax {
                      * @see #BALANCE
                      */
                     // @ts-ignore
-                    readonly PAN: javax.sound.sampled.FloatControl.Type
+                    public static readonly PAN: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control for the relative balance of a stereo signal
                      * between two stereo speakers.  The valid range of values is -1.0 (left channel only) to 1.0 (right channel
@@ -108,7 +108,7 @@ declare namespace javax {
                      * @see #PAN
                      */
                     // @ts-ignore
-                    readonly BALANCE: javax.sound.sampled.FloatControl.Type
+                    public static readonly BALANCE: javax.sound.sampled.FloatControl.Type
                     /**
                      * Represents a control that changes the sample rate of audio playback.  The net effect
                      * of changing the sample rate depends on the relationship between
@@ -126,7 +126,7 @@ declare namespace javax {
                      * which raises the pitch by an octave.
                      */
                     // @ts-ignore
-                    readonly SAMPLE_RATE: javax.sound.sampled.FloatControl.Type
+                    public static readonly SAMPLE_RATE: javax.sound.sampled.FloatControl.Type
                 }
             }
         }

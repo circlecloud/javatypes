@@ -13,13 +13,13 @@ declare namespace org {
                 // @ts-ignore
                 class PrimitivePersistentDataType<T> extends java.lang.Object implements org.bukkit.persistence.PersistentDataType<T, T> {
                     // @ts-ignore
-                    getPrimitiveType(): java.lang.Class<T>
+                    public getPrimitiveType(): java.lang.Class<T>
                     // @ts-ignore
-                    getComplexType(): java.lang.Class<T>
+                    public getComplexType(): java.lang.Class<T>
                     // @ts-ignore
-                    toPrimitive(complex: T, context: org.bukkit.persistence.PersistentDataAdapterContext): T
+                    public toPrimitive(complex: T, context: org.bukkit.persistence.PersistentDataAdapterContext): T
                     // @ts-ignore
-                    fromPrimitive(primitive: T, context: org.bukkit.persistence.PersistentDataAdapterContext): T
+                    public fromPrimitive(primitive: T, context: org.bukkit.persistence.PersistentDataAdapterContext): T
                 }
             }
         }

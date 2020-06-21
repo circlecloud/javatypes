@@ -24,7 +24,7 @@ declare namespace javax {
                  * @throws XMLStreamException if there was a failure attempting to resolve the resource.
                  */
                 // @ts-ignore
-                resolveEntity(publicID: string, systemID: string, baseURI: string, namespace: string): java.lang.Object
+                resolveEntity(publicID: java.lang.String | string, systemID: java.lang.String | string, baseURI: java.lang.String | string, namespace: java.lang.String | string): any
             }
         }
     }

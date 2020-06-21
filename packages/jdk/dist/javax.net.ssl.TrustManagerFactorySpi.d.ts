@@ -12,7 +12,7 @@ declare namespace javax {
              * @see TrustManager
              */
             // @ts-ignore
-            class TrustManagerFactorySpi extends java.lang.Object {
+            abstract class TrustManagerFactorySpi extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**

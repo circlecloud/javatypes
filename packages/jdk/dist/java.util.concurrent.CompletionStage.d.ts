@@ -89,7 +89,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenApply<U>(fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletionStage<U>
+                thenApply<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed using this stage's default asynchronous
@@ -103,7 +103,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenApplyAsync<U>(fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletionStage<U>
+                thenApplyAsync<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed using the supplied Executor, with this
@@ -117,7 +117,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenApplyAsync<U>(fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
+                thenApplyAsync<U>(fn: java.util.function$.Function<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed with this stage's result as the argument
@@ -129,7 +129,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenAccept(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletionStage<java.lang.Void>
+                thenAccept(action: java.util.function$.Consumer<any>): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed using this stage's default asynchronous
@@ -142,7 +142,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenAcceptAsync(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletionStage<java.lang.Void>
+                thenAcceptAsync(action: java.util.function$.Consumer<any>): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed using the supplied Executor, with this
@@ -155,7 +155,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenAcceptAsync(action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<java.lang.Void>
+                thenAcceptAsync(action: java.util.function$.Consumer<any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, executes the given action.
@@ -205,7 +205,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenCombine<U, V>(other: java.util.concurrent.CompletionStage<U>, fn: java.util.function.BiFunction<any super T, ? super U, V> | java.util.function$.BiFunction<? super T, ? super U, V>): java.util.concurrent.CompletionStage<V>
+                thenCombine<U, V>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.BiFunction<any, any, any>): java.util.concurrent.CompletionStage<V>
                 /**
                  * Returns a new CompletionStage that, when this and the other
                  * given stage complete normally, is executed using this stage's
@@ -221,7 +221,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<U>, fn: java.util.function.BiFunction<any super T, ? super U, V> | java.util.function$.BiFunction<? super T, ? super U, V>): java.util.concurrent.CompletionStage<V>
+                thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.BiFunction<any, any, any>): java.util.concurrent.CompletionStage<V>
                 /**
                  * Returns a new CompletionStage that, when this and the other
                  * given stage complete normally, is executed using the supplied
@@ -238,7 +238,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<U>, fn: java.util.function.BiFunction<any super T, ? super U, V> | java.util.function$.BiFunction<? super T, ? super U, V>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<V>
+                thenCombineAsync<U, V>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.BiFunction<any, any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<V>
                 /**
                  * Returns a new CompletionStage that, when this and the other
                  * given stage both complete normally, is executed with the two
@@ -252,7 +252,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenAcceptBoth<U>(other: java.util.concurrent.CompletionStage<U>, action: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>): java.util.concurrent.CompletionStage<java.lang.Void>
+                thenAcceptBoth<U>(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when this and the other
                  * given stage complete normally, is executed using this stage's
@@ -265,7 +265,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<U>, action: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>): java.util.concurrent.CompletionStage<java.lang.Void>
+                thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when this and the other
                  * given stage complete normally, is executed using the supplied
@@ -279,7 +279,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<U>, action: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<java.lang.Void>
+                thenAcceptBothAsync<U>(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.BiConsumer<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when this and the other
                  * given stage both complete normally, executes the given action.
@@ -332,7 +332,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                applyToEither<U>(other: java.util.concurrent.CompletionStage<T>, fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletionStage<U>
+                applyToEither<U>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.Function<any, U>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when either this or the
                  * other given stage complete normally, is executed using this
@@ -347,7 +347,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<T>, fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.concurrent.CompletionStage<U>
+                applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.Function<any, U>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when either this or the
                  * other given stage complete normally, is executed using the
@@ -363,7 +363,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<T>, fn: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
+                applyToEitherAsync<U>(other: java.util.concurrent.CompletionStage<any>, fn: java.util.function$.Function<any, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when either this or the
                  * other given stage complete normally, is executed with the
@@ -376,7 +376,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                acceptEither(other: java.util.concurrent.CompletionStage<T>, action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletionStage<java.lang.Void>
+                acceptEither(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.Consumer<any>): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when either this or the
                  * other given stage complete normally, is executed using this
@@ -390,7 +390,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                acceptEitherAsync(other: java.util.concurrent.CompletionStage<T>, action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): java.util.concurrent.CompletionStage<java.lang.Void>
+                acceptEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.Consumer<any>): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when either this or the
                  * other given stage complete normally, is executed using the
@@ -405,7 +405,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                acceptEitherAsync(other: java.util.concurrent.CompletionStage<T>, action: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<java.lang.Void>
+                acceptEitherAsync(other: java.util.concurrent.CompletionStage<any>, action: java.util.function$.Consumer<any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<java.lang.Void>
                 /**
                  * Returns a new CompletionStage that, when either this or the
                  * other given stage complete normally, executes the given action.
@@ -456,7 +456,7 @@ declare namespace java {
                  * @return the CompletionStage
                  */
                 // @ts-ignore
-                thenCompose<U>(fn: java.util.function.Function<any super T, java.util.concurrent.CompletionStage<U>> | java.util.function$.Function<? super T, java.util.concurrent.CompletionStage<U>>): java.util.concurrent.CompletionStage<U>
+                thenCompose<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed using this stage's default asynchronous
@@ -469,7 +469,7 @@ declare namespace java {
                  * @return the CompletionStage
                  */
                 // @ts-ignore
-                thenComposeAsync<U>(fn: java.util.function.Function<any super T, java.util.concurrent.CompletionStage<U>> | java.util.function$.Function<? super T, java.util.concurrent.CompletionStage<U>>): java.util.concurrent.CompletionStage<U>
+                thenComposeAsync<U>(fn: java.util.function$.Function<any, any>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * normally, is executed using the supplied Executor, with this
@@ -482,7 +482,7 @@ declare namespace java {
                  * @return the CompletionStage
                  */
                 // @ts-ignore
-                thenComposeAsync<U>(fn: java.util.function.Function<any super T, java.util.concurrent.CompletionStage<U>> | java.util.function$.Function<? super T, java.util.concurrent.CompletionStage<U>>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
+                thenComposeAsync<U>(fn: java.util.function$.Function<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * exceptionally, is executed with this stage's exception as the
@@ -495,7 +495,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                exceptionally(fn: java.util.function.Function<java.lang.Throwable, T> | java.util.function$.Function<java.lang.Throwable, T>): java.util.concurrent.CompletionStage<T>
+                exceptionally(fn: java.util.function$.Function<java.lang.Throwable | Error, any>): java.util.concurrent.CompletionStage<T>
                 /**
                  * Returns a new CompletionStage with the same result or exception as
                  * this stage, that executes the given action when this stage completes.
@@ -509,7 +509,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                whenComplete(action: java.util.function.BiConsumer<any super T, ? super java.lang.Throwable> | java.util.function$.BiConsumer<? super T, ? super java.lang.Throwable>): java.util.concurrent.CompletionStage<T>
+                whenComplete(action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletionStage<T>
                 /**
                  * Returns a new CompletionStage with the same result or exception as
                  * this stage, that executes the given action using this stage's
@@ -524,7 +524,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                whenCompleteAsync(action: java.util.function.BiConsumer<any super T, ? super java.lang.Throwable> | java.util.function$.BiConsumer<? super T, ? super java.lang.Throwable>): java.util.concurrent.CompletionStage<T>
+                whenCompleteAsync(action: java.util.function$.BiConsumer<any, any>): java.util.concurrent.CompletionStage<T>
                 /**
                  * Returns a new CompletionStage with the same result or exception as
                  * this stage, that executes the given action using the supplied
@@ -540,7 +540,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                whenCompleteAsync(action: java.util.function.BiConsumer<any super T, ? super java.lang.Throwable> | java.util.function$.BiConsumer<? super T, ? super java.lang.Throwable>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<T>
+                whenCompleteAsync(action: java.util.function$.BiConsumer<any, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<T>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * either normally or exceptionally, is executed with this stage's
@@ -555,7 +555,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                handle<U>(fn: java.util.function.BiFunction<any super T, java.lang.Throwable, U> | java.util.function$.BiFunction<? super T, java.lang.Throwable, U>): java.util.concurrent.CompletionStage<U>
+                handle<U>(fn: java.util.function$.BiFunction<any, java.lang.Throwable | Error, any>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * either normally or exceptionally, is executed using this stage's
@@ -571,7 +571,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                handleAsync<U>(fn: java.util.function.BiFunction<any super T, java.lang.Throwable, U> | java.util.function$.BiFunction<? super T, java.lang.Throwable, U>): java.util.concurrent.CompletionStage<U>
+                handleAsync<U>(fn: java.util.function$.BiFunction<any, java.lang.Throwable | Error, any>): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a new CompletionStage that, when this stage completes
                  * either normally or exceptionally, is executed using the
@@ -588,7 +588,7 @@ declare namespace java {
                  * @return the new CompletionStage
                  */
                 // @ts-ignore
-                handleAsync<U>(fn: java.util.function.BiFunction<any super T, java.lang.Throwable, U> | java.util.function$.BiFunction<? super T, java.lang.Throwable, U>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
+                handleAsync<U>(fn: java.util.function$.BiFunction<any, java.lang.Throwable | Error, any>, executor: java.util.concurrent.Executor): java.util.concurrent.CompletionStage<U>
                 /**
                  * Returns a {@link CompletableFuture} maintaining the same
                  * completion properties as this stage. If this stage is already a

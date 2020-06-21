@@ -14,19 +14,19 @@ declare namespace org {
                     // @ts-ignore
                     constructor(instance: org.bukkit.Server)
                     // @ts-ignore
-                    readonly pluginParentTimer: org.spigotmc.CustomTimingsHandler
+                    public static readonly pluginParentTimer: org.spigotmc.CustomTimingsHandler
                     // @ts-ignore
-                    loadPlugin(file: java.io.File): org.bukkit.plugin.Plugin
+                    public loadPlugin(file: java.io.File): org.bukkit.plugin.Plugin
                     // @ts-ignore
-                    getPluginDescription(file: java.io.File): org.bukkit.plugin.PluginDescriptionFile
+                    public getPluginDescription(file: java.io.File): org.bukkit.plugin.PluginDescriptionFile
                     // @ts-ignore
-                    getPluginFileFilters(): java.util.regex.Pattern[]
+                    public getPluginFileFilters(): java.util.regex.Pattern[]
                     // @ts-ignore
-                    createRegisteredListeners(listener: org.bukkit.event.Listener, plugin: org.bukkit.plugin.Plugin): java.util.Map<java.lang.Class<? extends org.bukkit.event.Event>, java.util.Set<org.bukkit.plugin.RegisteredListener>>
+                    public createRegisteredListeners(listener: org.bukkit.event.Listener, plugin: org.bukkit.plugin.Plugin): java.util.Map<java.lang.Class<any>, java.util.Set<org.bukkit.plugin.RegisteredListener> | Array<org.bukkit.plugin.RegisteredListener>>
                     // @ts-ignore
-                    enablePlugin(plugin: org.bukkit.plugin.Plugin): void
+                    public enablePlugin(plugin: org.bukkit.plugin.Plugin): void
                     // @ts-ignore
-                    disablePlugin(plugin: org.bukkit.plugin.Plugin): void
+                    public disablePlugin(plugin: org.bukkit.plugin.Plugin): void
                 }
             }
         }

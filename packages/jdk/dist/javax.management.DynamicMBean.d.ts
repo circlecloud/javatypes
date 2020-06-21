@@ -17,7 +17,7 @@ declare namespace javax {
              * @see #setAttribute
              */
             // @ts-ignore
-            getAttribute(attribute: string): java.lang.Object
+            getAttribute(attribute: java.lang.String | string): any
             /**
              * Set the value of a specific attribute of the Dynamic MBean.
              * @param attribute The identification of the attribute to
@@ -37,7 +37,7 @@ declare namespace javax {
              * @see #setAttributes
              */
             // @ts-ignore
-            getAttributes(attributes: string[]): javax.management.AttributeList
+            getAttributes(attributes: java.lang.String[] | string[]): javax.management.AttributeList
             /**
              * Sets the values of several attributes of the Dynamic MBean.
              * @param attributes A list of attributes: The identification of the
@@ -61,7 +61,7 @@ declare namespace javax {
              * @exception ReflectionException  Wraps a <CODE>java.lang.Exception</CODE> thrown while trying to invoke the method
              */
             // @ts-ignore
-            invoke(actionName: string, params: any[], signature: string[]): java.lang.Object
+            invoke(actionName: java.lang.String | string, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): any
             /**
              * Provides the exposed attributes and actions of the Dynamic MBean using an MBeanInfo object.
              * @return An instance of <CODE>MBeanInfo</CODE> allowing all attributes and actions

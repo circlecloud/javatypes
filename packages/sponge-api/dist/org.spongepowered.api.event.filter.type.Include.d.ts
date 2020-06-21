@@ -12,7 +12,7 @@ declare namespace org {
                          * annotation.</p>
                          */
                         // @ts-ignore
-                        class Include implements java.lang.annotation.Annotation {
+                        abstract class Include implements java.lang.annotation.Annotation {
                         }
                     }
                 }

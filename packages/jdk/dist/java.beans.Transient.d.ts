@@ -30,7 +30,7 @@ declare namespace java {
          * @since 1.7
          */
         // @ts-ignore
-        class Transient implements java.lang.annotation.Annotation {
+        abstract class Transient implements java.lang.annotation.Annotation {
         }
     }
 }

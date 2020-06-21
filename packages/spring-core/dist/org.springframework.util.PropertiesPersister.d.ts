@@ -44,7 +44,7 @@ declare namespace org {
                  * @see java.util.Properties#store
                  */
                 // @ts-ignore
-                store(props: java.util.Properties, os: java.io.OutputStream, header: string): void
+                store(props: java.util.Properties, os: java.io.OutputStream, header: java.lang.String | string): void
                 /**
                  * Write the contents of the given Properties object to the
                  * given Writer.
@@ -54,7 +54,7 @@ declare namespace org {
                  * @throws IOException in case of I/O errors
                  */
                 // @ts-ignore
-                store(props: java.util.Properties, writer: java.io.Writer, header: string): void
+                store(props: java.util.Properties, writer: java.io.Writer, header: java.lang.String | string): void
                 /**
                  * Load properties from the given XML InputStream into the
                  * given Properties object.
@@ -75,7 +75,7 @@ declare namespace org {
                  * @see java.util.Properties#storeToXML(java.io.OutputStream, String)
                  */
                 // @ts-ignore
-                storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: string): void
+                storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: java.lang.String | string): void
                 /**
                  * Write the contents of the given Properties object to the
                  * given XML OutputStream.
@@ -87,7 +87,7 @@ declare namespace org {
                  * @see java.util.Properties#storeToXML(java.io.OutputStream, String, String)
                  */
                 // @ts-ignore
-                storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: string, encoding: string): void
+                storeToXml(props: java.util.Properties, os: java.io.OutputStream, header: java.lang.String | string, encoding: java.lang.String | string): void
             }
         }
     }

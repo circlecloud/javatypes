@@ -34,7 +34,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class Schema extends java.lang.Object {
+            abstract class Schema extends java.lang.Object {
                 /**
                  * Constructor for the derived class.
                  * <p>
@@ -52,7 +52,7 @@ declare namespace javax {
                  * @return Always return a non-null valid object.
                  */
                 // @ts-ignore
-                abstract newValidator(): javax.xml.validation.Validator
+                public abstract newValidator(): javax.xml.validation.Validator
                 /**
                  * Creates a new {@link ValidatorHandler} for this {@link Schema}.
                  * <p>Implementors should assure that the properties set on the
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @return Always return a non-null valid object.
                  */
                 // @ts-ignore
-                abstract newValidatorHandler(): javax.xml.validation.ValidatorHandler
+                public abstract newValidatorHandler(): javax.xml.validation.ValidatorHandler
             }
         }
     }

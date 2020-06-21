@@ -35,7 +35,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        registerSingleton(beanName: string, singletonObject: any): void
+                        public registerSingleton(beanName: java.lang.String | string, singletonObject: java.lang.Object | any): void
                         /**
                          * Add the given singleton object to the singleton cache of this factory.
                          * <p>To be called for eager registration of singletons.
@@ -43,7 +43,7 @@ declare namespace org {
                          * @param singletonObject the singleton object
                          */
                         // @ts-ignore
-                        addSingleton(beanName: string, singletonObject: any): void
+                        addSingleton(beanName: java.lang.String | string, singletonObject: java.lang.Object | any): void
                         /**
                          * Add the given singleton factory for building the specified singleton
                          * if necessary.
@@ -53,9 +53,9 @@ declare namespace org {
                          * @param singletonFactory the factory for the singleton object
                          */
                         // @ts-ignore
-                        addSingletonFactory(beanName: string, singletonFactory: org.springframework.beans.factory.ObjectFactory<any>): void
+                        addSingletonFactory(beanName: java.lang.String | string, singletonFactory: org.springframework.beans.factory.ObjectFactory<any>): void
                         // @ts-ignore
-                        getSingleton(beanName: string): java.lang.Object
+                        public getSingleton(beanName: java.lang.String | string): any
                         /**
                          * Return the (raw) singleton object registered under the given name.
                          * <p>Checks already instantiated singletons and also allows for an early
@@ -65,7 +65,7 @@ declare namespace org {
                          * @return the registered singleton object, or {#code null} if none found
                          */
                         // @ts-ignore
-                        getSingleton(beanName: string, allowEarlyReference: boolean): java.lang.Object
+                        getSingleton(beanName: java.lang.String | string, allowEarlyReference: boolean): any
                         /**
                          * Return the (raw) singleton object registered under the given name,
                          * creating and registering a new one if none registered yet.
@@ -75,7 +75,7 @@ declare namespace org {
                          * @return the registered singleton object
                          */
                         // @ts-ignore
-                        getSingleton(beanName: string, singletonFactory: org.springframework.beans.factory.ObjectFactory<any>): java.lang.Object
+                        public getSingleton(beanName: java.lang.String | string, singletonFactory: org.springframework.beans.factory.ObjectFactory<any>): any
                         /**
                          * Register an exception that happened to get suppressed during the creation of a
                          * singleton bean instance, e.g. a temporary circular reference resolution problem.
@@ -94,26 +94,26 @@ declare namespace org {
                          * @see #getSingletonMutex()
                          */
                         // @ts-ignore
-                        removeSingleton(beanName: string): void
+                        removeSingleton(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        containsSingleton(beanName: string): boolean
+                        public containsSingleton(beanName: java.lang.String | string): boolean
                         // @ts-ignore
-                        getSingletonNames(): java.lang.String[]
+                        public getSingletonNames(): string[]
                         // @ts-ignore
-                        getSingletonCount(): int
+                        public getSingletonCount(): number /*int*/
                         // @ts-ignore
-                        setCurrentlyInCreation(beanName: string, inCreation: boolean): void
+                        public setCurrentlyInCreation(beanName: java.lang.String | string, inCreation: boolean): void
                         // @ts-ignore
-                        isCurrentlyInCreation(beanName: string): boolean
+                        public isCurrentlyInCreation(beanName: java.lang.String | string): boolean
                         // @ts-ignore
-                        isActuallyInCreation(beanName: string): boolean
+                        isActuallyInCreation(beanName: java.lang.String | string): boolean
                         /**
                          * Return whether the specified singleton bean is currently in creation
                          * (within the entire factory).
                          * @param beanName the name of the bean
                          */
                         // @ts-ignore
-                        isSingletonCurrentlyInCreation(beanName: string): boolean
+                        public isSingletonCurrentlyInCreation(beanName: java.lang.String | string): boolean
                         /**
                          * Callback before singleton creation.
                          * <p>The default implementation register the singleton as currently in creation.
@@ -121,7 +121,7 @@ declare namespace org {
                          * @see #isSingletonCurrentlyInCreation
                          */
                         // @ts-ignore
-                        beforeSingletonCreation(beanName: string): void
+                        beforeSingletonCreation(beanName: java.lang.String | string): void
                         /**
                          * Callback after singleton creation.
                          * <p>The default implementation marks the singleton as not in creation anymore.
@@ -129,7 +129,7 @@ declare namespace org {
                          * @see #isSingletonCurrentlyInCreation
                          */
                         // @ts-ignore
-                        afterSingletonCreation(beanName: string): void
+                        afterSingletonCreation(beanName: java.lang.String | string): void
                         /**
                          * Add the given bean to the list of disposable beans in this registry.
                          * <p>Disposable beans usually correspond to registered singletons,
@@ -140,7 +140,7 @@ declare namespace org {
                          * @param bean the bean instance
                          */
                         // @ts-ignore
-                        registerDisposableBean(beanName: string, bean: org.springframework.beans.factory.DisposableBean): void
+                        public registerDisposableBean(beanName: java.lang.String | string, bean: org.springframework.beans.factory.DisposableBean): void
                         /**
                          * Register a containment relationship between two beans,
                          * e.g. between an inner bean and its containing outer bean.
@@ -151,7 +151,7 @@ declare namespace org {
                          * @see #registerDependentBean
                          */
                         // @ts-ignore
-                        registerContainedBean(containedBeanName: string, containingBeanName: string): void
+                        public registerContainedBean(containedBeanName: java.lang.String | string, containingBeanName: java.lang.String | string): void
                         /**
                          * Register a dependent bean for the given bean,
                          * to be destroyed before the given bean is destroyed.
@@ -159,7 +159,7 @@ declare namespace org {
                          * @param dependentBeanName the name of the dependent bean
                          */
                         // @ts-ignore
-                        registerDependentBean(beanName: string, dependentBeanName: string): void
+                        public registerDependentBean(beanName: java.lang.String | string, dependentBeanName: java.lang.String | string): void
                         /**
                          * Determine whether the specified dependent bean has been registered as
                          * dependent on the given bean or on any of its transitive dependencies.
@@ -168,20 +168,20 @@ declare namespace org {
                          * @since 4.0
                          */
                         // @ts-ignore
-                        isDependent(beanName: string, dependentBeanName: string): boolean
+                        isDependent(beanName: java.lang.String | string, dependentBeanName: java.lang.String | string): boolean
                         /**
                          * Determine whether a dependent bean has been registered for the given name.
                          * @param beanName the name of the bean to check
                          */
                         // @ts-ignore
-                        hasDependentBean(beanName: string): boolean
+                        hasDependentBean(beanName: java.lang.String | string): boolean
                         /**
                          * Return the names of all beans which depend on the specified bean, if any.
                          * @param beanName the name of the bean
                          * @return the array of dependent bean names, or an empty array if none
                          */
                         // @ts-ignore
-                        getDependentBeans(beanName: string): java.lang.String[]
+                        public getDependentBeans(beanName: java.lang.String | string): string[]
                         /**
                          * Return the names of all beans that the specified bean depends on, if any.
                          * @param beanName the name of the bean
@@ -189,9 +189,9 @@ declare namespace org {
                          *  or an empty array if none
                          */
                         // @ts-ignore
-                        getDependenciesForBean(beanName: string): java.lang.String[]
+                        public getDependenciesForBean(beanName: java.lang.String | string): string[]
                         // @ts-ignore
-                        destroySingletons(): void
+                        public destroySingletons(): void
                         /**
                          * Clear all cached singleton instances in this registry.
                          * @since 4.3.15
@@ -205,7 +205,7 @@ declare namespace org {
                          * @see #destroyBean
                          */
                         // @ts-ignore
-                        destroySingleton(beanName: string): void
+                        public destroySingleton(beanName: java.lang.String | string): void
                         /**
                          * Destroy the given bean. Must destroy beans that depend on the given
                          * bean before the bean itself. Should not throw any exceptions.
@@ -213,7 +213,7 @@ declare namespace org {
                          * @param bean the bean instance to destroy
                          */
                         // @ts-ignore
-                        destroyBean(beanName: string, bean: org.springframework.beans.factory.DisposableBean): void
+                        destroyBean(beanName: java.lang.String | string, bean: org.springframework.beans.factory.DisposableBean): void
                         /**
                          * Exposes the singleton mutex to subclasses and external collaborators.
                          * <p>Subclasses should synchronize on the given Object if they perform
@@ -222,7 +222,7 @@ declare namespace org {
                          * to avoid the potential for deadlocks in lazy-init situations.
                          */
                         // @ts-ignore
-                        getSingletonMutex(): java.lang.Object
+                        public getSingletonMutex(): any
                     }
                 }
             }

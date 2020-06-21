@@ -62,7 +62,7 @@ declare namespace java {
                  *  are not of type {@code java.security.cert.TrustAnchor}
                  */
                 // @ts-ignore
-                constructor(trustAnchors: Array<java.security.cert.TrustAnchor>)
+                constructor(trustAnchors: java.util.Set<java.security.cert.TrustAnchor> | Array<java.security.cert.TrustAnchor>)
                 /**
                  * Creates an instance of {@code PKIXParameters} that
                  * populates the set of most-trusted CAs from the trusted
@@ -86,7 +86,7 @@ declare namespace java {
                  * @see #setTrustAnchors
                  */
                 // @ts-ignore
-                getTrustAnchors(): java.util.Set<java.security.cert.TrustAnchor>
+                public getTrustAnchors(): Array<java.security.cert.TrustAnchor>
                 /**
                  * Sets the {@code Set} of most-trusted CAs.
                  * <p>
@@ -102,7 +102,7 @@ declare namespace java {
                  * @see #getTrustAnchors
                  */
                 // @ts-ignore
-                setTrustAnchors(trustAnchors: Array<java.security.cert.TrustAnchor>): void
+                public setTrustAnchors(trustAnchors: java.util.Set<java.security.cert.TrustAnchor> | Array<java.security.cert.TrustAnchor>): void
                 /**
                  * Returns an immutable {@code Set} of initial
                  * policy identifiers (OID strings), indicating that any one of these
@@ -116,7 +116,7 @@ declare namespace java {
                  * @see #setInitialPolicies
                  */
                 // @ts-ignore
-                getInitialPolicies(): java.util.Set<java.lang.String>
+                public getInitialPolicies(): Array<java.lang.String | string>
                 /**
                  * Sets the {@code Set} of initial policy identifiers
                  * (OID strings), indicating that any one of these
@@ -135,7 +135,7 @@ declare namespace java {
                  * @see #getInitialPolicies
                  */
                 // @ts-ignore
-                setInitialPolicies(initialPolicies: Array<java.lang.String>): void
+                public setInitialPolicies(initialPolicies: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Sets the list of {@code CertStore}s to be used in finding
                  * certificates and CRLs. May be {@code null}, in which case
@@ -152,7 +152,7 @@ declare namespace java {
                  * @see #getCertStores
                  */
                 // @ts-ignore
-                setCertStores(stores: Array<java.security.cert.CertStore>): void
+                public setCertStores(stores: java.util.List<java.security.cert.CertStore> | Array<java.security.cert.CertStore>): void
                 /**
                  * Adds a {@code CertStore} to the end of the list of
                  * {@code CertStore}s used in finding certificates and CRLs.
@@ -160,7 +160,7 @@ declare namespace java {
                  *  the store is ignored (not added to list).
                  */
                 // @ts-ignore
-                addCertStore(store: java.security.cert.CertStore): void
+                public addCertStore(store: java.security.cert.CertStore): void
                 /**
                  * Returns an immutable {@code List} of {@code CertStore}s that
                  * are used to find certificates and CRLs.
@@ -169,7 +169,7 @@ declare namespace java {
                  * @see #setCertStores
                  */
                 // @ts-ignore
-                getCertStores(): java.util.List<java.security.cert.CertStore>
+                public getCertStores(): Array<java.security.cert.CertStore>
                 /**
                  * Sets the RevocationEnabled flag. If this flag is true, the default
                  * revocation checking mechanism of the underlying PKIX service provider
@@ -188,7 +188,7 @@ declare namespace java {
                  * @param val the new value of the RevocationEnabled flag
                  */
                 // @ts-ignore
-                setRevocationEnabled(val: boolean): void
+                public setRevocationEnabled(val: boolean): void
                 /**
                  * Checks the RevocationEnabled flag. If this flag is true, the default
                  * revocation checking mechanism of the underlying PKIX service provider
@@ -199,7 +199,7 @@ declare namespace java {
                  * @return the current value of the RevocationEnabled flag
                  */
                 // @ts-ignore
-                isRevocationEnabled(): boolean
+                public isRevocationEnabled(): boolean
                 /**
                  * Sets the ExplicitPolicyRequired flag. If this flag is true, an
                  * acceptable policy needs to be explicitly identified in every certificate.
@@ -208,7 +208,7 @@ declare namespace java {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                setExplicitPolicyRequired(val: boolean): void
+                public setExplicitPolicyRequired(val: boolean): void
                 /**
                  * Checks if explicit policy is required. If this flag is true, an
                  * acceptable policy needs to be explicitly identified in every certificate.
@@ -217,7 +217,7 @@ declare namespace java {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                isExplicitPolicyRequired(): boolean
+                public isExplicitPolicyRequired(): boolean
                 /**
                  * Sets the PolicyMappingInhibited flag. If this flag is true, policy
                  * mapping is inhibited. By default, policy mapping is not inhibited (the
@@ -226,7 +226,7 @@ declare namespace java {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                setPolicyMappingInhibited(val: boolean): void
+                public setPolicyMappingInhibited(val: boolean): void
                 /**
                  * Checks if policy mapping is inhibited. If this flag is true, policy
                  * mapping is inhibited. By default, policy mapping is not inhibited (the
@@ -234,7 +234,7 @@ declare namespace java {
                  * @return true if policy mapping is inhibited, false otherwise
                  */
                 // @ts-ignore
-                isPolicyMappingInhibited(): boolean
+                public isPolicyMappingInhibited(): boolean
                 /**
                  * Sets state to determine if the any policy OID should be processed
                  * if it is included in a certificate. By default, the any policy OID
@@ -244,7 +244,7 @@ declare namespace java {
                  *  inhibited, {@code false} otherwise
                  */
                 // @ts-ignore
-                setAnyPolicyInhibited(val: boolean): void
+                public setAnyPolicyInhibited(val: boolean): void
                 /**
                  * Checks whether the any policy OID should be processed if it
                  * is included in a certificate.
@@ -252,7 +252,7 @@ declare namespace java {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                isAnyPolicyInhibited(): boolean
+                public isAnyPolicyInhibited(): boolean
                 /**
                  * Sets the PolicyQualifiersRejected flag. If this flag is true,
                  * certificates that include policy qualifiers in a certificate
@@ -275,7 +275,7 @@ declare namespace java {
                  * @see PolicyQualifierInfo
                  */
                 // @ts-ignore
-                setPolicyQualifiersRejected(qualifiersRejected: boolean): void
+                public setPolicyQualifiersRejected(qualifiersRejected: boolean): void
                 /**
                  * Gets the PolicyQualifiersRejected flag. If this flag is true,
                  * certificates that include policy qualifiers in a certificate policies
@@ -289,7 +289,7 @@ declare namespace java {
                  * @see #setPolicyQualifiersRejected
                  */
                 // @ts-ignore
-                getPolicyQualifiersRejected(): boolean
+                public getPolicyQualifiersRejected(): boolean
                 /**
                  * Returns the time for which the validity of the certification path
                  * should be determined. If {@code null}, the current time is used.
@@ -300,7 +300,7 @@ declare namespace java {
                  * @see #setDate
                  */
                 // @ts-ignore
-                getDate(): java.util.Date
+                public getDate(): java.util.Date
                 /**
                  * Sets the time for which the validity of the certification path
                  * should be determined. If {@code null}, the current time is used.
@@ -312,7 +312,7 @@ declare namespace java {
                  * @see #getDate
                  */
                 // @ts-ignore
-                setDate(date: java.util.Date): void
+                public setDate(date: java.util.Date): void
                 /**
                  * Sets a {@code List} of additional certification path checkers. If
                  * the specified {@code List} contains an object that is not a
@@ -349,7 +349,7 @@ declare namespace java {
                  * @see #getCertPathCheckers
                  */
                 // @ts-ignore
-                setCertPathCheckers(checkers: Array<java.security.cert.PKIXCertPathChecker>): void
+                public setCertPathCheckers(checkers: java.util.List<java.security.cert.PKIXCertPathChecker> | Array<java.security.cert.PKIXCertPathChecker>): void
                 /**
                  * Returns the {@code List} of certification path checkers.
                  * The returned {@code List} is immutable, and each
@@ -361,7 +361,7 @@ declare namespace java {
                  * @see #setCertPathCheckers
                  */
                 // @ts-ignore
-                getCertPathCheckers(): java.util.List<java.security.cert.PKIXCertPathChecker>
+                public getCertPathCheckers(): Array<java.security.cert.PKIXCertPathChecker>
                 /**
                  * Adds a {@code PKIXCertPathChecker} to the list of certification
                  * path checkers. See the {@link #setCertPathCheckers setCertPathCheckers}
@@ -373,7 +373,7 @@ declare namespace java {
                  *  checks. If {@code null}, the checker is ignored (not added to list).
                  */
                 // @ts-ignore
-                addCertPathChecker(checker: java.security.cert.PKIXCertPathChecker): void
+                public addCertPathChecker(checker: java.security.cert.PKIXCertPathChecker): void
                 /**
                  * Returns the signature provider's name, or {@code null}
                  * if not set.
@@ -381,7 +381,7 @@ declare namespace java {
                  * @see #setSigProvider
                  */
                 // @ts-ignore
-                getSigProvider(): java.lang.String
+                public getSigProvider(): string
                 /**
                  * Sets the signature provider's name. The specified provider will be
                  * preferred when creating {@link java.security.Signature Signature}
@@ -391,7 +391,7 @@ declare namespace java {
                  * @see #getSigProvider
                  */
                 // @ts-ignore
-                setSigProvider(sigProvider: string): void
+                public setSigProvider(sigProvider: java.lang.String | string): void
                 /**
                  * Returns the required constraints on the target certificate.
                  * The constraints are returned as an instance of {@code CertSelector}.
@@ -403,7 +403,7 @@ declare namespace java {
                  * @see #setTargetCertConstraints
                  */
                 // @ts-ignore
-                getTargetCertConstraints(): java.security.cert.CertSelector
+                public getTargetCertConstraints(): java.security.cert.CertSelector
                 /**
                  * Sets the required constraints on the target certificate.
                  * The constraints are specified as an instance of
@@ -416,20 +416,20 @@ declare namespace java {
                  * @see #getTargetCertConstraints
                  */
                 // @ts-ignore
-                setTargetCertConstraints(selector: java.security.cert.CertSelector): void
+                public setTargetCertConstraints(selector: java.security.cert.CertSelector): void
                 /**
                  * Makes a copy of this {@code PKIXParameters} object. Changes
                  * to the copy will not affect the original and vice versa.
                  * @return a copy of this {#code PKIXParameters} object
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a formatted string describing the parameters.
                  * @return a formatted string describing the parameters.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

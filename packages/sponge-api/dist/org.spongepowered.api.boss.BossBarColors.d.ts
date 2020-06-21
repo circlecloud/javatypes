@@ -8,19 +8,19 @@ declare namespace org {
                 // @ts-ignore
                 class BossBarColors extends java.lang.Object {
                     // @ts-ignore
-                    readonly BLUE: org.spongepowered.api.boss.BossBarColor
+                    public static readonly BLUE: org.spongepowered.api.boss.BossBarColor
                     // @ts-ignore
-                    readonly GREEN: org.spongepowered.api.boss.BossBarColor
+                    public static readonly GREEN: org.spongepowered.api.boss.BossBarColor
                     // @ts-ignore
-                    readonly PINK: org.spongepowered.api.boss.BossBarColor
+                    public static readonly PINK: org.spongepowered.api.boss.BossBarColor
                     // @ts-ignore
-                    readonly PURPLE: org.spongepowered.api.boss.BossBarColor
+                    public static readonly PURPLE: org.spongepowered.api.boss.BossBarColor
                     // @ts-ignore
-                    readonly RED: org.spongepowered.api.boss.BossBarColor
+                    public static readonly RED: org.spongepowered.api.boss.BossBarColor
                     // @ts-ignore
-                    readonly WHITE: org.spongepowered.api.boss.BossBarColor
+                    public static readonly WHITE: org.spongepowered.api.boss.BossBarColor
                     // @ts-ignore
-                    readonly YELLOW: org.spongepowered.api.boss.BossBarColor
+                    public static readonly YELLOW: org.spongepowered.api.boss.BossBarColor
                 }
             }
         }

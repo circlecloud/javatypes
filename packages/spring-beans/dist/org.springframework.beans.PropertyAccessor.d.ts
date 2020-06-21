@@ -18,37 +18,37 @@ declare namespace org {
                  * Follows normal Java conventions: getFoo().getBar() would be "foo.bar".
                  */
                 // @ts-ignore
-                
+                readonly NESTED_PROPERTY_SEPARATOR: java.lang.String | string
                 /**
                  * Path separator for nested properties.
                  * Follows normal Java conventions: getFoo().getBar() would be "foo.bar".
                  */
                 // @ts-ignore
-                
+                readonly NESTED_PROPERTY_SEPARATOR_CHAR: string
                 /**
                  * Marker that indicates the start of a property key for an
                  * indexed or mapped property like "person.addresses[0]".
                  */
                 // @ts-ignore
-                
+                readonly PROPERTY_KEY_PREFIX: java.lang.String | string
                 /**
                  * Marker that indicates the start of a property key for an
                  * indexed or mapped property like "person.addresses[0]".
                  */
                 // @ts-ignore
-                
+                readonly PROPERTY_KEY_PREFIX_CHAR: string
                 /**
                  * Marker that indicates the end of a property key for an
                  * indexed or mapped property like "person.addresses[0]".
                  */
                 // @ts-ignore
-                
+                readonly PROPERTY_KEY_SUFFIX: java.lang.String | string
                 /**
                  * Marker that indicates the end of a property key for an
                  * indexed or mapped property like "person.addresses[0]".
                  */
                 // @ts-ignore
-                
+                readonly PROPERTY_KEY_SUFFIX_CHAR: string
                 /**
                  * Determine whether the specified property is readable.
                  * <p>Returns {@code false} if the property doesn't exist.
@@ -57,7 +57,7 @@ declare namespace org {
                  * @return whether the property is readable
                  */
                 // @ts-ignore
-                isReadableProperty(propertyName: string): boolean
+                isReadableProperty(propertyName: java.lang.String | string): boolean
                 /**
                  * Determine whether the specified property is writable.
                  * <p>Returns {@code false} if the property doesn't exist.
@@ -66,7 +66,7 @@ declare namespace org {
                  * @return whether the property is writable
                  */
                 // @ts-ignore
-                isWritableProperty(propertyName: string): boolean
+                isWritableProperty(propertyName: java.lang.String | string): boolean
                 /**
                  * Determine the property type for the specified property,
                  * either checking the property descriptor or checking the value
@@ -79,7 +79,7 @@ declare namespace org {
                  *  accessor method failed
                  */
                 // @ts-ignore
-                getPropertyType(propertyName: string): java.lang.Class<?>
+                getPropertyType(propertyName: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Return a type descriptor for the specified property:
                  * preferably from the read method, falling back to the write method.
@@ -91,7 +91,7 @@ declare namespace org {
                  *  accessor method failed
                  */
                 // @ts-ignore
-                getPropertyTypeDescriptor(propertyName: string): TypeDescriptor
+                getPropertyTypeDescriptor(propertyName: java.lang.String | string): TypeDescriptor
                 /**
                  * Get the current value of the specified property.
                  * @param propertyName the name of the property to get the value of
@@ -103,7 +103,7 @@ declare namespace org {
                  *  accessor method failed
                  */
                 // @ts-ignore
-                getPropertyValue(propertyName: string): java.lang.Object
+                getPropertyValue(propertyName: java.lang.String | string): any
                 /**
                  * Set the specified value as current property value.
                  * @param propertyName the name of the property to set the value of
@@ -115,7 +115,7 @@ declare namespace org {
                  *  accessor method failed or a type mismatch occurred
                  */
                 // @ts-ignore
-                setPropertyValue(propertyName: string, value: any): void
+                setPropertyValue(propertyName: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Set the specified value as current property value.
                  * @param pv an object containing the new property value
@@ -141,7 +141,7 @@ declare namespace org {
                  *  successfully updated.
                  */
                 // @ts-ignore
-                setPropertyValues(map: java.util.Map<any, ?>): void
+                setPropertyValues(map: java.util.Map<any, any>): void
                 /**
                  * The preferred way to perform a batch update.
                  * <p>Note that performing a batch update differs from performing a single update,

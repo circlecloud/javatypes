@@ -40,10 +40,22 @@ declare namespace java {
              */
             // @ts-ignore
             class MinguoEra extends java.lang.Enum<java.time.chrono.MinguoEra> implements java.time.chrono.Era {
+                /**
+                 * The singleton instance for the era before the current one, 'Before Republic of China Era',
+                 * which has the numeric value 0.
+                 */
+                // @ts-ignore
+                readonly BEFORE_ROC: java.time.chrono.MinguoEra
+                /**
+                 * The singleton instance for the current era, 'Republic of China Era',
+                 * which has the numeric value 1.
+                 */
+                // @ts-ignore
+                readonly ROC: java.time.chrono.MinguoEra
                 // @ts-ignore
                 values(): java.time.chrono.MinguoEra[]
                 // @ts-ignore
-                valueOf(name: string): java.time.chrono.MinguoEra
+                valueOf(name: java.lang.String | string): java.time.chrono.MinguoEra
                 /**
                  * Obtains an instance of {@code MinguoEra} from an {@code int} value.
                  * <p>
@@ -62,7 +74,7 @@ declare namespace java {
                  * @return the era value, from 0 (BEFORE_ROC) to 1 (ROC)
                  */
                 // @ts-ignore
-                getValue(): int
+                getValue(): number /*int*/
             }
         }
     }

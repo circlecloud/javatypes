@@ -15,13 +15,13 @@ declare namespace java {
                  * @return true if the Permission objects are equal, false otherwise
                  */
                 // @ts-ignore
-                equals(another: any): boolean
+                equals(another: java.lang.Object | any): boolean
                 /**
                  * Prints a string representation of this permission.
                  * @return the string representation of the permission.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

@@ -52,7 +52,7 @@ declare namespace java {
          * @author Helena Shih
          */
         // @ts-ignore
-        class CollationKey extends java.lang.Object implements java.lang.Comparable<java.text.CollationKey> {
+        abstract class CollationKey extends java.lang.Object implements java.lang.Comparable<java.text.CollationKey> {
             /**
              * CollationKey constructor.
              * @param source the source string
@@ -60,7 +60,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(source: string)
+            constructor(source: java.lang.String | string)
             /**
              * Compare this CollationKey to the target CollationKey. The collation rules of the
              * Collator object which created these keys are applied. <strong>Note:</strong>
@@ -72,13 +72,13 @@ declare namespace java {
              * @see java.text.Collator#compare
              */
             // @ts-ignore
-            abstract compareTo(target: java.text.CollationKey): int
+            public abstract compareTo(target: java.text.CollationKey): number /*int*/
             /**
              * Returns the String that this CollationKey represents.
              * @return the source string of this CollationKey
              */
             // @ts-ignore
-            getSourceString(): java.lang.String
+            public getSourceString(): string
             /**
              * Converts the CollationKey to a sequence of bits. If two CollationKeys
              * could be legitimately compared, then one could compare the byte arrays
@@ -87,7 +87,7 @@ declare namespace java {
              * @return a byte array representation of the CollationKey
              */
             // @ts-ignore
-            abstract toByteArray(): byte[]
+            public abstract toByteArray(): number /*byte*/[]
         }
     }
 }

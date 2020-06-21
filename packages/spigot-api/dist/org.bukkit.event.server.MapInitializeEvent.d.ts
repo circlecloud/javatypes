@@ -14,11 +14,11 @@ declare namespace org {
                      * @return Map for this event
                      */
                     // @ts-ignore
-                    getMap(): org.bukkit.map.MapView
+                    public getMap(): org.bukkit.map.MapView
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

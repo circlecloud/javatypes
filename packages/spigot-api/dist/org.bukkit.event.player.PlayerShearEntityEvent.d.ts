@@ -12,31 +12,31 @@ declare namespace org {
                     // @ts-ignore
                     constructor(who: org.bukkit.entity.Player, what: org.bukkit.entity.Entity)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the entity the player is shearing
                      * @return the entity the player is shearing
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     /**
                      * Gets the item used to shear the entity.
                      * @return the shears
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the hand used to shear the entity.
                      * @return the hand
                      */
                     // @ts-ignore
-                    getHand(): org.bukkit.inventory.EquipmentSlot
+                    public getHand(): org.bukkit.inventory.EquipmentSlot
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

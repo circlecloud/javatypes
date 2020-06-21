@@ -14,7 +14,7 @@ declare namespace javax {
              * <code>java.xml.soap.Name</code> objects.
              */
             // @ts-ignore
-            class SOAPFactory extends java.lang.Object {
+            abstract class SOAPFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -34,7 +34,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                createElement(domElement: org.w3c.dom.Element): javax.xml.soap.SOAPElement
+                public createElement(domElement: org.w3c.dom.Element): javax.xml.soap.SOAPElement
                 /**
                  * Creates a <code>SOAPElement</code> object initialized with the
                  * given <code>Name</code> object. The concrete type of the return value
@@ -51,7 +51,7 @@ declare namespace javax {
                  * @see SOAPFactory#createElement(javax.xml.namespace.QName)
                  */
                 // @ts-ignore
-                abstract createElement(name: javax.xml.soap.Name): javax.xml.soap.SOAPElement
+                public abstract createElement(name: javax.xml.soap.Name): javax.xml.soap.SOAPElement
                 /**
                  * Creates a <code>SOAPElement</code> object initialized with the
                  * given <code>QName</code> object. The concrete type of the return value
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                createElement(qname: javax.xml.namespace.QName): javax.xml.soap.SOAPElement
+                public createElement(qname: javax.xml.namespace.QName): javax.xml.soap.SOAPElement
                 /**
                  * Creates a <code>SOAPElement</code> object initialized with the
                  * given local name.
@@ -81,7 +81,7 @@ declare namespace javax {
                  *             <code>SOAPElement</code> object
                  */
                 // @ts-ignore
-                abstract createElement(localName: string): javax.xml.soap.SOAPElement
+                public abstract createElement(localName: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Creates a new <code>SOAPElement</code> object with the given
                  * local name, prefix and uri. The concrete type of the return value
@@ -98,7 +98,7 @@ declare namespace javax {
                  *             <code>SOAPElement</code> object
                  */
                 // @ts-ignore
-                abstract createElement(localName: string, prefix: string, uri: string): javax.xml.soap.SOAPElement
+                public abstract createElement(localName: java.lang.String | string, prefix: java.lang.String | string, uri: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Creates a new <code>Detail</code> object which serves as a container
                  * for <code>DetailEntry</code> objects.
@@ -112,7 +112,7 @@ declare namespace javax {
                  *          for the SOAPFactory was <code>DYNAMIC_SOAP_PROTOCOL</code>
                  */
                 // @ts-ignore
-                abstract createDetail(): javax.xml.soap.Detail
+                public abstract createDetail(): javax.xml.soap.Detail
                 /**
                  * Creates a new <code>SOAPFault</code> object initialized with the given <code>reasonText</code>
                  * and <code>faultCode</code>
@@ -123,7 +123,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract createFault(reasonText: string, faultCode: javax.xml.namespace.QName): javax.xml.soap.SOAPFault
+                public abstract createFault(reasonText: java.lang.String | string, faultCode: javax.xml.namespace.QName): javax.xml.soap.SOAPFault
                 /**
                  * Creates a new default <code>SOAPFault</code> object
                  * @return a <code>SOAPFault</code> object
@@ -131,7 +131,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract createFault(): javax.xml.soap.SOAPFault
+                public abstract createFault(): javax.xml.soap.SOAPFault
                 /**
                  * Creates a new <code>Name</code> object initialized with the
                  * given local name, namespace prefix, and namespace URI.
@@ -147,7 +147,7 @@ declare namespace javax {
                  * @throws SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                abstract createName(localName: string, prefix: string, uri: string): javax.xml.soap.Name
+                public abstract createName(localName: java.lang.String | string, prefix: java.lang.String | string, uri: java.lang.String | string): javax.xml.soap.Name
                 /**
                  * Creates a new <code>Name</code> object initialized with the
                  * given local name.
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @throws SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                abstract createName(localName: string): javax.xml.soap.Name
+                public abstract createName(localName: java.lang.String | string): javax.xml.soap.Name
                 /**
                  * Creates a new <code>SOAPFactory</code> object that is an instance of
                  * the default implementation (SOAP 1.1),
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @see SAAJMetaFactory
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.soap.SOAPFactory
+                public static newInstance(): javax.xml.soap.SOAPFactory
                 /**
                  * Creates a new <code>SOAPFactory</code> object that is an instance of
                  * the specified implementation, this method uses the SAAJMetaFactory to
@@ -199,7 +199,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                newInstance(protocol: string): javax.xml.soap.SOAPFactory
+                public static newInstance(protocol: java.lang.String | string): javax.xml.soap.SOAPFactory
             }
         }
     }

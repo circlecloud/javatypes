@@ -17,7 +17,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class TypeInfoProvider extends java.lang.Object {
+            abstract class TypeInfoProvider extends java.lang.Object {
                 /**
                  * Constructor for the derived class.
                  * <p>
@@ -55,7 +55,7 @@ declare namespace javax {
                  *       an earlier error.)
                  */
                 // @ts-ignore
-                abstract getElementTypeInfo(): org.w3c.dom.TypeInfo
+                public abstract getElementTypeInfo(): org.w3c.dom.TypeInfo
                 /**
                  * Returns the immutable {@link TypeInfo} object for the specified
                  * attribute of the current element.
@@ -82,7 +82,7 @@ declare namespace javax {
                  *       determine the type.
                  */
                 // @ts-ignore
-                abstract getAttributeTypeInfo(index: number /*int*/): org.w3c.dom.TypeInfo
+                public abstract getAttributeTypeInfo(index: number /*int*/): org.w3c.dom.TypeInfo
                 /**
                  * Returns <code>true</code> if the specified attribute is determined
                  * to be ID.
@@ -111,7 +111,7 @@ declare namespace javax {
                  *       if the type of the specified attribute is ID.
                  */
                 // @ts-ignore
-                abstract isIdAttribute(index: number /*int*/): boolean
+                public abstract isIdAttribute(index: number /*int*/): boolean
                 /**
                  * Returns <code>false</code> if the attribute was added by the validator.
                  * <p>
@@ -140,7 +140,7 @@ declare namespace javax {
                  *       by the validator.
                  */
                 // @ts-ignore
-                abstract isSpecified(index: number /*int*/): boolean
+                public abstract isSpecified(index: number /*int*/): boolean
             }
         }
     }

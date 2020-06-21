@@ -20,7 +20,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class SecretKeyFactorySpi extends java.lang.Object {
+        abstract class SecretKeyFactorySpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**

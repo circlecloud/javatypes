@@ -24,7 +24,7 @@ declare namespace org {
                  *  or an empty map in case of no match
                  */
                 // @ts-ignore
-                selectMethods<T>(targetType: java.lang.Class<any>, metadataLookup: org.springframework.core.MethodIntrospector.MetadataLookup<T>): java.util.Map<java.lang.reflect.Method, T>
+                public static selectMethods<T>(targetType: java.lang.Class<any>, metadataLookup: org.springframework.core.MethodIntrospector.MetadataLookup<T>): java.util.Map<java.lang.reflect.Method, T>
                 /**
                  * Select methods on the given target type based on a filter.
                  * <p>Callers define methods of interest through the {@code MethodFilter} parameter.
@@ -34,7 +34,7 @@ declare namespace org {
                  * @return the selected methods, or an empty set in case of no match
                  */
                 // @ts-ignore
-                selectMethods(targetType: java.lang.Class<any>, methodFilter: org.springframework.util.ReflectionUtils.MethodFilter): java.util.Set<java.lang.reflect.Method>
+                public static selectMethods(targetType: java.lang.Class<any>, methodFilter: org.springframework.util.ReflectionUtils.MethodFilter): Array<java.lang.reflect.Method>
                 /**
                  * Select an invocable method on the target type: either the given method itself
                  * if actually exposed on the target type, or otherwise a corresponding method
@@ -49,7 +49,7 @@ declare namespace org {
                  *  target type (typically due to a proxy mismatch)
                  */
                 // @ts-ignore
-                selectInvocableMethod(method: java.lang.reflect.Method, targetType: java.lang.Class<any>): java.lang.reflect.Method
+                public static selectInvocableMethod(method: java.lang.reflect.Method, targetType: java.lang.Class<any>): java.lang.reflect.Method
             }
         }
     }

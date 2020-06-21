@@ -10,9 +10,9 @@ declare namespace org {
                 // @ts-ignore
                 class ValueRetrievalException extends java.lang.RuntimeException {
                     // @ts-ignore
-                    constructor(key: any, loader: java.util.concurrent.Callable<any>, ex: Error)
+                    constructor(key: java.lang.Object | any, loader: java.util.concurrent.Callable<any>, ex: java.lang.Throwable | Error)
                     // @ts-ignore
-                    getKey(): java.lang.Object
+                    getKey(): any
                 }
             }
         }

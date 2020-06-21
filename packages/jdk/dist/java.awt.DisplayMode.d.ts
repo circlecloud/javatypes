@@ -40,25 +40,25 @@ declare namespace java {
              * @see #getBitDepth
              */
             // @ts-ignore
-            readonly BIT_DEPTH_MULTI: number /*int*/
+            public static readonly BIT_DEPTH_MULTI: number /*int*/
             /**
              * Value of the refresh rate if not known.
              * @see #getRefreshRate
              */
             // @ts-ignore
-            readonly REFRESH_RATE_UNKNOWN: number /*int*/
+            public static readonly REFRESH_RATE_UNKNOWN: number /*int*/
             /**
              * Returns the height of the display, in pixels.
              * @return the height of the display, in pixels
              */
             // @ts-ignore
-            getHeight(): int
+            public getHeight(): number /*int*/
             /**
              * Returns the width of the display, in pixels.
              * @return the width of the display, in pixels
              */
             // @ts-ignore
-            getWidth(): int
+            public getWidth(): number /*int*/
             /**
              * Returns the bit depth of the display, in bits per pixel.  This may be
              * <code>BIT_DEPTH_MULTI</code> if multiple bit depths are supported in
@@ -67,7 +67,7 @@ declare namespace java {
              * @see #BIT_DEPTH_MULTI
              */
             // @ts-ignore
-            getBitDepth(): int
+            public getBitDepth(): number /*int*/
             /**
              * Returns the refresh rate of the display, in hertz.  This may be
              * <code>REFRESH_RATE_UNKNOWN</code> if the information is not available.
@@ -75,23 +75,23 @@ declare namespace java {
              * @see #REFRESH_RATE_UNKNOWN
              */
             // @ts-ignore
-            getRefreshRate(): int
+            public getRefreshRate(): number /*int*/
             /**
              * Returns whether the two display modes are equal.
              * @return whether the two display modes are equal
              */
             // @ts-ignore
-            equals(dm: java.awt.DisplayMode): boolean
+            public equals(dm: java.awt.DisplayMode): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            equals(dm: any): boolean
+            public equals(dm: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

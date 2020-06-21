@@ -132,7 +132,7 @@ declare namespace javax {
              * @param text the text to be displayed, or <code>null</code>
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs a new empty <code>TextField</code> with the specified
              * number of columns.
@@ -155,7 +155,7 @@ declare namespace javax {
              *    the component implementation
              */
             // @ts-ignore
-            constructor(text: string, columns: number /*int*/)
+            constructor(text: java.lang.String | string, columns: number /*int*/)
             /**
              * Constructs a new <code>JTextField</code> that uses the given text
              * storage model and the given number of columns.
@@ -172,14 +172,14 @@ declare namespace javax {
              * @exception IllegalArgumentException if <code>columns</code> &lt; 0
              */
             // @ts-ignore
-            constructor(doc: javax.swing.text.Document, text: string, columns: number /*int*/)
+            constructor(doc: javax.swing.text.Document, text: java.lang.String | string, columns: number /*int*/)
             /**
              * Name of the action to send notification that the
              * contents of the field have been accepted.  Typically
              * this is bound to a carriage-return.
              */
             // @ts-ignore
-            readonly notifyAction: string
+            public static readonly notifyAction: java.lang.String | string
             /**
              * Gets the class ID for a UI.
              * @return the string "TextFieldUI"
@@ -187,7 +187,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Associates the editor with a text document.
              * The currently registered factory is used to build a view for
@@ -200,7 +200,7 @@ declare namespace javax {
              *        expert: true
              */
             // @ts-ignore
-            setDocument(doc: javax.swing.text.Document): void
+            public setDocument(doc: javax.swing.text.Document): void
             /**
              * Calls to <code>revalidate</code> that come from within the
              * textfield itself will
@@ -214,7 +214,7 @@ declare namespace javax {
              * @see java.awt.Container#isValidateRoot
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * Returns the horizontal alignment of the text.
              * Valid keys are:
@@ -228,7 +228,7 @@ declare namespace javax {
              * @return the horizontal alignment
              */
             // @ts-ignore
-            getHorizontalAlignment(): int
+            public getHorizontalAlignment(): number /*int*/
             /**
              * Sets the horizontal alignment of the text.
              * Valid keys are:
@@ -253,7 +253,7 @@ declare namespace javax {
              *               LEADING JTextField.LEADING TRAILING JTextField.TRAILING
              */
             // @ts-ignore
-            setHorizontalAlignment(alignment: number /*int*/): void
+            public setHorizontalAlignment(alignment: number /*int*/): void
             /**
              * Creates the default implementation of the model
              * to be used at construction if one isn't explicitly
@@ -267,7 +267,7 @@ declare namespace javax {
              * @return the number of columns &gt;= 0
              */
             // @ts-ignore
-            getColumns(): int
+            public getColumns(): number /*int*/
             /**
              * Sets the number of columns in this <code>TextField</code>,
              * and then invalidate the layout.
@@ -277,7 +277,7 @@ declare namespace javax {
              * @beaninfo description: the number of columns preferred for display
              */
             // @ts-ignore
-            setColumns(columns: number /*int*/): void
+            public setColumns(columns: number /*int*/): void
             /**
              * Returns the column width.
              * The meaning of what a column is can be considered a fairly weak
@@ -288,7 +288,7 @@ declare namespace javax {
              * @return the column width &gt;= 1
              */
             // @ts-ignore
-            getColumnWidth(): int
+            getColumnWidth(): number /*int*/
             /**
              * Returns the preferred size <code>Dimensions</code> needed for this
              * <code>TextField</code>.  If a non-zero number of columns has been
@@ -297,7 +297,7 @@ declare namespace javax {
              * @return the dimension of this textfield
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * Sets the current font.  This removes cached row height and column
              * width so the new font will be reflected.
@@ -305,21 +305,21 @@ declare namespace javax {
              * @param f the new font
              */
             // @ts-ignore
-            setFont(f: java.awt.Font): void
+            public setFont(f: java.awt.Font): void
             /**
              * Adds the specified action listener to receive
              * action events from this textfield.
              * @param l the action listener to be added
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener so that it no longer
              * receives action events from this textfield.
              * @param l the action listener to be removed
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the <code>ActionListener</code>s added
              * to this JTextField with addActionListener().
@@ -328,7 +328,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -344,7 +344,7 @@ declare namespace javax {
              * @param command the command string
              */
             // @ts-ignore
-            setActionCommand(command: string): void
+            public setActionCommand(command: java.lang.String | string): void
             /**
              * Sets the <code>Action</code> for the <code>ActionEvent</code> source.
              * The new <code>Action</code> replaces
@@ -384,7 +384,7 @@ declare namespace javax {
              *   description: the Action instance connected with this ActionEvent source
              */
             // @ts-ignore
-            setAction(a: javax.swing.Action): void
+            public setAction(a: javax.swing.Action): void
             /**
              * Returns the currently set <code>Action</code> for this
              * <code>ActionEvent</code> source, or <code>null</code>
@@ -396,7 +396,7 @@ declare namespace javax {
              * @see #setAction
              */
             // @ts-ignore
-            getAction(): javax.swing.Action
+            public getAction(): javax.swing.Action
             /**
              * Sets the properties on this textfield to match those in the specified
              * <code>Action</code>.  Refer to <a href="Action.html#buttonActions">
@@ -429,7 +429,7 @@ declare namespace javax {
              * @see #configurePropertiesFromAction
              */
             // @ts-ignore
-            actionPropertyChanged(action: javax.swing.Action, propertyName: string): void
+            actionPropertyChanged(action: javax.swing.Action, propertyName: java.lang.String | string): void
             /**
              * Creates and returns a <code>PropertyChangeListener</code> that is
              * responsible for listening for changes from the specified
@@ -454,7 +454,7 @@ declare namespace javax {
              * @return the command list
              */
             // @ts-ignore
-            getActions(): javax.swing.Action[]
+            public getActions(): javax.swing.Action[]
             /**
              * Processes action events occurring on this textfield by
              * dispatching them to any registered <code>ActionListener</code> objects.
@@ -462,7 +462,7 @@ declare namespace javax {
              * textfield.
              */
             // @ts-ignore
-            postActionEvent(): void
+            public postActionEvent(): void
             /**
              * Gets the visibility of the text field.  This can
              * be adjusted to change the location of the visible
@@ -476,25 +476,25 @@ declare namespace javax {
              * @see BoundedRangeModel
              */
             // @ts-ignore
-            getHorizontalVisibility(): javax.swing.BoundedRangeModel
+            public getHorizontalVisibility(): javax.swing.BoundedRangeModel
             /**
              * Gets the scroll offset, in pixels.
              * @return the offset &gt;= 0
              */
             // @ts-ignore
-            getScrollOffset(): int
+            public getScrollOffset(): number /*int*/
             /**
              * Sets the scroll offset, in pixels.
              * @param scrollOffset the offset &gt;= 0
              */
             // @ts-ignore
-            setScrollOffset(scrollOffset: number /*int*/): void
+            public setScrollOffset(scrollOffset: number /*int*/): void
             /**
              * Scrolls the field left or right.
              * @param r the region to scroll
              */
             // @ts-ignore
-            scrollRectToVisible(r: java.awt.Rectangle): void
+            public scrollRectToVisible(r: java.awt.Rectangle): void
             /**
              * Returns a string representation of this <code>JTextField</code>.
              * This method is intended to be used only for debugging purposes,
@@ -504,7 +504,7 @@ declare namespace javax {
              * @return a string representation of this <code>JTextField</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>JTextField</code>. For <code>JTextFields</code>,
@@ -516,7 +516,7 @@ declare namespace javax {
              *          <code>AccessibleContext</code> of this <code>JTextField</code>
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

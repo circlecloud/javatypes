@@ -115,13 +115,13 @@ declare namespace javax {
              * @see #removeNotificationListener
              */
             // @ts-ignore
-            addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            public addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener): void
+            public removeNotificationListener(listener: javax.management.NotificationListener): void
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            public removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
-            getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+            public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
             /**
              * Sends a notification.
              * If an {@code Executor} was specified in the constructor, it will be given one
@@ -129,7 +129,7 @@ declare namespace javax {
              * @param notification The notification to send.
              */
             // @ts-ignore
-            sendNotification(notification: javax.management.Notification): void
+            public sendNotification(notification: javax.management.Notification): void
             /**
              * <p>This method is called by {@link #sendNotification
              * sendNotification} for each listener in order to send the
@@ -148,7 +148,7 @@ declare namespace javax {
              *  listener was added.
              */
             // @ts-ignore
-            handleNotification(listener: javax.management.NotificationListener, notif: javax.management.Notification, handback: any): void
+            handleNotification(listener: javax.management.NotificationListener, notif: javax.management.Notification, handback: java.lang.Object | any): void
         }
     }
 }

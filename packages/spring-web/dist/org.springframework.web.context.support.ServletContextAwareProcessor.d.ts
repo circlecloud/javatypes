@@ -54,9 +54,9 @@ declare namespace org {
                         // @ts-ignore
                         getServletConfig(): ServletConfig
                         // @ts-ignore
-                        postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                        public postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        postProcessAfterInitialization(bean: any, beanName: string): java.lang.Object
+                        public postProcessAfterInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     }
                 }
             }

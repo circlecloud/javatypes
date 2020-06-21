@@ -16,7 +16,7 @@ declare namespace org {
                      * @since 3.1
                      */
                     // @ts-ignore
-                    class AbstractCookieValueMethodArgumentResolver extends org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver {
+                    abstract class AbstractCookieValueMethodArgumentResolver extends org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver {
                         /**
                          * Crate a new {@link AbstractCookieValueMethodArgumentResolver} instance.
                          * @param beanFactory a bean factory to use for resolving  ${...}
@@ -26,11 +26,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanFactory: ConfigurableBeanFactory)
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         // @ts-ignore
                         createNamedValueInfo(parameter: MethodParameter): org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.NamedValueInfo
                         // @ts-ignore
-                        handleMissingValue(name: string, parameter: MethodParameter): void
+                        handleMissingValue(name: java.lang.String | string, parameter: MethodParameter): void
                     }
                 }
             }

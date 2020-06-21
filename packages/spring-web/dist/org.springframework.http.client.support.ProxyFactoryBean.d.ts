@@ -19,25 +19,25 @@ declare namespace org {
                          * <p>Defaults to {@link java.net.Proxy.Type#HTTP}.
                          */
                         // @ts-ignore
-                        setType(type: java.net.Proxy.Type): void
+                        public setType(type: java.net.Proxy.Type): void
                         /**
                          * Set the proxy host name.
                          */
                         // @ts-ignore
-                        setHostname(hostname: string): void
+                        public setHostname(hostname: java.lang.String | string): void
                         /**
                          * Set the proxy port.
                          */
                         // @ts-ignore
-                        setPort(port: number /*int*/): void
+                        public setPort(port: number /*int*/): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObject(): java.net.Proxy
+                        public getObject(): java.net.Proxy
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

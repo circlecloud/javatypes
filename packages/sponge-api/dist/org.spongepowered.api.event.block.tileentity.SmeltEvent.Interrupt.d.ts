@@ -17,7 +17,7 @@ declare namespace org {
                                  * @deprecated always empty
                                  */
                                 // @ts-ignore
-                                getSmeltedItems(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                                getSmeltedItems(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             }
                         }
                     }

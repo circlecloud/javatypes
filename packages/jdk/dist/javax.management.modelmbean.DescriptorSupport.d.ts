@@ -78,7 +78,7 @@ declare namespace javax {
                  * @exception MBeanException Wraps a distributed communication Exception.
                  */
                 // @ts-ignore
-                constructor(inStr: string)
+                constructor(inStr: java.lang.String | string)
                 /**
                  * Constructor taking field names and field values.  Neither array
                  * can be null.
@@ -98,7 +98,7 @@ declare namespace javax {
                  *  exception will be thrown.
                  */
                 // @ts-ignore
-                constructor(fieldNames: string[], fieldValues: any[])
+                constructor(fieldNames: java.lang.String[] | string[], fieldValues: java.lang.Object[] | any[])
                 /**
                  * Constructor taking fields in the <i>fieldName=fieldValue</i>
                  * format.
@@ -124,19 +124,19 @@ declare namespace javax {
                  *  this exception will be thrown.
                  */
                 // @ts-ignore
-                constructor(...fields: string[])
+                constructor(...fields: java.lang.String[] | string[])
                 // @ts-ignore
-                getFieldValue(fieldName: string): java.lang.Object
+                public getFieldValue(fieldName: java.lang.String | string): any
                 // @ts-ignore
-                setField(fieldName: string, fieldValue: any): void
+                public setField(fieldName: java.lang.String | string, fieldValue: java.lang.Object | any): void
                 // @ts-ignore
-                getFields(): java.lang.String[]
+                public getFields(): string[]
                 // @ts-ignore
-                getFieldNames(): java.lang.String[]
+                public getFieldNames(): string[]
                 // @ts-ignore
-                getFieldValues(...fieldNames: string[]): java.lang.Object[]
+                public getFieldValues(...fieldNames: java.lang.String[] | string[]): any[]
                 // @ts-ignore
-                setFields(fieldNames: string[], fieldValues: any[]): void
+                public setFields(fieldNames: java.lang.String[] | string[], fieldValues: java.lang.Object[] | any[]): void
                 /**
                  * Returns a new Descriptor which is a duplicate of the Descriptor.
                  * @exception RuntimeOperationsException for illegal value for
@@ -144,9 +144,9 @@ declare namespace javax {
                  *  fails for any reason, this exception will be thrown.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 // @ts-ignore
-                removeField(fieldName: string): void
+                public removeField(fieldName: java.lang.String | string): void
                 /**
                  * Compares this descriptor to the given object.  The objects are equal if
                  * the given object is also a Descriptor, and if the two Descriptors have
@@ -167,7 +167,7 @@ declare namespace javax {
                  *  otherwise.
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * <p>Returns the hash code value for this descriptor.  The hash
                  * code is computed as the sum of the hash codes for each field in
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @return A hash code value for this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns true if all of the fields have legal values given their
                  * names.
@@ -220,7 +220,7 @@ declare namespace javax {
                  *  fails for any reason, this exception will be thrown.
                  */
                 // @ts-ignore
-                isValid(): boolean
+                public isValid(): boolean
                 /**
                  * <p>Returns an XML String representing the descriptor.</p>
                  * <p>The format is not defined, but an implementation must
@@ -244,7 +244,7 @@ declare namespace javax {
                  *  thrown.
                  */
                 // @ts-ignore
-                toXMLString(): java.lang.String
+                public toXMLString(): string
                 /**
                  * Returns a human readable string representing the
                  * descriptor.  The string will be in the format of
@@ -259,7 +259,7 @@ declare namespace javax {
                  *  for any reason, this exception will be thrown.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

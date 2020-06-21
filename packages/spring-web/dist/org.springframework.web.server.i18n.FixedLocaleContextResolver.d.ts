@@ -33,9 +33,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor(locale: java.util.Locale, timeZone: java.util.TimeZone)
                         // @ts-ignore
-                        resolveLocaleContext(exchange: org.springframework.web.server.ServerWebExchange): LocaleContext
+                        public resolveLocaleContext(exchange: org.springframework.web.server.ServerWebExchange): LocaleContext
                         // @ts-ignore
-                        setLocaleContext(exchange: org.springframework.web.server.ServerWebExchange, localeContext: LocaleContext): void
+                        public setLocaleContext(exchange: org.springframework.web.server.ServerWebExchange, localeContext: LocaleContext): void
                     }
                 }
             }

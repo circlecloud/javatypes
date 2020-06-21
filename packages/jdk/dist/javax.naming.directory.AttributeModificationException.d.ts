@@ -30,7 +30,7 @@ declare namespace javax {
                  * @see java.lang.Throwable#getMessage
                  */
                 // @ts-ignore
-                constructor(explanation: string)
+                constructor(explanation: java.lang.String | string)
                 /**
                  * Constructs a new instance of AttributeModificationException.
                  * All fields are set to null.
@@ -70,7 +70,7 @@ declare namespace javax {
                  * @return The non-null string representation of this exception.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

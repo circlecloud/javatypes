@@ -21,18 +21,18 @@ declare namespace javax {
                  * The job was canceled by the {@link javax.print.PrintService PrintService}.
                  */
                 // @ts-ignore
-                readonly JOB_CANCELED: number /*int*/
+                public static readonly JOB_CANCELED: number /*int*/
                 /**
                  * The document cis completely printed.
                  */
                 // @ts-ignore
-                readonly JOB_COMPLETE: number /*int*/
+                public static readonly JOB_COMPLETE: number /*int*/
                 /**
                  * The print service reports that the job cannot be completed.
                  * The application must resubmit the job.
                  */
                 // @ts-ignore
-                readonly JOB_FAILED: number /*int*/
+                public static readonly JOB_FAILED: number /*int*/
                 /**
                  * The print service indicates that a - possibly transient - problem
                  * may require external intervention before the print service can
@@ -40,7 +40,7 @@ declare namespace javax {
                  * generate this message is when the printer runs out of paper.
                  */
                 // @ts-ignore
-                readonly REQUIRES_ATTENTION: number /*int*/
+                public static readonly REQUIRES_ATTENTION: number /*int*/
                 /**
                  * Not all print services may be capable of delivering interesting
                  * events, or even telling when a job is complete. This message indicates
@@ -52,20 +52,20 @@ declare namespace javax {
                  * is that the print service does not support delivering such an event.
                  */
                 // @ts-ignore
-                readonly NO_MORE_EVENTS: number /*int*/
+                public static readonly NO_MORE_EVENTS: number /*int*/
                 /**
                  * The job is not necessarily printed yet, but the data has been transferred
                  * successfully from the client to the print service. The client may
                  * free data resources.
                  */
                 // @ts-ignore
-                readonly DATA_TRANSFER_COMPLETE: number /*int*/
+                public static readonly DATA_TRANSFER_COMPLETE: number /*int*/
                 /**
                  * Gets the reason for this event.
                  * @return reason int.
                  */
                 // @ts-ignore
-                getPrintEventType(): int
+                public getPrintEventType(): number /*int*/
                 /**
                  * Determines the <code>DocPrintJob</code> to which this print job
                  * event pertains.
@@ -74,7 +74,7 @@ declare namespace javax {
                  *           <code>PrintJobEvent</code>.
                  */
                 // @ts-ignore
-                getPrintJob(): javax.print.DocPrintJob
+                public getPrintJob(): javax.print.DocPrintJob
             }
         }
     }

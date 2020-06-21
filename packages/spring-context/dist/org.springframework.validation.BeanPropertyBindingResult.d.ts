@@ -24,7 +24,7 @@ declare namespace org {
                  * @param objectName the name of the target object
                  */
                 // @ts-ignore
-                constructor(target: any, objectName: string)
+                constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                 /**
                  * Creates a new instance of the {@link BeanPropertyBindingResult} class.
                  * @param target the target bean to bind onto
@@ -33,16 +33,16 @@ declare namespace org {
                  * @param autoGrowCollectionLimit the limit for array and collection auto-growing
                  */
                 // @ts-ignore
-                constructor(target: any, objectName: string, autoGrowNestedPaths: boolean, autoGrowCollectionLimit: number /*int*/)
+                constructor(target: java.lang.Object | any, objectName: java.lang.String | string, autoGrowNestedPaths: boolean, autoGrowCollectionLimit: number /*int*/)
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                public getTarget(): any
                 /**
                  * Returns the {@link BeanWrapper} that this instance uses.
                  * Creates a new one if none existed before.
                  * @see #createBeanWrapper()
                  */
                 // @ts-ignore
-                getPropertyAccessor(): ConfigurablePropertyAccessor
+                public getPropertyAccessor(): ConfigurablePropertyAccessor
                 /**
                  * Create a new {@link BeanWrapper} for the underlying target object.
                  * @see #getTarget()

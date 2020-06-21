@@ -26,7 +26,7 @@ declare namespace org {
                      * Processes the incoming Hessian request and creates a Hessian response.
                      */
                     // @ts-ignore
-                    handleRequest(request: HttpServletRequest, response: HttpServletResponse): void
+                    public handleRequest(request: HttpServletRequest, response: HttpServletResponse): void
                 }
             }
         }

@@ -14,17 +14,17 @@ declare namespace org {
                      * @return Old position.
                      */
                     // @ts-ignore
-                    getFrom(): org.bukkit.Location
+                    public getFrom(): org.bukkit.Location
                     /**
                      * Get the next position.
                      * @return New position.
                      */
                     // @ts-ignore
-                    getTo(): org.bukkit.Location
+                    public getTo(): org.bukkit.Location
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

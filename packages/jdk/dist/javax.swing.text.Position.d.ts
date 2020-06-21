@@ -29,7 +29,7 @@ declare namespace javax {
                  * @return the offset &gt;= 0
                  */
                 // @ts-ignore
-                getOffset(): int
+                getOffset(): number /*int*/
             }
         }
     }

@@ -26,7 +26,7 @@ declare namespace javax {
                  * Deselect the menu when the popup is closed from outside.
                  */
                 // @ts-ignore
-                windowClosing(e: java.awt.event.WindowEvent): void
+                public windowClosing(e: java.awt.event.WindowEvent): void
             }
         }
     }

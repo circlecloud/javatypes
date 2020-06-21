@@ -23,15 +23,15 @@ declare namespace javax {
                 // @ts-ignore
                 constructor(stream: java.io.OutputStream)
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 // @ts-ignore
-                write(b: number /*int*/): void
+                public write(b: number /*int*/): void
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                length(): long
+                public length(): number /*long*/
                 /**
                  * Returns <code>true</code> since this
                  * <code>ImageOutputStream</code> caches data in order to allow
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @see #isCachedFile
                  */
                 // @ts-ignore
-                isCached(): boolean
+                public isCached(): boolean
                 /**
                  * Returns <code>false</code> since this
                  * <code>ImageOutputStream</code> does not maintain a file cache.
@@ -50,7 +50,7 @@ declare namespace javax {
                  * @see #isCachedMemory
                  */
                 // @ts-ignore
-                isCachedFile(): boolean
+                public isCachedFile(): boolean
                 /**
                  * Returns <code>true</code> since this
                  * <code>ImageOutputStream</code> maintains a main memory cache.
@@ -59,7 +59,7 @@ declare namespace javax {
                  * @see #isCachedFile
                  */
                 // @ts-ignore
-                isCachedMemory(): boolean
+                public isCachedMemory(): boolean
                 /**
                  * Closes this <code>MemoryCacheImageOutputStream</code>.  All
                  * pending data is flushed to the output, and the cache
@@ -67,9 +67,9 @@ declare namespace javax {
                  * is not closed.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 // @ts-ignore
-                flushBefore(pos: number /*long*/): void
+                public flushBefore(pos: number /*long*/): void
             }
         }
     }

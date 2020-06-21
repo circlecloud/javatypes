@@ -54,7 +54,7 @@ declare namespace javax {
                      *                   is improperly specified
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Creates an {@code X500Principal} from a string representation of
                      * an X.500 distinguished name (ex:
@@ -89,7 +89,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    constructor(name: string, keywordMap: java.util.Map<java.lang.String, java.lang.String>)
+                    constructor(name: java.lang.String | string, keywordMap: java.util.Map<java.lang.String | string, java.lang.String | string>)
                     /**
                      * Creates an {@code X500Principal} from a distinguished name in
                      * ASN.1 DER encoded form. The ASN.1 notation for this structure is as
@@ -141,17 +141,17 @@ declare namespace javax {
                      * RFC 1779 String format of Distinguished Names.
                      */
                     // @ts-ignore
-                    readonly RFC1779: string
+                    public static readonly RFC1779: java.lang.String | string
                     /**
                      * RFC 2253 String format of Distinguished Names.
                      */
                     // @ts-ignore
-                    readonly RFC2253: string
+                    public static readonly RFC2253: java.lang.String | string
                     /**
                      * Canonical String format of Distinguished Names.
                      */
                     // @ts-ignore
-                    readonly CANONICAL: string
+                    public static readonly CANONICAL: java.lang.String | string
                     /**
                      * Returns a string representation of the X.500 distinguished name using
                      * the format defined in RFC 2253.
@@ -160,7 +160,7 @@ declare namespace javax {
                      * @return the distinguished name of this {#code X500Principal}
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns a string representation of the X.500 distinguished name
                      * using the specified format. Valid values for the format are
@@ -217,7 +217,7 @@ declare namespace javax {
                      *           or null
                      */
                     // @ts-ignore
-                    getName(format: string): java.lang.String
+                    public getName(format: java.lang.String | string): string
                     /**
                      * Returns a string representation of the X.500 distinguished name
                      * using the specified format. Valid values for the format are
@@ -249,7 +249,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getName(format: string, oidMap: java.util.Map<java.lang.String, java.lang.String>): java.lang.String
+                    public getName(format: java.lang.String | string, oidMap: java.util.Map<java.lang.String | string, java.lang.String | string>): string
                     /**
                      * Returns the distinguished name in ASN.1 DER encoded form. The ASN.1
                      * notation for this structure is supplied in the documentation for
@@ -260,14 +260,14 @@ declare namespace javax {
                      *  encoded form
                      */
                     // @ts-ignore
-                    getEncoded(): byte[]
+                    public getEncoded(): number /*byte*/[]
                     /**
                      * Return a user-friendly string representation of this
                      * {@code X500Principal}.
                      * @return a string representation of this {#code X500Principal}
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Compares the specified {@code Object} with this
                      * {@code X500Principal} for equality.
@@ -283,7 +283,7 @@ declare namespace javax {
                      *           to this {@code X500Principal}, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     /**
                      * Return a hash code for this {@code X500Principal}.
                      * <p> The hash code is calculated via:
@@ -291,7 +291,7 @@ declare namespace javax {
                      * @return a hash code for this {#code X500Principal}
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

@@ -13,19 +13,19 @@ declare namespace java {
                  * quality.
                  */
                 // @ts-ignore
-                readonly HIGH: java.awt.PageAttributes.PrintQualityType
+                public static readonly HIGH: java.awt.PageAttributes.PrintQualityType
                 /**
                  * The PrintQualityType instance to use for specifying a normal print
                  * quality.
                  */
                 // @ts-ignore
-                readonly NORMAL: java.awt.PageAttributes.PrintQualityType
+                public static readonly NORMAL: java.awt.PageAttributes.PrintQualityType
                 /**
                  * The PrintQualityType instance to use for specifying a draft print
                  * quality.
                  */
                 // @ts-ignore
-                readonly DRAFT: java.awt.PageAttributes.PrintQualityType
+                public static readonly DRAFT: java.awt.PageAttributes.PrintQualityType
             }
         }
     }

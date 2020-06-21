@@ -15,23 +15,23 @@ declare namespace org {
                      * @return the item
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the amount of durability damage this item will be taking.
                      * @return durability change
                      */
                     // @ts-ignore
-                    getDamage(): int
+                    public getDamage(): number /*int*/
                     // @ts-ignore
-                    setDamage(damage: number /*int*/): void
+                    public setDamage(damage: number /*int*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -19,13 +19,13 @@ declare namespace org {
                  * Add given iterator to this composite.
                  */
                 // @ts-ignore
-                add(iterator: java.util.Iterator<E>): void
+                public add(iterator: java.util.Iterator<E>): void
                 // @ts-ignore
-                hasNext(): boolean
+                public hasNext(): boolean
                 // @ts-ignore
-                next(): E
+                public next(): E
                 // @ts-ignore
-                remove(): void
+                public remove(): void
             }
         }
     }

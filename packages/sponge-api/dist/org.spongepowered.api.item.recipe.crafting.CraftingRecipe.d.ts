@@ -65,14 +65,14 @@ declare namespace org {
                              *          when the recipe has been fulfilled (possibly empty)
                              */
                             // @ts-ignore
-                            getRemainingItems(grid: org.spongepowered.api.item.inventory.crafting.CraftingGridInventory): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                            getRemainingItems(grid: org.spongepowered.api.item.inventory.crafting.CraftingGridInventory): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             /**
                              * The group this CraftingRecipe belongs to or {@link Optional#empty()}
                              * if not defined.
                              * @return The group this Recipe belongs to.
                              */
                             // @ts-ignore
-                            getGroup(): java.util.Optional<java.lang.String>
+                            getGroup(): java.util.Optional<java.lang.String | string>
                             /**
                              * Provides a Builder for a {@link ShapedCraftingRecipe}.
                              * @return The Builder.

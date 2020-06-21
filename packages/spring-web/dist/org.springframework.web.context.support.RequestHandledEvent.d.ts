@@ -26,7 +26,7 @@ declare namespace org {
                          * @param processingTimeMillis the processing time of the request in milliseconds
                          */
                         // @ts-ignore
-                        constructor(source: any, sessionId: string, userName: string, processingTimeMillis: number /*long*/)
+                        constructor(source: java.lang.Object | any, sessionId: java.lang.String | string, userName: java.lang.String | string, processingTimeMillis: number /*long*/)
                         /**
                          * Create a new RequestHandledEvent with session information.
                          * @param source the component that published the event
@@ -37,48 +37,48 @@ declare namespace org {
                          * @param failureCause the cause of failure, if any
                          */
                         // @ts-ignore
-                        constructor(source: any, sessionId: string, userName: string, processingTimeMillis: number /*long*/, failureCause: Error)
+                        constructor(source: java.lang.Object | any, sessionId: java.lang.String | string, userName: java.lang.String | string, processingTimeMillis: number /*long*/, failureCause: java.lang.Throwable | Error)
                         /**
                          * Return the processing time of the request in milliseconds.
                          */
                         // @ts-ignore
-                        getProcessingTimeMillis(): long
+                        public getProcessingTimeMillis(): number /*long*/
                         /**
                          * Return the id of the HTTP session, if any.
                          */
                         // @ts-ignore
-                        getSessionId(): java.lang.String
+                        public getSessionId(): string
                         /**
                          * Return the name of the user that was associated with the request
                          * (usually the UserPrincipal).
                          * @see javax.servlet.http.HttpServletRequest#getUserPrincipal()
                          */
                         // @ts-ignore
-                        getUserName(): java.lang.String
+                        public getUserName(): string
                         /**
                          * Return whether the request failed.
                          */
                         // @ts-ignore
-                        wasFailure(): boolean
+                        public wasFailure(): boolean
                         /**
                          * Return the cause of failure, if any.
                          */
                         // @ts-ignore
-                        getFailureCause(): java.lang.Throwable
+                        public getFailureCause(): Error
                         /**
                          * Return a short description of this event, only involving
                          * the most important context data.
                          */
                         // @ts-ignore
-                        getShortDescription(): java.lang.String
+                        public getShortDescription(): string
                         /**
                          * Return a full description of this event, involving
                          * all available context data.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

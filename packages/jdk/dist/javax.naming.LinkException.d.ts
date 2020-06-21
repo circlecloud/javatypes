@@ -35,7 +35,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of LinkException.
              * All the non-link-related and link-related fields are initialized to null.
@@ -64,7 +64,7 @@ declare namespace javax {
              * @see #setLinkResolvedObj
              */
             // @ts-ignore
-            linkResolvedObj: any
+            linkResolvedObj: java.lang.Object | any
             /**
              * Contains the remaining link name that has not been resolved yet.
              * It is a composite name and can be null.
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see #setLinkExplanation
              */
             // @ts-ignore
-            linkExplanation: string
+            linkExplanation: java.lang.String | string
             /**
              * Retrieves the leading portion of the link name that was resolved
              * successfully.
@@ -117,7 +117,7 @@ declare namespace javax {
              * @see #setLinkResolvedObj
              */
             // @ts-ignore
-            getLinkResolvedObj(): java.lang.Object
+            getLinkResolvedObj(): any
             /**
              * Retrieves the explanation associated with the problem encounter
              * when resolving a link.
@@ -128,7 +128,7 @@ declare namespace javax {
              * @see #setLinkExplanation
              */
             // @ts-ignore
-            getLinkExplanation(): java.lang.String
+            getLinkExplanation(): string
             /**
              * Sets the explanation associated with the problem encounter
              * when resolving a link.
@@ -137,7 +137,7 @@ declare namespace javax {
              * @see #getLinkExplanation
              */
             // @ts-ignore
-            setLinkExplanation(msg: string): void
+            setLinkExplanation(msg: java.lang.String | string): void
             /**
              * Sets the resolved link name field of this exception.
              * <p>
@@ -182,7 +182,7 @@ declare namespace javax {
              * @see #getLinkResolvedObj
              */
             // @ts-ignore
-            setLinkResolvedObj(obj: any): void
+            setLinkResolvedObj(obj: java.lang.Object | any): void
             /**
              * Generates the string representation of this exception.
              * This string consists of the NamingException information plus
@@ -192,7 +192,7 @@ declare namespace javax {
              * @return The non-null string representation of this link exception.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
             /**
              * Generates the string representation of this exception.
              * This string consists of the NamingException information plus
@@ -207,7 +207,7 @@ declare namespace javax {
              * @return The non-null string representation of this link exception.
              */
             // @ts-ignore
-            toString(detail: boolean): java.lang.String
+            toString(detail: boolean): string
         }
     }
 }

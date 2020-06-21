@@ -34,606 +34,606 @@ declare namespace java {
                  * Profile class is input.
                  */
                 // @ts-ignore
-                readonly CLASS_INPUT: number /*int*/
+                public static readonly CLASS_INPUT: number /*int*/
                 /**
                  * Profile class is display.
                  */
                 // @ts-ignore
-                readonly CLASS_DISPLAY: number /*int*/
+                public static readonly CLASS_DISPLAY: number /*int*/
                 /**
                  * Profile class is output.
                  */
                 // @ts-ignore
-                readonly CLASS_OUTPUT: number /*int*/
+                public static readonly CLASS_OUTPUT: number /*int*/
                 /**
                  * Profile class is device link.
                  */
                 // @ts-ignore
-                readonly CLASS_DEVICELINK: number /*int*/
+                public static readonly CLASS_DEVICELINK: number /*int*/
                 /**
                  * Profile class is color space conversion.
                  */
                 // @ts-ignore
-                readonly CLASS_COLORSPACECONVERSION: number /*int*/
+                public static readonly CLASS_COLORSPACECONVERSION: number /*int*/
                 /**
                  * Profile class is abstract.
                  */
                 // @ts-ignore
-                readonly CLASS_ABSTRACT: number /*int*/
+                public static readonly CLASS_ABSTRACT: number /*int*/
                 /**
                  * Profile class is named color.
                  */
                 // @ts-ignore
-                readonly CLASS_NAMEDCOLOR: number /*int*/
+                public static readonly CLASS_NAMEDCOLOR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'XYZ '.
                  */
                 // @ts-ignore
-                readonly icSigXYZData: number /*int*/
+                public static readonly icSigXYZData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'Lab '.
                  */
                 // @ts-ignore
-                readonly icSigLabData: number /*int*/
+                public static readonly icSigLabData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'Luv '.
                  */
                 // @ts-ignore
-                readonly icSigLuvData: number /*int*/
+                public static readonly icSigLuvData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'YCbr'.
                  */
                 // @ts-ignore
-                readonly icSigYCbCrData: number /*int*/
+                public static readonly icSigYCbCrData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'Yxy '.
                  */
                 // @ts-ignore
-                readonly icSigYxyData: number /*int*/
+                public static readonly icSigYxyData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'RGB '.
                  */
                 // @ts-ignore
-                readonly icSigRgbData: number /*int*/
+                public static readonly icSigRgbData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'GRAY'.
                  */
                 // @ts-ignore
-                readonly icSigGrayData: number /*int*/
+                public static readonly icSigGrayData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'HSV'.
                  */
                 // @ts-ignore
-                readonly icSigHsvData: number /*int*/
+                public static readonly icSigHsvData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'HLS'.
                  */
                 // @ts-ignore
-                readonly icSigHlsData: number /*int*/
+                public static readonly icSigHlsData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'CMYK'.
                  */
                 // @ts-ignore
-                readonly icSigCmykData: number /*int*/
+                public static readonly icSigCmykData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'CMY '.
                  */
                 // @ts-ignore
-                readonly icSigCmyData: number /*int*/
+                public static readonly icSigCmyData: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '2CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace2CLR: number /*int*/
+                public static readonly icSigSpace2CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '3CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace3CLR: number /*int*/
+                public static readonly icSigSpace3CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '4CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace4CLR: number /*int*/
+                public static readonly icSigSpace4CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '5CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace5CLR: number /*int*/
+                public static readonly icSigSpace5CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '6CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace6CLR: number /*int*/
+                public static readonly icSigSpace6CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '7CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace7CLR: number /*int*/
+                public static readonly icSigSpace7CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '8CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace8CLR: number /*int*/
+                public static readonly icSigSpace8CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: '9CLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpace9CLR: number /*int*/
+                public static readonly icSigSpace9CLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'ACLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpaceACLR: number /*int*/
+                public static readonly icSigSpaceACLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'BCLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpaceBCLR: number /*int*/
+                public static readonly icSigSpaceBCLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'CCLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpaceCCLR: number /*int*/
+                public static readonly icSigSpaceCCLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'DCLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpaceDCLR: number /*int*/
+                public static readonly icSigSpaceDCLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'ECLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpaceECLR: number /*int*/
+                public static readonly icSigSpaceECLR: number /*int*/
                 /**
                  * ICC Profile Color Space Type Signature: 'FCLR'.
                  */
                 // @ts-ignore
-                readonly icSigSpaceFCLR: number /*int*/
+                public static readonly icSigSpaceFCLR: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'scnr'.
                  */
                 // @ts-ignore
-                readonly icSigInputClass: number /*int*/
+                public static readonly icSigInputClass: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'mntr'.
                  */
                 // @ts-ignore
-                readonly icSigDisplayClass: number /*int*/
+                public static readonly icSigDisplayClass: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'prtr'.
                  */
                 // @ts-ignore
-                readonly icSigOutputClass: number /*int*/
+                public static readonly icSigOutputClass: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'link'.
                  */
                 // @ts-ignore
-                readonly icSigLinkClass: number /*int*/
+                public static readonly icSigLinkClass: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'abst'.
                  */
                 // @ts-ignore
-                readonly icSigAbstractClass: number /*int*/
+                public static readonly icSigAbstractClass: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'spac'.
                  */
                 // @ts-ignore
-                readonly icSigColorSpaceClass: number /*int*/
+                public static readonly icSigColorSpaceClass: number /*int*/
                 /**
                  * ICC Profile Class Signature: 'nmcl'.
                  */
                 // @ts-ignore
-                readonly icSigNamedColorClass: number /*int*/
+                public static readonly icSigNamedColorClass: number /*int*/
                 /**
                  * ICC Profile Rendering Intent: Perceptual.
                  */
                 // @ts-ignore
-                readonly icPerceptual: number /*int*/
+                public static readonly icPerceptual: number /*int*/
                 /**
                  * ICC Profile Rendering Intent: RelativeColorimetric.
                  */
                 // @ts-ignore
-                readonly icRelativeColorimetric: number /*int*/
+                public static readonly icRelativeColorimetric: number /*int*/
                 /**
                  * ICC Profile Rendering Intent: Media-RelativeColorimetric.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icMediaRelativeColorimetric: number /*int*/
+                public static readonly icMediaRelativeColorimetric: number /*int*/
                 /**
                  * ICC Profile Rendering Intent: Saturation.
                  */
                 // @ts-ignore
-                readonly icSaturation: number /*int*/
+                public static readonly icSaturation: number /*int*/
                 /**
                  * ICC Profile Rendering Intent: AbsoluteColorimetric.
                  */
                 // @ts-ignore
-                readonly icAbsoluteColorimetric: number /*int*/
+                public static readonly icAbsoluteColorimetric: number /*int*/
                 /**
                  * ICC Profile Rendering Intent: ICC-AbsoluteColorimetric.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icICCAbsoluteColorimetric: number /*int*/
+                public static readonly icICCAbsoluteColorimetric: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'head' - special.
                  */
                 // @ts-ignore
-                readonly icSigHead: number /*int*/
+                public static readonly icSigHead: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'A2B0'.
                  */
                 // @ts-ignore
-                readonly icSigAToB0Tag: number /*int*/
+                public static readonly icSigAToB0Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'A2B1'.
                  */
                 // @ts-ignore
-                readonly icSigAToB1Tag: number /*int*/
+                public static readonly icSigAToB1Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'A2B2'.
                  */
                 // @ts-ignore
-                readonly icSigAToB2Tag: number /*int*/
+                public static readonly icSigAToB2Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'bXYZ'.
                  */
                 // @ts-ignore
-                readonly icSigBlueColorantTag: number /*int*/
+                public static readonly icSigBlueColorantTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'bXYZ'.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icSigBlueMatrixColumnTag: number /*int*/
+                public static readonly icSigBlueMatrixColumnTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'bTRC'.
                  */
                 // @ts-ignore
-                readonly icSigBlueTRCTag: number /*int*/
+                public static readonly icSigBlueTRCTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'B2A0'.
                  */
                 // @ts-ignore
-                readonly icSigBToA0Tag: number /*int*/
+                public static readonly icSigBToA0Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'B2A1'.
                  */
                 // @ts-ignore
-                readonly icSigBToA1Tag: number /*int*/
+                public static readonly icSigBToA1Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'B2A2'.
                  */
                 // @ts-ignore
-                readonly icSigBToA2Tag: number /*int*/
+                public static readonly icSigBToA2Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'calt'.
                  */
                 // @ts-ignore
-                readonly icSigCalibrationDateTimeTag: number /*int*/
+                public static readonly icSigCalibrationDateTimeTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'targ'.
                  */
                 // @ts-ignore
-                readonly icSigCharTargetTag: number /*int*/
+                public static readonly icSigCharTargetTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'cprt'.
                  */
                 // @ts-ignore
-                readonly icSigCopyrightTag: number /*int*/
+                public static readonly icSigCopyrightTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'crdi'.
                  */
                 // @ts-ignore
-                readonly icSigCrdInfoTag: number /*int*/
+                public static readonly icSigCrdInfoTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'dmnd'.
                  */
                 // @ts-ignore
-                readonly icSigDeviceMfgDescTag: number /*int*/
+                public static readonly icSigDeviceMfgDescTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'dmdd'.
                  */
                 // @ts-ignore
-                readonly icSigDeviceModelDescTag: number /*int*/
+                public static readonly icSigDeviceModelDescTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'devs'.
                  */
                 // @ts-ignore
-                readonly icSigDeviceSettingsTag: number /*int*/
+                public static readonly icSigDeviceSettingsTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'gamt'.
                  */
                 // @ts-ignore
-                readonly icSigGamutTag: number /*int*/
+                public static readonly icSigGamutTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'kTRC'.
                  */
                 // @ts-ignore
-                readonly icSigGrayTRCTag: number /*int*/
+                public static readonly icSigGrayTRCTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'gXYZ'.
                  */
                 // @ts-ignore
-                readonly icSigGreenColorantTag: number /*int*/
+                public static readonly icSigGreenColorantTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'gXYZ'.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icSigGreenMatrixColumnTag: number /*int*/
+                public static readonly icSigGreenMatrixColumnTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'gTRC'.
                  */
                 // @ts-ignore
-                readonly icSigGreenTRCTag: number /*int*/
+                public static readonly icSigGreenTRCTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'lumi'.
                  */
                 // @ts-ignore
-                readonly icSigLuminanceTag: number /*int*/
+                public static readonly icSigLuminanceTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'meas'.
                  */
                 // @ts-ignore
-                readonly icSigMeasurementTag: number /*int*/
+                public static readonly icSigMeasurementTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'bkpt'.
                  */
                 // @ts-ignore
-                readonly icSigMediaBlackPointTag: number /*int*/
+                public static readonly icSigMediaBlackPointTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'wtpt'.
                  */
                 // @ts-ignore
-                readonly icSigMediaWhitePointTag: number /*int*/
+                public static readonly icSigMediaWhitePointTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'ncl2'.
                  */
                 // @ts-ignore
-                readonly icSigNamedColor2Tag: number /*int*/
+                public static readonly icSigNamedColor2Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'resp'.
                  */
                 // @ts-ignore
-                readonly icSigOutputResponseTag: number /*int*/
+                public static readonly icSigOutputResponseTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'pre0'.
                  */
                 // @ts-ignore
-                readonly icSigPreview0Tag: number /*int*/
+                public static readonly icSigPreview0Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'pre1'.
                  */
                 // @ts-ignore
-                readonly icSigPreview1Tag: number /*int*/
+                public static readonly icSigPreview1Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'pre2'.
                  */
                 // @ts-ignore
-                readonly icSigPreview2Tag: number /*int*/
+                public static readonly icSigPreview2Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'desc'.
                  */
                 // @ts-ignore
-                readonly icSigProfileDescriptionTag: number /*int*/
+                public static readonly icSigProfileDescriptionTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'pseq'.
                  */
                 // @ts-ignore
-                readonly icSigProfileSequenceDescTag: number /*int*/
+                public static readonly icSigProfileSequenceDescTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'psd0'.
                  */
                 // @ts-ignore
-                readonly icSigPs2CRD0Tag: number /*int*/
+                public static readonly icSigPs2CRD0Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'psd1'.
                  */
                 // @ts-ignore
-                readonly icSigPs2CRD1Tag: number /*int*/
+                public static readonly icSigPs2CRD1Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'psd2'.
                  */
                 // @ts-ignore
-                readonly icSigPs2CRD2Tag: number /*int*/
+                public static readonly icSigPs2CRD2Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'psd3'.
                  */
                 // @ts-ignore
-                readonly icSigPs2CRD3Tag: number /*int*/
+                public static readonly icSigPs2CRD3Tag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'ps2s'.
                  */
                 // @ts-ignore
-                readonly icSigPs2CSATag: number /*int*/
+                public static readonly icSigPs2CSATag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'ps2i'.
                  */
                 // @ts-ignore
-                readonly icSigPs2RenderingIntentTag: number /*int*/
+                public static readonly icSigPs2RenderingIntentTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'rXYZ'.
                  */
                 // @ts-ignore
-                readonly icSigRedColorantTag: number /*int*/
+                public static readonly icSigRedColorantTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'rXYZ'.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icSigRedMatrixColumnTag: number /*int*/
+                public static readonly icSigRedMatrixColumnTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'rTRC'.
                  */
                 // @ts-ignore
-                readonly icSigRedTRCTag: number /*int*/
+                public static readonly icSigRedTRCTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'scrd'.
                  */
                 // @ts-ignore
-                readonly icSigScreeningDescTag: number /*int*/
+                public static readonly icSigScreeningDescTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'scrn'.
                  */
                 // @ts-ignore
-                readonly icSigScreeningTag: number /*int*/
+                public static readonly icSigScreeningTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'tech'.
                  */
                 // @ts-ignore
-                readonly icSigTechnologyTag: number /*int*/
+                public static readonly icSigTechnologyTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'bfd '.
                  */
                 // @ts-ignore
-                readonly icSigUcrBgTag: number /*int*/
+                public static readonly icSigUcrBgTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'vued'.
                  */
                 // @ts-ignore
-                readonly icSigViewingCondDescTag: number /*int*/
+                public static readonly icSigViewingCondDescTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'view'.
                  */
                 // @ts-ignore
-                readonly icSigViewingConditionsTag: number /*int*/
+                public static readonly icSigViewingConditionsTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'chrm'.
                  */
                 // @ts-ignore
-                readonly icSigChromaticityTag: number /*int*/
+                public static readonly icSigChromaticityTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'chad'.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icSigChromaticAdaptationTag: number /*int*/
+                public static readonly icSigChromaticAdaptationTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'clro'.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icSigColorantOrderTag: number /*int*/
+                public static readonly icSigColorantOrderTag: number /*int*/
                 /**
                  * ICC Profile Tag Signature: 'clrt'.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icSigColorantTableTag: number /*int*/
+                public static readonly icSigColorantTableTag: number /*int*/
                 /**
                  * ICC Profile Header Location: profile size in bytes.
                  */
                 // @ts-ignore
-                readonly icHdrSize: number /*int*/
+                public static readonly icHdrSize: number /*int*/
                 /**
                  * ICC Profile Header Location: CMM for this profile.
                  */
                 // @ts-ignore
-                readonly icHdrCmmId: number /*int*/
+                public static readonly icHdrCmmId: number /*int*/
                 /**
                  * ICC Profile Header Location: format version number.
                  */
                 // @ts-ignore
-                readonly icHdrVersion: number /*int*/
+                public static readonly icHdrVersion: number /*int*/
                 /**
                  * ICC Profile Header Location: type of profile.
                  */
                 // @ts-ignore
-                readonly icHdrDeviceClass: number /*int*/
+                public static readonly icHdrDeviceClass: number /*int*/
                 /**
                  * ICC Profile Header Location: color space of data.
                  */
                 // @ts-ignore
-                readonly icHdrColorSpace: number /*int*/
+                public static readonly icHdrColorSpace: number /*int*/
                 /**
                  * ICC Profile Header Location: PCS - XYZ or Lab only.
                  */
                 // @ts-ignore
-                readonly icHdrPcs: number /*int*/
+                public static readonly icHdrPcs: number /*int*/
                 /**
                  * ICC Profile Header Location: date profile was created.
                  */
                 // @ts-ignore
-                readonly icHdrDate: number /*int*/
+                public static readonly icHdrDate: number /*int*/
                 /**
                  * ICC Profile Header Location: icMagicNumber.
                  */
                 // @ts-ignore
-                readonly icHdrMagic: number /*int*/
+                public static readonly icHdrMagic: number /*int*/
                 /**
                  * ICC Profile Header Location: primary platform.
                  */
                 // @ts-ignore
-                readonly icHdrPlatform: number /*int*/
+                public static readonly icHdrPlatform: number /*int*/
                 /**
                  * ICC Profile Header Location: various bit settings.
                  */
                 // @ts-ignore
-                readonly icHdrFlags: number /*int*/
+                public static readonly icHdrFlags: number /*int*/
                 /**
                  * ICC Profile Header Location: device manufacturer.
                  */
                 // @ts-ignore
-                readonly icHdrManufacturer: number /*int*/
+                public static readonly icHdrManufacturer: number /*int*/
                 /**
                  * ICC Profile Header Location: device model number.
                  */
                 // @ts-ignore
-                readonly icHdrModel: number /*int*/
+                public static readonly icHdrModel: number /*int*/
                 /**
                  * ICC Profile Header Location: device attributes.
                  */
                 // @ts-ignore
-                readonly icHdrAttributes: number /*int*/
+                public static readonly icHdrAttributes: number /*int*/
                 /**
                  * ICC Profile Header Location: rendering intent.
                  */
                 // @ts-ignore
-                readonly icHdrRenderingIntent: number /*int*/
+                public static readonly icHdrRenderingIntent: number /*int*/
                 /**
                  * ICC Profile Header Location: profile illuminant.
                  */
                 // @ts-ignore
-                readonly icHdrIlluminant: number /*int*/
+                public static readonly icHdrIlluminant: number /*int*/
                 /**
                  * ICC Profile Header Location: profile creator.
                  */
                 // @ts-ignore
-                readonly icHdrCreator: number /*int*/
+                public static readonly icHdrCreator: number /*int*/
                 /**
                  * ICC Profile Header Location: profile's ID.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly icHdrProfileID: number /*int*/
+                public static readonly icHdrProfileID: number /*int*/
                 /**
                  * ICC Profile Constant: tag type signaturE.
                  */
                 // @ts-ignore
-                readonly icTagType: number /*int*/
+                public static readonly icTagType: number /*int*/
                 /**
                  * ICC Profile Constant: reserved.
                  */
                 // @ts-ignore
-                readonly icTagReserved: number /*int*/
+                public static readonly icTagReserved: number /*int*/
                 /**
                  * ICC Profile Constant: curveType count.
                  */
                 // @ts-ignore
-                readonly icCurveCount: number /*int*/
+                public static readonly icCurveCount: number /*int*/
                 /**
                  * ICC Profile Constant: curveType data.
                  */
                 // @ts-ignore
-                readonly icCurveData: number /*int*/
+                public static readonly icCurveData: number /*int*/
                 /**
                  * ICC Profile Constant: XYZNumber X.
                  */
                 // @ts-ignore
-                readonly icXYZNumberX: number /*int*/
+                public static readonly icXYZNumberX: number /*int*/
                 /**
                  * Frees the resources associated with an ICC_Profile object.
                  */
@@ -648,7 +648,7 @@ declare namespace java {
                  *           the data in the specified <code>data</code> array.
                  */
                 // @ts-ignore
-                getInstance(data: number /*byte*/[]): java.awt.color.ICC_Profile
+                public static getInstance(data: number /*byte*/[]): java.awt.color.ICC_Profile
                 /**
                  * Constructs an ICC_Profile corresponding to one of the specific color
                  * spaces defined by the ColorSpace class (for example CS_sRGB).
@@ -663,7 +663,7 @@ declare namespace java {
                  *  one of the predefined color space types.
                  */
                 // @ts-ignore
-                getInstance(cspace: number /*int*/): java.awt.color.ICC_Profile
+                public static getInstance(cspace: number /*int*/): java.awt.color.ICC_Profile
                 /**
                  * Constructs an ICC_Profile corresponding to the data in a file.
                  * fileName may be an absolute or a relative file specification.
@@ -688,7 +688,7 @@ declare namespace java {
                  *  and it does not permit read access to the given file.
                  */
                 // @ts-ignore
-                getInstance(fileName: string): java.awt.color.ICC_Profile
+                public static getInstance(fileName: java.lang.String | string): java.awt.color.ICC_Profile
                 /**
                  * Constructs an ICC_Profile corresponding to the data in an InputStream.
                  * This method throws an IllegalArgumentException if the stream does not
@@ -702,25 +702,25 @@ declare namespace java {
                  *  contain valid ICC Profile data.
                  */
                 // @ts-ignore
-                getInstance(s: java.io.InputStream): java.awt.color.ICC_Profile
+                public static getInstance(s: java.io.InputStream): java.awt.color.ICC_Profile
                 /**
                  * Returns profile major version.
                  * @return The major version of the profile.
                  */
                 // @ts-ignore
-                getMajorVersion(): int
+                public getMajorVersion(): number /*int*/
                 /**
                  * Returns profile minor version.
                  * @return The minor version of the profile.
                  */
                 // @ts-ignore
-                getMinorVersion(): int
+                public getMinorVersion(): number /*int*/
                 /**
                  * Returns the profile class.
                  * @return One of the predefined profile class constants.
                  */
                 // @ts-ignore
-                getProfileClass(): int
+                public getProfileClass(): number /*int*/
                 /**
                  * Returns the color space type.  Returns one of the color space type
                  * constants defined by the ColorSpace class.  This is the
@@ -734,7 +734,7 @@ declare namespace java {
                  *  <CODE>ColorSpace</CODE> class.
                  */
                 // @ts-ignore
-                getColorSpaceType(): int
+                public getColorSpaceType(): number /*int*/
                 /**
                  * Returns the color space type of the Profile Connection Space (PCS).
                  * Returns one of the color space type constants defined by the
@@ -748,7 +748,7 @@ declare namespace java {
                  *  <CODE>ColorSpace</CODE> class.
                  */
                 // @ts-ignore
-                getPCSType(): int
+                public getPCSType(): number /*int*/
                 /**
                  * Write this ICC_Profile to a file.
                  * @param fileName The file to write the profile data to.
@@ -756,7 +756,7 @@ declare namespace java {
                  *  or an I/O error occurs while writing to the file.
                  */
                 // @ts-ignore
-                write(fileName: string): void
+                public write(fileName: java.lang.String | string): void
                 /**
                  * Write this ICC_Profile to an OutputStream.
                  * @param s The stream to write the profile data to.
@@ -764,14 +764,14 @@ declare namespace java {
                  *  stream.
                  */
                 // @ts-ignore
-                write(s: java.io.OutputStream): void
+                public write(s: java.io.OutputStream): void
                 /**
                  * Returns a byte array corresponding to the data of this ICC_Profile.
                  * @return A byte array that contains the profile data.
                  * @see #setData(int, byte[])
                  */
                 // @ts-ignore
-                getData(): byte[]
+                public getData(): number /*byte*/[]
                 /**
                  * Returns a particular tagged data element from the profile as
                  * a byte array.  Elements are identified by signatures
@@ -786,7 +786,7 @@ declare namespace java {
                  * @see #setData(int, byte[])
                  */
                 // @ts-ignore
-                getData(tagSignature: number /*int*/): byte[]
+                public getData(tagSignature: number /*int*/): number /*byte*/[]
                 /**
                  * Sets a particular tagged data element in the profile from
                  * a byte array. The array should contain data in a format, corresponded
@@ -804,7 +804,7 @@ declare namespace java {
                  * @see #getData
                  */
                 // @ts-ignore
-                setData(tagSignature: number /*int*/, tagData: number /*byte*/[]): void
+                public setData(tagSignature: number /*int*/, tagData: number /*byte*/[]): void
                 /**
                  * Returns the number of color components in the "input" color
                  * space of this profile.  For example if the color space type
@@ -815,7 +815,7 @@ declare namespace java {
                  *          is invalid
                  */
                 // @ts-ignore
-                getNumComponents(): int
+                public getNumComponents(): number /*int*/
                 /**
                  * Resolves instances being deserialized into instances registered
                  * with CMM.
@@ -825,7 +825,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                readResolve(): any
             }
         }
     }

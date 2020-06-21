@@ -39,7 +39,7 @@ declare namespace org {
                      * @see #setMaxResponseSize(int)
                      */
                     // @ts-ignore
-                    readonly DEFAULT_MAX_RESPONSE_SIZE: number /*int*/
+                    public static readonly DEFAULT_MAX_RESPONSE_SIZE: number /*int*/
                     /**
                      * Set the default maximum response size.
                      * <p>By default this is set to {@link #DEFAULT_MAX_RESPONSE_SIZE}.
@@ -47,34 +47,34 @@ declare namespace org {
                      * @see HttpObjectAggregator#HttpObjectAggregator(int)
                      */
                     // @ts-ignore
-                    setMaxResponseSize(maxResponseSize: number /*int*/): void
+                    public setMaxResponseSize(maxResponseSize: number /*int*/): void
                     /**
                      * Set the SSL context. When configured it is used to create and insert an
                      * {@link io.netty.handler.ssl.SslHandler} in the channel pipeline.
                      * <p>A default client SslContext is configured if none has been provided.
                      */
                     // @ts-ignore
-                    setSslContext(sslContext: SslContext): void
+                    public setSslContext(sslContext: SslContext): void
                     /**
                      * Set the underlying connect timeout (in milliseconds).
                      * A timeout value of 0 specifies an infinite timeout.
                      * @see ChannelConfig#setConnectTimeoutMillis(int)
                      */
                     // @ts-ignore
-                    setConnectTimeout(connectTimeout: number /*int*/): void
+                    public setConnectTimeout(connectTimeout: number /*int*/): void
                     /**
                      * Set the underlying URLConnection's read timeout (in milliseconds).
                      * A timeout value of 0 specifies an infinite timeout.
                      * @see ReadTimeoutHandler
                      */
                     // @ts-ignore
-                    setReadTimeout(readTimeout: number /*int*/): void
+                    public setReadTimeout(readTimeout: number /*int*/): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
+                    public createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
                     // @ts-ignore
-                    createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
+                    public createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
                     /**
                      * Template method for changing properties on the given {@link SocketChannelConfig}.
                      * <p>The default implementation sets the connect timeout based on the set property.
@@ -83,7 +83,7 @@ declare namespace org {
                     // @ts-ignore
                     configureChannel(config: SocketChannelConfig): void
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

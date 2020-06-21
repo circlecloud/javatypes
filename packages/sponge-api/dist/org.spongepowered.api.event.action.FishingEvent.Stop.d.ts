@@ -22,7 +22,7 @@ declare namespace org {
                              * @return The transactions
                              */
                             // @ts-ignore
-                            getTransactions(): java.util.List<org.spongepowered.api.data.Transaction<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
+                            getTransactions(): Array<org.spongepowered.api.data.Transaction<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
                             /**
                              * Gets a list of {@link Transaction}s for each {@link ItemStackSnapshot}
                              * that will be spawned if this event is not cancelled.
@@ -30,7 +30,7 @@ declare namespace org {
                              * @deprecated Use {#link #getTransactions()}
                              */
                             // @ts-ignore
-                            getItemStackTransaction(): java.util.List<org.spongepowered.api.data.Transaction<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
+                            getItemStackTransaction(): Array<org.spongepowered.api.data.Transaction<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
                         }
                     }
                 }

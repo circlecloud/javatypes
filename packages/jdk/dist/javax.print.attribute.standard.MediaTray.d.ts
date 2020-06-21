@@ -29,47 +29,47 @@ declare namespace javax {
                      * The top input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly TOP: javax.print.attribute.standard.MediaTray
+                    public static readonly TOP: javax.print.attribute.standard.MediaTray
                     /**
                      * The middle input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly MIDDLE: javax.print.attribute.standard.MediaTray
+                    public static readonly MIDDLE: javax.print.attribute.standard.MediaTray
                     /**
                      * The bottom input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly BOTTOM: javax.print.attribute.standard.MediaTray
+                    public static readonly BOTTOM: javax.print.attribute.standard.MediaTray
                     /**
                      * The envelope input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly ENVELOPE: javax.print.attribute.standard.MediaTray
+                    public static readonly ENVELOPE: javax.print.attribute.standard.MediaTray
                     /**
                      * The manual feed input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly MANUAL: javax.print.attribute.standard.MediaTray
+                    public static readonly MANUAL: javax.print.attribute.standard.MediaTray
                     /**
                      * The large capacity input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly LARGE_CAPACITY: javax.print.attribute.standard.MediaTray
+                    public static readonly LARGE_CAPACITY: javax.print.attribute.standard.MediaTray
                     /**
                      * The main input tray in the printer.
                      */
                     // @ts-ignore
-                    readonly MAIN: javax.print.attribute.standard.MediaTray
+                    public static readonly MAIN: javax.print.attribute.standard.MediaTray
                     /**
                      * The side input tray.
                      */
                     // @ts-ignore
-                    readonly SIDE: javax.print.attribute.standard.MediaTray
+                    public static readonly SIDE: javax.print.attribute.standard.MediaTray
                     /**
                      * Returns the string table for class MediaTray.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class MediaTray.
                      */

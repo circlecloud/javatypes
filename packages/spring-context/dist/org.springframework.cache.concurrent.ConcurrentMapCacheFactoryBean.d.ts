@@ -22,31 +22,31 @@ declare namespace org {
                      * <p>Default is "" (empty String).
                      */
                     // @ts-ignore
-                    setName(name: string): void
+                    public setName(name: java.lang.String | string): void
                     /**
                      * Specify the ConcurrentMap to use as an internal store
                      * (possibly pre-populated).
                      * <p>Default is a standard {@link java.util.concurrent.ConcurrentHashMap}.
                      */
                     // @ts-ignore
-                    setStore(store: java.util.concurrent.ConcurrentMap<java.lang.Object, java.lang.Object>): void
+                    public setStore(store: java.util.concurrent.ConcurrentMap<java.lang.Object | any, java.lang.Object | any>): void
                     /**
                      * Set whether to allow {@code null} values
                      * (adapting them to an internal null holder value).
                      * <p>Default is "true".
                      */
                     // @ts-ignore
-                    setAllowNullValues(allowNullValues: boolean): void
+                    public setAllowNullValues(allowNullValues: boolean): void
                     // @ts-ignore
-                    setBeanName(beanName: string): void
+                    public setBeanName(beanName: java.lang.String | string): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): org.springframework.cache.concurrent.ConcurrentMapCache
+                    public getObject(): org.springframework.cache.concurrent.ConcurrentMapCache
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

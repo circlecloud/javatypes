@@ -8,7 +8,7 @@ declare namespace org {
                  * @return The name to reference on tamed animals or null if a name cannot be obtained
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * This is the UUID of the specified AnimalTamer.
                  * @return The UUID to reference on tamed animals

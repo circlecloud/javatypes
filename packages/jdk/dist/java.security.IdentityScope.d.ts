@@ -28,7 +28,7 @@ declare namespace java {
          *  {@code java.security.Principal}.
          */
         // @ts-ignore
-        class IdentityScope extends java.security.Identity {
+        abstract class IdentityScope extends java.security.Identity {
             /**
              * This constructor is used for serialization only and should not
              * be used by subclasses.
@@ -40,7 +40,7 @@ declare namespace java {
              * @param name the scope name.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Constructs a new identity scope with the specified name and scope.
              * @param name the scope name.
@@ -49,7 +49,7 @@ declare namespace java {
              *  with the same name in the scope.
              */
             // @ts-ignore
-            constructor(name: string, scope: java.security.IdentityScope)
+            constructor(name: java.lang.String | string, scope: java.security.IdentityScope)
             /**
              * Returns the system's identity scope.
              * @return the system's identity scope, or {#code null} if none has been
@@ -57,7 +57,7 @@ declare namespace java {
              * @see #setSystemScope
              */
             // @ts-ignore
-            getSystemScope(): java.security.IdentityScope
+            public static getSystemScope(): java.security.IdentityScope
             /**
              * Sets the system's identity scope.
              * <p>First, if there is a security manager, its
@@ -72,13 +72,13 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            setSystemScope(scope: java.security.IdentityScope): void
+            static setSystemScope(scope: java.security.IdentityScope): void
             /**
              * Returns the number of identities within this identity scope.
              * @return the number of identities within this identity scope.
              */
             // @ts-ignore
-            abstract size(): int
+            public abstract size(): number /*int*/
             /**
              * Returns the identity in this scope with the specified name (if any).
              * @param name the name of the identity to be retrieved.
@@ -86,7 +86,7 @@ declare namespace java {
              *  no identities named {@code name} in this scope.
              */
             // @ts-ignore
-            abstract getIdentity(name: string): java.security.Identity
+            public abstract getIdentity(name: java.lang.String | string): java.security.Identity
             /**
              * Retrieves the identity whose name is the same as that of the
              * specified principal. (Note: Identity implements Principal.)
@@ -97,7 +97,7 @@ declare namespace java {
              *  in this scope.
              */
             // @ts-ignore
-            getIdentity(principal: java.security.Principal): java.security.Identity
+            public getIdentity(principal: java.security.Principal): java.security.Identity
             /**
              * Retrieves the identity with the specified public key.
              * @param key the public key for the identity to be returned.
@@ -105,7 +105,7 @@ declare namespace java {
              *  no identities in this scope with that key.
              */
             // @ts-ignore
-            abstract getIdentity(key: java.security.PublicKey): java.security.Identity
+            public abstract getIdentity(key: java.security.PublicKey): java.security.Identity
             /**
              * Adds an identity to this identity scope.
              * @param identity the identity to be added.
@@ -115,7 +115,7 @@ declare namespace java {
              *  occurs.
              */
             // @ts-ignore
-            abstract addIdentity(identity: java.security.Identity): void
+            public abstract addIdentity(identity: java.security.Identity): void
             /**
              * Removes an identity from this identity scope.
              * @param identity the identity to be removed.
@@ -123,13 +123,13 @@ declare namespace java {
              *  or another exception occurs.
              */
             // @ts-ignore
-            abstract removeIdentity(identity: java.security.Identity): void
+            public abstract removeIdentity(identity: java.security.Identity): void
             /**
              * Returns an enumeration of all identities in this identity scope.
              * @return an enumeration of all identities in this identity scope.
              */
             // @ts-ignore
-            abstract identities(): java.util.Enumeration<java.security.Identity>
+            public abstract identities(): java.util.Enumeration<java.security.Identity>
             /**
              * Returns a string representation of this identity scope, including
              * its name, its scope name, and the number of identities in this
@@ -137,7 +137,7 @@ declare namespace java {
              * @return a string representation of this identity scope.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

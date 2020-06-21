@@ -179,21 +179,21 @@ declare namespace javax {
                  * resources.
                  */
                 // @ts-ignore
-                addURL(url: java.net.URL): void
+                public addURL(url: java.net.URL): void
                 /**
                  * Appends the specified URL to the list of URLs to search for classes and
                  * resources.
                  * @exception ServiceNotFoundException The specified URL is malformed.
                  */
                 // @ts-ignore
-                addURL(url: string): void
+                public addURL(url: java.lang.String | string): void
                 /**
                  * Returns the search path of URLs for loading classes and resources.
                  * This includes the original list of URLs specified to the constructor,
                  * along with any URLs subsequently appended by the addURL() method.
                  */
                 // @ts-ignore
-                getURLs(): java.net.URL[]
+                public getURLs(): java.net.URL[]
                 /**
                  * Loads a text file containing MLET tags that define the MBeans to
                  * be added to the MBean server. The location of the text file is specified by
@@ -210,7 +210,7 @@ declare namespace javax {
                  * @exception IllegalStateException MLet MBean is not registered with an MBeanServer.
                  */
                 // @ts-ignore
-                getMBeansFromURL(url: java.net.URL): java.util.Set<java.lang.Object>
+                public getMBeansFromURL(url: java.net.URL): Array<java.lang.Object | any>
                 /**
                  * Loads a text file containing MLET tags that define the MBeans to
                  * be added to the MBean server. The location of the text file is specified by
@@ -231,7 +231,7 @@ declare namespace javax {
                  *  with an MBeanServer.
                  */
                 // @ts-ignore
-                getMBeansFromURL(url: string): java.util.Set<java.lang.Object>
+                public getMBeansFromURL(url: java.lang.String | string): Array<java.lang.Object | any>
                 /**
                  * Gets the current directory used by the library loader for
                  * storing native libraries before they are loaded into memory.
@@ -241,7 +241,7 @@ declare namespace javax {
                  *  does not support storing native libraries in this way.
                  */
                 // @ts-ignore
-                getLibraryDirectory(): java.lang.String
+                public getLibraryDirectory(): string
                 /**
                  * Sets the directory used by the library loader for storing
                  * native libraries before they are loaded into memory.
@@ -251,7 +251,7 @@ declare namespace javax {
                  *  does not support storing native libraries in this way.
                  */
                 // @ts-ignore
-                setLibraryDirectory(libdir: string): void
+                public setLibraryDirectory(libdir: java.lang.String | string): void
                 /**
                  * Allows the m-let to perform any operations it needs before
                  * being registered in the MBean server. If the ObjectName is
@@ -264,7 +264,7 @@ declare namespace javax {
                  * as an MBeanRegistrationException.
                  */
                 // @ts-ignore
-                preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+                public preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
                 /**
                  * Allows the m-let to perform any operations needed after having been
                  * registered in the MBean server or after the registration has failed.
@@ -273,7 +273,7 @@ declare namespace javax {
                  *  false means that either the registration phase has failed.
                  */
                 // @ts-ignore
-                postRegister(registrationDone: java.lang.Boolean): void
+                public postRegister(registrationDone: java.lang.Boolean): void
                 /**
                  * Allows the m-let to perform any operations it needs before being unregistered
                  * by the MBean server.
@@ -282,13 +282,13 @@ declare namespace javax {
                  *  MBeanRegistrationException.
                  */
                 // @ts-ignore
-                preDeregister(): void
+                public preDeregister(): void
                 /**
                  * Allows the m-let to perform any operations needed after having been
                  * unregistered in the MBean server.
                  */
                 // @ts-ignore
-                postDeregister(): void
+                public postDeregister(): void
                 /**
                  * <p>Save this MLet's contents to the given {@link ObjectOutput}.
                  * Not all implementations support this method.  Those that do not
@@ -305,7 +305,7 @@ declare namespace javax {
                  *  implementation does not support this operation.
                  */
                 // @ts-ignore
-                writeExternal(out: java.io.ObjectOutput): void
+                public writeExternal(out: java.io.ObjectOutput): void
                 /**
                  * <p>Restore this MLet's contents from the given {@link ObjectInput}.
                  * Not all implementations support this method.  Those that do not
@@ -324,7 +324,7 @@ declare namespace javax {
                  *  implementation does not support this operation.
                  */
                 // @ts-ignore
-                readExternal(input: java.io.ObjectInput): void
+                public readExternal(input: java.io.ObjectInput): void
                 /**
                  * <p>Load a class, using the given {@link ClassLoaderRepository} if
                  * the class is not found in this MLet's URLs.  The given
@@ -341,7 +341,7 @@ declare namespace javax {
                  *             ClassLoaderRepository.
                  */
                 // @ts-ignore
-                loadClass(name: string, clr: javax.management.loading.ClassLoaderRepository): java.lang.Class<?>
+                public loadClass(name: java.lang.String | string, clr: javax.management.loading.ClassLoaderRepository): java.lang.Class<any>
                 /**
                  * This is the main method for class loaders that is being redefined.
                  * @param name The name of the class.
@@ -350,7 +350,7 @@ declare namespace javax {
                  *             found.
                  */
                 // @ts-ignore
-                findClass(name: string): java.lang.Class<?>
+                findClass(name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Returns the absolute path name of a native library. The VM
                  * invokes this method to locate the native libraries that belong
@@ -388,7 +388,7 @@ declare namespace javax {
                  * @return The absolute path of the native library.
                  */
                 // @ts-ignore
-                findLibrary(libname: string): java.lang.String
+                findLibrary(libname: java.lang.String | string): string
                 /**
                  * <p>This method is to be overridden when extending this service to
                  * support caching and versioning.  It is called from {@link
@@ -411,7 +411,7 @@ declare namespace javax {
                  *  {#link #getMBeansFromURL getMBeansFromURL}.
                  */
                 // @ts-ignore
-                check(version: string, codebase: java.net.URL, jarfile: string, mlet: javax.management.loading.MLetContent): java.net.URL
+                check(version: java.lang.String | string, codebase: java.net.URL, jarfile: java.lang.String | string, mlet: javax.management.loading.MLetContent): java.net.URL
             }
         }
     }

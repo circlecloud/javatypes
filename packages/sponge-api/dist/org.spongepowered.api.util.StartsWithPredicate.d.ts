@@ -7,15 +7,15 @@ declare namespace org {
                  * test string, case-insensitively.
                  */
                 // @ts-ignore
-                class StartsWithPredicate extends java.lang.Object implements java.util.function.Predicate<java.lang.String> {
+                class StartsWithPredicate extends java.lang.Object implements java.util.function.Predicate<java.lang.String | string> {
                     /**
                      * Create an new predicate.
                      * @param test The string to test input against
                      */
                     // @ts-ignore
-                    constructor(test: string)
+                    constructor(test: java.lang.String | string)
                     // @ts-ignore
-                    test(input: string): boolean
+                    public test(input: java.lang.String | string): boolean
                 }
             }
         }

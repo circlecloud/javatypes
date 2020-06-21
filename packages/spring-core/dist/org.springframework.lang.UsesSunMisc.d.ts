@@ -8,7 +8,7 @@ declare namespace org {
              * @since 4.3
              */
             // @ts-ignore
-            class UsesSunMisc implements java.lang.annotation.Annotation {
+            abstract class UsesSunMisc implements java.lang.annotation.Annotation {
             }
         }
     }

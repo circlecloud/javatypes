@@ -8,7 +8,7 @@ declare namespace org {
                          * Inserts some text into the chat prompt.
                          */
                         // @ts-ignore
-                        class InsertText extends org.spongepowered.api.text.action.ShiftClickAction<java.lang.String> {
+                        class InsertText extends org.spongepowered.api.text.action.ShiftClickAction<java.lang.String | string> {
                         }
                     }
                 }

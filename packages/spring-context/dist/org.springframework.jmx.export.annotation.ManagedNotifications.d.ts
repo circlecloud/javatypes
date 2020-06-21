@@ -10,7 +10,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class ManagedNotifications implements java.lang.annotation.Annotation {
+                    abstract class ManagedNotifications implements java.lang.annotation.Annotation {
                     }
                 }
             }

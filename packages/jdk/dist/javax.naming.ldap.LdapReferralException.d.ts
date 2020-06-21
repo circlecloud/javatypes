@@ -19,7 +19,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class LdapReferralException extends javax.naming.ReferralException {
+            abstract class LdapReferralException extends javax.naming.ReferralException {
                 /**
                  * Constructs a new instance of LdapReferralException using the
                  * explanation supplied. All other fields are set to null.
@@ -27,7 +27,7 @@ declare namespace javax {
                  * @see java.lang.Throwable#getMessage
                  */
                 // @ts-ignore
-                constructor(explanation: string)
+                constructor(explanation: java.lang.String | string)
                 /**
                  * Constructs a new instance of LdapReferralException.
                  * All fields are set to null.
@@ -76,7 +76,7 @@ declare namespace javax {
                  *  to continue processing referrals.
                  */
                 // @ts-ignore
-                abstract getReferralContext(env: java.util.Hashtable<any, ?>): javax.naming.Context
+                abstract getReferralContext(env: java.util.Hashtable<any, any>): javax.naming.Context
                 /**
                  * Retrieves the context at which to continue the method using
                  * request controls and environment properties.
@@ -113,7 +113,7 @@ declare namespace javax {
                  *  to continue processing referrals.
                  */
                 // @ts-ignore
-                abstract getReferralContext(env: java.util.Hashtable<any, ?>, reqCtls: javax.naming.ldap.Control[]): javax.naming.Context
+                abstract getReferralContext(env: java.util.Hashtable<any, any>, reqCtls: javax.naming.ldap.Control[]): javax.naming.Context
             }
         }
     }

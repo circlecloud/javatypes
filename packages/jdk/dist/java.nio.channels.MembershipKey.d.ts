@@ -21,7 +21,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class MembershipKey extends java.lang.Object {
+            abstract class MembershipKey extends java.lang.Object {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -36,7 +36,7 @@ declare namespace java {
                  *           otherwise
                  */
                 // @ts-ignore
-                abstract isValid(): boolean
+                public abstract isValid(): boolean
                 /**
                  * Drop membership.
                  * <p> If the membership key represents a membership to receive all datagrams
@@ -55,7 +55,7 @@ declare namespace java {
                  * it remains invalid forever.
                  */
                 // @ts-ignore
-                abstract drop(): void
+                public abstract drop(): void
                 /**
                  * Block multicast datagrams from the given source address.
                  * <p> If this membership key is not source-specific, and the underlying
@@ -80,7 +80,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract block(source: java.net.InetAddress): java.nio.channels.MembershipKey
+                public abstract block(source: java.net.InetAddress): java.nio.channels.MembershipKey
                 /**
                  * Unblock multicast datagrams from the given source address that was
                  * previously blocked using the {@link #block(InetAddress) block} method.
@@ -92,7 +92,7 @@ declare namespace java {
                  *           membership key is no longer valid
                  */
                 // @ts-ignore
-                abstract unblock(source: java.net.InetAddress): java.nio.channels.MembershipKey
+                public abstract unblock(source: java.net.InetAddress): java.nio.channels.MembershipKey
                 /**
                  * Returns the channel for which this membership key was created. This
                  * method will continue to return the channel even after the membership
@@ -100,7 +100,7 @@ declare namespace java {
                  * @return the channel
                  */
                 // @ts-ignore
-                abstract channel(): java.nio.channels.MulticastChannel
+                public abstract channel(): java.nio.channels.MulticastChannel
                 /**
                  * Returns the multicast group for which this membership key was created.
                  * This method will continue to return the group even after the membership
@@ -108,7 +108,7 @@ declare namespace java {
                  * @return the multicast group
                  */
                 // @ts-ignore
-                abstract group(): java.net.InetAddress
+                public abstract group(): java.net.InetAddress
                 /**
                  * Returns the network interface for which this membership key was created.
                  * This method will continue to return the network interface even after the
@@ -116,7 +116,7 @@ declare namespace java {
                  * @return the network interface
                  */
                 // @ts-ignore
-                abstract networkInterface(): java.net.NetworkInterface
+                public abstract networkInterface(): java.net.NetworkInterface
                 /**
                  * Returns the source address if this membership key is source-specific,
                  * or {@code null} if this membership is not source-specific.
@@ -124,7 +124,7 @@ declare namespace java {
                  *           otherwise {#code null}
                  */
                 // @ts-ignore
-                abstract sourceAddress(): java.net.InetAddress
+                public abstract sourceAddress(): java.net.InetAddress
             }
         }
     }

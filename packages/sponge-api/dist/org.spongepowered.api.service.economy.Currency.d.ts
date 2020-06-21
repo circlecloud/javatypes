@@ -59,7 +59,7 @@ declare namespace org {
                          * @return defaultFractionDigits utilized.
                          */
                         // @ts-ignore
-                        getDefaultFractionDigits(): int
+                        getDefaultFractionDigits(): number /*int*/
                         /**
                          * Returns true if this currency is the default currency for the economy,
                          * otherwise false.

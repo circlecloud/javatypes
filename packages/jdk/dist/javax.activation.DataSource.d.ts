@@ -38,7 +38,7 @@ declare namespace javax {
              * @return the MIME Type
              */
             // @ts-ignore
-            getContentType(): java.lang.String
+            getContentType(): string
             /**
              * Return the <i>name</i> of this object where the name of the object
              * is dependant on the nature of the underlying objects. DataSources
@@ -48,7 +48,7 @@ declare namespace javax {
              * @return the name of the object.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
         }
     }
 }

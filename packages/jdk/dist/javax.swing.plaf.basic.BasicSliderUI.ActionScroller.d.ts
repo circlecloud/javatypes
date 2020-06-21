@@ -21,9 +21,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(slider: javax.swing.JSlider, dir: number /*int*/, block: boolean)
                         // @ts-ignore
-                        actionPerformed(e: java.awt.event.ActionEvent): void
+                        public actionPerformed(e: java.awt.event.ActionEvent): void
                         // @ts-ignore
-                        isEnabled(): boolean
+                        public isEnabled(): boolean
                     }
                 }
             }

@@ -24,7 +24,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Number extends java.lang.Object implements java.io.Serializable {
+        abstract class Number extends java.lang.Object implements java.io.Serializable {
             // @ts-ignore
             constructor()
             /**
@@ -34,7 +34,7 @@ declare namespace java {
              *           to type {#code int}.
              */
             // @ts-ignore
-            abstract intValue(): int
+            public abstract intValue(): number /*int*/
             /**
              * Returns the value of the specified number as a {@code long},
              * which may involve rounding or truncation.
@@ -42,7 +42,7 @@ declare namespace java {
              *           to type {#code long}.
              */
             // @ts-ignore
-            abstract longValue(): long
+            public abstract longValue(): number /*long*/
             /**
              * Returns the value of the specified number as a {@code float},
              * which may involve rounding.
@@ -50,7 +50,7 @@ declare namespace java {
              *           to type {#code float}.
              */
             // @ts-ignore
-            abstract floatValue(): float
+            public abstract floatValue(): number /*float*/
             /**
              * Returns the value of the specified number as a {@code double},
              * which may involve rounding.
@@ -58,7 +58,7 @@ declare namespace java {
              *           to type {#code double}.
              */
             // @ts-ignore
-            abstract doubleValue(): double
+            public abstract doubleValue(): number /*double*/
             /**
              * Returns the value of the specified number as a {@code byte},
              * which may involve rounding or truncation.
@@ -69,7 +69,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of the specified number as a {@code short},
              * which may involve rounding or truncation.
@@ -80,7 +80,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
         }
     }
 }

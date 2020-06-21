@@ -17,9 +17,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory): java.lang.Object
+                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory): any
                         // @ts-ignore
-                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: any[]): java.lang.Object
+                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: java.lang.Object[] | any[]): any
                     }
                 }
             }

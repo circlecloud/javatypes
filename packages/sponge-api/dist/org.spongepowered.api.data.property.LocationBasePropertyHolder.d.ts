@@ -80,7 +80,7 @@ declare namespace org {
                          * @return An immutable collection of all known {#link Property}s
                          */
                         // @ts-ignore
-                        getProperties(coords: Vector3i): java.util.Collection<org.spongepowered.api.data.Property<?, ?>>
+                        getProperties(coords: Vector3i): Array<org.spongepowered.api.data.Property<any, any>>
                         /**
                          * Gets an immutable collection of all known {@link Property}s pertaining to
                          * this {@link PropertyHolder}.
@@ -92,7 +92,7 @@ declare namespace org {
                          * @return An immutable collection of all known {#link Property}s
                          */
                         // @ts-ignore
-                        getProperties(x: number /*int*/, y: number /*int*/, z: number /*int*/): java.util.Collection<org.spongepowered.api.data.Property<?, ?>>
+                        getProperties(x: number /*int*/, y: number /*int*/, z: number /*int*/): Array<org.spongepowered.api.data.Property<any, any>>
                         /**
                          * Gets all the faces of this block that have the given property.
                          * @param coords The coordinates
@@ -100,7 +100,7 @@ declare namespace org {
                          * @return All faces with the property
                          */
                         // @ts-ignore
-                        getFacesWithProperty(coords: Vector3i, propertyClass: java.lang.Class<org.spongepowered.api.data.Property<any, ?>>): java.util.Collection<org.spongepowered.api.util.Direction>
+                        getFacesWithProperty(coords: Vector3i, propertyClass: java.lang.Class<any>): Array<org.spongepowered.api.util.Direction>
                         /**
                          * Gets all the faces of this block that have the given property.
                          * @param x The x coordinate
@@ -110,7 +110,7 @@ declare namespace org {
                          * @return All faces with the property
                          */
                         // @ts-ignore
-                        getFacesWithProperty(x: number /*int*/, y: number /*int*/, z: number /*int*/, propertyClass: java.lang.Class<org.spongepowered.api.data.Property<any, ?>>): java.util.Collection<org.spongepowered.api.util.Direction>
+                        getFacesWithProperty(x: number /*int*/, y: number /*int*/, z: number /*int*/, propertyClass: java.lang.Class<any>): Array<org.spongepowered.api.util.Direction>
                     }
                 }
             }

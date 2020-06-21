@@ -6,7 +6,7 @@ declare namespace javax {
              * @author David Kloba
              */
             // @ts-ignore
-            class ScrollBarUI extends javax.swing.plaf.ComponentUI {
+            abstract class ScrollBarUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

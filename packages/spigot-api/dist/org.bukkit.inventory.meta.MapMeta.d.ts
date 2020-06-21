@@ -34,7 +34,7 @@ declare namespace org {
                      * @see #getMapView()
                      */
                     // @ts-ignore
-                    getMapId(): int
+                    getMapId(): number /*int*/
                     /**
                      * Sets the map ID. This is used to determine what map is displayed.
                      * @param id the map id to set
@@ -99,14 +99,14 @@ declare namespace org {
                      * @return the location name that is set
                      */
                     // @ts-ignore
-                    getLocationName(): java.lang.String
+                    getLocationName(): string
                     /**
                      * Sets the location name. A custom map color will alter the display of the
                      * map in an inventory slot.
                      * @param name the name to set
                      */
                     // @ts-ignore
-                    setLocationName(name: string): void
+                    setLocationName(name: java.lang.String | string): void
                     /**
                      * Checks for existence of a map color.
                      * @return true if this has a custom map color

@@ -45,47 +45,47 @@ declare namespace org {
                          * Anything else represents false. Case seNsItive.
                          */
                         // @ts-ignore
-                        readonly TRUE_VALUE: string
+                        public static readonly TRUE_VALUE: java.lang.String | string
                         /**
                          * Separator between bean name and property name.
                          * We follow normal Java conventions.
                          */
                         // @ts-ignore
-                        readonly SEPARATOR: string
+                        public static readonly SEPARATOR: java.lang.String | string
                         /**
                          * Special key to distinguish {@code owner.(class)=com.myapp.MyClass}.
                          */
                         // @ts-ignore
-                        readonly CLASS_KEY: string
+                        public static readonly CLASS_KEY: java.lang.String | string
                         /**
                          * Special key to distinguish {@code owner.(parent)=parentBeanName}.
                          */
                         // @ts-ignore
-                        readonly PARENT_KEY: string
+                        public static readonly PARENT_KEY: java.lang.String | string
                         /**
                          * Special key to distinguish {@code owner.(scope)=prototype}.
                          * Default is "true".
                          */
                         // @ts-ignore
-                        readonly SCOPE_KEY: string
+                        public static readonly SCOPE_KEY: java.lang.String | string
                         /**
                          * Special key to distinguish {@code owner.(singleton)=false}.
                          * Default is "true".
                          */
                         // @ts-ignore
-                        readonly SINGLETON_KEY: string
+                        public static readonly SINGLETON_KEY: java.lang.String | string
                         /**
                          * Special key to distinguish {@code owner.(abstract)=true}
                          * Default is "false".
                          */
                         // @ts-ignore
-                        readonly ABSTRACT_KEY: string
+                        public static readonly ABSTRACT_KEY: java.lang.String | string
                         /**
                          * Special key to distinguish {@code owner.(lazy-init)=true}
                          * Default is "false".
                          */
                         // @ts-ignore
-                        readonly LAZY_INIT_KEY: string
+                        public static readonly LAZY_INIT_KEY: java.lang.String | string
                         /**
                          * Property suffix for references to other beans in the current
                          * BeanFactory: e.g. {@code owner.dog(ref)=fido}.
@@ -93,17 +93,17 @@ declare namespace org {
                          * will depend on the definition of the target bean.
                          */
                         // @ts-ignore
-                        readonly REF_SUFFIX: string
+                        public static readonly REF_SUFFIX: java.lang.String | string
                         /**
                          * Prefix before values referencing other beans.
                          */
                         // @ts-ignore
-                        readonly REF_PREFIX: string
+                        public static readonly REF_PREFIX: java.lang.String | string
                         /**
                          * Prefix used to denote a constructor argument definition.
                          */
                         // @ts-ignore
-                        readonly CONSTRUCTOR_ARG_PREFIX: string
+                        public static readonly CONSTRUCTOR_ARG_PREFIX: java.lang.String | string
                         /**
                          * Set the default parent bean for this bean factory.
                          * If a child bean definition handled by this factory provides neither
@@ -117,24 +117,24 @@ declare namespace org {
                          * backwards compatibility reasons. It still matches the typical use case.
                          */
                         // @ts-ignore
-                        setDefaultParentBean(defaultParentBean: string): void
+                        public setDefaultParentBean(defaultParentBean: java.lang.String | string): void
                         /**
                          * Return the default parent bean for this bean factory.
                          */
                         // @ts-ignore
-                        getDefaultParentBean(): java.lang.String
+                        public getDefaultParentBean(): string
                         /**
                          * Set the PropertiesPersister to use for parsing properties files.
                          * The default is DefaultPropertiesPersister.
                          * @see org.springframework.util.DefaultPropertiesPersister
                          */
                         // @ts-ignore
-                        setPropertiesPersister(propertiesPersister: PropertiesPersister): void
+                        public setPropertiesPersister(propertiesPersister: PropertiesPersister): void
                         /**
                          * Return the PropertiesPersister to use for parsing properties files.
                          */
                         // @ts-ignore
-                        getPropertiesPersister(): PropertiesPersister
+                        public getPropertiesPersister(): PropertiesPersister
                         /**
                          * Load bean definitions from the specified properties file,
                          * using all property keys (i.e. not filtering by prefix).
@@ -144,7 +144,7 @@ declare namespace org {
                          * @see #loadBeanDefinitions(org.springframework.core.io.Resource, String)
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(resource: Resource): int
+                        public loadBeanDefinitions(resource: Resource): number /*int*/
                         /**
                          * Load bean definitions from the specified properties file.
                          * @param resource the resource descriptor for the properties file
@@ -154,7 +154,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(resource: Resource, prefix: string): int
+                        public loadBeanDefinitions(resource: Resource, prefix: java.lang.String | string): number /*int*/
                         /**
                          * Load bean definitions from the specified properties file.
                          * @param encodedResource the resource descriptor for the properties file,
@@ -163,7 +163,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(encodedResource: EncodedResource): int
+                        public loadBeanDefinitions(encodedResource: EncodedResource): number /*int*/
                         /**
                          * Load bean definitions from the specified properties file.
                          * @param encodedResource the resource descriptor for the properties file,
@@ -174,7 +174,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(encodedResource: EncodedResource, prefix: string): int
+                        public loadBeanDefinitions(encodedResource: EncodedResource, prefix: java.lang.String | string): number /*int*/
                         /**
                          * Register bean definitions contained in a resource bundle,
                          * using all property keys (i.e. not filtering by prefix).
@@ -184,7 +184,7 @@ declare namespace org {
                          * @see #registerBeanDefinitions(java.util.ResourceBundle, String)
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(rb: java.util.ResourceBundle): int
+                        public registerBeanDefinitions(rb: java.util.ResourceBundle): number /*int*/
                         /**
                          * Register bean definitions contained in a ResourceBundle.
                          * <p>Similar syntax as for a Map. This method is useful to enable
@@ -196,7 +196,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(rb: java.util.ResourceBundle, prefix: string): int
+                        public registerBeanDefinitions(rb: java.util.ResourceBundle, prefix: java.lang.String | string): number /*int*/
                         /**
                          * Register bean definitions contained in a Map, using all property keys (i.e. not
                          * filtering by prefix).
@@ -208,7 +208,7 @@ declare namespace org {
                          * @see #registerBeanDefinitions(java.util.Map, String, String)
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(map: java.util.Map<any, ?>): int
+                        public registerBeanDefinitions(map: java.util.Map<any, any>): number /*int*/
                         /**
                          * Register bean definitions contained in a Map.
                          * Ignore ineligible properties.
@@ -221,7 +221,7 @@ declare namespace org {
                          * @throws BeansException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(map: java.util.Map<any, ?>, prefix: string): int
+                        public registerBeanDefinitions(map: java.util.Map<any, any>, prefix: java.lang.String | string): number /*int*/
                         /**
                          * Register bean definitions contained in a Map.
                          * Ignore ineligible properties.
@@ -237,7 +237,7 @@ declare namespace org {
                          * @see #registerBeanDefinitions(Map, String)
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(map: java.util.Map<any, ?>, prefix: string, resourceDescription: string): int
+                        public registerBeanDefinitions(map: java.util.Map<any, any>, prefix: java.lang.String | string, resourceDescription: java.lang.String | string): number /*int*/
                         /**
                          * Get all property values, given a prefix (which will be stripped)
                          * and add the bean they define to the factory with the given name.
@@ -249,7 +249,7 @@ declare namespace org {
                          * @throws BeansException if the bean definition could not be parsed or registered
                          */
                         // @ts-ignore
-                        registerBeanDefinition(beanName: string, map: java.util.Map<any, ?>, prefix: string, resourceDescription: string): void
+                        registerBeanDefinition(beanName: java.lang.String | string, map: java.util.Map<any, any>, prefix: java.lang.String | string, resourceDescription: java.lang.String | string): void
                     }
                 }
             }

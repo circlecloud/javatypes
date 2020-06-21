@@ -38,9 +38,9 @@ declare namespace javax {
                  * @see StateEdit
                  */
                 // @ts-ignore
-                constructor(anObject: javax.swing.undo.StateEditable, name: string)
+                constructor(anObject: javax.swing.undo.StateEditable, name: java.lang.String | string)
                 // @ts-ignore
-                readonly RCSID: string
+                static readonly RCSID: java.lang.String | string
                 /**
                  * The object being edited
                  */
@@ -50,40 +50,40 @@ declare namespace javax {
                  * The state information prior to the edit
                  */
                 // @ts-ignore
-                preState: java.util.Hashtable<java.lang.Object, java.lang.Object>
+                preState: java.util.Hashtable<java.lang.Object | any, java.lang.Object | any>
                 /**
                  * The state information after the edit
                  */
                 // @ts-ignore
-                postState: java.util.Hashtable<java.lang.Object, java.lang.Object>
+                postState: java.util.Hashtable<java.lang.Object | any, java.lang.Object | any>
                 /**
                  * The undo/redo presentation name
                  */
                 // @ts-ignore
-                undoRedoName: string
+                undoRedoName: java.lang.String | string
                 // @ts-ignore
-                init(anObject: javax.swing.undo.StateEditable, name: string): void
+                init(anObject: javax.swing.undo.StateEditable, name: java.lang.String | string): void
                 /**
                  * Gets the post-edit state of the StateEditable object and
                  * ends the edit.
                  */
                 // @ts-ignore
-                end(): void
+                public end(): void
                 /**
                  * Tells the edited object to apply the state prior to the edit
                  */
                 // @ts-ignore
-                undo(): void
+                public undo(): void
                 /**
                  * Tells the edited object to apply the state after the edit
                  */
                 // @ts-ignore
-                redo(): void
+                public redo(): void
                 /**
                  * Gets the presentation name for this edit
                  */
                 // @ts-ignore
-                getPresentationName(): java.lang.String
+                public getPresentationName(): string
                 /**
                  * Remove redundant key/values in state hashtables.
                  */

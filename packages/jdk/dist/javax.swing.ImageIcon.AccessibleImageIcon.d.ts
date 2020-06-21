@@ -28,7 +28,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Gets the state of this object.
                  * @return an instance of AccessibleStateSet containing the current
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Gets the Accessible parent of this object.  If the parent of this
                  * object implements Accessible, this method should simply return
@@ -45,7 +45,7 @@ declare namespace javax {
                  *  object does not have an Accessible parent
                  */
                 // @ts-ignore
-                getAccessibleParent(): javax.accessibility.Accessible
+                public getAccessibleParent(): javax.accessibility.Accessible
                 /**
                  * Gets the index of this object in its accessible parent.
                  * @return the index of this object in its parent; -1 if this
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @see #getAccessibleParent
                  */
                 // @ts-ignore
-                getAccessibleIndexInParent(): int
+                public getAccessibleIndexInParent(): number /*int*/
                 /**
                  * Returns the number of accessible children in the object.  If all
                  * of the children of this object implement Accessible, than this
@@ -61,20 +61,20 @@ declare namespace javax {
                  * @return the number of accessible children in the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the nth Accessible child of the object.
                  * @param i zero-based index of child
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns the locale of this object.
                  * @return the locale of this object
                  */
                 // @ts-ignore
-                getLocale(): java.util.Locale
+                public getLocale(): java.util.Locale
                 /**
                  * Gets the description of the icon.  This is meant to be a brief
                  * textual description of the object.  For example, it might be
@@ -83,7 +83,7 @@ declare namespace javax {
                  * @return the description of the icon
                  */
                 // @ts-ignore
-                getAccessibleIconDescription(): java.lang.String
+                public getAccessibleIconDescription(): string
                 /**
                  * Sets the description of the icon.  This is meant to be a brief
                  * textual description of the object.  For example, it might be
@@ -92,19 +92,19 @@ declare namespace javax {
                  * @param description the description of the icon
                  */
                 // @ts-ignore
-                setAccessibleIconDescription(description: string): void
+                public setAccessibleIconDescription(description: java.lang.String | string): void
                 /**
                  * Gets the height of the icon.
                  * @return the height of the icon
                  */
                 // @ts-ignore
-                getAccessibleIconHeight(): int
+                public getAccessibleIconHeight(): number /*int*/
                 /**
                  * Gets the width of the icon.
                  * @return the width of the icon
                  */
                 // @ts-ignore
-                getAccessibleIconWidth(): int
+                public getAccessibleIconWidth(): number /*int*/
             }
         }
     }

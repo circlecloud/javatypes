@@ -34,7 +34,7 @@ declare namespace javax {
              * @see #size()
              */
             // @ts-ignore
-            getSize(): int
+            public getSize(): number /*int*/
             /**
              * Returns the component at the specified index.
              * <blockquote>
@@ -50,7 +50,7 @@ declare namespace javax {
              * @see #get(int)
              */
             // @ts-ignore
-            getElementAt(index: number /*int*/): E
+            public getElementAt(index: number /*int*/): E
             /**
              * Copies the components of this list into the specified array.
              * The array must be big enough to hold all the objects in this list,
@@ -59,13 +59,13 @@ declare namespace javax {
              * @see Vector#copyInto(Object[])
              */
             // @ts-ignore
-            copyInto(anArray: any[]): void
+            public copyInto(anArray: java.lang.Object[] | any[]): void
             /**
              * Trims the capacity of this list to be the list's current size.
              * @see Vector#trimToSize()
              */
             // @ts-ignore
-            trimToSize(): void
+            public trimToSize(): void
             /**
              * Increases the capacity of this list, if necessary, to ensure
              * that it can hold at least the number of components specified by
@@ -74,28 +74,28 @@ declare namespace javax {
              * @see Vector#ensureCapacity(int)
              */
             // @ts-ignore
-            ensureCapacity(minCapacity: number /*int*/): void
+            public ensureCapacity(minCapacity: number /*int*/): void
             /**
              * Sets the size of this list.
              * @param newSize   the new size of this list
              * @see Vector#setSize(int)
              */
             // @ts-ignore
-            setSize(newSize: number /*int*/): void
+            public setSize(newSize: number /*int*/): void
             /**
              * Returns the current capacity of this list.
              * @return the current capacity
              * @see Vector#capacity()
              */
             // @ts-ignore
-            capacity(): int
+            public capacity(): number /*int*/
             /**
              * Returns the number of components in this list.
              * @return the number of components in this list
              * @see Vector#size()
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Tests whether this list has any components.
              * @return <code>true</code> if and only if this list has
@@ -104,14 +104,14 @@ declare namespace javax {
              * @see Vector#isEmpty()
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns an enumeration of the components of this list.
              * @return an enumeration of the components of this list
              * @see Vector#elements()
              */
             // @ts-ignore
-            elements(): java.util.Enumeration<E>
+            public elements(): java.util.Enumeration<E>
             /**
              * Tests whether the specified object is a component in this list.
              * @param elem   an object
@@ -120,7 +120,7 @@ declare namespace javax {
              * @see Vector#contains(Object)
              */
             // @ts-ignore
-            contains(elem: any): boolean
+            public contains(elem: java.lang.Object | any): boolean
             /**
              * Searches for the first occurrence of <code>elem</code>.
              * @param elem   an object
@@ -129,7 +129,7 @@ declare namespace javax {
              * @see Vector#indexOf(Object)
              */
             // @ts-ignore
-            indexOf(elem: any): int
+            public indexOf(elem: java.lang.Object | any): number /*int*/
             /**
              * Searches for the first occurrence of <code>elem</code>, beginning
              * the search at <code>index</code>.
@@ -141,7 +141,7 @@ declare namespace javax {
              * @see Vector#indexOf(Object,int)
              */
             // @ts-ignore
-            indexOf(elem: any, index: number /*int*/): int
+            public indexOf(elem: java.lang.Object | any, index: number /*int*/): number /*int*/
             /**
              * Returns the index of the last occurrence of <code>elem</code>.
              * @param elem   the desired component
@@ -150,7 +150,7 @@ declare namespace javax {
              * @see Vector#lastIndexOf(Object)
              */
             // @ts-ignore
-            lastIndexOf(elem: any): int
+            public lastIndexOf(elem: java.lang.Object | any): number /*int*/
             /**
              * Searches backwards for <code>elem</code>, starting from the
              * specified index, and returns an index to it.
@@ -162,7 +162,7 @@ declare namespace javax {
              * @see Vector#lastIndexOf(Object,int)
              */
             // @ts-ignore
-            lastIndexOf(elem: any, index: number /*int*/): int
+            public lastIndexOf(elem: java.lang.Object | any, index: number /*int*/): number /*int*/
             /**
              * Returns the component at the specified index.
              * Throws an <code>ArrayIndexOutOfBoundsException</code> if the index
@@ -178,7 +178,7 @@ declare namespace javax {
              * @see Vector#elementAt(int)
              */
             // @ts-ignore
-            elementAt(index: number /*int*/): E
+            public elementAt(index: number /*int*/): E
             /**
              * Returns the first component of this list.
              * Throws a <code>NoSuchElementException</code> if this
@@ -187,7 +187,7 @@ declare namespace javax {
              * @see Vector#firstElement()
              */
             // @ts-ignore
-            firstElement(): E
+            public firstElement(): E
             /**
              * Returns the last component of the list.
              * Throws a <code>NoSuchElementException</code> if this vector
@@ -196,7 +196,7 @@ declare namespace javax {
              * @see Vector#lastElement()
              */
             // @ts-ignore
-            lastElement(): E
+            public lastElement(): E
             /**
              * Sets the component at the specified <code>index</code> of this
              * list to be the specified element. The previous component at that
@@ -215,7 +215,7 @@ declare namespace javax {
              * @see Vector#setElementAt(Object,int)
              */
             // @ts-ignore
-            setElementAt(element: E, index: number /*int*/): void
+            public setElementAt(element: E, index: number /*int*/): void
             /**
              * Deletes the component at the specified index.
              * <p>
@@ -231,7 +231,7 @@ declare namespace javax {
              * @see Vector#removeElementAt(int)
              */
             // @ts-ignore
-            removeElementAt(index: number /*int*/): void
+            public removeElementAt(index: number /*int*/): void
             /**
              * Inserts the specified element as a component in this list at the
              * specified <code>index</code>.
@@ -250,14 +250,14 @@ declare namespace javax {
              * @see Vector#insertElementAt(Object,int)
              */
             // @ts-ignore
-            insertElementAt(element: E, index: number /*int*/): void
+            public insertElementAt(element: E, index: number /*int*/): void
             /**
              * Adds the specified component to the end of this list.
              * @param element   the component to be added
              * @see Vector#addElement(Object)
              */
             // @ts-ignore
-            addElement(element: E): void
+            public addElement(element: E): void
             /**
              * Removes the first (lowest-indexed) occurrence of the argument
              * from this list.
@@ -267,7 +267,7 @@ declare namespace javax {
              * @see Vector#removeElement(Object)
              */
             // @ts-ignore
-            removeElement(obj: any): boolean
+            public removeElement(obj: java.lang.Object | any): boolean
             /**
              * Removes all components from this list and sets its size to zero.
              * <blockquote>
@@ -279,14 +279,14 @@ declare namespace javax {
              * @see Vector#removeAllElements()
              */
             // @ts-ignore
-            removeAllElements(): void
+            public removeAllElements(): void
             /**
              * Returns a string that displays and identifies this
              * object's properties.
              * @return a String representation of this object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns an array containing all of the elements in this list in the
              * correct order.
@@ -294,7 +294,7 @@ declare namespace javax {
              * @see Vector#toArray()
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * Returns the element at the specified position in this list.
              * <p>
@@ -304,7 +304,7 @@ declare namespace javax {
              * @param index index of element to return
              */
             // @ts-ignore
-            get(index: number /*int*/): E
+            public get(index: number /*int*/): E
             /**
              * Replaces the element at the specified position in this list with the
              * specified element.
@@ -317,7 +317,7 @@ declare namespace javax {
              * @return the element previously at the specified position
              */
             // @ts-ignore
-            set(index: number /*int*/, element: E): E
+            public set(index: number /*int*/, element: E): E
             /**
              * Inserts the specified element at the specified position in this list.
              * <p>
@@ -328,7 +328,7 @@ declare namespace javax {
              * @param element element to be inserted
              */
             // @ts-ignore
-            add(index: number /*int*/, element: E): void
+            public add(index: number /*int*/, element: E): void
             /**
              * Removes the element at the specified position in this list.
              * Returns the element that was removed from the list.
@@ -340,13 +340,13 @@ declare namespace javax {
              * @return the element previously at the specified position
              */
             // @ts-ignore
-            remove(index: number /*int*/): E
+            public remove(index: number /*int*/): E
             /**
              * Removes all of the elements from this list.  The list will
              * be empty after this call returns (unless it throws an exception).
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Deletes the components at the specified range of indexes.
              * The removal is inclusive, so specifying a range of (1,5)
@@ -362,7 +362,7 @@ declare namespace javax {
              * @see #remove(int)
              */
             // @ts-ignore
-            removeRange(fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public removeRange(fromIndex: number /*int*/, toIndex: number /*int*/): void
         }
     }
 }

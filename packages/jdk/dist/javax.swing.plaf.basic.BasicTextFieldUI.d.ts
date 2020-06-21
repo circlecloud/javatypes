@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return the UI
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Fetches the name used as a key to lookup properties through the
                      * UIManager.  This is used as a prefix to all the standard
@@ -36,14 +36,14 @@ declare namespace javax {
                      * @return the name ("TextField")
                      */
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     /**
                      * Creates a view (FieldView) based on an element.
                      * @param elem the element
                      * @return the view
                      */
                     // @ts-ignore
-                    create(elem: javax.swing.text.Element): javax.swing.text.View
+                    public create(elem: javax.swing.text.Element): javax.swing.text.View
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -52,7 +52,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -61,7 +61,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 }
             }
         }

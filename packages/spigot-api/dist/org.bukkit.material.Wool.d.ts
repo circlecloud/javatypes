@@ -26,17 +26,17 @@ declare namespace org {
                  * @return DyeColor of this dye
                  */
                 // @ts-ignore
-                getColor(): org.bukkit.DyeColor
+                public getColor(): org.bukkit.DyeColor
                 /**
                  * Sets the color of this dye
                  * @param color New color of this dye
                  */
                 // @ts-ignore
-                setColor(color: org.bukkit.DyeColor): void
+                public setColor(color: org.bukkit.DyeColor): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Wool
+                public clone(): org.bukkit.material.Wool
             }
         }
     }

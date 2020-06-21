@@ -24,7 +24,7 @@ declare namespace org {
                          *  with Strings as keys and String arrays as values
                          */
                         // @ts-ignore
-                        constructor(request: HttpServletRequest, mpFiles: object, mpParams: java.util.Map<java.lang.String, java.lang.String[]>, mpParamContentTypes: java.util.Map<java.lang.String, java.lang.String>)
+                        constructor(request: HttpServletRequest, mpFiles: object, mpParams: java.util.Map<java.lang.String | string, java.lang.String[] | string[]>, mpParamContentTypes: java.util.Map<java.lang.String | string, java.lang.String | string>)
                         /**
                          * Wrap the given HttpServletRequest in a MultipartHttpServletRequest.
                          * @param request the servlet request to wrap
@@ -32,43 +32,43 @@ declare namespace org {
                         // @ts-ignore
                         constructor(request: HttpServletRequest)
                         // @ts-ignore
-                        getParameter(name: string): java.lang.String
+                        public getParameter(name: java.lang.String | string): string
                         // @ts-ignore
-                        getParameterValues(name: string): java.lang.String[]
+                        public getParameterValues(name: java.lang.String | string): string[]
                         // @ts-ignore
-                        getParameterNames(): java.util.Enumeration<java.lang.String>
+                        public getParameterNames(): java.util.Enumeration<java.lang.String | string>
                         // @ts-ignore
-                        getParameterMap(): java.util.Map<java.lang.String, java.lang.String[]>
+                        public getParameterMap(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                         // @ts-ignore
-                        getMultipartContentType(paramOrFileName: string): java.lang.String
+                        public getMultipartContentType(paramOrFileName: java.lang.String | string): string
                         // @ts-ignore
-                        getMultipartHeaders(paramOrFileName: string): org.springframework.http.HttpHeaders
+                        public getMultipartHeaders(paramOrFileName: java.lang.String | string): org.springframework.http.HttpHeaders
                         /**
                          * Set a Map with parameter names as keys and String array objects as values.
                          * To be invoked by subclasses on initialization.
                          */
                         // @ts-ignore
-                        setMultipartParameters(multipartParameters: java.util.Map<java.lang.String, java.lang.String[]>): void
+                        setMultipartParameters(multipartParameters: java.util.Map<java.lang.String | string, java.lang.String[] | string[]>): void
                         /**
                          * Obtain the multipart parameter Map for retrieval,
                          * lazily initializing it if necessary.
                          * @see #initializeMultipart()
                          */
                         // @ts-ignore
-                        getMultipartParameters(): java.util.Map<java.lang.String, java.lang.String[]>
+                        getMultipartParameters(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                         /**
                          * Set a Map with parameter names as keys and content type Strings as values.
                          * To be invoked by subclasses on initialization.
                          */
                         // @ts-ignore
-                        setMultipartParameterContentTypes(multipartParameterContentTypes: java.util.Map<java.lang.String, java.lang.String>): void
+                        setMultipartParameterContentTypes(multipartParameterContentTypes: java.util.Map<java.lang.String | string, java.lang.String | string>): void
                         /**
                          * Obtain the multipart parameter content type Map for retrieval,
                          * lazily initializing it if necessary.
                          * @see #initializeMultipart()
                          */
                         // @ts-ignore
-                        getMultipartParameterContentTypes(): java.util.Map<java.lang.String, java.lang.String>
+                        getMultipartParameterContentTypes(): java.util.Map<java.lang.String | string, java.lang.String | string>
                     }
                 }
             }

@@ -165,7 +165,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeStartElement(localName: string): void
+                writeStartElement(localName: java.lang.String | string): void
                 /**
                  * Writes a start tag to the output
                  * @param namespaceURI the namespaceURI of the prefix to use, may not be null
@@ -174,7 +174,7 @@ declare namespace javax {
                  *  javax.xml.stream.isRepairingNamespaces has not been set to true
                  */
                 // @ts-ignore
-                writeStartElement(namespaceURI: string, localName: string): void
+                writeStartElement(namespaceURI: java.lang.String | string, localName: java.lang.String | string): void
                 /**
                  * Writes a start tag to the output
                  * @param localName local name of the tag, may not be null
@@ -183,7 +183,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeStartElement(prefix: string, localName: string, namespaceURI: string): void
+                writeStartElement(prefix: java.lang.String | string, localName: java.lang.String | string, namespaceURI: java.lang.String | string): void
                 /**
                  * Writes an empty element tag to the output
                  * @param namespaceURI the uri to bind the tag to, may not be null
@@ -192,7 +192,7 @@ declare namespace javax {
                  *  javax.xml.stream.isRepairingNamespaces has not been set to true
                  */
                 // @ts-ignore
-                writeEmptyElement(namespaceURI: string, localName: string): void
+                writeEmptyElement(namespaceURI: java.lang.String | string, localName: java.lang.String | string): void
                 /**
                  * Writes an empty element tag to the output
                  * @param prefix the prefix of the tag, may not be null
@@ -201,14 +201,14 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeEmptyElement(prefix: string, localName: string, namespaceURI: string): void
+                writeEmptyElement(prefix: java.lang.String | string, localName: java.lang.String | string, namespaceURI: java.lang.String | string): void
                 /**
                  * Writes an empty element tag to the output
                  * @param localName local name of the tag, may not be null
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeEmptyElement(localName: string): void
+                writeEmptyElement(localName: java.lang.String | string): void
                 /**
                  * Writes an end tag to the output relying on the internal
                  * state of the writer to determine the prefix and local name
@@ -245,7 +245,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeAttribute(localName: string, value: string): void
+                writeAttribute(localName: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Writes an attribute to the output stream
                  * @param prefix the prefix for this attribute
@@ -257,7 +257,7 @@ declare namespace javax {
                  *  javax.xml.stream.isRepairingNamespaces has not been set to true
                  */
                 // @ts-ignore
-                writeAttribute(prefix: string, namespaceURI: string, localName: string, value: string): void
+                writeAttribute(prefix: java.lang.String | string, namespaceURI: java.lang.String | string, localName: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Writes an attribute to the output stream
                  * @param namespaceURI the uri of the prefix for this attribute
@@ -268,7 +268,7 @@ declare namespace javax {
                  *  javax.xml.stream.isRepairingNamespaces has not been set to true
                  */
                 // @ts-ignore
-                writeAttribute(namespaceURI: string, localName: string, value: string): void
+                writeAttribute(namespaceURI: java.lang.String | string, localName: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Writes a namespace to the output stream
                  * If the prefix argument to this method is the empty string,
@@ -279,7 +279,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeNamespace(prefix: string, namespaceURI: string): void
+                writeNamespace(prefix: java.lang.String | string, namespaceURI: java.lang.String | string): void
                 /**
                  * Writes the default namespace to the stream
                  * @param namespaceURI the uri to bind the default namespace to
@@ -287,21 +287,21 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeDefaultNamespace(namespaceURI: string): void
+                writeDefaultNamespace(namespaceURI: java.lang.String | string): void
                 /**
                  * Writes an xml comment with the data enclosed
                  * @param data the data contained in the comment, may be null
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeComment(data: string): void
+                writeComment(data: java.lang.String | string): void
                 /**
                  * Writes a processing instruction
                  * @param target the target of the processing instruction, may not be null
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeProcessingInstruction(target: string): void
+                writeProcessingInstruction(target: java.lang.String | string): void
                 /**
                  * Writes a processing instruction
                  * @param target the target of the processing instruction, may not be null
@@ -309,14 +309,14 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeProcessingInstruction(target: string, data: string): void
+                writeProcessingInstruction(target: java.lang.String | string, data: java.lang.String | string): void
                 /**
                  * Writes a CData section
                  * @param data the data contained in the CData Section, may not be null
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeCData(data: string): void
+                writeCData(data: java.lang.String | string): void
                 /**
                  * Write a DTD section.  This string represents the entire doctypedecl production
                  * from the XML 1.0 specification.
@@ -324,14 +324,14 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeDTD(dtd: string): void
+                writeDTD(dtd: java.lang.String | string): void
                 /**
                  * Writes an entity reference
                  * @param name the name of the entity
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeEntityRef(name: string): void
+                writeEntityRef(name: java.lang.String | string): void
                 /**
                  * Write the XML Declaration. Defaults the XML version to 1.0, and the encoding to utf-8
                  * @throws XMLStreamException
@@ -344,7 +344,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeStartDocument(version: string): void
+                writeStartDocument(version: java.lang.String | string): void
                 /**
                  * Write the XML Declaration.  Note that the encoding parameter does
                  * not set the actual encoding of the underlying output.  That must
@@ -356,14 +356,14 @@ declare namespace javax {
                  *  of the underlying stream
                  */
                 // @ts-ignore
-                writeStartDocument(encoding: string, version: string): void
+                writeStartDocument(encoding: java.lang.String | string, version: java.lang.String | string): void
                 /**
                  * Write text to the output
                  * @param text the value to write
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                writeCharacters(text: string): void
+                writeCharacters(text: java.lang.String | string): void
                 /**
                  * Write text to the output
                  * @param text the value to write
@@ -379,7 +379,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                getPrefix(uri: string): java.lang.String
+                getPrefix(uri: java.lang.String | string): string
                 /**
                  * Sets the prefix the uri is bound to.  This prefix is bound
                  * in the scope of the current START_ELEMENT / END_ELEMENT pair.
@@ -390,7 +390,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                setPrefix(prefix: string, uri: string): void
+                setPrefix(prefix: java.lang.String | string, uri: java.lang.String | string): void
                 /**
                  * Binds a URI to the default namespace
                  * This URI is bound
@@ -401,7 +401,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                setDefaultNamespace(uri: string): void
+                setDefaultNamespace(uri: java.lang.String | string): void
                 /**
                  * Sets the current namespace context for prefix and uri bindings.
                  * This context becomes the root namespace context for writing and
@@ -432,7 +432,7 @@ declare namespace javax {
                  * @throws NullPointerException if the name is null
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
             }
         }
     }

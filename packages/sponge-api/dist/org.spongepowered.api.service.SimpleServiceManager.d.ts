@@ -15,13 +15,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(pluginManager: org.spongepowered.api.plugin.PluginManager)
                     // @ts-ignore
-                    setProvider<T>(plugin: any, service: java.lang.Class<T>, provider: T): void
+                    public setProvider<T>(plugin: java.lang.Object | any, service: java.lang.Class<T>, provider: T): void
                     // @ts-ignore
-                    provide<T>(service: java.lang.Class<T>): java.util.Optional<T>
+                    public provide<T>(service: java.lang.Class<T>): java.util.Optional<T>
                     // @ts-ignore
-                    getRegistration<T>(service: java.lang.Class<T>): java.util.Optional<org.spongepowered.api.service.ProviderRegistration<T>>
+                    public getRegistration<T>(service: java.lang.Class<T>): java.util.Optional<org.spongepowered.api.service.ProviderRegistration<T>>
                     // @ts-ignore
-                    provideUnchecked<T>(service: java.lang.Class<T>): T
+                    public provideUnchecked<T>(service: java.lang.Class<T>): T
                 }
             }
         }

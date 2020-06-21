@@ -25,7 +25,7 @@ declare namespace org {
                      * @return The percent
                      */
                     // @ts-ignore
-                    getPercent(): float
+                    getPercent(): number /*float*/
                     /**
                      * Sets the percent.
                      * <p>The percent must be between {@code 0.0} and {@code 1.0}.</p>

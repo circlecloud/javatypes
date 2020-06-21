@@ -81,7 +81,7 @@ declare namespace javax {
              * </PRE>
              */
             // @ts-ignore
-            class AttachmentPart extends java.lang.Object {
+            abstract class AttachmentPart extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -94,13 +94,13 @@ declare namespace javax {
                  *             to determine the size.
                  */
                 // @ts-ignore
-                abstract getSize(): int
+                public abstract getSize(): number /*int*/
                 /**
                  * Clears out the content of this <code>AttachmentPart</code> object.
                  * The MIME header portion is left untouched.
                  */
                 // @ts-ignore
-                abstract clearContent(): void
+                public abstract clearContent(): void
                 /**
                  * Gets the content of this <code>AttachmentPart</code> object as a Java
                  * object. The type of the returned Java object depends on (1) the
@@ -134,7 +134,7 @@ declare namespace javax {
                  *             transformation error
                  */
                 // @ts-ignore
-                abstract getContent(): java.lang.Object
+                public abstract getContent(): any
                 /**
                  * Gets the content of this <code>AttachmentPart</code> object as an
                  * InputStream as if a call had been made to <code>getContent</code> and no
@@ -155,7 +155,7 @@ declare namespace javax {
                  * @see #getRawContentBytes
                  */
                 // @ts-ignore
-                abstract getRawContent(): java.io.InputStream
+                public abstract getRawContent(): java.io.InputStream
                 /**
                  * Gets the content of this <code>AttachmentPart</code> object as a
                  * byte[] array as if a call had been made to <code>getContent</code> and no
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract getRawContentBytes(): byte[]
+                public abstract getRawContentBytes(): number /*byte*/[]
                 /**
                  * Returns an <code>InputStream</code> which can be used to obtain the
                  * content of <code>AttachmentPart</code>  as Base64 encoded
@@ -183,7 +183,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract getBase64Content(): java.io.InputStream
+                public abstract getBase64Content(): java.io.InputStream
                 /**
                  * Sets the content of this attachment part to that of the given
                  * <code>Object</code> and sets the value of the <code>Content-Type</code>
@@ -202,7 +202,7 @@ declare namespace javax {
                  * @see #getContent
                  */
                 // @ts-ignore
-                abstract setContent(object: any, contentType: string): void
+                public abstract setContent(object: java.lang.Object | any, contentType: java.lang.String | string): void
                 /**
                  * Sets the content of this attachment part to that contained by the
                  * <code>InputStream</code> <code>content</code> and sets the value of the
@@ -219,7 +219,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract setRawContent(content: java.io.InputStream, contentType: string): void
+                public abstract setRawContent(content: java.io.InputStream, contentType: java.lang.String | string): void
                 /**
                  * Sets the content of this attachment part to that contained by the
                  * <code>byte[]</code> array <code>content</code> and sets the value of the
@@ -235,7 +235,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract setRawContentBytes(content: number /*byte*/[], offset: number /*int*/, len: number /*int*/, contentType: string): void
+                public abstract setRawContentBytes(content: number /*byte*/[], offset: number /*int*/, len: number /*int*/, contentType: java.lang.String | string): void
                 /**
                  * Sets the content of this attachment part from the Base64 source
                  * <code>InputStream</code>  and sets the value of the
@@ -253,7 +253,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                abstract setBase64Content(content: java.io.InputStream, contentType: string): void
+                public abstract setBase64Content(content: java.io.InputStream, contentType: java.lang.String | string): void
                 /**
                  * Gets the <code>DataHandler</code> object for this <code>AttachmentPart</code>
                  * object.
@@ -263,7 +263,7 @@ declare namespace javax {
                  *  this <code>AttachmentPart</code> object
                  */
                 // @ts-ignore
-                abstract getDataHandler(): javax.activation.DataHandler
+                public abstract getDataHandler(): javax.activation.DataHandler
                 /**
                  * Sets the given <code>DataHandler</code> object as the data handler
                  * for this <code>AttachmentPart</code> object. Typically, on an incoming
@@ -276,7 +276,7 @@ declare namespace javax {
                  *             the specified <code>DataHandler</code> object
                  */
                 // @ts-ignore
-                abstract setDataHandler(dataHandler: javax.activation.DataHandler): void
+                public abstract setDataHandler(dataHandler: javax.activation.DataHandler): void
                 /**
                  * Gets the value of the MIME header whose name is "Content-ID".
                  * @return a <code>String</code> giving the value of the
@@ -285,7 +285,7 @@ declare namespace javax {
                  * @see #setContentId
                  */
                 // @ts-ignore
-                getContentId(): java.lang.String
+                public getContentId(): string
                 /**
                  * Gets the value of the MIME header whose name is "Content-Location".
                  * @return a <code>String</code> giving the value of the
@@ -293,7 +293,7 @@ declare namespace javax {
                  *           is none
                  */
                 // @ts-ignore
-                getContentLocation(): java.lang.String
+                public getContentLocation(): string
                 /**
                  * Gets the value of the MIME header whose name is "Content-Type".
                  * @return a <code>String</code> giving the value of the
@@ -301,7 +301,7 @@ declare namespace javax {
                  *           is none
                  */
                 // @ts-ignore
-                getContentType(): java.lang.String
+                public getContentType(): string
                 /**
                  * Sets the MIME header whose name is "Content-ID" with the given value.
                  * @param contentId a <code>String</code> giving the value of the
@@ -311,7 +311,7 @@ declare namespace javax {
                  * @see #getContentId
                  */
                 // @ts-ignore
-                setContentId(contentId: string): void
+                public setContentId(contentId: java.lang.String | string): void
                 /**
                  * Sets the MIME header whose name is "Content-Location" with the given value.
                  * @param contentLocation a <code>String</code> giving the value of the
@@ -320,7 +320,7 @@ declare namespace javax {
                  *             the specified content location
                  */
                 // @ts-ignore
-                setContentLocation(contentLocation: string): void
+                public setContentLocation(contentLocation: java.lang.String | string): void
                 /**
                  * Sets the MIME header whose name is "Content-Type" with the given value.
                  * @param contentType a <code>String</code> giving the value of the
@@ -329,19 +329,19 @@ declare namespace javax {
                  *             the specified content type
                  */
                 // @ts-ignore
-                setContentType(contentType: string): void
+                public setContentType(contentType: java.lang.String | string): void
                 /**
                  * Removes all MIME headers that match the given name.
                  * @param header the string name of the MIME header/s to
                  *                be removed
                  */
                 // @ts-ignore
-                abstract removeMimeHeader(header: string): void
+                public abstract removeMimeHeader(header: java.lang.String | string): void
                 /**
                  * Removes all the MIME header entries.
                  */
                 // @ts-ignore
-                abstract removeAllMimeHeaders(): void
+                public abstract removeAllMimeHeaders(): void
                 /**
                  * Gets all the values of the header identified by the given
                  * <code>String</code>.
@@ -351,7 +351,7 @@ declare namespace javax {
                  * @see #setMimeHeader
                  */
                 // @ts-ignore
-                abstract getMimeHeader(name: string): java.lang.String[]
+                public abstract getMimeHeader(name: java.lang.String | string): string[]
                 /**
                  * Changes the first header entry that matches the given name
                  * to the given value, adding a new header if no existing header
@@ -365,7 +365,7 @@ declare namespace javax {
                  *             the specified mime header name or value
                  */
                 // @ts-ignore
-                abstract setMimeHeader(name: string, value: string): void
+                public abstract setMimeHeader(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Adds a MIME header with the specified name and value to this
                  * <code>AttachmentPart</code> object.
@@ -379,7 +379,7 @@ declare namespace javax {
                  *             the specified mime header name or value
                  */
                 // @ts-ignore
-                abstract addMimeHeader(name: string, value: string): void
+                public abstract addMimeHeader(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Retrieves all the headers for this <code>AttachmentPart</code> object
                  * as an iterator over the <code>MimeHeader</code> objects.
@@ -387,7 +387,7 @@ declare namespace javax {
                  *           headers for this <code>AttachmentPart</code> object
                  */
                 // @ts-ignore
-                abstract getAllMimeHeaders(): java.util.Iterator
+                public abstract getAllMimeHeaders(): java.util.Iterator<any>
                 /**
                  * Retrieves all <code>MimeHeader</code> objects that match a name in
                  * the given array.
@@ -397,7 +397,7 @@ declare namespace javax {
                  *            given array as an <code>Iterator</code> object
                  */
                 // @ts-ignore
-                abstract getMatchingMimeHeaders(names: string[]): java.util.Iterator
+                public abstract getMatchingMimeHeaders(names: java.lang.String[] | string[]): java.util.Iterator<any>
                 /**
                  * Retrieves all <code>MimeHeader</code> objects whose name does
                  * not match a name in the given array.
@@ -409,7 +409,7 @@ declare namespace javax {
                  *            <code>Iterator</code> object.
                  */
                 // @ts-ignore
-                abstract getNonMatchingMimeHeaders(names: string[]): java.util.Iterator
+                public abstract getNonMatchingMimeHeaders(names: java.lang.String[] | string[]): java.util.Iterator<any>
             }
         }
     }

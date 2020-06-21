@@ -47,11 +47,11 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    readonly DEFAULT_TASK_SCHEDULER_BEAN_NAME: string
+                    public static readonly DEFAULT_TASK_SCHEDULER_BEAN_NAME: java.lang.String | string
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     /**
                      * Set the {@link org.springframework.scheduling.TaskScheduler} that will invoke
                      * the scheduled methods, or a {@link java.util.concurrent.ScheduledExecutorService}
@@ -64,35 +64,35 @@ declare namespace org {
                      * @see #DEFAULT_TASK_SCHEDULER_BEAN_NAME
                      */
                     // @ts-ignore
-                    setScheduler(scheduler: any): void
+                    public setScheduler(scheduler: java.lang.Object | any): void
                     // @ts-ignore
-                    setEmbeddedValueResolver(resolver: StringValueResolver): void
+                    public setEmbeddedValueResolver(resolver: StringValueResolver): void
                     // @ts-ignore
-                    setBeanName(beanName: string): void
+                    public setBeanName(beanName: java.lang.String | string): void
                     /**
                      * Making a {@link BeanFactory} available is optional; if not set,
                      * {@link SchedulingConfigurer} beans won't get autodetected and
                      * a {@link #setScheduler scheduler} has to be explicitly configured.
                      */
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     /**
                      * Setting an {@link ApplicationContext} is optional: If set, registered
                      * tasks will be activated in the {@link ContextRefreshedEvent} phase;
                      * if not set, it will happen at {@link #afterSingletonsInstantiated} time.
                      */
                     // @ts-ignore
-                    setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
+                    public setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
                     // @ts-ignore
-                    afterSingletonsInstantiated(): void
+                    public afterSingletonsInstantiated(): void
                     // @ts-ignore
-                    onApplicationEvent(event: org.springframework.context.event.ContextRefreshedEvent): void
+                    public onApplicationEvent(event: org.springframework.context.event.ContextRefreshedEvent): void
                     // @ts-ignore
-                    postProcessMergedBeanDefinition(beanDefinition: RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                    public postProcessMergedBeanDefinition(beanDefinition: RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                     // @ts-ignore
-                    postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                    public postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     // @ts-ignore
-                    postProcessAfterInitialization(bean: any, beanName: string): java.lang.Object
+                    public postProcessAfterInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     /**
                      * Process the given {@code @Scheduled} method declaration on the given bean.
                      * @param scheduled the #Scheduled annotation
@@ -101,7 +101,7 @@ declare namespace org {
                      * @see #createRunnable(Object, Method)
                      */
                     // @ts-ignore
-                    processScheduled(scheduled: org.springframework.scheduling.annotation.Scheduled, method: java.lang.reflect.Method, bean: any): void
+                    processScheduled(scheduled: org.springframework.scheduling.annotation.Scheduled, method: java.lang.reflect.Method, bean: java.lang.Object | any): void
                     /**
                      * Create a {@link Runnable} for the given bean instance,
                      * calling the specified scheduled method.
@@ -112,20 +112,20 @@ declare namespace org {
                      * @see ScheduledMethodRunnable#ScheduledMethodRunnable(Object, Method)
                      */
                     // @ts-ignore
-                    createRunnable(target: any, method: java.lang.reflect.Method): java.lang.Runnable
+                    createRunnable(target: java.lang.Object | any, method: java.lang.reflect.Method): java.lang.Runnable
                     /**
                      * Return all currently scheduled tasks, from {@link Scheduled} methods
                      * as well as from programmatic {@link SchedulingConfigurer} interaction.
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    getScheduledTasks(): java.util.Set<org.springframework.scheduling.config.ScheduledTask>
+                    public getScheduledTasks(): Array<org.springframework.scheduling.config.ScheduledTask>
                     // @ts-ignore
-                    postProcessBeforeDestruction(bean: any, beanName: string): void
+                    public postProcessBeforeDestruction(bean: java.lang.Object | any, beanName: java.lang.String | string): void
                     // @ts-ignore
-                    requiresDestruction(bean: any): boolean
+                    public requiresDestruction(bean: java.lang.Object | any): boolean
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

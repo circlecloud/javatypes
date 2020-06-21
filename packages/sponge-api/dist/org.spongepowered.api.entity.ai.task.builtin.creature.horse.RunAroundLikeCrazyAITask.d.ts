@@ -22,7 +22,7 @@ declare namespace org {
                                          * @return The speed modifier
                                          */
                                         // @ts-ignore
-                                        getSpeed(): double
+                                        getSpeed(): number /*double*/
                                         /**
                                          * Sets the speed modifier at which when an {@link Entity} is running
                                          * around, the movement speed is amplified by this modifier.

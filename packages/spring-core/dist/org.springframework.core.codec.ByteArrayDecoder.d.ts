@@ -9,13 +9,13 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                class ByteArrayDecoder extends org.springframework.core.codec.AbstractDataBufferDecoder<byte[]> {
+                class ByteArrayDecoder extends org.springframework.core.codec.AbstractDataBufferDecoder<number /*byte*/[]> {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    canDecode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canDecode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                     // @ts-ignore
-                    decode(dataBuffer: org.springframework.core.io.buffer.DataBuffer, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): byte[]
+                    public decode(dataBuffer: org.springframework.core.io.buffer.DataBuffer, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): number /*byte*/[]
                 }
             }
         }

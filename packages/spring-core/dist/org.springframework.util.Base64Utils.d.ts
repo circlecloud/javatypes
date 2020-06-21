@@ -10,7 +10,7 @@ declare namespace org {
              * @see java.util.Base64
              */
             // @ts-ignore
-            class Base64Utils extends java.lang.Object {
+            abstract class Base64Utils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -19,14 +19,14 @@ declare namespace org {
                  * @return the encoded byte array
                  */
                 // @ts-ignore
-                encode(src: number /*byte*/[]): byte[]
+                public static encode(src: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Base64-decode the given byte array.
                  * @param src the encoded byte array
                  * @return the original byte array
                  */
                 // @ts-ignore
-                decode(src: number /*byte*/[]): byte[]
+                public static decode(src: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Base64-encode the given byte array using the RFC 4648
                  * "URL and Filename Safe Alphabet".
@@ -35,7 +35,7 @@ declare namespace org {
                  * @since 4.2.4
                  */
                 // @ts-ignore
-                encodeUrlSafe(src: number /*byte*/[]): byte[]
+                public static encodeUrlSafe(src: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Base64-decode the given byte array using the RFC 4648
                  * "URL and Filename Safe Alphabet".
@@ -44,21 +44,21 @@ declare namespace org {
                  * @since 4.2.4
                  */
                 // @ts-ignore
-                decodeUrlSafe(src: number /*byte*/[]): byte[]
+                public static decodeUrlSafe(src: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Base64-encode the given byte array to a String.
                  * @param src the original byte array
                  * @return the encoded byte array as a UTF-8 String
                  */
                 // @ts-ignore
-                encodeToString(src: number /*byte*/[]): java.lang.String
+                public static encodeToString(src: number /*byte*/[]): string
                 /**
                  * Base64-decode the given byte array from an UTF-8 String.
                  * @param src the encoded UTF-8 String
                  * @return the original byte array
                  */
                 // @ts-ignore
-                decodeFromString(src: string): byte[]
+                public static decodeFromString(src: java.lang.String | string): number /*byte*/[]
                 /**
                  * Base64-encode the given byte array to a String using the RFC 4648
                  * "URL and Filename Safe Alphabet".
@@ -66,7 +66,7 @@ declare namespace org {
                  * @return the encoded byte array as a UTF-8 String
                  */
                 // @ts-ignore
-                encodeToUrlSafeString(src: number /*byte*/[]): java.lang.String
+                public static encodeToUrlSafeString(src: number /*byte*/[]): string
                 /**
                  * Base64-decode the given byte array from an UTF-8 String using the RFC 4648
                  * "URL and Filename Safe Alphabet".
@@ -74,7 +74,7 @@ declare namespace org {
                  * @return the original byte array
                  */
                 // @ts-ignore
-                decodeFromUrlSafeString(src: string): byte[]
+                public static decodeFromUrlSafeString(src: java.lang.String | string): number /*byte*/[]
             }
         }
     }

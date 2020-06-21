@@ -14,34 +14,34 @@ declare namespace org {
                          * @param args Arguments extracted from the raw input
                          */
                         // @ts-ignore
-                        constructor(rawInput: string, args: Array<org.spongepowered.api.command.args.parsing.SingleArg>)
+                        constructor(rawInput: java.lang.String | string, args: java.util.List<org.spongepowered.api.command.args.parsing.SingleArg> | Array<org.spongepowered.api.command.args.parsing.SingleArg>)
                         /**
                          * Return whether more arguments remain to be read.
                          * @return Whether more arguments remain
                          */
                         // @ts-ignore
-                        hasNext(): boolean
+                        public hasNext(): boolean
                         /**
                          * Try to read the next argument without advancing the current index.
                          * @return The next argument
                          * @throws ArgumentParseException if not enough arguments are present
                          */
                         // @ts-ignore
-                        peek(): java.lang.String
+                        public peek(): string
                         /**
                          * Try to read the next argument, advancing the current index if successful.
                          * @return The next argument
                          * @throws ArgumentParseException if not enough arguments are present
                          */
                         // @ts-ignore
-                        next(): java.lang.String
+                        public next(): string
                         /**
                          * Try to read the next argument, advancing the current index if successful
                          * or returning an absent optional if not.
                          * @return The optional next argument.
                          */
                         // @ts-ignore
-                        nextIfPresent(): java.util.Optional<java.lang.String>
+                        public nextIfPresent(): java.util.Optional<java.lang.String | string>
                         /**
                          * Create a parse exception with the provided message which has the position
                          * of the last parsed argument attached. The returned exception must be
@@ -50,13 +50,13 @@ declare namespace org {
                          * @return the newly created, but unthrown exception
                          */
                         // @ts-ignore
-                        createError(message: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.ArgumentParseException
+                        public createError(message: org.spongepowered.api.text.Text): org.spongepowered.api.command.args.ArgumentParseException
                         /**
                          * Gets a list of all arguments as a string. The returned list is immutable.
                          * @return all arguments
                          */
                         // @ts-ignore
-                        getAll(): java.util.List<java.lang.String>
+                        public getAll(): Array<java.lang.String | string>
                         /**
                          * Return this arguments object's current state. Can be used to reset with
                          * the {@link #setState(Object)} method.
@@ -65,7 +65,7 @@ declare namespace org {
                          * @return The current state
                          */
                         // @ts-ignore
-                        getState(): java.lang.Object
+                        public getState(): any
                         /**
                          * Restore the arguments object's state to a state previously used.
                          * @deprecated Use {#link #getSnapshot()} and
@@ -73,25 +73,25 @@ declare namespace org {
                          * @param state the previous state
                          */
                         // @ts-ignore
-                        setState(state: any): void
+                        public setState(state: java.lang.Object | any): void
                         /**
                          * Return the raw string used to provide input to this arguments object.
                          * @return The raw input
                          */
                         // @ts-ignore
-                        getRaw(): java.lang.String
+                        public getRaw(): string
                         /**
                          * Get an arg at the specified position.
                          * @param index index of the element to return
                          */
                         // @ts-ignore
-                        get(index: number /*int*/): java.lang.String
+                        public get(index: number /*int*/): string
                         /**
                          * Insert an arg as the next arg to be returned by {@link #next()}.
                          * @param value The argument to insert
                          */
                         // @ts-ignore
-                        insertArg(value: string): void
+                        public insertArg(value: java.lang.String | string): void
                         /**
                          * Remove the arguments parsed between startState and endState.
                          * @deprecated Use with {#link #getSnapshot()} instead of
@@ -100,26 +100,26 @@ declare namespace org {
                          * @param endState The ending state
                          */
                         // @ts-ignore
-                        removeArgs(startState: any, endState: any): void
+                        public removeArgs(startState: java.lang.Object | any, endState: java.lang.Object | any): void
                         /**
                          * Remove the arguments parsed between two snapshots.
                          * @param startSnapshot The starting state
                          * @param endSnapshot The ending state
                          */
                         // @ts-ignore
-                        removeArgs(startSnapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot, endSnapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot): void
+                        public removeArgs(startSnapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot, endSnapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot): void
                         /**
                          * Returns the number of arguments
                          * @return the number of arguments
                          */
                         // @ts-ignore
-                        size(): int
+                        public size(): number /*int*/
                         /**
                          * Gets the current position in raw input.
                          * @return the raw position
                          */
                         // @ts-ignore
-                        getRawPosition(): int
+                        public getRawPosition(): number /*int*/
                         /**
                          * Gets a snapshot of the data inside this context to allow it to be
                          * restored later.
@@ -127,7 +127,7 @@ declare namespace org {
                          *       {@link CommandArgs}
                          */
                         // @ts-ignore
-                        getSnapshot(): org.spongepowered.api.command.args.CommandArgs.Snapshot
+                        public getSnapshot(): org.spongepowered.api.command.args.CommandArgs.Snapshot
                         /**
                          * Resets a {@link CommandArgs} to a previous state using a previously
                          * created {@link CommandArgs.Snapshot}.
@@ -135,7 +135,7 @@ declare namespace org {
                          *       with
                          */
                         // @ts-ignore
-                        applySnapshot(snapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot): void
+                        public applySnapshot(snapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot): void
                         /**
                          * Resets a {@link CommandArgs} to a previous state using a previously
                          * created {@link CommandArgs.Snapshot}.
@@ -146,7 +146,7 @@ declare namespace org {
                          * @param resetArgs Whether to restore the argument list
                          */
                         // @ts-ignore
-                        applySnapshot(snapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot, resetArgs: boolean): void
+                        public applySnapshot(snapshot: org.spongepowered.api.command.args.CommandArgs.Snapshot, resetArgs: boolean): void
                     }
                 }
             }

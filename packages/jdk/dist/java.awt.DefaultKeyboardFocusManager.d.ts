@@ -35,7 +35,7 @@ declare namespace java {
              *          <code>false</code> otherwise
              */
             // @ts-ignore
-            dispatchEvent(e: java.awt.AWTEvent): boolean
+            public dispatchEvent(e: java.awt.AWTEvent): boolean
             /**
              * Called by <code>dispatchEvent</code> if no other
              * KeyEventDispatcher in the dispatcher chain dispatched the KeyEvent, or
@@ -55,7 +55,7 @@ declare namespace java {
              * @see Component#dispatchEvent
              */
             // @ts-ignore
-            dispatchKeyEvent(e: java.awt.event.KeyEvent): boolean
+            public dispatchKeyEvent(e: java.awt.event.KeyEvent): boolean
             /**
              * This method will be called by <code>dispatchKeyEvent</code>. It will
              * handle any unconsumed KeyEvents that map to an AWT
@@ -67,7 +67,7 @@ declare namespace java {
              * @see MenuShortcut
              */
             // @ts-ignore
-            postProcessKeyEvent(e: java.awt.event.KeyEvent): boolean
+            public postProcessKeyEvent(e: java.awt.event.KeyEvent): boolean
             /**
              * This method initiates a focus traversal operation if and only if the
              * KeyEvent represents a focus traversal key for the specified
@@ -81,7 +81,7 @@ declare namespace java {
              * @param e the event that may represent a focus traversal key
              */
             // @ts-ignore
-            processKeyEvent(focusedComponent: java.awt.Component, e: java.awt.event.KeyEvent): void
+            public processKeyEvent(focusedComponent: java.awt.Component, e: java.awt.event.KeyEvent): void
             /**
              * Delays dispatching of KeyEvents until the specified Component becomes
              * the focus owner. KeyEvents with timestamps later than the specified
@@ -134,7 +134,7 @@ declare namespace java {
              * @see Component#transferFocusBackward
              */
             // @ts-ignore
-            focusPreviousComponent(aComponent: java.awt.Component): void
+            public focusPreviousComponent(aComponent: java.awt.Component): void
             /**
              * Focuses the Component after aComponent, typically based on a
              * FocusTraversalPolicy.
@@ -144,7 +144,7 @@ declare namespace java {
              * @see Component#transferFocus
              */
             // @ts-ignore
-            focusNextComponent(aComponent: java.awt.Component): void
+            public focusNextComponent(aComponent: java.awt.Component): void
             /**
              * Moves the focus up one focus traversal cycle. Typically, the focus owner
              * is set to aComponent's focus cycle root, and the current focus cycle
@@ -157,7 +157,7 @@ declare namespace java {
              * @see Component#transferFocusUpCycle
              */
             // @ts-ignore
-            upFocusCycle(aComponent: java.awt.Component): void
+            public upFocusCycle(aComponent: java.awt.Component): void
             /**
              * Moves the focus down one focus traversal cycle. If aContainer is a focus
              * cycle root, then the focus owner is set to aContainer's default
@@ -169,7 +169,7 @@ declare namespace java {
              * @see Container#transferFocusDownCycle
              */
             // @ts-ignore
-            downFocusCycle(aContainer: java.awt.Container): void
+            public downFocusCycle(aContainer: java.awt.Container): void
         }
     }
 }

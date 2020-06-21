@@ -18,17 +18,17 @@ declare namespace org {
                  * @param actualType the actual type that the lookup returned
                  */
                 // @ts-ignore
-                constructor(jndiName: string, requiredType: java.lang.Class<any>, actualType: java.lang.Class<any>)
+                constructor(jndiName: java.lang.String | string, requiredType: java.lang.Class<any>, actualType: java.lang.Class<any>)
                 /**
                  * Return the required type for the lookup, if available.
                  */
                 // @ts-ignore
-                getRequiredType(): java.lang.Class<?>
+                getRequiredType(): java.lang.Class<any>
                 /**
                  * Return the actual type that the lookup returned, if available.
                  */
                 // @ts-ignore
-                getActualType(): java.lang.Class<?>
+                getActualType(): java.lang.Class<any>
             }
         }
     }

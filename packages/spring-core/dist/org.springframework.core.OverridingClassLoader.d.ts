@@ -32,11 +32,11 @@ declare namespace org {
                  * Packages that are excluded by default.
                  */
                 // @ts-ignore
-                readonly DEFAULT_EXCLUDED_PACKAGES: string[]
+                public static readonly DEFAULT_EXCLUDED_PACKAGES: java.lang.String[] | string[]
                 // @ts-ignore
-                loadClass(name: string): java.lang.Class<?>
+                public loadClass(name: java.lang.String | string): java.lang.Class<any>
                 // @ts-ignore
-                loadClass(name: string, resolve: boolean): java.lang.Class<?>
+                loadClass(name: java.lang.String | string, resolve: boolean): java.lang.Class<any>
                 /**
                  * Determine whether the specified class is eligible for overriding
                  * by this class loader.
@@ -45,7 +45,7 @@ declare namespace org {
                  * @see #isExcluded
                  */
                 // @ts-ignore
-                isEligibleForOverriding(className: string): boolean
+                isEligibleForOverriding(className: java.lang.String | string): boolean
                 /**
                  * Load the specified class for overriding purposes in this ClassLoader.
                  * <p>The default implementation delegates to {@link #findLoadedClass},
@@ -55,7 +55,7 @@ declare namespace org {
                  * @throws ClassNotFoundException if the class for the given name couldn't be loaded
                  */
                 // @ts-ignore
-                loadClassForOverriding(name: string): java.lang.Class<?>
+                loadClassForOverriding(name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Load the defining bytes for the given class,
                  * to be turned into a Class object through a {@link #defineClass} call.
@@ -67,7 +67,7 @@ declare namespace org {
                  * @throws ClassNotFoundException if the class for the given name couldn't be loaded
                  */
                 // @ts-ignore
-                loadBytesForClass(name: string): byte[]
+                loadBytesForClass(name: java.lang.String | string): number /*byte*/[]
                 /**
                  * Open an InputStream for the specified class.
                  * <p>The default implementation loads a standard class file through
@@ -76,7 +76,7 @@ declare namespace org {
                  * @return the InputStream containing the byte code for the specified class
                  */
                 // @ts-ignore
-                openStreamForClass(name: string): java.io.InputStream
+                openStreamForClass(name: java.lang.String | string): java.io.InputStream
                 /**
                  * Transformation hook to be implemented by subclasses.
                  * <p>The default implementation simply returns the given bytes as-is.
@@ -86,7 +86,7 @@ declare namespace org {
                  *  same as the input bytes if the transformation produced no changes)
                  */
                 // @ts-ignore
-                transformIfNecessary(name: string, bytes: number /*byte*/[]): byte[]
+                transformIfNecessary(name: java.lang.String | string, bytes: number /*byte*/[]): number /*byte*/[]
             }
         }
     }

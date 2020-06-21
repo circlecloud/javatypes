@@ -9,7 +9,7 @@ declare namespace org {
                  * Remember that {@link Inject} is also necessary.</p>
                  */
                 // @ts-ignore
-                class SynchronousExecutor implements java.lang.annotation.Annotation {
+                abstract class SynchronousExecutor implements java.lang.annotation.Annotation {
                 }
             }
         }

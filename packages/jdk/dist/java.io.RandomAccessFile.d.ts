@@ -67,7 +67,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            constructor(name: string, mode: string)
+            constructor(name: java.lang.String | string, mode: java.lang.String | string)
             /**
              * Creates a random access file stream to read from, and optionally to
              * write to, the file specified by the {@link File} argument.  A new {@link
@@ -139,7 +139,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            constructor(file: java.io.File, mode: string)
+            constructor(file: java.io.File, mode: java.lang.String | string)
             /**
              * Returns the opaque file descriptor object associated with this
              * stream.
@@ -148,7 +148,7 @@ declare namespace java {
              * @see java.io.FileDescriptor
              */
             // @ts-ignore
-            getFD(): java.io.FileDescriptor
+            public getFD(): java.io.FileDescriptor
             /**
              * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
              * object associated with this file.
@@ -165,7 +165,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getChannel(): java.nio.channels.FileChannel
+            public getChannel(): java.nio.channels.FileChannel
             /**
              * Reads a byte of data from this file. The byte is returned as an
              * integer in the range 0 to 255 ({@code 0x00-0x0ff}). This
@@ -181,7 +181,7 @@ declare namespace java {
              *                           end-of-file has been reached.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to {@code len} bytes of data from this file into an
              * array of bytes. This method blocks until at least one byte of input
@@ -207,7 +207,7 @@ declare namespace java {
              *  {@code b.length - off}
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Reads up to {@code b.length} bytes of data from this file
              * into an array of bytes. This method blocks until at least one byte
@@ -227,7 +227,7 @@ declare namespace java {
              * @exception NullPointerException If {#code b} is {@code null}.
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads {@code b.length} bytes from this file into the byte
              * array, starting at the current file pointer. This method reads
@@ -240,7 +240,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readFully(b: number /*byte*/[]): void
+            public readFully(b: number /*byte*/[]): void
             /**
              * Reads exactly {@code len} bytes from this file into the byte
              * array, starting at the current file pointer. This method reads
@@ -255,7 +255,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readFully(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public readFully(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Attempts to skip over {@code n} bytes of input discarding the
              * skipped bytes.
@@ -271,7 +271,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            skipBytes(n: number /*int*/): int
+            public skipBytes(n: number /*int*/): number /*int*/
             /**
              * Writes the specified byte to this file. The write starts at
              * the current file pointer.
@@ -279,7 +279,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes {@code b.length} bytes from the specified byte array
              * to this file, starting at the current file pointer.
@@ -287,7 +287,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*byte*/[]): void
+            public write(b: number /*byte*/[]): void
             /**
              * Writes {@code len} bytes from the specified byte array
              * starting at offset {@code off} to this file.
@@ -297,7 +297,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Returns the current offset in this file.
              * @return the offset from the beginning of the file, in bytes,
@@ -305,7 +305,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            getFilePointer(): long
+            public getFilePointer(): number /*long*/
             /**
              * Sets the file-pointer offset, measured from the beginning of this
              * file, at which the next read or write occurs.  The offset may be
@@ -320,14 +320,14 @@ declare namespace java {
              *                           {@code 0} or if an I/O error occurs.
              */
             // @ts-ignore
-            seek(pos: number /*long*/): void
+            public seek(pos: number /*long*/): void
             /**
              * Returns the length of this file.
              * @return the length of this file, measured in bytes.
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            length(): long
+            public length(): number /*long*/
             /**
              * Sets the length of this file.
              * <p> If the present length of the file as returned by the
@@ -345,7 +345,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setLength(newLength: number /*long*/): void
+            public setLength(newLength: number /*long*/): void
             /**
              * Closes this random access file stream and releases any system
              * resources associated with the stream. A closed random access
@@ -358,7 +358,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Reads a {@code boolean} from this file. This method reads a
              * single byte from the file, starting at the current file pointer.
@@ -371,7 +371,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readBoolean(): boolean
+            public readBoolean(): boolean
             /**
              * Reads a signed eight-bit value from this file. This method reads a
              * byte from the file, starting from the current file pointer.
@@ -390,7 +390,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readByte(): byte
+            public readByte(): number /*byte*/
             /**
              * Reads an unsigned eight-bit number from this file. This method reads
              * a byte from this file, starting at the current file pointer,
@@ -404,7 +404,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readUnsignedByte(): int
+            public readUnsignedByte(): number /*int*/
             /**
              * Reads a signed 16-bit number from this file. The method reads two
              * bytes from this file, starting at the current file pointer.
@@ -425,7 +425,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readShort(): short
+            public readShort(): number /*short*/
             /**
              * Reads an unsigned 16-bit number from this file. This method reads
              * two bytes from the file, starting at the current file pointer.
@@ -446,7 +446,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readUnsignedShort(): int
+            public readUnsignedShort(): number /*int*/
             /**
              * Reads a character from this file. This method reads two
              * bytes from the file, starting at the current file pointer.
@@ -467,7 +467,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readChar(): char
+            public readChar(): string
             /**
              * Reads a signed 32-bit integer from this file. This method reads 4
              * bytes from the file, starting at the current file pointer.
@@ -488,7 +488,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readInt(): int
+            public readInt(): number /*int*/
             /**
              * Reads a signed 64-bit integer from this file. This method reads eight
              * bytes from the file, starting at the current file pointer.
@@ -517,7 +517,7 @@ declare namespace java {
              * @exception IOException   if an I/O error occurs.
              */
             // @ts-ignore
-            readLong(): long
+            public readLong(): number /*long*/
             /**
              * Reads a {@code float} from this file. This method reads an
              * {@code int} value, starting at the current file pointer,
@@ -537,7 +537,7 @@ declare namespace java {
              * @see java.lang.Float#intBitsToFloat(int)
              */
             // @ts-ignore
-            readFloat(): float
+            public readFloat(): number /*float*/
             /**
              * Reads a {@code double} from this file. This method reads a
              * {@code long} value, starting at the current file pointer,
@@ -557,7 +557,7 @@ declare namespace java {
              * @see java.lang.Double#longBitsToDouble(long)
              */
             // @ts-ignore
-            readDouble(): double
+            public readDouble(): number /*double*/
             /**
              * Reads the next line of text from this file.  This method successively
              * reads bytes from the file, starting at the current file pointer,
@@ -579,7 +579,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            public readLine(): string
             /**
              * Reads in a string from this file. The string has been encoded
              * using a
@@ -605,7 +605,7 @@ declare namespace java {
              * @see java.io.RandomAccessFile#readUnsignedShort()
              */
             // @ts-ignore
-            readUTF(): java.lang.String
+            public readUTF(): string
             /**
              * Writes a {@code boolean} to the file as a one-byte value. The
              * value {@code true} is written out as the value
@@ -616,7 +616,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeBoolean(v: boolean): void
+            public writeBoolean(v: boolean): void
             /**
              * Writes a {@code byte} to the file as a one-byte value. The
              * write starts at the current position of the file pointer.
@@ -624,7 +624,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeByte(v: number /*int*/): void
+            public writeByte(v: number /*int*/): void
             /**
              * Writes a {@code short} to the file as two bytes, high byte first.
              * The write starts at the current position of the file pointer.
@@ -632,7 +632,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeShort(v: number /*int*/): void
+            public writeShort(v: number /*int*/): void
             /**
              * Writes a {@code char} to the file as a two-byte value, high
              * byte first. The write starts at the current position of the
@@ -641,7 +641,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeChar(v: number /*int*/): void
+            public writeChar(v: number /*int*/): void
             /**
              * Writes an {@code int} to the file as four bytes, high byte first.
              * The write starts at the current position of the file pointer.
@@ -649,7 +649,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeInt(v: number /*int*/): void
+            public writeInt(v: number /*int*/): void
             /**
              * Writes a {@code long} to the file as eight bytes, high byte first.
              * The write starts at the current position of the file pointer.
@@ -657,7 +657,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeLong(v: number /*long*/): void
+            public writeLong(v: number /*long*/): void
             /**
              * Converts the float argument to an {@code int} using the
              * {@code floatToIntBits} method in class {@code Float},
@@ -669,7 +669,7 @@ declare namespace java {
              * @see java.lang.Float#floatToIntBits(float)
              */
             // @ts-ignore
-            writeFloat(v: number /*float*/): void
+            public writeFloat(v: number /*float*/): void
             /**
              * Converts the double argument to a {@code long} using the
              * {@code doubleToLongBits} method in class {@code Double},
@@ -681,7 +681,7 @@ declare namespace java {
              * @see java.lang.Double#doubleToLongBits(double)
              */
             // @ts-ignore
-            writeDouble(v: number /*double*/): void
+            public writeDouble(v: number /*double*/): void
             /**
              * Writes the string to the file as a sequence of bytes. Each
              * character in the string is written out, in sequence, by discarding
@@ -691,7 +691,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeBytes(s: string): void
+            public writeBytes(s: java.lang.String | string): void
             /**
              * Writes a string to the file as a sequence of characters. Each
              * character is written to the data output stream as if by the
@@ -702,7 +702,7 @@ declare namespace java {
              * @see java.io.RandomAccessFile#writeChar(int)
              */
             // @ts-ignore
-            writeChars(s: string): void
+            public writeChars(s: java.lang.String | string): void
             /**
              * Writes a string to the file using
              * <a href="DataInput.html#modified-utf-8">modified UTF-8</a>
@@ -719,7 +719,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeUTF(str: string): void
+            public writeUTF(str: java.lang.String | string): void
         }
     }
 }

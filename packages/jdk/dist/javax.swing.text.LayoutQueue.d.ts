@@ -18,19 +18,19 @@ declare namespace javax {
                  * Fetch the default layout queue.
                  */
                 // @ts-ignore
-                getDefaultQueue(): javax.swing.text.LayoutQueue
+                public static getDefaultQueue(): javax.swing.text.LayoutQueue
                 /**
                  * Set the default layout queue.
                  * @param q the new queue.
                  */
                 // @ts-ignore
-                setDefaultQueue(q: javax.swing.text.LayoutQueue): void
+                public static setDefaultQueue(q: javax.swing.text.LayoutQueue): void
                 /**
                  * Add a task that is not needed immediately because
                  * the results are not believed to be visible.
                  */
                 // @ts-ignore
-                addTask(task: java.lang.Runnable): void
+                public addTask(task: java.lang.Runnable): void
                 /**
                  * Used by the worker thread to get a new task to execute
                  */

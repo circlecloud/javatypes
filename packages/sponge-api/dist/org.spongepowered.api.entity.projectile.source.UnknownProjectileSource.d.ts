@@ -11,9 +11,9 @@ declare namespace org {
                         // @ts-ignore
                         class UnknownProjectileSource extends java.lang.Object implements org.spongepowered.api.entity.projectile.source.ProjectileSource {
                             // @ts-ignore
-                            launchProjectile<T extends org.spongepowered.api.entity.projectile.Projectile>(projectileClass: java.lang.Class<T>): java.util.Optional<T>
+                            public launchProjectile<T extends org.spongepowered.api.entity.projectile.Projectile>(projectileClass: java.lang.Class<T>): java.util.Optional<T>
                             // @ts-ignore
-                            launchProjectile<T extends org.spongepowered.api.entity.projectile.Projectile>(projectileClass: java.lang.Class<T>, velocity: Vector3d): java.util.Optional<T>
+                            public launchProjectile<T extends org.spongepowered.api.entity.projectile.Projectile>(projectileClass: java.lang.Class<T>, velocity: Vector3d): java.util.Optional<T>
                         }
                     }
                 }

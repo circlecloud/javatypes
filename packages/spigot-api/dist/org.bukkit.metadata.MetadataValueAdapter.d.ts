@@ -9,29 +9,29 @@ declare namespace org {
              * value() and invalidate().
              */
             // @ts-ignore
-            class MetadataValueAdapter extends java.lang.Object implements org.bukkit.metadata.MetadataValue {
+            abstract class MetadataValueAdapter extends java.lang.Object implements org.bukkit.metadata.MetadataValue {
                 // @ts-ignore
                 constructor(owningPlugin: org.bukkit.plugin.Plugin)
                 // @ts-ignore
                 readonly owningPlugin: java.lang.ref.WeakReference<org.bukkit.plugin.Plugin>
                 // @ts-ignore
-                getOwningPlugin(): org.bukkit.plugin.Plugin
+                public getOwningPlugin(): org.bukkit.plugin.Plugin
                 // @ts-ignore
-                asInt(): int
+                public asInt(): number /*int*/
                 // @ts-ignore
-                asFloat(): float
+                public asFloat(): number /*float*/
                 // @ts-ignore
-                asDouble(): double
+                public asDouble(): number /*double*/
                 // @ts-ignore
-                asLong(): long
+                public asLong(): number /*long*/
                 // @ts-ignore
-                asShort(): short
+                public asShort(): number /*short*/
                 // @ts-ignore
-                asByte(): byte
+                public asByte(): number /*byte*/
                 // @ts-ignore
-                asBoolean(): boolean
+                public asBoolean(): boolean
                 // @ts-ignore
-                asString(): java.lang.String
+                public asString(): string
             }
         }
     }

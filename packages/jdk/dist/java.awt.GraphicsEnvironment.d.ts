@@ -15,7 +15,7 @@ declare namespace java {
          * @see GraphicsConfiguration
          */
         // @ts-ignore
-        class GraphicsEnvironment extends java.lang.Object {
+        abstract class GraphicsEnvironment extends java.lang.Object {
             /**
              * This is an abstract class and cannot be instantiated directly.
              * Instances must be obtained from a suitable factory or query method.
@@ -27,7 +27,7 @@ declare namespace java {
              * @return the local <code>GraphicsEnvironment</code>
              */
             // @ts-ignore
-            getLocalGraphicsEnvironment(): java.awt.GraphicsEnvironment
+            public static getLocalGraphicsEnvironment(): java.awt.GraphicsEnvironment
             /**
              * Tests whether or not a display, keyboard, and mouse can be
              * supported in this environment.  If this method returns true,
@@ -41,7 +41,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isHeadless(): boolean
+            public static isHeadless(): boolean
             /**
              * Returns whether or not a display, keyboard, and mouse can be
              * supported in this graphics environment.  If this returns true,
@@ -56,7 +56,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isHeadlessInstance(): boolean
+            public isHeadlessInstance(): boolean
             /**
              * Returns an array of all of the screen <code>GraphicsDevice</code>
              * objects.
@@ -66,7 +66,7 @@ declare namespace java {
              * @see #isHeadless()
              */
             // @ts-ignore
-            abstract getScreenDevices(): java.awt.GraphicsDevice[]
+            public abstract getScreenDevices(): java.awt.GraphicsDevice[]
             /**
              * Returns the default screen <code>GraphicsDevice</code>.
              * @return the <code>GraphicsDevice</code> that represents the
@@ -75,7 +75,7 @@ declare namespace java {
              * @see #isHeadless()
              */
             // @ts-ignore
-            abstract getDefaultScreenDevice(): java.awt.GraphicsDevice
+            public abstract getDefaultScreenDevice(): java.awt.GraphicsDevice
             /**
              * Returns a <code>Graphics2D</code> object for rendering into the
              * specified {@link BufferedImage}.
@@ -85,7 +85,7 @@ declare namespace java {
              * @throws NullPointerException if <code>img</code> is null
              */
             // @ts-ignore
-            abstract createGraphics(img: java.awt.image.BufferedImage): java.awt.Graphics2D
+            public abstract createGraphics(img: java.awt.image.BufferedImage): java.awt.Graphics2D
             /**
              * Returns an array containing a one-point size instance of all fonts
              * available in this <code>GraphicsEnvironment</code>.  Typical usage
@@ -112,7 +112,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            abstract getAllFonts(): java.awt.Font[]
+            public abstract getAllFonts(): java.awt.Font[]
             /**
              * Returns an array containing the names of all font families in this
              * <code>GraphicsEnvironment</code> localized for the default locale,
@@ -132,7 +132,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            abstract getAvailableFontFamilyNames(): java.lang.String[]
+            public abstract getAvailableFontFamilyNames(): string[]
             /**
              * Returns an array containing the names of all font families in this
              * <code>GraphicsEnvironment</code> localized for the specified locale.
@@ -155,7 +155,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            abstract getAvailableFontFamilyNames(l: java.util.Locale): java.lang.String[]
+            public abstract getAvailableFontFamilyNames(l: java.util.Locale): string[]
             /**
              * Registers a <i>created</i> <code>Font</code>in this
              * <code>GraphicsEnvironment</code>.
@@ -188,7 +188,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            registerFont(font: java.awt.Font): boolean
+            public registerFont(font: java.awt.Font): boolean
             /**
              * Indicates a preference for locale-specific fonts in the mapping of
              * logical fonts to physical fonts. Calling this method indicates that font
@@ -210,7 +210,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            preferLocaleFonts(): void
+            public preferLocaleFonts(): void
             /**
              * Indicates a preference for proportional over non-proportional (e.g.
              * dual-spaced CJK fonts) fonts in the mapping of logical fonts to
@@ -228,7 +228,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            preferProportionalFonts(): void
+            public preferProportionalFonts(): void
             /**
              * Returns the Point where Windows should be centered.
              * It is recommended that centered Windows be checked to ensure they fit
@@ -239,7 +239,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCenterPoint(): java.awt.Point
+            public getCenterPoint(): java.awt.Point
             /**
              * Returns the maximum bounds for centered Windows.
              * These bounds account for objects in the native windowing system such as
@@ -259,7 +259,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMaximumWindowBounds(): java.awt.Rectangle
+            public getMaximumWindowBounds(): java.awt.Rectangle
         }
     }
 }

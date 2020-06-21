@@ -114,7 +114,7 @@ declare namespace java {
          * @author Helena Shih
          */
         // @ts-ignore
-        class NumberFormat extends java.text.Format {
+        abstract class NumberFormat extends java.text.Format {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -127,14 +127,14 @@ declare namespace java {
              * @see java.text.FieldPosition
              */
             // @ts-ignore
-            readonly INTEGER_FIELD: number /*int*/
+            public static readonly INTEGER_FIELD: number /*int*/
             /**
              * Field constant used to construct a FieldPosition object. Signifies that
              * the position of the fraction part of a formatted number should be returned.
              * @see java.text.FieldPosition
              */
             // @ts-ignore
-            readonly FRACTION_FIELD: number /*int*/
+            public static readonly FRACTION_FIELD: number /*int*/
             /**
              * Formats a number and appends the resulting text to the given string
              * buffer.
@@ -166,7 +166,7 @@ declare namespace java {
              * @see java.text.FieldPosition
              */
             // @ts-ignore
-            format(number: any, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public format(number: java.lang.Object | any, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Parses text from a string to produce a <code>Number</code>.
              * <p>
@@ -191,7 +191,7 @@ declare namespace java {
              * @exception NullPointerException if <code>pos</code> is null.
              */
             // @ts-ignore
-            parseObject(source: string, pos: java.text.ParsePosition): java.lang.Object
+            public parseObject(source: java.lang.String | string, pos: java.text.ParsePosition): any
             /**
              * Specialization of format.
              * @param number the double number to format
@@ -201,7 +201,7 @@ declare namespace java {
              * @see java.text.Format#format
              */
             // @ts-ignore
-            format(number: number /*double*/): java.lang.String
+            public format(number: number /*double*/): string
             /**
              * Specialization of format.
              * @param number the long number to format
@@ -211,7 +211,7 @@ declare namespace java {
              * @see java.text.Format#format
              */
             // @ts-ignore
-            format(number: number /*long*/): java.lang.String
+            public format(number: number /*long*/): string
             /**
              * Specialization of format.
              * @param number     the double number to format
@@ -224,7 +224,7 @@ declare namespace java {
              * @see java.text.Format#format
              */
             // @ts-ignore
-            abstract format(number: number /*double*/, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public abstract format(number: number /*double*/, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Specialization of format.
              * @param number     the long number to format
@@ -237,7 +237,7 @@ declare namespace java {
              * @see java.text.Format#format
              */
             // @ts-ignore
-            abstract format(number: number /*long*/, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public abstract format(number: number /*long*/, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Returns a Long if possible (e.g., within the range [Long.MIN_VALUE,
              * Long.MAX_VALUE] and with no decimals), otherwise a Double.
@@ -253,7 +253,7 @@ declare namespace java {
              * @see java.text.Format#parseObject
              */
             // @ts-ignore
-            abstract parse(source: string, parsePosition: java.text.ParsePosition): java.lang.Number
+            public abstract parse(source: java.lang.String | string, parsePosition: java.text.ParsePosition): java.lang.Number
             /**
              * Parses text from the beginning of the given string to produce a number.
              * The method may not use the entire text of the given string.
@@ -266,7 +266,7 @@ declare namespace java {
              *             cannot be parsed.
              */
             // @ts-ignore
-            parse(source: string): java.lang.Number
+            public parse(source: java.lang.String | string): java.lang.Number
             /**
              * Returns true if this format will parse numbers as integers only.
              * For example in the English locale, with ParseIntegerOnly true, the
@@ -278,7 +278,7 @@ declare namespace java {
              *          {@code false} otherwise
              */
             // @ts-ignore
-            isParseIntegerOnly(): boolean
+            public isParseIntegerOnly(): boolean
             /**
              * Sets whether or not numbers should be parsed as integers only.
              * @param value {#code true} if numbers should be parsed as integers only;
@@ -286,7 +286,7 @@ declare namespace java {
              * @see #isParseIntegerOnly
              */
             // @ts-ignore
-            setParseIntegerOnly(value: boolean): void
+            public setParseIntegerOnly(value: boolean): void
             /**
              * Returns a general-purpose number format for the current default
              * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -296,7 +296,7 @@ declare namespace java {
              *  formatting
              */
             // @ts-ignore
-            getInstance(): java.text.NumberFormat
+            public static getInstance(): java.text.NumberFormat
             /**
              * Returns a general-purpose number format for the specified locale.
              * This is the same as calling
@@ -306,7 +306,7 @@ declare namespace java {
              *  formatting
              */
             // @ts-ignore
-            getInstance(inLocale: java.util.Locale): java.text.NumberFormat
+            public static getInstance(inLocale: java.util.Locale): java.text.NumberFormat
             /**
              * Returns a general-purpose number format for the current default
              * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -319,7 +319,7 @@ declare namespace java {
              * @see java.util.Locale.Category#FORMAT
              */
             // @ts-ignore
-            getNumberInstance(): java.text.NumberFormat
+            public static getNumberInstance(): java.text.NumberFormat
             /**
              * Returns a general-purpose number format for the specified locale.
              * @param inLocale the desired locale
@@ -327,7 +327,7 @@ declare namespace java {
              *  formatting
              */
             // @ts-ignore
-            getNumberInstance(inLocale: java.util.Locale): java.text.NumberFormat
+            public static getNumberInstance(inLocale: java.util.Locale): java.text.NumberFormat
             /**
              * Returns an integer number format for the current default
              * {@link java.util.Locale.Category#FORMAT FORMAT} locale. The
@@ -346,7 +346,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getIntegerInstance(): java.text.NumberFormat
+            public static getIntegerInstance(): java.text.NumberFormat
             /**
              * Returns an integer number format for the specified locale. The
              * returned number format is configured to round floating point numbers
@@ -360,7 +360,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getIntegerInstance(inLocale: java.util.Locale): java.text.NumberFormat
+            public static getIntegerInstance(inLocale: java.util.Locale): java.text.NumberFormat
             /**
              * Returns a currency format for the current default
              * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -372,14 +372,14 @@ declare namespace java {
              * @see java.util.Locale.Category#FORMAT
              */
             // @ts-ignore
-            getCurrencyInstance(): java.text.NumberFormat
+            public static getCurrencyInstance(): java.text.NumberFormat
             /**
              * Returns a currency format for the specified locale.
              * @param inLocale the desired locale
              * @return the {#code NumberFormat} instance for currency formatting
              */
             // @ts-ignore
-            getCurrencyInstance(inLocale: java.util.Locale): java.text.NumberFormat
+            public static getCurrencyInstance(inLocale: java.util.Locale): java.text.NumberFormat
             /**
              * Returns a percentage format for the current default
              * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -391,14 +391,14 @@ declare namespace java {
              * @see java.util.Locale.Category#FORMAT
              */
             // @ts-ignore
-            getPercentInstance(): java.text.NumberFormat
+            public static getPercentInstance(): java.text.NumberFormat
             /**
              * Returns a percentage format for the specified locale.
              * @param inLocale the desired locale
              * @return the {#code NumberFormat} instance for percentage formatting
              */
             // @ts-ignore
-            getPercentInstance(inLocale: java.util.Locale): java.text.NumberFormat
+            public static getPercentInstance(inLocale: java.util.Locale): java.text.NumberFormat
             /**
              * Returns an array of all locales for which the
              * <code>get*Instance</code> methods of this class can return
@@ -412,22 +412,22 @@ declare namespace java {
              *          <code>NumberFormat</code> instances are available.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Overrides hashCode.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Overrides equals.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Overrides Cloneable.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns true if grouping is used in this format. For example, in the
              * English locale, with grouping on, the number 1234567 might be formatted
@@ -438,7 +438,7 @@ declare namespace java {
              * @see #setGroupingUsed
              */
             // @ts-ignore
-            isGroupingUsed(): boolean
+            public isGroupingUsed(): boolean
             /**
              * Set whether or not grouping will be used in this format.
              * @param newValue {#code true} if grouping is used;
@@ -446,7 +446,7 @@ declare namespace java {
              * @see #isGroupingUsed
              */
             // @ts-ignore
-            setGroupingUsed(newValue: boolean): void
+            public setGroupingUsed(newValue: boolean): void
             /**
              * Returns the maximum number of digits allowed in the integer portion of a
              * number.
@@ -454,7 +454,7 @@ declare namespace java {
              * @see #setMaximumIntegerDigits
              */
             // @ts-ignore
-            getMaximumIntegerDigits(): int
+            public getMaximumIntegerDigits(): number /*int*/
             /**
              * Sets the maximum number of digits allowed in the integer portion of a
              * number. maximumIntegerDigits must be &ge; minimumIntegerDigits.  If the
@@ -467,7 +467,7 @@ declare namespace java {
              * @see #getMaximumIntegerDigits
              */
             // @ts-ignore
-            setMaximumIntegerDigits(newValue: number /*int*/): void
+            public setMaximumIntegerDigits(newValue: number /*int*/): void
             /**
              * Returns the minimum number of digits allowed in the integer portion of a
              * number.
@@ -475,7 +475,7 @@ declare namespace java {
              * @see #setMinimumIntegerDigits
              */
             // @ts-ignore
-            getMinimumIntegerDigits(): int
+            public getMinimumIntegerDigits(): number /*int*/
             /**
              * Sets the minimum number of digits allowed in the integer portion of a
              * number. minimumIntegerDigits must be &le; maximumIntegerDigits.  If the
@@ -488,7 +488,7 @@ declare namespace java {
              * @see #getMinimumIntegerDigits
              */
             // @ts-ignore
-            setMinimumIntegerDigits(newValue: number /*int*/): void
+            public setMinimumIntegerDigits(newValue: number /*int*/): void
             /**
              * Returns the maximum number of digits allowed in the fraction portion of a
              * number.
@@ -496,7 +496,7 @@ declare namespace java {
              * @see #setMaximumFractionDigits
              */
             // @ts-ignore
-            getMaximumFractionDigits(): int
+            public getMaximumFractionDigits(): number /*int*/
             /**
              * Sets the maximum number of digits allowed in the fraction portion of a
              * number. maximumFractionDigits must be &ge; minimumFractionDigits.  If the
@@ -509,7 +509,7 @@ declare namespace java {
              * @see #getMaximumFractionDigits
              */
             // @ts-ignore
-            setMaximumFractionDigits(newValue: number /*int*/): void
+            public setMaximumFractionDigits(newValue: number /*int*/): void
             /**
              * Returns the minimum number of digits allowed in the fraction portion of a
              * number.
@@ -517,7 +517,7 @@ declare namespace java {
              * @see #setMinimumFractionDigits
              */
             // @ts-ignore
-            getMinimumFractionDigits(): int
+            public getMinimumFractionDigits(): number /*int*/
             /**
              * Sets the minimum number of digits allowed in the fraction portion of a
              * number. minimumFractionDigits must be &le; maximumFractionDigits.  If the
@@ -530,7 +530,7 @@ declare namespace java {
              * @see #getMinimumFractionDigits
              */
             // @ts-ignore
-            setMinimumFractionDigits(newValue: number /*int*/): void
+            public setMinimumFractionDigits(newValue: number /*int*/): void
             /**
              * Gets the currency used by this number format when formatting
              * currency values. The initial value is derived in a locale dependent
@@ -546,7 +546,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCurrency(): java.util.Currency
+            public getCurrency(): java.util.Currency
             /**
              * Sets the currency used by this number format when formatting
              * currency values. This does not update the minimum or maximum
@@ -561,7 +561,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setCurrency(currency: java.util.Currency): void
+            public setCurrency(currency: java.util.Currency): void
             /**
              * Gets the {@link java.math.RoundingMode} used in this NumberFormat.
              * The default implementation of this method in NumberFormat
@@ -575,7 +575,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getRoundingMode(): java.math.RoundingMode
+            public getRoundingMode(): java.math.RoundingMode
             /**
              * Sets the {@link java.math.RoundingMode} used in this NumberFormat.
              * The default implementation of this method in NumberFormat always
@@ -590,7 +590,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setRoundingMode(roundingMode: java.math.RoundingMode): void
+            public setRoundingMode(roundingMode: java.math.RoundingMode): void
         }
     }
 }

@@ -28,13 +28,13 @@ declare namespace org {
                      * Default method parameter: {@code _method}.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_METHOD_PARAM: string
+                    public static readonly DEFAULT_METHOD_PARAM: java.lang.String | string
                     /**
                      * Set the parameter name to look for HTTP methods.
                      * @see #DEFAULT_METHOD_PARAM
                      */
                     // @ts-ignore
-                    setMethodParam(methodParam: string): void
+                    public setMethodParam(methodParam: java.lang.String | string): void
                     // @ts-ignore
                     doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain): void
                 }

@@ -17,12 +17,12 @@ declare namespace javax {
              * engine.
              */
             // @ts-ignore
-            
+            readonly ENGINE_SCOPE: number /*int*/
             /**
              * GlobalScope attributes are visible to all engines created by same ScriptEngineFactory.
              */
             // @ts-ignore
-            
+            readonly GLOBAL_SCOPE: number /*int*/
             /**
              * Associates a <code>Bindings</code> instance with a particular scope in this
              * <code>ScriptContext</code>.  Calls to the <code>getAttribute</code> and
@@ -58,7 +58,7 @@ declare namespace javax {
              * @throws NullPointerException if the name is null.
              */
             // @ts-ignore
-            setAttribute(name: string, value: any, scope: number /*int*/): void
+            setAttribute(name: java.lang.String | string, value: java.lang.Object | any, scope: number /*int*/): void
             /**
              * Gets the value of an attribute in a given scope.
              * @param name The name of the attribute to retrieve.
@@ -70,7 +70,7 @@ declare namespace javax {
              * @throws NullPointerException if the name is null.
              */
             // @ts-ignore
-            getAttribute(name: string, scope: number /*int*/): java.lang.Object
+            getAttribute(name: java.lang.String | string, scope: number /*int*/): any
             /**
              * Remove an attribute in a given scope.
              * @param name The name of the attribute to remove
@@ -81,7 +81,7 @@ declare namespace javax {
              * @throws NullPointerException if the name is null.
              */
             // @ts-ignore
-            removeAttribute(name: string, scope: number /*int*/): java.lang.Object
+            removeAttribute(name: java.lang.String | string, scope: number /*int*/): any
             /**
              * Retrieves the value of the attribute with the given name in
              * the scope occurring earliest in the search order.  The order
@@ -95,7 +95,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if the name is empty.
              */
             // @ts-ignore
-            getAttribute(name: string): java.lang.Object
+            getAttribute(name: java.lang.String | string): any
             /**
              * Get the lowest scope in which an attribute is defined.
              * @param name Name of the attribute
@@ -106,7 +106,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if name is empty.
              */
             // @ts-ignore
-            getAttributesScope(name: string): int
+            getAttributesScope(name: java.lang.String | string): number /*int*/
             /**
              * Returns the <code>Writer</code> for scripts to use when displaying output.
              * @return The <code>Writer</code>.
@@ -151,7 +151,7 @@ declare namespace javax {
              * @return list of scope values
              */
             // @ts-ignore
-            getScopes(): java.util.List<java.lang.Integer>
+            getScopes(): Array<java.lang.Integer | number>
         }
     }
 }

@@ -20,7 +20,7 @@ declare namespace javax {
                      * grid so that rows and columns will be recalculated.
                      */
                     // @ts-ignore
-                    replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
+                    public replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
                     /**
                      * Perform layout for the major axis of the box (i.e. the
                      * axis that it represents).  The results of the layout should
@@ -70,7 +70,7 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid axis
                      */
                     // @ts-ignore
-                    getResizeWeight(axis: number /*int*/): int
+                    public getResizeWeight(axis: number /*int*/): number /*int*/
                     /**
                      * Fetches the child view that represents the given position in
                      * the model.  This is implemented to walk through the children

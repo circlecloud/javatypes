@@ -257,7 +257,7 @@ declare namespace javax {
              * @param message the <code>Object</code> to display
              */
             // @ts-ignore
-            constructor(message: any)
+            constructor(message: java.lang.Object | any)
             /**
              * Creates an instance of <code>JOptionPane</code> to display a message
              * with the specified message type and the default options,
@@ -270,7 +270,7 @@ declare namespace javax {
              *                   or <code>PLAIN_MESSAGE</code>
              */
             // @ts-ignore
-            constructor(message: any, messageType: number /*int*/)
+            constructor(message: java.lang.Object | any, messageType: number /*int*/)
             /**
              * Creates an instance of <code>JOptionPane</code> to display a message
              * with the specified message type and options.
@@ -287,7 +287,7 @@ declare namespace javax {
              *                   <code>OK_CANCEL_OPTION</code>
              */
             // @ts-ignore
-            constructor(message: any, messageType: number /*int*/, optionType: number /*int*/)
+            constructor(message: java.lang.Object | any, messageType: number /*int*/, optionType: number /*int*/)
             /**
              * Creates an instance of <code>JOptionPane</code> to display a message
              * with the specified message type, options, and icon.
@@ -305,7 +305,7 @@ declare namespace javax {
              * @param icon the <code>Icon</code> image to display
              */
             // @ts-ignore
-            constructor(message: any, messageType: number /*int*/, optionType: number /*int*/, icon: javax.swing.Icon)
+            constructor(message: java.lang.Object | any, messageType: number /*int*/, optionType: number /*int*/, icon: javax.swing.Icon)
             /**
              * Creates an instance of <code>JOptionPane</code> to display a message
              * with the specified message type, icon, and options.
@@ -333,7 +333,7 @@ declare namespace javax {
              * @param options  the choices the user can select
              */
             // @ts-ignore
-            constructor(message: any, messageType: number /*int*/, optionType: number /*int*/, icon: javax.swing.Icon, options: any[])
+            constructor(message: java.lang.Object | any, messageType: number /*int*/, optionType: number /*int*/, icon: javax.swing.Icon, options: java.lang.Object[] | any[])
             /**
              * Creates an instance of <code>JOptionPane</code> to display a message
              * with the specified message type, icon, and options, with the
@@ -357,140 +357,140 @@ declare namespace javax {
              *                   only meaningful if <code>options</code> is used
              */
             // @ts-ignore
-            constructor(message: any, messageType: number /*int*/, optionType: number /*int*/, icon: javax.swing.Icon, options: any[], initialValue: any)
+            constructor(message: java.lang.Object | any, messageType: number /*int*/, optionType: number /*int*/, icon: javax.swing.Icon, options: java.lang.Object[] | any[], initialValue: java.lang.Object | any)
             /**
              * Indicates that the user has not yet selected a value.
              */
             // @ts-ignore
-            readonly UNINITIALIZED_VALUE: any
+            public static readonly UNINITIALIZED_VALUE: java.lang.Object | any
             /**
              * Type meaning Look and Feel should not supply any options -- only
              * use the options from the <code>JOptionPane</code>.
              */
             // @ts-ignore
-            readonly DEFAULT_OPTION: number /*int*/
+            public static readonly DEFAULT_OPTION: number /*int*/
             /**
              * Type used for <code>showConfirmDialog</code>.
              */
             // @ts-ignore
-            readonly YES_NO_OPTION: number /*int*/
+            public static readonly YES_NO_OPTION: number /*int*/
             /**
              * Type used for <code>showConfirmDialog</code>.
              */
             // @ts-ignore
-            readonly YES_NO_CANCEL_OPTION: number /*int*/
+            public static readonly YES_NO_CANCEL_OPTION: number /*int*/
             /**
              * Type used for <code>showConfirmDialog</code>.
              */
             // @ts-ignore
-            readonly OK_CANCEL_OPTION: number /*int*/
+            public static readonly OK_CANCEL_OPTION: number /*int*/
             /**
              * Return value from class method if YES is chosen.
              */
             // @ts-ignore
-            readonly YES_OPTION: number /*int*/
+            public static readonly YES_OPTION: number /*int*/
             /**
              * Return value from class method if NO is chosen.
              */
             // @ts-ignore
-            readonly NO_OPTION: number /*int*/
+            public static readonly NO_OPTION: number /*int*/
             /**
              * Return value from class method if CANCEL is chosen.
              */
             // @ts-ignore
-            readonly CANCEL_OPTION: number /*int*/
+            public static readonly CANCEL_OPTION: number /*int*/
             /**
              * Return value form class method if OK is chosen.
              */
             // @ts-ignore
-            readonly OK_OPTION: number /*int*/
+            public static readonly OK_OPTION: number /*int*/
             /**
              * Return value from class method if user closes window without selecting
              * anything, more than likely this should be treated as either a
              * <code>CANCEL_OPTION</code> or <code>NO_OPTION</code>.
              */
             // @ts-ignore
-            readonly CLOSED_OPTION: number /*int*/
+            public static readonly CLOSED_OPTION: number /*int*/
             /**
              * Used for error messages.
              */
             // @ts-ignore
-            readonly ERROR_MESSAGE: number /*int*/
+            public static readonly ERROR_MESSAGE: number /*int*/
             /**
              * Used for information messages.
              */
             // @ts-ignore
-            readonly INFORMATION_MESSAGE: number /*int*/
+            public static readonly INFORMATION_MESSAGE: number /*int*/
             /**
              * Used for warning messages.
              */
             // @ts-ignore
-            readonly WARNING_MESSAGE: number /*int*/
+            public static readonly WARNING_MESSAGE: number /*int*/
             /**
              * Used for questions.
              */
             // @ts-ignore
-            readonly QUESTION_MESSAGE: number /*int*/
+            public static readonly QUESTION_MESSAGE: number /*int*/
             /**
              * No icon is used.
              */
             // @ts-ignore
-            readonly PLAIN_MESSAGE: number /*int*/
+            public static readonly PLAIN_MESSAGE: number /*int*/
             /**
              * Bound property name for <code>icon</code>.
              */
             // @ts-ignore
-            readonly ICON_PROPERTY: string
+            public static readonly ICON_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>message</code>.
              */
             // @ts-ignore
-            readonly MESSAGE_PROPERTY: string
+            public static readonly MESSAGE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>value</code>.
              */
             // @ts-ignore
-            readonly VALUE_PROPERTY: string
+            public static readonly VALUE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>option</code>.
              */
             // @ts-ignore
-            readonly OPTIONS_PROPERTY: string
+            public static readonly OPTIONS_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>initialValue</code>.
              */
             // @ts-ignore
-            readonly INITIAL_VALUE_PROPERTY: string
+            public static readonly INITIAL_VALUE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>type</code>.
              */
             // @ts-ignore
-            readonly MESSAGE_TYPE_PROPERTY: string
+            public static readonly MESSAGE_TYPE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>optionType</code>.
              */
             // @ts-ignore
-            readonly OPTION_TYPE_PROPERTY: string
+            public static readonly OPTION_TYPE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>selectionValues</code>.
              */
             // @ts-ignore
-            readonly SELECTION_VALUES_PROPERTY: string
+            public static readonly SELECTION_VALUES_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>initialSelectionValue</code>.
              */
             // @ts-ignore
-            readonly INITIAL_SELECTION_VALUE_PROPERTY: string
+            public static readonly INITIAL_SELECTION_VALUE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>inputValue</code>.
              */
             // @ts-ignore
-            readonly INPUT_VALUE_PROPERTY: string
+            public static readonly INPUT_VALUE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>wantsInput</code>.
              */
             // @ts-ignore
-            readonly WANTS_INPUT_PROPERTY: string
+            public static readonly WANTS_INPUT_PROPERTY: java.lang.String | string
             /**
              * Icon used in pane.
              */
@@ -500,17 +500,17 @@ declare namespace javax {
              * Message to display.
              */
             // @ts-ignore
-            message: any
+            message: java.lang.Object | any
             /**
              * Options to display to the user.
              */
             // @ts-ignore
-            options: any[]
+            options: java.lang.Object[] | any[]
             /**
              * Value that should be initially selected in <code>options</code>.
              */
             // @ts-ignore
-            initialValue: any
+            initialValue: java.lang.Object | any
             /**
              * Message type.
              */
@@ -529,23 +529,23 @@ declare namespace javax {
              * <code>UNINITIALIZED_VALUE</code> or <code>null</code>.
              */
             // @ts-ignore
-            value: any
+            value: java.lang.Object | any
             /**
              * Array of values the user can choose from. Look and feel will
              * provide the UI component to choose this from.
              */
             // @ts-ignore
-            selectionValues: any[]
+            selectionValues: java.lang.Object[] | any[]
             /**
              * Value the user has input.
              */
             // @ts-ignore
-            inputValue: any
+            inputValue: java.lang.Object | any
             /**
              * Initial value to select in <code>selectionValues</code>.
              */
             // @ts-ignore
-            initialSelectionValue: any
+            initialSelectionValue: java.lang.Object | any
             /**
              * If true, a UI widget will be provided to the user to get input.
              */
@@ -562,7 +562,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showInputDialog(message: any): java.lang.String
+            public static showInputDialog(message: java.lang.Object | any): string
             /**
              * Shows a question-message dialog requesting input from the user, with
              * the input value initialized to <code>initialSelectionValue</code>. The
@@ -574,7 +574,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            showInputDialog(message: any, initialSelectionValue: any): java.lang.String
+            public static showInputDialog(message: java.lang.Object | any, initialSelectionValue: java.lang.Object | any): string
             /**
              * Shows a question-message dialog requesting input from the user
              * parented to <code>parentComponent</code>.
@@ -589,7 +589,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showInputDialog(parentComponent: java.awt.Component, message: any): java.lang.String
+            public static showInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any): string
             /**
              * Shows a question-message dialog requesting input from the user and
              * parented to <code>parentComponent</code>. The input value will be
@@ -604,7 +604,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            showInputDialog(parentComponent: java.awt.Component, message: any, initialSelectionValue: any): java.lang.String
+            public static showInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, initialSelectionValue: java.lang.Object | any): string
             /**
              * Shows a dialog requesting input from the user parented to
              * <code>parentComponent</code> with the dialog having the title
@@ -626,7 +626,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showInputDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/): java.lang.String
+            public static showInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/): string
             /**
              * Prompts the user for input in a blocking dialog where the
              * initial selection, possible selections, and all other options can
@@ -663,7 +663,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showInputDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/, icon: javax.swing.Icon, selectionValues: any[], initialSelectionValue: any): java.lang.Object
+            public static showInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/, icon: javax.swing.Icon, selectionValues: java.lang.Object[] | any[], initialSelectionValue: java.lang.Object | any): any
             /**
              * Brings up an information-message dialog titled "Message".
              * @param parentComponent determines the <code>Frame</code> in
@@ -677,7 +677,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showMessageDialog(parentComponent: java.awt.Component, message: any): void
+            public static showMessageDialog(parentComponent: java.awt.Component, message: java.lang.Object | any): void
             /**
              * Brings up a dialog that displays a message using a default
              * icon determined by the <code>messageType</code> parameter.
@@ -699,7 +699,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showMessageDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/): void
+            public static showMessageDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/): void
             /**
              * Brings up a dialog displaying a message, specifying all parameters.
              * @param parentComponent determines the <code>Frame</code> in which the
@@ -723,7 +723,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showMessageDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/, icon: javax.swing.Icon): void
+            public static showMessageDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/, icon: javax.swing.Icon): void
             /**
              * Brings up a dialog with the options <i>Yes</i>,
              * <i>No</i> and <i>Cancel</i>; with the
@@ -741,7 +741,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showConfirmDialog(parentComponent: java.awt.Component, message: any): int
+            public static showConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any): number /*int*/
             /**
              * Brings up a dialog where the number of choices is determined
              * by the <code>optionType</code> parameter.
@@ -763,7 +763,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showConfirmDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/): int
+            public static showConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/): number /*int*/
             /**
              * Brings up a dialog where the number of choices is determined
              * by the <code>optionType</code> parameter, where the
@@ -796,7 +796,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showConfirmDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/, messageType: number /*int*/): int
+            public static showConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/, messageType: number /*int*/): number /*int*/
             /**
              * Brings up a dialog with a specified icon, where the number of
              * choices is determined by the <code>optionType</code> parameter.
@@ -828,7 +828,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showConfirmDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon): int
+            public static showConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon): number /*int*/
             /**
              * Brings up a dialog with a specified icon, where the initial
              * choice is determined by the <code>initialValue</code> parameter and
@@ -883,7 +883,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showOptionDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon, options: any[], initialValue: any): int
+            public static showOptionDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon, options: java.lang.Object[] | any[], initialValue: java.lang.Object | any): number /*int*/
             /**
              * Creates and returns a new <code>JDialog</code> wrapping
              * <code>this</code> centered on the <code>parentComponent</code>
@@ -910,7 +910,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            createDialog(parentComponent: java.awt.Component, title: string): javax.swing.JDialog
+            public createDialog(parentComponent: java.awt.Component, title: java.lang.String | string): javax.swing.JDialog
             /**
              * Creates and returns a new parentless <code>JDialog</code>
              * with the specified title.
@@ -933,7 +933,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            createDialog(title: string): javax.swing.JDialog
+            public createDialog(title: java.lang.String | string): javax.swing.JDialog
             /**
              * Brings up an internal confirmation dialog panel. The dialog
              * is a information-message dialog titled "Message".
@@ -944,7 +944,7 @@ declare namespace javax {
              * @param message   the object to display
              */
             // @ts-ignore
-            showInternalMessageDialog(parentComponent: java.awt.Component, message: any): void
+            public static showInternalMessageDialog(parentComponent: java.awt.Component, message: java.lang.Object | any): void
             /**
              * Brings up an internal dialog panel that displays a message
              * using a default icon determined by the <code>messageType</code>
@@ -963,7 +963,7 @@ declare namespace javax {
              *                   or <code>PLAIN_MESSAGE</code>
              */
             // @ts-ignore
-            showInternalMessageDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/): void
+            public static showInternalMessageDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/): void
             /**
              * Brings up an internal dialog panel displaying a message,
              * specifying all parameters.
@@ -983,7 +983,7 @@ declare namespace javax {
              *                   identify the kind of message that is being displayed
              */
             // @ts-ignore
-            showInternalMessageDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/, icon: javax.swing.Icon): void
+            public static showInternalMessageDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/, icon: javax.swing.Icon): void
             /**
              * Brings up an internal dialog panel with the options <i>Yes</i>, <i>No</i>
              * and <i>Cancel</i>; with the title, <b>Select an Option</b>.
@@ -995,7 +995,7 @@ declare namespace javax {
              * @return an integer indicating the option selected by the user
              */
             // @ts-ignore
-            showInternalConfirmDialog(parentComponent: java.awt.Component, message: any): int
+            public static showInternalConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any): number /*int*/
             /**
              * Brings up a internal dialog panel where the number of choices
              * is determined by the <code>optionType</code> parameter.
@@ -1016,7 +1016,7 @@ declare namespace javax {
              * @return an integer indicating the option selected by the user
              */
             // @ts-ignore
-            showInternalConfirmDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/): int
+            public static showInternalConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/): number /*int*/
             /**
              * Brings up an internal dialog panel where the number of choices
              * is determined by the <code>optionType</code> parameter, where
@@ -1046,7 +1046,7 @@ declare namespace javax {
              * @return an integer indicating the option selected by the user
              */
             // @ts-ignore
-            showInternalConfirmDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/, messageType: number /*int*/): int
+            public static showInternalConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/, messageType: number /*int*/): number /*int*/
             /**
              * Brings up an internal dialog panel with a specified icon, where
              * the number of choices is determined by the <code>optionType</code>
@@ -1078,7 +1078,7 @@ declare namespace javax {
              * @return an integer indicating the option selected by the user
              */
             // @ts-ignore
-            showInternalConfirmDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon): int
+            public static showInternalConfirmDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon): number /*int*/
             /**
              * Brings up an internal dialog panel with a specified icon, where
              * the initial choice is determined by the <code>initialValue</code>
@@ -1126,7 +1126,7 @@ declare namespace javax {
              *           or <code>CLOSED_OPTION</code> if the user closed the Dialog
              */
             // @ts-ignore
-            showInternalOptionDialog(parentComponent: java.awt.Component, message: any, title: string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon, options: any[], initialValue: any): int
+            public static showInternalOptionDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, optionType: number /*int*/, messageType: number /*int*/, icon: javax.swing.Icon, options: java.lang.Object[] | any[], initialValue: java.lang.Object | any): number /*int*/
             /**
              * Shows an internal question-message dialog requesting input from
              * the user parented to <code>parentComponent</code>. The dialog
@@ -1137,7 +1137,7 @@ declare namespace javax {
              * @param message  the <code>Object</code> to display
              */
             // @ts-ignore
-            showInternalInputDialog(parentComponent: java.awt.Component, message: any): java.lang.String
+            public static showInternalInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any): string
             /**
              * Shows an internal dialog requesting input from the user parented
              * to <code>parentComponent</code> with the dialog having the title
@@ -1151,7 +1151,7 @@ declare namespace javax {
              *                     QUESTION_MESSAGE, or PLAIN_MESSAGE
              */
             // @ts-ignore
-            showInternalInputDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/): java.lang.String
+            public static showInternalInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/): string
             /**
              * Prompts the user for input in a blocking internal dialog where
              * the initial selection, possible selections, and all other
@@ -1181,7 +1181,7 @@ declare namespace javax {
              *           canceled the input
              */
             // @ts-ignore
-            showInternalInputDialog(parentComponent: java.awt.Component, message: any, title: string, messageType: number /*int*/, icon: javax.swing.Icon, selectionValues: any[], initialSelectionValue: any): java.lang.Object
+            public static showInternalInputDialog(parentComponent: java.awt.Component, message: java.lang.Object | any, title: java.lang.String | string, messageType: number /*int*/, icon: javax.swing.Icon, selectionValues: java.lang.Object[] | any[], initialSelectionValue: java.lang.Object | any): any
             /**
              * Creates and returns an instance of <code>JInternalFrame</code>.
              * The internal frame is created with the specified title,
@@ -1202,7 +1202,7 @@ declare namespace javax {
              *           not have a valid parent
              */
             // @ts-ignore
-            createInternalFrame(parentComponent: java.awt.Component, title: string): javax.swing.JInternalFrame
+            public createInternalFrame(parentComponent: java.awt.Component, title: java.lang.String | string): javax.swing.JInternalFrame
             /**
              * Returns the specified component's <code>Frame</code>.
              * @param parentComponent the <code>Component</code> to check for a
@@ -1218,7 +1218,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            getFrameForComponent(parentComponent: java.awt.Component): java.awt.Frame
+            public static getFrameForComponent(parentComponent: java.awt.Component): java.awt.Frame
             /**
              * Returns the specified component's desktop pane.
              * @param parentComponent the <code>Component</code> to check for a
@@ -1229,7 +1229,7 @@ declare namespace javax {
              *           <code>JInternalFrame</code>
              */
             // @ts-ignore
-            getDesktopPaneForComponent(parentComponent: java.awt.Component): javax.swing.JDesktopPane
+            public static getDesktopPaneForComponent(parentComponent: java.awt.Component): javax.swing.JDesktopPane
             /**
              * Sets the frame to use for class methods in which a frame is
              * not provided.
@@ -1239,7 +1239,7 @@ declare namespace javax {
              * @param newRootFrame the default <code>Frame</code> to use
              */
             // @ts-ignore
-            setRootFrame(newRootFrame: java.awt.Frame): void
+            public static setRootFrame(newRootFrame: java.awt.Frame): void
             /**
              * Returns the <code>Frame</code> to use for the class methods in
              * which a frame is not provided.
@@ -1251,7 +1251,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            getRootFrame(): java.awt.Frame
+            public static getRootFrame(): java.awt.Frame
             /**
              * Sets the UI object which implements the {@literal L&F} for this component.
              * @param ui  the <code>OptionPaneUI</code> {#literal L&F} object
@@ -1261,13 +1261,13 @@ declare namespace javax {
              *  description: The UI object that implements the optionpane's LookAndFeel
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.OptionPaneUI): void
+            public setUI(ui: javax.swing.plaf.OptionPaneUI): void
             /**
              * Returns the UI object which implements the {@literal L&F} for this component.
              * @return the <code>OptionPaneUI</code> object
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.OptionPaneUI
+            public getUI(): javax.swing.plaf.OptionPaneUI
             /**
              * Notification from the <code>UIManager</code> that the {@literal L&F} has changed.
              * Replaces the current UI object with the latest version from the
@@ -1275,7 +1275,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the UI class that implements the
              * {@literal L&F} for this component.
@@ -1284,7 +1284,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the option pane's message-object.
              * @param newMessage the <code>Object</code> to display
@@ -1294,14 +1294,14 @@ declare namespace javax {
              *  description: The optionpane's message object.
              */
             // @ts-ignore
-            setMessage(newMessage: any): void
+            public setMessage(newMessage: java.lang.Object | any): void
             /**
              * Returns the message-object this pane displays.
              * @see #setMessage
              * @return the <code>Object</code> that is displayed
              */
             // @ts-ignore
-            getMessage(): java.lang.Object
+            public getMessage(): any
             /**
              * Sets the icon to display. If non-<code>null</code>, the look and feel
              * does not provide an icon.
@@ -1312,14 +1312,14 @@ declare namespace javax {
              *  description: The option pane's type icon.
              */
             // @ts-ignore
-            setIcon(newIcon: javax.swing.Icon): void
+            public setIcon(newIcon: javax.swing.Icon): void
             /**
              * Returns the icon this pane displays.
              * @return the <code>Icon</code> that is displayed
              * @see #setIcon
              */
             // @ts-ignore
-            getIcon(): javax.swing.Icon
+            public getIcon(): javax.swing.Icon
             /**
              * Sets the value the user has chosen.
              * @param newValue  the chosen value
@@ -1329,7 +1329,7 @@ declare namespace javax {
              *  description: The option pane's value object.
              */
             // @ts-ignore
-            setValue(newValue: any): void
+            public setValue(newValue: java.lang.Object | any): void
             /**
              * Returns the value the user has selected. <code>UNINITIALIZED_VALUE</code>
              * implies the user has not yet made a choice, <code>null</code> means the
@@ -1343,7 +1343,7 @@ declare namespace javax {
              * @see #setValue
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Sets the options this pane displays. If an element in
              * <code>newOptions</code> is a <code>Component</code>
@@ -1357,14 +1357,14 @@ declare namespace javax {
              *  description: The option pane's options objects.
              */
             // @ts-ignore
-            setOptions(newOptions: any[]): void
+            public setOptions(newOptions: java.lang.Object[] | any[]): void
             /**
              * Returns the choices the user can make.
              * @return the array of <code>Objects</code> that give the user's choices
              * @see #setOptions
              */
             // @ts-ignore
-            getOptions(): java.lang.Object[]
+            public getOptions(): any[]
             /**
              * Sets the initial value that is to be enabled -- the
              * <code>Component</code>
@@ -1377,14 +1377,14 @@ declare namespace javax {
              *  description: The option pane's initial value object.
              */
             // @ts-ignore
-            setInitialValue(newInitialValue: any): void
+            public setInitialValue(newInitialValue: java.lang.Object | any): void
             /**
              * Returns the initial value.
              * @return the <code>Object</code> that gets the initial keyboard focus
              * @see #setInitialValue
              */
             // @ts-ignore
-            getInitialValue(): java.lang.Object
+            public getInitialValue(): any
             /**
              * Sets the option pane's message type.
              * The message type is used by the Look and Feel to determine the
@@ -1402,14 +1402,14 @@ declare namespace javax {
              *  description: The option pane's message type.
              */
             // @ts-ignore
-            setMessageType(newType: number /*int*/): void
+            public setMessageType(newType: number /*int*/): void
             /**
              * Returns the message type.
              * @return an integer specifying the message type
              * @see #setMessageType
              */
             // @ts-ignore
-            getMessageType(): int
+            public getMessageType(): number /*int*/
             /**
              * Sets the options to display.
              * The option type is used by the Look and Feel to
@@ -1428,14 +1428,14 @@ declare namespace javax {
              *  description: The option pane's option type.
              */
             // @ts-ignore
-            setOptionType(newType: number /*int*/): void
+            public setOptionType(newType: number /*int*/): void
             /**
              * Returns the type of options that are displayed.
              * @return an integer specifying the user-selectable options
              * @see #setOptionType
              */
             // @ts-ignore
-            getOptionType(): int
+            public getOptionType(): number /*int*/
             /**
              * Sets the input selection values for a pane that provides the user
              * with a list of items to choose from. (The UI provides a widget
@@ -1458,14 +1458,14 @@ declare namespace javax {
              *  description: The option pane's selection values.
              */
             // @ts-ignore
-            setSelectionValues(newValues: any[]): void
+            public setSelectionValues(newValues: java.lang.Object[] | any[]): void
             /**
              * Returns the input selection values.
              * @return the array of <code>Objects</code> the user can select
              * @see #setSelectionValues
              */
             // @ts-ignore
-            getSelectionValues(): java.lang.Object[]
+            public getSelectionValues(): any[]
             /**
              * Sets the input value that is initially displayed as selected to the user.
              * Only used if <code>wantsInput</code> is true.
@@ -1476,7 +1476,7 @@ declare namespace javax {
              *  description: The option pane's initial selection value object.
              */
             // @ts-ignore
-            setInitialSelectionValue(newValue: any): void
+            public setInitialSelectionValue(newValue: java.lang.Object | any): void
             /**
              * Returns the input value that is displayed as initially selected to the user.
              * @return the initially selected value
@@ -1484,7 +1484,7 @@ declare namespace javax {
              * @see #setSelectionValues
              */
             // @ts-ignore
-            getInitialSelectionValue(): java.lang.Object
+            public getInitialSelectionValue(): any
             /**
              * Sets the input value that was selected or input by the user.
              * Only used if <code>wantsInput</code> is true.  Note that this method
@@ -1503,7 +1503,7 @@ declare namespace javax {
              *  description: The option pane's input value object.
              */
             // @ts-ignore
-            setInputValue(newValue: any): void
+            public setInputValue(newValue: java.lang.Object | any): void
             /**
              * Returns the value the user has input, if <code>wantsInput</code>
              * is true.
@@ -1516,7 +1516,7 @@ declare namespace javax {
              * @see #setInputValue
              */
             // @ts-ignore
-            getInputValue(): java.lang.Object
+            public getInputValue(): any
             /**
              * Returns the maximum number of characters to place on a line in a
              * message. Default is to return <code>Integer.MAX_VALUE</code>.
@@ -1525,7 +1525,7 @@ declare namespace javax {
              * @return an integer giving the maximum number of characters on a line
              */
             // @ts-ignore
-            getMaxCharactersPerLineCount(): int
+            public getMaxCharactersPerLineCount(): number /*int*/
             /**
              * Sets the <code>wantsInput</code> property.
              * If <code>newValue</code> is true, an input component
@@ -1544,14 +1544,14 @@ declare namespace javax {
              *  description: Flag which allows the user to input a value.
              */
             // @ts-ignore
-            setWantsInput(newValue: boolean): void
+            public setWantsInput(newValue: boolean): void
             /**
              * Returns the value of the <code>wantsInput</code> property.
              * @return true if an input component will be provided
              * @see #setWantsInput
              */
             // @ts-ignore
-            getWantsInput(): boolean
+            public getWantsInput(): boolean
             /**
              * Requests that the initial value be selected, which will set
              * focus to the initial value. This method
@@ -1559,7 +1559,7 @@ declare namespace javax {
              * is made visible.
              */
             // @ts-ignore
-            selectInitialValue(): void
+            public selectInitialValue(): void
             /**
              * Returns a string representation of this <code>JOptionPane</code>.
              * This method
@@ -1570,7 +1570,7 @@ declare namespace javax {
              * @return a string representation of this <code>JOptionPane</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns the <code>AccessibleContext</code> associated with this JOptionPane.
              * For option panes, the <code>AccessibleContext</code> takes the form of an
@@ -1582,7 +1582,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this option pane
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

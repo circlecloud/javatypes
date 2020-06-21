@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            constructor(comparator: java.util.Comparator<any super E>)
+            constructor(comparator: java.util.Comparator<any>)
             /**
              * Creates a {@code PriorityQueue} with the specified initial capacity
              * that orders its elements according to the specified comparator.
@@ -85,7 +85,7 @@ declare namespace java {
              *          less than 1
              */
             // @ts-ignore
-            constructor(initialCapacity: number /*int*/, comparator: java.util.Comparator<any super E>)
+            constructor(initialCapacity: number /*int*/, comparator: java.util.Comparator<any>)
             /**
              * Creates a {@code PriorityQueue} containing the elements in the
              * specified collection.  If the specified collection is an instance of
@@ -102,7 +102,7 @@ declare namespace java {
              *          of its elements are null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Creates a {@code PriorityQueue} containing the elements in the
              * specified priority queue.  This priority queue will be
@@ -117,7 +117,7 @@ declare namespace java {
              *          of its elements are null
              */
             // @ts-ignore
-            constructor(c: java.util.PriorityQueue<E>)
+            constructor(c: java.util.PriorityQueue<any>)
             /**
              * Creates a {@code PriorityQueue} containing the elements in the
              * specified sorted set.   This priority queue will be ordered
@@ -131,7 +131,7 @@ declare namespace java {
              *          of its elements are null
              */
             // @ts-ignore
-            constructor(c: java.util.SortedSet<E>)
+            constructor(c: java.util.SortedSet<any>)
             /**
              * Inserts the specified element into this priority queue.
              * @return {#code true} (as specified by {@link Collection#add})
@@ -141,7 +141,7 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Inserts the specified element into this priority queue.
              * @return {#code true} (as specified by {@link Queue#offer})
@@ -151,9 +151,9 @@ declare namespace java {
              * @throws NullPointerException if the specified element is null
              */
             // @ts-ignore
-            offer(e: E): boolean
+            public offer(e: E): boolean
             // @ts-ignore
-            peek(): E
+            public peek(): E
             /**
              * Removes a single instance of the specified element from this queue,
              * if it is present.  More formally, removes an element {@code e} such
@@ -165,7 +165,7 @@ declare namespace java {
              * @return {#code true} if this queue changed as a result of the call
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Returns {@code true} if this queue contains the specified element.
              * More formally, returns {@code true} if and only if this queue contains
@@ -174,7 +174,7 @@ declare namespace java {
              * @return {#code true} if this queue contains the specified element
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Returns an array containing all of the elements in this queue.
              * The elements are in no particular order.
@@ -186,7 +186,7 @@ declare namespace java {
              * @return an array containing all of the elements in this queue
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * Returns an array containing all of the elements in this queue; the
              * runtime type of the returned array is that of the specified array.
@@ -218,24 +218,24 @@ declare namespace java {
              * @throws NullPointerException if the specified array is null
              */
             // @ts-ignore
-            toArray<T>(a: T[]): T
+            public toArray<T>(a: T[]): T
             /**
              * Returns an iterator over the elements in this queue. The iterator
              * does not return the elements in any particular order.
              * @return an iterator over the elements in this queue
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Removes all of the elements from this priority queue.
              * The queue will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             // @ts-ignore
-            poll(): E
+            public poll(): E
             /**
              * Returns the comparator used to order the elements in this
              * queue, or {@code null} if this queue is sorted according to
@@ -245,7 +245,7 @@ declare namespace java {
              *          natural ordering of its elements
              */
             // @ts-ignore
-            comparator(): java.util.Comparator<? super E>
+            public comparator(): java.util.Comparator<any>
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -258,7 +258,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

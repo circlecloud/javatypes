@@ -29,7 +29,7 @@ declare namespace java {
                  * @return the event count
                  */
                 // @ts-ignore
-                count(): int
+                count(): number /*int*/
                 /**
                  * Returns the context for the event.
                  * <p> In the case of {@link StandardWatchEventKinds#ENTRY_CREATE ENTRY_CREATE},

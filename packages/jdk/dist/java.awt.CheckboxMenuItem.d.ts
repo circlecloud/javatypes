@@ -48,7 +48,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(label: string)
+            constructor(label: java.lang.String | string)
             /**
              * Create a check box menu item with the specified label and state.
              * @param label   a string label for the check box menu item,
@@ -62,7 +62,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(label: string, state: boolean)
+            constructor(label: java.lang.String | string, state: boolean)
             /**
              * Creates the peer of the checkbox item.  This peer allows us to
              * change the look of the checkbox item without changing its
@@ -72,7 +72,7 @@ declare namespace java {
              * @see java.awt.Component#getToolkit()
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Determines whether the state of this check box menu item
              * is "on" or "off."
@@ -82,7 +82,7 @@ declare namespace java {
              * @see #setState
              */
             // @ts-ignore
-            getState(): boolean
+            public getState(): boolean
             /**
              * Sets this check box menu item to the specified state.
              * The boolean value <code>true</code> indicates "on" while
@@ -98,14 +98,14 @@ declare namespace java {
              * @see #getState
              */
             // @ts-ignore
-            setState(b: boolean): void
+            public setState(b: boolean): void
             /**
              * Returns the an array (length 1) containing the checkbox menu item
              * label or null if the checkbox is not selected.
              * @see ItemSelectable
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * Adds the specified item listener to receive item events from
              * this check box menu item.  Item events are sent in response to user
@@ -122,7 +122,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addItemListener(l: java.awt.event.ItemListener): void
+            public addItemListener(l: java.awt.event.ItemListener): void
             /**
              * Removes the specified item listener so that it no longer receives
              * item events from this check box menu item.
@@ -137,7 +137,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeItemListener(l: java.awt.event.ItemListener): void
+            public removeItemListener(l: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the item listeners
              * registered on this checkbox menuitem.
@@ -151,7 +151,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -181,7 +181,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this check box menu item.
              * If the event is an instance of <code>ItemEvent</code>,
@@ -234,7 +234,7 @@ declare namespace java {
              * @return the parameter string of this check box menu item
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            public paramString(): string
             /**
              * Gets the AccessibleContext associated with this CheckboxMenuItem.
              * For checkbox menu items, the AccessibleContext takes the
@@ -245,7 +245,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

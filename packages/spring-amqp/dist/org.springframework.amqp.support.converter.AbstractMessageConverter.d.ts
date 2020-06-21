@@ -9,7 +9,7 @@ declare namespace org {
                      * @author Gary Russell
                      */
                     // @ts-ignore
-                    class AbstractMessageConverter extends java.lang.Object implements org.springframework.amqp.support.converter.MessageConverter {
+                    abstract class AbstractMessageConverter extends java.lang.Object implements org.springframework.amqp.support.converter.MessageConverter {
                         // @ts-ignore
                         constructor()
                         /**
@@ -18,7 +18,7 @@ declare namespace org {
                          * @param createMessageIds the flag value to set
                          */
                         // @ts-ignore
-                        setCreateMessageIds(createMessageIds: boolean): void
+                        public setCreateMessageIds(createMessageIds: boolean): void
                         /**
                          * Flag to indicate that new messages should have unique identifiers added to their properties before sending.
                          * @return the flag value
@@ -26,9 +26,9 @@ declare namespace org {
                         // @ts-ignore
                         isCreateMessageIds(): boolean
                         // @ts-ignore
-                        toMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        public toMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         // @ts-ignore
-                        toMessage(object: any, messagePropertiesArg: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
+                        public toMessage(object: java.lang.Object | any, messagePropertiesArg: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
                         /**
                          * Crate a message from the payload object and message properties provided. The message id will be added to the
                          * properties if necessary later.
@@ -39,7 +39,7 @@ declare namespace org {
                          * @since 2.1
                          */
                         // @ts-ignore
-                        createMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
+                        createMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
                         /**
                          * Crate a message from the payload object and message properties provided. The message id will be added to the
                          * properties if necessary later.
@@ -48,7 +48,7 @@ declare namespace org {
                          * @return a message.
                          */
                         // @ts-ignore
-                        abstract createMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        abstract createMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                     }
                 }
             }

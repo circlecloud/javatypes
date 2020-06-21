@@ -18,7 +18,7 @@ declare namespace org {
                      * @param extraCatalog The extra catalog to register
                      */
                     // @ts-ignore
-                    registerAdditionalCatalog(extraCatalog: T extends org.spongepowered.api.CatalogType): void
+                    registerAdditionalCatalog(extraCatalog: T): void
                 }
             }
         }

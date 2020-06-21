@@ -15,7 +15,7 @@ declare namespace java {
              * @return the name of this network interface
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Convenience method to return an Enumeration with all or a
              * subset of the InetAddresses bound to this network interface.
@@ -30,7 +30,7 @@ declare namespace java {
              *  bound to this network interface
              */
             // @ts-ignore
-            getInetAddresses(): java.util.Enumeration<java.net.InetAddress>
+            public getInetAddresses(): java.util.Enumeration<java.net.InetAddress>
             /**
              * Get a List of all or a subset of the {@code InterfaceAddresses}
              * of this network interface.
@@ -44,7 +44,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInterfaceAddresses(): java.util.List<java.net.InterfaceAddress>
+            public getInterfaceAddresses(): Array<java.net.InterfaceAddress>
             /**
              * Get an Enumeration with all the subinterfaces (also known as virtual
              * interfaces) attached to this network interface.
@@ -55,7 +55,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getSubInterfaces(): java.util.Enumeration<java.net.NetworkInterface>
+            public getSubInterfaces(): java.util.Enumeration<java.net.NetworkInterface>
             /**
              * Returns the parent NetworkInterface of this interface if this is
              * a subinterface, or {@code null} if it is a physical
@@ -64,7 +64,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getParent(): java.net.NetworkInterface
+            public getParent(): java.net.NetworkInterface
             /**
              * Returns the index of this network interface. The index is an integer greater
              * or equal to zero, or {@code -1} for unknown. This is a system specific value
@@ -76,7 +76,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getIndex(): int
+            public getIndex(): number /*int*/
             /**
              * Get the display name of this network interface.
              * A display name is a human readable String describing the network
@@ -85,7 +85,7 @@ declare namespace java {
              *          interface, or null if no display name is available.
              */
             // @ts-ignore
-            getDisplayName(): java.lang.String
+            public getDisplayName(): string
             /**
              * Searches for the network interface with the specified name.
              * @param name
@@ -99,7 +99,7 @@ declare namespace java {
              *           If the specified name is {#code null}.
              */
             // @ts-ignore
-            getByName(name: string): java.net.NetworkInterface
+            public static getByName(name: java.lang.String | string): java.net.NetworkInterface
             /**
              * Get a network interface given its index.
              * @param index an integer, the index of the interface
@@ -111,7 +111,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getByIndex(index: number /*int*/): java.net.NetworkInterface
+            public static getByIndex(index: number /*int*/): java.net.NetworkInterface
             /**
              * Convenience method to search for a network interface that
              * has the specified Internet Protocol (IP) address bound to
@@ -131,7 +131,7 @@ declare namespace java {
              *           If the specified address is {#code null}.
              */
             // @ts-ignore
-            getByInetAddress(addr: java.net.InetAddress): java.net.NetworkInterface
+            public static getByInetAddress(addr: java.net.InetAddress): java.net.NetworkInterface
             /**
              * Returns all the interfaces on this machine. The {@code Enumeration}
              * contains at least one element, possibly representing a loopback
@@ -143,7 +143,7 @@ declare namespace java {
              * @exception SocketException  if an I/O error occurs.
              */
             // @ts-ignore
-            getNetworkInterfaces(): java.util.Enumeration<java.net.NetworkInterface>
+            public static getNetworkInterfaces(): java.util.Enumeration<java.net.NetworkInterface>
             /**
              * Returns whether a network interface is up and running.
              * @return {#code true} if the interface is up and running.
@@ -151,7 +151,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            isUp(): boolean
+            public isUp(): boolean
             /**
              * Returns whether a network interface is a loopback interface.
              * @return {#code true} if the interface is a loopback interface.
@@ -159,7 +159,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            isLoopback(): boolean
+            public isLoopback(): boolean
             /**
              * Returns whether a network interface is a point to point interface.
              * A typical point to point interface would be a PPP connection through
@@ -170,7 +170,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            isPointToPoint(): boolean
+            public isPointToPoint(): boolean
             /**
              * Returns whether a network interface supports multicasting or not.
              * @return {#code true} if the interface supports Multicasting.
@@ -178,7 +178,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            supportsMulticast(): boolean
+            public supportsMulticast(): boolean
             /**
              * Returns the hardware address (usually MAC) of the interface if it
              * has one and if it can be accessed given the current privileges.
@@ -192,7 +192,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getHardwareAddress(): byte[]
+            public getHardwareAddress(): number /*byte*/[]
             /**
              * Returns the Maximum Transmission Unit (MTU) of this interface.
              * @return the value of the MTU for that interface.
@@ -200,7 +200,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getMTU(): int
+            public getMTU(): number /*int*/
             /**
              * Returns whether this interface is a virtual interface (also called
              * subinterface).
@@ -214,7 +214,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            isVirtual(): boolean
+            public isVirtual(): boolean
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -229,11 +229,11 @@ declare namespace java {
              * @see java.net.InetAddress#getAddress()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

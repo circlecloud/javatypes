@@ -8,24 +8,24 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                class TaskManagementConfigUtils extends java.lang.Object {
+                abstract class TaskManagementConfigUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
                      * The bean name of the internally managed Scheduled annotation processor.
                      */
                     // @ts-ignore
-                    readonly SCHEDULED_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly SCHEDULED_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed Async annotation processor.
                      */
                     // @ts-ignore
-                    readonly ASYNC_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly ASYNC_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed AspectJ async execution aspect.
                      */
                     // @ts-ignore
-                    readonly ASYNC_EXECUTION_ASPECT_BEAN_NAME: string
+                    public static readonly ASYNC_EXECUTION_ASPECT_BEAN_NAME: java.lang.String | string
                 }
             }
         }

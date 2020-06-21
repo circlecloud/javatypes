@@ -45,7 +45,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getAxis(): int
+                public getAxis(): number /*int*/
                 /**
                  * Sets the tile axis property.  This is the axis along which
                  * the child views are tiled.
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setAxis(axis: number /*int*/): void
+                public setAxis(axis: number /*int*/): void
                 /**
                  * Invalidates the layout along an axis.  This happens
                  * automatically if the preferences have changed for
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                layoutChanged(axis: number /*int*/): void
+                public layoutChanged(axis: number /*int*/): void
                 /**
                  * Determines if the layout is valid along the given axis.
                  * @param axis either <code>View.X_AXIS</code> or <code>View.Y_AXIS</code>
@@ -99,7 +99,7 @@ declare namespace javax {
                  *    (useful to remove)
                  */
                 // @ts-ignore
-                replace(index: number /*int*/, length: number /*int*/, elems: javax.swing.text.View[]): void
+                public replace(index: number /*int*/, length: number /*int*/, elems: javax.swing.text.View[]): void
                 /**
                  * Forwards the given <code>DocumentEvent</code> to the child views
                  * that need to be notified of the change to the model.
@@ -130,7 +130,7 @@ declare namespace javax {
                  * @param height true if the height preference should change
                  */
                 // @ts-ignore
-                preferenceChanged(child: javax.swing.text.View, width: boolean, height: boolean): void
+                public preferenceChanged(child: javax.swing.text.View, width: boolean, height: boolean): void
                 /**
                  * Gets the resize weight.  A value of 0 or less is not resizable.
                  * @param axis may be either <code>View.X_AXIS</code> or
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getResizeWeight(axis: number /*int*/): int
+                public getResizeWeight(axis: number /*int*/): number /*int*/
                 /**
                  * Sets the size of the view.  This should cause
                  * layout of the view if the view caches any layout
@@ -149,7 +149,7 @@ declare namespace javax {
                  * @param height the height &gt;= 0
                  */
                 // @ts-ignore
-                setSize(width: number /*float*/, height: number /*float*/): void
+                public setSize(width: number /*float*/, height: number /*float*/): void
                 /**
                  * Renders the <code>BoxView</code> using the given
                  * rendering surface and area
@@ -161,7 +161,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, allocation: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, allocation: java.awt.Shape): void
                 /**
                  * Fetches the allocation for the given child view.
                  * This enables finding out where various views
@@ -175,7 +175,7 @@ declare namespace javax {
                  *           or <code>null</code> if the layout is invalid
                  */
                 // @ts-ignore
-                getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
+                public getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.  This makes
@@ -188,7 +188,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Determines the desired alignment for this view along an
                  * axis.  This is implemented to give the total alignment
@@ -218,7 +218,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getAlignment(axis: number /*int*/): float
+                public getAlignment(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the preferred span for this view along an
                  * axis.
@@ -231,7 +231,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis type
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the minimum span for this view along an
                  * axis.
@@ -244,7 +244,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis type
                  */
                 // @ts-ignore
-                getMinimumSpan(axis: number /*int*/): float
+                public getMinimumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the maximum span for this view along an
                  * axis.
@@ -257,7 +257,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis type
                  */
                 // @ts-ignore
-                getMaximumSpan(axis: number /*int*/): float
+                public getMaximumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Are the allocations for the children still
                  * valid?
@@ -316,14 +316,14 @@ declare namespace javax {
                  * @return the current width of the box
                  */
                 // @ts-ignore
-                getWidth(): int
+                public getWidth(): number /*int*/
                 /**
                  * Returns the current height of the box.  This is the height that
                  * it was last allocated.
                  * @return the current height of the box
                  */
                 // @ts-ignore
-                getHeight(): int
+                public getHeight(): number /*int*/
                 /**
                  * Performs layout for the major axis of the box (i.e. the
                  * axis that it represents). The results of the layout (the
@@ -413,7 +413,7 @@ declare namespace javax {
                  * @return the offset (location) for the specified child
                  */
                 // @ts-ignore
-                getOffset(axis: number /*int*/, childIndex: number /*int*/): int
+                getOffset(axis: number /*int*/, childIndex: number /*int*/): number /*int*/
                 /**
                  * Fetches the span of a particular child's current layout.
                  * @param axis the axis being studied
@@ -421,7 +421,7 @@ declare namespace javax {
                  * @return the span (width or height) of the specified child
                  */
                 // @ts-ignore
-                getSpan(axis: number /*int*/, childIndex: number /*int*/): int
+                getSpan(axis: number /*int*/, childIndex: number /*int*/): number /*int*/
                 /**
                  * Determines in which direction the next view lays.
                  * Consider the View at index n. Typically the <code>View</code>s

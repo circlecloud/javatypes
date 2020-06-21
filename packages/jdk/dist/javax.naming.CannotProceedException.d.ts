@@ -34,7 +34,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of CannotProceedException.
              * All fields default to null.
@@ -68,7 +68,7 @@ declare namespace javax {
              * @see #setEnvironment
              */
             // @ts-ignore
-            environment: java.util.Hashtable<any, ?>
+            environment: java.util.Hashtable<any, any>
             /**
              * Contains the name of the resolved object, relative
              * to the context <code>altNameCtx</code>.  It is a composite name.
@@ -113,7 +113,7 @@ declare namespace javax {
              * @see #setEnvironment
              */
             // @ts-ignore
-            getEnvironment(): java.util.Hashtable<?, ?>
+            getEnvironment(): java.util.Hashtable<any, any>
             /**
              * Sets the environment that will be returned when getEnvironment()
              * is called.
@@ -123,7 +123,7 @@ declare namespace javax {
              * @see #getEnvironment
              */
             // @ts-ignore
-            setEnvironment(environment: java.util.Hashtable<any, ?>): void
+            setEnvironment(environment: java.util.Hashtable<any, any>): void
             /**
              * Retrieves the "remaining new name" field of this exception, which is
              * used when this exception is thrown during a rename() operation.

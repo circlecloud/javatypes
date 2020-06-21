@@ -14,13 +14,13 @@ declare namespace org {
                          * achieved to unlock a {@link Advancement}.
                          */
                         // @ts-ignore
-                        
+                        readonly EMPTY: org.spongepowered.api.advancement.criteria.AdvancementCriterion
                         /**
                          * Represents a dummy criterion, this will never be triggered
                          * by vanilla Minecraft.
                          */
                         // @ts-ignore
-                        
+                        readonly DUMMY: org.spongepowered.api.advancement.criteria.AdvancementCriterion
                         /**
                          * Creates a new {@link Builder} to create {@link AdvancementCriterion}s.
                          * @return The new builder
@@ -32,7 +32,7 @@ declare namespace org {
                          * @return The name
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                         /**
                          * Combines this {@link AdvancementCriterion} with the other criteria
                          * to create an AND operation.
@@ -83,7 +83,7 @@ declare namespace org {
                          * @return The trigger
                          */
                         // @ts-ignore
-                        getTrigger(): java.util.Optional<org.spongepowered.api.advancement.criteria.trigger.FilteredTrigger<?>>
+                        getTrigger(): java.util.Optional<org.spongepowered.api.advancement.criteria.trigger.FilteredTrigger<any>>
                     }
                 }
             }

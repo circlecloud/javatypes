@@ -28,7 +28,7 @@ declare namespace javax {
                  * contains.
                  */
                 // @ts-ignore
-                getChildCount(): int
+                getChildCount(): number /*int*/
                 /**
                  * Returns the parent <code>TreeNode</code> of the receiver.
                  */
@@ -40,7 +40,7 @@ declare namespace javax {
                  * returned.
                  */
                 // @ts-ignore
-                getIndex(node: javax.swing.tree.TreeNode): int
+                getIndex(node: javax.swing.tree.TreeNode): number /*int*/
                 /**
                  * Returns true if the receiver allows children.
                  */
@@ -55,7 +55,7 @@ declare namespace javax {
                  * Returns the children of the receiver as an <code>Enumeration</code>.
                  */
                 // @ts-ignore
-                children(): java.util.Enumeration
+                children(): java.util.Enumeration<any>
             }
         }
     }

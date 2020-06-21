@@ -39,7 +39,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.support.BeanDefinitionRegistry#registerBeanDefinition
                          */
                         // @ts-ignore
-                        registerSingleton(beanName: string, singletonObject: any): void
+                        registerSingleton(beanName: java.lang.String | string, singletonObject: java.lang.Object | any): void
                         /**
                          * Return the (raw) singleton object registered under the given name.
                          * <p>Only checks already instantiated singletons; does not return an Object
@@ -54,7 +54,7 @@ declare namespace org {
                          * @see ConfigurableListableBeanFactory#getBeanDefinition
                          */
                         // @ts-ignore
-                        getSingleton(beanName: string): java.lang.Object
+                        getSingleton(beanName: java.lang.String | string): any
                         /**
                          * Check if this registry contains a singleton instance with the given name.
                          * <p>Only checks already instantiated singletons; does not return {@code true}
@@ -78,7 +78,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.BeanFactory#containsBean
                          */
                         // @ts-ignore
-                        containsSingleton(beanName: string): boolean
+                        containsSingleton(beanName: java.lang.String | string): boolean
                         /**
                          * Return the names of singleton beans registered in this registry.
                          * <p>Only checks already instantiated singletons; does not return names
@@ -92,7 +92,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionNames
                          */
                         // @ts-ignore
-                        getSingletonNames(): java.lang.String[]
+                        getSingletonNames(): string[]
                         /**
                          * Return the number of singleton beans registered in this registry.
                          * <p>Only checks already instantiated singletons; does not count
@@ -106,14 +106,14 @@ declare namespace org {
                          * @see org.springframework.beans.factory.ListableBeanFactory#getBeanDefinitionCount
                          */
                         // @ts-ignore
-                        getSingletonCount(): int
+                        getSingletonCount(): number /*int*/
                         /**
                          * Return the singleton mutex used by this registry (for external collaborators).
                          * @return the mutex object (never {#code null})
                          * @since 4.2
                          */
                         // @ts-ignore
-                        getSingletonMutex(): java.lang.Object
+                        getSingletonMutex(): any
                     }
                 }
             }

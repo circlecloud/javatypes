@@ -36,14 +36,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getTarget(): java.awt.Container
+            public getTarget(): java.awt.Container
             /**
              * Indicates a child has changed its layout related information,
              * which causes any cached calculations to be flushed.
              * @param target the container
              */
             // @ts-ignore
-            invalidateLayout(target: java.awt.Container): void
+            public invalidateLayout(target: java.awt.Container): void
             /**
              * Adds the specified component to the layout. Used by
              * this class to know when to invalidate layout.
@@ -51,14 +51,14 @@ declare namespace javax {
              * @param comp the the component to be added
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Removes the specified component from the layout. Used by
              * this class to know when to invalidate layout.
              * @param comp the component to remove
              */
             // @ts-ignore
-            removeLayoutComponent(comp: java.awt.Component): void
+            public removeLayoutComponent(comp: java.awt.Component): void
             /**
              * Adds the specified component to the layout, using the specified
              * constraint object. Used by this class to know when to invalidate
@@ -67,7 +67,7 @@ declare namespace javax {
              * @param constraints  where/how the component is added to the layout.
              */
             // @ts-ignore
-            addLayoutComponent(comp: java.awt.Component, constraints: any): void
+            public addLayoutComponent(comp: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Returns the preferred dimensions for this layout given the components
              * in the specified target container.  Recomputes the layout if it
@@ -78,7 +78,7 @@ declare namespace javax {
              * @see #minimumLayoutSize
              */
             // @ts-ignore
-            preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the minimum dimensions needed to lay out the components
              * contained in the specified target container.  Recomputes the layout
@@ -88,7 +88,7 @@ declare namespace javax {
              * @see #preferredLayoutSize
              */
             // @ts-ignore
-            minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the maximum dimensions needed to lay out the components
              * contained in the specified target container.  Recomputes the
@@ -100,21 +100,21 @@ declare namespace javax {
              * @see #preferredLayoutSize
              */
             // @ts-ignore
-            maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the alignment along the x axis for the container.
              * @param target the container
              * @return the alignment &gt;= 0.0f &amp;&amp; &lt;= 1.0f
              */
             // @ts-ignore
-            getLayoutAlignmentX(target: java.awt.Container): float
+            public getLayoutAlignmentX(target: java.awt.Container): number /*float*/
             /**
              * Returns the alignment along the y axis for the container.
              * @param target the container
              * @return the alignment &gt;= 0.0f &amp;&amp; &lt;= 1.0f
              */
             // @ts-ignore
-            getLayoutAlignmentY(target: java.awt.Container): float
+            public getLayoutAlignmentY(target: java.awt.Container): number /*float*/
             /**
              * Called by the AWT when the specified container needs to be laid out.
              * @param target  the container to lay out
@@ -122,7 +122,7 @@ declare namespace javax {
              *                       constructor
              */
             // @ts-ignore
-            layoutContainer(target: java.awt.Container): void
+            public layoutContainer(target: java.awt.Container): void
         }
     }
 }

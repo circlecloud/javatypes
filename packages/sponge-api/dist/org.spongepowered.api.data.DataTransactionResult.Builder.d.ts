@@ -18,7 +18,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        result(type: org.spongepowered.api.data.DataTransactionResult.Type): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public result(type: org.spongepowered.api.data.DataTransactionResult.Type): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Adds the provided {@link ImmutableValue} to the {@link List} of
                          * "replaced" {@link ImmutableValue}s. The replaced values are always
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        replace(value: org.spongepowered.api.data.value.immutable.ImmutableValue<any>): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public replace(value: org.spongepowered.api.data.value.immutable.ImmutableValue<any>): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Adds the provided {@link ImmutableValue}s to the {@link List} of
                          * "replaced" {@link ImmutableValue}s. The replaced values are always
@@ -42,7 +42,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        replace(values: java.lang.Iterable<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public replace(values: java.lang.Iterable<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Adds the provided {@link ImmutableValue} to the {@link List} of
                          * "rejected" {@link ImmutableValue}s. The rejected values are always
@@ -54,7 +54,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        reject(value: org.spongepowered.api.data.value.immutable.ImmutableValue<any>): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public reject(value: org.spongepowered.api.data.value.immutable.ImmutableValue<any>): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Adds the provided {@link ImmutableValue}s to the {@link List} of
                          * "rejected" {@link ImmutableValue}s. The rejected values are always
@@ -66,7 +66,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        reject(values: java.lang.Iterable<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public reject(values: java.lang.Iterable<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Adds the provided {@link ImmutableValue} to the {@link List} of
                          * "successful" {@link ImmutableValue}s. The rejected values are always
@@ -78,7 +78,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        success(value: org.spongepowered.api.data.value.immutable.ImmutableValue<any>): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public success(value: org.spongepowered.api.data.value.immutable.ImmutableValue<any>): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Adds the provided {@link ImmutableValue}s to the {@link List} of
                          * "successful" {@link ImmutableValue}s. The rejected values are always
@@ -90,7 +90,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        success(values: java.lang.Iterable<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public success(values: java.lang.Iterable<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Combines the currently building {@link DataTransactionResult} with the
                          * one provided. Usually, this means that there is some merging of the
@@ -102,7 +102,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        absorbResult(result: org.spongepowered.api.data.DataTransactionResult): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public absorbResult(result: org.spongepowered.api.data.DataTransactionResult): org.spongepowered.api.data.DataTransactionResult.Builder
                         /**
                          * Builds a new {@link DataTransactionResult} with the providing
                          * {@link List}s of {@link ImmutableValue}s that are successfully
@@ -111,11 +111,11 @@ declare namespace org {
                          * @return The newly created transaction result
                          */
                         // @ts-ignore
-                        build(): org.spongepowered.api.data.DataTransactionResult
+                        public build(): org.spongepowered.api.data.DataTransactionResult
                         // @ts-ignore
-                        from(value: org.spongepowered.api.data.DataTransactionResult): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public from(value: org.spongepowered.api.data.DataTransactionResult): org.spongepowered.api.data.DataTransactionResult.Builder
                         // @ts-ignore
-                        reset(): org.spongepowered.api.data.DataTransactionResult.Builder
+                        public reset(): org.spongepowered.api.data.DataTransactionResult.Builder
                     }
                 }
             }

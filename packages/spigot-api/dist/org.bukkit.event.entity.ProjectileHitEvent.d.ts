@@ -18,30 +18,30 @@ declare namespace org {
                     // @ts-ignore
                     constructor(projectile: org.bukkit.entity.Projectile, hitEntity: org.bukkit.entity.Entity, hitBlock: org.bukkit.block.Block, hitFace: org.bukkit.block.BlockFace)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Projectile
+                    public getEntity(): org.bukkit.entity.Projectile
                     /**
                      * Gets the block that was hit, if it was a block that was hit.
                      * @return hit block or else null
                      */
                     // @ts-ignore
-                    getHitBlock(): org.bukkit.block.Block
+                    public getHitBlock(): org.bukkit.block.Block
                     /**
                      * Gets the block face that was hit, if it was a block that was hit and the
                      * face was provided in the vent.
                      * @return hit face or else null
                      */
                     // @ts-ignore
-                    getHitBlockFace(): org.bukkit.block.BlockFace
+                    public getHitBlockFace(): org.bukkit.block.BlockFace
                     /**
                      * Gets the entity that was hit, if it was an entity that was hit.
                      * @return hit entity or else null
                      */
                     // @ts-ignore
-                    getHitEntity(): org.bukkit.entity.Entity
+                    public getHitEntity(): org.bukkit.entity.Entity
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

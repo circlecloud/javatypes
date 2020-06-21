@@ -42,31 +42,31 @@ declare namespace javax {
                  * Useful constant for the <CODE>addNotification</CODE> method.
                  */
                 // @ts-ignore
-                readonly ONE_SECOND: number /*long*/
+                public static readonly ONE_SECOND: number /*long*/
                 /**
                  * Number of milliseconds in one minute.
                  * Useful constant for the <CODE>addNotification</CODE> method.
                  */
                 // @ts-ignore
-                readonly ONE_MINUTE: number /*long*/
+                public static readonly ONE_MINUTE: number /*long*/
                 /**
                  * Number of milliseconds in one hour.
                  * Useful constant for the <CODE>addNotification</CODE> method.
                  */
                 // @ts-ignore
-                readonly ONE_HOUR: number /*long*/
+                public static readonly ONE_HOUR: number /*long*/
                 /**
                  * Number of milliseconds in one day.
                  * Useful constant for the <CODE>addNotification</CODE> method.
                  */
                 // @ts-ignore
-                readonly ONE_DAY: number /*long*/
+                public static readonly ONE_DAY: number /*long*/
                 /**
                  * Number of milliseconds in one week.
                  * Useful constant for the <CODE>addNotification</CODE> method.
                  */
                 // @ts-ignore
-                readonly ONE_WEEK: number /*long*/
+                public static readonly ONE_WEEK: number /*long*/
                 /**
                  * Allows the timer MBean to perform any operations it needs before being registered
                  * in the MBean server.
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @exception java.lang.Exception
                  */
                 // @ts-ignore
-                preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+                public preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
                 /**
                  * Allows the timer MBean to perform any operations needed after having been
                  * registered in the MBean server or after the registration has failed.
@@ -86,7 +86,7 @@ declare namespace javax {
                  * Not used in this context.
                  */
                 // @ts-ignore
-                postRegister(registrationDone: java.lang.Boolean): void
+                public postRegister(registrationDone: java.lang.Boolean): void
                 /**
                  * Allows the timer MBean to perform any operations it needs before being unregistered
                  * by the MBean server.
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @exception java.lang.Exception
                  */
                 // @ts-ignore
-                preDeregister(): void
+                public preDeregister(): void
                 /**
                  * Allows the timer MBean to perform any operations needed after having been
                  * unregistered by the MBean server.
@@ -103,9 +103,9 @@ declare namespace javax {
                  * Not used in this context.
                  */
                 // @ts-ignore
-                postDeregister(): void
+                public postDeregister(): void
                 // @ts-ignore
-                getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+                public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
                 /**
                  * Starts the timer.
                  * <P>
@@ -116,12 +116,12 @@ declare namespace javax {
                  * from the list of notifications.
                  */
                 // @ts-ignore
-                start(): void
+                public start(): void
                 /**
                  * Stops the timer.
                  */
                 // @ts-ignore
-                stop(): void
+                public stop(): void
                 /**
                  * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
                  * and <CODE>userData</CODE> and inserts it into the list of notifications with a given date,
@@ -155,7 +155,7 @@ declare namespace javax {
                  * @see #addNotification(String, String, Object, Date, long, long)
                  */
                 // @ts-ignore
-                addNotification(type: string, message: string, userData: any, date: java.util.Date, period: number /*long*/, nbOccurences: number /*long*/, fixedRate: boolean): java.lang.Integer
+                public addNotification(type: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any, date: java.util.Date, period: number /*long*/, nbOccurences: number /*long*/, fixedRate: boolean): number
                 /**
                  * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
                  * and <CODE>userData</CODE> and inserts it into the list of notifications with a given date,
@@ -185,7 +185,7 @@ declare namespace javax {
                  * @see #addNotification(String, String, Object, Date, long, long, boolean)
                  */
                 // @ts-ignore
-                addNotification(type: string, message: string, userData: any, date: java.util.Date, period: number /*long*/, nbOccurences: number /*long*/): java.lang.Integer
+                public addNotification(type: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any, date: java.util.Date, period: number /*long*/, nbOccurences: number /*long*/): number
                 /**
                  * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
                  * and <CODE>userData</CODE> and inserts it into the list of notifications with a given date
@@ -210,7 +210,7 @@ declare namespace javax {
                  *  the period is negative.
                  */
                 // @ts-ignore
-                addNotification(type: string, message: string, userData: any, date: java.util.Date, period: number /*long*/): java.lang.Integer
+                public addNotification(type: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any, date: java.util.Date, period: number /*long*/): number
                 /**
                  * Creates a new timer notification with the specified <CODE>type</CODE>, <CODE>message</CODE>
                  * and <CODE>userData</CODE> and inserts it into the list of notifications with a given date
@@ -229,7 +229,7 @@ declare namespace javax {
                  * @exception java.lang.IllegalArgumentException The date is {#code null}.
                  */
                 // @ts-ignore
-                addNotification(type: string, message: string, userData: any, date: java.util.Date): java.lang.Integer
+                public addNotification(type: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any, date: java.util.Date): number
                 /**
                  * Removes the timer notification corresponding to the specified identifier from the list of notifications.
                  * @param id The timer notification identifier.
@@ -237,7 +237,7 @@ declare namespace javax {
                  *  in the list of notifications of this timer MBean.
                  */
                 // @ts-ignore
-                removeNotification(id: number): void
+                public removeNotification(id: java.lang.Integer | number): void
                 /**
                  * Removes all the timer notifications corresponding to the specified type from the list of notifications.
                  * @param type The timer notification type.
@@ -245,26 +245,26 @@ declare namespace javax {
                  *  in the list of notifications of this timer MBean.
                  */
                 // @ts-ignore
-                removeNotifications(type: string): void
+                public removeNotifications(type: java.lang.String | string): void
                 /**
                  * Removes all the timer notifications from the list of notifications
                  * and resets the counter used to update the timer notification identifiers.
                  */
                 // @ts-ignore
-                removeAllNotifications(): void
+                public removeAllNotifications(): void
                 /**
                  * Gets the number of timer notifications registered into the list of notifications.
                  * @return The number of timer notifications.
                  */
                 // @ts-ignore
-                getNbNotifications(): int
+                public getNbNotifications(): number /*int*/
                 /**
                  * Gets all timer notification identifiers registered into the list of notifications.
                  * @return A vector of <CODE>Integer</CODE> objects containing all the timer notification identifiers.
                  *  <BR>The vector is empty if there is no timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getAllNotificationIDs(): java.util.Vector<java.lang.Integer>
+                public getAllNotificationIDs(): java.util.Vector<java.lang.Integer | number>
                 /**
                  * Gets all the identifiers of timer notifications corresponding to the specified type.
                  * @param type The timer notification type.
@@ -274,7 +274,7 @@ declare namespace javax {
                  *  with the specified <CODE>type</CODE>.
                  */
                 // @ts-ignore
-                getNotificationIDs(type: string): java.util.Vector<java.lang.Integer>
+                public getNotificationIDs(type: java.lang.String | string): java.util.Vector<java.lang.Integer | number>
                 /**
                  * Gets the timer notification type corresponding to the specified identifier.
                  * @param id The timer notification identifier.
@@ -282,7 +282,7 @@ declare namespace javax {
                  *  timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getNotificationType(id: number): java.lang.String
+                public getNotificationType(id: java.lang.Integer | number): string
                 /**
                  * Gets the timer notification detailed message corresponding to the specified identifier.
                  * @param id The timer notification identifier.
@@ -290,7 +290,7 @@ declare namespace javax {
                  *  timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getNotificationMessage(id: number): java.lang.String
+                public getNotificationMessage(id: java.lang.Integer | number): string
                 /**
                  * Gets the timer notification user data object corresponding to the specified identifier.
                  * @param id The timer notification identifier.
@@ -298,7 +298,7 @@ declare namespace javax {
                  *  timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getNotificationUserData(id: number): java.lang.Object
+                public getNotificationUserData(id: java.lang.Integer | number): any
                 /**
                  * Gets a copy of the date associated to a timer notification.
                  * @param id The timer notification identifier.
@@ -306,7 +306,7 @@ declare namespace javax {
                  *  timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getDate(id: number): java.util.Date
+                public getDate(id: java.lang.Integer | number): java.util.Date
                 /**
                  * Gets a copy of the period (in milliseconds) associated to a timer notification.
                  * @param id The timer notification identifier.
@@ -314,7 +314,7 @@ declare namespace javax {
                  *  timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getPeriod(id: number): java.lang.Long
+                public getPeriod(id: java.lang.Integer | number): number
                 /**
                  * Gets a copy of the remaining number of occurrences associated to a timer notification.
                  * @param id The timer notification identifier.
@@ -322,7 +322,7 @@ declare namespace javax {
                  *  timer notification registered for this timer MBean.
                  */
                 // @ts-ignore
-                getNbOccurences(id: number): java.lang.Long
+                public getNbOccurences(id: java.lang.Integer | number): number
                 /**
                  * Gets a copy of the flag indicating whether a periodic notification is
                  * executed at <i>fixed-delay</i> or at <i>fixed-rate</i>.
@@ -331,7 +331,7 @@ declare namespace javax {
                  *          executed at <i>fixed-delay</i> or at <i>fixed-rate</i>.
                  */
                 // @ts-ignore
-                getFixedRate(id: number): java.lang.Boolean
+                public getFixedRate(id: java.lang.Integer | number): java.lang.Boolean
                 /**
                  * Gets the flag indicating whether or not the timer sends past notifications.
                  * <BR>The default value of the past notifications sending on/off flag is <CODE>false</CODE>.
@@ -339,7 +339,7 @@ declare namespace javax {
                  * @see #setSendPastNotifications
                  */
                 // @ts-ignore
-                getSendPastNotifications(): boolean
+                public getSendPastNotifications(): boolean
                 /**
                  * Sets the flag indicating whether the timer sends past notifications or not.
                  * <BR>The default value of the past notifications sending on/off flag is <CODE>false</CODE>.
@@ -347,7 +347,7 @@ declare namespace javax {
                  * @see #getSendPastNotifications
                  */
                 // @ts-ignore
-                setSendPastNotifications(value: boolean): void
+                public setSendPastNotifications(value: boolean): void
                 /**
                  * Tests whether the timer MBean is active.
                  * A timer MBean is marked active when the {@link #start start} method is called.
@@ -356,13 +356,13 @@ declare namespace javax {
                  * @return <CODE>true</CODE> if the timer MBean is active, <CODE>false</CODE> otherwise.
                  */
                 // @ts-ignore
-                isActive(): boolean
+                public isActive(): boolean
                 /**
                  * Tests whether the list of timer notifications is empty.
                  * @return <CODE>true</CODE> if the list of timer notifications is empty, <CODE>false</CODE> otherwise.
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
             }
         }
     }

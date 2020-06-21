@@ -16,9 +16,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getObjectToExpose(serviceLoader: java.util.ServiceLoader<any>): java.lang.Object
+                        getObjectToExpose(serviceLoader: java.util.ServiceLoader<any>): any
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                     }
                 }
             }

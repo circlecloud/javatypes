@@ -23,7 +23,7 @@ declare namespace javax {
                  *                 (typically <code>this</code>)
                  */
                 // @ts-ignore
-                constructor(source: any)
+                constructor(source: java.lang.Object | any)
             }
         }
     }

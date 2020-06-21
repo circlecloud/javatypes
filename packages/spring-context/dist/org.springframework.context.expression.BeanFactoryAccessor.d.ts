@@ -14,15 +14,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getSpecificTargetClasses(): java.lang.Class[]
+                    public getSpecificTargetClasses(): java.lang.Class<any>[]
                     // @ts-ignore
-                    canRead(context: EvaluationContext, target: any, name: string): boolean
+                    public canRead(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string): boolean
                     // @ts-ignore
-                    read(context: EvaluationContext, target: any, name: string): TypedValue
+                    public read(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string): TypedValue
                     // @ts-ignore
-                    canWrite(context: EvaluationContext, target: any, name: string): boolean
+                    public canWrite(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string): boolean
                     // @ts-ignore
-                    write(context: EvaluationContext, target: any, name: string, newValue: any): void
+                    public write(context: EvaluationContext, target: java.lang.Object | any, name: java.lang.String | string, newValue: java.lang.Object | any): void
                 }
             }
         }

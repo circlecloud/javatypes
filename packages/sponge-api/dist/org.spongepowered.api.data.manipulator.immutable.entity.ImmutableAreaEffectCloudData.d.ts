@@ -18,7 +18,7 @@ declare namespace org {
                                  * @return The radius value of this cloud
                                  */
                                 // @ts-ignore
-                                radius(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                radius(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link ParticleType} of this cloud.
                                  * @return The particle type of this cloud
@@ -30,7 +30,7 @@ declare namespace org {
                                  * @return The bounded duration value
                                  */
                                 // @ts-ignore
-                                duration(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                duration(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the bounded {@code waitTime} value of this cloud. The wait time
                                  * dictates how long until this cloud will affect {@link Entity} instances
@@ -38,7 +38,7 @@ declare namespace org {
                                  * @return The bounded wait time value
                                  */
                                 // @ts-ignore
-                                waitTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                waitTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the bounded {@code radiusOnUse} value of this cloud.
                                  * The radius is reduced per {@link Entity} affected.
@@ -46,7 +46,7 @@ declare namespace org {
                                  * @return The bounded radius reduced on use value
                                  */
                                 // @ts-ignore
-                                radiusOnUse(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                radiusOnUse(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the bounded {@code radiusPerTick} value of this cloud.
                                  * The radius is reduced per tick (so technically can be set to
@@ -55,7 +55,7 @@ declare namespace org {
                                  * @return The bounded radius reduction per tick value
                                  */
                                 // @ts-ignore
-                                radiusPerTick(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                radiusPerTick(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the bounded {@code durationOnUse} value of this cloud.
                                  * The duration on use is reduced for every time that this cloud
@@ -63,7 +63,7 @@ declare namespace org {
                                  * @return The bounded duration on use value
                                  */
                                 // @ts-ignore
-                                durationOnUse(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                durationOnUse(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the bounded {@code applicationDelay} value of this cloud.
                                  * What this means is the application delay between times of application
@@ -71,7 +71,7 @@ declare namespace org {
                                  * @return The bounded re-application delay value
                                  */
                                 // @ts-ignore
-                                applicationDelay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                applicationDelay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ListValue} of {@link PotionEffect}s of this cloud.
                                  * The potion effects will affect any {@link Entity} according to the
@@ -85,7 +85,7 @@ declare namespace org {
                                  * @return The bounded age value
                                  */
                                 // @ts-ignore
-                                age(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                age(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

@@ -30,7 +30,7 @@ declare namespace org {
                      * managing caches for the specified cache names only.
                      */
                     // @ts-ignore
-                    constructor(...cacheNames: string[])
+                    constructor(...cacheNames: java.lang.String[] | string[])
                     /**
                      * Specify the set of cache names for this CacheManager's 'static' mode.
                      * <p>The number of caches and their names will be fixed after a call to this method,
@@ -39,7 +39,7 @@ declare namespace org {
                      * mode to 'dynamic', allowing for further creation of caches again.
                      */
                     // @ts-ignore
-                    setCacheNames(cacheNames: Array<java.lang.String>): void
+                    public setCacheNames(cacheNames: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Specify whether to accept and convert {@code null} values for all caches
                      * in this cache manager.
@@ -49,13 +49,13 @@ declare namespace org {
                      * if any, to reconfigure them with the new null-value requirement.
                      */
                     // @ts-ignore
-                    setAllowNullValues(allowNullValues: boolean): void
+                    public setAllowNullValues(allowNullValues: boolean): void
                     /**
                      * Return whether this cache manager accepts and converts {@code null} values
                      * for all of its caches.
                      */
                     // @ts-ignore
-                    isAllowNullValues(): boolean
+                    public isAllowNullValues(): boolean
                     /**
                      * Specify whether this cache manager stores a copy of each entry ({@code true}
                      * or the reference ({@code false} for all of its caches.
@@ -66,7 +66,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setStoreByValue(storeByValue: boolean): void
+                    public setStoreByValue(storeByValue: boolean): void
                     /**
                      * Return whether this cache manager stores a copy of each entry or
                      * a reference for all its caches. If store by value is enabled, any
@@ -74,20 +74,20 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    isStoreByValue(): boolean
+                    public isStoreByValue(): boolean
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    getCacheNames(): java.util.Collection<java.lang.String>
+                    public getCacheNames(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getCache(name: string): org.springframework.cache.Cache
+                    public getCache(name: java.lang.String | string): org.springframework.cache.Cache
                     /**
                      * Create a new ConcurrentMapCache instance for the specified cache name.
                      * @param name the name of the cache
                      * @return the ConcurrentMapCache (or a decorator thereof)
                      */
                     // @ts-ignore
-                    createConcurrentMapCache(name: string): org.springframework.cache.Cache
+                    createConcurrentMapCache(name: java.lang.String | string): org.springframework.cache.Cache
                 }
             }
         }

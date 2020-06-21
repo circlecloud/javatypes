@@ -30,7 +30,7 @@ declare namespace org {
                      * @see BeanFactory#containsBean
                      */
                     // @ts-ignore
-                    containsLocalBean(name: string): boolean
+                    containsLocalBean(name: java.lang.String | string): boolean
                 }
             }
         }

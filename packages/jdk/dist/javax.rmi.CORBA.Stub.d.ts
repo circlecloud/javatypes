@@ -5,7 +5,7 @@ declare namespace javax {
              * Base class from which all RMI-IIOP stubs must inherit.
              */
             // @ts-ignore
-            class Stub extends org.omg.CORBA_2_3.portable.ObjectImpl implements java.io.Serializable {
+            abstract class Stub extends org.omg.CORBA_2_3.portable.ObjectImpl implements java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -14,7 +14,7 @@ declare namespace javax {
                  * @return the hash code value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares two stubs for equality. Returns <code>true</code> when used to compare stubs
                  * that represent the same remote object, and <code>false</code> otherwise.
@@ -23,14 +23,14 @@ declare namespace javax {
                  *           argument; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a string representation of this stub. Returns the same string
                  * for all stubs that represent the same remote object.
                  * @return a string representation of this stub.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Connects this stub to an ORB. Required after the stub is deserialized
                  * but not after it is demarshalled by an ORB stream. If an unconnected
@@ -43,7 +43,7 @@ declare namespace javax {
                  *  ORB, or if the stub does not represent an exported remote or local object.
                  */
                 // @ts-ignore
-                connect(orb: org.omg.CORBA.ORB): void
+                public connect(orb: org.omg.CORBA.ORB): void
             }
         }
     }

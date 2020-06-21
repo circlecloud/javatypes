@@ -40,7 +40,7 @@ declare namespace org {
                  * @return the property value, or {#code null} if none
                  */
                 // @ts-ignore
-                getPropertyValue(propertyName: string): org.springframework.beans.PropertyValue
+                getPropertyValue(propertyName: java.lang.String | string): org.springframework.beans.PropertyValue
                 /**
                  * Return the changes since the previous PropertyValues.
                  * Subclasses should also override {@code equals}.
@@ -57,7 +57,7 @@ declare namespace org {
                  * @return whether there is a property value for this property
                  */
                 // @ts-ignore
-                contains(propertyName: string): boolean
+                contains(propertyName: java.lang.String | string): boolean
                 /**
                  * Does this holder not contain any PropertyValue objects at all?
                  */

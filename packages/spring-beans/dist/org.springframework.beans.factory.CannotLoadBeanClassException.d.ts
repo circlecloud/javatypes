@@ -19,7 +19,7 @@ declare namespace org {
                      * @param cause the root cause
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, beanClassName: string, cause: java.lang.ClassNotFoundException)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, beanClassName: java.lang.String | string, cause: java.lang.ClassNotFoundException)
                     /**
                      * Create a new CannotLoadBeanClassException.
                      * @param resourceDescription description of the resource
@@ -29,23 +29,23 @@ declare namespace org {
                      * @param cause the root cause
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, beanClassName: string, cause: java.lang.LinkageError)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, beanClassName: java.lang.String | string, cause: java.lang.LinkageError)
                     /**
                      * Return the description of the resource that the bean
                      * definition came from.
                      */
                     // @ts-ignore
-                    getResourceDescription(): java.lang.String
+                    public getResourceDescription(): string
                     /**
                      * Return the name of the bean requested.
                      */
                     // @ts-ignore
-                    getBeanName(): java.lang.String
+                    public getBeanName(): string
                     /**
                      * Return the name of the class we were trying to load.
                      */
                     // @ts-ignore
-                    getBeanClassName(): java.lang.String
+                    public getBeanClassName(): string
                 }
             }
         }

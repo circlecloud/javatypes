@@ -46,7 +46,7 @@ declare namespace java {
                  * @return the {#code TrustAnchor} (never {@code null})
                  */
                 // @ts-ignore
-                getTrustAnchor(): java.security.cert.TrustAnchor
+                public getTrustAnchor(): java.security.cert.TrustAnchor
                 /**
                  * Returns the root node of the valid policy tree resulting from the
                  * PKIX certification path validation algorithm. The
@@ -63,20 +63,20 @@ declare namespace java {
                  *  if there are no valid policies
                  */
                 // @ts-ignore
-                getPolicyTree(): java.security.cert.PolicyNode
+                public getPolicyTree(): java.security.cert.PolicyNode
                 /**
                  * Returns the public key of the subject (target) of the certification
                  * path, including any inherited public key parameters if applicable.
                  * @return the public key of the subject (never {#code null})
                  */
                 // @ts-ignore
-                getPublicKey(): java.security.PublicKey
+                public getPublicKey(): java.security.PublicKey
                 /**
                  * Returns a copy of this object.
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Return a printable representation of this
                  * {@code PKIXCertPathValidatorResult}.
@@ -84,7 +84,7 @@ declare namespace java {
                  *          {@code PKIXCertPathValidatorResult}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

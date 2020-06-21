@@ -20,7 +20,7 @@ declare namespace javax {
                  *  the file attempting to be opened; may be {#code null}
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
             }
         }
     }

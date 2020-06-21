@@ -22,7 +22,7 @@ declare namespace org {
                                  * @return The chance that the owning entity will "swim"
                                  */
                                 // @ts-ignore
-                                getSwimChance(): float
+                                getSwimChance(): number /*float*/
                                 /**
                                  * Sets the chance that the owning {@link Agent} will perform
                                  * a "jump". The chance is limited between {@code 0} and {@code 1},

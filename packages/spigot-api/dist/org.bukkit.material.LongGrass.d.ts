@@ -26,17 +26,17 @@ declare namespace org {
                  * @return GrassSpecies of this grass
                  */
                 // @ts-ignore
-                getSpecies(): org.bukkit.GrassSpecies
+                public getSpecies(): org.bukkit.GrassSpecies
                 /**
                  * Sets the species of this grass
                  * @param species New species of this grass
                  */
                 // @ts-ignore
-                setSpecies(species: org.bukkit.GrassSpecies): void
+                public setSpecies(species: org.bukkit.GrassSpecies): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.LongGrass
+                public clone(): org.bukkit.material.LongGrass
             }
         }
     }

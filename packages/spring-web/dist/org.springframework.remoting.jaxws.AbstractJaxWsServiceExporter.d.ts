@@ -14,7 +14,7 @@ declare namespace org {
                  * @see SimpleJaxWsServiceExporter
                  */
                 // @ts-ignore
-                class AbstractJaxWsServiceExporter extends java.lang.Object {
+                abstract class AbstractJaxWsServiceExporter extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -25,45 +25,45 @@ declare namespace org {
                      * @see javax.xml.ws.Endpoint#WSDL_PORT
                      */
                     // @ts-ignore
-                    setEndpointProperties(endpointProperties: java.util.Map<java.lang.String, java.lang.Object>): void
+                    public setEndpointProperties(endpointProperties: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                     /**
                      * Set the JDK concurrent executor to use for dispatching incoming requests
                      * to exported service instances.
                      * @see javax.xml.ws.Endpoint#setExecutor
                      */
                     // @ts-ignore
-                    setExecutor(executor: java.util.concurrent.Executor): void
+                    public setExecutor(executor: java.util.concurrent.Executor): void
                     /**
                      * Specify the binding type to use, overriding the value of
                      * the JAX-WS {@link javax.xml.ws.BindingType} annotation.
                      */
                     // @ts-ignore
-                    setBindingType(bindingType: string): void
+                    public setBindingType(bindingType: java.lang.String | string): void
                     /**
                      * Specify WebServiceFeature objects (e.g. as inner bean definitions)
                      * to apply to JAX-WS endpoint creation.
                      * @since 4.0
                      */
                     // @ts-ignore
-                    setEndpointFeatures(...endpointFeatures: javax.xml.ws.WebServiceFeature[]): void
+                    public setEndpointFeatures(...endpointFeatures: javax.xml.ws.WebServiceFeature[]): void
                     /**
                      * Obtains all web service beans and publishes them as JAX-WS endpoints.
                      */
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     /**
                      * Immediately publish all endpoints when fully configured.
                      * @see #publishEndpoints()
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Publish all {@link javax.jws.WebService} annotated beans in the
                      * containing BeanFactory.
                      * @see #publishEndpoint
                      */
                     // @ts-ignore
-                    publishEndpoints(): void
+                    public publishEndpoints(): void
                     /**
                      * Create the actual Endpoint instance.
                      * @param bean the service object to wrap
@@ -72,7 +72,7 @@ declare namespace org {
                      * @see Endpoint#create(String, Object)
                      */
                     // @ts-ignore
-                    createEndpoint(bean: any): javax.xml.ws.Endpoint
+                    createEndpoint(bean: java.lang.Object | any): javax.xml.ws.Endpoint
                     /**
                      * Actually publish the given endpoint. To be implemented by subclasses.
                      * @param endpoint the JAX-WS Endpoint object
@@ -91,7 +91,7 @@ declare namespace org {
                      * Stops all published endpoints, taking the web services offline.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

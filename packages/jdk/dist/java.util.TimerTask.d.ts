@@ -7,7 +7,7 @@ declare namespace java {
          * @since 1.3
          */
         // @ts-ignore
-        class TimerTask extends java.lang.Object implements java.lang.Runnable {
+        abstract class TimerTask extends java.lang.Object implements java.lang.Runnable {
             /**
              * Creates a new timer task.
              */
@@ -17,7 +17,7 @@ declare namespace java {
              * The action to be performed by this timer task.
              */
             // @ts-ignore
-            abstract run(): void
+            public abstract run(): void
             /**
              * Cancels this timer task.  If the task has been scheduled for one-time
              * execution and has not yet run, or has not yet been scheduled, it will
@@ -38,7 +38,7 @@ declare namespace java {
              *          executions from taking place.)
              */
             // @ts-ignore
-            cancel(): boolean
+            public cancel(): boolean
             /**
              * Returns the <i>scheduled</i> execution time of the most recent
              * <i>actual</i> execution of this task.  (If this method is invoked
@@ -66,7 +66,7 @@ declare namespace java {
              * @see Date#getTime()
              */
             // @ts-ignore
-            scheduledExecutionTime(): long
+            public scheduledExecutionTime(): number /*long*/
         }
     }
 }

@@ -96,7 +96,7 @@ declare namespace org {
                      * to be used as serialization id for the underlying BeanFactory: {@value}.
                      */
                     // @ts-ignore
-                    readonly CONTEXT_ID_PARAM: string
+                    public static readonly CONTEXT_ID_PARAM: java.lang.String | string
                     /**
                      * Name of servlet context parameter (i.e., {@value}) that can specify the
                      * config location for the root context, falling back to the implementation's
@@ -104,27 +104,27 @@ declare namespace org {
                      * @see org.springframework.web.context.support.XmlWebApplicationContext#DEFAULT_CONFIG_LOCATION
                      */
                     // @ts-ignore
-                    readonly CONFIG_LOCATION_PARAM: string
+                    public static readonly CONFIG_LOCATION_PARAM: java.lang.String | string
                     /**
                      * Config param for the root WebApplicationContext implementation class to use: {@value}.
                      * @see #determineContextClass(ServletContext)
                      */
                     // @ts-ignore
-                    readonly CONTEXT_CLASS_PARAM: string
+                    public static readonly CONTEXT_CLASS_PARAM: java.lang.String | string
                     /**
                      * Config param for {@link ApplicationContextInitializer} classes to use
                      * for initializing the root web application context: {@value}.
                      * @see #customizeContext(ServletContext, ConfigurableWebApplicationContext)
                      */
                     // @ts-ignore
-                    readonly CONTEXT_INITIALIZER_CLASSES_PARAM: string
+                    public static readonly CONTEXT_INITIALIZER_CLASSES_PARAM: java.lang.String | string
                     /**
                      * Config param for global {@link ApplicationContextInitializer} classes to use
                      * for initializing all web application contexts in the current application: {@value}.
                      * @see #customizeContext(ServletContext, ConfigurableWebApplicationContext)
                      */
                     // @ts-ignore
-                    readonly GLOBAL_INITIALIZER_CLASSES_PARAM: string
+                    public static readonly GLOBAL_INITIALIZER_CLASSES_PARAM: java.lang.String | string
                     /**
                      * Specify which {@link ApplicationContextInitializer} instances should be used
                      * to initialize the application context used by this {@code ContextLoader}.
@@ -133,7 +133,7 @@ declare namespace org {
                      * @see #customizeContext
                      */
                     // @ts-ignore
-                    setContextInitializers(...initializers: any[]): void
+                    public setContextInitializers(...initializers: object[]): void
                     /**
                      * Initialize Spring's web application context for the given servlet context,
                      * using the application context provided at construction time, or creating a new one
@@ -146,7 +146,7 @@ declare namespace org {
                      * @see #CONFIG_LOCATION_PARAM
                      */
                     // @ts-ignore
-                    initWebApplicationContext(servletContext: ServletContext): org.springframework.web.context.WebApplicationContext
+                    public initWebApplicationContext(servletContext: ServletContext): org.springframework.web.context.WebApplicationContext
                     /**
                      * Instantiate the root WebApplicationContext for this loader, either the
                      * default context class or a custom context class if specified.
@@ -170,7 +170,7 @@ declare namespace org {
                      * @see org.springframework.web.context.support.XmlWebApplicationContext
                      */
                     // @ts-ignore
-                    determineContextClass(servletContext: ServletContext): java.lang.Class<?>
+                    determineContextClass(servletContext: ServletContext): java.lang.Class<any>
                     // @ts-ignore
                     configureAndRefreshWebApplicationContext(wac: org.springframework.web.context.ConfigurableWebApplicationContext, sc: ServletContext): void
                     /**
@@ -199,7 +199,7 @@ declare namespace org {
                      * @see #CONTEXT_INITIALIZER_CLASSES_PARAM
                      */
                     // @ts-ignore
-                    determineContextInitializerClasses(servletContext: ServletContext): java.util.List<java.lang.Class<<any>>>
+                    determineContextInitializerClasses(servletContext: ServletContext): Array<java.lang.Class<object>>
                     /**
                      * Template method with default implementation (which may be overridden by a
                      * subclass), to load or obtain an ApplicationContext instance which will be
@@ -223,7 +223,7 @@ declare namespace org {
                      * @param servletContext the ServletContext that the WebApplicationContext runs in
                      */
                     // @ts-ignore
-                    closeWebApplicationContext(servletContext: ServletContext): void
+                    public closeWebApplicationContext(servletContext: ServletContext): void
                     /**
                      * Obtain the Spring root web application context for the current thread
                      * (i.e. for the current thread's context ClassLoader, which needs to be
@@ -233,7 +233,7 @@ declare namespace org {
                      * @see org.springframework.web.context.support.SpringBeanAutowiringSupport
                      */
                     // @ts-ignore
-                    getCurrentWebApplicationContext(): org.springframework.web.context.WebApplicationContext
+                    public static getCurrentWebApplicationContext(): org.springframework.web.context.WebApplicationContext
                 }
             }
         }

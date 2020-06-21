@@ -18,15 +18,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    isCandidateClass(targetClass: java.lang.Class<any>): boolean
+                    public isCandidateClass(targetClass: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    parseCacheAnnotations(type: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    public parseCacheAnnotations(type: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                     // @ts-ignore
-                    parseCacheAnnotations(method: java.lang.reflect.Method): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    public parseCacheAnnotations(method: java.lang.reflect.Method): Array<org.springframework.cache.interceptor.CacheOperation>
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

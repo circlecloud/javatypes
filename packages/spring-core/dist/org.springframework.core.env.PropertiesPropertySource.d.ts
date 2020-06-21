@@ -17,11 +17,11 @@ declare namespace org {
                 // @ts-ignore
                 class PropertiesPropertySource extends org.springframework.core.env.MapPropertySource {
                     // @ts-ignore
-                    constructor(name: string, source: java.util.Properties)
+                    constructor(name: java.lang.String | string, source: java.util.Properties)
                     // @ts-ignore
-                    constructor(name: string, source: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(name: java.lang.String | string, source: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    public getPropertyNames(): string[]
                 }
             }
         }

@@ -17,7 +17,7 @@ declare namespace org {
                              * @return A new instance of the sound type
                              */
                             // @ts-ignore
-                            build(id: string): org.spongepowered.api.effect.sound.SoundType
+                            build(id: java.lang.String | string): org.spongepowered.api.effect.sound.SoundType
                         }
                     }
                 }

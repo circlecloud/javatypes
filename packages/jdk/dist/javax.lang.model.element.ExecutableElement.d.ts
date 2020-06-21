@@ -21,7 +21,7 @@ declare namespace javax {
                      *  if there are none
                      */
                     // @ts-ignore
-                    getTypeParameters(): java.util.List<? extends javax.lang.model.element.TypeParameterElement>
+                    getTypeParameters(): Array<any>
                     /**
                      * Returns the return type of this executable.
                      * Returns a {@link NoType} with kind {@link TypeKind#VOID VOID}
@@ -38,7 +38,7 @@ declare namespace javax {
                      *  or an empty list if there are none
                      */
                     // @ts-ignore
-                    getParameters(): java.util.List<? extends javax.lang.model.element.VariableElement>
+                    getParameters(): Array<any>
                     /**
                      * Returns the receiver type of this executable,
                      * or {@link javax.lang.model.type.NoType NoType} with
@@ -80,7 +80,7 @@ declare namespace javax {
                      *  {#code throws} clause, or an empty list if there are none
                      */
                     // @ts-ignore
-                    getThrownTypes(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getThrownTypes(): Array<any>
                     /**
                      * Returns the default value if this executable is an annotation
                      * type element.  Returns {@code null} if this method is not an

@@ -30,14 +30,14 @@ declare namespace java {
                  * @return the public point W.
                  */
                 // @ts-ignore
-                getW(): java.security.spec.ECPoint
+                public getW(): java.security.spec.ECPoint
                 /**
                  * Returns the associated elliptic curve domain
                  * parameters.
                  * @return the EC domain parameters.
                  */
                 // @ts-ignore
-                getParams(): java.security.spec.ECParameterSpec
+                public getParams(): java.security.spec.ECParameterSpec
             }
         }
     }

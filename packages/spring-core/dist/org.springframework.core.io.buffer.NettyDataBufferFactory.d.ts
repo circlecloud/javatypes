@@ -26,28 +26,28 @@ declare namespace org {
                          * Return the {@code ByteBufAllocator} used by this factory.
                          */
                         // @ts-ignore
-                        getByteBufAllocator(): ByteBufAllocator
+                        public getByteBufAllocator(): ByteBufAllocator
                         // @ts-ignore
-                        allocateBuffer(): org.springframework.core.io.buffer.NettyDataBuffer
+                        public allocateBuffer(): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        allocateBuffer(initialCapacity: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
+                        public allocateBuffer(initialCapacity: number /*int*/): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        wrap(byteBuffer: java.nio.ByteBuffer): org.springframework.core.io.buffer.NettyDataBuffer
+                        public wrap(byteBuffer: java.nio.ByteBuffer): org.springframework.core.io.buffer.NettyDataBuffer
                         // @ts-ignore
-                        wrap(bytes: number /*byte*/[]): org.springframework.core.io.buffer.DataBuffer
+                        public wrap(bytes: number /*byte*/[]): org.springframework.core.io.buffer.DataBuffer
                         /**
                          * Wrap the given Netty {@link ByteBuf} in a {@code NettyDataBuffer}.
                          * @param byteBuf the Netty byte buffer to wrap
                          * @return the wrapped buffer
                          */
                         // @ts-ignore
-                        wrap(byteBuf: ByteBuf): org.springframework.core.io.buffer.NettyDataBuffer
+                        public wrap(byteBuf: ByteBuf): org.springframework.core.io.buffer.NettyDataBuffer
                         /**
                          * {@inheritDoc}
                          * <p>This implementation uses Netty's {@link CompositeByteBuf}.
                          */
                         // @ts-ignore
-                        join(dataBuffers: Array<org.springframework.core.io.buffer.DataBuffer>): org.springframework.core.io.buffer.DataBuffer
+                        public join(dataBuffers: java.util.List<any> | Array<any>): org.springframework.core.io.buffer.DataBuffer
                         /**
                          * Return the given Netty {@link DataBuffer} as a {@link ByteBuf}.
                          * <p>Returns the {@linkplain NettyDataBuffer#getNativeBuffer() native buffer}
@@ -57,9 +57,9 @@ declare namespace org {
                          * @return the netty {#code ByteBuf}
                          */
                         // @ts-ignore
-                        toByteBuf(buffer: org.springframework.core.io.buffer.DataBuffer): ByteBuf
+                        public static toByteBuf(buffer: org.springframework.core.io.buffer.DataBuffer): ByteBuf
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

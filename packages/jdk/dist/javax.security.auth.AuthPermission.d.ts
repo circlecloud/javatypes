@@ -89,7 +89,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if {#code name} is empty.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new AuthPermission object with the specified name.
                  * The name is the symbolic name of the AuthPermission, and the
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if {#code name} is empty.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

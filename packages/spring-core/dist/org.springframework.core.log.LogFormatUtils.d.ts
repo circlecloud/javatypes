@@ -12,7 +12,7 @@ declare namespace org {
                  * @since 5.1
                  */
                 // @ts-ignore
-                class LogFormatUtils extends java.lang.Object {
+                abstract class LogFormatUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -24,7 +24,7 @@ declare namespace org {
                      * @return the formatted value
                      */
                     // @ts-ignore
-                    formatValue(value: any, limitLength: boolean): java.lang.String
+                    public static formatValue(value: java.lang.Object | any, limitLength: boolean): string
                     /**
                      * Use this to log a message with different levels of detail (or different
                      * messages) at TRACE vs DEBUG log levels. Effectively, a substitute for:
@@ -44,7 +44,7 @@ declare namespace org {
                      *  of {#link Log#isTraceEnabled()}
                      */
                     // @ts-ignore
-                    traceDebug(logger: Log, messageFactory: java.util.function.Function<java.lang.Boolean, java.lang.String> | java.util.function$.Function<java.lang.Boolean, java.lang.String>): void
+                    public static traceDebug(logger: Log, messageFactory: java.util.function$.Function<java.lang.Boolean, java.lang.String | string>): void
                 }
             }
         }

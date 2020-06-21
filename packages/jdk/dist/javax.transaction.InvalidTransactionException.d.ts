@@ -10,7 +10,7 @@ declare namespace javax {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            constructor(msg: string)
+            constructor(msg: java.lang.String | string)
         }
     }
 }

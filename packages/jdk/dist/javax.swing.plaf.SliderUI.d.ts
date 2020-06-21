@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Hans Muller
              */
             // @ts-ignore
-            class SliderUI extends javax.swing.plaf.ComponentUI {
+            abstract class SliderUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

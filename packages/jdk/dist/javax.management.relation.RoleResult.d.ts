@@ -23,28 +23,28 @@ declare namespace javax {
                  * @see #setRoles
                  */
                 // @ts-ignore
-                getRoles(): javax.management.relation.RoleList
+                public getRoles(): javax.management.relation.RoleList
                 /**
                  * Retrieves list of roles unsuccessfully accessed.
                  * @return a RoleUnresolvedList.
                  * @see #setRolesUnresolved
                  */
                 // @ts-ignore
-                getRolesUnresolved(): javax.management.relation.RoleUnresolvedList
+                public getRolesUnresolved(): javax.management.relation.RoleUnresolvedList
                 /**
                  * Sets list of roles successfully accessed.
                  * @param list  list of roles successfully accessed
                  * @see #getRoles
                  */
                 // @ts-ignore
-                setRoles(list: javax.management.relation.RoleList): void
+                public setRoles(list: javax.management.relation.RoleList): void
                 /**
                  * Sets list of roles unsuccessfully accessed.
                  * @param unresolvedList  list of roles unsuccessfully accessed
                  * @see #getRolesUnresolved
                  */
                 // @ts-ignore
-                setRolesUnresolved(unresolvedList: javax.management.relation.RoleUnresolvedList): void
+                public setRolesUnresolved(unresolvedList: javax.management.relation.RoleUnresolvedList): void
             }
         }
     }

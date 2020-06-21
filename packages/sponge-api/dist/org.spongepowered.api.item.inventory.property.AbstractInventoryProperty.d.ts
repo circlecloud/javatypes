@@ -11,7 +11,7 @@ declare namespace org {
                          * @param <V> Value type
                          */
                         // @ts-ignore
-                        class AbstractInventoryProperty<K, V> extends java.lang.Object implements org.spongepowered.api.item.inventory.InventoryProperty<K, V> {
+                        abstract class AbstractInventoryProperty<K, V> extends java.lang.Object implements org.spongepowered.api.item.inventory.InventoryProperty<K, V> {
                             /**
                              * Initialise internal values to defaults, use this ctor if you plan to
                              * override {@link #getKey} and {@link #getValue} yourself.
@@ -71,7 +71,7 @@ declare namespace org {
                              * @return default key to use.
                              */
                             // @ts-ignore
-                            getDefaultKey<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(clazz: java.lang.Class<T>): java.lang.Object
+                            public static getDefaultKey<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(clazz: java.lang.Class<T>): any
                             /**
                              * Return the default operator to use, based on the supplied key and value.
                              * @param key Property key
@@ -81,17 +81,17 @@ declare namespace org {
                             // @ts-ignore
                             getDefaultOperator(key: K, value: V): org.spongepowered.api.data.Property.Operator
                             // @ts-ignore
-                            getKey(): K
+                            public getKey(): K
                             // @ts-ignore
-                            getValue(): V
+                            public getValue(): V
                             // @ts-ignore
-                            getOperator(): org.spongepowered.api.data.Property.Operator
+                            public getOperator(): org.spongepowered.api.data.Property.Operator
                             // @ts-ignore
-                            matches(other: org.spongepowered.api.data.Property<any, ?>): boolean
+                            public matches(other: org.spongepowered.api.data.Property<any, any>): boolean
                             // @ts-ignore
-                            equals(obj: any): boolean
+                            public equals(obj: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             /**
                              * Convenience method to avoid null-checking. Returns 0 if <em>value</em> is
                              * null.
@@ -99,7 +99,7 @@ declare namespace org {
                              * @return The hashcode value
                              */
                             // @ts-ignore
-                            hashCodeOf(value: any): int
+                            hashCodeOf(value: java.lang.Object | any): number /*int*/
                         }
                     }
                 }

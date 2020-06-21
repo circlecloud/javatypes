@@ -68,7 +68,7 @@ declare namespace java {
                  * @see Inflater#needsInput
                  */
                 // @ts-ignore
-                setInput(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public setInput(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Sets input data for decompression. Should be called whenever
                  * needsInput() returns true indicating that more input data is
@@ -77,7 +77,7 @@ declare namespace java {
                  * @see Inflater#needsInput
                  */
                 // @ts-ignore
-                setInput(b: number /*byte*/[]): void
+                public setInput(b: number /*byte*/[]): void
                 /**
                  * Sets the preset dictionary to the given array of bytes. Should be
                  * called when inflate() returns 0 and needsDictionary() returns true
@@ -90,7 +90,7 @@ declare namespace java {
                  * @see Inflater#getAdler
                  */
                 // @ts-ignore
-                setDictionary(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public setDictionary(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Sets the preset dictionary to the given array of bytes. Should be
                  * called when inflate() returns 0 and needsDictionary() returns true
@@ -101,7 +101,7 @@ declare namespace java {
                  * @see Inflater#getAdler
                  */
                 // @ts-ignore
-                setDictionary(b: number /*byte*/[]): void
+                public setDictionary(b: number /*byte*/[]): void
                 /**
                  * Returns the total number of bytes remaining in the input buffer.
                  * This can be used to find out what bytes still remain in the input
@@ -109,7 +109,7 @@ declare namespace java {
                  * @return the total number of bytes remaining in the input buffer
                  */
                 // @ts-ignore
-                getRemaining(): int
+                public getRemaining(): number /*int*/
                 /**
                  * Returns true if no data remains in the input buffer. This can
                  * be used to determine if #setInput should be called in order
@@ -117,14 +117,14 @@ declare namespace java {
                  * @return true if no data remains in the input buffer
                  */
                 // @ts-ignore
-                needsInput(): boolean
+                public needsInput(): boolean
                 /**
                  * Returns true if a preset dictionary is needed for decompression.
                  * @return true if a preset dictionary is needed for decompression
                  * @see Inflater#setDictionary
                  */
                 // @ts-ignore
-                needsDictionary(): boolean
+                public needsDictionary(): boolean
                 /**
                  * Returns true if the end of the compressed data stream has been
                  * reached.
@@ -132,7 +132,7 @@ declare namespace java {
                  *  reached
                  */
                 // @ts-ignore
-                finished(): boolean
+                public finished(): boolean
                 /**
                  * Uncompresses bytes into specified buffer. Returns actual number
                  * of bytes uncompressed. A return value of 0 indicates that
@@ -149,7 +149,7 @@ declare namespace java {
                  * @see Inflater#needsDictionary
                  */
                 // @ts-ignore
-                inflate(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public inflate(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Uncompresses bytes into specified buffer. Returns actual number
                  * of bytes uncompressed. A return value of 0 indicates that
@@ -164,13 +164,13 @@ declare namespace java {
                  * @see Inflater#needsDictionary
                  */
                 // @ts-ignore
-                inflate(b: number /*byte*/[]): int
+                public inflate(b: number /*byte*/[]): number /*int*/
                 /**
                  * Returns the ADLER-32 value of the uncompressed data.
                  * @return the ADLER-32 value of the uncompressed data
                  */
                 // @ts-ignore
-                getAdler(): int
+                public getAdler(): number /*int*/
                 /**
                  * Returns the total number of compressed bytes input so far.
                  * <p>Since the number of bytes may be greater than
@@ -179,14 +179,14 @@ declare namespace java {
                  * @return the total number of compressed bytes input so far
                  */
                 // @ts-ignore
-                getTotalIn(): int
+                public getTotalIn(): number /*int*/
                 /**
                  * Returns the total number of compressed bytes input so far.
                  * @return the total (non-negative) number of compressed bytes input so far
                  * @since 1.5
                  */
                 // @ts-ignore
-                getBytesRead(): long
+                public getBytesRead(): number /*long*/
                 /**
                  * Returns the total number of uncompressed bytes output so far.
                  * <p>Since the number of bytes may be greater than
@@ -195,19 +195,19 @@ declare namespace java {
                  * @return the total number of uncompressed bytes output so far
                  */
                 // @ts-ignore
-                getTotalOut(): int
+                public getTotalOut(): number /*int*/
                 /**
                  * Returns the total number of uncompressed bytes output so far.
                  * @return the total (non-negative) number of uncompressed bytes output so far
                  * @since 1.5
                  */
                 // @ts-ignore
-                getBytesWritten(): long
+                public getBytesWritten(): number /*long*/
                 /**
                  * Resets inflater so that a new set of input data can be processed.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Closes the decompressor and discards any unprocessed input.
                  * This method should be called when the decompressor is no longer
@@ -216,7 +216,7 @@ declare namespace java {
                  * object is undefined.
                  */
                 // @ts-ignore
-                end(): void
+                public end(): void
                 /**
                  * Closes the decompressor when garbage is collected.
                  */

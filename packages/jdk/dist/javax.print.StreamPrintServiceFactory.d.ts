@@ -20,7 +20,7 @@ declare namespace javax {
          * physical printer device.
          */
         // @ts-ignore
-        class StreamPrintServiceFactory extends java.lang.Object {
+        abstract class StreamPrintServiceFactory extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -46,21 +46,21 @@ declare namespace javax {
              *            empty if no suitable factories could be located.
              */
             // @ts-ignore
-            lookupStreamPrintServiceFactories(flavor: javax.print.DocFlavor, outputMimeType: string): javax.print.StreamPrintServiceFactory[]
+            public static lookupStreamPrintServiceFactories(flavor: javax.print.DocFlavor, outputMimeType: java.lang.String | string): javax.print.StreamPrintServiceFactory[]
             /**
              * Queries the factory for the document format that is emitted
              * by printers obtained from this factory.
              * @return the output format described as a mime type.
              */
             // @ts-ignore
-            abstract getOutputFormat(): java.lang.String
+            public abstract getOutputFormat(): string
             /**
              * Queries the factory for the document flavors that can be accepted
              * by printers obtained from this factory.
              * @return array of supported doc flavors.
              */
             // @ts-ignore
-            abstract getSupportedDocFlavors(): javax.print.DocFlavor[]
+            public abstract getSupportedDocFlavors(): javax.print.DocFlavor[]
             /**
              * Returns a <code>StreamPrintService</code> that can print to
              * the specified output stream.
@@ -94,7 +94,7 @@ declare namespace javax {
              *  DocFlavor supported by this Factory.
              */
             // @ts-ignore
-            abstract getPrintService(out: java.io.OutputStream): javax.print.StreamPrintService
+            public abstract getPrintService(out: java.io.OutputStream): javax.print.StreamPrintService
         }
     }
 }

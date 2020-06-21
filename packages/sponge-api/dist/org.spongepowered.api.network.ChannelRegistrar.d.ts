@@ -18,7 +18,7 @@ declare namespace org {
                      * @throws ChannelRegistrationException The channel name is reserved
                      */
                     // @ts-ignore
-                    createChannel(plugin: any, channel: string): org.spongepowered.api.network.ChannelBinding.IndexedMessageChannel
+                    createChannel(plugin: java.lang.Object | any, channel: java.lang.String | string): org.spongepowered.api.network.ChannelBinding.IndexedMessageChannel
                     /**
                      * Creates a new raw channel binding. The channel can be used to send and
                      * Receive data from {@link ChannelBuf} objects.
@@ -30,14 +30,14 @@ declare namespace org {
                      * @see #createChannel
                      */
                     // @ts-ignore
-                    createRawChannel(plugin: any, channel: string): org.spongepowered.api.network.ChannelBinding.RawDataChannel
+                    createRawChannel(plugin: java.lang.Object | any, channel: java.lang.String | string): org.spongepowered.api.network.ChannelBinding.RawDataChannel
                     /**
                      * Gets a channel binding if a channel registered by that name exists.
                      * @param channel The name of the channel
                      * @return The channel if it exists
                      */
                     // @ts-ignore
-                    getChannel(channel: string): java.util.Optional<org.spongepowered.api.network.ChannelBinding>
+                    getChannel(channel: java.lang.String | string): java.util.Optional<org.spongepowered.api.network.ChannelBinding>
                     /**
                      * Gets or creates a {@link ChannelBinding.IndexedMessageChannel} by the
                      * given name. If the channel exists and is a indexed message channel, then
@@ -53,7 +53,7 @@ declare namespace org {
                      *          {#link #createChannel}.
                      */
                     // @ts-ignore
-                    getOrCreate(plugin: any, channel: string): org.spongepowered.api.network.ChannelBinding.IndexedMessageChannel
+                    getOrCreate(plugin: java.lang.Object | any, channel: java.lang.String | string): org.spongepowered.api.network.ChannelBinding.IndexedMessageChannel
                     /**
                      * Gets or creates a {@link ChannelBinding.RawDataChannel} by the given
                      * name. If the channel exists and is a raw data channel, then it is
@@ -69,7 +69,7 @@ declare namespace org {
                      *          {#link #createRawChannel}.
                      */
                     // @ts-ignore
-                    getOrCreateRaw(plugin: any, channel: string): org.spongepowered.api.network.ChannelBinding.RawDataChannel
+                    getOrCreateRaw(plugin: java.lang.Object | any, channel: java.lang.String | string): org.spongepowered.api.network.ChannelBinding.RawDataChannel
                     /**
                      * Remove the channel binding from this registrar, freeing up the channel
                      * name. All method calls on the channel binding instance will now throw
@@ -84,7 +84,7 @@ declare namespace org {
                      * @return A copy of the list of channels
                      */
                     // @ts-ignore
-                    getRegisteredChannels(side: org.spongepowered.api.Platform.Type): java.util.Set<java.lang.String>
+                    getRegisteredChannels(side: org.spongepowered.api.Platform.Type): Array<java.lang.String | string>
                     /**
                      * Returns whether the given channel name is available for creating with
                      * {@link #createChannel}.
@@ -92,7 +92,7 @@ declare namespace org {
                      * @return True if available
                      */
                     // @ts-ignore
-                    isChannelAvailable(channelName: string): boolean
+                    isChannelAvailable(channelName: java.lang.String | string): boolean
                 }
             }
         }

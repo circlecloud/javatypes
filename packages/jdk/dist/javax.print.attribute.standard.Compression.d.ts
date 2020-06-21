@@ -30,28 +30,28 @@ declare namespace javax {
                      * No compression is used.
                      */
                     // @ts-ignore
-                    readonly NONE: javax.print.attribute.standard.Compression
+                    public static readonly NONE: javax.print.attribute.standard.Compression
                     /**
                      * ZIP public domain inflate/deflate compression technology.
                      */
                     // @ts-ignore
-                    readonly DEFLATE: javax.print.attribute.standard.Compression
+                    public static readonly DEFLATE: javax.print.attribute.standard.Compression
                     /**
                      * GNU zip compression technology described in
                      * <A HREF="http://www.ietf.org/rfc/rfc1952.txt">RFC 1952</A>.
                      */
                     // @ts-ignore
-                    readonly GZIP: javax.print.attribute.standard.Compression
+                    public static readonly GZIP: javax.print.attribute.standard.Compression
                     /**
                      * UNIX compression technology.
                      */
                     // @ts-ignore
-                    readonly COMPRESS: javax.print.attribute.standard.Compression
+                    public static readonly COMPRESS: javax.print.attribute.standard.Compression
                     /**
                      * Returns the string table for class Compression.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class Compression.
                      */
@@ -67,7 +67,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -77,7 +77,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

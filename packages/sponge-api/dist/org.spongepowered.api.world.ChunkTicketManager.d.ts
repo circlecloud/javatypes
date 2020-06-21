@@ -18,7 +18,7 @@ declare namespace org {
                      * @param callback The callback function object
                      */
                     // @ts-ignore
-                    registerCallback(plugin: any, callback: org.spongepowered.api.world.ChunkTicketManager.Callback): void
+                    registerCallback(plugin: java.lang.Object | any, callback: org.spongepowered.api.world.ChunkTicketManager.Callback): void
                     /**
                      * Attempts to create a new loading ticket for a plugin to load chunks in a
                      * world.
@@ -30,7 +30,7 @@ declare namespace org {
                      *          be created
                      */
                     // @ts-ignore
-                    createTicket(plugin: any, world: org.spongepowered.api.world.World): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.LoadingTicket>
+                    createTicket(plugin: java.lang.Object | any, world: org.spongepowered.api.world.World): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.LoadingTicket>
                     /**
                      * Attempts to create a new loading ticket for a plugin to load chunks in a
                      * world.
@@ -45,7 +45,7 @@ declare namespace org {
                      *          be created
                      */
                     // @ts-ignore
-                    createEntityTicket(plugin: any, world: org.spongepowered.api.world.World): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.EntityLoadingTicket>
+                    createEntityTicket(plugin: java.lang.Object | any, world: org.spongepowered.api.world.World): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.EntityLoadingTicket>
                     /**
                      * Attempts to create a new loading ticket for a plugin to load chunks in a
                      * world. The returned ticket will be associated with the given player.
@@ -57,7 +57,7 @@ declare namespace org {
                      *          be created
                      */
                     // @ts-ignore
-                    createPlayerTicket(plugin: any, world: org.spongepowered.api.world.World, player: java.util.UUID): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.PlayerLoadingTicket>
+                    createPlayerTicket(plugin: java.lang.Object | any, world: org.spongepowered.api.world.World, player: java.util.UUID): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.PlayerLoadingTicket>
                     /**
                      * Attempts to create a new loading ticket for a plugin to load chunks in a
                      * world. The returned ticket will be associated with the given player.
@@ -73,7 +73,7 @@ declare namespace org {
                      *          be created
                      */
                     // @ts-ignore
-                    createPlayerEntityTicket(plugin: any, world: org.spongepowered.api.world.World, player: java.util.UUID): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.PlayerEntityLoadingTicket>
+                    createPlayerEntityTicket(plugin: java.lang.Object | any, world: org.spongepowered.api.world.World, player: java.util.UUID): java.util.Optional<org.spongepowered.api.world.ChunkTicketManager.PlayerEntityLoadingTicket>
                     /**
                      * Gets the maximum allowed per-world tickets for a plugin.
                      * @param plugin The plugin to get the maximum ticket count for
@@ -81,7 +81,7 @@ declare namespace org {
                      *          world
                      */
                     // @ts-ignore
-                    getMaxTickets(plugin: any): int
+                    getMaxTickets(plugin: java.lang.Object | any): number /*int*/
                     /**
                      * Gets the amount of remaining tickets a plugin can have in the world
                      * before hitting the maximum.
@@ -90,14 +90,14 @@ declare namespace org {
                      * @return The remaining tickets the plugin has available in the world
                      */
                     // @ts-ignore
-                    getAvailableTickets(plugin: any, world: org.spongepowered.api.world.World): int
+                    getAvailableTickets(plugin: java.lang.Object | any, world: org.spongepowered.api.world.World): number /*int*/
                     /**
                      * Gets the amount of tickets remaining available for a player.
                      * @param player The player to get the number of remaining tickets for
                      * @return The remaining tickets the player has available
                      */
                     // @ts-ignore
-                    getAvailableTickets(player: java.util.UUID): int
+                    getAvailableTickets(player: java.util.UUID): number /*int*/
                     /**
                      * Gets the set of currently force-loaded chunks in a world.
                      * @param world The world to get force-loaded chunks from
@@ -105,7 +105,7 @@ declare namespace org {
                      *          that are loading those chunks
                      */
                     // @ts-ignore
-                    getForcedChunks(world: org.spongepowered.api.world.World): <any>
+                    getForcedChunks(world: org.spongepowered.api.world.World): object
                 }
             }
         }

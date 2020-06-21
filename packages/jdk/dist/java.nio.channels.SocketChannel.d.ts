@@ -75,7 +75,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class SocketChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.ByteChannel, java.nio.channels.ScatteringByteChannel, java.nio.channels.GatheringByteChannel, java.nio.channels.NetworkChannel {
+            abstract class SocketChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.ByteChannel, java.nio.channels.ScatteringByteChannel, java.nio.channels.GatheringByteChannel, java.nio.channels.NetworkChannel {
                 /**
                  * Initializes a new instance of this class.
                  * @param provider
@@ -94,7 +94,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.SocketChannel
+                public static open(): java.nio.channels.SocketChannel
                 /**
                  * Opens a socket channel and connects it to a remote address.
                  * <p> This convenience method works as if by invoking the {@link #open()}
@@ -123,7 +123,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                open(remote: java.net.SocketAddress): java.nio.channels.SocketChannel
+                public static open(remote: java.net.SocketAddress): java.nio.channels.SocketChannel
                 /**
                  * Returns an operation set identifying this channel's supported
                  * operations.
@@ -134,7 +134,7 @@ declare namespace java {
                  * @return The valid-operation set
                  */
                 // @ts-ignore
-                validOps(): int
+                public validOps(): number /*int*/
                 /**
                  * @throws ConnectionPendingException
                  *           If a non-blocking connect operation is already in progress on
@@ -150,7 +150,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract bind(local: java.net.SocketAddress): java.nio.channels.SocketChannel
+                public abstract bind(local: java.net.SocketAddress): java.nio.channels.SocketChannel
                 /**
                  * @throws UnsupportedOperationException           {#inheritDoc}
                  * @throws IllegalArgumentException                {#inheritDoc}
@@ -159,7 +159,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.SocketChannel
+                public abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.SocketChannel
                 /**
                  * Shutdown the connection for reading without closing the channel.
                  * <p> Once shutdown for reading then further reads on the channel will
@@ -175,7 +175,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract shutdownInput(): java.nio.channels.SocketChannel
+                public abstract shutdownInput(): java.nio.channels.SocketChannel
                 /**
                  * Shutdown the connection for writing without closing the channel.
                  * <p> Once shutdown for writing then further attempts to write to the
@@ -192,7 +192,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract shutdownOutput(): java.nio.channels.SocketChannel
+                public abstract shutdownOutput(): java.nio.channels.SocketChannel
                 /**
                  * Retrieves a socket associated with this channel.
                  * <p> The returned object will not declare any public methods that are not
@@ -200,14 +200,14 @@ declare namespace java {
                  * @return A socket associated with this channel
                  */
                 // @ts-ignore
-                abstract socket(): java.net.Socket
+                public abstract socket(): java.net.Socket
                 /**
                  * Tells whether or not this channel's network socket is connected.
                  * @return <tt>true</tt> if, and only if, this channel's network socket
                  *           is {#link #isOpen open} and connected
                  */
                 // @ts-ignore
-                abstract isConnected(): boolean
+                public abstract isConnected(): boolean
                 /**
                  * Tells whether or not a connection operation is in progress on this
                  * channel.
@@ -216,7 +216,7 @@ declare namespace java {
                  *           {#link #finishConnect finishConnect} method
                  */
                 // @ts-ignore
-                abstract isConnectionPending(): boolean
+                public abstract isConnectionPending(): boolean
                 /**
                  * Connects this channel's socket.
                  * <p> If this channel is in non-blocking mode then an invocation of this
@@ -270,7 +270,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract connect(remote: java.net.SocketAddress): boolean
+                public abstract connect(remote: java.net.SocketAddress): boolean
                 /**
                  * Finishes the process of connecting a socket channel.
                  * <p> A non-blocking connection operation is initiated by placing a socket
@@ -312,7 +312,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract finishConnect(): boolean
+                public abstract finishConnect(): boolean
                 /**
                  * Returns the remote address to which this channel's socket is connected.
                  * <p> Where the channel is bound and connected to an Internet Protocol
@@ -327,43 +327,43 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract getRemoteAddress(): java.net.SocketAddress
+                public abstract getRemoteAddress(): java.net.SocketAddress
                 /**
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                abstract read(dst: java.nio.ByteBuffer): int
+                public abstract read(dst: java.nio.ByteBuffer): number /*int*/
                 /**
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                abstract read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                public abstract read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                read(dsts: java.nio.ByteBuffer[]): long
+                public read(dsts: java.nio.ByteBuffer[]): number /*long*/
                 /**
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                abstract write(src: java.nio.ByteBuffer): int
+                public abstract write(src: java.nio.ByteBuffer): number /*int*/
                 /**
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                abstract write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                public abstract write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * @throws NotYetConnectedException
                  *           If this channel is not yet connected
                  */
                 // @ts-ignore
-                write(srcs: java.nio.ByteBuffer[]): long
+                public write(srcs: java.nio.ByteBuffer[]): number /*long*/
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -381,7 +381,7 @@ declare namespace java {
                  * @throws IOException                {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract getLocalAddress(): java.net.SocketAddress
+                public abstract getLocalAddress(): java.net.SocketAddress
             }
         }
     }

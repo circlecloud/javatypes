@@ -47,14 +47,14 @@ declare namespace java {
                  * @return the flatness of this <code>FlatteningPathIterator</code>.
                  */
                 // @ts-ignore
-                getFlatness(): double
+                public getFlatness(): number /*double*/
                 /**
                  * Returns the recursion limit of this iterator.
                  * @return the recursion limit of this
                  *  <code>FlatteningPathIterator</code>.
                  */
                 // @ts-ignore
-                getRecursionLimit(): int
+                public getRecursionLimit(): number /*int*/
                 /**
                  * Returns the winding rule for determining the interior of the
                  * path.
@@ -64,21 +64,21 @@ declare namespace java {
                  * @see PathIterator#WIND_NON_ZERO
                  */
                 // @ts-ignore
-                getWindingRule(): int
+                public getWindingRule(): number /*int*/
                 /**
                  * Tests if the iteration is complete.
                  * @return <code>true</code> if all the segments have
                  *  been read; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isDone(): boolean
+                public isDone(): boolean
                 /**
                  * Moves the iterator to the next segment of the path forwards
                  * along the primary direction of traversal as long as there are
                  * more points in that direction.
                  */
                 // @ts-ignore
-                next(): void
+                public next(): void
                 /**
                  * Returns the coordinates and type of the current path segment in
                  * the iteration.
@@ -100,7 +100,7 @@ declare namespace java {
                  * @see PathIterator#SEG_CLOSE
                  */
                 // @ts-ignore
-                currentSegment(coords: number /*float*/[]): int
+                public currentSegment(coords: number /*float*/[]): number /*int*/
                 /**
                  * Returns the coordinates and type of the current path segment in
                  * the iteration.
@@ -122,7 +122,7 @@ declare namespace java {
                  * @see PathIterator#SEG_CLOSE
                  */
                 // @ts-ignore
-                currentSegment(coords: number /*double*/[]): int
+                public currentSegment(coords: number /*double*/[]): number /*int*/
             }
         }
     }

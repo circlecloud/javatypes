@@ -37,7 +37,7 @@ declare namespace javax {
              *                  The contents of src is copied into the new BinaryRefAddr.
              */
             // @ts-ignore
-            constructor(addrType: string, src: number /*byte*/[])
+            constructor(addrType: java.lang.String | string, src: number /*byte*/[])
             /**
              * Constructs a new instance of BinaryRefAddr using its address type and
              * a region of a byte array for contents.
@@ -50,7 +50,7 @@ declare namespace javax {
              *                  {#code 0 <= count <= src.length-offset}.
              */
             // @ts-ignore
-            constructor(addrType: string, src: number /*byte*/[], offset: number /*int*/, count: number /*int*/)
+            constructor(addrType: java.lang.String | string, src: number /*byte*/[], offset: number /*int*/, count: number /*int*/)
             /**
              * Retrieves the contents of this address as an Object.
              * The result is a byte array.
@@ -60,7 +60,7 @@ declare namespace javax {
              * @return The non-null buffer containing this address's contents.
              */
             // @ts-ignore
-            getContent(): java.lang.Object
+            public getContent(): any
             /**
              * Determines whether obj is equal to this address.  It is equal if
              * it contains the same address type and their contents are byte-wise
@@ -69,7 +69,7 @@ declare namespace javax {
              * @return true if the object is equal; false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Computes the hash code of this address using its address type and contents.
              * Two BinaryRefAddrs have the same hash code if they have
@@ -79,7 +79,7 @@ declare namespace javax {
              * @return The hash code of this address as an int.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Generates the string representation of this address.
              * The string consists of the address's type and contents with labels.
@@ -90,7 +90,7 @@ declare namespace javax {
              * @return The non-null string representation of this address.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

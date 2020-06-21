@@ -21,9 +21,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(locale: java.util.Locale)
                     // @ts-ignore
-                    getLocale(): java.util.Locale
+                    public getLocale(): java.util.Locale
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

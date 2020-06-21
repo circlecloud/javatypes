@@ -8,13 +8,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor(classLoader: java.lang.ClassLoader)
                         // @ts-ignore
-                        getClassLoader(): java.lang.ClassLoader
+                        public getClassLoader(): java.lang.ClassLoader
                         // @ts-ignore
-                        reserveName(name: string): void
+                        public reserveName(name: java.lang.String | string): void
                         // @ts-ignore
-                        getUniqueNamePredicate(): Predicate
+                        public getUniqueNamePredicate(): Predicate
                         // @ts-ignore
-                        get(gen: org.springframework.cglib.core.AbstractClassGenerator, useCache: boolean): java.lang.Object
+                        public get(gen: org.springframework.cglib.core.AbstractClassGenerator<any>, useCache: boolean): any
                     }
                 }
             }

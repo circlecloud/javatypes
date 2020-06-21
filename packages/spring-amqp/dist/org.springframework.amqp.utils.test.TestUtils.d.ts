@@ -21,9 +21,9 @@ declare namespace org {
                          * @return The field.
                          */
                         // @ts-ignore
-                        getPropertyValue(root: any, propertyPath: string): java.lang.Object
+                        public static getPropertyValue(root: java.lang.Object | any, propertyPath: java.lang.String | string): any
                         // @ts-ignore
-                        getPropertyValue<T>(root: any, propertyPath: string, type: java.lang.Class<T>): T
+                        public static getPropertyValue<T>(root: java.lang.Object | any, propertyPath: java.lang.String | string, type: java.lang.Class<T>): T
                     }
                 }
             }

@@ -20,7 +20,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(s: string, err: java.lang.Error)
+            constructor(s: java.lang.String | string, err: java.lang.Error)
         }
     }
 }

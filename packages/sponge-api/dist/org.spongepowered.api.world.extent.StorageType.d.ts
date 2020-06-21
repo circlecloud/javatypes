@@ -10,10 +10,23 @@ declare namespace org {
                      */
                     // @ts-ignore
                     class StorageType extends java.lang.Enum<org.spongepowered.api.world.extent.StorageType> {
+                        /**
+                         * The standard storage method used by the implementation. Not guaranteed to
+                         * provide anything but single threaded capabilities.
+                         */
+                        // @ts-ignore
+                        readonly STANDARD: org.spongepowered.api.world.extent.StorageType
+                        /**
+                         * A thread-safe storage solution. Reads and writes are atomic. Necessary
+                         * for multi-threaded applications, but single threaded ones might suffer
+                         * for extra overhead.
+                         */
+                        // @ts-ignore
+                        readonly THREAD_SAFE: org.spongepowered.api.world.extent.StorageType
                         // @ts-ignore
                         values(): org.spongepowered.api.world.extent.StorageType[]
                         // @ts-ignore
-                        valueOf(name: string): org.spongepowered.api.world.extent.StorageType
+                        valueOf(name: java.lang.String | string): org.spongepowered.api.world.extent.StorageType
                     }
                 }
             }

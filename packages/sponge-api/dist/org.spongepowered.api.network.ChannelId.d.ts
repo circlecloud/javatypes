@@ -8,7 +8,7 @@ declare namespace org {
                  * ChannelBinding.RawDataChannel channel;}</pre></p>
                  */
                 // @ts-ignore
-                class ChannelId implements java.lang.annotation.Annotation {
+                abstract class ChannelId implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -21,14 +21,14 @@ declare namespace org {
                  * @see org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor
                  */
                 // @ts-ignore
-                class AnnotationConfigUtils extends java.lang.Object {
+                abstract class AnnotationConfigUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
                      * The bean name of the internally managed Configuration annotation processor.
                      */
                     // @ts-ignore
-                    readonly CONFIGURATION_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly CONFIGURATION_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed BeanNameGenerator for use when processing
                      * {@link Configuration} classes. Set by {@link AnnotationConfigApplicationContext}
@@ -38,44 +38,44 @@ declare namespace org {
                      * @since 3.1.1
                      */
                     // @ts-ignore
-                    readonly CONFIGURATION_BEAN_NAME_GENERATOR: string
+                    public static readonly CONFIGURATION_BEAN_NAME_GENERATOR: java.lang.String | string
                     /**
                      * The bean name of the internally managed Autowired annotation processor.
                      */
                     // @ts-ignore
-                    readonly AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly AUTOWIRED_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed Required annotation processor.
                      * @deprecated as of 5.1, since no Required processor is registered by default anymore
                      */
                     // @ts-ignore
-                    readonly REQUIRED_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly REQUIRED_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed JSR-250 annotation processor.
                      */
                     // @ts-ignore
-                    readonly COMMON_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly COMMON_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed JPA annotation processor.
                      */
                     // @ts-ignore
-                    readonly PERSISTENCE_ANNOTATION_PROCESSOR_BEAN_NAME: string
+                    public static readonly PERSISTENCE_ANNOTATION_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed @EventListener annotation processor.
                      */
                     // @ts-ignore
-                    readonly EVENT_LISTENER_PROCESSOR_BEAN_NAME: string
+                    public static readonly EVENT_LISTENER_PROCESSOR_BEAN_NAME: java.lang.String | string
                     /**
                      * The bean name of the internally managed EventListenerFactory.
                      */
                     // @ts-ignore
-                    readonly EVENT_LISTENER_FACTORY_BEAN_NAME: string
+                    public static readonly EVENT_LISTENER_FACTORY_BEAN_NAME: java.lang.String | string
                     /**
                      * Register all relevant annotation post processors in the given registry.
                      * @param registry the registry to operate on
                      */
                     // @ts-ignore
-                    registerAnnotationConfigProcessors(registry: BeanDefinitionRegistry): void
+                    public static registerAnnotationConfigProcessors(registry: BeanDefinitionRegistry): void
                     /**
                      * Register all relevant annotation post processors in the given registry.
                      * @param registry the registry to operate on
@@ -85,9 +85,9 @@ declare namespace org {
                      *  that have actually been registered by this call
                      */
                     // @ts-ignore
-                    registerAnnotationConfigProcessors(registry: BeanDefinitionRegistry, source: any): java.util.Set<BeanDefinitionHolder>
+                    public static registerAnnotationConfigProcessors(registry: BeanDefinitionRegistry, source: java.lang.Object | any): Array<BeanDefinitionHolder>
                     // @ts-ignore
-                    processCommonDefinitionAnnotations(abd: AnnotatedBeanDefinition): void
+                    public static processCommonDefinitionAnnotations(abd: AnnotatedBeanDefinition): void
                 }
             }
         }

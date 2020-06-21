@@ -12,7 +12,7 @@ declare namespace org {
                      * @since 1.4.2
                      */
                     // @ts-ignore
-                    class AbstractCompressingPostProcessor extends java.lang.Object implements org.springframework.amqp.core.MessagePostProcessor {
+                    abstract class AbstractCompressingPostProcessor extends java.lang.Object implements org.springframework.amqp.core.MessagePostProcessor {
                         /**
                          * Construct a post processor that will include the
                          * {@link MessageProperties#SPRING_AUTO_DECOMPRESS} header set to 'true'.
@@ -40,11 +40,11 @@ declare namespace org {
                          * @since 2.1.5
                          */
                         // @ts-ignore
-                        setCopyProperties(copyProperties: boolean): void
+                        public setCopyProperties(copyProperties: boolean): void
                         // @ts-ignore
-                        postProcessMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
+                        public postProcessMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         /**
                          * Set the order.
                          * @param order the order, default 0.
@@ -65,7 +65,7 @@ declare namespace org {
                          * @return the content-encoding header.
                          */
                         // @ts-ignore
-                        abstract getEncoding(): java.lang.String
+                        abstract getEncoding(): string
                     }
                 }
             }

@@ -96,7 +96,7 @@ declare namespace java {
              * @return the name of the coding format.
              */
             // @ts-ignore
-            getFormat(): java.lang.String
+            getFormat(): string
             /**
              * Returns a string that represents the contents of the certificate.
              * @param detailed whether or not to give detailed information
@@ -104,7 +104,7 @@ declare namespace java {
              * @return a string representing the contents of the certificate
              */
             // @ts-ignore
-            toString(detailed: boolean): java.lang.String
+            toString(detailed: boolean): string
         }
     }
 }

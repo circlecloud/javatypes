@@ -6,13 +6,13 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class ObjectStreamException extends java.io.IOException {
+        abstract class ObjectStreamException extends java.io.IOException {
             /**
              * Create an ObjectStreamException with the specified argument.
              * @param classname the detailed message for the exception
              */
             // @ts-ignore
-            constructor(classname: string)
+            constructor(classname: java.lang.String | string)
             /**
              * Create an ObjectStreamException.
              */

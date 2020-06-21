@@ -24,7 +24,7 @@ declare namespace java {
                  * 					next available Reference or NULL.
                  */
                 // @ts-ignore
-                poll(): java.lang.ref.Reference<? extends T>
+                public poll(): java.lang.ref.Reference<any>
                 /**
                  * Return the next available enqueued reference on the queue, blocking
                  * indefinitely until one is available.
@@ -37,7 +37,7 @@ declare namespace java {
                  * 					to interrupt the wait.
                  */
                 // @ts-ignore
-                remove(): java.lang.ref.Reference<? extends T>
+                public remove(): java.lang.ref.Reference<any>
                 /**
                  * Return the next available enqueued reference on the queue, blocking
                  * up to the time given until one is available.  Return null if no
@@ -56,7 +56,7 @@ declare namespace java {
                  * 					to interrupt the wait.
                  */
                 // @ts-ignore
-                remove(timeout: number /*long*/): java.lang.ref.Reference<? extends T>
+                public remove(timeout: number /*long*/): java.lang.ref.Reference<any>
             }
         }
     }

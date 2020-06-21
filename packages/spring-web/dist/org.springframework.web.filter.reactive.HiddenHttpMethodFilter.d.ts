@@ -24,13 +24,13 @@ declare namespace org {
                          * Default name of the form parameter with the HTTP method to use.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_METHOD_PARAMETER_NAME: string
+                        public static readonly DEFAULT_METHOD_PARAMETER_NAME: java.lang.String | string
                         /**
                          * Set the name of the form parameter with the HTTP method to use.
                          * <p>By default this is set to {@code "_method"}.
                          */
                         // @ts-ignore
-                        setMethodParamName(methodParamName: string): void
+                        public setMethodParamName(methodParamName: java.lang.String | string): void
                         /**
                          * Transform an HTTP POST into another method based on {@code methodParamName}.
                          * @param exchange the current server exchange
@@ -38,7 +38,7 @@ declare namespace org {
                          * @return {#code Mono<Void>} to indicate when request processing is complete
                          */
                         // @ts-ignore
-                        filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): <any>
+                        public filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): object
                     }
                 }
             }

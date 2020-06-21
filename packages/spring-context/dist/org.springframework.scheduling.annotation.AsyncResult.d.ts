@@ -27,21 +27,21 @@ declare namespace org {
                     // @ts-ignore
                     constructor(value: V)
                     // @ts-ignore
-                    cancel(mayInterruptIfRunning: boolean): boolean
+                    public cancel(mayInterruptIfRunning: boolean): boolean
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    isDone(): boolean
+                    public isDone(): boolean
                     // @ts-ignore
-                    get(): V
+                    public get(): V
                     // @ts-ignore
-                    get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
+                    public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
                     // @ts-ignore
-                    addCallback(callback: object): void
+                    public addCallback(callback: object): void
                     // @ts-ignore
-                    addCallback(successCallback: object, failureCallback: FailureCallback): void
+                    public addCallback(successCallback: object, failureCallback: FailureCallback): void
                     // @ts-ignore
-                    completable(): java.util.concurrent.CompletableFuture<V>
+                    public completable(): java.util.concurrent.CompletableFuture<V>
                     /**
                      * Create a new async result which exposes the given value from {@link Future#get()}.
                      * @param value the value to expose
@@ -49,7 +49,7 @@ declare namespace org {
                      * @see Future#get()
                      */
                     // @ts-ignore
-                    forValue<V>(value: V): <any>
+                    public static forValue<V>(value: V): object
                     /**
                      * Create a new async result which exposes the given exception as an
                      * {@link ExecutionException} from {@link Future#get()}.
@@ -59,7 +59,7 @@ declare namespace org {
                      * @see ExecutionException
                      */
                     // @ts-ignore
-                    forExecutionException<V>(ex: Error): <any>
+                    public static forExecutionException<V>(ex: java.lang.Throwable | Error): object
                 }
             }
         }

@@ -22,7 +22,7 @@ declare namespace org {
                      * @return the title of the book
                      */
                     // @ts-ignore
-                    getTitle(): java.lang.String
+                    getTitle(): string
                     /**
                      * Sets the title of the book.
                      * <p>
@@ -31,7 +31,7 @@ declare namespace org {
                      * @return true if the title was successfully set
                      */
                     // @ts-ignore
-                    setTitle(title: string): boolean
+                    setTitle(title: java.lang.String | string): boolean
                     /**
                      * Checks for the existence of an author in the book.
                      * @return true if the book has an author
@@ -46,13 +46,13 @@ declare namespace org {
                      * @return the author of the book
                      */
                     // @ts-ignore
-                    getAuthor(): java.lang.String
+                    getAuthor(): string
                     /**
                      * Sets the author of the book. Removes author when given null.
                      * @param author the author to set
                      */
                     // @ts-ignore
-                    setAuthor(author: string): void
+                    setAuthor(author: java.lang.String | string): void
                     /**
                      * Checks for the existence of generation level in the book.
                      * @return true if the book has a generation level
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return the page from the book
                      */
                     // @ts-ignore
-                    getPage(page: number /*int*/): java.lang.String
+                    getPage(page: number /*int*/): string
                     /**
                      * Sets the specified page in the book. Pages of the book must be
                      * contiguous.
@@ -101,40 +101,40 @@ declare namespace org {
                      * @param data the data to set for that page
                      */
                     // @ts-ignore
-                    setPage(page: number /*int*/, data: string): void
+                    setPage(page: number /*int*/, data: java.lang.String | string): void
                     /**
                      * Gets all the pages in the book.
                      * @return list of all the pages in the book
                      */
                     // @ts-ignore
-                    getPages(): java.util.List<java.lang.String>
+                    getPages(): Array<java.lang.String | string>
                     /**
                      * Clears the existing book pages, and sets the book to use the provided
                      * pages. Maximum 100 pages with 256 characters per page.
                      * @param pages A list of pages to set the book to use
                      */
                     // @ts-ignore
-                    setPages(pages: Array<java.lang.String>): void
+                    setPages(pages: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Clears the existing book pages, and sets the book to use the provided
                      * pages. Maximum 50 pages with 256 characters per page.
                      * @param pages A list of strings, each being a page
                      */
                     // @ts-ignore
-                    setPages(...pages: string[]): void
+                    setPages(...pages: java.lang.String[] | string[]): void
                     /**
                      * Adds new pages to the end of the book. Up to a maximum of 50 pages with
                      * 256 characters per page.
                      * @param pages A list of strings, each being a page
                      */
                     // @ts-ignore
-                    addPage(...pages: string[]): void
+                    addPage(...pages: java.lang.String[] | string[]): void
                     /**
                      * Gets the number of pages in the book.
                      * @return the number of pages in the book
                      */
                     // @ts-ignore
-                    getPageCount(): int
+                    getPageCount(): number /*int*/
                     // @ts-ignore
                     clone(): org.bukkit.inventory.meta.BookMeta
                     // @ts-ignore

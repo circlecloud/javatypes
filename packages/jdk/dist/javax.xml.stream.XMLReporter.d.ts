@@ -22,7 +22,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                report(message: string, errorType: string, relatedInformation: any, location: javax.xml.stream.Location): void
+                report(message: java.lang.String | string, errorType: java.lang.String | string, relatedInformation: java.lang.Object | any, location: javax.xml.stream.Location): void
             }
         }
     }

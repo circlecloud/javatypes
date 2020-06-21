@@ -31,7 +31,7 @@ declare namespace org {
                          * {@code null} to indicate all source-to-target pairs should be considered.
                          */
                         // @ts-ignore
-                        getConvertibleTypes(): java.util.Set<org.springframework.core.convert.converter.GenericConverter.ConvertiblePair>
+                        getConvertibleTypes(): Array<org.springframework.core.convert.converter.GenericConverter.ConvertiblePair>
                         /**
                          * Convert the source object to the targetType described by the {@code TypeDescriptor}.
                          * @param source the source object to convert (may be {#code null})
@@ -40,7 +40,7 @@ declare namespace org {
                          * @return the converted object
                          */
                         // @ts-ignore
-                        convert(source: any, sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): java.lang.Object
+                        convert(source: java.lang.Object | any, sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): any
                     }
                 }
             }

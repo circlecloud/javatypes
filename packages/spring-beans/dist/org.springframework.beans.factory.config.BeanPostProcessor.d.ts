@@ -51,7 +51,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet
                          */
                         // @ts-ignore
-                        postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                        postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                         /**
                          * Apply this {@code BeanPostProcessor} to the given new bean instance <i>after</i> any bean
                          * initialization callbacks (like InitializingBean's {@code afterPropertiesSet}
@@ -74,7 +74,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.FactoryBean
                          */
                         // @ts-ignore
-                        postProcessAfterInitialization(bean: any, beanName: string): java.lang.Object
+                        postProcessAfterInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     }
                 }
             }

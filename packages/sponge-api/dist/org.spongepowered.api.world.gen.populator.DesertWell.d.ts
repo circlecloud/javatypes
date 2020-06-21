@@ -22,7 +22,7 @@ declare namespace org {
                              * @return The spawn chance of a well
                              */
                             // @ts-ignore
-                            getSpawnProbability(): double
+                            getSpawnProbability(): number /*double*/
                             /**
                              * Sets the probability of a desert well spawning.
                              * @param p The new spawn probability

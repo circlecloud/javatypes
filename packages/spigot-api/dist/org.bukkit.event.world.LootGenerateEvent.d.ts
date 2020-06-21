@@ -13,7 +13,7 @@ declare namespace org {
                 // @ts-ignore
                 class LootGenerateEvent extends org.bukkit.event.world.WorldEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(world: org.bukkit.World, entity: org.bukkit.entity.Entity, inventoryHolder: org.bukkit.inventory.InventoryHolder, lootTable: org.bukkit.loot.LootTable, lootContext: org.bukkit.loot.LootContext, items: Array<org.bukkit.inventory.ItemStack>, plugin: boolean)
+                    constructor(world: org.bukkit.World, entity: org.bukkit.entity.Entity, inventoryHolder: org.bukkit.inventory.InventoryHolder, lootTable: org.bukkit.loot.LootTable, lootContext: org.bukkit.loot.LootContext, items: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>, plugin: boolean)
                     /**
                      * Get the entity used as context for loot generation (if applicable).
                      * For inventories where entities are not required to generate loot, such as
@@ -23,7 +23,7 @@ declare namespace org {
                      * @return the entity
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     /**
                      * Get the inventory holder in which the loot was generated.
                      * If the loot was generated as a result of the block being broken, the
@@ -31,20 +31,20 @@ declare namespace org {
                      * @return the inventory holder
                      */
                     // @ts-ignore
-                    getInventoryHolder(): org.bukkit.inventory.InventoryHolder
+                    public getInventoryHolder(): org.bukkit.inventory.InventoryHolder
                     /**
                      * Get the loot table used to generate loot.
                      * @return the loot table
                      */
                     // @ts-ignore
-                    getLootTable(): org.bukkit.loot.LootTable
+                    public getLootTable(): org.bukkit.loot.LootTable
                     /**
                      * Get the loot context used to provide context to the loot table's loot
                      * generation.
                      * @return the loot context
                      */
                     // @ts-ignore
-                    getLootContext(): org.bukkit.loot.LootContext
+                    public getLootContext(): org.bukkit.loot.LootContext
                     /**
                      * Set the loot to be generated. Null items will be treated as air.
                      * Note: the set collection is not the one which will be returned by
@@ -52,7 +52,7 @@ declare namespace org {
                      * @param loot the loot to generate, null to clear all loot
                      */
                     // @ts-ignore
-                    setLoot(loot: Array<org.bukkit.inventory.ItemStack>): void
+                    public setLoot(loot: java.util.Collection<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>): void
                     /**
                      * Get a mutable list of all loot to be generated.
                      * Any items added or removed from the returned list will be reflected in
@@ -60,7 +60,7 @@ declare namespace org {
                      * @return the loot to generate
                      */
                     // @ts-ignore
-                    getLoot(): java.util.List<org.bukkit.inventory.ItemStack>
+                    public getLoot(): Array<org.bukkit.inventory.ItemStack>
                     /**
                      * Check whether or not this event was called as a result of a plugin
                      * invoking
@@ -68,15 +68,15 @@ declare namespace org {
                      * @return true if plugin caused, false otherwise
                      */
                     // @ts-ignore
-                    isPlugin(): boolean
+                    public isPlugin(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

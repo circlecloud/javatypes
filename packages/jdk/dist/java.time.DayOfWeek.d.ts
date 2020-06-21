@@ -27,10 +27,52 @@ declare namespace java {
          */
         // @ts-ignore
         class DayOfWeek extends java.lang.Enum<java.time.DayOfWeek> implements java.time.temporal.TemporalAccessor, java.time.temporal.TemporalAdjuster {
+            /**
+             * The singleton instance for the day-of-week of Monday.
+             * This has the numeric value of {@code 1}.
+             */
+            // @ts-ignore
+            readonly MONDAY: java.time.DayOfWeek
+            /**
+             * The singleton instance for the day-of-week of Tuesday.
+             * This has the numeric value of {@code 2}.
+             */
+            // @ts-ignore
+            readonly TUESDAY: java.time.DayOfWeek
+            /**
+             * The singleton instance for the day-of-week of Wednesday.
+             * This has the numeric value of {@code 3}.
+             */
+            // @ts-ignore
+            readonly WEDNESDAY: java.time.DayOfWeek
+            /**
+             * The singleton instance for the day-of-week of Thursday.
+             * This has the numeric value of {@code 4}.
+             */
+            // @ts-ignore
+            readonly THURSDAY: java.time.DayOfWeek
+            /**
+             * The singleton instance for the day-of-week of Friday.
+             * This has the numeric value of {@code 5}.
+             */
+            // @ts-ignore
+            readonly FRIDAY: java.time.DayOfWeek
+            /**
+             * The singleton instance for the day-of-week of Saturday.
+             * This has the numeric value of {@code 6}.
+             */
+            // @ts-ignore
+            readonly SATURDAY: java.time.DayOfWeek
+            /**
+             * The singleton instance for the day-of-week of Sunday.
+             * This has the numeric value of {@code 7}.
+             */
+            // @ts-ignore
+            readonly SUNDAY: java.time.DayOfWeek
             // @ts-ignore
             values(): java.time.DayOfWeek[]
             // @ts-ignore
-            valueOf(name: string): java.time.DayOfWeek
+            valueOf(name: java.lang.String | string): java.time.DayOfWeek
             /**
              * Obtains an instance of {@code DayOfWeek} from an {@code int} value.
              * <p>
@@ -68,7 +110,7 @@ declare namespace java {
              * @return the day-of-week, from 1 (Monday) to 7 (Sunday)
              */
             // @ts-ignore
-            getValue(): int
+            getValue(): number /*int*/
             /**
              * Gets the textual representation, such as 'Mon' or 'Friday'.
              * <p>
@@ -82,7 +124,7 @@ declare namespace java {
              * @return the text value of the day-of-week, not null
              */
             // @ts-ignore
-            getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): java.lang.String
+            getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -151,7 +193,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this day-of-week as a {@code long}.
              * <p>
@@ -174,7 +216,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Returns the day-of-week that is the specified number of days after this one.
              * <p>

@@ -24,19 +24,19 @@ declare namespace org {
                 // @ts-ignore
                 defaults: org.bukkit.configuration.Configuration
                 // @ts-ignore
-                addDefault(path: string, value: any): void
+                public addDefault(path: java.lang.String | string, value: java.lang.Object | any): void
                 // @ts-ignore
-                addDefaults(defaults: java.util.Map<java.lang.String, java.lang.Object>): void
+                public addDefaults(defaults: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                 // @ts-ignore
-                addDefaults(defaults: org.bukkit.configuration.Configuration): void
+                public addDefaults(defaults: org.bukkit.configuration.Configuration): void
                 // @ts-ignore
-                setDefaults(defaults: org.bukkit.configuration.Configuration): void
+                public setDefaults(defaults: org.bukkit.configuration.Configuration): void
                 // @ts-ignore
-                getDefaults(): org.bukkit.configuration.Configuration
+                public getDefaults(): org.bukkit.configuration.Configuration
                 // @ts-ignore
-                getParent(): org.bukkit.configuration.ConfigurationSection
+                public getParent(): org.bukkit.configuration.ConfigurationSection
                 // @ts-ignore
-                options(): org.bukkit.configuration.MemoryConfigurationOptions
+                public options(): org.bukkit.configuration.MemoryConfigurationOptions
             }
         }
     }

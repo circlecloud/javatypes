@@ -152,7 +152,7 @@ declare namespace javax {
              * @see JComponent#getDefaultLocale
              */
             // @ts-ignore
-            constructor(owner: java.awt.Frame, title: string)
+            constructor(owner: java.awt.Frame, title: java.lang.String | string)
             /**
              * Creates a dialog with the specified title, owner {@code Frame}
              * and modality. If {@code owner} is {@code null},
@@ -187,7 +187,7 @@ declare namespace javax {
              * @see JComponent#getDefaultLocale
              */
             // @ts-ignore
-            constructor(owner: java.awt.Frame, title: string, modal: boolean)
+            constructor(owner: java.awt.Frame, title: java.lang.String | string, modal: boolean)
             /**
              * Creates a dialog with the specified title,
              * owner {@code Frame}, modality and {@code GraphicsConfiguration}.
@@ -227,7 +227,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(owner: java.awt.Frame, title: string, modal: boolean, gc: java.awt.GraphicsConfiguration)
+            constructor(owner: java.awt.Frame, title: java.lang.String | string, modal: boolean, gc: java.awt.GraphicsConfiguration)
             /**
              * Creates a modeless dialog with the specified {@code Dialog}
              * as its owner and an empty title.
@@ -282,7 +282,7 @@ declare namespace javax {
              * @see JComponent#getDefaultLocale
              */
             // @ts-ignore
-            constructor(owner: java.awt.Dialog, title: string)
+            constructor(owner: java.awt.Dialog, title: java.lang.String | string)
             /**
              * Creates a dialog with the specified title, modality
              * and the specified owner {@code Dialog}.
@@ -307,7 +307,7 @@ declare namespace javax {
              * @see JComponent#getDefaultLocale
              */
             // @ts-ignore
-            constructor(owner: java.awt.Dialog, title: string, modal: boolean)
+            constructor(owner: java.awt.Dialog, title: java.lang.String | string, modal: boolean)
             /**
              * Creates a dialog with the specified title, owner {@code Dialog},
              * modality and {@code GraphicsConfiguration}.
@@ -340,7 +340,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(owner: java.awt.Dialog, title: string, modal: boolean, gc: java.awt.GraphicsConfiguration)
+            constructor(owner: java.awt.Dialog, title: java.lang.String | string, modal: boolean, gc: java.awt.GraphicsConfiguration)
             /**
              * Creates a modeless dialog with the specified {@code Window}
              * as its owner and an empty title.
@@ -414,7 +414,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(owner: java.awt.Window, title: string)
+            constructor(owner: java.awt.Window, title: java.lang.String | string)
             /**
              * Creates a dialog with the specified title, owner {@code Window} and
              * modality.
@@ -446,7 +446,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(owner: java.awt.Window, title: string, modalityType: java.awt.Dialog.ModalityType)
+            constructor(owner: java.awt.Window, title: java.lang.String | string, modalityType: java.awt.Dialog.ModalityType)
             /**
              * Creates a dialog with the specified title, owner {@code Window},
              * modality and {@code GraphicsConfiguration}.
@@ -485,7 +485,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(owner: java.awt.Window, title: string, modalityType: java.awt.Dialog.ModalityType, gc: java.awt.GraphicsConfiguration)
+            constructor(owner: java.awt.Window, title: java.lang.String | string, modalityType: java.awt.Dialog.ModalityType, gc: java.awt.GraphicsConfiguration)
             /**
              * @see #getRootPane
              * @see #setRootPane
@@ -568,7 +568,7 @@ declare namespace javax {
              *  description: The dialog's default close operation.
              */
             // @ts-ignore
-            setDefaultCloseOperation(operation: number /*int*/): void
+            public setDefaultCloseOperation(operation: number /*int*/): void
             /**
              * Returns the operation which occurs when the user
              * initiates a "close" on this dialog.
@@ -576,7 +576,7 @@ declare namespace javax {
              * @see #setDefaultCloseOperation
              */
             // @ts-ignore
-            getDefaultCloseOperation(): int
+            public getDefaultCloseOperation(): number /*int*/
             /**
              * Sets the {@code transferHandler} property, which is a mechanism to
              * support transfer of data into this component. Use {@code null}
@@ -607,7 +607,7 @@ declare namespace javax {
              *   description: Mechanism for transfer of data into the component
              */
             // @ts-ignore
-            setTransferHandler(newHandler: javax.swing.TransferHandler): void
+            public setTransferHandler(newHandler: javax.swing.TransferHandler): void
             /**
              * Gets the {@code transferHandler} property.
              * @return the value of the {#code transferHandler} property
@@ -616,14 +616,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getTransferHandler(): javax.swing.TransferHandler
+            public getTransferHandler(): javax.swing.TransferHandler
             /**
              * Calls {@code paint(g)}.  This method was overridden to
              * prevent an unnecessary call to clear the background.
              * @param g  the {#code Graphics} context in which to paint
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Sets the menubar for this dialog.
              * @param menu the menubar being placed in the dialog
@@ -632,13 +632,13 @@ declare namespace javax {
              *  description: The menubar for accessing pulldown menus from this dialog.
              */
             // @ts-ignore
-            setJMenuBar(menu: javax.swing.JMenuBar): void
+            public setJMenuBar(menu: javax.swing.JMenuBar): void
             /**
              * Returns the menubar set on this dialog.
              * @see #setJMenuBar
              */
             // @ts-ignore
-            getJMenuBar(): javax.swing.JMenuBar
+            public getJMenuBar(): javax.swing.JMenuBar
             /**
              * Returns whether calls to {@code add} and
              * {@code setLayout} are forwarded to the {@code contentPane}.
@@ -684,7 +684,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the specified component from the container. If
              * {@code comp} is not the {@code rootPane}, this will forward
@@ -697,7 +697,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * Sets the {@code LayoutManager}.
              * Overridden to conditionally forward the call to the
@@ -709,14 +709,14 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            setLayout(manager: java.awt.LayoutManager): void
+            public setLayout(manager: java.awt.LayoutManager): void
             /**
              * Returns the {@code rootPane} object for this dialog.
              * @see #setRootPane
              * @see RootPaneContainer#getRootPane
              */
             // @ts-ignore
-            getRootPane(): javax.swing.JRootPane
+            public getRootPane(): javax.swing.JRootPane
             /**
              * Sets the {@code rootPane} property.
              * This method is called by the constructor.
@@ -734,7 +734,7 @@ declare namespace javax {
              * @see RootPaneContainer#getContentPane
              */
             // @ts-ignore
-            getContentPane(): java.awt.Container
+            public getContentPane(): java.awt.Container
             /**
              * Sets the {@code contentPane} property.
              * This method is called by the constructor.
@@ -754,7 +754,7 @@ declare namespace javax {
              *                   components are normally inserted.
              */
             // @ts-ignore
-            setContentPane(contentPane: java.awt.Container): void
+            public setContentPane(contentPane: java.awt.Container): void
             /**
              * Returns the {@code layeredPane} object for this dialog.
              * @return the {#code layeredPane} property
@@ -762,7 +762,7 @@ declare namespace javax {
              * @see RootPaneContainer#getLayeredPane
              */
             // @ts-ignore
-            getLayeredPane(): javax.swing.JLayeredPane
+            public getLayeredPane(): javax.swing.JLayeredPane
             /**
              * Sets the {@code layeredPane} property.
              * This method is called by the constructor.
@@ -775,7 +775,7 @@ declare namespace javax {
              *      description: The pane which holds the various dialog layers.
              */
             // @ts-ignore
-            setLayeredPane(layeredPane: javax.swing.JLayeredPane): void
+            public setLayeredPane(layeredPane: javax.swing.JLayeredPane): void
             /**
              * Returns the {@code glassPane} object for this dialog.
              * @return the {#code glassPane} property
@@ -783,7 +783,7 @@ declare namespace javax {
              * @see RootPaneContainer#getGlassPane
              */
             // @ts-ignore
-            getGlassPane(): java.awt.Component
+            public getGlassPane(): java.awt.Component
             /**
              * Sets the {@code glassPane} property.
              * This method is called by the constructor.
@@ -794,13 +794,13 @@ declare namespace javax {
              *      description: A transparent pane used for menu rendering.
              */
             // @ts-ignore
-            setGlassPane(glassPane: java.awt.Component): void
+            public setGlassPane(glassPane: java.awt.Component): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            getGraphics(): java.awt.Graphics
+            public getGraphics(): java.awt.Graphics
             /**
              * Repaints the specified rectangle of this component within
              * {@code time} milliseconds.  Refer to {@code RepaintManager}
@@ -814,7 +814,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            repaint(time: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(time: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Provides a hint as to whether or not newly created {@code JDialog}s
              * should have their Window decorations (such as borders, widgets to
@@ -839,7 +839,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setDefaultLookAndFeelDecorated(defaultLookAndFeelDecorated: boolean): void
+            public static setDefaultLookAndFeelDecorated(defaultLookAndFeelDecorated: boolean): void
             /**
              * Returns true if newly created {@code JDialog}s should have their
              * Window decorations provided by the current look and feel. This is only
@@ -848,7 +848,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            isDefaultLookAndFeelDecorated(): boolean
+            public static isDefaultLookAndFeelDecorated(): boolean
             /**
              * Returns a string representation of this {@code JDialog}.
              * This method
@@ -859,7 +859,7 @@ declare namespace javax {
              * @return a string representation of this {#code JDialog}.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JDialog.
              * For JDialogs, the AccessibleContext takes the form of an
@@ -869,7 +869,7 @@ declare namespace javax {
              *          AccessibleContext of this JDialog
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -29,7 +29,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads characters into a portion of an array.
              * @param cbuf  Destination buffer
@@ -40,7 +40,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Pushes back a single character by copying it to the front of the
              * pushback buffer. After this method returns, the next character to be read
@@ -50,7 +50,7 @@ declare namespace java {
              *                           or if some other I/O error occurs
              */
             // @ts-ignore
-            unread(c: number /*int*/): void
+            public unread(c: number /*int*/): void
             /**
              * Pushes back a portion of an array of characters by copying it to the
              * front of the pushback buffer.  After this method returns, the next
@@ -64,7 +64,7 @@ declare namespace java {
              *                           buffer, or if some other I/O error occurs
              */
             // @ts-ignore
-            unread(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public unread(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Pushes back an array of characters by copying it to the front of the
              * pushback buffer.  After this method returns, the next character to be
@@ -75,33 +75,33 @@ declare namespace java {
              *                           buffer, or if some other I/O error occurs
              */
             // @ts-ignore
-            unread(cbuf: string[]): void
+            public unread(cbuf: string[]): void
             /**
              * Tells whether this stream is ready to be read.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             /**
              * Marks the present position in the stream. The <code>mark</code>
              * for class <code>PushbackReader</code> always throws an exception.
              * @exception IOException  Always, since mark is not supported
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Resets the stream. The <code>reset</code> method of
              * <code>PushbackReader</code> always throws an exception.
              * @exception IOException  Always, since reset is not supported
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Tells whether this stream supports the mark() operation, which it does
              * not.
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Closes the stream and releases any system resources associated with
              * it. Once the stream has been closed, further read(),
@@ -110,7 +110,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Skips characters.  This method will block until some characters are
              * available, an I/O error occurs, or the end of the stream is reached.
@@ -120,7 +120,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
         }
     }
 }

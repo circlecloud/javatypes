@@ -13,7 +13,7 @@ declare namespace org {
                  * @see DefaultRemoteInvocationExecutor
                  */
                 // @ts-ignore
-                class RemoteInvocationBasedExporter extends org.springframework.remoting.support.RemoteExporter {
+                abstract class RemoteInvocationBasedExporter extends org.springframework.remoting.support.RemoteExporter {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,12 +23,12 @@ declare namespace org {
                      * from the invocation, for example user credentials.
                      */
                     // @ts-ignore
-                    setRemoteInvocationExecutor(remoteInvocationExecutor: org.springframework.remoting.support.RemoteInvocationExecutor): void
+                    public setRemoteInvocationExecutor(remoteInvocationExecutor: org.springframework.remoting.support.RemoteInvocationExecutor): void
                     /**
                      * Return the RemoteInvocationExecutor used by this exporter.
                      */
                     // @ts-ignore
-                    getRemoteInvocationExecutor(): org.springframework.remoting.support.RemoteInvocationExecutor
+                    public getRemoteInvocationExecutor(): org.springframework.remoting.support.RemoteInvocationExecutor
                     /**
                      * Apply the given remote invocation to the given target object.
                      * The default implementation delegates to the RemoteInvocationExecutor.
@@ -45,7 +45,7 @@ declare namespace org {
                      * @see RemoteInvocationExecutor#invoke
                      */
                     // @ts-ignore
-                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: any): java.lang.Object
+                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: java.lang.Object | any): any
                     /**
                      * Apply the given remote invocation to the given target object, wrapping
                      * the invocation result in a serializable RemoteInvocationResult object.
@@ -59,7 +59,7 @@ declare namespace org {
                      * @see #invoke
                      */
                     // @ts-ignore
-                    invokeAndCreateResult(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: any): org.springframework.remoting.support.RemoteInvocationResult
+                    invokeAndCreateResult(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: java.lang.Object | any): org.springframework.remoting.support.RemoteInvocationResult
                 }
             }
         }

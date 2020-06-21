@@ -18,7 +18,7 @@ declare namespace org {
                          * @return The new property
                          */
                         // @ts-ignore
-                        of(name: string, value: string): org.spongepowered.api.profile.property.ProfileProperty
+                        of(name: java.lang.String | string, value: java.lang.String | string): org.spongepowered.api.profile.property.ProfileProperty
                         /**
                          * Creates a new signed property.
                          * <p>Depending on the property name, if the signature is provided it must
@@ -29,19 +29,19 @@ declare namespace org {
                          * @return The new property
                          */
                         // @ts-ignore
-                        of(name: string, value: string, signature: string): org.spongepowered.api.profile.property.ProfileProperty
+                        of(name: java.lang.String | string, value: java.lang.String | string, signature: java.lang.String | string): org.spongepowered.api.profile.property.ProfileProperty
                         /**
                          * Gets the name of this property.
                          * @return The name
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                         /**
                          * Gets the value of this property.
                          * @return The value
                          */
                         // @ts-ignore
-                        getValue(): java.lang.String
+                        getValue(): string
                         /**
                          * Gets the signature of this property.
                          * <p>Depending on the property name, if the signature is provided it must
@@ -49,7 +49,7 @@ declare namespace org {
                          * @return The signature, or {#link Optional#empty()} if not present
                          */
                         // @ts-ignore
-                        getSignature(): java.util.Optional<java.lang.String>
+                        getSignature(): java.util.Optional<java.lang.String | string>
                         /**
                          * Tests if this property has a signature.
                          * @return Whether this property has a signature

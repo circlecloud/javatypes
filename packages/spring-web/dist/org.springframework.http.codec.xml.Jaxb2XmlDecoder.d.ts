@@ -12,7 +12,7 @@ declare namespace org {
                      * @see Jaxb2XmlEncoder
                      */
                     // @ts-ignore
-                    class Jaxb2XmlDecoder extends <any> {
+                    class Jaxb2XmlDecoder extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -28,13 +28,13 @@ declare namespace org {
                          * @since 5.1.3
                          */
                         // @ts-ignore
-                        setUnmarshallerProcessor(processor: java.util.function.Function<javax.xml.bind.Unmarshaller, javax.xml.bind.Unmarshaller> | java.util.function$.Function<javax.xml.bind.Unmarshaller, javax.xml.bind.Unmarshaller>): void
+                        public setUnmarshallerProcessor(processor: java.util.function$.Function<javax.xml.bind.Unmarshaller, javax.xml.bind.Unmarshaller>): void
                         /**
                          * Return the configured processor for customizing Unmarshaller instances.
                          * @since 5.1.3
                          */
                         // @ts-ignore
-                        getUnmarshallerProcessor(): java.util.function.Function<javax.xml.bind.Unmarshaller, javax.xml.bind.Unmarshaller>
+                        public getUnmarshallerProcessor(): java.util.function$.Function<javax.xml.bind.Unmarshaller, javax.xml.bind.Unmarshaller>
                         /**
                          * Set the max number of bytes that can be buffered by this decoder.
                          * This is either the size of the entire input when decoding as a whole, or when
@@ -45,21 +45,21 @@ declare namespace org {
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        setMaxInMemorySize(byteCount: number /*int*/): void
+                        public setMaxInMemorySize(byteCount: number /*int*/): void
                         /**
                          * Return the {@link #setMaxInMemorySize configured} byte count limit.
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getMaxInMemorySize(): int
+                        public getMaxInMemorySize(): number /*int*/
                         // @ts-ignore
-                        canDecode(elementType: ResolvableType, mimeType: MimeType): boolean
+                        public canDecode(elementType: ResolvableType, mimeType: MimeType): boolean
                         // @ts-ignore
-                        decode(inputStream: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decode(inputStream: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        decodeToMono(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public decodeToMono(input: object, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        decode(dataBuffer: DataBuffer, targetType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                        public decode(dataBuffer: DataBuffer, targetType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
                     }
                 }
             }

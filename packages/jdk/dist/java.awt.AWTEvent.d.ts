@@ -39,7 +39,7 @@ declare namespace java {
          * @since 1.1
          */
         // @ts-ignore
-        class AWTEvent extends java.util.EventObject {
+        abstract class AWTEvent extends java.util.EventObject {
             /**
              * Constructs an AWTEvent object from the parameters of a 1.0-style event.
              * @param event the old-style event
@@ -52,7 +52,7 @@ declare namespace java {
              * @param id the event type
              */
             // @ts-ignore
-            constructor(source: any, id: number /*int*/)
+            constructor(source: java.lang.Object | any, id: number /*int*/)
             /**
              * The event's id.
              * @serial 
@@ -76,106 +76,106 @@ declare namespace java {
              * The event mask for selecting component events.
              */
             // @ts-ignore
-            readonly COMPONENT_EVENT_MASK: number /*long*/
+            public static readonly COMPONENT_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting container events.
              */
             // @ts-ignore
-            readonly CONTAINER_EVENT_MASK: number /*long*/
+            public static readonly CONTAINER_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting focus events.
              */
             // @ts-ignore
-            readonly FOCUS_EVENT_MASK: number /*long*/
+            public static readonly FOCUS_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting key events.
              */
             // @ts-ignore
-            readonly KEY_EVENT_MASK: number /*long*/
+            public static readonly KEY_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting mouse events.
              */
             // @ts-ignore
-            readonly MOUSE_EVENT_MASK: number /*long*/
+            public static readonly MOUSE_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting mouse motion events.
              */
             // @ts-ignore
-            readonly MOUSE_MOTION_EVENT_MASK: number /*long*/
+            public static readonly MOUSE_MOTION_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting window events.
              */
             // @ts-ignore
-            readonly WINDOW_EVENT_MASK: number /*long*/
+            public static readonly WINDOW_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting action events.
              */
             // @ts-ignore
-            readonly ACTION_EVENT_MASK: number /*long*/
+            public static readonly ACTION_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting adjustment events.
              */
             // @ts-ignore
-            readonly ADJUSTMENT_EVENT_MASK: number /*long*/
+            public static readonly ADJUSTMENT_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting item events.
              */
             // @ts-ignore
-            readonly ITEM_EVENT_MASK: number /*long*/
+            public static readonly ITEM_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting text events.
              */
             // @ts-ignore
-            readonly TEXT_EVENT_MASK: number /*long*/
+            public static readonly TEXT_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting input method events.
              */
             // @ts-ignore
-            readonly INPUT_METHOD_EVENT_MASK: number /*long*/
+            public static readonly INPUT_METHOD_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting paint events.
              */
             // @ts-ignore
-            readonly PAINT_EVENT_MASK: number /*long*/
+            public static readonly PAINT_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting invocation events.
              */
             // @ts-ignore
-            readonly INVOCATION_EVENT_MASK: number /*long*/
+            public static readonly INVOCATION_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting hierarchy events.
              */
             // @ts-ignore
-            readonly HIERARCHY_EVENT_MASK: number /*long*/
+            public static readonly HIERARCHY_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting hierarchy bounds events.
              */
             // @ts-ignore
-            readonly HIERARCHY_BOUNDS_EVENT_MASK: number /*long*/
+            public static readonly HIERARCHY_BOUNDS_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting mouse wheel events.
              * @since 1.4
              */
             // @ts-ignore
-            readonly MOUSE_WHEEL_EVENT_MASK: number /*long*/
+            public static readonly MOUSE_WHEEL_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting window state events.
              * @since 1.4
              */
             // @ts-ignore
-            readonly WINDOW_STATE_EVENT_MASK: number /*long*/
+            public static readonly WINDOW_STATE_EVENT_MASK: number /*long*/
             /**
              * The event mask for selecting window focus events.
              * @since 1.4
              */
             // @ts-ignore
-            readonly WINDOW_FOCUS_EVENT_MASK: number /*long*/
+            public static readonly WINDOW_FOCUS_EVENT_MASK: number /*long*/
             /**
              * The maximum value for reserved AWT event IDs. Programs defining
              * their own event IDs should use IDs greater than this value.
              */
             // @ts-ignore
-            readonly RESERVED_ID_MAX: number /*int*/
+            public static readonly RESERVED_ID_MAX: number /*int*/
             /**
              * Retargets an event to a new source. This method is typically used to
              * retarget an event to a lightweight child Component of the original
@@ -188,17 +188,17 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setSource(newSource: any): void
+            public setSource(newSource: java.lang.Object | any): void
             /**
              * Returns the event type.
              */
             // @ts-ignore
-            getID(): int
+            public getID(): number /*int*/
             /**
              * Returns a String representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a string representing the state of this <code>Event</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -208,7 +208,7 @@ declare namespace java {
              * @return a string representation of this event
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            public paramString(): string
             /**
              * Consumes this event, if this event can be consumed. Only low-level,
              * system events can be consumed

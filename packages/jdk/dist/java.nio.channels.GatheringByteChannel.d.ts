@@ -75,7 +75,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * Writes a sequence of bytes to this channel from the given buffers.
                  * <p> An invocation of this method of the form <tt>c.write(srcs)</tt>
@@ -101,7 +101,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                write(srcs: java.nio.ByteBuffer[]): long
+                write(srcs: java.nio.ByteBuffer[]): number /*long*/
             }
         }
     }

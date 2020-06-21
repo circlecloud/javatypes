@@ -18,14 +18,14 @@ declare namespace org {
                          * set the {@literal Content-Length} header.
                          */
                         // @ts-ignore
-                        writeWith(body: object): <any>
+                        public writeWith(body: object): object
                         /**
                          * Invoke {@link #setComplete()} without writing.
                          * <p>RFC 7302 allows HTTP HEAD response without content-length and it's not
                          * something that can be computed on a streaming response.
                          */
                         // @ts-ignore
-                        writeAndFlushWith(body: object): <any>
+                        public writeAndFlushWith(body: object): object
                     }
                 }
             }

@@ -23,11 +23,11 @@ declare namespace javax {
                     // @ts-ignore
                     boxRect: java.awt.Rectangle
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -81,7 +81,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -90,7 +90,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     // @ts-ignore
                     getPreferredInnerHorizontal(): java.awt.Dimension
                     // @ts-ignore
@@ -118,7 +118,7 @@ declare namespace javax {
                      * @see JProgressBar#isStringPainted
                      */
                     // @ts-ignore
-                    getCellLength(): int
+                    getCellLength(): number /*int*/
                     // @ts-ignore
                     setCellLength(cellLen: number /*int*/): void
                     /**
@@ -131,7 +131,7 @@ declare namespace javax {
                      * @see JProgressBar#isStringPainted
                      */
                     // @ts-ignore
-                    getCellSpacing(): int
+                    getCellSpacing(): number /*int*/
                     // @ts-ignore
                     setCellSpacing(cellSpace: number /*int*/): void
                     /**
@@ -142,13 +142,13 @@ declare namespace javax {
                      * you will want to override this method.
                      */
                     // @ts-ignore
-                    getAmountFull(b: java.awt.Insets, width: number /*int*/, height: number /*int*/): int
+                    getAmountFull(b: java.awt.Insets, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Delegates painting to one of two methods:
                      * paintDeterminate or paintIndeterminate.
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Stores the position and size of
                      * the bouncing box that would be painted for the current animation index
@@ -204,7 +204,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getBoxLength(availableLength: number /*int*/, otherDimension: number /*int*/): int
+                    getBoxLength(availableLength: number /*int*/, otherDimension: number /*int*/): number /*int*/
                     /**
                      * All purpose paint method that should do the right thing for all
                      * linear bouncing-box progress bars.
@@ -237,23 +237,23 @@ declare namespace javax {
                      * to nudge it around for any reason.
                      */
                     // @ts-ignore
-                    getStringPlacement(g: java.awt.Graphics, progressString: string, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Point
+                    getStringPlacement(g: java.awt.Graphics, progressString: java.lang.String | string, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Point
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * The Minimum size for this component is 10. The rationale here
                      * is that there should be at least one pixel per 10 percent.
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Gets the index of the current animation frame.
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getAnimationIndex(): int
+                    getAnimationIndex(): number /*int*/
                     /**
                      * Returns the number of frames for the complete animation loop
                      * used by an indeterminate JProgessBar. The progress chunk will go
@@ -263,7 +263,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getFrameCount(): int
+                    getFrameCount(): number /*int*/
                     /**
                      * Sets the index of the current animation frame
                      * to the specified value and requests that the

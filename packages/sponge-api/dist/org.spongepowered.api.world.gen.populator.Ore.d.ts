@@ -87,13 +87,13 @@ declare namespace org {
                              * @return The placement conditions check
                              */
                             // @ts-ignore
-                            getPlacementCondition(): java.util.function.Predicate<org.spongepowered.api.block.BlockState>
+                            getPlacementCondition(): java.util.function$.Predicate<org.spongepowered.api.block.BlockState>
                             /**
                              * Sets a predicate which checks for the placement conditions for this ore.
                              * @param condition The new placement conditions check
                              */
                             // @ts-ignore
-                            setPlacementCondition(condition: java.util.function.Predicate<org.spongepowered.api.block.BlockState> | java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): void
+                            setPlacementCondition(condition: java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): void
                         }
                     }
                 }

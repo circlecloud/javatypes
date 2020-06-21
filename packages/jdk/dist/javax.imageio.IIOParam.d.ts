@@ -17,7 +17,7 @@ declare namespace javax {
          * Subsets of the source and destination bands may be selected.
          */
         // @ts-ignore
-        class IIOParam extends java.lang.Object {
+        abstract class IIOParam extends java.lang.Object {
             /**
              * Protected constructor may be called only by subclasses.
              */
@@ -140,7 +140,7 @@ declare namespace javax {
              * @see ImageReadParam#getDestinationOffset
              */
             // @ts-ignore
-            setSourceRegion(sourceRegion: java.awt.Rectangle): void
+            public setSourceRegion(sourceRegion: java.awt.Rectangle): void
             /**
              * Returns the source region to be used.  The returned value is
              * that set by the most recent call to
@@ -151,7 +151,7 @@ declare namespace javax {
              * @see #setSourceRegion
              */
             // @ts-ignore
-            getSourceRegion(): java.awt.Rectangle
+            public getSourceRegion(): java.awt.Rectangle
             /**
              * Specifies a decimation subsampling to apply on I/O.  The
              * <code>sourceXSubsampling</code> and
@@ -215,7 +215,7 @@ declare namespace javax {
              *  the subsampled output would contain no pixels.
              */
             // @ts-ignore
-            setSourceSubsampling(sourceXSubsampling: number /*int*/, sourceYSubsampling: number /*int*/, subsamplingXOffset: number /*int*/, subsamplingYOffset: number /*int*/): void
+            public setSourceSubsampling(sourceXSubsampling: number /*int*/, sourceYSubsampling: number /*int*/, subsamplingXOffset: number /*int*/, subsamplingYOffset: number /*int*/): void
             /**
              * Returns the number of source columns to advance for each pixel.
              * <p>If <code>setSourceSubsampling</code> has not been called, 1
@@ -225,7 +225,7 @@ declare namespace javax {
              * @see #getSourceYSubsampling
              */
             // @ts-ignore
-            getSourceXSubsampling(): int
+            public getSourceXSubsampling(): number /*int*/
             /**
              * Returns the number of rows to advance for each pixel.
              * <p>If <code>setSourceSubsampling</code> has not been called, 1
@@ -235,7 +235,7 @@ declare namespace javax {
              * @see #getSourceXSubsampling
              */
             // @ts-ignore
-            getSourceYSubsampling(): int
+            public getSourceYSubsampling(): number /*int*/
             /**
              * Returns the horizontal offset of the subsampling grid.
              * <p>If <code>setSourceSubsampling</code> has not been called, 0
@@ -245,7 +245,7 @@ declare namespace javax {
              * @see #getSubsamplingYOffset
              */
             // @ts-ignore
-            getSubsamplingXOffset(): int
+            public getSubsamplingXOffset(): number /*int*/
             /**
              * Returns the vertical offset of the subsampling grid.
              * <p>If <code>setSourceSubsampling</code> has not been called, 0
@@ -255,7 +255,7 @@ declare namespace javax {
              * @see #getSubsamplingXOffset
              */
             // @ts-ignore
-            getSubsamplingYOffset(): int
+            public getSubsamplingYOffset(): number /*int*/
             /**
              * Sets the indices of the source bands to be used.  Duplicate
              * indices are not allowed.
@@ -280,7 +280,7 @@ declare namespace javax {
              * @see ImageReader#checkReadParamBandSettings
              */
             // @ts-ignore
-            setSourceBands(sourceBands: number /*int*/[]): void
+            public setSourceBands(sourceBands: number /*int*/[]): void
             /**
              * Returns the set of of source bands to be used. The returned
              * value is that set by the most recent call to
@@ -294,7 +294,7 @@ declare namespace javax {
              * @see #setSourceBands
              */
             // @ts-ignore
-            getSourceBands(): int[]
+            public getSourceBands(): number /*int*/[]
             /**
              * Sets the desired image type for the destination image, using an
              * <code>ImageTypeSpecifier</code>.
@@ -323,7 +323,7 @@ declare namespace javax {
              * @see #getDestinationType
              */
             // @ts-ignore
-            setDestinationType(destinationType: javax.imageio.ImageTypeSpecifier): void
+            public setDestinationType(destinationType: javax.imageio.ImageTypeSpecifier): void
             /**
              * Returns the type of image to be returned by the read, if one
              * was set by a call to
@@ -335,7 +335,7 @@ declare namespace javax {
              * @see #setDestinationType
              */
             // @ts-ignore
-            getDestinationType(): javax.imageio.ImageTypeSpecifier
+            public getDestinationType(): javax.imageio.ImageTypeSpecifier
             /**
              * Specifies the offset in the destination image at which future
              * decoded pixels are to be placed, when reading, or where a
@@ -360,7 +360,7 @@ declare namespace javax {
              * @see ImageWriter#replacePixels
              */
             // @ts-ignore
-            setDestinationOffset(destinationOffset: java.awt.Point): void
+            public setDestinationOffset(destinationOffset: java.awt.Point): void
             /**
              * Returns the offset in the destination image at which pixels are
              * to be placed.
@@ -371,7 +371,7 @@ declare namespace javax {
              * @see #setDestinationOffset
              */
             // @ts-ignore
-            getDestinationOffset(): java.awt.Point
+            public getDestinationOffset(): java.awt.Point
             /**
              * Sets the <code>IIOParamController</code> to be used
              * to provide settings for this <code>IIOParam</code>
@@ -389,7 +389,7 @@ declare namespace javax {
              * @see #activateController()
              */
             // @ts-ignore
-            setController(controller: javax.imageio.IIOParamController): void
+            public setController(controller: javax.imageio.IIOParamController): void
             /**
              * Returns whatever <code>IIOParamController</code> is currently
              * installed.  This could be the default if there is one,
@@ -404,7 +404,7 @@ declare namespace javax {
              * @see #activateController()
              */
             // @ts-ignore
-            getController(): javax.imageio.IIOParamController
+            public getController(): javax.imageio.IIOParamController
             /**
              * Returns the default <code>IIOParamController</code>, if there
              * is one, regardless of the currently installed controller.  If
@@ -418,7 +418,7 @@ declare namespace javax {
              * @see #activateController()
              */
             // @ts-ignore
-            getDefaultController(): javax.imageio.IIOParamController
+            public getDefaultController(): javax.imageio.IIOParamController
             /**
              * Returns <code>true</code> if there is a controller installed
              * for this <code>IIOParam</code> object.  This will return
@@ -432,7 +432,7 @@ declare namespace javax {
              * @see #activateController()
              */
             // @ts-ignore
-            hasController(): boolean
+            public hasController(): boolean
             /**
              * Activates the installed <code>IIOParamController</code> for
              * this <code>IIOParam</code> object and returns the resulting
@@ -454,7 +454,7 @@ declare namespace javax {
              * @see #hasController
              */
             // @ts-ignore
-            activateController(): boolean
+            public activateController(): boolean
         }
     }
 }

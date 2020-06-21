@@ -22,24 +22,24 @@ declare namespace java {
                  * The public-exponent value F0 = 3.
                  */
                 // @ts-ignore
-                readonly F0: java.math.BigInteger
+                public static readonly F0: java.math.BigInteger
                 /**
                  * The public exponent-value F4 = 65537.
                  */
                 // @ts-ignore
-                readonly F4: java.math.BigInteger
+                public static readonly F4: java.math.BigInteger
                 /**
                  * Returns the keysize.
                  * @return the keysize.
                  */
                 // @ts-ignore
-                getKeysize(): int
+                public getKeysize(): number /*int*/
                 /**
                  * Returns the public-exponent value.
                  * @return the public-exponent value.
                  */
                 // @ts-ignore
-                getPublicExponent(): java.math.BigInteger
+                public getPublicExponent(): java.math.BigInteger
             }
         }
     }

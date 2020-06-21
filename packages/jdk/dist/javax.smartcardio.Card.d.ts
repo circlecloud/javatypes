@@ -9,7 +9,7 @@ declare namespace javax {
          * @author JSR 268 Expert Group
          */
         // @ts-ignore
-        class Card extends java.lang.Object {
+        abstract class Card extends java.lang.Object {
             /**
              * Constructs a new Card object.
              * <p>This constructor is called by subclasses only. Application should
@@ -24,13 +24,13 @@ declare namespace javax {
              * @return the ATR of this card.
              */
             // @ts-ignore
-            abstract getATR(): javax.smartcardio.ATR
+            public abstract getATR(): javax.smartcardio.ATR
             /**
              * Returns the protocol in use for this card.
              * @return the protocol in use for this card, for example "T=0" or "T=1"
              */
             // @ts-ignore
-            abstract getProtocol(): java.lang.String
+            public abstract getProtocol(): string
             /**
              * Returns the CardChannel for the basic logical channel. The basic
              * logical channel has a channel number of 0.
@@ -41,7 +41,7 @@ declare namespace javax {
              *    via the {#linkplain #disconnect disconnect()} method
              */
             // @ts-ignore
-            abstract getBasicChannel(): javax.smartcardio.CardChannel
+            public abstract getBasicChannel(): javax.smartcardio.CardChannel
             /**
              * Opens a new logical channel to the card and returns it. The channel is
              * opened by issuing a <code>MANAGE CHANNEL</code> command that should use
@@ -54,7 +54,7 @@ declare namespace javax {
              *    via the {#linkplain #disconnect disconnect()} method
              */
             // @ts-ignore
-            abstract openLogicalChannel(): javax.smartcardio.CardChannel
+            public abstract openLogicalChannel(): javax.smartcardio.CardChannel
             /**
              * Requests exclusive access to this card.
              * <p>Once a thread has invoked <code>beginExclusive</code>, only this
@@ -74,7 +74,7 @@ declare namespace javax {
              *    via the {#linkplain #disconnect disconnect()} method
              */
             // @ts-ignore
-            abstract beginExclusive(): void
+            public abstract beginExclusive(): void
             /**
              * Releases the exclusive access previously established using
              * <code>beginExclusive</code>.
@@ -88,7 +88,7 @@ declare namespace javax {
              * @throws CardException if the operation failed
              */
             // @ts-ignore
-            abstract endExclusive(): void
+            public abstract endExclusive(): void
             /**
              * Transmits a control command to the terminal device.
              * <p>This can be used to, for example, control terminal functions like
@@ -104,7 +104,7 @@ declare namespace javax {
              *    via the {#linkplain #disconnect disconnect()} method
              */
             // @ts-ignore
-            abstract transmitControlCommand(controlCode: number /*int*/, command: number /*byte*/[]): byte[]
+            public abstract transmitControlCommand(controlCode: number /*int*/, command: number /*byte*/[]): number /*byte*/[]
             /**
              * Disconnects the connection with this card. After this method returns,
              * calling methods on this object or in CardChannels associated with this
@@ -117,7 +117,7 @@ declare namespace javax {
              *    {#linkplain CardPermission permission}
              */
             // @ts-ignore
-            abstract disconnect(reset: boolean): void
+            public abstract disconnect(reset: boolean): void
         }
     }
 }

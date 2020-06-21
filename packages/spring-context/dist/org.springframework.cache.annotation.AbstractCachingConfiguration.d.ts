@@ -12,21 +12,21 @@ declare namespace org {
                  * @see EnableCaching
                  */
                 // @ts-ignore
-                class AbstractCachingConfiguration extends java.lang.Object implements org.springframework.context.annotation.ImportAware {
+                abstract class AbstractCachingConfiguration extends java.lang.Object implements org.springframework.context.annotation.ImportAware {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
                     enableCaching: AnnotationAttributes
                     // @ts-ignore
-                    cacheManager: java.util.function.Supplier<org.springframework.cache.CacheManager> | java.util.function$.Supplier<org.springframework.cache.CacheManager>
+                    cacheManager: java.util.function$.Supplier<org.springframework.cache.CacheManager>
                     // @ts-ignore
-                    cacheResolver: java.util.function.Supplier<org.springframework.cache.interceptor.CacheResolver> | java.util.function$.Supplier<org.springframework.cache.interceptor.CacheResolver>
+                    cacheResolver: java.util.function$.Supplier<org.springframework.cache.interceptor.CacheResolver>
                     // @ts-ignore
-                    keyGenerator: java.util.function.Supplier<org.springframework.cache.interceptor.KeyGenerator> | java.util.function$.Supplier<org.springframework.cache.interceptor.KeyGenerator>
+                    keyGenerator: java.util.function$.Supplier<org.springframework.cache.interceptor.KeyGenerator>
                     // @ts-ignore
-                    errorHandler: java.util.function.Supplier<org.springframework.cache.interceptor.CacheErrorHandler> | java.util.function$.Supplier<org.springframework.cache.interceptor.CacheErrorHandler>
+                    errorHandler: java.util.function$.Supplier<org.springframework.cache.interceptor.CacheErrorHandler>
                     // @ts-ignore
-                    setImportMetadata(importMetadata: AnnotationMetadata): void
+                    public setImportMetadata(importMetadata: AnnotationMetadata): void
                     /**
                      * Extract the configuration from the nominated {@link CachingConfigurer}.
                      */

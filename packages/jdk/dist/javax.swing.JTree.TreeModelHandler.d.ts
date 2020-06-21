@@ -10,13 +10,13 @@ declare namespace javax {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                treeNodesChanged(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesChanged(e: javax.swing.event.TreeModelEvent): void
                 // @ts-ignore
-                treeNodesInserted(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesInserted(e: javax.swing.event.TreeModelEvent): void
                 // @ts-ignore
-                treeStructureChanged(e: javax.swing.event.TreeModelEvent): void
+                public treeStructureChanged(e: javax.swing.event.TreeModelEvent): void
                 // @ts-ignore
-                treeNodesRemoved(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesRemoved(e: javax.swing.event.TreeModelEvent): void
             }
         }
     }

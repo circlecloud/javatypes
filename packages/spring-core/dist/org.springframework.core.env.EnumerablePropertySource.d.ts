@@ -25,11 +25,11 @@ declare namespace org {
                  * @param <T> the source type
                  */
                 // @ts-ignore
-                class EnumerablePropertySource<T> extends org.springframework.core.env.PropertySource<T> {
+                abstract class EnumerablePropertySource<T> extends org.springframework.core.env.PropertySource<T> {
                     // @ts-ignore
-                    constructor(name: string, source: T)
+                    constructor(name: java.lang.String | string, source: T)
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Return whether this {@code PropertySource} contains a property with the given name.
                      * <p>This implementation checks for the presence of the given name within the
@@ -37,13 +37,13 @@ declare namespace org {
                      * @param name the name of the property to find
                      */
                     // @ts-ignore
-                    containsProperty(name: string): boolean
+                    public containsProperty(name: java.lang.String | string): boolean
                     /**
                      * Return the names of all properties contained by the
                      * {@linkplain #getSource() source} object (never {@code null}).
                      */
                     // @ts-ignore
-                    abstract getPropertyNames(): java.lang.String[]
+                    public abstract getPropertyNames(): string[]
                 }
             }
         }

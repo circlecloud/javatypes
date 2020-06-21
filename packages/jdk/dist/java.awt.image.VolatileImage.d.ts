@@ -93,20 +93,20 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class VolatileImage extends java.awt.Image implements java.awt.Transparency {
+            abstract class VolatileImage extends java.awt.Image implements java.awt.Transparency {
                 // @ts-ignore
                 constructor()
                 /**
                  * Validated image is ready to use as-is.
                  */
                 // @ts-ignore
-                readonly IMAGE_OK: number /*int*/
+                public static readonly IMAGE_OK: number /*int*/
                 /**
                  * Validated image has been restored and is now ready to use.
                  * Note that restoration causes contents of the image to be lost.
                  */
                 // @ts-ignore
-                readonly IMAGE_RESTORED: number /*int*/
+                public static readonly IMAGE_RESTORED: number /*int*/
                 /**
                  * Validated image is incompatible with supplied
                  * <code>GraphicsConfiguration</code> object and should be
@@ -115,7 +115,7 @@ declare namespace java {
                  * is undefined.
                  */
                 // @ts-ignore
-                readonly IMAGE_INCOMPATIBLE: number /*int*/
+                public static readonly IMAGE_INCOMPATIBLE: number /*int*/
                 /**
                  * The transparency value with which this image was created.
                  * @see java.awt.GraphicsConfiguration#createCompatibleVolatileImage(int,
@@ -138,19 +138,19 @@ declare namespace java {
                  * @see BufferedImage
                  */
                 // @ts-ignore
-                abstract getSnapshot(): java.awt.image.BufferedImage
+                public abstract getSnapshot(): java.awt.image.BufferedImage
                 /**
                  * Returns the width of the <code>VolatileImage</code>.
                  * @return the width of this <code>VolatileImage</code>.
                  */
                 // @ts-ignore
-                abstract getWidth(): int
+                public abstract getWidth(): number /*int*/
                 /**
                  * Returns the height of the <code>VolatileImage</code>.
                  * @return the height of this <code>VolatileImage</code>.
                  */
                 // @ts-ignore
-                abstract getHeight(): int
+                public abstract getHeight(): number /*int*/
                 /**
                  * This returns an ImageProducer for this VolatileImage.
                  * Note that the VolatileImage object is optimized for
@@ -174,7 +174,7 @@ declare namespace java {
                  * @see #getSnapshot()
                  */
                 // @ts-ignore
-                getSource(): java.awt.image.ImageProducer
+                public getSource(): java.awt.image.ImageProducer
                 /**
                  * This method returns a {@link Graphics2D}, but is here
                  * for backwards compatibility.  {@link #createGraphics() createGraphics} is more
@@ -184,7 +184,7 @@ declare namespace java {
                  *           this image.
                  */
                 // @ts-ignore
-                getGraphics(): java.awt.Graphics
+                public getGraphics(): java.awt.Graphics
                 /**
                  * Creates a <code>Graphics2D</code>, which can be used to draw into
                  * this <code>VolatileImage</code>.
@@ -192,7 +192,7 @@ declare namespace java {
                  *           image.
                  */
                 // @ts-ignore
-                abstract createGraphics(): java.awt.Graphics2D
+                public abstract createGraphics(): java.awt.Graphics2D
                 /**
                  * Attempts to restore the drawing surface of the image if the surface
                  * had been lost since the last <code>validate</code> call.  Also
@@ -234,7 +234,7 @@ declare namespace java {
                  * @see #IMAGE_INCOMPATIBLE
                  */
                 // @ts-ignore
-                abstract validate(gc: java.awt.GraphicsConfiguration): int
+                public abstract validate(gc: java.awt.GraphicsConfiguration): number /*int*/
                 /**
                  * Returns <code>true</code> if rendering data was lost since last
                  * <code>validate</code> call.  This method should be called by the
@@ -245,7 +245,7 @@ declare namespace java {
                  *  <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                abstract contentsLost(): boolean
+                public abstract contentsLost(): boolean
                 /**
                  * Returns an ImageCapabilities object which can be
                  * inquired as to the specific capabilities of this
@@ -263,7 +263,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                abstract getCapabilities(): java.awt.ImageCapabilities
+                public abstract getCapabilities(): java.awt.ImageCapabilities
                 /**
                  * Returns the transparency.  Returns either OPAQUE, BITMASK,
                  * or TRANSLUCENT.
@@ -274,7 +274,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTransparency(): int
+                public getTransparency(): number /*int*/
             }
         }
     }

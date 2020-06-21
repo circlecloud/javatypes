@@ -40,20 +40,20 @@ declare namespace java {
                  * @throws IllegalStateException - if the target has not yet been assigned in the ConstantCallSite constructor
                  */
                 // @ts-ignore
-                dynamicInvoker(): java.lang.invoke.MethodHandle
+                public dynamicInvoker(): java.lang.invoke.MethodHandle
                 /**
                  * Return the target MethodHandle of this CallSite.
                  * The target is defined as though it where a final field.
                  * @throws IllegalStateException - if the target has not yet been assigned in the ConstantCallSite constructor
                  */
                 // @ts-ignore
-                getTarget(): java.lang.invoke.MethodHandle
+                public getTarget(): java.lang.invoke.MethodHandle
                 /**
                  * Throws UnsupportedOperationException as a ConstantCallSite is permanently
                  * bound to its initial target MethodHandle.
                  */
                 // @ts-ignore
-                setTarget(newTarget: java.lang.invoke.MethodHandle): void
+                public setTarget(newTarget: java.lang.invoke.MethodHandle): void
             }
         }
     }

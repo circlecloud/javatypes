@@ -110,7 +110,7 @@ declare namespace javax {
              * @see #setCalendarField
              */
             // @ts-ignore
-            constructor(value: java.util.Date, start: java.lang.Comparable, end: java.lang.Comparable, calendarField: number /*int*/)
+            constructor(value: java.util.Date, start: java.lang.Comparable<any>, end: java.lang.Comparable<any>, calendarField: number /*int*/)
             /**
              * Constructs a <code>SpinnerDateModel</code> whose initial
              * <code>value</code> is the current date, <code>calendarField</code>
@@ -156,14 +156,14 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            setStart(start: java.lang.Comparable): void
+            public setStart(start: java.lang.Comparable<any>): void
             /**
              * Returns the first <code>Date</code> in the sequence.
              * @return the value of the <code>start</code> property
              * @see #setStart
              */
             // @ts-ignore
-            getStart(): java.lang.Comparable
+            public getStart(): java.lang.Comparable<any>
             /**
              * Changes the upper limit for <code>Date</code>s in this sequence.
              * If <code>start</code> is <code>null</code>, then there is no upper
@@ -186,14 +186,14 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            setEnd(end: java.lang.Comparable): void
+            public setEnd(end: java.lang.Comparable<any>): void
             /**
              * Returns the last <code>Date</code> in the sequence.
              * @return the value of the <code>end</code> property
              * @see #setEnd
              */
             // @ts-ignore
-            getEnd(): java.lang.Comparable
+            public getEnd(): java.lang.Comparable<any>
             /**
              * Changes the size of the date value change computed
              * by the <code>nextValue</code> and <code>previousValue</code> methods.
@@ -235,7 +235,7 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            setCalendarField(calendarField: number /*int*/): void
+            public setCalendarField(calendarField: number /*int*/): void
             /**
              * Returns the <code>Calendar</code> field that is added to or subtracted from
              * by the <code>nextValue</code> and <code>previousValue</code> methods.
@@ -243,7 +243,7 @@ declare namespace javax {
              * @see #setCalendarField
              */
             // @ts-ignore
-            getCalendarField(): int
+            public getCalendarField(): number /*int*/
             /**
              * Returns the next <code>Date</code> in the sequence, or <code>null</code> if
              * the next date is after <code>end</code>.
@@ -254,7 +254,7 @@ declare namespace javax {
              * @see #setCalendarField
              */
             // @ts-ignore
-            getNextValue(): java.lang.Object
+            public getNextValue(): any
             /**
              * Returns the previous <code>Date</code> in the sequence, or <code>null</code>
              * if the previous date is before <code>start</code>.
@@ -266,7 +266,7 @@ declare namespace javax {
              * @see #setCalendarField
              */
             // @ts-ignore
-            getPreviousValue(): java.lang.Object
+            public getPreviousValue(): any
             /**
              * Returns the current element in this sequence of <code>Date</code>s.
              * This method is equivalent to <code>(Date)getValue</code>.
@@ -274,7 +274,7 @@ declare namespace javax {
              * @see #setValue
              */
             // @ts-ignore
-            getDate(): java.util.Date
+            public getDate(): java.util.Date
             /**
              * Returns the current element in this sequence of <code>Date</code>s.
              * @return the <code>value</code> property
@@ -282,7 +282,7 @@ declare namespace javax {
              * @see #getDate
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Sets the current <code>Date</code> for this sequence.
              * If <code>value</code> is <code>null</code>,
@@ -305,7 +305,7 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            setValue(value: any): void
+            public setValue(value: java.lang.Object | any): void
         }
     }
 }

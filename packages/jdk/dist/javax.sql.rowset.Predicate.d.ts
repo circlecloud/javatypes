@@ -94,7 +94,7 @@ declare namespace javax {
                  * @throws SQLException if the column is not part of filtering criteria
                  */
                 // @ts-ignore
-                evaluate(value: any, column: number /*int*/): boolean
+                evaluate(value: java.lang.Object | any, column: number /*int*/): boolean
                 /**
                  * This method is called by the <code>FilteredRowSet</code> object
                  * to check whether the value lies between the filtering criteria set
@@ -112,7 +112,7 @@ declare namespace javax {
                  * @throws SQLException if the column is not part of filtering criteria
                  */
                 // @ts-ignore
-                evaluate(value: any, columnName: string): boolean
+                evaluate(value: java.lang.Object | any, columnName: java.lang.String | string): boolean
             }
         }
     }

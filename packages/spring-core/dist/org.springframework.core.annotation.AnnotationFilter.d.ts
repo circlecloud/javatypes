@@ -22,19 +22,19 @@ declare namespace org {
                      * <p>This is the default filter in the {@link MergedAnnotations} model.
                      */
                     // @ts-ignore
-                    
+                    readonly PLAIN: org.springframework.core.annotation.AnnotationFilter
                     /**
                      * {@link AnnotationFilter} that matches annotations in the
                      * {@code java} and {@code javax} packages and their subpackages.
                      */
                     // @ts-ignore
-                    
+                    readonly JAVA: org.springframework.core.annotation.AnnotationFilter
                     /**
                      * {@link AnnotationFilter} that always matches and can be used when no
                      * relevant annotation types are expected to be present at all.
                      */
                     // @ts-ignore
-                    
+                    readonly ALL: org.springframework.core.annotation.AnnotationFilter
                     /**
                      * {@link AnnotationFilter} that never matches and can be used when no
                      * filtering is needed (allowing for any annotation types to be present).
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see #PLAIN
                      */
                     // @ts-ignore
-                    
+                    readonly NONE: org.springframework.core.annotation.AnnotationFilter
                     /**
                      * Test if the given annotation matches the filter.
                      * @param annotation the annotation to test
@@ -65,7 +65,7 @@ declare namespace org {
                      * @return {#code true} if the annotation matches
                      */
                     // @ts-ignore
-                    matches(typeName: string): boolean
+                    matches(typeName: java.lang.String | string): boolean
                     /**
                      * Create a new {@link AnnotationFilter} that matches annotations in the
                      * specified packages.
@@ -73,7 +73,7 @@ declare namespace org {
                      * @return a new {#link AnnotationFilter} instance
                      */
                     // @ts-ignore
-                    packages(...packages: string[]): org.springframework.core.annotation.AnnotationFilter
+                    packages(...packages: java.lang.String[] | string[]): org.springframework.core.annotation.AnnotationFilter
                 }
             }
         }

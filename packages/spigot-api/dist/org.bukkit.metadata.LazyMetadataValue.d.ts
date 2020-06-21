@@ -22,7 +22,7 @@ declare namespace org {
                  * @param lazyValue the lazy value assigned to this metadata value.
                  */
                 // @ts-ignore
-                constructor(owningPlugin: org.bukkit.plugin.Plugin, lazyValue: java.util.concurrent.Callable<java.lang.Object>)
+                constructor(owningPlugin: org.bukkit.plugin.Plugin, lazyValue: java.util.concurrent.Callable<java.lang.Object | any>)
                 /**
                  * Initializes a LazyMetadataValue object with a specific cache strategy.
                  * @param owningPlugin the {#link Plugin} that created this metadata
@@ -32,7 +32,7 @@ declare namespace org {
                  * @param lazyValue the lazy value assigned to this metadata value.
                  */
                 // @ts-ignore
-                constructor(owningPlugin: org.bukkit.plugin.Plugin, cacheStrategy: org.bukkit.metadata.LazyMetadataValue.CacheStrategy, lazyValue: java.util.concurrent.Callable<java.lang.Object>)
+                constructor(owningPlugin: org.bukkit.plugin.Plugin, cacheStrategy: org.bukkit.metadata.LazyMetadataValue.CacheStrategy, lazyValue: java.util.concurrent.Callable<java.lang.Object | any>)
                 /**
                  * Protected special constructor used by FixedMetadataValue to bypass
                  * standard setup.
@@ -41,9 +41,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor(owningPlugin: org.bukkit.plugin.Plugin)
                 // @ts-ignore
-                value(): java.lang.Object
+                public value(): any
                 // @ts-ignore
-                invalidate(): void
+                public invalidate(): void
             }
         }
     }

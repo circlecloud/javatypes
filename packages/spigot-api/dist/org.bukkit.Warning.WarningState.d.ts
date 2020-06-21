@@ -6,10 +6,26 @@ declare namespace org {
              */
             // @ts-ignore
             class WarningState extends java.lang.Enum<org.bukkit.Warning.WarningState> {
+                /**
+                 * Indicates all warnings should be printed for deprecated items.
+                 */
+                // @ts-ignore
+                readonly ON: org.bukkit.Warning.WarningState
+                /**
+                 * Indicates no warnings should be printed for deprecated items.
+                 */
+                // @ts-ignore
+                readonly OFF: org.bukkit.Warning.WarningState
+                /**
+                 * Indicates each warning would default to the configured {@link
+                 * Warning} annotation, or always if annotation not found.
+                 */
+                // @ts-ignore
+                readonly DEFAULT: org.bukkit.Warning.WarningState
                 // @ts-ignore
                 values(): org.bukkit.Warning.WarningState[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.Warning.WarningState
+                valueOf(name: java.lang.String | string): org.bukkit.Warning.WarningState
                 /**
                  * This method checks the provided warning should be printed for this
                  * state
@@ -31,7 +47,7 @@ declare namespace org {
                  *      WarningState
                  */
                 // @ts-ignore
-                value(value: string): org.bukkit.Warning.WarningState
+                value(value: java.lang.String | string): org.bukkit.Warning.WarningState
             }
         }
     }

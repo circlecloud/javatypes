@@ -29,7 +29,7 @@ declare namespace java {
                  * @return the operator of this <code>BufferedImageFilter</code>.
                  */
                 // @ts-ignore
-                getBufferedImageOp(): java.awt.image.BufferedImageOp
+                public getBufferedImageOp(): java.awt.image.BufferedImageOp
                 /**
                  * Filters the information provided in the
                  * {@link ImageConsumer#setDimensions(int, int) setDimensions } method
@@ -49,7 +49,7 @@ declare namespace java {
                  * @see ImageConsumer#setDimensions
                  */
                 // @ts-ignore
-                setDimensions(width: number /*int*/, height: number /*int*/): void
+                public setDimensions(width: number /*int*/, height: number /*int*/): void
                 /**
                  * Filters the information provided in the
                  * {@link ImageConsumer#setColorModel(ColorModel) setColorModel} method
@@ -71,7 +71,7 @@ declare namespace java {
                  * @see ImageConsumer#setColorModel
                  */
                 // @ts-ignore
-                setColorModel(model: java.awt.image.ColorModel): void
+                public setColorModel(model: java.awt.image.ColorModel): void
                 /**
                  * Filters the information provided in the <code>setPixels</code>
                  * method of the <code>ImageConsumer</code> interface which takes
@@ -89,7 +89,7 @@ declare namespace java {
                  *                                     int, int)
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Filters the information provided in the <code>setPixels</code>
                  * method of the <code>ImageConsumer</code> interface which takes
@@ -107,7 +107,7 @@ declare namespace java {
                  *                                     int, int)
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Filters the information provided in the <code>imageComplete</code>
                  * method of the <code>ImageConsumer</code> interface.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @see ImageConsumer#imageComplete
                  */
                 // @ts-ignore
-                imageComplete(status: number /*int*/): void
+                public imageComplete(status: number /*int*/): void
             }
         }
     }

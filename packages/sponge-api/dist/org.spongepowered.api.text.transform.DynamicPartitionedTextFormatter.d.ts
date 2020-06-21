@@ -21,35 +21,35 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly partitions: Array<org.spongepowered.api.text.transform.SimpleTextFormatter>
+                        readonly partitions: java.util.List<org.spongepowered.api.text.transform.SimpleTextFormatter> | Array<org.spongepowered.api.text.transform.SimpleTextFormatter>
                         // @ts-ignore
-                        getAll(): <any>
+                        public getAll(): object
                         // @ts-ignore
-                        get(i: number /*int*/): org.spongepowered.api.text.transform.SimpleTextFormatter
+                        public get(i: number /*int*/): org.spongepowered.api.text.transform.SimpleTextFormatter
                         // @ts-ignore
-                        set(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextFormatter): org.spongepowered.api.text.transform.SimpleTextFormatter
+                        public set(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextFormatter): org.spongepowered.api.text.transform.SimpleTextFormatter
                         // @ts-ignore
-                        size(): int
+                        public size(): number /*int*/
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         // @ts-ignore
-                        contains(element: org.spongepowered.api.text.transform.SimpleTextFormatter): boolean
+                        public contains(element: org.spongepowered.api.text.transform.SimpleTextFormatter): boolean
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         // @ts-ignore
-                        add(element: org.spongepowered.api.text.transform.SimpleTextFormatter): boolean
+                        public add(element: org.spongepowered.api.text.transform.SimpleTextFormatter): boolean
                         // @ts-ignore
-                        add(elements: Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): boolean
+                        public add(elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextFormatter> | Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): boolean
                         // @ts-ignore
-                        insert(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextFormatter): void
+                        public insert(i: number /*int*/, element: org.spongepowered.api.text.transform.SimpleTextFormatter): void
                         // @ts-ignore
-                        insert(i: number /*int*/, elements: Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): void
+                        public insert(i: number /*int*/, elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextFormatter> | Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): void
                         // @ts-ignore
-                        remove(element: org.spongepowered.api.text.transform.SimpleTextFormatter): boolean
+                        public remove(element: org.spongepowered.api.text.transform.SimpleTextFormatter): boolean
                         // @ts-ignore
-                        remove(elements: Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): boolean
+                        public remove(elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextFormatter> | Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): boolean
                         // @ts-ignore
-                        retain(elements: Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): boolean
+                        public retain(elements: java.util.Collection<org.spongepowered.api.text.transform.SimpleTextFormatter> | Array<org.spongepowered.api.text.transform.SimpleTextFormatter>): boolean
                     }
                 }
             }

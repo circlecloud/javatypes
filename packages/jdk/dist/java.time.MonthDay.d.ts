@@ -47,7 +47,7 @@ declare namespace java {
              * @return the current month-day using the system clock and default time-zone, not null
              */
             // @ts-ignore
-            now(): java.time.MonthDay
+            public static now(): java.time.MonthDay
             /**
              * Obtains the current month-day from the system clock in the specified time-zone.
              * <p>
@@ -60,7 +60,7 @@ declare namespace java {
              * @return the current month-day using the system clock, not null
              */
             // @ts-ignore
-            now(zone: java.time.ZoneId): java.time.MonthDay
+            public static now(zone: java.time.ZoneId): java.time.MonthDay
             /**
              * Obtains the current month-day from the specified clock.
              * <p>
@@ -71,7 +71,7 @@ declare namespace java {
              * @return the current month-day, not null
              */
             // @ts-ignore
-            now(clock: java.time.Clock): java.time.MonthDay
+            public static now(clock: java.time.Clock): java.time.MonthDay
             /**
              * Obtains an instance of {@code MonthDay}.
              * <p>
@@ -88,7 +88,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month
              */
             // @ts-ignore
-            of(month: java.time.Month, dayOfMonth: number /*int*/): java.time.MonthDay
+            public static of(month: java.time.Month, dayOfMonth: number /*int*/): java.time.MonthDay
             /**
              * Obtains an instance of {@code MonthDay}.
              * <p>
@@ -105,7 +105,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month
              */
             // @ts-ignore
-            of(month: number /*int*/, dayOfMonth: number /*int*/): java.time.MonthDay
+            public static of(month: number /*int*/, dayOfMonth: number /*int*/): java.time.MonthDay
             /**
              * Obtains an instance of {@code MonthDay} from a temporal object.
              * <p>
@@ -125,7 +125,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code MonthDay}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.MonthDay
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.MonthDay
             /**
              * Obtains an instance of {@code MonthDay} from a text string such as {@code --12-03}.
              * <p>
@@ -136,7 +136,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.MonthDay
+            public static parse(text: java.lang.CharSequence): java.time.MonthDay
             /**
              * Obtains an instance of {@code MonthDay} from a text string using a specific formatter.
              * <p>
@@ -147,7 +147,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.MonthDay
+            public static parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.MonthDay
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -171,7 +171,7 @@ declare namespace java {
              * @return true if the field is supported on this month-day, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -195,7 +195,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this month-day as an {@code int}.
              * <p>
@@ -222,7 +222,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this month-day as a {@code long}.
              * <p>
@@ -246,7 +246,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Gets the month-of-year field from 1 to 12.
              * <p>
@@ -257,7 +257,7 @@ declare namespace java {
              * @see #getMonth()
              */
             // @ts-ignore
-            getMonthValue(): int
+            public getMonthValue(): number /*int*/
             /**
              * Gets the month-of-year field using the {@code Month} enum.
              * <p>
@@ -269,7 +269,7 @@ declare namespace java {
              * @see #getMonthValue()
              */
             // @ts-ignore
-            getMonth(): java.time.Month
+            public getMonth(): java.time.Month
             /**
              * Gets the day-of-month field.
              * <p>
@@ -277,7 +277,7 @@ declare namespace java {
              * @return the day-of-month, from 1 to 31
              */
             // @ts-ignore
-            getDayOfMonth(): int
+            public getDayOfMonth(): number /*int*/
             /**
              * Checks if the year is valid for this month-day.
              * <p>
@@ -288,7 +288,7 @@ declare namespace java {
              * @see Year#isValidMonthDay(MonthDay)
              */
             // @ts-ignore
-            isValidYear(year: number /*int*/): boolean
+            public isValidYear(year: number /*int*/): boolean
             /**
              * Returns a copy of this {@code MonthDay} with the month-of-year altered.
              * <p>
@@ -302,7 +302,7 @@ declare namespace java {
              * @throws DateTimeException if the month-of-year value is invalid
              */
             // @ts-ignore
-            withMonth(month: number /*int*/): java.time.MonthDay
+            public withMonth(month: number /*int*/): java.time.MonthDay
             /**
              * Returns a copy of this {@code MonthDay} with the month-of-year altered.
              * <p>
@@ -315,7 +315,7 @@ declare namespace java {
              * @return a {#code MonthDay} based on this month-day with the requested month, not null
              */
             // @ts-ignore
-            with(month: java.time.Month): java.time.MonthDay
+            public with(month: java.time.Month): java.time.MonthDay
             /**
              * Returns a copy of this {@code MonthDay} with the day-of-month altered.
              * <p>
@@ -329,7 +329,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month
              */
             // @ts-ignore
-            withDayOfMonth(dayOfMonth: number /*int*/): java.time.MonthDay
+            public withDayOfMonth(dayOfMonth: number /*int*/): java.time.MonthDay
             /**
              * Queries this month-day using the specified query.
              * <p>
@@ -348,7 +348,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have this month-day.
              * <p>
@@ -376,7 +376,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Formats this month-day using the specified formatter.
              * <p>
@@ -386,7 +386,7 @@ declare namespace java {
              * @throws DateTimeException if an error occurs during printing
              */
             // @ts-ignore
-            format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+            public format(formatter: java.time.format.DateTimeFormatter): string
             /**
              * Combines this month-day with a year to create a {@code LocalDate}.
              * <p>
@@ -401,7 +401,7 @@ declare namespace java {
              * @throws DateTimeException if the year is outside the valid range of years
              */
             // @ts-ignore
-            atYear(year: number /*int*/): java.time.LocalDate
+            public atYear(year: number /*int*/): java.time.LocalDate
             /**
              * Compares this month-day to another month-day.
              * <p>
@@ -411,21 +411,21 @@ declare namespace java {
              * @return the comparator value, negative if less, positive if greater
              */
             // @ts-ignore
-            compareTo(other: java.time.MonthDay): int
+            public compareTo(other: java.time.MonthDay): number /*int*/
             /**
              * Checks if this month-day is after the specified month-day.
              * @param other  the other month-day to compare to, not null
              * @return true if this is after the specified month-day
              */
             // @ts-ignore
-            isAfter(other: java.time.MonthDay): boolean
+            public isAfter(other: java.time.MonthDay): boolean
             /**
              * Checks if this month-day is before the specified month-day.
              * @param other  the other month-day to compare to, not null
              * @return true if this point is before the specified month-day
              */
             // @ts-ignore
-            isBefore(other: java.time.MonthDay): boolean
+            public isBefore(other: java.time.MonthDay): boolean
             /**
              * Checks if this month-day is equal to another month-day.
              * <p>
@@ -434,13 +434,13 @@ declare namespace java {
              * @return true if this is equal to the other month-day
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this month-day.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this month-day as a {@code String}, such as {@code --12-03}.
              * <p>
@@ -448,7 +448,7 @@ declare namespace java {
              * @return a string representation of this month-day, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

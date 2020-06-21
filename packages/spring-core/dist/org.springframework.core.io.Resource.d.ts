@@ -107,14 +107,14 @@ declare namespace org {
                      *  (in the file system or as some other known physical resource type)
                      */
                     // @ts-ignore
-                    contentLength(): long
+                    contentLength(): number /*long*/
                     /**
                      * Determine the last-modified timestamp for this resource.
                      * @throws IOException if the resource cannot be resolved
                      *  (in the file system or as some other known physical resource type)
                      */
                     // @ts-ignore
-                    lastModified(): long
+                    lastModified(): number /*long*/
                     /**
                      * Create a resource relative to this resource.
                      * @param relativePath the relative path (relative to this resource)
@@ -122,7 +122,7 @@ declare namespace org {
                      * @throws IOException if the relative resource cannot be determined
                      */
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * Determine a filename for this resource, i.e. typically the last
                      * part of the path: for example, "myfile.txt".
@@ -130,7 +130,7 @@ declare namespace org {
                      * have a filename.
                      */
                     // @ts-ignore
-                    getFilename(): java.lang.String
+                    getFilename(): string
                     /**
                      * Return a description for this resource,
                      * to be used for error output when working with the resource.
@@ -139,7 +139,7 @@ declare namespace org {
                      * @see Object#toString()
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    getDescription(): string
                 }
             }
         }

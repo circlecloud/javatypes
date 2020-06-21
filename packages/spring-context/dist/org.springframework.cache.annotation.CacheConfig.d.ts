@@ -12,7 +12,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                class CacheConfig implements java.lang.annotation.Annotation {
+                abstract class CacheConfig implements java.lang.annotation.Annotation {
                 }
             }
         }

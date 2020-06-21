@@ -13,7 +13,7 @@ declare namespace org {
                  * @see PropertySource
                  */
                 // @ts-ignore
-                class PropertySources implements java.lang.annotation.Annotation {
+                abstract class PropertySources implements java.lang.annotation.Annotation {
                 }
             }
         }

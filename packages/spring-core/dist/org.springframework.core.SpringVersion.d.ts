@@ -20,7 +20,7 @@ declare namespace org {
                  * @see Package#getImplementationVersion()
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                public static getVersion(): string
             }
         }
     }

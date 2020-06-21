@@ -41,10 +41,62 @@ declare namespace java {
              */
             // @ts-ignore
             class ElementType extends java.lang.Enum<java.lang.annotation.ElementType> {
+                /**
+                 * Class, interface (including annotation type), or enum declaration
+                 */
+                // @ts-ignore
+                readonly TYPE: java.lang.annotation.ElementType
+                /**
+                 * Field declaration (includes enum constants)
+                 */
+                // @ts-ignore
+                readonly FIELD: java.lang.annotation.ElementType
+                /**
+                 * Method declaration
+                 */
+                // @ts-ignore
+                readonly METHOD: java.lang.annotation.ElementType
+                /**
+                 * Formal parameter declaration
+                 */
+                // @ts-ignore
+                readonly PARAMETER: java.lang.annotation.ElementType
+                /**
+                 * Constructor declaration
+                 */
+                // @ts-ignore
+                readonly CONSTRUCTOR: java.lang.annotation.ElementType
+                /**
+                 * Local variable declaration
+                 */
+                // @ts-ignore
+                readonly LOCAL_VARIABLE: java.lang.annotation.ElementType
+                /**
+                 * Annotation type declaration
+                 */
+                // @ts-ignore
+                readonly ANNOTATION_TYPE: java.lang.annotation.ElementType
+                /**
+                 * Package declaration
+                 */
+                // @ts-ignore
+                readonly PACKAGE: java.lang.annotation.ElementType
+                /**
+                 * Type parameter declaration
+                 * @since 1.8
+                 */
+                // @ts-ignore
+                readonly TYPE_PARAMETER: java.lang.annotation.ElementType
+                /**
+                 * Use of a type
+                 * @since 1.8
+                 */
+                // @ts-ignore
+                readonly TYPE_USE: java.lang.annotation.ElementType
                 // @ts-ignore
                 values(): java.lang.annotation.ElementType[]
                 // @ts-ignore
-                valueOf(name: string): java.lang.annotation.ElementType
+                valueOf(name: java.lang.String | string): java.lang.annotation.ElementType
             }
         }
     }

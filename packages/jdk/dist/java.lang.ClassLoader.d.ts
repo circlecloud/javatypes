@@ -6,7 +6,7 @@ declare namespace java {
          * @version initial
          */
         // @ts-ignore
-        class ClassLoader extends java.lang.Object {
+        abstract class ClassLoader extends java.lang.Object {
             /**
              * Constructs a new instance of this class with the system
              * class loader as its parent.
@@ -42,7 +42,7 @@ declare namespace java {
              * @deprecated Use defineClass(String, byte[], int, int)
              */
             // @ts-ignore
-            defineClass(classRep: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.lang.Class<?>
+            defineClass(classRep: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.lang.Class<any>
             /**
              * Constructs a new class from an array of bytes containing a
              * class definition in class file format.
@@ -58,7 +58,7 @@ declare namespace java {
              * @throws ClassFormatError when the bytes are invalid
              */
             // @ts-ignore
-            defineClass(className: string, classRep: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.lang.Class<?>
+            defineClass(className: java.lang.String | string, classRep: number /*byte*/[], offset: number /*int*/, length: number /*int*/): java.lang.Class<any>
             /**
              * Constructs a new class from an array of bytes containing a
              * class definition in class file format and assigns the new
@@ -78,7 +78,7 @@ declare namespace java {
              * @throws ClassFormatError when the bytes are invalid
              */
             // @ts-ignore
-            defineClass(className: string, classRep: number /*byte*/[], offset: number /*int*/, length: number /*int*/, protectionDomain: java.security.ProtectionDomain): java.lang.Class<?>
+            defineClass(className: java.lang.String | string, classRep: number /*byte*/[], offset: number /*int*/, length: number /*int*/, protectionDomain: java.security.ProtectionDomain): java.lang.Class<any>
             /**
              * Overridden by subclasses, by default throws ClassNotFoundException.
              * This method is called by loadClass() after the parent ClassLoader
@@ -91,7 +91,7 @@ declare namespace java {
              * 					always, unless overridden.
              */
             // @ts-ignore
-            findClass(className: string): java.lang.Class<?>
+            findClass(className: java.lang.String | string): java.lang.Class<any>
             /**
              * Attempts to find and return a class which has already
              * been loaded by the virtual machine. Note that the class
@@ -103,7 +103,7 @@ declare namespace java {
              * 					the name of the class to search for.
              */
             // @ts-ignore
-            findLoadedClass(className: string): java.lang.Class<?>
+            findLoadedClass(className: java.lang.String | string): java.lang.Class<any>
             /**
              * Attempts to load a class using the system class loader.
              * Note that the class has already been been linked.
@@ -115,7 +115,7 @@ declare namespace java {
              * 					if the class can not be found.
              */
             // @ts-ignore
-            findSystemClass(className: string): java.lang.Class<?>
+            findSystemClass(className: java.lang.String | string): java.lang.Class<any>
             /**
              * Returns the specified ClassLoader's parent.
              * @return java.lang.ClassLoader
@@ -125,7 +125,7 @@ declare namespace java {
              * 					allow the parent loader to be retrieved.
              */
             // @ts-ignore
-            getParent(): java.lang.ClassLoader
+            public getParent(): java.lang.ClassLoader
             /**
              * Answers an URL which can be used to access the resource
              * described by resName, using the class loader's resource lookup
@@ -137,7 +137,7 @@ declare namespace java {
              * @see Class#getResource
              */
             // @ts-ignore
-            getResource(resName: string): java.net.URL
+            public getResource(resName: java.lang.String | string): java.net.URL
             /**
              * Answers an Enumeration of URL which can be used to access the resources
              * described by resName, using the class loader's resource lookup
@@ -149,7 +149,7 @@ declare namespace java {
              * @throws IOException when an error occurs
              */
             // @ts-ignore
-            getResources(resName: string): java.util.Enumeration<java.net.URL>
+            public getResources(resName: java.lang.String | string): java.util.Enumeration<java.net.URL>
             /**
              * Answers a stream on a resource found by looking up
              * resName using the class loader's resource lookup
@@ -161,7 +161,7 @@ declare namespace java {
              * @see Class#getResourceAsStream
              */
             // @ts-ignore
-            getResourceAsStream(resName: string): java.io.InputStream
+            public getResourceAsStream(resName: java.lang.String | string): java.io.InputStream
             /**
              * Convenience operation to obtain a reference to the system class loader.
              * The system class loader is the parent of any new <code>ClassLoader</code>
@@ -173,7 +173,7 @@ declare namespace java {
              *                 caller to access the system class loader.
              */
             // @ts-ignore
-            getSystemClassLoader(): java.lang.ClassLoader
+            public static getSystemClassLoader(): java.lang.ClassLoader
             /**
              * Answers an URL specifying a resource which can be found by
              * looking up resName using the system class loader's resource
@@ -185,7 +185,7 @@ declare namespace java {
              * @see Class#getResource
              */
             // @ts-ignore
-            getSystemResource(resName: string): java.net.URL
+            public static getSystemResource(resName: java.lang.String | string): java.net.URL
             /**
              * Answers an Enumeration of URL containing all resources which can be
              * found by looking up resName using the system class loader's resource
@@ -197,7 +197,7 @@ declare namespace java {
              * @throws IOException when an error occurs
              */
             // @ts-ignore
-            getSystemResources(resName: string): java.util.Enumeration<java.net.URL>
+            public static getSystemResources(resName: java.lang.String | string): java.util.Enumeration<java.net.URL>
             /**
              * Answers a stream on a resource found by looking up
              * resName using the system class loader's resource lookup
@@ -209,7 +209,7 @@ declare namespace java {
              * @see Class#getResourceAsStream
              */
             // @ts-ignore
-            getSystemResourceAsStream(resName: string): java.io.InputStream
+            public static getSystemResourceAsStream(resName: java.lang.String | string): java.io.InputStream
             /**
              * Invoked by the Virtual Machine when resolving class references.
              * Equivalent to loadClass(className, false);
@@ -221,7 +221,7 @@ declare namespace java {
              * 					If the class could not be found.
              */
             // @ts-ignore
-            loadClass(className: string): java.lang.Class<?>
+            public loadClass(className: java.lang.String | string): java.lang.Class<any>
             /**
              * Attempts to load the type <code>className</code> in the running VM,
              * optionally linking the type after a successful load.
@@ -235,7 +235,7 @@ declare namespace java {
              * 					If the class could not be found.
              */
             // @ts-ignore
-            loadClass(className: string, resolveClass: boolean): java.lang.Class<?>
+            loadClass(className: java.lang.String | string, resolveClass: boolean): java.lang.Class<any>
             /**
              * Attempts to register the  the ClassLoader as being capable of
              * parallel class loading.  This requires that all superclasses must
@@ -245,7 +245,7 @@ declare namespace java {
              * @see java.lang.ClassLoader
              */
             // @ts-ignore
-            registerAsParallelCapable(): boolean
+            static registerAsParallelCapable(): boolean
             /**
              * Answers the lock object for class loading in parallel.
              * If this ClassLoader object has been registered as parallel capable,
@@ -259,7 +259,7 @@ declare namespace java {
              * @see java.lang.ClassLoader
              */
             // @ts-ignore
-            getClassLoadingLock(className: string): java.lang.Object
+            getClassLoadingLock(className: java.lang.String | string): any
             /**
              * Forces a class to be linked (initialized).  If the class has
              * already been linked this operation has no effect.
@@ -282,7 +282,7 @@ declare namespace java {
              * 					the name of the resource to find.
              */
             // @ts-ignore
-            findResource(resName: string): java.net.URL
+            findResource(resName: java.lang.String | string): java.net.URL
             /**
              * Answers an Enumeration of URL which can be used to access the resources
              * described by resName, using the class loader's resource lookup
@@ -294,7 +294,7 @@ declare namespace java {
              * @throws IOException when an error occurs
              */
             // @ts-ignore
-            findResources(resName: string): java.util.Enumeration<java.net.URL>
+            findResources(resName: java.lang.String | string): java.util.Enumeration<java.net.URL>
             /**
              * Answers the absolute path of the file containing the library
              * associated with the given name, or null. If null is answered,
@@ -306,7 +306,7 @@ declare namespace java {
              * 					the name of the library to find.
              */
             // @ts-ignore
-            findLibrary(libName: string): java.lang.String
+            findLibrary(libName: java.lang.String | string): string
             /**
              * Attempt to locate the requested package. If no package information
              * can be located, null is returned.
@@ -314,7 +314,7 @@ declare namespace java {
              * @return The package requested, or null
              */
             // @ts-ignore
-            getPackage(name: string): java.lang.Package
+            getPackage(name: java.lang.String | string): java.lang.Package
             /**
              * Answers all the packages known to this class loader.
              * @return All the packages known to this classloader
@@ -335,14 +335,14 @@ declare namespace java {
              * @exception IllegalArgumentException if the Package already exists
              */
             // @ts-ignore
-            definePackage(name: string, specTitle: string, specVersion: string, specVendor: string, implTitle: string, implVersion: string, implVendor: string, sealBase: java.net.URL): java.lang.Package
+            definePackage(name: java.lang.String | string, specTitle: java.lang.String | string, specVersion: java.lang.String | string, specVendor: java.lang.String | string, implTitle: java.lang.String | string, implVersion: java.lang.String | string, implVendor: java.lang.String | string, sealBase: java.net.URL): java.lang.Package
             /**
              * Sets the signers of a class.
              * @param c		The Class object
              * @param signers	The signers for the class
              */
             // @ts-ignore
-            setSigners(c: java.lang.Class<any>, signers: any[]): void
+            setSigners(c: java.lang.Class<any>, signers: java.lang.Object[] | any[]): void
             /**
              * Sets the assertion status of a class.
              * @param cname		Class name
@@ -350,7 +350,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setClassAssertionStatus(cname: string, enable: boolean): void
+            public setClassAssertionStatus(cname: java.lang.String | string, enable: boolean): void
             /**
              * Sets the assertion status of a package.
              * @param pname		Package name
@@ -358,20 +358,20 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setPackageAssertionStatus(pname: string, enable: boolean): void
+            public setPackageAssertionStatus(pname: java.lang.String | string, enable: boolean): void
             /**
              * Sets the default assertion status of a classloader
              * @param enable		Enable or disable assertion
              * @since 1.4
              */
             // @ts-ignore
-            setDefaultAssertionStatus(enable: boolean): void
+            public setDefaultAssertionStatus(enable: boolean): void
             /**
              * Clears the default, package and class assertion status of a classloader
              * @since 1.4
              */
             // @ts-ignore
-            clearAssertionStatus(): void
+            public clearAssertionStatus(): void
             /**
              * Constructs a new class from an array of bytes containing a
              * class definition in class file format and assigns the new
@@ -388,9 +388,9 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            defineClass(name: string, buffer: java.nio.ByteBuffer, domain: java.security.ProtectionDomain): java.lang.Class<?>
+            defineClass(name: java.lang.String | string, buffer: java.nio.ByteBuffer, domain: java.security.ProtectionDomain): java.lang.Class<any>
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
         }
     }
 }

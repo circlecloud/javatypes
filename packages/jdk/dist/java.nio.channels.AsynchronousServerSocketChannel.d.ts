@@ -54,7 +54,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class AsynchronousServerSocketChannel extends java.lang.Object implements java.nio.channels.AsynchronousChannel, java.nio.channels.NetworkChannel {
+            abstract class AsynchronousServerSocketChannel extends java.lang.Object implements java.nio.channels.AsynchronousChannel, java.nio.channels.NetworkChannel {
                 /**
                  * Initializes a new instance of this class.
                  * @param provider
@@ -67,7 +67,7 @@ declare namespace java {
                  * @return The provider that created this channel
                  */
                 // @ts-ignore
-                provider(): java.nio.channels.spi.AsynchronousChannelProvider
+                public provider(): java.nio.channels.spi.AsynchronousChannelProvider
                 /**
                  * Opens an asynchronous server-socket channel.
                  * <p> The new channel is created by invoking the {@link
@@ -87,7 +87,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousServerSocketChannel
+                public static open(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousServerSocketChannel
                 /**
                  * Opens an asynchronous server-socket channel.
                  * <p> This method returns an asynchronous server socket channel that is
@@ -101,7 +101,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.AsynchronousServerSocketChannel
+                public static open(): java.nio.channels.AsynchronousServerSocketChannel
                 /**
                  * Binds the channel's socket to a local address and configures the socket to
                  * listen for connections.
@@ -120,7 +120,7 @@ declare namespace java {
                  * @throws IOException                         {#inheritDoc}
                  */
                 // @ts-ignore
-                bind(local: java.net.SocketAddress): java.nio.channels.AsynchronousServerSocketChannel
+                public bind(local: java.net.SocketAddress): java.nio.channels.AsynchronousServerSocketChannel
                 /**
                  * Binds the channel's socket to a local address and configures the socket to
                  * listen for connections.
@@ -152,14 +152,14 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract bind(local: java.net.SocketAddress, backlog: number /*int*/): java.nio.channels.AsynchronousServerSocketChannel
+                public abstract bind(local: java.net.SocketAddress, backlog: number /*int*/): java.nio.channels.AsynchronousServerSocketChannel
                 /**
                  * @throws IllegalArgumentException                {#inheritDoc}
                  * @throws ClosedChannelException                  {#inheritDoc}
                  * @throws IOException                             {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.AsynchronousServerSocketChannel
+                public abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.AsynchronousServerSocketChannel
                 /**
                  * Accepts a connection.
                  * <p> This method initiates an asynchronous operation to accept a
@@ -198,7 +198,7 @@ declare namespace java {
                  *           If the channel group has terminated
                  */
                 // @ts-ignore
-                abstract accept<A>(attachment: A, handler: java.nio.channels.CompletionHandler<java.nio.channels.AsynchronousSocketChannel, any super A>): void
+                public abstract accept<A>(attachment: A, handler: java.nio.channels.CompletionHandler<java.nio.channels.AsynchronousSocketChannel, any>): void
                 /**
                  * Accepts a connection.
                  * <p> This method initiates an asynchronous operation to accept a
@@ -215,7 +215,7 @@ declare namespace java {
                  *           If this channel's socket has not yet been bound
                  */
                 // @ts-ignore
-                abstract accept(): java.util.concurrent.Future<java.nio.channels.AsynchronousSocketChannel>
+                public abstract accept(): java.util.concurrent.Future<java.nio.channels.AsynchronousSocketChannel>
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -233,7 +233,7 @@ declare namespace java {
                  * @throws IOException                {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract getLocalAddress(): java.net.SocketAddress
+                public abstract getLocalAddress(): java.net.SocketAddress
             }
         }
     }

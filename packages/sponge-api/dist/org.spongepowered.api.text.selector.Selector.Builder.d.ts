@@ -19,7 +19,7 @@ declare namespace org {
                              * @return This selector builder
                              */
                             // @ts-ignore
-                            add(...arguments: org.spongepowered.api.text.selector.Argument[]): org.spongepowered.api.text.selector.Selector.Builder
+                            add(...arguments: org.spongepowered.api.text.selector.Argument<any>[]): org.spongepowered.api.text.selector.Selector.Builder
                             /**
                              * Adds some arguments to this selector.
                              * @param arguments The arguments to add
@@ -43,7 +43,7 @@ declare namespace org {
                              * @return This selector builder
                              */
                             // @ts-ignore
-                            remove(...arguments: org.spongepowered.api.text.selector.Argument[]): org.spongepowered.api.text.selector.Selector.Builder
+                            remove(...arguments: org.spongepowered.api.text.selector.Argument<any>[]): org.spongepowered.api.text.selector.Selector.Builder
                             /**
                              * Removes the specified arguments, if they exist.
                              * @param arguments The arguments to remove
@@ -58,7 +58,7 @@ declare namespace org {
                              * @return This selector builder
                              */
                             // @ts-ignore
-                            remove(...types: org.spongepowered.api.text.selector.ArgumentType[]): org.spongepowered.api.text.selector.Selector.Builder
+                            remove(...types: org.spongepowered.api.text.selector.ArgumentType<any>[]): org.spongepowered.api.text.selector.Selector.Builder
                             /**
                              * Builds an immutable instance of the current state of this selector
                              * builder.

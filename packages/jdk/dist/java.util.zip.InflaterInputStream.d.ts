@@ -56,7 +56,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 /**
                  * Reads uncompressed data into an array of bytes. If <code>len</code> is not
                  * zero, the method will block until some input can be decompressed; otherwise,
@@ -74,7 +74,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Returns 0 after EOF has been reached, otherwise always return 1.
                  * <p>
@@ -84,7 +84,7 @@ declare namespace java {
                  * @exception IOException  if an I/O error occurs.
                  */
                 // @ts-ignore
-                available(): int
+                public available(): number /*int*/
                 /**
                  * Skips specified number of bytes of uncompressed data.
                  * @param n the number of bytes to skip
@@ -93,14 +93,14 @@ declare namespace java {
                  * @exception IllegalArgumentException if {#code n < 0}
                  */
                 // @ts-ignore
-                skip(n: number /*long*/): long
+                public skip(n: number /*long*/): number /*long*/
                 /**
                  * Closes this input stream and releases any system resources associated
                  * with the stream.
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Fills input buffer with more data to decompress.
                  * @exception IOException if an I/O error has occurred
@@ -118,7 +118,7 @@ declare namespace java {
                  * @see java.io.InputStream#reset()
                  */
                 // @ts-ignore
-                markSupported(): boolean
+                public markSupported(): boolean
                 /**
                  * Marks the current position in this input stream.
                  * <p> The <code>mark</code> method of <code>InflaterInputStream</code>
@@ -128,7 +128,7 @@ declare namespace java {
                  * @see java.io.InputStream#reset()
                  */
                 // @ts-ignore
-                mark(readlimit: number /*int*/): void
+                public mark(readlimit: number /*int*/): void
                 /**
                  * Repositions this stream to the position at the time the
                  * <code>mark</code> method was last called on this input stream.
@@ -140,7 +140,7 @@ declare namespace java {
                  * @see java.io.IOException
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
             }
         }
     }

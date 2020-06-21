@@ -13,7 +13,7 @@ declare namespace javax {
          * @author JSR 268 Expert Group
          */
         // @ts-ignore
-        class CardChannel extends java.lang.Object {
+        abstract class CardChannel extends java.lang.Object {
             /**
              * Constructs a new CardChannel object.
              * <p>This constructor is called by subclasses only. Application should
@@ -28,7 +28,7 @@ declare namespace javax {
              * @return the Card this channel is associated with
              */
             // @ts-ignore
-            abstract getCard(): javax.smartcardio.Card
+            public abstract getCard(): javax.smartcardio.Card
             /**
              * Returns the channel number of this CardChannel. A channel number of
              * 0 indicates the basic logical channel.
@@ -38,7 +38,7 @@ declare namespace javax {
              *    {@linkplain Card#disconnect disconnected}.
              */
             // @ts-ignore
-            abstract getChannelNumber(): int
+            public abstract getChannelNumber(): number /*int*/
             /**
              * Transmits the specified command APDU to the Smart Card and returns the
              * response APDU.
@@ -76,7 +76,7 @@ declare namespace javax {
              * @throws CardException if the card operation failed
              */
             // @ts-ignore
-            abstract transmit(command: javax.smartcardio.CommandAPDU): javax.smartcardio.ResponseAPDU
+            public abstract transmit(command: javax.smartcardio.CommandAPDU): javax.smartcardio.ResponseAPDU
             /**
              * Transmits the command APDU stored in the command ByteBuffer and receives
              * the response APDU in the response ByteBuffer.
@@ -112,7 +112,7 @@ declare namespace javax {
              * @throws CardException if the card operation failed
              */
             // @ts-ignore
-            abstract transmit(command: java.nio.ByteBuffer, response: java.nio.ByteBuffer): int
+            public abstract transmit(command: java.nio.ByteBuffer, response: java.nio.ByteBuffer): number /*int*/
             /**
              * Closes this CardChannel. The logical channel is closed by issuing
              * a <code>MANAGE CHANNEL</code> command that should use the format
@@ -128,7 +128,7 @@ declare namespace javax {
              *    connection the basic logical channel
              */
             // @ts-ignore
-            abstract close(): void
+            public abstract close(): void
         }
     }
 }

@@ -85,7 +85,7 @@ declare namespace javax {
                  * @throws NullPointerException If  <code>returnType</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(item: any, returnType: javax.xml.namespace.QName): java.lang.Object
+                evaluate(item: java.lang.Object | any, returnType: javax.xml.namespace.QName): any
                 /**
                  * <p>Evaluate the compiled XPath expression in the specified context and return the result as a <code>String</code>.</p>
                  * <p>This method calls {@link #evaluate(Object item, QName returnType)} with a <code>returnType</code> of
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @throws XPathExpressionException If the expression cannot be evaluated.
                  */
                 // @ts-ignore
-                evaluate(item: any): java.lang.String
+                evaluate(item: java.lang.Object | any): string
                 /**
                  * <p>Evaluate the compiled XPath expression in the context of the specified <code>InputSource</code> and return the result as the
                  * specified type.</p>
@@ -122,7 +122,7 @@ declare namespace javax {
                  * @throws NullPointerException If  <code>source</code> or <code>returnType</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(source: org.xml.sax.InputSource, returnType: javax.xml.namespace.QName): java.lang.Object
+                evaluate(source: org.xml.sax.InputSource, returnType: javax.xml.namespace.QName): any
                 /**
                  * <p>Evaluate the compiled XPath expression in the context of the specified <code>InputSource</code> and return the result as a
                  * <code>String</code>.</p>
@@ -138,7 +138,7 @@ declare namespace javax {
                  * @throws NullPointerException If  <code>source</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(source: org.xml.sax.InputSource): java.lang.String
+                evaluate(source: org.xml.sax.InputSource): string
             }
         }
     }

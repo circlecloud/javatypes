@@ -57,7 +57,7 @@ declare namespace org {
                          * @see ClassPathBeanDefinitionScanner#setBeanNameGenerator
                          */
                         // @ts-ignore
-                        setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
+                        public setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
                         /**
                          * Return the custom {@link BeanNameGenerator} for use with {@link AnnotatedBeanDefinitionReader}
                          * and/or {@link ClassPathBeanDefinitionScanner}, if any.
@@ -72,7 +72,7 @@ declare namespace org {
                          * @see ClassPathBeanDefinitionScanner#setScopeMetadataResolver
                          */
                         // @ts-ignore
-                        setScopeMetadataResolver(scopeMetadataResolver: ScopeMetadataResolver): void
+                        public setScopeMetadataResolver(scopeMetadataResolver: ScopeMetadataResolver): void
                         /**
                          * Return the custom {@link ScopeMetadataResolver} for use with {@link AnnotatedBeanDefinitionReader}
                          * and/or {@link ClassPathBeanDefinitionScanner}, if any.
@@ -91,7 +91,7 @@ declare namespace org {
                          * @see #refresh()
                          */
                         // @ts-ignore
-                        register(...componentClasses: java.lang.Class[]): void
+                        public register(...componentClasses: java.lang.Class<any>[]): void
                         /**
                          * Perform a scan within the specified base packages.
                          * <p>Note that {@link #refresh()} must be called in order for the context
@@ -103,7 +103,7 @@ declare namespace org {
                          * @see #refresh()
                          */
                         // @ts-ignore
-                        scan(...basePackages: string[]): void
+                        public scan(...basePackages: java.lang.String[] | string[]): void
                         /**
                          * Register a {@link org.springframework.beans.factory.config.BeanDefinition} for
                          * any classes specified by {@link #register(Class...)} and scan any packages

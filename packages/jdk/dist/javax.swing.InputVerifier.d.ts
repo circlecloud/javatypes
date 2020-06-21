@@ -59,7 +59,7 @@ declare namespace javax {
          * @since 1.3
          */
         // @ts-ignore
-        class InputVerifier extends java.lang.Object {
+        abstract class InputVerifier extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -72,7 +72,7 @@ declare namespace javax {
              * @see JComponent#getInputVerifier
              */
             // @ts-ignore
-            abstract verify(input: javax.swing.JComponent): boolean
+            public abstract verify(input: javax.swing.JComponent): boolean
             /**
              * Calls <code>verify(input)</code> to ensure that the input is valid.
              * This method can have side effects. In particular, this method
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see JComponent#getInputVerifier
              */
             // @ts-ignore
-            shouldYieldFocus(input: javax.swing.JComponent): boolean
+            public shouldYieldFocus(input: javax.swing.JComponent): boolean
         }
     }
 }

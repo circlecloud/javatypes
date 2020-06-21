@@ -60,7 +60,7 @@ declare namespace javax {
                  * Get the current maximum zone size.
                  */
                 // @ts-ignore
-                getMaximumZoneSize(): int
+                public getMaximumZoneSize(): number /*int*/
                 /**
                  * Set the desired maximum zone size.  A
                  * zone may get larger than this size if
@@ -72,13 +72,13 @@ declare namespace javax {
                  *  the zone into a smaller size.
                  */
                 // @ts-ignore
-                setMaximumZoneSize(size: number /*int*/): void
+                public setMaximumZoneSize(size: number /*int*/): void
                 /**
                  * Get the current setting of the number of zones
                  * allowed to be loaded at the same time.
                  */
                 // @ts-ignore
-                getMaxZonesLoaded(): int
+                public getMaxZonesLoaded(): number /*int*/
                 /**
                  * Sets the current setting of the number of zones
                  * allowed to be loaded at the same time. This will throw an
@@ -89,7 +89,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException if <code>mzl</code> is &lt; 1
                  */
                 // @ts-ignore
-                setMaxZonesLoaded(mzl: number /*int*/): void
+                public setMaxZonesLoaded(mzl: number /*int*/): void
                 /**
                  * Called by a zone when it gets loaded.  This happens when
                  * an attempt is made to display or perform a model/view
@@ -156,7 +156,7 @@ declare namespace javax {
                  *    -1 if no view represents that position
                  */
                 // @ts-ignore
-                getViewIndexAtPosition(pos: number /*int*/): int
+                getViewIndexAtPosition(pos: number /*int*/): number /*int*/
                 /**
                  * The superclass behavior will try to update the child views
                  * which is not desired in this case, since the children are
@@ -178,7 +178,7 @@ declare namespace javax {
                  * @see View#insertUpdate
                  */
                 // @ts-ignore
-                insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification that something was removed from the document
                  * in a location that this view is responsible for.  This is largely
@@ -191,7 +191,7 @@ declare namespace javax {
                  * @see View#removeUpdate
                  */
                 // @ts-ignore
-                removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
             }
         }
     }

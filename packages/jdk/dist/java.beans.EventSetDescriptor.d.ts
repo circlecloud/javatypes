@@ -29,7 +29,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(sourceClass: java.lang.Class<any>, eventSetName: string, listenerType: java.lang.Class<any>, listenerMethodName: string)
+            constructor(sourceClass: java.lang.Class<any>, eventSetName: java.lang.String | string, listenerType: java.lang.Class<any>, listenerMethodName: java.lang.String | string)
             /**
              * Creates an <TT>EventSetDescriptor</TT> from scratch using
              * string names.
@@ -48,7 +48,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(sourceClass: java.lang.Class<any>, eventSetName: string, listenerType: java.lang.Class<any>, listenerMethodNames: string[], addListenerMethodName: string, removeListenerMethodName: string)
+            constructor(sourceClass: java.lang.Class<any>, eventSetName: java.lang.String | string, listenerType: java.lang.Class<any>, listenerMethodNames: java.lang.String[] | string[], addListenerMethodName: java.lang.String | string, removeListenerMethodName: java.lang.String | string)
             /**
              * This constructor creates an EventSetDescriptor from scratch using
              * string names.
@@ -70,7 +70,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(sourceClass: java.lang.Class<any>, eventSetName: string, listenerType: java.lang.Class<any>, listenerMethodNames: string[], addListenerMethodName: string, removeListenerMethodName: string, getListenerMethodName: string)
+            constructor(sourceClass: java.lang.Class<any>, eventSetName: java.lang.String | string, listenerType: java.lang.Class<any>, listenerMethodNames: java.lang.String[] | string[], addListenerMethodName: java.lang.String | string, removeListenerMethodName: java.lang.String | string, getListenerMethodName: java.lang.String | string)
             /**
              * Creates an <TT>EventSetDescriptor</TT> from scratch using
              * <TT>java.lang.reflect.Method</TT> and <TT>java.lang.Class</TT> objects.
@@ -86,7 +86,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(eventSetName: string, listenerType: java.lang.Class<any>, listenerMethods: java.lang.reflect.Method[], addListenerMethod: java.lang.reflect.Method, removeListenerMethod: java.lang.reflect.Method)
+            constructor(eventSetName: java.lang.String | string, listenerType: java.lang.Class<any>, listenerMethods: java.lang.reflect.Method[], addListenerMethod: java.lang.reflect.Method, removeListenerMethod: java.lang.reflect.Method)
             /**
              * This constructor creates an EventSetDescriptor from scratch using
              * java.lang.reflect.Method and java.lang.Class objects.
@@ -105,7 +105,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(eventSetName: string, listenerType: java.lang.Class<any>, listenerMethods: java.lang.reflect.Method[], addListenerMethod: java.lang.reflect.Method, removeListenerMethod: java.lang.reflect.Method, getListenerMethod: java.lang.reflect.Method)
+            constructor(eventSetName: java.lang.String | string, listenerType: java.lang.Class<any>, listenerMethods: java.lang.reflect.Method[], addListenerMethod: java.lang.reflect.Method, removeListenerMethod: java.lang.reflect.Method, getListenerMethod: java.lang.reflect.Method)
             /**
              * Creates an <TT>EventSetDescriptor</TT> from scratch using
              * <TT>java.lang.reflect.MethodDescriptor</TT> and <TT>java.lang.Class</TT>
@@ -123,14 +123,14 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(eventSetName: string, listenerType: java.lang.Class<any>, listenerMethodDescriptors: java.beans.MethodDescriptor[], addListenerMethod: java.lang.reflect.Method, removeListenerMethod: java.lang.reflect.Method)
+            constructor(eventSetName: java.lang.String | string, listenerType: java.lang.Class<any>, listenerMethodDescriptors: java.beans.MethodDescriptor[], addListenerMethod: java.lang.reflect.Method, removeListenerMethod: java.lang.reflect.Method)
             /**
              * Gets the <TT>Class</TT> object for the target interface.
              * @return The Class object for the target interface that will
              *  get invoked when the event is fired.
              */
             // @ts-ignore
-            getListenerType(): java.lang.Class<?>
+            public getListenerType(): java.lang.Class<any>
             /**
              * Gets the methods of the target listener interface.
              * @return An array of <TT>Method</TT> objects for the target methods
@@ -138,7 +138,7 @@ declare namespace java {
              *  events are fired.
              */
             // @ts-ignore
-            getListenerMethods(): java.lang.reflect.Method[]
+            public getListenerMethods(): java.lang.reflect.Method[]
             /**
              * Gets the <code>MethodDescriptor</code>s of the target listener interface.
              * @return An array of <code>MethodDescriptor</code> objects for the target methods
@@ -146,19 +146,19 @@ declare namespace java {
              *  events are fired.
              */
             // @ts-ignore
-            getListenerMethodDescriptors(): java.beans.MethodDescriptor[]
+            public getListenerMethodDescriptors(): java.beans.MethodDescriptor[]
             /**
              * Gets the method used to add event listeners.
              * @return The method used to register a listener at the event source.
              */
             // @ts-ignore
-            getAddListenerMethod(): java.lang.reflect.Method
+            public getAddListenerMethod(): java.lang.reflect.Method
             /**
              * Gets the method used to remove event listeners.
              * @return The method used to remove a listener at the event source.
              */
             // @ts-ignore
-            getRemoveListenerMethod(): java.lang.reflect.Method
+            public getRemoveListenerMethod(): java.lang.reflect.Method
             /**
              * Gets the method used to access the registered event listeners.
              * @return The method used to access the array of listeners at the event
@@ -166,13 +166,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getGetListenerMethod(): java.lang.reflect.Method
+            public getGetListenerMethod(): java.lang.reflect.Method
             /**
              * Mark an event set as unicast (or not).
              * @param unicast  True if the event set is unicast.
              */
             // @ts-ignore
-            setUnicast(unicast: boolean): void
+            public setUnicast(unicast: boolean): void
             /**
              * Normally event sources are multicast.  However there are some
              * exceptions that are strictly unicast.
@@ -180,7 +180,7 @@ declare namespace java {
              *           Defaults to <TT>false</TT>.
              */
             // @ts-ignore
-            isUnicast(): boolean
+            public isUnicast(): boolean
             /**
              * Marks an event set as being in the &quot;default&quot; set (or not).
              * By default this is <TT>true</TT>.
@@ -189,14 +189,14 @@ declare namespace java {
              *                           <code>false</code> if not
              */
             // @ts-ignore
-            setInDefaultEventSet(inDefaultEventSet: boolean): void
+            public setInDefaultEventSet(inDefaultEventSet: boolean): void
             /**
              * Reports if an event set is in the &quot;default&quot; set.
              * @return <TT>true</TT> if the event set is in
              *           the &quot;default&quot; set.  Defaults to <TT>true</TT>.
              */
             // @ts-ignore
-            isInDefaultEventSet(): boolean
+            public isInDefaultEventSet(): boolean
         }
     }
 }

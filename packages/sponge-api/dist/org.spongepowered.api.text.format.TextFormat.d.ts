@@ -12,27 +12,27 @@ declare namespace org {
                          * An empty {@link TextFormat} with no {@link TextColor} and no {@link TextStyle}.
                          */
                         // @ts-ignore
-                        readonly NONE: org.spongepowered.api.text.format.TextFormat
+                        public static readonly NONE: org.spongepowered.api.text.format.TextFormat
                         /**
                          * Gets the {@link TextFormat} with the default style and color.
                          * @return The empty text format
                          */
                         // @ts-ignore
-                        of(): org.spongepowered.api.text.format.TextFormat
+                        public static of(): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Constructs a new {@link TextFormat} with the specific style.
                          * @param style The style
                          * @return The new text format
                          */
                         // @ts-ignore
-                        of(style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.format.TextFormat
+                        public static of(style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Constructs a new {@link TextFormat} with the specific color.
                          * @param color The color
                          * @return The new text format
                          */
                         // @ts-ignore
-                        of(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.format.TextFormat
+                        public static of(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Constructs a new {@link TextFormat} with the specific color and style.
                          * @param color The color
@@ -40,33 +40,33 @@ declare namespace org {
                          * @return The new text format
                          */
                         // @ts-ignore
-                        of(color: org.spongepowered.api.text.format.TextColor, style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.format.TextFormat
+                        public static of(color: org.spongepowered.api.text.format.TextColor, style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Returns the {@link TextColor} in this format.
                          * @return The color
                          */
                         // @ts-ignore
-                        getColor(): org.spongepowered.api.text.format.TextColor
+                        public getColor(): org.spongepowered.api.text.format.TextColor
                         /**
                          * Returns the {@link TextStyle} in this format.
                          * @return The style
                          */
                         // @ts-ignore
-                        getStyle(): org.spongepowered.api.text.format.TextStyle
+                        public getStyle(): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Returns a new {@link TextFormat} with the given color.
                          * @param color The color
                          * @return The new text format
                          */
                         // @ts-ignore
-                        color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.format.TextFormat
+                        public color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Returns a new {@link TextFormat} with the given style.
                          * @param style The style
                          * @return The new text format
                          */
                         // @ts-ignore
-                        style(style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.format.TextFormat
+                        public style(style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Returns a new {@link TextFormat} that combines this and the given format.
                          * The given format takes higher priority than this one. Due to this the
@@ -78,22 +78,22 @@ declare namespace org {
                          * @return The new text format
                          */
                         // @ts-ignore
-                        merge(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.format.TextFormat
+                        public merge(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.format.TextFormat
                         /**
                          * Returns whether this {@link TextFormat} has no color and format
                          * specified.
                          * @return If the format does not contain a color or any styles
                          */
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         // @ts-ignore
-                        applyTo(builder: org.spongepowered.api.text.Text.Builder): void
+                        public applyTo(builder: org.spongepowered.api.text.Text.Builder): void
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

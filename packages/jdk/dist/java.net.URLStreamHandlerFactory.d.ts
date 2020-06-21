@@ -22,7 +22,7 @@ declare namespace java {
              * @see java.net.URLStreamHandler
              */
             // @ts-ignore
-            createURLStreamHandler(protocol: string): java.net.URLStreamHandler
+            createURLStreamHandler(protocol: java.lang.String | string): java.net.URLStreamHandler
         }
     }
 }

@@ -24,43 +24,43 @@ declare namespace javax {
                     // @ts-ignore
                     filledSlider: boolean
                     // @ts-ignore
-                    thumbColor: java.awt.Color
+                    static thumbColor: java.awt.Color
                     // @ts-ignore
-                    highlightColor: java.awt.Color
+                    static highlightColor: java.awt.Color
                     // @ts-ignore
-                    darkShadowColor: java.awt.Color
+                    static darkShadowColor: java.awt.Color
                     // @ts-ignore
-                    trackWidth: number /*int*/
+                    static trackWidth: number /*int*/
                     // @ts-ignore
-                    tickLength: number /*int*/
+                    static tickLength: number /*int*/
                     /**
                      * A default horizontal thumb <code>Icon</code>. This field might not be
                      * used. To change the <code>Icon</code> used by this delegate directly set it
                      * using the <code>Slider.horizontalThumbIcon</code> UIManager property.
                      */
                     // @ts-ignore
-                    horizThumbIcon: javax.swing.Icon
+                    static horizThumbIcon: javax.swing.Icon
                     /**
                      * A default vertical thumb <code>Icon</code>. This field might not be
                      * used. To change the <code>Icon</code> used by this delegate directly set it
                      * using the <code>Slider.verticalThumbIcon</code> UIManager property.
                      */
                     // @ts-ignore
-                    vertThumbIcon: javax.swing.Icon
+                    static vertThumbIcon: javax.swing.Icon
                     // @ts-ignore
-                    readonly SLIDER_FILL: string
+                    readonly SLIDER_FILL: java.lang.String | string
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     createPropertyChangeListener(slider: javax.swing.JSlider): java.beans.PropertyChangeListener
                     // @ts-ignore
-                    paintThumb(g: java.awt.Graphics): void
+                    public paintThumb(g: java.awt.Graphics): void
                     // @ts-ignore
-                    paintTrack(g: java.awt.Graphics): void
+                    public paintTrack(g: java.awt.Graphics): void
                     // @ts-ignore
-                    paintFocus(g: java.awt.Graphics): void
+                    public paintFocus(g: java.awt.Graphics): void
                     // @ts-ignore
                     getThumbSize(): java.awt.Dimension
                     /**
@@ -69,23 +69,23 @@ declare namespace javax {
                      * determine the tick area rectangle.
                      */
                     // @ts-ignore
-                    getTickLength(): int
+                    public getTickLength(): number /*int*/
                     /**
                      * Returns the shorter dimension of the track.
                      */
                     // @ts-ignore
-                    getTrackWidth(): int
+                    getTrackWidth(): number /*int*/
                     /**
                      * Returns the longer dimension of the slide bar.  (The slide bar is only the
                      * part that runs directly under the thumb)
                      */
                     // @ts-ignore
-                    getTrackLength(): int
+                    getTrackLength(): number /*int*/
                     /**
                      * Returns the amount that the thumb goes past the slide bar.
                      */
                     // @ts-ignore
-                    getThumbOverhang(): int
+                    getThumbOverhang(): number /*int*/
                     // @ts-ignore
                     scrollDueToClickInTrack(dir: number /*int*/): void
                     // @ts-ignore

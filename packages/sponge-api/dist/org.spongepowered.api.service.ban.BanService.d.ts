@@ -19,19 +19,19 @@ declare namespace org {
                          * @return All registered bans
                          */
                         // @ts-ignore
-                        getBans(): java.util.Collection<? extends org.spongepowered.api.util.ban.Ban>
+                        getBans(): Array<any>
                         /**
                          * Gets all {@link GameProfile} bans registered.
                          * @return All registered {#link GameProfile} bans
                          */
                         // @ts-ignore
-                        getProfileBans(): java.util.Collection<org.spongepowered.api.util.ban.Ban.Profile>
+                        getProfileBans(): Array<org.spongepowered.api.util.ban.Ban.Profile>
                         /**
                          * Gets all IP bans registered.
                          * @return All registered IP bans
                          */
                         // @ts-ignore
-                        getIpBans(): java.util.Collection<org.spongepowered.api.util.ban.Ban.Ip>
+                        getIpBans(): Array<org.spongepowered.api.util.ban.Ban.Ip>
                         /**
                          * Gets the ban for the given {@link GameProfile}, if available.
                          * @param profile The profile
@@ -89,7 +89,7 @@ declare namespace org {
                          * @return The previous ban, if available
                          */
                         // @ts-ignore
-                        addBan(ban: org.spongepowered.api.util.ban.Ban): java.util.Optional<? extends org.spongepowered.api.util.ban.Ban>
+                        addBan(ban: org.spongepowered.api.util.ban.Ban): java.util.Optional<any>
                         /**
                          * Checks if the specified ban is present.
                          * @param ban The ban

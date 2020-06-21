@@ -85,7 +85,7 @@ declare namespace java {
          * @since 1.8
          */
         // @ts-ignore
-        class ZoneId extends java.lang.Object implements java.io.Serializable {
+        abstract class ZoneId extends java.lang.Object implements java.io.Serializable {
             /**
              * A map of zone overrides to enable the short time-zone names to be used.
              * <p>
@@ -131,7 +131,7 @@ declare namespace java {
              * The map is unmodifiable.
              */
             // @ts-ignore
-            readonly SHORT_IDS: java.util.Map<java.lang.String, java.lang.String>
+            public static readonly SHORT_IDS: java.util.Map<java.lang.String | string, java.lang.String | string>
             /**
              * Gets the system default time-zone.
              * <p>
@@ -143,7 +143,7 @@ declare namespace java {
              * @throws ZoneRulesException if the converted zone region ID cannot be found
              */
             // @ts-ignore
-            systemDefault(): java.time.ZoneId
+            public static systemDefault(): java.time.ZoneId
             /**
              * Gets the set of available zone IDs.
              * <p>
@@ -156,7 +156,7 @@ declare namespace java {
              * @return a modifiable copy of the set of zone IDs, not null
              */
             // @ts-ignore
-            getAvailableZoneIds(): java.util.Set<java.lang.String>
+            public static getAvailableZoneIds(): Array<java.lang.String | string>
             /**
              * Obtains an instance of {@code ZoneId} using its ID using a map
              * of aliases to supplement the standard zone IDs.
@@ -173,7 +173,7 @@ declare namespace java {
              * @throws ZoneRulesException if the zone ID is a region ID that cannot be found
              */
             // @ts-ignore
-            of(zoneId: string, aliasMap: java.util.Map<java.lang.String, java.lang.String>): java.time.ZoneId
+            public static of(zoneId: java.lang.String | string, aliasMap: java.util.Map<java.lang.String | string, java.lang.String | string>): java.time.ZoneId
             /**
              * Obtains an instance of {@code ZoneId} from an ID ensuring that the
              * ID is valid and available for use.
@@ -214,7 +214,7 @@ declare namespace java {
              * @throws ZoneRulesException if the zone ID is a region ID that cannot be found
              */
             // @ts-ignore
-            of(zoneId: string): java.time.ZoneId
+            public static of(zoneId: java.lang.String | string): java.time.ZoneId
             /**
              * Obtains an instance of {@code ZoneId} wrapping an offset.
              * <p>
@@ -228,7 +228,7 @@ declare namespace java {
              *      "GMT", "UTC", or "UT", or ""
              */
             // @ts-ignore
-            ofOffset(prefix: string, offset: java.time.ZoneOffset): java.time.ZoneId
+            public static ofOffset(prefix: java.lang.String | string, offset: java.time.ZoneOffset): java.time.ZoneId
             /**
              * Obtains an instance of {@code ZoneId} from a temporal object.
              * <p>
@@ -249,7 +249,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code ZoneId}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.ZoneId
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.ZoneId
             /**
              * Gets the unique time-zone ID.
              * <p>
@@ -258,7 +258,7 @@ declare namespace java {
              * @return the time-zone unique ID, not null
              */
             // @ts-ignore
-            abstract getId(): java.lang.String
+            public abstract getId(): string
             /**
              * Gets the textual representation of the zone, such as 'British Time' or
              * '+02:00'.
@@ -273,7 +273,7 @@ declare namespace java {
              * @return the text value of the zone, not null
              */
             // @ts-ignore
-            getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): java.lang.String
+            public getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
             /**
              * Gets the time-zone rules for this ID allowing calculations to be performed.
              * <p>
@@ -294,7 +294,7 @@ declare namespace java {
              * @throws ZoneRulesException if no rules are available for this ID
              */
             // @ts-ignore
-            abstract getRules(): java.time.zone.ZoneRules
+            public abstract getRules(): java.time.zone.ZoneRules
             /**
              * Normalizes the time-zone ID, returning a {@code ZoneOffset} where possible.
              * <p>
@@ -308,7 +308,7 @@ declare namespace java {
              * @return the time-zone unique ID, not null
              */
             // @ts-ignore
-            normalized(): java.time.ZoneId
+            public normalized(): java.time.ZoneId
             /**
              * Checks if this time-zone ID is equal to another time-zone ID.
              * <p>
@@ -317,19 +317,19 @@ declare namespace java {
              * @return true if this is equal to the other time-zone ID
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this time-zone ID.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this zone as a {@code String}, using the ID.
              * @return a string representation of this time-zone ID, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

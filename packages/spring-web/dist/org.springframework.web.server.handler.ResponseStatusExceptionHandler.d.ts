@@ -25,9 +25,9 @@ declare namespace org {
                          * @see java.util.logging.Logger#getLogger(String)
                          */
                         // @ts-ignore
-                        setWarnLogCategory(loggerName: string): void
+                        public setWarnLogCategory(loggerName: java.lang.String | string): void
                         // @ts-ignore
-                        handle(exchange: org.springframework.web.server.ServerWebExchange, ex: Error): <any>
+                        public handle(exchange: org.springframework.web.server.ServerWebExchange, ex: java.lang.Throwable | Error): object
                         /**
                          * Determine the HTTP status implied by the given exception.
                          * @param ex the exception to introspect
@@ -35,7 +35,7 @@ declare namespace org {
                          * @since 5.0.5
                          */
                         // @ts-ignore
-                        determineStatus(ex: Error): org.springframework.http.HttpStatus
+                        determineStatus(ex: java.lang.Throwable | Error): org.springframework.http.HttpStatus
                     }
                 }
             }

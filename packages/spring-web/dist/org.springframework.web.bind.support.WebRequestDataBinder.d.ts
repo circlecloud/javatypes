@@ -43,7 +43,7 @@ declare namespace org {
                          * @see #DEFAULT_OBJECT_NAME
                          */
                         // @ts-ignore
-                        constructor(target: any)
+                        constructor(target: java.lang.Object | any)
                         /**
                          * Create a new WebRequestDataBinder instance.
                          * @param target the target object to bind onto (or {#code null}
@@ -51,7 +51,7 @@ declare namespace org {
                          * @param objectName the name of the target object
                          */
                         // @ts-ignore
-                        constructor(target: any, objectName: string)
+                        constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                         /**
                          * Bind the parameters of the given request to this binder's target,
                          * also binding multipart files in case of a multipart request.
@@ -71,7 +71,7 @@ declare namespace org {
                          * @see #bind(org.springframework.beans.PropertyValues)
                          */
                         // @ts-ignore
-                        bind(request: org.springframework.web.context.request.WebRequest): void
+                        public bind(request: org.springframework.web.context.request.WebRequest): void
                         /**
                          * Treats errors as fatal.
                          * <p>Use this method only if it's an error if the input isn't valid.
@@ -79,7 +79,7 @@ declare namespace org {
                          * @throws BindException if binding errors have been encountered
                          */
                         // @ts-ignore
-                        closeNoCatch(): void
+                        public closeNoCatch(): void
                     }
                 }
             }

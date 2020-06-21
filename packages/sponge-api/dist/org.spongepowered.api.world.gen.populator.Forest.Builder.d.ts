@@ -48,7 +48,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                supplier(override: java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject> | java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject>): org.spongepowered.api.world.gen.populator.Forest.Builder
+                                supplier(override: java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject>): org.spongepowered.api.world.gen.populator.Forest.Builder
                                 /**
                                  * Builds a new instance of a {@link Forest} populator with the settings
                                  * set within the builder.

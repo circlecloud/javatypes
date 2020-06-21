@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The maximum speed
                          */
                         // @ts-ignore
-                        getMaxSpeed(): double
+                        getMaxSpeed(): number /*double*/
                         /**
                          * Sets the maximum speed that this boat is allowed to travel at.
                          * <p>The Default value is 0.4.</p>
@@ -45,7 +45,7 @@ declare namespace org {
                          * @return The occupied deceleration rate
                          */
                         // @ts-ignore
-                        getOccupiedDeceleration(): double
+                        getOccupiedDeceleration(): number /*double*/
                         /**
                          * Sets the rate at which occupied boats decelerate.
                          * @param occupiedDeceleration The new occupied deceleration rate
@@ -57,7 +57,7 @@ declare namespace org {
                          * @return The unoccupied deceleration rate
                          */
                         // @ts-ignore
-                        getUnoccupiedDeceleration(): double
+                        getUnoccupiedDeceleration(): number /*double*/
                         /**
                          * Sets the rate at which unoccupied boats decelerate.
                          * @param unoccupiedDeceleration The new unoccupied deceleration rate

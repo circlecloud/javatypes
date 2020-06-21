@@ -38,9 +38,15 @@ declare namespace javax {
                 // @ts-ignore
                 class XmlNsForm extends java.lang.Enum<javax.xml.bind.annotation.XmlNsForm> {
                     // @ts-ignore
+                    readonly UNQUALIFIED: javax.xml.bind.annotation.XmlNsForm
+                    // @ts-ignore
+                    readonly QUALIFIED: javax.xml.bind.annotation.XmlNsForm
+                    // @ts-ignore
+                    readonly UNSET: javax.xml.bind.annotation.XmlNsForm
+                    // @ts-ignore
                     values(): javax.xml.bind.annotation.XmlNsForm[]
                     // @ts-ignore
-                    valueOf(name: string): javax.xml.bind.annotation.XmlNsForm
+                    valueOf(name: java.lang.String | string): javax.xml.bind.annotation.XmlNsForm
                 }
             }
         }

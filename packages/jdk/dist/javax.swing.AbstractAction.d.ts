@@ -19,7 +19,7 @@ declare namespace javax {
          * @see Action
          */
         // @ts-ignore
-        class AbstractAction extends java.lang.Object implements javax.swing.Action, java.lang.Cloneable, java.io.Serializable {
+        abstract class AbstractAction extends java.lang.Object implements javax.swing.Action, java.lang.Cloneable, java.io.Serializable {
             /**
              * Creates an {@code Action}.
              */
@@ -31,7 +31,7 @@ declare namespace javax {
              *         value of {@code null} is ignored
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates an {@code Action} with the specified name and small icon.
              * @param name the name ({#code Action.NAME}) for the action; a
@@ -40,7 +40,7 @@ declare namespace javax {
              *         value of {@code null} is ignored
              */
             // @ts-ignore
-            constructor(name: string, icon: javax.swing.Icon)
+            constructor(name: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Specifies whether action is enabled; the default is true.
              */
@@ -60,7 +60,7 @@ declare namespace javax {
              * @see Action#getValue
              */
             // @ts-ignore
-            getValue(key: string): java.lang.Object
+            public getValue(key: java.lang.String | string): any
             /**
              * Sets the <code>Value</code> associated with the specified key.
              * @param key  the <code>String</code> that identifies the stored object
@@ -68,14 +68,14 @@ declare namespace javax {
              * @see Action#putValue
              */
             // @ts-ignore
-            putValue(key: string, newValue: any): void
+            public putValue(key: java.lang.String | string, newValue: java.lang.Object | any): void
             /**
              * Returns true if the action is enabled.
              * @return true if the action is enabled, false otherwise
              * @see Action#isEnabled
              */
             // @ts-ignore
-            isEnabled(): boolean
+            public isEnabled(): boolean
             /**
              * Sets whether the {@code Action} is enabled. The default is {@code true}.
              * @param newValue  {#code true} to enable the action, {@code false} to
@@ -83,7 +83,7 @@ declare namespace javax {
              * @see Action#setEnabled
              */
             // @ts-ignore
-            setEnabled(newValue: boolean): void
+            public setEnabled(newValue: boolean): void
             /**
              * Returns an array of <code>Object</code>s which are keys for
              * which values have been set for this <code>AbstractAction</code>,
@@ -93,7 +93,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getKeys(): java.lang.Object[]
+            public getKeys(): any[]
             /**
              * Supports reporting bound property changes.  This method can be called
              * when a bound property has changed and it will send the appropriate
@@ -101,7 +101,7 @@ declare namespace javax {
              * <code>PropertyChangeListeners</code>.
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Adds a <code>PropertyChangeListener</code> to the listener list.
              * The listener is registered for all properties.
@@ -116,7 +116,7 @@ declare namespace javax {
              * @see Action#addPropertyChangeListener
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a <code>PropertyChangeListener</code> from the listener list.
              * This removes a <code>PropertyChangeListener</code> that was registered
@@ -125,7 +125,7 @@ declare namespace javax {
              * @see Action#removePropertyChangeListener
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the <code>PropertyChangeListener</code>s added
              * to this AbstractAction with addPropertyChangeListener().
@@ -134,14 +134,14 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
             /**
              * Clones the abstract action. This gives the clone
              * its own copy of the key/value list,
              * which is not handled for you by <code>Object.clone()</code>.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
         }
     }
 }

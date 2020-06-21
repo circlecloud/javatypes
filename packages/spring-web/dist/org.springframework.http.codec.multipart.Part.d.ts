@@ -23,7 +23,7 @@ declare namespace org {
                          * @return the name of the part, never {#code null} or empty
                          */
                         // @ts-ignore
-                        name(): java.lang.String
+                        name(): string
                         /**
                          * Return the headers associated with the part.
                          */
@@ -35,7 +35,7 @@ declare namespace org {
                          * more easily via {@link FormFieldPart#value()}.
                          */
                         // @ts-ignore
-                        content(): <any>
+                        content(): object
                     }
                 }
             }

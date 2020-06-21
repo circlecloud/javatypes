@@ -24,7 +24,7 @@ declare namespace org {
                      * @see org.springframework.web.servlet.theme.AbstractThemeResolver#ORIGINAL_DEFAULT_THEME_NAME
                      */
                     // @ts-ignore
-                    getTheme(themeName: string): org.springframework.ui.context.Theme
+                    getTheme(themeName: java.lang.String | string): org.springframework.ui.context.Theme
                 }
             }
         }

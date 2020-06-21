@@ -15,20 +15,20 @@ declare namespace org {
                  * @param message A message describing the problem.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Construct an instance with the supplied argument.
                  * @param cause the cause.
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Construct an instance with the supplied arguments.
                  * @param message A message describing the problem.
                  * @param cause the cause.
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Construct an instance with the supplied arguments.
                  * @param message A message describing the problem.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @since 2.1.9
                  */
                 // @ts-ignore
-                constructor(message: string, rejectManual: boolean, cause: Error)
+                constructor(message: java.lang.String | string, rejectManual: boolean, cause: java.lang.Throwable | Error)
                 /**
                  * True if the container should reject the message, even with manual acks.
                  * @return true to reject.

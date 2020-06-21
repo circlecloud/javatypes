@@ -22,7 +22,7 @@ declare namespace org {
                  * @param cause the root cause (may be {#code null})
                  */
                 // @ts-ignore
-                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, requiredType: java.lang.Class<any>, cause: Error)
+                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, requiredType: java.lang.Class<any>, cause: java.lang.Throwable | Error)
                 /**
                  * Create a new {@code TypeMismatchException} without a {@code PropertyChangeEvent}.
                  * @param value the offending value that couldn't be converted (may be {#code null})
@@ -30,7 +30,7 @@ declare namespace org {
                  * @see #initPropertyName
                  */
                 // @ts-ignore
-                constructor(value: any, requiredType: java.lang.Class<any>)
+                constructor(value: java.lang.Object | any, requiredType: java.lang.Class<any>)
                 /**
                  * Create a new {@code TypeMismatchException} without a {@code PropertyChangeEvent}.
                  * @param value the offending value that couldn't be converted (may be {#code null})
@@ -39,12 +39,12 @@ declare namespace org {
                  * @see #initPropertyName
                  */
                 // @ts-ignore
-                constructor(value: any, requiredType: java.lang.Class<any>, cause: Error)
+                constructor(value: java.lang.Object | any, requiredType: java.lang.Class<any>, cause: java.lang.Throwable | Error)
                 /**
                  * Error code that a type mismatch error will be registered with.
                  */
                 // @ts-ignore
-                readonly ERROR_CODE: string
+                public static readonly ERROR_CODE: java.lang.String | string
                 /**
                  * Initialize this exception's property name for exposure through {@link #getPropertyName()},
                  * as an alternative to having it initialized via a {@link PropertyChangeEvent}.
@@ -54,24 +54,24 @@ declare namespace org {
                  * @see #TypeMismatchException(Object, Class, Throwable)
                  */
                 // @ts-ignore
-                initPropertyName(propertyName: string): void
+                public initPropertyName(propertyName: java.lang.String | string): void
                 /**
                  * Return the name of the affected property, if available.
                  */
                 // @ts-ignore
-                getPropertyName(): java.lang.String
+                public getPropertyName(): string
                 /**
                  * Return the offending value (may be {@code null}).
                  */
                 // @ts-ignore
-                getValue(): java.lang.Object
+                public getValue(): any
                 /**
                  * Return the required target type, if any.
                  */
                 // @ts-ignore
-                getRequiredType(): java.lang.Class<?>
+                public getRequiredType(): java.lang.Class<any>
                 // @ts-ignore
-                getErrorCode(): java.lang.String
+                public getErrorCode(): string
             }
         }
     }

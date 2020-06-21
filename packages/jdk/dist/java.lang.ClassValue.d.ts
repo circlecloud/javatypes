@@ -10,7 +10,7 @@ declare namespace java {
          * @since 1.7
          */
         // @ts-ignore
-        class ClassValue<T> extends java.lang.Object {
+        abstract class ClassValue<T> extends java.lang.Object {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -62,7 +62,7 @@ declare namespace java {
              * @see #computeValue
              */
             // @ts-ignore
-            get(type: java.lang.Class<any>): T
+            public get(type: java.lang.Class<any>): T
             /**
              * Removes the associated value for the given class.
              * If this value is subsequently {@linkplain #get read} for the same class,
@@ -116,7 +116,7 @@ declare namespace java {
              * @throws NullPointerException if the argument is null
              */
             // @ts-ignore
-            remove(type: java.lang.Class<any>): void
+            public remove(type: java.lang.Class<any>): void
         }
     }
 }

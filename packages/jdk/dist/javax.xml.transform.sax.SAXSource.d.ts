@@ -55,31 +55,31 @@ declare namespace javax {
                      * the Transformer supports Source input of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * Set the XMLReader to be used for the Source.
                      * @param reader A valid XMLReader or XMLFilter reference.
                      */
                     // @ts-ignore
-                    setXMLReader(reader: org.xml.sax.XMLReader): void
+                    public setXMLReader(reader: org.xml.sax.XMLReader): void
                     /**
                      * Get the XMLReader to be used for the Source.
                      * @return A valid XMLReader or XMLFilter reference, or null.
                      */
                     // @ts-ignore
-                    getXMLReader(): org.xml.sax.XMLReader
+                    public getXMLReader(): org.xml.sax.XMLReader
                     /**
                      * Set the SAX InputSource to be used for the Source.
                      * @param inputSource A valid InputSource reference.
                      */
                     // @ts-ignore
-                    setInputSource(inputSource: org.xml.sax.InputSource): void
+                    public setInputSource(inputSource: org.xml.sax.InputSource): void
                     /**
                      * Get the SAX InputSource to be used for the Source.
                      * @return A valid InputSource reference, or null.
                      */
                     // @ts-ignore
-                    getInputSource(): org.xml.sax.InputSource
+                    public getInputSource(): org.xml.sax.InputSource
                     /**
                      * Set the system identifier for this Source.  If an input source
                      * has already been set, it will set the system ID or that
@@ -93,14 +93,14 @@ declare namespace javax {
                      * @param systemId The system identifier as a URI string.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * <p>Get the base ID (URI or system ID) from where URIs
                      * will be resolved.</p>
                      * @return Base URL for the <code>Source</code>, or <code>null</code>.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                     /**
                      * Attempt to obtain a SAX InputSource object from a Source
                      * object.
@@ -108,7 +108,7 @@ declare namespace javax {
                      * @return An InputSource, or null if Source can not be converted.
                      */
                     // @ts-ignore
-                    sourceToInputSource(source: javax.xml.transform.Source): org.xml.sax.InputSource
+                    public static sourceToInputSource(source: javax.xml.transform.Source): org.xml.sax.InputSource
                 }
             }
         }

@@ -6,7 +6,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class SecureCacheResponse extends java.net.CacheResponse {
+        abstract class SecureCacheResponse extends java.net.CacheResponse {
             // @ts-ignore
             constructor()
             /**
@@ -15,7 +15,7 @@ declare namespace java {
              * @return a string representing the cipher suite
              */
             // @ts-ignore
-            abstract getCipherSuite(): java.lang.String
+            public abstract getCipherSuite(): string
             /**
              * Returns the certificate chain that were sent to the server during
              * handshaking of the original connection that retrieved the
@@ -27,7 +27,7 @@ declare namespace java {
              * @see #getLocalPrincipal()
              */
             // @ts-ignore
-            abstract getLocalCertificateChain(): java.util.List<java.security.cert.Certificate>
+            public abstract getLocalCertificateChain(): Array<java.security.cert.Certificate>
             /**
              * Returns the server's certificate chain, which was established as
              * part of defining the session in the original connection that
@@ -41,7 +41,7 @@ declare namespace java {
              * @see #getPeerPrincipal()
              */
             // @ts-ignore
-            abstract getServerCertificateChain(): java.util.List<java.security.cert.Certificate>
+            public abstract getServerCertificateChain(): Array<java.security.cert.Certificate>
             /**
              * Returns the server's principal which was established as part of
              * defining the session during the original connection that
@@ -54,7 +54,7 @@ declare namespace java {
              * @see #getLocalPrincipal()
              */
             // @ts-ignore
-            abstract getPeerPrincipal(): java.security.Principal
+            public abstract getPeerPrincipal(): java.security.Principal
             /**
              * Returns the principal that was sent to the server during
              * handshaking in the original connection that retrieved the
@@ -67,7 +67,7 @@ declare namespace java {
              * @see #getPeerPrincipal()
              */
             // @ts-ignore
-            abstract getLocalPrincipal(): java.security.Principal
+            public abstract getLocalPrincipal(): java.security.Principal
         }
     }
 }

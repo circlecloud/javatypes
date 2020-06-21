@@ -78,7 +78,7 @@ declare namespace java {
              * @return the number of elements in this list
              */
             // @ts-ignore
-            size(): int
+            size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this list contains no elements.
              * @return <tt>true</tt> if this list contains no elements
@@ -100,7 +100,7 @@ declare namespace java {
              *  (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            contains(o: any): boolean
+            contains(o: java.lang.Object | any): boolean
             /**
              * Returns an iterator over the elements in this list in proper sequence.
              * @return an iterator over the elements in this list in proper sequence
@@ -121,7 +121,7 @@ declare namespace java {
              * @see Arrays#asList(Object[])
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            toArray(): any[]
             /**
              * Returns an array containing all of the elements in this list in
              * proper sequence (from first to last element); the runtime type of
@@ -200,7 +200,7 @@ declare namespace java {
              *          is not supported by this list
              */
             // @ts-ignore
-            remove(o: any): boolean
+            remove(o: java.lang.Object | any): boolean
             /**
              * Returns <tt>true</tt> if this list contains all of the elements of the
              * specified collection.
@@ -219,7 +219,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            containsAll(c: Array<any>): boolean
+            containsAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Appends all of the elements in the specified collection to the end of
              * this list, in the order that they are returned by the specified
@@ -241,7 +241,7 @@ declare namespace java {
              * @see #add(Object)
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Inserts all of the elements in the specified collection into this
              * list at the specified position (optional operation).  Shifts the
@@ -269,7 +269,7 @@ declare namespace java {
              *          (<tt>index &lt; 0 || index &gt; size()</tt>)
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<E>): boolean
+            addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes from this list all of its elements that are contained in the
              * specified collection (optional operation).
@@ -288,7 +288,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            removeAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Retains only the elements in this list that are contained in the
              * specified collection (optional operation).  In other words, removes
@@ -309,7 +309,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            retainAll(c: Array<any>): boolean
+            retainAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Replaces each element of this list with the result of applying the
              * operator to that element.  Errors or runtime exceptions thrown by
@@ -337,7 +337,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            replaceAll(operator: java.util.function.UnaryOperator<E> | java.util.function$.UnaryOperator<E>): void
+            replaceAll(operator: java.util.function$.UnaryOperator<E>): void
             /**
              * Sorts this list according to the order induced by the specified
              * {@link Comparator}.
@@ -389,7 +389,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            sort(c: java.util.Comparator<any super E>): void
+            sort(c: java.util.Comparator<any>): void
             /**
              * Removes all of the elements from this list (optional operation).
              * The list will be empty after this call returns.
@@ -412,7 +412,7 @@ declare namespace java {
              * @return <tt>true</tt> if the specified object is equal to this list
              */
             // @ts-ignore
-            equals(o: any): boolean
+            equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this list.  The hash code of a list
              * is defined to be the result of the following calculation:
@@ -430,7 +430,7 @@ declare namespace java {
              * @see #equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
             /**
              * Returns the element at the specified position in this list.
              * @param index index of the element to return
@@ -510,7 +510,7 @@ declare namespace java {
              *          (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            indexOf(o: any): int
+            indexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns the index of the last occurrence of the specified element
              * in this list, or -1 if this list does not contain the element.
@@ -528,7 +528,7 @@ declare namespace java {
              *          (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            lastIndexOf(o: any): int
+            lastIndexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns a list iterator over the elements in this list (in proper
              * sequence).
@@ -585,7 +585,7 @@ declare namespace java {
              *          fromIndex &gt; toIndex</tt>)
              */
             // @ts-ignore
-            subList(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.List<E>
+            subList(fromIndex: number /*int*/, toIndex: number /*int*/): Array<E>
             /**
              * Creates a {@link Spliterator} over the elements in this list.
              * <p>The {@code Spliterator} reports {@link Spliterator#SIZED} and

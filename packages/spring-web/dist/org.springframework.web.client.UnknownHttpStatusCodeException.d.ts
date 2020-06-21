@@ -19,7 +19,7 @@ declare namespace org {
                      * @param responseCharset the response body charset (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(rawStatusCode: number /*int*/, statusText: string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
+                    constructor(rawStatusCode: number /*int*/, statusText: java.lang.String | string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
                     /**
                      * Construct a new instance of {@code HttpStatusCodeException} based on an
                      * {@link HttpStatus}, status text, and response body content.
@@ -31,7 +31,7 @@ declare namespace org {
                      * @since 5.2.2
                      */
                     // @ts-ignore
-                    constructor(message: string, rawStatusCode: number /*int*/, statusText: string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
+                    constructor(message: java.lang.String | string, rawStatusCode: number /*int*/, statusText: java.lang.String | string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
                 }
             }
         }

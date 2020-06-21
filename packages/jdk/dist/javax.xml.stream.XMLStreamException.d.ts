@@ -21,20 +21,20 @@ declare namespace javax {
                  * @param msg the message to report
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Construct an exception with the assocated exception
                  * @param th a nested exception
                  */
                 // @ts-ignore
-                constructor(th: Error)
+                constructor(th: java.lang.Throwable | Error)
                 /**
                  * Construct an exception with the assocated message and exception
                  * @param th a nested exception
                  * @param msg the message to report
                  */
                 // @ts-ignore
-                constructor(msg: string, th: Error)
+                constructor(msg: java.lang.String | string, th: java.lang.Throwable | Error)
                 /**
                  * Construct an exception with the assocated message, exception and location.
                  * @param th a nested exception
@@ -42,16 +42,16 @@ declare namespace javax {
                  * @param location the location of the error
                  */
                 // @ts-ignore
-                constructor(msg: string, location: javax.xml.stream.Location, th: Error)
+                constructor(msg: java.lang.String | string, location: javax.xml.stream.Location, th: java.lang.Throwable | Error)
                 /**
                  * Construct an exception with the assocated message, exception and location.
                  * @param msg the message to report
                  * @param location the location of the error
                  */
                 // @ts-ignore
-                constructor(msg: string, location: javax.xml.stream.Location)
+                constructor(msg: java.lang.String | string, location: javax.xml.stream.Location)
                 // @ts-ignore
-                nested: Error
+                nested: java.lang.Throwable | Error
                 // @ts-ignore
                 location: javax.xml.stream.Location
                 /**
@@ -59,7 +59,7 @@ declare namespace javax {
                  * @return Nested exception
                  */
                 // @ts-ignore
-                getNestedException(): java.lang.Throwable
+                getNestedException(): Error
                 /**
                  * Gets the location of the exception
                  * @return the location of the exception, may be null if none is available

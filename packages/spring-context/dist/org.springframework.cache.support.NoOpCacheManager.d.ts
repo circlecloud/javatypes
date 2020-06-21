@@ -21,12 +21,12 @@ declare namespace org {
                      * Additionally, the request cache will be remembered by the manager for consistency.
                      */
                     // @ts-ignore
-                    getCache(name: string): org.springframework.cache.Cache
+                    public getCache(name: java.lang.String | string): org.springframework.cache.Cache
                     /**
                      * This implementation returns the name of the caches previously requested.
                      */
                     // @ts-ignore
-                    getCacheNames(): java.util.Collection<java.lang.String>
+                    public getCacheNames(): Array<java.lang.String | string>
                 }
             }
         }

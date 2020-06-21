@@ -13,7 +13,7 @@ declare namespace org {
                      * Return the cache name(s) associated with the operation.
                      */
                     // @ts-ignore
-                    getCacheNames(): java.util.Set<java.lang.String>
+                    getCacheNames(): Array<java.lang.String | string>
                 }
             }
         }

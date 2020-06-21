@@ -67,7 +67,7 @@ declare namespace org {
                              * @return The spawn chance
                              */
                             // @ts-ignore
-                            getSpawnChance(): double
+                            getSpawnChance(): number /*double*/
                             /**
                              * Sets the chance of spawning the object for each attempt. This chance is
                              * applied before the checks for if the placement is valid. This value must

@@ -31,7 +31,7 @@ declare namespace javax {
                  * @see javax.xml.soap.SOAPFactory#createElement(javax.xml.namespace.QName)
                  */
                 // @ts-ignore
-                create(name: javax.xml.soap.Name): javax.xml.soap.SOAPElement
+                public create(name: javax.xml.soap.Name): javax.xml.soap.SOAPElement
                 /**
                  * Create a <code>SOAPElement</code> object initialized with the
                  * given local name.
@@ -46,7 +46,7 @@ declare namespace javax {
                  * @see javax.xml.soap.SOAPFactory#createElement(java.lang.String)
                  */
                 // @ts-ignore
-                create(localName: string): javax.xml.soap.SOAPElement
+                public create(localName: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Create a new <code>SOAPElement</code> object with the given
                  * local name, prefix and uri.
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @see javax.xml.soap.SOAPFactory#createElement(java.lang.String, java.lang.String, java.lang.String)
                  */
                 // @ts-ignore
-                create(localName: string, prefix: string, uri: string): javax.xml.soap.SOAPElement
+                public create(localName: java.lang.String | string, prefix: java.lang.String | string, uri: java.lang.String | string): javax.xml.soap.SOAPElement
                 /**
                  * Creates a new instance of <code>SOAPElementFactory</code>.
                  * @return a new instance of a <code>SOAPElementFactory</code>
@@ -73,7 +73,7 @@ declare namespace javax {
                  *             default <code>SOAPElementFactory</code>
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.soap.SOAPElementFactory
+                public static newInstance(): javax.xml.soap.SOAPElementFactory
             }
         }
     }

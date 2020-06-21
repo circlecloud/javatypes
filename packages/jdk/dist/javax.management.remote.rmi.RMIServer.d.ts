@@ -35,7 +35,7 @@ declare namespace javax {
                      *  exception during the remote method call.
                      */
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    getVersion(): string
                     /**
                      * <p>Makes a new connection through this RMI connector.  Each
                      * remote client calls this method to obtain a new RMI object
@@ -51,7 +51,7 @@ declare namespace javax {
                      *  allow the server to authenticate the caller successfully.
                      */
                     // @ts-ignore
-                    newClient(credentials: any): javax.management.remote.rmi.RMIConnection
+                    newClient(credentials: java.lang.Object | any): javax.management.remote.rmi.RMIConnection
                 }
             }
         }

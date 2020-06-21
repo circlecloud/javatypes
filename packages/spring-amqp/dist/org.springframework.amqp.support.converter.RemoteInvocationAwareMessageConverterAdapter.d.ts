@@ -17,11 +17,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor(delegate: org.springframework.amqp.support.converter.MessageConverter)
                         // @ts-ignore
-                        setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        toMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        public toMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                     }
                 }
             }

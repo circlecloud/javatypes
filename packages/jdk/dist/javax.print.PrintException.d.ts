@@ -18,7 +18,7 @@ declare namespace javax {
              * @param s  Detail message, or null if no detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Construct a print exception chaining the supplied exception.
              * @param e  Chained exception.
@@ -32,7 +32,7 @@ declare namespace javax {
              * @param e  Chained exception.
              */
             // @ts-ignore
-            constructor(s: string, e: java.lang.Exception)
+            constructor(s: java.lang.String | string, e: java.lang.Exception)
         }
     }
 }

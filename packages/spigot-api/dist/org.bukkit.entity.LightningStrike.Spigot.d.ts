@@ -7,7 +7,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    isSilent(): boolean
+                    public isSilent(): boolean
                 }
             }
         }

@@ -8,7 +8,7 @@ declare namespace javax {
              * @author David Brownell
              */
             // @ts-ignore
-            class SSLSocketFactory extends javax.net.SocketFactory {
+            abstract class SSLSocketFactory extends javax.net.SocketFactory {
                 /**
                  * Constructor is used only by subclasses.
                  */
@@ -28,7 +28,7 @@ declare namespace javax {
                  * @see SSLContext#getDefault
                  */
                 // @ts-ignore
-                getDefault(): javax.net.SocketFactory
+                public static getDefault(): javax.net.SocketFactory
                 /**
                  * Returns the list of cipher suites which are enabled by default.
                  * Unless a different list is enabled, handshaking on an SSL connection
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @return array of the cipher suites enabled by default
                  */
                 // @ts-ignore
-                abstract getDefaultCipherSuites(): java.lang.String[]
+                public abstract getDefaultCipherSuites(): string[]
                 /**
                  * Returns the names of the cipher suites which could be enabled for use
                  * on an SSL connection.  Normally, only a subset of these will actually
@@ -50,7 +50,7 @@ declare namespace javax {
                  * @return an array of cipher suite names
                  */
                 // @ts-ignore
-                abstract getSupportedCipherSuites(): java.lang.String[]
+                public abstract getSupportedCipherSuites(): string[]
                 /**
                  * Returns a socket layered over an existing socket connected to the named
                  * host, at the given port.  This constructor can be used when tunneling SSL
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @throws NullPointerException if the parameter s is null
                  */
                 // @ts-ignore
-                abstract createSocket(s: java.net.Socket, host: string, port: number /*int*/, autoClose: boolean): java.net.Socket
+                public abstract createSocket(s: java.net.Socket, host: java.lang.String | string, port: number /*int*/, autoClose: boolean): java.net.Socket
                 /**
                  * Creates a server mode {@link Socket} layered over an
                  * existing connected socket, and is able to read data which has
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                createSocket(s: java.net.Socket, consumed: java.io.InputStream, autoClose: boolean): java.net.Socket
+                public createSocket(s: java.net.Socket, consumed: java.io.InputStream, autoClose: boolean): java.net.Socket
             }
         }
     }

@@ -73,7 +73,7 @@ declare namespace javax {
              * @see javax.management.MBeanRegistration
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName): javax.management.ObjectInstance
             /**
              * <p>Instantiates and registers an MBean in the MBean server.  The
              * class loader to be used is identified by its object name. An
@@ -142,7 +142,7 @@ declare namespace javax {
              * @see javax.management.MBeanRegistration
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName): javax.management.ObjectInstance
             /**
              * Instantiates and registers an MBean in the MBean server.  The
              * MBean server will use its {@link
@@ -208,7 +208,7 @@ declare namespace javax {
              * @see javax.management.MBeanRegistration
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName, params: any[], signature: string[]): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): javax.management.ObjectInstance
             /**
              * <p>Instantiates and registers an MBean in the MBean server.  The
              * class loader to be used is identified by its object name. An
@@ -277,7 +277,7 @@ declare namespace javax {
              * @see javax.management.MBeanRegistration
              */
             // @ts-ignore
-            createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: any[], signature: string[]): javax.management.ObjectInstance
+            createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): javax.management.ObjectInstance
             /**
              * Unregisters an MBean from the MBean server. The MBean is
              * identified by its object name. Once the method has been
@@ -357,7 +357,7 @@ declare namespace javax {
              *  talking to the MBean server.
              */
             // @ts-ignore
-            queryMBeans(name: javax.management.ObjectName, query: javax.management.QueryExp): java.util.Set<javax.management.ObjectInstance>
+            queryMBeans(name: javax.management.ObjectName, query: javax.management.QueryExp): Array<javax.management.ObjectInstance>
             /**
              * Gets the names of MBeans controlled by the MBean server. This
              * method enables any of the following to be obtained: The names
@@ -381,7 +381,7 @@ declare namespace javax {
              *  talking to the MBean server.
              */
             // @ts-ignore
-            queryNames(name: javax.management.ObjectName, query: javax.management.QueryExp): java.util.Set<javax.management.ObjectName>
+            queryNames(name: javax.management.ObjectName, query: javax.management.QueryExp): Array<javax.management.ObjectName>
             /**
              * Checks whether an MBean, identified by its object name, is
              * already registered with the MBean server.
@@ -403,7 +403,7 @@ declare namespace javax {
              *  talking to the MBean server.
              */
             // @ts-ignore
-            getMBeanCount(): java.lang.Integer
+            getMBeanCount(): number
             /**
              * Gets the value of a specific attribute of a named MBean. The MBean
              * is identified by its object name.
@@ -430,7 +430,7 @@ declare namespace javax {
              * @see #setAttribute
              */
             // @ts-ignore
-            getAttribute(name: javax.management.ObjectName, attribute: string): java.lang.Object
+            getAttribute(name: javax.management.ObjectName, attribute: java.lang.String | string): any
             /**
              * <p>Retrieves the values of several attributes of a named MBean. The MBean
              * is identified by its object name.</p>
@@ -470,7 +470,7 @@ declare namespace javax {
              * @see #setAttributes
              */
             // @ts-ignore
-            getAttributes(name: javax.management.ObjectName, attributes: string[]): javax.management.AttributeList
+            getAttributes(name: javax.management.ObjectName, attributes: java.lang.String[] | string[]): javax.management.AttributeList
             /**
              * Sets the value of a specific attribute of a named MBean. The MBean
              * is identified by its object name.
@@ -598,7 +598,7 @@ declare namespace javax {
              *  talking to the MBean server.
              */
             // @ts-ignore
-            invoke(name: javax.management.ObjectName, operationName: string, params: any[], signature: string[]): java.lang.Object
+            invoke(name: javax.management.ObjectName, operationName: java.lang.String | string, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): any
             /**
              * Returns the default domain used for naming the MBean.
              * The default domain name is used as the domain part in the ObjectName
@@ -608,7 +608,7 @@ declare namespace javax {
              *  talking to the MBean server.
              */
             // @ts-ignore
-            getDefaultDomain(): java.lang.String
+            getDefaultDomain(): string
             /**
              * <p>Returns the list of domains in which any MBean is currently
              * registered.  A string is in the returned array if and only if
@@ -621,7 +621,7 @@ declare namespace javax {
              *  talking to the MBean server.
              */
             // @ts-ignore
-            getDomains(): java.lang.String[]
+            getDomains(): string[]
             /**
              * <p>Adds a listener to a registered MBean.
              * Notifications emitted by the MBean will be forwarded to the listener.</p>
@@ -642,7 +642,7 @@ declare namespace javax {
              *  NotificationFilter, Object)
              */
             // @ts-ignore
-            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             /**
              * <p>Adds a listener to a registered MBean.</p>
              * <p>A notification emitted by an MBean will be forwarded by the
@@ -676,7 +676,7 @@ declare namespace javax {
              *  NotificationFilter, Object)
              */
             // @ts-ignore
-            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: any): void
+            addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             /**
              * Removes a listener from a registered MBean.
              * <P> If the listener is registered more than once, perhaps with
@@ -723,7 +723,7 @@ declare namespace javax {
              *  NotificationFilter, Object)
              */
             // @ts-ignore
-            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: any): void
+            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             /**
              * <p>Removes a listener from a registered MBean.</p>
              * <P> If the listener is registered more than once, perhaps with
@@ -770,7 +770,7 @@ declare namespace javax {
              *  NotificationFilter, Object)
              */
             // @ts-ignore
-            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             /**
              * This method discovers the attributes and operations that an
              * MBean exposes for management.
@@ -815,7 +815,7 @@ declare namespace javax {
              * @see Class#isInstance
              */
             // @ts-ignore
-            isInstanceOf(name: javax.management.ObjectName, className: string): boolean
+            isInstanceOf(name: javax.management.ObjectName, className: java.lang.String | string): boolean
         }
     }
 }

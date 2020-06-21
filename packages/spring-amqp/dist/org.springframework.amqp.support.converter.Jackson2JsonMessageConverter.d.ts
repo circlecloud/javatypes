@@ -33,7 +33,7 @@ declare namespace org {
                          * @see DefaultJackson2JavaTypeMapper#setTrustedPackages(String...)
                          */
                         // @ts-ignore
-                        constructor(...trustedPackages: string[])
+                        constructor(...trustedPackages: java.lang.String[] | string[])
                         /**
                          * Construct with the provided {@link ObjectMapper} instance
                          * and trusted packed to all ({@code *}).
@@ -50,7 +50,7 @@ declare namespace org {
                          * @see DefaultJackson2JavaTypeMapper#setTrustedPackages(String...)
                          */
                         // @ts-ignore
-                        constructor(jsonObjectMapper: ObjectMapper, ...trustedPackages: string[])
+                        constructor(jsonObjectMapper: ObjectMapper, ...trustedPackages: java.lang.String[] | string[])
                     }
                 }
             }

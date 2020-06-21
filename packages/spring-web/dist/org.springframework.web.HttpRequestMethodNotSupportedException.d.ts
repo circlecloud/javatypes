@@ -14,28 +14,28 @@ declare namespace org {
                  * @param method the unsupported HTTP request method
                  */
                 // @ts-ignore
-                constructor(method: string)
+                constructor(method: java.lang.String | string)
                 /**
                  * Create a new HttpRequestMethodNotSupportedException.
                  * @param method the unsupported HTTP request method
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(method: string, msg: string)
+                constructor(method: java.lang.String | string, msg: java.lang.String | string)
                 /**
                  * Create a new HttpRequestMethodNotSupportedException.
                  * @param method the unsupported HTTP request method
                  * @param supportedMethods the actually supported HTTP methods (may be {#code null})
                  */
                 // @ts-ignore
-                constructor(method: string, supportedMethods: Array<java.lang.String>)
+                constructor(method: java.lang.String | string, supportedMethods: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>)
                 /**
                  * Create a new HttpRequestMethodNotSupportedException.
                  * @param method the unsupported HTTP request method
                  * @param supportedMethods the actually supported HTTP methods (may be {#code null})
                  */
                 // @ts-ignore
-                constructor(method: string, supportedMethods: string[])
+                constructor(method: java.lang.String | string, supportedMethods: java.lang.String[] | string[])
                 /**
                  * Create a new HttpRequestMethodNotSupportedException.
                  * @param method the unsupported HTTP request method
@@ -43,24 +43,24 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(method: string, supportedMethods: string[], msg: string)
+                constructor(method: java.lang.String | string, supportedMethods: java.lang.String[] | string[], msg: java.lang.String | string)
                 /**
                  * Return the HTTP request method that caused the failure.
                  */
                 // @ts-ignore
-                getMethod(): java.lang.String
+                public getMethod(): string
                 /**
                  * Return the actually supported HTTP methods, or {@code null} if not known.
                  */
                 // @ts-ignore
-                getSupportedMethods(): java.lang.String[]
+                public getSupportedMethods(): string[]
                 /**
                  * Return the actually supported HTTP methods as {@link HttpMethod} instances,
                  * or {@code null} if not known.
                  * @since 3.2
                  */
                 // @ts-ignore
-                getSupportedHttpMethods(): java.util.Set<org.springframework.http.HttpMethod>
+                public getSupportedHttpMethods(): Array<org.springframework.http.HttpMethod>
             }
         }
     }

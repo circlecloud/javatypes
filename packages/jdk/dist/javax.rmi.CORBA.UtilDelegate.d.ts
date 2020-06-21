@@ -23,22 +23,22 @@ declare namespace javax {
                  * Delegation call for {@link Util#writeAny}.
                  */
                 // @ts-ignore
-                writeAny(out: org.omg.CORBA.portable.OutputStream, obj: any): void
+                writeAny(out: org.omg.CORBA.portable.OutputStream, obj: java.lang.Object | any): void
                 /**
                  * Delegation call for {@link Util#readAny}.
                  */
                 // @ts-ignore
-                readAny(input: org.omg.CORBA.portable.InputStream): java.lang.Object
+                readAny(input: org.omg.CORBA.portable.InputStream): any
                 /**
                  * Delegation call for {@link Util#writeRemoteObject}.
                  */
                 // @ts-ignore
-                writeRemoteObject(out: org.omg.CORBA.portable.OutputStream, obj: any): void
+                writeRemoteObject(out: org.omg.CORBA.portable.OutputStream, obj: java.lang.Object | any): void
                 /**
                  * Delegation call for {@link Util#writeAbstractObject}.
                  */
                 // @ts-ignore
-                writeAbstractObject(out: org.omg.CORBA.portable.OutputStream, obj: any): void
+                writeAbstractObject(out: org.omg.CORBA.portable.OutputStream, obj: java.lang.Object | any): void
                 /**
                  * Delegation call for {@link Util#registerTarget}.
                  */
@@ -63,12 +63,12 @@ declare namespace javax {
                  * Delegation call for {@link Util#getCodebase}.
                  */
                 // @ts-ignore
-                getCodebase(clz: java.lang.Class): java.lang.String
+                getCodebase(clz: java.lang.Class<any>): string
                 /**
                  * Delegation call for {@link Util#loadClass}.
                  */
                 // @ts-ignore
-                loadClass(className: string, remoteCodebase: string, loader: java.lang.ClassLoader): java.lang.Class
+                loadClass(className: java.lang.String | string, remoteCodebase: java.lang.String | string, loader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Delegation call for {@link Util#isLocal}.
                  */
@@ -78,17 +78,17 @@ declare namespace javax {
                  * Delegation call for {@link Util#wrapException}.
                  */
                 // @ts-ignore
-                wrapException(obj: Error): java.rmi.RemoteException
+                wrapException(obj: java.lang.Throwable | Error): java.rmi.RemoteException
                 /**
                  * Delegation call for {@link Util#copyObject}.
                  */
                 // @ts-ignore
-                copyObject(obj: any, orb: org.omg.CORBA.ORB): java.lang.Object
+                copyObject(obj: java.lang.Object | any, orb: org.omg.CORBA.ORB): any
                 /**
                  * Delegation call for {@link Util#copyObjects}.
                  */
                 // @ts-ignore
-                copyObjects(obj: any[], orb: org.omg.CORBA.ORB): java.lang.Object[]
+                copyObjects(obj: java.lang.Object[] | any[], orb: org.omg.CORBA.ORB): any[]
             }
         }
     }

@@ -57,21 +57,21 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class Group extends javax.swing.GroupLayout.Spring {
+            abstract class Group extends javax.swing.GroupLayout.Spring {
                 /**
                  * Adds a {@code Group} to this {@code Group}.
                  * @param group the {#code Group} to add
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addGroup(group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.Group
+                public addGroup(group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.Group
                 /**
                  * Adds a {@code Component} to this {@code Group}.
                  * @param component the {#code Component} to add
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component): javax.swing.GroupLayout.Group
+                public addComponent(component: java.awt.Component): javax.swing.GroupLayout.Group
                 /**
                  * Adds a {@code Component} to this {@code Group}
                  * with the specified size.
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.Group
+                public addComponent(component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.Group
                 /**
                  * Adds a rigid gap to this {@code Group}.
                  * @param size the size of the gap
@@ -94,7 +94,7 @@ declare namespace javax {
                  *          {@code 0}
                  */
                 // @ts-ignore
-                addGap(size: number /*int*/): javax.swing.GroupLayout.Group
+                public addGap(size: number /*int*/): javax.swing.GroupLayout.Group
                 /**
                  * Adds a gap to this {@code Group} with the specified size.
                  * @param min the minimum size of the gap
@@ -105,7 +105,7 @@ declare namespace javax {
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addGap(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.Group
+                public addGap(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.Group
             }
         }
     }

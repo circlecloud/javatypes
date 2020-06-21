@@ -12,7 +12,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.metadata.ManagedMetric
                      */
                     // @ts-ignore
-                    class ManagedMetric implements java.lang.annotation.Annotation {
+                    abstract class ManagedMetric implements java.lang.annotation.Annotation {
                     }
                 }
             }

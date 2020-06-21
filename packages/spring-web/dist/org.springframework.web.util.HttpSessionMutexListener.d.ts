@@ -25,9 +25,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    sessionCreated(event: HttpSessionEvent): void
+                    public sessionCreated(event: HttpSessionEvent): void
                     // @ts-ignore
-                    sessionDestroyed(event: HttpSessionEvent): void
+                    public sessionDestroyed(event: HttpSessionEvent): void
                 }
             }
         }

@@ -67,7 +67,7 @@ declare namespace java {
                  *          of its elements are null
                  */
                 // @ts-ignore
-                constructor(c: Array<E>)
+                constructor(c: java.util.Collection<any> | Array<any>)
                 /**
                  * Inserts the specified element at the tail of this queue.
                  * As the queue is unbounded, this method will never throw
@@ -76,7 +76,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                add(e: E): boolean
+                public add(e: E): boolean
                 /**
                  * Inserts the specified element at the tail of this queue.
                  * As the queue is unbounded, this method will never return {@code false}.
@@ -84,17 +84,17 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E): boolean
+                public offer(e: E): boolean
                 // @ts-ignore
-                poll(): E
+                public poll(): E
                 // @ts-ignore
-                peek(): E
+                public peek(): E
                 /**
                  * Returns {@code true} if this queue contains no elements.
                  * @return {#code true} if this queue contains no elements
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Returns the number of elements in this queue.  If this queue
                  * contains more than {@code Integer.MAX_VALUE} elements, returns
@@ -110,7 +110,7 @@ declare namespace java {
                  * @return the number of elements in this queue
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns {@code true} if this queue contains the specified element.
                  * More formally, returns {@code true} if and only if this queue contains
@@ -119,7 +119,7 @@ declare namespace java {
                  * @return {#code true} if this queue contains the specified element
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Removes a single instance of the specified element from this queue,
                  * if it is present.  More formally, removes an element {@code e} such
@@ -131,7 +131,7 @@ declare namespace java {
                  * @return {#code true} if this queue changed as a result of the call
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Appends all of the elements in the specified collection to the end of
                  * this queue, in the order that they are returned by the specified
@@ -144,7 +144,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the collection is this queue
                  */
                 // @ts-ignore
-                addAll(c: Array<E>): boolean
+                public addAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Returns an array containing all of the elements in this queue, in
                  * proper sequence.
@@ -156,7 +156,7 @@ declare namespace java {
                  * @return an array containing all of the elements in this queue
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Returns an array containing all of the elements in this queue, in
                  * proper sequence; the runtime type of the returned array is that of
@@ -187,7 +187,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified array is null
                  */
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 /**
                  * Returns an iterator over the elements in this queue in proper sequence.
                  * The elements will be returned in order from first (head) to last (tail).
@@ -196,7 +196,7 @@ declare namespace java {
                  * @return an iterator over the elements in this queue in proper sequence
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 /**
                  * Returns a {@link Spliterator} over the elements in this queue.
                  * <p>The returned spliterator is
@@ -209,7 +209,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<E>
+                public spliterator(): java.util.Spliterator<E>
             }
         }
     }

@@ -17,7 +17,7 @@ declare namespace javax {
                      * @param name  the name of the new enumerated control type
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Represents a control over a set of possible reverberation settings.
                      * Each reverberation setting is described by an instance of the
@@ -26,7 +26,7 @@ declare namespace javax {
                      * enumerated control of type <code>REVERB</code>.)
                      */
                     // @ts-ignore
-                    readonly REVERB: javax.sound.sampled.EnumControl.Type
+                    public static readonly REVERB: javax.sound.sampled.EnumControl.Type
                 }
             }
         }

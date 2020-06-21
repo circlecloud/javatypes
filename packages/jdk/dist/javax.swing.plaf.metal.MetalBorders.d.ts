@@ -15,31 +15,31 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getButtonBorder(): javax.swing.border.Border
+                    public static getButtonBorder(): javax.swing.border.Border
                     /**
                      * Returns a border instance for a text component
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getTextBorder(): javax.swing.border.Border
+                    public static getTextBorder(): javax.swing.border.Border
                     /**
                      * Returns a border instance for a JTextField
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getTextFieldBorder(): javax.swing.border.Border
+                    public static getTextFieldBorder(): javax.swing.border.Border
                     /**
                      * Returns a border instance for a JToggleButton
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getToggleButtonBorder(): javax.swing.border.Border
+                    public static getToggleButtonBorder(): javax.swing.border.Border
                     /**
                      * Returns a border instance for a Desktop Icon
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getDesktopIconBorder(): javax.swing.border.Border
+                    public static getDesktopIconBorder(): javax.swing.border.Border
                 }
             }
         }

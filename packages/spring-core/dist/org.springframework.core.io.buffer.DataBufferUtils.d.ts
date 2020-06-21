@@ -10,7 +10,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class DataBufferUtils extends java.lang.Object {
+                    abstract class DataBufferUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -23,7 +23,7 @@ declare namespace org {
                          * @return a Flux of data buffers read from the given channel
                          */
                         // @ts-ignore
-                        readInputStream(inputStreamSupplier: java.util.concurrent.Callable<java.io.InputStream>, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): <any>
+                        public static readInputStream(inputStreamSupplier: java.util.concurrent.Callable<java.io.InputStream>, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): object
                         /**
                          * Obtain a {@link ReadableByteChannel} from the given supplier, and read
                          * it into a {@code Flux} of {@code DataBuffer}s. Closes the channel when
@@ -34,7 +34,7 @@ declare namespace org {
                          * @return a Flux of data buffers read from the given channel
                          */
                         // @ts-ignore
-                        readByteChannel(channelSupplier: java.util.concurrent.Callable<java.nio.channels.ReadableByteChannel>, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): <any>
+                        public static readByteChannel(channelSupplier: java.util.concurrent.Callable<java.nio.channels.ReadableByteChannel>, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): object
                         /**
                          * Obtain a {@code AsynchronousFileChannel} from the given supplier, and read
                          * it into a {@code Flux} of {@code DataBuffer}s. Closes the channel when
@@ -45,7 +45,7 @@ declare namespace org {
                          * @return a Flux of data buffers read from the given channel
                          */
                         // @ts-ignore
-                        readAsynchronousFileChannel(channelSupplier: java.util.concurrent.Callable<java.nio.channels.AsynchronousFileChannel>, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): <any>
+                        public static readAsynchronousFileChannel(channelSupplier: java.util.concurrent.Callable<java.nio.channels.AsynchronousFileChannel>, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): object
                         /**
                          * Obtain a {@code AsynchronousFileChannel} from the given supplier, and
                          * read it into a {@code Flux} of {@code DataBuffer}s, starting at the given
@@ -57,7 +57,7 @@ declare namespace org {
                          * @return a Flux of data buffers read from the given channel
                          */
                         // @ts-ignore
-                        readAsynchronousFileChannel(channelSupplier: java.util.concurrent.Callable<java.nio.channels.AsynchronousFileChannel>, position: number /*long*/, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): <any>
+                        public static readAsynchronousFileChannel(channelSupplier: java.util.concurrent.Callable<java.nio.channels.AsynchronousFileChannel>, position: number /*long*/, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): object
                         /**
                          * Read bytes from the given file {@code Path} into a {@code Flux} of {@code DataBuffer}s.
                          * The method ensures that the file is closed when the flux is terminated.
@@ -68,7 +68,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        read(path: java.nio.file.Path, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/, ...options: java.nio.file.OpenOption[]): <any>
+                        public static read(path: java.nio.file.Path, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/, ...options: java.nio.file.OpenOption[]): object
                         /**
                          * Read the given {@code Resource} into a {@code Flux} of {@code DataBuffer}s.
                          * <p>If the resource is a file, it is read into an
@@ -82,7 +82,7 @@ declare namespace org {
                          * @return a Flux of data buffers read from the given channel
                          */
                         // @ts-ignore
-                        read(resource: org.springframework.core.io.Resource, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): <any>
+                        public static read(resource: org.springframework.core.io.Resource, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): object
                         /**
                          * Read the given {@code Resource} into a {@code Flux} of {@code DataBuffer}s
                          * starting at the given position.
@@ -98,7 +98,7 @@ declare namespace org {
                          * @return a Flux of data buffers read from the given channel
                          */
                         // @ts-ignore
-                        read(resource: org.springframework.core.io.Resource, position: number /*long*/, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): <any>
+                        public static read(resource: org.springframework.core.io.Resource, position: number /*long*/, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, bufferSize: number /*int*/): object
                         /**
                          * Write the given stream of {@link DataBuffer DataBuffers} to the given
                          * {@code OutputStream}. Does <strong>not</strong> close the output stream
@@ -115,7 +115,7 @@ declare namespace org {
                          *  writing errors and the completion signal
                          */
                         // @ts-ignore
-                        write(source: object, outputStream: java.io.OutputStream): <any>
+                        public static write(source: object, outputStream: java.io.OutputStream): object
                         /**
                          * Write the given stream of {@link DataBuffer DataBuffers} to the given
                          * {@code WritableByteChannel}. Does <strong>not</strong> close the channel
@@ -132,7 +132,7 @@ declare namespace org {
                          *  writing errors and the completion signal
                          */
                         // @ts-ignore
-                        write(source: object, channel: java.nio.channels.WritableByteChannel): <any>
+                        public static write(source: object, channel: java.nio.channels.WritableByteChannel): object
                         /**
                          * Write the given stream of {@link DataBuffer DataBuffers} to the given
                          * {@code AsynchronousFileChannel}. Does <strong>not</strong> close the
@@ -150,7 +150,7 @@ declare namespace org {
                          * @since 5.0.10
                          */
                         // @ts-ignore
-                        write(source: object, channel: java.nio.channels.AsynchronousFileChannel): <any>
+                        public static write(source: object, channel: java.nio.channels.AsynchronousFileChannel): object
                         /**
                          * Write the given stream of {@link DataBuffer DataBuffers} to the given
                          * {@code AsynchronousFileChannel}. Does <strong>not</strong> close the channel
@@ -168,7 +168,7 @@ declare namespace org {
                          *  writing errors and the completion signal
                          */
                         // @ts-ignore
-                        write(source: object, channel: java.nio.channels.AsynchronousFileChannel, position: number /*long*/): <any>
+                        public static write(source: object, channel: java.nio.channels.AsynchronousFileChannel, position: number /*long*/): object
                         /**
                          * Write the given stream of {@link DataBuffer DataBuffers} to the given
                          * file {@link Path}. The optional {@code options} parameter specifies
@@ -183,7 +183,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        write(source: object, destination: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): <any>
+                        public static write(source: object, destination: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): object
                         /**
                          * Relay buffers from the given {@link Publisher} until the total
                          * {@linkplain DataBuffer#readableByteCount() byte count} reaches
@@ -193,7 +193,7 @@ declare namespace org {
                          * @return a flux whose maximum byte count is {#code maxByteCount}
                          */
                         // @ts-ignore
-                        takeUntilByteCount(publisher: object, maxByteCount: number /*long*/): <any>
+                        public static takeUntilByteCount(publisher: object, maxByteCount: number /*long*/): object
                         /**
                          * Skip buffers from the given {@link Publisher} until the total
                          * {@linkplain DataBuffer#readableByteCount() byte count} reaches
@@ -203,14 +203,14 @@ declare namespace org {
                          * @return a flux with the remaining part of the given publisher
                          */
                         // @ts-ignore
-                        skipUntilByteCount(publisher: object, maxByteCount: number /*long*/): <any>
+                        public static skipUntilByteCount(publisher: object, maxByteCount: number /*long*/): object
                         /**
                          * Retain the given data buffer, if it is a {@link PooledDataBuffer}.
                          * @param dataBuffer the data buffer to retain
                          * @return the retained buffer
                          */
                         // @ts-ignore
-                        retain<T extends org.springframework.core.io.buffer.DataBuffer>(dataBuffer: T extends org.springframework.core.io.buffer.DataBuffer): T
+                        public static retain<T extends org.springframework.core.io.buffer.DataBuffer>(dataBuffer: T): T
                         /**
                          * Release the given data buffer, if it is a {@link PooledDataBuffer} and
                          * has been {@linkplain PooledDataBuffer#isAllocated() allocated}.
@@ -218,13 +218,13 @@ declare namespace org {
                          * @return {#code true} if the buffer was released; {@code false} otherwise.
                          */
                         // @ts-ignore
-                        release(dataBuffer: org.springframework.core.io.buffer.DataBuffer): boolean
+                        public static release(dataBuffer: org.springframework.core.io.buffer.DataBuffer): boolean
                         /**
                          * Return a consumer that calls {@link #release(DataBuffer)} on all
                          * passed data buffers.
                          */
                         // @ts-ignore
-                        releaseConsumer(): java.util.function.Consumer<org.springframework.core.io.buffer.DataBuffer>
+                        public static releaseConsumer(): java.util.function$.Consumer<org.springframework.core.io.buffer.DataBuffer>
                         /**
                          * Return a new {@code DataBuffer} composed from joining together the given
                          * {@code dataBuffers} elements. Depending on the {@link DataBuffer} type,
@@ -241,7 +241,7 @@ declare namespace org {
                          * @since 5.0.3
                          */
                         // @ts-ignore
-                        join(dataBuffers: object): <any>
+                        public static join(dataBuffers: object): object
                         /**
                          * Variant of {@link #join(Publisher)} that behaves the same way up until
                          * the specified max number of bytes to buffer. Once the limit is exceeded,
@@ -254,7 +254,7 @@ declare namespace org {
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        join(buffers: object, maxByteCount: number /*int*/): <any>
+                        public static join(buffers: object, maxByteCount: number /*int*/): object
                         /**
                          * Return a {@link Matcher} for the given delimiter.
                          * The matcher can be used to find the delimiters in data buffers.
@@ -263,7 +263,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        matcher(delimiter: number /*byte*/[]): org.springframework.core.io.buffer.DataBufferUtils.Matcher
+                        public static matcher(delimiter: number /*byte*/[]): org.springframework.core.io.buffer.DataBufferUtils.Matcher
                         /**
                          * Return a {@link Matcher} for the given delimiters.
                          * The matcher can be used to find the delimiters in data buffers.
@@ -272,7 +272,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        matcher(...delimiters: number /*byte*/[][]): org.springframework.core.io.buffer.DataBufferUtils.Matcher
+                        public static matcher(...delimiters: number /*byte*/[][]): org.springframework.core.io.buffer.DataBufferUtils.Matcher
                     }
                 }
             }

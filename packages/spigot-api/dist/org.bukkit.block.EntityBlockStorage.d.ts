@@ -18,13 +18,13 @@ declare namespace org {
                  * @return Amount of entities currently in this block
                  */
                 // @ts-ignore
-                getEntityCount(): int
+                getEntityCount(): number /*int*/
                 /**
                  * Get the maximum amount of entities this block can hold.
                  * @return Maximum amount of entities this block can hold
                  */
                 // @ts-ignore
-                getMaxEntities(): int
+                getMaxEntities(): number /*int*/
                 /**
                  * Set the maximum amount of entities this block can hold.
                  * @param max Maximum amount of entities this block can hold
@@ -36,13 +36,13 @@ declare namespace org {
                  * @return List of all entities which were released
                  */
                 // @ts-ignore
-                releaseEntities(): java.util.List<T>
+                releaseEntities(): Array<T>
                 /**
                  * Add an entity to the block.
                  * @param entity Entity to add to the block
                  */
                 // @ts-ignore
-                addEntity(entity: T extends org.bukkit.entity.Entity): void
+                addEntity(entity: T): void
             }
         }
     }

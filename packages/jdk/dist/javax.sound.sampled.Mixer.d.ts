@@ -131,7 +131,7 @@ declare namespace javax {
                  * @return the maximum number of matching lines supported, or <code>AudioSystem.NOT_SPECIFIED</code>
                  */
                 // @ts-ignore
-                getMaxLines(info: javax.sound.sampled.Line.Info): int
+                getMaxLines(info: javax.sound.sampled.Line.Info): number /*int*/
                 /**
                  * Obtains the set of all source lines currently open to this mixer.
                  * @return the source lines currently open to the mixer.

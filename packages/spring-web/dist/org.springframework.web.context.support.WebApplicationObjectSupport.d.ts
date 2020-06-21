@@ -15,11 +15,11 @@ declare namespace org {
                      * @see SpringBeanAutowiringSupport
                      */
                     // @ts-ignore
-                    class WebApplicationObjectSupport extends ApplicationObjectSupport implements org.springframework.web.context.ServletContextAware {
+                    abstract class WebApplicationObjectSupport extends ApplicationObjectSupport implements org.springframework.web.context.ServletContextAware {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                         /**
                          * Overrides the base class behavior to enforce running in an ApplicationContext.
                          * All accessors will throw IllegalStateException if not running in a context.

@@ -32,7 +32,7 @@ declare namespace org {
                                      * @return The view distance
                                      */
                                     // @ts-ignore
-                                    getViewDistance(): int
+                                    getViewDistance(): number /*int*/
                                     /**
                                      * Gets the new chat visibility setting of the player.
                                      * @return The chat visibility setting
@@ -50,7 +50,7 @@ declare namespace org {
                                      * @return The displayed skin parts
                                      */
                                     // @ts-ignore
-                                    getDisplayedSkinParts(): java.util.Set<org.spongepowered.api.data.type.SkinPart>
+                                    getDisplayedSkinParts(): Array<org.spongepowered.api.data.type.SkinPart>
                                 }
                             }
                         }

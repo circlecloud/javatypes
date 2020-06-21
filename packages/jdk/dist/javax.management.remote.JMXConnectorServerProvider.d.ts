@@ -41,7 +41,7 @@ declare namespace javax {
                  *  connector server cannot be created.
                  */
                 // @ts-ignore
-                newJMXConnectorServer(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>, mbeanServer: javax.management.MBeanServer): javax.management.remote.JMXConnectorServer
+                newJMXConnectorServer(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>, mbeanServer: javax.management.MBeanServer): javax.management.remote.JMXConnectorServer
             }
         }
     }

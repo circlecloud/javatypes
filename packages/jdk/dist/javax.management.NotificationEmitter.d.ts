@@ -55,7 +55,7 @@ declare namespace javax {
              *  given filter and handback.
              */
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
         }
     }
 }

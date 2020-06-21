@@ -16,7 +16,7 @@ declare namespace org {
                     // @ts-ignore
                     class DataBufferLimitException extends java.lang.IllegalStateException {
                         // @ts-ignore
-                        constructor(message: string)
+                        constructor(message: java.lang.String | string)
                     }
                 }
             }

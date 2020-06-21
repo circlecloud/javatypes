@@ -9,7 +9,7 @@ declare namespace org {
                      * @return The portal agent class for this type
                      */
                     // @ts-ignore
-                    getPortalAgentClass(): java.lang.Class<? extends org.spongepowered.api.world.PortalAgent>
+                    getPortalAgentClass(): java.lang.Class<any>
                 }
             }
         }

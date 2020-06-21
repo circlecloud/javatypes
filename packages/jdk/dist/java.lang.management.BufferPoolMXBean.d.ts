@@ -11,25 +11,25 @@ declare namespace java {
                  * @return the name of the buffer pool.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns the number of buffers of the pool.
                  * @return the number of buffers of the pool.
                  */
                 // @ts-ignore
-                getCount(): long
+                getCount(): number /*long*/
                 /**
                  * Returns the total capacity of the buffers in this pool.
                  * @return the total capacity of the buffers in this pool.
                  */
                 // @ts-ignore
-                getTotalCapacity(): long
+                getTotalCapacity(): number /*long*/
                 /**
                  * Returns the count of used memory.
                  * @return the count of used memory.
                  */
                 // @ts-ignore
-                getMemoryUsed(): long
+                getMemoryUsed(): number /*long*/
             }
         }
     }

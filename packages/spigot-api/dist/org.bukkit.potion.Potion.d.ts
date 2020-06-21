@@ -49,20 +49,20 @@ declare namespace org {
                  * @return The potion.
                  */
                 // @ts-ignore
-                splash(): org.bukkit.potion.Potion
+                public splash(): org.bukkit.potion.Potion
                 /**
                  * Chain this to the constructor to extend the potion's duration.
                  * @return The potion.
                  */
                 // @ts-ignore
-                extend(): org.bukkit.potion.Potion
+                public extend(): org.bukkit.potion.Potion
                 /**
                  * Applies the effects of this potion to the given {@link ItemStack}. The
                  * ItemStack must be a potion.
                  * @param to The itemstack to apply to
                  */
                 // @ts-ignore
-                apply(to: org.bukkit.inventory.ItemStack): void
+                public apply(to: org.bukkit.inventory.ItemStack): void
                 /**
                  * Applies the effects that would be applied by this potion to the given
                  * {@link LivingEntity}.
@@ -70,9 +70,9 @@ declare namespace org {
                  * @see LivingEntity#addPotionEffects(Collection)
                  */
                 // @ts-ignore
-                apply(to: org.bukkit.entity.LivingEntity): void
+                public apply(to: org.bukkit.entity.LivingEntity): void
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a collection of {@link PotionEffect}s that this {@link Potion}
                  * would confer upon a {@link LivingEntity}.
@@ -81,59 +81,59 @@ declare namespace org {
                  * @return The effects that this potion applies
                  */
                 // @ts-ignore
-                getEffects(): java.util.Collection<org.bukkit.potion.PotionEffect>
+                public getEffects(): Array<org.bukkit.potion.PotionEffect>
                 /**
                  * Returns the level of this potion.
                  * @return The level of this potion
                  */
                 // @ts-ignore
-                getLevel(): int
+                public getLevel(): number /*int*/
                 /**
                  * Returns the {@link PotionType} of this potion.
                  * @return The type of this potion
                  */
                 // @ts-ignore
-                getType(): org.bukkit.potion.PotionType
+                public getType(): org.bukkit.potion.PotionType
                 /**
                  * Returns whether this potion has an extended duration.
                  * @return Whether this potion has extended duration
                  */
                 // @ts-ignore
-                hasExtendedDuration(): boolean
+                public hasExtendedDuration(): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns whether this potion is a splash potion.
                  * @return Whether this is a splash potion
                  */
                 // @ts-ignore
-                isSplash(): boolean
+                public isSplash(): boolean
                 /**
                  * Set whether this potion has extended duration. This will cause the
                  * potion to have roughly 8/3 more duration than a regular potion.
                  * @param isExtended Whether the potion should have extended duration
                  */
                 // @ts-ignore
-                setHasExtendedDuration(isExtended: boolean): void
+                public setHasExtendedDuration(isExtended: boolean): void
                 /**
                  * Sets whether this potion is a splash potion. Splash potions can be
                  * thrown for a radius effect.
                  * @param isSplash Whether this is a splash potion
                  */
                 // @ts-ignore
-                setSplash(isSplash: boolean): void
+                public setSplash(isSplash: boolean): void
                 /**
                  * Sets the {@link PotionType} of this potion.
                  * @param type The new type of this potion
                  */
                 // @ts-ignore
-                setType(type: org.bukkit.potion.PotionType): void
+                public setType(type: org.bukkit.potion.PotionType): void
                 /**
                  * Sets the level of this potion.
                  * @param level The new level of this potion
                  */
                 // @ts-ignore
-                setLevel(level: number /*int*/): void
+                public setLevel(level: number /*int*/): void
                 /**
                  * Converts this potion to a valid potion damage short, usable for potion
                  * item stacks.
@@ -141,7 +141,7 @@ declare namespace org {
                  * @deprecated Non-functional
                  */
                 // @ts-ignore
-                toDamageValue(): short
+                public toDamageValue(): number /*short*/
                 /**
                  * Converts this potion to an {@link ItemStack} with the specified amount
                  * and a correct damage value.
@@ -149,36 +149,36 @@ declare namespace org {
                  * @return The created ItemStack
                  */
                 // @ts-ignore
-                toItemStack(amount: number /*int*/): org.bukkit.inventory.ItemStack
+                public toItemStack(amount: number /*int*/): org.bukkit.inventory.ItemStack
                 /**
                  * Gets the potion from its damage value.
                  * @param damage the damage value
                  * @return the produced potion
                  */
                 // @ts-ignore
-                fromDamage(damage: number /*int*/): org.bukkit.potion.Potion
+                public static fromDamage(damage: number /*int*/): org.bukkit.potion.Potion
                 // @ts-ignore
-                fromItemStack(item: org.bukkit.inventory.ItemStack): org.bukkit.potion.Potion
+                public static fromItemStack(item: org.bukkit.inventory.ItemStack): org.bukkit.potion.Potion
                 /**
                  * Returns an instance of {@link PotionBrewer}.
                  * @return An instance of PotionBrewer
                  */
                 // @ts-ignore
-                getBrewer(): org.bukkit.potion.PotionBrewer
+                public static getBrewer(): org.bukkit.potion.PotionBrewer
                 /**
                  * Sets the current instance of {@link PotionBrewer}. Generally not to be
                  * used from within a plugin.
                  * @param other The new PotionBrewer
                  */
                 // @ts-ignore
-                setPotionBrewer(other: org.bukkit.potion.PotionBrewer): void
+                public static setPotionBrewer(other: org.bukkit.potion.PotionBrewer): void
                 /**
                  * Gets the potion from its name id.
                  * @return the name id
                  * @deprecated Non-functional
                  */
                 // @ts-ignore
-                getNameId(): int
+                public getNameId(): number /*int*/
             }
         }
     }

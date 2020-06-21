@@ -23,7 +23,7 @@ declare namespace javax {
                      * @param message the detail message
                      */
                     // @ts-ignore
-                    constructor(message: string)
+                    constructor(message: java.lang.String | string)
                     /**
                      * Constructs a new <code>XMLSignatureException</code> with the
                      * specified detail message and cause.
@@ -35,7 +35,7 @@ declare namespace javax {
                      *         indicates that the cause is nonexistent or unknown.)
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Constructs a new <code>XMLSignatureException</code> with the specified
                      * cause and a detail message of
@@ -46,7 +46,7 @@ declare namespace javax {
                      *         indicates that the cause is nonexistent or unknown.)
                      */
                     // @ts-ignore
-                    constructor(cause: Error)
+                    constructor(cause: java.lang.Throwable | Error)
                     /**
                      * Returns the cause of this <code>XMLSignatureException</code> or
                      * <code>null</code> if the cause is nonexistent or unknown.  (The
@@ -56,7 +56,7 @@ declare namespace javax {
                      *          <code>null</code> if the cause is nonexistent or unknown.
                      */
                     // @ts-ignore
-                    getCause(): java.lang.Throwable
+                    getCause(): Error
                     /**
                      * Prints this <code>XMLSignatureException</code>, its backtrace and
                      * the cause's backtrace to the standard error stream.

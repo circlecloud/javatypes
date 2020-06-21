@@ -67,7 +67,7 @@ declare namespace java {
                  * @return the OID (never {#code null})
                  */
                 // @ts-ignore
-                getPolicyQualifierId(): java.lang.String
+                public getPolicyQualifierId(): string
                 /**
                  * Returns the ASN.1 DER encoded form of this
                  * {@code PolicyQualifierInfo}.
@@ -76,7 +76,7 @@ declare namespace java {
                  *  this method is called.
                  */
                 // @ts-ignore
-                getEncoded(): byte[]
+                public getEncoded(): number /*byte*/[]
                 /**
                  * Returns the ASN.1 DER encoded form of the {@code qualifier}
                  * field of this {@code PolicyQualifierInfo}.
@@ -85,7 +85,7 @@ declare namespace java {
                  *  time this method is called.
                  */
                 // @ts-ignore
-                getPolicyQualifier(): byte[]
+                public getPolicyQualifier(): number /*byte*/[]
                 /**
                  * Return a printable representation of this
                  * {@code PolicyQualifierInfo}.
@@ -93,7 +93,7 @@ declare namespace java {
                  *          {@code PolicyQualifierInfo}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

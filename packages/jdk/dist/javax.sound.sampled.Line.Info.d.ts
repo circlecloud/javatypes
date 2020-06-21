@@ -45,7 +45,7 @@ declare namespace javax {
                      * @return the described line's class
                      */
                     // @ts-ignore
-                    getLineClass(): java.lang.Class<?>
+                    public getLineClass(): java.lang.Class<any>
                     /**
                      * Indicates whether the specified info object matches this one.
                      * To match, the specified object must be identical to or
@@ -63,13 +63,13 @@ declare namespace javax {
                      *  <code>false</code> otherwise
                      */
                     // @ts-ignore
-                    matches(info: javax.sound.sampled.Line.Info): boolean
+                    public matches(info: javax.sound.sampled.Line.Info): boolean
                     /**
                      * Obtains a textual description of the line info.
                      * @return a string description
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

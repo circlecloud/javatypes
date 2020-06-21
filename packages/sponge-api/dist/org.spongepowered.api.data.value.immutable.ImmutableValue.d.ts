@@ -45,7 +45,7 @@ declare namespace org {
                              *      immutable
                              */
                             // @ts-ignore
-                            transform(func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): org.spongepowered.api.data.value.immutable.ImmutableValue<E>
+                            transform(func: java.util.function$.Function<E, E>): org.spongepowered.api.data.value.immutable.ImmutableValue<E>
                             /**
                              * Creates a mutable {@link Value} for this {@link ImmutableValue}.
                              * @return A mutable value

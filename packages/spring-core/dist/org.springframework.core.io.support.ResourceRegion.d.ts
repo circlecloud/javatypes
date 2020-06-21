@@ -25,17 +25,17 @@ declare namespace org {
                          * Return the underlying {@link Resource} for this {@code ResourceRegion}.
                          */
                         // @ts-ignore
-                        getResource(): org.springframework.core.io.Resource
+                        public getResource(): org.springframework.core.io.Resource
                         /**
                          * Return the start position of this region in the underlying {@link Resource}.
                          */
                         // @ts-ignore
-                        getPosition(): long
+                        public getPosition(): number /*long*/
                         /**
                          * Return the byte count of this region in the underlying {@link Resource}.
                          */
                         // @ts-ignore
-                        getCount(): long
+                        public getCount(): number /*long*/
                     }
                 }
             }

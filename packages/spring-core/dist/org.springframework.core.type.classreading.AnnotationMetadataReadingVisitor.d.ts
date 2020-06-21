@@ -25,42 +25,42 @@ declare namespace org {
                         // @ts-ignore
                         readonly classLoader: java.lang.ClassLoader
                         // @ts-ignore
-                        readonly annotationSet: Array<java.lang.String>
+                        readonly annotationSet: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>
                         // @ts-ignore
-                        readonly metaAnnotationMap: java.util.Map<java.lang.String, java.util.Set<java.lang.String>>
+                        readonly metaAnnotationMap: java.util.Map<java.lang.String | string, java.util.Set<java.lang.String | string> | Array<java.lang.String | string>>
                         /**
                          * Declared as a {@link LinkedMultiValueMap} instead of a {@link MultiValueMap}
                          * to ensure that the hierarchical ordering of the entries is preserved.
                          * @see AnnotationReadingVisitorUtils#getMergedAnnotationAttributes
                          */
                         // @ts-ignore
-                        readonly attributesMap: org.springframework.util.LinkedMultiValueMap<java.lang.String, org.springframework.core.annotation.AnnotationAttributes>
+                        readonly attributesMap: org.springframework.util.LinkedMultiValueMap<java.lang.String | string, org.springframework.core.annotation.AnnotationAttributes>
                         // @ts-ignore
-                        readonly methodMetadataSet: Array<org.springframework.core.type.MethodMetadata>
+                        readonly methodMetadataSet: java.util.Set<org.springframework.core.type.MethodMetadata> | Array<org.springframework.core.type.MethodMetadata>
                         // @ts-ignore
-                        getAnnotations(): org.springframework.core.annotation.MergedAnnotations
+                        public getAnnotations(): org.springframework.core.annotation.MergedAnnotations
                         // @ts-ignore
-                        visitMethod(access: number /*int*/, name: string, desc: string, signature: string, exceptions: string[]): org.springframework.asm.MethodVisitor
+                        public visitMethod(access: number /*int*/, name: java.lang.String | string, desc: java.lang.String | string, signature: java.lang.String | string, exceptions: java.lang.String[] | string[]): org.springframework.asm.MethodVisitor
                         // @ts-ignore
-                        visitAnnotation(desc: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                        public visitAnnotation(desc: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                         // @ts-ignore
-                        getAnnotationTypes(): java.util.Set<java.lang.String>
+                        public getAnnotationTypes(): Array<java.lang.String | string>
                         // @ts-ignore
-                        getMetaAnnotationTypes(annotationName: string): java.util.Set<java.lang.String>
+                        public getMetaAnnotationTypes(annotationName: java.lang.String | string): Array<java.lang.String | string>
                         // @ts-ignore
-                        hasMetaAnnotation(metaAnnotationType: string): boolean
+                        public hasMetaAnnotation(metaAnnotationType: java.lang.String | string): boolean
                         // @ts-ignore
-                        isAnnotated(annotationName: string): boolean
+                        public isAnnotated(annotationName: java.lang.String | string): boolean
                         // @ts-ignore
-                        hasAnnotation(annotationName: string): boolean
+                        public hasAnnotation(annotationName: java.lang.String | string): boolean
                         // @ts-ignore
-                        getAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.core.annotation.AnnotationAttributes
+                        public getAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.core.annotation.AnnotationAttributes
                         // @ts-ignore
-                        getAllAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                        public getAllAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        hasAnnotatedMethods(annotationName: string): boolean
+                        public hasAnnotatedMethods(annotationName: java.lang.String | string): boolean
                         // @ts-ignore
-                        getAnnotatedMethods(annotationName: string): java.util.Set<org.springframework.core.type.MethodMetadata>
+                        public getAnnotatedMethods(annotationName: java.lang.String | string): Array<org.springframework.core.type.MethodMetadata>
                     }
                 }
             }

@@ -27,7 +27,7 @@ declare namespace javax {
                          *     <code>null</code>
                          */
                         // @ts-ignore
-                        constructor(xPathList: Array)
+                        constructor(xPathList: java.util.List<any> | Array<any>)
                         /**
                          * Returns a list of one or more {@link XPathType} objects.
                          * <p>
@@ -37,7 +37,7 @@ declare namespace javax {
                          *     (never <code>null</code> or empty)
                          */
                         // @ts-ignore
-                        getXPathList(): java.util.List
+                        public getXPathList(): Array<any>
                     }
                 }
             }

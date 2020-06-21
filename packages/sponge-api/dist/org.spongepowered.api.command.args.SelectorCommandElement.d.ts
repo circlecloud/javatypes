@@ -7,13 +7,13 @@ declare namespace org {
                      * Abstract command element that matches values based on a {@link Selector}.
                      */
                     // @ts-ignore
-                    class SelectorCommandElement extends org.spongepowered.api.command.args.PatternMatchingCommandElement {
+                    abstract class SelectorCommandElement extends org.spongepowered.api.command.args.PatternMatchingCommandElement {
                         // @ts-ignore
                         constructor(key: org.spongepowered.api.text.Text)
                         // @ts-ignore
-                        parseValue(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs): java.lang.Object
+                        parseValue(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs): any
                         // @ts-ignore
-                        complete(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): java.util.List<java.lang.String>
+                        public complete(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): Array<java.lang.String | string>
                     }
                 }
             }

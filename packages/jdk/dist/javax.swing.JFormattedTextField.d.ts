@@ -159,7 +159,7 @@ declare namespace javax {
              * @param value Initial value for the JFormattedTextField
              */
             // @ts-ignore
-            constructor(value: any)
+            constructor(value: java.lang.Object | any)
             /**
              * Creates a <code>JFormattedTextField</code>. <code>format</code> is
              * wrapped in an appropriate <code>AbstractFormatter</code> which is
@@ -191,7 +191,7 @@ declare namespace javax {
              * @param currentValue Initial value to use
              */
             // @ts-ignore
-            constructor(factory: javax.swing.JFormattedTextField.AbstractFormatterFactory, currentValue: any)
+            constructor(factory: javax.swing.JFormattedTextField.AbstractFormatterFactory, currentValue: java.lang.Object | any)
             /**
              * Constant identifying that when focus is lost,
              * <code>commitEdit</code> should be invoked. If in committing the
@@ -200,7 +200,7 @@ declare namespace javax {
              * @see #setFocusLostBehavior
              */
             // @ts-ignore
-            readonly COMMIT: number /*int*/
+            public static readonly COMMIT: number /*int*/
             /**
              * Constant identifying that when focus is lost,
              * <code>commitEdit</code> should be invoked. If in committing the new
@@ -209,7 +209,7 @@ declare namespace javax {
              * @see #setFocusLostBehavior
              */
             // @ts-ignore
-            readonly COMMIT_OR_REVERT: number /*int*/
+            public static readonly COMMIT_OR_REVERT: number /*int*/
             /**
              * Constant identifying that when focus is lost, editing value should
              * be reverted to current value set on the
@@ -217,14 +217,14 @@ declare namespace javax {
              * @see #setFocusLostBehavior
              */
             // @ts-ignore
-            readonly REVERT: number /*int*/
+            public static readonly REVERT: number /*int*/
             /**
              * Constant identifying that when focus is lost, the edited value
              * should be left.
              * @see #setFocusLostBehavior
              */
             // @ts-ignore
-            readonly PERSIST: number /*int*/
+            public static readonly PERSIST: number /*int*/
             /**
              * Sets the behavior when focus is lost. This will be one of
              * <code>JFormattedTextField.COMMIT_OR_REVERT</code>,
@@ -249,7 +249,7 @@ declare namespace javax {
              *   description: Behavior when component loses focus
              */
             // @ts-ignore
-            setFocusLostBehavior(behavior: number /*int*/): void
+            public setFocusLostBehavior(behavior: number /*int*/): void
             /**
              * Returns the behavior when focus is lost. This will be one of
              * <code>COMMIT_OR_REVERT</code>,
@@ -261,7 +261,7 @@ declare namespace javax {
              * @return returns behavior when focus is lost
              */
             // @ts-ignore
-            getFocusLostBehavior(): int
+            public getFocusLostBehavior(): number /*int*/
             /**
              * Sets the <code>AbstractFormatterFactory</code>.
              * <code>AbstractFormatterFactory</code> is
@@ -287,7 +287,7 @@ declare namespace javax {
              *               AbstractFormatter that can format the current value.
              */
             // @ts-ignore
-            setFormatterFactory(tf: javax.swing.JFormattedTextField.AbstractFormatterFactory): void
+            public setFormatterFactory(tf: javax.swing.JFormattedTextField.AbstractFormatterFactory): void
             /**
              * Returns the current <code>AbstractFormatterFactory</code>.
              * @see #setFormatterFactory
@@ -295,7 +295,7 @@ declare namespace javax {
              *          <code>AbstractFormatter</code>s
              */
             // @ts-ignore
-            getFormatterFactory(): javax.swing.JFormattedTextField.AbstractFormatterFactory
+            public getFormatterFactory(): javax.swing.JFormattedTextField.AbstractFormatterFactory
             /**
              * Sets the current <code>AbstractFormatter</code>.
              * <p>
@@ -323,7 +323,7 @@ declare namespace javax {
              * @return AbstractFormatter used for formatting
              */
             // @ts-ignore
-            getFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
+            public getFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
             /**
              * Sets the value that will be formatted by an
              * <code>AbstractFormatter</code> obtained from the current
@@ -340,7 +340,7 @@ declare namespace javax {
              *  description: The value to be formatted.
              */
             // @ts-ignore
-            setValue(value: any): void
+            public setValue(value: java.lang.Object | any): void
             /**
              * Returns the last valid value. Based on the editing policy of
              * the <code>AbstractFormatter</code> this may not return the current
@@ -349,7 +349,7 @@ declare namespace javax {
              * @return Last valid value
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Forces the current value to be taken from the
              * <code>AbstractFormatter</code> and set as the current value.
@@ -359,7 +359,7 @@ declare namespace javax {
              *          to format the current value
              */
             // @ts-ignore
-            commitEdit(): void
+            public commitEdit(): void
             /**
              * Returns true if the current value being edited is valid. The value of
              * this is managed by the current <code>AbstractFormatter</code>, as such
@@ -367,7 +367,7 @@ declare namespace javax {
              * @return true if the current value being edited is valid.
              */
             // @ts-ignore
-            isEditValid(): boolean
+            public isEditValid(): boolean
             /**
              * Invoked when the user inputs an invalid value. This gives the
              * component a chance to provide feedback. The default
@@ -402,14 +402,14 @@ declare namespace javax {
              * @return the command list
              */
             // @ts-ignore
-            getActions(): javax.swing.Action[]
+            public getActions(): javax.swing.Action[]
             /**
              * Gets the class ID for a UI.
              * @return the string "FormattedTextFieldUI"
              * @see JComponent#getUIClassID
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Associates the editor with a text document.
              * The currently registered factory is used to build a view for
@@ -422,7 +422,7 @@ declare namespace javax {
              *        expert: true
              */
             // @ts-ignore
-            setDocument(doc: javax.swing.text.Document): void
+            public setDocument(doc: javax.swing.text.Document): void
         }
     }
 }

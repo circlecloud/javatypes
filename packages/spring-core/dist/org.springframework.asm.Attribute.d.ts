@@ -18,12 +18,12 @@ declare namespace org {
                  * @param type the type of the attribute.
                  */
                 // @ts-ignore
-                constructor(type: string)
+                constructor(type: java.lang.String | string)
                 /**
                  * The type of this attribute, also called its name in the JVMS.
                  */
                 // @ts-ignore
-                readonly type: string
+                public readonly type: java.lang.String | string
                 /**
                  * Returns {@literal true} if this type of attribute is unknown. This means that the attribute
                  * content can't be parsed to extract constant pool references, labels, etc. Instead, the
@@ -34,13 +34,13 @@ declare namespace org {
                  * @return {#literal true} if this type of attribute is unknown.
                  */
                 // @ts-ignore
-                isUnknown(): boolean
+                public isUnknown(): boolean
                 /**
                  * Returns {@literal true} if this type of attribute is a Code attribute.
                  * @return {#literal true} if this type of attribute is a Code attribute.
                  */
                 // @ts-ignore
-                isCodeAttribute(): boolean
+                public isCodeAttribute(): boolean
                 /**
                  * Returns the labels corresponding to this attribute.
                  * @return the labels corresponding to this attribute, or {#literal null} if this attribute is not

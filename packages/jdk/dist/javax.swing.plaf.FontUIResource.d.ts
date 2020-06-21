@@ -20,7 +20,7 @@ declare namespace javax {
             // @ts-ignore
             class FontUIResource extends java.awt.Font implements javax.swing.plaf.UIResource {
                 // @ts-ignore
-                constructor(name: string, style: number /*int*/, size: number /*int*/)
+                constructor(name: java.lang.String | string, style: number /*int*/, size: number /*int*/)
                 // @ts-ignore
                 constructor(font: java.awt.Font)
             }

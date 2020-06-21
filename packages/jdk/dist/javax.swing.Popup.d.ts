@@ -55,7 +55,7 @@ declare namespace javax {
              * currently visible, this has no effect.
              */
             // @ts-ignore
-            show(): void
+            public show(): void
             /**
              * Hides and disposes of the <code>Popup</code>. Once a <code>Popup</code>
              * has been disposed you should no longer invoke methods on it. A
@@ -65,7 +65,7 @@ declare namespace javax {
              * behavior will result.
              */
             // @ts-ignore
-            hide(): void
+            public hide(): void
         }
     }
 }

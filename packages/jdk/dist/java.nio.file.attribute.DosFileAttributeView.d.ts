@@ -56,7 +56,7 @@ declare namespace java {
                      * have the name {@code "dos"}.
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * @throws IOException                             {#inheritDoc}
                      * @throws SecurityException                       {#inheritDoc}

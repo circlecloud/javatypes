@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        itemStack(snapshot: org.spongepowered.api.item.inventory.ItemStackSnapshot): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static itemStack(snapshot: org.spongepowered.api.item.inventory.ItemStackSnapshot): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that uses a randomized selection
                          * of the provided {@link ItemStackSnapshot}s. The builder, when called will
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        itemStacks(snapshot: org.spongepowered.api.item.inventory.ItemStackSnapshot, ...snapshots: org.spongepowered.api.item.inventory.ItemStackSnapshot[]): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static itemStacks(snapshot: org.spongepowered.api.item.inventory.ItemStackSnapshot, ...snapshots: org.spongepowered.api.item.inventory.ItemStackSnapshot[]): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that defines the provided
                          * {@link ItemType}.
@@ -38,7 +38,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        item(itemType: org.spongepowered.api.item.ItemType): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static item(itemType: org.spongepowered.api.item.ItemType): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that defines the provided
                          * {@link ItemType}, provided that the {@link Supplier} does not
@@ -50,7 +50,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        item(supplier: java.util.function.Supplier<org.spongepowered.api.item.ItemType> | java.util.function$.Supplier<org.spongepowered.api.item.ItemType>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static item(supplier: java.util.function$.Supplier<org.spongepowered.api.item.ItemType>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that provides a random
                          * {@link ItemType} of the provided item types.
@@ -62,7 +62,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an item stack builder
                          */
                         // @ts-ignore
-                        items(itemType: org.spongepowered.api.item.ItemType, ...itemTypes: org.spongepowered.api.item.ItemType[]): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static items(itemType: org.spongepowered.api.item.ItemType, ...itemTypes: org.spongepowered.api.item.ItemType[]): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that provides a random
                          * {@link ItemType} from the provided collection of item types.
@@ -70,7 +70,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        items(itemTypes: Array<org.spongepowered.api.item.ItemType>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static items(itemTypes: java.util.Collection<org.spongepowered.api.item.ItemType> | Array<org.spongepowered.api.item.ItemType>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that sets the desired quantity
                          * for creating an {@link ItemStack}.
@@ -80,7 +80,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        quantity(amount: org.spongepowered.api.util.weighted.VariableAmount): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static quantity(amount: org.spongepowered.api.util.weighted.VariableAmount): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that sets the desired quantity
                          * for creating an {@link ItemStack}. The supplier is not queried for
@@ -92,7 +92,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        quantity(supplier: java.util.function.Supplier<org.spongepowered.api.util.weighted.VariableAmount> | java.util.function$.Supplier<org.spongepowered.api.util.weighted.VariableAmount>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static quantity(supplier: java.util.function$.Supplier<org.spongepowered.api.util.weighted.VariableAmount>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that sets the provided {@link Key}'ed
                          * object where the value is possibly ignored or not supported. No checks
@@ -105,7 +105,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        keyValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static keyValue<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that sets a single provided
                          * value with the provided {@link Key}. Only a single value is chosen
@@ -118,7 +118,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        keyValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, values: java.lang.Iterable<E>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static keyValues<E>(key: org.spongepowered.api.data.key.Key<any>, values: java.lang.Iterable<E>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is responsible
                          * for a {@link List} based {@link Value}. Given that the provided elements
@@ -133,7 +133,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        listValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, elementPool: Array<E>, amount: org.spongepowered.api.util.weighted.VariableAmount): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static listValues<E>(key: org.spongepowered.api.data.key.Key<any>, elementPool: java.util.List<E> | Array<E>, amount: org.spongepowered.api.util.weighted.VariableAmount): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is responsible
                          * for a {@link List} based {@link Value}. Given that the provided elements
@@ -150,7 +150,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        listValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, elementPool: Array<E>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static listValues<E>(key: org.spongepowered.api.data.key.Key<any>, elementPool: java.util.List<E> | Array<E>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is responsible
                          * for a {@link List} based {@link Value}. Given the {@link WeightedTable}
@@ -164,7 +164,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        listValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, weightedTable: org.spongepowered.api.util.weighted.WeightedTable<E>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static listValues<E>(key: org.spongepowered.api.data.key.Key<any>, weightedTable: org.spongepowered.api.util.weighted.WeightedTable<E>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is responsible
                          * for a {@link List} based {@link Value}. Given the
@@ -184,7 +184,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        listValueSuppliers<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, weightedTable: org.spongepowered.api.util.weighted.WeightedTable<java.util.function.Function<java.util.Random, E>> | org.spongepowered.api.util.weighted.WeightedTable<java.util.function$.Function<java.util.Random, E>>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static listValueSuppliers<E>(key: org.spongepowered.api.data.key.Key<any>, weightedTable: org.spongepowered.api.util.weighted.WeightedTable<java.util.function$.Function<java.util.Random, E>> | org.spongepowered.api.util.weighted.WeightedTable<java.util.function$$.Function<java.util.Random, E>>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is responsible
                          * for a {@link Set} based {@link Value}. Given the {@link Set} of element
@@ -198,7 +198,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        setValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, elementPool: Array<E>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static setValues<E>(key: org.spongepowered.api.data.key.Key<any>, elementPool: java.util.Set<E> | Array<E>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is responsible
                          * for a {@link Set} based {@link Value}. Given the {@link Set} of
@@ -214,7 +214,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        setValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, elementPool: Array<E>, amount: org.spongepowered.api.util.weighted.VariableAmount): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static setValues<E>(key: org.spongepowered.api.data.key.Key<any>, elementPool: java.util.Set<E> | Array<E>, amount: org.spongepowered.api.util.weighted.VariableAmount): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} where the {@link Key} is
                          * responsible for a {@link Set} based {@link Value}. Given
@@ -228,7 +228,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        setValues<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>, weightedTable: org.spongepowered.api.util.weighted.WeightedTable<E>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static setValues<E>(key: org.spongepowered.api.data.key.Key<any>, weightedTable: org.spongepowered.api.util.weighted.WeightedTable<E>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that applies the provided {@link Value}
                          * to the generated {@link ItemStack}.
@@ -240,7 +240,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        value<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(value: V extends org.spongepowered.api.data.value.BaseValue<E>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static value<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(value: V): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that applies a random selection of the
                          * provided {@link BaseValue}s.
@@ -252,7 +252,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        values<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(values: java.lang.Iterable<V>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static values<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(values: java.lang.Iterable<V>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that sets a particular
                          * {@link DataManipulator} onto an {@link ItemStack}. Note
@@ -263,7 +263,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        data(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static data(manipulator: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that sets a single
                          * {@link DataManipulator} form the provided collection of manipulators.
@@ -275,7 +275,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        data(manipulators: Array<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static data(manipulators: java.util.Collection<org.spongepowered.api.data.manipulator.DataManipulator<any, any>> | Array<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that provides a {@link VariableAmount}
                          * of {@link DataManipulator}s from the provided pool. Note that no
@@ -286,7 +286,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        data(manipulators: Array<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>, rolls: org.spongepowered.api.util.weighted.VariableAmount): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static data(manipulators: java.util.Collection<org.spongepowered.api.data.manipulator.DataManipulator<any, any>> | Array<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>, rolls: org.spongepowered.api.util.weighted.VariableAmount): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that provides a variable
                          * amount of {@link DataManipulator}s from the provided
@@ -297,7 +297,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        data(weightedTable: org.spongepowered.api.util.weighted.WeightedTable<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static data(weightedTable: org.spongepowered.api.util.weighted.WeightedTable<org.spongepowered.api.data.manipulator.DataManipulator<any, any>>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that takes the provided
                          * {@link EnchantmentType} and applies it to the generated {@link ItemStack}.
@@ -306,7 +306,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        enchantment(enchantmentType: org.spongepowered.api.item.enchantment.EnchantmentType): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static enchantment(enchantmentType: org.spongepowered.api.item.enchantment.EnchantmentType): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that takes the provided
                          * {@link EnchantmentType} and applies it to the generated {@link ItemStack}.
@@ -316,7 +316,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        enchantment(level: org.spongepowered.api.util.weighted.VariableAmount, enchantmentType: org.spongepowered.api.item.enchantment.EnchantmentType): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static enchantment(level: org.spongepowered.api.util.weighted.VariableAmount, enchantmentType: org.spongepowered.api.item.enchantment.EnchantmentType): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that takes the provided
                          * {@link Collection} of {@link EnchantmentType}s and applies a
@@ -326,7 +326,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        enchantmentsWithVanillaLevelVariance(enchantmentTypes: Array<org.spongepowered.api.item.enchantment.EnchantmentType>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static enchantmentsWithVanillaLevelVariance(enchantmentTypes: java.util.Collection<org.spongepowered.api.item.enchantment.EnchantmentType> | Array<org.spongepowered.api.item.enchantment.EnchantmentType>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that takes the provided
                          * {@link EnchantmentType}s and applies a variable amount of enchantmentTypes
@@ -337,7 +337,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        enchantmentsWithVanillaLevelVariance(amount: org.spongepowered.api.util.weighted.VariableAmount, enchantmentType: org.spongepowered.api.item.enchantment.EnchantmentType, ...enchantmentTypes: org.spongepowered.api.item.enchantment.EnchantmentType[]): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static enchantmentsWithVanillaLevelVariance(amount: org.spongepowered.api.util.weighted.VariableAmount, enchantmentType: org.spongepowered.api.item.enchantment.EnchantmentType, ...enchantmentTypes: org.spongepowered.api.item.enchantment.EnchantmentType[]): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that takes the provided
                          * {@link Collection} of {@link EnchantmentType}s and applies a varying amount
@@ -347,7 +347,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        enchantmentsWithVanillaLevelVariance(amount: org.spongepowered.api.util.weighted.VariableAmount, itemEnchantmentTypes: Array<org.spongepowered.api.item.enchantment.EnchantmentType>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static enchantmentsWithVanillaLevelVariance(amount: org.spongepowered.api.util.weighted.VariableAmount, itemEnchantmentTypes: java.util.Collection<org.spongepowered.api.item.enchantment.EnchantmentType> | Array<org.spongepowered.api.item.enchantment.EnchantmentType>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                         /**
                          * Creates a new {@link BiConsumer} that takes the provided
                          * {@link Collection} of coupled {@link EnchantmentType} and
@@ -359,7 +359,7 @@ declare namespace org {
                          * @return The new biconsumer to apply to an itemstack builder
                          */
                         // @ts-ignore
-                        enchantments(amount: org.spongepowered.api.util.weighted.VariableAmount, enchantments: Array<org.spongepowered.api.util.Tuple<org.spongepowered.api.item.enchantment.EnchantmentType, org.spongepowered.api.util.weighted.VariableAmount>>): java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
+                        public static enchantments(amount: org.spongepowered.api.util.weighted.VariableAmount, enchantments: java.util.Collection<org.spongepowered.api.util.Tuple<org.spongepowered.api.item.enchantment.EnchantmentType, org.spongepowered.api.util.weighted.VariableAmount>> | Array<org.spongepowered.api.util.Tuple<org.spongepowered.api.item.enchantment.EnchantmentType, org.spongepowered.api.util.weighted.VariableAmount>>): java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>
                     }
                 }
             }

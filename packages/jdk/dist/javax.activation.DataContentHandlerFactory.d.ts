@@ -17,7 +17,7 @@ declare namespace javax {
              *  if none are found.
              */
             // @ts-ignore
-            createDataContentHandler(mimeType: string): javax.activation.DataContentHandler
+            createDataContentHandler(mimeType: java.lang.String | string): javax.activation.DataContentHandler
         }
     }
 }

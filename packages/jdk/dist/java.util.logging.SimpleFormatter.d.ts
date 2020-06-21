@@ -101,7 +101,7 @@ declare namespace java {
                  * @return a formatted log record
                  */
                 // @ts-ignore
-                format(record: java.util.logging.LogRecord): java.lang.String
+                public format(record: java.util.logging.LogRecord): string
             }
         }
     }

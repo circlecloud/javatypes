@@ -38,7 +38,7 @@ declare namespace org {
                          * @return The child command's mapping, if present
                          */
                         // @ts-ignore
-                        register(callable: org.spongepowered.api.command.CommandCallable, aliases: Array<java.lang.String>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public register(callable: org.spongepowered.api.command.CommandCallable, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         /**
                          * Register a child command for a given set of aliases.
                          * @param callable The command to register
@@ -46,17 +46,17 @@ declare namespace org {
                          * @return The child command's mapping, if present
                          */
                         // @ts-ignore
-                        register(callable: org.spongepowered.api.command.CommandCallable, ...aliases: string[]): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        public register(callable: org.spongepowered.api.command.CommandCallable, ...aliases: java.lang.String[] | string[]): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                         // @ts-ignore
-                        complete(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): java.util.List<java.lang.String>
+                        public complete(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): Array<java.lang.String | string>
                         // @ts-ignore
-                        parse(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): void
+                        public parse(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): void
                         // @ts-ignore
-                        parseValue(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs): java.lang.Object
+                        parseValue(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs): any
                         // @ts-ignore
-                        execute(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandContext): org.spongepowered.api.command.CommandResult
+                        public execute(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandContext): org.spongepowered.api.command.CommandResult
                         // @ts-ignore
-                        getUsage(src: org.spongepowered.api.command.CommandSource): org.spongepowered.api.text.Text
+                        public getUsage(src: org.spongepowered.api.command.CommandSource): org.spongepowered.api.text.Text
                     }
                 }
             }

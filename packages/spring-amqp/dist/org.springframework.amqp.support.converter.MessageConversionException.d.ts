@@ -18,9 +18,9 @@ declare namespace org {
                     // @ts-ignore
                     class MessageConversionException extends org.springframework.amqp.AmqpException {
                         // @ts-ignore
-                        constructor(message: string, cause: Error)
+                        constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                         // @ts-ignore
-                        constructor(message: string)
+                        constructor(message: java.lang.String | string)
                     }
                 }
             }

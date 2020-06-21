@@ -14,14 +14,14 @@ declare namespace java {
                      * @return the attribute name
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Returns the attribute's value.
                      * Multi-valued attributes encode their values as a single string.
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getValue(): java.lang.String
+                    getValue(): string
                 }
             }
         }

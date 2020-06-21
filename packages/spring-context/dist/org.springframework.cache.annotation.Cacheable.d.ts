@@ -25,7 +25,7 @@ declare namespace org {
                  * @see CacheConfig
                  */
                 // @ts-ignore
-                class Cacheable implements java.lang.annotation.Annotation {
+                abstract class Cacheable implements java.lang.annotation.Annotation {
                 }
             }
         }

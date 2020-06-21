@@ -21,7 +21,7 @@ declare namespace javax {
                  * 2 for GIOP 1.3 and higher.
                  */
                 // @ts-ignore
-                getMaximumStreamFormatVersion(): byte
+                getMaximumStreamFormatVersion(): number /*byte*/
                 /**
                  * Allows the ORB to pass the stream format
                  * version for RMI/IDL custom value types. If the ORB

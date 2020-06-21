@@ -12,7 +12,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            interface XMLEventReader extends java.util.Iterator {
+            interface XMLEventReader extends java.util.Iterator<any> {
                 /**
                  * Get the next XMLEvent
                  * @see XMLEvent
@@ -45,7 +45,7 @@ declare namespace javax {
                  *  or if a non text element is encountered
                  */
                 // @ts-ignore
-                getElementText(): java.lang.String
+                getElementText(): string
                 /**
                  * Skips any insignificant space events until a START_ELEMENT or
                  * END_ELEMENT is reached. If anything other than space characters are
@@ -64,7 +64,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if the property is not supported
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
                 /**
                  * Frees any resources associated with this Reader.  This method does not close the
                  * underlying input source.

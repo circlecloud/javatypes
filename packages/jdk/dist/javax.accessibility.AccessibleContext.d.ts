@@ -42,7 +42,7 @@ declare namespace javax {
          * @author Lynn Monsanto
          */
         // @ts-ignore
-        class AccessibleContext extends java.lang.Object {
+        abstract class AccessibleContext extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -53,7 +53,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_NAME_PROPERTY: string
+            public static readonly ACCESSIBLE_NAME_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the accessibleDescription property has
              * changed.  The old value in the PropertyChangeEvent will be the
@@ -63,7 +63,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_DESCRIPTION_PROPERTY: string
+            public static readonly ACCESSIBLE_DESCRIPTION_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the accessibleStateSet property has
              * changed.  The old value will be the old AccessibleState and the new
@@ -81,7 +81,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_STATE_PROPERTY: string
+            public static readonly ACCESSIBLE_STATE_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the accessibleValue property has
              * changed.  The old value in the PropertyChangeEvent will be a Number
@@ -91,7 +91,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_VALUE_PROPERTY: string
+            public static readonly ACCESSIBLE_VALUE_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the accessibleSelection has changed.
              * The old and new values in the PropertyChangeEvent are currently
@@ -100,7 +100,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_SELECTION_PROPERTY: string
+            public static readonly ACCESSIBLE_SELECTION_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the accessibleText caret has changed.
              * The old value in the PropertyChangeEvent will be an
@@ -109,7 +109,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_CARET_PROPERTY: string
+            public static readonly ACCESSIBLE_CARET_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the visual appearance of the object
              * has changed.  The old and new values in the PropertyChangeEvent are
@@ -117,7 +117,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_VISIBLE_DATA_PROPERTY: string
+            public static readonly ACCESSIBLE_VISIBLE_DATA_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when Accessible children are added/removed
              * from the object.  If an Accessible child is being added, the old
@@ -127,7 +127,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_CHILD_PROPERTY: string
+            public static readonly ACCESSIBLE_CHILD_PROPERTY: java.lang.String | string
             /**
              * Constant used to determine when the active descendant of a component
              * has changed.  The active descendant is used for objects such as
@@ -139,7 +139,7 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            readonly ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY: string
+            public static readonly ACCESSIBLE_ACTIVE_DESCENDANT_PROPERTY: java.lang.String | string
             /**
              * Constant used to indicate that the table caption has changed
              * The old value in the PropertyChangeEvent will be an Accessible
@@ -149,7 +149,7 @@ declare namespace javax {
              * @see AccessibleTable
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_CAPTION_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_CAPTION_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that the table summary has changed
              * The old value in the PropertyChangeEvent will be an Accessible
@@ -159,7 +159,7 @@ declare namespace javax {
              * @see AccessibleTable
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_SUMMARY_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_SUMMARY_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that table data has changed.
              * The old value in the PropertyChangeEvent will be null and the
@@ -169,7 +169,7 @@ declare namespace javax {
              * @see AccessibleTableModelChange
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_MODEL_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_MODEL_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that the row header has changed
              * The old value in the PropertyChangeEvent will be null and the
@@ -179,7 +179,7 @@ declare namespace javax {
              * @see AccessibleTableModelChange
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_ROW_HEADER_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_ROW_HEADER_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that the row description has changed
              * The old value in the PropertyChangeEvent will be null and the
@@ -187,7 +187,7 @@ declare namespace javax {
              * @see AccessibleTable
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_ROW_DESCRIPTION_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that the column header has changed
              * The old value in the PropertyChangeEvent will be null and the
@@ -197,7 +197,7 @@ declare namespace javax {
              * @see AccessibleTableModelChange
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_COLUMN_HEADER_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that the column description has changed
              * The old value in the PropertyChangeEvent will be null and the
@@ -205,7 +205,7 @@ declare namespace javax {
              * @see AccessibleTable
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED: string
+            public static readonly ACCESSIBLE_TABLE_COLUMN_DESCRIPTION_CHANGED: java.lang.String | string
             /**
              * Constant used to indicate that the supported set of actions
              * has changed.  The old value in the PropertyChangeEvent will
@@ -215,7 +215,7 @@ declare namespace javax {
              * @see AccessibleAction
              */
             // @ts-ignore
-            readonly ACCESSIBLE_ACTION_PROPERTY: string
+            public static readonly ACCESSIBLE_ACTION_PROPERTY: java.lang.String | string
             /**
              * Constant used to indicate that a hypertext element has received focus.
              * The old value in the PropertyChangeEvent will be an Integer
@@ -227,7 +227,7 @@ declare namespace javax {
              * @see AccessibleHyperlink
              */
             // @ts-ignore
-            readonly ACCESSIBLE_HYPERTEXT_OFFSET: string
+            public static readonly ACCESSIBLE_HYPERTEXT_OFFSET: java.lang.String | string
             /**
              * PropertyChangeEvent which indicates that text has changed.
              * <br>
@@ -246,7 +246,7 @@ declare namespace javax {
              * @see AccessibleTextSequence
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TEXT_PROPERTY: string
+            public static readonly ACCESSIBLE_TEXT_PROPERTY: java.lang.String | string
             /**
              * PropertyChangeEvent which indicates that a significant change
              * has occurred to the children of a component like a tree or text.
@@ -260,7 +260,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            readonly ACCESSIBLE_INVALIDATE_CHILDREN: string
+            public static readonly ACCESSIBLE_INVALIDATE_CHILDREN: java.lang.String | string
             /**
              * PropertyChangeEvent which indicates that text attributes have changed.
              * <br>
@@ -280,7 +280,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            readonly ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED: string
+            public static readonly ACCESSIBLE_TEXT_ATTRIBUTES_CHANGED: java.lang.String | string
             /**
              * PropertyChangeEvent which indicates that a change has occurred
              * in a component's bounds.
@@ -290,7 +290,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            readonly ACCESSIBLE_COMPONENT_BOUNDS_CHANGED: string
+            public static readonly ACCESSIBLE_COMPONENT_BOUNDS_CHANGED: java.lang.String | string
             /**
              * The accessible parent of this object.
              * @see #getAccessibleParent
@@ -304,14 +304,14 @@ declare namespace javax {
              * @see #setAccessibleName
              */
             // @ts-ignore
-            accessibleName: string
+            accessibleName: java.lang.String | string
             /**
              * A localized String containing the description of the object.
              * @see #getAccessibleDescription
              * @see #setAccessibleDescription
              */
             // @ts-ignore
-            accessibleDescription: string
+            accessibleDescription: java.lang.String | string
             /**
              * Gets the accessibleName property of this object.  The accessibleName
              * property of an object is a localized String that designates the purpose
@@ -326,7 +326,7 @@ declare namespace javax {
              * @see #setAccessibleName
              */
             // @ts-ignore
-            getAccessibleName(): java.lang.String
+            public getAccessibleName(): string
             /**
              * Sets the localized accessible name of this object.  Changing the
              * name will cause a PropertyChangeEvent to be fired for the
@@ -338,7 +338,7 @@ declare namespace javax {
              *     description: Sets the accessible name for the component.
              */
             // @ts-ignore
-            setAccessibleName(s: string): void
+            public setAccessibleName(s: java.lang.String | string): void
             /**
              * Gets the accessibleDescription property of this object.  The
              * accessibleDescription property of this object is a short localized
@@ -350,7 +350,7 @@ declare namespace javax {
              * @see #setAccessibleDescription
              */
             // @ts-ignore
-            getAccessibleDescription(): java.lang.String
+            public getAccessibleDescription(): string
             /**
              * Sets the accessible description of this object.  Changing the
              * name will cause a PropertyChangeEvent to be fired for the
@@ -362,7 +362,7 @@ declare namespace javax {
              *     description: Sets the accessible description for the component.
              */
             // @ts-ignore
-            setAccessibleDescription(s: string): void
+            public setAccessibleDescription(s: java.lang.String | string): void
             /**
              * Gets the role of this object.  The role of the object is the generic
              * purpose or use of the class of this object.  For example, the role
@@ -381,7 +381,7 @@ declare namespace javax {
              * @see AccessibleRole
              */
             // @ts-ignore
-            abstract getAccessibleRole(): javax.accessibility.AccessibleRole
+            public abstract getAccessibleRole(): javax.accessibility.AccessibleRole
             /**
              * Gets the state set of this object.  The AccessibleStateSet of an object
              * is composed of a set of unique AccessibleStates.  A change in the
@@ -394,14 +394,14 @@ declare namespace javax {
              * @see #addPropertyChangeListener
              */
             // @ts-ignore
-            abstract getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+            public abstract getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
             /**
              * Gets the Accessible parent of this object.
              * @return the Accessible parent of this object; null if this
              *  object does not have an Accessible parent
              */
             // @ts-ignore
-            getAccessibleParent(): javax.accessibility.Accessible
+            public getAccessibleParent(): javax.accessibility.Accessible
             /**
              * Sets the Accessible parent of this object.  This is meant to be used
              * only in the situations where the actual component's parent should
@@ -410,7 +410,7 @@ declare namespace javax {
              * @param a - Accessible to be set as the parent
              */
             // @ts-ignore
-            setAccessibleParent(a: javax.accessibility.Accessible): void
+            public setAccessibleParent(a: javax.accessibility.Accessible): void
             /**
              * Gets the 0-based index of this object in its accessible parent.
              * @return the 0-based index of this object in its parent; -1 if this
@@ -420,13 +420,13 @@ declare namespace javax {
              * @see #getAccessibleChild
              */
             // @ts-ignore
-            abstract getAccessibleIndexInParent(): int
+            public abstract getAccessibleIndexInParent(): number /*int*/
             /**
              * Returns the number of accessible children of the object.
              * @return the number of accessible children of the object.
              */
             // @ts-ignore
-            abstract getAccessibleChildrenCount(): int
+            public abstract getAccessibleChildrenCount(): number /*int*/
             /**
              * Returns the specified Accessible child of the object.  The Accessible
              * children of an Accessible object are zero-based, so the first child
@@ -437,7 +437,7 @@ declare namespace javax {
              * @see #getAccessibleChildrenCount
              */
             // @ts-ignore
-            abstract getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+            public abstract getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
             /**
              * Gets the locale of the component. If the component does not have a
              * locale, then the locale of its parent is returned.
@@ -449,7 +449,7 @@ declare namespace javax {
              *  determined from the containing parent.
              */
             // @ts-ignore
-            abstract getLocale(): java.util.Locale
+            public abstract getLocale(): java.util.Locale
             /**
              * Adds a PropertyChangeListener to the listener list.
              * The listener is registered for all Accessible properties and will
@@ -464,7 +464,7 @@ declare namespace javax {
              * @param listener  The PropertyChangeListener to be added
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a PropertyChangeListener from the listener list.
              * This removes a PropertyChangeListener that was registered
@@ -472,7 +472,7 @@ declare namespace javax {
              * @param listener  The PropertyChangeListener to be removed
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Gets the AccessibleAction associated with this object that supports
              * one or more actions.
@@ -480,7 +480,7 @@ declare namespace javax {
              * @see AccessibleAction
              */
             // @ts-ignore
-            getAccessibleAction(): javax.accessibility.AccessibleAction
+            public getAccessibleAction(): javax.accessibility.AccessibleAction
             /**
              * Gets the AccessibleComponent associated with this object that has a
              * graphical representation.
@@ -488,7 +488,7 @@ declare namespace javax {
              * @see AccessibleComponent
              */
             // @ts-ignore
-            getAccessibleComponent(): javax.accessibility.AccessibleComponent
+            public getAccessibleComponent(): javax.accessibility.AccessibleComponent
             /**
              * Gets the AccessibleSelection associated with this object which allows its
              * Accessible children to be selected.
@@ -496,7 +496,7 @@ declare namespace javax {
              * @see AccessibleSelection
              */
             // @ts-ignore
-            getAccessibleSelection(): javax.accessibility.AccessibleSelection
+            public getAccessibleSelection(): javax.accessibility.AccessibleSelection
             /**
              * Gets the AccessibleText associated with this object presenting
              * text on the display.
@@ -504,7 +504,7 @@ declare namespace javax {
              * @see AccessibleText
              */
             // @ts-ignore
-            getAccessibleText(): javax.accessibility.AccessibleText
+            public getAccessibleText(): javax.accessibility.AccessibleText
             /**
              * Gets the AccessibleEditableText associated with this object
              * presenting editable text on the display.
@@ -513,7 +513,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getAccessibleEditableText(): javax.accessibility.AccessibleEditableText
+            public getAccessibleEditableText(): javax.accessibility.AccessibleEditableText
             /**
              * Gets the AccessibleValue associated with this object that supports a
              * Numerical value.
@@ -521,7 +521,7 @@ declare namespace javax {
              * @see AccessibleValue
              */
             // @ts-ignore
-            getAccessibleValue(): javax.accessibility.AccessibleValue
+            public getAccessibleValue(): javax.accessibility.AccessibleValue
             /**
              * Gets the AccessibleIcons associated with an object that has
              * one or more associated icons
@@ -531,7 +531,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleIcon(): javax.accessibility.AccessibleIcon[]
+            public getAccessibleIcon(): javax.accessibility.AccessibleIcon[]
             /**
              * Gets the AccessibleRelationSet associated with an object
              * @return an AccessibleRelationSet if supported by object;
@@ -540,7 +540,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleRelationSet(): javax.accessibility.AccessibleRelationSet
+            public getAccessibleRelationSet(): javax.accessibility.AccessibleRelationSet
             /**
              * Gets the AccessibleTable associated with an object
              * @return an AccessibleTable if supported by object;
@@ -549,7 +549,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleTable(): javax.accessibility.AccessibleTable
+            public getAccessibleTable(): javax.accessibility.AccessibleTable
             /**
              * Support for reporting bound property changes.  If oldValue and
              * newValue are not equal and the PropertyChangeEvent listener list
@@ -572,7 +572,7 @@ declare namespace javax {
              * @see #ACCESSIBLE_VISIBLE_DATA_PROPERTY
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
         }
     }
 }

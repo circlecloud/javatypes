@@ -42,7 +42,7 @@ declare namespace javax {
              *          aComponent is null
              */
             // @ts-ignore
-            getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             /**
              * Returns the Component that should receive the focus before aComponent.
              * aContainer must be a focus cycle root of aComponent.
@@ -65,7 +65,7 @@ declare namespace javax {
              *          aComponent is null
              */
             // @ts-ignore
-            getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             /**
              * Returns the first Component in the traversal cycle. This method is used
              * to determine the next Component to focus when traversal wraps in the
@@ -77,7 +77,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            getFirstComponent(aContainer: java.awt.Container): java.awt.Component
+            public getFirstComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Returns the last Component in the traversal cycle. This method is used
              * to determine the next Component to focus when traversal wraps in the
@@ -89,7 +89,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            getLastComponent(aContainer: java.awt.Container): java.awt.Component
+            public getLastComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Determines whether the specified <code>Component</code>
              * is an acceptable choice as the new focus owner.

@@ -39,49 +39,49 @@ declare namespace org {
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    getPeriod(): long
+                    public getPeriod(): number /*long*/
                     /**
                      * Return this trigger's time unit (milliseconds by default).
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    getTimeUnit(): java.util.concurrent.TimeUnit
+                    public getTimeUnit(): java.util.concurrent.TimeUnit
                     /**
                      * Specify the delay for the initial execution. It will be evaluated in
                      * terms of this trigger's {@link TimeUnit}. If no time unit was explicitly
                      * provided upon instantiation, the default is milliseconds.
                      */
                     // @ts-ignore
-                    setInitialDelay(initialDelay: number /*long*/): void
+                    public setInitialDelay(initialDelay: number /*long*/): void
                     /**
                      * Return the initial delay, or 0 if none.
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    getInitialDelay(): long
+                    public getInitialDelay(): number /*long*/
                     /**
                      * Specify whether the periodic interval should be measured between the
                      * scheduled start times rather than between actual completion times.
                      * The latter, "fixed delay" behavior, is the default.
                      */
                     // @ts-ignore
-                    setFixedRate(fixedRate: boolean): void
+                    public setFixedRate(fixedRate: boolean): void
                     /**
                      * Return whether this trigger uses fixed rate ({@code true}) or
                      * fixed delay ({@code false}) behavior.
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    isFixedRate(): boolean
+                    public isFixedRate(): boolean
                     /**
                      * Returns the time after which a task should run again.
                      */
                     // @ts-ignore
-                    nextExecutionTime(triggerContext: org.springframework.scheduling.TriggerContext): java.util.Date
+                    public nextExecutionTime(triggerContext: org.springframework.scheduling.TriggerContext): java.util.Date
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

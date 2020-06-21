@@ -41,7 +41,7 @@ declare namespace org {
                      * @since 4.1
                      */
                     // @ts-ignore
-                    class YamlMapFactoryBean extends org.springframework.beans.factory.config.YamlProcessor implements org.springframework.beans.factory.FactoryBean<java.util.Map<java.lang.String, java.lang.Object>>, org.springframework.beans.factory.InitializingBean {
+                    class YamlMapFactoryBean extends org.springframework.beans.factory.config.YamlProcessor implements org.springframework.beans.factory.FactoryBean<java.util.Map<java.lang.String | string, java.lang.Object | any>>, org.springframework.beans.factory.InitializingBean {
                         // @ts-ignore
                         constructor()
                         /**
@@ -49,15 +49,15 @@ declare namespace org {
                          * otherwise. Default is {@code true} (a singleton).
                          */
                         // @ts-ignore
-                        setSingleton(singleton: boolean): void
+                        public setSingleton(singleton: boolean): void
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObject(): java.util.Map<java.lang.String, java.lang.Object>
+                        public getObject(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         /**
                          * Template method that subclasses may override to construct the object
                          * returned by this factory.
@@ -68,7 +68,7 @@ declare namespace org {
                          * @see #process(MatchCallback)
                          */
                         // @ts-ignore
-                        createMap(): java.util.Map<java.lang.String, java.lang.Object>
+                        createMap(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     }
                 }
             }

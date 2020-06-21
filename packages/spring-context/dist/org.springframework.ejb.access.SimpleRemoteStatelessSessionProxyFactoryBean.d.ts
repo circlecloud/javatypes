@@ -47,22 +47,22 @@ declare namespace org {
                      * @param businessInterface the business interface of the EJB
                      */
                     // @ts-ignore
-                    setBusinessInterface(businessInterface: java.lang.Class<any>): void
+                    public setBusinessInterface(businessInterface: java.lang.Class<any>): void
                     /**
                      * Return the business interface of the EJB we're proxying.
                      */
                     // @ts-ignore
-                    getBusinessInterface(): java.lang.Class<?>
+                    public getBusinessInterface(): java.lang.Class<any>
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): java.lang.Object
+                    public getObject(): any
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

@@ -23,7 +23,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                write(b: number /*int*/): void
+                public write(b: number /*int*/): void
                 /**
                  * Writes an array of bytes. Will block until the bytes are
                  * actually written.
@@ -33,13 +33,13 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Returns the Checksum for this output stream.
                  * @return the Checksum
                  */
                 // @ts-ignore
-                getChecksum(): java.util.zip.Checksum
+                public getChecksum(): java.util.zip.Checksum
             }
         }
     }

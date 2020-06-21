@@ -21,7 +21,7 @@ declare namespace org {
                  * @throws IllegalArgumentException in case of an unresolvable String value
                  */
                 // @ts-ignore
-                resolveStringValue(strVal: string): java.lang.String
+                resolveStringValue(strVal: java.lang.String | string): string
             }
         }
     }

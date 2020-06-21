@@ -12,13 +12,13 @@ declare namespace org {
                      * @return The volume
                      */
                     // @ts-ignore
-                    getVolume(): double
+                    getVolume(): number /*double*/
                     /**
                      * Gets the pitch used when playing sounds.
                      * @return The pitch
                      */
                     // @ts-ignore
-                    getPitch(): double
+                    getPitch(): number /*double*/
                     /**
                      * Gets the sound played when the block is breaking.
                      * @return The break sound

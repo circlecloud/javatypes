@@ -57,7 +57,7 @@ declare namespace javax {
              * @return the SeparatorUI object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.SeparatorUI
+            public getUI(): javax.swing.plaf.SeparatorUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the SeparatorUI L&amp;F object
@@ -68,13 +68,13 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.SeparatorUI): void
+            public setUI(ui: javax.swing.plaf.SeparatorUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "SeparatorUI"
@@ -82,7 +82,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the orientation of this separator.
              * @return The value of the orientation property, one of the
@@ -93,7 +93,7 @@ declare namespace javax {
              * @see #setOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Sets the orientation of the separator.
              * The default value of this property is HORIZONTAL.
@@ -112,7 +112,7 @@ declare namespace javax {
              *   description: The orientation of the separator.
              */
             // @ts-ignore
-            setOrientation(orientation: number /*int*/): void
+            public setOrientation(orientation: number /*int*/): void
             /**
              * Returns a string representation of this <code>JSeparator</code>.
              * This method
@@ -123,7 +123,7 @@ declare namespace javax {
              * @return a string representation of this <code>JSeparator</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JSeparator.
              * For separators, the AccessibleContext takes the form of an
@@ -133,7 +133,7 @@ declare namespace javax {
              *          AccessibleContext of this JSeparator
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

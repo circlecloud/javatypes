@@ -53,7 +53,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                supplier(override: java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.data.type.DoublePlantType> | java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.data.type.DoublePlantType>): org.spongepowered.api.world.gen.populator.DoublePlant.Builder
+                                supplier(override: java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.data.type.DoublePlantType>): org.spongepowered.api.world.gen.populator.DoublePlant.Builder
                                 /**
                                  * Builds a new instance of a {@link DoublePlant} populator with the
                                  * settings set within the builder.

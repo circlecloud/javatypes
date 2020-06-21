@@ -12,13 +12,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setCacheWide(cacheWide: boolean): void
+                        public setCacheWide(cacheWide: boolean): void
                         // @ts-ignore
-                        setBeforeInvocation(beforeInvocation: boolean): void
+                        public setBeforeInvocation(beforeInvocation: boolean): void
                         // @ts-ignore
                         getOperationDescription(): java.lang.StringBuilder
                         // @ts-ignore
-                        build(): org.springframework.cache.interceptor.CacheEvictOperation
+                        public build(): org.springframework.cache.interceptor.CacheEvictOperation
                     }
                 }
             }

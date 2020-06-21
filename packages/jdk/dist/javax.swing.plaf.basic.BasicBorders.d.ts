@@ -12,27 +12,27 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getButtonBorder(): javax.swing.border.Border
+                    public static getButtonBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getRadioButtonBorder(): javax.swing.border.Border
+                    public static getRadioButtonBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getToggleButtonBorder(): javax.swing.border.Border
+                    public static getToggleButtonBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getMenuBarBorder(): javax.swing.border.Border
+                    public static getMenuBarBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getSplitPaneBorder(): javax.swing.border.Border
+                    public static getSplitPaneBorder(): javax.swing.border.Border
                     /**
                      * Returns a border instance for a JSplitPane divider
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getSplitPaneDividerBorder(): javax.swing.border.Border
+                    public static getSplitPaneDividerBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getTextFieldBorder(): javax.swing.border.Border
+                    public static getTextFieldBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getProgressBarBorder(): javax.swing.border.Border
+                    public static getProgressBarBorder(): javax.swing.border.Border
                     // @ts-ignore
-                    getInternalFrameBorder(): javax.swing.border.Border
+                    public static getInternalFrameBorder(): javax.swing.border.Border
                 }
             }
         }

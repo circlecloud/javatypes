@@ -2,7 +2,7 @@ declare namespace org {
     namespace bukkit {
         namespace metadata {
             // @ts-ignore
-            class MetadataStoreBase<T> extends java.lang.Object {
+            abstract class MetadataStoreBase<T> extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -27,7 +27,7 @@ declare namespace org {
                  * @see MetadataStore#setMetadata(Object, String, MetadataValue)
                  */
                 // @ts-ignore
-                setMetadata(subject: T, metadataKey: string, newMetadataValue: org.bukkit.metadata.MetadataValue): void
+                public setMetadata(subject: T, metadataKey: java.lang.String | string, newMetadataValue: org.bukkit.metadata.MetadataValue): void
                 /**
                  * Returns all metadata values attached to an object. If multiple
                  * have attached metadata, each will value will be included.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @see MetadataStore#getMetadata(Object, String)
                  */
                 // @ts-ignore
-                getMetadata(subject: T, metadataKey: string): java.util.List<org.bukkit.metadata.MetadataValue>
+                public getMetadata(subject: T, metadataKey: java.lang.String | string): Array<org.bukkit.metadata.MetadataValue>
                 /**
                  * Tests to see if a metadata attribute has been set on an object.
                  * @param subject the object upon which the has-metadata test is
@@ -47,7 +47,7 @@ declare namespace org {
                  * @return the existence of the metadataKey within subject.
                  */
                 // @ts-ignore
-                hasMetadata(subject: T, metadataKey: string): boolean
+                public hasMetadata(subject: T, metadataKey: java.lang.String | string): boolean
                 /**
                  * Removes a metadata item owned by a plugin from a subject.
                  * @param subject the object to remove the metadata from.
@@ -59,7 +59,7 @@ declare namespace org {
                  *      org.bukkit.plugin.Plugin)
                  */
                 // @ts-ignore
-                removeMetadata(subject: T, metadataKey: string, owningPlugin: org.bukkit.plugin.Plugin): void
+                public removeMetadata(subject: T, metadataKey: java.lang.String | string, owningPlugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Invalidates all metadata in the metadata store that originates from the
                  * given plugin. Doing this will force each invalidated metadata item to
@@ -69,7 +69,7 @@ declare namespace org {
                  * @see MetadataStore#invalidateAll(org.bukkit.plugin.Plugin)
                  */
                 // @ts-ignore
-                invalidateAll(owningPlugin: org.bukkit.plugin.Plugin): void
+                public invalidateAll(owningPlugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Creates a unique name for the object receiving metadata by combining
                  * unique data from the subject with a metadataKey.
@@ -83,7 +83,7 @@ declare namespace org {
                  * @return a unique metadata key for the given subject.
                  */
                 // @ts-ignore
-                abstract disambiguate(subject: T, metadataKey: string): java.lang.String
+                abstract disambiguate(subject: T, metadataKey: java.lang.String | string): string
             }
         }
     }

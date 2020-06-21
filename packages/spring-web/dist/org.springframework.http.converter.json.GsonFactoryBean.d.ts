@@ -23,7 +23,7 @@ declare namespace org {
                          * @see GsonBuilderUtils#gsonBuilderWithBase64EncodedByteArrays()
                          */
                         // @ts-ignore
-                        setBase64EncodeByteArrays(base64EncodeByteArrays: boolean): void
+                        public setBase64EncodeByteArrays(base64EncodeByteArrays: boolean): void
                         /**
                          * Whether to use the {@link GsonBuilder#serializeNulls()} option when writing
                          * JSON. This is a shortcut for setting up a {@code Gson} as follows:
@@ -32,7 +32,7 @@ declare namespace org {
                          * </pre>
                          */
                         // @ts-ignore
-                        setSerializeNulls(serializeNulls: boolean): void
+                        public setSerializeNulls(serializeNulls: boolean): void
                         /**
                          * Whether to use the {@link GsonBuilder#setPrettyPrinting()} when writing
                          * JSON. This is a shortcut for setting up a {@code Gson} as follows:
@@ -41,7 +41,7 @@ declare namespace org {
                          * </pre>
                          */
                         // @ts-ignore
-                        setPrettyPrinting(prettyPrinting: boolean): void
+                        public setPrettyPrinting(prettyPrinting: boolean): void
                         /**
                          * Whether to use the {@link GsonBuilder#disableHtmlEscaping()} when writing
                          * JSON. Set to {@code true} to disable HTML escaping in JSON. This is a
@@ -51,7 +51,7 @@ declare namespace org {
                          * </pre>
                          */
                         // @ts-ignore
-                        setDisableHtmlEscaping(disableHtmlEscaping: boolean): void
+                        public setDisableHtmlEscaping(disableHtmlEscaping: boolean): void
                         /**
                          * Define the date/time format with a {@link SimpleDateFormat}-style pattern.
                          * This is a shortcut for setting up a {@code Gson} as follows:
@@ -60,18 +60,18 @@ declare namespace org {
                          * </pre>
                          */
                         // @ts-ignore
-                        setDateFormatPattern(dateFormatPattern: string): void
+                        public setDateFormatPattern(dateFormatPattern: java.lang.String | string): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Return the created Gson instance.
                          */
                         // @ts-ignore
-                        getObject(): Gson
+                        public getObject(): Gson
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

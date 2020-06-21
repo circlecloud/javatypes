@@ -14,17 +14,17 @@ declare namespace org {
              * the methods in this class.
              */
             // @ts-ignore
-            class HelpTopic extends java.lang.Object {
+            abstract class HelpTopic extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                name: string
+                name: java.lang.String | string
                 // @ts-ignore
-                shortText: string
+                shortText: java.lang.String | string
                 // @ts-ignore
-                fullText: string
+                fullText: java.lang.String | string
                 // @ts-ignore
-                amendedPermission: string
+                amendedPermission: java.lang.String | string
                 /**
                  * Determines if a {@link Player} is allowed to see this help topic.
                  * <p>
@@ -34,7 +34,7 @@ declare namespace org {
                  * @return True of the Player can see this help topic, false otherwise.
                  */
                 // @ts-ignore
-                abstract canSee(player: org.bukkit.command.CommandSender): boolean
+                public abstract canSee(player: org.bukkit.command.CommandSender): boolean
                 /**
                  * Allows the server administrator to override the permission required to
                  * see a help topic.
@@ -46,19 +46,19 @@ declare namespace org {
                  *      wishes to apply to this topic.
                  */
                 // @ts-ignore
-                amendCanSee(amendedPermission: string): void
+                public amendCanSee(amendedPermission: java.lang.String | string): void
                 /**
                  * Returns the name of this help topic.
                  * @return The topic name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns a brief description that will be displayed in the topic index.
                  * @return A brief topic description.
                  */
                 // @ts-ignore
-                getShortText(): java.lang.String
+                public getShortText(): string
                 /**
                  * Returns the full description of this help topic that is displayed when
                  * the user requests this topic's details.
@@ -70,7 +70,7 @@ declare namespace org {
                  * @return A full topic description.
                  */
                 // @ts-ignore
-                getFullText(forWho: org.bukkit.command.CommandSender): java.lang.String
+                public getFullText(forWho: org.bukkit.command.CommandSender): string
                 /**
                  * Allows the server admin (or another plugin) to add or replace the
                  * contents of a help topic.
@@ -85,7 +85,7 @@ declare namespace org {
                  *      alone.
                  */
                 // @ts-ignore
-                amendTopic(amendedShortText: string, amendedFullText: string): void
+                public amendTopic(amendedShortText: java.lang.String | string, amendedFullText: java.lang.String | string): void
                 /**
                  * Developers implementing their own custom HelpTopic implementations can
                  * use this utility method to ensure their implementations comply with the
@@ -97,7 +97,7 @@ declare namespace org {
                  *      according to the expected rules of amendTopic().
                  */
                 // @ts-ignore
-                applyAmendment(baseText: string, amendment: string): java.lang.String
+                applyAmendment(baseText: java.lang.String | string, amendment: java.lang.String | string): string
             }
         }
     }

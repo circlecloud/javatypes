@@ -16,29 +16,29 @@ declare namespace org {
                      * @param name the name of the cache
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     // @ts-ignore
-                    getNativeCache(): java.lang.Object
+                    public getNativeCache(): any
                     // @ts-ignore
-                    get(key: any): org.springframework.cache.Cache.ValueWrapper
+                    public get(key: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                     // @ts-ignore
-                    get<T>(key: any, type: java.lang.Class<T>): T
+                    public get<T>(key: java.lang.Object | any, type: java.lang.Class<T>): T
                     // @ts-ignore
-                    get<T>(key: any, valueLoader: java.util.concurrent.Callable<T>): T
+                    public get<T>(key: java.lang.Object | any, valueLoader: java.util.concurrent.Callable<T>): T
                     // @ts-ignore
-                    put(key: any, value: any): void
+                    public put(key: java.lang.Object | any, value: java.lang.Object | any): void
                     // @ts-ignore
-                    putIfAbsent(key: any, value: any): org.springframework.cache.Cache.ValueWrapper
+                    public putIfAbsent(key: java.lang.Object | any, value: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                     // @ts-ignore
-                    evict(key: any): void
+                    public evict(key: java.lang.Object | any): void
                     // @ts-ignore
-                    evictIfPresent(key: any): boolean
+                    public evictIfPresent(key: java.lang.Object | any): boolean
                     // @ts-ignore
-                    clear(): void
+                    public clear(): void
                     // @ts-ignore
-                    invalidate(): boolean
+                    public invalidate(): boolean
                 }
             }
         }

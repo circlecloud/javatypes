@@ -13,7 +13,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    init(): void
+                    public init(): void
                 }
             }
         }

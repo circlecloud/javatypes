@@ -30,24 +30,24 @@ declare namespace org {
                          * Name of the exposed WebApplicationContext variable: "webApplicationContext".
                          */
                         // @ts-ignore
-                        readonly WEB_APPLICATION_CONTEXT_VARIABLE_NAME: string
+                        public static readonly WEB_APPLICATION_CONTEXT_VARIABLE_NAME: java.lang.String | string
                         /**
                          * Logger available to subclasses.
                          */
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        getValue(elContext: ELContext, base: any, property: any): java.lang.Object
+                        public getValue(elContext: ELContext, base: java.lang.Object | any, property: java.lang.Object | any): any
                         // @ts-ignore
-                        getType(elContext: ELContext, base: any, property: any): java.lang.Class<?>
+                        public getType(elContext: ELContext, base: java.lang.Object | any, property: java.lang.Object | any): java.lang.Class<any>
                         // @ts-ignore
-                        setValue(elContext: ELContext, base: any, property: any, value: any): void
+                        public setValue(elContext: ELContext, base: java.lang.Object | any, property: java.lang.Object | any, value: java.lang.Object | any): void
                         // @ts-ignore
-                        isReadOnly(elContext: ELContext, base: any, property: any): boolean
+                        public isReadOnly(elContext: ELContext, base: java.lang.Object | any, property: java.lang.Object | any): boolean
                         // @ts-ignore
-                        getFeatureDescriptors(elContext: ELContext, base: any): java.util.Iterator<java.beans.FeatureDescriptor>
+                        public getFeatureDescriptors(elContext: ELContext, base: java.lang.Object | any): java.util.Iterator<java.beans.FeatureDescriptor>
                         // @ts-ignore
-                        getCommonPropertyType(elContext: ELContext, base: any): java.lang.Class<?>
+                        public getCommonPropertyType(elContext: ELContext, base: java.lang.Object | any): java.lang.Class<any>
                         /**
                          * Retrieve the {@link WebApplicationContext} reference to expose.
                          * <p>The default implementation delegates to {@link FacesContextUtils},

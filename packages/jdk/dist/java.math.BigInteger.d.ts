@@ -114,7 +114,7 @@ declare namespace java {
              * @see Character#digit
              */
             // @ts-ignore
-            constructor(val: string, radix: number /*int*/)
+            constructor(val: java.lang.String | string, radix: number /*int*/)
             /**
              * Translates the decimal String representation of a BigInteger into a
              * BigInteger.  The String representation consists of an optional minus
@@ -128,7 +128,7 @@ declare namespace java {
              * @see Character#digit
              */
             // @ts-ignore
-            constructor(val: string)
+            constructor(val: java.lang.String | string)
             /**
              * Constructs a randomly generated BigInteger, uniformly distributed over
              * the range 0 to (2<sup>{@code numBits}</sup> - 1), inclusive.
@@ -167,19 +167,19 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly ZERO: java.math.BigInteger
+            public static readonly ZERO: java.math.BigInteger
             /**
              * The BigInteger constant one.
              * @since 1.2
              */
             // @ts-ignore
-            readonly ONE: java.math.BigInteger
+            public static readonly ONE: java.math.BigInteger
             /**
              * The BigInteger constant ten.
              * @since 1.5
              */
             // @ts-ignore
-            readonly TEN: java.math.BigInteger
+            public static readonly TEN: java.math.BigInteger
             /**
              * Returns a positive BigInteger that is probably prime, with the
              * specified bitLength. The probability that a BigInteger returned
@@ -193,7 +193,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            probablePrime(bitLength: number /*int*/, rnd: java.util.Random): java.math.BigInteger
+            public static probablePrime(bitLength: number /*int*/, rnd: java.util.Random): java.math.BigInteger
             /**
              * Returns the first integer greater than this {@code BigInteger} that
              * is probably prime.  The probability that the number returned by this
@@ -206,7 +206,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            nextProbablePrime(): java.math.BigInteger
+            public nextProbablePrime(): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is equal to that of the
              * specified {@code long}.  This "static factory method" is
@@ -216,21 +216,21 @@ declare namespace java {
              * @return a BigInteger with the specified value.
              */
             // @ts-ignore
-            valueOf(val: number /*long*/): java.math.BigInteger
+            public static valueOf(val: number /*long*/): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this + val)}.
              * @param val value to be added to this BigInteger.
              * @return {#code this + val}
              */
             // @ts-ignore
-            add(val: java.math.BigInteger): java.math.BigInteger
+            public add(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this - val)}.
              * @param val value to be subtracted from this BigInteger.
              * @return {#code this - val}
              */
             // @ts-ignore
-            subtract(val: java.math.BigInteger): java.math.BigInteger
+            public subtract(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this * val)}.
              * @implNote An implementation may offer better algorithmic
@@ -239,7 +239,7 @@ declare namespace java {
              * @return {#code this * val}
              */
             // @ts-ignore
-            multiply(val: java.math.BigInteger): java.math.BigInteger
+            public multiply(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this / val)}.
              * @param val value by which this BigInteger is to be divided.
@@ -247,7 +247,7 @@ declare namespace java {
              * @throws ArithmeticException if {#code val} is zero.
              */
             // @ts-ignore
-            divide(val: java.math.BigInteger): java.math.BigInteger
+            public divide(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns an array of two BigIntegers containing {@code (this / val)}
              * followed by {@code (this % val)}.
@@ -259,7 +259,7 @@ declare namespace java {
              * @throws ArithmeticException if {#code val} is zero.
              */
             // @ts-ignore
-            divideAndRemainder(val: java.math.BigInteger): java.math.BigInteger[]
+            public divideAndRemainder(val: java.math.BigInteger): java.math.BigInteger[]
             /**
              * Returns a BigInteger whose value is {@code (this % val)}.
              * @param val value by which this BigInteger is to be divided, and the
@@ -268,7 +268,7 @@ declare namespace java {
              * @throws ArithmeticException if {#code val} is zero.
              */
             // @ts-ignore
-            remainder(val: java.math.BigInteger): java.math.BigInteger
+            public remainder(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is <tt>(this<sup>exponent</sup>)</tt>.
              * Note that {@code exponent} is an integer rather than a BigInteger.
@@ -278,7 +278,7 @@ declare namespace java {
              *          cause the operation to yield a non-integer value.)
              */
             // @ts-ignore
-            pow(exponent: number /*int*/): java.math.BigInteger
+            public pow(exponent: number /*int*/): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is the greatest common divisor of
              * {@code abs(this)} and {@code abs(val)}.  Returns 0 if
@@ -287,27 +287,27 @@ declare namespace java {
              * @return {#code GCD(abs(this), abs(val))}
              */
             // @ts-ignore
-            gcd(val: java.math.BigInteger): java.math.BigInteger
+            public gcd(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is the absolute value of this
              * BigInteger.
              * @return {#code abs(this)}
              */
             // @ts-ignore
-            abs(): java.math.BigInteger
+            public abs(): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (-this)}.
              * @return {#code -this}
              */
             // @ts-ignore
-            negate(): java.math.BigInteger
+            public negate(): java.math.BigInteger
             /**
              * Returns the signum function of this BigInteger.
              * @return -1, 0 or 1 as the value of this BigInteger is negative, zero or
              *          positive.
              */
             // @ts-ignore
-            signum(): int
+            public signum(): number /*int*/
             /**
              * Returns a BigInteger whose value is {@code (this mod m}).  This method
              * differs from {@code remainder} in that it always returns a
@@ -318,7 +318,7 @@ declare namespace java {
              * @see #remainder
              */
             // @ts-ignore
-            mod(m: java.math.BigInteger): java.math.BigInteger
+            public mod(m: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is
              * <tt>(this<sup>exponent</sup> mod m)</tt>.  (Unlike {@code pow}, this
@@ -332,7 +332,7 @@ declare namespace java {
              * @see #modInverse
              */
             // @ts-ignore
-            modPow(exponent: java.math.BigInteger, m: java.math.BigInteger): java.math.BigInteger
+            public modPow(exponent: java.math.BigInteger, m: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this}<sup>-1</sup> {@code mod m)}.
              * @param m the modulus.
@@ -342,7 +342,7 @@ declare namespace java {
              *          is not <i>relatively prime</i> to m).
              */
             // @ts-ignore
-            modInverse(m: java.math.BigInteger): java.math.BigInteger
+            public modInverse(m: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this << n)}.
              * The shift distance, {@code n}, may be negative, in which case
@@ -353,7 +353,7 @@ declare namespace java {
              * @see #shiftRight
              */
             // @ts-ignore
-            shiftLeft(n: number /*int*/): java.math.BigInteger
+            public shiftLeft(n: number /*int*/): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this >> n)}.  Sign
              * extension is performed.  The shift distance, {@code n}, may be
@@ -364,7 +364,7 @@ declare namespace java {
              * @see #shiftLeft
              */
             // @ts-ignore
-            shiftRight(n: number /*int*/): java.math.BigInteger
+            public shiftRight(n: number /*int*/): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this & val)}.  (This
              * method returns a negative BigInteger if and only if this and val are
@@ -373,7 +373,7 @@ declare namespace java {
              * @return {#code this & val}
              */
             // @ts-ignore
-            and(val: java.math.BigInteger): java.math.BigInteger
+            public and(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this | val)}.  (This method
              * returns a negative BigInteger if and only if either this or val is
@@ -382,7 +382,7 @@ declare namespace java {
              * @return {#code this | val}
              */
             // @ts-ignore
-            or(val: java.math.BigInteger): java.math.BigInteger
+            public or(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this ^ val)}.  (This method
              * returns a negative BigInteger if and only if exactly one of this and
@@ -391,7 +391,7 @@ declare namespace java {
              * @return {#code this ^ val}
              */
             // @ts-ignore
-            xor(val: java.math.BigInteger): java.math.BigInteger
+            public xor(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (~this)}.  (This method
              * returns a negative value if and only if this BigInteger is
@@ -399,7 +399,7 @@ declare namespace java {
              * @return {#code ~this}
              */
             // @ts-ignore
-            not(): java.math.BigInteger
+            public not(): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is {@code (this & ~val)}.  This
              * method, which is equivalent to {@code and(val.not())}, is provided as
@@ -410,7 +410,7 @@ declare namespace java {
              * @return {#code this & ~val}
              */
             // @ts-ignore
-            andNot(val: java.math.BigInteger): java.math.BigInteger
+            public andNot(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns {@code true} if and only if the designated bit is set.
              * (Computes {@code ((this & (1<<n)) != 0)}.)
@@ -419,7 +419,7 @@ declare namespace java {
              * @throws ArithmeticException {#code n} is negative.
              */
             // @ts-ignore
-            testBit(n: number /*int*/): boolean
+            public testBit(n: number /*int*/): boolean
             /**
              * Returns a BigInteger whose value is equivalent to this BigInteger
              * with the designated bit set.  (Computes {@code (this | (1<<n))}.)
@@ -428,7 +428,7 @@ declare namespace java {
              * @throws ArithmeticException {#code n} is negative.
              */
             // @ts-ignore
-            setBit(n: number /*int*/): java.math.BigInteger
+            public setBit(n: number /*int*/): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is equivalent to this BigInteger
              * with the designated bit cleared.
@@ -438,7 +438,7 @@ declare namespace java {
              * @throws ArithmeticException {#code n} is negative.
              */
             // @ts-ignore
-            clearBit(n: number /*int*/): java.math.BigInteger
+            public clearBit(n: number /*int*/): java.math.BigInteger
             /**
              * Returns a BigInteger whose value is equivalent to this BigInteger
              * with the designated bit flipped.
@@ -448,7 +448,7 @@ declare namespace java {
              * @throws ArithmeticException {#code n} is negative.
              */
             // @ts-ignore
-            flipBit(n: number /*int*/): java.math.BigInteger
+            public flipBit(n: number /*int*/): java.math.BigInteger
             /**
              * Returns the index of the rightmost (lowest-order) one bit in this
              * BigInteger (the number of zero bits to the right of the rightmost
@@ -457,7 +457,7 @@ declare namespace java {
              * @return index of the rightmost one bit in this BigInteger.
              */
             // @ts-ignore
-            getLowestSetBit(): int
+            public getLowestSetBit(): number /*int*/
             /**
              * Returns the number of bits in the minimal two's-complement
              * representation of this BigInteger, <i>excluding</i> a sign bit.
@@ -468,7 +468,7 @@ declare namespace java {
              *          representation of this BigInteger, <i>excluding</i> a sign bit.
              */
             // @ts-ignore
-            bitLength(): int
+            public bitLength(): number /*int*/
             /**
              * Returns the number of bits in the two's complement representation
              * of this BigInteger that differ from its sign bit.  This method is
@@ -477,7 +477,7 @@ declare namespace java {
              *          of this BigInteger that differ from its sign bit.
              */
             // @ts-ignore
-            bitCount(): int
+            public bitCount(): number /*int*/
             /**
              * Returns {@code true} if this BigInteger is probably prime,
              * {@code false} if it's definitely composite.  If
@@ -492,7 +492,7 @@ declare namespace java {
              *          {@code false} if it's definitely composite.
              */
             // @ts-ignore
-            isProbablePrime(certainty: number /*int*/): boolean
+            public isProbablePrime(certainty: number /*int*/): boolean
             /**
              * Compares this BigInteger with the specified BigInteger.  This
              * method is provided in preference to individual methods for each
@@ -506,7 +506,7 @@ declare namespace java {
              *          to, or greater than {#code val}.
              */
             // @ts-ignore
-            compareTo(val: java.math.BigInteger): int
+            public compareTo(val: java.math.BigInteger): number /*int*/
             /**
              * Compares this BigInteger with the specified Object for equality.
              * @param x Object to which this BigInteger is to be compared.
@@ -514,7 +514,7 @@ declare namespace java {
              *          BigInteger whose value is numerically equal to this BigInteger.
              */
             // @ts-ignore
-            equals(x: any): boolean
+            public equals(x: java.lang.Object | any): boolean
             /**
              * Returns the minimum of this BigInteger and {@code val}.
              * @param val value with which the minimum is to be computed.
@@ -522,7 +522,7 @@ declare namespace java {
              *          {#code val}.  If they are equal, either may be returned.
              */
             // @ts-ignore
-            min(val: java.math.BigInteger): java.math.BigInteger
+            public min(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns the maximum of this BigInteger and {@code val}.
              * @param val value with which the maximum is to be computed.
@@ -530,13 +530,13 @@ declare namespace java {
              *          {#code val}.  If they are equal, either may be returned.
              */
             // @ts-ignore
-            max(val: java.math.BigInteger): java.math.BigInteger
+            public max(val: java.math.BigInteger): java.math.BigInteger
             /**
              * Returns the hash code for this BigInteger.
              * @return hash code for this BigInteger.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the String representation of this BigInteger in the
              * given radix.  If the radix is outside the range from {@link
@@ -554,7 +554,7 @@ declare namespace java {
              * @see #BigInteger(java.lang.String, int)
              */
             // @ts-ignore
-            toString(radix: number /*int*/): java.lang.String
+            public toString(radix: number /*int*/): string
             /**
              * Returns the decimal String representation of this BigInteger.
              * The digit-to-character mapping provided by
@@ -567,7 +567,7 @@ declare namespace java {
              * @see #BigInteger(java.lang.String)
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a byte array containing the two's-complement
              * representation of this BigInteger.  The byte array will be in
@@ -582,7 +582,7 @@ declare namespace java {
              * @see #BigInteger(byte[])
              */
             // @ts-ignore
-            toByteArray(): byte[]
+            public toByteArray(): number /*byte*/[]
             /**
              * Converts this BigInteger to an {@code int}.  This
              * conversion is analogous to a
@@ -598,7 +598,7 @@ declare namespace java {
              * @see #intValueExact()
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Converts this BigInteger to a {@code long}.  This
              * conversion is analogous to a
@@ -614,7 +614,7 @@ declare namespace java {
              * @see #longValueExact()
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Converts this BigInteger to a {@code float}.  This
              * conversion is similar to the
@@ -630,7 +630,7 @@ declare namespace java {
              * @return this BigInteger converted to a {#code float}.
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Converts this BigInteger to a {@code double}.  This
              * conversion is similar to the
@@ -646,7 +646,7 @@ declare namespace java {
              * @return this BigInteger converted to a {#code double}.
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Converts this {@code BigInteger} to a {@code long}, checking
              * for lost information.  If the value of this {@code BigInteger}
@@ -659,7 +659,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            longValueExact(): long
+            public longValueExact(): number /*long*/
             /**
              * Converts this {@code BigInteger} to an {@code int}, checking
              * for lost information.  If the value of this {@code BigInteger}
@@ -672,7 +672,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            intValueExact(): int
+            public intValueExact(): number /*int*/
             /**
              * Converts this {@code BigInteger} to a {@code short}, checking
              * for lost information.  If the value of this {@code BigInteger}
@@ -685,7 +685,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            shortValueExact(): short
+            public shortValueExact(): number /*short*/
             /**
              * Converts this {@code BigInteger} to a {@code byte}, checking
              * for lost information.  If the value of this {@code BigInteger}
@@ -698,7 +698,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            byteValueExact(): byte
+            public byteValueExact(): number /*byte*/
         }
     }
 }

@@ -23,7 +23,7 @@ declare namespace org {
                      * @param reason the associated reason (optional)
                      */
                     // @ts-ignore
-                    constructor(status: org.springframework.http.HttpStatus, reason: string)
+                    constructor(status: org.springframework.http.HttpStatus, reason: java.lang.String | string)
                     /**
                      * Constructor with a response status and a reason to add to the exception
                      * message as explanation, as well as a nested exception.
@@ -32,12 +32,12 @@ declare namespace org {
                      * @param cause a nested exception (optional)
                      */
                     // @ts-ignore
-                    constructor(status: org.springframework.http.HttpStatus, reason: string, cause: Error)
+                    constructor(status: org.springframework.http.HttpStatus, reason: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Return the HTTP status associated with this exception.
                      */
                     // @ts-ignore
-                    getStatus(): org.springframework.http.HttpStatus
+                    public getStatus(): org.springframework.http.HttpStatus
                     /**
                      * Return headers associated with the exception that should be added to the
                      * error response, e.g. "Allow", "Accept", etc.
@@ -46,7 +46,7 @@ declare namespace org {
                      * @deprecated as of 5.1.13 in favor of {#link #getResponseHeaders()}
                      */
                     // @ts-ignore
-                    getHeaders(): java.util.Map<java.lang.String, java.lang.String>
+                    public getHeaders(): java.util.Map<java.lang.String | string, java.lang.String | string>
                     /**
                      * Return headers associated with the exception that should be added to the
                      * error response, e.g. "Allow", "Accept", etc.
@@ -54,14 +54,14 @@ declare namespace org {
                      * @since 5.1.13
                      */
                     // @ts-ignore
-                    getResponseHeaders(): org.springframework.http.HttpHeaders
+                    public getResponseHeaders(): org.springframework.http.HttpHeaders
                     /**
                      * The reason explaining the exception (potentially {@code null} or empty).
                      */
                     // @ts-ignore
-                    getReason(): java.lang.String
+                    public getReason(): string
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                 }
             }
         }

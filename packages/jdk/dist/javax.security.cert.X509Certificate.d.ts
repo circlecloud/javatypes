@@ -85,7 +85,7 @@ declare namespace javax {
              * @see java.security.Security security properties
              */
             // @ts-ignore
-            class X509Certificate extends javax.security.cert.Certificate {
+            abstract class X509Certificate extends javax.security.cert.Certificate {
                 // @ts-ignore
                 constructor()
                 /**
@@ -109,7 +109,7 @@ declare namespace javax {
                  *             or certificate parsing error occurs.
                  */
                 // @ts-ignore
-                getInstance(inStream: java.io.InputStream): javax.security.cert.X509Certificate
+                public static getInstance(inStream: java.io.InputStream): javax.security.cert.X509Certificate
                 /**
                  * Instantiates an X509Certificate object, and initializes it with
                  * the specified byte array.
@@ -129,7 +129,7 @@ declare namespace javax {
                  *             or certificate parsing error occurs.
                  */
                 // @ts-ignore
-                getInstance(certData: number /*byte*/[]): javax.security.cert.X509Certificate
+                public static getInstance(certData: number /*byte*/[]): javax.security.cert.X509Certificate
                 /**
                  * Checks that the certificate is currently valid. It is if
                  * the current date and time are within the validity period given in the
@@ -153,7 +153,7 @@ declare namespace javax {
                  *             yet valid.
                  */
                 // @ts-ignore
-                abstract checkValidity(): void
+                public abstract checkValidity(): void
                 /**
                  * Checks that the specified date is within the certificate's
                  * validity period. In other words, this determines whether the
@@ -167,7 +167,7 @@ declare namespace javax {
                  * @see #checkValidity()
                  */
                 // @ts-ignore
-                abstract checkValidity(date: java.util.Date): void
+                public abstract checkValidity(date: java.util.Date): void
                 /**
                  * Gets the {@code version} (version number) value from the
                  * certificate. The ASN.1 definition for this is:
@@ -178,7 +178,7 @@ declare namespace javax {
                  * @return the version number from the ASN.1 encoding, i.e. 0, 1 or 2.
                  */
                 // @ts-ignore
-                abstract getVersion(): int
+                public abstract getVersion(): number /*int*/
                 /**
                  * Gets the {@code serialNumber} value from the certificate.
                  * The serial number is an integer assigned by the certification
@@ -193,7 +193,7 @@ declare namespace javax {
                  * @return the serial number.
                  */
                 // @ts-ignore
-                abstract getSerialNumber(): java.math.BigInteger
+                public abstract getSerialNumber(): java.math.BigInteger
                 /**
                  * Gets the {@code issuer} (issuer distinguished name) value from
                  * the certificate. The issuer name identifies the entity that signed (and
@@ -223,7 +223,7 @@ declare namespace javax {
                  * @return a Principal whose name is the issuer distinguished name.
                  */
                 // @ts-ignore
-                abstract getIssuerDN(): java.security.Principal
+                public abstract getIssuerDN(): java.security.Principal
                 /**
                  * Gets the {@code subject} (subject distinguished name) value
                  * from the certificate.
@@ -237,7 +237,7 @@ declare namespace javax {
                  * @see #getIssuerDN()
                  */
                 // @ts-ignore
-                abstract getSubjectDN(): java.security.Principal
+                public abstract getSubjectDN(): java.security.Principal
                 /**
                  * Gets the {@code notBefore} date from the validity period of
                  * the certificate.
@@ -255,7 +255,7 @@ declare namespace javax {
                  * @see #checkValidity()
                  */
                 // @ts-ignore
-                abstract getNotBefore(): java.util.Date
+                public abstract getNotBefore(): java.util.Date
                 /**
                  * Gets the {@code notAfter} date from the validity period of
                  * the certificate. See {@link #getNotBefore() getNotBefore}
@@ -264,7 +264,7 @@ declare namespace javax {
                  * @see #checkValidity()
                  */
                 // @ts-ignore
-                abstract getNotAfter(): java.util.Date
+                public abstract getNotAfter(): java.util.Date
                 /**
                  * Gets the signature algorithm name for the certificate
                  * signature algorithm. An example is the string "SHA-1/DSA".
@@ -283,7 +283,7 @@ declare namespace javax {
                  * @return the signature algorithm name.
                  */
                 // @ts-ignore
-                abstract getSigAlgName(): java.lang.String
+                public abstract getSigAlgName(): string
                 /**
                  * Gets the signature algorithm OID string from the certificate.
                  * An OID is represented by a set of positive whole numbers separated
@@ -295,7 +295,7 @@ declare namespace javax {
                  * @return the signature algorithm OID string.
                  */
                 // @ts-ignore
-                abstract getSigAlgOID(): java.lang.String
+                public abstract getSigAlgOID(): string
                 /**
                  * Gets the DER-encoded signature algorithm parameters from this
                  * certificate's signature algorithm. In most cases, the signature
@@ -307,7 +307,7 @@ declare namespace javax {
                  *          null if no parameters are present.
                  */
                 // @ts-ignore
-                abstract getSigAlgParams(): byte[]
+                public abstract getSigAlgParams(): number /*byte*/[]
             }
         }
     }

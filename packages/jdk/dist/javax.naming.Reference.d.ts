@@ -51,7 +51,7 @@ declare namespace javax {
              *  this reference refers.
              */
             // @ts-ignore
-            constructor(className: string)
+            constructor(className: java.lang.String | string)
             /**
              * Constructs a new reference for an object with class name 'className' and
              * an address.
@@ -61,7 +61,7 @@ declare namespace javax {
              * @param addr The non-null address of the object.
              */
             // @ts-ignore
-            constructor(className: string, addr: javax.naming.RefAddr)
+            constructor(className: java.lang.String | string, addr: javax.naming.RefAddr)
             /**
              * Constructs a new reference for an object with class name 'className',
              * and the class name and location of the object's factory.
@@ -75,7 +75,7 @@ declare namespace javax {
              * @see javax.naming.spi.NamingManager#getObjectInstance
              */
             // @ts-ignore
-            constructor(className: string, factory: string, factoryLocation: string)
+            constructor(className: java.lang.String | string, factory: java.lang.String | string, factoryLocation: java.lang.String | string)
             /**
              * Constructs a new reference for an object with class name 'className',
              * the class name and location of the object's factory, and the address for
@@ -90,7 +90,7 @@ declare namespace javax {
              * @see javax.naming.spi.NamingManager#getObjectInstance
              */
             // @ts-ignore
-            constructor(className: string, addr: javax.naming.RefAddr, factory: string, factoryLocation: string)
+            constructor(className: java.lang.String | string, addr: javax.naming.RefAddr, factory: java.lang.String | string, factoryLocation: java.lang.String | string)
             /**
              * Contains the fully-qualified name of the class of the object to which
              * this Reference refers.
@@ -98,7 +98,7 @@ declare namespace javax {
              * @see java.lang.Class#getName
              */
             // @ts-ignore
-            className: string
+            className: java.lang.String | string
             /**
              * Contains the addresses contained in this Reference.
              * Initialized by constructor.
@@ -113,21 +113,21 @@ declare namespace javax {
              * @serial 
              */
             // @ts-ignore
-            classFactory: string
+            classFactory: java.lang.String | string
             /**
              * Contains the location of the factory class.
              * Initialized to null.
              * @serial 
              */
             // @ts-ignore
-            classFactoryLocation: string
+            classFactoryLocation: java.lang.String | string
             /**
              * Retrieves the class name of the object to which this reference refers.
              * @return The non-null fully-qualified class name of the object.
              *          (e.g. "java.lang.String")
              */
             // @ts-ignore
-            getClassName(): java.lang.String
+            public getClassName(): string
             /**
              * Retrieves the class name of the factory of the object
              * to which this reference refers.
@@ -135,7 +135,7 @@ declare namespace javax {
              *          (e.g. "java.lang.String")
              */
             // @ts-ignore
-            getFactoryClassName(): java.lang.String
+            public getFactoryClassName(): string
             /**
              * Retrieves the location of the factory of the object
              * to which this reference refers.
@@ -146,7 +146,7 @@ declare namespace javax {
              *                  location for loading in the factory's class.
              */
             // @ts-ignore
-            getFactoryClassLocation(): java.lang.String
+            public getFactoryClassLocation(): string
             /**
              * Retrieves the first address that has the address type 'addrType'.
              * String.compareTo() is used to test the equality of the address types.
@@ -155,7 +155,7 @@ declare namespace javax {
              *          null if no such address exist.
              */
             // @ts-ignore
-            get(addrType: string): javax.naming.RefAddr
+            public get(addrType: java.lang.String | string): javax.naming.RefAddr
             /**
              * Retrieves the address at index posn.
              * @param posn The index of the address to retrieve.
@@ -165,7 +165,7 @@ declare namespace javax {
              *          range.
              */
             // @ts-ignore
-            get(posn: number /*int*/): javax.naming.RefAddr
+            public get(posn: number /*int*/): javax.naming.RefAddr
             /**
              * Retrieves an enumeration of the addresses in this reference.
              * When addresses are added, changed or removed from this reference,
@@ -176,19 +176,19 @@ declare namespace javax {
              *          zero elements is returned.
              */
             // @ts-ignore
-            getAll(): java.util.Enumeration<javax.naming.RefAddr>
+            public getAll(): java.util.Enumeration<javax.naming.RefAddr>
             /**
              * Retrieves the number of addresses in this reference.
              * @return The nonnegative number of addresses in this reference.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Adds an address to the end of the list of addresses.
              * @param addr The non-null address to add.
              */
             // @ts-ignore
-            add(addr: javax.naming.RefAddr): void
+            public add(addr: javax.naming.RefAddr): void
             /**
              * Adds an address to the list of addresses at index posn.
              * All addresses at index posn or greater are shifted up
@@ -199,7 +199,7 @@ declare namespace javax {
              *          range.
              */
             // @ts-ignore
-            add(posn: number /*int*/, addr: javax.naming.RefAddr): void
+            public add(posn: number /*int*/, addr: javax.naming.RefAddr): void
             /**
              * Deletes the address at index posn from the list of addresses.
              * All addresses at index greater than posn are shifted down
@@ -210,12 +210,12 @@ declare namespace javax {
              *          range.
              */
             // @ts-ignore
-            remove(posn: number /*int*/): java.lang.Object
+            public remove(posn: number /*int*/): any
             /**
              * Deletes all addresses from this reference.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Determines whether obj is a reference with the same addresses
              * (in same order) as this reference.
@@ -228,14 +228,14 @@ declare namespace javax {
              * @return true if obj is equal to this reference; false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Computes the hash code of this reference.
              * The hash code is the sum of the hash code of its addresses.
              * @return A hash code of this reference as an int.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Generates the string representation of this reference.
              * The string consists of the class name to which this reference refers,
@@ -244,7 +244,7 @@ declare namespace javax {
              * @return The non-null string representation of this reference.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Makes a copy of this reference using its class name
              * list of addresses, class factory name and class factory location.
@@ -252,7 +252,7 @@ declare namespace javax {
              * and vice versa.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

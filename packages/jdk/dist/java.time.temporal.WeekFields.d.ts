@@ -93,7 +93,7 @@ declare namespace java {
                  * week-based-year corresponding to the previous calendar year.
                  */
                 // @ts-ignore
-                readonly ISO: java.time.temporal.WeekFields
+                public static readonly ISO: java.time.temporal.WeekFields
                 /**
                  * The common definition of a week that starts on Sunday and the first week
                  * has a minimum of 1 day.
@@ -102,7 +102,7 @@ declare namespace java {
                  * This week definition is in use in the US and other European countries.
                  */
                 // @ts-ignore
-                readonly SUNDAY_START: java.time.temporal.WeekFields
+                public static readonly SUNDAY_START: java.time.temporal.WeekFields
                 /**
                  * The unit that represents week-based-years for the purpose of addition and subtraction.
                  * <p>
@@ -120,7 +120,7 @@ declare namespace java {
                  * This unit is an immutable and thread-safe singleton.
                  */
                 // @ts-ignore
-                readonly WEEK_BASED_YEARS: java.time.temporal.TemporalUnit
+                public static readonly WEEK_BASED_YEARS: java.time.temporal.TemporalUnit
                 /**
                  * Obtains an instance of {@code WeekFields} appropriate for a locale.
                  * <p>
@@ -129,7 +129,7 @@ declare namespace java {
                  * @return the week-definition, not null
                  */
                 // @ts-ignore
-                of(locale: java.util.Locale): java.time.temporal.WeekFields
+                public static of(locale: java.util.Locale): java.time.temporal.WeekFields
                 /**
                  * Obtains an instance of {@code WeekFields} from the first day-of-week and minimal days.
                  * <p>
@@ -150,7 +150,7 @@ declare namespace java {
                  *       or greater than 7
                  */
                 // @ts-ignore
-                of(firstDayOfWeek: java.time.DayOfWeek, minimalDaysInFirstWeek: number /*int*/): java.time.temporal.WeekFields
+                public static of(firstDayOfWeek: java.time.DayOfWeek, minimalDaysInFirstWeek: number /*int*/): java.time.temporal.WeekFields
                 /**
                  * Gets the first day-of-week.
                  * <p>
@@ -160,7 +160,7 @@ declare namespace java {
                  * @return the first day-of-week, not null
                  */
                 // @ts-ignore
-                getFirstDayOfWeek(): java.time.DayOfWeek
+                public getFirstDayOfWeek(): java.time.DayOfWeek
                 /**
                  * Gets the minimal number of days in the first week.
                  * <p>
@@ -171,7 +171,7 @@ declare namespace java {
                  * @return the minimal number of days in the first week of a month or year, from 1 to 7
                  */
                 // @ts-ignore
-                getMinimalDaysInFirstWeek(): int
+                public getMinimalDaysInFirstWeek(): number /*int*/
                 /**
                  * Returns a field to access the day of week based on this {@code WeekFields}.
                  * <p>
@@ -190,7 +190,7 @@ declare namespace java {
                  * @return a field providing access to the day-of-week with localized numbering, not null
                  */
                 // @ts-ignore
-                dayOfWeek(): java.time.temporal.TemporalField
+                public dayOfWeek(): java.time.temporal.TemporalField
                 /**
                  * Returns a field to access the week of month based on this {@code WeekFields}.
                  * <p>
@@ -233,7 +233,7 @@ declare namespace java {
                  * @return a field providing access to the week-of-month, not null
                  */
                 // @ts-ignore
-                weekOfMonth(): java.time.temporal.TemporalField
+                public weekOfMonth(): java.time.temporal.TemporalField
                 /**
                  * Returns a field to access the week of year based on this {@code WeekFields}.
                  * <p>
@@ -275,7 +275,7 @@ declare namespace java {
                  * @return a field providing access to the week-of-year, not null
                  */
                 // @ts-ignore
-                weekOfYear(): java.time.temporal.TemporalField
+                public weekOfYear(): java.time.temporal.TemporalField
                 /**
                  * Returns a field to access the week of a week-based-year based on this {@code WeekFields}.
                  * <p>
@@ -322,7 +322,7 @@ declare namespace java {
                  * @return a field providing access to the week-of-week-based-year, not null
                  */
                 // @ts-ignore
-                weekOfWeekBasedYear(): java.time.temporal.TemporalField
+                public weekOfWeekBasedYear(): java.time.temporal.TemporalField
                 /**
                  * Returns a field to access the year of a week-based-year based on this {@code WeekFields}.
                  * <p>
@@ -361,7 +361,7 @@ declare namespace java {
                  * @return a field providing access to the week-based-year, not null
                  */
                 // @ts-ignore
-                weekBasedYear(): java.time.temporal.TemporalField
+                public weekBasedYear(): java.time.temporal.TemporalField
                 /**
                  * Checks if this {@code WeekFields} is equal to the specified object.
                  * <p>
@@ -371,19 +371,19 @@ declare namespace java {
                  * @return true if this is equal to the specified rules
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * A hash code for this {@code WeekFields}.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * A string representation of this {@code WeekFields} instance.
                  * @return the string representation, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

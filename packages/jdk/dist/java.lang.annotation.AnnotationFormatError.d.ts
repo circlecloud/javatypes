@@ -19,7 +19,7 @@ declare namespace java {
                  * @param message   the detail message.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a new <tt>AnnotationFormatError</tt> with the specified
                  * detail message and cause.  Note that the detail message associated
@@ -30,7 +30,7 @@ declare namespace java {
                  *      indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a new <tt>AnnotationFormatError</tt> with the specified
                  * cause and a detail message of
@@ -40,7 +40,7 @@ declare namespace java {
                  *      indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

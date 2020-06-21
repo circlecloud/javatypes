@@ -10,7 +10,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    constructor(channel: string)
+                    constructor(channel: java.lang.String | string)
                 }
             }
         }

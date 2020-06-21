@@ -25,7 +25,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getRegistry(): java.rmi.registry.Registry
+                public static getRegistry(): java.rmi.registry.Registry
                 /**
                  * Returns a reference to the the remote object <code>Registry</code> for
                  * the local host on the specified <code>port</code>.
@@ -35,7 +35,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getRegistry(port: number /*int*/): java.rmi.registry.Registry
+                public static getRegistry(port: number /*int*/): java.rmi.registry.Registry
                 /**
                  * Returns a reference to the remote object <code>Registry</code> on the
                  * specified <code>host</code> on the default registry port of 1099.  If
@@ -46,7 +46,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getRegistry(host: string): java.rmi.registry.Registry
+                public static getRegistry(host: java.lang.String | string): java.rmi.registry.Registry
                 /**
                  * Returns a reference to the remote object <code>Registry</code> on the
                  * specified <code>host</code> and <code>port</code>. If <code>host</code>
@@ -58,7 +58,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getRegistry(host: string, port: number /*int*/): java.rmi.registry.Registry
+                public static getRegistry(host: java.lang.String | string, port: number /*int*/): java.rmi.registry.Registry
                 /**
                  * Returns a locally created remote reference to the remote object
                  * <code>Registry</code> on the specified <code>host</code> and
@@ -77,7 +77,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getRegistry(host: string, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory): java.rmi.registry.Registry
+                public static getRegistry(host: java.lang.String | string, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory): java.rmi.registry.Registry
                 /**
                  * Creates and exports a <code>Registry</code> instance on the local
                  * host that accepts requests on the specified <code>port</code>.
@@ -94,7 +94,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                createRegistry(port: number /*int*/): java.rmi.registry.Registry
+                public static createRegistry(port: number /*int*/): java.rmi.registry.Registry
                 /**
                  * Creates and exports a <code>Registry</code> instance on the local
                  * host that uses custom socket factories for communication with that
@@ -122,7 +122,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                createRegistry(port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.registry.Registry
+                public static createRegistry(port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.registry.Registry
             }
         }
     }

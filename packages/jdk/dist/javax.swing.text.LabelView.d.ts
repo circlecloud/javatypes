@@ -96,7 +96,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getBackground(): java.awt.Color
+                public getBackground(): java.awt.Color
                 /**
                  * Fetches the foreground color to use to render the glyphs.
                  * This is implemented to return a cached foreground color,
@@ -105,14 +105,14 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getForeground(): java.awt.Color
+                public getForeground(): java.awt.Color
                 /**
                  * Fetches the font that the glyphs should be based upon.
                  * This is implemented to return a cached font.
                  * @return the cached font
                  */
                 // @ts-ignore
-                getFont(): java.awt.Font
+                public getFont(): java.awt.Font
                 /**
                  * Determines if the glyphs should be underlined.  If true,
                  * an underline should be drawn through the baseline.  This
@@ -127,7 +127,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isUnderline(): boolean
+                public isUnderline(): boolean
                 /**
                  * Determines if the glyphs should have a strikethrough
                  * line.  If true, a line should be drawn through the center
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isStrikeThrough(): boolean
+                public isStrikeThrough(): boolean
                 /**
                  * Determines if the glyphs should be rendered as superscript.
                  * @return the value of the cached subscript property
@@ -158,7 +158,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isSubscript(): boolean
+                public isSubscript(): boolean
                 /**
                  * Determines if the glyphs should be rendered as subscript.
                  * <p>When you request this property, <code>LabelView</code>
@@ -171,7 +171,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isSuperscript(): boolean
+                public isSuperscript(): boolean
                 /**
                  * Gives notification from the document that attributes were changed
                  * in a location that this view is responsible for.
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @see View#changedUpdate
                  */
                 // @ts-ignore
-                changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
             }
         }
     }

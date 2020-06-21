@@ -57,7 +57,7 @@ declare namespace org {
                          * @return The maximum amount of lines that will be sent per page
                          */
                         // @ts-ignore
-                        getLinesPerPage(): int
+                        getLinesPerPage(): number /*int*/
                         /**
                          * Sends the first page of the constructed pagination list
                          * to the specified message receiver.

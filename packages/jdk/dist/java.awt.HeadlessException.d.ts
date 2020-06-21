@@ -12,9 +12,9 @@ declare namespace java {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            constructor(msg: string)
+            constructor(msg: java.lang.String | string)
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

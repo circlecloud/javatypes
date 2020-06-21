@@ -148,7 +148,7 @@ declare namespace org {
                          * @return The time in ticks
                          */
                         // @ts-ignore
-                        getBlockDigTimeWith(position: Vector3i, itemStack: org.spongepowered.api.item.inventory.ItemStack, profile: org.spongepowered.api.profile.GameProfile): int
+                        getBlockDigTimeWith(position: Vector3i, itemStack: org.spongepowered.api.item.inventory.ItemStack, profile: org.spongepowered.api.profile.GameProfile): number /*int*/
                         /**
                          * Gets the time it takes to dig this block with the specified item in
                          * ticks.
@@ -160,9 +160,9 @@ declare namespace org {
                          * @return The time in ticks
                          */
                         // @ts-ignore
-                        getBlockDigTimeWith(x: number /*int*/, y: number /*int*/, z: number /*int*/, itemStack: org.spongepowered.api.item.inventory.ItemStack, profile: org.spongepowered.api.profile.GameProfile): int
+                        getBlockDigTimeWith(x: number /*int*/, y: number /*int*/, z: number /*int*/, itemStack: org.spongepowered.api.item.inventory.ItemStack, profile: org.spongepowered.api.profile.GameProfile): number /*int*/
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<? extends org.spongepowered.api.world.extent.InteractableVolume>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<any>
                     }
                 }
             }

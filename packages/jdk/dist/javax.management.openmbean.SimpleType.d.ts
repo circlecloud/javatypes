@@ -22,85 +22,85 @@ declare namespace javax {
                  * Java class name is <code>java.lang.Void</code>.
                  */
                 // @ts-ignore
-                readonly VOID: javax.management.openmbean.SimpleType<java.lang.Void>
+                public static readonly VOID: javax.management.openmbean.SimpleType<java.lang.Void>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Boolean</code>.
                  */
                 // @ts-ignore
-                readonly BOOLEAN: javax.management.openmbean.SimpleType<java.lang.Boolean>
+                public static readonly BOOLEAN: javax.management.openmbean.SimpleType<java.lang.Boolean>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Character</code>.
                  */
                 // @ts-ignore
-                readonly CHARACTER: javax.management.openmbean.SimpleType<java.lang.Character>
+                public static readonly CHARACTER: javax.management.openmbean.SimpleType<java.lang.Character>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Byte</code>.
                  */
                 // @ts-ignore
-                readonly BYTE: javax.management.openmbean.SimpleType<java.lang.Byte>
+                public static readonly BYTE: javax.management.openmbean.SimpleType<java.lang.Byte | number>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Short</code>.
                  */
                 // @ts-ignore
-                readonly SHORT: javax.management.openmbean.SimpleType<java.lang.Short>
+                public static readonly SHORT: javax.management.openmbean.SimpleType<java.lang.Short | number>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Integer</code>.
                  */
                 // @ts-ignore
-                readonly INTEGER: javax.management.openmbean.SimpleType<java.lang.Integer>
+                public static readonly INTEGER: javax.management.openmbean.SimpleType<java.lang.Integer | number>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Long</code>.
                  */
                 // @ts-ignore
-                readonly LONG: javax.management.openmbean.SimpleType<java.lang.Long>
+                public static readonly LONG: javax.management.openmbean.SimpleType<java.lang.Long | number>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Float</code>.
                  */
                 // @ts-ignore
-                readonly FLOAT: javax.management.openmbean.SimpleType<java.lang.Float>
+                public static readonly FLOAT: javax.management.openmbean.SimpleType<java.lang.Float | number>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.Double</code>.
                  */
                 // @ts-ignore
-                readonly DOUBLE: javax.management.openmbean.SimpleType<java.lang.Double>
+                public static readonly DOUBLE: javax.management.openmbean.SimpleType<java.lang.Double | number>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.lang.String</code>.
                  */
                 // @ts-ignore
-                readonly STRING: javax.management.openmbean.SimpleType<java.lang.String>
+                public static readonly STRING: javax.management.openmbean.SimpleType<java.lang.String | string>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.math.BigDecimal</code>.
                  */
                 // @ts-ignore
-                readonly BIGDECIMAL: javax.management.openmbean.SimpleType<java.math.BigDecimal>
+                public static readonly BIGDECIMAL: javax.management.openmbean.SimpleType<java.math.BigDecimal>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.math.BigInteger</code>.
                  */
                 // @ts-ignore
-                readonly BIGINTEGER: javax.management.openmbean.SimpleType<java.math.BigInteger>
+                public static readonly BIGINTEGER: javax.management.openmbean.SimpleType<java.math.BigInteger>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>java.util.Date</code>.
                  */
                 // @ts-ignore
-                readonly DATE: javax.management.openmbean.SimpleType<java.util.Date>
+                public static readonly DATE: javax.management.openmbean.SimpleType<java.util.Date>
                 /**
                  * The <code>SimpleType</code> instance describing values whose
                  * Java class name is <code>javax.management.ObjectName</code>.
                  */
                 // @ts-ignore
-                readonly OBJECTNAME: javax.management.openmbean.SimpleType<javax.management.ObjectName>
+                public static readonly OBJECTNAME: javax.management.openmbean.SimpleType<javax.management.ObjectName>
                 /**
                  * Tests whether <var>obj</var> is a value for this
                  * <code>SimpleType</code> instance.  <p> This method returns
@@ -114,7 +114,7 @@ declare namespace javax {
                  *  <code>SimpleType</code> instance.
                  */
                 // @ts-ignore
-                isValue(obj: any): boolean
+                public isValue(obj: java.lang.Object | any): boolean
                 /**
                  * Compares the specified <code>obj</code> parameter with this <code>SimpleType</code> instance for equality.
                  * <p>
@@ -126,7 +126,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>SimpleType</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>SimpleType</code> instance.
                  * The hash code of a <code>SimpleType</code> instance is the the hash code of
@@ -137,7 +137,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>SimpleType</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>SimpleType</code> instance.
                  * <p>
@@ -150,7 +150,7 @@ declare namespace javax {
                  * @return a string representation of this <code>SimpleType</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Replace an object read from an {@link
                  * java.io.ObjectInputStream} with the unique instance for that
@@ -160,7 +160,7 @@ declare namespace javax {
                  *  resolved.
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                public readResolve(): any
             }
         }
     }

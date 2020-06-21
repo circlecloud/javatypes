@@ -133,7 +133,7 @@ declare namespace org {
                  * @see SynthesizedAnnotation
                  */
                 // @ts-ignore
-                class AliasFor implements java.lang.annotation.Annotation {
+                abstract class AliasFor implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -32,7 +32,7 @@ declare namespace javax {
                  *  array of instances of a subclass of {@code MBeanParameterInfo}.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.openmbean.OpenMBeanParameterInfo[], returnOpenType: javax.management.openmbean.OpenType<any>, impact: number /*int*/)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.openmbean.OpenMBeanParameterInfo[], returnOpenType: javax.management.openmbean.OpenType<any>, impact: number /*int*/)
                 /**
                  * <p>Constructs an {@code OpenMBeanOperationInfoSupport}
                  * instance, which describes the operation of a class of open
@@ -61,14 +61,14 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.openmbean.OpenMBeanParameterInfo[], returnOpenType: javax.management.openmbean.OpenType<any>, impact: number /*int*/, descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.openmbean.OpenMBeanParameterInfo[], returnOpenType: javax.management.openmbean.OpenType<any>, impact: number /*int*/, descriptor: javax.management.Descriptor)
                 /**
                  * Returns the <i>open type</i> of the values returned by the
                  * operation described by this {@code OpenMBeanOperationInfo}
                  * instance.
                  */
                 // @ts-ignore
-                getReturnOpenType(): javax.management.openmbean.OpenType<?>
+                public getReturnOpenType(): javax.management.openmbean.OpenType<any>
                 /**
                  * <p>Compares the specified {@code obj} parameter with this
                  * {@code OpenMBeanOperationInfoSupport} instance for
@@ -93,7 +93,7 @@ declare namespace javax {
                  *  {@code OpenMBeanOperationInfoSupport} instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns the hash code value for this {@code
                  * OpenMBeanOperationInfoSupport} instance.</p>
@@ -121,7 +121,7 @@ declare namespace javax {
                  *  OpenMBeanOperationInfoSupport} instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * <p>Returns a string representation of this {@code
                  * OpenMBeanOperationInfoSupport} instance.</p>
@@ -138,7 +138,7 @@ declare namespace javax {
                  *  OpenMBeanOperationInfoSupport} instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

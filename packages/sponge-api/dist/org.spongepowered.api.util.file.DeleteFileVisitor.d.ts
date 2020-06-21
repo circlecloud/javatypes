@@ -14,11 +14,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly INSTANCE: org.spongepowered.api.util.file.DeleteFileVisitor
+                        public static readonly INSTANCE: org.spongepowered.api.util.file.DeleteFileVisitor
                         // @ts-ignore
-                        visitFile(file: java.nio.file.Path, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
+                        public visitFile(file: java.nio.file.Path, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
                         // @ts-ignore
-                        postVisitDirectory(dir: java.nio.file.Path, exc: java.io.IOException): java.nio.file.FileVisitResult
+                        public postVisitDirectory(dir: java.nio.file.Path, exc: java.io.IOException): java.nio.file.FileVisitResult
                     }
                 }
             }

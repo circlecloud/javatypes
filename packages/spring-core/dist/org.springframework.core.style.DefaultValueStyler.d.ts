@@ -16,7 +16,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    style(value: any): java.lang.String
+                    public style(value: java.lang.Object | any): string
                 }
             }
         }

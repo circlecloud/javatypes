@@ -25,20 +25,20 @@ declare namespace javax {
                  * attributes.
                  */
                 // @ts-ignore
-                
+                readonly NameAttribute: java.lang.Object | any
                 /**
                  * Attribute name used to identify the resolving parent
                  * set of attributes, if one is defined.
                  */
                 // @ts-ignore
-                
+                readonly ResolveAttribute: java.lang.Object | any
                 /**
                  * Returns the number of attributes that are defined locally in this set.
                  * Attributes that are defined in the parent set are not included.
                  * @return the number of attributes &gt;= 0
                  */
                 // @ts-ignore
-                getAttributeCount(): int
+                getAttributeCount(): number /*int*/
                 /**
                  * Checks whether the named attribute has a value specified in
                  * the set without resolving through another attribute
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @return true if the attribute has a value specified
                  */
                 // @ts-ignore
-                isDefined(attrName: any): boolean
+                isDefined(attrName: java.lang.Object | any): boolean
                 /**
                  * Determines if the two attribute sets are equivalent.
                  * @param attr an attribute set
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @return the value of the attribute, or {#code null} if not found
                  */
                 // @ts-ignore
-                getAttribute(key: any): java.lang.Object
+                getAttribute(key: java.lang.Object | any): any
                 /**
                  * Returns an enumeration over the names of the attributes that are
                  * defined locally in the set. Names of attributes defined in the
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @return the names
                  */
                 // @ts-ignore
-                getAttributeNames(): java.util.Enumeration<?>
+                getAttributeNames(): java.util.Enumeration<any>
                 /**
                  * Returns {@code true} if this set defines an attribute with the same
                  * name and an equal value. If such an attribute is not found locally,
@@ -98,7 +98,7 @@ declare namespace javax {
                  *       {@code value} is {@code null}
                  */
                 // @ts-ignore
-                containsAttribute(name: any, value: any): boolean
+                containsAttribute(name: java.lang.Object | any, value: java.lang.Object | any): boolean
                 /**
                  * Returns {@code true} if this set defines all the attributes from the
                  * given set with equal values. If an attribute is not found locally,

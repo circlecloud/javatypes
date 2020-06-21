@@ -16,11 +16,11 @@ declare namespace org {
                      * @return Cause of the event
                      */
                     // @ts-ignore
-                    getCause(): org.bukkit.event.player.PlayerTeleportEvent.TeleportCause
+                    public getCause(): org.bukkit.event.player.PlayerTeleportEvent.TeleportCause
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

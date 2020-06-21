@@ -31,7 +31,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    send(routingKey: string, message: org.springframework.amqp.core.Message): void
+                    send(routingKey: java.lang.String | string, message: org.springframework.amqp.core.Message): void
                     /**
                      * Send a message to a specific exchange with a specific routing key.
                      * @param exchange the name of the exchange
@@ -40,7 +40,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    send(exchange: string, routingKey: string, message: org.springframework.amqp.core.Message): void
+                    send(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: org.springframework.amqp.core.Message): void
                     /**
                      * Convert a Java object to an Amqp {@link Message} and send it to a default exchange
                      * with a default routing key.
@@ -48,7 +48,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertAndSend(message: any): void
+                    convertAndSend(message: java.lang.Object | any): void
                     /**
                      * Convert a Java object to an Amqp {@link Message} and send it to a default exchange
                      * with a specific routing key.
@@ -57,7 +57,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertAndSend(routingKey: string, message: any): void
+                    convertAndSend(routingKey: java.lang.String | string, message: java.lang.Object | any): void
                     /**
                      * Convert a Java object to an Amqp {@link Message} and send it to a specific exchange
                      * with a specific routing key.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertAndSend(exchange: string, routingKey: string, message: any): void
+                    convertAndSend(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: java.lang.Object | any): void
                     /**
                      * Convert a Java object to an Amqp {@link Message} and send it to a default exchange
                      * with a default routing key.
@@ -76,7 +76,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertAndSend(message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): void
+                    convertAndSend(message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): void
                     /**
                      * Convert a Java object to an Amqp {@link Message} and send it to a default exchange
                      * with a specific routing key.
@@ -86,7 +86,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertAndSend(routingKey: string, message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): void
+                    convertAndSend(routingKey: java.lang.String | string, message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): void
                     /**
                      * Convert a Java object to an Amqp {@link Message} and send it to a specific exchange
                      * with a specific routing key.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertAndSend(exchange: string, routingKey: string, message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): void
+                    convertAndSend(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): void
                     /**
                      * Receive a message if there is one from a default queue. Returns immediately,
                      * possibly with a null value.
@@ -114,7 +114,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    receive(queueName: string): org.springframework.amqp.core.Message
+                    receive(queueName: java.lang.String | string): org.springframework.amqp.core.Message
                     /**
                      * Receive a message from a default queue, waiting up to the specified wait time if
                      * necessary for a message to become available.
@@ -139,7 +139,7 @@ declare namespace org {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    receive(queueName: string, timeoutMillis: number /*long*/): org.springframework.amqp.core.Message
+                    receive(queueName: java.lang.String | string, timeoutMillis: number /*long*/): org.springframework.amqp.core.Message
                     /**
                      * Receive a message if there is one from a default queue and convert it to a Java
                      * object. Returns immediately, possibly with a null value.
@@ -147,7 +147,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    receiveAndConvert(): java.lang.Object
+                    receiveAndConvert(): any
                     /**
                      * Receive a message if there is one from a specific queue and convert it to a Java
                      * object. Returns immediately, possibly with a null value.
@@ -156,7 +156,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    receiveAndConvert(queueName: string): java.lang.Object
+                    receiveAndConvert(queueName: java.lang.String | string): any
                     /**
                      * Receive a message if there is one from a default queue and convert it to a Java
                      * object. Wait up to the specified wait time if necessary for a message to become
@@ -169,7 +169,7 @@ declare namespace org {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    receiveAndConvert(timeoutMillis: number /*long*/): java.lang.Object
+                    receiveAndConvert(timeoutMillis: number /*long*/): any
                     /**
                      * Receive a message if there is one from a specific queue and convert it to a Java
                      * object. Wait up to the specified wait time if necessary for a message to become
@@ -183,7 +183,7 @@ declare namespace org {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    receiveAndConvert(queueName: string, timeoutMillis: number /*long*/): java.lang.Object
+                    receiveAndConvert(queueName: java.lang.String | string, timeoutMillis: number /*long*/): any
                     /**
                      * Receive a message if there is one from a default queue and convert it to a Java
                      * object. Returns immediately, possibly with a null value. Requires a
@@ -208,7 +208,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    receiveAndConvert<T>(queueName: string, type: object): T
+                    receiveAndConvert<T>(queueName: java.lang.String | string, type: object): T
                     /**
                      * Receive a message if there is one from a default queue and convert it to a Java
                      * object. Wait up to the specified wait time if necessary for a message to become
@@ -241,7 +241,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    receiveAndConvert<T>(queueName: string, timeoutMillis: number /*long*/, type: object): T
+                    receiveAndConvert<T>(queueName: java.lang.String | string, timeoutMillis: number /*long*/, type: object): T
                     /**
                      * Receive a message if there is one from a default queue, invoke provided
                      * {@link ReceiveAndReplyCallback} and send reply message, if the {@code callback}
@@ -272,7 +272,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem.
                      */
                     // @ts-ignore
-                    receiveAndReply<R, S>(queueName: string, callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>): boolean
+                    receiveAndReply<R, S>(queueName: java.lang.String | string, callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>): boolean
                     /**
                      * Receive a message if there is one from default queue, invoke provided
                      * {@link ReceiveAndReplyCallback} and send reply message, if the {@code callback}
@@ -287,7 +287,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem.
                      */
                     // @ts-ignore
-                    receiveAndReply<R, S>(callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>, replyExchange: string, replyRoutingKey: string): boolean
+                    receiveAndReply<R, S>(callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>, replyExchange: java.lang.String | string, replyRoutingKey: java.lang.String | string): boolean
                     /**
                      * Receive a message if there is one from provided queue, invoke provided
                      * {@link ReceiveAndReplyCallback} and send reply message, if the {@code callback}
@@ -303,7 +303,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    receiveAndReply<R, S>(queueName: string, callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>, replyExchange: string, replyRoutingKey: string): boolean
+                    receiveAndReply<R, S>(queueName: java.lang.String | string, callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>, replyExchange: java.lang.String | string, replyRoutingKey: java.lang.String | string): boolean
                     /**
                      * Receive a message if there is one from a default queue, invoke provided
                      * {@link ReceiveAndReplyCallback} and send reply message, if the {@code callback}
@@ -334,7 +334,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    receiveAndReply<R, S>(queueName: string, callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>, replyToAddressCallback: org.springframework.amqp.core.ReplyToAddressCallback<S>): boolean
+                    receiveAndReply<R, S>(queueName: java.lang.String | string, callback: org.springframework.amqp.core.ReceiveAndReplyCallback<R, S>, replyToAddressCallback: org.springframework.amqp.core.ReplyToAddressCallback<S>): boolean
                     /**
                      * Basic RPC pattern. Send a message to a default exchange with a default routing key
                      * and attempt to receive a response. Implementations will normally set the reply-to
@@ -355,7 +355,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    sendAndReceive(routingKey: string, message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
+                    sendAndReceive(routingKey: java.lang.String | string, message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
                     /**
                      * Basic RPC pattern. Send a message to a specific exchange with a specific routing
                      * key and attempt to receive a response. Implementations will normally set the
@@ -368,7 +368,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    sendAndReceive(exchange: string, routingKey: string, message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
+                    sendAndReceive(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a default routing key and attempt to receive a response,
@@ -379,7 +379,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertSendAndReceive(message: any): java.lang.Object
+                    convertSendAndReceive(message: java.lang.Object | any): any
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a specific routing key and attempt to receive a response,
@@ -391,7 +391,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertSendAndReceive(routingKey: string, message: any): java.lang.Object
+                    convertSendAndReceive(routingKey: java.lang.String | string, message: java.lang.Object | any): any
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * specific exchange with a specific routing key and attempt to receive a response,
@@ -404,7 +404,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertSendAndReceive(exchange: string, routingKey: string, message: any): java.lang.Object
+                    convertSendAndReceive(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: java.lang.Object | any): any
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a default routing key and attempt to receive a response,
@@ -416,7 +416,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertSendAndReceive(message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): java.lang.Object
+                    convertSendAndReceive(message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): any
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a specific routing key and attempt to receive a response,
@@ -429,7 +429,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertSendAndReceive(routingKey: string, message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): java.lang.Object
+                    convertSendAndReceive(routingKey: java.lang.String | string, message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): any
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * specific exchange with a specific routing key and attempt to receive a response,
@@ -443,7 +443,7 @@ declare namespace org {
                      * @throws AmqpException if there is a problem
                      */
                     // @ts-ignore
-                    convertSendAndReceive(exchange: string, routingKey: string, message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): java.lang.Object
+                    convertSendAndReceive(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): any
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a default routing key and attempt to receive a response,
@@ -459,7 +459,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<T>(message: any, responseType: object): T
+                    convertSendAndReceiveAsType<T>(message: java.lang.Object | any, responseType: object): T
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a specific routing key and attempt to receive a response,
@@ -475,7 +475,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<T>(routingKey: string, message: any, responseType: object): T
+                    convertSendAndReceiveAsType<T>(routingKey: java.lang.String | string, message: java.lang.Object | any, responseType: object): T
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * specific exchange with a specific routing key and attempt to receive a response,
@@ -492,7 +492,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<T>(exchange: string, routingKey: string, message: any, responseType: object): T
+                    convertSendAndReceiveAsType<T>(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: java.lang.Object | any, responseType: object): T
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a default routing key and attempt to receive a response,
@@ -508,7 +508,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<T>(message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): T
+                    convertSendAndReceiveAsType<T>(message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): T
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * default exchange with a specific routing key and attempt to receive a response,
@@ -525,7 +525,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<T>(routingKey: string, message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): T
+                    convertSendAndReceiveAsType<T>(routingKey: java.lang.String | string, message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): T
                     /**
                      * Basic RPC pattern with conversion. Send a Java object converted to a message to a
                      * specific exchange with a specific routing key and attempt to receive a response,
@@ -543,7 +543,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<T>(exchange: string, routingKey: string, message: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): T
+                    convertSendAndReceiveAsType<T>(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): T
                 }
             }
         }

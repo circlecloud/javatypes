@@ -40,7 +40,7 @@ declare namespace javax {
                  * @return the selected <code>Color</code>
                  */
                 // @ts-ignore
-                getSelectedColor(): java.awt.Color
+                public getSelectedColor(): java.awt.Color
                 /**
                  * Sets the selected color to <code>color</code>.
                  * Note that setting the color to <code>null</code>
@@ -52,19 +52,19 @@ declare namespace javax {
                  * @param color the new <code>Color</code>
                  */
                 // @ts-ignore
-                setSelectedColor(color: java.awt.Color): void
+                public setSelectedColor(color: java.awt.Color): void
                 /**
                  * Adds a <code>ChangeListener</code> to the model.
                  * @param l the <code>ChangeListener</code> to be added
                  */
                 // @ts-ignore
-                addChangeListener(l: javax.swing.event.ChangeListener): void
+                public addChangeListener(l: javax.swing.event.ChangeListener): void
                 /**
                  * Removes a <code>ChangeListener</code> from the model.
                  * @param l the <code>ChangeListener</code> to be removed
                  */
                 // @ts-ignore
-                removeChangeListener(l: javax.swing.event.ChangeListener): void
+                public removeChangeListener(l: javax.swing.event.ChangeListener): void
                 /**
                  * Returns an array of all the <code>ChangeListener</code>s added
                  * to this <code>DefaultColorSelectionModel</code> with
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getChangeListeners(): javax.swing.event.ChangeListener[]
+                public getChangeListeners(): javax.swing.event.ChangeListener[]
                 /**
                  * Runs each <code>ChangeListener</code>'s
                  * <code>stateChanged</code> method.

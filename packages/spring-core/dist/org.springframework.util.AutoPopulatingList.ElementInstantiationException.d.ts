@@ -8,9 +8,9 @@ declare namespace org {
                 // @ts-ignore
                 class ElementInstantiationException extends java.lang.RuntimeException {
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     // @ts-ignore
-                    constructor(message: string, cause: Error)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 }
             }
         }

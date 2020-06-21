@@ -37,7 +37,7 @@ declare namespace javax {
                  * @exception NamingException If an initial context factory could not be created.
                  */
                 // @ts-ignore
-                createInitialContextFactory(environment: java.util.Hashtable<any, ?>): javax.naming.spi.InitialContextFactory
+                createInitialContextFactory(environment: java.util.Hashtable<any, any>): javax.naming.spi.InitialContextFactory
             }
         }
     }

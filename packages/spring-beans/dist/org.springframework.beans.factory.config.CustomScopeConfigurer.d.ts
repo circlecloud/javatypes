@@ -28,7 +28,7 @@ declare namespace org {
                          * or class name.
                          */
                         // @ts-ignore
-                        setScopes(scopes: java.util.Map<java.lang.String, java.lang.Object>): void
+                        public setScopes(scopes: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                         /**
                          * Add the given scope to this configurer's map of scopes.
                          * @param scopeName the name of the scope
@@ -36,15 +36,15 @@ declare namespace org {
                          * @since 4.1.1
                          */
                         // @ts-ignore
-                        addScope(scopeName: string, scope: org.springframework.beans.factory.config.Scope): void
+                        public addScope(scopeName: java.lang.String | string, scope: org.springframework.beans.factory.config.Scope): void
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
+                        public postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
                     }
                 }
             }

@@ -51,7 +51,7 @@ declare namespace java {
              * @see ICC_ColorSpace
              */
             // @ts-ignore
-            class ColorSpace extends java.lang.Object implements java.io.Serializable {
+            abstract class ColorSpace extends java.lang.Object implements java.io.Serializable {
                 /**
                  * Constructs a ColorSpace object given a color space type
                  * and the number of components.
@@ -64,127 +64,127 @@ declare namespace java {
                  * Any of the family of XYZ color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_XYZ: number /*int*/
+                public static readonly TYPE_XYZ: number /*int*/
                 /**
                  * Any of the family of Lab color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_Lab: number /*int*/
+                public static readonly TYPE_Lab: number /*int*/
                 /**
                  * Any of the family of Luv color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_Luv: number /*int*/
+                public static readonly TYPE_Luv: number /*int*/
                 /**
                  * Any of the family of YCbCr color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_YCbCr: number /*int*/
+                public static readonly TYPE_YCbCr: number /*int*/
                 /**
                  * Any of the family of Yxy color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_Yxy: number /*int*/
+                public static readonly TYPE_Yxy: number /*int*/
                 /**
                  * Any of the family of RGB color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_RGB: number /*int*/
+                public static readonly TYPE_RGB: number /*int*/
                 /**
                  * Any of the family of GRAY color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_GRAY: number /*int*/
+                public static readonly TYPE_GRAY: number /*int*/
                 /**
                  * Any of the family of HSV color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_HSV: number /*int*/
+                public static readonly TYPE_HSV: number /*int*/
                 /**
                  * Any of the family of HLS color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_HLS: number /*int*/
+                public static readonly TYPE_HLS: number /*int*/
                 /**
                  * Any of the family of CMYK color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_CMYK: number /*int*/
+                public static readonly TYPE_CMYK: number /*int*/
                 /**
                  * Any of the family of CMY color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_CMY: number /*int*/
+                public static readonly TYPE_CMY: number /*int*/
                 /**
                  * Generic 2 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_2CLR: number /*int*/
+                public static readonly TYPE_2CLR: number /*int*/
                 /**
                  * Generic 3 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_3CLR: number /*int*/
+                public static readonly TYPE_3CLR: number /*int*/
                 /**
                  * Generic 4 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_4CLR: number /*int*/
+                public static readonly TYPE_4CLR: number /*int*/
                 /**
                  * Generic 5 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_5CLR: number /*int*/
+                public static readonly TYPE_5CLR: number /*int*/
                 /**
                  * Generic 6 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_6CLR: number /*int*/
+                public static readonly TYPE_6CLR: number /*int*/
                 /**
                  * Generic 7 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_7CLR: number /*int*/
+                public static readonly TYPE_7CLR: number /*int*/
                 /**
                  * Generic 8 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_8CLR: number /*int*/
+                public static readonly TYPE_8CLR: number /*int*/
                 /**
                  * Generic 9 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_9CLR: number /*int*/
+                public static readonly TYPE_9CLR: number /*int*/
                 /**
                  * Generic 10 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_ACLR: number /*int*/
+                public static readonly TYPE_ACLR: number /*int*/
                 /**
                  * Generic 11 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_BCLR: number /*int*/
+                public static readonly TYPE_BCLR: number /*int*/
                 /**
                  * Generic 12 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_CCLR: number /*int*/
+                public static readonly TYPE_CCLR: number /*int*/
                 /**
                  * Generic 13 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_DCLR: number /*int*/
+                public static readonly TYPE_DCLR: number /*int*/
                 /**
                  * Generic 14 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_ECLR: number /*int*/
+                public static readonly TYPE_ECLR: number /*int*/
                 /**
                  * Generic 15 component color spaces.
                  */
                 // @ts-ignore
-                readonly TYPE_FCLR: number /*int*/
+                public static readonly TYPE_FCLR: number /*int*/
                 /**
                  * The sRGB color space defined at
                  * <A href="http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html">
@@ -192,28 +192,28 @@ declare namespace java {
                  * </A>.
                  */
                 // @ts-ignore
-                readonly CS_sRGB: number /*int*/
+                public static readonly CS_sRGB: number /*int*/
                 /**
                  * A built-in linear RGB color space.  This space is based on the
                  * same RGB primaries as CS_sRGB, but has a linear tone reproduction curve.
                  */
                 // @ts-ignore
-                readonly CS_LINEAR_RGB: number /*int*/
+                public static readonly CS_LINEAR_RGB: number /*int*/
                 /**
                  * The CIEXYZ conversion color space defined above.
                  */
                 // @ts-ignore
-                readonly CS_CIEXYZ: number /*int*/
+                public static readonly CS_CIEXYZ: number /*int*/
                 /**
                  * The Photo YCC conversion color space.
                  */
                 // @ts-ignore
-                readonly CS_PYCC: number /*int*/
+                public static readonly CS_PYCC: number /*int*/
                 /**
                  * The built-in linear gray scale color space.
                  */
                 // @ts-ignore
-                readonly CS_GRAY: number /*int*/
+                public static readonly CS_GRAY: number /*int*/
                 /**
                  * Returns a ColorSpace representing one of the specific
                  * predefined color spaces.
@@ -223,14 +223,14 @@ declare namespace java {
                  * @return the requested <CODE>ColorSpace</CODE> object
                  */
                 // @ts-ignore
-                getInstance(colorspace: number /*int*/): java.awt.color.ColorSpace
+                public static getInstance(colorspace: number /*int*/): java.awt.color.ColorSpace
                 /**
                  * Returns true if the ColorSpace is CS_sRGB.
                  * @return <CODE>true</CODE> if this is a <CODE>CS_sRGB</CODE> color
                  *          space, <code>false</code> if it is not
                  */
                 // @ts-ignore
-                isCS_sRGB(): boolean
+                public isCS_sRGB(): boolean
                 /**
                  * Transforms a color value assumed to be in this ColorSpace
                  * into a value in the default CS_sRGB color space.
@@ -253,7 +253,7 @@ declare namespace java {
                  *          at least the number of components in this ColorSpace
                  */
                 // @ts-ignore
-                abstract toRGB(colorvalue: number /*float*/[]): float[]
+                public abstract toRGB(colorvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Transforms a color value assumed to be in the default CS_sRGB
                  * color space into this ColorSpace.
@@ -276,7 +276,7 @@ declare namespace java {
                  *          at least 3
                  */
                 // @ts-ignore
-                abstract fromRGB(rgbvalue: number /*float*/[]): float[]
+                public abstract fromRGB(rgbvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Transforms a color value assumed to be in this ColorSpace
                  * into the CS_CIEXYZ conversion color space.
@@ -302,7 +302,7 @@ declare namespace java {
                  *          at least the number of components in this ColorSpace.
                  */
                 // @ts-ignore
-                abstract toCIEXYZ(colorvalue: number /*float*/[]): float[]
+                public abstract toCIEXYZ(colorvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Transforms a color value assumed to be in the CS_CIEXYZ conversion
                  * color space into this ColorSpace.
@@ -329,7 +329,7 @@ declare namespace java {
                  *          at least 3
                  */
                 // @ts-ignore
-                abstract fromCIEXYZ(colorvalue: number /*float*/[]): float[]
+                public abstract fromCIEXYZ(colorvalue: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the color space type of this ColorSpace (for example
                  * TYPE_RGB, TYPE_XYZ, ...).  The type defines the
@@ -342,13 +342,13 @@ declare namespace java {
                  *          <CODE>ColorSpace</CODE>
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Returns the number of components of this ColorSpace.
                  * @return The number of components in this <CODE>ColorSpace</CODE>.
                  */
                 // @ts-ignore
-                getNumComponents(): int
+                public getNumComponents(): number /*int*/
                 /**
                  * Returns the name of the component given the component index.
                  * @param idx the component index
@@ -357,7 +357,7 @@ declare namespace java {
                  *          less than 0 or greater than numComponents - 1
                  */
                 // @ts-ignore
-                getName(idx: number /*int*/): java.lang.String
+                public getName(idx: number /*int*/): string
                 /**
                  * Returns the minimum normalized color component value for the
                  * specified component.  The default implementation in this abstract
@@ -370,7 +370,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getMinValue(component: number /*int*/): float
+                public getMinValue(component: number /*int*/): number /*float*/
                 /**
                  * Returns the maximum normalized color component value for the
                  * specified component.  The default implementation in this abstract
@@ -383,7 +383,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getMaxValue(component: number /*int*/): float
+                public getMaxValue(component: number /*int*/): number /*float*/
             }
         }
     }

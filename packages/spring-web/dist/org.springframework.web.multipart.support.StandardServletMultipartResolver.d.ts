@@ -46,13 +46,13 @@ declare namespace org {
                          * @since 3.2.9
                          */
                         // @ts-ignore
-                        setResolveLazily(resolveLazily: boolean): void
+                        public setResolveLazily(resolveLazily: boolean): void
                         // @ts-ignore
-                        isMultipart(request: HttpServletRequest): boolean
+                        public isMultipart(request: HttpServletRequest): boolean
                         // @ts-ignore
-                        resolveMultipart(request: HttpServletRequest): org.springframework.web.multipart.MultipartHttpServletRequest
+                        public resolveMultipart(request: HttpServletRequest): org.springframework.web.multipart.MultipartHttpServletRequest
                         // @ts-ignore
-                        cleanupMultipart(request: org.springframework.web.multipart.MultipartHttpServletRequest): void
+                        public cleanupMultipart(request: org.springframework.web.multipart.MultipartHttpServletRequest): void
                     }
                 }
             }

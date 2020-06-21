@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable value for a slime
                                  */
                                 // @ts-ignore
-                                size(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer>
+                                size(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Integer | number>
                             }
                         }
                     }

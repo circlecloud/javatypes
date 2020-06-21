@@ -44,7 +44,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                dispose(): void
+                public dispose(): void
                 /**
                  * Creates the back buffers
                  */
@@ -54,17 +54,17 @@ declare namespace java {
                  * @return the buffering capabilities of this strategy
                  */
                 // @ts-ignore
-                getCapabilities(): java.awt.BufferCapabilities
+                public getCapabilities(): java.awt.BufferCapabilities
                 /**
                  * @return the draw graphics
                  */
                 // @ts-ignore
-                getDrawGraphics(): java.awt.Graphics
+                public getDrawGraphics(): java.awt.Graphics
                 /**
                  * Makes the next available buffer visible.
                  */
                 // @ts-ignore
-                show(): void
+                public show(): void
                 /**
                  * Restore the drawing buffer if it has been lost
                  */
@@ -75,13 +75,13 @@ declare namespace java {
                  *  <code>getDrawGraphics</code>
                  */
                 // @ts-ignore
-                contentsLost(): boolean
+                public contentsLost(): boolean
                 /**
                  * @return whether the drawing buffer was recently restored from a lost
                  *  state and reinitialized to the default background color (white)
                  */
                 // @ts-ignore
-                contentsRestored(): boolean
+                public contentsRestored(): boolean
             }
         }
     }

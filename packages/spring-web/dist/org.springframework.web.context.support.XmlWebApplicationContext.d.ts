@@ -42,17 +42,17 @@ declare namespace org {
                          * Default config location for the root context.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CONFIG_LOCATION: string
+                        public static readonly DEFAULT_CONFIG_LOCATION: java.lang.String | string
                         /**
                          * Default prefix for building a config location for a namespace.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CONFIG_LOCATION_PREFIX: string
+                        public static readonly DEFAULT_CONFIG_LOCATION_PREFIX: java.lang.String | string
                         /**
                          * Default suffix for building a config location for a namespace.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CONFIG_LOCATION_SUFFIX: string
+                        public static readonly DEFAULT_CONFIG_LOCATION_SUFFIX: java.lang.String | string
                         /**
                          * Loads the bean definitions via an XmlBeanDefinitionReader.
                          * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
@@ -92,7 +92,7 @@ declare namespace org {
                          * (like for a DispatcherServlet instance with the servlet-name "test").
                          */
                         // @ts-ignore
-                        getDefaultConfigLocations(): java.lang.String[]
+                        getDefaultConfigLocations(): string[]
                     }
                 }
             }

@@ -19,7 +19,7 @@ declare namespace org {
                  * @since 01.03.2003
                  */
                 // @ts-ignore
-                class HtmlUtils extends java.lang.Object {
+                abstract class HtmlUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return the escaped string
                      */
                     // @ts-ignore
-                    htmlEscape(input: string): java.lang.String
+                    public static htmlEscape(input: java.lang.String | string): string
                     /**
                      * Turn special characters into HTML character references.
                      * <p>Handles complete character set defined in HTML 4.01 recommendation.
@@ -53,7 +53,7 @@ declare namespace org {
                      * @since 4.1.2
                      */
                     // @ts-ignore
-                    htmlEscape(input: string, encoding: string): java.lang.String
+                    public static htmlEscape(input: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Turn special characters into HTML character references.
                      * <p>Handles complete character set defined in HTML 4.01 recommendation.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return the escaped string
                      */
                     // @ts-ignore
-                    htmlEscapeDecimal(input: string): java.lang.String
+                    public static htmlEscapeDecimal(input: java.lang.String | string): string
                     /**
                      * Turn special characters into HTML character references.
                      * <p>Handles complete character set defined in HTML 4.01 recommendation.
@@ -85,7 +85,7 @@ declare namespace org {
                      * @since 4.1.2
                      */
                     // @ts-ignore
-                    htmlEscapeDecimal(input: string, encoding: string): java.lang.String
+                    public static htmlEscapeDecimal(input: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Turn special characters into HTML character references.
                      * <p>Handles complete character set defined in HTML 4.01 recommendation.
@@ -99,7 +99,7 @@ declare namespace org {
                      * @return the escaped string
                      */
                     // @ts-ignore
-                    htmlEscapeHex(input: string): java.lang.String
+                    public static htmlEscapeHex(input: java.lang.String | string): string
                     /**
                      * Turn special characters into HTML character references.
                      * <p>Handles complete character set defined in HTML 4.01 recommendation.
@@ -117,7 +117,7 @@ declare namespace org {
                      * @since 4.1.2
                      */
                     // @ts-ignore
-                    htmlEscapeHex(input: string, encoding: string): java.lang.String
+                    public static htmlEscapeHex(input: java.lang.String | string, encoding: java.lang.String | string): string
                     /**
                      * Turn HTML character references into their plain text UNICODE equivalent.
                      * <p>Handles complete character set defined in HTML 4.01 recommendation
@@ -138,7 +138,7 @@ declare namespace org {
                      * @return the unescaped string
                      */
                     // @ts-ignore
-                    htmlUnescape(input: string): java.lang.String
+                    public static htmlUnescape(input: java.lang.String | string): string
                 }
             }
         }

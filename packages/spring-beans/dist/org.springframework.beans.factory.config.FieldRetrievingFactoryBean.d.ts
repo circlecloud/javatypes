@@ -23,7 +23,7 @@ declare namespace org {
                      * @see #setStaticField
                      */
                     // @ts-ignore
-                    class FieldRetrievingFactoryBean extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<java.lang.Object>, org.springframework.beans.factory.BeanNameAware, org.springframework.beans.factory.BeanClassLoaderAware, org.springframework.beans.factory.InitializingBean {
+                    class FieldRetrievingFactoryBean extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<java.lang.Object | any>, org.springframework.beans.factory.BeanNameAware, org.springframework.beans.factory.BeanClassLoaderAware, org.springframework.beans.factory.InitializingBean {
                         // @ts-ignore
                         constructor()
                         /**
@@ -34,12 +34,12 @@ declare namespace org {
                          * @see #setTargetField
                          */
                         // @ts-ignore
-                        setTargetClass(targetClass: java.lang.Class<any>): void
+                        public setTargetClass(targetClass: java.lang.Class<any>): void
                         /**
                          * Return the target class on which the field is defined.
                          */
                         // @ts-ignore
-                        getTargetClass(): java.lang.Class<?>
+                        public getTargetClass(): java.lang.Class<any>
                         /**
                          * Set the target object on which the field is defined.
                          * Only necessary when the target field is not static;
@@ -48,12 +48,12 @@ declare namespace org {
                          * @see #setTargetField
                          */
                         // @ts-ignore
-                        setTargetObject(targetObject: any): void
+                        public setTargetObject(targetObject: java.lang.Object | any): void
                         /**
                          * Return the target object on which the field is defined.
                          */
                         // @ts-ignore
-                        getTargetObject(): java.lang.Object
+                        public getTargetObject(): any
                         /**
                          * Set the name of the field to be retrieved.
                          * Refers to either a static field or a non-static field,
@@ -62,12 +62,12 @@ declare namespace org {
                          * @see #setTargetObject
                          */
                         // @ts-ignore
-                        setTargetField(targetField: string): void
+                        public setTargetField(targetField: java.lang.String | string): void
                         /**
                          * Return the name of the field to be retrieved.
                          */
                         // @ts-ignore
-                        getTargetField(): java.lang.String
+                        public getTargetField(): string
                         /**
                          * Set a fully qualified static field name to retrieve,
                          * e.g. "example.MyExampleClass.MY_EXAMPLE_FIELD".
@@ -76,7 +76,7 @@ declare namespace org {
                          * @see #setTargetField
                          */
                         // @ts-ignore
-                        setStaticField(staticField: string): void
+                        public setStaticField(staticField: java.lang.String | string): void
                         /**
                          * The bean name of this FieldRetrievingFactoryBean will be interpreted
                          * as "staticField" pattern, if neither "targetClass" nor "targetObject"
@@ -84,17 +84,17 @@ declare namespace org {
                          * This allows for concise bean definitions with just an id/name.
                          */
                         // @ts-ignore
-                        setBeanName(beanName: string): void
+                        public setBeanName(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObject(): java.lang.Object
+                        public getObject(): any
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

@@ -15,7 +15,7 @@ declare namespace org {
                      * @return the 'power' value
                      */
                     // @ts-ignore
-                    getPower(): int
+                    getPower(): number /*int*/
                     /**
                      * Sets the value of the 'power' property.
                      * @param power the new 'power' value
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return the maximum 'power' value
                      */
                     // @ts-ignore
-                    getMaximumPower(): int
+                    getMaximumPower(): number /*int*/
                 }
             }
         }

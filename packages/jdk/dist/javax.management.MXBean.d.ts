@@ -961,7 +961,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class MXBean implements java.lang.annotation.Annotation {
+        abstract class MXBean implements java.lang.annotation.Annotation {
         }
     }
 }

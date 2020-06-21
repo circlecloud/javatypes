@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 3.0.5
                  */
                 // @ts-ignore
-                class DefaultSerializer extends java.lang.Object implements org.springframework.core.serializer.Serializer<java.lang.Object> {
+                class DefaultSerializer extends java.lang.Object implements org.springframework.core.serializer.Serializer<java.lang.Object | any> {
                     // @ts-ignore
                     constructor()
                     /**
@@ -19,7 +19,7 @@ declare namespace org {
                      * @see ObjectOutputStream#writeObject(Object)
                      */
                     // @ts-ignore
-                    serialize(object: any, outputStream: java.io.OutputStream): void
+                    public serialize(object: java.lang.Object | any, outputStream: java.io.OutputStream): void
                 }
             }
         }

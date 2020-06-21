@@ -22,7 +22,7 @@ declare namespace javax {
                  * @throws InvalidKeyException  if <tt>key</tt> is not an existing item name for this <tt>CompositeData</tt> instance.
                  */
                 // @ts-ignore
-                get(key: string): java.lang.Object
+                get(key: java.lang.String | string): any
                 /**
                  * Returns an array of the values of the items whose names are specified by <tt>keys</tt>, in the same order as <tt>keys</tt>.
                  * @param keys the names of the items.
@@ -31,7 +31,7 @@ declare namespace javax {
                  * @throws InvalidKeyException  if an element in <tt>keys</tt> is not an existing item name for this <tt>CompositeData</tt> instance.
                  */
                 // @ts-ignore
-                getAll(keys: string[]): java.lang.Object[]
+                getAll(keys: java.lang.String[] | string[]): any[]
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance contains
                  * an item whose name is <tt>key</tt>.
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @return true if this <tt>CompositeData</tt> contains the key.
                  */
                 // @ts-ignore
-                containsKey(key: string): boolean
+                containsKey(key: java.lang.String | string): boolean
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>CompositeData</tt> instance contains an item
                  * whose value is <tt>value</tt>.
@@ -48,7 +48,7 @@ declare namespace javax {
                  * @return true if this <tt>CompositeData</tt> contains the value.
                  */
                 // @ts-ignore
-                containsValue(value: any): boolean
+                containsValue(value: java.lang.Object | any): boolean
                 /**
                  * Returns an unmodifiable Collection view of the item values contained in this <tt>CompositeData</tt> instance.
                  * The returned collection's iterator will return the values in the ascending lexicographic order of the corresponding
@@ -56,7 +56,7 @@ declare namespace javax {
                  * @return the values.
                  */
                 // @ts-ignore
-                values(): java.util.Collection<?>
+                values(): Array<any>
                 /**
                  * Compares the specified <var>obj</var> parameter with this
                  * <code>CompositeData</code> instance for equality.
@@ -84,7 +84,7 @@ declare namespace javax {
                  *  <code>CompositeData</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>CompositeData</code> instance.
                  * <p>
@@ -106,7 +106,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>CompositeData</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>CompositeData</code> instance.
                  * <p>
@@ -116,7 +116,7 @@ declare namespace javax {
                  * @return a string representation of this <code>CompositeData</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

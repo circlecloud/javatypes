@@ -32,7 +32,7 @@ declare namespace org {
                  * @see Condition
                  */
                 // @ts-ignore
-                class Conditional implements java.lang.annotation.Annotation {
+                abstract class Conditional implements java.lang.annotation.Annotation {
                 }
             }
         }

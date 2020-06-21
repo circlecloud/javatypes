@@ -20,7 +20,7 @@ declare namespace java {
                  * the specified <code>String</code>.
                  */
                 // @ts-ignore
-                constructor(data: string)
+                constructor(data: java.lang.String | string)
                 /**
                  * Returns an array of flavors in which this <code>Transferable</code>
                  * can provide the data. <code>DataFlavor.stringFlavor</code>
@@ -31,7 +31,7 @@ declare namespace java {
                  *          stringFlavor</code> and <code>DataFlavor.plainTextFlavor</code>
                  */
                 // @ts-ignore
-                getTransferDataFlavors(): java.awt.datatransfer.DataFlavor[]
+                public getTransferDataFlavors(): java.awt.datatransfer.DataFlavor[]
                 /**
                  * Returns whether the requested flavor is supported by this
                  * <code>Transferable</code>.
@@ -43,7 +43,7 @@ declare namespace java {
                  * @throws NullPointerException if flavor is <code>null</code>
                  */
                 // @ts-ignore
-                isDataFlavorSupported(flavor: java.awt.datatransfer.DataFlavor): boolean
+                public isDataFlavorSupported(flavor: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * Returns the <code>Transferable</code>'s data in the requested
                  * <code>DataFlavor</code> if possible. If the desired flavor is
@@ -68,9 +68,9 @@ declare namespace java {
                  * @see java.io.Reader
                  */
                 // @ts-ignore
-                getTransferData(flavor: java.awt.datatransfer.DataFlavor): java.lang.Object
+                public getTransferData(flavor: java.awt.datatransfer.DataFlavor): any
                 // @ts-ignore
-                lostOwnership(clipboard: java.awt.datatransfer.Clipboard, contents: java.awt.datatransfer.Transferable): void
+                public lostOwnership(clipboard: java.awt.datatransfer.Clipboard, contents: java.awt.datatransfer.Transferable): void
             }
         }
     }

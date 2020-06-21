@@ -21,7 +21,7 @@ declare namespace javax {
                  *  response is not yet available.
                  */
                 // @ts-ignore
-                getContext(): java.util.Map<java.lang.String, java.lang.Object>
+                getContext(): java.util.Map<java.lang.String | string, java.lang.Object | any>
             }
         }
     }

@@ -19,17 +19,17 @@ declare namespace org {
                          * Always returns {@code true}.
                          */
                         // @ts-ignore
-                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Always returns {@code true}.
                          */
                         // @ts-ignore
-                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         /**
                          * Always returns {@code true}.
                          */
                         // @ts-ignore
-                        includeOperation(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeOperation(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                     }
                 }
             }

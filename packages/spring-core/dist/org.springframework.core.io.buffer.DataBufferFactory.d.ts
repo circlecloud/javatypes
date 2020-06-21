@@ -57,7 +57,7 @@ declare namespace org {
                          * @since 5.0.3
                          */
                         // @ts-ignore
-                        join(dataBuffers: Array<org.springframework.core.io.buffer.DataBuffer>): org.springframework.core.io.buffer.DataBuffer
+                        join(dataBuffers: java.util.List<any> | Array<any>): org.springframework.core.io.buffer.DataBuffer
                     }
                 }
             }

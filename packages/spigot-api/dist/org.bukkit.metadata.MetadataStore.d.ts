@@ -12,7 +12,7 @@ declare namespace org {
                  *      is null
                  */
                 // @ts-ignore
-                setMetadata(subject: T, metadataKey: string, newMetadataValue: org.bukkit.metadata.MetadataValue): void
+                setMetadata(subject: T, metadataKey: java.lang.String | string, newMetadataValue: org.bukkit.metadata.MetadataValue): void
                 /**
                  * Returns all metadata values attached to an object. If multiple plugins
                  * have attached metadata, each will value will be included.
@@ -22,7 +22,7 @@ declare namespace org {
                  *      requested value.
                  */
                 // @ts-ignore
-                getMetadata(subject: T, metadataKey: string): java.util.List<org.bukkit.metadata.MetadataValue>
+                getMetadata(subject: T, metadataKey: java.lang.String | string): Array<org.bukkit.metadata.MetadataValue>
                 /**
                  * Tests to see if a metadata attribute has been set on an object.
                  * @param subject the object upon which the has-metadata test is
@@ -31,7 +31,7 @@ declare namespace org {
                  * @return the existence of the metadataKey within subject.
                  */
                 // @ts-ignore
-                hasMetadata(subject: T, metadataKey: string): boolean
+                hasMetadata(subject: T, metadataKey: java.lang.String | string): boolean
                 /**
                  * Removes a metadata item owned by a plugin from a subject.
                  * @param subject the object to remove the metadata from.
@@ -41,7 +41,7 @@ declare namespace org {
                  * @throws IllegalArgumentException If plugin is null
                  */
                 // @ts-ignore
-                removeMetadata(subject: T, metadataKey: string, owningPlugin: org.bukkit.plugin.Plugin): void
+                removeMetadata(subject: T, metadataKey: java.lang.String | string, owningPlugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Invalidates all metadata in the metadata store that originates from the
                  * given plugin. Doing this will force each invalidated metadata item to

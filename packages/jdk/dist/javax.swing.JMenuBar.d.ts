@@ -53,7 +53,7 @@ declare namespace javax {
              * @see #setUI
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.MenuBarUI
+            public getUI(): javax.swing.plaf.MenuBarUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui the new MenuBarUI L&amp;F object
@@ -64,13 +64,13 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.MenuBarUI): void
+            public setUI(ui: javax.swing.plaf.MenuBarUI): void
             /**
              * Resets the UI property with a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "MenuBarUI"
@@ -78,14 +78,14 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the model object that handles single selections.
              * @return the <code>SingleSelectionModel</code> property
              * @see SingleSelectionModel
              */
             // @ts-ignore
-            getSelectionModel(): javax.swing.SingleSelectionModel
+            public getSelectionModel(): javax.swing.SingleSelectionModel
             /**
              * Sets the model object to handle single selections.
              * @param model the <code>SingleSelectionModel</code> to use
@@ -94,14 +94,14 @@ declare namespace javax {
              *  description: The selection model, recording which child is selected.
              */
             // @ts-ignore
-            setSelectionModel(model: javax.swing.SingleSelectionModel): void
+            public setSelectionModel(model: javax.swing.SingleSelectionModel): void
             /**
              * Appends the specified menu to the end of the menu bar.
              * @param c the <code>JMenu</code> component to add
              * @return the menu component
              */
             // @ts-ignore
-            add(c: javax.swing.JMenu): javax.swing.JMenu
+            public add(c: javax.swing.JMenu): javax.swing.JMenu
             /**
              * Returns the menu at the specified position in the menu bar.
              * @param index  an integer giving the position in the menu bar, where
@@ -111,13 +111,13 @@ declare namespace javax {
              *           it is a <code>JMenuItem</code>)
              */
             // @ts-ignore
-            getMenu(index: number /*int*/): javax.swing.JMenu
+            public getMenu(index: number /*int*/): javax.swing.JMenu
             /**
              * Returns the number of items in the menu bar.
              * @return the number of items in the menu bar
              */
             // @ts-ignore
-            getMenuCount(): int
+            public getMenuCount(): number /*int*/
             /**
              * Sets the help menu that appears when the user selects the
              * "help" option in the menu bar. This method is not yet implemented
@@ -125,14 +125,14 @@ declare namespace javax {
              * @param menu the JMenu that delivers help to the user
              */
             // @ts-ignore
-            setHelpMenu(menu: javax.swing.JMenu): void
+            public setHelpMenu(menu: javax.swing.JMenu): void
             /**
              * Gets the help menu for the menu bar.  This method is not yet
              * implemented and will throw an exception.
              * @return the <code>JMenu</code> that delivers help to the user
              */
             // @ts-ignore
-            getHelpMenu(): javax.swing.JMenu
+            public getHelpMenu(): javax.swing.JMenu
             /**
              * Returns the component at the specified index.
              * @param i an integer specifying the position, where 0 is first
@@ -141,7 +141,7 @@ declare namespace javax {
              * @deprecated replaced by <code>getComponent(int i)</code>
              */
             // @ts-ignore
-            getComponentAtIndex(i: number /*int*/): java.awt.Component
+            public getComponentAtIndex(i: number /*int*/): java.awt.Component
             /**
              * Returns the index of the specified component.
              * @param c  the <code>Component</code> to find
@@ -149,26 +149,26 @@ declare namespace javax {
              *           or -1 if it can't be found
              */
             // @ts-ignore
-            getComponentIndex(c: java.awt.Component): int
+            public getComponentIndex(c: java.awt.Component): number /*int*/
             /**
              * Sets the currently selected component, producing a
              * a change to the selection model.
              * @param sel the <code>Component</code> to select
              */
             // @ts-ignore
-            setSelected(sel: java.awt.Component): void
+            public setSelected(sel: java.awt.Component): void
             /**
              * Returns true if the menu bar currently has a component selected.
              * @return true if a selection has been made, else false
              */
             // @ts-ignore
-            isSelected(): boolean
+            public isSelected(): boolean
             /**
              * Returns true if the menu bars border should be painted.
              * @return true if the border should be painted, else false
              */
             // @ts-ignore
-            isBorderPainted(): boolean
+            public isBorderPainted(): boolean
             /**
              * Sets whether the border should be painted.
              * @param b if true and border property is not <code>null</code>,
@@ -179,7 +179,7 @@ declare namespace javax {
              *   description: Whether the border should be painted.
              */
             // @ts-ignore
-            setBorderPainted(b: boolean): void
+            public setBorderPainted(b: boolean): void
             /**
              * Paints the menubar's border if <code>BorderPainted</code>
              * property is true.
@@ -200,7 +200,7 @@ declare namespace javax {
              *   description: The space between the menubar's border and its contents
              */
             // @ts-ignore
-            setMargin(m: java.awt.Insets): void
+            public setMargin(m: java.awt.Insets): void
             /**
              * Returns the margin between the menubar's border and
              * its menus.  If there is no previous margin, it will create
@@ -209,25 +209,25 @@ declare namespace javax {
              * @see Insets
              */
             // @ts-ignore
-            getMargin(): java.awt.Insets
+            public getMargin(): java.awt.Insets
             /**
              * Implemented to be a <code>MenuElement</code> -- does nothing.
              * @see #getSubElements
              */
             // @ts-ignore
-            processMouseEvent(event: java.awt.event.MouseEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
+            public processMouseEvent(event: java.awt.event.MouseEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
             /**
              * Implemented to be a <code>MenuElement</code> -- does nothing.
              * @see #getSubElements
              */
             // @ts-ignore
-            processKeyEvent(e: java.awt.event.KeyEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
+            public processKeyEvent(e: java.awt.event.KeyEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
             /**
              * Implemented to be a <code>MenuElement</code> -- does nothing.
              * @see #getSubElements
              */
             // @ts-ignore
-            menuSelectionChanged(isIncluded: boolean): void
+            public menuSelectionChanged(isIncluded: boolean): void
             /**
              * Implemented to be a <code>MenuElement</code> -- returns the
              * menus in this menu bar.
@@ -237,14 +237,14 @@ declare namespace javax {
              * @return an array of menu items in the menu bar.
              */
             // @ts-ignore
-            getSubElements(): javax.swing.MenuElement[]
+            public getSubElements(): javax.swing.MenuElement[]
             /**
              * Implemented to be a <code>MenuElement</code>. Returns this object.
              * @return the current <code>Component</code> (this)
              * @see #getSubElements
              */
             // @ts-ignore
-            getComponent(): java.awt.Component
+            public getComponent(): java.awt.Component
             /**
              * Returns a string representation of this <code>JMenuBar</code>.
              * This method
@@ -255,7 +255,7 @@ declare namespace javax {
              * @return a string representation of this <code>JMenuBar</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JMenuBar.
              * For JMenuBars, the AccessibleContext takes the form of an
@@ -265,7 +265,7 @@ declare namespace javax {
              *          AccessibleContext of this JMenuBar
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
             /**
              * Subclassed to check all the child menus.
              * @since 1.3
@@ -277,13 +277,13 @@ declare namespace javax {
              * menu bar with the current keyboard manager.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Overrides <code>JComponent.removeNotify</code> to unregister this
              * menu bar with the current keyboard manager.
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
         }
     }
 }

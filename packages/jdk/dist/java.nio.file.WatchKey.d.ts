@@ -64,7 +64,7 @@ declare namespace java {
                  * @return the list of the events retrieved; may be empty
                  */
                 // @ts-ignore
-                pollEvents(): java.util.List<java.nio.file.WatchEvent<?>>
+                pollEvents(): Array<java.nio.file.WatchEvent<any>>
                 /**
                  * Resets this watch key.
                  * <p> If this watch key has been cancelled or this watch key is already in

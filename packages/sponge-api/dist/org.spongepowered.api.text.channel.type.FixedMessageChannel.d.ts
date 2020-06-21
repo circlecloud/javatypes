@@ -22,11 +22,11 @@ declare namespace org {
                              * @param provided The message receivers
                              */
                             // @ts-ignore
-                            constructor(provided: Array<org.spongepowered.api.text.channel.MessageReceiver>)
+                            constructor(provided: java.util.Collection<any> | Array<any>)
                             // @ts-ignore
-                            readonly recipients: Array<org.spongepowered.api.text.channel.MessageReceiver>
+                            readonly recipients: java.util.Set<org.spongepowered.api.text.channel.MessageReceiver> | Array<org.spongepowered.api.text.channel.MessageReceiver>
                             // @ts-ignore
-                            getMembers(): java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver>
+                            public getMembers(): Array<org.spongepowered.api.text.channel.MessageReceiver>
                         }
                     }
                 }

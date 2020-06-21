@@ -16,13 +16,13 @@ declare namespace org {
                      * @param <T> the type of element signaled
                      */
                     // @ts-ignore
-                    class ChannelSendOperator<T> extends <any> {
+                    class ChannelSendOperator<T> extends java.lang.Object {
                         // @ts-ignore
-                        constructor(source: object, writeFunction: java.util.function.Function<<any>, <any>> | java.util.function$.Function<<any>, <any>>)
+                        constructor(source: object, writeFunction: java.util.function$.Function<object, object>)
                         // @ts-ignore
-                        scanUnsafe(key: Attr): java.lang.Object
+                        public scanUnsafe(key: Attr): any
                         // @ts-ignore
-                        subscribe(actual: object): void
+                        public subscribe(actual: object): void
                     }
                 }
             }

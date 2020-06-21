@@ -52,7 +52,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getLogWriter(): java.io.PrintWriter
+            public static getLogWriter(): java.io.PrintWriter
             /**
              * Sets the logging/tracing <code>PrintWriter</code> object
              * that is used by the <code>DriverManager</code> and all drivers.
@@ -82,7 +82,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setLogWriter(out: java.io.PrintWriter): void
+            public static setLogWriter(out: java.io.PrintWriter): void
             /**
              * Attempts to establish a connection to the given database URL.
              * The <code>DriverManager</code> attempts to select an appropriate driver from
@@ -107,7 +107,7 @@ declare namespace java {
              *  current database connection attempt
              */
             // @ts-ignore
-            getConnection(url: string, info: java.util.Properties): java.sql.Connection
+            public static getConnection(url: java.lang.String | string, info: java.util.Properties): java.sql.Connection
             /**
              * Attempts to establish a connection to the given database URL.
              * The <code>DriverManager</code> attempts to select an appropriate driver from
@@ -132,7 +132,7 @@ declare namespace java {
              *  current database connection attempt
              */
             // @ts-ignore
-            getConnection(url: string, user: string, password: string): java.sql.Connection
+            public static getConnection(url: java.lang.String | string, user: java.lang.String | string, password: java.lang.String | string): java.sql.Connection
             /**
              * Attempts to establish a connection to the given database URL.
              * The <code>DriverManager</code> attempts to select an appropriate driver from
@@ -148,7 +148,7 @@ declare namespace java {
              *  current database connection attempt
              */
             // @ts-ignore
-            getConnection(url: string): java.sql.Connection
+            public static getConnection(url: java.lang.String | string): java.sql.Connection
             /**
              * Attempts to locate a driver that understands the given URL.
              * The <code>DriverManager</code> attempts to select an appropriate driver from
@@ -160,7 +160,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getDriver(url: string): java.sql.Driver
+            public static getDriver(url: java.lang.String | string): java.sql.Driver
             /**
              * Registers the given driver with the {@code DriverManager}.
              * A newly-loaded driver class should call
@@ -173,7 +173,7 @@ declare namespace java {
              * @exception NullPointerException if {#code driver} is null
              */
             // @ts-ignore
-            registerDriver(driver: java.sql.Driver): void
+            public static registerDriver(driver: java.sql.Driver): void
             /**
              * Registers the given driver with the {@code DriverManager}.
              * A newly-loaded driver class should call
@@ -189,7 +189,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            registerDriver(driver: java.sql.Driver, da: java.sql.DriverAction): void
+            public static registerDriver(driver: java.sql.Driver, da: java.sql.DriverAction): void
             /**
              * Removes the specified driver from the {@code DriverManager}'s list of
              * registered drivers.
@@ -214,7 +214,7 @@ declare namespace java {
              * @see SecurityManager#checkPermission
              */
             // @ts-ignore
-            deregisterDriver(driver: java.sql.Driver): void
+            public static deregisterDriver(driver: java.sql.Driver): void
             /**
              * Retrieves an Enumeration with all of the currently loaded JDBC drivers
              * to which the current caller has access.
@@ -223,7 +223,7 @@ declare namespace java {
              * @return the list of JDBC Drivers loaded by the caller's class loader
              */
             // @ts-ignore
-            getDrivers(): java.util.Enumeration<java.sql.Driver>
+            public static getDrivers(): java.util.Enumeration<java.sql.Driver>
             /**
              * Sets the maximum time in seconds that a driver will wait
              * while attempting to connect to a database once the driver has
@@ -232,7 +232,7 @@ declare namespace java {
              * @see #getLoginTimeout
              */
             // @ts-ignore
-            setLoginTimeout(seconds: number /*int*/): void
+            public static setLoginTimeout(seconds: number /*int*/): void
             /**
              * Gets the maximum time in seconds that a driver can wait
              * when attempting to log in to a database.
@@ -240,7 +240,7 @@ declare namespace java {
              * @see #setLoginTimeout
              */
             // @ts-ignore
-            getLoginTimeout(): int
+            public static getLoginTimeout(): number /*int*/
             /**
              * Sets the logging/tracing PrintStream that is used
              * by the <code>DriverManager</code>
@@ -259,7 +259,7 @@ declare namespace java {
              * @see #getLogStream
              */
             // @ts-ignore
-            setLogStream(out: java.io.PrintStream): void
+            public static setLogStream(out: java.io.PrintStream): void
             /**
              * Retrieves the logging/tracing PrintStream that is used by the <code>DriverManager</code>
              * and all drivers.
@@ -268,13 +268,13 @@ declare namespace java {
              * @see #setLogStream
              */
             // @ts-ignore
-            getLogStream(): java.io.PrintStream
+            public static getLogStream(): java.io.PrintStream
             /**
              * Prints a message to the current JDBC log stream.
              * @param message a log or tracing message
              */
             // @ts-ignore
-            println(message: string): void
+            public static println(message: java.lang.String | string): void
         }
     }
 }

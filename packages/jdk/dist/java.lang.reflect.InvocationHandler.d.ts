@@ -59,7 +59,7 @@ declare namespace java {
                  * @see UndeclaredThrowableException
                  */
                 // @ts-ignore
-                invoke(proxy: any, method: java.lang.reflect.Method, args: any[]): java.lang.Object
+                invoke(proxy: java.lang.Object | any, method: java.lang.reflect.Method, args: java.lang.Object[] | any[]): any
             }
         }
     }

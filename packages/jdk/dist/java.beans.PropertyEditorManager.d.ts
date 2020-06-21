@@ -46,7 +46,7 @@ declare namespace java {
              * @see SecurityManager#checkPropertiesAccess
              */
             // @ts-ignore
-            registerEditor(targetType: java.lang.Class<any>, editorClass: java.lang.Class<any>): void
+            public static registerEditor(targetType: java.lang.Class<any>, editorClass: java.lang.Class<any>): void
             /**
              * Locate a value editor for a given target type.
              * @param targetType  The Class object for the type to be edited
@@ -54,7 +54,7 @@ declare namespace java {
              *  The result is null if no suitable editor can be found.
              */
             // @ts-ignore
-            findEditor(targetType: java.lang.Class<any>): java.beans.PropertyEditor
+            public static findEditor(targetType: java.lang.Class<any>): java.beans.PropertyEditor
             /**
              * Gets the package names that will be searched for property editors.
              * @return The array of package names that will be searched in
@@ -63,7 +63,7 @@ declare namespace java {
              *          e.g. Sun implementation initially sets to  {"sun.beans.editors"}.
              */
             // @ts-ignore
-            getEditorSearchPath(): java.lang.String[]
+            public static getEditorSearchPath(): string[]
             /**
              * Change the list of package names that will be used for
              * finding property editors.
@@ -76,7 +76,7 @@ declare namespace java {
              * @see SecurityManager#checkPropertiesAccess
              */
             // @ts-ignore
-            setEditorSearchPath(path: string[]): void
+            public static setEditorSearchPath(path: java.lang.String[] | string[]): void
         }
     }
 }

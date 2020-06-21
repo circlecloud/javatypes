@@ -47,21 +47,21 @@ declare namespace org {
                      * @return the new {#code UriComponentsBuilder}
                      */
                     // @ts-ignore
-                    newInstance(): org.springframework.web.util.UriComponentsBuilder
+                    public static newInstance(): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Create a builder that is initialized with the given path.
                      * @param path the path to initialize with
                      * @return the new {#code UriComponentsBuilder}
                      */
                     // @ts-ignore
-                    fromPath(path: string): org.springframework.web.util.UriComponentsBuilder
+                    public static fromPath(path: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Create a builder that is initialized with the given {@code URI}.
                      * @param uri the URI to initialize with
                      * @return the new {#code UriComponentsBuilder}
                      */
                     // @ts-ignore
-                    fromUri(uri: java.net.URI): org.springframework.web.util.UriComponentsBuilder
+                    public static fromUri(uri: java.net.URI): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Create a builder that is initialized with the given URI string.
                      * <p><strong>Note:</strong> The presence of reserved characters can prevent
@@ -77,7 +77,7 @@ declare namespace org {
                      * @return the new {#code UriComponentsBuilder}
                      */
                     // @ts-ignore
-                    fromUriString(uri: string): org.springframework.web.util.UriComponentsBuilder
+                    public static fromUriString(uri: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Create a URI components builder from the given HTTP URL String.
                      * <p><strong>Note:</strong> The presence of reserved characters can prevent
@@ -93,7 +93,7 @@ declare namespace org {
                      * @return the URI components of the URI
                      */
                     // @ts-ignore
-                    fromHttpUrl(httpUrl: string): org.springframework.web.util.UriComponentsBuilder
+                    public static fromHttpUrl(httpUrl: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Create a new {@code UriComponents} object from the URI associated with
                      * the given HttpRequest while also overlaying with values from the headers
@@ -105,13 +105,13 @@ declare namespace org {
                      * @since 4.1.5
                      */
                     // @ts-ignore
-                    fromHttpRequest(request: org.springframework.http.HttpRequest): org.springframework.web.util.UriComponentsBuilder
+                    public static fromHttpRequest(request: org.springframework.http.HttpRequest): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Create an instance by parsing the "Origin" header of an HTTP request.
                      * @see <a href="https://tools.ietf.org/html/rfc6454">RFC 6454</a>
                      */
                     // @ts-ignore
-                    fromOriginHeader(origin: string): org.springframework.web.util.UriComponentsBuilder
+                    public static fromOriginHeader(origin: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Request to have the URI template pre-encoded at build time, and
                      * URI variables encoded separately when expanded.
@@ -131,20 +131,20 @@ declare namespace org {
                      * @since 5.0.8
                      */
                     // @ts-ignore
-                    encode(): org.springframework.web.util.UriComponentsBuilder
+                    public encode(): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * A variant of {@link #encode()} with a charset other than "UTF-8".
                      * @param charset the charset to use for encoding
                      * @since 5.0.8
                      */
                     // @ts-ignore
-                    encode(charset: java.nio.charset.Charset): org.springframework.web.util.UriComponentsBuilder
+                    public encode(charset: java.nio.charset.Charset): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Build a {@code UriComponents} instance from the various components contained in this builder.
                      * @return the URI components
                      */
                     // @ts-ignore
-                    build(): org.springframework.web.util.UriComponents
+                    public build(): org.springframework.web.util.UriComponents
                     /**
                      * Build a {@code UriComponents} instance from the various components
                      * contained in this builder.
@@ -153,7 +153,7 @@ declare namespace org {
                      * @return the URI components
                      */
                     // @ts-ignore
-                    build(encoded: boolean): org.springframework.web.util.UriComponents
+                    public build(encoded: boolean): org.springframework.web.util.UriComponents
                     /**
                      * Build a {@code UriComponents} instance and replaces URI template variables
                      * with the values from a map. This is a shortcut method which combines
@@ -162,7 +162,7 @@ declare namespace org {
                      * @return the URI components with expanded values
                      */
                     // @ts-ignore
-                    buildAndExpand(uriVariables: java.util.Map<java.lang.String, any>): org.springframework.web.util.UriComponents
+                    public buildAndExpand(uriVariables: java.util.Map<java.lang.String | string, any>): org.springframework.web.util.UriComponents
                     /**
                      * Build a {@code UriComponents} instance and replaces URI template variables
                      * with the values from an array. This is a shortcut method which combines
@@ -171,11 +171,11 @@ declare namespace org {
                      * @return the URI components with expanded values
                      */
                     // @ts-ignore
-                    buildAndExpand(...uriVariableValues: any[]): org.springframework.web.util.UriComponents
+                    public buildAndExpand(...uriVariableValues: java.lang.Object[] | any[]): org.springframework.web.util.UriComponents
                     // @ts-ignore
-                    build(...uriVariables: any[]): java.net.URI
+                    public build(...uriVariables: java.lang.Object[] | any[]): java.net.URI
                     // @ts-ignore
-                    build(uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    public build(uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                     /**
                      * Build a URI String.
                      * <p>Effectively, a shortcut for building, encoding, and returning the
@@ -193,14 +193,14 @@ declare namespace org {
                      * @see UriComponents#toUriString()
                      */
                     // @ts-ignore
-                    toUriString(): java.lang.String
+                    public toUriString(): string
                     /**
                      * Initialize components of this builder from components of the given URI.
                      * @param uri the URI
                      * @return this UriComponentsBuilder
                      */
                     // @ts-ignore
-                    uri(uri: java.net.URI): org.springframework.web.util.UriComponentsBuilder
+                    public uri(uri: java.net.URI): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Set or append individual URI components of this builder from the values
                      * of the given {@link UriComponents} instance.
@@ -211,9 +211,9 @@ declare namespace org {
                      * @return this UriComponentsBuilder
                      */
                     // @ts-ignore
-                    uriComponents(uriComponents: org.springframework.web.util.UriComponents): org.springframework.web.util.UriComponentsBuilder
+                    public uriComponents(uriComponents: org.springframework.web.util.UriComponents): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    scheme(scheme: string): org.springframework.web.util.UriComponentsBuilder
+                    public scheme(scheme: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Set the URI scheme-specific-part. When invoked, this method overwrites
                      * {@linkplain #userInfo(String) user-info}, {@linkplain #host(String) host},
@@ -223,47 +223,47 @@ declare namespace org {
                      * @return this UriComponentsBuilder
                      */
                     // @ts-ignore
-                    schemeSpecificPart(ssp: string): org.springframework.web.util.UriComponentsBuilder
+                    public schemeSpecificPart(ssp: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    userInfo(userInfo: string): org.springframework.web.util.UriComponentsBuilder
+                    public userInfo(userInfo: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    host(host: string): org.springframework.web.util.UriComponentsBuilder
+                    public host(host: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    port(port: number /*int*/): org.springframework.web.util.UriComponentsBuilder
+                    public port(port: number /*int*/): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    port(port: string): org.springframework.web.util.UriComponentsBuilder
+                    public port(port: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    path(path: string): org.springframework.web.util.UriComponentsBuilder
+                    public path(path: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    pathSegment(...pathSegments: string[]): org.springframework.web.util.UriComponentsBuilder
+                    public pathSegment(...pathSegments: java.lang.String[] | string[]): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    replacePath(path: string): org.springframework.web.util.UriComponentsBuilder
+                    public replacePath(path: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    query(query: string): org.springframework.web.util.UriComponentsBuilder
+                    public query(query: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    replaceQuery(query: string): org.springframework.web.util.UriComponentsBuilder
+                    public replaceQuery(query: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    queryParam(name: string, ...values: any[]): org.springframework.web.util.UriComponentsBuilder
+                    public queryParam(name: java.lang.String | string, ...values: java.lang.Object[] | any[]): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    queryParam(name: string, values: Array<any>): org.springframework.web.util.UriComponentsBuilder
+                    public queryParam(name: java.lang.String | string, values: java.util.Collection<any> | Array<any>): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * {@inheritDoc}
                      * @since 4.0
                      */
                     // @ts-ignore
-                    queryParams(params: object): org.springframework.web.util.UriComponentsBuilder
+                    public queryParams(params: object): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    replaceQueryParam(name: string, ...values: any[]): org.springframework.web.util.UriComponentsBuilder
+                    public replaceQueryParam(name: java.lang.String | string, ...values: java.lang.Object[] | any[]): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    replaceQueryParam(name: string, values: Array<any>): org.springframework.web.util.UriComponentsBuilder
+                    public replaceQueryParam(name: java.lang.String | string, values: java.util.Collection<any> | Array<any>): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * {@inheritDoc}
                      * @since 4.2
                      */
                     // @ts-ignore
-                    replaceQueryParams(params: object): org.springframework.web.util.UriComponentsBuilder
+                    public replaceQueryParams(params: object): org.springframework.web.util.UriComponentsBuilder
                     // @ts-ignore
-                    fragment(fragment: string): org.springframework.web.util.UriComponentsBuilder
+                    public fragment(fragment: java.lang.String | string): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Configure URI variables to be expanded at build time.
                      * <p>The provided variables may be a subset of all required ones. At build
@@ -279,20 +279,20 @@ declare namespace org {
                      * @since 5.0.8
                      */
                     // @ts-ignore
-                    uriVariables(uriVariables: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.web.util.UriComponentsBuilder
+                    public uriVariables(uriVariables: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.web.util.UriComponentsBuilder
                     /**
                      * Public declaration of Object's {@code clone()} method.
                      * Delegates to {@link #cloneBuilder()}.
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                     /**
                      * Clone this {@code UriComponentsBuilder}.
                      * @return the cloned {#code UriComponentsBuilder} object
                      * @since 4.2.7
                      */
                     // @ts-ignore
-                    cloneBuilder(): org.springframework.web.util.UriComponentsBuilder
+                    public cloneBuilder(): org.springframework.web.util.UriComponentsBuilder
                 }
             }
         }

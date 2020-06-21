@@ -17,7 +17,7 @@ declare namespace javax {
                  * @param value the value
                  */
                 // @ts-ignore
-                addAttribute(name: any, value: any): void
+                addAttribute(name: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Creates a new attribute set similar to this one except that it contains
                  * the given attributes and values.
@@ -30,7 +30,7 @@ declare namespace javax {
                  * @param name the attribute name
                  */
                 // @ts-ignore
-                removeAttribute(name: any): void
+                removeAttribute(name: java.lang.Object | any): void
                 /**
                  * Removes an attribute set with the given <code>names</code>.
                  * @param names the set of names

@@ -21,9 +21,9 @@ declare namespace org {
                      * Return the underlying task.
                      */
                     // @ts-ignore
-                    getRunnable(): java.lang.Runnable
+                    public getRunnable(): java.lang.Runnable
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

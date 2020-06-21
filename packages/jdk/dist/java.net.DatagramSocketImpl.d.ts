@@ -6,7 +6,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class DatagramSocketImpl extends java.lang.Object implements java.net.SocketOptions {
+        abstract class DatagramSocketImpl extends java.lang.Object implements java.net.SocketOptions {
             // @ts-ignore
             constructor()
             /**
@@ -82,7 +82,7 @@ declare namespace java {
              *        exception will be thrown.
              */
             // @ts-ignore
-            abstract peek(i: java.net.InetAddress): int
+            abstract peek(i: java.net.InetAddress): number /*int*/
             /**
              * Peek at the packet to see who it is from. The data is copied into the specified
              * {@code DatagramPacket}. The data is returned,
@@ -97,7 +97,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            abstract peekData(p: java.net.DatagramPacket): int
+            abstract peekData(p: java.net.DatagramPacket): number /*int*/
             /**
              * Receive the datagram packet.
              * @param p the Packet Received.
@@ -128,7 +128,7 @@ declare namespace java {
              * @see #setTTL(byte)
              */
             // @ts-ignore
-            abstract getTTL(): byte
+            abstract getTTL(): number /*byte*/
             /**
              * Set the TTL (time-to-live) option.
              * @param ttl an {#code int} specifying the time-to-live value
@@ -146,7 +146,7 @@ declare namespace java {
              * @see #setTimeToLive(int)
              */
             // @ts-ignore
-            abstract getTimeToLive(): int
+            abstract getTimeToLive(): number /*int*/
             /**
              * Join the multicast group.
              * @param inetaddr multicast address to join.
@@ -194,7 +194,7 @@ declare namespace java {
              * @return an {#code int} representing the local port value
              */
             // @ts-ignore
-            getLocalPort(): int
+            getLocalPort(): number /*int*/
             /**
              * Gets the datagram socket file descriptor.
              * @return a {#code FileDescriptor} object representing the datagram socket

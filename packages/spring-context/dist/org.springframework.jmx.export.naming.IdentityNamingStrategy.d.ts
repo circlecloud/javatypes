@@ -20,18 +20,18 @@ declare namespace org {
                          * The type key.
                          */
                         // @ts-ignore
-                        readonly TYPE_KEY: string
+                        public static readonly TYPE_KEY: java.lang.String | string
                         /**
                          * The hash code key.
                          */
                         // @ts-ignore
-                        readonly HASH_CODE_KEY: string
+                        public static readonly HASH_CODE_KEY: java.lang.String | string
                         /**
                          * Returns an instance of {@code ObjectName} based on the identity
                          * of the managed resource.
                          */
                         // @ts-ignore
-                        getObjectName(managedBean: any, beanKey: string): javax.management.ObjectName
+                        public getObjectName(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.ObjectName
                     }
                 }
             }

@@ -86,7 +86,7 @@ declare namespace javax {
                  * @param format NumberFormat instance used to dictate legal values
                  */
                 // @ts-ignore
-                setFormat(format: java.text.Format): void
+                public setFormat(format: java.text.Format): void
             }
         }
     }

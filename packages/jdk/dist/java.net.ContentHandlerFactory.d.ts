@@ -24,7 +24,7 @@ declare namespace java {
              * @see java.net.URLStreamHandler
              */
             // @ts-ignore
-            createContentHandler(mimetype: string): java.net.ContentHandler
+            createContentHandler(mimetype: java.lang.String | string): java.net.ContentHandler
         }
     }
 }

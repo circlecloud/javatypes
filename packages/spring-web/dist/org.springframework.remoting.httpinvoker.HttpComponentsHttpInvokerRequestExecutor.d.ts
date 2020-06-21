@@ -34,12 +34,12 @@ declare namespace org {
                      * Set the {@link HttpClient} instance to use for this request executor.
                      */
                     // @ts-ignore
-                    setHttpClient(httpClient: HttpClient): void
+                    public setHttpClient(httpClient: HttpClient): void
                     /**
                      * Return the {@link HttpClient} instance that this request executor uses.
                      */
                     // @ts-ignore
-                    getHttpClient(): HttpClient
+                    public getHttpClient(): HttpClient
                     /**
                      * Set the connection timeout for the underlying HttpClient.
                      * A timeout value of 0 specifies an infinite timeout.
@@ -49,7 +49,7 @@ declare namespace org {
                      * @see RequestConfig#getConnectTimeout()
                      */
                     // @ts-ignore
-                    setConnectTimeout(timeout: number /*int*/): void
+                    public setConnectTimeout(timeout: number /*int*/): void
                     /**
                      * Set the timeout in milliseconds used when requesting a connection from the connection
                      * manager using the underlying HttpClient.
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see RequestConfig#getConnectionRequestTimeout()
                      */
                     // @ts-ignore
-                    setConnectionRequestTimeout(connectionRequestTimeout: number /*int*/): void
+                    public setConnectionRequestTimeout(connectionRequestTimeout: number /*int*/): void
                     /**
                      * Set the socket read timeout for the underlying HttpClient.
                      * A timeout value of 0 specifies an infinite timeout.
@@ -71,7 +71,7 @@ declare namespace org {
                      * @see RequestConfig#getSocketTimeout()
                      */
                     // @ts-ignore
-                    setReadTimeout(timeout: number /*int*/): void
+                    public setReadTimeout(timeout: number /*int*/): void
                     /**
                      * Execute the given request through the HttpClient.
                      * <p>This method implements the basic processing workflow:

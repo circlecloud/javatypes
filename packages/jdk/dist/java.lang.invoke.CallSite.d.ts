@@ -17,20 +17,20 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class CallSite extends java.lang.Object {
+            abstract class CallSite extends java.lang.Object {
                 /**
                  * Report the type of CallSite's target MethodHandle.
                  * A CallSite cannot change its type.
                  * @return The permanent MethodType of this CallSite.
                  */
                 // @ts-ignore
-                type(): java.lang.invoke.MethodType
+                public type(): java.lang.invoke.MethodType
                 /**
                  * Return the target MethodHandle of the CallSite.
                  * @return the current target MethodHandle
                  */
                 // @ts-ignore
-                abstract getTarget(): java.lang.invoke.MethodHandle
+                public abstract getTarget(): java.lang.invoke.MethodHandle
                 /**
                  * Set the CallSite's target to be <i>nextTarget</i>.
                  * The <i>nextTarget</i> MethodHandle must have the same type as the CallSite.
@@ -39,14 +39,14 @@ declare namespace java {
                  * @throws NullPointerException - if <i>nextTarget</i> is null.
                  */
                 // @ts-ignore
-                abstract setTarget(nextTarget: java.lang.invoke.MethodHandle): void
+                public abstract setTarget(nextTarget: java.lang.invoke.MethodHandle): void
                 /**
                  * Return a MethodHandle equivalent to the invokedynamic instruction on this CallSite.
                  * The MethodHandle is equivalent to getTarget().invokeExact(args).
                  * @return a MethodHandle that is equivalent to an invokedynamic instruction on this CallSite.
                  */
                 // @ts-ignore
-                abstract dynamicInvoker(): java.lang.invoke.MethodHandle
+                public abstract dynamicInvoker(): java.lang.invoke.MethodHandle
             }
         }
     }

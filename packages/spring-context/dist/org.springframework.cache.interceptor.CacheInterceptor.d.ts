@@ -20,7 +20,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                 }
             }
         }

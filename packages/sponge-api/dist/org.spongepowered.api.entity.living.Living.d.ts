@@ -27,7 +27,7 @@ declare namespace org {
                          * @return Health value
                          */
                         // @ts-ignore
-                        health(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                        health(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                         /**
                          * Gets the current maximum health.
                          * <p>The maximum health set here may affect the attribute increasing
@@ -36,7 +36,7 @@ declare namespace org {
                          * @return This entities maximum health
                          */
                         // @ts-ignore
-                        maxHealth(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                        maxHealth(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                         /**
                          * Gets a copy of the current {@link DamageableData}.
                          * @return A copy of the current damageable data
@@ -55,7 +55,7 @@ declare namespace org {
                          * @return The last damage dealt as an optional value
                          */
                         // @ts-ignore
-                        lastDamage(): org.spongepowered.api.data.value.mutable.OptionalValue<java.lang.Double>
+                        lastDamage(): org.spongepowered.api.data.value.mutable.OptionalValue<java.lang.Double | number>
                         /**
                          * Returns this entity's head rotation.
                          * <p>The format of the rotation is represented by:</p>

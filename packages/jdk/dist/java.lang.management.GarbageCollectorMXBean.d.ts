@@ -33,7 +33,7 @@ declare namespace java {
                  *          out by the associated garbage collector.
                  */
                 // @ts-ignore
-                getCollectionCount(): long
+                getCollectionCount(): number /*long*/
                 /**
                  * For the associated garbage collector, returns the total amount of time in
                  * milliseconds that it has spent carrying out garbage collection.
@@ -41,7 +41,7 @@ declare namespace java {
                  *          garbage collection. This is a cumulative figure.
                  */
                 // @ts-ignore
-                getCollectionTime(): long
+                getCollectionTime(): number /*long*/
             }
         }
     }

@@ -13,12 +13,12 @@ declare namespace javax {
                  *          <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(source: any)
+                constructor(source: java.lang.Object | any)
                 /**
                  * @return a message describing the event
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -14,21 +14,21 @@ declare namespace org {
                      * @return amount of air remaining
                      */
                     // @ts-ignore
-                    getAmount(): int
+                    public getAmount(): number /*int*/
                     /**
                      * Sets the amount of air remaining for the entity (measured in ticks.
                      * @param amount amount of air remaining
                      */
                     // @ts-ignore
-                    setAmount(amount: number /*int*/): void
+                    public setAmount(amount: number /*int*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

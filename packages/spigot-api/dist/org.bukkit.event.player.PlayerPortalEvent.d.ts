@@ -22,20 +22,20 @@ declare namespace org {
                      *  location
                      */
                     // @ts-ignore
-                    setSearchRadius(searchRadius: number /*int*/): void
+                    public setSearchRadius(searchRadius: number /*int*/): void
                     /**
                      * Gets the search radius value for finding an available portal.
                      * @return the currently set search radius
                      */
                     // @ts-ignore
-                    getSearchRadius(): int
+                    public getSearchRadius(): number /*int*/
                     /**
                      * Returns whether the server will attempt to create a destination portal or
                      * not.
                      * @return whether there should create be a destination portal created
                      */
                     // @ts-ignore
-                    getCanCreatePortal(): boolean
+                    public getCanCreatePortal(): boolean
                     /**
                      * Sets whether the server should attempt to create a destination portal or
                      * not.
@@ -43,7 +43,7 @@ declare namespace org {
                      *  created
                      */
                     // @ts-ignore
-                    setCanCreatePortal(canCreatePortal: boolean): void
+                    public setCanCreatePortal(canCreatePortal: boolean): void
                     /**
                      * Sets the maximum radius the world is searched for a free space from the
                      * given location.
@@ -55,7 +55,7 @@ declare namespace org {
                      *  location
                      */
                     // @ts-ignore
-                    setCreationRadius(creationRadius: number /*int*/): void
+                    public setCreationRadius(creationRadius: number /*int*/): void
                     /**
                      * Gets the maximum radius the world is searched for a free space from the
                      * given location.
@@ -66,11 +66,11 @@ declare namespace org {
                      * @return the currently set creation radius
                      */
                     // @ts-ignore
-                    getCreationRadius(): int
+                    public getCreationRadius(): number /*int*/
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

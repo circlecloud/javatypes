@@ -16,13 +16,13 @@ declare namespace javax {
                      * @param name  the name of the new boolean control type
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Represents a control for the mute status of a line.
                      * Note that mute status does not affect gain.
                      */
                     // @ts-ignore
-                    readonly MUTE: javax.sound.sampled.BooleanControl.Type
+                    public static readonly MUTE: javax.sound.sampled.BooleanControl.Type
                     /**
                      * Represents a control for whether reverberation is applied
                      * to a line.  Note that the status of this control not affect
@@ -30,7 +30,7 @@ declare namespace javax {
                      * these settings are used.
                      */
                     // @ts-ignore
-                    readonly APPLY_REVERB: javax.sound.sampled.BooleanControl.Type
+                    public static readonly APPLY_REVERB: javax.sound.sampled.BooleanControl.Type
                 }
             }
         }

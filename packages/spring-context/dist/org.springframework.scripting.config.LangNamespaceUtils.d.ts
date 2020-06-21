@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 2.5
                  */
                 // @ts-ignore
-                class LangNamespaceUtils extends java.lang.Object {
+                abstract class LangNamespaceUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -20,7 +20,7 @@ declare namespace org {
                      * @return the {#link ScriptFactoryPostProcessor} bean definition (new or already registered)
                      */
                     // @ts-ignore
-                    registerScriptFactoryPostProcessorIfNecessary(registry: BeanDefinitionRegistry): BeanDefinition
+                    public static registerScriptFactoryPostProcessorIfNecessary(registry: BeanDefinitionRegistry): BeanDefinition
                 }
             }
         }

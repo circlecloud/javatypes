@@ -25,7 +25,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                config(config: C extends org.spongepowered.api.advancement.criteria.trigger.FilteredTriggerConfiguration): org.spongepowered.api.advancement.criteria.trigger.FilteredTrigger.Builder<C>
+                                config(config: C): org.spongepowered.api.advancement.criteria.trigger.FilteredTrigger.Builder<C>
                                 /**
                                  * Builds the {@link FilteredTrigger}.
                                  * @return The trigger

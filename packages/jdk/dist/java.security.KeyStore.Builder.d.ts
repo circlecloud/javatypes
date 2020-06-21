@@ -14,7 +14,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            class Builder extends java.lang.Object {
+            abstract class Builder extends java.lang.Object {
                 /**
                  * Construct a new Builder.
                  */
@@ -28,7 +28,7 @@ declare namespace java {
                  *    instantiated or loaded
                  */
                 // @ts-ignore
-                abstract getKeyStore(): java.security.KeyStore
+                public abstract getKeyStore(): java.security.KeyStore
                 /**
                  * Returns the ProtectionParameters that should be used to obtain
                  * the {@link KeyStore.Entry Entry} with the given alias.
@@ -44,7 +44,7 @@ declare namespace java {
                  *    not been invoked prior to calling this method
                  */
                 // @ts-ignore
-                abstract getProtectionParameter(alias: string): java.security.KeyStore.ProtectionParameter
+                public abstract getProtectionParameter(alias: java.lang.String | string): java.security.KeyStore.ProtectionParameter
                 /**
                  * Returns a new Builder that encapsulates the given KeyStore.
                  * The {@linkplain #getKeyStore} method of the returned object
@@ -63,7 +63,7 @@ declare namespace java {
                  *    initialized
                  */
                 // @ts-ignore
-                newInstance(keyStore: java.security.KeyStore, protectionParameter: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Builder
+                public static newInstance(keyStore: java.security.KeyStore, protectionParameter: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Builder
                 /**
                  * Returns a new Builder object.
                  * <p>The first call to the {@link #getKeyStore} method on the returned
@@ -102,7 +102,7 @@ declare namespace java {
                  *    if file does not exist or does not refer to a normal file
                  */
                 // @ts-ignore
-                newInstance(type: string, provider: java.security.Provider, file: java.io.File, protection: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Builder
+                public static newInstance(type: java.lang.String | string, provider: java.security.Provider, file: java.io.File, protection: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Builder
                 /**
                  * Returns a new Builder object.
                  * <p>Each call to the {@link #getKeyStore} method on the returned
@@ -126,7 +126,7 @@ declare namespace java {
                  * @throws NullPointerException if type or protection is null
                  */
                 // @ts-ignore
-                newInstance(type: string, provider: java.security.Provider, protection: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Builder
+                public static newInstance(type: java.lang.String | string, provider: java.security.Provider, protection: java.security.KeyStore.ProtectionParameter): java.security.KeyStore.Builder
             }
         }
     }

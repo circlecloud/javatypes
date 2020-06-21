@@ -19,13 +19,13 @@ declare namespace javax {
                 // @ts-ignore
                 class MetalComboBoxButton extends javax.swing.JButton {
                     // @ts-ignore
-                    constructor(cb: javax.swing.JComboBox, i: javax.swing.Icon, pane: javax.swing.CellRendererPane, list: javax.swing.JList)
+                    constructor(cb: javax.swing.JComboBox<any>, i: javax.swing.Icon, pane: javax.swing.CellRendererPane, list: javax.swing.JList<any>)
                     // @ts-ignore
-                    constructor(cb: javax.swing.JComboBox, i: javax.swing.Icon, onlyIcon: boolean, pane: javax.swing.CellRendererPane, list: javax.swing.JList)
+                    constructor(cb: javax.swing.JComboBox<any>, i: javax.swing.Icon, onlyIcon: boolean, pane: javax.swing.CellRendererPane, list: javax.swing.JList<any>)
                     // @ts-ignore
-                    comboBox: javax.swing.JComboBox
+                    comboBox: javax.swing.JComboBox<any>
                     // @ts-ignore
-                    listBox: javax.swing.JList
+                    listBox: javax.swing.JList<any>
                     // @ts-ignore
                     rendererPane: javax.swing.CellRendererPane
                     // @ts-ignore
@@ -33,25 +33,25 @@ declare namespace javax {
                     // @ts-ignore
                     iconOnly: boolean
                     // @ts-ignore
-                    getComboBox(): javax.swing.JComboBox
+                    public getComboBox(): javax.swing.JComboBox<any>
                     // @ts-ignore
-                    setComboBox(cb: javax.swing.JComboBox): void
+                    public setComboBox(cb: javax.swing.JComboBox<any>): void
                     // @ts-ignore
-                    getComboIcon(): javax.swing.Icon
+                    public getComboIcon(): javax.swing.Icon
                     // @ts-ignore
-                    setComboIcon(i: javax.swing.Icon): void
+                    public setComboIcon(i: javax.swing.Icon): void
                     // @ts-ignore
-                    isIconOnly(): boolean
+                    public isIconOnly(): boolean
                     // @ts-ignore
-                    setIconOnly(isIconOnly: boolean): void
+                    public setIconOnly(isIconOnly: boolean): void
                     // @ts-ignore
-                    isFocusTraversable(): boolean
+                    public isFocusTraversable(): boolean
                     // @ts-ignore
-                    setEnabled(enabled: boolean): void
+                    public setEnabled(enabled: boolean): void
                     // @ts-ignore
-                    paintComponent(g: java.awt.Graphics): void
+                    public paintComponent(g: java.awt.Graphics): void
                     // @ts-ignore
-                    getMinimumSize(): java.awt.Dimension
+                    public getMinimumSize(): java.awt.Dimension
                 }
             }
         }

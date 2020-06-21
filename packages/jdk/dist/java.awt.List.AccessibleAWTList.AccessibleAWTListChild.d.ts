@@ -20,7 +20,7 @@ declare namespace java {
                      * @return this object
                      */
                     // @ts-ignore
-                    getAccessibleContext(): javax.accessibility.AccessibleContext
+                    public getAccessibleContext(): javax.accessibility.AccessibleContext
                     /**
                      * Get the role of this object.
                      * @return an instance of AccessibleRole describing the role of
@@ -28,7 +28,7 @@ declare namespace java {
                      * @see AccessibleRole
                      */
                     // @ts-ignore
-                    getAccessibleRole(): javax.accessibility.AccessibleRole
+                    public getAccessibleRole(): javax.accessibility.AccessibleRole
                     /**
                      * Get the state set of this object.  The AccessibleStateSet of an
                      * object is composed of a set of unique AccessibleState's.  A
@@ -42,7 +42,7 @@ declare namespace java {
                      * @see #addPropertyChangeListener
                      */
                     // @ts-ignore
-                    getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                    public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                     /**
                      * Gets the locale of the component. If the component does not
                      * have a locale, then the locale of its parent is returned.
@@ -54,7 +54,7 @@ declare namespace java {
                      *  be determined from the containing parent.
                      */
                     // @ts-ignore
-                    getLocale(): java.util.Locale
+                    public getLocale(): java.util.Locale
                     /**
                      * Get the 0-based index of this object in its accessible parent.
                      * @return the 0-based index of this object in its parent; -1 if
@@ -64,13 +64,13 @@ declare namespace java {
                      * @see #getAccessibleChild
                      */
                     // @ts-ignore
-                    getAccessibleIndexInParent(): int
+                    public getAccessibleIndexInParent(): number /*int*/
                     /**
                      * Returns the number of accessible children of the object.
                      * @return the number of accessible children of the object.
                      */
                     // @ts-ignore
-                    getAccessibleChildrenCount(): int
+                    public getAccessibleChildrenCount(): number /*int*/
                     /**
                      * Return the specified Accessible child of the object.  The
                      * Accessible children of an Accessible object are zero-based,
@@ -81,7 +81,7 @@ declare namespace java {
                      * @see #getAccessibleChildrenCount
                      */
                     // @ts-ignore
-                    getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                    public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                     /**
                      * Get the background color of this object.
                      * @return the background color, if supported, of the object;
@@ -89,14 +89,14 @@ declare namespace java {
                      * @see #setBackground
                      */
                     // @ts-ignore
-                    getBackground(): java.awt.Color
+                    public getBackground(): java.awt.Color
                     /**
                      * Set the background color of this object.
                      * @param c the new Color for the background
                      * @see #setBackground
                      */
                     // @ts-ignore
-                    setBackground(c: java.awt.Color): void
+                    public setBackground(c: java.awt.Color): void
                     /**
                      * Get the foreground color of this object.
                      * @return the foreground color, if supported, of the object;
@@ -104,21 +104,21 @@ declare namespace java {
                      * @see #setForeground
                      */
                     // @ts-ignore
-                    getForeground(): java.awt.Color
+                    public getForeground(): java.awt.Color
                     /**
                      * Set the foreground color of this object.
                      * @param c the new Color for the foreground
                      * @see #getForeground
                      */
                     // @ts-ignore
-                    setForeground(c: java.awt.Color): void
+                    public setForeground(c: java.awt.Color): void
                     /**
                      * Get the Cursor of this object.
                      * @return the Cursor, if supported, of the object; otherwise, null
                      * @see #setCursor
                      */
                     // @ts-ignore
-                    getCursor(): java.awt.Cursor
+                    public getCursor(): java.awt.Cursor
                     /**
                      * Set the Cursor of this object.
                      * <p>
@@ -129,21 +129,21 @@ declare namespace java {
                      * @see #getCursor
                      */
                     // @ts-ignore
-                    setCursor(cursor: java.awt.Cursor): void
+                    public setCursor(cursor: java.awt.Cursor): void
                     /**
                      * Get the Font of this object.
                      * @return the Font,if supported, for the object; otherwise, null
                      * @see #setFont
                      */
                     // @ts-ignore
-                    getFont(): java.awt.Font
+                    public getFont(): java.awt.Font
                     /**
                      * Set the Font of this object.
                      * @param f the new Font for the object
                      * @see #getFont
                      */
                     // @ts-ignore
-                    setFont(f: java.awt.Font): void
+                    public setFont(f: java.awt.Font): void
                     /**
                      * Get the FontMetrics of this object.
                      * @param f the Font
@@ -151,7 +151,7 @@ declare namespace java {
                      * @see #getFont
                      */
                     // @ts-ignore
-                    getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
+                    public getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
                     /**
                      * Determine if the object is enabled.  Objects that are enabled
                      * will also have the AccessibleState.ENABLED state set in their
@@ -163,14 +163,14 @@ declare namespace java {
                      * @see AccessibleStateSet
                      */
                     // @ts-ignore
-                    isEnabled(): boolean
+                    public isEnabled(): boolean
                     /**
                      * Set the enabled state of the object.
                      * @param b if true, enables this object; otherwise, disables it
                      * @see #isEnabled
                      */
                     // @ts-ignore
-                    setEnabled(b: boolean): void
+                    public setEnabled(b: boolean): void
                     /**
                      * Determine if the object is visible.  Note: this means that the
                      * object intends to be visible; however, it may not be
@@ -186,14 +186,14 @@ declare namespace java {
                      * @see AccessibleStateSet
                      */
                     // @ts-ignore
-                    isVisible(): boolean
+                    public isVisible(): boolean
                     /**
                      * Set the visible state of the object.
                      * @param b if true, shows this object; otherwise, hides it
                      * @see #isVisible
                      */
                     // @ts-ignore
-                    setVisible(b: boolean): void
+                    public setVisible(b: boolean): void
                     /**
                      * Determine if the object is showing.  This is determined by
                      * checking the visibility of the object and visibility of the
@@ -204,7 +204,7 @@ declare namespace java {
                      * @return true if object is showing; otherwise, false
                      */
                     // @ts-ignore
-                    isShowing(): boolean
+                    public isShowing(): boolean
                     /**
                      * Checks whether the specified point is within this object's
                      * bounds, where the point's x and y coordinates are defined to
@@ -215,7 +215,7 @@ declare namespace java {
                      * @see #getBounds
                      */
                     // @ts-ignore
-                    contains(p: java.awt.Point): boolean
+                    public contains(p: java.awt.Point): boolean
                     /**
                      * Returns the location of the object on the screen.
                      * @return location of object on screen; null if this object
@@ -224,7 +224,7 @@ declare namespace java {
                      * @see #getLocation
                      */
                     // @ts-ignore
-                    getLocationOnScreen(): java.awt.Point
+                    public getLocationOnScreen(): java.awt.Point
                     /**
                      * Gets the location of the object relative to the parent in the
                      * form of a point specifying the object's top-left corner in the
@@ -236,14 +236,14 @@ declare namespace java {
                      * @see #getLocationOnScreen
                      */
                     // @ts-ignore
-                    getLocation(): java.awt.Point
+                    public getLocation(): java.awt.Point
                     /**
                      * Sets the location of the object relative to the parent.
                      * @param p the new position for the top-left corner
                      * @see #getLocation
                      */
                     // @ts-ignore
-                    setLocation(p: java.awt.Point): void
+                    public setLocation(p: java.awt.Point): void
                     /**
                      * Gets the bounds of this object in the form of a Rectangle object.
                      * The bounds specify this object's width, height, and location
@@ -253,7 +253,7 @@ declare namespace java {
                      * @see #contains
                      */
                     // @ts-ignore
-                    getBounds(): java.awt.Rectangle
+                    public getBounds(): java.awt.Rectangle
                     /**
                      * Sets the bounds of this object in the form of a Rectangle
                      * object.  The bounds specify this object's width, height, and
@@ -262,7 +262,7 @@ declare namespace java {
                      * @see #getBounds
                      */
                     // @ts-ignore
-                    setBounds(r: java.awt.Rectangle): void
+                    public setBounds(r: java.awt.Rectangle): void
                     /**
                      * Returns the size of this object in the form of a Dimension
                      * object.  The height field of the Dimension object contains this
@@ -273,14 +273,14 @@ declare namespace java {
                      * @see #setSize
                      */
                     // @ts-ignore
-                    getSize(): java.awt.Dimension
+                    public getSize(): java.awt.Dimension
                     /**
                      * Resizes this object so that it has width and height.
                      * @param d - The dimension specifying the new size of the object.
                      * @see #getSize
                      */
                     // @ts-ignore
-                    setSize(d: java.awt.Dimension): void
+                    public setSize(d: java.awt.Dimension): void
                     /**
                      * Returns the <code>Accessible</code> child, if one exists,
                      * contained at the local coordinate <code>Point</code>.
@@ -290,7 +290,7 @@ declare namespace java {
                      *      at the specified location; otherwise <code>null</code>
                      */
                     // @ts-ignore
-                    getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                    public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                     /**
                      * Returns whether this object can accept focus or not.   Objects
                      * that can accept focus will also have the
@@ -303,7 +303,7 @@ declare namespace java {
                      * @see AccessibleStateSet
                      */
                     // @ts-ignore
-                    isFocusTraversable(): boolean
+                    public isFocusTraversable(): boolean
                     /**
                      * Requests focus for this object.  If this object cannot accept
                      * focus, nothing will happen.  Otherwise, the object will attempt
@@ -311,7 +311,7 @@ declare namespace java {
                      * @see #isFocusTraversable
                      */
                     // @ts-ignore
-                    requestFocus(): void
+                    public requestFocus(): void
                     /**
                      * Adds the specified focus listener to receive focus events from
                      * this component.
@@ -319,7 +319,7 @@ declare namespace java {
                      * @see #removeFocusListener
                      */
                     // @ts-ignore
-                    addFocusListener(l: java.awt.event.FocusListener): void
+                    public addFocusListener(l: java.awt.event.FocusListener): void
                     /**
                      * Removes the specified focus listener so it no longer receives
                      * focus events from this component.
@@ -327,7 +327,7 @@ declare namespace java {
                      * @see #addFocusListener
                      */
                     // @ts-ignore
-                    removeFocusListener(l: java.awt.event.FocusListener): void
+                    public removeFocusListener(l: java.awt.event.FocusListener): void
                 }
             }
         }

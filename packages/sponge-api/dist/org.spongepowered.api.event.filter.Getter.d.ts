@@ -14,7 +14,7 @@ declare namespace org {
                      * optional is not present then your event listener will not be called.</p>
                      */
                     // @ts-ignore
-                    class Getter implements java.lang.annotation.Annotation {
+                    abstract class Getter implements java.lang.annotation.Annotation {
                     }
                 }
             }

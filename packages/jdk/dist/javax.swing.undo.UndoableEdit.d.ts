@@ -143,7 +143,7 @@ declare namespace javax {
                  * @return description of this edit
                  */
                 // @ts-ignore
-                getPresentationName(): java.lang.String
+                getPresentationName(): string
                 /**
                  * Returns a localized, human-readable description of the undoable form of
                  * this edit, suitable for use as an Undo menu item, for example.
@@ -151,7 +151,7 @@ declare namespace javax {
                  * @return a description of the undoable form of this edit
                  */
                 // @ts-ignore
-                getUndoPresentationName(): java.lang.String
+                getUndoPresentationName(): string
                 /**
                  * Returns a localized, human-readable description of the redoable form of
                  * this edit, suitable for use as a Redo menu item, for example. This is
@@ -159,7 +159,7 @@ declare namespace javax {
                  * @return a description of the redoable form of this edit
                  */
                 // @ts-ignore
-                getRedoPresentationName(): java.lang.String
+                getRedoPresentationName(): string
             }
         }
     }

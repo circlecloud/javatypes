@@ -20,7 +20,7 @@ declare namespace java {
              * @deprecated no replacement
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Construct an <code>RMISecurityException</code> with a detail message.
              * @param name the detail message
@@ -29,7 +29,7 @@ declare namespace java {
              * @deprecated no replacement
              */
             // @ts-ignore
-            constructor(name: string, arg: string)
+            constructor(name: java.lang.String | string, arg: java.lang.String | string)
         }
     }
 }

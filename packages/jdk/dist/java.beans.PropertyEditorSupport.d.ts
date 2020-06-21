@@ -19,7 +19,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(source: any)
+            constructor(source: java.lang.Object | any)
             /**
              * Returns the bean that is used as the
              * source of events. If the source has not
@@ -29,7 +29,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getSource(): java.lang.Object
+            public getSource(): any
             /**
              * Sets the source bean.
              * <p>
@@ -40,7 +40,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setSource(source: any): void
+            public setSource(source: java.lang.Object | any): void
             /**
              * Set (or change) the object that is to be edited.
              * @param value The new target object to be edited.  Note that this
@@ -49,19 +49,19 @@ declare namespace java {
              *      modified value.
              */
             // @ts-ignore
-            setValue(value: any): void
+            public setValue(value: java.lang.Object | any): void
             /**
              * Gets the value of the property.
              * @return The value of the property.
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Determines whether the class will honor the paintValue method.
              * @return True if the class will honor the paintValue method.
              */
             // @ts-ignore
-            isPaintable(): boolean
+            public isPaintable(): boolean
             /**
              * Paint a representation of the value into a given area of screen
              * real estate.  Note that the propertyEditor is responsible for doing
@@ -73,7 +73,7 @@ declare namespace java {
              * @param box  Rectangle within graphics object into which we should paint.
              */
             // @ts-ignore
-            paintValue(gfx: java.awt.Graphics, box: java.awt.Rectangle): void
+            public paintValue(gfx: java.awt.Graphics, box: java.awt.Rectangle): void
             /**
              * This method is intended for use when generating Java code to set
              * the value of the property.  It should return a fragment of Java code
@@ -85,7 +85,7 @@ declare namespace java {
              *           current value.
              */
             // @ts-ignore
-            getJavaInitializationString(): java.lang.String
+            public getJavaInitializationString(): string
             /**
              * Gets the property value as a string suitable for presentation
              * to a human to edit.
@@ -96,7 +96,7 @@ declare namespace java {
              *        be prepared to parse that string back in setAsText().
              */
             // @ts-ignore
-            getAsText(): java.lang.String
+            public getAsText(): string
             /**
              * Sets the property value by parsing a given String.  May raise
              * java.lang.IllegalArgumentException if either the String is
@@ -105,7 +105,7 @@ declare namespace java {
              * @param text  The string to be parsed.
              */
             // @ts-ignore
-            setAsText(text: string): void
+            public setAsText(text: java.lang.String | string): void
             /**
              * If the property value must be one of a set of known tagged values,
              * then this method should return an array of the tag values.  This can
@@ -116,7 +116,7 @@ declare namespace java {
              *    property cannot be represented as a tagged value.
              */
             // @ts-ignore
-            getTags(): java.lang.String[]
+            public getTags(): string[]
             /**
              * A PropertyEditor may chose to make available a full custom Component
              * that edits its property value.  It is the responsibility of the
@@ -131,13 +131,13 @@ declare namespace java {
              *       not supported.
              */
             // @ts-ignore
-            getCustomEditor(): java.awt.Component
+            public getCustomEditor(): java.awt.Component
             /**
              * Determines whether the propertyEditor can provide a custom editor.
              * @return True if the propertyEditor can provide a custom editor.
              */
             // @ts-ignore
-            supportsCustomEditor(): boolean
+            public supportsCustomEditor(): boolean
             /**
              * Adds a listener for the value change.
              * When the property editor changes its value
@@ -154,7 +154,7 @@ declare namespace java {
              * @param listener  the {#link PropertyChangeListener} to add
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a listener for the value change.
              * <p>
@@ -165,12 +165,12 @@ declare namespace java {
              * @param listener  the {#link PropertyChangeListener} to remove
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Report that we have been modified to any interested listeners.
              */
             // @ts-ignore
-            firePropertyChange(): void
+            public firePropertyChange(): void
         }
     }
 }

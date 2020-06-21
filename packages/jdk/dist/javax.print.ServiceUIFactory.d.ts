@@ -31,7 +31,7 @@ declare namespace javax {
          * </pre>
          */
         // @ts-ignore
-        class ServiceUIFactory extends java.lang.Object {
+        abstract class ServiceUIFactory extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -40,43 +40,43 @@ declare namespace javax {
              * "javax.swing.JComponent".
              */
             // @ts-ignore
-            readonly JCOMPONENT_UI: string
+            public static readonly JCOMPONENT_UI: java.lang.String | string
             /**
              * Denotes a UI implemented as an AWT panel.
              * The value of the String is the fully qualified classname :
              * "java.awt.Panel"
              */
             // @ts-ignore
-            readonly PANEL_UI: string
+            public static readonly PANEL_UI: java.lang.String | string
             /**
              * Denotes a UI implemented as an AWT dialog.
              * The value of the String is the fully qualified classname :
              * "java.awt.Dialog"
              */
             // @ts-ignore
-            readonly DIALOG_UI: string
+            public static readonly DIALOG_UI: java.lang.String | string
             /**
              * Denotes a UI implemented as a Swing dialog.
              * The value of the String is the fully qualified classname :
              * "javax.swing.JDialog"
              */
             // @ts-ignore
-            readonly JDIALOG_UI: string
+            public static readonly JDIALOG_UI: java.lang.String | string
             /**
              * Denotes a UI which performs an informative "About" role.
              */
             // @ts-ignore
-            readonly ABOUT_UIROLE: number /*int*/
+            public static readonly ABOUT_UIROLE: number /*int*/
             /**
              * Denotes a UI which performs an administrative role.
              */
             // @ts-ignore
-            readonly ADMIN_UIROLE: number /*int*/
+            public static readonly ADMIN_UIROLE: number /*int*/
             /**
              * Denotes a UI which performs the normal end user role.
              */
             // @ts-ignore
-            readonly MAIN_UIROLE: number /*int*/
+            public static readonly MAIN_UIROLE: number /*int*/
             /**
              * Not a valid role but role id's greater than this may be used
              * for private roles supported by a service. Knowledge of the
@@ -84,7 +84,7 @@ declare namespace javax {
              * of it.
              */
             // @ts-ignore
-            readonly RESERVED_UIROLE: number /*int*/
+            public static readonly RESERVED_UIROLE: number /*int*/
             /**
              * Get a UI object which may be cast to the requested UI type
              * by the application and used in its user interface.
@@ -99,7 +99,7 @@ declare namespace javax {
              *  supported by the factory.
              */
             // @ts-ignore
-            abstract getUI(role: number /*int*/, ui: string): java.lang.Object
+            public abstract getUI(role: number /*int*/, ui: java.lang.String | string): any
             /**
              * Given a UI role obtained from this factory obtain the UI
              * types available from this factory which implement this role.
@@ -113,7 +113,7 @@ declare namespace javax {
              *  role not supported by this factory.
              */
             // @ts-ignore
-            abstract getUIClassNamesForRole(role: number /*int*/): java.lang.String[]
+            public abstract getUIClassNamesForRole(role: number /*int*/): string[]
         }
     }
 }

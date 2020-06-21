@@ -88,7 +88,7 @@ declare namespace java {
              *          <code>AWTKeyStroke</code>
              */
             // @ts-ignore
-            registerSubclass(subclass: java.lang.Class<any>): void
+            static registerSubclass(subclass: java.lang.Class<any>): void
             /**
              * Returns a shared instance of an <code>AWTKeyStroke</code>
              * that represents a <code>KEY_TYPED</code> event for the
@@ -97,7 +97,7 @@ declare namespace java {
              * @return an <code>AWTKeyStroke</code> object for that key
              */
             // @ts-ignore
-            getAWTKeyStroke(keyChar: string): java.awt.AWTKeyStroke
+            public static getAWTKeyStroke(keyChar: string): java.awt.AWTKeyStroke
             /**
              * Returns a shared instance of an {@code AWTKeyStroke}
              * that represents a {@code KEY_TYPED} event for the
@@ -132,7 +132,7 @@ declare namespace java {
              * @see java.awt.event.InputEvent
              */
             // @ts-ignore
-            getAWTKeyStroke(keyChar: java.lang.Character, modifiers: number /*int*/): java.awt.AWTKeyStroke
+            public static getAWTKeyStroke(keyChar: java.lang.Character, modifiers: number /*int*/): java.awt.AWTKeyStroke
             /**
              * Returns a shared instance of an <code>AWTKeyStroke</code>,
              * given a numeric key code and a set of modifiers, specifying
@@ -174,7 +174,7 @@ declare namespace java {
              * @see java.awt.event.InputEvent
              */
             // @ts-ignore
-            getAWTKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/, onKeyRelease: boolean): java.awt.AWTKeyStroke
+            public static getAWTKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/, onKeyRelease: boolean): java.awt.AWTKeyStroke
             /**
              * Returns a shared instance of an <code>AWTKeyStroke</code>,
              * given a numeric key code and a set of modifiers. The returned
@@ -212,7 +212,7 @@ declare namespace java {
              * @see java.awt.event.InputEvent
              */
             // @ts-ignore
-            getAWTKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/): java.awt.AWTKeyStroke
+            public static getAWTKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/): java.awt.AWTKeyStroke
             /**
              * Returns an <code>AWTKeyStroke</code> which represents the
              * stroke which generated a given <code>KeyEvent</code>.
@@ -227,7 +227,7 @@ declare namespace java {
              * @return the <code>AWTKeyStroke</code> that precipitated the event
              */
             // @ts-ignore
-            getAWTKeyStrokeForEvent(anEvent: java.awt.event.KeyEvent): java.awt.AWTKeyStroke
+            public static getAWTKeyStrokeForEvent(anEvent: java.awt.event.KeyEvent): java.awt.AWTKeyStroke
             /**
              * Parses a string and returns an <code>AWTKeyStroke</code>.
              * The string must have the following syntax:
@@ -254,7 +254,7 @@ declare namespace java {
              *         or is formatted incorrectly
              */
             // @ts-ignore
-            getAWTKeyStroke(s: string): java.awt.AWTKeyStroke
+            public static getAWTKeyStroke(s: java.lang.String | string): java.awt.AWTKeyStroke
             /**
              * Returns the character for this <code>AWTKeyStroke</code>.
              * @return a char value
@@ -262,7 +262,7 @@ declare namespace java {
              * @see KeyEvent#getKeyChar
              */
             // @ts-ignore
-            getKeyChar(): char
+            public getKeyChar(): string
             /**
              * Returns the numeric key code for this <code>AWTKeyStroke</code>.
              * @return an int containing the key code value
@@ -270,14 +270,14 @@ declare namespace java {
              * @see KeyEvent#getKeyCode
              */
             // @ts-ignore
-            getKeyCode(): int
+            public getKeyCode(): number /*int*/
             /**
              * Returns the modifier keys for this <code>AWTKeyStroke</code>.
              * @return an int containing the modifiers
              * @see #getAWTKeyStroke(int,int)
              */
             // @ts-ignore
-            getModifiers(): int
+            public getModifiers(): number /*int*/
             /**
              * Returns whether this <code>AWTKeyStroke</code> represents a key release.
              * @return <code>true</code> if this <code>AWTKeyStroke</code>
@@ -285,7 +285,7 @@ declare namespace java {
              * @see #getAWTKeyStroke(int,int,boolean)
              */
             // @ts-ignore
-            isOnKeyRelease(): boolean
+            public isOnKeyRelease(): boolean
             /**
              * Returns the type of <code>KeyEvent</code> which corresponds to
              * this <code>AWTKeyStroke</code>.
@@ -295,21 +295,21 @@ declare namespace java {
              * @see java.awt.event.KeyEvent
              */
             // @ts-ignore
-            getKeyEventType(): int
+            public getKeyEventType(): number /*int*/
             /**
              * Returns a numeric value for this object that is likely to be unique,
              * making it a good choice as the index value in a hash table.
              * @return an int that represents this object
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns true if this object is identical to the specified object.
              * @param anObject the Object to compare this object to
              * @return true if the objects are identical
              */
             // @ts-ignore
-            equals(anObject: any): boolean
+            public equals(anObject: java.lang.Object | any): boolean
             /**
              * Returns a string that displays and identifies this object's properties.
              * The <code>String</code> returned by this method can be passed
@@ -319,14 +319,14 @@ declare namespace java {
              * @see #getAWTKeyStroke(String)
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a cached instance of <code>AWTKeyStroke</code> (or a subclass of
              * <code>AWTKeyStroke</code>) which is equal to this instance.
              * @return a cached instance which is equal to this instance
              */
             // @ts-ignore
-            readResolve(): java.lang.Object
+            readResolve(): any
         }
     }
 }

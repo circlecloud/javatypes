@@ -26,14 +26,14 @@ declare namespace javax {
                  * @return the number of accessible children in the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the nth Accessible child of the object.
                  * @param i zero-based index of child
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Get the AccessibleSelection associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -50,13 +50,13 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                 /**
                  * Returns 1 if a sub-menu is currently selected in this menu.
                  * @return 1 if a menu is currently selected, else 0
                  */
                 // @ts-ignore
-                getAccessibleSelectionCount(): int
+                public getAccessibleSelectionCount(): number /*int*/
                 /**
                  * Returns the currently selected sub-menu if one is selected,
                  * otherwise null (there can only be one selection, and it can
@@ -64,7 +64,7 @@ declare namespace javax {
                  * selected).
                  */
                 // @ts-ignore
-                getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns true if the current child of this object is selected
                  * (that is, if this child is a popped-up submenu).
@@ -73,7 +73,7 @@ declare namespace javax {
                  * @see AccessibleContext#getAccessibleChild
                  */
                 // @ts-ignore
-                isAccessibleChildSelected(i: number /*int*/): boolean
+                public isAccessibleChildSelected(i: number /*int*/): boolean
                 /**
                  * Selects the <code>i</code>th menu in the menu.
                  * If that item is a submenu,
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @see #getAccessibleStateSet
                  */
                 // @ts-ignore
-                addAccessibleSelection(i: number /*int*/): void
+                public addAccessibleSelection(i: number /*int*/): void
                 /**
                  * Removes the nth item from the selection.  In general, menus
                  * can only have one item within them selected at a time
@@ -93,20 +93,20 @@ declare namespace javax {
                  * @param i the zero-based index of the selected item
                  */
                 // @ts-ignore
-                removeAccessibleSelection(i: number /*int*/): void
+                public removeAccessibleSelection(i: number /*int*/): void
                 /**
                  * Clears the selection in the object, so that nothing in the
                  * object is selected.  This will close any open sub-menu.
                  */
                 // @ts-ignore
-                clearAccessibleSelection(): void
+                public clearAccessibleSelection(): void
                 /**
                  * Normally causes every selected item in the object to be selected
                  * if the object supports multiple selections.  This method
                  * makes no sense in a menu bar, and so does nothing.
                  */
                 // @ts-ignore
-                selectAllAccessibleSelection(): void
+                public selectAllAccessibleSelection(): void
             }
         }
     }

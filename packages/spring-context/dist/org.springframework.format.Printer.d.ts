@@ -16,7 +16,7 @@ declare namespace org {
                  * @return the printed text string
                  */
                 // @ts-ignore
-                print(object: T, locale: java.util.Locale): java.lang.String
+                print(object: T, locale: java.util.Locale): string
             }
         }
     }

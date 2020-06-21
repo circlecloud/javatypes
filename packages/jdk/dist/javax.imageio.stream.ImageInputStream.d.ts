@@ -63,7 +63,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                read(): int
+                read(): number /*int*/
                 /**
                  * Reads up to <code>b.length</code> bytes from the stream, and
                  * stores them into <code>b</code> starting at index 0.  The
@@ -79,7 +79,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[]): int
+                read(b: number /*byte*/[]): number /*int*/
                 /**
                  * Reads up to <code>len</code> bytes from the stream, and stores
                  * them into <code>b</code> starting at index <code>off</code>.
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Reads up to <code>len</code> bytes from the stream, and
                  * modifies the supplied <code>IIOByteBuffer</code> to indicate
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                readByte(): byte
+                readByte(): number /*byte*/
                 /**
                  * Reads a byte from the stream, and (conceptually) converts it to
                  * an int, masks it with <code>0xff</code> in order to strip off
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                readUnsignedByte(): int
+                readUnsignedByte(): number /*int*/
                 /**
                  * Reads two bytes from the stream, and (conceptually)
                  * concatenates them according to the current byte order, and
@@ -180,7 +180,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readShort(): short
+                readShort(): number /*short*/
                 /**
                  * Reads two bytes from the stream, and (conceptually)
                  * concatenates them according to the current byte order, converts
@@ -197,7 +197,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readUnsignedShort(): int
+                readUnsignedShort(): number /*int*/
                 /**
                  * Equivalent to <code>readUnsignedShort</code>, except that the
                  * result is returned using the <code>char</code> datatype.
@@ -210,7 +210,7 @@ declare namespace javax {
                  * @see #readUnsignedShort
                  */
                 // @ts-ignore
-                readChar(): char
+                readChar(): string
                 /**
                  * Reads 4 bytes from the stream, and (conceptually) concatenates
                  * them according to the current byte order and returns the result
@@ -224,7 +224,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readInt(): int
+                readInt(): number /*int*/
                 /**
                  * Reads 4 bytes from the stream, and (conceptually) concatenates
                  * them according to the current byte order, converts the result
@@ -240,7 +240,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readUnsignedInt(): long
+                readUnsignedInt(): number /*long*/
                 /**
                  * Reads 8 bytes from the stream, and (conceptually) concatenates
                  * them according to the current byte order and returns the result
@@ -254,7 +254,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readLong(): long
+                readLong(): number /*long*/
                 /**
                  * Reads 4 bytes from the stream, and (conceptually) concatenates
                  * them according to the current byte order and returns the result
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readFloat(): float
+                readFloat(): number /*float*/
                 /**
                  * Reads 8 bytes from the stream, and (conceptually) concatenates
                  * them according to the current byte order and returns the result
@@ -282,7 +282,7 @@ declare namespace javax {
                  * @see #getByteOrder
                  */
                 // @ts-ignore
-                readDouble(): double
+                readDouble(): number /*double*/
                 /**
                  * Reads the next line of text from the input stream.  It reads
                  * successive bytes, converting each byte separately into a
@@ -312,7 +312,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                readLine(): java.lang.String
+                readLine(): string
                 /**
                  * Reads in a string that has been encoded using a
                  * <a href="../../../java/io/DataInput.html#modified-utf-8">modified
@@ -382,7 +382,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                readUTF(): java.lang.String
+                readUTF(): string
                 /**
                  * Reads <code>len</code> bytes from the stream, and stores them
                  * into <code>b</code> starting at index <code>off</code>.
@@ -559,7 +559,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                getStreamPosition(): long
+                getStreamPosition(): number /*long*/
                 /**
                  * Returns the current bit offset, as an integer between 0 and 7,
                  * inclusive.  The bit offset is updated implicitly by calls to
@@ -576,7 +576,7 @@ declare namespace javax {
                  * @see #setBitOffset
                  */
                 // @ts-ignore
-                getBitOffset(): int
+                getBitOffset(): number /*int*/
                 /**
                  * Sets the bit offset to an integer between 0 and 7, inclusive.
                  * The byte offset within the stream, as returned by
@@ -605,7 +605,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                readBit(): int
+                readBit(): number /*int*/
                 /**
                  * Reads a bitstring from the stream and returns it as a
                  * <code>long</code>, with the first bit read becoming the most
@@ -642,7 +642,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                readBits(numBits: number /*int*/): long
+                readBits(numBits: number /*int*/): number /*long*/
                 /**
                  * Returns the total length of the stream, if known.  Otherwise,
                  * <code>-1</code> is returned.
@@ -651,7 +651,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                length(): long
+                length(): number /*long*/
                 /**
                  * Moves the stream position forward by a given number of bytes.  It
                  * is possible that this method will only be able to skip forward
@@ -665,7 +665,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                skipBytes(n: number /*int*/): int
+                skipBytes(n: number /*int*/): number /*int*/
                 /**
                  * Moves the stream position forward by a given number of bytes.
                  * This method is identical to <code>skipBytes(int)</code> except
@@ -677,7 +677,7 @@ declare namespace javax {
                  * @exception IOException if an I/O error occurs.
                  */
                 // @ts-ignore
-                skipBytes(n: number /*long*/): long
+                skipBytes(n: number /*long*/): number /*long*/
                 /**
                  * Sets the current stream position to the desired location.  The
                  * next read will occur at this location.  The bit offset is set
@@ -765,7 +765,7 @@ declare namespace javax {
                  *  <code>long</code>.
                  */
                 // @ts-ignore
-                getFlushedPosition(): long
+                getFlushedPosition(): number /*long*/
                 /**
                  * Returns <code>true</code> if this <code>ImageInputStream</code>
                  * caches data itself in order to allow seeking backwards.

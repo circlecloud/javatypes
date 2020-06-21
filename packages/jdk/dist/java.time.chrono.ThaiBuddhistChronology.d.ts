@@ -32,7 +32,7 @@ declare namespace java {
                  * Singleton instance of the Buddhist chronology.
                  */
                 // @ts-ignore
-                readonly INSTANCE: java.time.chrono.ThaiBuddhistChronology
+                public static readonly INSTANCE: java.time.chrono.ThaiBuddhistChronology
                 /**
                  * Gets the ID of the chronology - 'ThaiBuddhist'.
                  * <p>
@@ -42,7 +42,7 @@ declare namespace java {
                  * @see #getCalendarType()
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                public getId(): string
                 /**
                  * Gets the calendar type of the underlying calendar system - 'buddhist'.
                  * <p>
@@ -55,7 +55,7 @@ declare namespace java {
                  * @see #getId()
                  */
                 // @ts-ignore
-                getCalendarType(): java.lang.String
+                public getCalendarType(): string
                 /**
                  * Obtains a local date in Thai Buddhist calendar system from the
                  * era, year-of-era, month-of-year and day-of-month fields.
@@ -68,7 +68,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not a {@code ThaiBuddhistEra}
                  */
                 // @ts-ignore
-                date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.ThaiBuddhistDate
+                public date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.ThaiBuddhistDate
                 /**
                  * Obtains a local date in Thai Buddhist calendar system from the
                  * proleptic-year, month-of-year and day-of-month fields.
@@ -79,7 +79,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.ThaiBuddhistDate
+                public date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.ThaiBuddhistDate
                 /**
                  * Obtains a local date in Thai Buddhist calendar system from the
                  * era, year-of-era and day-of-year fields.
@@ -91,7 +91,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not a {@code ThaiBuddhistEra}
                  */
                 // @ts-ignore
-                dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.ThaiBuddhistDate
+                public dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.ThaiBuddhistDate
                 /**
                  * Obtains a local date in Thai Buddhist calendar system from the
                  * proleptic-year and day-of-year fields.
@@ -101,7 +101,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.ThaiBuddhistDate
+                public dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.ThaiBuddhistDate
                 /**
                  * Obtains a local date in the Thai Buddhist calendar system from the epoch-day.
                  * @param epochDay  the epoch day
@@ -109,21 +109,21 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateEpochDay(epochDay: number /*long*/): java.time.chrono.ThaiBuddhistDate
+                public dateEpochDay(epochDay: number /*long*/): java.time.chrono.ThaiBuddhistDate
                 // @ts-ignore
-                dateNow(): java.time.chrono.ThaiBuddhistDate
+                public dateNow(): java.time.chrono.ThaiBuddhistDate
                 // @ts-ignore
-                dateNow(zone: java.time.ZoneId): java.time.chrono.ThaiBuddhistDate
+                public dateNow(zone: java.time.ZoneId): java.time.chrono.ThaiBuddhistDate
                 // @ts-ignore
-                dateNow(clock: java.time.Clock): java.time.chrono.ThaiBuddhistDate
+                public dateNow(clock: java.time.Clock): java.time.chrono.ThaiBuddhistDate
                 // @ts-ignore
-                date(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ThaiBuddhistDate
+                public date(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ThaiBuddhistDate
                 // @ts-ignore
-                localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<java.time.chrono.ThaiBuddhistDate>
+                public localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<java.time.chrono.ThaiBuddhistDate>
                 // @ts-ignore
-                zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<java.time.chrono.ThaiBuddhistDate>
+                public zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<java.time.chrono.ThaiBuddhistDate>
                 // @ts-ignore
-                zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<java.time.chrono.ThaiBuddhistDate>
+                public zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<java.time.chrono.ThaiBuddhistDate>
                 /**
                  * Checks if the specified year is a leap year.
                  * <p>
@@ -134,17 +134,17 @@ declare namespace java {
                  * @return true if the year is a leap year
                  */
                 // @ts-ignore
-                isLeapYear(prolepticYear: number /*long*/): boolean
+                public isLeapYear(prolepticYear: number /*long*/): boolean
                 // @ts-ignore
-                prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): int
+                public prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): number /*int*/
                 // @ts-ignore
-                eraOf(eraValue: number /*int*/): java.time.chrono.ThaiBuddhistEra
+                public eraOf(eraValue: number /*int*/): java.time.chrono.ThaiBuddhistEra
                 // @ts-ignore
-                eras(): java.util.List<java.time.chrono.Era>
+                public eras(): Array<java.time.chrono.Era>
                 // @ts-ignore
-                range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
                 // @ts-ignore
-                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.ThaiBuddhistDate
+                public resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.ThaiBuddhistDate
             }
         }
     }

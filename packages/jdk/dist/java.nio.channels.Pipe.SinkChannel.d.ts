@@ -7,7 +7,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class SinkChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.WritableByteChannel, java.nio.channels.GatheringByteChannel {
+                abstract class SinkChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.WritableByteChannel, java.nio.channels.GatheringByteChannel {
                     /**
                      * Initializes a new instance of this class.
                      * @param provider
@@ -23,7 +23,7 @@ declare namespace java {
                      * @return The valid-operation set
                      */
                     // @ts-ignore
-                    validOps(): int
+                    public validOps(): number /*int*/
                 }
             }
         }

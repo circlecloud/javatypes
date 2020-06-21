@@ -11,7 +11,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class MacSpi extends java.lang.Object {
+        abstract class MacSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -19,7 +19,7 @@ declare namespace javax {
              * @return the MAC length in bytes.
              */
             // @ts-ignore
-            abstract engineGetMacLength(): int
+            abstract engineGetMacLength(): number /*int*/
             /**
              * Initializes the MAC with the given (secret) key and algorithm
              * parameters.
@@ -65,7 +65,7 @@ declare namespace javax {
              * @return the MAC result.
              */
             // @ts-ignore
-            abstract engineDoFinal(): byte[]
+            abstract engineDoFinal(): number /*byte*/[]
             /**
              * Resets the MAC for further use, maintaining the secret key that the
              * MAC was initialized with.
@@ -79,7 +79,7 @@ declare namespace javax {
              *  on an implementation that does not support <code>Cloneable</code>.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

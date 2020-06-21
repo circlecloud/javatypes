@@ -17,7 +17,7 @@ declare namespace org {
                  * @return a list of ItemStacks
                  */
                 // @ts-ignore
-                populateLoot(random: java.util.Random, context: org.bukkit.loot.LootContext): java.util.Collection<org.bukkit.inventory.ItemStack>
+                populateLoot(random: java.util.Random, context: org.bukkit.loot.LootContext): Array<org.bukkit.inventory.ItemStack>
                 /**
                  * Attempt to fill an inventory with this LootTable's loot.
                  * @param inventory the inventory to fill

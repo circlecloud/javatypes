@@ -41,7 +41,7 @@ declare namespace javax {
              *   handler (a subclass that performs some other kind of transfer, for example)
              */
             // @ts-ignore
-            constructor(property: string)
+            constructor(property: java.lang.String | string)
             /**
              * Convenience constructor for subclasses.
              */
@@ -51,27 +51,27 @@ declare namespace javax {
              * An <code>int</code> representing no transfer action.
              */
             // @ts-ignore
-            readonly NONE: number /*int*/
+            public static readonly NONE: number /*int*/
             /**
              * An <code>int</code> representing a &quot;copy&quot; transfer action.
              * This value is used when data is copied to a clipboard
              * or copied elsewhere in a drag and drop operation.
              */
             // @ts-ignore
-            readonly COPY: number /*int*/
+            public static readonly COPY: number /*int*/
             /**
              * An <code>int</code> representing a &quot;move&quot; transfer action.
              * This value is used when data is moved to a clipboard (i.e. a cut)
              * or moved elsewhere in a drag and drop operation.
              */
             // @ts-ignore
-            readonly MOVE: number /*int*/
+            public static readonly MOVE: number /*int*/
             /**
              * An <code>int</code> representing a source action capability of either
              * &quot;copy&quot; or &quot;move&quot;.
              */
             // @ts-ignore
-            readonly COPY_OR_MOVE: number /*int*/
+            public static readonly COPY_OR_MOVE: number /*int*/
             /**
              * An <code>int</code> representing a &quot;link&quot; transfer action.
              * This value is used to specify that data should be linked in a drag
@@ -80,7 +80,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            readonly LINK: number /*int*/
+            public static readonly LINK: number /*int*/
             /**
              * Returns an {@code Action} that performs cut operations to the
              * clipboard. When performed, this action operates on the {@code JComponent}
@@ -89,7 +89,7 @@ declare namespace javax {
              * @return an {#code Action} for performing cuts to the clipboard
              */
             // @ts-ignore
-            getCutAction(): javax.swing.Action
+            public static getCutAction(): javax.swing.Action
             /**
              * Returns an {@code Action} that performs copy operations to the
              * clipboard. When performed, this action operates on the {@code JComponent}
@@ -98,7 +98,7 @@ declare namespace javax {
              * @return an {#code Action} for performing copies to the clipboard
              */
             // @ts-ignore
-            getCopyAction(): javax.swing.Action
+            public static getCopyAction(): javax.swing.Action
             /**
              * Returns an {@code Action} that performs paste operations from the
              * clipboard. When performed, this action operates on the {@code JComponent}
@@ -107,7 +107,7 @@ declare namespace javax {
              * @return an {#code Action} for performing pastes from the clipboard
              */
             // @ts-ignore
-            getPasteAction(): javax.swing.Action
+            public static getPasteAction(): javax.swing.Action
             /**
              * Sets the drag image parameter. The image has to be prepared
              * for rendering by the moment of the call. The image is stored
@@ -115,14 +115,14 @@ declare namespace javax {
              * @param img an image to drag
              */
             // @ts-ignore
-            setDragImage(img: java.awt.Image): void
+            public setDragImage(img: java.awt.Image): void
             /**
              * Returns the drag image. If there is no image to drag,
              * the returned value is {@code null}.
              * @return the reference to the drag image
              */
             // @ts-ignore
-            getDragImage(): java.awt.Image
+            public getDragImage(): java.awt.Image
             /**
              * Sets an anchor offset for the image to drag.
              * It can not be {@code null}.
@@ -131,7 +131,7 @@ declare namespace javax {
              *  relative to the upper left corner of the image
              */
             // @ts-ignore
-            setDragImageOffset(p: java.awt.Point): void
+            public setDragImageOffset(p: java.awt.Point): void
             /**
              * Returns an anchor offset for the image to drag.
              * @return a {#code Point} object that corresponds
@@ -140,7 +140,7 @@ declare namespace javax {
              *  The point {@code (0,0)} returns by default.
              */
             // @ts-ignore
-            getDragImageOffset(): java.awt.Point
+            public getDragImageOffset(): java.awt.Point
             /**
              * Causes the Swing drag support to be initiated.  This is called by
              * the various UI implementations in the <code>javax.swing.plaf.basic</code>
@@ -165,7 +165,7 @@ declare namespace javax {
              *                course of the drag operation
              */
             // @ts-ignore
-            exportAsDrag(comp: javax.swing.JComponent, e: java.awt.event.InputEvent, action: number /*int*/): void
+            public exportAsDrag(comp: javax.swing.JComponent, e: java.awt.event.InputEvent, action: number /*int*/): void
             /**
              * Causes a transfer from the given component to the
              * given clipboard.  This method is called by the default cut and
@@ -194,7 +194,7 @@ declare namespace javax {
              * @see Clipboard#setContents(Transferable, ClipboardOwner)
              */
             // @ts-ignore
-            exportToClipboard(comp: javax.swing.JComponent, clip: java.awt.datatransfer.Clipboard, action: number /*int*/): void
+            public exportToClipboard(comp: javax.swing.JComponent, clip: java.awt.datatransfer.Clipboard, action: number /*int*/): void
             /**
              * Causes a transfer to occur from a clipboard or a drag and
              * drop operation. The <code>Transferable</code> to be
@@ -220,7 +220,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            importData(support: javax.swing.TransferHandler.TransferSupport): boolean
+            public importData(support: javax.swing.TransferHandler.TransferSupport): boolean
             /**
              * Causes a transfer to a component from a clipboard or a
              * DND drop operation.  The <code>Transferable</code> represents
@@ -240,7 +240,7 @@ declare namespace javax {
              * @see #importData(TransferHandler.TransferSupport)
              */
             // @ts-ignore
-            importData(comp: javax.swing.JComponent, t: java.awt.datatransfer.Transferable): boolean
+            public importData(comp: javax.swing.JComponent, t: java.awt.datatransfer.Transferable): boolean
             /**
              * This method is called repeatedly during a drag and drop operation
              * to allow the developer to configure properties of, and to return
@@ -286,7 +286,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            canImport(support: javax.swing.TransferHandler.TransferSupport): boolean
+            public canImport(support: javax.swing.TransferHandler.TransferSupport): boolean
             /**
              * Indicates whether a component will accept an import of the given
              * set of data flavors prior to actually attempting to import it.
@@ -305,7 +305,7 @@ declare namespace javax {
              * @see #canImport(TransferHandler.TransferSupport)
              */
             // @ts-ignore
-            canImport(comp: javax.swing.JComponent, transferFlavors: java.awt.datatransfer.DataFlavor[]): boolean
+            public canImport(comp: javax.swing.JComponent, transferFlavors: java.awt.datatransfer.DataFlavor[]): boolean
             /**
              * Returns the type of transfer actions supported by the source;
              * any bitwise-OR combination of {@code COPY}, {@code MOVE}
@@ -320,7 +320,7 @@ declare namespace javax {
              *           otherwise returns <code>NONE</code>
              */
             // @ts-ignore
-            getSourceActions(c: javax.swing.JComponent): int
+            public getSourceActions(c: javax.swing.JComponent): number /*int*/
             /**
              * Returns an object that establishes the look of a transfer.  This is
              * useful for both providing feedback while performing a drag operation and for
@@ -342,7 +342,7 @@ declare namespace javax {
              *     there is no default visual representation
              */
             // @ts-ignore
-            getVisualRepresentation(t: java.awt.datatransfer.Transferable): javax.swing.Icon
+            public getVisualRepresentation(t: java.awt.datatransfer.Transferable): javax.swing.Icon
             /**
              * Creates a <code>Transferable</code> to use as the source for
              * a data transfer. Returns the representation of the data to

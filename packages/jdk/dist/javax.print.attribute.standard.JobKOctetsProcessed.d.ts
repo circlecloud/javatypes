@@ -69,7 +69,7 @@ declare namespace javax {
                      *           octets processed attribute, false otherwise.
                      */
                     // @ts-ignore
-                    equals(object: any): boolean
+                    public equals(object: java.lang.Object | any): boolean
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -80,7 +80,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -90,7 +90,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

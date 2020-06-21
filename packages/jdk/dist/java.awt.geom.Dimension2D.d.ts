@@ -13,7 +13,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Dimension2D extends java.lang.Object implements java.lang.Cloneable {
+            abstract class Dimension2D extends java.lang.Object implements java.lang.Cloneable {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -32,7 +32,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getWidth(): double
+                public abstract getWidth(): number /*double*/
                 /**
                  * Returns the height of this <code>Dimension</code> in double
                  * precision.
@@ -40,7 +40,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getHeight(): double
+                public abstract getHeight(): number /*double*/
                 /**
                  * Sets the size of this <code>Dimension</code> object to the
                  * specified width and height.
@@ -54,7 +54,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setSize(width: number /*double*/, height: number /*double*/): void
+                public abstract setSize(width: number /*double*/, height: number /*double*/): void
                 /**
                  * Sets the size of this <code>Dimension2D</code> object to
                  * match the specified size.
@@ -65,7 +65,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setSize(d: java.awt.geom.Dimension2D): void
+                public setSize(d: java.awt.geom.Dimension2D): void
                 /**
                  * Creates a new object of the same class as this object.
                  * @return a clone of this instance.
@@ -74,7 +74,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

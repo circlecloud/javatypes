@@ -45,7 +45,7 @@ declare namespace javax {
                      * @param e the action event
                      */
                     // @ts-ignore
-                    actionPerformed(e: java.awt.event.ActionEvent): void
+                    public actionPerformed(e: java.awt.event.ActionEvent): void
                 }
             }
         }

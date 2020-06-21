@@ -17,7 +17,7 @@ declare namespace java {
                  * @param errorIndex  the index in the parsed string that was invalid, should be a valid index
                  */
                 // @ts-ignore
-                constructor(message: string, parsedData: java.lang.CharSequence, errorIndex: number /*int*/)
+                constructor(message: java.lang.String | string, parsedData: java.lang.CharSequence, errorIndex: number /*int*/)
                 /**
                  * Constructs a new exception with the specified message and cause.
                  * @param message  the message to use for this exception, may be null
@@ -26,19 +26,19 @@ declare namespace java {
                  * @param cause  the cause exception, may be null
                  */
                 // @ts-ignore
-                constructor(message: string, parsedData: java.lang.CharSequence, errorIndex: number /*int*/, cause: Error)
+                constructor(message: java.lang.String | string, parsedData: java.lang.CharSequence, errorIndex: number /*int*/, cause: java.lang.Throwable | Error)
                 /**
                  * Returns the string that was being parsed.
                  * @return the string that was being parsed, should not be null.
                  */
                 // @ts-ignore
-                getParsedString(): java.lang.String
+                getParsedString(): string
                 /**
                  * Returns the index where the error was found.
                  * @return the index in the parsed string that was invalid, should be a valid index
                  */
                 // @ts-ignore
-                getErrorIndex(): int
+                getErrorIndex(): number /*int*/
             }
         }
     }

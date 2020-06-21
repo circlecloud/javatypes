@@ -24,7 +24,7 @@ declare namespace javax {
                      * might not be used.
                      */
                     // @ts-ignore
-                    editorBorderInsets: java.awt.Insets
+                    static editorBorderInsets: java.awt.Insets
                 }
             }
         }

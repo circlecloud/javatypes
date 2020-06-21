@@ -52,12 +52,12 @@ declare namespace org {
                      * @see java.rmi.server.RMIClassLoader
                      */
                     // @ts-ignore
-                    setCodebaseUrl(codebaseUrl: string): void
+                    public setCodebaseUrl(codebaseUrl: java.lang.String | string): void
                     /**
                      * Return the codebase URL to download classes from if not found locally.
                      */
                     // @ts-ignore
-                    getCodebaseUrl(): java.lang.String
+                    public getCodebaseUrl(): string
                     /**
                      * Set the HttpInvokerRequestExecutor implementation to use for executing
                      * remote invocations.
@@ -68,18 +68,18 @@ declare namespace org {
                      * @see HttpComponentsHttpInvokerRequestExecutor
                      */
                     // @ts-ignore
-                    setHttpInvokerRequestExecutor(httpInvokerRequestExecutor: org.springframework.remoting.httpinvoker.HttpInvokerRequestExecutor): void
+                    public setHttpInvokerRequestExecutor(httpInvokerRequestExecutor: org.springframework.remoting.httpinvoker.HttpInvokerRequestExecutor): void
                     /**
                      * Return the HttpInvokerRequestExecutor used by this remote accessor.
                      * <p>Creates a default SimpleHttpInvokerRequestExecutor if no executor
                      * has been initialized already.
                      */
                     // @ts-ignore
-                    getHttpInvokerRequestExecutor(): org.springframework.remoting.httpinvoker.HttpInvokerRequestExecutor
+                    public getHttpInvokerRequestExecutor(): org.springframework.remoting.httpinvoker.HttpInvokerRequestExecutor
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    invoke(methodInvocation: MethodInvocation): java.lang.Object
+                    public invoke(methodInvocation: MethodInvocation): any
                     /**
                      * Execute the given remote invocation via the {@link HttpInvokerRequestExecutor}.
                      * <p>This implementation delegates to {@link #executeRequest(RemoteInvocation)}.
@@ -116,7 +116,7 @@ declare namespace org {
                      *  original exception propagated to the caller
                      */
                     // @ts-ignore
-                    convertHttpInvokerAccessException(ex: Error): RemoteAccessException
+                    convertHttpInvokerAccessException(ex: java.lang.Throwable | Error): RemoteAccessException
                 }
             }
         }

@@ -114,7 +114,7 @@ declare namespace java {
              * @exception IllegalArgumentException if url is invalid or if actions contains white-space.
              */
             // @ts-ignore
-            constructor(url: string, actions: string)
+            constructor(url: java.lang.String | string, actions: java.lang.String | string)
             /**
              * Creates a URLPermission with the given url string and unrestricted
              * methods and request headers by invoking the two argument
@@ -123,7 +123,7 @@ declare namespace java {
              * @throws IllegalArgumentException if url does not result in a valid {#link URI}
              */
             // @ts-ignore
-            constructor(url: string)
+            constructor(url: java.lang.String | string)
             /**
              * Returns the normalized method list and request
              * header list, in the form:
@@ -137,7 +137,7 @@ declare namespace java {
              * then the colon separator will not be present.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Checks if this URLPermission implies the given permission.
              * Specifically, the following checks are done as if in the
@@ -174,19 +174,19 @@ declare namespace java {
              * </table>
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Returns true if, this.getActions().equals(p.getActions())
              * and p's url equals this's url.  Returns false otherwise.
              */
             // @ts-ignore
-            equals(p: any): boolean
+            public equals(p: java.lang.Object | any): boolean
             /**
              * Returns a hashcode calculated from the hashcode of the
              * actions String and the url string.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

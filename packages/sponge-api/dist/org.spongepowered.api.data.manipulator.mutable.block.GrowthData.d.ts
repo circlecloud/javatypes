@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#GROWTH_STAGE
                                  */
                                 // @ts-ignore
-                                growthStage(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                growthStage(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

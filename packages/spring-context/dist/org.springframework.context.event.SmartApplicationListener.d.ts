@@ -19,7 +19,7 @@ declare namespace org {
                      * @param eventType the event type (never {#code null})
                      */
                     // @ts-ignore
-                    supportsEventType(eventType: java.lang.Class<org.springframework.context.ApplicationEvent>): boolean
+                    supportsEventType(eventType: java.lang.Class<any>): boolean
                     /**
                      * Determine whether this listener actually supports the given source type.
                      * <p>The default implementation always returns {@code true}.
@@ -32,7 +32,7 @@ declare namespace org {
                      * <p>The default implementation returns {@link #LOWEST_PRECEDENCE}.
                      */
                     // @ts-ignore
-                    getOrder(): int
+                    getOrder(): number /*int*/
                 }
             }
         }

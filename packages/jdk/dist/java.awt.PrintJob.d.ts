@@ -8,7 +8,7 @@ declare namespace java {
          * @author Amy Fowler
          */
         // @ts-ignore
-        class PrintJob extends java.lang.Object {
+        abstract class PrintJob extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -19,37 +19,37 @@ declare namespace java {
              * @see PrintGraphics
              */
             // @ts-ignore
-            abstract getGraphics(): java.awt.Graphics
+            public abstract getGraphics(): java.awt.Graphics
             /**
              * Returns the dimensions of the page in pixels.
              * The resolution of the page is chosen so that it
              * is similar to the screen resolution.
              */
             // @ts-ignore
-            abstract getPageDimension(): java.awt.Dimension
+            public abstract getPageDimension(): java.awt.Dimension
             /**
              * Returns the resolution of the page in pixels per inch.
              * Note that this doesn't have to correspond to the physical
              * resolution of the printer.
              */
             // @ts-ignore
-            abstract getPageResolution(): int
+            public abstract getPageResolution(): number /*int*/
             /**
              * Returns true if the last page will be printed first.
              */
             // @ts-ignore
-            abstract lastPageFirst(): boolean
+            public abstract lastPageFirst(): boolean
             /**
              * Ends the print job and does any necessary cleanup.
              */
             // @ts-ignore
-            abstract end(): void
+            public abstract end(): void
             /**
              * Ends this print job once it is no longer referenced.
              * @see #end
              */
             // @ts-ignore
-            finalize(): void
+            public finalize(): void
         }
     }
 }

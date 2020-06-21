@@ -16,13 +16,13 @@ declare namespace javax {
                      * @return the drop index
                      */
                     // @ts-ignore
-                    getIndex(): int
+                    public getIndex(): number /*int*/
                     /**
                      * Returns the bias for the drop index.
                      * @return the drop bias
                      */
                     // @ts-ignore
-                    getBias(): javax.swing.text.Position.Bias
+                    public getBias(): javax.swing.text.Position.Bias
                     /**
                      * Returns a string representation of this drop location.
                      * This method is intended to be used for debugging purposes,
@@ -31,7 +31,7 @@ declare namespace javax {
                      * @return a string representation of this drop location
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

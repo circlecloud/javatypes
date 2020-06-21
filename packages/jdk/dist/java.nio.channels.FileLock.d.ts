@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class FileLock extends java.lang.Object implements java.lang.AutoCloseable {
+            abstract class FileLock extends java.lang.Object implements java.lang.AutoCloseable {
                 /**
                  * Initializes a new instance of this class.
                  * @param channel
@@ -119,14 +119,14 @@ declare namespace java {
                  *           acquired by a file channel.
                  */
                 // @ts-ignore
-                channel(): java.nio.channels.FileChannel
+                public channel(): java.nio.channels.FileChannel
                 /**
                  * Returns the channel upon whose file this lock was acquired.
                  * @return The channel upon whose file this lock was acquired.
                  * @since 1.7
                  */
                 // @ts-ignore
-                acquiredBy(): java.nio.channels.Channel
+                public acquiredBy(): java.nio.channels.Channel
                 /**
                  * Returns the position within the file of the first byte of the locked
                  * region.
@@ -136,7 +136,7 @@ declare namespace java {
                  * @return The position
                  */
                 // @ts-ignore
-                position(): long
+                public position(): number /*long*/
                 /**
                  * Returns the size of the locked region in bytes.
                  * <p> A locked region need not be contained within, or even overlap, the
@@ -145,14 +145,14 @@ declare namespace java {
                  * @return The size of the locked region
                  */
                 // @ts-ignore
-                size(): long
+                public size(): number /*long*/
                 /**
                  * Tells whether this lock is shared.
                  * @return <tt>true</tt> if lock is shared,
                  *          <tt>false</tt> if it is exclusive
                  */
                 // @ts-ignore
-                isShared(): boolean
+                public isShared(): boolean
                 /**
                  * Tells whether or not this lock overlaps the given lock range.
                  * @param position
@@ -163,7 +163,7 @@ declare namespace java {
                  *           range overlap by at least one byte
                  */
                 // @ts-ignore
-                overlaps(position: number /*long*/, size: number /*long*/): boolean
+                public overlaps(position: number /*long*/, size: number /*long*/): boolean
                 /**
                  * Tells whether or not this lock is valid.
                  * <p> A lock object remains valid until it is released or the associated
@@ -171,7 +171,7 @@ declare namespace java {
                  * @return <tt>true</tt> if, and only if, this lock is valid
                  */
                 // @ts-ignore
-                abstract isValid(): boolean
+                public abstract isValid(): boolean
                 /**
                  * Releases this lock.
                  * <p> If this lock object is valid then invoking this method releases the
@@ -184,7 +184,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract release(): void
+                public abstract release(): void
                 /**
                  * This method invokes the {@link #release} method. It was added
                  * to the class so that it could be used in conjunction with the
@@ -192,13 +192,13 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Returns a string describing the range, type, and validity of this lock.
                  * @return A descriptive string
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

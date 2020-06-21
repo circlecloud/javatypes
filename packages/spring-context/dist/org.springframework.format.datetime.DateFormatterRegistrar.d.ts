@@ -25,15 +25,15 @@ declare namespace org {
                      * {@link Date} and {@link Calendar} fields will be registered.
                      */
                     // @ts-ignore
-                    setFormatter(dateFormatter: org.springframework.format.datetime.DateFormatter): void
+                    public setFormatter(dateFormatter: org.springframework.format.datetime.DateFormatter): void
                     // @ts-ignore
-                    registerFormatters(registry: org.springframework.format.FormatterRegistry): void
+                    public registerFormatters(registry: org.springframework.format.FormatterRegistry): void
                     /**
                      * Add date converters to the specified registry.
                      * @param converterRegistry the registry of converters to add to
                      */
                     // @ts-ignore
-                    addDateConverters(converterRegistry: ConverterRegistry): void
+                    public static addDateConverters(converterRegistry: ConverterRegistry): void
                 }
             }
         }

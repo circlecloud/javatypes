@@ -14,21 +14,21 @@ declare namespace org {
                  * @since 3.0.3
                  */
                 // @ts-ignore
-                class VfsUtils extends java.lang.Object {
+                abstract class VfsUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly VIRTUAL_FILE_VISITOR_INTERFACE: java.lang.Class<any>
+                    static readonly VIRTUAL_FILE_VISITOR_INTERFACE: java.lang.Class<any>
                     // @ts-ignore
-                    readonly VIRTUAL_FILE_METHOD_VISIT: java.lang.reflect.Method
+                    static readonly VIRTUAL_FILE_METHOD_VISIT: java.lang.reflect.Method
                     // @ts-ignore
-                    invokeVfsMethod(method: java.lang.reflect.Method, target: any, ...args: any[]): java.lang.Object
+                    static invokeVfsMethod(method: java.lang.reflect.Method, target: java.lang.Object | any, ...args: java.lang.Object[] | any[]): any
                     // @ts-ignore
-                    getRoot(url: java.net.URL): java.lang.Object
+                    static getRoot(url: java.net.URL): any
                     // @ts-ignore
-                    doGetVisitorAttributes(): java.lang.Object
+                    static doGetVisitorAttributes(): any
                     // @ts-ignore
-                    doGetPath(resource: any): java.lang.String
+                    static doGetPath(resource: java.lang.Object | any): string
                 }
             }
         }

@@ -16,7 +16,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class Control extends java.lang.Object {
+            abstract class Control extends java.lang.Object {
                 /**
                  * Constructs a Control with the specified type.
                  * @param type the kind of control desired
@@ -28,13 +28,13 @@ declare namespace javax {
                  * @return the control's type.
                  */
                 // @ts-ignore
-                getType(): javax.sound.sampled.Control.Type
+                public getType(): javax.sound.sampled.Control.Type
                 /**
                  * Obtains a String describing the control type and its current state.
                  * @return a String representation of the Control.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

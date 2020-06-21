@@ -38,7 +38,7 @@ declare namespace javax {
          * @since 1.3
          */
         // @ts-ignore
-        class ReferralException extends javax.naming.NamingException {
+        abstract class ReferralException extends javax.naming.NamingException {
             /**
              * Constructs a new instance of ReferralException using the
              * explanation supplied. All other fields are set to null.
@@ -46,7 +46,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of ReferralException.
              * All fields are set to null.
@@ -62,7 +62,7 @@ declare namespace javax {
              * @return Non-null referral information related to this referral.
              */
             // @ts-ignore
-            abstract getReferralInfo(): java.lang.Object
+            abstract getReferralInfo(): any
             /**
              * Retrieves the context at which to continue the method.
              * Regardless of whether a referral is encountered directly during a
@@ -107,7 +107,7 @@ declare namespace javax {
              *  to continue processing referrals.
              */
             // @ts-ignore
-            abstract getReferralContext(env: java.util.Hashtable<any, ?>): javax.naming.Context
+            abstract getReferralContext(env: java.util.Hashtable<any, any>): javax.naming.Context
             /**
              * Discards the referral about to be processed.
              * A call to this method should be followed by a call to

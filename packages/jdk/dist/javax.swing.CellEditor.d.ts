@@ -33,7 +33,7 @@ declare namespace javax {
              * @return the value contained in the editor
              */
             // @ts-ignore
-            getCellEditorValue(): java.lang.Object
+            getCellEditorValue(): any
             /**
              * Asks the editor if it can start editing using <code>anEvent</code>.
              * <code>anEvent</code> is in the invoking component coordinate system.

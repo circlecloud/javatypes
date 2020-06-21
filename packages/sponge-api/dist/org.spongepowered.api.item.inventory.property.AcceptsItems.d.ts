@@ -12,13 +12,13 @@ declare namespace org {
                          * property's collection.
                          */
                         // @ts-ignore
-                        class AcceptsItems extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, java.util.Collection<org.spongepowered.api.item.ItemType>> {
+                        class AcceptsItems extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, java.util.Collection<org.spongepowered.api.item.ItemType> | Array<org.spongepowered.api.item.ItemType>> {
                             /**
                              * Create a new AcceptsItems property with the supplied value.
                              * @param value Item types to accept
                              */
                             // @ts-ignore
-                            constructor(value: Array<org.spongepowered.api.item.ItemType>)
+                            constructor(value: java.util.Collection<org.spongepowered.api.item.ItemType> | Array<org.spongepowered.api.item.ItemType>)
                             /**
                              * Create a new AcceptsItems property with the supplied value and operator.
                              * @param value Item types to accept
@@ -26,7 +26,7 @@ declare namespace org {
                              *       properties
                              */
                             // @ts-ignore
-                            constructor(value: Array<org.spongepowered.api.item.ItemType>, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.util.Collection<org.spongepowered.api.item.ItemType> | Array<org.spongepowered.api.item.ItemType>, operator: org.spongepowered.api.data.Property.Operator)
                             /**
                              * Create a new AcceptsItems property with the supplied value and operator.
                              * @param value Item types to accept
@@ -34,9 +34,9 @@ declare namespace org {
                              *       properties
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                             /**
                              * Returns true if <em>other</em> is also an {@link AcceptsItems} property
                              * and <b>any</b> item appearing in the other property's collection appears
@@ -45,7 +45,7 @@ declare namespace org {
                              * greater than zero.
                              */
                             // @ts-ignore
-                            equals(obj: any): boolean
+                            public equals(obj: java.lang.Object | any): boolean
                             /**
                              * Create an AcceptsItems property which matches AcceptsItems properties
                              * with containing one or more of the supplied values.
@@ -53,7 +53,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(...value: any[]): org.spongepowered.api.item.inventory.property.AcceptsItems
+                            public static of(...value: java.lang.Object[] | any[]): org.spongepowered.api.item.inventory.property.AcceptsItems
                         }
                     }
                 }

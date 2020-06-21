@@ -18,7 +18,7 @@ declare namespace javax {
                  * @param algorithm the algorithm
                  */
                 // @ts-ignore
-                constructor(factorySpi: javax.net.ssl.KeyManagerFactorySpi, provider: java.security.Provider, algorithm: string)
+                constructor(factorySpi: javax.net.ssl.KeyManagerFactorySpi, provider: java.security.Provider, algorithm: java.lang.String | string)
                 /**
                  * Obtains the default KeyManagerFactory algorithm name.
                  * <p>The default algorithm can be changed at runtime by setting
@@ -30,7 +30,7 @@ declare namespace javax {
                  *           implementation-specific default if no such property exists.
                  */
                 // @ts-ignore
-                getDefaultAlgorithm(): java.lang.String
+                public static getDefaultAlgorithm(): string
                 /**
                  * Returns the algorithm name of this <code>KeyManagerFactory</code> object.
                  * <p>This is the same name that was specified in one of the
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @return the algorithm name of this <code>KeyManagerFactory</code> object.
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
                 /**
                  * Returns a <code>KeyManagerFactory</code> object that acts as a
                  * factory for key managers.
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string): javax.net.ssl.KeyManagerFactory
+                public static getInstance(algorithm: java.lang.String | string): javax.net.ssl.KeyManagerFactory
                 /**
                  * Returns a <code>KeyManagerFactory</code> object that acts as a
                  * factory for key managers.
@@ -90,7 +90,7 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: string): javax.net.ssl.KeyManagerFactory
+                public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.net.ssl.KeyManagerFactory
                 /**
                  * Returns a <code>KeyManagerFactory</code> object that acts as a
                  * factory for key managers.
@@ -113,13 +113,13 @@ declare namespace javax {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: java.security.Provider): javax.net.ssl.KeyManagerFactory
+                public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.net.ssl.KeyManagerFactory
                 /**
                  * Returns the provider of this <code>KeyManagerFactory</code> object.
                  * @return the provider of this <code>KeyManagerFactory</code> object
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Initializes this factory with a source of key material.
                  * <P>
@@ -139,7 +139,7 @@ declare namespace javax {
                  *           (e.g. the given password is wrong).
                  */
                 // @ts-ignore
-                init(ks: java.security.KeyStore, password: string[]): void
+                public init(ks: java.security.KeyStore, password: string[]): void
                 /**
                  * Initializes this factory with a source of provider-specific
                  * key material.
@@ -156,14 +156,14 @@ declare namespace javax {
                  * @throws InvalidAlgorithmParameterException if an error is encountered
                  */
                 // @ts-ignore
-                init(spec: javax.net.ssl.ManagerFactoryParameters): void
+                public init(spec: javax.net.ssl.ManagerFactoryParameters): void
                 /**
                  * Returns one key manager for each type of key material.
                  * @return the key managers
                  * @throws IllegalStateException if the KeyManagerFactory is not initialized
                  */
                 // @ts-ignore
-                getKeyManagers(): javax.net.ssl.KeyManager[]
+                public getKeyManagers(): javax.net.ssl.KeyManager[]
             }
         }
     }

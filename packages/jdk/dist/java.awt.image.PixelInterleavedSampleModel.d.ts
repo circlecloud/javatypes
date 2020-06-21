@@ -70,7 +70,7 @@ declare namespace java {
                  *          <code>h</code> is not greater than 0
                  */
                 // @ts-ignore
-                createCompatibleSampleModel(w: number /*int*/, h: number /*int*/): java.awt.image.SampleModel
+                public createCompatibleSampleModel(w: number /*int*/, h: number /*int*/): java.awt.image.SampleModel
                 /**
                  * Creates a new PixelInterleavedSampleModel with a subset of the
                  * bands of this PixelInterleavedSampleModel.  The new
@@ -81,9 +81,9 @@ declare namespace java {
                  * PixelInterleavedSampleModel/DataBuffer combination.
                  */
                 // @ts-ignore
-                createSubsetSampleModel(bands: number /*int*/[]): java.awt.image.SampleModel
+                public createSubsetSampleModel(bands: number /*int*/[]): java.awt.image.SampleModel
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

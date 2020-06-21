@@ -34,7 +34,7 @@ declare namespace javax {
              * @param name the system-dependent file name.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * This method will return an InputStream representing the
              * the data and will throw an IOException if it can
@@ -43,7 +43,7 @@ declare namespace javax {
              * @return an InputStream
              */
             // @ts-ignore
-            getInputStream(): java.io.InputStream
+            public getInputStream(): java.io.InputStream
             /**
              * This method will return an OutputStream representing the
              * the data and will throw an IOException if it can
@@ -52,7 +52,7 @@ declare namespace javax {
              * @return an OutputStream
              */
             // @ts-ignore
-            getOutputStream(): java.io.OutputStream
+            public getOutputStream(): java.io.OutputStream
             /**
              * This method returns the MIME type of the data in the form of a
              * string. This method uses the currently installed FileTypeMap. If
@@ -64,7 +64,7 @@ declare namespace javax {
              * @see javax.activation.FileTypeMap#getDefaultFileTypeMap
              */
             // @ts-ignore
-            getContentType(): java.lang.String
+            public getContentType(): string
             /**
              * Return the <i>name</i> of this object. The FileDataSource
              * will return the file name of the object.
@@ -72,19 +72,19 @@ declare namespace javax {
              * @see javax.activation.DataSource
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Return the File object that corresponds to this FileDataSource.
              * @return the File object for the file represented by this object.
              */
             // @ts-ignore
-            getFile(): java.io.File
+            public getFile(): java.io.File
             /**
              * Set the FileTypeMap to use with this FileDataSource
              * @param map The FileTypeMap for this object.
              */
             // @ts-ignore
-            setFileTypeMap(map: javax.activation.FileTypeMap): void
+            public setFileTypeMap(map: javax.activation.FileTypeMap): void
         }
     }
 }

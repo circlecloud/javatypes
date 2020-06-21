@@ -11,10 +11,22 @@ declare namespace javax {
                  */
                 // @ts-ignore
                 class XmlAccessOrder extends java.lang.Enum<javax.xml.bind.annotation.XmlAccessOrder> {
+                    /**
+                     * The ordering of fields and properties in a class is undefined.
+                     */
+                    // @ts-ignore
+                    readonly UNDEFINED: javax.xml.bind.annotation.XmlAccessOrder
+                    /**
+                     * The ordering of fields and properties in a class is in
+                     * alphabetical order as determined by the
+                     * method java.lang.String.compareTo(String anotherString).
+                     */
+                    // @ts-ignore
+                    readonly ALPHABETICAL: javax.xml.bind.annotation.XmlAccessOrder
                     // @ts-ignore
                     values(): javax.xml.bind.annotation.XmlAccessOrder[]
                     // @ts-ignore
-                    valueOf(name: string): javax.xml.bind.annotation.XmlAccessOrder
+                    valueOf(name: java.lang.String | string): javax.xml.bind.annotation.XmlAccessOrder
                 }
             }
         }

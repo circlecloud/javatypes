@@ -16,7 +16,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if aliases are duplicated
                      */
                     // @ts-ignore
-                    constructor(callable: org.spongepowered.api.command.CommandCallable, primary: string, ...alias: string[])
+                    constructor(callable: org.spongepowered.api.command.CommandCallable, primary: java.lang.String | string, ...alias: java.lang.String[] | string[])
                     /**
                      * Create a new instance.
                      * @param callable The command callable
@@ -25,15 +25,15 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if aliases are duplicated
                      */
                     // @ts-ignore
-                    constructor(callable: org.spongepowered.api.command.CommandCallable, primary: string, aliases: Array<java.lang.String>)
+                    constructor(callable: org.spongepowered.api.command.CommandCallable, primary: java.lang.String | string, aliases: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>)
                     // @ts-ignore
-                    getPrimaryAlias(): java.lang.String
+                    public getPrimaryAlias(): string
                     // @ts-ignore
-                    getAllAliases(): java.util.Set<java.lang.String>
+                    public getAllAliases(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getCallable(): org.spongepowered.api.command.CommandCallable
+                    public getCallable(): org.spongepowered.api.command.CommandCallable
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

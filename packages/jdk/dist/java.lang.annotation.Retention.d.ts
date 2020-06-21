@@ -15,7 +15,7 @@ declare namespace java {
              * @jls 9.6.3.2 #Retention
              */
             // @ts-ignore
-            class Retention implements java.lang.annotation.Annotation {
+            abstract class Retention implements java.lang.annotation.Annotation {
             }
         }
     }

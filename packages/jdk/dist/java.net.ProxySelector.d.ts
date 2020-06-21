@@ -25,7 +25,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class ProxySelector extends java.lang.Object {
+        abstract class ProxySelector extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -38,7 +38,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getDefault(): java.net.ProxySelector
+            public static getDefault(): java.net.ProxySelector
             /**
              * Sets (or unsets) the system-wide proxy selector.
              * Note: non-standard protocol handlers may ignore this setting.
@@ -51,7 +51,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setDefault(ps: java.net.ProxySelector): void
+            public static setDefault(ps: java.net.ProxySelector): void
             /**
              * Selects all the applicable proxies based on the protocol to
              * access the resource with and a destination address to access
@@ -75,7 +75,7 @@ declare namespace java {
              * @throws IllegalArgumentException if the argument is null
              */
             // @ts-ignore
-            abstract select(uri: java.net.URI): java.util.List<java.net.Proxy>
+            public abstract select(uri: java.net.URI): Array<java.net.Proxy>
             /**
              * Called to indicate that a connection could not be established
              * to a proxy/socks server. An implementation of this method can
@@ -91,7 +91,7 @@ declare namespace java {
              * @throws IllegalArgumentException if either argument is null
              */
             // @ts-ignore
-            abstract connectFailed(uri: java.net.URI, sa: java.net.SocketAddress, ioe: java.io.IOException): void
+            public abstract connectFailed(uri: java.net.URI, sa: java.net.SocketAddress, ioe: java.io.IOException): void
         }
     }
 }

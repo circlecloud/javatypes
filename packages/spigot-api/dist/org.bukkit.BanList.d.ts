@@ -11,7 +11,7 @@ declare namespace org {
              * @return the corresponding entry, or null if none found
              */
             // @ts-ignore
-            getBanEntry(target: string): org.bukkit.BanEntry
+            getBanEntry(target: java.lang.String | string): org.bukkit.BanEntry
             /**
              * Adds a ban to the this list. If a previous ban exists, this will
              * update the previous entry.
@@ -24,13 +24,13 @@ declare namespace org {
              *      (updated) previous ban
              */
             // @ts-ignore
-            addBan(target: string, reason: string, expires: java.util.Date, source: string): org.bukkit.BanEntry
+            addBan(target: java.lang.String | string, reason: java.lang.String | string, expires: java.util.Date, source: java.lang.String | string): org.bukkit.BanEntry
             /**
              * Gets a set containing every {@link BanEntry} in this list.
              * @return an immutable set containing every entry tracked by this list
              */
             // @ts-ignore
-            getBanEntries(): java.util.Set<org.bukkit.BanEntry>
+            getBanEntries(): Array<org.bukkit.BanEntry>
             /**
              * Gets if a {@link BanEntry} exists for the target, indicating an active
              * ban status.
@@ -39,14 +39,14 @@ declare namespace org {
              *      active ban status, false otherwise
              */
             // @ts-ignore
-            isBanned(target: string): boolean
+            isBanned(target: java.lang.String | string): boolean
             /**
              * Removes the specified target from this list, therefore indicating a
              * "not banned" status.
              * @param target the target to remove from this list
              */
             // @ts-ignore
-            pardon(target: string): void
+            pardon(target: java.lang.String | string): void
         }
     }
 }

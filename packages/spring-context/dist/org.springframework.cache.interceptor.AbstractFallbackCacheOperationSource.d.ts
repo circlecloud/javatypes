@@ -19,7 +19,7 @@ declare namespace org {
                  * @since 3.1
                  */
                 // @ts-ignore
-                class AbstractFallbackCacheOperationSource extends java.lang.Object implements org.springframework.cache.interceptor.CacheOperationSource {
+                abstract class AbstractFallbackCacheOperationSource extends java.lang.Object implements org.springframework.cache.interceptor.CacheOperationSource {
                     // @ts-ignore
                     constructor()
                     /**
@@ -38,7 +38,7 @@ declare namespace org {
                      *  is not cacheable
                      */
                     // @ts-ignore
-                    getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    public getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * Determine a cache key for the given method and target class.
                      * <p>Must not produce same key for overloaded methods.
@@ -48,7 +48,7 @@ declare namespace org {
                      * @return the cache key (never {#code null})
                      */
                     // @ts-ignore
-                    getCacheKey(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.lang.Object
+                    getCacheKey(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): any
                     /**
                      * Subclasses need to implement this to return the caching attribute for the
                      * given class, if any.
@@ -56,7 +56,7 @@ declare namespace org {
                      * @return all caching attribute associated with this class, or {#code null} if none
                      */
                     // @ts-ignore
-                    abstract findCacheOperations(clazz: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    abstract findCacheOperations(clazz: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * Subclasses need to implement this to return the caching attribute for the
                      * given method, if any.
@@ -64,7 +64,7 @@ declare namespace org {
                      * @return all caching attribute associated with this method, or {#code null} if none
                      */
                     // @ts-ignore
-                    abstract findCacheOperations(method: java.lang.reflect.Method): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    abstract findCacheOperations(method: java.lang.reflect.Method): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * Should only public methods be allowed to have caching semantics?
                      * <p>The default implementation returns {@code false}.

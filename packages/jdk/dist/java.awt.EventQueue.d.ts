@@ -56,7 +56,7 @@ declare namespace java {
              * @throws NullPointerException if <code>theEvent</code> is <code>null</code>
              */
             // @ts-ignore
-            postEvent(theEvent: java.awt.AWTEvent): void
+            public postEvent(theEvent: java.awt.AWTEvent): void
             /**
              * Removes an event from the <code>EventQueue</code> and
              * returns it.  This method will block until an event has
@@ -66,14 +66,14 @@ declare namespace java {
              *             if any thread has interrupted this thread
              */
             // @ts-ignore
-            getNextEvent(): java.awt.AWTEvent
+            public getNextEvent(): java.awt.AWTEvent
             /**
              * Returns the first event on the <code>EventQueue</code>
              * without removing it.
              * @return the first event
              */
             // @ts-ignore
-            peekEvent(): java.awt.AWTEvent
+            public peekEvent(): java.awt.AWTEvent
             /**
              * Returns the first event with the specified id, if any.
              * @param id the id of the type of event desired
@@ -81,7 +81,7 @@ declare namespace java {
              *     if there is no such event
              */
             // @ts-ignore
-            peekEvent(id: number /*int*/): java.awt.AWTEvent
+            public peekEvent(id: number /*int*/): java.awt.AWTEvent
             /**
              * Dispatches an event. The manner in which the event is
              * dispatched depends upon the type of the event and the
@@ -148,7 +148,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMostRecentEventTime(): long
+            public static getMostRecentEventTime(): number /*long*/
             /**
              * Returns the the event currently being dispatched by the
              * <code>EventQueue</code> associated with the calling thread. This is
@@ -161,7 +161,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCurrentEvent(): java.awt.AWTEvent
+            public static getCurrentEvent(): java.awt.AWTEvent
             /**
              * Replaces the existing <code>EventQueue</code> with the specified one.
              * Any pending events are transferred to the new <code>EventQueue</code>
@@ -173,7 +173,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            push(newEventQueue: java.awt.EventQueue): void
+            public push(newEventQueue: java.awt.EventQueue): void
             /**
              * Stops dispatching events using this <code>EventQueue</code>.
              * Any pending events are transferred to the previous
@@ -201,7 +201,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            createSecondaryLoop(): java.awt.SecondaryLoop
+            public createSecondaryLoop(): java.awt.SecondaryLoop
             /**
              * Returns true if the calling thread is
              * {@link Toolkit#getSystemEventQueue the current AWT EventQueue}'s
@@ -222,7 +222,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            isDispatchThread(): boolean
+            public static isDispatchThread(): boolean
             /**
              * Causes <code>runnable</code> to have its <code>run</code>
              * method called in the {@link #isDispatchThread dispatch thread} of
@@ -239,7 +239,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            invokeLater(runnable: java.lang.Runnable): void
+            public static invokeLater(runnable: java.lang.Runnable): void
             /**
              * Causes <code>runnable</code> to have its <code>run</code>
              * method called in the {@link #isDispatchThread dispatch thread} of
@@ -263,7 +263,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            invokeAndWait(runnable: java.lang.Runnable): void
+            public static invokeAndWait(runnable: java.lang.Runnable): void
         }
     }
 }

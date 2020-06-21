@@ -4,7 +4,7 @@ declare namespace org {
             namespace core {
                 namespace KeyFactory {
                     // @ts-ignore
-                    class Generator extends org.springframework.cglib.core.AbstractClassGenerator {
+                    class Generator extends org.springframework.cglib.core.AbstractClassGenerator<any> {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
@@ -15,25 +15,25 @@ declare namespace org {
                          * @deprecated Use {#link #addCustomizer(KeyFactoryCustomizer)} instead.
                          */
                         // @ts-ignore
-                        setCustomizer(customizer: Customizer): void
+                        public setCustomizer(customizer: Customizer): void
                         // @ts-ignore
-                        addCustomizer(customizer: KeyFactoryCustomizer): void
+                        public addCustomizer(customizer: KeyFactoryCustomizer): void
                         // @ts-ignore
-                        getCustomizers<T>(klass: java.lang.Class<T>): java.util.List<T>
+                        public getCustomizers<T>(klass: java.lang.Class<T>): Array<T>
                         // @ts-ignore
-                        setInterface(keyInterface: java.lang.Class): void
+                        public setInterface(keyInterface: java.lang.Class<any>): void
                         // @ts-ignore
-                        create(): org.springframework.cglib.core.KeyFactory
+                        public create(): org.springframework.cglib.core.KeyFactory
                         // @ts-ignore
-                        setHashConstant(constant: number /*int*/): void
+                        public setHashConstant(constant: number /*int*/): void
                         // @ts-ignore
-                        setHashMultiplier(multiplier: number /*int*/): void
+                        public setHashMultiplier(multiplier: number /*int*/): void
                         // @ts-ignore
-                        firstInstance(type: java.lang.Class): java.lang.Object
+                        firstInstance(type: java.lang.Class<any>): any
                         // @ts-ignore
-                        nextInstance(instance: any): java.lang.Object
+                        nextInstance(instance: java.lang.Object | any): any
                         // @ts-ignore
-                        generateClass(v: org.springframework.asm.ClassVisitor): void
+                        public generateClass(v: org.springframework.asm.ClassVisitor): void
                     }
                 }
             }

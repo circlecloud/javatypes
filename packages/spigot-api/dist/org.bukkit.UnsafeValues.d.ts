@@ -21,15 +21,15 @@ declare namespace org {
             // @ts-ignore
             fromLegacy(material: org.bukkit.Material, data: number /*byte*/): org.bukkit.block.data.BlockData
             // @ts-ignore
-            getMaterial(material: string, version: number /*int*/): org.bukkit.Material
+            getMaterial(material: java.lang.String | string, version: number /*int*/): org.bukkit.Material
             // @ts-ignore
-            getDataVersion(): int
+            getDataVersion(): number /*int*/
             // @ts-ignore
-            modifyItemStack(stack: org.bukkit.inventory.ItemStack, arguments: string): org.bukkit.inventory.ItemStack
+            modifyItemStack(stack: org.bukkit.inventory.ItemStack, arguments: java.lang.String | string): org.bukkit.inventory.ItemStack
             // @ts-ignore
             checkSupported(pdf: org.bukkit.plugin.PluginDescriptionFile): void
             // @ts-ignore
-            processClass(pdf: org.bukkit.plugin.PluginDescriptionFile, path: string, clazz: number /*byte*/[]): byte[]
+            processClass(pdf: org.bukkit.plugin.PluginDescriptionFile, path: java.lang.String | string, clazz: number /*byte*/[]): number /*byte*/[]
             /**
              * Load an advancement represented by the specified string into the server.
              * The advancement format is governed by Minecraft and has no specified
@@ -47,7 +47,7 @@ declare namespace org {
              * @return the loaded advancement or null if an error occurred
              */
             // @ts-ignore
-            loadAdvancement(key: org.bukkit.NamespacedKey, advancement: string): org.bukkit.advancement.Advancement
+            loadAdvancement(key: org.bukkit.NamespacedKey, advancement: java.lang.String | string): org.bukkit.advancement.Advancement
             /**
              * Delete an advancement which was loaded and saved by
              * {@link #loadAdvancement(org.bukkit.NamespacedKey, java.lang.String)}.

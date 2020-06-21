@@ -8,7 +8,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class CollatorProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class CollatorProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -28,7 +28,7 @@ declare namespace java {
                  * @see java.text.Collator#getInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getInstance(locale: java.util.Locale): java.text.Collator
+                public abstract getInstance(locale: java.util.Locale): java.text.Collator
             }
         }
     }

@@ -22,19 +22,19 @@ declare namespace java {
                  * @return the prime {#code p}.
                  */
                 // @ts-ignore
-                getP(): java.math.BigInteger
+                public getP(): java.math.BigInteger
                 /**
                  * Returns the sub-prime {@code q}.
                  * @return the sub-prime {#code q}.
                  */
                 // @ts-ignore
-                getQ(): java.math.BigInteger
+                public getQ(): java.math.BigInteger
                 /**
                  * Returns the base {@code g}.
                  * @return the base {#code g}.
                  */
                 // @ts-ignore
-                getG(): java.math.BigInteger
+                public getG(): java.math.BigInteger
             }
         }
     }

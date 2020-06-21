@@ -43,13 +43,13 @@ declare namespace java {
              * @see Component#getTreeLock()
              */
             // @ts-ignore
-            getComponentCount(): int
+            public getComponentCount(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by getComponentCount().
              */
             // @ts-ignore
-            countComponents(): int
+            public countComponents(): number /*int*/
             /**
              * Gets the nth component in this container.
              * <p>
@@ -61,7 +61,7 @@ declare namespace java {
              * @see Component#getTreeLock()
              */
             // @ts-ignore
-            getComponent(n: number /*int*/): java.awt.Component
+            public getComponent(n: number /*int*/): java.awt.Component
             /**
              * Gets all the components in this container.
              * <p>
@@ -70,7 +70,7 @@ declare namespace java {
              * @see Component#getTreeLock()
              */
             // @ts-ignore
-            getComponents(): java.awt.Component[]
+            public getComponents(): java.awt.Component[]
             /**
              * Determines the insets of this container, which indicate the size
              * of the container's border.
@@ -83,13 +83,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getInsets(): java.awt.Insets
+            public getInsets(): java.awt.Insets
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getInsets()</code>.
              */
             // @ts-ignore
-            insets(): java.awt.Insets
+            public insets(): java.awt.Insets
             /**
              * Appends the specified component to the end of this container.
              * This is a convenience method for {@link #addImpl}.
@@ -107,7 +107,7 @@ declare namespace java {
              * @return the component argument
              */
             // @ts-ignore
-            add(comp: java.awt.Component): java.awt.Component
+            public add(comp: java.awt.Component): java.awt.Component
             /**
              * Adds the specified component to this container.
              * This is a convenience method for {@link #addImpl}.
@@ -124,7 +124,7 @@ declare namespace java {
              * @see #invalidate
              */
             // @ts-ignore
-            add(name: string, comp: java.awt.Component): java.awt.Component
+            public add(name: java.lang.String | string, comp: java.awt.Component): java.awt.Component
             /**
              * Adds the specified component to this container at the given
              * position.
@@ -148,7 +148,7 @@ declare namespace java {
              * @see javax.swing.JComponent#revalidate()
              */
             // @ts-ignore
-            add(comp: java.awt.Component, index: number /*int*/): java.awt.Component
+            public add(comp: java.awt.Component, index: number /*int*/): java.awt.Component
             /**
              * Moves the specified component to the specified z-order index in
              * the container. The z-order determines the order that components
@@ -199,7 +199,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setComponentZOrder(comp: java.awt.Component, index: number /*int*/): void
+            public setComponentZOrder(comp: java.awt.Component, index: number /*int*/): void
             /**
              * Returns the z-order index of the component inside the container.
              * The higher a component is in the z-order hierarchy, the lower
@@ -213,7 +213,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getComponentZOrder(comp: java.awt.Component): int
+            public getComponentZOrder(comp: java.awt.Component): number /*int*/
             /**
              * Adds the specified component to the end of this container.
              * Also notifies the layout manager to add the component to
@@ -236,7 +236,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            add(comp: java.awt.Component, constraints: any): void
+            public add(comp: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Adds the specified component to this container with the specified
              * constraints at the specified index.  Also notifies the layout
@@ -264,7 +264,7 @@ declare namespace java {
              * @see LayoutManager
              */
             // @ts-ignore
-            add(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            public add(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Adds the specified component to this container at the specified
              * index. This method also notifies the layout manager to add
@@ -330,7 +330,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the component, specified by <code>index</code>,
              * from this container.
@@ -352,7 +352,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            remove(index: number /*int*/): void
+            public remove(index: number /*int*/): void
             /**
              * Removes the specified component from this container.
              * This method also notifies the layout manager to remove the
@@ -371,7 +371,7 @@ declare namespace java {
              * @see #remove(int)
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * Removes all the components from this container.
              * This method also notifies the layout manager to remove the
@@ -387,14 +387,14 @@ declare namespace java {
              * @see #invalidate
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Gets the layout manager for this container.
              * @see #doLayout
              * @see #setLayout
              */
             // @ts-ignore
-            getLayout(): java.awt.LayoutManager
+            public getLayout(): java.awt.LayoutManager
             /**
              * Sets the layout manager for this container.
              * <p>
@@ -406,7 +406,7 @@ declare namespace java {
              * @see #invalidate
              */
             // @ts-ignore
-            setLayout(mgr: java.awt.LayoutManager): void
+            public setLayout(mgr: java.awt.LayoutManager): void
             /**
              * Causes this container to lay out its components.  Most programs
              * should not call this method directly, but should invoke
@@ -417,13 +417,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            doLayout(): void
+            public doLayout(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>doLayout()</code>.
              */
             // @ts-ignore
-            layout(): void
+            public layout(): void
             /**
              * Indicates if this container is a <i>validate root</i>.
              * <p>
@@ -453,7 +453,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * Invalidates the container.
              * <p>
@@ -469,7 +469,7 @@ declare namespace java {
              * @see LayoutManager2
              */
             // @ts-ignore
-            invalidate(): void
+            public invalidate(): void
             /**
              * Validates this container and all of its subcomponents.
              * <p>
@@ -497,7 +497,7 @@ declare namespace java {
              * @see #validateTree
              */
             // @ts-ignore
-            validate(): void
+            public validate(): void
             /**
              * Recursively descends the container tree and recomputes the
              * layout for any subtrees marked as needing it (those marked as
@@ -519,7 +519,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            setFont(f: java.awt.Font): void
+            public setFont(f: java.awt.Font): void
             /**
              * Returns the preferred size of this container.  If the preferred size has
              * not been set explicitly by {@link Component#setPreferredSize(Dimension)}
@@ -540,13 +540,13 @@ declare namespace java {
              * @see Component#getPreferredSize
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize()</code>.
              */
             // @ts-ignore
-            preferredSize(): java.awt.Dimension
+            public preferredSize(): java.awt.Dimension
             /**
              * Returns the minimum size of this container.  If the minimum size has
              * not been set explicitly by {@link Component#setMinimumSize(Dimension)}
@@ -568,13 +568,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize()</code>.
              */
             // @ts-ignore
-            minimumSize(): java.awt.Dimension
+            public minimumSize(): java.awt.Dimension
             /**
              * Returns the maximum size of this container.  If the maximum size has
              * not been set explicitly by {@link Component#setMaximumSize(Dimension)}
@@ -596,7 +596,7 @@ declare namespace java {
              * @see Component#getMaximumSize
              */
             // @ts-ignore
-            getMaximumSize(): java.awt.Dimension
+            public getMaximumSize(): java.awt.Dimension
             /**
              * Returns the alignment along the x axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -605,7 +605,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getAlignmentX(): float
+            public getAlignmentX(): number /*float*/
             /**
              * Returns the alignment along the y axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -614,7 +614,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getAlignmentY(): float
+            public getAlignmentY(): number /*float*/
             /**
              * Paints the container. This forwards the paint to any lightweight
              * components that are children of this container. If this method is
@@ -626,7 +626,7 @@ declare namespace java {
              * @see Component#update(Graphics)
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Updates the container.  This forwards the update to any lightweight
              * components that are children of this container.  If this method is
@@ -638,7 +638,7 @@ declare namespace java {
              * @see Component#update(Graphics)
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Prints the container. This forwards the print to any lightweight
              * components that are children of this container. If this method is
@@ -650,7 +650,7 @@ declare namespace java {
              * @see Component#update(Graphics)
              */
             // @ts-ignore
-            print(g: java.awt.Graphics): void
+            public print(g: java.awt.Graphics): void
             /**
              * Paints each of the components in this container.
              * @param g   the graphics context.
@@ -658,7 +658,7 @@ declare namespace java {
              * @see Component#paintAll
              */
             // @ts-ignore
-            paintComponents(g: java.awt.Graphics): void
+            public paintComponents(g: java.awt.Graphics): void
             /**
              * Prints each of the components in this container.
              * @param g   the graphics context.
@@ -666,7 +666,7 @@ declare namespace java {
              * @see Component#printAll
              */
             // @ts-ignore
-            printComponents(g: java.awt.Graphics): void
+            public printComponents(g: java.awt.Graphics): void
             /**
              * Adds the specified container listener to receive container events
              * from this container.
@@ -678,7 +678,7 @@ declare namespace java {
              * @see #getContainerListeners
              */
             // @ts-ignore
-            addContainerListener(l: java.awt.event.ContainerListener): void
+            public addContainerListener(l: java.awt.event.ContainerListener): void
             /**
              * Removes the specified container listener so it no longer receives
              * container events from this container.
@@ -690,7 +690,7 @@ declare namespace java {
              * @see #getContainerListeners
              */
             // @ts-ignore
-            removeContainerListener(l: java.awt.event.ContainerListener): void
+            public removeContainerListener(l: java.awt.event.ContainerListener): void
             /**
              * Returns an array of all the container listeners
              * registered on this container.
@@ -702,7 +702,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getContainerListeners(): java.awt.event.ContainerListener[]
+            public getContainerListeners(): java.awt.event.ContainerListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -732,7 +732,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this container. If the event is a
              * <code>ContainerEvent</code>, it invokes the
@@ -769,7 +769,7 @@ declare namespace java {
              *  replaced by <code>dispatchEvent(AWTEvent e)</code>
              */
             // @ts-ignore
-            deliverEvent(e: java.awt.Event): void
+            public deliverEvent(e: java.awt.Event): void
             /**
              * Locates the component that contains the x,y position.  The
              * top-most child component is returned in the case where there
@@ -788,13 +788,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getComponentAt(x: number /*int*/, y: number /*int*/): java.awt.Component
+            public getComponentAt(x: number /*int*/, y: number /*int*/): java.awt.Component
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getComponentAt(int, int)</code>.
              */
             // @ts-ignore
-            locate(x: number /*int*/, y: number /*int*/): java.awt.Component
+            public locate(x: number /*int*/, y: number /*int*/): java.awt.Component
             /**
              * Gets the component that contains the specified point.
              * @param p   the point.
@@ -805,7 +805,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getComponentAt(p: java.awt.Point): java.awt.Component
+            public getComponentAt(p: java.awt.Point): java.awt.Component
             /**
              * Returns the position of the mouse pointer in this <code>Container</code>'s
              * coordinate space if the <code>Container</code> is under the mouse pointer,
@@ -825,7 +825,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getMousePosition(allowChildren: boolean): java.awt.Point
+            public getMousePosition(allowChildren: boolean): java.awt.Point
             /**
              * Locates the visible child component that contains the specified
              * position.  The top-most child component is returned in the case
@@ -848,7 +848,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            findComponentAt(x: number /*int*/, y: number /*int*/): java.awt.Component
+            public findComponentAt(x: number /*int*/, y: number /*int*/): java.awt.Component
             /**
              * Locates the visible child component that contains the specified
              * point.  The top-most child component is returned in the case
@@ -871,7 +871,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            findComponentAt(p: java.awt.Point): java.awt.Component
+            public findComponentAt(p: java.awt.Point): java.awt.Component
             /**
              * Makes this Container displayable by connecting it to
              * a native screen resource.  Making a container displayable will
@@ -882,7 +882,7 @@ declare namespace java {
              * @see #removeNotify
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Makes this Container undisplayable by removing its connection
              * to its native screen resource.  Making a container undisplayable
@@ -893,7 +893,7 @@ declare namespace java {
              * @see #addNotify
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Checks if the component is contained in the component hierarchy of
              * this container.
@@ -903,7 +903,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            isAncestorOf(c: java.awt.Component): boolean
+            public isAncestorOf(c: java.awt.Component): boolean
             /**
              * Returns a string representing the state of this <code>Container</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -913,7 +913,7 @@ declare namespace java {
              * @return the parameter string of this container
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Prints a listing of this container to the specified output
              * stream. The listing starts at the specified indentation.
@@ -929,7 +929,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            list(out: java.io.PrintStream, indent: number /*int*/): void
+            public list(out: java.io.PrintStream, indent: number /*int*/): void
             /**
              * Prints out a list, starting at the specified indentation,
              * to the specified print writer.
@@ -945,7 +945,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            list(out: java.io.PrintWriter, indent: number /*int*/): void
+            public list(out: java.io.PrintWriter, indent: number /*int*/): void
             /**
              * Sets the focus traversal keys for a given traversal operation for this
              * Container.
@@ -1023,7 +1023,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusTraversalKeys(id: number /*int*/, keystrokes: Array<java.awt.AWTKeyStroke>): void
+            public setFocusTraversalKeys(id: number /*int*/, keystrokes: java.util.Set<any> | Array<any>): void
             /**
              * Returns the Set of focus traversal keys for a given traversal operation
              * for this Container. (See
@@ -1053,7 +1053,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusTraversalKeys(id: number /*int*/): java.util.Set<java.awt.AWTKeyStroke>
+            public getFocusTraversalKeys(id: number /*int*/): Array<java.awt.AWTKeyStroke>
             /**
              * Returns whether the Set of focus traversal keys for the given focus
              * traversal operation has been explicitly defined for this Container. If
@@ -1074,7 +1074,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            areFocusTraversalKeysSet(id: number /*int*/): boolean
+            public areFocusTraversalKeysSet(id: number /*int*/): boolean
             /**
              * Returns whether the specified Container is the focus cycle root of this
              * Container's focus traversal cycle. Each focus traversal cycle has only
@@ -1091,7 +1091,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusCycleRoot(container: java.awt.Container): boolean
+            public isFocusCycleRoot(container: java.awt.Container): boolean
             /**
              * Sets the focus traversal policy that will manage keyboard traversal of
              * this Container's children, if this Container is a focus cycle root. If
@@ -1112,7 +1112,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusTraversalPolicy(policy: java.awt.FocusTraversalPolicy): void
+            public setFocusTraversalPolicy(policy: java.awt.FocusTraversalPolicy): void
             /**
              * Returns the focus traversal policy that will manage keyboard traversal
              * of this Container's children, or null if this Container is not a focus
@@ -1127,7 +1127,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusTraversalPolicy(): java.awt.FocusTraversalPolicy
+            public getFocusTraversalPolicy(): java.awt.FocusTraversalPolicy
             /**
              * Returns whether the focus traversal policy has been explicitly set for
              * this Container. If this method returns <code>false</code>, this
@@ -1137,7 +1137,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusTraversalPolicySet(): boolean
+            public isFocusTraversalPolicySet(): boolean
             /**
              * Sets whether this Container is the root of a focus traversal cycle. Once
              * focus enters a traversal cycle, typically it cannot leave it via focus
@@ -1162,7 +1162,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusCycleRoot(focusCycleRoot: boolean): void
+            public setFocusCycleRoot(focusCycleRoot: boolean): void
             /**
              * Returns whether this Container is the root of a focus traversal cycle.
              * Once focus enters a traversal cycle, typically it cannot leave it via
@@ -1180,7 +1180,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusCycleRoot(): boolean
+            public isFocusCycleRoot(): boolean
             /**
              * Sets whether this container will be used to provide focus
              * traversal policy. Container with this property as
@@ -1195,7 +1195,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusTraversalPolicyProvider(provider: boolean): void
+            public setFocusTraversalPolicyProvider(provider: boolean): void
             /**
              * Returns whether this container provides focus traversal
              * policy. If this property is set to <code>true</code> then when
@@ -1214,7 +1214,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            isFocusTraversalPolicyProvider(): boolean
+            public isFocusTraversalPolicyProvider(): boolean
             /**
              * Transfers the focus down one focus traversal cycle. If this Container is
              * a focus cycle root, then the focus owner is set to this Container's
@@ -1227,7 +1227,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            transferFocusDownCycle(): void
+            public transferFocusDownCycle(): void
             /**
              * Sets the <code>ComponentOrientation</code> property of this container
              * and all components contained within it.
@@ -1243,7 +1243,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            applyComponentOrientation(o: java.awt.ComponentOrientation): void
+            public applyComponentOrientation(o: java.awt.ComponentOrientation): void
             /**
              * Adds a PropertyChangeListener to the listener list. The listener is
              * registered for all bound properties of this class, including the
@@ -1276,7 +1276,7 @@ declare namespace java {
              * @see #addPropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Adds a PropertyChangeListener to the listener list for a specific
              * property. The specified property may be user-defined, or one of the
@@ -1312,7 +1312,7 @@ declare namespace java {
              * @see Component#removePropertyChangeListener
              */
             // @ts-ignore
-            addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
         }
     }
 }

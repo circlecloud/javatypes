@@ -60,7 +60,7 @@ declare namespace javax {
                  *  {#code null}.
                  */
                 // @ts-ignore
-                constructor(relationId: string, relationServiceName: javax.management.ObjectName, relationTypeName: string, list: javax.management.relation.RoleList)
+                constructor(relationId: java.lang.String | string, relationServiceName: javax.management.ObjectName, relationTypeName: java.lang.String | string, list: javax.management.relation.RoleList)
                 /**
                  * Creates a {@code RelationSupport} object.
                  * <P>This constructor has to be used when the user relation MBean
@@ -108,7 +108,7 @@ declare namespace javax {
                  *  or relation type name) is {#code null}.
                  */
                 // @ts-ignore
-                constructor(relationId: string, relationServiceName: javax.management.ObjectName, relationServiceMBeanServer: javax.management.MBeanServer, relationTypeName: string, list: javax.management.relation.RoleList)
+                constructor(relationId: java.lang.String | string, relationServiceName: javax.management.ObjectName, relationServiceMBeanServer: javax.management.MBeanServer, relationTypeName: java.lang.String | string, list: javax.management.relation.RoleList)
                 /**
                  * Retrieves role value for given role name.
                  * <P>Checks if the role exists and is readable according to the relation
@@ -124,7 +124,7 @@ declare namespace javax {
                  * @see #setRole
                  */
                 // @ts-ignore
-                getRole(roleName: string): java.util.List<javax.management.ObjectName>
+                public getRole(roleName: java.lang.String | string): Array<javax.management.ObjectName>
                 /**
                  * Retrieves values of roles with given names.
                  * <P>Checks for each role if it exists and is readable according to the
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @see #setRoles
                  */
                 // @ts-ignore
-                getRoles(roleNameArray: string[]): javax.management.relation.RoleResult
+                public getRoles(roleNameArray: java.lang.String[] | string[]): javax.management.relation.RoleResult
                 /**
                  * Returns all roles present in the relation.
                  * @return a RoleResult object, including a RoleList (for roles
@@ -149,13 +149,13 @@ declare namespace javax {
                  *  Service is not registered in the MBean Server
                  */
                 // @ts-ignore
-                getAllRoles(): javax.management.relation.RoleResult
+                public getAllRoles(): javax.management.relation.RoleResult
                 /**
                  * Returns all roles in the relation without checking read mode.
                  * @return a RoleList
                  */
                 // @ts-ignore
-                retrieveAllRoles(): javax.management.relation.RoleList
+                public retrieveAllRoles(): javax.management.relation.RoleList
                 /**
                  * Returns the number of MBeans currently referenced in the given role.
                  * @param roleName  name of role
@@ -164,7 +164,7 @@ declare namespace javax {
                  * @exception RoleNotFoundException  if there is no role with given name
                  */
                 // @ts-ignore
-                getRoleCardinality(roleName: string): java.lang.Integer
+                public getRoleCardinality(roleName: java.lang.String | string): number
                 /**
                  * Sets the given role.
                  * <P>Will check the role according to its corresponding role definition
@@ -195,7 +195,7 @@ declare namespace javax {
                  * @see #getRole
                  */
                 // @ts-ignore
-                setRole(role: javax.management.relation.Role): void
+                public setRole(role: javax.management.relation.Role): void
                 /**
                  * Sets the given roles.
                  * <P>Will check the role according to its corresponding role definition
@@ -217,7 +217,7 @@ declare namespace javax {
                  * @see #getRoles
                  */
                 // @ts-ignore
-                setRoles(list: javax.management.relation.RoleList): javax.management.relation.RoleResult
+                public setRoles(list: javax.management.relation.RoleList): javax.management.relation.RoleResult
                 /**
                  * Callback used by the Relation Service when a MBean referenced in a role
                  * is unregistered.
@@ -243,48 +243,48 @@ declare namespace javax {
                  *  relation MBean not added in the Relation Service.
                  */
                 // @ts-ignore
-                handleMBeanUnregistration(objectName: javax.management.ObjectName, roleName: string): void
+                public handleMBeanUnregistration(objectName: javax.management.ObjectName, roleName: java.lang.String | string): void
                 /**
                  * Retrieves MBeans referenced in the various roles of the relation.
                  * @return a HashMap mapping:
                  *  <P> ObjectName {#literal ->} ArrayList of String (role names)
                  */
                 // @ts-ignore
-                getReferencedMBeans(): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String>>
+                public getReferencedMBeans(): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                 /**
                  * Returns name of associated relation type.
                  */
                 // @ts-ignore
-                getRelationTypeName(): java.lang.String
+                public getRelationTypeName(): string
                 /**
                  * Returns ObjectName of the Relation Service handling the relation.
                  * @return the ObjectName of the Relation Service.
                  */
                 // @ts-ignore
-                getRelationServiceName(): javax.management.ObjectName
+                public getRelationServiceName(): javax.management.ObjectName
                 /**
                  * Returns relation identifier (used to uniquely identify the relation
                  * inside the Relation Service).
                  * @return the relation id.
                  */
                 // @ts-ignore
-                getRelationId(): java.lang.String
+                public getRelationId(): string
                 // @ts-ignore
-                preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+                public preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
                 // @ts-ignore
-                postRegister(registrationDone: java.lang.Boolean): void
+                public postRegister(registrationDone: java.lang.Boolean): void
                 // @ts-ignore
-                preDeregister(): void
+                public preDeregister(): void
                 // @ts-ignore
-                postDeregister(): void
+                public postDeregister(): void
                 /**
                  * Returns an internal flag specifying if the object is still handled by
                  * the Relation Service.
                  */
                 // @ts-ignore
-                isInRelationService(): java.lang.Boolean
+                public isInRelationService(): java.lang.Boolean
                 // @ts-ignore
-                setRelationServiceManagementFlag(flag: java.lang.Boolean): void
+                public setRelationServiceManagementFlag(flag: java.lang.Boolean): void
             }
         }
     }

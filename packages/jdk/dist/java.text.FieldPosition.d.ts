@@ -78,57 +78,57 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFieldAttribute(): java.text.Format.Field
+            public getFieldAttribute(): java.text.Format.Field
             /**
              * Retrieves the field identifier.
              * @return the field identifier
              */
             // @ts-ignore
-            getField(): int
+            public getField(): number /*int*/
             /**
              * Retrieves the index of the first character in the requested field.
              * @return the begin index
              */
             // @ts-ignore
-            getBeginIndex(): int
+            public getBeginIndex(): number /*int*/
             /**
              * Retrieves the index of the character following the last character in the
              * requested field.
              * @return the end index
              */
             // @ts-ignore
-            getEndIndex(): int
+            public getEndIndex(): number /*int*/
             /**
              * Sets the begin index.  For use by subclasses of Format.
              * @param bi the begin index
              * @since 1.2
              */
             // @ts-ignore
-            setBeginIndex(bi: number /*int*/): void
+            public setBeginIndex(bi: number /*int*/): void
             /**
              * Sets the end index.  For use by subclasses of Format.
              * @param ei the end index
              * @since 1.2
              */
             // @ts-ignore
-            setEndIndex(ei: number /*int*/): void
+            public setEndIndex(ei: number /*int*/): void
             /**
              * Overrides equals
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hash code for this FieldPosition.
              * @return a hash code value for this object
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Return a string representation of this FieldPosition.
              * @return a string representation of this object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

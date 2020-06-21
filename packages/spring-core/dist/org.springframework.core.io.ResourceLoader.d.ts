@@ -25,7 +25,7 @@ declare namespace org {
                      * Pseudo URL prefix for loading from the class path: "classpath:".
                      */
                     // @ts-ignore
-                    
+                    readonly CLASSPATH_URL_PREFIX: java.lang.String | string
                     /**
                      * Return a Resource handle for the specified resource location.
                      * <p>The handle should always be a reusable resource descriptor,
@@ -46,7 +46,7 @@ declare namespace org {
                      * @see Resource#getInputStream()
                      */
                     // @ts-ignore
-                    getResource(location: string): org.springframework.core.io.Resource
+                    getResource(location: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * Expose the ClassLoader used by this ResourceLoader.
                      * <p>Clients which need to access the ClassLoader directly can do so

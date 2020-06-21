@@ -18,7 +18,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createLineBorder(color: java.awt.Color): javax.swing.border.Border
+            public static createLineBorder(color: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a line border with the specified color
              * and width. The width applies to all four sides of the
@@ -30,7 +30,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createLineBorder(color: java.awt.Color, thickness: number /*int*/): javax.swing.border.Border
+            public static createLineBorder(color: java.awt.Color, thickness: number /*int*/): javax.swing.border.Border
             /**
              * Creates a line border with the specified color, thickness, and corner shape.
              * @param color      the color of the border
@@ -41,7 +41,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createLineBorder(color: java.awt.Color, thickness: number /*int*/, rounded: boolean): javax.swing.border.Border
+            public static createLineBorder(color: java.awt.Color, thickness: number /*int*/, rounded: boolean): javax.swing.border.Border
             /**
              * Creates a border with a raised beveled edge, using
              * brighter shades of the component's current background color
@@ -51,7 +51,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createRaisedBevelBorder(): javax.swing.border.Border
+            public static createRaisedBevelBorder(): javax.swing.border.Border
             /**
              * Creates a border with a lowered beveled edge, using
              * brighter shades of the component's current background color
@@ -61,7 +61,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createLoweredBevelBorder(): javax.swing.border.Border
+            public static createLoweredBevelBorder(): javax.swing.border.Border
             /**
              * Creates a beveled border of the specified type, using
              * brighter shades of the component's current background color
@@ -74,7 +74,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createBevelBorder(type: number /*int*/): javax.swing.border.Border
+            public static createBevelBorder(type: number /*int*/): javax.swing.border.Border
             /**
              * Creates a beveled border of the specified type, using
              * the specified highlighting and shadowing. The outer
@@ -89,7 +89,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createBevelBorder(type: number /*int*/, highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
+            public static createBevelBorder(type: number /*int*/, highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a beveled border of the specified type, using
              * the specified colors for the inner and outer highlight
@@ -108,7 +108,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createBevelBorder(type: number /*int*/, highlightOuter: java.awt.Color, highlightInner: java.awt.Color, shadowOuter: java.awt.Color, shadowInner: java.awt.Color): javax.swing.border.Border
+            public static createBevelBorder(type: number /*int*/, highlightOuter: java.awt.Color, highlightInner: java.awt.Color, shadowOuter: java.awt.Color, shadowInner: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a beveled border with a raised edge and softened corners,
              * using brighter shades of the component's current background color
@@ -118,7 +118,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createRaisedSoftBevelBorder(): javax.swing.border.Border
+            public static createRaisedSoftBevelBorder(): javax.swing.border.Border
             /**
              * Creates a beveled border with a lowered edge and softened corners,
              * using brighter shades of the component's current background color
@@ -128,7 +128,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createLoweredSoftBevelBorder(): javax.swing.border.Border
+            public static createLoweredSoftBevelBorder(): javax.swing.border.Border
             /**
              * Creates a beveled border of the specified type with softened corners,
              * using brighter shades of the component's current background color
@@ -141,7 +141,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createSoftBevelBorder(type: number /*int*/): javax.swing.border.Border
+            public static createSoftBevelBorder(type: number /*int*/): javax.swing.border.Border
             /**
              * Creates a beveled border of the specified type with softened corners,
              * using the specified highlighting and shadowing.
@@ -158,7 +158,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createSoftBevelBorder(type: number /*int*/, highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
+            public static createSoftBevelBorder(type: number /*int*/, highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a beveled border of the specified type with softened corners,
              * using the specified colors for the inner and outer edges
@@ -176,7 +176,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createSoftBevelBorder(type: number /*int*/, highlightOuter: java.awt.Color, highlightInner: java.awt.Color, shadowOuter: java.awt.Color, shadowInner: java.awt.Color): javax.swing.border.Border
+            public static createSoftBevelBorder(type: number /*int*/, highlightOuter: java.awt.Color, highlightInner: java.awt.Color, shadowOuter: java.awt.Color, shadowInner: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a border with an "etched" look using
              * the component's current background color for
@@ -184,7 +184,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createEtchedBorder(): javax.swing.border.Border
+            public static createEtchedBorder(): javax.swing.border.Border
             /**
              * Creates a border with an "etched" look using
              * the specified highlighting and shading colors.
@@ -193,7 +193,7 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createEtchedBorder(highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
+            public static createEtchedBorder(highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a border with an "etched" look using
              * the component's current background color for
@@ -207,7 +207,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            createEtchedBorder(type: number /*int*/): javax.swing.border.Border
+            public static createEtchedBorder(type: number /*int*/): javax.swing.border.Border
             /**
              * Creates a border with an "etched" look using
              * the specified highlighting and shading colors.
@@ -219,7 +219,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            createEtchedBorder(type: number /*int*/, highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
+            public static createEtchedBorder(type: number /*int*/, highlight: java.awt.Color, shadow: java.awt.Color): javax.swing.border.Border
             /**
              * Creates a new titled border with the specified title,
              * the default border type (determined by the current look and feel),
@@ -230,7 +230,7 @@ declare namespace javax {
              * @return the <code>TitledBorder</code> object
              */
             // @ts-ignore
-            createTitledBorder(title: string): javax.swing.border.TitledBorder
+            public static createTitledBorder(title: java.lang.String | string): javax.swing.border.TitledBorder
             /**
              * Creates a new titled border with an empty title,
              * the specified border object,
@@ -243,7 +243,7 @@ declare namespace javax {
              * @return the <code>TitledBorder</code> object
              */
             // @ts-ignore
-            createTitledBorder(border: javax.swing.border.Border): javax.swing.border.TitledBorder
+            public static createTitledBorder(border: javax.swing.border.Border): javax.swing.border.TitledBorder
             /**
              * Adds a title to an existing border,
              * with default positioning (determined by the current look and feel),
@@ -254,7 +254,7 @@ declare namespace javax {
              * @return the <code>TitledBorder</code> object
              */
             // @ts-ignore
-            createTitledBorder(border: javax.swing.border.Border, title: string): javax.swing.border.TitledBorder
+            public static createTitledBorder(border: javax.swing.border.Border, title: java.lang.String | string): javax.swing.border.TitledBorder
             /**
              * Adds a title to an existing border, with the specified
              * positioning and using the default
@@ -286,7 +286,7 @@ declare namespace javax {
              * @return the <code>TitledBorder</code> object
              */
             // @ts-ignore
-            createTitledBorder(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/): javax.swing.border.TitledBorder
+            public static createTitledBorder(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/): javax.swing.border.TitledBorder
             /**
              * Adds a title to an existing border, with the specified
              * positioning and font, and using the default text color
@@ -319,7 +319,7 @@ declare namespace javax {
              * @return the TitledBorder object
              */
             // @ts-ignore
-            createTitledBorder(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font): javax.swing.border.TitledBorder
+            public static createTitledBorder(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font): javax.swing.border.TitledBorder
             /**
              * Adds a title to an existing border, with the specified
              * positioning, font and color.
@@ -352,14 +352,14 @@ declare namespace javax {
              * @return the <code>TitledBorder</code> object
              */
             // @ts-ignore
-            createTitledBorder(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font, titleColor: java.awt.Color): javax.swing.border.TitledBorder
+            public static createTitledBorder(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font, titleColor: java.awt.Color): javax.swing.border.TitledBorder
             /**
              * Creates an empty border that takes up no space. (The width
              * of the top, bottom, left, and right sides are all zero.)
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createEmptyBorder(): javax.swing.border.Border
+            public static createEmptyBorder(): javax.swing.border.Border
             /**
              * Creates an empty border that takes up space but which does
              * no drawing, specifying the width of the top, left, bottom, and
@@ -375,14 +375,14 @@ declare namespace javax {
              * @return the <code>Border</code> object
              */
             // @ts-ignore
-            createEmptyBorder(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/): javax.swing.border.Border
+            public static createEmptyBorder(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/): javax.swing.border.Border
             /**
              * Creates a compound border with a <code>null</code> inside edge and a
              * <code>null</code> outside edge.
              * @return the <code>CompoundBorder</code> object
              */
             // @ts-ignore
-            createCompoundBorder(): javax.swing.border.CompoundBorder
+            public static createCompoundBorder(): javax.swing.border.CompoundBorder
             /**
              * Creates a compound border specifying the border objects to use
              * for the outside and inside edges.
@@ -393,7 +393,7 @@ declare namespace javax {
              * @return the <code>CompoundBorder</code> object
              */
             // @ts-ignore
-            createCompoundBorder(outsideBorder: javax.swing.border.Border, insideBorder: javax.swing.border.Border): javax.swing.border.CompoundBorder
+            public static createCompoundBorder(outsideBorder: javax.swing.border.Border, insideBorder: javax.swing.border.Border): javax.swing.border.CompoundBorder
             /**
              * Creates a matte-look border using a solid color. (The difference between
              * this border and a line border is that you can specify the individual
@@ -410,7 +410,7 @@ declare namespace javax {
              * @return the <code>MatteBorder</code> object
              */
             // @ts-ignore
-            createMatteBorder(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/, color: java.awt.Color): javax.swing.border.MatteBorder
+            public static createMatteBorder(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/, color: java.awt.Color): javax.swing.border.MatteBorder
             /**
              * Creates a matte-look border that consists of multiple tiles of a
              * specified icon. Multiple copies of the icon are placed side-by-side
@@ -430,7 +430,7 @@ declare namespace javax {
              * @return the <code>MatteBorder</code> object
              */
             // @ts-ignore
-            createMatteBorder(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/, tileIcon: javax.swing.Icon): javax.swing.border.MatteBorder
+            public static createMatteBorder(top: number /*int*/, left: number /*int*/, bottom: number /*int*/, right: number /*int*/, tileIcon: javax.swing.Icon): javax.swing.border.MatteBorder
             /**
              * Creates a border of the specified {@code stroke}.
              * The component's foreground color will be used to render the border.
@@ -440,7 +440,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createStrokeBorder(stroke: java.awt.BasicStroke): javax.swing.border.Border
+            public static createStrokeBorder(stroke: java.awt.BasicStroke): javax.swing.border.Border
             /**
              * Creates a border of the specified {@code stroke} and {@code paint}.
              * If the specified {@code paint} is {@code null},
@@ -452,7 +452,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createStrokeBorder(stroke: java.awt.BasicStroke, paint: java.awt.Paint): javax.swing.border.Border
+            public static createStrokeBorder(stroke: java.awt.BasicStroke, paint: java.awt.Paint): javax.swing.border.Border
             /**
              * Creates a dashed border of the specified {@code paint}.
              * If the specified {@code paint} is {@code null},
@@ -466,7 +466,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createDashedBorder(paint: java.awt.Paint): javax.swing.border.Border
+            public static createDashedBorder(paint: java.awt.Paint): javax.swing.border.Border
             /**
              * Creates a dashed border of the specified {@code paint},
              * relative {@code length}, and relative {@code spacing}.
@@ -483,7 +483,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createDashedBorder(paint: java.awt.Paint, length: number /*float*/, spacing: number /*float*/): javax.swing.border.Border
+            public static createDashedBorder(paint: java.awt.Paint, length: number /*float*/, spacing: number /*float*/): javax.swing.border.Border
             /**
              * Creates a dashed border of the specified {@code paint}, {@code thickness},
              * line shape, relative {@code length}, and relative {@code spacing}.
@@ -501,7 +501,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            createDashedBorder(paint: java.awt.Paint, thickness: number /*float*/, length: number /*float*/, spacing: number /*float*/, rounded: boolean): javax.swing.border.Border
+            public static createDashedBorder(paint: java.awt.Paint, thickness: number /*float*/, length: number /*float*/, spacing: number /*float*/, rounded: boolean): javax.swing.border.Border
         }
     }
 }

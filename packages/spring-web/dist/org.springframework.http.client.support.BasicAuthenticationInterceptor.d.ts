@@ -24,7 +24,7 @@ declare namespace org {
                          * @see HttpHeaders#encodeBasicAuth(String, String, Charset)
                          */
                         // @ts-ignore
-                        constructor(username: string, password: string)
+                        constructor(username: java.lang.String | string, password: java.lang.String | string)
                         /**
                          * Create a new interceptor which adds Basic Authentication for the
                          * given username and password, encoded using the specified charset.
@@ -35,9 +35,9 @@ declare namespace org {
                          * @see HttpHeaders#encodeBasicAuth(String, String, Charset)
                          */
                         // @ts-ignore
-                        constructor(username: string, password: string, charset: java.nio.charset.Charset)
+                        constructor(username: java.lang.String | string, password: java.lang.String | string, charset: java.nio.charset.Charset)
                         // @ts-ignore
-                        intercept(request: org.springframework.http.HttpRequest, body: number /*byte*/[], execution: org.springframework.http.client.ClientHttpRequestExecution): org.springframework.http.client.ClientHttpResponse
+                        public intercept(request: org.springframework.http.HttpRequest, body: number /*byte*/[], execution: org.springframework.http.client.ClientHttpRequestExecution): org.springframework.http.client.ClientHttpResponse
                     }
                 }
             }

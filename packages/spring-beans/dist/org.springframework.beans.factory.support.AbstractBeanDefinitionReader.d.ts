@@ -14,7 +14,7 @@ declare namespace org {
                      * @see BeanDefinitionReaderUtils
                      */
                     // @ts-ignore
-                    class AbstractBeanDefinitionReader extends java.lang.Object implements org.springframework.beans.factory.support.BeanDefinitionReader {
+                    abstract class AbstractBeanDefinitionReader extends java.lang.Object implements org.springframework.beans.factory.support.BeanDefinitionReader {
                         /**
                          * Create a new AbstractBeanDefinitionReader for the given bean factory.
                          * <p>If the passed-in bean factory does not only implement the BeanDefinitionRegistry
@@ -40,9 +40,9 @@ declare namespace org {
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        getBeanFactory(): org.springframework.beans.factory.support.BeanDefinitionRegistry
+                        public getBeanFactory(): org.springframework.beans.factory.support.BeanDefinitionRegistry
                         // @ts-ignore
-                        getRegistry(): org.springframework.beans.factory.support.BeanDefinitionRegistry
+                        public getRegistry(): org.springframework.beans.factory.support.BeanDefinitionRegistry
                         /**
                          * Set the ResourceLoader to use for resource locations.
                          * If specifying a ResourcePatternResolver, the bean definition reader
@@ -55,9 +55,9 @@ declare namespace org {
                          * @see org.springframework.core.io.support.PathMatchingResourcePatternResolver
                          */
                         // @ts-ignore
-                        setResourceLoader(resourceLoader: ResourceLoader): void
+                        public setResourceLoader(resourceLoader: ResourceLoader): void
                         // @ts-ignore
-                        getResourceLoader(): ResourceLoader
+                        public getResourceLoader(): ResourceLoader
                         /**
                          * Set the ClassLoader to use for bean classes.
                          * <p>Default is {@code null}, which suggests to not load bean classes
@@ -66,31 +66,31 @@ declare namespace org {
                          * @see Thread#getContextClassLoader()
                          */
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        getBeanClassLoader(): java.lang.ClassLoader
+                        public getBeanClassLoader(): java.lang.ClassLoader
                         /**
                          * Set the Environment to use when reading bean definitions. Most often used
                          * for evaluating profile information to determine which bean definitions
                          * should be read and which should be omitted.
                          */
                         // @ts-ignore
-                        setEnvironment(environment: Environment): void
+                        public setEnvironment(environment: Environment): void
                         // @ts-ignore
-                        getEnvironment(): Environment
+                        public getEnvironment(): Environment
                         /**
                          * Set the BeanNameGenerator to use for anonymous beans
                          * (without explicit bean name specified).
                          * <p>Default is a {@link DefaultBeanNameGenerator}.
                          */
                         // @ts-ignore
-                        setBeanNameGenerator(beanNameGenerator: org.springframework.beans.factory.support.BeanNameGenerator): void
+                        public setBeanNameGenerator(beanNameGenerator: org.springframework.beans.factory.support.BeanNameGenerator): void
                         // @ts-ignore
-                        getBeanNameGenerator(): org.springframework.beans.factory.support.BeanNameGenerator
+                        public getBeanNameGenerator(): org.springframework.beans.factory.support.BeanNameGenerator
                         // @ts-ignore
-                        loadBeanDefinitions(...resources: Resource[]): int
+                        public loadBeanDefinitions(...resources: Resource[]): number /*int*/
                         // @ts-ignore
-                        loadBeanDefinitions(location: string): int
+                        public loadBeanDefinitions(location: java.lang.String | string): number /*int*/
                         /**
                          * Load bean definitions from the specified resource location.
                          * <p>The location can also be a location pattern, provided that the
@@ -107,7 +107,7 @@ declare namespace org {
                          * @see #loadBeanDefinitions(org.springframework.core.io.Resource[])
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(location: string, actualResources: Array<Resource>): int
+                        public loadBeanDefinitions(location: java.lang.String | string, actualResources: java.util.Set<Resource> | Array<Resource>): number /*int*/
                     }
                 }
             }

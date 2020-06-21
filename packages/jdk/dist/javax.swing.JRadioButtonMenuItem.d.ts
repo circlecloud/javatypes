@@ -62,7 +62,7 @@ declare namespace javax {
              * @param text the text of the <code>JRadioButtonMenuItem</code>
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a radio button menu item whose properties are taken from the
              * <code>Action</code> supplied.
@@ -79,7 +79,7 @@ declare namespace javax {
              * @param icon the icon to display on the <code>JRadioButtonMenuItem</code>
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Creates a radio button menu item with the specified text
              * and selection state.
@@ -87,7 +87,7 @@ declare namespace javax {
              * @param selected the selected state of the <code>CheckBoxMenuItem</code>
              */
             // @ts-ignore
-            constructor(text: string, selected: boolean)
+            constructor(text: java.lang.String | string, selected: boolean)
             /**
              * Creates a radio button menu item with the specified image
              * and selection state, but no text.
@@ -105,7 +105,7 @@ declare namespace javax {
              * @param icon  the image that the button should display
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon, selected: boolean)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon, selected: boolean)
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "RadioButtonMenuItemUI"
@@ -113,7 +113,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns a string representation of this
              * <code>JRadioButtonMenuItem</code>.  This method
@@ -125,7 +125,7 @@ declare namespace javax {
              *           <code>JRadioButtonMenuItem</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JRadioButtonMenuItem.
              * For JRadioButtonMenuItems, the AccessibleContext takes the form of an
@@ -135,7 +135,7 @@ declare namespace javax {
              *          AccessibleContext of this JRadioButtonMenuItem
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

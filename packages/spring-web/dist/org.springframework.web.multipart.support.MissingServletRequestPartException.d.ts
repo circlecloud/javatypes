@@ -16,9 +16,9 @@ declare namespace org {
                     // @ts-ignore
                     class MissingServletRequestPartException extends ServletException {
                         // @ts-ignore
-                        constructor(partName: string)
+                        constructor(partName: java.lang.String | string)
                         // @ts-ignore
-                        getRequestPartName(): java.lang.String
+                        public getRequestPartName(): string
                     }
                 }
             }

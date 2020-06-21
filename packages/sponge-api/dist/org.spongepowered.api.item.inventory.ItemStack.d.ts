@@ -60,7 +60,7 @@ declare namespace org {
                          * @return Quantity of items
                          */
                         // @ts-ignore
-                        getQuantity(): int
+                        getQuantity(): number /*int*/
                         /**
                          * Sets the quantity in this stack.
                          * @param quantity Quantity
@@ -76,7 +76,7 @@ declare namespace org {
                          * @return Max stack quantity
                          */
                         // @ts-ignore
-                        getMaxStackQuantity(): int
+                        getMaxStackQuantity(): number /*int*/
                         /**
                          * Gets the {@link ItemStackSnapshot} of this {@link ItemStack}. All known
                          * {@link DataManipulator}s existing on this {@link ItemStack} are added

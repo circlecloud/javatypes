@@ -12,17 +12,17 @@ declare namespace java {
              * Indicates that the <code>Adjustable</code> has horizontal orientation.
              */
             // @ts-ignore
-            
+            readonly HORIZONTAL: number /*int*/
             /**
              * Indicates that the <code>Adjustable</code> has vertical orientation.
              */
             // @ts-ignore
-            
+            readonly VERTICAL: number /*int*/
             /**
              * Indicates that the <code>Adjustable</code> has no orientation.
              */
             // @ts-ignore
-            
+            readonly NO_ORIENTATION: number /*int*/
             /**
              * Gets the orientation of the adjustable object.
              * @return the orientation of the adjustable object;
@@ -30,7 +30,7 @@ declare namespace java {
              *    or <code>NO_ORIENTATION</code>
              */
             // @ts-ignore
-            getOrientation(): int
+            getOrientation(): number /*int*/
             /**
              * Sets the minimum value of the adjustable object.
              * @param min the minimum value
@@ -42,7 +42,7 @@ declare namespace java {
              * @return the minimum value of the adjustable object
              */
             // @ts-ignore
-            getMinimum(): int
+            getMinimum(): number /*int*/
             /**
              * Sets the maximum value of the adjustable object.
              * @param max the maximum value
@@ -54,7 +54,7 @@ declare namespace java {
              * @return the maximum value of the adjustable object
              */
             // @ts-ignore
-            getMaximum(): int
+            getMaximum(): number /*int*/
             /**
              * Sets the unit value increment for the adjustable object.
              * @param u the unit increment
@@ -66,7 +66,7 @@ declare namespace java {
              * @return the unit value increment for the adjustable object
              */
             // @ts-ignore
-            getUnitIncrement(): int
+            getUnitIncrement(): number /*int*/
             /**
              * Sets the block value increment for the adjustable object.
              * @param b the block increment
@@ -78,7 +78,7 @@ declare namespace java {
              * @return the block value increment for the adjustable object
              */
             // @ts-ignore
-            getBlockIncrement(): int
+            getBlockIncrement(): number /*int*/
             /**
              * Sets the length of the proportional indicator of the
              * adjustable object.
@@ -91,7 +91,7 @@ declare namespace java {
              * @return the length of the proportional indicator
              */
             // @ts-ignore
-            getVisibleAmount(): int
+            getVisibleAmount(): number /*int*/
             /**
              * Sets the current value of the adjustable object. If
              * the value supplied is less than <code>minimum</code>
@@ -110,7 +110,7 @@ declare namespace java {
              * @return the current value of the adjustable object
              */
             // @ts-ignore
-            getValue(): int
+            getValue(): number /*int*/
             /**
              * Adds a listener to receive adjustment events when the value of
              * the adjustable object changes.

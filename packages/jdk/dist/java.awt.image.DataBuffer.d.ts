@@ -26,7 +26,7 @@ declare namespace java {
              * @see java.awt.image.SampleModel
              */
             // @ts-ignore
-            class DataBuffer extends java.lang.Object {
+            abstract class DataBuffer extends java.lang.Object {
                 /**
                  * Constructs a DataBuffer containing one bank of the specified
                  * data type and size.
@@ -75,37 +75,37 @@ declare namespace java {
                  * Tag for unsigned byte data.
                  */
                 // @ts-ignore
-                readonly TYPE_BYTE: number /*int*/
+                public static readonly TYPE_BYTE: number /*int*/
                 /**
                  * Tag for unsigned short data.
                  */
                 // @ts-ignore
-                readonly TYPE_USHORT: number /*int*/
+                public static readonly TYPE_USHORT: number /*int*/
                 /**
                  * Tag for signed short data.  Placeholder for future use.
                  */
                 // @ts-ignore
-                readonly TYPE_SHORT: number /*int*/
+                public static readonly TYPE_SHORT: number /*int*/
                 /**
                  * Tag for int data.
                  */
                 // @ts-ignore
-                readonly TYPE_INT: number /*int*/
+                public static readonly TYPE_INT: number /*int*/
                 /**
                  * Tag for float data.  Placeholder for future use.
                  */
                 // @ts-ignore
-                readonly TYPE_FLOAT: number /*int*/
+                public static readonly TYPE_FLOAT: number /*int*/
                 /**
                  * Tag for double data.  Placeholder for future use.
                  */
                 // @ts-ignore
-                readonly TYPE_DOUBLE: number /*int*/
+                public static readonly TYPE_DOUBLE: number /*int*/
                 /**
                  * Tag for undefined data.
                  */
                 // @ts-ignore
-                readonly TYPE_UNDEFINED: number /*int*/
+                public static readonly TYPE_UNDEFINED: number /*int*/
                 /**
                  * The data type of this DataBuffer.
                  */
@@ -139,37 +139,37 @@ declare namespace java {
                  *          zero or greater than {#link #TYPE_DOUBLE}
                  */
                 // @ts-ignore
-                getDataTypeSize(type: number /*int*/): int
+                public static getDataTypeSize(type: number /*int*/): number /*int*/
                 /**
                  * Returns the data type of this DataBuffer.
                  * @return the data type of this <code>DataBuffer</code>.
                  */
                 // @ts-ignore
-                getDataType(): int
+                public getDataType(): number /*int*/
                 /**
                  * Returns the size (in array elements) of all banks.
                  * @return the size of all banks.
                  */
                 // @ts-ignore
-                getSize(): int
+                public getSize(): number /*int*/
                 /**
                  * Returns the offset of the default bank in array elements.
                  * @return the offset of the default bank.
                  */
                 // @ts-ignore
-                getOffset(): int
+                public getOffset(): number /*int*/
                 /**
                  * Returns the offsets (in array elements) of all the banks.
                  * @return the offsets of all banks.
                  */
                 // @ts-ignore
-                getOffsets(): int[]
+                public getOffsets(): number /*int*/[]
                 /**
                  * Returns the number of banks in this DataBuffer.
                  * @return the number of banks.
                  */
                 // @ts-ignore
-                getNumBanks(): int
+                public getNumBanks(): number /*int*/
                 /**
                  * Returns the requested data array element from the first (default) bank
                  * as an integer.
@@ -179,7 +179,7 @@ declare namespace java {
                  * @see #setElem(int, int, int)
                  */
                 // @ts-ignore
-                getElem(i: number /*int*/): int
+                public getElem(i: number /*int*/): number /*int*/
                 /**
                  * Returns the requested data array element from the specified bank
                  * as an integer.
@@ -191,7 +191,7 @@ declare namespace java {
                  * @see #setElem(int, int, int)
                  */
                 // @ts-ignore
-                abstract getElem(bank: number /*int*/, i: number /*int*/): int
+                public abstract getElem(bank: number /*int*/, i: number /*int*/): number /*int*/
                 /**
                  * Sets the requested data array element in the first (default) bank
                  * from the given integer.
@@ -202,7 +202,7 @@ declare namespace java {
                  * @see #getElem(int, int)
                  */
                 // @ts-ignore
-                setElem(i: number /*int*/, val: number /*int*/): void
+                public setElem(i: number /*int*/, val: number /*int*/): void
                 /**
                  * Sets the requested data array element in the specified bank
                  * from the given integer.
@@ -214,7 +214,7 @@ declare namespace java {
                  * @see #getElem(int, int)
                  */
                 // @ts-ignore
-                abstract setElem(bank: number /*int*/, i: number /*int*/, val: number /*int*/): void
+                public abstract setElem(bank: number /*int*/, i: number /*int*/, val: number /*int*/): void
                 /**
                  * Returns the requested data array element from the first (default) bank
                  * as a float.  The implementation in this class is to cast getElem(i)
@@ -227,7 +227,7 @@ declare namespace java {
                  * @see #setElemFloat(int, int, float)
                  */
                 // @ts-ignore
-                getElemFloat(i: number /*int*/): float
+                public getElemFloat(i: number /*int*/): number /*float*/
                 /**
                  * Returns the requested data array element from the specified bank
                  * as a float.  The implementation in this class is to cast
@@ -242,7 +242,7 @@ declare namespace java {
                  * @see #setElemFloat(int, int, float)
                  */
                 // @ts-ignore
-                getElemFloat(bank: number /*int*/, i: number /*int*/): float
+                public getElemFloat(bank: number /*int*/, i: number /*int*/): number /*float*/
                 /**
                  * Sets the requested data array element in the first (default) bank
                  * from the given float.  The implementation in this class is to cast
@@ -255,7 +255,7 @@ declare namespace java {
                  * @see #getElemFloat(int, int)
                  */
                 // @ts-ignore
-                setElemFloat(i: number /*int*/, val: number /*float*/): void
+                public setElemFloat(i: number /*int*/, val: number /*float*/): void
                 /**
                  * Sets the requested data array element in the specified bank
                  * from the given float.  The implementation in this class is to cast
@@ -269,7 +269,7 @@ declare namespace java {
                  * @see #getElemFloat(int, int)
                  */
                 // @ts-ignore
-                setElemFloat(bank: number /*int*/, i: number /*int*/, val: number /*float*/): void
+                public setElemFloat(bank: number /*int*/, i: number /*int*/, val: number /*float*/): void
                 /**
                  * Returns the requested data array element from the first (default) bank
                  * as a double.  The implementation in this class is to cast
@@ -283,7 +283,7 @@ declare namespace java {
                  * @see #setElemDouble(int, int, double)
                  */
                 // @ts-ignore
-                getElemDouble(i: number /*int*/): double
+                public getElemDouble(i: number /*int*/): number /*double*/
                 /**
                  * Returns the requested data array element from the specified bank as
                  * a double.  The implementation in this class is to cast getElem(bank, i)
@@ -297,7 +297,7 @@ declare namespace java {
                  * @see #setElemDouble(int, int, double)
                  */
                 // @ts-ignore
-                getElemDouble(bank: number /*int*/, i: number /*int*/): double
+                public getElemDouble(bank: number /*int*/, i: number /*int*/): number /*double*/
                 /**
                  * Sets the requested data array element in the first (default) bank
                  * from the given double.  The implementation in this class is to cast
@@ -310,7 +310,7 @@ declare namespace java {
                  * @see #getElemDouble(int, int)
                  */
                 // @ts-ignore
-                setElemDouble(i: number /*int*/, val: number /*double*/): void
+                public setElemDouble(i: number /*int*/, val: number /*double*/): void
                 /**
                  * Sets the requested data array element in the specified bank
                  * from the given double.  The implementation in this class is to cast
@@ -324,7 +324,7 @@ declare namespace java {
                  * @see #getElemDouble(int, int)
                  */
                 // @ts-ignore
-                setElemDouble(bank: number /*int*/, i: number /*int*/, val: number /*double*/): void
+                public setElemDouble(bank: number /*int*/, i: number /*int*/, val: number /*double*/): void
             }
         }
     }

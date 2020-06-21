@@ -22,11 +22,11 @@ declare namespace org {
                      * {@code CompositeCacheOperationSource} combines.
                      */
                     // @ts-ignore
-                    getCacheOperationSources(): org.springframework.cache.interceptor.CacheOperationSource[]
+                    public getCacheOperationSources(): org.springframework.cache.interceptor.CacheOperationSource[]
                     // @ts-ignore
-                    isCandidateClass(targetClass: java.lang.Class<any>): boolean
+                    public isCandidateClass(targetClass: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    public getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                 }
             }
         }

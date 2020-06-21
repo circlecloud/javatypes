@@ -24,7 +24,7 @@ declare namespace org {
                  * @deprecated Non-Functional
                  */
                 // @ts-ignore
-                getEffectsFromDamage(damage: number /*int*/): java.util.Collection<org.bukkit.potion.PotionEffect>
+                getEffectsFromDamage(damage: number /*int*/): Array<org.bukkit.potion.PotionEffect>
                 /**
                  * Returns a collection of {@link PotionEffect} that would be applied from
                  * a potion with the given type.
@@ -34,7 +34,7 @@ declare namespace org {
                  * @return The list of effects
                  */
                 // @ts-ignore
-                getEffects(type: org.bukkit.potion.PotionType, upgraded: boolean, extended: boolean): java.util.Collection<org.bukkit.potion.PotionEffect>
+                getEffects(type: org.bukkit.potion.PotionType, upgraded: boolean, extended: boolean): Array<org.bukkit.potion.PotionEffect>
             }
         }
     }

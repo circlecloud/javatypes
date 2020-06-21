@@ -18,7 +18,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(servletContext: ServletContext)
                         // @ts-ignore
-                        findApplicationContexts(): java.util.Set<ConfigurableApplicationContext>
+                        findApplicationContexts(): Array<ConfigurableApplicationContext>
                     }
                 }
             }

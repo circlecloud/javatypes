@@ -39,7 +39,7 @@ declare namespace org {
                      * @see #setEngineName
                      */
                     // @ts-ignore
-                    setLanguage(language: string): void
+                    public setLanguage(language: java.lang.String | string): void
                     /**
                      * Set the name of the script engine for evaluating the scripts (e.g. "Groovy"),
                      * as exposed by the JSR-223 script engine factory.
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see #setLanguage
                      */
                     // @ts-ignore
-                    setEngineName(engineName: string): void
+                    public setEngineName(engineName: java.lang.String | string): void
                     /**
                      * Set the globally scoped bindings on the underlying script engine manager,
                      * shared by all scripts, as an alternative to script argument bindings.
@@ -57,13 +57,13 @@ declare namespace org {
                      * @see javax.script.SimpleBindings
                      */
                     // @ts-ignore
-                    setGlobalBindings(globalBindings: java.util.Map<java.lang.String, java.lang.Object>): void
+                    public setGlobalBindings(globalBindings: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    evaluate(script: org.springframework.scripting.ScriptSource): java.lang.Object
+                    public evaluate(script: org.springframework.scripting.ScriptSource): any
                     // @ts-ignore
-                    evaluate(script: org.springframework.scripting.ScriptSource, argumentBindings: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                    public evaluate(script: org.springframework.scripting.ScriptSource, argumentBindings: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
                     /**
                      * Obtain the JSR-223 ScriptEngine to use for the given script.
                      * @param script the script to evaluate

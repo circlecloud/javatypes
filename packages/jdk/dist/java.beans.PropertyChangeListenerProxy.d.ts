@@ -24,19 +24,19 @@ declare namespace java {
              * @param listener      the listener object
              */
             // @ts-ignore
-            constructor(propertyName: string, listener: java.beans.PropertyChangeListener)
+            constructor(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener)
             /**
              * Forwards the property change event to the listener delegate.
              * @param event  the property change event
              */
             // @ts-ignore
-            propertyChange(event: java.beans.PropertyChangeEvent): void
+            public propertyChange(event: java.beans.PropertyChangeEvent): void
             /**
              * Returns the name of the named property associated with the listener.
              * @return the name of the named property associated with the listener
              */
             // @ts-ignore
-            getPropertyName(): java.lang.String
+            public getPropertyName(): string
         }
     }
 }

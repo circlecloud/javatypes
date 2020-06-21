@@ -26,7 +26,7 @@ declare namespace org {
                          * @param processingTimeMillis the processing time of the request in milliseconds
                          */
                         // @ts-ignore
-                        constructor(source: any, requestUrl: string, clientAddress: string, method: string, servletName: string, sessionId: string, userName: string, processingTimeMillis: number /*long*/)
+                        constructor(source: java.lang.Object | any, requestUrl: java.lang.String | string, clientAddress: java.lang.String | string, method: java.lang.String | string, servletName: java.lang.String | string, sessionId: java.lang.String | string, userName: java.lang.String | string, processingTimeMillis: number /*long*/)
                         /**
                          * Create a new ServletRequestHandledEvent.
                          * @param source the component that published the event
@@ -41,7 +41,7 @@ declare namespace org {
                          * @param failureCause the cause of failure, if any
                          */
                         // @ts-ignore
-                        constructor(source: any, requestUrl: string, clientAddress: string, method: string, servletName: string, sessionId: string, userName: string, processingTimeMillis: number /*long*/, failureCause: Error)
+                        constructor(source: java.lang.Object | any, requestUrl: java.lang.String | string, clientAddress: java.lang.String | string, method: java.lang.String | string, servletName: java.lang.String | string, sessionId: java.lang.String | string, userName: java.lang.String | string, processingTimeMillis: number /*long*/, failureCause: java.lang.Throwable | Error)
                         /**
                          * Create a new ServletRequestHandledEvent.
                          * @param source the component that published the event
@@ -57,40 +57,40 @@ declare namespace org {
                          * @param statusCode the HTTP status code of the response
                          */
                         // @ts-ignore
-                        constructor(source: any, requestUrl: string, clientAddress: string, method: string, servletName: string, sessionId: string, userName: string, processingTimeMillis: number /*long*/, failureCause: Error, statusCode: number /*int*/)
+                        constructor(source: java.lang.Object | any, requestUrl: java.lang.String | string, clientAddress: java.lang.String | string, method: java.lang.String | string, servletName: java.lang.String | string, sessionId: java.lang.String | string, userName: java.lang.String | string, processingTimeMillis: number /*long*/, failureCause: java.lang.Throwable | Error, statusCode: number /*int*/)
                         /**
                          * Return the URL of the request.
                          */
                         // @ts-ignore
-                        getRequestUrl(): java.lang.String
+                        public getRequestUrl(): string
                         /**
                          * Return the IP address that the request came from.
                          */
                         // @ts-ignore
-                        getClientAddress(): java.lang.String
+                        public getClientAddress(): string
                         /**
                          * Return the HTTP method of the request (usually GET or POST).
                          */
                         // @ts-ignore
-                        getMethod(): java.lang.String
+                        public getMethod(): string
                         /**
                          * Return the name of the servlet that handled the request.
                          */
                         // @ts-ignore
-                        getServletName(): java.lang.String
+                        public getServletName(): string
                         /**
                          * Return the HTTP status code of the response or -1 if the status
                          * code is not available.
                          * @since 4.1
                          */
                         // @ts-ignore
-                        getStatusCode(): int
+                        public getStatusCode(): number /*int*/
                         // @ts-ignore
-                        getShortDescription(): java.lang.String
+                        public getShortDescription(): string
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

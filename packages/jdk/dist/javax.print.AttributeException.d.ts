@@ -22,7 +22,7 @@ declare namespace javax {
              * @return unsupported attribute classes
              */
             // @ts-ignore
-            getUnsupportedAttributes(): java.lang.Class[]
+            getUnsupportedAttributes(): java.lang.Class<any>[]
             /**
              * Returns the array of printing attributes for which the Print Service
              * instance supports the attribute but does not support that particular

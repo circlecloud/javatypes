@@ -12,9 +12,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(what: org.bukkit.inventory.InventoryView, type: org.bukkit.event.inventory.InventoryType.SlotType, slot: number /*int*/, newItem: org.bukkit.inventory.ItemStack)
                     // @ts-ignore
-                    getCursor(): org.bukkit.inventory.ItemStack
+                    public getCursor(): org.bukkit.inventory.ItemStack
                     // @ts-ignore
-                    setCursor(item: org.bukkit.inventory.ItemStack): void
+                    public setCursor(item: org.bukkit.inventory.ItemStack): void
                 }
             }
         }

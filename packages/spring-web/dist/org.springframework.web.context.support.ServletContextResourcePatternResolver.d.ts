@@ -37,7 +37,7 @@ declare namespace org {
                          * @see javax.servlet.ServletContext#getResourcePaths
                          */
                         // @ts-ignore
-                        doFindPathMatchingFileResources(rootDirResource: Resource, subPattern: string): java.util.Set<Resource>
+                        doFindPathMatchingFileResources(rootDirResource: Resource, subPattern: java.lang.String | string): Array<Resource>
                         /**
                          * Recursively retrieve ServletContextResources that match the given pattern,
                          * adding them to the given result set.
@@ -51,7 +51,7 @@ declare namespace org {
                          * @see javax.servlet.ServletContext#getResourcePaths
                          */
                         // @ts-ignore
-                        doRetrieveMatchingServletContextResources(servletContext: ServletContext, fullPattern: string, dir: string, result: Array<Resource>): void
+                        doRetrieveMatchingServletContextResources(servletContext: ServletContext, fullPattern: java.lang.String | string, dir: java.lang.String | string, result: java.util.Set<Resource> | Array<Resource>): void
                     }
                 }
             }

@@ -16,7 +16,7 @@ declare namespace java {
              * @see java.util.Collection
              */
             // @ts-ignore
-            interface BeanContext extends java.beans.beancontext.BeanContextChild, java.util.Collection, java.beans.DesignMode, java.beans.Visibility {
+            interface BeanContext extends java.beans.beancontext.BeanContextChild, java.util.Collection<any>, java.beans.DesignMode, java.beans.Visibility {
                 /**
                  * This global lock is used by both <code>BeanContext</code>
                  * and <code>BeanContextServices</code> implementors
@@ -24,7 +24,7 @@ declare namespace java {
                  * hierarchy and any service requests etc.
                  */
                 // @ts-ignore
-                
+                readonly globalHierarchyLock: java.lang.Object | any
                 /**
                  * Instantiate the javaBean named as a
                  * child of this <code>BeanContext</code>.
@@ -41,7 +41,7 @@ declare namespace java {
                  *  by the beanName parameter is not found
                  */
                 // @ts-ignore
-                instantiateChild(beanName: string): java.lang.Object
+                instantiateChild(beanName: java.lang.String | string): any
                 /**
                  * Analagous to <code>java.lang.ClassLoader.getResourceAsStream()</code>,
                  * this method allows a <code>BeanContext</code> implementation
@@ -56,7 +56,7 @@ declare namespace java {
                  *  the resource is not valid
                  */
                 // @ts-ignore
-                getResourceAsStream(name: string, bcc: java.beans.beancontext.BeanContextChild): java.io.InputStream
+                getResourceAsStream(name: java.lang.String | string, bcc: java.beans.beancontext.BeanContextChild): java.io.InputStream
                 /**
                  * Analagous to <code>java.lang.ClassLoader.getResource()</code>, this
                  * method allows a <code>BeanContext</code> implementation to interpose
@@ -70,7 +70,7 @@ declare namespace java {
                  *  if the resource is not valid
                  */
                 // @ts-ignore
-                getResource(name: string, bcc: java.beans.beancontext.BeanContextChild): java.net.URL
+                getResource(name: java.lang.String | string, bcc: java.beans.beancontext.BeanContextChild): java.net.URL
                 /**
                  * Adds the specified <code>BeanContextMembershipListener</code>
                  * to receive <code>BeanContextMembershipEvents</code> from

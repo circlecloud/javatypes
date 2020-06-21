@@ -32,7 +32,7 @@ declare namespace javax {
                  * @see javax.naming.NameClassPair#getClassName
                  */
                 // @ts-ignore
-                constructor(name: string, obj: any, attrs: javax.naming.directory.Attributes)
+                constructor(name: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes)
                 /**
                  * Constructs a search result using the result's name, its bound object, and
                  * its attributes, and whether the name is relative.
@@ -52,7 +52,7 @@ declare namespace javax {
                  * @see javax.naming.NameClassPair#getClassName
                  */
                 // @ts-ignore
-                constructor(name: string, obj: any, attrs: javax.naming.directory.Attributes, isRelative: boolean)
+                constructor(name: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes, isRelative: boolean)
                 /**
                  * Constructs a search result using the result's name, its class name,
                  * its bound object, and its attributes.
@@ -70,7 +70,7 @@ declare namespace javax {
                  * @see javax.naming.NameClassPair#getClassName
                  */
                 // @ts-ignore
-                constructor(name: string, className: string, obj: any, attrs: javax.naming.directory.Attributes)
+                constructor(name: java.lang.String | string, className: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes)
                 /**
                  * Constructs a search result using the result's name, its class name,
                  * its bound object, its attributes, and whether the name is relative.
@@ -90,21 +90,21 @@ declare namespace javax {
                  * @see javax.naming.NameClassPair#getClassName
                  */
                 // @ts-ignore
-                constructor(name: string, className: string, obj: any, attrs: javax.naming.directory.Attributes, isRelative: boolean)
+                constructor(name: java.lang.String | string, className: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes, isRelative: boolean)
                 /**
                  * Retrieves the attributes in this search result.
                  * @return The non-null attributes in this search result. Can be empty.
                  * @see #setAttributes
                  */
                 // @ts-ignore
-                getAttributes(): javax.naming.directory.Attributes
+                public getAttributes(): javax.naming.directory.Attributes
                 /**
                  * Sets the attributes of this search result to <code>attrs</code>.
                  * @param attrs The non-null attributes to use. Can be empty.
                  * @see #getAttributes
                  */
                 // @ts-ignore
-                setAttributes(attrs: javax.naming.directory.Attributes): void
+                public setAttributes(attrs: javax.naming.directory.Attributes): void
                 /**
                  * Generates the string representation of this SearchResult.
                  * The string representation consists of the string representation
@@ -115,7 +115,7 @@ declare namespace javax {
                  * @return The string representation of this SearchResult. Cannot be null.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -54,7 +54,7 @@ declare namespace java {
              *  {#code null}
              */
             // @ts-ignore
-            connect(url: string, info: java.util.Properties): java.sql.Connection
+            connect(url: java.lang.String | string, info: java.util.Properties): java.sql.Connection
             /**
              * Retrieves whether the driver thinks that it can open a connection
              * to the given URL.  Typically drivers will return <code>true</code> if they
@@ -67,7 +67,7 @@ declare namespace java {
              *  {#code null}
              */
             // @ts-ignore
-            acceptsURL(url: string): boolean
+            acceptsURL(url: java.lang.String | string): boolean
             /**
              * Gets information about the possible properties for this driver.
              * <P>
@@ -87,19 +87,19 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getPropertyInfo(url: string, info: java.util.Properties): java.sql.DriverPropertyInfo[]
+            getPropertyInfo(url: java.lang.String | string, info: java.util.Properties): java.sql.DriverPropertyInfo[]
             /**
              * Retrieves the driver's major version number. Initially this should be 1.
              * @return this driver's major version number
              */
             // @ts-ignore
-            getMajorVersion(): int
+            getMajorVersion(): number /*int*/
             /**
              * Gets the driver's minor version number. Initially this should be 0.
              * @return this driver's minor version number
              */
             // @ts-ignore
-            getMinorVersion(): int
+            getMinorVersion(): number /*int*/
             /**
              * Reports whether this driver is a genuine JDBC
              * Compliant&trade; driver.

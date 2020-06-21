@@ -9,7 +9,7 @@ declare namespace org {
                      * {@link Predicate}
                      */
                     // @ts-ignore
-                    interface IntegerTrait extends org.spongepowered.api.block.trait.BlockTrait<java.lang.Integer> {
+                    interface IntegerTrait extends org.spongepowered.api.block.trait.BlockTrait<java.lang.Integer | number> {
                     }
                 }
             }

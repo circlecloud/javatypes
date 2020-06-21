@@ -98,7 +98,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class TableRowSorter<M extends javax.swing.table.TableModel> extends javax.swing.DefaultRowSorter<M, java.lang.Integer> {
+            class TableRowSorter<M extends javax.swing.table.TableModel> extends javax.swing.DefaultRowSorter<M, java.lang.Integer | number> {
                 /**
                  * Creates a <code>TableRowSorter</code> with an empty model.
                  */
@@ -111,7 +111,7 @@ declare namespace javax {
                  *         <code>null</code> is treated as an empty model
                  */
                 // @ts-ignore
-                constructor(model: M extends javax.swing.table.TableModel)
+                constructor(model: M)
                 /**
                  * Sets the <code>TableModel</code> to use as the underlying model
                  * for this <code>TableRowSorter</code>.  A value of <code>null</code>
@@ -119,7 +119,7 @@ declare namespace javax {
                  * @param model the underlying model to use, or <code>null</code>
                  */
                 // @ts-ignore
-                setModel(model: M extends javax.swing.table.TableModel): void
+                public setModel(model: M): void
                 /**
                  * Sets the object responsible for converting values from the
                  * model to strings.  If non-<code>null</code> this
@@ -129,14 +129,14 @@ declare namespace javax {
                  *         from the model to strings
                  */
                 // @ts-ignore
-                setStringConverter(stringConverter: javax.swing.table.TableStringConverter): void
+                public setStringConverter(stringConverter: javax.swing.table.TableStringConverter): void
                 /**
                  * Returns the object responsible for converting values from the
                  * model to strings.
                  * @return object responsible for converting values to strings.
                  */
                 // @ts-ignore
-                getStringConverter(): javax.swing.table.TableStringConverter
+                public getStringConverter(): javax.swing.table.TableStringConverter
                 /**
                  * Returns the <code>Comparator</code> for the specified
                  * column.  If a <code>Comparator</code> has not been specified using
@@ -152,7 +152,7 @@ declare namespace javax {
                  * @throws IndexOutOfBoundsException {#inheritDoc}
                  */
                 // @ts-ignore
-                getComparator(column: number /*int*/): java.util.Comparator<?>
+                public getComparator(column: number /*int*/): java.util.Comparator<any>
                 /**
                  * {@inheritDoc}
                  * @throws IndexOutOfBoundsException {#inheritDoc}

@@ -81,7 +81,7 @@ declare namespace java {
          * @author Mark Davis
          */
         // @ts-ignore
-        class Format extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+        abstract class Format extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -100,7 +100,7 @@ declare namespace java {
              *             object
              */
             // @ts-ignore
-            format(obj: any): java.lang.String
+            public format(obj: java.lang.Object | any): string
             /**
              * Formats an object and appends the resulting text to a given string
              * buffer.
@@ -119,7 +119,7 @@ declare namespace java {
              *             object
              */
             // @ts-ignore
-            abstract format(obj: any, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public abstract format(obj: java.lang.Object | any, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats an Object producing an <code>AttributedCharacterIterator</code>.
              * You can use the returned <code>AttributedCharacterIterator</code>
@@ -143,7 +143,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            formatToCharacterIterator(obj: any): java.text.AttributedCharacterIterator
+            public formatToCharacterIterator(obj: java.lang.Object | any): java.text.AttributedCharacterIterator
             /**
              * Parses text from a string to produce an object.
              * <p>
@@ -165,7 +165,7 @@ declare namespace java {
              * @exception NullPointerException if <code>pos</code> is null.
              */
             // @ts-ignore
-            abstract parseObject(source: string, pos: java.text.ParsePosition): java.lang.Object
+            public abstract parseObject(source: java.lang.String | string, pos: java.text.ParsePosition): any
             /**
              * Parses text from the beginning of the given string to produce an object.
              * The method may not use the entire text of the given string.
@@ -175,13 +175,13 @@ declare namespace java {
              *             cannot be parsed.
              */
             // @ts-ignore
-            parseObject(source: string): java.lang.Object
+            public parseObject(source: java.lang.String | string): any
             /**
              * Creates and returns a copy of this object.
              * @return a clone of this instance.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

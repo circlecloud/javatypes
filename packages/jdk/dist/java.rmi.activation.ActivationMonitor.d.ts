@@ -51,7 +51,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                activeObject(id: java.rmi.activation.ActivationID, obj: java.rmi.MarshalledObject<java.rmi.Remote>): void
+                activeObject(id: java.rmi.activation.ActivationID, obj: java.rmi.MarshalledObject<any>): void
                 /**
                  * Informs that the group is now inactive. The group will be
                  * recreated upon a subsequent request to activate an object

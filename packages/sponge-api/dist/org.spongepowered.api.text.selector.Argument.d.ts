@@ -44,7 +44,7 @@ declare namespace org {
                          * @return The created argument
                          */
                         // @ts-ignore
-                        createSet<T, V>(type: org.spongepowered.api.text.selector.ArgumentHolder<org.spongepowered.api.text.selector.ArgumentType<T>>, value: V): java.util.Set<org.spongepowered.api.text.selector.Argument<T>>
+                        createSet<T, V>(type: org.spongepowered.api.text.selector.ArgumentHolder<any>, value: V): Array<org.spongepowered.api.text.selector.Argument<T>>
                         /**
                          * Parses an {@link Argument} from the given argument string.
                          * <p>In Vanilla, it should be formatted like {@code key=value}.</p>
@@ -54,7 +54,7 @@ declare namespace org {
                          *          due to invalid format)
                          */
                         // @ts-ignore
-                        parse(argument: string): org.spongepowered.api.text.selector.Argument<?>
+                        parse(argument: java.lang.String | string): org.spongepowered.api.text.selector.Argument<any>
                         /**
                          * Returns the type of this {@link Argument}.
                          * @return The type of this argument
@@ -72,7 +72,7 @@ declare namespace org {
                          * @return The plain argument string
                          */
                         // @ts-ignore
-                        toPlain(): java.lang.String
+                        toPlain(): string
                     }
                 }
             }

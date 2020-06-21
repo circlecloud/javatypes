@@ -13,59 +13,59 @@ declare namespace org {
              * @see org.springframework.beans.ConfigurablePropertyAccessor
              */
             // @ts-ignore
-            class AbstractPropertyBindingResult extends org.springframework.validation.AbstractBindingResult {
+            abstract class AbstractPropertyBindingResult extends org.springframework.validation.AbstractBindingResult {
                 /**
                  * Create a new AbstractPropertyBindingResult instance.
                  * @param objectName the name of the target object
                  * @see DefaultMessageCodesResolver
                  */
                 // @ts-ignore
-                constructor(objectName: string)
+                constructor(objectName: java.lang.String | string)
                 // @ts-ignore
-                initConversion(conversionService: ConversionService): void
+                public initConversion(conversionService: ConversionService): void
                 /**
                  * Returns the underlying PropertyAccessor.
                  * @see #getPropertyAccessor()
                  */
                 // @ts-ignore
-                getPropertyEditorRegistry(): PropertyEditorRegistry
+                public getPropertyEditorRegistry(): PropertyEditorRegistry
                 /**
                  * Returns the canonical property name.
                  * @see org.springframework.beans.PropertyAccessorUtils#canonicalPropertyName
                  */
                 // @ts-ignore
-                canonicalFieldName(field: string): java.lang.String
+                canonicalFieldName(field: java.lang.String | string): string
                 /**
                  * Determines the field type from the property type.
                  * @see #getPropertyAccessor()
                  */
                 // @ts-ignore
-                getFieldType(field: string): java.lang.Class<?>
+                public getFieldType(field: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Fetches the field value from the PropertyAccessor.
                  * @see #getPropertyAccessor()
                  */
                 // @ts-ignore
-                getActualFieldValue(field: string): java.lang.Object
+                getActualFieldValue(field: java.lang.String | string): any
                 /**
                  * Formats the field value based on registered PropertyEditors.
                  * @see #getCustomEditor
                  */
                 // @ts-ignore
-                formatFieldValue(field: string, value: any): java.lang.Object
+                formatFieldValue(field: java.lang.String | string, value: java.lang.Object | any): any
                 /**
                  * Retrieve the custom PropertyEditor for the given field, if any.
                  * @param fixedField the fully qualified field name
                  * @return the custom PropertyEditor, or {#code null}
                  */
                 // @ts-ignore
-                getCustomEditor(fixedField: string): java.beans.PropertyEditor
+                getCustomEditor(fixedField: java.lang.String | string): java.beans.PropertyEditor
                 /**
                  * This implementation exposes a PropertyEditor adapter for a Formatter,
                  * if applicable.
                  */
                 // @ts-ignore
-                findEditor(field: string, valueType: java.lang.Class<any>): java.beans.PropertyEditor
+                public findEditor(field: java.lang.String | string, valueType: java.lang.Class<any>): java.beans.PropertyEditor
                 /**
                  * Provide the PropertyAccessor to work with, according to the
                  * concrete strategy of access.
@@ -76,7 +76,7 @@ declare namespace org {
                  * @see ConfigurablePropertyAccessor#setExtractOldValueForEditor
                  */
                 // @ts-ignore
-                abstract getPropertyAccessor(): ConfigurablePropertyAccessor
+                public abstract getPropertyAccessor(): ConfigurablePropertyAccessor
             }
         }
     }

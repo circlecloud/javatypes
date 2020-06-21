@@ -11,7 +11,7 @@ declare namespace org {
                  * @see #locateMBeanServer
                  */
                 // @ts-ignore
-                class JmxUtils extends java.lang.Object {
+                abstract class JmxUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -19,7 +19,7 @@ declare namespace org {
                      * identity hash code of its corresponding managed resource.
                      */
                     // @ts-ignore
-                    readonly IDENTITY_OBJECT_NAME_KEY: string
+                    public static readonly IDENTITY_OBJECT_NAME_KEY: java.lang.String | string
                     /**
                      * Attempt to find a locally running {@code MBeanServer}. Fails if no
                      * {@code MBeanServer} can be found. Logs a warning if more than one
@@ -29,7 +29,7 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#findMBeanServer
                      */
                     // @ts-ignore
-                    locateMBeanServer(): javax.management.MBeanServer
+                    public static locateMBeanServer(): javax.management.MBeanServer
                     /**
                      * Attempt to find a locally running {@code MBeanServer}. Fails if no
                      * {@code MBeanServer} can be found. Logs a warning if more than one
@@ -42,7 +42,7 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#findMBeanServer(String)
                      */
                     // @ts-ignore
-                    locateMBeanServer(agentId: string): javax.management.MBeanServer
+                    public static locateMBeanServer(agentId: java.lang.String | string): javax.management.MBeanServer
                     /**
                      * Convert an array of {@code MBeanParameterInfo} into an array of
                      * {@code Class} instances corresponding to the parameters.
@@ -51,7 +51,7 @@ declare namespace org {
                      * @throws ClassNotFoundException if a parameter type could not be resolved
                      */
                     // @ts-ignore
-                    parameterInfoToTypes(paramInfo: javax.management.MBeanParameterInfo[]): java.lang.Class[]
+                    public static parameterInfoToTypes(paramInfo: javax.management.MBeanParameterInfo[]): java.lang.Class<any>[]
                     /**
                      * Convert an array of {@code MBeanParameterInfo} into an array of
                      * {@code Class} instances corresponding to the parameters.
@@ -61,7 +61,7 @@ declare namespace org {
                      * @throws ClassNotFoundException if a parameter type could not be resolved
                      */
                     // @ts-ignore
-                    parameterInfoToTypes(paramInfo: javax.management.MBeanParameterInfo[], classLoader: java.lang.ClassLoader): java.lang.Class[]
+                    public static parameterInfoToTypes(paramInfo: javax.management.MBeanParameterInfo[], classLoader: java.lang.ClassLoader): java.lang.Class<any>[]
                     /**
                      * Create a {@code String[]} representing the argument signature of a
                      * method. Each element in the array is the fully qualified class name
@@ -70,7 +70,7 @@ declare namespace org {
                      * @return the signature as array of argument types
                      */
                     // @ts-ignore
-                    getMethodSignature(method: java.lang.reflect.Method): java.lang.String[]
+                    public static getMethodSignature(method: java.lang.reflect.Method): string[]
                     /**
                      * Return the JMX attribute name to use for the given JavaBeans property.
                      * <p>When using strict casing, a JavaBean property with a getter method
@@ -82,7 +82,7 @@ declare namespace org {
                      * @return the JMX attribute name to use
                      */
                     // @ts-ignore
-                    getAttributeName(property: java.beans.PropertyDescriptor, useStrictCasing: boolean): java.lang.String
+                    public static getAttributeName(property: java.beans.PropertyDescriptor, useStrictCasing: boolean): string
                     /**
                      * Append an additional key/value pair to an existing {@link ObjectName} with the key being
                      * the static value {@code identity} and the value being the identity hash code of the
@@ -98,7 +98,7 @@ declare namespace org {
                      * @see org.springframework.util.ObjectUtils#getIdentityHexString(Object)
                      */
                     // @ts-ignore
-                    appendIdentityToObjectName(objectName: javax.management.ObjectName, managedResource: any): javax.management.ObjectName
+                    public static appendIdentityToObjectName(objectName: javax.management.ObjectName, managedResource: java.lang.Object | any): javax.management.ObjectName
                     /**
                      * Return the class or interface to expose for the given bean.
                      * This is the class that will be searched for attributes and operations
@@ -110,7 +110,7 @@ declare namespace org {
                      * @see org.springframework.util.ClassUtils#getUserClass(Object)
                      */
                     // @ts-ignore
-                    getClassToExpose(managedBean: any): java.lang.Class<?>
+                    public static getClassToExpose(managedBean: java.lang.Object | any): java.lang.Class<any>
                     /**
                      * Return the class or interface to expose for the given bean class.
                      * This is the class that will be searched for attributes and operations
@@ -122,7 +122,7 @@ declare namespace org {
                      * @see org.springframework.util.ClassUtils#getUserClass(Class)
                      */
                     // @ts-ignore
-                    getClassToExpose(clazz: java.lang.Class<any>): java.lang.Class<?>
+                    public static getClassToExpose(clazz: java.lang.Class<any>): java.lang.Class<any>
                     /**
                      * Determine whether the given bean class qualifies as an MBean as-is.
                      * <p>This implementation checks for {@link javax.management.DynamicMBean}
@@ -133,7 +133,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.MBeanExporter#isMBean(Class)
                      */
                     // @ts-ignore
-                    isMBean(clazz: java.lang.Class<any>): boolean
+                    public static isMBean(clazz: java.lang.Class<any>): boolean
                     /**
                      * Return the Standard MBean interface for the given class, if any
                      * (that is, an interface whose name matches the class name of the
@@ -142,7 +142,7 @@ declare namespace org {
                      * @return the Standard MBean interface for the given class
                      */
                     // @ts-ignore
-                    getMBeanInterface(clazz: java.lang.Class<any>): java.lang.Class<?>
+                    public static getMBeanInterface(clazz: java.lang.Class<any>): java.lang.Class<any>
                     /**
                      * Return the Java 6 MXBean interface exists for the given class, if any
                      * (that is, an interface whose name ends with "MXBean" and/or
@@ -151,7 +151,7 @@ declare namespace org {
                      * @return whether there is an MXBean interface for the given class
                      */
                     // @ts-ignore
-                    getMXBeanInterface(clazz: java.lang.Class<any>): java.lang.Class<?>
+                    public static getMXBeanInterface(clazz: java.lang.Class<any>): java.lang.Class<any>
                 }
             }
         }

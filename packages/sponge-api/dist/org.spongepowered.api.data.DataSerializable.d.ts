@@ -21,7 +21,7 @@ declare namespace org {
                      * @return The version of the content being serialized
                      */
                     // @ts-ignore
-                    getContentVersion(): int
+                    getContentVersion(): number /*int*/
                     /**
                      * Serializes this object into a comprehensible {@link DataContainer}.
                      * @return A newly created DataContainer

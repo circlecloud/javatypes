@@ -25,19 +25,19 @@ declare namespace javax {
                      * the Transformer supports Result output of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * Set the target to be a SAX2 {@link org.xml.sax.ContentHandler}.
                      * @param handler Must be a non-null ContentHandler reference.
                      */
                     // @ts-ignore
-                    setHandler(handler: org.xml.sax.ContentHandler): void
+                    public setHandler(handler: org.xml.sax.ContentHandler): void
                     /**
                      * Get the {@link org.xml.sax.ContentHandler} that is the Result.
                      * @return The ContentHandler that is to be transformation output.
                      */
                     // @ts-ignore
-                    getHandler(): org.xml.sax.ContentHandler
+                    public getHandler(): org.xml.sax.ContentHandler
                     /**
                      * Set the SAX2 {@link org.xml.sax.ext.LexicalHandler} for the output.
                      * <p>This is needed to handle XML comments and the like.  If the
@@ -48,27 +48,27 @@ declare namespace javax {
                      *  handling lexical parse events.
                      */
                     // @ts-ignore
-                    setLexicalHandler(handler: org.xml.sax.ext.LexicalHandler): void
+                    public setLexicalHandler(handler: org.xml.sax.ext.LexicalHandler): void
                     /**
                      * Get a SAX2 {@link org.xml.sax.ext.LexicalHandler} for the output.
                      * @return A <code>LexicalHandler</code>, or null.
                      */
                     // @ts-ignore
-                    getLexicalHandler(): org.xml.sax.ext.LexicalHandler
+                    public getLexicalHandler(): org.xml.sax.ext.LexicalHandler
                     /**
                      * Method setSystemId Set the systemID that may be used in association
                      * with the {@link org.xml.sax.ContentHandler}.
                      * @param systemId The system identifier as a URI string.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * Get the system identifier that was set with setSystemId.
                      * @return The system identifier that was set with setSystemId, or null
                      *  if setSystemId was not called.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                 }
             }
         }

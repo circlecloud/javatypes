@@ -33,7 +33,7 @@ declare namespace javax {
                  * @see <a href="http://www.w3.org/TR/xml-media-types/">Describing Media Content of Binary Data in XML</a>
                  */
                 // @ts-ignore
-                class AttachmentUnmarshaller extends java.lang.Object {
+                abstract class AttachmentUnmarshaller extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -78,7 +78,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if the attachment for the given cid is not found.
                      */
                     // @ts-ignore
-                    abstract getAttachmentAsDataHandler(cid: string): javax.activation.DataHandler
+                    public abstract getAttachmentAsDataHandler(cid: java.lang.String | string): javax.activation.DataHandler
                     /**
                      * <p>Retrieve the attachment identified by content-id, <code>cid</code>,  as a <tt>byte[]</tt></p>.
                      * @param cid It is expected to be a valid lexical form of the XML Schema
@@ -88,7 +88,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if the attachment for the given cid is not found.
                      */
                     // @ts-ignore
-                    abstract getAttachmentAsByteArray(cid: string): byte[]
+                    public abstract getAttachmentAsByteArray(cid: java.lang.String | string): number /*byte*/[]
                     /**
                      * <p>Read-only property that returns true if JAXB unmarshaller needs to perform XOP processing.</p>
                      * <p>This method returns <code>true</code> when the constraints specified
@@ -97,7 +97,7 @@ declare namespace javax {
                      * @return true when MIME context is a XOP Document.
                      */
                     // @ts-ignore
-                    isXOPPackage(): boolean
+                    public isXOPPackage(): boolean
                 }
             }
         }

@@ -51,7 +51,7 @@ declare namespace javax {
                  *  respectively.
                  */
                 // @ts-ignore
-                constructor(className: string, description: string, openAttributes: javax.management.openmbean.OpenMBeanAttributeInfo[], openConstructors: javax.management.openmbean.OpenMBeanConstructorInfo[], openOperations: javax.management.openmbean.OpenMBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[])
+                constructor(className: java.lang.String | string, description: java.lang.String | string, openAttributes: javax.management.openmbean.OpenMBeanAttributeInfo[], openConstructors: javax.management.openmbean.OpenMBeanConstructorInfo[], openOperations: javax.management.openmbean.OpenMBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[])
                 /**
                  * <p>Constructs an {@code OpenMBeanInfoSupport} instance, which
                  * describes a class of open MBeans with the specified {@code
@@ -93,7 +93,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                constructor(className: string, description: string, openAttributes: javax.management.openmbean.OpenMBeanAttributeInfo[], openConstructors: javax.management.openmbean.OpenMBeanConstructorInfo[], openOperations: javax.management.openmbean.OpenMBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[], descriptor: javax.management.Descriptor)
+                constructor(className: java.lang.String | string, description: java.lang.String | string, openAttributes: javax.management.openmbean.OpenMBeanAttributeInfo[], openConstructors: javax.management.openmbean.OpenMBeanConstructorInfo[], openOperations: javax.management.openmbean.OpenMBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[], descriptor: javax.management.Descriptor)
                 /**
                  * <p>Compares the specified {@code obj} parameter with this
                  * {@code OpenMBeanInfoSupport} instance for equality.</p>
@@ -116,7 +116,7 @@ declare namespace javax {
                  *  {@code OpenMBeanInfoSupport} instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns the hash code value for this {@code
                  * OpenMBeanInfoSupport} instance.</p>
@@ -145,7 +145,7 @@ declare namespace javax {
                  *  OpenMBeanInfoSupport} instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * <p>Returns a string representation of this {@code
                  * OpenMBeanInfoSupport} instance.</p>
@@ -162,7 +162,7 @@ declare namespace javax {
                  *  OpenMBeanInfoSupport} instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -32,52 +32,52 @@ declare namespace javax {
                  * An empty attribute set.
                  */
                 // @ts-ignore
-                readonly EMPTY: javax.swing.text.AttributeSet
+                public static readonly EMPTY: javax.swing.text.AttributeSet
                 /**
                  * Checks whether the set of attributes is empty.
                  * @return true if the set is empty else false
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Gets a count of the number of attributes.
                  * @return the count
                  */
                 // @ts-ignore
-                getAttributeCount(): int
+                public getAttributeCount(): number /*int*/
                 /**
                  * Tells whether a given attribute is defined.
                  * @param attrName the attribute name
                  * @return true if the attribute is defined
                  */
                 // @ts-ignore
-                isDefined(attrName: any): boolean
+                public isDefined(attrName: java.lang.Object | any): boolean
                 /**
                  * Compares two attribute sets.
                  * @param attr the second attribute set
                  * @return true if the sets are equal, false otherwise
                  */
                 // @ts-ignore
-                isEqual(attr: javax.swing.text.AttributeSet): boolean
+                public isEqual(attr: javax.swing.text.AttributeSet): boolean
                 /**
                  * Makes a copy of the attributes.
                  * @return the copy
                  */
                 // @ts-ignore
-                copyAttributes(): javax.swing.text.AttributeSet
+                public copyAttributes(): javax.swing.text.AttributeSet
                 /**
                  * Gets the names of the attributes in the set.
                  * @return the names as an <code>Enumeration</code>
                  */
                 // @ts-ignore
-                getAttributeNames(): java.util.Enumeration<?>
+                public getAttributeNames(): java.util.Enumeration<any>
                 /**
                  * Gets the value of an attribute.
                  * @param name the attribute name
                  * @return the value
                  */
                 // @ts-ignore
-                getAttribute(name: any): java.lang.Object
+                public getAttribute(name: java.lang.Object | any): any
                 /**
                  * Checks whether the attribute list contains a
                  * specified attribute name/value pair.
@@ -86,7 +86,7 @@ declare namespace javax {
                  * @return true if the name/value pair is in the list
                  */
                 // @ts-ignore
-                containsAttribute(name: any, value: any): boolean
+                public containsAttribute(name: java.lang.Object | any, value: java.lang.Object | any): boolean
                 /**
                  * Checks whether the attribute list contains all the
                  * specified name/value pairs.
@@ -94,38 +94,38 @@ declare namespace javax {
                  * @return true if the list contains all the name/value pairs
                  */
                 // @ts-ignore
-                containsAttributes(attributes: javax.swing.text.AttributeSet): boolean
+                public containsAttributes(attributes: javax.swing.text.AttributeSet): boolean
                 /**
                  * Adds an attribute to the list.
                  * @param name the attribute name
                  * @param value the attribute value
                  */
                 // @ts-ignore
-                addAttribute(name: any, value: any): void
+                public addAttribute(name: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Adds a set of attributes to the list.
                  * @param attributes the set of attributes to add
                  */
                 // @ts-ignore
-                addAttributes(attributes: javax.swing.text.AttributeSet): void
+                public addAttributes(attributes: javax.swing.text.AttributeSet): void
                 /**
                  * Removes an attribute from the list.
                  * @param name the attribute name
                  */
                 // @ts-ignore
-                removeAttribute(name: any): void
+                public removeAttribute(name: java.lang.Object | any): void
                 /**
                  * Removes a set of attributes from the list.
                  * @param names the set of names to remove
                  */
                 // @ts-ignore
-                removeAttributes(names: java.util.Enumeration<any>): void
+                public removeAttributes(names: java.util.Enumeration<any>): void
                 /**
                  * Removes a set of attributes from the list.
                  * @param attributes the set of attributes to remove
                  */
                 // @ts-ignore
-                removeAttributes(attributes: javax.swing.text.AttributeSet): void
+                public removeAttributes(attributes: javax.swing.text.AttributeSet): void
                 /**
                  * Gets the resolving parent.  This is the set
                  * of attributes to resolve through if an attribute
@@ -135,25 +135,25 @@ declare namespace javax {
                  * @return the parent
                  */
                 // @ts-ignore
-                getResolveParent(): javax.swing.text.AttributeSet
+                public getResolveParent(): javax.swing.text.AttributeSet
                 /**
                  * Sets the resolving parent.
                  * @param parent the parent
                  */
                 // @ts-ignore
-                setResolveParent(parent: javax.swing.text.AttributeSet): void
+                public setResolveParent(parent: javax.swing.text.AttributeSet): void
                 /**
                  * Clones a set of attributes.
                  * @return the new set of attributes
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a hashcode for this set of attributes.
                  * @return a hashcode value for this set of attributes.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares this object to the specified object.
                  * The result is <code>true</code> if the object is an equivalent
@@ -163,13 +163,13 @@ declare namespace javax {
                  *             <code>false</code> otherwise
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Converts the attribute set to a String.
                  * @return the string
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

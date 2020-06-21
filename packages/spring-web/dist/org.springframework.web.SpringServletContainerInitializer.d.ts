@@ -101,7 +101,7 @@ declare namespace org {
                  * @see AnnotationAwareOrderComparator
                  */
                 // @ts-ignore
-                onStartup(webAppInitializerClasses: Array<java.lang.Class<any>>, servletContext: ServletContext): void
+                public onStartup(webAppInitializerClasses: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>, servletContext: ServletContext): void
             }
         }
     }

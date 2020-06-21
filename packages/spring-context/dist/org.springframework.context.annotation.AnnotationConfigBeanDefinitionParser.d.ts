@@ -15,7 +15,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    parse(element: org.w3c.dom.Element, parserContext: ParserContext): BeanDefinition
+                    public parse(element: org.w3c.dom.Element, parserContext: ParserContext): BeanDefinition
                 }
             }
         }

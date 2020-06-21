@@ -1,6 +1,6 @@
 {
     "name": "@javatypes/spring-amqp",
-    "version": "2.1.15",
+    "version": "2.1.15.RELEASE",
     "description": "java spring-amqp types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",

@@ -14,34 +14,34 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class AbstractComponentDefinition extends java.lang.Object implements org.springframework.beans.factory.parsing.ComponentDefinition {
+                    abstract class AbstractComponentDefinition extends java.lang.Object implements org.springframework.beans.factory.parsing.ComponentDefinition {
                         // @ts-ignore
                         constructor()
                         /**
                          * Delegates to {@link #getName}.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                         /**
                          * Returns an empty array.
                          */
                         // @ts-ignore
-                        getBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
+                        public getBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
                         /**
                          * Returns an empty array.
                          */
                         // @ts-ignore
-                        getInnerBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
+                        public getInnerBeanDefinitions(): org.springframework.beans.factory.config.BeanDefinition[]
                         /**
                          * Returns an empty array.
                          */
                         // @ts-ignore
-                        getBeanReferences(): org.springframework.beans.factory.config.BeanReference[]
+                        public getBeanReferences(): org.springframework.beans.factory.config.BeanReference[]
                         /**
                          * Delegates to {@link #getDescription}.
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

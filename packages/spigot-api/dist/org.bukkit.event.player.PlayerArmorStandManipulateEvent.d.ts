@@ -19,7 +19,7 @@ declare namespace org {
                      * @return the item held by the player.
                      */
                     // @ts-ignore
-                    getPlayerItem(): org.bukkit.inventory.ItemStack
+                    public getPlayerItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Returns the item held by the armor stand.
                      * If this Item is null and the player's Item is also null, there will be no transaction between the player and the armor stand.
@@ -30,19 +30,19 @@ declare namespace org {
                      * @return the item held by the armor stand.
                      */
                     // @ts-ignore
-                    getArmorStandItem(): org.bukkit.inventory.ItemStack
+                    public getArmorStandItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Returns the raw item slot of the armor stand in this event.
                      * @return the index of the item obtained or placed of the armor stand.
                      */
                     // @ts-ignore
-                    getSlot(): org.bukkit.inventory.EquipmentSlot
+                    public getSlot(): org.bukkit.inventory.EquipmentSlot
                     // @ts-ignore
-                    getRightClicked(): org.bukkit.entity.ArmorStand
+                    public getRightClicked(): org.bukkit.entity.ArmorStand
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

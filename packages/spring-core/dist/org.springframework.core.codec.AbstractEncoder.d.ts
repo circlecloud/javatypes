@@ -10,7 +10,7 @@ declare namespace org {
                  * @param <T> the element type
                  */
                 // @ts-ignore
-                class AbstractEncoder<T> extends java.lang.Object implements org.springframework.core.codec.Encoder<T> {
+                abstract class AbstractEncoder<T> extends java.lang.Object implements org.springframework.core.codec.Encoder<T> {
                     // @ts-ignore
                     constructor(...supportedMimeTypes: org.springframework.util.MimeType[])
                     // @ts-ignore
@@ -21,17 +21,17 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    setLogger(logger: Log): void
+                    public setLogger(logger: Log): void
                     /**
                      * Return the currently configured Logger.
                      * @since 5.1
                      */
                     // @ts-ignore
-                    getLogger(): Log
+                    public getLogger(): Log
                     // @ts-ignore
-                    getEncodableMimeTypes(): java.util.List<org.springframework.util.MimeType>
+                    public getEncodableMimeTypes(): Array<org.springframework.util.MimeType>
                     // @ts-ignore
-                    canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                 }
             }
         }

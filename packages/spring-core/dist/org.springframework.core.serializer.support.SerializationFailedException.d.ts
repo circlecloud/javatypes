@@ -19,7 +19,7 @@ declare namespace org {
                          * @param message the detail message
                          */
                         // @ts-ignore
-                        constructor(message: string)
+                        constructor(message: java.lang.String | string)
                         /**
                          * Construct a {@code SerializationException} with the specified detail message
                          * and nested exception.
@@ -27,7 +27,7 @@ declare namespace org {
                          * @param cause the nested exception
                          */
                         // @ts-ignore
-                        constructor(message: string, cause: Error)
+                        constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                     }
                 }
             }

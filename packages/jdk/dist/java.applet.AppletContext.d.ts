@@ -43,7 +43,7 @@ declare namespace java {
              *           not found.
              */
             // @ts-ignore
-            getApplet(name: string): java.applet.Applet
+            getApplet(name: java.lang.String | string): java.applet.Applet
             /**
              * Finds all the applets in the document represented by this applet
              * context.
@@ -92,7 +92,7 @@ declare namespace java {
              *                    the page.
              */
             // @ts-ignore
-            showDocument(url: java.net.URL, target: string): void
+            showDocument(url: java.net.URL, target: java.lang.String | string): void
             /**
              * Requests that the argument string be displayed in the
              * "status window". Many browsers and applet viewers
@@ -101,7 +101,7 @@ declare namespace java {
              * @param status   a string to display in the status window.
              */
             // @ts-ignore
-            showStatus(status: string): void
+            showStatus(status: java.lang.String | string): void
             /**
              * Associates the specified stream with the specified key in this
              * applet context. If the applet context previously contained a mapping
@@ -121,7 +121,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setStream(key: string, stream: java.io.InputStream): void
+            setStream(key: java.lang.String | string, stream: java.io.InputStream): void
             /**
              * Returns the stream to which specified key is associated within this
              * applet context. Returns <tt>null</tt> if the applet context contains
@@ -136,7 +136,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getStream(key: string): java.io.InputStream
+            getStream(key: java.lang.String | string): java.io.InputStream
             /**
              * Finds all the keys of the streams in this applet context.
              * <p>
@@ -149,7 +149,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getStreamKeys(): java.util.Iterator<java.lang.String>
+            getStreamKeys(): java.util.Iterator<java.lang.String | string>
         }
     }
 }

@@ -45,7 +45,7 @@ declare namespace java {
                  * @see FileSystem#getPath
                  */
                 // @ts-ignore
-                get(first: string, ...more: string[]): java.nio.file.Path
+                public static get(first: java.lang.String | string, ...more: java.lang.String[] | string[]): java.nio.file.Path
                 /**
                  * Converts the given URI to a {@link Path} object.
                  * <p> This method iterates over the {@link FileSystemProvider#installedProviders()
@@ -85,7 +85,7 @@ declare namespace java {
                  *           permission to access the file system
                  */
                 // @ts-ignore
-                get(uri: java.net.URI): java.nio.file.Path
+                public static get(uri: java.net.URI): java.nio.file.Path
             }
         }
     }

@@ -42,7 +42,7 @@ declare namespace org {
                  * @return the bounding box
                  */
                 // @ts-ignore
-                of(corner1: org.bukkit.util.Vector, corner2: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
+                public static of(corner1: org.bukkit.util.Vector, corner2: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
                 /**
                  * Creates a new bounding box using the coordinates of the given locations
                  * as corners.
@@ -51,7 +51,7 @@ declare namespace org {
                  * @return the bounding box
                  */
                 // @ts-ignore
-                of(corner1: org.bukkit.Location, corner2: org.bukkit.Location): org.bukkit.util.BoundingBox
+                public static of(corner1: org.bukkit.Location, corner2: org.bukkit.Location): org.bukkit.util.BoundingBox
                 /**
                  * Creates a new bounding box using the coordinates of the given blocks as
                  * corners.
@@ -62,14 +62,14 @@ declare namespace org {
                  * @return the bounding box
                  */
                 // @ts-ignore
-                of(corner1: org.bukkit.block.Block, corner2: org.bukkit.block.Block): org.bukkit.util.BoundingBox
+                public static of(corner1: org.bukkit.block.Block, corner2: org.bukkit.block.Block): org.bukkit.util.BoundingBox
                 /**
                  * Creates a new 1x1x1 sized bounding box containing the given block.
                  * @param block the block
                  * @return the bounding box
                  */
                 // @ts-ignore
-                of(block: org.bukkit.block.Block): org.bukkit.util.BoundingBox
+                public static of(block: org.bukkit.block.Block): org.bukkit.util.BoundingBox
                 /**
                  * Creates a new bounding box using the given center and extents.
                  * @param center the center
@@ -79,7 +79,7 @@ declare namespace org {
                  * @return the bounding box
                  */
                 // @ts-ignore
-                of(center: org.bukkit.util.Vector, x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.BoundingBox
+                public static of(center: org.bukkit.util.Vector, x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Creates a new bounding box using the given center and extents.
                  * @param center the center
@@ -89,7 +89,7 @@ declare namespace org {
                  * @return the bounding box
                  */
                 // @ts-ignore
-                of(center: org.bukkit.Location, x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.BoundingBox
+                public static of(center: org.bukkit.Location, x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Resizes this bounding box.
                  * @param x1 the first corner's x value
@@ -101,110 +101,110 @@ declare namespace org {
                  * @return this bounding box (resized)
                  */
                 // @ts-ignore
-                resize(x1: number /*double*/, y1: number /*double*/, z1: number /*double*/, x2: number /*double*/, y2: number /*double*/, z2: number /*double*/): org.bukkit.util.BoundingBox
+                public resize(x1: number /*double*/, y1: number /*double*/, z1: number /*double*/, x2: number /*double*/, y2: number /*double*/, z2: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Gets the minimum x value.
                  * @return the minimum x value
                  */
                 // @ts-ignore
-                getMinX(): double
+                public getMinX(): number /*double*/
                 /**
                  * Gets the minimum y value.
                  * @return the minimum y value
                  */
                 // @ts-ignore
-                getMinY(): double
+                public getMinY(): number /*double*/
                 /**
                  * Gets the minimum z value.
                  * @return the minimum z value
                  */
                 // @ts-ignore
-                getMinZ(): double
+                public getMinZ(): number /*double*/
                 /**
                  * Gets the minimum corner as vector.
                  * @return the minimum corner as vector
                  */
                 // @ts-ignore
-                getMin(): org.bukkit.util.Vector
+                public getMin(): org.bukkit.util.Vector
                 /**
                  * Gets the maximum x value.
                  * @return the maximum x value
                  */
                 // @ts-ignore
-                getMaxX(): double
+                public getMaxX(): number /*double*/
                 /**
                  * Gets the maximum y value.
                  * @return the maximum y value
                  */
                 // @ts-ignore
-                getMaxY(): double
+                public getMaxY(): number /*double*/
                 /**
                  * Gets the maximum z value.
                  * @return the maximum z value
                  */
                 // @ts-ignore
-                getMaxZ(): double
+                public getMaxZ(): number /*double*/
                 /**
                  * Gets the maximum corner as vector.
                  * @return the maximum corner vector
                  */
                 // @ts-ignore
-                getMax(): org.bukkit.util.Vector
+                public getMax(): org.bukkit.util.Vector
                 /**
                  * Gets the width of the bounding box in the x direction.
                  * @return the width in the x direction
                  */
                 // @ts-ignore
-                getWidthX(): double
+                public getWidthX(): number /*double*/
                 /**
                  * Gets the width of the bounding box in the z direction.
                  * @return the width in the z direction
                  */
                 // @ts-ignore
-                getWidthZ(): double
+                public getWidthZ(): number /*double*/
                 /**
                  * Gets the height of the bounding box.
                  * @return the height
                  */
                 // @ts-ignore
-                getHeight(): double
+                public getHeight(): number /*double*/
                 /**
                  * Gets the volume of the bounding box.
                  * @return the volume
                  */
                 // @ts-ignore
-                getVolume(): double
+                public getVolume(): number /*double*/
                 /**
                  * Gets the x coordinate of the center of the bounding box.
                  * @return the center's x coordinate
                  */
                 // @ts-ignore
-                getCenterX(): double
+                public getCenterX(): number /*double*/
                 /**
                  * Gets the y coordinate of the center of the bounding box.
                  * @return the center's y coordinate
                  */
                 // @ts-ignore
-                getCenterY(): double
+                public getCenterY(): number /*double*/
                 /**
                  * Gets the z coordinate of the center of the bounding box.
                  * @return the center's z coordinate
                  */
                 // @ts-ignore
-                getCenterZ(): double
+                public getCenterZ(): number /*double*/
                 /**
                  * Gets the center of the bounding box.
                  * @return the center
                  */
                 // @ts-ignore
-                getCenter(): org.bukkit.util.Vector
+                public getCenter(): org.bukkit.util.Vector
                 /**
                  * Copies another bounding box.
                  * @param other the other bounding box
                  * @return this bounding box
                  */
                 // @ts-ignore
-                copy(other: org.bukkit.util.BoundingBox): org.bukkit.util.BoundingBox
+                public copy(other: org.bukkit.util.BoundingBox): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box by the given values in the corresponding
                  * directions.
@@ -221,7 +221,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(negativeX: number /*double*/, negativeY: number /*double*/, negativeZ: number /*double*/, positiveX: number /*double*/, positiveY: number /*double*/, positiveZ: number /*double*/): org.bukkit.util.BoundingBox
+                public expand(negativeX: number /*double*/, negativeY: number /*double*/, negativeZ: number /*double*/, positiveX: number /*double*/, positiveY: number /*double*/, positiveZ: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box uniformly by the given values in both positive
                  * and negative directions.
@@ -237,7 +237,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.BoundingBox
+                public expand(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box uniformly by the given values in both positive
                  * and negative directions.
@@ -248,7 +248,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(expansion: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
+                public expand(expansion: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box uniformly by the given value in all directions.
                  * <p>
@@ -258,7 +258,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(expansion: number /*double*/): org.bukkit.util.BoundingBox
+                public expand(expansion: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box in the specified direction.
                  * <p>
@@ -272,7 +272,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(dirX: number /*double*/, dirY: number /*double*/, dirZ: number /*double*/, expansion: number /*double*/): org.bukkit.util.BoundingBox
+                public expand(dirX: number /*double*/, dirY: number /*double*/, dirZ: number /*double*/, expansion: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box in the specified direction.
                  * <p>
@@ -284,7 +284,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(direction: org.bukkit.util.Vector, expansion: number /*double*/): org.bukkit.util.BoundingBox
+                public expand(direction: org.bukkit.util.Vector, expansion: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box in the direction specified by the given block
                  * face.
@@ -296,7 +296,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expand(blockFace: org.bukkit.block.BlockFace, expansion: number /*double*/): org.bukkit.util.BoundingBox
+                public expand(blockFace: org.bukkit.block.BlockFace, expansion: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box in the specified direction.
                  * <p>
@@ -310,7 +310,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expandDirectional(dirX: number /*double*/, dirY: number /*double*/, dirZ: number /*double*/): org.bukkit.util.BoundingBox
+                public expandDirectional(dirX: number /*double*/, dirY: number /*double*/, dirZ: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box in the specified direction.
                  * <p>
@@ -321,7 +321,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                expandDirectional(direction: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
+                public expandDirectional(direction: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box to contain (or border) the specified position.
                  * @param posX the x position value
@@ -331,7 +331,7 @@ declare namespace org {
                  * @see #contains(double, double, double)
                  */
                 // @ts-ignore
-                union(posX: number /*double*/, posY: number /*double*/, posZ: number /*double*/): org.bukkit.util.BoundingBox
+                public union(posX: number /*double*/, posY: number /*double*/, posZ: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box to contain (or border) the specified position.
                  * @param position the position
@@ -339,7 +339,7 @@ declare namespace org {
                  * @see #contains(double, double, double)
                  */
                 // @ts-ignore
-                union(position: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
+                public union(position: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box to contain (or border) the specified position.
                  * @param position the position
@@ -347,7 +347,7 @@ declare namespace org {
                  * @see #contains(double, double, double)
                  */
                 // @ts-ignore
-                union(position: org.bukkit.Location): org.bukkit.util.BoundingBox
+                public union(position: org.bukkit.Location): org.bukkit.util.BoundingBox
                 /**
                  * Expands this bounding box to contain both this and the given bounding
                  * box.
@@ -355,7 +355,7 @@ declare namespace org {
                  * @return this bounding box (now expanded)
                  */
                 // @ts-ignore
-                union(other: org.bukkit.util.BoundingBox): org.bukkit.util.BoundingBox
+                public union(other: org.bukkit.util.BoundingBox): org.bukkit.util.BoundingBox
                 /**
                  * Resizes this bounding box to represent the intersection of this and the
                  * given bounding box.
@@ -364,7 +364,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the bounding boxes don't overlap
                  */
                 // @ts-ignore
-                intersection(other: org.bukkit.util.BoundingBox): org.bukkit.util.BoundingBox
+                public intersection(other: org.bukkit.util.BoundingBox): org.bukkit.util.BoundingBox
                 /**
                  * Shifts this bounding box by the given amounts.
                  * @param shiftX the shift in x direction
@@ -373,21 +373,21 @@ declare namespace org {
                  * @return this bounding box (now shifted)
                  */
                 // @ts-ignore
-                shift(shiftX: number /*double*/, shiftY: number /*double*/, shiftZ: number /*double*/): org.bukkit.util.BoundingBox
+                public shift(shiftX: number /*double*/, shiftY: number /*double*/, shiftZ: number /*double*/): org.bukkit.util.BoundingBox
                 /**
                  * Shifts this bounding box by the given amounts.
                  * @param shift the shift
                  * @return this bounding box (now shifted)
                  */
                 // @ts-ignore
-                shift(shift: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
+                public shift(shift: org.bukkit.util.Vector): org.bukkit.util.BoundingBox
                 /**
                  * Shifts this bounding box by the given amounts.
                  * @param shift the shift
                  * @return this bounding box (now shifted)
                  */
                 // @ts-ignore
-                shift(shift: org.bukkit.Location): org.bukkit.util.BoundingBox
+                public shift(shift: org.bukkit.Location): org.bukkit.util.BoundingBox
                 /**
                  * Checks if this bounding box overlaps with the given bounding box.
                  * <p>
@@ -397,7 +397,7 @@ declare namespace org {
                  * @return <code>true</code> if overlapping
                  */
                 // @ts-ignore
-                overlaps(other: org.bukkit.util.BoundingBox): boolean
+                public overlaps(other: org.bukkit.util.BoundingBox): boolean
                 /**
                  * Checks if this bounding box overlaps with the bounding box that is
                  * defined by the given corners.
@@ -409,7 +409,7 @@ declare namespace org {
                  * @return <code>true</code> if overlapping
                  */
                 // @ts-ignore
-                overlaps(min: org.bukkit.util.Vector, max: org.bukkit.util.Vector): boolean
+                public overlaps(min: org.bukkit.util.Vector, max: org.bukkit.util.Vector): boolean
                 /**
                  * Checks if this bounding box contains the specified position.
                  * <p>
@@ -424,7 +424,7 @@ declare namespace org {
                  * @return <code>true</code> if the bounding box contains the position
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, z: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, z: number /*double*/): boolean
                 /**
                  * Checks if this bounding box contains the specified position.
                  * <p>
@@ -437,7 +437,7 @@ declare namespace org {
                  * @return <code>true</code> if the bounding box contains the position
                  */
                 // @ts-ignore
-                contains(position: org.bukkit.util.Vector): boolean
+                public contains(position: org.bukkit.util.Vector): boolean
                 /**
                  * Checks if this bounding box fully contains the given bounding box.
                  * @param other the other bounding box
@@ -445,7 +445,7 @@ declare namespace org {
                  *  box
                  */
                 // @ts-ignore
-                contains(other: org.bukkit.util.BoundingBox): boolean
+                public contains(other: org.bukkit.util.BoundingBox): boolean
                 /**
                  * Checks if this bounding box fully contains the bounding box that is
                  * defined by the given corners.
@@ -455,7 +455,7 @@ declare namespace org {
                  *      bounding box
                  */
                 // @ts-ignore
-                contains(min: org.bukkit.util.Vector, max: org.bukkit.util.Vector): boolean
+                public contains(min: org.bukkit.util.Vector, max: org.bukkit.util.Vector): boolean
                 /**
                  * Calculates the intersection of this bounding box with the specified line
                  * segment.
@@ -468,23 +468,23 @@ declare namespace org {
                  * @return the ray trace hit result, or <code>null</code> if there is no hit
                  */
                 // @ts-ignore
-                rayTrace(start: org.bukkit.util.Vector, direction: org.bukkit.util.Vector, maxDistance: number /*double*/): org.bukkit.util.RayTraceResult
+                public rayTrace(start: org.bukkit.util.Vector, direction: org.bukkit.util.Vector, maxDistance: number /*double*/): org.bukkit.util.RayTraceResult
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Creates a copy of this bounding box.
                  * @return the cloned bounding box
                  */
                 // @ts-ignore
-                clone(): org.bukkit.util.BoundingBox
+                public clone(): org.bukkit.util.BoundingBox
                 // @ts-ignore
-                serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 // @ts-ignore
-                deserialize(args: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.util.BoundingBox
+                public static deserialize(args: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.util.BoundingBox
             }
         }
     }

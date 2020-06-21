@@ -75,7 +75,7 @@ declare namespace javax {
                      * @see #isFormatSupported(AudioFormat)
                      */
                     // @ts-ignore
-                    getFormats(): javax.sound.sampled.AudioFormat[]
+                    public getFormats(): javax.sound.sampled.AudioFormat[]
                     /**
                      * Indicates whether this data line supports a particular audio format.
                      * The default implementation of this method simply returns <code>true</code> if
@@ -86,19 +86,19 @@ declare namespace javax {
                      * @see AudioFormat#matches
                      */
                     // @ts-ignore
-                    isFormatSupported(format: javax.sound.sampled.AudioFormat): boolean
+                    public isFormatSupported(format: javax.sound.sampled.AudioFormat): boolean
                     /**
                      * Obtains the minimum buffer size supported by the data line.
                      * @return minimum buffer size in bytes, or <code>AudioSystem.NOT_SPECIFIED</code>
                      */
                     // @ts-ignore
-                    getMinBufferSize(): int
+                    public getMinBufferSize(): number /*int*/
                     /**
                      * Obtains the maximum buffer size supported by the data line.
                      * @return maximum buffer size in bytes, or <code>AudioSystem.NOT_SPECIFIED</code>
                      */
                     // @ts-ignore
-                    getMaxBufferSize(): int
+                    public getMaxBufferSize(): number /*int*/
                     /**
                      * Determines whether the specified info object matches this one.
                      * To match, the superclass match requirements must be met.  In
@@ -110,13 +110,13 @@ declare namespace javax {
                      *  otherwise <code>false</code>.
                      */
                     // @ts-ignore
-                    matches(info: javax.sound.sampled.Line.Info): boolean
+                    public matches(info: javax.sound.sampled.Line.Info): boolean
                     /**
                      * Obtains a textual description of the data line info.
                      * @return a string description
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

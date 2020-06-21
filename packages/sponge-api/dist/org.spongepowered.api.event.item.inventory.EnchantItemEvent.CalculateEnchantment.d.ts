@@ -24,21 +24,21 @@ declare namespace org {
                                  * @return the level requirement for the option
                                  */
                                 // @ts-ignore
-                                getLevelRequirement(): int
+                                getLevelRequirement(): number /*int*/
                                 /**
                                  * Returns the original list of enchantments to apply to the item.
                                  * <p>The first item in the list is used for display when previewing the enchantments.</p>
                                  * @return the list of enchantments
                                  */
                                 // @ts-ignore
-                                getOriginalEnchantments(): java.util.List<org.spongepowered.api.item.enchantment.Enchantment>
+                                getOriginalEnchantments(): Array<org.spongepowered.api.item.enchantment.Enchantment>
                                 /**
                                  * Returns the list of enchantments to apply to the item.
                                  * <p>The first item in the list is used for display when previewing the enchantments.</p>
                                  * @return the list of enchantments
                                  */
                                 // @ts-ignore
-                                getEnchantments(): java.util.List<org.spongepowered.api.item.enchantment.Enchantment>
+                                getEnchantments(): Array<org.spongepowered.api.item.enchantment.Enchantment>
                                 /**
                                  * Sets the list of enchantments to apply to the item.
                                  * <p>The first item in the list is used for display when previewing the enchantments.</p>
@@ -48,7 +48,7 @@ declare namespace org {
                                  * @param enchantments the new list of enchantments
                                  */
                                 // @ts-ignore
-                                setEnchantments(enchantments: Array<org.spongepowered.api.item.enchantment.Enchantment>): void
+                                setEnchantments(enchantments: java.util.List<org.spongepowered.api.item.enchantment.Enchantment> | Array<org.spongepowered.api.item.enchantment.Enchantment>): void
                             }
                         }
                     }

@@ -25,28 +25,28 @@ declare namespace java {
                  * @see TextComponent#getText()
                  */
                 // @ts-ignore
-                getText(): java.lang.String
+                getText(): string
                 /**
                  * Sets the content for the text component.
                  * @param text the content to set
                  * @see TextComponent#setText(String)
                  */
                 // @ts-ignore
-                setText(text: string): void
+                setText(text: java.lang.String | string): void
                 /**
                  * Returns the start index of the current selection.
                  * @return the start index of the current selection
                  * @see TextComponent#getSelectionStart()
                  */
                 // @ts-ignore
-                getSelectionStart(): int
+                getSelectionStart(): number /*int*/
                 /**
                  * Returns the end index of the current selection.
                  * @return the end index of the current selection
                  * @see TextComponent#getSelectionEnd()
                  */
                 // @ts-ignore
-                getSelectionEnd(): int
+                getSelectionEnd(): number /*int*/
                 /**
                  * Selects an area of the text component.
                  * @param selStart the start index of the new selection
@@ -68,7 +68,7 @@ declare namespace java {
                  * @see TextComponent#getCaretPosition()
                  */
                 // @ts-ignore
-                getCaretPosition(): int
+                getCaretPosition(): number /*int*/
                 /**
                  * Returns the input method requests.
                  * @return the input method requests

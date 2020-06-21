@@ -22,7 +22,7 @@ declare namespace java {
              * @param msg the detail message.
              */
             // @ts-ignore
-            constructor(msg: string)
+            constructor(msg: java.lang.String | string)
             /**
              * Creates a {@code NoSuchAlgorithmException} with the specified
              * detail message and cause.
@@ -34,7 +34,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Creates a {@code NoSuchAlgorithmException} with the specified cause
              * and a detail message of {@code (cause==null ? null : cause.toString())}
@@ -46,7 +46,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
         }
     }
 }

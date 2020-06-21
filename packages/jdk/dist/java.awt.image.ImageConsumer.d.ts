@@ -19,20 +19,20 @@ declare namespace java {
                  * @see #setHints
                  */
                 // @ts-ignore
-                
+                readonly RANDOMPIXELORDER: number /*int*/
                 /**
                  * The pixels will be delivered in top-down, left-to-right order.
                  * @see #setHints
                  */
                 // @ts-ignore
-                
+                readonly TOPDOWNLEFTRIGHT: number /*int*/
                 /**
                  * The pixels will be delivered in (multiples of) complete scanlines
                  * at a time.
                  * @see #setHints
                  */
                 // @ts-ignore
-                
+                readonly COMPLETESCANLINES: number /*int*/
                 /**
                  * The pixels will be delivered in a single pass.  Each pixel will
                  * appear in only one call to any of the setPixels methods.  An
@@ -42,7 +42,7 @@ declare namespace java {
                  * @see #setHints
                  */
                 // @ts-ignore
-                
+                readonly SINGLEPASS: number /*int*/
                 /**
                  * The image contain a single static image.  The pixels will be defined
                  * in calls to the setPixels methods and then the imageComplete method
@@ -56,33 +56,33 @@ declare namespace java {
                  * @see #imageComplete
                  */
                 // @ts-ignore
-                
+                readonly SINGLEFRAME: number /*int*/
                 /**
                  * An error was encountered while producing the image.
                  * @see #imageComplete
                  */
                 // @ts-ignore
-                
+                readonly IMAGEERROR: number /*int*/
                 /**
                  * One frame of the image is complete but there are more frames
                  * to be delivered.
                  * @see #imageComplete
                  */
                 // @ts-ignore
-                
+                readonly SINGLEFRAMEDONE: number /*int*/
                 /**
                  * The image is complete and there are no more pixels or frames
                  * to be delivered.
                  * @see #imageComplete
                  */
                 // @ts-ignore
-                
+                readonly STATICIMAGEDONE: number /*int*/
                 /**
                  * The image creation process was deliberately aborted.
                  * @see #imageComplete
                  */
                 // @ts-ignore
-                
+                readonly IMAGEABORTED: number /*int*/
                 /**
                  * The dimensions of the source image are reported using the
                  * setDimensions method call.
@@ -97,7 +97,7 @@ declare namespace java {
                  *         image
                  */
                 // @ts-ignore
-                setProperties(props: java.util.Hashtable<any, ?>): void
+                setProperties(props: java.util.Hashtable<any, any>): void
                 /**
                  * Sets the ColorModel object used for the majority of
                  * the pixels reported using the setPixels method

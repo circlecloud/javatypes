@@ -16,13 +16,13 @@ declare namespace org {
                              * @return The width of this ItemGrid.
                              */
                             // @ts-ignore
-                            getColumns(): int
+                            getColumns(): number /*int*/
                             /**
                              * Gets the number of rows in the inventory.
                              * @return The height of this ItemGrid.
                              */
                             // @ts-ignore
-                            getRows(): int
+                            getRows(): number /*int*/
                             /**
                              * Returns the dimensions of this GridInventory as a {@link Vector2i}.
                              * @return The dimensions of this GridInventory.

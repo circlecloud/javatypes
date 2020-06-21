@@ -88,14 +88,14 @@ declare namespace java {
                  *          be converted to the type required by the requested interface
                  */
                 // @ts-ignore
-                asInterfaceInstance<T>(intfc: java.lang.Class<T>, target: java.lang.invoke.MethodHandle): T
+                public static asInterfaceInstance<T>(intfc: java.lang.Class<T>, target: java.lang.invoke.MethodHandle): T
                 /**
                  * Determines if the given object was produced by a call to {@link #asInterfaceInstance asInterfaceInstance}.
                  * @param x any reference
                  * @return true if the reference is not null and points to an object produced by {#code asInterfaceInstance}
                  */
                 // @ts-ignore
-                isWrapperInstance(x: any): boolean
+                public static isWrapperInstance(x: java.lang.Object | any): boolean
                 /**
                  * Produces or recovers a target method handle which is behaviorally
                  * equivalent to the unique method of this wrapper instance.
@@ -106,7 +106,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the reference x is not to a wrapper instance
                  */
                 // @ts-ignore
-                wrapperInstanceTarget(x: any): java.lang.invoke.MethodHandle
+                public static wrapperInstanceTarget(x: java.lang.Object | any): java.lang.invoke.MethodHandle
                 /**
                  * Recovers the unique single-method interface type for which this wrapper instance was created.
                  * The object {@code x} must have been produced by a call to {@link #asInterfaceInstance asInterfaceInstance}.
@@ -116,7 +116,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the reference x is not to a wrapper instance
                  */
                 // @ts-ignore
-                wrapperInstanceType(x: any): java.lang.Class<?>
+                public static wrapperInstanceType(x: java.lang.Object | any): java.lang.Class<any>
             }
         }
     }

@@ -103,7 +103,7 @@ declare namespace java {
              * @see Integer#valueOf(String)
              */
             // @ts-ignore
-            readonly MIN_RADIX: number /*int*/
+            public static readonly MIN_RADIX: number /*int*/
             /**
              * The maximum radix available for conversion to and from strings.
              * The constant value of this field is the largest value permitted
@@ -116,329 +116,329 @@ declare namespace java {
              * @see Integer#valueOf(String)
              */
             // @ts-ignore
-            readonly MAX_RADIX: number /*int*/
+            public static readonly MAX_RADIX: number /*int*/
             /**
              * The constant value of this field is the smallest value of type
              * {@code char}, {@code '\u0000'}.
              * @since 1.0.2
              */
             // @ts-ignore
-            readonly MIN_VALUE: string
+            public static readonly MIN_VALUE: string
             /**
              * The constant value of this field is the largest value of type
              * {@code char}, {@code '\uFFFF'}.
              * @since 1.0.2
              */
             // @ts-ignore
-            readonly MAX_VALUE: string
+            public static readonly MAX_VALUE: string
             /**
              * The {@code Class} instance representing the primitive type
              * {@code char}.
              * @since 1.1
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Character>
+            public static readonly TYPE: java.lang.Class<java.lang.Character>
             /**
              * General category "Cn" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly UNASSIGNED: number /*byte*/
+            public static readonly UNASSIGNED: number /*byte*/
             /**
              * General category "Lu" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly UPPERCASE_LETTER: number /*byte*/
+            public static readonly UPPERCASE_LETTER: number /*byte*/
             /**
              * General category "Ll" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly LOWERCASE_LETTER: number /*byte*/
+            public static readonly LOWERCASE_LETTER: number /*byte*/
             /**
              * General category "Lt" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly TITLECASE_LETTER: number /*byte*/
+            public static readonly TITLECASE_LETTER: number /*byte*/
             /**
              * General category "Lm" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly MODIFIER_LETTER: number /*byte*/
+            public static readonly MODIFIER_LETTER: number /*byte*/
             /**
              * General category "Lo" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly OTHER_LETTER: number /*byte*/
+            public static readonly OTHER_LETTER: number /*byte*/
             /**
              * General category "Mn" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly NON_SPACING_MARK: number /*byte*/
+            public static readonly NON_SPACING_MARK: number /*byte*/
             /**
              * General category "Me" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly ENCLOSING_MARK: number /*byte*/
+            public static readonly ENCLOSING_MARK: number /*byte*/
             /**
              * General category "Mc" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly COMBINING_SPACING_MARK: number /*byte*/
+            public static readonly COMBINING_SPACING_MARK: number /*byte*/
             /**
              * General category "Nd" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly DECIMAL_DIGIT_NUMBER: number /*byte*/
+            public static readonly DECIMAL_DIGIT_NUMBER: number /*byte*/
             /**
              * General category "Nl" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly LETTER_NUMBER: number /*byte*/
+            public static readonly LETTER_NUMBER: number /*byte*/
             /**
              * General category "No" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly OTHER_NUMBER: number /*byte*/
+            public static readonly OTHER_NUMBER: number /*byte*/
             /**
              * General category "Zs" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly SPACE_SEPARATOR: number /*byte*/
+            public static readonly SPACE_SEPARATOR: number /*byte*/
             /**
              * General category "Zl" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly LINE_SEPARATOR: number /*byte*/
+            public static readonly LINE_SEPARATOR: number /*byte*/
             /**
              * General category "Zp" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly PARAGRAPH_SEPARATOR: number /*byte*/
+            public static readonly PARAGRAPH_SEPARATOR: number /*byte*/
             /**
              * General category "Cc" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly CONTROL: number /*byte*/
+            public static readonly CONTROL: number /*byte*/
             /**
              * General category "Cf" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly FORMAT: number /*byte*/
+            public static readonly FORMAT: number /*byte*/
             /**
              * General category "Co" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly PRIVATE_USE: number /*byte*/
+            public static readonly PRIVATE_USE: number /*byte*/
             /**
              * General category "Cs" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly SURROGATE: number /*byte*/
+            public static readonly SURROGATE: number /*byte*/
             /**
              * General category "Pd" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly DASH_PUNCTUATION: number /*byte*/
+            public static readonly DASH_PUNCTUATION: number /*byte*/
             /**
              * General category "Ps" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly START_PUNCTUATION: number /*byte*/
+            public static readonly START_PUNCTUATION: number /*byte*/
             /**
              * General category "Pe" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly END_PUNCTUATION: number /*byte*/
+            public static readonly END_PUNCTUATION: number /*byte*/
             /**
              * General category "Pc" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly CONNECTOR_PUNCTUATION: number /*byte*/
+            public static readonly CONNECTOR_PUNCTUATION: number /*byte*/
             /**
              * General category "Po" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly OTHER_PUNCTUATION: number /*byte*/
+            public static readonly OTHER_PUNCTUATION: number /*byte*/
             /**
              * General category "Sm" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly MATH_SYMBOL: number /*byte*/
+            public static readonly MATH_SYMBOL: number /*byte*/
             /**
              * General category "Sc" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly CURRENCY_SYMBOL: number /*byte*/
+            public static readonly CURRENCY_SYMBOL: number /*byte*/
             /**
              * General category "Sk" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly MODIFIER_SYMBOL: number /*byte*/
+            public static readonly MODIFIER_SYMBOL: number /*byte*/
             /**
              * General category "So" in the Unicode specification.
              * @since 1.1
              */
             // @ts-ignore
-            readonly OTHER_SYMBOL: number /*byte*/
+            public static readonly OTHER_SYMBOL: number /*byte*/
             /**
              * General category "Pi" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly INITIAL_QUOTE_PUNCTUATION: number /*byte*/
+            public static readonly INITIAL_QUOTE_PUNCTUATION: number /*byte*/
             /**
              * General category "Pf" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly FINAL_QUOTE_PUNCTUATION: number /*byte*/
+            public static readonly FINAL_QUOTE_PUNCTUATION: number /*byte*/
             /**
              * Undefined bidirectional character type. Undefined {@code char}
              * values have undefined directionality in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_UNDEFINED: number /*byte*/
+            public static readonly DIRECTIONALITY_UNDEFINED: number /*byte*/
             /**
              * Strong bidirectional character type "L" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_LEFT_TO_RIGHT: number /*byte*/
+            public static readonly DIRECTIONALITY_LEFT_TO_RIGHT: number /*byte*/
             /**
              * Strong bidirectional character type "R" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_RIGHT_TO_LEFT: number /*byte*/
+            public static readonly DIRECTIONALITY_RIGHT_TO_LEFT: number /*byte*/
             /**
              * Strong bidirectional character type "AL" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC: number /*byte*/
+            public static readonly DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC: number /*byte*/
             /**
              * Weak bidirectional character type "EN" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_EUROPEAN_NUMBER: number /*byte*/
+            public static readonly DIRECTIONALITY_EUROPEAN_NUMBER: number /*byte*/
             /**
              * Weak bidirectional character type "ES" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR: number /*byte*/
+            public static readonly DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR: number /*byte*/
             /**
              * Weak bidirectional character type "ET" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR: number /*byte*/
+            public static readonly DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR: number /*byte*/
             /**
              * Weak bidirectional character type "AN" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_ARABIC_NUMBER: number /*byte*/
+            public static readonly DIRECTIONALITY_ARABIC_NUMBER: number /*byte*/
             /**
              * Weak bidirectional character type "CS" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_COMMON_NUMBER_SEPARATOR: number /*byte*/
+            public static readonly DIRECTIONALITY_COMMON_NUMBER_SEPARATOR: number /*byte*/
             /**
              * Weak bidirectional character type "NSM" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_NONSPACING_MARK: number /*byte*/
+            public static readonly DIRECTIONALITY_NONSPACING_MARK: number /*byte*/
             /**
              * Weak bidirectional character type "BN" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_BOUNDARY_NEUTRAL: number /*byte*/
+            public static readonly DIRECTIONALITY_BOUNDARY_NEUTRAL: number /*byte*/
             /**
              * Neutral bidirectional character type "B" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_PARAGRAPH_SEPARATOR: number /*byte*/
+            public static readonly DIRECTIONALITY_PARAGRAPH_SEPARATOR: number /*byte*/
             /**
              * Neutral bidirectional character type "S" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_SEGMENT_SEPARATOR: number /*byte*/
+            public static readonly DIRECTIONALITY_SEGMENT_SEPARATOR: number /*byte*/
             /**
              * Neutral bidirectional character type "WS" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_WHITESPACE: number /*byte*/
+            public static readonly DIRECTIONALITY_WHITESPACE: number /*byte*/
             /**
              * Neutral bidirectional character type "ON" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_OTHER_NEUTRALS: number /*byte*/
+            public static readonly DIRECTIONALITY_OTHER_NEUTRALS: number /*byte*/
             /**
              * Strong bidirectional character type "LRE" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING: number /*byte*/
+            public static readonly DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING: number /*byte*/
             /**
              * Strong bidirectional character type "LRO" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE: number /*byte*/
+            public static readonly DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE: number /*byte*/
             /**
              * Strong bidirectional character type "RLE" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING: number /*byte*/
+            public static readonly DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING: number /*byte*/
             /**
              * Strong bidirectional character type "RLO" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE: number /*byte*/
+            public static readonly DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE: number /*byte*/
             /**
              * Weak bidirectional character type "PDF" in the Unicode specification.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DIRECTIONALITY_POP_DIRECTIONAL_FORMAT: number /*byte*/
+            public static readonly DIRECTIONALITY_POP_DIRECTIONAL_FORMAT: number /*byte*/
             /**
              * The minimum value of a
              * <a href="http://www.unicode.org/glossary/#high_surrogate_code_unit">
@@ -448,7 +448,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MIN_HIGH_SURROGATE: string
+            public static readonly MIN_HIGH_SURROGATE: string
             /**
              * The maximum value of a
              * <a href="http://www.unicode.org/glossary/#high_surrogate_code_unit">
@@ -458,7 +458,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MAX_HIGH_SURROGATE: string
+            public static readonly MAX_HIGH_SURROGATE: string
             /**
              * The minimum value of a
              * <a href="http://www.unicode.org/glossary/#low_surrogate_code_unit">
@@ -468,7 +468,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MIN_LOW_SURROGATE: string
+            public static readonly MIN_LOW_SURROGATE: string
             /**
              * The maximum value of a
              * <a href="http://www.unicode.org/glossary/#low_surrogate_code_unit">
@@ -478,21 +478,21 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MAX_LOW_SURROGATE: string
+            public static readonly MAX_LOW_SURROGATE: string
             /**
              * The minimum value of a Unicode surrogate code unit in the
              * UTF-16 encoding, constant {@code '\uD800'}.
              * @since 1.5
              */
             // @ts-ignore
-            readonly MIN_SURROGATE: string
+            public static readonly MIN_SURROGATE: string
             /**
              * The maximum value of a Unicode surrogate code unit in the
              * UTF-16 encoding, constant {@code '\uDFFF'}.
              * @since 1.5
              */
             // @ts-ignore
-            readonly MAX_SURROGATE: string
+            public static readonly MAX_SURROGATE: string
             /**
              * The minimum value of a
              * <a href="http://www.unicode.org/glossary/#supplementary_code_point">
@@ -500,7 +500,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MIN_SUPPLEMENTARY_CODE_POINT: number /*int*/
+            public static readonly MIN_SUPPLEMENTARY_CODE_POINT: number /*int*/
             /**
              * The minimum value of a
              * <a href="http://www.unicode.org/glossary/#code_point">
@@ -508,7 +508,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MIN_CODE_POINT: number /*int*/
+            public static readonly MIN_CODE_POINT: number /*int*/
             /**
              * The maximum value of a
              * <a href="http://www.unicode.org/glossary/#code_point">
@@ -516,21 +516,21 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly MAX_CODE_POINT: number /*int*/
+            public static readonly MAX_CODE_POINT: number /*int*/
             /**
              * The number of bits used to represent a <tt>char</tt> value in unsigned
              * binary form, constant {@code 16}.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code char} value in unsigned
              * binary form.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * Returns a <tt>Character</tt> instance representing the specified
              * <tt>char</tt> value.
@@ -547,21 +547,21 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(c: string): java.lang.Character
+            public static valueOf(c: string): java.lang.Character
             /**
              * Returns the value of this {@code Character} object.
              * @return the primitive {#code char} value represented by
              *           this object.
              */
             // @ts-ignore
-            charValue(): char
+            public charValue(): string
             /**
              * Returns a hash code for this {@code Character}; equal to the result
              * of invoking {@code charValue()}.
              * @return a hash code value for this {#code Character}
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code char} value; compatible with
              * {@code Character.hashCode()}.
@@ -570,7 +570,7 @@ declare namespace java {
              * @return a hash code value for a {#code char} value.
              */
             // @ts-ignore
-            hashCode(value: string): int
+            public static hashCode(value: string): number /*int*/
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is not
@@ -581,7 +581,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a {@code String} object representing this
              * {@code Character}'s value.  The result is a string of
@@ -591,7 +591,7 @@ declare namespace java {
              * @return a string representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a {@code String} object representing the
              * specified {@code char}.  The result is a string of length
@@ -601,7 +601,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            toString(c: string): java.lang.String
+            public static toString(c: string): string
             /**
              * Determines whether the specified code point is a valid
              * <a href="http://www.unicode.org/glossary/#code_point">
@@ -614,7 +614,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isValidCodePoint(codePoint: number /*int*/): boolean
+            public static isValidCodePoint(codePoint: number /*int*/): boolean
             /**
              * Determines whether the specified character (Unicode code point)
              * is in the <a href="#BMP">Basic Multilingual Plane (BMP)</a>.
@@ -626,7 +626,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isBmpCodePoint(codePoint: number /*int*/): boolean
+            public static isBmpCodePoint(codePoint: number /*int*/): boolean
             /**
              * Determines whether the specified character (Unicode code point)
              * is in the <a href="#supplementary">supplementary character</a> range.
@@ -638,7 +638,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isSupplementaryCodePoint(codePoint: number /*int*/): boolean
+            public static isSupplementaryCodePoint(codePoint: number /*int*/): boolean
             /**
              * Determines if the given {@code char} value is a
              * <a href="http://www.unicode.org/glossary/#high_surrogate_code_unit">
@@ -658,7 +658,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isHighSurrogate(ch: string): boolean
+            public static isHighSurrogate(ch: string): boolean
             /**
              * Determines if the given {@code char} value is a
              * <a href="http://www.unicode.org/glossary/#low_surrogate_code_unit">
@@ -677,7 +677,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isLowSurrogate(ch: string): boolean
+            public static isLowSurrogate(ch: string): boolean
             /**
              * Determines if the given {@code char} value is a Unicode
              * <i>surrogate code unit</i>.
@@ -696,7 +696,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isSurrogate(ch: string): boolean
+            public static isSurrogate(ch: string): boolean
             /**
              * Determines whether the specified pair of {@code char}
              * values is a valid
@@ -714,7 +714,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isSurrogatePair(high: string, low: string): boolean
+            public static isSurrogatePair(high: string, low: string): boolean
             /**
              * Determines the number of {@code char} values needed to
              * represent the specified character (Unicode code point). If the
@@ -730,7 +730,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            charCount(codePoint: number /*int*/): int
+            public static charCount(codePoint: number /*int*/): number /*int*/
             /**
              * Converts the specified surrogate pair to its supplementary code
              * point value. This method does not validate the specified
@@ -743,7 +743,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toCodePoint(high: string, low: string): int
+            public static toCodePoint(high: string, low: string): number /*int*/
             /**
              * Returns the code point at the given index of the
              * {@code CharSequence}. If the {@code char} value at
@@ -766,7 +766,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointAt(seq: java.lang.CharSequence, index: number /*int*/): int
+            public static codePointAt(seq: java.lang.CharSequence, index: number /*int*/): number /*int*/
             /**
              * Returns the code point at the given index of the
              * {@code char} array. If the {@code char} value at
@@ -788,7 +788,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointAt(a: string[], index: number /*int*/): int
+            public static codePointAt(a: string[], index: number /*int*/): number /*int*/
             /**
              * Returns the code point at the given index of the
              * {@code char} array, where only array elements with
@@ -814,7 +814,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointAt(a: string[], index: number /*int*/, limit: number /*int*/): int
+            public static codePointAt(a: string[], index: number /*int*/, limit: number /*int*/): number /*int*/
             /**
              * Returns the code point preceding the given index of the
              * {@code CharSequence}. If the {@code char} value at
@@ -836,7 +836,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointBefore(seq: java.lang.CharSequence, index: number /*int*/): int
+            public static codePointBefore(seq: java.lang.CharSequence, index: number /*int*/): number /*int*/
             /**
              * Returns the code point preceding the given index of the
              * {@code char} array. If the {@code char} value at
@@ -858,7 +858,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointBefore(a: string[], index: number /*int*/): int
+            public static codePointBefore(a: string[], index: number /*int*/): number /*int*/
             /**
              * Returns the code point preceding the given index of the
              * {@code char} array, where only array elements with
@@ -886,7 +886,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointBefore(a: string[], index: number /*int*/, start: number /*int*/): int
+            public static codePointBefore(a: string[], index: number /*int*/, start: number /*int*/): number /*int*/
             /**
              * Returns the leading surrogate (a
              * <a href="http://www.unicode.org/glossary/#high_surrogate_code_unit">
@@ -910,7 +910,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            highSurrogate(codePoint: number /*int*/): char
+            public static highSurrogate(codePoint: number /*int*/): string
             /**
              * Returns the trailing surrogate (a
              * <a href="http://www.unicode.org/glossary/#low_surrogate_code_unit">
@@ -934,7 +934,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            lowSurrogate(codePoint: number /*int*/): char
+            public static lowSurrogate(codePoint: number /*int*/): string
             /**
              * Converts the specified character (Unicode code point) to its
              * UTF-16 representation. If the specified code point is a BMP
@@ -966,7 +966,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toChars(codePoint: number /*int*/, dst: string[], dstIndex: number /*int*/): int
+            public static toChars(codePoint: number /*int*/, dst: string[], dstIndex: number /*int*/): number /*int*/
             /**
              * Converts the specified character (Unicode code point) to its
              * UTF-16 representation stored in a {@code char} array. If
@@ -983,7 +983,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toChars(codePoint: number /*int*/): char[]
+            public static toChars(codePoint: number /*int*/): string[]
             /**
              * Returns the number of Unicode code points in the text range of
              * the specified char sequence. The text range begins at the
@@ -1007,7 +1007,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointCount(seq: java.lang.CharSequence, beginIndex: number /*int*/, endIndex: number /*int*/): int
+            public static codePointCount(seq: java.lang.CharSequence, beginIndex: number /*int*/, endIndex: number /*int*/): number /*int*/
             /**
              * Returns the number of Unicode code points in a subarray of the
              * {@code char} array argument. The {@code offset}
@@ -1027,7 +1027,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointCount(a: string[], offset: number /*int*/, count: number /*int*/): int
+            public static codePointCount(a: string[], offset: number /*int*/, count: number /*int*/): number /*int*/
             /**
              * Returns the index within the given char sequence that is offset
              * from the given {@code index} by {@code codePointOffset}
@@ -1050,7 +1050,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            offsetByCodePoints(seq: java.lang.CharSequence, index: number /*int*/, codePointOffset: number /*int*/): int
+            public static offsetByCodePoints(seq: java.lang.CharSequence, index: number /*int*/, codePointOffset: number /*int*/): number /*int*/
             /**
              * Returns the index within the given {@code char} subarray
              * that is offset from the given {@code index} by
@@ -1084,7 +1084,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            offsetByCodePoints(a: string[], start: number /*int*/, count: number /*int*/, index: number /*int*/, codePointOffset: number /*int*/): int
+            public static offsetByCodePoints(a: string[], start: number /*int*/, count: number /*int*/, index: number /*int*/, codePointOffset: number /*int*/): number /*int*/
             /**
              * Determines if the specified character is a lowercase character.
              * <p>
@@ -1115,7 +1115,7 @@ declare namespace java {
              * @see Character#getType(char)
              */
             // @ts-ignore
-            isLowerCase(ch: string): boolean
+            public static isLowerCase(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is a
              * lowercase character.
@@ -1144,7 +1144,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isLowerCase(codePoint: number /*int*/): boolean
+            public static isLowerCase(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is an uppercase character.
              * <p>
@@ -1175,7 +1175,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            isUpperCase(ch: string): boolean
+            public static isUpperCase(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is an uppercase character.
              * <p>
@@ -1202,7 +1202,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isUpperCase(codePoint: number /*int*/): boolean
+            public static isUpperCase(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is a titlecase character.
              * <p>
@@ -1239,7 +1239,7 @@ declare namespace java {
              * @since 1.0.2
              */
             // @ts-ignore
-            isTitleCase(ch: string): boolean
+            public static isTitleCase(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is a titlecase character.
              * <p>
@@ -1272,7 +1272,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isTitleCase(codePoint: number /*int*/): boolean
+            public static isTitleCase(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is a digit.
              * <p>
@@ -1306,7 +1306,7 @@ declare namespace java {
              * @see Character#getType(char)
              */
             // @ts-ignore
-            isDigit(ch: string): boolean
+            public static isDigit(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is a digit.
              * <p>
@@ -1336,7 +1336,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isDigit(codePoint: number /*int*/): boolean
+            public static isDigit(codePoint: number /*int*/): boolean
             /**
              * Determines if a character is defined in Unicode.
              * <p>
@@ -1361,7 +1361,7 @@ declare namespace java {
              * @since 1.0.2
              */
             // @ts-ignore
-            isDefined(ch: string): boolean
+            public static isDefined(ch: string): boolean
             /**
              * Determines if a character (Unicode code point) is defined in Unicode.
              * <p>
@@ -1382,7 +1382,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isDefined(codePoint: number /*int*/): boolean
+            public static isDefined(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is a letter.
              * <p>
@@ -1416,7 +1416,7 @@ declare namespace java {
              * @see Character#isUpperCase(char)
              */
             // @ts-ignore
-            isLetter(ch: string): boolean
+            public static isLetter(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is a letter.
              * <p>
@@ -1445,7 +1445,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isLetter(codePoint: number /*int*/): boolean
+            public static isLetter(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is a letter or digit.
              * <p>
@@ -1469,7 +1469,7 @@ declare namespace java {
              * @since 1.0.2
              */
             // @ts-ignore
-            isLetterOrDigit(ch: string): boolean
+            public static isLetterOrDigit(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is a letter or digit.
              * <p>
@@ -1487,7 +1487,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isLetterOrDigit(codePoint: number /*int*/): boolean
+            public static isLetterOrDigit(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is permissible as the first
              * character in a Java identifier.
@@ -1513,7 +1513,7 @@ declare namespace java {
              * @deprecated Replaced by isJavaIdentifierStart(char).
              */
             // @ts-ignore
-            isJavaLetter(ch: string): boolean
+            public static isJavaLetter(ch: string): boolean
             /**
              * Determines if the specified character may be part of a Java
              * identifier as other than the first character.
@@ -1545,7 +1545,7 @@ declare namespace java {
              * @deprecated Replaced by isJavaIdentifierPart(char).
              */
             // @ts-ignore
-            isJavaLetterOrDigit(ch: string): boolean
+            public static isJavaLetterOrDigit(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is an alphabet.
              * <p>
@@ -1568,7 +1568,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isAlphabetic(codePoint: number /*int*/): boolean
+            public static isAlphabetic(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character (Unicode code point) is a CJKV
              * (Chinese, Japanese, Korean and Vietnamese) ideograph, as defined by
@@ -1579,7 +1579,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isIdeographic(codePoint: number /*int*/): boolean
+            public static isIdeographic(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is
              * permissible as the first character in a Java identifier.
@@ -1606,7 +1606,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isJavaIdentifierStart(ch: string): boolean
+            public static isJavaIdentifierStart(ch: string): boolean
             /**
              * Determines if the character (Unicode code point) is
              * permissible as the first character in a Java identifier.
@@ -1632,7 +1632,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isJavaIdentifierStart(codePoint: number /*int*/): boolean
+            public static isJavaIdentifierStart(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character may be part of a Java
              * identifier as other than the first character.
@@ -1665,7 +1665,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isJavaIdentifierPart(ch: string): boolean
+            public static isJavaIdentifierPart(ch: string): boolean
             /**
              * Determines if the character (Unicode code point) may be part of a Java
              * identifier as other than the first character.
@@ -1695,7 +1695,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isJavaIdentifierPart(codePoint: number /*int*/): boolean
+            public static isJavaIdentifierPart(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is permissible as the
              * first character in a Unicode identifier.
@@ -1720,7 +1720,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isUnicodeIdentifierStart(ch: string): boolean
+            public static isUnicodeIdentifierStart(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is permissible as the
              * first character in a Unicode identifier.
@@ -1742,7 +1742,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isUnicodeIdentifierStart(codePoint: number /*int*/): boolean
+            public static isUnicodeIdentifierStart(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character may be part of a Unicode
              * identifier as other than the first character.
@@ -1773,7 +1773,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isUnicodeIdentifierPart(ch: string): boolean
+            public static isUnicodeIdentifierPart(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) may be part of a Unicode
              * identifier as other than the first character.
@@ -1800,7 +1800,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isUnicodeIdentifierPart(codePoint: number /*int*/): boolean
+            public static isUnicodeIdentifierPart(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character should be regarded as
              * an ignorable character in a Java identifier or a Unicode identifier.
@@ -1830,7 +1830,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isIdentifierIgnorable(ch: string): boolean
+            public static isIdentifierIgnorable(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) should be regarded as
              * an ignorable character in a Java identifier or a Unicode identifier.
@@ -1856,7 +1856,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isIdentifierIgnorable(codePoint: number /*int*/): boolean
+            public static isIdentifierIgnorable(codePoint: number /*int*/): boolean
             /**
              * Converts the character argument to lowercase using case
              * mapping information from the UnicodeData file.
@@ -1882,7 +1882,7 @@ declare namespace java {
              * @see String#toLowerCase()
              */
             // @ts-ignore
-            toLowerCase(ch: string): char
+            public static toLowerCase(ch: string): string
             /**
              * Converts the character (Unicode code point) argument to
              * lowercase using case mapping information from the UnicodeData
@@ -1905,7 +1905,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toLowerCase(codePoint: number /*int*/): int
+            public static toLowerCase(codePoint: number /*int*/): number /*int*/
             /**
              * Converts the character argument to uppercase using case mapping
              * information from the UnicodeData file.
@@ -1931,7 +1931,7 @@ declare namespace java {
              * @see String#toUpperCase()
              */
             // @ts-ignore
-            toUpperCase(ch: string): char
+            public static toUpperCase(ch: string): string
             /**
              * Converts the character (Unicode code point) argument to
              * uppercase using case mapping information from the UnicodeData
@@ -1954,7 +1954,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toUpperCase(codePoint: number /*int*/): int
+            public static toUpperCase(codePoint: number /*int*/): number /*int*/
             /**
              * Converts the character argument to titlecase using case mapping
              * information from the UnicodeData file. If a character has no
@@ -1982,7 +1982,7 @@ declare namespace java {
              * @since 1.0.2
              */
             // @ts-ignore
-            toTitleCase(ch: string): char
+            public static toTitleCase(ch: string): string
             /**
              * Converts the character (Unicode code point) argument to titlecase using case mapping
              * information from the UnicodeData file. If a character has no
@@ -2005,7 +2005,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            toTitleCase(codePoint: number /*int*/): int
+            public static toTitleCase(codePoint: number /*int*/): number /*int*/
             /**
              * Returns the numeric value of the character {@code ch} in the
              * specified radix.
@@ -2055,7 +2055,7 @@ declare namespace java {
              * @see Character#isDigit(char)
              */
             // @ts-ignore
-            digit(ch: string, radix: number /*int*/): int
+            public static digit(ch: string, radix: number /*int*/): number /*int*/
             /**
              * Returns the numeric value of the specified character (Unicode
              * code point) in the specified radix.
@@ -2103,7 +2103,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            digit(codePoint: number /*int*/, radix: number /*int*/): int
+            public static digit(codePoint: number /*int*/, radix: number /*int*/): number /*int*/
             /**
              * Returns the {@code int} value that the specified Unicode
              * character represents. For example, the character
@@ -2137,7 +2137,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getNumericValue(ch: string): int
+            public static getNumericValue(ch: string): number /*int*/
             /**
              * Returns the {@code int} value that the specified
              * character (Unicode code point) represents. For example, the character
@@ -2167,7 +2167,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getNumericValue(codePoint: number /*int*/): int
+            public static getNumericValue(codePoint: number /*int*/): number /*int*/
             /**
              * Determines if the specified character is ISO-LATIN-1 white space.
              * This method returns {@code true} for the following five
@@ -2192,7 +2192,7 @@ declare namespace java {
              * @deprecated Replaced by isWhitespace(char).
              */
             // @ts-ignore
-            isSpace(ch: string): boolean
+            public static isSpace(ch: string): boolean
             /**
              * Determines if the specified character is a Unicode space character.
              * A character is considered to be a space character if and only if
@@ -2215,7 +2215,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isSpaceChar(ch: string): boolean
+            public static isSpaceChar(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is a
              * Unicode space character.  A character is considered to be a
@@ -2234,7 +2234,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isSpaceChar(codePoint: number /*int*/): boolean
+            public static isSpaceChar(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is white space according to Java.
              * A character is a Java whitespace character if and only if it satisfies
@@ -2265,7 +2265,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isWhitespace(ch: string): boolean
+            public static isWhitespace(ch: string): boolean
             /**
              * Determines if the specified character (Unicode code point) is
              * white space according to Java.  A character is a Java
@@ -2294,7 +2294,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isWhitespace(codePoint: number /*int*/): boolean
+            public static isWhitespace(codePoint: number /*int*/): boolean
             /**
              * Determines if the specified character is an ISO control
              * character.  A character is considered to be an ISO control
@@ -2313,7 +2313,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            isISOControl(ch: string): boolean
+            public static isISOControl(ch: string): boolean
             /**
              * Determines if the referenced character (Unicode code point) is an ISO control
              * character.  A character is considered to be an ISO control
@@ -2328,7 +2328,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isISOControl(codePoint: number /*int*/): boolean
+            public static isISOControl(codePoint: number /*int*/): boolean
             /**
              * Returns a value indicating a character's general category.
              * <p><b>Note:</b> This method cannot handle <a
@@ -2371,7 +2371,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getType(ch: string): int
+            public static getType(ch: string): number /*int*/
             /**
              * Returns a value indicating a character's general category.
              * @param codePoint the character (Unicode code point) to be tested.
@@ -2410,7 +2410,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getType(codePoint: number /*int*/): int
+            public static getType(codePoint: number /*int*/): number /*int*/
             /**
              * Determines the character representation for a specific digit in
              * the specified radix. If the value of {@code radix} is not a
@@ -2435,7 +2435,7 @@ declare namespace java {
              * @see Character#digit(char, int)
              */
             // @ts-ignore
-            forDigit(digit: number /*int*/, radix: number /*int*/): char
+            public static forDigit(digit: number /*int*/, radix: number /*int*/): string
             /**
              * Returns the Unicode directionality property for the given
              * character.  Character directionality is used to calculate the
@@ -2471,7 +2471,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDirectionality(ch: string): byte
+            public static getDirectionality(ch: string): number /*byte*/
             /**
              * Returns the Unicode directionality property for the given
              * character (Unicode code point).  Character directionality is
@@ -2504,7 +2504,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getDirectionality(codePoint: number /*int*/): byte
+            public static getDirectionality(codePoint: number /*int*/): number /*byte*/
             /**
              * Determines whether the character is mirrored according to the
              * Unicode specification.  Mirrored characters should have their
@@ -2523,7 +2523,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMirrored(ch: string): boolean
+            public static isMirrored(ch: string): boolean
             /**
              * Determines whether the specified character (Unicode code point)
              * is mirrored according to the Unicode specification.  Mirrored
@@ -2539,7 +2539,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isMirrored(codePoint: number /*int*/): boolean
+            public static isMirrored(codePoint: number /*int*/): boolean
             /**
              * Compares two {@code Character} objects numerically.
              * @param anotherCharacter   the {#code Character} to be compared.
@@ -2554,7 +2554,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(anotherCharacter: java.lang.Character): int
+            public compareTo(anotherCharacter: java.lang.Character): number /*int*/
             /**
              * Compares two {@code char} values numerically.
              * The value returned is identical to what would be returned by:
@@ -2569,7 +2569,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            compare(x: string, y: string): int
+            public static compare(x: string, y: string): number /*int*/
             /**
              * Returns the value obtained by reversing the order of the bytes in the
              * specified <tt>char</tt> value.
@@ -2579,7 +2579,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverseBytes(ch: string): char
+            public static reverseBytes(ch: string): string
             /**
              * Returns the Unicode name of the specified character
              * {@code codePoint}, or null if the code point is
@@ -2603,7 +2603,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getName(codePoint: number /*int*/): java.lang.String
+            public static getName(codePoint: number /*int*/): string
         }
     }
 }

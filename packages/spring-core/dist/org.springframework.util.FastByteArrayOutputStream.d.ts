@@ -33,11 +33,11 @@ declare namespace org {
                 // @ts-ignore
                 constructor(initialBlockSize: number /*int*/)
                 // @ts-ignore
-                write(datum: number /*int*/): void
+                public write(datum: number /*int*/): void
                 // @ts-ignore
-                write(data: number /*byte*/[], offset: number /*int*/, length: number /*int*/): void
+                public write(data: number /*byte*/[], offset: number /*int*/, length: number /*int*/): void
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Convert the buffer's contents into a string decoding bytes using the
                  * platform's default character set. The length of the new <tt>String</tt>
@@ -51,12 +51,12 @@ declare namespace org {
                  * @return a String decoded from the buffer's contents
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return the number of bytes stored in this <code>FastByteArrayOutputStream</code>.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Convert the stream's data to a byte array and return the byte array.
                  * <p>Also replaces the internal structures with the byte array to conserve memory:
@@ -70,7 +70,7 @@ declare namespace org {
                  * @see #toByteArray()
                  */
                 // @ts-ignore
-                toByteArrayUnsafe(): byte[]
+                public toByteArrayUnsafe(): number /*byte*/[]
                 /**
                  * Creates a newly allocated byte array.
                  * <p>Its size is the current
@@ -81,14 +81,14 @@ declare namespace org {
                  * @see #toByteArrayUnsafe()
                  */
                 // @ts-ignore
-                toByteArray(): byte[]
+                public toByteArray(): number /*byte*/[]
                 /**
                  * Reset the contents of this <code>FastByteArrayOutputStream</code>.
                  * <p>All currently accumulated output in the output stream is discarded.
                  * The output stream can be used again.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Get an {@link InputStream} to retrieve the data in this OutputStream.
                  * <p>Note that if any methods are called on the OutputStream
@@ -98,13 +98,13 @@ declare namespace org {
                  * @return {#link InputStream} of the contents of this OutputStream
                  */
                 // @ts-ignore
-                getInputStream(): java.io.InputStream
+                public getInputStream(): java.io.InputStream
                 /**
                  * Write the buffers content to the given OutputStream.
                  * @param out the OutputStream to write to
                  */
                 // @ts-ignore
-                writeTo(out: java.io.OutputStream): void
+                public writeTo(out: java.io.OutputStream): void
                 /**
                  * Resize the internal buffer size to a specified capacity.
                  * @param targetCapacity the desired size of the buffer
@@ -113,7 +113,7 @@ declare namespace org {
                  * @see FastByteArrayOutputStream#size()
                  */
                 // @ts-ignore
-                resize(targetCapacity: number /*int*/): void
+                public resize(targetCapacity: number /*int*/): void
             }
         }
     }

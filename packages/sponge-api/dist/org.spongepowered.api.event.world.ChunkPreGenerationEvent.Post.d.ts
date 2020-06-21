@@ -15,14 +15,14 @@ declare namespace org {
                              * @return The number of chunks that were generated.
                              */
                             // @ts-ignore
-                            getChunksGeneratedThisStep(): int
+                            getChunksGeneratedThisStep(): number /*int*/
                             /**
                              * The number of chunks generated that did not need to be generated and
                              * were skipped over.
                              * @return The number of chunks that were generated.
                              */
                             // @ts-ignore
-                            getChunksSkippedThisStep(): int
+                            getChunksSkippedThisStep(): number /*int*/
                             /**
                              * The {@link Duration} of the previous step.
                              * @return The {#link Duration}

@@ -114,7 +114,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getRows(): int
+            public getRows(): number /*int*/
             /**
              * Sets the number of rows in this layout to the specified value.
              * @param rows   the number of rows in this layout
@@ -123,14 +123,14 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setRows(rows: number /*int*/): void
+            public setRows(rows: number /*int*/): void
             /**
              * Gets the number of columns in this layout.
              * @return the number of columns in this layout
              * @since JDK1.1
              */
             // @ts-ignore
-            getColumns(): int
+            public getColumns(): number /*int*/
             /**
              * Sets the number of columns in this layout to the specified value.
              * Setting the number of columns has no affect on the layout
@@ -144,48 +144,48 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setColumns(cols: number /*int*/): void
+            public setColumns(cols: number /*int*/): void
             /**
              * Gets the horizontal gap between components.
              * @return the horizontal gap between components
              * @since JDK1.1
              */
             // @ts-ignore
-            getHgap(): int
+            public getHgap(): number /*int*/
             /**
              * Sets the horizontal gap between components to the specified value.
              * @param hgap   the horizontal gap between components
              * @since JDK1.1
              */
             // @ts-ignore
-            setHgap(hgap: number /*int*/): void
+            public setHgap(hgap: number /*int*/): void
             /**
              * Gets the vertical gap between components.
              * @return the vertical gap between components
              * @since JDK1.1
              */
             // @ts-ignore
-            getVgap(): int
+            public getVgap(): number /*int*/
             /**
              * Sets the vertical gap between components to the specified value.
              * @param vgap  the vertical gap between components
              * @since JDK1.1
              */
             // @ts-ignore
-            setVgap(vgap: number /*int*/): void
+            public setVgap(vgap: number /*int*/): void
             /**
              * Adds the specified component with the specified name to the layout.
              * @param name the name of the component
              * @param comp the component to be added
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Removes the specified component from the layout.
              * @param comp the component to be removed
              */
             // @ts-ignore
-            removeLayoutComponent(comp: java.awt.Component): void
+            public removeLayoutComponent(comp: java.awt.Component): void
             /**
              * Determines the preferred size of the container argument using
              * this grid layout.
@@ -206,7 +206,7 @@ declare namespace java {
              * @see java.awt.Container#getPreferredSize()
              */
             // @ts-ignore
-            preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Determines the minimum size of the container argument using this
              * grid layout.
@@ -227,7 +227,7 @@ declare namespace java {
              * @see java.awt.Container#doLayout
              */
             // @ts-ignore
-            minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Lays out the specified container using this layout.
              * <p>
@@ -246,13 +246,13 @@ declare namespace java {
              * @see java.awt.Container#doLayout
              */
             // @ts-ignore
-            layoutContainer(parent: java.awt.Container): void
+            public layoutContainer(parent: java.awt.Container): void
             /**
              * Returns the string representation of this grid layout's values.
              * @return a string representation of this grid layout
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

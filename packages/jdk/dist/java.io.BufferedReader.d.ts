@@ -52,7 +52,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads characters into a portion of an array.
              * <p> This method implements the general contract of the corresponding
@@ -89,7 +89,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Reads a line of text.  A line is considered to be terminated by any one
              * of a line feed ('\n'), a carriage return ('\r'), or a carriage return
@@ -101,7 +101,7 @@ declare namespace java {
              * @see java.nio.file.Files#readAllLines
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            public readLine(): string
             /**
              * Skips characters.
              * @param n  The number of characters to skip
@@ -110,7 +110,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Tells whether this stream is ready to be read.  A buffered character
              * stream is ready if the buffer is not empty, or if the underlying
@@ -118,12 +118,12 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             /**
              * Tells whether this stream supports the mark() operation, which it does.
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Marks the present position in the stream.  Subsequent calls to reset()
              * will attempt to reposition the stream to this point.
@@ -139,16 +139,16 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Resets the stream to the most recent mark.
              * @exception IOException  If the stream has never been marked,
              *                           or if the mark has been invalidated
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns a {@code Stream}, the elements of which are lines read from
              * this {@code BufferedReader}.  The {@link Stream} is lazily populated,
@@ -173,7 +173,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            lines(): java.util.stream.Stream<java.lang.String>
+            public lines(): java.util.stream.Stream<java.lang.String | string>
         }
     }
 }

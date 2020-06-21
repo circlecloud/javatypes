@@ -21,7 +21,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            class X509ExtendedTrustManager extends java.lang.Object implements javax.net.ssl.X509TrustManager {
+            abstract class X509ExtendedTrustManager extends java.lang.Object implements javax.net.ssl.X509TrustManager {
                 // @ts-ignore
                 constructor()
                 /**
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
                  */
                 // @ts-ignore
-                abstract checkClientTrusted(chain: java.security.cert.X509Certificate[], authType: string, socket: java.net.Socket): void
+                public abstract checkClientTrusted(chain: java.security.cert.X509Certificate[], authType: java.lang.String | string, socket: java.net.Socket): void
                 /**
                  * Given the partial or complete certificate chain provided by the
                  * peer, build and validate the certificate path based on the
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
                  */
                 // @ts-ignore
-                abstract checkServerTrusted(chain: java.security.cert.X509Certificate[], authType: string, socket: java.net.Socket): void
+                public abstract checkServerTrusted(chain: java.security.cert.X509Certificate[], authType: java.lang.String | string, socket: java.net.Socket): void
                 /**
                  * Given the partial or complete certificate chain provided by the
                  * peer, build and validate the certificate path based on the
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
                  */
                 // @ts-ignore
-                abstract checkClientTrusted(chain: java.security.cert.X509Certificate[], authType: string, engine: javax.net.ssl.SSLEngine): void
+                public abstract checkClientTrusted(chain: java.security.cert.X509Certificate[], authType: java.lang.String | string, engine: javax.net.ssl.SSLEngine): void
                 /**
                  * Given the partial or complete certificate chain provided by the
                  * peer, build and validate the certificate path based on the
@@ -189,7 +189,7 @@ declare namespace javax {
                  * @see SSLParameters#setAlgorithmConstraints(AlgorithmConstraints)
                  */
                 // @ts-ignore
-                abstract checkServerTrusted(chain: java.security.cert.X509Certificate[], authType: string, engine: javax.net.ssl.SSLEngine): void
+                public abstract checkServerTrusted(chain: java.security.cert.X509Certificate[], authType: java.lang.String | string, engine: javax.net.ssl.SSLEngine): void
             }
         }
     }

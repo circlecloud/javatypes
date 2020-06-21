@@ -97,7 +97,7 @@ declare namespace javax {
                  *  </ul>
                  */
                 // @ts-ignore
-                setModelMBeanInfo(mbi: javax.management.modelmbean.ModelMBeanInfo): void
+                public setModelMBeanInfo(mbi: javax.management.modelmbean.ModelMBeanInfo): void
                 /**
                  * Sets the instance handle of the object against which to
                  * execute all methods in this ModelMBean management interface
@@ -117,7 +117,7 @@ declare namespace javax {
                  *             RuntimeException} when setting the resource.
                  */
                 // @ts-ignore
-                setManagedResource(mr: any, mr_type: string): void
+                public setManagedResource(mr: java.lang.Object | any, mr_type: java.lang.String | string): void
                 /**
                  * <p>Instantiates this MBean instance with the data found for
                  * the MBean in the persistent store.  The data loaded could include
@@ -136,7 +136,7 @@ declare namespace javax {
                  *  this MBean from persistent storage
                  */
                 // @ts-ignore
-                load(): void
+                public load(): void
                 /**
                  * <p>Captures the current state of this MBean instance and writes
                  * it out to the persistent store.  The state stored could include
@@ -167,7 +167,7 @@ declare namespace javax {
                  *  persistent store
                  */
                 // @ts-ignore
-                store(): void
+                public store(): void
                 /**
                  * Returns the attributes, operations, constructors and notifications
                  * that this RequiredModelMBean exposes for management.
@@ -175,7 +175,7 @@ declare namespace javax {
                  *           attributes, operations, and Notifications of this MBean.
                  */
                 // @ts-ignore
-                getMBeanInfo(): javax.management.MBeanInfo
+                public getMBeanInfo(): javax.management.MBeanInfo
                 /**
                  * Invokes a method on or through a RequiredModelMBean and returns
                  * the result of the method execution.
@@ -244,7 +244,7 @@ declare namespace javax {
                  *       {#link IllegalArgumentException} Method name is null.
                  */
                 // @ts-ignore
-                invoke(opName: string, opArgs: any[], sig: string[]): java.lang.Object
+                public invoke(opName: java.lang.String | string, opArgs: java.lang.Object[] | any[], sig: java.lang.String[] | string[]): any
                 /**
                  * Returns the value of a specific attribute defined for this
                  * ModelMBean.
@@ -343,7 +343,7 @@ declare namespace javax {
                  * @see #setAttribute(javax.management.Attribute)
                  */
                 // @ts-ignore
-                getAttribute(attrName: string): java.lang.Object
+                public getAttribute(attrName: java.lang.String | string): any
                 /**
                  * Returns the values of several attributes in the ModelMBean.
                  * Executes a getAttribute for each attribute name in the
@@ -357,7 +357,7 @@ declare namespace javax {
                  * @see #setAttributes(javax.management.AttributeList)
                  */
                 // @ts-ignore
-                getAttributes(attrNames: string[]): javax.management.AttributeList
+                public getAttributes(attrNames: java.lang.String[] | string[]): javax.management.AttributeList
                 /**
                  * Sets the value of a specific attribute of a named ModelMBean.
                  * If the 'setMethod' field of the attribute's descriptor
@@ -427,7 +427,7 @@ declare namespace javax {
                  * @see #getAttribute(java.lang.String)
                  */
                 // @ts-ignore
-                setAttribute(attribute: javax.management.Attribute): void
+                public setAttribute(attribute: javax.management.Attribute): void
                 /**
                  * Sets the values of an array of attributes of this ModelMBean.
                  * Executes the setAttribute() method for each attribute in the list.
@@ -441,7 +441,7 @@ declare namespace javax {
                  * @see #getAttributes
                  */
                 // @ts-ignore
-                setAttributes(attributes: javax.management.AttributeList): javax.management.AttributeList
+                public setAttributes(attributes: javax.management.AttributeList): javax.management.AttributeList
                 /**
                  * Registers an object which implements the NotificationListener
                  * interface as a listener.  This
@@ -459,7 +459,7 @@ declare namespace javax {
                  * @see #removeNotificationListener
                  */
                 // @ts-ignore
-                addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+                public addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
                 /**
                  * Removes a listener for Notifications from the RequiredModelMBean.
                  * @param listener The listener name which was handling notifications
@@ -470,13 +470,13 @@ declare namespace javax {
                  * @see #addNotificationListener
                  */
                 // @ts-ignore
-                removeNotificationListener(listener: javax.management.NotificationListener): void
+                public removeNotificationListener(listener: javax.management.NotificationListener): void
                 // @ts-ignore
-                removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+                public removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
                 // @ts-ignore
-                sendNotification(ntfyObj: javax.management.Notification): void
+                public sendNotification(ntfyObj: javax.management.Notification): void
                 // @ts-ignore
-                sendNotification(ntfyText: string): void
+                public sendNotification(ntfyText: java.lang.String | string): void
                 /**
                  * Returns the array of Notifications always generated by the
                  * RequiredModelMBean.
@@ -492,15 +492,15 @@ declare namespace javax {
                  * @return MBeanNotificationInfo[]
                  */
                 // @ts-ignore
-                getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+                public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
                 // @ts-ignore
-                addAttributeChangeNotificationListener(inlistener: javax.management.NotificationListener, inAttributeName: string, inhandback: any): void
+                public addAttributeChangeNotificationListener(inlistener: javax.management.NotificationListener, inAttributeName: java.lang.String | string, inhandback: java.lang.Object | any): void
                 // @ts-ignore
-                removeAttributeChangeNotificationListener(inlistener: javax.management.NotificationListener, inAttributeName: string): void
+                public removeAttributeChangeNotificationListener(inlistener: javax.management.NotificationListener, inAttributeName: java.lang.String | string): void
                 // @ts-ignore
-                sendAttributeChangeNotification(ntfyObj: javax.management.AttributeChangeNotification): void
+                public sendAttributeChangeNotification(ntfyObj: javax.management.AttributeChangeNotification): void
                 // @ts-ignore
-                sendAttributeChangeNotification(inOldVal: javax.management.Attribute, inNewVal: javax.management.Attribute): void
+                public sendAttributeChangeNotification(inOldVal: javax.management.Attribute, inNewVal: javax.management.Attribute): void
                 /**
                  * Return the Class Loader Repository used to perform class loading.
                  * Subclasses may wish to redefine this method in order to return
@@ -537,7 +537,7 @@ declare namespace javax {
                  *  MBeanRegistrationException}.
                  */
                 // @ts-ignore
-                preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+                public preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
                 /**
                  * Allows the MBean to perform any operations needed after having been
                  * registered in the MBean server or after the registration has failed.
@@ -551,7 +551,7 @@ declare namespace javax {
                  *  false means that the registration phase has failed.
                  */
                 // @ts-ignore
-                postRegister(registrationDone: java.lang.Boolean): void
+                public postRegister(registrationDone: java.lang.Boolean): void
                 /**
                  * Allows the MBean to perform any operations it needs before
                  * being unregistered by the MBean server.
@@ -566,7 +566,7 @@ declare namespace javax {
                  *  MBeanRegistrationException}.
                  */
                 // @ts-ignore
-                preDeregister(): void
+                public preDeregister(): void
                 /**
                  * Allows the MBean to perform any operations needed after having been
                  * unregistered in the MBean server.
@@ -577,7 +577,7 @@ declare namespace javax {
                  * <code>postDeregister</code> implementation.
                  */
                 // @ts-ignore
-                postDeregister(): void
+                public postDeregister(): void
             }
         }
     }

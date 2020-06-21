@@ -32,7 +32,7 @@ declare namespace org {
                      * <p>The default implementation returns {@link #LOWEST_PRECEDENCE}.
                      */
                     // @ts-ignore
-                    getOrder(): int
+                    getOrder(): number /*int*/
                 }
             }
         }

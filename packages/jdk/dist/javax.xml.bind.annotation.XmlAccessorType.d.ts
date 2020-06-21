@@ -48,7 +48,7 @@ declare namespace javax {
                  * @see XmlAccessType
                  */
                 // @ts-ignore
-                class XmlAccessorType implements java.lang.annotation.Annotation {
+                abstract class XmlAccessorType implements java.lang.annotation.Annotation {
                 }
             }
         }

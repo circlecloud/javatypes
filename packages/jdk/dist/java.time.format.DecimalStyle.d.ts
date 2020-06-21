@@ -17,7 +17,7 @@ declare namespace java {
                  * This uses standard ASCII characters for zero, positive, negative and a dot for the decimal point.
                  */
                 // @ts-ignore
-                readonly STANDARD: java.time.format.DecimalStyle
+                public static readonly STANDARD: java.time.format.DecimalStyle
                 /**
                  * Lists all the locales that are supported.
                  * <p>
@@ -25,7 +25,7 @@ declare namespace java {
                  * @return a Set of Locales for which localization is supported
                  */
                 // @ts-ignore
-                getAvailableLocales(): java.util.Set<java.util.Locale>
+                public static getAvailableLocales(): Array<java.util.Locale>
                 /**
                  * Obtains the DecimalStyle for the default
                  * {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -39,7 +39,7 @@ declare namespace java {
                  * @return the decimal style, not null
                  */
                 // @ts-ignore
-                ofDefaultLocale(): java.time.format.DecimalStyle
+                public static ofDefaultLocale(): java.time.format.DecimalStyle
                 /**
                  * Obtains the DecimalStyle for the specified locale.
                  * <p>
@@ -48,7 +48,7 @@ declare namespace java {
                  * @return the decimal style, not null
                  */
                 // @ts-ignore
-                of(locale: java.util.Locale): java.time.format.DecimalStyle
+                public static of(locale: java.util.Locale): java.time.format.DecimalStyle
                 /**
                  * Gets the character that represents zero.
                  * <p>
@@ -57,7 +57,7 @@ declare namespace java {
                  * @return the character for zero
                  */
                 // @ts-ignore
-                getZeroDigit(): char
+                public getZeroDigit(): string
                 /**
                  * Returns a copy of the info with a new character that represents zero.
                  * <p>
@@ -67,7 +67,7 @@ declare namespace java {
                  * @return a copy with a new character that represents zero, not null
                  */
                 // @ts-ignore
-                withZeroDigit(zeroDigit: string): java.time.format.DecimalStyle
+                public withZeroDigit(zeroDigit: string): java.time.format.DecimalStyle
                 /**
                  * Gets the character that represents the positive sign.
                  * <p>
@@ -76,7 +76,7 @@ declare namespace java {
                  * @return the character for the positive sign
                  */
                 // @ts-ignore
-                getPositiveSign(): char
+                public getPositiveSign(): string
                 /**
                  * Returns a copy of the info with a new character that represents the positive sign.
                  * <p>
@@ -86,7 +86,7 @@ declare namespace java {
                  * @return a copy with a new character that represents the positive sign, not null
                  */
                 // @ts-ignore
-                withPositiveSign(positiveSign: string): java.time.format.DecimalStyle
+                public withPositiveSign(positiveSign: string): java.time.format.DecimalStyle
                 /**
                  * Gets the character that represents the negative sign.
                  * <p>
@@ -95,7 +95,7 @@ declare namespace java {
                  * @return the character for the negative sign
                  */
                 // @ts-ignore
-                getNegativeSign(): char
+                public getNegativeSign(): string
                 /**
                  * Returns a copy of the info with a new character that represents the negative sign.
                  * <p>
@@ -105,7 +105,7 @@ declare namespace java {
                  * @return a copy with a new character that represents the negative sign, not null
                  */
                 // @ts-ignore
-                withNegativeSign(negativeSign: string): java.time.format.DecimalStyle
+                public withNegativeSign(negativeSign: string): java.time.format.DecimalStyle
                 /**
                  * Gets the character that represents the decimal point.
                  * <p>
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return the character for the decimal point
                  */
                 // @ts-ignore
-                getDecimalSeparator(): char
+                public getDecimalSeparator(): string
                 /**
                  * Returns a copy of the info with a new character that represents the decimal point.
                  * <p>
@@ -124,26 +124,26 @@ declare namespace java {
                  * @return a copy with a new character that represents the decimal point, not null
                  */
                 // @ts-ignore
-                withDecimalSeparator(decimalSeparator: string): java.time.format.DecimalStyle
+                public withDecimalSeparator(decimalSeparator: string): java.time.format.DecimalStyle
                 /**
                  * Checks if this DecimalStyle is equal to another DecimalStyle.
                  * @param obj  the object to check, null returns false
                  * @return true if this is equal to the other date
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this DecimalStyle.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string describing this DecimalStyle.
                  * @return a string description, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

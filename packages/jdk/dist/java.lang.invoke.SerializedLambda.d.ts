@@ -50,13 +50,13 @@ declare namespace java {
                  *                      the lambda
                  */
                 // @ts-ignore
-                constructor(capturingClass: java.lang.Class<any>, functionalInterfaceClass: string, functionalInterfaceMethodName: string, functionalInterfaceMethodSignature: string, implMethodKind: number /*int*/, implClass: string, implMethodName: string, implMethodSignature: string, instantiatedMethodType: string, capturedArgs: any[])
+                constructor(capturingClass: java.lang.Class<any>, functionalInterfaceClass: java.lang.String | string, functionalInterfaceMethodName: java.lang.String | string, functionalInterfaceMethodSignature: java.lang.String | string, implMethodKind: number /*int*/, implClass: java.lang.String | string, implMethodName: java.lang.String | string, implMethodSignature: java.lang.String | string, instantiatedMethodType: java.lang.String | string, capturedArgs: java.lang.Object[] | any[])
                 /**
                  * Get the name of the class that captured this lambda.
                  * @return the name of the class that captured this lambda
                  */
                 // @ts-ignore
-                getCapturingClass(): java.lang.String
+                public getCapturingClass(): string
                 /**
                  * Get the name of the invoked type to which this
                  * lambda has been converted
@@ -64,14 +64,14 @@ declare namespace java {
                  *  this lambda has been converted
                  */
                 // @ts-ignore
-                getFunctionalInterfaceClass(): java.lang.String
+                public getFunctionalInterfaceClass(): string
                 /**
                  * Get the name of the primary method for the functional interface
                  * to which this lambda has been converted.
                  * @return the name of the primary methods of the functional interface
                  */
                 // @ts-ignore
-                getFunctionalInterfaceMethodName(): java.lang.String
+                public getFunctionalInterfaceMethodName(): string
                 /**
                  * Get the signature of the primary method for the functional
                  * interface to which this lambda has been converted.
@@ -79,7 +79,7 @@ declare namespace java {
                  *  interface
                  */
                 // @ts-ignore
-                getFunctionalInterfaceMethodSignature(): java.lang.String
+                public getFunctionalInterfaceMethodSignature(): string
                 /**
                  * Get the name of the class containing the implementation
                  * method.
@@ -87,26 +87,26 @@ declare namespace java {
                  *  method
                  */
                 // @ts-ignore
-                getImplClass(): java.lang.String
+                public getImplClass(): string
                 /**
                  * Get the name of the implementation method.
                  * @return the name of the implementation method
                  */
                 // @ts-ignore
-                getImplMethodName(): java.lang.String
+                public getImplMethodName(): string
                 /**
                  * Get the signature of the implementation method.
                  * @return the signature of the implementation method
                  */
                 // @ts-ignore
-                getImplMethodSignature(): java.lang.String
+                public getImplMethodSignature(): string
                 /**
                  * Get the method handle kind (see {@link MethodHandleInfo}) of
                  * the implementation method.
                  * @return the method handle kind of the implementation method
                  */
                 // @ts-ignore
-                getImplMethodKind(): int
+                public getImplMethodKind(): number /*int*/
                 /**
                  * Get the signature of the primary functional interface method
                  * after type variables are substituted with their instantiation
@@ -115,22 +115,22 @@ declare namespace java {
                  *  after type variable processing
                  */
                 // @ts-ignore
-                getInstantiatedMethodType(): java.lang.String
+                public getInstantiatedMethodType(): string
                 /**
                  * Get the count of dynamic arguments to the lambda capture site.
                  * @return the count of dynamic arguments to the lambda capture site
                  */
                 // @ts-ignore
-                getCapturedArgCount(): int
+                public getCapturedArgCount(): number /*int*/
                 /**
                  * Get a dynamic argument to the lambda capture site.
                  * @param i the argument to capture
                  * @return a dynamic argument to the lambda capture site
                  */
                 // @ts-ignore
-                getCapturedArg(i: number /*int*/): java.lang.Object
+                public getCapturedArg(i: number /*int*/): any
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

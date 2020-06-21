@@ -175,7 +175,7 @@ declare namespace javax {
                  * @deprecated since JAXB2.0
                  */
                 // @ts-ignore
-                validate(subrootObj: any): boolean
+                validate(subrootObj: java.lang.Object | any): boolean
                 /**
                  * Validate the Java content tree rooted at <tt>rootObj</tt>.
                  * <p>
@@ -197,7 +197,7 @@ declare namespace javax {
                  * @deprecated since JAXB2.0
                  */
                 // @ts-ignore
-                validateRoot(rootObj: any): boolean
+                validateRoot(rootObj: java.lang.Object | any): boolean
                 /**
                  * Set the particular property in the underlying implementation of
                  * <tt>Validator</tt>.  This method can only be used to set one of
@@ -216,7 +216,7 @@ declare namespace javax {
                  * @deprecated since JAXB2.0
                  */
                 // @ts-ignore
-                setProperty(name: string, value: any): void
+                setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get the particular property in the underlying implementation of
                  * <tt>Validator</tt>.  This method can only be used to get one of
@@ -234,7 +234,7 @@ declare namespace javax {
                  * @deprecated since JAXB2.0
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
             }
         }
     }

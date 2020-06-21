@@ -75,7 +75,7 @@ declare namespace java {
              * @param y         Y position
              */
             // @ts-ignore
-            mouseMove(x: number /*int*/, y: number /*int*/): void
+            public mouseMove(x: number /*int*/, y: number /*int*/): void
             /**
              * Presses one or more mouse buttons.  The mouse buttons should
              * be released using the {@link #mouseRelease(int)} method.
@@ -128,7 +128,7 @@ declare namespace java {
              * @see java.awt.event.MouseEvent
              */
             // @ts-ignore
-            mousePress(buttons: number /*int*/): void
+            public mousePress(buttons: number /*int*/): void
             /**
              * Releases one or more mouse buttons.
              * @param buttons the Button mask; a combination of one or more
@@ -180,7 +180,7 @@ declare namespace java {
              * @see java.awt.event.MouseEvent
              */
             // @ts-ignore
-            mouseRelease(buttons: number /*int*/): void
+            public mouseRelease(buttons: number /*int*/): void
             /**
              * Rotates the scroll wheel on wheel-equipped mice.
              * @param wheelAmt  number of "notches" to move the mouse wheel
@@ -189,7 +189,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            mouseWheel(wheelAmt: number /*int*/): void
+            public mouseWheel(wheelAmt: number /*int*/): void
             /**
              * Presses a given key.  The key should be released using the
              * <code>keyRelease</code> method.
@@ -204,7 +204,7 @@ declare namespace java {
              * @see java.awt.event.KeyEvent
              */
             // @ts-ignore
-            keyPress(keycode: number /*int*/): void
+            public keyPress(keycode: number /*int*/): void
             /**
              * Releases a given key.
              * <p>
@@ -218,7 +218,7 @@ declare namespace java {
              * @see java.awt.event.KeyEvent
              */
             // @ts-ignore
-            keyRelease(keycode: number /*int*/): void
+            public keyRelease(keycode: number /*int*/): void
             /**
              * Returns the color of a pixel at the given screen coordinates.
              * @param x       X position of pixel
@@ -226,7 +226,7 @@ declare namespace java {
              * @return Color of the pixel
              */
             // @ts-ignore
-            getPixelColor(x: number /*int*/, y: number /*int*/): java.awt.Color
+            public getPixelColor(x: number /*int*/, y: number /*int*/): java.awt.Color
             /**
              * Creates an image containing pixels read from the screen.  This image does
              * not include the mouse cursor.
@@ -238,32 +238,32 @@ declare namespace java {
              * @see AWTPermission
              */
             // @ts-ignore
-            createScreenCapture(screenRect: java.awt.Rectangle): java.awt.image.BufferedImage
+            public createScreenCapture(screenRect: java.awt.Rectangle): java.awt.image.BufferedImage
             /**
              * Returns whether this Robot automatically invokes <code>waitForIdle</code>
              * after generating an event.
              * @return Whether <code>waitForIdle</code> is automatically called
              */
             // @ts-ignore
-            isAutoWaitForIdle(): boolean
+            public isAutoWaitForIdle(): boolean
             /**
              * Sets whether this Robot automatically invokes <code>waitForIdle</code>
              * after generating an event.
              * @param isOn    Whether <code>waitForIdle</code> is automatically invoked
              */
             // @ts-ignore
-            setAutoWaitForIdle(isOn: boolean): void
+            public setAutoWaitForIdle(isOn: boolean): void
             /**
              * Returns the number of milliseconds this Robot sleeps after generating an event.
              */
             // @ts-ignore
-            getAutoDelay(): int
+            public getAutoDelay(): number /*int*/
             /**
              * Sets the number of milliseconds this Robot sleeps after generating an event.
              * @throws IllegalArgumentException If <code>ms</code> is not between 0 and 60,000 milliseconds inclusive
              */
             // @ts-ignore
-            setAutoDelay(ms: number /*int*/): void
+            public setAutoDelay(ms: number /*int*/): void
             /**
              * Sleeps for the specified time.
              * To catch any <code>InterruptedException</code>s that occur,
@@ -273,19 +273,19 @@ declare namespace java {
              * @see java.lang.Thread#sleep
              */
             // @ts-ignore
-            delay(ms: number /*int*/): void
+            public delay(ms: number /*int*/): void
             /**
              * Waits until all events currently on the event queue have been processed.
              * @throws IllegalThreadStateException if called on the AWT event dispatching thread
              */
             // @ts-ignore
-            waitForIdle(): void
+            public waitForIdle(): void
             /**
              * Returns a string representation of this Robot.
              * @return the string representation.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

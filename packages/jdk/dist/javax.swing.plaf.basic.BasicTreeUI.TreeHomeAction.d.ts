@@ -11,13 +11,13 @@ declare namespace javax {
                     // @ts-ignore
                     class TreeHomeAction extends javax.swing.AbstractAction {
                         // @ts-ignore
-                        constructor(direction: number /*int*/, name: string)
+                        constructor(direction: number /*int*/, name: java.lang.String | string)
                         // @ts-ignore
                         direction: number /*int*/
                         // @ts-ignore
-                        actionPerformed(e: java.awt.event.ActionEvent): void
+                        public actionPerformed(e: java.awt.event.ActionEvent): void
                         // @ts-ignore
-                        isEnabled(): boolean
+                        public isEnabled(): boolean
                     }
                 }
             }

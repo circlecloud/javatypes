@@ -18,7 +18,7 @@ declare namespace org {
                                  * @param z The z coordinate of the block
                                  */
                                 // @ts-ignore
-                                visit(volume: V extends org.spongepowered.api.world.extent.BlockVolume, x: number /*int*/, y: number /*int*/, z: number /*int*/): void
+                                visit(volume: V, x: number /*int*/, y: number /*int*/, z: number /*int*/): void
                             }
                         }
                     }

@@ -17,11 +17,11 @@ declare namespace org {
                                      * @return This builder, for chaining
                                      */
                                     // @ts-ignore
-                                    group(name: string): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
+                                    group(name: java.lang.String | string): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
                                     // @ts-ignore
-                                    id(id: string): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
+                                    id(id: java.lang.String | string): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
                                     // @ts-ignore
-                                    name(name: string): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
+                                    name(name: java.lang.String | string): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
                                     // @ts-ignore
                                     name(name: org.spongepowered.api.text.translation.Translation): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.EndStep
                                     /**
@@ -34,7 +34,7 @@ declare namespace org {
                                      * @deprecated Use {#link #build()} instead in combination with {@link #id(String)}
                                      */
                                     // @ts-ignore
-                                    build(id: string, plugin: any): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe
+                                    build(id: java.lang.String | string, plugin: java.lang.Object | any): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe
                                 }
                             }
                         }

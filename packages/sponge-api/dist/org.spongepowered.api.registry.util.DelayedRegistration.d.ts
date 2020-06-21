@@ -4,7 +4,7 @@ declare namespace org {
             namespace registry {
                 namespace util {
                     // @ts-ignore
-                    class DelayedRegistration implements java.lang.annotation.Annotation {
+                    abstract class DelayedRegistration implements java.lang.annotation.Annotation {
                     }
                 }
             }

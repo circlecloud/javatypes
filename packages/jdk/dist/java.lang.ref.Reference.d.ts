@@ -8,31 +8,31 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Reference<T> extends java.lang.Object {
+            abstract class Reference<T> extends java.lang.Object {
                 /**
                  * Make the referent null.  This does not force the reference object to be enqueued.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Force the reference object to be enqueued if it has been associated with a queue.
                  * @return true if Reference is enqueued, false otherwise.
                  */
                 // @ts-ignore
-                enqueue(): boolean
+                public enqueue(): boolean
                 /**
                  * Return the referent of the reference object.
                  * @return the referent to which reference refers,
                  * 			or null if object has been cleared.
                  */
                 // @ts-ignore
-                get(): T
+                public get(): T
                 /**
                  * Return whether the reference object has been enqueued.
                  * @return true if Reference has been enqueued, false otherwise.
                  */
                 // @ts-ignore
-                isEnqueued(): boolean
+                public isEnqueued(): boolean
             }
         }
     }

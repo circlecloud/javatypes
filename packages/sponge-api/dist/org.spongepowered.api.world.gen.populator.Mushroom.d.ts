@@ -61,7 +61,7 @@ declare namespace org {
                              * @return The supplier override
                              */
                             // @ts-ignore
-                            getSupplierOverride(): java.util.Optional<java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType>>
+                            getSupplierOverride(): java.util.Optional<java.util.function$$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType>>
                             /**
                              * Sets the overriding supplier. If the supplier is present then it is used
                              * in place of the chance table while determining what MushroomType to
@@ -69,7 +69,7 @@ declare namespace org {
                              * @param override The new supplier override, or null
                              */
                             // @ts-ignore
-                            setSupplierOverride(override: java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType> | java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType>): void
+                            setSupplierOverride(override: java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.type.MushroomType>): void
                             /**
                              * Clears the supplier override to force the chance table to be used
                              * instead.

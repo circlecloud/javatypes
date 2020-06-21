@@ -56,7 +56,7 @@ declare namespace javax {
                  *  of an error.
                  */
                 // @ts-ignore
-                createSaslServer(mechanism: string, protocol: string, serverName: string, props: java.util.Map<java.lang.String, any>, cbh: javax.security.auth.callback.CallbackHandler): javax.security.sasl.SaslServer
+                createSaslServer(mechanism: java.lang.String | string, protocol: java.lang.String | string, serverName: java.lang.String | string, props: java.util.Map<java.lang.String | string, any>, cbh: javax.security.auth.callback.CallbackHandler): javax.security.sasl.SaslServer
                 /**
                  * Returns an array of names of mechanisms that match the specified
                  * mechanism selection policies.
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @return A non-null array containing a IANA-registered SASL mechanism names.
                  */
                 // @ts-ignore
-                getMechanismNames(props: java.util.Map<java.lang.String, any>): java.lang.String[]
+                getMechanismNames(props: java.util.Map<java.lang.String | string, any>): string[]
             }
         }
     }

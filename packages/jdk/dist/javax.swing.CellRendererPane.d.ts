@@ -43,24 +43,24 @@ declare namespace javax {
              * cell renderer child is configured.
              */
             // @ts-ignore
-            invalidate(): void
+            public invalidate(): void
             /**
              * Shouldn't be called.
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Shouldn't be called.
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * If the specified component is already a child of this then we don't
              * bother doing anything - stacking order doesn't matter for cell
              * renderer components (CellRendererPane doesn't paint anyway).
              */
             // @ts-ignore
-            addImpl(x: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(x: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Paint a cell renderer component c on graphics object g.  Before the component
              * is drawn it's reparented to this (if that's necessary), it's bounds
@@ -73,17 +73,17 @@ declare namespace javax {
              * validated before painted.
              */
             // @ts-ignore
-            paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, shouldValidate: boolean): void
+            public paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, shouldValidate: boolean): void
             /**
              * Calls this.paintComponent(g, c, p, x, y, w, h, false).
              */
             // @ts-ignore
-            paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Calls this.paintComponent() with the rectangles x,y,width,height fields.
              */
             // @ts-ignore
-            paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, r: java.awt.Rectangle): void
+            public paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, r: java.awt.Rectangle): void
             /**
              * Gets the AccessibleContext associated with this CellRendererPane.
              * For CellRendererPanes, the AccessibleContext takes the form of an
@@ -93,7 +93,7 @@ declare namespace javax {
              *          AccessibleContext of this CellRendererPane
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

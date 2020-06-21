@@ -17,7 +17,7 @@ declare namespace org {
                      * @see HttpHeaders#add(String, String)
                      */
                     // @ts-ignore
-                    header(headerName: string, ...headerValues: string[]): B
+                    header(headerName: java.lang.String | string, ...headerValues: java.lang.String[] | string[]): B
                     /**
                      * Copy the given headers into the entity's headers map.
                      * @param headers the existing HttpHeaders to copy from
@@ -38,7 +38,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    headers(headersConsumer: java.util.function.Consumer<org.springframework.http.HttpHeaders> | java.util.function$.Consumer<org.springframework.http.HttpHeaders>): B
+                    headers(headersConsumer: java.util.function$.Consumer<org.springframework.http.HttpHeaders>): B
                     /**
                      * Set the set of allowed {@link HttpMethod HTTP methods}, as specified
                      * by the {@code Allow} header.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @see HttpHeaders#setETag(String)
                      */
                     // @ts-ignore
-                    eTag(etag: string): B
+                    eTag(etag: java.lang.String | string): B
                     /**
                      * Set the time the resource was last changed, as specified by the
                      * {@code Last-Modified} header.
@@ -117,7 +117,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    varyBy(...requestHeaders: string[]): B
+                    varyBy(...requestHeaders: java.lang.String[] | string[]): B
                     /**
                      * Build the response entity with no body.
                      * @return the response entity

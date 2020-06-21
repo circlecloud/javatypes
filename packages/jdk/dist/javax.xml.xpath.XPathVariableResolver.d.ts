@@ -24,7 +24,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>variableName</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                resolveVariable(variableName: javax.xml.namespace.QName): java.lang.Object
+                resolveVariable(variableName: javax.xml.namespace.QName): any
             }
         }
     }

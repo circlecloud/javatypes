@@ -15,13 +15,13 @@ declare namespace org {
                 // @ts-ignore
                 constructor(logger: Log)
                 // @ts-ignore
-                write(ch: string): void
+                public write(ch: string): void
                 // @ts-ignore
-                write(buffer: string[], offset: number /*int*/, length: number /*int*/): void
+                public write(buffer: string[], offset: number /*int*/, length: number /*int*/): void
                 // @ts-ignore
-                flush(): void
+                public flush(): void
                 // @ts-ignore
-                close(): void
+                public close(): void
             }
         }
     }

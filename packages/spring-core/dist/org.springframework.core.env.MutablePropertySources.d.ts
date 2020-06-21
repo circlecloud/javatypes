@@ -28,48 +28,48 @@ declare namespace org {
                     // @ts-ignore
                     constructor(propertySources: org.springframework.core.env.PropertySources)
                     // @ts-ignore
-                    iterator(): java.util.Iterator<org.springframework.core.env.PropertySource<?>>
+                    public iterator(): java.util.Iterator<org.springframework.core.env.PropertySource<any>>
                     // @ts-ignore
-                    spliterator(): java.util.Spliterator<org.springframework.core.env.PropertySource<?>>
+                    public spliterator(): java.util.Spliterator<org.springframework.core.env.PropertySource<any>>
                     // @ts-ignore
-                    stream(): java.util.stream.Stream<org.springframework.core.env.PropertySource<?>>
+                    public stream(): java.util.stream.Stream<org.springframework.core.env.PropertySource<any>>
                     // @ts-ignore
-                    contains(name: string): boolean
+                    public contains(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    get(name: string): org.springframework.core.env.PropertySource<?>
+                    public get(name: java.lang.String | string): org.springframework.core.env.PropertySource<any>
                     /**
                      * Add the given property source object with highest precedence.
                      */
                     // @ts-ignore
-                    addFirst(propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public addFirst(propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Add the given property source object with lowest precedence.
                      */
                     // @ts-ignore
-                    addLast(propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public addLast(propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Add the given property source object with precedence immediately higher
                      * than the named relative property source.
                      */
                     // @ts-ignore
-                    addBefore(relativePropertySourceName: string, propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public addBefore(relativePropertySourceName: java.lang.String | string, propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Add the given property source object with precedence immediately lower
                      * than the named relative property source.
                      */
                     // @ts-ignore
-                    addAfter(relativePropertySourceName: string, propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public addAfter(relativePropertySourceName: java.lang.String | string, propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Return the precedence of the given property source, {@code -1} if not found.
                      */
                     // @ts-ignore
-                    precedenceOf(propertySource: org.springframework.core.env.PropertySource<any>): int
+                    public precedenceOf(propertySource: org.springframework.core.env.PropertySource<any>): number /*int*/
                     /**
                      * Remove and return the property source with the given name, {@code null} if not found.
                      * @param name the name of the property source to find and remove
                      */
                     // @ts-ignore
-                    remove(name: string): org.springframework.core.env.PropertySource<?>
+                    public remove(name: java.lang.String | string): org.springframework.core.env.PropertySource<any>
                     /**
                      * Replace the property source with the given name with the given property source object.
                      * @param name the name of the property source to find and replace
@@ -78,19 +78,19 @@ declare namespace org {
                      * @see #contains
                      */
                     // @ts-ignore
-                    replace(name: string, propertySource: org.springframework.core.env.PropertySource<any>): void
+                    public replace(name: java.lang.String | string, propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Return the number of {@link PropertySource} objects contained.
                      */
                     // @ts-ignore
-                    size(): int
+                    public size(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Ensure that the given property source is not being added relative to itself.
                      */
                     // @ts-ignore
-                    assertLegalRelativeAddition(relativePropertySourceName: string, propertySource: org.springframework.core.env.PropertySource<any>): void
+                    assertLegalRelativeAddition(relativePropertySourceName: java.lang.String | string, propertySource: org.springframework.core.env.PropertySource<any>): void
                     /**
                      * Remove the given property source if it is present.
                      */

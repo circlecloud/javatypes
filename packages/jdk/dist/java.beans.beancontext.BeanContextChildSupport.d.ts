@@ -35,7 +35,7 @@ declare namespace java {
                  * this <code>BeanContextChild</code> is nested.
                  */
                 // @ts-ignore
-                beanContextChildPeer: java.beans.beancontext.BeanContextChild
+                public beanContextChildPeer: java.beans.beancontext.BeanContextChild
                 /**
                  * The <tt>PropertyChangeSupport</tt> associated with this
                  * <tt>BeanContextChildSupport</tt>.
@@ -68,7 +68,7 @@ declare namespace java {
                  * @throws PropertyVetoException if the change is rejected
                  */
                 // @ts-ignore
-                setBeanContext(bc: java.beans.beancontext.BeanContext): void
+                public setBeanContext(bc: java.beans.beancontext.BeanContext): void
                 /**
                  * Gets the nesting <code>BeanContext</code>
                  * for this <code>BeanContextChildSupport</code>.
@@ -76,7 +76,7 @@ declare namespace java {
                  *  this <code>BeanContextChildSupport</code>.
                  */
                 // @ts-ignore
-                getBeanContext(): java.beans.beancontext.BeanContext
+                public getBeanContext(): java.beans.beancontext.BeanContext
                 /**
                  * Add a PropertyChangeListener for a specific property.
                  * The same listener object may be added more than once.  For each
@@ -88,7 +88,7 @@ declare namespace java {
                  * @param pcl The <code>PropertyChangeListener</code> to be added
                  */
                 // @ts-ignore
-                addPropertyChangeListener(name: string, pcl: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(name: java.lang.String | string, pcl: java.beans.PropertyChangeListener): void
                 /**
                  * Remove a PropertyChangeListener for a specific property.
                  * If <code>pcl</code> was added more than once to the same event
@@ -102,7 +102,7 @@ declare namespace java {
                  * @param pcl The PropertyChangeListener to be removed
                  */
                 // @ts-ignore
-                removePropertyChangeListener(name: string, pcl: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(name: java.lang.String | string, pcl: java.beans.PropertyChangeListener): void
                 /**
                  * Add a VetoableChangeListener for a specific property.
                  * The same listener object may be added more than once.  For each
@@ -114,7 +114,7 @@ declare namespace java {
                  * @param vcl The <code>VetoableChangeListener</code> to be added
                  */
                 // @ts-ignore
-                addVetoableChangeListener(name: string, vcl: java.beans.VetoableChangeListener): void
+                public addVetoableChangeListener(name: java.lang.String | string, vcl: java.beans.VetoableChangeListener): void
                 /**
                  * Removes a <code>VetoableChangeListener</code>.
                  * If <code>pcl</code> was added more than once to the same event
@@ -128,7 +128,7 @@ declare namespace java {
                  * @param vcl The <code>VetoableChangeListener</code> to be removed
                  */
                 // @ts-ignore
-                removeVetoableChangeListener(name: string, vcl: java.beans.VetoableChangeListener): void
+                public removeVetoableChangeListener(name: java.lang.String | string, vcl: java.beans.VetoableChangeListener): void
                 /**
                  * A service provided by the nesting BeanContext has been revoked.
                  * Subclasses may override this method in order to implement their own
@@ -137,7 +137,7 @@ declare namespace java {
                  *  result of a service being revoked
                  */
                 // @ts-ignore
-                serviceRevoked(bcsre: java.beans.beancontext.BeanContextServiceRevokedEvent): void
+                public serviceRevoked(bcsre: java.beans.beancontext.BeanContextServiceRevokedEvent): void
                 /**
                  * A new service is available from the nesting BeanContext.
                  * Subclasses may override this method in order to implement their own
@@ -146,20 +146,20 @@ declare namespace java {
                  *  result of a service becoming available
                  */
                 // @ts-ignore
-                serviceAvailable(bcsae: java.beans.beancontext.BeanContextServiceAvailableEvent): void
+                public serviceAvailable(bcsae: java.beans.beancontext.BeanContextServiceAvailableEvent): void
                 /**
                  * Gets the <tt>BeanContextChild</tt> associated with this
                  * <tt>BeanContextChildSupport</tt>.
                  * @return the <tt>BeanContextChild</tt> peer of this class
                  */
                 // @ts-ignore
-                getBeanContextChildPeer(): java.beans.beancontext.BeanContextChild
+                public getBeanContextChildPeer(): java.beans.beancontext.BeanContextChild
                 /**
                  * Reports whether or not this class is a delegate of another.
                  * @return true if this class is a delegate of another
                  */
                 // @ts-ignore
-                isDelegated(): boolean
+                public isDelegated(): boolean
                 /**
                  * Report a bound property update to any registered listeners. No event is
                  * fired if old and new are equal and non-null.
@@ -168,7 +168,7 @@ declare namespace java {
                  * @param newValue  The new value of the property
                  */
                 // @ts-ignore
-                firePropertyChange(name: string, oldValue: any, newValue: any): void
+                public firePropertyChange(name: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
                 /**
                  * Report a vetoable property update to any registered listeners.
                  * If anyone vetos the change, then fire a new event
@@ -184,7 +184,7 @@ declare namespace java {
                  *  change to be rolled back.
                  */
                 // @ts-ignore
-                fireVetoableChange(name: string, oldValue: any, newValue: any): void
+                public fireVetoableChange(name: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
                 /**
                  * Called from setBeanContext to validate (or otherwise) the
                  * pending change in the nesting BeanContext property value.
@@ -195,7 +195,7 @@ declare namespace java {
                  * @return <code>true</code> if the change operation is to be vetoed
                  */
                 // @ts-ignore
-                validatePendingSetBeanContext(newValue: java.beans.beancontext.BeanContext): boolean
+                public validatePendingSetBeanContext(newValue: java.beans.beancontext.BeanContext): boolean
                 /**
                  * This method may be overridden by subclasses to provide their own
                  * release behaviors. When invoked any resources held by this instance

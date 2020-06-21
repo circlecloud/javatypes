@@ -35,22 +35,22 @@ declare namespace javax {
                      * The standard DC luminance Huffman table.
                      */
                     // @ts-ignore
-                    readonly StdDCLuminance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
+                    public static readonly StdDCLuminance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
                     /**
                      * The standard DC chrominance Huffman table.
                      */
                     // @ts-ignore
-                    readonly StdDCChrominance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
+                    public static readonly StdDCChrominance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
                     /**
                      * The standard AC luminance Huffman table.
                      */
                     // @ts-ignore
-                    readonly StdACLuminance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
+                    public static readonly StdACLuminance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
                     /**
                      * The standard AC chrominance Huffman table.
                      */
                     // @ts-ignore
-                    readonly StdACChrominance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
+                    public static readonly StdACChrominance: javax.imageio.plugins.jpeg.JPEGHuffmanTable
                     /**
                      * Returns an array of <code>short</code>s containing the number of values
                      * for each length in the Huffman table. The returned array is a copy.
@@ -59,7 +59,7 @@ declare namespace javax {
                      * @see #getValues
                      */
                     // @ts-ignore
-                    getLengths(): short[]
+                    public getLengths(): number /*short*/[]
                     /**
                      * Returns an array of <code>short</code>s containing the values arranged
                      * by increasing length of their corresponding codes.
@@ -69,13 +69,13 @@ declare namespace javax {
                      * @see #getLengths
                      */
                     // @ts-ignore
-                    getValues(): short[]
+                    public getValues(): number /*short*/[]
                     /**
                      * Returns a {@code String} representing this Huffman table.
                      * @return a {#code String} representing this Huffman table.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

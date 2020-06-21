@@ -51,7 +51,7 @@ declare namespace javax {
                  * @throws NullPointerException if the specified {#code g} is {@code null}
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitializes the {@code insets} parameter
                  * with this border's current insets.
@@ -65,14 +65,14 @@ declare namespace javax {
                  * @see Math#ceil
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns the {@link BasicStroke} object used to stroke a shape
                  * during the border rendering.
                  * @return the {#link BasicStroke} object
                  */
                 // @ts-ignore
-                getStroke(): java.awt.BasicStroke
+                public getStroke(): java.awt.BasicStroke
                 /**
                  * Returns the {@link Paint} object used to generate a color
                  * during the border rendering.
@@ -80,7 +80,7 @@ declare namespace javax {
                  *          if the {@code paint} parameter is not set
                  */
                 // @ts-ignore
-                getPaint(): java.awt.Paint
+                public getPaint(): java.awt.Paint
             }
         }
     }

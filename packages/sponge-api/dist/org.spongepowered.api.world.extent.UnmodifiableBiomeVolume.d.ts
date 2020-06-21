@@ -41,7 +41,7 @@ declare namespace org {
                         // @ts-ignore
                         getUnmodifiableBiomeView(): org.spongepowered.api.world.extent.UnmodifiableBiomeVolume
                         // @ts-ignore
-                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.BiomeVolumeWorker<? extends org.spongepowered.api.world.extent.UnmodifiableBiomeVolume>
+                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.BiomeVolumeWorker<any>
                     }
                 }
             }

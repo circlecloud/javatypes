@@ -12,7 +12,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        mouseMoved(anEvent: java.awt.event.MouseEvent): void
+                        public mouseMoved(anEvent: java.awt.event.MouseEvent): void
                     }
                 }
             }

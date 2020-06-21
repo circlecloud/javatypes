@@ -9,7 +9,7 @@ declare namespace org {
          *  suggests a bad API design.
          */
         // @ts-ignore
-        class UndefinedNullability implements java.lang.annotation.Annotation {
+        abstract class UndefinedNullability implements java.lang.annotation.Annotation {
         }
     }
 }

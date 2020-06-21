@@ -18,7 +18,7 @@ declare namespace java {
                  * version of the class.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Returns the value of the private key, {@code x}.
                  * @return the value of the private key, {#code x}.

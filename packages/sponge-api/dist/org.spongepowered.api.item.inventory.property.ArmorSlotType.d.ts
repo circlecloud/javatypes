@@ -32,7 +32,7 @@ declare namespace org {
                              * @param operator logical operator (either EQUAL or NOTEQUAL) to apply
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                             /**
                              * Create an ArmourSlotType property which matches ArmourSlotType properties
                              * with equal value.
@@ -40,7 +40,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(value: any): org.spongepowered.api.item.inventory.property.ArmorSlotType
+                            public static of(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.ArmorSlotType
                             /**
                              * Create an ArmourSlotType property which matches ArmourSlotType properties
                              * with unequal value.
@@ -48,7 +48,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            not(value: any): org.spongepowered.api.item.inventory.property.ArmorSlotType
+                            public static not(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.ArmorSlotType
                         }
                     }
                 }

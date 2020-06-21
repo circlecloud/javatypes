@@ -56,27 +56,27 @@ declare namespace java {
              * Examples: English, French.
              */
             // @ts-ignore
-            readonly LEFT_TO_RIGHT: java.awt.ComponentOrientation
+            public static readonly LEFT_TO_RIGHT: java.awt.ComponentOrientation
             /**
              * Items run right to left and lines flow top to bottom
              * Examples: Arabic, Hebrew.
              */
             // @ts-ignore
-            readonly RIGHT_TO_LEFT: java.awt.ComponentOrientation
+            public static readonly RIGHT_TO_LEFT: java.awt.ComponentOrientation
             /**
              * Indicates that a component's orientation has not been set.
              * To preserve the behavior of existing applications,
              * isLeftToRight will return true for this value.
              */
             // @ts-ignore
-            readonly UNKNOWN: java.awt.ComponentOrientation
+            public static readonly UNKNOWN: java.awt.ComponentOrientation
             /**
              * Are lines horizontal?
              * This will return true for horizontal, left-to-right writing
              * systems such as Roman.
              */
             // @ts-ignore
-            isHorizontal(): boolean
+            public isHorizontal(): boolean
             /**
              * HorizontalLines: Do items run left-to-right?<br>
              * Vertical Lines:  Do lines run left-to-right?<br>
@@ -84,13 +84,13 @@ declare namespace java {
              * systems such as Roman.
              */
             // @ts-ignore
-            isLeftToRight(): boolean
+            public isLeftToRight(): boolean
             /**
              * Returns the orientation that is appropriate for the given locale.
              * @param locale the specified locale
              */
             // @ts-ignore
-            getOrientation(locale: java.util.Locale): java.awt.ComponentOrientation
+            public static getOrientation(locale: java.util.Locale): java.awt.ComponentOrientation
             /**
              * Returns the orientation appropriate for the given ResourceBundle's
              * localization.  Three approaches are tried, in the following order:
@@ -104,7 +104,7 @@ declare namespace java {
              * @deprecated As of J2SE 1.4, use {#link #getOrientation(java.util.Locale)}.
              */
             // @ts-ignore
-            getOrientation(bdl: java.util.ResourceBundle): java.awt.ComponentOrientation
+            public static getOrientation(bdl: java.util.ResourceBundle): java.awt.ComponentOrientation
         }
     }
 }

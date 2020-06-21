@@ -25,7 +25,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class EnumControl extends javax.sound.sampled.Control {
+            abstract class EnumControl extends javax.sound.sampled.Control {
                 /**
                  * Constructs a new enumerated control object with the given parameters.
                  * @param type the type of control represented this enumerated control object
@@ -33,7 +33,7 @@ declare namespace javax {
                  * @param value the initial control value
                  */
                 // @ts-ignore
-                constructor(type: javax.sound.sampled.EnumControl.Type, values: any[], value: any)
+                constructor(type: javax.sound.sampled.EnumControl.Type, values: java.lang.Object[] | any[], value: java.lang.Object | any)
                 /**
                  * Sets the current value for the control.  The default implementation
                  * simply sets the value as indicated.  If the value indicated is not
@@ -45,25 +45,25 @@ declare namespace javax {
                  *  within the allowable range
                  */
                 // @ts-ignore
-                setValue(value: any): void
+                public setValue(value: java.lang.Object | any): void
                 /**
                  * Obtains this control's current value.
                  * @return the current value
                  */
                 // @ts-ignore
-                getValue(): java.lang.Object
+                public getValue(): any
                 /**
                  * Returns the set of possible values for this control.
                  * @return the set of possible values
                  */
                 // @ts-ignore
-                getValues(): java.lang.Object[]
+                public getValues(): any[]
                 /**
                  * Provides a string representation of the control.
                  * @return a string description
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

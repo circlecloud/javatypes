@@ -11,21 +11,21 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly COMMENT_PREFIX: string
+                    static readonly COMMENT_PREFIX: java.lang.String | string
                     // @ts-ignore
-                    readonly BLANK_CONFIG: string
+                    static readonly BLANK_CONFIG: java.lang.String | string
                     // @ts-ignore
-                    saveToString(): java.lang.String
+                    public saveToString(): string
                     // @ts-ignore
-                    loadFromString(contents: string): void
+                    public loadFromString(contents: java.lang.String | string): void
                     // @ts-ignore
-                    convertMapsToSections(input: java.util.Map<any, ?>, section: org.bukkit.configuration.ConfigurationSection): void
+                    convertMapsToSections(input: java.util.Map<any, any>, section: org.bukkit.configuration.ConfigurationSection): void
                     // @ts-ignore
-                    parseHeader(input: string): java.lang.String
+                    parseHeader(input: java.lang.String | string): string
                     // @ts-ignore
-                    buildHeader(): java.lang.String
+                    buildHeader(): string
                     // @ts-ignore
-                    options(): org.bukkit.configuration.file.YamlConfigurationOptions
+                    public options(): org.bukkit.configuration.file.YamlConfigurationOptions
                     /**
                      * Creates a new {@link YamlConfiguration}, loading from the given file.
                      * <p>
@@ -39,7 +39,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if file is null
                      */
                     // @ts-ignore
-                    loadConfiguration(file: java.io.File): org.bukkit.configuration.file.YamlConfiguration
+                    public static loadConfiguration(file: java.io.File): org.bukkit.configuration.file.YamlConfiguration
                     /**
                      * Creates a new {@link YamlConfiguration}, loading from the given reader.
                      * <p>
@@ -51,7 +51,7 @@ declare namespace org {
                      * @throws IllegalArgumentException Thrown if stream is null
                      */
                     // @ts-ignore
-                    loadConfiguration(reader: java.io.Reader): org.bukkit.configuration.file.YamlConfiguration
+                    public static loadConfiguration(reader: java.io.Reader): org.bukkit.configuration.file.YamlConfiguration
                 }
             }
         }

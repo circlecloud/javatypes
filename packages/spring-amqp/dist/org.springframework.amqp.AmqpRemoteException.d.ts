@@ -10,7 +10,7 @@ declare namespace org {
             // @ts-ignore
             class AmqpRemoteException extends org.springframework.amqp.AmqpException {
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

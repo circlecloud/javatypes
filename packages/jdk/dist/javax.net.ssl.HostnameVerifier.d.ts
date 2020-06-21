@@ -27,7 +27,7 @@ declare namespace javax {
                  * @return true if the host name is acceptable
                  */
                 // @ts-ignore
-                verify(hostname: string, session: javax.net.ssl.SSLSession): boolean
+                verify(hostname: java.lang.String | string, session: javax.net.ssl.SSLSession): boolean
             }
         }
     }

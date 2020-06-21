@@ -19,7 +19,7 @@ declare namespace javax {
                          *            name of the outermost element of the Header block.
                          */
                         // @ts-ignore
-                        getHeaders(): java.util.Set<javax.xml.namespace.QName>
+                        getHeaders(): Array<javax.xml.namespace.QName>
                     }
                 }
             }

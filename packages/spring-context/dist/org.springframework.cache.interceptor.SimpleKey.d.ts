@@ -16,18 +16,18 @@ declare namespace org {
                      * @param elements the elements of the key
                      */
                     // @ts-ignore
-                    constructor(...elements: any[])
+                    constructor(...elements: java.lang.Object[] | any[])
                     /**
                      * An empty key.
                      */
                     // @ts-ignore
-                    readonly EMPTY: org.springframework.cache.interceptor.SimpleKey
+                    public static readonly EMPTY: org.springframework.cache.interceptor.SimpleKey
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

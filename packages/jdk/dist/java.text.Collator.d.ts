@@ -72,7 +72,7 @@ declare namespace java {
          * @author Helena Shih, Laura Werner, Richard Gillam
          */
         // @ts-ignore
-        class Collator extends java.lang.Object implements java.util.Comparator<java.lang.Object>, java.lang.Cloneable {
+        abstract class Collator extends java.lang.Object implements java.util.Comparator<java.lang.Object | any>, java.lang.Cloneable {
             /**
              * Default constructor.  This constructor is
              * protected so subclasses can get access to it. Users typically create
@@ -90,7 +90,7 @@ declare namespace java {
              * @see java.text.Collator#getStrength
              */
             // @ts-ignore
-            readonly PRIMARY: number /*int*/
+            public static readonly PRIMARY: number /*int*/
             /**
              * Collator strength value.  When set, only SECONDARY and above differences are
              * considered significant during comparison. The assignment of strengths
@@ -101,7 +101,7 @@ declare namespace java {
              * @see java.text.Collator#getStrength
              */
             // @ts-ignore
-            readonly SECONDARY: number /*int*/
+            public static readonly SECONDARY: number /*int*/
             /**
              * Collator strength value.  When set, only TERTIARY and above differences are
              * considered significant during comparison. The assignment of strengths
@@ -111,7 +111,7 @@ declare namespace java {
              * @see java.text.Collator#getStrength
              */
             // @ts-ignore
-            readonly TERTIARY: number /*int*/
+            public static readonly TERTIARY: number /*int*/
             /**
              * Collator strength value.  When set, all differences are
              * considered significant during comparison. The assignment of strengths
@@ -124,7 +124,7 @@ declare namespace java {
              * level if decomposition is set to NO_DECOMPOSITION.
              */
             // @ts-ignore
-            readonly IDENTICAL: number /*int*/
+            public static readonly IDENTICAL: number /*int*/
             /**
              * Decomposition mode value. With NO_DECOMPOSITION
              * set, accented characters will not be decomposed for collation. This
@@ -134,7 +134,7 @@ declare namespace java {
              * @see java.text.Collator#setDecomposition
              */
             // @ts-ignore
-            readonly NO_DECOMPOSITION: number /*int*/
+            public static readonly NO_DECOMPOSITION: number /*int*/
             /**
              * Decomposition mode value. With CANONICAL_DECOMPOSITION
              * set, characters that are canonical variants according to Unicode
@@ -149,7 +149,7 @@ declare namespace java {
              * @see java.text.Collator#setDecomposition
              */
             // @ts-ignore
-            readonly CANONICAL_DECOMPOSITION: number /*int*/
+            public static readonly CANONICAL_DECOMPOSITION: number /*int*/
             /**
              * Decomposition mode value. With FULL_DECOMPOSITION
              * set, both Unicode canonical variants and Unicode compatibility variants
@@ -168,7 +168,7 @@ declare namespace java {
              * @see java.text.Collator#setDecomposition
              */
             // @ts-ignore
-            readonly FULL_DECOMPOSITION: number /*int*/
+            public static readonly FULL_DECOMPOSITION: number /*int*/
             /**
              * Gets the Collator for the current default locale.
              * The default locale is determined by java.util.Locale.getDefault.
@@ -176,7 +176,7 @@ declare namespace java {
              * @see java.util.Locale#getDefault
              */
             // @ts-ignore
-            getInstance(): java.text.Collator
+            public static getInstance(): java.text.Collator
             /**
              * Gets the Collator for the desired locale.
              * @param desiredLocale the desired locale.
@@ -185,7 +185,7 @@ declare namespace java {
              * @see java.util.ResourceBundle
              */
             // @ts-ignore
-            getInstance(desiredLocale: java.util.Locale): java.text.Collator
+            public static getInstance(desiredLocale: java.util.Locale): java.text.Collator
             /**
              * Compares the source string to the target string according to the
              * collation rules for this Collator.  Returns an integer less than,
@@ -206,7 +206,7 @@ declare namespace java {
              * @see java.text.Collator#getCollationKey
              */
             // @ts-ignore
-            abstract compare(source: string, target: string): int
+            public abstract compare(source: java.lang.String | string, target: java.lang.String | string): number /*int*/
             /**
              * Compares its two arguments for order.  Returns a negative integer,
              * zero, or a positive integer as the first argument is less than, equal
@@ -222,7 +222,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compare(o1: any, o2: any): int
+            public compare(o1: java.lang.Object | any, o2: java.lang.Object | any): number /*int*/
             /**
              * Transforms the String into a series of bits that can be compared bitwise
              * to other CollationKeys. CollationKeys provide better performance than
@@ -235,7 +235,7 @@ declare namespace java {
              * @see java.text.Collator#compare
              */
             // @ts-ignore
-            abstract getCollationKey(source: string): java.text.CollationKey
+            public abstract getCollationKey(source: java.lang.String | string): java.text.CollationKey
             /**
              * Convenience method for comparing the equality of two strings based on
              * this Collator's collation rules.
@@ -246,7 +246,7 @@ declare namespace java {
              * @see java.text.Collator#compare
              */
             // @ts-ignore
-            equals(source: string, target: string): boolean
+            public equals(source: java.lang.String | string, target: java.lang.String | string): boolean
             /**
              * Returns this Collator's strength property.  The strength property determines
              * the minimum level of difference considered significant during comparison.
@@ -259,7 +259,7 @@ declare namespace java {
              * @see java.text.Collator#IDENTICAL
              */
             // @ts-ignore
-            getStrength(): int
+            public getStrength(): number /*int*/
             /**
              * Sets this Collator's strength property.  The strength property determines
              * the minimum level of difference considered significant during comparison.
@@ -274,7 +274,7 @@ declare namespace java {
              *  PRIMARY, SECONDARY, TERTIARY or IDENTICAL.
              */
             // @ts-ignore
-            setStrength(newStrength: number /*int*/): void
+            public setStrength(newStrength: number /*int*/): void
             /**
              * Get the decomposition mode of this Collator. Decomposition mode
              * determines how Unicode composed characters are handled. Adjusting
@@ -295,7 +295,7 @@ declare namespace java {
              * @see java.text.Collator#FULL_DECOMPOSITION
              */
             // @ts-ignore
-            getDecomposition(): int
+            public getDecomposition(): number /*int*/
             /**
              * Set the decomposition mode of this Collator. See getDecomposition
              * for a description of decomposition mode.
@@ -308,7 +308,7 @@ declare namespace java {
              *  mode.
              */
             // @ts-ignore
-            setDecomposition(decompositionMode: number /*int*/): void
+            public setDecomposition(decompositionMode: number /*int*/): void
             /**
              * Returns an array of all locales for which the
              * <code>getInstance</code> methods of this class can return
@@ -322,12 +322,12 @@ declare namespace java {
              *          <code>Collator</code> instances are available.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Overrides Cloneable
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Compares the equality of two Collators.
              * @param that the Collator to be compared with this.
@@ -335,12 +335,12 @@ declare namespace java {
              *  false otherwise.
              */
             // @ts-ignore
-            equals(that: any): boolean
+            public equals(that: java.lang.Object | any): boolean
             /**
              * Generates the hash code for this Collator.
              */
             // @ts-ignore
-            abstract hashCode(): int
+            public abstract hashCode(): number /*int*/
         }
     }
 }

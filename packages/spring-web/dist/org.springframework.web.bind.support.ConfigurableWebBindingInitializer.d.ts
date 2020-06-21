@@ -31,12 +31,12 @@ declare namespace org {
                          * @see org.springframework.validation.DataBinder#setAutoGrowNestedPaths
                          */
                         // @ts-ignore
-                        setAutoGrowNestedPaths(autoGrowNestedPaths: boolean): void
+                        public setAutoGrowNestedPaths(autoGrowNestedPaths: boolean): void
                         /**
                          * Return whether a binder should attempt to "auto-grow" a nested path that contains a null value.
                          */
                         // @ts-ignore
-                        isAutoGrowNestedPaths(): boolean
+                        public isAutoGrowNestedPaths(): boolean
                         /**
                          * Set whether to use direct field access instead of bean property access.
                          * <p>Default is {@code false}, using bean property access.
@@ -45,12 +45,12 @@ declare namespace org {
                          * @see org.springframework.validation.DataBinder#initBeanPropertyAccess()
                          */
                         // @ts-ignore
-                        setDirectFieldAccess(directFieldAccess: boolean): void
+                        public setDirectFieldAccess(directFieldAccess: boolean): void
                         /**
                          * Return whether to use direct field access instead of bean property access.
                          */
                         // @ts-ignore
-                        isDirectFieldAccess(): boolean
+                        public isDirectFieldAccess(): boolean
                         /**
                          * Set the strategy to use for resolving errors into message codes.
                          * Applies the given strategy to all data binders used by this controller.
@@ -59,12 +59,12 @@ declare namespace org {
                          * @see org.springframework.validation.DataBinder#setMessageCodesResolver
                          */
                         // @ts-ignore
-                        setMessageCodesResolver(messageCodesResolver: MessageCodesResolver): void
+                        public setMessageCodesResolver(messageCodesResolver: MessageCodesResolver): void
                         /**
                          * Return the strategy to use for resolving errors into message codes.
                          */
                         // @ts-ignore
-                        getMessageCodesResolver(): MessageCodesResolver
+                        public getMessageCodesResolver(): MessageCodesResolver
                         /**
                          * Set the strategy to use for processing binding errors, that is,
                          * required field errors and {@code PropertyAccessException}s.
@@ -73,50 +73,50 @@ declare namespace org {
                          * @see org.springframework.validation.DataBinder#setBindingErrorProcessor
                          */
                         // @ts-ignore
-                        setBindingErrorProcessor(bindingErrorProcessor: BindingErrorProcessor): void
+                        public setBindingErrorProcessor(bindingErrorProcessor: BindingErrorProcessor): void
                         /**
                          * Return the strategy to use for processing binding errors.
                          */
                         // @ts-ignore
-                        getBindingErrorProcessor(): BindingErrorProcessor
+                        public getBindingErrorProcessor(): BindingErrorProcessor
                         /**
                          * Set the Validator to apply after each binding step.
                          */
                         // @ts-ignore
-                        setValidator(validator: Validator): void
+                        public setValidator(validator: Validator): void
                         /**
                          * Return the Validator to apply after each binding step, if any.
                          */
                         // @ts-ignore
-                        getValidator(): Validator
+                        public getValidator(): Validator
                         /**
                          * Specify a ConversionService which will apply to every DataBinder.
                          * @since 3.0
                          */
                         // @ts-ignore
-                        setConversionService(conversionService: ConversionService): void
+                        public setConversionService(conversionService: ConversionService): void
                         /**
                          * Return the ConversionService which will apply to every DataBinder.
                          */
                         // @ts-ignore
-                        getConversionService(): ConversionService
+                        public getConversionService(): ConversionService
                         /**
                          * Specify a single PropertyEditorRegistrar to be applied to every DataBinder.
                          */
                         // @ts-ignore
-                        setPropertyEditorRegistrar(propertyEditorRegistrar: PropertyEditorRegistrar): void
+                        public setPropertyEditorRegistrar(propertyEditorRegistrar: PropertyEditorRegistrar): void
                         /**
                          * Specify multiple PropertyEditorRegistrars to be applied to every DataBinder.
                          */
                         // @ts-ignore
-                        setPropertyEditorRegistrars(propertyEditorRegistrars: PropertyEditorRegistrar[]): void
+                        public setPropertyEditorRegistrars(propertyEditorRegistrars: PropertyEditorRegistrar[]): void
                         /**
                          * Return the PropertyEditorRegistrars to be applied to every DataBinder.
                          */
                         // @ts-ignore
-                        getPropertyEditorRegistrars(): PropertyEditorRegistrar[]
+                        public getPropertyEditorRegistrars(): PropertyEditorRegistrar[]
                         // @ts-ignore
-                        initBinder(binder: org.springframework.web.bind.WebDataBinder): void
+                        public initBinder(binder: org.springframework.web.bind.WebDataBinder): void
                     }
                 }
             }

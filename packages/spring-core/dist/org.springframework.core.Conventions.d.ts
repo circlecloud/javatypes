@@ -27,7 +27,7 @@ declare namespace org {
                  * @return the generated variable name
                  */
                 // @ts-ignore
-                getVariableName(value: any): java.lang.String
+                public static getVariableName(value: java.lang.Object | any): string
                 /**
                  * Determine the conventional variable name for the given parameter taking
                  * the generic collection type, if any, into account.
@@ -39,7 +39,7 @@ declare namespace org {
                  * @return the generated variable name
                  */
                 // @ts-ignore
-                getVariableNameForParameter(parameter: org.springframework.core.MethodParameter): java.lang.String
+                public static getVariableNameForParameter(parameter: org.springframework.core.MethodParameter): string
                 /**
                  * Determine the conventional variable name for the return type of the
                  * given method, taking the generic collection type, if any, into account.
@@ -47,7 +47,7 @@ declare namespace org {
                  * @return the generated variable name
                  */
                 // @ts-ignore
-                getVariableNameForReturnType(method: java.lang.reflect.Method): java.lang.String
+                public static getVariableNameForReturnType(method: java.lang.reflect.Method): string
                 /**
                  * Determine the conventional variable name for the return type of the given
                  * method, taking the generic collection type, if any, into account, falling
@@ -58,7 +58,7 @@ declare namespace org {
                  * @return the generated variable name
                  */
                 // @ts-ignore
-                getVariableNameForReturnType(method: java.lang.reflect.Method, value: any): java.lang.String
+                public static getVariableNameForReturnType(method: java.lang.reflect.Method, value: java.lang.Object | any): string
                 /**
                  * Determine the conventional variable name for the return type of the given
                  * method, taking the generic collection type, if any, into account, falling
@@ -74,21 +74,21 @@ declare namespace org {
                  * @return the generated variable name
                  */
                 // @ts-ignore
-                getVariableNameForReturnType(method: java.lang.reflect.Method, resolvedType: java.lang.Class<any>, value: any): java.lang.String
+                public static getVariableNameForReturnType(method: java.lang.reflect.Method, resolvedType: java.lang.Class<any>, value: java.lang.Object | any): string
                 /**
                  * Convert {@code String}s in attribute name format (e.g. lowercase, hyphens
                  * separating words) into property name format (camel-case). For example
                  * {@code transaction-manager} becomes {@code "transactionManager"}.
                  */
                 // @ts-ignore
-                attributeNameToPropertyName(attributeName: string): java.lang.String
+                public static attributeNameToPropertyName(attributeName: java.lang.String | string): string
                 /**
                  * Return an attribute name qualified by the given enclosing {@link Class}.
                  * For example the attribute name '{@code foo}' qualified by {@link Class}
                  * '{@code com.myapp.SomeClass}' would be '{@code com.myapp.SomeClass.foo}'
                  */
                 // @ts-ignore
-                getQualifiedAttributeName(enclosingClass: java.lang.Class<any>, attributeName: string): java.lang.String
+                public static getQualifiedAttributeName(enclosingClass: java.lang.Class<any>, attributeName: java.lang.String | string): string
             }
         }
     }

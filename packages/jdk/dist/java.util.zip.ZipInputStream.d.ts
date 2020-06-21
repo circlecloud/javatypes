@@ -38,7 +38,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                getNextEntry(): java.util.zip.ZipEntry
+                public getNextEntry(): java.util.zip.ZipEntry
                 /**
                  * Closes the current ZIP entry and positions the stream for reading the
                  * next entry.
@@ -46,7 +46,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                closeEntry(): void
+                public closeEntry(): void
                 /**
                  * Returns 0 after EOF has reached for the current entry data,
                  * otherwise always return 1.
@@ -57,7 +57,7 @@ declare namespace java {
                  * @exception IOException  if an I/O error occurs.
                  */
                 // @ts-ignore
-                available(): int
+                public available(): number /*int*/
                 /**
                  * Reads from the current ZIP entry into an array of bytes.
                  * If <code>len</code> is not zero, the method
@@ -76,7 +76,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Skips specified number of bytes in the current ZIP entry.
                  * @param n the number of bytes to skip
@@ -86,14 +86,14 @@ declare namespace java {
                  * @exception IllegalArgumentException if {#code n < 0}
                  */
                 // @ts-ignore
-                skip(n: number /*long*/): long
+                public skip(n: number /*long*/): number /*long*/
                 /**
                  * Closes this input stream and releases any system resources associated
                  * with the stream.
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Creates a new <code>ZipEntry</code> object for the specified
                  * entry name.
@@ -101,7 +101,7 @@ declare namespace java {
                  * @return the ZipEntry just created
                  */
                 // @ts-ignore
-                createZipEntry(name: string): java.util.zip.ZipEntry
+                createZipEntry(name: java.lang.String | string): java.util.zip.ZipEntry
             }
         }
     }

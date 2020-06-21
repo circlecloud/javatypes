@@ -21,7 +21,7 @@ declare namespace javax {
                  * @see SNIHostName
                  */
                 // @ts-ignore
-                readonly SNI_HOST_NAME: number /*int*/
+                public static readonly SNI_HOST_NAME: number /*int*/
             }
         }
     }

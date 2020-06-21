@@ -11,7 +11,7 @@ declare namespace org {
                              * @return The ai class
                              */
                             // @ts-ignore
-                            getAIClass(): java.lang.Class<? extends org.spongepowered.api.entity.ai.task.AITask<?>>
+                            getAIClass(): java.lang.Class<any>
                         }
                     }
                 }

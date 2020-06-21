@@ -13,7 +13,7 @@ declare namespace org {
                  * @return true if the permission is set, otherwise false
                  */
                 // @ts-ignore
-                isPermissionSet(name: string): boolean
+                isPermissionSet(name: java.lang.String | string): boolean
                 /**
                  * Checks if this object contains an override for the specified {@link
                  * Permission}
@@ -31,7 +31,7 @@ declare namespace org {
                  * @return Value of the permission
                  */
                 // @ts-ignore
-                hasPermission(name: string): boolean
+                hasPermission(name: java.lang.String | string): boolean
                 /**
                  * Gets the value of the specified permission, if set.
                  * <p>
@@ -52,7 +52,7 @@ declare namespace org {
                  * @return The PermissionAttachment that was just created
                  */
                 // @ts-ignore
-                addAttachment(plugin: org.bukkit.plugin.Plugin, name: string, value: boolean): org.bukkit.permissions.PermissionAttachment
+                addAttachment(plugin: org.bukkit.plugin.Plugin, name: java.lang.String | string, value: boolean): org.bukkit.permissions.PermissionAttachment
                 /**
                  * Adds a new empty {@link PermissionAttachment} to this object
                  * @param plugin Plugin responsible for this attachment, may not be null
@@ -73,7 +73,7 @@ declare namespace org {
                  * @return The PermissionAttachment that was just created
                  */
                 // @ts-ignore
-                addAttachment(plugin: org.bukkit.plugin.Plugin, name: string, value: boolean, ticks: number /*int*/): org.bukkit.permissions.PermissionAttachment
+                addAttachment(plugin: org.bukkit.plugin.Plugin, name: java.lang.String | string, value: boolean, ticks: number /*int*/): org.bukkit.permissions.PermissionAttachment
                 /**
                  * Temporarily adds a new empty {@link PermissionAttachment} to this
                  * object
@@ -107,7 +107,7 @@ declare namespace org {
                  * @return Set of currently effective permissions
                  */
                 // @ts-ignore
-                getEffectivePermissions(): java.util.Set<org.bukkit.permissions.PermissionAttachmentInfo>
+                getEffectivePermissions(): Array<org.bukkit.permissions.PermissionAttachmentInfo>
             }
         }
     }

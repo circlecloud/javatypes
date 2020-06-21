@@ -15,55 +15,55 @@ declare namespace javax {
              * @param fileObject delegate to this file object
              */
             // @ts-ignore
-            constructor(fileObject: F extends javax.tools.FileObject)
+            constructor(fileObject: F)
             /**
              * The file object which all methods are delegated to.
              */
             // @ts-ignore
-            readonly fileObject: F extends javax.tools.FileObject
+            readonly fileObject: F
             // @ts-ignore
-            toUri(): java.net.URI
+            public toUri(): java.net.URI
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * @throws IllegalStateException {#inheritDoc}
              * @throws UnsupportedOperationException {#inheritDoc}
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            openInputStream(): java.io.InputStream
+            public openInputStream(): java.io.InputStream
             /**
              * @throws IllegalStateException {#inheritDoc}
              * @throws UnsupportedOperationException {#inheritDoc}
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            openOutputStream(): java.io.OutputStream
+            public openOutputStream(): java.io.OutputStream
             /**
              * @throws IllegalStateException {#inheritDoc}
              * @throws UnsupportedOperationException {#inheritDoc}
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            openReader(ignoreEncodingErrors: boolean): java.io.Reader
+            public openReader(ignoreEncodingErrors: boolean): java.io.Reader
             /**
              * @throws IllegalStateException {#inheritDoc}
              * @throws UnsupportedOperationException {#inheritDoc}
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            getCharContent(ignoreEncodingErrors: boolean): java.lang.CharSequence
+            public getCharContent(ignoreEncodingErrors: boolean): java.lang.CharSequence
             /**
              * @throws IllegalStateException {#inheritDoc}
              * @throws UnsupportedOperationException {#inheritDoc}
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            openWriter(): java.io.Writer
+            public openWriter(): java.io.Writer
             // @ts-ignore
-            getLastModified(): long
+            public getLastModified(): number /*long*/
             // @ts-ignore
-            delete(): boolean
+            public delete(): boolean
         }
     }
 }

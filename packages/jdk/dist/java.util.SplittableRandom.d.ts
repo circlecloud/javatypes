@@ -76,13 +76,13 @@ declare namespace java {
              * @return the new SplittableRandom instance
              */
             // @ts-ignore
-            split(): java.util.SplittableRandom
+            public split(): java.util.SplittableRandom
             /**
              * Returns a pseudorandom {@code int} value.
              * @return a pseudorandom {#code int} value
              */
             // @ts-ignore
-            nextInt(): int
+            public nextInt(): number /*int*/
             /**
              * Returns a pseudorandom {@code int} value between zero (inclusive)
              * and the specified bound (exclusive).
@@ -92,7 +92,7 @@ declare namespace java {
              * @throws IllegalArgumentException if {#code bound} is not positive
              */
             // @ts-ignore
-            nextInt(bound: number /*int*/): int
+            public nextInt(bound: number /*int*/): number /*int*/
             /**
              * Returns a pseudorandom {@code int} value between the specified
              * origin (inclusive) and the specified bound (exclusive).
@@ -104,13 +104,13 @@ declare namespace java {
              *          or equal to {@code bound}
              */
             // @ts-ignore
-            nextInt(origin: number /*int*/, bound: number /*int*/): int
+            public nextInt(origin: number /*int*/, bound: number /*int*/): number /*int*/
             /**
              * Returns a pseudorandom {@code long} value.
              * @return a pseudorandom {#code long} value
              */
             // @ts-ignore
-            nextLong(): long
+            public nextLong(): number /*long*/
             /**
              * Returns a pseudorandom {@code long} value between zero (inclusive)
              * and the specified bound (exclusive).
@@ -120,7 +120,7 @@ declare namespace java {
              * @throws IllegalArgumentException if {#code bound} is not positive
              */
             // @ts-ignore
-            nextLong(bound: number /*long*/): long
+            public nextLong(bound: number /*long*/): number /*long*/
             /**
              * Returns a pseudorandom {@code long} value between the specified
              * origin (inclusive) and the specified bound (exclusive).
@@ -132,7 +132,7 @@ declare namespace java {
              *          or equal to {@code bound}
              */
             // @ts-ignore
-            nextLong(origin: number /*long*/, bound: number /*long*/): long
+            public nextLong(origin: number /*long*/, bound: number /*long*/): number /*long*/
             /**
              * Returns a pseudorandom {@code double} value between zero
              * (inclusive) and one (exclusive).
@@ -140,7 +140,7 @@ declare namespace java {
              *          (inclusive) and one (exclusive)
              */
             // @ts-ignore
-            nextDouble(): double
+            public nextDouble(): number /*double*/
             /**
              * Returns a pseudorandom {@code double} value between 0.0
              * (inclusive) and the specified bound (exclusive).
@@ -150,7 +150,7 @@ declare namespace java {
              * @throws IllegalArgumentException if {#code bound} is not positive
              */
             // @ts-ignore
-            nextDouble(bound: number /*double*/): double
+            public nextDouble(bound: number /*double*/): number /*double*/
             /**
              * Returns a pseudorandom {@code double} value between the specified
              * origin (inclusive) and bound (exclusive).
@@ -162,13 +162,13 @@ declare namespace java {
              *          or equal to {@code bound}
              */
             // @ts-ignore
-            nextDouble(origin: number /*double*/, bound: number /*double*/): double
+            public nextDouble(origin: number /*double*/, bound: number /*double*/): number /*double*/
             /**
              * Returns a pseudorandom {@code boolean} value.
              * @return a pseudorandom {#code boolean} value
              */
             // @ts-ignore
-            nextBoolean(): boolean
+            public nextBoolean(): boolean
             /**
              * Returns a stream producing the given {@code streamSize} number
              * of pseudorandom {@code int} values from this generator and/or
@@ -179,7 +179,7 @@ declare namespace java {
              *          less than zero
              */
             // @ts-ignore
-            ints(streamSize: number /*long*/): java.util.stream.IntStream
+            public ints(streamSize: number /*long*/): java.util.stream.IntStream
             /**
              * Returns an effectively unlimited stream of pseudorandom {@code int}
              * values from this generator and/or one split from it.
@@ -188,7 +188,7 @@ declare namespace java {
              * @return a stream of pseudorandom {#code int} values
              */
             // @ts-ignore
-            ints(): java.util.stream.IntStream
+            public ints(): java.util.stream.IntStream
             /**
              * Returns a stream producing the given {@code streamSize} number
              * of pseudorandom {@code int} values from this generator and/or one split
@@ -204,7 +204,7 @@ declare namespace java {
              *          is greater than or equal to {@code randomNumberBound}
              */
             // @ts-ignore
-            ints(streamSize: number /*long*/, randomNumberOrigin: number /*int*/, randomNumberBound: number /*int*/): java.util.stream.IntStream
+            public ints(streamSize: number /*long*/, randomNumberOrigin: number /*int*/, randomNumberBound: number /*int*/): java.util.stream.IntStream
             /**
              * Returns an effectively unlimited stream of pseudorandom {@code
              * int} values from this generator and/or one split from it; each value
@@ -219,7 +219,7 @@ declare namespace java {
              *          is greater than or equal to {@code randomNumberBound}
              */
             // @ts-ignore
-            ints(randomNumberOrigin: number /*int*/, randomNumberBound: number /*int*/): java.util.stream.IntStream
+            public ints(randomNumberOrigin: number /*int*/, randomNumberBound: number /*int*/): java.util.stream.IntStream
             /**
              * Returns a stream producing the given {@code streamSize} number
              * of pseudorandom {@code long} values from this generator and/or
@@ -230,7 +230,7 @@ declare namespace java {
              *          less than zero
              */
             // @ts-ignore
-            longs(streamSize: number /*long*/): java.util.stream.LongStream
+            public longs(streamSize: number /*long*/): java.util.stream.LongStream
             /**
              * Returns an effectively unlimited stream of pseudorandom {@code
              * long} values from this generator and/or one split from it.
@@ -239,7 +239,7 @@ declare namespace java {
              * @return a stream of pseudorandom {#code long} values
              */
             // @ts-ignore
-            longs(): java.util.stream.LongStream
+            public longs(): java.util.stream.LongStream
             /**
              * Returns a stream producing the given {@code streamSize} number of
              * pseudorandom {@code long} values from this generator and/or one split
@@ -255,7 +255,7 @@ declare namespace java {
              *          is greater than or equal to {@code randomNumberBound}
              */
             // @ts-ignore
-            longs(streamSize: number /*long*/, randomNumberOrigin: number /*long*/, randomNumberBound: number /*long*/): java.util.stream.LongStream
+            public longs(streamSize: number /*long*/, randomNumberOrigin: number /*long*/, randomNumberBound: number /*long*/): java.util.stream.LongStream
             /**
              * Returns an effectively unlimited stream of pseudorandom {@code
              * long} values from this generator and/or one split from it; each value
@@ -270,7 +270,7 @@ declare namespace java {
              *          is greater than or equal to {@code randomNumberBound}
              */
             // @ts-ignore
-            longs(randomNumberOrigin: number /*long*/, randomNumberBound: number /*long*/): java.util.stream.LongStream
+            public longs(randomNumberOrigin: number /*long*/, randomNumberBound: number /*long*/): java.util.stream.LongStream
             /**
              * Returns a stream producing the given {@code streamSize} number of
              * pseudorandom {@code double} values from this generator and/or one split
@@ -281,7 +281,7 @@ declare namespace java {
              *          less than zero
              */
             // @ts-ignore
-            doubles(streamSize: number /*long*/): java.util.stream.DoubleStream
+            public doubles(streamSize: number /*long*/): java.util.stream.DoubleStream
             /**
              * Returns an effectively unlimited stream of pseudorandom {@code
              * double} values from this generator and/or one split from it; each value
@@ -291,7 +291,7 @@ declare namespace java {
              * @return a stream of pseudorandom {#code double} values
              */
             // @ts-ignore
-            doubles(): java.util.stream.DoubleStream
+            public doubles(): java.util.stream.DoubleStream
             /**
              * Returns a stream producing the given {@code streamSize} number of
              * pseudorandom {@code double} values from this generator and/or one split
@@ -308,7 +308,7 @@ declare namespace java {
              *          is greater than or equal to {@code randomNumberBound}
              */
             // @ts-ignore
-            doubles(streamSize: number /*long*/, randomNumberOrigin: number /*double*/, randomNumberBound: number /*double*/): java.util.stream.DoubleStream
+            public doubles(streamSize: number /*long*/, randomNumberOrigin: number /*double*/, randomNumberBound: number /*double*/): java.util.stream.DoubleStream
             /**
              * Returns an effectively unlimited stream of pseudorandom {@code
              * double} values from this generator and/or one split from it; each value
@@ -323,7 +323,7 @@ declare namespace java {
              *          is greater than or equal to {@code randomNumberBound}
              */
             // @ts-ignore
-            doubles(randomNumberOrigin: number /*double*/, randomNumberBound: number /*double*/): java.util.stream.DoubleStream
+            public doubles(randomNumberOrigin: number /*double*/, randomNumberBound: number /*double*/): java.util.stream.DoubleStream
         }
     }
 }

@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a player related event
                  */
                 // @ts-ignore
-                class PlayerEvent extends org.bukkit.event.Event {
+                abstract class PlayerEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(who: org.bukkit.entity.Player)
                     // @ts-ignore
@@ -16,7 +16,7 @@ declare namespace org {
                      * @return Player who is involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                 }
             }
         }

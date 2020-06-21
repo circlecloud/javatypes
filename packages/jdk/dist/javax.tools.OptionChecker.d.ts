@@ -15,7 +15,7 @@ declare namespace javax {
              *  the option is not supported
              */
             // @ts-ignore
-            isSupportedOption(option: string): int
+            isSupportedOption(option: java.lang.String | string): number /*int*/
         }
     }
 }

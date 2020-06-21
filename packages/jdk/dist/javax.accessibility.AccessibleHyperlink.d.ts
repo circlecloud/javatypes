@@ -11,7 +11,7 @@ declare namespace javax {
          * @author Peter Korn
          */
         // @ts-ignore
-        class AccessibleHyperlink extends java.lang.Object implements javax.accessibility.AccessibleAction {
+        abstract class AccessibleHyperlink extends java.lang.Object implements javax.accessibility.AccessibleAction {
             // @ts-ignore
             constructor()
             /**
@@ -22,7 +22,7 @@ declare namespace javax {
              *          respect to the AccessibleHypertext it belongs to
              */
             // @ts-ignore
-            abstract isValid(): boolean
+            public abstract isValid(): boolean
             /**
              * Returns the number of accessible actions available in this Link
              * If there are more than one, the first one is NOT considered the
@@ -31,7 +31,7 @@ declare namespace javax {
              * @return the zero-based number of Actions in this object
              */
             // @ts-ignore
-            abstract getAccessibleActionCount(): int
+            public abstract getAccessibleActionCount(): number /*int*/
             /**
              * Performs the specified Action on the object
              * @param i zero-based index of actions
@@ -39,7 +39,7 @@ declare namespace javax {
              * @see #getAccessibleActionCount
              */
             // @ts-ignore
-            abstract doAccessibleAction(i: number /*int*/): boolean
+            public abstract doAccessibleAction(i: number /*int*/): boolean
             /**
              * Returns a String description of this particular
              * link action.  This should be a text string
@@ -55,7 +55,7 @@ declare namespace javax {
              * @see #getAccessibleActionCount
              */
             // @ts-ignore
-            abstract getAccessibleActionDescription(i: number /*int*/): java.lang.String
+            public abstract getAccessibleActionDescription(i: number /*int*/): string
             /**
              * Returns an object that represents the link action,
              * as appropriate for that link.  E.g. from HTML:
@@ -67,7 +67,7 @@ declare namespace javax {
              * @see #getAccessibleActionCount
              */
             // @ts-ignore
-            abstract getAccessibleActionObject(i: number /*int*/): java.lang.Object
+            public abstract getAccessibleActionObject(i: number /*int*/): any
             /**
              * Returns an object that represents the link anchor,
              * as appropriate for that link.  E.g. from HTML:
@@ -82,21 +82,21 @@ declare namespace javax {
              * @see #getAccessibleActionCount
              */
             // @ts-ignore
-            abstract getAccessibleActionAnchor(i: number /*int*/): java.lang.Object
+            public abstract getAccessibleActionAnchor(i: number /*int*/): any
             /**
              * Gets the index with the hypertext document at which this
              * link begins
              * @return index of start of link
              */
             // @ts-ignore
-            abstract getStartIndex(): int
+            public abstract getStartIndex(): number /*int*/
             /**
              * Gets the index with the hypertext document at which this
              * link ends
              * @return index of end of link
              */
             // @ts-ignore
-            abstract getEndIndex(): int
+            public abstract getEndIndex(): number /*int*/
         }
     }
 }

@@ -49,9 +49,9 @@ declare namespace org {
                      * (if any) when {@link #setAsText(String) converting from a String}.
                      */
                     // @ts-ignore
-                    readonly BASE_NAME_SEPARATOR: string
+                    public static readonly BASE_NAME_SEPARATOR: java.lang.String | string
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                 }
             }
         }

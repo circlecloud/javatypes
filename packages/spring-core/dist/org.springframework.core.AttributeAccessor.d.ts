@@ -19,7 +19,7 @@ declare namespace org {
                  * @param value the attribute value to be attached
                  */
                 // @ts-ignore
-                setAttribute(name: string, value: any): void
+                setAttribute(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get the value of the attribute identified by {@code name}.
                  * Return {@code null} if the attribute doesn't exist.
@@ -27,7 +27,7 @@ declare namespace org {
                  * @return the current value of the attribute, if any
                  */
                 // @ts-ignore
-                getAttribute(name: string): java.lang.Object
+                getAttribute(name: java.lang.String | string): any
                 /**
                  * Remove the attribute identified by {@code name} and return its value.
                  * Return {@code null} if no attribute under {@code name} is found.
@@ -35,19 +35,19 @@ declare namespace org {
                  * @return the last value of the attribute, if any
                  */
                 // @ts-ignore
-                removeAttribute(name: string): java.lang.Object
+                removeAttribute(name: java.lang.String | string): any
                 /**
                  * Return {@code true} if the attribute identified by {@code name} exists.
                  * Otherwise return {@code false}.
                  * @param name the unique attribute key
                  */
                 // @ts-ignore
-                hasAttribute(name: string): boolean
+                hasAttribute(name: java.lang.String | string): boolean
                 /**
                  * Return the names of all attributes.
                  */
                 // @ts-ignore
-                attributeNames(): java.lang.String[]
+                attributeNames(): string[]
             }
         }
     }

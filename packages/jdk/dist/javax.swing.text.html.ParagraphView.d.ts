@@ -32,14 +32,14 @@ declare namespace javax {
                      *   to
                      */
                     // @ts-ignore
-                    setParent(parent: javax.swing.text.View): void
+                    public setParent(parent: javax.swing.text.View): void
                     /**
                      * Fetches the attributes to use when rendering.  This is
                      * implemented to multiplex the attributes specified in the
                      * model with a StyleSheet.
                      */
                     // @ts-ignore
-                    getAttributes(): javax.swing.text.AttributeSet
+                    public getAttributes(): javax.swing.text.AttributeSet
                     /**
                      * Sets up the paragraph from css attributes instead of
                      * the values found in StyleConstants (i.e. which are used
@@ -76,7 +76,7 @@ declare namespace javax {
                      * @return true if the paragraph should be displayed
                      */
                     // @ts-ignore
-                    isVisible(): boolean
+                    public isVisible(): boolean
                     /**
                      * Renders using the given rendering surface and area on that
                      * surface.  This is implemented to delegate to the superclass
@@ -86,7 +86,7 @@ declare namespace javax {
                      * @see View#paint
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                    public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                     /**
                      * Determines the preferred span for this view.  Returns
                      * 0 if the view is not visible, otherwise it calls the
@@ -100,7 +100,7 @@ declare namespace javax {
                      * @see javax.swing.text.ParagraphView#getPreferredSpan
                      */
                     // @ts-ignore
-                    getPreferredSpan(axis: number /*int*/): float
+                    public getPreferredSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Determines the minimum span for this view along an
                      * axis.  Returns 0 if the view is not visible, otherwise
@@ -111,7 +111,7 @@ declare namespace javax {
                      * @see javax.swing.text.ParagraphView#getMinimumSpan
                      */
                     // @ts-ignore
-                    getMinimumSpan(axis: number /*int*/): float
+                    public getMinimumSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Determines the maximum span for this view along an
                      * axis.  Returns 0 if the view is not visible, otherwise
@@ -122,7 +122,7 @@ declare namespace javax {
                      * @see javax.swing.text.ParagraphView#getMaximumSpan
                      */
                     // @ts-ignore
-                    getMaximumSpan(axis: number /*int*/): float
+                    public getMaximumSpan(axis: number /*int*/): number /*float*/
                 }
             }
         }

@@ -28,7 +28,7 @@ declare namespace java {
              * @author Hemma Prafullchandra
              */
             // @ts-ignore
-            class X509CRLEntry extends java.lang.Object implements java.security.cert.X509Extension {
+            abstract class X509CRLEntry extends java.lang.Object implements java.security.cert.X509Extension {
                 // @ts-ignore
                 constructor()
                 /**
@@ -42,14 +42,14 @@ declare namespace java {
                  *  match, false otherwise.
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode value for this CRL entry from its
                  * encoded form.
                  * @return the hashcode value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the ASN.1 DER-encoded form of this CRL Entry,
                  * that is the inner SEQUENCE.
@@ -57,14 +57,14 @@ declare namespace java {
                  * @exception CRLException if an encoding error occurs.
                  */
                 // @ts-ignore
-                abstract getEncoded(): byte[]
+                public abstract getEncoded(): number /*byte*/[]
                 /**
                  * Gets the serial number from this X509CRLEntry,
                  * the <em>userCertificate</em>.
                  * @return the serial number.
                  */
                 // @ts-ignore
-                abstract getSerialNumber(): java.math.BigInteger
+                public abstract getSerialNumber(): java.math.BigInteger
                 /**
                  * Get the issuer of the X509Certificate described by this entry. If
                  * the certificate issuer is also the CRL issuer, this method returns
@@ -77,26 +77,26 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getCertificateIssuer(): javax.security.auth.x500.X500Principal
+                public getCertificateIssuer(): javax.security.auth.x500.X500Principal
                 /**
                  * Gets the revocation date from this X509CRLEntry,
                  * the <em>revocationDate</em>.
                  * @return the revocation date.
                  */
                 // @ts-ignore
-                abstract getRevocationDate(): java.util.Date
+                public abstract getRevocationDate(): java.util.Date
                 /**
                  * Returns true if this CRL entry has extensions.
                  * @return true if this entry has extensions, false otherwise.
                  */
                 // @ts-ignore
-                abstract hasExtensions(): boolean
+                public abstract hasExtensions(): boolean
                 /**
                  * Returns a string representation of this CRL entry.
                  * @return a string representation of this CRL entry.
                  */
                 // @ts-ignore
-                abstract toString(): java.lang.String
+                public abstract toString(): string
                 /**
                  * Returns the reason the certificate has been revoked, as specified
                  * in the Reason Code extension of this CRL entry.
@@ -106,7 +106,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getRevocationReason(): java.security.cert.CRLReason
+                public getRevocationReason(): java.security.cert.CRLReason
             }
         }
     }

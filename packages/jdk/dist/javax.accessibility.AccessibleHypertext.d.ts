@@ -25,7 +25,7 @@ declare namespace javax {
              * @return number of links in this hypertext doc.
              */
             // @ts-ignore
-            getLinkCount(): int
+            getLinkCount(): number /*int*/
             /**
              * Returns the nth Link of this Hypertext document.
              * @param linkIndex within the links of this Hypertext
@@ -41,7 +41,7 @@ declare namespace javax {
              * @return index into the set of hyperlinks for this hypertext doc.
              */
             // @ts-ignore
-            getLinkIndex(charIndex: number /*int*/): int
+            getLinkIndex(charIndex: number /*int*/): number /*int*/
         }
     }
 }

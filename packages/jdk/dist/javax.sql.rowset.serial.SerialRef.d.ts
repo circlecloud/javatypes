@@ -34,7 +34,7 @@ declare namespace javax {
                      * @throws SerialException in no Ref object has been set
                      */
                     // @ts-ignore
-                    getBaseTypeName(): java.lang.String
+                    public getBaseTypeName(): string
                     /**
                      * Returns an <code>Object</code> representing the SQL structured type
                      * to which this <code>SerialRef</code> object refers.  The attributes
@@ -50,7 +50,7 @@ declare namespace javax {
                      *         resolution
                      */
                     // @ts-ignore
-                    getObject(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+                    public getObject(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
                     /**
                      * Returns an <code>Object</code> representing the SQL structured type
                      * to which this <code>SerialRef</code> object refers.
@@ -59,7 +59,7 @@ declare namespace javax {
                      *          resolution
                      */
                     // @ts-ignore
-                    getObject(): java.lang.Object
+                    public getObject(): any
                     /**
                      * Sets the SQL structured type that this <code>SerialRef</code> object
                      * references to the given <code>Object</code> object.
@@ -69,7 +69,7 @@ declare namespace javax {
                      *  the structured type referenced by this <code>SerialRef</code> object
                      */
                     // @ts-ignore
-                    setObject(obj: any): void
+                    public setObject(obj: java.lang.Object | any): void
                     /**
                      * Compares this SerialRef to the specified object.  The result is {@code
                      * true} if and only if the argument is not {@code null} and is a {@code
@@ -80,20 +80,20 @@ declare namespace javax {
                      *           equivalent to this SerialRef, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this {@code SerialRef}.
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialRef}.
                      * The underlying {@code Ref} object will be set to null.
                      * @return a clone of this SerialRef
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

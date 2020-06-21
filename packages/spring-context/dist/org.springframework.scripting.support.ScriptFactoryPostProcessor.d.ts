@@ -77,22 +77,22 @@ declare namespace org {
                      * configuration, as opposed to being defined in an external file.
                      */
                     // @ts-ignore
-                    readonly INLINE_SCRIPT_PREFIX: string
+                    public static readonly INLINE_SCRIPT_PREFIX: java.lang.String | string
                     /**
                      * The {@code refreshCheckDelay} attribute.
                      */
                     // @ts-ignore
-                    readonly REFRESH_CHECK_DELAY_ATTRIBUTE: string
+                    public static readonly REFRESH_CHECK_DELAY_ATTRIBUTE: java.lang.String | string
                     /**
                      * The {@code proxyTargetClass} attribute.
                      */
                     // @ts-ignore
-                    readonly PROXY_TARGET_CLASS_ATTRIBUTE: string
+                    public static readonly PROXY_TARGET_CLASS_ATTRIBUTE: java.lang.String | string
                     /**
                      * The {@code language} attribute.
                      */
                     // @ts-ignore
-                    readonly LANGUAGE_ATTRIBUTE: string
+                    public static readonly LANGUAGE_ATTRIBUTE: java.lang.String | string
                     /**
                      * Logger available to subclasses.
                      */
@@ -107,27 +107,27 @@ declare namespace org {
                      * @see org.springframework.scripting.ScriptSource#isModified()
                      */
                     // @ts-ignore
-                    setDefaultRefreshCheckDelay(defaultRefreshCheckDelay: number /*long*/): void
+                    public setDefaultRefreshCheckDelay(defaultRefreshCheckDelay: number /*long*/): void
                     /**
                      * Flag to signal that refreshable proxies should be created to proxy the target class not its interfaces.
                      * @param defaultProxyTargetClass the flag value to set
                      */
                     // @ts-ignore
-                    setDefaultProxyTargetClass(defaultProxyTargetClass: boolean): void
+                    public setDefaultProxyTargetClass(defaultProxyTargetClass: boolean): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    setResourceLoader(resourceLoader: ResourceLoader): void
+                    public setResourceLoader(resourceLoader: ResourceLoader): void
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     // @ts-ignore
-                    predictBeanType(beanClass: java.lang.Class<any>, beanName: string): java.lang.Class<?>
+                    public predictBeanType(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.Class<any>
                     // @ts-ignore
-                    postProcessProperties(pvs: PropertyValues, bean: any, beanName: string): PropertyValues
+                    public postProcessProperties(pvs: PropertyValues, bean: java.lang.Object | any, beanName: java.lang.String | string): PropertyValues
                     // @ts-ignore
-                    postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: string): java.lang.Object
+                    public postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): any
                     /**
                      * Prepare the script beans in the internal BeanFactory that this
                      * post-processor uses. Each original bean definition will be split
@@ -137,7 +137,7 @@ declare namespace org {
                      * @param scriptedObjectBeanName the name of the internal scripted object bean
                      */
                     // @ts-ignore
-                    prepareScriptBeans(bd: BeanDefinition, scriptFactoryBeanName: string, scriptedObjectBeanName: string): void
+                    prepareScriptBeans(bd: BeanDefinition, scriptFactoryBeanName: java.lang.String | string, scriptedObjectBeanName: java.lang.String | string): void
                     /**
                      * Get the refresh check delay for the given {@link ScriptFactory} {@link BeanDefinition}.
                      * If the {@link BeanDefinition} has a
@@ -149,7 +149,7 @@ declare namespace org {
                      * @return the refresh check delay
                      */
                     // @ts-ignore
-                    resolveRefreshCheckDelay(beanDefinition: BeanDefinition): long
+                    resolveRefreshCheckDelay(beanDefinition: BeanDefinition): number /*long*/
                     // @ts-ignore
                     resolveProxyTargetClass(beanDefinition: BeanDefinition): boolean
                     /**
@@ -171,7 +171,7 @@ declare namespace org {
                      * @see #convertToScriptSource
                      */
                     // @ts-ignore
-                    getScriptSource(beanName: string, scriptSourceLocator: string): org.springframework.scripting.ScriptSource
+                    getScriptSource(beanName: java.lang.String | string, scriptSourceLocator: java.lang.String | string): org.springframework.scripting.ScriptSource
                     /**
                      * Convert the given script source locator to a ScriptSource instance.
                      * <p>By default, supported locators are Spring resource locations
@@ -183,7 +183,7 @@ declare namespace org {
                      * @return the ScriptSource instance
                      */
                     // @ts-ignore
-                    convertToScriptSource(beanName: string, scriptSourceLocator: string, resourceLoader: ResourceLoader): org.springframework.scripting.ScriptSource
+                    convertToScriptSource(beanName: java.lang.String | string, scriptSourceLocator: java.lang.String | string, resourceLoader: ResourceLoader): org.springframework.scripting.ScriptSource
                     /**
                      * Create a config interface for the given bean definition, defining setter
                      * methods for the defined property values as well as an init method and
@@ -199,7 +199,7 @@ declare namespace org {
                      * @see org.springframework.beans.BeanUtils#findPropertyType
                      */
                     // @ts-ignore
-                    createConfigInterface(bd: BeanDefinition, interfaces: java.lang.Class[]): java.lang.Class<?>
+                    createConfigInterface(bd: BeanDefinition, interfaces: java.lang.Class<any>[]): java.lang.Class<any>
                     /**
                      * Create a composite interface Class for the given interfaces,
                      * implementing the given interfaces in one single Class.
@@ -210,7 +210,7 @@ declare namespace org {
                      * @see java.lang.reflect.Proxy#getProxyClass
                      */
                     // @ts-ignore
-                    createCompositeInterface(interfaces: java.lang.Class[]): java.lang.Class<?>
+                    createCompositeInterface(interfaces: java.lang.Class<any>[]): java.lang.Class<any>
                     /**
                      * Create a bean definition for the scripted object, based on the given script
                      * definition, extracting the definition data that is relevant for the scripted
@@ -223,7 +223,7 @@ declare namespace org {
                      * @see org.springframework.scripting.ScriptFactory#getScriptedObject
                      */
                     // @ts-ignore
-                    createScriptedObjectBeanDefinition(bd: BeanDefinition, scriptFactoryBeanName: string, scriptSource: org.springframework.scripting.ScriptSource, interfaces: java.lang.Class[]): BeanDefinition
+                    createScriptedObjectBeanDefinition(bd: BeanDefinition, scriptFactoryBeanName: java.lang.String | string, scriptSource: org.springframework.scripting.ScriptSource, interfaces: java.lang.Class<any>[]): BeanDefinition
                     /**
                      * Create a refreshable proxy for the given AOP TargetSource.
                      * @param ts the refreshable TargetSource
@@ -233,12 +233,12 @@ declare namespace org {
                      * @see RefreshableScriptTargetSource
                      */
                     // @ts-ignore
-                    createRefreshableProxy(ts: TargetSource, interfaces: java.lang.Class[], proxyTargetClass: boolean): java.lang.Object
+                    createRefreshableProxy(ts: TargetSource, interfaces: java.lang.Class<any>[], proxyTargetClass: boolean): any
                     /**
                      * Destroy the inner bean factory (used for scripts) on shutdown.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

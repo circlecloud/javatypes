@@ -43,13 +43,13 @@ declare namespace org {
                          * type declaration in Kotlin.
                          */
                         // @ts-ignore
-                        isRequired(): boolean
+                        public isRequired(): boolean
                         /**
                          * Return whether this dependency is 'eager' in the sense of
                          * eagerly resolving potential target beans for type matching.
                          */
                         // @ts-ignore
-                        isEager(): boolean
+                        public isEager(): boolean
                         /**
                          * Resolve the specified not-unique scenario: by default,
                          * throwing a {@link NoUniqueBeanDefinitionException}.
@@ -64,7 +64,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        resolveNotUnique(type: ResolvableType, matchingBeans: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                        public resolveNotUnique(type: ResolvableType, matchingBeans: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
                         /**
                          * Resolve a shortcut for this dependency against the given factory, for example
                          * taking some pre-resolved information into account.
@@ -78,7 +78,7 @@ declare namespace org {
                          * @since 4.3.1
                          */
                         // @ts-ignore
-                        resolveShortcut(beanFactory: org.springframework.beans.factory.BeanFactory): java.lang.Object
+                        public resolveShortcut(beanFactory: org.springframework.beans.factory.BeanFactory): any
                         /**
                          * Resolve the specified bean name, as a candidate result of the matching
                          * algorithm for this dependency, to a bean instance from the given factory.
@@ -93,12 +93,12 @@ declare namespace org {
                          * @see BeanFactory#getBean(String)
                          */
                         // @ts-ignore
-                        resolveCandidate(beanName: string, requiredType: java.lang.Class<any>, beanFactory: org.springframework.beans.factory.BeanFactory): java.lang.Object
+                        public resolveCandidate(beanName: java.lang.String | string, requiredType: java.lang.Class<any>, beanFactory: org.springframework.beans.factory.BeanFactory): any
                         /**
                          * Increase this descriptor's nesting level.
                          */
                         // @ts-ignore
-                        increaseNestingLevel(): void
+                        public increaseNestingLevel(): void
                         /**
                          * Optionally set the concrete class that contains this dependency.
                          * This may differ from the class that declares the parameter/field in that
@@ -106,19 +106,19 @@ declare namespace org {
                          * @since 4.0
                          */
                         // @ts-ignore
-                        setContainingClass(containingClass: java.lang.Class<any>): void
+                        public setContainingClass(containingClass: java.lang.Class<any>): void
                         /**
                          * Build a {@link ResolvableType} object for the wrapped parameter/field.
                          * @since 4.0
                          */
                         // @ts-ignore
-                        getResolvableType(): ResolvableType
+                        public getResolvableType(): ResolvableType
                         /**
                          * Build a {@link TypeDescriptor} object for the wrapped parameter/field.
                          * @since 5.1.4
                          */
                         // @ts-ignore
-                        getTypeDescriptor(): TypeDescriptor
+                        public getTypeDescriptor(): TypeDescriptor
                         /**
                          * Return whether a fallback match is allowed.
                          * <p>This is {@code false} by default but may be overridden to return {@code true} in order
@@ -127,14 +127,14 @@ declare namespace org {
                          * @since 4.0
                          */
                         // @ts-ignore
-                        fallbackMatchAllowed(): boolean
+                        public fallbackMatchAllowed(): boolean
                         /**
                          * Return a variant of this descriptor that is intended for a fallback match.
                          * @since 4.0
                          * @see #fallbackMatchAllowed()
                          */
                         // @ts-ignore
-                        forFallbackMatch(): org.springframework.beans.factory.config.DependencyDescriptor
+                        public forFallbackMatch(): org.springframework.beans.factory.config.DependencyDescriptor
                         /**
                          * Initialize parameter name discovery for the underlying method parameter, if any.
                          * <p>This method does not actually try to retrieve the parameter name at
@@ -142,23 +142,23 @@ declare namespace org {
                          * {@link #getDependencyName()} (if ever).
                          */
                         // @ts-ignore
-                        initParameterNameDiscovery(parameterNameDiscoverer: ParameterNameDiscoverer): void
+                        public initParameterNameDiscovery(parameterNameDiscoverer: ParameterNameDiscoverer): void
                         /**
                          * Determine the name of the wrapped parameter/field.
                          * @return the declared name (may be {#code null} if unresolvable)
                          */
                         // @ts-ignore
-                        getDependencyName(): java.lang.String
+                        public getDependencyName(): string
                         /**
                          * Determine the declared (non-generic) type of the wrapped parameter/field.
                          * @return the declared type (never {#code null})
                          */
                         // @ts-ignore
-                        getDependencyType(): java.lang.Class<?>
+                        public getDependencyType(): java.lang.Class<any>
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

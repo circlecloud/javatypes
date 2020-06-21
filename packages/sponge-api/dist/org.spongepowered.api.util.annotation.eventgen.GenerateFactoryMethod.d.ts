@@ -10,7 +10,7 @@ declare namespace org {
                          * an event factory method generated.</p>
                          */
                         // @ts-ignore
-                        class GenerateFactoryMethod implements java.lang.annotation.Annotation {
+                        abstract class GenerateFactoryMethod implements java.lang.annotation.Annotation {
                         }
                     }
                 }

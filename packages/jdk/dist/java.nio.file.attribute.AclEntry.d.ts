@@ -36,40 +36,40 @@ declare namespace java {
                      * @return a new builder
                      */
                     // @ts-ignore
-                    newBuilder(): java.nio.file.attribute.AclEntry.Builder
+                    public static newBuilder(): java.nio.file.attribute.AclEntry.Builder
                     /**
                      * Constructs a new builder with the components of an existing ACL entry.
                      * @param entry  an ACL entry
                      * @return a new builder
                      */
                     // @ts-ignore
-                    newBuilder(entry: java.nio.file.attribute.AclEntry): java.nio.file.attribute.AclEntry.Builder
+                    public static newBuilder(entry: java.nio.file.attribute.AclEntry): java.nio.file.attribute.AclEntry.Builder
                     /**
                      * Returns the ACL entry type.
                      * @return the ACL entry type
                      */
                     // @ts-ignore
-                    type(): java.nio.file.attribute.AclEntryType
+                    public type(): java.nio.file.attribute.AclEntryType
                     /**
                      * Returns the principal component.
                      * @return the principal component
                      */
                     // @ts-ignore
-                    principal(): java.nio.file.attribute.UserPrincipal
+                    public principal(): java.nio.file.attribute.UserPrincipal
                     /**
                      * Returns a copy of the permissions component.
                      * <p> The returned set is a modifiable copy of the permissions.
                      * @return the permissions component
                      */
                     // @ts-ignore
-                    permissions(): java.util.Set<java.nio.file.attribute.AclEntryPermission>
+                    public permissions(): Array<java.nio.file.attribute.AclEntryPermission>
                     /**
                      * Returns a copy of the flags component.
                      * <p> The returned set is a modifiable copy of the flags.
                      * @return the flags component
                      */
                     // @ts-ignore
-                    flags(): java.util.Set<java.nio.file.attribute.AclEntryFlag>
+                    public flags(): Array<java.nio.file.attribute.AclEntryFlag>
                     /**
                      * Compares the specified object with this ACL entry for equality.
                      * <p> If the given object is not an {@code AclEntry} then this method
@@ -84,20 +84,20 @@ declare namespace java {
                      *           is identical to this AclEntry
                      */
                     // @ts-ignore
-                    equals(ob: any): boolean
+                    public equals(ob: java.lang.Object | any): boolean
                     /**
                      * Returns the hash-code value for this ACL entry.
                      * <p> This method satisfies the general contract of the {@link
                      * Object#hashCode} method.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns the string representation of this ACL entry.
                      * @return the string representation of this entry
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

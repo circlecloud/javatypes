@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Georges Saab
              */
             // @ts-ignore
-            class ToolBarUI extends javax.swing.plaf.ComponentUI {
+            abstract class ToolBarUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

@@ -15,13 +15,13 @@ declare namespace javax {
                  * <p>Type: <code>java.lang.String</code>
                  */
                 // @ts-ignore
-                
+                readonly USERNAME_PROPERTY: java.lang.String | string
                 /**
                  * Standard property: Password for authentication.
                  * <p>Type: <code>java.lang.String</code>
                  */
                 // @ts-ignore
-                
+                readonly PASSWORD_PROPERTY: java.lang.String | string
                 /**
                  * Standard property: Target service endpoint address. The
                  * URI scheme for the endpoint address specification MUST
@@ -30,7 +30,7 @@ declare namespace javax {
                  * <p>Type: <code>java.lang.String</code>
                  */
                 // @ts-ignore
-                
+                readonly ENDPOINT_ADDRESS_PROPERTY: java.lang.String | string
                 /**
                  * Standard property: This boolean property is used by a service
                  * client to indicate whether or not it wants to participate in
@@ -41,7 +41,7 @@ declare namespace javax {
                  * <p>Type: <code>java.lang.Boolean</code>
                  */
                 // @ts-ignore
-                
+                readonly SESSION_MAINTAIN_PROPERTY: java.lang.String | string
                 /**
                  * Standard property for SOAPAction. This boolean property
                  * indicates whether or not the value of the
@@ -56,7 +56,7 @@ declare namespace javax {
                  * <p>Type: <code>java.lang.Boolean</code>
                  */
                 // @ts-ignore
-                
+                readonly SOAPACTION_USE_PROPERTY: java.lang.String | string
                 /**
                  * Standard property for SOAPAction. Indicates the SOAPAction
                  * URI if the <code>javax.xml.ws.soap.http.soapaction.use</code>
@@ -67,7 +67,7 @@ declare namespace javax {
                  * <p>Type: <code>java.lang.String</code>
                  */
                 // @ts-ignore
-                
+                readonly SOAPACTION_URI_PROPERTY: java.lang.String | string
                 /**
                  * Get the context that is used to initialize the message context
                  * for request messages.
@@ -77,7 +77,7 @@ declare namespace javax {
                  * @return The context that is used in processing request messages.
                  */
                 // @ts-ignore
-                getRequestContext(): java.util.Map<java.lang.String, java.lang.Object>
+                getRequestContext(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Get the context that resulted from processing a response message.
                  * The returned context is for the most recently completed synchronous
@@ -88,7 +88,7 @@ declare namespace javax {
                  *  response messages.
                  */
                 // @ts-ignore
-                getResponseContext(): java.util.Map<java.lang.String, java.lang.Object>
+                getResponseContext(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Get the Binding for this binding provider.
                  * @return The Binding for this binding provider.

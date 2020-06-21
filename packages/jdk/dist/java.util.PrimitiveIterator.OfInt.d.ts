@@ -6,14 +6,14 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface OfInt extends java.util.PrimitiveIterator<java.lang.Integer, java.util.function.IntConsumer> {
+            interface OfInt extends java.util.PrimitiveIterator<java.lang.Integer | number, java.util.function$.IntConsumer> {
                 /**
                  * Returns the next {@code int} element in the iteration.
                  * @return the next {#code int} element in the iteration
                  * @throws NoSuchElementException if the iteration has no more elements
                  */
                 // @ts-ignore
-                nextInt(): int
+                nextInt(): number /*int*/
                 /**
                  * Performs the given action for each remaining element until all elements
                  * have been processed or the action throws an exception.  Actions are
@@ -28,14 +28,14 @@ declare namespace java {
                  * @throws NullPointerException if the specified action is null
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.IntConsumer | java.util.function$.IntConsumer): void
+                forEachRemaining(action: java.util.function$.IntConsumer): void
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation boxes the result of calling
                  *  {#link #nextInt()}, and returns that boxed result.
                  */
                 // @ts-ignore
-                next(): java.lang.Integer
+                next(): number
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code IntConsumer} then it is cast
@@ -45,7 +45,7 @@ declare namespace java {
                  *  and then passed to {@link #forEachRemaining}.
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.Consumer<any super java.lang.Integer> | java.util.function$.Consumer<? super java.lang.Integer>): void
+                forEachRemaining(action: java.util.function$.Consumer<any>): void
             }
         }
     }

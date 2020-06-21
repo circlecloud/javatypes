@@ -16,7 +16,7 @@ declare namespace org {
                 // @ts-ignore
                 constructor(context: org.bukkit.plugin.Plugin)
                 // @ts-ignore
-                log(logRecord: java.util.logging.LogRecord): void
+                public log(logRecord: java.util.logging.LogRecord): void
             }
         }
     }

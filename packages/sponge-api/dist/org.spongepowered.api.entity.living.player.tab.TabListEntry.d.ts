@@ -46,7 +46,7 @@ declare namespace org {
                                  * @return The latency for this entry
                                  */
                                 // @ts-ignore
-                                getLatency(): int
+                                getLatency(): number /*int*/
                                 /**
                                  * Sets the latency for this entry.
                                  * <p>The client displays connection bars based on this number.</p>

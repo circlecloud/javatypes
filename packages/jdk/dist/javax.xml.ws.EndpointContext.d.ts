@@ -16,7 +16,7 @@ declare namespace javax {
              * @since JAX-WS 2.2
              */
             // @ts-ignore
-            class EndpointContext extends java.lang.Object {
+            abstract class EndpointContext extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -27,7 +27,7 @@ declare namespace javax {
                  * @return list of all endpoints in an application
                  */
                 // @ts-ignore
-                abstract getEndpoints(): java.util.Set<javax.xml.ws.Endpoint>
+                public abstract getEndpoints(): Array<javax.xml.ws.Endpoint>
             }
         }
     }

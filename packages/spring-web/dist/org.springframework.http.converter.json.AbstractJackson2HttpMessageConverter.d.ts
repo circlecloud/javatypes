@@ -16,7 +16,7 @@ declare namespace org {
                      * @see MappingJackson2HttpMessageConverter
                      */
                     // @ts-ignore
-                    class AbstractJackson2HttpMessageConverter extends org.springframework.http.converter.AbstractGenericHttpMessageConverter<java.lang.Object> {
+                    abstract class AbstractJackson2HttpMessageConverter extends org.springframework.http.converter.AbstractGenericHttpMessageConverter<java.lang.Object | any> {
                         // @ts-ignore
                         constructor(objectMapper: ObjectMapper)
                         // @ts-ignore
@@ -27,7 +27,7 @@ declare namespace org {
                          * The default charset used by the converter.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                        public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                         // @ts-ignore
                         objectMapper: ObjectMapper
                         /**
@@ -42,12 +42,12 @@ declare namespace org {
                          * custom-configured ObjectMapper is unnecessary.
                          */
                         // @ts-ignore
-                        setObjectMapper(objectMapper: ObjectMapper): void
+                        public setObjectMapper(objectMapper: ObjectMapper): void
                         /**
                          * Return the underlying {@code ObjectMapper} for this view.
                          */
                         // @ts-ignore
-                        getObjectMapper(): ObjectMapper
+                        public getObjectMapper(): ObjectMapper
                         /**
                          * Whether to use the {@link DefaultPrettyPrinter} when writing JSON.
                          * This is a shortcut for setting up an {@code ObjectMapper} as follows:
@@ -58,13 +58,13 @@ declare namespace org {
                          * </pre>
                          */
                         // @ts-ignore
-                        setPrettyPrint(prettyPrint: boolean): void
+                        public setPrettyPrint(prettyPrint: boolean): void
                         // @ts-ignore
-                        canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        canRead(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canRead(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         /**
                          * Determine whether to log the given exception coming from a
                          * {@link ObjectMapper#canDeserialize} / {@link ObjectMapper#canSerialize} check.
@@ -74,27 +74,27 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        logWarningIfNecessary(type: java.lang.reflect.Type, cause: Error): void
+                        logWarningIfNecessary(type: java.lang.reflect.Type, cause: java.lang.Throwable | Error): void
                         // @ts-ignore
-                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.Object
+                        readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): any
                         // @ts-ignore
-                        read(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.Object
+                        public read(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): any
                         // @ts-ignore
-                        writeInternal(object: any, type: java.lang.reflect.Type, outputMessage: org.springframework.http.HttpOutputMessage): void
+                        writeInternal(object: java.lang.Object | any, type: java.lang.reflect.Type, outputMessage: org.springframework.http.HttpOutputMessage): void
                         /**
                          * Write a prefix before the main content.
                          * @param generator the generator to use for writing content.
                          * @param object the object to write to the output message.
                          */
                         // @ts-ignore
-                        writePrefix(generator: JsonGenerator, object: any): void
+                        writePrefix(generator: JsonGenerator, object: java.lang.Object | any): void
                         /**
                          * Write a suffix after the main content.
                          * @param generator the generator to use for writing content.
                          * @param object the object to write to the output message.
                          */
                         // @ts-ignore
-                        writeSuffix(generator: JsonGenerator, object: any): void
+                        writeSuffix(generator: JsonGenerator, object: java.lang.Object | any): void
                         /**
                          * Return the Jackson {@link JavaType} for the specified type and context class.
                          * @param type the generic type to return the Jackson JavaType for
@@ -112,9 +112,9 @@ declare namespace org {
                         // @ts-ignore
                         getJsonEncoding(contentType: org.springframework.http.MediaType): JsonEncoding
                         // @ts-ignore
-                        getDefaultContentType(object: any): org.springframework.http.MediaType
+                        getDefaultContentType(object: java.lang.Object | any): org.springframework.http.MediaType
                         // @ts-ignore
-                        getContentLength(object: any, contentType: org.springframework.http.MediaType): java.lang.Long
+                        getContentLength(object: java.lang.Object | any, contentType: org.springframework.http.MediaType): number
                     }
                 }
             }

@@ -14,7 +14,7 @@ declare namespace org {
                      * @param module The module in question
                      */
                     // @ts-ignore
-                    constructor(message: string, module: org.spongepowered.api.registry.RegistryModule)
+                    constructor(message: java.lang.String | string, module: org.spongepowered.api.registry.RegistryModule)
                     /**
                      * Gets the {@link RegistryModule} associated with this exception.
                      * @return The registry module

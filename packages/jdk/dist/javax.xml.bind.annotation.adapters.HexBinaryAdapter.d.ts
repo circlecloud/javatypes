@@ -11,13 +11,13 @@ declare namespace javax {
                      * @since JAXB 2.0
                      */
                     // @ts-ignore
-                    class HexBinaryAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<java.lang.String, byte[]> {
+                    class HexBinaryAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<java.lang.String | string, number /*byte*/[]> {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        unmarshal(s: string): byte[]
+                        public unmarshal(s: java.lang.String | string): number /*byte*/[]
                         // @ts-ignore
-                        marshal(bytes: number /*byte*/[]): java.lang.String
+                        public marshal(bytes: number /*byte*/[]): string
                     }
                 }
             }

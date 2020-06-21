@@ -23,29 +23,29 @@ declare namespace org {
                  * @return The number of slices eaten
                  */
                 // @ts-ignore
-                getSlicesEaten(): int
+                public getSlicesEaten(): number /*int*/
                 /**
                  * Gets the number of slices remaining on this cake
                  * @return The number of slices remaining
                  */
                 // @ts-ignore
-                getSlicesRemaining(): int
+                public getSlicesRemaining(): number /*int*/
                 /**
                  * Sets the number of slices eaten from this cake
                  * @param n The number of slices eaten
                  */
                 // @ts-ignore
-                setSlicesEaten(n: number /*int*/): void
+                public setSlicesEaten(n: number /*int*/): void
                 /**
                  * Sets the number of slices remaining on this cake
                  * @param n The number of slices remaining
                  */
                 // @ts-ignore
-                setSlicesRemaining(n: number /*int*/): void
+                public setSlicesRemaining(n: number /*int*/): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Cake
+                public clone(): org.bukkit.material.Cake
             }
         }
     }

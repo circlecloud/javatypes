@@ -30,9 +30,9 @@ declare namespace javax {
             // @ts-ignore
             readonly kind: javax.tools.JavaFileObject.Kind
             // @ts-ignore
-            toUri(): java.net.URI
+            public toUri(): java.net.URI
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * This implementation always throws {@linkplain
              * UnsupportedOperationException}.  Subclasses can change this
@@ -40,7 +40,7 @@ declare namespace javax {
              * obeyed.
              */
             // @ts-ignore
-            openInputStream(): java.io.InputStream
+            public openInputStream(): java.io.InputStream
             /**
              * This implementation always throws {@linkplain
              * UnsupportedOperationException}.  Subclasses can change this
@@ -48,7 +48,7 @@ declare namespace javax {
              * obeyed.
              */
             // @ts-ignore
-            openOutputStream(): java.io.OutputStream
+            public openOutputStream(): java.io.OutputStream
             /**
              * Wraps the result of {@linkplain #getCharContent} in a Reader.
              * Subclasses can change this behavior as long as the contract of
@@ -60,7 +60,7 @@ declare namespace javax {
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            openReader(ignoreEncodingErrors: boolean): java.io.Reader
+            public openReader(ignoreEncodingErrors: boolean): java.io.Reader
             /**
              * This implementation always throws {@linkplain
              * UnsupportedOperationException}.  Subclasses can change this
@@ -68,7 +68,7 @@ declare namespace javax {
              * obeyed.
              */
             // @ts-ignore
-            getCharContent(ignoreEncodingErrors: boolean): java.lang.CharSequence
+            public getCharContent(ignoreEncodingErrors: boolean): java.lang.CharSequence
             /**
              * Wraps the result of openOutputStream in a Writer.  Subclasses
              * can change this behavior as long as the contract of {@link
@@ -79,7 +79,7 @@ declare namespace javax {
              * @throws IOException {#inheritDoc}
              */
             // @ts-ignore
-            openWriter(): java.io.Writer
+            public openWriter(): java.io.Writer
             /**
              * This implementation returns {@code 0L}.  Subclasses can change
              * this behavior as long as the contract of {@link FileObject} is
@@ -87,7 +87,7 @@ declare namespace javax {
              * @return {#code 0L}
              */
             // @ts-ignore
-            getLastModified(): long
+            public getLastModified(): number /*long*/
             /**
              * This implementation does nothing.  Subclasses can change this
              * behavior as long as the contract of {@link FileObject} is
@@ -95,12 +95,12 @@ declare namespace javax {
              * @return {#code false}
              */
             // @ts-ignore
-            delete(): boolean
+            public delete(): boolean
             /**
              * @return {#code this.kind}
              */
             // @ts-ignore
-            getKind(): javax.tools.JavaFileObject.Kind
+            public getKind(): javax.tools.JavaFileObject.Kind
             /**
              * This implementation compares the path of its URI to the given
              * simple name.  This method returns true if the given kind is
@@ -114,23 +114,23 @@ declare namespace javax {
              * of {@link JavaFileObject} is obeyed.
              */
             // @ts-ignore
-            isNameCompatible(simpleName: string, kind: javax.tools.JavaFileObject.Kind): boolean
+            public isNameCompatible(simpleName: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind): boolean
             /**
              * This implementation returns {@code null}.  Subclasses can
              * change this behavior as long as the contract of
              * {@link JavaFileObject} is obeyed.
              */
             // @ts-ignore
-            getNestingKind(): javax.lang.model.element.NestingKind
+            public getNestingKind(): javax.lang.model.element.NestingKind
             /**
              * This implementation returns {@code null}.  Subclasses can
              * change this behavior as long as the contract of
              * {@link JavaFileObject} is obeyed.
              */
             // @ts-ignore
-            getAccessLevel(): javax.lang.model.element.Modifier
+            public getAccessLevel(): javax.lang.model.element.Modifier
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -19,25 +19,25 @@ declare namespace javax {
              * @param parameterList an RFC 2045, 2046 compliant parameter list.
              */
             // @ts-ignore
-            constructor(parameterList: string)
+            constructor(parameterList: java.lang.String | string)
             /**
              * A routine for parsing the parameter list out of a String.
              * @param parameterList an RFC 2045, 2046 compliant parameter list.
              */
             // @ts-ignore
-            parse(parameterList: string): void
+            parse(parameterList: java.lang.String | string): void
             /**
              * Return the number of name-value pairs in this list.
              * @return the number of parameters
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Determine whether or not this list is empty.
              * @return true if there are no parameters
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Retrieve the value associated with the given name, or null if there
              * is no current association.
@@ -45,7 +45,7 @@ declare namespace javax {
              * @return the parameter's value
              */
             // @ts-ignore
-            get(name: string): java.lang.String
+            public get(name: java.lang.String | string): string
             /**
              * Set the value to be associated with the given name, replacing
              * any previous association.
@@ -53,24 +53,24 @@ declare namespace javax {
              * @param value     the parameter's value
              */
             // @ts-ignore
-            set(name: string, value: string): void
+            public set(name: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Remove any value associated with the given name.
              * @param name      the parameter name
              */
             // @ts-ignore
-            remove(name: string): void
+            public remove(name: java.lang.String | string): void
             /**
              * Retrieve an enumeration of all the names in this list.
              * @return an enumeration of all parameter names
              */
             // @ts-ignore
-            getNames(): java.util.Enumeration
+            public getNames(): java.util.Enumeration<any>
             /**
              * Return a string representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

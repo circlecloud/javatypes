@@ -11,17 +11,17 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                readonly GUARANTEED_NO_WRAP_CHAT_PAGE_WIDTH: number /*int*/
+                public static readonly GUARANTEED_NO_WRAP_CHAT_PAGE_WIDTH: number /*int*/
                 // @ts-ignore
-                readonly AVERAGE_CHAT_PAGE_WIDTH: number /*int*/
+                public static readonly AVERAGE_CHAT_PAGE_WIDTH: number /*int*/
                 // @ts-ignore
-                readonly UNBOUNDED_PAGE_WIDTH: number /*int*/
+                public static readonly UNBOUNDED_PAGE_WIDTH: number /*int*/
                 // @ts-ignore
-                readonly OPEN_CHAT_PAGE_HEIGHT: number /*int*/
+                public static readonly OPEN_CHAT_PAGE_HEIGHT: number /*int*/
                 // @ts-ignore
-                readonly CLOSED_CHAT_PAGE_HEIGHT: number /*int*/
+                public static readonly CLOSED_CHAT_PAGE_HEIGHT: number /*int*/
                 // @ts-ignore
-                readonly UNBOUNDED_PAGE_HEIGHT: number /*int*/
+                public static readonly UNBOUNDED_PAGE_HEIGHT: number /*int*/
                 /**
                  * Breaks a raw string up into pages using the default width and height.
                  * @param unpaginatedString The raw string to break.
@@ -29,7 +29,7 @@ declare namespace org {
                  * @return A single chat page.
                  */
                 // @ts-ignore
-                paginate(unpaginatedString: string, pageNumber: number /*int*/): org.bukkit.util.ChatPaginator.ChatPage
+                public static paginate(unpaginatedString: java.lang.String | string, pageNumber: number /*int*/): org.bukkit.util.ChatPaginator.ChatPage
                 /**
                  * Breaks a raw string up into pages using a provided width and height.
                  * @param unpaginatedString The raw string to break.
@@ -39,7 +39,7 @@ declare namespace org {
                  * @return A single chat page.
                  */
                 // @ts-ignore
-                paginate(unpaginatedString: string, pageNumber: number /*int*/, lineLength: number /*int*/, pageHeight: number /*int*/): org.bukkit.util.ChatPaginator.ChatPage
+                public static paginate(unpaginatedString: java.lang.String | string, pageNumber: number /*int*/, lineLength: number /*int*/, pageHeight: number /*int*/): org.bukkit.util.ChatPaginator.ChatPage
                 /**
                  * Breaks a raw string up into a series of lines. Words are wrapped using
                  * spaces as decimeters and the newline character is respected.
@@ -48,7 +48,7 @@ declare namespace org {
                  * @return An array of word-wrapped lines.
                  */
                 // @ts-ignore
-                wordWrap(rawString: string, lineLength: number /*int*/): java.lang.String[]
+                public static wordWrap(rawString: java.lang.String | string, lineLength: number /*int*/): string[]
             }
         }
     }

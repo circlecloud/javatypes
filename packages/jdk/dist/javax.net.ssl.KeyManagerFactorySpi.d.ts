@@ -12,7 +12,7 @@ declare namespace javax {
              * @see KeyManager
              */
             // @ts-ignore
-            class KeyManagerFactorySpi extends java.lang.Object {
+            abstract class KeyManagerFactorySpi extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**

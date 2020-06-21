@@ -8,7 +8,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class LocaleNameProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class LocaleNameProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -39,7 +39,7 @@ declare namespace java {
                  * @see java.util.Locale#getDisplayLanguage(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getDisplayLanguage(languageCode: string, locale: java.util.Locale): java.lang.String
+                public abstract getDisplayLanguage(languageCode: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Returns a localized name for the given <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
                  * IETF BCP47</a> script code and the given locale that is appropriate for
@@ -67,7 +67,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getDisplayScript(scriptCode: string, locale: java.util.Locale): java.lang.String
+                public getDisplayScript(scriptCode: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Returns a localized name for the given <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">
                  * IETF BCP47</a> region code (either ISO 3166 country code or UN M.49 area
@@ -93,7 +93,7 @@ declare namespace java {
                  * @see java.util.Locale#getDisplayCountry(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getDisplayCountry(countryCode: string, locale: java.util.Locale): java.lang.String
+                public abstract getDisplayCountry(countryCode: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Returns a localized name for the given variant code and the given locale that
                  * is appropriate for display to the user.
@@ -111,7 +111,7 @@ declare namespace java {
                  * @see java.util.Locale#getDisplayVariant(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getDisplayVariant(variant: string, locale: java.util.Locale): java.lang.String
+                public abstract getDisplayVariant(variant: java.lang.String | string, locale: java.util.Locale): string
             }
         }
     }

@@ -10,11 +10,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(damagee: org.bukkit.entity.Entity, cause: org.bukkit.event.entity.EntityDamageEvent.DamageCause, damage: number /*double*/)
                     // @ts-ignore
-                    constructor(damagee: org.bukkit.entity.Entity, cause: org.bukkit.event.entity.EntityDamageEvent.DamageCause, modifiers: java.util.Map<org.bukkit.event.entity.EntityDamageEvent.DamageModifier, java.lang.Double>, modifierFunctions: java.util.Map<org.bukkit.event.entity.EntityDamageEvent.DamageModifier, <any>>)
+                    constructor(damagee: org.bukkit.entity.Entity, cause: org.bukkit.event.entity.EntityDamageEvent.DamageCause, modifiers: java.util.Map<org.bukkit.event.entity.EntityDamageEvent.DamageModifier, java.lang.Double | number>, modifierFunctions: java.util.Map<org.bukkit.event.entity.EntityDamageEvent.DamageModifier, any>)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the original damage for the specified modifier, as defined at this
                      * event's construction.
@@ -23,7 +23,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if type is null
                      */
                     // @ts-ignore
-                    getOriginalDamage(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier): double
+                    public getOriginalDamage(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier): number /*double*/
                     /**
                      * Sets the damage for the specified modifier.
                      * @param type the damage modifier
@@ -35,7 +35,7 @@ declare namespace org {
                      * @see #getFinalDamage()
                      */
                     // @ts-ignore
-                    setDamage(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier, damage: number /*double*/): void
+                    public setDamage(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier, damage: number /*double*/): void
                     /**
                      * Gets the damage change for some modifier
                      * @param type the damage modifier
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see DamageModifier#BASE
                      */
                     // @ts-ignore
-                    getDamage(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier): double
+                    public getDamage(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier): number /*double*/
                     /**
                      * This checks to see if a particular modifier is valid for this event's
                      * caller, such that, {@link #setDamage(DamageModifier, double)} will not
@@ -56,21 +56,21 @@ declare namespace org {
                      * @throws IllegalArgumentException if type is null
                      */
                     // @ts-ignore
-                    isApplicable(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier): boolean
+                    public isApplicable(type: org.bukkit.event.entity.EntityDamageEvent.DamageModifier): boolean
                     /**
                      * Gets the raw amount of damage caused by the event
                      * @return The raw amount of damage caused by the event
                      * @see DamageModifier#BASE
                      */
                     // @ts-ignore
-                    getDamage(): double
+                    public getDamage(): number /*double*/
                     /**
                      * Gets the amount of damage caused by the event after all damage
                      * reduction is applied.
                      * @return the amount of damage caused by the event
                      */
                     // @ts-ignore
-                    getFinalDamage(): double
+                    public getFinalDamage(): number /*double*/
                     /**
                      * Sets the raw amount of damage caused by the event.
                      * <p>
@@ -80,17 +80,17 @@ declare namespace org {
                      * @param damage The raw amount of damage caused by the event
                      */
                     // @ts-ignore
-                    setDamage(damage: number /*double*/): void
+                    public setDamage(damage: number /*double*/): void
                     /**
                      * Gets the cause of the damage.
                      * @return A DamageCause value detailing the cause of the damage.
                      */
                     // @ts-ignore
-                    getCause(): org.bukkit.event.entity.EntityDamageEvent.DamageCause
+                    public getCause(): org.bukkit.event.entity.EntityDamageEvent.DamageCause
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

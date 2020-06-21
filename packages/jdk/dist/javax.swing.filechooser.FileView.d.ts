@@ -32,7 +32,7 @@ declare namespace javax {
              * @author Jeff Dinkins
              */
             // @ts-ignore
-            class FileView extends java.lang.Object {
+            abstract class FileView extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -40,33 +40,33 @@ declare namespace javax {
                  * <code>f.getName()</code>.
                  */
                 // @ts-ignore
-                getName(f: java.io.File): java.lang.String
+                public getName(f: java.io.File): string
                 /**
                  * A human readable description of the file. For example,
                  * a file named <i>jag.jpg</i> might have a description that read:
                  * "A JPEG image file of James Gosling's face".
                  */
                 // @ts-ignore
-                getDescription(f: java.io.File): java.lang.String
+                public getDescription(f: java.io.File): string
                 /**
                  * A human readable description of the type of the file. For
                  * example, a <code>jpg</code> file might have a type description of:
                  * "A JPEG Compressed Image File"
                  */
                 // @ts-ignore
-                getTypeDescription(f: java.io.File): java.lang.String
+                public getTypeDescription(f: java.io.File): string
                 /**
                  * The icon that represents this file in the <code>JFileChooser</code>.
                  */
                 // @ts-ignore
-                getIcon(f: java.io.File): javax.swing.Icon
+                public getIcon(f: java.io.File): javax.swing.Icon
                 /**
                  * Whether the directory is traversable or not. This might be
                  * useful, for example, if you want a directory to represent
                  * a compound document and don't want the user to descend into it.
                  */
                 // @ts-ignore
-                isTraversable(f: java.io.File): java.lang.Boolean
+                public isTraversable(f: java.io.File): java.lang.Boolean
             }
         }
     }

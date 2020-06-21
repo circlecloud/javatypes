@@ -16,17 +16,17 @@ declare namespace org {
                         // @ts-ignore
                         constructor(properties: java.util.Properties, fileTimestamp: number /*long*/)
                         // @ts-ignore
-                        getProperties(): java.util.Properties
+                        public getProperties(): java.util.Properties
                         // @ts-ignore
-                        getFileTimestamp(): long
+                        public getFileTimestamp(): number /*long*/
                         // @ts-ignore
-                        setRefreshTimestamp(refreshTimestamp: number /*long*/): void
+                        public setRefreshTimestamp(refreshTimestamp: number /*long*/): void
                         // @ts-ignore
-                        getRefreshTimestamp(): long
+                        public getRefreshTimestamp(): number /*long*/
                         // @ts-ignore
-                        getProperty(code: string): java.lang.String
+                        public getProperty(code: java.lang.String | string): string
                         // @ts-ignore
-                        getMessageFormat(code: string, locale: java.util.Locale): java.text.MessageFormat
+                        public getMessageFormat(code: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                     }
                 }
             }

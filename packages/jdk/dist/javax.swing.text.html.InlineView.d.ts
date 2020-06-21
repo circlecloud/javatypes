@@ -27,7 +27,7 @@ declare namespace javax {
                      * @see View#insertUpdate
                      */
                     // @ts-ignore
-                    insertUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                    public insertUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                     /**
                      * Gives notification that something was removed from the document
                      * in a location that this view is responsible for.
@@ -40,7 +40,7 @@ declare namespace javax {
                      * @see View#removeUpdate
                      */
                     // @ts-ignore
-                    removeUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                    public removeUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                     /**
                      * Gives notification from the document that attributes were changed
                      * in a location that this view is responsible for.
@@ -50,14 +50,14 @@ declare namespace javax {
                      * @see View#changedUpdate
                      */
                     // @ts-ignore
-                    changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                    public changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                     /**
                      * Fetches the attributes to use when rendering.  This is
                      * implemented to multiplex the attributes specified in the
                      * model with a StyleSheet.
                      */
                     // @ts-ignore
-                    getAttributes(): javax.swing.text.AttributeSet
+                    public getAttributes(): javax.swing.text.AttributeSet
                     /**
                      * Determines how attractive a break opportunity in
                      * this view is.  This can be used for determining which
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @see javax.swing.text.View#ForcedBreakWeight
                      */
                     // @ts-ignore
-                    getBreakWeight(axis: number /*int*/, pos: number /*float*/, len: number /*float*/): int
+                    public getBreakWeight(axis: number /*int*/, pos: number /*float*/, len: number /*float*/): number /*int*/
                     /**
                      * Tries to break this view on the given axis. Refer to
                      * {@link javax.swing.text.View#breakView} for a complete
@@ -122,7 +122,7 @@ declare namespace javax {
                      * @see javax.swing.text.View#breakView
                      */
                     // @ts-ignore
-                    breakView(axis: number /*int*/, offset: number /*int*/, pos: number /*float*/, len: number /*float*/): javax.swing.text.View
+                    public breakView(axis: number /*int*/, offset: number /*int*/, pos: number /*float*/, len: number /*float*/): javax.swing.text.View
                     /**
                      * Set the cached properties from the attributes.
                      */

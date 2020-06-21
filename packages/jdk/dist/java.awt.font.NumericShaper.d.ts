@@ -100,97 +100,97 @@ declare namespace java {
                  * Latin-1 (European) decimal base.
                  */
                 // @ts-ignore
-                readonly EUROPEAN: number /*int*/
+                public static readonly EUROPEAN: number /*int*/
                 /**
                  * Identifies the ARABIC range and decimal base.
                  */
                 // @ts-ignore
-                readonly ARABIC: number /*int*/
+                public static readonly ARABIC: number /*int*/
                 /**
                  * Identifies the ARABIC range and ARABIC_EXTENDED decimal base.
                  */
                 // @ts-ignore
-                readonly EASTERN_ARABIC: number /*int*/
+                public static readonly EASTERN_ARABIC: number /*int*/
                 /**
                  * Identifies the DEVANAGARI range and decimal base.
                  */
                 // @ts-ignore
-                readonly DEVANAGARI: number /*int*/
+                public static readonly DEVANAGARI: number /*int*/
                 /**
                  * Identifies the BENGALI range and decimal base.
                  */
                 // @ts-ignore
-                readonly BENGALI: number /*int*/
+                public static readonly BENGALI: number /*int*/
                 /**
                  * Identifies the GURMUKHI range and decimal base.
                  */
                 // @ts-ignore
-                readonly GURMUKHI: number /*int*/
+                public static readonly GURMUKHI: number /*int*/
                 /**
                  * Identifies the GUJARATI range and decimal base.
                  */
                 // @ts-ignore
-                readonly GUJARATI: number /*int*/
+                public static readonly GUJARATI: number /*int*/
                 /**
                  * Identifies the ORIYA range and decimal base.
                  */
                 // @ts-ignore
-                readonly ORIYA: number /*int*/
+                public static readonly ORIYA: number /*int*/
                 /**
                  * Identifies the TAMIL range and decimal base.
                  */
                 // @ts-ignore
-                readonly TAMIL: number /*int*/
+                public static readonly TAMIL: number /*int*/
                 /**
                  * Identifies the TELUGU range and decimal base.
                  */
                 // @ts-ignore
-                readonly TELUGU: number /*int*/
+                public static readonly TELUGU: number /*int*/
                 /**
                  * Identifies the KANNADA range and decimal base.
                  */
                 // @ts-ignore
-                readonly KANNADA: number /*int*/
+                public static readonly KANNADA: number /*int*/
                 /**
                  * Identifies the MALAYALAM range and decimal base.
                  */
                 // @ts-ignore
-                readonly MALAYALAM: number /*int*/
+                public static readonly MALAYALAM: number /*int*/
                 /**
                  * Identifies the THAI range and decimal base.
                  */
                 // @ts-ignore
-                readonly THAI: number /*int*/
+                public static readonly THAI: number /*int*/
                 /**
                  * Identifies the LAO range and decimal base.
                  */
                 // @ts-ignore
-                readonly LAO: number /*int*/
+                public static readonly LAO: number /*int*/
                 /**
                  * Identifies the TIBETAN range and decimal base.
                  */
                 // @ts-ignore
-                readonly TIBETAN: number /*int*/
+                public static readonly TIBETAN: number /*int*/
                 /**
                  * Identifies the MYANMAR range and decimal base.
                  */
                 // @ts-ignore
-                readonly MYANMAR: number /*int*/
+                public static readonly MYANMAR: number /*int*/
                 /**
                  * Identifies the ETHIOPIC range and decimal base.
                  */
                 // @ts-ignore
-                readonly ETHIOPIC: number /*int*/
+                public static readonly ETHIOPIC: number /*int*/
                 /**
                  * Identifies the KHMER range and decimal base.
                  */
                 // @ts-ignore
-                readonly KHMER: number /*int*/
+                public static readonly KHMER: number /*int*/
                 /**
                  * Identifies the MONGOLIAN range and decimal base.
                  */
                 // @ts-ignore
-                readonly MONGOLIAN: number /*int*/
+                public static readonly MONGOLIAN: number /*int*/
                 /**
                  * Identifies all ranges, for full contextual shaping.
                  * <p>This constant specifies all of the bit mask-based
@@ -198,7 +198,7 @@ declare namespace java {
                  * specify all of the enum-based ranges.
                  */
                 // @ts-ignore
-                readonly ALL_RANGES: number /*int*/
+                public static readonly ALL_RANGES: number /*int*/
                 /**
                  * Returns a shaper for the provided unicode range.  All
                  * Latin-1 (EUROPEAN) digits are converted
@@ -208,7 +208,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the range is not a single range
                  */
                 // @ts-ignore
-                getShaper(singleRange: number /*int*/): java.awt.font.NumericShaper
+                public static getShaper(singleRange: number /*int*/): java.awt.font.NumericShaper
                 /**
                  * Returns a shaper for the provided Unicode
                  * range. All Latin-1 (EUROPEAN) digits are converted to the
@@ -220,7 +220,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getShaper(singleRange: java.awt.font.NumericShaper.Range): java.awt.font.NumericShaper
+                public static getShaper(singleRange: java.awt.font.NumericShaper.Range): java.awt.font.NumericShaper
                 /**
                  * Returns a contextual shaper for the provided unicode range(s).
                  * Latin-1 (EUROPEAN) digits are converted to the decimal digits
@@ -236,7 +236,7 @@ declare namespace java {
                  * @return a shaper for the specified ranges
                  */
                 // @ts-ignore
-                getContextualShaper(ranges: number /*int*/): java.awt.font.NumericShaper
+                public static getContextualShaper(ranges: number /*int*/): java.awt.font.NumericShaper
                 /**
                  * Returns a contextual shaper for the provided Unicode
                  * range(s). The Latin-1 (EUROPEAN) digits are converted to the
@@ -252,7 +252,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getContextualShaper(ranges: Array<java.awt.font.NumericShaper.Range>): java.awt.font.NumericShaper
+                public static getContextualShaper(ranges: java.util.Set<java.awt.font.NumericShaper.Range> | Array<java.awt.font.NumericShaper.Range>): java.awt.font.NumericShaper
                 /**
                  * Returns a contextual shaper for the provided unicode range(s).
                  * Latin-1 (EUROPEAN) digits will be converted to the decimal digits
@@ -269,7 +269,7 @@ declare namespace java {
                  *  <code>defaultContext</code> is not a single valid range.
                  */
                 // @ts-ignore
-                getContextualShaper(ranges: number /*int*/, defaultContext: number /*int*/): java.awt.font.NumericShaper
+                public static getContextualShaper(ranges: number /*int*/, defaultContext: number /*int*/): java.awt.font.NumericShaper
                 /**
                  * Returns a contextual shaper for the provided Unicode range(s).
                  * The Latin-1 (EUROPEAN) digits will be converted to the decimal
@@ -285,7 +285,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getContextualShaper(ranges: Array<java.awt.font.NumericShaper.Range>, defaultContext: java.awt.font.NumericShaper.Range): java.awt.font.NumericShaper
+                public static getContextualShaper(ranges: java.util.Set<java.awt.font.NumericShaper.Range> | Array<java.awt.font.NumericShaper.Range>, defaultContext: java.awt.font.NumericShaper.Range): java.awt.font.NumericShaper
                 /**
                  * Converts the digits in the text that occur between start and
                  * start + count.
@@ -299,7 +299,7 @@ declare namespace java {
                  * @throws NullPointerException if text is null
                  */
                 // @ts-ignore
-                shape(text: string[], start: number /*int*/, count: number /*int*/): void
+                public shape(text: string[], start: number /*int*/, count: number /*int*/): void
                 /**
                  * Converts the digits in the text that occur between start and
                  * start + count, using the provided context.
@@ -319,7 +319,7 @@ declare namespace java {
                  *  range.
                  */
                 // @ts-ignore
-                shape(text: string[], start: number /*int*/, count: number /*int*/, context: number /*int*/): void
+                public shape(text: string[], start: number /*int*/, count: number /*int*/, context: number /*int*/): void
                 /**
                  * Converts the digits in the text that occur between {@code
                  * start} and {@code start + count}, using the provided {@code
@@ -338,7 +338,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                shape(text: string[], start: number /*int*/, count: number /*int*/, context: java.awt.font.NumericShaper.Range): void
+                public shape(text: string[], start: number /*int*/, count: number /*int*/, context: java.awt.font.NumericShaper.Range): void
                 /**
                  * Returns a <code>boolean</code> indicating whether or not
                  * this shaper shapes contextually.
@@ -346,7 +346,7 @@ declare namespace java {
                  *          <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isContextual(): boolean
+                public isContextual(): boolean
                 /**
                  * Returns an <code>int</code> that ORs together the values for
                  * all the ranges that will be shaped.
@@ -361,7 +361,7 @@ declare namespace java {
                  * @return the values for all the ranges to be shaped.
                  */
                 // @ts-ignore
-                getRanges(): int
+                public getRanges(): number /*int*/
                 /**
                  * Returns a {@code Set} representing all the Unicode ranges in
                  * this {@code NumericShaper} that will be shaped.
@@ -369,14 +369,14 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getRangeSet(): java.util.Set<java.awt.font.NumericShaper.Range>
+                public getRangeSet(): Array<java.awt.font.NumericShaper.Range>
                 /**
                  * Returns a hash code for this shaper.
                  * @return this shaper's hash code.
                  * @see java.lang.Object#hashCode
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns {@code true} if the specified object is an instance of
                  * <code>NumericShaper</code> and shapes identically to this one,
@@ -395,14 +395,14 @@ declare namespace java {
                  * @see java.lang.Object#equals(java.lang.Object)
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns a <code>String</code> that describes this shaper. This method
                  * is used for debugging purposes only.
                  * @return a <code>String</code> describing this shaper.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

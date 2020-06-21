@@ -130,7 +130,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.SecureRandom
+            public static getInstance(algorithm: java.lang.String | string): java.security.SecureRandom
             /**
              * Returns a SecureRandom object that implements the specified
              * Random Number Generator (RNG) algorithm.
@@ -164,7 +164,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.SecureRandom
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.SecureRandom
             /**
              * Returns a SecureRandom object that implements the specified
              * Random Number Generator (RNG) algorithm.
@@ -193,13 +193,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.SecureRandom
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.SecureRandom
             /**
              * Returns the provider of this SecureRandom object.
              * @return the provider of this SecureRandom object.
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns the name of the algorithm implemented by this SecureRandom
              * object.
@@ -208,7 +208,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Reseeds this random object. The given seed supplements, rather than
              * replaces, the existing seed. Thus, repeated calls are guaranteed
@@ -217,7 +217,7 @@ declare namespace java {
              * @see #getSeed
              */
             // @ts-ignore
-            setSeed(seed: number /*byte*/[]): void
+            public setSeed(seed: number /*byte*/[]): void
             /**
              * Reseeds this random object, using the eight bytes contained
              * in the given {@code long seed}. The given seed supplements,
@@ -229,7 +229,7 @@ declare namespace java {
              * @see #getSeed
              */
             // @ts-ignore
-            setSeed(seed: number /*long*/): void
+            public setSeed(seed: number /*long*/): void
             /**
              * Generates a user-specified number of random bytes.
              * <p> If a call to {@code setSeed} had not occurred previously,
@@ -239,7 +239,7 @@ declare namespace java {
              * @param bytes the array to be filled in with random bytes.
              */
             // @ts-ignore
-            nextBytes(bytes: number /*byte*/[]): void
+            public nextBytes(bytes: number /*byte*/[]): void
             /**
              * Generates an integer containing the user-specified number of
              * pseudo-random bits (right justified, with leading zeros).  This
@@ -253,7 +253,7 @@ declare namespace java {
              *  of pseudo-random bits (right justified, with leading zeros).
              */
             // @ts-ignore
-            next(numBits: number /*int*/): int
+            next(numBits: number /*int*/): number /*int*/
             /**
              * Returns the given number of seed bytes, computed using the seed
              * generation algorithm that this class uses to seed itself.  This
@@ -268,7 +268,7 @@ declare namespace java {
              * @see #setSeed
              */
             // @ts-ignore
-            getSeed(numBytes: number /*int*/): byte[]
+            public static getSeed(numBytes: number /*int*/): number /*byte*/[]
             /**
              * Returns the given number of seed bytes, computed using the seed
              * generation algorithm that this class uses to seed itself.  This
@@ -277,7 +277,7 @@ declare namespace java {
              * @return the seed bytes.
              */
             // @ts-ignore
-            generateSeed(numBytes: number /*int*/): byte[]
+            public generateSeed(numBytes: number /*int*/): number /*byte*/[]
             /**
              * Returns a {@code SecureRandom} object that was selected by using
              * the algorithms/providers specified in the {@code
@@ -300,7 +300,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getInstanceStrong(): java.security.SecureRandom
+            public static getInstanceStrong(): java.security.SecureRandom
         }
     }
 }

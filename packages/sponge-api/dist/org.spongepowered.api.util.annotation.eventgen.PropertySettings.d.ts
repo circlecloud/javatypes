@@ -10,7 +10,7 @@ declare namespace org {
                          * property.</p>
                          */
                         // @ts-ignore
-                        class PropertySettings implements java.lang.annotation.Annotation {
+                        abstract class PropertySettings implements java.lang.annotation.Annotation {
                         }
                     }
                 }

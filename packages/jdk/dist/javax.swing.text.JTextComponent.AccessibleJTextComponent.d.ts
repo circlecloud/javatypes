@@ -33,7 +33,7 @@ declare namespace javax {
                      * @param e the CaretEvent
                      */
                     // @ts-ignore
-                    caretUpdate(e: javax.swing.event.CaretEvent): void
+                    public caretUpdate(e: javax.swing.event.CaretEvent): void
                     /**
                      * Handles document insert (fire appropriate property change event
                      * which is AccessibleContext.ACCESSIBLE_TEXT_PROPERTY).
@@ -41,7 +41,7 @@ declare namespace javax {
                      * @param e the DocumentEvent
                      */
                     // @ts-ignore
-                    insertUpdate(e: javax.swing.event.DocumentEvent): void
+                    public insertUpdate(e: javax.swing.event.DocumentEvent): void
                     /**
                      * Handles document remove (fire appropriate property change event,
                      * which is AccessibleContext.ACCESSIBLE_TEXT_PROPERTY).
@@ -49,7 +49,7 @@ declare namespace javax {
                      * @param e the DocumentEvent
                      */
                     // @ts-ignore
-                    removeUpdate(e: javax.swing.event.DocumentEvent): void
+                    public removeUpdate(e: javax.swing.event.DocumentEvent): void
                     /**
                      * Handles document remove (fire appropriate property change event,
                      * which is AccessibleContext.ACCESSIBLE_TEXT_PROPERTY).
@@ -57,7 +57,7 @@ declare namespace javax {
                      * @param e the DocumentEvent
                      */
                     // @ts-ignore
-                    changedUpdate(e: javax.swing.event.DocumentEvent): void
+                    public changedUpdate(e: javax.swing.event.DocumentEvent): void
                     /**
                      * Gets the state set of the JTextComponent.
                      * The AccessibleStateSet of an object is composed of a set of
@@ -71,7 +71,7 @@ declare namespace javax {
                      * @see #addPropertyChangeListener
                      */
                     // @ts-ignore
-                    getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                    public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                     /**
                      * Gets the role of this object.
                      * @return an instance of AccessibleRole describing the role of the
@@ -79,7 +79,7 @@ declare namespace javax {
                      * @see AccessibleRole
                      */
                     // @ts-ignore
-                    getAccessibleRole(): javax.accessibility.AccessibleRole
+                    public getAccessibleRole(): javax.accessibility.AccessibleRole
                     /**
                      * Get the AccessibleText associated with this object.  In the
                      * implementation of the Java Accessibility API for this class,
@@ -88,7 +88,7 @@ declare namespace javax {
                      * @return this object
                      */
                     // @ts-ignore
-                    getAccessibleText(): javax.accessibility.AccessibleText
+                    public getAccessibleText(): javax.accessibility.AccessibleText
                     /**
                      * Given a point in local coordinates, return the zero-based index
                      * of the character under that Point.  If the point is invalid,
@@ -97,7 +97,7 @@ declare namespace javax {
                      * @return the zero-based index of the character under Point p.
                      */
                     // @ts-ignore
-                    getIndexAtPoint(p: java.awt.Point): int
+                    public getIndexAtPoint(p: java.awt.Point): number /*int*/
                     /**
                      * Determines the bounding box of the character at the given
                      * index into the string.  The bounds are returned in local
@@ -124,13 +124,13 @@ declare namespace javax {
                      * @return the screen coordinates of the character's bounding box
                      */
                     // @ts-ignore
-                    getCharacterBounds(i: number /*int*/): java.awt.Rectangle
+                    public getCharacterBounds(i: number /*int*/): java.awt.Rectangle
                     /**
                      * Returns the number of characters (valid indices)
                      * @return the number of characters &ge; 0
                      */
                     // @ts-ignore
-                    getCharCount(): int
+                    public getCharCount(): number /*int*/
                     /**
                      * Returns the zero-based offset of the caret.
                      * Note: The character to the right of the caret will have the
@@ -139,14 +139,14 @@ declare namespace javax {
                      * @return the zero-based offset of the caret.
                      */
                     // @ts-ignore
-                    getCaretPosition(): int
+                    public getCaretPosition(): number /*int*/
                     /**
                      * Returns the AttributeSet for a given character (at a given index).
                      * @param i the zero-based index into the text
                      * @return the AttributeSet of the character
                      */
                     // @ts-ignore
-                    getCharacterAttribute(i: number /*int*/): javax.swing.text.AttributeSet
+                    public getCharacterAttribute(i: number /*int*/): javax.swing.text.AttributeSet
                     /**
                      * Returns the start offset within the selected text.
                      * If there is no selection, but there is
@@ -156,7 +156,7 @@ declare namespace javax {
                      * @return the index into the text of the start of the selection &ge; 0
                      */
                     // @ts-ignore
-                    getSelectionStart(): int
+                    public getSelectionStart(): number /*int*/
                     /**
                      * Returns the end offset within the selected text.
                      * If there is no selection, but there is
@@ -166,13 +166,13 @@ declare namespace javax {
                      * @return the index into the text of the end of the selection &ge; 0
                      */
                     // @ts-ignore
-                    getSelectionEnd(): int
+                    public getSelectionEnd(): number /*int*/
                     /**
                      * Returns the portion of the text that is selected.
                      * @return the text, null if no selection
                      */
                     // @ts-ignore
-                    getSelectedText(): java.lang.String
+                    public getSelectedText(): string
                     /**
                      * Returns the String at a given index. Whitespace
                      * between words is treated as a word.
@@ -181,7 +181,7 @@ declare namespace javax {
                      * @return the letter, word, or sentence.
                      */
                     // @ts-ignore
-                    getAtIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                    public getAtIndex(part: number /*int*/, index: number /*int*/): string
                     /**
                      * Returns the String after a given index. Whitespace
                      * between words is treated as a word.
@@ -190,7 +190,7 @@ declare namespace javax {
                      * @return the letter, word, or sentence.
                      */
                     // @ts-ignore
-                    getAfterIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                    public getAfterIndex(part: number /*int*/, index: number /*int*/): string
                     /**
                      * Returns the String before a given index. Whitespace
                      * between words is treated a word.
@@ -199,7 +199,7 @@ declare namespace javax {
                      * @return the letter, word, or sentence.
                      */
                     // @ts-ignore
-                    getBeforeIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+                    public getBeforeIndex(part: number /*int*/, index: number /*int*/): string
                     /**
                      * Returns the AccessibleEditableText interface for
                      * this text component.
@@ -207,14 +207,14 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getAccessibleEditableText(): javax.accessibility.AccessibleEditableText
+                    public getAccessibleEditableText(): javax.accessibility.AccessibleEditableText
                     /**
                      * Sets the text contents to the specified string.
                      * @param s the string to set the text contents
                      * @since 1.4
                      */
                     // @ts-ignore
-                    setTextContents(s: string): void
+                    public setTextContents(s: java.lang.String | string): void
                     /**
                      * Inserts the specified string at the given index
                      * @param index the index in the text where the string will
@@ -223,7 +223,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    insertTextAtIndex(index: number /*int*/, s: string): void
+                    public insertTextAtIndex(index: number /*int*/, s: java.lang.String | string): void
                     /**
                      * Returns the text string between two indices.
                      * @param startIndex the starting index in the text
@@ -232,7 +232,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): java.lang.String
+                    public getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): string
                     /**
                      * Deletes the text between two indices
                      * @param startIndex the starting index in the text
@@ -240,7 +240,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    delete(startIndex: number /*int*/, endIndex: number /*int*/): void
+                    public delete(startIndex: number /*int*/, endIndex: number /*int*/): void
                     /**
                      * Cuts the text between two indices into the system clipboard.
                      * @param startIndex the starting index in the text
@@ -248,7 +248,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    cut(startIndex: number /*int*/, endIndex: number /*int*/): void
+                    public cut(startIndex: number /*int*/, endIndex: number /*int*/): void
                     /**
                      * Pastes the text from the system clipboard into the text
                      * starting at the specified index.
@@ -256,7 +256,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    paste(startIndex: number /*int*/): void
+                    public paste(startIndex: number /*int*/): void
                     /**
                      * Replaces the text between two indices with the specified
                      * string.
@@ -266,7 +266,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    replaceText(startIndex: number /*int*/, endIndex: number /*int*/, s: string): void
+                    public replaceText(startIndex: number /*int*/, endIndex: number /*int*/, s: java.lang.String | string): void
                     /**
                      * Selects the text between two indices.
                      * @param startIndex the starting index in the text
@@ -274,7 +274,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    selectText(startIndex: number /*int*/, endIndex: number /*int*/): void
+                    public selectText(startIndex: number /*int*/, endIndex: number /*int*/): void
                     /**
                      * Sets attributes for the text between two indices.
                      * @param startIndex the starting index in the text
@@ -284,7 +284,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    setAttributes(startIndex: number /*int*/, endIndex: number /*int*/, as: javax.swing.text.AttributeSet): void
+                    public setAttributes(startIndex: number /*int*/, endIndex: number /*int*/, as: javax.swing.text.AttributeSet): void
                     /**
                      * Returns the <code>AccessibleTextSequence</code> at a given
                      * <code>index</code>.
@@ -303,7 +303,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getTextSequenceAt(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
+                    public getTextSequenceAt(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
                     /**
                      * Returns the <code>AccessibleTextSequence</code> after a given
                      * <code>index</code>.
@@ -322,7 +322,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getTextSequenceAfter(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
+                    public getTextSequenceAfter(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
                     /**
                      * Returns the <code>AccessibleTextSequence</code> before a given
                      * <code>index</code>.
@@ -341,7 +341,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getTextSequenceBefore(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
+                    public getTextSequenceBefore(part: number /*int*/, index: number /*int*/): javax.accessibility.AccessibleTextSequence
                     /**
                      * Returns the <code>Rectangle</code> enclosing the text between
                      * two indicies.
@@ -352,9 +352,9 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getTextBounds(startIndex: number /*int*/, endIndex: number /*int*/): java.awt.Rectangle
+                    public getTextBounds(startIndex: number /*int*/, endIndex: number /*int*/): java.awt.Rectangle
                     // @ts-ignore
-                    getAccessibleAction(): javax.accessibility.AccessibleAction
+                    public getAccessibleAction(): javax.accessibility.AccessibleAction
                     /**
                      * Returns the number of accessible actions available in this object
                      * If there are more than one, the first one is considered the
@@ -363,7 +363,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getAccessibleActionCount(): int
+                    public getAccessibleActionCount(): number /*int*/
                     /**
                      * Returns a description of the specified action of the object.
                      * @param i zero-based index of the actions
@@ -372,7 +372,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getAccessibleActionDescription(i: number /*int*/): java.lang.String
+                    public getAccessibleActionDescription(i: number /*int*/): string
                     /**
                      * Performs the specified Action on the object
                      * @param i zero-based index of actions
@@ -381,7 +381,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    doAccessibleAction(i: number /*int*/): boolean
+                    public doAccessibleAction(i: number /*int*/): boolean
                 }
             }
         }

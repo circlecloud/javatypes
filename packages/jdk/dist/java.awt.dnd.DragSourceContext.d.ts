@@ -107,27 +107,27 @@ declare namespace java {
                  * to the default (no drop) <code>Cursor</code>.
                  */
                 // @ts-ignore
-                readonly DEFAULT: number /*int*/
+                static readonly DEFAULT: number /*int*/
                 /**
                  * An <code>int</code> used by updateCurrentCursor()
                  * indicating that the <code>Cursor</code>
                  * has entered a <code>DropTarget</code>.
                  */
                 // @ts-ignore
-                readonly ENTER: number /*int*/
+                static readonly ENTER: number /*int*/
                 /**
                  * An <code>int</code> used by updateCurrentCursor()
                  * indicating that the <code>Cursor</code> is
                  * over a <code>DropTarget</code>.
                  */
                 // @ts-ignore
-                readonly OVER: number /*int*/
+                static readonly OVER: number /*int*/
                 /**
                  * An <code>int</code> used by updateCurrentCursor()
                  * indicating that the user operation has changed.
                  */
                 // @ts-ignore
-                readonly CHANGED: number /*int*/
+                static readonly CHANGED: number /*int*/
                 /**
                  * Returns the <code>DragSource</code>
                  * that instantiated this <code>DragSourceContext</code>.
@@ -135,21 +135,21 @@ declare namespace java {
                  *    instantiated this <code>DragSourceContext</code>
                  */
                 // @ts-ignore
-                getDragSource(): java.awt.dnd.DragSource
+                public getDragSource(): java.awt.dnd.DragSource
                 /**
                  * Returns the <code>Component</code> associated with this
                  * <code>DragSourceContext</code>.
                  * @return the <code>Component</code> that started the drag
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * Returns the <code>DragGestureEvent</code>
                  * that initially triggered the drag.
                  * @return the Event that triggered the drag
                  */
                 // @ts-ignore
-                getTrigger(): java.awt.dnd.DragGestureEvent
+                public getTrigger(): java.awt.dnd.DragGestureEvent
                 /**
                  * Returns a bitwise mask of <code>DnDConstants</code> that
                  * represent the set of drop actions supported by the drag source for the
@@ -157,7 +157,7 @@ declare namespace java {
                  * @return the drop actions supported by the drag source
                  */
                 // @ts-ignore
-                getSourceActions(): int
+                public getSourceActions(): number /*int*/
                 /**
                  * Sets the cursor for this drag operation to the specified
                  * <code>Cursor</code>.  If the specified <code>Cursor</code>
@@ -170,14 +170,14 @@ declare namespace java {
                  *                        on the cursor handling during drag and drop
                  */
                 // @ts-ignore
-                setCursor(c: java.awt.Cursor): void
+                public setCursor(c: java.awt.Cursor): void
                 /**
                  * Returns the current drag <code>Cursor</code>.
                  * <P>
                  * @return the current drag <code>Cursor</code>
                  */
                 // @ts-ignore
-                getCursor(): java.awt.Cursor
+                public getCursor(): java.awt.Cursor
                 /**
                  * Add a <code>DragSourceListener</code> to this
                  * <code>DragSourceContext</code> if one has not already been added.
@@ -192,7 +192,7 @@ declare namespace java {
                  *  a <code>DragSourceListener</code> has already been added
                  */
                 // @ts-ignore
-                addDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
+                public addDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Removes the specified <code>DragSourceListener</code>
                  * from  this <code>DragSourceContext</code>.
@@ -201,13 +201,13 @@ declare namespace java {
                  *      it is not acceptable as a parameter
                  */
                 // @ts-ignore
-                removeDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
+                public removeDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Notifies the peer that the <code>Transferable</code>'s
                  * <code>DataFlavor</code>s have changed.
                  */
                 // @ts-ignore
-                transferablesFlavorsChanged(): void
+                public transferablesFlavorsChanged(): void
                 /**
                  * Calls <code>dragEnter</code> on the
                  * <code>DragSourceListener</code>s registered with this
@@ -217,7 +217,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dragEnter(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dragEnter(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Calls <code>dragOver</code> on the
                  * <code>DragSourceListener</code>s registered with this
@@ -227,7 +227,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dragOver(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dragOver(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Calls <code>dragExit</code> on the
                  * <code>DragSourceListener</code>s registered with this
@@ -237,7 +237,7 @@ declare namespace java {
                  * @param dse the <code>DragSourceEvent</code>
                  */
                 // @ts-ignore
-                dragExit(dse: java.awt.dnd.DragSourceEvent): void
+                public dragExit(dse: java.awt.dnd.DragSourceEvent): void
                 /**
                  * Calls <code>dropActionChanged</code> on the
                  * <code>DragSourceListener</code>s registered with this
@@ -247,7 +247,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDragEvent</code>
                  */
                 // @ts-ignore
-                dropActionChanged(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dropActionChanged(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Calls <code>dragDropEnd</code> on the
                  * <code>DragSourceListener</code>s registered with this
@@ -257,7 +257,7 @@ declare namespace java {
                  * @param dsde the <code>DragSourceDropEvent</code>
                  */
                 // @ts-ignore
-                dragDropEnd(dsde: java.awt.dnd.DragSourceDropEvent): void
+                public dragDropEnd(dsde: java.awt.dnd.DragSourceDropEvent): void
                 /**
                  * Calls <code>dragMouseMoved</code> on the
                  * <code>DragSourceMotionListener</code>s registered with the
@@ -268,14 +268,14 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                dragMouseMoved(dsde: java.awt.dnd.DragSourceDragEvent): void
+                public dragMouseMoved(dsde: java.awt.dnd.DragSourceDragEvent): void
                 /**
                  * Returns the <code>Transferable</code> associated with
                  * this <code>DragSourceContext</code>.
                  * @return the <code>Transferable</code>
                  */
                 // @ts-ignore
-                getTransferable(): java.awt.datatransfer.Transferable
+                public getTransferable(): java.awt.datatransfer.Transferable
                 /**
                  * If the default drag cursor behavior is active, this method
                  * sets the default drag cursor for the specified actions

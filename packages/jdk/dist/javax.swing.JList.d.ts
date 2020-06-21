@@ -250,7 +250,7 @@ declare namespace javax {
              *                    data model, {#code non-null}
              */
             // @ts-ignore
-            constructor(listData: java.util.Vector<E>)
+            constructor(listData: java.util.Vector<any>)
             /**
              * Constructs a <code>JList</code> with an empty, read-only, model.
              */
@@ -263,7 +263,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly VERTICAL: number /*int*/
+            public static readonly VERTICAL: number /*int*/
             /**
              * Indicates a "newspaper style" layout with cells flowing vertically
              * then horizontally.
@@ -271,7 +271,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly VERTICAL_WRAP: number /*int*/
+            public static readonly VERTICAL_WRAP: number /*int*/
             /**
              * Indicates a "newspaper style" layout with cells flowing horizontally
              * then vertically.
@@ -279,14 +279,14 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly HORIZONTAL_WRAP: number /*int*/
+            public static readonly HORIZONTAL_WRAP: number /*int*/
             /**
              * Returns the {@code ListUI}, the look and feel object that
              * renders this component.
              * @return the <code>ListUI</code> object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ListUI
+            public getUI(): javax.swing.plaf.ListUI
             /**
              * Sets the {@code ListUI}, the look and feel object that
              * renders this component.
@@ -298,7 +298,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ListUI): void
+            public setUI(ui: javax.swing.plaf.ListUI): void
             /**
              * Resets the {@code ListUI} property by setting it to the value provided
              * by the current look and feel. If the current cell renderer was installed
@@ -309,7 +309,7 @@ declare namespace javax {
              * @see SwingUtilities#updateComponentTreeUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns {@code "ListUI"}, the <code>UIDefaults</code> key used to look
              * up the name of the {@code javax.swing.plaf.ListUI} class that defines
@@ -319,7 +319,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the "prototypical" cell value -- a value used to calculate a
              * fixed width and height for cells. This can be {@code null} if there
@@ -328,7 +328,7 @@ declare namespace javax {
              * @see #setPrototypeCellValue
              */
             // @ts-ignore
-            getPrototypeCellValue(): E
+            public getPrototypeCellValue(): E
             /**
              * Sets the {@code prototypeCellValue} property, and then (if the new value
              * is {@code non-null}), computes the {@code fixedCellWidth} and
@@ -364,14 +364,14 @@ declare namespace javax {
              *  description: The cell prototype value, used to compute cell width and height.
              */
             // @ts-ignore
-            setPrototypeCellValue(prototypeCellValue: E): void
+            public setPrototypeCellValue(prototypeCellValue: E): void
             /**
              * Returns the value of the {@code fixedCellWidth} property.
              * @return the fixed cell width
              * @see #setFixedCellWidth
              */
             // @ts-ignore
-            getFixedCellWidth(): int
+            public getFixedCellWidth(): number /*int*/
             /**
              * Sets a fixed value to be used for the width of every cell in the list.
              * If {@code width} is -1, cell widths are computed in the {@code ListUI}
@@ -390,14 +390,14 @@ declare namespace javax {
              *  description: Defines a fixed cell width when greater than zero.
              */
             // @ts-ignore
-            setFixedCellWidth(width: number /*int*/): void
+            public setFixedCellWidth(width: number /*int*/): void
             /**
              * Returns the value of the {@code fixedCellHeight} property.
              * @return the fixed cell height
              * @see #setFixedCellHeight
              */
             // @ts-ignore
-            getFixedCellHeight(): int
+            public getFixedCellHeight(): number /*int*/
             /**
              * Sets a fixed value to be used for the height of every cell in the list.
              * If {@code height} is -1, cell heights are computed in the {@code ListUI}
@@ -416,14 +416,14 @@ declare namespace javax {
              *  description: Defines a fixed cell height when greater than zero.
              */
             // @ts-ignore
-            setFixedCellHeight(height: number /*int*/): void
+            public setFixedCellHeight(height: number /*int*/): void
             /**
              * Returns the object responsible for painting list items.
              * @return the value of the {#code cellRenderer} property
              * @see #setCellRenderer
              */
             // @ts-ignore
-            getCellRenderer(): javax.swing.ListCellRenderer<? super E>
+            public getCellRenderer(): javax.swing.ListCellRenderer<any>
             /**
              * Sets the delegate that is used to paint each cell in the list.
              * The job of a cell renderer is discussed in detail in the
@@ -447,7 +447,7 @@ declare namespace javax {
              *  description: The component used to draw the cells.
              */
             // @ts-ignore
-            setCellRenderer(cellRenderer: javax.swing.ListCellRenderer<any super E>): void
+            public setCellRenderer(cellRenderer: javax.swing.ListCellRenderer<any>): void
             /**
              * Returns the color used to draw the foreground of selected items.
              * {@code DefaultListCellRenderer} uses this color to draw the foreground
@@ -458,7 +458,7 @@ declare namespace javax {
              * @see DefaultListCellRenderer
              */
             // @ts-ignore
-            getSelectionForeground(): java.awt.Color
+            public getSelectionForeground(): java.awt.Color
             /**
              * Sets the color used to draw the foreground of selected items, which
              * cell renderers can use to render text and graphics.
@@ -483,7 +483,7 @@ declare namespace javax {
              *  description: The foreground color of selected cells.
              */
             // @ts-ignore
-            setSelectionForeground(selectionForeground: java.awt.Color): void
+            public setSelectionForeground(selectionForeground: java.awt.Color): void
             /**
              * Returns the color used to draw the background of selected items.
              * {@code DefaultListCellRenderer} uses this color to draw the background
@@ -494,7 +494,7 @@ declare namespace javax {
              * @see DefaultListCellRenderer
              */
             // @ts-ignore
-            getSelectionBackground(): java.awt.Color
+            public getSelectionBackground(): java.awt.Color
             /**
              * Sets the color used to draw the background of selected items, which
              * cell renderers can use fill selected cells.
@@ -519,7 +519,7 @@ declare namespace javax {
              *  description: The background color of selected cells.
              */
             // @ts-ignore
-            setSelectionBackground(selectionBackground: java.awt.Color): void
+            public setSelectionBackground(selectionBackground: java.awt.Color): void
             /**
              * Returns the value of the {@code visibleRowCount} property. See the
              * documentation for {@link #setVisibleRowCount} for details on how to
@@ -528,7 +528,7 @@ declare namespace javax {
              * @see #setVisibleRowCount
              */
             // @ts-ignore
-            getVisibleRowCount(): int
+            public getVisibleRowCount(): number /*int*/
             /**
              * Sets the {@code visibleRowCount} property, which has different meanings
              * depending on the layout orientation: For a {@code VERTICAL} layout
@@ -565,7 +565,7 @@ declare namespace javax {
              *               requiring scrolling
              */
             // @ts-ignore
-            setVisibleRowCount(visibleRowCount: number /*int*/): void
+            public setVisibleRowCount(visibleRowCount: number /*int*/): void
             /**
              * Returns the layout orientation property for the list: {@code VERTICAL}
              * if the layout is a single column of cells, {@code VERTICAL_WRAP} if the
@@ -577,7 +577,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getLayoutOrientation(): int
+            public getLayoutOrientation(): number /*int*/
             /**
              * Defines the way list cells are layed out. Consider a {@code JList}
              * with five cells. Cells can be layed out in one of the following ways:
@@ -631,7 +631,7 @@ declare namespace javax {
              *               VERTICAL_WRAP JList.VERTICAL_WRAP
              */
             // @ts-ignore
-            setLayoutOrientation(layoutOrientation: number /*int*/): void
+            public setLayoutOrientation(layoutOrientation: number /*int*/): void
             /**
              * Returns the smallest list index that is currently visible.
              * In a left-to-right {@code componentOrientation}, the first visible
@@ -644,7 +644,7 @@ declare namespace javax {
              * @see JComponent#getVisibleRect
              */
             // @ts-ignore
-            getFirstVisibleIndex(): int
+            public getFirstVisibleIndex(): number /*int*/
             /**
              * Returns the largest list index that is currently visible.
              * If nothing is visible or the list is empty, {@code -1} is returned.
@@ -654,7 +654,7 @@ declare namespace javax {
              * @see JComponent#getVisibleRect
              */
             // @ts-ignore
-            getLastVisibleIndex(): int
+            public getLastVisibleIndex(): number /*int*/
             /**
              * Scrolls the list within an enclosing viewport to make the specified
              * cell completely visible. This calls {@code scrollRectToVisible} with
@@ -668,7 +668,7 @@ declare namespace javax {
              * @see #getVisibleRect
              */
             // @ts-ignore
-            ensureIndexIsVisible(index: number /*int*/): void
+            public ensureIndexIsVisible(index: number /*int*/): void
             /**
              * Turns on or off automatic drag handling. In order to enable automatic
              * drag handling, this property should be set to {@code true}, and the
@@ -700,7 +700,7 @@ declare namespace javax {
              *         bound: false
              */
             // @ts-ignore
-            setDragEnabled(b: boolean): void
+            public setDragEnabled(b: boolean): void
             /**
              * Returns whether or not automatic drag handling is enabled.
              * @return the value of the {#code dragEnabled} property
@@ -708,7 +708,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDragEnabled(): boolean
+            public getDragEnabled(): boolean
             /**
              * Sets the drop mode for this component. For backward compatibility,
              * the default for this property is <code>DropMode.USE_SELECTION</code>.
@@ -736,7 +736,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setDropMode(dropMode: javax.swing.DropMode): void
+            public setDropMode(dropMode: javax.swing.DropMode): void
             /**
              * Returns the drop mode for this component.
              * @return the drop mode for this component
@@ -744,7 +744,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDropMode(): javax.swing.DropMode
+            public getDropMode(): javax.swing.DropMode
             /**
              * Returns the location that this component should visually indicate
              * as the drop location during a DnD operation over the component,
@@ -770,7 +770,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDropLocation(): javax.swing.JList.DropLocation
+            public getDropLocation(): javax.swing.JList.DropLocation
             /**
              * Returns the next list element whose {@code toString} value
              * starts with the given prefix.
@@ -785,7 +785,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getNextMatch(prefix: string, startIndex: number /*int*/, bias: javax.swing.text.Position.Bias): int
+            public getNextMatch(prefix: java.lang.String | string, startIndex: number /*int*/, bias: javax.swing.text.Position.Bias): number /*int*/
             /**
              * Returns the tooltip text to be used for the given event. This overrides
              * {@code JComponent}'s {@code getToolTipText} to first check the cell
@@ -805,7 +805,7 @@ declare namespace javax {
              * @see JComponent#getToolTipText
              */
             // @ts-ignore
-            getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+            public getToolTipText(event: java.awt.event.MouseEvent): string
             /**
              * Returns the cell index closest to the given location in the list's
              * coordinate system. To determine if the cell actually contains the
@@ -820,7 +820,7 @@ declare namespace javax {
              * @return the cell index closest to the given location, or {#code -1}
              */
             // @ts-ignore
-            locationToIndex(location: java.awt.Point): int
+            public locationToIndex(location: java.awt.Point): number /*int*/
             /**
              * Returns the origin of the specified item in the list's coordinate
              * system. This method returns {@code null} if the index isn't valid.
@@ -832,7 +832,7 @@ declare namespace javax {
              * @return the origin of the cell, or {#code null}
              */
             // @ts-ignore
-            indexToLocation(index: number /*int*/): java.awt.Point
+            public indexToLocation(index: number /*int*/): java.awt.Point
             /**
              * Returns the bounding rectangle, in the list's coordinate system,
              * for the range of cells specified by the two indices.
@@ -851,7 +851,7 @@ declare namespace javax {
              * @return the bounding rectangle for the range of cells, or {#code null}
              */
             // @ts-ignore
-            getCellBounds(index0: number /*int*/, index1: number /*int*/): java.awt.Rectangle
+            public getCellBounds(index0: number /*int*/, index1: number /*int*/): java.awt.Rectangle
             /**
              * Returns the data model that holds the list of items displayed
              * by the <code>JList</code> component.
@@ -860,7 +860,7 @@ declare namespace javax {
              * @see #setModel
              */
             // @ts-ignore
-            getModel(): javax.swing.ListModel<E>
+            public getModel(): javax.swing.ListModel<E>
             /**
              * Sets the model that represents the contents or "value" of the
              * list, notifies property change listeners, and then clears the
@@ -878,7 +878,7 @@ declare namespace javax {
              *  description: The object that contains the data to be drawn by this JList.
              */
             // @ts-ignore
-            setModel(model: javax.swing.ListModel<E>): void
+            public setModel(model: javax.swing.ListModel<E>): void
             /**
              * Constructs a read-only <code>ListModel</code> from an array of items,
              * and calls {@code setModel} with this model.
@@ -892,7 +892,7 @@ declare namespace javax {
              * @see #setModel
              */
             // @ts-ignore
-            setListData(listData: E[]): void
+            public setListData(listData: E[]): void
             /**
              * Constructs a read-only <code>ListModel</code> from a <code>Vector</code>
              * and calls {@code setModel} with this model.
@@ -906,7 +906,7 @@ declare namespace javax {
              * @see #setModel
              */
             // @ts-ignore
-            setListData(listData: java.util.Vector<E>): void
+            public setListData(listData: java.util.Vector<any>): void
             /**
              * Returns an instance of {@code DefaultListSelectionModel}; called
              * during construction to initialize the list's selection model
@@ -928,7 +928,7 @@ declare namespace javax {
              * @see ListSelectionModel
              */
             // @ts-ignore
-            getSelectionModel(): javax.swing.ListSelectionModel
+            public getSelectionModel(): javax.swing.ListSelectionModel
             /**
              * Notifies {@code ListSelectionListener}s added directly to the list
              * of selection changes made to the selection model. {@code JList}
@@ -962,7 +962,7 @@ declare namespace javax {
              * @see #getListSelectionListeners
              */
             // @ts-ignore
-            addListSelectionListener(listener: javax.swing.event.ListSelectionListener): void
+            public addListSelectionListener(listener: javax.swing.event.ListSelectionListener): void
             /**
              * Removes a selection listener from the list.
              * @param listener the {#code ListSelectionListener} to remove
@@ -970,7 +970,7 @@ declare namespace javax {
              * @see #getSelectionModel
              */
             // @ts-ignore
-            removeListSelectionListener(listener: javax.swing.event.ListSelectionListener): void
+            public removeListSelectionListener(listener: javax.swing.event.ListSelectionListener): void
             /**
              * Returns an array of all the {@code ListSelectionListener}s added
              * to this {@code JList} by way of {@code addListSelectionListener}.
@@ -980,7 +980,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getListSelectionListeners(): javax.swing.event.ListSelectionListener[]
+            public getListSelectionListeners(): javax.swing.event.ListSelectionListener[]
             /**
              * Sets the <code>selectionModel</code> for the list to a
              * non-<code>null</code> <code>ListSelectionModel</code>
@@ -998,7 +998,7 @@ declare namespace javax {
              *  description: The selection model, recording which cells are selected.
              */
             // @ts-ignore
-            setSelectionModel(selectionModel: javax.swing.ListSelectionModel): void
+            public setSelectionModel(selectionModel: javax.swing.ListSelectionModel): void
             /**
              * Sets the selection mode for the list. This is a cover method that sets
              * the selection mode directly on the selection model.
@@ -1030,7 +1030,7 @@ declare namespace javax {
              *               MULTIPLE_INTERVAL_SELECTION ListSelectionModel.MULTIPLE_INTERVAL_SELECTION
              */
             // @ts-ignore
-            setSelectionMode(selectionMode: number /*int*/): void
+            public setSelectionMode(selectionMode: number /*int*/): void
             /**
              * Returns the current selection mode for the list. This is a cover
              * method that delegates to the method of the same name on the
@@ -1039,7 +1039,7 @@ declare namespace javax {
              * @see #setSelectionMode
              */
             // @ts-ignore
-            getSelectionMode(): int
+            public getSelectionMode(): number /*int*/
             /**
              * Returns the anchor selection index. This is a cover method that
              * delegates to the method of the same name on the list's selection model.
@@ -1047,7 +1047,7 @@ declare namespace javax {
              * @see ListSelectionModel#getAnchorSelectionIndex
              */
             // @ts-ignore
-            getAnchorSelectionIndex(): int
+            public getAnchorSelectionIndex(): number /*int*/
             /**
              * Returns the lead selection index. This is a cover method that
              * delegates to the method of the same name on the list's selection model.
@@ -1056,7 +1056,7 @@ declare namespace javax {
              * @beaninfo description: The lead selection index.
              */
             // @ts-ignore
-            getLeadSelectionIndex(): int
+            public getLeadSelectionIndex(): number /*int*/
             /**
              * Returns the smallest selected cell index, or {@code -1} if the selection
              * is empty. This is a cover method that delegates to the method of the same
@@ -1065,7 +1065,7 @@ declare namespace javax {
              * @see ListSelectionModel#getMinSelectionIndex
              */
             // @ts-ignore
-            getMinSelectionIndex(): int
+            public getMinSelectionIndex(): number /*int*/
             /**
              * Returns the largest selected cell index, or {@code -1} if the selection
              * is empty. This is a cover method that delegates to the method of the same
@@ -1074,7 +1074,7 @@ declare namespace javax {
              * @see ListSelectionModel#getMaxSelectionIndex
              */
             // @ts-ignore
-            getMaxSelectionIndex(): int
+            public getMaxSelectionIndex(): number /*int*/
             /**
              * Returns {@code true} if the specified index is selected,
              * else {@code false}. This is a cover method that delegates to the method
@@ -1086,7 +1086,7 @@ declare namespace javax {
              * @see #setSelectedIndex
              */
             // @ts-ignore
-            isSelectedIndex(index: number /*int*/): boolean
+            public isSelectedIndex(index: number /*int*/): boolean
             /**
              * Returns {@code true} if nothing is selected, else {@code false}.
              * This is a cover method that delegates to the method of the same
@@ -1096,7 +1096,7 @@ declare namespace javax {
              * @see #clearSelection
              */
             // @ts-ignore
-            isSelectionEmpty(): boolean
+            public isSelectionEmpty(): boolean
             /**
              * Clears the selection; after calling this method, {@code isSelectionEmpty}
              * will return {@code true}. This is a cover method that delegates to the
@@ -1105,7 +1105,7 @@ declare namespace javax {
              * @see #isSelectionEmpty
              */
             // @ts-ignore
-            clearSelection(): void
+            public clearSelection(): void
             /**
              * Selects the specified interval. Both {@code anchor} and {@code lead}
              * indices are included. {@code anchor} doesn't have to be less than or
@@ -1123,7 +1123,7 @@ declare namespace javax {
              * @see #removeSelectionInterval
              */
             // @ts-ignore
-            setSelectionInterval(anchor: number /*int*/, lead: number /*int*/): void
+            public setSelectionInterval(anchor: number /*int*/, lead: number /*int*/): void
             /**
              * Sets the selection to be the union of the specified interval with current
              * selection. Both the {@code anchor} and {@code lead} indices are
@@ -1142,7 +1142,7 @@ declare namespace javax {
              * @see #removeSelectionInterval
              */
             // @ts-ignore
-            addSelectionInterval(anchor: number /*int*/, lead: number /*int*/): void
+            public addSelectionInterval(anchor: number /*int*/, lead: number /*int*/): void
             /**
              * Sets the selection to be the set difference of the specified interval
              * and the current selection. Both the {@code index0} and {@code index1}
@@ -1161,7 +1161,7 @@ declare namespace javax {
              * @see #addSelectionInterval
              */
             // @ts-ignore
-            removeSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public removeSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Sets the selection model's {@code valueIsAdjusting} property. When
              * {@code true}, upcoming changes to selection should be considered part
@@ -1186,7 +1186,7 @@ declare namespace javax {
              * @see #getValueIsAdjusting
              */
             // @ts-ignore
-            setValueIsAdjusting(b: boolean): void
+            public setValueIsAdjusting(b: boolean): void
             /**
              * Returns the value of the selection model's {@code isAdjusting} property.
              * <p>
@@ -1197,7 +1197,7 @@ declare namespace javax {
              * @see ListSelectionModel#getValueIsAdjusting
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * Returns an array of all of the selected indices, in increasing
              * order.
@@ -1207,7 +1207,7 @@ declare namespace javax {
              * @see #addListSelectionListener
              */
             // @ts-ignore
-            getSelectedIndices(): int[]
+            public getSelectedIndices(): number /*int*/[]
             /**
              * Selects a single cell. Does nothing if the given index is greater
              * than or equal to the model size. This is a convenience method that uses
@@ -1221,7 +1221,7 @@ declare namespace javax {
              * @beaninfo description: The index of the selected cell.
              */
             // @ts-ignore
-            setSelectedIndex(index: number /*int*/): void
+            public setSelectedIndex(index: number /*int*/): void
             /**
              * Changes the selection to be the set of indices specified by the given
              * array. Indices greater than or equal to the model size are ignored.
@@ -1237,7 +1237,7 @@ declare namespace javax {
              * @throws NullPointerException if the given array is {#code null}
              */
             // @ts-ignore
-            setSelectedIndices(indices: number /*int*/[]): void
+            public setSelectedIndices(indices: number /*int*/[]): void
             /**
              * Returns an array of all the selected values, in increasing order based
              * on their indices in the list.
@@ -1248,7 +1248,7 @@ declare namespace javax {
              * @deprecated As of JDK 1.7, replaced by {#link #getSelectedValuesList()}
              */
             // @ts-ignore
-            getSelectedValues(): java.lang.Object[]
+            public getSelectedValues(): any[]
             /**
              * Returns a list of all the selected items, in increasing order based
              * on their indices in the list.
@@ -1259,7 +1259,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            getSelectedValuesList(): java.util.List<E>
+            public getSelectedValuesList(): Array<E>
             /**
              * Returns the smallest selected cell index; <i>the selection</i> when only
              * a single item is selected in the list. When multiple items are selected,
@@ -1272,7 +1272,7 @@ declare namespace javax {
              * @see #addListSelectionListener
              */
             // @ts-ignore
-            getSelectedIndex(): int
+            public getSelectedIndex(): number /*int*/
             /**
              * Returns the value for the smallest selected cell index;
              * <i>the selected value</i> when only a single item is selected in the
@@ -1287,7 +1287,7 @@ declare namespace javax {
              * @see #addListSelectionListener
              */
             // @ts-ignore
-            getSelectedValue(): E
+            public getSelectedValue(): E
             /**
              * Selects the specified object from the list.
              * @param anObject      the object to select
@@ -1295,7 +1295,7 @@ declare namespace javax {
              *                       the selected object, if one exists; otherwise {@code false}
              */
             // @ts-ignore
-            setSelectedValue(anObject: any, shouldScroll: boolean): void
+            public setSelectedValue(anObject: java.lang.Object | any, shouldScroll: boolean): void
             /**
              * Computes the size of viewport needed to display {@code visibleRowCount}
              * rows. The value returned by this method depends on the layout
@@ -1333,7 +1333,7 @@ declare namespace javax {
              * @see #setPrototypeCellValue
              */
             // @ts-ignore
-            getPreferredScrollableViewportSize(): java.awt.Dimension
+            public getPreferredScrollableViewportSize(): java.awt.Dimension
             /**
              * Returns the distance to scroll to expose the next or previous
              * row (for vertical scrolling) or column (for horizontal scrolling).
@@ -1355,7 +1355,7 @@ declare namespace javax {
              *          {@code SwingConstants.HORIZONTAL}
              */
             // @ts-ignore
-            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns the distance to scroll to expose the next or previous block.
              * <p>
@@ -1398,7 +1398,7 @@ declare namespace javax {
              *          {@code SwingConstants.HORIZONTAL}
              */
             // @ts-ignore
-            getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns {@code true} if this {@code JList} is displayed in a
              * {@code JViewport} and the viewport is wider than the list's
@@ -1413,7 +1413,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableTracksViewportWidth
              */
             // @ts-ignore
-            getScrollableTracksViewportWidth(): boolean
+            public getScrollableTracksViewportWidth(): boolean
             /**
              * Returns {@code true} if this {@code JList} is displayed in a
              * {@code JViewport} and the viewport is taller than the list's
@@ -1428,7 +1428,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableTracksViewportHeight
              */
             // @ts-ignore
-            getScrollableTracksViewportHeight(): boolean
+            public getScrollableTracksViewportHeight(): boolean
             /**
              * Returns a {@code String} representation of this {@code JList}.
              * This method is intended to be used only for debugging purposes,
@@ -1438,7 +1438,7 @@ declare namespace javax {
              * @return a {#code String} representation of this {@code JList}.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the {@code AccessibleContext} associated with this {@code JList}.
              * For {@code JList}, the {@code AccessibleContext} takes the form of an
@@ -1449,7 +1449,7 @@ declare namespace javax {
              *          {@code AccessibleContext} of this {@code JList}
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

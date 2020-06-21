@@ -43,46 +43,46 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
+                static readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly DEFAULT_ACTIVE: boolean
+                static readonly DEFAULT_ACTIVE: boolean
                 /**
                  * Sets whether the hopper is active or not.
                  * @param isActive True if the hopper is active, false if deactivated as if
                  *  powered by redstone
                  */
                 // @ts-ignore
-                setActive(isActive: boolean): void
+                public setActive(isActive: boolean): void
                 /**
                  * Checks whether the hopper is active or not.
                  * @return True if the hopper is active, false if deactivated
                  */
                 // @ts-ignore
-                isActive(): boolean
+                public isActive(): boolean
                 /**
                  * Sets the direction this hopper is facing
                  * @param face The direction to set this hopper to
                  * @see BlockFace
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 /**
                  * Gets the direction this hopper is facing
                  * @return The direction this hopper is facing
                  * @see BlockFace
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Hopper
+                public clone(): org.bukkit.material.Hopper
                 /**
                  * Checks if the hopper is powered.
                  * @return true if the hopper is powered
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
             }
         }
     }

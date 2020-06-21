@@ -39,9 +39,9 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly MinimumWidth: number /*int*/
+                    public static readonly MinimumWidth: number /*int*/
                     // @ts-ignore
-                    readonly MinimumHeight: number /*int*/
+                    public static readonly MinimumHeight: number /*int*/
                     /**
                      * <code>JOptionPane</code> that the receiver is providing the
                      * look and feel for.
@@ -73,19 +73,19 @@ declare namespace javax {
                      * Creates a new BasicOptionPaneUI instance.
                      */
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Installs the receiver as the L&amp;F for the passed in
                      * <code>JOptionPane</code>.
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Removes the receiver from the L&amp;F controller of the passed in split
                      * pane.
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -111,7 +111,7 @@ declare namespace javax {
                      * provided for subclassers wishing to offer a different minimum size.
                      */
                     // @ts-ignore
-                    getMinimumOptionPaneSize(): java.awt.Dimension
+                    public getMinimumOptionPaneSize(): java.awt.Dimension
                     /**
                      * If <code>c</code> is the <code>JOptionPane</code> the receiver
                      * is contained in, the preferred
@@ -120,7 +120,7 @@ declare namespace javax {
                      * <code>getMinimumOptionPaneSize</code>.
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Messaged from installComponents to create a Container containing the
                      * body of the message. The icon is the created by calling
@@ -140,13 +140,13 @@ declare namespace javax {
                      * used to correctly set hasCustomComponents only if !internallyCreated).
                      */
                     // @ts-ignore
-                    addMessageComponents(container: java.awt.Container, cons: java.awt.GridBagConstraints, msg: any, maxll: number /*int*/, internallyCreated: boolean): void
+                    addMessageComponents(container: java.awt.Container, cons: java.awt.GridBagConstraints, msg: java.lang.Object | any, maxll: number /*int*/, internallyCreated: boolean): void
                     /**
                      * Returns the message to display from the JOptionPane the receiver is
                      * providing the look and feel for.
                      */
                     // @ts-ignore
-                    getMessage(): java.lang.Object
+                    getMessage(): any
                     /**
                      * Creates and adds a JLabel representing the icon returned from
                      * <code>getIcon</code> to <code>top</code>. This is messaged from
@@ -170,13 +170,13 @@ declare namespace javax {
                      * Returns the maximum number of characters to place on a line.
                      */
                     // @ts-ignore
-                    getMaxCharactersPerLineCount(): int
+                    getMaxCharactersPerLineCount(): number /*int*/
                     /**
                      * Recursively creates new JLabel instances to represent <code>d</code>.
                      * Each JLabel instance is added to <code>c</code>.
                      */
                     // @ts-ignore
-                    burstStringInto(c: java.awt.Container, d: string, maxll: number /*int*/): void
+                    burstStringInto(c: java.awt.Container, d: java.lang.String | string, maxll: number /*int*/): void
                     // @ts-ignore
                     createSeparator(): java.awt.Container
                     /**
@@ -193,7 +193,7 @@ declare namespace javax {
                      * it will create an instance of JButton.
                      */
                     // @ts-ignore
-                    addButtonComponents(container: java.awt.Container, buttons: any[], initialIndex: number /*int*/): void
+                    addButtonComponents(container: java.awt.Container, buttons: java.lang.Object[] | any[], initialIndex: number /*int*/): void
                     // @ts-ignore
                     createButtonActionListener(buttonIndex: number /*int*/): java.awt.event.ActionListener
                     /**
@@ -205,7 +205,7 @@ declare namespace javax {
                      * defaultButtons are returned.
                      */
                     // @ts-ignore
-                    getButtons(): java.lang.Object[]
+                    getButtons(): any[]
                     /**
                      * Returns true, basic L&amp;F wants all the buttons to have the same
                      * width.
@@ -218,7 +218,7 @@ declare namespace javax {
                      * options of the JOptionPane or 0.
                      */
                     // @ts-ignore
-                    getInitialValueIndex(): int
+                    getInitialValueIndex(): number /*int*/
                     /**
                      * Sets the input value in the option pane the receiver is providing
                      * the look and feel for based on the value in the inputComponent.
@@ -230,13 +230,13 @@ declare namespace javax {
                      * otherwise request focus on the default value
                      */
                     // @ts-ignore
-                    selectInitialValue(op: javax.swing.JOptionPane): void
+                    public selectInitialValue(op: javax.swing.JOptionPane): void
                     /**
                      * Returns true if in the last call to validateComponent the message
                      * or buttons contained a subclass of Component.
                      */
                     // @ts-ignore
-                    containsCustomComponents(op: javax.swing.JOptionPane): boolean
+                    public containsCustomComponents(op: javax.swing.JOptionPane): boolean
                 }
             }
         }

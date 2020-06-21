@@ -47,7 +47,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                constructor(protocol: string)
+                constructor(protocol: java.lang.String | string)
                 /**
                  * Creates a <code>SAAJResult</code> that will write the results into the
                  * <code>SOAPPart</code> of the supplied <code>SOAPMessage</code>.
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                getResult(): javax.xml.soap.Node
+                public getResult(): javax.xml.soap.Node
             }
         }
     }

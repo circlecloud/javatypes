@@ -14,19 +14,19 @@ declare namespace org {
                          * Return a formatted message with inserts applied.
                          */
                         // @ts-ignore
-                        getMessage(): java.lang.String
+                        getMessage(): string
                         /**
                          * Return a detailed message that includes the original pattern text
                          * with a pointer to the error position, as well as the error message.
                          */
                         // @ts-ignore
-                        toDetailedString(): java.lang.String
+                        toDetailedString(): string
                         // @ts-ignore
-                        getPosition(): int
+                        getPosition(): number /*int*/
                         // @ts-ignore
                         getMessageType(): org.springframework.web.util.pattern.PatternParseException.PatternMessage
                         // @ts-ignore
-                        getInserts(): java.lang.Object[]
+                        getInserts(): any[]
                     }
                 }
             }

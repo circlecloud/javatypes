@@ -22,7 +22,7 @@ declare namespace javax {
                  * @return Print Service object.
                  */
                 // @ts-ignore
-                getPrintService(): javax.print.PrintService
+                public getPrintService(): javax.print.PrintService
                 /**
                  * Determine the printing service attributes that changed and their new
                  * values.
@@ -30,7 +30,7 @@ declare namespace javax {
                  *  attributes that changed. The returned set may be unmodifiable.
                  */
                 // @ts-ignore
-                getAttributes(): javax.print.attribute.PrintServiceAttributeSet
+                public getAttributes(): javax.print.attribute.PrintServiceAttributeSet
             }
         }
     }

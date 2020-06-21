@@ -22,7 +22,7 @@ declare namespace org {
                  * @since 3.1
                  */
                 // @ts-ignore
-                class CacheAspectSupport extends org.springframework.cache.interceptor.AbstractCacheInvoker {
+                abstract class CacheAspectSupport extends org.springframework.cache.interceptor.AbstractCacheInvoker {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
@@ -33,7 +33,7 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    configure(errorHandler: java.util.function.Supplier<org.springframework.cache.interceptor.CacheErrorHandler> | java.util.function$.Supplier<org.springframework.cache.interceptor.CacheErrorHandler>, keyGenerator: java.util.function.Supplier<org.springframework.cache.interceptor.KeyGenerator> | java.util.function$.Supplier<org.springframework.cache.interceptor.KeyGenerator>, cacheResolver: java.util.function.Supplier<org.springframework.cache.interceptor.CacheResolver> | java.util.function$.Supplier<org.springframework.cache.interceptor.CacheResolver>, cacheManager: java.util.function.Supplier<org.springframework.cache.CacheManager> | java.util.function$.Supplier<org.springframework.cache.CacheManager>): void
+                    public configure(errorHandler: java.util.function$.Supplier<org.springframework.cache.interceptor.CacheErrorHandler>, keyGenerator: java.util.function$.Supplier<org.springframework.cache.interceptor.KeyGenerator>, cacheResolver: java.util.function$.Supplier<org.springframework.cache.interceptor.CacheResolver>, cacheManager: java.util.function$.Supplier<org.springframework.cache.CacheManager>): void
                     /**
                      * Set one or more cache operation sources which are used to find the cache
                      * attributes. If more than one source is provided, they will be aggregated
@@ -41,31 +41,31 @@ declare namespace org {
                      * @see #setCacheOperationSource
                      */
                     // @ts-ignore
-                    setCacheOperationSources(...cacheOperationSources: org.springframework.cache.interceptor.CacheOperationSource[]): void
+                    public setCacheOperationSources(...cacheOperationSources: org.springframework.cache.interceptor.CacheOperationSource[]): void
                     /**
                      * Set the CacheOperationSource for this cache aspect.
                      * @since 5.1
                      * @see #setCacheOperationSources
                      */
                     // @ts-ignore
-                    setCacheOperationSource(cacheOperationSource: org.springframework.cache.interceptor.CacheOperationSource): void
+                    public setCacheOperationSource(cacheOperationSource: org.springframework.cache.interceptor.CacheOperationSource): void
                     /**
                      * Return the CacheOperationSource for this cache aspect.
                      */
                     // @ts-ignore
-                    getCacheOperationSource(): org.springframework.cache.interceptor.CacheOperationSource
+                    public getCacheOperationSource(): org.springframework.cache.interceptor.CacheOperationSource
                     /**
                      * Set the default {@link KeyGenerator} that this cache aspect should delegate to
                      * if no specific key generator has been set for the operation.
                      * <p>The default is a {@link SimpleKeyGenerator}.
                      */
                     // @ts-ignore
-                    setKeyGenerator(keyGenerator: org.springframework.cache.interceptor.KeyGenerator): void
+                    public setKeyGenerator(keyGenerator: org.springframework.cache.interceptor.KeyGenerator): void
                     /**
                      * Return the default {@link KeyGenerator} that this cache aspect delegates to.
                      */
                     // @ts-ignore
-                    getKeyGenerator(): org.springframework.cache.interceptor.KeyGenerator
+                    public getKeyGenerator(): org.springframework.cache.interceptor.KeyGenerator
                     /**
                      * Set the default {@link CacheResolver} that this cache aspect should delegate
                      * to if no specific cache resolver has been set for the operation.
@@ -75,12 +75,12 @@ declare namespace org {
                      * @see SimpleCacheResolver
                      */
                     // @ts-ignore
-                    setCacheResolver(cacheResolver: org.springframework.cache.interceptor.CacheResolver): void
+                    public setCacheResolver(cacheResolver: org.springframework.cache.interceptor.CacheResolver): void
                     /**
                      * Return the default {@link CacheResolver} that this cache aspect delegates to.
                      */
                     // @ts-ignore
-                    getCacheResolver(): org.springframework.cache.interceptor.CacheResolver
+                    public getCacheResolver(): org.springframework.cache.interceptor.CacheResolver
                     /**
                      * Set the {@link CacheManager} to use to create a default {@link CacheResolver}.
                      * Replace the current {@link CacheResolver}, if any.
@@ -88,18 +88,18 @@ declare namespace org {
                      * @see SimpleCacheResolver
                      */
                     // @ts-ignore
-                    setCacheManager(cacheManager: org.springframework.cache.CacheManager): void
+                    public setCacheManager(cacheManager: org.springframework.cache.CacheManager): void
                     /**
                      * Set the containing {@link BeanFactory} for {@link CacheManager} and other
                      * service lookups.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    afterSingletonsInstantiated(): void
+                    public afterSingletonsInstantiated(): void
                     /**
                      * Convenience method to return a String representation of this Method
                      * for use in logging. Can be overridden in subclasses to provide a
@@ -110,11 +110,11 @@ declare namespace org {
                      * @see org.springframework.util.ClassUtils#getQualifiedMethodName
                      */
                     // @ts-ignore
-                    methodIdentification(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.lang.String
+                    methodIdentification(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): string
                     // @ts-ignore
-                    getCaches(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<org.springframework.cache.interceptor.CacheOperation>, cacheResolver: org.springframework.cache.interceptor.CacheResolver): java.util.Collection<? extends org.springframework.cache.Cache>
+                    getCaches(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<org.springframework.cache.interceptor.CacheOperation>, cacheResolver: org.springframework.cache.interceptor.CacheResolver): Array<any>
                     // @ts-ignore
-                    getOperationContext(operation: org.springframework.cache.interceptor.CacheOperation, method: java.lang.reflect.Method, args: any[], target: any, targetClass: java.lang.Class<any>): org.springframework.cache.interceptor.CacheAspectSupport.CacheOperationContext
+                    getOperationContext(operation: org.springframework.cache.interceptor.CacheOperation, method: java.lang.reflect.Method, args: java.lang.Object[] | any[], target: java.lang.Object | any, targetClass: java.lang.Class<any>): org.springframework.cache.interceptor.CacheAspectSupport.CacheOperationContext
                     /**
                      * Return the {@link CacheOperationMetadata} for the specified operation.
                      * <p>Resolve the {@link CacheResolver} and the {@link KeyGenerator} to be
@@ -138,14 +138,14 @@ declare namespace org {
                      * @see CacheOperation#getCacheResolver()
                      */
                     // @ts-ignore
-                    getBean<T>(beanName: string, expectedType: java.lang.Class<T>): T
+                    getBean<T>(beanName: java.lang.String | string, expectedType: java.lang.Class<T>): T
                     /**
                      * Clear the cached metadata.
                      */
                     // @ts-ignore
                     clearMetadataCache(): void
                     // @ts-ignore
-                    execute(invoker: org.springframework.cache.interceptor.CacheOperationInvoker, target: any, method: java.lang.reflect.Method, args: any[]): java.lang.Object
+                    execute(invoker: org.springframework.cache.interceptor.CacheOperationInvoker, target: java.lang.Object | any, method: java.lang.reflect.Method, args: java.lang.Object[] | any[]): any
                     /**
                      * Execute the underlying operation (typically in case of cache miss) and return
                      * the result of the invocation. If an exception occurs it will be wrapped in a
@@ -157,7 +157,7 @@ declare namespace org {
                      * @see CacheOperationInvoker#invoke()
                      */
                     // @ts-ignore
-                    invokeOperation(invoker: org.springframework.cache.interceptor.CacheOperationInvoker): java.lang.Object
+                    invokeOperation(invoker: org.springframework.cache.interceptor.CacheOperationInvoker): any
                 }
             }
         }

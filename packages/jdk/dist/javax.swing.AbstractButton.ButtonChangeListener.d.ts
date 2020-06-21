@@ -16,7 +16,7 @@ declare namespace javax {
             // @ts-ignore
             class ButtonChangeListener extends java.lang.Object implements javax.swing.event.ChangeListener, java.io.Serializable {
                 // @ts-ignore
-                stateChanged(e: javax.swing.event.ChangeEvent): void
+                public stateChanged(e: javax.swing.event.ChangeEvent): void
             }
         }
     }

@@ -13,13 +13,13 @@ declare namespace org {
                          * @return The original fire ticks
                          */
                         // @ts-ignore
-                        getOriginalFireTicks(): int
+                        getOriginalFireTicks(): number /*int*/
                         /**
                          * Gets the amount of ticks the entity will remain on fire.
                          * @return The amount of ticks the entity will remain on fire
                          */
                         // @ts-ignore
-                        getFireTicks(): int
+                        getFireTicks(): number /*int*/
                         /**
                          * Sets the amount of ticks the entity will remain on fire.
                          * @param fireTicks The amount of ticks the entity will remain on fire

@@ -15,33 +15,33 @@ declare namespace java {
                  * Unicode character set
                  */
                 // @ts-ignore
-                readonly US_ASCII: java.nio.charset.Charset
+                public static readonly US_ASCII: java.nio.charset.Charset
                 /**
                  * ISO Latin Alphabet No. 1, a.k.a. ISO-LATIN-1
                  */
                 // @ts-ignore
-                readonly ISO_8859_1: java.nio.charset.Charset
+                public static readonly ISO_8859_1: java.nio.charset.Charset
                 /**
                  * Eight-bit UCS Transformation Format
                  */
                 // @ts-ignore
-                readonly UTF_8: java.nio.charset.Charset
+                public static readonly UTF_8: java.nio.charset.Charset
                 /**
                  * Sixteen-bit UCS Transformation Format, big-endian byte order
                  */
                 // @ts-ignore
-                readonly UTF_16BE: java.nio.charset.Charset
+                public static readonly UTF_16BE: java.nio.charset.Charset
                 /**
                  * Sixteen-bit UCS Transformation Format, little-endian byte order
                  */
                 // @ts-ignore
-                readonly UTF_16LE: java.nio.charset.Charset
+                public static readonly UTF_16LE: java.nio.charset.Charset
                 /**
                  * Sixteen-bit UCS Transformation Format, byte order identified by an
                  * optional byte-order mark
                  */
                 // @ts-ignore
-                readonly UTF_16: java.nio.charset.Charset
+                public static readonly UTF_16: java.nio.charset.Charset
             }
         }
     }

@@ -26,13 +26,13 @@ declare namespace org {
                      * MBean which all invocations are routed to.
                      */
                     // @ts-ignore
-                    setServer(server: javax.management.MBeanServerConnection): void
+                    public setServer(server: javax.management.MBeanServerConnection): void
                     /**
                      * Specify the environment for the JMX connector.
                      * @see javax.management.remote.JMXConnectorFactory#connect(javax.management.remote.JMXServiceURL, java.util.Map)
                      */
                     // @ts-ignore
-                    setEnvironment(environment: java.util.Map<java.lang.String, any>): void
+                    public setEnvironment(environment: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Allow Map access to the environment to be set for the connector,
                      * with the option to add or override specific entries.
@@ -41,12 +41,12 @@ declare namespace org {
                      * adding or overriding entries in child bean definitions.
                      */
                     // @ts-ignore
-                    getEnvironment(): java.util.Map<java.lang.String, ?>
+                    public getEnvironment(): java.util.Map<java.lang.String | string, any>
                     /**
                      * Set the service URL of the remote {@code MBeanServer}.
                      */
                     // @ts-ignore
-                    setServiceUrl(url: string): void
+                    public setServiceUrl(url: java.lang.String | string): void
                     /**
                      * Set the agent id of the {@code MBeanServer} to locate.
                      * <p>Default is none. If specified, this will result in an
@@ -56,21 +56,21 @@ declare namespace org {
                      *  <p>Specifying the empty String indicates the platform MBeanServer.
                      */
                     // @ts-ignore
-                    setAgentId(agentId: string): void
+                    public setAgentId(agentId: java.lang.String | string): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Registers the specified {@code NotificationListener}.
                      * <p>Ensures that an {@code MBeanServerConnection} is configured and attempts
                      * to detect a local connection if one is not supplied.
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Unregisters the specified {@code NotificationListener}.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

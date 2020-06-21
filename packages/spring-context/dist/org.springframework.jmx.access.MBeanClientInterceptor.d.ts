@@ -34,18 +34,18 @@ declare namespace org {
                      * MBean which all invocations are routed to.
                      */
                     // @ts-ignore
-                    setServer(server: javax.management.MBeanServerConnection): void
+                    public setServer(server: javax.management.MBeanServerConnection): void
                     /**
                      * Set the service URL of the remote {@code MBeanServer}.
                      */
                     // @ts-ignore
-                    setServiceUrl(url: string): void
+                    public setServiceUrl(url: java.lang.String | string): void
                     /**
                      * Specify the environment for the JMX connector.
                      * @see javax.management.remote.JMXConnectorFactory#connect(javax.management.remote.JMXServiceURL, java.util.Map)
                      */
                     // @ts-ignore
-                    setEnvironment(environment: java.util.Map<java.lang.String, any>): void
+                    public setEnvironment(environment: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Allow Map access to the environment to be set for the connector,
                      * with the option to add or override specific entries.
@@ -54,7 +54,7 @@ declare namespace org {
                      * adding or overriding entries in child bean definitions.
                      */
                     // @ts-ignore
-                    getEnvironment(): java.util.Map<java.lang.String, ?>
+                    public getEnvironment(): java.util.Map<java.lang.String | string, any>
                     /**
                      * Set the agent id of the {@code MBeanServer} to locate.
                      * <p>Default is none. If specified, this will result in an
@@ -64,14 +64,14 @@ declare namespace org {
                      *  <p>Specifying the empty String indicates the platform MBeanServer.
                      */
                     // @ts-ignore
-                    setAgentId(agentId: string): void
+                    public setAgentId(agentId: java.lang.String | string): void
                     /**
                      * Set whether or not the proxy should connect to the {@code MBeanServer}
                      * at creation time ("true") or the first time it is invoked ("false").
                      * Default is "true".
                      */
                     // @ts-ignore
-                    setConnectOnStartup(connectOnStartup: boolean): void
+                    public setConnectOnStartup(connectOnStartup: boolean): void
                     /**
                      * Set whether to refresh the MBeanServer connection on connect failure.
                      * Default is "false".
@@ -79,13 +79,13 @@ declare namespace org {
                      * automatically reconnecting and retrying in case of an IOException.
                      */
                     // @ts-ignore
-                    setRefreshOnConnectFailure(refreshOnConnectFailure: boolean): void
+                    public setRefreshOnConnectFailure(refreshOnConnectFailure: boolean): void
                     /**
                      * Set the {@code ObjectName} of the MBean which calls are routed to,
                      * as {@code ObjectName} instance or as {@code String}.
                      */
                     // @ts-ignore
-                    setObjectName(objectName: any): void
+                    public setObjectName(objectName: java.lang.Object | any): void
                     /**
                      * Set whether to use strict casing for attributes. Enabled by default.
                      * <p>When using strict casing, a JavaBean property with a getter such as
@@ -94,34 +94,34 @@ declare namespace org {
                      * {@code foo}.
                      */
                     // @ts-ignore
-                    setUseStrictCasing(useStrictCasing: boolean): void
+                    public setUseStrictCasing(useStrictCasing: boolean): void
                     /**
                      * Set the management interface of the target MBean, exposing bean property
                      * setters and getters for MBean attributes and conventional Java methods
                      * for MBean operations.
                      */
                     // @ts-ignore
-                    setManagementInterface(managementInterface: java.lang.Class<any>): void
+                    public setManagementInterface(managementInterface: java.lang.Class<any>): void
                     /**
                      * Return the management interface of the target MBean,
                      * or {@code null} if none specified.
                      */
                     // @ts-ignore
-                    getManagementInterface(): java.lang.Class<?>
+                    getManagementInterface(): java.lang.Class<any>
                     // @ts-ignore
-                    setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                     /**
                      * Prepares the {@code MBeanServerConnection} if the "connectOnStartup"
                      * is turned on (which it is by default).
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Ensures that an {@code MBeanServerConnection} is configured and attempts
                      * to detect a local connection if one is not supplied.
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Return whether this client interceptor has already been prepared,
                      * i.e. has already looked up the server and cached all metadata.
@@ -137,7 +137,7 @@ declare namespace org {
                      * @see #handleConnectFailure
                      */
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                     /**
                      * Refresh the connection and retry the MBean invocation if possible.
                      * <p>If not configured to refresh on connect failure, this method
@@ -151,7 +151,7 @@ declare namespace org {
                      * @see #doInvoke
                      */
                     // @ts-ignore
-                    handleConnectFailure(invocation: MethodInvocation, ex: java.lang.Exception): java.lang.Object
+                    handleConnectFailure(invocation: MethodInvocation, ex: java.lang.Exception): any
                     /**
                      * Route the invocation to the configured managed resource. Correctly routes JavaBean property
                      * access to {@code MBeanServerConnection.get/setAttribute} and method invocation to
@@ -161,7 +161,7 @@ declare namespace org {
                      * @throws Throwable an invocation error propagated to the user
                      */
                     // @ts-ignore
-                    doInvoke(invocation: MethodInvocation): java.lang.Object
+                    doInvoke(invocation: MethodInvocation): any
                     /**
                      * Convert the given result object (from attribute access or operation invocation)
                      * to the specified target class for returning from the proxy method.
@@ -171,9 +171,9 @@ declare namespace org {
                      *  is necessary
                      */
                     // @ts-ignore
-                    convertResultValueIfNecessary(result: any, parameter: MethodParameter): java.lang.Object
+                    convertResultValueIfNecessary(result: java.lang.Object | any, parameter: MethodParameter): any
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

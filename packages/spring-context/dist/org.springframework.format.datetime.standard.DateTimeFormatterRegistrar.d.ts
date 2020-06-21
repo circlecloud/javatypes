@@ -27,25 +27,25 @@ declare namespace org {
                          * properties are effectively ignored.
                          */
                         // @ts-ignore
-                        setUseIsoFormat(useIsoFormat: boolean): void
+                        public setUseIsoFormat(useIsoFormat: boolean): void
                         /**
                          * Set the default format style of {@link java.time.LocalDate} objects.
                          * Default is {@link java.time.format.FormatStyle#SHORT}.
                          */
                         // @ts-ignore
-                        setDateStyle(dateStyle: java.time.format.FormatStyle): void
+                        public setDateStyle(dateStyle: java.time.format.FormatStyle): void
                         /**
                          * Set the default format style of {@link java.time.LocalTime} objects.
                          * Default is {@link java.time.format.FormatStyle#SHORT}.
                          */
                         // @ts-ignore
-                        setTimeStyle(timeStyle: java.time.format.FormatStyle): void
+                        public setTimeStyle(timeStyle: java.time.format.FormatStyle): void
                         /**
                          * Set the default format style of {@link java.time.LocalDateTime} objects.
                          * Default is {@link java.time.format.FormatStyle#SHORT}.
                          */
                         // @ts-ignore
-                        setDateTimeStyle(dateTimeStyle: java.time.format.FormatStyle): void
+                        public setDateTimeStyle(dateTimeStyle: java.time.format.FormatStyle): void
                         /**
                          * Set the formatter that will be used for objects representing date values.
                          * <p>This formatter will be used for the {@link LocalDate} type.
@@ -56,7 +56,7 @@ declare namespace org {
                          * @see #setDateTimeFormatter
                          */
                         // @ts-ignore
-                        setDateFormatter(formatter: java.time.format.DateTimeFormatter): void
+                        public setDateFormatter(formatter: java.time.format.DateTimeFormatter): void
                         /**
                          * Set the formatter that will be used for objects representing time values.
                          * <p>This formatter will be used for the {@link LocalTime} and {@link OffsetTime}
@@ -67,7 +67,7 @@ declare namespace org {
                          * @see #setDateTimeFormatter
                          */
                         // @ts-ignore
-                        setTimeFormatter(formatter: java.time.format.DateTimeFormatter): void
+                        public setTimeFormatter(formatter: java.time.format.DateTimeFormatter): void
                         /**
                          * Set the formatter that will be used for objects representing date and time values.
                          * <p>This formatter will be used for {@link LocalDateTime}, {@link ZonedDateTime}
@@ -79,9 +79,9 @@ declare namespace org {
                          * @see #setTimeFormatter
                          */
                         // @ts-ignore
-                        setDateTimeFormatter(formatter: java.time.format.DateTimeFormatter): void
+                        public setDateTimeFormatter(formatter: java.time.format.DateTimeFormatter): void
                         // @ts-ignore
-                        registerFormatters(registry: org.springframework.format.FormatterRegistry): void
+                        public registerFormatters(registry: org.springframework.format.FormatterRegistry): void
                     }
                 }
             }

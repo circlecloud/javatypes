@@ -19,7 +19,7 @@ declare namespace org {
                  * @param placeholderSuffix the suffix that denotes the end of a placeholder
                  */
                 // @ts-ignore
-                constructor(placeholderPrefix: string, placeholderSuffix: string)
+                constructor(placeholderPrefix: java.lang.String | string, placeholderSuffix: java.lang.String | string)
                 /**
                  * Creates a new {@code PropertyPlaceholderHelper} that uses the supplied prefix and suffix.
                  * @param placeholderPrefix the prefix that denotes the start of a placeholder
@@ -30,7 +30,7 @@ declare namespace org {
                  *  be ignored ({#code true}) or cause an exception ({@code false})
                  */
                 // @ts-ignore
-                constructor(placeholderPrefix: string, placeholderSuffix: string, valueSeparator: string, ignoreUnresolvablePlaceholders: boolean)
+                constructor(placeholderPrefix: java.lang.String | string, placeholderSuffix: java.lang.String | string, valueSeparator: java.lang.String | string, ignoreUnresolvablePlaceholders: boolean)
                 /**
                  * Replaces all placeholders of format {@code ${name}} with the corresponding
                  * property from the supplied {@link Properties}.
@@ -39,7 +39,7 @@ declare namespace org {
                  * @return the supplied value with placeholders replaced inline
                  */
                 // @ts-ignore
-                replacePlaceholders(value: string, properties: java.util.Properties): java.lang.String
+                public replacePlaceholders(value: java.lang.String | string, properties: java.util.Properties): string
                 /**
                  * Replaces all placeholders of format {@code ${name}} with the value returned
                  * from the supplied {@link PlaceholderResolver}.
@@ -48,9 +48,9 @@ declare namespace org {
                  * @return the supplied value with placeholders replaced inline
                  */
                 // @ts-ignore
-                replacePlaceholders(value: string, placeholderResolver: org.springframework.util.PropertyPlaceholderHelper.PlaceholderResolver): java.lang.String
+                public replacePlaceholders(value: java.lang.String | string, placeholderResolver: org.springframework.util.PropertyPlaceholderHelper.PlaceholderResolver): string
                 // @ts-ignore
-                parseStringValue(value: string, placeholderResolver: org.springframework.util.PropertyPlaceholderHelper.PlaceholderResolver, visitedPlaceholders: Array<java.lang.String>): java.lang.String
+                parseStringValue(value: java.lang.String | string, placeholderResolver: org.springframework.util.PropertyPlaceholderHelper.PlaceholderResolver, visitedPlaceholders: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): string
             }
         }
     }

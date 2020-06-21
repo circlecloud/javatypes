@@ -67,7 +67,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Constructs a new, empty set; the backing <tt>HashMap</tt> instance has
              * the specified initial capacity and the specified load factor.
@@ -94,19 +94,19 @@ declare namespace java {
              * @see ConcurrentModificationException
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             /**
              * Returns the number of elements in this set (its cardinality).
              * @return the number of elements in this set (its cardinality)
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this set contains no elements.
              * @return <tt>true</tt> if this set contains no elements
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns <tt>true</tt> if this set contains the specified element.
              * More formally, returns <tt>true</tt> if and only if this set
@@ -116,7 +116,7 @@ declare namespace java {
              * @return <tt>true</tt> if this set contains the specified element
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Adds the specified element to this set if it is not already present.
              * More formally, adds the specified element <tt>e</tt> to this set if
@@ -129,7 +129,7 @@ declare namespace java {
              *  element
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Removes the specified element from this set if it is present.
              * More formally, removes an element <tt>e</tt> such that
@@ -142,20 +142,20 @@ declare namespace java {
              * @return <tt>true</tt> if the set contained the specified element
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Removes all of the elements from this set.
              * The set will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns a shallow copy of this <tt>HashSet</tt> instance: the elements
              * themselves are not cloned.
              * @return a shallow copy of this set
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -167,7 +167,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

@@ -12,9 +12,25 @@ declare namespace org {
             // @ts-ignore
             class HttpMethod extends java.lang.Enum<org.springframework.http.HttpMethod> {
                 // @ts-ignore
+                readonly GET: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly HEAD: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly POST: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly PUT: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly PATCH: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly DELETE: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly OPTIONS: org.springframework.http.HttpMethod
+                // @ts-ignore
+                readonly TRACE: org.springframework.http.HttpMethod
+                // @ts-ignore
                 values(): org.springframework.http.HttpMethod[]
                 // @ts-ignore
-                valueOf(name: string): org.springframework.http.HttpMethod
+                valueOf(name: java.lang.String | string): org.springframework.http.HttpMethod
                 /**
                  * Resolve the given method value to an {@code HttpMethod}.
                  * @param method the method value as a String
@@ -22,7 +38,7 @@ declare namespace org {
                  * @since 4.2.4
                  */
                 // @ts-ignore
-                resolve(method: string): org.springframework.http.HttpMethod
+                resolve(method: java.lang.String | string): org.springframework.http.HttpMethod
                 /**
                  * Determine whether this {@code HttpMethod} matches the given
                  * method value.
@@ -31,7 +47,7 @@ declare namespace org {
                  * @since 4.2.4
                  */
                 // @ts-ignore
-                matches(method: string): boolean
+                matches(method: java.lang.String | string): boolean
             }
         }
     }

@@ -30,12 +30,12 @@ declare namespace java {
                  * Compression method for uncompressed (STORED) entries.
                  */
                 // @ts-ignore
-                readonly STORED: number /*int*/
+                public static readonly STORED: number /*int*/
                 /**
                  * Compression method for compressed (DEFLATED) entries.
                  */
                 // @ts-ignore
-                readonly DEFLATED: number /*int*/
+                public static readonly DEFLATED: number /*int*/
                 /**
                  * Sets the ZIP file comment.
                  * @param comment the comment string
@@ -43,7 +43,7 @@ declare namespace java {
                  *             ZIP file comment is greater than 0xFFFF bytes
                  */
                 // @ts-ignore
-                setComment(comment: string): void
+                public setComment(comment: java.lang.String | string): void
                 /**
                  * Sets the default compression method for subsequent entries. This
                  * default will be used whenever the compression method is not specified
@@ -53,7 +53,7 @@ declare namespace java {
                  *             is invalid
                  */
                 // @ts-ignore
-                setMethod(method: number /*int*/): void
+                public setMethod(method: number /*int*/): void
                 /**
                  * Sets the compression level for subsequent entries which are DEFLATED.
                  * The default setting is DEFAULT_COMPRESSION.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @exception IllegalArgumentException if the compression level is invalid
                  */
                 // @ts-ignore
-                setLevel(level: number /*int*/): void
+                public setLevel(level: number /*int*/): void
                 /**
                  * Begins writing a new ZIP file entry and positions the stream to the
                  * start of the entry data. Closes the current entry if still active.
@@ -73,7 +73,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                putNextEntry(e: java.util.zip.ZipEntry): void
+                public putNextEntry(e: java.util.zip.ZipEntry): void
                 /**
                  * Closes the current ZIP entry and positions the stream for writing
                  * the next entry.
@@ -81,7 +81,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                closeEntry(): void
+                public closeEntry(): void
                 /**
                  * Writes an array of bytes to the current ZIP entry data. This method
                  * will block until all the bytes are written.
@@ -92,7 +92,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Finishes writing the contents of the ZIP output stream without closing
                  * the underlying stream. Use this method when applying multiple filters
@@ -101,14 +101,14 @@ declare namespace java {
                  * @exception IOException if an I/O exception has occurred
                  */
                 // @ts-ignore
-                finish(): void
+                public finish(): void
                 /**
                  * Closes the ZIP output stream as well as the stream being filtered.
                  * @exception ZipException if a ZIP file error has occurred
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
             }
         }
     }

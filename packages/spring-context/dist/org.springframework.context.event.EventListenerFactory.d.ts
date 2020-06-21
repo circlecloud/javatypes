@@ -25,7 +25,7 @@ declare namespace org {
                      * @return an application listener, suitable to invoke the specified method
                      */
                     // @ts-ignore
-                    createApplicationListener(beanName: string, type: java.lang.Class<any>, method: java.lang.reflect.Method): org.springframework.context.ApplicationListener<?>
+                    createApplicationListener(beanName: java.lang.String | string, type: java.lang.Class<any>, method: java.lang.reflect.Method): org.springframework.context.ApplicationListener<any>
                 }
             }
         }

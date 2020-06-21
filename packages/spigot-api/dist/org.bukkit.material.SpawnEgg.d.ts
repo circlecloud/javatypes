@@ -30,18 +30,18 @@ declare namespace org {
                  * @deprecated This is now stored in {#link SpawnEggMeta}.
                  */
                 // @ts-ignore
-                getSpawnedType(): org.bukkit.entity.EntityType
+                public getSpawnedType(): org.bukkit.entity.EntityType
                 /**
                  * Set the type of entity this egg will spawn.
                  * @param type The entity type.
                  * @deprecated This is now stored in {#link SpawnEggMeta}.
                  */
                 // @ts-ignore
-                setSpawnedType(type: org.bukkit.entity.EntityType): void
+                public setSpawnedType(type: org.bukkit.entity.EntityType): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.SpawnEgg
+                public clone(): org.bukkit.material.SpawnEgg
             }
         }
     }

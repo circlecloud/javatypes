@@ -79,19 +79,19 @@ declare namespace java {
              * in the horizontal/vertical dimension.
              */
             // @ts-ignore
-            readonly SCROLLBARS_AS_NEEDED: number /*int*/
+            public static readonly SCROLLBARS_AS_NEEDED: number /*int*/
             /**
              * Specifies that horizontal/vertical scrollbars should always be
              * shown regardless of the respective sizes of the scrollpane and child.
              */
             // @ts-ignore
-            readonly SCROLLBARS_ALWAYS: number /*int*/
+            public static readonly SCROLLBARS_ALWAYS: number /*int*/
             /**
              * Specifies that horizontal/vertical scrollbars should never be shown
              * regardless of the respective sizes of the scrollpane and child.
              */
             // @ts-ignore
-            readonly SCROLLBARS_NEVER: number /*int*/
+            public static readonly SCROLLBARS_NEVER: number /*int*/
             /**
              * Adds the specified component to this scroll pane container.
              * If the scroll pane has an existing child component, that
@@ -101,19 +101,19 @@ declare namespace java {
              * @param index position of child component (must be &lt;= 0)
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Returns the display policy for the scrollbars.
              * @return the display policy for the scrollbars
              */
             // @ts-ignore
-            getScrollbarDisplayPolicy(): int
+            public getScrollbarDisplayPolicy(): number /*int*/
             /**
              * Returns the current size of the scroll pane's view port.
              * @return the size of the view port in pixels
              */
             // @ts-ignore
-            getViewportSize(): java.awt.Dimension
+            public getViewportSize(): java.awt.Dimension
             /**
              * Returns the height that would be occupied by a horizontal
              * scrollbar, which is independent of whether it is currently
@@ -121,7 +121,7 @@ declare namespace java {
              * @return the height of a horizontal scrollbar in pixels
              */
             // @ts-ignore
-            getHScrollbarHeight(): int
+            public getHScrollbarHeight(): number /*int*/
             /**
              * Returns the width that would be occupied by a vertical
              * scrollbar, which is independent of whether it is currently
@@ -129,7 +129,7 @@ declare namespace java {
              * @return the width of a vertical scrollbar in pixels
              */
             // @ts-ignore
-            getVScrollbarWidth(): int
+            public getVScrollbarWidth(): number /*int*/
             /**
              * Returns the <code>ScrollPaneAdjustable</code> object which
              * represents the state of the vertical scrollbar.
@@ -138,7 +138,7 @@ declare namespace java {
              * @see java.awt.ScrollPaneAdjustable
              */
             // @ts-ignore
-            getVAdjustable(): java.awt.Adjustable
+            public getVAdjustable(): java.awt.Adjustable
             /**
              * Returns the <code>ScrollPaneAdjustable</code> object which
              * represents the state of the horizontal scrollbar.
@@ -147,7 +147,7 @@ declare namespace java {
              * @see java.awt.ScrollPaneAdjustable
              */
             // @ts-ignore
-            getHAdjustable(): java.awt.Adjustable
+            public getHAdjustable(): java.awt.Adjustable
             /**
              * Scrolls to the specified position within the child component.
              * A call to this method is only valid if the scroll pane contains
@@ -164,7 +164,7 @@ declare namespace java {
              *      a child
              */
             // @ts-ignore
-            setScrollPosition(x: number /*int*/, y: number /*int*/): void
+            public setScrollPosition(x: number /*int*/, y: number /*int*/): void
             /**
              * Scrolls to the specified position within the child component.
              * A call to this method is only valid if the scroll pane contains
@@ -180,7 +180,7 @@ declare namespace java {
              * @throws NullPointerException if {#code p} is {@code null}
              */
             // @ts-ignore
-            setScrollPosition(p: java.awt.Point): void
+            public setScrollPosition(p: java.awt.Point): void
             /**
              * Returns the current x,y position within the child which is displayed
              * at the 0,0 location of the scrolled panel's view port.
@@ -191,14 +191,14 @@ declare namespace java {
              *      a child
              */
             // @ts-ignore
-            getScrollPosition(): java.awt.Point
+            public getScrollPosition(): java.awt.Point
             /**
              * Sets the layout manager for this container.  This method is
              * overridden to prevent the layout mgr from being set.
              * @param mgr the specified layout manager
              */
             // @ts-ignore
-            setLayout(mgr: java.awt.LayoutManager): void
+            public setLayout(mgr: java.awt.LayoutManager): void
             /**
              * Lays out this container by resizing its child to its preferred size.
              * If the new preferred size of the child causes the current scroll
@@ -207,13 +207,13 @@ declare namespace java {
              * @see Component#validate
              */
             // @ts-ignore
-            doLayout(): void
+            public doLayout(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>doLayout()</code>.
              */
             // @ts-ignore
-            layout(): void
+            public layout(): void
             /**
              * Prints the component in this scroll pane.
              * @param g the specified Graphics window
@@ -221,12 +221,12 @@ declare namespace java {
              * @see Component#printAll
              */
             // @ts-ignore
-            printComponents(g: java.awt.Graphics): void
+            public printComponents(g: java.awt.Graphics): void
             /**
              * Creates the scroll pane's peer.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Returns a string representing the state of this
              * <code>ScrollPane</code>. This
@@ -237,7 +237,7 @@ declare namespace java {
              * @return the parameter string of this scroll pane
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            public paramString(): string
             /**
              * Process mouse wheel events that are delivered to this
              * <code>ScrollPane</code> by scrolling an appropriate amount.
@@ -267,7 +267,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setWheelScrollingEnabled(handleWheel: boolean): void
+            public setWheelScrollingEnabled(handleWheel: boolean): void
             /**
              * Indicates whether or not scrolling will take place in response to
              * the mouse wheel.  Wheel scrolling is enabled by default.
@@ -275,7 +275,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isWheelScrollingEnabled(): boolean
+            public isWheelScrollingEnabled(): boolean
             /**
              * Gets the AccessibleContext associated with this ScrollPane.
              * For scroll panes, the AccessibleContext takes the form of an
@@ -286,7 +286,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

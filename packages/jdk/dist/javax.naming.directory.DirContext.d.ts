@@ -146,7 +146,7 @@ declare namespace javax {
                  * @see #modifyAttributes
                  */
                 // @ts-ignore
-                
+                readonly ADD_ATTRIBUTE: number /*int*/
                 /**
                  * This constant specifies to replace an attribute with specified values.
                  * <p>
@@ -164,7 +164,7 @@ declare namespace javax {
                  * @see #modifyAttributes
                  */
                 // @ts-ignore
-                
+                readonly REPLACE_ATTRIBUTE: number /*int*/
                 /**
                  * This constant specifies to delete
                  * the specified attribute values from the attribute.
@@ -184,7 +184,7 @@ declare namespace javax {
                  * @see #modifyAttributes
                  */
                 // @ts-ignore
-                
+                readonly REMOVE_ATTRIBUTE: number /*int*/
                 /**
                  * Retrieves all of the attributes associated with a named object.
                  * See the class description regarding attribute models, attribute
@@ -209,7 +209,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                getAttributes(name: string): javax.naming.directory.Attributes
+                getAttributes(name: java.lang.String | string): javax.naming.directory.Attributes
                 /**
                  * Retrieves selected attributes associated with a named object.
                  * See the class description regarding attribute models, attribute
@@ -232,7 +232,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                getAttributes(name: javax.naming.Name, attrIds: string[]): javax.naming.directory.Attributes
+                getAttributes(name: javax.naming.Name, attrIds: java.lang.String[] | string[]): javax.naming.directory.Attributes
                 /**
                  * Retrieves selected attributes associated with a named object.
                  * See {@link #getAttributes(Name, String[])} for details.
@@ -246,7 +246,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                getAttributes(name: string, attrIds: string[]): javax.naming.directory.Attributes
+                getAttributes(name: java.lang.String | string, attrIds: java.lang.String[] | string[]): javax.naming.directory.Attributes
                 /**
                  * Modifies the attributes associated with a named object.
                  * The order of the modifications is not specified.  Where
@@ -284,7 +284,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                modifyAttributes(name: string, mod_op: number /*int*/, attrs: javax.naming.directory.Attributes): void
+                modifyAttributes(name: java.lang.String | string, mod_op: number /*int*/, attrs: javax.naming.directory.Attributes): void
                 /**
                  * Modifies the attributes associated with a named object using
                  * an ordered list of modifications.
@@ -320,7 +320,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                modifyAttributes(name: string, mods: javax.naming.directory.ModificationItem[]): void
+                modifyAttributes(name: java.lang.String | string, mods: javax.naming.directory.ModificationItem[]): void
                 /**
                  * Binds a name to an object, along with associated attributes.
                  * If <tt>attrs</tt> is null, the resulting binding will have
@@ -343,7 +343,7 @@ declare namespace javax {
                  * @see #rebind(Name, Object, Attributes)
                  */
                 // @ts-ignore
-                bind(name: javax.naming.Name, obj: any, attrs: javax.naming.directory.Attributes): void
+                bind(name: javax.naming.Name, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 /**
                  * Binds a name to an object, along with associated attributes.
                  * See {@link #bind(Name, Object, Attributes)} for details.
@@ -359,7 +359,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                bind(name: string, obj: any, attrs: javax.naming.directory.Attributes): void
+                bind(name: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 /**
                  * Binds a name to an object, along with associated attributes,
                  * overwriting any existing binding.
@@ -386,7 +386,7 @@ declare namespace javax {
                  * @see #bind(Name, Object, Attributes)
                  */
                 // @ts-ignore
-                rebind(name: javax.naming.Name, obj: any, attrs: javax.naming.directory.Attributes): void
+                rebind(name: javax.naming.Name, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 /**
                  * Binds a name to an object, along with associated attributes,
                  * overwriting any existing binding.
@@ -402,7 +402,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                rebind(name: string, obj: any, attrs: javax.naming.directory.Attributes): void
+                rebind(name: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 /**
                  * Creates and binds a new context, along with associated attributes.
                  * This method creates a new subcontext with the given name, binds it in
@@ -439,7 +439,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                createSubcontext(name: string, attrs: javax.naming.directory.Attributes): javax.naming.directory.DirContext
+                createSubcontext(name: java.lang.String | string, attrs: javax.naming.directory.Attributes): javax.naming.directory.DirContext
                 /**
                  * Retrieves the schema associated with the named object.
                  * The schema describes rules regarding the structure of the namespace
@@ -472,7 +472,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                getSchema(name: string): javax.naming.directory.DirContext
+                getSchema(name: java.lang.String | string): javax.naming.directory.DirContext
                 /**
                  * Retrieves a context containing the schema objects of the
                  * named object's class definitions.
@@ -519,7 +519,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                getSchemaClassDefinition(name: string): javax.naming.directory.DirContext
+                getSchemaClassDefinition(name: java.lang.String | string): javax.naming.directory.DirContext
                 /**
                  * Searches in a single context for objects that contain a
                  * specified set of attributes, and retrieves selected attributes.
@@ -587,7 +587,7 @@ declare namespace javax {
                  * @see #search(Name, String, Object[], SearchControls)
                  */
                 // @ts-ignore
-                search(name: javax.naming.Name, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: javax.naming.Name, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: java.lang.String[] | string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 /**
                  * Searches in a single context for objects that contain a
                  * specified set of attributes, and retrieves selected attributes.
@@ -602,7 +602,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                search(name: string, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: java.lang.String | string, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: java.lang.String[] | string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 /**
                  * Searches in a single context for objects that contain a
                  * specified set of attributes.
@@ -634,7 +634,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                search(name: string, matchingAttributes: javax.naming.directory.Attributes): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: java.lang.String | string, matchingAttributes: javax.naming.directory.Attributes): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 /**
                  * Searches in the named context or object for entries that satisfy the
                  * given search filter.  Performs the search as specified by
@@ -729,7 +729,7 @@ declare namespace javax {
                  * @see SearchResult
                  */
                 // @ts-ignore
-                search(name: javax.naming.Name, filter: string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: javax.naming.Name, filter: java.lang.String | string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 /**
                  * Searches in the named context or object for entries that satisfy the
                  * given search filter.  Performs the search as specified by
@@ -752,7 +752,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                search(name: string, filter: string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: java.lang.String | string, filter: java.lang.String | string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 /**
                  * Searches in the named context or object for entries that satisfy the
                  * given search filter.  Performs the search as specified by
@@ -851,7 +851,7 @@ declare namespace javax {
                  * @see java.text.MessageFormat
                  */
                 // @ts-ignore
-                search(name: javax.naming.Name, filterExpr: string, filterArgs: any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: javax.naming.Name, filterExpr: java.lang.String | string, filterArgs: java.lang.Object[] | any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 /**
                  * Searches in the named context or object for entries that satisfy the
                  * given search filter.  Performs the search as specified by
@@ -886,7 +886,7 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                search(name: string, filterExpr: string, filterArgs: any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                search(name: java.lang.String | string, filterExpr: java.lang.String | string, filterArgs: java.lang.Object[] | any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
             }
         }
     }

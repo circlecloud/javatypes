@@ -18,9 +18,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    contextInitialized(event: ServletContextEvent): void
+                    public contextInitialized(event: ServletContextEvent): void
                     // @ts-ignore
-                    contextDestroyed(event: ServletContextEvent): void
+                    public contextDestroyed(event: ServletContextEvent): void
                 }
             }
         }

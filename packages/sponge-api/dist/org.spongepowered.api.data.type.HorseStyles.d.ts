@@ -9,15 +9,15 @@ declare namespace org {
                     // @ts-ignore
                     class HorseStyles extends java.lang.Object {
                         // @ts-ignore
-                        readonly BLACK_DOTS: org.spongepowered.api.data.type.HorseStyle
+                        public static readonly BLACK_DOTS: org.spongepowered.api.data.type.HorseStyle
                         // @ts-ignore
-                        readonly NONE: org.spongepowered.api.data.type.HorseStyle
+                        public static readonly NONE: org.spongepowered.api.data.type.HorseStyle
                         // @ts-ignore
-                        readonly WHITE: org.spongepowered.api.data.type.HorseStyle
+                        public static readonly WHITE: org.spongepowered.api.data.type.HorseStyle
                         // @ts-ignore
-                        readonly WHITEFIELD: org.spongepowered.api.data.type.HorseStyle
+                        public static readonly WHITEFIELD: org.spongepowered.api.data.type.HorseStyle
                         // @ts-ignore
-                        readonly WHITE_DOTS: org.spongepowered.api.data.type.HorseStyle
+                        public static readonly WHITE_DOTS: org.spongepowered.api.data.type.HorseStyle
                     }
                 }
             }

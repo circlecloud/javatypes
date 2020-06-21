@@ -21,7 +21,7 @@ declare namespace javax {
                      * @return true if the provider matches the criterion.
                      */
                     // @ts-ignore
-                    filter(provider: any): boolean
+                    filter(provider: java.lang.Object | any): boolean
                 }
             }
         }

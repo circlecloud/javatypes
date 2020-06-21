@@ -12,7 +12,7 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class StringHttpMessageConverter extends org.springframework.http.converter.AbstractHttpMessageConverter<java.lang.String> {
+                class StringHttpMessageConverter extends org.springframework.http.converter.AbstractHttpMessageConverter<java.lang.String | string> {
                     /**
                      * A default constructor that uses {@code "ISO-8859-1"} as the default charset.
                      * @see #StringHttpMessageConverter(Charset)
@@ -29,7 +29,7 @@ declare namespace org {
                      * The default charset used by the converter.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                    public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                     /**
                      * Whether the {@code Accept-Charset} header should be written to any outgoing
                      * request sourced from the value of {@link Charset#availableCharsets()}.
@@ -37,17 +37,17 @@ declare namespace org {
                      * <p>As of 5.2, by default is set to {@code false}.
                      */
                     // @ts-ignore
-                    setWriteAcceptCharset(writeAcceptCharset: boolean): void
+                    public setWriteAcceptCharset(writeAcceptCharset: boolean): void
                     // @ts-ignore
-                    supports(clazz: java.lang.Class<any>): boolean
+                    public supports(clazz: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    readInternal(clazz: java.lang.Class<java.lang.String>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.String
+                    readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): string
                     // @ts-ignore
-                    getContentLength(str: string, contentType: org.springframework.http.MediaType): java.lang.Long
+                    getContentLength(str: java.lang.String | string, contentType: org.springframework.http.MediaType): number
                     // @ts-ignore
-                    addDefaultHeaders(headers: org.springframework.http.HttpHeaders, s: string, type: org.springframework.http.MediaType): void
+                    addDefaultHeaders(headers: org.springframework.http.HttpHeaders, s: java.lang.String | string, type: org.springframework.http.MediaType): void
                     // @ts-ignore
-                    writeInternal(str: string, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    writeInternal(str: java.lang.String | string, outputMessage: org.springframework.http.HttpOutputMessage): void
                     /**
                      * Return the list of supported {@link Charset Charsets}.
                      * <p>By default, returns {@link Charset#availableCharsets()}.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return the list of accepted charsets
                      */
                     // @ts-ignore
-                    getAcceptedCharsets(): java.util.List<java.nio.charset.Charset>
+                    getAcceptedCharsets(): Array<java.nio.charset.Charset>
                 }
             }
         }

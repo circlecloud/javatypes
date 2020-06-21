@@ -26,13 +26,13 @@ declare namespace java {
                  * @return the field size in bits.
                  */
                 // @ts-ignore
-                getFieldSize(): int
+                public getFieldSize(): number /*int*/
                 /**
                  * Returns the prime {@code p} of this prime finite field.
                  * @return the prime.
                  */
                 // @ts-ignore
-                getP(): java.math.BigInteger
+                public getP(): java.math.BigInteger
                 /**
                  * Compares this prime finite field for equality with the
                  * specified object.
@@ -41,13 +41,13 @@ declare namespace java {
                  *  of ECFieldFp and the prime value match, false otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this prime finite field.
                  * @return a hash code value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

@@ -52,7 +52,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.CharBuffer>, java.lang.Appendable, java.lang.CharSequence, java.lang.Readable {
+        abstract class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.CharBuffer>, java.lang.Appendable, java.lang.CharSequence, java.lang.Readable {
             /**
              * Allocates a new char buffer.
              * <p> The new buffer's position will be zero, its limit will be its
@@ -66,7 +66,7 @@ declare namespace java {
              *           If the <tt>capacity</tt> is a negative integer
              */
             // @ts-ignore
-            allocate(capacity: number /*int*/): java.nio.CharBuffer
+            public static allocate(capacity: number /*int*/): java.nio.CharBuffer
             /**
              * Wraps a char array into a buffer.
              * <p> The new buffer will be backed by the given char array;
@@ -93,7 +93,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            wrap(array: string[], offset: number /*int*/, length: number /*int*/): java.nio.CharBuffer
+            public static wrap(array: string[], offset: number /*int*/, length: number /*int*/): java.nio.CharBuffer
             /**
              * Wraps a char array into a buffer.
              * <p> The new buffer will be backed by the given char array;
@@ -108,7 +108,7 @@ declare namespace java {
              * @return The new char buffer
              */
             // @ts-ignore
-            wrap(array: string[]): java.nio.CharBuffer
+            public static wrap(array: string[]): java.nio.CharBuffer
             /**
              * Attempts to read characters into the specified character buffer.
              * The buffer is used as a repository of characters as-is: the only
@@ -123,7 +123,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            read(target: java.nio.CharBuffer): int
+            public read(target: java.nio.CharBuffer): number /*int*/
             /**
              * Wraps a character sequence into a buffer.
              * <p> The content of the new, read-only buffer will be the content of the
@@ -148,7 +148,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            wrap(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
+            public static wrap(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
             /**
              * Wraps a character sequence into a buffer.
              * <p> The content of the new, read-only buffer will be the content of the
@@ -161,7 +161,7 @@ declare namespace java {
              * @return The new character buffer
              */
             // @ts-ignore
-            wrap(csq: java.lang.CharSequence): java.nio.CharBuffer
+            public static wrap(csq: java.lang.CharSequence): java.nio.CharBuffer
             /**
              * Creates a new char buffer whose content is a shared subsequence of
              * this buffer's content.
@@ -177,7 +177,7 @@ declare namespace java {
              * @return The new char buffer
              */
             // @ts-ignore
-            abstract slice(): java.nio.CharBuffer
+            public abstract slice(): java.nio.CharBuffer
             /**
              * Creates a new char buffer that shares this buffer's content.
              * <p> The content of the new buffer will be that of this buffer.  Changes
@@ -191,7 +191,7 @@ declare namespace java {
              * @return The new char buffer
              */
             // @ts-ignore
-            abstract duplicate(): java.nio.CharBuffer
+            public abstract duplicate(): java.nio.CharBuffer
             /**
              * Creates a new, read-only char buffer that shares this buffer's
              * content.
@@ -207,7 +207,7 @@ declare namespace java {
              * @return The new, read-only char buffer
              */
             // @ts-ignore
-            abstract asReadOnlyBuffer(): java.nio.CharBuffer
+            public abstract asReadOnlyBuffer(): java.nio.CharBuffer
             /**
              * Relative <i>get</i> method.  Reads the char at this buffer's
              * current position, and then increments the position.
@@ -216,7 +216,7 @@ declare namespace java {
              *           If the buffer's current position is not smaller than its limit
              */
             // @ts-ignore
-            abstract get(): char
+            public abstract get(): string
             /**
              * Relative <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given char into this buffer at the current
@@ -230,7 +230,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(c: string): java.nio.CharBuffer
+            public abstract put(c: string): java.nio.CharBuffer
             /**
              * Absolute <i>get</i> method.  Reads the char at the given
              * index.
@@ -242,7 +242,7 @@ declare namespace java {
              *           or not smaller than the buffer's limit
              */
             // @ts-ignore
-            abstract get(index: number /*int*/): char
+            public abstract get(index: number /*int*/): string
             /**
              * Absolute <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> Writes the given char into this buffer at the given
@@ -259,7 +259,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract put(index: number /*int*/, c: string): java.nio.CharBuffer
+            public abstract put(index: number /*int*/, c: string): java.nio.CharBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers chars from this buffer into the given
@@ -300,7 +300,7 @@ declare namespace java {
              *           parameters do not hold
              */
             // @ts-ignore
-            get(dst: string[], offset: number /*int*/, length: number /*int*/): java.nio.CharBuffer
+            public get(dst: string[], offset: number /*int*/, length: number /*int*/): java.nio.CharBuffer
             /**
              * Relative bulk <i>get</i> method.
              * <p> This method transfers chars from this buffer into the given
@@ -316,7 +316,7 @@ declare namespace java {
              *           remaining in this buffer
              */
             // @ts-ignore
-            get(dst: string[]): java.nio.CharBuffer
+            public get(dst: string[]): java.nio.CharBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the chars remaining in the given source
@@ -349,7 +349,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: java.nio.CharBuffer): java.nio.CharBuffer
+            public put(src: java.nio.CharBuffer): java.nio.CharBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers chars into this buffer from the given
@@ -390,7 +390,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: string[], offset: number /*int*/, length: number /*int*/): java.nio.CharBuffer
+            public put(src: string[], offset: number /*int*/, length: number /*int*/): java.nio.CharBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the entire content of the given source
@@ -408,7 +408,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: string[]): java.nio.CharBuffer
+            public put(src: string[]): java.nio.CharBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers chars from the given string into this
@@ -451,7 +451,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: string, start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
+            public put(src: java.lang.String | string, start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
             /**
              * Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> This method transfers the entire content of the given source string
@@ -468,7 +468,7 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            put(src: string): java.nio.CharBuffer
+            public put(src: java.lang.String | string): java.nio.CharBuffer
             /**
              * Tells whether or not this buffer is backed by an accessible char
              * array.
@@ -479,7 +479,7 @@ declare namespace java {
              *           is backed by an array and is not read-only
              */
             // @ts-ignore
-            hasArray(): boolean
+            public hasArray(): boolean
             /**
              * Returns the char array that backs this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -495,7 +495,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            array(): char[]
+            public array(): string[]
             /**
              * Returns the offset within this buffer's backing array of the first
              * element of the buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -512,7 +512,7 @@ declare namespace java {
              *           If this buffer is not backed by an accessible array
              */
             // @ts-ignore
-            arrayOffset(): int
+            public arrayOffset(): number /*int*/
             /**
              * Compacts this buffer&nbsp;&nbsp;<i>(optional operation)</i>.
              * <p> The chars between the buffer's current position and its limit,
@@ -533,13 +533,13 @@ declare namespace java {
              *           If this buffer is read-only
              */
             // @ts-ignore
-            abstract compact(): java.nio.CharBuffer
+            public abstract compact(): java.nio.CharBuffer
             /**
              * Tells whether or not this char buffer is direct.
              * @return <tt>true</tt> if, and only if, this buffer is direct
              */
             // @ts-ignore
-            abstract isDirect(): boolean
+            public abstract isDirect(): boolean
             /**
              * Returns the current hash code of this buffer.
              * <p> The hash code of a char buffer depends only upon its remaining
@@ -551,7 +551,7 @@ declare namespace java {
              * @return The current hash code of this buffer
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tells whether or not this buffer is equal to another object.
              * <p> Two char buffers are equal if, and only if,
@@ -569,7 +569,7 @@ declare namespace java {
              *            given object
              */
             // @ts-ignore
-            equals(ob: any): boolean
+            public equals(ob: java.lang.Object | any): boolean
             /**
              * Compares this buffer to another.
              * <p> Two char buffers are compared by comparing their sequences of
@@ -582,7 +582,7 @@ declare namespace java {
              *           is less than, equal to, or greater than the given buffer
              */
             // @ts-ignore
-            compareTo(that: java.nio.CharBuffer): int
+            public compareTo(that: java.nio.CharBuffer): number /*int*/
             /**
              * Returns a string containing the characters in this buffer.
              * <p> The first character of the resulting string will be the character at
@@ -592,7 +592,7 @@ declare namespace java {
              * @return The specified string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the length of this character buffer.
              * <p> When viewed as a character sequence, the length of a character
@@ -602,7 +602,7 @@ declare namespace java {
              * @return The length of this character buffer
              */
             // @ts-ignore
-            length(): int
+            public length(): number /*int*/
             /**
              * Reads the character at the given index relative to the current
              * position.
@@ -615,7 +615,7 @@ declare namespace java {
              *           If the preconditions on <tt>index</tt> do not hold
              */
             // @ts-ignore
-            charAt(index: number /*int*/): char
+            public charAt(index: number /*int*/): string
             /**
              * Creates a new character buffer that represents the specified subsequence
              * of this buffer, relative to the current position.
@@ -642,7 +642,7 @@ declare namespace java {
              *           do not hold
              */
             // @ts-ignore
-            abstract subSequence(start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
+            public abstract subSequence(start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
             /**
              * Appends the specified character sequence  to this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -667,7 +667,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence): java.nio.CharBuffer
+            public append(csq: java.lang.CharSequence): java.nio.CharBuffer
             /**
              * Appends a subsequence of the  specified character sequence  to this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -693,7 +693,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
+            public append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.nio.CharBuffer
             /**
              * Appends the specified char  to this
              * buffer&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -711,7 +711,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(c: string): java.nio.CharBuffer
+            public append(c: string): java.nio.CharBuffer
             /**
              * Retrieves this buffer's byte order.
              * <p> The byte order of a char buffer created by allocation or by
@@ -723,9 +723,9 @@ declare namespace java {
              * @return This buffer's byte order
              */
             // @ts-ignore
-            abstract order(): java.nio.ByteOrder
+            public abstract order(): java.nio.ByteOrder
             // @ts-ignore
-            chars(): java.util.stream.IntStream
+            public chars(): java.util.stream.IntStream
         }
     }
 }

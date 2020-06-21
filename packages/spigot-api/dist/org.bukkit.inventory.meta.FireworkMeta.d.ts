@@ -38,13 +38,13 @@ declare namespace org {
                      * @return An immutable list of the firework effects
                      */
                     // @ts-ignore
-                    getEffects(): java.util.List<org.bukkit.FireworkEffect>
+                    getEffects(): Array<org.bukkit.FireworkEffect>
                     /**
                      * Get the number of effects in this firework.
                      * @return The number of effects
                      */
                     // @ts-ignore
-                    getEffectsSize(): int
+                    getEffectsSize(): number /*int*/
                     /**
                      * Remove an effect from this firework.
                      * @param index The index of the effect to remove
@@ -69,7 +69,7 @@ declare namespace org {
                      * @return approximate flight height of the firework.
                      */
                     // @ts-ignore
-                    getPower(): int
+                    getPower(): number /*int*/
                     /**
                      * Sets the approximate power of the firework. Each level of power is half
                      * a second of flight time.

@@ -17,13 +17,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setImportMetadata(importMetadata: AnnotationMetadata): void
+                    public setImportMetadata(importMetadata: AnnotationMetadata): void
                     // @ts-ignore
-                    setLoadTimeWeavingConfigurer(ltwConfigurer: org.springframework.context.annotation.LoadTimeWeavingConfigurer): void
+                    public setLoadTimeWeavingConfigurer(ltwConfigurer: org.springframework.context.annotation.LoadTimeWeavingConfigurer): void
                     // @ts-ignore
-                    setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    loadTimeWeaver(): org.springframework.instrument.classloading.LoadTimeWeaver
+                    public loadTimeWeaver(): org.springframework.instrument.classloading.LoadTimeWeaver
                 }
             }
         }

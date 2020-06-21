@@ -39,7 +39,7 @@ declare namespace org {
                          * Default maximum number of entries for a local MetadataReader cache: 256.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_CACHE_LIMIT: number /*int*/
+                        public static readonly DEFAULT_CACHE_LIMIT: number /*int*/
                         /**
                          * Specify the maximum number of entries for the MetadataReader cache.
                          * <p>Default is 256 for a local cache, whereas a shared cache is
@@ -47,19 +47,19 @@ declare namespace org {
                          * even if the {@link ResourceLoader} supports a shared resource cache.
                          */
                         // @ts-ignore
-                        setCacheLimit(cacheLimit: number /*int*/): void
+                        public setCacheLimit(cacheLimit: number /*int*/): void
                         /**
                          * Return the maximum number of entries for the MetadataReader cache.
                          */
                         // @ts-ignore
-                        getCacheLimit(): int
+                        public getCacheLimit(): number /*int*/
                         // @ts-ignore
-                        getMetadataReader(resource: org.springframework.core.io.Resource): org.springframework.core.type.classreading.MetadataReader
+                        public getMetadataReader(resource: org.springframework.core.io.Resource): org.springframework.core.type.classreading.MetadataReader
                         /**
                          * Clear the local MetadataReader cache, if any, removing all cached class metadata.
                          */
                         // @ts-ignore
-                        clearCache(): void
+                        public clearCache(): void
                     }
                 }
             }

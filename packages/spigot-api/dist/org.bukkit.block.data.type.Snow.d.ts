@@ -17,7 +17,7 @@ declare namespace org {
                          * @return the 'layers' value
                          */
                         // @ts-ignore
-                        getLayers(): int
+                        getLayers(): number /*int*/
                         /**
                          * Sets the value of the 'layers' property.
                          * @param layers the new 'layers' value
@@ -29,13 +29,13 @@ declare namespace org {
                          * @return the minimum 'layers' value
                          */
                         // @ts-ignore
-                        getMinimumLayers(): int
+                        getMinimumLayers(): number /*int*/
                         /**
                          * Gets the maximum allowed value of the 'layers' property.
                          * @return the maximum 'layers' value
                          */
                         // @ts-ignore
-                        getMaximumLayers(): int
+                        getMaximumLayers(): number /*int*/
                     }
                 }
             }

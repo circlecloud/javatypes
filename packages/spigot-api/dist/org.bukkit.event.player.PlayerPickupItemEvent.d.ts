@@ -15,21 +15,21 @@ declare namespace org {
                      * @return Item
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.entity.Item
+                    public getItem(): org.bukkit.entity.Item
                     /**
                      * Gets the amount remaining on the ground, if any
                      * @return amount remaining on the ground
                      */
                     // @ts-ignore
-                    getRemaining(): int
+                    public getRemaining(): number /*int*/
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

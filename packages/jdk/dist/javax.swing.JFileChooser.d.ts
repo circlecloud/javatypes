@@ -51,7 +51,7 @@ declare namespace javax {
              *                           to a file or directory
              */
             // @ts-ignore
-            constructor(currentDirectoryPath: string)
+            constructor(currentDirectoryPath: java.lang.String | string)
             /**
              * Constructs a <code>JFileChooser</code> using the given <code>File</code>
              * as the path. Passing in a <code>null</code> file
@@ -81,163 +81,163 @@ declare namespace javax {
              * path and <code>FileSystemView</code>.
              */
             // @ts-ignore
-            constructor(currentDirectoryPath: string, fsv: javax.swing.filechooser.FileSystemView)
+            constructor(currentDirectoryPath: java.lang.String | string, fsv: javax.swing.filechooser.FileSystemView)
             /**
              * Type value indicating that the <code>JFileChooser</code> supports an
              * "Open" file operation.
              */
             // @ts-ignore
-            readonly OPEN_DIALOG: number /*int*/
+            public static readonly OPEN_DIALOG: number /*int*/
             /**
              * Type value indicating that the <code>JFileChooser</code> supports a
              * "Save" file operation.
              */
             // @ts-ignore
-            readonly SAVE_DIALOG: number /*int*/
+            public static readonly SAVE_DIALOG: number /*int*/
             /**
              * Type value indicating that the <code>JFileChooser</code> supports a
              * developer-specified file operation.
              */
             // @ts-ignore
-            readonly CUSTOM_DIALOG: number /*int*/
+            public static readonly CUSTOM_DIALOG: number /*int*/
             /**
              * Return value if cancel is chosen.
              */
             // @ts-ignore
-            readonly CANCEL_OPTION: number /*int*/
+            public static readonly CANCEL_OPTION: number /*int*/
             /**
              * Return value if approve (yes, ok) is chosen.
              */
             // @ts-ignore
-            readonly APPROVE_OPTION: number /*int*/
+            public static readonly APPROVE_OPTION: number /*int*/
             /**
              * Return value if an error occurred.
              */
             // @ts-ignore
-            readonly ERROR_OPTION: number /*int*/
+            public static readonly ERROR_OPTION: number /*int*/
             /**
              * Instruction to display only files.
              */
             // @ts-ignore
-            readonly FILES_ONLY: number /*int*/
+            public static readonly FILES_ONLY: number /*int*/
             /**
              * Instruction to display only directories.
              */
             // @ts-ignore
-            readonly DIRECTORIES_ONLY: number /*int*/
+            public static readonly DIRECTORIES_ONLY: number /*int*/
             /**
              * Instruction to display both files and directories.
              */
             // @ts-ignore
-            readonly FILES_AND_DIRECTORIES: number /*int*/
+            public static readonly FILES_AND_DIRECTORIES: number /*int*/
             /**
              * Instruction to cancel the current selection.
              */
             // @ts-ignore
-            readonly CANCEL_SELECTION: string
+            public static readonly CANCEL_SELECTION: java.lang.String | string
             /**
              * Instruction to approve the current selection
              * (same as pressing yes or ok).
              */
             // @ts-ignore
-            readonly APPROVE_SELECTION: string
+            public static readonly APPROVE_SELECTION: java.lang.String | string
             /**
              * Identifies change in the text on the approve (yes, ok) button.
              */
             // @ts-ignore
-            readonly APPROVE_BUTTON_TEXT_CHANGED_PROPERTY: string
+            public static readonly APPROVE_BUTTON_TEXT_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies change in the tooltip text for the approve (yes, ok)
              * button.
              */
             // @ts-ignore
-            readonly APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY: string
+            public static readonly APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies change in the mnemonic for the approve (yes, ok) button.
              */
             // @ts-ignore
-            readonly APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY: string
+            public static readonly APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Instruction to display the control buttons.
              */
             // @ts-ignore
-            readonly CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY: string
+            public static readonly CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies user's directory change.
              */
             // @ts-ignore
-            readonly DIRECTORY_CHANGED_PROPERTY: string
+            public static readonly DIRECTORY_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies change in user's single-file selection.
              */
             // @ts-ignore
-            readonly SELECTED_FILE_CHANGED_PROPERTY: string
+            public static readonly SELECTED_FILE_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies change in user's multiple-file selection.
              */
             // @ts-ignore
-            readonly SELECTED_FILES_CHANGED_PROPERTY: string
+            public static readonly SELECTED_FILES_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Enables multiple-file selections.
              */
             // @ts-ignore
-            readonly MULTI_SELECTION_ENABLED_CHANGED_PROPERTY: string
+            public static readonly MULTI_SELECTION_ENABLED_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Says that a different object is being used to find available drives
              * on the system.
              */
             // @ts-ignore
-            readonly FILE_SYSTEM_VIEW_CHANGED_PROPERTY: string
+            public static readonly FILE_SYSTEM_VIEW_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Says that a different object is being used to retrieve file
              * information.
              */
             // @ts-ignore
-            readonly FILE_VIEW_CHANGED_PROPERTY: string
+            public static readonly FILE_VIEW_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the display-hidden-files property.
              */
             // @ts-ignore
-            readonly FILE_HIDING_CHANGED_PROPERTY: string
+            public static readonly FILE_HIDING_CHANGED_PROPERTY: java.lang.String | string
             /**
              * User changed the kind of files to display.
              */
             // @ts-ignore
-            readonly FILE_FILTER_CHANGED_PROPERTY: string
+            public static readonly FILE_FILTER_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the kind of selection (single,
              * multiple, etc.).
              */
             // @ts-ignore
-            readonly FILE_SELECTION_MODE_CHANGED_PROPERTY: string
+            public static readonly FILE_SELECTION_MODE_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Says that a different accessory component is in use
              * (for example, to preview files).
              */
             // @ts-ignore
-            readonly ACCESSORY_CHANGED_PROPERTY: string
+            public static readonly ACCESSORY_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies whether a the AcceptAllFileFilter is used or not.
              */
             // @ts-ignore
-            readonly ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY: string
+            public static readonly ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the dialog title.
              */
             // @ts-ignore
-            readonly DIALOG_TITLE_CHANGED_PROPERTY: string
+            public static readonly DIALOG_TITLE_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the type of files displayed (files only,
              * directories only, or both files and directories).
              */
             // @ts-ignore
-            readonly DIALOG_TYPE_CHANGED_PROPERTY: string
+            public static readonly DIALOG_TYPE_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the list of predefined file filters
              * the user can choose from.
              */
             // @ts-ignore
-            readonly CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY: string
+            public static readonly CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY: java.lang.String | string
             // @ts-ignore
             accessibleContext: javax.accessibility.AccessibleContext
             /**
@@ -283,7 +283,7 @@ declare namespace javax {
              *         bound: false
              */
             // @ts-ignore
-            setDragEnabled(b: boolean): void
+            public setDragEnabled(b: boolean): void
             /**
              * Gets the value of the <code>dragEnabled</code> property.
              * @return the value of the <code>dragEnabled</code> property
@@ -291,7 +291,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDragEnabled(): boolean
+            public getDragEnabled(): boolean
             /**
              * Returns the selected file. This can be set either by the
              * programmer via <code>setSelectedFile</code> or by a user action, such as
@@ -301,7 +301,7 @@ declare namespace javax {
              * @return the selected file
              */
             // @ts-ignore
-            getSelectedFile(): java.io.File
+            public getSelectedFile(): java.io.File
             /**
              * Sets the selected file. If the file's parent directory is
              * not the current directory, changes the current directory
@@ -312,13 +312,13 @@ declare namespace javax {
              * @param file the selected file
              */
             // @ts-ignore
-            setSelectedFile(file: java.io.File): void
+            public setSelectedFile(file: java.io.File): void
             /**
              * Returns a list of selected files if the file chooser is
              * set to allow multiple selection.
              */
             // @ts-ignore
-            getSelectedFiles(): java.io.File[]
+            public getSelectedFiles(): java.io.File[]
             /**
              * Sets the list of selected files if the file chooser is
              * set to allow multiple selection.
@@ -326,14 +326,14 @@ declare namespace javax {
              *  description: The list of selected files if the chooser is in multiple selection mode.
              */
             // @ts-ignore
-            setSelectedFiles(selectedFiles: java.io.File[]): void
+            public setSelectedFiles(selectedFiles: java.io.File[]): void
             /**
              * Returns the current directory.
              * @return the current directory
              * @see #setCurrentDirectory
              */
             // @ts-ignore
-            getCurrentDirectory(): java.io.File
+            public getCurrentDirectory(): java.io.File
             /**
              * Sets the current directory. Passing in <code>null</code> sets the
              * file chooser to point to the user's default directory.
@@ -352,26 +352,26 @@ declare namespace javax {
              * @see #getCurrentDirectory
              */
             // @ts-ignore
-            setCurrentDirectory(dir: java.io.File): void
+            public setCurrentDirectory(dir: java.io.File): void
             /**
              * Changes the directory to be set to the parent of the
              * current directory.
              * @see #getCurrentDirectory
              */
             // @ts-ignore
-            changeToParentDirectory(): void
+            public changeToParentDirectory(): void
             /**
              * Tells the UI to rescan its files list from the current directory.
              */
             // @ts-ignore
-            rescanCurrentDirectory(): void
+            public rescanCurrentDirectory(): void
             /**
              * Makes sure that the specified file is viewable, and
              * not hidden.
              * @param f  a File object
              */
             // @ts-ignore
-            ensureFileIsVisible(f: java.io.File): void
+            public ensureFileIsVisible(f: java.io.File): void
             /**
              * Pops up an "Open File" file chooser dialog. Note that the
              * text that appears in the approve button is determined by
@@ -392,7 +392,7 @@ declare namespace javax {
              * @see #showDialog
              */
             // @ts-ignore
-            showOpenDialog(parent: java.awt.Component): int
+            public showOpenDialog(parent: java.awt.Component): number /*int*/
             /**
              * Pops up a "Save File" file chooser dialog. Note that the
              * text that appears in the approve button is determined by
@@ -413,7 +413,7 @@ declare namespace javax {
              * @see #showDialog
              */
             // @ts-ignore
-            showSaveDialog(parent: java.awt.Component): int
+            public showSaveDialog(parent: java.awt.Component): number /*int*/
             /**
              * Pops a custom file chooser dialog with a custom approve button.
              * For example, the following code
@@ -464,7 +464,7 @@ declare namespace javax {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            showDialog(parent: java.awt.Component, approveButtonText: string): int
+            public showDialog(parent: java.awt.Component, approveButtonText: java.lang.String | string): number /*int*/
             /**
              * Creates and returns a new <code>JDialog</code> wrapping
              * <code>this</code> centered on the <code>parent</code>
@@ -500,7 +500,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getControlButtonsAreShown(): boolean
+            public getControlButtonsAreShown(): boolean
             /**
              * Sets the property
              * that indicates whether the <i>approve</i> and <i>cancel</i>
@@ -522,7 +522,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setControlButtonsAreShown(b: boolean): void
+            public setControlButtonsAreShown(b: boolean): void
             /**
              * Returns the type of this dialog.  The default is
              * <code>JFileChooser.OPEN_DIALOG</code>.
@@ -535,7 +535,7 @@ declare namespace javax {
              * @see #setDialogType
              */
             // @ts-ignore
-            getDialogType(): int
+            public getDialogType(): number /*int*/
             /**
              * Sets the type of this dialog. Use <code>OPEN_DIALOG</code> when you
              * want to bring up a file chooser that the user can use to open a file.
@@ -568,7 +568,7 @@ declare namespace javax {
              * @see #setApproveButtonText
              */
             // @ts-ignore
-            setDialogType(dialogType: number /*int*/): void
+            public setDialogType(dialogType: number /*int*/): void
             /**
              * Sets the string that goes in the <code>JFileChooser</code> window's
              * title bar.
@@ -579,13 +579,13 @@ declare namespace javax {
              * @see #getDialogTitle
              */
             // @ts-ignore
-            setDialogTitle(dialogTitle: string): void
+            public setDialogTitle(dialogTitle: java.lang.String | string): void
             /**
              * Gets the string that goes in the <code>JFileChooser</code>'s titlebar.
              * @see #setDialogTitle
              */
             // @ts-ignore
-            getDialogTitle(): java.lang.String
+            public getDialogTitle(): string
             /**
              * Sets the tooltip text used in the <code>ApproveButton</code>.
              * If <code>null</code>, the UI object will determine the button's text.
@@ -598,7 +598,7 @@ declare namespace javax {
              * @see #showDialog
              */
             // @ts-ignore
-            setApproveButtonToolTipText(toolTipText: string): void
+            public setApproveButtonToolTipText(toolTipText: java.lang.String | string): void
             /**
              * Returns the tooltip text used in the <code>ApproveButton</code>.
              * If <code>null</code>, the UI object will determine the button's text.
@@ -608,14 +608,14 @@ declare namespace javax {
              * @see #showDialog
              */
             // @ts-ignore
-            getApproveButtonToolTipText(): java.lang.String
+            public getApproveButtonToolTipText(): string
             /**
              * Returns the approve button's mnemonic.
              * @return an integer value for the mnemonic key
              * @see #setApproveButtonMnemonic
              */
             // @ts-ignore
-            getApproveButtonMnemonic(): int
+            public getApproveButtonMnemonic(): number /*int*/
             /**
              * Sets the approve button's mnemonic using a numeric keycode.
              * @param mnemonic  an integer value for the mnemonic key
@@ -625,14 +625,14 @@ declare namespace javax {
              * @see #getApproveButtonMnemonic
              */
             // @ts-ignore
-            setApproveButtonMnemonic(mnemonic: number /*int*/): void
+            public setApproveButtonMnemonic(mnemonic: number /*int*/): void
             /**
              * Sets the approve button's mnemonic using a character.
              * @param mnemonic  a character value for the mnemonic key
              * @see #getApproveButtonMnemonic
              */
             // @ts-ignore
-            setApproveButtonMnemonic(mnemonic: string): void
+            public setApproveButtonMnemonic(mnemonic: string): void
             /**
              * Sets the text used in the <code>ApproveButton</code> in the
              * <code>FileChooserUI</code>.
@@ -645,7 +645,7 @@ declare namespace javax {
              * @see #showDialog
              */
             // @ts-ignore
-            setApproveButtonText(approveButtonText: string): void
+            public setApproveButtonText(approveButtonText: java.lang.String | string): void
             /**
              * Returns the text used in the <code>ApproveButton</code> in the
              * <code>FileChooserUI</code>.
@@ -657,7 +657,7 @@ declare namespace javax {
              * @see #showDialog
              */
             // @ts-ignore
-            getApproveButtonText(): java.lang.String
+            public getApproveButtonText(): string
             /**
              * Gets the list of user choosable file filters.
              * @return a <code>FileFilter</code> array containing all the choosable
@@ -667,7 +667,7 @@ declare namespace javax {
              * @see #resetChoosableFileFilters
              */
             // @ts-ignore
-            getChoosableFileFilters(): javax.swing.filechooser.FileFilter[]
+            public getChoosableFileFilters(): javax.swing.filechooser.FileFilter[]
             /**
              * Adds a filter to the list of user choosable file filters.
              * For information on setting the file selection mode, see
@@ -683,7 +683,7 @@ declare namespace javax {
              * @see #setFileSelectionMode
              */
             // @ts-ignore
-            addChoosableFileFilter(filter: javax.swing.filechooser.FileFilter): void
+            public addChoosableFileFilter(filter: javax.swing.filechooser.FileFilter): void
             /**
              * Removes a filter from the list of user choosable file filters. Returns
              * true if the file filter was removed.
@@ -692,7 +692,7 @@ declare namespace javax {
              * @see #resetChoosableFileFilters
              */
             // @ts-ignore
-            removeChoosableFileFilter(f: javax.swing.filechooser.FileFilter): boolean
+            public removeChoosableFileFilter(f: javax.swing.filechooser.FileFilter): boolean
             /**
              * Resets the choosable file filter list to its starting state. Normally,
              * this removes all added file filters while leaving the
@@ -702,13 +702,13 @@ declare namespace javax {
              * @see #removeChoosableFileFilter
              */
             // @ts-ignore
-            resetChoosableFileFilters(): void
+            public resetChoosableFileFilters(): void
             /**
              * Returns the <code>AcceptAll</code> file filter.
              * For example, on Microsoft Windows this would be All Files (*.*).
              */
             // @ts-ignore
-            getAcceptAllFileFilter(): javax.swing.filechooser.FileFilter
+            public getAcceptAllFileFilter(): javax.swing.filechooser.FileFilter
             /**
              * Returns whether the <code>AcceptAll FileFilter</code> is used.
              * @return true if the <code>AcceptAll FileFilter</code> is used
@@ -716,7 +716,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            isAcceptAllFileFilterUsed(): boolean
+            public isAcceptAllFileFilterUsed(): boolean
             /**
              * Determines whether the <code>AcceptAll FileFilter</code> is used
              * as an available choice in the choosable filter list.
@@ -733,14 +733,14 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setAcceptAllFileFilterUsed(b: boolean): void
+            public setAcceptAllFileFilterUsed(b: boolean): void
             /**
              * Returns the accessory component.
              * @return this JFileChooser's accessory component, or null
              * @see #setAccessory
              */
             // @ts-ignore
-            getAccessory(): javax.swing.JComponent
+            public getAccessory(): javax.swing.JComponent
             /**
              * Sets the accessory component. An accessory is often used to show a
              * preview image of the selected file; however, it can be used for anything
@@ -754,7 +754,7 @@ declare namespace javax {
              *  description: Sets the accessory component on the JFileChooser.
              */
             // @ts-ignore
-            setAccessory(newAccessory: javax.swing.JComponent): void
+            public setAccessory(newAccessory: javax.swing.JComponent): void
             /**
              * Sets the <code>JFileChooser</code> to allow the user to just
              * select files, just select
@@ -777,7 +777,7 @@ declare namespace javax {
              * @see #getFileSelectionMode
              */
             // @ts-ignore
-            setFileSelectionMode(mode: number /*int*/): void
+            public setFileSelectionMode(mode: number /*int*/): void
             /**
              * Returns the current file-selection mode.  The default is
              * <code>JFilesChooser.FILES_ONLY</code>.
@@ -790,7 +790,7 @@ declare namespace javax {
              * @see #setFileSelectionMode
              */
             // @ts-ignore
-            getFileSelectionMode(): int
+            public getFileSelectionMode(): number /*int*/
             /**
              * Convenience call that determines if files are selectable based on the
              * current file selection mode.
@@ -798,7 +798,7 @@ declare namespace javax {
              * @see #getFileSelectionMode
              */
             // @ts-ignore
-            isFileSelectionEnabled(): boolean
+            public isFileSelectionEnabled(): boolean
             /**
              * Convenience call that determines if directories are selectable based
              * on the current file selection mode.
@@ -806,7 +806,7 @@ declare namespace javax {
              * @see #getFileSelectionMode
              */
             // @ts-ignore
-            isDirectorySelectionEnabled(): boolean
+            public isDirectorySelectionEnabled(): boolean
             /**
              * Sets the file chooser to allow multiple file selections.
              * @param b true if multiple files may be selected
@@ -815,14 +815,14 @@ declare namespace javax {
              * @see #isMultiSelectionEnabled
              */
             // @ts-ignore
-            setMultiSelectionEnabled(b: boolean): void
+            public setMultiSelectionEnabled(b: boolean): void
             /**
              * Returns true if multiple files can be selected.
              * @return true if multiple files can be selected
              * @see #setMultiSelectionEnabled
              */
             // @ts-ignore
-            isMultiSelectionEnabled(): boolean
+            public isMultiSelectionEnabled(): boolean
             /**
              * Returns true if hidden files are not shown in the file chooser;
              * otherwise, returns false.
@@ -830,7 +830,7 @@ declare namespace javax {
              * @see #setFileHidingEnabled
              */
             // @ts-ignore
-            isFileHidingEnabled(): boolean
+            public isFileHidingEnabled(): boolean
             /**
              * Sets file hiding on or off. If true, hidden files are not shown
              * in the file chooser. The job of determining which files are
@@ -843,7 +843,7 @@ declare namespace javax {
              * @see #isFileHidingEnabled
              */
             // @ts-ignore
-            setFileHidingEnabled(b: boolean): void
+            public setFileHidingEnabled(b: boolean): void
             /**
              * Sets the current file filter. The file filter is used by the
              * file chooser to filter out files from the user's view.
@@ -854,7 +854,7 @@ declare namespace javax {
              * @see #getFileFilter
              */
             // @ts-ignore
-            setFileFilter(filter: javax.swing.filechooser.FileFilter): void
+            public setFileFilter(filter: javax.swing.filechooser.FileFilter): void
             /**
              * Returns the currently selected file filter.
              * @return the current file filter
@@ -862,7 +862,7 @@ declare namespace javax {
              * @see #addChoosableFileFilter
              */
             // @ts-ignore
-            getFileFilter(): javax.swing.filechooser.FileFilter
+            public getFileFilter(): javax.swing.filechooser.FileFilter
             /**
              * Sets the file view to used to retrieve UI information, such as
              * the icon that represents a file or the type description of a file.
@@ -872,13 +872,13 @@ declare namespace javax {
              * @see #getFileView
              */
             // @ts-ignore
-            setFileView(fileView: javax.swing.filechooser.FileView): void
+            public setFileView(fileView: javax.swing.filechooser.FileView): void
             /**
              * Returns the current file view.
              * @see #setFileView
              */
             // @ts-ignore
-            getFileView(): javax.swing.filechooser.FileView
+            public getFileView(): javax.swing.filechooser.FileView
             /**
              * Returns the filename.
              * @param f the <code>File</code>
@@ -887,7 +887,7 @@ declare namespace javax {
              * @see FileView#getName
              */
             // @ts-ignore
-            getName(f: java.io.File): java.lang.String
+            public getName(f: java.io.File): string
             /**
              * Returns the file description.
              * @param f the <code>File</code>
@@ -896,7 +896,7 @@ declare namespace javax {
              * @see FileView#getDescription
              */
             // @ts-ignore
-            getDescription(f: java.io.File): java.lang.String
+            public getDescription(f: java.io.File): string
             /**
              * Returns the file type.
              * @param f the <code>File</code>
@@ -905,7 +905,7 @@ declare namespace javax {
              * @see FileView#getTypeDescription
              */
             // @ts-ignore
-            getTypeDescription(f: java.io.File): java.lang.String
+            public getTypeDescription(f: java.io.File): string
             /**
              * Returns the icon for this file or type of file, depending
              * on the system.
@@ -914,7 +914,7 @@ declare namespace javax {
              * @see FileView#getIcon
              */
             // @ts-ignore
-            getIcon(f: java.io.File): javax.swing.Icon
+            public getIcon(f: java.io.File): javax.swing.Icon
             /**
              * Returns true if the file (directory) can be visited.
              * Returns false if the directory cannot be traversed.
@@ -923,7 +923,7 @@ declare namespace javax {
              * @see FileView#isTraversable
              */
             // @ts-ignore
-            isTraversable(f: java.io.File): boolean
+            public isTraversable(f: java.io.File): boolean
             /**
              * Returns true if the file should be displayed.
              * @param f the <code>File</code>
@@ -931,7 +931,7 @@ declare namespace javax {
              * @see FileFilter#accept
              */
             // @ts-ignore
-            accept(f: java.io.File): boolean
+            public accept(f: java.io.File): boolean
             /**
              * Sets the file system view that the <code>JFileChooser</code> uses for
              * accessing and creating file system resources, such as finding
@@ -943,14 +943,14 @@ declare namespace javax {
              * @see FileSystemView
              */
             // @ts-ignore
-            setFileSystemView(fsv: javax.swing.filechooser.FileSystemView): void
+            public setFileSystemView(fsv: javax.swing.filechooser.FileSystemView): void
             /**
              * Returns the file system view.
              * @return the <code>FileSystemView</code> object
              * @see #setFileSystemView
              */
             // @ts-ignore
-            getFileSystemView(): javax.swing.filechooser.FileSystemView
+            public getFileSystemView(): javax.swing.filechooser.FileSystemView
             /**
              * Called by the UI when the user hits the Approve button
              * (labeled "Open" or "Save", by default). This can also be
@@ -961,7 +961,7 @@ declare namespace javax {
              * @see #APPROVE_SELECTION
              */
             // @ts-ignore
-            approveSelection(): void
+            public approveSelection(): void
             /**
              * Called by the UI when the user chooses the Cancel button.
              * This can also be called by the programmer.
@@ -971,7 +971,7 @@ declare namespace javax {
              * @see #CANCEL_SELECTION
              */
             // @ts-ignore
-            cancelSelection(): void
+            public cancelSelection(): void
             /**
              * Adds an <code>ActionListener</code> to the file chooser.
              * @param l  the listener to be added
@@ -979,14 +979,14 @@ declare namespace javax {
              * @see #cancelSelection
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes an <code>ActionListener</code> from the file chooser.
              * @param l  the listener to be removed
              * @see #addActionListener
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this file chooser.
@@ -998,7 +998,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type. The event instance
@@ -1006,13 +1006,13 @@ declare namespace javax {
              * @see EventListenerList
              */
             // @ts-ignore
-            fireActionPerformed(command: string): void
+            fireActionPerformed(command: java.lang.String | string): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the L&amp;F class
              * that renders this component.
@@ -1023,13 +1023,13 @@ declare namespace javax {
              *    description: A string that specifies the name of the L&amp;F class.
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Gets the UI object which implements the L&amp;F for this component.
              * @return the FileChooserUI object that implements the FileChooserUI L&amp;F
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.FileChooserUI
+            public getUI(): javax.swing.plaf.FileChooserUI
             /**
              * Returns a string representation of this <code>JFileChooser</code>.
              * This method
@@ -1040,7 +1040,7 @@ declare namespace javax {
              * @return a string representation of this <code>JFileChooser</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JFileChooser.
              * For file choosers, the AccessibleContext takes the form of an
@@ -1050,7 +1050,7 @@ declare namespace javax {
              *          AccessibleContext of this JFileChooser
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

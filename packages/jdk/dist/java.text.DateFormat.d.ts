@@ -89,7 +89,7 @@ declare namespace java {
          * @author Mark Davis, Chen-Lieh Huang, Alan Liu
          */
         // @ts-ignore
-        class DateFormat extends java.text.Format {
+        abstract class DateFormat extends java.text.Format {
             /**
              * Create a new date format.
              */
@@ -119,25 +119,25 @@ declare namespace java {
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly ERA_FIELD: number /*int*/
+            public static readonly ERA_FIELD: number /*int*/
             /**
              * Useful constant for YEAR field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly YEAR_FIELD: number /*int*/
+            public static readonly YEAR_FIELD: number /*int*/
             /**
              * Useful constant for MONTH field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly MONTH_FIELD: number /*int*/
+            public static readonly MONTH_FIELD: number /*int*/
             /**
              * Useful constant for DATE field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly DATE_FIELD: number /*int*/
+            public static readonly DATE_FIELD: number /*int*/
             /**
              * Useful constant for one-based HOUR_OF_DAY field alignment.
              * Used in FieldPosition of date/time formatting.
@@ -145,7 +145,7 @@ declare namespace java {
              * For example, 23:59 + 01:00 results in 24:59.
              */
             // @ts-ignore
-            readonly HOUR_OF_DAY1_FIELD: number /*int*/
+            public static readonly HOUR_OF_DAY1_FIELD: number /*int*/
             /**
              * Useful constant for zero-based HOUR_OF_DAY field alignment.
              * Used in FieldPosition of date/time formatting.
@@ -153,61 +153,61 @@ declare namespace java {
              * For example, 23:59 + 01:00 results in 00:59.
              */
             // @ts-ignore
-            readonly HOUR_OF_DAY0_FIELD: number /*int*/
+            public static readonly HOUR_OF_DAY0_FIELD: number /*int*/
             /**
              * Useful constant for MINUTE field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly MINUTE_FIELD: number /*int*/
+            public static readonly MINUTE_FIELD: number /*int*/
             /**
              * Useful constant for SECOND field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly SECOND_FIELD: number /*int*/
+            public static readonly SECOND_FIELD: number /*int*/
             /**
              * Useful constant for MILLISECOND field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly MILLISECOND_FIELD: number /*int*/
+            public static readonly MILLISECOND_FIELD: number /*int*/
             /**
              * Useful constant for DAY_OF_WEEK field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly DAY_OF_WEEK_FIELD: number /*int*/
+            public static readonly DAY_OF_WEEK_FIELD: number /*int*/
             /**
              * Useful constant for DAY_OF_YEAR field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly DAY_OF_YEAR_FIELD: number /*int*/
+            public static readonly DAY_OF_YEAR_FIELD: number /*int*/
             /**
              * Useful constant for DAY_OF_WEEK_IN_MONTH field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly DAY_OF_WEEK_IN_MONTH_FIELD: number /*int*/
+            public static readonly DAY_OF_WEEK_IN_MONTH_FIELD: number /*int*/
             /**
              * Useful constant for WEEK_OF_YEAR field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly WEEK_OF_YEAR_FIELD: number /*int*/
+            public static readonly WEEK_OF_YEAR_FIELD: number /*int*/
             /**
              * Useful constant for WEEK_OF_MONTH field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly WEEK_OF_MONTH_FIELD: number /*int*/
+            public static readonly WEEK_OF_MONTH_FIELD: number /*int*/
             /**
              * Useful constant for AM_PM field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly AM_PM_FIELD: number /*int*/
+            public static readonly AM_PM_FIELD: number /*int*/
             /**
              * Useful constant for one-based HOUR field alignment.
              * Used in FieldPosition of date/time formatting.
@@ -215,7 +215,7 @@ declare namespace java {
              * For example, 11:30 PM + 1 hour results in 12:30 AM.
              */
             // @ts-ignore
-            readonly HOUR1_FIELD: number /*int*/
+            public static readonly HOUR1_FIELD: number /*int*/
             /**
              * Useful constant for zero-based HOUR field alignment.
              * Used in FieldPosition of date/time formatting.
@@ -223,38 +223,38 @@ declare namespace java {
              * For example, 11:30 PM + 1 hour results in 00:30 AM.
              */
             // @ts-ignore
-            readonly HOUR0_FIELD: number /*int*/
+            public static readonly HOUR0_FIELD: number /*int*/
             /**
              * Useful constant for TIMEZONE field alignment.
              * Used in FieldPosition of date/time formatting.
              */
             // @ts-ignore
-            readonly TIMEZONE_FIELD: number /*int*/
+            public static readonly TIMEZONE_FIELD: number /*int*/
             /**
              * Constant for full style pattern.
              */
             // @ts-ignore
-            readonly FULL: number /*int*/
+            public static readonly FULL: number /*int*/
             /**
              * Constant for long style pattern.
              */
             // @ts-ignore
-            readonly LONG: number /*int*/
+            public static readonly LONG: number /*int*/
             /**
              * Constant for medium style pattern.
              */
             // @ts-ignore
-            readonly MEDIUM: number /*int*/
+            public static readonly MEDIUM: number /*int*/
             /**
              * Constant for short style pattern.
              */
             // @ts-ignore
-            readonly SHORT: number /*int*/
+            public static readonly SHORT: number /*int*/
             /**
              * Constant for default style pattern.  Its value is MEDIUM.
              */
             // @ts-ignore
-            readonly DEFAULT: number /*int*/
+            public static readonly DEFAULT: number /*int*/
             /**
              * Overrides Format.
              * Formats a time object into a time string. Examples of time objects
@@ -281,7 +281,7 @@ declare namespace java {
              * @see java.text.Format
              */
             // @ts-ignore
-            format(obj: any, toAppendTo: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
+            public format(obj: java.lang.Object | any, toAppendTo: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats a Date into a date/time string.
              * @param date a Date to be formatted into a date/time string.
@@ -305,14 +305,14 @@ declare namespace java {
              * @return the string buffer passed in as toAppendTo, with formatted text appended.
              */
             // @ts-ignore
-            abstract format(date: java.util.Date, toAppendTo: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
+            public abstract format(date: java.util.Date, toAppendTo: java.lang.StringBuffer, fieldPosition: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats a Date into a date/time string.
              * @param date the time value to be formatted into a time string.
              * @return the formatted time string.
              */
             // @ts-ignore
-            format(date: java.util.Date): java.lang.String
+            public format(date: java.util.Date): string
             /**
              * Parses text from the beginning of the given string to produce a date.
              * The method may not use the entire text of the given string.
@@ -325,7 +325,7 @@ declare namespace java {
              *             cannot be parsed.
              */
             // @ts-ignore
-            parse(source: string): java.util.Date
+            public parse(source: java.lang.String | string): java.util.Date
             /**
              * Parse a date/time string according to the given parse position.  For
              * example, a time text {@code "07/10/96 4:5 PM, PDT"} will be parsed into a {@code Date}
@@ -348,7 +348,7 @@ declare namespace java {
              * @return A {#code Date}, or {@code null} if the input could not be parsed
              */
             // @ts-ignore
-            abstract parse(source: string, pos: java.text.ParsePosition): java.util.Date
+            public abstract parse(source: java.lang.String | string, pos: java.text.ParsePosition): java.util.Date
             /**
              * Parses text from a string to produce a <code>Date</code>.
              * <p>
@@ -373,7 +373,7 @@ declare namespace java {
              * @exception NullPointerException if <code>pos</code> is null.
              */
             // @ts-ignore
-            parseObject(source: string, pos: java.text.ParsePosition): java.lang.Object
+            public parseObject(source: java.lang.String | string, pos: java.text.ParsePosition): any
             /**
              * Gets the time formatter with the default formatting style
              * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -385,7 +385,7 @@ declare namespace java {
              * @return a time formatter.
              */
             // @ts-ignore
-            getTimeInstance(): java.text.DateFormat
+            public static getTimeInstance(): java.text.DateFormat
             /**
              * Gets the time formatter with the given formatting style
              * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -399,7 +399,7 @@ declare namespace java {
              * @return a time formatter.
              */
             // @ts-ignore
-            getTimeInstance(style: number /*int*/): java.text.DateFormat
+            public static getTimeInstance(style: number /*int*/): java.text.DateFormat
             /**
              * Gets the time formatter with the given formatting style
              * for the given locale.
@@ -409,7 +409,7 @@ declare namespace java {
              * @return a time formatter.
              */
             // @ts-ignore
-            getTimeInstance(style: number /*int*/, aLocale: java.util.Locale): java.text.DateFormat
+            public static getTimeInstance(style: number /*int*/, aLocale: java.util.Locale): java.text.DateFormat
             /**
              * Gets the date formatter with the default formatting style
              * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -421,7 +421,7 @@ declare namespace java {
              * @return a date formatter.
              */
             // @ts-ignore
-            getDateInstance(): java.text.DateFormat
+            public static getDateInstance(): java.text.DateFormat
             /**
              * Gets the date formatter with the given formatting style
              * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -435,7 +435,7 @@ declare namespace java {
              * @return a date formatter.
              */
             // @ts-ignore
-            getDateInstance(style: number /*int*/): java.text.DateFormat
+            public static getDateInstance(style: number /*int*/): java.text.DateFormat
             /**
              * Gets the date formatter with the given formatting style
              * for the given locale.
@@ -445,7 +445,7 @@ declare namespace java {
              * @return a date formatter.
              */
             // @ts-ignore
-            getDateInstance(style: number /*int*/, aLocale: java.util.Locale): java.text.DateFormat
+            public static getDateInstance(style: number /*int*/, aLocale: java.util.Locale): java.text.DateFormat
             /**
              * Gets the date/time formatter with the default formatting style
              * for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -457,7 +457,7 @@ declare namespace java {
              * @return a date/time formatter.
              */
             // @ts-ignore
-            getDateTimeInstance(): java.text.DateFormat
+            public static getDateTimeInstance(): java.text.DateFormat
             /**
              * Gets the date/time formatter with the given date and time
              * formatting styles for the default {@link java.util.Locale.Category#FORMAT FORMAT} locale.
@@ -473,7 +473,7 @@ declare namespace java {
              * @return a date/time formatter.
              */
             // @ts-ignore
-            getDateTimeInstance(dateStyle: number /*int*/, timeStyle: number /*int*/): java.text.DateFormat
+            public static getDateTimeInstance(dateStyle: number /*int*/, timeStyle: number /*int*/): java.text.DateFormat
             /**
              * Gets the date/time formatter with the given formatting styles
              * for the given locale.
@@ -483,14 +483,14 @@ declare namespace java {
              * @return a date/time formatter.
              */
             // @ts-ignore
-            getDateTimeInstance(dateStyle: number /*int*/, timeStyle: number /*int*/, aLocale: java.util.Locale): java.text.DateFormat
+            public static getDateTimeInstance(dateStyle: number /*int*/, timeStyle: number /*int*/, aLocale: java.util.Locale): java.text.DateFormat
             /**
              * Get a default date/time formatter that uses the SHORT style for both the
              * date and the time.
              * @return a date/time formatter
              */
             // @ts-ignore
-            getInstance(): java.text.DateFormat
+            public static getInstance(): java.text.DateFormat
             /**
              * Returns an array of all locales for which the
              * <code>get*Instance</code> methods of this class can return
@@ -504,7 +504,7 @@ declare namespace java {
              *          <code>DateFormat</code> instances are available.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Set the calendar to be used by this date format.  Initially, the default
              * calendar for the specified or default locale is used.
@@ -514,26 +514,26 @@ declare namespace java {
              * @param newCalendar the new {#code Calendar} to be used by the date format
              */
             // @ts-ignore
-            setCalendar(newCalendar: java.util.Calendar): void
+            public setCalendar(newCalendar: java.util.Calendar): void
             /**
              * Gets the calendar associated with this date/time formatter.
              * @return the calendar associated with this date/time formatter.
              */
             // @ts-ignore
-            getCalendar(): java.util.Calendar
+            public getCalendar(): java.util.Calendar
             /**
              * Allows you to set the number formatter.
              * @param newNumberFormat the given new NumberFormat.
              */
             // @ts-ignore
-            setNumberFormat(newNumberFormat: java.text.NumberFormat): void
+            public setNumberFormat(newNumberFormat: java.text.NumberFormat): void
             /**
              * Gets the number formatter which this date/time formatter uses to
              * format and parse a time.
              * @return the number formatter which this date/time formatter uses.
              */
             // @ts-ignore
-            getNumberFormat(): java.text.NumberFormat
+            public getNumberFormat(): java.text.NumberFormat
             /**
              * Sets the time zone for the calendar of this {@code DateFormat} object.
              * This method is equivalent to the following call.
@@ -547,7 +547,7 @@ declare namespace java {
              * @param zone the given new time zone.
              */
             // @ts-ignore
-            setTimeZone(zone: java.util.TimeZone): void
+            public setTimeZone(zone: java.util.TimeZone): void
             /**
              * Gets the time zone.
              * This method is equivalent to the following call.
@@ -557,7 +557,7 @@ declare namespace java {
              * @return the time zone associated with the calendar of DateFormat.
              */
             // @ts-ignore
-            getTimeZone(): java.util.TimeZone
+            public getTimeZone(): java.util.TimeZone
             /**
              * Specify whether or not date/time parsing is to be lenient.  With
              * lenient parsing, the parser may use heuristics to interpret inputs that
@@ -573,7 +573,7 @@ declare namespace java {
              * @see java.util.Calendar#setLenient(boolean)
              */
             // @ts-ignore
-            setLenient(lenient: boolean): void
+            public setLenient(lenient: boolean): void
             /**
              * Tell whether date/time parsing is to be lenient.
              * This method is equivalent to the following call.
@@ -585,22 +585,22 @@ declare namespace java {
              * @see java.util.Calendar#isLenient()
              */
             // @ts-ignore
-            isLenient(): boolean
+            public isLenient(): boolean
             /**
              * Overrides hashCode
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Overrides equals
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Overrides Cloneable
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

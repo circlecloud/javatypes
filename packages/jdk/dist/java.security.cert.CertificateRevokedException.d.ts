@@ -30,7 +30,7 @@ declare namespace java {
                  *     {@code extensions} is {@code null}
                  */
                 // @ts-ignore
-                constructor(revocationDate: java.util.Date, reason: java.security.cert.CRLReason, authority: javax.security.auth.x500.X500Principal, extensions: java.util.Map<java.lang.String, java.security.cert.Extension>)
+                constructor(revocationDate: java.util.Date, reason: java.security.cert.CRLReason, authority: javax.security.auth.x500.X500Principal, extensions: java.util.Map<java.lang.String | string, java.security.cert.Extension>)
                 /**
                  * Returns the date on which the certificate was revoked. A new copy is
                  * returned each time the method is invoked to protect against subsequent
@@ -76,9 +76,9 @@ declare namespace java {
                  *     if there are no extensions
                  */
                 // @ts-ignore
-                getExtensions(): java.util.Map<java.lang.String, java.security.cert.Extension>
+                getExtensions(): java.util.Map<java.lang.String | string, java.security.cert.Extension>
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

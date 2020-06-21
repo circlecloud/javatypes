@@ -228,7 +228,7 @@ declare namespace java {
                  *     next <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                nextOffset(wrappingWidth: number /*float*/): int
+                public nextOffset(wrappingWidth: number /*float*/): number /*int*/
                 /**
                  * Returns the position at the end of the next layout.  Does NOT
                  * update the current position of this <code>LineBreakMeasurer</code>.
@@ -246,7 +246,7 @@ declare namespace java {
                  *     next <code>TextLayout</code>
                  */
                 // @ts-ignore
-                nextOffset(wrappingWidth: number /*float*/, offsetLimit: number /*int*/, requireNextWord: boolean): int
+                public nextOffset(wrappingWidth: number /*float*/, offsetLimit: number /*int*/, requireNextWord: boolean): number /*int*/
                 /**
                  * Returns the next layout, and updates the current position.
                  * @param wrappingWidth the maximum visible advance permitted for
@@ -256,7 +256,7 @@ declare namespace java {
                  *      <code>wrappingWidth</code>
                  */
                 // @ts-ignore
-                nextLayout(wrappingWidth: number /*float*/): java.awt.font.TextLayout
+                public nextLayout(wrappingWidth: number /*float*/): java.awt.font.TextLayout
                 /**
                  * Returns the next layout, and updates the current position.
                  * @param wrappingWidth the maximum visible advance permitted
@@ -277,14 +277,14 @@ declare namespace java {
                  *     <code>null</code> is returned
                  */
                 // @ts-ignore
-                nextLayout(wrappingWidth: number /*float*/, offsetLimit: number /*int*/, requireNextWord: boolean): java.awt.font.TextLayout
+                public nextLayout(wrappingWidth: number /*float*/, offsetLimit: number /*int*/, requireNextWord: boolean): java.awt.font.TextLayout
                 /**
                  * Returns the current position of this <code>LineBreakMeasurer</code>.
                  * @return the current position of this <code>LineBreakMeasurer</code>
                  * @see #setPosition
                  */
                 // @ts-ignore
-                getPosition(): int
+                public getPosition(): number /*int*/
                 /**
                  * Sets the current position of this <code>LineBreakMeasurer</code>.
                  * @param newPosition the current position of this
@@ -295,7 +295,7 @@ declare namespace java {
                  * @see #getPosition
                  */
                 // @ts-ignore
-                setPosition(newPosition: number /*int*/): void
+                public setPosition(newPosition: number /*int*/): void
                 /**
                  * Updates this <code>LineBreakMeasurer</code> after a single
                  * character is inserted into the text, and sets the current
@@ -311,7 +311,7 @@ declare namespace java {
                  * @see #deleteChar
                  */
                 // @ts-ignore
-                insertChar(newParagraph: java.text.AttributedCharacterIterator, insertPos: number /*int*/): void
+                public insertChar(newParagraph: java.text.AttributedCharacterIterator, insertPos: number /*int*/): void
                 /**
                  * Updates this <code>LineBreakMeasurer</code> after a single
                  * character is deleted from the text, and sets the current
@@ -327,7 +327,7 @@ declare namespace java {
                  * @see #insertChar
                  */
                 // @ts-ignore
-                deleteChar(newParagraph: java.text.AttributedCharacterIterator, deletePos: number /*int*/): void
+                public deleteChar(newParagraph: java.text.AttributedCharacterIterator, deletePos: number /*int*/): void
             }
         }
     }

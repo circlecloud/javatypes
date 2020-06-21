@@ -18,7 +18,7 @@ declare namespace org {
                      * @param message the detail message
                      */
                     // @ts-ignore
-                    constructor(message: string)
+                    constructor(message: java.lang.String | string)
                     /**
                      * Construct a new {@code AnnotationConfigurationException} with the
                      * supplied message and cause.
@@ -26,7 +26,7 @@ declare namespace org {
                      * @param cause the root cause
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 }
             }
         }

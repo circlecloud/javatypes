@@ -127,7 +127,7 @@ declare namespace javax {
              * @see #setMnemonic
              */
             // @ts-ignore
-            getMnemonic(): int
+            getMnemonic(): number /*int*/
             /**
              * Sets the action command string that gets sent as part of the
              * <code>ActionEvent</code> when the button is triggered.
@@ -136,14 +136,14 @@ declare namespace javax {
              * @see java.awt.event.ActionEvent#getActionCommand
              */
             // @ts-ignore
-            setActionCommand(s: string): void
+            setActionCommand(s: java.lang.String | string): void
             /**
              * Returns the action command string for the button.
              * @return the <code>String</code> that identifies the generated event
              * @see #setActionCommand
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            getActionCommand(): string
             /**
              * Identifies the group the button belongs to --
              * needed for radio buttons, which are mutually

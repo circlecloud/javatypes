@@ -8,7 +8,7 @@ declare namespace org {
                      * include filter} or {@linkplain ComponentScan#excludeFilters exclude filter}.
                      */
                     // @ts-ignore
-                    class Filter implements java.lang.annotation.Annotation {
+                    abstract class Filter implements java.lang.annotation.Annotation {
                     }
                 }
             }

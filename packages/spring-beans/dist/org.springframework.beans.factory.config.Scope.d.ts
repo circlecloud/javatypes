@@ -52,7 +52,7 @@ declare namespace org {
                          * @throws IllegalStateException if the underlying scope is not currently active
                          */
                         // @ts-ignore
-                        get(name: string, objectFactory: org.springframework.beans.factory.ObjectFactory<any>): java.lang.Object
+                        get(name: java.lang.String | string, objectFactory: org.springframework.beans.factory.ObjectFactory<any>): any
                         /**
                          * Remove the object with the given {@code name} from the underlying scope.
                          * <p>Returns {@code null} if no object was found; otherwise
@@ -70,7 +70,7 @@ declare namespace org {
                          * @see #registerDestructionCallback
                          */
                         // @ts-ignore
-                        remove(name: string): java.lang.Object
+                        remove(name: java.lang.String | string): any
                         /**
                          * Register a callback to be executed on destruction of the specified
                          * object in the scope (or at destruction of the entire scope, if the
@@ -101,7 +101,7 @@ declare namespace org {
                          * @see DestructionAwareBeanPostProcessor
                          */
                         // @ts-ignore
-                        registerDestructionCallback(name: string, callback: java.lang.Runnable): void
+                        registerDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable): void
                         /**
                          * Resolve the contextual object for the given key, if any.
                          * E.g. the HttpServletRequest object for key "request".
@@ -110,7 +110,7 @@ declare namespace org {
                          * @throws IllegalStateException if the underlying scope is not currently active
                          */
                         // @ts-ignore
-                        resolveContextualObject(key: string): java.lang.Object
+                        resolveContextualObject(key: java.lang.String | string): any
                         /**
                          * Return the <em>conversation ID</em> for the current underlying scope, if any.
                          * <p>The exact meaning of the conversation ID depends on the underlying
@@ -127,7 +127,7 @@ declare namespace org {
                          * @throws IllegalStateException if the underlying scope is not currently active
                          */
                         // @ts-ignore
-                        getConversationId(): java.lang.String
+                        getConversationId(): string
                     }
                 }
             }

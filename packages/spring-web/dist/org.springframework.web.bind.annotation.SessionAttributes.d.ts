@@ -29,7 +29,7 @@ declare namespace org {
                      * @since 2.5
                      */
                     // @ts-ignore
-                    class SessionAttributes implements java.lang.annotation.Annotation {
+                    abstract class SessionAttributes implements java.lang.annotation.Annotation {
                     }
                 }
             }

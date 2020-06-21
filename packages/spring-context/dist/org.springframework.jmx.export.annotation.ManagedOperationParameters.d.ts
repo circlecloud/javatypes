@@ -11,7 +11,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.metadata.ManagedOperationParameter
                      */
                     // @ts-ignore
-                    class ManagedOperationParameters implements java.lang.annotation.Annotation {
+                    abstract class ManagedOperationParameters implements java.lang.annotation.Annotation {
                     }
                 }
             }

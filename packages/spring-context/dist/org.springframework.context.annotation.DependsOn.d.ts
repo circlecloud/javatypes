@@ -23,7 +23,7 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class DependsOn implements java.lang.annotation.Annotation {
+                abstract class DependsOn implements java.lang.annotation.Annotation {
                 }
             }
         }

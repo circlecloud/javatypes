@@ -28,7 +28,7 @@ declare namespace java {
                  * @return true if the service was successful added, false otherwise
                  */
                 // @ts-ignore
-                addService(serviceClass: java.lang.Class, serviceProvider: java.beans.beancontext.BeanContextServiceProvider): boolean
+                addService(serviceClass: java.lang.Class<any>, serviceProvider: java.beans.beancontext.BeanContextServiceProvider): boolean
                 /**
                  * BeanContextServiceProviders wishing to remove
                  * a currently registered service from this context
@@ -49,7 +49,7 @@ declare namespace java {
                  *  to the specified service.
                  */
                 // @ts-ignore
-                revokeService(serviceClass: java.lang.Class, serviceProvider: java.beans.beancontext.BeanContextServiceProvider, revokeCurrentServicesNow: boolean): void
+                revokeService(serviceClass: java.lang.Class<any>, serviceProvider: java.beans.beancontext.BeanContextServiceProvider, revokeCurrentServicesNow: boolean): void
                 /**
                  * Reports whether or not a given service is
                  * currently available from this context.
@@ -57,7 +57,7 @@ declare namespace java {
                  * @return true if the service is available
                  */
                 // @ts-ignore
-                hasService(serviceClass: java.lang.Class): boolean
+                hasService(serviceClass: java.lang.Class<any>): boolean
                 /**
                  * A <code>BeanContextChild</code>, or any arbitrary object
                  * associated with a <code>BeanContextChild</code>, may obtain
@@ -79,7 +79,7 @@ declare namespace java {
                  *  Service as requested or <code>null</code>
                  */
                 // @ts-ignore
-                getService(child: java.beans.beancontext.BeanContextChild, requestor: any, serviceClass: java.lang.Class, serviceSelector: any, bcsrl: java.beans.beancontext.BeanContextServiceRevokedListener): java.lang.Object
+                getService(child: java.beans.beancontext.BeanContextChild, requestor: java.lang.Object | any, serviceClass: java.lang.Class<any>, serviceSelector: java.lang.Object | any, bcsrl: java.beans.beancontext.BeanContextServiceRevokedListener): any
                 /**
                  * Releases a <code>BeanContextChild</code>'s
                  * (or any arbitrary object associated with a BeanContextChild)
@@ -90,14 +90,14 @@ declare namespace java {
                  * @param service the service
                  */
                 // @ts-ignore
-                releaseService(child: java.beans.beancontext.BeanContextChild, requestor: any, service: any): void
+                releaseService(child: java.beans.beancontext.BeanContextChild, requestor: java.lang.Object | any, service: java.lang.Object | any): void
                 /**
                  * Gets the currently available services for this context.
                  * @return an <code>Iterator</code> consisting of the
                  *  currently available services
                  */
                 // @ts-ignore
-                getCurrentServiceClasses(): java.util.Iterator
+                getCurrentServiceClasses(): java.util.Iterator<any>
                 /**
                  * Gets the list of service dependent service parameters
                  * (Service Selectors) for the specified service, by
@@ -108,7 +108,7 @@ declare namespace java {
                  *  for the named serviceClass
                  */
                 // @ts-ignore
-                getCurrentServiceSelectors(serviceClass: java.lang.Class): java.util.Iterator
+                getCurrentServiceSelectors(serviceClass: java.lang.Class<any>): java.util.Iterator<any>
                 /**
                  * Adds a <code>BeanContextServicesListener</code> to this BeanContext
                  * @param bcsl the <code>BeanContextServicesListener</code> to add

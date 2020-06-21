@@ -16,7 +16,7 @@ declare namespace java {
              * @param mess Descriptive message
              */
             // @ts-ignore
-            constructor(mess: string)
+            constructor(mess: java.lang.String | string)
         }
     }
 }

@@ -60,21 +60,21 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_TYPE: org.bukkit.Material
+                static readonly DEFAULT_TYPE: org.bukkit.Material
                 // @ts-ignore
-                readonly DEFAULT_DECAYABLE: boolean
+                static readonly DEFAULT_DECAYABLE: boolean
                 /**
                  * Checks if this leaf block is in the process of decaying
                  * @return true if the leaf block is in the process of decaying
                  */
                 // @ts-ignore
-                isDecaying(): boolean
+                public isDecaying(): boolean
                 /**
                  * Set whether this leaf block is in the process of decaying
                  * @param isDecaying whether the block is decaying or not
                  */
                 // @ts-ignore
-                setDecaying(isDecaying: boolean): void
+                public setDecaying(isDecaying: boolean): void
                 /**
                  * Checks if this leaf block is permanent or can decay when too far from a
                  * log
@@ -82,17 +82,17 @@ declare namespace org {
                  *  from a log
                  */
                 // @ts-ignore
-                isDecayable(): boolean
+                public isDecayable(): boolean
                 /**
                  * Set whether this leaf block will disappear when too far from a log
                  * @param isDecayable whether the block is permanent or can disappear
                  */
                 // @ts-ignore
-                setDecayable(isDecayable: boolean): void
+                public setDecayable(isDecayable: boolean): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Leaves
+                public clone(): org.bukkit.material.Leaves
             }
         }
     }

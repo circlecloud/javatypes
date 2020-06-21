@@ -15,18 +15,18 @@ declare namespace org {
                              * @param permission The permission node
                              */
                             // @ts-ignore
-                            constructor(permission: string)
+                            constructor(permission: java.lang.String | string)
                             // @ts-ignore
-                            readonly permission: string
+                            readonly permission: java.lang.String | string
                             /**
                              * Gets the {@link String} permission required to be included in this
                              * {@link MessageChannel}.
                              * @return The permission node
                              */
                             // @ts-ignore
-                            getPermission(): java.lang.String
+                            public getPermission(): string
                             // @ts-ignore
-                            getMembers(): java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver>
+                            public getMembers(): Array<org.spongepowered.api.text.channel.MessageReceiver>
                         }
                     }
                 }

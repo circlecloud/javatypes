@@ -91,19 +91,19 @@ declare namespace org {
                      * @see #setEnvironment(org.springframework.core.env.Environment)
                      */
                     // @ts-ignore
-                    constructor(targetBeanName: string, wac: org.springframework.web.context.WebApplicationContext)
+                    constructor(targetBeanName: java.lang.String | string, wac: org.springframework.web.context.WebApplicationContext)
                     /**
                      * Set the name of the ServletContext attribute which should be used to retrieve the
                      * {@link WebApplicationContext} from which to load the delegate {@link Filter} bean.
                      */
                     // @ts-ignore
-                    setContextAttribute(contextAttribute: string): void
+                    public setContextAttribute(contextAttribute: java.lang.String | string): void
                     /**
                      * Return the name of the ServletContext attribute which should be used to retrieve the
                      * {@link WebApplicationContext} from which to load the delegate {@link Filter} bean.
                      */
                     // @ts-ignore
-                    getContextAttribute(): java.lang.String
+                    public getContextAttribute(): string
                     /**
                      * Set the name of the target bean in the Spring application context.
                      * The target bean must implement the standard Servlet Filter interface.
@@ -111,12 +111,12 @@ declare namespace org {
                      * DelegatingFilterProxy in {@code web.xml} will be used.
                      */
                     // @ts-ignore
-                    setTargetBeanName(targetBeanName: string): void
+                    public setTargetBeanName(targetBeanName: java.lang.String | string): void
                     /**
                      * Return the name of the target bean in the Spring application context.
                      */
                     // @ts-ignore
-                    getTargetBeanName(): java.lang.String
+                    getTargetBeanName(): string
                     /**
                      * Set whether to invoke the {@code Filter.init} and
                      * {@code Filter.destroy} lifecycle methods on the target bean.
@@ -126,7 +126,7 @@ declare namespace org {
                      * Filter, with this proxy delegating the corresponding calls.
                      */
                     // @ts-ignore
-                    setTargetFilterLifecycle(targetFilterLifecycle: boolean): void
+                    public setTargetFilterLifecycle(targetFilterLifecycle: boolean): void
                     /**
                      * Return whether to invoke the {@code Filter.init} and
                      * {@code Filter.destroy} lifecycle methods on the target bean.
@@ -136,9 +136,9 @@ declare namespace org {
                     // @ts-ignore
                     initFilterBean(): void
                     // @ts-ignore
-                    doFilter(request: ServletRequest, response: ServletResponse, filterChain: FilterChain): void
+                    public doFilter(request: ServletRequest, response: ServletResponse, filterChain: FilterChain): void
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Return the {@code WebApplicationContext} passed in at construction time, if available.
                      * Otherwise, attempt to retrieve a {@code WebApplicationContext} from the

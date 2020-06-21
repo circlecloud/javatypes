@@ -21,7 +21,7 @@ declare namespace org {
                      * @return the name of the parameter (never {#code null} or empty)
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Return the original filename in the client's filesystem.
                      * <p>This may contain path information depending on the browser used,
@@ -32,14 +32,14 @@ declare namespace org {
                      * @see org.springframework.web.multipart.commons.CommonsMultipartFile#setPreserveFilename
                      */
                     // @ts-ignore
-                    getOriginalFilename(): java.lang.String
+                    getOriginalFilename(): string
                     /**
                      * Return the content type of the file.
                      * @return the content type, or {#code null} if not defined
                      *  (or no file has been chosen in the multipart form)
                      */
                     // @ts-ignore
-                    getContentType(): java.lang.String
+                    getContentType(): string
                     /**
                      * Return whether the uploaded file is empty, that is, either no file has
                      * been chosen in the multipart form or the chosen file has no content.
@@ -51,14 +51,14 @@ declare namespace org {
                      * @return the size of the file, or 0 if empty
                      */
                     // @ts-ignore
-                    getSize(): long
+                    getSize(): number /*long*/
                     /**
                      * Return the contents of the file as an array of bytes.
                      * @return the contents of the file as bytes, or an empty byte array if empty
                      * @throws IOException in case of access errors (if the temporary store fails)
                      */
                     // @ts-ignore
-                    getBytes(): byte[]
+                    getBytes(): number /*byte*/[]
                     /**
                      * Return an InputStream to read the contents of the file from.
                      * <p>The user is responsible for closing the returned stream.

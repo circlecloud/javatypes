@@ -43,23 +43,23 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    getHorizontalLegBuffer(): int
+                    getHorizontalLegBuffer(): number /*int*/
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * this function converts between the string passed into the client property
                      * and the internal representation (currently and int)
                      */
                     // @ts-ignore
-                    decodeLineStyle(lineStyleFlag: any): void
+                    decodeLineStyle(lineStyleFlag: java.lang.Object | any): void
                     // @ts-ignore
                     isLocationInExpandControl(row: number /*int*/, rowLevel: number /*int*/, mouseX: number /*int*/, mouseY: number /*int*/): boolean
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintHorizontalSeparators(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore

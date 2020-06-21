@@ -14,23 +14,23 @@ declare namespace org {
                      * @return Location current respawn location
                      */
                     // @ts-ignore
-                    getRespawnLocation(): org.bukkit.Location
+                    public getRespawnLocation(): org.bukkit.Location
                     /**
                      * Sets the new respawn location
                      * @param respawnLocation new location for the respawn
                      */
                     // @ts-ignore
-                    setRespawnLocation(respawnLocation: org.bukkit.Location): void
+                    public setRespawnLocation(respawnLocation: org.bukkit.Location): void
                     /**
                      * Gets whether the respawn location is the player's bed.
                      * @return true if the respawn location is the player's bed.
                      */
                     // @ts-ignore
-                    isBedSpawn(): boolean
+                    public isBedSpawn(): boolean
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

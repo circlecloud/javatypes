@@ -59,7 +59,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBaseTypeName(): java.lang.String
+            getBaseTypeName(): string
             /**
              * Retrieves the JDBC type of the elements in the array designated
              * by this <code>Array</code> object.
@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBaseType(): int
+            getBaseType(): number /*int*/
             /**
              * Retrieves the contents of the SQL <code>ARRAY</code> value designated
              * by this
@@ -96,7 +96,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getArray(): java.lang.Object
+            getArray(): any
             /**
              * Retrieves the contents of the SQL <code>ARRAY</code> value designated by this
              * <code>Array</code> object.
@@ -123,7 +123,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getArray(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getArray(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves a slice of the SQL <code>ARRAY</code>
              * value designated by this <code>Array</code> object, beginning with the
@@ -147,7 +147,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getArray(index: number /*long*/, count: number /*int*/): java.lang.Object
+            getArray(index: number /*long*/, count: number /*int*/): any
             /**
              * Retreives a slice of the SQL <code>ARRAY</code> value
              * designated by this <code>Array</code> object, beginning with the specified
@@ -184,7 +184,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getArray(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getArray(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves a result set that contains the elements of the SQL
              * <code>ARRAY</code> value
@@ -238,7 +238,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getResultSet(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.sql.ResultSet
+            getResultSet(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): java.sql.ResultSet
             /**
              * Retrieves a result set holding the elements of the subarray that
              * starts at index <code>index</code> and contains up to
@@ -304,7 +304,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getResultSet(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.sql.ResultSet
+            getResultSet(index: number /*long*/, count: number /*int*/, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): java.sql.ResultSet
             /**
              * This method frees the <code>Array</code> object and releases the resources that
              * it holds. The object is invalid once the <code>free</code>

@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see #accept
                  */
                 // @ts-ignore
-                constructor(description: string, ...extensions: string[])
+                constructor(description: java.lang.String | string, ...extensions: java.lang.String[] | string[])
                 /**
                  * Tests the specified file, returning true if the file is
                  * accepted, false otherwise. True is returned if the extension
@@ -46,19 +46,19 @@ declare namespace javax {
                  * @return true if the file is to be accepted, false otherwise
                  */
                 // @ts-ignore
-                accept(f: java.io.File): boolean
+                public accept(f: java.io.File): boolean
                 /**
                  * The description of this filter. For example: "JPG and GIF Images."
                  * @return the description of this filter
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Returns the set of file name extensions files are tested against.
                  * @return the set of file name extensions files are tested against
                  */
                 // @ts-ignore
-                getExtensions(): java.lang.String[]
+                public getExtensions(): string[]
                 /**
                  * Returns a string representation of the {@code FileNameExtensionFilter}.
                  * This method is intended to be used for debugging purposes,
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @return a string representation of this {#code FileNameExtensionFilter}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

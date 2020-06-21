@@ -20,12 +20,12 @@ declare namespace javax {
                      * @return the UI object
                      */
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    installDefaults(): void
+                    public installDefaults(): void
                     /**
                      * {@inheritDoc}
                      */
@@ -45,7 +45,7 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getContext(c: javax.swing.JComponent): javax.swing.plaf.synth.SynthContext
+                    public getContext(c: javax.swing.JComponent): javax.swing.plaf.synth.SynthContext
                     /**
                      * Notifies this UI delegate to repaint the specified component.
                      * This method paints the component background, then calls
@@ -57,7 +57,7 @@ declare namespace javax {
                      * @see #paint(SynthContext,Graphics)
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the specified component according to the Look and Feel.
                      * <p>This method is not used by Synth Look and Feel.
@@ -67,7 +67,7 @@ declare namespace javax {
                      * @see #paint(SynthContext,Graphics)
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the specified component. This implementation does nothing.
                      * @param context context for the component being painted
@@ -80,12 +80,12 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+                    public paintBorder(context: javax.swing.plaf.synth.SynthContext, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                 }
             }
         }

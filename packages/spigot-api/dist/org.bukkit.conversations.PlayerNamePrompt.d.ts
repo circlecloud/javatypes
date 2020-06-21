@@ -6,13 +6,13 @@ declare namespace org {
              * to enter another player's name.
              */
             // @ts-ignore
-            class PlayerNamePrompt extends org.bukkit.conversations.ValidatingPrompt {
+            abstract class PlayerNamePrompt extends org.bukkit.conversations.ValidatingPrompt {
                 // @ts-ignore
                 constructor(plugin: org.bukkit.plugin.Plugin)
                 // @ts-ignore
-                isInputValid(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                isInputValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 // @ts-ignore
-                acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
                 /**
                  * Override this method to perform some action with the user's player name
                  * response.

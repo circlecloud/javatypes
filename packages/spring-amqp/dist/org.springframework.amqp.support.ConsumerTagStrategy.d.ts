@@ -17,7 +17,7 @@ declare namespace org {
                      * @return The consumer tag.
                      */
                     // @ts-ignore
-                    createConsumerTag(queue: string): java.lang.String
+                    createConsumerTag(queue: java.lang.String | string): string
                 }
             }
         }

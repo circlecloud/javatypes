@@ -54,7 +54,7 @@ declare namespace javax {
                      *         is a <code>null</code> value
                      */
                     // @ts-ignore
-                    constructor(attributes: any[], map: java.util.Map<java.lang.String, java.lang.Class<any>>)
+                    constructor(attributes: java.lang.Object[] | any[], map: java.util.Map<java.lang.String | string, java.lang.Class<any>>)
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object as
                      * a <code>String</code> in the Java programming language.
@@ -70,7 +70,7 @@ declare namespace javax {
                      *      position or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readString(): java.lang.String
+                    public readString(): string
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object as
                      * a <code>boolean</code> in the Java programming language.
@@ -86,7 +86,7 @@ declare namespace javax {
                      *      position or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readBoolean(): boolean
+                    public readBoolean(): boolean
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object as
                      * a <code>byte</code> in the Java programming language.
@@ -102,7 +102,7 @@ declare namespace javax {
                      *      position or if there are no further values in the stream
                      */
                     // @ts-ignore
-                    readByte(): byte
+                    public readByte(): number /*byte*/
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as a <code>short</code> in the Java programming language.
@@ -117,7 +117,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readShort(): short
+                    public readShort(): number /*short*/
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as an <code>int</code> in the Java programming language.
@@ -132,7 +132,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readInt(): int
+                    public readInt(): number /*int*/
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as a <code>long</code> in the Java programming language.
@@ -147,7 +147,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readLong(): long
+                    public readLong(): number /*long*/
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as a <code>float</code> in the Java programming language.
@@ -162,7 +162,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readFloat(): float
+                    public readFloat(): number /*float*/
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as a <code>double</code> in the Java programming language.
@@ -177,7 +177,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readDouble(): double
+                    public readDouble(): number /*double*/
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as a <code>java.math.BigDecimal</code>.
@@ -192,7 +192,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readBigDecimal(): java.math.BigDecimal
+                    public readBigDecimal(): java.math.BigDecimal
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as an array of bytes.
@@ -207,7 +207,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readBytes(): byte[]
+                    public readBytes(): number /*byte*/[]
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> as
                      * a <code>java.sql.Date</code> object.
@@ -222,7 +222,7 @@ declare namespace javax {
                      *        position or if there are no more values in the stream
                      */
                     // @ts-ignore
-                    readDate(): java.sql.Date
+                    public readDate(): java.sql.Date
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object as
                      * a <code>java.sql.Time</code> object.
@@ -237,7 +237,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readTime(): java.sql.Time
+                    public readTime(): java.sql.Time
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object as
                      * a <code>java.sql.Timestamp</code> object.
@@ -247,7 +247,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readTimestamp(): java.sql.Timestamp
+                    public readTimestamp(): java.sql.Timestamp
                     /**
                      * Retrieves the next attribute in this <code>SQLInputImpl</code> object
                      * as a stream of Unicode characters.
@@ -261,7 +261,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readCharacterStream(): java.io.Reader
+                    public readCharacterStream(): java.io.Reader
                     /**
                      * Returns the next attribute in this <code>SQLInputImpl</code> object
                      * as a stream of ASCII characters.
@@ -276,7 +276,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readAsciiStream(): java.io.InputStream
+                    public readAsciiStream(): java.io.InputStream
                     /**
                      * Returns the next attribute in this <code>SQLInputImpl</code> object
                      * as a stream of uninterpreted bytes.
@@ -291,7 +291,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readBinaryStream(): java.io.InputStream
+                    public readBinaryStream(): java.io.InputStream
                     /**
                      * Retrieves the value at the head of this <code>SQLInputImpl</code>
                      * object as an <code>Object</code> in the Java programming language.  The
@@ -318,7 +318,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readObject(): java.lang.Object
+                    public readObject(): any
                     /**
                      * Retrieves the value at the head of this <code>SQLInputImpl</code> object
                      * as a <code>Ref</code> object in the Java programming language.
@@ -329,7 +329,7 @@ declare namespace javax {
                      *          position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readRef(): java.sql.Ref
+                    public readRef(): java.sql.Ref
                     /**
                      * Retrieves the <code>BLOB</code> value at the head of this
                      * <code>SQLInputImpl</code> object as a <code>Blob</code> object
@@ -347,7 +347,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readBlob(): java.sql.Blob
+                    public readBlob(): java.sql.Blob
                     /**
                      * Retrieves the <code>CLOB</code> value at the head of this
                      * <code>SQLInputImpl</code> object as a <code>Clob</code> object
@@ -365,7 +365,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readClob(): java.sql.Clob
+                    public readClob(): java.sql.Clob
                     /**
                      * Reads an SQL <code>ARRAY</code> value from the stream and
                      * returns it as an <code>Array</code> object in the Java programming
@@ -383,7 +383,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readArray(): java.sql.Array
+                    public readArray(): java.sql.Array
                     /**
                      * Ascertains whether the last value read from this
                      * <code>SQLInputImpl</code> object was <code>null</code>.
@@ -394,7 +394,7 @@ declare namespace javax {
                      *          read was a <code>null</code> value or not;
                      */
                     // @ts-ignore
-                    wasNull(): boolean
+                    public wasNull(): boolean
                     /**
                      * Reads an SQL <code>DATALINK</code> value from the stream and
                      * returns it as an <code>URL</code> object in the Java programming
@@ -412,7 +412,7 @@ declare namespace javax {
                      *  position; or if there are no further values in the stream.
                      */
                     // @ts-ignore
-                    readURL(): java.net.URL
+                    public readURL(): java.net.URL
                     /**
                      * Reads an SQL <code>NCLOB</code> value from the stream and returns it as a
                      * <code>Clob</code> object in the Java programming language.
@@ -423,7 +423,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    readNClob(): java.sql.NClob
+                    public readNClob(): java.sql.NClob
                     /**
                      * Reads the next attribute in the stream and returns it as a <code>String</code>
                      * in the Java programming language. It is intended for use when
@@ -434,7 +434,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    readNString(): java.lang.String
+                    public readNString(): string
                     /**
                      * Reads an SQL <code>XML</code> value from the stream and returns it as a
                      * <code>SQLXML</code> object in the Java programming language.
@@ -445,7 +445,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    readSQLXML(): java.sql.SQLXML
+                    public readSQLXML(): java.sql.SQLXML
                     /**
                      * Reads an SQL <code>ROWID</code> value from the stream and returns it as a
                      * <code>RowId</code> object in the Java programming language.
@@ -456,7 +456,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    readRowId(): java.sql.RowId
+                    public readRowId(): java.sql.RowId
                 }
             }
         }

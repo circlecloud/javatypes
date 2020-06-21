@@ -116,7 +116,7 @@ declare namespace org {
                  * @see org.springframework.core.env.MutablePropertySources
                  */
                 // @ts-ignore
-                class PropertySource implements java.lang.annotation.Annotation {
+                abstract class PropertySource implements java.lang.annotation.Annotation {
                 }
             }
         }

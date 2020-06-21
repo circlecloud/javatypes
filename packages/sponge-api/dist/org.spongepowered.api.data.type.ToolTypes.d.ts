@@ -6,15 +6,15 @@ declare namespace org {
                     // @ts-ignore
                     class ToolTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly DIAMOND: org.spongepowered.api.data.type.ToolType
+                        public static readonly DIAMOND: org.spongepowered.api.data.type.ToolType
                         // @ts-ignore
-                        readonly GOLD: org.spongepowered.api.data.type.ToolType
+                        public static readonly GOLD: org.spongepowered.api.data.type.ToolType
                         // @ts-ignore
-                        readonly IRON: org.spongepowered.api.data.type.ToolType
+                        public static readonly IRON: org.spongepowered.api.data.type.ToolType
                         // @ts-ignore
-                        readonly STONE: org.spongepowered.api.data.type.ToolType
+                        public static readonly STONE: org.spongepowered.api.data.type.ToolType
                         // @ts-ignore
-                        readonly WOOD: org.spongepowered.api.data.type.ToolType
+                        public static readonly WOOD: org.spongepowered.api.data.type.ToolType
                     }
                 }
             }

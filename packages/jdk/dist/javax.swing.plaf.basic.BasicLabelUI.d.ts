@@ -19,7 +19,7 @@ declare namespace javax {
                      * name in defaults table under the key "LabelUI".
                      */
                     // @ts-ignore
-                    labelUI: javax.swing.plaf.basic.BasicLabelUI
+                    static labelUI: javax.swing.plaf.basic.BasicLabelUI
                     /**
                      * Forwards the call to SwingUtilities.layoutCompoundLabel().
                      * This method is here so that a subclass could do Label specific
@@ -35,7 +35,7 @@ declare namespace javax {
                      * @see SwingUtilities#layoutCompoundLabel
                      */
                     // @ts-ignore
-                    layoutCL(label: javax.swing.JLabel, fontMetrics: java.awt.FontMetrics, text: string, icon: javax.swing.Icon, viewR: java.awt.Rectangle, iconR: java.awt.Rectangle, textR: java.awt.Rectangle): java.lang.String
+                    layoutCL(label: javax.swing.JLabel, fontMetrics: java.awt.FontMetrics, text: java.lang.String | string, icon: javax.swing.Icon, viewR: java.awt.Rectangle, iconR: java.awt.Rectangle, textR: java.awt.Rectangle): string
                     /**
                      * Paint clippedText at textX, textY with the labels foreground color.
                      * @param l an instance of {#code JLabel}
@@ -47,7 +47,7 @@ declare namespace javax {
                      * @see #paintDisabledText
                      */
                     // @ts-ignore
-                    paintEnabledText(l: javax.swing.JLabel, g: java.awt.Graphics, s: string, textX: number /*int*/, textY: number /*int*/): void
+                    paintEnabledText(l: javax.swing.JLabel, g: java.awt.Graphics, s: java.lang.String | string, textX: number /*int*/, textY: number /*int*/): void
                     /**
                      * Paint clippedText at textX, textY with background.lighter() and then
                      * shifted down and to the right by one pixel with background.darker().
@@ -60,7 +60,7 @@ declare namespace javax {
                      * @see #paintEnabledText
                      */
                     // @ts-ignore
-                    paintDisabledText(l: javax.swing.JLabel, g: java.awt.Graphics, s: string, textX: number /*int*/, textY: number /*int*/): void
+                    paintDisabledText(l: javax.swing.JLabel, g: java.awt.Graphics, s: java.lang.String | string, textX: number /*int*/, textY: number /*int*/): void
                     /**
                      * Paints the label text with the foreground color, if the label is opaque
                      * then paints the entire background with the background color. The Label
@@ -71,19 +71,19 @@ declare namespace javax {
                      * @see #layoutCL
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * @return getPreferredSize(c)
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * @return getPreferredSize(c)
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -92,7 +92,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -101,11 +101,11 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Installs default properties.
                      * @param c an instance of {#code JLabel}
@@ -160,9 +160,9 @@ declare namespace javax {
                      * @return an instance of {#code BasicLabelUI}
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                 }
             }
         }

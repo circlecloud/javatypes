@@ -14,7 +14,7 @@ declare namespace org {
                      * @param <T> The type of DataSerializable
                      */
                     // @ts-ignore
-                    class AbstractDataBuilder<T extends org.spongepowered.api.data.DataSerializable> extends java.lang.Object implements org.spongepowered.api.data.persistence.DataBuilder<T> {
+                    abstract class AbstractDataBuilder<T extends org.spongepowered.api.data.DataSerializable> extends java.lang.Object implements org.spongepowered.api.data.persistence.DataBuilder<T> {
                         // @ts-ignore
                         constructor(requiredClass: java.lang.Class<T>, supportedVersion: number /*int*/)
                         /**
@@ -30,7 +30,7 @@ declare namespace org {
                         // @ts-ignore
                         abstract buildContent(container: org.spongepowered.api.data.DataView): java.util.Optional<T>
                         // @ts-ignore
-                        build(container: org.spongepowered.api.data.DataView): java.util.Optional<T>
+                        public build(container: org.spongepowered.api.data.DataView): java.util.Optional<T>
                     }
                 }
             }

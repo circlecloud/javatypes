@@ -402,13 +402,13 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, transform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
+            public createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, transform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
             /**
              * Returns a copy of the center point of the radial gradient.
              * @return a {#code Point2D} object that is a copy of the center point
              */
             // @ts-ignore
-            getCenterPoint(): java.awt.geom.Point2D
+            public getCenterPoint(): java.awt.geom.Point2D
             /**
              * Returns a copy of the focus point of the radial gradient.
              * Note that if the focus point specified when the radial gradient
@@ -419,13 +419,13 @@ declare namespace java {
              * @return a {#code Point2D} object that is a copy of the focus point
              */
             // @ts-ignore
-            getFocusPoint(): java.awt.geom.Point2D
+            public getFocusPoint(): java.awt.geom.Point2D
             /**
              * Returns the radius of the circle defining the radial gradient.
              * @return the radius of the circle defining the radial gradient
              */
             // @ts-ignore
-            getRadius(): float
+            public getRadius(): number /*float*/
         }
     }
 }

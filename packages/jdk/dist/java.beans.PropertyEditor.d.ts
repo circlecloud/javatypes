@@ -39,14 +39,14 @@ declare namespace java {
              *      modified value.
              */
             // @ts-ignore
-            setValue(value: any): void
+            setValue(value: java.lang.Object | any): void
             /**
              * Gets the property value.
              * @return The value of the property.  Primitive types such as "int" will
              *  be wrapped as the corresponding object type such as "java.lang.Integer".
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            getValue(): any
             /**
              * Determines whether this property editor is paintable.
              * @return True if the class will honor the paintValue method.
@@ -100,7 +100,7 @@ declare namespace java {
              *          ('<code>;</code>') to end the expression.
              */
             // @ts-ignore
-            getJavaInitializationString(): java.lang.String
+            getJavaInitializationString(): string
             /**
              * Gets the property value as text.
              * @return The property value as a human editable string.
@@ -109,7 +109,7 @@ declare namespace java {
              *        be prepared to parse that string back in setAsText().
              */
             // @ts-ignore
-            getAsText(): java.lang.String
+            getAsText(): string
             /**
              * Set the property value by parsing a given String.  May raise
              * java.lang.IllegalArgumentException if either the String is
@@ -118,7 +118,7 @@ declare namespace java {
              * @param text  The string to be parsed.
              */
             // @ts-ignore
-            setAsText(text: string): void
+            setAsText(text: java.lang.String | string): void
             /**
              * If the property value must be one of a set of known tagged values,
              * then this method should return an array of the tags.  This can
@@ -130,7 +130,7 @@ declare namespace java {
              *    property cannot be represented as a tagged value.
              */
             // @ts-ignore
-            getTags(): java.lang.String[]
+            getTags(): string[]
             /**
              * A PropertyEditor may choose to make available a full custom Component
              * that edits its property value.  It is the responsibility of the

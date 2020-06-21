@@ -13,20 +13,20 @@ declare namespace org {
                  * @param cause Exception that triggered this Exception
                  */
                 // @ts-ignore
-                constructor(cause: Error, message: string)
+                constructor(cause: java.lang.Throwable | Error, message: java.lang.String | string)
                 /**
                  * Constructs a new InvalidDescriptionException based on the given
                  * Exception
                  * @param cause Exception that triggered this Exception
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a new InvalidDescriptionException with the given message
                  * @param message Brief message explaining the cause of the exception
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a new InvalidDescriptionException
                  */

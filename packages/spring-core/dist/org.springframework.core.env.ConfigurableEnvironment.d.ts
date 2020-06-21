@@ -63,14 +63,14 @@ declare namespace org {
                      * @see AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME
                      */
                     // @ts-ignore
-                    setActiveProfiles(...profiles: string[]): void
+                    setActiveProfiles(...profiles: java.lang.String[] | string[]): void
                     /**
                      * Add a profile to the current set of active profiles.
                      * @throws IllegalArgumentException if the profile is null, empty or whitespace-only
                      * @see #setActiveProfiles
                      */
                     // @ts-ignore
-                    addActiveProfile(profile: string): void
+                    addActiveProfile(profile: java.lang.String | string): void
                     /**
                      * Specify the set of profiles to be made active by default if no other profiles
                      * are explicitly made active through {@link #setActiveProfiles}.
@@ -78,7 +78,7 @@ declare namespace org {
                      * @see AbstractEnvironment#DEFAULT_PROFILES_PROPERTY_NAME
                      */
                     // @ts-ignore
-                    setDefaultProfiles(...profiles: string[]): void
+                    setDefaultProfiles(...profiles: java.lang.String[] | string[]): void
                     /**
                      * Return the {@link PropertySources} for this {@code Environment} in mutable form,
                      * allowing for manipulation of the set of {@link PropertySource} objects that should
@@ -110,7 +110,7 @@ declare namespace org {
                      * issued noting the exception.
                      */
                     // @ts-ignore
-                    getSystemProperties(): java.util.Map<java.lang.String, java.lang.Object>
+                    getSystemProperties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Return the value of {@link System#getenv()} if allowed by the current
                      * {@link SecurityManager}, otherwise return a map implementation that will attempt
@@ -125,7 +125,7 @@ declare namespace org {
                      * issued noting the exception.
                      */
                     // @ts-ignore
-                    getSystemEnvironment(): java.util.Map<java.lang.String, java.lang.Object>
+                    getSystemEnvironment(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Append the given parent environment's active profiles, default profiles and
                      * property sources to this (child) environment's respective collections of each.

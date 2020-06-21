@@ -98,13 +98,13 @@ declare namespace java {
                  * @return a string representation of the contents.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
                 /**
                  * Clones this ACL entry.
                  * @return a clone of this ACL entry.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

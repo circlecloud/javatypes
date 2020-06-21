@@ -88,7 +88,7 @@ declare namespace javax {
              * @see #setRenderer
              */
             // @ts-ignore
-            renderer: javax.swing.ListCellRenderer<any super E>
+            renderer: javax.swing.ListCellRenderer<any>
             /**
              * This protected field is implementation specific. Do not access directly
              * or override. Use the accessor methods instead.
@@ -120,7 +120,7 @@ declare namespace javax {
              * @see #getActionCommand
              */
             // @ts-ignore
-            actionCommand: string
+            actionCommand: java.lang.String | string
             /**
              * This protected field is implementation specific. Do not access directly
              * or override. Use the accessor methods instead.
@@ -134,7 +134,7 @@ declare namespace javax {
              * or override.
              */
             // @ts-ignore
-            selectedItemReminder: any
+            selectedItemReminder: java.lang.Object | any
             // @ts-ignore
             installAncestorListener(): void
             /**
@@ -147,13 +147,13 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ComboBoxUI): void
+            public setUI(ui: javax.swing.plaf.ComboBoxUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "ComboBoxUI"
@@ -161,13 +161,13 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the L&amp;F object that renders this component.
              * @return the ComboBoxUI object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ComboBoxUI
+            public getUI(): javax.swing.plaf.ComboBoxUI
             /**
              * Sets the data model that the <code>JComboBox</code> uses to obtain
              * the list of items.
@@ -177,14 +177,14 @@ declare namespace javax {
              *   description: Model that the combo box uses to get data to display.
              */
             // @ts-ignore
-            setModel(aModel: javax.swing.ComboBoxModel<E>): void
+            public setModel(aModel: javax.swing.ComboBoxModel<E>): void
             /**
              * Returns the data model currently used by the <code>JComboBox</code>.
              * @return the <code>ComboBoxModel</code> that provides the displayed
              *                   list of items
              */
             // @ts-ignore
-            getModel(): javax.swing.ComboBoxModel<E>
+            public getModel(): javax.swing.ComboBoxModel<E>
             /**
              * Sets the <code>lightWeightPopupEnabled</code> property, which
              * provides a hint as to whether or not a lightweight
@@ -211,7 +211,7 @@ declare namespace javax {
              *   description: Set to <code>false</code> to require heavyweight popups.
              */
             // @ts-ignore
-            setLightWeightPopupEnabled(aFlag: boolean): void
+            public setLightWeightPopupEnabled(aFlag: boolean): void
             /**
              * Gets the value of the <code>lightWeightPopupEnabled</code>
              * property.
@@ -220,7 +220,7 @@ declare namespace javax {
              * @see #setLightWeightPopupEnabled
              */
             // @ts-ignore
-            isLightWeightPopupEnabled(): boolean
+            public isLightWeightPopupEnabled(): boolean
             /**
              * Determines whether the <code>JComboBox</code> field is editable.
              * An editable <code>JComboBox</code> allows the user to type into the
@@ -236,14 +236,14 @@ declare namespace javax {
              *   description: If true, the user can type a new value in the combo box.
              */
             // @ts-ignore
-            setEditable(aFlag: boolean): void
+            public setEditable(aFlag: boolean): void
             /**
              * Returns true if the <code>JComboBox</code> is editable.
              * By default, a combo box is not editable.
              * @return true if the <code>JComboBox</code> is editable, else false
              */
             // @ts-ignore
-            isEditable(): boolean
+            public isEditable(): boolean
             /**
              * Sets the maximum number of rows the <code>JComboBox</code> displays.
              * If the number of objects in the model is greater than count,
@@ -255,7 +255,7 @@ declare namespace javax {
              *   description: The maximum number of rows the popup should have
              */
             // @ts-ignore
-            setMaximumRowCount(count: number /*int*/): void
+            public setMaximumRowCount(count: number /*int*/): void
             /**
              * Returns the maximum number of items the combo box can display
              * without a scrollbar
@@ -263,7 +263,7 @@ declare namespace javax {
              *          displayed in the list before using a scrollbar
              */
             // @ts-ignore
-            getMaximumRowCount(): int
+            public getMaximumRowCount(): number /*int*/
             /**
              * Sets the renderer that paints the list items and the item selected from the list in
              * the JComboBox field. The renderer is used if the JComboBox is not
@@ -284,7 +284,7 @@ declare namespace javax {
              *   description: The renderer that paints the item selected in the list.
              */
             // @ts-ignore
-            setRenderer(aRenderer: javax.swing.ListCellRenderer<any super E>): void
+            public setRenderer(aRenderer: javax.swing.ListCellRenderer<any>): void
             /**
              * Returns the renderer used to display the selected item in the
              * <code>JComboBox</code> field.
@@ -292,7 +292,7 @@ declare namespace javax {
              *                   the selected item.
              */
             // @ts-ignore
-            getRenderer(): javax.swing.ListCellRenderer<? super E>
+            public getRenderer(): javax.swing.ListCellRenderer<any>
             /**
              * Sets the editor used to paint and edit the selected item in the
              * <code>JComboBox</code> field.  The editor is used only if the
@@ -306,14 +306,14 @@ declare namespace javax {
              *   description: The editor that combo box uses to edit the current value
              */
             // @ts-ignore
-            setEditor(anEditor: javax.swing.ComboBoxEditor): void
+            public setEditor(anEditor: javax.swing.ComboBoxEditor): void
             /**
              * Returns the editor used to paint and edit the selected item in the
              * <code>JComboBox</code> field.
              * @return the <code>ComboBoxEditor</code> that displays the selected item
              */
             // @ts-ignore
-            getEditor(): javax.swing.ComboBoxEditor
+            public getEditor(): javax.swing.ComboBoxEditor
             /**
              * Sets the selected item in the combo box display area to the object in
              * the argument.
@@ -341,7 +341,7 @@ declare namespace javax {
              *     description: Sets the selected item in the JComboBox.
              */
             // @ts-ignore
-            setSelectedItem(anObject: any): void
+            public setSelectedItem(anObject: java.lang.Object | any): void
             /**
              * Returns the current selected item.
              * <p>
@@ -352,7 +352,7 @@ declare namespace javax {
              * @see #setSelectedItem
              */
             // @ts-ignore
-            getSelectedItem(): java.lang.Object
+            public getSelectedItem(): any
             /**
              * Selects the item at index <code>anIndex</code>.
              * @param anIndex an integer specifying the list item to select,
@@ -363,7 +363,7 @@ declare namespace javax {
              *   description: The item at index is selected.
              */
             // @ts-ignore
-            setSelectedIndex(anIndex: number /*int*/): void
+            public setSelectedIndex(anIndex: number /*int*/): void
             /**
              * Returns the first item in the list that matches the given item.
              * The result is not always defined if the <code>JComboBox</code>
@@ -377,7 +377,7 @@ declare namespace javax {
              *                   the currently selected item is not in the list
              */
             // @ts-ignore
-            getSelectedIndex(): int
+            public getSelectedIndex(): number /*int*/
             /**
              * Returns the "prototypical display" value - an Object used
              * for the calculation of the display height and width.
@@ -386,7 +386,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getPrototypeDisplayValue(): E
+            public getPrototypeDisplayValue(): E
             /**
              * Sets the prototype display value used to calculate the size of the display
              * for the UI portion.
@@ -407,7 +407,7 @@ declare namespace javax {
              *  description: The display prototype value, used to compute display width and height.
              */
             // @ts-ignore
-            setPrototypeDisplayValue(prototypeDisplayValue: E): void
+            public setPrototypeDisplayValue(prototypeDisplayValue: E): void
             /**
              * Adds an item to the item list.
              * This method works only if the <code>JComboBox</code> uses a
@@ -430,7 +430,7 @@ declare namespace javax {
              * @see MutableComboBoxModel
              */
             // @ts-ignore
-            addItem(item: E): void
+            public addItem(item: E): void
             /**
              * Inserts an item into the item list at a given index.
              * This method works only if the <code>JComboBox</code> uses a
@@ -441,7 +441,7 @@ declare namespace javax {
              * @see MutableComboBoxModel
              */
             // @ts-ignore
-            insertItemAt(item: E, index: number /*int*/): void
+            public insertItemAt(item: E, index: number /*int*/): void
             /**
              * Removes an item from the item list.
              * This method works only if the <code>JComboBox</code> uses a
@@ -450,7 +450,7 @@ declare namespace javax {
              * @see MutableComboBoxModel
              */
             // @ts-ignore
-            removeItem(anObject: any): void
+            public removeItem(anObject: java.lang.Object | any): void
             /**
              * Removes the item at <code>anIndex</code>
              * This method works only if the <code>JComboBox</code> uses a
@@ -461,35 +461,35 @@ declare namespace javax {
              * @see MutableComboBoxModel
              */
             // @ts-ignore
-            removeItemAt(anIndex: number /*int*/): void
+            public removeItemAt(anIndex: number /*int*/): void
             /**
              * Removes all items from the item list.
              */
             // @ts-ignore
-            removeAllItems(): void
+            public removeAllItems(): void
             /**
              * Causes the combo box to display its popup window.
              * @see #setPopupVisible
              */
             // @ts-ignore
-            showPopup(): void
+            public showPopup(): void
             /**
              * Causes the combo box to close its popup window.
              * @see #setPopupVisible
              */
             // @ts-ignore
-            hidePopup(): void
+            public hidePopup(): void
             /**
              * Sets the visibility of the popup.
              */
             // @ts-ignore
-            setPopupVisible(v: boolean): void
+            public setPopupVisible(v: boolean): void
             /**
              * Determines the visibility of the popup.
              * @return true if the popup is visible, otherwise returns false
              */
             // @ts-ignore
-            isPopupVisible(): boolean
+            public isPopupVisible(): boolean
             /**
              * Adds an <code>ItemListener</code>.
              * <p>
@@ -499,13 +499,13 @@ declare namespace javax {
              * @see #setSelectedItem
              */
             // @ts-ignore
-            addItemListener(aListener: java.awt.event.ItemListener): void
+            public addItemListener(aListener: java.awt.event.ItemListener): void
             /**
              * Removes an <code>ItemListener</code>.
              * @param aListener  the <code>ItemListener</code> to remove
              */
             // @ts-ignore
-            removeItemListener(aListener: java.awt.event.ItemListener): void
+            public removeItemListener(aListener: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the <code>ItemListener</code>s added
              * to this JComboBox with addItemListener().
@@ -514,7 +514,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Adds an <code>ActionListener</code>.
              * <p>
@@ -525,13 +525,13 @@ declare namespace javax {
              * @see #setSelectedItem
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes an <code>ActionListener</code>.
              * @param l  the <code>ActionListener</code> to remove
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the <code>ActionListener</code>s added
              * to this JComboBox with addActionListener().
@@ -540,7 +540,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Adds a <code>PopupMenu</code> listener which will listen to notification
              * messages from the popup portion of the combo box.
@@ -553,7 +553,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            addPopupMenuListener(l: javax.swing.event.PopupMenuListener): void
+            public addPopupMenuListener(l: javax.swing.event.PopupMenuListener): void
             /**
              * Removes a <code>PopupMenuListener</code>.
              * @param l  the <code>PopupMenuListener</code> to remove
@@ -561,7 +561,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            removePopupMenuListener(l: javax.swing.event.PopupMenuListener): void
+            public removePopupMenuListener(l: javax.swing.event.PopupMenuListener): void
             /**
              * Returns an array of all the <code>PopupMenuListener</code>s added
              * to this JComboBox with addPopupMenuListener().
@@ -570,7 +570,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getPopupMenuListeners(): javax.swing.event.PopupMenuListener[]
+            public getPopupMenuListeners(): javax.swing.event.PopupMenuListener[]
             /**
              * Notifies <code>PopupMenuListener</code>s that the popup portion of the
              * combo box will become visible.
@@ -581,7 +581,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            firePopupMenuWillBecomeVisible(): void
+            public firePopupMenuWillBecomeVisible(): void
             /**
              * Notifies <code>PopupMenuListener</code>s that the popup portion of the
              * combo box has become invisible.
@@ -592,7 +592,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            firePopupMenuWillBecomeInvisible(): void
+            public firePopupMenuWillBecomeInvisible(): void
             /**
              * Notifies <code>PopupMenuListener</code>s that the popup portion of the
              * combo box has been canceled.
@@ -603,7 +603,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            firePopupMenuCanceled(): void
+            public firePopupMenuCanceled(): void
             /**
              * Sets the action command that should be included in the event
              * sent to action listeners.
@@ -613,7 +613,7 @@ declare namespace javax {
              *                   receives
              */
             // @ts-ignore
-            setActionCommand(aCommand: string): void
+            public setActionCommand(aCommand: java.lang.String | string): void
             /**
              * Returns the action command that is included in the event sent to
              * action listeners.
@@ -621,7 +621,7 @@ declare namespace javax {
              *           to action listeners.
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * Sets the <code>Action</code> for the <code>ActionEvent</code> source.
              * The new <code>Action</code> replaces any previously set
@@ -660,7 +660,7 @@ declare namespace javax {
              *   description: the Action instance connected with this ActionEvent source
              */
             // @ts-ignore
-            setAction(a: javax.swing.Action): void
+            public setAction(a: javax.swing.Action): void
             /**
              * Returns the currently set <code>Action</code> for this
              * <code>ActionEvent</code> source, or <code>null</code> if no
@@ -672,7 +672,7 @@ declare namespace javax {
              * @see #setAction
              */
             // @ts-ignore
-            getAction(): javax.swing.Action
+            public getAction(): javax.swing.Action
             /**
              * Sets the properties on this combobox to match those in the specified
              * <code>Action</code>.  Refer to <a href="Action.html#buttonActions">
@@ -720,7 +720,7 @@ declare namespace javax {
              * @see #configurePropertiesFromAction
              */
             // @ts-ignore
-            actionPropertyChanged(action: javax.swing.Action, propertyName: string): void
+            actionPropertyChanged(action: javax.swing.Action, propertyName: java.lang.String | string): void
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.
@@ -750,31 +750,31 @@ declare namespace javax {
              *           element -- the selected item
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * This method is public as an implementation side effect.
              * do not call or override.
              */
             // @ts-ignore
-            actionPerformed(e: java.awt.event.ActionEvent): void
+            public actionPerformed(e: java.awt.event.ActionEvent): void
             /**
              * This method is public as an implementation side effect.
              * do not call or override.
              */
             // @ts-ignore
-            contentsChanged(e: javax.swing.event.ListDataEvent): void
+            public contentsChanged(e: javax.swing.event.ListDataEvent): void
             /**
              * This method is public as an implementation side effect.
              * do not call or override.
              */
             // @ts-ignore
-            intervalAdded(e: javax.swing.event.ListDataEvent): void
+            public intervalAdded(e: javax.swing.event.ListDataEvent): void
             /**
              * This method is public as an implementation side effect.
              * do not call or override.
              */
             // @ts-ignore
-            intervalRemoved(e: javax.swing.event.ListDataEvent): void
+            public intervalRemoved(e: javax.swing.event.ListDataEvent): void
             /**
              * Selects the list item that corresponds to the specified keyboard
              * character and returns true, if there is an item corresponding
@@ -783,7 +783,7 @@ declare namespace javax {
              *                   typed by the user
              */
             // @ts-ignore
-            selectWithKeyChar(keyChar: string): boolean
+            public selectWithKeyChar(keyChar: string): boolean
             /**
              * Enables the combo box so that items can be selected. When the
              * combo box is disabled, items cannot be selected and values
@@ -795,7 +795,7 @@ declare namespace javax {
              *   description: Whether the combo box is enabled.
              */
             // @ts-ignore
-            setEnabled(b: boolean): void
+            public setEnabled(b: boolean): void
             /**
              * Initializes the editor with the specified item.
              * @param anEditor the <code>ComboBoxEditor</code> that displays
@@ -804,7 +804,7 @@ declare namespace javax {
              * @param anItem   the object to display and edit in the field
              */
             // @ts-ignore
-            configureEditor(anEditor: javax.swing.ComboBoxEditor, anItem: any): void
+            public configureEditor(anEditor: javax.swing.ComboBoxEditor, anItem: java.lang.Object | any): void
             /**
              * Handles <code>KeyEvent</code>s, looking for the Tab key.
              * If the Tab key is found, the popup window is closed.
@@ -812,7 +812,7 @@ declare namespace javax {
              *           key that was pressed
              */
             // @ts-ignore
-            processKeyEvent(e: java.awt.event.KeyEvent): void
+            public processKeyEvent(e: java.awt.event.KeyEvent): void
             /**
              * {@inheritDoc}
              */
@@ -826,19 +826,19 @@ declare namespace javax {
              *   description: The objects that changes the selection when a key is pressed.
              */
             // @ts-ignore
-            setKeySelectionManager(aManager: javax.swing.JComboBox.KeySelectionManager): void
+            public setKeySelectionManager(aManager: javax.swing.JComboBox.KeySelectionManager): void
             /**
              * Returns the list's key-selection manager.
              * @return the <code>KeySelectionManager</code> currently in use
              */
             // @ts-ignore
-            getKeySelectionManager(): javax.swing.JComboBox.KeySelectionManager
+            public getKeySelectionManager(): javax.swing.JComboBox.KeySelectionManager
             /**
              * Returns the number of items in the list.
              * @return an integer equal to the number of items in the list
              */
             // @ts-ignore
-            getItemCount(): int
+            public getItemCount(): number /*int*/
             /**
              * Returns the list item at the specified index.  If <code>index</code>
              * is out of range (less than zero or greater than or equal to size)
@@ -849,7 +849,7 @@ declare namespace javax {
              *                   <code>null</code> if out of range
              */
             // @ts-ignore
-            getItemAt(index: number /*int*/): E
+            public getItemAt(index: number /*int*/): E
             /**
              * Returns an instance of the default key-selection manager.
              * @return the <code>KeySelectionManager</code> currently used by the list
@@ -866,7 +866,7 @@ declare namespace javax {
              * @return a string representation of this <code>JComboBox</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JComboBox.
              * For combo boxes, the AccessibleContext takes the form of an
@@ -876,7 +876,7 @@ declare namespace javax {
              *          AccessibleContext of this JComboBox
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

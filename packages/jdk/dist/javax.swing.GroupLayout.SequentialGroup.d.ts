@@ -24,7 +24,7 @@ declare namespace javax {
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addGroup(group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.SequentialGroup
+                public addGroup(group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds a {@code Group} to this {@code Group}.
                  * @param group the {#code Group} to add
@@ -33,12 +33,12 @@ declare namespace javax {
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addGroup(useAsBaseline: boolean, group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.SequentialGroup
+                public addGroup(useAsBaseline: boolean, group: javax.swing.GroupLayout.Group): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component): javax.swing.GroupLayout.SequentialGroup
+                public addComponent(component: java.awt.Component): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds a {@code Component} to this {@code Group}.
                  * @param useAsBaseline whether the specified {#code Component} should
@@ -47,12 +47,12 @@ declare namespace javax {
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addComponent(useAsBaseline: boolean, component: java.awt.Component): javax.swing.GroupLayout.SequentialGroup
+                public addComponent(useAsBaseline: boolean, component: java.awt.Component): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addComponent(component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addComponent(component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds a {@code Component} to this {@code Group}
                  * with the specified size.
@@ -68,17 +68,17 @@ declare namespace javax {
                  * @return this {#code Group}
                  */
                 // @ts-ignore
-                addComponent(useAsBaseline: boolean, component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addComponent(useAsBaseline: boolean, component: java.awt.Component, min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addGap(size: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addGap(size: number /*int*/): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                addGap(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addGap(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds an element representing the preferred gap between two
                  * components. The element created to represent the gap is not
@@ -93,7 +93,7 @@ declare namespace javax {
                  * @see LayoutStyle
                  */
                 // @ts-ignore
-                addPreferredGap(comp1: javax.swing.JComponent, comp2: javax.swing.JComponent, type: javax.swing.LayoutStyle.ComponentPlacement): javax.swing.GroupLayout.SequentialGroup
+                public addPreferredGap(comp1: javax.swing.JComponent, comp2: javax.swing.JComponent, type: javax.swing.LayoutStyle.ComponentPlacement): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds an element representing the preferred gap between two
                  * components.
@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see LayoutStyle
                  */
                 // @ts-ignore
-                addPreferredGap(comp1: javax.swing.JComponent, comp2: javax.swing.JComponent, type: javax.swing.LayoutStyle.ComponentPlacement, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addPreferredGap(comp1: javax.swing.JComponent, comp2: javax.swing.JComponent, type: javax.swing.LayoutStyle.ComponentPlacement, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds an element representing the preferred gap between the
                  * nearest components.  During layout, neighboring
@@ -131,7 +131,7 @@ declare namespace javax {
                  *          {@code LayoutStyle.ComponentPlacement.UNRELATED}
                  */
                 // @ts-ignore
-                addPreferredGap(type: javax.swing.LayoutStyle.ComponentPlacement): javax.swing.GroupLayout.SequentialGroup
+                public addPreferredGap(type: javax.swing.LayoutStyle.ComponentPlacement): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds an element representing the preferred gap between the
                  * nearest components.  During layout, neighboring
@@ -154,7 +154,7 @@ declare namespace javax {
                  * @see LayoutStyle
                  */
                 // @ts-ignore
-                addPreferredGap(type: javax.swing.LayoutStyle.ComponentPlacement, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addPreferredGap(type: javax.swing.LayoutStyle.ComponentPlacement, pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds an element representing the preferred gap between an edge
                  * the container and components that touch the border of the
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @return this {#code SequentialGroup}
                  */
                 // @ts-ignore
-                addContainerGap(): javax.swing.GroupLayout.SequentialGroup
+                public addContainerGap(): javax.swing.GroupLayout.SequentialGroup
                 /**
                  * Adds an element representing the preferred gap between one
                  * edge of the container and the next or previous {@code
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @return this {#code SequentialGroup}
                  */
                 // @ts-ignore
-                addContainerGap(pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
+                public addContainerGap(pref: number /*int*/, max: number /*int*/): javax.swing.GroupLayout.SequentialGroup
             }
         }
     }

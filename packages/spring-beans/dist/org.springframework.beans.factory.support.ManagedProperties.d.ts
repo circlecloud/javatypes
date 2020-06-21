@@ -19,19 +19,19 @@ declare namespace org {
                          * <p>The exact type of the object will depend on the configuration mechanism used.
                          */
                         // @ts-ignore
-                        setSource(source: any): void
+                        public setSource(source: java.lang.Object | any): void
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         /**
                          * Set whether merging should be enabled for this collection,
                          * in case of a 'parent' collection value being present.
                          */
                         // @ts-ignore
-                        setMergeEnabled(mergeEnabled: boolean): void
+                        public setMergeEnabled(mergeEnabled: boolean): void
                         // @ts-ignore
-                        isMergeEnabled(): boolean
+                        public isMergeEnabled(): boolean
                         // @ts-ignore
-                        merge(parent: any): java.lang.Object
+                        public merge(parent: java.lang.Object | any): any
                     }
                 }
             }

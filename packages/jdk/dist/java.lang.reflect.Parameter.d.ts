@@ -16,14 +16,14 @@ declare namespace java {
                  * @return Whether or not this is equal to the argument.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code based on the executable's hash code and the
                  * index.
                  * @return A hash code based on the executable's hash code.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns true if the parameter has a name according to the class
                  * file; returns false otherwise. Whether a parameter has a name
@@ -33,7 +33,7 @@ declare namespace java {
                  *  to the class file.
                  */
                 // @ts-ignore
-                isNamePresent(): boolean
+                public isNamePresent(): boolean
                 /**
                  * Returns a string describing this parameter.  The format is the
                  * modifiers for the parameter, if any, in canonical order as
@@ -47,20 +47,20 @@ declare namespace java {
                  *  information.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return the {@code Executable} which declares this parameter.
                  * @return The {#code Executable} declaring this parameter.
                  */
                 // @ts-ignore
-                getDeclaringExecutable(): java.lang.reflect.Executable
+                public getDeclaringExecutable(): java.lang.reflect.Executable
                 /**
                  * Get the modifier flags for this the parameter represented by
                  * this {@code Parameter} object.
                  * @return The modifier flags for this parameter.
                  */
                 // @ts-ignore
-                getModifiers(): int
+                public getModifiers(): number /*int*/
                 /**
                  * Returns the name of the parameter.  If the parameter's name is
                  * {@linkplain #isNamePresent() present}, then this method returns
@@ -73,7 +73,7 @@ declare namespace java {
                  *          a name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns a {@code Type} object that identifies the parameterized
                  * type for the parameter represented by this {@code Parameter}
@@ -82,7 +82,7 @@ declare namespace java {
                  *  type of the parameter represented by this object
                  */
                 // @ts-ignore
-                getParameterizedType(): java.lang.reflect.Type
+                public getParameterizedType(): java.lang.reflect.Type
                 /**
                  * Returns a {@code Class} object that identifies the
                  * declared type for the parameter represented by this
@@ -91,7 +91,7 @@ declare namespace java {
                  *  type of the parameter represented by this object
                  */
                 // @ts-ignore
-                getType(): java.lang.Class<?>
+                public getType(): java.lang.Class<any>
                 /**
                  * Returns an AnnotatedType object that represents the use of a type to
                  * specify the type of the formal parameter represented by this Parameter.
@@ -100,7 +100,7 @@ declare namespace java {
                  *          Parameter
                  */
                 // @ts-ignore
-                getAnnotatedType(): java.lang.reflect.AnnotatedType
+                public getAnnotatedType(): java.lang.reflect.AnnotatedType
                 /**
                  * Returns {@code true} if this parameter is implicitly declared
                  * in source code; returns {@code false} otherwise.
@@ -109,7 +109,7 @@ declare namespace java {
                  *  Specification</cite>.
                  */
                 // @ts-ignore
-                isImplicit(): boolean
+                public isImplicit(): boolean
                 /**
                  * Returns {@code true} if this parameter is neither implicitly
                  * nor explicitly declared in source code; returns {@code false}
@@ -120,7 +120,7 @@ declare namespace java {
                  *  <cite>The Java&trade; Language Specification</cite>.
                  */
                 // @ts-ignore
-                isSynthetic(): boolean
+                public isSynthetic(): boolean
                 /**
                  * Returns {@code true} if this parameter represents a variable
                  * argument list; returns {@code false} otherwise.
@@ -128,39 +128,39 @@ declare namespace java {
                  *  variable argument list.
                  */
                 // @ts-ignore
-                isVarArgs(): boolean
+                public isVarArgs(): boolean
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+                public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaredAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getDeclaredAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaredAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getDeclaredAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getAnnotations(): java.lang.annotation.Annotation[]
+                public getAnnotations(): java.lang.annotation.Annotation[]
             }
         }
     }

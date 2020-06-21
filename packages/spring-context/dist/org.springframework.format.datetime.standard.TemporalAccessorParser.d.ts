@@ -25,9 +25,9 @@ declare namespace org {
                          * @param formatter the base DateTimeFormatter instance
                          */
                         // @ts-ignore
-                        constructor(temporalAccessorType: java.lang.Class<java.time.temporal.TemporalAccessor>, formatter: java.time.format.DateTimeFormatter)
+                        constructor(temporalAccessorType: java.lang.Class<any>, formatter: java.time.format.DateTimeFormatter)
                         // @ts-ignore
-                        parse(text: string, locale: java.util.Locale): java.time.temporal.TemporalAccessor
+                        public parse(text: java.lang.String | string, locale: java.util.Locale): java.time.temporal.TemporalAccessor
                     }
                 }
             }

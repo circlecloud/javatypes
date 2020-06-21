@@ -74,7 +74,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getLoginTimeout(): int
+            getLoginTimeout(): number /*int*/
             /**
              * Return the parent Logger of all the Loggers used by this data source. This
              * should be the Logger farthest from the root Logger that is

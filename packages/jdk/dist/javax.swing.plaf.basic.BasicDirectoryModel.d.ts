@@ -7,22 +7,22 @@ declare namespace javax {
                  * @author Jeff Dinkins
                  */
                 // @ts-ignore
-                class BasicDirectoryModel extends javax.swing.AbstractListModel<java.lang.Object> implements java.beans.PropertyChangeListener {
+                class BasicDirectoryModel extends javax.swing.AbstractListModel<java.lang.Object | any> implements java.beans.PropertyChangeListener {
                     // @ts-ignore
                     constructor(filechooser: javax.swing.JFileChooser)
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                     /**
                      * This method is used to interrupt file loading thread.
                      */
                     // @ts-ignore
-                    invalidateFileCache(): void
+                    public invalidateFileCache(): void
                     // @ts-ignore
-                    getDirectories(): java.util.Vector<java.io.File>
+                    public getDirectories(): java.util.Vector<java.io.File>
                     // @ts-ignore
-                    getFiles(): java.util.Vector<java.io.File>
+                    public getFiles(): java.util.Vector<java.io.File>
                     // @ts-ignore
-                    validateFileCache(): void
+                    public validateFileCache(): void
                     /**
                      * Renames a file in the underlying file system.
                      * @param oldFile a <code>File</code> object representing
@@ -34,29 +34,29 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    renameFile(oldFile: java.io.File, newFile: java.io.File): boolean
+                    public renameFile(oldFile: java.io.File, newFile: java.io.File): boolean
                     // @ts-ignore
-                    fireContentsChanged(): void
+                    public fireContentsChanged(): void
                     // @ts-ignore
-                    getSize(): int
+                    public getSize(): number /*int*/
                     // @ts-ignore
-                    contains(o: any): boolean
+                    public contains(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    indexOf(o: any): int
+                    public indexOf(o: java.lang.Object | any): number /*int*/
                     // @ts-ignore
-                    getElementAt(index: number /*int*/): java.lang.Object
+                    public getElementAt(index: number /*int*/): any
                     /**
                      * Obsolete - not used.
                      */
                     // @ts-ignore
-                    intervalAdded(e: javax.swing.event.ListDataEvent): void
+                    public intervalAdded(e: javax.swing.event.ListDataEvent): void
                     /**
                      * Obsolete - not used.
                      */
                     // @ts-ignore
-                    intervalRemoved(e: javax.swing.event.ListDataEvent): void
+                    public intervalRemoved(e: javax.swing.event.ListDataEvent): void
                     // @ts-ignore
-                    sort(v: java.util.Vector<java.io.File>): void
+                    sort(v: java.util.Vector<any>): void
                     // @ts-ignore
                     lt(a: java.io.File, b: java.io.File): boolean
                     /**
@@ -71,7 +71,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                    public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                     /**
                      * Removes a PropertyChangeListener from the listener list.
                      * <p>
@@ -82,7 +82,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                    public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                     /**
                      * Returns an array of all the property change listeners
                      * registered on this component.
@@ -95,7 +95,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+                    public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
                     /**
                      * Support for reporting bound property changes for boolean properties.
                      * This method can be called when a bound property has changed and it will
@@ -107,7 +107,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+                    firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
                 }
             }
         }

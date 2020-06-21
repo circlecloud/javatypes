@@ -21,26 +21,26 @@ declare namespace org {
                          * @param sessionIdResolver the resolver to use
                          */
                         // @ts-ignore
-                        setSessionIdResolver(sessionIdResolver: org.springframework.web.server.session.WebSessionIdResolver): void
+                        public setSessionIdResolver(sessionIdResolver: org.springframework.web.server.session.WebSessionIdResolver): void
                         /**
                          * Return the configured {@link WebSessionIdResolver}.
                          */
                         // @ts-ignore
-                        getSessionIdResolver(): org.springframework.web.server.session.WebSessionIdResolver
+                        public getSessionIdResolver(): org.springframework.web.server.session.WebSessionIdResolver
                         /**
                          * Configure the persistence strategy.
                          * <p>By default an instance of {@link InMemoryWebSessionStore}.
                          * @param sessionStore the persistence strategy to use
                          */
                         // @ts-ignore
-                        setSessionStore(sessionStore: org.springframework.web.server.session.WebSessionStore): void
+                        public setSessionStore(sessionStore: org.springframework.web.server.session.WebSessionStore): void
                         /**
                          * Return the configured {@link WebSessionStore}.
                          */
                         // @ts-ignore
-                        getSessionStore(): org.springframework.web.server.session.WebSessionStore
+                        public getSessionStore(): org.springframework.web.server.session.WebSessionStore
                         // @ts-ignore
-                        getSession(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public getSession(exchange: org.springframework.web.server.ServerWebExchange): object
                     }
                 }
             }

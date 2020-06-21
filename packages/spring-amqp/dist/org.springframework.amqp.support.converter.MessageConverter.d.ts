@@ -19,7 +19,7 @@ declare namespace org {
                          * @throws MessageConversionException in case of conversion failure
                          */
                         // @ts-ignore
-                        toMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        toMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         /**
                          * Convert a Java object to a Message.
                          * The default implementation calls {@link #toMessage(Object, MessageProperties)}.
@@ -31,7 +31,7 @@ declare namespace org {
                          * @since 2.1
                          */
                         // @ts-ignore
-                        toMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
+                        toMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties, genericType: java.lang.reflect.Type): org.springframework.amqp.core.Message
                         /**
                          * Convert from a Message to a Java object.
                          * @param message the message to convert
@@ -39,7 +39,7 @@ declare namespace org {
                          * @throws MessageConversionException in case of conversion failure
                          */
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        fromMessage(message: org.springframework.amqp.core.Message): any
                     }
                 }
             }

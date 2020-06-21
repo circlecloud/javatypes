@@ -74,7 +74,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    setStrategies(strategies: Array<org.springframework.web.accept.ContentNegotiationStrategy>): void
+                    public setStrategies(strategies: java.util.List<org.springframework.web.accept.ContentNegotiationStrategy> | Array<org.springframework.web.accept.ContentNegotiationStrategy>): void
                     /**
                      * Whether the path extension in the URL path should be used to determine
                      * the requested media type.
@@ -88,7 +88,7 @@ declare namespace org {
                      *  this property will no longer be necessary.
                      */
                     // @ts-ignore
-                    setFavorPathExtension(favorPathExtension: boolean): void
+                    public setFavorPathExtension(favorPathExtension: boolean): void
                     /**
                      * Add a mapping from a key to a MediaType where the key are normalized to
                      * lowercase and may have been extracted from a path extension, a filename
@@ -117,17 +117,17 @@ declare namespace org {
                      * @see #addMediaTypes(Map)
                      */
                     // @ts-ignore
-                    setMediaTypes(mediaTypes: java.util.Properties): void
+                    public setMediaTypes(mediaTypes: java.util.Properties): void
                     /**
                      * An alternative to {@link #setMediaTypes} for programmatic registrations.
                      */
                     // @ts-ignore
-                    addMediaType(key: string, mediaType: org.springframework.http.MediaType): void
+                    public addMediaType(key: java.lang.String | string, mediaType: org.springframework.http.MediaType): void
                     /**
                      * An alternative to {@link #setMediaTypes} for programmatic registrations.
                      */
                     // @ts-ignore
-                    addMediaTypes(mediaTypes: java.util.Map<java.lang.String, org.springframework.http.MediaType>): void
+                    public addMediaTypes(mediaTypes: java.util.Map<java.lang.String | string, org.springframework.http.MediaType>): void
                     /**
                      * Whether to ignore requests with path extension that cannot be resolved
                      * to any media type. Setting this to {@code false} will result in an
@@ -137,7 +137,7 @@ declare namespace org {
                      *  extension config options.
                      */
                     // @ts-ignore
-                    setIgnoreUnknownPathExtensions(ignore: boolean): void
+                    public setIgnoreUnknownPathExtensions(ignore: boolean): void
                     /**
                      * Indicate whether to use the Java Activation Framework as a fallback option
                      * to map from file extensions to media types.
@@ -145,7 +145,7 @@ declare namespace org {
                      *  has reverse behavior.
                      */
                     // @ts-ignore
-                    setUseJaf(useJaf: boolean): void
+                    public setUseJaf(useJaf: boolean): void
                     /**
                      * When {@link #setFavorPathExtension favorPathExtension} or
                      * {@link #setFavorParameter(boolean)} is set, this property determines
@@ -154,7 +154,7 @@ declare namespace org {
                      * <p>By default this is not set in which case dynamic resolution is on.
                      */
                     // @ts-ignore
-                    setUseRegisteredExtensionsOnly(useRegisteredExtensionsOnly: boolean): void
+                    public setUseRegisteredExtensionsOnly(useRegisteredExtensionsOnly: boolean): void
                     /**
                      * Whether a request parameter ("format" by default) should be used to
                      * determine the requested media type. For this option to work you must
@@ -163,26 +163,26 @@ declare namespace org {
                      * @see #setParameterName
                      */
                     // @ts-ignore
-                    setFavorParameter(favorParameter: boolean): void
+                    public setFavorParameter(favorParameter: boolean): void
                     /**
                      * Set the query parameter name to use when {@link #setFavorParameter} is on.
                      * <p>The default parameter name is {@code "format"}.
                      */
                     // @ts-ignore
-                    setParameterName(parameterName: string): void
+                    public setParameterName(parameterName: java.lang.String | string): void
                     /**
                      * Whether to disable checking the 'Accept' request header.
                      * <p>By default this value is set to {@code false}.
                      */
                     // @ts-ignore
-                    setIgnoreAcceptHeader(ignoreAcceptHeader: boolean): void
+                    public setIgnoreAcceptHeader(ignoreAcceptHeader: boolean): void
                     /**
                      * Set the default content type to use when no content type is requested.
                      * <p>By default this is not set.
                      * @see #setDefaultContentTypeStrategy
                      */
                     // @ts-ignore
-                    setDefaultContentType(contentType: org.springframework.http.MediaType): void
+                    public setDefaultContentType(contentType: org.springframework.http.MediaType): void
                     /**
                      * Set the default content types to use when no content type is requested.
                      * <p>By default this is not set.
@@ -190,7 +190,7 @@ declare namespace org {
                      * @see #setDefaultContentTypeStrategy
                      */
                     // @ts-ignore
-                    setDefaultContentTypes(contentTypes: Array<org.springframework.http.MediaType>): void
+                    public setDefaultContentTypes(contentTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>): void
                     /**
                      * Set a custom {@link ContentNegotiationStrategy} to use to determine
                      * the content type to use when no content type is requested.
@@ -199,26 +199,26 @@ declare namespace org {
                      * @see #setDefaultContentType
                      */
                     // @ts-ignore
-                    setDefaultContentTypeStrategy(strategy: org.springframework.web.accept.ContentNegotiationStrategy): void
+                    public setDefaultContentTypeStrategy(strategy: org.springframework.web.accept.ContentNegotiationStrategy): void
                     /**
                      * Invoked by Spring to inject the ServletContext.
                      */
                     // @ts-ignore
-                    setServletContext(servletContext: ServletContext): void
+                    public setServletContext(servletContext: ServletContext): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Create and initialize a {@link ContentNegotiationManager} instance.
                      * @since 5.0
                      */
                     // @ts-ignore
-                    build(): org.springframework.web.accept.ContentNegotiationManager
+                    public build(): org.springframework.web.accept.ContentNegotiationManager
                     // @ts-ignore
-                    getObject(): org.springframework.web.accept.ContentNegotiationManager
+                    public getObject(): org.springframework.web.accept.ContentNegotiationManager
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

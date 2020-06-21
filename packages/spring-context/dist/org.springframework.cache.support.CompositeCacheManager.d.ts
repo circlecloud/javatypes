@@ -39,20 +39,20 @@ declare namespace org {
                      * Specify the CacheManagers to delegate to.
                      */
                     // @ts-ignore
-                    setCacheManagers(cacheManagers: Array<org.springframework.cache.CacheManager>): void
+                    public setCacheManagers(cacheManagers: java.util.Collection<org.springframework.cache.CacheManager> | Array<org.springframework.cache.CacheManager>): void
                     /**
                      * Indicate whether a {@link NoOpCacheManager} should be added at the end of the delegate list.
                      * In this case, any {@code getCache} requests not handled by the configured CacheManagers will
                      * be automatically handled by the {@link NoOpCacheManager} (and hence never return {@code null}).
                      */
                     // @ts-ignore
-                    setFallbackToNoOpCache(fallbackToNoOpCache: boolean): void
+                    public setFallbackToNoOpCache(fallbackToNoOpCache: boolean): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getCache(name: string): org.springframework.cache.Cache
+                    public getCache(name: java.lang.String | string): org.springframework.cache.Cache
                     // @ts-ignore
-                    getCacheNames(): java.util.Collection<java.lang.String>
+                    public getCacheNames(): Array<java.lang.String | string>
                 }
             }
         }

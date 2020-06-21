@@ -22,73 +22,73 @@ declare namespace java {
                  * modifier.
                  */
                 // @ts-ignore
-                readonly PUBLIC: number /*int*/
+                public static readonly PUBLIC: number /*int*/
                 /**
                  * The {@code int} value representing the {@code private}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly PRIVATE: number /*int*/
+                public static readonly PRIVATE: number /*int*/
                 /**
                  * The {@code int} value representing the {@code protected}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly PROTECTED: number /*int*/
+                public static readonly PROTECTED: number /*int*/
                 /**
                  * The {@code int} value representing the {@code static}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly STATIC: number /*int*/
+                public static readonly STATIC: number /*int*/
                 /**
                  * The {@code int} value representing the {@code final}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly FINAL: number /*int*/
+                public static readonly FINAL: number /*int*/
                 /**
                  * The {@code int} value representing the {@code synchronized}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly SYNCHRONIZED: number /*int*/
+                public static readonly SYNCHRONIZED: number /*int*/
                 /**
                  * The {@code int} value representing the {@code volatile}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly VOLATILE: number /*int*/
+                public static readonly VOLATILE: number /*int*/
                 /**
                  * The {@code int} value representing the {@code transient}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly TRANSIENT: number /*int*/
+                public static readonly TRANSIENT: number /*int*/
                 /**
                  * The {@code int} value representing the {@code native}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly NATIVE: number /*int*/
+                public static readonly NATIVE: number /*int*/
                 /**
                  * The {@code int} value representing the {@code interface}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly INTERFACE: number /*int*/
+                public static readonly INTERFACE: number /*int*/
                 /**
                  * The {@code int} value representing the {@code abstract}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly ABSTRACT: number /*int*/
+                public static readonly ABSTRACT: number /*int*/
                 /**
                  * The {@code int} value representing the {@code strictfp}
                  * modifier.
                  */
                 // @ts-ignore
-                readonly STRICT: number /*int*/
+                public static readonly STRICT: number /*int*/
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code public} modifier, {@code false} otherwise.
@@ -97,7 +97,7 @@ declare namespace java {
                  *  {@code public} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isPublic(mod: number /*int*/): boolean
+                public static isPublic(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code private} modifier, {@code false} otherwise.
@@ -106,7 +106,7 @@ declare namespace java {
                  *  {@code private} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isPrivate(mod: number /*int*/): boolean
+                public static isPrivate(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code protected} modifier, {@code false} otherwise.
@@ -115,7 +115,7 @@ declare namespace java {
                  *  {@code protected} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isProtected(mod: number /*int*/): boolean
+                public static isProtected(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code static} modifier, {@code false} otherwise.
@@ -124,7 +124,7 @@ declare namespace java {
                  *  {@code static} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isStatic(mod: number /*int*/): boolean
+                public static isStatic(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code final} modifier, {@code false} otherwise.
@@ -133,7 +133,7 @@ declare namespace java {
                  *  {@code final} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isFinal(mod: number /*int*/): boolean
+                public static isFinal(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code synchronized} modifier, {@code false} otherwise.
@@ -142,7 +142,7 @@ declare namespace java {
                  *  {@code synchronized} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isSynchronized(mod: number /*int*/): boolean
+                public static isSynchronized(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code volatile} modifier, {@code false} otherwise.
@@ -151,7 +151,7 @@ declare namespace java {
                  *  {@code volatile} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isVolatile(mod: number /*int*/): boolean
+                public static isVolatile(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code transient} modifier, {@code false} otherwise.
@@ -160,7 +160,7 @@ declare namespace java {
                  *  {@code transient} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isTransient(mod: number /*int*/): boolean
+                public static isTransient(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code native} modifier, {@code false} otherwise.
@@ -169,7 +169,7 @@ declare namespace java {
                  *  {@code native} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isNative(mod: number /*int*/): boolean
+                public static isNative(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code interface} modifier, {@code false} otherwise.
@@ -178,7 +178,7 @@ declare namespace java {
                  *  {@code interface} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isInterface(mod: number /*int*/): boolean
+                public static isInterface(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code abstract} modifier, {@code false} otherwise.
@@ -187,7 +187,7 @@ declare namespace java {
                  *  {@code abstract} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isAbstract(mod: number /*int*/): boolean
+                public static isAbstract(mod: number /*int*/): boolean
                 /**
                  * Return {@code true} if the integer argument includes the
                  * {@code strictfp} modifier, {@code false} otherwise.
@@ -196,7 +196,7 @@ declare namespace java {
                  *  {@code strictfp} modifier; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isStrict(mod: number /*int*/): boolean
+                public static isStrict(mod: number /*int*/): boolean
                 /**
                  * Return a string describing the access modifier flags in
                  * the specified modifier. For example:
@@ -227,7 +227,7 @@ declare namespace java {
                  *  represented by {#code mod}
                  */
                 // @ts-ignore
-                toString(mod: number /*int*/): java.lang.String
+                public static toString(mod: number /*int*/): string
                 /**
                  * Return an {@code int} value OR-ing together the source language
                  * modifiers that can be applied to a class.
@@ -237,7 +237,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                classModifiers(): int
+                public static classModifiers(): number /*int*/
                 /**
                  * Return an {@code int} value OR-ing together the source language
                  * modifiers that can be applied to an interface.
@@ -247,7 +247,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                interfaceModifiers(): int
+                public static interfaceModifiers(): number /*int*/
                 /**
                  * Return an {@code int} value OR-ing together the source language
                  * modifiers that can be applied to a constructor.
@@ -257,7 +257,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                constructorModifiers(): int
+                public static constructorModifiers(): number /*int*/
                 /**
                  * Return an {@code int} value OR-ing together the source language
                  * modifiers that can be applied to a method.
@@ -267,7 +267,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                methodModifiers(): int
+                public static methodModifiers(): number /*int*/
                 /**
                  * Return an {@code int} value OR-ing together the source language
                  * modifiers that can be applied to a field.
@@ -277,7 +277,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                fieldModifiers(): int
+                public static fieldModifiers(): number /*int*/
                 /**
                  * Return an {@code int} value OR-ing together the source language
                  * modifiers that can be applied to a parameter.
@@ -287,7 +287,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                parameterModifiers(): int
+                public static parameterModifiers(): number /*int*/
             }
         }
     }

@@ -62,7 +62,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Associates the editor with a text document.  This
              * must be a <code>StyledDocument</code>.
@@ -72,7 +72,7 @@ declare namespace javax {
              *    required type of model for this text component
              */
             // @ts-ignore
-            setDocument(doc: javax.swing.text.Document): void
+            public setDocument(doc: javax.swing.text.Document): void
             /**
              * Associates the editor with a text document.
              * The currently registered factory is used to build a view for
@@ -80,13 +80,13 @@ declare namespace javax {
              * @param doc  the document to display/edit
              */
             // @ts-ignore
-            setStyledDocument(doc: javax.swing.text.StyledDocument): void
+            public setStyledDocument(doc: javax.swing.text.StyledDocument): void
             /**
              * Fetches the model associated with the editor.
              * @return the model
              */
             // @ts-ignore
-            getStyledDocument(): javax.swing.text.StyledDocument
+            public getStyledDocument(): javax.swing.text.StyledDocument
             /**
              * Replaces the currently selected content with new content
              * represented by the given string.  If there is no selection
@@ -98,7 +98,7 @@ declare namespace javax {
              * @param content  the content to replace the selection with
              */
             // @ts-ignore
-            replaceSelection(content: string): void
+            public replaceSelection(content: java.lang.String | string): void
             /**
              * Inserts a component into the document as a replacement
              * for the currently selected content.  If there is no
@@ -123,7 +123,7 @@ declare namespace javax {
              * @param c    the component to insert
              */
             // @ts-ignore
-            insertComponent(c: java.awt.Component): void
+            public insertComponent(c: java.awt.Component): void
             /**
              * Inserts an icon into the document as a replacement
              * for the currently selected content.  If there is no
@@ -135,7 +135,7 @@ declare namespace javax {
              * @see Icon
              */
             // @ts-ignore
-            insertIcon(g: javax.swing.Icon): void
+            public insertIcon(g: javax.swing.Icon): void
             /**
              * Adds a new style into the logical style hierarchy.  Style attributes
              * resolve from bottom up so an attribute specified in a child
@@ -153,21 +153,21 @@ declare namespace javax {
              * @return the new <code>Style</code>
              */
             // @ts-ignore
-            addStyle(nm: string, parent: javax.swing.text.Style): javax.swing.text.Style
+            public addStyle(nm: java.lang.String | string, parent: javax.swing.text.Style): javax.swing.text.Style
             /**
              * Removes a named non-<code>null</code> style previously added to
              * the document.
              * @param nm  the name of the style to remove
              */
             // @ts-ignore
-            removeStyle(nm: string): void
+            public removeStyle(nm: java.lang.String | string): void
             /**
              * Fetches a named non-<code>null</code> style previously added.
              * @param nm  the name of the style
              * @return the <code>Style</code>
              */
             // @ts-ignore
-            getStyle(nm: string): javax.swing.text.Style
+            public getStyle(nm: java.lang.String | string): javax.swing.text.Style
             /**
              * Sets the logical style to use for the paragraph at the
              * current caret position.  If attributes aren't explicitly set
@@ -179,21 +179,21 @@ declare namespace javax {
              *           or <code>null</code> for no style
              */
             // @ts-ignore
-            setLogicalStyle(s: javax.swing.text.Style): void
+            public setLogicalStyle(s: javax.swing.text.Style): void
             /**
              * Fetches the logical style assigned to the paragraph represented
              * by the current position of the caret, or <code>null</code>.
              * @return the <code>Style</code>
              */
             // @ts-ignore
-            getLogicalStyle(): javax.swing.text.Style
+            public getLogicalStyle(): javax.swing.text.Style
             /**
              * Fetches the character attributes in effect at the
              * current location of the caret, or <code>null</code>.
              * @return the attributes, or <code>null</code>
              */
             // @ts-ignore
-            getCharacterAttributes(): javax.swing.text.AttributeSet
+            public getCharacterAttributes(): javax.swing.text.AttributeSet
             /**
              * Applies the given attributes to character
              * content.  If there is a selection, the attributes
@@ -205,14 +205,14 @@ declare namespace javax {
              * @param replace if true, then replace the existing attributes first
              */
             // @ts-ignore
-            setCharacterAttributes(attr: javax.swing.text.AttributeSet, replace: boolean): void
+            public setCharacterAttributes(attr: javax.swing.text.AttributeSet, replace: boolean): void
             /**
              * Fetches the current paragraph attributes in effect
              * at the location of the caret, or <code>null</code> if none.
              * @return the attributes
              */
             // @ts-ignore
-            getParagraphAttributes(): javax.swing.text.AttributeSet
+            public getParagraphAttributes(): javax.swing.text.AttributeSet
             /**
              * Applies the given attributes to paragraphs.  If
              * there is a selection, the attributes are applied
@@ -223,13 +223,13 @@ declare namespace javax {
              * @param replace if true, replace the existing attributes first
              */
             // @ts-ignore
-            setParagraphAttributes(attr: javax.swing.text.AttributeSet, replace: boolean): void
+            public setParagraphAttributes(attr: javax.swing.text.AttributeSet, replace: boolean): void
             /**
              * Gets the input attributes for the pane.
              * @return the attributes
              */
             // @ts-ignore
-            getInputAttributes(): javax.swing.text.MutableAttributeSet
+            public getInputAttributes(): javax.swing.text.MutableAttributeSet
             /**
              * Gets the editor kit.
              * @return the editor kit
@@ -252,7 +252,7 @@ declare namespace javax {
              *           <code>StyledEditorKit</code>
              */
             // @ts-ignore
-            setEditorKit(kit: javax.swing.text.EditorKit): void
+            public setEditorKit(kit: javax.swing.text.EditorKit): void
             /**
              * Returns a string representation of this <code>JTextPane</code>.
              * This method
@@ -263,7 +263,7 @@ declare namespace javax {
              * @return a string representation of this <code>JTextPane</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
         }
     }
 }

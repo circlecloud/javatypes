@@ -17,7 +17,7 @@ declare namespace org {
                  * @see DelegatingNavigationHandlerProxy
                  */
                 // @ts-ignore
-                class DecoratingNavigationHandler extends NavigationHandler {
+                abstract class DecoratingNavigationHandler extends NavigationHandler {
                     /**
                      * Create a DecoratingNavigationHandler without fixed original NavigationHandler.
                      */
@@ -34,7 +34,7 @@ declare namespace org {
                      * (that is, if passed in through the constructor).
                      */
                     // @ts-ignore
-                    getDecoratedNavigationHandler(): NavigationHandler
+                    public getDecoratedNavigationHandler(): NavigationHandler
                     /**
                      * This implementation of the standard JSF {@code handleNavigation} method
                      * delegates to the overloaded variant, passing in constructor-injected
@@ -42,7 +42,7 @@ declare namespace org {
                      * @see #handleNavigation(javax.faces.context.FacesContext, String, String, javax.faces.application.NavigationHandler)
                      */
                     // @ts-ignore
-                    handleNavigation(facesContext: FacesContext, fromAction: string, outcome: string): void
+                    public handleNavigation(facesContext: FacesContext, fromAction: java.lang.String | string, outcome: java.lang.String | string): void
                     /**
                      * Special {@code handleNavigation} variant with explicit NavigationHandler
                      * argument. Either called directly, by code with an explicit original handler,
@@ -64,7 +64,7 @@ declare namespace org {
                      * @see #callNextHandlerInChain
                      */
                     // @ts-ignore
-                    abstract handleNavigation(facesContext: FacesContext, fromAction: string, outcome: string, originalNavigationHandler: NavigationHandler): void
+                    public abstract handleNavigation(facesContext: FacesContext, fromAction: java.lang.String | string, outcome: java.lang.String | string, originalNavigationHandler: NavigationHandler): void
                     /**
                      * Method to be called by subclasses when intending to delegate to the next
                      * handler in the NavigationHandler chain. Will always call the most
@@ -94,7 +94,7 @@ declare namespace org {
                      *  or {#code null} if none
                      */
                     // @ts-ignore
-                    callNextHandlerInChain(facesContext: FacesContext, fromAction: string, outcome: string, originalNavigationHandler: NavigationHandler): void
+                    callNextHandlerInChain(facesContext: FacesContext, fromAction: java.lang.String | string, outcome: java.lang.String | string, originalNavigationHandler: NavigationHandler): void
                 }
             }
         }

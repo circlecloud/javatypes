@@ -21,7 +21,7 @@ declare namespace org {
                          * @return A new selector containing the given selector data
                          */
                         // @ts-ignore
-                        parseRawSelector(selector: string): org.spongepowered.api.text.selector.Selector
+                        parseRawSelector(selector: java.lang.String | string): org.spongepowered.api.text.selector.Selector
                         /**
                          * Creates a minimum and maximum {@link ArgumentType} filtering depending on
                          * the score of the specified objective.
@@ -29,7 +29,7 @@ declare namespace org {
                          * @return The created argument type
                          */
                         // @ts-ignore
-                        createScoreArgumentType(name: string): org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer>>
+                        createScoreArgumentType(name: java.lang.String | string): org.spongepowered.api.text.selector.ArgumentHolder.Limit<org.spongepowered.api.text.selector.ArgumentType<java.lang.Integer | number>>
                         /**
                          * Gets the {@link ArgumentType} with the provided name.
                          * @param name The name of the argument type
@@ -37,20 +37,20 @@ declare namespace org {
                          *          if not found
                          */
                         // @ts-ignore
-                        getArgumentType(name: string): java.util.Optional<org.spongepowered.api.text.selector.ArgumentType<?>>
+                        getArgumentType(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.text.selector.ArgumentType<any>>
                         /**
                          * Gets a {@link Collection} of all possible {@link ArgumentType}s.
                          * @return The list of all available {#link ArgumentType}s
                          */
                         // @ts-ignore
-                        getArgumentTypes(): java.util.Collection<org.spongepowered.api.text.selector.ArgumentType<?>>
+                        getArgumentTypes(): Array<org.spongepowered.api.text.selector.ArgumentType<any>>
                         /**
                          * Creates a custom {@link ArgumentType} with the specified key.
                          * @param key The key to use for the argument
                          * @return The created argument type
                          */
                         // @ts-ignore
-                        createArgumentType(key: string): org.spongepowered.api.text.selector.ArgumentType<java.lang.String>
+                        createArgumentType(key: java.lang.String | string): org.spongepowered.api.text.selector.ArgumentType<java.lang.String | string>
                         /**
                          * Creates a custom {@link ArgumentType} with the specified key and value.
                          * @param key The key to use for the argument
@@ -59,7 +59,7 @@ declare namespace org {
                          * @return The created argument type
                          */
                         // @ts-ignore
-                        createArgumentType<T>(key: string, type: java.lang.Class<T>): org.spongepowered.api.text.selector.ArgumentType<T>
+                        createArgumentType<T>(key: java.lang.String | string, type: java.lang.Class<T>): org.spongepowered.api.text.selector.ArgumentType<T>
                         /**
                          * Creates a new {@link Argument} using the specified type and value.
                          * @param type The type of the argument
@@ -91,7 +91,7 @@ declare namespace org {
                          * @return The created argument
                          */
                         // @ts-ignore
-                        createArguments<T, V>(type: org.spongepowered.api.text.selector.ArgumentHolder<org.spongepowered.api.text.selector.ArgumentType<T>>, value: V): java.util.Set<org.spongepowered.api.text.selector.Argument<T>>
+                        createArguments<T, V>(type: org.spongepowered.api.text.selector.ArgumentHolder<any>, value: V): Array<org.spongepowered.api.text.selector.Argument<T>>
                         /**
                          * Parses an {@link Argument} from the given argument string.
                          * <p>In Vanilla, it should be formatted like {@code key=value}.</p>
@@ -101,14 +101,14 @@ declare namespace org {
                          *          due to invalid format)
                          */
                         // @ts-ignore
-                        parseArgument(argument: string): org.spongepowered.api.text.selector.Argument<?>
+                        parseArgument(argument: java.lang.String | string): org.spongepowered.api.text.selector.Argument<any>
                         /**
                          * Fetch completions for a selector command argument.
                          * @param selector The partial selector
                          * @return Tab completions for the next part of the selector
                          */
                         // @ts-ignore
-                        complete(selector: string): java.util.List<java.lang.String>
+                        complete(selector: java.lang.String | string): Array<java.lang.String | string>
                     }
                 }
             }

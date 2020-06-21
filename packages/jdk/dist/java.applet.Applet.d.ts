@@ -38,7 +38,7 @@ declare namespace java {
              * @exception SecurityException if the caller cannot set the stub
              */
             // @ts-ignore
-            setStub(stub: java.applet.AppletStub): void
+            public setStub(stub: java.applet.AppletStub): void
             /**
              * Determines if this applet is active. An applet is marked active
              * just before its <code>start</code> method is called. It becomes
@@ -49,7 +49,7 @@ declare namespace java {
              * @see java.applet.Applet#stop()
              */
             // @ts-ignore
-            isActive(): boolean
+            public isActive(): boolean
             /**
              * Gets the URL of the document in which this applet is embedded.
              * For example, suppose an applet is contained
@@ -66,7 +66,7 @@ declare namespace java {
              * @see java.applet.Applet#getCodeBase()
              */
             // @ts-ignore
-            getDocumentBase(): java.net.URL
+            public getDocumentBase(): java.net.URL
             /**
              * Gets the base URL. This is the URL of the directory which contains this applet.
              * @return the base {#link java.net.URL} of
@@ -74,7 +74,7 @@ declare namespace java {
              * @see java.applet.Applet#getDocumentBase()
              */
             // @ts-ignore
-            getCodeBase(): java.net.URL
+            public getCodeBase(): java.net.URL
             /**
              * Returns the value of the named parameter in the HTML tag. For
              * example, if this applet is specified as
@@ -93,7 +93,7 @@ declare namespace java {
              *           or <code>null</code> if not set.
              */
             // @ts-ignore
-            getParameter(name: string): java.lang.String
+            public getParameter(name: java.lang.String | string): string
             /**
              * Determines this applet's context, which allows the applet to
              * query and affect the environment in which it runs.
@@ -103,20 +103,20 @@ declare namespace java {
              * @return the applet's context.
              */
             // @ts-ignore
-            getAppletContext(): java.applet.AppletContext
+            public getAppletContext(): java.applet.AppletContext
             /**
              * Requests that this applet be resized.
              * @param width    the new requested width for the applet.
              * @param height   the new requested height for the applet.
              */
             // @ts-ignore
-            resize(width: number /*int*/, height: number /*int*/): void
+            public resize(width: number /*int*/, height: number /*int*/): void
             /**
              * Requests that this applet be resized.
              * @param d   an object giving the new width and height.
              */
             // @ts-ignore
-            resize(d: java.awt.Dimension): void
+            public resize(d: java.awt.Dimension): void
             /**
              * Indicates if this container is a validate root.
              * <p>
@@ -127,7 +127,7 @@ declare namespace java {
              * @see java.awt.Container#isValidateRoot
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * Requests that the argument string be displayed in the
              * "status window". Many browsers and applet viewers
@@ -136,7 +136,7 @@ declare namespace java {
              * @param msg   a string to display in the status window.
              */
             // @ts-ignore
-            showStatus(msg: string): void
+            public showStatus(msg: java.lang.String | string): void
             /**
              * Returns an <code>Image</code> object that can then be painted on
              * the screen. The <code>url</code> that is passed as an argument
@@ -151,7 +151,7 @@ declare namespace java {
              * @see java.awt.Image
              */
             // @ts-ignore
-            getImage(url: java.net.URL): java.awt.Image
+            public getImage(url: java.net.URL): java.awt.Image
             /**
              * Returns an <code>Image</code> object that can then be painted on
              * the screen. The <code>url</code> argument must specify an absolute
@@ -169,7 +169,7 @@ declare namespace java {
              * @see java.awt.Image
              */
             // @ts-ignore
-            getImage(url: java.net.URL, name: string): java.awt.Image
+            public getImage(url: java.net.URL, name: java.lang.String | string): java.awt.Image
             /**
              * Get an audio clip from the given URL.
              * @param url points to the audio clip
@@ -177,7 +177,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            newAudioClip(url: java.net.URL): java.applet.AudioClip
+            public static newAudioClip(url: java.net.URL): java.applet.AudioClip
             /**
              * Returns the <code>AudioClip</code> object specified by the
              * <code>URL</code> argument.
@@ -190,7 +190,7 @@ declare namespace java {
              * @see java.applet.AudioClip
              */
             // @ts-ignore
-            getAudioClip(url: java.net.URL): java.applet.AudioClip
+            public getAudioClip(url: java.net.URL): java.applet.AudioClip
             /**
              * Returns the <code>AudioClip</code> object specified by the
              * <code>URL</code> and <code>name</code> arguments.
@@ -206,7 +206,7 @@ declare namespace java {
              * @see java.applet.AudioClip
              */
             // @ts-ignore
-            getAudioClip(url: java.net.URL, name: string): java.applet.AudioClip
+            public getAudioClip(url: java.net.URL, name: java.lang.String | string): java.applet.AudioClip
             /**
              * Returns information about this applet. An applet should override
              * this method to return a <code>String</code> containing information
@@ -218,7 +218,7 @@ declare namespace java {
              *           copyright of the applet.
              */
             // @ts-ignore
-            getAppletInfo(): java.lang.String
+            public getAppletInfo(): string
             /**
              * Gets the locale of the applet. It allows the applet
              * to maintain its own locale separated from the locale
@@ -228,7 +228,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Returns information about the parameters that are understood by
              * this applet. An applet should override this method to return an
@@ -250,14 +250,14 @@ declare namespace java {
              * @return an array describing the parameters this applet looks for.
              */
             // @ts-ignore
-            getParameterInfo(): java.lang.String[][]
+            public getParameterInfo(): string[][]
             /**
              * Plays the audio clip at the specified absolute URL. Nothing
              * happens if the audio clip cannot be found.
              * @param url   an absolute URL giving the location of the audio clip.
              */
             // @ts-ignore
-            play(url: java.net.URL): void
+            public play(url: java.net.URL): void
             /**
              * Plays the audio clip given the URL and a specifier that is
              * relative to it. Nothing happens if the audio clip cannot be found.
@@ -267,7 +267,7 @@ declare namespace java {
              *                  <code>url</code> argument.
              */
             // @ts-ignore
-            play(url: java.net.URL, name: string): void
+            public play(url: java.net.URL, name: java.lang.String | string): void
             /**
              * Called by the browser or applet viewer to inform
              * this applet that it has been loaded into the system. It is always
@@ -286,7 +286,7 @@ declare namespace java {
              * @see java.applet.Applet#stop()
              */
             // @ts-ignore
-            init(): void
+            public init(): void
             /**
              * Called by the browser or applet viewer to inform
              * this applet that it should start its execution. It is called after
@@ -316,7 +316,7 @@ declare namespace java {
              * @see java.awt.event.ComponentListener#componentShown(java.awt.event.ComponentEvent)
              */
             // @ts-ignore
-            start(): void
+            public start(): void
             /**
              * Called by the browser or applet viewer to inform
              * this applet that it should stop its execution. It is called when
@@ -336,7 +336,7 @@ declare namespace java {
              * @see java.applet.Applet#init()
              */
             // @ts-ignore
-            stop(): void
+            public stop(): void
             /**
              * Called by the browser or applet viewer to inform
              * this applet that it is being reclaimed and that it should destroy
@@ -356,7 +356,7 @@ declare namespace java {
              * @see java.applet.Applet#stop()
              */
             // @ts-ignore
-            destroy(): void
+            public destroy(): void
             /**
              * Gets the AccessibleContext associated with this Applet.
              * For applets, the AccessibleContext takes the form of an
@@ -367,7 +367,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

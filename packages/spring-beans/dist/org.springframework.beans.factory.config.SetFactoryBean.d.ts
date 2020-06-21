@@ -12,14 +12,14 @@ declare namespace org {
                      * @see MapFactoryBean
                      */
                     // @ts-ignore
-                    class SetFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.util.Set<java.lang.Object>> {
+                    class SetFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.util.Set<java.lang.Object | any> | Array<java.lang.Object | any>> {
                         // @ts-ignore
                         constructor()
                         /**
                          * Set the source Set, typically populated via XML "set" elements.
                          */
                         // @ts-ignore
-                        setSourceSet(sourceSet: Array<any>): void
+                        public setSourceSet(sourceSet: java.util.Set<any> | Array<any>): void
                         /**
                          * Set the class to use for the target Set. Can be populated with a fully
                          * qualified class name when defined in a Spring application context.
@@ -27,11 +27,11 @@ declare namespace org {
                          * @see java.util.LinkedHashSet
                          */
                         // @ts-ignore
-                        setTargetSetClass(targetSetClass: java.lang.Class<java.util.Set>): void
+                        public setTargetSetClass(targetSetClass: java.lang.Class<any>): void
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<java.util.Set>
+                        public getObjectType(): java.lang.Class<java.util.Set<any> | Array<any>>
                         // @ts-ignore
-                        createInstance(): java.util.Set<java.lang.Object>
+                        createInstance(): Array<java.lang.Object | any>
                     }
                 }
             }

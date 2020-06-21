@@ -10,15 +10,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor(entity: org.bukkit.entity.Entity, target: org.bukkit.entity.Entity, reason: org.bukkit.event.entity.EntityTargetEvent.TargetReason)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Returns the reason for the targeting
                      * @return The reason
                      */
                     // @ts-ignore
-                    getReason(): org.bukkit.event.entity.EntityTargetEvent.TargetReason
+                    public getReason(): org.bukkit.event.entity.EntityTargetEvent.TargetReason
                     /**
                      * Get the entity that this is targeting.
                      * <p>
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return The entity
                      */
                     // @ts-ignore
-                    getTarget(): org.bukkit.entity.Entity
+                    public getTarget(): org.bukkit.entity.Entity
                     /**
                      * Set the entity that you want the mob to target instead.
                      * <p>
@@ -40,11 +40,11 @@ declare namespace org {
                      * @param target The entity to target
                      */
                     // @ts-ignore
-                    setTarget(target: org.bukkit.entity.Entity): void
+                    public setTarget(target: org.bukkit.entity.Entity): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

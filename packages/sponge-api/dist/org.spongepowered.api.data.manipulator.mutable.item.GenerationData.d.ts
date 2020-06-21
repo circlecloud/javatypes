@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#GENERATION
                                  */
                                 // @ts-ignore
-                                generation(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                generation(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

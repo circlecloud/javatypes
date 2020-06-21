@@ -20,7 +20,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Long extends java.lang.Number implements java.lang.Comparable<java.lang.Long> {
+        class Long extends java.lang.Number implements java.lang.Comparable<java.lang.Long | number> {
             /**
              * Constructs a newly allocated {@code Long} object that
              * represents the specified {@code long} argument.
@@ -42,40 +42,40 @@ declare namespace java {
              * @see java.lang.Long#parseLong(java.lang.String, int)
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * A constant holding the minimum value a {@code long} can
              * have, -2<sup>63</sup>.
              */
             // @ts-ignore
-            readonly MIN_VALUE: number /*long*/
+            public static readonly MIN_VALUE: number /*long*/
             /**
              * A constant holding the maximum value a {@code long} can
              * have, 2<sup>63</sup>-1.
              */
             // @ts-ignore
-            readonly MAX_VALUE: number /*long*/
+            public static readonly MAX_VALUE: number /*long*/
             /**
              * The {@code Class} instance representing the primitive type
              * {@code long}.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Long>
+            public static readonly TYPE: java.lang.Class<java.lang.Long | number>
             /**
              * The number of bits used to represent a {@code long} value in two's
              * complement binary form.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code long} value in two's
              * complement binary form.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * Returns a string representation of the first argument in the
              * radix specified by the second argument.
@@ -114,7 +114,7 @@ declare namespace java {
              * @see java.lang.Character#MIN_RADIX
              */
             // @ts-ignore
-            toString(i: number /*long*/, radix: number /*int*/): java.lang.String
+            public static toString(i: number /*long*/, radix: number /*int*/): string
             /**
              * Returns a string representation of the first argument as an
              * unsigned integer value in the radix specified by the second
@@ -137,7 +137,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedString(i: number /*long*/, radix: number /*int*/): java.lang.String
+            public static toUnsignedString(i: number /*long*/, radix: number /*int*/): string
             /**
              * Returns a string representation of the {@code long}
              * argument as an unsigned integer in base&nbsp;16.
@@ -175,7 +175,7 @@ declare namespace java {
              * @since JDK 1.0.2
              */
             // @ts-ignore
-            toHexString(i: number /*long*/): java.lang.String
+            public static toHexString(i: number /*long*/): string
             /**
              * Returns a string representation of the {@code long}
              * argument as an unsigned integer in base&nbsp;8.
@@ -206,7 +206,7 @@ declare namespace java {
              * @since JDK 1.0.2
              */
             // @ts-ignore
-            toOctalString(i: number /*long*/): java.lang.String
+            public static toOctalString(i: number /*long*/): string
             /**
              * Returns a string representation of the {@code long}
              * argument as an unsigned integer in base&nbsp;2.
@@ -233,7 +233,7 @@ declare namespace java {
              * @since JDK 1.0.2
              */
             // @ts-ignore
-            toBinaryString(i: number /*long*/): java.lang.String
+            public static toBinaryString(i: number /*long*/): string
             /**
              * Returns a {@code String} object representing the specified
              * {@code long}.  The argument is converted to signed decimal
@@ -244,7 +244,7 @@ declare namespace java {
              * @return a string representation of the argument in base&nbsp;10.
              */
             // @ts-ignore
-            toString(i: number /*long*/): java.lang.String
+            public static toString(i: number /*long*/): string
             /**
              * Returns a string representation of the argument as an unsigned
              * decimal value.
@@ -258,7 +258,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedString(i: number /*long*/): java.lang.String
+            public static toUnsignedString(i: number /*long*/): string
             /**
              * Parses the string argument as a signed {@code long} in the
              * radix specified by the second argument. The characters in the
@@ -313,7 +313,7 @@ declare namespace java {
              *              parsable {#code long}.
              */
             // @ts-ignore
-            parseLong(s: string, radix: number /*int*/): long
+            public static parseLong(s: java.lang.String | string, radix: number /*int*/): number /*long*/
             /**
              * Parses the string argument as a signed decimal {@code long}.
              * The characters in the string must all be decimal digits, except
@@ -337,7 +337,7 @@ declare namespace java {
              *              parsable {#code long}.
              */
             // @ts-ignore
-            parseLong(s: string): long
+            public static parseLong(s: java.lang.String | string): number /*long*/
             /**
              * Parses the string argument as an unsigned {@code long} in the
              * radix specified by the second argument.  An unsigned integer
@@ -374,7 +374,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parseUnsignedLong(s: string, radix: number /*int*/): long
+            public static parseUnsignedLong(s: java.lang.String | string, radix: number /*int*/): number /*long*/
             /**
              * Parses the string argument as an unsigned decimal {@code long}. The
              * characters in the string must all be decimal digits, except
@@ -391,7 +391,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            parseUnsignedLong(s: string): long
+            public static parseUnsignedLong(s: java.lang.String | string): number /*long*/
             /**
              * Returns a {@code Long} object holding the value
              * extracted from the specified {@code String} when parsed
@@ -416,7 +416,7 @@ declare namespace java {
              *              contain a parsable {@code long}.
              */
             // @ts-ignore
-            valueOf(s: string, radix: number /*int*/): java.lang.Long
+            public static valueOf(s: java.lang.String | string, radix: number /*int*/): number
             /**
              * Returns a {@code Long} object holding the value
              * of the specified {@code String}. The argument is
@@ -437,7 +437,7 @@ declare namespace java {
              *              as a {#code long}.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Long
+            public static valueOf(s: java.lang.String | string): number
             /**
              * Returns a {@code Long} instance representing the specified
              * {@code long} value.
@@ -455,7 +455,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(l: number /*long*/): java.lang.Long
+            public static valueOf(l: number /*long*/): number
             /**
              * Decodes a {@code String} into a {@code Long}.
              * Accepts decimal, hexadecimal, and octal numbers given by the
@@ -495,48 +495,48 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            decode(nm: string): java.lang.Long
+            public static decode(nm: java.lang.String | string): number
             /**
              * Returns the value of this {@code Long} as a {@code byte} after
              * a narrowing primitive conversion.
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of this {@code Long} as a {@code short} after
              * a narrowing primitive conversion.
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
             /**
              * Returns the value of this {@code Long} as an {@code int} after
              * a narrowing primitive conversion.
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Returns the value of this {@code Long} as a
              * {@code long} value.
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Returns the value of this {@code Long} as a {@code float} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Returns the value of this {@code Long} as a {@code double}
              * after a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns a {@code String} object representing this
              * {@code Long}'s value.  The value is converted to signed
@@ -547,7 +547,7 @@ declare namespace java {
              *           base&nbsp;10.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this {@code Long}. The result is
              * the exclusive OR of the two halves of the primitive
@@ -559,7 +559,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code long} value; compatible with
              * {@code Long.hashCode()}.
@@ -568,7 +568,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hashCode(value: number /*long*/): int
+            public static hashCode(value: number /*long*/): number /*int*/
             /**
              * Compares this object to the specified object.  The result is
              * {@code true} if and only if the argument is not
@@ -579,7 +579,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Determines the {@code long} value of the system property
              * with the specified name.
@@ -606,7 +606,7 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getLong(nm: string): java.lang.Long
+            public static getLong(nm: java.lang.String | string): number
             /**
              * Determines the {@code long} value of the system property
              * with the specified name.
@@ -641,7 +641,7 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getLong(nm: string, val: number /*long*/): java.lang.Long
+            public static getLong(nm: java.lang.String | string, val: number /*long*/): number
             /**
              * Returns the {@code long} value of the system property with
              * the specified name.  The first argument is treated as the name
@@ -683,7 +683,7 @@ declare namespace java {
              * @see System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getLong(nm: string, val: number): java.lang.Long
+            public static getLong(nm: java.lang.String | string, val: java.lang.Long | number): number
             /**
              * Compares two {@code Long} objects numerically.
              * @param anotherLong   the {#code Long} to be compared.
@@ -697,7 +697,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(anotherLong: number): int
+            public compareTo(anotherLong: java.lang.Long | number): number /*int*/
             /**
              * Compares two {@code long} values numerically.
              * The value returned is identical to what would be returned by:
@@ -712,7 +712,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            compare(x: number /*long*/, y: number /*long*/): int
+            public static compare(x: number /*long*/, y: number /*long*/): number /*int*/
             /**
              * Compares two {@code long} values numerically treating the values
              * as unsigned.
@@ -725,7 +725,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            compareUnsigned(x: number /*long*/, y: number /*long*/): int
+            public static compareUnsigned(x: number /*long*/, y: number /*long*/): number /*int*/
             /**
              * Returns the unsigned quotient of dividing the first argument by
              * the second where each argument and the result is interpreted as
@@ -743,7 +743,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            divideUnsigned(dividend: number /*long*/, divisor: number /*long*/): long
+            public static divideUnsigned(dividend: number /*long*/, divisor: number /*long*/): number /*long*/
             /**
              * Returns the unsigned remainder from dividing the first argument
              * by the second where each argument and the result is interpreted
@@ -756,7 +756,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            remainderUnsigned(dividend: number /*long*/, divisor: number /*long*/): long
+            public static remainderUnsigned(dividend: number /*long*/, divisor: number /*long*/): number /*long*/
             /**
              * Returns a {@code long} value with at most a single one-bit, in the
              * position of the highest-order ("leftmost") one-bit in the specified
@@ -770,7 +770,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            highestOneBit(i: number /*long*/): long
+            public static highestOneBit(i: number /*long*/): number /*long*/
             /**
              * Returns a {@code long} value with at most a single one-bit, in the
              * position of the lowest-order ("rightmost") one-bit in the specified
@@ -784,7 +784,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            lowestOneBit(i: number /*long*/): long
+            public static lowestOneBit(i: number /*long*/): number /*long*/
             /**
              * Returns the number of zero bits preceding the highest-order
              * ("leftmost") one-bit in the two's complement binary representation
@@ -805,7 +805,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            numberOfLeadingZeros(i: number /*long*/): int
+            public static numberOfLeadingZeros(i: number /*long*/): number /*int*/
             /**
              * Returns the number of zero bits following the lowest-order ("rightmost")
              * one-bit in the two's complement binary representation of the specified
@@ -820,7 +820,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            numberOfTrailingZeros(i: number /*long*/): int
+            public static numberOfTrailingZeros(i: number /*long*/): number /*int*/
             /**
              * Returns the number of one-bits in the two's complement binary
              * representation of the specified {@code long} value.  This function is
@@ -831,7 +831,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            bitCount(i: number /*long*/): int
+            public static bitCount(i: number /*long*/): number /*int*/
             /**
              * Returns the value obtained by rotating the two's complement binary
              * representation of the specified {@code long} value left by the
@@ -851,7 +851,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            rotateLeft(i: number /*long*/, distance: number /*int*/): long
+            public static rotateLeft(i: number /*long*/, distance: number /*int*/): number /*long*/
             /**
              * Returns the value obtained by rotating the two's complement binary
              * representation of the specified {@code long} value right by the
@@ -871,7 +871,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            rotateRight(i: number /*long*/, distance: number /*int*/): long
+            public static rotateRight(i: number /*long*/, distance: number /*int*/): number /*long*/
             /**
              * Returns the value obtained by reversing the order of the bits in the
              * two's complement binary representation of the specified {@code long}
@@ -882,7 +882,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverse(i: number /*long*/): long
+            public static reverse(i: number /*long*/): number /*long*/
             /**
              * Returns the signum function of the specified {@code long} value.  (The
              * return value is -1 if the specified value is negative; 0 if the
@@ -892,7 +892,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            signum(i: number /*long*/): int
+            public static signum(i: number /*long*/): number /*int*/
             /**
              * Returns the value obtained by reversing the order of the bytes in the
              * two's complement representation of the specified {@code long} value.
@@ -902,7 +902,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverseBytes(i: number /*long*/): long
+            public static reverseBytes(i: number /*long*/): number /*long*/
             /**
              * Adds two {@code long} values together as per the + operator.
              * @param a the first operand
@@ -912,7 +912,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            sum(a: number /*long*/, b: number /*long*/): long
+            public static sum(a: number /*long*/, b: number /*long*/): number /*long*/
             /**
              * Returns the greater of two {@code long} values
              * as if by calling {@link Math#max(long, long) Math.max}.
@@ -923,7 +923,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            max(a: number /*long*/, b: number /*long*/): long
+            public static max(a: number /*long*/, b: number /*long*/): number /*long*/
             /**
              * Returns the smaller of two {@code long} values
              * as if by calling {@link Math#min(long, long) Math.min}.
@@ -934,7 +934,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            min(a: number /*long*/, b: number /*long*/): long
+            public static min(a: number /*long*/, b: number /*long*/): number /*long*/
         }
     }
 }

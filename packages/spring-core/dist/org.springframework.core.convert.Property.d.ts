@@ -20,36 +20,36 @@ declare namespace org {
                     // @ts-ignore
                     constructor(objectType: java.lang.Class<any>, readMethod: java.lang.reflect.Method, writeMethod: java.lang.reflect.Method)
                     // @ts-ignore
-                    constructor(objectType: java.lang.Class<any>, readMethod: java.lang.reflect.Method, writeMethod: java.lang.reflect.Method, name: string)
+                    constructor(objectType: java.lang.Class<any>, readMethod: java.lang.reflect.Method, writeMethod: java.lang.reflect.Method, name: java.lang.String | string)
                     /**
                      * The object declaring this property, either directly or in a superclass the object extends.
                      */
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     /**
                      * The name of the property: e.g. 'foo'
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * The property type: e.g. {@code java.lang.String}
                      */
                     // @ts-ignore
-                    getType(): java.lang.Class<?>
+                    public getType(): java.lang.Class<any>
                     /**
                      * The property getter method: e.g. {@code getFoo()}
                      */
                     // @ts-ignore
-                    getReadMethod(): java.lang.reflect.Method
+                    public getReadMethod(): java.lang.reflect.Method
                     /**
                      * The property setter method: e.g. {@code setFoo(String)}
                      */
                     // @ts-ignore
-                    getWriteMethod(): java.lang.reflect.Method
+                    public getWriteMethod(): java.lang.reflect.Method
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

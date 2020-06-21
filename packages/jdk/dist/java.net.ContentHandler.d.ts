@@ -41,7 +41,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class ContentHandler extends java.lang.Object {
+        abstract class ContentHandler extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -53,7 +53,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs while reading the object.
              */
             // @ts-ignore
-            abstract getContent(urlc: java.net.URLConnection): java.lang.Object
+            public abstract getContent(urlc: java.net.URLConnection): any
             /**
              * Given a URL connect stream positioned at the beginning of the
              * representation of an object, this method reads that stream and
@@ -69,7 +69,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getContent(urlc: java.net.URLConnection, classes: java.lang.Class[]): java.lang.Object
+            public getContent(urlc: java.net.URLConnection, classes: java.lang.Class<any>[]): any
         }
     }
 }

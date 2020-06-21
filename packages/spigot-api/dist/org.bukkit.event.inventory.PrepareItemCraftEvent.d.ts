@@ -13,23 +13,23 @@ declare namespace org {
                      * @return The recipe being crafted.
                      */
                     // @ts-ignore
-                    getRecipe(): org.bukkit.inventory.Recipe
+                    public getRecipe(): org.bukkit.inventory.Recipe
                     /**
                      * @return The crafting inventory on which the recipe was formed.
                      */
                     // @ts-ignore
-                    getInventory(): org.bukkit.inventory.CraftingInventory
+                    public getInventory(): org.bukkit.inventory.CraftingInventory
                     /**
                      * Check if this event was triggered by a tool repair operation rather
                      * than a crafting recipe.
                      * @return True if this is a repair.
                      */
                     // @ts-ignore
-                    isRepair(): boolean
+                    public isRepair(): boolean
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

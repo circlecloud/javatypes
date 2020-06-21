@@ -82,7 +82,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                examineMustUnderstandHeaderElements(actor: string): java.util.Iterator
+                examineMustUnderstandHeaderElements(actor: java.lang.String | string): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
                  * in this <code>SOAPHeader</code> object
@@ -106,7 +106,7 @@ declare namespace javax {
                  * @see SOAPConstants#URI_SOAP_ACTOR_NEXT
                  */
                 // @ts-ignore
-                examineHeaderElements(actor: string): java.util.Iterator
+                examineHeaderElements(actor: java.lang.String | string): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
                  * in this <code>SOAPHeader</code> object
@@ -128,7 +128,7 @@ declare namespace javax {
                  * @see SOAPConstants#URI_SOAP_ACTOR_NEXT
                  */
                 // @ts-ignore
-                extractHeaderElements(actor: string): java.util.Iterator
+                extractHeaderElements(actor: java.lang.String | string): java.util.Iterator<any>
                 /**
                  * Creates a new NotUnderstood <code>SOAPHeaderElement</code> object initialized
                  * with the specified name and adds it to this <code>SOAPHeader</code> object.
@@ -156,7 +156,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addUpgradeHeaderElement(supportedSOAPURIs: java.util.Iterator): javax.xml.soap.SOAPHeaderElement
+                addUpgradeHeaderElement(supportedSOAPURIs: java.util.Iterator<any>): javax.xml.soap.SOAPHeaderElement
                 /**
                  * Creates a new Upgrade <code>SOAPHeaderElement</code> object initialized
                  * with the specified array of supported SOAP URIs and adds it to this
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addUpgradeHeaderElement(supportedSoapUris: string[]): javax.xml.soap.SOAPHeaderElement
+                addUpgradeHeaderElement(supportedSoapUris: java.lang.String[] | string[]): javax.xml.soap.SOAPHeaderElement
                 /**
                  * Creates a new Upgrade <code>SOAPHeaderElement</code> object initialized
                  * with the specified supported SOAP URI and adds it to this
@@ -182,7 +182,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addUpgradeHeaderElement(supportedSoapUri: string): javax.xml.soap.SOAPHeaderElement
+                addUpgradeHeaderElement(supportedSoapUri: java.lang.String | string): javax.xml.soap.SOAPHeaderElement
                 /**
                  * Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
                  * in this <code>SOAPHeader</code> object.
@@ -193,7 +193,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                examineAllHeaderElements(): java.util.Iterator
+                examineAllHeaderElements(): java.util.Iterator<any>
                 /**
                  * Returns an <code>Iterator</code> over all the <code>SOAPHeaderElement</code> objects
                  * in this <code>SOAPHeader</code> object and detaches them
@@ -205,7 +205,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                extractAllHeaderElements(): java.util.Iterator
+                extractAllHeaderElements(): java.util.Iterator<any>
             }
         }
     }

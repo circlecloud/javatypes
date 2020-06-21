@@ -25,41 +25,41 @@ declare namespace javax {
              * Will remove the desktopIcon from its parent if it successfully adds the frame.
              */
             // @ts-ignore
-            openFrame(f: javax.swing.JInternalFrame): void
+            public openFrame(f: javax.swing.JInternalFrame): void
             /**
              * Removes the frame, and, if necessary, the
              * <code>desktopIcon</code>, from its parent.
              * @param f the <code>JInternalFrame</code> to be removed
              */
             // @ts-ignore
-            closeFrame(f: javax.swing.JInternalFrame): void
+            public closeFrame(f: javax.swing.JInternalFrame): void
             /**
              * Resizes the frame to fill its parents bounds.
              * @param f the frame to be resized
              */
             // @ts-ignore
-            maximizeFrame(f: javax.swing.JInternalFrame): void
+            public maximizeFrame(f: javax.swing.JInternalFrame): void
             /**
              * Restores the frame back to its size and position prior
              * to a <code>maximizeFrame</code> call.
              * @param f the <code>JInternalFrame</code> to be restored
              */
             // @ts-ignore
-            minimizeFrame(f: javax.swing.JInternalFrame): void
+            public minimizeFrame(f: javax.swing.JInternalFrame): void
             /**
              * Removes the frame from its parent and adds its
              * <code>desktopIcon</code> to the parent.
              * @param f the <code>JInternalFrame</code> to be iconified
              */
             // @ts-ignore
-            iconifyFrame(f: javax.swing.JInternalFrame): void
+            public iconifyFrame(f: javax.swing.JInternalFrame): void
             /**
              * Removes the desktopIcon from its parent and adds its frame
              * to the parent.
              * @param f the <code>JInternalFrame</code> to be de-iconified
              */
             // @ts-ignore
-            deiconifyFrame(f: javax.swing.JInternalFrame): void
+            public deiconifyFrame(f: javax.swing.JInternalFrame): void
             /**
              * This will activate <b>f</b> moving it to the front. It will
              * set the current active frame's (if any)
@@ -68,11 +68,11 @@ declare namespace javax {
              * @param f the <code>JInternalFrame</code> to be activated
              */
             // @ts-ignore
-            activateFrame(f: javax.swing.JInternalFrame): void
+            public activateFrame(f: javax.swing.JInternalFrame): void
             // @ts-ignore
-            deactivateFrame(f: javax.swing.JInternalFrame): void
+            public deactivateFrame(f: javax.swing.JInternalFrame): void
             // @ts-ignore
-            beginDraggingFrame(f: javax.swing.JComponent): void
+            public beginDraggingFrame(f: javax.swing.JComponent): void
             /**
              * Moves the visible location of the frame being dragged
              * to the location specified.  The means by which this occurs can vary depending
@@ -80,11 +80,11 @@ declare namespace javax {
              * might not change until <code>endDraggingFrame</code> is called.
              */
             // @ts-ignore
-            dragFrame(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/): void
+            public dragFrame(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/): void
             // @ts-ignore
-            endDraggingFrame(f: javax.swing.JComponent): void
+            public endDraggingFrame(f: javax.swing.JComponent): void
             // @ts-ignore
-            beginResizingFrame(f: javax.swing.JComponent, direction: number /*int*/): void
+            public beginResizingFrame(f: javax.swing.JComponent, direction: number /*int*/): void
             /**
              * Calls <code>setBoundsForFrame</code> with the new values.
              * @param f the component to be resized
@@ -94,14 +94,14 @@ declare namespace javax {
              * @param newHeight the new height
              */
             // @ts-ignore
-            resizeFrame(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/, newWidth: number /*int*/, newHeight: number /*int*/): void
+            public resizeFrame(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/, newWidth: number /*int*/, newHeight: number /*int*/): void
             // @ts-ignore
-            endResizingFrame(f: javax.swing.JComponent): void
+            public endResizingFrame(f: javax.swing.JComponent): void
             /**
              * This moves the <code>JComponent</code> and repaints the damaged areas.
              */
             // @ts-ignore
-            setBoundsForFrame(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/, newWidth: number /*int*/, newHeight: number /*int*/): void
+            public setBoundsForFrame(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/, newWidth: number /*int*/, newHeight: number /*int*/): void
             /**
              * Convenience method to remove the desktopIcon of <b>f</b> is necessary.
              */

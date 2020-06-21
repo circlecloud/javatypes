@@ -64,7 +64,7 @@ declare namespace java {
                  * @see Calendar#time
                  */
                 // @ts-ignore
-                setInstant(instant: number /*long*/): java.util.Calendar.Builder
+                public setInstant(instant: number /*long*/): java.util.Calendar.Builder
                 /**
                  * Sets the instant parameter to the {@code instant} value given by a
                  * {@link Date}. This method is equivalent to a call to
@@ -80,7 +80,7 @@ declare namespace java {
                  * @see Calendar#time
                  */
                 // @ts-ignore
-                setInstant(instant: java.util.Date): java.util.Calendar.Builder
+                public setInstant(instant: java.util.Date): java.util.Calendar.Builder
                 /**
                  * Sets the {@code field} parameter to the given {@code value}.
                  * {@code field} is an index to the {@link Calendar#fields}, such as
@@ -98,7 +98,7 @@ declare namespace java {
                  * @see Calendar#set(int, int)
                  */
                 // @ts-ignore
-                set(field: number /*int*/, value: number /*int*/): java.util.Calendar.Builder
+                public set(field: number /*int*/, value: number /*int*/): java.util.Calendar.Builder
                 /**
                  * Sets field parameters to their values given by
                  * {@code fieldValuePairs} that are pairs of a field and its value.
@@ -123,7 +123,7 @@ declare namespace java {
                  *              {#link Integer#MAX_VALUE}) times.
                  */
                 // @ts-ignore
-                setFields(...fieldValuePairs: number /*int*/[]): java.util.Calendar.Builder
+                public setFields(...fieldValuePairs: number /*int*/[]): java.util.Calendar.Builder
                 /**
                  * Sets the date field parameters to the values given by {@code year},
                  * {@code month}, and {@code dayOfMonth}. This method is equivalent to
@@ -139,7 +139,7 @@ declare namespace java {
                  * @return this {#code Calendar.Builder}
                  */
                 // @ts-ignore
-                setDate(year: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.util.Calendar.Builder
+                public setDate(year: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.util.Calendar.Builder
                 /**
                  * Sets the time of day field parameters to the values given by
                  * {@code hourOfDay}, {@code minute}, and {@code second}. This method is
@@ -153,7 +153,7 @@ declare namespace java {
                  * @return this {#code Calendar.Builder}
                  */
                 // @ts-ignore
-                setTimeOfDay(hourOfDay: number /*int*/, minute: number /*int*/, second: number /*int*/): java.util.Calendar.Builder
+                public setTimeOfDay(hourOfDay: number /*int*/, minute: number /*int*/, second: number /*int*/): java.util.Calendar.Builder
                 /**
                  * Sets the time of day field parameters to the values given by
                  * {@code hourOfDay}, {@code minute}, {@code second}, and
@@ -171,7 +171,7 @@ declare namespace java {
                  * @return this {#code Calendar.Builder}
                  */
                 // @ts-ignore
-                setTimeOfDay(hourOfDay: number /*int*/, minute: number /*int*/, second: number /*int*/, millis: number /*int*/): java.util.Calendar.Builder
+                public setTimeOfDay(hourOfDay: number /*int*/, minute: number /*int*/, second: number /*int*/, millis: number /*int*/): java.util.Calendar.Builder
                 /**
                  * Sets the week-based date parameters to the values with the given
                  * date specifiers - week year, week of year, and day of week.
@@ -187,7 +187,7 @@ declare namespace java {
                  * @see Calendar#isWeekDateSupported()
                  */
                 // @ts-ignore
-                setWeekDate(weekYear: number /*int*/, weekOfYear: number /*int*/, dayOfWeek: number /*int*/): java.util.Calendar.Builder
+                public setWeekDate(weekYear: number /*int*/, weekOfYear: number /*int*/, dayOfWeek: number /*int*/): java.util.Calendar.Builder
                 /**
                  * Sets the time zone parameter to the given {@code zone}. If no time
                  * zone parameter is given to this {@code Caledar.Builder}, the
@@ -200,7 +200,7 @@ declare namespace java {
                  * @see Calendar#setTimeZone(TimeZone)
                  */
                 // @ts-ignore
-                setTimeZone(zone: java.util.TimeZone): java.util.Calendar.Builder
+                public setTimeZone(zone: java.util.TimeZone): java.util.Calendar.Builder
                 /**
                  * Sets the lenient mode parameter to the value given by {@code lenient}.
                  * If no lenient parameter is given to this {@code Calendar.Builder},
@@ -211,7 +211,7 @@ declare namespace java {
                  * @see Calendar#setLenient(boolean)
                  */
                 // @ts-ignore
-                setLenient(lenient: boolean): java.util.Calendar.Builder
+                public setLenient(lenient: boolean): java.util.Calendar.Builder
                 /**
                  * Sets the calendar type parameter to the given {@code type}. The
                  * calendar type given by this method has precedence over any explicit
@@ -230,7 +230,7 @@ declare namespace java {
                  * @see Calendar#getAvailableCalendarTypes()
                  */
                 // @ts-ignore
-                setCalendarType(type: string): java.util.Calendar.Builder
+                public setCalendarType(type: java.lang.String | string): java.util.Calendar.Builder
                 /**
                  * Sets the locale parameter to the given {@code locale}. If no locale
                  * is given to this {@code Calendar.Builder}, the {@linkplain
@@ -249,7 +249,7 @@ declare namespace java {
                  * @see Calendar#getInstance(Locale)
                  */
                 // @ts-ignore
-                setLocale(locale: java.util.Locale): java.util.Calendar.Builder
+                public setLocale(locale: java.util.Locale): java.util.Calendar.Builder
                 /**
                  * Sets the week definition parameters to the values given by
                  * {@code firstDayOfWeek} and {@code minimalDaysInFirstWeek} that are
@@ -268,7 +268,7 @@ declare namespace java {
                  * @see Calendar#getMinimalDaysInFirstWeek()
                  */
                 // @ts-ignore
-                setWeekDefinition(firstDayOfWeek: number /*int*/, minimalDaysInFirstWeek: number /*int*/): java.util.Calendar.Builder
+                public setWeekDefinition(firstDayOfWeek: number /*int*/, minimalDaysInFirstWeek: number /*int*/): java.util.Calendar.Builder
                 /**
                  * Returns a {@code Calendar} built from the parameters set by the
                  * setter methods. The calendar type given by the {@link #setCalendarType(String)
@@ -300,7 +300,7 @@ declare namespace java {
                  * @see TimeZone#getDefault()
                  */
                 // @ts-ignore
-                build(): java.util.Calendar
+                public build(): java.util.Calendar
             }
         }
     }

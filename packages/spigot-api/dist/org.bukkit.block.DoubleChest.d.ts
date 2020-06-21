@@ -9,21 +9,21 @@ declare namespace org {
                 // @ts-ignore
                 constructor(chest: org.bukkit.inventory.DoubleChestInventory)
                 // @ts-ignore
-                getInventory(): org.bukkit.inventory.Inventory
+                public getInventory(): org.bukkit.inventory.Inventory
                 // @ts-ignore
-                getLeftSide(): org.bukkit.inventory.InventoryHolder
+                public getLeftSide(): org.bukkit.inventory.InventoryHolder
                 // @ts-ignore
-                getRightSide(): org.bukkit.inventory.InventoryHolder
+                public getRightSide(): org.bukkit.inventory.InventoryHolder
                 // @ts-ignore
-                getLocation(): org.bukkit.Location
+                public getLocation(): org.bukkit.Location
                 // @ts-ignore
-                getWorld(): org.bukkit.World
+                public getWorld(): org.bukkit.World
                 // @ts-ignore
-                getX(): double
+                public getX(): number /*double*/
                 // @ts-ignore
-                getY(): double
+                public getY(): number /*double*/
                 // @ts-ignore
-                getZ(): double
+                public getZ(): number /*double*/
             }
         }
     }

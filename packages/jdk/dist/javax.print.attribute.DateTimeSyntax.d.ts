@@ -29,7 +29,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class DateTimeSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class DateTimeSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Construct a new date-time attribute with the given
                  * <code>java.util.Date </code> value.
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @return the Date.
                  */
                 // @ts-ignore
-                getValue(): java.util.Date
+                public getValue(): java.util.Date
                 /**
                  * Returns whether this date-time attribute is equivalent to the passed in
                  * object. To be equivalent, all of the following conditions must be true:
@@ -63,13 +63,13 @@ declare namespace javax {
                  *           attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this date-time attribute. The hashcode is
                  * that of this attribute's <code>java.util.Date</code> value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string value corresponding to this date-time attribute.
                  * The string value is just this attribute's
@@ -77,7 +77,7 @@ declare namespace javax {
                  * converted to a string.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -14,7 +14,7 @@ declare namespace org {
                          * generics).</p>
                          */
                         // @ts-ignore
-                        class TransformWith implements java.lang.annotation.Annotation {
+                        abstract class TransformWith implements java.lang.annotation.Annotation {
                         }
                     }
                 }

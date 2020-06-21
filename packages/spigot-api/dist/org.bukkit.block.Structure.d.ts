@@ -12,7 +12,7 @@ declare namespace org {
                  * @return structure name
                  */
                 // @ts-ignore
-                getStructureName(): java.lang.String
+                getStructureName(): string
                 /**
                  * Set the name of this structure. This is case-sensitive. The name of the
                  * structure in the {@link UsageMode#SAVE} structure block MUST match the
@@ -21,19 +21,19 @@ declare namespace org {
                  * @param name the case-sensitive name of this structure
                  */
                 // @ts-ignore
-                setStructureName(name: string): void
+                setStructureName(name: java.lang.String | string): void
                 /**
                  * Get the name of who created this structure.
                  * @return the name of whoever created this structure.
                  */
                 // @ts-ignore
-                getAuthor(): java.lang.String
+                getAuthor(): string
                 /**
                  * Set the name of whoever created this structure.
                  * @param author whoever created this structure (not empty)
                  */
                 // @ts-ignore
-                setAuthor(author: string): void
+                setAuthor(author: java.lang.String | string): void
                 /**
                  * Set the name of whoever created this structure using a
                  * {@link LivingEntity}.
@@ -166,7 +166,7 @@ declare namespace org {
                  * @return the integrity of this structure
                  */
                 // @ts-ignore
-                getIntegrity(): float
+                getIntegrity(): number /*float*/
                 /**
                  * The seed used to determine which blocks will be removed upon loading.
                  * {@link #getIntegrity()} and seed are used together to determine which
@@ -181,7 +181,7 @@ declare namespace org {
                  * @return the seed used
                  */
                 // @ts-ignore
-                getSeed(): long
+                getSeed(): number /*long*/
                 /**
                  * Only applicable while in {@link UsageMode#DATA}. Metadata are specific
                  * functions that can be applied to the structure location. Consult the
@@ -190,7 +190,7 @@ declare namespace org {
                  * @param metadata the function to perform on the selected location
                  */
                 // @ts-ignore
-                setMetadata(metadata: string): void
+                setMetadata(metadata: java.lang.String | string): void
                 /**
                  * Get the metadata function this structure block will perform when
                  * activated. Consult the
@@ -199,7 +199,7 @@ declare namespace org {
                  * @return the function that will be performed when this block is activated
                  */
                 // @ts-ignore
-                getMetadata(): java.lang.String
+                getMetadata(): string
             }
         }
     }

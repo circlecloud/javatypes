@@ -72,7 +72,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getConnection(username: string, password: string): java.sql.Connection
+            getConnection(username: java.lang.String | string, password: java.lang.String | string): java.sql.Connection
         }
     }
 }

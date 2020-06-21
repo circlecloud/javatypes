@@ -180,7 +180,7 @@ declare namespace org {
                  * @return Held item slot number
                  */
                 // @ts-ignore
-                getHeldItemSlot(): int
+                getHeldItemSlot(): number /*int*/
                 /**
                  * Set the slot number of the currently held item.
                  * <p>

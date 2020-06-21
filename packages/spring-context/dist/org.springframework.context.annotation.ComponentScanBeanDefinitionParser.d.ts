@@ -14,13 +14,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    parse(element: org.w3c.dom.Element, parserContext: ParserContext): BeanDefinition
+                    public parse(element: org.w3c.dom.Element, parserContext: ParserContext): BeanDefinition
                     // @ts-ignore
                     configureScanner(parserContext: ParserContext, element: org.w3c.dom.Element): org.springframework.context.annotation.ClassPathBeanDefinitionScanner
                     // @ts-ignore
                     createScanner(readerContext: XmlReaderContext, useDefaultFilters: boolean): org.springframework.context.annotation.ClassPathBeanDefinitionScanner
                     // @ts-ignore
-                    registerComponents(readerContext: XmlReaderContext, beanDefinitions: Array<BeanDefinitionHolder>, element: org.w3c.dom.Element): void
+                    registerComponents(readerContext: XmlReaderContext, beanDefinitions: java.util.Set<BeanDefinitionHolder> | Array<BeanDefinitionHolder>, element: org.w3c.dom.Element): void
                     // @ts-ignore
                     parseBeanNameGenerator(element: org.w3c.dom.Element, scanner: org.springframework.context.annotation.ClassPathBeanDefinitionScanner): void
                     // @ts-ignore

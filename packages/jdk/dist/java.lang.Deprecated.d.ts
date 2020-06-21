@@ -10,7 +10,7 @@ declare namespace java {
          * @jls 9.6.3.6 #Deprecated
          */
         // @ts-ignore
-        class Deprecated implements java.lang.annotation.Annotation {
+        abstract class Deprecated implements java.lang.annotation.Annotation {
         }
     }
 }

@@ -78,7 +78,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#setParentBeanFactory
                      */
                     // @ts-ignore
-                    setParent(parent: org.springframework.context.ApplicationContext): void
+                    public setParent(parent: org.springframework.context.ApplicationContext): void
                     /**
                      * Set whether it should be allowed to override bean definitions by registering
                      * a different definition with the same name, automatically replacing the former.
@@ -87,7 +87,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowBeanDefinitionOverriding
                      */
                     // @ts-ignore
-                    setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding: boolean): void
+                    public setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding: boolean): void
                     /**
                      * Set whether to allow circular references between beans - and automatically
                      * try to resolve them.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowCircularReferences
                      */
                     // @ts-ignore
-                    setAllowCircularReferences(allowCircularReferences: boolean): void
+                    public setAllowCircularReferences(allowCircularReferences: boolean): void
                     /**
                      * Set a ResourceLoader to use for this context. If set, the context will
                      * delegate all {@code getResource} calls to the given ResourceLoader.
@@ -117,14 +117,14 @@ declare namespace org {
                      * @see #getResources
                      */
                     // @ts-ignore
-                    setResourceLoader(resourceLoader: ResourceLoader): void
+                    public setResourceLoader(resourceLoader: ResourceLoader): void
                     /**
                      * This implementation delegates to this context's ResourceLoader if set,
                      * falling back to the default superclass behavior else.
                      * @see #setResourceLoader
                      */
                     // @ts-ignore
-                    getResource(location: string): Resource
+                    public getResource(location: java.lang.String | string): Resource
                     /**
                      * This implementation delegates to this context's ResourceLoader if it
                      * implements the ResourcePatternResolver interface, falling back to the
@@ -132,11 +132,11 @@ declare namespace org {
                      * @see #setResourceLoader
                      */
                     // @ts-ignore
-                    getResources(locationPattern: string): Resource[]
+                    public getResources(locationPattern: java.lang.String | string): Resource[]
                     // @ts-ignore
-                    setClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    getClassLoader(): java.lang.ClassLoader
+                    public getClassLoader(): java.lang.ClassLoader
                     /**
                      * Do nothing: We hold a single internal BeanFactory and rely on callers
                      * to register beans through our public methods (or the BeanFactory's).
@@ -157,7 +157,7 @@ declare namespace org {
                      * (as ConfigurableListableBeanFactory).
                      */
                     // @ts-ignore
-                    getBeanFactory(): ConfigurableListableBeanFactory
+                    public getBeanFactory(): ConfigurableListableBeanFactory
                     /**
                      * Return the underlying bean factory of this context,
                      * available for registering bean definitions.
@@ -167,23 +167,23 @@ declare namespace org {
                      * @return the internal bean factory (as DefaultListableBeanFactory)
                      */
                     // @ts-ignore
-                    getDefaultListableBeanFactory(): DefaultListableBeanFactory
+                    public getDefaultListableBeanFactory(): DefaultListableBeanFactory
                     // @ts-ignore
-                    getAutowireCapableBeanFactory(): AutowireCapableBeanFactory
+                    public getAutowireCapableBeanFactory(): AutowireCapableBeanFactory
                     // @ts-ignore
-                    registerBeanDefinition(beanName: string, beanDefinition: BeanDefinition): void
+                    public registerBeanDefinition(beanName: java.lang.String | string, beanDefinition: BeanDefinition): void
                     // @ts-ignore
-                    removeBeanDefinition(beanName: string): void
+                    public removeBeanDefinition(beanName: java.lang.String | string): void
                     // @ts-ignore
-                    getBeanDefinition(beanName: string): BeanDefinition
+                    public getBeanDefinition(beanName: java.lang.String | string): BeanDefinition
                     // @ts-ignore
-                    isBeanNameInUse(beanName: string): boolean
+                    public isBeanNameInUse(beanName: java.lang.String | string): boolean
                     // @ts-ignore
-                    registerAlias(beanName: string, alias: string): void
+                    public registerAlias(beanName: java.lang.String | string, alias: java.lang.String | string): void
                     // @ts-ignore
-                    removeAlias(alias: string): void
+                    public removeAlias(alias: java.lang.String | string): void
                     // @ts-ignore
-                    isAlias(beanName: string): boolean
+                    public isAlias(beanName: java.lang.String | string): boolean
                     /**
                      * Register a bean from the given bean class, optionally providing explicit
                      * constructor arguments for consideration in the autowiring process.
@@ -195,7 +195,7 @@ declare namespace org {
                      * @since 5.2 (since 5.0 on the AnnotationConfigApplicationContext subclass)
                      */
                     // @ts-ignore
-                    registerBean<T>(beanClass: java.lang.Class<T>, ...constructorArgs: any[]): void
+                    public registerBean<T>(beanClass: java.lang.Class<T>, ...constructorArgs: java.lang.Object[] | any[]): void
                     /**
                      * Register a bean from the given bean class, optionally providing explicit
                      * constructor arguments for consideration in the autowiring process.
@@ -208,7 +208,7 @@ declare namespace org {
                      * @since 5.2 (since 5.0 on the AnnotationConfigApplicationContext subclass)
                      */
                     // @ts-ignore
-                    registerBean<T>(beanName: string, beanClass: java.lang.Class<T>, ...constructorArgs: any[]): void
+                    public registerBean<T>(beanName: java.lang.String | string, beanClass: java.lang.Class<T>, ...constructorArgs: java.lang.Object[] | any[]): void
                     /**
                      * Register a bean from the given bean class, optionally customizing its
                      * bean definition metadata (typically declared as a lambda expression).
@@ -220,7 +220,7 @@ declare namespace org {
                      * @see #registerBean(String, Class, Supplier, BeanDefinitionCustomizer...)
                      */
                     // @ts-ignore
-                    registerBean<T>(beanClass: java.lang.Class<T>, ...customizers: BeanDefinitionCustomizer[]): void
+                    public registerBean<T>(beanClass: java.lang.Class<T>, ...customizers: BeanDefinitionCustomizer[]): void
                     /**
                      * Register a bean from the given bean class, optionally customizing its
                      * bean definition metadata (typically declared as a lambda expression).
@@ -233,7 +233,7 @@ declare namespace org {
                      * @see #registerBean(String, Class, Supplier, BeanDefinitionCustomizer...)
                      */
                     // @ts-ignore
-                    registerBean<T>(beanName: string, beanClass: java.lang.Class<T>, ...customizers: BeanDefinitionCustomizer[]): void
+                    public registerBean<T>(beanName: java.lang.String | string, beanClass: java.lang.Class<T>, ...customizers: BeanDefinitionCustomizer[]): void
                     /**
                      * Register a bean from the given bean class, using the given supplier for
                      * obtaining a new instance (typically declared as a lambda expression or
@@ -247,7 +247,7 @@ declare namespace org {
                      * @see #registerBean(String, Class, Supplier, BeanDefinitionCustomizer...)
                      */
                     // @ts-ignore
-                    registerBean<T>(beanClass: java.lang.Class<T>, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
+                    public registerBean<T>(beanClass: java.lang.Class<T>, supplier: java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
                     /**
                      * Register a bean from the given bean class, using the given supplier for
                      * obtaining a new instance (typically declared as a lambda expression or
@@ -264,7 +264,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    registerBean<T>(beanName: string, beanClass: java.lang.Class<T>, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
+                    public registerBean<T>(beanName: java.lang.String | string, beanClass: java.lang.Class<T>, supplier: java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
                 }
             }
         }

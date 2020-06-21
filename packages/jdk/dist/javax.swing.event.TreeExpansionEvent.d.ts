@@ -30,7 +30,7 @@ declare namespace javax {
                  *                 node
                  */
                 // @ts-ignore
-                constructor(source: any, path: javax.swing.tree.TreePath)
+                constructor(source: java.lang.Object | any, path: javax.swing.tree.TreePath)
                 /**
                  * Path to the value this event represents.
                  */
@@ -40,7 +40,7 @@ declare namespace javax {
                  * Returns the path to the value that has been expanded/collapsed.
                  */
                 // @ts-ignore
-                getPath(): javax.swing.tree.TreePath
+                public getPath(): javax.swing.tree.TreePath
             }
         }
     }

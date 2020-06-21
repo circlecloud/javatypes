@@ -20,9 +20,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                getParameterNames(method: java.lang.reflect.Method): java.lang.String[]
+                public getParameterNames(method: java.lang.reflect.Method): string[]
                 // @ts-ignore
-                getParameterNames(ctor: java.lang.reflect.Constructor<any>): java.lang.String[]
+                public getParameterNames(ctor: java.lang.reflect.Constructor<any>): string[]
             }
         }
     }

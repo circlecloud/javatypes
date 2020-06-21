@@ -15,13 +15,13 @@ declare namespace org {
                      * @return The selector of this text
                      */
                     // @ts-ignore
-                    getSelector(): org.spongepowered.api.text.selector.Selector
+                    public getSelector(): org.spongepowered.api.text.selector.Selector
                     // @ts-ignore
-                    toBuilder(): org.spongepowered.api.text.SelectorText.Builder
+                    public toBuilder(): org.spongepowered.api.text.SelectorText.Builder
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

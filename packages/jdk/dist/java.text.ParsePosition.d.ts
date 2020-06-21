@@ -27,13 +27,13 @@ declare namespace java {
              * @return the current parse position
              */
             // @ts-ignore
-            getIndex(): int
+            public getIndex(): number /*int*/
             /**
              * Set the current parse position.
              * @param index the current parse position
              */
             // @ts-ignore
-            setIndex(index: number /*int*/): void
+            public setIndex(index: number /*int*/): void
             /**
              * Set the index at which a parse error occurred.  Formatters
              * should set this before returning an error code from their
@@ -42,7 +42,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setErrorIndex(ei: number /*int*/): void
+            public setErrorIndex(ei: number /*int*/): void
             /**
              * Retrieve the index at which an error occurred, or -1 if the
              * error index has not been set.
@@ -50,24 +50,24 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getErrorIndex(): int
+            public getErrorIndex(): number /*int*/
             /**
              * Overrides equals
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hash code for this ParsePosition.
              * @return a hash code value for this object
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Return a string representation of this ParsePosition.
              * @return a string representation of this object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#COOLDOWN
                                  */
                                 // @ts-ignore
-                                cooldown(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                                cooldown(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                             }
                         }
                     }

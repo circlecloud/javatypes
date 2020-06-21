@@ -59,7 +59,7 @@ declare namespace java {
                  * field should be synchronized on that object
                  */
                 // @ts-ignore
-                services: java.util.HashMap
+                services: java.util.HashMap<any>
                 /**
                  * The number of instances of a serializable <tt>BeanContextServceProvider</tt>.
                  */
@@ -74,7 +74,7 @@ declare namespace java {
                  * List of <tt>BeanContextServicesListener</tt> objects.
                  */
                 // @ts-ignore
-                bcsListeners: java.util.ArrayList
+                bcsListeners: java.util.ArrayList<any>
                 /**
                  * called by BeanContextSupport superclass during construction and
                  * deserialization to initialize subclass transient state.
@@ -82,7 +82,7 @@ declare namespace java {
                  * call it directly.
                  */
                 // @ts-ignore
-                initialize(): void
+                public initialize(): void
                 /**
                  * Gets the <tt>BeanContextServices</tt> associated with this
                  * <tt>BeanContextServicesSupport</tt>.
@@ -90,7 +90,7 @@ declare namespace java {
                  *  this object is providing the implementation for.
                  */
                 // @ts-ignore
-                getBeanContextServicesPeer(): java.beans.beancontext.BeanContextServices
+                public getBeanContextServicesPeer(): java.beans.beancontext.BeanContextServices
                 /**
                  * <p>
                  * Subclasses can override this method to insert their own subclass
@@ -101,7 +101,7 @@ declare namespace java {
                  * @param peer        the peer if the targetChild and peer are related by BeanContextProxy
                  */
                 // @ts-ignore
-                createBCSChild(targetChild: any, peer: any): java.beans.beancontext.BeanContextSupport.BCSChild
+                createBCSChild(targetChild: java.lang.Object | any, peer: java.lang.Object | any): java.beans.beancontext.BeanContextSupport.BCSChild
                 /**
                  * subclasses can override this method to create new subclasses of
                  * BCSSServiceProvider without having to override addService() in
@@ -111,25 +111,25 @@ declare namespace java {
                  * @return a service provider without overriding addService()
                  */
                 // @ts-ignore
-                createBCSSServiceProvider(sc: java.lang.Class, bcsp: java.beans.beancontext.BeanContextServiceProvider): java.beans.beancontext.BeanContextServicesSupport.BCSSServiceProvider
+                createBCSSServiceProvider(sc: java.lang.Class<any>, bcsp: java.beans.beancontext.BeanContextServiceProvider): java.beans.beancontext.BeanContextServicesSupport.BCSSServiceProvider
                 /**
                  * add a BeanContextServicesListener
                  * @throws NullPointerException if the argument is null
                  */
                 // @ts-ignore
-                addBeanContextServicesListener(bcsl: java.beans.beancontext.BeanContextServicesListener): void
+                public addBeanContextServicesListener(bcsl: java.beans.beancontext.BeanContextServicesListener): void
                 /**
                  * remove a BeanContextServicesListener
                  */
                 // @ts-ignore
-                removeBeanContextServicesListener(bcsl: java.beans.beancontext.BeanContextServicesListener): void
+                public removeBeanContextServicesListener(bcsl: java.beans.beancontext.BeanContextServicesListener): void
                 /**
                  * add a service
                  * @param serviceClass the service class
                  * @param bcsp the service provider
                  */
                 // @ts-ignore
-                addService(serviceClass: java.lang.Class, bcsp: java.beans.beancontext.BeanContextServiceProvider): boolean
+                public addService(serviceClass: java.lang.Class<any>, bcsp: java.beans.beancontext.BeanContextServiceProvider): boolean
                 /**
                  * add a service
                  * @param serviceClass the service class
@@ -138,7 +138,7 @@ declare namespace java {
                  * @return true if the service was successfully added
                  */
                 // @ts-ignore
-                addService(serviceClass: java.lang.Class, bcsp: java.beans.beancontext.BeanContextServiceProvider, fireEvent: boolean): boolean
+                addService(serviceClass: java.lang.Class<any>, bcsp: java.beans.beancontext.BeanContextServiceProvider, fireEvent: boolean): boolean
                 /**
                  * remove a service
                  * @param serviceClass the service class
@@ -146,33 +146,33 @@ declare namespace java {
                  * @param revokeCurrentServicesNow whether or not to revoke the service
                  */
                 // @ts-ignore
-                revokeService(serviceClass: java.lang.Class, bcsp: java.beans.beancontext.BeanContextServiceProvider, revokeCurrentServicesNow: boolean): void
+                public revokeService(serviceClass: java.lang.Class<any>, bcsp: java.beans.beancontext.BeanContextServiceProvider, revokeCurrentServicesNow: boolean): void
                 /**
                  * has a service, which may be delegated
                  */
                 // @ts-ignore
-                hasService(serviceClass: java.lang.Class): boolean
+                public hasService(serviceClass: java.lang.Class<any>): boolean
                 /**
                  * obtain a service which may be delegated
                  */
                 // @ts-ignore
-                getService(child: java.beans.beancontext.BeanContextChild, requestor: any, serviceClass: java.lang.Class, serviceSelector: any, bcsrl: java.beans.beancontext.BeanContextServiceRevokedListener): java.lang.Object
+                public getService(child: java.beans.beancontext.BeanContextChild, requestor: java.lang.Object | any, serviceClass: java.lang.Class<any>, serviceSelector: java.lang.Object | any, bcsrl: java.beans.beancontext.BeanContextServiceRevokedListener): any
                 /**
                  * release a service
                  */
                 // @ts-ignore
-                releaseService(child: java.beans.beancontext.BeanContextChild, requestor: any, service: any): void
+                public releaseService(child: java.beans.beancontext.BeanContextChild, requestor: java.lang.Object | any, service: java.lang.Object | any): void
                 /**
                  * @return an iterator for all the currently registered service classes.
                  */
                 // @ts-ignore
-                getCurrentServiceClasses(): java.util.Iterator
+                public getCurrentServiceClasses(): java.util.Iterator<any>
                 /**
                  * @return an iterator for all the currently available service selectors
                  *  (if any) available for the specified service.
                  */
                 // @ts-ignore
-                getCurrentServiceSelectors(serviceClass: java.lang.Class): java.util.Iterator
+                public getCurrentServiceSelectors(serviceClass: java.lang.Class<any>): java.util.Iterator<any>
                 /**
                  * BeanContextServicesListener callback, propagates event to all
                  * currently registered listeners and BeanContextServices children,
@@ -182,7 +182,7 @@ declare namespace java {
                  * own propagation semantics.
                  */
                 // @ts-ignore
-                serviceAvailable(bcssae: java.beans.beancontext.BeanContextServiceAvailableEvent): void
+                public serviceAvailable(bcssae: java.beans.beancontext.BeanContextServiceAvailableEvent): void
                 /**
                  * BeanContextServicesListener callback, propagates event to all
                  * currently registered listeners and BeanContextServices children,
@@ -192,7 +192,7 @@ declare namespace java {
                  * own propagation semantics.
                  */
                 // @ts-ignore
-                serviceRevoked(bcssre: java.beans.beancontext.BeanContextServiceRevokedEvent): void
+                public serviceRevoked(bcssre: java.beans.beancontext.BeanContextServiceRevokedEvent): void
                 /**
                  * Gets the <tt>BeanContextServicesListener</tt> (if any) of the specified
                  * child.
@@ -200,7 +200,7 @@ declare namespace java {
                  * @return the BeanContextServicesListener (if any) of the specified child
                  */
                 // @ts-ignore
-                getChildBeanContextServicesListener(child: any): java.beans.beancontext.BeanContextServicesListener
+                static getChildBeanContextServicesListener(child: java.lang.Object | any): java.beans.beancontext.BeanContextServicesListener
                 /**
                  * called from superclass child removal operations after a child
                  * has been successfully removed. called with child synchronized.
@@ -210,7 +210,7 @@ declare namespace java {
                  * own child removal side-effects.
                  */
                 // @ts-ignore
-                childJustRemovedHook(child: any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
+                childJustRemovedHook(child: java.lang.Object | any, bcsc: java.beans.beancontext.BeanContextSupport.BCSChild): void
                 /**
                  * called from setBeanContext to notify a BeanContextChild
                  * to release resources obtained from the nesting BeanContext.
@@ -231,7 +231,7 @@ declare namespace java {
                  * @param serviceClass the service class
                  */
                 // @ts-ignore
-                fireServiceAdded(serviceClass: java.lang.Class): void
+                fireServiceAdded(serviceClass: java.lang.Class<any>): void
                 /**
                  * Fires a <tt>BeanContextServiceAvailableEvent</tt> indicating that a new
                  * service has become available.
@@ -253,7 +253,7 @@ declare namespace java {
                  * @param revokeNow whether or not the event should be revoked now
                  */
                 // @ts-ignore
-                fireServiceRevoked(serviceClass: java.lang.Class, revokeNow: boolean): void
+                fireServiceRevoked(serviceClass: java.lang.Class<any>, revokeNow: boolean): void
                 /**
                  * called from BeanContextSupport writeObject before it serializes the
                  * children ...

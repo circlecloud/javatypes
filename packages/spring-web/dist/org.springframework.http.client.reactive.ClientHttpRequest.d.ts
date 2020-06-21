@@ -25,7 +25,7 @@ declare namespace org {
                          * Return a mutable map of request cookies to send to the server.
                          */
                         // @ts-ignore
-                        getCookies(): <any>
+                        getCookies(): object
                     }
                 }
             }

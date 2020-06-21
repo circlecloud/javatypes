@@ -14,13 +14,13 @@ declare namespace org {
                  * @return particle color
                  */
                 // @ts-ignore
-                getColor(): org.bukkit.Color
+                public getColor(): org.bukkit.Color
                 /**
                  * Relative size of the particle.
                  * @return relative particle size
                  */
                 // @ts-ignore
-                getSize(): float
+                public getSize(): number /*float*/
             }
         }
     }

@@ -12,13 +12,13 @@ declare namespace javax {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            report(diagnostic: javax.tools.Diagnostic<S>): void
+            public report(diagnostic: javax.tools.Diagnostic<any>): void
             /**
              * Gets a list view of diagnostics collected by this object.
              * @return a list view of diagnostics
              */
             // @ts-ignore
-            getDiagnostics(): java.util.List<javax.tools.Diagnostic<? extends S>>
+            public getDiagnostics(): Array<javax.tools.Diagnostic<any>>
         }
     }
 }

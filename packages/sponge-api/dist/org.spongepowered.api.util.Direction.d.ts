@@ -17,9 +17,47 @@ declare namespace org {
                 // @ts-ignore
                 class Direction extends java.lang.Enum<org.spongepowered.api.util.Direction> {
                     // @ts-ignore
+                    readonly NORTH: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly NORTH_NORTHEAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly NORTHEAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly EAST_NORTHEAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly EAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly EAST_SOUTHEAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly SOUTHEAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly SOUTH_SOUTHEAST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly SOUTH: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly SOUTH_SOUTHWEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly SOUTHWEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly WEST_SOUTHWEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly WEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly WEST_NORTHWEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly NORTHWEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly NORTH_NORTHWEST: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly UP: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly DOWN: org.spongepowered.api.util.Direction
+                    // @ts-ignore
+                    readonly NONE: org.spongepowered.api.util.Direction
+                    // @ts-ignore
                     values(): org.spongepowered.api.util.Direction[]
                     // @ts-ignore
-                    valueOf(name: string): org.spongepowered.api.util.Direction
+                    valueOf(name: java.lang.String | string): org.spongepowered.api.util.Direction
                     /**
                      * Gets the closest direction from the given vector. If the vector is the
                      * 0-Vector, this method returns {@link #NONE}. If the vector has the same

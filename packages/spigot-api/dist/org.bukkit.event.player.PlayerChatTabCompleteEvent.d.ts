@@ -9,13 +9,13 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerChatTabCompleteEvent extends org.bukkit.event.player.PlayerEvent {
                     // @ts-ignore
-                    constructor(who: org.bukkit.entity.Player, message: string, completions: Array<java.lang.String>)
+                    constructor(who: org.bukkit.entity.Player, message: java.lang.String | string, completions: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>)
                     /**
                      * Gets the chat message being tab-completed.
                      * @return the chat message
                      */
                     // @ts-ignore
-                    getChatMessage(): java.lang.String
+                    public getChatMessage(): string
                     /**
                      * Gets the last 'token' of the message being tab-completed.
                      * <p>
@@ -24,17 +24,17 @@ declare namespace org {
                      * @return The last token for the chat message
                      */
                     // @ts-ignore
-                    getLastToken(): java.lang.String
+                    public getLastToken(): string
                     /**
                      * This is the collection of completions for this event.
                      * @return the current completions
                      */
                     // @ts-ignore
-                    getTabCompletions(): java.util.Collection<java.lang.String>
+                    public getTabCompletions(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

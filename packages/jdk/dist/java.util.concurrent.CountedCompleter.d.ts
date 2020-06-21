@@ -345,7 +345,7 @@ declare namespace java {
              * @author Doug Lea
              */
             // @ts-ignore
-            class CountedCompleter<T> extends java.util.concurrent.ForkJoinTask<T> {
+            abstract class CountedCompleter<T> extends java.util.concurrent.ForkJoinTask<T> {
                 /**
                  * Creates a new CountedCompleter with the given completer
                  * and initial pending count.
@@ -371,7 +371,7 @@ declare namespace java {
                  * The main computation performed by this task.
                  */
                 // @ts-ignore
-                abstract compute(): void
+                public abstract compute(): void
                 /**
                  * Performs an action when method {@link #tryComplete} is invoked
                  * and the pending count is zero, or when the unconditional
@@ -384,7 +384,7 @@ declare namespace java {
                  *  be this task itself)
                  */
                 // @ts-ignore
-                onCompletion(caller: java.util.concurrent.CountedCompleter<any>): void
+                public onCompletion(caller: java.util.concurrent.CountedCompleter<any>): void
                 /**
                  * Performs an action when method {@link
                  * #completeExceptionally(Throwable)} is invoked or method {@link
@@ -403,32 +403,32 @@ declare namespace java {
                  *  task's completer, if one exists
                  */
                 // @ts-ignore
-                onExceptionalCompletion(ex: Error, caller: java.util.concurrent.CountedCompleter<any>): boolean
+                public onExceptionalCompletion(ex: java.lang.Throwable | Error, caller: java.util.concurrent.CountedCompleter<any>): boolean
                 /**
                  * Returns the completer established in this task's constructor,
                  * or {@code null} if none.
                  * @return the completer
                  */
                 // @ts-ignore
-                getCompleter(): java.util.concurrent.CountedCompleter<?>
+                public getCompleter(): java.util.concurrent.CountedCompleter<any>
                 /**
                  * Returns the current pending count.
                  * @return the current pending count
                  */
                 // @ts-ignore
-                getPendingCount(): int
+                public getPendingCount(): number /*int*/
                 /**
                  * Sets the pending count to the given value.
                  * @param count the count
                  */
                 // @ts-ignore
-                setPendingCount(count: number /*int*/): void
+                public setPendingCount(count: number /*int*/): void
                 /**
                  * Adds (atomically) the given value to the pending count.
                  * @param delta the value to add
                  */
                 // @ts-ignore
-                addToPendingCount(delta: number /*int*/): void
+                public addToPendingCount(delta: number /*int*/): void
                 /**
                  * Sets (atomically) the pending count to the given count only if
                  * it currently holds the given expected value.
@@ -437,21 +437,21 @@ declare namespace java {
                  * @return {#code true} if successful
                  */
                 // @ts-ignore
-                compareAndSetPendingCount(expected: number /*int*/, count: number /*int*/): boolean
+                public compareAndSetPendingCount(expected: number /*int*/, count: number /*int*/): boolean
                 /**
                  * If the pending count is nonzero, (atomically) decrements it.
                  * @return the initial (undecremented) pending count holding on entry
                  *  to this method
                  */
                 // @ts-ignore
-                decrementPendingCountUnlessZero(): int
+                public decrementPendingCountUnlessZero(): number /*int*/
                 /**
                  * Returns the root of the current computation; i.e., this
                  * task if it has no completer, else its completer's root.
                  * @return the root of the current computation
                  */
                 // @ts-ignore
-                getRoot(): java.util.concurrent.CountedCompleter<?>
+                public getRoot(): java.util.concurrent.CountedCompleter<any>
                 /**
                  * If the pending count is nonzero, decrements the count;
                  * otherwise invokes {@link #onCompletion(CountedCompleter)}
@@ -459,7 +459,7 @@ declare namespace java {
                  * if one exists, else marks this task as complete.
                  */
                 // @ts-ignore
-                tryComplete(): void
+                public tryComplete(): void
                 /**
                  * Equivalent to {@link #tryComplete} but does not invoke {@link
                  * #onCompletion(CountedCompleter)} along the completion path:
@@ -470,7 +470,7 @@ declare namespace java {
                  * not, be invoked for each completer in a computation.
                  */
                 // @ts-ignore
-                propagateCompletion(): void
+                public propagateCompletion(): void
                 /**
                  * Regardless of pending count, invokes
                  * {@link #onCompletion(CountedCompleter)}, marks this task as
@@ -489,7 +489,7 @@ declare namespace java {
                  * @param rawResult the raw result
                  */
                 // @ts-ignore
-                complete(rawResult: T): void
+                public complete(rawResult: T): void
                 /**
                  * If this task's pending count is zero, returns this task;
                  * otherwise decrements its pending count and returns {@code
@@ -498,7 +498,7 @@ declare namespace java {
                  * @return this task, if pending count was zero, else {#code null}
                  */
                 // @ts-ignore
-                firstComplete(): java.util.concurrent.CountedCompleter<?>
+                public firstComplete(): java.util.concurrent.CountedCompleter<any>
                 /**
                  * If this task does not have a completer, invokes {@link
                  * ForkJoinTask#quietlyComplete} and returns {@code null}.  Or, if
@@ -515,12 +515,12 @@ declare namespace java {
                  * @return the completer, or {#code null} if none
                  */
                 // @ts-ignore
-                nextComplete(): java.util.concurrent.CountedCompleter<?>
+                public nextComplete(): java.util.concurrent.CountedCompleter<any>
                 /**
                  * Equivalent to {@code getRoot().quietlyComplete()}.
                  */
                 // @ts-ignore
-                quietlyCompleteRoot(): void
+                public quietlyCompleteRoot(): void
                 /**
                  * If this task has not completed, attempts to process at most the
                  * given number of other unprocessed tasks for which this task is
@@ -530,7 +530,7 @@ declare namespace java {
                  *                  processed.
                  */
                 // @ts-ignore
-                helpComplete(maxTasks: number /*int*/): void
+                public helpComplete(maxTasks: number /*int*/): void
                 /**
                  * Implements execution conventions for CountedCompleters.
                  */
@@ -545,7 +545,7 @@ declare namespace java {
                  * @return the result of the computation
                  */
                 // @ts-ignore
-                getRawResult(): T
+                public getRawResult(): T
                 /**
                  * A method that result-bearing CountedCompleters may optionally
                  * use to help maintain result data.  By default, does nothing.

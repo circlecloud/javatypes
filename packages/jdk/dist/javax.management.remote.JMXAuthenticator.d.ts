@@ -34,7 +34,7 @@ declare namespace javax {
                  *  with the provided credentials.
                  */
                 // @ts-ignore
-                authenticate(credentials: any): javax.security.auth.Subject
+                authenticate(credentials: java.lang.Object | any): javax.security.auth.Subject
             }
         }
     }

@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The string representation of this text
                          */
                         // @ts-ignore
-                        serialize(text: org.spongepowered.api.text.Text): java.lang.String
+                        serialize(text: org.spongepowered.api.text.Text): string
                         /**
                          * Returns a string representation of only the provided {@link Text}
                          * (without any children) in a format that will be accepted by this
@@ -29,7 +29,7 @@ declare namespace org {
                          * @return The string representation of this text (without any children)
                          */
                         // @ts-ignore
-                        serializeSingle(text: org.spongepowered.api.text.Text): java.lang.String
+                        serializeSingle(text: org.spongepowered.api.text.Text): string
                         /**
                          * Returns a {@link Text} instance from an appropriately formatted string.
                          * @param input The raw input to parse into a text
@@ -37,7 +37,7 @@ declare namespace org {
                          * @throws TextParseException If an error occurs while parsing the text
                          */
                         // @ts-ignore
-                        deserialize(input: string): org.spongepowered.api.text.Text
+                        deserialize(input: java.lang.String | string): org.spongepowered.api.text.Text
                         /**
                          * Tries to return a {@link Text} instance from the provided input string.
                          * However, if the input string is not of a valid format, the returned
@@ -47,7 +47,7 @@ declare namespace org {
                          * @return The parsed text for the input string, or the raw input
                          */
                         // @ts-ignore
-                        deserializeUnchecked(input: string): org.spongepowered.api.text.Text
+                        deserializeUnchecked(input: java.lang.String | string): org.spongepowered.api.text.Text
                     }
                 }
             }

@@ -76,7 +76,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <code>name</code> is empty.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new SSLPermission object with the specified name.
                  * The name is the symbolic name of the SSLPermission, and the
@@ -87,7 +87,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if <code>name</code> is empty.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

@@ -47,7 +47,7 @@ declare namespace javax {
                  * @see java.text.SimpleDateFormat
                  */
                 // @ts-ignore
-                constructor(spinner: javax.swing.JSpinner, dateFormatPattern: string)
+                constructor(spinner: javax.swing.JSpinner, dateFormatPattern: java.lang.String | string)
                 /**
                  * Returns the <code>java.text.SimpleDateFormat</code> object the
                  * <code>JFormattedTextField</code> uses to parse and format
@@ -57,7 +57,7 @@ declare namespace javax {
                  * @see java.text.SimpleDateFormat
                  */
                 // @ts-ignore
-                getFormat(): java.text.SimpleDateFormat
+                public getFormat(): java.text.SimpleDateFormat
                 /**
                  * Return our spinner ancestor's <code>SpinnerDateModel</code>.
                  * @return <code>getSpinner().getModel()</code>
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @see #getTextField
                  */
                 // @ts-ignore
-                getModel(): javax.swing.SpinnerDateModel
+                public getModel(): javax.swing.SpinnerDateModel
             }
         }
     }

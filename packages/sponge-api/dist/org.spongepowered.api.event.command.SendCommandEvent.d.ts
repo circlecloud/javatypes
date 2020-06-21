@@ -15,7 +15,7 @@ declare namespace org {
                          * @return The command
                          */
                         // @ts-ignore
-                        getCommand(): java.lang.String
+                        getCommand(): string
                         /**
                          * Sets the command as a string, without any sort of command prefix.
                          * <p>For example, if the message was {@code /example bob 3 -f}, then
@@ -23,7 +23,7 @@ declare namespace org {
                          * @param command The command
                          */
                         // @ts-ignore
-                        setCommand(command: string): void
+                        setCommand(command: java.lang.String | string): void
                         /**
                          * Gets the arguments as a string.
                          * <p>For example, if the message was {@code /example bob 3 -f}, then
@@ -31,7 +31,7 @@ declare namespace org {
                          * @return The arguments
                          */
                         // @ts-ignore
-                        getArguments(): java.lang.String
+                        getArguments(): string
                         /**
                          * Sets the arguments as a string.
                          * <p>For example, if the message was {@code /example bob 3 -f}, then
@@ -39,7 +39,7 @@ declare namespace org {
                          * @param arguments The arguments
                          */
                         // @ts-ignore
-                        setArguments(arguments: string): void
+                        setArguments(arguments: java.lang.String | string): void
                         /**
                          * The result of the command.
                          * @return The result of the command

@@ -28,7 +28,7 @@ declare namespace java {
              * @author Doug Lea
              */
             // @ts-ignore
-            class RecursiveTask<V> extends java.util.concurrent.ForkJoinTask<V> {
+            abstract class RecursiveTask<V> extends java.util.concurrent.ForkJoinTask<V> {
                 // @ts-ignore
                 constructor()
                 /**
@@ -38,7 +38,7 @@ declare namespace java {
                 // @ts-ignore
                 abstract compute(): V
                 // @ts-ignore
-                getRawResult(): V
+                public getRawResult(): V
                 // @ts-ignore
                 setRawResult(value: V): void
                 /**

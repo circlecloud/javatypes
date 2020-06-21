@@ -9,15 +9,15 @@ declare namespace org {
                     // @ts-ignore
                     class Professions extends java.lang.Object {
                         // @ts-ignore
-                        readonly BLACKSMITH: org.spongepowered.api.data.type.Profession
+                        public static readonly BLACKSMITH: org.spongepowered.api.data.type.Profession
                         // @ts-ignore
-                        readonly BUTCHER: org.spongepowered.api.data.type.Profession
+                        public static readonly BUTCHER: org.spongepowered.api.data.type.Profession
                         // @ts-ignore
-                        readonly FARMER: org.spongepowered.api.data.type.Profession
+                        public static readonly FARMER: org.spongepowered.api.data.type.Profession
                         // @ts-ignore
-                        readonly LIBRARIAN: org.spongepowered.api.data.type.Profession
+                        public static readonly LIBRARIAN: org.spongepowered.api.data.type.Profession
                         // @ts-ignore
-                        readonly PRIEST: org.spongepowered.api.data.type.Profession
+                        public static readonly PRIEST: org.spongepowered.api.data.type.Profession
                     }
                 }
             }

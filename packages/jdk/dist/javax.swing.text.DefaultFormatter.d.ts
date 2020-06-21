@@ -62,7 +62,7 @@ declare namespace javax {
                  *             uninstall from current JFormattedTextField.
                  */
                 // @ts-ignore
-                install(ftf: javax.swing.JFormattedTextField): void
+                public install(ftf: javax.swing.JFormattedTextField): void
                 /**
                  * Sets when edits are published back to the
                  * <code>JFormattedTextField</code>. If true, <code>commitEdit</code>
@@ -77,14 +77,14 @@ declare namespace javax {
                  *                JTextComponent
                  */
                 // @ts-ignore
-                setCommitsOnValidEdit(commit: boolean): void
+                public setCommitsOnValidEdit(commit: boolean): void
                 /**
                  * Returns when edits are published back to the
                  * <code>JFormattedTextField</code>.
                  * @return true if edits are committed after every valid edit
                  */
                 // @ts-ignore
-                getCommitsOnValidEdit(): boolean
+                public getCommitsOnValidEdit(): boolean
                 /**
                  * Configures the behavior when inserting characters. If
                  * <code>overwriteMode</code> is true (the default), new characters
@@ -92,13 +92,13 @@ declare namespace javax {
                  * @param overwriteMode Indicates if overwrite or overstrike mode is used
                  */
                 // @ts-ignore
-                setOverwriteMode(overwriteMode: boolean): void
+                public setOverwriteMode(overwriteMode: boolean): void
                 /**
                  * Returns the behavior when inserting characters.
                  * @return true if newly inserted characters overwrite existing characters
                  */
                 // @ts-ignore
-                getOverwriteMode(): boolean
+                public getOverwriteMode(): boolean
                 /**
                  * Sets whether or not the value being edited is allowed to be invalid
                  * for a length of time (that is, <code>stringToValue</code> throws
@@ -109,14 +109,14 @@ declare namespace javax {
                  *         be valid
                  */
                 // @ts-ignore
-                setAllowsInvalid(allowsInvalid: boolean): void
+                public setAllowsInvalid(allowsInvalid: boolean): void
                 /**
                  * Returns whether or not the value being edited is allowed to be invalid
                  * for a length of time.
                  * @return false if the edited value must always be valid
                  */
                 // @ts-ignore
-                getAllowsInvalid(): boolean
+                public getAllowsInvalid(): boolean
                 /**
                  * Sets that class that is used to create new Objects. If the
                  * passed in class does not have a single argument constructor that
@@ -125,13 +125,13 @@ declare namespace javax {
                  *         stringToValue
                  */
                 // @ts-ignore
-                setValueClass(valueClass: java.lang.Class<any>): void
+                public setValueClass(valueClass: java.lang.Class<any>): void
                 /**
                  * Returns that class that is used to create new Objects.
                  * @return Class used to construct return value from stringToValue
                  */
                 // @ts-ignore
-                getValueClass(): java.lang.Class<?>
+                public getValueClass(): java.lang.Class<any>
                 /**
                  * Converts the passed in String into an instance of
                  * <code>getValueClass</code> by way of the constructor that
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @return Object representation of text
                  */
                 // @ts-ignore
-                stringToValue(string: string): java.lang.Object
+                public stringToValue(string: java.lang.String | string): any
                 /**
                  * Converts the passed in Object into a String by way of the
                  * <code>toString</code> method.
@@ -155,7 +155,7 @@ declare namespace javax {
                  * @return String representation of value
                  */
                 // @ts-ignore
-                valueToString(value: any): java.lang.String
+                public valueToString(value: java.lang.Object | any): string
                 /**
                  * Returns the <code>DocumentFilter</code> used to restrict the characters
                  * that can be input into the <code>JFormattedTextField</code>.
@@ -175,7 +175,7 @@ declare namespace javax {
                  * @return copy of the DefaultFormatter
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

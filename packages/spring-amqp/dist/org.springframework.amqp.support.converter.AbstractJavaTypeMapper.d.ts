@@ -11,35 +11,35 @@ declare namespace org {
                      * @author Gary Russell
                      */
                     // @ts-ignore
-                    class AbstractJavaTypeMapper extends java.lang.Object {
+                    abstract class AbstractJavaTypeMapper extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly DEFAULT_CLASSID_FIELD_NAME: string
+                        public static readonly DEFAULT_CLASSID_FIELD_NAME: java.lang.String | string
                         // @ts-ignore
-                        readonly DEFAULT_CONTENT_CLASSID_FIELD_NAME: string
+                        public static readonly DEFAULT_CONTENT_CLASSID_FIELD_NAME: java.lang.String | string
                         // @ts-ignore
-                        readonly DEFAULT_KEY_CLASSID_FIELD_NAME: string
+                        public static readonly DEFAULT_KEY_CLASSID_FIELD_NAME: java.lang.String | string
                         // @ts-ignore
-                        getClassIdFieldName(): java.lang.String
+                        public getClassIdFieldName(): string
                         // @ts-ignore
-                        getContentClassIdFieldName(): java.lang.String
+                        public getContentClassIdFieldName(): string
                         // @ts-ignore
-                        getKeyClassIdFieldName(): java.lang.String
+                        public getKeyClassIdFieldName(): string
                         // @ts-ignore
-                        setIdClassMapping(idClassMapping: java.util.Map<java.lang.String, java.lang.Class<any>>): void
+                        public setIdClassMapping(idClassMapping: java.util.Map<java.lang.String | string, java.lang.Class<any>>): void
                         // @ts-ignore
-                        setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                         // @ts-ignore
                         getClassLoader(): java.lang.ClassLoader
                         // @ts-ignore
-                        addHeader(properties: org.springframework.amqp.core.MessageProperties, headerName: string, clazz: java.lang.Class<any>): void
+                        addHeader(properties: org.springframework.amqp.core.MessageProperties, headerName: java.lang.String | string, clazz: java.lang.Class<any>): void
                         // @ts-ignore
-                        retrieveHeader(properties: org.springframework.amqp.core.MessageProperties, headerName: string): java.lang.String
+                        retrieveHeader(properties: org.springframework.amqp.core.MessageProperties, headerName: java.lang.String | string): string
                         // @ts-ignore
-                        retrieveHeaderAsString(properties: org.springframework.amqp.core.MessageProperties, headerName: string): java.lang.String
+                        retrieveHeaderAsString(properties: org.springframework.amqp.core.MessageProperties, headerName: java.lang.String | string): string
                         // @ts-ignore
-                        getIdClassMapping(): java.util.Map<java.lang.String, java.lang.Class<?>>
+                        public getIdClassMapping(): java.util.Map<java.lang.String | string, java.lang.Class<any>>
                         // @ts-ignore
                         hasInferredTypeHeader(properties: org.springframework.amqp.core.MessageProperties): boolean
                         // @ts-ignore

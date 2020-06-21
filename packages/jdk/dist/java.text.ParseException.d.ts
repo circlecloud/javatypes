@@ -18,13 +18,13 @@ declare namespace java {
              * @param errorOffset the position where the error is found while parsing.
              */
             // @ts-ignore
-            constructor(s: string, errorOffset: number /*int*/)
+            constructor(s: java.lang.String | string, errorOffset: number /*int*/)
             /**
              * Returns the position where the error was found.
              * @return the position where the error was found
              */
             // @ts-ignore
-            getErrorOffset(): int
+            getErrorOffset(): number /*int*/
         }
     }
 }

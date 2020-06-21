@@ -19,7 +19,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class Enum<E extends java.lang.Enum<E>> extends java.lang.Object implements java.lang.Comparable<E>, java.io.Serializable {
+        abstract class Enum<E extends java.lang.Enum<E>> extends java.lang.Object implements java.lang.Comparable<E>, java.io.Serializable {
             /**
              * Sole constructor.  Programmers cannot invoke this constructor.
              * It is for use by code emitted by the compiler in response to
@@ -31,7 +31,7 @@ declare namespace java {
              *          an ordinal of zero).
              */
             // @ts-ignore
-            constructor(name: string, ordinal: number /*int*/)
+            constructor(name: java.lang.String | string, ordinal: number /*int*/)
             /**
              * Returns the name of this enum constant, exactly as declared in its
              * enum declaration.
@@ -43,7 +43,7 @@ declare namespace java {
              * @return the name of this enum constant
              */
             // @ts-ignore
-            name(): java.lang.String
+            public name(): string
             /**
              * Returns the ordinal of this enumeration constant (its position
              * in its enum declaration, where the initial constant is assigned
@@ -54,7 +54,7 @@ declare namespace java {
              * @return the ordinal of this enumeration constant
              */
             // @ts-ignore
-            ordinal(): int
+            public ordinal(): number /*int*/
             /**
              * Returns the name of this enum constant, as contained in the
              * declaration.  This method may be overridden, though it typically
@@ -63,7 +63,7 @@ declare namespace java {
              * @return the name of this enum constant
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns true if the specified object is equal to this
              * enum constant.
@@ -72,13 +72,13 @@ declare namespace java {
              *           enum constant.
              */
             // @ts-ignore
-            equals(other: any): boolean
+            public equals(other: java.lang.Object | any): boolean
             /**
              * Returns a hash code for this enum constant.
              * @return a hash code for this enum constant.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Throws CloneNotSupportedException.  This guarantees that enums
              * are never cloned, which is necessary to preserve their "singleton"
@@ -86,7 +86,7 @@ declare namespace java {
              * @return (never returns)
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
             /**
              * Compares this enum with the specified object for order.  Returns a
              * negative integer, zero, or a positive integer as this object is less
@@ -96,7 +96,7 @@ declare namespace java {
              * method is the order in which the constants are declared.
              */
             // @ts-ignore
-            compareTo(o: E extends java.lang.Enum<E>): int
+            public compareTo(o: E): number /*int*/
             /**
              * Returns the Class object corresponding to this enum constant's
              * enum type.  Two enum constants e1 and  e2 are of the
@@ -109,7 +109,7 @@ declare namespace java {
              *      enum type
              */
             // @ts-ignore
-            getDeclaringClass(): java.lang.Class<E>
+            public getDeclaringClass(): java.lang.Class<E>
             /**
              * Returns the enum constant of the specified enum type with the
              * specified name.  The name must match exactly an identifier used
@@ -136,7 +136,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf<T extends java.lang.Enum<T>>(enumType: java.lang.Class<T>, name: string): T
+            public static valueOf<T extends java.lang.Enum<T>>(enumType: java.lang.Class<T>, name: java.lang.String | string): T
             /**
              * enum classes cannot have finalize methods.
              */

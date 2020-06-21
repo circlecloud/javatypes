@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#MOISTURE
                                  */
                                 // @ts-ignore
-                                moisture(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                moisture(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

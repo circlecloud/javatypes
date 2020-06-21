@@ -23,12 +23,12 @@ declare namespace org {
                          * A filter for selecting {@code @ExceptionHandler} methods.
                          */
                         // @ts-ignore
-                        readonly EXCEPTION_HANDLER_METHODS: MethodFilter
+                        public static readonly EXCEPTION_HANDLER_METHODS: MethodFilter
                         /**
                          * Whether the contained type has any exception mappings.
                          */
                         // @ts-ignore
-                        hasExceptionMappings(): boolean
+                        public hasExceptionMappings(): boolean
                         /**
                          * Find a {@link Method} to handle the given exception.
                          * Use {@link ExceptionDepthComparator} if more than one match is found.
@@ -36,7 +36,7 @@ declare namespace org {
                          * @return a Method to handle the exception, or {#code null} if none found
                          */
                         // @ts-ignore
-                        resolveMethod(exception: java.lang.Exception): java.lang.reflect.Method
+                        public resolveMethod(exception: java.lang.Exception): java.lang.reflect.Method
                         /**
                          * Find a {@link Method} to handle the given Throwable.
                          * Use {@link ExceptionDepthComparator} if more than one match is found.
@@ -45,7 +45,7 @@ declare namespace org {
                          * @since 5.0
                          */
                         // @ts-ignore
-                        resolveMethodByThrowable(exception: Error): java.lang.reflect.Method
+                        public resolveMethodByThrowable(exception: java.lang.Throwable | Error): java.lang.reflect.Method
                         /**
                          * Find a {@link Method} to handle the given exception type. This can be
                          * useful if an {@link Exception} instance is not available (e.g. for tools).
@@ -53,7 +53,7 @@ declare namespace org {
                          * @return a Method to handle the exception, or {#code null} if none found
                          */
                         // @ts-ignore
-                        resolveMethodByExceptionType(exceptionType: java.lang.Class<java.lang.Throwable>): java.lang.reflect.Method
+                        public resolveMethodByExceptionType(exceptionType: java.lang.Class<any>): java.lang.reflect.Method
                     }
                 }
             }

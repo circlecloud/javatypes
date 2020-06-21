@@ -29,7 +29,7 @@ declare namespace java {
              * @see XMLDecoder#readObject
              */
             // @ts-ignore
-            writeObject(o: any): void
+            writeObject(o: java.lang.Object | any): void
             /**
              * Sets the exception handler for this stream to <code>exceptionListener</code>.
              * The exception handler is notified when this stream catches recoverable
@@ -39,7 +39,7 @@ declare namespace java {
              * @see #getExceptionListener
              */
             // @ts-ignore
-            setExceptionListener(exceptionListener: java.beans.ExceptionListener): void
+            public setExceptionListener(exceptionListener: java.beans.ExceptionListener): void
             /**
              * Gets the exception handler for this stream.
              * @return The exception handler for this stream;
@@ -47,7 +47,7 @@ declare namespace java {
              * @see #setExceptionListener
              */
             // @ts-ignore
-            getExceptionListener(): java.beans.ExceptionListener
+            public getExceptionListener(): java.beans.ExceptionListener
             /**
              * Returns the persistence delegate for the given type.
              * The persistence delegate is calculated by applying
@@ -130,7 +130,7 @@ declare namespace java {
              * @see java.beans.BeanInfo#getBeanDescriptor
              */
             // @ts-ignore
-            getPersistenceDelegate(type: java.lang.Class<any>): java.beans.PersistenceDelegate
+            public getPersistenceDelegate(type: java.lang.Class<any>): java.beans.PersistenceDelegate
             /**
              * Associates the specified persistence delegate with the given type.
              * @param type  the class of objects that the specified persistence delegate applies to
@@ -140,7 +140,7 @@ declare namespace java {
              * @see java.beans.BeanInfo#getBeanDescriptor
              */
             // @ts-ignore
-            setPersistenceDelegate(type: java.lang.Class<any>, delegate: java.beans.PersistenceDelegate): void
+            public setPersistenceDelegate(type: java.lang.Class<any>, delegate: java.beans.PersistenceDelegate): void
             /**
              * Removes the entry for this instance, returning the old entry.
              * @param oldInstance The entry that should be removed.
@@ -148,7 +148,7 @@ declare namespace java {
              * @see #get
              */
             // @ts-ignore
-            remove(oldInstance: any): java.lang.Object
+            public remove(oldInstance: java.lang.Object | any): any
             /**
              * Returns a tentative value for <code>oldInstance</code> in
              * the environment created by this stream. A persistence
@@ -161,7 +161,7 @@ declare namespace java {
              * @return The object, null if the object has not been seen before.
              */
             // @ts-ignore
-            get(oldInstance: any): java.lang.Object
+            public get(oldInstance: java.lang.Object | any): any
             /**
              * Writes statement <code>oldStm</code> to the stream.
              * The <code>oldStm</code> should be written entirely
@@ -181,7 +181,7 @@ declare namespace java {
              * @param oldStm The expression to be written to the stream.
              */
             // @ts-ignore
-            writeStatement(oldStm: java.beans.Statement): void
+            public writeStatement(oldStm: java.beans.Statement): void
             /**
              * The implementation first checks to see if an
              * expression with this value has already been written.
@@ -193,7 +193,7 @@ declare namespace java {
              * @param oldExp The expression to be written to the stream.
              */
             // @ts-ignore
-            writeExpression(oldExp: java.beans.Expression): void
+            public writeExpression(oldExp: java.beans.Expression): void
         }
     }
 }

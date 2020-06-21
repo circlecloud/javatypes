@@ -39,7 +39,7 @@ declare namespace javax {
                      * @see java.sql.Struct
                      */
                     // @ts-ignore
-                    constructor(input: java.sql.Struct, map: java.util.Map<java.lang.String, java.lang.Class<any>>)
+                    constructor(input: java.sql.Struct, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>)
                     /**
                      * Constructs a <code>SerialStruct</code> object from the
                      * given <code>SQLData</code> object, using the given type
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @throws SerialException if an error occurs
                      */
                     // @ts-ignore
-                    constructor(input: java.sql.SQLData, map: java.util.Map<java.lang.String, java.lang.Class<any>>)
+                    constructor(input: java.sql.SQLData, map: java.util.Map<java.lang.String | string, java.lang.Class<any>>)
                     /**
                      * Retrieves the SQL type name for this <code>SerialStruct</code>
                      * object. This is the name used in the SQL definition of the
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @throws SerialException if an error occurs
                      */
                     // @ts-ignore
-                    getSQLTypeName(): java.lang.String
+                    public getSQLTypeName(): string
                     /**
                      * Retrieves an array of <code>Object</code> values containing the
                      * attributes of the SQL structured type that this
@@ -80,7 +80,7 @@ declare namespace javax {
                      * @throws SerialException if an error occurs
                      */
                     // @ts-ignore
-                    getAttributes(): java.lang.Object[]
+                    public getAttributes(): any[]
                     /**
                      * Retrieves the attributes for the SQL structured type that
                      * this <code>SerialStruct</code> represents as an array of
@@ -98,7 +98,7 @@ declare namespace javax {
                      * @throws SerialException if an error occurs
                      */
                     // @ts-ignore
-                    getAttributes(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object[]
+                    public getAttributes(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any[]
                     /**
                      * Compares this SerialStruct to the specified object.  The result is
                      * {@code true} if and only if the argument is not {@code null} and is a
@@ -109,7 +109,7 @@ declare namespace javax {
                      *           equivalent to this SerialStruct, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this {@code SerialStruct}. The hash code for a
                      * {@code SerialStruct} object is computed using the hash codes
@@ -118,7 +118,7 @@ declare namespace javax {
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialStruct}. The copy will contain a
                      * reference to a clone of the underlying attribs array, not a reference
@@ -126,7 +126,7 @@ declare namespace javax {
                      * @return a clone of this SerialStruct
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

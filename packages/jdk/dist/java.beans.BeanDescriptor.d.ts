@@ -30,14 +30,14 @@ declare namespace java {
              * @return The Class object for the bean.
              */
             // @ts-ignore
-            getBeanClass(): java.lang.Class<?>
+            public getBeanClass(): java.lang.Class<any>
             /**
              * Gets the Class object for the bean's customizer.
              * @return The Class object for the bean's customizer.  This may
              *  be null if the bean doesn't have a customizer.
              */
             // @ts-ignore
-            getCustomizerClass(): java.lang.Class<?>
+            public getCustomizerClass(): java.lang.Class<any>
         }
     }
 }

@@ -30,31 +30,31 @@ declare namespace org {
                      * @see org.springframework.web.context.support.WebApplicationContextUtils#getRequiredWebApplicationContext
                      */
                     // @ts-ignore
-                    
+                    readonly ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE: java.lang.String | string
                     /**
                      * Scope identifier for request scope: "request".
                      * Supported in addition to the standard scopes "singleton" and "prototype".
                      */
                     // @ts-ignore
-                    
+                    readonly SCOPE_REQUEST: java.lang.String | string
                     /**
                      * Scope identifier for session scope: "session".
                      * Supported in addition to the standard scopes "singleton" and "prototype".
                      */
                     // @ts-ignore
-                    
+                    readonly SCOPE_SESSION: java.lang.String | string
                     /**
                      * Scope identifier for the global web application scope: "application".
                      * Supported in addition to the standard scopes "singleton" and "prototype".
                      */
                     // @ts-ignore
-                    
+                    readonly SCOPE_APPLICATION: java.lang.String | string
                     /**
                      * Name of the ServletContext environment bean in the factory.
                      * @see javax.servlet.ServletContext
                      */
                     // @ts-ignore
-                    
+                    readonly SERVLET_CONTEXT_BEAN_NAME: java.lang.String | string
                     /**
                      * Name of the ServletContext init-params environment bean in the factory.
                      * <p>Note: Possibly merged with ServletConfig parameters.
@@ -65,14 +65,14 @@ declare namespace org {
                      * @see javax.servlet.ServletConfig#getInitParameter(String)
                      */
                     // @ts-ignore
-                    
+                    readonly CONTEXT_PARAMETERS_BEAN_NAME: java.lang.String | string
                     /**
                      * Name of the ServletContext attributes environment bean in the factory.
                      * @see javax.servlet.ServletContext#getAttributeNames()
                      * @see javax.servlet.ServletContext#getAttribute(String)
                      */
                     // @ts-ignore
-                    
+                    readonly CONTEXT_ATTRIBUTES_BEAN_NAME: java.lang.String | string
                     /**
                      * Return the standard Servlet API ServletContext for this application.
                      */

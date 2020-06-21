@@ -44,7 +44,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                putNextEntry(ze: java.util.zip.ZipEntry): void
+                public putNextEntry(ze: java.util.zip.ZipEntry): void
             }
         }
     }

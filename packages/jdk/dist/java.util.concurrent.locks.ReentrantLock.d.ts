@@ -86,7 +86,7 @@ declare namespace java {
                      * at which time the lock hold count is set to one.
                      */
                     // @ts-ignore
-                    lock(): void
+                    public lock(): void
                     /**
                      * Acquires the lock unless the current thread is
                      * {@linkplain Thread#interrupt interrupted}.
@@ -118,7 +118,7 @@ declare namespace java {
                      * @throws InterruptedException if the current thread is interrupted
                      */
                     // @ts-ignore
-                    lockInterruptibly(): void
+                    public lockInterruptibly(): void
                     /**
                      * Acquires the lock only if it is not held by another thread at the time
                      * of invocation.
@@ -142,7 +142,7 @@ declare namespace java {
                      *          thread; and {@code false} otherwise
                      */
                     // @ts-ignore
-                    tryLock(): boolean
+                    public tryLock(): boolean
                     /**
                      * Acquires the lock if it is not held by another thread within the given
                      * waiting time and the current thread has not been
@@ -198,7 +198,7 @@ declare namespace java {
                      * @throws NullPointerException if the time unit is null
                      */
                     // @ts-ignore
-                    tryLock(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                    public tryLock(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                     /**
                      * Attempts to release this lock.
                      * <p>If the current thread is the holder of this lock then the hold
@@ -209,7 +209,7 @@ declare namespace java {
                      *          hold this lock
                      */
                     // @ts-ignore
-                    unlock(): void
+                    public unlock(): void
                     /**
                      * Returns a {@link Condition} instance for use with this
                      * {@link Lock} instance.
@@ -241,7 +241,7 @@ declare namespace java {
                      * @return the Condition object
                      */
                     // @ts-ignore
-                    newCondition(): java.util.concurrent.locks.Condition
+                    public newCondition(): java.util.concurrent.locks.Condition
                     /**
                      * Queries the number of holds on this lock by the current thread.
                      * <p>A thread has a hold on a lock for each lock action that is not
@@ -268,7 +268,7 @@ declare namespace java {
                      *          or zero if this lock is not held by the current thread
                      */
                     // @ts-ignore
-                    getHoldCount(): int
+                    public getHoldCount(): number /*int*/
                     /**
                      * Queries if this lock is held by the current thread.
                      * <p>Analogous to the {@link Thread#holdsLock(Object)} method for
@@ -304,7 +304,7 @@ declare namespace java {
                      *          {@code false} otherwise
                      */
                     // @ts-ignore
-                    isHeldByCurrentThread(): boolean
+                    public isHeldByCurrentThread(): boolean
                     /**
                      * Queries if this lock is held by any thread. This method is
                      * designed for use in monitoring of the system state,
@@ -313,13 +313,13 @@ declare namespace java {
                      *          {@code false} otherwise
                      */
                     // @ts-ignore
-                    isLocked(): boolean
+                    public isLocked(): boolean
                     /**
                      * Returns {@code true} if this lock has fairness set true.
                      * @return {#code true} if this lock has fairness set true
                      */
                     // @ts-ignore
-                    isFair(): boolean
+                    public isFair(): boolean
                     /**
                      * Returns the thread that currently owns this lock, or
                      * {@code null} if not owned. When this method is called by a
@@ -344,7 +344,7 @@ declare namespace java {
                      *          acquire the lock
                      */
                     // @ts-ignore
-                    hasQueuedThreads(): boolean
+                    public hasQueuedThreads(): boolean
                     /**
                      * Queries whether the given thread is waiting to acquire this
                      * lock. Note that because cancellations may occur at any time, a
@@ -356,7 +356,7 @@ declare namespace java {
                      * @throws NullPointerException if the thread is null
                      */
                     // @ts-ignore
-                    hasQueuedThread(thread: java.lang.Thread): boolean
+                    public hasQueuedThread(thread: java.lang.Thread): boolean
                     /**
                      * Returns an estimate of the number of threads waiting to
                      * acquire this lock.  The value is only an estimate because the number of
@@ -367,7 +367,7 @@ declare namespace java {
                      * @return the estimated number of threads waiting for this lock
                      */
                     // @ts-ignore
-                    getQueueLength(): int
+                    public getQueueLength(): number /*int*/
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire this lock.  Because the actual set of threads may change
@@ -379,7 +379,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getQueuedThreads(): java.util.Collection<java.lang.Thread>
+                    getQueuedThreads(): Array<java.lang.Thread>
                     /**
                      * Queries whether any threads are waiting on the given condition
                      * associated with this lock. Note that because timeouts and
@@ -395,7 +395,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    hasWaiters(condition: java.util.concurrent.locks.Condition): boolean
+                    public hasWaiters(condition: java.util.concurrent.locks.Condition): boolean
                     /**
                      * Returns an estimate of the number of threads waiting on the
                      * given condition associated with this lock. Note that because
@@ -411,7 +411,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    getWaitQueueLength(condition: java.util.concurrent.locks.Condition): int
+                    public getWaitQueueLength(condition: java.util.concurrent.locks.Condition): number /*int*/
                     /**
                      * Returns a collection containing those threads that may be
                      * waiting on the given condition associated with this lock.
@@ -429,7 +429,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    getWaitingThreads(condition: java.util.concurrent.locks.Condition): java.util.Collection<java.lang.Thread>
+                    getWaitingThreads(condition: java.util.concurrent.locks.Condition): Array<java.lang.Thread>
                     /**
                      * Returns a string identifying this lock, as well as its lock state.
                      * The state, in brackets, includes either the String {@code "Unlocked"}
@@ -438,7 +438,7 @@ declare namespace java {
                      * @return a string identifying this lock, as well as its lock state
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -45,7 +45,7 @@ declare namespace java {
              * @see java.awt.dnd.DragSource
              */
             // @ts-ignore
-            class DragGestureRecognizer extends java.lang.Object implements java.io.Serializable {
+            abstract class DragGestureRecognizer extends java.lang.Object implements java.io.Serializable {
                 /**
                  * Construct a new <code>DragGestureRecognizer</code>
                  * given the <code>DragSource</code> to be used
@@ -199,7 +199,7 @@ declare namespace java {
                  * @return the DragSource
                  */
                 // @ts-ignore
-                getDragSource(): java.awt.dnd.DragSource
+                public getDragSource(): java.awt.dnd.DragSource
                 /**
                  * This method returns the <code>Component</code>
                  * that is to be "observed" by the
@@ -210,7 +210,7 @@ declare namespace java {
                  *  is associated with
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * set the Component that the DragGestureRecognizer is associated with
                  * registerListeners() and unregisterListeners() are called as a side
@@ -219,7 +219,7 @@ declare namespace java {
                  * @param c The <code>Component</code> or <code>null</code>
                  */
                 // @ts-ignore
-                setComponent(c: java.awt.Component): void
+                public setComponent(c: java.awt.Component): void
                 /**
                  * This method returns an int representing the
                  * type of action(s) this Drag and Drop
@@ -228,7 +228,7 @@ declare namespace java {
                  * @return the currently permitted source action(s)
                  */
                 // @ts-ignore
-                getSourceActions(): int
+                public getSourceActions(): number /*int*/
                 /**
                  * This method sets the permitted source drag action(s)
                  * for this Drag and Drop operation.
@@ -236,7 +236,7 @@ declare namespace java {
                  * @param actions the permitted source drag action(s)
                  */
                 // @ts-ignore
-                setSourceActions(actions: number /*int*/): void
+                public setSourceActions(actions: number /*int*/): void
                 /**
                  * This method returns the first event in the
                  * series of events that initiated
@@ -245,13 +245,13 @@ declare namespace java {
                  * @return the initial event that triggered the drag gesture
                  */
                 // @ts-ignore
-                getTriggerEvent(): java.awt.event.InputEvent
+                public getTriggerEvent(): java.awt.event.InputEvent
                 /**
                  * Reset the Recognizer, if its currently recognizing a gesture, ignore
                  * it.
                  */
                 // @ts-ignore
-                resetRecognizer(): void
+                public resetRecognizer(): void
                 /**
                  * Register a new <code>DragGestureListener</code>.
                  * <P>
@@ -262,7 +262,7 @@ declare namespace java {
                  *  <code>DragGestureListener</code> has already been added.
                  */
                 // @ts-ignore
-                addDragGestureListener(dgl: java.awt.dnd.DragGestureListener): void
+                public addDragGestureListener(dgl: java.awt.dnd.DragGestureListener): void
                 /**
                  * unregister the current DragGestureListener
                  * <P>
@@ -273,7 +273,7 @@ declare namespace java {
                  *  dgl is not (equal to) the currently registered <code>DragGestureListener</code>.
                  */
                 // @ts-ignore
-                removeDragGestureListener(dgl: java.awt.dnd.DragGestureListener): void
+                public removeDragGestureListener(dgl: java.awt.dnd.DragGestureListener): void
                 /**
                  * Notify the DragGestureListener that a Drag and Drop initiating
                  * gesture has occurred. Then reset the state of the Recognizer.

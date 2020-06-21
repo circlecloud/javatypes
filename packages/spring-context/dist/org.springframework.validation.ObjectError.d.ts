@@ -19,7 +19,7 @@ declare namespace org {
                  * @param defaultMessage the default message to be used to resolve this message
                  */
                 // @ts-ignore
-                constructor(objectName: string, defaultMessage: string)
+                constructor(objectName: java.lang.String | string, defaultMessage: java.lang.String | string)
                 /**
                  * Create a new instance of the ObjectError class.
                  * @param objectName the name of the affected object
@@ -28,12 +28,12 @@ declare namespace org {
                  * @param defaultMessage the default message to be used to resolve this message
                  */
                 // @ts-ignore
-                constructor(objectName: string, codes: string[], arguments: any[], defaultMessage: string)
+                constructor(objectName: java.lang.String | string, codes: java.lang.String[] | string[], arguments: java.lang.Object[] | any[], defaultMessage: java.lang.String | string)
                 /**
                  * Return the name of the affected object.
                  */
                 // @ts-ignore
-                getObjectName(): java.lang.String
+                public getObjectName(): string
                 /**
                  * Preserve the source behind this error: possibly an {@link Exception}
                  * (typically {@link org.springframework.beans.PropertyAccessException})
@@ -44,7 +44,7 @@ declare namespace org {
                  * @since 5.0.4
                  */
                 // @ts-ignore
-                wrap(source: any): void
+                public wrap(source: java.lang.Object | any): void
                 /**
                  * Unwrap the source behind this error: possibly an {@link Exception}
                  * (typically {@link org.springframework.beans.PropertyAccessException})
@@ -58,7 +58,7 @@ declare namespace org {
                  * @since 5.0.4
                  */
                 // @ts-ignore
-                unwrap<T>(sourceType: java.lang.Class<T>): T
+                public unwrap<T>(sourceType: java.lang.Class<T>): T
                 /**
                  * Check the source behind this error: possibly an {@link Exception}
                  * (typically {@link org.springframework.beans.PropertyAccessException})
@@ -70,13 +70,13 @@ declare namespace org {
                  * @since 5.0.4
                  */
                 // @ts-ignore
-                contains(sourceType: java.lang.Class<any>): boolean
+                public contains(sourceType: java.lang.Class<any>): boolean
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

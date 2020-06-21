@@ -20,7 +20,7 @@ declare namespace java {
                      * @return the string representation of the permission set
                      */
                     // @ts-ignore
-                    toString(perms: Array<java.nio.file.attribute.PosixFilePermission>): java.lang.String
+                    public static toString(perms: java.util.Set<java.nio.file.attribute.PosixFilePermission> | Array<java.nio.file.attribute.PosixFilePermission>): string
                     /**
                      * Returns the set of permissions corresponding to a given {@code String}
                      * representation.
@@ -47,7 +47,7 @@ declare namespace java {
                      * @see #toString(Set)
                      */
                     // @ts-ignore
-                    fromString(perms: string): java.util.Set<java.nio.file.attribute.PosixFilePermission>
+                    public static fromString(perms: java.lang.String | string): Array<java.nio.file.attribute.PosixFilePermission>
                     /**
                      * Creates a {@link FileAttribute}, encapsulating a copy of the given file
                      * permissions, suitable for passing to the {@link java.nio.file.Files#createFile
@@ -62,7 +62,7 @@ declare namespace java {
                      *           PosixFilePermission}
                      */
                     // @ts-ignore
-                    asFileAttribute(perms: Array<java.nio.file.attribute.PosixFilePermission>): java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>
+                    public static asFileAttribute(perms: java.util.Set<java.nio.file.attribute.PosixFilePermission> | Array<java.nio.file.attribute.PosixFilePermission>): java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission> | Array<java.nio.file.attribute.PosixFilePermission>>
                 }
             }
         }

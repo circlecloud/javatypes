@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The command
                          */
                         // @ts-ignore
-                        storedCommand(): org.spongepowered.api.data.value.mutable.Value<java.lang.String>
+                        storedCommand(): org.spongepowered.api.data.value.mutable.Value<java.lang.String | string>
                         /**
                          * Gets the success count of the last executed command.
                          * <p>The success count is the number of times the most recently used
@@ -32,7 +32,7 @@ declare namespace org {
                          * @return The last success count
                          */
                         // @ts-ignore
-                        successCount(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                        successCount(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                         /**
                          * Gets whether this command block will keep track of the output from the
                          * last command it executed.

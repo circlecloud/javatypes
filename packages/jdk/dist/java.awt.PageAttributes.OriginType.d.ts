@@ -11,12 +11,12 @@ declare namespace java {
                  * The OriginType instance to use for specifying a physical origin.
                  */
                 // @ts-ignore
-                readonly PHYSICAL: java.awt.PageAttributes.OriginType
+                public static readonly PHYSICAL: java.awt.PageAttributes.OriginType
                 /**
                  * The OriginType instance to use for specifying a printable origin.
                  */
                 // @ts-ignore
-                readonly PRINTABLE: java.awt.PageAttributes.OriginType
+                public static readonly PRINTABLE: java.awt.PageAttributes.OriginType
             }
         }
     }

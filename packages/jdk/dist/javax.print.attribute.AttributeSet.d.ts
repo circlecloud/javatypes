@@ -206,7 +206,7 @@ declare namespace javax {
                  * @return The number of attributes in this attribute set.
                  */
                 // @ts-ignore
-                size(): int
+                size(): number /*int*/
                 /**
                  * Returns an array of the attributes contained in this set.
                  * @return the Attributes contained in this set as an array, zero length
@@ -240,7 +240,7 @@ declare namespace javax {
                  *        attribute   set.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this attribute set. The hash code of an
                  * attribute set is defined to be the sum of the hash codes of each entry
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @return The hash code value for this attribute set.
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
             }
         }
     }

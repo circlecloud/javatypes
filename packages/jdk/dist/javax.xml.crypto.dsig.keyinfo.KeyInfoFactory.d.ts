@@ -52,7 +52,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    class KeyInfoFactory extends java.lang.Object {
+                    abstract class KeyInfoFactory extends java.lang.Object {
                         /**
                          * Default constructor, for invocation by subclasses.
                          */
@@ -83,7 +83,7 @@ declare namespace javax {
                          * @see Provider
                          */
                         // @ts-ignore
-                        getInstance(mechanismType: string): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
+                        public static getInstance(mechanismType: java.lang.String | string): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
                         /**
                          * Returns a <code>KeyInfoFactory</code> that supports the
                          * requested XML processing mechanism and representation type (ex: "DOM"),
@@ -105,7 +105,7 @@ declare namespace javax {
                          * @see Provider
                          */
                         // @ts-ignore
-                        getInstance(mechanismType: string, provider: java.security.Provider): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
+                        public static getInstance(mechanismType: java.lang.String | string, provider: java.security.Provider): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
                         /**
                          * Returns a <code>KeyInfoFactory</code> that supports the
                          * requested XML processing mechanism and representation type (ex: "DOM"),
@@ -130,7 +130,7 @@ declare namespace javax {
                          * @see Provider
                          */
                         // @ts-ignore
-                        getInstance(mechanismType: string, provider: string): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
+                        public static getInstance(mechanismType: java.lang.String | string, provider: java.lang.String | string): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
                         /**
                          * Returns a <code>KeyInfoFactory</code> that supports the
                          * default XML processing mechanism and representation type ("DOM").
@@ -149,7 +149,7 @@ declare namespace javax {
                          * @see Provider
                          */
                         // @ts-ignore
-                        getInstance(): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
+                        public static getInstance(): javax.xml.crypto.dsig.keyinfo.KeyInfoFactory
                         /**
                          * Returns the type of the XML processing mechanism and representation
                          * supported by this <code>KeyInfoFactory</code> (ex: "DOM")
@@ -157,13 +157,13 @@ declare namespace javax {
                          *     <code>KeyInfoFactory</code>
                          */
                         // @ts-ignore
-                        getMechanismType(): java.lang.String
+                        public getMechanismType(): string
                         /**
                          * Returns the provider of this <code>KeyInfoFactory</code>.
                          * @return the provider of this <code>KeyInfoFactory</code>
                          */
                         // @ts-ignore
-                        getProvider(): java.security.Provider
+                        public getProvider(): java.security.Provider
                         /**
                          * Creates a <code>KeyInfo</code> containing the specified list of
                          * key information types.
@@ -177,7 +177,7 @@ declare namespace javax {
                          *     that are not of type {#link XMLStructure}
                          */
                         // @ts-ignore
-                        abstract newKeyInfo(content: Array): javax.xml.crypto.dsig.keyinfo.KeyInfo
+                        public abstract newKeyInfo(content: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.keyinfo.KeyInfo
                         /**
                          * Creates a <code>KeyInfo</code> containing the specified list of key
                          * information types and optional id. The
@@ -195,7 +195,7 @@ declare namespace javax {
                          *     that are not of type {#link XMLStructure}
                          */
                         // @ts-ignore
-                        abstract newKeyInfo(content: Array, id: string): javax.xml.crypto.dsig.keyinfo.KeyInfo
+                        public abstract newKeyInfo(content: java.util.List<any> | Array<any>, id: java.lang.String | string): javax.xml.crypto.dsig.keyinfo.KeyInfo
                         /**
                          * Creates a <code>KeyName</code> from the specified name.
                          * @param name the name that identifies the key
@@ -203,7 +203,7 @@ declare namespace javax {
                          * @throws NullPointerException if <code>name</code> is <code>null</code>
                          */
                         // @ts-ignore
-                        abstract newKeyName(name: string): javax.xml.crypto.dsig.keyinfo.KeyName
+                        public abstract newKeyName(name: java.lang.String | string): javax.xml.crypto.dsig.keyinfo.KeyName
                         /**
                          * Creates a <code>KeyValue</code> from the specified public key.
                          * @param key the public key
@@ -213,7 +213,7 @@ declare namespace javax {
                          * @throws NullPointerException if <code>key</code> is <code>null</code>
                          */
                         // @ts-ignore
-                        abstract newKeyValue(key: java.security.PublicKey): javax.xml.crypto.dsig.keyinfo.KeyValue
+                        public abstract newKeyValue(key: java.security.PublicKey): javax.xml.crypto.dsig.keyinfo.KeyValue
                         /**
                          * Creates a <code>PGPData</code> from the specified PGP public key
                          * identifier.
@@ -226,7 +226,7 @@ declare namespace javax {
                          *     format
                          */
                         // @ts-ignore
-                        abstract newPGPData(keyId: number /*byte*/[]): javax.xml.crypto.dsig.keyinfo.PGPData
+                        public abstract newPGPData(keyId: number /*byte*/[]): javax.xml.crypto.dsig.keyinfo.PGPData
                         /**
                          * Creates a <code>PGPData</code> from the specified PGP public key
                          * identifier, and optional key material packet and list of external
@@ -252,7 +252,7 @@ declare namespace javax {
                          *     entries that are not of type {#link XMLStructure}
                          */
                         // @ts-ignore
-                        abstract newPGPData(keyId: number /*byte*/[], keyPacket: number /*byte*/[], other: Array): javax.xml.crypto.dsig.keyinfo.PGPData
+                        public abstract newPGPData(keyId: number /*byte*/[], keyPacket: number /*byte*/[], other: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.keyinfo.PGPData
                         /**
                          * Creates a <code>PGPData</code> from the specified PGP key material
                          * packet and optional list of external elements.
@@ -273,7 +273,7 @@ declare namespace javax {
                          *     entries that are not of type {#link XMLStructure}
                          */
                         // @ts-ignore
-                        abstract newPGPData(keyPacket: number /*byte*/[], other: Array): javax.xml.crypto.dsig.keyinfo.PGPData
+                        public abstract newPGPData(keyPacket: number /*byte*/[], other: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.keyinfo.PGPData
                         /**
                          * Creates a <code>RetrievalMethod</code> from the specified URI.
                          * @param uri the URI that identifies the <code>KeyInfo</code> information
@@ -284,7 +284,7 @@ declare namespace javax {
                          *     compliant
                          */
                         // @ts-ignore
-                        abstract newRetrievalMethod(uri: string): javax.xml.crypto.dsig.keyinfo.RetrievalMethod
+                        public abstract newRetrievalMethod(uri: java.lang.String | string): javax.xml.crypto.dsig.keyinfo.RetrievalMethod
                         /**
                          * Creates a <code>RetrievalMethod</code> from the specified parameters.
                          * @param uri the URI that identifies the <code>KeyInfo</code> information
@@ -302,7 +302,7 @@ declare namespace javax {
                          *     entries that are not of type {#link Transform}
                          */
                         // @ts-ignore
-                        abstract newRetrievalMethod(uri: string, type: string, transforms: Array): javax.xml.crypto.dsig.keyinfo.RetrievalMethod
+                        public abstract newRetrievalMethod(uri: java.lang.String | string, type: java.lang.String | string, transforms: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.keyinfo.RetrievalMethod
                         /**
                          * Creates a <code>X509Data</code> containing the specified list of
                          * X.509 content.
@@ -325,7 +325,7 @@ declare namespace javax {
                          *     that are not of one of the valid types mentioned above
                          */
                         // @ts-ignore
-                        abstract newX509Data(content: Array): javax.xml.crypto.dsig.keyinfo.X509Data
+                        public abstract newX509Data(content: java.util.List<any> | Array<any>): javax.xml.crypto.dsig.keyinfo.X509Data
                         /**
                          * Creates an <code>X509IssuerSerial</code> from the specified X.500 issuer
                          * distinguished name and serial number.
@@ -341,7 +341,7 @@ declare namespace javax {
                          *     compliant or one of the attribute type keywords is not recognized.
                          */
                         // @ts-ignore
-                        abstract newX509IssuerSerial(issuerName: string, serialNumber: java.math.BigInteger): javax.xml.crypto.dsig.keyinfo.X509IssuerSerial
+                        public abstract newX509IssuerSerial(issuerName: java.lang.String | string, serialNumber: java.math.BigInteger): javax.xml.crypto.dsig.keyinfo.X509IssuerSerial
                         /**
                          * Indicates whether a specified feature is supported.
                          * @param feature the feature name (as an absolute URI)
@@ -350,14 +350,14 @@ declare namespace javax {
                          * @throws NullPointerException if <code>feature</code> is <code>null</code>
                          */
                         // @ts-ignore
-                        abstract isFeatureSupported(feature: string): boolean
+                        public abstract isFeatureSupported(feature: java.lang.String | string): boolean
                         /**
                          * Returns a reference to the <code>URIDereferencer</code> that is used by
                          * default to dereference URIs in {@link RetrievalMethod} objects.
                          * @return a reference to the default <code>URIDereferencer</code>
                          */
                         // @ts-ignore
-                        abstract getURIDereferencer(): javax.xml.crypto.URIDereferencer
+                        public abstract getURIDereferencer(): javax.xml.crypto.URIDereferencer
                         /**
                          * Unmarshals a new <code>KeyInfo</code> instance from a
                          * mechanism-specific <code>XMLStructure</code> (ex: {@link DOMStructure})
@@ -373,7 +373,7 @@ declare namespace javax {
                          *    unmarshalling
                          */
                         // @ts-ignore
-                        abstract unmarshalKeyInfo(xmlStructure: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.keyinfo.KeyInfo
+                        public abstract unmarshalKeyInfo(xmlStructure: javax.xml.crypto.XMLStructure): javax.xml.crypto.dsig.keyinfo.KeyInfo
                     }
                 }
             }

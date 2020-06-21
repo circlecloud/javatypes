@@ -128,7 +128,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                constructor(encoding: javax.sound.sampled.AudioFormat.Encoding, sampleRate: number /*float*/, sampleSizeInBits: number /*int*/, channels: number /*int*/, frameSize: number /*int*/, frameRate: number /*float*/, bigEndian: boolean, properties: java.util.Map<java.lang.String, java.lang.Object>)
+                constructor(encoding: javax.sound.sampled.AudioFormat.Encoding, sampleRate: number /*float*/, sampleSizeInBits: number /*int*/, channels: number /*int*/, frameSize: number /*int*/, frameRate: number /*float*/, bigEndian: boolean, properties: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                 /**
                  * Constructs an <code>AudioFormat</code> with a linear PCM encoding and
                  * the given parameters.  The frame size is set to the number of bytes
@@ -188,7 +188,7 @@ declare namespace javax {
                  * @see Encoding#ALAW
                  */
                 // @ts-ignore
-                getEncoding(): javax.sound.sampled.AudioFormat.Encoding
+                public getEncoding(): javax.sound.sampled.AudioFormat.Encoding
                 /**
                  * Obtains the sample rate.
                  * For compressed formats, the return value is the sample rate of the uncompressed
@@ -206,7 +206,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getSampleRate(): float
+                public getSampleRate(): number /*float*/
                 /**
                  * Obtains the size of a sample.
                  * For compressed formats, the return value is the sample size of the
@@ -224,7 +224,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getSampleSizeInBits(): int
+                public getSampleSizeInBits(): number /*int*/
                 /**
                  * Obtains the number of channels.
                  * When this AudioFormat is used for queries (e.g. {@link
@@ -238,7 +238,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getChannels(): int
+                public getChannels(): number /*int*/
                 /**
                  * Obtains the frame size in bytes.
                  * When this AudioFormat is used for queries (e.g. {@link
@@ -254,7 +254,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getFrameSize(): int
+                public getFrameSize(): number /*int*/
                 /**
                  * Obtains the frame rate in frames per second.
                  * When this AudioFormat is used for queries (e.g. {@link
@@ -270,7 +270,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getFrameRate(): float
+                public getFrameRate(): number /*float*/
                 /**
                  * Indicates whether the audio data is stored in big-endian or little-endian
                  * byte order.  If the sample size is not more than one byte, the return value is
@@ -279,7 +279,7 @@ declare namespace javax {
                  *  <code>false</code> if little-endian
                  */
                 // @ts-ignore
-                isBigEndian(): boolean
+                public isBigEndian(): boolean
                 /**
                  * Obtain an unmodifiable map of properties.
                  * The concept of properties is further explained in
@@ -291,7 +291,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                properties(): java.util.Map<java.lang.String, java.lang.Object>
+                public properties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Obtain the property value specified by the key.
                  * The concept of properties is further explained in
@@ -306,7 +306,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getProperty(key: string): java.lang.Object
+                public getProperty(key: java.lang.String | string): any
                 /**
                  * Indicates whether this format matches the one specified.
                  * To match, two formats must have the same encoding,
@@ -322,7 +322,7 @@ declare namespace javax {
                  *          {@code false} otherwise.
                  */
                 // @ts-ignore
-                matches(format: javax.sound.sampled.AudioFormat): boolean
+                public matches(format: javax.sound.sampled.AudioFormat): boolean
                 /**
                  * Returns a string that describes the format, such as:
                  * "PCM SIGNED 22050 Hz 16 bit mono big-endian".  The contents of the string
@@ -330,7 +330,7 @@ declare namespace javax {
                  * @return a string that describes the format parameters
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

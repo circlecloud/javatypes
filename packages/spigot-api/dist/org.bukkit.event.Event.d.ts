@@ -8,7 +8,7 @@ declare namespace org {
              * @see PluginManager#registerEvents(Listener,Plugin)
              */
             // @ts-ignore
-            class Event extends java.lang.Object {
+            abstract class Event extends java.lang.Object {
                 /**
                  * The default constructor is defined for cleaner code. This constructor
                  * assumes the event is synchronous.
@@ -30,9 +30,9 @@ declare namespace org {
                  * @return name of this event
                  */
                 // @ts-ignore
-                getEventName(): java.lang.String
+                public getEventName(): string
                 // @ts-ignore
-                abstract getHandlers(): org.bukkit.event.HandlerList
+                public abstract getHandlers(): org.bukkit.event.HandlerList
                 /**
                  * Any custom event that should not by synchronized with other events must
                  * use the specific constructor. These are the caveats of using an
@@ -55,7 +55,7 @@ declare namespace org {
                  * @return false by default, true if the event fires asynchronously
                  */
                 // @ts-ignore
-                isAsynchronous(): boolean
+                public isAsynchronous(): boolean
             }
         }
     }

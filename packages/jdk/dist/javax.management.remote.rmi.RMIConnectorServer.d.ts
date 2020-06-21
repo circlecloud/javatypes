@@ -33,7 +33,7 @@ declare namespace javax {
                      *  start} method will fail.
                      */
                     // @ts-ignore
-                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>)
+                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>)
                     /**
                      * <p>Makes an <code>RMIConnectorServer</code> for the given MBean
                      * server.
@@ -58,7 +58,7 @@ declare namespace javax {
                      *  start} method will fail.
                      */
                     // @ts-ignore
-                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>, mbeanServer: javax.management.MBeanServer)
+                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>, mbeanServer: javax.management.MBeanServer)
                     /**
                      * <p>Makes an <code>RMIConnectorServer</code> for the given MBean
                      * server.</p>
@@ -86,7 +86,7 @@ declare namespace javax {
                      * @see #start
                      */
                     // @ts-ignore
-                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>, rmiServerImpl: javax.management.remote.rmi.RMIServerImpl, mbeanServer: javax.management.MBeanServer)
+                    constructor(url: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>, rmiServerImpl: javax.management.remote.rmi.RMIServerImpl, mbeanServer: javax.management.MBeanServer)
                     /**
                      * <p>Name of the attribute that specifies whether the {@link
                      * RMIServer} stub that represents an RMI connector server should
@@ -96,7 +96,7 @@ declare namespace javax {
                      * <code>"false"</code>.  The default value is false.</p>
                      */
                     // @ts-ignore
-                    readonly JNDI_REBIND_ATTRIBUTE: string
+                    public static readonly JNDI_REBIND_ATTRIBUTE: java.lang.String | string
                     /**
                      * <p>Name of the attribute that specifies the {@link
                      * RMIClientSocketFactory} for the RMI objects created in
@@ -106,7 +106,7 @@ declare namespace javax {
                      * creating a connector server.</p>
                      */
                     // @ts-ignore
-                    readonly RMI_CLIENT_SOCKET_FACTORY_ATTRIBUTE: string
+                    public static readonly RMI_CLIENT_SOCKET_FACTORY_ATTRIBUTE: java.lang.String | string
                     /**
                      * <p>Name of the attribute that specifies the {@link
                      * RMIServerSocketFactory} for the RMI objects created in
@@ -116,7 +116,7 @@ declare namespace javax {
                      * creating a connector server.</p>
                      */
                     // @ts-ignore
-                    readonly RMI_SERVER_SOCKET_FACTORY_ATTRIBUTE: string
+                    public static readonly RMI_SERVER_SOCKET_FACTORY_ATTRIBUTE: java.lang.String | string
                     /**
                      * <p>Returns a client stub for this connector server.  A client
                      * stub is a serializable object whose {@link
@@ -136,7 +136,7 @@ declare namespace javax {
                      *  stub cannot be created.
                      */
                     // @ts-ignore
-                    toJMXConnector(env: java.util.Map<java.lang.String, any>): javax.management.remote.JMXConnector
+                    public toJMXConnector(env: java.util.Map<java.lang.String | string, any>): javax.management.remote.JMXConnector
                     /**
                      * <p>Activates the connector server, that is starts listening for
                      * client connections.  Calling this method when the connector
@@ -187,7 +187,7 @@ declare namespace javax {
                      *  RMI/IIOP is not supported.
                      */
                     // @ts-ignore
-                    start(): void
+                    public start(): void
                     /**
                      * <p>Deactivates the connector server, that is, stops listening for
                      * client connections.  Calling this method will also close all
@@ -227,21 +227,21 @@ declare namespace javax {
                      *  close them.
                      */
                     // @ts-ignore
-                    stop(): void
+                    public stop(): void
                     // @ts-ignore
-                    isActive(): boolean
+                    public isActive(): boolean
                     // @ts-ignore
-                    getAddress(): javax.management.remote.JMXServiceURL
+                    public getAddress(): javax.management.remote.JMXServiceURL
                     // @ts-ignore
-                    getAttributes(): java.util.Map<java.lang.String, ?>
+                    public getAttributes(): java.util.Map<java.lang.String | string, any>
                     // @ts-ignore
-                    setMBeanServerForwarder(mbsf: javax.management.remote.MBeanServerForwarder): void
+                    public setMBeanServerForwarder(mbsf: javax.management.remote.MBeanServerForwarder): void
                     // @ts-ignore
-                    connectionOpened(connectionId: string, message: string, userData: any): void
+                    connectionOpened(connectionId: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any): void
                     // @ts-ignore
-                    connectionClosed(connectionId: string, message: string, userData: any): void
+                    connectionClosed(connectionId: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any): void
                     // @ts-ignore
-                    connectionFailed(connectionId: string, message: string, userData: any): void
+                    connectionFailed(connectionId: java.lang.String | string, message: java.lang.String | string, userData: java.lang.Object | any): void
                 }
             }
         }

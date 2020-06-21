@@ -29,7 +29,7 @@ declare namespace javax {
                  * @see #setAccessibleName
                  */
                 // @ts-ignore
-                getAccessibleDescription(): java.lang.String
+                public getAccessibleDescription(): string
                 /**
                  * Gets the state set of this object.
                  * @return an instance of AccessibleStateSet describing the states
@@ -37,7 +37,7 @@ declare namespace javax {
                  * @see AccessibleStateSet
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
             }
         }
     }

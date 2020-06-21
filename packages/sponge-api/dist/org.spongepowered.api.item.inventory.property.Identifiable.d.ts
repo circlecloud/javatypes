@@ -8,7 +8,7 @@ declare namespace org {
                          * A property to uniquely identify an Inventory instance.
                          */
                         // @ts-ignore
-                        class Identifiable extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, java.util.UUID> {
+                        class Identifiable extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, java.util.UUID> {
                             /**
                              * Creates an Identifiable with a random UUID.
                              */
@@ -28,7 +28,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(value: java.util.UUID, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

@@ -18,7 +18,7 @@ declare namespace java {
              * @return the name of the socket option
              */
             // @ts-ignore
-            name(): java.lang.String
+            name(): string
             /**
              * Returns the type of the socket option value.
              * @return the type of the socket option value

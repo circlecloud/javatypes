@@ -25,7 +25,7 @@ declare namespace javax {
                      * @param msg the detail message.
                      */
                     // @ts-ignore
-                    constructor(callback: javax.security.auth.callback.Callback, msg: string)
+                    constructor(callback: javax.security.auth.callback.Callback, msg: java.lang.String | string)
                     /**
                      * Get the unrecognized {@code Callback}.
                      * <p>

@@ -33,7 +33,7 @@ declare namespace javax {
                  * Delegation call for {@link javax.rmi.PortableRemoteObject#narrow}.
                  */
                 // @ts-ignore
-                narrow(narrowFrom: any, narrowTo: java.lang.Class): java.lang.Object
+                narrow(narrowFrom: java.lang.Object | any, narrowTo: java.lang.Class<any>): any
                 /**
                  * Delegation call for {@link javax.rmi.PortableRemoteObject#connect}.
                  */

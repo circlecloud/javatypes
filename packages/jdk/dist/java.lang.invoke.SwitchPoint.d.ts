@@ -114,7 +114,7 @@ declare namespace java {
                  * @return true if this switch point has been invalidated
                  */
                 // @ts-ignore
-                hasBeenInvalidated(): boolean
+                public hasBeenInvalidated(): boolean
                 /**
                  * Returns a method handle which always delegates either to the target or the fallback.
                  * The method handle will delegate to the target exactly as long as the switch point is valid.
@@ -130,7 +130,7 @@ declare namespace java {
                  * @see MethodHandles#guardWithTest
                  */
                 // @ts-ignore
-                guardWithTest(target: java.lang.invoke.MethodHandle, fallback: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
+                public guardWithTest(target: java.lang.invoke.MethodHandle, fallback: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
                 /**
                  * Sets all of the given switch points into the invalid state.
                  * After this call executes, no thread will observe any of the
@@ -170,7 +170,7 @@ declare namespace java {
                  *                               or the array contains a null
                  */
                 // @ts-ignore
-                invalidateAll(switchPoints: java.lang.invoke.SwitchPoint[]): void
+                public static invalidateAll(switchPoints: java.lang.invoke.SwitchPoint[]): void
             }
         }
     }

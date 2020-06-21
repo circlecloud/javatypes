@@ -56,7 +56,7 @@ declare namespace javax {
                      * @return <code>true</code> if tables are present.
                      */
                     // @ts-ignore
-                    areTablesSet(): boolean
+                    public areTablesSet(): boolean
                     /**
                      * Sets the quantization and Huffman tables to use in decoding
                      * abbreviated streams.  There may be a maximum of 4 tables of
@@ -76,14 +76,14 @@ declare namespace javax {
                      * @see #unsetDecodeTables
                      */
                     // @ts-ignore
-                    setDecodeTables(qTables: javax.imageio.plugins.jpeg.JPEGQTable[], DCHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[], ACHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[]): void
+                    public setDecodeTables(qTables: javax.imageio.plugins.jpeg.JPEGQTable[], DCHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[], ACHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[]): void
                     /**
                      * Removes any quantization and Huffman tables that are currently
                      * set.
                      * @see #setDecodeTables
                      */
                     // @ts-ignore
-                    unsetDecodeTables(): void
+                    public unsetDecodeTables(): void
                     /**
                      * Returns a copy of the array of quantization tables set on the
                      * most recent call to <code>setDecodeTables</code>, or
@@ -93,7 +93,7 @@ declare namespace javax {
                      * @see #setDecodeTables
                      */
                     // @ts-ignore
-                    getQTables(): javax.imageio.plugins.jpeg.JPEGQTable[]
+                    public getQTables(): javax.imageio.plugins.jpeg.JPEGQTable[]
                     /**
                      * Returns a copy of the array of DC Huffman tables set on the
                      * most recent call to <code>setDecodeTables</code>, or
@@ -103,7 +103,7 @@ declare namespace javax {
                      * @see #setDecodeTables
                      */
                     // @ts-ignore
-                    getDCHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
+                    public getDCHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
                     /**
                      * Returns a copy of the array of AC Huffman tables set on the
                      * most recent call to <code>setDecodeTables</code>, or
@@ -113,7 +113,7 @@ declare namespace javax {
                      * @see #setDecodeTables
                      */
                     // @ts-ignore
-                    getACHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
+                    public getACHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
                 }
             }
         }

@@ -20,9 +20,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                getTextures(): java.util.List<org.bukkit.Material>
+                public getTextures(): Array<org.bukkit.Material>
                 // @ts-ignore
-                clone(): org.bukkit.material.SmoothBrick
+                public clone(): org.bukkit.material.SmoothBrick
             }
         }
     }

@@ -392,7 +392,7 @@ declare namespace java {
              *           by the above deviations
              */
             // @ts-ignore
-            constructor(str: string)
+            constructor(str: java.lang.String | string)
             /**
              * Constructs a hierarchical URI from the given components.
              * <p> If a scheme is given then the path, if also given, must either be
@@ -451,7 +451,7 @@ declare namespace java {
              *          present but cannot be parsed as a server-based authority
              */
             // @ts-ignore
-            constructor(scheme: string, userInfo: string, host: string, port: number /*int*/, path: string, query: string, fragment: string)
+            constructor(scheme: java.lang.String | string, userInfo: java.lang.String | string, host: java.lang.String | string, port: number /*int*/, path: java.lang.String | string, query: java.lang.String | string, fragment: java.lang.String | string)
             /**
              * Constructs a hierarchical URI from the given components.
              * <p> If a scheme is given then the path, if also given, must either be
@@ -501,7 +501,7 @@ declare namespace java {
              *          present but cannot be parsed as a server-based authority
              */
             // @ts-ignore
-            constructor(scheme: string, authority: string, path: string, query: string, fragment: string)
+            constructor(scheme: java.lang.String | string, authority: java.lang.String | string, path: java.lang.String | string, query: java.lang.String | string, fragment: java.lang.String | string)
             /**
              * Constructs a hierarchical URI from the given components.
              * <p> A component may be left undefined by passing {@code null}.
@@ -520,7 +520,7 @@ declare namespace java {
              *           violates RFC&nbsp;2396
              */
             // @ts-ignore
-            constructor(scheme: string, host: string, path: string, fragment: string)
+            constructor(scheme: java.lang.String | string, host: java.lang.String | string, path: java.lang.String | string, fragment: java.lang.String | string)
             /**
              * Constructs a URI from the given components.
              * <p> A component may be left undefined by passing {@code null}.
@@ -548,7 +548,7 @@ declare namespace java {
              *           violates RFC&nbsp;2396
              */
             // @ts-ignore
-            constructor(scheme: string, ssp: string, fragment: string)
+            constructor(scheme: java.lang.String | string, ssp: java.lang.String | string, fragment: java.lang.String | string)
             /**
              * Creates a URI by parsing the given string.
              * <p> This convenience factory method works as if by invoking the {@link
@@ -570,7 +570,7 @@ declare namespace java {
              *           If the given string violates RFC&nbsp;2396
              */
             // @ts-ignore
-            create(str: string): java.net.URI
+            public static create(str: java.lang.String | string): java.net.URI
             /**
              * Attempts to parse this URI's authority component, if defined, into
              * user-information, host, and port components.
@@ -611,7 +611,7 @@ declare namespace java {
              *           according to RFC&nbsp;2396
              */
             // @ts-ignore
-            parseServerAuthority(): java.net.URI
+            public parseServerAuthority(): java.net.URI
             /**
              * Normalizes this URI's path.
              * <p> If this URI is opaque, or if its path is already in normal form,
@@ -642,7 +642,7 @@ declare namespace java {
              *           but whose path is in normal form
              */
             // @ts-ignore
-            normalize(): java.net.URI
+            public normalize(): java.net.URI
             /**
              * Resolves the given URI against this URI.
              * <p> If the given URI is already absolute, or if this URI is opaque, then
@@ -683,7 +683,7 @@ declare namespace java {
              *           If {#code uri} is {@code null}
              */
             // @ts-ignore
-            resolve(uri: java.net.URI): java.net.URI
+            public resolve(uri: java.net.URI): java.net.URI
             /**
              * Constructs a new URI by parsing the given string and then resolving it
              * against this URI.
@@ -698,7 +698,7 @@ declare namespace java {
              *           If the given string violates RFC&nbsp;2396
              */
             // @ts-ignore
-            resolve(str: string): java.net.URI
+            public resolve(str: java.lang.String | string): java.net.URI
             /**
              * Relativizes the given URI against this URI.
              * <p> The relativization of the given URI against this URI is computed as
@@ -719,7 +719,7 @@ declare namespace java {
              *           If {#code uri} is {@code null}
              */
             // @ts-ignore
-            relativize(uri: java.net.URI): java.net.URI
+            public relativize(uri: java.net.URI): java.net.URI
             /**
              * Constructs a URL from this URI.
              * <p> This convenience method works as if invoking it were equivalent to
@@ -733,7 +733,7 @@ declare namespace java {
              *           or if some other error occurred while constructing the URL
              */
             // @ts-ignore
-            toURL(): java.net.URL
+            public toURL(): java.net.URL
             /**
              * Returns the scheme component of this URI.
              * <p> The scheme component of a URI, if defined, only contains characters
@@ -745,14 +745,14 @@ declare namespace java {
              *           or {#code null} if the scheme is undefined
              */
             // @ts-ignore
-            getScheme(): java.lang.String
+            public getScheme(): string
             /**
              * Tells whether or not this URI is absolute.
              * <p> A URI is absolute if, and only if, it has a scheme component. </p>
              * @return {#code true} if, and only if, this URI is absolute
              */
             // @ts-ignore
-            isAbsolute(): boolean
+            public isAbsolute(): boolean
             /**
              * Tells whether or not this URI is opaque.
              * <p> A URI is opaque if, and only if, it is absolute and its
@@ -762,7 +762,7 @@ declare namespace java {
              * @return {#code true} if, and only if, this URI is opaque
              */
             // @ts-ignore
-            isOpaque(): boolean
+            public isOpaque(): boolean
             /**
              * Returns the raw scheme-specific part of this URI.  The scheme-specific
              * part is never undefined, though it may be empty.
@@ -772,7 +772,7 @@ declare namespace java {
              *           (never {#code null})
              */
             // @ts-ignore
-            getRawSchemeSpecificPart(): java.lang.String
+            public getRawSchemeSpecificPart(): string
             /**
              * Returns the decoded scheme-specific part of this URI.
              * <p> The string returned by this method is equal to that returned by the
@@ -783,7 +783,7 @@ declare namespace java {
              *           (never {#code null})
              */
             // @ts-ignore
-            getSchemeSpecificPart(): java.lang.String
+            public getSchemeSpecificPart(): string
             /**
              * Returns the raw authority component of this URI.
              * <p> The authority component of a URI, if defined, only contains the
@@ -796,7 +796,7 @@ declare namespace java {
              *           or {#code null} if the authority is undefined
              */
             // @ts-ignore
-            getRawAuthority(): java.lang.String
+            public getRawAuthority(): string
             /**
              * Returns the decoded authority component of this URI.
              * <p> The string returned by this method is equal to that returned by the
@@ -806,7 +806,7 @@ declare namespace java {
              *           or {#code null} if the authority is undefined
              */
             // @ts-ignore
-            getAuthority(): java.lang.String
+            public getAuthority(): string
             /**
              * Returns the raw user-information component of this URI.
              * <p> The user-information component of a URI, if defined, only contains
@@ -816,7 +816,7 @@ declare namespace java {
              *           or {#code null} if the user information is undefined
              */
             // @ts-ignore
-            getRawUserInfo(): java.lang.String
+            public getRawUserInfo(): string
             /**
              * Returns the decoded user-information component of this URI.
              * <p> The string returned by this method is equal to that returned by the
@@ -826,7 +826,7 @@ declare namespace java {
              *           or {#code null} if the user information is undefined
              */
             // @ts-ignore
-            getUserInfo(): java.lang.String
+            public getUserInfo(): string
             /**
              * Returns the host component of this URI.
              * <p> The host component of a URI, if defined, will have one of the
@@ -856,7 +856,7 @@ declare namespace java {
              *           or {#code null} if the host is undefined
              */
             // @ts-ignore
-            getHost(): java.lang.String
+            public getHost(): string
             /**
              * Returns the port number of this URI.
              * <p> The port component of a URI, if defined, is a non-negative
@@ -865,7 +865,7 @@ declare namespace java {
              *           or {#code -1} if the port is undefined
              */
             // @ts-ignore
-            getPort(): int
+            public getPort(): number /*int*/
             /**
              * Returns the raw path component of this URI.
              * <p> The path component of a URI, if defined, only contains the slash
@@ -876,7 +876,7 @@ declare namespace java {
              *           or {#code null} if the path is undefined
              */
             // @ts-ignore
-            getRawPath(): java.lang.String
+            public getRawPath(): string
             /**
              * Returns the decoded path component of this URI.
              * <p> The string returned by this method is equal to that returned by the
@@ -886,7 +886,7 @@ declare namespace java {
              *           or {#code null} if the path is undefined
              */
             // @ts-ignore
-            getPath(): java.lang.String
+            public getPath(): string
             /**
              * Returns the raw query component of this URI.
              * <p> The query component of a URI, if defined, only contains legal URI
@@ -895,7 +895,7 @@ declare namespace java {
              *           or {#code null} if the query is undefined
              */
             // @ts-ignore
-            getRawQuery(): java.lang.String
+            public getRawQuery(): string
             /**
              * Returns the decoded query component of this URI.
              * <p> The string returned by this method is equal to that returned by the
@@ -905,7 +905,7 @@ declare namespace java {
              *           or {#code null} if the query is undefined
              */
             // @ts-ignore
-            getQuery(): java.lang.String
+            public getQuery(): string
             /**
              * Returns the raw fragment component of this URI.
              * <p> The fragment component of a URI, if defined, only contains legal URI
@@ -914,7 +914,7 @@ declare namespace java {
              *           or {#code null} if the fragment is undefined
              */
             // @ts-ignore
-            getRawFragment(): java.lang.String
+            public getRawFragment(): string
             /**
              * Returns the decoded fragment component of this URI.
              * <p> The string returned by this method is equal to that returned by the
@@ -924,7 +924,7 @@ declare namespace java {
              *           or {#code null} if the fragment is undefined
              */
             // @ts-ignore
-            getFragment(): java.lang.String
+            public getFragment(): string
             /**
              * Tests this URI for equality with another object.
              * <p> If the given object is not a URI then this method immediately
@@ -955,7 +955,7 @@ declare namespace java {
              *           is identical to this URI
              */
             // @ts-ignore
-            equals(ob: any): boolean
+            public equals(ob: java.lang.Object | any): boolean
             /**
              * Returns a hash-code value for this URI.  The hash code is based upon all
              * of the URI's components, and satisfies the general contract of the
@@ -963,7 +963,7 @@ declare namespace java {
              * @return A hash-code value for this URI
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this URI to another object, which must be a URI.
              * <p> When comparing corresponding components of two URIs, if one
@@ -1015,7 +1015,7 @@ declare namespace java {
              *           If the given object is not a URI
              */
             // @ts-ignore
-            compareTo(that: java.net.URI): int
+            public compareTo(that: java.net.URI): number /*int*/
             /**
              * Returns the content of this URI as a string.
              * <p> If this URI was created by invoking one of the constructors in this
@@ -1029,7 +1029,7 @@ declare namespace java {
              * @return The string form of this URI
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the content of this URI as a US-ASCII string.
              * <p> If this URI does not contain any characters in the <i>other</i>
@@ -1042,7 +1042,7 @@ declare namespace java {
              *           charset
              */
             // @ts-ignore
-            toASCIIString(): java.lang.String
+            public toASCIIString(): string
         }
     }
 }

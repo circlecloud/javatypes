@@ -8,15 +8,15 @@ declare namespace org {
                             // @ts-ignore
                             class TeleportTypes extends java.lang.Object {
                                 // @ts-ignore
-                                readonly COMMAND: org.spongepowered.api.event.cause.entity.teleport.TeleportType
+                                public static readonly COMMAND: org.spongepowered.api.event.cause.entity.teleport.TeleportType
                                 // @ts-ignore
-                                readonly ENTITY_TELEPORT: org.spongepowered.api.event.cause.entity.teleport.TeleportType
+                                public static readonly ENTITY_TELEPORT: org.spongepowered.api.event.cause.entity.teleport.TeleportType
                                 // @ts-ignore
-                                readonly PLUGIN: org.spongepowered.api.event.cause.entity.teleport.TeleportType
+                                public static readonly PLUGIN: org.spongepowered.api.event.cause.entity.teleport.TeleportType
                                 // @ts-ignore
-                                readonly PORTAL: org.spongepowered.api.event.cause.entity.teleport.TeleportType
+                                public static readonly PORTAL: org.spongepowered.api.event.cause.entity.teleport.TeleportType
                                 // @ts-ignore
-                                readonly UNKNOWN: org.spongepowered.api.event.cause.entity.teleport.TeleportType
+                                public static readonly UNKNOWN: org.spongepowered.api.event.cause.entity.teleport.TeleportType
                             }
                         }
                     }

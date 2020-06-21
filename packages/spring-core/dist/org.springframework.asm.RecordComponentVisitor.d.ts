@@ -10,7 +10,7 @@ declare namespace org {
              * @deprecated this API is experimental.
              */
             // @ts-ignore
-            class RecordComponentVisitor extends java.lang.Object {
+            abstract class RecordComponentVisitor extends java.lang.Object {
                 /**
                  * Constructs a new {@link RecordComponentVisitor}.
                  * @param api the ASM API version implemented by this visitor. Must be {#link
@@ -41,7 +41,7 @@ declare namespace org {
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                getDelegateExperimental(): org.springframework.asm.RecordComponentVisitor
+                public getDelegateExperimental(): org.springframework.asm.RecordComponentVisitor
                 /**
                  * Visits an annotation of the record component.
                  * @param descriptor the class descriptor of the annotation class.
@@ -51,7 +51,7 @@ declare namespace org {
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                visitAnnotationExperimental(descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitAnnotationExperimental(descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits an annotation on a type in the record component signature.
                  * @param typeRef a reference to the annotated type. The sort of this type reference must be
@@ -68,21 +68,21 @@ declare namespace org {
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                visitTypeAnnotationExperimental(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitTypeAnnotationExperimental(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a non standard attribute of the record component.
                  * @param attribute an attribute.
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                visitAttributeExperimental(attribute: org.springframework.asm.Attribute): void
+                public visitAttributeExperimental(attribute: org.springframework.asm.Attribute): void
                 /**
                  * Visits the end of the record component. This method, which is the last one to be called, is
                  * used to inform the visitor that everything have been visited.
                  * @deprecated this API is experimental.
                  */
                 // @ts-ignore
-                visitEndExperimental(): void
+                public visitEndExperimental(): void
             }
         }
     }

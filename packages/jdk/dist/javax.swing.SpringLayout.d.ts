@@ -151,71 +151,71 @@ declare namespace javax {
              * Specifies the top edge of a component's bounding rectangle.
              */
             // @ts-ignore
-            readonly NORTH: string
+            public static readonly NORTH: java.lang.String | string
             /**
              * Specifies the bottom edge of a component's bounding rectangle.
              */
             // @ts-ignore
-            readonly SOUTH: string
+            public static readonly SOUTH: java.lang.String | string
             /**
              * Specifies the right edge of a component's bounding rectangle.
              */
             // @ts-ignore
-            readonly EAST: string
+            public static readonly EAST: java.lang.String | string
             /**
              * Specifies the left edge of a component's bounding rectangle.
              */
             // @ts-ignore
-            readonly WEST: string
+            public static readonly WEST: java.lang.String | string
             /**
              * Specifies the horizontal center of a component's bounding rectangle.
              * @since 1.6
              */
             // @ts-ignore
-            readonly HORIZONTAL_CENTER: string
+            public static readonly HORIZONTAL_CENTER: java.lang.String | string
             /**
              * Specifies the vertical center of a component's bounding rectangle.
              * @since 1.6
              */
             // @ts-ignore
-            readonly VERTICAL_CENTER: string
+            public static readonly VERTICAL_CENTER: java.lang.String | string
             /**
              * Specifies the baseline of a component.
              * @since 1.6
              */
             // @ts-ignore
-            readonly BASELINE: string
+            public static readonly BASELINE: java.lang.String | string
             /**
              * Specifies the width of a component's bounding rectangle.
              * @since 1.6
              */
             // @ts-ignore
-            readonly WIDTH: string
+            public static readonly WIDTH: java.lang.String | string
             /**
              * Specifies the height of a component's bounding rectangle.
              * @since 1.6
              */
             // @ts-ignore
-            readonly HEIGHT: string
+            public static readonly HEIGHT: java.lang.String | string
             /**
              * Has no effect,
              * since this layout manager does not
              * use a per-component string.
              */
             // @ts-ignore
-            addLayoutComponent(name: string, c: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, c: java.awt.Component): void
             /**
              * Removes the constraints associated with the specified component.
              * @param c the component being removed from the container
              */
             // @ts-ignore
-            removeLayoutComponent(c: java.awt.Component): void
+            public removeLayoutComponent(c: java.awt.Component): void
             // @ts-ignore
-            minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             // @ts-ignore
-            preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
             // @ts-ignore
-            maximumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public maximumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * If <code>constraints</code> is an instance of
              * <code>SpringLayout.Constraints</code>,
@@ -226,19 +226,19 @@ declare namespace javax {
              * @see SpringLayout.Constraints
              */
             // @ts-ignore
-            addLayoutComponent(component: java.awt.Component, constraints: any): void
+            public addLayoutComponent(component: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Returns 0.5f (centered).
              */
             // @ts-ignore
-            getLayoutAlignmentX(p: java.awt.Container): float
+            public getLayoutAlignmentX(p: java.awt.Container): number /*float*/
             /**
              * Returns 0.5f (centered).
              */
             // @ts-ignore
-            getLayoutAlignmentY(p: java.awt.Container): float
+            public getLayoutAlignmentY(p: java.awt.Container): number /*float*/
             // @ts-ignore
-            invalidateLayout(p: java.awt.Container): void
+            public invalidateLayout(p: java.awt.Container): void
             /**
              * Links edge <code>e1</code> of component <code>c1</code> to
              * edge <code>e2</code> of component <code>c2</code>,
@@ -256,7 +256,7 @@ declare namespace javax {
              * @see #putConstraint(String, Component, Spring, String, Component)
              */
             // @ts-ignore
-            putConstraint(e1: string, c1: java.awt.Component, pad: number /*int*/, e2: string, c2: java.awt.Component): void
+            public putConstraint(e1: java.lang.String | string, c1: java.awt.Component, pad: number /*int*/, e2: java.lang.String | string, c2: java.awt.Component): void
             /**
              * Links edge <code>e1</code> of component <code>c1</code> to
              * edge <code>e2</code> of component <code>c2</code>. As edge
@@ -287,7 +287,7 @@ declare namespace javax {
              * @see #BASELINE
              */
             // @ts-ignore
-            putConstraint(e1: string, c1: java.awt.Component, s: javax.swing.Spring, e2: string, c2: java.awt.Component): void
+            public putConstraint(e1: java.lang.String | string, c1: java.awt.Component, s: javax.swing.Spring, e2: java.lang.String | string, c2: java.awt.Component): void
             /**
              * Returns the constraints for the specified component.
              * Note that,
@@ -309,7 +309,7 @@ declare namespace javax {
              * @return the constraints for the specified component
              */
             // @ts-ignore
-            getConstraints(c: java.awt.Component): javax.swing.SpringLayout.Constraints
+            public getConstraints(c: java.awt.Component): javax.swing.SpringLayout.Constraints
             /**
              * Returns the spring controlling the distance between
              * the specified edge of
@@ -344,9 +344,9 @@ declare namespace javax {
              * @see #BASELINE
              */
             // @ts-ignore
-            getConstraint(edgeName: string, c: java.awt.Component): javax.swing.Spring
+            public getConstraint(edgeName: java.lang.String | string, c: java.awt.Component): javax.swing.Spring
             // @ts-ignore
-            layoutContainer(parent: java.awt.Container): void
+            public layoutContainer(parent: java.awt.Container): void
         }
     }
 }

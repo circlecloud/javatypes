@@ -43,7 +43,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class DatatypeFactory extends java.lang.Object {
+            abstract class DatatypeFactory extends java.lang.Object {
                 /**
                  * <p>Protected constructor to prevent instaniation outside of package.</p>
                  * <p>Use {@link #newInstance()} to create a <code>DatatypeFactory</code>.</p>
@@ -55,7 +55,7 @@ declare namespace javax {
                  * <p>Default value is <code>javax.xml.datatype.DatatypeFactory</code>.</p>
                  */
                 // @ts-ignore
-                readonly DATATYPEFACTORY_PROPERTY: string
+                public static readonly DATATYPEFACTORY_PROPERTY: java.lang.String | string
                 /**
                  * <p>Default implementation class name as defined in
                  * <em>JSR 206: Java(TM) API for XML Processing (JAXP) 1.3</em>.</p>
@@ -67,7 +67,7 @@ declare namespace javax {
                  * </p>
                  */
                 // @ts-ignore
-                readonly DATATYPEFACTORY_IMPLEMENTATION_CLASS: string
+                public static readonly DATATYPEFACTORY_IMPLEMENTATION_CLASS: java.lang.String | string
                 /**
                  * <p>Obtain a new instance of a <code>DatatypeFactory</code>.</p>
                  * <p>The implementation resolution mechanisms are <a href="#DatatypeFactory.newInstance">defined</a> in this
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @see #newInstance(String factoryClassName, ClassLoader classLoader)
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.datatype.DatatypeFactory
+                public static newInstance(): javax.xml.datatype.DatatypeFactory
                 /**
                  * <p>Obtain a new instance of a <code>DatatypeFactory</code> from class name.
                  * This function is useful when there are multiple providers in the classpath.
@@ -104,7 +104,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                newInstance(factoryClassName: string, classLoader: java.lang.ClassLoader): javax.xml.datatype.DatatypeFactory
+                public static newInstance(factoryClassName: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.datatype.DatatypeFactory
                 /**
                  * <p>Obtain a new instance of a <code>Duration</code>
                  * specifying the <code>Duration</code> as its string representation, "PnYnMnDTnHnMnS",
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>lexicalRepresentation</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract newDuration(lexicalRepresentation: string): javax.xml.datatype.Duration
+                public abstract newDuration(lexicalRepresentation: java.lang.String | string): javax.xml.datatype.Duration
                 /**
                  * <p>Obtain a new instance of a <code>Duration</code>
                  * specifying the <code>Duration</code> as milliseconds.</p>
@@ -162,7 +162,7 @@ declare namespace javax {
                  * @return New <code>Duration</code> representing <code>durationInMilliSeconds</code>.
                  */
                 // @ts-ignore
-                abstract newDuration(durationInMilliSeconds: number /*long*/): javax.xml.datatype.Duration
+                public abstract newDuration(durationInMilliSeconds: number /*long*/): javax.xml.datatype.Duration
                 /**
                  * <p>Obtain a new instance of a <code>Duration</code>
                  * specifying the <code>Duration</code> as isPositive, years, months, days, hours, minutes, seconds.</p>
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @throws UnsupportedOperationException If implementation cannot support requested values.
                  */
                 // @ts-ignore
-                abstract newDuration(isPositive: boolean, years: java.math.BigInteger, months: java.math.BigInteger, days: java.math.BigInteger, hours: java.math.BigInteger, minutes: java.math.BigInteger, seconds: java.math.BigDecimal): javax.xml.datatype.Duration
+                public abstract newDuration(isPositive: boolean, years: java.math.BigInteger, months: java.math.BigInteger, days: java.math.BigInteger, hours: java.math.BigInteger, minutes: java.math.BigInteger, seconds: java.math.BigDecimal): javax.xml.datatype.Duration
                 /**
                  * <p>Obtain a new instance of a <code>Duration</code>
                  * specifying the <code>Duration</code> as isPositive, years, months, days, hours, minutes, seconds.</p>
@@ -212,7 +212,7 @@ declare namespace javax {
                  *    BigDecimal seconds)
                  */
                 // @ts-ignore
-                newDuration(isPositive: boolean, years: number /*int*/, months: number /*int*/, days: number /*int*/, hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/): javax.xml.datatype.Duration
+                public newDuration(isPositive: boolean, years: number /*int*/, months: number /*int*/, days: number /*int*/, hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> by parsing its <code>String</code> representation,
                  * "<em>PnDTnHnMnS</em>", <a href="http://www.w3.org/TR/xpath-datamodel#dayTimeDuration">
@@ -232,7 +232,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                newDurationDayTime(lexicalRepresentation: string): javax.xml.datatype.Duration
+                public newDurationDayTime(lexicalRepresentation: java.lang.String | string): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified milliseconds as defined in
                  * <a href="http://www.w3.org/TR/xpath-datamodel#dayTimeDuration">
@@ -264,7 +264,7 @@ declare namespace javax {
                  *    XQuery 1.0 and XPath 2.0 Data Model, xdt:dayTimeDuration</a>
                  */
                 // @ts-ignore
-                newDurationDayTime(durationInMilliseconds: number /*long*/): javax.xml.datatype.Duration
+                public newDurationDayTime(durationInMilliseconds: number /*long*/): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified
                  * <code>day</code>, <code>hour</code>, <code>minute</code> and <code>second</code> as defined in
@@ -292,7 +292,7 @@ declare namespace javax {
                  * @throws UnsupportedOperationException If implementation cannot support requested values.
                  */
                 // @ts-ignore
-                newDurationDayTime(isPositive: boolean, day: java.math.BigInteger, hour: java.math.BigInteger, minute: java.math.BigInteger, second: java.math.BigInteger): javax.xml.datatype.Duration
+                public newDurationDayTime(isPositive: boolean, day: java.math.BigInteger, hour: java.math.BigInteger, minute: java.math.BigInteger, second: java.math.BigInteger): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:dayTimeDuration</code> using the specified
                  * <code>day</code>, <code>hour</code>, <code>minute</code> and <code>second</code> as defined in
@@ -314,7 +314,7 @@ declare namespace javax {
                  *  <code>Duration</code>: if any of the fields (day, hour, ...) is negative.
                  */
                 // @ts-ignore
-                newDurationDayTime(isPositive: boolean, day: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/): javax.xml.datatype.Duration
+                public newDurationDayTime(isPositive: boolean, day: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> by parsing its <code>String</code> representation,
                  * "<em>PnYnM</em>", <a href="http://www.w3.org/TR/xpath-datamodel#yearMonthDuration">
@@ -334,7 +334,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                newDurationYearMonth(lexicalRepresentation: string): javax.xml.datatype.Duration
+                public newDurationYearMonth(lexicalRepresentation: java.lang.String | string): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified milliseconds as defined in
                  * <a href="http://www.w3.org/TR/xpath-datamodel#yearMonthDuration">
@@ -364,7 +364,7 @@ declare namespace javax {
                  * @return New <code>Duration</code> created using the specified <code>durationInMilliseconds</code>.
                  */
                 // @ts-ignore
-                newDurationYearMonth(durationInMilliseconds: number /*long*/): javax.xml.datatype.Duration
+                public newDurationYearMonth(durationInMilliseconds: number /*long*/): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified
                  * <code>year</code> and <code>month</code> as defined in
@@ -386,7 +386,7 @@ declare namespace javax {
                  * @throws UnsupportedOperationException If implementation cannot support requested values.
                  */
                 // @ts-ignore
-                newDurationYearMonth(isPositive: boolean, year: java.math.BigInteger, month: java.math.BigInteger): javax.xml.datatype.Duration
+                public newDurationYearMonth(isPositive: boolean, year: java.math.BigInteger, month: java.math.BigInteger): javax.xml.datatype.Duration
                 /**
                  * <p>Create a <code>Duration</code> of type <code>xdt:yearMonthDuration</code> using the specified
                  * <code>year</code> and <code>month</code> as defined in
@@ -402,7 +402,7 @@ declare namespace javax {
                  *  <code>Duration</code>: if any of the fields (year, month) is negative.
                  */
                 // @ts-ignore
-                newDurationYearMonth(isPositive: boolean, year: number /*int*/, month: number /*int*/): javax.xml.datatype.Duration
+                public newDurationYearMonth(isPositive: boolean, year: number /*int*/, month: number /*int*/): javax.xml.datatype.Duration
                 /**
                  * <p>Create a new instance of an <code>XMLGregorianCalendar</code>.</p>
                  * <p>All date/time datatype fields set to {@link DatatypeConstants#FIELD_UNDEFINED} or null.</p>
@@ -410,7 +410,7 @@ declare namespace javax {
                  *    {#link DatatypeConstants#FIELD_UNDEFINED} or null.
                  */
                 // @ts-ignore
-                abstract newXMLGregorianCalendar(): javax.xml.datatype.XMLGregorianCalendar
+                public abstract newXMLGregorianCalendar(): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Create a new XMLGregorianCalendar by parsing the String as a lexical representation.</p>
                  * <p>Parsing the lexical string representation is defined in
@@ -431,7 +431,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>lexicalRepresentation</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract newXMLGregorianCalendar(lexicalRepresentation: string): javax.xml.datatype.XMLGregorianCalendar
+                public abstract newXMLGregorianCalendar(lexicalRepresentation: java.lang.String | string): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Create an <code>XMLGregorianCalendar</code> from a {@link GregorianCalendar}.</p>
                  * <table border="2" rules="all" cellpadding="2">
@@ -490,7 +490,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>cal</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract newXMLGregorianCalendar(cal: java.util.GregorianCalendar): javax.xml.datatype.XMLGregorianCalendar
+                public abstract newXMLGregorianCalendar(cal: java.util.GregorianCalendar): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Constructor allowing for complete value spaces allowed by
                  * W3C XML Schema 1.0 recommendation for xsd:dateTime and related
@@ -513,7 +513,7 @@ declare namespace javax {
                  *    as determined by {@link XMLGregorianCalendar#isValid()}.
                  */
                 // @ts-ignore
-                abstract newXMLGregorianCalendar(year: java.math.BigInteger, month: number /*int*/, day: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/, fractionalSecond: java.math.BigDecimal, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
+                public abstract newXMLGregorianCalendar(year: java.math.BigInteger, month: number /*int*/, day: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/, fractionalSecond: java.math.BigDecimal, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Constructor of value spaces that a
                  * <code>java.util.GregorianCalendar</code> instance would need to convert to an
@@ -536,7 +536,7 @@ declare namespace javax {
                  *    as determined by {@link XMLGregorianCalendar#isValid()}.
                  */
                 // @ts-ignore
-                newXMLGregorianCalendar(year: number /*int*/, month: number /*int*/, day: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/, millisecond: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
+                public newXMLGregorianCalendar(year: number /*int*/, month: number /*int*/, day: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/, millisecond: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Create a Java representation of XML Schema builtin datatype <code>date</code> or <code>g*</code>.</p>
                  * <p>For example, an instance of <code>gYear</code> can be created invoking this factory
@@ -555,7 +555,7 @@ declare namespace javax {
                  *    as determined by {@link XMLGregorianCalendar#isValid()}.
                  */
                 // @ts-ignore
-                newXMLGregorianCalendarDate(year: number /*int*/, month: number /*int*/, day: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
+                public newXMLGregorianCalendarDate(year: number /*int*/, month: number /*int*/, day: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Create a Java instance of XML Schema builtin datatype <code>time</code>.</p>
                  * <p>A {@link DatatypeConstants#FIELD_UNDEFINED} value indicates that field is not set.</p>
@@ -571,7 +571,7 @@ declare namespace javax {
                  * @see DatatypeConstants#FIELD_UNDEFINED
                  */
                 // @ts-ignore
-                newXMLGregorianCalendarTime(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
+                public newXMLGregorianCalendarTime(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Create a Java instance of XML Schema builtin datatype time.</p>
                  * <p>A <code>null</code> value indicates that field is not set.</p>
@@ -589,7 +589,7 @@ declare namespace javax {
                  *    as determined by {@link XMLGregorianCalendar#isValid()}.
                  */
                 // @ts-ignore
-                newXMLGregorianCalendarTime(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/, fractionalSecond: java.math.BigDecimal, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
+                public newXMLGregorianCalendarTime(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/, fractionalSecond: java.math.BigDecimal, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Create a Java instance of XML Schema builtin datatype time.</p>
                  * <p>A {@link DatatypeConstants#FIELD_UNDEFINED} value indicates that field is not set.</p>
@@ -606,7 +606,7 @@ declare namespace javax {
                  *    as determined by {@link XMLGregorianCalendar#isValid()}.
                  */
                 // @ts-ignore
-                newXMLGregorianCalendarTime(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/, milliseconds: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
+                public newXMLGregorianCalendarTime(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/, milliseconds: number /*int*/, timezone: number /*int*/): javax.xml.datatype.XMLGregorianCalendar
             }
         }
     }

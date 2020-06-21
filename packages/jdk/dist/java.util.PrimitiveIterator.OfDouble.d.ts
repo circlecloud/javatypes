@@ -6,14 +6,14 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface OfDouble extends java.util.PrimitiveIterator<java.lang.Double, java.util.function.DoubleConsumer> {
+            interface OfDouble extends java.util.PrimitiveIterator<java.lang.Double | number, java.util.function$.DoubleConsumer> {
                 /**
                  * Returns the next {@code double} element in the iteration.
                  * @return the next {#code double} element in the iteration
                  * @throws NoSuchElementException if the iteration has no more elements
                  */
                 // @ts-ignore
-                nextDouble(): double
+                nextDouble(): number /*double*/
                 /**
                  * Performs the given action for each remaining element until all elements
                  * have been processed or the action throws an exception.  Actions are
@@ -28,14 +28,14 @@ declare namespace java {
                  * @throws NullPointerException if the specified action is null
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.DoubleConsumer | java.util.function$.DoubleConsumer): void
+                forEachRemaining(action: java.util.function$.DoubleConsumer): void
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation boxes the result of calling
                  *  {#link #nextDouble()}, and returns that boxed result.
                  */
                 // @ts-ignore
-                next(): java.lang.Double
+                next(): number
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code DoubleConsumer} then it is
@@ -46,7 +46,7 @@ declare namespace java {
                  *  {@link #forEachRemaining}.
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.Consumer<any super java.lang.Double> | java.util.function$.Consumer<? super java.lang.Double>): void
+                forEachRemaining(action: java.util.function$.Consumer<any>): void
             }
         }
     }

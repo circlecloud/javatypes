@@ -10,25 +10,25 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class AbstractClientHttpRequest extends java.lang.Object implements org.springframework.http.client.reactive.ClientHttpRequest {
+                    abstract class AbstractClientHttpRequest extends java.lang.Object implements org.springframework.http.client.reactive.ClientHttpRequest {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
                         constructor(headers: org.springframework.http.HttpHeaders)
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         // @ts-ignore
-                        beforeCommit(action: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): void
+                        public beforeCommit(action: java.util.function$.Supplier<any>): void
                         // @ts-ignore
-                        isCommitted(): boolean
+                        public isCommitted(): boolean
                         /**
                          * A variant of {@link #doCommit(Supplier)} for a request without body.
                          * @return a completion publisher
                          */
                         // @ts-ignore
-                        doCommit(): <any>
+                        doCommit(): object
                         /**
                          * Apply {@link #beforeCommit(Supplier) beforeCommit} actions, apply the
                          * request headers/cookies, and write the request body.
@@ -36,7 +36,7 @@ declare namespace org {
                          * @return a completion publisher
                          */
                         // @ts-ignore
-                        doCommit(writeAction: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): <any>
+                        doCommit(writeAction: java.util.function$.Supplier<any>): object
                         /**
                          * Apply header changes from {@link #getHeaders()} to the underlying request.
                          * This method is called once only.

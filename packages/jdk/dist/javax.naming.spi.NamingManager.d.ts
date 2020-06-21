@@ -40,7 +40,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly CPE: string
+                public static readonly CPE: java.lang.String | string
                 /**
                  * The ObjectFactoryBuilder determines the policy used when
                  * trying to load object factories.
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @see java.lang.SecurityManager#checkSetFactory
                  */
                 // @ts-ignore
-                setObjectFactoryBuilder(builder: javax.naming.spi.ObjectFactoryBuilder): void
+                public static setObjectFactoryBuilder(builder: javax.naming.spi.ObjectFactoryBuilder): void
                 /**
                  * Creates an instance of an object for the specified object
                  * and environment.
@@ -153,7 +153,7 @@ declare namespace javax {
                  * @see ObjectFactory#getObjectInstance
                  */
                 // @ts-ignore
-                getObjectInstance(refInfo: any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, ?>): java.lang.Object
+                public static getObjectInstance(refInfo: java.lang.Object | any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, any>): any
                 /**
                  * Creates a context for the given URL scheme id.
                  * <p>
@@ -216,7 +216,7 @@ declare namespace javax {
                  * @see ObjectFactory#getObjectInstance
                  */
                 // @ts-ignore
-                getURLContext(scheme: string, environment: java.util.Hashtable<any, ?>): javax.naming.Context
+                public static getURLContext(scheme: java.lang.String | string, environment: java.util.Hashtable<any, any>): javax.naming.Context
                 /**
                  * Creates an initial context using the specified environment
                  * properties.
@@ -242,7 +242,7 @@ declare namespace javax {
                  * @see javax.naming.directory.InitialDirContext
                  */
                 // @ts-ignore
-                getInitialContext(env: java.util.Hashtable<any, ?>): javax.naming.Context
+                public static getInitialContext(env: java.util.Hashtable<any, any>): javax.naming.Context
                 /**
                  * Sets the InitialContextFactory builder to be builder.
                  * <p>
@@ -260,7 +260,7 @@ declare namespace javax {
                  * @see java.lang.SecurityManager#checkSetFactory
                  */
                 // @ts-ignore
-                setInitialContextFactoryBuilder(builder: javax.naming.spi.InitialContextFactoryBuilder): void
+                public static setInitialContextFactoryBuilder(builder: javax.naming.spi.InitialContextFactoryBuilder): void
                 /**
                  * Determines whether an initial context factory builder has
                  * been set.
@@ -269,7 +269,7 @@ declare namespace javax {
                  * @see #setInitialContextFactoryBuilder
                  */
                 // @ts-ignore
-                hasInitialContextFactoryBuilder(): boolean
+                public static hasInitialContextFactoryBuilder(): boolean
                 /**
                  * Creates a context in which to continue a context operation.
                  * <p>
@@ -297,7 +297,7 @@ declare namespace javax {
                  * @exception NamingException If a naming exception occurred.
                  */
                 // @ts-ignore
-                getContinuationContext(cpe: javax.naming.CannotProceedException): javax.naming.Context
+                public static getContinuationContext(cpe: javax.naming.CannotProceedException): javax.naming.Context
                 /**
                  * Retrieves the state of an object for binding.
                  * <p>
@@ -357,7 +357,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getStateToBind(obj: any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, ?>): java.lang.Object
+                public static getStateToBind(obj: java.lang.Object | any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, any>): any
             }
         }
     }

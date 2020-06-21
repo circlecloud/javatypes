@@ -23,7 +23,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            class AbstractIntSpliterator extends java.lang.Object implements java.util.Spliterator.OfInt {
+            abstract class AbstractIntSpliterator extends java.lang.Object implements java.util.Spliterator.OfInt {
                 /**
                  * Creates a spliterator reporting the given estimated size and
                  * characteristics.
@@ -40,7 +40,7 @@ declare namespace java {
                  * This implementation permits limited parallelism.
                  */
                 // @ts-ignore
-                trySplit(): java.util.Spliterator.OfInt
+                public trySplit(): java.util.Spliterator.OfInt
                 /**
                  * {@inheritDoc}
                  * @implSpec This implementation returns the estimated size as reported when
@@ -48,14 +48,14 @@ declare namespace java {
                  *  split.
                  */
                 // @ts-ignore
-                estimateSize(): long
+                public estimateSize(): number /*long*/
                 /**
                  * {@inheritDoc}
                  * @implSpec This implementation returns the characteristics as reported when
                  *  created.
                  */
                 // @ts-ignore
-                characteristics(): int
+                public characteristics(): number /*int*/
             }
         }
     }

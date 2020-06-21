@@ -34,9 +34,9 @@ declare namespace org {
                          * @param targetType the target type
                          */
                         // @ts-ignore
-                        constructor(comparator: java.util.Comparator<T>, conversionService: org.springframework.core.convert.ConversionService, targetType: java.lang.Class<T>)
+                        constructor(comparator: java.util.Comparator<T>, conversionService: org.springframework.core.convert.ConversionService, targetType: java.lang.Class<any>)
                         // @ts-ignore
-                        compare(o1: S, o2: S): int
+                        public compare(o1: S, o2: S): number /*int*/
                         /**
                          * Create a new {@link ConvertingComparator} that compares {@link java.util.Map.Entry
                          * map * entries} based on their {@link java.util.Map.Entry#getKey() keys}.
@@ -44,7 +44,7 @@ declare namespace org {
                          * @return a new {#link ConvertingComparator} instance
                          */
                         // @ts-ignore
-                        mapEntryKeys<K, V>(comparator: java.util.Comparator<K>): org.springframework.core.convert.converter.ConvertingComparator<java.util.Map.Entry<K, V>, K>
+                        public static mapEntryKeys<K, V>(comparator: java.util.Comparator<K>): org.springframework.core.convert.converter.ConvertingComparator<java.util.Map.Entry<K, V>, K>
                         /**
                          * Create a new {@link ConvertingComparator} that compares {@link java.util.Map.Entry
                          * map entries} based on their {@link java.util.Map.Entry#getValue() values}.
@@ -52,7 +52,7 @@ declare namespace org {
                          * @return a new {#link ConvertingComparator} instance
                          */
                         // @ts-ignore
-                        mapEntryValues<K, V>(comparator: java.util.Comparator<V>): org.springframework.core.convert.converter.ConvertingComparator<java.util.Map.Entry<K, V>, V>
+                        public static mapEntryValues<K, V>(comparator: java.util.Comparator<V>): org.springframework.core.convert.converter.ConvertingComparator<java.util.Map.Entry<K, V>, V>
                     }
                 }
             }

@@ -15,19 +15,19 @@ declare namespace org {
                      * @param parameterType the expected type of the missing parameter
                      */
                     // @ts-ignore
-                    constructor(parameterName: string, parameterType: string)
+                    constructor(parameterName: java.lang.String | string, parameterType: java.lang.String | string)
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Return the name of the offending parameter.
                      */
                     // @ts-ignore
-                    getParameterName(): java.lang.String
+                    public getParameterName(): string
                     /**
                      * Return the expected type of the offending parameter.
                      */
                     // @ts-ignore
-                    getParameterType(): java.lang.String
+                    public getParameterType(): string
                 }
             }
         }

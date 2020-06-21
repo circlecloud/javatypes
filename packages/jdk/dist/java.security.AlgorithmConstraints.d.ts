@@ -34,7 +34,7 @@ declare namespace java {
              *      or empty
              */
             // @ts-ignore
-            permits(primitives: Array<java.security.CryptoPrimitive>, algorithm: string, parameters: java.security.AlgorithmParameters): boolean
+            permits(primitives: java.util.Set<java.security.CryptoPrimitive> | Array<java.security.CryptoPrimitive>, algorithm: java.lang.String | string, parameters: java.security.AlgorithmParameters): boolean
             /**
              * Determines whether a key is granted permission for the specified
              * cryptographic primitives.
@@ -48,7 +48,7 @@ declare namespace java {
              *      or the key is null
              */
             // @ts-ignore
-            permits(primitives: Array<java.security.CryptoPrimitive>, key: java.security.Key): boolean
+            permits(primitives: java.util.Set<java.security.CryptoPrimitive> | Array<java.security.CryptoPrimitive>, key: java.security.Key): boolean
             /**
              * Determines whether an algorithm and the corresponding key are granted
              * permission for the specified cryptographic primitives.
@@ -63,7 +63,7 @@ declare namespace java {
              *      or empty, or the key is null
              */
             // @ts-ignore
-            permits(primitives: Array<java.security.CryptoPrimitive>, algorithm: string, key: java.security.Key, parameters: java.security.AlgorithmParameters): boolean
+            permits(primitives: java.util.Set<java.security.CryptoPrimitive> | Array<java.security.CryptoPrimitive>, algorithm: java.lang.String | string, key: java.security.Key, parameters: java.security.AlgorithmParameters): boolean
         }
     }
 }

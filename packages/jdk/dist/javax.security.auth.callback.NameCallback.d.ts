@@ -18,7 +18,7 @@ declare namespace javax {
                      *                   or if {@code prompt} has a length of 0.
                      */
                     // @ts-ignore
-                    constructor(prompt: string)
+                    constructor(prompt: java.lang.String | string)
                     /**
                      * Construct a {@code NameCallback} with a prompt
                      * and default name.
@@ -32,14 +32,14 @@ declare namespace javax {
                      *                   or if {@code defaultName} has a length of 0.
                      */
                     // @ts-ignore
-                    constructor(prompt: string, defaultName: string)
+                    constructor(prompt: java.lang.String | string, defaultName: java.lang.String | string)
                     /**
                      * Get the prompt.
                      * <p>
                      * @return the prompt.
                      */
                     // @ts-ignore
-                    getPrompt(): java.lang.String
+                    public getPrompt(): string
                     /**
                      * Get the default name.
                      * <p>
@@ -47,7 +47,7 @@ declare namespace javax {
                      *           was not instantiated with a {@code defaultName}.
                      */
                     // @ts-ignore
-                    getDefaultName(): java.lang.String
+                    public getDefaultName(): string
                     /**
                      * Set the retrieved name.
                      * <p>
@@ -55,7 +55,7 @@ declare namespace javax {
                      * @see #getName
                      */
                     // @ts-ignore
-                    setName(name: string): void
+                    public setName(name: java.lang.String | string): void
                     /**
                      * Get the retrieved name.
                      * <p>
@@ -63,7 +63,7 @@ declare namespace javax {
                      * @see #setName
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

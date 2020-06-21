@@ -82,9 +82,9 @@ declare namespace javax {
                  *        by.  This is never null.
                  */
                 // @ts-ignore
-                getCompositeData(): javax.management.openmbean.CompositeData
+                public getCompositeData(): javax.management.openmbean.CompositeData
                 // @ts-ignore
-                invoke(proxy: any, method: java.lang.reflect.Method, args: any[]): java.lang.Object
+                public invoke(proxy: java.lang.Object | any, method: java.lang.reflect.Method, args: java.lang.Object[] | any[]): any
             }
         }
     }

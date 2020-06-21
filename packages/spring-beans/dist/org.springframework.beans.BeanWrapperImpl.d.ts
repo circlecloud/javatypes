@@ -50,7 +50,7 @@ declare namespace org {
                  * @param object the object wrapped by this BeanWrapper
                  */
                 // @ts-ignore
-                constructor(object: any)
+                constructor(object: java.lang.Object | any)
                 /**
                  * Create a new BeanWrapperImpl, wrapping a new instance of the specified class.
                  * @param clazz class to instantiate and wrap
@@ -65,7 +65,7 @@ declare namespace org {
                  * @param rootObject the root object at the top of the path
                  */
                 // @ts-ignore
-                constructor(object: any, nestedPath: string, rootObject: any)
+                constructor(object: java.lang.Object | any, nestedPath: java.lang.String | string, rootObject: java.lang.Object | any)
                 /**
                  * Set a bean instance to hold, without any unwrapping of {@link java.util.Optional}.
                  * @param object the actual target object
@@ -73,9 +73,9 @@ declare namespace org {
                  * @see #setWrappedInstance(Object)
                  */
                 // @ts-ignore
-                setBeanInstance(object: any): void
+                public setBeanInstance(object: java.lang.Object | any): void
                 // @ts-ignore
-                setWrappedInstance(object: any, nestedPath: string, rootObject: any): void
+                public setWrappedInstance(object: java.lang.Object | any, nestedPath: java.lang.String | string, rootObject: java.lang.Object | any): void
                 /**
                  * Set the class to introspect.
                  * Needs to be called when the target object changes.
@@ -88,13 +88,13 @@ declare namespace org {
                  * Can be null.
                  */
                 // @ts-ignore
-                setSecurityContext(acc: java.security.AccessControlContext): void
+                public setSecurityContext(acc: java.security.AccessControlContext): void
                 /**
                  * Return the security context used during the invocation of the wrapped instance methods.
                  * Can be null.
                  */
                 // @ts-ignore
-                getSecurityContext(): java.security.AccessControlContext
+                public getSecurityContext(): java.security.AccessControlContext
                 /**
                  * Convert the given value for the specified property to the latter's type.
                  * <p>This method is only intended for optimizations in a BeanFactory.
@@ -106,17 +106,17 @@ declare namespace org {
                  * @throws TypeMismatchException if type conversion failed
                  */
                 // @ts-ignore
-                convertForProperty(value: any, propertyName: string): java.lang.Object
+                public convertForProperty(value: java.lang.Object | any, propertyName: java.lang.String | string): any
                 // @ts-ignore
-                getLocalPropertyHandler(propertyName: string): org.springframework.beans.BeanWrapperImpl.BeanPropertyHandler
+                getLocalPropertyHandler(propertyName: java.lang.String | string): org.springframework.beans.BeanWrapperImpl.BeanPropertyHandler
                 // @ts-ignore
-                newNestedPropertyAccessor(object: any, nestedPath: string): org.springframework.beans.BeanWrapperImpl
+                newNestedPropertyAccessor(object: java.lang.Object | any, nestedPath: java.lang.String | string): org.springframework.beans.BeanWrapperImpl
                 // @ts-ignore
-                createNotWritablePropertyException(propertyName: string): org.springframework.beans.NotWritablePropertyException
+                createNotWritablePropertyException(propertyName: java.lang.String | string): org.springframework.beans.NotWritablePropertyException
                 // @ts-ignore
-                getPropertyDescriptors(): java.beans.PropertyDescriptor[]
+                public getPropertyDescriptors(): java.beans.PropertyDescriptor[]
                 // @ts-ignore
-                getPropertyDescriptor(propertyName: string): java.beans.PropertyDescriptor
+                public getPropertyDescriptor(propertyName: java.lang.String | string): java.beans.PropertyDescriptor
             }
         }
     }

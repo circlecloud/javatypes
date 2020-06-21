@@ -18,7 +18,7 @@ declare namespace org {
                          * @return the message sent to the server for tab completion.
                          */
                         // @ts-ignore
-                        getRawMessage(): java.lang.String
+                        getRawMessage(): string
                         /**
                          * Gets the immutable list of the suggestions originally generated.
                          * <p>In Vanilla, these suggestions are usually player names, in the case
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return the immutable list of original suggestions
                          */
                         // @ts-ignore
-                        getOriginalTabCompletions(): java.util.List<java.lang.String>
+                        getOriginalTabCompletions(): Array<java.lang.String | string>
                         /**
                          * Gets the list of available suggestions. This list is mutable, so
                          * any modifications should happen to this list. All suggestions will
@@ -38,7 +38,7 @@ declare namespace org {
                          * @return The list of suggestion
                          */
                         // @ts-ignore
-                        getTabCompletions(): java.util.List<java.lang.String>
+                        getTabCompletions(): Array<java.lang.String | string>
                         /**
                          * Gets the location of the block that the player is looking at, if
                          * available.

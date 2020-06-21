@@ -56,7 +56,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            valueOf(longs: number /*long*/[]): java.util.BitSet
+            public static valueOf(longs: number /*long*/[]): java.util.BitSet
             /**
              * Returns a new bit set containing all the bits in the given long
              * buffer between its position and limit.
@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            valueOf(lb: java.nio.LongBuffer): java.util.BitSet
+            public static valueOf(lb: java.nio.LongBuffer): java.util.BitSet
             /**
              * Returns a new bit set containing all the bits in the given byte array.
              * <p>More precisely,
@@ -88,7 +88,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            valueOf(bytes: number /*byte*/[]): java.util.BitSet
+            public static valueOf(bytes: number /*byte*/[]): java.util.BitSet
             /**
              * Returns a new bit set containing all the bits in the given byte
              * buffer between its position and limit.
@@ -105,7 +105,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            valueOf(bb: java.nio.ByteBuffer): java.util.BitSet
+            public static valueOf(bb: java.nio.ByteBuffer): java.util.BitSet
             /**
              * Returns a new byte array containing all the bits in this bit set.
              * <p>More precisely, if
@@ -118,7 +118,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            toByteArray(): byte[]
+            public toByteArray(): number /*byte*/[]
             /**
              * Returns a new long array containing all the bits in this bit set.
              * <p>More precisely, if
@@ -131,7 +131,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            toLongArray(): long[]
+            public toLongArray(): number /*long*/[]
             /**
              * Sets the bit at the specified index to the complement of its
              * current value.
@@ -140,7 +140,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            flip(bitIndex: number /*int*/): void
+            public flip(bitIndex: number /*int*/): void
             /**
              * Sets each bit from the specified {@code fromIndex} (inclusive) to the
              * specified {@code toIndex} (exclusive) to the complement of its current
@@ -153,7 +153,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            flip(fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public flip(fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sets the bit at the specified index to {@code true}.
              * @param bitIndex a bit index
@@ -161,7 +161,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            set(bitIndex: number /*int*/): void
+            public set(bitIndex: number /*int*/): void
             /**
              * Sets the bit at the specified index to the specified value.
              * @param bitIndex a bit index
@@ -170,7 +170,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            set(bitIndex: number /*int*/, value: boolean): void
+            public set(bitIndex: number /*int*/, value: boolean): void
             /**
              * Sets the bits from the specified {@code fromIndex} (inclusive) to the
              * specified {@code toIndex} (exclusive) to {@code true}.
@@ -182,7 +182,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            set(fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public set(fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sets the bits from the specified {@code fromIndex} (inclusive) to the
              * specified {@code toIndex} (exclusive) to the specified value.
@@ -195,7 +195,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            set(fromIndex: number /*int*/, toIndex: number /*int*/, value: boolean): void
+            public set(fromIndex: number /*int*/, toIndex: number /*int*/, value: boolean): void
             /**
              * Sets the bit specified by the index to {@code false}.
              * @param bitIndex the index of the bit to be cleared
@@ -203,7 +203,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            clear(bitIndex: number /*int*/): void
+            public clear(bitIndex: number /*int*/): void
             /**
              * Sets the bits from the specified {@code fromIndex} (inclusive) to the
              * specified {@code toIndex} (exclusive) to {@code false}.
@@ -215,13 +215,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            clear(fromIndex: number /*int*/, toIndex: number /*int*/): void
+            public clear(fromIndex: number /*int*/, toIndex: number /*int*/): void
             /**
              * Sets all of the bits in this BitSet to {@code false}.
              * @since 1.4
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns the value of the bit with the specified index. The value
              * is {@code true} if the bit with the index {@code bitIndex}
@@ -232,7 +232,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException if the specified index is negative
              */
             // @ts-ignore
-            get(bitIndex: number /*int*/): boolean
+            public get(bitIndex: number /*int*/): boolean
             /**
              * Returns a new {@code BitSet} composed of bits from this {@code BitSet}
              * from {@code fromIndex} (inclusive) to {@code toIndex} (exclusive).
@@ -245,7 +245,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            get(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.BitSet
+            public get(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.BitSet
             /**
              * Returns the index of the first bit that is set to {@code true}
              * that occurs on or after the specified starting index. If no such
@@ -266,7 +266,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            nextSetBit(fromIndex: number /*int*/): int
+            public nextSetBit(fromIndex: number /*int*/): number /*int*/
             /**
              * Returns the index of the first bit that is set to {@code false}
              * that occurs on or after the specified starting index.
@@ -276,7 +276,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            nextClearBit(fromIndex: number /*int*/): int
+            public nextClearBit(fromIndex: number /*int*/): number /*int*/
             /**
              * Returns the index of the nearest bit that is set to {@code true}
              * that occurs on or before the specified starting index.
@@ -296,7 +296,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            previousSetBit(fromIndex: number /*int*/): int
+            public previousSetBit(fromIndex: number /*int*/): number /*int*/
             /**
              * Returns the index of the nearest bit that is set to {@code false}
              * that occurs on or before the specified starting index.
@@ -310,7 +310,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            previousClearBit(fromIndex: number /*int*/): int
+            public previousClearBit(fromIndex: number /*int*/): number /*int*/
             /**
              * Returns the "logical size" of this {@code BitSet}: the index of
              * the highest set bit in the {@code BitSet} plus one. Returns zero
@@ -319,7 +319,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            length(): int
+            public length(): number /*int*/
             /**
              * Returns true if this {@code BitSet} contains no bits that are set
              * to {@code true}.
@@ -327,7 +327,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns true if the specified {@code BitSet} has any bits set to
              * {@code true} that are also set to {@code true} in this {@code BitSet}.
@@ -337,14 +337,14 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            intersects(set: java.util.BitSet): boolean
+            public intersects(set: java.util.BitSet): boolean
             /**
              * Returns the number of bits set to {@code true} in this {@code BitSet}.
              * @return the number of bits set to {#code true} in this {@code BitSet}
              * @since 1.4
              */
             // @ts-ignore
-            cardinality(): int
+            public cardinality(): number /*int*/
             /**
              * Performs a logical <b>AND</b> of this target bit set with the
              * argument bit set. This bit set is modified so that each bit in it
@@ -354,7 +354,7 @@ declare namespace java {
              * @param set a bit set
              */
             // @ts-ignore
-            and(set: java.util.BitSet): void
+            public and(set: java.util.BitSet): void
             /**
              * Performs a logical <b>OR</b> of this bit set with the bit set
              * argument. This bit set is modified so that a bit in it has the
@@ -364,7 +364,7 @@ declare namespace java {
              * @param set a bit set
              */
             // @ts-ignore
-            or(set: java.util.BitSet): void
+            public or(set: java.util.BitSet): void
             /**
              * Performs a logical <b>XOR</b> of this bit set with the bit set
              * argument. This bit set is modified so that a bit in it has the
@@ -379,7 +379,7 @@ declare namespace java {
              * @param set a bit set
              */
             // @ts-ignore
-            xor(set: java.util.BitSet): void
+            public xor(set: java.util.BitSet): void
             /**
              * Clears all of the bits in this {@code BitSet} whose corresponding
              * bit is set in the specified {@code BitSet}.
@@ -388,7 +388,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            andNot(set: java.util.BitSet): void
+            public andNot(set: java.util.BitSet): void
             /**
              * Returns the hash code value for this bit set. The hash code depends
              * only on which bits are set within this {@code BitSet}.
@@ -406,7 +406,7 @@ declare namespace java {
              * @return the hash code value for this bit set
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the number of bits of space actually in use by this
              * {@code BitSet} to represent bit values.
@@ -414,7 +414,7 @@ declare namespace java {
              * @return the number of bits currently in this bit set
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -429,7 +429,7 @@ declare namespace java {
              * @see #size()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Cloning this {@code BitSet} produces a new {@code BitSet}
              * that is equal to it.
@@ -439,7 +439,7 @@ declare namespace java {
              * @see #size()
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns a string representation of this bit set. For every index
              * for which this {@code BitSet} contains a bit in the set
@@ -462,7 +462,7 @@ declare namespace java {
              * @return a string representation of this bit set
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a stream of indices for which this {@code BitSet}
              * contains a bit in the set state. The indices are returned
@@ -476,7 +476,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            stream(): java.util.stream.IntStream
+            public stream(): java.util.stream.IntStream
         }
     }
 }

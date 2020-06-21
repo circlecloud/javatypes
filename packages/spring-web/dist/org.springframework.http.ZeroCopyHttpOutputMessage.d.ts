@@ -20,7 +20,7 @@ declare namespace org {
                  * @return a publisher that indicates completion or error.
                  */
                 // @ts-ignore
-                writeWith(file: java.io.File, position: number /*long*/, count: number /*long*/): <any>
+                writeWith(file: java.io.File, position: number /*long*/, count: number /*long*/): object
                 /**
                  * Use the given {@link Path} to write the body of the message to the underlying
                  * HTTP layer.
@@ -31,7 +31,7 @@ declare namespace org {
                  * @since 5.1
                  */
                 // @ts-ignore
-                writeWith(file: java.nio.file.Path, position: number /*long*/, count: number /*long*/): <any>
+                writeWith(file: java.nio.file.Path, position: number /*long*/, count: number /*long*/): object
             }
         }
     }

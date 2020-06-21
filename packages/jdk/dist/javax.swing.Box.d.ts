@@ -67,7 +67,7 @@ declare namespace javax {
              * @return the box
              */
             // @ts-ignore
-            createHorizontalBox(): javax.swing.Box
+            public static createHorizontalBox(): javax.swing.Box
             /**
              * Creates a <code>Box</code> that displays its components
              * from top to bottom. If you want a <code>Box</code> that
@@ -80,7 +80,7 @@ declare namespace javax {
              * @return the box
              */
             // @ts-ignore
-            createVerticalBox(): javax.swing.Box
+            public static createVerticalBox(): javax.swing.Box
             /**
              * Creates an invisible component that's always the specified size.
              * <!-- WHEN WOULD YOU USE THIS AS OPPOSED TO A STRUT? -->
@@ -91,7 +91,7 @@ declare namespace javax {
              * @see #createVerticalStrut
              */
             // @ts-ignore
-            createRigidArea(d: java.awt.Dimension): java.awt.Component
+            public static createRigidArea(d: java.awt.Dimension): java.awt.Component
             /**
              * Creates an invisible, fixed-width component.
              * In a horizontal box,
@@ -111,7 +111,7 @@ declare namespace javax {
              * @see #createRigidArea
              */
             // @ts-ignore
-            createHorizontalStrut(width: number /*int*/): java.awt.Component
+            public static createHorizontalStrut(width: number /*int*/): java.awt.Component
             /**
              * Creates an invisible, fixed-height component.
              * In a vertical box,
@@ -131,7 +131,7 @@ declare namespace javax {
              * @see #createRigidArea
              */
             // @ts-ignore
-            createVerticalStrut(height: number /*int*/): java.awt.Component
+            public static createVerticalStrut(height: number /*int*/): java.awt.Component
             /**
              * Creates an invisible "glue" component
              * that can be useful in a Box
@@ -172,25 +172,25 @@ declare namespace javax {
              * @return the component
              */
             // @ts-ignore
-            createGlue(): java.awt.Component
+            public static createGlue(): java.awt.Component
             /**
              * Creates a horizontal glue component.
              * @return the component
              */
             // @ts-ignore
-            createHorizontalGlue(): java.awt.Component
+            public static createHorizontalGlue(): java.awt.Component
             /**
              * Creates a vertical glue component.
              * @return the component
              */
             // @ts-ignore
-            createVerticalGlue(): java.awt.Component
+            public static createVerticalGlue(): java.awt.Component
             /**
              * Throws an AWTError, since a Box can use only a BoxLayout.
              * @param l the layout manager to use
              */
             // @ts-ignore
-            setLayout(l: java.awt.LayoutManager): void
+            public setLayout(l: java.awt.LayoutManager): void
             /**
              * Paints this <code>Box</code>.  If this <code>Box</code> has a UI this
              * method invokes super's implementation, otherwise if this
@@ -211,7 +211,7 @@ declare namespace javax {
              *          AccessibleContext of this Box
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -36,7 +36,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                constructor(password: string[], protectionAlgorithm: string, protectionParameters: java.security.spec.AlgorithmParameterSpec)
+                constructor(password: string[], protectionAlgorithm: java.lang.String | string, protectionParameters: java.security.spec.AlgorithmParameterSpec)
                 /**
                  * Gets the name of the protection algorithm.
                  * If none was set then the keystore provider will use its default
@@ -52,7 +52,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getProtectionAlgorithm(): java.lang.String
+                public getProtectionAlgorithm(): string
                 /**
                  * Gets the parameters supplied for the protection algorithm.
                  * @return the algorithm parameter specification, or {#code  null},
@@ -60,7 +60,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getProtectionParameters(): java.security.spec.AlgorithmParameterSpec
+                public getProtectionParameters(): java.security.spec.AlgorithmParameterSpec
                 /**
                  * Gets the password.
                  * <p>Note that this method returns a reference to the password.
@@ -73,20 +73,20 @@ declare namespace java {
                  *               been cleared (destroyed)
                  */
                 // @ts-ignore
-                getPassword(): char[]
+                public getPassword(): string[]
                 /**
                  * Clears the password.
                  * @exception DestroyFailedException if this method was unable
                  *       to clear the password
                  */
                 // @ts-ignore
-                destroy(): void
+                public destroy(): void
                 /**
                  * Determines if password has been cleared.
                  * @return true if the password has been cleared, false otherwise
                  */
                 // @ts-ignore
-                isDestroyed(): boolean
+                public isDestroyed(): boolean
             }
         }
     }

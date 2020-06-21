@@ -22,14 +22,14 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly DEFAULT_CLASSID_FIELD_NAME: string
+                        public static readonly DEFAULT_CLASSID_FIELD_NAME: java.lang.String | string
                         /**
                          * The type returned by {@link #toClass(MessageProperties)} if no type information
                          * is found in the message properties.
                          * @param defaultType the defaultType to set.
                          */
                         // @ts-ignore
-                        setDefaultType(defaultType: java.lang.Class<any>): void
+                        public setDefaultType(defaultType: java.lang.Class<any>): void
                         /**
                          * Set the type of {@link Map} to use. For outbound messages, set the
                          * {@value #DEFAULT_CLASSID_FIELD_NAME} header to {@code HashTable}. For inbound messages,
@@ -40,14 +40,14 @@ declare namespace org {
                          * @see #DEFAULT_CLASSID_FIELD_NAME
                          */
                         // @ts-ignore
-                        setDefaultMapClass(defaultMapClass: java.lang.Class<any>): void
+                        public setDefaultMapClass(defaultMapClass: java.lang.Class<any>): void
                         /**
                          * The name of the header that contains the type id.
                          * @return {#value #DEFAULT_CLASSID_FIELD_NAME}
                          * @see #DEFAULT_CLASSID_FIELD_NAME
                          */
                         // @ts-ignore
-                        getClassIdFieldName(): java.lang.String
+                        public getClassIdFieldName(): string
                         /**
                          * Set a map of type Ids (in the {@value #DEFAULT_CLASSID_FIELD_NAME} header) to
                          * classes. For outbound messages, if the class is not in this map, the
@@ -56,7 +56,7 @@ declare namespace org {
                          * @param idClassMapping the map of IDs to classes.
                          */
                         // @ts-ignore
-                        setIdClassMapping(idClassMapping: java.util.Map<java.lang.String, java.lang.Class<any>>): void
+                        public setIdClassMapping(idClassMapping: java.util.Map<java.lang.String | string, java.lang.Class<any>>): void
                         /**
                          * Specify a set of packages to trust during deserialization.
                          * The asterisk ({@code *}) means trust all.
@@ -64,17 +64,17 @@ declare namespace org {
                          * @since 1.6.11
                          */
                         // @ts-ignore
-                        setTrustedPackages(...trustedPackages: string[]): void
+                        public setTrustedPackages(...trustedPackages: java.lang.String[] | string[]): void
                         /**
                          * {@inheritDoc}
                          * <p>Creates the reverse mapping from class to type id.
                          */
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        fromClass(clazz: java.lang.Class<any>, properties: org.springframework.amqp.core.MessageProperties): void
+                        public fromClass(clazz: java.lang.Class<any>, properties: org.springframework.amqp.core.MessageProperties): void
                         // @ts-ignore
-                        toClass(properties: org.springframework.amqp.core.MessageProperties): java.lang.Class<?>
+                        public toClass(properties: org.springframework.amqp.core.MessageProperties): java.lang.Class<any>
                     }
                 }
             }

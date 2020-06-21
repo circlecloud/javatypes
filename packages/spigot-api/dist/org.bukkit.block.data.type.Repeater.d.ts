@@ -23,7 +23,7 @@ declare namespace org {
                          * @return the 'delay' value
                          */
                         // @ts-ignore
-                        getDelay(): int
+                        getDelay(): number /*int*/
                         /**
                          * Sets the value of the 'delay' property.
                          * @param delay the new 'delay' value
@@ -35,13 +35,13 @@ declare namespace org {
                          * @return the minimum 'delay' value
                          */
                         // @ts-ignore
-                        getMinimumDelay(): int
+                        getMinimumDelay(): number /*int*/
                         /**
                          * Gets the maximum allowed value of the 'delay' property.
                          * @return the maximum 'delay' value
                          */
                         // @ts-ignore
-                        getMaximumDelay(): int
+                        getMaximumDelay(): number /*int*/
                         /**
                          * Gets the value of the 'locked' property.
                          * @return the 'locked' value

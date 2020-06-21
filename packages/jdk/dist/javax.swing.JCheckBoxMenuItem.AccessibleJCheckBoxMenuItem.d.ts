@@ -26,7 +26,7 @@ declare namespace javax {
                  *  object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
             }
         }
     }

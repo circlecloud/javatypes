@@ -6,7 +6,7 @@ declare namespace javax {
          * @since Common Annotations 1.0
          */
         // @ts-ignore
-        class Resources implements java.lang.annotation.Annotation {
+        abstract class Resources implements java.lang.annotation.Annotation {
         }
     }
 }

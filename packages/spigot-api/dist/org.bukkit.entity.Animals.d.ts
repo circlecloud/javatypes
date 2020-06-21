@@ -34,7 +34,7 @@ declare namespace org {
                  * @return the remaining love mode ticks
                  */
                 // @ts-ignore
-                getLoveModeTicks(): int
+                getLoveModeTicks(): number /*int*/
                 /**
                  * Set the amount of ticks for which this entity should be in love mode.
                  * Setting the love mode ticks to 600 is the equivalent of a player

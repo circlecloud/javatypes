@@ -19,17 +19,17 @@ declare namespace javax {
                  * Delegation call for {@link Stub#hashCode}.
                  */
                 // @ts-ignore
-                hashCode(self: javax.rmi.CORBA.Stub): int
+                hashCode(self: javax.rmi.CORBA.Stub): number /*int*/
                 /**
                  * Delegation call for {@link Stub#equals}.
                  */
                 // @ts-ignore
-                equals(self: javax.rmi.CORBA.Stub, obj: any): boolean
+                equals(self: javax.rmi.CORBA.Stub, obj: java.lang.Object | any): boolean
                 /**
                  * Delegation call for {@link Stub#toString}.
                  */
                 // @ts-ignore
-                toString(self: javax.rmi.CORBA.Stub): java.lang.String
+                toString(self: javax.rmi.CORBA.Stub): string
                 /**
                  * Delegation call for {@link Stub#connect}.
                  */

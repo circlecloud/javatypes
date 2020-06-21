@@ -7,7 +7,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class VirtualMachineError extends java.lang.Error {
+        abstract class VirtualMachineError extends java.lang.Error {
             /**
              * Constructs a <code>VirtualMachineError</code> with no detail message.
              */
@@ -19,7 +19,7 @@ declare namespace java {
              * @param message   the detail message.
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs a {@code VirtualMachineError} with the specified
              * detail message and cause.  <p>Note that the detail message
@@ -34,7 +34,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs an a {@code VirtualMachineError} with the specified
              * cause and a detail message of {@code (cause==null ? null :
@@ -47,7 +47,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
         }
     }
 }

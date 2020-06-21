@@ -16,34 +16,34 @@ declare namespace org {
                              * @param <I> The API immutable data manipulator
                              */
                             // @ts-ignore
-                            class AbstractBoundedComparableData<T extends java.lang.Comparable<T>, M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<T, M, I> {
+                            abstract class AbstractBoundedComparableData<T extends java.lang.Comparable<T>, M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<T, M, I> {
                                 /**
                                  * @deprecated Use {#link #AbstractBoundedComparableData(Key, Comparable, Comparable, Comparable, Comparable, Comparator)} instead.
                                  */
                                 // @ts-ignore
-                                constructor(value: T extends java.lang.Comparable<T>, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>>, comparator: java.util.Comparator<T>, lowerBound: T extends java.lang.Comparable<T>, upperBound: T extends java.lang.Comparable<T>, defaultValue: T extends java.lang.Comparable<T>)
+                                constructor(value: T, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>>, comparator: java.util.Comparator<T>, lowerBound: T, upperBound: T, defaultValue: T)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>>, value: T extends java.lang.Comparable<T>, lowerBound: T extends java.lang.Comparable<T>, upperBound: T extends java.lang.Comparable<T>, comparator: java.util.Comparator<T>)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>>, value: T, lowerBound: T, upperBound: T, comparator: java.util.Comparator<T>)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>>, value: T extends java.lang.Comparable<T>, defaultValue: T extends java.lang.Comparable<T>, lowerBound: T extends java.lang.Comparable<T>, upperBound: T extends java.lang.Comparable<T>, comparator: java.util.Comparator<T>)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>>, value: T, defaultValue: T, lowerBound: T, upperBound: T, comparator: java.util.Comparator<T>)
                                 // @ts-ignore
                                 readonly comparator: java.util.Comparator<T>
                                 // @ts-ignore
-                                readonly lowerBound: T extends java.lang.Comparable<T>
+                                readonly lowerBound: T
                                 // @ts-ignore
-                                readonly upperBound: T extends java.lang.Comparable<T>
+                                readonly upperBound: T
                                 // @ts-ignore
-                                readonly defaultValue: T extends java.lang.Comparable<T>
+                                readonly defaultValue: T
                                 // @ts-ignore
                                 getValueGetter(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<T>
                                 // @ts-ignore
-                                setValue(value: T extends java.lang.Comparable<T>): M
+                                public setValue(value: T): M
                                 // @ts-ignore
-                                toContainer(): org.spongepowered.api.data.DataContainer
+                                public toContainer(): org.spongepowered.api.data.DataContainer
                                 // @ts-ignore
-                                hashCode(): int
+                                public hashCode(): number /*int*/
                                 // @ts-ignore
-                                equals(obj: any): boolean
+                                public equals(obj: java.lang.Object | any): boolean
                             }
                         }
                     }

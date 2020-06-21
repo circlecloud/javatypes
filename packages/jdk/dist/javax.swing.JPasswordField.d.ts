@@ -53,7 +53,7 @@ declare namespace javax {
              * @param text the text to be displayed, <code>null</code> if none
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs a new empty <code>JPasswordField</code> with the specified
              * number of columns.  A default model is created, and the initial string
@@ -70,7 +70,7 @@ declare namespace javax {
              * @param columns the number of columns &gt;= 0
              */
             // @ts-ignore
-            constructor(text: string, columns: number /*int*/)
+            constructor(text: java.lang.String | string, columns: number /*int*/)
             /**
              * Constructs a new <code>JPasswordField</code> that uses the
              * given text storage model and the given number of columns.
@@ -86,7 +86,7 @@ declare namespace javax {
              *    the component implementation
              */
             // @ts-ignore
-            constructor(doc: javax.swing.text.Document, txt: string, columns: number /*int*/)
+            constructor(doc: javax.swing.text.Document, txt: java.lang.String | string, columns: number /*int*/)
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "PasswordFieldUI"
@@ -94,13 +94,13 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the character to be used for echoing.  The default is '*'.
              * The default may be different depending on the currently running Look
@@ -110,7 +110,7 @@ declare namespace javax {
              * @see #echoCharIsSet
              */
             // @ts-ignore
-            getEchoChar(): char
+            public getEchoChar(): string
             /**
              * Sets the echo character for this <code>JPasswordField</code>.
              * Note that this is largely a suggestion, since the
@@ -125,7 +125,7 @@ declare namespace javax {
              *    attribute: visualUpdate true
              */
             // @ts-ignore
-            setEchoChar(c: string): void
+            public setEchoChar(c: string): void
             /**
              * Returns true if this <code>JPasswordField</code> has a character
              * set for echoing.  A character is considered to be set if the echo
@@ -135,7 +135,7 @@ declare namespace javax {
              * @see #getEchoChar
              */
             // @ts-ignore
-            echoCharIsSet(): boolean
+            public echoCharIsSet(): boolean
             /**
              * Invokes <code>provideErrorFeedback</code> on the current
              * look and feel, which typically initiates an error beep.
@@ -145,7 +145,7 @@ declare namespace javax {
              * the model, is not acceptable for a password field.
              */
             // @ts-ignore
-            cut(): void
+            public cut(): void
             /**
              * Invokes <code>provideErrorFeedback</code> on the current
              * look and feel, which typically initiates an error beep.
@@ -155,7 +155,7 @@ declare namespace javax {
              * the model, is not acceptable for a password field.
              */
             // @ts-ignore
-            copy(): void
+            public copy(): void
             /**
              * Returns the text contained in this <code>TextComponent</code>.
              * If the underlying document is <code>null</code>, will give a
@@ -168,7 +168,7 @@ declare namespace javax {
              * @return the text
              */
             // @ts-ignore
-            getText(): java.lang.String
+            public getText(): string
             /**
              * Fetches a portion of the text represented by the
              * component.  Returns an empty string if length is 0.
@@ -183,7 +183,7 @@ declare namespace javax {
              * @exception BadLocationException if the offset or length are invalid
              */
             // @ts-ignore
-            getText(offs: number /*int*/, len: number /*int*/): java.lang.String
+            public getText(offs: number /*int*/, len: number /*int*/): string
             /**
              * Returns the text contained in this <code>TextComponent</code>.
              * If the underlying document is <code>null</code>, will give a
@@ -193,7 +193,7 @@ declare namespace javax {
              * @return the text
              */
             // @ts-ignore
-            getPassword(): char[]
+            public getPassword(): string[]
             /**
              * Returns a string representation of this <code>JPasswordField</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -203,7 +203,7 @@ declare namespace javax {
              * @return a string representation of this <code>JPasswordField</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns the <code>AccessibleContext</code> associated with this
              * <code>JPasswordField</code>. For password fields, the
@@ -216,7 +216,7 @@ declare namespace javax {
              *          <code>JPasswordField</code>
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

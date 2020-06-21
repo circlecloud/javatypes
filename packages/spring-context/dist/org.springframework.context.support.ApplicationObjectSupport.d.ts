@@ -20,7 +20,7 @@ declare namespace org {
                  * @see org.springframework.web.context.support.WebApplicationObjectSupport
                  */
                 // @ts-ignore
-                class ApplicationObjectSupport extends java.lang.Object implements org.springframework.context.ApplicationContextAware {
+                abstract class ApplicationObjectSupport extends java.lang.Object implements org.springframework.context.ApplicationContextAware {
                     // @ts-ignore
                     constructor()
                     /**
@@ -29,7 +29,7 @@ declare namespace org {
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    setApplicationContext(context: org.springframework.context.ApplicationContext): void
+                    public setApplicationContext(context: org.springframework.context.ApplicationContext): void
                     /**
                      * Determine whether this application object needs to run in an ApplicationContext.
                      * <p>Default is "false". Can be overridden to enforce running in a context
@@ -46,7 +46,7 @@ declare namespace org {
                      * @see #setApplicationContext
                      */
                     // @ts-ignore
-                    requiredContextClass(): java.lang.Class<?>
+                    requiredContextClass(): java.lang.Class<any>
                     /**
                      * Subclasses can override this for custom initialization behavior.
                      * Gets called by {@code setApplicationContext} after setting the context instance.
@@ -76,7 +76,7 @@ declare namespace org {
                      * @throws IllegalStateException if not running in an ApplicationContext
                      */
                     // @ts-ignore
-                    getApplicationContext(): org.springframework.context.ApplicationContext
+                    public getApplicationContext(): org.springframework.context.ApplicationContext
                     /**
                      * Obtain the ApplicationContext for actual use.
                      * @return the ApplicationContext (never {#code null})

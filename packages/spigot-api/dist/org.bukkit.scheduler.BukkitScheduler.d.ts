@@ -13,7 +13,7 @@ declare namespace org {
                  * @return Task id number (-1 if scheduling failed)
                  */
                 // @ts-ignore
-                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/): int
+                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/): number /*int*/
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskLater(Plugin, long)}
                  * @param plugin Plugin that owns the task
@@ -22,7 +22,7 @@ declare namespace org {
                  * @return Task id number (-1 if scheduling failed)
                  */
                 // @ts-ignore
-                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: org.bukkit.scheduler.BukkitRunnable, delay: number /*long*/): int
+                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: org.bukkit.scheduler.BukkitRunnable, delay: number /*long*/): number /*int*/
                 /**
                  * Schedules a once off task to occur as soon as possible.
                  * <p>
@@ -32,7 +32,7 @@ declare namespace org {
                  * @return Task id number (-1 if scheduling failed)
                  */
                 // @ts-ignore
-                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable): int
+                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable): number /*int*/
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTask(Plugin)}
                  * @param plugin Plugin that owns the task
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return Task id number (-1 if scheduling failed)
                  */
                 // @ts-ignore
-                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: org.bukkit.scheduler.BukkitRunnable): int
+                scheduleSyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: org.bukkit.scheduler.BukkitRunnable): number /*int*/
                 /**
                  * Schedules a repeating task.
                  * <p>
@@ -52,7 +52,7 @@ declare namespace org {
                  * @return Task id number (-1 if scheduling failed)
                  */
                 // @ts-ignore
-                scheduleSyncRepeatingTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/, period: number /*long*/): int
+                scheduleSyncRepeatingTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/, period: number /*long*/): number /*int*/
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskTimer(Plugin, long, long)}
                  * @param plugin Plugin that owns the task
@@ -62,7 +62,7 @@ declare namespace org {
                  * @return Task id number (-1 if scheduling failed)
                  */
                 // @ts-ignore
-                scheduleSyncRepeatingTask(plugin: org.bukkit.plugin.Plugin, task: org.bukkit.scheduler.BukkitRunnable, delay: number /*long*/, period: number /*long*/): int
+                scheduleSyncRepeatingTask(plugin: org.bukkit.plugin.Plugin, task: org.bukkit.scheduler.BukkitRunnable, delay: number /*long*/, period: number /*long*/): number /*int*/
                 /**
                  * <b>Asynchronous tasks should never access any API in Bukkit. Great care
                  * should be taken to assure the thread-safety of asynchronous tasks.</b>
@@ -77,7 +77,7 @@ declare namespace org {
                  *      task, but rather, "an async" task
                  */
                 // @ts-ignore
-                scheduleAsyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/): int
+                scheduleAsyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/): number /*int*/
                 /**
                  * <b>Asynchronous tasks should never access any API in Bukkit. Great care
                  * should be taken to assure the thread-safety of asynchronous tasks.</b>
@@ -91,7 +91,7 @@ declare namespace org {
                  *      task, but rather, "an async" task
                  */
                 // @ts-ignore
-                scheduleAsyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable): int
+                scheduleAsyncDelayedTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable): number /*int*/
                 /**
                  * <b>Asynchronous tasks should never access any API in Bukkit. Great care
                  * should be taken to assure the thread-safety of asynchronous tasks.</b>
@@ -107,7 +107,7 @@ declare namespace org {
                  *      task, but rather, "an async" task
                  */
                 // @ts-ignore
-                scheduleAsyncRepeatingTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/, period: number /*long*/): int
+                scheduleAsyncRepeatingTask(plugin: org.bukkit.plugin.Plugin, task: java.lang.Runnable, delay: number /*long*/, period: number /*long*/): number /*int*/
                 /**
                  * Calls a method on the main thread and returns a Future object. This
                  * task will be executed by the main server thread.
@@ -172,14 +172,14 @@ declare namespace org {
                  * @return Active workers
                  */
                 // @ts-ignore
-                getActiveWorkers(): java.util.List<org.bukkit.scheduler.BukkitWorker>
+                getActiveWorkers(): Array<org.bukkit.scheduler.BukkitWorker>
                 /**
                  * Returns a list of all pending tasks. The ordering of the tasks is not
                  * related to their order of execution.
                  * @return Active workers
                  */
                 // @ts-ignore
-                getPendingTasks(): java.util.List<org.bukkit.scheduler.BukkitTask>
+                getPendingTasks(): Array<org.bukkit.scheduler.BukkitTask>
                 /**
                  * Returns a task that will run on the next server tick.
                  * @param plugin the reference to the plugin scheduling task
@@ -198,7 +198,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if task is null
                  */
                 // @ts-ignore
-                runTask(plugin: org.bukkit.plugin.Plugin, task: java.util.function.Consumer<org.bukkit.scheduler.BukkitTask> | java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>): void
+                runTask(plugin: org.bukkit.plugin.Plugin, task: java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>): void
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTask(Plugin)}
                  * @param plugin the reference to the plugin scheduling task
@@ -233,7 +233,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if task is null
                  */
                 // @ts-ignore
-                runTaskAsynchronously(plugin: org.bukkit.plugin.Plugin, task: java.util.function.Consumer<org.bukkit.scheduler.BukkitTask> | java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>): void
+                runTaskAsynchronously(plugin: org.bukkit.plugin.Plugin, task: java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>): void
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskAsynchronously(Plugin)}
                  * @param plugin the reference to the plugin scheduling task
@@ -266,7 +266,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if task is null
                  */
                 // @ts-ignore
-                runTaskLater(plugin: org.bukkit.plugin.Plugin, task: java.util.function.Consumer<org.bukkit.scheduler.BukkitTask> | java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/): void
+                runTaskLater(plugin: org.bukkit.plugin.Plugin, task: java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/): void
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskLater(Plugin, long)}
                  * @param plugin the reference to the plugin scheduling task
@@ -306,7 +306,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if task is null
                  */
                 // @ts-ignore
-                runTaskLaterAsynchronously(plugin: org.bukkit.plugin.Plugin, task: java.util.function.Consumer<org.bukkit.scheduler.BukkitTask> | java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/): void
+                runTaskLaterAsynchronously(plugin: org.bukkit.plugin.Plugin, task: java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/): void
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskLaterAsynchronously(Plugin, long)}
                  * @param plugin the reference to the plugin scheduling task
@@ -342,7 +342,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if task is null
                  */
                 // @ts-ignore
-                runTaskTimer(plugin: org.bukkit.plugin.Plugin, task: java.util.function.Consumer<org.bukkit.scheduler.BukkitTask> | java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/, period: number /*long*/): void
+                runTaskTimer(plugin: org.bukkit.plugin.Plugin, task: java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/, period: number /*long*/): void
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskTimer(Plugin, long, long)}
                  * @param plugin the reference to the plugin scheduling task
@@ -387,7 +387,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if task is null
                  */
                 // @ts-ignore
-                runTaskTimerAsynchronously(plugin: org.bukkit.plugin.Plugin, task: java.util.function.Consumer<org.bukkit.scheduler.BukkitTask> | java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/, period: number /*long*/): void
+                runTaskTimerAsynchronously(plugin: org.bukkit.plugin.Plugin, task: java.util.function$.Consumer<org.bukkit.scheduler.BukkitTask>, delay: number /*long*/, period: number /*long*/): void
                 /**
                  * @deprecated Use {#link BukkitRunnable#runTaskTimerAsynchronously(Plugin, long, long)}
                  * @param plugin the reference to the plugin scheduling task

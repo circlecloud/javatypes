@@ -120,20 +120,20 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            constructor(t: java.util.Map<K, V>)
+            constructor(t: java.util.Map<any, any>)
             /**
              * Returns the number of keys in this hashtable.
              * @return the number of keys in this hashtable.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Tests if this hashtable maps no keys to values.
              * @return <code>true</code> if this hashtable maps no keys to values;
              *           <code>false</code> otherwise.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns an enumeration of the keys in this hashtable.
              * @return an enumeration of the keys in this hashtable.
@@ -143,7 +143,7 @@ declare namespace java {
              * @see Map
              */
             // @ts-ignore
-            keys(): java.util.Enumeration<K>
+            public keys(): java.util.Enumeration<K>
             /**
              * Returns an enumeration of the values in this hashtable.
              * Use the Enumeration methods on the returned object to fetch the elements
@@ -155,7 +155,7 @@ declare namespace java {
              * @see Map
              */
             // @ts-ignore
-            elements(): java.util.Enumeration<V>
+            public elements(): java.util.Enumeration<V>
             /**
              * Tests if some key maps into the specified value in this hashtable.
              * This operation is more expensive than the {@link #containsKey
@@ -171,7 +171,7 @@ declare namespace java {
              * @exception NullPointerException  if the value is <code>null</code>
              */
             // @ts-ignore
-            contains(value: any): boolean
+            public contains(value: java.lang.Object | any): boolean
             /**
              * Returns true if this hashtable maps one or more keys to this value.
              * <p>Note that this method is identical in functionality to {@link
@@ -183,7 +183,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Tests if the specified object is a key in this hashtable.
              * @param key   possible key
@@ -194,7 +194,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -209,7 +209,7 @@ declare namespace java {
              * @see #put(Object, Object)
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             /**
              * Increases the capacity of and internally reorganizes this
              * hashtable, in order to accommodate and access its entries more
@@ -235,7 +235,7 @@ declare namespace java {
              * @see #get(Object)
              */
             // @ts-ignore
-            put(key: K, value: V): V
+            public put(key: K, value: V): V
             /**
              * Removes the key (and its corresponding value) from this
              * hashtable. This method does nothing if the key is not in the hashtable.
@@ -245,7 +245,7 @@ declare namespace java {
              * @throws NullPointerException  if the key is <code>null</code>
              */
             // @ts-ignore
-            remove(key: any): V
+            public remove(key: java.lang.Object | any): V
             /**
              * Copies all of the mappings from the specified map to this hashtable.
              * These mappings will replace any mappings that this hashtable had for any
@@ -255,12 +255,12 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            putAll(t: java.util.Map<K, V>): void
+            public putAll(t: java.util.Map<any, any>): void
             /**
              * Clears this hashtable so that it contains no keys.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Creates a shallow copy of this hashtable. All the structure of the
              * hashtable itself is copied, but the keys and values are not cloned.
@@ -268,7 +268,7 @@ declare namespace java {
              * @return a clone of the hashtable
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns a string representation of this <tt>Hashtable</tt> object
              * in the form of a set of entries, enclosed in braces and separated
@@ -279,7 +279,7 @@ declare namespace java {
              * @return a string representation of this hashtable
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a {@link Set} view of the keys contained in this map.
              * The set is backed by the map, so changes to the map are
@@ -295,7 +295,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * The set is backed by the map, so changes to the map are
@@ -312,7 +312,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public entrySet(): Array<java.util.Map.Entry<K, V>>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The collection is backed by the map, so changes to the map are
@@ -328,7 +328,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             /**
              * Compares the specified Object with this Map for equality,
              * as per the definition in the Map interface.
@@ -338,7 +338,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this Map as per the definition in the
              * Map interface.
@@ -346,29 +346,29 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             // @ts-ignore
-            getOrDefault(key: any, defaultValue: V): V
+            public getOrDefault(key: java.lang.Object | any, defaultValue: V): V
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+            public forEach(action: java.util.function$.BiConsumer<any, any>): void
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+            public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
             // @ts-ignore
-            putIfAbsent(key: K, value: V): V
+            public putIfAbsent(key: K, value: V): V
             // @ts-ignore
-            remove(key: any, value: any): boolean
+            public remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
             // @ts-ignore
-            replace(key: K, oldValue: V, newValue: V): boolean
+            public replace(key: K, oldValue: V, newValue: V): boolean
             // @ts-ignore
-            replace(key: K, value: V): V
+            public replace(key: K, value: V): V
             // @ts-ignore
-            computeIfAbsent(key: K, mappingFunction: java.util.function.Function<any super K, V> | java.util.function$.Function<? super K, V>): V
+            public computeIfAbsent(key: K, mappingFunction: java.util.function$.Function<any, any>): V
             // @ts-ignore
-            computeIfPresent(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+            public computeIfPresent(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
             // @ts-ignore
-            compute(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+            public compute(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
             // @ts-ignore
-            merge(key: K, value: V, remappingFunction: java.util.function.BiFunction<any super V, ? super V, V> | java.util.function$.BiFunction<? super V, ? super V, V>): V
+            public merge(key: K, value: V, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
         }
     }
 }

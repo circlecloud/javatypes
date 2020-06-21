@@ -10,14 +10,14 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    class ManagedArray extends org.springframework.beans.factory.support.ManagedList<java.lang.Object> {
+                    class ManagedArray extends org.springframework.beans.factory.support.ManagedList<java.lang.Object | any> {
                         /**
                          * Create a new managed array placeholder.
                          * @param elementTypeName the target element type as a class name
                          * @param size the size of the array
                          */
                         // @ts-ignore
-                        constructor(elementTypeName: string, size: number /*int*/)
+                        constructor(elementTypeName: java.lang.String | string, size: number /*int*/)
                     }
                 }
             }

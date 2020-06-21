@@ -18,13 +18,13 @@ declare namespace org {
                      *  e.g. {#link Configuration @Configuration} classes
                      */
                     // @ts-ignore
-                    register(...componentClasses: java.lang.Class[]): void
+                    register(...componentClasses: java.lang.Class<any>[]): void
                     /**
                      * Perform a scan within the specified base packages.
                      * @param basePackages the packages to scan for component classes
                      */
                     // @ts-ignore
-                    scan(...basePackages: string[]): void
+                    scan(...basePackages: java.lang.String[] | string[]): void
                 }
             }
         }

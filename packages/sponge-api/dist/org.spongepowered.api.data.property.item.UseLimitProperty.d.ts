@@ -30,7 +30,7 @@ declare namespace org {
                              * @param operator The operator to use to compare to other properties
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                         }
                     }
                 }

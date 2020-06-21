@@ -16,7 +16,7 @@ declare namespace org {
                      *         or {@link org.spongepowered.api.Platform.Type#SERVER})
                      */
                     // @ts-ignore
-                    handleMessage(message: M extends org.spongepowered.api.network.Message, connection: org.spongepowered.api.network.RemoteConnection, side: org.spongepowered.api.Platform.Type): void
+                    handleMessage(message: M, connection: org.spongepowered.api.network.RemoteConnection, side: org.spongepowered.api.Platform.Type): void
                 }
             }
         }

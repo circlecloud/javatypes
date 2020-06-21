@@ -17,7 +17,7 @@ declare namespace org {
                      * @see RequestMapping
                      */
                     // @ts-ignore
-                    class PostMapping implements java.lang.annotation.Annotation {
+                    abstract class PostMapping implements java.lang.annotation.Annotation {
                     }
                 }
             }

@@ -27,7 +27,7 @@ declare namespace javax {
              * @author Hemma Prafullchandra
              */
             // @ts-ignore
-            class Certificate extends java.lang.Object {
+            abstract class Certificate extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -41,14 +41,14 @@ declare namespace javax {
                  *          match, false otherwise.
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode value for this certificate from its
                  * encoded form.
                  * @return the hashcode value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the encoded form of this certificate. It is
                  * assumed that each certificate type would have only a single
@@ -59,7 +59,7 @@ declare namespace javax {
                  *             encoding failure
                  */
                 // @ts-ignore
-                abstract getEncoded(): byte[]
+                public abstract getEncoded(): number /*byte*/[]
                 /**
                  * Verifies that this certificate was signed using the
                  * private key that corresponds to the specified public key.
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @exception CertificateException on encoding errors.
                  */
                 // @ts-ignore
-                abstract verify(key: java.security.PublicKey): void
+                public abstract verify(key: java.security.PublicKey): void
                 /**
                  * Verifies that this certificate was signed using the
                  * private key that corresponds to the specified public key.
@@ -87,19 +87,19 @@ declare namespace javax {
                  * @exception CertificateException on encoding errors.
                  */
                 // @ts-ignore
-                abstract verify(key: java.security.PublicKey, sigProvider: string): void
+                public abstract verify(key: java.security.PublicKey, sigProvider: java.lang.String | string): void
                 /**
                  * Returns a string representation of this certificate.
                  * @return a string representation of this certificate.
                  */
                 // @ts-ignore
-                abstract toString(): java.lang.String
+                public abstract toString(): string
                 /**
                  * Gets the public key from this certificate.
                  * @return the public key.
                  */
                 // @ts-ignore
-                abstract getPublicKey(): java.security.PublicKey
+                public abstract getPublicKey(): java.security.PublicKey
             }
         }
     }

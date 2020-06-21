@@ -10,52 +10,52 @@ declare namespace org {
                     // @ts-ignore
                     constructor(child: org.bukkit.entity.LivingEntity, mother: org.bukkit.entity.LivingEntity, father: org.bukkit.entity.LivingEntity, breeder: org.bukkit.entity.LivingEntity, bredWith: org.bukkit.inventory.ItemStack, experience: number /*int*/)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets the parent creating this entity.
                      * @return The "birth" parent
                      */
                     // @ts-ignore
-                    getMother(): org.bukkit.entity.LivingEntity
+                    public getMother(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets the other parent of the newly born entity.
                      * @return the other parent
                      */
                     // @ts-ignore
-                    getFather(): org.bukkit.entity.LivingEntity
+                    public getFather(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets the Entity responsible for breeding. Breeder is null for spontaneous
                      * conception.
                      * @return The Entity who initiated breeding.
                      */
                     // @ts-ignore
-                    getBreeder(): org.bukkit.entity.LivingEntity
+                    public getBreeder(): org.bukkit.entity.LivingEntity
                     /**
                      * The ItemStack that was used to initiate breeding, if present.
                      * @return ItemStack used to initiate breeding.
                      */
                     // @ts-ignore
-                    getBredWith(): org.bukkit.inventory.ItemStack
+                    public getBredWith(): org.bukkit.inventory.ItemStack
                     /**
                      * Get the amount of experience granted by breeding.
                      * @return experience amount
                      */
                     // @ts-ignore
-                    getExperience(): int
+                    public getExperience(): number /*int*/
                     /**
                      * Set the amount of experience granted by breeding.
                      * @param experience experience amount
                      */
                     // @ts-ignore
-                    setExperience(experience: number /*int*/): void
+                    public setExperience(experience: number /*int*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

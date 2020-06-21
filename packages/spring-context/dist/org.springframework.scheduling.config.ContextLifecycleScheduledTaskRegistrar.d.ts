@@ -13,9 +13,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    afterSingletonsInstantiated(): void
+                    public afterSingletonsInstantiated(): void
                 }
             }
         }

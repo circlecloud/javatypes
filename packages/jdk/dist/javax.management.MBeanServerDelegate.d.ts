@@ -18,60 +18,60 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            readonly DELEGATE_NAME: javax.management.ObjectName
+            public static readonly DELEGATE_NAME: javax.management.ObjectName
             /**
              * Returns the MBean server agent identity.
              * @return the identity.
              */
             // @ts-ignore
-            getMBeanServerId(): java.lang.String
+            public getMBeanServerId(): string
             /**
              * Returns the full name of the JMX specification implemented
              * by this product.
              * @return the specification name.
              */
             // @ts-ignore
-            getSpecificationName(): java.lang.String
+            public getSpecificationName(): string
             /**
              * Returns the version of the JMX specification implemented
              * by this product.
              * @return the specification version.
              */
             // @ts-ignore
-            getSpecificationVersion(): java.lang.String
+            public getSpecificationVersion(): string
             /**
              * Returns the vendor of the JMX specification implemented
              * by this product.
              * @return the specification vendor.
              */
             // @ts-ignore
-            getSpecificationVendor(): java.lang.String
+            public getSpecificationVendor(): string
             /**
              * Returns the JMX implementation name (the name of this product).
              * @return the implementation name.
              */
             // @ts-ignore
-            getImplementationName(): java.lang.String
+            public getImplementationName(): string
             /**
              * Returns the JMX implementation version (the version of this product).
              * @return the implementation version.
              */
             // @ts-ignore
-            getImplementationVersion(): java.lang.String
+            public getImplementationVersion(): string
             /**
              * Returns the JMX implementation vendor (the vendor of this product).
              * @return the implementation vendor.
              */
             // @ts-ignore
-            getImplementationVendor(): java.lang.String
+            public getImplementationVendor(): string
             // @ts-ignore
-            getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+            public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
             // @ts-ignore
-            addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            public addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            public removeNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             // @ts-ignore
-            removeNotificationListener(listener: javax.management.NotificationListener): void
+            public removeNotificationListener(listener: javax.management.NotificationListener): void
             /**
              * Enables the MBean server to send a notification.
              * If the passed <var>notification</var> has a sequence number lesser
@@ -80,7 +80,7 @@ declare namespace javax {
              * @param notification The notification to send.
              */
             // @ts-ignore
-            sendNotification(notification: javax.management.Notification): void
+            public sendNotification(notification: javax.management.Notification): void
         }
     }
 }

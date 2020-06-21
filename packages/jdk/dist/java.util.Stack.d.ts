@@ -35,7 +35,7 @@ declare namespace java {
              * @see java.util.Vector#addElement
              */
             // @ts-ignore
-            push(item: E): E
+            public push(item: E): E
             /**
              * Removes the object at the top of this stack and returns that
              * object as the value of this function.
@@ -44,7 +44,7 @@ declare namespace java {
              * @throws EmptyStackException  if this stack is empty.
              */
             // @ts-ignore
-            pop(): E
+            public pop(): E
             /**
              * Looks at the object at the top of this stack without removing it
              * from the stack.
@@ -53,14 +53,14 @@ declare namespace java {
              * @throws EmptyStackException  if this stack is empty.
              */
             // @ts-ignore
-            peek(): E
+            public peek(): E
             /**
              * Tests if this stack is empty.
              * @return <code>true</code> if and only if this stack contains
              *           no items; <code>false</code> otherwise.
              */
             // @ts-ignore
-            empty(): boolean
+            public empty(): boolean
             /**
              * Returns the 1-based position where an object is on this stack.
              * If the object <tt>o</tt> occurs as an item in this stack, this
@@ -75,7 +75,7 @@ declare namespace java {
              *           indicates that the object is not on the stack.
              */
             // @ts-ignore
-            search(o: any): int
+            public search(o: java.lang.Object | any): number /*int*/
         }
     }
 }

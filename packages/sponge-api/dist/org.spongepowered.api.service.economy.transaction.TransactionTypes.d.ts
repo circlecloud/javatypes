@@ -10,17 +10,17 @@ declare namespace org {
                              * Represents a transaction where an {@link Account} received some amount of a {@link Currency}.
                              */
                             // @ts-ignore
-                            readonly DEPOSIT: org.spongepowered.api.service.economy.transaction.TransactionType
+                            public static readonly DEPOSIT: org.spongepowered.api.service.economy.transaction.TransactionType
                             /**
                              * Represents a transaction where an {@link Account} transferred some amount of a currency to another {@link Account}.
                              */
                             // @ts-ignore
-                            readonly TRANSFER: org.spongepowered.api.service.economy.transaction.TransactionType
+                            public static readonly TRANSFER: org.spongepowered.api.service.economy.transaction.TransactionType
                             /**
                              * Represents a transaction where an {@link Account} lost some amount of a {@link Currency}.
                              */
                             // @ts-ignore
-                            readonly WITHDRAW: org.spongepowered.api.service.economy.transaction.TransactionType
+                            public static readonly WITHDRAW: org.spongepowered.api.service.economy.transaction.TransactionType
                         }
                     }
                 }

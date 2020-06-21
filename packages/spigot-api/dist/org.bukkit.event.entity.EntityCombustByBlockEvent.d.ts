@@ -16,7 +16,7 @@ declare namespace org {
                      * @return the Block that set the combustee alight.
                      */
                     // @ts-ignore
-                    getCombuster(): org.bukkit.block.Block
+                    public getCombuster(): org.bukkit.block.Block
                 }
             }
         }

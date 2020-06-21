@@ -16,7 +16,7 @@ declare namespace java {
                  * serialization compatibility.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Returns the public point W.
                  * @return the public point W.

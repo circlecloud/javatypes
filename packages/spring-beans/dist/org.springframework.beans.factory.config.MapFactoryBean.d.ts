@@ -12,14 +12,14 @@ declare namespace org {
                      * @see ListFactoryBean
                      */
                     // @ts-ignore
-                    class MapFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.util.Map<java.lang.Object, java.lang.Object>> {
+                    class MapFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.util.Map<java.lang.Object | any, java.lang.Object | any>> {
                         // @ts-ignore
                         constructor()
                         /**
                          * Set the source Map, typically populated via XML "map" elements.
                          */
                         // @ts-ignore
-                        setSourceMap(sourceMap: java.util.Map<any, ?>): void
+                        public setSourceMap(sourceMap: java.util.Map<any, any>): void
                         /**
                          * Set the class to use for the target Map. Can be populated with a fully
                          * qualified class name when defined in a Spring application context.
@@ -27,11 +27,11 @@ declare namespace org {
                          * @see java.util.LinkedHashMap
                          */
                         // @ts-ignore
-                        setTargetMapClass(targetMapClass: java.lang.Class<java.util.Map>): void
+                        public setTargetMapClass(targetMapClass: java.lang.Class<any>): void
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<java.util.Map>
+                        public getObjectType(): java.lang.Class<java.util.Map<any>>
                         // @ts-ignore
-                        createInstance(): java.util.Map<java.lang.Object, java.lang.Object>
+                        createInstance(): java.util.Map<java.lang.Object | any, java.lang.Object | any>
                     }
                 }
             }

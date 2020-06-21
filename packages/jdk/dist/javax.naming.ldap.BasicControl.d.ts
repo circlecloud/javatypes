@@ -15,7 +15,7 @@ declare namespace javax {
                  * @param id      The control's object identifier string.
                  */
                 // @ts-ignore
-                constructor(id: string)
+                constructor(id: java.lang.String | string)
                 /**
                  * Constructs a control using the supplied arguments.
                  * @param id              The control's object identifier string.
@@ -26,13 +26,13 @@ declare namespace javax {
                  *                           It may be null.
                  */
                 // @ts-ignore
-                constructor(id: string, criticality: boolean, value: number /*byte*/[])
+                constructor(id: java.lang.String | string, criticality: boolean, value: number /*byte*/[])
                 /**
                  * The control's object identifier string.
                  * @serial 
                  */
                 // @ts-ignore
-                id: string
+                id: java.lang.String | string
                 /**
                  * The control's criticality.
                  * @serial 
@@ -50,13 +50,13 @@ declare namespace javax {
                  * @return The non-null object identifier string.
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                public getID(): string
                 /**
                  * Determines the control's criticality.
                  * @return true if the control is critical; false otherwise.
                  */
                 // @ts-ignore
-                isCritical(): boolean
+                public isCritical(): boolean
                 /**
                  * Retrieves the control's ASN.1 BER encoded value.
                  * The result includes the BER tag and length for the control's value but
@@ -66,7 +66,7 @@ declare namespace javax {
                  *           returned value will affect the contents of the control.
                  */
                 // @ts-ignore
-                getEncodedValue(): byte[]
+                public getEncodedValue(): number /*byte*/[]
             }
         }
     }

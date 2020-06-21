@@ -113,7 +113,7 @@ declare namespace java {
                  * @return the number of consumers waiting to receive elements
                  */
                 // @ts-ignore
-                getWaitingConsumerCount(): int
+                getWaitingConsumerCount(): number /*int*/
             }
         }
     }

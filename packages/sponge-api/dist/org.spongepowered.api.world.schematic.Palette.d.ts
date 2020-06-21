@@ -23,7 +23,7 @@ declare namespace org {
                          * @return The highest id
                          */
                         // @ts-ignore
-                        getHighestId(): int
+                        getHighestId(): number /*int*/
                         /**
                          * Gets the {@code type} represented by the given identifier from the mapping.
                          * @param id The identifier
@@ -38,7 +38,7 @@ declare namespace org {
                          * @return The identifier, if found
                          */
                         // @ts-ignore
-                        get(type: T extends org.spongepowered.api.CatalogType): java.util.Optional<java.lang.Integer>
+                        get(type: T): java.util.Optional<java.lang.Integer | number>
                         /**
                          * Gets the identifier for the given {@code type T} from the mapping. If the
                          * {@code type T} is not yet registered in the mapping then it is registered and
@@ -47,7 +47,7 @@ declare namespace org {
                          * @return The identifier
                          */
                         // @ts-ignore
-                        getOrAssign(type: T extends org.spongepowered.api.CatalogType): int
+                        getOrAssign(type: T): number /*int*/
                         /**
                          * Removes the given {@code type T} from the mapping.
                          * <p>Note that if this palette is considered a global palette, removal is not supported.</p>
@@ -55,13 +55,13 @@ declare namespace org {
                          * @return If the type existed in the mapping
                          */
                         // @ts-ignore
-                        remove(type: T extends org.spongepowered.api.CatalogType): boolean
+                        remove(type: T): boolean
                         /**
                          * Gets all {@code type T}s contained in this palette.
                          * @return All contained types
                          */
                         // @ts-ignore
-                        getEntries(): java.util.Collection<T>
+                        getEntries(): Array<T>
                     }
                 }
             }

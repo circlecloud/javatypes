@@ -40,7 +40,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            length(): long
+            length(): number /*long*/
             /**
              * Retrieves a copy of the specified substring
              * in the <code>CLOB</code> value
@@ -62,7 +62,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getSubString(pos: number /*long*/, length: number /*int*/): java.lang.String
+            getSubString(pos: number /*long*/, length: number /*int*/): string
             /**
              * Retrieves the <code>CLOB</code> value designated by this <code>Clob</code>
              * object as a <code>java.io.Reader</code> object (or as a stream of
@@ -109,7 +109,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            position(searchstr: string, start: number /*long*/): long
+            position(searchstr: java.lang.String | string, start: number /*long*/): number /*long*/
             /**
              * Retrieves the character position at which the specified
              * <code>Clob</code> object <code>searchstr</code> appears in this
@@ -127,7 +127,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            position(searchstr: java.sql.Clob, start: number /*long*/): long
+            position(searchstr: java.sql.Clob, start: number /*long*/): number /*long*/
             /**
              * Writes the given Java <code>String</code> to the <code>CLOB</code>
              * value that this <code>Clob</code> object designates at the position
@@ -155,7 +155,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setString(pos: number /*long*/, str: string): int
+            setString(pos: number /*long*/, str: java.lang.String | string): number /*int*/
             /**
              * Writes <code>len</code> characters of <code>str</code>, starting
              * at character <code>offset</code>, to the <code>CLOB</code> value
@@ -185,7 +185,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setString(pos: number /*long*/, str: string, offset: number /*int*/, len: number /*int*/): int
+            setString(pos: number /*long*/, str: java.lang.String | string, offset: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Retrieves a stream to be used to write Ascii characters to the
              * <code>CLOB</code> value that this <code>Clob</code> object represents,

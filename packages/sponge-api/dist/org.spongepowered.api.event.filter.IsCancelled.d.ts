@@ -13,7 +13,7 @@ declare namespace org {
                      * cancellable (eg. must extend {@link Cancellable}). </p>
                      */
                     // @ts-ignore
-                    class IsCancelled implements java.lang.annotation.Annotation {
+                    abstract class IsCancelled implements java.lang.annotation.Annotation {
                     }
                 }
             }

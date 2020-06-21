@@ -35,7 +35,7 @@ declare namespace javax {
                  *               then the node is not allowed to have children
                  */
                 // @ts-ignore
-                constructor(value: any, children: any)
+                constructor(value: java.lang.Object | any, children: java.lang.Object | any)
                 /**
                  * Does the this <code>JTree</code> have children?
                  * This property is currently not implemented.
@@ -46,7 +46,7 @@ declare namespace javax {
                  * Value to create children with.
                  */
                 // @ts-ignore
-                childValue: any
+                childValue: java.lang.Object | any
                 /**
                  * Have the children been loaded yet?
                  */
@@ -60,7 +60,7 @@ declare namespace javax {
                  * <code>Enumeration</code> returns them.
                  */
                 // @ts-ignore
-                createChildren(parent: javax.swing.tree.DefaultMutableTreeNode, children: any): void
+                public static createChildren(parent: javax.swing.tree.DefaultMutableTreeNode, children: java.lang.Object | any): void
                 /**
                  * Returns true if this node allows children. Whether the node
                  * allows children depends on how it was created.
@@ -68,13 +68,13 @@ declare namespace javax {
                  * @see JTree.DynamicUtilTreeNode
                  */
                 // @ts-ignore
-                isLeaf(): boolean
+                public isLeaf(): boolean
                 /**
                  * Returns the number of child nodes.
                  * @return the number of child nodes
                  */
                 // @ts-ignore
-                getChildCount(): int
+                public getChildCount(): number /*int*/
                 /**
                  * Loads the children based on <code>childValue</code>.
                  * If <code>childValue</code> is a <code>Vector</code>
@@ -89,12 +89,12 @@ declare namespace javax {
                  * Subclassed to load the children, if necessary.
                  */
                 // @ts-ignore
-                getChildAt(index: number /*int*/): javax.swing.tree.TreeNode
+                public getChildAt(index: number /*int*/): javax.swing.tree.TreeNode
                 /**
                  * Subclassed to load the children, if necessary.
                  */
                 // @ts-ignore
-                children(): java.util.Enumeration
+                public children(): java.util.Enumeration<any>
             }
         }
     }

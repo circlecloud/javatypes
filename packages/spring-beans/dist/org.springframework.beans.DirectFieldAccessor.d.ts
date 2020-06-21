@@ -25,7 +25,7 @@ declare namespace org {
                  * @param object the object wrapped by this DirectFieldAccessor
                  */
                 // @ts-ignore
-                constructor(object: any)
+                constructor(object: java.lang.Object | any)
                 /**
                  * Create a new DirectFieldAccessor for the given object,
                  * registering a nested path that the object is in.
@@ -34,13 +34,13 @@ declare namespace org {
                  * @param parent the containing DirectFieldAccessor (must not be {#code null})
                  */
                 // @ts-ignore
-                constructor(object: any, nestedPath: string, parent: org.springframework.beans.DirectFieldAccessor)
+                constructor(object: java.lang.Object | any, nestedPath: java.lang.String | string, parent: org.springframework.beans.DirectFieldAccessor)
                 // @ts-ignore
-                getLocalPropertyHandler(propertyName: string): org.springframework.beans.DirectFieldAccessor.FieldPropertyHandler
+                getLocalPropertyHandler(propertyName: java.lang.String | string): org.springframework.beans.DirectFieldAccessor.FieldPropertyHandler
                 // @ts-ignore
-                newNestedPropertyAccessor(object: any, nestedPath: string): org.springframework.beans.DirectFieldAccessor
+                newNestedPropertyAccessor(object: java.lang.Object | any, nestedPath: java.lang.String | string): org.springframework.beans.DirectFieldAccessor
                 // @ts-ignore
-                createNotWritablePropertyException(propertyName: string): org.springframework.beans.NotWritablePropertyException
+                createNotWritablePropertyException(propertyName: java.lang.String | string): org.springframework.beans.NotWritablePropertyException
             }
         }
     }

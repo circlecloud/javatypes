@@ -48,7 +48,7 @@ declare namespace org {
                      * if not running within a BeanFactory.
                      */
                     // @ts-ignore
-                    setBundleClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBundleClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Return the ClassLoader to load resource bundles with.
                      * <p>Default is the containing BeanFactory's bean ClassLoader.
@@ -57,19 +57,19 @@ declare namespace org {
                     // @ts-ignore
                     getBundleClassLoader(): java.lang.ClassLoader
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Resolves the given message code as key in the registered resource bundles,
                      * returning the value found in the bundle as-is (without MessageFormat parsing).
                      */
                     // @ts-ignore
-                    resolveCodeWithoutArguments(code: string, locale: java.util.Locale): java.lang.String
+                    resolveCodeWithoutArguments(code: java.lang.String | string, locale: java.util.Locale): string
                     /**
                      * Resolves the given message code as key in the registered resource bundles,
                      * using a cached MessageFormat instance per message code.
                      */
                     // @ts-ignore
-                    resolveCode(code: string, locale: java.util.Locale): java.text.MessageFormat
+                    resolveCode(code: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                     /**
                      * Return a ResourceBundle for the given basename and code,
                      * fetching already generated MessageFormats from the cache.
@@ -79,7 +79,7 @@ declare namespace org {
                      *  found for the given basename and Locale
                      */
                     // @ts-ignore
-                    getResourceBundle(basename: string, locale: java.util.Locale): java.util.ResourceBundle
+                    getResourceBundle(basename: java.lang.String | string, locale: java.util.Locale): java.util.ResourceBundle
                     /**
                      * Obtain the resource bundle for the given basename and Locale.
                      * @param basename the basename to look for
@@ -90,7 +90,7 @@ declare namespace org {
                      * @see #getBundleClassLoader()
                      */
                     // @ts-ignore
-                    doGetBundle(basename: string, locale: java.util.Locale): java.util.ResourceBundle
+                    doGetBundle(basename: java.lang.String | string, locale: java.util.Locale): java.util.ResourceBundle
                     /**
                      * Load a property-based resource bundle from the given reader.
                      * <p>This will be called in case of a {@link #setDefaultEncoding "defaultEncoding"},
@@ -139,7 +139,7 @@ declare namespace org {
                      * @throws MissingResourceException if thrown by the ResourceBundle
                      */
                     // @ts-ignore
-                    getMessageFormat(bundle: java.util.ResourceBundle, code: string, locale: java.util.Locale): java.text.MessageFormat
+                    getMessageFormat(bundle: java.util.ResourceBundle, code: java.lang.String | string, locale: java.util.Locale): java.text.MessageFormat
                     /**
                      * Efficiently retrieve the String value for the specified key,
                      * or return {@code null} if not found.
@@ -155,12 +155,12 @@ declare namespace org {
                      * @see ResourceBundle#containsKey(String)
                      */
                     // @ts-ignore
-                    getStringOrNull(bundle: java.util.ResourceBundle, key: string): java.lang.String
+                    getStringOrNull(bundle: java.util.ResourceBundle, key: java.lang.String | string): string
                     /**
                      * Show the configuration of this MessageSource.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

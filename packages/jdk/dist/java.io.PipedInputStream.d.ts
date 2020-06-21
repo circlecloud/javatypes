@@ -77,7 +77,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly PIPE_SIZE: number /*int*/
+            static readonly PIPE_SIZE: number /*int*/
             /**
              * The circular buffer into which incoming data is placed.
              * @since JDK1.1
@@ -121,7 +121,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            connect(src: java.io.PipedOutputStream): void
+            public connect(src: java.io.PipedOutputStream): void
             /**
              * Receives a byte of data.  This method will block if no input is
              * available.
@@ -147,7 +147,7 @@ declare namespace java {
              *            or if an I/O error occurs.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this piped input
              * stream into an array of bytes. Less than <code>len</code> bytes
@@ -172,7 +172,7 @@ declare namespace java {
              *            closed, or if an I/O error occurs.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Returns the number of bytes that can be read from this input
              * stream without blocking.
@@ -185,14 +185,14 @@ declare namespace java {
              * @since JDK1.0.2
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Closes this piped input stream and releases any system resources
              * associated with the stream.
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

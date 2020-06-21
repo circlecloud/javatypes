@@ -13,10 +13,20 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class AdviceMode extends java.lang.Enum<org.springframework.context.annotation.AdviceMode> {
+                    /**
+                     * JDK proxy-based advice.
+                     */
+                    // @ts-ignore
+                    readonly PROXY: org.springframework.context.annotation.AdviceMode
+                    /**
+                     * AspectJ weaving-based advice.
+                     */
+                    // @ts-ignore
+                    readonly ASPECTJ: org.springframework.context.annotation.AdviceMode
                     // @ts-ignore
                     values(): org.springframework.context.annotation.AdviceMode[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.context.annotation.AdviceMode
+                    valueOf(name: java.lang.String | string): org.springframework.context.annotation.AdviceMode
                 }
             }
         }

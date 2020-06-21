@@ -29,7 +29,7 @@ declare namespace java {
                  * @return the name of the JIT compiler
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * If supported (see {@link #isCompilationTimeMonitoringSupported()}),
                  * returns the total number of <b>milliseconds </b> spent by the virtual
@@ -42,7 +42,7 @@ declare namespace java {
                  *              {#link #isCompilationTimeMonitoringSupported()} method.
                  */
                 // @ts-ignore
-                getTotalCompilationTime(): long
+                getTotalCompilationTime(): number /*long*/
                 /**
                  * A boolean indication of whether or not the virtual machine supports the
                  * timing of its compilation facilities.

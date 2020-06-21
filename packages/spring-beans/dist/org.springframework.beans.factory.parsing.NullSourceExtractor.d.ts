@@ -19,7 +19,7 @@ declare namespace org {
                          * This implementation simply returns {@code null} for any input.
                          */
                         // @ts-ignore
-                        extractSource(sourceCandidate: any, definitionResource: Resource): java.lang.Object
+                        public extractSource(sourceCandidate: java.lang.Object | any, definitionResource: Resource): any
                     }
                 }
             }

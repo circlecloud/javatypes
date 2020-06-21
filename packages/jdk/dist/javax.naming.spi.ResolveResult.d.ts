@@ -29,7 +29,7 @@ declare namespace javax {
                  *                  resolved. Cannot be null (but can be empty).
                  */
                 // @ts-ignore
-                constructor(robj: any, rcomp: string)
+                constructor(robj: java.lang.Object | any, rcomp: java.lang.String | string)
                 /**
                  * Constructs a new instance of ResolveResult consisting of
                  * the resolved Object and the remaining name.
@@ -37,7 +37,7 @@ declare namespace javax {
                  * @param rname The non-null remaining name that has yet to be resolved.
                  */
                 // @ts-ignore
-                constructor(robj: any, rname: javax.naming.Name)
+                constructor(robj: java.lang.Object | any, rname: javax.naming.Name)
                 /**
                  * Field containing the Object that was resolved to successfully.
                  * It can be null only when constructed using a subclass.
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @serial 
                  */
                 // @ts-ignore
-                resolvedObj: any
+                resolvedObj: java.lang.Object | any
                 /**
                  * Field containing the remaining name yet to be resolved.
                  * It can be null only when constructed using a subclass.
@@ -63,14 +63,14 @@ declare namespace javax {
                  * @see #setRemainingName
                  */
                 // @ts-ignore
-                getRemainingName(): javax.naming.Name
+                public getRemainingName(): javax.naming.Name
                 /**
                  * Retrieves the Object to which resolution was successful.
                  * @return The Object to which resolution was successful. Cannot be null.
                  * @see #setResolvedObj
                  */
                 // @ts-ignore
-                getResolvedObj(): java.lang.Object
+                public getResolvedObj(): any
                 /**
                  * Sets the remaining name field of this result to name.
                  * A copy of name is made so that modifying the copy within
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see #appendRemainingComponent
                  */
                 // @ts-ignore
-                setRemainingName(name: javax.naming.Name): void
+                public setRemainingName(name: javax.naming.Name): void
                 /**
                  * Adds components to the end of remaining name.
                  * @param name The components to add. Can be null.
@@ -91,7 +91,7 @@ declare namespace javax {
                  * @see #appendRemainingComponent
                  */
                 // @ts-ignore
-                appendRemainingName(name: javax.naming.Name): void
+                public appendRemainingName(name: javax.naming.Name): void
                 /**
                  * Adds a single component to the end of remaining name.
                  * @param name The component to add. Can be null.
@@ -99,7 +99,7 @@ declare namespace javax {
                  * @see #appendRemainingName
                  */
                 // @ts-ignore
-                appendRemainingComponent(name: string): void
+                public appendRemainingComponent(name: java.lang.String | string): void
                 /**
                  * Sets the resolved Object field of this result to obj.
                  * @param obj The object to use for setting the resolved obj field.
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @see #getResolvedObj
                  */
                 // @ts-ignore
-                setResolvedObj(obj: any): void
+                public setResolvedObj(obj: java.lang.Object | any): void
             }
         }
     }

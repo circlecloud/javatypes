@@ -33,7 +33,7 @@ declare namespace java {
                  *           The object attached to the I/O operation when it was initiated.
                  */
                 // @ts-ignore
-                failed(exc: Error, attachment: A): void
+                failed(exc: java.lang.Throwable | Error, attachment: A): void
             }
         }
     }

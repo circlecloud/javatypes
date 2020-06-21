@@ -11,9 +11,9 @@ declare namespace org {
                     // @ts-ignore
                     interface SafeTextSerializer extends org.spongepowered.api.text.serializer.TextSerializer {
                         // @ts-ignore
-                        deserialize(input: string): org.spongepowered.api.text.Text
+                        deserialize(input: java.lang.String | string): org.spongepowered.api.text.Text
                         // @ts-ignore
-                        deserializeUnchecked(input: string): org.spongepowered.api.text.Text
+                        deserializeUnchecked(input: java.lang.String | string): org.spongepowered.api.text.Text
                     }
                 }
             }

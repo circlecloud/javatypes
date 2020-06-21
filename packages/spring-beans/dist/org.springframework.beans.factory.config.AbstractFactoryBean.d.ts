@@ -22,7 +22,7 @@ declare namespace org {
                      * @see #createInstance()
                      */
                     // @ts-ignore
-                    class AbstractFactoryBean<T> extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<T>, org.springframework.beans.factory.BeanClassLoaderAware, org.springframework.beans.factory.BeanFactoryAware, org.springframework.beans.factory.InitializingBean, org.springframework.beans.factory.DisposableBean {
+                    abstract class AbstractFactoryBean<T> extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<T>, org.springframework.beans.factory.BeanClassLoaderAware, org.springframework.beans.factory.BeanFactoryAware, org.springframework.beans.factory.InitializingBean, org.springframework.beans.factory.DisposableBean {
                         // @ts-ignore
                         constructor()
                         /**
@@ -35,13 +35,13 @@ declare namespace org {
                          * otherwise. Default is {@code true} (a singleton).
                          */
                         // @ts-ignore
-                        setSingleton(singleton: boolean): void
+                        public setSingleton(singleton: boolean): void
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                         // @ts-ignore
-                        setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         /**
                          * Return the BeanFactory that this bean runs in.
                          */
@@ -61,27 +61,27 @@ declare namespace org {
                          * Eagerly create the singleton instance, if necessary.
                          */
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Expose the singleton instance or create a new prototype instance.
                          * @see #createInstance()
                          * @see #getEarlySingletonInterfaces()
                          */
                         // @ts-ignore
-                        getObject(): T
+                        public getObject(): T
                         /**
                          * Destroy the singleton instance, if any.
                          * @see #destroyInstance(Object)
                          */
                         // @ts-ignore
-                        destroy(): void
+                        public destroy(): void
                         /**
                          * This abstract method declaration mirrors the method in the FactoryBean
                          * interface, for a consistent offering of abstract template methods.
                          * @see org.springframework.beans.factory.FactoryBean#getObjectType()
                          */
                         // @ts-ignore
-                        abstract getObjectType(): java.lang.Class<?>
+                        public abstract getObjectType(): java.lang.Class<any>
                         /**
                          * Template method that subclasses must override to construct
                          * the object returned by this factory.
@@ -106,7 +106,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.FactoryBeanNotInitializedException
                          */
                         // @ts-ignore
-                        getEarlySingletonInterfaces(): java.lang.Class[]
+                        getEarlySingletonInterfaces(): java.lang.Class<any>[]
                         /**
                          * Callback for destroying a singleton instance. Subclasses may
                          * override this to destroy the previously created instance.

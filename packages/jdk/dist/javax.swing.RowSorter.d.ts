@@ -64,7 +64,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class RowSorter<M> extends java.lang.Object {
+        abstract class RowSorter<M> extends java.lang.Object {
             /**
              * Creates a <code>RowSorter</code>.
              */
@@ -75,7 +75,7 @@ declare namespace javax {
              * @return the underlying model
              */
             // @ts-ignore
-            abstract getModel(): M
+            public abstract getModel(): M
             /**
              * Reverses the sort order of the specified column.  It is up to
              * subclasses to provide the exact behavior when invoked.  Typically
@@ -95,7 +95,7 @@ declare namespace javax {
              *          the underlying model
              */
             // @ts-ignore
-            abstract toggleSortOrder(column: number /*int*/): void
+            public abstract toggleSortOrder(column: number /*int*/): void
             /**
              * Returns the location of <code>index</code> in terms of the
              * underlying model.  That is, for the row <code>index</code> in
@@ -107,7 +107,7 @@ declare namespace javax {
              *          range of the view
              */
             // @ts-ignore
-            abstract convertRowIndexToModel(index: number /*int*/): int
+            public abstract convertRowIndexToModel(index: number /*int*/): number /*int*/
             /**
              * Returns the location of <code>index</code> in terms of the
              * view.  That is, for the row <code>index</code> in the
@@ -120,7 +120,7 @@ declare namespace javax {
              *          the range of the model
              */
             // @ts-ignore
-            abstract convertRowIndexToView(index: number /*int*/): int
+            public abstract convertRowIndexToView(index: number /*int*/): number /*int*/
             /**
              * Sets the current sort keys.
              * @param keys the new <code>SortKeys</code>; <code>null</code>
@@ -128,7 +128,7 @@ declare namespace javax {
              *         indicating that the view should be unsorted
              */
             // @ts-ignore
-            abstract setSortKeys(keys: Array<javax.swing.RowSorter.SortKey>): void
+            public abstract setSortKeys(keys: java.util.List<any> | Array<any>): void
             /**
              * Returns the current sort keys.  This must return a {@code
              * non-null List} and may return an unmodifiable {@code List}. If
@@ -138,7 +138,7 @@ declare namespace javax {
              * @return the current sort order
              */
             // @ts-ignore
-            abstract getSortKeys(): java.util.List<? extends javax.swing.RowSorter.SortKey>
+            public abstract getSortKeys(): Array<any>
             /**
              * Returns the number of rows in the view.  If the contents have
              * been filtered this might differ from the row count of the
@@ -147,14 +147,14 @@ declare namespace javax {
              * @see #getModelRowCount
              */
             // @ts-ignore
-            abstract getViewRowCount(): int
+            public abstract getViewRowCount(): number /*int*/
             /**
              * Returns the number of rows in the underlying model.
              * @return number of rows in the underlying model
              * @see #getViewRowCount
              */
             // @ts-ignore
-            abstract getModelRowCount(): int
+            public abstract getModelRowCount(): number /*int*/
             /**
              * Invoked when the underlying model structure has completely
              * changed.  For example, if the number of columns in a
@@ -164,7 +164,7 @@ declare namespace javax {
              * to allow view classes to call it.
              */
             // @ts-ignore
-            abstract modelStructureChanged(): void
+            public abstract modelStructureChanged(): void
             /**
              * Invoked when the contents of the underlying model have
              * completely changed. The structure of the table is the same,
@@ -176,7 +176,7 @@ declare namespace javax {
              * to allow view classes to call it.
              */
             // @ts-ignore
-            abstract allRowsChanged(): void
+            public abstract allRowsChanged(): void
             /**
              * Invoked when rows have been inserted into the underlying model
              * in the specified range (inclusive).
@@ -197,7 +197,7 @@ declare namespace javax {
              *          <code>firstRow</code> &gt; <code>endRow</code>
              */
             // @ts-ignore
-            abstract rowsInserted(firstRow: number /*int*/, endRow: number /*int*/): void
+            public abstract rowsInserted(firstRow: number /*int*/, endRow: number /*int*/): void
             /**
              * Invoked when rows have been deleted from the underlying model
              * in the specified range (inclusive).
@@ -216,7 +216,7 @@ declare namespace javax {
              *          <code>firstRow</code> &gt; <code>endRow</code>
              */
             // @ts-ignore
-            abstract rowsDeleted(firstRow: number /*int*/, endRow: number /*int*/): void
+            public abstract rowsDeleted(firstRow: number /*int*/, endRow: number /*int*/): void
             /**
              * Invoked when rows have been changed in the underlying model
              * between the specified range (inclusive).
@@ -230,7 +230,7 @@ declare namespace javax {
              *          <code>firstRow</code> &gt; <code>endRow</code>
              */
             // @ts-ignore
-            abstract rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/): void
+            public abstract rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/): void
             /**
              * Invoked when the column in the rows have been updated in
              * the underlying model between the specified range.
@@ -248,7 +248,7 @@ declare namespace javax {
              *           model
              */
             // @ts-ignore
-            abstract rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/, column: number /*int*/): void
+            public abstract rowsUpdated(firstRow: number /*int*/, endRow: number /*int*/, column: number /*int*/): void
             /**
              * Adds a <code>RowSorterListener</code> to receive notification
              * about this <code>RowSorter</code>.  If the same
@@ -258,14 +258,14 @@ declare namespace javax {
              * @param l the <code>RowSorterListener</code>
              */
             // @ts-ignore
-            addRowSorterListener(l: javax.swing.event.RowSorterListener): void
+            public addRowSorterListener(l: javax.swing.event.RowSorterListener): void
             /**
              * Removes a <code>RowSorterListener</code>.  If
              * <code>l</code> is <code>null</code> nothing is done.
              * @param l the <code>RowSorterListener</code>
              */
             // @ts-ignore
-            removeRowSorterListener(l: javax.swing.event.RowSorterListener): void
+            public removeRowSorterListener(l: javax.swing.event.RowSorterListener): void
             /**
              * Notifies listener that the sort order has changed.
              */

@@ -26,7 +26,7 @@ declare namespace javax {
              * @param s the string to set the text contents
              */
             // @ts-ignore
-            setTextContents(s: string): void
+            setTextContents(s: java.lang.String | string): void
             /**
              * Inserts the specified string at the given index/
              * @param index the index in the text where the string will
@@ -34,7 +34,7 @@ declare namespace javax {
              * @param s the string to insert in the text
              */
             // @ts-ignore
-            insertTextAtIndex(index: number /*int*/, s: string): void
+            insertTextAtIndex(index: number /*int*/, s: java.lang.String | string): void
             /**
              * Returns the text string between two indices.
              * @param startIndex the starting index in the text
@@ -42,7 +42,7 @@ declare namespace javax {
              * @return the text string between the indices
              */
             // @ts-ignore
-            getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): java.lang.String
+            getTextRange(startIndex: number /*int*/, endIndex: number /*int*/): string
             /**
              * Deletes the text between two indices
              * @param startIndex the starting index in the text
@@ -72,7 +72,7 @@ declare namespace javax {
              * @param s the string to replace the text between two indices
              */
             // @ts-ignore
-            replaceText(startIndex: number /*int*/, endIndex: number /*int*/, s: string): void
+            replaceText(startIndex: number /*int*/, endIndex: number /*int*/, s: java.lang.String | string): void
             /**
              * Selects the text between two indices.
              * @param startIndex the starting index in the text

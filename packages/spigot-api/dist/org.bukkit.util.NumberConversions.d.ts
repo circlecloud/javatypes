@@ -7,33 +7,33 @@ declare namespace org {
             // @ts-ignore
             class NumberConversions extends java.lang.Object {
                 // @ts-ignore
-                floor(num: number /*double*/): int
+                public static floor(num: number /*double*/): number /*int*/
                 // @ts-ignore
-                ceil(num: number /*double*/): int
+                public static ceil(num: number /*double*/): number /*int*/
                 // @ts-ignore
-                round(num: number /*double*/): int
+                public static round(num: number /*double*/): number /*int*/
                 // @ts-ignore
-                square(num: number /*double*/): double
+                public static square(num: number /*double*/): number /*double*/
                 // @ts-ignore
-                toInt(object: any): int
+                public static toInt(object: java.lang.Object | any): number /*int*/
                 // @ts-ignore
-                toFloat(object: any): float
+                public static toFloat(object: java.lang.Object | any): number /*float*/
                 // @ts-ignore
-                toDouble(object: any): double
+                public static toDouble(object: java.lang.Object | any): number /*double*/
                 // @ts-ignore
-                toLong(object: any): long
+                public static toLong(object: java.lang.Object | any): number /*long*/
                 // @ts-ignore
-                toShort(object: any): short
+                public static toShort(object: java.lang.Object | any): number /*short*/
                 // @ts-ignore
-                toByte(object: any): byte
+                public static toByte(object: java.lang.Object | any): number /*byte*/
                 // @ts-ignore
-                isFinite(d: number /*double*/): boolean
+                public static isFinite(d: number /*double*/): boolean
                 // @ts-ignore
-                isFinite(f: number /*float*/): boolean
+                public static isFinite(f: number /*float*/): boolean
                 // @ts-ignore
-                checkFinite(d: number /*double*/, message: string): void
+                public static checkFinite(d: number /*double*/, message: java.lang.String | string): void
                 // @ts-ignore
-                checkFinite(d: number /*float*/, message: string): void
+                public static checkFinite(d: number /*float*/, message: java.lang.String | string): void
             }
         }
     }

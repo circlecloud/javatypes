@@ -21,27 +21,27 @@ declare namespace org {
                      * Return the underlying Class.
                      */
                     // @ts-ignore
-                    getIntrospectedClass(): java.lang.Class<?>
+                    public getIntrospectedClass(): java.lang.Class<any>
                     // @ts-ignore
-                    getClassName(): java.lang.String
+                    public getClassName(): string
                     // @ts-ignore
-                    isInterface(): boolean
+                    public isInterface(): boolean
                     // @ts-ignore
-                    isAnnotation(): boolean
+                    public isAnnotation(): boolean
                     // @ts-ignore
-                    isAbstract(): boolean
+                    public isAbstract(): boolean
                     // @ts-ignore
-                    isFinal(): boolean
+                    public isFinal(): boolean
                     // @ts-ignore
-                    isIndependent(): boolean
+                    public isIndependent(): boolean
                     // @ts-ignore
-                    getEnclosingClassName(): java.lang.String
+                    public getEnclosingClassName(): string
                     // @ts-ignore
-                    getSuperClassName(): java.lang.String
+                    public getSuperClassName(): string
                     // @ts-ignore
-                    getInterfaceNames(): java.lang.String[]
+                    public getInterfaceNames(): string[]
                     // @ts-ignore
-                    getMemberClassNames(): java.lang.String[]
+                    public getMemberClassNames(): string[]
                 }
             }
         }

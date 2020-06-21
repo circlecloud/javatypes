@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class MessageBuilderSupport<T> extends java.lang.Object {
+                abstract class MessageBuilderSupport<T> extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
@@ -18,103 +18,103 @@ declare namespace org {
                     // @ts-ignore
                     setProperties(properties: org.springframework.amqp.core.MessageProperties): void
                     // @ts-ignore
-                    setHeader(key: string, value: any): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setHeader(key: java.lang.String | string, value: java.lang.Object | any): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setTimestamp(timestamp: java.util.Date): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setTimestamp(timestamp: java.util.Date): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setMessageId(messageId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setMessageId(messageId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setUserId(userId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setUserId(userId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setAppId(appId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setAppId(appId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setClusterId(clusterId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setClusterId(clusterId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setType(type: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setType(type: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setCorrelationId(correlationId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setCorrelationId(correlationId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReplyTo(replyTo: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReplyTo(replyTo: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReplyToAddress(replyTo: org.springframework.amqp.core.Address): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReplyToAddress(replyTo: org.springframework.amqp.core.Address): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setContentType(contentType: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setContentType(contentType: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setContentEncoding(contentEncoding: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setContentEncoding(contentEncoding: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setContentLength(contentLength: number /*long*/): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setContentLength(contentLength: number /*long*/): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setDeliveryMode(deliveryMode: org.springframework.amqp.core.MessageDeliveryMode): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setDeliveryMode(deliveryMode: org.springframework.amqp.core.MessageDeliveryMode): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setExpiration(expiration: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setExpiration(expiration: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setPriority(priority: number): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setPriority(priority: java.lang.Integer | number): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReceivedExchange(receivedExchange: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReceivedExchange(receivedExchange: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReceivedRoutingKey(receivedRoutingKey: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReceivedRoutingKey(receivedRoutingKey: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setRedelivered(redelivered: java.lang.Boolean): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setRedelivered(redelivered: java.lang.Boolean): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setDeliveryTag(deliveryTag: number): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setDeliveryTag(deliveryTag: java.lang.Long | number): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setMessageCount(messageCount: number): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setMessageCount(messageCount: java.lang.Integer | number): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setHeaderIfAbsent(key: string, value: any): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setHeaderIfAbsent(key: java.lang.String | string, value: java.lang.Object | any): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setTimestampIfAbsent(timestamp: java.util.Date): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setTimestampIfAbsent(timestamp: java.util.Date): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setMessageIdIfAbsent(messageId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setMessageIdIfAbsent(messageId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setUserIdIfAbsent(userId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setUserIdIfAbsent(userId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setAppIdIfAbsent(appId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setAppIdIfAbsent(appId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setClusterIdIfAbsent(clusterId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setClusterIdIfAbsent(clusterId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setTypeIfAbsent(type: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setTypeIfAbsent(type: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setCorrelationIdIfAbsent(correlationId: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setCorrelationIdIfAbsent(correlationId: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReplyToIfAbsent(replyTo: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReplyToIfAbsent(replyTo: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReplyToAddressIfAbsent(replyTo: org.springframework.amqp.core.Address): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReplyToAddressIfAbsent(replyTo: org.springframework.amqp.core.Address): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setContentTypeIfAbsentOrDefault(contentType: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setContentTypeIfAbsentOrDefault(contentType: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setContentEncodingIfAbsent(contentEncoding: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setContentEncodingIfAbsent(contentEncoding: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setContentLengthIfAbsent(contentLength: number /*long*/): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setContentLengthIfAbsent(contentLength: number /*long*/): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setDeliveryModeIfAbsentOrDefault(deliveryMode: org.springframework.amqp.core.MessageDeliveryMode): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setDeliveryModeIfAbsentOrDefault(deliveryMode: org.springframework.amqp.core.MessageDeliveryMode): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setExpirationIfAbsent(expiration: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setExpirationIfAbsent(expiration: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setPriorityIfAbsentOrDefault(priority: number): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setPriorityIfAbsentOrDefault(priority: java.lang.Integer | number): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReceivedExchangeIfAbsent(receivedExchange: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReceivedExchangeIfAbsent(receivedExchange: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setReceivedRoutingKeyIfAbsent(receivedRoutingKey: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setReceivedRoutingKeyIfAbsent(receivedRoutingKey: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setRedeliveredIfAbsent(redelivered: java.lang.Boolean): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setRedeliveredIfAbsent(redelivered: java.lang.Boolean): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setDeliveryTagIfAbsent(deliveryTag: number): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setDeliveryTagIfAbsent(deliveryTag: java.lang.Long | number): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    setMessageCountIfAbsent(messageCount: number): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public setMessageCountIfAbsent(messageCount: java.lang.Integer | number): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    copyProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public copyProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    copyHeaders(headers: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public copyHeaders(headers: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    copyHeadersIfAbsent(headers: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public copyHeadersIfAbsent(headers: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    removeHeader(key: string): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public removeHeader(key: java.lang.String | string): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
-                    removeHeaders(): org.springframework.amqp.core.MessageBuilderSupport<T>
+                    public removeHeaders(): org.springframework.amqp.core.MessageBuilderSupport<T>
                     // @ts-ignore
                     buildProperties(): org.springframework.amqp.core.MessageProperties
                     // @ts-ignore
-                    abstract build(): T
+                    public abstract build(): T
                 }
             }
         }

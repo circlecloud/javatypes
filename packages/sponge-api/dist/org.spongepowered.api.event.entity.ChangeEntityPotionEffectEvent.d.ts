@@ -13,7 +13,7 @@ declare namespace org {
                          * @return A copy of the potion effects
                          */
                         // @ts-ignore
-                        getCurrentEffects(): java.util.List<org.spongepowered.api.effect.potion.PotionEffect>
+                        getCurrentEffects(): Array<org.spongepowered.api.effect.potion.PotionEffect>
                         /**
                          * Gets the potion effect involved in this event.
                          * @return The potion effect involved in this event

@@ -15,7 +15,7 @@ declare namespace org {
                          * @return the 'eggs' value
                          */
                         // @ts-ignore
-                        getEggs(): int
+                        getEggs(): number /*int*/
                         /**
                          * Sets the value of the 'eggs' property.
                          * @param eggs the new 'eggs' value
@@ -27,19 +27,19 @@ declare namespace org {
                          * @return the minimum 'eggs' value
                          */
                         // @ts-ignore
-                        getMinimumEggs(): int
+                        getMinimumEggs(): number /*int*/
                         /**
                          * Gets the maximum allowed value of the 'eggs' property.
                          * @return the maximum 'eggs' value
                          */
                         // @ts-ignore
-                        getMaximumEggs(): int
+                        getMaximumEggs(): number /*int*/
                         /**
                          * Gets the value of the 'hatch' property.
                          * @return the 'hatch' value
                          */
                         // @ts-ignore
-                        getHatch(): int
+                        getHatch(): number /*int*/
                         /**
                          * Sets the value of the 'hatch' property.
                          * @param hatch the new 'hatch' value
@@ -51,7 +51,7 @@ declare namespace org {
                          * @return the maximum 'hatch' value
                          */
                         // @ts-ignore
-                        getMaximumHatch(): int
+                        getMaximumHatch(): number /*int*/
                     }
                 }
             }

@@ -21,21 +21,21 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getMenuItemCheckIcon(): javax.swing.Icon
+                    public static getMenuItemCheckIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getMenuItemArrowIcon(): javax.swing.Icon
+                    public static getMenuItemArrowIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getMenuArrowIcon(): javax.swing.Icon
+                    public static getMenuArrowIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getCheckBoxIcon(): javax.swing.Icon
+                    public static getCheckBoxIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getRadioButtonIcon(): javax.swing.Icon
+                    public static getRadioButtonIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getCheckBoxMenuItemIcon(): javax.swing.Icon
+                    public static getCheckBoxMenuItemIcon(): javax.swing.Icon
                     // @ts-ignore
-                    getRadioButtonMenuItemIcon(): javax.swing.Icon
+                    public static getRadioButtonMenuItemIcon(): javax.swing.Icon
                     // @ts-ignore
-                    createEmptyFrameIcon(): javax.swing.Icon
+                    public static createEmptyFrameIcon(): javax.swing.Icon
                 }
             }
         }

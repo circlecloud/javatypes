@@ -9,13 +9,13 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    class ProtobufCodecSupport extends java.lang.Object {
+                    abstract class ProtobufCodecSupport extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
                         supportsMimeType(mimeType: MimeType): boolean
                         // @ts-ignore
-                        getMimeTypes(): java.util.List<MimeType>
+                        getMimeTypes(): Array<MimeType>
                     }
                 }
             }

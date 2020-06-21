@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a Chunk related event
                  */
                 // @ts-ignore
-                class ChunkEvent extends org.bukkit.event.world.WorldEvent {
+                abstract class ChunkEvent extends org.bukkit.event.world.WorldEvent {
                     // @ts-ignore
                     constructor(chunk: org.bukkit.Chunk)
                     // @ts-ignore
@@ -16,7 +16,7 @@ declare namespace org {
                      * @return Chunk that triggered this event
                      */
                     // @ts-ignore
-                    getChunk(): org.bukkit.Chunk
+                    public getChunk(): org.bukkit.Chunk
                 }
             }
         }

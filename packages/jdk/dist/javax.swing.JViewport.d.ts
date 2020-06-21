@@ -119,7 +119,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            readonly BLIT_SCROLL_MODE: number /*int*/
+            public static readonly BLIT_SCROLL_MODE: number /*int*/
             /**
              * Draws viewport contents into an offscreen image.
              * This was previously the default mode for <code>JTable</code>.
@@ -129,7 +129,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            readonly BACKINGSTORE_SCROLL_MODE: number /*int*/
+            public static readonly BACKINGSTORE_SCROLL_MODE: number /*int*/
             /**
              * This mode uses the very simple method of redrawing the entire
              * contents of the scrollpane each time it is scrolled.
@@ -140,14 +140,14 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            readonly SIMPLE_SCROLL_MODE: number /*int*/
+            public static readonly SIMPLE_SCROLL_MODE: number /*int*/
             /**
              * Returns the L&amp;F object that renders this component.
              * @return a <code>ViewportUI</code> object
              * @since 1.3
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ViewportUI
+            public getUI(): javax.swing.plaf.ViewportUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the <code>ViewportUI</code> L&amp;F object
@@ -159,13 +159,13 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ViewportUI): void
+            public setUI(ui: javax.swing.plaf.ViewportUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the L&amp;F class
              * that renders this component.
@@ -174,7 +174,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the <code>JViewport</code>'s one lightweight child,
              * which can be <code>null</code>.
@@ -187,13 +187,13 @@ declare namespace javax {
              * @see #setView
              */
             // @ts-ignore
-            addImpl(child: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(child: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the <code>Viewport</code>s one lightweight child.
              * @see #setView
              */
             // @ts-ignore
-            remove(child: java.awt.Component): void
+            public remove(child: java.awt.Component): void
             /**
              * Scrolls the view so that <code>Rectangle</code>
              * within the view becomes visible.
@@ -215,7 +215,7 @@ declare namespace javax {
              * @see java.awt.Component#getPeer
              */
             // @ts-ignore
-            scrollRectToVisible(contentRect: java.awt.Rectangle): void
+            public scrollRectToVisible(contentRect: java.awt.Rectangle): void
             /**
              * The viewport "scrolls" its child (called the "view") by the
              * normal parent/child clipping (typically the view is moved in
@@ -231,7 +231,7 @@ declare namespace javax {
              * @exception IllegalArgumentException this method is not implemented
              */
             // @ts-ignore
-            setBorder(border: javax.swing.border.Border): void
+            public setBorder(border: javax.swing.border.Border): void
             /**
              * Returns the insets (border) dimensions as (0,0,0,0), since borders
              * are not supported on a <code>JViewport</code>.
@@ -239,7 +239,7 @@ declare namespace javax {
              * @see #setBorder
              */
             // @ts-ignore
-            getInsets(): java.awt.Insets
+            public getInsets(): java.awt.Insets
             /**
              * Returns an <code>Insets</code> object containing this
              * <code>JViewport</code>s inset values.  The passed-in
@@ -251,7 +251,7 @@ declare namespace javax {
              * @beaninfo expert: true
              */
             // @ts-ignore
-            getInsets(insets: java.awt.Insets): java.awt.Insets
+            public getInsets(insets: java.awt.Insets): java.awt.Insets
             /**
              * The <code>JViewport</code> overrides the default implementation of
              * this method (in <code>JComponent</code>) to return false.
@@ -263,7 +263,7 @@ declare namespace javax {
              * @return false
              */
             // @ts-ignore
-            isOptimizedDrawingEnabled(): boolean
+            public isOptimizedDrawingEnabled(): boolean
             /**
              * Returns true if scroll mode is a {@code BACKINGSTORE_SCROLL_MODE} to cause
              * painting to originate from {@code JViewport}, or one of its
@@ -286,7 +286,7 @@ declare namespace javax {
              * @param g the <code>Graphics</code> context within which to paint
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Sets the bounds of this viewport.  If the viewport's width
              * or height has changed, fire a <code>StateChanged</code> event.
@@ -297,7 +297,7 @@ declare namespace javax {
              * @see JComponent#reshape(int, int, int, int)
              */
             // @ts-ignore
-            reshape(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public reshape(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Used to control the method of scrolling the viewport contents.
              * You may want to change this mode to get maximum performance for your
@@ -319,7 +319,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setScrollMode(mode: number /*int*/): void
+            public setScrollMode(mode: number /*int*/): void
             /**
              * Returns the current scrolling mode.
              * @return the <code>scrollMode</code> property
@@ -327,7 +327,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getScrollMode(): int
+            public getScrollMode(): number /*int*/
             /**
              * Returns <code>true</code> if this viewport is maintaining
              * an offscreen image of its contents.
@@ -337,7 +337,7 @@ declare namespace javax {
              *              <code>getScrollMode()</code>.
              */
             // @ts-ignore
-            isBackingStoreEnabled(): boolean
+            public isBackingStoreEnabled(): boolean
             /**
              * If true if this viewport will maintain an offscreen
              * image of its contents.  The image is used to reduce the cost
@@ -349,14 +349,14 @@ declare namespace javax {
              *              <code>setScrollMode()</code>.
              */
             // @ts-ignore
-            setBackingStoreEnabled(enabled: boolean): void
+            public setBackingStoreEnabled(enabled: boolean): void
             /**
              * Returns the <code>JViewport</code>'s one child or <code>null</code>.
              * @return the viewports child, or <code>null</code> if none exists
              * @see #setView
              */
             // @ts-ignore
-            getView(): java.awt.Component
+            public getView(): java.awt.Component
             /**
              * Sets the <code>JViewport</code>'s one lightweight child
              * (<code>view</code>), which can be <code>null</code>.
@@ -364,7 +364,7 @@ declare namespace javax {
              * @see #getView
              */
             // @ts-ignore
-            setView(view: java.awt.Component): void
+            public setView(view: java.awt.Component): void
             /**
              * If the view's size hasn't been explicitly set, return the
              * preferred size, otherwise return the view's current size.
@@ -372,28 +372,28 @@ declare namespace javax {
              * @return a <code>Dimension</code> object specifying the size of the view
              */
             // @ts-ignore
-            getViewSize(): java.awt.Dimension
+            public getViewSize(): java.awt.Dimension
             /**
              * Sets the size of the view.  A state changed event will be fired.
              * @param newSize a <code>Dimension</code> object specifying the new
              *           size of the view
              */
             // @ts-ignore
-            setViewSize(newSize: java.awt.Dimension): void
+            public setViewSize(newSize: java.awt.Dimension): void
             /**
              * Returns the view coordinates that appear in the upper left
              * hand corner of the viewport, or 0,0 if there's no view.
              * @return a <code>Point</code> object giving the upper left coordinates
              */
             // @ts-ignore
-            getViewPosition(): java.awt.Point
+            public getViewPosition(): java.awt.Point
             /**
              * Sets the view coordinates that appear in the upper left
              * hand corner of the viewport, does nothing if there's no view.
              * @param p  a <code>Point</code> object giving the upper left coordinates
              */
             // @ts-ignore
-            setViewPosition(p: java.awt.Point): void
+            public setViewPosition(p: java.awt.Point): void
             /**
              * Returns a rectangle whose origin is <code>getViewPosition</code>
              * and size is <code>getExtentSize</code>.
@@ -402,7 +402,7 @@ declare namespace javax {
              *           the view using view coordinates.
              */
             // @ts-ignore
-            getViewRect(): java.awt.Rectangle
+            public getViewRect(): java.awt.Rectangle
             /**
              * Computes the parameters for a blit where the backing store image
              * currently contains <code>oldLoc</code> in the upper left hand corner
@@ -425,7 +425,7 @@ declare namespace javax {
              * @return a <code>Dimension</code> object giving the size of the view
              */
             // @ts-ignore
-            getExtentSize(): java.awt.Dimension
+            public getExtentSize(): java.awt.Dimension
             /**
              * Converts a size in pixel coordinates to view coordinates.
              * Subclasses of viewport that support "logical coordinates"
@@ -434,7 +434,7 @@ declare namespace javax {
              * @return a <code>Dimension</code> object converted to view coordinates
              */
             // @ts-ignore
-            toViewCoordinates(size: java.awt.Dimension): java.awt.Dimension
+            public toViewCoordinates(size: java.awt.Dimension): java.awt.Dimension
             /**
              * Converts a point in pixel coordinates to view coordinates.
              * Subclasses of viewport that support "logical coordinates"
@@ -443,14 +443,14 @@ declare namespace javax {
              * @return a <code>Point</code> object converted to view coordinates
              */
             // @ts-ignore
-            toViewCoordinates(p: java.awt.Point): java.awt.Point
+            public toViewCoordinates(p: java.awt.Point): java.awt.Point
             /**
              * Sets the size of the visible part of the view using view coordinates.
              * @param newExtent  a <code>Dimension</code> object specifying
              *           the size of the view
              */
             // @ts-ignore
-            setExtentSize(newExtent: java.awt.Dimension): void
+            public setExtentSize(newExtent: java.awt.Dimension): void
             /**
              * Creates a listener for the view.
              * @return a <code>ViewListener</code>
@@ -476,7 +476,7 @@ declare namespace javax {
              * @see #setExtentSize
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a <code>ChangeListener</code> from the list that's notified each
              * time the views size, position, or the viewports extent size
@@ -485,7 +485,7 @@ declare namespace javax {
              * @see #addChangeListener
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this JViewport with addChangeListener().
@@ -494,7 +494,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Notifies all <code>ChangeListeners</code> when the views
              * size, position, or the viewports extent size has changed.
@@ -515,7 +515,7 @@ declare namespace javax {
              * @see java.awt.Component#update(java.awt.Graphics)
              */
             // @ts-ignore
-            repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Returns a string representation of this <code>JViewport</code>.
              * This method
@@ -526,7 +526,7 @@ declare namespace javax {
              * @return a string representation of this <code>JViewport</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Notifies listeners of a property change. This is subclassed to update
              * the <code>windowBlit</code> property.
@@ -536,7 +536,7 @@ declare namespace javax {
              * @param newValue  the new value of the property
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Gets the AccessibleContext associated with this JViewport.
              * For viewports, the AccessibleContext takes the form of an
@@ -546,7 +546,7 @@ declare namespace javax {
              *          AccessibleContext of this JViewport
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

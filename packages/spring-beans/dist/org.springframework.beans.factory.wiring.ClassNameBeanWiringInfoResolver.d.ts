@@ -17,7 +17,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        resolveWiringInfo(beanInstance: any): org.springframework.beans.factory.wiring.BeanWiringInfo
+                        public resolveWiringInfo(beanInstance: java.lang.Object | any): org.springframework.beans.factory.wiring.BeanWiringInfo
                     }
                 }
             }

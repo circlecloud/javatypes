@@ -36,7 +36,7 @@ declare namespace java {
                  * @see java.nio.charset.Charset
                  */
                 // @ts-ignore
-                class CharsetProvider extends java.lang.Object {
+                abstract class CharsetProvider extends java.lang.Object {
                     /**
                      * Initializes a new charset provider.
                      * @throws SecurityException
@@ -53,7 +53,7 @@ declare namespace java {
                      * @return The new iterator
                      */
                     // @ts-ignore
-                    abstract charsets(): java.util.Iterator<java.nio.charset.Charset>
+                    public abstract charsets(): java.util.Iterator<java.nio.charset.Charset>
                     /**
                      * Retrieves a charset for the given charset name.
                      * @param charsetName
@@ -64,7 +64,7 @@ declare namespace java {
                      *           is not supported by this provider
                      */
                     // @ts-ignore
-                    abstract charsetForName(charsetName: string): java.nio.charset.Charset
+                    public abstract charsetForName(charsetName: java.lang.String | string): java.nio.charset.Charset
                 }
             }
         }

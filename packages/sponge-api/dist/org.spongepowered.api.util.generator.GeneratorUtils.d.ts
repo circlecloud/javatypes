@@ -13,7 +13,7 @@ declare namespace org {
                          * @return The java class name equivalent with the provided classifier
                          */
                         // @ts-ignore
-                        getClassName(targetPackage: string, clazz: java.lang.Class<any>, classifier: string): java.lang.String
+                        public static getClassName(targetPackage: java.lang.String | string, clazz: java.lang.Class<any>, classifier: java.lang.String | string): string
                         /**
                          * Insert the necessary methods to box a primitive type (if the given type
                          * is a primitive object).
@@ -21,7 +21,7 @@ declare namespace org {
                          * @param type The type to unbox
                          */
                         // @ts-ignore
-                        visitBoxingMethod(mv: MethodVisitor, type: Type): void
+                        public static visitBoxingMethod(mv: MethodVisitor, type: Type): void
                         /**
                          * Insert the necessary methods to unbox a primitive type (if the given type
                          * is a primitive).
@@ -29,7 +29,7 @@ declare namespace org {
                          * @param type The type to unbox
                          */
                         // @ts-ignore
-                        visitUnboxingMethod(mv: MethodVisitor, type: Type): void
+                        public static visitUnboxingMethod(mv: MethodVisitor, type: Type): void
                     }
                 }
             }

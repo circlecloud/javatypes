@@ -16,14 +16,14 @@ declare namespace javax {
                  * @param systemId The system identifier as a URL string.
                  */
                 // @ts-ignore
-                setSystemId(systemId: string): void
+                setSystemId(systemId: java.lang.String | string): void
                 /**
                  * Get the system identifier that was set with setSystemId.
                  * @return The system identifier that was set with setSystemId, or null
                  *  if setSystemId was not called.
                  */
                 // @ts-ignore
-                getSystemId(): java.lang.String
+                getSystemId(): string
             }
         }
     }

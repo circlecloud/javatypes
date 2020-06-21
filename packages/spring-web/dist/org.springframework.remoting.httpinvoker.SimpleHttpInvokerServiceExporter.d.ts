@@ -37,7 +37,7 @@ declare namespace org {
                      * @see #writeRemoteInvocationResult(HttpExchange, RemoteInvocationResult)
                      */
                     // @ts-ignore
-                    handle(exchange: com.sun.net.httpserver.HttpExchange): void
+                    public handle(exchange: com.sun.net.httpserver.HttpExchange): void
                     /**
                      * Read a RemoteInvocation from the given HTTP request.
                      * <p>Delegates to {@link #readRemoteInvocation(HttpExchange, InputStream)}

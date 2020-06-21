@@ -15,24 +15,24 @@ declare namespace org {
              * @see System#getProperty(String)
              */
             // @ts-ignore
-            class SystemPropertyUtils extends java.lang.Object {
+            abstract class SystemPropertyUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Prefix for system property placeholders: "${".
                  */
                 // @ts-ignore
-                readonly PLACEHOLDER_PREFIX: string
+                public static readonly PLACEHOLDER_PREFIX: java.lang.String | string
                 /**
                  * Suffix for system property placeholders: "}".
                  */
                 // @ts-ignore
-                readonly PLACEHOLDER_SUFFIX: string
+                public static readonly PLACEHOLDER_SUFFIX: java.lang.String | string
                 /**
                  * Value separator for system property placeholders: ":".
                  */
                 // @ts-ignore
-                readonly VALUE_SEPARATOR: string
+                public static readonly VALUE_SEPARATOR: java.lang.String | string
                 /**
                  * Resolve {@code ${...}} placeholders in the given text, replacing them with
                  * corresponding system property values.
@@ -43,7 +43,7 @@ declare namespace org {
                  * @see #PLACEHOLDER_SUFFIX
                  */
                 // @ts-ignore
-                resolvePlaceholders(text: string): java.lang.String
+                public static resolvePlaceholders(text: java.lang.String | string): string
                 /**
                  * Resolve {@code ${...}} placeholders in the given text, replacing them with
                  * corresponding system property values. Unresolvable placeholders with no default
@@ -57,7 +57,7 @@ declare namespace org {
                  *  and the "ignoreUnresolvablePlaceholders" flag is {#code false}
                  */
                 // @ts-ignore
-                resolvePlaceholders(text: string, ignoreUnresolvablePlaceholders: boolean): java.lang.String
+                public static resolvePlaceholders(text: java.lang.String | string, ignoreUnresolvablePlaceholders: boolean): string
             }
         }
     }

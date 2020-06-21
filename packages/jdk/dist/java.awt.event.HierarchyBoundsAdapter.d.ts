@@ -23,19 +23,19 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            class HierarchyBoundsAdapter extends java.lang.Object implements java.awt.event.HierarchyBoundsListener {
+            abstract class HierarchyBoundsAdapter extends java.lang.Object implements java.awt.event.HierarchyBoundsListener {
                 // @ts-ignore
                 constructor()
                 /**
                  * Called when an ancestor of the source is moved.
                  */
                 // @ts-ignore
-                ancestorMoved(e: java.awt.event.HierarchyEvent): void
+                public ancestorMoved(e: java.awt.event.HierarchyEvent): void
                 /**
                  * Called when an ancestor of the source is resized.
                  */
                 // @ts-ignore
-                ancestorResized(e: java.awt.event.HierarchyEvent): void
+                public ancestorResized(e: java.awt.event.HierarchyEvent): void
             }
         }
     }

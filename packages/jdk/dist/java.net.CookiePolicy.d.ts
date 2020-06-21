@@ -14,17 +14,17 @@ declare namespace java {
              * One pre-defined policy which accepts all cookies.
              */
             // @ts-ignore
-            
+            readonly ACCEPT_ALL: java.net.CookiePolicy
             /**
              * One pre-defined policy which accepts no cookies.
              */
             // @ts-ignore
-            
+            readonly ACCEPT_NONE: java.net.CookiePolicy
             /**
              * One pre-defined policy which only accepts cookies from original server.
              */
             // @ts-ignore
-            
+            readonly ACCEPT_ORIGINAL_SERVER: java.net.CookiePolicy
             /**
              * Will be called to see whether or not this cookie should be accepted.
              * @param uri       the URI to consult accept policy with

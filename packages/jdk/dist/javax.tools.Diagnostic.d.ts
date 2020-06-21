@@ -20,7 +20,7 @@ declare namespace javax {
              * Used to signal that no position is available.
              */
             // @ts-ignore
-            
+            readonly NOPOS: number /*long*/
             /**
              * Gets the kind of this diagnostic, for example, error or
              * warning.
@@ -47,7 +47,7 @@ declare namespace javax {
              *  no location is suitable
              */
             // @ts-ignore
-            getPosition(): long
+            getPosition(): number /*long*/
             /**
              * Gets the character offset from the beginning of the file
              * associated with this diagnostic that indicates the start of the
@@ -56,7 +56,7 @@ declare namespace javax {
              *  only if {@link #getPosition()} returns {@link #NOPOS}
              */
             // @ts-ignore
-            getStartPosition(): long
+            getStartPosition(): number /*long*/
             /**
              * Gets the character offset from the beginning of the file
              * associated with this diagnostic that indicates the end of the
@@ -65,7 +65,7 @@ declare namespace javax {
              *  only if {@link #getPosition()} returns {@link #NOPOS}
              */
             // @ts-ignore
-            getEndPosition(): long
+            getEndPosition(): number /*long*/
             /**
              * Gets the line number of the character offset returned by
              * {@linkplain #getPosition()}.
@@ -73,7 +73,7 @@ declare namespace javax {
              *  #getPosition()} returns {@link #NOPOS}
              */
             // @ts-ignore
-            getLineNumber(): long
+            getLineNumber(): number /*long*/
             /**
              * Gets the column number of the character offset returned by
              * {@linkplain #getPosition()}.
@@ -81,14 +81,14 @@ declare namespace javax {
              *  #getPosition()} returns {@link #NOPOS}
              */
             // @ts-ignore
-            getColumnNumber(): long
+            getColumnNumber(): number /*long*/
             /**
              * Gets a diagnostic code indicating the type of diagnostic.  The
              * code is implementation-dependent and might be {@code null}.
              * @return a diagnostic code
              */
             // @ts-ignore
-            getCode(): java.lang.String
+            getCode(): string
             /**
              * Gets a localized message for the given locale.  The actual
              * message is implementation-dependent.  If the locale is {@code
@@ -97,7 +97,7 @@ declare namespace javax {
              * @return a localized message
              */
             // @ts-ignore
-            getMessage(locale: java.util.Locale): java.lang.String
+            getMessage(locale: java.util.Locale): string
         }
     }
 }

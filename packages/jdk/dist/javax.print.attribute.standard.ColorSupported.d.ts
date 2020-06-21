@@ -42,18 +42,18 @@ declare namespace javax {
                      * The printer is not capable of any type of color printing.
                      */
                     // @ts-ignore
-                    readonly NOT_SUPPORTED: javax.print.attribute.standard.ColorSupported
+                    public static readonly NOT_SUPPORTED: javax.print.attribute.standard.ColorSupported
                     /**
                      * The printer is capable of some type of color printing, such as
                      * highlight color or full process color.
                      */
                     // @ts-ignore
-                    readonly SUPPORTED: javax.print.attribute.standard.ColorSupported
+                    public static readonly SUPPORTED: javax.print.attribute.standard.ColorSupported
                     /**
                      * Returns the string table for class ColorSupported.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class ColorSupported.
                      */
@@ -68,7 +68,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -77,7 +77,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

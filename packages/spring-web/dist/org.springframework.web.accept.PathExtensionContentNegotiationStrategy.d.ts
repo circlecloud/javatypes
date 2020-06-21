@@ -26,23 +26,23 @@ declare namespace org {
                      * Create an instance with the given map of file extensions and media types.
                      */
                     // @ts-ignore
-                    constructor(mediaTypes: java.util.Map<java.lang.String, org.springframework.http.MediaType>)
+                    constructor(mediaTypes: java.util.Map<java.lang.String | string, org.springframework.http.MediaType>)
                     /**
                      * Configure a {@code UrlPathHelper} to use in {@link #getMediaTypeKey}
                      * in order to derive the lookup path for a target request URL path.
                      * @since 4.2.8
                      */
                     // @ts-ignore
-                    setUrlPathHelper(urlPathHelper: org.springframework.web.util.UrlPathHelper): void
+                    public setUrlPathHelper(urlPathHelper: org.springframework.web.util.UrlPathHelper): void
                     /**
                      * Indicate whether to use the Java Activation Framework as a fallback option
                      * to map from file extensions to media types.
                      * @deprecated as of 5.0, in favor of {#link #setUseRegisteredExtensionsOnly(boolean)}.
                      */
                     // @ts-ignore
-                    setUseJaf(useJaf: boolean): void
+                    public setUseJaf(useJaf: boolean): void
                     // @ts-ignore
-                    getMediaTypeKey(webRequest: org.springframework.web.context.request.NativeWebRequest): java.lang.String
+                    getMediaTypeKey(webRequest: org.springframework.web.context.request.NativeWebRequest): string
                     /**
                      * A public method exposing the knowledge of the path extension strategy to
                      * resolve file extensions to a {@link MediaType} in this case for a given
@@ -53,7 +53,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getMediaTypeForResource(resource: Resource): org.springframework.http.MediaType
+                    public getMediaTypeForResource(resource: Resource): org.springframework.http.MediaType
                 }
             }
         }

@@ -33,7 +33,7 @@ declare namespace org {
                      * @return The name of this team
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the name displayed to users for this team.
                      * @return The display name for this team
@@ -166,7 +166,7 @@ declare namespace org {
                      * @return the {#link Text}s for this team's members
                      */
                     // @ts-ignore
-                    getMembers(): java.util.Set<org.spongepowered.api.text.Text>
+                    getMembers(): Array<org.spongepowered.api.text.Text>
                     /**
                      * Adds the specified {@link Text} to this team.
                      * <p>While any {@link Text} may be added, the {@link Text} to use should

@@ -99,7 +99,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if given an executable or package type
                      */
                     // @ts-ignore
-                    directSupertypes(t: javax.lang.model.type.TypeMirror): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    directSupertypes(t: javax.lang.model.type.TypeMirror): Array<any>
                     /**
                      * Returns the erasure of a type.
                      * @param t  the type to be erased

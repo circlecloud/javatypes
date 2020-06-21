@@ -32,7 +32,7 @@ declare namespace javax {
              *  otherwise
              */
             // @ts-ignore
-            isNameCompatible(simpleName: string, kind: javax.tools.JavaFileObject.Kind): boolean
+            isNameCompatible(simpleName: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind): boolean
             /**
              * Provides a hint about the nesting level of the class
              * represented by this file object.  This method may return

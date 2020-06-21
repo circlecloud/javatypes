@@ -29,11 +29,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        init(): void
+                        public init(): void
                         // @ts-ignore
-                        parse(element: org.w3c.dom.Element, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinition
+                        public parse(element: org.w3c.dom.Element, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinition
                         // @ts-ignore
-                        decorate(node: org.w3c.dom.Node, definition: org.springframework.beans.factory.config.BeanDefinitionHolder, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinitionHolder
+                        public decorate(node: org.w3c.dom.Node, definition: org.springframework.beans.factory.config.BeanDefinitionHolder, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinitionHolder
                     }
                 }
             }

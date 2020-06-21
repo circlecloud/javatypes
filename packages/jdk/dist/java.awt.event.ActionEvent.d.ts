@@ -49,7 +49,7 @@ declare namespace java {
                  * @see #getActionCommand()
                  */
                 // @ts-ignore
-                constructor(source: any, id: number /*int*/, command: string)
+                constructor(source: java.lang.Object | any, id: number /*int*/, command: java.lang.String | string)
                 /**
                  * Constructs an <code>ActionEvent</code> object with modifier keys.
                  * <p>
@@ -75,7 +75,7 @@ declare namespace java {
                  * @see #getModifiers()
                  */
                 // @ts-ignore
-                constructor(source: any, id: number /*int*/, command: string, modifiers: number /*int*/)
+                constructor(source: java.lang.Object | any, id: number /*int*/, command: java.lang.String | string, modifiers: number /*int*/)
                 /**
                  * Constructs an <code>ActionEvent</code> object with the specified
                  * modifier keys and timestamp.
@@ -107,46 +107,46 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                constructor(source: any, id: number /*int*/, command: string, when: number /*long*/, modifiers: number /*int*/)
+                constructor(source: java.lang.Object | any, id: number /*int*/, command: java.lang.String | string, when: number /*long*/, modifiers: number /*int*/)
                 /**
                  * The shift modifier. An indicator that the shift key was held
                  * down during the event.
                  */
                 // @ts-ignore
-                readonly SHIFT_MASK: number /*int*/
+                public static readonly SHIFT_MASK: number /*int*/
                 /**
                  * The control modifier. An indicator that the control key was held
                  * down during the event.
                  */
                 // @ts-ignore
-                readonly CTRL_MASK: number /*int*/
+                public static readonly CTRL_MASK: number /*int*/
                 /**
                  * The meta modifier. An indicator that the meta key was held
                  * down during the event.
                  */
                 // @ts-ignore
-                readonly META_MASK: number /*int*/
+                public static readonly META_MASK: number /*int*/
                 /**
                  * The alt modifier. An indicator that the alt key was held
                  * down during the event.
                  */
                 // @ts-ignore
-                readonly ALT_MASK: number /*int*/
+                public static readonly ALT_MASK: number /*int*/
                 /**
                  * The first number in the range of ids used for action events.
                  */
                 // @ts-ignore
-                readonly ACTION_FIRST: number /*int*/
+                public static readonly ACTION_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for action events.
                  */
                 // @ts-ignore
-                readonly ACTION_LAST: number /*int*/
+                public static readonly ACTION_LAST: number /*int*/
                 /**
                  * This event id indicates that a meaningful action occurred.
                  */
                 // @ts-ignore
-                readonly ACTION_PERFORMED: number /*int*/
+                public static readonly ACTION_PERFORMED: number /*int*/
                 /**
                  * Returns the command string associated with this action.
                  * This string allows a "modal" component to specify one of several
@@ -161,7 +161,7 @@ declare namespace java {
                  * @return the string identifying the command for this event
                  */
                 // @ts-ignore
-                getActionCommand(): java.lang.String
+                public getActionCommand(): string
                 /**
                  * Returns the timestamp of when this event occurred. Because an
                  * ActionEvent is a high-level, semantic event, the timestamp is typically
@@ -170,20 +170,20 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getWhen(): long
+                public getWhen(): number /*long*/
                 /**
                  * Returns the modifier keys held down during this action event.
                  * @return the bitwise-or of the modifier constants
                  */
                 // @ts-ignore
-                getModifiers(): int
+                public getModifiers(): number /*int*/
                 /**
                  * Returns a parameter string identifying this action event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its associated command
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

@@ -38,7 +38,7 @@ declare namespace javax {
              * @see #setName
              */
             // @ts-ignore
-            constructor(name: string, className: string)
+            constructor(name: java.lang.String | string, className: java.lang.String | string)
             /**
              * Constructs an instance of a NameClassPair given its
              * name, class name, and whether it is relative to the listing context.
@@ -57,7 +57,7 @@ declare namespace javax {
              * @see #setRelative
              */
             // @ts-ignore
-            constructor(name: string, className: string, isRelative: boolean)
+            constructor(name: java.lang.String | string, className: java.lang.String | string, isRelative: boolean)
             /**
              * Retrieves the class name of the object bound to the name of this binding.
              * If a reference or some other indirect information is bound,
@@ -70,7 +70,7 @@ declare namespace javax {
              * @see #setClassName
              */
             // @ts-ignore
-            getClassName(): java.lang.String
+            public getClassName(): string
             /**
              * Retrieves the name of this binding.
              * If <tt>isRelative()</tt> is true, this name is relative to the
@@ -82,7 +82,7 @@ declare namespace javax {
              * @see #setName
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Sets the name of this binding.
              * @param name the non-null string to use as the name.
@@ -90,7 +90,7 @@ declare namespace javax {
              * @see #setRelative
              */
             // @ts-ignore
-            setName(name: string): void
+            public setName(name: java.lang.String | string): void
             /**
              * Sets the class name of this binding.
              * @param name the possibly null string to use as the class name.
@@ -101,7 +101,7 @@ declare namespace javax {
              * @see Binding#getClassName
              */
             // @ts-ignore
-            setClassName(name: string): void
+            public setClassName(name: java.lang.String | string): void
             /**
              * Determines whether the name of this binding is
              * relative to the target context (which is named by
@@ -113,7 +113,7 @@ declare namespace javax {
              * @see #getName
              */
             // @ts-ignore
-            isRelative(): boolean
+            public isRelative(): boolean
             /**
              * Sets whether the name of this binding is relative to the target
              * context (which is named by the first parameter of the <code>list()</code>
@@ -124,7 +124,7 @@ declare namespace javax {
              * @see #setName
              */
             // @ts-ignore
-            setRelative(r: boolean): void
+            public setRelative(r: boolean): void
             /**
              * Retrieves the full name of this binding.
              * The full name is the absolute name of this binding within
@@ -146,7 +146,7 @@ declare namespace javax {
              * @see #getName
              */
             // @ts-ignore
-            getNameInNamespace(): java.lang.String
+            public getNameInNamespace(): string
             /**
              * Sets the full name of this binding.
              * This method must be called to set the full name whenever a
@@ -161,7 +161,7 @@ declare namespace javax {
              * @see #setName
              */
             // @ts-ignore
-            setNameInNamespace(fullName: string): void
+            public setNameInNamespace(fullName: java.lang.String | string): void
             /**
              * Generates the string representation of this name/class pair.
              * The string representation consists of the name and class name separated
@@ -171,7 +171,7 @@ declare namespace javax {
              * @return The string representation of this name/class pair.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

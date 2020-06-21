@@ -133,7 +133,7 @@ declare namespace java {
              * @see java.awt.GraphicsConfiguration#getBounds
              */
             // @ts-ignore
-            constructor(title: string)
+            constructor(title: java.lang.String | string)
             /**
              * Constructs a new, initially invisible <code>Frame</code> object
              * with the specified title and a
@@ -156,77 +156,77 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            constructor(title: string, gc: java.awt.GraphicsConfiguration)
+            constructor(title: java.lang.String | string, gc: java.awt.GraphicsConfiguration)
             /**
              * @deprecated replaced by <code>Cursor.DEFAULT_CURSOR</code>.
              */
             // @ts-ignore
-            readonly DEFAULT_CURSOR: number /*int*/
+            public static readonly DEFAULT_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.CROSSHAIR_CURSOR</code>.
              */
             // @ts-ignore
-            readonly CROSSHAIR_CURSOR: number /*int*/
+            public static readonly CROSSHAIR_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.TEXT_CURSOR</code>.
              */
             // @ts-ignore
-            readonly TEXT_CURSOR: number /*int*/
+            public static readonly TEXT_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.WAIT_CURSOR</code>.
              */
             // @ts-ignore
-            readonly WAIT_CURSOR: number /*int*/
+            public static readonly WAIT_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.SW_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly SW_RESIZE_CURSOR: number /*int*/
+            public static readonly SW_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.SE_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly SE_RESIZE_CURSOR: number /*int*/
+            public static readonly SE_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.NW_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly NW_RESIZE_CURSOR: number /*int*/
+            public static readonly NW_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.NE_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly NE_RESIZE_CURSOR: number /*int*/
+            public static readonly NE_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.N_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly N_RESIZE_CURSOR: number /*int*/
+            public static readonly N_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.S_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly S_RESIZE_CURSOR: number /*int*/
+            public static readonly S_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.W_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly W_RESIZE_CURSOR: number /*int*/
+            public static readonly W_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.E_RESIZE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly E_RESIZE_CURSOR: number /*int*/
+            public static readonly E_RESIZE_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.HAND_CURSOR</code>.
              */
             // @ts-ignore
-            readonly HAND_CURSOR: number /*int*/
+            public static readonly HAND_CURSOR: number /*int*/
             /**
              * @deprecated replaced by <code>Cursor.MOVE_CURSOR</code>.
              */
             // @ts-ignore
-            readonly MOVE_CURSOR: number /*int*/
+            public static readonly MOVE_CURSOR: number /*int*/
             /**
              * Frame is in the "normal" state.  This symbolic constant names a
              * frame state with all state bits cleared.
@@ -234,14 +234,14 @@ declare namespace java {
              * @see #getExtendedState
              */
             // @ts-ignore
-            readonly NORMAL: number /*int*/
+            public static readonly NORMAL: number /*int*/
             /**
              * This state bit indicates that frame is iconified.
              * @see #setExtendedState(int)
              * @see #getExtendedState
              */
             // @ts-ignore
-            readonly ICONIFIED: number /*int*/
+            public static readonly ICONIFIED: number /*int*/
             /**
              * This state bit indicates that frame is maximized in the
              * horizontal direction.
@@ -250,7 +250,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly MAXIMIZED_HORIZ: number /*int*/
+            public static readonly MAXIMIZED_HORIZ: number /*int*/
             /**
              * This state bit indicates that frame is maximized in the
              * vertical direction.
@@ -259,7 +259,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly MAXIMIZED_VERT: number /*int*/
+            public static readonly MAXIMIZED_VERT: number /*int*/
             /**
              * This state bit mask indicates that frame is fully maximized
              * (that is both horizontally and vertically).  It is just a
@@ -278,7 +278,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly MAXIMIZED_BOTH: number /*int*/
+            public static readonly MAXIMIZED_BOTH: number /*int*/
             /**
              * Makes this Frame displayable by connecting it to
              * a native screen resource.  Making a frame displayable will
@@ -289,7 +289,7 @@ declare namespace java {
              * @see #removeNotify
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the title of the frame.  The title is displayed in the
              * frame's border.
@@ -298,7 +298,7 @@ declare namespace java {
              * @see #setTitle(String)
              */
             // @ts-ignore
-            getTitle(): java.lang.String
+            public getTitle(): string
             /**
              * Sets the title for this frame to the specified string.
              * @param title the title to be displayed in the frame's border.
@@ -307,7 +307,7 @@ declare namespace java {
              * @see #getTitle
              */
             // @ts-ignore
-            setTitle(title: string): void
+            public setTitle(title: java.lang.String | string): void
             /**
              * Returns the image to be displayed as the icon for this frame.
              * <p>
@@ -323,12 +323,12 @@ declare namespace java {
              * @see Window#setIconImages
              */
             // @ts-ignore
-            getIconImage(): java.awt.Image
+            public getIconImage(): java.awt.Image
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setIconImage(image: java.awt.Image): void
+            public setIconImage(image: java.awt.Image): void
             /**
              * Gets the menu bar for this frame.
              * @return the menu bar for this frame, or <code>null</code>
@@ -336,7 +336,7 @@ declare namespace java {
              * @see #setMenuBar(MenuBar)
              */
             // @ts-ignore
-            getMenuBar(): java.awt.MenuBar
+            public getMenuBar(): java.awt.MenuBar
             /**
              * Sets the menu bar for this frame to the specified menu bar.
              * @param mb the menu bar being set.
@@ -345,7 +345,7 @@ declare namespace java {
              * @see #getMenuBar
              */
             // @ts-ignore
-            setMenuBar(mb: java.awt.MenuBar): void
+            public setMenuBar(mb: java.awt.MenuBar): void
             /**
              * Indicates whether this frame is resizable by the user.
              * By default, all frames are initially resizable.
@@ -354,7 +354,7 @@ declare namespace java {
              * @see java.awt.Frame#setResizable(boolean)
              */
             // @ts-ignore
-            isResizable(): boolean
+            public isResizable(): boolean
             /**
              * Sets whether this frame is resizable by the user.
              * @param resizable   <code>true</code> if this frame is resizable;
@@ -362,7 +362,7 @@ declare namespace java {
              * @see java.awt.Frame#isResizable
              */
             // @ts-ignore
-            setResizable(resizable: boolean): void
+            public setResizable(resizable: boolean): void
             /**
              * Sets the state of this frame (obsolete).
              * <p>
@@ -410,7 +410,7 @@ declare namespace java {
              * @see java.awt.Window#addWindowStateListener
              */
             // @ts-ignore
-            setState(state: number /*int*/): void
+            public setState(state: number /*int*/): void
             /**
              * Sets the state of this frame. The state is
              * represented as a bitwise mask.
@@ -454,7 +454,7 @@ declare namespace java {
              * @see java.awt.Window#addWindowStateListener
              */
             // @ts-ignore
-            setExtendedState(state: number /*int*/): void
+            public setExtendedState(state: number /*int*/): void
             /**
              * Gets the state of this frame (obsolete).
              * <p>
@@ -471,7 +471,7 @@ declare namespace java {
              * @see #getExtendedState
              */
             // @ts-ignore
-            getState(): int
+            public getState(): number /*int*/
             /**
              * Gets the state of this frame. The state is
              * represented as a bitwise mask.
@@ -490,7 +490,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getExtendedState(): int
+            public getExtendedState(): number /*int*/
             /**
              * Sets the maximized bounds for this frame.
              * <p>
@@ -514,7 +514,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setMaximizedBounds(bounds: java.awt.Rectangle): void
+            public setMaximizedBounds(bounds: java.awt.Rectangle): void
             /**
              * Gets maximized bounds for this frame.
              * Some fields may contain <code>Integer.MAX_VALUE</code> to indicate
@@ -524,7 +524,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMaximizedBounds(): java.awt.Rectangle
+            public getMaximizedBounds(): java.awt.Rectangle
             /**
              * Disables or enables decorations for this frame.
              * <p>
@@ -552,7 +552,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setUndecorated(undecorated: boolean): void
+            public setUndecorated(undecorated: boolean): void
             /**
              * Indicates whether this frame is undecorated.
              * By default, all frames are initially decorated.
@@ -562,22 +562,22 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isUndecorated(): boolean
+            public isUndecorated(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setOpacity(opacity: number /*float*/): void
+            public setOpacity(opacity: number /*float*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setShape(shape: java.awt.Shape): void
+            public setShape(shape: java.awt.Shape): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setBackground(bgColor: java.awt.Color): void
+            public setBackground(bgColor: java.awt.Color): void
             /**
              * Removes the specified menu bar from this frame.
              * @param m   the menu component to remove.
@@ -585,7 +585,7 @@ declare namespace java {
              *            no action is taken
              */
             // @ts-ignore
-            remove(m: java.awt.MenuComponent): void
+            public remove(m: java.awt.MenuComponent): void
             /**
              * Makes this Frame undisplayable by removing its connection
              * to its native screen resource. Making a Frame undisplayable
@@ -596,7 +596,7 @@ declare namespace java {
              * @see #addNotify
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Returns a string representing the state of this <code>Frame</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -606,19 +606,19 @@ declare namespace java {
              * @return the parameter string of this frame
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>Component.setCursor(Cursor)</code>.
              */
             // @ts-ignore
-            setCursor(cursorType: number /*int*/): void
+            public setCursor(cursorType: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>Component.getCursor()</code>.
              */
             // @ts-ignore
-            getCursorType(): int
+            public getCursorType(): number /*int*/
             /**
              * Returns an array of all {@code Frame}s created by this application.
              * If called from an applet, the array includes only the {@code Frame}s
@@ -638,7 +638,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getFrames(): java.awt.Frame[]
+            public static getFrames(): java.awt.Frame[]
             /**
              * Gets the AccessibleContext associated with this Frame.
              * For frames, the AccessibleContext takes the form of an
@@ -649,7 +649,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

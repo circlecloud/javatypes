@@ -21,7 +21,7 @@ declare namespace org {
                          * @return The objective's name
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                         /**
                          * Gets the name displayed to players.
                          * @return The objective's display name
@@ -110,7 +110,7 @@ declare namespace org {
                          *          {@link Objective} is registered to
                          */
                         // @ts-ignore
-                        getScoreboards(): java.util.Set<org.spongepowered.api.scoreboard.Scoreboard>
+                        getScoreboards(): Array<org.spongepowered.api.scoreboard.Scoreboard>
                     }
                 }
             }

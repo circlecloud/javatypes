@@ -20,7 +20,7 @@ declare namespace java {
                  * @see AccessibleAction
                  */
                 // @ts-ignore
-                getAccessibleAction(): javax.accessibility.AccessibleAction
+                public getAccessibleAction(): javax.accessibility.AccessibleAction
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -28,7 +28,7 @@ declare namespace java {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Returns the number of accessible actions available in this object
                  * If there are more than one, the first one is considered the "default"
@@ -36,7 +36,7 @@ declare namespace java {
                  * @return the zero-based number of Actions in this object
                  */
                 // @ts-ignore
-                getAccessibleActionCount(): int
+                public getAccessibleActionCount(): number /*int*/
                 /**
                  * Returns a description of the specified action of the object.
                  * @param i zero-based index of the actions
@@ -44,7 +44,7 @@ declare namespace java {
                  * @see #getAccessibleActionCount
                  */
                 // @ts-ignore
-                getAccessibleActionDescription(i: number /*int*/): java.lang.String
+                public getAccessibleActionDescription(i: number /*int*/): string
                 /**
                  * Perform the specified Action on the object
                  * @param i zero-based index of actions
@@ -52,7 +52,7 @@ declare namespace java {
                  * @see #getAccessibleActionCount
                  */
                 // @ts-ignore
-                doAccessibleAction(i: number /*int*/): boolean
+                public doAccessibleAction(i: number /*int*/): boolean
             }
         }
     }

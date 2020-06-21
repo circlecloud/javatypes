@@ -29,7 +29,7 @@ declare namespace javax {
              *  "register" nor "*".
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * <p>Create a new MBeanTrustPermission with the given name.</p>
              * @param name the name of the permission. It must be
@@ -42,7 +42,7 @@ declare namespace javax {
              *  non-empty string.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
         }
     }
 }

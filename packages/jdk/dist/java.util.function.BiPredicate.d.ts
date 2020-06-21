@@ -37,7 +37,7 @@ declare namespace java {
                  * @throws NullPointerException if other is null
                  */
                 // @ts-ignore
-                and(other: java.util.function.BiPredicate<any super T, ? super U> | java.util.function$.BiPredicate<? super T, ? super U>): java.util.function.BiPredicate<T, U>
+                and(other: java.util.function$.BiPredicate<any, any>): java.util.function$.BiPredicate<T, U>
                 /**
                  * Returns a predicate that represents the logical negation of this
                  * predicate.
@@ -45,7 +45,7 @@ declare namespace java {
                  *  predicate
                  */
                 // @ts-ignore
-                negate(): java.util.function.BiPredicate<T, U>
+                negate(): java.util.function$.BiPredicate<T, U>
                 /**
                  * Returns a composed predicate that represents a short-circuiting logical
                  * OR of this predicate and another.  When evaluating the composed
@@ -61,7 +61,7 @@ declare namespace java {
                  * @throws NullPointerException if other is null
                  */
                 // @ts-ignore
-                or(other: java.util.function.BiPredicate<any super T, ? super U> | java.util.function$.BiPredicate<? super T, ? super U>): java.util.function.BiPredicate<T, U>
+                or(other: java.util.function$.BiPredicate<any, any>): java.util.function$.BiPredicate<T, U>
             }
         }
     }

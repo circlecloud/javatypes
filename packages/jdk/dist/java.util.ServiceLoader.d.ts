@@ -126,7 +126,7 @@ declare namespace java {
              * can be installed into a running Java virtual machine.
              */
             // @ts-ignore
-            reload(): void
+            public reload(): void
             /**
              * Lazily loads the available providers of this loader's service.
              * <p> The iterator returned by this method first yields all of the
@@ -167,7 +167,7 @@ declare namespace java {
              *           service
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<S>
+            public iterator(): java.util.Iterator<S>
             /**
              * Creates a new service loader for the given service type and class
              * loader.
@@ -182,7 +182,7 @@ declare namespace java {
              * @return A new service loader
              */
             // @ts-ignore
-            load<S>(service: java.lang.Class<S>, loader: java.lang.ClassLoader): java.util.ServiceLoader<S>
+            public static load<S>(service: java.lang.Class<S>, loader: java.lang.ClassLoader): java.util.ServiceLoader<S>
             /**
              * Creates a new service loader for the given service type, using the
              * current thread's {@linkplain java.lang.Thread#getContextClassLoader
@@ -200,7 +200,7 @@ declare namespace java {
              * @return A new service loader
              */
             // @ts-ignore
-            load<S>(service: java.lang.Class<S>): java.util.ServiceLoader<S>
+            public static load<S>(service: java.lang.Class<S>): java.util.ServiceLoader<S>
             /**
              * Creates a new service loader for the given service type, using the
              * extension class loader.
@@ -221,13 +221,13 @@ declare namespace java {
              * @return A new service loader
              */
             // @ts-ignore
-            loadInstalled<S>(service: java.lang.Class<S>): java.util.ServiceLoader<S>
+            public static loadInstalled<S>(service: java.lang.Class<S>): java.util.ServiceLoader<S>
             /**
              * Returns a string describing this service.
              * @return A descriptive string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

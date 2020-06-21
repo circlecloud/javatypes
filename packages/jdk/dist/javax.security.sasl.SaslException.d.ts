@@ -22,7 +22,7 @@ declare namespace javax {
                  * @see java.lang.Throwable#getMessage
                  */
                 // @ts-ignore
-                constructor(detail: string)
+                constructor(detail: java.lang.String | string)
                 /**
                  * Constructs a new instance of {@code SaslException} with a detailed message
                  * and a root exception.
@@ -38,11 +38,11 @@ declare namespace javax {
                  * @see #getCause
                  */
                 // @ts-ignore
-                constructor(detail: string, ex: Error)
+                constructor(detail: java.lang.String | string, ex: java.lang.Throwable | Error)
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
                 // @ts-ignore
-                initCause(cause: Error): java.lang.Throwable
+                initCause(cause: java.lang.Throwable | Error): Error
                 /**
                  * Returns the string representation of this exception.
                  * The string representation contains
@@ -55,7 +55,7 @@ declare namespace javax {
                  * @see java.lang.Throwable#getMessage
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

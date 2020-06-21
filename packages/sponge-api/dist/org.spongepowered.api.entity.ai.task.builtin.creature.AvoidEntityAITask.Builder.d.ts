@@ -16,7 +16,7 @@ declare namespace org {
                                          * @return This builder, for chaining
                                          */
                                         // @ts-ignore
-                                        targetSelector(predicate: java.util.function.Predicate<org.spongepowered.api.entity.Entity> | java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): org.spongepowered.api.entity.ai.task.builtin.creature.AvoidEntityAITask.Builder
+                                        targetSelector(predicate: java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): org.spongepowered.api.entity.ai.task.builtin.creature.AvoidEntityAITask.Builder
                                         /**
                                          * Sets the search distance at which any {@link Entity} instances in a
                                          * radius of the parent {@link Agent} are considered for avoiding.

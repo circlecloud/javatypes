@@ -21,7 +21,7 @@ declare namespace org {
                              * @return The maximum speed
                              */
                             // @ts-ignore
-                            getSwiftness(): double
+                            getSwiftness(): number /*double*/
                             /**
                              * Sets the absolute maximum speed that this cart is allowed to travel at.
                              * <p>The default value is 0.4.</p>
@@ -39,7 +39,7 @@ declare namespace org {
                              *      this method is called
                              */
                             // @ts-ignore
-                            getPotentialMaxSpeed(): double
+                            getPotentialMaxSpeed(): number /*double*/
                             /**
                              * Gets whether or not the minecart slows down faster without a passenger.
                              * @return If the cart slows when empty

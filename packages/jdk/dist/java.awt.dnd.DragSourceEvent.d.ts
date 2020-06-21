@@ -60,7 +60,7 @@ declare namespace java {
                  * @return the <code>DragSourceContext</code> that originated the event
                  */
                 // @ts-ignore
-                getDragSourceContext(): java.awt.dnd.DragSourceContext
+                public getDragSourceContext(): java.awt.dnd.DragSourceContext
                 /**
                  * This method returns a <code>Point</code> indicating the cursor
                  * location in screen coordinates at the moment this event occurred, or
@@ -71,7 +71,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getLocation(): java.awt.Point
+                public getLocation(): java.awt.Point
                 /**
                  * This method returns the horizontal coordinate of the cursor location in
                  * screen coordinates at the moment this event occurred, or zero if the
@@ -81,7 +81,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getX(): int
+                public getX(): number /*int*/
                 /**
                  * This method returns the vertical coordinate of the cursor location in
                  * screen coordinates at the moment this event occurred, or zero if the
@@ -91,7 +91,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getY(): int
+                public getY(): number /*int*/
             }
         }
     }

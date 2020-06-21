@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class SandTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly NORMAL: org.spongepowered.api.data.type.SandType
+                        public static readonly NORMAL: org.spongepowered.api.data.type.SandType
                         // @ts-ignore
-                        readonly RED: org.spongepowered.api.data.type.SandType
+                        public static readonly RED: org.spongepowered.api.data.type.SandType
                     }
                 }
             }

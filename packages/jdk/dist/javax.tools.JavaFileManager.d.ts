@@ -97,7 +97,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            list(location: javax.tools.JavaFileManager.Location, packageName: string, kinds: Array<javax.tools.JavaFileObject.Kind>, recurse: boolean): java.lang.Iterable<javax.tools.JavaFileObject>
+            list(location: javax.tools.JavaFileManager.Location, packageName: java.lang.String | string, kinds: java.util.Set<javax.tools.JavaFileObject.Kind> | Array<javax.tools.JavaFileObject.Kind>, recurse: boolean): java.lang.Iterable<javax.tools.JavaFileObject>
             /**
              * Infers a binary name of a file object based on a location.  The
              * binary name returned might not be a valid binary name according to
@@ -110,7 +110,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            inferBinaryName(location: javax.tools.JavaFileManager.Location, file: javax.tools.JavaFileObject): java.lang.String
+            inferBinaryName(location: javax.tools.JavaFileManager.Location, file: javax.tools.JavaFileObject): string
             /**
              * Compares two file objects and return true if they represent the
              * same underlying object.
@@ -138,7 +138,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            handleOption(current: string, remaining: java.util.Iterator<java.lang.String>): boolean
+            handleOption(current: java.lang.String | string, remaining: java.util.Iterator<java.lang.String | string>): boolean
             /**
              * Determines if a location is known to this file manager.
              * @param location a location
@@ -167,7 +167,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            getJavaFileForInput(location: javax.tools.JavaFileManager.Location, className: string, kind: javax.tools.JavaFileObject.Kind): javax.tools.JavaFileObject
+            getJavaFileForInput(location: javax.tools.JavaFileManager.Location, className: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind): javax.tools.JavaFileObject
             /**
              * Gets a {@linkplain JavaFileObject file object} for output
              * representing the specified class of the specified kind in the
@@ -199,7 +199,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            getJavaFileForOutput(location: javax.tools.JavaFileManager.Location, className: string, kind: javax.tools.JavaFileObject.Kind, sibling: javax.tools.FileObject): javax.tools.JavaFileObject
+            getJavaFileForOutput(location: javax.tools.JavaFileManager.Location, className: java.lang.String | string, kind: javax.tools.JavaFileObject.Kind, sibling: javax.tools.FileObject): javax.tools.JavaFileObject
             /**
              * Gets a {@linkplain FileObject file object} for input
              * representing the specified <a href="JavaFileManager.html#relative_name">relative
@@ -235,7 +235,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            getFileForInput(location: javax.tools.JavaFileManager.Location, packageName: string, relativeName: string): javax.tools.FileObject
+            getFileForInput(location: javax.tools.JavaFileManager.Location, packageName: java.lang.String | string, relativeName: java.lang.String | string): javax.tools.FileObject
             /**
              * Gets a {@linkplain FileObject file object} for output
              * representing the specified <a href="JavaFileManager.html#relative_name">relative
@@ -273,7 +273,7 @@ declare namespace javax {
              *  and this file manager cannot be reopened
              */
             // @ts-ignore
-            getFileForOutput(location: javax.tools.JavaFileManager.Location, packageName: string, relativeName: string, sibling: javax.tools.FileObject): javax.tools.FileObject
+            getFileForOutput(location: javax.tools.JavaFileManager.Location, packageName: java.lang.String | string, relativeName: java.lang.String | string, sibling: javax.tools.FileObject): javax.tools.FileObject
             /**
              * Flushes any resources opened for output by this file manager
              * directly or indirectly.  Flushing a closed file manager has no

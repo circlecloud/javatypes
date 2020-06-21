@@ -37,7 +37,7 @@ declare namespace javax {
                      * @return the RootPaneUI implementation for the passed in JRootPane
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Invokes supers implementation of <code>installUI</code> to install
                      * the necessary state onto the passed in <code>JRootPane</code>
@@ -52,7 +52,7 @@ declare namespace javax {
                      * @param c the JRootPane to install state onto
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Invokes supers implementation to uninstall any of its state. This will
                      * also reset the <code>LayoutManager</code> of the <code>JRootPane</code>.
@@ -64,7 +64,7 @@ declare namespace javax {
                      * @param c the JRootPane to uninstall state from
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Invoked when a property changes. <code>MetalRootPaneUI</code> is
                      * primarily interested in events originating from the
@@ -83,7 +83,7 @@ declare namespace javax {
                      *           and the property that has changed.
                      */
                     // @ts-ignore
-                    propertyChange(e: java.beans.PropertyChangeEvent): void
+                    public propertyChange(e: java.beans.PropertyChangeEvent): void
                 }
             }
         }

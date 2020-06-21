@@ -29,7 +29,7 @@ declare namespace org {
                      * @param threadNamePrefix the prefix to use for the names of newly created threads
                      */
                     // @ts-ignore
-                    constructor(threadNamePrefix: string)
+                    constructor(threadNamePrefix: java.lang.String | string)
                     /**
                      * Create a new SimpleAsyncTaskExecutor with the given external thread factory.
                      * @param threadFactory the factory to use for creating new Threads
@@ -41,13 +41,13 @@ declare namespace org {
                      * @see ConcurrencyThrottleSupport#UNBOUNDED_CONCURRENCY
                      */
                     // @ts-ignore
-                    readonly UNBOUNDED_CONCURRENCY: number /*int*/
+                    public static readonly UNBOUNDED_CONCURRENCY: number /*int*/
                     /**
                      * Switch concurrency 'off': that is, don't allow any concurrent invocations.
                      * @see ConcurrencyThrottleSupport#NO_CONCURRENCY
                      */
                     // @ts-ignore
-                    readonly NO_CONCURRENCY: number /*int*/
+                    public static readonly NO_CONCURRENCY: number /*int*/
                     /**
                      * Specify an external factory to use for creating new Threads,
                      * instead of relying on the local properties of this executor.
@@ -57,12 +57,12 @@ declare namespace org {
                      * @see #setThreadPriority
                      */
                     // @ts-ignore
-                    setThreadFactory(threadFactory: java.util.concurrent.ThreadFactory): void
+                    public setThreadFactory(threadFactory: java.util.concurrent.ThreadFactory): void
                     /**
                      * Return the external factory to use for creating new Threads, if any.
                      */
                     // @ts-ignore
-                    getThreadFactory(): java.util.concurrent.ThreadFactory
+                    public getThreadFactory(): java.util.concurrent.ThreadFactory
                     /**
                      * Specify a custom {@link TaskDecorator} to be applied to any {@link Runnable}
                      * about to be executed.
@@ -74,7 +74,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setTaskDecorator(taskDecorator: org.springframework.core.task.TaskDecorator): void
+                    public setTaskDecorator(taskDecorator: org.springframework.core.task.TaskDecorator): void
                     /**
                      * Set the maximum number of parallel accesses allowed.
                      * -1 indicates no concurrency limit at all.
@@ -86,12 +86,12 @@ declare namespace org {
                      * @see #UNBOUNDED_CONCURRENCY
                      */
                     // @ts-ignore
-                    setConcurrencyLimit(concurrencyLimit: number /*int*/): void
+                    public setConcurrencyLimit(concurrencyLimit: number /*int*/): void
                     /**
                      * Return the maximum number of parallel accesses allowed.
                      */
                     // @ts-ignore
-                    getConcurrencyLimit(): int
+                    public getConcurrencyLimit(): number /*int*/
                     /**
                      * Return whether this throttle is currently active.
                      * @return {#code true} if the concurrency limit for this instance is active
@@ -99,14 +99,14 @@ declare namespace org {
                      * @see #setConcurrencyLimit
                      */
                     // @ts-ignore
-                    isThrottleActive(): boolean
+                    public isThrottleActive(): boolean
                     /**
                      * Executes the given task, within a concurrency throttle
                      * if configured (through the superclass's settings).
                      * @see #doExecute(Runnable)
                      */
                     // @ts-ignore
-                    execute(task: java.lang.Runnable): void
+                    public execute(task: java.lang.Runnable): void
                     /**
                      * Executes the given task, within a concurrency throttle
                      * if configured (through the superclass's settings).
@@ -117,15 +117,15 @@ declare namespace org {
                      * @see #doExecute(Runnable)
                      */
                     // @ts-ignore
-                    execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
+                    public execute(task: java.lang.Runnable, startTimeout: number /*long*/): void
                     // @ts-ignore
-                    submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                    public submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                     // @ts-ignore
-                    submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
+                    public submit<T>(task: java.util.concurrent.Callable<T>): java.util.concurrent.Future<T>
                     // @ts-ignore
-                    submitListenable(task: java.lang.Runnable): org.springframework.util.concurrent.ListenableFuture<?>
+                    public submitListenable(task: java.lang.Runnable): org.springframework.util.concurrent.ListenableFuture<any>
                     // @ts-ignore
-                    submitListenable<T>(task: java.util.concurrent.Callable<T>): org.springframework.util.concurrent.ListenableFuture<T>
+                    public submitListenable<T>(task: java.util.concurrent.Callable<T>): org.springframework.util.concurrent.ListenableFuture<T>
                     /**
                      * Template method for the actual execution of a task.
                      * <p>The default implementation creates a new Thread and starts it.

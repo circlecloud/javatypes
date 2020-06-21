@@ -26,7 +26,7 @@ declare namespace javax {
              * @return the number of items currently selected.
              */
             // @ts-ignore
-            getAccessibleSelectionCount(): int
+            getAccessibleSelectionCount(): number /*int*/
             /**
              * Returns an Accessible representing the specified selected child
              * of the object.  If there isn't a selection, or there are

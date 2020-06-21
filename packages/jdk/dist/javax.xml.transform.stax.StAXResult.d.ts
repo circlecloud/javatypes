@@ -50,7 +50,7 @@ declare namespace javax {
                      * the Transformer supports Result output of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * <p>Get the <code>XMLEventWriter</code> used by this
                      * <code>StAXResult</code>.</p>
@@ -61,7 +61,7 @@ declare namespace javax {
                      *    <code>StAXResult</code>.
                      */
                     // @ts-ignore
-                    getXMLEventWriter(): javax.xml.stream.XMLEventWriter
+                    public getXMLEventWriter(): javax.xml.stream.XMLEventWriter
                     /**
                      * <p>Get the <code>XMLStreamWriter</code> used by this
                      * <code>StAXResult</code>.</p>
@@ -72,7 +72,7 @@ declare namespace javax {
                      *    <code>StAXResult</code>.
                      */
                     // @ts-ignore
-                    getXMLStreamWriter(): javax.xml.stream.XMLStreamWriter
+                    public getXMLStreamWriter(): javax.xml.stream.XMLStreamWriter
                     /**
                      * <p>In the context of a <code>StAXResult</code>, it is not appropriate
                      * to explicitly set the system identifier.
@@ -86,13 +86,13 @@ declare namespace javax {
                      *    thrown by this method.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * <p>The returned system identifier is always <code>null</code>.</p>
                      * @return The returned system identifier is always <code>null</code>.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                 }
             }
         }

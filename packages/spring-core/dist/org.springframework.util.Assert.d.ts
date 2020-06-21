@@ -29,7 +29,7 @@ declare namespace org {
              * @since 1.1.2
              */
             // @ts-ignore
-            class Assert extends java.lang.Object {
+            abstract class Assert extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -43,7 +43,7 @@ declare namespace org {
                  * @throws IllegalStateException if {#code expression} is {@code false}
                  */
                 // @ts-ignore
-                state(expression: boolean, message: string): void
+                public static state(expression: boolean, message: java.lang.String | string): void
                 /**
                  * Assert a boolean expression, throwing an {@code IllegalStateException}
                  * if the expression evaluates to {@code false}.
@@ -60,14 +60,14 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                state(expression: boolean, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static state(expression: boolean, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert a boolean expression, throwing an {@code IllegalStateException}
                  * if the expression evaluates to {@code false}.
                  * @deprecated as of 4.3.7, in favor of {#link #state(boolean, String)}
                  */
                 // @ts-ignore
-                state(expression: boolean): void
+                public static state(expression: boolean): void
                 /**
                  * Assert a boolean expression, throwing an {@code IllegalArgumentException}
                  * if the expression evaluates to {@code false}.
@@ -77,7 +77,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if {#code expression} is {@code false}
                  */
                 // @ts-ignore
-                isTrue(expression: boolean, message: string): void
+                public static isTrue(expression: boolean, message: java.lang.String | string): void
                 /**
                  * Assert a boolean expression, throwing an {@code IllegalArgumentException}
                  * if the expression evaluates to {@code false}.
@@ -91,14 +91,14 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                isTrue(expression: boolean, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static isTrue(expression: boolean, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert a boolean expression, throwing an {@code IllegalArgumentException}
                  * if the expression evaluates to {@code false}.
                  * @deprecated as of 4.3.7, in favor of {#link #isTrue(boolean, String)}
                  */
                 // @ts-ignore
-                isTrue(expression: boolean): void
+                public static isTrue(expression: boolean): void
                 /**
                  * Assert that an object is {@code null}.
                  * <pre class="code">Assert.isNull(value, "The value must be null");</pre>
@@ -107,7 +107,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the object is not {#code null}
                  */
                 // @ts-ignore
-                isNull(object: any, message: string): void
+                public static isNull(object: java.lang.Object | any, message: java.lang.String | string): void
                 /**
                  * Assert that an object is {@code null}.
                  * <pre class="code">
@@ -120,13 +120,13 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                isNull(object: any, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static isNull(object: java.lang.Object | any, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that an object is {@code null}.
                  * @deprecated as of 4.3.7, in favor of {#link #isNull(Object, String)}
                  */
                 // @ts-ignore
-                isNull(object: any): void
+                public static isNull(object: java.lang.Object | any): void
                 /**
                  * Assert that an object is not {@code null}.
                  * <pre class="code">Assert.notNull(clazz, "The class must not be null");</pre>
@@ -135,7 +135,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the object is {#code null}
                  */
                 // @ts-ignore
-                notNull(object: any, message: string): void
+                public static notNull(object: java.lang.Object | any, message: java.lang.String | string): void
                 /**
                  * Assert that an object is not {@code null}.
                  * <pre class="code">
@@ -148,13 +148,13 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                notNull(object: any, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static notNull(object: java.lang.Object | any, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that an object is not {@code null}.
                  * @deprecated as of 4.3.7, in favor of {#link #notNull(Object, String)}
                  */
                 // @ts-ignore
-                notNull(object: any): void
+                public static notNull(object: java.lang.Object | any): void
                 /**
                  * Assert that the given String is not empty; that is,
                  * it must not be {@code null} and not the empty String.
@@ -165,7 +165,7 @@ declare namespace org {
                  * @see StringUtils#hasLength
                  */
                 // @ts-ignore
-                hasLength(text: string, message: string): void
+                public static hasLength(text: java.lang.String | string, message: java.lang.String | string): void
                 /**
                  * Assert that the given String is not empty; that is,
                  * it must not be {@code null} and not the empty String.
@@ -180,14 +180,14 @@ declare namespace org {
                  * @see StringUtils#hasLength
                  */
                 // @ts-ignore
-                hasLength(text: string, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static hasLength(text: java.lang.String | string, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that the given String is not empty; that is,
                  * it must not be {@code null} and not the empty String.
                  * @deprecated as of 4.3.7, in favor of {#link #hasLength(String, String)}
                  */
                 // @ts-ignore
-                hasLength(text: string): void
+                public static hasLength(text: java.lang.String | string): void
                 /**
                  * Assert that the given String contains valid text content; that is, it must not
                  * be {@code null} and must contain at least one non-whitespace character.
@@ -198,7 +198,7 @@ declare namespace org {
                  * @see StringUtils#hasText
                  */
                 // @ts-ignore
-                hasText(text: string, message: string): void
+                public static hasText(text: java.lang.String | string, message: java.lang.String | string): void
                 /**
                  * Assert that the given String contains valid text content; that is, it must not
                  * be {@code null} and must contain at least one non-whitespace character.
@@ -213,14 +213,14 @@ declare namespace org {
                  * @see StringUtils#hasText
                  */
                 // @ts-ignore
-                hasText(text: string, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static hasText(text: java.lang.String | string, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that the given String contains valid text content; that is, it must not
                  * be {@code null} and must contain at least one non-whitespace character.
                  * @deprecated as of 4.3.7, in favor of {#link #hasText(String, String)}
                  */
                 // @ts-ignore
-                hasText(text: string): void
+                public static hasText(text: java.lang.String | string): void
                 /**
                  * Assert that the given text does not contain the given substring.
                  * <pre class="code">Assert.doesNotContain(name, "rod", "Name must not contain 'rod'");</pre>
@@ -230,7 +230,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the text contains the substring
                  */
                 // @ts-ignore
-                doesNotContain(textToSearch: string, substring: string, message: string): void
+                public static doesNotContain(textToSearch: java.lang.String | string, substring: java.lang.String | string, message: java.lang.String | string): void
                 /**
                  * Assert that the given text does not contain the given substring.
                  * <pre class="code">
@@ -244,13 +244,13 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                doesNotContain(textToSearch: string, substring: string, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static doesNotContain(textToSearch: java.lang.String | string, substring: java.lang.String | string, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that the given text does not contain the given substring.
                  * @deprecated as of 4.3.7, in favor of {#link #doesNotContain(String, String, String)}
                  */
                 // @ts-ignore
-                doesNotContain(textToSearch: string, substring: string): void
+                public static doesNotContain(textToSearch: java.lang.String | string, substring: java.lang.String | string): void
                 /**
                  * Assert that an array contains elements; that is, it must not be
                  * {@code null} and must contain at least one element.
@@ -260,7 +260,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the object array is {#code null} or contains no elements
                  */
                 // @ts-ignore
-                notEmpty(array: any[], message: string): void
+                public static notEmpty(array: java.lang.Object[] | any[], message: java.lang.String | string): void
                 /**
                  * Assert that an array contains elements; that is, it must not be
                  * {@code null} and must contain at least one element.
@@ -274,14 +274,14 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                notEmpty(array: any[], messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static notEmpty(array: java.lang.Object[] | any[], messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that an array contains elements; that is, it must not be
                  * {@code null} and must contain at least one element.
                  * @deprecated as of 4.3.7, in favor of {#link #notEmpty(Object[], String)}
                  */
                 // @ts-ignore
-                notEmpty(array: any[]): void
+                public static notEmpty(array: java.lang.Object[] | any[]): void
                 /**
                  * Assert that an array contains no {@code null} elements.
                  * <p>Note: Does not complain if the array is empty!
@@ -291,7 +291,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the object array contains a {#code null} element
                  */
                 // @ts-ignore
-                noNullElements(array: any[], message: string): void
+                public static noNullElements(array: java.lang.Object[] | any[], message: java.lang.String | string): void
                 /**
                  * Assert that an array contains no {@code null} elements.
                  * <p>Note: Does not complain if the array is empty!
@@ -305,13 +305,13 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                noNullElements(array: any[], messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static noNullElements(array: java.lang.Object[] | any[], messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that an array contains no {@code null} elements.
                  * @deprecated as of 4.3.7, in favor of {#link #noNullElements(Object[], String)}
                  */
                 // @ts-ignore
-                noNullElements(array: any[]): void
+                public static noNullElements(array: java.lang.Object[] | any[]): void
                 /**
                  * Assert that a collection contains elements; that is, it must not be
                  * {@code null} and must contain at least one element.
@@ -322,7 +322,7 @@ declare namespace org {
                  *  contains no elements
                  */
                 // @ts-ignore
-                notEmpty(collection: Array<any>, message: string): void
+                public static notEmpty(collection: java.util.Collection<any> | Array<any>, message: java.lang.String | string): void
                 /**
                  * Assert that a collection contains elements; that is, it must not be
                  * {@code null} and must contain at least one element.
@@ -337,14 +337,14 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                notEmpty(collection: Array<any>, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static notEmpty(collection: java.util.Collection<any> | Array<any>, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that a collection contains elements; that is, it must not be
                  * {@code null} and must contain at least one element.
                  * @deprecated as of 4.3.7, in favor of {#link #notEmpty(Collection, String)}
                  */
                 // @ts-ignore
-                notEmpty(collection: Array<any>): void
+                public static notEmpty(collection: java.util.Collection<any> | Array<any>): void
                 /**
                  * Assert that a collection contains no {@code null} elements.
                  * <p>Note: Does not complain if the collection is empty!
@@ -355,7 +355,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                noNullElements(collection: Array<any>, message: string): void
+                public static noNullElements(collection: java.util.Collection<any> | Array<any>, message: java.lang.String | string): void
                 /**
                  * Assert that a collection contains no {@code null} elements.
                  * <p>Note: Does not complain if the collection is empty!
@@ -369,7 +369,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                noNullElements(collection: Array<any>, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static noNullElements(collection: java.util.Collection<any> | Array<any>, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that a Map contains entries; that is, it must not be {@code null}
                  * and must contain at least one entry.
@@ -379,7 +379,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the map is {#code null} or contains no entries
                  */
                 // @ts-ignore
-                notEmpty(map: java.util.Map<any, ?>, message: string): void
+                public static notEmpty(map: java.util.Map<any, any>, message: java.lang.String | string): void
                 /**
                  * Assert that a Map contains entries; that is, it must not be {@code null}
                  * and must contain at least one entry.
@@ -393,14 +393,14 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                notEmpty(map: java.util.Map<any, ?>, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static notEmpty(map: java.util.Map<any, any>, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that a Map contains entries; that is, it must not be {@code null}
                  * and must contain at least one entry.
                  * @deprecated as of 4.3.7, in favor of {#link #notEmpty(Map, String)}
                  */
                 // @ts-ignore
-                notEmpty(map: java.util.Map<any, ?>): void
+                public static notEmpty(map: java.util.Map<any, any>): void
                 /**
                  * Assert that the provided object is an instance of the provided class.
                  * <pre class="code">Assert.instanceOf(Foo.class, foo, "Foo expected");</pre>
@@ -414,7 +414,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the object is not an instance of type
                  */
                 // @ts-ignore
-                isInstanceOf(type: java.lang.Class<any>, obj: any, message: string): void
+                public static isInstanceOf(type: java.lang.Class<any>, obj: java.lang.Object | any, message: java.lang.String | string): void
                 /**
                  * Assert that the provided object is an instance of the provided class.
                  * <pre class="code">
@@ -428,7 +428,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                isInstanceOf(type: java.lang.Class<any>, obj: any, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static isInstanceOf(type: java.lang.Class<any>, obj: java.lang.Object | any, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that the provided object is an instance of the provided class.
                  * <pre class="code">Assert.instanceOf(Foo.class, foo);</pre>
@@ -437,7 +437,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the object is not an instance of type
                  */
                 // @ts-ignore
-                isInstanceOf(type: java.lang.Class<any>, obj: any): void
+                public static isInstanceOf(type: java.lang.Class<any>, obj: java.lang.Object | any): void
                 /**
                  * Assert that {@code superType.isAssignableFrom(subType)} is {@code true}.
                  * <pre class="code">Assert.isAssignable(Number.class, myClass, "Number expected");</pre>
@@ -451,7 +451,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the classes are not assignable
                  */
                 // @ts-ignore
-                isAssignable(superType: java.lang.Class<any>, subType: java.lang.Class<any>, message: string): void
+                public static isAssignable(superType: java.lang.Class<any>, subType: java.lang.Class<any>, message: java.lang.String | string): void
                 /**
                  * Assert that {@code superType.isAssignableFrom(subType)} is {@code true}.
                  * <pre class="code">
@@ -465,7 +465,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                isAssignable(superType: java.lang.Class<any>, subType: java.lang.Class<any>, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public static isAssignable(superType: java.lang.Class<any>, subType: java.lang.Class<any>, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Assert that {@code superType.isAssignableFrom(subType)} is {@code true}.
                  * <pre class="code">Assert.isAssignable(Number.class, myClass);</pre>
@@ -474,7 +474,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the classes are not assignable
                  */
                 // @ts-ignore
-                isAssignable(superType: java.lang.Class<any>, subType: java.lang.Class<any>): void
+                public static isAssignable(superType: java.lang.Class<any>, subType: java.lang.Class<any>): void
             }
         }
     }

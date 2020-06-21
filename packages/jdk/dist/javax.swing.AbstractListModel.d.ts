@@ -16,7 +16,7 @@ declare namespace javax {
          * @author Hans Muller
          */
         // @ts-ignore
-        class AbstractListModel<E> extends java.lang.Object implements javax.swing.ListModel<E>, java.io.Serializable {
+        abstract class AbstractListModel<E> extends java.lang.Object implements javax.swing.ListModel<E>, java.io.Serializable {
             // @ts-ignore
             constructor()
             // @ts-ignore
@@ -27,14 +27,14 @@ declare namespace javax {
              * @param l the <code>ListDataListener</code> to be added
              */
             // @ts-ignore
-            addListDataListener(l: javax.swing.event.ListDataListener): void
+            public addListDataListener(l: javax.swing.event.ListDataListener): void
             /**
              * Removes a listener from the list that's notified each time a
              * change to the data model occurs.
              * @param l the <code>ListDataListener</code> to be removed
              */
             // @ts-ignore
-            removeListDataListener(l: javax.swing.event.ListDataListener): void
+            public removeListDataListener(l: javax.swing.event.ListDataListener): void
             /**
              * Returns an array of all the list data listeners
              * registered on this <code>AbstractListModel</code>.
@@ -46,7 +46,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getListDataListeners(): javax.swing.event.ListDataListener[]
+            public getListDataListeners(): javax.swing.event.ListDataListener[]
             /**
              * <code>AbstractListModel</code> subclasses must call this method
              * <b>after</b>
@@ -61,7 +61,7 @@ declare namespace javax {
              * @see DefaultListModel
              */
             // @ts-ignore
-            fireContentsChanged(source: any, index0: number /*int*/, index1: number /*int*/): void
+            fireContentsChanged(source: java.lang.Object | any, index0: number /*int*/, index1: number /*int*/): void
             /**
              * <code>AbstractListModel</code> subclasses must call this method
              * <b>after</b>
@@ -76,7 +76,7 @@ declare namespace javax {
              * @see DefaultListModel
              */
             // @ts-ignore
-            fireIntervalAdded(source: any, index0: number /*int*/, index1: number /*int*/): void
+            fireIntervalAdded(source: java.lang.Object | any, index0: number /*int*/, index1: number /*int*/): void
             /**
              * <code>AbstractListModel</code> subclasses must call this method
              * <b>after</b> one or more elements are removed from the model.
@@ -92,7 +92,7 @@ declare namespace javax {
              * @see DefaultListModel
              */
             // @ts-ignore
-            fireIntervalRemoved(source: any, index0: number /*int*/, index1: number /*int*/): void
+            fireIntervalRemoved(source: java.lang.Object | any, index0: number /*int*/, index1: number /*int*/): void
             /**
              * Returns an array of all the objects currently registered as
              * <code><em>Foo</em>Listener</code>s
@@ -124,7 +124,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
         }
     }
 }

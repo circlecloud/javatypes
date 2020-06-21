@@ -41,7 +41,7 @@ declare namespace org {
                          * @return This builder, for chaining
                          */
                         // @ts-ignore
-                        execute(executor: java.util.function.Consumer<org.spongepowered.api.scheduler.Task> | java.util.function$.Consumer<org.spongepowered.api.scheduler.Task>): org.spongepowered.api.scheduler.Task.Builder
+                        execute(executor: java.util.function$.Consumer<org.spongepowered.api.scheduler.Task>): org.spongepowered.api.scheduler.Task.Builder
                         /**
                          * Sets the delay before the task runs. This delay is an initial offset,
                          * subsequent runs (when the interval is not 0) will not be offset. By
@@ -103,7 +103,7 @@ declare namespace org {
                          * @throws IllegalArgumentException If the name is blank
                          */
                         // @ts-ignore
-                        name(name: string): org.spongepowered.api.scheduler.Task.Builder
+                        name(name: java.lang.String | string): org.spongepowered.api.scheduler.Task.Builder
                         /**
                          * Submits the task to the scheduler and returns the task that was
                          * created.
@@ -114,7 +114,7 @@ declare namespace org {
                          * @throws IllegalStateException If the builder is incomplete
                          */
                         // @ts-ignore
-                        submit(plugin: any): org.spongepowered.api.scheduler.Task
+                        submit(plugin: java.lang.Object | any): org.spongepowered.api.scheduler.Task
                     }
                 }
             }

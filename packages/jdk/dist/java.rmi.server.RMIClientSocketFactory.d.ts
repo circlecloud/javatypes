@@ -39,7 +39,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                createSocket(host: string, port: number /*int*/): java.net.Socket
+                createSocket(host: java.lang.String | string, port: number /*int*/): java.net.Socket
             }
         }
     }

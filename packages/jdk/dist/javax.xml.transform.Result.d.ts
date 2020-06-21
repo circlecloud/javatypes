@@ -25,7 +25,7 @@ declare namespace javax {
                  * @see <a href="http://www.w3.org/TR/xslt#disable-output-escaping">disable-output-escaping in XSLT Specification</a>
                  */
                 // @ts-ignore
-                
+                readonly PI_DISABLE_OUTPUT_ESCAPING: java.lang.String | string
                 /**
                  * The name of the processing instruction that is sent
                  * if the result tree enables output escaping at some point after having
@@ -33,7 +33,7 @@ declare namespace javax {
                  * @see <a href="http://www.w3.org/TR/xslt#disable-output-escaping">disable-output-escaping in XSLT Specification</a>
                  */
                 // @ts-ignore
-                
+                readonly PI_ENABLE_OUTPUT_ESCAPING: java.lang.String | string
                 /**
                  * Set the system identifier for this Result.
                  * <p>If the Result is not to be written to a file, the system identifier is optional.
@@ -42,14 +42,14 @@ declare namespace javax {
                  * @param systemId The system identifier as a URI string.
                  */
                 // @ts-ignore
-                setSystemId(systemId: string): void
+                setSystemId(systemId: java.lang.String | string): void
                 /**
                  * Get the system identifier that was set with setSystemId.
                  * @return The system identifier that was set with setSystemId,
                  *  or null if setSystemId was not called.
                  */
                 // @ts-ignore
-                getSystemId(): java.lang.String
+                getSystemId(): string
             }
         }
     }

@@ -12,13 +12,13 @@ declare namespace javax {
                  * @param message The error or warning message.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Create a new TransformerException wrapping an existing exception.
                  * @param e The exception to be wrapped.
                  */
                 // @ts-ignore
-                constructor(e: Error)
+                constructor(e: java.lang.Throwable | Error)
                 /**
                  * Wrap an existing exception in a TransformerException.
                  * <p>This is used for throwing processor exceptions before
@@ -28,7 +28,7 @@ declare namespace javax {
                  * @param e Any exception
                  */
                 // @ts-ignore
-                constructor(message: string, e: Error)
+                constructor(message: java.lang.String | string, e: java.lang.Throwable | Error)
                 /**
                  * Create a new TransformerException from a message and a Locator.
                  * <p>This constructor is especially useful when an application is
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @param locator The locator object for the error or warning.
                  */
                 // @ts-ignore
-                constructor(message: string, locator: javax.xml.transform.SourceLocator)
+                constructor(message: java.lang.String | string, locator: javax.xml.transform.SourceLocator)
                 /**
                  * Wrap an existing exception in a TransformerException.
                  * @param message The error or warning message, or null to
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @param e Any exception
                  */
                 // @ts-ignore
-                constructor(message: string, locator: javax.xml.transform.SourceLocator, e: Error)
+                constructor(message: java.lang.String | string, locator: javax.xml.transform.SourceLocator, e: java.lang.Throwable | Error)
                 /**
                  * Method getLocator retrieves an instance of a SourceLocator
                  * object that specifies where an error occurred.
@@ -68,7 +68,7 @@ declare namespace javax {
                  * @see #getCause
                  */
                 // @ts-ignore
-                getException(): java.lang.Throwable
+                getException(): Error
                 /**
                  * Returns the cause of this throwable or <code>null</code> if the
                  * cause is nonexistent or unknown.  (The cause is the throwable that
@@ -76,7 +76,7 @@ declare namespace javax {
                  * @return the cause, or null if unknown
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
                 /**
                  * Initializes the <i>cause</i> of this throwable to the specified value.
                  * (The cause is the throwable that caused this throwable to get thrown.)
@@ -100,7 +100,7 @@ declare namespace javax {
                  *          been called on this throwable.
                  */
                 // @ts-ignore
-                initCause(cause: Error): java.lang.Throwable
+                initCause(cause: java.lang.Throwable | Error): Error
                 /**
                  * Get the error message with location information
                  * appended.
@@ -108,14 +108,14 @@ declare namespace javax {
                  *          location information appended.
                  */
                 // @ts-ignore
-                getMessageAndLocation(): java.lang.String
+                getMessageAndLocation(): string
                 /**
                  * Get the location information as a string.
                  * @return A string with location info, or null
                  *  if there is no location information.
                  */
                 // @ts-ignore
-                getLocationAsString(): java.lang.String
+                getLocationAsString(): string
                 /**
                  * Print the the trace of methods from where the error
                  * originated.  This will trace all nested exception

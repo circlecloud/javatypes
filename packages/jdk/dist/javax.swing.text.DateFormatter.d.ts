@@ -41,7 +41,7 @@ declare namespace javax {
                  * @param format DateFormat instance used for converting from/to Strings
                  */
                 // @ts-ignore
-                setFormat(format: java.text.DateFormat): void
+                public setFormat(format: java.text.DateFormat): void
             }
         }
     }

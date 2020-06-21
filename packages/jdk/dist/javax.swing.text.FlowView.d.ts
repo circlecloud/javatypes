@@ -21,7 +21,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class FlowView extends javax.swing.text.BoxView {
+            abstract class FlowView extends javax.swing.text.BoxView {
                 /**
                  * Constructs a FlowView for the given element.
                  * @param elem the element that this view is responsible for
@@ -64,7 +64,7 @@ declare namespace javax {
                  * by the <code>FlowStrategy</code>.
                  */
                 // @ts-ignore
-                getFlowAxis(): int
+                public getFlowAxis(): number /*int*/
                 /**
                  * Fetch the constraining span to flow against for
                  * the given child index.  This is called by the
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @see #getFlowStart
                  */
                 // @ts-ignore
-                getFlowSpan(index: number /*int*/): int
+                public getFlowSpan(index: number /*int*/): number /*int*/
                 /**
                  * Fetch the location along the flow axis that the
                  * flow span will start at.  This is called by the
@@ -90,7 +90,7 @@ declare namespace javax {
                  * @see #getFlowSpan
                  */
                 // @ts-ignore
-                getFlowStart(index: number /*int*/): int
+                public getFlowStart(index: number /*int*/): number /*int*/
                 /**
                  * Create a View that should be used to hold a
                  * a rows worth of children in a flow.  This is
@@ -120,7 +120,7 @@ declare namespace javax {
                  *    -1 if no view represents that position
                  */
                 // @ts-ignore
-                getViewIndexAtPosition(pos: number /*int*/): int
+                getViewIndexAtPosition(pos: number /*int*/): number /*int*/
                 /**
                  * Lays out the children.  If the span along the flow
                  * axis has changed, layout is marked as invalid which
@@ -155,7 +155,7 @@ declare namespace javax {
                  * @see View#insertUpdate
                  */
                 // @ts-ignore
-                insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification that something was removed from the document
                  * in a location that this view is responsible for.
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @see View#removeUpdate
                  */
                 // @ts-ignore
-                removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification from the document that attributes were changed
                  * in a location that this view is responsible for.
@@ -175,12 +175,12 @@ declare namespace javax {
                  * @see View#changedUpdate
                  */
                 // @ts-ignore
-                changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                setParent(parent: javax.swing.text.View): void
+                public setParent(parent: javax.swing.text.View): void
             }
         }
     }

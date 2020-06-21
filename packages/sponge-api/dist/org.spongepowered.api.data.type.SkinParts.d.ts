@@ -9,19 +9,19 @@ declare namespace org {
                     // @ts-ignore
                     class SkinParts extends java.lang.Object {
                         // @ts-ignore
-                        readonly CAPE: org.spongepowered.api.data.type.SkinPart
+                        public static readonly CAPE: org.spongepowered.api.data.type.SkinPart
                         // @ts-ignore
-                        readonly HAT: org.spongepowered.api.data.type.SkinPart
+                        public static readonly HAT: org.spongepowered.api.data.type.SkinPart
                         // @ts-ignore
-                        readonly JACKET: org.spongepowered.api.data.type.SkinPart
+                        public static readonly JACKET: org.spongepowered.api.data.type.SkinPart
                         // @ts-ignore
-                        readonly LEFT_PANTS_LEG: org.spongepowered.api.data.type.SkinPart
+                        public static readonly LEFT_PANTS_LEG: org.spongepowered.api.data.type.SkinPart
                         // @ts-ignore
-                        readonly LEFT_SLEEVE: org.spongepowered.api.data.type.SkinPart
+                        public static readonly LEFT_SLEEVE: org.spongepowered.api.data.type.SkinPart
                         // @ts-ignore
-                        readonly RIGHT_PANTS_LEG: org.spongepowered.api.data.type.SkinPart
+                        public static readonly RIGHT_PANTS_LEG: org.spongepowered.api.data.type.SkinPart
                         // @ts-ignore
-                        readonly RIGHT_SLEEVE: org.spongepowered.api.data.type.SkinPart
+                        public static readonly RIGHT_SLEEVE: org.spongepowered.api.data.type.SkinPart
                     }
                 }
             }

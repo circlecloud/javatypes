@@ -7,19 +7,19 @@ declare namespace javax {
                      * Data model for a type-face selection combo-box.
                      */
                     // @ts-ignore
-                    class DirectoryComboBoxModel extends javax.swing.AbstractListModel<java.lang.Object> implements javax.swing.ComboBoxModel<java.lang.Object> {
+                    class DirectoryComboBoxModel extends javax.swing.AbstractListModel<java.lang.Object | any> implements javax.swing.ComboBoxModel<java.lang.Object | any> {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getDepth(i: number /*int*/): int
+                        public getDepth(i: number /*int*/): number /*int*/
                         // @ts-ignore
-                        setSelectedItem(selectedDirectory: any): void
+                        public setSelectedItem(selectedDirectory: java.lang.Object | any): void
                         // @ts-ignore
-                        getSelectedItem(): java.lang.Object
+                        public getSelectedItem(): any
                         // @ts-ignore
-                        getSize(): int
+                        public getSize(): number /*int*/
                         // @ts-ignore
-                        getElementAt(index: number /*int*/): java.lang.Object
+                        public getElementAt(index: number /*int*/): any
                     }
                 }
             }

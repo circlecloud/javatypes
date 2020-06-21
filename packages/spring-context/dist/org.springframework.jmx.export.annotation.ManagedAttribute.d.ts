@@ -13,7 +13,7 @@ declare namespace org {
                      * @see org.springframework.jmx.export.metadata.ManagedAttribute
                      */
                     // @ts-ignore
-                    class ManagedAttribute implements java.lang.annotation.Annotation {
+                    abstract class ManagedAttribute implements java.lang.annotation.Annotation {
                     }
                 }
             }

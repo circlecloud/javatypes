@@ -14,10 +14,43 @@ declare namespace javax {
                  */
                 // @ts-ignore
                 class Status extends java.lang.Enum<javax.net.ssl.SSLEngineResult.Status> {
+                    /**
+                     * The <code>SSLEngine</code> was not able to unwrap the
+                     * incoming data because there were not enough source bytes
+                     * available to make a complete packet.
+                     * <P>
+                     * Repeat the call once more bytes are available.
+                     */
+                    // @ts-ignore
+                    readonly BUFFER_UNDERFLOW: javax.net.ssl.SSLEngineResult.Status
+                    /**
+                     * The <code>SSLEngine</code> was not able to process the
+                     * operation because there are not enough bytes available in the
+                     * destination buffer to hold the result.
+                     * <P>
+                     * Repeat the call once more bytes are available.
+                     * @see SSLSession#getPacketBufferSize()
+                     * @see SSLSession#getApplicationBufferSize()
+                     */
+                    // @ts-ignore
+                    readonly BUFFER_OVERFLOW: javax.net.ssl.SSLEngineResult.Status
+                    /**
+                     * The <code>SSLEngine</code> completed the operation, and
+                     * is available to process similar calls.
+                     */
+                    // @ts-ignore
+                    readonly OK: javax.net.ssl.SSLEngineResult.Status
+                    /**
+                     * The operation just closed this side of the
+                     * <code>SSLEngine</code>, or the operation
+                     * could not be completed because it was already closed.
+                     */
+                    // @ts-ignore
+                    readonly CLOSED: javax.net.ssl.SSLEngineResult.Status
                     // @ts-ignore
                     values(): javax.net.ssl.SSLEngineResult.Status[]
                     // @ts-ignore
-                    valueOf(name: string): javax.net.ssl.SSLEngineResult.Status
+                    valueOf(name: java.lang.String | string): javax.net.ssl.SSLEngineResult.Status
                 }
             }
         }

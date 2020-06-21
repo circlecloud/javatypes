@@ -5,10 +5,90 @@ declare namespace org {
          */
         // @ts-ignore
         class DyeColor extends java.lang.Enum<org.bukkit.DyeColor> {
+            /**
+             * Represents white dye.
+             */
+            // @ts-ignore
+            readonly WHITE: org.bukkit.DyeColor
+            /**
+             * Represents orange dye.
+             */
+            // @ts-ignore
+            readonly ORANGE: org.bukkit.DyeColor
+            /**
+             * Represents magenta dye.
+             */
+            // @ts-ignore
+            readonly MAGENTA: org.bukkit.DyeColor
+            /**
+             * Represents light blue dye.
+             */
+            // @ts-ignore
+            readonly LIGHT_BLUE: org.bukkit.DyeColor
+            /**
+             * Represents yellow dye.
+             */
+            // @ts-ignore
+            readonly YELLOW: org.bukkit.DyeColor
+            /**
+             * Represents lime dye.
+             */
+            // @ts-ignore
+            readonly LIME: org.bukkit.DyeColor
+            /**
+             * Represents pink dye.
+             */
+            // @ts-ignore
+            readonly PINK: org.bukkit.DyeColor
+            /**
+             * Represents gray dye.
+             */
+            // @ts-ignore
+            readonly GRAY: org.bukkit.DyeColor
+            /**
+             * Represents light gray dye.
+             */
+            // @ts-ignore
+            readonly LIGHT_GRAY: org.bukkit.DyeColor
+            /**
+             * Represents cyan dye.
+             */
+            // @ts-ignore
+            readonly CYAN: org.bukkit.DyeColor
+            /**
+             * Represents purple dye.
+             */
+            // @ts-ignore
+            readonly PURPLE: org.bukkit.DyeColor
+            /**
+             * Represents blue dye.
+             */
+            // @ts-ignore
+            readonly BLUE: org.bukkit.DyeColor
+            /**
+             * Represents brown dye.
+             */
+            // @ts-ignore
+            readonly BROWN: org.bukkit.DyeColor
+            /**
+             * Represents green dye.
+             */
+            // @ts-ignore
+            readonly GREEN: org.bukkit.DyeColor
+            /**
+             * Represents red dye.
+             */
+            // @ts-ignore
+            readonly RED: org.bukkit.DyeColor
+            /**
+             * Represents black dye.
+             */
+            // @ts-ignore
+            readonly BLACK: org.bukkit.DyeColor
             // @ts-ignore
             values(): org.bukkit.DyeColor[]
             // @ts-ignore
-            valueOf(name: string): org.bukkit.DyeColor
+            valueOf(name: java.lang.String | string): org.bukkit.DyeColor
             /**
              * Gets the associated wool data value representing this color.
              * @return A byte containing the wool data value of this color
@@ -16,7 +96,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getWoolData(): byte
+            getWoolData(): number /*byte*/
             /**
              * Gets the associated dye data value representing this color.
              * @return A byte containing the dye data value of this color
@@ -24,7 +104,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getDyeData(): byte
+            getDyeData(): number /*byte*/
             /**
              * Gets the color that this dye represents.
              * @return The {#link Color} that this dye represents
@@ -80,7 +160,7 @@ declare namespace org {
              * @deprecated legacy use only
              */
             // @ts-ignore
-            legacyValueOf(name: string): org.bukkit.DyeColor
+            legacyValueOf(name: java.lang.String | string): org.bukkit.DyeColor
         }
     }
 }

@@ -83,7 +83,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                readonly DefaultCopyDrop: java.awt.Cursor
+                public static readonly DefaultCopyDrop: java.awt.Cursor
                 /**
                  * The default <code>Cursor</code> to use with a move operation indicating
                  * that a drop is currently allowed. <code>null</code> if
@@ -91,7 +91,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                readonly DefaultMoveDrop: java.awt.Cursor
+                public static readonly DefaultMoveDrop: java.awt.Cursor
                 /**
                  * The default <code>Cursor</code> to use with a link operation indicating
                  * that a drop is currently allowed. <code>null</code> if
@@ -99,7 +99,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                readonly DefaultLinkDrop: java.awt.Cursor
+                public static readonly DefaultLinkDrop: java.awt.Cursor
                 /**
                  * The default <code>Cursor</code> to use with a copy operation indicating
                  * that a drop is currently not allowed. <code>null</code> if
@@ -107,7 +107,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                readonly DefaultCopyNoDrop: java.awt.Cursor
+                public static readonly DefaultCopyNoDrop: java.awt.Cursor
                 /**
                  * The default <code>Cursor</code> to use with a move operation indicating
                  * that a drop is currently not allowed. <code>null</code> if
@@ -115,7 +115,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                readonly DefaultMoveNoDrop: java.awt.Cursor
+                public static readonly DefaultMoveNoDrop: java.awt.Cursor
                 /**
                  * The default <code>Cursor</code> to use with a link operation indicating
                  * that a drop is currently not allowed. <code>null</code> if
@@ -123,7 +123,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                readonly DefaultLinkNoDrop: java.awt.Cursor
+                public static readonly DefaultLinkNoDrop: java.awt.Cursor
                 /**
                  * Gets the <code>DragSource</code> object associated with
                  * the underlying platform.
@@ -133,7 +133,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                getDefaultDragSource(): java.awt.dnd.DragSource
+                public static getDefaultDragSource(): java.awt.dnd.DragSource
                 /**
                  * Reports
                  * whether or not drag
@@ -143,7 +143,7 @@ declare namespace java {
                  * @return if the Drag Image support is available on this platform
                  */
                 // @ts-ignore
-                isDragImageSupported(): boolean
+                public static isDragImageSupported(): boolean
                 /**
                  * Start a drag, given the <code>DragGestureEvent</code>
                  * that initiated the drag, the initial
@@ -175,7 +175,7 @@ declare namespace java {
                  *     is still executing
                  */
                 // @ts-ignore
-                startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, dragImage: java.awt.Image, imageOffset: java.awt.Point, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener, flavorMap: java.awt.datatransfer.FlavorMap): void
+                public startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, dragImage: java.awt.Image, imageOffset: java.awt.Point, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener, flavorMap: java.awt.datatransfer.FlavorMap): void
                 /**
                  * Start a drag, given the <code>DragGestureEvent</code>
                  * that initiated the drag, the initial
@@ -201,7 +201,7 @@ declare namespace java {
                  *     is still executing
                  */
                 // @ts-ignore
-                startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener, flavorMap: java.awt.datatransfer.FlavorMap): void
+                public startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener, flavorMap: java.awt.datatransfer.FlavorMap): void
                 /**
                  * Start a drag, given the <code>DragGestureEvent</code>
                  * that initiated the drag, the initial <code>Cursor</code>
@@ -231,7 +231,7 @@ declare namespace java {
                  *     is still executing
                  */
                 // @ts-ignore
-                startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, dragImage: java.awt.Image, dragOffset: java.awt.Point, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
+                public startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, dragImage: java.awt.Image, dragOffset: java.awt.Point, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Start a drag, given the <code>DragGestureEvent</code>
                  * that initiated the drag, the initial
@@ -255,7 +255,7 @@ declare namespace java {
                  *     is still executing
                  */
                 // @ts-ignore
-                startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
+                public startDrag(trigger: java.awt.dnd.DragGestureEvent, dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Creates the {@code DragSourceContext} to handle the current drag
                  * operation.
@@ -308,7 +308,7 @@ declare namespace java {
                  * @return the <code>FlavorMap</code> for this <code>DragSource</code>
                  */
                 // @ts-ignore
-                getFlavorMap(): java.awt.datatransfer.FlavorMap
+                public getFlavorMap(): java.awt.datatransfer.FlavorMap
                 /**
                  * Creates a new <code>DragGestureRecognizer</code>
                  * that implements the specified
@@ -330,7 +330,7 @@ declare namespace java {
                  *     subclass and returns <code>null</code>
                  */
                 // @ts-ignore
-                createDragGestureRecognizer<T extends java.awt.dnd.DragGestureRecognizer>(recognizerAbstractClass: java.lang.Class<T>, c: java.awt.Component, actions: number /*int*/, dgl: java.awt.dnd.DragGestureListener): T
+                public createDragGestureRecognizer<T extends java.awt.dnd.DragGestureRecognizer>(recognizerAbstractClass: java.lang.Class<T>, c: java.awt.Component, actions: number /*int*/, dgl: java.awt.dnd.DragGestureListener): T
                 /**
                  * Creates a new <code>DragGestureRecognizer</code>
                  * that implements the default
@@ -353,7 +353,7 @@ declare namespace java {
                  *     subclass and returns <code>null</code>
                  */
                 // @ts-ignore
-                createDefaultDragGestureRecognizer(c: java.awt.Component, actions: number /*int*/, dgl: java.awt.dnd.DragGestureListener): java.awt.dnd.DragGestureRecognizer
+                public createDefaultDragGestureRecognizer(c: java.awt.Component, actions: number /*int*/, dgl: java.awt.dnd.DragGestureListener): java.awt.dnd.DragGestureRecognizer
                 /**
                  * Adds the specified <code>DragSourceListener</code> to this
                  * <code>DragSource</code> to receive drag source events during drag
@@ -366,7 +366,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                addDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
+                public addDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Removes the specified <code>DragSourceListener</code> from this
                  * <code>DragSource</code>.
@@ -381,7 +381,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                removeDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
+                public removeDragSourceListener(dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Gets all the <code>DragSourceListener</code>s
                  * registered with this <code>DragSource</code>.
@@ -393,7 +393,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getDragSourceListeners(): java.awt.dnd.DragSourceListener[]
+                public getDragSourceListeners(): java.awt.dnd.DragSourceListener[]
                 /**
                  * Adds the specified <code>DragSourceMotionListener</code> to this
                  * <code>DragSource</code> to receive drag motion events during drag
@@ -406,7 +406,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                addDragSourceMotionListener(dsml: java.awt.dnd.DragSourceMotionListener): void
+                public addDragSourceMotionListener(dsml: java.awt.dnd.DragSourceMotionListener): void
                 /**
                  * Removes the specified <code>DragSourceMotionListener</code> from this
                  * <code>DragSource</code>.
@@ -421,7 +421,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                removeDragSourceMotionListener(dsml: java.awt.dnd.DragSourceMotionListener): void
+                public removeDragSourceMotionListener(dsml: java.awt.dnd.DragSourceMotionListener): void
                 /**
                  * Gets all of the  <code>DragSourceMotionListener</code>s
                  * registered with this <code>DragSource</code>.
@@ -433,7 +433,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getDragSourceMotionListeners(): java.awt.dnd.DragSourceMotionListener[]
+                public getDragSourceMotionListeners(): java.awt.dnd.DragSourceMotionListener[]
                 /**
                  * Gets all the objects currently registered as
                  * <code><em>Foo</em>Listener</code>s upon this <code>DragSource</code>.
@@ -454,7 +454,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
                 /**
                  * Returns the drag gesture motion threshold. The drag gesture motion threshold
                  * defines the recommended behavior for {@link MouseDragGestureRecognizer}s.
@@ -471,7 +471,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getDragThreshold(): int
+                public static getDragThreshold(): number /*int*/
             }
         }
     }

@@ -61,7 +61,7 @@ declare namespace java {
              * @return the newly decoded {#code String}
              */
             // @ts-ignore
-            decode(s: string): java.lang.String
+            public static decode(s: java.lang.String | string): string
             /**
              * Decodes a {@code application/x-www-form-urlencoded} string using a specific
              * encoding scheme.
@@ -86,7 +86,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            decode(s: string, enc: string): java.lang.String
+            public static decode(s: java.lang.String | string, enc: java.lang.String | string): string
         }
     }
 }

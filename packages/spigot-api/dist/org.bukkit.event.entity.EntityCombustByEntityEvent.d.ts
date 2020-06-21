@@ -14,7 +14,7 @@ declare namespace org {
                      * @return the Entity that set the combustee alight.
                      */
                     // @ts-ignore
-                    getCombuster(): org.bukkit.entity.Entity
+                    public getCombuster(): org.bukkit.entity.Entity
                 }
             }
         }

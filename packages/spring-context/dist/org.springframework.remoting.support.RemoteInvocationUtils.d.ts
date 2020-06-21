@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 2.0
                  */
                 // @ts-ignore
-                class RemoteInvocationUtils extends java.lang.Object {
+                abstract class RemoteInvocationUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -24,7 +24,7 @@ declare namespace org {
                      * @see Throwable#setStackTrace(StackTraceElement[])
                      */
                     // @ts-ignore
-                    fillInClientStackTraceIfPossible(ex: Error): void
+                    public static fillInClientStackTraceIfPossible(ex: java.lang.Throwable | Error): void
                 }
             }
         }

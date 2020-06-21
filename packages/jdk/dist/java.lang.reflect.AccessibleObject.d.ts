@@ -51,7 +51,7 @@ declare namespace java {
                  * @see java.lang.RuntimePermission
                  */
                 // @ts-ignore
-                setAccessible(array: java.lang.reflect.AccessibleObject[], flag: boolean): void
+                public static setAccessible(array: java.lang.reflect.AccessibleObject[], flag: boolean): void
                 /**
                  * Set the {@code accessible} flag for this object to
                  * the indicated boolean value.  A value of {@code true} indicates that
@@ -74,54 +74,54 @@ declare namespace java {
                  * @see java.lang.RuntimePermission
                  */
                 // @ts-ignore
-                setAccessible(flag: boolean): void
+                public setAccessible(flag: boolean): void
                 /**
                  * Get the value of the {@code accessible} flag for this object.
                  * @return the value of the object's {#code accessible} flag
                  */
                 // @ts-ignore
-                isAccessible(): boolean
+                public isAccessible(): boolean
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.5
                  */
                 // @ts-ignore
-                isAnnotationPresent(annotationClass: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                public isAnnotationPresent(annotationClass: java.lang.Class<any>): boolean
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * @since 1.5
                  */
                 // @ts-ignore
-                getAnnotations(): java.lang.annotation.Annotation[]
+                public getAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getDeclaredAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getDeclaredAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @since 1.8
                  */
                 // @ts-ignore
-                getDeclaredAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getDeclaredAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * @since 1.5
                  */
                 // @ts-ignore
-                getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+                public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
             }
         }
     }

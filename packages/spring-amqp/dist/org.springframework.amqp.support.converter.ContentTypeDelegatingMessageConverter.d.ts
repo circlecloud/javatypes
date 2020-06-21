@@ -29,9 +29,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor(defaultConverter: org.springframework.amqp.support.converter.MessageConverter)
                         // @ts-ignore
-                        setDelegates(delegatesByContentType: java.util.Map<java.lang.String, org.springframework.amqp.support.converter.MessageConverter>): void
+                        public setDelegates(delegatesByContentType: java.util.Map<java.lang.String | string, org.springframework.amqp.support.converter.MessageConverter>): void
                         // @ts-ignore
-                        getDelegates(): java.util.Map<java.lang.String, org.springframework.amqp.support.converter.MessageConverter>
+                        public getDelegates(): java.util.Map<java.lang.String | string, org.springframework.amqp.support.converter.MessageConverter>
                         /**
                          * Add a delegate converter for the content type.
                          * @param contentType the content type to check.
@@ -39,20 +39,20 @@ declare namespace org {
                          * @since 1.6
                          */
                         // @ts-ignore
-                        addDelegate(contentType: string, messageConverter: org.springframework.amqp.support.converter.MessageConverter): void
+                        public addDelegate(contentType: java.lang.String | string, messageConverter: org.springframework.amqp.support.converter.MessageConverter): void
                         /**
                          * Remove the delegate for the content type.
                          * @param contentType the content type key to remove {#link MessageConverter} from delegates.
                          * @return the remove {#link MessageConverter}.
                          */
                         // @ts-ignore
-                        removeDelegate(contentType: string): org.springframework.amqp.support.converter.MessageConverter
+                        public removeDelegate(contentType: java.lang.String | string): org.springframework.amqp.support.converter.MessageConverter
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                         // @ts-ignore
-                        toMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        public toMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         // @ts-ignore
-                        getConverterForContentType(contentType: string): org.springframework.amqp.support.converter.MessageConverter
+                        getConverterForContentType(contentType: java.lang.String | string): org.springframework.amqp.support.converter.MessageConverter
                     }
                 }
             }

@@ -48,7 +48,7 @@ declare namespace javax {
                  * @see java.text.DecimalFormat
                  */
                 // @ts-ignore
-                constructor(spinner: javax.swing.JSpinner, decimalFormatPattern: string)
+                constructor(spinner: javax.swing.JSpinner, decimalFormatPattern: java.lang.String | string)
                 /**
                  * Returns the <code>java.text.DecimalFormat</code> object the
                  * <code>JFormattedTextField</code> uses to parse and format
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @see java.text.DecimalFormat
                  */
                 // @ts-ignore
-                getFormat(): java.text.DecimalFormat
+                public getFormat(): java.text.DecimalFormat
                 /**
                  * Return our spinner ancestor's <code>SpinnerNumberModel</code>.
                  * @return <code>getSpinner().getModel()</code>
@@ -66,7 +66,7 @@ declare namespace javax {
                  * @see #getTextField
                  */
                 // @ts-ignore
-                getModel(): javax.swing.SpinnerNumberModel
+                public getModel(): javax.swing.SpinnerNumberModel
             }
         }
     }

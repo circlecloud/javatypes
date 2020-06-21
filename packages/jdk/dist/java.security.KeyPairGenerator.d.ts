@@ -79,7 +79,7 @@ declare namespace java {
          * @see java.security.spec.AlgorithmParameterSpec
          */
         // @ts-ignore
-        class KeyPairGenerator extends java.security.KeyPairGeneratorSpi {
+        abstract class KeyPairGenerator extends java.security.KeyPairGeneratorSpi {
             /**
              * Creates a KeyPairGenerator object for the specified algorithm.
              * @param algorithm the standard string name of the algorithm.
@@ -89,7 +89,7 @@ declare namespace java {
              *  for information about standard algorithm names.
              */
             // @ts-ignore
-            constructor(algorithm: string)
+            constructor(algorithm: java.lang.String | string)
             /**
              * Returns the standard name of the algorithm for this key pair generator.
              * See the KeyPairGenerator section in the <a href=
@@ -99,7 +99,7 @@ declare namespace java {
              * @return the standard string name of the algorithm.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns a KeyPairGenerator object that generates public/private
              * key pairs for the specified algorithm.
@@ -122,7 +122,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.KeyPairGenerator
+            public static getInstance(algorithm: java.lang.String | string): java.security.KeyPairGenerator
             /**
              * Returns a KeyPairGenerator object that generates public/private
              * key pairs for the specified algorithm.
@@ -149,7 +149,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.KeyPairGenerator
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.KeyPairGenerator
             /**
              * Returns a KeyPairGenerator object that generates public/private
              * key pairs for the specified algorithm.
@@ -172,13 +172,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.KeyPairGenerator
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.KeyPairGenerator
             /**
              * Returns the provider of this key pair generator object.
              * @return the provider of this key pair generator object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Initializes the key pair generator for a certain keysize using
              * a default parameter set and the {@code SecureRandom}
@@ -194,7 +194,7 @@ declare namespace java {
              *  supported by this KeyPairGenerator object.
              */
             // @ts-ignore
-            initialize(keysize: number /*int*/): void
+            public initialize(keysize: number /*int*/): void
             /**
              * Initializes the key pair generator for a certain keysize with
              * the given source of randomness (and a default parameter set).
@@ -207,7 +207,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            initialize(keysize: number /*int*/, random: java.security.SecureRandom): void
+            public initialize(keysize: number /*int*/, random: java.security.SecureRandom): void
             /**
              * Initializes the key pair generator using the specified parameter
              * set and the {@code SecureRandom}
@@ -233,7 +233,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            initialize(params: java.security.spec.AlgorithmParameterSpec): void
+            public initialize(params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Initializes the key pair generator with the given parameter
              * set and source of randomness.
@@ -254,7 +254,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            initialize(params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
+            public initialize(params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
             /**
              * Generates a key pair.
              * <p>If this KeyPairGenerator has not been initialized explicitly,
@@ -267,7 +267,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            genKeyPair(): java.security.KeyPair
+            public genKeyPair(): java.security.KeyPair
             /**
              * Generates a key pair.
              * <p>If this KeyPairGenerator has not been initialized explicitly,
@@ -279,7 +279,7 @@ declare namespace java {
              * @return the generated key pair
              */
             // @ts-ignore
-            generateKeyPair(): java.security.KeyPair
+            public generateKeyPair(): java.security.KeyPair
         }
     }
 }

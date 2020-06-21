@@ -13,13 +13,13 @@ declare namespace org {
                      * @return The content of this text
                      */
                     // @ts-ignore
-                    getContent(): java.lang.String
+                    public getContent(): string
                     // @ts-ignore
-                    toBuilder(): org.spongepowered.api.text.LiteralText.Builder
+                    public toBuilder(): org.spongepowered.api.text.LiteralText.Builder
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

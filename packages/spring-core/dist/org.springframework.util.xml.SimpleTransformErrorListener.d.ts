@@ -18,11 +18,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(logger: Log)
                     // @ts-ignore
-                    warning(ex: javax.xml.transform.TransformerException): void
+                    public warning(ex: javax.xml.transform.TransformerException): void
                     // @ts-ignore
-                    error(ex: javax.xml.transform.TransformerException): void
+                    public error(ex: javax.xml.transform.TransformerException): void
                     // @ts-ignore
-                    fatalError(ex: javax.xml.transform.TransformerException): void
+                    public fatalError(ex: javax.xml.transform.TransformerException): void
                 }
             }
         }

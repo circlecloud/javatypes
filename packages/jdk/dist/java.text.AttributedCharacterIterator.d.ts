@@ -46,7 +46,7 @@ declare namespace java {
              * @return the index of the first character of the run
              */
             // @ts-ignore
-            getRunStart(): int
+            getRunStart(): number /*int*/
             /**
              * Returns the index of the first character of the run
              * with respect to the given {@code attribute} containing the current character.
@@ -54,7 +54,7 @@ declare namespace java {
              * @return the index of the first character of the run
              */
             // @ts-ignore
-            getRunStart(attribute: java.text.AttributedCharacterIterator.Attribute): int
+            getRunStart(attribute: java.text.AttributedCharacterIterator.Attribute): number /*int*/
             /**
              * Returns the index of the first character of the run
              * with respect to the given {@code attributes} containing the current character.
@@ -62,7 +62,7 @@ declare namespace java {
              * @return the index of the first character of the run
              */
             // @ts-ignore
-            getRunStart(attributes: Array<java.text.AttributedCharacterIterator.Attribute>): int
+            getRunStart(attributes: java.util.Set<any> | Array<any>): number /*int*/
             /**
              * Returns the index of the first character following the run
              * with respect to all attributes containing the current character.
@@ -72,7 +72,7 @@ declare namespace java {
              * @return the index of the first character following the run
              */
             // @ts-ignore
-            getRunLimit(): int
+            getRunLimit(): number /*int*/
             /**
              * Returns the index of the first character following the run
              * with respect to the given {@code attribute} containing the current character.
@@ -80,7 +80,7 @@ declare namespace java {
              * @return the index of the first character following the run
              */
             // @ts-ignore
-            getRunLimit(attribute: java.text.AttributedCharacterIterator.Attribute): int
+            getRunLimit(attribute: java.text.AttributedCharacterIterator.Attribute): number /*int*/
             /**
              * Returns the index of the first character following the run
              * with respect to the given {@code attributes} containing the current character.
@@ -88,14 +88,14 @@ declare namespace java {
              * @return the index of the first character following the run
              */
             // @ts-ignore
-            getRunLimit(attributes: Array<java.text.AttributedCharacterIterator.Attribute>): int
+            getRunLimit(attributes: java.util.Set<any> | Array<any>): number /*int*/
             /**
              * Returns a map with the attributes defined on the current
              * character.
              * @return a map with the attributes defined on the current character
              */
             // @ts-ignore
-            getAttributes(): java.util.Map<java.text.AttributedCharacterIterator.Attribute, java.lang.Object>
+            getAttributes(): java.util.Map<java.text.AttributedCharacterIterator.Attribute, java.lang.Object | any>
             /**
              * Returns the value of the named {@code attribute} for the current character.
              * Returns {@code null} if the {@code attribute} is not defined.
@@ -103,7 +103,7 @@ declare namespace java {
              * @return the value of the named {#code attribute} or {@code null}
              */
             // @ts-ignore
-            getAttribute(attribute: java.text.AttributedCharacterIterator.Attribute): java.lang.Object
+            getAttribute(attribute: java.text.AttributedCharacterIterator.Attribute): any
             /**
              * Returns the keys of all attributes defined on the
              * iterator's text range. The set is empty if no
@@ -111,7 +111,7 @@ declare namespace java {
              * @return the keys of all attributes
              */
             // @ts-ignore
-            getAllAttributeKeys(): java.util.Set<java.text.AttributedCharacterIterator.Attribute>
+            getAllAttributeKeys(): Array<java.text.AttributedCharacterIterator.Attribute>
         }
     }
 }

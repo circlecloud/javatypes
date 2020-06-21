@@ -36,26 +36,26 @@ declare namespace org {
                      * Wildcard representing <em>all</em> origins, methods, or headers.
                      */
                     // @ts-ignore
-                    readonly ALL: string
+                    public static readonly ALL: java.lang.String | string
                     /**
                      * Set the origins to allow, e.g. {@code "https://domain1.com"}.
                      * <p>The special value {@code "*"} allows all domains.
                      * <p>By default this is not set.
                      */
                     // @ts-ignore
-                    setAllowedOrigins(allowedOrigins: Array<java.lang.String>): void
+                    public setAllowedOrigins(allowedOrigins: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Return the configured origins to allow, or {@code null} if none.
                      * @see #addAllowedOrigin(String)
                      * @see #setAllowedOrigins(List)
                      */
                     // @ts-ignore
-                    getAllowedOrigins(): java.util.List<java.lang.String>
+                    public getAllowedOrigins(): Array<java.lang.String | string>
                     /**
                      * Add an origin to allow.
                      */
                     // @ts-ignore
-                    addAllowedOrigin(origin: string): void
+                    public addAllowedOrigin(origin: java.lang.String | string): void
                     /**
                      * Set the HTTP methods to allow, e.g. {@code "GET"}, {@code "POST"},
                      * {@code "PUT"}, etc.
@@ -71,7 +71,7 @@ declare namespace org {
                      * See the Spring Framework reference for more on this filter.
                      */
                     // @ts-ignore
-                    setAllowedMethods(allowedMethods: Array<java.lang.String>): void
+                    public setAllowedMethods(allowedMethods: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Return the allowed HTTP methods, or {@code null} in which case
                      * only {@code "GET"} and {@code "HEAD"} allowed.
@@ -80,17 +80,17 @@ declare namespace org {
                      * @see #setAllowedMethods(List)
                      */
                     // @ts-ignore
-                    getAllowedMethods(): java.util.List<java.lang.String>
+                    public getAllowedMethods(): Array<java.lang.String | string>
                     /**
                      * Add an HTTP method to allow.
                      */
                     // @ts-ignore
-                    addAllowedMethod(method: org.springframework.http.HttpMethod): void
+                    public addAllowedMethod(method: org.springframework.http.HttpMethod): void
                     /**
                      * Add an HTTP method to allow.
                      */
                     // @ts-ignore
-                    addAllowedMethod(method: string): void
+                    public addAllowedMethod(method: java.lang.String | string): void
                     /**
                      * Set the list of headers that a pre-flight request can list as allowed
                      * for use during an actual request.
@@ -102,19 +102,19 @@ declare namespace org {
                      * <p>By default this is not set.
                      */
                     // @ts-ignore
-                    setAllowedHeaders(allowedHeaders: Array<java.lang.String>): void
+                    public setAllowedHeaders(allowedHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Return the allowed actual request headers, or {@code null} if none.
                      * @see #addAllowedHeader(String)
                      * @see #setAllowedHeaders(List)
                      */
                     // @ts-ignore
-                    getAllowedHeaders(): java.util.List<java.lang.String>
+                    public getAllowedHeaders(): Array<java.lang.String | string>
                     /**
                      * Add an actual request header to allow.
                      */
                     // @ts-ignore
-                    addAllowedHeader(allowedHeader: string): void
+                    public addAllowedHeader(allowedHeader: java.lang.String | string): void
                     /**
                      * Set the list of response headers other than simple headers (i.e.
                      * {@code Cache-Control}, {@code Content-Language}, {@code Content-Type},
@@ -124,32 +124,32 @@ declare namespace org {
                      * <p>By default this is not set.
                      */
                     // @ts-ignore
-                    setExposedHeaders(exposedHeaders: Array<java.lang.String>): void
+                    public setExposedHeaders(exposedHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Return the configured response headers to expose, or {@code null} if none.
                      * @see #addExposedHeader(String)
                      * @see #setExposedHeaders(List)
                      */
                     // @ts-ignore
-                    getExposedHeaders(): java.util.List<java.lang.String>
+                    public getExposedHeaders(): Array<java.lang.String | string>
                     /**
                      * Add a response header to expose.
                      * <p>Note that {@code "*"} is not a valid exposed header value.
                      */
                     // @ts-ignore
-                    addExposedHeader(exposedHeader: string): void
+                    public addExposedHeader(exposedHeader: java.lang.String | string): void
                     /**
                      * Whether user credentials are supported.
                      * <p>By default this is not set (i.e. user credentials are not supported).
                      */
                     // @ts-ignore
-                    setAllowCredentials(allowCredentials: java.lang.Boolean): void
+                    public setAllowCredentials(allowCredentials: java.lang.Boolean): void
                     /**
                      * Return the configured {@code allowCredentials} flag, or {@code null} if none.
                      * @see #setAllowCredentials(Boolean)
                      */
                     // @ts-ignore
-                    getAllowCredentials(): java.lang.Boolean
+                    public getAllowCredentials(): java.lang.Boolean
                     /**
                      * Configure how long, as a duration, the response from a pre-flight request
                      * can be cached by clients.
@@ -157,20 +157,20 @@ declare namespace org {
                      * @see #setMaxAge(Long)
                      */
                     // @ts-ignore
-                    setMaxAge(maxAge: java.time.Duration): void
+                    public setMaxAge(maxAge: java.time.Duration): void
                     /**
                      * Configure how long, in seconds, the response from a pre-flight request
                      * can be cached by clients.
                      * <p>By default this is not set.
                      */
                     // @ts-ignore
-                    setMaxAge(maxAge: number): void
+                    public setMaxAge(maxAge: java.lang.Long | number): void
                     /**
                      * Return the configured {@code maxAge} value, or {@code null} if none.
                      * @see #setMaxAge(Long)
                      */
                     // @ts-ignore
-                    getMaxAge(): java.lang.Long
+                    public getMaxAge(): number
                     /**
                      * By default a newly created {@code CorsConfiguration} does not permit any
                      * cross-origin requests and must be configured explicitly to indicate what
@@ -188,7 +188,7 @@ declare namespace org {
                      * </ul>
                      */
                     // @ts-ignore
-                    applyPermitDefaultValues(): org.springframework.web.cors.CorsConfiguration
+                    public applyPermitDefaultValues(): org.springframework.web.cors.CorsConfiguration
                     /**
                      * Combine the non-null properties of the supplied
                      * {@code CorsConfiguration} with this one.
@@ -208,7 +208,7 @@ declare namespace org {
                      *  configuration if the supplied configuration is {@code null}
                      */
                     // @ts-ignore
-                    combine(other: org.springframework.web.cors.CorsConfiguration): org.springframework.web.cors.CorsConfiguration
+                    public combine(other: org.springframework.web.cors.CorsConfiguration): org.springframework.web.cors.CorsConfiguration
                     /**
                      * Check the origin of the request against the configured allowed origins.
                      * @param requestOrigin the origin to check
@@ -216,7 +216,7 @@ declare namespace org {
                      *  means the request origin is not allowed
                      */
                     // @ts-ignore
-                    checkOrigin(requestOrigin: string): java.lang.String
+                    public checkOrigin(requestOrigin: java.lang.String | string): string
                     /**
                      * Check the HTTP request method (or the method from the
                      * {@code Access-Control-Request-Method} header on a pre-flight request)
@@ -226,7 +226,7 @@ declare namespace org {
                      *  request, or {#code null} if the supplied {@code requestMethod} is not allowed
                      */
                     // @ts-ignore
-                    checkHttpMethod(requestMethod: org.springframework.http.HttpMethod): java.util.List<org.springframework.http.HttpMethod>
+                    public checkHttpMethod(requestMethod: org.springframework.http.HttpMethod): Array<org.springframework.http.HttpMethod>
                     /**
                      * Check the supplied request headers (or the headers listed in the
                      * {@code Access-Control-Request-Headers} of a pre-flight request) against
@@ -236,7 +236,7 @@ declare namespace org {
                      *  request, or {#code null} if none of the supplied request headers is allowed
                      */
                     // @ts-ignore
-                    checkHeaders(requestHeaders: Array<java.lang.String>): java.util.List<java.lang.String>
+                    public checkHeaders(requestHeaders: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): Array<java.lang.String | string>
                 }
             }
         }

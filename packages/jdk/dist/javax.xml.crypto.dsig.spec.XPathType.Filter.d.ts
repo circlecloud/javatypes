@@ -13,23 +13,23 @@ declare namespace javax {
                              * The intersect filter operation.
                              */
                             // @ts-ignore
-                            readonly INTERSECT: javax.xml.crypto.dsig.spec.XPathType.Filter
+                            public static readonly INTERSECT: javax.xml.crypto.dsig.spec.XPathType.Filter
                             /**
                              * The subtract filter operation.
                              */
                             // @ts-ignore
-                            readonly SUBTRACT: javax.xml.crypto.dsig.spec.XPathType.Filter
+                            public static readonly SUBTRACT: javax.xml.crypto.dsig.spec.XPathType.Filter
                             /**
                              * The union filter operation.
                              */
                             // @ts-ignore
-                            readonly UNION: javax.xml.crypto.dsig.spec.XPathType.Filter
+                            public static readonly UNION: javax.xml.crypto.dsig.spec.XPathType.Filter
                             /**
                              * Returns the string form of the operation.
                              * @return the string form of the operation
                              */
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

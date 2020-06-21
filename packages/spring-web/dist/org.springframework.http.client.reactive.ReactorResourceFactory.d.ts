@@ -26,13 +26,13 @@ declare namespace org {
                          * @see #addGlobalResourcesConsumer(Consumer)
                          */
                         // @ts-ignore
-                        setUseGlobalResources(useGlobalResources: boolean): void
+                        public setUseGlobalResources(useGlobalResources: boolean): void
                         /**
                          * Whether this factory exposes the global
                          * {@link reactor.netty.http.HttpResources HttpResources} holder.
                          */
                         // @ts-ignore
-                        isUseGlobalResources(): boolean
+                        public isUseGlobalResources(): boolean
                         /**
                          * Add a Consumer for configuring the global Reactor Netty resources on
                          * startup. When this option is used, {@link #setUseGlobalResources} is also
@@ -41,7 +41,7 @@ declare namespace org {
                          * @see #setUseGlobalResources(boolean)
                          */
                         // @ts-ignore
-                        addGlobalResourcesConsumer(consumer: java.util.function.Consumer<HttpResources> | java.util.function$.Consumer<HttpResources>): void
+                        public addGlobalResourcesConsumer(consumer: java.util.function$.Consumer<HttpResources>): void
                         /**
                          * Use this when you don't want to participate in global resources and
                          * you want to customize the creation of the managed {@code ConnectionProvider}.
@@ -51,19 +51,19 @@ declare namespace org {
                          * @param supplier the supplier to use
                          */
                         // @ts-ignore
-                        setConnectionProviderSupplier(supplier: java.util.function.Supplier<ConnectionProvider> | java.util.function$.Supplier<ConnectionProvider>): void
+                        public setConnectionProviderSupplier(supplier: java.util.function$.Supplier<ConnectionProvider>): void
                         /**
                          * Use this when you want to provide an externally managed
                          * {@link ConnectionProvider} instance.
                          * @param connectionProvider the connection provider to use as is
                          */
                         // @ts-ignore
-                        setConnectionProvider(connectionProvider: ConnectionProvider): void
+                        public setConnectionProvider(connectionProvider: ConnectionProvider): void
                         /**
                          * Return the configured {@link ConnectionProvider}.
                          */
                         // @ts-ignore
-                        getConnectionProvider(): ConnectionProvider
+                        public getConnectionProvider(): ConnectionProvider
                         /**
                          * Use this when you don't want to participate in global resources and
                          * you want to customize the creation of the managed {@code LoopResources}.
@@ -73,19 +73,19 @@ declare namespace org {
                          * @param supplier the supplier to use
                          */
                         // @ts-ignore
-                        setLoopResourcesSupplier(supplier: java.util.function.Supplier<LoopResources> | java.util.function$.Supplier<LoopResources>): void
+                        public setLoopResourcesSupplier(supplier: java.util.function$.Supplier<LoopResources>): void
                         /**
                          * Use this option when you want to provide an externally managed
                          * {@link LoopResources} instance.
                          * @param loopResources the loop resources to use as is
                          */
                         // @ts-ignore
-                        setLoopResources(loopResources: LoopResources): void
+                        public setLoopResources(loopResources: LoopResources): void
                         /**
                          * Return the configured {@link LoopResources}.
                          */
                         // @ts-ignore
-                        getLoopResources(): LoopResources
+                        public getLoopResources(): LoopResources
                         /**
                          * Configure the amount of time we'll wait before shutting down resources.
                          * If a task is submitted during the {@code shutdownQuietPeriod}, it is guaranteed
@@ -99,7 +99,7 @@ declare namespace org {
                          * @see #setShutdownTimeout(Duration)
                          */
                         // @ts-ignore
-                        setShutdownQuietPeriod(shutdownQuietPeriod: java.time.Duration): void
+                        public setShutdownQuietPeriod(shutdownQuietPeriod: java.time.Duration): void
                         /**
                          * Configure the maximum amount of time to wait until the disposal of the
                          * underlying resources regardless if a task was submitted during the
@@ -113,11 +113,11 @@ declare namespace org {
                          * @see #setShutdownQuietPeriod(Duration)
                          */
                         // @ts-ignore
-                        setShutdownTimeout(shutdownTimeout: java.time.Duration): void
+                        public setShutdownTimeout(shutdownTimeout: java.time.Duration): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        destroy(): void
+                        public destroy(): void
                     }
                 }
             }

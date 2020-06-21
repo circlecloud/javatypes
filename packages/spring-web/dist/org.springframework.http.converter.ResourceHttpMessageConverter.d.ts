@@ -32,11 +32,11 @@ declare namespace org {
                     // @ts-ignore
                     supports(clazz: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    readInternal(clazz: java.lang.Class<Resource>, inputMessage: org.springframework.http.HttpInputMessage): Resource
+                    readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): Resource
                     // @ts-ignore
                     getDefaultContentType(resource: Resource): org.springframework.http.MediaType
                     // @ts-ignore
-                    getContentLength(resource: Resource, contentType: org.springframework.http.MediaType): java.lang.Long
+                    getContentLength(resource: Resource, contentType: org.springframework.http.MediaType): number
                     // @ts-ignore
                     writeInternal(resource: Resource, outputMessage: org.springframework.http.HttpOutputMessage): void
                     // @ts-ignore

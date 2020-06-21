@@ -11,9 +11,9 @@ declare namespace javax {
                      * methods may have inconsistent behavior, or return the wrong thing.
                      */
                     // @ts-ignore
-                    class HTMLTextAction extends javax.swing.text.StyledEditorKit.StyledTextAction {
+                    abstract class HTMLTextAction extends javax.swing.text.StyledEditorKit.StyledTextAction {
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                         /**
                          * @return HTMLDocument of <code>e</code>.
                          */
@@ -38,7 +38,7 @@ declare namespace javax {
                          * <code>tag</code>.
                          */
                         // @ts-ignore
-                        elementCountToTag(doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, tag: javax.swing.text.html.HTML.Tag): int
+                        elementCountToTag(doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, tag: javax.swing.text.html.HTML.Tag): number /*int*/
                         /**
                          * Returns the deepest element at <code>offset</code> matching
                          * <code>tag</code>.

@@ -24,15 +24,15 @@ declare namespace org {
                          * Set the name of the ServletContext init parameter to expose.
                          */
                         // @ts-ignore
-                        setInitParamName(initParamName: string): void
+                        public setInitParamName(initParamName: java.lang.String | string): void
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                         // @ts-ignore
-                        getObject(): java.lang.String
+                        public getObject(): string
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<java.lang.String>
+                        public getObjectType(): java.lang.Class<java.lang.String | string>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

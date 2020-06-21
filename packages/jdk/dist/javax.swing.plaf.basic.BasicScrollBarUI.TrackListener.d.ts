@@ -17,7 +17,7 @@ declare namespace javax {
                         // @ts-ignore
                         currentMouseY: number /*int*/
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                         /**
                          * If the mouse is pressed above the "thumb" component
                          * then reduce the scrollbars value by one page ("page up"),
@@ -26,7 +26,7 @@ declare namespace javax {
                          * of the track.
                          */
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         /**
                          * Set the models value to the position of the thumb's top of Vertical
                          * scrollbar, or the left/right of Horizontal scrollbar in
@@ -34,16 +34,16 @@ declare namespace javax {
                          * track.
                          */
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when the mouse exits the scrollbar.
                          * @param e MouseEvent further describing the event
                          * @since 1.5
                          */
                         // @ts-ignore
-                        mouseExited(e: java.awt.event.MouseEvent): void
+                        public mouseExited(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

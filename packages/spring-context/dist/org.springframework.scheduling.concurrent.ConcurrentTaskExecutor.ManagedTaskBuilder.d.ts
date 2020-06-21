@@ -13,9 +13,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        buildManagedTask(task: java.lang.Runnable, identityName: string): java.lang.Runnable
+                        public static buildManagedTask(task: java.lang.Runnable, identityName: java.lang.String | string): java.lang.Runnable
                         // @ts-ignore
-                        buildManagedTask<T>(task: java.util.concurrent.Callable<T>, identityName: string): java.util.concurrent.Callable<T>
+                        public static buildManagedTask<T>(task: java.util.concurrent.Callable<T>, identityName: java.lang.String | string): java.util.concurrent.Callable<T>
                     }
                 }
             }

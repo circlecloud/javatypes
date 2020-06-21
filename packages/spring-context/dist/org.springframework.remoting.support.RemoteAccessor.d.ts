@@ -18,7 +18,7 @@ declare namespace org {
                  * @see java.rmi.RemoteException
                  */
                 // @ts-ignore
-                class RemoteAccessor extends org.springframework.remoting.support.RemotingSupport {
+                abstract class RemoteAccessor extends org.springframework.remoting.support.RemotingSupport {
                     // @ts-ignore
                     constructor()
                     /**
@@ -28,12 +28,12 @@ declare namespace org {
                      * but can also be optional if the lookup returns a typed proxy.
                      */
                     // @ts-ignore
-                    setServiceInterface(serviceInterface: java.lang.Class<any>): void
+                    public setServiceInterface(serviceInterface: java.lang.Class<any>): void
                     /**
                      * Return the interface of the service to access.
                      */
                     // @ts-ignore
-                    getServiceInterface(): java.lang.Class<?>
+                    public getServiceInterface(): java.lang.Class<any>
                 }
             }
         }

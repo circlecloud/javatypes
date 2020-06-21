@@ -32,9 +32,9 @@ declare namespace org {
                      * or {@link org.springframework.core.convert.converter.GenericConverter}.
                      */
                     // @ts-ignore
-                    setConverters(converters: Array<any>): void
+                    public setConverters(converters: java.util.Set<any> | Array<any>): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Create the ConversionService instance returned by this factory bean.
                      * <p>Creates a simple {@link GenericConversionService} instance by default.
@@ -44,11 +44,11 @@ declare namespace org {
                     // @ts-ignore
                     createConversionService(): GenericConversionService
                     // @ts-ignore
-                    getObject(): ConversionService
+                    public getObject(): ConversionService
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends ConversionService>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

@@ -16,7 +16,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        createPropertySource(name: string, resource: org.springframework.core.io.support.EncodedResource): org.springframework.core.env.PropertySource<?>
+                        public createPropertySource(name: java.lang.String | string, resource: org.springframework.core.io.support.EncodedResource): org.springframework.core.env.PropertySource<any>
                     }
                 }
             }

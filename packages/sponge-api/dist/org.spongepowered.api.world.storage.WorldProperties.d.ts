@@ -19,7 +19,7 @@ declare namespace org {
                          * @return The name
                          */
                         // @ts-ignore
-                        getWorldName(): java.lang.String
+                        getWorldName(): string
                         /**
                          * Gets the {@link UUID} of the world.
                          * @return The unique Id
@@ -110,7 +110,7 @@ declare namespace org {
                          * @return The seed
                          */
                         // @ts-ignore
-                        getSeed(): long
+                        getSeed(): number /*long*/
                         /**
                          * Sets the seed of this world.
                          * <p>Warning: this may cause the edge of currently generated chunks to no
@@ -124,7 +124,7 @@ declare namespace org {
                          * @return The total time in ticks
                          */
                         // @ts-ignore
-                        getTotalTime(): long
+                        getTotalTime(): number /*long*/
                         /**
                          * Gets the time of day, in ticks. The total number of ticks in a day is
                          * 24000, however this value does not reset to zero at the start of each day
@@ -132,7 +132,7 @@ declare namespace org {
                          * @return The time of day
                          */
                         // @ts-ignore
-                        getWorldTime(): long
+                        getWorldTime(): number /*long*/
                         /**
                          * Sets the time of day, in ticks. The total number of ticks in a day is
                          * 24000, however this value does not reset to zero at the start of each day
@@ -185,7 +185,7 @@ declare namespace org {
                          * @return The time until the weather changes
                          */
                         // @ts-ignore
-                        getRainTime(): int
+                        getRainTime(): number /*int*/
                         /**
                          * Sets the number of ticks until the weather is next toggled to a new
                          * random value.
@@ -211,7 +211,7 @@ declare namespace org {
                          * @return The time until the thundering state changes
                          */
                         // @ts-ignore
-                        getThunderTime(): int
+                        getThunderTime(): number /*int*/
                         /**
                          * Sets the number of ticks until the {@link #isThundering()} state is
                          * toggled to a new random value.
@@ -314,7 +314,7 @@ declare namespace org {
                          * @return The diameter
                          */
                         // @ts-ignore
-                        getWorldBorderDiameter(): double
+                        getWorldBorderDiameter(): number /*double*/
                         /**
                          * Sets the diameter of the world border.
                          * <p>The specified diameter applies to the x and z axis. The world border
@@ -329,7 +329,7 @@ declare namespace org {
                          * @return The time remaining, in milliseconds
                          */
                         // @ts-ignore
-                        getWorldBorderTimeRemaining(): long
+                        getWorldBorderTimeRemaining(): number /*long*/
                         /**
                          * Sets the time remaining until the world border stops expanding or
                          * contracting.
@@ -344,7 +344,7 @@ declare namespace org {
                          * @return The diameter being changed to
                          */
                         // @ts-ignore
-                        getWorldBorderTargetDiameter(): double
+                        getWorldBorderTargetDiameter(): number /*double*/
                         /**
                          * Sets the target diameter of the world border.
                          * <p>The world border diameter increases/decrease linearly over time
@@ -361,7 +361,7 @@ declare namespace org {
                          * @return The distance
                          */
                         // @ts-ignore
-                        getWorldBorderDamageThreshold(): double
+                        getWorldBorderDamageThreshold(): number /*double*/
                         /**
                          * Sets the distance a player may be be outside the world border before
                          * taking damage.
@@ -375,7 +375,7 @@ declare namespace org {
                          * @return The damage amount
                          */
                         // @ts-ignore
-                        getWorldBorderDamageAmount(): double
+                        getWorldBorderDamageAmount(): number /*double*/
                         /**
                          * Sets the damage done to a player per block per tick when outside the
                          * buffer.
@@ -391,7 +391,7 @@ declare namespace org {
                          * @return The time, in seconds
                          */
                         // @ts-ignore
-                        getWorldBorderWarningTime(): int
+                        getWorldBorderWarningTime(): number /*int*/
                         /**
                          * Sets the time when a contracting world border will warn a player for whom
                          * the world border will reach in {@code time} seconds.
@@ -409,7 +409,7 @@ declare namespace org {
                          * @return The distance, in blocks
                          */
                         // @ts-ignore
-                        getWorldBorderWarningDistance(): int
+                        getWorldBorderWarningDistance(): number /*int*/
                         /**
                          * Sets the distance when a contracting world border will warn a player for
                          * whom the world border is {@code distance} blocks away.
@@ -425,13 +425,13 @@ declare namespace org {
                          * @return The GameRule value, if it exists.
                          */
                         // @ts-ignore
-                        getGameRule(gameRule: string): java.util.Optional<java.lang.String>
+                        getGameRule(gameRule: java.lang.String | string): java.util.Optional<java.lang.String | string>
                         /**
                          * Gets a map of the currently set game rules and their values.
                          * @return An immutable map of the game rules
                          */
                         // @ts-ignore
-                        getGameRules(): java.util.Map<java.lang.String, java.lang.String>
+                        getGameRules(): java.util.Map<java.lang.String | string, java.lang.String | string>
                         /**
                          * Sets the specified GameRule value. If one with this name does not exist,
                          * it will be created.
@@ -439,14 +439,14 @@ declare namespace org {
                          * @param value The value to set the GameRule to.
                          */
                         // @ts-ignore
-                        setGameRule(gameRule: string, value: string): void
+                        setGameRule(gameRule: java.lang.String | string, value: java.lang.String | string): void
                         /**
                          * Removes custom GameRule.
                          * @param gameRule The name of the GameRule.
                          * @return True if GameRule was deleted, false if not
                          */
                         // @ts-ignore
-                        removeGameRule(gameRule: string): boolean
+                        removeGameRule(gameRule: java.lang.String | string): boolean
                         /**
                          * Gets a {@link DataContainer} containing any additional properties for
                          * this world. The returned data is a snapshot of the data and is not live.
@@ -478,7 +478,7 @@ declare namespace org {
                          * @return The world generator modifiers in use.
                          */
                         // @ts-ignore
-                        getGeneratorModifiers(): java.util.Collection<org.spongepowered.api.world.gen.WorldGeneratorModifier>
+                        getGeneratorModifiers(): Array<org.spongepowered.api.world.gen.WorldGeneratorModifier>
                         /**
                          * Sets the given world generator modifiers to be used.
                          * @param modifiers The modifiers to set.
@@ -486,7 +486,7 @@ declare namespace org {
                          *          registered in the {#link GameRegistry}.
                          */
                         // @ts-ignore
-                        setGeneratorModifiers(modifiers: Array<org.spongepowered.api.world.gen.WorldGeneratorModifier>): void
+                        setGeneratorModifiers(modifiers: java.util.Collection<org.spongepowered.api.world.gen.WorldGeneratorModifier> | Array<org.spongepowered.api.world.gen.WorldGeneratorModifier>): void
                         /**
                          * Gets the generator settings. These can be used by the generator type
                          * and/or by the generator modifiers.

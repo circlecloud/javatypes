@@ -16,7 +16,7 @@ declare namespace org {
                      * @see HttpHeaders#add(String, String)
                      */
                     // @ts-ignore
-                    header(headerName: string, ...headerValues: string[]): B
+                    header(headerName: java.lang.String | string, ...headerValues: java.lang.String[] | string[]): B
                     /**
                      * Copy the given headers into the entity's headers map.
                      * @param headers the existing HttpHeaders to copy from
@@ -37,7 +37,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    headers(headersConsumer: java.util.function.Consumer<org.springframework.http.HttpHeaders> | java.util.function$.Consumer<org.springframework.http.HttpHeaders>): B
+                    headers(headersConsumer: java.util.function$.Consumer<org.springframework.http.HttpHeaders>): B
                     /**
                      * Set the list of acceptable {@linkplain MediaType media types}, as
                      * specified by the {@code Accept} header.
@@ -79,7 +79,7 @@ declare namespace org {
                      * @param ifNoneMatches the new value of the header
                      */
                     // @ts-ignore
-                    ifNoneMatch(...ifNoneMatches: string[]): B
+                    ifNoneMatch(...ifNoneMatches: java.lang.String[] | string[]): B
                     /**
                      * Builds the request entity with no body.
                      * @return the request entity

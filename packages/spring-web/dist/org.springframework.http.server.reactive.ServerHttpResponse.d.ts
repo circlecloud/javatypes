@@ -38,7 +38,7 @@ declare namespace org {
                          * @since 5.2.4
                          */
                         // @ts-ignore
-                        setRawStatusCode(value: number): boolean
+                        setRawStatusCode(value: java.lang.Integer | number): boolean
                         /**
                          * Return the status code that has been set, or otherwise fall back on the
                          * status of the response from the underlying server. The return value may
@@ -46,12 +46,12 @@ declare namespace org {
                          * @since 5.2.4
                          */
                         // @ts-ignore
-                        getRawStatusCode(): java.lang.Integer
+                        getRawStatusCode(): number
                         /**
                          * Return a mutable map with the cookies to send to the server.
                          */
                         // @ts-ignore
-                        getCookies(): <any>
+                        getCookies(): object
                         /**
                          * Add the given {@code ResponseCookie}.
                          * @param cookie the cookie to add

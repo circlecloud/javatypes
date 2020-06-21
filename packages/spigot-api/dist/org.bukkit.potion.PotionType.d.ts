@@ -8,9 +8,51 @@ declare namespace org {
             // @ts-ignore
             class PotionType extends java.lang.Enum<org.bukkit.potion.PotionType> {
                 // @ts-ignore
+                readonly UNCRAFTABLE: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly WATER: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly MUNDANE: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly THICK: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly AWKWARD: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly NIGHT_VISION: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly INVISIBILITY: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly JUMP: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly FIRE_RESISTANCE: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly SPEED: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly SLOWNESS: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly WATER_BREATHING: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly INSTANT_HEAL: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly INSTANT_DAMAGE: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly POISON: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly REGEN: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly STRENGTH: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly WEAKNESS: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly LUCK: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly TURTLE_MASTER: org.bukkit.potion.PotionType
+                // @ts-ignore
+                readonly SLOW_FALLING: org.bukkit.potion.PotionType
+                // @ts-ignore
                 values(): org.bukkit.potion.PotionType[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.potion.PotionType
+                valueOf(name: java.lang.String | string): org.bukkit.potion.PotionType
                 // @ts-ignore
                 getEffectType(): org.bukkit.potion.PotionEffectType
                 // @ts-ignore
@@ -31,7 +73,7 @@ declare namespace org {
                 // @ts-ignore
                 isExtendable(): boolean
                 // @ts-ignore
-                getMaxLevel(): int
+                getMaxLevel(): number /*int*/
                 /**
                  * @param effectType the effect to get by
                  * @return the matching potion type

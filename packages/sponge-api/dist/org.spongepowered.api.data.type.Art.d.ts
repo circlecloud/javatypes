@@ -13,13 +13,13 @@ declare namespace org {
                          * @return The height in blocks
                          */
                         // @ts-ignore
-                        getHeight(): int
+                        getHeight(): number /*int*/
                         /**
                          * Gets the width in blocks this art piece spans.
                          * @return The width in blocks
                          */
                         // @ts-ignore
-                        getWidth(): int
+                        getWidth(): number /*int*/
                     }
                 }
             }

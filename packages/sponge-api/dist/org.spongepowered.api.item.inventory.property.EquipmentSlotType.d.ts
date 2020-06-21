@@ -9,7 +9,7 @@ declare namespace org {
                          * equipment slot type.
                          */
                         // @ts-ignore
-                        class EquipmentSlotType extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, org.spongepowered.api.item.inventory.equipment.EquipmentType> {
+                        class EquipmentSlotType extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, org.spongepowered.api.item.inventory.equipment.EquipmentType> {
                             /**
                              * Create a new EquipmentSlotType property to match items of the specified
                              * value.
@@ -34,9 +34,9 @@ declare namespace org {
                              *       properties
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                             /**
                              * Create an EquipmentSlotType property which matches EquipmentSlotType
                              * properties with equal value.
@@ -44,7 +44,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(value: any): org.spongepowered.api.item.inventory.property.EquipmentSlotType
+                            public static of(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.EquipmentSlotType
                             /**
                              * Create an EquipmentSlotType property which matches EquipmentSlotType
                              * properties with unequal value.
@@ -52,7 +52,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            not(value: any): org.spongepowered.api.item.inventory.property.EquipmentSlotType
+                            public static not(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.EquipmentSlotType
                         }
                     }
                 }

@@ -308,7 +308,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlType implements java.lang.annotation.Annotation {
+                abstract class XmlType implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -12,22 +12,22 @@ declare namespace org {
                          * regeneration from a golden apple, etc.</p>
                          */
                         // @ts-ignore
-                        class ApplicableEffectProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, java.util.Set<org.spongepowered.api.effect.potion.PotionEffect>> {
+                        class ApplicableEffectProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, java.util.Set<org.spongepowered.api.effect.potion.PotionEffect> | Array<org.spongepowered.api.effect.potion.PotionEffect>> {
                             /**
                              * Creates a {@link ApplicableEffectProperty} with a specific set of {@link PotionEffect}s.
                              * @param value The potion effects
                              */
                             // @ts-ignore
-                            constructor(value: Array<org.spongepowered.api.effect.potion.PotionEffect>)
+                            constructor(value: java.util.Set<org.spongepowered.api.effect.potion.PotionEffect> | Array<org.spongepowered.api.effect.potion.PotionEffect>)
                             /**
                              * Creates a {@link ApplicableEffectProperty} with a specific set of {@link PotionEffect}s.
                              * @param value The potion effects
                              * @param op The operator to use when comparing against other properties
                              */
                             // @ts-ignore
-                            constructor(value: Array<org.spongepowered.api.effect.potion.PotionEffect>, op: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.util.Set<org.spongepowered.api.effect.potion.PotionEffect> | Array<org.spongepowered.api.effect.potion.PotionEffect>, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

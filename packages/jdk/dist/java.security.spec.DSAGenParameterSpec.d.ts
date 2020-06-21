@@ -43,20 +43,20 @@ declare namespace java {
                  * @return the length of the prime P.
                  */
                 // @ts-ignore
-                getPrimePLength(): int
+                public getPrimePLength(): number /*int*/
                 /**
                  * Returns the desired length of the sub-prime Q of the
                  * to-be-generated DSA domain parameters in bits.
                  * @return the length of the sub-prime Q.
                  */
                 // @ts-ignore
-                getSubprimeQLength(): int
+                public getSubprimeQLength(): number /*int*/
                 /**
                  * Returns the desired length of the domain parameter seed in bits.
                  * @return the length of the domain parameter seed.
                  */
                 // @ts-ignore
-                getSeedLength(): int
+                public getSeedLength(): number /*int*/
             }
         }
     }

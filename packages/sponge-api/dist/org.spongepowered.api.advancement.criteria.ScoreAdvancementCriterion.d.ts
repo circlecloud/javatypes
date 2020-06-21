@@ -21,7 +21,7 @@ declare namespace org {
                          * @return The goal value
                          */
                         // @ts-ignore
-                        getGoal(): int
+                        getGoal(): number /*int*/
                     }
                 }
             }

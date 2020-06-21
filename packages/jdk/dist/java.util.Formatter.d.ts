@@ -1432,7 +1432,7 @@ declare namespace java {
              *           creating the file
              */
             // @ts-ignore
-            constructor(fileName: string)
+            constructor(fileName: java.lang.String | string)
             /**
              * Constructs a new formatter with the specified file name and charset.
              * <p> The locale used is the {@linkplain
@@ -1460,7 +1460,7 @@ declare namespace java {
              *           If the named charset is not supported
              */
             // @ts-ignore
-            constructor(fileName: string, csn: string)
+            constructor(fileName: java.lang.String | string, csn: java.lang.String | string)
             /**
              * Constructs a new formatter with the specified file name, charset, and
              * locale.
@@ -1489,7 +1489,7 @@ declare namespace java {
              *           If the named charset is not supported
              */
             // @ts-ignore
-            constructor(fileName: string, csn: string, l: java.util.Locale)
+            constructor(fileName: java.lang.String | string, csn: java.lang.String | string, l: java.util.Locale)
             /**
              * Constructs a new formatter with the specified file.
              * <p> The charset used is the {@linkplain
@@ -1543,7 +1543,7 @@ declare namespace java {
              *           If the named charset is not supported
              */
             // @ts-ignore
-            constructor(file: java.io.File, csn: string)
+            constructor(file: java.io.File, csn: java.lang.String | string)
             /**
              * Constructs a new formatter with the specified file, charset, and
              * locale.
@@ -1572,7 +1572,7 @@ declare namespace java {
              *           If the named charset is not supported
              */
             // @ts-ignore
-            constructor(file: java.io.File, csn: string, l: java.util.Locale)
+            constructor(file: java.io.File, csn: java.lang.String | string, l: java.util.Locale)
             /**
              * Constructs a new formatter with the specified print stream.
              * <p> The locale used is the {@linkplain
@@ -1619,7 +1619,7 @@ declare namespace java {
              *           If the named charset is not supported
              */
             // @ts-ignore
-            constructor(os: java.io.OutputStream, csn: string)
+            constructor(os: java.io.OutputStream, csn: java.lang.String | string)
             /**
              * Constructs a new formatter with the specified output stream, charset,
              * and locale.
@@ -1637,7 +1637,7 @@ declare namespace java {
              *           If the named charset is not supported
              */
             // @ts-ignore
-            constructor(os: java.io.OutputStream, csn: string, l: java.util.Locale)
+            constructor(os: java.io.OutputStream, csn: java.lang.String | string, l: java.util.Locale)
             /**
              * Returns the locale set by the construction of this formatter.
              * <p> The {@link #format(java.util.Locale,String,Object...) format} method
@@ -1649,7 +1649,7 @@ declare namespace java {
              *           #close()} method
              */
             // @ts-ignore
-            locale(): java.util.Locale
+            public locale(): java.util.Locale
             /**
              * Returns the destination for the output.
              * @return The destination for the output
@@ -1658,7 +1658,7 @@ declare namespace java {
              *           #close()} method
              */
             // @ts-ignore
-            out(): java.lang.Appendable
+            public out(): java.lang.Appendable
             /**
              * Returns the result of invoking {@code toString()} on the destination
              * for the output.  For example, the following code formats text into a
@@ -1685,7 +1685,7 @@ declare namespace java {
              *           #close()} method
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Flushes this formatter.  If the destination implements the {@link
              * java.io.Flushable} interface, its {@code flush} method will be invoked.
@@ -1696,7 +1696,7 @@ declare namespace java {
              *           #close()} method
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Closes this formatter.  If the destination implements the {@link
              * java.io.Closeable} interface, its {@code close} method will be invoked.
@@ -1708,7 +1708,7 @@ declare namespace java {
              * FormatterClosedException}.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns the {@code IOException} last thrown by this formatter's {@link
              * Appendable}.
@@ -1718,7 +1718,7 @@ declare namespace java {
              *           no such exception exists.
              */
             // @ts-ignore
-            ioException(): java.io.IOException
+            public ioException(): java.io.IOException
             /**
              * Writes a formatted string to this object's destination using the
              * specified format string and arguments.  The locale used is the one
@@ -1745,7 +1745,7 @@ declare namespace java {
              * @return This formatter
              */
             // @ts-ignore
-            format(format: string, ...args: any[]): java.util.Formatter
+            public format(format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.util.Formatter
             /**
              * Writes a formatted string to this object's destination using the
              * specified locale, format string, and arguments.
@@ -1776,7 +1776,7 @@ declare namespace java {
              * @return This formatter
              */
             // @ts-ignore
-            format(l: java.util.Locale, format: string, ...args: any[]): java.util.Formatter
+            public format(l: java.util.Locale, format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.util.Formatter
         }
     }
 }

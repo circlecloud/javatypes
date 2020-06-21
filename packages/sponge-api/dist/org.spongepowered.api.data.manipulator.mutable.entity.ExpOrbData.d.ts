@@ -17,7 +17,7 @@ declare namespace org {
                                  * @see Keys#CONTAINED_EXPERIENCE
                                  */
                                 // @ts-ignore
-                                experience(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                                experience(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                             }
                         }
                     }

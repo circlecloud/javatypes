@@ -7,56 +7,56 @@ declare namespace javax {
              * be implemented by subclasses.
              */
             // @ts-ignore
-            class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStreamImpl implements javax.imageio.stream.ImageOutputStream {
+            abstract class ImageOutputStreamImpl extends javax.imageio.stream.ImageInputStreamImpl implements javax.imageio.stream.ImageOutputStream {
                 /**
                  * Constructs an <code>ImageOutputStreamImpl</code>.
                  */
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                abstract write(b: number /*int*/): void
+                public abstract write(b: number /*int*/): void
                 // @ts-ignore
-                write(b: number /*byte*/[]): void
+                public write(b: number /*byte*/[]): void
                 // @ts-ignore
-                abstract write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public abstract write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeBoolean(v: boolean): void
+                public writeBoolean(v: boolean): void
                 // @ts-ignore
-                writeByte(v: number /*int*/): void
+                public writeByte(v: number /*int*/): void
                 // @ts-ignore
-                writeShort(v: number /*int*/): void
+                public writeShort(v: number /*int*/): void
                 // @ts-ignore
-                writeChar(v: number /*int*/): void
+                public writeChar(v: number /*int*/): void
                 // @ts-ignore
-                writeInt(v: number /*int*/): void
+                public writeInt(v: number /*int*/): void
                 // @ts-ignore
-                writeLong(v: number /*long*/): void
+                public writeLong(v: number /*long*/): void
                 // @ts-ignore
-                writeFloat(v: number /*float*/): void
+                public writeFloat(v: number /*float*/): void
                 // @ts-ignore
-                writeDouble(v: number /*double*/): void
+                public writeDouble(v: number /*double*/): void
                 // @ts-ignore
-                writeBytes(s: string): void
+                public writeBytes(s: java.lang.String | string): void
                 // @ts-ignore
-                writeChars(s: string): void
+                public writeChars(s: java.lang.String | string): void
                 // @ts-ignore
-                writeUTF(s: string): void
+                public writeUTF(s: java.lang.String | string): void
                 // @ts-ignore
-                writeShorts(s: number /*short*/[], off: number /*int*/, len: number /*int*/): void
+                public writeShorts(s: number /*short*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeChars(c: string[], off: number /*int*/, len: number /*int*/): void
+                public writeChars(c: string[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeInts(i: number /*int*/[], off: number /*int*/, len: number /*int*/): void
+                public writeInts(i: number /*int*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeLongs(l: number /*long*/[], off: number /*int*/, len: number /*int*/): void
+                public writeLongs(l: number /*long*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeFloats(f: number /*float*/[], off: number /*int*/, len: number /*int*/): void
+                public writeFloats(f: number /*float*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeDoubles(d: number /*double*/[], off: number /*int*/, len: number /*int*/): void
+                public writeDoubles(d: number /*double*/[], off: number /*int*/, len: number /*int*/): void
                 // @ts-ignore
-                writeBit(bit: number /*int*/): void
+                public writeBit(bit: number /*int*/): void
                 // @ts-ignore
-                writeBits(bits: number /*long*/, numBits: number /*int*/): void
+                public writeBits(bits: number /*long*/, numBits: number /*int*/): void
                 /**
                  * If the bit offset is non-zero, forces the remaining bits
                  * in the current byte to 0 and advances the stream position

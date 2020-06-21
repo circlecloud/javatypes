@@ -8,7 +8,7 @@ declare namespace org {
                          * Used to indicate the base class that a generated event class extends from.
                          */
                         // @ts-ignore
-                        class ImplementedBy implements java.lang.annotation.Annotation {
+                        abstract class ImplementedBy implements java.lang.annotation.Annotation {
                         }
                     }
                 }

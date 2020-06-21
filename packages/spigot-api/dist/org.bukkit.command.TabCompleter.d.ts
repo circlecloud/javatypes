@@ -19,7 +19,7 @@ declare namespace org {
                  *      to default to the command executor
                  */
                 // @ts-ignore
-                onTabComplete(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, alias: string, args: string[]): java.util.List<java.lang.String>
+                onTabComplete(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, alias: java.lang.String | string, args: java.lang.String[] | string[]): Array<java.lang.String | string>
             }
         }
     }

@@ -25,7 +25,7 @@ declare namespace javax {
              * @exception NamingException If a naming exception was encountered.
              */
             // @ts-ignore
-            parse(name: string): javax.naming.Name
+            parse(name: java.lang.String | string): javax.naming.Name
         }
     }
 }

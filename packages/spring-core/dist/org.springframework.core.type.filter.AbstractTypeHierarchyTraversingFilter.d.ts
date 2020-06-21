@@ -14,13 +14,13 @@ declare namespace org {
                      * @since 2.5
                      */
                     // @ts-ignore
-                    class AbstractTypeHierarchyTraversingFilter extends java.lang.Object implements org.springframework.core.type.filter.TypeFilter {
+                    abstract class AbstractTypeHierarchyTraversingFilter extends java.lang.Object implements org.springframework.core.type.filter.TypeFilter {
                         // @ts-ignore
                         constructor(considerInherited: boolean, considerInterfaces: boolean)
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        match(metadataReader: org.springframework.core.type.classreading.MetadataReader, metadataReaderFactory: org.springframework.core.type.classreading.MetadataReaderFactory): boolean
+                        public match(metadataReader: org.springframework.core.type.classreading.MetadataReader, metadataReaderFactory: org.springframework.core.type.classreading.MetadataReaderFactory): boolean
                         /**
                          * Override this to match self characteristics alone. Typically,
                          * the implementation will use a visitor to extract information
@@ -32,17 +32,17 @@ declare namespace org {
                          * Override this to match on type name.
                          */
                         // @ts-ignore
-                        matchClassName(className: string): boolean
+                        matchClassName(className: java.lang.String | string): boolean
                         /**
                          * Override this to match on super type name.
                          */
                         // @ts-ignore
-                        matchSuperClass(superClassName: string): java.lang.Boolean
+                        matchSuperClass(superClassName: java.lang.String | string): java.lang.Boolean
                         /**
                          * Override this to match on interface type name.
                          */
                         // @ts-ignore
-                        matchInterface(interfaceName: string): java.lang.Boolean
+                        matchInterface(interfaceName: java.lang.String | string): java.lang.Boolean
                     }
                 }
             }

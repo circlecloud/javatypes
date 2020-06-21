@@ -43,19 +43,19 @@ declare namespace org {
                      * Set the prefix that placeholders replaced by this resolver must begin with.
                      */
                     // @ts-ignore
-                    setPlaceholderPrefix(placeholderPrefix: string): void
+                    setPlaceholderPrefix(placeholderPrefix: java.lang.String | string): void
                     /**
                      * Set the suffix that placeholders replaced by this resolver must end with.
                      */
                     // @ts-ignore
-                    setPlaceholderSuffix(placeholderSuffix: string): void
+                    setPlaceholderSuffix(placeholderSuffix: java.lang.String | string): void
                     /**
                      * Specify the separating character between the placeholders replaced by this
                      * resolver and their associated default value, or {@code null} if no such
                      * special character should be processed as a value separator.
                      */
                     // @ts-ignore
-                    setValueSeparator(valueSeparator: string): void
+                    setValueSeparator(valueSeparator: java.lang.String | string): void
                     /**
                      * Set whether to throw an exception when encountering an unresolvable placeholder
                      * nested within the value of a given property. A {@code false} value indicates strict
@@ -74,7 +74,7 @@ declare namespace org {
                      * {@link #validateRequiredProperties()}.
                      */
                     // @ts-ignore
-                    setRequiredProperties(...requiredProperties: string[]): void
+                    setRequiredProperties(...requiredProperties: java.lang.String[] | string[]): void
                     /**
                      * Validate that each of the properties specified by
                      * {@link #setRequiredProperties} is present and resolves to a

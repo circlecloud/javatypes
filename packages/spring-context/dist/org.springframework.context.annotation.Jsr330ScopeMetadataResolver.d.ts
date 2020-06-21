@@ -27,7 +27,7 @@ declare namespace org {
                      * @param scopeName the Spring scope name
                      */
                     // @ts-ignore
-                    registerScope(annotationType: java.lang.Class<any>, scopeName: string): void
+                    public registerScope(annotationType: java.lang.Class<any>, scopeName: java.lang.String | string): void
                     /**
                      * Register an extended JSR-330 scope annotation, mapping it onto a
                      * specific Spring scope by name.
@@ -35,7 +35,7 @@ declare namespace org {
                      * @param scopeName the Spring scope name
                      */
                     // @ts-ignore
-                    registerScope(annotationType: string, scopeName: string): void
+                    public registerScope(annotationType: java.lang.String | string, scopeName: java.lang.String | string): void
                     /**
                      * Resolve the given annotation type into a named Spring scope.
                      * <p>The default implementation simply checks against registered scopes.
@@ -44,9 +44,9 @@ declare namespace org {
                      * @return the Spring scope name
                      */
                     // @ts-ignore
-                    resolveScopeName(annotationType: string): java.lang.String
+                    resolveScopeName(annotationType: java.lang.String | string): string
                     // @ts-ignore
-                    resolveScopeMetadata(definition: BeanDefinition): org.springframework.context.annotation.ScopeMetadata
+                    public resolveScopeMetadata(definition: BeanDefinition): org.springframework.context.annotation.ScopeMetadata
                 }
             }
         }

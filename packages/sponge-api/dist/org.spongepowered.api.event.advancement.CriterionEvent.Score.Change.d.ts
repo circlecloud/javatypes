@@ -16,13 +16,13 @@ declare namespace org {
                                  * @return The previous score
                                  */
                                 // @ts-ignore
-                                getPreviousScore(): int
+                                getPreviousScore(): number /*int*/
                                 /**
                                  * Gets the new score.
                                  * @return The new score
                                  */
                                 // @ts-ignore
-                                getNewScore(): int
+                                getNewScore(): number /*int*/
                             }
                         }
                     }

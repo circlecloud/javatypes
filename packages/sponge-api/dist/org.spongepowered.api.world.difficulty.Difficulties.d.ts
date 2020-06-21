@@ -9,13 +9,13 @@ declare namespace org {
                     // @ts-ignore
                     class Difficulties extends java.lang.Object {
                         // @ts-ignore
-                        readonly EASY: org.spongepowered.api.world.difficulty.Difficulty
+                        public static readonly EASY: org.spongepowered.api.world.difficulty.Difficulty
                         // @ts-ignore
-                        readonly HARD: org.spongepowered.api.world.difficulty.Difficulty
+                        public static readonly HARD: org.spongepowered.api.world.difficulty.Difficulty
                         // @ts-ignore
-                        readonly NORMAL: org.spongepowered.api.world.difficulty.Difficulty
+                        public static readonly NORMAL: org.spongepowered.api.world.difficulty.Difficulty
                         // @ts-ignore
-                        readonly PEACEFUL: org.spongepowered.api.world.difficulty.Difficulty
+                        public static readonly PEACEFUL: org.spongepowered.api.world.difficulty.Difficulty
                     }
                 }
             }

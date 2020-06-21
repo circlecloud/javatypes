@@ -147,14 +147,14 @@ declare namespace java {
                      * @return a stamp that can be used to unlock or convert mode
                      */
                     // @ts-ignore
-                    writeLock(): long
+                    public writeLock(): number /*long*/
                     /**
                      * Exclusively acquires the lock if it is immediately available.
                      * @return a stamp that can be used to unlock or convert mode,
                      *  or zero if the lock is not available
                      */
                     // @ts-ignore
-                    tryWriteLock(): long
+                    public tryWriteLock(): number /*long*/
                     /**
                      * Exclusively acquires the lock if it is available within the
                      * given time and the current thread has not been interrupted.
@@ -168,7 +168,7 @@ declare namespace java {
                      *  before acquiring the lock
                      */
                     // @ts-ignore
-                    tryWriteLock(time: number /*long*/, unit: java.util.concurrent.TimeUnit): long
+                    public tryWriteLock(time: number /*long*/, unit: java.util.concurrent.TimeUnit): number /*long*/
                     /**
                      * Exclusively acquires the lock, blocking if necessary
                      * until available or the current thread is interrupted.
@@ -179,21 +179,21 @@ declare namespace java {
                      *  before acquiring the lock
                      */
                     // @ts-ignore
-                    writeLockInterruptibly(): long
+                    public writeLockInterruptibly(): number /*long*/
                     /**
                      * Non-exclusively acquires the lock, blocking if necessary
                      * until available.
                      * @return a stamp that can be used to unlock or convert mode
                      */
                     // @ts-ignore
-                    readLock(): long
+                    public readLock(): number /*long*/
                     /**
                      * Non-exclusively acquires the lock if it is immediately available.
                      * @return a stamp that can be used to unlock or convert mode,
                      *  or zero if the lock is not available
                      */
                     // @ts-ignore
-                    tryReadLock(): long
+                    public tryReadLock(): number /*long*/
                     /**
                      * Non-exclusively acquires the lock if it is available within the
                      * given time and the current thread has not been interrupted.
@@ -207,7 +207,7 @@ declare namespace java {
                      *  before acquiring the lock
                      */
                     // @ts-ignore
-                    tryReadLock(time: number /*long*/, unit: java.util.concurrent.TimeUnit): long
+                    public tryReadLock(time: number /*long*/, unit: java.util.concurrent.TimeUnit): number /*long*/
                     /**
                      * Non-exclusively acquires the lock, blocking if necessary
                      * until available or the current thread is interrupted.
@@ -218,14 +218,14 @@ declare namespace java {
                      *  before acquiring the lock
                      */
                     // @ts-ignore
-                    readLockInterruptibly(): long
+                    public readLockInterruptibly(): number /*long*/
                     /**
                      * Returns a stamp that can later be validated, or zero
                      * if exclusively locked.
                      * @return a stamp, or zero if exclusively locked
                      */
                     // @ts-ignore
-                    tryOptimisticRead(): long
+                    public tryOptimisticRead(): number /*long*/
                     /**
                      * Returns true if the lock has not been exclusively acquired
                      * since issuance of the given stamp. Always returns false if the
@@ -238,7 +238,7 @@ declare namespace java {
                      *  since issuance of the given stamp; else false
                      */
                     // @ts-ignore
-                    validate(stamp: number /*long*/): boolean
+                    public validate(stamp: number /*long*/): boolean
                     /**
                      * If the lock state matches the given stamp, releases the
                      * exclusive lock.
@@ -247,7 +247,7 @@ declare namespace java {
                      *  not match the current state of this lock
                      */
                     // @ts-ignore
-                    unlockWrite(stamp: number /*long*/): void
+                    public unlockWrite(stamp: number /*long*/): void
                     /**
                      * If the lock state matches the given stamp, releases the
                      * non-exclusive lock.
@@ -256,7 +256,7 @@ declare namespace java {
                      *  not match the current state of this lock
                      */
                     // @ts-ignore
-                    unlockRead(stamp: number /*long*/): void
+                    public unlockRead(stamp: number /*long*/): void
                     /**
                      * If the lock state matches the given stamp, releases the
                      * corresponding mode of the lock.
@@ -265,7 +265,7 @@ declare namespace java {
                      *  not match the current state of this lock
                      */
                     // @ts-ignore
-                    unlock(stamp: number /*long*/): void
+                    public unlock(stamp: number /*long*/): void
                     /**
                      * If the lock state matches the given stamp, performs one of
                      * the following actions. If the stamp represents holding a write
@@ -278,7 +278,7 @@ declare namespace java {
                      * @return a valid write stamp, or zero on failure
                      */
                     // @ts-ignore
-                    tryConvertToWriteLock(stamp: number /*long*/): long
+                    public tryConvertToWriteLock(stamp: number /*long*/): number /*long*/
                     /**
                      * If the lock state matches the given stamp, performs one of
                      * the following actions. If the stamp represents holding a write
@@ -290,7 +290,7 @@ declare namespace java {
                      * @return a valid read stamp, or zero on failure
                      */
                     // @ts-ignore
-                    tryConvertToReadLock(stamp: number /*long*/): long
+                    public tryConvertToReadLock(stamp: number /*long*/): number /*long*/
                     /**
                      * If the lock state matches the given stamp then, if the stamp
                      * represents holding a lock, releases it and returns an
@@ -301,7 +301,7 @@ declare namespace java {
                      * @return a valid optimistic read stamp, or zero on failure
                      */
                     // @ts-ignore
-                    tryConvertToOptimisticRead(stamp: number /*long*/): long
+                    public tryConvertToOptimisticRead(stamp: number /*long*/): number /*long*/
                     /**
                      * Releases the write lock if it is held, without requiring a
                      * stamp value. This method may be useful for recovery after
@@ -309,7 +309,7 @@ declare namespace java {
                      * @return {#code true} if the lock was held, else false
                      */
                     // @ts-ignore
-                    tryUnlockWrite(): boolean
+                    public tryUnlockWrite(): boolean
                     /**
                      * Releases one hold of the read lock if it is held, without
                      * requiring a stamp value. This method may be useful for recovery
@@ -317,19 +317,19 @@ declare namespace java {
                      * @return {#code true} if the read lock was held, else false
                      */
                     // @ts-ignore
-                    tryUnlockRead(): boolean
+                    public tryUnlockRead(): boolean
                     /**
                      * Returns {@code true} if the lock is currently held exclusively.
                      * @return {#code true} if the lock is currently held exclusively
                      */
                     // @ts-ignore
-                    isWriteLocked(): boolean
+                    public isWriteLocked(): boolean
                     /**
                      * Returns {@code true} if the lock is currently held non-exclusively.
                      * @return {#code true} if the lock is currently held non-exclusively
                      */
                     // @ts-ignore
-                    isReadLocked(): boolean
+                    public isReadLocked(): boolean
                     /**
                      * Queries the number of read locks held for this lock. This
                      * method is designed for use in monitoring system state, not for
@@ -337,7 +337,7 @@ declare namespace java {
                      * @return the number of read locks held
                      */
                     // @ts-ignore
-                    getReadLockCount(): int
+                    public getReadLockCount(): number /*int*/
                     /**
                      * Returns a string identifying this lock, as well as its lock
                      * state.  The state, in brackets, includes the String {@code
@@ -347,7 +347,7 @@ declare namespace java {
                      * @return a string identifying this lock, as well as its lock state
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns a plain {@link Lock} view of this StampedLock in which
                      * the {@link Lock#lock} method is mapped to {@link #readLock},
@@ -358,7 +358,7 @@ declare namespace java {
                      * @return the lock
                      */
                     // @ts-ignore
-                    asReadLock(): java.util.concurrent.locks.Lock
+                    public asReadLock(): java.util.concurrent.locks.Lock
                     /**
                      * Returns a plain {@link Lock} view of this StampedLock in which
                      * the {@link Lock#lock} method is mapped to {@link #writeLock},
@@ -369,7 +369,7 @@ declare namespace java {
                      * @return the lock
                      */
                     // @ts-ignore
-                    asWriteLock(): java.util.concurrent.locks.Lock
+                    public asWriteLock(): java.util.concurrent.locks.Lock
                     /**
                      * Returns a {@link ReadWriteLock} view of this StampedLock in
                      * which the {@link ReadWriteLock#readLock()} method is mapped to
@@ -378,7 +378,7 @@ declare namespace java {
                      * @return the lock
                      */
                     // @ts-ignore
-                    asReadWriteLock(): java.util.concurrent.locks.ReadWriteLock
+                    public asReadWriteLock(): java.util.concurrent.locks.ReadWriteLock
                 }
             }
         }

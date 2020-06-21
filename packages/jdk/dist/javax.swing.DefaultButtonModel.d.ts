@@ -29,7 +29,7 @@ declare namespace javax {
              * The action command string fired by the button.
              */
             // @ts-ignore
-            actionCommand: string
+            actionCommand: java.lang.String | string
             /**
              * The button group that the button belongs to.
              */
@@ -58,113 +58,113 @@ declare namespace javax {
              * the button.
              */
             // @ts-ignore
-            readonly ARMED: number /*int*/
+            public static readonly ARMED: number /*int*/
             /**
              * Identifies the "selected" bit in the bitmask, which
              * indicates that the button has been selected. Only needed for
              * certain types of buttons - such as radio button or check box.
              */
             // @ts-ignore
-            readonly SELECTED: number /*int*/
+            public static readonly SELECTED: number /*int*/
             /**
              * Identifies the "pressed" bit in the bitmask, which
              * indicates that the button is pressed.
              */
             // @ts-ignore
-            readonly PRESSED: number /*int*/
+            public static readonly PRESSED: number /*int*/
             /**
              * Identifies the "enabled" bit in the bitmask, which
              * indicates that the button can be selected by
              * an input device (such as a mouse pointer).
              */
             // @ts-ignore
-            readonly ENABLED: number /*int*/
+            public static readonly ENABLED: number /*int*/
             /**
              * Identifies the "rollover" bit in the bitmask, which
              * indicates that the mouse is over the button.
              */
             // @ts-ignore
-            readonly ROLLOVER: number /*int*/
+            public static readonly ROLLOVER: number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setActionCommand(actionCommand: string): void
+            public setActionCommand(actionCommand: java.lang.String | string): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isArmed(): boolean
+            public isArmed(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isSelected(): boolean
+            public isSelected(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isEnabled(): boolean
+            public isEnabled(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isPressed(): boolean
+            public isPressed(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isRollover(): boolean
+            public isRollover(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setArmed(b: boolean): void
+            public setArmed(b: boolean): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setEnabled(b: boolean): void
+            public setEnabled(b: boolean): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setSelected(b: boolean): void
+            public setSelected(b: boolean): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setPressed(b: boolean): void
+            public setPressed(b: boolean): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setRollover(b: boolean): void
+            public setRollover(b: boolean): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setMnemonic(key: number /*int*/): void
+            public setMnemonic(key: number /*int*/): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getMnemonic(): int
+            public getMnemonic(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the change listeners
              * registered on this <code>DefaultButtonModel</code>.
@@ -176,7 +176,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -189,12 +189,12 @@ declare namespace javax {
              * {@inheritDoc}
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this <code>DefaultButtonModel</code>.
@@ -206,7 +206,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.
@@ -219,12 +219,12 @@ declare namespace javax {
              * {@inheritDoc}
              */
             // @ts-ignore
-            addItemListener(l: java.awt.event.ItemListener): void
+            public addItemListener(l: java.awt.event.ItemListener): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeItemListener(l: java.awt.event.ItemListener): void
+            public removeItemListener(l: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the item listeners
              * registered on this <code>DefaultButtonModel</code>.
@@ -236,7 +236,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.
@@ -278,17 +278,17 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Overridden to return <code>null</code>.
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setGroup(group: javax.swing.ButtonGroup): void
+            public setGroup(group: javax.swing.ButtonGroup): void
             /**
              * Returns the group that the button belongs to.
              * Normally used with radio buttons, which are mutually
@@ -297,7 +297,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getGroup(): javax.swing.ButtonGroup
+            public getGroup(): javax.swing.ButtonGroup
         }
     }
 }

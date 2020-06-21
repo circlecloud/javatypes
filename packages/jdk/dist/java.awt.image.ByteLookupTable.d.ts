@@ -55,7 +55,7 @@ declare namespace java {
                  * @return the data array of this <code>ByteLookupTable</code>.
                  */
                 // @ts-ignore
-                getTable(): byte[][]
+                public getTable(): number /*byte*/[][]
                 /**
                  * Returns an array of samples of a pixel, translated with the lookup
                  * table. The source and destination array can be the same array.
@@ -75,7 +75,7 @@ declare namespace java {
                  *             for any band.
                  */
                 // @ts-ignore
-                lookupPixel(src: number /*int*/[], dst: number /*int*/[]): int[]
+                public lookupPixel(src: number /*int*/[], dst: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns an array of samples of a pixel, translated with the lookup
                  * table. The source and destination array can be the same array.
@@ -95,7 +95,7 @@ declare namespace java {
                  *             lookup table for any band.
                  */
                 // @ts-ignore
-                lookupPixel(src: number /*byte*/[], dst: number /*byte*/[]): byte[]
+                public lookupPixel(src: number /*byte*/[], dst: number /*byte*/[]): number /*byte*/[]
             }
         }
     }

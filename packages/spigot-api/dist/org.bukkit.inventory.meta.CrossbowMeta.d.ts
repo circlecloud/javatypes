@@ -15,7 +15,7 @@ declare namespace org {
                      * @return charged projectiles
                      */
                     // @ts-ignore
-                    getChargedProjectiles(): java.util.List<org.bukkit.inventory.ItemStack>
+                    getChargedProjectiles(): Array<org.bukkit.inventory.ItemStack>
                     /**
                      * Sets the projectiles charged on this item.
                      * Removes all projectiles when given null.
@@ -24,7 +24,7 @@ declare namespace org {
                      *  arrow or firework rocket
                      */
                     // @ts-ignore
-                    setChargedProjectiles(projectiles: Array<org.bukkit.inventory.ItemStack>): void
+                    setChargedProjectiles(projectiles: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>): void
                     /**
                      * Adds a charged projectile to this item.
                      * @param item projectile

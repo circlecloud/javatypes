@@ -42,31 +42,31 @@ declare namespace javax {
                  * @return the return value
                  */
                 // @ts-ignore
-                getStatus(): javax.net.ssl.SSLEngineResult.Status
+                public getStatus(): javax.net.ssl.SSLEngineResult.Status
                 /**
                  * Gets the handshake status of this <code>SSLEngine</code>
                  * operation.
                  * @return the handshake status
                  */
                 // @ts-ignore
-                getHandshakeStatus(): javax.net.ssl.SSLEngineResult.HandshakeStatus
+                public getHandshakeStatus(): javax.net.ssl.SSLEngineResult.HandshakeStatus
                 /**
                  * Returns the number of bytes consumed from the input buffer.
                  * @return the number of bytes consumed.
                  */
                 // @ts-ignore
-                bytesConsumed(): int
+                public bytesConsumed(): number /*int*/
                 /**
                  * Returns the number of bytes written to the output buffer.
                  * @return the number of bytes produced
                  */
                 // @ts-ignore
-                bytesProduced(): int
+                public bytesProduced(): number /*int*/
                 /**
                  * Returns a String representation of this object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

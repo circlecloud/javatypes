@@ -211,12 +211,12 @@ declare namespace java {
                  * The first number in the range of ids used for key events.
                  */
                 // @ts-ignore
-                readonly KEY_FIRST: number /*int*/
+                public static readonly KEY_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for key events.
                  */
                 // @ts-ignore
-                readonly KEY_LAST: number /*int*/
+                public static readonly KEY_LAST: number /*int*/
                 /**
                  * The "key typed" event.  This event is generated when a character is
                  * entered.  In the simplest case, it is produced by a single key press.
@@ -225,607 +225,607 @@ declare namespace java {
                  * many-to-one or many-to-many.
                  */
                 // @ts-ignore
-                readonly KEY_TYPED: number /*int*/
+                public static readonly KEY_TYPED: number /*int*/
                 /**
                  * The "key pressed" event. This event is generated when a key
                  * is pushed down.
                  */
                 // @ts-ignore
-                readonly KEY_PRESSED: number /*int*/
+                public static readonly KEY_PRESSED: number /*int*/
                 /**
                  * The "key released" event. This event is generated when a key
                  * is let up.
                  */
                 // @ts-ignore
-                readonly KEY_RELEASED: number /*int*/
+                public static readonly KEY_RELEASED: number /*int*/
                 // @ts-ignore
-                readonly VK_ENTER: number /*int*/
+                public static readonly VK_ENTER: number /*int*/
                 // @ts-ignore
-                readonly VK_BACK_SPACE: number /*int*/
+                public static readonly VK_BACK_SPACE: number /*int*/
                 // @ts-ignore
-                readonly VK_TAB: number /*int*/
+                public static readonly VK_TAB: number /*int*/
                 // @ts-ignore
-                readonly VK_CANCEL: number /*int*/
+                public static readonly VK_CANCEL: number /*int*/
                 // @ts-ignore
-                readonly VK_CLEAR: number /*int*/
+                public static readonly VK_CLEAR: number /*int*/
                 // @ts-ignore
-                readonly VK_SHIFT: number /*int*/
+                public static readonly VK_SHIFT: number /*int*/
                 // @ts-ignore
-                readonly VK_CONTROL: number /*int*/
+                public static readonly VK_CONTROL: number /*int*/
                 // @ts-ignore
-                readonly VK_ALT: number /*int*/
+                public static readonly VK_ALT: number /*int*/
                 // @ts-ignore
-                readonly VK_PAUSE: number /*int*/
+                public static readonly VK_PAUSE: number /*int*/
                 // @ts-ignore
-                readonly VK_CAPS_LOCK: number /*int*/
+                public static readonly VK_CAPS_LOCK: number /*int*/
                 // @ts-ignore
-                readonly VK_ESCAPE: number /*int*/
+                public static readonly VK_ESCAPE: number /*int*/
                 // @ts-ignore
-                readonly VK_SPACE: number /*int*/
+                public static readonly VK_SPACE: number /*int*/
                 // @ts-ignore
-                readonly VK_PAGE_UP: number /*int*/
+                public static readonly VK_PAGE_UP: number /*int*/
                 // @ts-ignore
-                readonly VK_PAGE_DOWN: number /*int*/
+                public static readonly VK_PAGE_DOWN: number /*int*/
                 // @ts-ignore
-                readonly VK_END: number /*int*/
+                public static readonly VK_END: number /*int*/
                 // @ts-ignore
-                readonly VK_HOME: number /*int*/
+                public static readonly VK_HOME: number /*int*/
                 /**
                  * Constant for the non-numpad <b>left</b> arrow key.
                  * @see #VK_KP_LEFT
                  */
                 // @ts-ignore
-                readonly VK_LEFT: number /*int*/
+                public static readonly VK_LEFT: number /*int*/
                 /**
                  * Constant for the non-numpad <b>up</b> arrow key.
                  * @see #VK_KP_UP
                  */
                 // @ts-ignore
-                readonly VK_UP: number /*int*/
+                public static readonly VK_UP: number /*int*/
                 /**
                  * Constant for the non-numpad <b>right</b> arrow key.
                  * @see #VK_KP_RIGHT
                  */
                 // @ts-ignore
-                readonly VK_RIGHT: number /*int*/
+                public static readonly VK_RIGHT: number /*int*/
                 /**
                  * Constant for the non-numpad <b>down</b> arrow key.
                  * @see #VK_KP_DOWN
                  */
                 // @ts-ignore
-                readonly VK_DOWN: number /*int*/
+                public static readonly VK_DOWN: number /*int*/
                 /**
                  * Constant for the comma key, ","
                  */
                 // @ts-ignore
-                readonly VK_COMMA: number /*int*/
+                public static readonly VK_COMMA: number /*int*/
                 /**
                  * Constant for the minus key, "-"
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_MINUS: number /*int*/
+                public static readonly VK_MINUS: number /*int*/
                 /**
                  * Constant for the period key, "."
                  */
                 // @ts-ignore
-                readonly VK_PERIOD: number /*int*/
+                public static readonly VK_PERIOD: number /*int*/
                 /**
                  * Constant for the forward slash key, "/"
                  */
                 // @ts-ignore
-                readonly VK_SLASH: number /*int*/
+                public static readonly VK_SLASH: number /*int*/
                 /**
                  * VK_0 thru VK_9 are the same as ASCII '0' thru '9' (0x30 - 0x39)
                  */
                 // @ts-ignore
-                readonly VK_0: number /*int*/
+                public static readonly VK_0: number /*int*/
                 // @ts-ignore
-                readonly VK_1: number /*int*/
+                public static readonly VK_1: number /*int*/
                 // @ts-ignore
-                readonly VK_2: number /*int*/
+                public static readonly VK_2: number /*int*/
                 // @ts-ignore
-                readonly VK_3: number /*int*/
+                public static readonly VK_3: number /*int*/
                 // @ts-ignore
-                readonly VK_4: number /*int*/
+                public static readonly VK_4: number /*int*/
                 // @ts-ignore
-                readonly VK_5: number /*int*/
+                public static readonly VK_5: number /*int*/
                 // @ts-ignore
-                readonly VK_6: number /*int*/
+                public static readonly VK_6: number /*int*/
                 // @ts-ignore
-                readonly VK_7: number /*int*/
+                public static readonly VK_7: number /*int*/
                 // @ts-ignore
-                readonly VK_8: number /*int*/
+                public static readonly VK_8: number /*int*/
                 // @ts-ignore
-                readonly VK_9: number /*int*/
+                public static readonly VK_9: number /*int*/
                 /**
                  * Constant for the semicolon key, ";"
                  */
                 // @ts-ignore
-                readonly VK_SEMICOLON: number /*int*/
+                public static readonly VK_SEMICOLON: number /*int*/
                 /**
                  * Constant for the equals key, "="
                  */
                 // @ts-ignore
-                readonly VK_EQUALS: number /*int*/
+                public static readonly VK_EQUALS: number /*int*/
                 /**
                  * VK_A thru VK_Z are the same as ASCII 'A' thru 'Z' (0x41 - 0x5A)
                  */
                 // @ts-ignore
-                readonly VK_A: number /*int*/
+                public static readonly VK_A: number /*int*/
                 // @ts-ignore
-                readonly VK_B: number /*int*/
+                public static readonly VK_B: number /*int*/
                 // @ts-ignore
-                readonly VK_C: number /*int*/
+                public static readonly VK_C: number /*int*/
                 // @ts-ignore
-                readonly VK_D: number /*int*/
+                public static readonly VK_D: number /*int*/
                 // @ts-ignore
-                readonly VK_E: number /*int*/
+                public static readonly VK_E: number /*int*/
                 // @ts-ignore
-                readonly VK_F: number /*int*/
+                public static readonly VK_F: number /*int*/
                 // @ts-ignore
-                readonly VK_G: number /*int*/
+                public static readonly VK_G: number /*int*/
                 // @ts-ignore
-                readonly VK_H: number /*int*/
+                public static readonly VK_H: number /*int*/
                 // @ts-ignore
-                readonly VK_I: number /*int*/
+                public static readonly VK_I: number /*int*/
                 // @ts-ignore
-                readonly VK_J: number /*int*/
+                public static readonly VK_J: number /*int*/
                 // @ts-ignore
-                readonly VK_K: number /*int*/
+                public static readonly VK_K: number /*int*/
                 // @ts-ignore
-                readonly VK_L: number /*int*/
+                public static readonly VK_L: number /*int*/
                 // @ts-ignore
-                readonly VK_M: number /*int*/
+                public static readonly VK_M: number /*int*/
                 // @ts-ignore
-                readonly VK_N: number /*int*/
+                public static readonly VK_N: number /*int*/
                 // @ts-ignore
-                readonly VK_O: number /*int*/
+                public static readonly VK_O: number /*int*/
                 // @ts-ignore
-                readonly VK_P: number /*int*/
+                public static readonly VK_P: number /*int*/
                 // @ts-ignore
-                readonly VK_Q: number /*int*/
+                public static readonly VK_Q: number /*int*/
                 // @ts-ignore
-                readonly VK_R: number /*int*/
+                public static readonly VK_R: number /*int*/
                 // @ts-ignore
-                readonly VK_S: number /*int*/
+                public static readonly VK_S: number /*int*/
                 // @ts-ignore
-                readonly VK_T: number /*int*/
+                public static readonly VK_T: number /*int*/
                 // @ts-ignore
-                readonly VK_U: number /*int*/
+                public static readonly VK_U: number /*int*/
                 // @ts-ignore
-                readonly VK_V: number /*int*/
+                public static readonly VK_V: number /*int*/
                 // @ts-ignore
-                readonly VK_W: number /*int*/
+                public static readonly VK_W: number /*int*/
                 // @ts-ignore
-                readonly VK_X: number /*int*/
+                public static readonly VK_X: number /*int*/
                 // @ts-ignore
-                readonly VK_Y: number /*int*/
+                public static readonly VK_Y: number /*int*/
                 // @ts-ignore
-                readonly VK_Z: number /*int*/
+                public static readonly VK_Z: number /*int*/
                 /**
                  * Constant for the open bracket key, "["
                  */
                 // @ts-ignore
-                readonly VK_OPEN_BRACKET: number /*int*/
+                public static readonly VK_OPEN_BRACKET: number /*int*/
                 /**
                  * Constant for the back slash key, "\"
                  */
                 // @ts-ignore
-                readonly VK_BACK_SLASH: number /*int*/
+                public static readonly VK_BACK_SLASH: number /*int*/
                 /**
                  * Constant for the close bracket key, "]"
                  */
                 // @ts-ignore
-                readonly VK_CLOSE_BRACKET: number /*int*/
+                public static readonly VK_CLOSE_BRACKET: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD0: number /*int*/
+                public static readonly VK_NUMPAD0: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD1: number /*int*/
+                public static readonly VK_NUMPAD1: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD2: number /*int*/
+                public static readonly VK_NUMPAD2: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD3: number /*int*/
+                public static readonly VK_NUMPAD3: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD4: number /*int*/
+                public static readonly VK_NUMPAD4: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD5: number /*int*/
+                public static readonly VK_NUMPAD5: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD6: number /*int*/
+                public static readonly VK_NUMPAD6: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD7: number /*int*/
+                public static readonly VK_NUMPAD7: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD8: number /*int*/
+                public static readonly VK_NUMPAD8: number /*int*/
                 // @ts-ignore
-                readonly VK_NUMPAD9: number /*int*/
+                public static readonly VK_NUMPAD9: number /*int*/
                 // @ts-ignore
-                readonly VK_MULTIPLY: number /*int*/
+                public static readonly VK_MULTIPLY: number /*int*/
                 // @ts-ignore
-                readonly VK_ADD: number /*int*/
+                public static readonly VK_ADD: number /*int*/
                 /**
                  * This constant is obsolete, and is included only for backwards
                  * compatibility.
                  * @see #VK_SEPARATOR
                  */
                 // @ts-ignore
-                readonly VK_SEPARATER: number /*int*/
+                public static readonly VK_SEPARATER: number /*int*/
                 /**
                  * Constant for the Numpad Separator key.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly VK_SEPARATOR: number /*int*/
+                public static readonly VK_SEPARATOR: number /*int*/
                 // @ts-ignore
-                readonly VK_SUBTRACT: number /*int*/
+                public static readonly VK_SUBTRACT: number /*int*/
                 // @ts-ignore
-                readonly VK_DECIMAL: number /*int*/
+                public static readonly VK_DECIMAL: number /*int*/
                 // @ts-ignore
-                readonly VK_DIVIDE: number /*int*/
+                public static readonly VK_DIVIDE: number /*int*/
                 // @ts-ignore
-                readonly VK_DELETE: number /*int*/
+                public static readonly VK_DELETE: number /*int*/
                 // @ts-ignore
-                readonly VK_NUM_LOCK: number /*int*/
+                public static readonly VK_NUM_LOCK: number /*int*/
                 // @ts-ignore
-                readonly VK_SCROLL_LOCK: number /*int*/
+                public static readonly VK_SCROLL_LOCK: number /*int*/
                 /**
                  * Constant for the F1 function key.
                  */
                 // @ts-ignore
-                readonly VK_F1: number /*int*/
+                public static readonly VK_F1: number /*int*/
                 /**
                  * Constant for the F2 function key.
                  */
                 // @ts-ignore
-                readonly VK_F2: number /*int*/
+                public static readonly VK_F2: number /*int*/
                 /**
                  * Constant for the F3 function key.
                  */
                 // @ts-ignore
-                readonly VK_F3: number /*int*/
+                public static readonly VK_F3: number /*int*/
                 /**
                  * Constant for the F4 function key.
                  */
                 // @ts-ignore
-                readonly VK_F4: number /*int*/
+                public static readonly VK_F4: number /*int*/
                 /**
                  * Constant for the F5 function key.
                  */
                 // @ts-ignore
-                readonly VK_F5: number /*int*/
+                public static readonly VK_F5: number /*int*/
                 /**
                  * Constant for the F6 function key.
                  */
                 // @ts-ignore
-                readonly VK_F6: number /*int*/
+                public static readonly VK_F6: number /*int*/
                 /**
                  * Constant for the F7 function key.
                  */
                 // @ts-ignore
-                readonly VK_F7: number /*int*/
+                public static readonly VK_F7: number /*int*/
                 /**
                  * Constant for the F8 function key.
                  */
                 // @ts-ignore
-                readonly VK_F8: number /*int*/
+                public static readonly VK_F8: number /*int*/
                 /**
                  * Constant for the F9 function key.
                  */
                 // @ts-ignore
-                readonly VK_F9: number /*int*/
+                public static readonly VK_F9: number /*int*/
                 /**
                  * Constant for the F10 function key.
                  */
                 // @ts-ignore
-                readonly VK_F10: number /*int*/
+                public static readonly VK_F10: number /*int*/
                 /**
                  * Constant for the F11 function key.
                  */
                 // @ts-ignore
-                readonly VK_F11: number /*int*/
+                public static readonly VK_F11: number /*int*/
                 /**
                  * Constant for the F12 function key.
                  */
                 // @ts-ignore
-                readonly VK_F12: number /*int*/
+                public static readonly VK_F12: number /*int*/
                 /**
                  * Constant for the F13 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F13: number /*int*/
+                public static readonly VK_F13: number /*int*/
                 /**
                  * Constant for the F14 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F14: number /*int*/
+                public static readonly VK_F14: number /*int*/
                 /**
                  * Constant for the F15 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F15: number /*int*/
+                public static readonly VK_F15: number /*int*/
                 /**
                  * Constant for the F16 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F16: number /*int*/
+                public static readonly VK_F16: number /*int*/
                 /**
                  * Constant for the F17 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F17: number /*int*/
+                public static readonly VK_F17: number /*int*/
                 /**
                  * Constant for the F18 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F18: number /*int*/
+                public static readonly VK_F18: number /*int*/
                 /**
                  * Constant for the F19 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F19: number /*int*/
+                public static readonly VK_F19: number /*int*/
                 /**
                  * Constant for the F20 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F20: number /*int*/
+                public static readonly VK_F20: number /*int*/
                 /**
                  * Constant for the F21 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F21: number /*int*/
+                public static readonly VK_F21: number /*int*/
                 /**
                  * Constant for the F22 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F22: number /*int*/
+                public static readonly VK_F22: number /*int*/
                 /**
                  * Constant for the F23 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F23: number /*int*/
+                public static readonly VK_F23: number /*int*/
                 /**
                  * Constant for the F24 function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_F24: number /*int*/
+                public static readonly VK_F24: number /*int*/
                 // @ts-ignore
-                readonly VK_PRINTSCREEN: number /*int*/
+                public static readonly VK_PRINTSCREEN: number /*int*/
                 // @ts-ignore
-                readonly VK_INSERT: number /*int*/
+                public static readonly VK_INSERT: number /*int*/
                 // @ts-ignore
-                readonly VK_HELP: number /*int*/
+                public static readonly VK_HELP: number /*int*/
                 // @ts-ignore
-                readonly VK_META: number /*int*/
+                public static readonly VK_META: number /*int*/
                 // @ts-ignore
-                readonly VK_BACK_QUOTE: number /*int*/
+                public static readonly VK_BACK_QUOTE: number /*int*/
                 // @ts-ignore
-                readonly VK_QUOTE: number /*int*/
+                public static readonly VK_QUOTE: number /*int*/
                 /**
                  * Constant for the numeric keypad <b>up</b> arrow key.
                  * @see #VK_UP
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_KP_UP: number /*int*/
+                public static readonly VK_KP_UP: number /*int*/
                 /**
                  * Constant for the numeric keypad <b>down</b> arrow key.
                  * @see #VK_DOWN
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_KP_DOWN: number /*int*/
+                public static readonly VK_KP_DOWN: number /*int*/
                 /**
                  * Constant for the numeric keypad <b>left</b> arrow key.
                  * @see #VK_LEFT
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_KP_LEFT: number /*int*/
+                public static readonly VK_KP_LEFT: number /*int*/
                 /**
                  * Constant for the numeric keypad <b>right</b> arrow key.
                  * @see #VK_RIGHT
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_KP_RIGHT: number /*int*/
+                public static readonly VK_KP_RIGHT: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_GRAVE: number /*int*/
+                public static readonly VK_DEAD_GRAVE: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_ACUTE: number /*int*/
+                public static readonly VK_DEAD_ACUTE: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_CIRCUMFLEX: number /*int*/
+                public static readonly VK_DEAD_CIRCUMFLEX: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_TILDE: number /*int*/
+                public static readonly VK_DEAD_TILDE: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_MACRON: number /*int*/
+                public static readonly VK_DEAD_MACRON: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_BREVE: number /*int*/
+                public static readonly VK_DEAD_BREVE: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_ABOVEDOT: number /*int*/
+                public static readonly VK_DEAD_ABOVEDOT: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_DIAERESIS: number /*int*/
+                public static readonly VK_DEAD_DIAERESIS: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_ABOVERING: number /*int*/
+                public static readonly VK_DEAD_ABOVERING: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_DOUBLEACUTE: number /*int*/
+                public static readonly VK_DEAD_DOUBLEACUTE: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_CARON: number /*int*/
+                public static readonly VK_DEAD_CARON: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_CEDILLA: number /*int*/
+                public static readonly VK_DEAD_CEDILLA: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_OGONEK: number /*int*/
+                public static readonly VK_DEAD_OGONEK: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_IOTA: number /*int*/
+                public static readonly VK_DEAD_IOTA: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_VOICED_SOUND: number /*int*/
+                public static readonly VK_DEAD_VOICED_SOUND: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DEAD_SEMIVOICED_SOUND: number /*int*/
+                public static readonly VK_DEAD_SEMIVOICED_SOUND: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_AMPERSAND: number /*int*/
+                public static readonly VK_AMPERSAND: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_ASTERISK: number /*int*/
+                public static readonly VK_ASTERISK: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_QUOTEDBL: number /*int*/
+                public static readonly VK_QUOTEDBL: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_LESS: number /*int*/
+                public static readonly VK_LESS: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_GREATER: number /*int*/
+                public static readonly VK_GREATER: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_BRACELEFT: number /*int*/
+                public static readonly VK_BRACELEFT: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_BRACERIGHT: number /*int*/
+                public static readonly VK_BRACERIGHT: number /*int*/
                 /**
                  * Constant for the "@" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_AT: number /*int*/
+                public static readonly VK_AT: number /*int*/
                 /**
                  * Constant for the ":" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_COLON: number /*int*/
+                public static readonly VK_COLON: number /*int*/
                 /**
                  * Constant for the "^" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_CIRCUMFLEX: number /*int*/
+                public static readonly VK_CIRCUMFLEX: number /*int*/
                 /**
                  * Constant for the "$" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_DOLLAR: number /*int*/
+                public static readonly VK_DOLLAR: number /*int*/
                 /**
                  * Constant for the Euro currency sign key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_EURO_SIGN: number /*int*/
+                public static readonly VK_EURO_SIGN: number /*int*/
                 /**
                  * Constant for the "!" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_EXCLAMATION_MARK: number /*int*/
+                public static readonly VK_EXCLAMATION_MARK: number /*int*/
                 /**
                  * Constant for the inverted exclamation mark key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_INVERTED_EXCLAMATION_MARK: number /*int*/
+                public static readonly VK_INVERTED_EXCLAMATION_MARK: number /*int*/
                 /**
                  * Constant for the "(" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_LEFT_PARENTHESIS: number /*int*/
+                public static readonly VK_LEFT_PARENTHESIS: number /*int*/
                 /**
                  * Constant for the "#" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_NUMBER_SIGN: number /*int*/
+                public static readonly VK_NUMBER_SIGN: number /*int*/
                 /**
                  * Constant for the "+" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_PLUS: number /*int*/
+                public static readonly VK_PLUS: number /*int*/
                 /**
                  * Constant for the ")" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_RIGHT_PARENTHESIS: number /*int*/
+                public static readonly VK_RIGHT_PARENTHESIS: number /*int*/
                 /**
                  * Constant for the "_" key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_UNDERSCORE: number /*int*/
+                public static readonly VK_UNDERSCORE: number /*int*/
                 /**
                  * Constant for the Microsoft Windows "Windows" key.
                  * It is used for both the left and right version of the key.
@@ -833,195 +833,195 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly VK_WINDOWS: number /*int*/
+                public static readonly VK_WINDOWS: number /*int*/
                 /**
                  * Constant for the Microsoft Windows Context Menu key.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly VK_CONTEXT_MENU: number /*int*/
+                public static readonly VK_CONTEXT_MENU: number /*int*/
                 // @ts-ignore
-                readonly VK_FINAL: number /*int*/
+                public static readonly VK_FINAL: number /*int*/
                 /**
                  * Constant for the Convert function key.
                  */
                 // @ts-ignore
-                readonly VK_CONVERT: number /*int*/
+                public static readonly VK_CONVERT: number /*int*/
                 /**
                  * Constant for the Don't Convert function key.
                  */
                 // @ts-ignore
-                readonly VK_NONCONVERT: number /*int*/
+                public static readonly VK_NONCONVERT: number /*int*/
                 /**
                  * Constant for the Accept or Commit function key.
                  */
                 // @ts-ignore
-                readonly VK_ACCEPT: number /*int*/
+                public static readonly VK_ACCEPT: number /*int*/
                 // @ts-ignore
-                readonly VK_MODECHANGE: number /*int*/
+                public static readonly VK_MODECHANGE: number /*int*/
                 // @ts-ignore
-                readonly VK_KANA: number /*int*/
+                public static readonly VK_KANA: number /*int*/
                 // @ts-ignore
-                readonly VK_KANJI: number /*int*/
+                public static readonly VK_KANJI: number /*int*/
                 /**
                  * Constant for the Alphanumeric function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_ALPHANUMERIC: number /*int*/
+                public static readonly VK_ALPHANUMERIC: number /*int*/
                 /**
                  * Constant for the Katakana function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_KATAKANA: number /*int*/
+                public static readonly VK_KATAKANA: number /*int*/
                 /**
                  * Constant for the Hiragana function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_HIRAGANA: number /*int*/
+                public static readonly VK_HIRAGANA: number /*int*/
                 /**
                  * Constant for the Full-Width Characters function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_FULL_WIDTH: number /*int*/
+                public static readonly VK_FULL_WIDTH: number /*int*/
                 /**
                  * Constant for the Half-Width Characters function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_HALF_WIDTH: number /*int*/
+                public static readonly VK_HALF_WIDTH: number /*int*/
                 /**
                  * Constant for the Roman Characters function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_ROMAN_CHARACTERS: number /*int*/
+                public static readonly VK_ROMAN_CHARACTERS: number /*int*/
                 /**
                  * Constant for the All Candidates function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_ALL_CANDIDATES: number /*int*/
+                public static readonly VK_ALL_CANDIDATES: number /*int*/
                 /**
                  * Constant for the Previous Candidate function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_PREVIOUS_CANDIDATE: number /*int*/
+                public static readonly VK_PREVIOUS_CANDIDATE: number /*int*/
                 /**
                  * Constant for the Code Input function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_CODE_INPUT: number /*int*/
+                public static readonly VK_CODE_INPUT: number /*int*/
                 /**
                  * Constant for the Japanese-Katakana function key.
                  * This key switches to a Japanese input method and selects its Katakana input mode.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_JAPANESE_KATAKANA: number /*int*/
+                public static readonly VK_JAPANESE_KATAKANA: number /*int*/
                 /**
                  * Constant for the Japanese-Hiragana function key.
                  * This key switches to a Japanese input method and selects its Hiragana input mode.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_JAPANESE_HIRAGANA: number /*int*/
+                public static readonly VK_JAPANESE_HIRAGANA: number /*int*/
                 /**
                  * Constant for the Japanese-Roman function key.
                  * This key switches to a Japanese input method and selects its Roman-Direct input mode.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_JAPANESE_ROMAN: number /*int*/
+                public static readonly VK_JAPANESE_ROMAN: number /*int*/
                 /**
                  * Constant for the locking Kana function key.
                  * This key locks the keyboard into a Kana layout.
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly VK_KANA_LOCK: number /*int*/
+                public static readonly VK_KANA_LOCK: number /*int*/
                 /**
                  * Constant for the input method on/off key.
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly VK_INPUT_METHOD_ON_OFF: number /*int*/
+                public static readonly VK_INPUT_METHOD_ON_OFF: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_CUT: number /*int*/
+                public static readonly VK_CUT: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_COPY: number /*int*/
+                public static readonly VK_COPY: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_PASTE: number /*int*/
+                public static readonly VK_PASTE: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_UNDO: number /*int*/
+                public static readonly VK_UNDO: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_AGAIN: number /*int*/
+                public static readonly VK_AGAIN: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_FIND: number /*int*/
+                public static readonly VK_FIND: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_PROPS: number /*int*/
+                public static readonly VK_PROPS: number /*int*/
                 /**
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_STOP: number /*int*/
+                public static readonly VK_STOP: number /*int*/
                 /**
                  * Constant for the Compose function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_COMPOSE: number /*int*/
+                public static readonly VK_COMPOSE: number /*int*/
                 /**
                  * Constant for the AltGraph function key.
                  * @since 1.2
                  */
                 // @ts-ignore
-                readonly VK_ALT_GRAPH: number /*int*/
+                public static readonly VK_ALT_GRAPH: number /*int*/
                 /**
                  * Constant for the Begin key.
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly VK_BEGIN: number /*int*/
+                public static readonly VK_BEGIN: number /*int*/
                 /**
                  * This value is used to indicate that the keyCode is unknown.
                  * KEY_TYPED events do not have a keyCode value; this value
                  * is used instead.
                  */
                 // @ts-ignore
-                readonly VK_UNDEFINED: number /*int*/
+                public static readonly VK_UNDEFINED: number /*int*/
                 /**
                  * KEY_PRESSED and KEY_RELEASED events which do not map to a
                  * valid Unicode character use this for the keyChar value.
                  */
                 // @ts-ignore
-                readonly CHAR_UNDEFINED: string
+                public static readonly CHAR_UNDEFINED: string
                 /**
                  * A constant indicating that the keyLocation is indeterminate
                  * or not relevant.
@@ -1030,7 +1030,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly KEY_LOCATION_UNKNOWN: number /*int*/
+                public static readonly KEY_LOCATION_UNKNOWN: number /*int*/
                 /**
                  * A constant indicating that the key pressed or released
                  * is not distinguished as the left or right version of a key,
@@ -1040,7 +1040,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly KEY_LOCATION_STANDARD: number /*int*/
+                public static readonly KEY_LOCATION_STANDARD: number /*int*/
                 /**
                  * A constant indicating that the key pressed or released is in
                  * the left key location (there is more than one possible location
@@ -1048,7 +1048,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly KEY_LOCATION_LEFT: number /*int*/
+                public static readonly KEY_LOCATION_LEFT: number /*int*/
                 /**
                  * A constant indicating that the key pressed or released is in
                  * the right key location (there is more than one possible location
@@ -1056,7 +1056,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly KEY_LOCATION_RIGHT: number /*int*/
+                public static readonly KEY_LOCATION_RIGHT: number /*int*/
                 /**
                  * A constant indicating that the key event originated on the
                  * numeric keypad or with a virtual key corresponding to the
@@ -1064,7 +1064,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly KEY_LOCATION_NUMPAD: number /*int*/
+                public static readonly KEY_LOCATION_NUMPAD: number /*int*/
                 /**
                  * Returns the integer keyCode associated with the key in this event.
                  * @return the integer code for an actual key on the keyboard.
@@ -1072,13 +1072,13 @@ declare namespace java {
                  *          <code>VK_UNDEFINED</code>.)
                  */
                 // @ts-ignore
-                getKeyCode(): int
+                public getKeyCode(): number /*int*/
                 /**
                  * Set the keyCode value to indicate a physical key.
                  * @param keyCode an integer corresponding to an actual key on the keyboard.
                  */
                 // @ts-ignore
-                setKeyCode(keyCode: number /*int*/): void
+                public setKeyCode(keyCode: number /*int*/): void
                 /**
                  * Returns the character associated with the key in this event.
                  * For example, the <code>KEY_TYPED</code> event for shift + "a"
@@ -1093,14 +1093,14 @@ declare namespace java {
                  *          <code>CHAR_UNDEFINED</code> is returned.
                  */
                 // @ts-ignore
-                getKeyChar(): char
+                public getKeyChar(): string
                 /**
                  * Set the keyChar value to indicate a logical character.
                  * @param keyChar a char corresponding to to the combination of keystrokes
                  *                 that make up this event.
                  */
                 // @ts-ignore
-                setKeyChar(keyChar: string): void
+                public setKeyChar(keyChar: string): void
                 /**
                  * Set the modifiers to indicate additional keys that were held down
                  * (e.g. shift, ctrl, alt, meta) defined as part of InputEvent.
@@ -1114,7 +1114,7 @@ declare namespace java {
                  * @deprecated as of JDK1.1.4
                  */
                 // @ts-ignore
-                setModifiers(modifiers: number /*int*/): void
+                public setModifiers(modifiers: number /*int*/): void
                 /**
                  * Returns the location of the key that originated this key event.
                  * Some keys occur more than once on a keyboard, e.g. the left and
@@ -1126,7 +1126,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getKeyLocation(): int
+                public getKeyLocation(): number /*int*/
                 /**
                  * Returns a String describing the keyCode, such as "HOME", "F1" or "A".
                  * These strings can be localized by changing the awt.properties file.
@@ -1134,7 +1134,7 @@ declare namespace java {
                  *          identified by its keyCode
                  */
                 // @ts-ignore
-                getKeyText(keyCode: number /*int*/): java.lang.String
+                public static getKeyText(keyCode: number /*int*/): string
                 /**
                  * Returns a <code>String</code> describing the modifier key(s),
                  * such as "Shift", or "Ctrl+Shift".  These strings can be
@@ -1151,7 +1151,7 @@ declare namespace java {
                  * @see InputEvent#getModifiersExText(int)
                  */
                 // @ts-ignore
-                getKeyModifiersText(modifiers: number /*int*/): java.lang.String
+                public static getKeyModifiersText(modifiers: number /*int*/): string
                 /**
                  * Returns whether the key in this event is an "action" key.
                  * Typically an action key does not fire a unicode character and is
@@ -1160,14 +1160,14 @@ declare namespace java {
                  *          <code>false</code> otherwise
                  */
                 // @ts-ignore
-                isActionKey(): boolean
+                public isActionKey(): boolean
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
                 /**
                  * Returns an extended key code for the event.
                  * The extended key code is a unique id assigned to  a key on the keyboard
@@ -1179,7 +1179,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getExtendedKeyCode(): int
+                public getExtendedKeyCode(): number /*int*/
                 /**
                  * Returns an extended key code for a unicode character.
                  * @return for a unicode character with a corresponding {#code VK_} constant -- this
@@ -1190,7 +1190,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getExtendedKeyCodeForChar(c: number /*int*/): int
+                public static getExtendedKeyCodeForChar(c: number /*int*/): number /*int*/
             }
         }
     }

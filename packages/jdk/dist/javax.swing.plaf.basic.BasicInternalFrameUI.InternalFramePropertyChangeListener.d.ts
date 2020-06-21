@@ -12,7 +12,7 @@ declare namespace javax {
                          * actions.
                          */
                         // @ts-ignore
-                        propertyChange(evt: java.beans.PropertyChangeEvent): void
+                        public propertyChange(evt: java.beans.PropertyChangeEvent): void
                     }
                 }
             }

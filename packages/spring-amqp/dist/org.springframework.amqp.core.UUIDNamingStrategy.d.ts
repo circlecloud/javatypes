@@ -16,9 +16,9 @@ declare namespace org {
                      * The default instance.
                      */
                     // @ts-ignore
-                    readonly DEFAULT: org.springframework.amqp.core.UUIDNamingStrategy
+                    public static readonly DEFAULT: org.springframework.amqp.core.UUIDNamingStrategy
                     // @ts-ignore
-                    generateName(): java.lang.String
+                    public generateName(): string
                 }
             }
         }

@@ -21,14 +21,14 @@ declare namespace java {
                  * @return a new MethodType with the parameter at position changed
                  */
                 // @ts-ignore
-                changeParameterType(position: number /*int*/, type: java.lang.Class<any>): java.lang.invoke.MethodType
+                public changeParameterType(position: number /*int*/, type: java.lang.Class<any>): java.lang.invoke.MethodType
                 /**
                  * Convenience method to create a new MethodType with a changed return type.
                  * @param type - the Class that the return type should be changed to.
                  * @return a new MethodType with a changed return type
                  */
                 // @ts-ignore
-                changeReturnType(type: java.lang.Class<any>): java.lang.invoke.MethodType
+                public changeReturnType(type: java.lang.Class<any>): java.lang.invoke.MethodType
                 /**
                  * Convenience method to create a new MethodType after dropping the
                  * parameters between startPosition and endPosition.
@@ -38,21 +38,21 @@ declare namespace java {
                  * @throws IndexOutOfBoundsException if the startPosition or endPosition are not valid indexes or if the startPosition is greater than the endPosition
                  */
                 // @ts-ignore
-                dropParameterTypes(startPosition: number /*int*/, endPosition: number /*int*/): java.lang.invoke.MethodType
+                public dropParameterTypes(startPosition: number /*int*/, endPosition: number /*int*/): java.lang.invoke.MethodType
                 /**
                  * Compares the specified object with this type for equality.
                  * That is, it returns true if and only if the specified object
                  * is also a method type with exactly the same parameters and return type.
                  */
                 // @ts-ignore
-                equals(x: any): boolean
+                public equals(x: java.lang.Object | any): boolean
                 /**
                  * Convenience method erase all reference types to Object.  Primitive and void
                  * remain unchanged.
                  * @return a new MethodType with all non-primitive or void return type and parameters changed to Object.
                  */
                 // @ts-ignore
-                erase(): java.lang.invoke.MethodType
+                public erase(): java.lang.invoke.MethodType
                 /**
                  * Convenience Method to create a MethodType from bytecode-level method descriptor.
                  * (See JVM Spec 2nd Ed. section 4.4.3).
@@ -78,13 +78,13 @@ declare namespace java {
                  * @throws TypeNotPresentException - if a named type cannot be found
                  */
                 // @ts-ignore
-                fromMethodDescriptorString(methodDescriptor: string, loader: java.lang.ClassLoader): java.lang.invoke.MethodType
+                public static fromMethodDescriptorString(methodDescriptor: java.lang.String | string, loader: java.lang.ClassLoader): java.lang.invoke.MethodType
                 /**
                  * Convenience method to convert all types to Object.
                  * @return a new MethodType with both return and parameter types changed to Object
                  */
                 // @ts-ignore
-                generic(): java.lang.invoke.MethodType
+                public generic(): java.lang.invoke.MethodType
                 /**
                  * Returns the MethodType's hash code, which is defined to be
                  * the same as the hash code of a List composed of the return type
@@ -92,14 +92,14 @@ declare namespace java {
                  * @return the MethodType's hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Helper method to determine if the return type or any of the parameter types
                  * are primitives.
                  * @return whether the MethodType contains any primitive types
                  */
                 // @ts-ignore
-                hasPrimitives(): boolean
+                public hasPrimitives(): boolean
                 /**
                  * Helper method to determine if the return type or any of the parameter types
                  * are wrappers.  Wrappers are the boxed versions of primitives.
@@ -109,7 +109,7 @@ declare namespace java {
                  * @return whether the MethodType contains any wrapper types
                  */
                 // @ts-ignore
-                hasWrappers(): boolean
+                public hasWrappers(): boolean
                 /**
                  * Return a new MethodType with an additional parameters inserted at position, which
                  * is a zero based index.
@@ -119,7 +119,7 @@ declare namespace java {
                  * @throws IndexOutOfBoundsException if position is less than 0 or greater than than the number of arguments
                  */
                 // @ts-ignore
-                insertParameterTypes(position: number /*int*/, ...types: java.lang.Class[]): java.lang.invoke.MethodType
+                public insertParameterTypes(position: number /*int*/, ...types: java.lang.Class<any>[]): java.lang.invoke.MethodType
                 /**
                  * Return a new MethodType with an additional parameters inserted at position, which
                  * is a zero based index.
@@ -129,14 +129,14 @@ declare namespace java {
                  * @throws IllegalArgumentException if position is less than 0 or greater than than the number of arguments
                  */
                 // @ts-ignore
-                insertParameterTypes(position: number /*int*/, types: Array<java.lang.Class<any>>): java.lang.invoke.MethodType
+                public insertParameterTypes(position: number /*int*/, types: java.util.List<java.lang.Class<any>> | Array<java.lang.Class<any>>): java.lang.invoke.MethodType
                 /**
                  * Create a MethodType object with the specified return type and no parameters
                  * @param type - the return type of the MethodHandle
                  * @return a new MethodHandle object
                  */
                 // @ts-ignore
-                methodType(type: java.lang.Class<any>): java.lang.invoke.MethodType
+                public static methodType(type: java.lang.Class<any>): java.lang.invoke.MethodType
                 /**
                  * Return a MethodType object with the specified return type and a single parameter
                  * of type 'parameter0'.
@@ -145,7 +145,7 @@ declare namespace java {
                  * @return a new MethodHandle object
                  */
                 // @ts-ignore
-                methodType(type: java.lang.Class<any>, parameter0: java.lang.Class<any>): java.lang.invoke.MethodType
+                public static methodType(type: java.lang.Class<any>, parameter0: java.lang.Class<any>): java.lang.invoke.MethodType
                 /**
                  * Return a MethodType object with the parameter and return types as requested.
                  * @param returnType - the MethodType's return type
@@ -155,7 +155,7 @@ declare namespace java {
                  * @throws IllegalArgumentException - if any of the parameters is void
                  */
                 // @ts-ignore
-                methodType(returnType: java.lang.Class<any>, parameters: java.lang.Class[]): java.lang.invoke.MethodType
+                public static methodType(returnType: java.lang.Class<any>, parameters: java.lang.Class<any>[]): java.lang.invoke.MethodType
                 /**
                  * Wrapper on {@link MethodType#methodType(Class, Class[])}.
                  * <br>
@@ -166,7 +166,7 @@ declare namespace java {
                  * @return a MethodType object
                  */
                 // @ts-ignore
-                methodType(type: java.lang.Class<any>, parameter0: java.lang.Class<any>, ...parameters: java.lang.Class[]): java.lang.invoke.MethodType
+                public static methodType(type: java.lang.Class<any>, parameter0: java.lang.Class<any>, ...parameters: java.lang.Class<any>[]): java.lang.invoke.MethodType
                 /**
                  * Wrapper on {@link MethodType#methodType(Class, Class[])}
                  * @param type - the return type
@@ -174,7 +174,7 @@ declare namespace java {
                  * @return a MethodType object
                  */
                 // @ts-ignore
-                methodType(type: java.lang.Class<any>, parameters: Array<java.lang.Class<any>>): java.lang.invoke.MethodType
+                public static methodType(type: java.lang.Class<any>, parameters: java.util.List<java.lang.Class<any>> | Array<java.lang.Class<any>>): java.lang.invoke.MethodType
                 /**
                  * Wrapper on {@link #methodType(Class, Class[])}.
                  * Return a MethodType made from the returnType and parameters of the passed in MethodType.
@@ -183,7 +183,7 @@ declare namespace java {
                  * @return a MethodType object made by changing the return type of the passed in MethodType
                  */
                 // @ts-ignore
-                methodType(returnType: java.lang.Class<any>, methodType: java.lang.invoke.MethodType): java.lang.invoke.MethodType
+                public static methodType(returnType: java.lang.Class<any>, methodType: java.lang.invoke.MethodType): java.lang.invoke.MethodType
                 /**
                  * Static helper method to create a MethodType with only Object return type and parameters.
                  * @param numParameters - number of parameters
@@ -191,7 +191,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if numParameters is less than 0 or greater than the allowed number of arguments
                  */
                 // @ts-ignore
-                genericMethodType(numParameters: number /*int*/): java.lang.invoke.MethodType
+                public static genericMethodType(numParameters: number /*int*/): java.lang.invoke.MethodType
                 /**
                  * Wrapper on {@link #methodType(Class, Class[])}.
                  * <br>
@@ -204,7 +204,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if numParameters is less than 0 or greater than the allowed number of arguments (255 or 254 if isVarargs)
                  */
                 // @ts-ignore
-                genericMethodType(numParameters: number /*int*/, isVarargs: boolean): java.lang.invoke.MethodType
+                public static genericMethodType(numParameters: number /*int*/, isVarargs: boolean): java.lang.invoke.MethodType
                 /**
                  * Helper method to return the parameter types in an array.
                  * <br>
@@ -212,13 +212,13 @@ declare namespace java {
                  * @return the parameter types as an array
                  */
                 // @ts-ignore
-                parameterArray(): java.lang.Class[]
+                public parameterArray(): java.lang.Class<any>[]
                 /**
                  * Helper method to return the number of parameters
                  * @return the number of parameters
                  */
                 // @ts-ignore
-                parameterCount(): int
+                public parameterCount(): number /*int*/
                 /**
                  * Helper method to return the parameter types in a List.
                  * <br>
@@ -226,7 +226,7 @@ declare namespace java {
                  * @return the parameter types as a List
                  */
                 // @ts-ignore
-                parameterList(): java.util.List<java.lang.Class<?>>
+                public parameterList(): Array<java.lang.Class<any>>
                 /**
                  * Return the type of the parameter at position.
                  * @param position - the parameter to get the type of
@@ -234,19 +234,19 @@ declare namespace java {
                  * @throws IndexOutOfBoundsException if position is less than 0 or an invalid argument index.
                  */
                 // @ts-ignore
-                parameterType(position: number /*int*/): java.lang.Class<?>
+                public parameterType(position: number /*int*/): java.lang.Class<any>
                 /**
                  * @return the type of the return
                  */
                 // @ts-ignore
-                returnType(): java.lang.Class<?>
+                public returnType(): java.lang.Class<any>
                 /**
                  * Create a method descriptor string for this MethodType.
                  * @return a method descriptor string
                  * @see #fromMethodDescriptorString(String, ClassLoader)
                  */
                 // @ts-ignore
-                toMethodDescriptorString(): java.lang.String
+                public toMethodDescriptorString(): string
                 /**
                  * Return a string representation of the MethodType in the form: '(A0,A2,A3...)R'.
                  * The simple name of each class is used.
@@ -254,7 +254,7 @@ declare namespace java {
                  * Note that this is not the same as {@link #toMethodDescriptorString()}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Wrapper method on {@link #methodType(Class, Class[])}.  Replaces all wrapper types with
                  * the appropriate primitive types, including changing {@link java.lang.Void} to
@@ -263,7 +263,7 @@ declare namespace java {
                  * @see #wrap()
                  */
                 // @ts-ignore
-                unwrap(): java.lang.invoke.MethodType
+                public unwrap(): java.lang.invoke.MethodType
                 /**
                  * Wrapper method on {@link #methodType(Class, Class[])}.  Replaces all primitive types with
                  * the appropriate wrapper types, including changing void to {@link java.lang.Void}.
@@ -271,7 +271,7 @@ declare namespace java {
                  * @see #unwrap()
                  */
                 // @ts-ignore
-                wrap(): java.lang.invoke.MethodType
+                public wrap(): java.lang.invoke.MethodType
                 /**
                  * Returns a MethodType with the additional class types appended to the end.
                  * @param classes - the new parameter types to add to the end of the MethodType's argument types
@@ -280,7 +280,7 @@ declare namespace java {
                  * @throws NullPointerException - if the <i>classes</i> array is null or contains null
                  */
                 // @ts-ignore
-                appendParameterTypes(...classes: java.lang.Class[]): java.lang.invoke.MethodType
+                public appendParameterTypes(...classes: java.lang.Class<any>[]): java.lang.invoke.MethodType
                 /**
                  * Returns a MethodType with the additional class types appended to the end.
                  * @param classes - the new parameter types to add to the end of the MethodType's argument types
@@ -289,7 +289,7 @@ declare namespace java {
                  * @throws NullPointerException - if the <i>classes</i> is null or contains null
                  */
                 // @ts-ignore
-                appendParameterTypes(classes: Array<java.lang.Class<any>>): java.lang.invoke.MethodType
+                public appendParameterTypes(classes: java.util.List<java.lang.Class<any>> | Array<java.lang.Class<any>>): java.lang.invoke.MethodType
             }
         }
     }

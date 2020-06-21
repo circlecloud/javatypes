@@ -57,7 +57,7 @@ declare namespace java {
              * A constant indicating that transactions are not supported.
              */
             // @ts-ignore
-            
+            readonly TRANSACTION_NONE: number /*int*/
             /**
              * A constant indicating that
              * dirty reads, non-repeatable reads and phantom reads can occur.
@@ -67,7 +67,7 @@ declare namespace java {
              * the second transaction will have retrieved an invalid row.
              */
             // @ts-ignore
-            
+            readonly TRANSACTION_READ_UNCOMMITTED: number /*int*/
             /**
              * A constant indicating that
              * dirty reads are prevented; non-repeatable reads and phantom
@@ -75,7 +75,7 @@ declare namespace java {
              * from reading a row with uncommitted changes in it.
              */
             // @ts-ignore
-            
+            readonly TRANSACTION_READ_COMMITTED: number /*int*/
             /**
              * A constant indicating that
              * dirty reads and non-repeatable reads are prevented; phantom
@@ -87,7 +87,7 @@ declare namespace java {
              * (a "non-repeatable read").
              */
             // @ts-ignore
-            
+            readonly TRANSACTION_REPEATABLE_READ: number /*int*/
             /**
              * A constant indicating that
              * dirty reads, non-repeatable reads and phantom reads are prevented.
@@ -100,7 +100,7 @@ declare namespace java {
              * "phantom" row in the second read.
              */
             // @ts-ignore
-            
+            readonly TRANSACTION_SERIALIZABLE: number /*int*/
             /**
              * Creates a <code>Statement</code> object for sending
              * SQL statements to the database.
@@ -151,7 +151,7 @@ declare namespace java {
              *  or this method is called on a closed connection
              */
             // @ts-ignore
-            prepareStatement(sql: string): java.sql.PreparedStatement
+            prepareStatement(sql: java.lang.String | string): java.sql.PreparedStatement
             /**
              * Creates a <code>CallableStatement</code> object for calling
              * database stored procedures.
@@ -181,7 +181,7 @@ declare namespace java {
              *  or this method is called on a closed connection
              */
             // @ts-ignore
-            prepareCall(sql: string): java.sql.CallableStatement
+            prepareCall(sql: java.lang.String | string): java.sql.CallableStatement
             /**
              * Converts the given SQL statement into the system's native SQL grammar.
              * A driver may convert the JDBC SQL grammar into its system's
@@ -194,7 +194,7 @@ declare namespace java {
              *  or this method is called on a closed connection
              */
             // @ts-ignore
-            nativeSQL(sql: string): java.lang.String
+            nativeSQL(sql: java.lang.String | string): string
             /**
              * Sets this connection's auto-commit mode to the given state.
              * If a connection is in auto-commit mode, then all its SQL
@@ -360,7 +360,7 @@ declare namespace java {
              * @see #getCatalog
              */
             // @ts-ignore
-            setCatalog(catalog: string): void
+            setCatalog(catalog: java.lang.String | string): void
             /**
              * Retrieves this <code>Connection</code> object's current catalog name.
              * @return the current catalog name or <code>null</code> if there is none
@@ -369,7 +369,7 @@ declare namespace java {
              * @see #setCatalog
              */
             // @ts-ignore
-            getCatalog(): java.lang.String
+            getCatalog(): string
             /**
              * Attempts to change the transaction isolation level for this
              * <code>Connection</code> object to the one given.
@@ -409,7 +409,7 @@ declare namespace java {
              * @see #setTransactionIsolation
              */
             // @ts-ignore
-            getTransactionIsolation(): int
+            getTransactionIsolation(): number /*int*/
             /**
              * Retrieves the first warning reported by calls on this
              * <code>Connection</code> object.  If there is more than one
@@ -501,7 +501,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            prepareStatement(sql: string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/): java.sql.PreparedStatement
+            prepareStatement(sql: java.lang.String | string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/): java.sql.PreparedStatement
             /**
              * Creates a <code>CallableStatement</code> object that will generate
              * <code>ResultSet</code> objects with the given type and concurrency.
@@ -532,7 +532,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            prepareCall(sql: string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/): java.sql.CallableStatement
+            prepareCall(sql: java.lang.String | string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/): java.sql.CallableStatement
             /**
              * Retrieves the <code>Map</code> object associated with this
              * <code>Connection</code> object.
@@ -558,7 +558,7 @@ declare namespace java {
              * @see #setTypeMap
              */
             // @ts-ignore
-            getTypeMap(): java.util.Map<java.lang.String, java.lang.Class<?>>
+            getTypeMap(): java.util.Map<java.lang.String | string, java.lang.Class<any>>
             /**
              * Installs the given <code>TypeMap</code> object as the type map for
              * this <code>Connection</code> object.  The type map will be used for the
@@ -585,7 +585,7 @@ declare namespace java {
              * @see #getTypeMap
              */
             // @ts-ignore
-            setTypeMap(map: java.util.Map<java.lang.String, java.lang.Class<any>>): void
+            setTypeMap(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): void
             /**
              * Changes the default holdability of <code>ResultSet</code> objects
              * created using this <code>Connection</code> object to the given
@@ -620,7 +620,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getHoldability(): int
+            getHoldability(): number /*int*/
             /**
              * Creates an unnamed savepoint in the current transaction and
              * returns the new <code>Savepoint</code> object that represents it.
@@ -657,7 +657,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setSavepoint(name: string): java.sql.Savepoint
+            setSavepoint(name: java.lang.String | string): java.sql.Savepoint
             /**
              * Undoes all changes made after the given <code>Savepoint</code> object
              * was set.
@@ -767,7 +767,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            prepareStatement(sql: string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/, resultSetHoldability: number /*int*/): java.sql.PreparedStatement
+            prepareStatement(sql: java.lang.String | string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/, resultSetHoldability: number /*int*/): java.sql.PreparedStatement
             /**
              * Creates a <code>CallableStatement</code> object that will generate
              * <code>ResultSet</code> objects with the given type and concurrency.
@@ -804,7 +804,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            prepareCall(sql: string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/, resultSetHoldability: number /*int*/): java.sql.CallableStatement
+            prepareCall(sql: java.lang.String | string, resultSetType: number /*int*/, resultSetConcurrency: number /*int*/, resultSetHoldability: number /*int*/): java.sql.CallableStatement
             /**
              * Creates a default <code>PreparedStatement</code> object that has
              * the capability to retrieve auto-generated keys. The given constant
@@ -847,7 +847,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            prepareStatement(sql: string, autoGeneratedKeys: number /*int*/): java.sql.PreparedStatement
+            prepareStatement(sql: java.lang.String | string, autoGeneratedKeys: number /*int*/): java.sql.PreparedStatement
             /**
              * Creates a default <code>PreparedStatement</code> object capable
              * of returning the auto-generated keys designated by the given array.
@@ -892,7 +892,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            prepareStatement(sql: string, columnIndexes: number /*int*/[]): java.sql.PreparedStatement
+            prepareStatement(sql: java.lang.String | string, columnIndexes: number /*int*/[]): java.sql.PreparedStatement
             /**
              * Creates a default <code>PreparedStatement</code> object capable
              * of returning the auto-generated keys designated by the given array.
@@ -937,7 +937,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            prepareStatement(sql: string, columnNames: string[]): java.sql.PreparedStatement
+            prepareStatement(sql: java.lang.String | string, columnNames: java.lang.String[] | string[]): java.sql.PreparedStatement
             /**
              * Constructs an object that implements the <code>Clob</code> interface. The object
              * returned initially contains no data.  The <code>setAsciiStream</code>,
@@ -1074,7 +1074,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setClientInfo(name: string, value: string): void
+            setClientInfo(name: java.lang.String | string, value: java.lang.String | string): void
             /**
              * Sets the value of the connection's client info properties.  The
              * <code>Properties</code> object contains the names and values of the client info
@@ -1127,7 +1127,7 @@ declare namespace java {
              * @see java.sql.DatabaseMetaData#getClientInfoProperties
              */
             // @ts-ignore
-            getClientInfo(name: string): java.lang.String
+            getClientInfo(name: java.lang.String | string): string
             /**
              * Returns a list containing the name and current value of each client info
              * property supported by the driver.  The value of a client info property
@@ -1171,7 +1171,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            createArrayOf(typeName: string, elements: any[]): java.sql.Array
+            createArrayOf(typeName: java.lang.String | string, elements: java.lang.Object[] | any[]): java.sql.Array
             /**
              * Factory method for creating Struct objects.
              * @param typeName the SQL type name of the SQL structured type that this <code>Struct</code>
@@ -1185,7 +1185,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            createStruct(typeName: string, attributes: any[]): java.sql.Struct
+            createStruct(typeName: java.lang.String | string, attributes: java.lang.Object[] | any[]): java.sql.Struct
             /**
              * Sets the given schema name to access.
              * <P>
@@ -1205,7 +1205,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setSchema(schema: string): void
+            setSchema(schema: java.lang.String | string): void
             /**
              * Retrieves this <code>Connection</code> object's current schema name.
              * @return the current schema name or <code>null</code> if there is none
@@ -1215,7 +1215,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getSchema(): java.lang.String
+            getSchema(): string
             /**
              * Terminates an open connection.  Calling <code>abort</code> results in:
              * <ul>
@@ -1357,7 +1357,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getNetworkTimeout(): int
+            getNetworkTimeout(): number /*int*/
         }
     }
 }

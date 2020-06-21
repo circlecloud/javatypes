@@ -171,7 +171,7 @@ declare namespace org {
                  * @param mainClass Full location of the main class of this plugin
                  */
                 // @ts-ignore
-                constructor(pluginName: string, pluginVersion: string, mainClass: string)
+                constructor(pluginName: java.lang.String | string, pluginVersion: java.lang.String | string, mainClass: java.lang.String | string)
                 /**
                  * Gives the name of the plugin. This name is a unique identifier for
                  * plugins.
@@ -197,7 +197,7 @@ declare namespace org {
                  * @return the name of the plugin
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Gives the list of other plugin APIs which this plugin provides.
                  * These are usable for other plugins to depend on.
@@ -224,7 +224,7 @@ declare namespace org {
                  * @return immutable list of the plugin APIs which this plugin provides
                  */
                 // @ts-ignore
-                getProvides(): java.util.List<java.lang.String>
+                public getProvides(): Array<java.lang.String | string>
                 /**
                  * Gives the version of the plugin.
                  * <ul>
@@ -241,7 +241,7 @@ declare namespace org {
                  * @return the version of the plugin
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                public getVersion(): string
                 /**
                  * Gives the fully qualified name of the main class for a plugin. The
                  * format should follow the {@link ClassLoader#loadClass(String)} syntax
@@ -264,7 +264,7 @@ declare namespace org {
                  * @return the fully qualified main class for the plugin
                  */
                 // @ts-ignore
-                getMain(): java.lang.String
+                public getMain(): string
                 /**
                  * Gives a human-friendly description of the functionality the plugin
                  * provides.
@@ -280,7 +280,7 @@ declare namespace org {
                  * @return description of this plugin, or null if not specified
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Gives the phase of server startup that the plugin should be loaded.
                  * <ul>
@@ -300,7 +300,7 @@ declare namespace org {
                  * @return the phase when the plugin should be loaded
                  */
                 // @ts-ignore
-                getLoad(): org.bukkit.plugin.PluginLoadOrder
+                public getLoad(): org.bukkit.plugin.PluginLoadOrder
                 /**
                  * Gives the list of authors for the plugin.
                  * <ul>
@@ -332,7 +332,7 @@ declare namespace org {
                  * @return an immutable list of the plugin's authors
                  */
                 // @ts-ignore
-                getAuthors(): java.util.List<java.lang.String>
+                public getAuthors(): Array<java.lang.String | string>
                 /**
                  * Gives the plugin's or plugin's author's website.
                  * <ul>
@@ -348,7 +348,7 @@ declare namespace org {
                  * @return description of this plugin, or null if not specified
                  */
                 // @ts-ignore
-                getWebsite(): java.lang.String
+                public getWebsite(): string
                 /**
                  * Gives a list of other plugins that the plugin requires.
                  * <ul>
@@ -375,7 +375,7 @@ declare namespace org {
                  * @return immutable list of the plugin's dependencies
                  */
                 // @ts-ignore
-                getDepend(): java.util.List<java.lang.String>
+                public getDepend(): Array<java.lang.String | string>
                 /**
                  * Gives a list of other plugins that the plugin requires for full
                  * functionality. The {@link PluginManager} will make best effort to treat
@@ -401,7 +401,7 @@ declare namespace org {
                  * @return immutable list of the plugin's preferred dependencies
                  */
                 // @ts-ignore
-                getSoftDepend(): java.util.List<java.lang.String>
+                public getSoftDepend(): Array<java.lang.String | string>
                 /**
                  * Gets the list of plugins that should consider this plugin a
                  * soft-dependency.
@@ -427,7 +427,7 @@ declare namespace org {
                  *      soft-dependency
                  */
                 // @ts-ignore
-                getLoadBefore(): java.util.List<java.lang.String>
+                public getLoadBefore(): Array<java.lang.String | string>
                 /**
                  * Gives the token to prefix plugin-specific logging messages with.
                  * <ul>
@@ -443,7 +443,7 @@ declare namespace org {
                  * @return the prefixed logging token, or null if not specified
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                public getPrefix(): string
                 /**
                  * Gives the map of command-name to command-properties. Each entry in this
                  * map corresponds to a single command and the respective values are the
@@ -558,7 +558,7 @@ declare namespace org {
                  * @return the commands this plugin will register
                  */
                 // @ts-ignore
-                getCommands(): java.util.Map<java.lang.String, java.util.Map<java.lang.String, java.lang.Object>>
+                public getCommands(): java.util.Map<java.lang.String | string, java.util.Map<java.lang.String | string, java.lang.Object | any>>
                 /**
                  * Gives the list of permissions the plugin will register at runtime,
                  * immediately proceding enabling. The format for defining permissions is
@@ -667,7 +667,7 @@ declare namespace org {
                  * @return the permissions this plugin will register
                  */
                 // @ts-ignore
-                getPermissions(): java.util.List<org.bukkit.permissions.Permission>
+                public getPermissions(): Array<org.bukkit.permissions.Permission>
                 /**
                  * Gives the default {@link Permission#getDefault() default} state of
                  * {@link #getPermissions() permissions} registered for the plugin.
@@ -685,7 +685,7 @@ declare namespace org {
                  * @return the default value for the plugin's permissions
                  */
                 // @ts-ignore
-                getPermissionDefault(): org.bukkit.permissions.PermissionDefault
+                public getPermissionDefault(): org.bukkit.permissions.PermissionDefault
                 /**
                  * Gives a set of every {@link PluginAwareness} for a plugin. An awareness
                  * dictates something that a plugin developer acknowledges when the plugin
@@ -720,7 +720,7 @@ declare namespace org {
                  * @return a set containing every awareness for the plugin
                  */
                 // @ts-ignore
-                getAwareness(): java.util.Set<org.bukkit.plugin.PluginAwareness>
+                public getAwareness(): Array<org.bukkit.plugin.PluginAwareness>
                 /**
                  * Returns the name of a plugin, including the version. This method is
                  * provided for convenience; it uses the {@link #getName()} and {@link
@@ -728,7 +728,7 @@ declare namespace org {
                  * @return a descriptive name of the plugin and respective version
                  */
                 // @ts-ignore
-                getFullName(): java.lang.String
+                public getFullName(): string
                 /**
                  * Gives the API version which this plugin is designed to support. No
                  * specific format is guaranteed.
@@ -742,25 +742,25 @@ declare namespace org {
                  * @return the version of the plugin
                  */
                 // @ts-ignore
-                getAPIVersion(): java.lang.String
+                public getAPIVersion(): string
                 /**
                  * @return unused
                  * @deprecated unused
                  */
                 // @ts-ignore
-                getClassLoaderOf(): java.lang.String
+                public getClassLoaderOf(): string
                 /**
                  * Saves this PluginDescriptionFile to the given writer
                  * @param writer Writer to output this file to
                  */
                 // @ts-ignore
-                save(writer: java.io.Writer): void
+                public save(writer: java.io.Writer): void
                 /**
                  * @return internal use
                  * @deprecated Internal use
                  */
                 // @ts-ignore
-                getRawName(): java.lang.String
+                public getRawName(): string
             }
         }
     }

@@ -38,7 +38,7 @@ declare namespace javax {
                  *  is null or <code>key</code> is null or empty.
                  */
                 // @ts-ignore
-                constructor(key: number /*byte*/[], algorithm: string)
+                constructor(key: number /*byte*/[], algorithm: java.lang.String | string)
                 /**
                  * Constructs a secret key from the given byte array, using the first
                  * <code>len</code> bytes of <code>key</code>, starting at
@@ -75,32 +75,32 @@ declare namespace javax {
                  *  <code>key</code>.
                  */
                 // @ts-ignore
-                constructor(key: number /*byte*/[], offset: number /*int*/, len: number /*int*/, algorithm: string)
+                constructor(key: number /*byte*/[], offset: number /*int*/, len: number /*int*/, algorithm: java.lang.String | string)
                 /**
                  * Returns the name of the algorithm associated with this secret key.
                  * @return the secret key algorithm.
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
                 /**
                  * Returns the name of the encoding format for this secret key.
                  * @return the string "RAW".
                  */
                 // @ts-ignore
-                getFormat(): java.lang.String
+                public getFormat(): string
                 /**
                  * Returns the key material of this secret key.
                  * @return the key material. Returns a new array
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getEncoded(): byte[]
+                public getEncoded(): number /*byte*/[]
                 /**
                  * Calculates a hash code value for the object.
                  * Objects that are equal will also have the same hashcode.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Tests for equality between the specified object and this
                  * object. Two SecretKeySpec objects are considered equal if
@@ -111,7 +111,7 @@ declare namespace javax {
                  *  <code>obj</code> is null or otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

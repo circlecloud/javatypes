@@ -41,7 +41,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            x: number /*int*/
+            public x: number /*int*/
             /**
              * The Y coordinate of this <code>Point</code>.
              * If no Y coordinate is set it will default to 0.
@@ -51,19 +51,19 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            y: number /*int*/
+            public y: number /*int*/
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            getX(): double
+            public getX(): number /*double*/
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            getY(): double
+            public getY(): number /*double*/
             /**
              * Returns the location of this point.
              * This method is included for completeness, to parallel the
@@ -75,7 +75,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getLocation(): java.awt.Point
+            public getLocation(): java.awt.Point
             /**
              * Sets the location of the point to the specified location.
              * This method is included for completeness, to parallel the
@@ -86,7 +86,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setLocation(p: java.awt.Point): void
+            public setLocation(p: java.awt.Point): void
             /**
              * Changes the point to have the specified location.
              * <p>
@@ -101,7 +101,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setLocation(x: number /*int*/, y: number /*int*/): void
+            public setLocation(x: number /*int*/, y: number /*int*/): void
             /**
              * Sets the location of this point to the specified double coordinates.
              * The double values will be rounded to integer values.
@@ -114,7 +114,7 @@ declare namespace java {
              * @see #getLocation
              */
             // @ts-ignore
-            setLocation(x: number /*double*/, y: number /*double*/): void
+            public setLocation(x: number /*double*/, y: number /*double*/): void
             /**
              * Moves this point to the specified location in the
              * {@code (x,y)} coordinate plane. This method
@@ -124,7 +124,7 @@ declare namespace java {
              * @see java.awt.Component#setLocation(int, int)
              */
             // @ts-ignore
-            move(x: number /*int*/, y: number /*int*/): void
+            public move(x: number /*int*/, y: number /*int*/): void
             /**
              * Translates this point, at location {@code (x,y)},
              * by {@code dx} along the {@code x} axis and {@code dy}
@@ -136,7 +136,7 @@ declare namespace java {
              *                             along the Y axis
              */
             // @ts-ignore
-            translate(dx: number /*int*/, dy: number /*int*/): void
+            public translate(dx: number /*int*/, dy: number /*int*/): void
             /**
              * Determines whether or not two points are equal. Two instances of
              * <code>Point2D</code> are equal if the values of their
@@ -148,7 +148,7 @@ declare namespace java {
              *          the same values; <code>false</code> otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a string representation of this point and its location
              * in the {@code (x,y)} coordinate space. This method is
@@ -158,7 +158,7 @@ declare namespace java {
              * @return a string representation of this point
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

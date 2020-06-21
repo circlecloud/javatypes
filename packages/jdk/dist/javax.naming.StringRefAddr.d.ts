@@ -30,13 +30,13 @@ declare namespace javax {
              * @param addr The possibly null contents of the address in the form of a string.
              */
             // @ts-ignore
-            constructor(addrType: string, addr: string)
+            constructor(addrType: java.lang.String | string, addr: java.lang.String | string)
             /**
              * Retrieves the contents of this address. The result is a string.
              * @return The possibly null address contents.
              */
             // @ts-ignore
-            getContent(): java.lang.Object
+            public getContent(): any
         }
     }
 }

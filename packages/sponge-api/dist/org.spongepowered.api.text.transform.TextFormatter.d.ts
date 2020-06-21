@@ -14,7 +14,7 @@ declare namespace org {
                          * @return All elements
                          */
                         // @ts-ignore
-                        getAll(): <any>
+                        getAll(): object
                         /**
                          * Returns the element at the specified index.
                          * @param i Index to retrieve from
@@ -49,7 +49,7 @@ declare namespace org {
                          * @param <T> Type
                          */
                         // @ts-ignore
-                        forEachAfter<T extends org.spongepowered.api.text.TextRepresentable>(index: number /*int*/, clazz: java.lang.Class<T>, consumer: java.util.function.Consumer<T> | java.util.function$.Consumer<T>): void
+                        forEachAfter<T extends org.spongepowered.api.text.TextRepresentable>(index: number /*int*/, clazz: java.lang.Class<T>, consumer: java.util.function$.Consumer<T>): void
                         /**
                          * Applies the specified consumer to each element of the specified type
                          * after the specified index.
@@ -58,7 +58,7 @@ declare namespace org {
                          * @param <T> Type
                          */
                         // @ts-ignore
-                        forEach<T extends org.spongepowered.api.text.TextRepresentable>(clazz: java.lang.Class<T>, consumer: java.util.function.Consumer<T> | java.util.function$.Consumer<T>): void
+                        forEach<T extends org.spongepowered.api.text.TextRepresentable>(clazz: java.lang.Class<T>, consumer: java.util.function$.Consumer<T>): void
                         /**
                          * Replaces the element previously at the specified index with the
                          * specified element.
@@ -67,13 +67,13 @@ declare namespace org {
                          * @return Element previously at index
                          */
                         // @ts-ignore
-                        set(i: number /*int*/, e: E extends org.spongepowered.api.text.TextRepresentable): E
+                        set(i: number /*int*/, e: E): E
                         /**
                          * Returns the amount of elements in this formatter.
                          * @return Amount of elements
                          */
                         // @ts-ignore
-                        size(): int
+                        size(): number /*int*/
                         /**
                          * Returns true if the formatter contains no elements.
                          * @return True if contains no elements
@@ -86,7 +86,7 @@ declare namespace org {
                          * @return True if in formatter
                          */
                         // @ts-ignore
-                        contains(e: E extends org.spongepowered.api.text.TextRepresentable): boolean
+                        contains(e: E): boolean
                         /**
                          * Clears all elements from this formatter.
                          */
@@ -98,14 +98,14 @@ declare namespace org {
                          * @return True if the formatter changed as a result of the call
                          */
                         // @ts-ignore
-                        add(element: E extends org.spongepowered.api.text.TextRepresentable): boolean
+                        add(element: E): boolean
                         /**
                          * Adds the specified elements to the end of this formatter.
                          * @param elements Elements to add
                          * @return True if the formatter changed as a result of the call
                          */
                         // @ts-ignore
-                        add(elements: Array<E>): boolean
+                        add(elements: java.util.Collection<E> | Array<E>): boolean
                         /**
                          * Adds the specified elements to the end of this formatter.
                          * @param elements Elements to add
@@ -127,7 +127,7 @@ declare namespace org {
                          * @param element Element to insert
                          */
                         // @ts-ignore
-                        insert(i: number /*int*/, element: E extends org.spongepowered.api.text.TextRepresentable): void
+                        insert(i: number /*int*/, element: E): void
                         /**
                          * Inserts the specified elements at the specified index within the
                          * formatter.
@@ -135,7 +135,7 @@ declare namespace org {
                          * @param elements Elements to insert
                          */
                         // @ts-ignore
-                        insert(i: number /*int*/, elements: Array<E>): void
+                        insert(i: number /*int*/, elements: java.util.Collection<E> | Array<E>): void
                         /**
                          * Inserts the specified elements at the specified index within the
                          * formatter.
@@ -158,14 +158,14 @@ declare namespace org {
                          * @return True if this formatter contained the Element
                          */
                         // @ts-ignore
-                        remove(element: E extends org.spongepowered.api.text.TextRepresentable): boolean
+                        remove(element: E): boolean
                         /**
                          * Removes the specified elements from the formatter.
                          * @param elements Elements to remove
                          * @return True if the formatter changed as a result of this call
                          */
                         // @ts-ignore
-                        remove(elements: Array<E>): boolean
+                        remove(elements: java.util.Collection<E> | Array<E>): boolean
                         /**
                          * Removes the specified elements from the formatter.
                          * @param elements Elements to remove
@@ -187,7 +187,7 @@ declare namespace org {
                          * @return True if the formatter changed as a result of this call
                          */
                         // @ts-ignore
-                        retain(elements: Array<E>): boolean
+                        retain(elements: java.util.Collection<E> | Array<E>): boolean
                         /**
                          * Removes all elements from the formatter except for these specified
                          * elements.

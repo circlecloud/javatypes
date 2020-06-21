@@ -26,147 +26,147 @@ declare namespace org {
                  *      if parent contains no root Configuration.
                  */
                 // @ts-ignore
-                constructor(parent: org.bukkit.configuration.ConfigurationSection, path: string)
+                constructor(parent: org.bukkit.configuration.ConfigurationSection, path: java.lang.String | string)
                 // @ts-ignore
-                readonly map: java.util.Map<java.lang.String, java.lang.Object>
+                readonly map: java.util.Map<java.lang.String | string, java.lang.Object | any>
                 // @ts-ignore
-                getKeys(deep: boolean): java.util.Set<java.lang.String>
+                public getKeys(deep: boolean): Array<java.lang.String | string>
                 // @ts-ignore
-                getValues(deep: boolean): java.util.Map<java.lang.String, java.lang.Object>
+                public getValues(deep: boolean): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 // @ts-ignore
-                contains(path: string): boolean
+                public contains(path: java.lang.String | string): boolean
                 // @ts-ignore
-                contains(path: string, ignoreDefault: boolean): boolean
+                public contains(path: java.lang.String | string, ignoreDefault: boolean): boolean
                 // @ts-ignore
-                isSet(path: string): boolean
+                public isSet(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getCurrentPath(): java.lang.String
+                public getCurrentPath(): string
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 // @ts-ignore
-                getRoot(): org.bukkit.configuration.Configuration
+                public getRoot(): org.bukkit.configuration.Configuration
                 // @ts-ignore
-                getParent(): org.bukkit.configuration.ConfigurationSection
+                public getParent(): org.bukkit.configuration.ConfigurationSection
                 // @ts-ignore
-                addDefault(path: string, value: any): void
+                public addDefault(path: java.lang.String | string, value: java.lang.Object | any): void
                 // @ts-ignore
-                getDefaultSection(): org.bukkit.configuration.ConfigurationSection
+                public getDefaultSection(): org.bukkit.configuration.ConfigurationSection
                 // @ts-ignore
-                set(path: string, value: any): void
+                public set(path: java.lang.String | string, value: java.lang.Object | any): void
                 // @ts-ignore
-                get(path: string): java.lang.Object
+                public get(path: java.lang.String | string): any
                 // @ts-ignore
-                get(path: string, def: any): java.lang.Object
+                public get(path: java.lang.String | string, def: java.lang.Object | any): any
                 // @ts-ignore
-                createSection(path: string): org.bukkit.configuration.ConfigurationSection
+                public createSection(path: java.lang.String | string): org.bukkit.configuration.ConfigurationSection
                 // @ts-ignore
-                createSection(path: string, map: java.util.Map<any, ?>): org.bukkit.configuration.ConfigurationSection
+                public createSection(path: java.lang.String | string, map: java.util.Map<any, any>): org.bukkit.configuration.ConfigurationSection
                 // @ts-ignore
-                getString(path: string): java.lang.String
+                public getString(path: java.lang.String | string): string
                 // @ts-ignore
-                getString(path: string, def: string): java.lang.String
+                public getString(path: java.lang.String | string, def: java.lang.String | string): string
                 // @ts-ignore
-                isString(path: string): boolean
+                public isString(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getInt(path: string): int
+                public getInt(path: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getInt(path: string, def: number /*int*/): int
+                public getInt(path: java.lang.String | string, def: number /*int*/): number /*int*/
                 // @ts-ignore
-                isInt(path: string): boolean
+                public isInt(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getBoolean(path: string): boolean
+                public getBoolean(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getBoolean(path: string, def: boolean): boolean
+                public getBoolean(path: java.lang.String | string, def: boolean): boolean
                 // @ts-ignore
-                isBoolean(path: string): boolean
+                public isBoolean(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getDouble(path: string): double
+                public getDouble(path: java.lang.String | string): number /*double*/
                 // @ts-ignore
-                getDouble(path: string, def: number /*double*/): double
+                public getDouble(path: java.lang.String | string, def: number /*double*/): number /*double*/
                 // @ts-ignore
-                isDouble(path: string): boolean
+                public isDouble(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getLong(path: string): long
+                public getLong(path: java.lang.String | string): number /*long*/
                 // @ts-ignore
-                getLong(path: string, def: number /*long*/): long
+                public getLong(path: java.lang.String | string, def: number /*long*/): number /*long*/
                 // @ts-ignore
-                isLong(path: string): boolean
+                public isLong(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getList(path: string): java.util.List<?>
+                public getList(path: java.lang.String | string): Array<any>
                 // @ts-ignore
-                getList(path: string, def: Array<any>): java.util.List<?>
+                public getList(path: java.lang.String | string, def: java.util.List<any> | Array<any>): Array<any>
                 // @ts-ignore
-                isList(path: string): boolean
+                public isList(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getStringList(path: string): java.util.List<java.lang.String>
+                public getStringList(path: java.lang.String | string): Array<java.lang.String | string>
                 // @ts-ignore
-                getIntegerList(path: string): java.util.List<java.lang.Integer>
+                public getIntegerList(path: java.lang.String | string): Array<java.lang.Integer | number>
                 // @ts-ignore
-                getBooleanList(path: string): java.util.List<java.lang.Boolean>
+                public getBooleanList(path: java.lang.String | string): Array<java.lang.Boolean>
                 // @ts-ignore
-                getDoubleList(path: string): java.util.List<java.lang.Double>
+                public getDoubleList(path: java.lang.String | string): Array<java.lang.Double | number>
                 // @ts-ignore
-                getFloatList(path: string): java.util.List<java.lang.Float>
+                public getFloatList(path: java.lang.String | string): Array<java.lang.Float | number>
                 // @ts-ignore
-                getLongList(path: string): java.util.List<java.lang.Long>
+                public getLongList(path: java.lang.String | string): Array<java.lang.Long | number>
                 // @ts-ignore
-                getByteList(path: string): java.util.List<java.lang.Byte>
+                public getByteList(path: java.lang.String | string): Array<java.lang.Byte | number>
                 // @ts-ignore
-                getCharacterList(path: string): java.util.List<java.lang.Character>
+                public getCharacterList(path: java.lang.String | string): Array<java.lang.Character>
                 // @ts-ignore
-                getShortList(path: string): java.util.List<java.lang.Short>
+                public getShortList(path: java.lang.String | string): Array<java.lang.Short | number>
                 // @ts-ignore
-                getMapList(path: string): java.util.List<java.util.Map<?, ?>>
+                public getMapList(path: java.lang.String | string): Array<java.util.Map<any, any>>
                 // @ts-ignore
-                getObject<T>(path: string, clazz: java.lang.Class<T>): T
+                public getObject<T>(path: java.lang.String | string, clazz: java.lang.Class<T>): T
                 // @ts-ignore
-                getObject<T>(path: string, clazz: java.lang.Class<T>, def: T): T
+                public getObject<T>(path: java.lang.String | string, clazz: java.lang.Class<T>, def: T): T
                 // @ts-ignore
-                getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: string, clazz: java.lang.Class<T>): T
+                public getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: java.lang.String | string, clazz: java.lang.Class<T>): T
                 // @ts-ignore
-                getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: string, clazz: java.lang.Class<T>, def: T extends org.bukkit.configuration.serialization.ConfigurationSerializable): T
+                public getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: java.lang.String | string, clazz: java.lang.Class<T>, def: T): T
                 // @ts-ignore
-                getVector(path: string): org.bukkit.util.Vector
+                public getVector(path: java.lang.String | string): org.bukkit.util.Vector
                 // @ts-ignore
-                getVector(path: string, def: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public getVector(path: java.lang.String | string, def: org.bukkit.util.Vector): org.bukkit.util.Vector
                 // @ts-ignore
-                isVector(path: string): boolean
+                public isVector(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getOfflinePlayer(path: string): org.bukkit.OfflinePlayer
+                public getOfflinePlayer(path: java.lang.String | string): org.bukkit.OfflinePlayer
                 // @ts-ignore
-                getOfflinePlayer(path: string, def: org.bukkit.OfflinePlayer): org.bukkit.OfflinePlayer
+                public getOfflinePlayer(path: java.lang.String | string, def: org.bukkit.OfflinePlayer): org.bukkit.OfflinePlayer
                 // @ts-ignore
-                isOfflinePlayer(path: string): boolean
+                public isOfflinePlayer(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getItemStack(path: string): org.bukkit.inventory.ItemStack
+                public getItemStack(path: java.lang.String | string): org.bukkit.inventory.ItemStack
                 // @ts-ignore
-                getItemStack(path: string, def: org.bukkit.inventory.ItemStack): org.bukkit.inventory.ItemStack
+                public getItemStack(path: java.lang.String | string, def: org.bukkit.inventory.ItemStack): org.bukkit.inventory.ItemStack
                 // @ts-ignore
-                isItemStack(path: string): boolean
+                public isItemStack(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getColor(path: string): org.bukkit.Color
+                public getColor(path: java.lang.String | string): org.bukkit.Color
                 // @ts-ignore
-                getColor(path: string, def: org.bukkit.Color): org.bukkit.Color
+                public getColor(path: java.lang.String | string, def: org.bukkit.Color): org.bukkit.Color
                 // @ts-ignore
-                isColor(path: string): boolean
+                public isColor(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getLocation(path: string): org.bukkit.Location
+                public getLocation(path: java.lang.String | string): org.bukkit.Location
                 // @ts-ignore
-                getLocation(path: string, def: org.bukkit.Location): org.bukkit.Location
+                public getLocation(path: java.lang.String | string, def: org.bukkit.Location): org.bukkit.Location
                 // @ts-ignore
-                isLocation(path: string): boolean
+                public isLocation(path: java.lang.String | string): boolean
                 // @ts-ignore
-                getConfigurationSection(path: string): org.bukkit.configuration.ConfigurationSection
+                public getConfigurationSection(path: java.lang.String | string): org.bukkit.configuration.ConfigurationSection
                 // @ts-ignore
-                isConfigurationSection(path: string): boolean
+                public isConfigurationSection(path: java.lang.String | string): boolean
                 // @ts-ignore
-                isPrimitiveWrapper(input: any): boolean
+                isPrimitiveWrapper(input: java.lang.Object | any): boolean
                 // @ts-ignore
-                getDefault(path: string): java.lang.Object
+                getDefault(path: java.lang.String | string): any
                 // @ts-ignore
-                mapChildrenKeys(output: Array<java.lang.String>, section: org.bukkit.configuration.ConfigurationSection, deep: boolean): void
+                mapChildrenKeys(output: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>, section: org.bukkit.configuration.ConfigurationSection, deep: boolean): void
                 // @ts-ignore
-                mapChildrenValues(output: java.util.Map<java.lang.String, java.lang.Object>, section: org.bukkit.configuration.ConfigurationSection, deep: boolean): void
+                mapChildrenValues(output: java.util.Map<java.lang.String | string, java.lang.Object | any>, section: org.bukkit.configuration.ConfigurationSection, deep: boolean): void
                 /**
                  * Creates a full path to the given {@link ConfigurationSection} from its
                  * root {@link Configuration}.
@@ -178,7 +178,7 @@ declare namespace org {
                  * @return Full path of the section from its root.
                  */
                 // @ts-ignore
-                createPath(section: org.bukkit.configuration.ConfigurationSection, key: string): java.lang.String
+                public static createPath(section: org.bukkit.configuration.ConfigurationSection, key: java.lang.String | string): string
                 /**
                  * Creates a relative path to the given {@link ConfigurationSection} from
                  * the given relative section.
@@ -191,9 +191,9 @@ declare namespace org {
                  * @return Full path of the section from its root.
                  */
                 // @ts-ignore
-                createPath(section: org.bukkit.configuration.ConfigurationSection, key: string, relativeTo: org.bukkit.configuration.ConfigurationSection): java.lang.String
+                public static createPath(section: org.bukkit.configuration.ConfigurationSection, key: java.lang.String | string, relativeTo: org.bukkit.configuration.ConfigurationSection): string
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

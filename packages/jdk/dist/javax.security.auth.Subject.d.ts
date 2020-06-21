@@ -99,7 +99,7 @@ declare namespace javax {
                  *           or {@code privCredentials} are {@code null}.
                  */
                 // @ts-ignore
-                constructor(readOnly: boolean, principals: Array<java.security.Principal>, pubCredentials: Array<any>, privCredentials: Array<any>)
+                constructor(readOnly: boolean, principals: java.util.Set<any> | Array<any>, pubCredentials: java.util.Set<any> | Array<any>, privCredentials: java.util.Set<any> | Array<any>)
                 /**
                  * Set this {@code Subject} to be read-only.
                  * <p> Modifications (additions and removals) to this Subject's
@@ -117,14 +117,14 @@ declare namespace javax {
                  *           to set this {#code Subject} to be read-only.
                  */
                 // @ts-ignore
-                setReadOnly(): void
+                public setReadOnly(): void
                 /**
                  * Query whether this {@code Subject} is read-only.
                  * <p>
                  * @return true if this {#code Subject} is read-only, false otherwise.
                  */
                 // @ts-ignore
-                isReadOnly(): boolean
+                public isReadOnly(): boolean
                 /**
                  * Get the {@code Subject} associated with the provided
                  * {@code AccessControlContext}.
@@ -145,7 +145,7 @@ declare namespace javax {
                  *           {#code AccessControlContext} is {@code null}.
                  */
                 // @ts-ignore
-                getSubject(acc: java.security.AccessControlContext): javax.security.auth.Subject
+                public static getSubject(acc: java.security.AccessControlContext): javax.security.auth.Subject
                 /**
                  * Perform work as a particular {@code Subject}.
                  * <p> This method first retrieves the current Thread's
@@ -174,7 +174,7 @@ declare namespace javax {
                  *                   to invoke this method.
                  */
                 // @ts-ignore
-                doAs<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedAction<T>): T
+                public static doAs<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedAction<T>): T
                 /**
                  * Perform work as a particular {@code Subject}.
                  * <p> This method first retrieves the current Thread's
@@ -207,7 +207,7 @@ declare namespace javax {
                  *                   to invoke this method.
                  */
                 // @ts-ignore
-                doAs<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedExceptionAction<T>): T
+                public static doAs<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedExceptionAction<T>): T
                 /**
                  * Perform privileged work as a particular {@code Subject}.
                  * <p> This method behaves exactly as {@code Subject.doAs},
@@ -235,7 +235,7 @@ declare namespace javax {
                  *                   to invoke this method.
                  */
                 // @ts-ignore
-                doAsPrivileged<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedAction<T>, acc: java.security.AccessControlContext): T
+                public static doAsPrivileged<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedAction<T>, acc: java.security.AccessControlContext): T
                 /**
                  * Perform privileged work as a particular {@code Subject}.
                  * <p> This method behaves exactly as {@code Subject.doAs},
@@ -267,7 +267,7 @@ declare namespace javax {
                  *                   to invoke this method.
                  */
                 // @ts-ignore
-                doAsPrivileged<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedExceptionAction<T>, acc: java.security.AccessControlContext): T
+                public static doAsPrivileged<T>(subject: javax.security.auth.Subject, action: java.security.PrivilegedExceptionAction<T>, acc: java.security.AccessControlContext): T
                 /**
                  * Return the {@code Set} of Principals associated with this
                  * {@code Subject}.  Each {@code Principal} represents
@@ -281,7 +281,7 @@ declare namespace javax {
                  *           {@code Subject}.
                  */
                 // @ts-ignore
-                getPrincipals(): java.util.Set<java.security.Principal>
+                public getPrincipals(): Array<java.security.Principal>
                 /**
                  * Return a {@code Set} of Principals associated with this
                  * {@code Subject} that are instances or subclasses of the specified
@@ -301,7 +301,7 @@ declare namespace javax {
                  *                   is {@code null}.
                  */
                 // @ts-ignore
-                getPrincipals<T extends java.security.Principal>(c: java.lang.Class<T>): java.util.Set<T>
+                public getPrincipals<T extends java.security.Principal>(c: java.lang.Class<T>): Array<T>
                 /**
                  * Return the {@code Set} of public credentials held by this
                  * {@code Subject}.
@@ -314,7 +314,7 @@ declare namespace javax {
                  *           {@code Subject}.
                  */
                 // @ts-ignore
-                getPublicCredentials(): java.util.Set<java.lang.Object>
+                public getPublicCredentials(): Array<java.lang.Object | any>
                 /**
                  * Return the {@code Set} of private credentials held by this
                  * {@code Subject}.
@@ -336,7 +336,7 @@ declare namespace javax {
                  *           {@code Subject}.
                  */
                 // @ts-ignore
-                getPrivateCredentials(): java.util.Set<java.lang.Object>
+                public getPrivateCredentials(): Array<java.lang.Object | any>
                 /**
                  * Return a {@code Set} of public credentials associated with this
                  * {@code Subject} that are instances or subclasses of the specified
@@ -356,7 +356,7 @@ declare namespace javax {
                  *           is {@code null}.
                  */
                 // @ts-ignore
-                getPublicCredentials<T>(c: java.lang.Class<T>): java.util.Set<T>
+                public getPublicCredentials<T>(c: java.lang.Class<T>): Array<T>
                 /**
                  * Return a {@code Set} of private credentials associated with this
                  * {@code Subject} that are instances or subclasses of the specified
@@ -379,7 +379,7 @@ declare namespace javax {
                  *           is {@code null}.
                  */
                 // @ts-ignore
-                getPrivateCredentials<T>(c: java.lang.Class<T>): java.util.Set<T>
+                public getPrivateCredentials<T>(c: java.lang.Class<T>): Array<T>
                 /**
                  * Compares the specified Object with this {@code Subject}
                  * for equality.  Returns true if the given object is also a Subject
@@ -398,14 +398,14 @@ declare namespace javax {
                  *           private credentials for the provided {@code Subject}.
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Return the String representation of this {@code Subject}.
                  * <p>
                  * @return the String representation of this {#code Subject}.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a hashcode for this {@code Subject}.
                  * <p>
@@ -414,7 +414,7 @@ declare namespace javax {
                  *           to access this Subject's private credentials.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

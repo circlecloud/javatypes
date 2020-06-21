@@ -17,7 +17,7 @@ declare namespace org {
                  * @param <T> the element type
                  */
                 // @ts-ignore
-                class AbstractDataBufferDecoder<T> extends org.springframework.core.codec.AbstractDecoder<T> {
+                abstract class AbstractDataBufferDecoder<T> extends org.springframework.core.codec.AbstractDecoder<T> {
                     // @ts-ignore
                     constructor(...supportedMimeTypes: org.springframework.util.MimeType[])
                     /**
@@ -33,24 +33,24 @@ declare namespace org {
                      * @since 5.1.11
                      */
                     // @ts-ignore
-                    setMaxInMemorySize(byteCount: number /*int*/): void
+                    public setMaxInMemorySize(byteCount: number /*int*/): void
                     /**
                      * Return the {@link #setMaxInMemorySize configured} byte count limit.
                      * @since 5.1.11
                      */
                     // @ts-ignore
-                    getMaxInMemorySize(): int
+                    public getMaxInMemorySize(): number /*int*/
                     // @ts-ignore
-                    decode(input: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public decode(input: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    decodeToMono(input: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public decodeToMono(input: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * How to decode a {@code DataBuffer} to the target element type.
                      * @deprecated as of 5.2, please implement
                      *  {#link #decode(DataBuffer, ResolvableType, MimeType, Map)} instead
                      */
                     // @ts-ignore
-                    decodeDataBuffer(buffer: org.springframework.core.io.buffer.DataBuffer, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): T
+                    decodeDataBuffer(buffer: org.springframework.core.io.buffer.DataBuffer, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): T
                 }
             }
         }

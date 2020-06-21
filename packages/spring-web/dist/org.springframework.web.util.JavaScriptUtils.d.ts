@@ -14,7 +14,7 @@ declare namespace org {
                  * @since 1.1.1
                  */
                 // @ts-ignore
-                class JavaScriptUtils extends java.lang.Object {
+                abstract class JavaScriptUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,7 +23,7 @@ declare namespace org {
                      * @return the string with escaped characters
                      */
                     // @ts-ignore
-                    javaScriptEscape(input: string): java.lang.String
+                    public static javaScriptEscape(input: java.lang.String | string): string
                 }
             }
         }

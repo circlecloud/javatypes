@@ -26,7 +26,7 @@ declare namespace org {
                          * @return The new immutable data manipulator, if compatible
                          */
                         // @ts-ignore
-                        with<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): java.util.Optional<I>
+                        with<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): java.util.Optional<I>
                         /**
                          * Creates a new {@link ImmutableDataManipulator} with the provided
                          * {@link BaseValue} provided that the {@link BaseValue} is supported by

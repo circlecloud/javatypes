@@ -104,7 +104,7 @@ declare namespace java {
                  *  is to be associated with.
                  */
                 // @ts-ignore
-                setComponent(c: java.awt.Component): void
+                public setComponent(c: java.awt.Component): void
                 /**
                  * Gets the <code>Component</code> associated
                  * with this <code>DropTarget</code>.
@@ -112,7 +112,7 @@ declare namespace java {
                  * @return the current <code>Component</code>
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * Sets the default acceptable actions for this <code>DropTarget</code>
                  * <P>
@@ -120,7 +120,7 @@ declare namespace java {
                  * @see java.awt.dnd.DnDConstants
                  */
                 // @ts-ignore
-                setDefaultActions(ops: number /*int*/): void
+                public setDefaultActions(ops: number /*int*/): void
                 /**
                  * Gets an <code>int</code> representing the
                  * current action(s) supported by this <code>DropTarget</code>.
@@ -128,7 +128,7 @@ declare namespace java {
                  * @return the current default actions
                  */
                 // @ts-ignore
-                getDefaultActions(): int
+                public getDefaultActions(): number /*int*/
                 /**
                  * Sets the DropTarget active if <code>true</code>,
                  * inactive if <code>false</code>.
@@ -136,7 +136,7 @@ declare namespace java {
                  * @param isActive sets the <code>DropTarget</code> (in)active.
                  */
                 // @ts-ignore
-                setActive(isActive: boolean): void
+                public setActive(isActive: boolean): void
                 /**
                  * Reports whether or not
                  * this <code>DropTarget</code>
@@ -145,7 +145,7 @@ declare namespace java {
                  * @return <CODE>true</CODE> if active, <CODE>false</CODE> if not
                  */
                 // @ts-ignore
-                isActive(): boolean
+                public isActive(): boolean
                 /**
                  * Adds a new <code>DropTargetListener</code> (UNICAST SOURCE).
                  * <P>
@@ -156,14 +156,14 @@ declare namespace java {
                  *  <code>DropTarget</code>.
                  */
                 // @ts-ignore
-                addDropTargetListener(dtl: java.awt.dnd.DropTargetListener): void
+                public addDropTargetListener(dtl: java.awt.dnd.DropTargetListener): void
                 /**
                  * Removes the current <code>DropTargetListener</code> (UNICAST SOURCE).
                  * <P>
                  * @param dtl the DropTargetListener to deregister.
                  */
                 // @ts-ignore
-                removeDropTargetListener(dtl: java.awt.dnd.DropTargetListener): void
+                public removeDropTargetListener(dtl: java.awt.dnd.DropTargetListener): void
                 /**
                  * Calls <code>dragEnter</code> on the registered
                  * <code>DropTargetListener</code> and passes it
@@ -176,7 +176,7 @@ declare namespace java {
                  * @see #isActive
                  */
                 // @ts-ignore
-                dragEnter(dtde: java.awt.dnd.DropTargetDragEvent): void
+                public dragEnter(dtde: java.awt.dnd.DropTargetDragEvent): void
                 /**
                  * Calls <code>dragOver</code> on the registered
                  * <code>DropTargetListener</code> and passes it
@@ -189,7 +189,7 @@ declare namespace java {
                  * @see #isActive
                  */
                 // @ts-ignore
-                dragOver(dtde: java.awt.dnd.DropTargetDragEvent): void
+                public dragOver(dtde: java.awt.dnd.DropTargetDragEvent): void
                 /**
                  * Calls <code>dropActionChanged</code> on the registered
                  * <code>DropTargetListener</code> and passes it
@@ -202,7 +202,7 @@ declare namespace java {
                  * @see #isActive
                  */
                 // @ts-ignore
-                dropActionChanged(dtde: java.awt.dnd.DropTargetDragEvent): void
+                public dropActionChanged(dtde: java.awt.dnd.DropTargetDragEvent): void
                 /**
                  * Calls <code>dragExit</code> on the registered
                  * <code>DropTargetListener</code> and passes it
@@ -217,7 +217,7 @@ declare namespace java {
                  * @see #isActive
                  */
                 // @ts-ignore
-                dragExit(dte: java.awt.dnd.DropTargetEvent): void
+                public dragExit(dte: java.awt.dnd.DropTargetEvent): void
                 /**
                  * Calls <code>drop</code> on the registered
                  * <code>DropTargetListener</code> and passes it
@@ -231,7 +231,7 @@ declare namespace java {
                  * @see #isActive
                  */
                 // @ts-ignore
-                drop(dtde: java.awt.dnd.DropTargetDropEvent): void
+                public drop(dtde: java.awt.dnd.DropTargetDropEvent): void
                 /**
                  * Gets the <code>FlavorMap</code>
                  * associated with this <code>DropTarget</code>.
@@ -242,7 +242,7 @@ declare namespace java {
                  * @return the FlavorMap for this DropTarget
                  */
                 // @ts-ignore
-                getFlavorMap(): java.awt.datatransfer.FlavorMap
+                public getFlavorMap(): java.awt.datatransfer.FlavorMap
                 /**
                  * Sets the <code>FlavorMap</code> associated
                  * with this <code>DropTarget</code>.
@@ -251,7 +251,7 @@ declare namespace java {
                  *  associate the default FlavorMap with this DropTarget.
                  */
                 // @ts-ignore
-                setFlavorMap(fm: java.awt.datatransfer.FlavorMap): void
+                public setFlavorMap(fm: java.awt.datatransfer.FlavorMap): void
                 /**
                  * Notify the DropTarget that it has been associated with a Component
                  * This method is usually called from java.awt.Component.addNotify() of
@@ -264,7 +264,7 @@ declare namespace java {
                  * @param peer The Peer of the Component we are associated with!
                  */
                 // @ts-ignore
-                addNotify(peer: java.awt.peer.ComponentPeer): void
+                public addNotify(peer: java.awt.peer.ComponentPeer): void
                 /**
                  * Notify the DropTarget that it has been disassociated from a Component
                  * This method is usually called from java.awt.Component.removeNotify() of
@@ -277,7 +277,7 @@ declare namespace java {
                  * @param peer The Peer of the Component we are being disassociated from!
                  */
                 // @ts-ignore
-                removeNotify(peer: java.awt.peer.ComponentPeer): void
+                public removeNotify(peer: java.awt.peer.ComponentPeer): void
                 /**
                  * Gets the <code>DropTargetContext</code> associated
                  * with this <code>DropTarget</code>.
@@ -285,7 +285,7 @@ declare namespace java {
                  * @return the <code>DropTargetContext</code> associated with this <code>DropTarget</code>.
                  */
                 // @ts-ignore
-                getDropTargetContext(): java.awt.dnd.DropTargetContext
+                public getDropTargetContext(): java.awt.dnd.DropTargetContext
                 /**
                  * Creates the DropTargetContext associated with this DropTarget.
                  * Subclasses may override this method to instantiate their own

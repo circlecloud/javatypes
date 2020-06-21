@@ -16,13 +16,13 @@ declare namespace javax {
                      *  <code>Method.GET</code> or <code>Method.POST</code>.
                      */
                     // @ts-ignore
-                    getMethod(): javax.swing.text.html.FormSubmitEvent.MethodType
+                    public getMethod(): javax.swing.text.html.FormSubmitEvent.MethodType
                     /**
                      * Gets the form submission data.
                      * @return the string representing the form submission data.
                      */
                     // @ts-ignore
-                    getData(): java.lang.String
+                    public getData(): string
                 }
             }
         }

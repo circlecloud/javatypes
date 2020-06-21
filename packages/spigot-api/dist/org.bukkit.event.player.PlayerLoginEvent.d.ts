@@ -21,9 +21,9 @@ declare namespace org {
                      * @param realAddress the actual, unspoofed connecting address
                      */
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, hostname: string, address: java.net.InetAddress, realAddress: java.net.InetAddress)
+                    constructor(player: org.bukkit.entity.Player, hostname: java.lang.String | string, address: java.net.InetAddress, realAddress: java.net.InetAddress)
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, hostname: string, address: java.net.InetAddress)
+                    constructor(player: org.bukkit.entity.Player, hostname: java.lang.String | string, address: java.net.InetAddress)
                     /**
                      * This constructor pre-configures the event with a result and message
                      * @param player The {#link Player} for this event
@@ -35,57 +35,57 @@ declare namespace org {
                      * @param realAddress the actual, unspoofed connecting address
                      */
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, hostname: string, address: java.net.InetAddress, result: org.bukkit.event.player.PlayerLoginEvent.Result, message: string, realAddress: java.net.InetAddress)
+                    constructor(player: org.bukkit.entity.Player, hostname: java.lang.String | string, address: java.net.InetAddress, result: org.bukkit.event.player.PlayerLoginEvent.Result, message: java.lang.String | string, realAddress: java.net.InetAddress)
                     /**
                      * Gets the connection address of this player, regardless of whether it has been spoofed or not.
                      * @return the player's connection address
                      */
                     // @ts-ignore
-                    getRealAddress(): java.net.InetAddress
+                    public getRealAddress(): java.net.InetAddress
                     /**
                      * Gets the current result of the login, as an enum
                      * @return Current Result of the login
                      */
                     // @ts-ignore
-                    getResult(): org.bukkit.event.player.PlayerLoginEvent.Result
+                    public getResult(): org.bukkit.event.player.PlayerLoginEvent.Result
                     /**
                      * Sets the new result of the login, as an enum
                      * @param result New result to set
                      */
                     // @ts-ignore
-                    setResult(result: org.bukkit.event.player.PlayerLoginEvent.Result): void
+                    public setResult(result: org.bukkit.event.player.PlayerLoginEvent.Result): void
                     /**
                      * Gets the current kick message that will be used if getResult() !=
                      * Result.ALLOWED
                      * @return Current kick message
                      */
                     // @ts-ignore
-                    getKickMessage(): java.lang.String
+                    public getKickMessage(): string
                     /**
                      * Sets the kick message to display if getResult() != Result.ALLOWED
                      * @param message New kick message
                      */
                     // @ts-ignore
-                    setKickMessage(message: string): void
+                    public setKickMessage(message: java.lang.String | string): void
                     /**
                      * Gets the hostname that the player used to connect to the server, or
                      * blank if unknown
                      * @return The hostname
                      */
                     // @ts-ignore
-                    getHostname(): java.lang.String
+                    public getHostname(): string
                     /**
                      * Allows the player to log in
                      */
                     // @ts-ignore
-                    allow(): void
+                    public allow(): void
                     /**
                      * Disallows the player from logging in, with the given reason
                      * @param result New result for disallowing the player
                      * @param message Kick message to display to the user
                      */
                     // @ts-ignore
-                    disallow(result: org.bukkit.event.player.PlayerLoginEvent.Result, message: string): void
+                    public disallow(result: org.bukkit.event.player.PlayerLoginEvent.Result, message: java.lang.String | string): void
                     /**
                      * Gets the {@link InetAddress} for the Player associated with this event.
                      * This method is provided as a workaround for player.getAddress()
@@ -94,11 +94,11 @@ declare namespace org {
                      *      be null.
                      */
                     // @ts-ignore
-                    getAddress(): java.net.InetAddress
+                    public getAddress(): java.net.InetAddress
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

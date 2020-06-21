@@ -35,7 +35,7 @@ declare namespace java {
                  * @throws NullPointerException if other is null
                  */
                 // @ts-ignore
-                and(other: java.util.function.DoublePredicate | java.util.function$.DoublePredicate): java.util.function.DoublePredicate
+                and(other: java.util.function$.DoublePredicate): java.util.function$.DoublePredicate
                 /**
                  * Returns a predicate that represents the logical negation of this
                  * predicate.
@@ -43,7 +43,7 @@ declare namespace java {
                  *  predicate
                  */
                 // @ts-ignore
-                negate(): java.util.function.DoublePredicate
+                negate(): java.util.function$.DoublePredicate
                 /**
                  * Returns a composed predicate that represents a short-circuiting logical
                  * OR of this predicate and another.  When evaluating the composed
@@ -59,7 +59,7 @@ declare namespace java {
                  * @throws NullPointerException if other is null
                  */
                 // @ts-ignore
-                or(other: java.util.function.DoublePredicate | java.util.function$.DoublePredicate): java.util.function.DoublePredicate
+                or(other: java.util.function$.DoublePredicate): java.util.function$.DoublePredicate
             }
         }
     }

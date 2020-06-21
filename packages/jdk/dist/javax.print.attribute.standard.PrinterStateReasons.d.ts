@@ -117,7 +117,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    put(reason: javax.print.attribute.standard.PrinterStateReason, severity: javax.print.attribute.standard.Severity): javax.print.attribute.standard.Severity
+                    public put(reason: javax.print.attribute.standard.PrinterStateReason, severity: javax.print.attribute.standard.Severity): javax.print.attribute.standard.Severity
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -128,7 +128,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -138,7 +138,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Obtain an unmodifiable set view of the individual printer state reason
                      * attributes at the given severity level in this PrinterStateReasons
@@ -158,7 +158,7 @@ declare namespace javax {
                      *      (unchecked exception) Thrown if <CODE>severity</CODE> is null.
                      */
                     // @ts-ignore
-                    printerStateReasonSet(severity: javax.print.attribute.standard.Severity): java.util.Set<javax.print.attribute.standard.PrinterStateReason>
+                    public printerStateReasonSet(severity: javax.print.attribute.standard.Severity): Array<javax.print.attribute.standard.PrinterStateReason>
                 }
             }
         }

@@ -20,7 +20,7 @@ declare namespace java {
                  * @return a copy of this {#code CertPathValidatorResult}
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

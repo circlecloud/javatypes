@@ -104,7 +104,7 @@ declare namespace javax {
                  * @see #setPolyPressure(int, int)
                  */
                 // @ts-ignore
-                getPolyPressure(noteNumber: number /*int*/): int
+                getPolyPressure(noteNumber: number /*int*/): number /*int*/
                 /**
                  * Reacts to a change in the keyboard pressure.  Channel
                  * pressure indicates how hard the keyboard player is depressing
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @see #setChannelPressure(int)
                  */
                 // @ts-ignore
-                getChannelPressure(): int
+                getChannelPressure(): number /*int*/
                 /**
                  * Reacts to a change in the specified controller's value.  A controller
                  * is some control other than a keyboard key, such as a
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @see #controlChange(int, int)
                  */
                 // @ts-ignore
-                getController(controller: number /*int*/): int
+                getController(controller: number /*int*/): number /*int*/
                 /**
                  * Changes a program (patch).  This selects a specific
                  * instrument from the currently selected bank of instruments.
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @see #programChange(int)
                  */
                 // @ts-ignore
-                getProgram(): int
+                getProgram(): number /*int*/
                 /**
                  * Changes the pitch offset for all notes on this channel.
                  * This affects all currently sounding notes as well as subsequent ones.
@@ -285,7 +285,7 @@ declare namespace javax {
                  * @see #setPitchBend(int)
                  */
                 // @ts-ignore
-                getPitchBend(): int
+                getPitchBend(): number /*int*/
                 /**
                  * Resets all the implemented controllers to their default values.
                  * @see #controlChange(int, int)

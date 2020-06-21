@@ -6,7 +6,7 @@ declare namespace org {
                  * Raised when a vehicle collides.
                  */
                 // @ts-ignore
-                class VehicleCollisionEvent extends org.bukkit.event.vehicle.VehicleEvent {
+                abstract class VehicleCollisionEvent extends org.bukkit.event.vehicle.VehicleEvent {
                     // @ts-ignore
                     constructor(vehicle: org.bukkit.entity.Vehicle)
                 }

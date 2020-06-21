@@ -49,7 +49,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                addConsumer(ic: java.awt.image.ImageConsumer): void
+                public addConsumer(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Determines whether an ImageConsumer is on the list of consumers
                  * currently interested in data for this image.
@@ -64,7 +64,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                isConsumer(ic: java.awt.image.ImageConsumer): boolean
+                public isConsumer(ic: java.awt.image.ImageConsumer): boolean
                 /**
                  * Removes an ImageConsumer from the list of consumers interested in
                  * data for this image.
@@ -77,7 +77,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                removeConsumer(ic: java.awt.image.ImageConsumer): void
+                public removeConsumer(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Starts production of the filtered image.
                  * If the specified <code>ImageConsumer</code>
@@ -100,7 +100,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                startProduction(ic: java.awt.image.ImageConsumer): void
+                public startProduction(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Requests that a given ImageConsumer have the image data delivered
                  * one more time in top-down, left-right order.  The request is
@@ -115,7 +115,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                requestTopDownLeftRightResend(ic: java.awt.image.ImageConsumer): void
+                public requestTopDownLeftRightResend(ic: java.awt.image.ImageConsumer): void
             }
         }
     }

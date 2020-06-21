@@ -16,61 +16,61 @@ declare namespace java {
                  * LATIN_EXTENDED_B Unicode character blocks.
                  */
                 // @ts-ignore
-                readonly LATIN: java.awt.im.InputSubset
+                public static readonly LATIN: java.awt.im.InputSubset
                 /**
                  * Constant for the digits included in the BASIC_LATIN Unicode character
                  * block.
                  */
                 // @ts-ignore
-                readonly LATIN_DIGITS: java.awt.im.InputSubset
+                public static readonly LATIN_DIGITS: java.awt.im.InputSubset
                 /**
                  * Constant for all Han characters used in writing Traditional Chinese,
                  * including a subset of the CJK unified ideographs as well as Traditional
                  * Chinese Han characters that may be defined as surrogate characters.
                  */
                 // @ts-ignore
-                readonly TRADITIONAL_HANZI: java.awt.im.InputSubset
+                public static readonly TRADITIONAL_HANZI: java.awt.im.InputSubset
                 /**
                  * Constant for all Han characters used in writing Simplified Chinese,
                  * including a subset of the CJK unified ideographs as well as Simplified
                  * Chinese Han characters that may be defined as surrogate characters.
                  */
                 // @ts-ignore
-                readonly SIMPLIFIED_HANZI: java.awt.im.InputSubset
+                public static readonly SIMPLIFIED_HANZI: java.awt.im.InputSubset
                 /**
                  * Constant for all Han characters used in writing Japanese, including a
                  * subset of the CJK unified ideographs as well as Japanese Han characters
                  * that may be defined as surrogate characters.
                  */
                 // @ts-ignore
-                readonly KANJI: java.awt.im.InputSubset
+                public static readonly KANJI: java.awt.im.InputSubset
                 /**
                  * Constant for all Han characters used in writing Korean, including a
                  * subset of the CJK unified ideographs as well as Korean Han characters
                  * that may be defined as surrogate characters.
                  */
                 // @ts-ignore
-                readonly HANJA: java.awt.im.InputSubset
+                public static readonly HANJA: java.awt.im.InputSubset
                 /**
                  * Constant for the halfwidth katakana subset of the Unicode halfwidth and
                  * fullwidth forms character block.
                  */
                 // @ts-ignore
-                readonly HALFWIDTH_KATAKANA: java.awt.im.InputSubset
+                public static readonly HALFWIDTH_KATAKANA: java.awt.im.InputSubset
                 /**
                  * Constant for the fullwidth ASCII variants subset of the Unicode halfwidth and
                  * fullwidth forms character block.
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly FULLWIDTH_LATIN: java.awt.im.InputSubset
+                public static readonly FULLWIDTH_LATIN: java.awt.im.InputSubset
                 /**
                  * Constant for the fullwidth digits included in the Unicode halfwidth and
                  * fullwidth forms character block.
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly FULLWIDTH_DIGITS: java.awt.im.InputSubset
+                public static readonly FULLWIDTH_DIGITS: java.awt.im.InputSubset
             }
         }
     }

@@ -59,7 +59,7 @@ declare namespace java {
              *  to associate with this {#code KeyFactory}
              */
             // @ts-ignore
-            constructor(keyFacSpi: java.security.KeyFactorySpi, provider: java.security.Provider, algorithm: string)
+            constructor(keyFacSpi: java.security.KeyFactorySpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns a KeyFactory object that converts
              * public/private keys of the specified algorithm.
@@ -82,7 +82,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): java.security.KeyFactory
+            public static getInstance(algorithm: java.lang.String | string): java.security.KeyFactory
             /**
              * Returns a KeyFactory object that converts
              * public/private keys of the specified algorithm.
@@ -109,7 +109,7 @@ declare namespace java {
              * @see Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): java.security.KeyFactory
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.KeyFactory
             /**
              * Returns a KeyFactory object that converts
              * public/private keys of the specified algorithm.
@@ -132,13 +132,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): java.security.KeyFactory
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.KeyFactory
             /**
              * Returns the provider of this key factory object.
              * @return the provider of this key factory object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Gets the name of the algorithm
              * associated with this {@code KeyFactory}.
@@ -146,7 +146,7 @@ declare namespace java {
              *  {#code KeyFactory}
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Generates a public key object from the provided key specification
              * (key material).
@@ -156,7 +156,7 @@ declare namespace java {
              *  is inappropriate for this key factory to produce a public key.
              */
             // @ts-ignore
-            generatePublic(keySpec: java.security.spec.KeySpec): java.security.PublicKey
+            public generatePublic(keySpec: java.security.spec.KeySpec): java.security.PublicKey
             /**
              * Generates a private key object from the provided key specification
              * (key material).
@@ -166,7 +166,7 @@ declare namespace java {
              *  is inappropriate for this key factory to produce a private key.
              */
             // @ts-ignore
-            generatePrivate(keySpec: java.security.spec.KeySpec): java.security.PrivateKey
+            public generatePrivate(keySpec: java.security.spec.KeySpec): java.security.PrivateKey
             /**
              * Returns a specification (key material) of the given key object.
              * {@code keySpec} identifies the specification class in which
@@ -185,7 +185,7 @@ declare namespace java {
              *  (e.g., the given key has an unrecognized algorithm or format).
              */
             // @ts-ignore
-            getKeySpec<T extends java.security.spec.KeySpec>(key: java.security.Key, keySpec: java.lang.Class<T>): T
+            public getKeySpec<T extends java.security.spec.KeySpec>(key: java.security.Key, keySpec: java.lang.Class<T>): T
             /**
              * Translates a key object, whose provider may be unknown or potentially
              * untrusted, into a corresponding key object of this key factory.
@@ -195,7 +195,7 @@ declare namespace java {
              *  by this key factory.
              */
             // @ts-ignore
-            translateKey(key: java.security.Key): java.security.Key
+            public translateKey(key: java.security.Key): java.security.Key
         }
     }
 }

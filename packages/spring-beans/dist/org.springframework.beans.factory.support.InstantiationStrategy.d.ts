@@ -24,7 +24,7 @@ declare namespace org {
                          * @throws BeansException if the instantiation attempt failed
                          */
                         // @ts-ignore
-                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory): java.lang.Object
+                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory): any
                         /**
                          * Return an instance of the bean with the given name in this factory,
                          * creating it via the given constructor.
@@ -39,7 +39,7 @@ declare namespace org {
                          * @throws BeansException if the instantiation attempt failed
                          */
                         // @ts-ignore
-                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: any[]): java.lang.Object
+                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: java.lang.Object[] | any[]): any
                         /**
                          * Return an instance of the bean with the given name in this factory,
                          * creating it via the given factory method.
@@ -56,7 +56,7 @@ declare namespace org {
                          * @throws BeansException if the instantiation attempt failed
                          */
                         // @ts-ignore
-                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory, factoryBean: any, factoryMethod: java.lang.reflect.Method, ...args: any[]): java.lang.Object
+                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory, factoryBean: java.lang.Object | any, factoryMethod: java.lang.reflect.Method, ...args: java.lang.Object[] | any[]): any
                     }
                 }
             }

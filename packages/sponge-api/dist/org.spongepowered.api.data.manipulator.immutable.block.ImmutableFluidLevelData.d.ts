@@ -19,7 +19,7 @@ declare namespace org {
                                  * @return The immutable bounded value for the fluid level state
                                  */
                                 // @ts-ignore
-                                level(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                level(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

@@ -12,13 +12,13 @@ declare namespace java {
                  * @return a MethodHandles.Lookup object
                  */
                 // @ts-ignore
-                lookup(): java.lang.invoke.MethodHandles.Lookup
+                public static lookup(): java.lang.invoke.MethodHandles.Lookup
                 /**
                  * Return a MethodHandles.Lookup object that is only able to access <code>public</code> members.
                  * @return a MethodHandles.Lookup object
                  */
                 // @ts-ignore
-                publicLookup(): java.lang.invoke.MethodHandles.Lookup
+                public static publicLookup(): java.lang.invoke.MethodHandles.Lookup
                 /**
                  * Gets the underlying Member of the provided <code>target</code> MethodHandle. This is done through an unchecked crack of the MethodHandle.
                  * Calling this method is equivalent to obtaining a lookup object capable of cracking the <code>target</code> MethodHandle, calling
@@ -33,7 +33,7 @@ declare namespace java {
                  * @throws ClassCastException if the underlying member is not of the <code>expected</code> type
                  */
                 // @ts-ignore
-                reflectAs<T extends java.lang.reflect.Member>(expected: java.lang.Class<T>, target: java.lang.invoke.MethodHandle): T
+                public static reflectAs<T extends java.lang.reflect.Member>(expected: java.lang.Class<T>, target: java.lang.invoke.MethodHandle): T
                 /**
                  * Return a MethodHandle that is the equivalent of calling
                  * MethodHandles.lookup().findVirtual(MethodHandle.class, "invokeExact", type).
@@ -47,7 +47,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the resulting MethodHandle would take too many parameters.
                  */
                 // @ts-ignore
-                exactInvoker(type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                public static exactInvoker(type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                 /**
                  * Return a MethodHandle that is the equivalent of calling
                  * MethodHandles.lookup().findVirtual(MethodHandle.class, "invoke", type).
@@ -61,7 +61,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the resulting MethodHandle would take too many parameters.
                  */
                 // @ts-ignore
-                invoker(type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                public static invoker(type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                 /**
                  * Return a MethodHandle that is able to invoke a MethodHandle of <i>type</i> as though by
                  * invoke after spreading the final Object[] parameter.
@@ -77,7 +77,7 @@ declare namespace java {
                  * @throws NullPointerException if the type is null
                  */
                 // @ts-ignore
-                spreadInvoker(type: java.lang.invoke.MethodType, fixedArgCount: number /*int*/): java.lang.invoke.MethodHandle
+                public static spreadInvoker(type: java.lang.invoke.MethodType, fixedArgCount: number /*int*/): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that implements an if-else block.
                  * This MethodHandle is composed from three handles:
@@ -97,7 +97,7 @@ declare namespace java {
                  *  				3) the guard handle doesn't take a subset of the target handle's arguments
                  */
                 // @ts-ignore
-                guardWithTest(guard: java.lang.invoke.MethodHandle, trueTarget: java.lang.invoke.MethodHandle, falseTarget: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
+                public static guardWithTest(guard: java.lang.invoke.MethodHandle, trueTarget: java.lang.invoke.MethodHandle, falseTarget: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that implements a try-catch block.
                  * This adapter acts as though the <i>tryHandle</i> were run inside a try block.  If <i>tryHandle</i>
@@ -118,7 +118,7 @@ declare namespace java {
                  *  of if catchHandle arguments[1-N] differ from tryHandle arguments[0-(N-1)]
                  */
                 // @ts-ignore
-                catchException(tryHandle: java.lang.invoke.MethodHandle, throwableClass: java.lang.Class<java.lang.Throwable>, catchHandle: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
+                public static catchException(tryHandle: java.lang.invoke.MethodHandle, throwableClass: java.lang.Class<any>, catchHandle: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that acts as an identity function.  It will accept a single
                  * argument and return it.
@@ -128,7 +128,7 @@ declare namespace java {
                  * @throws IllegalArgumentException - if the the classType is void.
                  */
                 // @ts-ignore
-                identity(classType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                public static identity(classType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                 /**
                  * Create a MethodHandle that returns the <i>constantValue</i> on each invocation.
                  * <p>
@@ -143,7 +143,7 @@ declare namespace java {
                  * @throws IllegalArgumentException - if the returnType is void
                  */
                 // @ts-ignore
-                constant(returnType: java.lang.Class<any>, constantValue: any): java.lang.invoke.MethodHandle
+                public static constant(returnType: java.lang.Class<any>, constantValue: java.lang.Object | any): java.lang.invoke.MethodHandle
                 /**
                  * Return a MethodHandle able to read from the array.  The MethodHandle's return type will be the same as
                  * the elements of the array.  The MethodHandle will also accept two arguments - the first being the array, typed correctly,
@@ -153,7 +153,7 @@ declare namespace java {
                  * @throws IllegalArgumentException - if arrayType is not actually an array
                  */
                 // @ts-ignore
-                arrayElementGetter(arrayType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                public static arrayElementGetter(arrayType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                 /**
                  * Return a MethodHandle able to write to the array.  The MethodHandle will have a void return type and take three
                  * arguments: the first being the array, typed correctly, the second will be the the <code>int</code> index into the array,
@@ -163,7 +163,7 @@ declare namespace java {
                  * @throws IllegalArgumentException - if arrayType is not actually an array
                  */
                 // @ts-ignore
-                arrayElementSetter(arrayType: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                public static arrayElementSetter(arrayType: java.lang.Class<any>): java.lang.invoke.MethodHandle
                 /**
                  * Return a MethodHandle that will throw the passed in Exception object.  The return type is largely
                  * irrelevant as the method never completes normally.  Any return type that is convenient can be
@@ -173,7 +173,7 @@ declare namespace java {
                  * @return a MethodHandle that throws the passed in exception object
                  */
                 // @ts-ignore
-                throwException(returnType: java.lang.Class<any>, exception: java.lang.Class<java.lang.Throwable>): java.lang.invoke.MethodHandle
+                public static throwException(returnType: java.lang.Class<any>, exception: java.lang.Class<any>): java.lang.invoke.MethodHandle
                 /**
                  * Return a MethodHandle that will adapt the return value of <i>handle</i> by running the <i>filter</i>
                  * on it and returning the result of the filter.
@@ -186,7 +186,7 @@ declare namespace java {
                  * @throws IllegalArgumentException - if the return type of <i>handle</i> differs from the type of the only argument to <i>filter</i>
                  */
                 // @ts-ignore
-                filterReturnValue(handle: java.lang.invoke.MethodHandle, filter: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
+                public static filterReturnValue(handle: java.lang.invoke.MethodHandle, filter: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that adapts its arguments using the filter methodhandles before calling the underlying handle.
                  * <p>
@@ -205,7 +205,7 @@ declare namespace java {
                  *  				or if the resulting MethodHandle would take too many parameters
                  */
                 // @ts-ignore
-                filterArguments(handle: java.lang.invoke.MethodHandle, startPosition: number /*int*/, ...filters: java.lang.invoke.MethodHandle[]): java.lang.invoke.MethodHandle
+                public static filterArguments(handle: java.lang.invoke.MethodHandle, startPosition: number /*int*/, ...filters: java.lang.invoke.MethodHandle[]): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that preprocesses some of the arguments by calling the preprocessor handle.
                  * If the preprocessor handle has a return type, it must be the same as the first argument type of the <i>handle</i>.
@@ -219,7 +219,7 @@ declare namespace java {
                  *  			or if the arguments taken by the preprocessor isn't a subset of the arguments to the handle
                  */
                 // @ts-ignore
-                foldArguments(handle: java.lang.invoke.MethodHandle, preprocessor: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
+                public static foldArguments(handle: java.lang.invoke.MethodHandle, preprocessor: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that will permute the incoming arguments according to the
                  * permute array.  The new handle will have a type of permuteType.
@@ -239,7 +239,7 @@ declare namespace java {
                  *  			if the permute arguments don't match the handle.type()
                  */
                 // @ts-ignore
-                permuteArguments(handle: java.lang.invoke.MethodHandle, permuteType: java.lang.invoke.MethodType, ...permute: number /*int*/[]): java.lang.invoke.MethodHandle
+                public static permuteArguments(handle: java.lang.invoke.MethodHandle, permuteType: java.lang.invoke.MethodType, ...permute: number /*int*/[]): java.lang.invoke.MethodHandle
                 /**
                  * Produce a MethodHandle that preprocesses some of the arguments by calling the filter handle.
                  * If the <i>filter</i> handle has a return type, it must be the same as the argument type at pos in the <i>target</i> arguments.
@@ -255,7 +255,7 @@ declare namespace java {
                  *  			have too many parameters
                  */
                 // @ts-ignore
-                collectArguments(target: java.lang.invoke.MethodHandle, pos: number /*int*/, filter: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
+                public static collectArguments(target: java.lang.invoke.MethodHandle, pos: number /*int*/, filter: java.lang.invoke.MethodHandle): java.lang.invoke.MethodHandle
                 /**
                  * This method returns a method handle that delegates to the original method handle,
                  * ignoring a particular range of arguments (starting at a given location and
@@ -267,7 +267,7 @@ declare namespace java {
                  * @return a MethodHandle - representing a transformed handle as described above
                  */
                 // @ts-ignore
-                dropArguments(originalHandle: java.lang.invoke.MethodHandle, location: number /*int*/, ...valueTypes: java.lang.Class[]): java.lang.invoke.MethodHandle
+                public static dropArguments(originalHandle: java.lang.invoke.MethodHandle, location: number /*int*/, ...valueTypes: java.lang.Class<any>[]): java.lang.invoke.MethodHandle
                 /**
                  * This method returns a method handle that delegates to the original method handle,
                  * ignoring a particular range of arguments (starting at a given location and
@@ -279,7 +279,7 @@ declare namespace java {
                  * @return a MethodHandle - representing a transformed handle as described above
                  */
                 // @ts-ignore
-                dropArguments(originalHandle: java.lang.invoke.MethodHandle, location: number /*int*/, valueTypes: Array<java.lang.Class<any>>): java.lang.invoke.MethodHandle
+                public static dropArguments(originalHandle: java.lang.invoke.MethodHandle, location: number /*int*/, valueTypes: java.util.List<java.lang.Class<any>> | Array<java.lang.Class<any>>): java.lang.invoke.MethodHandle
                 /**
                  * Produce an adapter that converts the incoming arguments from <i>type</i> to the underlying MethodHandle's type
                  * and converts the return value as required.
@@ -299,7 +299,7 @@ declare namespace java {
                  * @throws WrongMethodTypeException - if an illegal conversion is requested
                  */
                 // @ts-ignore
-                explicitCastArguments(handle: java.lang.invoke.MethodHandle, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                public static explicitCastArguments(handle: java.lang.invoke.MethodHandle, type: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                 /**
                  * This method returns a method handle that delegates to the original method handle,
                  * adding a particular range of arguments (starting at a given location and
@@ -311,7 +311,7 @@ declare namespace java {
                  * @return a MethodHandle - representing a transformed handle as described above
                  */
                 // @ts-ignore
-                insertArguments(originalHandle: java.lang.invoke.MethodHandle, location: number /*int*/, ...values: any[]): java.lang.invoke.MethodHandle
+                public static insertArguments(originalHandle: java.lang.invoke.MethodHandle, location: number /*int*/, ...values: java.lang.Object[] | any[]): java.lang.invoke.MethodHandle
             }
         }
     }

@@ -50,93 +50,93 @@ declare namespace java {
                  *          of its elements are null
                  */
                 // @ts-ignore
-                constructor(c: Array<E>)
+                constructor(c: java.util.Collection<any> | Array<any>)
                 /**
                  * @throws IllegalStateException if this deque is full
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                addFirst(e: E): void
+                public addFirst(e: E): void
                 /**
                  * @throws IllegalStateException if this deque is full
                  * @throws NullPointerException  {#inheritDoc}
                  */
                 // @ts-ignore
-                addLast(e: E): void
+                public addLast(e: E): void
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                offerFirst(e: E): boolean
+                public offerFirst(e: E): boolean
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                offerLast(e: E): boolean
-                /**
-                 * @throws NullPointerException {#inheritDoc}
-                 * @throws InterruptedException {#inheritDoc}
-                 */
-                // @ts-ignore
-                putFirst(e: E): void
+                public offerLast(e: E): boolean
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                putLast(e: E): void
+                public putFirst(e: E): void
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                offerFirst(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public putLast(e: E): void
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                offerLast(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public offerFirst(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                /**
+                 * @throws NullPointerException {#inheritDoc}
+                 * @throws InterruptedException {#inheritDoc}
+                 */
+                // @ts-ignore
+                public offerLast(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                removeFirst(): E
+                public removeFirst(): E
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                removeLast(): E
+                public removeLast(): E
                 // @ts-ignore
-                pollFirst(): E
+                public pollFirst(): E
                 // @ts-ignore
-                pollLast(): E
+                public pollLast(): E
                 // @ts-ignore
-                takeFirst(): E
+                public takeFirst(): E
                 // @ts-ignore
-                takeLast(): E
+                public takeLast(): E
                 // @ts-ignore
-                pollFirst(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public pollFirst(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 // @ts-ignore
-                pollLast(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public pollLast(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                getFirst(): E
+                public getFirst(): E
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                getLast(): E
+                public getLast(): E
                 // @ts-ignore
-                peekFirst(): E
+                public peekFirst(): E
                 // @ts-ignore
-                peekLast(): E
+                public peekLast(): E
                 // @ts-ignore
-                removeFirstOccurrence(o: any): boolean
+                public removeFirstOccurrence(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                removeLastOccurrence(o: any): boolean
+                public removeLastOccurrence(o: java.lang.Object | any): boolean
                 /**
                  * Inserts the specified element at the end of this deque unless it would
                  * violate capacity restrictions.  When using a capacity-restricted deque,
@@ -146,24 +146,24 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                add(e: E): boolean
+                public add(e: E): boolean
                 /**
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E): boolean
+                public offer(e: E): boolean
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                put(e: E): void
+                public put(e: E): void
                 /**
                  * @throws NullPointerException {#inheritDoc}
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Retrieves and removes the head of the queue represented by this deque.
                  * This method differs from {@link #poll poll} only in that it throws an
@@ -173,13 +173,13 @@ declare namespace java {
                  * @throws NoSuchElementException if this deque is empty
                  */
                 // @ts-ignore
-                remove(): E
+                public remove(): E
                 // @ts-ignore
-                poll(): E
+                public poll(): E
                 // @ts-ignore
-                take(): E
+                public take(): E
                 // @ts-ignore
-                poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 /**
                  * Retrieves, but does not remove, the head of the queue represented by
                  * this deque.  This method differs from {@link #peek peek} only in that
@@ -189,9 +189,9 @@ declare namespace java {
                  * @throws NoSuchElementException if this deque is empty
                  */
                 // @ts-ignore
-                element(): E
+                public element(): E
                 // @ts-ignore
-                peek(): E
+                public peek(): E
                 /**
                  * Returns the number of additional elements that this deque can ideally
                  * (in the absence of memory or resource constraints) accept without
@@ -203,7 +203,7 @@ declare namespace java {
                  * insert or remove an element.
                  */
                 // @ts-ignore
-                remainingCapacity(): int
+                public remainingCapacity(): number /*int*/
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -211,7 +211,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>): int
+                public drainTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -219,18 +219,18 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>, maxElements: number /*int*/): int
+                public drainTo(c: java.util.Collection<any> | Array<any>, maxElements: number /*int*/): number /*int*/
                 /**
                  * @throws IllegalStateException if this deque is full
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                push(e: E): void
+                public push(e: E): void
                 /**
                  * @throws NoSuchElementException {#inheritDoc}
                  */
                 // @ts-ignore
-                pop(): E
+                public pop(): E
                 /**
                  * Removes the first occurrence of the specified element from this deque.
                  * If the deque does not contain the element, it is unchanged.
@@ -244,13 +244,13 @@ declare namespace java {
                  * @return {#code true} if this deque changed as a result of the call
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Returns the number of elements in this deque.
                  * @return the number of elements in this deque
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns {@code true} if this deque contains the specified element.
                  * More formally, returns {@code true} if and only if this deque contains
@@ -259,7 +259,7 @@ declare namespace java {
                  * @return {#code true} if this deque contains the specified element
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Returns an array containing all of the elements in this deque, in
                  * proper sequence (from first to last element).
@@ -271,7 +271,7 @@ declare namespace java {
                  * @return an array containing all of the elements in this deque
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Returns an array containing all of the elements in this deque, in
                  * proper sequence; the runtime type of the returned array is that of
@@ -302,15 +302,15 @@ declare namespace java {
                  * @throws NullPointerException if the specified array is null
                  */
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Atomically removes all of the elements from this deque.
                  * The deque will be empty after this call returns.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Returns an iterator over the elements in this deque in proper sequence.
                  * The elements will be returned in order from first (head) to last (tail).
@@ -319,7 +319,7 @@ declare namespace java {
                  * @return an iterator over the elements in this deque in proper sequence
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 /**
                  * Returns an iterator over the elements in this deque in reverse
                  * sequential order.  The elements will be returned in order from
@@ -329,7 +329,7 @@ declare namespace java {
                  * @return an iterator over the elements in this deque in reverse order
                  */
                 // @ts-ignore
-                descendingIterator(): java.util.Iterator<E>
+                public descendingIterator(): java.util.Iterator<E>
                 /**
                  * Returns a {@link Spliterator} over the elements in this deque.
                  * <p>The returned spliterator is
@@ -342,7 +342,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<E>
+                public spliterator(): java.util.Spliterator<E>
             }
         }
     }

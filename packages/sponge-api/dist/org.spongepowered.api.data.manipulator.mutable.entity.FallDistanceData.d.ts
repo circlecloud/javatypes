@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#FALL_DISTANCE
                                  */
                                 // @ts-ignore
-                                fallDistance(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Float>
+                                fallDistance(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Float | number>
                             }
                         }
                     }

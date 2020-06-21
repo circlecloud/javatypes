@@ -26,7 +26,7 @@ declare namespace javax {
                 // @ts-ignore
                 viewPort: javax.swing.JViewport
                 // @ts-ignore
-                resetViewPort(): void
+                public resetViewPort(): void
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -34,14 +34,14 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Invoked when the target of the listener has changed its state.
                  * @param e  a <code>ChangeEvent</code> object. Must not be null.
                  * @throws NullPointerException if the parameter is null.
                  */
                 // @ts-ignore
-                stateChanged(e: javax.swing.event.ChangeEvent): void
+                public stateChanged(e: javax.swing.event.ChangeEvent): void
                 /**
                  * This method gets called when a bound property is changed.
                  * @param e A <code>PropertyChangeEvent</code> object describing
@@ -50,7 +50,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                propertyChange(e: java.beans.PropertyChangeEvent): void
+                public propertyChange(e: java.beans.PropertyChangeEvent): void
             }
         }
     }

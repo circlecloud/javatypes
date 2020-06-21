@@ -11,7 +11,7 @@ declare namespace org {
                      * case, Economy).</p>
                      */
                     // @ts-ignore
-                    class PluginProvidedRegistryModule implements java.lang.annotation.Annotation {
+                    abstract class PluginProvidedRegistryModule implements java.lang.annotation.Annotation {
                     }
                 }
             }

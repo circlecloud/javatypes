@@ -19,25 +19,25 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 /**
                  * Sets the current state of this piston
                  * @param powered true if the piston is extended {#literal &} powered, or false
                  */
                 // @ts-ignore
-                setPowered(powered: boolean): void
+                public setPowered(powered: boolean): void
                 /**
                  * Checks if this piston base is sticky, and returns true if so
                  * @return true if this piston is "sticky", or false
                  */
                 // @ts-ignore
-                isSticky(): boolean
+                public isSticky(): boolean
                 // @ts-ignore
-                clone(): org.bukkit.material.PistonBaseMaterial
+                public clone(): org.bukkit.material.PistonBaseMaterial
             }
         }
     }

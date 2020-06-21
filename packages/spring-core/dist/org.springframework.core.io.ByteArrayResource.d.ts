@@ -30,47 +30,47 @@ declare namespace org {
                      * @param description where the byte array comes from
                      */
                     // @ts-ignore
-                    constructor(byteArray: number /*byte*/[], description: string)
+                    constructor(byteArray: number /*byte*/[], description: java.lang.String | string)
                     /**
                      * Return the underlying byte array.
                      */
                     // @ts-ignore
-                    getByteArray(): byte[]
+                    public getByteArray(): number /*byte*/[]
                     /**
                      * This implementation always returns {@code true}.
                      */
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     /**
                      * This implementation returns the length of the underlying byte array.
                      */
                     // @ts-ignore
-                    contentLength(): long
+                    public contentLength(): number /*long*/
                     /**
                      * This implementation returns a ByteArrayInputStream for the
                      * underlying byte array.
                      * @see java.io.ByteArrayInputStream
                      */
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     /**
                      * This implementation returns a description that includes the passed-in
                      * {@code description}, if any.
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * This implementation compares the underlying byte array.
                      * @see java.util.Arrays#equals(byte[], byte[])
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the hash code based on the
                      * underlying byte array.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

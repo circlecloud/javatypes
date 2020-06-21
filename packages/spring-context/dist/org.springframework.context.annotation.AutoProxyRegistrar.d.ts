@@ -31,7 +31,7 @@ declare namespace org {
                      * the same.
                      */
                     // @ts-ignore
-                    registerBeanDefinitions(importingClassMetadata: AnnotationMetadata, registry: BeanDefinitionRegistry): void
+                    public registerBeanDefinitions(importingClassMetadata: AnnotationMetadata, registry: BeanDefinitionRegistry): void
                 }
             }
         }

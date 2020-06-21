@@ -12,37 +12,37 @@ declare namespace org {
                     // @ts-ignore
                     constructor(explosive: org.bukkit.entity.Explosive)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the radius of the explosion
                      * @return returns the radius of the explosion
                      */
                     // @ts-ignore
-                    getRadius(): float
+                    public getRadius(): number /*float*/
                     /**
                      * Sets the radius of the explosion
                      * @param radius the radius of the explosion
                      */
                     // @ts-ignore
-                    setRadius(radius: number /*float*/): void
+                    public setRadius(radius: number /*float*/): void
                     /**
                      * Gets whether this explosion will create fire or not
                      * @return true if this explosion will create fire
                      */
                     // @ts-ignore
-                    getFire(): boolean
+                    public getFire(): boolean
                     /**
                      * Sets whether this explosion will create fire or not
                      * @param fire true if you want this explosion to create fire
                      */
                     // @ts-ignore
-                    setFire(fire: boolean): void
+                    public setFire(fire: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

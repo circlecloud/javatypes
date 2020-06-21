@@ -17,13 +17,13 @@ declare namespace java {
                  * including inherited members.
                  */
                 // @ts-ignore
-                
+                readonly PUBLIC: number /*int*/
                 /**
                  * Identifies the set of declared members of a class or interface.
                  * Inherited members are not included.
                  */
                 // @ts-ignore
-                
+                readonly DECLARED: number /*int*/
                 /**
                  * Returns the Class object representing the class or interface
                  * that declares the member or constructor represented by this Member.
@@ -31,14 +31,14 @@ declare namespace java {
                  *  underlying member
                  */
                 // @ts-ignore
-                getDeclaringClass(): java.lang.Class<?>
+                getDeclaringClass(): java.lang.Class<any>
                 /**
                  * Returns the simple name of the underlying member or constructor
                  * represented by this Member.
                  * @return the simple name of the underlying member
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns the Java language modifiers for the member or
                  * constructor represented by this Member, as an integer.  The
@@ -48,7 +48,7 @@ declare namespace java {
                  * @see Modifier
                  */
                 // @ts-ignore
-                getModifiers(): int
+                getModifiers(): number /*int*/
                 /**
                  * Returns {@code true} if this member was introduced by
                  * the compiler; returns {@code false} otherwise.

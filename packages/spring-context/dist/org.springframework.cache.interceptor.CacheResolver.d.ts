@@ -17,7 +17,7 @@ declare namespace org {
                      * @throws IllegalStateException if cache resolution failed
                      */
                     // @ts-ignore
-                    resolveCaches(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): java.util.Collection<? extends org.springframework.cache.Cache>
+                    resolveCaches(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): Array<any>
                 }
             }
         }

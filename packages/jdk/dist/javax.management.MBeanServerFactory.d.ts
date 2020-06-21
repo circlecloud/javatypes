@@ -58,7 +58,7 @@ declare namespace javax {
              *  MBeanServerPermission}("releaseMBeanServer")</code>.
              */
             // @ts-ignore
-            releaseMBeanServer(mbeanServer: javax.management.MBeanServer): void
+            public static releaseMBeanServer(mbeanServer: javax.management.MBeanServer): void
             /**
              * <p>Return a new object implementing the MBeanServer interface
              * with a standard default domain name.  The default domain name
@@ -87,7 +87,7 @@ declare namespace javax {
              *  MBeanServerBuilder}.
              */
             // @ts-ignore
-            createMBeanServer(): javax.management.MBeanServer
+            public static createMBeanServer(): javax.management.MBeanServer
             /**
              * <p>Return a new object implementing the {@link MBeanServer}
              * interface with the specified default domain name.  The given
@@ -116,7 +116,7 @@ declare namespace javax {
              *  MBeanServerBuilder}.
              */
             // @ts-ignore
-            createMBeanServer(domain: string): javax.management.MBeanServer
+            public static createMBeanServer(domain: java.lang.String | string): javax.management.MBeanServer
             /**
              * <p>Return a new object implementing the MBeanServer interface
              * with a standard default domain name, without keeping an
@@ -147,7 +147,7 @@ declare namespace javax {
              *  MBeanServerBuilder}.
              */
             // @ts-ignore
-            newMBeanServer(): javax.management.MBeanServer
+            public static newMBeanServer(): javax.management.MBeanServer
             /**
              * <p>Return a new object implementing the MBeanServer interface
              * with the specified default domain name, without keeping an
@@ -178,7 +178,7 @@ declare namespace javax {
              *  MBeanServerBuilder}.
              */
             // @ts-ignore
-            newMBeanServer(domain: string): javax.management.MBeanServer
+            public static newMBeanServer(domain: java.lang.String | string): javax.management.MBeanServer
             /**
              * <p>Return a list of registered MBeanServer objects.  A
              * registered MBeanServer object is one that was created by one of
@@ -196,7 +196,7 @@ declare namespace javax {
              *  MBeanServerPermission}("findMBeanServer")</code>.
              */
             // @ts-ignore
-            findMBeanServer(agentId: string): java.util.ArrayList<javax.management.MBeanServer>
+            public static findMBeanServer(agentId: java.lang.String | string): java.util.ArrayList<javax.management.MBeanServer>
             /**
              * Return the ClassLoaderRepository used by the given MBeanServer.
              * This method is equivalent to {@link
@@ -213,7 +213,7 @@ declare namespace javax {
              * @exception NullPointerException if <code>server</code> is null.
              */
             // @ts-ignore
-            getClassLoaderRepository(server: javax.management.MBeanServer): javax.management.loading.ClassLoaderRepository
+            public static getClassLoaderRepository(server: javax.management.MBeanServer): javax.management.loading.ClassLoaderRepository
         }
     }
 }

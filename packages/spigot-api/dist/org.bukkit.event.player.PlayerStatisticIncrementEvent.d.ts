@@ -23,41 +23,41 @@ declare namespace org {
                      * @return the incremented statistic
                      */
                     // @ts-ignore
-                    getStatistic(): org.bukkit.Statistic
+                    public getStatistic(): org.bukkit.Statistic
                     /**
                      * Gets the previous value of the statistic.
                      * @return the previous value of the statistic
                      */
                     // @ts-ignore
-                    getPreviousValue(): int
+                    public getPreviousValue(): number /*int*/
                     /**
                      * Gets the new value of the statistic.
                      * @return the new value of the statistic
                      */
                     // @ts-ignore
-                    getNewValue(): int
+                    public getNewValue(): number /*int*/
                     /**
                      * Gets the EntityType if {@link #getStatistic() getStatistic()} is an
                      * entity statistic otherwise returns null.
                      * @return the EntityType of the statistic
                      */
                     // @ts-ignore
-                    getEntityType(): org.bukkit.entity.EntityType
+                    public getEntityType(): org.bukkit.entity.EntityType
                     /**
                      * Gets the Material if {@link #getStatistic() getStatistic()} is a block
                      * or item statistic otherwise returns null.
                      * @return the Material of the statistic
                      */
                     // @ts-ignore
-                    getMaterial(): org.bukkit.Material
+                    public getMaterial(): org.bukkit.Material
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

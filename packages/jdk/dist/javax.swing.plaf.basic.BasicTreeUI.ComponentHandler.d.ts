@@ -22,7 +22,7 @@ declare namespace javax {
                         // @ts-ignore
                         scrollBar: javax.swing.JScrollBar
                         // @ts-ignore
-                        componentMoved(e: java.awt.event.ComponentEvent): void
+                        public componentMoved(e: java.awt.event.ComponentEvent): void
                         /**
                          * Creates, if necessary, and starts a Timer to check if need to
                          * resize the bounds.
@@ -40,7 +40,7 @@ declare namespace javax {
                          * not adjusting, this stops the timer and updates the sizing.
                          */
                         // @ts-ignore
-                        actionPerformed(ae: java.awt.event.ActionEvent): void
+                        public actionPerformed(ae: java.awt.event.ActionEvent): void
                     }
                 }
             }

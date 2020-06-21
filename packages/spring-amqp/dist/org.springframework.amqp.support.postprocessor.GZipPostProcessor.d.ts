@@ -19,7 +19,7 @@ declare namespace org {
                         // @ts-ignore
                         getCompressorStream(zipped: java.io.OutputStream): java.io.OutputStream
                         // @ts-ignore
-                        getEncoding(): java.lang.String
+                        getEncoding(): string
                     }
                 }
             }

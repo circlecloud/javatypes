@@ -25,14 +25,14 @@ declare namespace org {
                          * @throws IllegalStateException If the method is called after the pre order
                          */
                         // @ts-ignore
-                        getEntitySnapshots(): java.util.List<org.spongepowered.api.entity.EntitySnapshot>
+                        getEntitySnapshots(): Array<org.spongepowered.api.entity.EntitySnapshot>
                         /**
                          * Gets the {@link List} who will be affected after event
                          * resolution.
                          * @return The List
                          */
                         // @ts-ignore
-                        getEntities(): java.util.List<org.spongepowered.api.entity.Entity>
+                        getEntities(): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Filters out {@link Location}'s from
                          * {@link AffectEntityEvent#getEntities()} to be affected by this event.
@@ -42,7 +42,7 @@ declare namespace org {
                          * @return The entities removed from {#link #getEntities()}
                          */
                         // @ts-ignore
-                        filterEntityLocations(predicate: java.util.function.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>> | java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): java.util.List<org.spongepowered.api.entity.Entity>
+                        filterEntityLocations(predicate: java.util.function$.Predicate<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Filters out {@link Entity}'s from {@link AffectEntityEvent#getEntities()}
                          * to be affected by this event.
@@ -52,7 +52,7 @@ declare namespace org {
                          * @return The entities removed from {#link #getEntities()}
                          */
                         // @ts-ignore
-                        filterEntities(predicate: java.util.function.Predicate<org.spongepowered.api.entity.Entity> | java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): java.util.List<? extends org.spongepowered.api.entity.Entity>
+                        filterEntities(predicate: java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): Array<any>
                     }
                 }
             }

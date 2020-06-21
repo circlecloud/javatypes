@@ -42,7 +42,7 @@ declare namespace java {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Creates a {@code CertPathValidatorException} that wraps the
                  * specified throwable. This allows any exception to be converted into a
@@ -56,7 +56,7 @@ declare namespace java {
                  *  permitted, and indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Creates a {@code CertPathValidatorException} with the specified
                  * detail message and cause.
@@ -66,7 +66,7 @@ declare namespace java {
                  *  permitted, and indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Creates a {@code CertPathValidatorException} with the specified
                  * detail message, cause, certification path, and index.
@@ -84,7 +84,7 @@ declare namespace java {
                  *  {@code null} and {@code index} is not -1
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error, certPath: java.security.cert.CertPath, index: number /*int*/)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error, certPath: java.security.cert.CertPath, index: number /*int*/)
                 /**
                  * Creates a {@code CertPathValidatorException} with the specified
                  * detail message, cause, certification path, index, and reason.
@@ -105,7 +105,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error, certPath: java.security.cert.CertPath, index: number /*int*/, reason: java.security.cert.CertPathValidatorException.Reason)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error, certPath: java.security.cert.CertPath, index: number /*int*/, reason: java.security.cert.CertPathValidatorException.Reason)
                 /**
                  * Returns the certification path that was being validated when
                  * the exception was thrown.
@@ -122,7 +122,7 @@ declare namespace java {
                  * @return the index that has been set, or -1 if none has been set
                  */
                 // @ts-ignore
-                getIndex(): int
+                getIndex(): number /*int*/
                 /**
                  * Returns the reason that the validation failed. The reason is
                  * associated with the index of the certificate returned by

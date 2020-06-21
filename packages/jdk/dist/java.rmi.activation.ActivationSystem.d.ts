@@ -20,7 +20,7 @@ declare namespace java {
                  * The port to lookup the activation system.
                  */
                 // @ts-ignore
-                
+                readonly SYSTEM_PORT: number /*int*/
                 /**
                  * The <code>registerObject</code> method is used to register an
                  * activation descriptor, <code>desc</code>, and obtain an

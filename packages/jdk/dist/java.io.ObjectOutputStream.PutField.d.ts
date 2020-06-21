@@ -7,7 +7,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class PutField extends java.lang.Object {
+            abstract class PutField extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -20,7 +20,7 @@ declare namespace java {
                  *  <code>boolean</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: boolean): void
+                public abstract put(name: java.lang.String | string, val: boolean): void
                 /**
                  * Put the value of the named byte field into the persistent field.
                  * @param name the name of the serializable field
@@ -31,7 +31,7 @@ declare namespace java {
                  *  <code>byte</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: number /*byte*/): void
+                public abstract put(name: java.lang.String | string, val: number /*byte*/): void
                 /**
                  * Put the value of the named char field into the persistent field.
                  * @param name the name of the serializable field
@@ -42,7 +42,7 @@ declare namespace java {
                  *  <code>char</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: string): void
+                public abstract put(name: java.lang.String | string, val: string): void
                 /**
                  * Put the value of the named short field into the persistent field.
                  * @param name the name of the serializable field
@@ -53,7 +53,7 @@ declare namespace java {
                  *  <code>short</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: number /*short*/): void
+                public abstract put(name: java.lang.String | string, val: number /*short*/): void
                 /**
                  * Put the value of the named int field into the persistent field.
                  * @param name the name of the serializable field
@@ -64,7 +64,7 @@ declare namespace java {
                  *  <code>int</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: number /*int*/): void
+                public abstract put(name: java.lang.String | string, val: number /*int*/): void
                 /**
                  * Put the value of the named long field into the persistent field.
                  * @param name the name of the serializable field
@@ -75,7 +75,7 @@ declare namespace java {
                  *  <code>long</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: number /*long*/): void
+                public abstract put(name: java.lang.String | string, val: number /*long*/): void
                 /**
                  * Put the value of the named float field into the persistent field.
                  * @param name the name of the serializable field
@@ -86,7 +86,7 @@ declare namespace java {
                  *  <code>float</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: number /*float*/): void
+                public abstract put(name: java.lang.String | string, val: number /*float*/): void
                 /**
                  * Put the value of the named double field into the persistent field.
                  * @param name the name of the serializable field
@@ -97,7 +97,7 @@ declare namespace java {
                  *  <code>double</code>
                  */
                 // @ts-ignore
-                abstract put(name: string, val: number /*double*/): void
+                public abstract put(name: java.lang.String | string, val: number /*double*/): void
                 /**
                  * Put the value of the named Object field into the persistent field.
                  * @param name the name of the serializable field
@@ -109,7 +109,7 @@ declare namespace java {
                  *  reference type
                  */
                 // @ts-ignore
-                abstract put(name: string, val: any): void
+                public abstract put(name: java.lang.String | string, val: java.lang.Object | any): void
                 /**
                  * Write the data and fields to the specified ObjectOutput stream,
                  * which must be the same stream that produced this
@@ -128,7 +128,7 @@ declare namespace java {
                  *          method.
                  */
                 // @ts-ignore
-                abstract write(out: java.io.ObjectOutput): void
+                public abstract write(out: java.io.ObjectOutput): void
             }
         }
     }

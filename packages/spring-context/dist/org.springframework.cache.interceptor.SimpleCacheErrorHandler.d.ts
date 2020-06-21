@@ -13,13 +13,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    handleCacheGetError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: any): void
+                    public handleCacheGetError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: java.lang.Object | any): void
                     // @ts-ignore
-                    handleCachePutError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: any, value: any): void
+                    public handleCachePutError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: java.lang.Object | any, value: java.lang.Object | any): void
                     // @ts-ignore
-                    handleCacheEvictError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: any): void
+                    public handleCacheEvictError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: java.lang.Object | any): void
                     // @ts-ignore
-                    handleCacheClearError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache): void
+                    public handleCacheClearError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache): void
                 }
             }
         }

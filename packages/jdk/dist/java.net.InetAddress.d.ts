@@ -123,7 +123,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            isMulticastAddress(): boolean
+            public isMulticastAddress(): boolean
             /**
              * Utility routine to check if the InetAddress in a wildcard address.
              * @return a {#code boolean} indicating if the Inetaddress is
@@ -131,7 +131,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isAnyLocalAddress(): boolean
+            public isAnyLocalAddress(): boolean
             /**
              * Utility routine to check if the InetAddress is a loopback address.
              * @return a {#code boolean} indicating if the InetAddress is
@@ -139,7 +139,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isLoopbackAddress(): boolean
+            public isLoopbackAddress(): boolean
             /**
              * Utility routine to check if the InetAddress is an link local address.
              * @return a {#code boolean} indicating if the InetAddress is
@@ -147,7 +147,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isLinkLocalAddress(): boolean
+            public isLinkLocalAddress(): boolean
             /**
              * Utility routine to check if the InetAddress is a site local address.
              * @return a {#code boolean} indicating if the InetAddress is
@@ -155,7 +155,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isSiteLocalAddress(): boolean
+            public isSiteLocalAddress(): boolean
             /**
              * Utility routine to check if the multicast address has global scope.
              * @return a {#code boolean} indicating if the address has
@@ -164,7 +164,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCGlobal(): boolean
+            public isMCGlobal(): boolean
             /**
              * Utility routine to check if the multicast address has node scope.
              * @return a {#code boolean} indicating if the address has
@@ -173,7 +173,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCNodeLocal(): boolean
+            public isMCNodeLocal(): boolean
             /**
              * Utility routine to check if the multicast address has link scope.
              * @return a {#code boolean} indicating if the address has
@@ -182,7 +182,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCLinkLocal(): boolean
+            public isMCLinkLocal(): boolean
             /**
              * Utility routine to check if the multicast address has site scope.
              * @return a {#code boolean} indicating if the address has
@@ -191,7 +191,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCSiteLocal(): boolean
+            public isMCSiteLocal(): boolean
             /**
              * Utility routine to check if the multicast address has organization scope.
              * @return a {#code boolean} indicating if the address has
@@ -201,7 +201,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCOrgLocal(): boolean
+            public isMCOrgLocal(): boolean
             /**
              * Test whether that address is reachable. Best effort is made by the
              * implementation to try to reach the host, but firewalls and server
@@ -222,7 +222,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isReachable(timeout: number /*int*/): boolean
+            public isReachable(timeout: number /*int*/): boolean
             /**
              * Test whether that address is reachable. Best effort is made by the
              * implementation to try to reach the host, but firewalls and server
@@ -254,7 +254,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isReachable(netif: java.net.NetworkInterface, ttl: number /*int*/, timeout: number /*int*/): boolean
+            public isReachable(netif: java.net.NetworkInterface, ttl: number /*int*/, timeout: number /*int*/): boolean
             /**
              * Gets the host name for this IP address.
              * <p>If this InetAddress was created with a host name,
@@ -277,7 +277,7 @@ declare namespace java {
              * @see SecurityManager#checkConnect
              */
             // @ts-ignore
-            getHostName(): java.lang.String
+            public getHostName(): string
             /**
              * Gets the fully qualified domain name for this IP address.
              * Best effort method, meaning we may not be able to return
@@ -296,7 +296,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCanonicalHostName(): java.lang.String
+            public getCanonicalHostName(): string
             /**
              * Returns the raw IP address of this {@code InetAddress}
              * object. The result is in network byte order: the highest order
@@ -304,20 +304,20 @@ declare namespace java {
              * @return the raw IP address of this object.
              */
             // @ts-ignore
-            getAddress(): byte[]
+            public getAddress(): number /*byte*/[]
             /**
              * Returns the IP address string in textual presentation.
              * @return the raw IP address in a string format.
              * @since JDK1.0.2
              */
             // @ts-ignore
-            getHostAddress(): java.lang.String
+            public getHostAddress(): string
             /**
              * Returns a hashcode for this IP address.
              * @return a hash code value for this IP address.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -334,7 +334,7 @@ declare namespace java {
              * @see java.net.InetAddress#getAddress()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Converts this IP address to a {@code String}. The
              * string returned is of the form: hostname / literal IP
@@ -344,7 +344,7 @@ declare namespace java {
              * @return a string representation of this IP address.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Creates an InetAddress based on the provided host name and IP address.
              * No name service is checked for the validity of the address.
@@ -364,7 +364,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getByAddress(host: string, addr: number /*byte*/[]): java.net.InetAddress
+            public static getByAddress(host: java.lang.String | string, addr: number /*byte*/[]): java.net.InetAddress
             /**
              * Determines the IP address of a host, given the host's name.
              * <p> The host name can either be a machine name, such as
@@ -390,7 +390,7 @@ declare namespace java {
              *              and its checkConnect method doesn't allow the operation
              */
             // @ts-ignore
-            getByName(host: string): java.net.InetAddress
+            public static getByName(host: java.lang.String | string): java.net.InetAddress
             /**
              * Given the name of a host, returns an array of its IP addresses,
              * based on the configured name service on the system.
@@ -425,7 +425,7 @@ declare namespace java {
              * @see SecurityManager#checkConnect
              */
             // @ts-ignore
-            getAllByName(host: string): java.net.InetAddress[]
+            public static getAllByName(host: java.lang.String | string): java.net.InetAddress[]
             /**
              * Returns the loopback address.
              * <p>
@@ -437,7 +437,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getLoopbackAddress(): java.net.InetAddress
+            public static getLoopbackAddress(): java.net.InetAddress
             /**
              * Returns an {@code InetAddress} object given the raw IP address .
              * The argument is in network byte order: the highest order
@@ -452,7 +452,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getByAddress(addr: number /*byte*/[]): java.net.InetAddress
+            public static getByAddress(addr: number /*byte*/[]): java.net.InetAddress
             /**
              * Returns the address of the local host. This is achieved by retrieving
              * the name of the host from the system, then resolving that name into
@@ -472,7 +472,7 @@ declare namespace java {
              * @see java.net.InetAddress#getByName(java.lang.String)
              */
             // @ts-ignore
-            getLocalHost(): java.net.InetAddress
+            public static getLocalHost(): java.net.InetAddress
         }
     }
 }

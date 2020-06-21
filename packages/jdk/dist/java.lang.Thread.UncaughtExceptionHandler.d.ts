@@ -12,7 +12,7 @@ declare namespace java {
                  * @param throwable the uncaught exception
                  */
                 // @ts-ignore
-                uncaughtException(thread: java.lang.Thread, throwable: Error): void
+                uncaughtException(thread: java.lang.Thread, throwable: java.lang.Throwable | Error): void
             }
         }
     }

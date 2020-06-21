@@ -17,7 +17,7 @@ declare namespace javax {
              * @since 1.8
              */
             // @ts-ignore
-            class SNIServerName extends java.lang.Object {
+            abstract class SNIServerName extends java.lang.Object {
                 /**
                  * Creates an {@code SNIServerName} using the specified name type and
                  * encoded value.
@@ -39,13 +39,13 @@ declare namespace javax {
                  * @return the name type of this server name
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Returns a copy of the encoded server name value of this server name.
                  * @return a copy of the encoded server name value of this server name
                  */
                 // @ts-ignore
-                getEncoded(): byte[]
+                public getEncoded(): number /*byte*/[]
                 /**
                  * Indicates whether some other object is "equal to" this server name.
                  * @return true if, and only if, {#code other} is of the same class
@@ -53,7 +53,7 @@ declare namespace javax {
                  *          encoded value as this server name.
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this server name.
                  * <P>
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @return a hash code value for this server name.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this server name, including the server
                  * name type and the encoded server name value in this
@@ -94,7 +94,7 @@ declare namespace javax {
                  * @return a string representation of this server name
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

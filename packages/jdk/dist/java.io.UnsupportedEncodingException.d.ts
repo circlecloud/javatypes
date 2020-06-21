@@ -17,7 +17,7 @@ declare namespace java {
              * @param s Describes the reason for the exception.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
         }
     }
 }

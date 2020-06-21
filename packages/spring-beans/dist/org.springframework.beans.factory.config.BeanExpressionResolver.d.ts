@@ -24,7 +24,7 @@ declare namespace org {
                          * @throws BeansException if evaluation failed
                          */
                         // @ts-ignore
-                        evaluate(value: string, evalContext: org.springframework.beans.factory.config.BeanExpressionContext): java.lang.Object
+                        evaluate(value: java.lang.String | string, evalContext: org.springframework.beans.factory.config.BeanExpressionContext): any
                     }
                 }
             }

@@ -70,7 +70,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class ValidatorHandler extends java.lang.Object implements org.xml.sax.ContentHandler {
+            abstract class ValidatorHandler extends java.lang.Object implements org.xml.sax.ContentHandler {
                 /**
                  * <p>Constructor for derived classes.</p>
                  * <p>The constructor does nothing.</p>
@@ -121,7 +121,7 @@ declare namespace javax {
                  *       A {#link ContentHandler} or a null value.
                  */
                 // @ts-ignore
-                abstract setContentHandler(receiver: org.xml.sax.ContentHandler): void
+                public abstract setContentHandler(receiver: org.xml.sax.ContentHandler): void
                 /**
                  * Gets the {@link ContentHandler} which receives the
                  * augmented validation result.
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @see #setContentHandler(ContentHandler)
                  */
                 // @ts-ignore
-                abstract getContentHandler(): org.xml.sax.ContentHandler
+                public abstract getContentHandler(): org.xml.sax.ContentHandler
                 /**
                  * Sets the {@link ErrorHandler} to receive errors encountered
                  * during the validation.
@@ -177,7 +177,7 @@ declare namespace javax {
                  *       A new error handler to be set. This parameter can be null.
                  */
                 // @ts-ignore
-                abstract setErrorHandler(errorHandler: org.xml.sax.ErrorHandler): void
+                public abstract setErrorHandler(errorHandler: org.xml.sax.ErrorHandler): void
                 /**
                  * Gets the current {@link ErrorHandler} set to this {@link ValidatorHandler}.
                  * @return This method returns the object that was last set through
@@ -187,7 +187,7 @@ declare namespace javax {
                  * @see #setErrorHandler(ErrorHandler)
                  */
                 // @ts-ignore
-                abstract getErrorHandler(): org.xml.sax.ErrorHandler
+                public abstract getErrorHandler(): org.xml.sax.ErrorHandler
                 /**
                  * Sets the {@link LSResourceResolver} to customize
                  * resource resolution while in a validation episode.
@@ -220,7 +220,7 @@ declare namespace javax {
                  *       A new resource resolver to be set. This parameter can be null.
                  */
                 // @ts-ignore
-                abstract setResourceResolver(resourceResolver: org.w3c.dom.ls.LSResourceResolver): void
+                public abstract setResourceResolver(resourceResolver: org.w3c.dom.ls.LSResourceResolver): void
                 /**
                  * Gets the current {@link LSResourceResolver} set to this {@link ValidatorHandler}.
                  * @return This method returns the object that was last set through
@@ -230,7 +230,7 @@ declare namespace javax {
                  * @see #setErrorHandler(ErrorHandler)
                  */
                 // @ts-ignore
-                abstract getResourceResolver(): org.w3c.dom.ls.LSResourceResolver
+                public abstract getResourceResolver(): org.w3c.dom.ls.LSResourceResolver
                 /**
                  * Obtains the {@link TypeInfoProvider} implementation of this
                  * {@link ValidatorHandler}.
@@ -247,7 +247,7 @@ declare namespace javax {
                  *       Otherwise a non-null valid {@link TypeInfoProvider}.
                  */
                 // @ts-ignore
-                abstract getTypeInfoProvider(): javax.xml.validation.TypeInfoProvider
+                public abstract getTypeInfoProvider(): javax.xml.validation.TypeInfoProvider
                 /**
                  * Look up the value of a feature flag.
                  * <p>The feature name is any fully-qualified URI.  It is
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @see #setFeature(String, boolean)
                  */
                 // @ts-ignore
-                getFeature(name: string): boolean
+                public getFeature(name: java.lang.String | string): boolean
                 /**
                  * <p>Set a feature for this <code>ValidatorHandler</code>.</p>
                  * <p>Feature can be used to control the way a
@@ -305,7 +305,7 @@ declare namespace javax {
                  * @see #getFeature(String)
                  */
                 // @ts-ignore
-                setFeature(name: string, value: boolean): void
+                public setFeature(name: java.lang.String | string, value: boolean): void
                 /**
                  * Set the value of a property.
                  * <p>The property name is any fully-qualified URI.  It is
@@ -326,7 +326,7 @@ declare namespace javax {
                  * @throws NullPointerException When <code>name</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                setProperty(name: string, object: any): void
+                public setProperty(name: java.lang.String | string, object: java.lang.Object | any): void
                 /**
                  * Look up the value of a property.
                  * <p>The property name is any fully-qualified URI.  It is
@@ -349,7 +349,7 @@ declare namespace javax {
                  * @see #setProperty(String, Object)
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                public getProperty(name: java.lang.String | string): any
             }
         }
     }

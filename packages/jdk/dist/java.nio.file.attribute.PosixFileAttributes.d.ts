@@ -37,7 +37,7 @@ declare namespace java {
                      * @see PosixFileAttributeView#setPermissions
                      */
                     // @ts-ignore
-                    permissions(): java.util.Set<java.nio.file.attribute.PosixFilePermission>
+                    permissions(): Array<java.nio.file.attribute.PosixFilePermission>
                 }
             }
         }

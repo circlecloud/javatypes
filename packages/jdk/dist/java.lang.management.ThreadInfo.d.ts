@@ -15,7 +15,7 @@ declare namespace java {
                  *          a monitor.
                  */
                 // @ts-ignore
-                getBlockedCount(): long
+                public getBlockedCount(): number /*long*/
                 /**
                  * If thread contention monitoring is supported and enabled, returns the
                  * total amount of time that the thread represented by this
@@ -34,7 +34,7 @@ declare namespace java {
                  * @see ThreadMXBean#isThreadContentionMonitoringEnabled()
                  */
                 // @ts-ignore
-                getBlockedTime(): long
+                public getBlockedTime(): number /*long*/
                 /**
                  * If the thread represented by this <code>ThreadInfo</code> is currently
                  * blocked on or waiting on a monitor object, returns a string
@@ -53,7 +53,7 @@ declare namespace java {
                  * @see System#identityHashCode(java.lang.Object)
                  */
                 // @ts-ignore
-                getLockName(): java.lang.String
+                public getLockName(): string
                 /**
                  * If the thread represented by this <code>ThreadInfo</code> is currently
                  * blocked on or waiting on a monitor object, returns the thread identifier
@@ -65,7 +65,7 @@ declare namespace java {
                  *          is no other thread holding the monitor, returns a <code>-1</code>.
                  */
                 // @ts-ignore
-                getLockOwnerId(): long
+                public getLockOwnerId(): number /*long*/
                 /**
                  * If the thread represented by this <code>ThreadInfo</code> is currently
                  * blocked on or waiting on a monitor object, returns the name of the thread
@@ -78,7 +78,7 @@ declare namespace java {
                  *          reference.
                  */
                 // @ts-ignore
-                getLockOwnerName(): java.lang.String
+                public getLockOwnerName(): string
                 /**
                  * If the thread corresponding to this <code>ThreadInfo</code> is blocked
                  * then this method returns a {@link LockInfo} object that contains details
@@ -87,7 +87,7 @@ declare namespace java {
                  *          thread is currently blocked, else <code>null</code>.
                  */
                 // @ts-ignore
-                getLockInfo(): java.lang.management.LockInfo
+                public getLockInfo(): java.lang.management.LockInfo
                 /**
                  * If available, returns the stack trace for the thread represented by this
                  * <code>ThreadInfo</code> instance. The stack trace is returned in an
@@ -103,7 +103,7 @@ declare namespace java {
                  *          <code>ThreadInfo</code>.
                  */
                 // @ts-ignore
-                getStackTrace(): java.lang.StackTraceElement[]
+                public getStackTrace(): java.lang.StackTraceElement[]
                 /**
                  * Returns the thread identifier of the thread represented by this
                  * <code>ThreadInfo</code>.
@@ -111,7 +111,7 @@ declare namespace java {
                  *          <code>ThreadInfo</code>.
                  */
                 // @ts-ignore
-                getThreadId(): long
+                public getThreadId(): number /*long*/
                 /**
                  * Returns the name of the thread represented by this
                  * <code>ThreadInfo</code>.
@@ -119,7 +119,7 @@ declare namespace java {
                  *          <code>ThreadInfo</code>.
                  */
                 // @ts-ignore
-                getThreadName(): java.lang.String
+                public getThreadName(): string
                 /**
                  * Returns the thread state value of the thread represented by this
                  * <code>ThreadInfo</code>.
@@ -128,7 +128,7 @@ declare namespace java {
                  * @see Thread#getState()
                  */
                 // @ts-ignore
-                getThreadState(): java.lang.Thread.State
+                public getThreadState(): java.lang.Thread.State
                 /**
                  * The number of times that the thread represented by this
                  * <code>ThreadInfo</code> has gone to the &quot;wait&quot; or &quot;timed
@@ -137,7 +137,7 @@ declare namespace java {
                  *          &quot;wait&quot; or &quot;timed wait&quot; state.
                  */
                 // @ts-ignore
-                getWaitedCount(): long
+                public getWaitedCount(): number /*long*/
                 /**
                  * If thread contention monitoring is supported and enabled, returns the
                  * total amount of time that the thread represented by this
@@ -156,7 +156,7 @@ declare namespace java {
                  * @see ThreadMXBean#isThreadContentionMonitoringEnabled()
                  */
                 // @ts-ignore
-                getWaitedTime(): long
+                public getWaitedTime(): number /*long*/
                 /**
                  * Returns a <code>boolean</code> indication of whether or not the thread
                  * represented by this <code>ThreadInfo</code> is currently in a native
@@ -165,7 +165,7 @@ declare namespace java {
                  *          then <code>true</code>, otherwise <code>false</code>.
                  */
                 // @ts-ignore
-                isInNative(): boolean
+                public isInNative(): boolean
                 /**
                  * Returns a <code>boolean</code> indication of whether or not the thread
                  * represented by this <code>ThreadInfo</code> is currently suspended.
@@ -173,7 +173,7 @@ declare namespace java {
                  *          <code>true</code>, otherwise <code>false</code>.
                  */
                 // @ts-ignore
-                isSuspended(): boolean
+                public isSuspended(): boolean
                 /**
                  * Returns an array of <code>MonitorInfo</code> objects, one for every
                  * monitor object locked by the <code>Thread</code> corresponding to this
@@ -185,7 +185,7 @@ declare namespace java {
                  *          length of zero.
                  */
                 // @ts-ignore
-                getLockedMonitors(): java.lang.management.MonitorInfo[]
+                public getLockedMonitors(): java.lang.management.MonitorInfo[]
                 /**
                  * Returns an array of <code>LockInfo</code> objects, each one containing
                  * information on an ownable synchronizer (a synchronizer that makes use of
@@ -199,7 +199,7 @@ declare namespace java {
                  *          have a length of zero.
                  */
                 // @ts-ignore
-                getLockedSynchronizers(): java.lang.management.LockInfo[]
+                public getLockedSynchronizers(): java.lang.management.LockInfo[]
                 /**
                  * Receives a {@link CompositeData} representing a <code>ThreadInfo</code>
                  * object and attempts to return the root <code>ThreadInfo</code>
@@ -251,23 +251,23 @@ declare namespace java {
                  *              </ul>
                  */
                 // @ts-ignore
-                from(cd: javax.management.openmbean.CompositeData): java.lang.management.ThreadInfo
+                public static from(cd: javax.management.openmbean.CompositeData): java.lang.management.ThreadInfo
                 /**
                  * Returns a text description of this thread info.
                  * @return a text description of this thread info.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

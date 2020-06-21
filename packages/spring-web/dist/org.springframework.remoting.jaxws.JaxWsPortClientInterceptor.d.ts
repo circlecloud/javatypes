@@ -30,89 +30,89 @@ declare namespace org {
                      * @see org.springframework.jndi.JndiObjectFactoryBean
                      */
                     // @ts-ignore
-                    setJaxWsService(jaxWsService: javax.xml.ws.Service): void
+                    public setJaxWsService(jaxWsService: javax.xml.ws.Service): void
                     /**
                      * Return a reference to an existing JAX-WS Service instance, if any.
                      */
                     // @ts-ignore
-                    getJaxWsService(): javax.xml.ws.Service
+                    public getJaxWsService(): javax.xml.ws.Service
                     /**
                      * Set the name of the port.
                      * Corresponds to the "wsdl:port" name.
                      */
                     // @ts-ignore
-                    setPortName(portName: string): void
+                    public setPortName(portName: java.lang.String | string): void
                     /**
                      * Return the name of the port.
                      */
                     // @ts-ignore
-                    getPortName(): java.lang.String
+                    public getPortName(): string
                     /**
                      * Set the username to specify on the stub.
                      * @see javax.xml.ws.BindingProvider#USERNAME_PROPERTY
                      */
                     // @ts-ignore
-                    setUsername(username: string): void
+                    public setUsername(username: java.lang.String | string): void
                     /**
                      * Return the username to specify on the stub.
                      */
                     // @ts-ignore
-                    getUsername(): java.lang.String
+                    public getUsername(): string
                     /**
                      * Set the password to specify on the stub.
                      * @see javax.xml.ws.BindingProvider#PASSWORD_PROPERTY
                      */
                     // @ts-ignore
-                    setPassword(password: string): void
+                    public setPassword(password: java.lang.String | string): void
                     /**
                      * Return the password to specify on the stub.
                      */
                     // @ts-ignore
-                    getPassword(): java.lang.String
+                    public getPassword(): string
                     /**
                      * Set the endpoint address to specify on the stub.
                      * @see javax.xml.ws.BindingProvider#ENDPOINT_ADDRESS_PROPERTY
                      */
                     // @ts-ignore
-                    setEndpointAddress(endpointAddress: string): void
+                    public setEndpointAddress(endpointAddress: java.lang.String | string): void
                     /**
                      * Return the endpoint address to specify on the stub.
                      */
                     // @ts-ignore
-                    getEndpointAddress(): java.lang.String
+                    public getEndpointAddress(): string
                     /**
                      * Set the "session.maintain" flag to specify on the stub.
                      * @see javax.xml.ws.BindingProvider#SESSION_MAINTAIN_PROPERTY
                      */
                     // @ts-ignore
-                    setMaintainSession(maintainSession: boolean): void
+                    public setMaintainSession(maintainSession: boolean): void
                     /**
                      * Return the "session.maintain" flag to specify on the stub.
                      */
                     // @ts-ignore
-                    isMaintainSession(): boolean
+                    public isMaintainSession(): boolean
                     /**
                      * Set the "soapaction.use" flag to specify on the stub.
                      * @see javax.xml.ws.BindingProvider#SOAPACTION_USE_PROPERTY
                      */
                     // @ts-ignore
-                    setUseSoapAction(useSoapAction: boolean): void
+                    public setUseSoapAction(useSoapAction: boolean): void
                     /**
                      * Return the "soapaction.use" flag to specify on the stub.
                      */
                     // @ts-ignore
-                    isUseSoapAction(): boolean
+                    public isUseSoapAction(): boolean
                     /**
                      * Set the SOAP action URI to specify on the stub.
                      * @see javax.xml.ws.BindingProvider#SOAPACTION_URI_PROPERTY
                      */
                     // @ts-ignore
-                    setSoapActionUri(soapActionUri: string): void
+                    public setSoapActionUri(soapActionUri: java.lang.String | string): void
                     /**
                      * Return the SOAP action URI to specify on the stub.
                      */
                     // @ts-ignore
-                    getSoapActionUri(): java.lang.String
+                    public getSoapActionUri(): string
                     /**
                      * Set custom properties to be set on the stub.
                      * <p>Can be populated with a String "value" (parsed via PropertiesEditor)
@@ -120,7 +120,7 @@ declare namespace org {
                      * @see javax.xml.ws.BindingProvider#getRequestContext()
                      */
                     // @ts-ignore
-                    setCustomProperties(customProperties: java.util.Map<java.lang.String, java.lang.Object>): void
+                    public setCustomProperties(customProperties: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                     /**
                      * Allow Map access to the custom properties to be set on the stub,
                      * with the option to add or override specific entries.
@@ -129,7 +129,7 @@ declare namespace org {
                      * adding or overriding entries in child bean definitions.
                      */
                     // @ts-ignore
-                    getCustomProperties(): java.util.Map<java.lang.String, java.lang.Object>
+                    public getCustomProperties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Add a custom property to this JAX-WS BindingProvider.
                      * @param name the name of the attribute to expose
@@ -137,7 +137,7 @@ declare namespace org {
                      * @see javax.xml.ws.BindingProvider#getRequestContext()
                      */
                     // @ts-ignore
-                    addCustomProperty(name: string, value: any): void
+                    public addCustomProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                     /**
                      * Specify WebServiceFeature objects (e.g. as inner bean definitions)
                      * to apply to JAX-WS port stub creation.
@@ -146,17 +146,17 @@ declare namespace org {
                      * @see #setServiceFeatures
                      */
                     // @ts-ignore
-                    setPortFeatures(...features: javax.xml.ws.WebServiceFeature[]): void
+                    public setPortFeatures(...features: javax.xml.ws.WebServiceFeature[]): void
                     /**
                      * Set the interface of the service that this factory should create a proxy for.
                      */
                     // @ts-ignore
-                    setServiceInterface(serviceInterface: java.lang.Class<any>): void
+                    public setServiceInterface(serviceInterface: java.lang.Class<any>): void
                     /**
                      * Return the interface of the service that this factory should create a proxy for.
                      */
                     // @ts-ignore
-                    getServiceInterface(): java.lang.Class<?>
+                    public getServiceInterface(): java.lang.Class<any>
                     /**
                      * Set whether to look up the JAX-WS service on startup.
                      * <p>Default is "true". Turn this flag off to allow for late start
@@ -164,25 +164,25 @@ declare namespace org {
                      * lazily fetched on first access.
                      */
                     // @ts-ignore
-                    setLookupServiceOnStartup(lookupServiceOnStartup: boolean): void
+                    public setLookupServiceOnStartup(lookupServiceOnStartup: boolean): void
                     /**
                      * Set the bean ClassLoader to use for this interceptor: primarily for
                      * building a client proxy in the {@link JaxWsPortProxyFactoryBean} subclass.
                      */
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Return the bean ClassLoader to use for this interceptor.
                      */
                     // @ts-ignore
                     getBeanClassLoader(): java.lang.ClassLoader
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Initialize the JAX-WS port for this interceptor.
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Initialize this client interceptor's properties from the given WebService annotation,
                      * if necessary and possible (i.e. if "wsdlDocumentUrl", "namespaceUri", "serviceName"
@@ -213,7 +213,7 @@ declare namespace org {
                      *  {#code Service.getPort(...)}
                      */
                     // @ts-ignore
-                    getPortStub(service: javax.xml.ws.Service, portQName: javax.xml.namespace.QName): java.lang.Object
+                    getPortStub(service: javax.xml.ws.Service, portQName: javax.xml.namespace.QName): any
                     /**
                      * Prepare the given JAX-WS port stub, applying properties to it.
                      * Called by {@link #prepare}.
@@ -225,15 +225,15 @@ declare namespace org {
                      * @see #setCustomProperties
                      */
                     // @ts-ignore
-                    preparePortStub(stub: any): void
+                    preparePortStub(stub: java.lang.Object | any): void
                     /**
                      * Return the underlying JAX-WS port stub that this interceptor delegates to
                      * for each method invocation on the proxy.
                      */
                     // @ts-ignore
-                    getPortStub(): java.lang.Object
+                    getPortStub(): any
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                     /**
                      * Perform a JAX-WS service invocation based on the given method invocation.
                      * @param invocation the AOP method invocation
@@ -243,7 +243,7 @@ declare namespace org {
                      * @see #doInvoke(org.aopalliance.intercept.MethodInvocation, Object)
                      */
                     // @ts-ignore
-                    doInvoke(invocation: MethodInvocation): java.lang.Object
+                    doInvoke(invocation: MethodInvocation): any
                     /**
                      * Perform a JAX-WS service invocation on the given port stub.
                      * @param invocation the AOP method invocation
@@ -253,7 +253,7 @@ declare namespace org {
                      * @see #getPortStub()
                      */
                     // @ts-ignore
-                    doInvoke(invocation: MethodInvocation, portStub: any): java.lang.Object
+                    doInvoke(invocation: MethodInvocation, portStub: java.lang.Object | any): any
                 }
             }
         }

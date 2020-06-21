@@ -13,7 +13,7 @@ declare namespace org {
                          * @return the 'pickles' value
                          */
                         // @ts-ignore
-                        getPickles(): int
+                        getPickles(): number /*int*/
                         /**
                          * Sets the value of the 'pickles' property.
                          * @param pickles the new 'pickles' value
@@ -25,13 +25,13 @@ declare namespace org {
                          * @return the minimum 'pickles' value
                          */
                         // @ts-ignore
-                        getMinimumPickles(): int
+                        getMinimumPickles(): number /*int*/
                         /**
                          * Gets the maximum allowed value of the 'pickles' property.
                          * @return the maximum 'pickles' value
                          */
                         // @ts-ignore
-                        getMaximumPickles(): int
+                        getMaximumPickles(): number /*int*/
                     }
                 }
             }

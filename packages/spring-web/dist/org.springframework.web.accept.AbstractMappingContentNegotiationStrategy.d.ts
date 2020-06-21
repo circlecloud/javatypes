@@ -18,12 +18,12 @@ declare namespace org {
                  * @since 3.2
                  */
                 // @ts-ignore
-                class AbstractMappingContentNegotiationStrategy extends org.springframework.web.accept.MappingMediaTypeFileExtensionResolver implements org.springframework.web.accept.ContentNegotiationStrategy {
+                abstract class AbstractMappingContentNegotiationStrategy extends org.springframework.web.accept.MappingMediaTypeFileExtensionResolver implements org.springframework.web.accept.ContentNegotiationStrategy {
                     /**
                      * Create an instance with the given map of file extensions and media types.
                      */
                     // @ts-ignore
-                    constructor(mediaTypes: java.util.Map<java.lang.String, org.springframework.http.MediaType>)
+                    constructor(mediaTypes: java.util.Map<java.lang.String | string, org.springframework.http.MediaType>)
                     // @ts-ignore
                     readonly logger: Log
                     /**
@@ -32,9 +32,9 @@ declare namespace org {
                      * <p>By default this is set to {@code false}.
                      */
                     // @ts-ignore
-                    setUseRegisteredExtensionsOnly(useRegisteredExtensionsOnly: boolean): void
+                    public setUseRegisteredExtensionsOnly(useRegisteredExtensionsOnly: boolean): void
                     // @ts-ignore
-                    isUseRegisteredExtensionsOnly(): boolean
+                    public isUseRegisteredExtensionsOnly(): boolean
                     /**
                      * Whether to ignore requests with unknown file extension. Setting this to
                      * {@code false} results in {@code HttpMediaTypeNotAcceptableException}.
@@ -42,30 +42,30 @@ declare namespace org {
                      * {@link PathExtensionContentNegotiationStrategy} to {@literal true}.
                      */
                     // @ts-ignore
-                    setIgnoreUnknownExtensions(ignoreUnknownExtensions: boolean): void
+                    public setIgnoreUnknownExtensions(ignoreUnknownExtensions: boolean): void
                     // @ts-ignore
-                    isIgnoreUnknownExtensions(): boolean
+                    public isIgnoreUnknownExtensions(): boolean
                     // @ts-ignore
-                    resolveMediaTypes(webRequest: org.springframework.web.context.request.NativeWebRequest): java.util.List<org.springframework.http.MediaType>
+                    public resolveMediaTypes(webRequest: org.springframework.web.context.request.NativeWebRequest): Array<org.springframework.http.MediaType>
                     /**
                      * An alternative to {@link #resolveMediaTypes(NativeWebRequest)} that accepts
                      * an already extracted key.
                      * @since 3.2.16
                      */
                     // @ts-ignore
-                    resolveMediaTypeKey(webRequest: org.springframework.web.context.request.NativeWebRequest, key: string): java.util.List<org.springframework.http.MediaType>
+                    public resolveMediaTypeKey(webRequest: org.springframework.web.context.request.NativeWebRequest, key: java.lang.String | string): Array<org.springframework.http.MediaType>
                     /**
                      * Extract a key from the request to use to look up media types.
                      * @return the lookup key, or {#code null} if none
                      */
                     // @ts-ignore
-                    abstract getMediaTypeKey(request: org.springframework.web.context.request.NativeWebRequest): java.lang.String
+                    abstract getMediaTypeKey(request: org.springframework.web.context.request.NativeWebRequest): string
                     /**
                      * Override to provide handling when a key is successfully resolved via
                      * {@link #lookupMediaType}.
                      */
                     // @ts-ignore
-                    handleMatch(key: string, mediaType: org.springframework.http.MediaType): void
+                    handleMatch(key: java.lang.String | string, mediaType: org.springframework.http.MediaType): void
                     /**
                      * Override to provide handling when a key is not resolved via.
                      * {@link #lookupMediaType}. Sub-classes can take further steps to
@@ -73,7 +73,7 @@ declare namespace org {
                      * this method it will be added to the cache in the base class.
                      */
                     // @ts-ignore
-                    handleNoMatch(request: org.springframework.web.context.request.NativeWebRequest, key: string): org.springframework.http.MediaType
+                    handleNoMatch(request: org.springframework.web.context.request.NativeWebRequest, key: java.lang.String | string): org.springframework.http.MediaType
                 }
             }
         }

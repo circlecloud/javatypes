@@ -12,19 +12,19 @@ declare namespace java {
                  * specifying the cross-platform, pure Java print dialog.
                  */
                 // @ts-ignore
-                readonly COMMON: java.awt.JobAttributes.DialogType
+                public static readonly COMMON: java.awt.JobAttributes.DialogType
                 /**
                  * The <code>DialogType</code> instance to use for
                  * specifying the platform's native print dialog.
                  */
                 // @ts-ignore
-                readonly NATIVE: java.awt.JobAttributes.DialogType
+                public static readonly NATIVE: java.awt.JobAttributes.DialogType
                 /**
                  * The <code>DialogType</code> instance to use for
                  * specifying no print dialog.
                  */
                 // @ts-ignore
-                readonly NONE: java.awt.JobAttributes.DialogType
+                public static readonly NONE: java.awt.JobAttributes.DialogType
             }
         }
     }

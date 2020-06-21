@@ -13,7 +13,7 @@ declare namespace org {
                      * @since 1.4.2
                      */
                     // @ts-ignore
-                    class AbstractDecompressingPostProcessor extends java.lang.Object implements org.springframework.amqp.core.MessagePostProcessor {
+                    abstract class AbstractDecompressingPostProcessor extends java.lang.Object implements org.springframework.amqp.core.MessagePostProcessor {
                         /**
                          * Construct a post processor that will decompress the supported content
                          * encoding only if {@link MessageProperties#SPRING_AUTO_DECOMPRESS} header is present
@@ -30,7 +30,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(alwaysDecompress: boolean)
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         /**
                          * Set the order.
                          * @param order the order, default 0.
@@ -39,7 +39,7 @@ declare namespace org {
                         // @ts-ignore
                         setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        postProcessMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
+                        public postProcessMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.Message
                         /**
                          * Get the stream.
                          * @param stream The output stream to write the compressed data to.
@@ -53,7 +53,7 @@ declare namespace org {
                          * @return the content-encoding header.
                          */
                         // @ts-ignore
-                        abstract getEncoding(): java.lang.String
+                        abstract getEncoding(): string
                     }
                 }
             }

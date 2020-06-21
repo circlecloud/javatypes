@@ -18,7 +18,7 @@ declare namespace org {
                                  * @return Explosion radius
                                  */
                                 // @ts-ignore
-                                explosionRadius(): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<java.lang.Integer>
+                                explosionRadius(): org.spongepowered.api.data.value.immutable.ImmutableOptionalValue<java.lang.Integer | number>
                             }
                         }
                     }

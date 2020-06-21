@@ -24,20 +24,20 @@ declare namespace org {
                      * @return The created profile
                      */
                     // @ts-ignore
-                    of(uniqueId: java.util.UUID, name: string): org.spongepowered.api.profile.GameProfile
+                    of(uniqueId: java.util.UUID, name: java.lang.String | string): org.spongepowered.api.profile.GameProfile
                     /**
                      * Gets the name associated with this profile.
                      * @return The associated name if present, otherwise {#link Optional#empty()}
                      */
                     // @ts-ignore
-                    getName(): java.util.Optional<java.lang.String>
+                    getName(): java.util.Optional<java.lang.String | string>
                     /**
                      * Gets the property map for this profile.
                      * <p>This is a mutable map.</p>
                      * @return The property map
                      */
                     // @ts-ignore
-                    getPropertyMap(): <any>
+                    getPropertyMap(): object
                     /**
                      * Adds a profile property to this game profile.
                      * <p>The {@link ProfileProperty#getName() name} of the property is used when
@@ -54,7 +54,7 @@ declare namespace org {
                      * @return The game profile
                      */
                     // @ts-ignore
-                    addProperty(name: string, property: org.spongepowered.api.profile.property.ProfileProperty): org.spongepowered.api.profile.GameProfile
+                    addProperty(name: java.lang.String | string, property: org.spongepowered.api.profile.property.ProfileProperty): org.spongepowered.api.profile.GameProfile
                     /**
                      * Removes a profile property to this game profile.
                      * <p>The {@link ProfileProperty#getName() name} of the property is used when
@@ -71,7 +71,7 @@ declare namespace org {
                      * @return {#code true} if the property map changed
                      */
                     // @ts-ignore
-                    removeProperty(name: string, property: org.spongepowered.api.profile.property.ProfileProperty): boolean
+                    removeProperty(name: java.lang.String | string, property: org.spongepowered.api.profile.property.ProfileProperty): boolean
                     /**
                      * Checks if this profile is filled.
                      * <p>A filled profile contains both a unique id and name.</p>

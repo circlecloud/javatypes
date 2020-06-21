@@ -13,22 +13,22 @@ declare namespace org {
                              * @param <M> The type of mutable manipulator
                              */
                             // @ts-ignore
-                            class AbstractImmutableSingleCatalogData<E extends org.spongepowered.api.CatalogType, I extends org.spongepowered.api.data.manipulator.immutable.ImmutableVariantData<E, I, M>, M extends org.spongepowered.api.data.manipulator.mutable.VariantData<E, M, I>> extends org.spongepowered.api.data.manipulator.immutable.common.AbstractImmutableSingleData<E, I, M> implements org.spongepowered.api.data.manipulator.immutable.ImmutableVariantData<E, I, M> {
+                            abstract class AbstractImmutableSingleCatalogData<E extends org.spongepowered.api.CatalogType, I extends org.spongepowered.api.data.manipulator.immutable.ImmutableVariantData<E, I, M>, M extends org.spongepowered.api.data.manipulator.mutable.VariantData<E, M, I>> extends org.spongepowered.api.data.manipulator.immutable.common.AbstractImmutableSingleData<E, I, M> implements org.spongepowered.api.data.manipulator.immutable.ImmutableVariantData<E, I, M> {
                                 /**
                                  * @deprecated Use {#link #AbstractImmutableSingleCatalogData(Key, CatalogType, CatalogType)} instead.
                                  */
                                 // @ts-ignore
-                                constructor(value: E extends org.spongepowered.api.CatalogType, defaultValue: E extends org.spongepowered.api.CatalogType, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>)
+                                constructor(value: E, defaultValue: E, usedKey: org.spongepowered.api.data.key.Key<any>)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E extends org.spongepowered.api.CatalogType)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E extends org.spongepowered.api.CatalogType, defaultValue: E extends org.spongepowered.api.CatalogType)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E, defaultValue: E)
                                 // @ts-ignore
                                 getValueGetter(): org.spongepowered.api.data.value.immutable.ImmutableValue<E>
                                 // @ts-ignore
-                                toContainer(): org.spongepowered.api.data.DataContainer
+                                public toContainer(): org.spongepowered.api.data.DataContainer
                                 // @ts-ignore
-                                type(): org.spongepowered.api.data.value.immutable.ImmutableValue<E>
+                                public type(): org.spongepowered.api.data.value.immutable.ImmutableValue<E>
                             }
                         }
                     }

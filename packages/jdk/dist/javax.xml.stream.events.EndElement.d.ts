@@ -26,7 +26,7 @@ declare namespace javax {
                      *  empty iterator
                      */
                     // @ts-ignore
-                    getNamespaces(): java.util.Iterator
+                    getNamespaces(): java.util.Iterator<any>
                 }
             }
         }

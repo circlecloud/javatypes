@@ -19,13 +19,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(element: java.lang.reflect.AnnotatedElement, targetClass: java.lang.Class<any>)
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    compareTo(other: org.springframework.context.expression.AnnotatedElementKey): int
+                    public compareTo(other: org.springframework.context.expression.AnnotatedElementKey): number /*int*/
                 }
             }
         }

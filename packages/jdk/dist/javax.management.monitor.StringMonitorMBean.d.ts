@@ -13,14 +13,14 @@ declare namespace javax {
                  * @deprecated As of JMX 1.2, replaced by {#link #getDerivedGauge(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGauge(): java.lang.String
+                getDerivedGauge(): string
                 /**
                  * Gets the derived gauge timestamp.
                  * @return The derived gauge timestamp.
                  * @deprecated As of JMX 1.2, replaced by {#link #getDerivedGaugeTimeStamp(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(): long
+                getDerivedGaugeTimeStamp(): number /*long*/
                 /**
                  * Gets the derived gauge for the specified MBean.
                  * @param object the MBean for which the derived gauge is to be returned
@@ -28,7 +28,7 @@ declare namespace javax {
                  *          set of observed MBeans, or <code>null</code> otherwise.
                  */
                 // @ts-ignore
-                getDerivedGauge(object: javax.management.ObjectName): java.lang.String
+                getDerivedGauge(object: javax.management.ObjectName): string
                 /**
                  * Gets the derived gauge timestamp for the specified MBean.
                  * @param object the MBean for which the derived gauge timestamp is to be returned
@@ -36,14 +36,14 @@ declare namespace javax {
                  *          is in the set of observed MBeans, or <code>null</code> otherwise.
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): long
+                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): number /*long*/
                 /**
                  * Gets the string to compare with the observed attribute.
                  * @return The string value.
                  * @see #setStringToCompare
                  */
                 // @ts-ignore
-                getStringToCompare(): java.lang.String
+                getStringToCompare(): string
                 /**
                  * Sets the string to compare with the observed attribute.
                  * @param value The string value.
@@ -52,7 +52,7 @@ declare namespace javax {
                  * @see #getStringToCompare
                  */
                 // @ts-ignore
-                setStringToCompare(value: string): void
+                setStringToCompare(value: java.lang.String | string): void
                 /**
                  * Gets the matching notification's on/off switch value.
                  * @return <CODE>true</CODE> if the string monitor notifies when

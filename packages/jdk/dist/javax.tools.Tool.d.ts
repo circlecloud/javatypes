@@ -28,14 +28,14 @@ declare namespace javax {
              *  any {#code null} elements.
              */
             // @ts-ignore
-            run(input: java.io.InputStream, out: java.io.OutputStream, err: java.io.OutputStream, ...arguments: string[]): int
+            run(input: java.io.InputStream, out: java.io.OutputStream, err: java.io.OutputStream, ...arguments: java.lang.String[] | string[]): number /*int*/
             /**
              * Gets the source versions of the Java&trade; programming language
              * supported by this tool.
              * @return a set of supported source versions
              */
             // @ts-ignore
-            getSourceVersions(): java.util.Set<javax.lang.model.SourceVersion>
+            getSourceVersions(): Array<javax.lang.model.SourceVersion>
         }
     }
 }

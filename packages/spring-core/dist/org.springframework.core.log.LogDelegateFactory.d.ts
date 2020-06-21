@@ -28,7 +28,7 @@ declare namespace org {
                      * @return the resulting composite logger for the related categories
                      */
                     // @ts-ignore
-                    getCompositeLog(primaryLogger: Log, secondaryLogger: Log, ...tertiaryLoggers: Log[]): Log
+                    public static getCompositeLog(primaryLogger: Log, secondaryLogger: Log, ...tertiaryLoggers: Log[]): Log
                     /**
                      * Create a "hidden" logger whose name is intentionally prefixed with "_"
                      * because its output is either too verbose or otherwise deemed as optional
@@ -38,7 +38,7 @@ declare namespace org {
                      * @return a logger for the hidden category ("_" + fully-qualified class name)
                      */
                     // @ts-ignore
-                    getHiddenLog(clazz: java.lang.Class<any>): Log
+                    public static getHiddenLog(clazz: java.lang.Class<any>): Log
                 }
             }
         }

@@ -19,13 +19,13 @@ declare namespace org {
                  *  does not exist or could be not created
                  */
                 // @ts-ignore
-                getCache(name: string): org.springframework.cache.Cache
+                getCache(name: java.lang.String | string): org.springframework.cache.Cache
                 /**
                  * Get a collection of the cache names known by this manager.
                  * @return the names of all caches known by the cache manager
                  */
                 // @ts-ignore
-                getCacheNames(): java.util.Collection<java.lang.String>
+                getCacheNames(): Array<java.lang.String | string>
             }
         }
     }

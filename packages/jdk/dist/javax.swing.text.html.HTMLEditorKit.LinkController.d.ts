@@ -20,11 +20,11 @@ declare namespace javax {
                          * @see MouseListener#mouseClicked
                          */
                         // @ts-ignore
-                        mouseClicked(e: java.awt.event.MouseEvent): void
+                        public mouseClicked(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                         /**
                          * Calls linkActivated on the associated JEditorPane
                          * if the given position represents a link.<p>This is implemented

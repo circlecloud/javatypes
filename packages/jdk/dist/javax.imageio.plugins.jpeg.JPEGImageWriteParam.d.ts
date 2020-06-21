@@ -75,7 +75,7 @@ declare namespace javax {
                      *  <code>MODE_EXPLICIT</code>.
                      */
                     // @ts-ignore
-                    unsetCompression(): void
+                    public unsetCompression(): void
                     /**
                      * Returns <code>false</code> since the JPEG plug-in only supports
                      * lossy compression.
@@ -84,17 +84,17 @@ declare namespace javax {
                      *  <code>MODE_EXPLICIT</code>.
                      */
                     // @ts-ignore
-                    isCompressionLossless(): boolean
+                    public isCompressionLossless(): boolean
                     // @ts-ignore
-                    getCompressionQualityDescriptions(): java.lang.String[]
+                    public getCompressionQualityDescriptions(): string[]
                     // @ts-ignore
-                    getCompressionQualityValues(): float[]
+                    public getCompressionQualityValues(): number /*float*/[]
                     /**
                      * Returns <code>true</code> if tables are currently set.
                      * @return <code>true</code> if tables are present.
                      */
                     // @ts-ignore
-                    areTablesSet(): boolean
+                    public areTablesSet(): boolean
                     /**
                      * Sets the quantization and Huffman tables to use in encoding
                      * abbreviated streams.  There may be a maximum of 4 tables of
@@ -113,14 +113,14 @@ declare namespace javax {
                      * @see #unsetEncodeTables
                      */
                     // @ts-ignore
-                    setEncodeTables(qTables: javax.imageio.plugins.jpeg.JPEGQTable[], DCHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[], ACHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[]): void
+                    public setEncodeTables(qTables: javax.imageio.plugins.jpeg.JPEGQTable[], DCHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[], ACHuffmanTables: javax.imageio.plugins.jpeg.JPEGHuffmanTable[]): void
                     /**
                      * Removes any quantization and Huffman tables that are currently
                      * set.
                      * @see #setEncodeTables
                      */
                     // @ts-ignore
-                    unsetEncodeTables(): void
+                    public unsetEncodeTables(): void
                     /**
                      * Returns a copy of the array of quantization tables set on the
                      * most recent call to <code>setEncodeTables</code>, or
@@ -130,7 +130,7 @@ declare namespace javax {
                      * @see #setEncodeTables
                      */
                     // @ts-ignore
-                    getQTables(): javax.imageio.plugins.jpeg.JPEGQTable[]
+                    public getQTables(): javax.imageio.plugins.jpeg.JPEGQTable[]
                     /**
                      * Returns a copy of the array of DC Huffman tables set on the
                      * most recent call to <code>setEncodeTables</code>, or
@@ -140,7 +140,7 @@ declare namespace javax {
                      * @see #setEncodeTables
                      */
                     // @ts-ignore
-                    getDCHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
+                    public getDCHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
                     /**
                      * Returns a copy of the array of AC Huffman tables set on the
                      * most recent call to <code>setEncodeTables</code>, or
@@ -150,7 +150,7 @@ declare namespace javax {
                      * @see #setEncodeTables
                      */
                     // @ts-ignore
-                    getACHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
+                    public getACHuffmanTables(): javax.imageio.plugins.jpeg.JPEGHuffmanTable[]
                     /**
                      * Tells the writer to generate optimized Huffman tables
                      * for the image as part of the writing process.  The
@@ -164,7 +164,7 @@ declare namespace javax {
                      * @see #getOptimizeHuffmanTables
                      */
                     // @ts-ignore
-                    setOptimizeHuffmanTables(optimize: boolean): void
+                    public setOptimizeHuffmanTables(optimize: boolean): void
                     /**
                      * Returns the value passed into the most recent call
                      * to <code>setOptimizeHuffmanTables</code>, or
@@ -175,7 +175,7 @@ declare namespace javax {
                      * @see #setOptimizeHuffmanTables
                      */
                     // @ts-ignore
-                    getOptimizeHuffmanTables(): boolean
+                    public getOptimizeHuffmanTables(): boolean
                 }
             }
         }

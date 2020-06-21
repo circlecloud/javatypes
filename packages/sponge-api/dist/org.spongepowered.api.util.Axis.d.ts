@@ -8,9 +8,15 @@ declare namespace org {
                 // @ts-ignore
                 class Axis extends java.lang.Enum<org.spongepowered.api.util.Axis> implements org.spongepowered.api.util.Cycleable<org.spongepowered.api.util.Axis> {
                     // @ts-ignore
+                    readonly X: org.spongepowered.api.util.Axis
+                    // @ts-ignore
+                    readonly Y: org.spongepowered.api.util.Axis
+                    // @ts-ignore
+                    readonly Z: org.spongepowered.api.util.Axis
+                    // @ts-ignore
                     values(): org.spongepowered.api.util.Axis[]
                     // @ts-ignore
-                    valueOf(name: string): org.spongepowered.api.util.Axis
+                    valueOf(name: java.lang.String | string): org.spongepowered.api.util.Axis
                     /**
                      * Gets the closest horizontal direction from the given vector. If the
                      * vector is the 0-Vector, this method returns {@link #X}. If the vector has
@@ -35,7 +41,7 @@ declare namespace org {
                      * @return The value of the component
                      */
                     // @ts-ignore
-                    getComponent(vector3d: Vector3d): double
+                    getComponent(vector3d: Vector3d): number /*double*/
                     /**
                      * Gets the direction of the vector's component denoted by this axis.
                      * @param vector3d The vector

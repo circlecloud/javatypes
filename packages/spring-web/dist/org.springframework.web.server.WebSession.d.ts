@@ -18,12 +18,12 @@ declare namespace org {
                      * Return a unique session identifier.
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Return a map that holds session attributes.
                      */
                     // @ts-ignore
-                    getAttributes(): java.util.Map<java.lang.String, java.lang.Object>
+                    getAttributes(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Return the session attribute value if present.
                      * @param name the attribute name
@@ -31,7 +31,7 @@ declare namespace org {
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getAttribute<T>(name: string): T
+                    getAttribute<T>(name: java.lang.String | string): T
                     /**
                      * Return the session attribute value or if not present raise an
                      * {@link IllegalArgumentException}.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getRequiredAttribute<T>(name: string): T
+                    getRequiredAttribute<T>(name: java.lang.String | string): T
                     /**
                      * Return the session attribute value, or a default, fallback value.
                      * @param name the attribute name
@@ -49,7 +49,7 @@ declare namespace org {
                      * @return the attribute value
                      */
                     // @ts-ignore
-                    getAttributeOrDefault<T>(name: string, defaultValue: T): T
+                    getAttributeOrDefault<T>(name: java.lang.String | string, defaultValue: T): T
                     /**
                      * Force the creation of a session causing the session id to be sent when
                      * {@link #save()} is called.
@@ -71,13 +71,13 @@ declare namespace org {
                      * @return completion notification (success or error)
                      */
                     // @ts-ignore
-                    changeSessionId(): <any>
+                    changeSessionId(): object
                     /**
                      * Invalidate the current session and clear session storage.
                      * @return completion notification (success or error)
                      */
                     // @ts-ignore
-                    invalidate(): <any>
+                    invalidate(): object
                     /**
                      * Save the session through the {@code WebSessionStore} as follows:
                      * <ul>
@@ -94,7 +94,7 @@ declare namespace org {
                      * @return {#code Mono} to indicate completion with success or error
                      */
                     // @ts-ignore
-                    save(): <any>
+                    save(): object
                     /**
                      * Return {@code true} if the session expired after {@link #getMaxIdleTime()
                      * maxIdleTime} elapsed.

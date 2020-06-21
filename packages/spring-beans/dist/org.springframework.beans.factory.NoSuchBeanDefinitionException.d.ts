@@ -20,14 +20,14 @@ declare namespace org {
                      * @param name the name of the missing bean
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Create a new {@code NoSuchBeanDefinitionException}.
                      * @param name the name of the missing bean
                      * @param message detailed message describing the problem
                      */
                     // @ts-ignore
-                    constructor(name: string, message: string)
+                    constructor(name: java.lang.String | string, message: java.lang.String | string)
                     /**
                      * Create a new {@code NoSuchBeanDefinitionException}.
                      * @param type required type of the missing bean
@@ -40,7 +40,7 @@ declare namespace org {
                      * @param message detailed message describing the problem
                      */
                     // @ts-ignore
-                    constructor(type: java.lang.Class<any>, message: string)
+                    constructor(type: java.lang.Class<any>, message: java.lang.String | string)
                     /**
                      * Create a new {@code NoSuchBeanDefinitionException}.
                      * @param type full type declaration of the missing bean
@@ -55,32 +55,32 @@ declare namespace org {
                      * @since 4.3.4
                      */
                     // @ts-ignore
-                    constructor(type: ResolvableType, message: string)
+                    constructor(type: ResolvableType, message: java.lang.String | string)
                     /**
                      * Return the name of the missing bean, if it was a lookup <em>by name</em> that failed.
                      */
                     // @ts-ignore
-                    getBeanName(): java.lang.String
+                    public getBeanName(): string
                     /**
                      * Return the required type of the missing bean, if it was a lookup <em>by type</em>
                      * that failed.
                      */
                     // @ts-ignore
-                    getBeanType(): java.lang.Class<?>
+                    public getBeanType(): java.lang.Class<any>
                     /**
                      * Return the required {@link ResolvableType} of the missing bean, if it was a lookup
                      * <em>by type</em> that failed.
                      * @since 4.3.4
                      */
                     // @ts-ignore
-                    getResolvableType(): ResolvableType
+                    public getResolvableType(): ResolvableType
                     /**
                      * Return the number of beans found when only one matching bean was expected.
                      * For a regular NoSuchBeanDefinitionException, this will always be 0.
                      * @see NoUniqueBeanDefinitionException
                      */
                     // @ts-ignore
-                    getNumberOfBeansFound(): int
+                    public getNumberOfBeansFound(): number /*int*/
                 }
             }
         }

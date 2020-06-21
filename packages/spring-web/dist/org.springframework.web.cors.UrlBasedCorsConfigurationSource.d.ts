@@ -20,19 +20,19 @@ declare namespace org {
                      * @see org.springframework.util.AntPathMatcher
                      */
                     // @ts-ignore
-                    setPathMatcher(pathMatcher: PathMatcher): void
+                    public setPathMatcher(pathMatcher: PathMatcher): void
                     /**
                      * Shortcut to same property on underlying {@link #setUrlPathHelper UrlPathHelper}.
                      * @see org.springframework.web.util.UrlPathHelper#setAlwaysUseFullPath
                      */
                     // @ts-ignore
-                    setAlwaysUseFullPath(alwaysUseFullPath: boolean): void
+                    public setAlwaysUseFullPath(alwaysUseFullPath: boolean): void
                     /**
                      * Shortcut to same property on underlying {@link #setUrlPathHelper UrlPathHelper}.
                      * @see org.springframework.web.util.UrlPathHelper#setUrlDecode
                      */
                     // @ts-ignore
-                    setUrlDecode(urlDecode: boolean): void
+                    public setUrlDecode(urlDecode: boolean): void
                     /**
                      * Optionally configure the name of the attribute that caches the lookupPath.
                      * This is used to make the call to
@@ -41,36 +41,36 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    setLookupPathAttributeName(lookupPathAttributeName: string): void
+                    public setLookupPathAttributeName(lookupPathAttributeName: java.lang.String | string): void
                     /**
                      * Shortcut to same property on underlying {@link #setUrlPathHelper UrlPathHelper}.
                      * @see org.springframework.web.util.UrlPathHelper#setRemoveSemicolonContent(boolean)
                      */
                     // @ts-ignore
-                    setRemoveSemicolonContent(removeSemicolonContent: boolean): void
+                    public setRemoveSemicolonContent(removeSemicolonContent: boolean): void
                     /**
                      * Set the UrlPathHelper to use for resolution of lookup paths.
                      * <p>Use this to override the default UrlPathHelper with a custom subclass.
                      */
                     // @ts-ignore
-                    setUrlPathHelper(urlPathHelper: org.springframework.web.util.UrlPathHelper): void
+                    public setUrlPathHelper(urlPathHelper: org.springframework.web.util.UrlPathHelper): void
                     /**
                      * Set CORS configuration based on URL patterns.
                      */
                     // @ts-ignore
-                    setCorsConfigurations(corsConfigurations: java.util.Map<java.lang.String, org.springframework.web.cors.CorsConfiguration>): void
+                    public setCorsConfigurations(corsConfigurations: java.util.Map<java.lang.String | string, org.springframework.web.cors.CorsConfiguration>): void
                     /**
                      * Get the CORS configuration.
                      */
                     // @ts-ignore
-                    getCorsConfigurations(): java.util.Map<java.lang.String, org.springframework.web.cors.CorsConfiguration>
+                    public getCorsConfigurations(): java.util.Map<java.lang.String | string, org.springframework.web.cors.CorsConfiguration>
                     /**
                      * Register a {@link CorsConfiguration} for the specified path pattern.
                      */
                     // @ts-ignore
-                    registerCorsConfiguration(path: string, config: org.springframework.web.cors.CorsConfiguration): void
+                    public registerCorsConfiguration(path: java.lang.String | string, config: org.springframework.web.cors.CorsConfiguration): void
                     // @ts-ignore
-                    getCorsConfiguration(request: HttpServletRequest): org.springframework.web.cors.CorsConfiguration
+                    public getCorsConfiguration(request: HttpServletRequest): org.springframework.web.cors.CorsConfiguration
                 }
             }
         }

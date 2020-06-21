@@ -25,7 +25,7 @@ declare namespace javax {
                  * @return the desired span &gt;= 0
                  */
                 // @ts-ignore
-                getTabbedSpan(x: number /*float*/, e: javax.swing.text.TabExpander): float
+                getTabbedSpan(x: number /*float*/, e: javax.swing.text.TabExpander): number /*float*/
                 /**
                  * Determines the span along the same axis as tab
                  * expansion for a portion of the view.  This is
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @return the span &gt;= 0
                  */
                 // @ts-ignore
-                getPartialSpan(p0: number /*int*/, p1: number /*int*/): float
+                getPartialSpan(p0: number /*int*/, p1: number /*int*/): number /*float*/
             }
         }
     }

@@ -23,7 +23,7 @@ declare namespace org {
                              * @return The radius
                              */
                             // @ts-ignore
-                            getExclusionRadius(): int
+                            getExclusionRadius(): number /*int*/
                             /**
                              * Sets the radius around the center (0, 0) of the world that this populator
                              * will not apply to.

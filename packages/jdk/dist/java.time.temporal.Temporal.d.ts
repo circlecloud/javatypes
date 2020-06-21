@@ -344,7 +344,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+                until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
             }
         }
     }

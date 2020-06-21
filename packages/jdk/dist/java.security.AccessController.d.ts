@@ -18,7 +18,7 @@ declare namespace java {
              *               NullPointerException if perm is null
              */
             // @ts-ignore
-            checkPermission(perm: java.security.Permission): void
+            public static checkPermission(perm: java.security.Permission): void
             /**
              * Answers the access controller context of the current thread,
              * including the inherited ones. It basically retrieves all the
@@ -28,7 +28,7 @@ declare namespace java {
              * @see AccessControlContext
              */
             // @ts-ignore
-            getContext(): java.security.AccessControlContext
+            public static getContext(): java.security.AccessControlContext
             /**
              * Performs the privileged action specified by <code>action</code>.
              * <p>
@@ -43,7 +43,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction)
              */
             // @ts-ignore
-            doPrivileged<T>(action: java.security.PrivilegedAction<T>): T
+            public static doPrivileged<T>(action: java.security.PrivilegedAction<T>): T
             /**
              * Performs the privileged action specified by <code>action</code>.
              * <p>
@@ -61,7 +61,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction)
              */
             // @ts-ignore
-            doPrivileged<T>(action: java.security.PrivilegedAction<T>, context: java.security.AccessControlContext): T
+            public static doPrivileged<T>(action: java.security.PrivilegedAction<T>, context: java.security.AccessControlContext): T
             /**
              * Performs the privileged action specified by <code>action</code>.
              * <p>
@@ -78,7 +78,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction)
              */
             // @ts-ignore
-            doPrivileged<T>(action: java.security.PrivilegedExceptionAction<T>): T
+            public static doPrivileged<T>(action: java.security.PrivilegedExceptionAction<T>): T
             /**
              * Performs the privileged action specified by <code>action</code>.
              * <p>
@@ -98,7 +98,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction)
              */
             // @ts-ignore
-            doPrivileged<T>(action: java.security.PrivilegedExceptionAction<T>, context: java.security.AccessControlContext): T
+            public static doPrivileged<T>(action: java.security.PrivilegedExceptionAction<T>, context: java.security.AccessControlContext): T
             /**
              * Performs the privileged action specified by <code>action</code>, retaining
              * any current DomainCombiner.
@@ -113,7 +113,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction)
              */
             // @ts-ignore
-            doPrivilegedWithCombiner<T>(action: java.security.PrivilegedAction<T>): T
+            public static doPrivilegedWithCombiner<T>(action: java.security.PrivilegedAction<T>): T
             /**
              * Performs the privileged action specified by <code>action</code>, retaining
              * any current DomainCombiner.
@@ -130,7 +130,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction)
              */
             // @ts-ignore
-            doPrivilegedWithCombiner<T>(action: java.security.PrivilegedExceptionAction<T>): T
+            public static doPrivilegedWithCombiner<T>(action: java.security.PrivilegedExceptionAction<T>): T
             /**
              * Performs the privileged action specified by <code>action</code>.
              * <p>
@@ -150,7 +150,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction, AccessControlContext)
              */
             // @ts-ignore
-            doPrivileged<T>(action: java.security.PrivilegedAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
+            public static doPrivileged<T>(action: java.security.PrivilegedAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
             /**
              * Performs the privileged action specified by <code>action</code>, retaining
              * any current DomainCombiner.
@@ -169,7 +169,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction, AccessControlContext)
              */
             // @ts-ignore
-            doPrivilegedWithCombiner<T>(action: java.security.PrivilegedAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
+            public static doPrivilegedWithCombiner<T>(action: java.security.PrivilegedAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
             /**
              * Performs the privileged action specified by <code>action</code>.
              * <p>
@@ -191,7 +191,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction, AccessControlContext)
              */
             // @ts-ignore
-            doPrivileged<T>(action: java.security.PrivilegedExceptionAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
+            public static doPrivileged<T>(action: java.security.PrivilegedExceptionAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
             /**
              * Performs the privileged action specified by <code>action</code>, retaining
              * any current DomainCombiner.
@@ -212,7 +212,7 @@ declare namespace java {
              * @see #doPrivileged(PrivilegedAction, AccessControlContext)
              */
             // @ts-ignore
-            doPrivilegedWithCombiner<T>(action: java.security.PrivilegedExceptionAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
+            public static doPrivilegedWithCombiner<T>(action: java.security.PrivilegedExceptionAction<T>, context: java.security.AccessControlContext, ...perms: java.security.Permission[]): T
         }
     }
 }

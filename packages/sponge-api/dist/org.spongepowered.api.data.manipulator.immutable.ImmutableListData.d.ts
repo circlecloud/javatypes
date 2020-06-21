@@ -25,7 +25,7 @@ declare namespace org {
                              * @see ImmutableListValue
                              */
                             // @ts-ignore
-                            asList(): java.util.List<E>
+                            asList(): Array<E>
                             /**
                              * Gets an element of type {@code E} by the provided {@code index}.
                              * @param index The index to get the value at

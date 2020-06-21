@@ -16,7 +16,7 @@ declare namespace org {
              * @author Sebastien Deleuze
              */
             // @ts-ignore
-            class BeanUtils extends java.lang.Object {
+            abstract class BeanUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -29,7 +29,7 @@ declare namespace org {
                  * @see Class#newInstance()
                  */
                 // @ts-ignore
-                instantiate<T>(clazz: java.lang.Class<T>): T
+                public static instantiate<T>(clazz: java.lang.Class<T>): T
                 /**
                  * Instantiate a class using its 'primary' constructor (for Kotlin classes,
                  * potentially having default arguments declared) or its default constructor
@@ -47,7 +47,7 @@ declare namespace org {
                  * @see Constructor#newInstance
                  */
                 // @ts-ignore
-                instantiateClass<T>(clazz: java.lang.Class<T>): T
+                public static instantiateClass<T>(clazz: java.lang.Class<T>): T
                 /**
                  * Instantiate a class using its no-arg constructor and return the new instance
                  * as the specified assignable type.
@@ -62,7 +62,7 @@ declare namespace org {
                  * @see Constructor#newInstance
                  */
                 // @ts-ignore
-                instantiateClass<T>(clazz: java.lang.Class<any>, assignableTo: java.lang.Class<T>): T
+                public static instantiateClass<T>(clazz: java.lang.Class<any>, assignableTo: java.lang.Class<T>): T
                 /**
                  * Convenience method to instantiate a class using the given constructor.
                  * <p>Note that this method tries to set the constructor accessible if given a
@@ -76,7 +76,7 @@ declare namespace org {
                  * @see Constructor#newInstance
                  */
                 // @ts-ignore
-                instantiateClass<T>(ctor: java.lang.reflect.Constructor<T>, ...args: any[]): T
+                public static instantiateClass<T>(ctor: java.lang.reflect.Constructor<T>, ...args: java.lang.Object[] | any[]): T
                 /**
                  * Return the primary constructor of the provided class. For Kotlin classes, this
                  * returns the Java constructor corresponding to the Kotlin primary constructor
@@ -87,7 +87,7 @@ declare namespace org {
                  * @see <a href="https://kotlinlang.org/docs/reference/classes.html#constructors">Kotlin docs</a>
                  */
                 // @ts-ignore
-                findPrimaryConstructor<T>(clazz: java.lang.Class<T>): java.lang.reflect.Constructor<T>
+                public static findPrimaryConstructor<T>(clazz: java.lang.Class<T>): java.lang.reflect.Constructor<T>
                 /**
                  * Find a method with the given method name and the given parameter types,
                  * declared on the given class or one of its superclasses. Prefers public methods,
@@ -103,7 +103,7 @@ declare namespace org {
                  * @see #findDeclaredMethod
                  */
                 // @ts-ignore
-                findMethod(clazz: java.lang.Class<any>, methodName: string, ...paramTypes: java.lang.Class[]): java.lang.reflect.Method
+                public static findMethod(clazz: java.lang.Class<any>, methodName: java.lang.String | string, ...paramTypes: java.lang.Class<any>[]): java.lang.reflect.Method
                 /**
                  * Find a method with the given method name and the given parameter types,
                  * declared on the given class or one of its superclasses. Will return a public,
@@ -116,7 +116,7 @@ declare namespace org {
                  * @see Class#getDeclaredMethod
                  */
                 // @ts-ignore
-                findDeclaredMethod(clazz: java.lang.Class<any>, methodName: string, ...paramTypes: java.lang.Class[]): java.lang.reflect.Method
+                public static findDeclaredMethod(clazz: java.lang.Class<any>, methodName: java.lang.String | string, ...paramTypes: java.lang.Class<any>[]): java.lang.reflect.Method
                 /**
                  * Find a method with the given method name and minimal parameters (best case: none),
                  * declared on the given class or one of its superclasses. Prefers public methods,
@@ -133,7 +133,7 @@ declare namespace org {
                  * @see #findDeclaredMethodWithMinimalParameters
                  */
                 // @ts-ignore
-                findMethodWithMinimalParameters(clazz: java.lang.Class<any>, methodName: string): java.lang.reflect.Method
+                public static findMethodWithMinimalParameters(clazz: java.lang.Class<any>, methodName: java.lang.String | string): java.lang.reflect.Method
                 /**
                  * Find a method with the given method name and minimal parameters (best case: none),
                  * declared on the given class or one of its superclasses. Will return a public,
@@ -147,7 +147,7 @@ declare namespace org {
                  * @see Class#getDeclaredMethods
                  */
                 // @ts-ignore
-                findDeclaredMethodWithMinimalParameters(clazz: java.lang.Class<any>, methodName: string): java.lang.reflect.Method
+                public static findDeclaredMethodWithMinimalParameters(clazz: java.lang.Class<any>, methodName: java.lang.String | string): java.lang.reflect.Method
                 /**
                  * Find a method with the given method name and minimal parameters (best case: none)
                  * in the given list of methods.
@@ -158,7 +158,7 @@ declare namespace org {
                  *  could not be resolved to a unique method with minimal parameters
                  */
                 // @ts-ignore
-                findMethodWithMinimalParameters(methods: java.lang.reflect.Method[], methodName: string): java.lang.reflect.Method
+                public static findMethodWithMinimalParameters(methods: java.lang.reflect.Method[], methodName: java.lang.String | string): java.lang.reflect.Method
                 /**
                  * Parse a method signature in the form {@code methodName[([arg_list])]},
                  * where {@code arg_list} is an optional, comma-separated list of fully-qualified
@@ -178,7 +178,7 @@ declare namespace org {
                  * @see #findMethodWithMinimalParameters
                  */
                 // @ts-ignore
-                resolveSignature(signature: string, clazz: java.lang.Class<any>): java.lang.reflect.Method
+                public static resolveSignature(signature: java.lang.String | string, clazz: java.lang.Class<any>): java.lang.reflect.Method
                 /**
                  * Retrieve the JavaBeans {@code PropertyDescriptor}s of a given class.
                  * @param clazz the Class to retrieve the PropertyDescriptors for
@@ -186,7 +186,7 @@ declare namespace org {
                  * @throws BeansException if PropertyDescriptor look fails
                  */
                 // @ts-ignore
-                getPropertyDescriptors(clazz: java.lang.Class<any>): java.beans.PropertyDescriptor[]
+                public static getPropertyDescriptors(clazz: java.lang.Class<any>): java.beans.PropertyDescriptor[]
                 /**
                  * Retrieve the JavaBeans {@code PropertyDescriptors} for the given property.
                  * @param clazz the Class to retrieve the PropertyDescriptor for
@@ -195,7 +195,7 @@ declare namespace org {
                  * @throws BeansException if PropertyDescriptor lookup fails
                  */
                 // @ts-ignore
-                getPropertyDescriptor(clazz: java.lang.Class<any>, propertyName: string): java.beans.PropertyDescriptor
+                public static getPropertyDescriptor(clazz: java.lang.Class<any>, propertyName: java.lang.String | string): java.beans.PropertyDescriptor
                 /**
                  * Find a JavaBeans {@code PropertyDescriptor} for the given method,
                  * with the method either being the read method or the write method for
@@ -206,7 +206,7 @@ declare namespace org {
                  * @throws BeansException if PropertyDescriptor lookup fails
                  */
                 // @ts-ignore
-                findPropertyForMethod(method: java.lang.reflect.Method): java.beans.PropertyDescriptor
+                public static findPropertyForMethod(method: java.lang.reflect.Method): java.beans.PropertyDescriptor
                 /**
                  * Find a JavaBeans {@code PropertyDescriptor} for the given method,
                  * with the method either being the read method or the write method for
@@ -218,7 +218,7 @@ declare namespace org {
                  * @since 3.2.13
                  */
                 // @ts-ignore
-                findPropertyForMethod(method: java.lang.reflect.Method, clazz: java.lang.Class<any>): java.beans.PropertyDescriptor
+                public static findPropertyForMethod(method: java.lang.reflect.Method, clazz: java.lang.Class<any>): java.beans.PropertyDescriptor
                 /**
                  * Find a JavaBeans PropertyEditor following the 'Editor' suffix convention
                  * (e.g. "mypackage.MyDomainClass" -> "mypackage.MyDomainClassEditor").
@@ -229,7 +229,7 @@ declare namespace org {
                  * @return the corresponding editor, or {#code null} if none found
                  */
                 // @ts-ignore
-                findEditorByConvention(targetType: java.lang.Class<any>): java.beans.PropertyEditor
+                public static findEditorByConvention(targetType: java.lang.Class<any>): java.beans.PropertyEditor
                 /**
                  * Determine the bean property type for the given property from the
                  * given classes/interfaces, if possible.
@@ -238,7 +238,7 @@ declare namespace org {
                  * @return the property type, or {#code Object.class} as fallback
                  */
                 // @ts-ignore
-                findPropertyType(propertyName: string, ...beanClasses: java.lang.Class[]): java.lang.Class<?>
+                public static findPropertyType(propertyName: java.lang.String | string, ...beanClasses: java.lang.Class<any>[]): java.lang.Class<any>
                 /**
                  * Obtain a new MethodParameter object for the write method of the
                  * specified property.
@@ -246,7 +246,7 @@ declare namespace org {
                  * @return a corresponding MethodParameter object
                  */
                 // @ts-ignore
-                getWriteMethodParameter(pd: java.beans.PropertyDescriptor): MethodParameter
+                public static getWriteMethodParameter(pd: java.beans.PropertyDescriptor): MethodParameter
                 /**
                  * Check if the given type represents a "simple" property: a simple value
                  * type or an array of simple value types.
@@ -260,7 +260,7 @@ declare namespace org {
                  * @see #isSimpleValueType(Class)
                  */
                 // @ts-ignore
-                isSimpleProperty(type: java.lang.Class<any>): boolean
+                public static isSimpleProperty(type: java.lang.Class<any>): boolean
                 /**
                  * Check if the given type represents a "simple" value type: a primitive or
                  * primitive wrapper, an enum, a String or other CharSequence, a Number, a
@@ -271,7 +271,7 @@ declare namespace org {
                  * @see #isSimpleProperty(Class)
                  */
                 // @ts-ignore
-                isSimpleValueType(type: java.lang.Class<any>): boolean
+                public static isSimpleValueType(type: java.lang.Class<any>): boolean
                 /**
                  * Copy the property values of the given source bean into the target bean.
                  * <p>Note: The source and target classes do not have to match or even be derived
@@ -285,7 +285,7 @@ declare namespace org {
                  * @see BeanWrapper
                  */
                 // @ts-ignore
-                copyProperties(source: any, target: any): void
+                public static copyProperties(source: java.lang.Object | any, target: java.lang.Object | any): void
                 /**
                  * Copy the property values of the given source bean into the given target bean,
                  * only setting properties defined in the given "editable" class (or interface).
@@ -301,7 +301,7 @@ declare namespace org {
                  * @see BeanWrapper
                  */
                 // @ts-ignore
-                copyProperties(source: any, target: any, editable: java.lang.Class<any>): void
+                public static copyProperties(source: java.lang.Object | any, target: java.lang.Object | any, editable: java.lang.Class<any>): void
                 /**
                  * Copy the property values of the given source bean into the given target bean,
                  * ignoring the given "ignoreProperties".
@@ -317,7 +317,7 @@ declare namespace org {
                  * @see BeanWrapper
                  */
                 // @ts-ignore
-                copyProperties(source: any, target: any, ...ignoreProperties: string[]): void
+                public static copyProperties(source: java.lang.Object | any, target: java.lang.Object | any, ...ignoreProperties: java.lang.String[] | string[]): void
             }
         }
     }

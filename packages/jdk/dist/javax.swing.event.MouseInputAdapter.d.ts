@@ -11,7 +11,7 @@ declare namespace javax {
              * @author Shannon Hickey
              */
             // @ts-ignore
-            class MouseInputAdapter extends java.awt.event.MouseAdapter implements javax.swing.event.MouseInputListener {
+            abstract class MouseInputAdapter extends java.awt.event.MouseAdapter implements javax.swing.event.MouseInputListener {
                 // @ts-ignore
                 constructor()
             }

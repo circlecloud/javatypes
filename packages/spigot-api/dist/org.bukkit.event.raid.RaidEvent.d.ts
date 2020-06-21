@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents events related to raids.
                  */
                 // @ts-ignore
-                class RaidEvent extends org.bukkit.event.world.WorldEvent {
+                abstract class RaidEvent extends org.bukkit.event.world.WorldEvent {
                     // @ts-ignore
                     constructor(raid: org.bukkit.Raid, world: org.bukkit.World)
                     /**
@@ -14,7 +14,7 @@ declare namespace org {
                      * @return Raid
                      */
                     // @ts-ignore
-                    getRaid(): org.bukkit.Raid
+                    public getRaid(): org.bukkit.Raid
                 }
             }
         }

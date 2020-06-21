@@ -225,7 +225,7 @@ declare namespace java {
                  *          overflow
                  */
                 // @ts-ignore
-                createInterleavedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bands: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
+                public static createInterleavedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bands: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a PixelInterleavedSampleModel with the
                  * specified data type, width, height, scanline stride, pixel
@@ -262,7 +262,7 @@ declare namespace java {
                  *          <code>DataBuffer.TYPE_USHORT</code>.
                  */
                 // @ts-ignore
-                createInterleavedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, pixelStride: number /*int*/, bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
+                public static createInterleavedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, pixelStride: number /*int*/, bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a BandedSampleModel with the
                  * specified data type, width, height, and number of bands.
@@ -288,7 +288,7 @@ declare namespace java {
                  *          is less than 1
                  */
                 // @ts-ignore
-                createBandedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bands: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
+                public static createBandedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bands: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a BandedSampleModel with the
                  * specified data type, width, height, scanline stride, bank
@@ -324,7 +324,7 @@ declare namespace java {
                  *          or <code>bandOffsets</code> is <code>null</code>
                  */
                 // @ts-ignore
-                createBandedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, bankIndices: number /*int*/[], bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
+                public static createBandedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, bankIndices: number /*int*/[], bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a SinglePixelPackedSampleModel with
                  * the specified data type, width, height, and band masks.
@@ -354,7 +354,7 @@ declare namespace java {
                  *          or <code>DataBuffer.TYPE_INT</code>
                  */
                 // @ts-ignore
-                createPackedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bandMasks: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
+                public static createPackedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bandMasks: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a packed SampleModel with the
                  * specified data type, width, height, number of bands, and bits
@@ -397,7 +397,7 @@ declare namespace java {
                  *          or <code>DataBuffer.TYPE_INT</code>
                  */
                 // @ts-ignore
-                createPackedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bands: number /*int*/, bitsPerBand: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
+                public static createPackedRaster(dataType: number /*int*/, w: number /*int*/, h: number /*int*/, bands: number /*int*/, bitsPerBand: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a PixelInterleavedSampleModel with the
                  * specified DataBuffer, width, height, scanline stride, pixel
@@ -434,7 +434,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>dataBuffer</code> is null
                  */
                 // @ts-ignore
-                createInterleavedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, pixelStride: number /*int*/, bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
+                public static createInterleavedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, pixelStride: number /*int*/, bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a BandedSampleModel with the
                  * specified DataBuffer, width, height, scanline stride, bank
@@ -466,7 +466,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>dataBuffer</code> is null
                  */
                 // @ts-ignore
-                createBandedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, bankIndices: number /*int*/[], bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
+                public static createBandedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, bankIndices: number /*int*/[], bandOffsets: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a SinglePixelPackedSampleModel with
                  * the specified DataBuffer, width, height, scanline stride, and
@@ -498,7 +498,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>dataBuffer</code> is null
                  */
                 // @ts-ignore
-                createPackedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, bandMasks: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
+                public static createPackedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, scanlineStride: number /*int*/, bandMasks: number /*int*/[], location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster based on a MultiPixelPackedSampleModel with the
                  * specified DataBuffer, width, height, and bits per pixel.  The upper
@@ -528,7 +528,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>dataBuffer</code> is null
                  */
                 // @ts-ignore
-                createPackedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, bitsPerPixel: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
+                public static createPackedRaster(dataBuffer: java.awt.image.DataBuffer, w: number /*int*/, h: number /*int*/, bitsPerPixel: number /*int*/, location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a Raster with the specified SampleModel and DataBuffer.
                  * The upper left corner of the Raster is given by the location argument.
@@ -551,7 +551,7 @@ declare namespace java {
                  *           null
                  */
                 // @ts-ignore
-                createRaster(sm: java.awt.image.SampleModel, db: java.awt.image.DataBuffer, location: java.awt.Point): java.awt.image.Raster
+                public static createRaster(sm: java.awt.image.SampleModel, db: java.awt.image.DataBuffer, location: java.awt.Point): java.awt.image.Raster
                 /**
                  * Creates a WritableRaster with the specified SampleModel.
                  * The upper left corner of the Raster is given by the location argument.
@@ -567,7 +567,7 @@ declare namespace java {
                  *           overflow
                  */
                 // @ts-ignore
-                createWritableRaster(sm: java.awt.image.SampleModel, location: java.awt.Point): java.awt.image.WritableRaster
+                public static createWritableRaster(sm: java.awt.image.SampleModel, location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Creates a WritableRaster with the specified SampleModel and DataBuffer.
                  * The upper left corner of the Raster is given by the location argument.
@@ -590,13 +590,13 @@ declare namespace java {
                  * @throws NullPointerException if either SampleModel or DataBuffer is null
                  */
                 // @ts-ignore
-                createWritableRaster(sm: java.awt.image.SampleModel, db: java.awt.image.DataBuffer, location: java.awt.Point): java.awt.image.WritableRaster
+                public static createWritableRaster(sm: java.awt.image.SampleModel, db: java.awt.image.DataBuffer, location: java.awt.Point): java.awt.image.WritableRaster
                 /**
                  * Returns the parent Raster (if any) of this Raster or null.
                  * @return the parent Raster or <code>null</code>.
                  */
                 // @ts-ignore
-                getParent(): java.awt.image.Raster
+                public getParent(): java.awt.image.Raster
                 /**
                  * Returns the X translation from the coordinate system of the
                  * SampleModel to that of the Raster.  To convert a pixel's X
@@ -606,7 +606,7 @@ declare namespace java {
                  *          Raster's SampleModel to that of the Raster.
                  */
                 // @ts-ignore
-                getSampleModelTranslateX(): int
+                public getSampleModelTranslateX(): number /*int*/
                 /**
                  * Returns the Y translation from the coordinate system of the
                  * SampleModel to that of the Raster.  To convert a pixel's Y
@@ -616,7 +616,7 @@ declare namespace java {
                  *          Raster's SampleModel to that of the Raster.
                  */
                 // @ts-ignore
-                getSampleModelTranslateY(): int
+                public getSampleModelTranslateY(): number /*int*/
                 /**
                  * Create a compatible WritableRaster the same size as this Raster with
                  * the same SampleModel and a new initialized DataBuffer.
@@ -624,7 +624,7 @@ declare namespace java {
                  *          model and a new data buffer.
                  */
                 // @ts-ignore
-                createCompatibleWritableRaster(): java.awt.image.WritableRaster
+                public createCompatibleWritableRaster(): java.awt.image.WritableRaster
                 /**
                  * Create a compatible WritableRaster with the specified size, a new
                  * SampleModel, and a new initialized DataBuffer.
@@ -636,7 +636,7 @@ declare namespace java {
                  *                                or equal to zero.
                  */
                 // @ts-ignore
-                createCompatibleWritableRaster(w: number /*int*/, h: number /*int*/): java.awt.image.WritableRaster
+                public createCompatibleWritableRaster(w: number /*int*/, h: number /*int*/): java.awt.image.WritableRaster
                 /**
                  * Create a compatible WritableRaster with location (minX, minY)
                  * and size (width, height) specified by rect, a
@@ -653,7 +653,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>rect</code> is null
                  */
                 // @ts-ignore
-                createCompatibleWritableRaster(rect: java.awt.Rectangle): java.awt.image.WritableRaster
+                public createCompatibleWritableRaster(rect: java.awt.Rectangle): java.awt.image.WritableRaster
                 /**
                  * Create a compatible WritableRaster with the specified
                  * location (minX, minY) and size (width, height), a
@@ -673,7 +673,7 @@ declare namespace java {
                  *          overflow
                  */
                 // @ts-ignore
-                createCompatibleWritableRaster(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): java.awt.image.WritableRaster
+                public createCompatibleWritableRaster(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): java.awt.image.WritableRaster
                 /**
                  * Create a Raster with the same size, SampleModel and DataBuffer
                  * as this one, but with a different location.  The new Raster
@@ -692,7 +692,7 @@ declare namespace java {
                  *          overflow
                  */
                 // @ts-ignore
-                createTranslatedChild(childMinX: number /*int*/, childMinY: number /*int*/): java.awt.image.Raster
+                public createTranslatedChild(childMinX: number /*int*/, childMinY: number /*int*/): java.awt.image.Raster
                 /**
                  * Returns a new Raster which shares all or part of this Raster's
                  * DataBuffer.  The new Raster will possess a reference to the
@@ -741,44 +741,44 @@ declare namespace java {
                  *          overflow
                  */
                 // @ts-ignore
-                createChild(parentX: number /*int*/, parentY: number /*int*/, width: number /*int*/, height: number /*int*/, childMinX: number /*int*/, childMinY: number /*int*/, bandList: number /*int*/[]): java.awt.image.Raster
+                public createChild(parentX: number /*int*/, parentY: number /*int*/, width: number /*int*/, height: number /*int*/, childMinX: number /*int*/, childMinY: number /*int*/, bandList: number /*int*/[]): java.awt.image.Raster
                 /**
                  * Returns the bounding Rectangle of this Raster. This function returns
                  * the same information as getMinX/MinY/Width/Height.
                  * @return the bounding box of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getBounds(): java.awt.Rectangle
+                public getBounds(): java.awt.Rectangle
                 /**
                  * Returns the minimum valid X coordinate of the Raster.
                  * @return the minimum x coordinate of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getMinX(): int
+                public getMinX(): number /*int*/
                 /**
                  * Returns the minimum valid Y coordinate of the Raster.
                  * @return the minimum y coordinate of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getMinY(): int
+                public getMinY(): number /*int*/
                 /**
                  * Returns the width in pixels of the Raster.
                  * @return the width of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getWidth(): int
+                public getWidth(): number /*int*/
                 /**
                  * Returns the height in pixels of the Raster.
                  * @return the height of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getHeight(): int
+                public getHeight(): number /*int*/
                 /**
                  * Returns the number of bands (samples per pixel) in this Raster.
                  * @return the number of bands of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getNumBands(): int
+                public getNumBands(): number /*int*/
                 /**
                  * Returns the number of data elements needed to transfer one pixel
                  * via the getDataElements and setDataElements methods.  When pixels
@@ -791,7 +791,7 @@ declare namespace java {
                  * @return the number of data elements.
                  */
                 // @ts-ignore
-                getNumDataElements(): int
+                public getNumDataElements(): number /*int*/
                 /**
                  * Returns the TransferType used to transfer pixels via the
                  * getDataElements and setDataElements methods.  When pixels
@@ -805,19 +805,19 @@ declare namespace java {
                  * @return this transfer type.
                  */
                 // @ts-ignore
-                getTransferType(): int
+                public getTransferType(): number /*int*/
                 /**
                  * Returns the DataBuffer associated with this Raster.
                  * @return the <code>DataBuffer</code> of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getDataBuffer(): java.awt.image.DataBuffer
+                public getDataBuffer(): java.awt.image.DataBuffer
                 /**
                  * Returns the SampleModel that describes the layout of the image data.
                  * @return the <code>SampleModel</code> of this <code>Raster</code>.
                  */
                 // @ts-ignore
-                getSampleModel(): java.awt.image.SampleModel
+                public getSampleModel(): java.awt.image.SampleModel
                 /**
                  * Returns data for a single pixel in a primitive array of type
                  * TransferType.  For image data supported by the Java 2D(tm) API,
@@ -843,7 +843,7 @@ declare namespace java {
                  *  in bounds, or if outData is too small to hold the output.
                  */
                 // @ts-ignore
-                getDataElements(x: number /*int*/, y: number /*int*/, outData: any): java.lang.Object
+                public getDataElements(x: number /*int*/, y: number /*int*/, outData: java.lang.Object | any): any
                 /**
                  * Returns the pixel data for the specified rectangle of pixels in a
                  * primitive array of type TransferType.
@@ -872,7 +872,7 @@ declare namespace java {
                  *  in bounds, or if outData is too small to hold the output.
                  */
                 // @ts-ignore
-                getDataElements(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, outData: any): java.lang.Object
+                public getDataElements(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, outData: java.lang.Object | any): any
                 /**
                  * Returns the samples in an array of int for the specified pixel.
                  * An ArrayIndexOutOfBoundsException may be thrown
@@ -886,7 +886,7 @@ declare namespace java {
                  *  in bounds, or if iArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[]): int[]
+                public getPixel(x: number /*int*/, y: number /*int*/, iArray: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns the samples in an array of float for the
                  * specified pixel.
@@ -901,7 +901,7 @@ declare namespace java {
                  *  in bounds, or if fArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixel(x: number /*int*/, y: number /*int*/, fArray: number /*float*/[]): float[]
+                public getPixel(x: number /*int*/, y: number /*int*/, fArray: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the samples in an array of double for the specified pixel.
                  * An ArrayIndexOutOfBoundsException may be thrown
@@ -915,7 +915,7 @@ declare namespace java {
                  *  in bounds, or if dArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixel(x: number /*int*/, y: number /*int*/, dArray: number /*double*/[]): double[]
+                public getPixel(x: number /*int*/, y: number /*int*/, dArray: number /*double*/[]): number /*double*/[]
                 /**
                  * Returns an int array containing all samples for a rectangle of pixels,
                  * one sample per array element.
@@ -932,7 +932,7 @@ declare namespace java {
                  *  in bounds, or if iArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[]): int[]
+                public getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, iArray: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns a float array containing all samples for a rectangle of pixels,
                  * one sample per array element.
@@ -949,7 +949,7 @@ declare namespace java {
                  *  in bounds, or if fArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, fArray: number /*float*/[]): float[]
+                public getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, fArray: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns a double array containing all samples for a rectangle of pixels,
                  * one sample per array element.
@@ -966,7 +966,7 @@ declare namespace java {
                  *  in bounds, or if dArray is too small to hold the output.
                  */
                 // @ts-ignore
-                getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, dArray: number /*double*/[]): double[]
+                public getPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, dArray: number /*double*/[]): number /*double*/[]
                 /**
                  * Returns the sample in a specified band for the pixel located
                  * at (x,y) as an int.
@@ -982,7 +982,7 @@ declare namespace java {
                  *  the band index are not in bounds.
                  */
                 // @ts-ignore
-                getSample(x: number /*int*/, y: number /*int*/, b: number /*int*/): int
+                public getSample(x: number /*int*/, y: number /*int*/, b: number /*int*/): number /*int*/
                 /**
                  * Returns the sample in a specified band
                  * for the pixel located at (x,y) as a float.
@@ -998,7 +998,7 @@ declare namespace java {
                  *  the band index are not in bounds.
                  */
                 // @ts-ignore
-                getSampleFloat(x: number /*int*/, y: number /*int*/, b: number /*int*/): float
+                public getSampleFloat(x: number /*int*/, y: number /*int*/, b: number /*int*/): number /*float*/
                 /**
                  * Returns the sample in a specified band
                  * for a pixel located at (x,y) as a double.
@@ -1014,7 +1014,7 @@ declare namespace java {
                  *  the band index are not in bounds.
                  */
                 // @ts-ignore
-                getSampleDouble(x: number /*int*/, y: number /*int*/, b: number /*int*/): double
+                public getSampleDouble(x: number /*int*/, y: number /*int*/, b: number /*int*/): number /*double*/
                 /**
                  * Returns the samples for a specified band for the specified rectangle
                  * of pixels in an int array, one sample per array element.
@@ -1034,7 +1034,7 @@ declare namespace java {
                  *  hold the output.
                  */
                 // @ts-ignore
-                getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[]): int[]
+                public getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, iArray: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns the samples for a specified band for the specified rectangle
                  * of pixels in a float array, one sample per array element.
@@ -1054,7 +1054,7 @@ declare namespace java {
                  *  hold the output.
                  */
                 // @ts-ignore
-                getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, fArray: number /*float*/[]): float[]
+                public getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, fArray: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the samples for a specified band for a specified rectangle
                  * of pixels in a double array, one sample per array element.
@@ -1074,7 +1074,7 @@ declare namespace java {
                  *  hold the output.
                  */
                 // @ts-ignore
-                getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, dArray: number /*double*/[]): double[]
+                public getSamples(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, b: number /*int*/, dArray: number /*double*/[]): number /*double*/[]
             }
         }
     }

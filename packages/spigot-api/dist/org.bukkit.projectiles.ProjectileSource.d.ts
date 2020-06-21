@@ -13,7 +13,7 @@ declare namespace org {
                  * @return the launched projectile
                  */
                 // @ts-ignore
-                launchProjectile<T extends org.bukkit.entity.Projectile>(projectile: java.lang.Class<T>): T
+                launchProjectile<T extends org.bukkit.entity.Projectile>(projectile: java.lang.Class<any>): T
                 /**
                  * Launches a {@link Projectile} from the ProjectileSource with an
                  * initial velocity.
@@ -23,7 +23,7 @@ declare namespace org {
                  * @return the launched projectile
                  */
                 // @ts-ignore
-                launchProjectile<T extends org.bukkit.entity.Projectile>(projectile: java.lang.Class<T>, velocity: org.bukkit.util.Vector): T
+                launchProjectile<T extends org.bukkit.entity.Projectile>(projectile: java.lang.Class<any>, velocity: org.bukkit.util.Vector): T
             }
         }
     }

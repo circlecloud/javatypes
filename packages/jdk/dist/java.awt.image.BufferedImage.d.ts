@@ -100,14 +100,14 @@ declare namespace java {
                  * @see WritableRaster
                  */
                 // @ts-ignore
-                constructor(cm: java.awt.image.ColorModel, raster: java.awt.image.WritableRaster, isRasterPremultiplied: boolean, properties: java.util.Hashtable<any, ?>)
+                constructor(cm: java.awt.image.ColorModel, raster: java.awt.image.WritableRaster, isRasterPremultiplied: boolean, properties: java.util.Hashtable<any, any>)
                 /**
                  * Image type is not recognized so it must be a customized
                  * image.  This type is only used as a return value for the getType()
                  * method.
                  */
                 // @ts-ignore
-                readonly TYPE_CUSTOM: number /*int*/
+                public static readonly TYPE_CUSTOM: number /*int*/
                 /**
                  * Represents an image with 8-bit RGB color components packed into
                  * integer pixels.  The image has a {@link DirectColorModel} without
@@ -120,7 +120,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_INT_RGB: number /*int*/
+                public static readonly TYPE_INT_RGB: number /*int*/
                 /**
                  * Represents an image with 8-bit RGBA color components packed into
                  * integer pixels.  The image has a <code>DirectColorModel</code>
@@ -131,7 +131,7 @@ declare namespace java {
                  * created in the JDK1.1 and earlier releases.
                  */
                 // @ts-ignore
-                readonly TYPE_INT_ARGB: number /*int*/
+                public static readonly TYPE_INT_ARGB: number /*int*/
                 /**
                  * Represents an image with 8-bit RGBA color components packed into
                  * integer pixels.  The image has a <code>DirectColorModel</code>
@@ -139,7 +139,7 @@ declare namespace java {
                  * premultiplied with alpha.
                  */
                 // @ts-ignore
-                readonly TYPE_INT_ARGB_PRE: number /*int*/
+                public static readonly TYPE_INT_ARGB_PRE: number /*int*/
                 /**
                  * Represents an image with 8-bit RGB color components, corresponding
                  * to a Windows- or Solaris- style BGR color model, with the colors
@@ -153,7 +153,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_INT_BGR: number /*int*/
+                public static readonly TYPE_INT_BGR: number /*int*/
                 /**
                  * Represents an image with 8-bit RGB color components, corresponding
                  * to a Windows-style BGR color model) with the colors Blue, Green,
@@ -167,7 +167,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_3BYTE_BGR: number /*int*/
+                public static readonly TYPE_3BYTE_BGR: number /*int*/
                 /**
                  * Represents an image with 8-bit RGBA color components with the colors
                  * Blue, Green, and Red stored in 3 bytes and 1 byte of alpha.  The
@@ -178,7 +178,7 @@ declare namespace java {
                  * from lower to higher byte addresses within each pixel.
                  */
                 // @ts-ignore
-                readonly TYPE_4BYTE_ABGR: number /*int*/
+                public static readonly TYPE_4BYTE_ABGR: number /*int*/
                 /**
                  * Represents an image with 8-bit RGBA color components with the colors
                  * Blue, Green, and Red stored in 3 bytes and 1 byte of alpha.  The
@@ -188,7 +188,7 @@ declare namespace java {
                  * A, B, G, R from lower to higher byte addresses within each pixel.
                  */
                 // @ts-ignore
-                readonly TYPE_4BYTE_ABGR_PRE: number /*int*/
+                public static readonly TYPE_4BYTE_ABGR_PRE: number /*int*/
                 /**
                  * Represents an image with 5-6-5 RGB color components (5-bits red,
                  * 6-bits green, 5-bits blue) with no alpha.  This image has
@@ -201,7 +201,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_USHORT_565_RGB: number /*int*/
+                public static readonly TYPE_USHORT_565_RGB: number /*int*/
                 /**
                  * Represents an image with 5-5-5 RGB color components (5-bits red,
                  * 5-bits green, 5-bits blue) with no alpha.  This image has
@@ -214,7 +214,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_USHORT_555_RGB: number /*int*/
+                public static readonly TYPE_USHORT_555_RGB: number /*int*/
                 /**
                  * Represents a unsigned byte grayscale image, non-indexed.  This
                  * image has a <code>ComponentColorModel</code> with a CS_GRAY
@@ -227,7 +227,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_BYTE_GRAY: number /*int*/
+                public static readonly TYPE_BYTE_GRAY: number /*int*/
                 /**
                  * Represents an unsigned short grayscale image, non-indexed).  This
                  * image has a <code>ComponentColorModel</code> with a CS_GRAY
@@ -240,7 +240,7 @@ declare namespace java {
                  * {@link java.awt.AlphaComposite} documentation.
                  */
                 // @ts-ignore
-                readonly TYPE_USHORT_GRAY: number /*int*/
+                public static readonly TYPE_USHORT_GRAY: number /*int*/
                 /**
                  * Represents an opaque byte-packed 1, 2, or 4 bit image.  The
                  * image has an {@link IndexColorModel} without alpha.  When this
@@ -266,7 +266,7 @@ declare namespace java {
                  * <code>IndexColorModel</code> colormap.
                  */
                 // @ts-ignore
-                readonly TYPE_BYTE_BINARY: number /*int*/
+                public static readonly TYPE_BYTE_BINARY: number /*int*/
                 /**
                  * Represents an indexed byte image.  When this type is used as the
                  * <code>imageType</code> argument to the <code>BufferedImage</code>
@@ -284,7 +284,7 @@ declare namespace java {
                  * <code>IndexColorModel</code> colormap.
                  */
                 // @ts-ignore
-                readonly TYPE_BYTE_INDEXED: number /*int*/
+                public static readonly TYPE_BYTE_INDEXED: number /*int*/
                 /**
                  * Returns the image type.  If it is not one of the known types,
                  * TYPE_CUSTOM is returned.
@@ -305,21 +305,21 @@ declare namespace java {
                  * @see #TYPE_CUSTOM
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Returns the <code>ColorModel</code>.
                  * @return the <code>ColorModel</code> of this
                  *   <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                getColorModel(): java.awt.image.ColorModel
+                public getColorModel(): java.awt.image.ColorModel
                 /**
                  * Returns the {@link WritableRaster}.
                  * @return the <code>WriteableRaster</code> of this
                  *   <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                getRaster(): java.awt.image.WritableRaster
+                public getRaster(): java.awt.image.WritableRaster
                 /**
                  * Returns a <code>WritableRaster</code> representing the alpha
                  * channel for <code>BufferedImage</code> objects
@@ -342,7 +342,7 @@ declare namespace java {
                  *           with its <code>ColorModel</code>.
                  */
                 // @ts-ignore
-                getAlphaRaster(): java.awt.image.WritableRaster
+                public getAlphaRaster(): java.awt.image.WritableRaster
                 /**
                  * Returns an integer pixel in the default RGB color model
                  * (TYPE_INT_ARGB) and default sRGB colorspace.  Color
@@ -366,7 +366,7 @@ declare namespace java {
                  * @see #setRGB(int, int, int, int, int[], int, int)
                  */
                 // @ts-ignore
-                getRGB(x: number /*int*/, y: number /*int*/): int
+                public getRGB(x: number /*int*/, y: number /*int*/): number /*int*/
                 /**
                  * Returns an array of integer pixels in the default RGB color model
                  * (TYPE_INT_ARGB) and default sRGB color space,
@@ -395,7 +395,7 @@ declare namespace java {
                  * @see #setRGB(int, int, int, int, int[], int, int)
                  */
                 // @ts-ignore
-                getRGB(startX: number /*int*/, startY: number /*int*/, w: number /*int*/, h: number /*int*/, rgbArray: number /*int*/[], offset: number /*int*/, scansize: number /*int*/): int[]
+                public getRGB(startX: number /*int*/, startY: number /*int*/, w: number /*int*/, h: number /*int*/, rgbArray: number /*int*/[], offset: number /*int*/, scansize: number /*int*/): number /*int*/[]
                 /**
                  * Sets a pixel in this <code>BufferedImage</code> to the specified
                  * RGB value. The pixel is assumed to be in the default RGB color
@@ -413,7 +413,7 @@ declare namespace java {
                  * @see #getRGB(int, int, int, int, int[], int, int)
                  */
                 // @ts-ignore
-                setRGB(x: number /*int*/, y: number /*int*/, rgb: number /*int*/): void
+                public setRGB(x: number /*int*/, y: number /*int*/, rgb: number /*int*/): void
                 /**
                  * Sets an array of integer pixels in the default RGB color model
                  * (TYPE_INT_ARGB) and default sRGB color space,
@@ -442,33 +442,33 @@ declare namespace java {
                  * @see #getRGB(int, int, int, int, int[], int, int)
                  */
                 // @ts-ignore
-                setRGB(startX: number /*int*/, startY: number /*int*/, w: number /*int*/, h: number /*int*/, rgbArray: number /*int*/[], offset: number /*int*/, scansize: number /*int*/): void
+                public setRGB(startX: number /*int*/, startY: number /*int*/, w: number /*int*/, h: number /*int*/, rgbArray: number /*int*/[], offset: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Returns the width of the <code>BufferedImage</code>.
                  * @return the width of this <code>BufferedImage</code>
                  */
                 // @ts-ignore
-                getWidth(): int
+                public getWidth(): number /*int*/
                 /**
                  * Returns the height of the <code>BufferedImage</code>.
                  * @return the height of this <code>BufferedImage</code>
                  */
                 // @ts-ignore
-                getHeight(): int
+                public getHeight(): number /*int*/
                 /**
                  * Returns the width of the <code>BufferedImage</code>.
                  * @param observer ignored
                  * @return the width of this <code>BufferedImage</code>
                  */
                 // @ts-ignore
-                getWidth(observer: java.awt.image.ImageObserver): int
+                public getWidth(observer: java.awt.image.ImageObserver): number /*int*/
                 /**
                  * Returns the height of the <code>BufferedImage</code>.
                  * @param observer ignored
                  * @return the height of this <code>BufferedImage</code>
                  */
                 // @ts-ignore
-                getHeight(observer: java.awt.image.ImageObserver): int
+                public getHeight(observer: java.awt.image.ImageObserver): number /*int*/
                 /**
                  * Returns the object that produces the pixels for the image.
                  * @return the {#link ImageProducer} that is used to produce the
@@ -476,7 +476,7 @@ declare namespace java {
                  * @see ImageProducer
                  */
                 // @ts-ignore
-                getSource(): java.awt.image.ImageProducer
+                public getSource(): java.awt.image.ImageProducer
                 /**
                  * Returns a property of the image by name.  Individual property names
                  * are defined by the various image formats.  If a property is not
@@ -498,7 +498,7 @@ declare namespace java {
                  * @see java.awt.Image#UndefinedProperty
                  */
                 // @ts-ignore
-                getProperty(name: string, observer: java.awt.image.ImageObserver): java.lang.Object
+                public getProperty(name: java.lang.String | string, observer: java.awt.image.ImageObserver): any
                 /**
                  * Returns a property of the image by name.
                  * @param name the property name
@@ -507,7 +507,7 @@ declare namespace java {
                  * @throws NullPointerException if the property name is null.
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                public getProperty(name: java.lang.String | string): any
                 /**
                  * This method returns a {@link Graphics2D}, but is here
                  * for backwards compatibility.  {@link #createGraphics() createGraphics} is more
@@ -517,7 +517,7 @@ declare namespace java {
                  *           this image.
                  */
                 // @ts-ignore
-                getGraphics(): java.awt.Graphics
+                public getGraphics(): java.awt.Graphics
                 /**
                  * Creates a <code>Graphics2D</code>, which can be used to draw into
                  * this <code>BufferedImage</code>.
@@ -525,7 +525,7 @@ declare namespace java {
                  *           image.
                  */
                 // @ts-ignore
-                createGraphics(): java.awt.Graphics2D
+                public createGraphics(): java.awt.Graphics2D
                 /**
                  * Returns a subimage defined by a specified rectangular region.
                  * The returned <code>BufferedImage</code> shares the same
@@ -542,7 +542,7 @@ declare namespace java {
                  *  area is not contained within this <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                getSubimage(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): java.awt.image.BufferedImage
+                public getSubimage(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): java.awt.image.BufferedImage
                 /**
                  * Returns whether or not the alpha has been premultiplied.  It
                  * returns <code>false</code> if there is no alpha.
@@ -550,7 +550,7 @@ declare namespace java {
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isAlphaPremultiplied(): boolean
+                public isAlphaPremultiplied(): boolean
                 /**
                  * Forces the data to match the state specified in the
                  * <code>isAlphaPremultiplied</code> variable.  It may multiply or
@@ -560,7 +560,7 @@ declare namespace java {
                  *           premultiplied; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                coerceData(isAlphaPremultiplied: boolean): void
+                public coerceData(isAlphaPremultiplied: boolean): void
                 /**
                  * Returns a <code>String</code> representation of this
                  * <code>BufferedImage</code> object and its values.
@@ -568,7 +568,7 @@ declare namespace java {
                  *           <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a {@link Vector} of {@link RenderedImage} objects that are
                  * the immediate sources, not the sources of these immediate sources,
@@ -585,7 +585,7 @@ declare namespace java {
                  *           has no immediate sources.
                  */
                 // @ts-ignore
-                getSources(): java.util.Vector<java.awt.image.RenderedImage>
+                public getSources(): java.util.Vector<java.awt.image.RenderedImage>
                 /**
                  * Returns an array of names recognized by
                  * {@link #getProperty(String) getProperty(String)}
@@ -595,7 +595,7 @@ declare namespace java {
                  *           or <code>null</code> if no property names are recognized.
                  */
                 // @ts-ignore
-                getPropertyNames(): java.lang.String[]
+                public getPropertyNames(): string[]
                 /**
                  * Returns the minimum x coordinate of this
                  * <code>BufferedImage</code>.  This is always zero.
@@ -603,7 +603,7 @@ declare namespace java {
                  *           <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                getMinX(): int
+                public getMinX(): number /*int*/
                 /**
                  * Returns the minimum y coordinate of this
                  * <code>BufferedImage</code>.  This is always zero.
@@ -611,7 +611,7 @@ declare namespace java {
                  *           <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                getMinY(): int
+                public getMinY(): number /*int*/
                 /**
                  * Returns the <code>SampleModel</code> associated with this
                  * <code>BufferedImage</code>.
@@ -619,47 +619,47 @@ declare namespace java {
                  *           <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                getSampleModel(): java.awt.image.SampleModel
+                public getSampleModel(): java.awt.image.SampleModel
                 /**
                  * Returns the number of tiles in the x direction.
                  * This is always one.
                  * @return the number of tiles in the x direction.
                  */
                 // @ts-ignore
-                getNumXTiles(): int
+                public getNumXTiles(): number /*int*/
                 /**
                  * Returns the number of tiles in the y direction.
                  * This is always one.
                  * @return the number of tiles in the y direction.
                  */
                 // @ts-ignore
-                getNumYTiles(): int
+                public getNumYTiles(): number /*int*/
                 /**
                  * Returns the minimum tile index in the x direction.
                  * This is always zero.
                  * @return the minimum tile index in the x direction.
                  */
                 // @ts-ignore
-                getMinTileX(): int
+                public getMinTileX(): number /*int*/
                 /**
                  * Returns the minimum tile index in the y direction.
                  * This is always zero.
                  * @return the minimum tile index in the y direction.
                  */
                 // @ts-ignore
-                getMinTileY(): int
+                public getMinTileY(): number /*int*/
                 /**
                  * Returns the tile width in pixels.
                  * @return the tile width in pixels.
                  */
                 // @ts-ignore
-                getTileWidth(): int
+                public getTileWidth(): number /*int*/
                 /**
                  * Returns the tile height in pixels.
                  * @return the tile height in pixels.
                  */
                 // @ts-ignore
-                getTileHeight(): int
+                public getTileHeight(): number /*int*/
                 /**
                  * Returns the x offset of the tile grid relative to the origin,
                  * For example, the x coordinate of the location of tile
@@ -667,7 +667,7 @@ declare namespace java {
                  * @return the x offset of the tile grid.
                  */
                 // @ts-ignore
-                getTileGridXOffset(): int
+                public getTileGridXOffset(): number /*int*/
                 /**
                  * Returns the y offset of the tile grid relative to the origin,
                  * For example, the y coordinate of the location of tile
@@ -675,7 +675,7 @@ declare namespace java {
                  * @return the y offset of the tile grid.
                  */
                 // @ts-ignore
-                getTileGridYOffset(): int
+                public getTileGridYOffset(): number /*int*/
                 /**
                  * Returns tile (<code>tileX</code>,&nbsp;<code>tileY</code>).  Note
                  * that <code>tileX</code> and <code>tileY</code> are indices
@@ -691,7 +691,7 @@ declare namespace java {
                  *           equal to 0
                  */
                 // @ts-ignore
-                getTile(tileX: number /*int*/, tileY: number /*int*/): java.awt.image.Raster
+                public getTile(tileX: number /*int*/, tileY: number /*int*/): java.awt.image.Raster
                 /**
                  * Returns the image as one large tile.  The <code>Raster</code>
                  * returned is a copy of the image data is not updated if the
@@ -700,7 +700,7 @@ declare namespace java {
                  * @see #setData(Raster)
                  */
                 // @ts-ignore
-                getData(): java.awt.image.Raster
+                public getData(): java.awt.image.Raster
                 /**
                  * Computes and returns an arbitrary region of the
                  * <code>BufferedImage</code>.  The <code>Raster</code> returned is a
@@ -713,7 +713,7 @@ declare namespace java {
                  * @see #setData(Raster)
                  */
                 // @ts-ignore
-                getData(rect: java.awt.Rectangle): java.awt.image.Raster
+                public getData(rect: java.awt.Rectangle): java.awt.image.Raster
                 /**
                  * Computes an arbitrary rectangular region of the
                  * <code>BufferedImage</code> and copies it into a specified
@@ -730,7 +730,7 @@ declare namespace java {
                  *           <code>WritableRaster</code>.
                  */
                 // @ts-ignore
-                copyData(outRaster: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public copyData(outRaster: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Sets a rectangular region of the image to the contents of the
                  * specified <code>Raster</code> <code>r</code>, which is
@@ -742,14 +742,14 @@ declare namespace java {
                  * @see #getData(Rectangle)
                  */
                 // @ts-ignore
-                setData(r: java.awt.image.Raster): void
+                public setData(r: java.awt.image.Raster): void
                 /**
                  * Adds a tile observer.  If the observer is already present,
                  * it receives multiple notifications.
                  * @param to the specified {#link TileObserver}
                  */
                 // @ts-ignore
-                addTileObserver(to: java.awt.image.TileObserver): void
+                public addTileObserver(to: java.awt.image.TileObserver): void
                 /**
                  * Removes a tile observer.  If the observer was not registered,
                  * nothing happens.  If the observer was registered for multiple
@@ -757,7 +757,7 @@ declare namespace java {
                  * @param to the specified <code>TileObserver</code>.
                  */
                 // @ts-ignore
-                removeTileObserver(to: java.awt.image.TileObserver): void
+                public removeTileObserver(to: java.awt.image.TileObserver): void
                 /**
                  * Returns whether or not a tile is currently checked out for writing.
                  * @param tileX the x index of the tile.
@@ -770,7 +770,7 @@ declare namespace java {
                  *           to 0
                  */
                 // @ts-ignore
-                isTileWritable(tileX: number /*int*/, tileY: number /*int*/): boolean
+                public isTileWritable(tileX: number /*int*/, tileY: number /*int*/): boolean
                 /**
                  * Returns an array of {@link Point} objects indicating which tiles
                  * are checked out for writing.  Returns <code>null</code> if none are
@@ -780,7 +780,7 @@ declare namespace java {
                  *           tiles are checked out for writing.
                  */
                 // @ts-ignore
-                getWritableTileIndices(): java.awt.Point[]
+                public getWritableTileIndices(): java.awt.Point[]
                 /**
                  * Returns whether or not any tile is checked out for writing.
                  * Semantically equivalent to
@@ -791,7 +791,7 @@ declare namespace java {
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                hasTileWriters(): boolean
+                public hasTileWriters(): boolean
                 /**
                  * Checks out a tile for writing.  All registered
                  * <code>TileObservers</code> are notified when a tile goes from having
@@ -802,7 +802,7 @@ declare namespace java {
                  *             the specified indices, to be checked out for writing.
                  */
                 // @ts-ignore
-                getWritableTile(tileX: number /*int*/, tileY: number /*int*/): java.awt.image.WritableRaster
+                public getWritableTile(tileX: number /*int*/, tileY: number /*int*/): java.awt.image.WritableRaster
                 /**
                  * Relinquishes permission to write to a tile.  If the caller
                  * continues to write to the tile, the results are undefined.
@@ -815,7 +815,7 @@ declare namespace java {
                  * @param tileY the y index of the tile
                  */
                 // @ts-ignore
-                releaseWritableTile(tileX: number /*int*/, tileY: number /*int*/): void
+                public releaseWritableTile(tileX: number /*int*/, tileY: number /*int*/): void
                 /**
                  * Returns the transparency.  Returns either OPAQUE, BITMASK,
                  * or TRANSLUCENT.
@@ -826,7 +826,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTransparency(): int
+                public getTransparency(): number /*int*/
             }
         }
     }

@@ -22,19 +22,19 @@ declare namespace org {
                  * Return the underlying {@link PathMatcher} delegate.
                  */
                 // @ts-ignore
-                getPathMatcher(): org.springframework.util.PathMatcher
+                public getPathMatcher(): org.springframework.util.PathMatcher
                 // @ts-ignore
-                parseRoute(route: string): org.springframework.util.RouteMatcher.Route
+                public parseRoute(route: java.lang.String | string): org.springframework.util.RouteMatcher.Route
                 // @ts-ignore
-                isPattern(route: string): boolean
+                public isPattern(route: java.lang.String | string): boolean
                 // @ts-ignore
-                combine(pattern1: string, pattern2: string): java.lang.String
+                public combine(pattern1: java.lang.String | string, pattern2: java.lang.String | string): string
                 // @ts-ignore
-                match(pattern: string, route: org.springframework.util.RouteMatcher.Route): boolean
+                public match(pattern: java.lang.String | string, route: org.springframework.util.RouteMatcher.Route): boolean
                 // @ts-ignore
-                matchAndExtract(pattern: string, route: org.springframework.util.RouteMatcher.Route): java.util.Map<java.lang.String, java.lang.String>
+                public matchAndExtract(pattern: java.lang.String | string, route: org.springframework.util.RouteMatcher.Route): java.util.Map<java.lang.String | string, java.lang.String | string>
                 // @ts-ignore
-                getPatternComparator(route: org.springframework.util.RouteMatcher.Route): java.util.Comparator<java.lang.String>
+                public getPatternComparator(route: org.springframework.util.RouteMatcher.Route): java.util.Comparator<java.lang.String | string>
             }
         }
     }

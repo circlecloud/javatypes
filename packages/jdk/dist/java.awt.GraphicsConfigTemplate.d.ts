@@ -14,7 +14,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class GraphicsConfigTemplate extends java.lang.Object implements java.io.Serializable {
+        abstract class GraphicsConfigTemplate extends java.lang.Object implements java.io.Serializable {
             /**
              * This class is an abstract class so only subclasses can be
              * instantiated.
@@ -28,7 +28,7 @@ declare namespace java {
              * <code>GraphicsConfiguration</code> object.
              */
             // @ts-ignore
-            readonly REQUIRED: number /*int*/
+            public static readonly REQUIRED: number /*int*/
             /**
              * Value used for "Enum" (Integer) type.  States that this
              * feature is desired for the <code>GraphicsConfiguration</code>
@@ -37,7 +37,7 @@ declare namespace java {
              * selections can be considered valid matches.
              */
             // @ts-ignore
-            readonly PREFERRED: number /*int*/
+            public static readonly PREFERRED: number /*int*/
             /**
              * Value used for "Enum" (Integer) type.  States that this
              * feature is not necessary for the selection of the
@@ -46,7 +46,7 @@ declare namespace java {
              * includes this feature since it is not used.
              */
             // @ts-ignore
-            readonly UNNECESSARY: number /*int*/
+            public static readonly UNNECESSARY: number /*int*/
             /**
              * Returns the "best" configuration possible that passes the
              * criteria defined in the <code>GraphicsConfigTemplate</code>.
@@ -57,7 +57,7 @@ declare namespace java {
              * @see GraphicsConfiguration
              */
             // @ts-ignore
-            abstract getBestConfiguration(gc: java.awt.GraphicsConfiguration[]): java.awt.GraphicsConfiguration
+            public abstract getBestConfiguration(gc: java.awt.GraphicsConfiguration[]): java.awt.GraphicsConfiguration
             /**
              * Returns a <code>boolean</code> indicating whether or
              * not the specified <code>GraphicsConfiguration</code> can be
@@ -72,7 +72,7 @@ declare namespace java {
              *  API.
              */
             // @ts-ignore
-            abstract isGraphicsConfigSupported(gc: java.awt.GraphicsConfiguration): boolean
+            public abstract isGraphicsConfigSupported(gc: java.awt.GraphicsConfiguration): boolean
         }
     }
 }

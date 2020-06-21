@@ -21,7 +21,7 @@ declare namespace javax {
              * @param message the detail message.
              */
             // @ts-ignore
-            constructor(e: java.lang.Exception, message: string)
+            constructor(e: java.lang.Exception, message: java.lang.String | string)
             /**
              * Returns the actual {@link Exception} thrown.
              * @return the wrapped {#link Exception}.
@@ -33,7 +33,7 @@ declare namespace javax {
              * @return the wrapped {#link Exception}.
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
         }
     }
 }

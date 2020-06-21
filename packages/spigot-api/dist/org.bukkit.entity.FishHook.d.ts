@@ -15,7 +15,7 @@ declare namespace org {
                  * @deprecated has no effect in newer Minecraft versions
                  */
                 // @ts-ignore
-                getBiteChance(): double
+                getBiteChance(): number /*double*/
                 /**
                  * Sets the chance of a fish biting.
                  * <p>

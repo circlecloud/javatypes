@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Jeff Dinkins
              */
             // @ts-ignore
-            class ButtonUI extends javax.swing.plaf.ComponentUI {
+            abstract class ButtonUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

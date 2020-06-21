@@ -65,7 +65,7 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*double*/
+                    public x: number /*double*/
                     /**
                      * The Y coordinate of the upper-left corner of the framing
                      * rectangle of the arc.
@@ -73,7 +73,7 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*double*/
+                    public y: number /*double*/
                     /**
                      * The overall width of the full ellipse of which this arc is
                      * a partial section (not considering the angular extents).
@@ -81,7 +81,7 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    width: number /*double*/
+                    public width: number /*double*/
                     /**
                      * The overall height of the full ellipse of which this arc is
                      * a partial section (not considering the angular extents).
@@ -89,21 +89,21 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    height: number /*double*/
+                    public height: number /*double*/
                     /**
                      * The starting angle of the arc in degrees.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    start: number /*double*/
+                    public start: number /*double*/
                     /**
                      * The angular extent of the arc in degrees.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    extent: number /*double*/
+                    public extent: number /*double*/
                     /**
                      * {@inheritDoc}
                      * Note that the arc
@@ -112,7 +112,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * Note that the arc
@@ -121,7 +121,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * Note that the arc
@@ -130,7 +130,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getWidth(): double
+                    public getWidth(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * Note that the arc
@@ -139,43 +139,43 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getHeight(): double
+                    public getHeight(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getAngleStart(): double
+                    public getAngleStart(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getAngleExtent(): double
+                    public getAngleExtent(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setArc(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
+                    public setArc(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/, angSt: number /*double*/, angExt: number /*double*/, closure: number /*int*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setAngleStart(angSt: number /*double*/): void
+                    public setAngleStart(angSt: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setAngleExtent(angExt: number /*double*/): void
+                    public setAngleExtent(angExt: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2

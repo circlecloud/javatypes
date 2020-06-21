@@ -13,9 +13,9 @@ declare namespace org {
                              * @deprecated Useless without its immutable counterpart, use {#link AbstractSingleData} instead.
                              */
                             // @ts-ignore
-                            class AbstractIntData<M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<java.lang.Integer, M, I> {
+                            abstract class AbstractIntData<M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<java.lang.Integer | number, M, I> {
                                 // @ts-ignore
-                                constructor(value: number /*int*/, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<java.lang.Integer>>)
+                                constructor(value: number /*int*/, usedKey: org.spongepowered.api.data.key.Key<any>)
                             }
                         }
                     }

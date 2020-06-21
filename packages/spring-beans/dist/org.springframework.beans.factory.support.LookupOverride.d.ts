@@ -19,7 +19,7 @@ declare namespace org {
                          *  that the overridden method should return (may be {@code null})
                          */
                         // @ts-ignore
-                        constructor(methodName: string, beanName: string)
+                        constructor(methodName: java.lang.String | string, beanName: java.lang.String | string)
                         /**
                          * Construct a new LookupOverride.
                          * @param method the method to override
@@ -27,12 +27,12 @@ declare namespace org {
                          *  that the overridden method should return (may be {@code null})
                          */
                         // @ts-ignore
-                        constructor(method: java.lang.reflect.Method, beanName: string)
+                        constructor(method: java.lang.reflect.Method, beanName: java.lang.String | string)
                         /**
                          * Return the name of the bean that should be returned by this method.
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Match the specified method by {@link Method} reference or method name.
                          * <p>For backwards compatibility reasons, in a scenario with overloaded
@@ -42,13 +42,13 @@ declare namespace org {
                          * be considered, usually demarcated by the {@code @Lookup} annotation.
                          */
                         // @ts-ignore
-                        matches(method: java.lang.reflect.Method): boolean
+                        public matches(method: java.lang.reflect.Method): boolean
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

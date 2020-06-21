@@ -8,7 +8,7 @@ declare namespace org {
                  * @param throwable Exception that triggered this Exception
                  */
                 // @ts-ignore
-                constructor(throwable: Error)
+                constructor(throwable: java.lang.Throwable | Error)
                 /**
                  * Constructs a new EventException
                  */
@@ -20,19 +20,19 @@ declare namespace org {
                  * @param message The message
                  */
                 // @ts-ignore
-                constructor(cause: Error, message: string)
+                constructor(cause: java.lang.Throwable | Error, message: java.lang.String | string)
                 /**
                  * Constructs a new EventException with the given message
                  * @param message The message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * If applicable, returns the Exception that triggered this Exception
                  * @return Inner exception, or null if one does not exist
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

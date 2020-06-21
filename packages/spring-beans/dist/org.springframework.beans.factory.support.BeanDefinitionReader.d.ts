@@ -65,7 +65,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(resource: Resource): int
+                        loadBeanDefinitions(resource: Resource): number /*int*/
                         /**
                          * Load bean definitions from the specified resources.
                          * @param resources the resource descriptors
@@ -73,7 +73,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(...resources: Resource[]): int
+                        loadBeanDefinitions(...resources: Resource[]): number /*int*/
                     }
                 }
             }

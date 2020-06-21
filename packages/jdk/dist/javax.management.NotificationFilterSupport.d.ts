@@ -37,7 +37,7 @@ declare namespace javax {
              * @return <CODE>true</CODE> if the notification should be sent to the listener, <CODE>false</CODE> otherwise.
              */
             // @ts-ignore
-            isNotificationEnabled(notification: javax.management.Notification): boolean
+            public isNotificationEnabled(notification: javax.management.Notification): boolean
             /**
              * Enables all the notifications the type of which starts with the specified prefix
              * to be sent to the listener.
@@ -62,7 +62,7 @@ declare namespace javax {
              * @exception java.lang.IllegalArgumentException The prefix parameter is null.
              */
             // @ts-ignore
-            enableType(prefix: string): void
+            public enableType(prefix: java.lang.String | string): void
             /**
              * Removes the given prefix from the prefix list.
              * <BR>If the specified prefix is not in the list of enabled notification types,
@@ -70,18 +70,18 @@ declare namespace javax {
              * @param prefix The prefix.
              */
             // @ts-ignore
-            disableType(prefix: string): void
+            public disableType(prefix: java.lang.String | string): void
             /**
              * Disables all notification types.
              */
             // @ts-ignore
-            disableAllTypes(): void
+            public disableAllTypes(): void
             /**
              * Gets all the enabled notification types for this filter.
              * @return The list containing all the enabled notification types.
              */
             // @ts-ignore
-            getEnabledTypes(): java.util.Vector<java.lang.String>
+            public getEnabledTypes(): java.util.Vector<java.lang.String | string>
         }
     }
 }

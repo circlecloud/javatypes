@@ -7,10 +7,20 @@ declare namespace java {
              */
             // @ts-ignore
             class RequestorType extends java.lang.Enum<java.net.Authenticator.RequestorType> {
+                /**
+                 * Entity requesting authentication is a HTTP proxy server.
+                 */
+                // @ts-ignore
+                readonly PROXY: java.net.Authenticator.RequestorType
+                /**
+                 * Entity requesting authentication is a HTTP origin server.
+                 */
+                // @ts-ignore
+                readonly SERVER: java.net.Authenticator.RequestorType
                 // @ts-ignore
                 values(): java.net.Authenticator.RequestorType[]
                 // @ts-ignore
-                valueOf(name: string): java.net.Authenticator.RequestorType
+                valueOf(name: java.lang.String | string): java.net.Authenticator.RequestorType
             }
         }
     }

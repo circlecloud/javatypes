@@ -24,26 +24,26 @@ declare namespace java {
                  *                   if the preference is being removed.
                  */
                 // @ts-ignore
-                constructor(node: java.util.prefs.Preferences, key: string, newValue: string)
+                constructor(node: java.util.prefs.Preferences, key: java.lang.String | string, newValue: java.lang.String | string)
                 /**
                  * Returns the preference node that emitted the event.
                  * @return The preference node that emitted the event.
                  */
                 // @ts-ignore
-                getNode(): java.util.prefs.Preferences
+                public getNode(): java.util.prefs.Preferences
                 /**
                  * Returns the key of the preference that was changed.
                  * @return The key of the preference that was changed.
                  */
                 // @ts-ignore
-                getKey(): java.lang.String
+                public getKey(): string
                 /**
                  * Returns the new value for the preference.
                  * @return The new value for the preference, or <tt>null</tt> if the
                  *           preference was removed.
                  */
                 // @ts-ignore
-                getNewValue(): java.lang.String
+                public getNewValue(): string
             }
         }
     }

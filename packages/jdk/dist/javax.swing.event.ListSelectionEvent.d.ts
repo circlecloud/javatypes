@@ -34,7 +34,7 @@ declare namespace javax {
                  *         multiple events, where changes are still being made
                  */
                 // @ts-ignore
-                constructor(source: any, firstIndex: number /*int*/, lastIndex: number /*int*/, isAdjusting: boolean)
+                constructor(source: java.lang.Object | any, firstIndex: number /*int*/, lastIndex: number /*int*/, isAdjusting: boolean)
                 /**
                  * Returns the index of the first row whose selection may have changed.
                  * {@code getFirstIndex() <= getLastIndex()}
@@ -42,7 +42,7 @@ declare namespace javax {
                  *          where zero is the first row
                  */
                 // @ts-ignore
-                getFirstIndex(): int
+                public getFirstIndex(): number /*int*/
                 /**
                  * Returns the index of the last row whose selection may have changed.
                  * {@code getLastIndex() >= getFirstIndex()}
@@ -50,7 +50,7 @@ declare namespace javax {
                  *          where zero is the first row
                  */
                 // @ts-ignore
-                getLastIndex(): int
+                public getLastIndex(): number /*int*/
                 /**
                  * Returns whether or not this is one in a series of multiple events,
                  * where changes are still being made. See the documentation for
@@ -60,14 +60,14 @@ declare namespace javax {
                  *          where changes are still being made
                  */
                 // @ts-ignore
-                getValueIsAdjusting(): boolean
+                public getValueIsAdjusting(): boolean
                 /**
                  * Returns a {@code String} that displays and identifies this
                  * object's properties.
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

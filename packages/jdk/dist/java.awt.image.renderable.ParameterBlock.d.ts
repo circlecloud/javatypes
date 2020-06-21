@@ -69,7 +69,7 @@ declare namespace java {
                      * @param sources a <code>Vector</code> of source images
                      */
                     // @ts-ignore
-                    constructor(sources: java.util.Vector<java.lang.Object>)
+                    constructor(sources: java.util.Vector<java.lang.Object | any>)
                     /**
                      * Constructs a <code>ParameterBlock</code> with a given Vector of sources and
                      * Vector of parameters.
@@ -78,17 +78,17 @@ declare namespace java {
                      *         rendering operation
                      */
                     // @ts-ignore
-                    constructor(sources: java.util.Vector<java.lang.Object>, parameters: java.util.Vector<java.lang.Object>)
+                    constructor(sources: java.util.Vector<java.lang.Object | any>, parameters: java.util.Vector<java.lang.Object | any>)
                     /**
                      * A Vector of sources, stored as arbitrary Objects.
                      */
                     // @ts-ignore
-                    sources: java.util.Vector<java.lang.Object>
+                    sources: java.util.Vector<java.lang.Object | any>
                     /**
                      * A Vector of non-source parameters, stored as arbitrary Objects.
                      */
                     // @ts-ignore
-                    parameters: java.util.Vector<java.lang.Object>
+                    parameters: java.util.Vector<java.lang.Object | any>
                     /**
                      * Creates a shallow copy of a <code>ParameterBlock</code>.  The source and
                      * parameter Vectors are copied by reference -- additions or
@@ -96,7 +96,7 @@ declare namespace java {
                      * @return an Object clone of the <code>ParameterBlock</code>.
                      */
                     // @ts-ignore
-                    shallowClone(): java.lang.Object
+                    public shallowClone(): any
                     /**
                      * Creates a copy of a <code>ParameterBlock</code>.  The source and parameter
                      * Vectors are cloned, but the actual sources and parameters are
@@ -107,7 +107,7 @@ declare namespace java {
                      * @return an Object clone of the <code>ParameterBlock</code>.
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                     /**
                      * Adds an image to end of the list of sources.  The image is
                      * stored as an object in order to allow new node types in the
@@ -117,7 +117,7 @@ declare namespace java {
                      *          <code>source</code>.
                      */
                     // @ts-ignore
-                    addSource(source: any): java.awt.image.renderable.ParameterBlock
+                    public addSource(source: java.lang.Object | any): java.awt.image.renderable.ParameterBlock
                     /**
                      * Returns a source as a general Object.  The caller must cast it into
                      * an appropriate type.
@@ -128,7 +128,7 @@ declare namespace java {
                      * @see #setSource(Object, int)
                      */
                     // @ts-ignore
-                    getSource(index: number /*int*/): java.lang.Object
+                    public getSource(index: number /*int*/): any
                     /**
                      * Replaces an entry in the list of source with a new source.
                      * If the index lies beyond the current source list,
@@ -143,7 +143,7 @@ declare namespace java {
                      * @see #getSource(int)
                      */
                     // @ts-ignore
-                    setSource(source: any, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public setSource(source: java.lang.Object | any, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Returns a source as a <code>RenderedImage</code>.  This method is
                      * a convenience method.
@@ -154,7 +154,7 @@ declare namespace java {
                      *          <code>sources</code> <code>Vector</code>.
                      */
                     // @ts-ignore
-                    getRenderedSource(index: number /*int*/): java.awt.image.RenderedImage
+                    public getRenderedSource(index: number /*int*/): java.awt.image.RenderedImage
                     /**
                      * Returns a source as a RenderableImage.  This method is a
                      * convenience method.
@@ -165,47 +165,47 @@ declare namespace java {
                      *          <code>sources</code> <code>Vector</code>.
                      */
                     // @ts-ignore
-                    getRenderableSource(index: number /*int*/): java.awt.image.renderable.RenderableImage
+                    public getRenderableSource(index: number /*int*/): java.awt.image.renderable.RenderableImage
                     /**
                      * Returns the number of source images.
                      * @return the number of source images in the <code>sources</code>
                      *          <code>Vector</code>.
                      */
                     // @ts-ignore
-                    getNumSources(): int
+                    public getNumSources(): number /*int*/
                     /**
                      * Returns the entire Vector of sources.
                      * @return the <code>sources</code> <code>Vector</code>.
                      * @see #setSources(Vector)
                      */
                     // @ts-ignore
-                    getSources(): java.util.Vector<java.lang.Object>
+                    public getSources(): java.util.Vector<java.lang.Object | any>
                     /**
                      * Sets the entire Vector of sources to a given Vector.
                      * @param sources the <code>Vector</code> of source images
                      * @see #getSources
                      */
                     // @ts-ignore
-                    setSources(sources: java.util.Vector<java.lang.Object>): void
+                    public setSources(sources: java.util.Vector<java.lang.Object | any>): void
                     /**
                      * Clears the list of source images.
                      */
                     // @ts-ignore
-                    removeSources(): void
+                    public removeSources(): void
                     /**
                      * Returns the number of parameters (not including source images).
                      * @return the number of parameters in the <code>parameters</code>
                      *          <code>Vector</code>.
                      */
                     // @ts-ignore
-                    getNumParameters(): int
+                    public getNumParameters(): number /*int*/
                     /**
                      * Returns the entire Vector of parameters.
                      * @return the <code>parameters</code> <code>Vector</code>.
                      * @see #setParameters(Vector)
                      */
                     // @ts-ignore
-                    getParameters(): java.util.Vector<java.lang.Object>
+                    public getParameters(): java.util.Vector<java.lang.Object | any>
                     /**
                      * Sets the entire Vector of parameters to a given Vector.
                      * @param parameters the specified <code>Vector</code> of
@@ -213,12 +213,12 @@ declare namespace java {
                      * @see #getParameters
                      */
                     // @ts-ignore
-                    setParameters(parameters: java.util.Vector<java.lang.Object>): void
+                    public setParameters(parameters: java.util.Vector<java.lang.Object | any>): void
                     /**
                      * Clears the list of parameters.
                      */
                     // @ts-ignore
-                    removeParameters(): void
+                    public removeParameters(): void
                     /**
                      * Adds an object to the list of parameters.
                      * @param obj the <code>Object</code> to add to the
@@ -227,7 +227,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(obj: any): java.awt.image.renderable.ParameterBlock
+                    public add(obj: java.lang.Object | any): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Byte to the list of parameters.
                      * @param b the byte to add to the
@@ -236,7 +236,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(b: number /*byte*/): java.awt.image.renderable.ParameterBlock
+                    public add(b: number /*byte*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Character to the list of parameters.
                      * @param c the char to add to the
@@ -245,7 +245,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(c: string): java.awt.image.renderable.ParameterBlock
+                    public add(c: string): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Short to the list of parameters.
                      * @param s the short to add to the
@@ -254,7 +254,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(s: number /*short*/): java.awt.image.renderable.ParameterBlock
+                    public add(s: number /*short*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Integer to the list of parameters.
                      * @param i the int to add to the
@@ -263,7 +263,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(i: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public add(i: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Long to the list of parameters.
                      * @param l the long to add to the
@@ -272,7 +272,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(l: number /*long*/): java.awt.image.renderable.ParameterBlock
+                    public add(l: number /*long*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Float to the list of parameters.
                      * @param f the float to add to the
@@ -281,7 +281,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(f: number /*float*/): java.awt.image.renderable.ParameterBlock
+                    public add(f: number /*float*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Adds a Double to the list of parameters.
                      * @param d the double to add to the
@@ -290,7 +290,7 @@ declare namespace java {
                      *          the specified parameter.
                      */
                     // @ts-ignore
-                    add(d: number /*double*/): java.awt.image.renderable.ParameterBlock
+                    public add(d: number /*double*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters.
                      * If the index lies beyond the current source list,
@@ -304,7 +304,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(obj: any, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(obj: java.lang.Object | any, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with a Byte.
                      * If the index lies beyond the current source list,
@@ -318,7 +318,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(b: number /*byte*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(b: number /*byte*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with a Character.
                      * If the index lies beyond the current source list,
@@ -332,7 +332,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(c: string, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(c: string, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with a Short.
                      * If the index lies beyond the current source list,
@@ -346,7 +346,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(s: number /*short*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(s: number /*short*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with an Integer.
                      * If the index lies beyond the current source list,
@@ -360,7 +360,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(i: number /*int*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(i: number /*int*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with a Long.
                      * If the index lies beyond the current source list,
@@ -374,7 +374,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(l: number /*long*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(l: number /*long*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with a Float.
                      * If the index lies beyond the current source list,
@@ -388,7 +388,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(f: number /*float*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(f: number /*float*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Replaces an Object in the list of parameters with a Double.
                      * If the index lies beyond the current source list,
@@ -402,7 +402,7 @@ declare namespace java {
                      *         the specified parameter.
                      */
                     // @ts-ignore
-                    set(d: number /*double*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
+                    public set(d: number /*double*/, index: number /*int*/): java.awt.image.renderable.ParameterBlock
                     /**
                      * Gets a parameter as an object.
                      * @param index the index of the parameter to get
@@ -412,7 +412,7 @@ declare namespace java {
                      *          <code>Vector</code>.
                      */
                     // @ts-ignore
-                    getObjectParameter(index: number /*int*/): java.lang.Object
+                    public getObjectParameter(index: number /*int*/): any
                     /**
                      * A convenience method to return a parameter as a byte.  An
                      * exception is thrown if the parameter is
@@ -429,7 +429,7 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getByteParameter(index: number /*int*/): byte
+                    public getByteParameter(index: number /*int*/): number /*byte*/
                     /**
                      * A convenience method to return a parameter as a char.  An
                      * exception is thrown if the parameter is
@@ -446,7 +446,7 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getCharParameter(index: number /*int*/): char
+                    public getCharParameter(index: number /*int*/): string
                     /**
                      * A convenience method to return a parameter as a short.  An
                      * exception is thrown if the parameter is
@@ -463,7 +463,7 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getShortParameter(index: number /*int*/): short
+                    public getShortParameter(index: number /*int*/): number /*short*/
                     /**
                      * A convenience method to return a parameter as an int.  An
                      * exception is thrown if the parameter is
@@ -480,7 +480,7 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getIntParameter(index: number /*int*/): int
+                    public getIntParameter(index: number /*int*/): number /*int*/
                     /**
                      * A convenience method to return a parameter as a long.  An
                      * exception is thrown if the parameter is
@@ -497,7 +497,7 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getLongParameter(index: number /*int*/): long
+                    public getLongParameter(index: number /*int*/): number /*long*/
                     /**
                      * A convenience method to return a parameter as a float.  An
                      * exception is thrown if the parameter is
@@ -514,7 +514,7 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getFloatParameter(index: number /*int*/): float
+                    public getFloatParameter(index: number /*int*/): number /*float*/
                     /**
                      * A convenience method to return a parameter as a double.  An
                      * exception is thrown if the parameter is
@@ -531,14 +531,14 @@ declare namespace java {
                      *          <code>ParameterBlock</code> object
                      */
                     // @ts-ignore
-                    getDoubleParameter(index: number /*int*/): double
+                    public getDoubleParameter(index: number /*int*/): number /*double*/
                     /**
                      * Returns an array of Class objects describing the types
                      * of the parameters.
                      * @return an array of <code>Class</code> objects.
                      */
                     // @ts-ignore
-                    getParamClasses(): java.lang.Class[]
+                    public getParamClasses(): java.lang.Class<any>[]
                 }
             }
         }

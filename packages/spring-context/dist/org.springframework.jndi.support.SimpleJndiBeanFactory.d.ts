@@ -34,7 +34,7 @@ declare namespace org {
                      *  (typically within the "java:comp/env/" namespace)
                      */
                     // @ts-ignore
-                    addShareableResource(shareableResource: string): void
+                    public addShareableResource(shareableResource: java.lang.String | string): void
                     /**
                      * Set a list of names of shareable JNDI resources,
                      * which this factory is allowed to cache once obtained.
@@ -42,35 +42,35 @@ declare namespace org {
                      *  (typically within the "java:comp/env/" namespace)
                      */
                     // @ts-ignore
-                    setShareableResources(...shareableResources: string[]): void
+                    public setShareableResources(...shareableResources: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    getBean(name: string): java.lang.Object
+                    public getBean(name: java.lang.String | string): any
                     // @ts-ignore
-                    getBean<T>(name: string, requiredType: java.lang.Class<T>): T
+                    public getBean<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>): T
                     // @ts-ignore
-                    getBean(name: string, ...args: any[]): java.lang.Object
+                    public getBean(name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
                     // @ts-ignore
-                    getBean<T>(requiredType: java.lang.Class<T>): T
+                    public getBean<T>(requiredType: java.lang.Class<T>): T
                     // @ts-ignore
-                    getBean<T>(requiredType: java.lang.Class<T>, ...args: any[]): T
+                    public getBean<T>(requiredType: java.lang.Class<T>, ...args: java.lang.Object[] | any[]): T
                     // @ts-ignore
-                    getBeanProvider<T>(requiredType: java.lang.Class<T>): <any>
+                    public getBeanProvider<T>(requiredType: java.lang.Class<T>): object
                     // @ts-ignore
-                    getBeanProvider<T>(requiredType: ResolvableType): <any>
+                    public getBeanProvider<T>(requiredType: ResolvableType): object
                     // @ts-ignore
-                    containsBean(name: string): boolean
+                    public containsBean(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    isSingleton(name: string): boolean
+                    public isSingleton(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    isPrototype(name: string): boolean
+                    public isPrototype(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    isTypeMatch(name: string, typeToMatch: ResolvableType): boolean
+                    public isTypeMatch(name: java.lang.String | string, typeToMatch: ResolvableType): boolean
                     // @ts-ignore
-                    getType(name: string): java.lang.Class<?>
+                    public getType(name: java.lang.String | string): java.lang.Class<any>
                     // @ts-ignore
-                    getType(name: string, allowFactoryBeanInit: boolean): java.lang.Class<?>
+                    public getType(name: java.lang.String | string, allowFactoryBeanInit: boolean): java.lang.Class<any>
                     // @ts-ignore
-                    getAliases(name: string): java.lang.String[]
+                    public getAliases(name: java.lang.String | string): string[]
                 }
             }
         }

@@ -103,31 +103,31 @@ declare namespace org {
                      * Return the BeanDefinitionRegistry that this scanner operates on.
                      */
                     // @ts-ignore
-                    getRegistry(): BeanDefinitionRegistry
+                    public getRegistry(): BeanDefinitionRegistry
                     /**
                      * Set the defaults to use for detected beans.
                      * @see BeanDefinitionDefaults
                      */
                     // @ts-ignore
-                    setBeanDefinitionDefaults(beanDefinitionDefaults: BeanDefinitionDefaults): void
+                    public setBeanDefinitionDefaults(beanDefinitionDefaults: BeanDefinitionDefaults): void
                     /**
                      * Return the defaults to use for detected beans (never {@code null}).
                      * @since 4.1
                      */
                     // @ts-ignore
-                    getBeanDefinitionDefaults(): BeanDefinitionDefaults
+                    public getBeanDefinitionDefaults(): BeanDefinitionDefaults
                     /**
                      * Set the name-matching patterns for determining autowire candidates.
                      * @param autowireCandidatePatterns the patterns to match against
                      */
                     // @ts-ignore
-                    setAutowireCandidatePatterns(...autowireCandidatePatterns: string[]): void
+                    public setAutowireCandidatePatterns(...autowireCandidatePatterns: java.lang.String[] | string[]): void
                     /**
                      * Set the BeanNameGenerator to use for detected bean classes.
                      * <p>Default is a {@link AnnotationBeanNameGenerator}.
                      */
                     // @ts-ignore
-                    setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
+                    public setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
                     /**
                      * Set the ScopeMetadataResolver to use for detected bean classes.
                      * Note that this will override any custom "scopedProxyMode" setting.
@@ -135,7 +135,7 @@ declare namespace org {
                      * @see #setScopedProxyMode
                      */
                     // @ts-ignore
-                    setScopeMetadataResolver(scopeMetadataResolver: org.springframework.context.annotation.ScopeMetadataResolver): void
+                    public setScopeMetadataResolver(scopeMetadataResolver: org.springframework.context.annotation.ScopeMetadataResolver): void
                     /**
                      * Specify the proxy behavior for non-singleton scoped beans.
                      * Note that this will override any custom "scopeMetadataResolver" setting.
@@ -143,21 +143,21 @@ declare namespace org {
                      * @see #setScopeMetadataResolver
                      */
                     // @ts-ignore
-                    setScopedProxyMode(scopedProxyMode: org.springframework.context.annotation.ScopedProxyMode): void
+                    public setScopedProxyMode(scopedProxyMode: org.springframework.context.annotation.ScopedProxyMode): void
                     /**
                      * Specify whether to register annotation config post-processors.
                      * <p>The default is to register the post-processors. Turn this off
                      * to be able to ignore the annotations or to process them differently.
                      */
                     // @ts-ignore
-                    setIncludeAnnotationConfig(includeAnnotationConfig: boolean): void
+                    public setIncludeAnnotationConfig(includeAnnotationConfig: boolean): void
                     /**
                      * Perform a scan within the specified base packages.
                      * @param basePackages the packages to check for annotated classes
                      * @return number of beans registered
                      */
                     // @ts-ignore
-                    scan(...basePackages: string[]): int
+                    public scan(...basePackages: java.lang.String[] | string[]): number /*int*/
                     /**
                      * Perform a scan within the specified base packages,
                      * returning the registered bean definitions.
@@ -167,7 +167,7 @@ declare namespace org {
                      * @return set of beans registered if any for tooling registration purposes (never {#code null})
                      */
                     // @ts-ignore
-                    doScan(...basePackages: string[]): java.util.Set<BeanDefinitionHolder>
+                    doScan(...basePackages: java.lang.String[] | string[]): Array<BeanDefinitionHolder>
                     /**
                      * Apply further settings to the given bean definition,
                      * beyond the contents retrieved from scanning the component class.
@@ -175,7 +175,7 @@ declare namespace org {
                      * @param beanName the generated bean name for the given bean
                      */
                     // @ts-ignore
-                    postProcessBeanDefinition(beanDefinition: AbstractBeanDefinition, beanName: string): void
+                    postProcessBeanDefinition(beanDefinition: AbstractBeanDefinition, beanName: java.lang.String | string): void
                     /**
                      * Register the specified bean with the given registry.
                      * <p>Can be overridden in subclasses, e.g. to adapt the registration
@@ -197,7 +197,7 @@ declare namespace org {
                      *  bean definition has been found for the specified name
                      */
                     // @ts-ignore
-                    checkCandidate(beanName: string, beanDefinition: BeanDefinition): boolean
+                    checkCandidate(beanName: java.lang.String | string, beanDefinition: BeanDefinition): boolean
                     /**
                      * Determine whether the given new bean definition is compatible with
                      * the given existing bean definition.

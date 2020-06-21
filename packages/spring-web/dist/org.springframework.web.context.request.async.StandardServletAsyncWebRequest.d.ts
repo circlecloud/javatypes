@@ -27,34 +27,34 @@ declare namespace org {
                              * container processing thread has exited.
                              */
                             // @ts-ignore
-                            setTimeout(timeout: number): void
+                            public setTimeout(timeout: java.lang.Long | number): void
                             // @ts-ignore
-                            addTimeoutHandler(timeoutHandler: java.lang.Runnable): void
+                            public addTimeoutHandler(timeoutHandler: java.lang.Runnable): void
                             // @ts-ignore
-                            addErrorHandler(exceptionHandler: java.util.function.Consumer<java.lang.Throwable> | java.util.function$.Consumer<java.lang.Throwable>): void
+                            public addErrorHandler(exceptionHandler: java.util.function$.Consumer<java.lang.Throwable | Error>): void
                             // @ts-ignore
-                            addCompletionHandler(runnable: java.lang.Runnable): void
+                            public addCompletionHandler(runnable: java.lang.Runnable): void
                             // @ts-ignore
-                            isAsyncStarted(): boolean
+                            public isAsyncStarted(): boolean
                             /**
                              * Whether async request processing has completed.
                              * <p>It is important to avoid use of request and response objects after async
                              * processing has completed. Servlet containers often re-use them.
                              */
                             // @ts-ignore
-                            isAsyncComplete(): boolean
+                            public isAsyncComplete(): boolean
                             // @ts-ignore
-                            startAsync(): void
+                            public startAsync(): void
                             // @ts-ignore
-                            dispatch(): void
+                            public dispatch(): void
                             // @ts-ignore
-                            onStartAsync(event: AsyncEvent): void
+                            public onStartAsync(event: AsyncEvent): void
                             // @ts-ignore
-                            onError(event: AsyncEvent): void
+                            public onError(event: AsyncEvent): void
                             // @ts-ignore
-                            onTimeout(event: AsyncEvent): void
+                            public onTimeout(event: AsyncEvent): void
                             // @ts-ignore
-                            onComplete(event: AsyncEvent): void
+                            public onComplete(event: AsyncEvent): void
                         }
                     }
                 }

@@ -93,7 +93,7 @@ declare namespace java {
                  * @see java.awt.Component#createImage
                  */
                 // @ts-ignore
-                constructor(w: number /*int*/, h: number /*int*/, cm: java.awt.image.ColorModel, pix: number /*byte*/[], off: number /*int*/, scan: number /*int*/, props: java.util.Hashtable<any, ?>)
+                constructor(w: number /*int*/, h: number /*int*/, cm: java.awt.image.ColorModel, pix: number /*byte*/[], off: number /*int*/, scan: number /*int*/, props: java.util.Hashtable<any, any>)
                 /**
                  * Constructs an ImageProducer object which uses an array of integers
                  * to produce data for an Image object.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @see java.awt.Component#createImage
                  */
                 // @ts-ignore
-                constructor(w: number /*int*/, h: number /*int*/, cm: java.awt.image.ColorModel, pix: number /*int*/[], off: number /*int*/, scan: number /*int*/, props: java.util.Hashtable<any, ?>)
+                constructor(w: number /*int*/, h: number /*int*/, cm: java.awt.image.ColorModel, pix: number /*int*/[], off: number /*int*/, scan: number /*int*/, props: java.util.Hashtable<any, any>)
                 /**
                  * Constructs an ImageProducer object which uses an array of integers
                  * in the default RGB ColorModel to produce data for an Image object.
@@ -157,7 +157,7 @@ declare namespace java {
                  * @see ColorModel#getRGBdefault
                  */
                 // @ts-ignore
-                constructor(w: number /*int*/, h: number /*int*/, pix: number /*int*/[], off: number /*int*/, scan: number /*int*/, props: java.util.Hashtable<any, ?>)
+                constructor(w: number /*int*/, h: number /*int*/, pix: number /*int*/[], off: number /*int*/, scan: number /*int*/, props: java.util.Hashtable<any, any>)
                 /**
                  * Adds an ImageConsumer to the list of consumers interested in
                  * data for this image.
@@ -167,7 +167,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                addConsumer(ic: java.awt.image.ImageConsumer): void
+                public addConsumer(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Determines if an ImageConsumer is on the list of consumers currently
                  * interested in data for this image.
@@ -177,7 +177,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                isConsumer(ic: java.awt.image.ImageConsumer): boolean
+                public isConsumer(ic: java.awt.image.ImageConsumer): boolean
                 /**
                  * Removes an ImageConsumer from the list of consumers interested in
                  * data for this image.
@@ -185,7 +185,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                removeConsumer(ic: java.awt.image.ImageConsumer): void
+                public removeConsumer(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Adds an ImageConsumer to the list of consumers interested in
                  * data for this image and immediately starts delivery of the
@@ -195,7 +195,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                startProduction(ic: java.awt.image.ImageConsumer): void
+                public startProduction(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Requests that a given ImageConsumer have the image data delivered
                  * one more time in top-down, left-right order.
@@ -203,7 +203,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                requestTopDownLeftRightResend(ic: java.awt.image.ImageConsumer): void
+                public requestTopDownLeftRightResend(ic: java.awt.image.ImageConsumer): void
                 /**
                  * Changes this memory image into a multi-frame animation or a
                  * single-frame static image depending on the animated parameter.
@@ -218,7 +218,7 @@ declare namespace java {
                  *        multi-frame animation
                  */
                 // @ts-ignore
-                setAnimated(animated: boolean): void
+                public setAnimated(animated: boolean): void
                 /**
                  * Specifies whether this animated memory image should always be
                  * updated by sending the complete buffer of pixels whenever
@@ -235,7 +235,7 @@ declare namespace java {
                  * @see #setAnimated
                  */
                 // @ts-ignore
-                setFullBufferUpdates(fullbuffers: boolean): void
+                public setFullBufferUpdates(fullbuffers: boolean): void
                 /**
                  * Sends a whole new buffer of pixels to any ImageConsumers that
                  * are currently interested in the data for this image and notify
@@ -247,7 +247,7 @@ declare namespace java {
                  * @see #setAnimated
                  */
                 // @ts-ignore
-                newPixels(): void
+                public newPixels(): void
                 /**
                  * Sends a rectangular region of the buffer of pixels to any
                  * ImageConsumers that are currently interested in the data for
@@ -269,7 +269,7 @@ declare namespace java {
                  * @see #setFullBufferUpdates
                  */
                 // @ts-ignore
-                newPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+                public newPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
                 /**
                  * Sends a rectangular region of the buffer of pixels to any
                  * ImageConsumers that are currently interested in the data for
@@ -294,7 +294,7 @@ declare namespace java {
                  * @see #setFullBufferUpdates
                  */
                 // @ts-ignore
-                newPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, framenotify: boolean): void
+                public newPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, framenotify: boolean): void
                 /**
                  * Changes to a new byte array to hold the pixels for this image.
                  * If the animation flag has been turned on through the setAnimated()
@@ -310,7 +310,7 @@ declare namespace java {
                  * @see #setAnimated
                  */
                 // @ts-ignore
-                newPixels(newpix: number /*byte*/[], newmodel: java.awt.image.ColorModel, offset: number /*int*/, scansize: number /*int*/): void
+                public newPixels(newpix: number /*byte*/[], newmodel: java.awt.image.ColorModel, offset: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Changes to a new int array to hold the pixels for this image.
                  * If the animation flag has been turned on through the setAnimated()
@@ -326,7 +326,7 @@ declare namespace java {
                  * @see #setAnimated
                  */
                 // @ts-ignore
-                newPixels(newpix: number /*int*/[], newmodel: java.awt.image.ColorModel, offset: number /*int*/, scansize: number /*int*/): void
+                public newPixels(newpix: number /*int*/[], newmodel: java.awt.image.ColorModel, offset: number /*int*/, scansize: number /*int*/): void
             }
         }
     }

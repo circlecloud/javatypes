@@ -31,34 +31,34 @@ declare namespace org {
                          * @param pattern the pattern to use to format date values
                          */
                         // @ts-ignore
-                        constructor(pattern: string)
+                        constructor(pattern: java.lang.String | string)
                         /**
                          * Set the pattern to use to format date values.
                          * @param pattern the format pattern
                          */
                         // @ts-ignore
-                        setPattern(pattern: string): void
+                        public setPattern(pattern: java.lang.String | string): void
                         /**
                          * Set the ISO format used to format date values.
                          * @param iso the ISO format
                          */
                         // @ts-ignore
-                        setIso(iso: org.springframework.format.annotation.DateTimeFormat.ISO): void
+                        public setIso(iso: org.springframework.format.annotation.DateTimeFormat.ISO): void
                         /**
                          * Set the style to use for date types.
                          */
                         // @ts-ignore
-                        setDateStyle(dateStyle: java.time.format.FormatStyle): void
+                        public setDateStyle(dateStyle: java.time.format.FormatStyle): void
                         /**
                          * Set the style to use for time types.
                          */
                         // @ts-ignore
-                        setTimeStyle(timeStyle: java.time.format.FormatStyle): void
+                        public setTimeStyle(timeStyle: java.time.format.FormatStyle): void
                         /**
                          * Set the style to use for date and time types.
                          */
                         // @ts-ignore
-                        setDateTimeStyle(dateTimeStyle: java.time.format.FormatStyle): void
+                        public setDateTimeStyle(dateTimeStyle: java.time.format.FormatStyle): void
                         /**
                          * Set the two characters to use to format date values, in Joda-Time style.
                          * <p>The first character is used for the date style; the second is for
@@ -76,13 +76,13 @@ declare namespace org {
                          * @param style two characters from the set {"S", "M", "L", "F", "-"}
                          */
                         // @ts-ignore
-                        setStylePattern(style: string): void
+                        public setStylePattern(style: java.lang.String | string): void
                         /**
                          * Set the {@code TimeZone} to normalize the date values into, if any.
                          * @param timeZone the time zone
                          */
                         // @ts-ignore
-                        setTimeZone(timeZone: java.util.TimeZone): void
+                        public setTimeZone(timeZone: java.util.TimeZone): void
                         /**
                          * Create a new {@code DateTimeFormatter} using this factory.
                          * <p>If no specific pattern or style has been defined,
@@ -91,7 +91,7 @@ declare namespace org {
                          * @see #createDateTimeFormatter(DateTimeFormatter)
                          */
                         // @ts-ignore
-                        createDateTimeFormatter(): java.time.format.DateTimeFormatter
+                        public createDateTimeFormatter(): java.time.format.DateTimeFormatter
                         /**
                          * Create a new {@code DateTimeFormatter} using this factory.
                          * <p>If no specific pattern or style has been defined,
@@ -101,7 +101,7 @@ declare namespace org {
                          * @return a new date time formatter
                          */
                         // @ts-ignore
-                        createDateTimeFormatter(fallbackFormatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatter
+                        public createDateTimeFormatter(fallbackFormatter: java.time.format.DateTimeFormatter): java.time.format.DateTimeFormatter
                     }
                 }
             }

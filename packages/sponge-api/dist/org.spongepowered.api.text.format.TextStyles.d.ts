@@ -12,28 +12,28 @@ declare namespace org {
                          * Represents an empty {@link TextStyle}.
                          */
                         // @ts-ignore
-                        readonly NONE: org.spongepowered.api.text.format.TextStyle
+                        public static readonly NONE: org.spongepowered.api.text.format.TextStyle
                         // @ts-ignore
-                        readonly OBFUSCATED: org.spongepowered.api.text.format.TextStyle.Base
+                        public static readonly OBFUSCATED: org.spongepowered.api.text.format.TextStyle.Base
                         // @ts-ignore
-                        readonly BOLD: org.spongepowered.api.text.format.TextStyle.Base
+                        public static readonly BOLD: org.spongepowered.api.text.format.TextStyle.Base
                         // @ts-ignore
-                        readonly STRIKETHROUGH: org.spongepowered.api.text.format.TextStyle.Base
+                        public static readonly STRIKETHROUGH: org.spongepowered.api.text.format.TextStyle.Base
                         // @ts-ignore
-                        readonly UNDERLINE: org.spongepowered.api.text.format.TextStyle.Base
+                        public static readonly UNDERLINE: org.spongepowered.api.text.format.TextStyle.Base
                         // @ts-ignore
-                        readonly ITALIC: org.spongepowered.api.text.format.TextStyle.Base
+                        public static readonly ITALIC: org.spongepowered.api.text.format.TextStyle.Base
                         /**
                          * Represents a {@link TextStyle} with all bases set to {@code false}.
                          */
                         // @ts-ignore
-                        readonly RESET: org.spongepowered.api.text.format.TextStyle.Base
+                        public static readonly RESET: org.spongepowered.api.text.format.TextStyle.Base
                         /**
                          * Returns an empty {@link TextStyle}.
                          * @return An empty text style
                          */
                         // @ts-ignore
-                        of(): org.spongepowered.api.text.format.TextStyle
+                        public static of(): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Constructs a composite text style from the specified styles. This will
                          * result in the same as calling {@link TextStyle#and(TextStyle...)} on all
@@ -42,7 +42,7 @@ declare namespace org {
                          * @return A composite text style from the specified styles
                          */
                         // @ts-ignore
-                        of(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.format.TextStyle
+                        public static of(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.format.TextStyle
                     }
                 }
             }

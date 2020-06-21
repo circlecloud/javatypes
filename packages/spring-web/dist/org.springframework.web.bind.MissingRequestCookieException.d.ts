@@ -18,19 +18,19 @@ declare namespace org {
                      * @param parameter the method parameter
                      */
                     // @ts-ignore
-                    constructor(cookieName: string, parameter: MethodParameter)
+                    constructor(cookieName: java.lang.String | string, parameter: MethodParameter)
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Return the expected name of the request cookie.
                      */
                     // @ts-ignore
-                    getCookieName(): java.lang.String
+                    public getCookieName(): string
                     /**
                      * Return the method parameter bound to the request cookie.
                      */
                     // @ts-ignore
-                    getParameter(): MethodParameter
+                    public getParameter(): MethodParameter
                 }
             }
         }

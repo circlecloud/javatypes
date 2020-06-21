@@ -18,7 +18,7 @@ declare namespace org {
                      * <p>Default is the default ValidatorFactory's default Validator.
                      */
                     // @ts-ignore
-                    setValidator(validator: Validator): void
+                    public setValidator(validator: Validator): void
                     /**
                      * Set the JSR-303 ValidatorFactory to delegate to for validating beans,
                      * using its default Validator.
@@ -26,7 +26,7 @@ declare namespace org {
                      * @see javax.validation.ValidatorFactory#getValidator()
                      */
                     // @ts-ignore
-                    setValidatorFactory(validatorFactory: ValidatorFactory): void
+                    public setValidatorFactory(validatorFactory: ValidatorFactory): void
                     /**
                      * Choose whether to perform validation after bean initialization
                      * (i.e. after init methods) instead of before (which is the default).
@@ -35,20 +35,20 @@ declare namespace org {
                      * to populate constrained fields before they get validated.
                      */
                     // @ts-ignore
-                    setAfterInitialization(afterInitialization: boolean): void
+                    public setAfterInitialization(afterInitialization: boolean): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                    public postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     // @ts-ignore
-                    postProcessAfterInitialization(bean: any, beanName: string): java.lang.Object
+                    public postProcessAfterInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     /**
                      * Perform validation of the given bean.
                      * @param bean the bean instance to validate
                      * @see javax.validation.Validator#validate
                      */
                     // @ts-ignore
-                    doValidate(bean: any): void
+                    doValidate(bean: java.lang.Object | any): void
                 }
             }
         }

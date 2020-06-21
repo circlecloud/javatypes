@@ -27,7 +27,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(acc: java.security.AccessControlContext)
                         // @ts-ignore
-                        getAccessControlContext(): java.security.AccessControlContext
+                        public getAccessControlContext(): java.security.AccessControlContext
                     }
                 }
             }

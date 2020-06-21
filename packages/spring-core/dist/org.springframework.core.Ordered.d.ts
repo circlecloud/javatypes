@@ -28,13 +28,13 @@ declare namespace org {
                  * @see java.lang.Integer#MIN_VALUE
                  */
                 // @ts-ignore
-                
+                readonly HIGHEST_PRECEDENCE: number /*int*/
                 /**
                  * Useful constant for the lowest precedence value.
                  * @see java.lang.Integer#MAX_VALUE
                  */
                 // @ts-ignore
-                
+                readonly LOWEST_PRECEDENCE: number /*int*/
                 /**
                  * Get the order value of this object.
                  * <p>Higher values are interpreted as lower priority. As a consequence,
@@ -47,7 +47,7 @@ declare namespace org {
                  * @see #LOWEST_PRECEDENCE
                  */
                 // @ts-ignore
-                getOrder(): int
+                getOrder(): number /*int*/
             }
         }
     }

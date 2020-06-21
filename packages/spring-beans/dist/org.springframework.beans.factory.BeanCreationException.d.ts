@@ -14,21 +14,21 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Create a new BeanCreationException.
                      * @param msg the detail message
                      * @param cause the root cause
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Create a new BeanCreationException.
                      * @param beanName the name of the bean requested
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(beanName: string, msg: string)
+                    constructor(beanName: java.lang.String | string, msg: java.lang.String | string)
                     /**
                      * Create a new BeanCreationException.
                      * @param beanName the name of the bean requested
@@ -36,7 +36,7 @@ declare namespace org {
                      * @param cause the root cause
                      */
                     // @ts-ignore
-                    constructor(beanName: string, msg: string, cause: Error)
+                    constructor(beanName: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Create a new BeanCreationException.
                      * @param resourceDescription description of the resource
@@ -45,7 +45,7 @@ declare namespace org {
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, msg: string)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, msg: java.lang.String | string)
                     /**
                      * Create a new BeanCreationException.
                      * @param resourceDescription description of the resource
@@ -55,18 +55,18 @@ declare namespace org {
                      * @param cause the root cause
                      */
                     // @ts-ignore
-                    constructor(resourceDescription: string, beanName: string, msg: string, cause: Error)
+                    constructor(resourceDescription: java.lang.String | string, beanName: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Return the description of the resource that the bean
                      * definition came from, if any.
                      */
                     // @ts-ignore
-                    getResourceDescription(): java.lang.String
+                    public getResourceDescription(): string
                     /**
                      * Return the name of the bean requested, if any.
                      */
                     // @ts-ignore
-                    getBeanName(): java.lang.String
+                    public getBeanName(): string
                     /**
                      * Add a related cause to this bean creation exception,
                      * not being a direct cause of the failure but having occurred
@@ -74,21 +74,21 @@ declare namespace org {
                      * @param ex the related cause to add
                      */
                     // @ts-ignore
-                    addRelatedCause(ex: Error): void
+                    public addRelatedCause(ex: java.lang.Throwable | Error): void
                     /**
                      * Return the related causes, if any.
                      * @return the array of related causes, or {#code null} if none
                      */
                     // @ts-ignore
-                    getRelatedCauses(): java.lang.Throwable[]
+                    public getRelatedCauses(): Error[]
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    printStackTrace(ps: java.io.PrintStream): void
+                    public printStackTrace(ps: java.io.PrintStream): void
                     // @ts-ignore
-                    printStackTrace(pw: java.io.PrintWriter): void
+                    public printStackTrace(pw: java.io.PrintWriter): void
                     // @ts-ignore
-                    contains(exClass: java.lang.Class<any>): boolean
+                    public contains(exClass: java.lang.Class<any>): boolean
                 }
             }
         }

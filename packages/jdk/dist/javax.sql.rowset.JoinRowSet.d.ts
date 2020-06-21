@@ -185,20 +185,20 @@ declare namespace javax {
                  * An ANSI-style <code>JOIN</code> providing a cross product of two tables
                  */
                 // @ts-ignore
-                
+                readonly CROSS_JOIN: number /*int*/
                 /**
                  * An ANSI-style <code>JOIN</code> providing a inner join between two tables. Any
                  * unmatched rows in either table of the join should be discarded.
                  */
                 // @ts-ignore
-                
+                readonly INNER_JOIN: number /*int*/
                 /**
                  * An ANSI-style <code>JOIN</code> providing a left outer join between two
                  * tables. In SQL, this is described where all records should be
                  * returned from the left side of the JOIN statement.
                  */
                 // @ts-ignore
-                
+                readonly LEFT_OUTER_JOIN: number /*int*/
                 /**
                  * An ANSI-style <code>JOIN</code> providing a right outer join between
                  * two tables. In SQL, this is described where all records from the
@@ -206,14 +206,14 @@ declare namespace javax {
                  * on the left has no matching record.
                  */
                 // @ts-ignore
-                
+                readonly RIGHT_OUTER_JOIN: number /*int*/
                 /**
                  * An ANSI-style <code>JOIN</code> providing a a full JOIN. Specifies that all
                  * rows from either table be returned regardless of matching
                  * records on the other table.
                  */
                 // @ts-ignore
-                
+                readonly FULL_JOIN: number /*int*/
                 /**
                  * Adds the given <code>RowSet</code> object to this <code>JoinRowSet</code>
                  * object. If the <code>RowSet</code> object
@@ -278,7 +278,7 @@ declare namespace javax {
                  *          conditions of the <code>JOIN</code>
                  */
                 // @ts-ignore
-                addRowSet(rowset: javax.sql.RowSet, columnName: string): void
+                addRowSet(rowset: javax.sql.RowSet, columnName: java.lang.String | string): void
                 /**
                  * Adds one or more <code>RowSet</code> objects contained in the given
                  * array of <code>RowSet</code> objects to this <code>JoinRowSet</code>
@@ -338,7 +338,7 @@ declare namespace javax {
                  *          <code>JOIN</code>
                  */
                 // @ts-ignore
-                addRowSet(rowset: javax.sql.RowSet[], columnName: string[]): void
+                addRowSet(rowset: javax.sql.RowSet[], columnName: java.lang.String[] | string[]): void
                 /**
                  * Returns a <code>Collection</code> object containing the
                  * <code>RowSet</code> objects that have been added to this
@@ -353,7 +353,7 @@ declare namespace javax {
                  *          <code>Collection</code> object to be returned
                  */
                 // @ts-ignore
-                getRowSets(): java.util.Collection<?>
+                getRowSets(): Array<any>
                 /**
                  * Returns a <code>String</code> array containing the names of the
                  * <code>RowSet</code> objects added to this <code>JoinRowSet</code>
@@ -366,7 +366,7 @@ declare namespace javax {
                  * @see CachedRowSet#setTableName
                  */
                 // @ts-ignore
-                getRowSetNames(): java.lang.String[]
+                getRowSetNames(): string[]
                 /**
                  * Creates a new <code>CachedRowSet</code> object containing the
                  * data in this <code>JoinRowSet</code> object, which can be saved
@@ -456,7 +456,7 @@ declare namespace javax {
                  *  of the WHERE clause.
                  */
                 // @ts-ignore
-                getWhereClause(): java.lang.String
+                getWhereClause(): string
                 /**
                  * Returns a <code>int</code> describing the set SQL <code>JOIN</code> type
                  * governing this JoinRowSet instance. The returned type will be one of
@@ -472,7 +472,7 @@ declare namespace javax {
                  * @see #setJoinType
                  */
                 // @ts-ignore
-                getJoinType(): int
+                getJoinType(): number /*int*/
             }
         }
     }

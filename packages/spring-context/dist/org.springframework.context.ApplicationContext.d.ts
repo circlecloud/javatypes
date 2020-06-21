@@ -37,25 +37,25 @@ declare namespace org {
                  * @return the unique id of the context, or {#code null} if none
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                getId(): string
                 /**
                  * Return a name for the deployed application that this context belongs to.
                  * @return a name for the deployed application, or the empty String by default
                  */
                 // @ts-ignore
-                getApplicationName(): java.lang.String
+                getApplicationName(): string
                 /**
                  * Return a friendly name for this context.
                  * @return a display name for this context (never {#code null})
                  */
                 // @ts-ignore
-                getDisplayName(): java.lang.String
+                getDisplayName(): string
                 /**
                  * Return the timestamp when this context was first loaded.
                  * @return the timestamp (ms) when this context was first loaded
                  */
                 // @ts-ignore
-                getStartupDate(): long
+                getStartupDate(): number /*long*/
                 /**
                  * Return the parent context, or {@code null} if there is no parent
                  * and this is the root of the context hierarchy.

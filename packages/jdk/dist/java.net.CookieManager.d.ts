@@ -109,17 +109,17 @@ declare namespace java {
              *                           has no effects on current cookie policy.
              */
             // @ts-ignore
-            setCookiePolicy(cookiePolicy: java.net.CookiePolicy): void
+            public setCookiePolicy(cookiePolicy: java.net.CookiePolicy): void
             /**
              * To retrieve current cookie store.
              * @return the cookie store currently used by cookie manager.
              */
             // @ts-ignore
-            getCookieStore(): java.net.CookieStore
+            public getCookieStore(): java.net.CookieStore
             // @ts-ignore
-            get(uri: java.net.URI, requestHeaders: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+            public get(uri: java.net.URI, requestHeaders: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
             // @ts-ignore
-            put(uri: java.net.URI, responseHeaders: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): void
+            public put(uri: java.net.URI, responseHeaders: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): void
         }
     }
 }

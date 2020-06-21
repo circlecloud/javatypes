@@ -57,7 +57,7 @@ declare namespace javax {
                      *       to the error handler.
                      */
                     // @ts-ignore
-                    getElement(rt: ResultT extends javax.xml.transform.Result): ElementT
+                    getElement(rt: ResultT): ElementT
                     /**
                      * This method is called when a JAXB provider needs to marshal an element
                      * to XML.

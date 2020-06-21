@@ -14,19 +14,19 @@ declare namespace org {
                  * @param constantPoolCount the number of constant pool items of the class.
                  */
                 // @ts-ignore
-                constructor(className: string, constantPoolCount: number /*int*/)
+                constructor(className: java.lang.String | string, constantPoolCount: number /*int*/)
                 /**
                  * Returns the internal name of the class.
                  * @return the internal name of the class.
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                getClassName(): string
                 /**
                  * Returns the number of constant pool items of the class.
                  * @return the number of constant pool items of the class.
                  */
                 // @ts-ignore
-                getConstantPoolCount(): int
+                getConstantPoolCount(): number /*int*/
             }
         }
     }

@@ -64,28 +64,28 @@ declare namespace org {
                  * The empty {@code HttpEntity}, with no body or headers.
                  */
                 // @ts-ignore
-                readonly EMPTY: org.springframework.http.HttpEntity<any>
+                public static readonly EMPTY: org.springframework.http.HttpEntity<any>
                 /**
                  * Returns the headers of this entity.
                  */
                 // @ts-ignore
-                getHeaders(): org.springframework.http.HttpHeaders
+                public getHeaders(): org.springframework.http.HttpHeaders
                 /**
                  * Returns the body of this entity.
                  */
                 // @ts-ignore
-                getBody(): T
+                public getBody(): T
                 /**
                  * Indicates whether this entity has a body.
                  */
                 // @ts-ignore
-                hasBody(): boolean
+                public hasBody(): boolean
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

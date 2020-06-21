@@ -20,7 +20,7 @@ declare namespace java {
                      * get the current Target actions
                      */
                     // @ts-ignore
-                    getTargetActions(): int
+                    getTargetActions(): number /*int*/
                     /**
                      * get the DropTarget associated with this peer
                      */

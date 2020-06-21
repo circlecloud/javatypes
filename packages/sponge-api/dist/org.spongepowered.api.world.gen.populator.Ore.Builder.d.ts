@@ -63,7 +63,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                placementCondition(condition: java.util.function.Predicate<org.spongepowered.api.block.BlockState> | java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): org.spongepowered.api.world.gen.populator.Ore.Builder
+                                placementCondition(condition: java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): org.spongepowered.api.world.gen.populator.Ore.Builder
                                 /**
                                  * Builds a new instance of a {@link Ore} populator with the settings
                                  * set within the builder.

@@ -39,43 +39,43 @@ declare namespace javax {
                      * @param name  the name of the new type of encoding
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Specifies signed, linear PCM data.
                      */
                     // @ts-ignore
-                    readonly PCM_SIGNED: javax.sound.sampled.AudioFormat.Encoding
+                    public static readonly PCM_SIGNED: javax.sound.sampled.AudioFormat.Encoding
                     /**
                      * Specifies unsigned, linear PCM data.
                      */
                     // @ts-ignore
-                    readonly PCM_UNSIGNED: javax.sound.sampled.AudioFormat.Encoding
+                    public static readonly PCM_UNSIGNED: javax.sound.sampled.AudioFormat.Encoding
                     /**
                      * Specifies floating-point PCM data.
                      * @since 1.7
                      */
                     // @ts-ignore
-                    readonly PCM_FLOAT: javax.sound.sampled.AudioFormat.Encoding
+                    public static readonly PCM_FLOAT: javax.sound.sampled.AudioFormat.Encoding
                     /**
                      * Specifies u-law encoded data.
                      */
                     // @ts-ignore
-                    readonly ULAW: javax.sound.sampled.AudioFormat.Encoding
+                    public static readonly ULAW: javax.sound.sampled.AudioFormat.Encoding
                     /**
                      * Specifies a-law encoded data.
                      */
                     // @ts-ignore
-                    readonly ALAW: javax.sound.sampled.AudioFormat.Encoding
+                    public static readonly ALAW: javax.sound.sampled.AudioFormat.Encoding
                     /**
                      * Finalizes the equals method
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashCode method
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Provides the <code>String</code> representation of the encoding.  This <code>String</code> is
                      * the same name that was passed to the constructor.  For the predefined encodings, the name
@@ -84,7 +84,7 @@ declare namespace javax {
                      * @return the encoding name
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

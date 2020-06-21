@@ -91,7 +91,7 @@ declare namespace org {
                              * @return The replacement check
                              */
                             // @ts-ignore
-                            getValidBlocksToReplace(): java.util.function.Predicate<org.spongepowered.api.block.BlockState>
+                            getValidBlocksToReplace(): java.util.function$.Predicate<org.spongepowered.api.block.BlockState>
                             /**
                              * Sets the predicate which will be applied to all {@link BlockState}s that
                              * this populator attempts to replace in order to determine if they are
@@ -99,7 +99,7 @@ declare namespace org {
                              * @param check The new replacement check
                              */
                             // @ts-ignore
-                            setValidBlocksToReplace(check: java.util.function.Predicate<org.spongepowered.api.block.BlockState> | java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): void
+                            setValidBlocksToReplace(check: java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): void
                         }
                     }
                 }

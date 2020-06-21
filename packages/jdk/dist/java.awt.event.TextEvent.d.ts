@@ -38,29 +38,29 @@ declare namespace java {
                  * @see #getID()
                  */
                 // @ts-ignore
-                constructor(source: any, id: number /*int*/)
+                constructor(source: java.lang.Object | any, id: number /*int*/)
                 /**
                  * The first number in the range of ids used for text events.
                  */
                 // @ts-ignore
-                readonly TEXT_FIRST: number /*int*/
+                public static readonly TEXT_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for text events.
                  */
                 // @ts-ignore
-                readonly TEXT_LAST: number /*int*/
+                public static readonly TEXT_LAST: number /*int*/
                 /**
                  * This event id indicates that object's text changed.
                  */
                 // @ts-ignore
-                readonly TEXT_VALUE_CHANGED: number /*int*/
+                public static readonly TEXT_VALUE_CHANGED: number /*int*/
                 /**
                  * Returns a parameter string identifying this text event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

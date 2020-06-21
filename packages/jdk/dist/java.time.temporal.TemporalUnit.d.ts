@@ -123,7 +123,7 @@ declare namespace java {
                  * @throws UnsupportedTemporalTypeException if the unit is not supported by the temporal
                  */
                 // @ts-ignore
-                addTo<R extends java.time.temporal.Temporal>(temporal: R extends java.time.temporal.Temporal, amount: number /*long*/): R
+                addTo<R extends java.time.temporal.Temporal>(temporal: R, amount: number /*long*/): R
                 /**
                  * Calculates the amount of time between two temporal objects.
                  * <p>
@@ -176,7 +176,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                between(temporal1Inclusive: java.time.temporal.Temporal, temporal2Exclusive: java.time.temporal.Temporal): long
+                between(temporal1Inclusive: java.time.temporal.Temporal, temporal2Exclusive: java.time.temporal.Temporal): number /*long*/
                 /**
                  * Gets a descriptive name for the unit.
                  * <p>
@@ -184,7 +184,7 @@ declare namespace java {
                  * @return the name of this unit, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

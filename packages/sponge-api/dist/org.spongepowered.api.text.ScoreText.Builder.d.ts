@@ -16,7 +16,7 @@ declare namespace org {
                          * @see ScoreText#getScore()
                          */
                         // @ts-ignore
-                        getScore(): org.spongepowered.api.scoreboard.Score
+                        public getScore(): org.spongepowered.api.scoreboard.Score
                         /**
                          * Sets the score of the text.
                          * @param score The score for this builder to use
@@ -24,14 +24,14 @@ declare namespace org {
                          * @see ScoreText#getScore()
                          */
                         // @ts-ignore
-                        score(score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText.Builder
+                        public score(score: org.spongepowered.api.scoreboard.Score): org.spongepowered.api.text.ScoreText.Builder
                         /**
                          * Returns the current override of this builder.
                          * @return The current override, or {#link Optional#empty()} if none
                          * @see ScoreText#getOverride()
                          */
                         // @ts-ignore
-                        getOverride(): java.util.Optional<java.lang.String>
+                        public getOverride(): java.util.Optional<java.lang.String | string>
                         /**
                          * Overrides the real score and displays a custom text instead.
                          * @param override The text to override the score with or {#code null}
@@ -40,51 +40,51 @@ declare namespace org {
                          * @see ScoreText#getOverride()
                          */
                         // @ts-ignore
-                        override(override: string): org.spongepowered.api.text.ScoreText.Builder
+                        public override(override: java.lang.String | string): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        build(): org.spongepowered.api.text.ScoreText
+                        public build(): org.spongepowered.api.text.ScoreText
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.ScoreText.Builder
+                        public format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.ScoreText.Builder
+                        public color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.ScoreText.Builder
+                        public style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.ScoreText.Builder
+                        public onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.ScoreText.Builder
+                        public onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.ScoreText.Builder
+                        public onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.ScoreText.Builder
+                        public append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        append(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public append(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        append(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public append(children: java.lang.Iterable<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        append(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public append(children: java.util.Iterator<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.ScoreText.Builder
+                        public insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public insert(pos: number /*int*/, children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public insert(pos: number /*int*/, children: java.lang.Iterable<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public insert(pos: number /*int*/, children: java.util.Iterator<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.ScoreText.Builder
+                        public remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        remove(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public remove(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        remove(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public remove(children: java.lang.Iterable<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        remove(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.ScoreText.Builder
+                        public remove(children: java.util.Iterator<any>): org.spongepowered.api.text.ScoreText.Builder
                         // @ts-ignore
-                        removeAll(): org.spongepowered.api.text.ScoreText.Builder
+                        public removeAll(): org.spongepowered.api.text.ScoreText.Builder
                     }
                 }
             }

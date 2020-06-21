@@ -8,19 +8,19 @@ declare namespace org {
                 // @ts-ignore
                 class ConfigurationSerialization extends java.lang.Object {
                     // @ts-ignore
-                    constructor(clazz: java.lang.Class<org.bukkit.configuration.serialization.ConfigurationSerializable>)
+                    constructor(clazz: java.lang.Class<any>)
                     // @ts-ignore
-                    readonly SERIALIZED_TYPE_KEY: string
+                    public static readonly SERIALIZED_TYPE_KEY: java.lang.String | string
                     // @ts-ignore
-                    getMethod(name: string, isStatic: boolean): java.lang.reflect.Method
+                    getMethod(name: java.lang.String | string, isStatic: boolean): java.lang.reflect.Method
                     // @ts-ignore
-                    getConstructor(): java.lang.reflect.Constructor<? extends org.bukkit.configuration.serialization.ConfigurationSerializable>
+                    getConstructor(): java.lang.reflect.Constructor<any>
                     // @ts-ignore
-                    deserializeViaMethod(method: java.lang.reflect.Method, args: java.util.Map<java.lang.String, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
+                    deserializeViaMethod(method: java.lang.reflect.Method, args: java.util.Map<java.lang.String | string, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
                     // @ts-ignore
-                    deserializeViaCtor(ctor: java.lang.reflect.Constructor<org.bukkit.configuration.serialization.ConfigurationSerializable>, args: java.util.Map<java.lang.String, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
+                    deserializeViaCtor(ctor: java.lang.reflect.Constructor<any>, args: java.util.Map<java.lang.String | string, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
                     // @ts-ignore
-                    deserialize(args: java.util.Map<java.lang.String, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
+                    public deserialize(args: java.util.Map<java.lang.String | string, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
                     /**
                      * Attempts to deserialize the given arguments into a new instance of the
                      * given class.
@@ -36,7 +36,7 @@ declare namespace org {
                      * @return New instance of the specified class
                      */
                     // @ts-ignore
-                    deserializeObject(args: java.util.Map<java.lang.String, any>, clazz: java.lang.Class<org.bukkit.configuration.serialization.ConfigurationSerializable>): org.bukkit.configuration.serialization.ConfigurationSerializable
+                    public static deserializeObject(args: java.util.Map<java.lang.String | string, any>, clazz: java.lang.Class<any>): org.bukkit.configuration.serialization.ConfigurationSerializable
                     /**
                      * Attempts to deserialize the given arguments into a new instance of the
                      * given class.
@@ -51,14 +51,14 @@ declare namespace org {
                      * @return New instance of the specified class
                      */
                     // @ts-ignore
-                    deserializeObject(args: java.util.Map<java.lang.String, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
+                    public static deserializeObject(args: java.util.Map<java.lang.String | string, any>): org.bukkit.configuration.serialization.ConfigurationSerializable
                     /**
                      * Registers the given {@link ConfigurationSerializable} class by its
                      * alias
                      * @param clazz Class to register
                      */
                     // @ts-ignore
-                    registerClass(clazz: java.lang.Class<org.bukkit.configuration.serialization.ConfigurationSerializable>): void
+                    public static registerClass(clazz: java.lang.Class<any>): void
                     /**
                      * Registers the given alias to the specified {@link
                      * ConfigurationSerializable} class
@@ -67,20 +67,20 @@ declare namespace org {
                      * @see SerializableAs
                      */
                     // @ts-ignore
-                    registerClass(clazz: java.lang.Class<org.bukkit.configuration.serialization.ConfigurationSerializable>, alias: string): void
+                    public static registerClass(clazz: java.lang.Class<any>, alias: java.lang.String | string): void
                     /**
                      * Unregisters the specified alias to a {@link ConfigurationSerializable}
                      * @param alias Alias to unregister
                      */
                     // @ts-ignore
-                    unregisterClass(alias: string): void
+                    public static unregisterClass(alias: java.lang.String | string): void
                     /**
                      * Unregisters any aliases for the specified {@link
                      * ConfigurationSerializable} class
                      * @param clazz Class to unregister
                      */
                     // @ts-ignore
-                    unregisterClass(clazz: java.lang.Class<org.bukkit.configuration.serialization.ConfigurationSerializable>): void
+                    public static unregisterClass(clazz: java.lang.Class<any>): void
                     /**
                      * Attempts to get a registered {@link ConfigurationSerializable} class by
                      * its alias
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return Registered class, or null if not found
                      */
                     // @ts-ignore
-                    getClassByAlias(alias: string): java.lang.Class<? extends org.bukkit.configuration.serialization.ConfigurationSerializable>
+                    public static getClassByAlias(alias: java.lang.String | string): java.lang.Class<any>
                     /**
                      * Gets the correct alias for the given {@link ConfigurationSerializable}
                      * class
@@ -96,7 +96,7 @@ declare namespace org {
                      * @return Alias to use for the class
                      */
                     // @ts-ignore
-                    getAlias(clazz: java.lang.Class<org.bukkit.configuration.serialization.ConfigurationSerializable>): java.lang.String
+                    public static getAlias(clazz: java.lang.Class<any>): string
                 }
             }
         }

@@ -18,7 +18,7 @@ declare namespace org {
                  * @return the number of ticks until this TNTPrimed explodes
                  */
                 // @ts-ignore
-                getFuseTicks(): int
+                getFuseTicks(): number /*int*/
                 /**
                  * Gets the source of this primed TNT. The source is the entity
                  * responsible for the creation of this primed TNT. (I.E. player ignites

@@ -40,7 +40,7 @@ declare namespace javax {
              * @author Kara Kytle
              */
             // @ts-ignore
-            class SoundbankResource extends java.lang.Object {
+            abstract class SoundbankResource extends java.lang.Object {
                 /**
                  * Constructs a new <code>SoundbankResource</code> from the given sound bank
                  * and wavetable index.  (Setting the <code>SoundbankResource's</code> name,
@@ -54,20 +54,20 @@ declare namespace javax {
                  * @see #getData
                  */
                 // @ts-ignore
-                constructor(soundBank: javax.sound.midi.Soundbank, name: string, dataClass: java.lang.Class<any>)
+                constructor(soundBank: javax.sound.midi.Soundbank, name: java.lang.String | string, dataClass: java.lang.Class<any>)
                 /**
                  * Obtains the sound bank that contains this <code>SoundbankResource</code>.
                  * @return the sound bank in which this <code>SoundbankResource</code> is stored
                  */
                 // @ts-ignore
-                getSoundbank(): javax.sound.midi.Soundbank
+                public getSoundbank(): javax.sound.midi.Soundbank
                 /**
                  * Obtains the name of the resource.  This should generally be a string
                  * descriptive of the resource.
                  * @return the instrument's name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Obtains the class used by this sample to represent its data.
                  * The object returned by <code>getData</code> will be of this
@@ -77,7 +77,7 @@ declare namespace javax {
                  *  null if the data is not accessible
                  */
                 // @ts-ignore
-                getDataClass(): java.lang.Class<?>
+                public getDataClass(): java.lang.Class<any>
                 /**
                  * Obtains the sampled audio that is stored in this <code>SoundbankResource</code>.
                  * The type of object returned depends on the implementation of the
@@ -86,7 +86,7 @@ declare namespace javax {
                  * @see #getDataClass
                  */
                 // @ts-ignore
-                abstract getData(): java.lang.Object
+                public abstract getData(): any
             }
         }
     }

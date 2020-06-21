@@ -20,7 +20,7 @@ declare namespace org {
                          * @return The highest id
                          */
                         // @ts-ignore
-                        getHighestId(): int
+                        getHighestId(): number /*int*/
                         /**
                          * Gets the blockstate represented by the given identifier from the mapping.
                          * @param id The identifier
@@ -35,7 +35,7 @@ declare namespace org {
                          * @return The identifier, if found
                          */
                         // @ts-ignore
-                        get(state: org.spongepowered.api.block.BlockState): java.util.Optional<java.lang.Integer>
+                        get(state: org.spongepowered.api.block.BlockState): java.util.Optional<java.lang.Integer | number>
                         /**
                          * Gets the identifier for the given blockstate from the mapping. If the
                          * blockstate is not yet registered in the mapping then it is registered and
@@ -44,7 +44,7 @@ declare namespace org {
                          * @return The identifier
                          */
                         // @ts-ignore
-                        getOrAssign(state: org.spongepowered.api.block.BlockState): int
+                        getOrAssign(state: org.spongepowered.api.block.BlockState): number /*int*/
                         /**
                          * Removes the given blockstate from the mapping.
                          * <p>If this palette is the {@link BlockPaletteTypes#GLOBAL} palette then
@@ -59,7 +59,7 @@ declare namespace org {
                          * @return All contained block states
                          */
                         // @ts-ignore
-                        getEntries(): java.util.Collection<org.spongepowered.api.block.BlockState>
+                        getEntries(): Array<org.spongepowered.api.block.BlockState>
                     }
                 }
             }

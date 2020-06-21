@@ -24,12 +24,12 @@ declare namespace javax {
                  *  object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Supports the change listener interface and fires property changes.
                  */
                 // @ts-ignore
-                stateChanged(e: javax.swing.event.ChangeEvent): void
+                public stateChanged(e: javax.swing.event.ChangeEvent): void
             }
         }
     }

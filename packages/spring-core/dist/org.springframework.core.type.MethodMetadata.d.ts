@@ -20,18 +20,18 @@ declare namespace org {
                      * Return the name of the method.
                      */
                     // @ts-ignore
-                    getMethodName(): java.lang.String
+                    getMethodName(): string
                     /**
                      * Return the fully-qualified name of the class that declares this method.
                      */
                     // @ts-ignore
-                    getDeclaringClassName(): java.lang.String
+                    getDeclaringClassName(): string
                     /**
                      * Return the fully-qualified name of this method's declared return type.
                      * @since 4.2
                      */
                     // @ts-ignore
-                    getReturnTypeName(): java.lang.String
+                    getReturnTypeName(): string
                     /**
                      * Return whether the underlying method is effectively abstract:
                      * i.e. marked as abstract on a class or declared as a regular,

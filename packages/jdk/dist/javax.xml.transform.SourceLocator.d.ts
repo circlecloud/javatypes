@@ -17,7 +17,7 @@ declare namespace javax {
                  * @see #getSystemId
                  */
                 // @ts-ignore
-                getPublicId(): java.lang.String
+                getPublicId(): string
                 /**
                  * Return the system identifier for the current document event.
                  * <p>The return value is the system identifier of the document
@@ -30,7 +30,7 @@ declare namespace javax {
                  * @see #getPublicId
                  */
                 // @ts-ignore
-                getSystemId(): java.lang.String
+                getSystemId(): string
                 /**
                  * Return the line number where the current document event ends.
                  * <p><strong>Warning:</strong> The return value from the method
@@ -44,7 +44,7 @@ declare namespace javax {
                  * @see #getColumnNumber
                  */
                 // @ts-ignore
-                getLineNumber(): int
+                getLineNumber(): number /*int*/
                 /**
                  * Return the character position where the current document event ends.
                  * <p><strong>Warning:</strong> The return value from the method
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @see #getLineNumber
                  */
                 // @ts-ignore
-                getColumnNumber(): int
+                getColumnNumber(): number /*int*/
             }
         }
     }

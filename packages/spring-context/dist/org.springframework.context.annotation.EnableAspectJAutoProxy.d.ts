@@ -76,7 +76,7 @@ declare namespace org {
                  * @see org.aspectj.lang.annotation.Aspect
                  */
                 // @ts-ignore
-                class EnableAspectJAutoProxy implements java.lang.annotation.Annotation {
+                abstract class EnableAspectJAutoProxy implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -20,7 +20,7 @@ declare namespace org {
                  * @deprecated a displayName should be explicitly specified
                  */
                 // @ts-ignore
-                registerNewObjective(name: string, criteria: string): org.bukkit.scoreboard.Objective
+                registerNewObjective(name: java.lang.String | string, criteria: java.lang.String | string): org.bukkit.scoreboard.Objective
                 /**
                  * Registers an Objective on this Scoreboard
                  * @param name Name of the Objective
@@ -38,7 +38,7 @@ declare namespace org {
                  *      exists
                  */
                 // @ts-ignore
-                registerNewObjective(name: string, criteria: string, displayName: string): org.bukkit.scoreboard.Objective
+                registerNewObjective(name: java.lang.String | string, criteria: java.lang.String | string, displayName: java.lang.String | string): org.bukkit.scoreboard.Objective
                 /**
                  * Registers an Objective on this Scoreboard
                  * @param name Name of the Objective
@@ -58,7 +58,7 @@ declare namespace org {
                  *      exists
                  */
                 // @ts-ignore
-                registerNewObjective(name: string, criteria: string, displayName: string, renderType: org.bukkit.scoreboard.RenderType): org.bukkit.scoreboard.Objective
+                registerNewObjective(name: java.lang.String | string, criteria: java.lang.String | string, displayName: java.lang.String | string, renderType: org.bukkit.scoreboard.RenderType): org.bukkit.scoreboard.Objective
                 /**
                  * Gets an Objective on this Scoreboard by name
                  * @param name Name of the Objective
@@ -66,7 +66,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if name is null
                  */
                 // @ts-ignore
-                getObjective(name: string): org.bukkit.scoreboard.Objective
+                getObjective(name: java.lang.String | string): org.bukkit.scoreboard.Objective
                 /**
                  * Gets all Objectives of a Criteria on the Scoreboard
                  * @param criteria Criteria to search by
@@ -74,13 +74,13 @@ declare namespace org {
                  * @throws IllegalArgumentException if criteria is null
                  */
                 // @ts-ignore
-                getObjectivesByCriteria(criteria: string): java.util.Set<org.bukkit.scoreboard.Objective>
+                getObjectivesByCriteria(criteria: java.lang.String | string): Array<org.bukkit.scoreboard.Objective>
                 /**
                  * Gets all Objectives on this Scoreboard
                  * @return An immutable set of all Objectives on this Scoreboard
                  */
                 // @ts-ignore
-                getObjectives(): java.util.Set<org.bukkit.scoreboard.Objective>
+                getObjectives(): Array<org.bukkit.scoreboard.Objective>
                 /**
                  * Gets the Objective currently displayed in a DisplaySlot on this
                  * Scoreboard
@@ -100,7 +100,7 @@ declare namespace org {
                  * @see #getScores(String)
                  */
                 // @ts-ignore
-                getScores(player: org.bukkit.OfflinePlayer): java.util.Set<org.bukkit.scoreboard.Score>
+                getScores(player: org.bukkit.OfflinePlayer): Array<org.bukkit.scoreboard.Score>
                 /**
                  * Gets all scores for an entry on this Scoreboard
                  * @param entry the entry whose scores are being retrieved
@@ -108,7 +108,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if entry is null
                  */
                 // @ts-ignore
-                getScores(entry: string): java.util.Set<org.bukkit.scoreboard.Score>
+                getScores(entry: java.lang.String | string): Array<org.bukkit.scoreboard.Score>
                 /**
                  * Removes all scores for a player on this Scoreboard
                  * @param player the player to drop all current scores for
@@ -124,7 +124,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if entry is null
                  */
                 // @ts-ignore
-                resetScores(entry: string): void
+                resetScores(entry: java.lang.String | string): void
                 /**
                  * Gets a player's Team on this Scoreboard
                  * @param player the player to search for
@@ -142,7 +142,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if entry is null
                  */
                 // @ts-ignore
-                getEntryTeam(entry: string): org.bukkit.scoreboard.Team
+                getEntryTeam(entry: java.lang.String | string): org.bukkit.scoreboard.Team
                 /**
                  * Gets a Team by name on this Scoreboard
                  * @param teamName Team name
@@ -150,13 +150,13 @@ declare namespace org {
                  * @throws IllegalArgumentException if teamName is null
                  */
                 // @ts-ignore
-                getTeam(teamName: string): org.bukkit.scoreboard.Team
+                getTeam(teamName: java.lang.String | string): org.bukkit.scoreboard.Team
                 /**
                  * Gets all teams on this Scoreboard
                  * @return an immutable set of Teams
                  */
                 // @ts-ignore
-                getTeams(): java.util.Set<org.bukkit.scoreboard.Team>
+                getTeams(): Array<org.bukkit.scoreboard.Team>
                 /**
                  * Registers a Team on this Scoreboard
                  * @param name Team name
@@ -165,7 +165,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if team by that name already exists
                  */
                 // @ts-ignore
-                registerNewTeam(name: string): org.bukkit.scoreboard.Team
+                registerNewTeam(name: java.lang.String | string): org.bukkit.scoreboard.Team
                 /**
                  * Gets all players tracked by this Scoreboard
                  * @return immutable set of all tracked players
@@ -173,13 +173,13 @@ declare namespace org {
                  * @see #getEntries()
                  */
                 // @ts-ignore
-                getPlayers(): java.util.Set<org.bukkit.OfflinePlayer>
+                getPlayers(): Array<org.bukkit.OfflinePlayer>
                 /**
                  * Gets all entries tracked by this Scoreboard
                  * @return immutable set of all tracked entries
                  */
                 // @ts-ignore
-                getEntries(): java.util.Set<java.lang.String>
+                getEntries(): Array<java.lang.String | string>
                 /**
                  * Clears any objective in the specified slot.
                  * @param slot the slot to remove objectives

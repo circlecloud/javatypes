@@ -17,9 +17,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(b: org.springframework.cache.interceptor.CacheEvictOperation.Builder)
                     // @ts-ignore
-                    isCacheWide(): boolean
+                    public isCacheWide(): boolean
                     // @ts-ignore
-                    isBeforeInvocation(): boolean
+                    public isBeforeInvocation(): boolean
                 }
             }
         }

@@ -11,22 +11,22 @@ declare namespace org {
                          * This behavior may be changed by events.</p>
                          */
                         // @ts-ignore
-                        class HarvestingProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, java.util.Set<org.spongepowered.api.block.BlockType>> {
+                        class HarvestingProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, java.util.Set<org.spongepowered.api.block.BlockType> | Array<org.spongepowered.api.block.BlockType>> {
                             /**
                              * Creates a {@link HarvestingProperty} with a specific set of {@link BlockType}s.
                              * @param value The harvestable block types
                              */
                             // @ts-ignore
-                            constructor(value: Array<org.spongepowered.api.block.BlockType>)
+                            constructor(value: java.util.Set<org.spongepowered.api.block.BlockType> | Array<org.spongepowered.api.block.BlockType>)
                             /**
                              * Creates a {@link HarvestingProperty} with a specific set of {@link BlockType}s.
                              * @param value The harvestable block types
                              * @param op The operator to use when comparing against other properties
                              */
                             // @ts-ignore
-                            constructor(value: Array<org.spongepowered.api.block.BlockType>, op: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.util.Set<org.spongepowered.api.block.BlockType> | Array<org.spongepowered.api.block.BlockType>, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

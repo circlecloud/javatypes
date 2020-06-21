@@ -9,7 +9,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class CacheResponse extends java.lang.Object {
+        abstract class CacheResponse extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -21,7 +21,7 @@ declare namespace java {
              *             while getting the response headers
              */
             // @ts-ignore
-            abstract getHeaders(): java.util.Map<java.lang.String, java.util.List<java.lang.String>>
+            public abstract getHeaders(): java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
             /**
              * Returns the response body as an InputStream.
              * @return an InputStream from which the response body can
@@ -30,7 +30,7 @@ declare namespace java {
              *          getting the response body
              */
             // @ts-ignore
-            abstract getBody(): java.io.InputStream
+            public abstract getBody(): java.io.InputStream
         }
     }
 }

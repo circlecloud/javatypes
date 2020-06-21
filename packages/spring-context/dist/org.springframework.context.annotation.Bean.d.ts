@@ -158,7 +158,7 @@ declare namespace org {
                  * @see org.springframework.beans.factory.annotation.Value
                  */
                 // @ts-ignore
-                class Bean implements java.lang.annotation.Annotation {
+                abstract class Bean implements java.lang.annotation.Annotation {
                 }
             }
         }

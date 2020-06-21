@@ -26,21 +26,21 @@ declare namespace java {
                  * @return a formatted log record
                  */
                 // @ts-ignore
-                format(record: java.util.logging.LogRecord): java.lang.String
+                public format(record: java.util.logging.LogRecord): string
                 /**
                  * Return the header string for a set of XML formatted records.
                  * @param h  The target handler (can be null)
                  * @return a valid XML string
                  */
                 // @ts-ignore
-                getHead(h: java.util.logging.Handler): java.lang.String
+                public getHead(h: java.util.logging.Handler): string
                 /**
                  * Return the tail string for a set of XML formatted records.
                  * @param h  The target handler (can be null)
                  * @return a valid XML string
                  */
                 // @ts-ignore
-                getTail(h: java.util.logging.Handler): java.lang.String
+                public getTail(h: java.util.logging.Handler): string
             }
         }
     }

@@ -56,7 +56,7 @@ declare namespace java {
                  * @throws IOException if an I/O error occurs
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Flushes this output stream, forcing any pending buffered output bytes to be
                  * written.
@@ -64,7 +64,7 @@ declare namespace java {
                  *  closed
                  */
                 // @ts-ignore
-                flush(): void
+                public flush(): void
                 /**
                  * Finishes writing uncompressed data to the output stream without closing
                  * the underlying stream.  Use this method when applying multiple filters in
@@ -73,7 +73,7 @@ declare namespace java {
                  *  closed
                  */
                 // @ts-ignore
-                finish(): void
+                public finish(): void
                 /**
                  * Writes a byte to the uncompressed output stream.
                  * @param b a single byte of compressed data to decompress and write to
@@ -83,7 +83,7 @@ declare namespace java {
                  * @throws ZipException if a compression (ZIP) format error occurs
                  */
                 // @ts-ignore
-                write(b: number /*int*/): void
+                public write(b: number /*int*/): void
                 /**
                  * Writes an array of bytes to the uncompressed output stream.
                  * @param b buffer containing compressed data to decompress and write to
@@ -98,7 +98,7 @@ declare namespace java {
                  * @throws ZipException if a compression (ZIP) format error occurs
                  */
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             }
         }
     }

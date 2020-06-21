@@ -35,17 +35,17 @@ declare namespace org {
                      * @see ResourceUtils#URL_PROTOCOL_FILE
                      */
                     // @ts-ignore
-                    constructor(location: string)
+                    constructor(location: java.lang.String | string)
                     // @ts-ignore
-                    getFile(): java.io.File
+                    public getFile(): java.io.File
                     // @ts-ignore
-                    isWritable(): boolean
+                    public isWritable(): boolean
                     // @ts-ignore
-                    getOutputStream(): java.io.OutputStream
+                    public getOutputStream(): java.io.OutputStream
                     // @ts-ignore
-                    writableChannel(): java.nio.channels.WritableByteChannel
+                    public writableChannel(): java.nio.channels.WritableByteChannel
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                 }
             }
         }

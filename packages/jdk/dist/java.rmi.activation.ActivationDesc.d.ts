@@ -50,7 +50,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(className: string, location: string, data: java.rmi.MarshalledObject<any>)
+                constructor(className: java.lang.String | string, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>)
                 /**
                  * Constructs an object descriptor for an object whose class name
                  * is <code>className</code>, that can be loaded from the
@@ -80,7 +80,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(className: string, location: string, data: java.rmi.MarshalledObject<any>, restart: boolean)
+                constructor(className: java.lang.String | string, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, restart: boolean)
                 /**
                  * Constructs an object descriptor for an object whose class name
                  * is <code>className</code> that can be loaded from the
@@ -106,7 +106,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(groupID: java.rmi.activation.ActivationGroupID, className: string, location: string, data: java.rmi.MarshalledObject<any>)
+                constructor(groupID: java.rmi.activation.ActivationGroupID, className: java.lang.String | string, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>)
                 /**
                  * Constructs an object descriptor for an object whose class name
                  * is <code>className</code> that can be loaded from the
@@ -133,7 +133,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(groupID: java.rmi.activation.ActivationGroupID, className: string, location: string, data: java.rmi.MarshalledObject<any>, restart: boolean)
+                constructor(groupID: java.rmi.activation.ActivationGroupID, className: java.lang.String | string, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, restart: boolean)
                 /**
                  * Returns the group identifier for the object specified by this
                  * descriptor. A group provides a way to aggregate objects into a
@@ -143,7 +143,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getGroupID(): java.rmi.activation.ActivationGroupID
+                public getGroupID(): java.rmi.activation.ActivationGroupID
                 /**
                  * Returns the class name for the object specified by this
                  * descriptor.
@@ -151,7 +151,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Returns the code location for the object specified by
                  * this descriptor.
@@ -159,7 +159,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getLocation(): java.lang.String
+                public getLocation(): string
                 /**
                  * Returns a "marshalled object" containing intialization/activation
                  * data for the object specified by this descriptor.
@@ -167,7 +167,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getData(): java.rmi.MarshalledObject<?>
+                public getData(): java.rmi.MarshalledObject<any>
                 /**
                  * Returns the "restart" mode of the object associated with
                  * this activation descriptor.
@@ -182,7 +182,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getRestartMode(): boolean
+                public getRestartMode(): boolean
                 /**
                  * Compares two activation descriptors for content equality.
                  * @param obj     the Object to compare with
@@ -191,14 +191,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Return the same hashCode for similar <code>ActivationDesc</code>s.
                  * @return an integer
                  * @see java.util.Hashtable
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

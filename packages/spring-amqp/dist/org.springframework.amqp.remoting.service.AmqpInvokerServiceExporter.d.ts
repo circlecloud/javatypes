@@ -29,9 +29,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        onMessage(message: org.springframework.amqp.core.Message): void
+                        public onMessage(message: org.springframework.amqp.core.Message): void
                         // @ts-ignore
-                        getAmqpTemplate(): org.springframework.amqp.core.AmqpTemplate
+                        public getAmqpTemplate(): org.springframework.amqp.core.AmqpTemplate
                         /**
                          * The AMQP template to use for sending the return value.
                          * <p>
@@ -43,9 +43,9 @@ declare namespace org {
                          * @see #setMessageConverter(MessageConverter)
                          */
                         // @ts-ignore
-                        setAmqpTemplate(amqpTemplate: org.springframework.amqp.core.AmqpTemplate): void
+                        public setAmqpTemplate(amqpTemplate: org.springframework.amqp.core.AmqpTemplate): void
                         // @ts-ignore
-                        getMessageConverter(): org.springframework.amqp.support.converter.MessageConverter
+                        public getMessageConverter(): org.springframework.amqp.support.converter.MessageConverter
                         /**
                          * Set the message converter for this remote service. Used to deserialize remote method calls and to serialize their
                          * return values.
@@ -58,7 +58,7 @@ declare namespace org {
                          * @see org.springframework.amqp.support.converter.SimpleMessageConverter
                          */
                         // @ts-ignore
-                        setMessageConverter(messageConverter: org.springframework.amqp.support.converter.MessageConverter): void
+                        public setMessageConverter(messageConverter: org.springframework.amqp.support.converter.MessageConverter): void
                     }
                 }
             }

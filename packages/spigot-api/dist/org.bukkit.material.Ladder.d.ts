@@ -24,14 +24,14 @@ declare namespace org {
                  * @return BlockFace attached to
                  */
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 /**
                  * Sets the direction this ladder is facing
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                clone(): org.bukkit.material.Ladder
+                public clone(): org.bukkit.material.Ladder
             }
         }
     }

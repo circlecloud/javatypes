@@ -21,7 +21,7 @@ declare namespace javax {
                  *                  retrieved using the getMessage method
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Constructs a new exception with the specified detail
                  * message and cause.
@@ -31,7 +31,7 @@ declare namespace javax {
                  *                  retrieval throw by the getCause method
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a new WebServiceException with the specified cause
                  * and a detail message of <tt>(cause==null ? null :
@@ -44,7 +44,7 @@ declare namespace javax {
                  *                unknown.)
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

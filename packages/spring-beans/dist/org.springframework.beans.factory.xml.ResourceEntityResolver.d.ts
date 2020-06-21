@@ -32,7 +32,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(resourceLoader: ResourceLoader)
                         // @ts-ignore
-                        resolveEntity(publicId: string, systemId: string): org.xml.sax.InputSource
+                        public resolveEntity(publicId: java.lang.String | string, systemId: java.lang.String | string): org.xml.sax.InputSource
                     }
                 }
             }

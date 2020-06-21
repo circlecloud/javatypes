@@ -7,10 +7,18 @@ declare namespace java {
              */
             // @ts-ignore
             class LinkOption extends java.lang.Enum<java.nio.file.LinkOption> implements java.nio.file.OpenOption, java.nio.file.CopyOption {
+                /**
+                 * Do not follow symbolic links.
+                 * @see Files#getFileAttributeView(Path,Class,LinkOption[])
+                 * @see Files#copy
+                 * @see SecureDirectoryStream#newByteChannel
+                 */
+                // @ts-ignore
+                readonly NOFOLLOW_LINKS: java.nio.file.LinkOption
                 // @ts-ignore
                 values(): java.nio.file.LinkOption[]
                 // @ts-ignore
-                valueOf(name: string): java.nio.file.LinkOption
+                valueOf(name: java.lang.String | string): java.nio.file.LinkOption
             }
         }
     }

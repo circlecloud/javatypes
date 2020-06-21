@@ -29,7 +29,7 @@ declare namespace javax {
                  *          by this TrustManager.
                  */
                 // @ts-ignore
-                checkClientTrusted(chain: java.security.cert.X509Certificate[], authType: string): void
+                checkClientTrusted(chain: java.security.cert.X509Certificate[], authType: java.lang.String | string): void
                 /**
                  * Given the partial or complete certificate chain provided by the
                  * peer, build a certificate path to a trusted root and return if
@@ -53,7 +53,7 @@ declare namespace javax {
                  *          by this TrustManager.
                  */
                 // @ts-ignore
-                checkServerTrusted(chain: java.security.cert.X509Certificate[], authType: string): void
+                checkServerTrusted(chain: java.security.cert.X509Certificate[], authType: java.lang.String | string): void
                 /**
                  * Return an array of certificate authority certificates
                  * which are trusted for authenticating peers.

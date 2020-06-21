@@ -18,7 +18,7 @@ declare namespace javax {
              * @throws NullPointerException if the argument is null.
              */
             // @ts-ignore
-            compile(script: string): javax.script.CompiledScript
+            compile(script: java.lang.String | string): javax.script.CompiledScript
             /**
              * Compiles the script (source read from <code>Reader</code>) for
              * later execution.  Functionality is identical to

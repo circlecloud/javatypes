@@ -36,7 +36,7 @@ declare namespace java {
                  * @return a copy of this {#code CertSelector}
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

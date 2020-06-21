@@ -39,7 +39,7 @@ declare namespace javax {
                      * @param systemId Must be a String that conforms to the URI syntax.
                      */
                     // @ts-ignore
-                    constructor(systemId: string)
+                    constructor(systemId: java.lang.String | string)
                     /**
                      * Construct a StreamResult from a File.
                      * @param f Must a non-null File reference.
@@ -52,7 +52,7 @@ declare namespace javax {
                      * the Transformer supports Result output of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * Set the ByteStream that is to be written to.  Normally,
                      * a stream should be used rather than a reader, so that
@@ -61,14 +61,14 @@ declare namespace javax {
                      * @param outputStream A valid OutputStream reference.
                      */
                     // @ts-ignore
-                    setOutputStream(outputStream: java.io.OutputStream): void
+                    public setOutputStream(outputStream: java.io.OutputStream): void
                     /**
                      * Get the byte stream that was set with setOutputStream.
                      * @return The byte stream that was set with setOutputStream, or null
                      *  if setOutputStream or the ByteStream constructor was not called.
                      */
                     // @ts-ignore
-                    getOutputStream(): java.io.OutputStream
+                    public getOutputStream(): java.io.OutputStream
                     /**
                      * Set the writer that is to receive the result.  Normally,
                      * a stream should be used rather than a writer, so that
@@ -79,14 +79,14 @@ declare namespace javax {
                      * @param writer  A valid Writer reference.
                      */
                     // @ts-ignore
-                    setWriter(writer: java.io.Writer): void
+                    public setWriter(writer: java.io.Writer): void
                     /**
                      * Get the character stream that was set with setWriter.
                      * @return The character stream that was set with setWriter, or null
                      *  if setWriter or the Writer constructor was not called.
                      */
                     // @ts-ignore
-                    getWriter(): java.io.Writer
+                    public getWriter(): java.io.Writer
                     /**
                      * Set the systemID that may be used in association
                      * with the byte or character stream, or, if neither is set, use
@@ -94,20 +94,20 @@ declare namespace javax {
                      * @param systemId The system identifier as a URI string.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * <p>Set the system ID from a <code>File</code> reference.</p>
                      * @param f Must a non-null File reference.
                      */
                     // @ts-ignore
-                    setSystemId(f: java.io.File): void
+                    public setSystemId(f: java.io.File): void
                     /**
                      * Get the system identifier that was set with setSystemId.
                      * @return The system identifier that was set with setSystemId, or null
                      *  if setSystemId was not called.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                 }
             }
         }

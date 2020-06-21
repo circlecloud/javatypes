@@ -27,11 +27,11 @@ declare namespace org {
                      *  transformed into {@code null}
                      */
                     // @ts-ignore
-                    constructor(charsToDelete: string, emptyAsNull: boolean)
+                    constructor(charsToDelete: java.lang.String | string, emptyAsNull: boolean)
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

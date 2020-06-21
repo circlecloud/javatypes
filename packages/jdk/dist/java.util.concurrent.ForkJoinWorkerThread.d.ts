@@ -28,7 +28,7 @@ declare namespace java {
                  * @return the pool
                  */
                 // @ts-ignore
-                getPool(): java.util.concurrent.ForkJoinPool
+                public getPool(): java.util.concurrent.ForkJoinPool
                 /**
                  * Returns the unique index number of this thread in its pool.
                  * The returned value ranges from zero to the maximum number of
@@ -39,7 +39,7 @@ declare namespace java {
                  * @return the index number
                  */
                 // @ts-ignore
-                getPoolIndex(): int
+                public getPoolIndex(): number /*int*/
                 /**
                  * Initializes internal state after construction but before
                  * processing any tasks. If you override this method, you must
@@ -59,14 +59,14 @@ declare namespace java {
                  *  to an unrecoverable error, or {#code null} if completed normally
                  */
                 // @ts-ignore
-                onTermination(exception: Error): void
+                onTermination(exception: java.lang.Throwable | Error): void
                 /**
                  * This method is required to be public, but should never be
                  * called explicitly. It performs the main run loop to execute
                  * {@link ForkJoinTask}s.
                  */
                 // @ts-ignore
-                run(): void
+                public run(): void
             }
         }
     }

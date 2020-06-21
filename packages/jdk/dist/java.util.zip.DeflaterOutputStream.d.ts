@@ -100,7 +100,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                write(b: number /*int*/): void
+                public write(b: number /*int*/): void
                 /**
                  * Writes an array of bytes to the compressed output stream. This
                  * method will block until all the bytes are written.
@@ -110,7 +110,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Finishes writing compressed data to the output stream without closing
                  * the underlying stream. Use this method when applying multiple filters
@@ -118,14 +118,14 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                finish(): void
+                public finish(): void
                 /**
                  * Writes remaining compressed data to the output stream and closes the
                  * underlying stream.
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Writes next block of compressed data to the output stream.
                  * @throws IOException if an I/O error has occurred
@@ -145,7 +145,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                flush(): void
+                public flush(): void
             }
         }
     }

@@ -55,7 +55,7 @@ declare namespace org {
                  * @see #ClassWriter(int)
                  */
                 // @ts-ignore
-                readonly COMPUTE_MAXS: number /*int*/
+                public static readonly COMPUTE_MAXS: number /*int*/
                 /**
                  * A flag to automatically compute the stack map frames of methods from scratch. If this flag is
                  * set, then the calls to the {@link MethodVisitor#visitFrame} method are ignored, and the stack
@@ -65,37 +65,37 @@ declare namespace org {
                  * @see #ClassWriter(int)
                  */
                 // @ts-ignore
-                readonly COMPUTE_FRAMES: number /*int*/
+                public static readonly COMPUTE_FRAMES: number /*int*/
                 // @ts-ignore
-                visit(version: number /*int*/, access: number /*int*/, name: string, signature: string, superName: string, interfaces: string[]): void
+                public visit(version: number /*int*/, access: number /*int*/, name: java.lang.String | string, signature: java.lang.String | string, superName: java.lang.String | string, interfaces: java.lang.String[] | string[]): void
                 // @ts-ignore
-                visitSource(file: string, debug: string): void
+                public visitSource(file: java.lang.String | string, debug: java.lang.String | string): void
                 // @ts-ignore
-                visitModule(name: string, access: number /*int*/, version: string): org.springframework.asm.ModuleVisitor
+                public visitModule(name: java.lang.String | string, access: number /*int*/, version: java.lang.String | string): org.springframework.asm.ModuleVisitor
                 // @ts-ignore
-                visitNestHost(nestHost: string): void
+                public visitNestHost(nestHost: java.lang.String | string): void
                 // @ts-ignore
-                visitOuterClass(owner: string, name: string, descriptor: string): void
+                public visitOuterClass(owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string): void
                 // @ts-ignore
-                visitAnnotation(descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitAnnotation(descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 // @ts-ignore
-                visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 // @ts-ignore
-                visitAttribute(attribute: org.springframework.asm.Attribute): void
+                public visitAttribute(attribute: org.springframework.asm.Attribute): void
                 // @ts-ignore
-                visitNestMember(nestMember: string): void
+                public visitNestMember(nestMember: java.lang.String | string): void
                 // @ts-ignore
-                visitPermittedSubtypeExperimental(permittedSubtype: string): void
+                public visitPermittedSubtypeExperimental(permittedSubtype: java.lang.String | string): void
                 // @ts-ignore
-                visitInnerClass(name: string, outerName: string, innerName: string, access: number /*int*/): void
+                public visitInnerClass(name: java.lang.String | string, outerName: java.lang.String | string, innerName: java.lang.String | string, access: number /*int*/): void
                 // @ts-ignore
-                visitRecordComponentExperimental(access: number /*int*/, name: string, descriptor: string, signature: string): org.springframework.asm.RecordComponentVisitor
+                public visitRecordComponentExperimental(access: number /*int*/, name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string): org.springframework.asm.RecordComponentVisitor
                 // @ts-ignore
-                visitField(access: number /*int*/, name: string, descriptor: string, signature: string, value: any): org.springframework.asm.FieldVisitor
+                public visitField(access: number /*int*/, name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string, value: java.lang.Object | any): org.springframework.asm.FieldVisitor
                 // @ts-ignore
-                visitMethod(access: number /*int*/, name: string, descriptor: string, signature: string, exceptions: string[]): org.springframework.asm.MethodVisitor
+                public visitMethod(access: number /*int*/, name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string, exceptions: java.lang.String[] | string[]): org.springframework.asm.MethodVisitor
                 // @ts-ignore
-                visitEnd(): void
+                public visitEnd(): void
                 /**
                  * Returns the content of the class file that was built by this ClassWriter.
                  * @return the binary content of the JVMS ClassFile structure that was built by this ClassWriter.
@@ -103,7 +103,7 @@ declare namespace org {
                  * @throws MethodTooLargeException if the Code attribute of a method is too large.
                  */
                 // @ts-ignore
-                toByteArray(): byte[]
+                public toByteArray(): number /*byte*/[]
                 /**
                  * Adds a number or string constant to the constant pool of the class being build. Does nothing if
                  * the constant pool already contains a similar item. <i>This method is intended for {@link
@@ -113,7 +113,7 @@ declare namespace org {
                  * @return the index of a new or already existing constant item with the given value.
                  */
                 // @ts-ignore
-                newConst(value: any): int
+                public newConst(value: java.lang.Object | any): number /*int*/
                 /**
                  * Adds an UTF8 string to the constant pool of the class being build. Does nothing if the constant
                  * pool already contains a similar item. <i>This method is intended for {@link Attribute} sub
@@ -122,7 +122,7 @@ declare namespace org {
                  * @return the index of a new or already existing UTF8 item.
                  */
                 // @ts-ignore
-                newUTF8(value: string): int
+                public newUTF8(value: java.lang.String | string): number /*int*/
                 /**
                  * Adds a class reference to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -131,7 +131,7 @@ declare namespace org {
                  * @return the index of a new or already existing class reference item.
                  */
                 // @ts-ignore
-                newClass(value: string): int
+                public newClass(value: java.lang.String | string): number /*int*/
                 /**
                  * Adds a method type reference to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -140,7 +140,7 @@ declare namespace org {
                  * @return the index of a new or already existing method type reference item.
                  */
                 // @ts-ignore
-                newMethodType(methodDescriptor: string): int
+                public newMethodType(methodDescriptor: java.lang.String | string): number /*int*/
                 /**
                  * Adds a module reference to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -149,7 +149,7 @@ declare namespace org {
                  * @return the index of a new or already existing module reference item.
                  */
                 // @ts-ignore
-                newModule(moduleName: string): int
+                public newModule(moduleName: java.lang.String | string): number /*int*/
                 /**
                  * Adds a package reference to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -158,7 +158,7 @@ declare namespace org {
                  * @return the index of a new or already existing module reference item.
                  */
                 // @ts-ignore
-                newPackage(packageName: string): int
+                public newPackage(packageName: java.lang.String | string): number /*int*/
                 /**
                  * Adds a handle to the constant pool of the class being build. Does nothing if the constant pool
                  * already contains a similar item. <i>This method is intended for {@link Attribute} sub classes,
@@ -175,7 +175,7 @@ declare namespace org {
                  *      boolean)}.
                  */
                 // @ts-ignore
-                newHandle(tag: number /*int*/, owner: string, name: string, descriptor: string): int
+                public newHandle(tag: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string): number /*int*/
                 /**
                  * Adds a handle to the constant pool of the class being build. Does nothing if the constant pool
                  * already contains a similar item. <i>This method is intended for {@link Attribute} sub classes,
@@ -191,7 +191,7 @@ declare namespace org {
                  * @return the index of a new or already existing method type reference item.
                  */
                 // @ts-ignore
-                newHandle(tag: number /*int*/, owner: string, name: string, descriptor: string, isInterface: boolean): int
+                public newHandle(tag: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string, isInterface: boolean): number /*int*/
                 /**
                  * Adds a dynamic constant reference to the constant pool of the class being build. Does nothing
                  * if the constant pool already contains a similar item. <i>This method is intended for {@link
@@ -203,7 +203,7 @@ declare namespace org {
                  * @return the index of a new or already existing dynamic constant reference item.
                  */
                 // @ts-ignore
-                newConstantDynamic(name: string, descriptor: string, bootstrapMethodHandle: org.springframework.asm.Handle, ...bootstrapMethodArguments: any[]): int
+                public newConstantDynamic(name: java.lang.String | string, descriptor: java.lang.String | string, bootstrapMethodHandle: org.springframework.asm.Handle, ...bootstrapMethodArguments: java.lang.Object[] | any[]): number /*int*/
                 /**
                  * Adds an invokedynamic reference to the constant pool of the class being build. Does nothing if
                  * the constant pool already contains a similar item. <i>This method is intended for {@link
@@ -215,7 +215,7 @@ declare namespace org {
                  * @return the index of a new or already existing invokedynamic reference item.
                  */
                 // @ts-ignore
-                newInvokeDynamic(name: string, descriptor: string, bootstrapMethodHandle: org.springframework.asm.Handle, ...bootstrapMethodArguments: any[]): int
+                public newInvokeDynamic(name: java.lang.String | string, descriptor: java.lang.String | string, bootstrapMethodHandle: org.springframework.asm.Handle, ...bootstrapMethodArguments: java.lang.Object[] | any[]): number /*int*/
                 /**
                  * Adds a field reference to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -226,7 +226,7 @@ declare namespace org {
                  * @return the index of a new or already existing field reference item.
                  */
                 // @ts-ignore
-                newField(owner: string, name: string, descriptor: string): int
+                public newField(owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string): number /*int*/
                 /**
                  * Adds a method reference to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -238,7 +238,7 @@ declare namespace org {
                  * @return the index of a new or already existing method reference item.
                  */
                 // @ts-ignore
-                newMethod(owner: string, name: string, descriptor: string, isInterface: boolean): int
+                public newMethod(owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string, isInterface: boolean): number /*int*/
                 /**
                  * Adds a name and type to the constant pool of the class being build. Does nothing if the
                  * constant pool already contains a similar item. <i>This method is intended for {@link Attribute}
@@ -248,7 +248,7 @@ declare namespace org {
                  * @return the index of a new or already existing name and type item.
                  */
                 // @ts-ignore
-                newNameType(name: string, descriptor: string): int
+                public newNameType(name: java.lang.String | string, descriptor: java.lang.String | string): number /*int*/
                 /**
                  * Returns the common super type of the two given types. The default implementation of this method
                  * <i>loads</i> the two given classes and uses the java.lang.Class methods to find the common
@@ -261,7 +261,7 @@ declare namespace org {
                  * @return the internal name of the common super class of the two given classes.
                  */
                 // @ts-ignore
-                getCommonSuperClass(type1: string, type2: string): java.lang.String
+                getCommonSuperClass(type1: java.lang.String | string, type2: java.lang.String | string): string
                 /**
                  * Returns the {@link ClassLoader} to be used by the default implementation of {@link
                  * #getCommonSuperClass(String, String)}, that of this {@link ClassWriter}'s runtime type by

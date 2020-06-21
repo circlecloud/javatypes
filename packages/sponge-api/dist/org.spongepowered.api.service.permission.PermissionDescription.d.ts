@@ -20,14 +20,14 @@ declare namespace org {
                          * have basic access. For example: joining in an arena.</p>
                          */
                         // @ts-ignore
-                        
+                        readonly ROLE_USER: java.lang.String | string
                         /**
                          * The standard role for staff.
                          * <p>The staff role should be assigned to permissions only meant for users
                          * with elevated access permissions. For example: force start an arena.</p>
                          */
                         // @ts-ignore
-                        
+                        readonly ROLE_STAFF: java.lang.String | string
                         /**
                          * The standard role for admins.
                          * <p>The admin role should be assigned to permissions only meant for users
@@ -35,7 +35,7 @@ declare namespace org {
                          * arena.</p>
                          */
                         // @ts-ignore
-                        
+                        readonly ROLE_ADMIN: java.lang.String | string
                         /**
                          * Gets the permission id this description belongs to.
                          * <p>The permission id must be of the specified format as specified using
@@ -80,7 +80,7 @@ declare namespace org {
                          * @return The permission id
                          */
                         // @ts-ignore
-                        getId(): java.lang.String
+                        getId(): string
                         /**
                          * Gets a short description of the linked permission.
                          * <p>May include a link to a more detailed description on the plugin's
@@ -113,7 +113,7 @@ declare namespace org {
                          * @see SubjectCollection#getAllWithPermission(String)
                          */
                         // @ts-ignore
-                        findAssignedSubjects(collectionIdentifier: string): java.util.concurrent.CompletableFuture<java.util.Map<org.spongepowered.api.service.permission.SubjectReference, java.lang.Boolean>>
+                        findAssignedSubjects(collectionIdentifier: java.lang.String | string): java.util.concurrent.CompletableFuture<java.util.Map<org.spongepowered.api.service.permission.SubjectReference, java.lang.Boolean>>
                         /**
                          * Gets all loaded subjects that have this permission set in the given
                          * collection.
@@ -129,7 +129,7 @@ declare namespace org {
                          * @see SubjectCollection#getLoadedWithPermission(String)
                          */
                         // @ts-ignore
-                        getAssignedSubjects(collectionIdentifier: string): java.util.Map<org.spongepowered.api.service.permission.Subject, java.lang.Boolean>
+                        getAssignedSubjects(collectionIdentifier: java.lang.String | string): java.util.Map<org.spongepowered.api.service.permission.Subject, java.lang.Boolean>
                     }
                 }
             }

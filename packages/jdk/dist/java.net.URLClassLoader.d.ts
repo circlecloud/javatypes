@@ -89,7 +89,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getResourceAsStream(name: string): java.io.InputStream
+            public getResourceAsStream(name: java.lang.String | string): java.io.InputStream
             /**
              * Closes this URLClassLoader, so that it can no longer be used to load
              * new classes or resources that are defined by this loader.
@@ -117,7 +117,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Appends the specified URL to the list of URLs to search for
              * classes and resources.
@@ -136,7 +136,7 @@ declare namespace java {
              * @return the search path of URLs for loading classes and resources.
              */
             // @ts-ignore
-            getURLs(): java.net.URL[]
+            public getURLs(): java.net.URL[]
             /**
              * Finds and loads the class with the specified name from the URL search
              * path. Any URLs referring to JAR files are loaded and opened as needed
@@ -148,7 +148,7 @@ declare namespace java {
              * @exception NullPointerException if {#code name} is {@code null}.
              */
             // @ts-ignore
-            findClass(name: string): java.lang.Class<?>
+            findClass(name: java.lang.String | string): java.lang.Class<any>
             /**
              * Defines a new package by name in this ClassLoader. The attributes
              * contained in the specified Manifest will be used to obtain package
@@ -164,7 +164,7 @@ declare namespace java {
              * @return the newly defined Package object
              */
             // @ts-ignore
-            definePackage(name: string, man: java.util.jar.Manifest, url: java.net.URL): java.lang.Package
+            definePackage(name: java.lang.String | string, man: java.util.jar.Manifest, url: java.net.URL): java.lang.Package
             /**
              * Finds the resource with the specified name on the URL search path.
              * @param name the name of the resource
@@ -172,7 +172,7 @@ declare namespace java {
              *  if the resource could not be found, or if the loader is closed.
              */
             // @ts-ignore
-            findResource(name: string): java.net.URL
+            public findResource(name: java.lang.String | string): java.net.URL
             /**
              * Returns an Enumeration of URLs representing all of the resources
              * on the URL search path having the specified name.
@@ -182,7 +182,7 @@ declare namespace java {
              *          If the loader is closed, the Enumeration will be empty.
              */
             // @ts-ignore
-            findResources(name: string): java.util.Enumeration<java.net.URL>
+            public findResources(name: java.lang.String | string): java.util.Enumeration<java.net.URL>
             /**
              * Returns the permissions for the given codesource object.
              * The implementation of this method first calls super.getPermissions
@@ -222,7 +222,7 @@ declare namespace java {
              * @return the resulting class loader
              */
             // @ts-ignore
-            newInstance(urls: java.net.URL[], parent: java.lang.ClassLoader): java.net.URLClassLoader
+            public static newInstance(urls: java.net.URL[], parent: java.lang.ClassLoader): java.net.URLClassLoader
             /**
              * Creates a new instance of URLClassLoader for the specified
              * URLs and default parent class loader. If a security manager is
@@ -235,7 +235,7 @@ declare namespace java {
              * @return the resulting class loader
              */
             // @ts-ignore
-            newInstance(urls: java.net.URL[]): java.net.URLClassLoader
+            public static newInstance(urls: java.net.URL[]): java.net.URLClassLoader
         }
     }
 }

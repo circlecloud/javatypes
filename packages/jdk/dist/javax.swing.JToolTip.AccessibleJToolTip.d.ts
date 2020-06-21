@@ -24,14 +24,14 @@ declare namespace javax {
                  * @return a localized String describing this object.
                  */
                 // @ts-ignore
-                getAccessibleDescription(): java.lang.String
+                public getAccessibleDescription(): string
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
                  *  object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
             }
         }
     }

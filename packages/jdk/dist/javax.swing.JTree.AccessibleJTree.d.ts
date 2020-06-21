@@ -25,7 +25,7 @@ declare namespace javax {
                  * @param e ListSelectionEvent
                  */
                 // @ts-ignore
-                valueChanged(e: javax.swing.event.TreeSelectionEvent): void
+                public valueChanged(e: javax.swing.event.TreeSelectionEvent): void
                 /**
                  * Fire a visible data property change notification.
                  * A 'visible' data property is one that represents
@@ -36,43 +36,43 @@ declare namespace javax {
                  * notify the user.
                  */
                 // @ts-ignore
-                fireVisibleDataPropertyChange(): void
+                public fireVisibleDataPropertyChange(): void
                 /**
                  * Tree Model Node change notification.
                  * @param e  a Tree Model event
                  */
                 // @ts-ignore
-                treeNodesChanged(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesChanged(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Tree Model Node change notification.
                  * @param e  a Tree node insertion event
                  */
                 // @ts-ignore
-                treeNodesInserted(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesInserted(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Tree Model Node change notification.
                  * @param e  a Tree node(s) removal event
                  */
                 // @ts-ignore
-                treeNodesRemoved(e: javax.swing.event.TreeModelEvent): void
+                public treeNodesRemoved(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Tree Model structure change change notification.
                  * @param e  a Tree Model event
                  */
                 // @ts-ignore
-                treeStructureChanged(e: javax.swing.event.TreeModelEvent): void
+                public treeStructureChanged(e: javax.swing.event.TreeModelEvent): void
                 /**
                  * Tree Collapsed notification.
                  * @param e  a TreeExpansionEvent
                  */
                 // @ts-ignore
-                treeCollapsed(e: javax.swing.event.TreeExpansionEvent): void
+                public treeCollapsed(e: javax.swing.event.TreeExpansionEvent): void
                 /**
                  * Tree Model Expansion notification.
                  * @param e  a Tree node insertion event
                  */
                 // @ts-ignore
-                treeExpanded(e: javax.swing.event.TreeExpansionEvent): void
+                public treeExpanded(e: javax.swing.event.TreeExpansionEvent): void
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Returns the <code>Accessible</code> child, if one exists,
                  * contained at the local coordinate <code>Point</code>.
@@ -90,21 +90,21 @@ declare namespace javax {
                  *     at the specified location; else <code>null</code>
                  */
                 // @ts-ignore
-                getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                 /**
                  * Returns the number of top-level children nodes of this
                  * JTree.  Each of these nodes may in turn have children nodes.
                  * @return the number of accessible children nodes in the tree.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Return the nth Accessible child of the object.
                  * @param i zero-based index of child
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Get the index of this object in its accessible parent.
                  * @return the index of this object in its parent.  Since a JTree
@@ -112,7 +112,7 @@ declare namespace javax {
                  * @see #getAccessibleParent
                  */
                 // @ts-ignore
-                getAccessibleIndexInParent(): int
+                public getAccessibleIndexInParent(): number /*int*/
                 /**
                  * Get the AccessibleSelection associated with this object.  In the
                  * implementation of the Java Accessibility API for this class,
@@ -121,14 +121,14 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                 /**
                  * Returns the number of items currently selected.
                  * If no items are selected, the return value will be 0.
                  * @return the number of items currently selected.
                  */
                 // @ts-ignore
-                getAccessibleSelectionCount(): int
+                public getAccessibleSelectionCount(): number /*int*/
                 /**
                  * Returns an Accessible representing the specified selected item
                  * in the object.  If there isn't a selection, or there are
@@ -138,14 +138,14 @@ declare namespace javax {
                  * @return an Accessible containing the selected item
                  */
                 // @ts-ignore
-                getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns true if the current child of this object is selected.
                  * @param i the zero-based index of the child in this Accessible object.
                  * @see AccessibleContext#getAccessibleChild
                  */
                 // @ts-ignore
-                isAccessibleChildSelected(i: number /*int*/): boolean
+                public isAccessibleChildSelected(i: number /*int*/): boolean
                 /**
                  * Adds the specified selected item in the object to the object's
                  * selection.  If the object supports multiple selections,
@@ -155,7 +155,7 @@ declare namespace javax {
                  * @param i the zero-based index of selectable items
                  */
                 // @ts-ignore
-                addAccessibleSelection(i: number /*int*/): void
+                public addAccessibleSelection(i: number /*int*/): void
                 /**
                  * Removes the specified selected item in the object from the object's
                  * selection.  If the specified item isn't currently selected, this
@@ -163,19 +163,19 @@ declare namespace javax {
                  * @param i the zero-based index of selectable items
                  */
                 // @ts-ignore
-                removeAccessibleSelection(i: number /*int*/): void
+                public removeAccessibleSelection(i: number /*int*/): void
                 /**
                  * Clears the selection in the object, so that nothing in the
                  * object is selected.
                  */
                 // @ts-ignore
-                clearAccessibleSelection(): void
+                public clearAccessibleSelection(): void
                 /**
                  * Causes every selected item in the object to be selected
                  * if the object supports multiple selections.
                  */
                 // @ts-ignore
-                selectAllAccessibleSelection(): void
+                public selectAllAccessibleSelection(): void
             }
         }
     }

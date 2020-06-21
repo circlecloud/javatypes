@@ -51,7 +51,7 @@ declare namespace org {
                  * @see org.springframework.stereotype.Component
                  */
                 // @ts-ignore
-                class Primary implements java.lang.annotation.Annotation {
+                abstract class Primary implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -9,10 +9,20 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class MetricType extends java.lang.Enum<org.springframework.jmx.support.MetricType> {
+                    /**
+                     * The measurement values may go up or down over time.
+                     */
+                    // @ts-ignore
+                    readonly GAUGE: org.springframework.jmx.support.MetricType
+                    /**
+                     * The measurement values will always increase.
+                     */
+                    // @ts-ignore
+                    readonly COUNTER: org.springframework.jmx.support.MetricType
                     // @ts-ignore
                     values(): org.springframework.jmx.support.MetricType[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.jmx.support.MetricType
+                    valueOf(name: java.lang.String | string): org.springframework.jmx.support.MetricType
                 }
             }
         }

@@ -87,7 +87,7 @@ declare namespace org {
                             // @ts-ignore
                             entity(entityArchetype: org.spongepowered.api.entity.EntityArchetype, position: Vector3d): org.spongepowered.api.world.schematic.Schematic.Builder
                             // @ts-ignore
-                            entities(entities: Array<org.spongepowered.api.entity.EntityArchetype>): org.spongepowered.api.world.schematic.Schematic.Builder
+                            entities(entities: java.util.Collection<org.spongepowered.api.entity.EntityArchetype> | Array<org.spongepowered.api.entity.EntityArchetype>): org.spongepowered.api.world.schematic.Schematic.Builder
                             /**
                              * Specifies the metadata container.
                              * @param metadata The metadata container
@@ -103,7 +103,7 @@ declare namespace org {
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            metaValue(key: string, value: any): org.spongepowered.api.world.schematic.Schematic.Builder
+                            metaValue(key: java.lang.String | string, value: java.lang.Object | any): org.spongepowered.api.world.schematic.Schematic.Builder
                             /**
                              * Constructs a new {@link Schematic} from this builder.
                              * @return The new schematic

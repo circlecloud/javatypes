@@ -17,7 +17,7 @@ declare namespace javax {
              * @param mechanism the exemption mechanism
              */
             // @ts-ignore
-            constructor(exmechSpi: javax.crypto.ExemptionMechanismSpi, provider: java.security.Provider, mechanism: string)
+            constructor(exmechSpi: javax.crypto.ExemptionMechanismSpi, provider: java.security.Provider, mechanism: java.lang.String | string)
             /**
              * Returns the exemption mechanism name of this
              * <code>ExemptionMechanism</code> object.
@@ -28,7 +28,7 @@ declare namespace javax {
              *  <code>ExemptionMechanism</code> object.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns an <code>ExemptionMechanism</code> object that implements the
              * specified exemption mechanism algorithm.
@@ -55,7 +55,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): javax.crypto.ExemptionMechanism
+            public static getInstance(algorithm: java.lang.String | string): javax.crypto.ExemptionMechanism
             /**
              * Returns an <code>ExemptionMechanism</code> object that implements the
              * specified exemption mechanism algorithm.
@@ -85,7 +85,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): javax.crypto.ExemptionMechanism
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.crypto.ExemptionMechanism
             /**
              * Returns an <code>ExemptionMechanism</code> object that implements the
              * specified exemption mechanism algorithm.
@@ -111,13 +111,13 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): javax.crypto.ExemptionMechanism
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.crypto.ExemptionMechanism
             /**
              * Returns the provider of this <code>ExemptionMechanism</code> object.
              * @return the provider of this <code>ExemptionMechanism</code> object.
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns whether the result blob has been generated successfully by this
              * exemption mechanism.
@@ -133,7 +133,7 @@ declare namespace javax {
              *  by this exemption mechanism object.
              */
             // @ts-ignore
-            isCryptoAllowed(key: java.security.Key): boolean
+            public isCryptoAllowed(key: java.security.Key): boolean
             /**
              * Returns the length in bytes that an output buffer would need to be in
              * order to hold the result of the next
@@ -148,7 +148,7 @@ declare namespace javax {
              *  wrong state (e.g., has not yet been initialized)
              */
             // @ts-ignore
-            getOutputSize(inputLen: number /*int*/): int
+            public getOutputSize(inputLen: number /*int*/): number /*int*/
             /**
              * Initializes this exemption mechanism with a key.
              * <p>If this exemption mechanism requires any algorithm parameters
@@ -164,7 +164,7 @@ declare namespace javax {
              *  process of initializing.
              */
             // @ts-ignore
-            init(key: java.security.Key): void
+            public init(key: java.security.Key): void
             /**
              * Initializes this exemption mechanism with a key and a set of algorithm
              * parameters.
@@ -184,7 +184,7 @@ declare namespace javax {
              *  process of initializing.
              */
             // @ts-ignore
-            init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
+            public init(key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Initializes this exemption mechanism with a key and a set of algorithm
              * parameters.
@@ -204,7 +204,7 @@ declare namespace javax {
              *  process of initializing.
              */
             // @ts-ignore
-            init(key: java.security.Key, params: java.security.AlgorithmParameters): void
+            public init(key: java.security.Key, params: java.security.AlgorithmParameters): void
             /**
              * Generates the exemption mechanism key blob.
              * @return the new buffer with the result key blob.
@@ -214,7 +214,7 @@ declare namespace javax {
              *  process of generating.
              */
             // @ts-ignore
-            genExemptionBlob(): byte[]
+            public genExemptionBlob(): number /*byte*/[]
             /**
              * Generates the exemption mechanism key blob, and stores the result in
              * the <code>output</code> buffer.
@@ -233,7 +233,7 @@ declare namespace javax {
              *  process of generating.
              */
             // @ts-ignore
-            genExemptionBlob(output: number /*byte*/[]): int
+            public genExemptionBlob(output: number /*byte*/[]): number /*int*/
             /**
              * Generates the exemption mechanism key blob, and stores the result in
              * the <code>output</code> buffer, starting at <code>outputOffset</code>
@@ -255,7 +255,7 @@ declare namespace javax {
              *  process of generating.
              */
             // @ts-ignore
-            genExemptionBlob(output: number /*byte*/[], outputOffset: number /*int*/): int
+            public genExemptionBlob(output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
             /**
              * Ensures that the key stored away by this ExemptionMechanism
              * object will be wiped out when there are no more references to it.

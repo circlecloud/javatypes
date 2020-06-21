@@ -37,7 +37,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBaseTypeName(): java.lang.String
+            getBaseTypeName(): string
             /**
              * Retrieves the referenced object and maps it to a Java type
              * using the given type map.
@@ -56,7 +56,7 @@ declare namespace java {
              * @see #setObject
              */
             // @ts-ignore
-            getObject(map: java.util.Map<java.lang.String, java.lang.Class<any>>): java.lang.Object
+            getObject(map: java.util.Map<java.lang.String | string, java.lang.Class<any>>): any
             /**
              * Retrieves the SQL structured type instance referenced by
              * this <code>Ref</code> object.  If the connection's type map has an entry
@@ -73,7 +73,7 @@ declare namespace java {
              * @see #setObject
              */
             // @ts-ignore
-            getObject(): java.lang.Object
+            getObject(): any
             /**
              * Sets the structured type value that this <code>Ref</code>
              * object references to the given instance of <code>Object</code>.
@@ -92,7 +92,7 @@ declare namespace java {
              * @see CallableStatement#setObject(String, Object)
              */
             // @ts-ignore
-            setObject(value: any): void
+            setObject(value: java.lang.Object | any): void
         }
     }
 }

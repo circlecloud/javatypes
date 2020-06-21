@@ -64,7 +64,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class SchemaFactory extends java.lang.Object {
+            abstract class SchemaFactory extends java.lang.Object {
                 /**
                  * <p>Constructor for derived classes.</p>
                  * <p>The constructor does nothing.</p>
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @see #newInstance(String schemaLanguage, String factoryClassName, ClassLoader classLoader)
                  */
                 // @ts-ignore
-                newInstance(schemaLanguage: string): javax.xml.validation.SchemaFactory
+                public static newInstance(schemaLanguage: java.lang.String | string): javax.xml.validation.SchemaFactory
                 /**
                  * <p>Obtain a new instance of a <code>SchemaFactory</code> from class name. <code>SchemaFactory</code>
                  * is returned if specified factory class name supports the specified schema language.
@@ -179,7 +179,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                newInstance(schemaLanguage: string, factoryClassName: string, classLoader: java.lang.ClassLoader): javax.xml.validation.SchemaFactory
+                public static newInstance(schemaLanguage: java.lang.String | string, factoryClassName: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.validation.SchemaFactory
                 /**
                  * <p>Is specified schema supported by this <code>SchemaFactory</code>?</p>
                  * @param schemaLanguage Specifies the schema language which the returned <code>SchemaFactory</code> will understand.
@@ -190,7 +190,7 @@ declare namespace javax {
                  *    or <code>schemaLanguage</code> does not specify a <a href="#schemaLanguage">valid</a> schema language.
                  */
                 // @ts-ignore
-                abstract isSchemaLanguageSupported(schemaLanguage: string): boolean
+                public abstract isSchemaLanguageSupported(schemaLanguage: java.lang.String | string): boolean
                 /**
                  * Look up the value of a feature flag.
                  * <p>The feature name is any fully-qualified URI.  It is
@@ -209,7 +209,7 @@ declare namespace javax {
                  * @see #setFeature(String, boolean)
                  */
                 // @ts-ignore
-                getFeature(name: string): boolean
+                public getFeature(name: java.lang.String | string): boolean
                 /**
                  * <p>Set a feature for this <code>SchemaFactory</code>,
                  * {@link Schema}s created by this factory, and by extension,
@@ -254,7 +254,7 @@ declare namespace javax {
                  * @see #getFeature(String)
                  */
                 // @ts-ignore
-                setFeature(name: string, value: boolean): void
+                public setFeature(name: java.lang.String | string, value: boolean): void
                 /**
                  * Set the value of a property.
                  * <p>The property name is any fully-qualified URI.  It is
@@ -305,7 +305,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>name</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                setProperty(name: string, object: any): void
+                public setProperty(name: java.lang.String | string, object: java.lang.Object | any): void
                 /**
                  * Look up the value of a property.
                  * <p>The property name is any fully-qualified URI.  It is
@@ -326,7 +326,7 @@ declare namespace javax {
                  * @see #setProperty(String, Object)
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                public getProperty(name: java.lang.String | string): any
                 /**
                  * Sets the {@link ErrorHandler} to receive errors encountered
                  * during the <code>newSchema</code> method invocation.
@@ -377,7 +377,7 @@ declare namespace javax {
                  *    This parameter can be <code>null</code>.
                  */
                 // @ts-ignore
-                abstract setErrorHandler(errorHandler: org.xml.sax.ErrorHandler): void
+                public abstract setErrorHandler(errorHandler: org.xml.sax.ErrorHandler): void
                 /**
                  * Gets the current {@link ErrorHandler} set to this {@link SchemaFactory}.
                  * @return This method returns the object that was last set through
@@ -387,7 +387,7 @@ declare namespace javax {
                  * @see #setErrorHandler(ErrorHandler)
                  */
                 // @ts-ignore
-                abstract getErrorHandler(): org.xml.sax.ErrorHandler
+                public abstract getErrorHandler(): org.xml.sax.ErrorHandler
                 /**
                  * Sets the {@link LSResourceResolver} to customize
                  * resource resolution when parsing schemas.
@@ -427,7 +427,7 @@ declare namespace javax {
                  *       A new resource resolver to be set. This parameter can be null.
                  */
                 // @ts-ignore
-                abstract setResourceResolver(resourceResolver: org.w3c.dom.ls.LSResourceResolver): void
+                public abstract setResourceResolver(resourceResolver: org.w3c.dom.ls.LSResourceResolver): void
                 /**
                  * Gets the current {@link LSResourceResolver} set to this {@link SchemaFactory}.
                  * @return This method returns the object that was last set through
@@ -437,7 +437,7 @@ declare namespace javax {
                  * @see #setErrorHandler(ErrorHandler)
                  */
                 // @ts-ignore
-                abstract getResourceResolver(): org.w3c.dom.ls.LSResourceResolver
+                public abstract getResourceResolver(): org.w3c.dom.ls.LSResourceResolver
                 /**
                  * <p>Parses the specified source as a schema and returns it as a schema.</p>
                  * <p>This is a convenience method for {@link #newSchema(Source[] schemas)}.</p>
@@ -447,7 +447,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>schema</code> is null.
                  */
                 // @ts-ignore
-                newSchema(schema: javax.xml.transform.Source): javax.xml.validation.Schema
+                public newSchema(schema: javax.xml.transform.Source): javax.xml.validation.Schema
                 /**
                  * <p>Parses the specified <code>File</code> as a schema and returns it as a <code>Schema</code>.</p>
                  * <p>This is a convenience method for {@link #newSchema(Source schema)}.</p>
@@ -457,7 +457,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>schema</code> is null.
                  */
                 // @ts-ignore
-                newSchema(schema: java.io.File): javax.xml.validation.Schema
+                public newSchema(schema: java.io.File): javax.xml.validation.Schema
                 /**
                  * <p>Parses the specified <code>URL</code> as a schema and returns it as a <code>Schema</code>.</p>
                  * <p>This is a convenience method for {@link #newSchema(Source schema)}.</p>
@@ -467,7 +467,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>schema</code> is null.
                  */
                 // @ts-ignore
-                newSchema(schema: java.net.URL): javax.xml.validation.Schema
+                public newSchema(schema: java.net.URL): javax.xml.validation.Schema
                 /**
                  * Parses the specified source(s) as a schema and returns it as a schema.
                  * <p>
@@ -531,7 +531,7 @@ declare namespace javax {
                  *       If the schema language doesn't support this operation.
                  */
                 // @ts-ignore
-                abstract newSchema(schemas: javax.xml.transform.Source[]): javax.xml.validation.Schema
+                public abstract newSchema(schemas: javax.xml.transform.Source[]): javax.xml.validation.Schema
                 /**
                  * Creates a special {@link Schema} object.
                  * <p>The exact semantics of the returned {@link Schema} object
@@ -573,7 +573,7 @@ declare namespace javax {
                  *       If this operation is supported but failed for some reason.
                  */
                 // @ts-ignore
-                abstract newSchema(): javax.xml.validation.Schema
+                public abstract newSchema(): javax.xml.validation.Schema
             }
         }
     }

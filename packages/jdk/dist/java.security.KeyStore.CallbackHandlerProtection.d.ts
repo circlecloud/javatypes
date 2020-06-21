@@ -20,7 +20,7 @@ declare namespace java {
                  * @return the CallbackHandler.
                  */
                 // @ts-ignore
-                getCallbackHandler(): javax.security.auth.callback.CallbackHandler
+                public getCallbackHandler(): javax.security.auth.callback.CallbackHandler
             }
         }
     }

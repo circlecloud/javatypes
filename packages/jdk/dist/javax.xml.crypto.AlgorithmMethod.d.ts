@@ -16,7 +16,7 @@ declare namespace javax {
                  * @return the algorithm URI of this <code>AlgorithmMethod</code>
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                getAlgorithm(): string
                 /**
                  * Returns the algorithm parameters of this <code>AlgorithmMethod</code>.
                  * @return the algorithm parameters of this <code>AlgorithmMethod</code>.

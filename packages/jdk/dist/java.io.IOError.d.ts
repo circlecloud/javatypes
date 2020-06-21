@@ -17,7 +17,7 @@ declare namespace java {
              *          is not known
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
         }
     }
 }

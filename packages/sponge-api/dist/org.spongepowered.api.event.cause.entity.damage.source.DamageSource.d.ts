@@ -80,7 +80,7 @@ declare namespace org {
                                      * @return The increase in exhaustion
                                      */
                                     // @ts-ignore
-                                    getExhaustion(): double
+                                    getExhaustion(): number /*double*/
                                 }
                             }
                         }

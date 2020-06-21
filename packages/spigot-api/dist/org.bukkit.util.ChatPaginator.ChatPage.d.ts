@@ -5,13 +5,13 @@ declare namespace org {
                 // @ts-ignore
                 class ChatPage extends java.lang.Object {
                     // @ts-ignore
-                    constructor(lines: string[], pageNumber: number /*int*/, totalPages: number /*int*/)
+                    constructor(lines: java.lang.String[] | string[], pageNumber: number /*int*/, totalPages: number /*int*/)
                     // @ts-ignore
-                    getPageNumber(): int
+                    public getPageNumber(): number /*int*/
                     // @ts-ignore
-                    getTotalPages(): int
+                    public getTotalPages(): number /*int*/
                     // @ts-ignore
-                    getLines(): java.lang.String[]
+                    public getLines(): string[]
                 }
             }
         }

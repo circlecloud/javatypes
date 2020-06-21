@@ -20,7 +20,7 @@ declare namespace org {
                              * @return The spawn probability
                              */
                             // @ts-ignore
-                            getSpawnProbability(): double
+                            getSpawnProbability(): number /*double*/
                             /**
                              * Sets the spawn probability, must be be between 0 and 1.
                              * @param chance The new spawn probability

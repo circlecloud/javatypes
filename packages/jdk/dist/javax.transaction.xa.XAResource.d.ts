@@ -35,60 +35,60 @@ declare namespace javax {
                  * Ends a recovery scan.
                  */
                 // @ts-ignore
-                
+                readonly TMENDRSCAN: number /*int*/
                 /**
                  * Disassociates the caller and marks the transaction branch
                  * rollback-only.
                  */
                 // @ts-ignore
-                
+                readonly TMFAIL: number /*int*/
                 /**
                  * Caller is joining existing transaction branch.
                  */
                 // @ts-ignore
-                
+                readonly TMJOIN: number /*int*/
                 /**
                  * Use TMNOFLAGS to indicate no flags value is selected.
                  */
                 // @ts-ignore
-                
+                readonly TMNOFLAGS: number /*int*/
                 /**
                  * Caller is using one-phase optimization.
                  */
                 // @ts-ignore
-                
+                readonly TMONEPHASE: number /*int*/
                 /**
                  * Caller is resuming association with a suspended
                  * transaction branch.
                  */
                 // @ts-ignore
-                
+                readonly TMRESUME: number /*int*/
                 /**
                  * Starts a recovery scan.
                  */
                 // @ts-ignore
-                
+                readonly TMSTARTRSCAN: number /*int*/
                 /**
                  * Disassociates caller from a transaction branch.
                  */
                 // @ts-ignore
-                
+                readonly TMSUCCESS: number /*int*/
                 /**
                  * Caller is suspending (not ending) its association with
                  * a transaction branch.
                  */
                 // @ts-ignore
-                
+                readonly TMSUSPEND: number /*int*/
                 /**
                  * The transaction branch has been read-only and has been committed.
                  */
                 // @ts-ignore
-                
+                readonly XA_RDONLY: number /*int*/
                 /**
                  * The transaction work has been prepared normally.
                  */
                 // @ts-ignore
-                
+                readonly XA_OK: number /*int*/
                 /**
                  * Commits the global transaction specified by xid.
                  * @param xid A global transaction identifier
@@ -149,7 +149,7 @@ declare namespace javax {
                  *  values are XAER_RMERR and XAER_RMFAIL.
                  */
                 // @ts-ignore
-                getTransactionTimeout(): int
+                getTransactionTimeout(): number /*int*/
                 /**
                  * This method is called to determine if the resource manager
                  * instance represented by the target object is the same as the
@@ -178,7 +178,7 @@ declare namespace javax {
                  *  in the prepare method.
                  */
                 // @ts-ignore
-                prepare(xid: javax.transaction.xa.Xid): int
+                prepare(xid: javax.transaction.xa.Xid): number /*int*/
                 /**
                  * Obtains a list of prepared transaction branches from a resource
                  * manager. The transaction manager calls this method during recovery

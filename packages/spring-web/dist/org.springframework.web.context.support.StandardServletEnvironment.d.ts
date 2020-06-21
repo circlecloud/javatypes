@@ -22,17 +22,17 @@ declare namespace org {
                          * Servlet context init parameters property source name: {@value}.
                          */
                         // @ts-ignore
-                        readonly SERVLET_CONTEXT_PROPERTY_SOURCE_NAME: string
+                        public static readonly SERVLET_CONTEXT_PROPERTY_SOURCE_NAME: java.lang.String | string
                         /**
                          * Servlet config init parameters property source name: {@value}.
                          */
                         // @ts-ignore
-                        readonly SERVLET_CONFIG_PROPERTY_SOURCE_NAME: string
+                        public static readonly SERVLET_CONFIG_PROPERTY_SOURCE_NAME: java.lang.String | string
                         /**
                          * JNDI property source name: {@value}.
                          */
                         // @ts-ignore
-                        readonly JNDI_PROPERTY_SOURCE_NAME: string
+                        public static readonly JNDI_PROPERTY_SOURCE_NAME: java.lang.String | string
                         /**
                          * Customize the set of property sources with those contributed by superclasses as
                          * well as those appropriate for standard servlet-based environments:
@@ -62,7 +62,7 @@ declare namespace org {
                         // @ts-ignore
                         customizePropertySources(propertySources: MutablePropertySources): void
                         // @ts-ignore
-                        initPropertySources(servletContext: ServletContext, servletConfig: ServletConfig): void
+                        public initPropertySources(servletContext: ServletContext, servletConfig: ServletConfig): void
                     }
                 }
             }

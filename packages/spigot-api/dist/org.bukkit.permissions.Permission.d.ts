@@ -8,29 +8,29 @@ declare namespace org {
             // @ts-ignore
             class Permission extends java.lang.Object {
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 // @ts-ignore
-                constructor(name: string, description: string)
+                constructor(name: java.lang.String | string, description: java.lang.String | string)
                 // @ts-ignore
-                constructor(name: string, defaultValue: org.bukkit.permissions.PermissionDefault)
+                constructor(name: java.lang.String | string, defaultValue: org.bukkit.permissions.PermissionDefault)
                 // @ts-ignore
-                constructor(name: string, description: string, defaultValue: org.bukkit.permissions.PermissionDefault)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, defaultValue: org.bukkit.permissions.PermissionDefault)
                 // @ts-ignore
-                constructor(name: string, children: java.util.Map<java.lang.String, java.lang.Boolean>)
+                constructor(name: java.lang.String | string, children: java.util.Map<java.lang.String | string, java.lang.Boolean>)
                 // @ts-ignore
-                constructor(name: string, description: string, children: java.util.Map<java.lang.String, java.lang.Boolean>)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, children: java.util.Map<java.lang.String | string, java.lang.Boolean>)
                 // @ts-ignore
-                constructor(name: string, defaultValue: org.bukkit.permissions.PermissionDefault, children: java.util.Map<java.lang.String, java.lang.Boolean>)
+                constructor(name: java.lang.String | string, defaultValue: org.bukkit.permissions.PermissionDefault, children: java.util.Map<java.lang.String | string, java.lang.Boolean>)
                 // @ts-ignore
-                constructor(name: string, description: string, defaultValue: org.bukkit.permissions.PermissionDefault, children: java.util.Map<java.lang.String, java.lang.Boolean>)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, defaultValue: org.bukkit.permissions.PermissionDefault, children: java.util.Map<java.lang.String | string, java.lang.Boolean>)
                 // @ts-ignore
-                readonly DEFAULT_PERMISSION: org.bukkit.permissions.PermissionDefault
+                public static readonly DEFAULT_PERMISSION: org.bukkit.permissions.PermissionDefault
                 /**
                  * Returns the unique fully qualified name of this Permission
                  * @return Fully qualified name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Gets the children of this permission.
                  * <p>
@@ -39,13 +39,13 @@ declare namespace org {
                  * @return Permission children
                  */
                 // @ts-ignore
-                getChildren(): java.util.Map<java.lang.String, java.lang.Boolean>
+                public getChildren(): java.util.Map<java.lang.String | string, java.lang.Boolean>
                 /**
                  * Gets the default value of this permission.
                  * @return Default value of this permission.
                  */
                 // @ts-ignore
-                getDefault(): org.bukkit.permissions.PermissionDefault
+                public getDefault(): org.bukkit.permissions.PermissionDefault
                 /**
                  * Sets the default value of this permission.
                  * <p>
@@ -56,13 +56,13 @@ declare namespace org {
                  * @param value The new default to set
                  */
                 // @ts-ignore
-                setDefault(value: org.bukkit.permissions.PermissionDefault): void
+                public setDefault(value: org.bukkit.permissions.PermissionDefault): void
                 /**
                  * Gets a brief description of this permission, may be empty
                  * @return Brief description of this permission
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Sets the description of this permission.
                  * <p>
@@ -71,7 +71,7 @@ declare namespace org {
                  * @param value The new description to set
                  */
                 // @ts-ignore
-                setDescription(value: string): void
+                public setDescription(value: java.lang.String | string): void
                 /**
                  * Gets a set containing every {@link Permissible} that has this
                  * permission.
@@ -80,7 +80,7 @@ declare namespace org {
                  * @return Set containing permissibles with this permission
                  */
                 // @ts-ignore
-                getPermissibles(): java.util.Set<org.bukkit.permissions.Permissible>
+                public getPermissibles(): Array<org.bukkit.permissions.Permissible>
                 /**
                  * Recalculates all {@link Permissible}s that contain this permission.
                  * <p>
@@ -88,7 +88,7 @@ declare namespace org {
                  * automatically called after modifying the default value
                  */
                 // @ts-ignore
-                recalculatePermissibles(): void
+                public recalculatePermissibles(): void
                 /**
                  * Adds this permission to the specified parent permission.
                  * <p>
@@ -99,14 +99,14 @@ declare namespace org {
                  * @return Parent permission it created or loaded
                  */
                 // @ts-ignore
-                addParent(name: string, value: boolean): org.bukkit.permissions.Permission
+                public addParent(name: java.lang.String | string, value: boolean): org.bukkit.permissions.Permission
                 /**
                  * Adds this permission to the specified parent permission.
                  * @param perm Parent permission to register with
                  * @param value The value to set this permission to
                  */
                 // @ts-ignore
-                addParent(perm: org.bukkit.permissions.Permission, value: boolean): void
+                public addParent(perm: org.bukkit.permissions.Permission, value: boolean): void
                 /**
                  * Loads a list of Permissions from a map of data, usually used from
                  * retrieval from a yaml file.
@@ -126,7 +126,7 @@ declare namespace org {
                  * @return Permission object
                  */
                 // @ts-ignore
-                loadPermissions(data: java.util.Map<any, ?>, error: string, def: org.bukkit.permissions.PermissionDefault): java.util.List<org.bukkit.permissions.Permission>
+                public static loadPermissions(data: java.util.Map<any, any>, error: java.lang.String | string, def: org.bukkit.permissions.PermissionDefault): Array<org.bukkit.permissions.Permission>
                 /**
                  * Loads a Permission from a map of data, usually used from retrieval from
                  * a yaml file.
@@ -144,7 +144,7 @@ declare namespace org {
                  * @return Permission object
                  */
                 // @ts-ignore
-                loadPermission(name: string, data: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.permissions.Permission
+                public static loadPermission(name: java.lang.String | string, data: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.permissions.Permission
                 /**
                  * Loads a Permission from a map of data, usually used from retrieval from
                  * a yaml file.
@@ -164,7 +164,7 @@ declare namespace org {
                  * @return Permission object
                  */
                 // @ts-ignore
-                loadPermission(name: string, data: java.util.Map<any, ?>, def: org.bukkit.permissions.PermissionDefault, output: Array<org.bukkit.permissions.Permission>): org.bukkit.permissions.Permission
+                public static loadPermission(name: java.lang.String | string, data: java.util.Map<any, any>, def: org.bukkit.permissions.PermissionDefault, output: java.util.List<org.bukkit.permissions.Permission> | Array<org.bukkit.permissions.Permission>): org.bukkit.permissions.Permission
             }
         }
     }

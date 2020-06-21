@@ -96,7 +96,7 @@ declare namespace java {
                      * a larger Java heap (about ten times the segment limit).
                      */
                     // @ts-ignore
-                    
+                    readonly SEGMENT_LIMIT: java.lang.String | string
                     /**
                      * If this property is set to {@link #TRUE}, the packer will transmit
                      * all elements in their original order within the source archive.
@@ -110,7 +110,7 @@ declare namespace java {
                      * but may cause the transmitted archive to be larger than necessary.
                      */
                     // @ts-ignore
-                    
+                    readonly KEEP_FILE_ORDER: java.lang.String | string
                     /**
                      * If this property is set to a single decimal digit, the packer will
                      * use the indicated amount of effort in compressing the archive.
@@ -126,7 +126,7 @@ declare namespace java {
                      * produce reasonable compression.
                      */
                     // @ts-ignore
-                    
+                    readonly EFFORT: java.lang.String | string
                     /**
                      * If this property is set to {@link #TRUE} or {@link #FALSE}, the packer
                      * will set the deflation hint accordingly in the output archive, and
@@ -147,7 +147,7 @@ declare namespace java {
                      * whether the element was deflated or stored directly.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFLATE_HINT: java.lang.String | string
                     /**
                      * If this property is set to the special string {@link #LATEST},
                      * the packer will attempt to determine the latest modification time,
@@ -172,7 +172,7 @@ declare namespace java {
                      * @see #SEGMENT_LIMIT
                      */
                     // @ts-ignore
-                    
+                    readonly MODIFICATION_TIME: java.lang.String | string
                     /**
                      * Indicates that a file should be passed through bytewise, with no
                      * compression.  Multiple files may be specified by specifying
@@ -200,7 +200,7 @@ declare namespace java {
                      * }</pre>
                      */
                     // @ts-ignore
-                    
+                    readonly PASS_FILE_PFX: java.lang.String | string
                     /**
                      * Indicates the action to take when a class-file containing an unknown
                      * attribute is encountered.  Possible values are the strings {@link #ERROR},
@@ -224,7 +224,7 @@ declare namespace java {
                      * }</pre>
                      */
                     // @ts-ignore
-                    
+                    readonly UNKNOWN_ATTRIBUTE: java.lang.String | string
                     /**
                      * When concatenated with a class attribute name,
                      * indicates the format of that attribute,
@@ -256,7 +256,7 @@ declare namespace java {
                      * </code></pre>
                      */
                     // @ts-ignore
-                    
+                    readonly CLASS_ATTRIBUTE_PFX: java.lang.String | string
                     /**
                      * When concatenated with a field attribute name,
                      * indicates the format of that attribute.
@@ -267,7 +267,7 @@ declare namespace java {
                      * @see #CLASS_ATTRIBUTE_PFX
                      */
                     // @ts-ignore
-                    
+                    readonly FIELD_ATTRIBUTE_PFX: java.lang.String | string
                     /**
                      * When concatenated with a method attribute name,
                      * indicates the format of that attribute.
@@ -278,7 +278,7 @@ declare namespace java {
                      * @see #CLASS_ATTRIBUTE_PFX
                      */
                     // @ts-ignore
-                    
+                    readonly METHOD_ATTRIBUTE_PFX: java.lang.String | string
                     /**
                      * When concatenated with a code attribute name,
                      * indicates the format of that attribute.
@@ -289,7 +289,7 @@ declare namespace java {
                      * @see #CLASS_ATTRIBUTE_PFX
                      */
                     // @ts-ignore
-                    
+                    readonly CODE_ATTRIBUTE_PFX: java.lang.String | string
                     /**
                      * The unpacker's progress as a percentage, as periodically
                      * updated by the unpacker.
@@ -302,14 +302,14 @@ declare namespace java {
                      * at the end.
                      */
                     // @ts-ignore
-                    
+                    readonly PROGRESS: java.lang.String | string
                     /**
                      * The string "keep", a possible value for certain properties.
                      * @see #DEFLATE_HINT
                      * @see #MODIFICATION_TIME
                      */
                     // @ts-ignore
-                    
+                    readonly KEEP: java.lang.String | string
                     /**
                      * The string "pass", a possible value for certain properties.
                      * @see #UNKNOWN_ATTRIBUTE
@@ -319,7 +319,7 @@ declare namespace java {
                      * @see #CODE_ATTRIBUTE_PFX
                      */
                     // @ts-ignore
-                    
+                    readonly PASS: java.lang.String | string
                     /**
                      * The string "strip", a possible value for certain properties.
                      * @see #UNKNOWN_ATTRIBUTE
@@ -329,7 +329,7 @@ declare namespace java {
                      * @see #CODE_ATTRIBUTE_PFX
                      */
                     // @ts-ignore
-                    
+                    readonly STRIP: java.lang.String | string
                     /**
                      * The string "error", a possible value for certain properties.
                      * @see #UNKNOWN_ATTRIBUTE
@@ -339,27 +339,27 @@ declare namespace java {
                      * @see #CODE_ATTRIBUTE_PFX
                      */
                     // @ts-ignore
-                    
+                    readonly ERROR: java.lang.String | string
                     /**
                      * The string "true", a possible value for certain properties.
                      * @see #KEEP_FILE_ORDER
                      * @see #DEFLATE_HINT
                      */
                     // @ts-ignore
-                    
+                    readonly TRUE: java.lang.String | string
                     /**
                      * The string "false", a possible value for certain properties.
                      * @see #KEEP_FILE_ORDER
                      * @see #DEFLATE_HINT
                      */
                     // @ts-ignore
-                    
+                    readonly FALSE: java.lang.String | string
                     /**
                      * The string "latest", a possible value for certain properties.
                      * @see #MODIFICATION_TIME
                      */
                     // @ts-ignore
-                    
+                    readonly LATEST: java.lang.String | string
                     /**
                      * Get the set of this engine's properties.
                      * This set is a "live view", so that changing its
@@ -386,7 +386,7 @@ declare namespace java {
                      *  values.
                      */
                     // @ts-ignore
-                    properties(): java.util.SortedMap<java.lang.String, java.lang.String>
+                    properties(): java.util.SortedMap<java.lang.String | string, java.lang.String | string>
                     /**
                      * Takes a JarFile and converts it into a Pack200 archive.
                      * <p>

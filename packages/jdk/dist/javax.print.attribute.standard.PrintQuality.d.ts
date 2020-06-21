@@ -27,22 +27,22 @@ declare namespace javax {
                      * Lowest quality available on the printer.
                      */
                     // @ts-ignore
-                    readonly DRAFT: javax.print.attribute.standard.PrintQuality
+                    public static readonly DRAFT: javax.print.attribute.standard.PrintQuality
                     /**
                      * Normal or intermediate quality on the printer.
                      */
                     // @ts-ignore
-                    readonly NORMAL: javax.print.attribute.standard.PrintQuality
+                    public static readonly NORMAL: javax.print.attribute.standard.PrintQuality
                     /**
                      * Highest quality available on the printer.
                      */
                     // @ts-ignore
-                    readonly HIGH: javax.print.attribute.standard.PrintQuality
+                    public static readonly HIGH: javax.print.attribute.standard.PrintQuality
                     /**
                      * Returns the string table for class PrintQuality.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class PrintQuality.
                      */
@@ -52,7 +52,7 @@ declare namespace javax {
                      * Returns the lowest integer value used by class PrintQuality.
                      */
                     // @ts-ignore
-                    getOffset(): int
+                    getOffset(): number /*int*/
                     /**
                      * Get the printing attribute class which is to be used as the "category"
                      * for this printing attribute value.
@@ -63,7 +63,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -73,7 +73,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

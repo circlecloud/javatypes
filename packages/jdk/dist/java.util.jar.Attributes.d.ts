@@ -14,7 +14,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Attributes extends java.lang.Object implements java.util.Map<java.lang.Object, java.lang.Object>, java.lang.Cloneable {
+            class Attributes extends java.lang.Object implements java.util.Map<java.lang.Object | any, java.lang.Object | any>, java.lang.Cloneable {
                 /**
                  * Constructs a new, empty Attributes object with default size.
                  */
@@ -38,7 +38,7 @@ declare namespace java {
                  * The attribute name-value mappings.
                  */
                 // @ts-ignore
-                map: java.util.Map<java.lang.Object, java.lang.Object>
+                map: java.util.Map<java.lang.Object | any, java.lang.Object | any>
                 /**
                  * Returns the value of the specified attribute name, or null if the
                  * attribute name was not found.
@@ -47,7 +47,7 @@ declare namespace java {
                  *          not found.
                  */
                 // @ts-ignore
-                get(name: any): java.lang.Object
+                public get(name: java.lang.Object | any): any
                 /**
                  * Returns the value of the specified attribute name, specified as
                  * a string, or null if the attribute was not found. The attribute
@@ -63,7 +63,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if the attribute name is invalid
                  */
                 // @ts-ignore
-                getValue(name: string): java.lang.String
+                public getValue(name: java.lang.String | string): string
                 /**
                  * Returns the value of the specified Attributes.Name, or null if the
                  * attribute was not found.
@@ -77,7 +77,7 @@ declare namespace java {
                  *          not found.
                  */
                 // @ts-ignore
-                getValue(name: java.util.jar.Attributes.Name): java.lang.String
+                public getValue(name: java.util.jar.Attributes.Name): string
                 /**
                  * Associates the specified value with the specified attribute name
                  * (key) in this Map. If the Map previously contained a mapping for
@@ -89,7 +89,7 @@ declare namespace java {
                  *             or the value is not a String
                  */
                 // @ts-ignore
-                put(name: any, value: any): java.lang.Object
+                public put(name: java.lang.Object | any, value: java.lang.Object | any): any
                 /**
                  * Associates the specified value with the specified attribute name,
                  * specified as a String. The attributes name is case-insensitive.
@@ -106,7 +106,7 @@ declare namespace java {
                  * @exception IllegalArgumentException if the attribute name is invalid
                  */
                 // @ts-ignore
-                putValue(name: string, value: string): java.lang.String
+                public putValue(name: java.lang.String | string, value: java.lang.String | string): string
                 /**
                  * Removes the attribute with the specified name (key) from this Map.
                  * Returns the previous attribute value, or null if none.
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return the previous value of the attribute, or null if none
                  */
                 // @ts-ignore
-                remove(name: any): java.lang.Object
+                public remove(name: java.lang.Object | any): any
                 /**
                  * Returns true if this Map maps one or more attribute names (keys)
                  * to the specified value.
@@ -123,14 +123,14 @@ declare namespace java {
                  *          the specified value
                  */
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 /**
                  * Returns true if this Map contains the specified attribute name (key).
                  * @param name the attribute name
                  * @return true if this Map contains the specified attribute name
                  */
                 // @ts-ignore
-                containsKey(name: any): boolean
+                public containsKey(name: java.lang.Object | any): boolean
                 /**
                  * Copies all of the attribute name-value mappings from the specified
                  * Attributes to this Map. Duplicate mappings will be replaced.
@@ -138,38 +138,38 @@ declare namespace java {
                  * @exception ClassCastException if attr is not an Attributes
                  */
                 // @ts-ignore
-                putAll(attr: java.util.Map<any, ?>): void
+                public putAll(attr: java.util.Map<any, any>): void
                 /**
                  * Removes all attributes from this Map.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Returns the number of attributes in this Map.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Returns true if this Map contains no attributes.
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Returns a Set view of the attribute names (keys) contained in this Map.
                  */
                 // @ts-ignore
-                keySet(): java.util.Set<java.lang.Object>
+                public keySet(): Array<java.lang.Object | any>
                 /**
                  * Returns a Collection view of the attribute values contained in this Map.
                  */
                 // @ts-ignore
-                values(): java.util.Collection<java.lang.Object>
+                public values(): Array<java.lang.Object | any>
                 /**
                  * Returns a Collection view of the attribute name-value mappings
                  * contained in this Map.
                  */
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<java.lang.Object, java.lang.Object>>
+                public entrySet(): Array<java.util.Map.Entry<java.lang.Object | any, java.lang.Object | any>>
                 /**
                  * Compares the specified Attributes object with this Map for equality.
                  * Returns true if the given object is also an instance of Attributes
@@ -178,12 +178,12 @@ declare namespace java {
                  * @return true if the specified Object is equal to this Map
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this Map.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a copy of the Attributes, implemented as follows:
                  * <pre>
@@ -194,7 +194,7 @@ declare namespace java {
                  * the original.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

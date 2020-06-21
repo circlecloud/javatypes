@@ -57,7 +57,7 @@ declare namespace java {
              *  <code>actions</code> is invalid.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
             /**
              * Checks if this PropertyPermission object "implies" the specified
              * permission.
@@ -75,7 +75,7 @@ declare namespace java {
              *  false if not.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two PropertyPermission objects for equality. Checks that <i>obj</i> is
              * a PropertyPermission, and has the same name and actions as this object.
@@ -85,7 +85,7 @@ declare namespace java {
              *  actions as this PropertyPermission object.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this object.
              * The hash code used is the hash code of this permissions name, that is,
@@ -94,7 +94,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the "canonical string representation" of the actions.
              * That is, this method always returns present actions in the following order:
@@ -104,7 +104,7 @@ declare namespace java {
              * @return the canonical string representation of the actions.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Returns a new PermissionCollection object for storing
              * PropertyPermission objects.
@@ -113,7 +113,7 @@ declare namespace java {
              *  PropertyPermissions.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

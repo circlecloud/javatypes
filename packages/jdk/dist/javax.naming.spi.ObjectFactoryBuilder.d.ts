@@ -40,7 +40,7 @@ declare namespace javax {
                  * @exception NamingException If an object factory cannot be created.
                  */
                 // @ts-ignore
-                createObjectFactory(obj: any, environment: java.util.Hashtable<any, ?>): javax.naming.spi.ObjectFactory
+                createObjectFactory(obj: java.lang.Object | any, environment: java.util.Hashtable<any, any>): javax.naming.spi.ObjectFactory
             }
         }
     }

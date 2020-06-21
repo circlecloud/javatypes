@@ -48,7 +48,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(resourceLoader: org.springframework.core.io.ResourceLoader, propertyResolver: org.springframework.core.env.PropertyResolver, ignoreUnresolvablePlaceholders: boolean)
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Resolve the given path, replacing placeholders with corresponding
                      * property values from the {@code environment} if necessary.
@@ -58,9 +58,9 @@ declare namespace org {
                      * @see PropertyResolver#resolveRequiredPlaceholders
                      */
                     // @ts-ignore
-                    resolvePath(path: string): java.lang.String
+                    resolvePath(path: java.lang.String | string): string
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

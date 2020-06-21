@@ -34,13 +34,13 @@ declare namespace org {
                      * {@linkplain #mergeProperties() merged properties} supplied to this configurer.
                      */
                     // @ts-ignore
-                    readonly LOCAL_PROPERTIES_PROPERTY_SOURCE_NAME: string
+                    public static readonly LOCAL_PROPERTIES_PROPERTY_SOURCE_NAME: java.lang.String | string
                     /**
                      * {@value} is the name given to the {@link PropertySource} that wraps the
                      * {@linkplain #setEnvironment environment} supplied to this configurer.
                      */
                     // @ts-ignore
-                    readonly ENVIRONMENT_PROPERTIES_PROPERTY_SOURCE_NAME: string
+                    public static readonly ENVIRONMENT_PROPERTIES_PROPERTY_SOURCE_NAME: java.lang.String | string
                     /**
                      * Customize the set of {@link PropertySources} to be used by this configurer.
                      * <p>Setting this property indicates that environment property sources and
@@ -48,7 +48,7 @@ declare namespace org {
                      * @see #postProcessBeanFactory
                      */
                     // @ts-ignore
-                    setPropertySources(propertySources: PropertySources): void
+                    public setPropertySources(propertySources: PropertySources): void
                     /**
                      * {@code PropertySources} from the given {@link Environment}
                      * will be searched when replacing ${...} placeholders.
@@ -56,7 +56,7 @@ declare namespace org {
                      * @see #postProcessBeanFactory
                      */
                     // @ts-ignore
-                    setEnvironment(environment: Environment): void
+                    public setEnvironment(environment: Environment): void
                     /**
                      * Processing occurs by replacing ${...} placeholders in bean definitions by resolving each
                      * against this configurer's set of {@link PropertySources}, which includes:
@@ -73,7 +73,7 @@ declare namespace org {
                      * sources, and once set, the configurer makes no assumptions about adding additional sources.
                      */
                     // @ts-ignore
-                    postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
+                    public postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
                     /**
                      * Visit each bean definition in the given bean factory and attempt to replace ${...} property
                      * placeholders with values from the given properties.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @since 4.0
                      */
                     // @ts-ignore
-                    getAppliedPropertySources(): PropertySources
+                    public getAppliedPropertySources(): PropertySources
                 }
             }
         }

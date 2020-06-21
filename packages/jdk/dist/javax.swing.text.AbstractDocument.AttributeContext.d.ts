@@ -31,7 +31,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#addAttribute
                      */
                     // @ts-ignore
-                    addAttribute(old: javax.swing.text.AttributeSet, name: any, value: any): javax.swing.text.AttributeSet
+                    addAttribute(old: javax.swing.text.AttributeSet, name: java.lang.Object | any, value: java.lang.Object | any): javax.swing.text.AttributeSet
                     /**
                      * Adds a set of attributes to the element.
                      * @param old the old attribute set
@@ -49,7 +49,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#removeAttribute
                      */
                     // @ts-ignore
-                    removeAttribute(old: javax.swing.text.AttributeSet, name: any): javax.swing.text.AttributeSet
+                    removeAttribute(old: javax.swing.text.AttributeSet, name: java.lang.Object | any): javax.swing.text.AttributeSet
                     /**
                      * Removes a set of attributes for the element.
                      * @param old the old attribute set

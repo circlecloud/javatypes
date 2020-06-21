@@ -18,21 +18,21 @@ declare namespace org {
                      * @param message detailed message describing the problem
                      */
                     // @ts-ignore
-                    constructor(type: java.lang.Class<any>, numberOfBeansFound: number /*int*/, message: string)
+                    constructor(type: java.lang.Class<any>, numberOfBeansFound: number /*int*/, message: java.lang.String | string)
                     /**
                      * Create a new {@code NoUniqueBeanDefinitionException}.
                      * @param type required type of the non-unique bean
                      * @param beanNamesFound the names of all matching beans (as a Collection)
                      */
                     // @ts-ignore
-                    constructor(type: java.lang.Class<any>, beanNamesFound: Array<java.lang.String>)
+                    constructor(type: java.lang.Class<any>, beanNamesFound: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>)
                     /**
                      * Create a new {@code NoUniqueBeanDefinitionException}.
                      * @param type required type of the non-unique bean
                      * @param beanNamesFound the names of all matching beans (as an array)
                      */
                     // @ts-ignore
-                    constructor(type: java.lang.Class<any>, ...beanNamesFound: string[])
+                    constructor(type: java.lang.Class<any>, ...beanNamesFound: java.lang.String[] | string[])
                     /**
                      * Create a new {@code NoUniqueBeanDefinitionException}.
                      * @param type required type of the non-unique bean
@@ -40,7 +40,7 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    constructor(type: ResolvableType, beanNamesFound: Array<java.lang.String>)
+                    constructor(type: ResolvableType, beanNamesFound: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>)
                     /**
                      * Create a new {@code NoUniqueBeanDefinitionException}.
                      * @param type required type of the non-unique bean
@@ -48,14 +48,14 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    constructor(type: ResolvableType, ...beanNamesFound: string[])
+                    constructor(type: ResolvableType, ...beanNamesFound: java.lang.String[] | string[])
                     /**
                      * Return the number of beans found when only one matching bean was expected.
                      * For a NoUniqueBeanDefinitionException, this will usually be higher than 1.
                      * @see #getBeanType()
                      */
                     // @ts-ignore
-                    getNumberOfBeansFound(): int
+                    public getNumberOfBeansFound(): number /*int*/
                     /**
                      * Return the names of all beans found when only one matching bean was expected.
                      * Note that this may be {@code null} if not specified at construction time.
@@ -63,7 +63,7 @@ declare namespace org {
                      * @see #getBeanType()
                      */
                     // @ts-ignore
-                    getBeanNamesFound(): java.util.Collection<java.lang.String>
+                    public getBeanNamesFound(): Array<java.lang.String | string>
                 }
             }
         }

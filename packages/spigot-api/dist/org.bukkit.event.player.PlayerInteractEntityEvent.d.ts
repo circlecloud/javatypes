@@ -14,25 +14,25 @@ declare namespace org {
                     // @ts-ignore
                     clickedEntity: org.bukkit.entity.Entity
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the entity that was right-clicked by the player.
                      * @return entity right clicked by player
                      */
                     // @ts-ignore
-                    getRightClicked(): org.bukkit.entity.Entity
+                    public getRightClicked(): org.bukkit.entity.Entity
                     /**
                      * The hand used to perform this interaction.
                      * @return the hand used to interact
                      */
                     // @ts-ignore
-                    getHand(): org.bukkit.inventory.EquipmentSlot
+                    public getHand(): org.bukkit.inventory.EquipmentSlot
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

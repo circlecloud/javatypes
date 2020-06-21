@@ -30,16 +30,16 @@ declare namespace org {
                     // @ts-ignore
                     constructor(defaultProxyMode: org.springframework.context.annotation.ScopedProxyMode)
                     // @ts-ignore
-                    scopeAnnotationType: java.lang.Class<java.lang.annotation.Annotation>
+                    scopeAnnotationType: java.lang.Class<any>
                     /**
                      * Set the type of annotation that is checked for by this
                      * {@code AnnotationScopeMetadataResolver}.
                      * @param scopeAnnotationType the target annotation type
                      */
                     // @ts-ignore
-                    setScopeAnnotationType(scopeAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                    public setScopeAnnotationType(scopeAnnotationType: java.lang.Class<any>): void
                     // @ts-ignore
-                    resolveScopeMetadata(definition: BeanDefinition): org.springframework.context.annotation.ScopeMetadata
+                    public resolveScopeMetadata(definition: BeanDefinition): org.springframework.context.annotation.ScopeMetadata
                 }
             }
         }

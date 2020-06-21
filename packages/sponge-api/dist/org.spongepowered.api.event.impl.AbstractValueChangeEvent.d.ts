@@ -4,7 +4,7 @@ declare namespace org {
             namespace event {
                 namespace impl {
                     // @ts-ignore
-                    class AbstractValueChangeEvent extends java.lang.Object implements org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange {
+                    abstract class AbstractValueChangeEvent extends java.lang.Object implements org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
@@ -14,7 +14,7 @@ declare namespace org {
                         // @ts-ignore
                         init(): void
                         // @ts-ignore
-                        proposeChanges(result: org.spongepowered.api.data.DataTransactionResult): org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange
+                        public proposeChanges(result: org.spongepowered.api.data.DataTransactionResult): org.spongepowered.api.event.data.ChangeDataHolderEvent.ValueChange
                     }
                 }
             }

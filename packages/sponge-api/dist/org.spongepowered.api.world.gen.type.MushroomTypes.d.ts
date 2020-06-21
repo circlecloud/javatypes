@@ -10,9 +10,9 @@ declare namespace org {
                         // @ts-ignore
                         class MushroomTypes extends java.lang.Object {
                             // @ts-ignore
-                            readonly BROWN: org.spongepowered.api.world.gen.type.MushroomType
+                            public static readonly BROWN: org.spongepowered.api.world.gen.type.MushroomType
                             // @ts-ignore
-                            readonly RED: org.spongepowered.api.world.gen.type.MushroomType
+                            public static readonly RED: org.spongepowered.api.world.gen.type.MushroomType
                         }
                     }
                 }

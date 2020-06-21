@@ -27,7 +27,7 @@ declare namespace javax {
                          * @since 1.4
                          */
                         // @ts-ignore
-                        mouseWheelMoved(e: java.awt.event.MouseWheelEvent): void
+                        public mouseWheelMoved(e: java.awt.event.MouseWheelEvent): void
                     }
                 }
             }

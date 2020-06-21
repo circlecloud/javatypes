@@ -64,7 +64,7 @@ declare namespace javax {
                  *          <tt>ExtendedRequest.requestName</tt> component.
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                getID(): string
                 /**
                  * Retrieves the ASN.1 BER encoded value of the LDAP extended operation
                  * request. Null is returned if the value is absent.
@@ -79,7 +79,7 @@ declare namespace javax {
                  *  because the request contains insufficient or invalid data/state.
                  */
                 // @ts-ignore
-                getEncodedValue(): byte[]
+                getEncodedValue(): number /*byte*/[]
                 /**
                  * Creates the response object that corresponds to this request.
                  * <p>
@@ -109,7 +109,7 @@ declare namespace javax {
                  * @see ExtendedResponse
                  */
                 // @ts-ignore
-                createExtendedResponse(id: string, berValue: number /*byte*/[], offset: number /*int*/, length: number /*int*/): javax.naming.ldap.ExtendedResponse
+                createExtendedResponse(id: java.lang.String | string, berValue: number /*byte*/[], offset: number /*int*/, length: number /*int*/): javax.naming.ldap.ExtendedResponse
             }
         }
     }

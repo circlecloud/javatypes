@@ -7,52 +7,52 @@ declare namespace org {
             // @ts-ignore
             class AttributeModifier extends java.lang.Object implements org.bukkit.configuration.serialization.ConfigurationSerializable {
                 // @ts-ignore
-                constructor(name: string, amount: number /*double*/, operation: org.bukkit.attribute.AttributeModifier.Operation)
+                constructor(name: java.lang.String | string, amount: number /*double*/, operation: org.bukkit.attribute.AttributeModifier.Operation)
                 // @ts-ignore
-                constructor(uuid: java.util.UUID, name: string, amount: number /*double*/, operation: org.bukkit.attribute.AttributeModifier.Operation)
+                constructor(uuid: java.util.UUID, name: java.lang.String | string, amount: number /*double*/, operation: org.bukkit.attribute.AttributeModifier.Operation)
                 // @ts-ignore
-                constructor(uuid: java.util.UUID, name: string, amount: number /*double*/, operation: org.bukkit.attribute.AttributeModifier.Operation, slot: org.bukkit.inventory.EquipmentSlot)
+                constructor(uuid: java.util.UUID, name: java.lang.String | string, amount: number /*double*/, operation: org.bukkit.attribute.AttributeModifier.Operation, slot: org.bukkit.inventory.EquipmentSlot)
                 /**
                  * Get the unique ID for this modifier.
                  * @return unique id
                  */
                 // @ts-ignore
-                getUniqueId(): java.util.UUID
+                public getUniqueId(): java.util.UUID
                 /**
                  * Get the name of this modifier.
                  * @return name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Get the amount by which this modifier will apply its {@link Operation}.
                  * @return modification amount
                  */
                 // @ts-ignore
-                getAmount(): double
+                public getAmount(): number /*double*/
                 /**
                  * Get the operation this modifier will apply.
                  * @return operation
                  */
                 // @ts-ignore
-                getOperation(): org.bukkit.attribute.AttributeModifier.Operation
+                public getOperation(): org.bukkit.attribute.AttributeModifier.Operation
                 /**
                  * Get the {@link EquipmentSlot} this AttributeModifier is active on,
                  * or null if this modifier is applicable for any slot.
                  * @return the slot
                  */
                 // @ts-ignore
-                getSlot(): org.bukkit.inventory.EquipmentSlot
+                public getSlot(): org.bukkit.inventory.EquipmentSlot
                 // @ts-ignore
-                serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                deserialize(args: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.attribute.AttributeModifier
+                public static deserialize(args: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.attribute.AttributeModifier
             }
         }
     }

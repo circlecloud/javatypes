@@ -17,7 +17,7 @@ declare namespace org {
                  * @param entry The item to register
                  */
                 // @ts-ignore
-                register(key: string, entry: org.spongepowered.api.GameDictionary.Entry): void
+                register(key: java.lang.String | string, entry: org.spongepowered.api.GameDictionary.Entry): void
                 /**
                  * Retrieves the entries registered for the given key. The stack sizes are
                  * set to 1.
@@ -25,14 +25,14 @@ declare namespace org {
                  * @return The entries registered for the given key
                  */
                 // @ts-ignore
-                get(key: string): java.util.Set<org.spongepowered.api.GameDictionary.Entry>
+                get(key: java.lang.String | string): Array<org.spongepowered.api.GameDictionary.Entry>
                 /**
                  * Retrieves all entries registered in this game dictionary, mapped by their
                  * key.
                  * @return A map of all entries registered
                  */
                 // @ts-ignore
-                getAll(): <any>
+                getAll(): object
             }
         }
     }

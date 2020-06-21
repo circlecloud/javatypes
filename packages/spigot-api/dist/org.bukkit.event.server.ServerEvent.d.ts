@@ -6,7 +6,7 @@ declare namespace org {
                  * Miscellaneous server events
                  */
                 // @ts-ignore
-                class ServerEvent extends org.bukkit.event.Event {
+                abstract class ServerEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore

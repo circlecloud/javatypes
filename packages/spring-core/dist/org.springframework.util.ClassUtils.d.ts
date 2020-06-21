@@ -13,24 +13,24 @@ declare namespace org {
              * @see ReflectionUtils
              */
             // @ts-ignore
-            class ClassUtils extends java.lang.Object {
+            abstract class ClassUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Suffix for array class names: {@code "[]"}.
                  */
                 // @ts-ignore
-                readonly ARRAY_SUFFIX: string
+                public static readonly ARRAY_SUFFIX: java.lang.String | string
                 /**
                  * The CGLIB class separator: {@code "$$"}.
                  */
                 // @ts-ignore
-                readonly CGLIB_CLASS_SEPARATOR: string
+                public static readonly CGLIB_CLASS_SEPARATOR: java.lang.String | string
                 /**
                  * The ".class" file suffix.
                  */
                 // @ts-ignore
-                readonly CLASS_FILE_SUFFIX: string
+                public static readonly CLASS_FILE_SUFFIX: java.lang.String | string
                 /**
                  * Return the default ClassLoader to use: typically the thread context
                  * ClassLoader, if available; the ClassLoader that loaded the ClassUtils
@@ -46,7 +46,7 @@ declare namespace org {
                  * @see ClassLoader#getSystemClassLoader()
                  */
                 // @ts-ignore
-                getDefaultClassLoader(): java.lang.ClassLoader
+                public static getDefaultClassLoader(): java.lang.ClassLoader
                 /**
                  * Override the thread context ClassLoader with the environment's bean ClassLoader
                  * if necessary, i.e. if the bean ClassLoader is not equivalent to the thread
@@ -55,7 +55,7 @@ declare namespace org {
                  * @return the original thread context ClassLoader, or {#code null} if not overridden
                  */
                 // @ts-ignore
-                overrideThreadContextClassLoader(classLoaderToUse: java.lang.ClassLoader): java.lang.ClassLoader
+                public static overrideThreadContextClassLoader(classLoaderToUse: java.lang.ClassLoader): java.lang.ClassLoader
                 /**
                  * Replacement for {@code Class.forName()} that also returns Class instances
                  * for primitives (e.g. "int") and array class names (e.g. "String[]").
@@ -70,7 +70,7 @@ declare namespace org {
                  * @see Class#forName(String, boolean, ClassLoader)
                  */
                 // @ts-ignore
-                forName(name: string, classLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public static forName(name: java.lang.String | string, classLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Resolve the given class name into a Class instance. Supports
                  * primitives (like "int") and array class names (like "String[]").
@@ -90,7 +90,7 @@ declare namespace org {
                  * @see #forName(String, ClassLoader)
                  */
                 // @ts-ignore
-                resolveClassName(className: string, classLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public static resolveClassName(className: java.lang.String | string, classLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Determine whether the {@link Class} identified by the supplied name is present
                  * and can be loaded. Will return {@code false} if either the class or
@@ -106,7 +106,7 @@ declare namespace org {
                  *  for a superclass or interface implemented by the class to be checked here)
                  */
                 // @ts-ignore
-                isPresent(className: string, classLoader: java.lang.ClassLoader): boolean
+                public static isPresent(className: java.lang.String | string, classLoader: java.lang.ClassLoader): boolean
                 /**
                  * Check whether the given class is visible in the given ClassLoader.
                  * @param clazz the class to check (typically an interface)
@@ -114,7 +114,7 @@ declare namespace org {
                  *  (may be {#code null} in which case this method will always return {@code true})
                  */
                 // @ts-ignore
-                isVisible(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): boolean
+                public static isVisible(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): boolean
                 /**
                  * Check whether the given class is cache-safe in the given context,
                  * i.e. whether it is loaded by the given ClassLoader or a parent of it.
@@ -123,7 +123,7 @@ declare namespace org {
                  *  (may be {#code null} which indicates the system class loader)
                  */
                 // @ts-ignore
-                isCacheSafe(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): boolean
+                public static isCacheSafe(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): boolean
                 /**
                  * Resolve the given class name as primitive class, if appropriate,
                  * according to the JVM's naming rules for primitive classes.
@@ -135,7 +135,7 @@ declare namespace org {
                  *  a primitive class or primitive array class
                  */
                 // @ts-ignore
-                resolvePrimitiveClassName(name: string): java.lang.Class<?>
+                public static resolvePrimitiveClassName(name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Check if the given class represents a primitive wrapper,
                  * i.e. Boolean, Byte, Character, Short, Integer, Long, Float, Double, or
@@ -144,7 +144,7 @@ declare namespace org {
                  * @return whether the given class is a primitive wrapper class
                  */
                 // @ts-ignore
-                isPrimitiveWrapper(clazz: java.lang.Class<any>): boolean
+                public static isPrimitiveWrapper(clazz: java.lang.Class<any>): boolean
                 /**
                  * Check if the given class represents a primitive (i.e. boolean, byte,
                  * char, short, int, long, float, or double), {@code void}, or a wrapper for
@@ -155,7 +155,7 @@ declare namespace org {
                  *  a wrapper class
                  */
                 // @ts-ignore
-                isPrimitiveOrWrapper(clazz: java.lang.Class<any>): boolean
+                public static isPrimitiveOrWrapper(clazz: java.lang.Class<any>): boolean
                 /**
                  * Check if the given class represents an array of primitives,
                  * i.e. boolean, byte, char, short, int, long, float, or double.
@@ -163,7 +163,7 @@ declare namespace org {
                  * @return whether the given class is a primitive array class
                  */
                 // @ts-ignore
-                isPrimitiveArray(clazz: java.lang.Class<any>): boolean
+                public static isPrimitiveArray(clazz: java.lang.Class<any>): boolean
                 /**
                  * Check if the given class represents an array of primitive wrappers,
                  * i.e. Boolean, Byte, Character, Short, Integer, Long, Float, or Double.
@@ -171,7 +171,7 @@ declare namespace org {
                  * @return whether the given class is a primitive wrapper array class
                  */
                 // @ts-ignore
-                isPrimitiveWrapperArray(clazz: java.lang.Class<any>): boolean
+                public static isPrimitiveWrapperArray(clazz: java.lang.Class<any>): boolean
                 /**
                  * Resolve the given class if it is a primitive class,
                  * returning the corresponding primitive wrapper type instead.
@@ -179,7 +179,7 @@ declare namespace org {
                  * @return the original class, or a primitive wrapper for the original primitive type
                  */
                 // @ts-ignore
-                resolvePrimitiveIfNecessary(clazz: java.lang.Class<any>): java.lang.Class<?>
+                public static resolvePrimitiveIfNecessary(clazz: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Check if the right-hand side type may be assigned to the left-hand side
                  * type, assuming setting by reflection. Considers primitive wrapper
@@ -190,7 +190,7 @@ declare namespace org {
                  * @see TypeUtils#isAssignable(java.lang.reflect.Type, java.lang.reflect.Type)
                  */
                 // @ts-ignore
-                isAssignable(lhsType: java.lang.Class<any>, rhsType: java.lang.Class<any>): boolean
+                public static isAssignable(lhsType: java.lang.Class<any>, rhsType: java.lang.Class<any>): boolean
                 /**
                  * Determine if the given type is assignable from the given value,
                  * assuming setting by reflection. Considers primitive wrapper classes
@@ -200,21 +200,21 @@ declare namespace org {
                  * @return if the type is assignable from the value
                  */
                 // @ts-ignore
-                isAssignableValue(type: java.lang.Class<any>, value: any): boolean
+                public static isAssignableValue(type: java.lang.Class<any>, value: java.lang.Object | any): boolean
                 /**
                  * Convert a "/"-based resource path to a "."-based fully qualified class name.
                  * @param resourcePath the resource path pointing to a class
                  * @return the corresponding fully qualified class name
                  */
                 // @ts-ignore
-                convertResourcePathToClassName(resourcePath: string): java.lang.String
+                public static convertResourcePathToClassName(resourcePath: java.lang.String | string): string
                 /**
                  * Convert a "."-based fully qualified class name to a "/"-based resource path.
                  * @param className the fully qualified class name
                  * @return the corresponding resource path, pointing to the class
                  */
                 // @ts-ignore
-                convertClassNameToResourcePath(className: string): java.lang.String
+                public static convertClassNameToResourcePath(className: java.lang.String | string): string
                 /**
                  * Return a path suitable for use with {@code ClassLoader.getResource}
                  * (also suitable for use with {@code Class.getResource} by prepending a
@@ -232,7 +232,7 @@ declare namespace org {
                  * @see Class#getResource
                  */
                 // @ts-ignore
-                addResourcePathToPackagePath(clazz: java.lang.Class<any>, resourceName: string): java.lang.String
+                public static addResourcePathToPackagePath(clazz: java.lang.Class<any>, resourceName: java.lang.String | string): string
                 /**
                  * Given an input class object, return a string which consists of the
                  * class's package name as a pathname, i.e., all dots ('.') are replaced by
@@ -248,7 +248,7 @@ declare namespace org {
                  * @see Class#getResource
                  */
                 // @ts-ignore
-                classPackageAsResourcePath(clazz: java.lang.Class<any>): java.lang.String
+                public static classPackageAsResourcePath(clazz: java.lang.Class<any>): string
                 /**
                  * Build a String that consists of the names of the classes/interfaces
                  * in the given array.
@@ -259,7 +259,7 @@ declare namespace org {
                  * @see java.util.AbstractCollection#toString()
                  */
                 // @ts-ignore
-                classNamesToString(...classes: java.lang.Class[]): java.lang.String
+                public static classNamesToString(...classes: java.lang.Class<any>[]): string
                 /**
                  * Build a String that consists of the names of the classes/interfaces
                  * in the given collection.
@@ -270,7 +270,7 @@ declare namespace org {
                  * @see java.util.AbstractCollection#toString()
                  */
                 // @ts-ignore
-                classNamesToString(classes: Array<java.lang.Class<any>>): java.lang.String
+                public static classNamesToString(classes: java.util.Collection<java.lang.Class<any>> | Array<java.lang.Class<any>>): string
                 /**
                  * Copy the given {@code Collection} into a {@code Class} array.
                  * <p>The {@code Collection} must contain {@code Class} elements only.
@@ -280,7 +280,7 @@ declare namespace org {
                  * @see StringUtils#toStringArray
                  */
                 // @ts-ignore
-                toClassArray(collection: Array<java.lang.Class<any>>): java.lang.Class[]
+                public static toClassArray(collection: java.util.Collection<java.lang.Class<any>> | Array<java.lang.Class<any>>): java.lang.Class<any>[]
                 /**
                  * Return all interfaces that the given instance implements as an array,
                  * including ones implemented by superclasses.
@@ -288,7 +288,7 @@ declare namespace org {
                  * @return all interfaces that the given instance implements as an array
                  */
                 // @ts-ignore
-                getAllInterfaces(instance: any): java.lang.Class[]
+                public static getAllInterfaces(instance: java.lang.Object | any): java.lang.Class<any>[]
                 /**
                  * Return all interfaces that the given class implements as an array,
                  * including ones implemented by superclasses.
@@ -297,7 +297,7 @@ declare namespace org {
                  * @return all interfaces that the given object implements as an array
                  */
                 // @ts-ignore
-                getAllInterfacesForClass(clazz: java.lang.Class<any>): java.lang.Class[]
+                public static getAllInterfacesForClass(clazz: java.lang.Class<any>): java.lang.Class<any>[]
                 /**
                  * Return all interfaces that the given class implements as an array,
                  * including ones implemented by superclasses.
@@ -308,7 +308,7 @@ declare namespace org {
                  * @return all interfaces that the given object implements as an array
                  */
                 // @ts-ignore
-                getAllInterfacesForClass(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): java.lang.Class[]
+                public static getAllInterfacesForClass(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): java.lang.Class<any>[]
                 /**
                  * Return all interfaces that the given instance implements as a Set,
                  * including ones implemented by superclasses.
@@ -316,7 +316,7 @@ declare namespace org {
                  * @return all interfaces that the given instance implements as a Set
                  */
                 // @ts-ignore
-                getAllInterfacesAsSet(instance: any): java.util.Set<java.lang.Class<?>>
+                public static getAllInterfacesAsSet(instance: java.lang.Object | any): Array<java.lang.Class<any>>
                 /**
                  * Return all interfaces that the given class implements as a Set,
                  * including ones implemented by superclasses.
@@ -325,7 +325,7 @@ declare namespace org {
                  * @return all interfaces that the given object implements as a Set
                  */
                 // @ts-ignore
-                getAllInterfacesForClassAsSet(clazz: java.lang.Class<any>): java.util.Set<java.lang.Class<?>>
+                public static getAllInterfacesForClassAsSet(clazz: java.lang.Class<any>): Array<java.lang.Class<any>>
                 /**
                  * Return all interfaces that the given class implements as a Set,
                  * including ones implemented by superclasses.
@@ -336,7 +336,7 @@ declare namespace org {
                  * @return all interfaces that the given object implements as a Set
                  */
                 // @ts-ignore
-                getAllInterfacesForClassAsSet(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): java.util.Set<java.lang.Class<?>>
+                public static getAllInterfacesForClassAsSet(clazz: java.lang.Class<any>, classLoader: java.lang.ClassLoader): Array<java.lang.Class<any>>
                 /**
                  * Create a composite interface Class for the given interfaces,
                  * implementing the given interfaces in one single Class.
@@ -349,7 +349,7 @@ declare namespace org {
                  * @see java.lang.reflect.Proxy#getProxyClass
                  */
                 // @ts-ignore
-                createCompositeInterface(interfaces: java.lang.Class[], classLoader: java.lang.ClassLoader): java.lang.Class<?>
+                public static createCompositeInterface(interfaces: java.lang.Class<any>[], classLoader: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * Determine the common ancestor of the given classes, if any.
                  * @param clazz1 the class to introspect
@@ -360,7 +360,7 @@ declare namespace org {
                  * @since 3.2.6
                  */
                 // @ts-ignore
-                determineCommonAncestor(clazz1: java.lang.Class<any>, clazz2: java.lang.Class<any>): java.lang.Class<?>
+                public static determineCommonAncestor(clazz1: java.lang.Class<any>, clazz2: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Determine whether the given interface is a common Java language interface:
                  * {@link Serializable}, {@link Externalizable}, {@link Closeable}, {@link AutoCloseable},
@@ -371,7 +371,7 @@ declare namespace org {
                  * @since 5.0.3
                  */
                 // @ts-ignore
-                isJavaLanguageInterface(ifc: java.lang.Class<any>): boolean
+                public static isJavaLanguageInterface(ifc: java.lang.Class<any>): boolean
                 /**
                  * Determine if the supplied class is an <em>inner class</em>,
                  * i.e. a non-static member of an enclosing class.
@@ -380,7 +380,7 @@ declare namespace org {
                  * @see Class#isMemberClass()
                  */
                 // @ts-ignore
-                isInnerClass(clazz: java.lang.Class<any>): boolean
+                public static isInnerClass(clazz: java.lang.Class<any>): boolean
                 /**
                  * Check whether the given object is a CGLIB proxy.
                  * @param object the object to check
@@ -389,7 +389,7 @@ declare namespace org {
                  * @deprecated as of 5.2, in favor of custom (possibly narrower) checks
                  */
                 // @ts-ignore
-                isCglibProxy(object: any): boolean
+                public static isCglibProxy(object: java.lang.Object | any): boolean
                 /**
                  * Check whether the specified class is a CGLIB-generated class.
                  * @param clazz the class to check
@@ -397,14 +397,14 @@ declare namespace org {
                  * @deprecated as of 5.2, in favor of custom (possibly narrower) checks
                  */
                 // @ts-ignore
-                isCglibProxyClass(clazz: java.lang.Class<any>): boolean
+                public static isCglibProxyClass(clazz: java.lang.Class<any>): boolean
                 /**
                  * Check whether the specified class name is a CGLIB-generated class.
                  * @param className the class name to check
                  * @deprecated as of 5.2, in favor of custom (possibly narrower) checks
                  */
                 // @ts-ignore
-                isCglibProxyClassName(className: string): boolean
+                public static isCglibProxyClassName(className: java.lang.String | string): boolean
                 /**
                  * Return the user-defined class for the given instance: usually simply
                  * the class of the given instance, but the original class in case of a
@@ -413,7 +413,7 @@ declare namespace org {
                  * @return the user-defined class
                  */
                 // @ts-ignore
-                getUserClass(instance: any): java.lang.Class<?>
+                public static getUserClass(instance: java.lang.Object | any): java.lang.Class<any>
                 /**
                  * Return the user-defined class for the given class: usually simply the given
                  * class, but the original class in case of a CGLIB-generated subclass.
@@ -421,7 +421,7 @@ declare namespace org {
                  * @return the user-defined class
                  */
                 // @ts-ignore
-                getUserClass(clazz: java.lang.Class<any>): java.lang.Class<?>
+                public static getUserClass(clazz: java.lang.Class<any>): java.lang.Class<any>
                 /**
                  * Return a descriptive name for the given object's type: usually simply
                  * the class name, but component type class name + "[]" for arrays,
@@ -430,14 +430,14 @@ declare namespace org {
                  * @return the qualified name of the class
                  */
                 // @ts-ignore
-                getDescriptiveType(value: any): java.lang.String
+                public static getDescriptiveType(value: java.lang.Object | any): string
                 /**
                  * Check whether the given class matches the user-specified type name.
                  * @param clazz the class to check
                  * @param typeName the type name to match
                  */
                 // @ts-ignore
-                matchesTypeName(clazz: java.lang.Class<any>, typeName: string): boolean
+                public static matchesTypeName(clazz: java.lang.Class<any>, typeName: java.lang.String | string): boolean
                 /**
                  * Get the class name without the qualified package name.
                  * @param className the className to get the short name for
@@ -445,14 +445,14 @@ declare namespace org {
                  * @throws IllegalArgumentException if the className is empty
                  */
                 // @ts-ignore
-                getShortName(className: string): java.lang.String
+                public static getShortName(className: java.lang.String | string): string
                 /**
                  * Get the class name without the qualified package name.
                  * @param clazz the class to get the short name for
                  * @return the class name of the class without the package name
                  */
                 // @ts-ignore
-                getShortName(clazz: java.lang.Class<any>): java.lang.String
+                public static getShortName(clazz: java.lang.Class<any>): string
                 /**
                  * Return the short string name of a Java class in uncapitalized JavaBeans
                  * property format. Strips the outer class name in case of an inner class.
@@ -461,7 +461,7 @@ declare namespace org {
                  * @see java.beans.Introspector#decapitalize(String)
                  */
                 // @ts-ignore
-                getShortNameAsProperty(clazz: java.lang.Class<any>): java.lang.String
+                public static getShortNameAsProperty(clazz: java.lang.Class<any>): string
                 /**
                  * Determine the name of the class file, relative to the containing
                  * package: e.g. "String.class"
@@ -469,7 +469,7 @@ declare namespace org {
                  * @return the file name of the ".class" file
                  */
                 // @ts-ignore
-                getClassFileName(clazz: java.lang.Class<any>): java.lang.String
+                public static getClassFileName(clazz: java.lang.Class<any>): string
                 /**
                  * Determine the name of the package of the given class,
                  * e.g. "java.lang" for the {@code java.lang.String} class.
@@ -478,7 +478,7 @@ declare namespace org {
                  *  is defined in the default package
                  */
                 // @ts-ignore
-                getPackageName(clazz: java.lang.Class<any>): java.lang.String
+                public static getPackageName(clazz: java.lang.Class<any>): string
                 /**
                  * Determine the name of the package of the given fully-qualified class name,
                  * e.g. "java.lang" for the {@code java.lang.String} class name.
@@ -487,7 +487,7 @@ declare namespace org {
                  *  is defined in the default package
                  */
                 // @ts-ignore
-                getPackageName(fqClassName: string): java.lang.String
+                public static getPackageName(fqClassName: java.lang.String | string): string
                 /**
                  * Return the qualified name of the given class: usually simply
                  * the class name, but component type class name + "[]" for arrays.
@@ -495,7 +495,7 @@ declare namespace org {
                  * @return the qualified name of the class
                  */
                 // @ts-ignore
-                getQualifiedName(clazz: java.lang.Class<any>): java.lang.String
+                public static getQualifiedName(clazz: java.lang.Class<any>): string
                 /**
                  * Return the qualified name of the given method, consisting of
                  * fully qualified interface/class name + "." + method name.
@@ -503,7 +503,7 @@ declare namespace org {
                  * @return the qualified name of the method
                  */
                 // @ts-ignore
-                getQualifiedMethodName(method: java.lang.reflect.Method): java.lang.String
+                public static getQualifiedMethodName(method: java.lang.reflect.Method): string
                 /**
                  * Return the qualified name of the given method, consisting of
                  * fully qualified interface/class name + "." + method name.
@@ -514,7 +514,7 @@ declare namespace org {
                  * @since 4.3.4
                  */
                 // @ts-ignore
-                getQualifiedMethodName(method: java.lang.reflect.Method, clazz: java.lang.Class<any>): java.lang.String
+                public static getQualifiedMethodName(method: java.lang.reflect.Method, clazz: java.lang.Class<any>): string
                 /**
                  * Determine whether the given class has a public constructor with the given signature.
                  * <p>Essentially translates {@code NoSuchMethodException} to "false".
@@ -524,7 +524,7 @@ declare namespace org {
                  * @see Class#getConstructor
                  */
                 // @ts-ignore
-                hasConstructor(clazz: java.lang.Class<any>, ...paramTypes: java.lang.Class[]): boolean
+                public static hasConstructor(clazz: java.lang.Class<any>, ...paramTypes: java.lang.Class<any>[]): boolean
                 /**
                  * Determine whether the given class has a public constructor with the given signature,
                  * and return it if available (else return {@code null}).
@@ -535,7 +535,7 @@ declare namespace org {
                  * @see Class#getConstructor
                  */
                 // @ts-ignore
-                getConstructorIfAvailable<T>(clazz: java.lang.Class<T>, ...paramTypes: java.lang.Class[]): java.lang.reflect.Constructor<T>
+                public static getConstructorIfAvailable<T>(clazz: java.lang.Class<T>, ...paramTypes: java.lang.Class<any>[]): java.lang.reflect.Constructor<T>
                 /**
                  * Determine whether the given class has a public method with the given signature.
                  * @param clazz the clazz to analyze
@@ -544,7 +544,7 @@ declare namespace org {
                  * @since 5.2.3
                  */
                 // @ts-ignore
-                hasMethod(clazz: java.lang.Class<any>, method: java.lang.reflect.Method): boolean
+                public static hasMethod(clazz: java.lang.Class<any>, method: java.lang.reflect.Method): boolean
                 /**
                  * Determine whether the given class has a public method with the given signature.
                  * <p>Essentially translates {@code NoSuchMethodException} to "false".
@@ -555,7 +555,7 @@ declare namespace org {
                  * @see Class#getMethod
                  */
                 // @ts-ignore
-                hasMethod(clazz: java.lang.Class<any>, methodName: string, ...paramTypes: java.lang.Class[]): boolean
+                public static hasMethod(clazz: java.lang.Class<any>, methodName: java.lang.String | string, ...paramTypes: java.lang.Class<any>[]): boolean
                 /**
                  * Determine whether the given class has a public method with the given signature,
                  * and return it if available (else throws an {@code IllegalStateException}).
@@ -571,7 +571,7 @@ declare namespace org {
                  * @see Class#getMethod
                  */
                 // @ts-ignore
-                getMethod(clazz: java.lang.Class<any>, methodName: string, ...paramTypes: java.lang.Class[]): java.lang.reflect.Method
+                public static getMethod(clazz: java.lang.Class<any>, methodName: java.lang.String | string, ...paramTypes: java.lang.Class<any>[]): java.lang.reflect.Method
                 /**
                  * Determine whether the given class has a public method with the given signature,
                  * and return it if available (else return {@code null}).
@@ -586,7 +586,7 @@ declare namespace org {
                  * @see Class#getMethod
                  */
                 // @ts-ignore
-                getMethodIfAvailable(clazz: java.lang.Class<any>, methodName: string, ...paramTypes: java.lang.Class[]): java.lang.reflect.Method
+                public static getMethodIfAvailable(clazz: java.lang.Class<any>, methodName: java.lang.String | string, ...paramTypes: java.lang.Class<any>[]): java.lang.reflect.Method
                 /**
                  * Return the number of methods with a given name (with any argument types),
                  * for the given class and/or its superclasses. Includes non-public methods.
@@ -595,7 +595,7 @@ declare namespace org {
                  * @return the number of methods with the given name
                  */
                 // @ts-ignore
-                getMethodCountForName(clazz: java.lang.Class<any>, methodName: string): int
+                public static getMethodCountForName(clazz: java.lang.Class<any>, methodName: java.lang.String | string): number /*int*/
                 /**
                  * Does the given class or one of its superclasses at least have one or more
                  * methods with the supplied name (with any argument types)?
@@ -605,7 +605,7 @@ declare namespace org {
                  * @return whether there is at least one method with the given name
                  */
                 // @ts-ignore
-                hasAtLeastOneMethodWithName(clazz: java.lang.Class<any>, methodName: string): boolean
+                public static hasAtLeastOneMethodWithName(clazz: java.lang.Class<any>, methodName: java.lang.String | string): boolean
                 /**
                  * Given a method, which may come from an interface, and a target class used
                  * in the current reflective invocation, find the corresponding target method
@@ -628,7 +628,7 @@ declare namespace org {
                  * @see #getInterfaceMethodIfPossible
                  */
                 // @ts-ignore
-                getMostSpecificMethod(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.lang.reflect.Method
+                public static getMostSpecificMethod(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.lang.reflect.Method
                 /**
                  * Determine a corresponding interface method for the given method handle, if possible.
                  * <p>This is particularly useful for arriving at a public exported type on Jigsaw
@@ -639,7 +639,7 @@ declare namespace org {
                  * @see #getMostSpecificMethod
                  */
                 // @ts-ignore
-                getInterfaceMethodIfPossible(method: java.lang.reflect.Method): java.lang.reflect.Method
+                public static getInterfaceMethodIfPossible(method: java.lang.reflect.Method): java.lang.reflect.Method
                 /**
                  * Determine whether the given method is declared by the user or at least pointing to
                  * a user-declared method.
@@ -652,7 +652,7 @@ declare namespace org {
                  * @return {#code true} if the method can be considered as user-declared; [@code false} otherwise
                  */
                 // @ts-ignore
-                isUserLevelMethod(method: java.lang.reflect.Method): boolean
+                public static isUserLevelMethod(method: java.lang.reflect.Method): boolean
                 /**
                  * Return a public static method of a class.
                  * @param clazz the class which defines the method
@@ -662,7 +662,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the method name is blank or the clazz is null
                  */
                 // @ts-ignore
-                getStaticMethod(clazz: java.lang.Class<any>, methodName: string, ...args: java.lang.Class[]): java.lang.reflect.Method
+                public static getStaticMethod(clazz: java.lang.Class<any>, methodName: java.lang.String | string, ...args: java.lang.Class<any>[]): java.lang.reflect.Method
             }
         }
     }

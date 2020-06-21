@@ -59,7 +59,7 @@ declare namespace org {
                      * normalize to object-based types and not work with primitive types directly.
                      */
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     /**
                      * The type of the backing class, method parameter, field, or property
                      * described by this TypeDescriptor.
@@ -69,13 +69,13 @@ declare namespace org {
                      * @see #getObjectType()
                      */
                     // @ts-ignore
-                    getType(): java.lang.Class<?>
+                    public getType(): java.lang.Class<any>
                     /**
                      * Return the underlying {@link ResolvableType}.
                      * @since 4.0
                      */
                     // @ts-ignore
-                    getResolvableType(): org.springframework.core.ResolvableType
+                    public getResolvableType(): org.springframework.core.ResolvableType
                     /**
                      * Return the underlying source of the descriptor. Will return a {@link Field},
                      * {@link MethodParameter} or {@link Type} depending on how the {@link TypeDescriptor}
@@ -84,7 +84,7 @@ declare namespace org {
                      * @since 4.0
                      */
                     // @ts-ignore
-                    getSource(): java.lang.Object
+                    public getSource(): any
                     /**
                      * Narrows this {@link TypeDescriptor} by setting its type to the class of the
                      * provided value.
@@ -102,7 +102,7 @@ declare namespace org {
                      *  class of the provided value)
                      */
                     // @ts-ignore
-                    narrow(value: any): org.springframework.core.convert.TypeDescriptor
+                    public narrow(value: java.lang.Object | any): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Cast this {@link TypeDescriptor} to a superclass or implemented interface
                      * preserving annotations and nested type context.
@@ -112,23 +112,23 @@ declare namespace org {
                      * @since 3.2
                      */
                     // @ts-ignore
-                    upcast(superType: java.lang.Class<any>): org.springframework.core.convert.TypeDescriptor
+                    public upcast(superType: java.lang.Class<any>): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Return the name of this type: the fully qualified class name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Is this type a primitive type?
                      */
                     // @ts-ignore
-                    isPrimitive(): boolean
+                    public isPrimitive(): boolean
                     /**
                      * Return the annotations associated with this type descriptor, if any.
                      * @return the annotations, or an empty array if none
                      */
                     // @ts-ignore
-                    getAnnotations(): java.lang.annotation.Annotation[]
+                    public getAnnotations(): java.lang.annotation.Annotation[]
                     /**
                      * Determine if this type descriptor has the specified annotation.
                      * <p>As of Spring Framework 4.2, this method supports arbitrary levels
@@ -137,7 +137,7 @@ declare namespace org {
                      * @return <tt>true</tt> if the annotation is present
                      */
                     // @ts-ignore
-                    hasAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                    public hasAnnotation(annotationType: java.lang.Class<any>): boolean
                     /**
                      * Obtain the annotation of the specified {@code annotationType} that is on this type descriptor.
                      * <p>As of Spring Framework 4.2, this method supports arbitrary levels of meta-annotations.
@@ -145,7 +145,7 @@ declare namespace org {
                      * @return the annotation, or {#code null} if no such annotation exists on this type descriptor
                      */
                     // @ts-ignore
-                    getAnnotation<T extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<T>): T
+                    public getAnnotation<T extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<T>): T
                     /**
                      * Returns true if an object of this type descriptor can be assigned to the location
                      * described by the given type descriptor.
@@ -161,17 +161,17 @@ declare namespace org {
                      * @see #getObjectType()
                      */
                     // @ts-ignore
-                    isAssignableTo(typeDescriptor: org.springframework.core.convert.TypeDescriptor): boolean
+                    public isAssignableTo(typeDescriptor: org.springframework.core.convert.TypeDescriptor): boolean
                     /**
                      * Is this type a {@link Collection} type?
                      */
                     // @ts-ignore
-                    isCollection(): boolean
+                    public isCollection(): boolean
                     /**
                      * Is this type an array type?
                      */
                     // @ts-ignore
-                    isArray(): boolean
+                    public isArray(): boolean
                     /**
                      * If this type is an array, returns the array's component type.
                      * If this type is a {@code Stream}, returns the stream's component type.
@@ -182,7 +182,7 @@ declare namespace org {
                      * @see #elementTypeDescriptor(Object)
                      */
                     // @ts-ignore
-                    getElementTypeDescriptor(): org.springframework.core.convert.TypeDescriptor
+                    public getElementTypeDescriptor(): org.springframework.core.convert.TypeDescriptor
                     /**
                      * If this type is a {@link Collection} or an array, creates a element TypeDescriptor
                      * from the provided collection or array element.
@@ -201,12 +201,12 @@ declare namespace org {
                      * @see #narrow(Object)
                      */
                     // @ts-ignore
-                    elementTypeDescriptor(element: any): org.springframework.core.convert.TypeDescriptor
+                    public elementTypeDescriptor(element: java.lang.Object | any): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Is this type a {@link Map} type?
                      */
                     // @ts-ignore
-                    isMap(): boolean
+                    public isMap(): boolean
                     /**
                      * If this type is a {@link Map} and its key type is parameterized,
                      * returns the map's key type. If the Map's key type is not parameterized,
@@ -216,7 +216,7 @@ declare namespace org {
                      * @throws IllegalStateException if this type is not a {#code java.util.Map}
                      */
                     // @ts-ignore
-                    getMapKeyTypeDescriptor(): org.springframework.core.convert.TypeDescriptor
+                    public getMapKeyTypeDescriptor(): org.springframework.core.convert.TypeDescriptor
                     /**
                      * If this type is a {@link Map}, creates a mapKey {@link TypeDescriptor}
                      * from the provided map key.
@@ -235,7 +235,7 @@ declare namespace org {
                      * @see #narrow(Object)
                      */
                     // @ts-ignore
-                    getMapKeyTypeDescriptor(mapKey: any): org.springframework.core.convert.TypeDescriptor
+                    public getMapKeyTypeDescriptor(mapKey: java.lang.Object | any): org.springframework.core.convert.TypeDescriptor
                     /**
                      * If this type is a {@link Map} and its value type is parameterized,
                      * returns the map's value type.
@@ -246,7 +246,7 @@ declare namespace org {
                      * @throws IllegalStateException if this type is not a {#code java.util.Map}
                      */
                     // @ts-ignore
-                    getMapValueTypeDescriptor(): org.springframework.core.convert.TypeDescriptor
+                    public getMapValueTypeDescriptor(): org.springframework.core.convert.TypeDescriptor
                     /**
                      * If this type is a {@link Map}, creates a mapValue {@link TypeDescriptor}
                      * from the provided map value.
@@ -265,13 +265,13 @@ declare namespace org {
                      * @see #narrow(Object)
                      */
                     // @ts-ignore
-                    getMapValueTypeDescriptor(mapValue: any): org.springframework.core.convert.TypeDescriptor
+                    public getMapValueTypeDescriptor(mapValue: java.lang.Object | any): org.springframework.core.convert.TypeDescriptor
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Create a new type descriptor for an object.
                      * <p>Use this factory method to introspect a source object before asking the
@@ -282,7 +282,7 @@ declare namespace org {
                      * @return the type descriptor
                      */
                     // @ts-ignore
-                    forObject(source: any): org.springframework.core.convert.TypeDescriptor
+                    public static forObject(source: java.lang.Object | any): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a new type descriptor from the given type.
                      * <p>Use this to instruct the conversion system to convert an object to a
@@ -294,7 +294,7 @@ declare namespace org {
                      * @return the corresponding type descriptor
                      */
                     // @ts-ignore
-                    valueOf(type: java.lang.Class<any>): org.springframework.core.convert.TypeDescriptor
+                    public static valueOf(type: java.lang.Class<any>): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a new type descriptor from a {@link java.util.Collection} type.
                      * <p>Useful for converting to typed Collections.
@@ -308,7 +308,7 @@ declare namespace org {
                      * @return the collection type descriptor
                      */
                     // @ts-ignore
-                    collection(collectionType: java.lang.Class<any>, elementTypeDescriptor: org.springframework.core.convert.TypeDescriptor): org.springframework.core.convert.TypeDescriptor
+                    public static collection(collectionType: java.lang.Class<any>, elementTypeDescriptor: org.springframework.core.convert.TypeDescriptor): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a new type descriptor from a {@link java.util.Map} type.
                      * <p>Useful for converting to typed Maps.
@@ -324,7 +324,7 @@ declare namespace org {
                      * @return the map type descriptor
                      */
                     // @ts-ignore
-                    map(mapType: java.lang.Class<any>, keyTypeDescriptor: org.springframework.core.convert.TypeDescriptor, valueTypeDescriptor: org.springframework.core.convert.TypeDescriptor): org.springframework.core.convert.TypeDescriptor
+                    public static map(mapType: java.lang.Class<any>, keyTypeDescriptor: org.springframework.core.convert.TypeDescriptor, valueTypeDescriptor: org.springframework.core.convert.TypeDescriptor): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a new type descriptor as an array of the specified type.
                      * <p>For example to create a {@code Map<String,String>[]} use:
@@ -336,7 +336,7 @@ declare namespace org {
                      * @since 3.2.1
                      */
                     // @ts-ignore
-                    array(elementTypeDescriptor: org.springframework.core.convert.TypeDescriptor): org.springframework.core.convert.TypeDescriptor
+                    public static array(elementTypeDescriptor: org.springframework.core.convert.TypeDescriptor): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a type descriptor for a nested type declared within the method parameter.
                      * <p>For example, if the methodParameter is a {@code List<String>} and the
@@ -360,7 +360,7 @@ declare namespace org {
                      *  specified nesting level are not of collection, array, or map types
                      */
                     // @ts-ignore
-                    nested(methodParameter: org.springframework.core.MethodParameter, nestingLevel: number /*int*/): org.springframework.core.convert.TypeDescriptor
+                    public static nested(methodParameter: org.springframework.core.MethodParameter, nestingLevel: number /*int*/): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a type descriptor for a nested type declared within the field.
                      * <p>For example, if the field is a {@code List<String>} and the nesting
@@ -383,7 +383,7 @@ declare namespace org {
                      *  level are not of collection, array, or map types
                      */
                     // @ts-ignore
-                    nested(field: java.lang.reflect.Field, nestingLevel: number /*int*/): org.springframework.core.convert.TypeDescriptor
+                    public static nested(field: java.lang.reflect.Field, nestingLevel: number /*int*/): org.springframework.core.convert.TypeDescriptor
                     /**
                      * Create a type descriptor for a nested type declared within the property.
                      * <p>For example, if the property is a {@code List<String>} and the nesting
@@ -406,7 +406,7 @@ declare namespace org {
                      *  level are not of collection, array, or map types
                      */
                     // @ts-ignore
-                    nested(property: org.springframework.core.convert.Property, nestingLevel: number /*int*/): org.springframework.core.convert.TypeDescriptor
+                    public static nested(property: org.springframework.core.convert.Property, nestingLevel: number /*int*/): org.springframework.core.convert.TypeDescriptor
                 }
             }
         }

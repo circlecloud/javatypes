@@ -21,13 +21,13 @@ declare namespace javax {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                getAccessibleText(): javax.accessibility.AccessibleText
+                public getAccessibleText(): javax.accessibility.AccessibleText
                 /**
                  * Returns the number of accessible children of the object.
                  * @return the number of accessible children of the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the specified Accessible child of the object.  The Accessible
                  * children of an Accessible object are zero-based, so the first child
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @see #getAccessibleChildrenCount
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns the Accessible child, if one exists, contained at the local
                  * coordinate Point.
@@ -47,7 +47,7 @@ declare namespace javax {
                  *  otherwise null
                  */
                 // @ts-ignore
-                getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
             }
         }
     }

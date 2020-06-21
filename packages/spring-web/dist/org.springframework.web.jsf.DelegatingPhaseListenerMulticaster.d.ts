@@ -34,11 +34,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getPhaseId(): PhaseId
+                    public getPhaseId(): PhaseId
                     // @ts-ignore
-                    beforePhase(event: PhaseEvent): void
+                    public beforePhase(event: PhaseEvent): void
                     // @ts-ignore
-                    afterPhase(event: PhaseEvent): void
+                    public afterPhase(event: PhaseEvent): void
                     /**
                      * Obtain the delegate PhaseListener beans from the Spring root WebApplicationContext.
                      * @param facesContext the current JSF context
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.ListableBeanFactory#getBeansOfType(Class)
                      */
                     // @ts-ignore
-                    getDelegates(facesContext: FacesContext): java.util.Collection<PhaseListener>
+                    getDelegates(facesContext: FacesContext): Array<PhaseListener>
                     /**
                      * Retrieve the Spring BeanFactory to delegate bean name resolution to.
                      * <p>The default implementation delegates to {@code getWebApplicationContext}.

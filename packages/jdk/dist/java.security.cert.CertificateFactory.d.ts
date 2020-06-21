@@ -82,7 +82,7 @@ declare namespace java {
                  * @param type the certificate type.
                  */
                 // @ts-ignore
-                constructor(certFacSpi: java.security.cert.CertificateFactorySpi, provider: java.security.Provider, type: string)
+                constructor(certFacSpi: java.security.cert.CertificateFactorySpi, provider: java.security.Provider, type: java.lang.String | string)
                 /**
                  * Returns a certificate factory object that implements the
                  * specified certificate type.
@@ -105,7 +105,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(type: string): java.security.cert.CertificateFactory
+                public static getInstance(type: java.lang.String | string): java.security.cert.CertificateFactory
                 /**
                  * Returns a certificate factory object for the specified
                  * certificate type.
@@ -132,7 +132,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(type: string, provider: string): java.security.cert.CertificateFactory
+                public static getInstance(type: java.lang.String | string, provider: java.lang.String | string): java.security.cert.CertificateFactory
                 /**
                  * Returns a certificate factory object for the specified
                  * certificate type.
@@ -156,13 +156,13 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getInstance(type: string, provider: java.security.Provider): java.security.cert.CertificateFactory
+                public static getInstance(type: java.lang.String | string, provider: java.security.Provider): java.security.cert.CertificateFactory
                 /**
                  * Returns the provider of this certificate factory.
                  * @return the provider of this certificate factory.
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Returns the name of the certificate type associated with this
                  * certificate factory.
@@ -170,7 +170,7 @@ declare namespace java {
                  *  certificate factory.
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Generates a certificate object and initializes it with
                  * the data read from the input stream {@code inStream}.
@@ -202,7 +202,7 @@ declare namespace java {
                  * @exception CertificateException on parsing errors.
                  */
                 // @ts-ignore
-                generateCertificate(inStream: java.io.InputStream): java.security.cert.Certificate
+                public generateCertificate(inStream: java.io.InputStream): java.security.cert.Certificate
                 /**
                  * Returns an iteration of the {@code CertPath} encodings supported
                  * by this certificate factory, with the default encoding first. See
@@ -219,7 +219,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCertPathEncodings(): java.util.Iterator<java.lang.String>
+                public getCertPathEncodings(): java.util.Iterator<java.lang.String | string>
                 /**
                  * Generates a {@code CertPath} object and initializes it with
                  * the data read from the {@code InputStream} inStream. The data
@@ -233,7 +233,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                generateCertPath(inStream: java.io.InputStream): java.security.cert.CertPath
+                public generateCertPath(inStream: java.io.InputStream): java.security.cert.CertPath
                 /**
                  * Generates a {@code CertPath} object and initializes it with
                  * the data read from the {@code InputStream} inStream. The data
@@ -251,7 +251,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                generateCertPath(inStream: java.io.InputStream, encoding: string): java.security.cert.CertPath
+                public generateCertPath(inStream: java.io.InputStream, encoding: java.lang.String | string): java.security.cert.CertPath
                 /**
                  * Generates a {@code CertPath} object and initializes it with
                  * a {@code List} of {@code Certificate}s.
@@ -266,7 +266,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                generateCertPath(certificates: Array<java.security.cert.Certificate>): java.security.cert.CertPath
+                public generateCertPath(certificates: java.util.List<any> | Array<any>): java.security.cert.CertPath
                 /**
                  * Returns a (possibly empty) collection view of the certificates read
                  * from the given input stream {@code inStream}.
@@ -297,7 +297,7 @@ declare namespace java {
                  * @exception CertificateException on parsing errors.
                  */
                 // @ts-ignore
-                generateCertificates(inStream: java.io.InputStream): java.util.Collection<? extends java.security.cert.Certificate>
+                public generateCertificates(inStream: java.io.InputStream): Array<any>
                 /**
                  * Generates a certificate revocation list (CRL) object and initializes it
                  * with the data read from the input stream {@code inStream}.
@@ -323,7 +323,7 @@ declare namespace java {
                  * @exception CRLException on parsing errors.
                  */
                 // @ts-ignore
-                generateCRL(inStream: java.io.InputStream): java.security.cert.CRL
+                public generateCRL(inStream: java.io.InputStream): java.security.cert.CRL
                 /**
                  * Returns a (possibly empty) collection view of the CRLs read
                  * from the given input stream {@code inStream}.
@@ -352,7 +352,7 @@ declare namespace java {
                  * @exception CRLException on parsing errors.
                  */
                 // @ts-ignore
-                generateCRLs(inStream: java.io.InputStream): java.util.Collection<? extends java.security.cert.CRL>
+                public generateCRLs(inStream: java.io.InputStream): Array<any>
             }
         }
     }

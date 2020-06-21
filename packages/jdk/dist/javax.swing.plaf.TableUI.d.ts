@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Alan Chung
              */
             // @ts-ignore
-            class TableUI extends javax.swing.plaf.ComponentUI {
+            abstract class TableUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

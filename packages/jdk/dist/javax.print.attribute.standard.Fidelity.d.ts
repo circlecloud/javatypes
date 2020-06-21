@@ -33,18 +33,18 @@ declare namespace javax {
                      * The job must be printed exactly as specified. or else rejected.
                      */
                     // @ts-ignore
-                    readonly FIDELITY_TRUE: javax.print.attribute.standard.Fidelity
+                    public static readonly FIDELITY_TRUE: javax.print.attribute.standard.Fidelity
                     /**
                      * The printer should make reasonable attempts to print the job,
                      * even if it cannot print it exactly as specified.
                      */
                     // @ts-ignore
-                    readonly FIDELITY_FALSE: javax.print.attribute.standard.Fidelity
+                    public static readonly FIDELITY_FALSE: javax.print.attribute.standard.Fidelity
                     /**
                      * Returns the string table for class Fidelity.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class Fidelity.
                      */
@@ -59,7 +59,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

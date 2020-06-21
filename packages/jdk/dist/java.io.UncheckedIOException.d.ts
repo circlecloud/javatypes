@@ -16,7 +16,7 @@ declare namespace java {
              *           if the cause is {#code null}
              */
             // @ts-ignore
-            constructor(message: string, cause: java.io.IOException)
+            constructor(message: java.lang.String | string, cause: java.io.IOException)
             /**
              * Constructs an instance of this class.
              * @param cause

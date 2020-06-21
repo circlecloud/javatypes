@@ -12,20 +12,20 @@ declare namespace javax {
                 // @ts-ignore
                 class SmallAttributeSet extends java.lang.Object implements javax.swing.text.AttributeSet {
                     // @ts-ignore
-                    constructor(attributes: any[])
+                    constructor(attributes: java.lang.Object[] | any[])
                     // @ts-ignore
                     constructor(attrs: javax.swing.text.AttributeSet)
                     /**
                      * Returns a string showing the key/value pairs
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns a hashcode for this set of attributes.
                      * @return a hashcode value for this set of attributes.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Compares this object to the specified object.
                      * The result is <code>true</code> if the object is an equivalent
@@ -35,21 +35,21 @@ declare namespace javax {
                      *             <code>false</code> otherwise.
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Clones a set of attributes.  Since the set is immutable, a
                      * clone is basically the same set.
                      * @return the set of attributes
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                     /**
                      * Gets the number of attributes that are defined.
                      * @return the number of attributes
                      * @see AttributeSet#getAttributeCount
                      */
                     // @ts-ignore
-                    getAttributeCount(): int
+                    public getAttributeCount(): number /*int*/
                     /**
                      * Checks whether a given attribute is defined.
                      * @param key the attribute key
@@ -57,7 +57,7 @@ declare namespace javax {
                      * @see AttributeSet#isDefined
                      */
                     // @ts-ignore
-                    isDefined(key: any): boolean
+                    public isDefined(key: java.lang.Object | any): boolean
                     /**
                      * Checks whether two attribute sets are equal.
                      * @param attr the attribute set to check against
@@ -65,14 +65,14 @@ declare namespace javax {
                      * @see AttributeSet#isEqual
                      */
                     // @ts-ignore
-                    isEqual(attr: javax.swing.text.AttributeSet): boolean
+                    public isEqual(attr: javax.swing.text.AttributeSet): boolean
                     /**
                      * Copies a set of attributes.
                      * @return the copy
                      * @see AttributeSet#copyAttributes
                      */
                     // @ts-ignore
-                    copyAttributes(): javax.swing.text.AttributeSet
+                    public copyAttributes(): javax.swing.text.AttributeSet
                     /**
                      * Gets the value of an attribute.
                      * @param key the attribute name
@@ -80,14 +80,14 @@ declare namespace javax {
                      * @see AttributeSet#getAttribute
                      */
                     // @ts-ignore
-                    getAttribute(key: any): java.lang.Object
+                    public getAttribute(key: java.lang.Object | any): any
                     /**
                      * Gets the names of all attributes.
                      * @return the attribute names
                      * @see AttributeSet#getAttributeNames
                      */
                     // @ts-ignore
-                    getAttributeNames(): java.util.Enumeration<?>
+                    public getAttributeNames(): java.util.Enumeration<any>
                     /**
                      * Checks whether a given attribute name/value is defined.
                      * @param name the attribute name
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @see AttributeSet#containsAttribute
                      */
                     // @ts-ignore
-                    containsAttribute(name: any, value: any): boolean
+                    public containsAttribute(name: java.lang.Object | any, value: java.lang.Object | any): boolean
                     /**
                      * Checks whether the attribute set contains all of
                      * the given attributes.
@@ -105,7 +105,7 @@ declare namespace javax {
                      * @see AttributeSet#containsAttributes
                      */
                     // @ts-ignore
-                    containsAttributes(attrs: javax.swing.text.AttributeSet): boolean
+                    public containsAttributes(attrs: javax.swing.text.AttributeSet): boolean
                     /**
                      * If not overriden, the resolving parent defaults to
                      * the parent element.
@@ -113,7 +113,7 @@ declare namespace javax {
                      * @see AttributeSet#getResolveParent
                      */
                     // @ts-ignore
-                    getResolveParent(): javax.swing.text.AttributeSet
+                    public getResolveParent(): javax.swing.text.AttributeSet
                 }
             }
         }

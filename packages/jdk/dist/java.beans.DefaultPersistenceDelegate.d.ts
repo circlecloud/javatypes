@@ -50,7 +50,7 @@ declare namespace java {
              * @see #instantiate
              */
             // @ts-ignore
-            constructor(constructorPropertyNames: string[])
+            constructor(constructorPropertyNames: java.lang.String[] | string[])
             /**
              * If the number of arguments in the specified constructor is non-zero and
              * the class of <code>oldInstance</code> explicitly declares an "equals" method
@@ -64,7 +64,7 @@ declare namespace java {
              * @see #DefaultPersistenceDelegate(String[])
              */
             // @ts-ignore
-            mutatesTo(oldInstance: any, newInstance: any): boolean
+            mutatesTo(oldInstance: java.lang.Object | any, newInstance: java.lang.Object | any): boolean
             /**
              * This default implementation of the <code>instantiate</code> method returns
              * an expression containing the predefined method name "new" which denotes a
@@ -78,7 +78,7 @@ declare namespace java {
              * @see #DefaultPersistenceDelegate(String[])
              */
             // @ts-ignore
-            instantiate(oldInstance: any, out: java.beans.Encoder): java.beans.Expression
+            instantiate(oldInstance: java.lang.Object | any, out: java.beans.Encoder): java.beans.Expression
             /**
              * This default implementation of the <code>initialize</code> method assumes
              * all state held in objects of this type is exposed via the
@@ -126,7 +126,7 @@ declare namespace java {
              * @see java.beans.PropertyDescriptor
              */
             // @ts-ignore
-            initialize(type: java.lang.Class<any>, oldInstance: any, newInstance: any, out: java.beans.Encoder): void
+            initialize(type: java.lang.Class<any>, oldInstance: java.lang.Object | any, newInstance: java.lang.Object | any, out: java.beans.Encoder): void
         }
     }
 }

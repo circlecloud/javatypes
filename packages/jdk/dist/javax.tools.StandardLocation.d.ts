@@ -7,10 +7,47 @@ declare namespace javax {
          */
         // @ts-ignore
         class StandardLocation extends java.lang.Enum<javax.tools.StandardLocation> implements javax.tools.JavaFileManager.Location {
+            /**
+             * Location of new class files.
+             */
+            // @ts-ignore
+            readonly CLASS_OUTPUT: javax.tools.StandardLocation
+            /**
+             * Location of new source files.
+             */
+            // @ts-ignore
+            readonly SOURCE_OUTPUT: javax.tools.StandardLocation
+            /**
+             * Location to search for user class files.
+             */
+            // @ts-ignore
+            readonly CLASS_PATH: javax.tools.StandardLocation
+            /**
+             * Location to search for existing source files.
+             */
+            // @ts-ignore
+            readonly SOURCE_PATH: javax.tools.StandardLocation
+            /**
+             * Location to search for annotation processors.
+             */
+            // @ts-ignore
+            readonly ANNOTATION_PROCESSOR_PATH: javax.tools.StandardLocation
+            /**
+             * Location to search for platform classes.  Sometimes called
+             * the boot class path.
+             */
+            // @ts-ignore
+            readonly PLATFORM_CLASS_PATH: javax.tools.StandardLocation
+            /**
+             * Location of new native header files.
+             * @since 1.8
+             */
+            // @ts-ignore
+            readonly NATIVE_HEADER_OUTPUT: javax.tools.StandardLocation
             // @ts-ignore
             values(): javax.tools.StandardLocation[]
             // @ts-ignore
-            valueOf(name: string): javax.tools.StandardLocation
+            valueOf(name: java.lang.String | string): javax.tools.StandardLocation
             /**
              * Gets a location object with the given name.  The following
              * property must hold: {@code locationFor(x) ==
@@ -21,9 +58,9 @@ declare namespace javax {
              * @return a location
              */
             // @ts-ignore
-            locationFor(name: string): javax.tools.JavaFileManager.Location
+            locationFor(name: java.lang.String | string): javax.tools.JavaFileManager.Location
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             // @ts-ignore
             isOutputLocation(): boolean
         }

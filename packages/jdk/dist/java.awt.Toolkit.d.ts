@@ -50,11 +50,11 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Toolkit extends java.lang.Object {
+        abstract class Toolkit extends java.lang.Object {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            readonly desktopProperties: java.util.Map<java.lang.String, java.lang.Object>
+            readonly desktopProperties: java.util.Map<java.lang.String | string, java.lang.Object | any>
             // @ts-ignore
             readonly desktopPropsSupport: java.beans.PropertyChangeSupport
             /**
@@ -359,7 +359,7 @@ declare namespace java {
              * @deprecated see java.awt.GraphicsEnvironment#getAllFonts
              */
             // @ts-ignore
-            abstract getFontPeer(name: string, style: number /*int*/): java.awt.peer.FontPeer
+            abstract getFontPeer(name: java.lang.String | string, style: number /*int*/): java.awt.peer.FontPeer
             /**
              * Fills in the integer array that is supplied as an argument
              * with the current system color values.
@@ -401,7 +401,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setDynamicLayout(dynamic: boolean): void
+            public setDynamicLayout(dynamic: boolean): void
             /**
              * Returns whether the layout of Containers is validated dynamically
              * during resizing, or statically, after resizing is complete.
@@ -448,7 +448,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isDynamicLayoutActive(): boolean
+            public isDynamicLayoutActive(): boolean
             /**
              * Gets the size of the screen.  On systems with multiple displays, the
              * primary display is used.  Multi-screen aware display dimensions are
@@ -462,7 +462,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            abstract getScreenSize(): java.awt.Dimension
+            public abstract getScreenSize(): java.awt.Dimension
             /**
              * Returns the screen resolution in dots-per-inch.
              * @return this toolkit's screen resolution, in dots-per-inch.
@@ -471,7 +471,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            abstract getScreenResolution(): int
+            public abstract getScreenResolution(): number /*int*/
             /**
              * Gets the insets of the screen.
              * @param gc a <code>GraphicsConfiguration</code>
@@ -482,7 +482,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getScreenInsets(gc: java.awt.GraphicsConfiguration): java.awt.Insets
+            public getScreenInsets(gc: java.awt.GraphicsConfiguration): java.awt.Insets
             /**
              * Determines the color model of this toolkit's screen.
              * <p>
@@ -502,7 +502,7 @@ declare namespace java {
              * @see java.awt.Component#getColorModel
              */
             // @ts-ignore
-            abstract getColorModel(): java.awt.image.ColorModel
+            public abstract getColorModel(): java.awt.image.ColorModel
             /**
              * Returns the names of the available fonts in this toolkit.<p>
              * For 1.1, the following font names are deprecated (the replacement
@@ -520,7 +520,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#getAvailableFontFamilyNames()
              */
             // @ts-ignore
-            abstract getFontList(): java.lang.String[]
+            public abstract getFontList(): string[]
             /**
              * Gets the screen device metrics for rendering of the font.
              * @param font   a font
@@ -532,7 +532,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#getScreenDevices
              */
             // @ts-ignore
-            abstract getFontMetrics(font: java.awt.Font): java.awt.FontMetrics
+            public abstract getFontMetrics(font: java.awt.Font): java.awt.FontMetrics
             /**
              * Synchronizes this toolkit's graphics state. Some window systems
              * may do buffering of graphics events.
@@ -541,7 +541,7 @@ declare namespace java {
              * for animation.
              */
             // @ts-ignore
-            abstract sync(): void
+            public abstract sync(): void
             /**
              * Gets the default toolkit.
              * <p>
@@ -572,7 +572,7 @@ declare namespace java {
              *                  if one could not be accessed or instantiated.
              */
             // @ts-ignore
-            getDefaultToolkit(): java.awt.Toolkit
+            public static getDefaultToolkit(): java.awt.Toolkit
             /**
              * Returns an image which gets pixel data from the specified file,
              * whose format can be either GIF, JPEG or PNG.
@@ -606,7 +606,7 @@ declare namespace java {
              * @see #createImage(java.lang.String)
              */
             // @ts-ignore
-            abstract getImage(filename: string): java.awt.Image
+            public abstract getImage(filename: java.lang.String | string): java.awt.Image
             /**
              * Returns an image which gets pixel data from the specified URL.
              * The pixel data referenced by the specified URL must be in one
@@ -647,7 +647,7 @@ declare namespace java {
              * @see #createImage(java.net.URL)
              */
             // @ts-ignore
-            abstract getImage(url: java.net.URL): java.awt.Image
+            public abstract getImage(url: java.net.URL): java.awt.Image
             /**
              * Returns an image which gets pixel data from the specified file.
              * The returned Image is a new object which will not be shared
@@ -666,7 +666,7 @@ declare namespace java {
              * @see #getImage(java.lang.String)
              */
             // @ts-ignore
-            abstract createImage(filename: string): java.awt.Image
+            public abstract createImage(filename: java.lang.String | string): java.awt.Image
             /**
              * Returns an image which gets pixel data from the specified URL.
              * The returned Image is a new object which will not be shared
@@ -691,7 +691,7 @@ declare namespace java {
              * @see #getImage(java.net.URL)
              */
             // @ts-ignore
-            abstract createImage(url: java.net.URL): java.awt.Image
+            public abstract createImage(url: java.net.URL): java.awt.Image
             /**
              * Prepares an image for rendering.
              * <p>
@@ -727,7 +727,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver
              */
             // @ts-ignore
-            abstract prepareImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): boolean
+            public abstract prepareImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): boolean
             /**
              * Indicates the construction status of a specified image that is
              * being prepared for display.
@@ -767,7 +767,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver
              */
             // @ts-ignore
-            abstract checkImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): int
+            public abstract checkImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): number /*int*/
             /**
              * Creates an image with the specified image producer.
              * @param producer the image producer to be used.
@@ -777,7 +777,7 @@ declare namespace java {
              * @see java.awt.Component#createImage(java.awt.image.ImageProducer)
              */
             // @ts-ignore
-            abstract createImage(producer: java.awt.image.ImageProducer): java.awt.Image
+            public abstract createImage(producer: java.awt.image.ImageProducer): java.awt.Image
             /**
              * Creates an image which decodes the image stored in the specified
              * byte array.
@@ -790,7 +790,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            createImage(imagedata: number /*byte*/[]): java.awt.Image
+            public createImage(imagedata: number /*byte*/[]): java.awt.Image
             /**
              * Creates an image which decodes the image stored in the specified
              * byte array, and at the specified offset and length.
@@ -805,7 +805,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract createImage(imagedata: number /*byte*/[], imageoffset: number /*int*/, imagelength: number /*int*/): java.awt.Image
+            public abstract createImage(imagedata: number /*byte*/[], imageoffset: number /*int*/, imagelength: number /*int*/): java.awt.Image
             /**
              * Gets a <code>PrintJob</code> object which is the result of initiating
              * a print operation on the toolkit's platform.
@@ -839,7 +839,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract getPrintJob(frame: java.awt.Frame, jobtitle: string, props: java.util.Properties): java.awt.PrintJob
+            public abstract getPrintJob(frame: java.awt.Frame, jobtitle: java.lang.String | string, props: java.util.Properties): java.awt.PrintJob
             /**
              * Gets a <code>PrintJob</code> object which is the result of initiating
              * a print operation on the toolkit's platform.
@@ -889,14 +889,14 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getPrintJob(frame: java.awt.Frame, jobtitle: string, jobAttributes: java.awt.JobAttributes, pageAttributes: java.awt.PageAttributes): java.awt.PrintJob
+            public getPrintJob(frame: java.awt.Frame, jobtitle: java.lang.String | string, jobAttributes: java.awt.JobAttributes, pageAttributes: java.awt.PageAttributes): java.awt.PrintJob
             /**
              * Emits an audio beep depending on native system settings and hardware
              * capabilities.
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract beep(): void
+            public abstract beep(): void
             /**
              * Gets the singleton instance of the system Clipboard which interfaces
              * with clipboard facilities provided by the native platform. This
@@ -938,7 +938,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract getSystemClipboard(): java.awt.datatransfer.Clipboard
+            public abstract getSystemClipboard(): java.awt.datatransfer.Clipboard
             /**
              * Gets the singleton instance of the system selection as a
              * <code>Clipboard</code> object. This allows an application to read and
@@ -984,7 +984,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getSystemSelection(): java.awt.datatransfer.Clipboard
+            public getSystemSelection(): java.awt.datatransfer.Clipboard
             /**
              * Determines which modifier key is the appropriate accelerator
              * key for menu shortcuts.
@@ -1006,7 +1006,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMenuShortcutKeyMask(): int
+            public getMenuShortcutKeyMask(): number /*int*/
             /**
              * Returns whether the given locking key on the keyboard is currently in
              * its "on" state.
@@ -1026,7 +1026,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getLockingKeyState(keyCode: number /*int*/): boolean
+            public getLockingKeyState(keyCode: number /*int*/): boolean
             /**
              * Sets the state of the given locking key on the keyboard.
              * Valid key codes are
@@ -1049,13 +1049,13 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            setLockingKeyState(keyCode: number /*int*/, on: boolean): void
+            public setLockingKeyState(keyCode: number /*int*/, on: boolean): void
             /**
              * Give native peers the ability to query the native container
              * given a native component (eg the direct parent may be lightweight).
              */
             // @ts-ignore
-            getNativeContainer(c: java.awt.Component): java.awt.Container
+            static getNativeContainer(c: java.awt.Component): java.awt.Container
             /**
              * Creates a new custom cursor object.
              * If the image to display is invalid, the cursor will be hidden (made
@@ -1075,7 +1075,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            createCustomCursor(cursor: java.awt.Image, hotSpot: java.awt.Point, name: string): java.awt.Cursor
+            public createCustomCursor(cursor: java.awt.Image, hotSpot: java.awt.Point, name: java.lang.String | string): java.awt.Cursor
             /**
              * Returns the supported cursor dimension which is closest to the desired
              * sizes.  Systems which only support a single cursor size will return that
@@ -1100,7 +1100,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBestCursorSize(preferredWidth: number /*int*/, preferredHeight: number /*int*/): java.awt.Dimension
+            public getBestCursorSize(preferredWidth: number /*int*/, preferredHeight: number /*int*/): java.awt.Dimension
             /**
              * Returns the maximum number of colors the Toolkit supports in a custom cursor
              * palette.<p>
@@ -1118,7 +1118,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getMaximumCursorColors(): int
+            public getMaximumCursorColors(): number /*int*/
             /**
              * Returns whether Toolkit supports this state for
              * <code>Frame</code>s.  This method tells whether the <em>UI
@@ -1157,13 +1157,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFrameStateSupported(state: number /*int*/): boolean
+            public isFrameStateSupported(state: number /*int*/): boolean
             /**
              * Gets a property with the specified key and default.
              * This method returns defaultValue if the property is not found.
              */
             // @ts-ignore
-            getProperty(key: string, defaultValue: string): java.lang.String
+            public static getProperty(key: java.lang.String | string, defaultValue: java.lang.String | string): string
             /**
              * Get the application's or applet's EventQueue instance.
              * Depending on the Toolkit implementation, different EventQueues
@@ -1180,7 +1180,7 @@ declare namespace java {
              * @see java.awt.AWTPermission
              */
             // @ts-ignore
-            getSystemEventQueue(): java.awt.EventQueue
+            public getSystemEventQueue(): java.awt.EventQueue
             /**
              * Gets the application's or applet's <code>EventQueue</code>
              * instance, without checking access.  For security reasons,
@@ -1196,7 +1196,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            abstract createDragSourceContextPeer(dge: java.awt.dnd.DragGestureEvent): java.awt.dnd.peer.DragSourceContextPeer
+            public abstract createDragSourceContextPeer(dge: java.awt.dnd.DragGestureEvent): java.awt.dnd.peer.DragSourceContextPeer
             /**
              * Creates a concrete, platform dependent, subclass of the abstract
              * DragGestureRecognizer class requested, and associates it with the
@@ -1212,7 +1212,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            createDragGestureRecognizer<T extends java.awt.dnd.DragGestureRecognizer>(abstractRecognizerClass: java.lang.Class<T>, ds: java.awt.dnd.DragSource, c: java.awt.Component, srcActions: number /*int*/, dgl: java.awt.dnd.DragGestureListener): T
+            public createDragGestureRecognizer<T extends java.awt.dnd.DragGestureRecognizer>(abstractRecognizerClass: java.lang.Class<T>, ds: java.awt.dnd.DragSource, c: java.awt.Component, srcActions: number /*int*/, dgl: java.awt.dnd.DragGestureListener): T
             /**
              * Obtains a value for the specified desktop property.
              * A desktop property is a uniquely named value for a resource that
@@ -1222,18 +1222,18 @@ declare namespace java {
              * <a href="doc-files/DesktopProperties.html">AWT Desktop Properties</a>.
              */
             // @ts-ignore
-            getDesktopProperty(propertyName: string): java.lang.Object
+            public getDesktopProperty(propertyName: java.lang.String | string): any
             /**
              * Sets the named desktop property to the specified value and fires a
              * property change event to notify any listeners that the value has changed.
              */
             // @ts-ignore
-            setDesktopProperty(name: string, newValue: any): void
+            setDesktopProperty(name: java.lang.String | string, newValue: java.lang.Object | any): void
             /**
              * an opportunity to lazily evaluate desktop property values.
              */
             // @ts-ignore
-            lazilyLoadDesktopProperty(name: string): java.lang.Object
+            lazilyLoadDesktopProperty(name: java.lang.String | string): any
             /**
              * initializeDesktopProperties
              */
@@ -1252,7 +1252,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            addPropertyChangeListener(name: string, pcl: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(name: java.lang.String | string, pcl: java.beans.PropertyChangeListener): void
             /**
              * Removes the specified property change listener for the named
              * desktop property. When a {@link java.beans.PropertyChangeListenerProxy} object
@@ -1267,7 +1267,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            removePropertyChangeListener(name: string, pcl: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(name: java.lang.String | string, pcl: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the property change listeners
              * registered on this toolkit. The returned array
@@ -1280,7 +1280,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
             /**
              * Returns an array of all property change listeners
              * associated with the specified name of a desktop property.
@@ -1292,7 +1292,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(propertyName: string): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(propertyName: java.lang.String | string): java.beans.PropertyChangeListener[]
             /**
              * Returns whether the always-on-top mode is supported by this toolkit.
              * To detect whether the always-on-top mode is supported for a
@@ -1304,7 +1304,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            isAlwaysOnTopSupported(): boolean
+            public isAlwaysOnTopSupported(): boolean
             /**
              * Returns whether the given modality type is supported by this toolkit. If
              * a dialog with unsupported modality type is created, then
@@ -1318,7 +1318,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            abstract isModalityTypeSupported(modalityType: java.awt.Dialog.ModalityType): boolean
+            public abstract isModalityTypeSupported(modalityType: java.awt.Dialog.ModalityType): boolean
             /**
              * Returns whether the given modal exclusion type is supported by this
              * toolkit. If an unsupported modal exclusion type property is set on a window,
@@ -1332,7 +1332,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            abstract isModalExclusionTypeSupported(modalExclusionType: java.awt.Dialog.ModalExclusionType): boolean
+            public abstract isModalExclusionTypeSupported(modalExclusionType: java.awt.Dialog.ModalExclusionType): boolean
             /**
              * Adds an AWTEventListener to receive all AWTEvents dispatched
              * system-wide that conform to the given <code>eventMask</code>.
@@ -1366,7 +1366,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            addAWTEventListener(listener: java.awt.event.AWTEventListener, eventMask: number /*long*/): void
+            public addAWTEventListener(listener: java.awt.event.AWTEventListener, eventMask: number /*long*/): void
             /**
              * Removes an AWTEventListener from receiving dispatched AWTEvents.
              * <p>
@@ -1394,7 +1394,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            removeAWTEventListener(listener: java.awt.event.AWTEventListener): void
+            public removeAWTEventListener(listener: java.awt.event.AWTEventListener): void
             /**
              * Returns an array of all the <code>AWTEventListener</code>s
              * registered on this toolkit.
@@ -1422,7 +1422,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAWTEventListeners(): java.awt.event.AWTEventListener[]
+            public getAWTEventListeners(): java.awt.event.AWTEventListener[]
             /**
              * Returns an array of all the <code>AWTEventListener</code>s
              * registered on this toolkit which listen to all of the event
@@ -1454,7 +1454,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAWTEventListeners(eventMask: number /*long*/): java.awt.event.AWTEventListener[]
+            public getAWTEventListeners(eventMask: number /*long*/): java.awt.event.AWTEventListener[]
             /**
              * Returns a map of visual attributes for the abstract level description
              * of the given input method highlight, or null if no mapping is found.
@@ -1468,7 +1468,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            abstract mapInputMethodHighlight(highlight: java.awt.im.InputMethodHighlight): java.util.Map<java.awt.font.TextAttribute, ?>
+            public abstract mapInputMethodHighlight(highlight: java.awt.im.InputMethodHighlight): java.util.Map<java.awt.font.TextAttribute, any>
             /**
              * Reports whether events from extra mouse buttons are allowed to be processed and posted into
              * {@code EventQueue}.
@@ -1497,7 +1497,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            areExtraMouseButtonsEnabled(): boolean
+            public areExtraMouseButtonsEnabled(): boolean
         }
     }
 }

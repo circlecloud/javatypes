@@ -9,11 +9,11 @@ declare namespace org {
                     // @ts-ignore
                     class DirtTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly COARSE_DIRT: org.spongepowered.api.data.type.DirtType
+                        public static readonly COARSE_DIRT: org.spongepowered.api.data.type.DirtType
                         // @ts-ignore
-                        readonly DIRT: org.spongepowered.api.data.type.DirtType
+                        public static readonly DIRT: org.spongepowered.api.data.type.DirtType
                         // @ts-ignore
-                        readonly PODZOL: org.spongepowered.api.data.type.DirtType
+                        public static readonly PODZOL: org.spongepowered.api.data.type.DirtType
                     }
                 }
             }

@@ -42,7 +42,7 @@ declare namespace java {
              * @see java.lang.Runnable
              */
             // @ts-ignore
-            constructor(runnable: java.lang.Runnable, threadName: string)
+            constructor(runnable: java.lang.Runnable, threadName: java.lang.String | string)
             /**
              * Constructs a new Thread with no runnable object and the name provided.
              * The new Thread will belong to the same ThreadGroup as the Thread calling
@@ -52,7 +52,7 @@ declare namespace java {
              * @see java.lang.Runnable
              */
             // @ts-ignore
-            constructor(threadName: string)
+            constructor(threadName: java.lang.String | string)
             /**
              * Constructs a new Thread with a runnable object and a newly generated name.
              * The new Thread will belong to the ThreadGroup passed as parameter.
@@ -87,7 +87,7 @@ declare namespace java {
              * @see java.lang.SecurityManager
              */
             // @ts-ignore
-            constructor(group: java.lang.ThreadGroup, runnable: java.lang.Runnable, threadName: string, stack: number /*long*/)
+            constructor(group: java.lang.ThreadGroup, runnable: java.lang.Runnable, threadName: java.lang.String | string, stack: number /*long*/)
             /**
              * Constructs a new Thread with a runnable object, the given name and
              * belonging to the ThreadGroup passed as parameter.
@@ -104,7 +104,7 @@ declare namespace java {
              * @see java.lang.SecurityManager
              */
             // @ts-ignore
-            constructor(group: java.lang.ThreadGroup, runnable: java.lang.Runnable, threadName: string)
+            constructor(group: java.lang.ThreadGroup, runnable: java.lang.Runnable, threadName: java.lang.String | string)
             /**
              * Constructs a new Thread with no runnable object, the given name and
              * belonging to the ThreadGroup passed as parameter.
@@ -119,29 +119,29 @@ declare namespace java {
              * @see java.lang.SecurityManager
              */
             // @ts-ignore
-            constructor(group: java.lang.ThreadGroup, threadName: string)
+            constructor(group: java.lang.ThreadGroup, threadName: java.lang.String | string)
             /**
              * The maximum priority value for a Thread.
              */
             // @ts-ignore
-            readonly MAX_PRIORITY: number /*int*/
+            public static readonly MAX_PRIORITY: number /*int*/
             /**
              * The minimum priority value for a Thread.
              */
             // @ts-ignore
-            readonly MIN_PRIORITY: number /*int*/
+            public static readonly MIN_PRIORITY: number /*int*/
             /**
              * The default priority value for a Thread.
              */
             // @ts-ignore
-            readonly NORM_PRIORITY: number /*int*/
+            public static readonly NORM_PRIORITY: number /*int*/
             /**
              * Returns how many threads are active in the <code>ThreadGroup</code>
              * which the current thread belongs to.
              * @return Number of Threads
              */
             // @ts-ignore
-            activeCount(): int
+            public static activeCount(): number /*int*/
             /**
              * This method is used for operations that require approval from
              * a SecurityManager. If there's none installed, this method is a no-op.
@@ -151,32 +151,32 @@ declare namespace java {
              * @see java.lang.SecurityManager
              */
             // @ts-ignore
-            checkAccess(): void
+            public checkAccess(): void
             /**
              * Returns the number of stack frames in this thread.
              * @return Number of stack frames
              * @deprecated The semantics of this method are poorly defined and it uses the deprecated suspend() method.
              */
             // @ts-ignore
-            countStackFrames(): int
+            public countStackFrames(): number /*int*/
             /**
              * Answers the instance of Thread that corresponds to the running Thread
              * which calls this method.
              * @return a java.lang.Thread corresponding to the code that called <code>currentThread()</code>
              */
             // @ts-ignore
-            currentThread(): java.lang.Thread
+            public static currentThread(): java.lang.Thread
             /**
              * Destroys the receiver without any monitor cleanup. Not implemented.
              * @deprecated May cause deadlocks.
              */
             // @ts-ignore
-            destroy(): void
+            public destroy(): void
             /**
              * Prints a text representation of the stack for this Thread.
              */
             // @ts-ignore
-            dumpStack(): void
+            public static dumpStack(): void
             /**
              * Copies an array with all Threads which are in the same ThreadGroup as
              * the receiver - and subgroups - into the array <code>threads</code>
@@ -190,7 +190,7 @@ declare namespace java {
              * @see java.lang.SecurityManager
              */
             // @ts-ignore
-            enumerate(threads: java.lang.Thread[]): int
+            public static enumerate(threads: java.lang.Thread[]): number /*int*/
             /**
              * Returns the context ClassLoader for the receiver.
              * @return ClassLoader		The context ClassLoader
@@ -198,26 +198,26 @@ declare namespace java {
              * @see #getContextClassLoader()
              */
             // @ts-ignore
-            getContextClassLoader(): java.lang.ClassLoader
+            public getContextClassLoader(): java.lang.ClassLoader
             /**
              * Answers the name of the receiver.
              * @return the receiver's name (a java.lang.String)
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Answers the priority of the receiver.
              * @return the receiver's priority (an <code>int</code>)
              * @see Thread#setPriority
              */
             // @ts-ignore
-            getPriority(): int
+            public getPriority(): number /*int*/
             /**
              * Answers the ThreadGroup to which the receiver belongs
              * @return the receiver's ThreadGroup
              */
             // @ts-ignore
-            getThreadGroup(): java.lang.ThreadGroup
+            public getThreadGroup(): java.lang.ThreadGroup
             /**
              * Posts an interrupt request to the receiver
              * @exception SecurityException
@@ -228,7 +228,7 @@ declare namespace java {
              * @see Thread#isInterrupted
              */
             // @ts-ignore
-            interrupt(): void
+            public interrupt(): void
             /**
              * Answers a <code>boolean</code> indicating whether the current Thread
              * (<code>currentThread()</code>) has a pending interrupt request
@@ -240,7 +240,7 @@ declare namespace java {
              * @see Thread#isInterrupted
              */
             // @ts-ignore
-            interrupted(): boolean
+            public static interrupted(): boolean
             /**
              * Answers <code>true</code> if the receiver has
              * already been started and still runs code (hasn't died yet).
@@ -250,7 +250,7 @@ declare namespace java {
              * @see Thread#start
              */
             // @ts-ignore
-            isAlive(): boolean
+            public isAlive(): boolean
             /**
              * Answers a <code>boolean</code> indicating whether the receiver
              * is a daemon Thread (<code>true</code>) or not (<code>false</code>)
@@ -261,7 +261,7 @@ declare namespace java {
              * @see Thread#setDaemon
              */
             // @ts-ignore
-            isDaemon(): boolean
+            public isDaemon(): boolean
             /**
              * Answers a <code>boolean</code> indicating whether the receiver
              * has a pending interrupt request (<code>true</code>) or not (<code>false</code>)
@@ -270,7 +270,7 @@ declare namespace java {
              * @see Thread#interrupted
              */
             // @ts-ignore
-            isInterrupted(): boolean
+            public isInterrupted(): boolean
             /**
              * Blocks the current Thread (<code>Thread.currentThread()</code>) until the
              * receiver finishes its execution and dies.
@@ -281,7 +281,7 @@ declare namespace java {
              * @see java.lang.ThreadDeath
              */
             // @ts-ignore
-            join(): void
+            public join(): void
             /**
              * Blocks the current Thread (<code>Thread.currentThread()</code>) until the
              * receiver finishes its execution and dies or the specified timeout expires, whatever
@@ -294,7 +294,7 @@ declare namespace java {
              * @see java.lang.ThreadDeath
              */
             // @ts-ignore
-            join(timeoutInMilliseconds: number /*long*/): void
+            public join(timeoutInMilliseconds: number /*long*/): void
             /**
              * Blocks the current Thread (<code>Thread.currentThread()</code>) until the
              * receiver finishes its execution and dies or the specified timeout expires, whatever
@@ -308,7 +308,7 @@ declare namespace java {
              * @see java.lang.ThreadDeath
              */
             // @ts-ignore
-            join(timeoutInMilliseconds: number /*long*/, nanos: number /*int*/): void
+            public join(timeoutInMilliseconds: number /*long*/, nanos: number /*int*/): void
             /**
              * This is a no-op if the receiver was never suspended, or suspended and already
              * resumed. If the receiver is suspended, however, makes it resume to the point
@@ -319,14 +319,14 @@ declare namespace java {
              * @deprecated Used with deprecated method Thread.suspend().
              */
             // @ts-ignore
-            resume(): void
+            public resume(): void
             /**
              * Calls the <code>run()</code> method of the Runnable object the receiver holds.
              * If no Runnable is set, does nothing.
              * @see Thread#start
              */
             // @ts-ignore
-            run(): void
+            public run(): void
             /**
              * Set the context ClassLoader for the receiver.
              * @param cl		The context ClassLoader
@@ -334,7 +334,7 @@ declare namespace java {
              * @see #getContextClassLoader()
              */
             // @ts-ignore
-            setContextClassLoader(cl: java.lang.ClassLoader): void
+            public setContextClassLoader(cl: java.lang.ClassLoader): void
             /**
              * Set if the receiver is a daemon Thread or not. This can only be done
              * before the Thread starts running.
@@ -344,7 +344,7 @@ declare namespace java {
              * @see Thread#isDaemon
              */
             // @ts-ignore
-            setDaemon(isDaemon: boolean): void
+            public setDaemon(isDaemon: boolean): void
             /**
              * Sets the name of the receiver.
              * @param threadName		new name for the Thread
@@ -353,7 +353,7 @@ declare namespace java {
              * @see Thread#getName
              */
             // @ts-ignore
-            setName(threadName: string): void
+            public setName(threadName: java.lang.String | string): void
             /**
              * Sets the priority of the receiver. Note that the final priority set may be less than the
              * requested value, as it is bounded by the maxPriority() of the receiver's ThreadGroup.
@@ -366,7 +366,7 @@ declare namespace java {
              * @see Thread#getPriority
              */
             // @ts-ignore
-            setPriority(requestedPriority: number /*int*/): void
+            public setPriority(requestedPriority: number /*int*/): void
             /**
              * Causes the thread which sent this message to sleep an interval
              * of time (given in milliseconds). The precision is not guaranteed -
@@ -377,7 +377,7 @@ declare namespace java {
              * @see Thread#interrupt()
              */
             // @ts-ignore
-            sleep(time: number /*long*/): void
+            public static sleep(time: number /*long*/): void
             /**
              * Causes the thread which sent this message to sleep an interval
              * of time (given in milliseconds). The precision is not guaranteed -
@@ -389,7 +389,7 @@ declare namespace java {
              * @see Thread#interrupt()
              */
             // @ts-ignore
-            sleep(time: number /*long*/, nanos: number /*int*/): void
+            public static sleep(time: number /*long*/, nanos: number /*int*/): void
             /**
              * Starts the new Thread of execution. The <code>run()</code> method of the receiver
              * will be called by the receiver Thread itself (and not the Thread calling <code>start()</code>).
@@ -398,7 +398,7 @@ declare namespace java {
              * @see Thread#run
              */
             // @ts-ignore
-            start(): void
+            public start(): void
             /**
              * Requests the receiver Thread to stop and throw ThreadDeath.
              * The Thread is resumed if it was suspended and awakened if it was
@@ -408,14 +408,14 @@ declare namespace java {
              * @deprecated 
              */
             // @ts-ignore
-            stop(): void
+            public stop(): void
             /**
              * Throws UnsupportedOperationException.
              * @param throwable		Throwable object to be thrown by the Thread
              * @deprecated 
              */
             // @ts-ignore
-            stop(throwable: Error): void
+            public stop(throwable: java.lang.Throwable | Error): void
             /**
              * This is a no-op if the receiver is suspended. If the receiver <code>isAlive()</code>
              * however, suspended it until <code>resume()</code> is sent to it. Suspend requests
@@ -427,21 +427,21 @@ declare namespace java {
              * @deprecated May cause deadlocks.
              */
             // @ts-ignore
-            suspend(): void
+            public suspend(): void
             /**
              * Answers a string containing a concise, human-readable
              * description of the receiver.
              * @return a printable representation for the receiver.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Causes the thread which sent this message to yield execution to another Thread
              * that is ready to run. The actual scheduling is implementation-dependent.
              * @version initial
              */
             // @ts-ignore
-            yield(): void
+            public static yield(): void
             /**
              * Returns whether the current thread has a monitor lock on the specified object.
              * @param object the object to test for the monitor lock
@@ -449,7 +449,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            holdsLock(object: any): boolean
+            public static holdsLock(object: java.lang.Object | any): boolean
             /**
              * Returns an array of StackTraceElement, where each element of the array represents a frame
              * on the Java stack.
@@ -458,7 +458,7 @@ declare namespace java {
              * @see java.lang.StackTraceElement
              */
             // @ts-ignore
-            getStackTrace(): java.lang.StackTraceElement[]
+            public getStackTrace(): java.lang.StackTraceElement[]
             /**
              * Returns a Map containing Thread keys, and values which are arrays of StackTraceElement. The Map contains
              * all Threads which were alive at the time this method was called.
@@ -468,50 +468,50 @@ declare namespace java {
              * @see #getStackTrace()
              */
             // @ts-ignore
-            getAllStackTraces(): java.util.Map<java.lang.Thread, java.lang.StackTraceElement[]>
+            public static getAllStackTraces(): java.util.Map<java.lang.Thread, java.lang.StackTraceElement[]>
             /**
              * Return a unique id for this Thread.
              * @return a positive unique id for this Thread.
              */
             // @ts-ignore
-            getId(): long
+            public getId(): number /*long*/
             /**
              * Return the UncaughtExceptionHandler for this Thread.
              * @return the UncaughtExceptionHandler for this Thread
              * @see UncaughtExceptionHandler
              */
             // @ts-ignore
-            getUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler
+            public getUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler
             /**
              * Set the UncaughtExceptionHandler for this Thread.
              * @param handler the UncaughtExceptionHandler to set
              * @see UncaughtExceptionHandler
              */
             // @ts-ignore
-            setUncaughtExceptionHandler(handler: java.lang.Thread.UncaughtExceptionHandler): void
+            public setUncaughtExceptionHandler(handler: java.lang.Thread.UncaughtExceptionHandler): void
             /**
              * Return the default UncaughtExceptionHandler used for new Threads.
              * @return the default UncaughtExceptionHandler for new Threads
              * @see UncaughtExceptionHandler
              */
             // @ts-ignore
-            getDefaultUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler
+            public static getDefaultUncaughtExceptionHandler(): java.lang.Thread.UncaughtExceptionHandler
             /**
              * Set the UncaughtExceptionHandler used for new  Threads.
              * @param handler the UncaughtExceptionHandler to set
              * @see UncaughtExceptionHandler
              */
             // @ts-ignore
-            setDefaultUncaughtExceptionHandler(handler: java.lang.Thread.UncaughtExceptionHandler): void
+            public static setDefaultUncaughtExceptionHandler(handler: java.lang.Thread.UncaughtExceptionHandler): void
             /**
              * Returns the current Thread state.
              * @return the current Thread state constant.
              * @see State
              */
             // @ts-ignore
-            getState(): java.lang.Thread.State
+            public getState(): java.lang.Thread.State
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
         }
     }
 }

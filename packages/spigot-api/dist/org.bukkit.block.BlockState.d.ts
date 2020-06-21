@@ -43,7 +43,7 @@ declare namespace org {
                  * @throws IllegalStateException if this block state is not placed
                  */
                 // @ts-ignore
-                getLightLevel(): byte
+                getLightLevel(): number /*byte*/
                 /**
                  * Gets the world which contains the block represented by this block state.
                  * @return the world containing the block represented by this block state
@@ -56,19 +56,19 @@ declare namespace org {
                  * @return x-coordinate
                  */
                 // @ts-ignore
-                getX(): int
+                getX(): number /*int*/
                 /**
                  * Gets the y-coordinate of this block state.
                  * @return y-coordinate
                  */
                 // @ts-ignore
-                getY(): int
+                getY(): number /*int*/
                 /**
                  * Gets the z-coordinate of this block state.
                  * @return z-coordinate
                  */
                 // @ts-ignore
-                getZ(): int
+                getZ(): number /*int*/
                 /**
                  * Gets the location of this block state.
                  * <p>
@@ -165,7 +165,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getRawData(): byte
+                getRawData(): number /*byte*/
                 /**
                  * @param data The new data value for the block.
                  * @deprecated Magic value

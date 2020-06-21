@@ -26,7 +26,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    buildDefaultBeanName(definition: BeanDefinition): java.lang.String
+                    buildDefaultBeanName(definition: BeanDefinition): string
                 }
             }
         }

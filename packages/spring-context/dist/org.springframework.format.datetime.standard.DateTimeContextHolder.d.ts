@@ -15,20 +15,20 @@ declare namespace org {
                          * Reset the DateTimeContext for the current thread.
                          */
                         // @ts-ignore
-                        resetDateTimeContext(): void
+                        public static resetDateTimeContext(): void
                         /**
                          * Associate the given DateTimeContext with the current thread.
                          * @param dateTimeContext the current DateTimeContext,
                          *  or {#code null} to reset the thread-bound context
                          */
                         // @ts-ignore
-                        setDateTimeContext(dateTimeContext: org.springframework.format.datetime.standard.DateTimeContext): void
+                        public static setDateTimeContext(dateTimeContext: org.springframework.format.datetime.standard.DateTimeContext): void
                         /**
                          * Return the DateTimeContext associated with the current thread, if any.
                          * @return the current DateTimeContext, or {#code null} if none
                          */
                         // @ts-ignore
-                        getDateTimeContext(): org.springframework.format.datetime.standard.DateTimeContext
+                        public static getDateTimeContext(): org.springframework.format.datetime.standard.DateTimeContext
                         /**
                          * Obtain a DateTimeFormatter with user-specific settings applied to the given base Formatter.
                          * @param formatter the base formatter that establishes default formatting rules
@@ -37,7 +37,7 @@ declare namespace org {
                          * @return the user-specific DateTimeFormatter
                          */
                         // @ts-ignore
-                        getFormatter(formatter: java.time.format.DateTimeFormatter, locale: java.util.Locale): java.time.format.DateTimeFormatter
+                        public static getFormatter(formatter: java.time.format.DateTimeFormatter, locale: java.util.Locale): java.time.format.DateTimeFormatter
                     }
                 }
             }

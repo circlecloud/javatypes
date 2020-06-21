@@ -118,7 +118,7 @@ declare namespace org {
                      * @see ObjectFactoryCreatingFactoryBean
                      */
                     // @ts-ignore
-                    class ServiceLocatorFactoryBean extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<java.lang.Object>, org.springframework.beans.factory.BeanFactoryAware, org.springframework.beans.factory.InitializingBean {
+                    class ServiceLocatorFactoryBean extends java.lang.Object implements org.springframework.beans.factory.FactoryBean<java.lang.Object | any>, org.springframework.beans.factory.BeanFactoryAware, org.springframework.beans.factory.InitializingBean {
                         // @ts-ignore
                         constructor()
                         /**
@@ -129,7 +129,7 @@ declare namespace org {
                          * information on the semantics of such methods.
                          */
                         // @ts-ignore
-                        setServiceLocatorInterface(interfaceType: java.lang.Class<any>): void
+                        public setServiceLocatorInterface(interfaceType: java.lang.Class<any>): void
                         /**
                          * Set the exception class that the service locator should throw if service
                          * lookup failed. The specified exception class must have a constructor
@@ -143,7 +143,7 @@ declare namespace org {
                          * @see #createServiceLocatorException
                          */
                         // @ts-ignore
-                        setServiceLocatorExceptionClass(serviceLocatorExceptionClass: java.lang.Class<java.lang.Exception>): void
+                        public setServiceLocatorExceptionClass(serviceLocatorExceptionClass: java.lang.Class<any>): void
                         /**
                          * Set mappings between service ids (passed into the service locator)
                          * and bean names (in the bean factory). Service ids that are not defined
@@ -155,11 +155,11 @@ declare namespace org {
                          *  with service ids as keys as bean names as values
                          */
                         // @ts-ignore
-                        setServiceMappings(serviceMappings: java.util.Properties): void
+                        public setServiceMappings(serviceMappings: java.util.Properties): void
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Determine the constructor to use for the given service locator exception
                          * class. Only called in case of a custom service locator exception.
@@ -171,7 +171,7 @@ declare namespace org {
                          * @see #setServiceLocatorExceptionClass
                          */
                         // @ts-ignore
-                        determineServiceLocatorExceptionConstructor(exceptionClass: java.lang.Class<java.lang.Exception>): java.lang.reflect.Constructor<java.lang.Exception>
+                        determineServiceLocatorExceptionConstructor(exceptionClass: java.lang.Class<any>): java.lang.reflect.Constructor<java.lang.Exception>
                         /**
                          * Create a service locator exception for the given cause.
                          * Only called in case of a custom service locator exception.
@@ -185,11 +185,11 @@ declare namespace org {
                         // @ts-ignore
                         createServiceLocatorException(exceptionConstructor: java.lang.reflect.Constructor<java.lang.Exception>, cause: org.springframework.beans.BeansException): java.lang.Exception
                         // @ts-ignore
-                        getObject(): java.lang.Object
+                        public getObject(): any
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

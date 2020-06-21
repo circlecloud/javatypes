@@ -16,7 +16,7 @@ declare namespace javax {
                  * be set to -1.
                  */
                 // @ts-ignore
-                getRowsForPaths(path: javax.swing.tree.TreePath[]): int[]
+                getRowsForPaths(path: javax.swing.tree.TreePath[]): number /*int*/[]
             }
         }
     }

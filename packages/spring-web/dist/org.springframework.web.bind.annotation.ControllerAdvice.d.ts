@@ -46,7 +46,7 @@ declare namespace org {
                      * @see RestControllerAdvice
                      */
                     // @ts-ignore
-                    class ControllerAdvice implements java.lang.annotation.Annotation {
+                    abstract class ControllerAdvice implements java.lang.annotation.Annotation {
                     }
                 }
             }

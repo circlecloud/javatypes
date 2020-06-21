@@ -26,7 +26,7 @@ declare namespace javax {
                  *  MLET tag is not specified, the value of url is malformed.
                  */
                 // @ts-ignore
-                getMBeansFromURL(url: string): java.util.Set<java.lang.Object>
+                getMBeansFromURL(url: java.lang.String | string): Array<java.lang.Object | any>
                 /**
                  * Loads a text file containing MLET tags that define the MBeans
                  * to be added to the MBean server. The location of the text file is
@@ -45,7 +45,7 @@ declare namespace javax {
                  *  MLET tag is not specified, the value of url is null.
                  */
                 // @ts-ignore
-                getMBeansFromURL(url: java.net.URL): java.util.Set<java.lang.Object>
+                getMBeansFromURL(url: java.net.URL): Array<java.lang.Object | any>
                 /**
                  * Appends the specified URL to the list of URLs to search for classes and
                  * resources.
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @exception ServiceNotFoundException The specified URL is malformed.
                  */
                 // @ts-ignore
-                addURL(url: string): void
+                addURL(url: java.lang.String | string): void
                 /**
                  * Returns the search path of URLs for loading classes and resources.
                  * This includes the original list of URLs specified to the constructor,
@@ -79,7 +79,7 @@ declare namespace javax {
                  *  resource.
                  */
                 // @ts-ignore
-                getResource(name: string): java.net.URL
+                getResource(name: java.lang.String | string): java.net.URL
                 /**
                  * Returns an input stream for reading the specified resource. The search order is described in the documentation for
                  * getResource(String).
@@ -87,7 +87,7 @@ declare namespace javax {
                  * @return An input stream for reading the resource, or null if the resource could not be found
                  */
                 // @ts-ignore
-                getResourceAsStream(name: string): java.io.InputStream
+                getResourceAsStream(name: java.lang.String | string): java.io.InputStream
                 /**
                  * Finds all the resources with the given name. A resource is some
                  * data (images, audio, text, etc) that can be accessed by class
@@ -102,7 +102,7 @@ declare namespace javax {
                  *  searching for resources.
                  */
                 // @ts-ignore
-                getResources(name: string): java.util.Enumeration<java.net.URL>
+                getResources(name: java.lang.String | string): java.util.Enumeration<java.net.URL>
                 /**
                  * Gets the current directory used by the library loader for
                  * storing native libraries before they are loaded into memory.
@@ -112,7 +112,7 @@ declare namespace javax {
                  *  does not support storing native libraries in this way.
                  */
                 // @ts-ignore
-                getLibraryDirectory(): java.lang.String
+                getLibraryDirectory(): string
                 /**
                  * Sets the directory used by the library loader for storing
                  * native libraries before they are loaded into memory.
@@ -122,7 +122,7 @@ declare namespace javax {
                  *  does not support storing native libraries in this way.
                  */
                 // @ts-ignore
-                setLibraryDirectory(libdir: string): void
+                setLibraryDirectory(libdir: java.lang.String | string): void
             }
         }
     }

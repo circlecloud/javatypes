@@ -16,7 +16,7 @@ declare namespace org {
              * @return Player name or null if we have not seen a name for this player yet
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             /**
              * Returns the UUID of this player
              * @return Player UUID
@@ -60,7 +60,7 @@ declare namespace org {
              * @return Date of first log-in for this player, or 0
              */
             // @ts-ignore
-            getFirstPlayed(): long
+            getFirstPlayed(): number /*long*/
             /**
              * Gets the last date and time that this player was witnessed on this
              * server.
@@ -71,7 +71,7 @@ declare namespace org {
              * @return Date of last log-in for this player, or 0
              */
             // @ts-ignore
-            getLastPlayed(): long
+            getLastPlayed(): number /*long*/
             /**
              * Checks if this player has played on this server before.
              * @return True if the player has played before, otherwise false
@@ -151,7 +151,7 @@ declare namespace org {
              *      additional parameter
              */
             // @ts-ignore
-            getStatistic(statistic: org.bukkit.Statistic): int
+            getStatistic(statistic: org.bukkit.Statistic): number /*int*/
             /**
              * Increments the given statistic for this player for the given material.
              * <p>
@@ -191,7 +191,7 @@ declare namespace org {
              *      for the statistic
              */
             // @ts-ignore
-            getStatistic(statistic: org.bukkit.Statistic, material: org.bukkit.Material): int
+            getStatistic(statistic: org.bukkit.Statistic, material: org.bukkit.Material): number /*int*/
             /**
              * Increments the given statistic for this player for the given material.
              * @param statistic Statistic to increment
@@ -270,7 +270,7 @@ declare namespace org {
              *      for the statistic
              */
             // @ts-ignore
-            getStatistic(statistic: org.bukkit.Statistic, entityType: org.bukkit.entity.EntityType): int
+            getStatistic(statistic: org.bukkit.Statistic, entityType: org.bukkit.entity.EntityType): number /*int*/
             /**
              * Increments the given statistic for this player for the given entity.
              * @param statistic Statistic to increment

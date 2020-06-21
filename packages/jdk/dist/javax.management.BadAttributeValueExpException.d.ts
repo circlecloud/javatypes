@@ -15,12 +15,12 @@ declare namespace javax {
              * @param val the inappropriate value.
              */
             // @ts-ignore
-            constructor(val: any)
+            constructor(val: java.lang.Object | any)
             /**
              * Returns the string representing the object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
         }
     }
 }

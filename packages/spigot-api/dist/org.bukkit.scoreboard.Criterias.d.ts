@@ -7,13 +7,13 @@ declare namespace org {
             // @ts-ignore
             class Criterias extends java.lang.Object {
                 // @ts-ignore
-                readonly HEALTH: string
+                public static readonly HEALTH: java.lang.String | string
                 // @ts-ignore
-                readonly PLAYER_KILLS: string
+                public static readonly PLAYER_KILLS: java.lang.String | string
                 // @ts-ignore
-                readonly TOTAL_KILLS: string
+                public static readonly TOTAL_KILLS: java.lang.String | string
                 // @ts-ignore
-                readonly DEATHS: string
+                public static readonly DEATHS: java.lang.String | string
             }
         }
     }

@@ -7,9 +7,17 @@ declare namespace org {
             // @ts-ignore
             class PermissionDefault extends java.lang.Enum<org.bukkit.permissions.PermissionDefault> {
                 // @ts-ignore
+                readonly TRUE: org.bukkit.permissions.PermissionDefault
+                // @ts-ignore
+                readonly FALSE: org.bukkit.permissions.PermissionDefault
+                // @ts-ignore
+                readonly OP: org.bukkit.permissions.PermissionDefault
+                // @ts-ignore
+                readonly NOT_OP: org.bukkit.permissions.PermissionDefault
+                // @ts-ignore
                 values(): org.bukkit.permissions.PermissionDefault[]
                 // @ts-ignore
-                valueOf(name: string): org.bukkit.permissions.PermissionDefault
+                valueOf(name: java.lang.String | string): org.bukkit.permissions.PermissionDefault
                 /**
                  * Calculates the value of this PermissionDefault for the given operator
                  * value
@@ -24,9 +32,9 @@ declare namespace org {
                  * @return Specified value, or null if not found
                  */
                 // @ts-ignore
-                getByName(name: string): org.bukkit.permissions.PermissionDefault
+                getByName(name: java.lang.String | string): org.bukkit.permissions.PermissionDefault
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

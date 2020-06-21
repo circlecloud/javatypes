@@ -8,15 +8,15 @@ declare namespace org {
                             namespace source {
                                 namespace common {
                                     // @ts-ignore
-                                    class AbstractHealingSource extends java.lang.Object implements org.spongepowered.api.event.cause.entity.health.source.HealingSource {
+                                    abstract class AbstractHealingSource extends java.lang.Object implements org.spongepowered.api.event.cause.entity.health.source.HealingSource {
                                         // @ts-ignore
-                                        constructor(builder: org.spongepowered.api.event.cause.entity.health.source.common.AbstractHealingSourceBuilder<any, ?>)
+                                        constructor(builder: org.spongepowered.api.event.cause.entity.health.source.common.AbstractHealingSourceBuilder<any, any>)
                                         // @ts-ignore
-                                        getHealingType(): org.spongepowered.api.event.cause.entity.health.HealingType
+                                        public getHealingType(): org.spongepowered.api.event.cause.entity.health.HealingType
                                         // @ts-ignore
-                                        isDifficultyScaled(): boolean
+                                        public isDifficultyScaled(): boolean
                                         // @ts-ignore
-                                        isMagic(): boolean
+                                        public isMagic(): boolean
                                     }
                                 }
                             }

@@ -39,7 +39,7 @@ declare namespace org {
                          * @return The number of remaining chunks available to read
                          */
                         // @ts-ignore
-                        available(): int
+                        available(): number /*int*/
                         /**
                          * Resets this stream to read from the beginning of the collection of
                          * chunks.

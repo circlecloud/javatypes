@@ -7,7 +7,7 @@ declare namespace javax {
              * @author David Karlton
              */
             // @ts-ignore
-            class SeparatorUI extends javax.swing.plaf.ComponentUI {
+            abstract class SeparatorUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

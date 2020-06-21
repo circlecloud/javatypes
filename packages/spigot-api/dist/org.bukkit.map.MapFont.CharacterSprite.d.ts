@@ -16,19 +16,19 @@ declare namespace org {
                      * @return True if the pixel is solid, false if transparent.
                      */
                     // @ts-ignore
-                    get(row: number /*int*/, col: number /*int*/): boolean
+                    public get(row: number /*int*/, col: number /*int*/): boolean
                     /**
                      * Get the width of the character sprite.
                      * @return The width of the character.
                      */
                     // @ts-ignore
-                    getWidth(): int
+                    public getWidth(): number /*int*/
                     /**
                      * Get the height of the character sprite.
                      * @return The height of the character.
                      */
                     // @ts-ignore
-                    getHeight(): int
+                    public getHeight(): number /*int*/
                 }
             }
         }

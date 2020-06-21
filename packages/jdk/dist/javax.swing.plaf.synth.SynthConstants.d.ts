@@ -17,39 +17,39 @@ declare namespace javax {
                      * Primary state indicating the component is enabled.
                      */
                     // @ts-ignore
-                    
+                    readonly ENABLED: number /*int*/
                     /**
                      * Primary state indicating the mouse is over the region.
                      */
                     // @ts-ignore
-                    
+                    readonly MOUSE_OVER: number /*int*/
                     /**
                      * Primary state indicating the region is in a pressed state. Pressed
                      * does not necessarily mean the user has pressed the mouse button.
                      */
                     // @ts-ignore
-                    
+                    readonly PRESSED: number /*int*/
                     /**
                      * Primary state indicating the region is not enabled.
                      */
                     // @ts-ignore
-                    
+                    readonly DISABLED: number /*int*/
                     /**
                      * Indicates the region has focus.
                      */
                     // @ts-ignore
-                    
+                    readonly FOCUSED: number /*int*/
                     /**
                      * Indicates the region is selected.
                      */
                     // @ts-ignore
-                    
+                    readonly SELECTED: number /*int*/
                     /**
                      * Indicates the region is the default. This is typically used for buttons
                      * to indicate this button is somehow special.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFAULT: number /*int*/
                 }
             }
         }

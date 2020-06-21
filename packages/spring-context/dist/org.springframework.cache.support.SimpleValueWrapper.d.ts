@@ -15,12 +15,12 @@ declare namespace org {
                      * @param value the value to expose (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(value: any)
+                    constructor(value: java.lang.Object | any)
                     /**
                      * Simply returns the value as given at construction time.
                      */
                     // @ts-ignore
-                    get(): java.lang.Object
+                    public get(): any
                 }
             }
         }

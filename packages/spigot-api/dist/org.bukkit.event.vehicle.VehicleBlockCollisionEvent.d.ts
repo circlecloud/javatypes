@@ -14,11 +14,11 @@ declare namespace org {
                      * @return the block the vehicle collided with
                      */
                     // @ts-ignore
-                    getBlock(): org.bukkit.block.Block
+                    public getBlock(): org.bukkit.block.Block
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

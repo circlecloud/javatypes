@@ -17,13 +17,13 @@ declare namespace javax {
                  * @return the text of the suggested completion.
                  */
                 // @ts-ignore
-                getValue(): java.lang.String
+                getValue(): string
                 /**
                  * Returns an informative message about the completion.
                  * @return an informative message about the completion.
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

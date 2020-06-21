@@ -14,14 +14,14 @@ declare namespace org {
                      * @param msg the message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Construct a new {@code ResourceAccessException} with the given message and {@link IOException}.
                      * @param msg the message
                      * @param ex the {#code IOException}
                      */
                     // @ts-ignore
-                    constructor(msg: string, ex: java.io.IOException)
+                    constructor(msg: java.lang.String | string, ex: java.io.IOException)
                 }
             }
         }

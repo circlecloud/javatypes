@@ -50,25 +50,25 @@ declare namespace javax {
                      *  algorithm passed is unsupported.
                      */
                     // @ts-ignore
-                    constructor(principal: javax.security.auth.kerberos.KerberosPrincipal, password: string[], algorithm: string)
+                    constructor(principal: javax.security.auth.kerberos.KerberosPrincipal, password: string[], algorithm: java.lang.String | string)
                     /**
                      * Returns the principal that this key belongs to.
                      * @return the principal this key belongs to.
                      */
                     // @ts-ignore
-                    getPrincipal(): javax.security.auth.kerberos.KerberosPrincipal
+                    public getPrincipal(): javax.security.auth.kerberos.KerberosPrincipal
                     /**
                      * Returns the key version number.
                      * @return the key version number.
                      */
                     // @ts-ignore
-                    getVersionNumber(): int
+                    public getVersionNumber(): number /*int*/
                     /**
                      * Returns the key type for this long-term key.
                      * @return the key type.
                      */
                     // @ts-ignore
-                    getKeyType(): int
+                    public getKeyType(): number /*int*/
                     /**
                      * Returns the standard algorithm name for this key. For
                      * example, "DES" would indicate that this key is a DES key.
@@ -80,19 +80,19 @@ declare namespace javax {
                      * @return the name of the algorithm associated with this key.
                      */
                     // @ts-ignore
-                    getAlgorithm(): java.lang.String
+                    public getAlgorithm(): string
                     /**
                      * Returns the name of the encoding format for this secret key.
                      * @return the String "RAW"
                      */
                     // @ts-ignore
-                    getFormat(): java.lang.String
+                    public getFormat(): string
                     /**
                      * Returns the key material of this secret key.
                      * @return the key material
                      */
                     // @ts-ignore
-                    getEncoded(): byte[]
+                    public getEncoded(): number /*byte*/[]
                     /**
                      * Destroys this key. A call to any of its other methods after this
                      * will cause an  IllegalStateException to be thrown.
@@ -100,21 +100,21 @@ declare namespace javax {
                      *  this key.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Determines if this key has been destroyed.
                      */
                     // @ts-ignore
-                    isDestroyed(): boolean
+                    public isDestroyed(): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns a hashcode for this KerberosKey.
                      * @return a hashCode() for the {#code KerberosKey}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Compares the specified Object with this KerberosKey for equality.
                      * Returns true if the given object is also a
@@ -127,7 +127,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                 }
             }
         }

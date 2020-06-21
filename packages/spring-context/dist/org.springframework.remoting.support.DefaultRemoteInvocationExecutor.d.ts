@@ -14,7 +14,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: any): java.lang.Object
+                    public invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: java.lang.Object | any): any
                 }
             }
         }

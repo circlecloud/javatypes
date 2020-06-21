@@ -12,7 +12,7 @@ declare namespace javax {
                      * @since JAXB 2.0
                      */
                     // @ts-ignore
-                    class NormalizedStringAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<java.lang.String, java.lang.String> {
+                    class NormalizedStringAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<java.lang.String | string, java.lang.String | string> {
                         // @ts-ignore
                         constructor()
                         /**
@@ -20,19 +20,19 @@ declare namespace javax {
                          * as specified in <a href="http://www.w3.org/TR/xmlschema-2/#rf-whiteSpace">the whitespace facet 'replace'</a>
                          */
                         // @ts-ignore
-                        unmarshal(text: string): java.lang.String
+                        public unmarshal(text: java.lang.String | string): string
                         /**
                          * No-op.
                          * Just return the same string given as the parameter.
                          */
                         // @ts-ignore
-                        marshal(s: string): java.lang.String
+                        public marshal(s: java.lang.String | string): string
                         /**
                          * Returns true if the specified char is a white space character
                          * but not 0x20.
                          */
                         // @ts-ignore
-                        isWhiteSpaceExceptSpace(ch: string): boolean
+                        static isWhiteSpaceExceptSpace(ch: string): boolean
                     }
                 }
             }

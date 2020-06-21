@@ -25,12 +25,12 @@ declare namespace org {
                      * Writes a log message before the request is processed.
                      */
                     // @ts-ignore
-                    beforeRequest(request: HttpServletRequest, message: string): void
+                    beforeRequest(request: HttpServletRequest, message: java.lang.String | string): void
                     /**
                      * Writes a log message after the request is processed.
                      */
                     // @ts-ignore
-                    afterRequest(request: HttpServletRequest, message: string): void
+                    afterRequest(request: HttpServletRequest, message: java.lang.String | string): void
                 }
             }
         }

@@ -43,17 +43,17 @@ declare namespace java {
              * The time-zone offset for UTC, with an ID of 'Z'.
              */
             // @ts-ignore
-            readonly UTC: java.time.ZoneOffset
+            public static readonly UTC: java.time.ZoneOffset
             /**
              * Constant for the maximum supported offset.
              */
             // @ts-ignore
-            readonly MIN: java.time.ZoneOffset
+            public static readonly MIN: java.time.ZoneOffset
             /**
              * Constant for the maximum supported offset.
              */
             // @ts-ignore
-            readonly MAX: java.time.ZoneOffset
+            public static readonly MAX: java.time.ZoneOffset
             /**
              * Obtains an instance of {@code ZoneOffset} using the ID.
              * <p>
@@ -84,7 +84,7 @@ declare namespace java {
              * @throws DateTimeException if the offset ID is invalid
              */
             // @ts-ignore
-            of(offsetId: string): java.time.ZoneOffset
+            public static of(offsetId: java.lang.String | string): java.time.ZoneOffset
             /**
              * Obtains an instance of {@code ZoneOffset} using an offset in hours.
              * @param hours  the time-zone offset in hours, from -18 to +18
@@ -92,7 +92,7 @@ declare namespace java {
              * @throws DateTimeException if the offset is not in the required range
              */
             // @ts-ignore
-            ofHours(hours: number /*int*/): java.time.ZoneOffset
+            public static ofHours(hours: number /*int*/): java.time.ZoneOffset
             /**
              * Obtains an instance of {@code ZoneOffset} using an offset in
              * hours and minutes.
@@ -106,7 +106,7 @@ declare namespace java {
              * @throws DateTimeException if the offset is not in the required range
              */
             // @ts-ignore
-            ofHoursMinutes(hours: number /*int*/, minutes: number /*int*/): java.time.ZoneOffset
+            public static ofHoursMinutes(hours: number /*int*/, minutes: number /*int*/): java.time.ZoneOffset
             /**
              * Obtains an instance of {@code ZoneOffset} using an offset in
              * hours, minutes and seconds.
@@ -120,7 +120,7 @@ declare namespace java {
              * @throws DateTimeException if the offset is not in the required range
              */
             // @ts-ignore
-            ofHoursMinutesSeconds(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/): java.time.ZoneOffset
+            public static ofHoursMinutesSeconds(hours: number /*int*/, minutes: number /*int*/, seconds: number /*int*/): java.time.ZoneOffset
             /**
              * Obtains an instance of {@code ZoneOffset} from a temporal object.
              * <p>
@@ -141,7 +141,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to an {#code ZoneOffset}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.ZoneOffset
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.ZoneOffset
             /**
              * Obtains an instance of {@code ZoneOffset} specifying the total offset in seconds
              * <p>
@@ -151,7 +151,7 @@ declare namespace java {
              * @throws DateTimeException if the offset is not in the required range
              */
             // @ts-ignore
-            ofTotalSeconds(totalSeconds: number /*int*/): java.time.ZoneOffset
+            public static ofTotalSeconds(totalSeconds: number /*int*/): java.time.ZoneOffset
             /**
              * Gets the total zone offset in seconds.
              * <p>
@@ -161,7 +161,7 @@ declare namespace java {
              * @return the total zone offset amount in seconds
              */
             // @ts-ignore
-            getTotalSeconds(): int
+            public getTotalSeconds(): number /*int*/
             /**
              * Gets the normalized zone offset ID.
              * <p>
@@ -175,7 +175,7 @@ declare namespace java {
              * @return the zone offset ID, not null
              */
             // @ts-ignore
-            getId(): java.lang.String
+            public getId(): string
             /**
              * Gets the associated time-zone rules.
              * <p>
@@ -184,7 +184,7 @@ declare namespace java {
              * @return the rules, not null
              */
             // @ts-ignore
-            getRules(): java.time.zone.ZoneRules
+            public getRules(): java.time.zone.ZoneRules
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -204,7 +204,7 @@ declare namespace java {
              * @return true if the field is supported on this offset, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -228,7 +228,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this offset as an {@code int}.
              * <p>
@@ -254,7 +254,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this offset as a {@code long}.
              * <p>
@@ -277,7 +277,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Queries this offset using the specified query.
              * <p>
@@ -296,7 +296,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have the same offset as this object.
              * <p>
@@ -321,7 +321,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Compares this offset to another offset in descending order.
              * <p>
@@ -335,7 +335,7 @@ declare namespace java {
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            compareTo(other: java.time.ZoneOffset): int
+            public compareTo(other: java.time.ZoneOffset): number /*int*/
             /**
              * Checks if this offset is equal to another offset.
              * <p>
@@ -345,19 +345,19 @@ declare namespace java {
              * @return true if this is equal to the other offset
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this offset.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this offset as a {@code String}, using the normalized ID.
              * @return a string representation of this offset, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

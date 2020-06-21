@@ -24,19 +24,19 @@ declare namespace javax {
                         // @ts-ignore
                         destination: java.awt.Component
                         // @ts-ignore
-                        mouseClicked(e: java.awt.event.MouseEvent): void
+                        public mouseClicked(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseEntered(e: java.awt.event.MouseEvent): void
+                        public mouseEntered(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseExited(e: java.awt.event.MouseEvent): void
+                        public mouseExited(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
                         removeFromSource(): void
                     }

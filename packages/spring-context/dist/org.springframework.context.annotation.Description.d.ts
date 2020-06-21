@@ -10,7 +10,7 @@ declare namespace org {
                  * @see org.springframework.beans.factory.config.BeanDefinition#getDescription()
                  */
                 // @ts-ignore
-                class Description implements java.lang.annotation.Annotation {
+                abstract class Description implements java.lang.annotation.Annotation {
                 }
             }
         }

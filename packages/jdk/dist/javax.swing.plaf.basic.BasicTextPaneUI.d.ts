@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return the UI
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Fetches the name used as a key to lookup properties through the
                      * UIManager.  This is used as a prefix to all the standard
@@ -36,9 +36,9 @@ declare namespace javax {
                      * @return the name ("TextPane")
                      */
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * This method gets called when a bound property is changed
                      * on the associated JTextComponent.  This is a hook

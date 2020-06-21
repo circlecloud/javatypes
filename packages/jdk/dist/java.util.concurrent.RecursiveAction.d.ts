@@ -120,7 +120,7 @@ declare namespace java {
              * @author Doug Lea
              */
             // @ts-ignore
-            class RecursiveAction extends java.util.concurrent.ForkJoinTask<java.lang.Void> {
+            abstract class RecursiveAction extends java.util.concurrent.ForkJoinTask<java.lang.Void> {
                 // @ts-ignore
                 constructor()
                 /**
@@ -133,7 +133,7 @@ declare namespace java {
                  * @return {#code null} always
                  */
                 // @ts-ignore
-                getRawResult(): java.lang.Void
+                public getRawResult(): java.lang.Void
                 /**
                  * Requires null completion value.
                  */

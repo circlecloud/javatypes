@@ -50,10 +50,30 @@ declare namespace javax {
                  */
                 // @ts-ignore
                 class NestingKind extends java.lang.Enum<javax.lang.model.element.NestingKind> {
+                    /**
+                     * A top-level type, not contained within another type.
+                     */
+                    // @ts-ignore
+                    readonly TOP_LEVEL: javax.lang.model.element.NestingKind
+                    /**
+                     * A type that is a named member of another type.
+                     */
+                    // @ts-ignore
+                    readonly MEMBER: javax.lang.model.element.NestingKind
+                    /**
+                     * A named type declared within a construct other than a type.
+                     */
+                    // @ts-ignore
+                    readonly LOCAL: javax.lang.model.element.NestingKind
+                    /**
+                     * A type without a name.
+                     */
+                    // @ts-ignore
+                    readonly ANONYMOUS: javax.lang.model.element.NestingKind
                     // @ts-ignore
                     values(): javax.lang.model.element.NestingKind[]
                     // @ts-ignore
-                    valueOf(name: string): javax.lang.model.element.NestingKind
+                    valueOf(name: java.lang.String | string): javax.lang.model.element.NestingKind
                     /**
                      * Does this constant correspond to a nested type element?
                      * A <i>nested</i> type element is any that is not top-level.

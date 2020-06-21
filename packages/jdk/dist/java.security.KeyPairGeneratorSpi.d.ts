@@ -17,7 +17,7 @@ declare namespace java {
          * @see java.security.spec.AlgorithmParameterSpec
          */
         // @ts-ignore
-        class KeyPairGeneratorSpi extends java.lang.Object {
+        abstract class KeyPairGeneratorSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -31,7 +31,7 @@ declare namespace java {
              *  supported by this KeyPairGeneratorSpi object.
              */
             // @ts-ignore
-            abstract initialize(keysize: number /*int*/, random: java.security.SecureRandom): void
+            public abstract initialize(keysize: number /*int*/, random: java.security.SecureRandom): void
             /**
              * Initializes the key pair generator using the specified parameter
              * set and user-provided source of randomness.
@@ -50,7 +50,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            initialize(params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
+            public initialize(params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
             /**
              * Generates a key pair. Unless an initialization method is called
              * using a KeyPairGenerator interface, algorithm-specific defaults
@@ -59,7 +59,7 @@ declare namespace java {
              * @return the newly generated {#code KeyPair}
              */
             // @ts-ignore
-            abstract generateKeyPair(): java.security.KeyPair
+            public abstract generateKeyPair(): java.security.KeyPair
         }
     }
 }

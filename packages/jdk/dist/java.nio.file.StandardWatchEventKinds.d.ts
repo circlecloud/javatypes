@@ -16,7 +16,7 @@ declare namespace java {
                  * @see WatchService
                  */
                 // @ts-ignore
-                readonly OVERFLOW: java.nio.file.WatchEvent.Kind<java.lang.Object>
+                public static readonly OVERFLOW: java.nio.file.WatchEvent.Kind<java.lang.Object | any>
                 /**
                  * Directory entry created.
                  * <p> When a directory is registered for this event then the {@link WatchKey}
@@ -25,7 +25,7 @@ declare namespace java {
                  * for this event is always {@code 1}.
                  */
                 // @ts-ignore
-                readonly ENTRY_CREATE: java.nio.file.WatchEvent.Kind<java.nio.file.Path>
+                public static readonly ENTRY_CREATE: java.nio.file.WatchEvent.Kind<java.nio.file.Path>
                 /**
                  * Directory entry deleted.
                  * <p> When a directory is registered for this event then the {@link WatchKey}
@@ -34,7 +34,7 @@ declare namespace java {
                  * is always {@code 1}.
                  */
                 // @ts-ignore
-                readonly ENTRY_DELETE: java.nio.file.WatchEvent.Kind<java.nio.file.Path>
+                public static readonly ENTRY_DELETE: java.nio.file.WatchEvent.Kind<java.nio.file.Path>
                 /**
                  * Directory entry modified.
                  * <p> When a directory is registered for this event then the {@link WatchKey}
@@ -43,7 +43,7 @@ declare namespace java {
                  * {@code 1} or greater.
                  */
                 // @ts-ignore
-                readonly ENTRY_MODIFY: java.nio.file.WatchEvent.Kind<java.nio.file.Path>
+                public static readonly ENTRY_MODIFY: java.nio.file.WatchEvent.Kind<java.nio.file.Path>
             }
         }
     }

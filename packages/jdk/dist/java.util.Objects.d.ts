@@ -24,7 +24,7 @@ declare namespace java {
              * @see Object#equals(Object)
              */
             // @ts-ignore
-            equals(a: any, b: any): boolean
+            public static equals(a: java.lang.Object | any, b: java.lang.Object | any): boolean
             /**
              * Returns {@code true} if the arguments are deeply equal to each other
              * and {@code false} otherwise.
@@ -41,7 +41,7 @@ declare namespace java {
              * @see Objects#equals(Object, Object)
              */
             // @ts-ignore
-            deepEquals(a: any, b: any): boolean
+            public static deepEquals(a: java.lang.Object | any, b: java.lang.Object | any): boolean
             /**
              * Returns the hash code of a non-{@code null} argument and 0 for
              * a {@code null} argument.
@@ -51,7 +51,7 @@ declare namespace java {
              * @see Object#hashCode
              */
             // @ts-ignore
-            hashCode(o: any): int
+            public static hashCode(o: java.lang.Object | any): number /*int*/
             /**
              * Generates a hash code for a sequence of input values. The hash
              * code is generated as if all the input values were placed into an
@@ -75,7 +75,7 @@ declare namespace java {
              * @see List#hashCode
              */
             // @ts-ignore
-            hash(...values: any[]): int
+            public static hash(...values: java.lang.Object[] | any[]): number /*int*/
             /**
              * Returns the result of calling {@code toString} for a non-{@code
              * null} argument and {@code "null"} for a {@code null} argument.
@@ -86,7 +86,7 @@ declare namespace java {
              * @see String#valueOf(Object)
              */
             // @ts-ignore
-            toString(o: any): java.lang.String
+            public static toString(o: java.lang.Object | any): string
             /**
              * Returns the result of calling {@code toString} on the first
              * argument if the first argument is not {@code null} and returns
@@ -100,7 +100,7 @@ declare namespace java {
              * @see Objects#toString(Object)
              */
             // @ts-ignore
-            toString(o: any, nullDefault: string): java.lang.String
+            public static toString(o: java.lang.Object | any, nullDefault: java.lang.String | string): string
             /**
              * Returns 0 if the arguments are identical and {@code
              * c.compare(a, b)} otherwise.
@@ -120,7 +120,7 @@ declare namespace java {
              * @see Comparator
              */
             // @ts-ignore
-            compare<T>(a: T, b: T, c: java.util.Comparator<any super T>): int
+            public static compare<T>(a: T, b: T, c: java.util.Comparator<any>): number /*int*/
             /**
              * Checks that the specified object reference is not {@code null}. This
              * method is designed primarily for doing parameter validation in methods
@@ -136,7 +136,7 @@ declare namespace java {
              * @throws NullPointerException if {#code obj} is {@code null}
              */
             // @ts-ignore
-            requireNonNull<T>(obj: T): T
+            public static requireNonNull<T>(obj: T): T
             /**
              * Checks that the specified object reference is not {@code null} and
              * throws a customized {@link NullPointerException} if it is. This method
@@ -156,7 +156,7 @@ declare namespace java {
              * @throws NullPointerException if {#code obj} is {@code null}
              */
             // @ts-ignore
-            requireNonNull<T>(obj: T, message: string): T
+            public static requireNonNull<T>(obj: T, message: java.lang.String | string): T
             /**
              * Returns {@code true} if the provided reference is {@code null} otherwise
              * returns {@code false}.
@@ -169,7 +169,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            isNull(obj: any): boolean
+            public static isNull(obj: java.lang.Object | any): boolean
             /**
              * Returns {@code true} if the provided reference is non-{@code null}
              * otherwise returns {@code false}.
@@ -182,7 +182,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            nonNull(obj: any): boolean
+            public static nonNull(obj: java.lang.Object | any): boolean
             /**
              * Checks that the specified object reference is not {@code null} and
              * throws a customized {@link NullPointerException} if it is.
@@ -202,7 +202,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            requireNonNull<T>(obj: T, messageSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): T
+            public static requireNonNull<T>(obj: T, messageSupplier: java.util.function$.Supplier<java.lang.String | string>): T
         }
     }
 }

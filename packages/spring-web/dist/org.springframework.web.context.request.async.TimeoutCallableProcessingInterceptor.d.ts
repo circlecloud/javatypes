@@ -23,7 +23,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): java.lang.Object
+                            public handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): any
                         }
                     }
                 }

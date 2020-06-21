@@ -11,27 +11,27 @@ declare namespace org {
                      * @see java.util.ServiceLoader
                      */
                     // @ts-ignore
-                    class AbstractServiceLoaderBasedFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.lang.Object> implements org.springframework.beans.factory.BeanClassLoaderAware {
+                    abstract class AbstractServiceLoaderBasedFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<java.lang.Object | any> implements org.springframework.beans.factory.BeanClassLoaderAware {
                         // @ts-ignore
                         constructor()
                         /**
                          * Specify the desired service type (typically the service's public API).
                          */
                         // @ts-ignore
-                        setServiceType(serviceType: java.lang.Class<any>): void
+                        public setServiceType(serviceType: java.lang.Class<any>): void
                         /**
                          * Return the desired service type.
                          */
                         // @ts-ignore
-                        getServiceType(): java.lang.Class<?>
+                        public getServiceType(): java.lang.Class<any>
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         /**
                          * Delegates to {@link #getObjectToExpose(java.util.ServiceLoader)}.
                          * @return the object to expose
                          */
                         // @ts-ignore
-                        createInstance(): java.lang.Object
+                        createInstance(): any
                         /**
                          * Determine the actual object to expose for the given ServiceLoader.
                          * <p>Left to concrete subclasses.
@@ -39,7 +39,7 @@ declare namespace org {
                          * @return the object to expose
                          */
                         // @ts-ignore
-                        abstract getObjectToExpose(serviceLoader: java.util.ServiceLoader<any>): java.lang.Object
+                        abstract getObjectToExpose(serviceLoader: java.util.ServiceLoader<any>): any
                     }
                 }
             }

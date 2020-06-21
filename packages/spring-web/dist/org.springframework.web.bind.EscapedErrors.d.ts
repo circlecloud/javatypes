@@ -22,65 +22,65 @@ declare namespace org {
                     // @ts-ignore
                     constructor(source: Errors)
                     // @ts-ignore
-                    getSource(): Errors
+                    public getSource(): Errors
                     // @ts-ignore
-                    getObjectName(): java.lang.String
+                    public getObjectName(): string
                     // @ts-ignore
-                    setNestedPath(nestedPath: string): void
+                    public setNestedPath(nestedPath: java.lang.String | string): void
                     // @ts-ignore
-                    getNestedPath(): java.lang.String
+                    public getNestedPath(): string
                     // @ts-ignore
-                    pushNestedPath(subPath: string): void
+                    public pushNestedPath(subPath: java.lang.String | string): void
                     // @ts-ignore
-                    popNestedPath(): void
+                    public popNestedPath(): void
                     // @ts-ignore
-                    reject(errorCode: string): void
+                    public reject(errorCode: java.lang.String | string): void
                     // @ts-ignore
-                    reject(errorCode: string, defaultMessage: string): void
+                    public reject(errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                     // @ts-ignore
-                    reject(errorCode: string, errorArgs: any[], defaultMessage: string): void
+                    public reject(errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                     // @ts-ignore
-                    rejectValue(field: string, errorCode: string): void
+                    public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string): void
                     // @ts-ignore
-                    rejectValue(field: string, errorCode: string, defaultMessage: string): void
+                    public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                     // @ts-ignore
-                    rejectValue(field: string, errorCode: string, errorArgs: any[], defaultMessage: string): void
+                    public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                     // @ts-ignore
-                    addAllErrors(errors: Errors): void
+                    public addAllErrors(errors: Errors): void
                     // @ts-ignore
-                    hasErrors(): boolean
+                    public hasErrors(): boolean
                     // @ts-ignore
-                    getErrorCount(): int
+                    public getErrorCount(): number /*int*/
                     // @ts-ignore
-                    getAllErrors(): java.util.List<ObjectError>
+                    public getAllErrors(): Array<ObjectError>
                     // @ts-ignore
-                    hasGlobalErrors(): boolean
+                    public hasGlobalErrors(): boolean
                     // @ts-ignore
-                    getGlobalErrorCount(): int
+                    public getGlobalErrorCount(): number /*int*/
                     // @ts-ignore
-                    getGlobalErrors(): java.util.List<ObjectError>
+                    public getGlobalErrors(): Array<ObjectError>
                     // @ts-ignore
-                    getGlobalError(): ObjectError
+                    public getGlobalError(): ObjectError
                     // @ts-ignore
-                    hasFieldErrors(): boolean
+                    public hasFieldErrors(): boolean
                     // @ts-ignore
-                    getFieldErrorCount(): int
+                    public getFieldErrorCount(): number /*int*/
                     // @ts-ignore
-                    getFieldErrors(): java.util.List<FieldError>
+                    public getFieldErrors(): Array<FieldError>
                     // @ts-ignore
-                    getFieldError(): FieldError
+                    public getFieldError(): FieldError
                     // @ts-ignore
-                    hasFieldErrors(field: string): boolean
+                    public hasFieldErrors(field: java.lang.String | string): boolean
                     // @ts-ignore
-                    getFieldErrorCount(field: string): int
+                    public getFieldErrorCount(field: java.lang.String | string): number /*int*/
                     // @ts-ignore
-                    getFieldErrors(field: string): java.util.List<FieldError>
+                    public getFieldErrors(field: java.lang.String | string): Array<FieldError>
                     // @ts-ignore
-                    getFieldError(field: string): FieldError
+                    public getFieldError(field: java.lang.String | string): FieldError
                     // @ts-ignore
-                    getFieldValue(field: string): java.lang.Object
+                    public getFieldValue(field: java.lang.String | string): any
                     // @ts-ignore
-                    getFieldType(field: string): java.lang.Class<?>
+                    public getFieldType(field: java.lang.String | string): java.lang.Class<any>
                 }
             }
         }

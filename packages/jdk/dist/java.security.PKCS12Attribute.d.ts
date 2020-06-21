@@ -29,7 +29,7 @@ declare namespace java {
              *      {@code value} is incorrectly formatted
              */
             // @ts-ignore
-            constructor(name: string, value: string)
+            constructor(name: java.lang.String | string, value: java.lang.String | string)
             /**
              * Constructs a PKCS12 attribute from its ASN.1 DER encoding.
              * The DER encoding is specified by the following ASN.1 definition:
@@ -56,7 +56,7 @@ declare namespace java {
              * @return the attribute's identifier
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns the attribute's ASN.1 DER-encoded value as a string.
              * An ASN.1 DER-encoded value is returned in one of the following
@@ -79,13 +79,13 @@ declare namespace java {
              * @return the attribute value's string encoding
              */
             // @ts-ignore
-            getValue(): java.lang.String
+            public getValue(): string
             /**
              * Returns the attribute's ASN.1 DER encoding.
              * @return a clone of the attribute's DER encoding
              */
             // @ts-ignore
-            getEncoded(): byte[]
+            public getEncoded(): number /*byte*/[]
             /**
              * Compares this {@code PKCS12Attribute} and a specified object for
              * equality.
@@ -94,20 +94,20 @@ declare namespace java {
              *  their DER encodings are equal.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hashcode for this {@code PKCS12Attribute}.
              * The hash code is computed from its DER encoding.
              * @return the hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of this {@code PKCS12Attribute}.
              * @return a name/value pair separated by an 'equals' symbol
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

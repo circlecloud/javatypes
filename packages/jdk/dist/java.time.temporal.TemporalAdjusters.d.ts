@@ -54,7 +54,7 @@ declare namespace java {
                  * @return the temporal adjuster wrapping on the date adjuster, not null
                  */
                 // @ts-ignore
-                ofDateAdjuster(dateBasedAdjuster: java.util.function.UnaryOperator<java.time.LocalDate> | java.util.function$.UnaryOperator<java.time.LocalDate>): java.time.temporal.TemporalAdjuster
+                public static ofDateAdjuster(dateBasedAdjuster: java.util.function$.UnaryOperator<java.time.LocalDate>): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the "first day of month" adjuster, which returns a new date set to
                  * the first day of the current month.
@@ -71,7 +71,7 @@ declare namespace java {
                  * @return the first day-of-month adjuster, not null
                  */
                 // @ts-ignore
-                firstDayOfMonth(): java.time.temporal.TemporalAdjuster
+                public static firstDayOfMonth(): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the "last day of month" adjuster, which returns a new date set to
                  * the last day of the current month.
@@ -91,7 +91,7 @@ declare namespace java {
                  * @return the last day-of-month adjuster, not null
                  */
                 // @ts-ignore
-                lastDayOfMonth(): java.time.temporal.TemporalAdjuster
+                public static lastDayOfMonth(): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the "first day of next month" adjuster, which returns a new date set to
                  * the first day of the next month.
@@ -108,7 +108,7 @@ declare namespace java {
                  * @return the first day of next month adjuster, not null
                  */
                 // @ts-ignore
-                firstDayOfNextMonth(): java.time.temporal.TemporalAdjuster
+                public static firstDayOfNextMonth(): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the "first day of year" adjuster, which returns a new date set to
                  * the first day of the current year.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @return the first day-of-year adjuster, not null
                  */
                 // @ts-ignore
-                firstDayOfYear(): java.time.temporal.TemporalAdjuster
+                public static firstDayOfYear(): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the "last day of year" adjuster, which returns a new date set to
                  * the last day of the current year.
@@ -143,7 +143,7 @@ declare namespace java {
                  * @return the last day-of-year adjuster, not null
                  */
                 // @ts-ignore
-                lastDayOfYear(): java.time.temporal.TemporalAdjuster
+                public static lastDayOfYear(): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the "first day of next year" adjuster, which returns a new date set to
                  * the first day of the next year.
@@ -159,7 +159,7 @@ declare namespace java {
                  * @return the first day of next month adjuster, not null
                  */
                 // @ts-ignore
-                firstDayOfNextYear(): java.time.temporal.TemporalAdjuster
+                public static firstDayOfNextYear(): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the first in month adjuster, which returns a new date
                  * in the same month with the first matching day-of-week.
@@ -176,7 +176,7 @@ declare namespace java {
                  * @return the first in month adjuster, not null
                  */
                 // @ts-ignore
-                firstInMonth(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static firstInMonth(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the last in month adjuster, which returns a new date
                  * in the same month with the last matching day-of-week.
@@ -193,7 +193,7 @@ declare namespace java {
                  * @return the first in month adjuster, not null
                  */
                 // @ts-ignore
-                lastInMonth(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static lastInMonth(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the day-of-week in month adjuster, which returns a new date
                  * in the same month with the ordinal day-of-week.
@@ -226,7 +226,7 @@ declare namespace java {
                  * @return the day-of-week in month adjuster, not null
                  */
                 // @ts-ignore
-                dayOfWeekInMonth(ordinal: number /*int*/, dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static dayOfWeekInMonth(ordinal: number /*int*/, dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the next day-of-week adjuster, which adjusts the date to the
                  * first occurrence of the specified day-of-week after the date being adjusted.
@@ -243,7 +243,7 @@ declare namespace java {
                  * @return the next day-of-week adjuster, not null
                  */
                 // @ts-ignore
-                next(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static next(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the next-or-same day-of-week adjuster, which adjusts the date to the
                  * first occurrence of the specified day-of-week after the date being adjusted
@@ -261,7 +261,7 @@ declare namespace java {
                  * @return the next-or-same day-of-week adjuster, not null
                  */
                 // @ts-ignore
-                nextOrSame(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static nextOrSame(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the previous day-of-week adjuster, which adjusts the date to the
                  * first occurrence of the specified day-of-week before the date being adjusted.
@@ -278,7 +278,7 @@ declare namespace java {
                  * @return the previous day-of-week adjuster, not null
                  */
                 // @ts-ignore
-                previous(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static previous(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
                 /**
                  * Returns the previous-or-same day-of-week adjuster, which adjusts the date to the
                  * first occurrence of the specified day-of-week before the date being adjusted
@@ -296,7 +296,7 @@ declare namespace java {
                  * @return the previous-or-same day-of-week adjuster, not null
                  */
                 // @ts-ignore
-                previousOrSame(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
+                public static previousOrSame(dayOfWeek: java.time.DayOfWeek): java.time.temporal.TemporalAdjuster
             }
         }
     }

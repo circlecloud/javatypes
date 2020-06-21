@@ -23,7 +23,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
             }
         }
     }

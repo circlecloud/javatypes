@@ -24,9 +24,9 @@ declare namespace org {
                             // @ts-ignore
                             type<T, B extends org.spongepowered.api.data.value.BaseValue<T>>(token: object): org.spongepowered.api.data.key.Key.Builder<T, B>
                             // @ts-ignore
-                            id(id: string): org.spongepowered.api.data.key.Key.Builder<E, V>
+                            id(id: java.lang.String | string): org.spongepowered.api.data.key.Key.Builder<E, V>
                             // @ts-ignore
-                            name(name: string): org.spongepowered.api.data.key.Key.Builder<E, V>
+                            name(name: java.lang.String | string): org.spongepowered.api.data.key.Key.Builder<E, V>
                             /**
                              * Sets the {@link DataQuery} recommended for use with
                              * {@link DataContainer}s. See {@link Key#getQuery()}.

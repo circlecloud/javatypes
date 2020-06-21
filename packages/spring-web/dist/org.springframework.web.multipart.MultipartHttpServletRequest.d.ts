@@ -42,7 +42,7 @@ declare namespace org {
                      * Otherwise, the returned headers will include a 'Content-Type' header at the very least.
                      */
                     // @ts-ignore
-                    getMultipartHeaders(paramOrFileName: string): org.springframework.http.HttpHeaders
+                    getMultipartHeaders(paramOrFileName: java.lang.String | string): org.springframework.http.HttpHeaders
                 }
             }
         }

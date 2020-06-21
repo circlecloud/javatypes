@@ -11,7 +11,7 @@ declare namespace org {
                  * @return Array of Strings containing each line of text
                  */
                 // @ts-ignore
-                getLines(): java.lang.String[]
+                getLines(): string[]
                 /**
                  * Gets the line of text at the specified index.
                  * <p>
@@ -21,7 +21,7 @@ declare namespace org {
                  * @return Text on the given line
                  */
                 // @ts-ignore
-                getLine(index: number /*int*/): java.lang.String
+                getLine(index: number /*int*/): string
                 /**
                  * Sets the line of text at the specified index.
                  * <p>
@@ -32,7 +32,7 @@ declare namespace org {
                  * @throws IndexOutOfBoundsException If the index is out of the range 0..3
                  */
                 // @ts-ignore
-                setLine(index: number /*int*/, line: string): void
+                setLine(index: number /*int*/, line: java.lang.String | string): void
                 /**
                  * Marks whether this sign can be edited by players.
                  * <br>

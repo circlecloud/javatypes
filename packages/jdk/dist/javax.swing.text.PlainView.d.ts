@@ -26,7 +26,7 @@ declare namespace javax {
                  * @return the tab size
                  */
                 // @ts-ignore
-                getTabSize(): int
+                getTabSize(): number /*int*/
                 /**
                  * Renders a line of text, suppressing whitespace at the end
                  * and expanding any tabs.  This is implemented to make calls
@@ -54,7 +54,7 @@ declare namespace javax {
                  * @exception BadLocationException if the range is invalid
                  */
                 // @ts-ignore
-                drawUnselectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): int
+                drawUnselectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Renders the given range in the model as selected text.  This
                  * is implemented to render the text in the color specified in
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @exception BadLocationException if the range is invalid
                  */
                 // @ts-ignore
-                drawSelectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): int
+                drawSelectedText(g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, p0: number /*int*/, p1: number /*int*/): number /*int*/
                 /**
                  * Gives access to a buffer that can be used to fetch
                  * text from the associated document.
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Renders using the given rendering surface and area on that surface.
                  * The view may need to do layout and create child views to enable
@@ -105,7 +105,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -117,7 +117,7 @@ declare namespace javax {
                  * @see View#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(fx: number /*float*/, fy: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                public viewToModel(fx: number /*float*/, fy: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Gives notification that something was inserted into the document
                  * in a location that this view is responsible for.
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @see View#insertUpdate
                  */
                 // @ts-ignore
-                insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public insertUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification that something was removed from the document
                  * in a location that this view is responsible for.
@@ -149,7 +149,7 @@ declare namespace javax {
                  * @see View#removeUpdate
                  */
                 // @ts-ignore
-                removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public removeUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Gives notification from the document that attributes were changed
                  * in a location that this view is responsible for.
@@ -159,7 +159,7 @@ declare namespace javax {
                  * @see View#changedUpdate
                  */
                 // @ts-ignore
-                changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                 /**
                  * Sets the size of the view.  This should cause
                  * layout of the view along the given axis, if it
@@ -168,7 +168,7 @@ declare namespace javax {
                  * @param height the height &gt;= 0
                  */
                 // @ts-ignore
-                setSize(width: number /*float*/, height: number /*float*/): void
+                public setSize(width: number /*float*/, height: number /*float*/): void
                 /**
                  * Returns the next tab stop position after a given reference position.
                  * This implementation does not support things like centering so it
@@ -179,7 +179,7 @@ declare namespace javax {
                  * @return the tab stop, measured in points &gt;= 0
                  */
                 // @ts-ignore
-                nextTabStop(x: number /*float*/, tabOffset: number /*int*/): float
+                public nextTabStop(x: number /*float*/, tabOffset: number /*int*/): number /*float*/
                 /**
                  * Repaint the region of change covered by the given document
                  * event.  Damages the line that begins the range to cover

@@ -59,7 +59,7 @@ declare namespace java {
          * @see GraphicsDevice
          */
         // @ts-ignore
-        class GraphicsConfiguration extends java.lang.Object {
+        abstract class GraphicsConfiguration extends java.lang.Object {
             /**
              * This is an abstract class that cannot be instantiated directly.
              * Instances must be obtained from a suitable factory or query method.
@@ -77,7 +77,7 @@ declare namespace java {
              *  associated with this <code>GraphicsConfiguration</code>.
              */
             // @ts-ignore
-            abstract getDevice(): java.awt.GraphicsDevice
+            public abstract getDevice(): java.awt.GraphicsDevice
             /**
              * Returns a {@link BufferedImage} with a data layout and color model
              * compatible with this <code>GraphicsConfiguration</code>.  This
@@ -92,7 +92,7 @@ declare namespace java {
              *  model is compatible with this <code>GraphicsConfiguration</code>.
              */
             // @ts-ignore
-            createCompatibleImage(width: number /*int*/, height: number /*int*/): java.awt.image.BufferedImage
+            public createCompatibleImage(width: number /*int*/, height: number /*int*/): java.awt.image.BufferedImage
             /**
              * Returns a <code>BufferedImage</code> that supports the specified
              * transparency and has a data layout and color model
@@ -113,7 +113,7 @@ declare namespace java {
              * @see Transparency#TRANSLUCENT
              */
             // @ts-ignore
-            createCompatibleImage(width: number /*int*/, height: number /*int*/, transparency: number /*int*/): java.awt.image.BufferedImage
+            public createCompatibleImage(width: number /*int*/, height: number /*int*/, transparency: number /*int*/): java.awt.image.BufferedImage
             /**
              * Returns a {@link VolatileImage} with a data layout and color model
              * compatible with this <code>GraphicsConfiguration</code>.
@@ -129,7 +129,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/): java.awt.image.VolatileImage
+            public createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/): java.awt.image.VolatileImage
             /**
              * Returns a {@link VolatileImage} with a data layout and color model
              * compatible with this <code>GraphicsConfiguration</code>.
@@ -150,7 +150,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/, transparency: number /*int*/): java.awt.image.VolatileImage
+            public createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/, transparency: number /*int*/): java.awt.image.VolatileImage
             /**
              * Returns a {@link VolatileImage} with a data layout and color model
              * compatible with this <code>GraphicsConfiguration</code>, using
@@ -172,7 +172,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/, caps: java.awt.ImageCapabilities): java.awt.image.VolatileImage
+            public createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/, caps: java.awt.ImageCapabilities): java.awt.image.VolatileImage
             /**
              * Returns a {@link VolatileImage} with a data layout and color model
              * compatible with this <code>GraphicsConfiguration</code>, using
@@ -200,7 +200,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/, caps: java.awt.ImageCapabilities, transparency: number /*int*/): java.awt.image.VolatileImage
+            public createCompatibleVolatileImage(width: number /*int*/, height: number /*int*/, caps: java.awt.ImageCapabilities, transparency: number /*int*/): java.awt.image.VolatileImage
             /**
              * Returns the {@link ColorModel} associated with this
              * <code>GraphicsConfiguration</code>.
@@ -208,7 +208,7 @@ declare namespace java {
              *  this <code>GraphicsConfiguration</code>.
              */
             // @ts-ignore
-            abstract getColorModel(): java.awt.image.ColorModel
+            public abstract getColorModel(): java.awt.image.ColorModel
             /**
              * Returns the <code>ColorModel</code> associated with this
              * <code>GraphicsConfiguration</code> that supports the specified
@@ -223,7 +223,7 @@ declare namespace java {
              * @see Transparency#TRANSLUCENT
              */
             // @ts-ignore
-            abstract getColorModel(transparency: number /*int*/): java.awt.image.ColorModel
+            public abstract getColorModel(transparency: number /*int*/): java.awt.image.ColorModel
             /**
              * Returns the default {@link AffineTransform} for this
              * <code>GraphicsConfiguration</code>. This
@@ -244,7 +244,7 @@ declare namespace java {
              *  <code>GraphicsConfiguration</code>.
              */
             // @ts-ignore
-            abstract getDefaultTransform(): java.awt.geom.AffineTransform
+            public abstract getDefaultTransform(): java.awt.geom.AffineTransform
             /**
              * Returns a <code>AffineTransform</code> that can be concatenated
              * with the default <code>AffineTransform</code>
@@ -272,7 +272,7 @@ declare namespace java {
              *  space is mapped to 1 inch in device space.
              */
             // @ts-ignore
-            abstract getNormalizingTransform(): java.awt.geom.AffineTransform
+            public abstract getNormalizingTransform(): java.awt.geom.AffineTransform
             /**
              * Returns the bounds of the <code>GraphicsConfiguration</code>
              * in the device coordinates. In a multi-screen environment
@@ -283,7 +283,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            abstract getBounds(): java.awt.Rectangle
+            public abstract getBounds(): java.awt.Rectangle
             /**
              * Returns the buffering capabilities of this
              * <code>GraphicsConfiguration</code>.
@@ -292,7 +292,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getBufferCapabilities(): java.awt.BufferCapabilities
+            public getBufferCapabilities(): java.awt.BufferCapabilities
             /**
              * Returns the image capabilities of this
              * <code>GraphicsConfiguration</code>.
@@ -301,7 +301,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getImageCapabilities(): java.awt.ImageCapabilities
+            public getImageCapabilities(): java.awt.ImageCapabilities
             /**
              * Returns whether this {@code GraphicsConfiguration} supports
              * the {@link GraphicsDevice.WindowTranslucency#PERPIXEL_TRANSLUCENT
@@ -312,7 +312,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isTranslucencyCapable(): boolean
+            public isTranslucencyCapable(): boolean
         }
     }
 }

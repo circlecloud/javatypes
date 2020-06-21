@@ -18,25 +18,25 @@ declare namespace java {
              *  encapsulated by this principal, and false otherwise.
              */
             // @ts-ignore
-            equals(another: any): boolean
+            equals(another: java.lang.Object | any): boolean
             /**
              * Returns a string representation of this principal.
              * @return a string representation of this principal.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
             /**
              * Returns a hashcode for this principal.
              * @return a hashcode for this principal.
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
             /**
              * Returns the name of this principal.
              * @return the name of this principal.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             /**
              * Returns true if the specified subject is implied by this principal.
              * <p>The default implementation of this method returns true if

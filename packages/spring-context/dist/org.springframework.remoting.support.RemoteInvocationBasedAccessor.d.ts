@@ -15,7 +15,7 @@ declare namespace org {
                  * @see DefaultRemoteInvocationFactory
                  */
                 // @ts-ignore
-                class RemoteInvocationBasedAccessor extends org.springframework.remoting.support.UrlBasedRemoteAccessor {
+                abstract class RemoteInvocationBasedAccessor extends org.springframework.remoting.support.UrlBasedRemoteAccessor {
                     // @ts-ignore
                     constructor()
                     /**
@@ -25,12 +25,12 @@ declare namespace org {
                      * to the invocation, for example user credentials.
                      */
                     // @ts-ignore
-                    setRemoteInvocationFactory(remoteInvocationFactory: org.springframework.remoting.support.RemoteInvocationFactory): void
+                    public setRemoteInvocationFactory(remoteInvocationFactory: org.springframework.remoting.support.RemoteInvocationFactory): void
                     /**
                      * Return the RemoteInvocationFactory used by this accessor.
                      */
                     // @ts-ignore
-                    getRemoteInvocationFactory(): org.springframework.remoting.support.RemoteInvocationFactory
+                    public getRemoteInvocationFactory(): org.springframework.remoting.support.RemoteInvocationFactory
                     /**
                      * Create a new RemoteInvocation object for the given AOP method invocation.
                      * <p>The default implementation delegates to the configured
@@ -56,7 +56,7 @@ declare namespace org {
                      * @see RemoteInvocationResult#recreate()
                      */
                     // @ts-ignore
-                    recreateRemoteInvocationResult(result: org.springframework.remoting.support.RemoteInvocationResult): java.lang.Object
+                    recreateRemoteInvocationResult(result: org.springframework.remoting.support.RemoteInvocationResult): any
                 }
             }
         }

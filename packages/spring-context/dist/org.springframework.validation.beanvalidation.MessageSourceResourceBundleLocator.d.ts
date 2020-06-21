@@ -20,7 +20,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(messageSource: org.springframework.context.MessageSource)
                     // @ts-ignore
-                    getResourceBundle(locale: java.util.Locale): java.util.ResourceBundle
+                    public getResourceBundle(locale: java.util.Locale): java.util.ResourceBundle
                 }
             }
         }

@@ -23,14 +23,14 @@ declare namespace java {
                  *  is null.
                  */
                 // @ts-ignore
-                constructor(stdName: string)
+                constructor(stdName: java.lang.String | string)
                 /**
                  * Returns the standard or predefined name of the
                  * to-be-generated EC domain parameters.
                  * @return the standard or predefined name.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
             }
         }
     }

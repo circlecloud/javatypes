@@ -25,7 +25,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.support.AbstractBeanDefinition#setDestroyMethodName(String)
                          */
                         // @ts-ignore
-                        postProcessBeforeDestruction(bean: any, beanName: string): void
+                        postProcessBeforeDestruction(bean: java.lang.Object | any, beanName: java.lang.String | string): void
                         /**
                          * Determine whether the given bean instance requires destruction by this
                          * post-processor.
@@ -38,7 +38,7 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        requiresDestruction(bean: any): boolean
+                        requiresDestruction(bean: java.lang.Object | any): boolean
                     }
                 }
             }

@@ -14,33 +14,33 @@ declare namespace org {
                      * The true value.
                      */
                     // @ts-ignore
-                    readonly TRUE: java.util.Optional<java.lang.Boolean>
+                    public static readonly TRUE: java.util.Optional<java.lang.Boolean>
                     /**
                      * The false value.
                      */
                     // @ts-ignore
-                    readonly FALSE: java.util.Optional<java.lang.Boolean>
+                    public static readonly FALSE: java.util.Optional<java.lang.Boolean>
                     /**
                      * The absent value.
                      * <p>Also a shorthand for constructing instances
                      * with {@code Optional.&lt;Boolean&gt;absent()}.</p>
                      */
                     // @ts-ignore
-                    readonly ABSENT: java.util.Optional<java.lang.Boolean>
+                    public static readonly ABSENT: java.util.Optional<java.lang.Boolean>
                     /**
                      * Constructs a new {@code Optional&lt;Boolean&gt;} from the given boolean.
                      * @param bool The boolean
                      * @return The constructed Optional
                      */
                     // @ts-ignore
-                    of(bool: boolean): java.util.Optional<java.lang.Boolean>
+                    public static of(bool: boolean): java.util.Optional<java.lang.Boolean>
                     /**
                      * Constructs a new {@code Optional&lt;Boolean&gt;} from the given {@link Boolean}.
                      * @param bool The boolean
                      * @return The constructed Optional, or {#link Optional#empty()}
                      */
                     // @ts-ignore
-                    of(bool: java.lang.Boolean): java.util.Optional<java.lang.Boolean>
+                    public static of(bool: java.lang.Boolean): java.util.Optional<java.lang.Boolean>
                     /**
                      * Coerces the given {@code Optional&lt;Boolean&gt;} into one of the three
                      * stored states.
@@ -48,7 +48,7 @@ declare namespace org {
                      * @return The constructed Optional, or {#link Optional#empty()}
                      */
                     // @ts-ignore
-                    of(bool: java.util.Optional<java.lang.Boolean>): java.util.Optional<java.lang.Boolean>
+                    public static of(bool: java.util.Optional<java.lang.Boolean>): java.util.Optional<java.lang.Boolean>
                 }
             }
         }

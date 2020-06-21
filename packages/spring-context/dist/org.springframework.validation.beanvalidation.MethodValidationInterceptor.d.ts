@@ -38,7 +38,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(validator: Validator)
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                     /**
                      * Determine the validation groups to validate against for the given method invocation.
                      * <p>Default are the validation groups as specified in the {@link Validated} annotation
@@ -47,7 +47,7 @@ declare namespace org {
                      * @return the applicable validation groups as a Class array
                      */
                     // @ts-ignore
-                    determineValidationGroups(invocation: MethodInvocation): java.lang.Class[]
+                    determineValidationGroups(invocation: MethodInvocation): java.lang.Class<any>[]
                 }
             }
         }

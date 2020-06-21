@@ -97,14 +97,14 @@ declare namespace java {
                  *                  silently ignored and is not published
                  */
                 // @ts-ignore
-                publish(record: java.util.logging.LogRecord): void
+                public publish(record: java.util.logging.LogRecord): void
                 /**
                  * Push any buffered output to the target <tt>Handler</tt>.
                  * <p>
                  * The buffer is then cleared.
                  */
                 // @ts-ignore
-                push(): void
+                public push(): void
                 /**
                  * Causes a flush on the target <tt>Handler</tt>.
                  * <p>
@@ -112,7 +112,7 @@ declare namespace java {
                  * buffer are <b>not</b> written out.  That requires a "push".
                  */
                 // @ts-ignore
-                flush(): void
+                public flush(): void
                 /**
                  * Close the <tt>Handler</tt> and free all associated resources.
                  * This will also close the target <tt>Handler</tt>.
@@ -120,7 +120,7 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Set the <tt>pushLevel</tt>.  After a <tt>LogRecord</tt> is copied
                  * into our internal buffer, if its level is greater than or equal to
@@ -130,13 +130,13 @@ declare namespace java {
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                setPushLevel(newLevel: java.util.logging.Level): void
+                public setPushLevel(newLevel: java.util.logging.Level): void
                 /**
                  * Get the <tt>pushLevel</tt>.
                  * @return the value of the <tt>pushLevel</tt>
                  */
                 // @ts-ignore
-                getPushLevel(): java.util.logging.Level
+                public getPushLevel(): java.util.logging.Level
                 /**
                  * Check if this <tt>Handler</tt> would actually log a given
                  * <tt>LogRecord</tt> into its internal buffer.
@@ -150,7 +150,7 @@ declare namespace java {
                  * @return true if the <tt>LogRecord</tt> would be logged.
                  */
                 // @ts-ignore
-                isLoggable(record: java.util.logging.LogRecord): boolean
+                public isLoggable(record: java.util.logging.LogRecord): boolean
             }
         }
     }

@@ -12,7 +12,7 @@ declare namespace org {
                      * @since 1.2.3
                      */
                     // @ts-ignore
-                    class ResourcePatternUtils extends java.lang.Object {
+                    abstract class ResourcePatternUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -26,7 +26,7 @@ declare namespace org {
                          * @see java.net.URL
                          */
                         // @ts-ignore
-                        isUrl(resourceLocation: string): boolean
+                        public static isUrl(resourceLocation: java.lang.String | string): boolean
                         /**
                          * Return a default {@link ResourcePatternResolver} for the given {@link ResourceLoader}.
                          * <p>This might be the {@code ResourceLoader} itself, if it implements the
@@ -38,7 +38,7 @@ declare namespace org {
                          * @see PathMatchingResourcePatternResolver
                          */
                         // @ts-ignore
-                        getResourcePatternResolver(resourceLoader: org.springframework.core.io.ResourceLoader): org.springframework.core.io.support.ResourcePatternResolver
+                        public static getResourcePatternResolver(resourceLoader: org.springframework.core.io.ResourceLoader): org.springframework.core.io.support.ResourcePatternResolver
                     }
                 }
             }

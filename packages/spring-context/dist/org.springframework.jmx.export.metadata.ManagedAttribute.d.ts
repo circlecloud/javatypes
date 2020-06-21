@@ -19,25 +19,25 @@ declare namespace org {
                          * Empty attributes.
                          */
                         // @ts-ignore
-                        readonly EMPTY: org.springframework.jmx.export.metadata.ManagedAttribute
+                        public static readonly EMPTY: org.springframework.jmx.export.metadata.ManagedAttribute
                         /**
                          * Set the default value of this attribute.
                          */
                         // @ts-ignore
-                        setDefaultValue(defaultValue: any): void
+                        public setDefaultValue(defaultValue: java.lang.Object | any): void
                         /**
                          * Return the default value of this attribute.
                          */
                         // @ts-ignore
-                        getDefaultValue(): java.lang.Object
+                        public getDefaultValue(): any
                         // @ts-ignore
-                        setPersistPolicy(persistPolicy: string): void
+                        public setPersistPolicy(persistPolicy: java.lang.String | string): void
                         // @ts-ignore
-                        getPersistPolicy(): java.lang.String
+                        public getPersistPolicy(): string
                         // @ts-ignore
-                        setPersistPeriod(persistPeriod: number /*int*/): void
+                        public setPersistPeriod(persistPeriod: number /*int*/): void
                         // @ts-ignore
-                        getPersistPeriod(): int
+                        public getPersistPeriod(): number /*int*/
                     }
                 }
             }

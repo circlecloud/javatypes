@@ -14,19 +14,19 @@ declare namespace org {
                      * @return A new builder
                      */
                     // @ts-ignore
-                    builder(): org.spongepowered.api.util.RespawnLocation.Builder
+                    public static builder(): org.spongepowered.api.util.RespawnLocation.Builder
                     /**
                      * Gets the {@link UUID} of the world this position refers to.
                      * @return The world UUID
                      */
                     // @ts-ignore
-                    getWorldUniqueId(): java.util.UUID
+                    public getWorldUniqueId(): java.util.UUID
                     /**
                      * Gets the position within the world of this spawn point.
                      * @return The spawn position
                      */
                     // @ts-ignore
-                    getPosition(): Vector3d
+                    public getPosition(): Vector3d
                     /**
                      * Gets whether the spawn position is forced in the given world, if
                      * available. A forced position will spawn the player there even if a bed is
@@ -34,24 +34,24 @@ declare namespace org {
                      * @return Whether the position is forced in the world
                      */
                     // @ts-ignore
-                    isForced(): boolean
+                    public isForced(): boolean
                     /**
                      * Gets this spawn position as a {@link Location} object, if the world is
                      * available.
                      * @return The position object, if available.
                      */
                     // @ts-ignore
-                    asLocation(): java.util.Optional<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
+                    public asLocation(): java.util.Optional<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
                     // @ts-ignore
-                    getContentVersion(): int
+                    public getContentVersion(): number /*int*/
                     // @ts-ignore
-                    toContainer(): org.spongepowered.api.data.DataContainer
+                    public toContainer(): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

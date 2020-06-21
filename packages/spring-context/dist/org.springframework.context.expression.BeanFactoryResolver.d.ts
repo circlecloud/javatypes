@@ -17,7 +17,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(beanFactory: BeanFactory)
                     // @ts-ignore
-                    resolve(context: EvaluationContext, beanName: string): java.lang.Object
+                    public resolve(context: EvaluationContext, beanName: java.lang.String | string): any
                 }
             }
         }

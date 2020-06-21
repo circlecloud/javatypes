@@ -25,7 +25,7 @@ declare namespace javax {
                  * @see <a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-2004-08-24.html">WS-I Attachments Profile Version 1.0.</a>
                  */
                 // @ts-ignore
-                class AttachmentMarshaller extends java.lang.Object {
+                abstract class AttachmentMarshaller extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @see <a href="http://www.w3.org/TR/xml-media-types/">Describing Media Content of Binary Data in XML</a>
                      */
                     // @ts-ignore
-                    abstract addMtomAttachment(data: javax.activation.DataHandler, elementNamespace: string, elementLocalName: string): java.lang.String
+                    public abstract addMtomAttachment(data: javax.activation.DataHandler, elementNamespace: java.lang.String | string, elementLocalName: java.lang.String | string): string
                     /**
                      * <p>Consider binary <code>data</code> for optimized binary storage as an attachment.
                      * <p>Since content type is not known, the attachment's MIME content type must be set to "application/octet-stream".</p>
@@ -102,7 +102,7 @@ declare namespace javax {
                      * @see #addMtomAttachment(DataHandler, String, String)
                      */
                     // @ts-ignore
-                    abstract addMtomAttachment(data: number /*byte*/[], offset: number /*int*/, length: number /*int*/, mimeType: string, elementNamespace: string, elementLocalName: string): java.lang.String
+                    public abstract addMtomAttachment(data: number /*byte*/[], offset: number /*int*/, length: number /*int*/, mimeType: java.lang.String | string, elementNamespace: java.lang.String | string, elementLocalName: java.lang.String | string): string
                     /**
                      * <p>Read-only property that returns true if JAXB marshaller should enable XOP creation.</p>
                      * <p>This value must not change during the marshalling process. When this
@@ -124,7 +124,7 @@ declare namespace javax {
                      * @return true when MIME context is a XOP Package.
                      */
                     // @ts-ignore
-                    isXOPPackage(): boolean
+                    public isXOPPackage(): boolean
                     /**
                      * <p>Add MIME <code>data</code> as an attachment and return attachment's content-id, cid.</p>
                      * <p>
@@ -140,7 +140,7 @@ declare namespace javax {
                      *        <a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-2004-08-24.html#Referencing_Attachments_from_the_SOAP_Envelope">WS-I Attachments Profile Version 1.0.</a>
                      */
                     // @ts-ignore
-                    abstract addSwaRefAttachment(data: javax.activation.DataHandler): java.lang.String
+                    public abstract addSwaRefAttachment(data: javax.activation.DataHandler): string
                 }
             }
         }

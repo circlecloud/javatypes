@@ -20,7 +20,7 @@ declare namespace java {
                  *  that the delay has already elapsed
                  */
                 // @ts-ignore
-                getDelay(unit: java.util.concurrent.TimeUnit): long
+                getDelay(unit: java.util.concurrent.TimeUnit): number /*long*/
             }
         }
     }

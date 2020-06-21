@@ -7,11 +7,11 @@ declare namespace org {
                  * org.bukkit.plugin.ServicesManager}
                  */
                 // @ts-ignore
-                class ServiceEvent extends org.bukkit.event.server.ServerEvent {
+                abstract class ServiceEvent extends org.bukkit.event.server.ServerEvent {
                     // @ts-ignore
                     constructor(provider: org.bukkit.plugin.RegisteredServiceProvider<any>)
                     // @ts-ignore
-                    getProvider(): org.bukkit.plugin.RegisteredServiceProvider<?>
+                    public getProvider(): org.bukkit.plugin.RegisteredServiceProvider<any>
                 }
             }
         }

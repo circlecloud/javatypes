@@ -58,14 +58,14 @@ declare namespace org {
                  * @see java.lang.reflect.AnnotatedElement#getDeclaredAnnotations()
                  */
                 // @ts-ignore
-                class AnnotationUtils extends java.lang.Object {
+                abstract class AnnotationUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
                      * The attribute name for annotations with a single element.
                      */
                     // @ts-ignore
-                    readonly VALUE: string
+                    public static readonly VALUE: java.lang.String | string
                     /**
                      * Determine whether the given class is a candidate for carrying one of the specified
                      * annotations (at type, method or field level).
@@ -79,7 +79,7 @@ declare namespace org {
                      * @see #isCandidateClass(Class, String)
                      */
                     // @ts-ignore
-                    isCandidateClass(clazz: java.lang.Class<any>, annotationTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>): boolean
+                    public static isCandidateClass(clazz: java.lang.Class<any>, annotationTypes: java.util.Collection<java.lang.Class<any>> | Array<java.lang.Class<any>>): boolean
                     /**
                      * Determine whether the given class is a candidate for carrying the specified annotation
                      * (at type, method or field level).
@@ -92,7 +92,7 @@ declare namespace org {
                      * @see #isCandidateClass(Class, String)
                      */
                     // @ts-ignore
-                    isCandidateClass(clazz: java.lang.Class<any>, annotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                    public static isCandidateClass(clazz: java.lang.Class<any>, annotationType: java.lang.Class<any>): boolean
                     /**
                      * Determine whether the given class is a candidate for carrying the specified annotation
                      * (at type, method or field level).
@@ -105,7 +105,7 @@ declare namespace org {
                      * @see #isCandidateClass(Class, Class)
                      */
                     // @ts-ignore
-                    isCandidateClass(clazz: java.lang.Class<any>, annotationName: string): boolean
+                    public static isCandidateClass(clazz: java.lang.Class<any>, annotationName: java.lang.String | string): boolean
                     /**
                      * Get a single {@link Annotation} of {@code annotationType} from the supplied
                      * annotation: either the given annotation itself or a direct meta-annotation
@@ -119,7 +119,7 @@ declare namespace org {
                      * @since 4.0
                      */
                     // @ts-ignore
-                    getAnnotation<A extends java.lang.annotation.Annotation>(annotation: java.lang.annotation.Annotation, annotationType: java.lang.Class<A>): A
+                    public static getAnnotation<A extends java.lang.annotation.Annotation>(annotation: java.lang.annotation.Annotation, annotationType: java.lang.Class<A>): A
                     /**
                      * Get a single {@link Annotation} of {@code annotationType} from the supplied
                      * {@link AnnotatedElement}, where the annotation is either <em>present</em> or
@@ -133,7 +133,7 @@ declare namespace org {
                      * @since 3.1
                      */
                     // @ts-ignore
-                    getAnnotation<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
+                    public static getAnnotation<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
                     /**
                      * Get a single {@link Annotation} of {@code annotationType} from the
                      * supplied {@link Method}, where the annotation is either <em>present</em>
@@ -149,7 +149,7 @@ declare namespace org {
                      * @see #getAnnotation(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    getAnnotation<A extends java.lang.annotation.Annotation>(method: java.lang.reflect.Method, annotationType: java.lang.Class<A>): A
+                    public static getAnnotation<A extends java.lang.annotation.Annotation>(method: java.lang.reflect.Method, annotationType: java.lang.Class<A>): A
                     /**
                      * Get all {@link Annotation Annotations} that are <em>present</em> on the
                      * supplied {@link AnnotatedElement}.
@@ -163,7 +163,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    getAnnotations(annotatedElement: java.lang.reflect.AnnotatedElement): java.lang.annotation.Annotation[]
+                    public static getAnnotations(annotatedElement: java.lang.reflect.AnnotatedElement): java.lang.annotation.Annotation[]
                     /**
                      * Get all {@link Annotation Annotations} that are <em>present</em> on the
                      * supplied {@link Method}.
@@ -178,7 +178,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    getAnnotations(method: java.lang.reflect.Method): java.lang.annotation.Annotation[]
+                    public static getAnnotations(method: java.lang.reflect.Method): java.lang.annotation.Annotation[]
                     /**
                      * Get the <em>repeatable</em> {@linkplain Annotation annotations} of
                      * {@code annotationType} from the supplied {@link AnnotatedElement}, where
@@ -208,7 +208,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    getRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): java.util.Set<A>
+                    public static getRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): Array<A>
                     /**
                      * Get the <em>repeatable</em> {@linkplain Annotation annotations} of
                      * {@code annotationType} from the supplied {@link AnnotatedElement}, where
@@ -241,7 +241,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    getRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Set<A>
+                    public static getRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerAnnotationType: java.lang.Class<any>): Array<A>
                     /**
                      * Get the declared <em>repeatable</em> {@linkplain Annotation annotations}
                      * of {@code annotationType} from the supplied {@link AnnotatedElement},
@@ -272,7 +272,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    getDeclaredRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): java.util.Set<A>
+                    public static getDeclaredRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): Array<A>
                     /**
                      * Get the declared <em>repeatable</em> {@linkplain Annotation annotations}
                      * of {@code annotationType} from the supplied {@link AnnotatedElement},
@@ -305,7 +305,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    getDeclaredRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Set<A>
+                    public static getDeclaredRepeatableAnnotations<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerAnnotationType: java.lang.Class<any>): Array<A>
                     /**
                      * Find a single {@link Annotation} of {@code annotationType} on the
                      * supplied {@link AnnotatedElement}.
@@ -323,7 +323,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    findAnnotation<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
+                    public static findAnnotation<A extends java.lang.annotation.Annotation>(annotatedElement: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
                     /**
                      * Find a single {@link Annotation} of {@code annotationType} on the supplied
                      * {@link Method}, traversing its super methods (i.e. from superclasses and
@@ -340,7 +340,7 @@ declare namespace org {
                      * @see #getAnnotation(Method, Class)
                      */
                     // @ts-ignore
-                    findAnnotation<A extends java.lang.annotation.Annotation>(method: java.lang.reflect.Method, annotationType: java.lang.Class<A>): A
+                    public static findAnnotation<A extends java.lang.annotation.Annotation>(method: java.lang.reflect.Method, annotationType: java.lang.Class<A>): A
                     /**
                      * Find a single {@link Annotation} of {@code annotationType} on the
                      * supplied {@link Class}, traversing its interfaces, annotations, and
@@ -364,7 +364,7 @@ declare namespace org {
                      * @return the first matching annotation, or {#code null} if not found
                      */
                     // @ts-ignore
-                    findAnnotation<A extends java.lang.annotation.Annotation>(clazz: java.lang.Class<any>, annotationType: java.lang.Class<A>): A
+                    public static findAnnotation<A extends java.lang.annotation.Annotation>(clazz: java.lang.Class<any>, annotationType: java.lang.Class<A>): A
                     /**
                      * Find the first {@link Class} in the inheritance hierarchy of the
                      * specified {@code clazz} (including the specified {@code clazz} itself)
@@ -387,7 +387,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    findAnnotationDeclaringClass(annotationType: java.lang.Class<java.lang.annotation.Annotation>, clazz: java.lang.Class<any>): java.lang.Class<?>
+                    public static findAnnotationDeclaringClass(annotationType: java.lang.Class<any>, clazz: java.lang.Class<any>): java.lang.Class<any>
                     /**
                      * Find the first {@link Class} in the inheritance hierarchy of the
                      * specified {@code clazz} (including the specified {@code clazz} itself)
@@ -412,7 +412,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    findAnnotationDeclaringClassForTypes(annotationTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>, clazz: java.lang.Class<any>): java.lang.Class<?>
+                    public static findAnnotationDeclaringClassForTypes(annotationTypes: java.util.List<java.lang.Class<any>> | Array<java.lang.Class<any>>, clazz: java.lang.Class<any>): java.lang.Class<any>
                     /**
                      * Determine whether an annotation of the specified {@code annotationType}
                      * is declared locally (i.e. <em>directly present</em>) on the supplied
@@ -429,7 +429,7 @@ declare namespace org {
                      * @see java.lang.Class#getDeclaredAnnotation(Class)
                      */
                     // @ts-ignore
-                    isAnnotationDeclaredLocally(annotationType: java.lang.Class<java.lang.annotation.Annotation>, clazz: java.lang.Class<any>): boolean
+                    public static isAnnotationDeclaredLocally(annotationType: java.lang.Class<any>, clazz: java.lang.Class<any>): boolean
                     /**
                      * Determine whether an annotation of the specified {@code annotationType}
                      * is <em>present</em> on the supplied {@code clazz} and is
@@ -451,7 +451,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    isAnnotationInherited(annotationType: java.lang.Class<java.lang.annotation.Annotation>, clazz: java.lang.Class<any>): boolean
+                    public static isAnnotationInherited(annotationType: java.lang.Class<any>, clazz: java.lang.Class<any>): boolean
                     /**
                      * Determine if an annotation of type {@code metaAnnotationType} is
                      * <em>meta-present</em> on the supplied {@code annotationType}.
@@ -462,7 +462,7 @@ declare namespace org {
                      * @deprecated as of 5.2 since it is superseded by the {#link MergedAnnotations} API
                      */
                     // @ts-ignore
-                    isAnnotationMetaPresent(annotationType: java.lang.Class<java.lang.annotation.Annotation>, metaAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                    public static isAnnotationMetaPresent(annotationType: java.lang.Class<any>, metaAnnotationType: java.lang.Class<any>): boolean
                     /**
                      * Determine if the supplied {@link Annotation} is defined in the core JDK
                      * {@code java.lang.annotation} package.
@@ -470,7 +470,7 @@ declare namespace org {
                      * @return {#code true} if the annotation is in the {@code java.lang.annotation} package
                      */
                     // @ts-ignore
-                    isInJavaLangAnnotationPackage(annotation: java.lang.annotation.Annotation): boolean
+                    public static isInJavaLangAnnotationPackage(annotation: java.lang.annotation.Annotation): boolean
                     /**
                      * Determine if the {@link Annotation} with the supplied name is defined
                      * in the core JDK {@code java.lang.annotation} package.
@@ -479,7 +479,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    isInJavaLangAnnotationPackage(annotationType: string): boolean
+                    public static isInJavaLangAnnotationPackage(annotationType: java.lang.String | string): boolean
                     /**
                      * Check the declared attributes of the given annotation, in particular covering
                      * Google App Engine's late arrival of {@code TypeNotPresentExceptionProxy} for
@@ -493,7 +493,7 @@ declare namespace org {
                      * @see #getAnnotationAttributes(Annotation)
                      */
                     // @ts-ignore
-                    validateAnnotation(annotation: java.lang.annotation.Annotation): void
+                    public static validateAnnotation(annotation: java.lang.annotation.Annotation): void
                     /**
                      * Retrieve the given annotation's attributes as a {@link Map}, preserving all
                      * attribute types.
@@ -510,7 +510,7 @@ declare namespace org {
                      * @see #getAnnotationAttributes(AnnotatedElement, Annotation, boolean, boolean)
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotation: java.lang.annotation.Annotation): java.util.Map<java.lang.String, java.lang.Object>
+                    public static getAnnotationAttributes(annotation: java.lang.annotation.Annotation): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Retrieve the given annotation's attributes as a {@link Map}.
                      * <p>Equivalent to calling {@link #getAnnotationAttributes(Annotation, boolean, boolean)}
@@ -526,7 +526,7 @@ declare namespace org {
                      * @see #getAnnotationAttributes(Annotation, boolean, boolean)
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotation: java.lang.annotation.Annotation, classValuesAsString: boolean): java.util.Map<java.lang.String, java.lang.Object>
+                    public static getAnnotationAttributes(annotation: java.lang.annotation.Annotation, classValuesAsString: boolean): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Retrieve the given annotation's attributes as an {@link AnnotationAttributes} map.
                      * <p>This method provides fully recursive annotation reading capabilities on par with
@@ -544,7 +544,7 @@ declare namespace org {
                      * @since 3.1.1
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotation: java.lang.annotation.Annotation, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
+                    public static getAnnotationAttributes(annotation: java.lang.annotation.Annotation, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Retrieve the given annotation's attributes as an {@link AnnotationAttributes} map.
                      * <p>Equivalent to calling {@link #getAnnotationAttributes(AnnotatedElement, Annotation, boolean, boolean)}
@@ -559,7 +559,7 @@ declare namespace org {
                      * @see #getAnnotationAttributes(AnnotatedElement, Annotation, boolean, boolean)
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotatedElement: java.lang.reflect.AnnotatedElement, annotation: java.lang.annotation.Annotation): org.springframework.core.annotation.AnnotationAttributes
+                    public static getAnnotationAttributes(annotatedElement: java.lang.reflect.AnnotatedElement, annotation: java.lang.annotation.Annotation): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Retrieve the given annotation's attributes as an {@link AnnotationAttributes} map.
                      * <p>This method provides fully recursive annotation reading capabilities on par with
@@ -579,7 +579,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotatedElement: java.lang.reflect.AnnotatedElement, annotation: java.lang.annotation.Annotation, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
+                    public static getAnnotationAttributes(annotatedElement: java.lang.reflect.AnnotatedElement, annotation: java.lang.annotation.Annotation, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Register the annotation-declared default values for the given attributes,
                      * if available.
@@ -587,7 +587,7 @@ declare namespace org {
                      * @since 4.3.2
                      */
                     // @ts-ignore
-                    registerDefaultValues(attributes: org.springframework.core.annotation.AnnotationAttributes): void
+                    public static registerDefaultValues(attributes: org.springframework.core.annotation.AnnotationAttributes): void
                     /**
                      * Post-process the supplied {@link AnnotationAttributes}, preserving nested
                      * annotations as {@code Annotation} instances.
@@ -605,7 +605,7 @@ declare namespace org {
                      * @see #getDefaultValue(Class, String)
                      */
                     // @ts-ignore
-                    postProcessAnnotationAttributes(annotatedElement: any, attributes: org.springframework.core.annotation.AnnotationAttributes, classValuesAsString: boolean): void
+                    public static postProcessAnnotationAttributes(annotatedElement: java.lang.Object | any, attributes: org.springframework.core.annotation.AnnotationAttributes, classValuesAsString: boolean): void
                     /**
                      * Retrieve the <em>value</em> of the {@code value} attribute of a
                      * single-element Annotation, given an annotation instance.
@@ -616,7 +616,7 @@ declare namespace org {
                      * @see #getValue(Annotation, String)
                      */
                     // @ts-ignore
-                    getValue(annotation: java.lang.annotation.Annotation): java.lang.Object
+                    public static getValue(annotation: java.lang.annotation.Annotation): any
                     /**
                      * Retrieve the <em>value</em> of a named attribute, given an annotation instance.
                      * @param annotation the annotation instance from which to retrieve the value
@@ -627,7 +627,7 @@ declare namespace org {
                      * @see #getValue(Annotation)
                      */
                     // @ts-ignore
-                    getValue(annotation: java.lang.annotation.Annotation, attributeName: string): java.lang.Object
+                    public static getValue(annotation: java.lang.annotation.Annotation, attributeName: java.lang.String | string): any
                     /**
                      * Retrieve the <em>default value</em> of the {@code value} attribute
                      * of a single-element Annotation, given an annotation instance.
@@ -636,7 +636,7 @@ declare namespace org {
                      * @see #getDefaultValue(Annotation, String)
                      */
                     // @ts-ignore
-                    getDefaultValue(annotation: java.lang.annotation.Annotation): java.lang.Object
+                    public static getDefaultValue(annotation: java.lang.annotation.Annotation): any
                     /**
                      * Retrieve the <em>default value</em> of a named attribute, given an annotation instance.
                      * @param annotation the annotation instance from which to retrieve the default value
@@ -645,7 +645,7 @@ declare namespace org {
                      * @see #getDefaultValue(Class, String)
                      */
                     // @ts-ignore
-                    getDefaultValue(annotation: java.lang.annotation.Annotation, attributeName: string): java.lang.Object
+                    public static getDefaultValue(annotation: java.lang.annotation.Annotation, attributeName: java.lang.String | string): any
                     /**
                      * Retrieve the <em>default value</em> of the {@code value} attribute
                      * of a single-element Annotation, given the {@link Class annotation type}.
@@ -654,7 +654,7 @@ declare namespace org {
                      * @see #getDefaultValue(Class, String)
                      */
                     // @ts-ignore
-                    getDefaultValue(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.lang.Object
+                    public static getDefaultValue(annotationType: java.lang.Class<any>): any
                     /**
                      * Retrieve the <em>default value</em> of a named attribute, given the
                      * {@link Class annotation type}.
@@ -664,7 +664,7 @@ declare namespace org {
                      * @see #getDefaultValue(Annotation, String)
                      */
                     // @ts-ignore
-                    getDefaultValue(annotationType: java.lang.Class<java.lang.annotation.Annotation>, attributeName: string): java.lang.Object
+                    public static getDefaultValue(annotationType: java.lang.Class<any>, attributeName: java.lang.String | string): any
                     /**
                      * <em>Synthesize</em> an annotation from the supplied {@code annotation}
                      * by wrapping it in a dynamic proxy that transparently enforces
@@ -683,7 +683,7 @@ declare namespace org {
                      * @see #synthesizeAnnotation(Class)
                      */
                     // @ts-ignore
-                    synthesizeAnnotation<A extends java.lang.annotation.Annotation>(annotation: A extends java.lang.annotation.Annotation, annotatedElement: java.lang.reflect.AnnotatedElement): A
+                    public static synthesizeAnnotation<A extends java.lang.annotation.Annotation>(annotation: A, annotatedElement: java.lang.reflect.AnnotatedElement): A
                     /**
                      * <em>Synthesize</em> an annotation from its default attributes values.
                      * <p>This method simply delegates to
@@ -700,7 +700,7 @@ declare namespace org {
                      * @see #synthesizeAnnotation(Annotation, AnnotatedElement)
                      */
                     // @ts-ignore
-                    synthesizeAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
+                    public static synthesizeAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
                     /**
                      * <em>Synthesize</em> an annotation from the supplied map of annotation
                      * attributes by wrapping the map in a dynamic proxy that implements an
@@ -731,13 +731,13 @@ declare namespace org {
                      * @see #getAnnotationAttributes(AnnotatedElement, Annotation, boolean, boolean)
                      */
                     // @ts-ignore
-                    synthesizeAnnotation<A extends java.lang.annotation.Annotation>(attributes: java.util.Map<java.lang.String, java.lang.Object>, annotationType: java.lang.Class<A>, annotatedElement: java.lang.reflect.AnnotatedElement): A
+                    public static synthesizeAnnotation<A extends java.lang.annotation.Annotation>(attributes: java.util.Map<java.lang.String | string, java.lang.Object | any>, annotationType: java.lang.Class<A>, annotatedElement: java.lang.reflect.AnnotatedElement): A
                     /**
                      * Clear the internal annotation metadata cache.
                      * @since 4.3.15
                      */
                     // @ts-ignore
-                    clearCache(): void
+                    public static clearCache(): void
                 }
             }
         }

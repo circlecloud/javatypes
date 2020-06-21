@@ -16,7 +16,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        keyPressed(e: java.awt.event.KeyEvent): void
+                        public keyPressed(e: java.awt.event.KeyEvent): void
                     }
                 }
             }

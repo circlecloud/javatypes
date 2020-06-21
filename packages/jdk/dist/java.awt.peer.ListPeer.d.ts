@@ -19,7 +19,7 @@ declare namespace java {
                  * @see List#getSelectedIndexes()
                  */
                 // @ts-ignore
-                getSelectedIndexes(): int[]
+                getSelectedIndexes(): number /*int*/[]
                 /**
                  * Adds an item to the list at the specified index.
                  * @param item the item to add to the list
@@ -27,7 +27,7 @@ declare namespace java {
                  * @see List#add(String, int)
                  */
                 // @ts-ignore
-                add(item: string, index: number /*int*/): void
+                add(item: java.lang.String | string, index: number /*int*/): void
                 /**
                  * Deletes items from the list. All items from start to end should are
                  * deleted, including the item at the start and end indices.

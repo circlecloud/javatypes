@@ -131,66 +131,66 @@ declare namespace org {
                  * @see Material#LEGACY_DARK_OAK_DOOR
                  */
                 // @ts-ignore
-                getWoodDoorOfSpecies(species: org.bukkit.TreeSpecies): org.bukkit.Material
+                public static getWoodDoorOfSpecies(species: org.bukkit.TreeSpecies): org.bukkit.Material
                 /**
                  * Result is undefined if <code>isTopHalf()</code> is true.
                  */
                 // @ts-ignore
-                isOpen(): boolean
+                public isOpen(): boolean
                 /**
                  * Set whether the door is open. Undefined if <code>isTopHalf()</code> is true.
                  */
                 // @ts-ignore
-                setOpen(isOpen: boolean): void
+                public setOpen(isOpen: boolean): void
                 /**
                  * @return whether this is the top half of the door
                  */
                 // @ts-ignore
-                isTopHalf(): boolean
+                public isTopHalf(): boolean
                 /**
                  * Configure this part of the door to be either the top or the bottom half
                  * @param isTopHalf True to make it the top half.
                  */
                 // @ts-ignore
-                setTopHalf(isTopHalf: boolean): void
+                public setTopHalf(isTopHalf: boolean): void
                 /**
                  * @return BlockFace.SELF
                  * @deprecated This method should not be used; use hinge and facing accessors instead.
                  */
                 // @ts-ignore
-                getHingeCorner(): org.bukkit.block.BlockFace
+                public getHingeCorner(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Set the direction that this door should is facing.
                  * Undefined if <code>isTopHalf()</code> is true.
                  * @param face the direction
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 /**
                  * Get the direction that this door is facing.
                  * Undefined if <code>isTopHalf()</code> is true.
                  * @return the direction
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 /**
                  * Returns the side of the door the hinge is on.
                  * Undefined if <code>isTopHalf()</code> is false.
                  * @return false for left hinge, true for right hinge
                  */
                 // @ts-ignore
-                getHinge(): boolean
+                public getHinge(): boolean
                 /**
                  * Set whether the hinge is on the left or right side. Left is false, right is true.
                  * Undefined if <code>isTopHalf()</code> is false.
                  * @param isHingeRight True if the hinge is on the right hand side, false if the hinge is on the left hand side.
                  */
                 // @ts-ignore
-                setHinge(isHingeRight: boolean): void
+                public setHinge(isHingeRight: boolean): void
                 // @ts-ignore
-                clone(): org.bukkit.material.Door
+                public clone(): org.bukkit.material.Door
             }
         }
     }

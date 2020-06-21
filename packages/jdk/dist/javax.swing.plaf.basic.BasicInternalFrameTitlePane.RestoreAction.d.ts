@@ -12,7 +12,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        actionPerformed(evt: java.awt.event.ActionEvent): void
+                        public actionPerformed(evt: java.awt.event.ActionEvent): void
                     }
                 }
             }

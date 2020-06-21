@@ -28,7 +28,7 @@ declare namespace org {
                      * @since 2.5
                      */
                     // @ts-ignore
-                    class ModelAttribute implements java.lang.annotation.Annotation {
+                    abstract class ModelAttribute implements java.lang.annotation.Annotation {
                     }
                 }
             }

@@ -56,7 +56,7 @@ declare namespace javax {
                  * @see javax.naming.directory.DirContext#search(javax.naming.Name, java.lang.String, javax.naming.directory.SearchControls)
                  */
                 // @ts-ignore
-                addNamingListener(target: javax.naming.Name, filter: string, ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
+                addNamingListener(target: javax.naming.Name, filter: java.lang.String | string, ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
                 /**
                  * Adds a listener for receiving naming events fired when
                  * objects identified by the search filter <tt>filter</tt> at the
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @see javax.naming.directory.DirContext#search(java.lang.String, java.lang.String, javax.naming.directory.SearchControls)
                  */
                 // @ts-ignore
-                addNamingListener(target: string, filter: string, ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
+                addNamingListener(target: java.lang.String | string, filter: java.lang.String | string, ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
                 /**
                  * Adds a listener for receiving naming events fired
                  * when objects identified by the search filter <tt>filter</tt> and
@@ -99,7 +99,7 @@ declare namespace javax {
                  * @see javax.naming.directory.DirContext#search(javax.naming.Name, java.lang.String, java.lang.Object[], javax.naming.directory.SearchControls)
                  */
                 // @ts-ignore
-                addNamingListener(target: javax.naming.Name, filter: string, filterArgs: any[], ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
+                addNamingListener(target: javax.naming.Name, filter: java.lang.String | string, filterArgs: java.lang.Object[] | any[], ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
                 /**
                  * Adds a listener for receiving naming events fired when
                  * objects identified by the search filter <tt>filter</tt>
@@ -119,7 +119,7 @@ declare namespace javax {
                  * @see javax.naming.directory.DirContext#search(java.lang.String, java.lang.String, java.lang.Object[], javax.naming.directory.SearchControls)
                  */
                 // @ts-ignore
-                addNamingListener(target: string, filter: string, filterArgs: any[], ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
+                addNamingListener(target: java.lang.String | string, filter: java.lang.String | string, filterArgs: java.lang.Object[] | any[], ctls: javax.naming.directory.SearchControls, l: javax.naming.event.NamingListener): void
             }
         }
     }

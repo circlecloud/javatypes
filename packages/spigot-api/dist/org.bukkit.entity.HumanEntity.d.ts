@@ -11,7 +11,7 @@ declare namespace org {
                  * @return Player name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Get the player's inventory.
                  * @return The inventory of the player, this also contains the armor
@@ -157,7 +157,7 @@ declare namespace org {
                  * @return the remaining cooldown time in ticks
                  */
                 // @ts-ignore
-                getCooldown(material: org.bukkit.Material): int
+                getCooldown(material: org.bukkit.Material): number /*int*/
                 /**
                  * Set a cooldown on the specified material for a certain amount of ticks.
                  * ticks. 0 ticks will result in the removal of the cooldown.
@@ -177,7 +177,7 @@ declare namespace org {
                  * @return slumber ticks
                  */
                 // @ts-ignore
-                getSleepTicks(): int
+                getSleepTicks(): number /*int*/
                 /**
                  * Gets the Location where the player will spawn at their bed, null if
                  * they have not slept in one or their current bed spawn is invalid.
@@ -257,7 +257,7 @@ declare namespace org {
                  * @return Experience required to level up
                  */
                 // @ts-ignore
-                getExpToLevel(): int
+                getExpToLevel(): number /*int*/
                 /**
                  * Gets the current cooldown for a player's attack.
                  * This is used to calculate damage, with 1.0 representing a fully charged
@@ -265,7 +265,7 @@ declare namespace org {
                  * @return A float between 0.0-1.0 representing the progress of the charge
                  */
                 // @ts-ignore
-                getAttackCooldown(): float
+                getAttackCooldown(): number /*float*/
                 /**
                  * Discover a recipe for this player such that it has not already been
                  * discovered. This method will add the key's associated recipe to the
@@ -286,7 +286,7 @@ declare namespace org {
                  *  indicates that all were new
                  */
                 // @ts-ignore
-                discoverRecipes(recipes: Array<org.bukkit.NamespacedKey>): int
+                discoverRecipes(recipes: java.util.Collection<org.bukkit.NamespacedKey> | Array<org.bukkit.NamespacedKey>): number /*int*/
                 /**
                  * Undiscover a recipe for this player such that it has already been
                  * discovered. This method will remove the key's associated recipe from the
@@ -308,7 +308,7 @@ declare namespace org {
                  *  that all were undiscovered
                  */
                 // @ts-ignore
-                undiscoverRecipes(recipes: Array<org.bukkit.NamespacedKey>): int
+                undiscoverRecipes(recipes: java.util.Collection<org.bukkit.NamespacedKey> | Array<org.bukkit.NamespacedKey>): number /*int*/
                 /**
                  * Gets the entity currently perched on the left shoulder or null if no
                  * entity.

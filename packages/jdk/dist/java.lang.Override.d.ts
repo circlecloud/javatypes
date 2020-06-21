@@ -18,7 +18,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class Override implements java.lang.annotation.Annotation {
+        abstract class Override implements java.lang.annotation.Annotation {
         }
     }
 }

@@ -45,7 +45,7 @@ declare namespace org {
                      * @return A collection of all players on this boss bar
                      */
                     // @ts-ignore
-                    getPlayers(): java.util.Collection<org.spongepowered.api.entity.living.player.Player>
+                    getPlayers(): Array<org.spongepowered.api.entity.living.player.Player>
                     /**
                      * Adds a player to this boss bar.
                      * @param player The player to add
@@ -59,7 +59,7 @@ declare namespace org {
                      * @return This boss bar
                      */
                     // @ts-ignore
-                    addPlayers(players: Array<org.spongepowered.api.entity.living.player.Player>): org.spongepowered.api.boss.ServerBossBar
+                    addPlayers(players: java.util.Collection<org.spongepowered.api.entity.living.player.Player> | Array<org.spongepowered.api.entity.living.player.Player>): org.spongepowered.api.boss.ServerBossBar
                     /**
                      * Removes a player from this boss bar.
                      * @param player The player to remove
@@ -73,7 +73,7 @@ declare namespace org {
                      * @return This boss bar
                      */
                     // @ts-ignore
-                    removePlayers(players: Array<org.spongepowered.api.entity.living.player.Player>): org.spongepowered.api.boss.ServerBossBar
+                    removePlayers(players: java.util.Collection<org.spongepowered.api.entity.living.player.Player> | Array<org.spongepowered.api.entity.living.player.Player>): org.spongepowered.api.boss.ServerBossBar
                 }
             }
         }

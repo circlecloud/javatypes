@@ -15,7 +15,7 @@ declare namespace org {
                          * @return This builder
                          */
                         // @ts-ignore
-                        objectives(objectives: Array<org.spongepowered.api.scoreboard.objective.Objective>): org.spongepowered.api.scoreboard.Scoreboard.Builder
+                        objectives(objectives: java.util.List<org.spongepowered.api.scoreboard.objective.Objective> | Array<org.spongepowered.api.scoreboard.objective.Objective>): org.spongepowered.api.scoreboard.Scoreboard.Builder
                         /**
                          * Sets the list of {@link Team}s of the {@link Scoreboard}.
                          * <p>By default, this is the empty list.</p>
@@ -23,7 +23,7 @@ declare namespace org {
                          * @return This builder
                          */
                         // @ts-ignore
-                        teams(teams: Array<org.spongepowered.api.scoreboard.Team>): org.spongepowered.api.scoreboard.Scoreboard.Builder
+                        teams(teams: java.util.List<org.spongepowered.api.scoreboard.Team> | Array<org.spongepowered.api.scoreboard.Team>): org.spongepowered.api.scoreboard.Scoreboard.Builder
                         /**
                          * Builds an instance of a {@link Scoreboard}.
                          * @return A new instance of a {#link Scoreboard}

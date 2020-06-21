@@ -27,7 +27,7 @@ declare namespace java {
                  * @return A new input stream
                  */
                 // @ts-ignore
-                newInputStream(ch: java.nio.channels.ReadableByteChannel): java.io.InputStream
+                public static newInputStream(ch: java.nio.channels.ReadableByteChannel): java.io.InputStream
                 /**
                  * Constructs a stream that writes bytes to the given channel.
                  * <p> The <tt>write</tt> methods of the resulting stream will throw an
@@ -40,7 +40,7 @@ declare namespace java {
                  * @return A new output stream
                  */
                 // @ts-ignore
-                newOutputStream(ch: java.nio.channels.WritableByteChannel): java.io.OutputStream
+                public static newOutputStream(ch: java.nio.channels.WritableByteChannel): java.io.OutputStream
                 /**
                  * Constructs a stream that reads bytes from the given channel.
                  * <p> The stream will not be buffered, and it will not support the {@link
@@ -53,7 +53,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                newInputStream(ch: java.nio.channels.AsynchronousByteChannel): java.io.InputStream
+                public static newInputStream(ch: java.nio.channels.AsynchronousByteChannel): java.io.InputStream
                 /**
                  * Constructs a stream that writes bytes to the given channel.
                  * <p> The stream will not be buffered. The stream will be safe for access
@@ -65,7 +65,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                newOutputStream(ch: java.nio.channels.AsynchronousByteChannel): java.io.OutputStream
+                public static newOutputStream(ch: java.nio.channels.AsynchronousByteChannel): java.io.OutputStream
                 /**
                  * Constructs a channel that reads bytes from the given stream.
                  * <p> The resulting channel will not be buffered; it will simply redirect
@@ -76,7 +76,7 @@ declare namespace java {
                  * @return A new readable byte channel
                  */
                 // @ts-ignore
-                newChannel(input: java.io.InputStream): java.nio.channels.ReadableByteChannel
+                public static newChannel(input: java.io.InputStream): java.nio.channels.ReadableByteChannel
                 /**
                  * Constructs a channel that writes bytes to the given stream.
                  * <p> The resulting channel will not be buffered; it will simply redirect
@@ -87,7 +87,7 @@ declare namespace java {
                  * @return A new writable byte channel
                  */
                 // @ts-ignore
-                newChannel(out: java.io.OutputStream): java.nio.channels.WritableByteChannel
+                public static newChannel(out: java.io.OutputStream): java.nio.channels.WritableByteChannel
                 /**
                  * Constructs a reader that decodes bytes from the given channel using the
                  * given decoder.
@@ -110,7 +110,7 @@ declare namespace java {
                  * @return A new reader
                  */
                 // @ts-ignore
-                newReader(ch: java.nio.channels.ReadableByteChannel, dec: java.nio.charset.CharsetDecoder, minBufferCap: number /*int*/): java.io.Reader
+                public static newReader(ch: java.nio.channels.ReadableByteChannel, dec: java.nio.charset.CharsetDecoder, minBufferCap: number /*int*/): java.io.Reader
                 /**
                  * Constructs a reader that decodes bytes from the given channel according
                  * to the named charset.
@@ -133,7 +133,7 @@ declare namespace java {
                  *           in this instance of the Java virtual machine
                  */
                 // @ts-ignore
-                newReader(ch: java.nio.channels.ReadableByteChannel, csName: string): java.io.Reader
+                public static newReader(ch: java.nio.channels.ReadableByteChannel, csName: java.lang.String | string): java.io.Reader
                 /**
                  * Constructs a writer that encodes characters using the given encoder and
                  * writes the resulting bytes to the given channel.
@@ -155,7 +155,7 @@ declare namespace java {
                  * @return A new writer
                  */
                 // @ts-ignore
-                newWriter(ch: java.nio.channels.WritableByteChannel, enc: java.nio.charset.CharsetEncoder, minBufferCap: number /*int*/): java.io.Writer
+                public static newWriter(ch: java.nio.channels.WritableByteChannel, enc: java.nio.charset.CharsetEncoder, minBufferCap: number /*int*/): java.io.Writer
                 /**
                  * Constructs a writer that encodes characters according to the named
                  * charset and writes the resulting bytes to the given channel.
@@ -178,7 +178,7 @@ declare namespace java {
                  *           in this instance of the Java virtual machine
                  */
                 // @ts-ignore
-                newWriter(ch: java.nio.channels.WritableByteChannel, csName: string): java.io.Writer
+                public static newWriter(ch: java.nio.channels.WritableByteChannel, csName: java.lang.String | string): java.io.Writer
             }
         }
     }

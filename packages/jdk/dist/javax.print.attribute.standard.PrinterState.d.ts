@@ -32,28 +32,28 @@ declare namespace javax {
                      * The printer state is unknown.
                      */
                     // @ts-ignore
-                    readonly UNKNOWN: javax.print.attribute.standard.PrinterState
+                    public static readonly UNKNOWN: javax.print.attribute.standard.PrinterState
                     /**
                      * Indicates that new jobs can start processing without waiting.
                      */
                     // @ts-ignore
-                    readonly IDLE: javax.print.attribute.standard.PrinterState
+                    public static readonly IDLE: javax.print.attribute.standard.PrinterState
                     /**
                      * Indicates that jobs are processing;
                      * new jobs will wait before processing.
                      */
                     // @ts-ignore
-                    readonly PROCESSING: javax.print.attribute.standard.PrinterState
+                    public static readonly PROCESSING: javax.print.attribute.standard.PrinterState
                     /**
                      * Indicates that no jobs can be processed and intervention is required.
                      */
                     // @ts-ignore
-                    readonly STOPPED: javax.print.attribute.standard.PrinterState
+                    public static readonly STOPPED: javax.print.attribute.standard.PrinterState
                     /**
                      * Returns the string table for class PrinterState.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class PrinterState.
                      */
@@ -68,7 +68,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -77,7 +77,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

@@ -40,28 +40,28 @@ declare namespace org {
                      * script from.
                      */
                     // @ts-ignore
-                    getResource(): Resource
+                    public getResource(): Resource
                     /**
                      * Set the encoding used for reading the script resource.
                      * <p>The default value for regular Resources is "UTF-8".
                      * A {@code null} value implies the platform default.
                      */
                     // @ts-ignore
-                    setEncoding(encoding: string): void
+                    public setEncoding(encoding: java.lang.String | string): void
                     // @ts-ignore
-                    getScriptAsString(): java.lang.String
+                    public getScriptAsString(): string
                     // @ts-ignore
-                    isModified(): boolean
+                    public isModified(): boolean
                     /**
                      * Retrieve the current last-modified timestamp of the underlying resource.
                      * @return the current timestamp, or 0 if not determinable
                      */
                     // @ts-ignore
-                    retrieveLastModifiedTime(): long
+                    retrieveLastModifiedTime(): number /*long*/
                     // @ts-ignore
-                    suggestedClassName(): java.lang.String
+                    public suggestedClassName(): string
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

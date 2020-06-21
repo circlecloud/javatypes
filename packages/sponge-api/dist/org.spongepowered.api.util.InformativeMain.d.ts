@@ -17,7 +17,7 @@ declare namespace org {
                      * @throws PEBKACException always
                      */
                     // @ts-ignore
-                    main(args: string[]): void
+                    public static main(args: java.lang.String[] | string[]): void
                 }
             }
         }

@@ -108,7 +108,7 @@ declare namespace javax {
                  *             specific is not specified
                  */
                 // @ts-ignore
-                setDefaultFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
+                public setDefaultFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
                 /**
                  * Returns the <code>JFormattedTextField.AbstractFormatter</code> to use
                  * as a last resort, eg in case a display, edit or null
@@ -118,7 +118,7 @@ declare namespace javax {
                  *          one is not specified.
                  */
                 // @ts-ignore
-                getDefaultFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
+                public getDefaultFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
                 /**
                  * Sets the <code>JFormattedTextField.AbstractFormatter</code> to use if
                  * the <code>JFormattedTextField</code> is not being edited and either
@@ -128,7 +128,7 @@ declare namespace javax {
                  *             JFormattedTextField does not have focus
                  */
                 // @ts-ignore
-                setDisplayFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
+                public setDisplayFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
                 /**
                  * Returns the <code>JFormattedTextField.AbstractFormatter</code> to use
                  * if the <code>JFormattedTextField</code> is not being edited and either
@@ -138,7 +138,7 @@ declare namespace javax {
                  *          JFormattedTextField does not have focus
                  */
                 // @ts-ignore
-                getDisplayFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
+                public getDisplayFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
                 /**
                  * Sets the <code>JFormattedTextField.AbstractFormatter</code> to use if
                  * the <code>JFormattedTextField</code> is being edited and either
@@ -148,7 +148,7 @@ declare namespace javax {
                  *             component has focus
                  */
                 // @ts-ignore
-                setEditFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
+                public setEditFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
                 /**
                  * Returns the <code>JFormattedTextField.AbstractFormatter</code> to use
                  * if the <code>JFormattedTextField</code> is being edited and either
@@ -158,7 +158,7 @@ declare namespace javax {
                  *          component has focus
                  */
                 // @ts-ignore
-                getEditFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
+                public getEditFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
                 /**
                  * Sets the formatter to use if the value of the JFormattedTextField is
                  * null.
@@ -166,14 +166,14 @@ declare namespace javax {
                  *  the value of the JFormattedTextField is null.
                  */
                 // @ts-ignore
-                setNullFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
+                public setNullFormatter(atf: javax.swing.JFormattedTextField.AbstractFormatter): void
                 /**
                  * Returns the formatter to use if the value is null.
                  * @return JFormattedTextField.AbstractFormatter to use when the value is
                  *          null
                  */
                 // @ts-ignore
-                getNullFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
+                public getNullFormatter(): javax.swing.JFormattedTextField.AbstractFormatter
                 /**
                  * Returns either the default formatter, display formatter, editor
                  * formatter or null formatter based on the state of the
@@ -184,7 +184,7 @@ declare namespace javax {
                  *          formatting duties.
                  */
                 // @ts-ignore
-                getFormatter(source: javax.swing.JFormattedTextField): javax.swing.JFormattedTextField.AbstractFormatter
+                public getFormatter(source: javax.swing.JFormattedTextField): javax.swing.JFormattedTextField.AbstractFormatter
             }
         }
     }

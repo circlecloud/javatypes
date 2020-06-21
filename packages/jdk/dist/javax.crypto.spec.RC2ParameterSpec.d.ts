@@ -55,14 +55,14 @@ declare namespace javax {
                  * @return the effective key size in bits.
                  */
                 // @ts-ignore
-                getEffectiveKeyBits(): int
+                public getEffectiveKeyBits(): number /*int*/
                 /**
                  * Returns the IV or null if this parameter set does not contain an IV.
                  * @return the IV or null if this parameter set does not contain an IV.
                  *  Returns a new array each time this method is called.
                  */
                 // @ts-ignore
-                getIV(): byte[]
+                public getIV(): number /*byte*/[]
                 /**
                  * Tests for equality between the specified object and this
                  * object. Two RC2ParameterSpec objects are considered equal if their
@@ -73,13 +73,13 @@ declare namespace javax {
                  *  <code>obj</code> is null or otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Calculates a hash code value for the object.
                  * Objects that are equal will also have the same hashcode.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

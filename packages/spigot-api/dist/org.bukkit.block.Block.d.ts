@@ -19,7 +19,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getData(): byte
+                getData(): number /*byte*/
                 /**
                  * Gets the complete block data for this block
                  * @return block specific data
@@ -72,7 +72,7 @@ declare namespace org {
                  * @return light level
                  */
                 // @ts-ignore
-                getLightLevel(): byte
+                getLightLevel(): number /*byte*/
                 /**
                  * Get the amount of light at this block from the sky.
                  * <p>
@@ -81,7 +81,7 @@ declare namespace org {
                  * @return Sky light level
                  */
                 // @ts-ignore
-                getLightFromSky(): byte
+                getLightFromSky(): number /*byte*/
                 /**
                  * Get the amount of light at this block from nearby blocks.
                  * <p>
@@ -89,7 +89,7 @@ declare namespace org {
                  * @return Block light level
                  */
                 // @ts-ignore
-                getLightFromBlocks(): byte
+                getLightFromBlocks(): number /*byte*/
                 /**
                  * Gets the world which contains this Block
                  * @return World containing this block
@@ -101,19 +101,19 @@ declare namespace org {
                  * @return x-coordinate
                  */
                 // @ts-ignore
-                getX(): int
+                getX(): number /*int*/
                 /**
                  * Gets the y-coordinate of this block
                  * @return y-coordinate
                  */
                 // @ts-ignore
-                getY(): int
+                getY(): number /*int*/
                 /**
                  * Gets the z-coordinate of this block
                  * @return z-coordinate
                  */
                 // @ts-ignore
-                getZ(): int
+                getZ(): number /*int*/
                 /**
                  * Gets the Location of the block
                  * @return Location of block
@@ -257,13 +257,13 @@ declare namespace org {
                  * @return The power level.
                  */
                 // @ts-ignore
-                getBlockPower(face: org.bukkit.block.BlockFace): int
+                getBlockPower(face: org.bukkit.block.BlockFace): number /*int*/
                 /**
                  * Returns the redstone power being provided to this block
                  * @return The power level.
                  */
                 // @ts-ignore
-                getBlockPower(): int
+                getBlockPower(): number /*int*/
                 /**
                  * Checks if this block is empty.
                  * <p>
@@ -290,13 +290,13 @@ declare namespace org {
                  * @return Temperature of this block
                  */
                 // @ts-ignore
-                getTemperature(): double
+                getTemperature(): number /*double*/
                 /**
                  * Gets the humidity of the biome of this block
                  * @return Humidity of this block
                  */
                 // @ts-ignore
-                getHumidity(): double
+                getHumidity(): number /*double*/
                 /**
                  * Returns the reaction of the block when moved by a piston
                  * @return reaction
@@ -323,7 +323,7 @@ declare namespace org {
                  * @return a list of dropped items for this type of block
                  */
                 // @ts-ignore
-                getDrops(): java.util.Collection<org.bukkit.inventory.ItemStack>
+                getDrops(): Array<org.bukkit.inventory.ItemStack>
                 /**
                  * Returns a list of items which would drop by destroying this block with
                  * a specific tool
@@ -331,7 +331,7 @@ declare namespace org {
                  * @return a list of dropped items for this type of block
                  */
                 // @ts-ignore
-                getDrops(tool: org.bukkit.inventory.ItemStack): java.util.Collection<org.bukkit.inventory.ItemStack>
+                getDrops(tool: org.bukkit.inventory.ItemStack): Array<org.bukkit.inventory.ItemStack>
                 /**
                  * Returns a list of items which would drop by the entity destroying this
                  * block with a specific tool
@@ -340,7 +340,7 @@ declare namespace org {
                  * @return a list of dropped items for this type of block
                  */
                 // @ts-ignore
-                getDrops(tool: org.bukkit.inventory.ItemStack, entity: org.bukkit.entity.Entity): java.util.Collection<org.bukkit.inventory.ItemStack>
+                getDrops(tool: org.bukkit.inventory.ItemStack, entity: org.bukkit.entity.Entity): Array<org.bukkit.inventory.ItemStack>
                 /**
                  * Checks if this block is passable.
                  * <p>

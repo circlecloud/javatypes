@@ -24,7 +24,7 @@ declare namespace java {
                          * purposes and lies dormant until the read lock has been acquired.
                          */
                         // @ts-ignore
-                        lock(): void
+                        public lock(): void
                         /**
                          * Acquires the read lock unless the current thread is
                          * {@linkplain Thread#interrupt interrupted}.
@@ -53,7 +53,7 @@ declare namespace java {
                          * @throws InterruptedException if the current thread is interrupted
                          */
                         // @ts-ignore
-                        lockInterruptibly(): void
+                        public lockInterruptibly(): void
                         /**
                          * Acquires the read lock only if the write lock is not held by
                          * another thread at the time of invocation.
@@ -75,7 +75,7 @@ declare namespace java {
                          * @return {#code true} if the read lock was acquired
                          */
                         // @ts-ignore
-                        tryLock(): boolean
+                        public tryLock(): boolean
                         /**
                          * Acquires the read lock if the write lock is not held by
                          * another thread within the given waiting time and the
@@ -127,21 +127,21 @@ declare namespace java {
                          * @throws NullPointerException if the time unit is null
                          */
                         // @ts-ignore
-                        tryLock(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                        public tryLock(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                         /**
                          * Attempts to release this lock.
                          * <p>If the number of readers is now zero then the lock
                          * is made available for write lock attempts.
                          */
                         // @ts-ignore
-                        unlock(): void
+                        public unlock(): void
                         /**
                          * Throws {@code UnsupportedOperationException} because
                          * {@code ReadLocks} do not support conditions.
                          * @throws UnsupportedOperationException always
                          */
                         // @ts-ignore
-                        newCondition(): java.util.concurrent.locks.Condition
+                        public newCondition(): java.util.concurrent.locks.Condition
                         /**
                          * Returns a string identifying this lock, as well as its lock state.
                          * The state, in brackets, includes the String {@code "Read locks ="}
@@ -149,7 +149,7 @@ declare namespace java {
                          * @return a string identifying this lock, as well as its lock state
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

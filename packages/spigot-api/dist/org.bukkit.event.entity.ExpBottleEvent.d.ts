@@ -10,13 +10,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(bottle: org.bukkit.entity.ThrownExpBottle, exp: number /*int*/)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.ThrownExpBottle
+                    public getEntity(): org.bukkit.entity.ThrownExpBottle
                     /**
                      * This method indicates if the particle effect should be shown.
                      * @return true if the effect will be shown, false otherwise
                      */
                     // @ts-ignore
-                    getShowEffect(): boolean
+                    public getShowEffect(): boolean
                     /**
                      * This method sets if the particle effect will be shown.
                      * <p>
@@ -25,7 +25,7 @@ declare namespace org {
                      *      indicates no effect will be shown
                      */
                     // @ts-ignore
-                    setShowEffect(showEffect: boolean): void
+                    public setShowEffect(showEffect: boolean): void
                     /**
                      * This method retrieves the amount of experience to be created.
                      * <p>
@@ -33,7 +33,7 @@ declare namespace org {
                      * @return the total amount of experience to be created
                      */
                     // @ts-ignore
-                    getExperience(): int
+                    public getExperience(): number /*int*/
                     /**
                      * This method sets the amount of experience to be created.
                      * <p>
@@ -41,11 +41,11 @@ declare namespace org {
                      * @param exp the total amount of experience to be created
                      */
                     // @ts-ignore
-                    setExperience(exp: number /*int*/): void
+                    public setExperience(exp: number /*int*/): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

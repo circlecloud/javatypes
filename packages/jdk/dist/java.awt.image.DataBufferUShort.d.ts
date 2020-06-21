@@ -116,7 +116,7 @@ declare namespace java {
                  * @return The first unsigned-short data array.
                  */
                 // @ts-ignore
-                getData(): short[]
+                public getData(): number /*short*/[]
                 /**
                  * Returns the data array for the specified bank.
                  * <p>
@@ -128,7 +128,7 @@ declare namespace java {
                  * @return The data array for the specified bank.
                  */
                 // @ts-ignore
-                getData(bank: number /*int*/): short[]
+                public getData(bank: number /*int*/): number /*short*/[]
                 /**
                  * Returns the data arrays for all banks.
                  * <p>
@@ -139,7 +139,7 @@ declare namespace java {
                  * @return All of the data arrays.
                  */
                 // @ts-ignore
-                getBankData(): short[][]
+                public getBankData(): number /*short*/[][]
                 /**
                  * Returns the requested data array element from the first (default) bank.
                  * @param i The data array element you want to get.
@@ -148,7 +148,7 @@ declare namespace java {
                  * @see #setElem(int, int, int)
                  */
                 // @ts-ignore
-                getElem(i: number /*int*/): int
+                public getElem(i: number /*int*/): number /*int*/
                 /**
                  * Returns the requested data array element from the specified bank.
                  * @param bank The bank from which you want to get a data array element.
@@ -158,7 +158,7 @@ declare namespace java {
                  * @see #setElem(int, int, int)
                  */
                 // @ts-ignore
-                getElem(bank: number /*int*/, i: number /*int*/): int
+                public getElem(bank: number /*int*/, i: number /*int*/): number /*int*/
                 /**
                  * Sets the requested data array element in the first (default) bank
                  * to the specified value.
@@ -168,7 +168,7 @@ declare namespace java {
                  * @see #getElem(int, int)
                  */
                 // @ts-ignore
-                setElem(i: number /*int*/, val: number /*int*/): void
+                public setElem(i: number /*int*/, val: number /*int*/): void
                 /**
                  * Sets the requested data array element in the specified bank
                  * from the given integer.
@@ -179,7 +179,7 @@ declare namespace java {
                  * @see #getElem(int, int)
                  */
                 // @ts-ignore
-                setElem(bank: number /*int*/, i: number /*int*/, val: number /*int*/): void
+                public setElem(bank: number /*int*/, i: number /*int*/, val: number /*int*/): void
             }
         }
     }

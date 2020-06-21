@@ -9,7 +9,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class URISyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class URISyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Constructs a URI attribute with the specified URI.
                  * @param uri  URI.
@@ -23,13 +23,13 @@ declare namespace javax {
                  * @return the URI.
                  */
                 // @ts-ignore
-                getURI(): java.net.URI
+                public getURI(): java.net.URI
                 /**
                  * Returns a hashcode for this URI attribute.
                  * @return A hashcode value for this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns whether this URI attribute is equivalent to the passed in
                  * object.
@@ -48,14 +48,14 @@ declare namespace javax {
                  *           attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a String identifying this URI attribute. The String is the
                  * string representation of the attribute's underlying URI.
                  * @return A String identifying this object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

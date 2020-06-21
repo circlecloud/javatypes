@@ -22,21 +22,21 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class AbstractBeanDefinitionParser extends java.lang.Object implements org.springframework.beans.factory.xml.BeanDefinitionParser {
+                    abstract class AbstractBeanDefinitionParser extends java.lang.Object implements org.springframework.beans.factory.xml.BeanDefinitionParser {
                         // @ts-ignore
                         constructor()
                         /**
                          * Constant for the "id" attribute.
                          */
                         // @ts-ignore
-                        readonly ID_ATTRIBUTE: string
+                        public static readonly ID_ATTRIBUTE: java.lang.String | string
                         /**
                          * Constant for the "name" attribute.
                          */
                         // @ts-ignore
-                        readonly NAME_ATTRIBUTE: string
+                        public static readonly NAME_ATTRIBUTE: java.lang.String | string
                         // @ts-ignore
-                        parse(element: org.w3c.dom.Element, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinition
+                        public parse(element: org.w3c.dom.Element, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Resolve the ID for the supplied {@link BeanDefinition}.
                          * <p>When using {@link #shouldGenerateId generation}, a name is generated automatically.
@@ -51,7 +51,7 @@ declare namespace org {
                          *  for the given bean definition
                          */
                         // @ts-ignore
-                        resolveId(element: org.w3c.dom.Element, definition: org.springframework.beans.factory.support.AbstractBeanDefinition, parserContext: org.springframework.beans.factory.xml.ParserContext): java.lang.String
+                        resolveId(element: org.w3c.dom.Element, definition: org.springframework.beans.factory.support.AbstractBeanDefinition, parserContext: org.springframework.beans.factory.xml.ParserContext): string
                         /**
                          * Register the supplied {@link BeanDefinitionHolder bean} with the supplied
                          * {@link BeanDefinitionRegistry registry}.

@@ -155,7 +155,7 @@ declare namespace javax {
                  * @see DataLine#available
                  */
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             }
         }
     }

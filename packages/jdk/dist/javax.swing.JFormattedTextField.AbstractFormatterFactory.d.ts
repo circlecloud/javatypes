@@ -14,7 +14,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            class AbstractFormatterFactory extends java.lang.Object {
+            abstract class AbstractFormatterFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -26,7 +26,7 @@ declare namespace javax {
                  *          like a normal JTextField
                  */
                 // @ts-ignore
-                abstract getFormatter(tf: javax.swing.JFormattedTextField): javax.swing.JFormattedTextField.AbstractFormatter
+                public abstract getFormatter(tf: javax.swing.JFormattedTextField): javax.swing.JFormattedTextField.AbstractFormatter
             }
         }
     }

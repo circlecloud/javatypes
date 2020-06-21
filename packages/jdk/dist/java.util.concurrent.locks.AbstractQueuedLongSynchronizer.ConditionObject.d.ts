@@ -32,7 +32,7 @@ declare namespace java {
                          *          returns {@code false}
                          */
                         // @ts-ignore
-                        signal(): void
+                        public signal(): void
                         /**
                          * Moves all threads from the wait queue for this condition to
                          * the wait queue for the owning lock.
@@ -40,7 +40,7 @@ declare namespace java {
                          *          returns {@code false}
                          */
                         // @ts-ignore
-                        signalAll(): void
+                        public signalAll(): void
                         /**
                          * Implements uninterruptible condition wait.
                          * <ol>
@@ -53,7 +53,7 @@ declare namespace java {
                          * </ol>
                          */
                         // @ts-ignore
-                        awaitUninterruptibly(): void
+                        public awaitUninterruptibly(): void
                         /**
                          * Implements interruptible condition wait.
                          * <ol>
@@ -68,7 +68,7 @@ declare namespace java {
                          * </ol>
                          */
                         // @ts-ignore
-                        await(): void
+                        public await(): void
                         /**
                          * Implements timed condition wait.
                          * <ol>
@@ -83,7 +83,7 @@ declare namespace java {
                          * </ol>
                          */
                         // @ts-ignore
-                        awaitNanos(nanosTimeout: number /*long*/): long
+                        public awaitNanos(nanosTimeout: number /*long*/): number /*long*/
                         /**
                          * Implements absolute timed condition wait.
                          * <ol>
@@ -99,7 +99,7 @@ declare namespace java {
                          * </ol>
                          */
                         // @ts-ignore
-                        awaitUntil(deadline: java.util.Date): boolean
+                        public awaitUntil(deadline: java.util.Date): boolean
                         /**
                          * Implements timed condition wait.
                          * <ol>
@@ -115,7 +115,7 @@ declare namespace java {
                          * </ol>
                          */
                         // @ts-ignore
-                        await(time: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                        public await(time: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                         /**
                          * Queries whether any threads are waiting on this condition.
                          * Implements {@link AbstractQueuedLongSynchronizer#hasWaiters(ConditionObject)}.
@@ -134,7 +134,7 @@ declare namespace java {
                          *          returns {@code false}
                          */
                         // @ts-ignore
-                        getWaitQueueLength(): int
+                        getWaitQueueLength(): number /*int*/
                         /**
                          * Returns a collection containing those threads that may be
                          * waiting on this Condition.
@@ -144,7 +144,7 @@ declare namespace java {
                          *          returns {@code false}
                          */
                         // @ts-ignore
-                        getWaitingThreads(): java.util.Collection<java.lang.Thread>
+                        getWaitingThreads(): Array<java.lang.Thread>
                     }
                 }
             }

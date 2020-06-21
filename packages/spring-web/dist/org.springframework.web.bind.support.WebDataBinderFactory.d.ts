@@ -20,7 +20,7 @@ declare namespace org {
                          * @throws Exception raised if the creation and initialization of the data binder fails
                          */
                         // @ts-ignore
-                        createBinder(webRequest: org.springframework.web.context.request.NativeWebRequest, target: any, objectName: string): org.springframework.web.bind.WebDataBinder
+                        createBinder(webRequest: org.springframework.web.context.request.NativeWebRequest, target: java.lang.Object | any, objectName: java.lang.String | string): org.springframework.web.bind.WebDataBinder
                     }
                 }
             }

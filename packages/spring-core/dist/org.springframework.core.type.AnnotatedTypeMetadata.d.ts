@@ -36,7 +36,7 @@ declare namespace org {
                      * @return whether a matching annotation is defined
                      */
                     // @ts-ignore
-                    isAnnotated(annotationName: string): boolean
+                    isAnnotated(annotationName: java.lang.String | string): boolean
                     /**
                      * Retrieve the attributes of the annotation of the given type, if any (i.e. if
                      * defined on the underlying element, as direct annotation or meta-annotation),
@@ -48,7 +48,7 @@ declare namespace org {
                      *  {#code null} if no matching annotation is defined.
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotationName: string): java.util.Map<java.lang.String, java.lang.Object>
+                    getAnnotationAttributes(annotationName: java.lang.String | string): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Retrieve the attributes of the annotation of the given type, if any (i.e. if
                      * defined on the underlying element, as direct annotation or meta-annotation),
@@ -63,7 +63,7 @@ declare namespace org {
                      *  {#code null} if no matching annotation is defined.
                      */
                     // @ts-ignore
-                    getAnnotationAttributes(annotationName: string, classValuesAsString: boolean): java.util.Map<java.lang.String, java.lang.Object>
+                    getAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Retrieve all attributes of all annotations of the given type, if any (i.e. if
                      * defined on the underlying element, as direct annotation or meta-annotation).
@@ -76,7 +76,7 @@ declare namespace org {
                      * @see #getAllAnnotationAttributes(String, boolean)
                      */
                     // @ts-ignore
-                    getAllAnnotationAttributes(annotationName: string): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                    getAllAnnotationAttributes(annotationName: java.lang.String | string): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Retrieve all attributes of all annotations of the given type, if any (i.e. if
                      * defined on the underlying element, as direct annotation or meta-annotation).
@@ -90,7 +90,7 @@ declare namespace org {
                      * @see #getAllAnnotationAttributes(String)
                      */
                     // @ts-ignore
-                    getAllAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                    getAllAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

@@ -20,7 +20,7 @@ declare namespace org {
                      * @throws CommandException Thrown on a command error
                      */
                     // @ts-ignore
-                    process(source: org.spongepowered.api.command.CommandSource, arguments: string): org.spongepowered.api.command.CommandResult
+                    process(source: org.spongepowered.api.command.CommandSource, arguments: java.lang.String | string): org.spongepowered.api.command.CommandResult
                     /**
                      * Gets a list of suggestions based on input.
                      * <p>If a suggestion is chosen by the user, it will replace the last
@@ -33,7 +33,7 @@ declare namespace org {
                      * @throws CommandException Thrown if there was a parsing error
                      */
                     // @ts-ignore
-                    getSuggestions(source: org.spongepowered.api.command.CommandSource, arguments: string, targetPosition: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): java.util.List<java.lang.String>
+                    getSuggestions(source: org.spongepowered.api.command.CommandSource, arguments: java.lang.String | string, targetPosition: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): Array<java.lang.String | string>
                     /**
                      * Test whether this command can probably be executed by the given source.
                      * <p>If implementations are unsure if the command can be executed by

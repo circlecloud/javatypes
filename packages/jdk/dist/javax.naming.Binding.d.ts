@@ -33,7 +33,7 @@ declare namespace javax {
              * @see NameClassPair#setClassName
              */
             // @ts-ignore
-            constructor(name: string, obj: any)
+            constructor(name: java.lang.String | string, obj: java.lang.Object | any)
             /**
              * Constructs an instance of a Binding given its name, object, and whether
              * the name is relative.
@@ -52,7 +52,7 @@ declare namespace javax {
              * @see NameClassPair#setClassName
              */
             // @ts-ignore
-            constructor(name: string, obj: any, isRelative: boolean)
+            constructor(name: java.lang.String | string, obj: java.lang.Object | any, isRelative: boolean)
             /**
              * Constructs an instance of a Binding given its name, class name, and object.
              * @param name    The non-null name of the object. It is relative
@@ -66,7 +66,7 @@ declare namespace javax {
              * @see NameClassPair#setClassName
              */
             // @ts-ignore
-            constructor(name: string, className: string, obj: any)
+            constructor(name: java.lang.String | string, className: java.lang.String | string, obj: java.lang.Object | any)
             /**
              * Constructs an instance of a Binding given its
              * name, class name, object, and whether the name is relative.
@@ -85,7 +85,7 @@ declare namespace javax {
              * @see NameClassPair#setClassName
              */
             // @ts-ignore
-            constructor(name: string, className: string, obj: any, isRelative: boolean)
+            constructor(name: java.lang.String | string, className: java.lang.String | string, obj: java.lang.Object | any, isRelative: boolean)
             /**
              * Retrieves the class name of the object bound to the name of this binding.
              * If the class name has been set explicitly, return it.
@@ -94,21 +94,21 @@ declare namespace javax {
              * @return A possibly null string containing class name of object bound.
              */
             // @ts-ignore
-            getClassName(): java.lang.String
+            public getClassName(): string
             /**
              * Retrieves the object bound to the name of this binding.
              * @return The object bound; null if this binding does not contain an object.
              * @see #setObject
              */
             // @ts-ignore
-            getObject(): java.lang.Object
+            public getObject(): any
             /**
              * Sets the object associated with this binding.
              * @param obj The possibly null object to use.
              * @see #getObject
              */
             // @ts-ignore
-            setObject(obj: any): void
+            public setObject(obj: java.lang.Object | any): void
             /**
              * Generates the string representation of this binding.
              * The string representation consists of the string representation
@@ -119,7 +119,7 @@ declare namespace javax {
              * @return The non-null string representation of this binding.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

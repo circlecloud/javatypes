@@ -14,7 +14,7 @@ declare namespace org {
                  * Return the phase value of this object.
                  */
                 // @ts-ignore
-                getPhase(): int
+                getPhase(): number /*int*/
             }
         }
     }

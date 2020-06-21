@@ -26,16 +26,16 @@ declare namespace org {
                      * @param ascending whether to sort ascending (true) or descending (false)
                      */
                     // @ts-ignore
-                    constructor(property: string, ignoreCase: boolean, ascending: boolean)
+                    constructor(property: java.lang.String | string, ignoreCase: boolean, ascending: boolean)
                     // @ts-ignore
                     readonly logger: Log
                     /**
                      * Return the SortDefinition that this comparator uses.
                      */
                     // @ts-ignore
-                    getSortDefinition(): org.springframework.beans.support.SortDefinition
+                    public getSortDefinition(): org.springframework.beans.support.SortDefinition
                     // @ts-ignore
-                    compare(o1: T, o2: T): int
+                    public compare(o1: T, o2: T): number /*int*/
                     /**
                      * Sort the given List according to the given sort definition.
                      * <p>Note: Contained objects have to provide the given property
@@ -45,7 +45,7 @@ declare namespace org {
                      * @throws java.lang.IllegalArgumentException in case of a missing propertyName
                      */
                     // @ts-ignore
-                    sort(source: Array<any>, sortDefinition: org.springframework.beans.support.SortDefinition): void
+                    public static sort(source: java.util.List<any> | Array<any>, sortDefinition: org.springframework.beans.support.SortDefinition): void
                     /**
                      * Sort the given source according to the given sort definition.
                      * <p>Note: Contained objects have to provide the given property
@@ -55,7 +55,7 @@ declare namespace org {
                      * @throws java.lang.IllegalArgumentException in case of a missing propertyName
                      */
                     // @ts-ignore
-                    sort(source: any[], sortDefinition: org.springframework.beans.support.SortDefinition): void
+                    public static sort(source: java.lang.Object[] | any[], sortDefinition: org.springframework.beans.support.SortDefinition): void
                 }
             }
         }

@@ -85,7 +85,7 @@ declare namespace java {
                  * @return the scale factors of this <code>RescaleOp</code>.
                  */
                 // @ts-ignore
-                getScaleFactors(scaleFactors: number /*float*/[]): float[]
+                public getScaleFactors(scaleFactors: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the offsets in the given array. The array is also returned
                  * for convenience.  If offsets is null, a new array
@@ -95,7 +95,7 @@ declare namespace java {
                  * @return the offsets of this <code>RescaleOp</code>.
                  */
                 // @ts-ignore
-                getOffsets(offsets: number /*float*/[]): float[]
+                public getOffsets(offsets: number /*float*/[]): number /*float*/[]
                 /**
                  * Returns the number of scaling factors and offsets used in this
                  * RescaleOp.
@@ -103,7 +103,7 @@ declare namespace java {
                  *          <code>RescaleOp</code>.
                  */
                 // @ts-ignore
-                getNumFactors(): int
+                public getNumFactors(): number /*int*/
                 /**
                  * Rescales the source BufferedImage.
                  * If the color model in the source image is not the same as that
@@ -125,7 +125,7 @@ declare namespace java {
                  *          stated in the class comments.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
+                public filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
                 /**
                  * Rescales the pixel data in the source Raster.
                  * If the destination Raster is null, a new Raster will be created.
@@ -145,14 +145,14 @@ declare namespace java {
                  *          stated in the class comments.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Returns the bounding box of the rescaled destination image.  Since
                  * this is not a geometric operation, the bounding box does not
                  * change.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
                 /**
                  * Returns the bounding box of the rescaled destination Raster.  Since
                  * this is not a geometric operation, the bounding box does not
@@ -161,7 +161,7 @@ declare namespace java {
                  * @return the bounds of the specified <code>Raster</code>.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
                 /**
                  * Creates a zeroed destination image with the correct size and number of
                  * bands.
@@ -171,7 +171,7 @@ declare namespace java {
                  * @return the zeroed-destination image.
                  */
                 // @ts-ignore
-                createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
+                public createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
                 /**
                  * Creates a zeroed-destination <code>Raster</code> with the correct
                  * size and number of bands, given this source.
@@ -179,7 +179,7 @@ declare namespace java {
                  * @return the zeroed-destination <code>Raster</code>.
                  */
                 // @ts-ignore
-                createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
+                public createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
                 /**
                  * Returns the location of the destination point given a
                  * point in the source.  If dstPt is non-null, it will
@@ -190,13 +190,13 @@ declare namespace java {
                  * @return the location of the destination point.
                  */
                 // @ts-ignore
-                getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Returns the rendering hints for this op.
                  * @return the rendering hints of this <code>RescaleOp</code>.
                  */
                 // @ts-ignore
-                getRenderingHints(): java.awt.RenderingHints
+                public getRenderingHints(): java.awt.RenderingHints
             }
         }
     }

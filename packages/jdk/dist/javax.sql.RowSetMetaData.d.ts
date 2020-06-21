@@ -107,7 +107,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setColumnLabel(columnIndex: number /*int*/, label: string): void
+            setColumnLabel(columnIndex: number /*int*/, label: java.lang.String | string): void
             /**
              * Sets the name of the designated column to the given <code>String</code>.
              * @param columnIndex the first column is 1, the second is 2, ...
@@ -115,7 +115,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setColumnName(columnIndex: number /*int*/, columnName: string): void
+            setColumnName(columnIndex: number /*int*/, columnName: java.lang.String | string): void
             /**
              * Sets the name of the designated column's table's schema, if any, to
              * the given <code>String</code>.
@@ -124,7 +124,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setSchemaName(columnIndex: number /*int*/, schemaName: string): void
+            setSchemaName(columnIndex: number /*int*/, schemaName: java.lang.String | string): void
             /**
              * Sets the designated column's number of decimal digits to the
              * given <code>int</code>.
@@ -151,7 +151,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setTableName(columnIndex: number /*int*/, tableName: string): void
+            setTableName(columnIndex: number /*int*/, tableName: java.lang.String | string): void
             /**
              * Sets the designated column's table's catalog name, if any, to the given
              * <code>String</code>.
@@ -160,7 +160,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setCatalogName(columnIndex: number /*int*/, catalogName: string): void
+            setCatalogName(columnIndex: number /*int*/, catalogName: java.lang.String | string): void
             /**
              * Sets the designated column's SQL type to the one given.
              * @param columnIndex the first column is 1, the second is 2, ...
@@ -178,7 +178,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            setColumnTypeName(columnIndex: number /*int*/, typeName: string): void
+            setColumnTypeName(columnIndex: number /*int*/, typeName: java.lang.String | string): void
         }
     }
 }

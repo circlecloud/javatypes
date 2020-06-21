@@ -27,14 +27,14 @@ declare namespace javax {
                  * @return the attribute set
                  */
                 // @ts-ignore
-                getInputAttributes(): javax.swing.text.MutableAttributeSet
+                public getInputAttributes(): javax.swing.text.MutableAttributeSet
                 /**
                  * Fetches the element representing the current
                  * run of character attributes for the caret.
                  * @return the element
                  */
                 // @ts-ignore
-                getCharacterAttributeRun(): javax.swing.text.Element
+                public getCharacterAttributeRun(): javax.swing.text.Element
                 /**
                  * Fetches the command list for the editor.  This is
                  * the list of commands supported by the superclass
@@ -43,21 +43,21 @@ declare namespace javax {
                  * @return the command list
                  */
                 // @ts-ignore
-                getActions(): javax.swing.Action[]
+                public getActions(): javax.swing.Action[]
                 /**
                  * Creates an uninitialized text storage model
                  * that is appropriate for this type of editor.
                  * @return the model
                  */
                 // @ts-ignore
-                createDefaultDocument(): javax.swing.text.Document
+                public createDefaultDocument(): javax.swing.text.Document
                 /**
                  * Called when the kit is being installed into
                  * a JEditorPane.
                  * @param c the JEditorPane
                  */
                 // @ts-ignore
-                install(c: javax.swing.JEditorPane): void
+                public install(c: javax.swing.JEditorPane): void
                 /**
                  * Called when the kit is being removed from the
                  * JEditorPane.  This is used to unregister any
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @param c the JEditorPane
                  */
                 // @ts-ignore
-                deinstall(c: javax.swing.JEditorPane): void
+                public deinstall(c: javax.swing.JEditorPane): void
                 /**
                  * Fetches a factory that is suitable for producing
                  * views of any models that are produced by this
@@ -81,13 +81,13 @@ declare namespace javax {
                  * @return the factory
                  */
                 // @ts-ignore
-                getViewFactory(): javax.swing.text.ViewFactory
+                public getViewFactory(): javax.swing.text.ViewFactory
                 /**
                  * Creates a copy of the editor kit.
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Copies the key/values in <code>element</code>s AttributeSet into
                  * <code>set</code>. This does not copy component, icon, or element

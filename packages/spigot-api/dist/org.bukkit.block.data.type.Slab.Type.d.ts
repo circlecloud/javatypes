@@ -9,10 +9,25 @@ declare namespace org {
                          */
                         // @ts-ignore
                         class Type extends java.lang.Enum<org.bukkit.block.data.type.Slab.Type> {
+                            /**
+                             * The slab occupies the upper y half of the block.
+                             */
+                            // @ts-ignore
+                            readonly TOP: org.bukkit.block.data.type.Slab.Type
+                            /**
+                             * The slab occupies the lower y half of the block.
+                             */
+                            // @ts-ignore
+                            readonly BOTTOM: org.bukkit.block.data.type.Slab.Type
+                            /**
+                             * The slab occupies the entire block.
+                             */
+                            // @ts-ignore
+                            readonly DOUBLE: org.bukkit.block.data.type.Slab.Type
                             // @ts-ignore
                             values(): org.bukkit.block.data.type.Slab.Type[]
                             // @ts-ignore
-                            valueOf(name: string): org.bukkit.block.data.type.Slab.Type
+                            valueOf(name: java.lang.String | string): org.bukkit.block.data.type.Slab.Type
                         }
                     }
                 }

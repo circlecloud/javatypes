@@ -56,7 +56,7 @@ declare namespace org {
                              * @return The spawn probability
                              */
                             // @ts-ignore
-                            getExtremeSpikeProbability(): double
+                            getExtremeSpikeProbability(): number /*double*/
                             /**
                              * Gets the probability of the spike much larger than normal.
                              * @param p The new spawn probability

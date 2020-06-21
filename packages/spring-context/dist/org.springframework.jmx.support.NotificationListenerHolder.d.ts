@@ -17,31 +17,31 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    mappedObjectNames: Array<java.lang.Object>
+                    mappedObjectNames: java.util.Set<java.lang.Object | any> | Array<java.lang.Object | any>
                     /**
                      * Set the {@link javax.management.NotificationListener}.
                      */
                     // @ts-ignore
-                    setNotificationListener(notificationListener: javax.management.NotificationListener): void
+                    public setNotificationListener(notificationListener: javax.management.NotificationListener): void
                     /**
                      * Get the {@link javax.management.NotificationListener}.
                      */
                     // @ts-ignore
-                    getNotificationListener(): javax.management.NotificationListener
+                    public getNotificationListener(): javax.management.NotificationListener
                     /**
                      * Set the {@link javax.management.NotificationFilter} associated
                      * with the encapsulated {@link #getNotificationFilter() NotificationFilter}.
                      * <p>May be {@code null}.
                      */
                     // @ts-ignore
-                    setNotificationFilter(notificationFilter: javax.management.NotificationFilter): void
+                    public setNotificationFilter(notificationFilter: javax.management.NotificationFilter): void
                     /**
                      * Return the {@link javax.management.NotificationFilter} associated
                      * with the encapsulated {@link #getNotificationListener() NotificationListener}.
                      * <p>May be {@code null}.
                      */
                     // @ts-ignore
-                    getNotificationFilter(): javax.management.NotificationFilter
+                    public getNotificationFilter(): javax.management.NotificationFilter
                     /**
                      * Set the (arbitrary) object that will be 'handed back' as-is by an
                      * {@link javax.management.NotificationBroadcaster} when notifying
@@ -50,7 +50,7 @@ declare namespace org {
                      * @see javax.management.NotificationListener#handleNotification(javax.management.Notification, Object)
                      */
                     // @ts-ignore
-                    setHandback(handback: any): void
+                    public setHandback(handback: java.lang.Object | any): void
                     /**
                      * Return the (arbitrary) object that will be 'handed back' as-is by an
                      * {@link javax.management.NotificationBroadcaster} when notifying
@@ -59,7 +59,7 @@ declare namespace org {
                      * @see javax.management.NotificationListener#handleNotification(javax.management.Notification, Object)
                      */
                     // @ts-ignore
-                    getHandback(): java.lang.Object
+                    public getHandback(): any
                     /**
                      * Set the {@link javax.management.ObjectName}-style name of the single MBean
                      * that the encapsulated {@link #getNotificationFilter() NotificationFilter}
@@ -68,7 +68,7 @@ declare namespace org {
                      * @see #setMappedObjectNames
                      */
                     // @ts-ignore
-                    setMappedObjectName(mappedObjectName: any): void
+                    public setMappedObjectName(mappedObjectName: java.lang.Object | any): void
                     /**
                      * Set an array of {@link javax.management.ObjectName}-style names of the MBeans
                      * that the encapsulated {@link #getNotificationFilter() NotificationFilter}
@@ -77,7 +77,7 @@ declare namespace org {
                      * @see #setMappedObjectName
                      */
                     // @ts-ignore
-                    setMappedObjectNames(...mappedObjectNames: any[]): void
+                    public setMappedObjectNames(...mappedObjectNames: java.lang.Object[] | any[]): void
                     /**
                      * Return the list of {@link javax.management.ObjectName} String representations for
                      * which the encapsulated {@link #getNotificationFilter() NotificationFilter} will
@@ -85,11 +85,11 @@ declare namespace org {
                      * @throws MalformedObjectNameException if an {#code ObjectName} is malformed
                      */
                     // @ts-ignore
-                    getResolvedObjectNames(): javax.management.ObjectName[]
+                    public getResolvedObjectNames(): javax.management.ObjectName[]
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

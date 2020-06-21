@@ -8,7 +8,7 @@ declare namespace javax {
              * @author Arnaud Weber
              */
             // @ts-ignore
-            class MenuItemUI extends javax.swing.plaf.ButtonUI {
+            abstract class MenuItemUI extends javax.swing.plaf.ButtonUI {
                 // @ts-ignore
                 constructor()
             }

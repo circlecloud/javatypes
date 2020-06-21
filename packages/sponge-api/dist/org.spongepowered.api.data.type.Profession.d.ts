@@ -14,7 +14,7 @@ declare namespace org {
                          * @return The collection of available careers
                          */
                         // @ts-ignore
-                        getCareers(): java.util.Collection<org.spongepowered.api.data.type.Career>
+                        getCareers(): Array<org.spongepowered.api.data.type.Career>
                     }
                 }
             }

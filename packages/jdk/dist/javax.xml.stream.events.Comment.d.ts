@@ -15,7 +15,7 @@ declare namespace javax {
                      * does not exist
                      */
                     // @ts-ignore
-                    getText(): java.lang.String
+                    getText(): string
                 }
             }
         }

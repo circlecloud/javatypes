@@ -21,7 +21,7 @@ declare namespace org {
                          * @param value the String value
                          */
                         // @ts-ignore
-                        constructor(value: string)
+                        constructor(value: java.lang.String | string)
                         /**
                          * Create a new {@link TypedStringValue} for the given String value
                          * and target type.
@@ -29,7 +29,7 @@ declare namespace org {
                          * @param targetType the type to convert to
                          */
                         // @ts-ignore
-                        constructor(value: string, targetType: java.lang.Class<any>)
+                        constructor(value: java.lang.String | string, targetType: java.lang.Class<any>)
                         /**
                          * Create a new {@link TypedStringValue} for the given String value
                          * and target type.
@@ -37,46 +37,46 @@ declare namespace org {
                          * @param targetTypeName the type to convert to
                          */
                         // @ts-ignore
-                        constructor(value: string, targetTypeName: string)
+                        constructor(value: java.lang.String | string, targetTypeName: java.lang.String | string)
                         /**
                          * Set the String value.
                          * <p>Only necessary for manipulating a registered value,
                          * for example in BeanFactoryPostProcessors.
                          */
                         // @ts-ignore
-                        setValue(value: string): void
+                        public setValue(value: java.lang.String | string): void
                         /**
                          * Return the String value.
                          */
                         // @ts-ignore
-                        getValue(): java.lang.String
+                        public getValue(): string
                         /**
                          * Set the type to convert to.
                          * <p>Only necessary for manipulating a registered value,
                          * for example in BeanFactoryPostProcessors.
                          */
                         // @ts-ignore
-                        setTargetType(targetType: java.lang.Class<any>): void
+                        public setTargetType(targetType: java.lang.Class<any>): void
                         /**
                          * Return the type to convert to.
                          */
                         // @ts-ignore
-                        getTargetType(): java.lang.Class<?>
+                        public getTargetType(): java.lang.Class<any>
                         /**
                          * Specify the type to convert to.
                          */
                         // @ts-ignore
-                        setTargetTypeName(targetTypeName: string): void
+                        public setTargetTypeName(targetTypeName: java.lang.String | string): void
                         /**
                          * Return the type to convert to.
                          */
                         // @ts-ignore
-                        getTargetTypeName(): java.lang.String
+                        public getTargetTypeName(): string
                         /**
                          * Return whether this typed String value carries a target type .
                          */
                         // @ts-ignore
-                        hasTargetType(): boolean
+                        public hasTargetType(): boolean
                         /**
                          * Determine the type to convert to, resolving it from a specified class name
                          * if necessary. Will also reload a specified Class from its name when called
@@ -86,42 +86,42 @@ declare namespace org {
                          * @throws ClassNotFoundException if the type cannot be resolved
                          */
                         // @ts-ignore
-                        resolveTargetType(classLoader: java.lang.ClassLoader): java.lang.Class<?>
+                        public resolveTargetType(classLoader: java.lang.ClassLoader): java.lang.Class<any>
                         /**
                          * Set the configuration source {@code Object} for this metadata element.
                          * <p>The exact type of the object will depend on the configuration mechanism used.
                          */
                         // @ts-ignore
-                        setSource(source: any): void
+                        public setSource(source: java.lang.Object | any): void
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         /**
                          * Set the type name as actually specified for this particular value, if any.
                          */
                         // @ts-ignore
-                        setSpecifiedTypeName(specifiedTypeName: string): void
+                        public setSpecifiedTypeName(specifiedTypeName: java.lang.String | string): void
                         /**
                          * Return the type name as actually specified for this particular value, if any.
                          */
                         // @ts-ignore
-                        getSpecifiedTypeName(): java.lang.String
+                        public getSpecifiedTypeName(): string
                         /**
                          * Mark this value as dynamic, i.e. as containing an expression
                          * and hence not being subject to caching.
                          */
                         // @ts-ignore
-                        setDynamic(): void
+                        public setDynamic(): void
                         /**
                          * Return whether this value has been marked as dynamic.
                          */
                         // @ts-ignore
-                        isDynamic(): boolean
+                        public isDynamic(): boolean
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

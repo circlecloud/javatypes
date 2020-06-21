@@ -21,12 +21,12 @@ declare namespace org {
                  * property values, as an alternative to JavaBeans PropertyEditors.
                  */
                 // @ts-ignore
-                setConversionService(conversionService: ConversionService): void
+                public setConversionService(conversionService: ConversionService): void
                 /**
                  * Return the associated ConversionService, if any.
                  */
                 // @ts-ignore
-                getConversionService(): ConversionService
+                public getConversionService(): ConversionService
                 /**
                  * Activate the default editors for this registry instance,
                  * allowing for lazily registering default editors when needed.
@@ -41,7 +41,7 @@ declare namespace org {
                  * them individually in any case, through {@link #registerCustomEditor}.
                  */
                 // @ts-ignore
-                useConfigValueEditors(): void
+                public useConfigValueEditors(): void
                 /**
                  * Override the default editor for the specified type with the given property editor.
                  * <p>Note that this is different from registering a custom editor in that the editor
@@ -52,7 +52,7 @@ declare namespace org {
                  * @see #registerCustomEditor(Class, PropertyEditor)
                  */
                 // @ts-ignore
-                overrideDefaultEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
+                public overrideDefaultEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
                 /**
                  * Retrieve the default editor for the given property type, if any.
                  * <p>Lazily registers the default editors, if they are active.
@@ -61,7 +61,7 @@ declare namespace org {
                  * @see #registerDefaultEditors
                  */
                 // @ts-ignore
-                getDefaultEditor(requiredType: java.lang.Class<any>): java.beans.PropertyEditor
+                public getDefaultEditor(requiredType: java.lang.Class<any>): java.beans.PropertyEditor
                 /**
                  * Copy the default editors registered in this instance to the given target registry.
                  * @param target the target registry to copy to
@@ -69,11 +69,11 @@ declare namespace org {
                 // @ts-ignore
                 copyDefaultEditorsTo(target: org.springframework.beans.PropertyEditorRegistrySupport): void
                 // @ts-ignore
-                registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
+                public registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
                 // @ts-ignore
-                registerCustomEditor(requiredType: java.lang.Class<any>, propertyPath: string, propertyEditor: java.beans.PropertyEditor): void
+                public registerCustomEditor(requiredType: java.lang.Class<any>, propertyPath: java.lang.String | string, propertyEditor: java.beans.PropertyEditor): void
                 // @ts-ignore
-                findCustomEditor(requiredType: java.lang.Class<any>, propertyPath: string): java.beans.PropertyEditor
+                public findCustomEditor(requiredType: java.lang.Class<any>, propertyPath: java.lang.String | string): java.beans.PropertyEditor
                 /**
                  * Determine whether this registry contains a custom editor
                  * for the specified array/collection element.
@@ -84,7 +84,7 @@ declare namespace org {
                  * @return whether a matching custom editor has been found
                  */
                 // @ts-ignore
-                hasCustomEditorForElement(elementType: java.lang.Class<any>, propertyPath: string): boolean
+                public hasCustomEditorForElement(elementType: java.lang.Class<any>, propertyPath: java.lang.String | string): boolean
                 /**
                  * Determine the property type for the given property path.
                  * <p>Called by {@link #findCustomEditor} if no required type has been specified,
@@ -97,7 +97,7 @@ declare namespace org {
                  * @see BeanWrapper#getPropertyType(String)
                  */
                 // @ts-ignore
-                getPropertyType(propertyPath: string): java.lang.Class<?>
+                getPropertyType(propertyPath: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Guess the property type of the specified property from the registered
                  * custom editors (provided that they were registered for a specific type).
@@ -105,7 +105,7 @@ declare namespace org {
                  * @return the property type, or {#code null} if not determinable
                  */
                 // @ts-ignore
-                guessPropertyTypeFromEditors(propertyName: string): java.lang.Class<?>
+                guessPropertyTypeFromEditors(propertyName: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Copy the custom editors registered in this instance to the given target registry.
                  * @param target the target registry to copy to
@@ -114,7 +114,7 @@ declare namespace org {
                  *  will be copied. If this is null, all editors will be copied.
                  */
                 // @ts-ignore
-                copyCustomEditorsTo(target: org.springframework.beans.PropertyEditorRegistry, nestedProperty: string): void
+                copyCustomEditorsTo(target: org.springframework.beans.PropertyEditorRegistry, nestedProperty: java.lang.String | string): void
             }
         }
     }

@@ -38,19 +38,19 @@ declare namespace javax {
                  * The first number in the range of IDs used for internal frame events.
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_FIRST: number /*int*/
+                public static readonly INTERNAL_FRAME_FIRST: number /*int*/
                 /**
                  * The last number in the range of IDs used for internal frame events.
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_LAST: number /*int*/
+                public static readonly INTERNAL_FRAME_LAST: number /*int*/
                 /**
                  * The "window opened" event.  This event is delivered only
                  * the first time the internal frame is made visible.
                  * @see JInternalFrame#show
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_OPENED: number /*int*/
+                public static readonly INTERNAL_FRAME_OPENED: number /*int*/
                 /**
                  * The "window is closing" event. This event is delivered when
                  * the user attempts to close the internal frame, such as by
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @see JInternalFrame#setClosed
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_CLOSING: number /*int*/
+                public static readonly INTERNAL_FRAME_CLOSING: number /*int*/
                 /**
                  * The "window closed" event. This event is delivered after
                  * the internal frame has been closed as the result of a call to
@@ -72,7 +72,7 @@ declare namespace javax {
                  * @see JInternalFrame#dispose
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_CLOSED: number /*int*/
+                public static readonly INTERNAL_FRAME_CLOSED: number /*int*/
                 /**
                  * The "window iconified" event.
                  * This event indicates that the internal frame
@@ -80,14 +80,14 @@ declare namespace javax {
                  * @see JInternalFrame#setIcon
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_ICONIFIED: number /*int*/
+                public static readonly INTERNAL_FRAME_ICONIFIED: number /*int*/
                 /**
                  * The "window deiconified" event type. This event indicates that the
                  * internal frame has been restored to its normal size.
                  * @see JInternalFrame#setIcon
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_DEICONIFIED: number /*int*/
+                public static readonly INTERNAL_FRAME_DEICONIFIED: number /*int*/
                 /**
                  * The "window activated" event type. This event indicates that keystrokes
                  * and mouse clicks are directed towards this internal frame.
@@ -95,28 +95,28 @@ declare namespace javax {
                  * @see JInternalFrame#setSelected
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_ACTIVATED: number /*int*/
+                public static readonly INTERNAL_FRAME_ACTIVATED: number /*int*/
                 /**
                  * The "window deactivated" event type. This event indicates that keystrokes
                  * and mouse clicks are no longer directed to the internal frame.
                  * @see JInternalFrame#setSelected
                  */
                 // @ts-ignore
-                readonly INTERNAL_FRAME_DEACTIVATED: number /*int*/
+                public static readonly INTERNAL_FRAME_DEACTIVATED: number /*int*/
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
                 /**
                  * Returns the originator of the event.
                  * @return the <code>JInternalFrame</code> object that originated the event
                  * @since 1.3
                  */
                 // @ts-ignore
-                getInternalFrame(): javax.swing.JInternalFrame
+                public getInternalFrame(): javax.swing.JInternalFrame
             }
         }
     }

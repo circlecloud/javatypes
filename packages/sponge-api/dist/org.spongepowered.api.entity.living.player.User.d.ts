@@ -22,7 +22,7 @@ declare namespace org {
                              * @return The player's last known username
                              */
                             // @ts-ignore
-                            getName(): java.lang.String
+                            getName(): string
                             /**
                              * Checks if this user is online or not.
                              * @return True if the corresponding player is online

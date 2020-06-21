@@ -11,7 +11,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class FilterBypass extends java.lang.Object {
+                abstract class FilterBypass extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -19,7 +19,7 @@ declare namespace javax {
                      * @return Document that remove/insertString will operate on
                      */
                     // @ts-ignore
-                    abstract getDocument(): javax.swing.text.Document
+                    public abstract getDocument(): javax.swing.text.Document
                     /**
                      * Removes the specified region of text, bypassing the
                      * DocumentFilter.
@@ -30,7 +30,7 @@ declare namespace javax {
                      *    exception is the first bad position encountered.
                      */
                     // @ts-ignore
-                    abstract remove(offset: number /*int*/, length: number /*int*/): void
+                    public abstract remove(offset: number /*int*/, length: number /*int*/): void
                     /**
                      * Inserts the specified text, bypassing the
                      * DocumentFilter.
@@ -44,7 +44,7 @@ declare namespace javax {
                      *    valid position within the document
                      */
                     // @ts-ignore
-                    abstract insertString(offset: number /*int*/, string: string, attr: javax.swing.text.AttributeSet): void
+                    public abstract insertString(offset: number /*int*/, string: java.lang.String | string, attr: javax.swing.text.AttributeSet): void
                     /**
                      * Deletes the region of text from <code>offset</code> to
                      * <code>offset + length</code>, and replaces it with
@@ -58,7 +58,7 @@ declare namespace javax {
                      *    valid position within the document
                      */
                     // @ts-ignore
-                    abstract replace(offset: number /*int*/, length: number /*int*/, string: string, attrs: javax.swing.text.AttributeSet): void
+                    public abstract replace(offset: number /*int*/, length: number /*int*/, string: java.lang.String | string, attrs: javax.swing.text.AttributeSet): void
                 }
             }
         }

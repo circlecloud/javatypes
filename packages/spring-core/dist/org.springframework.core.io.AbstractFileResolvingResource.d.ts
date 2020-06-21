@@ -11,22 +11,22 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class AbstractFileResolvingResource extends org.springframework.core.io.AbstractResource {
+                abstract class AbstractFileResolvingResource extends org.springframework.core.io.AbstractResource {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     // @ts-ignore
-                    isReadable(): boolean
+                    public isReadable(): boolean
                     // @ts-ignore
-                    isFile(): boolean
+                    public isFile(): boolean
                     /**
                      * This implementation returns a File reference for the underlying class path
                      * resource, provided that it refers to a file in the file system.
                      * @see org.springframework.util.ResourceUtils#getFile(java.net.URL, String)
                      */
                     // @ts-ignore
-                    getFile(): java.io.File
+                    public getFile(): java.io.File
                     /**
                      * This implementation determines the underlying File
                      * (or jar file, in case of a resource in a jar/zip).
@@ -55,11 +55,11 @@ declare namespace org {
                      * @see #getFile()
                      */
                     // @ts-ignore
-                    readableChannel(): java.nio.channels.ReadableByteChannel
+                    public readableChannel(): java.nio.channels.ReadableByteChannel
                     // @ts-ignore
-                    contentLength(): long
+                    public contentLength(): number /*long*/
                     // @ts-ignore
-                    lastModified(): long
+                    public lastModified(): number /*long*/
                     /**
                      * Customize the given {@link URLConnection}, obtained in the course of an
                      * {@link #exists()}, {@link #contentLength()} or {@link #lastModified()} call.

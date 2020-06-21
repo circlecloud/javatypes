@@ -28,7 +28,7 @@ declare namespace org {
                  * @see AsyncAnnotationAdvisor
                  */
                 // @ts-ignore
-                class Async implements java.lang.annotation.Annotation {
+                abstract class Async implements java.lang.annotation.Annotation {
                 }
             }
         }

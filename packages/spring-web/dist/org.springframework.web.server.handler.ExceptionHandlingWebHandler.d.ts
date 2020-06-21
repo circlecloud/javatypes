@@ -17,14 +17,14 @@ declare namespace org {
                          * @param handlers the WebExceptionHandlers to apply
                          */
                         // @ts-ignore
-                        constructor(delegate: org.springframework.web.server.WebHandler, handlers: Array<org.springframework.web.server.WebExceptionHandler>)
+                        constructor(delegate: org.springframework.web.server.WebHandler, handlers: java.util.List<org.springframework.web.server.WebExceptionHandler> | Array<org.springframework.web.server.WebExceptionHandler>)
                         /**
                          * Return a read-only list of the configured exception handlers.
                          */
                         // @ts-ignore
-                        getExceptionHandlers(): java.util.List<org.springframework.web.server.WebExceptionHandler>
+                        public getExceptionHandlers(): Array<org.springframework.web.server.WebExceptionHandler>
                         // @ts-ignore
-                        handle(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public handle(exchange: org.springframework.web.server.ServerWebExchange): object
                     }
                 }
             }

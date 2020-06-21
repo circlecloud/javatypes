@@ -14,21 +14,21 @@ declare namespace javax {
              * @param message the detail message
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs a new CardException with the specified cause and a detail message
              * of <code>(cause==null ? null : cause.toString())</code>.
              * @param cause the cause of this exception or null
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a new CardException with the specified detail message and cause.
              * @param message the detail message
              * @param cause the cause of this exception or null
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
         }
     }
 }

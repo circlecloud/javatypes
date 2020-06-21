@@ -24,17 +24,17 @@ declare namespace javax {
              * The start index of the text sequence
              */
             // @ts-ignore
-            startIndex: number /*int*/
+            public startIndex: number /*int*/
             /**
              * The end index of the text sequence
              */
             // @ts-ignore
-            endIndex: number /*int*/
+            public endIndex: number /*int*/
             /**
              * The text attributes
              */
             // @ts-ignore
-            attributes: javax.swing.text.AttributeSet
+            public attributes: javax.swing.text.AttributeSet
         }
     }
 }

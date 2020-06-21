@@ -26,11 +26,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor(classLoader: java.lang.ClassLoader)
                         // @ts-ignore
-                        addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
+                        public addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
                         // @ts-ignore
-                        getInstrumentableClassLoader(): java.lang.ClassLoader
+                        public getInstrumentableClassLoader(): java.lang.ClassLoader
                         // @ts-ignore
-                        getThrowawayClassLoader(): java.lang.ClassLoader
+                        public getThrowawayClassLoader(): java.lang.ClassLoader
                     }
                 }
             }

@@ -86,7 +86,7 @@ declare namespace javax {
                      * @return the scan of the last element or {#code DEFAULT_VALUE} if no elements
                      */
                     // @ts-ignore
-                    scan(iterable: java.lang.Iterable<javax.lang.model.element.Element>, p: P): R
+                    public scan(iterable: java.lang.Iterable<any>, p: P): R
                     /**
                      * Processes an element by calling {@code e.accept(this, p)};
                      * this method may be overridden by subclasses.
@@ -95,14 +95,14 @@ declare namespace javax {
                      * @return the result of visiting {#code e}.
                      */
                     // @ts-ignore
-                    scan(e: javax.lang.model.element.Element, p: P): R
+                    public scan(e: javax.lang.model.element.Element, p: P): R
                     /**
                      * Convenience method equivalent to {@code v.scan(e, null)}.
                      * @param e the element to scan
                      * @return the result of scanning {#code e}.
                      */
                     // @ts-ignore
-                    scan(e: javax.lang.model.element.Element): R
+                    public scan(e: javax.lang.model.element.Element): R
                     /**
                      * {@inheritDoc} This implementation scans the enclosed elements.
                      * @param e  {#inheritDoc}
@@ -110,7 +110,7 @@ declare namespace javax {
                      * @return the result of scanning
                      */
                     // @ts-ignore
-                    visitPackage(e: javax.lang.model.element.PackageElement, p: P): R
+                    public visitPackage(e: javax.lang.model.element.PackageElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation scans the enclosed elements.
                      * @param e  {#inheritDoc}
@@ -118,7 +118,7 @@ declare namespace javax {
                      * @return the result of scanning
                      */
                     // @ts-ignore
-                    visitType(e: javax.lang.model.element.TypeElement, p: P): R
+                    public visitType(e: javax.lang.model.element.TypeElement, p: P): R
                     /**
                      * {@inheritDoc}
                      * This implementation scans the enclosed elements, unless the
@@ -129,7 +129,7 @@ declare namespace javax {
                      * @return the result of scanning
                      */
                     // @ts-ignore
-                    visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation scans the parameters.
                      * @param e  {#inheritDoc}
@@ -137,7 +137,7 @@ declare namespace javax {
                      * @return the result of scanning
                      */
                     // @ts-ignore
-                    visitExecutable(e: javax.lang.model.element.ExecutableElement, p: P): R
+                    public visitExecutable(e: javax.lang.model.element.ExecutableElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation scans the enclosed elements.
                      * @param e  {#inheritDoc}
@@ -145,7 +145,7 @@ declare namespace javax {
                      * @return the result of scanning
                      */
                     // @ts-ignore
-                    visitTypeParameter(e: javax.lang.model.element.TypeParameterElement, p: P): R
+                    public visitTypeParameter(e: javax.lang.model.element.TypeParameterElement, p: P): R
                 }
             }
         }

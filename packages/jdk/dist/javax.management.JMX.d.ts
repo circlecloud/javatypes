@@ -11,55 +11,55 @@ declare namespace javax {
              * defaultValue}</a> field.
              */
             // @ts-ignore
-            readonly DEFAULT_VALUE_FIELD: string
+            public static readonly DEFAULT_VALUE_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#immutableInfo">{@code
              * immutableInfo}</a> field.
              */
             // @ts-ignore
-            readonly IMMUTABLE_INFO_FIELD: string
+            public static readonly IMMUTABLE_INFO_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#interfaceClassName">{@code
              * interfaceClassName}</a> field.
              */
             // @ts-ignore
-            readonly INTERFACE_CLASS_NAME_FIELD: string
+            public static readonly INTERFACE_CLASS_NAME_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#legalValues">{@code
              * legalValues}</a> field.
              */
             // @ts-ignore
-            readonly LEGAL_VALUES_FIELD: string
+            public static readonly LEGAL_VALUES_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#maxValue">{@code
              * maxValue}</a> field.
              */
             // @ts-ignore
-            readonly MAX_VALUE_FIELD: string
+            public static readonly MAX_VALUE_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#minValue">{@code
              * minValue}</a> field.
              */
             // @ts-ignore
-            readonly MIN_VALUE_FIELD: string
+            public static readonly MIN_VALUE_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#mxbean">{@code
              * mxbean}</a> field.
              */
             // @ts-ignore
-            readonly MXBEAN_FIELD: string
+            public static readonly MXBEAN_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#openType">{@code
              * openType}</a> field.
              */
             // @ts-ignore
-            readonly OPEN_TYPE_FIELD: string
+            public static readonly OPEN_TYPE_FIELD: java.lang.String | string
             /**
              * The name of the <a href="Descriptor.html#originalType">{@code
              * originalType}</a> field.
              */
             // @ts-ignore
-            readonly ORIGINAL_TYPE_FIELD: string
+            public static readonly ORIGINAL_TYPE_FIELD: java.lang.String | string
             /**
              * <p>Make a proxy for a Standard MBean in a local or remote
              * MBean Server.</p>
@@ -112,7 +112,7 @@ declare namespace javax {
              *  interface</a>
              */
             // @ts-ignore
-            newMBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>): T
+            public static newMBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>): T
             /**
              * <p>Make a proxy for a Standard MBean in a local or remote MBean
              * Server that may also support the methods of {@link
@@ -147,7 +147,7 @@ declare namespace javax {
              *  interface</a>
              */
             // @ts-ignore
-            newMBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>, notificationEmitter: boolean): T
+            public static newMBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>, notificationEmitter: boolean): T
             /**
              * Make a proxy for an MXBean in a local or remote MBean Server.
              * <p>If you have an MBean Server {@code mbs} containing an
@@ -223,7 +223,7 @@ declare namespace javax {
              *  a {@link javax.management.MXBean compliant MXBean interface}
              */
             // @ts-ignore
-            newMXBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>): T
+            public static newMXBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>): T
             /**
              * <p>Make a proxy for an MXBean in a local or remote MBean
              * Server that may also support the methods of {@link
@@ -257,7 +257,7 @@ declare namespace javax {
              *  a {@link javax.management.MXBean compliant MXBean interface}
              */
             // @ts-ignore
-            newMXBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>, notificationEmitter: boolean): T
+            public static newMXBeanProxy<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>, notificationEmitter: boolean): T
             /**
              * <p>Test whether an interface is an MXBean interface.
              * An interface is an MXBean interface if it is public,
@@ -270,7 +270,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code interfaceClass} is null.
              */
             // @ts-ignore
-            isMXBeanInterface(interfaceClass: java.lang.Class<any>): boolean
+            public static isMXBeanInterface(interfaceClass: java.lang.Class<any>): boolean
         }
     }
 }

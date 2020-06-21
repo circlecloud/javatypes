@@ -21,9 +21,9 @@ declare namespace org {
                          * caller is the container itself as opposed to user code.
                          */
                         // @ts-ignore
-                        getCurrentlyInvokedFactoryMethod(): java.lang.reflect.Method
+                        public static getCurrentlyInvokedFactoryMethod(): java.lang.reflect.Method
                         // @ts-ignore
-                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory): java.lang.Object
+                        public instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory): any
                         /**
                          * Subclasses can override this method, which is implemented to throw
                          * UnsupportedOperationException, if they can instantiate an object with
@@ -31,9 +31,9 @@ declare namespace org {
                          * Instantiation should use a no-arg constructor.
                          */
                         // @ts-ignore
-                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory): java.lang.Object
+                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory): any
                         // @ts-ignore
-                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: any[]): java.lang.Object
+                        public instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: java.lang.Object[] | any[]): any
                         /**
                          * Subclasses can override this method, which is implemented to throw
                          * UnsupportedOperationException, if they can instantiate an object with
@@ -41,9 +41,9 @@ declare namespace org {
                          * Instantiation should use the given constructor and parameters.
                          */
                         // @ts-ignore
-                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: any[]): java.lang.Object
+                        instantiateWithMethodInjection(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory, ctor: java.lang.reflect.Constructor<any>, ...args: java.lang.Object[] | any[]): any
                         // @ts-ignore
-                        instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: string, owner: org.springframework.beans.factory.BeanFactory, factoryBean: any, factoryMethod: java.lang.reflect.Method, ...args: any[]): java.lang.Object
+                        public instantiate(bd: org.springframework.beans.factory.support.RootBeanDefinition, beanName: java.lang.String | string, owner: org.springframework.beans.factory.BeanFactory, factoryBean: java.lang.Object | any, factoryMethod: java.lang.reflect.Method, ...args: java.lang.Object[] | any[]): any
                     }
                 }
             }

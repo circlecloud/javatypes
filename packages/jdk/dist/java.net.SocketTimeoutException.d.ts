@@ -12,7 +12,7 @@ declare namespace java {
              * @param msg the detail message
              */
             // @ts-ignore
-            constructor(msg: string)
+            constructor(msg: java.lang.String | string)
             /**
              * Construct a new SocketTimeoutException with no detailed message.
              */

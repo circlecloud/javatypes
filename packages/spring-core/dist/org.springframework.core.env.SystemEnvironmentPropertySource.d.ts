@@ -42,26 +42,26 @@ declare namespace org {
                      * delegating to the given {@code MapPropertySource}.
                      */
                     // @ts-ignore
-                    constructor(name: string, source: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(name: java.lang.String | string, source: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     /**
                      * Return {@code true} if a property with the given name or any underscore/uppercase variant
                      * thereof exists in this property source.
                      */
                     // @ts-ignore
-                    containsProperty(name: string): boolean
+                    public containsProperty(name: java.lang.String | string): boolean
                     /**
                      * This implementation returns {@code true} if a property with the given name or
                      * any underscore/uppercase variant thereof exists in this property source.
                      */
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                     /**
                      * Check to see if this property source contains a property with the given name, or
                      * any underscore / uppercase variation thereof. Return the resolved name if one is
                      * found or otherwise the original name. Never returns {@code null}.
                      */
                     // @ts-ignore
-                    resolvePropertyName(name: string): java.lang.String
+                    resolvePropertyName(name: java.lang.String | string): string
                     // @ts-ignore
                     isSecurityManagerPresent(): boolean
                 }

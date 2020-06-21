@@ -26,17 +26,17 @@ declare namespace org {
                  * @return SandstoneType of this sandstone
                  */
                 // @ts-ignore
-                getType(): org.bukkit.SandstoneType
+                public getType(): org.bukkit.SandstoneType
                 /**
                  * Sets the type of this sandstone
                  * @param type New type of this sandstone
                  */
                 // @ts-ignore
-                setType(type: org.bukkit.SandstoneType): void
+                public setType(type: org.bukkit.SandstoneType): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Sandstone
+                public clone(): org.bukkit.material.Sandstone
             }
         }
     }

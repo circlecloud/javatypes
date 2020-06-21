@@ -15,22 +15,22 @@ declare namespace org {
                      * @return new data
                      */
                     // @ts-ignore
-                    getNewData(): org.bukkit.block.data.BlockData
+                    public getNewData(): org.bukkit.block.data.BlockData
                     /**
                      * Sets the new data of the changed block. Must be of the same Material as
                      * the old one.
                      * @param newData the new data
                      */
                     // @ts-ignore
-                    setNewData(newData: org.bukkit.block.data.BlockData): void
+                    public setNewData(newData: org.bukkit.block.data.BlockData): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -17,7 +17,7 @@ declare namespace javax {
                  * @param r  an <code>Object</code>
                  */
                 // @ts-ignore
-                constructor(r: any)
+                constructor(r: java.lang.Object | any)
                 // @ts-ignore
                 updateLevel: number /*int*/
                 // @ts-ignore
@@ -25,7 +25,7 @@ declare namespace javax {
                 // @ts-ignore
                 listeners: java.util.Vector<javax.swing.event.UndoableEditListener>
                 // @ts-ignore
-                realSource: any
+                realSource: java.lang.Object | any
                 /**
                  * Registers an <code>UndoableEditListener</code>.
                  * The listener is notified whenever an edit occurs which can be undone.
@@ -33,14 +33,14 @@ declare namespace javax {
                  * @see #removeUndoableEditListener
                  */
                 // @ts-ignore
-                addUndoableEditListener(l: javax.swing.event.UndoableEditListener): void
+                public addUndoableEditListener(l: javax.swing.event.UndoableEditListener): void
                 /**
                  * Removes an <code>UndoableEditListener</code>.
                  * @param l  the <code>UndoableEditListener</code> object to be removed
                  * @see #addUndoableEditListener
                  */
                 // @ts-ignore
-                removeUndoableEditListener(l: javax.swing.event.UndoableEditListener): void
+                public removeUndoableEditListener(l: javax.swing.event.UndoableEditListener): void
                 /**
                  * Returns an array of all the <code>UndoableEditListener</code>s added
                  * to this UndoableEditSupport with addUndoableEditListener().
@@ -49,7 +49,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getUndoableEditListeners(): javax.swing.event.UndoableEditListener[]
+                public getUndoableEditListeners(): javax.swing.event.UndoableEditListener[]
                 /**
                  * Called only from <code>postEdit</code> and <code>endUpdate</code>. Calls
                  * <code>undoableEditHappened</code> in all listeners. No synchronization
@@ -63,15 +63,15 @@ declare namespace javax {
                  * It is unwise to call this method from one of its listeners.
                  */
                 // @ts-ignore
-                postEdit(e: javax.swing.undo.UndoableEdit): void
+                public postEdit(e: javax.swing.undo.UndoableEdit): void
                 /**
                  * Returns the update level value.
                  * @return an integer representing the update level
                  */
                 // @ts-ignore
-                getUpdateLevel(): int
+                public getUpdateLevel(): number /*int*/
                 // @ts-ignore
-                beginUpdate(): void
+                public beginUpdate(): void
                 /**
                  * Called only from <code>beginUpdate</code>.
                  * Exposed here for subclasses' use.
@@ -84,14 +84,14 @@ declare namespace javax {
                  * It is unwise to call this method from one of its listeners.
                  */
                 // @ts-ignore
-                endUpdate(): void
+                public endUpdate(): void
                 /**
                  * Returns a string that displays and identifies this
                  * object's properties.
                  * @return a <code>String</code> representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

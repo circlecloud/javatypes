@@ -16,14 +16,14 @@ declare namespace org {
                      * should not be retried.
                      */
                     // @ts-ignore
-                    
+                    readonly STOP: number /*long*/
                     /**
                      * Return the number of milliseconds to wait before retrying the operation
                      * or {@link #STOP} ({@value #STOP}) to indicate that no further attempt
                      * should be made for the operation.
                      */
                     // @ts-ignore
-                    nextBackOff(): long
+                    nextBackOff(): number /*long*/
                 }
             }
         }

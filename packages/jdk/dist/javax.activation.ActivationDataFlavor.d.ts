@@ -28,7 +28,7 @@ declare namespace javax {
              * @param humanPresentableName the human presentable name of the flavor
              */
             // @ts-ignore
-            constructor(representationClass: java.lang.Class, mimeType: string, humanPresentableName: string)
+            constructor(representationClass: java.lang.Class<any>, mimeType: java.lang.String | string, humanPresentableName: java.lang.String | string)
             /**
              * Construct a DataFlavor that represents a MimeType.
              * <p>
@@ -46,7 +46,7 @@ declare namespace javax {
              * @param humanPresentableName the human presentable name of the flavor
              */
             // @ts-ignore
-            constructor(representationClass: java.lang.Class, humanPresentableName: string)
+            constructor(representationClass: java.lang.Class<any>, humanPresentableName: java.lang.String | string)
             /**
              * Construct a DataFlavor that represents a MimeType.
              * <p>
@@ -62,31 +62,31 @@ declare namespace javax {
              * @param humanPresentableName the human presentable name of the flavor
              */
             // @ts-ignore
-            constructor(mimeType: string, humanPresentableName: string)
+            constructor(mimeType: java.lang.String | string, humanPresentableName: java.lang.String | string)
             /**
              * Return the MIME type for this DataFlavor.
              * @return the MIME type
              */
             // @ts-ignore
-            getMimeType(): java.lang.String
+            public getMimeType(): string
             /**
              * Return the representation class.
              * @return the representation class
              */
             // @ts-ignore
-            getRepresentationClass(): java.lang.Class
+            public getRepresentationClass(): java.lang.Class<any>
             /**
              * Return the Human Presentable name.
              * @return the human presentable name
              */
             // @ts-ignore
-            getHumanPresentableName(): java.lang.String
+            public getHumanPresentableName(): string
             /**
              * Set the human presentable name.
              * @param humanPresentableName      the name to set
              */
             // @ts-ignore
-            setHumanPresentableName(humanPresentableName: string): void
+            public setHumanPresentableName(humanPresentableName: java.lang.String | string): void
             /**
              * Compares the DataFlavor passed in with this DataFlavor; calls
              * the <code>isMimeTypeEqual</code> method.
@@ -95,7 +95,7 @@ declare namespace javax {
              *                           are the same
              */
             // @ts-ignore
-            equals(dataFlavor: java.awt.datatransfer.DataFlavor): boolean
+            public equals(dataFlavor: java.awt.datatransfer.DataFlavor): boolean
             /**
              * Is the string representation of the MIME type passed in equivalent
              * to the MIME type of this DataFlavor. <p>
@@ -107,7 +107,7 @@ declare namespace javax {
              * @return true if the same MIME type
              */
             // @ts-ignore
-            isMimeTypeEqual(mimeType: string): boolean
+            public isMimeTypeEqual(mimeType: java.lang.String | string): boolean
             /**
              * Called on DataFlavor for every MIME Type parameter to allow DataFlavor
              * subclasses to handle special parameters like the text/plain charset
@@ -123,7 +123,7 @@ declare namespace javax {
              * @deprecated 
              */
             // @ts-ignore
-            normalizeMimeTypeParameter(parameterName: string, parameterValue: string): java.lang.String
+            normalizeMimeTypeParameter(parameterName: java.lang.String | string, parameterValue: java.lang.String | string): string
             /**
              * Called for each MIME type string to give DataFlavor subtypes the
              * opportunity to change how the normalization of MIME types is
@@ -136,7 +136,7 @@ declare namespace javax {
              * @deprecated 
              */
             // @ts-ignore
-            normalizeMimeType(mimeType: string): java.lang.String
+            normalizeMimeType(mimeType: java.lang.String | string): string
         }
     }
 }

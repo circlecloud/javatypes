@@ -20,17 +20,17 @@ declare namespace org {
                 // @ts-ignore
                 constructor(data: number /*byte*/)
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                isOpen(): boolean
+                public isOpen(): boolean
                 // @ts-ignore
-                setOpen(isOpen: boolean): void
+                public setOpen(isOpen: boolean): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Gate
+                public clone(): org.bukkit.material.Gate
             }
         }
     }

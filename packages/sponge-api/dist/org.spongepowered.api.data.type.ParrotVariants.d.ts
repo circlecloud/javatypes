@@ -9,15 +9,15 @@ declare namespace org {
                     // @ts-ignore
                     class ParrotVariants extends java.lang.Object {
                         // @ts-ignore
-                        readonly BLUE: org.spongepowered.api.data.type.ParrotVariant
+                        public static readonly BLUE: org.spongepowered.api.data.type.ParrotVariant
                         // @ts-ignore
-                        readonly CYAN: org.spongepowered.api.data.type.ParrotVariant
+                        public static readonly CYAN: org.spongepowered.api.data.type.ParrotVariant
                         // @ts-ignore
-                        readonly GRAY: org.spongepowered.api.data.type.ParrotVariant
+                        public static readonly GRAY: org.spongepowered.api.data.type.ParrotVariant
                         // @ts-ignore
-                        readonly GREEN: org.spongepowered.api.data.type.ParrotVariant
+                        public static readonly GREEN: org.spongepowered.api.data.type.ParrotVariant
                         // @ts-ignore
-                        readonly RED: org.spongepowered.api.data.type.ParrotVariant
+                        public static readonly RED: org.spongepowered.api.data.type.ParrotVariant
                     }
                 }
             }

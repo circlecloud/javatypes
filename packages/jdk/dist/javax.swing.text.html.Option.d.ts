@@ -32,22 +32,22 @@ declare namespace javax {
                      * Sets the label to be used for the option.
                      */
                     // @ts-ignore
-                    setLabel(label: string): void
+                    public setLabel(label: java.lang.String | string): void
                     /**
                      * Fetch the label associated with the option.
                      */
                     // @ts-ignore
-                    getLabel(): java.lang.String
+                    public getLabel(): string
                     /**
                      * Fetch the attributes associated with this option.
                      */
                     // @ts-ignore
-                    getAttributes(): javax.swing.text.AttributeSet
+                    public getAttributes(): javax.swing.text.AttributeSet
                     /**
                      * String representation is the label.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Sets the selected state.
                      */
@@ -57,7 +57,7 @@ declare namespace javax {
                      * Fetches the selection state associated with this option.
                      */
                     // @ts-ignore
-                    isSelected(): boolean
+                    public isSelected(): boolean
                     /**
                      * Convenience method to return the string associated
                      * with the <code>value</code> attribute.  If the
@@ -65,7 +65,7 @@ declare namespace javax {
                      * returned.
                      */
                     // @ts-ignore
-                    getValue(): java.lang.String
+                    public getValue(): string
                 }
             }
         }

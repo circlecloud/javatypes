@@ -15,7 +15,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class ControlFactory extends java.lang.Object {
+            abstract class ControlFactory extends java.lang.Object {
                 /**
                  * Creates a new instance of a control factory.
                  */
@@ -55,7 +55,7 @@ declare namespace javax {
                  *  but is unable to because of, for example invalid BER data.
                  */
                 // @ts-ignore
-                abstract getControlInstance(ctl: javax.naming.ldap.Control): javax.naming.ldap.Control
+                public abstract getControlInstance(ctl: javax.naming.ldap.Control): javax.naming.ldap.Control
                 /**
                  * Creates a control using known control factories.
                  * <p>
@@ -94,7 +94,7 @@ declare namespace javax {
                  *  is wrapped inside a <tt>NamingException</tt> and then rethrown.
                  */
                 // @ts-ignore
-                getControlInstance(ctl: javax.naming.ldap.Control, ctx: javax.naming.Context, env: java.util.Hashtable<any, ?>): javax.naming.ldap.Control
+                public static getControlInstance(ctl: javax.naming.ldap.Control, ctx: javax.naming.Context, env: java.util.Hashtable<any, any>): javax.naming.ldap.Control
             }
         }
     }

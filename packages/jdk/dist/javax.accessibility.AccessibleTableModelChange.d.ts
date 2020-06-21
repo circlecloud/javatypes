@@ -32,17 +32,17 @@ declare namespace javax {
              * Identifies the insertion of new rows and/or columns.
              */
             // @ts-ignore
-            
+            readonly INSERT: number /*int*/
             /**
              * Identifies a change to existing data.
              */
             // @ts-ignore
-            
+            readonly UPDATE: number /*int*/
             /**
              * Identifies the deletion of rows and/or columns.
              */
             // @ts-ignore
-            
+            readonly DELETE: number /*int*/
             /**
              * Returns the type of event.
              * @return the type of event
@@ -51,31 +51,31 @@ declare namespace javax {
              * @see #DELETE
              */
             // @ts-ignore
-            getType(): int
+            getType(): number /*int*/
             /**
              * Returns the first row that changed.
              * @return the first row that changed
              */
             // @ts-ignore
-            getFirstRow(): int
+            getFirstRow(): number /*int*/
             /**
              * Returns the last row that changed.
              * @return the last row that changed
              */
             // @ts-ignore
-            getLastRow(): int
+            getLastRow(): number /*int*/
             /**
              * Returns the first column that changed.
              * @return the first column that changed
              */
             // @ts-ignore
-            getFirstColumn(): int
+            getFirstColumn(): number /*int*/
             /**
              * Returns the last column that changed.
              * @return the last column that changed
              */
             // @ts-ignore
-            getLastColumn(): int
+            getLastColumn(): number /*int*/
         }
     }
 }

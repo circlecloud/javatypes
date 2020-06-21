@@ -66,7 +66,7 @@ declare namespace java {
                  *           group} that has terminated
                  */
                 // @ts-ignore
-                read<A>(dst: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                read<A>(dst: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * Reads a sequence of bytes from this channel into the given buffer.
                  * <p> This method initiates an asynchronous read operation to read a
@@ -88,7 +88,7 @@ declare namespace java {
                  *           and a previous read has not completed
                  */
                 // @ts-ignore
-                read(dst: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer>
+                read(dst: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer | number>
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer.
                  * <p> This method initiates an asynchronous write operation to write a
@@ -132,7 +132,7 @@ declare namespace java {
                  *           group} that has terminated
                  */
                 // @ts-ignore
-                write<A>(src: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer, any super A>): void
+                write<A>(src: java.nio.ByteBuffer, attachment: A, handler: java.nio.channels.CompletionHandler<java.lang.Integer | number, any>): void
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer.
                  * <p> This method initiates an asynchronous write operation to write a
@@ -151,7 +151,7 @@ declare namespace java {
                  *           and a previous write has not completed
                  */
                 // @ts-ignore
-                write(src: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer>
+                write(src: java.nio.ByteBuffer): java.util.concurrent.Future<java.lang.Integer | number>
             }
         }
     }

@@ -29,7 +29,7 @@ declare namespace org {
                  *  (i.e. {#code mergeEnabled} equals {@code false}).
                  */
                 // @ts-ignore
-                merge(parent: any): java.lang.Object
+                merge(parent: java.lang.Object | any): any
             }
         }
     }

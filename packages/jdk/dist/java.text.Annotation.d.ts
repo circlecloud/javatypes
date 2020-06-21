@@ -33,19 +33,19 @@ declare namespace java {
              * @param value the value of the attribute
              */
             // @ts-ignore
-            constructor(value: any)
+            constructor(value: java.lang.Object | any)
             /**
              * Returns the value of the attribute, which may be null.
              * @return the value of the attribute
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Returns the String representation of this Annotation.
              * @return the {#code String} representation of this {@code Annotation}
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

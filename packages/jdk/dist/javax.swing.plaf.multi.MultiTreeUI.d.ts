@@ -18,149 +18,149 @@ declare namespace javax {
                      * obtained from the default look and feel.
                      */
                     // @ts-ignore
-                    uis: java.util.Vector
+                    uis: java.util.Vector<any>
                     /**
                      * Returns the list of UIs associated with this multiplexing UI.  This
                      * allows processing of the UIs by an application aware of multiplexing
                      * UIs on components.
                      */
                     // @ts-ignore
-                    getUIs(): javax.swing.plaf.ComponentUI[]
+                    public getUIs(): javax.swing.plaf.ComponentUI[]
                     /**
                      * Invokes the <code>getPathBounds</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getPathBounds(a: javax.swing.JTree, b: javax.swing.tree.TreePath): java.awt.Rectangle
+                    public getPathBounds(a: javax.swing.JTree, b: javax.swing.tree.TreePath): java.awt.Rectangle
                     /**
                      * Invokes the <code>getPathForRow</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getPathForRow(a: javax.swing.JTree, b: number /*int*/): javax.swing.tree.TreePath
+                    public getPathForRow(a: javax.swing.JTree, b: number /*int*/): javax.swing.tree.TreePath
                     /**
                      * Invokes the <code>getRowForPath</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getRowForPath(a: javax.swing.JTree, b: javax.swing.tree.TreePath): int
+                    public getRowForPath(a: javax.swing.JTree, b: javax.swing.tree.TreePath): number /*int*/
                     /**
                      * Invokes the <code>getRowCount</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getRowCount(a: javax.swing.JTree): int
+                    public getRowCount(a: javax.swing.JTree): number /*int*/
                     /**
                      * Invokes the <code>getClosestPathForLocation</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getClosestPathForLocation(a: javax.swing.JTree, b: number /*int*/, c: number /*int*/): javax.swing.tree.TreePath
+                    public getClosestPathForLocation(a: javax.swing.JTree, b: number /*int*/, c: number /*int*/): javax.swing.tree.TreePath
                     /**
                      * Invokes the <code>isEditing</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    isEditing(a: javax.swing.JTree): boolean
+                    public isEditing(a: javax.swing.JTree): boolean
                     /**
                      * Invokes the <code>stopEditing</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    stopEditing(a: javax.swing.JTree): boolean
+                    public stopEditing(a: javax.swing.JTree): boolean
                     /**
                      * Invokes the <code>cancelEditing</code> method on each UI handled by this object.
                      */
                     // @ts-ignore
-                    cancelEditing(a: javax.swing.JTree): void
+                    public cancelEditing(a: javax.swing.JTree): void
                     /**
                      * Invokes the <code>startEditingAtPath</code> method on each UI handled by this object.
                      */
                     // @ts-ignore
-                    startEditingAtPath(a: javax.swing.JTree, b: javax.swing.tree.TreePath): void
+                    public startEditingAtPath(a: javax.swing.JTree, b: javax.swing.tree.TreePath): void
                     /**
                      * Invokes the <code>getEditingPath</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getEditingPath(a: javax.swing.JTree): javax.swing.tree.TreePath
+                    public getEditingPath(a: javax.swing.JTree): javax.swing.tree.TreePath
                     /**
                      * Invokes the <code>contains</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    contains(a: javax.swing.JComponent, b: number /*int*/, c: number /*int*/): boolean
+                    public contains(a: javax.swing.JComponent, b: number /*int*/, c: number /*int*/): boolean
                     /**
                      * Invokes the <code>update</code> method on each UI handled by this object.
                      */
                     // @ts-ignore
-                    update(a: java.awt.Graphics, b: javax.swing.JComponent): void
+                    public update(a: java.awt.Graphics, b: javax.swing.JComponent): void
                     /**
                      * Returns a multiplexing UI instance if any of the auxiliary
                      * <code>LookAndFeel</code>s supports this UI.  Otherwise, just returns the
                      * UI object obtained from the default <code>LookAndFeel</code>.
                      */
                     // @ts-ignore
-                    createUI(a: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(a: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Invokes the <code>installUI</code> method on each UI handled by this object.
                      */
                     // @ts-ignore
-                    installUI(a: javax.swing.JComponent): void
+                    public installUI(a: javax.swing.JComponent): void
                     /**
                      * Invokes the <code>uninstallUI</code> method on each UI handled by this object.
                      */
                     // @ts-ignore
-                    uninstallUI(a: javax.swing.JComponent): void
+                    public uninstallUI(a: javax.swing.JComponent): void
                     /**
                      * Invokes the <code>paint</code> method on each UI handled by this object.
                      */
                     // @ts-ignore
-                    paint(a: java.awt.Graphics, b: javax.swing.JComponent): void
+                    public paint(a: java.awt.Graphics, b: javax.swing.JComponent): void
                     /**
                      * Invokes the <code>getPreferredSize</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getPreferredSize(a: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(a: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Invokes the <code>getMinimumSize</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getMinimumSize(a: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(a: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Invokes the <code>getMaximumSize</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getMaximumSize(a: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(a: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Invokes the <code>getAccessibleChildrenCount</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getAccessibleChildrenCount(a: javax.swing.JComponent): int
+                    public getAccessibleChildrenCount(a: javax.swing.JComponent): number /*int*/
                     /**
                      * Invokes the <code>getAccessibleChild</code> method on each UI handled by this object.
                      * @return the value obtained from the first UI, which is
                      *  the UI obtained from the default <code>LookAndFeel</code>
                      */
                     // @ts-ignore
-                    getAccessibleChild(a: javax.swing.JComponent, b: number /*int*/): javax.accessibility.Accessible
+                    public getAccessibleChild(a: javax.swing.JComponent, b: number /*int*/): javax.accessibility.Accessible
                 }
             }
         }

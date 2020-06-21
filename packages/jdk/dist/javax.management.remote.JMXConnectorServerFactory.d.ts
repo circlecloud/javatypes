@@ -105,7 +105,7 @@ declare namespace javax {
                  * attribute is an instance of {@link ClassLoader}.</p>
                  */
                 // @ts-ignore
-                readonly DEFAULT_CLASS_LOADER: string
+                public static readonly DEFAULT_CLASS_LOADER: java.lang.String | string
                 /**
                  * <p>Name of the attribute that specifies the default class
                  * loader MBean name.  This class loader is used to deserialize objects in
@@ -115,7 +115,7 @@ declare namespace javax {
                  * ObjectName}.</p>
                  */
                 // @ts-ignore
-                readonly DEFAULT_CLASS_LOADER_NAME: string
+                public static readonly DEFAULT_CLASS_LOADER_NAME: java.lang.String | string
                 /**
                  * <p>Name of the attribute that specifies the provider packages
                  * that are consulted when looking for the handler for a protocol.
@@ -123,7 +123,7 @@ declare namespace javax {
                  * package names separated by vertical bars (<code>|</code>).</p>
                  */
                 // @ts-ignore
-                readonly PROTOCOL_PROVIDER_PACKAGES: string
+                public static readonly PROTOCOL_PROVIDER_PACKAGES: java.lang.String | string
                 /**
                  * <p>Name of the attribute that specifies the class
                  * loader for loading protocol providers.
@@ -131,7 +131,7 @@ declare namespace javax {
                  * of {@link ClassLoader}.</p>
                  */
                 // @ts-ignore
-                readonly PROTOCOL_PROVIDER_CLASS_LOADER: string
+                public static readonly PROTOCOL_PROVIDER_CLASS_LOADER: java.lang.String | string
                 /**
                  * <p>Creates a connector server at the given address.  The
                  * resultant server is not started until its {@link
@@ -162,7 +162,7 @@ declare namespace javax {
                  *  some reason.
                  */
                 // @ts-ignore
-                newJMXConnectorServer(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>, mbeanServer: javax.management.MBeanServer): javax.management.remote.JMXConnectorServer
+                public static newJMXConnectorServer(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>, mbeanServer: javax.management.MBeanServer): javax.management.remote.JMXConnectorServer
             }
         }
     }

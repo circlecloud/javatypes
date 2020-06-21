@@ -18,7 +18,7 @@ declare namespace org {
                      * @return {#code Mono<Void>} to indicate when exception handling is complete
                      */
                     // @ts-ignore
-                    handle(exchange: org.springframework.web.server.ServerWebExchange, ex: Error): <any>
+                    handle(exchange: org.springframework.web.server.ServerWebExchange, ex: java.lang.Throwable | Error): object
                 }
             }
         }

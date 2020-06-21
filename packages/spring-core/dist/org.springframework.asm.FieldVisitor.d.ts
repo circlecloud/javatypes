@@ -8,7 +8,7 @@ declare namespace org {
              * @author Eric Bruneton
              */
             // @ts-ignore
-            class FieldVisitor extends java.lang.Object {
+            abstract class FieldVisitor extends java.lang.Object {
                 /**
                  * Constructs a new {@link FieldVisitor}.
                  * @param api the ASM API version implemented by this visitor. Must be one of {#link
@@ -44,7 +44,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitAnnotation(descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitAnnotation(descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits an annotation on the type of the field.
                  * @param typeRef a reference to the annotated type. The sort of this type reference must be
@@ -58,19 +58,19 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a non standard attribute of the field.
                  * @param attribute an attribute.
                  */
                 // @ts-ignore
-                visitAttribute(attribute: org.springframework.asm.Attribute): void
+                public visitAttribute(attribute: org.springframework.asm.Attribute): void
                 /**
                  * Visits the end of the field. This method, which is the last one to be called, is used to inform
                  * the visitor that all the annotations and attributes of the field have been visited.
                  */
                 // @ts-ignore
-                visitEnd(): void
+                public visitEnd(): void
             }
         }
     }

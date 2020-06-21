@@ -25,7 +25,7 @@ declare namespace org {
                      * The default base address.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_BASE_ADDRESS: string
+                    public static readonly DEFAULT_BASE_ADDRESS: java.lang.String | string
                     /**
                      * Set the base address for exported services.
                      * Default is "http://localhost:8080/".
@@ -36,7 +36,7 @@ declare namespace org {
                      * @see javax.jws.WebService#serviceName()
                      */
                     // @ts-ignore
-                    setBaseAddress(baseAddress: string): void
+                    public setBaseAddress(baseAddress: java.lang.String | string): void
                     // @ts-ignore
                     publishEndpoint(endpoint: javax.xml.ws.Endpoint, annotation: javax.jws.WebService): void
                     // @ts-ignore
@@ -48,7 +48,7 @@ declare namespace org {
                      * @return the full endpoint address
                      */
                     // @ts-ignore
-                    calculateEndpointAddress(endpoint: javax.xml.ws.Endpoint, serviceName: string): java.lang.String
+                    calculateEndpointAddress(endpoint: javax.xml.ws.Endpoint, serviceName: java.lang.String | string): string
                 }
             }
         }

@@ -21,11 +21,11 @@ declare namespace javax {
                     // @ts-ignore
                     scrollBarWidth: number /*int*/
                     // @ts-ignore
-                    readonly FREE_STANDING_PROP: string
+                    public static readonly FREE_STANDING_PROP: java.lang.String | string
                     // @ts-ignore
                     isFreeStanding: boolean
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
                     installDefaults(): void
                     // @ts-ignore
@@ -35,7 +35,7 @@ declare namespace javax {
                     // @ts-ignore
                     configureScrollBarColors(): void
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the view that represents the decrease view.
                      */

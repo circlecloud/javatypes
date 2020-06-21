@@ -94,19 +94,19 @@ declare namespace java {
              * should be left-justified.
              */
             // @ts-ignore
-            readonly LEFT: number /*int*/
+            public static readonly LEFT: number /*int*/
             /**
              * This value indicates that each row of components
              * should be centered.
              */
             // @ts-ignore
-            readonly CENTER: number /*int*/
+            public static readonly CENTER: number /*int*/
             /**
              * This value indicates that each row of components
              * should be right-justified.
              */
             // @ts-ignore
-            readonly RIGHT: number /*int*/
+            public static readonly RIGHT: number /*int*/
             /**
              * This value indicates that each row of components
              * should be justified to the leading edge of the container's
@@ -116,7 +116,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly LEADING: number /*int*/
+            public static readonly LEADING: number /*int*/
             /**
              * This value indicates that each row of components
              * should be justified to the trailing edge of the container's
@@ -126,7 +126,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly TRAILING: number /*int*/
+            public static readonly TRAILING: number /*int*/
             /**
              * Gets the alignment for this layout.
              * Possible values are <code>FlowLayout.LEFT</code>,
@@ -138,7 +138,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getAlignment(): int
+            public getAlignment(): number /*int*/
             /**
              * Sets the alignment for this layout.
              * Possible values are
@@ -154,7 +154,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setAlignment(align: number /*int*/): void
+            public setAlignment(align: number /*int*/): void
             /**
              * Gets the horizontal gap between components
              * and between the components and the borders
@@ -166,7 +166,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getHgap(): int
+            public getHgap(): number /*int*/
             /**
              * Sets the horizontal gap between components and
              * between the components and the borders of the
@@ -178,7 +178,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setHgap(hgap: number /*int*/): void
+            public setHgap(hgap: number /*int*/): void
             /**
              * Gets the vertical gap between components and
              * between the components and the borders of the
@@ -190,7 +190,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getVgap(): int
+            public getVgap(): number /*int*/
             /**
              * Sets the vertical gap between components and between
              * the components and the borders of the <code>Container</code>.
@@ -201,7 +201,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setVgap(vgap: number /*int*/): void
+            public setVgap(vgap: number /*int*/): void
             /**
              * Sets whether or not components should be vertically aligned along their
              * baseline.  Components that do not have a baseline will be centered.
@@ -211,7 +211,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setAlignOnBaseline(alignOnBaseline: boolean): void
+            public setAlignOnBaseline(alignOnBaseline: boolean): void
             /**
              * Returns true if components are to be vertically aligned along
              * their baseline.  The default is false.
@@ -220,7 +220,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getAlignOnBaseline(): boolean
+            public getAlignOnBaseline(): boolean
             /**
              * Adds the specified component to the layout.
              * Not used by this class.
@@ -228,7 +228,7 @@ declare namespace java {
              * @param comp the component to be added
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Removes the specified component from the layout.
              * Not used by this class.
@@ -236,7 +236,7 @@ declare namespace java {
              * @see java.awt.Container#removeAll
              */
             // @ts-ignore
-            removeLayoutComponent(comp: java.awt.Component): void
+            public removeLayoutComponent(comp: java.awt.Component): void
             /**
              * Returns the preferred dimensions for this layout given the
              * <i>visible</i> components in the specified target container.
@@ -248,7 +248,7 @@ declare namespace java {
              * @see java.awt.Container#getPreferredSize
              */
             // @ts-ignore
-            preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the minimum dimensions needed to layout the <i>visible</i>
              * components contained in the specified target container.
@@ -260,7 +260,7 @@ declare namespace java {
              * @see java.awt.Container#doLayout
              */
             // @ts-ignore
-            minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Lays out the container. This method lets each
              * <i>visible</i> component take
@@ -272,14 +272,14 @@ declare namespace java {
              * @see java.awt.Container#doLayout
              */
             // @ts-ignore
-            layoutContainer(target: java.awt.Container): void
+            public layoutContainer(target: java.awt.Container): void
             /**
              * Returns a string representation of this <code>FlowLayout</code>
              * object and its values.
              * @return a string representation of this layout
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

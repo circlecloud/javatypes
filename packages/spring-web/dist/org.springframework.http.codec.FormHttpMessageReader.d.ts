@@ -10,26 +10,26 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                class FormHttpMessageReader extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageReader<<any>> {
+                class FormHttpMessageReader extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageReader<object> {
                     // @ts-ignore
                     constructor()
                     /**
                      * The default charset used by the reader.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                    public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                     /**
                      * Set the default character set to use for reading form data when the
                      * request Content-Type header does not explicitly specify it.
                      * <p>By default this is set to "UTF-8".
                      */
                     // @ts-ignore
-                    setDefaultCharset(charset: java.nio.charset.Charset): void
+                    public setDefaultCharset(charset: java.nio.charset.Charset): void
                     /**
                      * Return the configured default charset.
                      */
                     // @ts-ignore
-                    getDefaultCharset(): java.nio.charset.Charset
+                    public getDefaultCharset(): java.nio.charset.Charset
                     /**
                      * Set the max number of bytes for input form data. As form data is buffered
                      * before it is parsed, this helps to limit the amount of buffering. Once
@@ -39,21 +39,21 @@ declare namespace org {
                      * @since 5.1.11
                      */
                     // @ts-ignore
-                    setMaxInMemorySize(byteCount: number /*int*/): void
+                    public setMaxInMemorySize(byteCount: number /*int*/): void
                     /**
                      * Return the {@link #setMaxInMemorySize configured} byte count limit.
                      * @since 5.1.11
                      */
                     // @ts-ignore
-                    getMaxInMemorySize(): int
+                    public getMaxInMemorySize(): number /*int*/
                     // @ts-ignore
-                    canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    getReadableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getReadableMediaTypes(): Array<org.springframework.http.MediaType>
                 }
             }
         }

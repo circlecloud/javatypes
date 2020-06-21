@@ -13,14 +13,14 @@ declare namespace java {
              * multibyte value are ordered from most significant to least significant.
              */
             // @ts-ignore
-            readonly BIG_ENDIAN: java.nio.ByteOrder
+            public static readonly BIG_ENDIAN: java.nio.ByteOrder
             /**
              * Constant denoting little-endian byte order.  In this order, the bytes of
              * a multibyte value are ordered from least significant to most
              * significant.
              */
             // @ts-ignore
-            readonly LITTLE_ENDIAN: java.nio.ByteOrder
+            public static readonly LITTLE_ENDIAN: java.nio.ByteOrder
             /**
              * Retrieves the native byte order of the underlying platform.
              * <p> This method is defined so that performance-sensitive Java code can
@@ -31,7 +31,7 @@ declare namespace java {
              *           virtual machine is running
              */
             // @ts-ignore
-            nativeOrder(): java.nio.ByteOrder
+            public static nativeOrder(): java.nio.ByteOrder
             /**
              * Constructs a string describing this object.
              * <p> This method returns the string <tt>"BIG_ENDIAN"</tt> for {@link
@@ -40,7 +40,7 @@ declare namespace java {
              * @return The specified string
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

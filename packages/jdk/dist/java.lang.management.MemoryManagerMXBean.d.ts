@@ -32,13 +32,13 @@ declare namespace java {
                  *          pools.
                  */
                 // @ts-ignore
-                getMemoryPoolNames(): java.lang.String[]
+                getMemoryPoolNames(): string[]
                 /**
                  * Returns the name of this particular memory manager.
                  * @return the name of this memory manager.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns <code>true</code> if this memory manager is still valid in the
                  * virtual machine. That is, the memory manager has not been eliminated from

@@ -39,7 +39,7 @@ declare namespace javax {
                      *           or an empty map if there are none
                      */
                     // @ts-ignore
-                    getElementValues(): java.util.Map<? extends javax.lang.model.element.ExecutableElement, ? extends javax.lang.model.element.AnnotationValue>
+                    getElementValues(): java.util.Map<any, any>
                 }
             }
         }

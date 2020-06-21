@@ -35,13 +35,13 @@ declare namespace org {
                      * {@linkplain #createRequest(URI, HttpMethod) synchronous execution}.
                      */
                     // @ts-ignore
-                    setHttpClient(httpClient: HttpClient): void
+                    public setHttpClient(httpClient: HttpClient): void
                     /**
                      * Return the {@code HttpClient} used for
                      * {@linkplain #createRequest(URI, HttpMethod) synchronous execution}.
                      */
                     // @ts-ignore
-                    getHttpClient(): HttpClient
+                    public getHttpClient(): HttpClient
                     /**
                      * Set the connection timeout for the underlying {@link RequestConfig}.
                      * A timeout value of 0 specifies an infinite timeout.
@@ -56,7 +56,7 @@ declare namespace org {
                      * @see org.apache.http.config.SocketConfig#getSoTimeout
                      */
                     // @ts-ignore
-                    setConnectTimeout(timeout: number /*int*/): void
+                    public setConnectTimeout(timeout: number /*int*/): void
                     /**
                      * Set the timeout in milliseconds used when requesting a connection
                      * from the connection manager using the underlying {@link RequestConfig}.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @see RequestConfig#getConnectionRequestTimeout()
                      */
                     // @ts-ignore
-                    setConnectionRequestTimeout(connectionRequestTimeout: number /*int*/): void
+                    public setConnectionRequestTimeout(connectionRequestTimeout: number /*int*/): void
                     /**
                      * Set the socket read timeout for the underlying {@link RequestConfig}.
                      * A timeout value of 0 specifies an infinite timeout.
@@ -77,7 +77,7 @@ declare namespace org {
                      * @see RequestConfig#getSocketTimeout()
                      */
                     // @ts-ignore
-                    setReadTimeout(timeout: number /*int*/): void
+                    public setReadTimeout(timeout: number /*int*/): void
                     /**
                      * Indicates whether this request factory should buffer the request body internally.
                      * <p>Default is {@code true}. When sending large amounts of data via POST or PUT, it is
@@ -85,9 +85,9 @@ declare namespace org {
                      * @since 4.0
                      */
                     // @ts-ignore
-                    setBufferRequestBody(bufferRequestBody: boolean): void
+                    public setBufferRequestBody(bufferRequestBody: boolean): void
                     // @ts-ignore
-                    createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
+                    public createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
                     /**
                      * Create a default {@link RequestConfig} to use with the given client.
                      * Can return {@code null} to indicate that no custom request config should
@@ -100,7 +100,7 @@ declare namespace org {
                      * @see #mergeRequestConfig(RequestConfig)
                      */
                     // @ts-ignore
-                    createRequestConfig(client: any): RequestConfig
+                    createRequestConfig(client: java.lang.Object | any): RequestConfig
                     /**
                      * Merge the given {@link HttpClient}-level {@link RequestConfig} with
                      * the factory-level {@link RequestConfig}, if necessary.
@@ -141,7 +141,7 @@ declare namespace org {
                      * connection pool, if any.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

@@ -18,7 +18,7 @@ declare namespace org {
                  * @see BeanWrapperImpl
                  */
                 // @ts-ignore
-                forBeanPropertyAccess(target: any): org.springframework.beans.BeanWrapper
+                public static forBeanPropertyAccess(target: java.lang.Object | any): org.springframework.beans.BeanWrapper
                 /**
                  * Obtain a PropertyAccessor for the given target object,
                  * accessing properties in direct field style.
@@ -27,7 +27,7 @@ declare namespace org {
                  * @see DirectFieldAccessor
                  */
                 // @ts-ignore
-                forDirectFieldAccess(target: any): org.springframework.beans.ConfigurablePropertyAccessor
+                public static forDirectFieldAccess(target: java.lang.Object | any): org.springframework.beans.ConfigurablePropertyAccessor
             }
         }
     }

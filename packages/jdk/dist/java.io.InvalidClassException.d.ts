@@ -19,25 +19,25 @@ declare namespace java {
              * @param reason  String describing the reason for the exception.
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
             /**
              * Constructs an InvalidClassException object.
              * @param cname   a String naming the invalid class.
              * @param reason  a String describing the reason for the exception.
              */
             // @ts-ignore
-            constructor(cname: string, reason: string)
+            constructor(cname: java.lang.String | string, reason: java.lang.String | string)
             /**
              * Name of the invalid class.
              * @serial Name of the invalid class.
              */
             // @ts-ignore
-            classname: string
+            classname: java.lang.String | string
             /**
              * Produce the message and include the classname, if present.
              */
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

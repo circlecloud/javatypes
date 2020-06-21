@@ -81,7 +81,7 @@ declare namespace java {
                  * @return the default file system
                  */
                 // @ts-ignore
-                getDefault(): java.nio.file.FileSystem
+                public static getDefault(): java.nio.file.FileSystem
                 /**
                  * Returns a reference to an existing {@code FileSystem}.
                  * <p> This method iterates over the {@link FileSystemProvider#installedProviders()
@@ -115,7 +115,7 @@ declare namespace java {
                  *           permission
                  */
                 // @ts-ignore
-                getFileSystem(uri: java.net.URI): java.nio.file.FileSystem
+                public static getFileSystem(uri: java.net.URI): java.nio.file.FileSystem
                 /**
                  * Constructs a new file system that is identified by a {@link URI}
                  * <p> This method iterates over the {@link FileSystemProvider#installedProviders()
@@ -157,7 +157,7 @@ declare namespace java {
                  *           permission required by the file system provider implementation
                  */
                 // @ts-ignore
-                newFileSystem(uri: java.net.URI, env: java.util.Map<java.lang.String, any>): java.nio.file.FileSystem
+                public static newFileSystem(uri: java.net.URI, env: java.util.Map<java.lang.String | string, any>): java.nio.file.FileSystem
                 /**
                  * Constructs a new file system that is identified by a {@link URI}
                  * <p> This method first attempts to locate an installed provider in exactly
@@ -194,7 +194,7 @@ declare namespace java {
                  *           permission required by the file system provider implementation
                  */
                 // @ts-ignore
-                newFileSystem(uri: java.net.URI, env: java.util.Map<java.lang.String, any>, loader: java.lang.ClassLoader): java.nio.file.FileSystem
+                public static newFileSystem(uri: java.net.URI, env: java.util.Map<java.lang.String | string, any>, loader: java.lang.ClassLoader): java.nio.file.FileSystem
                 /**
                  * Constructs a new {@code FileSystem} to access the contents of a file as a
                  * file system.
@@ -226,7 +226,7 @@ declare namespace java {
                  *           permission
                  */
                 // @ts-ignore
-                newFileSystem(path: java.nio.file.Path, loader: java.lang.ClassLoader): java.nio.file.FileSystem
+                public static newFileSystem(path: java.nio.file.Path, loader: java.lang.ClassLoader): java.nio.file.FileSystem
             }
         }
     }

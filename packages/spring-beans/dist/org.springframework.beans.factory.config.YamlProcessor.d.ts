@@ -11,7 +11,7 @@ declare namespace org {
                      * @since 4.1
                      */
                     // @ts-ignore
-                    class YamlProcessor extends java.lang.Object {
+                    abstract class YamlProcessor extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -41,27 +41,27 @@ declare namespace org {
                          * </pre>
                          */
                         // @ts-ignore
-                        setDocumentMatchers(...matchers: org.springframework.beans.factory.config.YamlProcessor.DocumentMatcher[]): void
+                        public setDocumentMatchers(...matchers: org.springframework.beans.factory.config.YamlProcessor.DocumentMatcher[]): void
                         /**
                          * Flag indicating that a document for which all the
                          * {@link #setDocumentMatchers(DocumentMatcher...) document matchers} abstain will
                          * nevertheless match. Default is {@code true}.
                          */
                         // @ts-ignore
-                        setMatchDefault(matchDefault: boolean): void
+                        public setMatchDefault(matchDefault: boolean): void
                         /**
                          * Method to use for resolving resources. Each resource will be converted to a Map,
                          * so this property is used to decide which map entries to keep in the final output
                          * from this factory. Default is {@link ResolutionMethod#OVERRIDE}.
                          */
                         // @ts-ignore
-                        setResolutionMethod(resolutionMethod: org.springframework.beans.factory.config.YamlProcessor.ResolutionMethod): void
+                        public setResolutionMethod(resolutionMethod: org.springframework.beans.factory.config.YamlProcessor.ResolutionMethod): void
                         /**
                          * Set locations of YAML {@link Resource resources} to be loaded.
                          * @see ResolutionMethod
                          */
                         // @ts-ignore
-                        setResources(...resources: Resource[]): void
+                        public setResources(...resources: Resource[]): void
                         /**
                          * Provide an opportunity for subclasses to process the Yaml parsed from the supplied
                          * resources. Each resource is parsed in turn and the documents inside checked against
@@ -92,7 +92,7 @@ declare namespace org {
                          * @since 4.1.3
                          */
                         // @ts-ignore
-                        getFlattenedMap(source: java.util.Map<java.lang.String, java.lang.Object>): java.util.Map<java.lang.String, java.lang.Object>
+                        getFlattenedMap(source: java.util.Map<java.lang.String | string, java.lang.Object | any>): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     }
                 }
             }

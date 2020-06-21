@@ -16,7 +16,7 @@ declare namespace javax {
                  * @since JAX-WS 2.2
                  */
                 // @ts-ignore
-                class Invoker extends java.lang.Object {
+                abstract class Invoker extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -35,7 +35,7 @@ declare namespace javax {
                      *          by reflection API throws this exception
                      */
                     // @ts-ignore
-                    abstract inject(webServiceContext: javax.xml.ws.WebServiceContext): void
+                    public abstract inject(webServiceContext: javax.xml.ws.WebServiceContext): void
                     /**
                      * JAX-WS runtime calls this method to do the actual web service
                      * invocation on endpoint instance. The injected
@@ -53,7 +53,7 @@ declare namespace javax {
                      * @see Method#invoke
                      */
                     // @ts-ignore
-                    abstract invoke(m: java.lang.reflect.Method, ...args: any[]): java.lang.Object
+                    public abstract invoke(m: java.lang.reflect.Method, ...args: java.lang.Object[] | any[]): any
                 }
             }
         }

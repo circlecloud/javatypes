@@ -71,12 +71,12 @@ declare namespace javax {
                  * Constant value identifying the RespectBindingFeature
                  */
                 // @ts-ignore
-                readonly ID: string
+                public static readonly ID: java.lang.String | string
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getID(): java.lang.String
+                public getID(): string
             }
         }
     }

@@ -33,7 +33,7 @@ declare namespace org {
                  * created through regular instantiation via a default constructor.
                  */
                 // @ts-ignore
-                readonly IGNORE_OBJENESIS_PROPERTY_NAME: string
+                public static readonly IGNORE_OBJENESIS_PROPERTY_NAME: java.lang.String | string
                 /**
                  * Return whether this Objenesis instance is worth trying for instance creation,
                  * i.e. whether it hasn't been used yet or is known to work.
@@ -42,7 +42,7 @@ declare namespace org {
                  * been set to "true", this method returns {@code false}.
                  */
                 // @ts-ignore
-                isWorthTrying(): boolean
+                public isWorthTrying(): boolean
                 /**
                  * Create a new instance of the given class via Objenesis.
                  * @param clazz the class to create an instance of
@@ -53,13 +53,13 @@ declare namespace org {
                  * @throws ObjenesisException if instance creation failed
                  */
                 // @ts-ignore
-                newInstance<T>(clazz: java.lang.Class<T>, useCache: boolean): T
+                public newInstance<T>(clazz: java.lang.Class<T>, useCache: boolean): T
                 // @ts-ignore
-                newInstance<T>(clazz: java.lang.Class<T>): T
+                public newInstance<T>(clazz: java.lang.Class<T>): T
                 // @ts-ignore
-                getInstantiatorOf<T>(clazz: java.lang.Class<T>): <any>
+                public getInstantiatorOf<T>(clazz: java.lang.Class<T>): object
                 // @ts-ignore
-                newInstantiatorOf<T>(clazz: java.lang.Class<T>): <any>
+                newInstantiatorOf<T>(clazz: java.lang.Class<T>): object
             }
         }
     }

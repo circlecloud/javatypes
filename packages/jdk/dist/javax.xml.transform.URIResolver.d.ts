@@ -19,7 +19,7 @@ declare namespace javax {
                  *  resolve the URI.
                  */
                 // @ts-ignore
-                resolve(href: string, base: string): javax.xml.transform.Source
+                resolve(href: java.lang.String | string, base: java.lang.String | string): javax.xml.transform.Source
             }
         }
     }

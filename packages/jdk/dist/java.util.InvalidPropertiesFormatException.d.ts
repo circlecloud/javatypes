@@ -21,7 +21,7 @@ declare namespace java {
              *          {#link Throwable#getCause()} method).
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs an InvalidPropertiesFormatException with the specified
              * detail message.
@@ -29,7 +29,7 @@ declare namespace java {
              *           later retrieval by the {#link Throwable#getMessage()} method.
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
         }
     }
 }

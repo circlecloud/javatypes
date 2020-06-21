@@ -31,7 +31,7 @@ declare namespace org {
                              * @see #handleError
                              */
                             // @ts-ignore
-                            
+                            readonly RESULT_NONE: java.lang.Object | any
                             /**
                              * Constant indicating that the response has been handled by this interceptor
                              * without a result and that no further interceptors are to be invoked.
@@ -39,7 +39,7 @@ declare namespace org {
                              * @see #handleError
                              */
                             // @ts-ignore
-                            
+                            readonly RESPONSE_HANDLED: java.lang.Object | any
                             /**
                              * Invoked <em>before</em> the start of concurrent handling in the original
                              * thread in which the {@code Callable} is submitted for concurrent handling.
@@ -80,7 +80,7 @@ declare namespace org {
                              * @throws Exception in case of errors
                              */
                             // @ts-ignore
-                            postProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, concurrentResult: any): void
+                            postProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, concurrentResult: java.lang.Object | any): void
                             /**
                              * Invoked from a container thread when the async request times out before
                              * the {@code Callable} task completes. Implementations may return a value,
@@ -95,7 +95,7 @@ declare namespace org {
                              * @throws Exception in case of errors
                              */
                             // @ts-ignore
-                            handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): java.lang.Object
+                            handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): any
                             /**
                              * Invoked from a container thread when an error occurred while processing
                              * the async request before the {@code Callable} task completes.
@@ -112,7 +112,7 @@ declare namespace org {
                              * @since 5.0
                              */
                             // @ts-ignore
-                            handleError<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, t: Error): java.lang.Object
+                            handleError<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, t: java.lang.Throwable | Error): any
                             /**
                              * Invoked from a container thread when async processing completes for any
                              * reason including timeout or network error.

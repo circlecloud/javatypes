@@ -22,27 +22,27 @@ declare namespace org {
                 // @ts-ignore
                 constructor(result: org.bukkit.inventory.ItemStack, uses: number /*int*/, maxUses: number /*int*/, experienceReward: boolean, villagerExperience: number /*int*/, priceMultiplier: number /*float*/)
                 // @ts-ignore
-                getResult(): org.bukkit.inventory.ItemStack
+                public getResult(): org.bukkit.inventory.ItemStack
                 // @ts-ignore
-                addIngredient(item: org.bukkit.inventory.ItemStack): void
+                public addIngredient(item: org.bukkit.inventory.ItemStack): void
                 // @ts-ignore
-                removeIngredient(index: number /*int*/): void
+                public removeIngredient(index: number /*int*/): void
                 // @ts-ignore
-                setIngredients(ingredients: Array<org.bukkit.inventory.ItemStack>): void
+                public setIngredients(ingredients: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>): void
                 // @ts-ignore
-                getIngredients(): java.util.List<org.bukkit.inventory.ItemStack>
+                public getIngredients(): Array<org.bukkit.inventory.ItemStack>
                 /**
                  * Get the number of times this trade has been used.
                  * @return the number of uses
                  */
                 // @ts-ignore
-                getUses(): int
+                public getUses(): number /*int*/
                 /**
                  * Set the number of times this trade has been used.
                  * @param uses the number of uses
                  */
                 // @ts-ignore
-                setUses(uses: number /*int*/): void
+                public setUses(uses: number /*int*/): void
                 /**
                  * Get the maximum number of uses this trade has.
                  * <br>
@@ -51,51 +51,51 @@ declare namespace org {
                  * @return the maximum number of uses
                  */
                 // @ts-ignore
-                getMaxUses(): int
+                public getMaxUses(): number /*int*/
                 /**
                  * Set the maximum number of uses this trade has.
                  * @param maxUses the maximum number of time this trade can be used
                  */
                 // @ts-ignore
-                setMaxUses(maxUses: number /*int*/): void
+                public setMaxUses(maxUses: number /*int*/): void
                 /**
                  * Whether to reward experience to the player for the trade.
                  * @return whether to reward experience to the player for completing this
                  *  trade
                  */
                 // @ts-ignore
-                hasExperienceReward(): boolean
+                public hasExperienceReward(): boolean
                 /**
                  * Set whether to reward experience to the player for the trade.
                  * @param flag whether to reward experience to the player for completing
                  *  this trade
                  */
                 // @ts-ignore
-                setExperienceReward(flag: boolean): void
+                public setExperienceReward(flag: boolean): void
                 /**
                  * Gets the amount of experience the villager earns from this trade.
                  * @return villager experience
                  */
                 // @ts-ignore
-                getVillagerExperience(): int
+                public getVillagerExperience(): number /*int*/
                 /**
                  * Sets the amount of experience the villager earns from this trade.
                  * @param villagerExperience new experience amount
                  */
                 // @ts-ignore
-                setVillagerExperience(villagerExperience: number /*int*/): void
+                public setVillagerExperience(villagerExperience: number /*int*/): void
                 /**
                  * Gets the additive price multiplier for the cost of this trade.
                  * @return price multiplier
                  */
                 // @ts-ignore
-                getPriceMultiplier(): float
+                public getPriceMultiplier(): number /*float*/
                 /**
                  * Sets the additive price multiplier for the cost of this trade.
                  * @param priceMultiplier new price multiplier
                  */
                 // @ts-ignore
-                setPriceMultiplier(priceMultiplier: number /*float*/): void
+                public setPriceMultiplier(priceMultiplier: number /*float*/): void
             }
         }
     }

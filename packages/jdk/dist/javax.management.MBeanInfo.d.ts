@@ -75,7 +75,7 @@ declare namespace javax {
              *  may be null with the same effect as a zero-length array.
              */
             // @ts-ignore
-            constructor(className: string, description: string, attributes: javax.management.MBeanAttributeInfo[], constructors: javax.management.MBeanConstructorInfo[], operations: javax.management.MBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[])
+            constructor(className: java.lang.String | string, description: java.lang.String | string, attributes: javax.management.MBeanAttributeInfo[], constructors: javax.management.MBeanConstructorInfo[], operations: javax.management.MBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[])
             /**
              * Constructs an <CODE>MBeanInfo</CODE>.
              * @param className The name of the Java class of the MBean described
@@ -102,7 +102,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(className: string, description: string, attributes: javax.management.MBeanAttributeInfo[], constructors: javax.management.MBeanConstructorInfo[], operations: javax.management.MBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[], descriptor: javax.management.Descriptor)
+            constructor(className: java.lang.String | string, description: java.lang.String | string, attributes: javax.management.MBeanAttributeInfo[], constructors: javax.management.MBeanConstructorInfo[], operations: javax.management.MBeanOperationInfo[], notifications: javax.management.MBeanNotificationInfo[], descriptor: javax.management.Descriptor)
             /**
              * <p>Returns a shallow clone of this instance.
              * The clone is obtained by simply calling <tt>super.clone()</tt>,
@@ -113,20 +113,20 @@ declare namespace javax {
              * interest to subclasses.</p>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the name of the Java class of the MBean described by
              * this <CODE>MBeanInfo</CODE>.
              * @return the class name.
              */
             // @ts-ignore
-            getClassName(): java.lang.String
+            public getClassName(): string
             /**
              * Returns a human readable description of the MBean.
              * @return the description.
              */
             // @ts-ignore
-            getDescription(): java.lang.String
+            public getDescription(): string
             /**
              * Returns the list of attributes exposed for management.
              * Each attribute is described by an <CODE>MBeanAttributeInfo</CODE> object.
@@ -137,7 +137,7 @@ declare namespace javax {
              * @return An array of <CODE>MBeanAttributeInfo</CODE> objects.
              */
             // @ts-ignore
-            getAttributes(): javax.management.MBeanAttributeInfo[]
+            public getAttributes(): javax.management.MBeanAttributeInfo[]
             /**
              * Returns the list of operations  of the MBean.
              * Each operation is described by an <CODE>MBeanOperationInfo</CODE> object.
@@ -148,7 +148,7 @@ declare namespace javax {
              * @return An array of <CODE>MBeanOperationInfo</CODE> objects.
              */
             // @ts-ignore
-            getOperations(): javax.management.MBeanOperationInfo[]
+            public getOperations(): javax.management.MBeanOperationInfo[]
             /**
              * <p>Returns the list of the public constructors of the MBean.
              * Each constructor is described by an
@@ -166,7 +166,7 @@ declare namespace javax {
              * @return An array of <CODE>MBeanConstructorInfo</CODE> objects.
              */
             // @ts-ignore
-            getConstructors(): javax.management.MBeanConstructorInfo[]
+            public getConstructors(): javax.management.MBeanConstructorInfo[]
             /**
              * Returns the list of the notifications emitted by the MBean.
              * Each notification is described by an <CODE>MBeanNotificationInfo</CODE> object.
@@ -177,7 +177,7 @@ declare namespace javax {
              * @return An array of <CODE>MBeanNotificationInfo</CODE> objects.
              */
             // @ts-ignore
-            getNotifications(): javax.management.MBeanNotificationInfo[]
+            public getNotifications(): javax.management.MBeanNotificationInfo[]
             /**
              * Get the descriptor of this MBeanInfo.  Changing the returned value
              * will have no affect on the original descriptor.
@@ -185,9 +185,9 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDescriptor(): javax.management.Descriptor
+            public getDescriptor(): javax.management.Descriptor
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * <p>Compare this MBeanInfo to another.  Two MBeanInfo objects
              * are equal if and only if they return equal values for {@link
@@ -205,9 +205,9 @@ declare namespace javax {
              *  to this one according to the rules above.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

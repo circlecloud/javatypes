@@ -26,7 +26,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            class FloatControl extends javax.sound.sampled.Control {
+            abstract class FloatControl extends javax.sound.sampled.Control {
                 /**
                  * Constructs a new float control object with the given parameters
                  * @param type the kind of control represented by this float control object
@@ -47,7 +47,7 @@ declare namespace javax {
                  *      within the allowable range
                  */
                 // @ts-ignore
-                constructor(type: javax.sound.sampled.FloatControl.Type, minimum: number /*float*/, maximum: number /*float*/, precision: number /*float*/, updatePeriod: number /*int*/, initialValue: number /*float*/, units: string, minLabel: string, midLabel: string, maxLabel: string)
+                constructor(type: javax.sound.sampled.FloatControl.Type, minimum: number /*float*/, maximum: number /*float*/, precision: number /*float*/, updatePeriod: number /*int*/, initialValue: number /*float*/, units: java.lang.String | string, minLabel: java.lang.String | string, midLabel: java.lang.String | string, maxLabel: java.lang.String | string)
                 /**
                  * Constructs a new float control object with the given parameters.
                  * The labels for the minimum, maximum, and mid-point values are set
@@ -67,7 +67,7 @@ declare namespace javax {
                  *      within the allowable range
                  */
                 // @ts-ignore
-                constructor(type: javax.sound.sampled.FloatControl.Type, minimum: number /*float*/, maximum: number /*float*/, precision: number /*float*/, updatePeriod: number /*int*/, initialValue: number /*float*/, units: string)
+                constructor(type: javax.sound.sampled.FloatControl.Type, minimum: number /*float*/, maximum: number /*float*/, precision: number /*float*/, updatePeriod: number /*int*/, initialValue: number /*float*/, units: java.lang.String | string)
                 /**
                  * Sets the current value for the control.  The default implementation
                  * simply sets the value as indicated.  If the value indicated is greater
@@ -80,50 +80,50 @@ declare namespace javax {
                  *  within the allowable range
                  */
                 // @ts-ignore
-                setValue(newValue: number /*float*/): void
+                public setValue(newValue: number /*float*/): void
                 /**
                  * Obtains this control's current value.
                  * @return the current value
                  */
                 // @ts-ignore
-                getValue(): float
+                public getValue(): number /*float*/
                 /**
                  * Obtains the maximum value permitted.
                  * @return the maximum allowable value
                  */
                 // @ts-ignore
-                getMaximum(): float
+                public getMaximum(): number /*float*/
                 /**
                  * Obtains the minimum value permitted.
                  * @return the minimum allowable value
                  */
                 // @ts-ignore
-                getMinimum(): float
+                public getMinimum(): number /*float*/
                 /**
                  * Obtains the label for the units in which the control's values are expressed,
                  * such as "dB" or "frames per second."
                  * @return the units label, or a zero-length string if no label
                  */
                 // @ts-ignore
-                getUnits(): java.lang.String
+                public getUnits(): string
                 /**
                  * Obtains the label for the minimum value, such as "Left" or "Off."
                  * @return the minimum value label, or a zero-length string if no label      * has been set
                  */
                 // @ts-ignore
-                getMinLabel(): java.lang.String
+                public getMinLabel(): string
                 /**
                  * Obtains the label for the mid-point value, such as "Center" or "Default."
                  * @return the mid-point value label, or a zero-length string if no label    * has been set
                  */
                 // @ts-ignore
-                getMidLabel(): java.lang.String
+                public getMidLabel(): string
                 /**
                  * Obtains the label for the maximum value, such as "Right" or "Full."
                  * @return the maximum value label, or a zero-length string if no label      * has been set
                  */
                 // @ts-ignore
-                getMaxLabel(): java.lang.String
+                public getMaxLabel(): string
                 /**
                  * Obtains the resolution or granularity of the control, in the units
                  * that the control measures.
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @return the control's precision
                  */
                 // @ts-ignore
-                getPrecision(): float
+                public getPrecision(): number /*float*/
                 /**
                  * Obtains the smallest time interval, in microseconds, over which the control's value can
                  * change during a shift.  The update period is the inverse of the frequency with which
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @see #shift
                  */
                 // @ts-ignore
-                getUpdatePeriod(): int
+                public getUpdatePeriod(): number /*int*/
                 /**
                  * Changes the control value from the initial value to the final
                  * value linearly over the specified time period, specified in microseconds.
@@ -159,13 +159,13 @@ declare namespace javax {
                  * @see #getUpdatePeriod
                  */
                 // @ts-ignore
-                shift(from: number /*float*/, to: number /*float*/, microseconds: number /*int*/): void
+                public shift(from: number /*float*/, to: number /*float*/, microseconds: number /*int*/): void
                 /**
                  * Provides a string representation of the control
                  * @return a string description
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

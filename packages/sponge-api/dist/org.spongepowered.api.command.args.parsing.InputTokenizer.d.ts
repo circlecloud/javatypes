@@ -42,7 +42,7 @@ declare namespace org {
                              * @throws ArgumentParseException if an invalid input is provided
                              */
                             // @ts-ignore
-                            tokenize(arguments: string, lenient: boolean): java.util.List<org.spongepowered.api.command.args.parsing.SingleArg>
+                            tokenize(arguments: java.lang.String | string, lenient: boolean): Array<org.spongepowered.api.command.args.parsing.SingleArg>
                         }
                     }
                 }

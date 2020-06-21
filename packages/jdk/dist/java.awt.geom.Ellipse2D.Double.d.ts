@@ -36,7 +36,7 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x: number /*double*/
+                    public x: number /*double*/
                     /**
                      * The Y coordinate of the upper-left corner of the
                      * framing rectangle of this {@code Ellipse2D}.
@@ -44,63 +44,63 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    y: number /*double*/
+                    public y: number /*double*/
                     /**
                      * The overall width of this <code>Ellipse2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    width: number /*double*/
+                    public width: number /*double*/
                     /**
                      * The overall height of the <code>Ellipse2D</code>.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    height: number /*double*/
+                    public height: number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX(): double
+                    public getX(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY(): double
+                    public getY(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getWidth(): double
+                    public getWidth(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getHeight(): double
+                    public getHeight(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    isEmpty(): boolean
+                    public isEmpty(): boolean
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
+                    public setFrame(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                 }
             }
         }

@@ -31,7 +31,7 @@ declare namespace javax {
                  * is 2.16.840.1.113730.3.4.2.
                  */
                 // @ts-ignore
-                readonly OID: string
+                public static readonly OID: java.lang.String | string
             }
         }
     }

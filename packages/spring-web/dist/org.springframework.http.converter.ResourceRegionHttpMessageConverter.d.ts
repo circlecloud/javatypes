@@ -10,25 +10,25 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                class ResourceRegionHttpMessageConverter extends org.springframework.http.converter.AbstractGenericHttpMessageConverter<java.lang.Object> {
+                class ResourceRegionHttpMessageConverter extends org.springframework.http.converter.AbstractGenericHttpMessageConverter<java.lang.Object | any> {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getDefaultContentType(object: any): org.springframework.http.MediaType
+                    getDefaultContentType(object: java.lang.Object | any): org.springframework.http.MediaType
                     // @ts-ignore
-                    canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    canRead(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    read(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.Object
+                    public read(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): any
                     // @ts-ignore
                     readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): ResourceRegion
                     // @ts-ignore
-                    canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    canWrite(type: java.lang.reflect.Type, clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(type: java.lang.reflect.Type, clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    writeInternal(object: any, type: java.lang.reflect.Type, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    writeInternal(object: java.lang.Object | any, type: java.lang.reflect.Type, outputMessage: org.springframework.http.HttpOutputMessage): void
                     // @ts-ignore
                     writeResourceRegion(region: ResourceRegion, outputMessage: org.springframework.http.HttpOutputMessage): void
                 }

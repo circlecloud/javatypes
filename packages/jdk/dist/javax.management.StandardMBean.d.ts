@@ -167,36 +167,36 @@ declare namespace javax {
              * @see #getImplementation
              */
             // @ts-ignore
-            setImplementation(implementation: any): void
+            public setImplementation(implementation: java.lang.Object | any): void
             /**
              * Get the implementation of this Standard MBean (or MXBean).
              * @return The implementation of this Standard MBean (or MXBean).
              * @see #setImplementation
              */
             // @ts-ignore
-            getImplementation(): java.lang.Object
+            public getImplementation(): any
             /**
              * Get the Management Interface of this Standard MBean (or MXBean).
              * @return The management interface of this Standard MBean (or MXBean).
              */
             // @ts-ignore
-            getMBeanInterface(): java.lang.Class<?>
+            public getMBeanInterface(): java.lang.Class<any>
             /**
              * Get the class of the implementation of this Standard MBean (or MXBean).
              * @return The class of the implementation of this Standard MBean (or MXBean).
              */
             // @ts-ignore
-            getImplementationClass(): java.lang.Class<?>
+            public getImplementationClass(): java.lang.Class<any>
             // @ts-ignore
-            getAttribute(attribute: string): java.lang.Object
+            public getAttribute(attribute: java.lang.String | string): any
             // @ts-ignore
-            setAttribute(attribute: javax.management.Attribute): void
+            public setAttribute(attribute: javax.management.Attribute): void
             // @ts-ignore
-            getAttributes(attributes: string[]): javax.management.AttributeList
+            public getAttributes(attributes: java.lang.String[] | string[]): javax.management.AttributeList
             // @ts-ignore
-            setAttributes(attributes: javax.management.AttributeList): javax.management.AttributeList
+            public setAttributes(attributes: javax.management.AttributeList): javax.management.AttributeList
             // @ts-ignore
-            invoke(actionName: string, params: any[], signature: string[]): java.lang.Object
+            public invoke(actionName: java.lang.String | string, params: java.lang.Object[] | any[], signature: java.lang.String[] | string[]): any
             /**
              * Get the {@link MBeanInfo} for this MBean.
              * <p>
@@ -220,7 +220,7 @@ declare namespace javax {
              *          newly built MBeanInfo if none was cached.
              */
             // @ts-ignore
-            getMBeanInfo(): javax.management.MBeanInfo
+            public getMBeanInfo(): javax.management.MBeanInfo
             /**
              * Customization hook:
              * Get the className that will be used in the MBeanInfo returned by
@@ -233,7 +233,7 @@ declare namespace javax {
              * @return the class name for the new MBeanInfo.
              */
             // @ts-ignore
-            getClassName(info: javax.management.MBeanInfo): java.lang.String
+            getClassName(info: javax.management.MBeanInfo): string
             /**
              * Customization hook:
              * Get the description that will be used in the MBeanInfo returned by
@@ -246,7 +246,7 @@ declare namespace javax {
              * @return the description for the new MBeanInfo.
              */
             // @ts-ignore
-            getDescription(info: javax.management.MBeanInfo): java.lang.String
+            getDescription(info: javax.management.MBeanInfo): string
             /**
              * <p>Customization hook:
              * Get the description that will be used in the MBeanFeatureInfo
@@ -263,7 +263,7 @@ declare namespace javax {
              * @return the description for the given MBeanFeatureInfo.
              */
             // @ts-ignore
-            getDescription(info: javax.management.MBeanFeatureInfo): java.lang.String
+            getDescription(info: javax.management.MBeanFeatureInfo): string
             /**
              * Customization hook:
              * Get the description that will be used in the MBeanAttributeInfo
@@ -276,7 +276,7 @@ declare namespace javax {
              * @return the description for the given MBeanAttributeInfo.
              */
             // @ts-ignore
-            getDescription(info: javax.management.MBeanAttributeInfo): java.lang.String
+            getDescription(info: javax.management.MBeanAttributeInfo): string
             /**
              * Customization hook:
              * Get the description that will be used in the MBeanConstructorInfo
@@ -291,7 +291,7 @@ declare namespace javax {
              * @return the description for the given MBeanConstructorInfo.
              */
             // @ts-ignore
-            getDescription(info: javax.management.MBeanConstructorInfo): java.lang.String
+            getDescription(info: javax.management.MBeanConstructorInfo): string
             /**
              * Customization hook:
              * Get the description that will be used for the  <var>sequence</var>
@@ -308,7 +308,7 @@ declare namespace javax {
              * @return the description for the given MBeanParameterInfo.
              */
             // @ts-ignore
-            getDescription(ctor: javax.management.MBeanConstructorInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): java.lang.String
+            getDescription(ctor: javax.management.MBeanConstructorInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): string
             /**
              * Customization hook:
              * Get the name that will be used for the <var>sequence</var>
@@ -325,7 +325,7 @@ declare namespace javax {
              * @return the name for the given MBeanParameterInfo.
              */
             // @ts-ignore
-            getParameterName(ctor: javax.management.MBeanConstructorInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): java.lang.String
+            getParameterName(ctor: javax.management.MBeanConstructorInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): string
             /**
              * Customization hook:
              * Get the description that will be used in the MBeanOperationInfo
@@ -339,7 +339,7 @@ declare namespace javax {
              * @return the description for the given MBeanOperationInfo.
              */
             // @ts-ignore
-            getDescription(info: javax.management.MBeanOperationInfo): java.lang.String
+            getDescription(info: javax.management.MBeanOperationInfo): string
             /**
              * Customization hook:
              * Get the <var>impact</var> flag of the operation that will be used in
@@ -352,7 +352,7 @@ declare namespace javax {
              * @return the impact flag for the given MBeanOperationInfo.
              */
             // @ts-ignore
-            getImpact(info: javax.management.MBeanOperationInfo): int
+            getImpact(info: javax.management.MBeanOperationInfo): number /*int*/
             /**
              * Customization hook:
              * Get the name that will be used for the <var>sequence</var>
@@ -369,7 +369,7 @@ declare namespace javax {
              * @return the name to use for the given MBeanParameterInfo.
              */
             // @ts-ignore
-            getParameterName(op: javax.management.MBeanOperationInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): java.lang.String
+            getParameterName(op: javax.management.MBeanOperationInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): string
             /**
              * Customization hook:
              * Get the description that will be used for the  <var>sequence</var>
@@ -386,7 +386,7 @@ declare namespace javax {
              * @return the description for the given MBeanParameterInfo.
              */
             // @ts-ignore
-            getDescription(op: javax.management.MBeanOperationInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): java.lang.String
+            getDescription(op: javax.management.MBeanOperationInfo, param: javax.management.MBeanParameterInfo, sequence: number /*int*/): string
             /**
              * Customization hook:
              * Get the MBeanConstructorInfo[] that will be used in the MBeanInfo
@@ -409,7 +409,7 @@ declare namespace javax {
              * @return the MBeanConstructorInfo[] for the new MBeanInfo.
              */
             // @ts-ignore
-            getConstructors(ctors: javax.management.MBeanConstructorInfo[], impl: any): javax.management.MBeanConstructorInfo[]
+            getConstructors(ctors: javax.management.MBeanConstructorInfo[], impl: java.lang.Object | any): javax.management.MBeanConstructorInfo[]
             /**
              * Customization hook:
              * Return the MBeanInfo cached for this object.
@@ -474,7 +474,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+            public preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
             /**
              * <p>Allows the MBean to perform any operations needed after having been
              * registered in the MBean server or after the registration has failed.</p>
@@ -491,7 +491,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            postRegister(registrationDone: java.lang.Boolean): void
+            public postRegister(registrationDone: java.lang.Boolean): void
             /**
              * <p>Allows the MBean to perform any operations it needs before
              * being unregistered by the MBean server.</p>
@@ -504,7 +504,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            preDeregister(): void
+            public preDeregister(): void
             /**
              * <p>Allows the MBean to perform any operations needed after having been
              * unregistered in the MBean server.</p>
@@ -518,7 +518,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            postDeregister(): void
+            public postDeregister(): void
         }
     }
 }

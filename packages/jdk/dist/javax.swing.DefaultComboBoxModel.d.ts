@@ -32,13 +32,13 @@ declare namespace javax {
              * @param anObject The combo box value or null for no selection.
              */
             // @ts-ignore
-            setSelectedItem(anObject: any): void
+            public setSelectedItem(anObject: java.lang.Object | any): void
             // @ts-ignore
-            getSelectedItem(): java.lang.Object
+            public getSelectedItem(): any
             // @ts-ignore
-            getSize(): int
+            public getSize(): number /*int*/
             // @ts-ignore
-            getElementAt(index: number /*int*/): E
+            public getElementAt(index: number /*int*/): E
             /**
              * Returns the index-position of the specified object in the list.
              * @param anObject
@@ -46,20 +46,20 @@ declare namespace javax {
              *          the first position
              */
             // @ts-ignore
-            getIndexOf(anObject: any): int
+            public getIndexOf(anObject: java.lang.Object | any): number /*int*/
             // @ts-ignore
-            addElement(anObject: E): void
+            public addElement(anObject: E): void
             // @ts-ignore
-            insertElementAt(anObject: E, index: number /*int*/): void
+            public insertElementAt(anObject: E, index: number /*int*/): void
             // @ts-ignore
-            removeElementAt(index: number /*int*/): void
+            public removeElementAt(index: number /*int*/): void
             // @ts-ignore
-            removeElement(anObject: any): void
+            public removeElement(anObject: java.lang.Object | any): void
             /**
              * Empties the list.
              */
             // @ts-ignore
-            removeAllElements(): void
+            public removeAllElements(): void
         }
     }
 }

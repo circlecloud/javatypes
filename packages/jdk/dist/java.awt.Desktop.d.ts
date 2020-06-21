@@ -47,7 +47,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            getDesktop(): java.awt.Desktop
+            public static getDesktop(): java.awt.Desktop
             /**
              * Tests whether this class is supported on the current platform.
              * If it's supported, use {@link #getDesktop()} to retrieve an
@@ -57,7 +57,7 @@ declare namespace java {
              * @see #getDesktop()
              */
             // @ts-ignore
-            isDesktopSupported(): boolean
+            public static isDesktopSupported(): boolean
             /**
              * Tests whether an action is supported on the current platform.
              * <p>Even when the platform supports an action, a file or URI may
@@ -73,7 +73,7 @@ declare namespace java {
              * @see Desktop.Action
              */
             // @ts-ignore
-            isSupported(action: java.awt.Desktop.Action): boolean
+            public isSupported(action: java.awt.Desktop.Action): boolean
             /**
              * Launches the associated application to open the file.
              * <p> If the specified file is a directory, the file manager of
@@ -95,7 +95,7 @@ declare namespace java {
              * @see java.awt.AWTPermission
              */
             // @ts-ignore
-            open(file: java.io.File): void
+            public open(file: java.io.File): void
             /**
              * Launches the associated editor application and opens a file for
              * editing.
@@ -118,7 +118,7 @@ declare namespace java {
              * @see java.awt.AWTPermission
              */
             // @ts-ignore
-            edit(file: java.io.File): void
+            public edit(file: java.io.File): void
             /**
              * Prints a file with the native desktop printing facility, using
              * the associated application's print command.
@@ -139,7 +139,7 @@ declare namespace java {
              *  allowed to create a subprocess
              */
             // @ts-ignore
-            print(file: java.io.File): void
+            public print(file: java.io.File): void
             /**
              * Launches the default browser to display a {@code URI}.
              * If the default browser is not able to handle the specified
@@ -174,7 +174,7 @@ declare namespace java {
              * @see java.applet.AppletContext
              */
             // @ts-ignore
-            browse(uri: java.net.URI): void
+            public browse(uri: java.net.URI): void
             /**
              * Launches the mail composing window of the user default mail
              * client.
@@ -190,7 +190,7 @@ declare namespace java {
              * @see java.awt.AWTPermission
              */
             // @ts-ignore
-            mail(): void
+            public mail(): void
             /**
              * Launches the mail composing window of the user default mail
              * client, filling the message fields specified by a {@code
@@ -219,7 +219,7 @@ declare namespace java {
              * @see java.awt.AWTPermission
              */
             // @ts-ignore
-            mail(mailtoURI: java.net.URI): void
+            public mail(mailtoURI: java.net.URI): void
         }
     }
 }

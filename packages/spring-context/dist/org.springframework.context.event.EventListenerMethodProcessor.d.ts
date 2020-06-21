@@ -19,11 +19,11 @@ declare namespace org {
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
+                    public setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
                     // @ts-ignore
-                    postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
+                    public postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
                     // @ts-ignore
-                    afterSingletonsInstantiated(): void
+                    public afterSingletonsInstantiated(): void
                 }
             }
         }

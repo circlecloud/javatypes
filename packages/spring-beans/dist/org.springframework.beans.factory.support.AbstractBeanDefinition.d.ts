@@ -19,7 +19,7 @@ declare namespace org {
                      * @see ChildBeanDefinition
                      */
                     // @ts-ignore
-                    class AbstractBeanDefinition extends org.springframework.beans.BeanMetadataAttributeAccessor implements org.springframework.beans.factory.config.BeanDefinition, java.lang.Cloneable {
+                    abstract class AbstractBeanDefinition extends org.springframework.beans.BeanMetadataAttributeAccessor implements org.springframework.beans.factory.config.BeanDefinition, java.lang.Cloneable {
                         /**
                          * Create a new AbstractBeanDefinition with default settings.
                          */
@@ -43,31 +43,31 @@ declare namespace org {
                          * status unless overridden from a parent bean definition (if applicable).
                          */
                         // @ts-ignore
-                        readonly SCOPE_DEFAULT: string
+                        public static readonly SCOPE_DEFAULT: java.lang.String | string
                         /**
                          * Constant that indicates no external autowiring at all.
                          * @see #setAutowireMode
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_NO: number /*int*/
+                        public static readonly AUTOWIRE_NO: number /*int*/
                         /**
                          * Constant that indicates autowiring bean properties by name.
                          * @see #setAutowireMode
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_BY_NAME: number /*int*/
+                        public static readonly AUTOWIRE_BY_NAME: number /*int*/
                         /**
                          * Constant that indicates autowiring bean properties by type.
                          * @see #setAutowireMode
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_BY_TYPE: number /*int*/
+                        public static readonly AUTOWIRE_BY_TYPE: number /*int*/
                         /**
                          * Constant that indicates autowiring a constructor.
                          * @see #setAutowireMode
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_CONSTRUCTOR: number /*int*/
+                        public static readonly AUTOWIRE_CONSTRUCTOR: number /*int*/
                         /**
                          * Constant that indicates determining an appropriate autowire strategy
                          * through introspection of the bean class.
@@ -76,33 +76,33 @@ declare namespace org {
                          *  use annotation-based autowiring for clearer demarcation of autowiring needs.
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_AUTODETECT: number /*int*/
+                        public static readonly AUTOWIRE_AUTODETECT: number /*int*/
                         /**
                          * Constant that indicates no dependency check at all.
                          * @see #setDependencyCheck
                          */
                         // @ts-ignore
-                        readonly DEPENDENCY_CHECK_NONE: number /*int*/
+                        public static readonly DEPENDENCY_CHECK_NONE: number /*int*/
                         /**
                          * Constant that indicates dependency checking for object references.
                          * @see #setDependencyCheck
                          */
                         // @ts-ignore
-                        readonly DEPENDENCY_CHECK_OBJECTS: number /*int*/
+                        public static readonly DEPENDENCY_CHECK_OBJECTS: number /*int*/
                         /**
                          * Constant that indicates dependency checking for "simple" properties.
                          * @see #setDependencyCheck
                          * @see org.springframework.beans.BeanUtils#isSimpleProperty
                          */
                         // @ts-ignore
-                        readonly DEPENDENCY_CHECK_SIMPLE: number /*int*/
+                        public static readonly DEPENDENCY_CHECK_SIMPLE: number /*int*/
                         /**
                          * Constant that indicates dependency checking for all properties
                          * (object references as well as "simple" properties).
                          * @see #setDependencyCheck
                          */
                         // @ts-ignore
-                        readonly DEPENDENCY_CHECK_ALL: number /*int*/
+                        public static readonly DEPENDENCY_CHECK_ALL: number /*int*/
                         /**
                          * Constant that indicates the container should attempt to infer the
                          * {@link #setDestroyMethodName destroy method name} for a bean as opposed to
@@ -114,7 +114,7 @@ declare namespace org {
                          * are "close" and "shutdown", if present on the specific bean class.
                          */
                         // @ts-ignore
-                        readonly INFER_METHOD: string
+                        public static readonly INFER_METHOD: java.lang.String | string
                         /**
                          * Override settings in this bean definition (presumably a copied parent
                          * from a parent-child inheritance relationship) from the given bean
@@ -132,30 +132,30 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        overrideFrom(other: org.springframework.beans.factory.config.BeanDefinition): void
+                        public overrideFrom(other: org.springframework.beans.factory.config.BeanDefinition): void
                         /**
                          * Apply the provided default values to this bean.
                          * @param defaults the default settings to apply
                          * @since 2.5
                          */
                         // @ts-ignore
-                        applyDefaults(defaults: org.springframework.beans.factory.support.BeanDefinitionDefaults): void
+                        public applyDefaults(defaults: org.springframework.beans.factory.support.BeanDefinitionDefaults): void
                         /**
                          * Specify the bean class name of this bean definition.
                          */
                         // @ts-ignore
-                        setBeanClassName(beanClassName: string): void
+                        public setBeanClassName(beanClassName: java.lang.String | string): void
                         /**
                          * Return the current bean class name of this bean definition.
                          */
                         // @ts-ignore
-                        getBeanClassName(): java.lang.String
+                        public getBeanClassName(): string
                         /**
                          * Specify the class for this bean.
                          * @see #setBeanClassName(String)
                          */
                         // @ts-ignore
-                        setBeanClass(beanClass: java.lang.Class<any>): void
+                        public setBeanClass(beanClass: java.lang.Class<any>): void
                         /**
                          * Return the specified class of the bean definition (assuming it is resolved already).
                          * <p><b>NOTE:</b> This is an initial class reference as declared in the bean metadata
@@ -178,7 +178,7 @@ declare namespace org {
                          * @see #resolveBeanClass(ClassLoader)
                          */
                         // @ts-ignore
-                        getBeanClass(): java.lang.Class<?>
+                        public getBeanClass(): java.lang.Class<any>
                         /**
                          * Return whether this definition specifies a bean class.
                          * @see #getBeanClass()
@@ -186,7 +186,7 @@ declare namespace org {
                          * @see #resolveBeanClass(ClassLoader)
                          */
                         // @ts-ignore
-                        hasBeanClass(): boolean
+                        public hasBeanClass(): boolean
                         /**
                          * Determine the class of the wrapped bean, resolving it from a
                          * specified class name if necessary. Will also reload a specified
@@ -196,14 +196,14 @@ declare namespace org {
                          * @throws ClassNotFoundException if the class name could be resolved
                          */
                         // @ts-ignore
-                        resolveBeanClass(classLoader: java.lang.ClassLoader): java.lang.Class<?>
+                        public resolveBeanClass(classLoader: java.lang.ClassLoader): java.lang.Class<any>
                         /**
                          * Return a resolvable type for this bean definition.
                          * <p>This implementation delegates to {@link #getBeanClass()}.
                          * @since 5.2
                          */
                         // @ts-ignore
-                        getResolvableType(): ResolvableType
+                        public getResolvableType(): ResolvableType
                         /**
                          * Set the name of the target scope for the bean.
                          * <p>The default is singleton status, although this is only applied once
@@ -215,26 +215,26 @@ declare namespace org {
                          * @see #SCOPE_PROTOTYPE
                          */
                         // @ts-ignore
-                        setScope(scope: string): void
+                        public setScope(scope: java.lang.String | string): void
                         /**
                          * Return the name of the target scope for the bean.
                          */
                         // @ts-ignore
-                        getScope(): java.lang.String
+                        public getScope(): string
                         /**
                          * Return whether this a <b>Singleton</b>, with a single shared instance
                          * returned from all calls.
                          * @see #SCOPE_SINGLETON
                          */
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                         /**
                          * Return whether this a <b>Prototype</b>, with an independent instance
                          * returned for each call.
                          * @see #SCOPE_PROTOTYPE
                          */
                         // @ts-ignore
-                        isPrototype(): boolean
+                        public isPrototype(): boolean
                         /**
                          * Set if this bean is "abstract", i.e. not meant to be instantiated itself but
                          * rather just serving as parent for concrete child bean definitions.
@@ -242,27 +242,27 @@ declare namespace org {
                          * instantiate that particular bean in any case.
                          */
                         // @ts-ignore
-                        setAbstract(abstractFlag: boolean): void
+                        public setAbstract(abstractFlag: boolean): void
                         /**
                          * Return whether this bean is "abstract", i.e. not meant to be instantiated
                          * itself but rather just serving as parent for concrete child bean definitions.
                          */
                         // @ts-ignore
-                        isAbstract(): boolean
+                        public isAbstract(): boolean
                         /**
                          * Set whether this bean should be lazily initialized.
                          * <p>If {@code false}, the bean will get instantiated on startup by bean
                          * factories that perform eager initialization of singletons.
                          */
                         // @ts-ignore
-                        setLazyInit(lazyInit: boolean): void
+                        public setLazyInit(lazyInit: boolean): void
                         /**
                          * Return whether this bean should be lazily initialized, i.e. not
                          * eagerly instantiated on startup. Only applicable to a singleton bean.
                          * @return whether to apply lazy-init semantics ({#code false} by default)
                          */
                         // @ts-ignore
-                        isLazyInit(): boolean
+                        public isLazyInit(): boolean
                         /**
                          * Return whether this bean should be lazily initialized, i.e. not
                          * eagerly instantiated on startup. Only applicable to a singleton bean.
@@ -270,7 +270,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        getLazyInit(): java.lang.Boolean
+                        public getLazyInit(): java.lang.Boolean
                         /**
                          * Set the autowire mode. This determines whether any automagical detection
                          * and setting of bean references will happen. Default is AUTOWIRE_NO
@@ -285,12 +285,12 @@ declare namespace org {
                          * @see #AUTOWIRE_AUTODETECT
                          */
                         // @ts-ignore
-                        setAutowireMode(autowireMode: number /*int*/): void
+                        public setAutowireMode(autowireMode: number /*int*/): void
                         /**
                          * Return the autowire mode as specified in the bean definition.
                          */
                         // @ts-ignore
-                        getAutowireMode(): int
+                        public getAutowireMode(): number /*int*/
                         /**
                          * Return the resolved autowire code,
                          * (resolving AUTOWIRE_AUTODETECT to AUTOWIRE_CONSTRUCTOR or AUTOWIRE_BY_TYPE).
@@ -299,7 +299,7 @@ declare namespace org {
                          * @see #AUTOWIRE_BY_TYPE
                          */
                         // @ts-ignore
-                        getResolvedAutowireMode(): int
+                        public getResolvedAutowireMode(): number /*int*/
                         /**
                          * Set the dependency check code.
                          * @param dependencyCheck the code to set.
@@ -310,12 +310,12 @@ declare namespace org {
                          * @see #DEPENDENCY_CHECK_ALL
                          */
                         // @ts-ignore
-                        setDependencyCheck(dependencyCheck: number /*int*/): void
+                        public setDependencyCheck(dependencyCheck: number /*int*/): void
                         /**
                          * Return the dependency check code.
                          */
                         // @ts-ignore
-                        getDependencyCheck(): int
+                        public getDependencyCheck(): number /*int*/
                         /**
                          * Set the names of the beans that this bean depends on being initialized.
                          * The bean factory will guarantee that these beans get initialized first.
@@ -324,12 +324,12 @@ declare namespace org {
                          * of dependencies like statics (*ugh*) or database preparation on startup.
                          */
                         // @ts-ignore
-                        setDependsOn(...dependsOn: string[]): void
+                        public setDependsOn(...dependsOn: java.lang.String[] | string[]): void
                         /**
                          * Return the bean names that this bean depends on.
                          */
                         // @ts-ignore
-                        getDependsOn(): java.lang.String[]
+                        public getDependsOn(): string[]
                         /**
                          * Set whether this bean is a candidate for getting autowired into some other bean.
                          * <p>Note that this flag is designed to only affect type-based autowiring.
@@ -340,53 +340,53 @@ declare namespace org {
                          * @see #AUTOWIRE_BY_NAME
                          */
                         // @ts-ignore
-                        setAutowireCandidate(autowireCandidate: boolean): void
+                        public setAutowireCandidate(autowireCandidate: boolean): void
                         /**
                          * Return whether this bean is a candidate for getting autowired into some other bean.
                          */
                         // @ts-ignore
-                        isAutowireCandidate(): boolean
+                        public isAutowireCandidate(): boolean
                         /**
                          * Set whether this bean is a primary autowire candidate.
                          * <p>If this value is {@code true} for exactly one bean among multiple
                          * matching candidates, it will serve as a tie-breaker.
                          */
                         // @ts-ignore
-                        setPrimary(primary: boolean): void
+                        public setPrimary(primary: boolean): void
                         /**
                          * Return whether this bean is a primary autowire candidate.
                          */
                         // @ts-ignore
-                        isPrimary(): boolean
+                        public isPrimary(): boolean
                         /**
                          * Register a qualifier to be used for autowire candidate resolution,
                          * keyed by the qualifier's type name.
                          * @see AutowireCandidateQualifier#getTypeName()
                          */
                         // @ts-ignore
-                        addQualifier(qualifier: org.springframework.beans.factory.support.AutowireCandidateQualifier): void
+                        public addQualifier(qualifier: org.springframework.beans.factory.support.AutowireCandidateQualifier): void
                         /**
                          * Return whether this bean has the specified qualifier.
                          */
                         // @ts-ignore
-                        hasQualifier(typeName: string): boolean
+                        public hasQualifier(typeName: java.lang.String | string): boolean
                         /**
                          * Return the qualifier mapped to the provided type name.
                          */
                         // @ts-ignore
-                        getQualifier(typeName: string): org.springframework.beans.factory.support.AutowireCandidateQualifier
+                        public getQualifier(typeName: java.lang.String | string): org.springframework.beans.factory.support.AutowireCandidateQualifier
                         /**
                          * Return all registered qualifiers.
                          * @return the Set of {#link AutowireCandidateQualifier} objects.
                          */
                         // @ts-ignore
-                        getQualifiers(): java.util.Set<org.springframework.beans.factory.support.AutowireCandidateQualifier>
+                        public getQualifiers(): Array<org.springframework.beans.factory.support.AutowireCandidateQualifier>
                         /**
                          * Copy the qualifiers from the supplied AbstractBeanDefinition to this bean definition.
                          * @param source the AbstractBeanDefinition to copy from
                          */
                         // @ts-ignore
-                        copyQualifiersFrom(source: org.springframework.beans.factory.support.AbstractBeanDefinition): void
+                        public copyQualifiersFrom(source: org.springframework.beans.factory.support.AbstractBeanDefinition): void
                         /**
                          * Specify a callback for creating an instance of the bean,
                          * as an alternative to a declaratively specified factory method.
@@ -398,13 +398,13 @@ declare namespace org {
                          * @see #setPropertyValues(MutablePropertyValues)
                          */
                         // @ts-ignore
-                        setInstanceSupplier(instanceSupplier: java.util.function.Supplier<any> | java.util.function$.Supplier<?>): void
+                        public setInstanceSupplier(instanceSupplier: java.util.function$.Supplier<any>): void
                         /**
                          * Return a callback for creating an instance of the bean, if any.
                          * @since 5.0
                          */
                         // @ts-ignore
-                        getInstanceSupplier(): java.util.function.Supplier<?>
+                        public getInstanceSupplier(): java.util.function$.Supplier<any>
                         /**
                          * Specify whether to allow access to non-public constructors and methods,
                          * for the case of externalized metadata pointing to those. The default is
@@ -417,12 +417,12 @@ declare namespace org {
                          * externalized metadata in this bean definition only.
                          */
                         // @ts-ignore
-                        setNonPublicAccessAllowed(nonPublicAccessAllowed: boolean): void
+                        public setNonPublicAccessAllowed(nonPublicAccessAllowed: boolean): void
                         /**
                          * Return whether to allow access to non-public constructors and methods.
                          */
                         // @ts-ignore
-                        isNonPublicAccessAllowed(): boolean
+                        public isNonPublicAccessAllowed(): boolean
                         /**
                          * Specify whether to resolve constructors in lenient mode ({@code true},
                          * which is the default) or to switch to strict resolution (throwing an exception
@@ -430,24 +430,24 @@ declare namespace org {
                          * whereas lenient mode would use the one with the 'closest' type matches).
                          */
                         // @ts-ignore
-                        setLenientConstructorResolution(lenientConstructorResolution: boolean): void
+                        public setLenientConstructorResolution(lenientConstructorResolution: boolean): void
                         /**
                          * Return whether to resolve constructors in lenient mode or in strict mode.
                          */
                         // @ts-ignore
-                        isLenientConstructorResolution(): boolean
+                        public isLenientConstructorResolution(): boolean
                         /**
                          * Specify the factory bean to use, if any.
                          * This the name of the bean to call the specified factory method on.
                          * @see #setFactoryMethodName
                          */
                         // @ts-ignore
-                        setFactoryBeanName(factoryBeanName: string): void
+                        public setFactoryBeanName(factoryBeanName: java.lang.String | string): void
                         /**
                          * Return the factory bean name, if any.
                          */
                         // @ts-ignore
-                        getFactoryBeanName(): java.lang.String
+                        public getFactoryBeanName(): string
                         /**
                          * Specify a factory method, if any. This method will be invoked with
                          * constructor arguments, or with no arguments if none are specified.
@@ -457,170 +457,170 @@ declare namespace org {
                          * @see #setBeanClassName
                          */
                         // @ts-ignore
-                        setFactoryMethodName(factoryMethodName: string): void
+                        public setFactoryMethodName(factoryMethodName: java.lang.String | string): void
                         /**
                          * Return a factory method, if any.
                          */
                         // @ts-ignore
-                        getFactoryMethodName(): java.lang.String
+                        public getFactoryMethodName(): string
                         /**
                          * Specify constructor argument values for this bean.
                          */
                         // @ts-ignore
-                        setConstructorArgumentValues(constructorArgumentValues: org.springframework.beans.factory.config.ConstructorArgumentValues): void
+                        public setConstructorArgumentValues(constructorArgumentValues: org.springframework.beans.factory.config.ConstructorArgumentValues): void
                         /**
                          * Return constructor argument values for this bean (never {@code null}).
                          */
                         // @ts-ignore
-                        getConstructorArgumentValues(): org.springframework.beans.factory.config.ConstructorArgumentValues
+                        public getConstructorArgumentValues(): org.springframework.beans.factory.config.ConstructorArgumentValues
                         /**
                          * Return if there are constructor argument values defined for this bean.
                          */
                         // @ts-ignore
-                        hasConstructorArgumentValues(): boolean
+                        public hasConstructorArgumentValues(): boolean
                         /**
                          * Specify property values for this bean, if any.
                          */
                         // @ts-ignore
-                        setPropertyValues(propertyValues: org.springframework.beans.MutablePropertyValues): void
+                        public setPropertyValues(propertyValues: org.springframework.beans.MutablePropertyValues): void
                         /**
                          * Return property values for this bean (never {@code null}).
                          */
                         // @ts-ignore
-                        getPropertyValues(): org.springframework.beans.MutablePropertyValues
+                        public getPropertyValues(): org.springframework.beans.MutablePropertyValues
                         /**
                          * Return if there are property values values defined for this bean.
                          * @since 5.0.2
                          */
                         // @ts-ignore
-                        hasPropertyValues(): boolean
+                        public hasPropertyValues(): boolean
                         /**
                          * Specify method overrides for the bean, if any.
                          */
                         // @ts-ignore
-                        setMethodOverrides(methodOverrides: org.springframework.beans.factory.support.MethodOverrides): void
+                        public setMethodOverrides(methodOverrides: org.springframework.beans.factory.support.MethodOverrides): void
                         /**
                          * Return information about methods to be overridden by the IoC
                          * container. This will be empty if there are no method overrides.
                          * <p>Never returns {@code null}.
                          */
                         // @ts-ignore
-                        getMethodOverrides(): org.springframework.beans.factory.support.MethodOverrides
+                        public getMethodOverrides(): org.springframework.beans.factory.support.MethodOverrides
                         /**
                          * Return if there are method overrides defined for this bean.
                          * @since 5.0.2
                          */
                         // @ts-ignore
-                        hasMethodOverrides(): boolean
+                        public hasMethodOverrides(): boolean
                         /**
                          * Set the name of the initializer method.
                          * <p>The default is {@code null} in which case there is no initializer method.
                          */
                         // @ts-ignore
-                        setInitMethodName(initMethodName: string): void
+                        public setInitMethodName(initMethodName: java.lang.String | string): void
                         /**
                          * Return the name of the initializer method.
                          */
                         // @ts-ignore
-                        getInitMethodName(): java.lang.String
+                        public getInitMethodName(): string
                         /**
                          * Specify whether or not the configured init method is the default.
                          * <p>The default value is {@code false}.
                          * @see #setInitMethodName
                          */
                         // @ts-ignore
-                        setEnforceInitMethod(enforceInitMethod: boolean): void
+                        public setEnforceInitMethod(enforceInitMethod: boolean): void
                         /**
                          * Indicate whether the configured init method is the default.
                          * @see #getInitMethodName()
                          */
                         // @ts-ignore
-                        isEnforceInitMethod(): boolean
+                        public isEnforceInitMethod(): boolean
                         /**
                          * Set the name of the destroy method.
                          * <p>The default is {@code null} in which case there is no destroy method.
                          */
                         // @ts-ignore
-                        setDestroyMethodName(destroyMethodName: string): void
+                        public setDestroyMethodName(destroyMethodName: java.lang.String | string): void
                         /**
                          * Return the name of the destroy method.
                          */
                         // @ts-ignore
-                        getDestroyMethodName(): java.lang.String
+                        public getDestroyMethodName(): string
                         /**
                          * Specify whether or not the configured destroy method is the default.
                          * <p>The default value is {@code false}.
                          * @see #setDestroyMethodName
                          */
                         // @ts-ignore
-                        setEnforceDestroyMethod(enforceDestroyMethod: boolean): void
+                        public setEnforceDestroyMethod(enforceDestroyMethod: boolean): void
                         /**
                          * Indicate whether the configured destroy method is the default.
                          * @see #getDestroyMethodName
                          */
                         // @ts-ignore
-                        isEnforceDestroyMethod(): boolean
+                        public isEnforceDestroyMethod(): boolean
                         /**
                          * Set whether this bean definition is 'synthetic', that is, not defined
                          * by the application itself (for example, an infrastructure bean such
                          * as a helper for auto-proxying, created through {@code <aop:config>}).
                          */
                         // @ts-ignore
-                        setSynthetic(synthetic: boolean): void
+                        public setSynthetic(synthetic: boolean): void
                         /**
                          * Return whether this bean definition is 'synthetic', that is,
                          * not defined by the application itself.
                          */
                         // @ts-ignore
-                        isSynthetic(): boolean
+                        public isSynthetic(): boolean
                         /**
                          * Set the role hint for this {@code BeanDefinition}.
                          */
                         // @ts-ignore
-                        setRole(role: number /*int*/): void
+                        public setRole(role: number /*int*/): void
                         /**
                          * Return the role hint for this {@code BeanDefinition}.
                          */
                         // @ts-ignore
-                        getRole(): int
+                        public getRole(): number /*int*/
                         /**
                          * Set a human-readable description of this bean definition.
                          */
                         // @ts-ignore
-                        setDescription(description: string): void
+                        public setDescription(description: java.lang.String | string): void
                         /**
                          * Return a human-readable description of this bean definition.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                         /**
                          * Set the resource that this bean definition came from
                          * (for the purpose of showing context in case of errors).
                          */
                         // @ts-ignore
-                        setResource(resource: Resource): void
+                        public setResource(resource: Resource): void
                         /**
                          * Return the resource that this bean definition came from.
                          */
                         // @ts-ignore
-                        getResource(): Resource
+                        public getResource(): Resource
                         /**
                          * Set a description of the resource that this bean definition
                          * came from (for the purpose of showing context in case of errors).
                          */
                         // @ts-ignore
-                        setResourceDescription(resourceDescription: string): void
+                        public setResourceDescription(resourceDescription: java.lang.String | string): void
                         /**
                          * Return a description of the resource that this bean definition
                          * came from (for the purpose of showing context in case of errors).
                          */
                         // @ts-ignore
-                        getResourceDescription(): java.lang.String
+                        public getResourceDescription(): string
                         /**
                          * Set the originating (e.g. decorated) BeanDefinition, if any.
                          */
                         // @ts-ignore
-                        setOriginatingBeanDefinition(originatingBd: org.springframework.beans.factory.config.BeanDefinition): void
+                        public setOriginatingBeanDefinition(originatingBd: org.springframework.beans.factory.config.BeanDefinition): void
                         /**
                          * Return the originating BeanDefinition, or {@code null} if none.
                          * Allows for retrieving the decorated bean definition, if any.
@@ -628,20 +628,20 @@ declare namespace org {
                          * originator chain to find the original BeanDefinition as defined by the user.
                          */
                         // @ts-ignore
-                        getOriginatingBeanDefinition(): org.springframework.beans.factory.config.BeanDefinition
+                        public getOriginatingBeanDefinition(): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Validate this bean definition.
                          * @throws BeanDefinitionValidationException in case of validation failure
                          */
                         // @ts-ignore
-                        validate(): void
+                        public validate(): void
                         /**
                          * Validate and prepare the method overrides defined for this bean.
                          * Checks for existence of a method with the specified name.
                          * @throws BeanDefinitionValidationException in case of validation failure
                          */
                         // @ts-ignore
-                        prepareMethodOverrides(): void
+                        public prepareMethodOverrides(): void
                         /**
                          * Validate and prepare the given method override.
                          * Checks for existence of a method with the specified name,
@@ -657,20 +657,20 @@ declare namespace org {
                          * @see Object#clone()
                          */
                         // @ts-ignore
-                        clone(): java.lang.Object
+                        public clone(): any
                         /**
                          * Clone this bean definition.
                          * To be implemented by concrete subclasses.
                          * @return the cloned bean definition object
                          */
                         // @ts-ignore
-                        abstract cloneBeanDefinition(): org.springframework.beans.factory.support.AbstractBeanDefinition
+                        public abstract cloneBeanDefinition(): org.springframework.beans.factory.support.AbstractBeanDefinition
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

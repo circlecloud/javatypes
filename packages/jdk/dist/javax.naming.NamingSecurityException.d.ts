@@ -18,7 +18,7 @@ declare namespace javax {
          * @since 1.3
          */
         // @ts-ignore
-        class NamingSecurityException extends javax.naming.NamingException {
+        abstract class NamingSecurityException extends javax.naming.NamingException {
             /**
              * Constructs a new instance of NamingSecurityException using the
              * explanation supplied. All other fields default to null.
@@ -26,7 +26,7 @@ declare namespace javax {
              * @see java.lang.Throwable#getMessage
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of NamingSecurityException.
              * All fields are initialized to null.

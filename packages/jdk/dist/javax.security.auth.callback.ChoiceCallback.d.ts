@@ -36,21 +36,21 @@ declare namespace javax {
                      *                   {@code choices}.
                      */
                     // @ts-ignore
-                    constructor(prompt: string, choices: string[], defaultChoice: number /*int*/, multipleSelectionsAllowed: boolean)
+                    constructor(prompt: java.lang.String | string, choices: java.lang.String[] | string[], defaultChoice: number /*int*/, multipleSelectionsAllowed: boolean)
                     /**
                      * Get the prompt.
                      * <p>
                      * @return the prompt.
                      */
                     // @ts-ignore
-                    getPrompt(): java.lang.String
+                    public getPrompt(): string
                     /**
                      * Get the list of choices.
                      * <p>
                      * @return the list of choices.
                      */
                     // @ts-ignore
-                    getChoices(): java.lang.String[]
+                    public getChoices(): string[]
                     /**
                      * Get the defaultChoice.
                      * <p>
@@ -58,7 +58,7 @@ declare namespace javax {
                      *           the {#code choices} list.
                      */
                     // @ts-ignore
-                    getDefaultChoice(): int
+                    public getDefaultChoice(): number /*int*/
                     /**
                      * Get the boolean determining whether multiple selections from
                      * the {@code choices} list are allowed.
@@ -66,7 +66,7 @@ declare namespace javax {
                      * @return whether multiple selections are allowed.
                      */
                     // @ts-ignore
-                    allowMultipleSelections(): boolean
+                    public allowMultipleSelections(): boolean
                     /**
                      * Set the selected choice.
                      * <p>
@@ -75,7 +75,7 @@ declare namespace javax {
                      * @see #getSelectedIndexes
                      */
                     // @ts-ignore
-                    setSelectedIndex(selection: number /*int*/): void
+                    public setSelectedIndex(selection: number /*int*/): void
                     /**
                      * Set the selected choices.
                      * <p>
@@ -87,7 +87,7 @@ declare namespace javax {
                      * @see #getSelectedIndexes
                      */
                     // @ts-ignore
-                    setSelectedIndexes(selections: number /*int*/[]): void
+                    public setSelectedIndexes(selections: number /*int*/[]): void
                     /**
                      * Get the selected choices.
                      * <p>
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @see #setSelectedIndexes
                      */
                     // @ts-ignore
-                    getSelectedIndexes(): int[]
+                    public getSelectedIndexes(): number /*int*/[]
                 }
             }
         }

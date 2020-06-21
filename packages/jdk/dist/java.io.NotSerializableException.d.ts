@@ -14,7 +14,7 @@ declare namespace java {
              * @param classname Class of the instance being serialized/deserialized.
              */
             // @ts-ignore
-            constructor(classname: string)
+            constructor(classname: java.lang.String | string)
             /**
              * Constructs a NotSerializableException object.
              */

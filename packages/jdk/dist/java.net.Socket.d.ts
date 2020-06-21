@@ -100,7 +100,7 @@ declare namespace java {
              * @see SecurityManager#checkConnect
              */
             // @ts-ignore
-            constructor(host: string, port: number /*int*/)
+            constructor(host: java.lang.String | string, port: number /*int*/)
             /**
              * Creates a stream socket and connects it to the specified port
              * number at the specified IP address.
@@ -165,7 +165,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(host: string, port: number /*int*/, localAddr: java.net.InetAddress, localPort: number /*int*/)
+            constructor(host: java.lang.String | string, port: number /*int*/, localAddr: java.net.InetAddress, localPort: number /*int*/)
             /**
              * Creates a socket and connects it to the specified remote address on
              * the specified remote port. The Socket will also bind() to the local
@@ -243,7 +243,7 @@ declare namespace java {
              * @deprecated Use DatagramSocket instead for UDP transport.
              */
             // @ts-ignore
-            constructor(host: string, port: number /*int*/, stream: boolean)
+            constructor(host: java.lang.String | string, port: number /*int*/, stream: boolean)
             /**
              * Creates a socket and connects it to the specified port number at
              * the specified IP address.
@@ -293,7 +293,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            connect(endpoint: java.net.SocketAddress): void
+            public connect(endpoint: java.net.SocketAddress): void
             /**
              * Connects this socket to the server with a specified timeout value.
              * A timeout of zero is interpreted as an infinite timeout. The connection
@@ -311,7 +311,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            connect(endpoint: java.net.SocketAddress, timeout: number /*int*/): void
+            public connect(endpoint: java.net.SocketAddress, timeout: number /*int*/): void
             /**
              * Binds the socket to a local address.
              * <P>
@@ -329,7 +329,7 @@ declare namespace java {
              * @see #isBound
              */
             // @ts-ignore
-            bind(bindpoint: java.net.SocketAddress): void
+            public bind(bindpoint: java.net.SocketAddress): void
             /**
              * Returns the address to which the socket is connected.
              * <p>
@@ -340,7 +340,7 @@ declare namespace java {
              *           or {#code null} if the socket is not connected.
              */
             // @ts-ignore
-            getInetAddress(): java.net.InetAddress
+            public getInetAddress(): java.net.InetAddress
             /**
              * Gets the local address to which the socket is bound.
              * <p>
@@ -355,7 +355,7 @@ declare namespace java {
              * @see SecurityManager#checkConnect
              */
             // @ts-ignore
-            getLocalAddress(): java.net.InetAddress
+            public getLocalAddress(): java.net.InetAddress
             /**
              * Returns the remote port number to which this socket is connected.
              * <p>
@@ -366,7 +366,7 @@ declare namespace java {
              *           0 if the socket is not connected yet.
              */
             // @ts-ignore
-            getPort(): int
+            public getPort(): number /*int*/
             /**
              * Returns the local port number to which this socket is bound.
              * <p>
@@ -377,7 +377,7 @@ declare namespace java {
              *           if the socket is not bound yet.
              */
             // @ts-ignore
-            getLocalPort(): int
+            public getLocalPort(): number /*int*/
             /**
              * Returns the address of the endpoint this socket is connected to, or
              * {@code null} if it is unconnected.
@@ -394,7 +394,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getRemoteSocketAddress(): java.net.SocketAddress
+            public getRemoteSocketAddress(): java.net.SocketAddress
             /**
              * Returns the address of the endpoint this socket is bound to.
              * <p>
@@ -423,7 +423,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getLocalSocketAddress(): java.net.SocketAddress
+            public getLocalSocketAddress(): java.net.SocketAddress
             /**
              * Returns the unique {@link java.nio.channels.SocketChannel SocketChannel}
              * object associated with this socket, if any.
@@ -439,7 +439,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getChannel(): java.nio.channels.SocketChannel
+            public getChannel(): java.nio.channels.SocketChannel
             /**
              * Returns an input stream for this socket.
              * <p> If this socket has an associated channel then the resulting input
@@ -476,7 +476,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getInputStream(): java.io.InputStream
+            public getInputStream(): java.io.InputStream
             /**
              * Returns an output stream for this socket.
              * <p> If this socket has an associated channel then the resulting output
@@ -493,7 +493,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getOutputStream(): java.io.OutputStream
+            public getOutputStream(): java.io.OutputStream
             /**
              * Enable/disable {@link SocketOptions#TCP_NODELAY TCP_NODELAY}
              * (disable/enable Nagle's algorithm).
@@ -505,7 +505,7 @@ declare namespace java {
              * @see #getTcpNoDelay()
              */
             // @ts-ignore
-            setTcpNoDelay(on: boolean): void
+            public setTcpNoDelay(on: boolean): void
             /**
              * Tests if {@link SocketOptions#TCP_NODELAY TCP_NODELAY} is enabled.
              * @return a {#code boolean} indicating whether or not
@@ -516,7 +516,7 @@ declare namespace java {
              * @see #setTcpNoDelay(boolean)
              */
             // @ts-ignore
-            getTcpNoDelay(): boolean
+            public getTcpNoDelay(): boolean
             /**
              * Enable/disable {@link SocketOptions#SO_LINGER SO_LINGER} with the
              * specified linger time in seconds. The maximum timeout value is platform
@@ -531,7 +531,7 @@ declare namespace java {
              * @see #getSoLinger()
              */
             // @ts-ignore
-            setSoLinger(on: boolean, linger: number /*int*/): void
+            public setSoLinger(on: boolean, linger: number /*int*/): void
             /**
              * Returns setting for {@link SocketOptions#SO_LINGER SO_LINGER}.
              * -1 returns implies that the
@@ -544,7 +544,7 @@ declare namespace java {
              * @see #setSoLinger(boolean, int)
              */
             // @ts-ignore
-            getSoLinger(): int
+            public getSoLinger(): number /*int*/
             /**
              * Send one byte of urgent data on the socket. The byte to be sent is the lowest eight
              * bits of the data parameter. The urgent byte is
@@ -556,7 +556,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            sendUrgentData(data: number /*int*/): void
+            public sendUrgentData(data: number /*int*/): void
             /**
              * Enable/disable {@link SocketOptions#SO_OOBINLINE SO_OOBINLINE}
              * (receipt of TCP urgent data)
@@ -578,7 +578,7 @@ declare namespace java {
              * @see #getOOBInline()
              */
             // @ts-ignore
-            setOOBInline(on: boolean): void
+            public setOOBInline(on: boolean): void
             /**
              * Tests if {@link SocketOptions#SO_OOBINLINE SO_OOBINLINE} is enabled.
              * @return a {#code boolean} indicating whether or not
@@ -589,7 +589,7 @@ declare namespace java {
              * @see #setOOBInline(boolean)
              */
             // @ts-ignore
-            getOOBInline(): boolean
+            public getOOBInline(): boolean
             /**
              * Enable/disable {@link SocketOptions#SO_TIMEOUT SO_TIMEOUT}
              * with the specified timeout, in milliseconds. With this option set
@@ -607,7 +607,7 @@ declare namespace java {
              * @see #getSoTimeout()
              */
             // @ts-ignore
-            setSoTimeout(timeout: number /*int*/): void
+            public setSoTimeout(timeout: number /*int*/): void
             /**
              * Returns setting for {@link SocketOptions#SO_TIMEOUT SO_TIMEOUT}.
              * 0 returns implies that the option is disabled (i.e., timeout of infinity).
@@ -618,7 +618,7 @@ declare namespace java {
              * @see #setSoTimeout(int)
              */
             // @ts-ignore
-            getSoTimeout(): int
+            public getSoTimeout(): number /*int*/
             /**
              * Sets the {@link SocketOptions#SO_SNDBUF SO_SNDBUF} option to the
              * specified value for this {@code Socket}.
@@ -638,7 +638,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setSendBufferSize(size: number /*int*/): void
+            public setSendBufferSize(size: number /*int*/): void
             /**
              * Get value of the {@link SocketOptions#SO_SNDBUF SO_SNDBUF} option
              * for this {@code Socket}, that is the buffer size used by the platform
@@ -651,7 +651,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getSendBufferSize(): int
+            public getSendBufferSize(): number /*int*/
             /**
              * Sets the {@link SocketOptions#SO_RCVBUF SO_RCVBUF} option to the
              * specified value for this {@code Socket}. The
@@ -687,7 +687,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setReceiveBufferSize(size: number /*int*/): void
+            public setReceiveBufferSize(size: number /*int*/): void
             /**
              * Gets the value of the {@link SocketOptions#SO_RCVBUF SO_RCVBUF} option
              * for this {@code Socket}, that is the buffer size used by the platform
@@ -700,7 +700,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getReceiveBufferSize(): int
+            public getReceiveBufferSize(): number /*int*/
             /**
              * Enable/disable {@link SocketOptions#SO_KEEPALIVE SO_KEEPALIVE}.
              * @param on  whether or not to have socket keep alive turned on.
@@ -710,7 +710,7 @@ declare namespace java {
              * @see #getKeepAlive()
              */
             // @ts-ignore
-            setKeepAlive(on: boolean): void
+            public setKeepAlive(on: boolean): void
             /**
              * Tests if {@link SocketOptions#SO_KEEPALIVE SO_KEEPALIVE} is enabled.
              * @return a {#code boolean} indicating whether or not
@@ -721,7 +721,7 @@ declare namespace java {
              * @see #setKeepAlive(boolean)
              */
             // @ts-ignore
-            getKeepAlive(): boolean
+            public getKeepAlive(): boolean
             /**
              * Sets traffic class or type-of-service octet in the IP
              * header for packets sent from this Socket.
@@ -766,7 +766,7 @@ declare namespace java {
              * @see SocketOptions#IP_TOS
              */
             // @ts-ignore
-            setTrafficClass(tc: number /*int*/): void
+            public setTrafficClass(tc: number /*int*/): void
             /**
              * Gets traffic class or type-of-service in the IP header
              * for packets sent from this Socket
@@ -783,7 +783,7 @@ declare namespace java {
              * @see SocketOptions#IP_TOS
              */
             // @ts-ignore
-            getTrafficClass(): int
+            public getTrafficClass(): number /*int*/
             /**
              * Enable/disable the {@link SocketOptions#SO_REUSEADDR SO_REUSEADDR}
              * socket option.
@@ -819,7 +819,7 @@ declare namespace java {
              * @see #isBound()
              */
             // @ts-ignore
-            setReuseAddress(on: boolean): void
+            public setReuseAddress(on: boolean): void
             /**
              * Tests if {@link SocketOptions#SO_REUSEADDR SO_REUSEADDR} is enabled.
              * @return a {#code boolean} indicating whether or not
@@ -830,7 +830,7 @@ declare namespace java {
              * @see #setReuseAddress(boolean)
              */
             // @ts-ignore
-            getReuseAddress(): boolean
+            public getReuseAddress(): boolean
             /**
              * Closes this socket.
              * <p>
@@ -851,7 +851,7 @@ declare namespace java {
              * @see #isClosed
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Places the input stream for this socket at "end of stream".
              * Any data sent to the input stream side of the socket is acknowledged
@@ -869,7 +869,7 @@ declare namespace java {
              * @see #isInputShutdown
              */
             // @ts-ignore
-            shutdownInput(): void
+            public shutdownInput(): void
             /**
              * Disables the output stream for this socket.
              * For a TCP socket, any previously written data will be sent
@@ -886,13 +886,13 @@ declare namespace java {
              * @see #isOutputShutdown
              */
             // @ts-ignore
-            shutdownOutput(): void
+            public shutdownOutput(): void
             /**
              * Converts this socket to a {@code String}.
              * @return a string representation of this socket.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the connection state of the socket.
              * <p>
@@ -904,7 +904,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isConnected(): boolean
+            public isConnected(): boolean
             /**
              * Returns the binding state of the socket.
              * <p>
@@ -917,7 +917,7 @@ declare namespace java {
              * @see #bind
              */
             // @ts-ignore
-            isBound(): boolean
+            public isBound(): boolean
             /**
              * Returns the closed state of the socket.
              * @return true if the socket has been closed
@@ -925,7 +925,7 @@ declare namespace java {
              * @see #close
              */
             // @ts-ignore
-            isClosed(): boolean
+            public isClosed(): boolean
             /**
              * Returns whether the read-half of the socket connection is closed.
              * @return true if the input of the socket has been shutdown
@@ -933,7 +933,7 @@ declare namespace java {
              * @see #shutdownInput
              */
             // @ts-ignore
-            isInputShutdown(): boolean
+            public isInputShutdown(): boolean
             /**
              * Returns whether the write-half of the socket connection is closed.
              * @return true if the output of the socket has been shutdown
@@ -941,7 +941,7 @@ declare namespace java {
              * @see #shutdownOutput
              */
             // @ts-ignore
-            isOutputShutdown(): boolean
+            public isOutputShutdown(): boolean
             /**
              * Sets the client socket implementation factory for the
              * application. The factory can be specified only once.
@@ -966,7 +966,7 @@ declare namespace java {
              * @see SecurityManager#checkSetFactory
              */
             // @ts-ignore
-            setSocketImplFactory(fac: java.net.SocketImplFactory): void
+            public static setSocketImplFactory(fac: java.net.SocketImplFactory): void
             /**
              * Sets performance preferences for this socket.
              * <p> Sockets use the TCP/IP protocol by default.  Some implementations
@@ -999,7 +999,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setPerformancePreferences(connectionTime: number /*int*/, latency: number /*int*/, bandwidth: number /*int*/): void
+            public setPerformancePreferences(connectionTime: number /*int*/, latency: number /*int*/, bandwidth: number /*int*/): void
         }
     }
 }

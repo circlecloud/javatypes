@@ -39,20 +39,20 @@ declare namespace org {
                      * @see javax.validation.Validation#byDefaultProvider()
                      */
                     // @ts-ignore
-                    setProviderClass(providerClass: java.lang.Class): void
+                    public setProviderClass(providerClass: java.lang.Class<any>): void
                     /**
                      * Specify a JSR-303 {@link ValidationProviderResolver} for bootstrapping the
                      * provider of choice, as an alternative to {@code META-INF} driven resolution.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setValidationProviderResolver(validationProviderResolver: ValidationProviderResolver): void
+                    public setValidationProviderResolver(validationProviderResolver: ValidationProviderResolver): void
                     /**
                      * Specify a custom MessageInterpolator to use for this ValidatorFactory
                      * and its exposed default Validator.
                      */
                     // @ts-ignore
-                    setMessageInterpolator(messageInterpolator: MessageInterpolator): void
+                    public setMessageInterpolator(messageInterpolator: MessageInterpolator): void
                     /**
                      * Specify a custom Spring MessageSource for resolving validation messages,
                      * instead of relying on JSR-303's default "ValidationMessages.properties" bundle
@@ -73,32 +73,32 @@ declare namespace org {
                      * @see ResourceBundleMessageInterpolator
                      */
                     // @ts-ignore
-                    setValidationMessageSource(messageSource: org.springframework.context.MessageSource): void
+                    public setValidationMessageSource(messageSource: org.springframework.context.MessageSource): void
                     /**
                      * Specify a custom TraversableResolver to use for this ValidatorFactory
                      * and its exposed default Validator.
                      */
                     // @ts-ignore
-                    setTraversableResolver(traversableResolver: TraversableResolver): void
+                    public setTraversableResolver(traversableResolver: TraversableResolver): void
                     /**
                      * Specify a custom ConstraintValidatorFactory to use for this ValidatorFactory.
                      * <p>Default is a {@link SpringConstraintValidatorFactory}, delegating to the
                      * containing ApplicationContext for creating autowired ConstraintValidator instances.
                      */
                     // @ts-ignore
-                    setConstraintValidatorFactory(constraintValidatorFactory: ConstraintValidatorFactory): void
+                    public setConstraintValidatorFactory(constraintValidatorFactory: ConstraintValidatorFactory): void
                     /**
                      * Set the ParameterNameDiscoverer to use for resolving method and constructor
                      * parameter names if needed for message interpolation.
                      * <p>Default is a {@link org.springframework.core.DefaultParameterNameDiscoverer}.
                      */
                     // @ts-ignore
-                    setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
+                    public setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
                     /**
                      * Specify resource locations to load XML constraint mapping files from, if any.
                      */
                     // @ts-ignore
-                    setMappingLocations(...mappingLocations: Resource[]): void
+                    public setMappingLocations(...mappingLocations: Resource[]): void
                     /**
                      * Specify bean validation properties to be passed to the validation provider.
                      * <p>Can be populated with a String "value" (parsed via PropertiesEditor)
@@ -106,25 +106,25 @@ declare namespace org {
                      * @see javax.validation.Configuration#addProperty(String, String)
                      */
                     // @ts-ignore
-                    setValidationProperties(jpaProperties: java.util.Properties): void
+                    public setValidationProperties(jpaProperties: java.util.Properties): void
                     /**
                      * Specify bean validation properties to be passed to the validation provider as a Map.
                      * <p>Can be populated with a "map" or "props" element in XML bean definitions.
                      * @see javax.validation.Configuration#addProperty(String, String)
                      */
                     // @ts-ignore
-                    setValidationPropertyMap(validationProperties: java.util.Map<java.lang.String, java.lang.String>): void
+                    public setValidationPropertyMap(validationProperties: java.util.Map<java.lang.String | string, java.lang.String | string>): void
                     /**
                      * Allow Map access to the bean validation properties to be passed to the validation provider,
                      * with the option to add or override specific entries.
                      * <p>Useful for specifying entries directly, for example via "validationPropertyMap[myKey]".
                      */
                     // @ts-ignore
-                    getValidationPropertyMap(): java.util.Map<java.lang.String, java.lang.String>
+                    public getValidationPropertyMap(): java.util.Map<java.lang.String | string, java.lang.String | string>
                     // @ts-ignore
-                    setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
+                    public setApplicationContext(applicationContext: org.springframework.context.ApplicationContext): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Post-process the given Bean Validation configuration,
                      * adding to or overriding any of its settings.
@@ -135,23 +135,23 @@ declare namespace org {
                     // @ts-ignore
                     postProcessConfiguration(configuration: object): void
                     // @ts-ignore
-                    getValidator(): Validator
+                    public getValidator(): Validator
                     // @ts-ignore
-                    usingContext(): ValidatorContext
+                    public usingContext(): ValidatorContext
                     // @ts-ignore
-                    getMessageInterpolator(): MessageInterpolator
+                    public getMessageInterpolator(): MessageInterpolator
                     // @ts-ignore
-                    getTraversableResolver(): TraversableResolver
+                    public getTraversableResolver(): TraversableResolver
                     // @ts-ignore
-                    getConstraintValidatorFactory(): ConstraintValidatorFactory
+                    public getConstraintValidatorFactory(): ConstraintValidatorFactory
                     // @ts-ignore
-                    getParameterNameProvider(): ParameterNameProvider
+                    public getParameterNameProvider(): ParameterNameProvider
                     // @ts-ignore
-                    unwrap<T>(type: java.lang.Class<T>): T
+                    public unwrap<T>(type: java.lang.Class<T>): T
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

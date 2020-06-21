@@ -32,7 +32,7 @@ declare namespace org {
                          * session attributes through an {@link SessionAttributes} annotation.
                          */
                         // @ts-ignore
-                        hasSessionAttributes(): boolean
+                        public hasSessionAttributes(): boolean
                         /**
                          * Whether the attribute name or type match the names and types specified
                          * via {@code @SessionAttributes} on the underlying controller.
@@ -43,7 +43,7 @@ declare namespace org {
                          * @param attributeType the type for the attribute
                          */
                         // @ts-ignore
-                        isHandlerSessionAttribute(attributeName: string, attributeType: java.lang.Class<any>): boolean
+                        public isHandlerSessionAttribute(attributeName: java.lang.String | string, attributeType: java.lang.Class<any>): boolean
                         /**
                          * Store a subset of the given attributes in the session. Attributes not
                          * declared as session attributes via {@code @SessionAttributes} are ignored.
@@ -51,7 +51,7 @@ declare namespace org {
                          * @param attributes candidate attributes for session storage
                          */
                         // @ts-ignore
-                        storeAttributes(request: org.springframework.web.context.request.WebRequest, attributes: java.util.Map<java.lang.String, any>): void
+                        public storeAttributes(request: org.springframework.web.context.request.WebRequest, attributes: java.util.Map<java.lang.String | string, any>): void
                         /**
                          * Retrieve "known" attributes from the session, i.e. attributes listed
                          * by name in {@code @SessionAttributes} or attributes previously stored
@@ -60,7 +60,7 @@ declare namespace org {
                          * @return a map with handler session attributes, possibly empty
                          */
                         // @ts-ignore
-                        retrieveAttributes(request: org.springframework.web.context.request.WebRequest): java.util.Map<java.lang.String, java.lang.Object>
+                        public retrieveAttributes(request: org.springframework.web.context.request.WebRequest): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         /**
                          * Remove "known" attributes from the session, i.e. attributes listed
                          * by name in {@code @SessionAttributes} or attributes previously stored
@@ -68,7 +68,7 @@ declare namespace org {
                          * @param request the current request
                          */
                         // @ts-ignore
-                        cleanupAttributes(request: org.springframework.web.context.request.WebRequest): void
+                        public cleanupAttributes(request: org.springframework.web.context.request.WebRequest): void
                     }
                 }
             }

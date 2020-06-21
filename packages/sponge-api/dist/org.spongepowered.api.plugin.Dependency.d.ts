@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a dependency for a {@link Plugin}.
                  */
                 // @ts-ignore
-                class Dependency implements java.lang.annotation.Annotation {
+                abstract class Dependency implements java.lang.annotation.Annotation {
                 }
             }
         }

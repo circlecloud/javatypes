@@ -25,23 +25,23 @@ declare namespace javax {
             // @ts-ignore
             listenerList: javax.swing.event.EventListenerList
             // @ts-ignore
-            getSelectedIndex(): int
+            public getSelectedIndex(): number /*int*/
             // @ts-ignore
-            setSelectedIndex(index: number /*int*/): void
+            public setSelectedIndex(index: number /*int*/): void
             // @ts-ignore
-            clearSelection(): void
+            public clearSelection(): void
             // @ts-ignore
-            isSelected(): boolean
+            public isSelected(): boolean
             /**
              * Adds a <code>ChangeListener</code> to the button.
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a <code>ChangeListener</code> from the button.
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the change listeners
              * registered on this <code>DefaultSingleSelectionModel</code>.
@@ -53,7 +53,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -93,7 +93,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
         }
     }
 }

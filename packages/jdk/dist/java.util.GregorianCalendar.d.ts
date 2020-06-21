@@ -332,7 +332,7 @@ declare namespace java {
              * @see #ERA
              */
             // @ts-ignore
-            readonly BC: number /*int*/
+            public static readonly BC: number /*int*/
             /**
              * Value of the <code>ERA</code> field indicating
              * the common era (Anno Domini), also known as CE.
@@ -341,7 +341,7 @@ declare namespace java {
              * @see #ERA
              */
             // @ts-ignore
-            readonly AD: number /*int*/
+            public static readonly AD: number /*int*/
             /**
              * Sets the <code>GregorianCalendar</code> change date. This is the point when the switch
              * from Julian dates to Gregorian dates occurred. Default is October 15,
@@ -353,7 +353,7 @@ declare namespace java {
              * @param date the given Gregorian cutover date.
              */
             // @ts-ignore
-            setGregorianChange(date: java.util.Date): void
+            public setGregorianChange(date: java.util.Date): void
             /**
              * Gets the Gregorian Calendar change date.  This is the point when the
              * switch from Julian dates to Gregorian dates occurred. Default is
@@ -362,7 +362,7 @@ declare namespace java {
              * @return the Gregorian cutover date for this <code>GregorianCalendar</code> object.
              */
             // @ts-ignore
-            getGregorianChange(): java.util.Date
+            public getGregorianChange(): java.util.Date
             /**
              * Determines if the given year is a leap year. Returns <code>true</code> if
              * the given year is a leap year. To specify BC year numbers,
@@ -372,14 +372,14 @@ declare namespace java {
              * @return <code>true</code> if the given year is a leap year; <code>false</code> otherwise.
              */
             // @ts-ignore
-            isLeapYear(year: number /*int*/): boolean
+            public isLeapYear(year: number /*int*/): boolean
             /**
              * Returns {@code "gregory"} as the calendar type.
              * @return {#code "gregory"}
              * @since 1.8
              */
             // @ts-ignore
-            getCalendarType(): java.lang.String
+            public getCalendarType(): string
             /**
              * Compares this <code>GregorianCalendar</code> to the specified
              * <code>Object</code>. The result is <code>true</code> if and
@@ -394,12 +394,12 @@ declare namespace java {
              * @see Calendar#compareTo(Calendar)
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Generates the hash code for this <code>GregorianCalendar</code> object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Adds the specified (signed) amount of time to the given calendar field,
              * based on the calendar's rules.
@@ -426,7 +426,7 @@ declare namespace java {
              *  non-lenient mode.
              */
             // @ts-ignore
-            add(field: number /*int*/, amount: number /*int*/): void
+            public add(field: number /*int*/, amount: number /*int*/): void
             /**
              * Adds or subtracts (up/down) a single unit of time on the given time
              * field without changing larger fields.
@@ -445,7 +445,7 @@ declare namespace java {
              * @see #set(int,int)
              */
             // @ts-ignore
-            roll(field: number /*int*/, up: boolean): void
+            public roll(field: number /*int*/, up: boolean): void
             /**
              * Adds a signed amount to the specified calendar field without changing larger fields.
              * A negative roll amount means to subtract from field without changing
@@ -488,7 +488,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            roll(field: number /*int*/, amount: number /*int*/): void
+            public roll(field: number /*int*/, amount: number /*int*/): void
             /**
              * Returns the minimum value for the given calendar field of this
              * <code>GregorianCalendar</code> instance. The minimum value is
@@ -508,7 +508,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            getMinimum(field: number /*int*/): int
+            public getMinimum(field: number /*int*/): number /*int*/
             /**
              * Returns the maximum value for the given calendar field of this
              * <code>GregorianCalendar</code> instance. The maximum value is
@@ -528,7 +528,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            getMaximum(field: number /*int*/): int
+            public getMaximum(field: number /*int*/): number /*int*/
             /**
              * Returns the highest minimum value for the given calendar field
              * of this <code>GregorianCalendar</code> instance. The highest
@@ -548,7 +548,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            getGreatestMinimum(field: number /*int*/): int
+            public getGreatestMinimum(field: number /*int*/): number /*int*/
             /**
              * Returns the lowest maximum value for the given calendar field
              * of this <code>GregorianCalendar</code> instance. The lowest
@@ -568,7 +568,7 @@ declare namespace java {
              * @see #getActualMaximum(int)
              */
             // @ts-ignore
-            getLeastMaximum(field: number /*int*/): int
+            public getLeastMaximum(field: number /*int*/): number /*int*/
             /**
              * Returns the minimum value that this calendar field could have,
              * taking into consideration the given time value and the current
@@ -595,7 +595,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getActualMinimum(field: number /*int*/): int
+            public getActualMinimum(field: number /*int*/): number /*int*/
             /**
              * Returns the maximum value that this calendar field could have,
              * taking into consideration the given time value and the current
@@ -625,13 +625,13 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getActualMaximum(field: number /*int*/): int
+            public getActualMaximum(field: number /*int*/): number /*int*/
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             // @ts-ignore
-            getTimeZone(): java.util.TimeZone
+            public getTimeZone(): java.util.TimeZone
             // @ts-ignore
-            setTimeZone(zone: java.util.TimeZone): void
+            public setTimeZone(zone: java.util.TimeZone): void
             /**
              * Returns {@code true} indicating this {@code GregorianCalendar}
              * supports week dates.
@@ -642,7 +642,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isWeekDateSupported(): boolean
+            public isWeekDateSupported(): boolean
             /**
              * Returns the <a href="#week_year">week year</a> represented by this
              * {@code GregorianCalendar}. The dates in the weeks between 1 and the
@@ -664,7 +664,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getWeekYear(): int
+            public getWeekYear(): number /*int*/
             /**
              * Sets this {@code GregorianCalendar} to the date given by the
              * date specifiers - <a href="#week_year">{@code weekYear}</a>,
@@ -701,7 +701,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            setWeekDate(weekYear: number /*int*/, weekOfYear: number /*int*/, dayOfWeek: number /*int*/): void
+            public setWeekDate(weekYear: number /*int*/, weekOfYear: number /*int*/, dayOfWeek: number /*int*/): void
             /**
              * Returns the number of weeks in the <a href="#week_year">week year</a>
              * represented by this {@code GregorianCalendar}.
@@ -718,7 +718,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            getWeeksInWeekYear(): int
+            public getWeeksInWeekYear(): number /*int*/
             /**
              * Converts the time value (millisecond offset from the <a
              * href="Calendar.html#Epoch">Epoch</a>) to calendar field values.
@@ -750,7 +750,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toZonedDateTime(): java.time.ZonedDateTime
+            public toZonedDateTime(): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code GregorianCalendar} with the default locale
              * from a {@code ZonedDateTime} object.
@@ -775,7 +775,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            from(zdt: java.time.ZonedDateTime): java.util.GregorianCalendar
+            public static from(zdt: java.time.ZonedDateTime): java.util.GregorianCalendar
         }
     }
 }

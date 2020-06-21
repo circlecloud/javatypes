@@ -27,32 +27,32 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            
+            readonly TOGGLE_EXPAND: java.lang.String | string
             /**
              * An action which increments a value.
              * @since 1.5
              */
             // @ts-ignore
-            
+            readonly INCREMENT: java.lang.String | string
             /**
              * An action which decrements a value.
              * @since 1.5
              */
             // @ts-ignore
-            
+            readonly DECREMENT: java.lang.String | string
             /**
              * An action which causes a component to execute its default action.
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly CLICK: java.lang.String | string
             /**
              * An action which causes a popup to become visible if it is hidden and
              * hidden if it is visible.
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly TOGGLE_POPUP: java.lang.String | string
             /**
              * Returns the number of accessible actions available in this object
              * If there are more than one, the first one is considered the "default"
@@ -60,7 +60,7 @@ declare namespace javax {
              * @return the zero-based number of Actions in this object
              */
             // @ts-ignore
-            getAccessibleActionCount(): int
+            getAccessibleActionCount(): number /*int*/
             /**
              * Returns a description of the specified action of the object.
              * @param i zero-based index of the actions
@@ -68,7 +68,7 @@ declare namespace javax {
              * @see #getAccessibleActionCount
              */
             // @ts-ignore
-            getAccessibleActionDescription(i: number /*int*/): java.lang.String
+            getAccessibleActionDescription(i: number /*int*/): string
             /**
              * Performs the specified Action on the object
              * @param i zero-based index of actions

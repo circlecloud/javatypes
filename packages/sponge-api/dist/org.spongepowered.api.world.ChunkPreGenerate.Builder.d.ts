@@ -22,7 +22,7 @@ declare namespace org {
                          * @return This for chained calls
                          */
                         // @ts-ignore
-                        owner(plugin: any): org.spongepowered.api.world.ChunkPreGenerate.Builder
+                        owner(plugin: java.lang.Object | any): org.spongepowered.api.world.ChunkPreGenerate.Builder
                         /**
                          * Adds a logger for logging generator efforts.
                          * <p>Optional. No effect if null is passed.</p>
@@ -76,7 +76,7 @@ declare namespace org {
                          * @return This for chained calls
                          */
                         // @ts-ignore
-                        addListener(listener: java.util.function.Consumer<org.spongepowered.api.event.world.ChunkPreGenerationEvent> | java.util.function$.Consumer<org.spongepowered.api.event.world.ChunkPreGenerationEvent>): org.spongepowered.api.world.ChunkPreGenerate.Builder
+                        addListener(listener: java.util.function$.Consumer<org.spongepowered.api.event.world.ChunkPreGenerationEvent>): org.spongepowered.api.world.ChunkPreGenerate.Builder
                         /**
                          * Schedules the task with the {@link Game#getScheduler()}.
                          * @return The resulting {#link ChunkPreGenerate} that can be used

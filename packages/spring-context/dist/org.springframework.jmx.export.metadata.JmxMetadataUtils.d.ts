@@ -10,7 +10,7 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class JmxMetadataUtils extends java.lang.Object {
+                    abstract class JmxMetadataUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -18,7 +18,7 @@ declare namespace org {
                          * {@link javax.management.modelmbean.ModelMBeanNotificationInfo}.
                          */
                         // @ts-ignore
-                        convertToModelMBeanNotificationInfo(notificationInfo: org.springframework.jmx.export.metadata.ManagedNotification): javax.management.modelmbean.ModelMBeanNotificationInfo
+                        public static convertToModelMBeanNotificationInfo(notificationInfo: org.springframework.jmx.export.metadata.ManagedNotification): javax.management.modelmbean.ModelMBeanNotificationInfo
                     }
                 }
             }

@@ -12,21 +12,21 @@ declare namespace org {
                      * @see #requestCompleted()
                      */
                     // @ts-ignore
-                    class AbstractRequestAttributes extends java.lang.Object implements org.springframework.web.context.request.RequestAttributes {
+                    abstract class AbstractRequestAttributes extends java.lang.Object implements org.springframework.web.context.request.RequestAttributes {
                         // @ts-ignore
                         constructor()
                         /**
                          * Map from attribute name String to destruction callback Runnable.
                          */
                         // @ts-ignore
-                        readonly requestDestructionCallbacks: java.util.Map<java.lang.String, java.lang.Runnable>
+                        readonly requestDestructionCallbacks: java.util.Map<java.lang.String | string, java.lang.Runnable>
                         /**
                          * Signal that the request has been completed.
                          * <p>Executes all request destruction callbacks and updates the
                          * session attributes that have been accessed during request processing.
                          */
                         // @ts-ignore
-                        requestCompleted(): void
+                        public requestCompleted(): void
                         /**
                          * Determine whether the original request is still active.
                          * @see #requestCompleted()
@@ -39,13 +39,13 @@ declare namespace org {
                          * @param callback the callback to be executed for destruction
                          */
                         // @ts-ignore
-                        registerRequestDestructionCallback(name: string, callback: java.lang.Runnable): void
+                        registerRequestDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable): void
                         /**
                          * Remove the request destruction callback for the specified attribute, if any.
                          * @param name the name of the attribute to remove the callback for
                          */
                         // @ts-ignore
-                        removeRequestDestructionCallback(name: string): void
+                        removeRequestDestructionCallback(name: java.lang.String | string): void
                         /**
                          * Update all session attributes that have been accessed during request processing,
                          * to expose their potentially updated state to the underlying session manager.

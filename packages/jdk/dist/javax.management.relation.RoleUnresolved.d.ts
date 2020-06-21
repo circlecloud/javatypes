@@ -22,14 +22,14 @@ declare namespace javax {
                  *  problem type
                  */
                 // @ts-ignore
-                constructor(name: string, value: Array<javax.management.ObjectName>, pbType: number /*int*/)
+                constructor(name: java.lang.String | string, value: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>, pbType: number /*int*/)
                 /**
                  * Retrieves role name.
                  * @return the role name.
                  * @see #setRoleName
                  */
                 // @ts-ignore
-                getRoleName(): java.lang.String
+                public getRoleName(): string
                 /**
                  * Retrieves role value.
                  * @return an ArrayList of ObjectName objects, the one provided to be set
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @see #setRoleValue
                  */
                 // @ts-ignore
-                getRoleValue(): java.util.List<javax.management.ObjectName>
+                public getRoleValue(): Array<javax.management.ObjectName>
                 /**
                  * Retrieves problem type.
                  * @return an integer corresponding to a problem, those being described as
@@ -46,7 +46,7 @@ declare namespace javax {
                  * @see #setProblemType
                  */
                 // @ts-ignore
-                getProblemType(): int
+                public getProblemType(): number /*int*/
                 /**
                  * Sets role name.
                  * @param name the new role name.
@@ -54,7 +54,7 @@ declare namespace javax {
                  * @see #getRoleName
                  */
                 // @ts-ignore
-                setRoleName(name: string): void
+                public setRoleName(name: java.lang.String | string): void
                 /**
                  * Sets role value.
                  * @param value  List of ObjectName objects for referenced
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @see #getRoleValue
                  */
                 // @ts-ignore
-                setRoleValue(value: Array<javax.management.ObjectName>): void
+                public setRoleValue(value: java.util.List<javax.management.ObjectName> | Array<javax.management.ObjectName>): void
                 /**
                  * Sets problem type.
                  * @param pbType  integer corresponding to a problem. Must be one of
@@ -71,19 +71,19 @@ declare namespace javax {
                  * @see #getProblemType
                  */
                 // @ts-ignore
-                setProblemType(pbType: number /*int*/): void
+                public setProblemType(pbType: number /*int*/): void
                 /**
                  * Clone this object.
                  * @return an independent clone.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Return a string describing this object.
                  * @return a description of this RoleUnresolved object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -28,7 +28,7 @@ declare namespace org {
                      *  or an empty set if none has been found for the specified {@code basePackage}
                      */
                     // @ts-ignore
-                    getCandidateTypes(basePackage: string, stereotype: string): java.util.Set<java.lang.String>
+                    public getCandidateTypes(basePackage: java.lang.String | string, stereotype: java.lang.String | string): Array<java.lang.String | string>
                 }
             }
         }

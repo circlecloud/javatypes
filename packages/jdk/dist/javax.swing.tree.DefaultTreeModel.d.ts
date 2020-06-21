@@ -55,7 +55,7 @@ declare namespace javax {
                  * is messaged, otherwise isLeaf() is messaged.
                  */
                 // @ts-ignore
-                setAsksAllowsChildren(newValue: boolean): void
+                public setAsksAllowsChildren(newValue: boolean): void
                 /**
                  * Tells how leaf nodes are determined.
                  * @return true if only nodes which do not allow children are
@@ -64,20 +64,20 @@ declare namespace javax {
                  * @see #asksAllowsChildren
                  */
                 // @ts-ignore
-                asksAllowsChildren(): boolean
+                public asksAllowsChildren(): boolean
                 /**
                  * Sets the root to <code>root</code>. A null <code>root</code> implies
                  * the tree is to display nothing, and is legal.
                  */
                 // @ts-ignore
-                setRoot(root: javax.swing.tree.TreeNode): void
+                public setRoot(root: javax.swing.tree.TreeNode): void
                 /**
                  * Returns the root of the tree.  Returns null only if the tree has
                  * no nodes.
                  * @return the root of the tree
                  */
                 // @ts-ignore
-                getRoot(): java.lang.Object
+                public getRoot(): any
                 /**
                  * Returns the index of child in parent.
                  * If either the parent or child is <code>null</code>, returns -1.
@@ -87,7 +87,7 @@ declare namespace javax {
                  *     if either the parent or the child is <code>null</code>
                  */
                 // @ts-ignore
-                getIndexOfChild(parent: any, child: any): int
+                public getIndexOfChild(parent: java.lang.Object | any, child: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the child of <I>parent</I> at index <I>index</I> in the parent's
                  * child array.  <I>parent</I> must be a node previously obtained from
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @return the child of <I>parent</I> at index <I>index</I>
                  */
                 // @ts-ignore
-                getChild(parent: any, index: number /*int*/): java.lang.Object
+                public getChild(parent: java.lang.Object | any, index: number /*int*/): any
                 /**
                  * Returns the number of children of <I>parent</I>.  Returns 0 if the node
                  * is a leaf or if it has no children.  <I>parent</I> must be a node
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @return the number of children of the node <I>parent</I>
                  */
                 // @ts-ignore
-                getChildCount(parent: any): int
+                public getChildCount(parent: java.lang.Object | any): number /*int*/
                 /**
                  * Returns whether the specified node is a leaf node.
                  * The way the test is performed depends on the
@@ -118,14 +118,14 @@ declare namespace javax {
                  * @see TreeModel#isLeaf
                  */
                 // @ts-ignore
-                isLeaf(node: any): boolean
+                public isLeaf(node: java.lang.Object | any): boolean
                 /**
                  * Invoke this method if you've modified the {@code TreeNode}s upon which
                  * this model depends. The model will notify all of its listeners that the
                  * model has changed.
                  */
                 // @ts-ignore
-                reload(): void
+                public reload(): void
                 /**
                  * This sets the user object of the TreeNode identified by path
                  * and posts a node changed.  If you use custom user objects in
@@ -133,7 +133,7 @@ declare namespace javax {
                  * set the user object of the changed node to something meaningful.
                  */
                 // @ts-ignore
-                valueForPathChanged(path: javax.swing.tree.TreePath, newValue: any): void
+                public valueForPathChanged(path: javax.swing.tree.TreePath, newValue: java.lang.Object | any): void
                 /**
                  * Invoked this to insert newChild at location index in parents children.
                  * This will then message nodesWereInserted to create the appropriate
@@ -141,7 +141,7 @@ declare namespace javax {
                  * the appropriate event.
                  */
                 // @ts-ignore
-                insertNodeInto(newChild: javax.swing.tree.MutableTreeNode, parent: javax.swing.tree.MutableTreeNode, index: number /*int*/): void
+                public insertNodeInto(newChild: javax.swing.tree.MutableTreeNode, parent: javax.swing.tree.MutableTreeNode, index: number /*int*/): void
                 /**
                  * Message this to remove node from its parent. This will message
                  * nodesWereRemoved to create the appropriate event. This is the
@@ -149,13 +149,13 @@ declare namespace javax {
                  * for you.
                  */
                 // @ts-ignore
-                removeNodeFromParent(node: javax.swing.tree.MutableTreeNode): void
+                public removeNodeFromParent(node: javax.swing.tree.MutableTreeNode): void
                 /**
                  * Invoke this method after you've changed how node is to be
                  * represented in the tree.
                  */
                 // @ts-ignore
-                nodeChanged(node: javax.swing.tree.TreeNode): void
+                public nodeChanged(node: javax.swing.tree.TreeNode): void
                 /**
                  * Invoke this method if you've modified the {@code TreeNode}s upon which
                  * this model depends. The model will notify all of its listeners that the
@@ -163,14 +163,14 @@ declare namespace javax {
                  * @param node the node below which the model has changed
                  */
                 // @ts-ignore
-                reload(node: javax.swing.tree.TreeNode): void
+                public reload(node: javax.swing.tree.TreeNode): void
                 /**
                  * Invoke this method after you've inserted some TreeNodes into
                  * node.  childIndices should be the index of the new elements and
                  * must be sorted in ascending order.
                  */
                 // @ts-ignore
-                nodesWereInserted(node: javax.swing.tree.TreeNode, childIndices: number /*int*/[]): void
+                public nodesWereInserted(node: javax.swing.tree.TreeNode, childIndices: number /*int*/[]): void
                 /**
                  * Invoke this method after you've removed some TreeNodes from
                  * node.  childIndices should be the index of the removed elements and
@@ -178,20 +178,20 @@ declare namespace javax {
                  * the array of the children objects that were removed.
                  */
                 // @ts-ignore
-                nodesWereRemoved(node: javax.swing.tree.TreeNode, childIndices: number /*int*/[], removedChildren: any[]): void
+                public nodesWereRemoved(node: javax.swing.tree.TreeNode, childIndices: number /*int*/[], removedChildren: java.lang.Object[] | any[]): void
                 /**
                  * Invoke this method after you've changed how the children identified by
                  * childIndicies are to be represented in the tree.
                  */
                 // @ts-ignore
-                nodesChanged(node: javax.swing.tree.TreeNode, childIndices: number /*int*/[]): void
+                public nodesChanged(node: javax.swing.tree.TreeNode, childIndices: number /*int*/[]): void
                 /**
                  * Invoke this method if you've totally changed the children of
                  * node and its children's children...  This will post a
                  * treeStructureChanged event.
                  */
                 // @ts-ignore
-                nodeStructureChanged(node: javax.swing.tree.TreeNode): void
+                public nodeStructureChanged(node: javax.swing.tree.TreeNode): void
                 /**
                  * Builds the parents of node up to and including the root node,
                  * where the original node is the last element in the returned array.
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @param aNode the TreeNode to get the path for
                  */
                 // @ts-ignore
-                getPathToRoot(aNode: javax.swing.tree.TreeNode): javax.swing.tree.TreeNode[]
+                public getPathToRoot(aNode: javax.swing.tree.TreeNode): javax.swing.tree.TreeNode[]
                 /**
                  * Builds the parents of node up to and including the root node,
                  * where the original node is the last element in the returned array.
@@ -220,14 +220,14 @@ declare namespace javax {
                  * @param l       the listener to add
                  */
                 // @ts-ignore
-                addTreeModelListener(l: javax.swing.event.TreeModelListener): void
+                public addTreeModelListener(l: javax.swing.event.TreeModelListener): void
                 /**
                  * Removes a listener previously added with <B>addTreeModelListener()</B>.
                  * @see #addTreeModelListener
                  * @param l       the listener to remove
                  */
                 // @ts-ignore
-                removeTreeModelListener(l: javax.swing.event.TreeModelListener): void
+                public removeTreeModelListener(l: javax.swing.event.TreeModelListener): void
                 /**
                  * Returns an array of all the tree model listeners
                  * registered on this model.
@@ -239,7 +239,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getTreeModelListeners(): javax.swing.event.TreeModelListener[]
+                public getTreeModelListeners(): javax.swing.event.TreeModelListener[]
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -253,7 +253,7 @@ declare namespace javax {
                  * @param children the changed elements
                  */
                 // @ts-ignore
-                fireTreeNodesChanged(source: any, path: any[], childIndices: number /*int*/[], children: any[]): void
+                fireTreeNodesChanged(source: java.lang.Object | any, path: java.lang.Object[] | any[], childIndices: number /*int*/[], children: java.lang.Object[] | any[]): void
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -266,7 +266,7 @@ declare namespace javax {
                  * @param children the new elements
                  */
                 // @ts-ignore
-                fireTreeNodesInserted(source: any, path: any[], childIndices: number /*int*/[], children: any[]): void
+                fireTreeNodesInserted(source: java.lang.Object | any, path: java.lang.Object[] | any[], childIndices: number /*int*/[], children: java.lang.Object[] | any[]): void
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -279,7 +279,7 @@ declare namespace javax {
                  * @param children the removed elements
                  */
                 // @ts-ignore
-                fireTreeNodesRemoved(source: any, path: any[], childIndices: number /*int*/[], children: any[]): void
+                fireTreeNodesRemoved(source: java.lang.Object | any, path: java.lang.Object[] | any[], childIndices: number /*int*/[], children: java.lang.Object[] | any[]): void
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -293,7 +293,7 @@ declare namespace javax {
                  * @param children the affected elements
                  */
                 // @ts-ignore
-                fireTreeStructureChanged(source: any, path: any[], childIndices: number /*int*/[], children: any[]): void
+                fireTreeStructureChanged(source: java.lang.Object | any, path: java.lang.Object[] | any[], childIndices: number /*int*/[], children: java.lang.Object[] | any[]): void
                 /**
                  * Returns an array of all the objects currently registered
                  * as <code><em>Foo</em>Listener</code>s
@@ -324,7 +324,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             }
         }
     }

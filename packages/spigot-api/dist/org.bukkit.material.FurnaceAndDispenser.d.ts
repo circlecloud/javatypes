@@ -18,7 +18,7 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                clone(): org.bukkit.material.FurnaceAndDispenser
+                public clone(): org.bukkit.material.FurnaceAndDispenser
             }
         }
     }

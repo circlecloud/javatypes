@@ -9,17 +9,17 @@ declare namespace org {
                     // @ts-ignore
                     class DoublePlantTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly FERN: org.spongepowered.api.data.type.DoublePlantType
+                        public static readonly FERN: org.spongepowered.api.data.type.DoublePlantType
                         // @ts-ignore
-                        readonly GRASS: org.spongepowered.api.data.type.DoublePlantType
+                        public static readonly GRASS: org.spongepowered.api.data.type.DoublePlantType
                         // @ts-ignore
-                        readonly PAEONIA: org.spongepowered.api.data.type.DoublePlantType
+                        public static readonly PAEONIA: org.spongepowered.api.data.type.DoublePlantType
                         // @ts-ignore
-                        readonly ROSE: org.spongepowered.api.data.type.DoublePlantType
+                        public static readonly ROSE: org.spongepowered.api.data.type.DoublePlantType
                         // @ts-ignore
-                        readonly SUNFLOWER: org.spongepowered.api.data.type.DoublePlantType
+                        public static readonly SUNFLOWER: org.spongepowered.api.data.type.DoublePlantType
                         // @ts-ignore
-                        readonly SYRINGA: org.spongepowered.api.data.type.DoublePlantType
+                        public static readonly SYRINGA: org.spongepowered.api.data.type.DoublePlantType
                     }
                 }
             }

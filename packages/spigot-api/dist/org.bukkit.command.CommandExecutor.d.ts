@@ -18,7 +18,7 @@ declare namespace org {
                  * @return true if a valid command, otherwise false
                  */
                 // @ts-ignore
-                onCommand(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, label: string, args: string[]): boolean
+                onCommand(sender: org.bukkit.command.CommandSender, command: org.bukkit.command.Command, label: java.lang.String | string, args: java.lang.String[] | string[]): boolean
             }
         }
     }

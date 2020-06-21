@@ -180,20 +180,20 @@ declare namespace java {
                  * must be serializable
                  */
                 // @ts-ignore
-                readonly FLAG_SERIALIZABLE: number /*int*/
+                public static readonly FLAG_SERIALIZABLE: number /*int*/
                 /**
                  * Flag for alternate metafactories indicating the lambda object implements
                  * other marker interfaces
                  * besides Serializable
                  */
                 // @ts-ignore
-                readonly FLAG_MARKERS: number /*int*/
+                public static readonly FLAG_MARKERS: number /*int*/
                 /**
                  * Flag for alternate metafactories indicating the lambda object requires
                  * additional bridge methods
                  */
                 // @ts-ignore
-                readonly FLAG_BRIDGES: number /*int*/
+                public static readonly FLAG_BRIDGES: number /*int*/
                 /**
                  * Facilitates the creation of simple "function objects" that implement one
                  * or more interfaces by delegation to a provided {@link MethodHandle},
@@ -246,7 +246,7 @@ declare namespace java {
                  *                                    are violated
                  */
                 // @ts-ignore
-                metafactory(caller: java.lang.invoke.MethodHandles.Lookup, invokedName: string, invokedType: java.lang.invoke.MethodType, samMethodType: java.lang.invoke.MethodType, implMethod: java.lang.invoke.MethodHandle, instantiatedMethodType: java.lang.invoke.MethodType): java.lang.invoke.CallSite
+                public static metafactory(caller: java.lang.invoke.MethodHandles.Lookup, invokedName: java.lang.String | string, invokedType: java.lang.invoke.MethodType, samMethodType: java.lang.invoke.MethodType, implMethod: java.lang.invoke.MethodHandle, instantiatedMethodType: java.lang.invoke.MethodType): java.lang.invoke.CallSite
                 /**
                  * Facilitates the creation of simple "function objects" that implement one
                  * or more interfaces by delegation to a provided {@link MethodHandle},
@@ -357,7 +357,7 @@ declare namespace java {
                  *                                    are violated
                  */
                 // @ts-ignore
-                altMetafactory(caller: java.lang.invoke.MethodHandles.Lookup, invokedName: string, invokedType: java.lang.invoke.MethodType, ...args: any[]): java.lang.invoke.CallSite
+                public static altMetafactory(caller: java.lang.invoke.MethodHandles.Lookup, invokedName: java.lang.String | string, invokedType: java.lang.invoke.MethodType, ...args: java.lang.Object[] | any[]): java.lang.invoke.CallSite
             }
         }
     }

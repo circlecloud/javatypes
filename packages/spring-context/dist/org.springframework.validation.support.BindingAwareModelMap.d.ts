@@ -19,9 +19,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    put(key: string, value: any): java.lang.Object
+                    public put(key: java.lang.String | string, value: java.lang.Object | any): any
                     // @ts-ignore
-                    putAll(map: java.util.Map<java.lang.String, any>): void
+                    public putAll(map: java.util.Map<any, any>): void
                 }
             }
         }

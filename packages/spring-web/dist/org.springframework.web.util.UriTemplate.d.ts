@@ -27,13 +27,13 @@ declare namespace org {
                      * @param uriTemplate the URI template string
                      */
                     // @ts-ignore
-                    constructor(uriTemplate: string)
+                    constructor(uriTemplate: java.lang.String | string)
                     /**
                      * Return the names of the variables in the template, in order.
                      * @return the template variable names
                      */
                     // @ts-ignore
-                    getVariableNames(): java.util.List<java.lang.String>
+                    public getVariableNames(): Array<java.lang.String | string>
                     /**
                      * Given the Map of variables, expands this template into a URI. The Map keys represent variable names,
                      * the Map values variable values. The order of variables is not significant.
@@ -52,7 +52,7 @@ declare namespace org {
                      *  or if it does not contain values for all the variable names
                      */
                     // @ts-ignore
-                    expand(uriVariables: java.util.Map<java.lang.String, any>): java.net.URI
+                    public expand(uriVariables: java.util.Map<java.lang.String | string, any>): java.net.URI
                     /**
                      * Given an array of variables, expand this template into a full URI. The array represent variable values.
                      * The order of variables is significant.
@@ -68,14 +68,14 @@ declare namespace org {
                      *  or if it does not contain sufficient variables
                      */
                     // @ts-ignore
-                    expand(...uriVariableValues: any[]): java.net.URI
+                    public expand(...uriVariableValues: java.lang.Object[] | any[]): java.net.URI
                     /**
                      * Indicate whether the given URI matches this template.
                      * @param uri the URI to match to
                      * @return {#code true} if it matches; {@code false} otherwise
                      */
                     // @ts-ignore
-                    matches(uri: string): boolean
+                    public matches(uri: java.lang.String | string): boolean
                     /**
                      * Match the given URI to a map of variable values. Keys in the returned map are variable names,
                      * values are variable values, as occurred in the given URI.
@@ -89,9 +89,9 @@ declare namespace org {
                      * @return a map of variable values
                      */
                     // @ts-ignore
-                    match(uri: string): java.util.Map<java.lang.String, java.lang.String>
+                    public match(uri: java.lang.String | string): java.util.Map<java.lang.String | string, java.lang.String | string>
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

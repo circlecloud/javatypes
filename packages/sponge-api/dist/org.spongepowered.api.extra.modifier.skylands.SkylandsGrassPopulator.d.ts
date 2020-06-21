@@ -16,7 +16,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            populate(world: org.spongepowered.api.world.World, buffer: org.spongepowered.api.world.extent.MutableBlockVolume, biomes: org.spongepowered.api.world.extent.ImmutableBiomeVolume): void
+                            public populate(world: org.spongepowered.api.world.World, buffer: org.spongepowered.api.world.extent.MutableBlockVolume, biomes: org.spongepowered.api.world.extent.ImmutableBiomeVolume): void
                         }
                     }
                 }

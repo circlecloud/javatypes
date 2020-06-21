@@ -12,18 +12,18 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class ByteArrayHttpMessageConverter extends org.springframework.http.converter.AbstractHttpMessageConverter<byte[]> {
+                class ByteArrayHttpMessageConverter extends org.springframework.http.converter.AbstractHttpMessageConverter<number /*byte*/[]> {
                     /**
                      * Create a new instance of the {@code ByteArrayHttpMessageConverter}.
                      */
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    supports(clazz: java.lang.Class<any>): boolean
+                    public supports(clazz: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    readInternal(clazz: java.lang.Class<byte[]>, inputMessage: org.springframework.http.HttpInputMessage): byte[]
+                    public readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): number /*byte*/[]
                     // @ts-ignore
-                    getContentLength(bytes: number /*byte*/[], contentType: org.springframework.http.MediaType): java.lang.Long
+                    getContentLength(bytes: number /*byte*/[], contentType: org.springframework.http.MediaType): number
                     // @ts-ignore
                     writeInternal(bytes: number /*byte*/[], outputMessage: org.springframework.http.HttpOutputMessage): void
                 }

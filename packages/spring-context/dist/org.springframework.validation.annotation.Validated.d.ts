@@ -26,7 +26,7 @@ declare namespace org {
                  * @see org.springframework.validation.beanvalidation.MethodValidationPostProcessor
                  */
                 // @ts-ignore
-                class Validated implements java.lang.annotation.Annotation {
+                abstract class Validated implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -26,17 +26,17 @@ declare namespace org {
                  * @return CoalType of this coal
                  */
                 // @ts-ignore
-                getType(): org.bukkit.CoalType
+                public getType(): org.bukkit.CoalType
                 /**
                  * Sets the type of this coal
                  * @param type New type of this coal
                  */
                 // @ts-ignore
-                setType(type: org.bukkit.CoalType): void
+                public setType(type: org.bukkit.CoalType): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Coal
+                public clone(): org.bukkit.material.Coal
             }
         }
     }

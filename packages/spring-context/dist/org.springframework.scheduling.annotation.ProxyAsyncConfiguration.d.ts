@@ -17,7 +17,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    asyncAdvisor(): org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor
+                    public asyncAdvisor(): org.springframework.scheduling.annotation.AsyncAnnotationBeanPostProcessor
                 }
             }
         }

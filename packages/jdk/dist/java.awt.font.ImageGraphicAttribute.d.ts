@@ -47,7 +47,7 @@ declare namespace java {
                  * @return the ascent of this <code>ImageGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getAscent(): float
+                public getAscent(): number /*float*/
                 /**
                  * Returns the descent of this <code>ImageGraphicAttribute</code>.
                  * The descent of an <code>ImageGraphicAttribute</code> is the
@@ -55,7 +55,7 @@ declare namespace java {
                  * @return the descent of this <code>ImageGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getDescent(): float
+                public getDescent(): number /*float*/
                 /**
                  * Returns the advance of this <code>ImageGraphicAttribute</code>.
                  * The advance of an <code>ImageGraphicAttribute</code> is the
@@ -63,7 +63,7 @@ declare namespace java {
                  * @return the advance of this <code>ImageGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getAdvance(): float
+                public getAdvance(): number /*float*/
                 /**
                  * Returns a {@link Rectangle2D} that encloses all of the
                  * bits rendered by this <code>ImageGraphicAttribute</code>, relative
@@ -74,18 +74,18 @@ declare namespace java {
                  *  rendered by this <code>ImageGraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getBounds(): java.awt.geom.Rectangle2D
+                public getBounds(): java.awt.geom.Rectangle2D
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                draw(graphics: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
+                public draw(graphics: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
                 /**
                  * Returns a hashcode for this <code>ImageGraphicAttribute</code>.
                  * @return a hash code value for this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares this <code>ImageGraphicAttribute</code> to the specified
                  * {@link Object}.
@@ -95,7 +95,7 @@ declare namespace java {
                  *  <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(rhs: any): boolean
+                public equals(rhs: java.lang.Object | any): boolean
                 /**
                  * Compares this <code>ImageGraphicAttribute</code> to the specified
                  * <code>ImageGraphicAttribute</code>.
@@ -106,7 +106,7 @@ declare namespace java {
                  *  <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(rhs: java.awt.font.ImageGraphicAttribute): boolean
+                public equals(rhs: java.awt.font.ImageGraphicAttribute): boolean
             }
         }
     }

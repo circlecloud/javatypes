@@ -24,35 +24,35 @@ declare namespace org {
                  * @return true if connected, false if not
                  */
                 // @ts-ignore
-                isConnected(): boolean
+                public isConnected(): boolean
                 /**
                  * Set tripwire connection state
                  * @param connected - true if connected, false if not
                  */
                 // @ts-ignore
-                setConnected(connected: boolean): void
+                public setConnected(connected: boolean): void
                 /**
                  * Test if hook is currently activated
                  * @return true if activated, false if not
                  */
                 // @ts-ignore
-                isActivated(): boolean
+                public isActivated(): boolean
                 /**
                  * Set hook activated state
                  * @param act - true if activated, false if not
                  */
                 // @ts-ignore
-                setActivated(act: boolean): void
+                public setActivated(act: boolean): void
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 // @ts-ignore
-                clone(): org.bukkit.material.TripwireHook
+                public clone(): org.bukkit.material.TripwireHook
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -16,7 +16,7 @@ declare namespace org {
                      * @see org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter
                      */
                     // @ts-ignore
-                    class RequestBody implements java.lang.annotation.Annotation {
+                    abstract class RequestBody implements java.lang.annotation.Annotation {
                     }
                 }
             }

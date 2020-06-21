@@ -107,7 +107,7 @@ declare namespace java {
              * @see #setAddress(java.net.InetAddress)
              */
             // @ts-ignore
-            getAddress(): java.net.InetAddress
+            public getAddress(): java.net.InetAddress
             /**
              * Returns the port number on the remote host to which this datagram is
              * being sent or from which the datagram was received.
@@ -116,7 +116,7 @@ declare namespace java {
              * @see #setPort(int)
              */
             // @ts-ignore
-            getPort(): int
+            public getPort(): number /*int*/
             /**
              * Returns the data buffer. The data received or the data to be sent
              * starts from the {@code offset} in the buffer,
@@ -125,7 +125,7 @@ declare namespace java {
              * @see #setData(byte[], int, int)
              */
             // @ts-ignore
-            getData(): byte[]
+            public getData(): number /*byte*/[]
             /**
              * Returns the offset of the data to be sent or the offset of the
              * data received.
@@ -134,7 +134,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getOffset(): int
+            public getOffset(): number /*int*/
             /**
              * Returns the length of the data to be sent or the length of the
              * data received.
@@ -143,7 +143,7 @@ declare namespace java {
              * @see #setLength(int)
              */
             // @ts-ignore
-            getLength(): int
+            public getLength(): number /*int*/
             /**
              * Set the data buffer for this packet. This sets the
              * data, length and offset of the packet.
@@ -158,7 +158,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setData(buf: number /*byte*/[], offset: number /*int*/, length: number /*int*/): void
+            public setData(buf: number /*byte*/[], offset: number /*int*/, length: number /*int*/): void
             /**
              * Sets the IP address of the machine to which this datagram
              * is being sent.
@@ -167,7 +167,7 @@ declare namespace java {
              * @see #getAddress()
              */
             // @ts-ignore
-            setAddress(iaddr: java.net.InetAddress): void
+            public setAddress(iaddr: java.net.InetAddress): void
             /**
              * Sets the port number on the remote host to which this datagram
              * is being sent.
@@ -176,7 +176,7 @@ declare namespace java {
              * @see #getPort()
              */
             // @ts-ignore
-            setPort(iport: number /*int*/): void
+            public setPort(iport: number /*int*/): void
             /**
              * Sets the SocketAddress (usually IP address + port number) of the remote
              * host to which this datagram is being sent.
@@ -187,7 +187,7 @@ declare namespace java {
              * @see #getSocketAddress
              */
             // @ts-ignore
-            setSocketAddress(address: java.net.SocketAddress): void
+            public setSocketAddress(address: java.net.SocketAddress): void
             /**
              * Gets the SocketAddress (usually IP address + port number) of the remote
              * host that this packet is being sent to or is coming from.
@@ -196,7 +196,7 @@ declare namespace java {
              * @see #setSocketAddress
              */
             // @ts-ignore
-            getSocketAddress(): java.net.SocketAddress
+            public getSocketAddress(): java.net.SocketAddress
             /**
              * Set the data buffer for this packet. With the offset of
              * this DatagramPacket set to 0, and the length set to
@@ -208,7 +208,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setData(buf: number /*byte*/[]): void
+            public setData(buf: number /*byte*/[]): void
             /**
              * Set the length for this packet. The length of the packet is
              * the number of bytes from the packet's data buffer that will be
@@ -224,7 +224,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setLength(length: number /*int*/): void
+            public setLength(length: number /*int*/): void
         }
     }
 }

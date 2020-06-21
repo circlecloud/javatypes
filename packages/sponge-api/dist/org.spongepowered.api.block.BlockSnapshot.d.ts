@@ -13,7 +13,7 @@ declare namespace org {
                      * {@link BlockTypes#AIR} and a {@link Location} that cannot be determined.
                      */
                     // @ts-ignore
-                    
+                    readonly NONE: org.spongepowered.api.block.BlockSnapshot
                     /**
                      * Creates a {@link Builder} to get {@link BlockSnapshot}s.
                      * @return The new builder

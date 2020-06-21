@@ -19,7 +19,7 @@ declare namespace org {
                          * @see org.springframework.web.server.ServerWebExchange#getLogPrefix()
                          */
                         // @ts-ignore
-                        getId(): java.lang.String
+                        getId(): string
                         /**
                          * Returns a structured representation of the request path including the
                          * context path + path within application portions, path segments with
@@ -31,12 +31,12 @@ declare namespace org {
                          * Return a read-only map with parsed and decoded query parameter values.
                          */
                         // @ts-ignore
-                        getQueryParams(): <any>
+                        getQueryParams(): object
                         /**
                          * Return a read-only map of cookies sent by the client.
                          */
                         // @ts-ignore
-                        getCookies(): <any>
+                        getCookies(): object
                         /**
                          * Return the remote address where this request is connected to, if available.
                          */

@@ -36,7 +36,7 @@ declare namespace javax {
                          * @return the stylesheet
                          */
                         // @ts-ignore
-                        getStylesheet(): javax.xml.crypto.XMLStructure
+                        public getStylesheet(): javax.xml.crypto.XMLStructure
                     }
                 }
             }

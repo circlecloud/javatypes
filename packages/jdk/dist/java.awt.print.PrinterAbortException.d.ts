@@ -22,7 +22,7 @@ declare namespace java {
                  *  <code>PrinterAbortException</code> is thrown
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
             }
         }
     }

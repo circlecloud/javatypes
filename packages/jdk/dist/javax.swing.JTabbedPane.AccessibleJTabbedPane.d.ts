@@ -30,22 +30,22 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getAccessibleName(): java.lang.String
+                public getAccessibleName(): string
                 // @ts-ignore
-                stateChanged(e: javax.swing.event.ChangeEvent): void
+                public stateChanged(e: javax.swing.event.ChangeEvent): void
                 /**
                  * Get the role of this object.
                  * @return an instance of AccessibleRole describing the role of
                  *           the object
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Returns the number of accessible children in the object.
                  * @return the number of accessible children in the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Return the specified Accessible child of the object.
                  * @param i zero-based index of child
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException if index is out of bounds
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Gets the <code>AccessibleSelection</code> associated with
                  * this object.  In the implementation of the Java
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @return this object
                  */
                 // @ts-ignore
-                getAccessibleSelection(): javax.accessibility.AccessibleSelection
+                public getAccessibleSelection(): javax.accessibility.AccessibleSelection
                 /**
                  * Returns the <code>Accessible</code> child contained at
                  * the local coordinate <code>Point</code>, if one exists.
@@ -72,21 +72,21 @@ declare namespace javax {
                  *     location, if it exists
                  */
                 // @ts-ignore
-                getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                 // @ts-ignore
-                getAccessibleSelectionCount(): int
+                public getAccessibleSelectionCount(): number /*int*/
                 // @ts-ignore
-                getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleSelection(i: number /*int*/): javax.accessibility.Accessible
                 // @ts-ignore
-                isAccessibleChildSelected(i: number /*int*/): boolean
+                public isAccessibleChildSelected(i: number /*int*/): boolean
                 // @ts-ignore
-                addAccessibleSelection(i: number /*int*/): void
+                public addAccessibleSelection(i: number /*int*/): void
                 // @ts-ignore
-                removeAccessibleSelection(i: number /*int*/): void
+                public removeAccessibleSelection(i: number /*int*/): void
                 // @ts-ignore
-                clearAccessibleSelection(): void
+                public clearAccessibleSelection(): void
                 // @ts-ignore
-                selectAllAccessibleSelection(): void
+                public selectAllAccessibleSelection(): void
             }
         }
     }

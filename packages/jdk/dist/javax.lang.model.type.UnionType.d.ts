@@ -16,7 +16,7 @@ declare namespace javax {
                      * @return the alternatives comprising this union type.
                      */
                     // @ts-ignore
-                    getAlternatives(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getAlternatives(): Array<any>
                 }
             }
         }

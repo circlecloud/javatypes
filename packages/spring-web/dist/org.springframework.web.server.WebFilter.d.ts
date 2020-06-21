@@ -19,7 +19,7 @@ declare namespace org {
                      * @return {#code Mono<Void>} to indicate when request processing is complete
                      */
                     // @ts-ignore
-                    filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): <any>
+                    filter(exchange: org.springframework.web.server.ServerWebExchange, chain: org.springframework.web.server.WebFilterChain): object
                 }
             }
         }

@@ -42,7 +42,7 @@ declare namespace javax {
                  * The value of this constant is {@code "javax.security.sasl.qop"}.
                  */
                 // @ts-ignore
-                readonly QOP: string
+                public static readonly QOP: java.lang.String | string
                 /**
                  * The name of a property that specifies the cipher strength to use.
                  * The property contains a comma-separated, ordered list
@@ -64,7 +64,7 @@ declare namespace javax {
                  * The value of this constant is {@code "javax.security.sasl.strength"}.
                  */
                 // @ts-ignore
-                readonly STRENGTH: string
+                public static readonly STRENGTH: java.lang.String | string
                 /**
                  * The name of a property that specifies whether the
                  * server must authenticate to the client. The property contains
@@ -75,7 +75,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.server.authentication"}.
                  */
                 // @ts-ignore
-                readonly SERVER_AUTH: string
+                public static readonly SERVER_AUTH: java.lang.String | string
                 /**
                  * The name of a property that specifies the bound server name for
                  * an unbound server. A server is created as an unbound server by setting
@@ -86,7 +86,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.bound.server.name"}.
                  */
                 // @ts-ignore
-                readonly BOUND_SERVER_NAME: string
+                public static readonly BOUND_SERVER_NAME: java.lang.String | string
                 /**
                  * The name of a property that specifies the maximum size of the receive
                  * buffer in bytes of {@code SaslClient}/{@code SaslServer}.
@@ -96,7 +96,7 @@ declare namespace javax {
                  * <br>The value of this constant is {@code "javax.security.sasl.maxbuffer"}.
                  */
                 // @ts-ignore
-                readonly MAX_BUFFER: string
+                public static readonly MAX_BUFFER: java.lang.String | string
                 /**
                  * The name of a property that specifies the maximum size of the raw send
                  * buffer in bytes of {@code SaslClient}/{@code SaslServer}.
@@ -106,7 +106,7 @@ declare namespace javax {
                  * <br>The value of this constant is {@code "javax.security.sasl.rawsendsize"}.
                  */
                 // @ts-ignore
-                readonly RAW_SEND_SIZE: string
+                public static readonly RAW_SEND_SIZE: java.lang.String | string
                 /**
                  * The name of a property that specifies whether to reuse previously
                  * authenticated session information. The property contains "true" if the
@@ -130,7 +130,7 @@ declare namespace javax {
                  * implementation-dependent.
                  */
                 // @ts-ignore
-                readonly REUSE: string
+                public static readonly REUSE: java.lang.String | string
                 /**
                  * The name of a property that specifies
                  * whether mechanisms susceptible to simple plain passive attacks (e.g.,
@@ -142,7 +142,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.policy.noplaintext"}.
                  */
                 // @ts-ignore
-                readonly POLICY_NOPLAINTEXT: string
+                public static readonly POLICY_NOPLAINTEXT: java.lang.String | string
                 /**
                  * The name of a property that specifies whether
                  * mechanisms susceptible to active (non-dictionary) attacks
@@ -155,7 +155,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.policy.noactive"}.
                  */
                 // @ts-ignore
-                readonly POLICY_NOACTIVE: string
+                public static readonly POLICY_NOACTIVE: java.lang.String | string
                 /**
                  * The name of a property that specifies whether
                  * mechanisms susceptible to passive dictionary attacks are not permitted.
@@ -168,7 +168,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.policy.nodictionary"}.
                  */
                 // @ts-ignore
-                readonly POLICY_NODICTIONARY: string
+                public static readonly POLICY_NODICTIONARY: java.lang.String | string
                 /**
                  * The name of a property that specifies whether mechanisms that accept
                  * anonymous login are not permitted. The property contains {@code "true"}
@@ -180,7 +180,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.policy.noanonymous"}.
                  */
                 // @ts-ignore
-                readonly POLICY_NOANONYMOUS: string
+                public static readonly POLICY_NOANONYMOUS: java.lang.String | string
                 /**
                  * The name of a property that specifies whether mechanisms that implement
                  * forward secrecy between sessions are required. Forward secrecy
@@ -195,7 +195,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.policy.forward"}.
                  */
                 // @ts-ignore
-                readonly POLICY_FORWARD_SECRECY: string
+                public static readonly POLICY_FORWARD_SECRECY: java.lang.String | string
                 /**
                  * The name of a property that specifies whether
                  * mechanisms that pass client credentials are required. The property
@@ -207,7 +207,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.policy.credentials"}.
                  */
                 // @ts-ignore
-                readonly POLICY_PASS_CREDENTIALS: string
+                public static readonly POLICY_PASS_CREDENTIALS: java.lang.String | string
                 /**
                  * The name of a property that specifies the credentials to use.
                  * The property contains a mechanism-specific Java credential object.
@@ -220,7 +220,7 @@ declare namespace javax {
                  * {@code "javax.security.sasl.credentials"}.
                  */
                 // @ts-ignore
-                readonly CREDENTIALS: string
+                public static readonly CREDENTIALS: java.lang.String | string
                 /**
                  * Creates a {@code SaslClient} using the parameters supplied.
                  * This method uses the
@@ -290,7 +290,7 @@ declare namespace javax {
                  *  of an error.
                  */
                 // @ts-ignore
-                createSaslClient(mechanisms: string[], authorizationId: string, protocol: string, serverName: string, props: java.util.Map<java.lang.String, any>, cbh: javax.security.auth.callback.CallbackHandler): javax.security.sasl.SaslClient
+                public static createSaslClient(mechanisms: java.lang.String[] | string[], authorizationId: java.lang.String | string, protocol: java.lang.String | string, serverName: java.lang.String | string, props: java.util.Map<java.lang.String | string, any>, cbh: javax.security.auth.callback.CallbackHandler): javax.security.sasl.SaslClient
                 /**
                  * Creates a {@code SaslServer} for the specified mechanism.
                  * This method uses the
@@ -357,7 +357,7 @@ declare namespace javax {
                  *  of an error.
                  */
                 // @ts-ignore
-                createSaslServer(mechanism: string, protocol: string, serverName: string, props: java.util.Map<java.lang.String, any>, cbh: javax.security.auth.callback.CallbackHandler): javax.security.sasl.SaslServer
+                public static createSaslServer(mechanism: java.lang.String | string, protocol: java.lang.String | string, serverName: java.lang.String | string, props: java.util.Map<java.lang.String | string, any>, cbh: javax.security.auth.callback.CallbackHandler): javax.security.sasl.SaslServer
                 /**
                  * Gets an enumeration of known factories for producing {@code SaslClient}.
                  * This method uses the same algorithm for locating factories as
@@ -367,7 +367,7 @@ declare namespace javax {
                  * @see #createSaslClient
                  */
                 // @ts-ignore
-                getSaslClientFactories(): java.util.Enumeration<javax.security.sasl.SaslClientFactory>
+                public static getSaslClientFactories(): java.util.Enumeration<javax.security.sasl.SaslClientFactory>
                 /**
                  * Gets an enumeration of known factories for producing {@code SaslServer}.
                  * This method uses the same algorithm for locating factories as
@@ -377,7 +377,7 @@ declare namespace javax {
                  * @see #createSaslServer
                  */
                 // @ts-ignore
-                getSaslServerFactories(): java.util.Enumeration<javax.security.sasl.SaslServerFactory>
+                public static getSaslServerFactories(): java.util.Enumeration<javax.security.sasl.SaslServerFactory>
             }
         }
     }

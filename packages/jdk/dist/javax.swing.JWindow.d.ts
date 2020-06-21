@@ -229,7 +229,7 @@ declare namespace javax {
              *   description: Mechanism for transfer of data into the component
              */
             // @ts-ignore
-            setTransferHandler(newHandler: javax.swing.TransferHandler): void
+            public setTransferHandler(newHandler: javax.swing.TransferHandler): void
             /**
              * Gets the <code>transferHandler</code> property.
              * @return the value of the <code>transferHandler</code> property
@@ -238,14 +238,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getTransferHandler(): javax.swing.TransferHandler
+            public getTransferHandler(): javax.swing.TransferHandler
             /**
              * Calls <code>paint(g)</code>.  This method was overridden to
              * prevent an unnecessary call to clear the background.
              * @param g  the <code>Graphics</code> context in which to paint
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Sets whether calls to <code>add</code> and
              * <code>setLayout</code> are forwarded to the <code>contentPane</code>.
@@ -279,7 +279,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the specified component from the container. If
              * <code>comp</code> is not the <code>rootPane</code>, this will forward
@@ -292,7 +292,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * Sets the <code>LayoutManager</code>.
              * Overridden to conditionally forward the call to the
@@ -304,7 +304,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            setLayout(manager: java.awt.LayoutManager): void
+            public setLayout(manager: java.awt.LayoutManager): void
             /**
              * Returns the <code>rootPane</code> object for this window.
              * @return the <code>rootPane</code> property for this window
@@ -312,7 +312,7 @@ declare namespace javax {
              * @see RootPaneContainer#getRootPane
              */
             // @ts-ignore
-            getRootPane(): javax.swing.JRootPane
+            public getRootPane(): javax.swing.JRootPane
             /**
              * Sets the new <code>rootPane</code> object for this window.
              * This method is called by the constructor.
@@ -331,7 +331,7 @@ declare namespace javax {
              * @see RootPaneContainer#getContentPane
              */
             // @ts-ignore
-            getContentPane(): java.awt.Container
+            public getContentPane(): java.awt.Container
             /**
              * Sets the <code>contentPane</code> property for this window.
              * This method is called by the constructor.
@@ -345,7 +345,7 @@ declare namespace javax {
              *                   components are normally inserted.
              */
             // @ts-ignore
-            setContentPane(contentPane: java.awt.Container): void
+            public setContentPane(contentPane: java.awt.Container): void
             /**
              * Returns the <code>layeredPane</code> object for this window.
              * @return the <code>layeredPane</code> property
@@ -353,7 +353,7 @@ declare namespace javax {
              * @see RootPaneContainer#getLayeredPane
              */
             // @ts-ignore
-            getLayeredPane(): javax.swing.JLayeredPane
+            public getLayeredPane(): javax.swing.JLayeredPane
             /**
              * Sets the <code>layeredPane</code> property.
              * This method is called by the constructor.
@@ -366,7 +366,7 @@ declare namespace javax {
              *      description: The pane which holds the various window layers.
              */
             // @ts-ignore
-            setLayeredPane(layeredPane: javax.swing.JLayeredPane): void
+            public setLayeredPane(layeredPane: javax.swing.JLayeredPane): void
             /**
              * Returns the <code>glassPane Component</code> for this window.
              * @return the <code>glassPane</code> property
@@ -374,7 +374,7 @@ declare namespace javax {
              * @see RootPaneContainer#getGlassPane
              */
             // @ts-ignore
-            getGlassPane(): java.awt.Component
+            public getGlassPane(): java.awt.Component
             /**
              * Sets the <code>glassPane</code> property.
              * This method is called by the constructor.
@@ -385,13 +385,13 @@ declare namespace javax {
              *      description: A transparent pane used for menu rendering.
              */
             // @ts-ignore
-            setGlassPane(glassPane: java.awt.Component): void
+            public setGlassPane(glassPane: java.awt.Component): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            getGraphics(): java.awt.Graphics
+            public getGraphics(): java.awt.Graphics
             /**
              * Repaints the specified rectangle of this component within
              * <code>time</code> milliseconds.  Refer to <code>RepaintManager</code>
@@ -405,7 +405,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            repaint(time: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(time: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Returns a string representation of this <code>JWindow</code>.
              * This method
@@ -416,7 +416,7 @@ declare namespace javax {
              * @return a string representation of this <code>JWindow</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JWindow.
              * For JWindows, the AccessibleContext takes the form of an
@@ -426,7 +426,7 @@ declare namespace javax {
              *          AccessibleContext of this JWindow
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

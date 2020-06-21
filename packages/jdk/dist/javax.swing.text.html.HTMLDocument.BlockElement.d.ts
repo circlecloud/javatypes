@@ -23,7 +23,7 @@ declare namespace javax {
                          * @return the name, null if none
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Gets the resolving parent.  HTML attributes are not inherited
                          * at the model level so we override this to return null.
@@ -31,7 +31,7 @@ declare namespace javax {
                          * @see AttributeSet#getResolveParent
                          */
                         // @ts-ignore
-                        getResolveParent(): javax.swing.text.AttributeSet
+                        public getResolveParent(): javax.swing.text.AttributeSet
                     }
                 }
             }

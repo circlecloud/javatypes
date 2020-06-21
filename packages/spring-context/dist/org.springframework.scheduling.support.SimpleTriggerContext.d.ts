@@ -29,13 +29,13 @@ declare namespace org {
                      * @param lastCompletionTime last completion time
                      */
                     // @ts-ignore
-                    update(lastScheduledExecutionTime: java.util.Date, lastActualExecutionTime: java.util.Date, lastCompletionTime: java.util.Date): void
+                    public update(lastScheduledExecutionTime: java.util.Date, lastActualExecutionTime: java.util.Date, lastCompletionTime: java.util.Date): void
                     // @ts-ignore
-                    lastScheduledExecutionTime(): java.util.Date
+                    public lastScheduledExecutionTime(): java.util.Date
                     // @ts-ignore
-                    lastActualExecutionTime(): java.util.Date
+                    public lastActualExecutionTime(): java.util.Date
                     // @ts-ignore
-                    lastCompletionTime(): java.util.Date
+                    public lastCompletionTime(): java.util.Date
                 }
             }
         }

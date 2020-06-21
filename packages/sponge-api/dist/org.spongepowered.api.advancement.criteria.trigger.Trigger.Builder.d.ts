@@ -83,7 +83,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                listener(eventListener: java.util.function.Consumer<org.spongepowered.api.event.advancement.CriterionEvent.Trigger<C>> | java.util.function$.Consumer<org.spongepowered.api.event.advancement.CriterionEvent.Trigger<C>>): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<C>
+                                listener(eventListener: java.util.function$.Consumer<org.spongepowered.api.event.advancement.CriterionEvent.Trigger<C>>): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<C>
                                 /**
                                  * Sets the identifier of the {@link Trigger}
                                  * (without the namespace).
@@ -91,7 +91,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                id(id: string): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<C>
+                                id(id: java.lang.String | string): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<C>
                                 /**
                                  * Sets the name of the {@link Trigger}. Defaults
                                  * to the identifier ({@link #id(String)}).
@@ -99,7 +99,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                name(name: string): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<C>
+                                name(name: java.lang.String | string): org.spongepowered.api.advancement.criteria.trigger.Trigger.Builder<C>
                                 /**
                                  * Builds a {@link Trigger}.
                                  * @return The trigger type

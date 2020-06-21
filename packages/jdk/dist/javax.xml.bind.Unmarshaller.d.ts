@@ -356,7 +356,7 @@ declare namespace javax {
                  *       If the file parameter is null
                  */
                 // @ts-ignore
-                unmarshal(f: java.io.File): java.lang.Object
+                unmarshal(f: java.io.File): any
                 /**
                  * Unmarshal XML data from the specified InputStream and return the
                  * resulting content tree.  Validation event location information may
@@ -376,7 +376,7 @@ declare namespace javax {
                  *       If the InputStream parameter is null
                  */
                 // @ts-ignore
-                unmarshal(jis: java.io.InputStream): java.lang.Object
+                unmarshal(jis: java.io.InputStream): any
                 /**
                  * Unmarshal XML data from the specified Reader and return the
                  * resulting content tree.  Validation event location information may
@@ -398,7 +398,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                unmarshal(reader: java.io.Reader): java.lang.Object
+                unmarshal(reader: java.io.Reader): any
                 /**
                  * Unmarshal XML data from the specified URL and return the resulting
                  * content tree.
@@ -417,7 +417,7 @@ declare namespace javax {
                  *       If the URL parameter is null
                  */
                 // @ts-ignore
-                unmarshal(url: java.net.URL): java.lang.Object
+                unmarshal(url: java.net.URL): any
                 /**
                  * Unmarshal XML data from the specified SAX InputSource and return the
                  * resulting content tree.
@@ -436,7 +436,7 @@ declare namespace javax {
                  *       If the InputSource parameter is null
                  */
                 // @ts-ignore
-                unmarshal(source: org.xml.sax.InputSource): java.lang.Object
+                unmarshal(source: org.xml.sax.InputSource): any
                 /**
                  * Unmarshal global XML data from the specified DOM tree and return the resulting
                  * content tree.
@@ -458,7 +458,7 @@ declare namespace javax {
                  * @see #unmarshal(org.w3c.dom.Node, Class)
                  */
                 // @ts-ignore
-                unmarshal(node: org.w3c.dom.Node): java.lang.Object
+                unmarshal(node: org.w3c.dom.Node): any
                 /**
                  * Unmarshal XML data by JAXB mapped <tt>declaredType</tt>
                  * and return the resulting content tree.
@@ -536,7 +536,7 @@ declare namespace javax {
                  * @see #unmarshal(javax.xml.transform.Source, Class)
                  */
                 // @ts-ignore
-                unmarshal(source: javax.xml.transform.Source): java.lang.Object
+                unmarshal(source: javax.xml.transform.Source): any
                 /**
                  * Unmarshal XML data from the specified XML Source by <tt>declaredType</tt> and return the
                  * resulting content tree.
@@ -592,7 +592,7 @@ declare namespace javax {
                  * @see #unmarshal(javax.xml.stream.XMLStreamReader, Class)
                  */
                 // @ts-ignore
-                unmarshal(reader: javax.xml.stream.XMLStreamReader): java.lang.Object
+                unmarshal(reader: javax.xml.stream.XMLStreamReader): any
                 /**
                  * Unmarshal root element to JAXB mapped <tt>declaredType</tt>
                  * and return the resulting content tree.
@@ -652,7 +652,7 @@ declare namespace javax {
                  * @see #unmarshal(javax.xml.stream.XMLEventReader, Class)
                  */
                 // @ts-ignore
-                unmarshal(reader: javax.xml.stream.XMLEventReader): java.lang.Object
+                unmarshal(reader: javax.xml.stream.XMLEventReader): any
                 /**
                  * Unmarshal root element to JAXB mapped <tt>declaredType</tt>
                  * and return the resulting content tree.
@@ -790,7 +790,7 @@ declare namespace javax {
                  *       If the name parameter is null
                  */
                 // @ts-ignore
-                setProperty(name: string, value: any): void
+                setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get the particular property in the underlying implementation of
                  * <tt>Unmarshaller</tt>.  This method can only be used to get one of
@@ -807,7 +807,7 @@ declare namespace javax {
                  *       If the name parameter is null
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.Object
+                getProperty(name: java.lang.String | string): any
                 /**
                  * Specify the JAXP 1.3 {@link javax.xml.validation.Schema Schema}
                  * object that should be used to validate subsequent unmarshal operations
@@ -860,7 +860,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                setAdapter(adapter: javax.xml.bind.annotation.adapters.XmlAdapter): void
+                setAdapter(adapter: javax.xml.bind.annotation.adapters.XmlAdapter<any>): void
                 /**
                  * Associates a configured instance of {@link XmlAdapter} with this unmarshaller.
                  * <p>
@@ -886,7 +886,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                setAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>, adapter: A extends javax.xml.bind.annotation.adapters.XmlAdapter): void
+                setAdapter<A extends javax.xml.bind.annotation.adapters.XmlAdapter>(type: java.lang.Class<A>, adapter: A): void
                 /**
                  * Gets the adapter associated with the specified type.
                  * This is the reverse operation of the {@link #setAdapter} method.

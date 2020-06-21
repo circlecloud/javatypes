@@ -59,12 +59,12 @@ declare namespace javax {
                  * Raised etched type.
                  */
                 // @ts-ignore
-                readonly RAISED: number /*int*/
+                public static readonly RAISED: number /*int*/
                 /**
                  * Lowered etched type.
                  */
                 // @ts-ignore
-                readonly LOWERED: number /*int*/
+                public static readonly LOWERED: number /*int*/
                 // @ts-ignore
                 etchType: number /*int*/
                 // @ts-ignore
@@ -82,24 +82,24 @@ declare namespace javax {
                  * @param height the height of the painted border
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitialize the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
                  * @param insets the object to be reinitialized
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns whether or not the border is opaque.
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
                 /**
                  * Returns which etch-type is set on the etched border.
                  */
                 // @ts-ignore
-                getEtchType(): int
+                public getEtchType(): number /*int*/
                 /**
                  * Returns the highlight color of the etched border
                  * when rendered on the specified component.  If no highlight
@@ -109,7 +109,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getHighlightColor(c: java.awt.Component): java.awt.Color
+                public getHighlightColor(c: java.awt.Component): java.awt.Color
                 /**
                  * Returns the highlight color of the etched border.
                  * Will return null if no highlight color was specified
@@ -117,7 +117,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getHighlightColor(): java.awt.Color
+                public getHighlightColor(): java.awt.Color
                 /**
                  * Returns the shadow color of the etched border
                  * when rendered on the specified component.  If no shadow
@@ -127,7 +127,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getShadowColor(c: java.awt.Component): java.awt.Color
+                public getShadowColor(c: java.awt.Component): java.awt.Color
                 /**
                  * Returns the shadow color of the etched border.
                  * Will return null if no shadow color was specified
@@ -135,7 +135,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getShadowColor(): java.awt.Color
+                public getShadowColor(): java.awt.Color
             }
         }
     }

@@ -60,7 +60,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            npoints: number /*int*/
+            public npoints: number /*int*/
             /**
              * The array of X coordinates.  The number of elements in
              * this array might be more than the number of X coordinates
@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            xpoints: number /*int*/[]
+            public xpoints: number /*int*/[]
             /**
              * The array of Y coordinates.  The number of elements in
              * this array might be more than the number of Y coordinates
@@ -86,7 +86,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            ypoints: number /*int*/[]
+            public ypoints: number /*int*/[]
             /**
              * The bounds of this {@code Polygon}.
              * This value can be null.
@@ -115,7 +115,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Invalidates or flushes any internally-cached data that depends
              * on the vertex coordinates of this <code>Polygon</code>.
@@ -129,7 +129,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            invalidate(): void
+            public invalidate(): void
             /**
              * Translates the vertices of the <code>Polygon</code> by
              * <code>deltaX</code> along the x axis and by
@@ -139,7 +139,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            translate(deltaX: number /*int*/, deltaY: number /*int*/): void
+            public translate(deltaX: number /*int*/, deltaY: number /*int*/): void
             /**
              * Appends the specified coordinates to this <code>Polygon</code>.
              * <p>
@@ -154,7 +154,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            addPoint(x: number /*int*/, y: number /*int*/): void
+            public addPoint(x: number /*int*/, y: number /*int*/): void
             /**
              * Gets the bounding box of this <code>Polygon</code>.
              * The bounding box is the smallest {@link Rectangle} whose
@@ -165,7 +165,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getBounds(): java.awt.Rectangle
+            public getBounds(): java.awt.Rectangle
             /**
              * Returns the bounds of this <code>Polygon</code>.
              * @return the bounds of this <code>Polygon</code>.
@@ -174,7 +174,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            getBoundingBox(): java.awt.Rectangle
+            public getBoundingBox(): java.awt.Rectangle
             /**
              * Determines whether the specified {@link Point} is inside this
              * <code>Polygon</code>.
@@ -185,7 +185,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            contains(p: java.awt.Point): boolean
+            public contains(p: java.awt.Point): boolean
             /**
              * Determines whether the specified coordinates are inside this
              * <code>Polygon</code>.
@@ -199,7 +199,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            contains(x: number /*int*/, y: number /*int*/): boolean
+            public contains(x: number /*int*/, y: number /*int*/): boolean
             /**
              * Determines whether the specified coordinates are contained in this
              * <code>Polygon</code>.
@@ -214,49 +214,49 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            inside(x: number /*int*/, y: number /*int*/): boolean
+            public inside(x: number /*int*/, y: number /*int*/): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            getBounds2D(): java.awt.geom.Rectangle2D
+            public getBounds2D(): java.awt.geom.Rectangle2D
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            contains(x: number /*double*/, y: number /*double*/): boolean
+            public contains(x: number /*double*/, y: number /*double*/): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            contains(p: java.awt.geom.Point2D): boolean
+            public contains(p: java.awt.geom.Point2D): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+            public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            intersects(r: java.awt.geom.Rectangle2D): boolean
+            public intersects(r: java.awt.geom.Rectangle2D): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+            public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            contains(r: java.awt.geom.Rectangle2D): boolean
+            public contains(r: java.awt.geom.Rectangle2D): boolean
             /**
              * Returns an iterator object that iterates along the boundary of this
              * <code>Polygon</code> and provides access to the geometry
@@ -271,7 +271,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+            public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
             /**
              * Returns an iterator object that iterates along the boundary of
              * the <code>Shape</code> and provides access to the geometry of the
@@ -294,7 +294,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+            public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
         }
     }
 }

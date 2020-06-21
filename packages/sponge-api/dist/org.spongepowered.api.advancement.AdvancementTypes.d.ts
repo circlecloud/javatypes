@@ -13,21 +13,21 @@ declare namespace org {
                      *      the Minecraft Wiki for an example of this advancement type</a>
                      */
                     // @ts-ignore
-                    readonly CHALLENGE: org.spongepowered.api.advancement.AdvancementType
+                    public static readonly CHALLENGE: org.spongepowered.api.advancement.AdvancementType
                     /**
                      * Represents the goal reached advancement type.
                      * @see <a href="https://minecraft.gamepedia.com/File:GoalReached.png">
                      *      the Minecraft Wiki for an example of this advancement type</a>
                      */
                     // @ts-ignore
-                    readonly GOAL: org.spongepowered.api.advancement.AdvancementType
+                    public static readonly GOAL: org.spongepowered.api.advancement.AdvancementType
                     /**
                      * Represents the advancement made advancement type.
                      * @see <a href="https://minecraft.gamepedia.com/File:AdvancementMade.png">
                      *      the Minecraft Wiki for an example of this advancement type</a>
                      */
                     // @ts-ignore
-                    readonly TASK: org.spongepowered.api.advancement.AdvancementType
+                    public static readonly TASK: org.spongepowered.api.advancement.AdvancementType
                 }
             }
         }

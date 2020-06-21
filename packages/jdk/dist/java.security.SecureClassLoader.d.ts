@@ -67,7 +67,7 @@ declare namespace java {
              *              the class name begins with "java.".
              */
             // @ts-ignore
-            defineClass(name: string, b: number /*byte*/[], off: number /*int*/, len: number /*int*/, cs: java.security.CodeSource): java.lang.Class<?>
+            defineClass(name: java.lang.String | string, b: number /*byte*/[], off: number /*int*/, len: number /*int*/, cs: java.security.CodeSource): java.lang.Class<any>
             /**
              * Converts a {@link java.nio.ByteBuffer ByteBuffer}
              * into an instance of class {@code Class}, with an optional CodeSource.
@@ -94,7 +94,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            defineClass(name: string, b: java.nio.ByteBuffer, cs: java.security.CodeSource): java.lang.Class<?>
+            defineClass(name: java.lang.String | string, b: java.nio.ByteBuffer, cs: java.security.CodeSource): java.lang.Class<any>
             /**
              * Returns the permissions for the given CodeSource object.
              * <p>

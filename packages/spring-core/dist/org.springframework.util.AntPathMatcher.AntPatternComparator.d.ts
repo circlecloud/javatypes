@@ -16,9 +16,9 @@ declare namespace org {
                  * </ul>
                  */
                 // @ts-ignore
-                class AntPatternComparator extends java.lang.Object implements java.util.Comparator<java.lang.String> {
+                class AntPatternComparator extends java.lang.Object implements java.util.Comparator<java.lang.String | string> {
                     // @ts-ignore
-                    constructor(path: string)
+                    constructor(path: java.lang.String | string)
                     /**
                      * Compare two patterns to determine which should match first, i.e. which
                      * is the most specific regarding the current path.
@@ -26,7 +26,7 @@ declare namespace org {
                      *  more specific, equally specific, or less specific than pattern2.
                      */
                     // @ts-ignore
-                    compare(pattern1: string, pattern2: string): int
+                    public compare(pattern1: java.lang.String | string, pattern2: java.lang.String | string): number /*int*/
                 }
             }
         }

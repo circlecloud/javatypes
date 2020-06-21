@@ -15,7 +15,7 @@ declare namespace javax {
              * @param description A human readable description of the data. Optional.
              */
             // @ts-ignore
-            constructor(name: string, type: string, description: string)
+            constructor(name: java.lang.String | string, type: java.lang.String | string, description: java.lang.String | string)
             /**
              * Constructs an <CODE>MBeanParameterInfo</CODE> object.
              * @param name The name of the data
@@ -26,7 +26,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(name: string, type: string, description: string, descriptor: javax.management.Descriptor)
+            constructor(name: java.lang.String | string, type: java.lang.String | string, description: java.lang.String | string, descriptor: javax.management.Descriptor)
             /**
              * <p>Returns a shallow clone of this instance.
              * The clone is obtained by simply calling <tt>super.clone()</tt>,
@@ -37,15 +37,15 @@ declare namespace javax {
              * interest to subclasses.</p>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the type or class name of the data.
              * @return the type string.
              */
             // @ts-ignore
-            getType(): java.lang.String
+            public getType(): string
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compare this MBeanParameterInfo to another.
              * @param o the object to compare to.
@@ -56,9 +56,9 @@ declare namespace javax {
              *  to those of this MBeanParameterInfo.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

@@ -53,7 +53,7 @@ declare namespace java {
                  *  {@code null})
                  */
                 // @ts-ignore
-                getCertPath(): java.security.cert.CertPath
+                public getCertPath(): java.security.cert.CertPath
                 /**
                  * Return a printable representation of this
                  * {@code PKIXCertPathBuilderResult}.
@@ -61,7 +61,7 @@ declare namespace java {
                  *          {@code PKIXCertPathBuilderResult}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -33,31 +33,31 @@ declare namespace javax {
                      * @param reader the new parent
                      */
                     // @ts-ignore
-                    setParent(reader: javax.xml.stream.XMLEventReader): void
+                    public setParent(reader: javax.xml.stream.XMLEventReader): void
                     /**
                      * Get the parent of this instance.
                      * @return the parent or null if none is set
                      */
                     // @ts-ignore
-                    getParent(): javax.xml.stream.XMLEventReader
+                    public getParent(): javax.xml.stream.XMLEventReader
                     // @ts-ignore
-                    nextEvent(): javax.xml.stream.events.XMLEvent
+                    public nextEvent(): javax.xml.stream.events.XMLEvent
                     // @ts-ignore
-                    next(): java.lang.Object
+                    public next(): any
                     // @ts-ignore
-                    hasNext(): boolean
+                    public hasNext(): boolean
                     // @ts-ignore
-                    peek(): javax.xml.stream.events.XMLEvent
+                    public peek(): javax.xml.stream.events.XMLEvent
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     // @ts-ignore
-                    getElementText(): java.lang.String
+                    public getElementText(): string
                     // @ts-ignore
-                    nextTag(): javax.xml.stream.events.XMLEvent
+                    public nextTag(): javax.xml.stream.events.XMLEvent
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                     // @ts-ignore
-                    remove(): void
+                    public remove(): void
                 }
             }
         }

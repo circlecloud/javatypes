@@ -16,7 +16,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Constructs an <code>ActivateFailedException</code> with the specified
                  * detail message and nested exception.
@@ -25,7 +25,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(s: string, ex: java.lang.Exception)
+                constructor(s: java.lang.String | string, ex: java.lang.Exception)
             }
         }
     }

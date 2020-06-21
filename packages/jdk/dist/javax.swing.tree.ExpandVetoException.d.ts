@@ -23,7 +23,7 @@ declare namespace javax {
                  * @param message  a String containing the message
                  */
                 // @ts-ignore
-                constructor(event: javax.swing.event.TreeExpansionEvent, message: string)
+                constructor(event: javax.swing.event.TreeExpansionEvent, message: java.lang.String | string)
                 /**
                  * The event that the exception was created for.
                  */

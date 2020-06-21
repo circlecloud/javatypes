@@ -27,7 +27,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class SelectorProvider extends java.lang.Object {
+                abstract class SelectorProvider extends java.lang.Object {
                     /**
                      * Initializes a new instance of this class.
                      * @throws SecurityException
@@ -64,7 +64,7 @@ declare namespace java {
                      * @return The system-wide default selector provider
                      */
                     // @ts-ignore
-                    provider(): java.nio.channels.spi.SelectorProvider
+                    public static provider(): java.nio.channels.spi.SelectorProvider
                     /**
                      * Opens a datagram channel.
                      * @return The new channel
@@ -72,7 +72,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openDatagramChannel(): java.nio.channels.DatagramChannel
+                    public abstract openDatagramChannel(): java.nio.channels.DatagramChannel
                     /**
                      * Opens a datagram channel.
                      * @param family
@@ -85,7 +85,7 @@ declare namespace java {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    abstract openDatagramChannel(family: java.net.ProtocolFamily): java.nio.channels.DatagramChannel
+                    public abstract openDatagramChannel(family: java.net.ProtocolFamily): java.nio.channels.DatagramChannel
                     /**
                      * Opens a pipe.
                      * @return The new pipe
@@ -93,7 +93,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openPipe(): java.nio.channels.Pipe
+                    public abstract openPipe(): java.nio.channels.Pipe
                     /**
                      * Opens a selector.
                      * @return The new selector
@@ -101,7 +101,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openSelector(): java.nio.channels.spi.AbstractSelector
+                    public abstract openSelector(): java.nio.channels.spi.AbstractSelector
                     /**
                      * Opens a server-socket channel.
                      * @return The new channel
@@ -109,7 +109,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openServerSocketChannel(): java.nio.channels.ServerSocketChannel
+                    public abstract openServerSocketChannel(): java.nio.channels.ServerSocketChannel
                     /**
                      * Opens a socket channel.
                      * @return The new channel
@@ -117,7 +117,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openSocketChannel(): java.nio.channels.SocketChannel
+                    public abstract openSocketChannel(): java.nio.channels.SocketChannel
                     /**
                      * Returns the channel inherited from the entity that created this
                      * Java virtual machine.
@@ -164,7 +164,7 @@ declare namespace java {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    inheritedChannel(): java.nio.channels.Channel
+                    public inheritedChannel(): java.nio.channels.Channel
                 }
             }
         }

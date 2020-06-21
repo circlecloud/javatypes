@@ -63,7 +63,7 @@ declare namespace java {
              * @return The printwriter associated with this console
              */
             // @ts-ignore
-            writer(): java.io.PrintWriter
+            public writer(): java.io.PrintWriter
             /**
              * Retrieves the unique {@link java.io.Reader Reader} object associated
              * with this console.
@@ -95,7 +95,7 @@ declare namespace java {
              * @return The reader associated with this console
              */
             // @ts-ignore
-            reader(): java.io.Reader
+            public reader(): java.io.Reader
             /**
              * Writes a formatted string to this console's output stream using
              * the specified format string and arguments.
@@ -123,7 +123,7 @@ declare namespace java {
              * @return This console
              */
             // @ts-ignore
-            format(fmt: string, ...args: any[]): java.io.Console
+            public format(fmt: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.io.Console
             /**
              * A convenience method to write a formatted string to this console's
              * output stream using the specified format string and arguments.
@@ -154,7 +154,7 @@ declare namespace java {
              * @return This console
              */
             // @ts-ignore
-            printf(format: string, ...args: any[]): java.io.Console
+            public printf(format: java.lang.String | string, ...args: java.lang.Object[] | any[]): java.io.Console
             /**
              * Provides a formatted prompt, then reads a single line of text from the
              * console.
@@ -182,7 +182,7 @@ declare namespace java {
              *           if an end of stream has been reached.
              */
             // @ts-ignore
-            readLine(fmt: string, ...args: any[]): java.lang.String
+            public readLine(fmt: java.lang.String | string, ...args: java.lang.Object[] | any[]): string
             /**
              * Reads a single line of text from the console.
              * @throws IOError
@@ -192,7 +192,7 @@ declare namespace java {
              *           if an end of stream has been reached.
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            public readLine(): string
             /**
              * Provides a formatted prompt, then reads a password or passphrase from
              * the console with echoing disabled.
@@ -221,7 +221,7 @@ declare namespace java {
              *           or <tt>null</tt> if an end of stream has been reached.
              */
             // @ts-ignore
-            readPassword(fmt: string, ...args: any[]): char[]
+            public readPassword(fmt: java.lang.String | string, ...args: java.lang.Object[] | any[]): string[]
             /**
              * Reads a password or passphrase from the console with echoing disabled
              * @throws IOError
@@ -231,13 +231,13 @@ declare namespace java {
              *           or <tt>null</tt> if an end of stream has been reached.
              */
             // @ts-ignore
-            readPassword(): char[]
+            public readPassword(): string[]
             /**
              * Flushes the console and forces any buffered output to be written
              * immediately .
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
         }
     }
 }

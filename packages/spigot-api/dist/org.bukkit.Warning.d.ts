@@ -7,7 +7,7 @@ declare namespace org {
          * if the {@link #value()} is true.
          */
         // @ts-ignore
-        class Warning implements java.lang.annotation.Annotation {
+        abstract class Warning implements java.lang.annotation.Annotation {
         }
     }
 }

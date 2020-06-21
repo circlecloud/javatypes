@@ -121,13 +121,13 @@ declare namespace javax {
                  * @param newColor the new border color
                  */
                 // @ts-ignore
-                setBorderSelectionColor(newColor: java.awt.Color): void
+                public setBorderSelectionColor(newColor: java.awt.Color): void
                 /**
                  * Returns the color the border is drawn.
                  * @return the border selection color
                  */
                 // @ts-ignore
-                getBorderSelectionColor(): java.awt.Color
+                public getBorderSelectionColor(): java.awt.Color
                 /**
                  * Sets the font to edit with. <code>null</code> indicates
                  * the renderers font should be used. This will NOT
@@ -139,62 +139,62 @@ declare namespace javax {
                  * @see #getFont
                  */
                 // @ts-ignore
-                setFont(font: java.awt.Font): void
+                public setFont(font: java.awt.Font): void
                 /**
                  * Gets the font used for editing.
                  * @return the editing <code>Font</code>
                  * @see #setFont
                  */
                 // @ts-ignore
-                getFont(): java.awt.Font
+                public getFont(): java.awt.Font
                 /**
                  * Configures the editor.  Passed onto the <code>realEditor</code>.
                  */
                 // @ts-ignore
-                getTreeCellEditorComponent(tree: javax.swing.JTree, value: any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): java.awt.Component
+                public getTreeCellEditorComponent(tree: javax.swing.JTree, value: java.lang.Object | any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): java.awt.Component
                 /**
                  * Returns the value currently being edited.
                  * @return the value currently being edited
                  */
                 // @ts-ignore
-                getCellEditorValue(): java.lang.Object
+                public getCellEditorValue(): any
                 /**
                  * If the <code>realEditor</code> returns true to this
                  * message, <code>prepareForEditing</code>
                  * is messaged and true is returned.
                  */
                 // @ts-ignore
-                isCellEditable(event: java.util.EventObject): boolean
+                public isCellEditable(event: java.util.EventObject): boolean
                 /**
                  * Messages the <code>realEditor</code> for the return value.
                  */
                 // @ts-ignore
-                shouldSelectCell(event: java.util.EventObject): boolean
+                public shouldSelectCell(event: java.util.EventObject): boolean
                 /**
                  * If the <code>realEditor</code> will allow editing to stop,
                  * the <code>realEditor</code> is removed and true is returned,
                  * otherwise false is returned.
                  */
                 // @ts-ignore
-                stopCellEditing(): boolean
+                public stopCellEditing(): boolean
                 /**
                  * Messages <code>cancelCellEditing</code> to the
                  * <code>realEditor</code> and removes it from this instance.
                  */
                 // @ts-ignore
-                cancelCellEditing(): void
+                public cancelCellEditing(): void
                 /**
                  * Adds the <code>CellEditorListener</code>.
                  * @param l the listener to be added
                  */
                 // @ts-ignore
-                addCellEditorListener(l: javax.swing.event.CellEditorListener): void
+                public addCellEditorListener(l: javax.swing.event.CellEditorListener): void
                 /**
                  * Removes the previously added <code>CellEditorListener</code>.
                  * @param l the listener to be removed
                  */
                 // @ts-ignore
-                removeCellEditorListener(l: javax.swing.event.CellEditorListener): void
+                public removeCellEditorListener(l: javax.swing.event.CellEditorListener): void
                 /**
                  * Returns an array of all the <code>CellEditorListener</code>s added
                  * to this DefaultTreeCellEditor with addCellEditorListener().
@@ -203,18 +203,18 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCellEditorListeners(): javax.swing.event.CellEditorListener[]
+                public getCellEditorListeners(): javax.swing.event.CellEditorListener[]
                 /**
                  * Resets <code>lastPath</code>.
                  */
                 // @ts-ignore
-                valueChanged(e: javax.swing.event.TreeSelectionEvent): void
+                public valueChanged(e: javax.swing.event.TreeSelectionEvent): void
                 /**
                  * Messaged when the timer fires, this will start the editing
                  * session.
                  */
                 // @ts-ignore
-                actionPerformed(e: java.awt.event.ActionEvent): void
+                public actionPerformed(e: java.awt.event.ActionEvent): void
                 /**
                  * Sets the tree currently editing for. This is needed to add
                  * a selection listener.
@@ -256,7 +256,7 @@ declare namespace javax {
                 // @ts-ignore
                 inHitRegion(x: number /*int*/, y: number /*int*/): boolean
                 // @ts-ignore
-                determineOffset(tree: javax.swing.JTree, value: any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): void
+                determineOffset(tree: javax.swing.JTree, value: java.lang.Object | any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): void
                 /**
                  * Invoked just before editing is to start. Will add the
                  * <code>editingComponent</code> to the

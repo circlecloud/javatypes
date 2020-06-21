@@ -34,7 +34,7 @@ declare namespace java {
                  * @param reason The reason for the exception.
                  */
                 // @ts-ignore
-                constructor(reason: string)
+                constructor(reason: java.lang.String | string)
             }
         }
     }

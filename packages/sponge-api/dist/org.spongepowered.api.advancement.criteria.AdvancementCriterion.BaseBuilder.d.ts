@@ -24,7 +24,7 @@ declare namespace org {
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            name(name: string): B
+                            name(name: java.lang.String | string): B
                             /**
                              * Builds a new {@link AdvancementCriterion}.
                              * @return The criterion

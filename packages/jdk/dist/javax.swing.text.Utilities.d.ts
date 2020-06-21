@@ -25,7 +25,7 @@ declare namespace javax {
                  * @return the X location at the end of the rendered text
                  */
                 // @ts-ignore
-                drawTabbedText(s: javax.swing.text.Segment, x: number /*int*/, y: number /*int*/, g: java.awt.Graphics, e: javax.swing.text.TabExpander, startOffset: number /*int*/): int
+                public static drawTabbedText(s: javax.swing.text.Segment, x: number /*int*/, y: number /*int*/, g: java.awt.Graphics, e: javax.swing.text.TabExpander, startOffset: number /*int*/): number /*int*/
                 /**
                  * Determines the width of the given segment of text taking tabs
                  * into consideration.  This is implemented in a 1.1 style coordinate
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @return the width of the text
                  */
                 // @ts-ignore
-                getTabbedTextWidth(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/): int
+                public static getTabbedTextWidth(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/): number /*int*/
                 /**
                  * Determines the relative offset into the given text that
                  * best represents the given span in the view coordinate
@@ -57,9 +57,9 @@ declare namespace javax {
                  * @return the offset into the text &gt;= 0
                  */
                 // @ts-ignore
-                getTabbedTextOffset(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x0: number /*int*/, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/): int
+                public static getTabbedTextOffset(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x0: number /*int*/, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/): number /*int*/
                 // @ts-ignore
-                getTabbedTextOffset(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x0: number /*int*/, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/, round: boolean): int
+                public static getTabbedTextOffset(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x0: number /*int*/, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/, round: boolean): number /*int*/
                 /**
                  * Determine where to break the given text to fit
                  * within the given span. This tries to find a word boundary.
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @return the offset into the given text
                  */
                 // @ts-ignore
-                getBreakLocation(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x0: number /*int*/, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/): int
+                public static getBreakLocation(s: javax.swing.text.Segment, metrics: java.awt.FontMetrics, x0: number /*int*/, x: number /*int*/, e: javax.swing.text.TabExpander, startOffset: number /*int*/): number /*int*/
                 /**
                  * Determines the starting row model position of the row that contains
                  * the specified model position.  The component given must have a
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getRowStart(c: javax.swing.text.JTextComponent, offs: number /*int*/): int
+                public static getRowStart(c: javax.swing.text.JTextComponent, offs: number /*int*/): number /*int*/
                 /**
                  * Determines the ending row model position of the row that contains
                  * the specified model position.  The component given must have a
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getRowEnd(c: javax.swing.text.JTextComponent, offs: number /*int*/): int
+                public static getRowEnd(c: javax.swing.text.JTextComponent, offs: number /*int*/): number /*int*/
                 /**
                  * Determines the position in the model that is closest to the given
                  * view location in the row above.  The component given must have a
@@ -115,7 +115,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getPositionAbove(c: javax.swing.text.JTextComponent, offs: number /*int*/, x: number /*int*/): int
+                public static getPositionAbove(c: javax.swing.text.JTextComponent, offs: number /*int*/, x: number /*int*/): number /*int*/
                 /**
                  * Determines the position in the model that is closest to the given
                  * view location in the row below.  The component given must have a
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getPositionBelow(c: javax.swing.text.JTextComponent, offs: number /*int*/, x: number /*int*/): int
+                public static getPositionBelow(c: javax.swing.text.JTextComponent, offs: number /*int*/, x: number /*int*/): number /*int*/
                 /**
                  * Determines the start of a word for the given model location.
                  * Uses BreakIterator.getWordInstance() to actually get the words.
@@ -139,7 +139,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getWordStart(c: javax.swing.text.JTextComponent, offs: number /*int*/): int
+                public static getWordStart(c: javax.swing.text.JTextComponent, offs: number /*int*/): number /*int*/
                 /**
                  * Determines the end of a word for the given location.
                  * Uses BreakIterator.getWordInstance() to actually get the words.
@@ -149,7 +149,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getWordEnd(c: javax.swing.text.JTextComponent, offs: number /*int*/): int
+                public static getWordEnd(c: javax.swing.text.JTextComponent, offs: number /*int*/): number /*int*/
                 /**
                  * Determines the start of the next word for the given location.
                  * Uses BreakIterator.getWordInstance() to actually get the words.
@@ -159,7 +159,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getNextWord(c: javax.swing.text.JTextComponent, offs: number /*int*/): int
+                public static getNextWord(c: javax.swing.text.JTextComponent, offs: number /*int*/): number /*int*/
                 /**
                  * Determine the start of the prev word for the given location.
                  * Uses BreakIterator.getWordInstance() to actually get the words.
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset is out of range
                  */
                 // @ts-ignore
-                getPreviousWord(c: javax.swing.text.JTextComponent, offs: number /*int*/): int
+                public static getPreviousWord(c: javax.swing.text.JTextComponent, offs: number /*int*/): number /*int*/
                 /**
                  * Determines the element to use for a paragraph/line.
                  * @param c the editor
@@ -177,7 +177,7 @@ declare namespace javax {
                  * @return the element
                  */
                 // @ts-ignore
-                getParagraphElement(c: javax.swing.text.JTextComponent, offs: number /*int*/): javax.swing.text.Element
+                public static getParagraphElement(c: javax.swing.text.JTextComponent, offs: number /*int*/): javax.swing.text.Element
             }
         }
     }

@@ -12,7 +12,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class MenuComponent extends java.lang.Object implements java.io.Serializable {
+        abstract class MenuComponent extends java.lang.Object implements java.io.Serializable {
             /**
              * Creates a <code>MenuComponent</code>.
              * @exception HeadlessException if
@@ -29,7 +29,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Sets the name of the component to the specified string.
              * @param name    the name of the menu component
@@ -37,7 +37,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setName(name: string): void
+            public setName(name: java.lang.String | string): void
             /**
              * Returns the parent container for this menu component.
              * @return the menu component containing this menu component,
@@ -45,13 +45,13 @@ declare namespace java {
              *                  is the outermost component, the menu bar itself
              */
             // @ts-ignore
-            getParent(): java.awt.MenuContainer
+            public getParent(): java.awt.MenuContainer
             /**
              * @deprecated As of JDK version 1.1,
              *  programs should not directly manipulate peers.
              */
             // @ts-ignore
-            getPeer(): java.awt.peer.MenuComponentPeer
+            public getPeer(): java.awt.peer.MenuComponentPeer
             /**
              * Gets the font used for this menu component.
              * @return the font used in this menu component, if there is one;
@@ -59,7 +59,7 @@ declare namespace java {
              * @see java.awt.MenuComponent#setFont
              */
             // @ts-ignore
-            getFont(): java.awt.Font
+            public getFont(): java.awt.Font
             /**
              * Sets the font to be used for this menu component to the specified
              * font. This font is also used by all subcomponents of this menu
@@ -77,14 +77,14 @@ declare namespace java {
              * @see java.awt.font.TextAttribute
              */
             // @ts-ignore
-            setFont(f: java.awt.Font): void
+            public setFont(f: java.awt.Font): void
             /**
              * Removes the menu component's peer.  The peer allows us to modify the
              * appearance of the menu component without changing the functionality of
              * the menu component.
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Posts the specified event to the menu.
              * This method is part of the Java&nbsp;1.0 event system
@@ -96,13 +96,13 @@ declare namespace java {
              *  #dispatchEvent(AWTEvent) dispatchEvent}.
              */
             // @ts-ignore
-            postEvent(evt: java.awt.Event): boolean
+            public postEvent(evt: java.awt.Event): boolean
             /**
              * Delivers an event to this component or one of its sub components.
              * @param e the event
              */
             // @ts-ignore
-            dispatchEvent(e: java.awt.AWTEvent): void
+            public dispatchEvent(e: java.awt.AWTEvent): void
             /**
              * Processes events occurring on this menu component.
              * <p>Note that if the event parameter is <code>null</code>
@@ -122,13 +122,13 @@ declare namespace java {
              * @return the parameter string of this menu component
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns a representation of this menu component as a string.
              * @return a string representation of this menu component
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Gets this component's locking object (the object that owns the thread
              * synchronization monitor) for AWT component-tree and layout
@@ -136,7 +136,7 @@ declare namespace java {
              * @return this component's locking object
              */
             // @ts-ignore
-            getTreeLock(): java.lang.Object
+            getTreeLock(): any
             /**
              * Gets the <code>AccessibleContext</code> associated with
              * this <code>MenuComponent</code>.
@@ -149,7 +149,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

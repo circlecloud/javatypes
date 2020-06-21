@@ -32,13 +32,13 @@ declare namespace org {
                      * @return all faces enabled
                      */
                     // @ts-ignore
-                    getFaces(): java.util.Set<org.bukkit.block.BlockFace>
+                    getFaces(): Array<org.bukkit.block.BlockFace>
                     /**
                      * Gets all of this faces which may be set on this block.
                      * @return all allowed faces
                      */
                     // @ts-ignore
-                    getAllowedFaces(): java.util.Set<org.bukkit.block.BlockFace>
+                    getAllowedFaces(): Array<org.bukkit.block.BlockFace>
                 }
             }
         }

@@ -11,29 +11,29 @@ declare namespace javax {
                      * A key for signing.
                      */
                     // @ts-ignore
-                    readonly SIGN: javax.xml.crypto.KeySelector.Purpose
+                    public static readonly SIGN: javax.xml.crypto.KeySelector.Purpose
                     /**
                      * A key for verifying.
                      */
                     // @ts-ignore
-                    readonly VERIFY: javax.xml.crypto.KeySelector.Purpose
+                    public static readonly VERIFY: javax.xml.crypto.KeySelector.Purpose
                     /**
                      * A key for encrypting.
                      */
                     // @ts-ignore
-                    readonly ENCRYPT: javax.xml.crypto.KeySelector.Purpose
+                    public static readonly ENCRYPT: javax.xml.crypto.KeySelector.Purpose
                     /**
                      * A key for decrypting.
                      */
                     // @ts-ignore
-                    readonly DECRYPT: javax.xml.crypto.KeySelector.Purpose
+                    public static readonly DECRYPT: javax.xml.crypto.KeySelector.Purpose
                     /**
                      * Returns a string representation of this purpose ("sign",
                      * "verify", "encrypt", or "decrypt").
                      * @return a string representation of this purpose
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

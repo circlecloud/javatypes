@@ -28,42 +28,42 @@ declare namespace org {
                      * Sets managed resource to expose and stores its {@link ClassLoader}.
                      */
                     // @ts-ignore
-                    setManagedResource(managedResource: any, managedResourceType: string): void
+                    public setManagedResource(managedResource: java.lang.Object | any, managedResourceType: java.lang.String | string): void
                     /**
                      * Switches the {@link Thread#getContextClassLoader() context ClassLoader} for the
                      * managed resources {@link ClassLoader} before allowing the invocation to occur.
                      * @see javax.management.modelmbean.ModelMBean#invoke
                      */
                     // @ts-ignore
-                    invoke(opName: string, opArgs: any[], sig: string[]): java.lang.Object
+                    public invoke(opName: java.lang.String | string, opArgs: java.lang.Object[] | any[], sig: java.lang.String[] | string[]): any
                     /**
                      * Switches the {@link Thread#getContextClassLoader() context ClassLoader} for the
                      * managed resources {@link ClassLoader} before allowing the invocation to occur.
                      * @see javax.management.modelmbean.ModelMBean#getAttribute
                      */
                     // @ts-ignore
-                    getAttribute(attrName: string): java.lang.Object
+                    public getAttribute(attrName: java.lang.String | string): any
                     /**
                      * Switches the {@link Thread#getContextClassLoader() context ClassLoader} for the
                      * managed resources {@link ClassLoader} before allowing the invocation to occur.
                      * @see javax.management.modelmbean.ModelMBean#getAttributes
                      */
                     // @ts-ignore
-                    getAttributes(attrNames: string[]): javax.management.AttributeList
+                    public getAttributes(attrNames: java.lang.String[] | string[]): javax.management.AttributeList
                     /**
                      * Switches the {@link Thread#getContextClassLoader() context ClassLoader} for the
                      * managed resources {@link ClassLoader} before allowing the invocation to occur.
                      * @see javax.management.modelmbean.ModelMBean#setAttribute
                      */
                     // @ts-ignore
-                    setAttribute(attribute: javax.management.Attribute): void
+                    public setAttribute(attribute: javax.management.Attribute): void
                     /**
                      * Switches the {@link Thread#getContextClassLoader() context ClassLoader} for the
                      * managed resources {@link ClassLoader} before allowing the invocation to occur.
                      * @see javax.management.modelmbean.ModelMBean#setAttributes
                      */
                     // @ts-ignore
-                    setAttributes(attributes: javax.management.AttributeList): javax.management.AttributeList
+                    public setAttributes(attributes: javax.management.AttributeList): javax.management.AttributeList
                 }
             }
         }

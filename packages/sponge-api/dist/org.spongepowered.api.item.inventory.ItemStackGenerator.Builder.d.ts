@@ -17,14 +17,14 @@ declare namespace org {
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            add(consumer: java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random> | java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>): org.spongepowered.api.item.inventory.ItemStackGenerator.Builder
+                            add(consumer: java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>): org.spongepowered.api.item.inventory.ItemStackGenerator.Builder
                             /**
                              * Adds all the provided biconsumers from the provided collection.
                              * @param collection The collection of consumer to add
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            addAll(collection: java.util.Collection<java.util.function.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>> | Array<java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>>): org.spongepowered.api.item.inventory.ItemStackGenerator.Builder
+                            addAll(collection: java.util.Collection<java.util.function$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>> | Array<java.util.function$$.BiConsumer<org.spongepowered.api.item.inventory.ItemStack.Builder, java.util.Random>>): org.spongepowered.api.item.inventory.ItemStackGenerator.Builder
                             /**
                              * Sets the base {@link ItemType} for the {@link ItemStackGenerator}. A
                              * base type must be set to avoid issues.

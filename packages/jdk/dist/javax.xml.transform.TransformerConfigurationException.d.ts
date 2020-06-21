@@ -18,7 +18,7 @@ declare namespace javax {
                  * @param msg The error message for the exception.
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Create a new <code>TransformerConfigurationException</code> with a
                  * given <code>Exception</code> base cause of the error.
@@ -26,7 +26,7 @@ declare namespace javax {
                  *  TransformerConfigurationException.
                  */
                 // @ts-ignore
-                constructor(e: Error)
+                constructor(e: java.lang.Throwable | Error)
                 /**
                  * Create a new <code>TransformerConfigurationException</code> with the
                  * given <code>Exception</code> base cause and detail message.
@@ -35,7 +35,7 @@ declare namespace javax {
                  * @param msg The detail message.
                  */
                 // @ts-ignore
-                constructor(msg: string, e: Error)
+                constructor(msg: java.lang.String | string, e: java.lang.Throwable | Error)
                 /**
                  * Create a new TransformerConfigurationException from a message and a Locator.
                  * <p>This constructor is especially useful when an application is
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @param locator The locator object for the error or warning.
                  */
                 // @ts-ignore
-                constructor(message: string, locator: javax.xml.transform.SourceLocator)
+                constructor(message: java.lang.String | string, locator: javax.xml.transform.SourceLocator)
                 /**
                  * Wrap an existing exception in a TransformerConfigurationException.
                  * @param message The error or warning message, or null to
@@ -54,7 +54,7 @@ declare namespace javax {
                  * @param e Any exception.
                  */
                 // @ts-ignore
-                constructor(message: string, locator: javax.xml.transform.SourceLocator, e: Error)
+                constructor(message: java.lang.String | string, locator: javax.xml.transform.SourceLocator, e: java.lang.Throwable | Error)
             }
         }
     }

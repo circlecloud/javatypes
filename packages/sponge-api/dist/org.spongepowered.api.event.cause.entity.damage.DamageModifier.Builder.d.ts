@@ -19,29 +19,29 @@ declare namespace org {
                                      * @return This builder, for chaining
                                      */
                                     // @ts-ignore
-                                    type(damageModifierType: org.spongepowered.api.event.cause.entity.damage.DamageModifierType): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
+                                    public type(damageModifierType: org.spongepowered.api.event.cause.entity.damage.DamageModifierType): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
                                     // @ts-ignore
-                                    item(itemStack: org.spongepowered.api.item.inventory.ItemStack): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
+                                    public item(itemStack: org.spongepowered.api.item.inventory.ItemStack): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
                                     // @ts-ignore
-                                    item(snapshot: org.spongepowered.api.item.inventory.ItemStackSnapshot): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
+                                    public item(snapshot: org.spongepowered.api.item.inventory.ItemStackSnapshot): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
                                     /**
                                      * Sets the {@link Cause} for the {@link DamageModifier} to build.
                                      * @param cause The cause for the damage modifier
                                      * @return This builder, for chaining
                                      */
                                     // @ts-ignore
-                                    cause(cause: org.spongepowered.api.event.cause.Cause): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
+                                    public cause(cause: org.spongepowered.api.event.cause.Cause): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
                                     /**
                                      * Creates a new {@link DamageModifier} with this builder's provided
                                      * {@link Cause} and {@link DamageModifierType}.
                                      * @return The newly created damage modifier
                                      */
                                     // @ts-ignore
-                                    build(): org.spongepowered.api.event.cause.entity.damage.DamageModifier
+                                    public build(): org.spongepowered.api.event.cause.entity.damage.DamageModifier
                                     // @ts-ignore
-                                    from(value: org.spongepowered.api.event.cause.entity.damage.DamageModifier): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
+                                    public from(value: org.spongepowered.api.event.cause.entity.damage.DamageModifier): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
                                     // @ts-ignore
-                                    reset(): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
+                                    public reset(): org.spongepowered.api.event.cause.entity.damage.DamageModifier.Builder
                                 }
                             }
                         }

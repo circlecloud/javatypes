@@ -8,7 +8,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        windowClosing(w: java.awt.event.WindowEvent): void
+                        public windowClosing(w: java.awt.event.WindowEvent): void
                     }
                 }
             }

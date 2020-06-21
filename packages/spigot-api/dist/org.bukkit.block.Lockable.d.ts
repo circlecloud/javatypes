@@ -19,14 +19,14 @@ declare namespace org {
                  * @return the key needed.
                  */
                 // @ts-ignore
-                getLock(): java.lang.String
+                getLock(): string
                 /**
                  * Sets the key required to access this container. Set to null (or empty
                  * string) to remove key.
                  * @param key the key required to access the container.
                  */
                 // @ts-ignore
-                setLock(key: string): void
+                setLock(key: java.lang.String | string): void
             }
         }
     }

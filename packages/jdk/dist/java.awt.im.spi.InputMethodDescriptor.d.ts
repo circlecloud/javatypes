@@ -62,7 +62,7 @@ declare namespace java {
                      * @param displayLanguage the language in which the name will be displayed
                      */
                     // @ts-ignore
-                    getInputMethodDisplayName(inputLocale: java.util.Locale, displayLanguage: java.util.Locale): java.lang.String
+                    getInputMethodDisplayName(inputLocale: java.util.Locale, displayLanguage: java.util.Locale): string
                     /**
                      * Returns an icon for the corresponding input method.
                      * The icon may be used by a user interface for selecting input methods.

@@ -129,7 +129,7 @@ declare namespace java {
                  * {@link Chronology#getAvailableChronologies}.
                  */
                 // @ts-ignore
-                readonly INSTANCE: java.time.chrono.HijrahChronology
+                public static readonly INSTANCE: java.time.chrono.HijrahChronology
                 /**
                  * Gets the ID of the chronology.
                  * <p>
@@ -139,7 +139,7 @@ declare namespace java {
                  * @see #getCalendarType()
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                public getId(): string
                 /**
                  * Gets the calendar type of the Islamic calendar.
                  * <p>
@@ -151,7 +151,7 @@ declare namespace java {
                  * @see #getId()
                  */
                 // @ts-ignore
-                getCalendarType(): java.lang.String
+                public getCalendarType(): string
                 /**
                  * Obtains a local date in Hijrah calendar system from the
                  * era, year-of-era, month-of-year and day-of-month fields.
@@ -164,7 +164,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not a {@code HijrahEra}
                  */
                 // @ts-ignore
-                date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.HijrahDate
+                public date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.HijrahDate
                 /**
                  * Obtains a local date in Hijrah calendar system from the
                  * proleptic-year, month-of-year and day-of-month fields.
@@ -175,7 +175,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.HijrahDate
+                public date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.HijrahDate
                 /**
                  * Obtains a local date in Hijrah calendar system from the
                  * era, year-of-era and day-of-year fields.
@@ -187,7 +187,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not a {@code HijrahEra}
                  */
                 // @ts-ignore
-                dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.HijrahDate
+                public dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.HijrahDate
                 /**
                  * Obtains a local date in Hijrah calendar system from the
                  * proleptic-year and day-of-year fields.
@@ -198,7 +198,7 @@ declare namespace java {
                  *   or if the day-of-year is invalid for the year
                  */
                 // @ts-ignore
-                dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.HijrahDate
+                public dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.HijrahDate
                 /**
                  * Obtains a local date in the Hijrah calendar system from the epoch-day.
                  * @param epochDay  the epoch day
@@ -206,33 +206,33 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateEpochDay(epochDay: number /*long*/): java.time.chrono.HijrahDate
+                public dateEpochDay(epochDay: number /*long*/): java.time.chrono.HijrahDate
                 // @ts-ignore
-                dateNow(): java.time.chrono.HijrahDate
+                public dateNow(): java.time.chrono.HijrahDate
                 // @ts-ignore
-                dateNow(zone: java.time.ZoneId): java.time.chrono.HijrahDate
+                public dateNow(zone: java.time.ZoneId): java.time.chrono.HijrahDate
                 // @ts-ignore
-                dateNow(clock: java.time.Clock): java.time.chrono.HijrahDate
+                public dateNow(clock: java.time.Clock): java.time.chrono.HijrahDate
                 // @ts-ignore
-                date(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.HijrahDate
+                public date(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.HijrahDate
                 // @ts-ignore
-                localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<java.time.chrono.HijrahDate>
+                public localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<java.time.chrono.HijrahDate>
                 // @ts-ignore
-                zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<java.time.chrono.HijrahDate>
+                public zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<java.time.chrono.HijrahDate>
                 // @ts-ignore
-                zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<java.time.chrono.HijrahDate>
+                public zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<java.time.chrono.HijrahDate>
                 // @ts-ignore
-                isLeapYear(prolepticYear: number /*long*/): boolean
+                public isLeapYear(prolepticYear: number /*long*/): boolean
                 // @ts-ignore
-                prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): int
+                public prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): number /*int*/
                 // @ts-ignore
-                eraOf(eraValue: number /*int*/): java.time.chrono.HijrahEra
+                public eraOf(eraValue: number /*int*/): java.time.chrono.HijrahEra
                 // @ts-ignore
-                eras(): java.util.List<java.time.chrono.Era>
+                public eras(): Array<java.time.chrono.Era>
                 // @ts-ignore
-                range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
                 // @ts-ignore
-                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.HijrahDate
+                public resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.HijrahDate
             }
         }
     }

@@ -31,15 +31,15 @@ declare namespace org {
                      * @see #setBeanNameGenerator
                      */
                     // @ts-ignore
-                    readonly IMPORT_BEAN_NAME_GENERATOR: org.springframework.context.annotation.AnnotationBeanNameGenerator
+                    public static readonly IMPORT_BEAN_NAME_GENERATOR: org.springframework.context.annotation.AnnotationBeanNameGenerator
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     /**
                      * Set the {@link SourceExtractor} to use for generated bean definitions
                      * that correspond to {@link Bean} factory methods.
                      */
                     // @ts-ignore
-                    setSourceExtractor(sourceExtractor: SourceExtractor): void
+                    public setSourceExtractor(sourceExtractor: SourceExtractor): void
                     /**
                      * Set the {@link ProblemReporter} to use.
                      * <p>Used to register any problems detected with {@link Configuration} or {@link Bean}
@@ -47,14 +47,14 @@ declare namespace org {
                      * and would be reported as a problem. Defaults to {@link FailFastProblemReporter}.
                      */
                     // @ts-ignore
-                    setProblemReporter(problemReporter: ProblemReporter): void
+                    public setProblemReporter(problemReporter: ProblemReporter): void
                     /**
                      * Set the {@link MetadataReaderFactory} to use.
                      * <p>Default is a {@link CachingMetadataReaderFactory} for the specified
                      * {@linkplain #setBeanClassLoader bean class loader}.
                      */
                     // @ts-ignore
-                    setMetadataReaderFactory(metadataReaderFactory: MetadataReaderFactory): void
+                    public setMetadataReaderFactory(metadataReaderFactory: MetadataReaderFactory): void
                     /**
                      * Set the {@link BeanNameGenerator} to be used when triggering component scanning
                      * from {@link Configuration} classes and when registering {@link Import}'ed
@@ -72,30 +72,30 @@ declare namespace org {
                      * @see AnnotationConfigUtils#CONFIGURATION_BEAN_NAME_GENERATOR
                      */
                     // @ts-ignore
-                    setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
+                    public setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
                     // @ts-ignore
-                    setEnvironment(environment: Environment): void
+                    public setEnvironment(environment: Environment): void
                     // @ts-ignore
-                    setResourceLoader(resourceLoader: ResourceLoader): void
+                    public setResourceLoader(resourceLoader: ResourceLoader): void
                     // @ts-ignore
-                    setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                     /**
                      * Derive further bean definitions from the configuration classes in the registry.
                      */
                     // @ts-ignore
-                    postProcessBeanDefinitionRegistry(registry: BeanDefinitionRegistry): void
+                    public postProcessBeanDefinitionRegistry(registry: BeanDefinitionRegistry): void
                     /**
                      * Prepare the Configuration classes for servicing bean requests at runtime
                      * by replacing them with CGLIB-enhanced subclasses.
                      */
                     // @ts-ignore
-                    postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
+                    public postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory): void
                     /**
                      * Build and validate a configuration model based on the registry of
                      * {@link Configuration} classes.
                      */
                     // @ts-ignore
-                    processConfigBeanDefinitions(registry: BeanDefinitionRegistry): void
+                    public processConfigBeanDefinitions(registry: BeanDefinitionRegistry): void
                     /**
                      * Post-processes a BeanFactory in search of Configuration class BeanDefinitions;
                      * any candidates are then enhanced by a {@link ConfigurationClassEnhancer}.
@@ -103,7 +103,7 @@ declare namespace org {
                      * @see ConfigurationClassEnhancer
                      */
                     // @ts-ignore
-                    enhanceConfigurationClasses(beanFactory: ConfigurableListableBeanFactory): void
+                    public enhanceConfigurationClasses(beanFactory: ConfigurableListableBeanFactory): void
                 }
             }
         }

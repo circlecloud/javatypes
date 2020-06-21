@@ -16,13 +16,13 @@ declare namespace org {
                                  * @return The immutable value for the walking speed
                                  */
                                 // @ts-ignore
-                                walkSpeed(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Double>
+                                walkSpeed(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the "flying" speed.
                                  * @return The immutable value for the flying speed
                                  */
                                 // @ts-ignore
-                                flySpeed(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Double>
+                                flySpeed(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Double | number>
                             }
                         }
                     }

@@ -13,7 +13,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class CacheRequest extends java.lang.Object {
+        abstract class CacheRequest extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -25,14 +25,14 @@ declare namespace java {
              *          writing the response body
              */
             // @ts-ignore
-            abstract getBody(): java.io.OutputStream
+            public abstract getBody(): java.io.OutputStream
             /**
              * Aborts the attempt to cache the response. If an IOException is
              * encountered while reading the response or writing to the cache,
              * the current cache store operation will be abandoned.
              */
             // @ts-ignore
-            abstract abort(): void
+            public abstract abort(): void
         }
     }
 }

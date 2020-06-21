@@ -24,7 +24,7 @@ declare namespace org {
                          * XML parser.
                          */
                         // @ts-ignore
-                        loadDocument(inputSource: org.xml.sax.InputSource, entityResolver: org.xml.sax.EntityResolver, errorHandler: org.xml.sax.ErrorHandler, validationMode: number /*int*/, namespaceAware: boolean): org.w3c.dom.Document
+                        public loadDocument(inputSource: org.xml.sax.InputSource, entityResolver: org.xml.sax.EntityResolver, errorHandler: org.xml.sax.ErrorHandler, validationMode: number /*int*/, namespaceAware: boolean): org.w3c.dom.Document
                         /**
                          * Create the {@link DocumentBuilderFactory} instance.
                          * @param validationMode the type of validation: {#link XmlValidationModeDetector#VALIDATION_DTD DTD}

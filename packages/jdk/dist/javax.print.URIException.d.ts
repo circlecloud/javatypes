@@ -16,19 +16,19 @@ declare namespace javax {
              * URI address.
              */
             // @ts-ignore
-            
+            readonly URIInaccessible: number /*int*/
             /**
              * Indicates that the printer does not support the URI
              * scheme ("http", "ftp", etc.) in the URI address.
              */
             // @ts-ignore
-            
+            readonly URISchemeNotSupported: number /*int*/
             /**
              * Indicates any kind of problem not specifically identified
              * by the other reasons.
              */
             // @ts-ignore
-            
+            readonly URIOtherProblem: number /*int*/
             /**
              * Return the URI.
              * @return the URI that is the cause of this exception.
@@ -40,7 +40,7 @@ declare namespace javax {
              * @return one of the predefined reasons enumerated in this interface.
              */
             // @ts-ignore
-            getReason(): int
+            getReason(): number /*int*/
         }
     }
 }

@@ -14,7 +14,7 @@ declare namespace org {
                              * @return The new item name
                              */
                             // @ts-ignore
-                            getItemName(): java.lang.String
+                            getItemName(): string
                             /**
                              * Returns the left input item.
                              * @return The left input item

@@ -91,7 +91,7 @@ declare namespace java {
                  * character.
                  */
                 // @ts-ignore
-                readonly STANDARD: number /*byte*/
+                public static readonly STANDARD: number /*byte*/
                 /**
                  * Indicates a glyph that represents multiple characters
                  * as a ligature, for example 'fi' or 'ffi'.  It is followed by
@@ -100,14 +100,14 @@ declare namespace java {
                  * on the logically preceding ligature.
                  */
                 // @ts-ignore
-                readonly LIGATURE: number /*byte*/
+                public static readonly LIGATURE: number /*byte*/
                 /**
                  * Indicates a glyph that represents a combining character,
                  * such as an umlaut.  There is no caret position between this glyph
                  * and the preceding glyph.
                  */
                 // @ts-ignore
-                readonly COMBINING: number /*byte*/
+                public static readonly COMBINING: number /*byte*/
                 /**
                  * Indicates a glyph with no corresponding character in the
                  * backing store.  The glyph is associated with the character
@@ -117,34 +117,34 @@ declare namespace java {
                  * and the preceding glyph.
                  */
                 // @ts-ignore
-                readonly COMPONENT: number /*byte*/
+                public static readonly COMPONENT: number /*byte*/
                 /**
                  * Indicates a glyph with no visual representation. It can
                  * be added to the other code values to indicate an invisible glyph.
                  */
                 // @ts-ignore
-                readonly WHITESPACE: number /*byte*/
+                public static readonly WHITESPACE: number /*byte*/
                 /**
                  * Returns the advance of the glyph along the baseline (either
                  * horizontal or vertical).
                  * @return the advance of the glyph
                  */
                 // @ts-ignore
-                getAdvance(): float
+                public getAdvance(): number /*float*/
                 /**
                  * Returns the x-component of the advance of the glyph.
                  * @return the x-component of the advance of the glyph
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAdvanceX(): float
+                public getAdvanceX(): number /*float*/
                 /**
                  * Returns the y-component of the advance of the glyph.
                  * @return the y-component of the advance of the glyph
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAdvanceY(): float
+                public getAdvanceY(): number /*float*/
                 /**
                  * Returns the bounds of the glyph. This is the bounding box of the glyph outline.
                  * Because of rasterization and pixel alignment effects, it does not necessarily
@@ -152,7 +152,7 @@ declare namespace java {
                  * @return a {#link Rectangle2D} that is the bounds of the glyph.
                  */
                 // @ts-ignore
-                getBounds2D(): java.awt.geom.Rectangle2D
+                public getBounds2D(): java.awt.geom.Rectangle2D
                 /**
                  * Returns the left (top) side bearing of the glyph.
                  * <p>
@@ -162,7 +162,7 @@ declare namespace java {
                  * @return the left side bearing of the glyph.
                  */
                 // @ts-ignore
-                getLSB(): float
+                public getLSB(): number /*float*/
                 /**
                  * Returns the right (bottom) side bearing of the glyph.
                  * <p>
@@ -172,48 +172,48 @@ declare namespace java {
                  * @return the right side bearing of the glyph.
                  */
                 // @ts-ignore
-                getRSB(): float
+                public getRSB(): number /*float*/
                 /**
                  * Returns the raw glyph type code.
                  * @return the raw glyph type code.
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Returns <code>true</code> if this is a standard glyph.
                  * @return <code>true</code> if this is a standard glyph;
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isStandard(): boolean
+                public isStandard(): boolean
                 /**
                  * Returns <code>true</code> if this is a ligature glyph.
                  * @return <code>true</code> if this is a ligature glyph;
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isLigature(): boolean
+                public isLigature(): boolean
                 /**
                  * Returns <code>true</code> if this is a combining glyph.
                  * @return <code>true</code> if this is a combining glyph;
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isCombining(): boolean
+                public isCombining(): boolean
                 /**
                  * Returns <code>true</code> if this is a component glyph.
                  * @return <code>true</code> if this is a component glyph;
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isComponent(): boolean
+                public isComponent(): boolean
                 /**
                  * Returns <code>true</code> if this is a whitespace glyph.
                  * @return <code>true</code> if this is a whitespace glyph;
                  *           <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isWhitespace(): boolean
+                public isWhitespace(): boolean
             }
         }
     }

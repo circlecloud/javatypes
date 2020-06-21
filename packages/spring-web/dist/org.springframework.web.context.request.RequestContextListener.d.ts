@@ -26,9 +26,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        requestInitialized(requestEvent: ServletRequestEvent): void
+                        public requestInitialized(requestEvent: ServletRequestEvent): void
                         // @ts-ignore
-                        requestDestroyed(requestEvent: ServletRequestEvent): void
+                        public requestDestroyed(requestEvent: ServletRequestEvent): void
                     }
                 }
             }

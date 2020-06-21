@@ -276,7 +276,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the pattern is invalid
              */
             // @ts-ignore
-            constructor(pattern: string)
+            constructor(pattern: java.lang.String | string)
             /**
              * Constructs a MessageFormat for the specified locale and
              * pattern.
@@ -290,7 +290,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(pattern: string, locale: java.util.Locale)
+            constructor(pattern: java.lang.String | string, locale: java.util.Locale)
             /**
              * Sets the locale to be used when creating or comparing subformats.
              * This affects subsequent calls
@@ -308,13 +308,13 @@ declare namespace java {
              * @param locale the locale to be used when creating or comparing subformats
              */
             // @ts-ignore
-            setLocale(locale: java.util.Locale): void
+            public setLocale(locale: java.util.Locale): void
             /**
              * Gets the locale that's used when creating or comparing subformats.
              * @return the locale used when creating or comparing subformats
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Sets the pattern used by this message format.
              * The method parses the pattern and creates a list of subformats
@@ -325,7 +325,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the pattern is invalid
              */
             // @ts-ignore
-            applyPattern(pattern: string): void
+            public applyPattern(pattern: java.lang.String | string): void
             /**
              * Returns a pattern representing the current state of the message format.
              * The string is constructed from internal information and therefore
@@ -333,7 +333,7 @@ declare namespace java {
              * @return a pattern representing the current state of the message format
              */
             // @ts-ignore
-            toPattern(): java.lang.String
+            public toPattern(): string
             /**
              * Sets the formats to use for the values passed into
              * <code>format</code> methods or returned from <code>parse</code>
@@ -357,7 +357,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setFormatsByArgumentIndex(newFormats: java.text.Format[]): void
+            public setFormatsByArgumentIndex(newFormats: java.text.Format[]): void
             /**
              * Sets the formats to use for the format elements in the
              * previously set pattern string.
@@ -380,7 +380,7 @@ declare namespace java {
              * @exception NullPointerException if <code>newFormats</code> is null
              */
             // @ts-ignore
-            setFormats(newFormats: java.text.Format[]): void
+            public setFormats(newFormats: java.text.Format[]): void
             /**
              * Sets the format to use for the format elements within the
              * previously set pattern string that use the given argument
@@ -399,7 +399,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setFormatByArgumentIndex(argumentIndex: number /*int*/, newFormat: java.text.Format): void
+            public setFormatByArgumentIndex(argumentIndex: number /*int*/, newFormat: java.text.Format): void
             /**
              * Sets the format to use for the format element with the given
              * format element index within the previously set pattern string.
@@ -417,7 +417,7 @@ declare namespace java {
              *             larger than the number of format elements in the pattern string
              */
             // @ts-ignore
-            setFormat(formatElementIndex: number /*int*/, newFormat: java.text.Format): void
+            public setFormat(formatElementIndex: number /*int*/, newFormat: java.text.Format): void
             /**
              * Gets the formats used for the values passed into
              * <code>format</code> methods or returned from <code>parse</code>
@@ -438,7 +438,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFormatsByArgumentIndex(): java.text.Format[]
+            public getFormatsByArgumentIndex(): java.text.Format[]
             /**
              * Gets the formats used for the format elements in the
              * previously set pattern string.
@@ -455,7 +455,7 @@ declare namespace java {
              * @return the formats used for the format elements in the pattern
              */
             // @ts-ignore
-            getFormats(): java.text.Format[]
+            public getFormats(): java.text.Format[]
             /**
              * Formats an array of objects and appends the <code>MessageFormat</code>'s
              * pattern, with format elements replaced by the formatted objects, to the
@@ -522,7 +522,7 @@ declare namespace java {
              *             expected by the format element(s) that use it.
              */
             // @ts-ignore
-            format(arguments: any[], result: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public format(arguments: java.lang.Object[] | any[], result: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Creates a MessageFormat with the given pattern and uses it
              * to format the given arguments. This is equivalent to
@@ -538,7 +538,7 @@ declare namespace java {
              *             that use it.
              */
             // @ts-ignore
-            format(pattern: string, ...arguments: any[]): java.lang.String
+            public static format(pattern: java.lang.String | string, ...arguments: java.lang.Object[] | any[]): string
             /**
              * Formats an array of objects and appends the <code>MessageFormat</code>'s
              * pattern, with format elements replaced by the formatted objects, to the
@@ -556,7 +556,7 @@ declare namespace java {
              *             expected by the format element(s) that use it.
              */
             // @ts-ignore
-            format(arguments: any, result: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public format(arguments: java.lang.Object | any, result: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats an array of objects and inserts them into the
              * <code>MessageFormat</code>'s pattern, producing an
@@ -592,7 +592,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            formatToCharacterIterator(arguments: any): java.text.AttributedCharacterIterator
+            public formatToCharacterIterator(arguments: java.lang.Object | any): java.text.AttributedCharacterIterator
             /**
              * Parses the string.
              * <p>Caveats: The parse may fail in a number of circumstances.
@@ -623,7 +623,7 @@ declare namespace java {
              * @return an array of parsed objects
              */
             // @ts-ignore
-            parse(source: string, pos: java.text.ParsePosition): java.lang.Object[]
+            public parse(source: java.lang.String | string, pos: java.text.ParsePosition): any[]
             /**
              * Parses text from the beginning of the given string to produce an object
              * array.
@@ -637,7 +637,7 @@ declare namespace java {
              *             cannot be parsed.
              */
             // @ts-ignore
-            parse(source: string): java.lang.Object[]
+            public parse(source: java.lang.String | string): any[]
             /**
              * Parses text from a string to produce an object array.
              * <p>
@@ -662,23 +662,23 @@ declare namespace java {
              * @exception NullPointerException if <code>pos</code> is null.
              */
             // @ts-ignore
-            parseObject(source: string, pos: java.text.ParsePosition): java.lang.Object
+            public parseObject(source: java.lang.String | string, pos: java.text.ParsePosition): any
             /**
              * Creates and returns a copy of this object.
              * @return a clone of this instance.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Equality comparison between two message format objects
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Generates a hash code for the message format object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

@@ -12,7 +12,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class EncodedKeySpec extends java.lang.Object implements java.security.spec.KeySpec {
+            abstract class EncodedKeySpec extends java.lang.Object implements java.security.spec.KeySpec {
                 /**
                  * Creates a new EncodedKeySpec with the given encoded key.
                  * @param encodedKey the encoded key. The contents of the
@@ -28,7 +28,7 @@ declare namespace java {
                  *  this method is called.
                  */
                 // @ts-ignore
-                getEncoded(): byte[]
+                public getEncoded(): number /*byte*/[]
                 /**
                  * Returns the name of the encoding format associated with this
                  * key specification.
@@ -43,7 +43,7 @@ declare namespace java {
                  * @return a string representation of the encoding format.
                  */
                 // @ts-ignore
-                abstract getFormat(): java.lang.String
+                public abstract getFormat(): string
             }
         }
     }

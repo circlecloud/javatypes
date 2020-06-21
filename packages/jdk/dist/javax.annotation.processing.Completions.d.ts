@@ -17,14 +17,14 @@ declare namespace javax {
                  * @return a completion of the provided value and message
                  */
                 // @ts-ignore
-                of(value: string, message: string): javax.annotation.processing.Completion
+                public static of(value: java.lang.String | string, message: java.lang.String | string): javax.annotation.processing.Completion
                 /**
                  * Returns a completion of the value and an empty message
                  * @param value the text of the completion
                  * @return a completion of the value and an empty message
                  */
                 // @ts-ignore
-                of(value: string): javax.annotation.processing.Completion
+                public static of(value: java.lang.String | string): javax.annotation.processing.Completion
             }
         }
     }

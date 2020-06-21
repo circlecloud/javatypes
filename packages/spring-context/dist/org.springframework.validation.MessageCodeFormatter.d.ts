@@ -20,7 +20,7 @@ declare namespace org {
                  * @see DefaultMessageCodesResolver.Format
                  */
                 // @ts-ignore
-                format(errorCode: string, objectName: string, field: string): java.lang.String
+                format(errorCode: java.lang.String | string, objectName: java.lang.String | string, field: java.lang.String | string): string
             }
         }
     }

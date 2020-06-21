@@ -132,7 +132,7 @@ declare namespace javax {
              * <code>Component</code>s will be split one on top of the other.
              */
             // @ts-ignore
-            readonly VERTICAL_SPLIT: number /*int*/
+            public static readonly VERTICAL_SPLIT: number /*int*/
             /**
              * Horizontal split indicates the <code>Component</code>s are
              * split along the x axis.  For example the two
@@ -140,73 +140,73 @@ declare namespace javax {
              * other.
              */
             // @ts-ignore
-            readonly HORIZONTAL_SPLIT: number /*int*/
+            public static readonly HORIZONTAL_SPLIT: number /*int*/
             /**
              * Used to add a <code>Component</code> to the left of the other
              * <code>Component</code>.
              */
             // @ts-ignore
-            readonly LEFT: string
+            public static readonly LEFT: java.lang.String | string
             /**
              * Used to add a <code>Component</code> to the right of the other
              * <code>Component</code>.
              */
             // @ts-ignore
-            readonly RIGHT: string
+            public static readonly RIGHT: java.lang.String | string
             /**
              * Used to add a <code>Component</code> above the other
              * <code>Component</code>.
              */
             // @ts-ignore
-            readonly TOP: string
+            public static readonly TOP: java.lang.String | string
             /**
              * Used to add a <code>Component</code> below the other
              * <code>Component</code>.
              */
             // @ts-ignore
-            readonly BOTTOM: string
+            public static readonly BOTTOM: java.lang.String | string
             /**
              * Used to add a <code>Component</code> that will represent the divider.
              */
             // @ts-ignore
-            readonly DIVIDER: string
+            public static readonly DIVIDER: java.lang.String | string
             /**
              * Bound property name for orientation (horizontal or vertical).
              */
             // @ts-ignore
-            readonly ORIENTATION_PROPERTY: string
+            public static readonly ORIENTATION_PROPERTY: java.lang.String | string
             /**
              * Bound property name for continuousLayout.
              */
             // @ts-ignore
-            readonly CONTINUOUS_LAYOUT_PROPERTY: string
+            public static readonly CONTINUOUS_LAYOUT_PROPERTY: java.lang.String | string
             /**
              * Bound property name for border.
              */
             // @ts-ignore
-            readonly DIVIDER_SIZE_PROPERTY: string
+            public static readonly DIVIDER_SIZE_PROPERTY: java.lang.String | string
             /**
              * Bound property for oneTouchExpandable.
              */
             // @ts-ignore
-            readonly ONE_TOUCH_EXPANDABLE_PROPERTY: string
+            public static readonly ONE_TOUCH_EXPANDABLE_PROPERTY: java.lang.String | string
             /**
              * Bound property for lastLocation.
              */
             // @ts-ignore
-            readonly LAST_DIVIDER_LOCATION_PROPERTY: string
+            public static readonly LAST_DIVIDER_LOCATION_PROPERTY: java.lang.String | string
             /**
              * Bound property for the dividerLocation.
              * @since 1.3
              */
             // @ts-ignore
-            readonly DIVIDER_LOCATION_PROPERTY: string
+            public static readonly DIVIDER_LOCATION_PROPERTY: java.lang.String | string
             /**
              * Bound property for weight.
              * @since 1.3
              */
             // @ts-ignore
-            readonly RESIZE_WEIGHT_PROPERTY: string
+            public static readonly RESIZE_WEIGHT_PROPERTY: java.lang.String | string
             /**
              * How the views are split.
              */
@@ -254,7 +254,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.SplitPaneUI): void
+            public setUI(ui: javax.swing.plaf.SplitPaneUI): void
             /**
              * Returns the <code>SplitPaneUI</code> that is providing the
              * current look and feel.
@@ -263,7 +263,7 @@ declare namespace javax {
              *   description: The L&amp;F object that renders this component.
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.SplitPaneUI
+            public getUI(): javax.swing.plaf.SplitPaneUI
             /**
              * Notification from the <code>UIManager</code> that the L&amp;F has changed.
              * Replaces the current UI object with the latest version from the
@@ -271,7 +271,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "SplitPaneUI"
@@ -281,7 +281,7 @@ declare namespace javax {
              *   description: A string that specifies the name of the L&amp;F class.
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the size of the divider.
              * @param newSize an integer giving the size of the divider in pixels
@@ -289,19 +289,19 @@ declare namespace javax {
              *   description: The size of the divider.
              */
             // @ts-ignore
-            setDividerSize(newSize: number /*int*/): void
+            public setDividerSize(newSize: number /*int*/): void
             /**
              * Returns the size of the divider.
              * @return an integer giving the size of the divider in pixels
              */
             // @ts-ignore
-            getDividerSize(): int
+            public getDividerSize(): number /*int*/
             /**
              * Sets the component to the left (or above) the divider.
              * @param comp the <code>Component</code> to display in that position
              */
             // @ts-ignore
-            setLeftComponent(comp: java.awt.Component): void
+            public setLeftComponent(comp: java.awt.Component): void
             /**
              * Returns the component to the left (or above) the divider.
              * @return the <code>Component</code> displayed in that position
@@ -309,20 +309,20 @@ declare namespace javax {
              *   description: The component to the left (or above) the divider.
              */
             // @ts-ignore
-            getLeftComponent(): java.awt.Component
+            public getLeftComponent(): java.awt.Component
             /**
              * Sets the component above, or to the left of the divider.
              * @param comp the <code>Component</code> to display in that position
              * @beaninfo description: The component above, or to the left of the divider.
              */
             // @ts-ignore
-            setTopComponent(comp: java.awt.Component): void
+            public setTopComponent(comp: java.awt.Component): void
             /**
              * Returns the component above, or to the left of the divider.
              * @return the <code>Component</code> displayed in that position
              */
             // @ts-ignore
-            getTopComponent(): java.awt.Component
+            public getTopComponent(): java.awt.Component
             /**
              * Sets the component to the right (or below) the divider.
              * @param comp the <code>Component</code> to display in that position
@@ -330,26 +330,26 @@ declare namespace javax {
              *   description: The component to the right (or below) the divider.
              */
             // @ts-ignore
-            setRightComponent(comp: java.awt.Component): void
+            public setRightComponent(comp: java.awt.Component): void
             /**
              * Returns the component to the right (or below) the divider.
              * @return the <code>Component</code> displayed in that position
              */
             // @ts-ignore
-            getRightComponent(): java.awt.Component
+            public getRightComponent(): java.awt.Component
             /**
              * Sets the component below, or to the right of the divider.
              * @param comp the <code>Component</code> to display in that position
              * @beaninfo description: The component below, or to the right of the divider.
              */
             // @ts-ignore
-            setBottomComponent(comp: java.awt.Component): void
+            public setBottomComponent(comp: java.awt.Component): void
             /**
              * Returns the component below, or to the right of the divider.
              * @return the <code>Component</code> displayed in that position
              */
             // @ts-ignore
-            getBottomComponent(): java.awt.Component
+            public getBottomComponent(): java.awt.Component
             /**
              * Sets the value of the <code>oneTouchExpandable</code> property,
              * which must be <code>true</code> for the
@@ -366,14 +366,14 @@ declare namespace javax {
              * @see #isOneTouchExpandable
              */
             // @ts-ignore
-            setOneTouchExpandable(newValue: boolean): void
+            public setOneTouchExpandable(newValue: boolean): void
             /**
              * Gets the <code>oneTouchExpandable</code> property.
              * @return the value of the <code>oneTouchExpandable</code> property
              * @see #setOneTouchExpandable
              */
             // @ts-ignore
-            isOneTouchExpandable(): boolean
+            public isOneTouchExpandable(): boolean
             /**
              * Sets the last location the divider was at to
              * <code>newLastLocation</code>.
@@ -384,7 +384,7 @@ declare namespace javax {
              *   description: The last location the divider was at.
              */
             // @ts-ignore
-            setLastDividerLocation(newLastLocation: number /*int*/): void
+            public setLastDividerLocation(newLastLocation: number /*int*/): void
             /**
              * Returns the last location the divider was at.
              * @return an integer specifying the last divider location as a count
@@ -392,7 +392,7 @@ declare namespace javax {
              *        left (or upper) edge of the divider
              */
             // @ts-ignore
-            getLastDividerLocation(): int
+            public getLastDividerLocation(): number /*int*/
             /**
              * Sets the orientation, or how the splitter is divided. The options
              * are:<ul>
@@ -408,14 +408,14 @@ declare namespace javax {
              *                VERTICAL_SPLIT   JSplitPane.VERTICAL_SPLIT
              */
             // @ts-ignore
-            setOrientation(orientation: number /*int*/): void
+            public setOrientation(orientation: number /*int*/): void
             /**
              * Returns the orientation.
              * @return an integer giving the orientation
              * @see #setOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Sets the value of the <code>continuousLayout</code> property,
              * which must be <code>true</code> for the child components
@@ -433,14 +433,14 @@ declare namespace javax {
              * @see #isContinuousLayout
              */
             // @ts-ignore
-            setContinuousLayout(newContinuousLayout: boolean): void
+            public setContinuousLayout(newContinuousLayout: boolean): void
             /**
              * Gets the <code>continuousLayout</code> property.
              * @return the value of the <code>continuousLayout</code> property
              * @see #setContinuousLayout
              */
             // @ts-ignore
-            isContinuousLayout(): boolean
+            public isContinuousLayout(): boolean
             /**
              * Specifies how to distribute extra space when the size of the split pane
              * changes. A value of 0, the default,
@@ -458,7 +458,7 @@ declare namespace javax {
              *                resizes.
              */
             // @ts-ignore
-            setResizeWeight(value: number /*double*/): void
+            public setResizeWeight(value: number /*double*/): void
             /**
              * Returns the number that determines how extra space is distributed.
              * @return how extra space is to be distributed on a resize of the
@@ -466,14 +466,14 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getResizeWeight(): double
+            public getResizeWeight(): number /*double*/
             /**
              * Lays out the <code>JSplitPane</code> layout based on the preferred size
              * of the children components. This will likely result in changing
              * the divider location.
              */
             // @ts-ignore
-            resetToPreferredSizes(): void
+            public resetToPreferredSizes(): void
             /**
              * Sets the divider location as a percentage of the
              * <code>JSplitPane</code>'s size.
@@ -492,7 +492,7 @@ declare namespace javax {
              * @beaninfo description: The location of the divider.
              */
             // @ts-ignore
-            setDividerLocation(proportionalLocation: number /*double*/): void
+            public setDividerLocation(proportionalLocation: number /*double*/): void
             /**
              * Sets the location of the divider. This is passed off to the
              * look and feel implementation, and then listeners are notified. A value
@@ -506,7 +506,7 @@ declare namespace javax {
              *   description: The location of the divider.
              */
             // @ts-ignore
-            setDividerLocation(location: number /*int*/): void
+            public setDividerLocation(location: number /*int*/): void
             /**
              * Returns the last value passed to <code>setDividerLocation</code>.
              * The value returned from this method may differ from the actual
@@ -515,7 +515,7 @@ declare namespace javax {
              * @return an integer specifying the location of the divider
              */
             // @ts-ignore
-            getDividerLocation(): int
+            public getDividerLocation(): number /*int*/
             /**
              * Returns the minimum location of the divider from the look and feel
              * implementation.
@@ -525,7 +525,7 @@ declare namespace javax {
              * @beaninfo description: The minimum location of the divider from the L&amp;F.
              */
             // @ts-ignore
-            getMinimumDividerLocation(): int
+            public getMinimumDividerLocation(): number /*int*/
             /**
              * Returns the maximum location of the divider from the look and feel
              * implementation.
@@ -534,7 +534,7 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            getMaximumDividerLocation(): int
+            public getMaximumDividerLocation(): number /*int*/
             /**
              * Removes the child component, <code>component</code> from the
              * pane. Resets the <code>leftComponent</code> or
@@ -542,7 +542,7 @@ declare namespace javax {
              * @param component the <code>Component</code> to remove
              */
             // @ts-ignore
-            remove(component: java.awt.Component): void
+            public remove(component: java.awt.Component): void
             /**
              * Removes the <code>Component</code> at the specified index.
              * Updates the <code>leftComponent</code> and <code>rightComponent</code>
@@ -552,14 +552,14 @@ declare namespace javax {
              *         bottom/right component
              */
             // @ts-ignore
-            remove(index: number /*int*/): void
+            public remove(index: number /*int*/): void
             /**
              * Removes all the child components from the split pane. Resets the
              * <code>leftComonent</code> and <code>rightComponent</code>
              * instance variables.
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Returns true, so that calls to <code>revalidate</code>
              * on any descendant of this <code>JSplitPane</code>
@@ -571,7 +571,7 @@ declare namespace javax {
              * @beaninfo hidden: true
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * Adds the specified component to this split pane.
              * If <code>constraints</code> identifies the left/top or
@@ -602,7 +602,7 @@ declare namespace javax {
              * @see java.awt.Container#addImpl(Component, Object, int)
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Subclassed to message the UI with <code>finishedPaintingChildren</code>
              * after super has been messaged, as well as painting the border.
@@ -620,7 +620,7 @@ declare namespace javax {
              * @return a string representation of this <code>JSplitPane</code>.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JSplitPane.
              * For split panes, the AccessibleContext takes the form of an
@@ -632,7 +632,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this SplitPane.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

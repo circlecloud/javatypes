@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Scott Violet
              */
             // @ts-ignore
-            class OptionPaneUI extends javax.swing.plaf.ComponentUI {
+            abstract class OptionPaneUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
                 /**
@@ -14,13 +14,13 @@ declare namespace javax {
                  * focus.
                  */
                 // @ts-ignore
-                abstract selectInitialValue(op: javax.swing.JOptionPane): void
+                public abstract selectInitialValue(op: javax.swing.JOptionPane): void
                 /**
                  * Returns true if the user has supplied instances of Component for
                  * either the options or message.
                  */
                 // @ts-ignore
-                abstract containsCustomComponents(op: javax.swing.JOptionPane): boolean
+                public abstract containsCustomComponents(op: javax.swing.JOptionPane): boolean
             }
         }
     }

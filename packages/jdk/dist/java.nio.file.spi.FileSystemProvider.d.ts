@@ -35,7 +35,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                class FileSystemProvider extends java.lang.Object {
+                abstract class FileSystemProvider extends java.lang.Object {
                     /**
                      * Initializes a new instance of this class.
                      * <p> During construction a provider may safely access files associated
@@ -60,13 +60,13 @@ declare namespace java {
                      *           When an error occurs while loading a service provider
                      */
                     // @ts-ignore
-                    installedProviders(): java.util.List<java.nio.file.spi.FileSystemProvider>
+                    public static installedProviders(): Array<java.nio.file.spi.FileSystemProvider>
                     /**
                      * Returns the URI scheme that identifies this provider.
                      * @return The URI scheme
                      */
                     // @ts-ignore
-                    abstract getScheme(): java.lang.String
+                    public abstract getScheme(): string
                     /**
                      * Constructs a new {@code FileSystem} object identified by a URI. This
                      * method is invoked by the {@link FileSystems#newFileSystem(URI,Map)}
@@ -101,7 +101,7 @@ declare namespace java {
                      *           If the file system has already been created
                      */
                     // @ts-ignore
-                    abstract newFileSystem(uri: java.net.URI, env: java.util.Map<java.lang.String, any>): java.nio.file.FileSystem
+                    public abstract newFileSystem(uri: java.net.URI, env: java.util.Map<java.lang.String | string, any>): java.nio.file.FileSystem
                     /**
                      * Returns an existing {@code FileSystem} created by this provider.
                      * <p> This method returns a reference to a {@code FileSystem} that was
@@ -136,7 +136,7 @@ declare namespace java {
                      *           permission.
                      */
                     // @ts-ignore
-                    abstract getFileSystem(uri: java.net.URI): java.nio.file.FileSystem
+                    public abstract getFileSystem(uri: java.net.URI): java.nio.file.FileSystem
                     /**
                      * Return a {@code Path} object by converting the given {@link URI}. The
                      * resulting {@code Path} is associated with a {@link FileSystem} that
@@ -164,7 +164,7 @@ declare namespace java {
                      *           permission.
                      */
                     // @ts-ignore
-                    abstract getPath(uri: java.net.URI): java.nio.file.Path
+                    public abstract getPath(uri: java.net.URI): java.nio.file.Path
                     /**
                      * Constructs a new {@code FileSystem} to access the contents of a file as a
                      * file system.
@@ -196,7 +196,7 @@ declare namespace java {
                      *           permission.
                      */
                     // @ts-ignore
-                    newFileSystem(path: java.nio.file.Path, env: java.util.Map<java.lang.String, any>): java.nio.file.FileSystem
+                    public newFileSystem(path: java.nio.file.Path, env: java.util.Map<java.lang.String | string, any>): java.nio.file.FileSystem
                     /**
                      * Opens a file, returning an input stream to read from the file. This
                      * method works in exactly the manner specified by the {@link
@@ -222,7 +222,7 @@ declare namespace java {
                      *           method is invoked to check read access to the file.
                      */
                     // @ts-ignore
-                    newInputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.InputStream
+                    public newInputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.InputStream
                     /**
                      * Opens or creates a file, returning an output stream that may be used to
                      * write bytes to the file. This method works in exactly the manner
@@ -251,7 +251,7 @@ declare namespace java {
                      *           {@code DELETE_ON_CLOSE} option.
                      */
                     // @ts-ignore
-                    newOutputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.OutputStream
+                    public newOutputStream(path: java.nio.file.Path, ...options: java.nio.file.OpenOption[]): java.io.OutputStream
                     /**
                      * Opens or creates a file for reading and/or writing, returning a file
                      * channel to access the file. This method works in exactly the manner
@@ -284,7 +284,7 @@ declare namespace java {
                      *           write access if the file is opened for writing
                      */
                     // @ts-ignore
-                    newFileChannel(path: java.nio.file.Path, options: Array<java.nio.file.OpenOption>, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.FileChannel
+                    public newFileChannel(path: java.nio.file.Path, options: java.util.Set<any> | Array<any>, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.FileChannel
                     /**
                      * Opens or creates a file for reading and/or writing, returning an
                      * asynchronous file channel to access the file. This method works in
@@ -323,7 +323,7 @@ declare namespace java {
                      *           write access if the file is opened for writing
                      */
                     // @ts-ignore
-                    newAsynchronousFileChannel(path: java.nio.file.Path, options: Array<java.nio.file.OpenOption>, executor: java.util.concurrent.ExecutorService, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.AsynchronousFileChannel
+                    public newAsynchronousFileChannel(path: java.nio.file.Path, options: java.util.Set<any> | Array<any>, executor: java.util.concurrent.ExecutorService, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.AsynchronousFileChannel
                     /**
                      * Opens or creates a file, returning a seekable byte channel to access the
                      * file. This method works in exactly the manner specified by the {@link
@@ -359,7 +359,7 @@ declare namespace java {
                      *           {@code DELETE_ON_CLOSE} option.
                      */
                     // @ts-ignore
-                    abstract newByteChannel(path: java.nio.file.Path, options: Array<java.nio.file.OpenOption>, ...attrs: java.nio.file.attribute.FileAttribute[]): java.nio.channels.SeekableByteChannel
+                    public abstract newByteChannel(path: java.nio.file.Path, options: java.util.Set<any> | Array<any>, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): java.nio.channels.SeekableByteChannel
                     /**
                      * Opens a directory, returning a {@code DirectoryStream} to iterate over
                      * the entries in the directory. This method works in exactly the manner
@@ -382,7 +382,7 @@ declare namespace java {
                      *           method is invoked to check read access to the directory.
                      */
                     // @ts-ignore
-                    abstract newDirectoryStream(dir: java.nio.file.Path, filter: java.nio.file.DirectoryStream.Filter<any super java.nio.file.Path>): java.nio.file.DirectoryStream<java.nio.file.Path>
+                    public abstract newDirectoryStream(dir: java.nio.file.Path, filter: java.nio.file.DirectoryStream.Filter<any>): java.nio.file.DirectoryStream<java.nio.file.Path>
                     /**
                      * Creates a new directory. This method works in exactly the manner
                      * specified by the {@link Files#createDirectory} method.
@@ -405,7 +405,7 @@ declare namespace java {
                      *           method is invoked to check write access to the new directory.
                      */
                     // @ts-ignore
-                    abstract createDirectory(dir: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute[]): void
+                    public abstract createDirectory(dir: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): void
                     /**
                      * Creates a symbolic link to a target. This method works in exactly the
                      * manner specified by the {@link Files#createSymbolicLink} method.
@@ -434,7 +434,7 @@ declare namespace java {
                      *           method denies write access to the path of the symbolic link.
                      */
                     // @ts-ignore
-                    createSymbolicLink(link: java.nio.file.Path, target: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute[]): void
+                    public createSymbolicLink(link: java.nio.file.Path, target: java.nio.file.Path, ...attrs: java.nio.file.attribute.FileAttribute<any>[]): void
                     /**
                      * Creates a new link (directory entry) for an existing file. This method
                      * works in exactly the manner specified by the {@link Files#createLink}
@@ -461,7 +461,7 @@ declare namespace java {
                      *           existing file.
                      */
                     // @ts-ignore
-                    createLink(link: java.nio.file.Path, existing: java.nio.file.Path): void
+                    public createLink(link: java.nio.file.Path, existing: java.nio.file.Path): void
                     /**
                      * Deletes a file. This method works in exactly the  manner specified by the
                      * {@link Files#delete} method.
@@ -481,7 +481,7 @@ declare namespace java {
                      *           is invoked to check delete access to the file
                      */
                     // @ts-ignore
-                    abstract delete(path: java.nio.file.Path): void
+                    public abstract delete(path: java.nio.file.Path): void
                     /**
                      * Deletes a file if it exists. This method works in exactly the manner
                      * specified by the {@link Files#deleteIfExists} method.
@@ -505,7 +505,7 @@ declare namespace java {
                      *           is invoked to check delete access to the file
                      */
                     // @ts-ignore
-                    deleteIfExists(path: java.nio.file.Path): boolean
+                    public deleteIfExists(path: java.nio.file.Path): boolean
                     /**
                      * Reads the target of a symbolic link. This method works in exactly the
                      * manner specified by the {@link Files#readSymbolicLink} method.
@@ -527,7 +527,7 @@ declare namespace java {
                      *           granted with the "{@code readlink}" action to read the link.
                      */
                     // @ts-ignore
-                    readSymbolicLink(link: java.nio.file.Path): java.nio.file.Path
+                    public readSymbolicLink(link: java.nio.file.Path): java.nio.file.Path
                     /**
                      * Copy a file to a target file. This method works in exactly the manner
                      * specified by the {@link Files#copy(Path,Path,CopyOption[])} method
@@ -561,7 +561,7 @@ declare namespace java {
                      *           LinkPermission}{@code ("symbolic")}.
                      */
                     // @ts-ignore
-                    abstract copy(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): void
+                    public abstract copy(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): void
                     /**
                      * Move or rename a file to a target file. This method works in exactly the
                      * manner specified by the {@link Files#move} method except that both the
@@ -594,7 +594,7 @@ declare namespace java {
                      *           target file.
                      */
                     // @ts-ignore
-                    abstract move(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): void
+                    public abstract move(source: java.nio.file.Path, target: java.nio.file.Path, ...options: java.nio.file.CopyOption[]): void
                     /**
                      * Tests if two paths locate the same file. This method works in exactly the
                      * manner specified by the {@link Files#isSameFile} method.
@@ -611,7 +611,7 @@ declare namespace java {
                      *           method is invoked to check read access to both files.
                      */
                     // @ts-ignore
-                    abstract isSameFile(path: java.nio.file.Path, path2: java.nio.file.Path): boolean
+                    public abstract isSameFile(path: java.nio.file.Path, path2: java.nio.file.Path): boolean
                     /**
                      * Tells whether or not a file is considered <em>hidden</em>. This method
                      * works in exactly the manner specified by the {@link Files#isHidden}
@@ -628,7 +628,7 @@ declare namespace java {
                      *           method is invoked to check read access to the file.
                      */
                     // @ts-ignore
-                    abstract isHidden(path: java.nio.file.Path): boolean
+                    public abstract isHidden(path: java.nio.file.Path): boolean
                     /**
                      * Returns the {@link FileStore} representing the file store where a file
                      * is located. This method works in exactly the manner specified by the
@@ -646,7 +646,7 @@ declare namespace java {
                      *           ("getFileStoreAttributes")</tt>
                      */
                     // @ts-ignore
-                    abstract getFileStore(path: java.nio.file.Path): java.nio.file.FileStore
+                    public abstract getFileStore(path: java.nio.file.Path): java.nio.file.FileStore
                     /**
                      * Checks the existence, and optionally the accessibility, of a file.
                      * <p> This method may be used by the {@link Files#isReadable isReadable},
@@ -714,7 +714,7 @@ declare namespace java {
                      *           when checking execute access.
                      */
                     // @ts-ignore
-                    abstract checkAccess(path: java.nio.file.Path, ...modes: java.nio.file.AccessMode[]): void
+                    public abstract checkAccess(path: java.nio.file.Path, ...modes: java.nio.file.AccessMode[]): void
                     /**
                      * Returns a file attribute view of a given type. This method works in
                      * exactly the manner specified by the {@link Files#getFileAttributeView}
@@ -731,7 +731,7 @@ declare namespace java {
                      *           the attribute view type is not available
                      */
                     // @ts-ignore
-                    abstract getFileAttributeView<V extends java.nio.file.attribute.FileAttributeView>(path: java.nio.file.Path, type: java.lang.Class<V>, ...options: java.nio.file.LinkOption[]): V
+                    public abstract getFileAttributeView<V extends java.nio.file.attribute.FileAttributeView>(path: java.nio.file.Path, type: java.lang.Class<V>, ...options: java.nio.file.LinkOption[]): V
                     /**
                      * Reads a file's attributes as a bulk operation. This method works in
                      * exactly the manner specified by the {@link
@@ -756,7 +756,7 @@ declare namespace java {
                      *           method is invoked to check read access to the file
                      */
                     // @ts-ignore
-                    abstract readAttributes<A extends java.nio.file.attribute.BasicFileAttributes>(path: java.nio.file.Path, type: java.lang.Class<A>, ...options: java.nio.file.LinkOption[]): A
+                    public abstract readAttributes<A extends java.nio.file.attribute.BasicFileAttributes>(path: java.nio.file.Path, type: java.lang.Class<A>, ...options: java.nio.file.LinkOption[]): A
                     /**
                      * Reads a set of file attributes as a bulk operation. This method works in
                      * exactly the manner specified by the {@link
@@ -784,7 +784,7 @@ declare namespace java {
                      *           may be invoke to check for additional permissions.
                      */
                     // @ts-ignore
-                    abstract readAttributes(path: java.nio.file.Path, attributes: string, ...options: java.nio.file.LinkOption[]): java.util.Map<java.lang.String, java.lang.Object>
+                    public abstract readAttributes(path: java.nio.file.Path, attributes: java.lang.String | string, ...options: java.nio.file.LinkOption[]): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Sets the value of a file attribute. This method works in exactly the
                      * manner specified by the {@link Files#setAttribute} method.
@@ -816,7 +816,7 @@ declare namespace java {
                      *           may be invoked to check for additional permissions.
                      */
                     // @ts-ignore
-                    abstract setAttribute(path: java.nio.file.Path, attribute: string, value: any, ...options: java.nio.file.LinkOption[]): void
+                    public abstract setAttribute(path: java.nio.file.Path, attribute: java.lang.String | string, value: java.lang.Object | any, ...options: java.nio.file.LinkOption[]): void
                 }
             }
         }

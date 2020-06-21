@@ -8,11 +8,11 @@ declare namespace org {
                 // @ts-ignore
                 class EntityDeathEvent extends org.bukkit.event.entity.EntityEvent {
                     // @ts-ignore
-                    constructor(entity: org.bukkit.entity.LivingEntity, drops: Array<org.bukkit.inventory.ItemStack>)
+                    constructor(entity: org.bukkit.entity.LivingEntity, drops: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>)
                     // @ts-ignore
-                    constructor(what: org.bukkit.entity.LivingEntity, drops: Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/)
+                    constructor(what: org.bukkit.entity.LivingEntity, drops: java.util.List<org.bukkit.inventory.ItemStack> | Array<org.bukkit.inventory.ItemStack>, droppedExp: number /*int*/)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets how much EXP should be dropped from this death.
                      * <p>
@@ -21,7 +21,7 @@ declare namespace org {
                      * @return Amount of EXP to drop.
                      */
                     // @ts-ignore
-                    getDroppedExp(): int
+                    public getDroppedExp(): number /*int*/
                     /**
                      * Sets how much EXP should be dropped from this death.
                      * <p>
@@ -30,17 +30,17 @@ declare namespace org {
                      * @param exp Amount of EXP to drop.
                      */
                     // @ts-ignore
-                    setDroppedExp(exp: number /*int*/): void
+                    public setDroppedExp(exp: number /*int*/): void
                     /**
                      * Gets all the items which will drop when the entity dies
                      * @return Items to drop when the entity dies
                      */
                     // @ts-ignore
-                    getDrops(): java.util.List<org.bukkit.inventory.ItemStack>
+                    public getDrops(): Array<org.bukkit.inventory.ItemStack>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

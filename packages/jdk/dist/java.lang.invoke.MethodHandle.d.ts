@@ -23,7 +23,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class MethodHandle extends java.lang.Object {
+            abstract class MethodHandle extends java.lang.Object {
                 /**
                  * Invoke the receiver MethodHandle against the supplied arguments.  The types of the arguments
                  * must be an exact match for the MethodType of the MethodHandle.
@@ -32,7 +32,7 @@ declare namespace java {
                  * @throws WrongMethodTypeException - If the resolved method type is not exactly equal to the MethodHandle's type
                  */
                 // @ts-ignore
-                invokeExact(...args: any[]): java.lang.Object
+                public invokeExact(...args: java.lang.Object[] | any[]): any
                 /**
                  * Invoke the receiver MethodHandle against the supplied arguments.  If the types of the arguments
                  * are not an exact match for the MethodType of the MethodHandle, conversions will be applied as
@@ -43,13 +43,13 @@ declare namespace java {
                  * @throws ClassCastException - if a conversion fails
                  */
                 // @ts-ignore
-                invoke(...args: any[]): java.lang.Object
+                public invoke(...args: java.lang.Object[] | any[]): any
                 /**
                  * The MethodType of the MethodHandle.  Invocation must match this MethodType.
                  * @return the MethodType of the MethodHandle.
                  */
                 // @ts-ignore
-                type(): java.lang.invoke.MethodType
+                public type(): java.lang.invoke.MethodType
                 /**
                  * Produce a MethodHandle that has an array of type <i>arrayClass</i> as its last argument and replaces the
                  * array with <i>spreadCount</i> arguments from the array before calling the original MethodHandle.  The
@@ -66,7 +66,7 @@ declare namespace java {
                  * @throws WrongMethodTypeException - if it cannot convert from one MethodType to the new type.
                  */
                 // @ts-ignore
-                asSpreader(arrayClass: java.lang.Class<any>, spreadCount: number /*int*/): java.lang.invoke.MethodHandle
+                public asSpreader(arrayClass: java.lang.Class<any>, spreadCount: number /*int*/): java.lang.invoke.MethodHandle
                 /**
                  * Returns a MethodHandle that collects the requested incoming arguments, which must match the
                  * types in MethodType incomingArgs, into an array of <i>arrayClass</i>, called T.
@@ -83,7 +83,7 @@ declare namespace java {
                  * @throws NullPointerException if arrayClass is null
                  */
                 // @ts-ignore
-                asCollector(arrayClass: java.lang.Class<any>, collectCount: number /*int*/): java.lang.invoke.MethodHandle
+                public asCollector(arrayClass: java.lang.Class<any>, collectCount: number /*int*/): java.lang.invoke.MethodHandle
                 /**
                  * Returns a MethodHandle that presents as being of MethodType newType.  It will
                  * convert the arguments used to match type().  If a conversion is invalid, a
@@ -98,7 +98,7 @@ declare namespace java {
                  * @throws ClassCastException if any of the requested coercions are invalid.
                  */
                 // @ts-ignore
-                asType(newType: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
+                public asType(newType: java.lang.invoke.MethodType): java.lang.invoke.MethodHandle
                 /**
                  * Invoke the MethodHandle using an Object[] of arguments.  The array must contain at exactly type().parameterCount() arguments.
                  * Each of the arguments in the array will be coerced to the appropriate type, if possible, based on the MethodType.
@@ -109,7 +109,7 @@ declare namespace java {
                  * @throws ClassCastException if an argument cannot be converted
                  */
                 // @ts-ignore
-                invokeWithArguments(...args: any[]): java.lang.Object
+                public invokeWithArguments(...args: java.lang.Object[] | any[]): any
                 /**
                  * Helper method to call {@link #invokeWithArguments(Object[])}.
                  * @param args - An array of arguments, with length at exactly type().parameterCount() to be used in the call.
@@ -120,7 +120,7 @@ declare namespace java {
                  * @throws NullPointerException if the args list is null
                  */
                 // @ts-ignore
-                invokeWithArguments(args: Array<any>): java.lang.Object
+                public invokeWithArguments(args: java.util.List<any> | Array<any>): any
                 /**
                  * Create an varargs collector adapter on this MethodHandle.
                  * For {@link #asVarargsCollector(Class)} MethodHandles, <i>invokeExact</i> requires that the arguments
@@ -134,13 +134,13 @@ declare namespace java {
                  * @throws IllegalArgumentException - if the arrayParameter is not an array class or cannot be assigned to the last parameter of the MethodType
                  */
                 // @ts-ignore
-                asVarargsCollector(arrayParameter: java.lang.Class<any>): java.lang.invoke.MethodHandle
+                public asVarargsCollector(arrayParameter: java.lang.Class<any>): java.lang.invoke.MethodHandle
                 /**
                  * Determine whether this is an {@link #asVarargsCollector(Class)} MethodHandle.
                  * @return true if an {#link #asVarargsCollector(Class)} handle, false otherwise.
                  */
                 // @ts-ignore
-                isVarargsCollector(): boolean
+                public isVarargsCollector(): boolean
                 /**
                  * Return a fixed arity version of the current MethodHandle.
                  * <p>
@@ -151,11 +151,11 @@ declare namespace java {
                  * @return a fixed arity version of the current method handle
                  */
                 // @ts-ignore
-                asFixedArity(): java.lang.invoke.MethodHandle
+                public asFixedArity(): java.lang.invoke.MethodHandle
                 // @ts-ignore
-                bindTo(value: any): java.lang.invoke.MethodHandle
+                public bindTo(value: java.lang.Object | any): java.lang.invoke.MethodHandle
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

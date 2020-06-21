@@ -239,7 +239,7 @@ declare namespace java {
              * @throws IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeBytes(s: string): void
+            writeBytes(s: java.lang.String | string): void
             /**
              * Writes every character in the string <code>s</code>,
              * to the output stream, in order,
@@ -258,7 +258,7 @@ declare namespace java {
              * @throws IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeChars(s: string): void
+            writeChars(s: java.lang.String | string): void
             /**
              * Writes two bytes of length information
              * to the output stream, followed
@@ -311,7 +311,7 @@ declare namespace java {
              * @throws IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            writeUTF(s: string): void
+            writeUTF(s: java.lang.String | string): void
         }
     }
 }

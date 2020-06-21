@@ -18,24 +18,24 @@ declare namespace java {
              * @param value the current value, which may be null
              */
             // @ts-ignore
-            constructor(name: string, value: string)
+            constructor(name: java.lang.String | string, value: java.lang.String | string)
             /**
              * The name of the property.
              */
             // @ts-ignore
-            name: string
+            public name: java.lang.String | string
             /**
              * A brief description of the property, which may be null.
              */
             // @ts-ignore
-            description: string
+            public description: java.lang.String | string
             /**
              * The <code>required</code> field is <code>true</code> if a value must be
              * supplied for this property
              * during <code>Driver.connect</code> and <code>false</code> otherwise.
              */
             // @ts-ignore
-            required: boolean
+            public required: boolean
             /**
              * The <code>value</code> field specifies the current value of
              * the property, based on a combination of the information
@@ -44,14 +44,14 @@ declare namespace java {
              * may be null if no value is known.
              */
             // @ts-ignore
-            value: string
+            public value: java.lang.String | string
             /**
              * An array of possible values if the value for the field
              * <code>DriverPropertyInfo.value</code> may be selected
              * from a particular set of values; otherwise null.
              */
             // @ts-ignore
-            choices: string[]
+            public choices: java.lang.String[] | string[]
         }
     }
 }

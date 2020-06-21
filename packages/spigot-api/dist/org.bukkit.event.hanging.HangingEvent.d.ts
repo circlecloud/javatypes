@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a hanging entity-related event.
                  */
                 // @ts-ignore
-                class HangingEvent extends org.bukkit.event.Event {
+                abstract class HangingEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(painting: org.bukkit.entity.Hanging)
                     // @ts-ignore
@@ -16,7 +16,7 @@ declare namespace org {
                      * @return the hanging entity
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Hanging
+                    public getEntity(): org.bukkit.entity.Hanging
                 }
             }
         }

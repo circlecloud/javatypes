@@ -38,7 +38,7 @@ declare namespace org {
                          * @param predicate The predicate to use for filtering.
                          */
                         // @ts-ignore
-                        filterDirections(predicate: java.util.function.Predicate<org.spongepowered.api.util.Direction> | java.util.function$.Predicate<org.spongepowered.api.util.Direction>): void
+                        filterDirections(predicate: java.util.function$.Predicate<org.spongepowered.api.util.Direction>): void
                     }
                 }
             }

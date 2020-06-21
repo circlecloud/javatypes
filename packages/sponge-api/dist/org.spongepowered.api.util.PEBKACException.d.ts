@@ -17,7 +17,7 @@ declare namespace org {
                      * @param msg The exception message
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Constructs a new {@link PEBKACException} with the given message and
                      * cause.
@@ -25,13 +25,13 @@ declare namespace org {
                      * @param cause The cause of the exception
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Constructs a new {@link PEBKACException} with the given cause.
                      * @param cause The cause of the exception
                      */
                     // @ts-ignore
-                    constructor(cause: Error)
+                    constructor(cause: java.lang.Throwable | Error)
                 }
             }
         }

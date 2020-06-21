@@ -18,14 +18,14 @@ declare namespace org {
                  * @param msg The details of the exception.
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Constructs an instance of InvalidConfigurationException with the
                  * specified cause.
                  * @param cause The cause of the exception.
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Constructs an instance of InvalidConfigurationException with the
                  * specified message and cause.
@@ -33,7 +33,7 @@ declare namespace org {
                  * @param msg The details of the exception.
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

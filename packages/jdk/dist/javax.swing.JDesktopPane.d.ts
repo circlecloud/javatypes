@@ -55,7 +55,7 @@ declare namespace javax {
              * @see #setDragMode
              */
             // @ts-ignore
-            readonly LIVE_DRAG_MODE: number /*int*/
+            public static readonly LIVE_DRAG_MODE: number /*int*/
             /**
              * Indicates that an outline only of the item being dragged
              * should appear inside the desktop pane.
@@ -63,14 +63,14 @@ declare namespace javax {
              * @see #setDragMode
              */
             // @ts-ignore
-            readonly OUTLINE_DRAG_MODE: number /*int*/
+            public static readonly OUTLINE_DRAG_MODE: number /*int*/
             /**
              * Returns the L&amp;F object that renders this component.
              * @return the <code>DesktopPaneUI</code> object that
              *    renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.DesktopPaneUI
+            public getUI(): javax.swing.plaf.DesktopPaneUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the DesktopPaneUI L&amp;F object
@@ -81,7 +81,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.DesktopPaneUI): void
+            public setUI(ui: javax.swing.plaf.DesktopPaneUI): void
             /**
              * Sets the "dragging style" used by the desktop pane.
              * You may want to change to one mode or another for
@@ -96,7 +96,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setDragMode(dragMode: number /*int*/): void
+            public setDragMode(dragMode: number /*int*/): void
             /**
              * Gets the current "dragging style" used by the desktop pane.
              * @return either <code>Live_DRAG_MODE</code> or
@@ -105,13 +105,13 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getDragMode(): int
+            public getDragMode(): number /*int*/
             /**
              * Returns the <code>DesktopManger</code> that handles
              * desktop-specific UI actions.
              */
             // @ts-ignore
-            getDesktopManager(): javax.swing.DesktopManager
+            public getDesktopManager(): javax.swing.DesktopManager
             /**
              * Sets the <code>DesktopManger</code> that will handle
              * desktop-specific UI actions. This may be overridden by
@@ -122,7 +122,7 @@ declare namespace javax {
              *                desktop pane.
              */
             // @ts-ignore
-            setDesktopManager(d: javax.swing.DesktopManager): void
+            public setDesktopManager(d: javax.swing.DesktopManager): void
             /**
              * Notification from the <code>UIManager</code> that the L&amp;F has changed.
              * Replaces the current UI object with the latest version from the
@@ -130,7 +130,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "DesktopPaneUI"
@@ -138,14 +138,14 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns all <code>JInternalFrames</code> currently displayed in the
              * desktop. Returns iconified frames as well as expanded frames.
              * @return an array of <code>JInternalFrame</code> objects
              */
             // @ts-ignore
-            getAllFrames(): javax.swing.JInternalFrame[]
+            public getAllFrames(): javax.swing.JInternalFrame[]
             /**
              * Returns the currently active <code>JInternalFrame</code>
              * in this <code>JDesktopPane</code>, or <code>null</code>
@@ -155,7 +155,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getSelectedFrame(): javax.swing.JInternalFrame
+            public getSelectedFrame(): javax.swing.JInternalFrame
             /**
              * Sets the currently active <code>JInternalFrame</code>
              * in this <code>JDesktopPane</code>. This method is used to bridge
@@ -168,7 +168,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setSelectedFrame(f: javax.swing.JInternalFrame): void
+            public setSelectedFrame(f: javax.swing.JInternalFrame): void
             /**
              * Returns all <code>JInternalFrames</code> currently displayed in the
              * specified layer of the desktop. Returns iconified frames as well
@@ -178,12 +178,12 @@ declare namespace javax {
              * @see JLayeredPane
              */
             // @ts-ignore
-            getAllFramesInLayer(layer: number /*int*/): javax.swing.JInternalFrame[]
+            public getAllFramesInLayer(layer: number /*int*/): javax.swing.JInternalFrame[]
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * Selects the next <code>JInternalFrame</code> in this desktop pane.
              * @param forward a boolean indicating which direction to select in;
@@ -194,31 +194,31 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            selectFrame(forward: boolean): javax.swing.JInternalFrame
+            public selectFrame(forward: boolean): javax.swing.JInternalFrame
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            remove(index: number /*int*/): void
+            public remove(index: number /*int*/): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            setComponentZOrder(comp: java.awt.Component, index: number /*int*/): void
+            public setComponentZOrder(comp: java.awt.Component, index: number /*int*/): void
             /**
              * Returns a string representation of this <code>JDesktopPane</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -228,7 +228,7 @@ declare namespace javax {
              * @return a string representation of this <code>JDesktopPane</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>JDesktopPane</code>. For desktop panes, the
@@ -239,7 +239,7 @@ declare namespace javax {
              *          <code>AccessibleContext</code> of this <code>JDesktopPane</code>
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

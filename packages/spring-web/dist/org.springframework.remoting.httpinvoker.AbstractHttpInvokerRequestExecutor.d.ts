@@ -11,28 +11,28 @@ declare namespace org {
                  * @see #doExecuteRequest
                  */
                 // @ts-ignore
-                class AbstractHttpInvokerRequestExecutor extends java.lang.Object implements org.springframework.remoting.httpinvoker.HttpInvokerRequestExecutor {
+                abstract class AbstractHttpInvokerRequestExecutor extends java.lang.Object implements org.springframework.remoting.httpinvoker.HttpInvokerRequestExecutor {
                     // @ts-ignore
                     constructor()
                     /**
                      * Default content type: "application/x-java-serialized-object".
                      */
                     // @ts-ignore
-                    readonly CONTENT_TYPE_SERIALIZED_OBJECT: string
+                    public static readonly CONTENT_TYPE_SERIALIZED_OBJECT: java.lang.String | string
                     // @ts-ignore
-                    readonly HTTP_METHOD_POST: string
+                    static readonly HTTP_METHOD_POST: java.lang.String | string
                     // @ts-ignore
-                    readonly HTTP_HEADER_ACCEPT_LANGUAGE: string
+                    static readonly HTTP_HEADER_ACCEPT_LANGUAGE: java.lang.String | string
                     // @ts-ignore
-                    readonly HTTP_HEADER_ACCEPT_ENCODING: string
+                    static readonly HTTP_HEADER_ACCEPT_ENCODING: java.lang.String | string
                     // @ts-ignore
-                    readonly HTTP_HEADER_CONTENT_ENCODING: string
+                    static readonly HTTP_HEADER_CONTENT_ENCODING: java.lang.String | string
                     // @ts-ignore
-                    readonly HTTP_HEADER_CONTENT_TYPE: string
+                    static readonly HTTP_HEADER_CONTENT_TYPE: java.lang.String | string
                     // @ts-ignore
-                    readonly HTTP_HEADER_CONTENT_LENGTH: string
+                    static readonly HTTP_HEADER_CONTENT_LENGTH: java.lang.String | string
                     // @ts-ignore
-                    readonly ENCODING_GZIP: string
+                    static readonly ENCODING_GZIP: java.lang.String | string
                     // @ts-ignore
                     readonly logger: Log
                     /**
@@ -40,12 +40,12 @@ declare namespace org {
                      * <p>Default is "application/x-java-serialized-object".
                      */
                     // @ts-ignore
-                    setContentType(contentType: string): void
+                    public setContentType(contentType: java.lang.String | string): void
                     /**
                      * Return the content type to use for sending HTTP invoker requests.
                      */
                     // @ts-ignore
-                    getContentType(): java.lang.String
+                    public getContentType(): string
                     /**
                      * Set whether to accept GZIP encoding, that is, whether to
                      * send the HTTP "Accept-Encoding" header with "gzip" as value.
@@ -53,22 +53,22 @@ declare namespace org {
                      * GZIP response compression even if enabled on the HTTP server.
                      */
                     // @ts-ignore
-                    setAcceptGzipEncoding(acceptGzipEncoding: boolean): void
+                    public setAcceptGzipEncoding(acceptGzipEncoding: boolean): void
                     /**
                      * Return whether to accept GZIP encoding, that is, whether to
                      * send the HTTP "Accept-Encoding" header with "gzip" as value.
                      */
                     // @ts-ignore
-                    isAcceptGzipEncoding(): boolean
+                    public isAcceptGzipEncoding(): boolean
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Return the bean ClassLoader that this executor is supposed to use.
                      */
                     // @ts-ignore
                     getBeanClassLoader(): java.lang.ClassLoader
                     // @ts-ignore
-                    executeRequest(config: org.springframework.remoting.httpinvoker.HttpInvokerClientConfiguration, invocation: RemoteInvocation): RemoteInvocationResult
+                    public executeRequest(config: org.springframework.remoting.httpinvoker.HttpInvokerClientConfiguration, invocation: RemoteInvocation): RemoteInvocationResult
                     /**
                      * Serialize the given RemoteInvocation into a ByteArrayOutputStream.
                      * @param invocation the RemoteInvocation object
@@ -148,7 +148,7 @@ declare namespace org {
                      * @see #doReadRemoteInvocationResult
                      */
                     // @ts-ignore
-                    readRemoteInvocationResult(jis: java.io.InputStream, codebaseUrl: string): RemoteInvocationResult
+                    readRemoteInvocationResult(jis: java.io.InputStream, codebaseUrl: java.lang.String | string): RemoteInvocationResult
                     /**
                      * Return the InputStream to use for reading remote invocation results,
                      * potentially decorating the given original InputStream.
@@ -170,7 +170,7 @@ declare namespace org {
                      * @see org.springframework.remoting.rmi.CodebaseAwareObjectInputStream
                      */
                     // @ts-ignore
-                    createObjectInputStream(jis: java.io.InputStream, codebaseUrl: string): java.io.ObjectInputStream
+                    createObjectInputStream(jis: java.io.InputStream, codebaseUrl: java.lang.String | string): java.io.ObjectInputStream
                     /**
                      * Perform the actual reading of an invocation object from the
                      * given ObjectInputStream.

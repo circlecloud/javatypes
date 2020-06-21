@@ -201,7 +201,7 @@ declare namespace javax {
              * @see ViewFactory
              */
             // @ts-ignore
-            class JTextComponent extends javax.swing.JComponent implements javax.swing.Scrollable, javax.accessibility.Accessible {
+            abstract class JTextComponent extends javax.swing.JComponent implements javax.swing.Scrollable, javax.accessibility.Accessible {
                 /**
                  * Creates a new <code>JTextComponent</code>.
                  * Listeners for caret events are established, and the pluggable
@@ -215,26 +215,26 @@ declare namespace javax {
                  * The bound property name for the focus accelerator.
                  */
                 // @ts-ignore
-                readonly FOCUS_ACCELERATOR_KEY: string
+                public static readonly FOCUS_ACCELERATOR_KEY: java.lang.String | string
                 /**
                  * The default keymap that will be shared by all
                  * <code>JTextComponent</code> instances unless they
                  * have had a different keymap set.
                  */
                 // @ts-ignore
-                readonly DEFAULT_KEYMAP: string
+                public static readonly DEFAULT_KEYMAP: java.lang.String | string
                 /**
                  * Fetches the user-interface factory for this text-oriented editor.
                  * @return the factory
                  */
                 // @ts-ignore
-                getUI(): javax.swing.plaf.TextUI
+                public getUI(): javax.swing.plaf.TextUI
                 /**
                  * Sets the user-interface factory for this text-oriented editor.
                  * @param ui the factory
                  */
                 // @ts-ignore
-                setUI(ui: javax.swing.plaf.TextUI): void
+                public setUI(ui: javax.swing.plaf.TextUI): void
                 /**
                  * Reloads the pluggable UI.  The key used to fetch the
                  * new interface is <code>getUIClassID()</code>.  The type of
@@ -242,7 +242,7 @@ declare namespace javax {
                  * is called after setting the UI.
                  */
                 // @ts-ignore
-                updateUI(): void
+                public updateUI(): void
                 /**
                  * Adds a caret listener for notification of any changes
                  * to the caret.
@@ -250,14 +250,14 @@ declare namespace javax {
                  * @see javax.swing.event.CaretEvent
                  */
                 // @ts-ignore
-                addCaretListener(listener: javax.swing.event.CaretListener): void
+                public addCaretListener(listener: javax.swing.event.CaretListener): void
                 /**
                  * Removes a caret listener.
                  * @param listener the listener to be removed
                  * @see javax.swing.event.CaretEvent
                  */
                 // @ts-ignore
-                removeCaretListener(listener: javax.swing.event.CaretListener): void
+                public removeCaretListener(listener: javax.swing.event.CaretListener): void
                 /**
                  * Returns an array of all the caret listeners
                  * registered on this text component.
@@ -269,7 +269,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCaretListeners(): javax.swing.event.CaretListener[]
+                public getCaretListeners(): javax.swing.event.CaretListener[]
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -293,7 +293,7 @@ declare namespace javax {
                  *        expert: true
                  */
                 // @ts-ignore
-                setDocument(doc: javax.swing.text.Document): void
+                public setDocument(doc: javax.swing.text.Document): void
                 /**
                  * Fetches the model associated with the editor.  This is
                  * primarily for the UI to get at the minimal amount of
@@ -303,9 +303,9 @@ declare namespace javax {
                  * @return the model
                  */
                 // @ts-ignore
-                getDocument(): javax.swing.text.Document
+                public getDocument(): javax.swing.text.Document
                 // @ts-ignore
-                setComponentOrientation(o: java.awt.ComponentOrientation): void
+                public setComponentOrientation(o: java.awt.ComponentOrientation): void
                 /**
                  * Fetches the command list for the editor.  This is
                  * the list of commands supported by the plugged-in UI
@@ -315,7 +315,7 @@ declare namespace javax {
                  * @return the command list
                  */
                 // @ts-ignore
-                getActions(): javax.swing.Action[]
+                public getActions(): javax.swing.Action[]
                 /**
                  * Sets margin space between the text component's border
                  * and its text.  The text component's default <code>Border</code>
@@ -330,14 +330,14 @@ declare namespace javax {
                  *         bound: true
                  */
                 // @ts-ignore
-                setMargin(m: java.awt.Insets): void
+                public setMargin(m: java.awt.Insets): void
                 /**
                  * Returns the margin between the text component's border and
                  * its text.
                  * @return the margin
                  */
                 // @ts-ignore
-                getMargin(): java.awt.Insets
+                public getMargin(): java.awt.Insets
                 /**
                  * Sets the <code>NavigationFilter</code>. <code>NavigationFilter</code>
                  * is used by <code>DefaultCaret</code> and the default cursor movement
@@ -345,7 +345,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                setNavigationFilter(filter: javax.swing.text.NavigationFilter): void
+                public setNavigationFilter(filter: javax.swing.text.NavigationFilter): void
                 /**
                  * Returns the <code>NavigationFilter</code>. <code>NavigationFilter</code>
                  * is used by <code>DefaultCaret</code> and the default cursor movement
@@ -355,14 +355,14 @@ declare namespace javax {
                  * @return the NavigationFilter
                  */
                 // @ts-ignore
-                getNavigationFilter(): javax.swing.text.NavigationFilter
+                public getNavigationFilter(): javax.swing.text.NavigationFilter
                 /**
                  * Fetches the caret that allows text-oriented navigation over
                  * the view.
                  * @return the caret
                  */
                 // @ts-ignore
-                getCaret(): javax.swing.text.Caret
+                public getCaret(): javax.swing.text.Caret
                 /**
                  * Sets the caret to be used.  By default this will be set
                  * by the UI that gets installed.  This can be changed to
@@ -375,13 +375,13 @@ declare namespace javax {
                  *        expert: true
                  */
                 // @ts-ignore
-                setCaret(c: javax.swing.text.Caret): void
+                public setCaret(c: javax.swing.text.Caret): void
                 /**
                  * Fetches the object responsible for making highlights.
                  * @return the highlighter
                  */
                 // @ts-ignore
-                getHighlighter(): javax.swing.text.Highlighter
+                public getHighlighter(): javax.swing.text.Highlighter
                 /**
                  * Sets the highlighter to be used.  By default this will be set
                  * by the UI that gets installed.  This can be changed to
@@ -396,7 +396,7 @@ declare namespace javax {
                  *        expert: true
                  */
                 // @ts-ignore
-                setHighlighter(h: javax.swing.text.Highlighter): void
+                public setHighlighter(h: javax.swing.text.Highlighter): void
                 /**
                  * Sets the keymap to use for binding events to
                  * actions.  Setting to <code>null</code> effectively disables
@@ -409,7 +409,7 @@ declare namespace javax {
                  *         bound: true
                  */
                 // @ts-ignore
-                setKeymap(map: javax.swing.text.Keymap): void
+                public setKeymap(map: javax.swing.text.Keymap): void
                 /**
                  * Turns on or off automatic drag handling. In order to enable automatic
                  * drag handling, this property should be set to {@code true}, and the
@@ -441,7 +441,7 @@ declare namespace javax {
                  *         bound: false
                  */
                 // @ts-ignore
-                setDragEnabled(b: boolean): void
+                public setDragEnabled(b: boolean): void
                 /**
                  * Returns whether or not automatic drag handling is enabled.
                  * @return the value of the {#code dragEnabled} property
@@ -449,7 +449,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getDragEnabled(): boolean
+                public getDragEnabled(): boolean
                 /**
                  * Sets the drop mode for this component. For backward compatibility,
                  * the default for this property is <code>DropMode.USE_SELECTION</code>.
@@ -476,7 +476,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setDropMode(dropMode: javax.swing.DropMode): void
+                public setDropMode(dropMode: javax.swing.DropMode): void
                 /**
                  * Returns the drop mode for this component.
                  * @return the drop mode for this component
@@ -484,7 +484,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getDropMode(): javax.swing.DropMode
+                public getDropMode(): javax.swing.DropMode
                 /**
                  * Returns the location that this component should visually indicate
                  * as the drop location during a DnD operation over the component,
@@ -503,14 +503,14 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getDropLocation(): javax.swing.text.JTextComponent.DropLocation
+                public getDropLocation(): javax.swing.text.JTextComponent.DropLocation
                 /**
                  * Fetches the keymap currently active in this text
                  * component.
                  * @return the keymap
                  */
                 // @ts-ignore
-                getKeymap(): javax.swing.text.Keymap
+                public getKeymap(): javax.swing.text.Keymap
                 /**
                  * Adds a new keymap into the keymap hierarchy.  Keymap bindings
                  * resolve from bottom up so an attribute specified in a child
@@ -526,7 +526,7 @@ declare namespace javax {
                  * @return the keymap
                  */
                 // @ts-ignore
-                addKeymap(nm: string, parent: javax.swing.text.Keymap): javax.swing.text.Keymap
+                public static addKeymap(nm: java.lang.String | string, parent: javax.swing.text.Keymap): javax.swing.text.Keymap
                 /**
                  * Removes a named keymap previously added to the document.  Keymaps
                  * with <code>null</code> names may not be removed in this way.
@@ -534,7 +534,7 @@ declare namespace javax {
                  * @return the keymap that was removed
                  */
                 // @ts-ignore
-                removeKeymap(nm: string): javax.swing.text.Keymap
+                public static removeKeymap(nm: java.lang.String | string): javax.swing.text.Keymap
                 /**
                  * Fetches a named keymap previously added to the document.
                  * This does not work with <code>null</code>-named keymaps.
@@ -542,7 +542,7 @@ declare namespace javax {
                  * @return the keymap
                  */
                 // @ts-ignore
-                getKeymap(nm: string): javax.swing.text.Keymap
+                public static getKeymap(nm: java.lang.String | string): javax.swing.text.Keymap
                 /**
                  * <p>
                  * Loads a keymap with a bunch of
@@ -575,14 +575,14 @@ declare namespace javax {
                  * @param actions the set of actions
                  */
                 // @ts-ignore
-                loadKeymap(map: javax.swing.text.Keymap, bindings: javax.swing.text.JTextComponent.KeyBinding[], actions: javax.swing.Action[]): void
+                public static loadKeymap(map: javax.swing.text.Keymap, bindings: javax.swing.text.JTextComponent.KeyBinding[], actions: javax.swing.Action[]): void
                 /**
                  * Fetches the current color used to render the
                  * caret.
                  * @return the color
                  */
                 // @ts-ignore
-                getCaretColor(): java.awt.Color
+                public getCaretColor(): java.awt.Color
                 /**
                  * Sets the current color used to render the caret.
                  * Setting to <code>null</code> effectively restores the default color.
@@ -595,14 +595,14 @@ declare namespace javax {
                  *     preferred: true
                  */
                 // @ts-ignore
-                setCaretColor(c: java.awt.Color): void
+                public setCaretColor(c: java.awt.Color): void
                 /**
                  * Fetches the current color used to render the
                  * selection.
                  * @return the color
                  */
                 // @ts-ignore
-                getSelectionColor(): java.awt.Color
+                public getSelectionColor(): java.awt.Color
                 /**
                  * Sets the current color used to render the selection.
                  * Setting the color to <code>null</code> is the same as setting
@@ -615,14 +615,14 @@ declare namespace javax {
                  *     preferred: true
                  */
                 // @ts-ignore
-                setSelectionColor(c: java.awt.Color): void
+                public setSelectionColor(c: java.awt.Color): void
                 /**
                  * Fetches the current color used to render the
                  * selected text.
                  * @return the color
                  */
                 // @ts-ignore
-                getSelectedTextColor(): java.awt.Color
+                public getSelectedTextColor(): java.awt.Color
                 /**
                  * Sets the current color used to render the selected text.
                  * Setting the color to <code>null</code> is the same as
@@ -635,14 +635,14 @@ declare namespace javax {
                  *     preferred: true
                  */
                 // @ts-ignore
-                setSelectedTextColor(c: java.awt.Color): void
+                public setSelectedTextColor(c: java.awt.Color): void
                 /**
                  * Fetches the current color used to render the
                  * disabled text.
                  * @return the color
                  */
                 // @ts-ignore
-                getDisabledTextColor(): java.awt.Color
+                public getDisabledTextColor(): java.awt.Color
                 /**
                  * Sets the current color used to render the
                  * disabled text.  Setting the color fires off a
@@ -654,7 +654,7 @@ declare namespace javax {
                  *     preferred: true
                  */
                 // @ts-ignore
-                setDisabledTextColor(c: java.awt.Color): void
+                public setDisabledTextColor(c: java.awt.Color): void
                 /**
                  * Replaces the currently selected content with new content
                  * represented by the given string.  If there is no selection
@@ -668,7 +668,7 @@ declare namespace javax {
                  * @param content  the content to replace the selection with
                  */
                 // @ts-ignore
-                replaceSelection(content: string): void
+                public replaceSelection(content: java.lang.String | string): void
                 /**
                  * Fetches a portion of the text represented by the
                  * component.  Returns an empty string if length is 0.
@@ -678,7 +678,7 @@ declare namespace javax {
                  * @exception BadLocationException if the offset or length are invalid
                  */
                 // @ts-ignore
-                getText(offs: number /*int*/, len: number /*int*/): java.lang.String
+                public getText(offs: number /*int*/, len: number /*int*/): string
                 /**
                  * Converts the given location in the model to a place in
                  * the view coordinate system.
@@ -695,7 +695,7 @@ declare namespace javax {
                  * @see TextUI#modelToView
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/): java.awt.Rectangle
+                public modelToView(pos: number /*int*/): java.awt.Rectangle
                 /**
                  * Converts the given place in the view coordinate system
                  * to the nearest representative location in the model.
@@ -710,7 +710,7 @@ declare namespace javax {
                  * @see TextUI#viewToModel
                  */
                 // @ts-ignore
-                viewToModel(pt: java.awt.Point): int
+                public viewToModel(pt: java.awt.Point): number /*int*/
                 /**
                  * Transfers the currently selected range in the associated
                  * text model to the system clipboard, removing the contents
@@ -720,7 +720,7 @@ declare namespace javax {
                  * @see java.awt.datatransfer.Clipboard
                  */
                 // @ts-ignore
-                cut(): void
+                public cut(): void
                 /**
                  * Transfers the currently selected range in the associated
                  * text model to the system clipboard, leaving the contents
@@ -730,7 +730,7 @@ declare namespace javax {
                  * @see java.awt.datatransfer.Clipboard
                  */
                 // @ts-ignore
-                copy(): void
+                public copy(): void
                 /**
                  * Transfers the contents of the system clipboard into the
                  * associated text model.  If there is a selection in the
@@ -743,7 +743,7 @@ declare namespace javax {
                  * @see java.awt.datatransfer.Clipboard
                  */
                 // @ts-ignore
-                paste(): void
+                public paste(): void
                 /**
                  * Moves the caret to a new position, leaving behind a mark
                  * defined by the last time <code>setCaretPosition</code> was
@@ -758,7 +758,7 @@ declare namespace javax {
                  * @see #setCaretPosition
                  */
                 // @ts-ignore
-                moveCaretPosition(pos: number /*int*/): void
+                public moveCaretPosition(pos: number /*int*/): void
                 /**
                  * Sets the key accelerator that will cause the receiving text
                  * component to get the focus.  The accelerator will be the
@@ -776,7 +776,7 @@ declare namespace javax {
                  *         bound: true
                  */
                 // @ts-ignore
-                setFocusAccelerator(aKey: string): void
+                public setFocusAccelerator(aKey: string): void
                 /**
                  * Returns the key accelerator that will cause the receiving
                  * text component to get the focus.  Return '\0' if no focus
@@ -784,7 +784,7 @@ declare namespace javax {
                  * @return the key
                  */
                 // @ts-ignore
-                getFocusAccelerator(): char
+                public getFocusAccelerator(): string
                 /**
                  * Initializes from a stream.  This creates a
                  * model of the type appropriate for the component
@@ -804,7 +804,7 @@ declare namespace javax {
                  * @see PlainDocument
                  */
                 // @ts-ignore
-                read(input: java.io.Reader, desc: any): void
+                public read(input: java.io.Reader, desc: java.lang.Object | any): void
                 /**
                  * Stores the contents of the model into the given
                  * stream.  By default this will store the model as plain
@@ -813,9 +813,9 @@ declare namespace javax {
                  * @exception IOException on any I/O error
                  */
                 // @ts-ignore
-                write(out: java.io.Writer): void
+                public write(out: java.io.Writer): void
                 // @ts-ignore
-                removeNotify(): void
+                public removeNotify(): void
                 /**
                  * Sets the position of the text insertion caret for the
                  * <code>TextComponent</code>.  Note that the caret tracks change,
@@ -830,7 +830,7 @@ declare namespace javax {
                  * @beaninfo description: the caret position
                  */
                 // @ts-ignore
-                setCaretPosition(position: number /*int*/): void
+                public setCaretPosition(position: number /*int*/): void
                 /**
                  * Returns the position of the text insertion caret for the
                  * text component.
@@ -838,7 +838,7 @@ declare namespace javax {
                  *   text component &ge; 0
                  */
                 // @ts-ignore
-                getCaretPosition(): int
+                public getCaretPosition(): number /*int*/
                 /**
                  * Sets the text of this <code>TextComponent</code>
                  * to the specified text.  If the text is <code>null</code>
@@ -855,7 +855,7 @@ declare namespace javax {
                  * @beaninfo description: the text of this component
                  */
                 // @ts-ignore
-                setText(t: string): void
+                public setText(t: java.lang.String | string): void
                 /**
                  * Returns the text contained in this <code>TextComponent</code>.
                  * If the underlying document is <code>null</code>,
@@ -868,7 +868,7 @@ declare namespace javax {
                  * @see #setText
                  */
                 // @ts-ignore
-                getText(): java.lang.String
+                public getText(): string
                 /**
                  * Returns the selected text contained in this
                  * <code>TextComponent</code>.  If the selection is
@@ -879,7 +879,7 @@ declare namespace javax {
                  * @see #setText
                  */
                 // @ts-ignore
-                getSelectedText(): java.lang.String
+                public getSelectedText(): string
                 /**
                  * Returns the boolean indicating whether this
                  * <code>TextComponent</code> is editable or not.
@@ -887,7 +887,7 @@ declare namespace javax {
                  * @see #setEditable
                  */
                 // @ts-ignore
-                isEditable(): boolean
+                public isEditable(): boolean
                 /**
                  * Sets the specified boolean to indicate whether or not this
                  * <code>TextComponent</code> should be editable.
@@ -899,14 +899,14 @@ declare namespace javax {
                  *        bound: true
                  */
                 // @ts-ignore
-                setEditable(b: boolean): void
+                public setEditable(b: boolean): void
                 /**
                  * Returns the selected text's start position.  Return 0 for an
                  * empty document, or the value of dot if no selection.
                  * @return the start position &ge; 0
                  */
                 // @ts-ignore
-                getSelectionStart(): int
+                public getSelectionStart(): number /*int*/
                 /**
                  * Sets the selection start to the specified position.  The new
                  * starting point is constrained to be before or at the current
@@ -920,14 +920,14 @@ declare namespace javax {
                  * @beaninfo description: starting location of the selection.
                  */
                 // @ts-ignore
-                setSelectionStart(selectionStart: number /*int*/): void
+                public setSelectionStart(selectionStart: number /*int*/): void
                 /**
                  * Returns the selected text's end position.  Return 0 if the document
                  * is empty, or the value of dot if there is no selection.
                  * @return the end position &ge; 0
                  */
                 // @ts-ignore
-                getSelectionEnd(): int
+                public getSelectionEnd(): number /*int*/
                 /**
                  * Sets the selection end to the specified position.  The new
                  * end point is constrained to be at or after the current
@@ -941,7 +941,7 @@ declare namespace javax {
                  * @beaninfo description: ending location of the selection.
                  */
                 // @ts-ignore
-                setSelectionEnd(selectionEnd: number /*int*/): void
+                public setSelectionEnd(selectionEnd: number /*int*/): void
                 /**
                  * Selects the text between the specified start and end positions.
                  * <p>
@@ -970,13 +970,13 @@ declare namespace javax {
                  * @see #moveCaretPosition
                  */
                 // @ts-ignore
-                select(selectionStart: number /*int*/, selectionEnd: number /*int*/): void
+                public select(selectionStart: number /*int*/, selectionEnd: number /*int*/): void
                 /**
                  * Selects all the text in the <code>TextComponent</code>.
                  * Does nothing on a <code>null</code> or empty document.
                  */
                 // @ts-ignore
-                selectAll(): void
+                public selectAll(): void
                 /**
                  * Returns the string to be used as the tooltip for <code>event</code>.
                  * This will return one of:
@@ -999,7 +999,7 @@ declare namespace javax {
                  * @see javax.swing.ToolTipManager#registerComponent
                  */
                 // @ts-ignore
-                getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+                public getToolTipText(event: java.awt.event.MouseEvent): string
                 /**
                  * Returns the preferred size of the viewport for a view component.
                  * This is implemented to do the default behavior of returning
@@ -1008,7 +1008,7 @@ declare namespace javax {
                  *  whose view is this <code>Scrollable</code>
                  */
                 // @ts-ignore
-                getPreferredScrollableViewportSize(): java.awt.Dimension
+                public getPreferredScrollableViewportSize(): java.awt.Dimension
                 /**
                  * Components that display logical rows or columns should compute
                  * the scroll increment that will completely expose one new row
@@ -1029,7 +1029,7 @@ declare namespace javax {
                  * @see JScrollBar#setUnitIncrement
                  */
                 // @ts-ignore
-                getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+                public getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
                 /**
                  * Components that display logical rows or columns should compute
                  * the scroll increment that will completely expose one block
@@ -1048,7 +1048,7 @@ declare namespace javax {
                  * @see JScrollBar#setBlockIncrement
                  */
                 // @ts-ignore
-                getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+                public getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
                 /**
                  * Returns true if a viewport should always force the width of this
                  * <code>Scrollable</code> to match the width of the viewport.
@@ -1065,7 +1065,7 @@ declare namespace javax {
                  *    width to match its own
                  */
                 // @ts-ignore
-                getScrollableTracksViewportWidth(): boolean
+                public getScrollableTracksViewportWidth(): boolean
                 /**
                  * Returns true if a viewport should always force the height of this
                  * <code>Scrollable</code> to match the height of the viewport.
@@ -1079,7 +1079,7 @@ declare namespace javax {
                  *    to match its own
                  */
                 // @ts-ignore
-                getScrollableTracksViewportHeight(): boolean
+                public getScrollableTracksViewportHeight(): boolean
                 /**
                  * A convenience print method that displays a print dialog, and then
                  * prints this {@code JTextComponent} in <i>interactive</i> mode with no
@@ -1099,7 +1099,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                print(): boolean
+                public print(): boolean
                 /**
                  * A convenience print method that displays a print dialog, and then
                  * prints this {@code JTextComponent} in <i>interactive</i> mode with
@@ -1124,7 +1124,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                print(headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): boolean
+                public print(headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): boolean
                 /**
                  * Prints the content of this {@code JTextComponent}. Note: this method
                  * blocks until printing is done.
@@ -1222,7 +1222,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                print(headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat, showPrintDialog: boolean, service: javax.print.PrintService, attributes: javax.print.attribute.PrintRequestAttributeSet, interactive: boolean): boolean
+                public print(headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat, showPrintDialog: boolean, service: javax.print.PrintService, attributes: javax.print.attribute.PrintRequestAttributeSet, interactive: boolean): boolean
                 /**
                  * Returns a {@code Printable} to use for printing the content of this
                  * {@code JTextComponent}. The returned {@code Printable} prints
@@ -1271,7 +1271,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getPrintable(headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): java.awt.print.Printable
+                public getPrintable(headerFormat: java.text.MessageFormat, footerFormat: java.text.MessageFormat): java.awt.print.Printable
                 /**
                  * Gets the <code>AccessibleContext</code> associated with this
                  * <code>JTextComponent</code>. For text components,
@@ -1284,7 +1284,7 @@ declare namespace javax {
                  *          <code>JTextComponent</code>
                  */
                 // @ts-ignore
-                getAccessibleContext(): javax.accessibility.AccessibleContext
+                public getAccessibleContext(): javax.accessibility.AccessibleContext
                 /**
                  * Returns a string representation of this <code>JTextComponent</code>.
                  * This method is intended to be used only for debugging purposes, and the
@@ -1297,13 +1297,13 @@ declare namespace javax {
                  * @return a string representation of this <code>JTextComponent</code>
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                paramString(): string
                 // @ts-ignore
                 processInputMethodEvent(e: java.awt.event.InputMethodEvent): void
                 // @ts-ignore
-                getInputMethodRequests(): java.awt.im.InputMethodRequests
+                public getInputMethodRequests(): java.awt.im.InputMethodRequests
                 // @ts-ignore
-                addInputMethodListener(l: java.awt.event.InputMethodListener): void
+                public addInputMethodListener(l: java.awt.event.InputMethodListener): void
                 /**
                  * Saves composed text around the specified position.
                  * The composed text (if any) around the specified position is saved

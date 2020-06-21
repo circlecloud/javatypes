@@ -14,7 +14,7 @@ declare namespace java {
                  * @param name Name of the attribute
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Constant identifying a portion of a message that was generated
                  * from an argument passed into <code>formatToCharacterIterator</code>.
@@ -23,7 +23,7 @@ declare namespace java {
                  * argument from which the text was generated.
                  */
                 // @ts-ignore
-                readonly ARGUMENT: java.text.MessageFormat.Field
+                public static readonly ARGUMENT: java.text.MessageFormat.Field
                 /**
                  * Resolves instances being deserialized to the predefined constants.
                  * @throws InvalidObjectException if the constant could not be
@@ -31,7 +31,7 @@ declare namespace java {
                  * @return resolved MessageFormat.Field constant
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                readResolve(): any
             }
         }
     }

@@ -8,23 +8,23 @@ declare namespace org {
                 // @ts-ignore
                 class RaidSpawnWaveEvent extends org.bukkit.event.raid.RaidEvent {
                     // @ts-ignore
-                    constructor(raid: org.bukkit.Raid, world: org.bukkit.World, leader: org.bukkit.entity.Raider, raiders: Array<org.bukkit.entity.Raider>)
+                    constructor(raid: org.bukkit.Raid, world: org.bukkit.World, leader: org.bukkit.entity.Raider, raiders: java.util.List<org.bukkit.entity.Raider> | Array<org.bukkit.entity.Raider>)
                     /**
                      * Returns the patrol leader.
                      * @return {#link Raider}
                      */
                     // @ts-ignore
-                    getPatrolLeader(): org.bukkit.entity.Raider
+                    public getPatrolLeader(): org.bukkit.entity.Raider
                     /**
                      * Returns all {@link Raider} that spawned in this wave.
                      * @return an immutable list of raiders
                      */
                     // @ts-ignore
-                    getRaiders(): java.util.List<org.bukkit.entity.Raider>
+                    public getRaiders(): Array<org.bukkit.entity.Raider>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

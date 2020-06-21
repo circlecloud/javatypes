@@ -18,7 +18,7 @@ declare namespace java {
                  * @return the function result
                  */
                 // @ts-ignore
-                applyAsInt(value: number /*long*/): int
+                applyAsInt(value: number /*long*/): number /*int*/
             }
         }
     }

@@ -126,7 +126,7 @@ declare namespace javax {
              *  a directory
              */
             // @ts-ignore
-            getJavaFileObjectsFromFiles(files: java.lang.Iterable<java.io.File>): java.lang.Iterable<? extends javax.tools.JavaFileObject>
+            getJavaFileObjectsFromFiles(files: java.lang.Iterable<any>): java.lang.Iterable<any>
             /**
              * Gets file objects representing the given files.
              * Convenience method equivalent to:
@@ -141,7 +141,7 @@ declare namespace javax {
              *  elements
              */
             // @ts-ignore
-            getJavaFileObjects(...files: java.io.File[]): java.lang.Iterable<? extends javax.tools.JavaFileObject>
+            getJavaFileObjects(...files: java.io.File[]): java.lang.Iterable<any>
             /**
              * Gets file objects representing the given file names.
              * @param names a list of file names
@@ -150,7 +150,7 @@ declare namespace javax {
              *  includes a directory
              */
             // @ts-ignore
-            getJavaFileObjectsFromStrings(names: java.lang.Iterable<java.lang.String>): java.lang.Iterable<? extends javax.tools.JavaFileObject>
+            getJavaFileObjectsFromStrings(names: java.lang.Iterable<java.lang.String | string>): java.lang.Iterable<any>
             /**
              * Gets file objects representing the given file names.
              * Convenience method equivalent to:
@@ -165,7 +165,7 @@ declare namespace javax {
              *  elements
              */
             // @ts-ignore
-            getJavaFileObjects(...names: string[]): java.lang.Iterable<? extends javax.tools.JavaFileObject>
+            getJavaFileObjects(...names: java.lang.String[] | string[]): java.lang.Iterable<any>
             /**
              * Associates the given path with the given location.  Any
              * previous value will be discarded.
@@ -179,7 +179,7 @@ declare namespace javax {
              *  does not represent an existing directory
              */
             // @ts-ignore
-            setLocation(location: javax.tools.JavaFileManager.Location, path: java.lang.Iterable<java.io.File>): void
+            setLocation(location: javax.tools.JavaFileManager.Location, path: java.lang.Iterable<any>): void
             /**
              * Gets the path associated with the given location.
              * @param location a location
@@ -188,7 +188,7 @@ declare namespace javax {
              * @see #setLocation
              */
             // @ts-ignore
-            getLocation(location: javax.tools.JavaFileManager.Location): java.lang.Iterable<? extends java.io.File>
+            getLocation(location: javax.tools.JavaFileManager.Location): java.lang.Iterable<any>
         }
     }
 }

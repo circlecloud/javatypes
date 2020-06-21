@@ -9,7 +9,7 @@ declare namespace org {
              * @deprecated as of 5.1, along with Spring's Sun HTTP Server support classes
              */
             // @ts-ignore
-            class UsesSunHttpServer implements java.lang.annotation.Annotation {
+            abstract class UsesSunHttpServer implements java.lang.annotation.Annotation {
             }
         }
     }

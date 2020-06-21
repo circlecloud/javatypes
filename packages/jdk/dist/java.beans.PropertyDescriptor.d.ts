@@ -21,7 +21,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(propertyName: string, beanClass: java.lang.Class<any>)
+            constructor(propertyName: java.lang.String | string, beanClass: java.lang.Class<any>)
             /**
              * This constructor takes the name of a simple property, and method
              * names for reading and writing the property.
@@ -36,7 +36,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(propertyName: string, beanClass: java.lang.Class<any>, readMethodName: string, writeMethodName: string)
+            constructor(propertyName: java.lang.String | string, beanClass: java.lang.Class<any>, readMethodName: java.lang.String | string, writeMethodName: java.lang.String | string)
             /**
              * This constructor takes the name of a simple property, and Method
              * objects for reading and writing the property.
@@ -49,7 +49,7 @@ declare namespace java {
              *               introspection.
              */
             // @ts-ignore
-            constructor(propertyName: string, readMethod: java.lang.reflect.Method, writeMethod: java.lang.reflect.Method)
+            constructor(propertyName: java.lang.String | string, readMethod: java.lang.reflect.Method, writeMethod: java.lang.reflect.Method)
             /**
              * Returns the Java type info for the property.
              * Note that the {@code Class} object may describe
@@ -62,63 +62,63 @@ declare namespace java {
              *          or {@code null} if the type cannot be determined
              */
             // @ts-ignore
-            getPropertyType(): java.lang.Class<?>
+            public getPropertyType(): java.lang.Class<any>
             /**
              * Gets the method that should be used to read the property value.
              * @return The method that should be used to read the property value.
              *  May return null if the property can't be read.
              */
             // @ts-ignore
-            getReadMethod(): java.lang.reflect.Method
+            public getReadMethod(): java.lang.reflect.Method
             /**
              * Sets the method that should be used to read the property value.
              * @param readMethod The new read method.
              * @throws IntrospectionException if the read method is invalid
              */
             // @ts-ignore
-            setReadMethod(readMethod: java.lang.reflect.Method): void
+            public setReadMethod(readMethod: java.lang.reflect.Method): void
             /**
              * Gets the method that should be used to write the property value.
              * @return The method that should be used to write the property value.
              *  May return null if the property can't be written.
              */
             // @ts-ignore
-            getWriteMethod(): java.lang.reflect.Method
+            public getWriteMethod(): java.lang.reflect.Method
             /**
              * Sets the method that should be used to write the property value.
              * @param writeMethod The new write method.
              * @throws IntrospectionException if the write method is invalid
              */
             // @ts-ignore
-            setWriteMethod(writeMethod: java.lang.reflect.Method): void
+            public setWriteMethod(writeMethod: java.lang.reflect.Method): void
             /**
              * Updates to "bound" properties will cause a "PropertyChange" event to
              * get fired when the property is changed.
              * @return True if this is a bound property.
              */
             // @ts-ignore
-            isBound(): boolean
+            public isBound(): boolean
             /**
              * Updates to "bound" properties will cause a "PropertyChange" event to
              * get fired when the property is changed.
              * @param bound True if this is a bound property.
              */
             // @ts-ignore
-            setBound(bound: boolean): void
+            public setBound(bound: boolean): void
             /**
              * Attempted updates to "Constrained" properties will cause a "VetoableChange"
              * event to get fired when the property is changed.
              * @return True if this is a constrained property.
              */
             // @ts-ignore
-            isConstrained(): boolean
+            public isConstrained(): boolean
             /**
              * Attempted updates to "Constrained" properties will cause a "VetoableChange"
              * event to get fired when the property is changed.
              * @param constrained True if this is a constrained property.
              */
             // @ts-ignore
-            setConstrained(constrained: boolean): void
+            public setConstrained(constrained: boolean): void
             /**
              * Normally PropertyEditors will be found using the PropertyEditorManager.
              * However if for some reason you want to associate a particular
@@ -127,7 +127,7 @@ declare namespace java {
              * @param propertyEditorClass  The Class for the desired PropertyEditor.
              */
             // @ts-ignore
-            setPropertyEditorClass(propertyEditorClass: java.lang.Class<any>): void
+            public setPropertyEditorClass(propertyEditorClass: java.lang.Class<any>): void
             /**
              * Gets any explicit PropertyEditor Class that has been registered
              * for this property.
@@ -138,7 +138,7 @@ declare namespace java {
              *           a suitable PropertyEditor.
              */
             // @ts-ignore
-            getPropertyEditorClass(): java.lang.Class<?>
+            public getPropertyEditorClass(): java.lang.Class<any>
             /**
              * Constructs an instance of a property editor using the current
              * property editor class.
@@ -152,7 +152,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            createPropertyEditor(bean: any): java.beans.PropertyEditor
+            public createPropertyEditor(bean: java.lang.Object | any): java.beans.PropertyEditor
             /**
              * Compares this <code>PropertyDescriptor</code> against the specified object.
              * Returns true if the objects are the same. Two <code>PropertyDescriptor</code>s
@@ -161,7 +161,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hash code value for the object.
              * See {@link java.lang.Object#hashCode} for a complete description.
@@ -169,7 +169,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

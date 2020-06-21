@@ -15,15 +15,15 @@ declare namespace org {
                         // @ts-ignore
                         interface CollectionValue<E, C extends java.util.Collection<E>, V extends org.spongepowered.api.data.value.mutable.CollectionValue<E, C, V, I>, I extends org.spongepowered.api.data.value.immutable.ImmutableCollectionValue<E, C, I, V>> extends org.spongepowered.api.data.value.mutable.Value<C>, java.lang.Iterable<E> {
                             // @ts-ignore
-                            set(value: C extends java.util.Collection<E>): V
+                            set(value: C): V
                             // @ts-ignore
-                            transform(func: java.util.function.Function<C, C> | java.util.function$.Function<C, C>): V
+                            transform(func: java.util.function$.Function<C, C>): V
                             /**
                              * Gets the size of the underlying collection of elements.
                              * @return The size
                              */
                             // @ts-ignore
-                            size(): int
+                            size(): number /*int*/
                             /**
                              * Checks if the backed {@link Collection} is empty.
                              * @see Collection#isEmpty()
@@ -69,7 +69,7 @@ declare namespace org {
                              * @return This value, for chaining
                              */
                             // @ts-ignore
-                            removeAll(predicate: java.util.function.Predicate<E> | java.util.function$.Predicate<E>): V
+                            removeAll(predicate: java.util.function$.Predicate<E>): V
                             /**
                              * Checks if the given <code>E</code> element is contained within the backed
                              * {@link Collection}.
@@ -85,7 +85,7 @@ declare namespace org {
                              * @return True if all elements are contained in this value
                              */
                             // @ts-ignore
-                            containsAll(iterable: Array<E>): boolean
+                            containsAll(iterable: java.util.Collection<E> | Array<E>): boolean
                             /**
                              * Applies a {@link Predicate} to filter the underlying elements in the
                              * backed {@link Collection} to create a new {@link CollectionValue}
@@ -97,7 +97,7 @@ declare namespace org {
                              * @return This value, for chaining
                              */
                             // @ts-ignore
-                            filter(predicate: java.util.function.Predicate<any super E> | java.util.function$.Predicate<? super E>): V
+                            filter(predicate: java.util.function$.Predicate<any>): V
                             /**
                              * Creates a new {@link Collection} of the proper type <code>C</code> with
                              * all elements copied to the new collection. Any modifications to the new

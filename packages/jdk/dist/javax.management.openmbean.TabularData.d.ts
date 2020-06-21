@@ -30,7 +30,7 @@ declare namespace javax {
                  *                                     row type definition.
                  */
                 // @ts-ignore
-                calculateIndex(value: javax.management.openmbean.CompositeData): java.lang.Object[]
+                calculateIndex(value: javax.management.openmbean.CompositeData): any[]
                 /**
                  * Returns the number of <tt>CompositeData</tt> values (ie the
                  * number of rows) contained in this <tt>TabularData</tt>
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @return the number of values contained.
                  */
                 // @ts-ignore
-                size(): int
+                size(): number /*int*/
                 /**
                  * Returns <tt>true</tt> if the number of <tt>CompositeData</tt>
                  * values (ie the number of rows) contained in this
@@ -55,7 +55,7 @@ declare namespace javax {
                  * @return <tt>true</tt> if this <tt>TabularData</tt> indexes a row value with the specified key.
                  */
                 // @ts-ignore
-                containsKey(key: any[]): boolean
+                containsKey(key: java.lang.Object[] | any[]): boolean
                 /**
                  * Returns <tt>true</tt> if and only if this <tt>TabularData</tt> instance contains the specified
                  * <tt>CompositeData</tt> value. If <var>value</var> is <tt>null</tt> or does not conform to
@@ -78,7 +78,7 @@ declare namespace javax {
                  *  <tt>TabularType</tt> definition
                  */
                 // @ts-ignore
-                get(key: any[]): javax.management.openmbean.CompositeData
+                get(key: java.lang.Object[] | any[]): javax.management.openmbean.CompositeData
                 /**
                  * Adds <var>value</var> to this <tt>TabularData</tt> instance.
                  * The composite type of <var>value</var> must be the same as this
@@ -116,7 +116,7 @@ declare namespace javax {
                  *                                <tt>TabularType</tt> definition
                  */
                 // @ts-ignore
-                remove(key: any[]): javax.management.openmbean.CompositeData
+                remove(key: java.lang.Object[] | any[]): javax.management.openmbean.CompositeData
                 /**
                  * Add all the elements in <var>values</var> to this <tt>TabularData</tt> instance.
                  * If any  element in <var>values</var> does not satisfy the constraints defined in {@link #put(CompositeData) <tt>put</tt>},
@@ -151,7 +151,7 @@ declare namespace javax {
                  *  used in this {@code TabularData} instance.
                  */
                 // @ts-ignore
-                keySet(): java.util.Set<?>
+                keySet(): Array<any>
                 /**
                  * Returns a collection view of the {@code CompositeData} values
                  * (ie the rows) contained in this {@code TabularData} instance.
@@ -162,7 +162,7 @@ declare namespace javax {
                  *  of the rows contained in this {@code TabularData} instance.
                  */
                 // @ts-ignore
-                values(): java.util.Collection<?>
+                values(): Array<any>
                 /**
                  * Compares the specified <var>obj</var> parameter with this <code>TabularData</code> instance for equality.
                  * <p>
@@ -180,7 +180,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>TabularData</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>TabularData</code> instance.
                  * <p>
@@ -195,7 +195,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>TabularDataSupport</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>TabularData</code> instance.
                  * <p>
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @return a string representation of this <code>TabularData</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

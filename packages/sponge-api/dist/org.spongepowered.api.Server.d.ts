@@ -11,13 +11,13 @@ declare namespace org {
                  * @return A {#link Collection} of online players
                  */
                 // @ts-ignore
-                getOnlinePlayers(): java.util.Collection<org.spongepowered.api.entity.living.player.Player>
+                getOnlinePlayers(): Array<org.spongepowered.api.entity.living.player.Player>
                 /**
                  * Gets the max players allowed on this server.
                  * @return Maximum number of connected players
                  */
                 // @ts-ignore
-                getMaxPlayers(): int
+                getMaxPlayers(): number /*int*/
                 /**
                  * Gets a {@link Player} by their UUID.
                  * @param uniqueId The UUID to get the player from
@@ -34,25 +34,25 @@ declare namespace org {
                  * @return The {#link Player} or empty if not found
                  */
                 // @ts-ignore
-                getPlayer(name: string): java.util.Optional<org.spongepowered.api.entity.living.player.Player>
+                getPlayer(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.entity.living.player.Player>
                 /**
                  * Gets all currently loaded {@link World}s.
                  * @return A collection of loaded worlds
                  */
                 // @ts-ignore
-                getWorlds(): java.util.Collection<org.spongepowered.api.world.World>
+                getWorlds(): Array<org.spongepowered.api.world.World>
                 /**
                  * Gets the properties of all unloaded worlds.
                  * @return A collection of world properties
                  */
                 // @ts-ignore
-                getUnloadedWorlds(): java.util.Collection<org.spongepowered.api.world.storage.WorldProperties>
+                getUnloadedWorlds(): Array<org.spongepowered.api.world.storage.WorldProperties>
                 /**
                  * Gets the properties of all worlds, loaded or otherwise.
                  * @return A collection of world properties
                  */
                 // @ts-ignore
-                getAllWorldProperties(): java.util.Collection<org.spongepowered.api.world.storage.WorldProperties>
+                getAllWorldProperties(): Array<org.spongepowered.api.world.storage.WorldProperties>
                 /**
                  * Gets a loaded {@link World} by its unique id ({@link UUID}), if it
                  * exists.
@@ -67,7 +67,7 @@ declare namespace org {
                  * @return The world, if found
                  */
                 // @ts-ignore
-                getWorld(worldName: string): java.util.Optional<org.spongepowered.api.world.World>
+                getWorld(worldName: java.lang.String | string): java.util.Optional<org.spongepowered.api.world.World>
                 /**
                  * Gets the properties of default world.
                  * @return The world properties
@@ -79,7 +79,7 @@ declare namespace org {
                  * @return The name
                  */
                 // @ts-ignore
-                getDefaultWorldName(): java.lang.String
+                getDefaultWorldName(): string
                 /**
                  * Loads a {@link World} from the default storage container. If a world with
                  * the given name is already loaded then it is returned instead.
@@ -87,7 +87,7 @@ declare namespace org {
                  * @return The world, if found
                  */
                 // @ts-ignore
-                loadWorld(worldName: string): java.util.Optional<org.spongepowered.api.world.World>
+                loadWorld(worldName: java.lang.String | string): java.util.Optional<org.spongepowered.api.world.World>
                 /**
                  * Loads a {@link World} from the default storage container. If a world with
                  * the given UUID is already loaded then it is returned instead.
@@ -114,7 +114,7 @@ declare namespace org {
                  * @return The world properties, if found
                  */
                 // @ts-ignore
-                getWorldProperties(worldName: string): java.util.Optional<org.spongepowered.api.world.storage.WorldProperties>
+                getWorldProperties(worldName: java.lang.String | string): java.util.Optional<org.spongepowered.api.world.storage.WorldProperties>
                 /**
                  * Gets the {@link WorldProperties} of a world. If a world with the given
                  * UUID is loaded then this is equivalent to calling
@@ -153,7 +153,7 @@ declare namespace org {
                  *       file
                  */
                 // @ts-ignore
-                createWorldProperties(folderName: string, archetype: org.spongepowered.api.world.WorldArchetype): org.spongepowered.api.world.storage.WorldProperties
+                createWorldProperties(folderName: java.lang.String | string, archetype: org.spongepowered.api.world.WorldArchetype): org.spongepowered.api.world.storage.WorldProperties
                 /**
                  * Creates a world copy asynchronously using the new name given and returns
                  * the new world properties if the copy was possible.
@@ -170,7 +170,7 @@ declare namespace org {
                  *          instance, if the copy was successful
                  */
                 // @ts-ignore
-                copyWorld(worldProperties: org.spongepowered.api.world.storage.WorldProperties, copyName: string): java.util.concurrent.CompletableFuture<java.util.Optional<org.spongepowered.api.world.storage.WorldProperties>>
+                copyWorld(worldProperties: org.spongepowered.api.world.storage.WorldProperties, copyName: java.lang.String | string): java.util.concurrent.CompletableFuture<java.util.Optional<org.spongepowered.api.world.storage.WorldProperties>>
                 /**
                  * Renames an unloaded world.
                  * @param worldProperties The world properties to rename
@@ -180,7 +180,7 @@ declare namespace org {
                  *          if the rename was successful
                  */
                 // @ts-ignore
-                renameWorld(worldProperties: org.spongepowered.api.world.storage.WorldProperties, newName: string): java.util.Optional<org.spongepowered.api.world.storage.WorldProperties>
+                renameWorld(worldProperties: org.spongepowered.api.world.storage.WorldProperties, newName: java.lang.String | string): java.util.Optional<org.spongepowered.api.world.storage.WorldProperties>
                 /**
                  * Deletes the provided world's files asynchronously from the disk.
                  * @param worldProperties The world properties to delete
@@ -223,7 +223,7 @@ declare namespace org {
                  * @return The number of ticks since this server started running
                  */
                 // @ts-ignore
-                getRunningTimeTicks(): int
+                getRunningTimeTicks(): number /*int*/
                 /**
                  * Gets the message channel that server-wide messages are sent through.
                  * @return The server-wide broadcast channel
@@ -314,7 +314,7 @@ declare namespace org {
                  * @return The current ticks per second
                  */
                 // @ts-ignore
-                getTicksPerSecond(): double
+                getTicksPerSecond(): number /*double*/
                 /**
                  * Gets the default resource pack. The default resource pack is sent to
                  * players when they join the server.
@@ -328,7 +328,7 @@ declare namespace org {
                  * @return The player idle timeout
                  */
                 // @ts-ignore
-                getPlayerIdleTimeout(): int
+                getPlayerIdleTimeout(): number /*int*/
                 /**
                  * Sets the player idle timeout, in minutes.
                  * <p>A value of {@code 0} disables the player idle timeout.</p>

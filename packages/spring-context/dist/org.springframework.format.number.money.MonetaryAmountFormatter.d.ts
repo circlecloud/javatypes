@@ -24,7 +24,7 @@ declare namespace org {
                          *  provider at runtime
                          */
                         // @ts-ignore
-                        constructor(formatName: string)
+                        constructor(formatName: java.lang.String | string)
                         /**
                          * Specify the format name, to be resolved by the JSR-354 provider
                          * at runtime.
@@ -32,11 +32,11 @@ declare namespace org {
                          * based on the current locale.
                          */
                         // @ts-ignore
-                        setFormatName(formatName: string): void
+                        public setFormatName(formatName: java.lang.String | string): void
                         // @ts-ignore
-                        print(object: MonetaryAmount, locale: java.util.Locale): java.lang.String
+                        public print(object: MonetaryAmount, locale: java.util.Locale): string
                         // @ts-ignore
-                        parse(text: string, locale: java.util.Locale): MonetaryAmount
+                        public parse(text: java.lang.String | string, locale: java.util.Locale): MonetaryAmount
                         /**
                          * Obtain a MonetaryAmountFormat for the given locale.
                          * <p>The default implementation simply calls

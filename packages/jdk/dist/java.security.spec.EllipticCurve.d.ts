@@ -50,21 +50,21 @@ declare namespace java {
                  *  is over.
                  */
                 // @ts-ignore
-                getField(): java.security.spec.ECField
+                public getField(): java.security.spec.ECField
                 /**
                  * Returns the first coefficient {@code a} of the
                  * elliptic curve.
                  * @return the first coefficient {#code a}.
                  */
                 // @ts-ignore
-                getA(): java.math.BigInteger
+                public getA(): java.math.BigInteger
                 /**
                  * Returns the second coefficient {@code b} of the
                  * elliptic curve.
                  * @return the second coefficient {#code b}.
                  */
                 // @ts-ignore
-                getB(): java.math.BigInteger
+                public getB(): java.math.BigInteger
                 /**
                  * Returns the seeding bytes {@code seed} used
                  * during curve generation. May be null if not specified.
@@ -72,7 +72,7 @@ declare namespace java {
                  *  array is returned each time this method is called.
                  */
                 // @ts-ignore
-                getSeed(): byte[]
+                public getSeed(): number /*byte*/[]
                 /**
                  * Compares this elliptic curve for equality with the
                  * specified object.
@@ -81,7 +81,7 @@ declare namespace java {
                  *  EllipticCurve and the field, A, and B match, false otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this elliptic curve.
                  * @return a hash code value computed from the hash codes of the field, A,
@@ -91,7 +91,7 @@ declare namespace java {
                  *  }</pre>
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

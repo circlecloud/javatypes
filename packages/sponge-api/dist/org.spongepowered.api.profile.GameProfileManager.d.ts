@@ -17,7 +17,7 @@ declare namespace org {
                      * @see GameProfile#of(UUID, String)
                      */
                     // @ts-ignore
-                    createProfile(uniqueId: java.util.UUID, name: string): org.spongepowered.api.profile.GameProfile
+                    createProfile(uniqueId: java.util.UUID, name: java.lang.String | string): org.spongepowered.api.profile.GameProfile
                     /**
                      * Creates a {@link ProfileProperty} from the provided name, value,
                      * and optional signature.
@@ -29,7 +29,7 @@ declare namespace org {
                      * @see ProfileProperty#of(String, String, String)
                      */
                     // @ts-ignore
-                    createProfileProperty(name: string, value: string, signature: string): org.spongepowered.api.profile.property.ProfileProperty
+                    createProfileProperty(name: java.lang.String | string, value: java.lang.String | string, signature: java.lang.String | string): org.spongepowered.api.profile.property.ProfileProperty
                     /**
                      * Looks up a {@link GameProfile} by its unique ID.
                      * <p>This method checks the local profile cache before contacting the
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return The result of the request
                      */
                     // @ts-ignore
-                    get(name: string): java.util.concurrent.CompletableFuture<org.spongepowered.api.profile.GameProfile>
+                    get(name: java.lang.String | string): java.util.concurrent.CompletableFuture<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Looks up a {@link GameProfile} by its unique ID.
                      * <p>The returned {@link CompletableFuture} throws an {@link ExecutionException}
@@ -77,7 +77,7 @@ declare namespace org {
                      * @return The result of the request
                      */
                     // @ts-ignore
-                    get(name: string, useCache: boolean): java.util.concurrent.CompletableFuture<org.spongepowered.api.profile.GameProfile>
+                    get(name: java.lang.String | string, useCache: boolean): java.util.concurrent.CompletableFuture<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Gets a collection of {@link GameProfile}s by their unique IDs.
                      * <p>The returned {@link CompletableFuture} throws an {@link ExecutionException}
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return The result of the request
                      */
                     // @ts-ignore
-                    getAllById(uniqueIds: java.lang.Iterable<java.util.UUID>, useCache: boolean): java.util.concurrent.CompletableFuture<java.util.Collection<org.spongepowered.api.profile.GameProfile>>
+                    getAllById(uniqueIds: java.lang.Iterable<java.util.UUID>, useCache: boolean): java.util.concurrent.CompletableFuture<java.util.Collection<org.spongepowered.api.profile.GameProfile> | Array<org.spongepowered.api.profile.GameProfile>>
                     /**
                      * Gets a collection of {@link GameProfile}s by their user names
                      * (case-insensitive).
@@ -100,7 +100,7 @@ declare namespace org {
                      * @return The result of the request
                      */
                     // @ts-ignore
-                    getAllByName(names: java.lang.Iterable<java.lang.String>, useCache: boolean): java.util.concurrent.CompletableFuture<java.util.Collection<org.spongepowered.api.profile.GameProfile>>
+                    getAllByName(names: java.lang.Iterable<java.lang.String | string>, useCache: boolean): java.util.concurrent.CompletableFuture<java.util.Collection<org.spongepowered.api.profile.GameProfile> | Array<org.spongepowered.api.profile.GameProfile>>
                     /**
                      * Fills a {@link GameProfile}.
                      * <p>The returned {@link CompletableFuture} throws an {@link ExecutionException}

@@ -28,11 +28,11 @@ declare namespace javax {
                      *  negative.
                      */
                     // @ts-ignore
-                    constructor(port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory, env: java.util.Map<java.lang.String, any>)
+                    constructor(port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory, env: java.util.Map<java.lang.String | string, any>)
                     // @ts-ignore
                     export(): void
                     // @ts-ignore
-                    getProtocol(): java.lang.String
+                    getProtocol(): string
                     /**
                      * <p>Returns a serializable stub for this {@link RMIServer} object.</p>
                      * @return a serializable stub.
@@ -40,7 +40,7 @@ declare namespace javax {
                      *             RMIJRMPServerImpl has not been exported yet.
                      */
                     // @ts-ignore
-                    toStub(): java.rmi.Remote
+                    public toStub(): java.rmi.Remote
                     /**
                      * <p>Creates a new client connection as an RMI object exported
                      * through JRMP. The port and socket factories for the new
@@ -56,7 +56,7 @@ declare namespace javax {
                      *  object cannot be created or exported.
                      */
                     // @ts-ignore
-                    makeClient(connectionId: string, subject: javax.security.auth.Subject): javax.management.remote.rmi.RMIConnection
+                    makeClient(connectionId: java.lang.String | string, subject: javax.security.auth.Subject): javax.management.remote.rmi.RMIConnection
                     // @ts-ignore
                     closeClient(client: javax.management.remote.rmi.RMIConnection): void
                     /**

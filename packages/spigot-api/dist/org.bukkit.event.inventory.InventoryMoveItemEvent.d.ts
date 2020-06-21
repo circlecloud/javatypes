@@ -27,14 +27,14 @@ declare namespace org {
                      * @return Inventory that the ItemStack is being taken from
                      */
                     // @ts-ignore
-                    getSource(): org.bukkit.inventory.Inventory
+                    public getSource(): org.bukkit.inventory.Inventory
                     /**
                      * Gets the ItemStack being moved; if modified, the original item will not
                      * be removed from the source inventory.
                      * @return ItemStack
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Sets the ItemStack being moved; if this is different from the original
                      * ItemStack, the original item will not be removed from the source
@@ -42,28 +42,28 @@ declare namespace org {
                      * @param itemStack The ItemStack
                      */
                     // @ts-ignore
-                    setItem(itemStack: org.bukkit.inventory.ItemStack): void
+                    public setItem(itemStack: org.bukkit.inventory.ItemStack): void
                     /**
                      * Gets the Inventory that the ItemStack is being put into
                      * @return Inventory that the ItemStack is being put into
                      */
                     // @ts-ignore
-                    getDestination(): org.bukkit.inventory.Inventory
+                    public getDestination(): org.bukkit.inventory.Inventory
                     /**
                      * Gets the Inventory that initiated the transfer. This will always be
                      * either the destination or source Inventory.
                      * @return Inventory that initiated the transfer
                      */
                     // @ts-ignore
-                    getInitiator(): org.bukkit.inventory.Inventory
+                    public getInitiator(): org.bukkit.inventory.Inventory
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

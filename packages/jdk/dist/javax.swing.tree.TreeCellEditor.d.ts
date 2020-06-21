@@ -27,7 +27,7 @@ declare namespace javax {
                  * @return the component for editing
                  */
                 // @ts-ignore
-                getTreeCellEditorComponent(tree: javax.swing.JTree, value: any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): java.awt.Component
+                getTreeCellEditorComponent(tree: javax.swing.JTree, value: java.lang.Object | any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): java.awt.Component
             }
         }
     }

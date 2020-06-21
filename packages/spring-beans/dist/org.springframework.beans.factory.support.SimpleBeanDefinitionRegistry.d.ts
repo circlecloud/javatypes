@@ -15,19 +15,19 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        registerBeanDefinition(beanName: string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
+                        public registerBeanDefinition(beanName: java.lang.String | string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
                         // @ts-ignore
-                        removeBeanDefinition(beanName: string): void
+                        public removeBeanDefinition(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        getBeanDefinition(beanName: string): org.springframework.beans.factory.config.BeanDefinition
+                        public getBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         // @ts-ignore
-                        containsBeanDefinition(beanName: string): boolean
+                        public containsBeanDefinition(beanName: java.lang.String | string): boolean
                         // @ts-ignore
-                        getBeanDefinitionNames(): java.lang.String[]
+                        public getBeanDefinitionNames(): string[]
                         // @ts-ignore
-                        getBeanDefinitionCount(): int
+                        public getBeanDefinitionCount(): number /*int*/
                         // @ts-ignore
-                        isBeanNameInUse(beanName: string): boolean
+                        public isBeanNameInUse(beanName: java.lang.String | string): boolean
                     }
                 }
             }

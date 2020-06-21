@@ -14,7 +14,7 @@ declare namespace javax {
              * @throws NullPointerException if m is null
              */
             // @ts-ignore
-            constructor(m: java.util.Map<java.lang.String, java.lang.Object>)
+            constructor(m: java.util.Map<java.lang.String | string, java.lang.Object | any>)
             /**
              * Default constructor uses a <code>HashMap</code>.
              */
@@ -30,7 +30,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if the name is empty.
              */
             // @ts-ignore
-            put(name: string, value: any): java.lang.Object
+            public put(name: java.lang.String | string, value: java.lang.Object | any): any
             /**
              * <code>putAll</code> is implemented using <code>Map.putAll</code>.
              * @param toMerge The <code>Map</code> of values to add.
@@ -40,12 +40,12 @@ declare namespace javax {
              *          if some key in the map is an empty String.
              */
             // @ts-ignore
-            putAll(toMerge: java.util.Map<java.lang.String, java.lang.Object>): void
+            public putAll(toMerge: java.util.Map<any, any>): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns <tt>true</tt> if this map contains a mapping for the specified
              * key.  More formally, returns <tt>true</tt> if and only if
@@ -60,17 +60,17 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty String
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<java.lang.String, java.lang.Object>>
+            public entrySet(): Array<java.util.Map.Entry<java.lang.String | string, java.lang.Object | any>>
             /**
              * Returns the value to which this map maps the specified key.  Returns
              * <tt>null</tt> if the map contains no mapping for this key.  A return
@@ -90,17 +90,17 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty String
              */
             // @ts-ignore
-            get(key: any): java.lang.Object
+            public get(key: java.lang.Object | any): any
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            keySet(): java.util.Set<java.lang.String>
+            public keySet(): Array<java.lang.String | string>
             /**
              * Removes the mapping for this key from this map if it is present
              * (optional operation).   More formally, if this map contains a mapping
@@ -121,17 +121,17 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty String
              */
             // @ts-ignore
-            remove(key: any): java.lang.Object
+            public remove(key: java.lang.Object | any): any
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            values(): java.util.Collection<java.lang.Object>
+            public values(): Array<java.lang.Object | any>
         }
     }
 }

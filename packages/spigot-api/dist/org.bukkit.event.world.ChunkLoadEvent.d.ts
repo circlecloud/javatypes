@@ -16,11 +16,11 @@ declare namespace org {
                      * @return true if the chunk is new, otherwise false
                      */
                     // @ts-ignore
-                    isNewChunk(): boolean
+                    public isNewChunk(): boolean
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

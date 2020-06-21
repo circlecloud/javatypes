@@ -23,7 +23,7 @@ declare namespace javax {
                              * completely ignores the tag.
                              */
                             // @ts-ignore
-                            start(t: javax.swing.text.html.HTML.Tag, a: javax.swing.text.MutableAttributeSet): void
+                            public start(t: javax.swing.text.html.HTML.Tag, a: javax.swing.text.MutableAttributeSet): void
                             /**
                              * Called when an end tag is seen for the
                              * type of tag this action was registered
@@ -33,7 +33,7 @@ declare namespace javax {
                              * completely ignores the tag.
                              */
                             // @ts-ignore
-                            end(t: javax.swing.text.html.HTML.Tag): void
+                            public end(t: javax.swing.text.html.HTML.Tag): void
                         }
                     }
                 }

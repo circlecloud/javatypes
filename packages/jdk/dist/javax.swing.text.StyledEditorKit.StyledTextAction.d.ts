@@ -28,13 +28,13 @@ declare namespace javax {
                  * Please see {@link java.beans.XMLEncoder}.
                  */
                 // @ts-ignore
-                class StyledTextAction extends javax.swing.text.TextAction {
+                abstract class StyledTextAction extends javax.swing.text.TextAction {
                     /**
                      * Creates a new StyledTextAction from a string action name.
                      * @param nm the name of the action
                      */
                     // @ts-ignore
-                    constructor(nm: string)
+                    constructor(nm: java.lang.String | string)
                     /**
                      * Gets the target editor for an action.
                      * @param e the action event

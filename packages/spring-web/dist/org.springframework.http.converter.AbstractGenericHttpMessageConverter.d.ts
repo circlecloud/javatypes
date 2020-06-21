@@ -10,7 +10,7 @@ declare namespace org {
                  * @param <T> the converted object type
                  */
                 // @ts-ignore
-                class AbstractGenericHttpMessageConverter<T> extends org.springframework.http.converter.AbstractHttpMessageConverter<T> implements org.springframework.http.converter.GenericHttpMessageConverter<T> {
+                abstract class AbstractGenericHttpMessageConverter<T> extends org.springframework.http.converter.AbstractHttpMessageConverter<T> implements org.springframework.http.converter.GenericHttpMessageConverter<T> {
                     /**
                      * Construct an {@code AbstractGenericHttpMessageConverter} with no supported media types.
                      * @see #setSupportedMediaTypes
@@ -32,15 +32,15 @@ declare namespace org {
                     // @ts-ignore
                     supports(clazz: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    canRead(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    canWrite(type: java.lang.reflect.Type, clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(type: java.lang.reflect.Type, clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     /**
                      * This implementation sets the default headers by calling {@link #addDefaultHeaders},
                      * and then calls {@link #writeInternal}.
                      */
                     // @ts-ignore
-                    write(t: T, type: java.lang.reflect.Type, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    public write(t: T, type: java.lang.reflect.Type, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
                     // @ts-ignore
                     writeInternal(t: T, outputMessage: org.springframework.http.HttpOutputMessage): void
                     /**

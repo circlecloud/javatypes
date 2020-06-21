@@ -15,7 +15,7 @@ declare namespace org {
                  * @see MBeanExportConfiguration
                  */
                 // @ts-ignore
-                class EnableMBeanExport implements java.lang.annotation.Annotation {
+                abstract class EnableMBeanExport implements java.lang.annotation.Annotation {
                 }
             }
         }

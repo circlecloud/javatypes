@@ -44,7 +44,7 @@ declare namespace org {
                  * @return the seed
                  */
                 // @ts-ignore
-                getSeed(): long
+                getSeed(): number /*long*/
             }
         }
     }

@@ -36,7 +36,7 @@ declare namespace org {
                      * @return The list of colors
                      */
                     // @ts-ignore
-                    getColors(): java.util.List<org.spongepowered.api.util.Color>
+                    getColors(): Array<org.spongepowered.api.util.Color>
                     /**
                      * Gets the ordered list of colors.
                      * <p>Normally in vanilla, the order of colors defines the colors
@@ -44,7 +44,7 @@ declare namespace org {
                      * @return The list of colors
                      */
                     // @ts-ignore
-                    getFadeColors(): java.util.List<org.spongepowered.api.util.Color>
+                    getFadeColors(): Array<org.spongepowered.api.util.Color>
                     /**
                      * Gets the explosion shape.
                      * @return The explosion shape

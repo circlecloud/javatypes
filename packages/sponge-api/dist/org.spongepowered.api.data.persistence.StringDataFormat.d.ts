@@ -18,7 +18,7 @@ declare namespace org {
                          * @throws IOException If there was an error reading from the string
                          */
                         // @ts-ignore
-                        read(input: string): org.spongepowered.api.data.DataContainer
+                        read(input: java.lang.String | string): org.spongepowered.api.data.DataContainer
                         /**
                          * Creates a new {@link DataContainer} from the contents of the given
                          * {@link Reader}.
@@ -38,7 +38,7 @@ declare namespace org {
                          * @throws IOException If there was an error serializing the data
                          */
                         // @ts-ignore
-                        write(data: org.spongepowered.api.data.DataView): java.lang.String
+                        write(data: org.spongepowered.api.data.DataView): string
                         /**
                          * Writes the given {@link DataView} to the given {@link Writer} using
                          * the format specified by this {@link DataFormat}.

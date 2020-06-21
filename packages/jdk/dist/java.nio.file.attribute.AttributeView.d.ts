@@ -17,7 +17,7 @@ declare namespace java {
                      * @return the name of the attribute view
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                 }
             }
         }

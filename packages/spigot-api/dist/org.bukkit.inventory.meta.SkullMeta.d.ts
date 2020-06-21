@@ -13,7 +13,7 @@ declare namespace org {
                      * @deprecated see {#link #setOwningPlayer(org.bukkit.OfflinePlayer)}.
                      */
                     // @ts-ignore
-                    getOwner(): java.lang.String
+                    getOwner(): string
                     /**
                      * Checks to see if the skull has an owner.
                      * @return true if the skull has an owner
@@ -27,7 +27,7 @@ declare namespace org {
                      * @deprecated see {#link #setOwningPlayer(org.bukkit.OfflinePlayer)}.
                      */
                     // @ts-ignore
-                    setOwner(owner: string): boolean
+                    setOwner(owner: java.lang.String | string): boolean
                     /**
                      * Gets the owner of the skull.
                      * @return the owner if the skull

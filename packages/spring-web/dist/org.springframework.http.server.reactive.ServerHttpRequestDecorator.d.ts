@@ -14,33 +14,33 @@ declare namespace org {
                         // @ts-ignore
                         constructor(delegate: org.springframework.http.server.reactive.ServerHttpRequest)
                         // @ts-ignore
-                        getDelegate(): org.springframework.http.server.reactive.ServerHttpRequest
+                        public getDelegate(): org.springframework.http.server.reactive.ServerHttpRequest
                         // @ts-ignore
-                        getId(): java.lang.String
+                        public getId(): string
                         // @ts-ignore
-                        getMethod(): org.springframework.http.HttpMethod
+                        public getMethod(): org.springframework.http.HttpMethod
                         // @ts-ignore
-                        getMethodValue(): java.lang.String
+                        public getMethodValue(): string
                         // @ts-ignore
-                        getURI(): java.net.URI
+                        public getURI(): java.net.URI
                         // @ts-ignore
-                        getPath(): org.springframework.http.server.RequestPath
+                        public getPath(): org.springframework.http.server.RequestPath
                         // @ts-ignore
-                        getQueryParams(): <any>
+                        public getQueryParams(): object
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         // @ts-ignore
-                        getRemoteAddress(): java.net.InetSocketAddress
+                        public getRemoteAddress(): java.net.InetSocketAddress
                         // @ts-ignore
-                        getLocalAddress(): java.net.InetSocketAddress
+                        public getLocalAddress(): java.net.InetSocketAddress
                         // @ts-ignore
-                        getSslInfo(): org.springframework.http.server.reactive.SslInfo
+                        public getSslInfo(): org.springframework.http.server.reactive.SslInfo
                         // @ts-ignore
-                        getBody(): <any>
+                        public getBody(): object
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

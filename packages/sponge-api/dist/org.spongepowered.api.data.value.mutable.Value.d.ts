@@ -26,7 +26,7 @@ declare namespace org {
                              * @return The owning {#link ValueContainer}
                              */
                             // @ts-ignore
-                            transform(func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): org.spongepowered.api.data.value.mutable.Value<E>
+                            transform(func: java.util.function$.Function<E, E>): org.spongepowered.api.data.value.mutable.Value<E>
                             /**
                              * Gets the {@link ImmutableValue} version of this {@link Value} such that
                              * all data is duplicated across to the new {@link ImmutableValue}. Note

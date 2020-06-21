@@ -40,13 +40,13 @@ declare namespace org {
                      *  {@link org.springframework.core.convert.converter.GenericConverter}
                      */
                     // @ts-ignore
-                    setConverters(converters: Array<any>): void
+                    public setConverters(converters: java.util.Set<any> | Array<any>): void
                     /**
                      * Configure the set of custom formatter objects that should be added.
                      * @param formatters instances of {#link Formatter} or {@link AnnotationFormatterFactory}
                      */
                     // @ts-ignore
-                    setFormatters(formatters: Array<any>): void
+                    public setFormatters(formatters: java.util.Set<any> | Array<any>): void
                     /**
                      * <p>Configure the set of FormatterRegistrars to invoke to register
                      * Converters and Formatters in addition to those added declaratively
@@ -62,7 +62,7 @@ declare namespace org {
                      * @see FormatterRegistry#addFormatterForFieldType(Class, Printer, Parser)
                      */
                     // @ts-ignore
-                    setFormatterRegistrars(formatterRegistrars: Array<org.springframework.format.FormatterRegistrar>): void
+                    public setFormatterRegistrars(formatterRegistrars: java.util.Set<org.springframework.format.FormatterRegistrar> | Array<org.springframework.format.FormatterRegistrar>): void
                     /**
                      * Indicate whether default formatters should be registered or not.
                      * <p>By default, built-in formatters are registered. This flag can be used
@@ -71,17 +71,17 @@ declare namespace org {
                      * @see #setFormatterRegistrars(Set)
                      */
                     // @ts-ignore
-                    setRegisterDefaultFormatters(registerDefaultFormatters: boolean): void
+                    public setRegisterDefaultFormatters(registerDefaultFormatters: boolean): void
                     // @ts-ignore
-                    setEmbeddedValueResolver(embeddedValueResolver: StringValueResolver): void
+                    public setEmbeddedValueResolver(embeddedValueResolver: StringValueResolver): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): org.springframework.format.support.FormattingConversionService
+                    public getObject(): org.springframework.format.support.FormattingConversionService
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends org.springframework.format.support.FormattingConversionService>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

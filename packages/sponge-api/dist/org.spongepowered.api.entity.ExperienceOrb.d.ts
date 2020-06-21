@@ -19,7 +19,7 @@ declare namespace org {
                      * @return The immutable value for the amount of "experience" stored
                      */
                     // @ts-ignore
-                    experience(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                    experience(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                 }
             }
         }

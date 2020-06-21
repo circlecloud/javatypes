@@ -16,7 +16,7 @@ declare namespace javax {
                  * @param reason describes the problem.
                  */
                 // @ts-ignore
-                constructor(reason: string)
+                constructor(reason: java.lang.String | string)
                 /**
                  * Creates a <code>SSLException</code> with the specified
                  * detail message and cause.
@@ -29,7 +29,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Creates a <code>SSLException</code> with the specified cause
                  * and a detail message of <tt>(cause==null ? null : cause.toString())</tt>
@@ -42,7 +42,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
             }
         }
     }

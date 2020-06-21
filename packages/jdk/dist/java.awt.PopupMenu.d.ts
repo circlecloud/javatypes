@@ -30,19 +30,19 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(label: string)
+            constructor(label: java.lang.String | string)
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            getParent(): java.awt.MenuContainer
+            public getParent(): java.awt.MenuContainer
             /**
              * Creates the popup menu's peer.
              * The peer allows us to change the appearance of the popup menu without
              * changing any of the popup menu's functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Shows the popup menu at the x, y position relative to an origin
              * component.
@@ -64,7 +64,7 @@ declare namespace java {
              * @exception RuntimeException if the parent is not showing on screen
              */
             // @ts-ignore
-            show(origin: java.awt.Component, x: number /*int*/, y: number /*int*/): void
+            public show(origin: java.awt.Component, x: number /*int*/, y: number /*int*/): void
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>PopupMenu</code>.
@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

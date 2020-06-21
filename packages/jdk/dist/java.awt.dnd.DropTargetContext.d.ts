@@ -22,7 +22,7 @@ declare namespace java {
                  * @return the <code>DropTarget</code> associated with this <code>DropTargetContext</code>
                  */
                 // @ts-ignore
-                getDropTarget(): java.awt.dnd.DropTarget
+                public getDropTarget(): java.awt.dnd.DropTarget
                 /**
                  * This method returns the <code>Component</code> associated with
                  * this <code>DropTargetContext</code>.
@@ -30,19 +30,19 @@ declare namespace java {
                  * @return the Component associated with this Context
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * Called when associated with the <code>DropTargetContextPeer</code>.
                  * <P>
                  * @param dtcp the <code>DropTargetContextPeer</code>
                  */
                 // @ts-ignore
-                addNotify(dtcp: java.awt.dnd.peer.DropTargetContextPeer): void
+                public addNotify(dtcp: java.awt.dnd.peer.DropTargetContextPeer): void
                 /**
                  * Called when disassociated with the <code>DropTargetContextPeer</code>.
                  */
                 // @ts-ignore
-                removeNotify(): void
+                public removeNotify(): void
                 /**
                  * This method sets the current actions acceptable to
                  * this <code>DropTarget</code>.
@@ -58,7 +58,7 @@ declare namespace java {
                  * @return the current actions acceptable to this <code>DropTarget</code>
                  */
                 // @ts-ignore
-                getTargetActions(): int
+                getTargetActions(): number /*int*/
                 /**
                  * This method signals that the drop is completed and
                  * if it was successful or not.
@@ -68,7 +68,7 @@ declare namespace java {
                  * @throws InvalidDnDOperationException if a drop is not outstanding/extant
                  */
                 // @ts-ignore
-                dropComplete(success: boolean): void
+                public dropComplete(success: boolean): void
                 /**
                  * accept the Drag.
                  * <P>
@@ -115,7 +115,7 @@ declare namespace java {
                  *  DataFlavors as a <code>java.util.List</code>
                  */
                 // @ts-ignore
-                getCurrentDataFlavorsAsList(): java.util.List<java.awt.datatransfer.DataFlavor>
+                getCurrentDataFlavorsAsList(): Array<java.awt.datatransfer.DataFlavor>
                 /**
                  * This method returns a <code>boolean</code>
                  * indicating if the given <code>DataFlavor</code> is

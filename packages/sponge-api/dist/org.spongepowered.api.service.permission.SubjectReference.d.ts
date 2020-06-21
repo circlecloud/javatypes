@@ -24,13 +24,13 @@ declare namespace org {
                          * @return The identifier of the collection holding this subject
                          */
                         // @ts-ignore
-                        getCollectionIdentifier(): java.lang.String
+                        getCollectionIdentifier(): string
                         /**
                          * Gets the identifier of the subject.
                          * @return The subject identifier
                          */
                         // @ts-ignore
-                        getSubjectIdentifier(): java.lang.String
+                        getSubjectIdentifier(): string
                         /**
                          * Resolves and returns the Subject being referenced.
                          * <p>The returned future will complete exceptionally if the subject

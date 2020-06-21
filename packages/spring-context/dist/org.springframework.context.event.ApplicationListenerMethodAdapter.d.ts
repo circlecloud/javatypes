@@ -18,23 +18,23 @@ declare namespace org {
                 // @ts-ignore
                 class ApplicationListenerMethodAdapter extends java.lang.Object implements org.springframework.context.event.GenericApplicationListener {
                     // @ts-ignore
-                    constructor(beanName: string, targetClass: java.lang.Class<any>, method: java.lang.reflect.Method)
+                    constructor(beanName: java.lang.String | string, targetClass: java.lang.Class<any>, method: java.lang.reflect.Method)
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    onApplicationEvent(event: org.springframework.context.ApplicationEvent): void
+                    public onApplicationEvent(event: org.springframework.context.ApplicationEvent): void
                     // @ts-ignore
-                    supportsEventType(eventType: ResolvableType): boolean
+                    public supportsEventType(eventType: ResolvableType): boolean
                     // @ts-ignore
-                    supportsSourceType(sourceType: java.lang.Class<any>): boolean
+                    public supportsSourceType(sourceType: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    getOrder(): int
+                    public getOrder(): number /*int*/
                     /**
                      * Process the specified {@link ApplicationEvent}, checking if the condition
                      * matches and handling a non-null result, if any.
                      */
                     // @ts-ignore
-                    processEvent(event: org.springframework.context.ApplicationEvent): void
+                    public processEvent(event: org.springframework.context.ApplicationEvent): void
                     /**
                      * Resolve the method arguments to use for the specified {@link ApplicationEvent}.
                      * <p>These arguments will be used to invoke the method handled by this instance.
@@ -42,21 +42,21 @@ declare namespace org {
                      * and therefore the method should not be invoked at all for the specified event.
                      */
                     // @ts-ignore
-                    resolveArguments(event: org.springframework.context.ApplicationEvent): java.lang.Object[]
+                    resolveArguments(event: org.springframework.context.ApplicationEvent): any[]
                     // @ts-ignore
-                    handleResult(result: any): void
+                    handleResult(result: java.lang.Object | any): void
                     // @ts-ignore
-                    handleAsyncError(t: Error): void
+                    handleAsyncError(t: java.lang.Throwable | Error): void
                     /**
                      * Invoke the event listener method with the given argument values.
                      */
                     // @ts-ignore
-                    doInvoke(...args: any[]): java.lang.Object
+                    doInvoke(...args: java.lang.Object[] | any[]): any
                     /**
                      * Return the target bean instance to use.
                      */
                     // @ts-ignore
-                    getTargetBean(): java.lang.Object
+                    getTargetBean(): any
                     /**
                      * Return the condition to use.
                      * <p>Matches the {@code condition} attribute of the {@link EventListener}
@@ -64,16 +64,16 @@ declare namespace org {
                      * is meta-annotated with {@code @EventListener}.
                      */
                     // @ts-ignore
-                    getCondition(): java.lang.String
+                    getCondition(): string
                     /**
                      * Add additional details such as the bean type and method signature to
                      * the given error message.
                      * @param message error message to append the HandlerMethod details to
                      */
                     // @ts-ignore
-                    getDetailedErrorMessage(bean: any, message: string): java.lang.String
+                    getDetailedErrorMessage(bean: java.lang.Object | any, message: java.lang.String | string): string
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

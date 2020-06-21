@@ -42,7 +42,7 @@ declare namespace javax {
              * @see #setValue
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            getValue(): any
             /**
              * Changes current value of the model, typically this value is displayed
              * by the <code>editor</code> part of a  <code>JSpinner</code>.
@@ -56,7 +56,7 @@ declare namespace javax {
              * @see #getValue
              */
             // @ts-ignore
-            setValue(value: any): void
+            setValue(value: java.lang.Object | any): void
             /**
              * Return the object in the sequence that comes after the object returned
              * by <code>getValue()</code>. If the end of the sequence has been reached
@@ -66,7 +66,7 @@ declare namespace javax {
              * @see #getPreviousValue
              */
             // @ts-ignore
-            getNextValue(): java.lang.Object
+            getNextValue(): any
             /**
              * Return the object in the sequence that comes before the object returned
              * by <code>getValue()</code>.  If the end of the sequence has been reached then
@@ -76,7 +76,7 @@ declare namespace javax {
              * @see #getNextValue
              */
             // @ts-ignore
-            getPreviousValue(): java.lang.Object
+            getPreviousValue(): any
             /**
              * Adds a <code>ChangeListener</code> to the model's listener list.  The
              * <code>ChangeListeners</code> must be notified when models <code>value</code>

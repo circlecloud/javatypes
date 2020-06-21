@@ -25,7 +25,7 @@ declare namespace javax {
                      * @return the length &gt;= 0
                      */
                     // @ts-ignore
-                    length(): int
+                    length(): number /*int*/
                     /**
                      * Inserts a string of characters into the sequence.
                      * @param where   offset into the sequence to make the insertion &gt;= 0
@@ -37,7 +37,7 @@ declare namespace javax {
                      *    the arguments is not contained in the character sequence
                      */
                     // @ts-ignore
-                    insertString(where: number /*int*/, str: string): javax.swing.undo.UndoableEdit
+                    insertString(where: number /*int*/, str: java.lang.String | string): javax.swing.undo.UndoableEdit
                     /**
                      * Removes some portion of the sequence.
                      * @param where   The offset into the sequence to make the
@@ -60,7 +60,7 @@ declare namespace javax {
                      *    the arguments is not contained in the character sequence.
                      */
                     // @ts-ignore
-                    getString(where: number /*int*/, len: number /*int*/): java.lang.String
+                    getString(where: number /*int*/, len: number /*int*/): string
                     /**
                      * Gets a sequence of characters and copies them into a Segment.
                      * @param where the starting offset &gt;= 0

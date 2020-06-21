@@ -10,7 +10,7 @@ declare namespace org {
                      * @param defaultReplacement The default replacement
                      */
                     // @ts-ignore
-                    constructor(original: T extends org.spongepowered.api.data.DataSerializable, defaultReplacement: T extends org.spongepowered.api.data.DataSerializable)
+                    constructor(original: T, defaultReplacement: T)
                     /**
                      * Creates a new {@link Transaction} with the added possibility of
                      * <i>intermediary</i> transactions that may have taken place between
@@ -26,19 +26,19 @@ declare namespace org {
                      * @param intermediary
                      */
                     // @ts-ignore
-                    constructor(original: T extends org.spongepowered.api.data.DataSerializable, defaultReplacement: T extends org.spongepowered.api.data.DataSerializable, intermediary: Array<T>)
+                    constructor(original: T, defaultReplacement: T, intermediary: java.util.List<any> | Array<any>)
                     /**
                      * Gets the original snapshot.
                      * @return The original snapshot
                      */
                     // @ts-ignore
-                    getOriginal(): T
+                    public getOriginal(): T
                     /**
                      * Gets the default replacement snapshot.
                      * @return The default replacement
                      */
                     // @ts-ignore
-                    getDefault(): T
+                    public getDefault(): T
                     /**
                      * Gets a {@link List} of any and all intermediary transactions that may
                      * have taken place to get the final {@link Transaction} of
@@ -52,20 +52,20 @@ declare namespace org {
                      * @return The intermediary list of transactions
                      */
                     // @ts-ignore
-                    getIntermediary(): java.util.List<? extends T>
+                    public getIntermediary(): Array<any>
                     /**
                      * Gets the custom snapshot if one was set.
                      * @return The custom snapshot, if available
                      */
                     // @ts-ignore
-                    getCustom(): java.util.Optional<T>
+                    public getCustom(): java.util.Optional<T>
                     /**
                      * Sets the custom snapshot. If setting <code>null</code>, this will
                      * reset to use the {@link #getDefault()} snapshot.
                      * @param custom The custom snapshot
                      */
                     // @ts-ignore
-                    setCustom(custom: T extends org.spongepowered.api.data.DataSerializable): void
+                    public setCustom(custom: T): void
                     /**
                      * Gets the proposed final snapshot, if the {@link #getCustom()} returns
                      * {@link Optional#isPresent()}, the custom is returned, otherwise,
@@ -73,29 +73,29 @@ declare namespace org {
                      * @return The proposed final snapshot
                      */
                     // @ts-ignore
-                    getFinal(): T
+                    public getFinal(): T
                     /**
                      * Gets whether this transaction is marked as valid.
                      * @return The valid state of this transaction
                      */
                     // @ts-ignore
-                    isValid(): boolean
+                    public isValid(): boolean
                     /**
                      * Sets whether this transaction is valid or not.
                      * @param valid The valid state of this transaction
                      */
                     // @ts-ignore
-                    setValid(valid: boolean): void
+                    public setValid(valid: boolean): void
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    getContentVersion(): int
+                    public getContentVersion(): number /*int*/
                     // @ts-ignore
-                    toContainer(): org.spongepowered.api.data.DataContainer
+                    public toContainer(): org.spongepowered.api.data.DataContainer
                 }
             }
         }

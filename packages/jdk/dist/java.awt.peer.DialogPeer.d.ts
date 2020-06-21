@@ -18,7 +18,7 @@ declare namespace java {
                  * @see Dialog#setTitle(String)
                  */
                 // @ts-ignore
-                setTitle(title: string): void
+                setTitle(title: java.lang.String | string): void
                 /**
                  * Sets if the dialog should be resizable or not.
                  * @param resizeable {#code true} when the dialog should be resizable,
@@ -34,7 +34,7 @@ declare namespace java {
                  * @see Dialog#blockWindows()
                  */
                 // @ts-ignore
-                blockWindows(windows: Array<java.awt.Window>): void
+                blockWindows(windows: java.util.List<java.awt.Window> | Array<java.awt.Window>): void
             }
         }
     }

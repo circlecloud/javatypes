@@ -13,7 +13,7 @@ declare namespace javax {
                  * the XMLReader.</p>
                  */
                 // @ts-ignore
-                class SAXTransformerFactory extends javax.xml.transform.TransformerFactory {
+                abstract class SAXTransformerFactory extends javax.xml.transform.TransformerFactory {
                     /**
                      * The default constructor is protected on purpose.
                      */
@@ -27,7 +27,7 @@ declare namespace javax {
                      * be safely cast to a SAXTransformerFactory.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * If {@link javax.xml.transform.TransformerFactory#getFeature}
                      * returns true when passed this value as an argument,
@@ -35,7 +35,7 @@ declare namespace javax {
                      * and {@link #newXMLFilter(Templates templates)} methods are supported.
                      */
                     // @ts-ignore
-                    readonly FEATURE_XMLFILTER: string
+                    public static readonly FEATURE_XMLFILTER: java.lang.String | string
                     /**
                      * Get a TransformerHandler object that can process SAX
                      * ContentHandler events into a Result, based on the transformation
@@ -46,7 +46,7 @@ declare namespace javax {
                      *  TransformerHandler can not be created.
                      */
                     // @ts-ignore
-                    abstract newTransformerHandler(src: javax.xml.transform.Source): javax.xml.transform.sax.TransformerHandler
+                    public abstract newTransformerHandler(src: javax.xml.transform.Source): javax.xml.transform.sax.TransformerHandler
                     /**
                      * Get a TransformerHandler object that can process SAX
                      * ContentHandler events into a Result, based on the Templates argument.
@@ -56,7 +56,7 @@ declare namespace javax {
                      *  TransformerHandler can not be created.
                      */
                     // @ts-ignore
-                    abstract newTransformerHandler(templates: javax.xml.transform.Templates): javax.xml.transform.sax.TransformerHandler
+                    public abstract newTransformerHandler(templates: javax.xml.transform.Templates): javax.xml.transform.sax.TransformerHandler
                     /**
                      * Get a TransformerHandler object that can process SAX
                      * ContentHandler events into a Result. The transformation
@@ -68,7 +68,7 @@ declare namespace javax {
                      *  TransformerHandler cannot be created.
                      */
                     // @ts-ignore
-                    abstract newTransformerHandler(): javax.xml.transform.sax.TransformerHandler
+                    public abstract newTransformerHandler(): javax.xml.transform.sax.TransformerHandler
                     /**
                      * Get a TemplatesHandler object that can process SAX
                      * ContentHandler events into a Templates object.
@@ -78,7 +78,7 @@ declare namespace javax {
                      *  TemplatesHandler cannot be created.
                      */
                     // @ts-ignore
-                    abstract newTemplatesHandler(): javax.xml.transform.sax.TemplatesHandler
+                    public abstract newTemplatesHandler(): javax.xml.transform.sax.TemplatesHandler
                     /**
                      * Create an XMLFilter that uses the given Source as the
                      * transformation instructions.
@@ -88,7 +88,7 @@ declare namespace javax {
                      *  TemplatesHandler cannot be created.
                      */
                     // @ts-ignore
-                    abstract newXMLFilter(src: javax.xml.transform.Source): org.xml.sax.XMLFilter
+                    public abstract newXMLFilter(src: javax.xml.transform.Source): org.xml.sax.XMLFilter
                     /**
                      * Create an XMLFilter, based on the Templates argument..
                      * @param templates The compiled transformation instructions.
@@ -97,7 +97,7 @@ declare namespace javax {
                      *  TemplatesHandler cannot be created.
                      */
                     // @ts-ignore
-                    abstract newXMLFilter(templates: javax.xml.transform.Templates): org.xml.sax.XMLFilter
+                    public abstract newXMLFilter(templates: javax.xml.transform.Templates): org.xml.sax.XMLFilter
                 }
             }
         }

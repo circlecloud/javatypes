@@ -7,7 +7,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            class SpinnerUI extends javax.swing.plaf.ComponentUI {
+            abstract class SpinnerUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

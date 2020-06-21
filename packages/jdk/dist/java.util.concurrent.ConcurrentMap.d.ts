@@ -31,7 +31,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getOrDefault(key: any, defaultValue: V): V
+                getOrDefault(key: java.lang.Object | any, defaultValue: V): V
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation is equivalent to, for this
@@ -48,7 +48,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+                forEach(action: java.util.function$.BiConsumer<any, any>): void
                 /**
                  * If the specified key is not already associated
                  * with a value, associate it with the given value.
@@ -106,7 +106,7 @@ declare namespace java {
                  *          (<a href="../Collection.html#optional-restrictions">optional</a>)
                  */
                 // @ts-ignore
-                remove(key: any, value: any): boolean
+                remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
                 /**
                  * Replaces the entry for a key only if currently mapped to a given value.
                  * This is equivalent to
@@ -191,7 +191,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+                replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation is equivalent to the following steps for this
@@ -220,7 +220,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                computeIfAbsent(key: K, mappingFunction: java.util.function.Function<any super K, V> | java.util.function$.Function<? super K, V>): V
+                computeIfAbsent(key: K, mappingFunction: java.util.function$.Function<any, any>): V
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation is equivalent to performing the following
@@ -252,7 +252,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                computeIfPresent(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+                computeIfPresent(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation is equivalent to performing the following
@@ -289,7 +289,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                compute(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+                compute(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation is equivalent to performing the following
@@ -320,7 +320,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                merge(key: K, value: V, remappingFunction: java.util.function.BiFunction<any super V, ? super V, V> | java.util.function$.BiFunction<? super V, ? super V, V>): V
+                merge(key: K, value: V, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
             }
         }
     }

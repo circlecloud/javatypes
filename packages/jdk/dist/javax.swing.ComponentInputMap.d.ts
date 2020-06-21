@@ -30,29 +30,29 @@ declare namespace javax {
              *          or is not associated with the same component
              */
             // @ts-ignore
-            setParent(map: javax.swing.InputMap): void
+            public setParent(map: javax.swing.InputMap): void
             /**
              * Returns the component the <code>InputMap</code> was created for.
              */
             // @ts-ignore
-            getComponent(): javax.swing.JComponent
+            public getComponent(): javax.swing.JComponent
             /**
              * Adds a binding for <code>keyStroke</code> to <code>actionMapKey</code>.
              * If <code>actionMapKey</code> is null, this removes the current binding
              * for <code>keyStroke</code>.
              */
             // @ts-ignore
-            put(keyStroke: javax.swing.KeyStroke, actionMapKey: any): void
+            public put(keyStroke: javax.swing.KeyStroke, actionMapKey: java.lang.Object | any): void
             /**
              * Removes the binding for <code>key</code> from this object.
              */
             // @ts-ignore
-            remove(key: javax.swing.KeyStroke): void
+            public remove(key: javax.swing.KeyStroke): void
             /**
              * Removes all the mappings from this object.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
         }
     }
 }

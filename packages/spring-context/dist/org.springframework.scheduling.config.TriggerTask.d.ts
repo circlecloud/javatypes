@@ -23,7 +23,7 @@ declare namespace org {
                      * Return the associated trigger.
                      */
                     // @ts-ignore
-                    getTrigger(): org.springframework.scheduling.Trigger
+                    public getTrigger(): org.springframework.scheduling.Trigger
                 }
             }
         }

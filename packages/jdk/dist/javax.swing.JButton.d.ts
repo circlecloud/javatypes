@@ -51,7 +51,7 @@ declare namespace javax {
              * @param text  the text of the button
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a button where properties are taken from the
              * <code>Action</code> supplied.
@@ -66,14 +66,14 @@ declare namespace javax {
              * @param icon  the Icon image to display on the button
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Resets the UI property to a value from the current look and
              * feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the L&amp;F class
              * that renders this component.
@@ -84,7 +84,7 @@ declare namespace javax {
              *    description: A string that specifies the name of the L&amp;F class.
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Gets the value of the <code>defaultButton</code> property,
              * which if <code>true</code> means that this button is the current
@@ -98,7 +98,7 @@ declare namespace javax {
              * @beaninfo description: Whether or not this button is the default button
              */
             // @ts-ignore
-            isDefaultButton(): boolean
+            public isDefaultButton(): boolean
             /**
              * Gets the value of the <code>defaultCapable</code> property.
              * @return the value of the <code>defaultCapable</code> property
@@ -107,7 +107,7 @@ declare namespace javax {
              * @see JRootPane#setDefaultButton
              */
             // @ts-ignore
-            isDefaultCapable(): boolean
+            public isDefaultCapable(): boolean
             /**
              * Sets the <code>defaultCapable</code> property,
              * which determines whether this button can be
@@ -124,7 +124,7 @@ declare namespace javax {
              *   description: Whether or not this button can be the default button
              */
             // @ts-ignore
-            setDefaultCapable(defaultCapable: boolean): void
+            public setDefaultCapable(defaultCapable: boolean): void
             /**
              * Overrides <code>JComponent.removeNotify</code> to check if
              * this button is currently set as the default button on the
@@ -133,7 +133,7 @@ declare namespace javax {
              * <code>RootPane</code> doesn't hold onto an invalid button reference.
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Returns a string representation of this <code>JButton</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -143,7 +143,7 @@ declare namespace javax {
              * @return a string representation of this <code>JButton</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>JButton</code>. For <code>JButton</code>s,
@@ -156,7 +156,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this Button.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

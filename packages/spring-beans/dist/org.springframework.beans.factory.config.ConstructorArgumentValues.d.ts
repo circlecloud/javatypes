@@ -32,14 +32,14 @@ declare namespace org {
                          * ValueHolder instances carrying the same content are of course allowed.
                          */
                         // @ts-ignore
-                        addArgumentValues(other: org.springframework.beans.factory.config.ConstructorArgumentValues): void
+                        public addArgumentValues(other: org.springframework.beans.factory.config.ConstructorArgumentValues): void
                         /**
                          * Add an argument value for the given index in the constructor argument list.
                          * @param index the index in the constructor argument list
                          * @param value the argument value
                          */
                         // @ts-ignore
-                        addIndexedArgumentValue(index: number /*int*/, value: any): void
+                        public addIndexedArgumentValue(index: number /*int*/, value: java.lang.Object | any): void
                         /**
                          * Add an argument value for the given index in the constructor argument list.
                          * @param index the index in the constructor argument list
@@ -47,20 +47,20 @@ declare namespace org {
                          * @param type the type of the constructor argument
                          */
                         // @ts-ignore
-                        addIndexedArgumentValue(index: number /*int*/, value: any, type: string): void
+                        public addIndexedArgumentValue(index: number /*int*/, value: java.lang.Object | any, type: java.lang.String | string): void
                         /**
                          * Add an argument value for the given index in the constructor argument list.
                          * @param index the index in the constructor argument list
                          * @param newValue the argument value in the form of a ValueHolder
                          */
                         // @ts-ignore
-                        addIndexedArgumentValue(index: number /*int*/, newValue: org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder): void
+                        public addIndexedArgumentValue(index: number /*int*/, newValue: org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder): void
                         /**
                          * Check whether an argument value has been registered for the given index.
                          * @param index the index in the constructor argument list
                          */
                         // @ts-ignore
-                        hasIndexedArgumentValue(index: number /*int*/): boolean
+                        public hasIndexedArgumentValue(index: number /*int*/): boolean
                         /**
                          * Get argument value for the given index in the constructor argument list.
                          * @param index the index in the constructor argument list
@@ -69,7 +69,7 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getIndexedArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getIndexedArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Get argument value for the given index in the constructor argument list.
                          * @param index the index in the constructor argument list
@@ -80,14 +80,14 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getIndexedArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>, requiredName: string): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getIndexedArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>, requiredName: java.lang.String | string): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Return the map of indexed argument values.
                          * @return unmodifiable Map with Integer index as key and ValueHolder as value
                          * @see ValueHolder
                          */
                         // @ts-ignore
-                        getIndexedArgumentValues(): java.util.Map<java.lang.Integer, org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>
+                        public getIndexedArgumentValues(): java.util.Map<java.lang.Integer | number, org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>
                         /**
                          * Add a generic argument value to be matched by type.
                          * <p>Note: A single generic argument value will just be used once,
@@ -95,7 +95,7 @@ declare namespace org {
                          * @param value the argument value
                          */
                         // @ts-ignore
-                        addGenericArgumentValue(value: any): void
+                        public addGenericArgumentValue(value: java.lang.Object | any): void
                         /**
                          * Add a generic argument value to be matched by type.
                          * <p>Note: A single generic argument value will just be used once,
@@ -104,7 +104,7 @@ declare namespace org {
                          * @param type the type of the constructor argument
                          */
                         // @ts-ignore
-                        addGenericArgumentValue(value: any, type: string): void
+                        public addGenericArgumentValue(value: java.lang.Object | any, type: java.lang.String | string): void
                         /**
                          * Add a generic argument value to be matched by type or name (if available).
                          * <p>Note: A single generic argument value will just be used once,
@@ -115,14 +115,14 @@ declare namespace org {
                          *  ValueHolder instances carrying the same content are of course allowed.
                          */
                         // @ts-ignore
-                        addGenericArgumentValue(newValue: org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder): void
+                        public addGenericArgumentValue(newValue: org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder): void
                         /**
                          * Look for a generic argument value that matches the given type.
                          * @param requiredType the type to match
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getGenericArgumentValue(requiredType: java.lang.Class<any>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getGenericArgumentValue(requiredType: java.lang.Class<any>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Look for a generic argument value that matches the given type.
                          * @param requiredType the type to match
@@ -130,7 +130,7 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getGenericArgumentValue(requiredType: java.lang.Class<any>, requiredName: string): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getGenericArgumentValue(requiredType: java.lang.Class<any>, requiredName: java.lang.String | string): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Look for the next generic argument value that matches the given type,
                          * ignoring argument values that have already been used in the current
@@ -144,14 +144,14 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none found
                          */
                         // @ts-ignore
-                        getGenericArgumentValue(requiredType: java.lang.Class<any>, requiredName: string, usedValueHolders: Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getGenericArgumentValue(requiredType: java.lang.Class<any>, requiredName: java.lang.String | string, usedValueHolders: java.util.Set<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder> | Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Return the list of generic argument values.
                          * @return unmodifiable List of ValueHolders
                          * @see ValueHolder
                          */
                         // @ts-ignore
-                        getGenericArgumentValues(): java.util.List<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>
+                        public getGenericArgumentValues(): Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>
                         /**
                          * Look for an argument value that either corresponds to the given index
                          * in the constructor argument list or generically matches by type.
@@ -160,7 +160,7 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Look for an argument value that either corresponds to the given index
                          * in the constructor argument list or generically matches by type.
@@ -170,7 +170,7 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>, requiredName: string): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>, requiredName: java.lang.String | string): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Look for an argument value that either corresponds to the given index
                          * in the constructor argument list or generically matches by type.
@@ -186,28 +186,28 @@ declare namespace org {
                          * @return the ValueHolder for the argument, or {#code null} if none set
                          */
                         // @ts-ignore
-                        getArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>, requiredName: string, usedValueHolders: Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
+                        public getArgumentValue(index: number /*int*/, requiredType: java.lang.Class<any>, requiredName: java.lang.String | string, usedValueHolders: java.util.Set<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder> | Array<org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder>): org.springframework.beans.factory.config.ConstructorArgumentValues.ValueHolder
                         /**
                          * Return the number of argument values held in this instance,
                          * counting both indexed and generic argument values.
                          */
                         // @ts-ignore
-                        getArgumentCount(): int
+                        public getArgumentCount(): number /*int*/
                         /**
                          * Return if this holder does not contain any argument values,
                          * neither indexed ones nor generic ones.
                          */
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         /**
                          * Clear this holder, removing all argument values.
                          */
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

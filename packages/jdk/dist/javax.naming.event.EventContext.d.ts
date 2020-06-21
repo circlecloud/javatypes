@@ -106,7 +106,7 @@ declare namespace javax {
                  * The value of this constant is <tt>0</tt>.
                  */
                 // @ts-ignore
-                
+                readonly OBJECT_SCOPE: number /*int*/
                 /**
                  * Constant for expressing interest in events concerning objects
                  * in the context named by the target,
@@ -115,7 +115,7 @@ declare namespace javax {
                  * The value of this constant is <tt>1</tt>.
                  */
                 // @ts-ignore
-                
+                readonly ONELEVEL_SCOPE: number /*int*/
                 /**
                  * Constant for expressing interest in events concerning objects
                  * in the subtree of the object named by the target, including the object
@@ -124,7 +124,7 @@ declare namespace javax {
                  * The value of this constant is <tt>2</tt>.
                  */
                 // @ts-ignore
-                
+                readonly SUBTREE_SCOPE: number /*int*/
                 /**
                  * Adds a listener for receiving naming events fired
                  * when the object(s) identified by a target and scope changes.
@@ -175,7 +175,7 @@ declare namespace javax {
                  * @see #removeNamingListener
                  */
                 // @ts-ignore
-                addNamingListener(target: string, scope: number /*int*/, l: javax.naming.event.NamingListener): void
+                addNamingListener(target: java.lang.String | string, scope: number /*int*/, l: javax.naming.event.NamingListener): void
                 /**
                  * Removes a listener from receiving naming events fired
                  * by this <tt>EventContext</tt>.

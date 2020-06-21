@@ -23,21 +23,21 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly BEAN_ELEMENT: string
+                        public static readonly BEAN_ELEMENT: java.lang.String | string
                         // @ts-ignore
-                        readonly NESTED_BEANS_ELEMENT: string
+                        public static readonly NESTED_BEANS_ELEMENT: java.lang.String | string
                         // @ts-ignore
-                        readonly ALIAS_ELEMENT: string
+                        public static readonly ALIAS_ELEMENT: java.lang.String | string
                         // @ts-ignore
-                        readonly NAME_ATTRIBUTE: string
+                        public static readonly NAME_ATTRIBUTE: java.lang.String | string
                         // @ts-ignore
-                        readonly ALIAS_ATTRIBUTE: string
+                        public static readonly ALIAS_ATTRIBUTE: java.lang.String | string
                         // @ts-ignore
-                        readonly IMPORT_ELEMENT: string
+                        public static readonly IMPORT_ELEMENT: java.lang.String | string
                         // @ts-ignore
-                        readonly RESOURCE_ATTRIBUTE: string
+                        public static readonly RESOURCE_ATTRIBUTE: java.lang.String | string
                         // @ts-ignore
-                        readonly PROFILE_ATTRIBUTE: string
+                        public static readonly PROFILE_ATTRIBUTE: java.lang.String | string
                         // @ts-ignore
                         readonly logger: Log
                         /**
@@ -47,7 +47,7 @@ declare namespace org {
                          * specified at the {@code <beans/>} level; then parses the contained bean definitions.
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(doc: org.w3c.dom.Document, readerContext: org.springframework.beans.factory.xml.XmlReaderContext): void
+                        public registerBeanDefinitions(doc: org.w3c.dom.Document, readerContext: org.springframework.beans.factory.xml.XmlReaderContext): void
                         /**
                          * Return the descriptor for the XML resource that this parser works on.
                          */
@@ -58,7 +58,7 @@ declare namespace org {
                          * to pull the source metadata from the supplied {@link Element}.
                          */
                         // @ts-ignore
-                        extractSource(ele: org.w3c.dom.Element): java.lang.Object
+                        extractSource(ele: org.w3c.dom.Element): any
                         /**
                          * Register each bean definition within the given root {@code <beans/>} element.
                          */

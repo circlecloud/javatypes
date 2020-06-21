@@ -3,9 +3,9 @@ declare namespace org {
         namespace help {
             namespace HelpTopicComparator {
                 // @ts-ignore
-                class TopicNameComparator extends java.lang.Object implements java.util.Comparator<java.lang.String> {
+                class TopicNameComparator extends java.lang.Object implements java.util.Comparator<java.lang.String | string> {
                     // @ts-ignore
-                    compare(lhs: string, rhs: string): int
+                    public compare(lhs: java.lang.String | string, rhs: java.lang.String | string): number /*int*/
                 }
             }
         }

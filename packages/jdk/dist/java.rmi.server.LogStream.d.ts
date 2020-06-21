@@ -14,17 +14,17 @@ declare namespace java {
                  * log level constant (no logging).
                  */
                 // @ts-ignore
-                readonly SILENT: number /*int*/
+                public static readonly SILENT: number /*int*/
                 /**
                  * log level constant (brief logging).
                  */
                 // @ts-ignore
-                readonly BRIEF: number /*int*/
+                public static readonly BRIEF: number /*int*/
                 /**
                  * log level constant (verbose logging).
                  */
                 // @ts-ignore
-                readonly VERBOSE: number /*int*/
+                public static readonly VERBOSE: number /*int*/
                 /**
                  * Return the LogStream identified by the given name.  If
                  * a log corresponding to "name" does not exist, a log using
@@ -35,7 +35,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                log(name: string): java.rmi.server.LogStream
+                public static log(name: java.lang.String | string): java.rmi.server.LogStream
                 /**
                  * Return the current default stream for new logs.
                  * @return default log stream
@@ -44,7 +44,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                getDefaultStream(): java.io.PrintStream
+                public static getDefaultStream(): java.io.PrintStream
                 /**
                  * Set the default stream for new logs.
                  * @param newDefault new default log stream
@@ -53,7 +53,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                setDefaultStream(newDefault: java.io.PrintStream): void
+                public static setDefaultStream(newDefault: java.io.PrintStream): void
                 /**
                  * Return the current stream to which output from this log is sent.
                  * @return output stream for this log
@@ -62,7 +62,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                getOutputStream(): java.io.OutputStream
+                public getOutputStream(): java.io.OutputStream
                 /**
                  * Set the stream to which output from this log is sent.
                  * @param out new output stream for this log
@@ -71,7 +71,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                setOutputStream(out: java.io.OutputStream): void
+                public setOutputStream(out: java.io.OutputStream): void
                 /**
                  * Write a byte of data to the stream.  If it is not a newline, then
                  * the byte is appended to the internal buffer.  If it is a newline,
@@ -81,14 +81,14 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                write(b: number /*int*/): void
+                public write(b: number /*int*/): void
                 /**
                  * Write a subarray of bytes.  Pass each through write byte method.
                  * @since JDK1.1
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Return log name as string representation.
                  * @return log name
@@ -96,7 +96,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Convert a string name of a logging level to its internal
                  * integer representation.
@@ -106,7 +106,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                parseLevel(s: string): int
+                public static parseLevel(s: java.lang.String | string): number /*int*/
             }
         }
     }

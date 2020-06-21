@@ -19,7 +19,7 @@ declare namespace org {
                      * @since 4.0
                      */
                     // @ts-ignore
-                    class RestController implements java.lang.annotation.Annotation {
+                    abstract class RestController implements java.lang.annotation.Annotation {
                     }
                 }
             }

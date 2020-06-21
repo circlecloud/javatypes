@@ -33,21 +33,21 @@ declare namespace org {
                      * @return The source block
                      */
                     // @ts-ignore
-                    getSourceBlock(): org.bukkit.block.Block
+                    public getSourceBlock(): org.bukkit.block.Block
                     /**
                      * Gets the type of block that changed, causing this event
                      * @return Changed block's type
                      */
                     // @ts-ignore
-                    getChangedType(): org.bukkit.Material
+                    public getChangedType(): org.bukkit.Material
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

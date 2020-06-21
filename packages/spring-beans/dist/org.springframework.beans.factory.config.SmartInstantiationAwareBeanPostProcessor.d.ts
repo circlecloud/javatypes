@@ -27,7 +27,7 @@ declare namespace org {
                          * @throws org.springframework.beans.BeansException in case of errors
                          */
                         // @ts-ignore
-                        predictBeanType(beanClass: java.lang.Class<any>, beanName: string): java.lang.Class<?>
+                        predictBeanType(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.Class<any>
                         /**
                          * Determine the candidate constructors to use for the given bean.
                          * <p>The default implementation returns {@code null}.
@@ -37,7 +37,7 @@ declare namespace org {
                          * @throws org.springframework.beans.BeansException in case of errors
                          */
                         // @ts-ignore
-                        determineCandidateConstructors(beanClass: java.lang.Class<any>, beanName: string): java.lang.reflect.Constructor[]
+                        determineCandidateConstructors(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.reflect.Constructor<any>[]
                         /**
                          * Obtain a reference for early access to the specified bean,
                          * typically for the purpose of resolving a circular reference.
@@ -60,7 +60,7 @@ declare namespace org {
                          * @throws org.springframework.beans.BeansException in case of errors
                          */
                         // @ts-ignore
-                        getEarlyBeanReference(bean: any, beanName: string): java.lang.Object
+                        getEarlyBeanReference(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     }
                 }
             }

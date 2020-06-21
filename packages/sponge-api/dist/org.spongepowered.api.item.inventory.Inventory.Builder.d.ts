@@ -23,14 +23,14 @@ declare namespace org {
                              * @return Fluent pattern
                              */
                             // @ts-ignore
-                            property(name: string, property: org.spongepowered.api.item.inventory.InventoryProperty<any, ?>): org.spongepowered.api.item.inventory.Inventory.Builder
+                            property(name: java.lang.String | string, property: org.spongepowered.api.item.inventory.InventoryProperty<any, any>): org.spongepowered.api.item.inventory.Inventory.Builder
                             /**
                              * Sets an {@link InventoryProperty} with its default key.
                              * @param property The property
                              * @return Fluent pattern
                              */
                             // @ts-ignore
-                            property(property: org.spongepowered.api.item.inventory.InventoryProperty<any, ?>): org.spongepowered.api.item.inventory.Inventory.Builder
+                            property(property: org.spongepowered.api.item.inventory.InventoryProperty<any, any>): org.spongepowered.api.item.inventory.Inventory.Builder
                             /**
                              * Sets the {@link Carrier} that carries the Inventory.
                              * @param carrier The Carrier
@@ -45,7 +45,7 @@ declare namespace org {
                              * @return Fluent pattern
                              */
                             // @ts-ignore
-                            listener<E extends org.spongepowered.api.event.item.inventory.InteractInventoryEvent>(type: java.lang.Class<E>, listener: java.util.function.Consumer<E> | java.util.function$.Consumer<E>): org.spongepowered.api.item.inventory.Inventory.Builder
+                            listener<E extends org.spongepowered.api.event.item.inventory.InteractInventoryEvent>(type: java.lang.Class<E>, listener: java.util.function$.Consumer<E>): org.spongepowered.api.item.inventory.Inventory.Builder
                             /**
                              * Sets the InventoryArchetype and Properties according to the
                              * {@link Carrier}s Inventory.
@@ -61,14 +61,14 @@ declare namespace org {
                              * @return Fluent pattern
                              */
                             // @ts-ignore
-                            forCarrier(carrier: java.lang.Class<org.spongepowered.api.item.inventory.Carrier>): org.spongepowered.api.item.inventory.Inventory.Builder
+                            forCarrier(carrier: java.lang.Class<any>): org.spongepowered.api.item.inventory.Inventory.Builder
                             /**
                              * Builds the {@link Inventory}.
                              * @param plugin The plugin building this inventory
                              * @return The new Inventory instance
                              */
                             // @ts-ignore
-                            build(plugin: any): org.spongepowered.api.item.inventory.Inventory
+                            build(plugin: java.lang.Object | any): org.spongepowered.api.item.inventory.Inventory
                         }
                     }
                 }

@@ -14,29 +14,29 @@ declare namespace org {
                         // @ts-ignore
                         constructor(delegate: org.springframework.http.client.reactive.ClientHttpRequest)
                         // @ts-ignore
-                        getDelegate(): org.springframework.http.client.reactive.ClientHttpRequest
+                        public getDelegate(): org.springframework.http.client.reactive.ClientHttpRequest
                         // @ts-ignore
-                        getMethod(): org.springframework.http.HttpMethod
+                        public getMethod(): org.springframework.http.HttpMethod
                         // @ts-ignore
-                        getURI(): java.net.URI
+                        public getURI(): java.net.URI
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         // @ts-ignore
-                        bufferFactory(): DataBufferFactory
+                        public bufferFactory(): DataBufferFactory
                         // @ts-ignore
-                        beforeCommit(action: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): void
+                        public beforeCommit(action: java.util.function$.Supplier<any>): void
                         // @ts-ignore
-                        isCommitted(): boolean
+                        public isCommitted(): boolean
                         // @ts-ignore
-                        writeWith(body: object): <any>
+                        public writeWith(body: object): object
                         // @ts-ignore
-                        writeAndFlushWith(body: object): <any>
+                        public writeAndFlushWith(body: object): object
                         // @ts-ignore
-                        setComplete(): <any>
+                        public setComplete(): object
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

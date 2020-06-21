@@ -32,23 +32,23 @@ declare namespace org {
                      * @return The Player that is breaking the block involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Sets whether or not the block will drop items as it normally would.
                      * @param dropItems Whether or not the block will drop items
                      */
                     // @ts-ignore
-                    setDropItems(dropItems: boolean): void
+                    public setDropItems(dropItems: boolean): void
                     /**
                      * Gets whether or not the block will drop items.
                      * @return Whether or not the block will drop items
                      */
                     // @ts-ignore
-                    isDropItems(): boolean
+                    public isDropItems(): boolean
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                 }
             }
         }

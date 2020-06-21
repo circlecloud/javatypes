@@ -13,7 +13,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Create a new FatalBeanException with the specified message
                  * and root cause.
@@ -21,7 +21,7 @@ declare namespace org {
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

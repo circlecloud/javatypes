@@ -16,22 +16,22 @@ declare namespace org {
                          * Set a description for this attribute.
                          */
                         // @ts-ignore
-                        setDescription(description: string): void
+                        public setDescription(description: java.lang.String | string): void
                         /**
                          * Return a description for this attribute.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                         /**
                          * Set a currency time limit for this attribute.
                          */
                         // @ts-ignore
-                        setCurrencyTimeLimit(currencyTimeLimit: number /*int*/): void
+                        public setCurrencyTimeLimit(currencyTimeLimit: number /*int*/): void
                         /**
                          * Return a currency time limit for this attribute.
                          */
                         // @ts-ignore
-                        getCurrencyTimeLimit(): int
+                        public getCurrencyTimeLimit(): number /*int*/
                     }
                 }
             }

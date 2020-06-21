@@ -32,19 +32,19 @@ declare namespace org {
                          * destruction callback when it is stored in a {@link HttpSession}.
                          */
                         // @ts-ignore
-                        readonly DESTRUCTION_CALLBACK_NAME_PREFIX: string
+                        public static readonly DESTRUCTION_CALLBACK_NAME_PREFIX: java.lang.String | string
                         // @ts-ignore
-                        readonly immutableValueTypes: Array<java.lang.Class<any>>
+                        static readonly immutableValueTypes: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>
                         /**
                          * Exposes the native {@link HttpServletRequest} that we're wrapping.
                          */
                         // @ts-ignore
-                        getRequest(): HttpServletRequest
+                        public getRequest(): HttpServletRequest
                         /**
                          * Exposes the native {@link HttpServletResponse} that we're wrapping (if any).
                          */
                         // @ts-ignore
-                        getResponse(): HttpServletResponse
+                        public getResponse(): HttpServletResponse
                         /**
                          * Exposes the {@link HttpSession} that we're wrapping.
                          * @param allowCreate whether to allow creation of a new session if none exists yet
@@ -52,21 +52,21 @@ declare namespace org {
                         // @ts-ignore
                         getSession(allowCreate: boolean): HttpSession
                         // @ts-ignore
-                        getAttribute(name: string, scope: number /*int*/): java.lang.Object
+                        public getAttribute(name: java.lang.String | string, scope: number /*int*/): any
                         // @ts-ignore
-                        setAttribute(name: string, value: any, scope: number /*int*/): void
+                        public setAttribute(name: java.lang.String | string, value: java.lang.Object | any, scope: number /*int*/): void
                         // @ts-ignore
-                        removeAttribute(name: string, scope: number /*int*/): void
+                        public removeAttribute(name: java.lang.String | string, scope: number /*int*/): void
                         // @ts-ignore
-                        getAttributeNames(scope: number /*int*/): java.lang.String[]
+                        public getAttributeNames(scope: number /*int*/): string[]
                         // @ts-ignore
-                        registerDestructionCallback(name: string, callback: java.lang.Runnable, scope: number /*int*/): void
+                        public registerDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable, scope: number /*int*/): void
                         // @ts-ignore
-                        resolveReference(key: string): java.lang.Object
+                        public resolveReference(key: java.lang.String | string): any
                         // @ts-ignore
-                        getSessionId(): java.lang.String
+                        public getSessionId(): string
                         // @ts-ignore
-                        getSessionMutex(): java.lang.Object
+                        public getSessionMutex(): any
                         /**
                          * Update all accessed session attributes through {@code session.setAttribute}
                          * calls, explicitly indicating to the container that they might have been modified.
@@ -86,7 +86,7 @@ declare namespace org {
                          * @see #updateAccessedSessionAttributes()
                          */
                         // @ts-ignore
-                        isImmutableSessionAttribute(name: string, value: any): boolean
+                        isImmutableSessionAttribute(name: java.lang.String | string, value: java.lang.Object | any): boolean
                         /**
                          * Register the given callback as to be executed after session termination.
                          * <p>Note: The callback object should be serializable in order to survive
@@ -95,9 +95,9 @@ declare namespace org {
                          * @param callback the callback to be executed for destruction
                          */
                         // @ts-ignore
-                        registerSessionDestructionCallback(name: string, callback: java.lang.Runnable): void
+                        registerSessionDestructionCallback(name: java.lang.String | string, callback: java.lang.Runnable): void
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

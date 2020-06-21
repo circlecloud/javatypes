@@ -20,7 +20,7 @@ declare namespace org {
              * @author Eric Bruneton
              */
             // @ts-ignore
-            class MethodVisitor extends java.lang.Object {
+            abstract class MethodVisitor extends java.lang.Object {
                 /**
                  * Constructs a new {@link MethodVisitor}.
                  * @param api the ASM API version implemented by this visitor. Must be one of {#link
@@ -55,7 +55,7 @@ declare namespace org {
                  *      or/and {@code ACC_MANDATED} are allowed (see {@link Opcodes}).
                  */
                 // @ts-ignore
-                visitParameter(name: string, access: number /*int*/): void
+                public visitParameter(name: java.lang.String | string, access: number /*int*/): void
                 /**
                  * Visits the default value of this annotation interface method.
                  * @return a visitor to the visit the actual default value of this annotation interface method, or
@@ -64,7 +64,7 @@ declare namespace org {
                  *      exacly one visit method must be called on this annotation visitor, followed by visitEnd.
                  */
                 // @ts-ignore
-                visitAnnotationDefault(): org.springframework.asm.AnnotationVisitor
+                public visitAnnotationDefault(): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits an annotation of this method.
                  * @param descriptor the class descriptor of the annotation class.
@@ -73,7 +73,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitAnnotation(descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitAnnotation(descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits an annotation on a type in the method signature.
                  * @param typeRef a reference to the annotated type. The sort of this type reference must be
@@ -90,7 +90,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitTypeAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits the number of method parameters that can have annotations. By default (i.e. when this
                  * method is not called), all the method parameters defined by the method descriptor can have
@@ -105,7 +105,7 @@ declare namespace org {
                  *      that can have annotations invisible at runtime.
                  */
                 // @ts-ignore
-                visitAnnotableParameterCount(parameterCount: number /*int*/, visible: boolean): void
+                public visitAnnotableParameterCount(parameterCount: number /*int*/, visible: boolean): void
                 /**
                  * Visits an annotation of a parameter this method.
                  * @param parameter the parameter index. This index must be strictly smaller than the number of
@@ -120,18 +120,18 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitParameterAnnotation(parameter: number /*int*/, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitParameterAnnotation(parameter: number /*int*/, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a non standard attribute of this method.
                  * @param attribute an attribute.
                  */
                 // @ts-ignore
-                visitAttribute(attribute: org.springframework.asm.Attribute): void
+                public visitAttribute(attribute: org.springframework.asm.Attribute): void
                 /**
                  * Starts the visit of the method's code, if any (i.e. non abstract method).
                  */
                 // @ts-ignore
-                visitCode(): void
+                public visitCode(): void
                 /**
                  * Visits the current state of the local variables and operand stack elements. This method must(*)
                  * be called <i>just before</i> any instruction <b>i</b> that follows an unconditional branch
@@ -187,7 +187,7 @@ declare namespace org {
                  *      is silently ignored).
                  */
                 // @ts-ignore
-                visitFrame(type: number /*int*/, numLocal: number /*int*/, local: any[], numStack: number /*int*/, stack: any[]): void
+                public visitFrame(type: number /*int*/, numLocal: number /*int*/, local: java.lang.Object[] | any[], numStack: number /*int*/, stack: java.lang.Object[] | any[]): void
                 /**
                  * Visits a zero operand instruction.
                  * @param opcode the opcode of the instruction to be visited. This opcode is either NOP,
@@ -202,7 +202,7 @@ declare namespace org {
                  *      DRETURN, ARETURN, RETURN, ARRAYLENGTH, ATHROW, MONITORENTER, or MONITOREXIT.
                  */
                 // @ts-ignore
-                visitInsn(opcode: number /*int*/): void
+                public visitInsn(opcode: number /*int*/): void
                 /**
                  * Visits an instruction with a single int operand.
                  * @param opcode the opcode of the instruction to be visited. This opcode is either BIPUSH, SIPUSH
@@ -217,7 +217,7 @@ declare namespace org {
                  *      {@link Opcodes#T_SHORT}, {@link Opcodes#T_INT} or {@link Opcodes#T_LONG}.
                  */
                 // @ts-ignore
-                visitIntInsn(opcode: number /*int*/, operand: number /*int*/): void
+                public visitIntInsn(opcode: number /*int*/, operand: number /*int*/): void
                 /**
                  * Visits a local variable instruction. A local variable instruction is an instruction that loads
                  * or stores the value of a local variable.
@@ -227,7 +227,7 @@ declare namespace org {
                  *      variable.
                  */
                 // @ts-ignore
-                visitVarInsn(opcode: number /*int*/, variable: number /*int*/): void
+                public visitVarInsn(opcode: number /*int*/, variable: number /*int*/): void
                 /**
                  * Visits a type instruction. A type instruction is an instruction that takes the internal name of
                  * a class as parameter.
@@ -237,7 +237,7 @@ declare namespace org {
                  *      name of an object or array class (see {#link Type#getInternalName()}).
                  */
                 // @ts-ignore
-                visitTypeInsn(opcode: number /*int*/, type: string): void
+                public visitTypeInsn(opcode: number /*int*/, type: java.lang.String | string): void
                 /**
                  * Visits a field instruction. A field instruction is an instruction that loads or stores the
                  * value of a field of an object.
@@ -248,7 +248,7 @@ declare namespace org {
                  * @param descriptor the field's descriptor (see {#link Type}).
                  */
                 // @ts-ignore
-                visitFieldInsn(opcode: number /*int*/, owner: string, name: string, descriptor: string): void
+                public visitFieldInsn(opcode: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string): void
                 /**
                  * Visits a method instruction. A method instruction is an instruction that invokes a method.
                  * @param opcode the opcode of the type instruction to be visited. This opcode is either
@@ -260,7 +260,7 @@ declare namespace org {
                  * @deprecated use {#link #visitMethodInsn(int, String, String, String, boolean)} instead.
                  */
                 // @ts-ignore
-                visitMethodInsn(opcode: number /*int*/, owner: string, name: string, descriptor: string): void
+                public visitMethodInsn(opcode: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string): void
                 /**
                  * Visits a method instruction. A method instruction is an instruction that invokes a method.
                  * @param opcode the opcode of the type instruction to be visited. This opcode is either
@@ -272,7 +272,7 @@ declare namespace org {
                  * @param isInterface if the method's owner class is an interface.
                  */
                 // @ts-ignore
-                visitMethodInsn(opcode: number /*int*/, owner: string, name: string, descriptor: string, isInterface: boolean): void
+                public visitMethodInsn(opcode: number /*int*/, owner: java.lang.String | string, name: java.lang.String | string, descriptor: java.lang.String | string, isInterface: boolean): void
                 /**
                  * Visits an invokedynamic instruction.
                  * @param name the method's name.
@@ -284,7 +284,7 @@ declare namespace org {
                  *      the content of the array so a caller should expect that this array may change.
                  */
                 // @ts-ignore
-                visitInvokeDynamicInsn(name: string, descriptor: string, bootstrapMethodHandle: org.springframework.asm.Handle, ...bootstrapMethodArguments: any[]): void
+                public visitInvokeDynamicInsn(name: java.lang.String | string, descriptor: java.lang.String | string, bootstrapMethodHandle: org.springframework.asm.Handle, ...bootstrapMethodArguments: java.lang.Object[] | any[]): void
                 /**
                  * Visits a jump instruction. A jump instruction is an instruction that may jump to another
                  * instruction.
@@ -295,13 +295,13 @@ declare namespace org {
                  *      designates the instruction to which the jump instruction may jump.
                  */
                 // @ts-ignore
-                visitJumpInsn(opcode: number /*int*/, label: org.springframework.asm.Label): void
+                public visitJumpInsn(opcode: number /*int*/, label: org.springframework.asm.Label): void
                 /**
                  * Visits a label. A label designates the instruction that will be visited just after it.
                  * @param label a {#link Label} object.
                  */
                 // @ts-ignore
-                visitLabel(label: org.springframework.asm.Label): void
+                public visitLabel(label: org.springframework.asm.Label): void
                 /**
                  * Visits a LDC instruction. Note that new constant types may be added in future versions of the
                  * Java Virtual Machine. To easily detect new constant types, implementations of this method
@@ -344,14 +344,14 @@ declare namespace org {
                  *      dynamic for classes whose version is 55.
                  */
                 // @ts-ignore
-                visitLdcInsn(value: any): void
+                public visitLdcInsn(value: java.lang.Object | any): void
                 /**
                  * Visits an IINC instruction.
                  * @param var index of the local variable to be incremented.
                  * @param increment amount to increment the local variable by.
                  */
                 // @ts-ignore
-                visitIincInsn(variable: number /*int*/, increment: number /*int*/): void
+                public visitIincInsn(variable: number /*int*/, increment: number /*int*/): void
                 /**
                  * Visits a TABLESWITCH instruction.
                  * @param min the minimum key value.
@@ -361,7 +361,7 @@ declare namespace org {
                  *      handler block for the {@code min + i} key.
                  */
                 // @ts-ignore
-                visitTableSwitchInsn(min: number /*int*/, max: number /*int*/, dflt: org.springframework.asm.Label, ...labels: org.springframework.asm.Label[]): void
+                public visitTableSwitchInsn(min: number /*int*/, max: number /*int*/, dflt: org.springframework.asm.Label, ...labels: org.springframework.asm.Label[]): void
                 /**
                  * Visits a LOOKUPSWITCH instruction.
                  * @param dflt beginning of the default handler block.
@@ -370,14 +370,14 @@ declare namespace org {
                  *      handler block for the {@code keys[i]} key.
                  */
                 // @ts-ignore
-                visitLookupSwitchInsn(dflt: org.springframework.asm.Label, keys: number /*int*/[], labels: org.springframework.asm.Label[]): void
+                public visitLookupSwitchInsn(dflt: org.springframework.asm.Label, keys: number /*int*/[], labels: org.springframework.asm.Label[]): void
                 /**
                  * Visits a MULTIANEWARRAY instruction.
                  * @param descriptor an array type descriptor (see {#link Type}).
                  * @param numDimensions the number of dimensions of the array to allocate.
                  */
                 // @ts-ignore
-                visitMultiANewArrayInsn(descriptor: string, numDimensions: number /*int*/): void
+                public visitMultiANewArrayInsn(descriptor: java.lang.String | string, numDimensions: number /*int*/): void
                 /**
                  * Visits an annotation on an instruction. This method must be called just <i>after</i> the
                  * annotated instruction. It can be called several times for the same instruction.
@@ -397,7 +397,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitInsnAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitInsnAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a try catch block.
                  * @param start the beginning of the exception handler's scope (inclusive).
@@ -409,7 +409,7 @@ declare namespace org {
                  *      (by the {#link #visitLabel} method).
                  */
                 // @ts-ignore
-                visitTryCatchBlock(start: org.springframework.asm.Label, end: org.springframework.asm.Label, handler: org.springframework.asm.Label, type: string): void
+                public visitTryCatchBlock(start: org.springframework.asm.Label, end: org.springframework.asm.Label, handler: org.springframework.asm.Label, type: java.lang.String | string): void
                 /**
                  * Visits an annotation on an exception handler type. This method must be called <i>after</i> the
                  * {@link #visitTryCatchBlock} for the annotated exception handler. It can be called several times
@@ -425,7 +425,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitTryCatchAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitTryCatchAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a local variable declaration.
                  * @param name the name of a local variable.
@@ -440,7 +440,7 @@ declare namespace org {
                  *      visitor (by the {#link #visitLabel} method).
                  */
                 // @ts-ignore
-                visitLocalVariable(name: string, descriptor: string, signature: string, start: org.springframework.asm.Label, end: org.springframework.asm.Label, index: number /*int*/): void
+                public visitLocalVariable(name: java.lang.String | string, descriptor: java.lang.String | string, signature: java.lang.String | string, start: org.springframework.asm.Label, end: org.springframework.asm.Label, index: number /*int*/): void
                 /**
                  * Visits an annotation on a local variable type.
                  * @param typeRef a reference to the annotated type. The sort of this type reference must be
@@ -461,7 +461,7 @@ declare namespace org {
                  *      interested in visiting this annotation.
                  */
                 // @ts-ignore
-                visitLocalVariableAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, start: org.springframework.asm.Label[], end: org.springframework.asm.Label[], index: number /*int*/[], descriptor: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                public visitLocalVariableAnnotation(typeRef: number /*int*/, typePath: org.springframework.asm.TypePath, start: org.springframework.asm.Label[], end: org.springframework.asm.Label[], index: number /*int*/[], descriptor: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits a line number declaration.
                  * @param line a line number. This number refers to the source file from which the class was
@@ -471,20 +471,20 @@ declare namespace org {
                  *      (by the {@link #visitLabel} method).
                  */
                 // @ts-ignore
-                visitLineNumber(line: number /*int*/, start: org.springframework.asm.Label): void
+                public visitLineNumber(line: number /*int*/, start: org.springframework.asm.Label): void
                 /**
                  * Visits the maximum stack size and the maximum number of local variables of the method.
                  * @param maxStack maximum stack size of the method.
                  * @param maxLocals maximum number of local variables for the method.
                  */
                 // @ts-ignore
-                visitMaxs(maxStack: number /*int*/, maxLocals: number /*int*/): void
+                public visitMaxs(maxStack: number /*int*/, maxLocals: number /*int*/): void
                 /**
                  * Visits the end of the method. This method, which is the last one to be called, is used to
                  * inform the visitor that all the annotations and attributes of the method have been visited.
                  */
                 // @ts-ignore
-                visitEnd(): void
+                public visitEnd(): void
             }
         }
     }

@@ -185,7 +185,7 @@ declare namespace java {
                  *        <code>TextLayout</code> and user space.
                  */
                 // @ts-ignore
-                constructor(string: string, font: java.awt.Font, frc: java.awt.font.FontRenderContext)
+                constructor(string: java.lang.String | string, font: java.awt.Font, frc: java.awt.font.FontRenderContext)
                 /**
                  * Constructs a <code>TextLayout</code> from a <code>String</code>
                  * and an attribute set.
@@ -204,7 +204,7 @@ declare namespace java {
                  *        <code>TextLayout</code> and user space.
                  */
                 // @ts-ignore
-                constructor(string: string, attributes: java.util.Map<java.text.AttributedCharacterIterator.Attribute, any>, frc: java.awt.font.FontRenderContext)
+                constructor(string: java.lang.String | string, attributes: java.util.Map<any, any>, frc: java.awt.font.FontRenderContext)
                 /**
                  * Constructs a <code>TextLayout</code> from an iterator over styled text.
                  * <p>
@@ -230,12 +230,12 @@ declare namespace java {
                  * than a hit on the trailing edge of a character.
                  */
                 // @ts-ignore
-                readonly DEFAULT_CARET_POLICY: java.awt.font.TextLayout.CaretPolicy
+                public static readonly DEFAULT_CARET_POLICY: java.awt.font.TextLayout.CaretPolicy
                 /**
                  * Creates a copy of this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
                 /**
                  * Creates a copy of this <code>TextLayout</code> justified to the
                  * specified width.
@@ -252,7 +252,7 @@ declare namespace java {
                  *  thrown.
                  */
                 // @ts-ignore
-                getJustifiedLayout(justificationWidth: number /*float*/): java.awt.font.TextLayout
+                public getJustifiedLayout(justificationWidth: number /*float*/): java.awt.font.TextLayout
                 /**
                  * Justify this layout.  Overridden by subclassers to control justification
                  * (if there were subclassers, that is...)
@@ -285,7 +285,7 @@ declare namespace java {
                  * @see Font
                  */
                 // @ts-ignore
-                getBaseline(): byte
+                public getBaseline(): number /*byte*/
                 /**
                  * Returns the offsets array for the baselines used for this
                  * <code>TextLayout</code>.
@@ -302,7 +302,7 @@ declare namespace java {
                  * @see Font
                  */
                 // @ts-ignore
-                getBaselineOffsets(): float[]
+                public getBaselineOffsets(): number /*float*/[]
                 /**
                  * Returns the advance of this <code>TextLayout</code>.
                  * The advance is the distance from the origin to the advance of the
@@ -311,7 +311,7 @@ declare namespace java {
                  * @return the advance of this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                getAdvance(): float
+                public getAdvance(): number /*float*/
                 /**
                  * Returns the advance of this <code>TextLayout</code>, minus trailing
                  * whitespace.  This is in baseline-relative coordinates.
@@ -320,7 +320,7 @@ declare namespace java {
                  * @see #getAdvance()
                  */
                 // @ts-ignore
-                getVisibleAdvance(): float
+                public getVisibleAdvance(): number /*float*/
                 /**
                  * Returns the ascent of this <code>TextLayout</code>.
                  * The ascent is the distance from the top (right) of the
@@ -333,7 +333,7 @@ declare namespace java {
                  * @return the ascent of this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                getAscent(): float
+                public getAscent(): number /*float*/
                 /**
                  * Returns the descent of this <code>TextLayout</code>.
                  * The descent is the distance from the baseline to the bottom (left) of
@@ -345,7 +345,7 @@ declare namespace java {
                  * @return the descent of this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                getDescent(): float
+                public getDescent(): number /*float*/
                 /**
                  * Returns the leading of the <code>TextLayout</code>.
                  * The leading is the suggested interline spacing for this
@@ -368,7 +368,7 @@ declare namespace java {
                  * @return the leading of this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                getLeading(): float
+                public getLeading(): number /*float*/
                 /**
                  * Returns the bounds of this <code>TextLayout</code>.
                  * The bounds are in standard coordinates.
@@ -380,7 +380,7 @@ declare namespace java {
                  *         <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                getBounds(): java.awt.geom.Rectangle2D
+                public getBounds(): java.awt.geom.Rectangle2D
                 /**
                  * Returns the pixel bounds of this <code>TextLayout</code> when
                  * rendered in a graphics with the given
@@ -398,7 +398,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getPixelBounds(frc: java.awt.font.FontRenderContext, x: number /*float*/, y: number /*float*/): java.awt.Rectangle
+                public getPixelBounds(frc: java.awt.font.FontRenderContext, x: number /*float*/, y: number /*float*/): java.awt.Rectangle
                 /**
                  * Returns <code>true</code> if this <code>TextLayout</code> has
                  * a left-to-right base direction or <code>false</code> if it has
@@ -416,21 +416,21 @@ declare namespace java {
                  *          otherwise.
                  */
                 // @ts-ignore
-                isLeftToRight(): boolean
+                public isLeftToRight(): boolean
                 /**
                  * Returns <code>true</code> if this <code>TextLayout</code> is vertical.
                  * @return <code>true</code> if this <code>TextLayout</code> is vertical;
                  *       <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                isVertical(): boolean
+                public isVertical(): boolean
                 /**
                  * Returns the number of characters represented by this
                  * <code>TextLayout</code>.
                  * @return the number of characters in this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                getCharacterCount(): int
+                public getCharacterCount(): number /*int*/
                 /**
                  * Returns information about the caret corresponding to <code>hit</code>.
                  * The first element of the array is the intersection of the caret with
@@ -449,7 +449,7 @@ declare namespace java {
                  * @see Font#getItalicAngle
                  */
                 // @ts-ignore
-                getCaretInfo(hit: java.awt.font.TextHitInfo, bounds: java.awt.geom.Rectangle2D): float[]
+                public getCaretInfo(hit: java.awt.font.TextHitInfo, bounds: java.awt.geom.Rectangle2D): number /*float*/[]
                 /**
                  * Returns information about the caret corresponding to <code>hit</code>.
                  * This method is a convenience overload of <code>getCaretInfo</code> and
@@ -459,7 +459,7 @@ declare namespace java {
                  *      returned caret info is in baseline-relative coordinates.
                  */
                 // @ts-ignore
-                getCaretInfo(hit: java.awt.font.TextHitInfo): float[]
+                public getCaretInfo(hit: java.awt.font.TextHitInfo): number /*float*/[]
                 /**
                  * Returns the hit for the next caret to the right (bottom); if there
                  * is no such hit, returns <code>null</code>.
@@ -470,7 +470,7 @@ declare namespace java {
                  *  right (bottom) of the caret of the provided hit or <code>null</code>.
                  */
                 // @ts-ignore
-                getNextRightHit(hit: java.awt.font.TextHitInfo): java.awt.font.TextHitInfo
+                public getNextRightHit(hit: java.awt.font.TextHitInfo): java.awt.font.TextHitInfo
                 /**
                  * Returns the hit for the next caret to the right (bottom); if no
                  * such hit, returns <code>null</code>.  The hit is to the right of
@@ -486,7 +486,7 @@ declare namespace java {
                  *  right (bottom) of the caret of the provided hit, or <code>null</code>.
                  */
                 // @ts-ignore
-                getNextRightHit(offset: number /*int*/, policy: java.awt.font.TextLayout.CaretPolicy): java.awt.font.TextHitInfo
+                public getNextRightHit(offset: number /*int*/, policy: java.awt.font.TextLayout.CaretPolicy): java.awt.font.TextHitInfo
                 /**
                  * Returns the hit for the next caret to the right (bottom); if no
                  * such hit, returns <code>null</code>.  The hit is to the right of
@@ -501,7 +501,7 @@ declare namespace java {
                  *  right (bottom) of the caret of the provided hit, or <code>null</code>.
                  */
                 // @ts-ignore
-                getNextRightHit(offset: number /*int*/): java.awt.font.TextHitInfo
+                public getNextRightHit(offset: number /*int*/): java.awt.font.TextHitInfo
                 /**
                  * Returns the hit for the next caret to the left (top); if no such
                  * hit, returns <code>null</code>.
@@ -512,7 +512,7 @@ declare namespace java {
                  *  left (top) of the caret of the provided hit, or <code>null</code>.
                  */
                 // @ts-ignore
-                getNextLeftHit(hit: java.awt.font.TextHitInfo): java.awt.font.TextHitInfo
+                public getNextLeftHit(hit: java.awt.font.TextHitInfo): java.awt.font.TextHitInfo
                 /**
                  * Returns the hit for the next caret to the left (top); if no
                  * such hit, returns <code>null</code>.  The hit is to the left of
@@ -528,7 +528,7 @@ declare namespace java {
                  *  left (top) of the caret of the provided hit, or <code>null</code>.
                  */
                 // @ts-ignore
-                getNextLeftHit(offset: number /*int*/, policy: java.awt.font.TextLayout.CaretPolicy): java.awt.font.TextHitInfo
+                public getNextLeftHit(offset: number /*int*/, policy: java.awt.font.TextLayout.CaretPolicy): java.awt.font.TextHitInfo
                 /**
                  * Returns the hit for the next caret to the left (top); if no
                  * such hit, returns <code>null</code>.  The hit is to the left of
@@ -543,7 +543,7 @@ declare namespace java {
                  *  left (top) of the caret of the provided hit, or <code>null</code>.
                  */
                 // @ts-ignore
-                getNextLeftHit(offset: number /*int*/): java.awt.font.TextHitInfo
+                public getNextLeftHit(offset: number /*int*/): java.awt.font.TextHitInfo
                 /**
                  * Returns the hit on the opposite side of the specified hit's caret.
                  * @param hit the specified hit
@@ -551,7 +551,7 @@ declare namespace java {
                  *     caret.
                  */
                 // @ts-ignore
-                getVisualOtherHit(hit: java.awt.font.TextHitInfo): java.awt.font.TextHitInfo
+                public getVisualOtherHit(hit: java.awt.font.TextHitInfo): java.awt.font.TextHitInfo
                 /**
                  * Returns a {@link Shape} representing the caret at the specified
                  * hit inside the specified bounds.
@@ -563,7 +563,7 @@ declare namespace java {
                  *     shape is in standard coordinates.
                  */
                 // @ts-ignore
-                getCaretShape(hit: java.awt.font.TextHitInfo, bounds: java.awt.geom.Rectangle2D): java.awt.Shape
+                public getCaretShape(hit: java.awt.font.TextHitInfo, bounds: java.awt.geom.Rectangle2D): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> representing the caret at the specified
                  * hit inside the natural bounds of this <code>TextLayout</code>.
@@ -572,7 +572,7 @@ declare namespace java {
                  *      shape is in standard coordinates.
                  */
                 // @ts-ignore
-                getCaretShape(hit: java.awt.font.TextHitInfo): java.awt.Shape
+                public getCaretShape(hit: java.awt.font.TextHitInfo): java.awt.Shape
                 /**
                  * Returns the level of the character at <code>index</code>.
                  * Indices -1 and <code>characterCount</code> are assigned the base
@@ -581,7 +581,7 @@ declare namespace java {
                  * @return the level of the character at the specified index.
                  */
                 // @ts-ignore
-                getCharacterLevel(index: number /*int*/): byte
+                public getCharacterLevel(index: number /*int*/): number /*byte*/
                 /**
                  * Returns two paths corresponding to the strong and weak caret.
                  * @param offset an offset in this <code>TextLayout</code>
@@ -594,7 +594,7 @@ declare namespace java {
                  *  are in standard coordinates.
                  */
                 // @ts-ignore
-                getCaretShapes(offset: number /*int*/, bounds: java.awt.geom.Rectangle2D, policy: java.awt.font.TextLayout.CaretPolicy): java.awt.Shape[]
+                public getCaretShapes(offset: number /*int*/, bounds: java.awt.geom.Rectangle2D, policy: java.awt.font.TextLayout.CaretPolicy): java.awt.Shape[]
                 /**
                  * Returns two paths corresponding to the strong and weak caret.
                  * This method is a convenience overload of <code>getCaretShapes</code>
@@ -607,7 +607,7 @@ declare namespace java {
                  *     in standard coordinates.
                  */
                 // @ts-ignore
-                getCaretShapes(offset: number /*int*/, bounds: java.awt.geom.Rectangle2D): java.awt.Shape[]
+                public getCaretShapes(offset: number /*int*/, bounds: java.awt.geom.Rectangle2D): java.awt.Shape[]
                 /**
                  * Returns two paths corresponding to the strong and weak caret.
                  * This method is a convenience overload of <code>getCaretShapes</code>
@@ -619,7 +619,7 @@ declare namespace java {
                  *     in standard coordinates.
                  */
                 // @ts-ignore
-                getCaretShapes(offset: number /*int*/): java.awt.Shape[]
+                public getCaretShapes(offset: number /*int*/): java.awt.Shape[]
                 /**
                  * Returns the logical ranges of text corresponding to a visual selection.
                  * @param firstEndpoint an endpoint of the visual range
@@ -630,7 +630,7 @@ declare namespace java {
                  * @see #getVisualHighlightShape(TextHitInfo, TextHitInfo, Rectangle2D)
                  */
                 // @ts-ignore
-                getLogicalRangesForVisualSelection(firstEndpoint: java.awt.font.TextHitInfo, secondEndpoint: java.awt.font.TextHitInfo): int[]
+                public getLogicalRangesForVisualSelection(firstEndpoint: java.awt.font.TextHitInfo, secondEndpoint: java.awt.font.TextHitInfo): number /*int*/[]
                 /**
                  * Returns a path enclosing the visual selection in the specified range,
                  * extended to <code>bounds</code>.
@@ -668,7 +668,7 @@ declare namespace java {
                  * @see #getLogicalHighlightShape(int, int, Rectangle2D)
                  */
                 // @ts-ignore
-                getVisualHighlightShape(firstEndpoint: java.awt.font.TextHitInfo, secondEndpoint: java.awt.font.TextHitInfo, bounds: java.awt.geom.Rectangle2D): java.awt.Shape
+                public getVisualHighlightShape(firstEndpoint: java.awt.font.TextHitInfo, secondEndpoint: java.awt.font.TextHitInfo, bounds: java.awt.geom.Rectangle2D): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> enclosing the visual selection in the
                  * specified range, extended to the bounds.  This method is a
@@ -680,7 +680,7 @@ declare namespace java {
                  *      in standard coordinates.
                  */
                 // @ts-ignore
-                getVisualHighlightShape(firstEndpoint: java.awt.font.TextHitInfo, secondEndpoint: java.awt.font.TextHitInfo): java.awt.Shape
+                public getVisualHighlightShape(firstEndpoint: java.awt.font.TextHitInfo, secondEndpoint: java.awt.font.TextHitInfo): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> enclosing the logical selection in the
                  * specified range, extended to the specified <code>bounds</code>.
@@ -721,7 +721,7 @@ declare namespace java {
                  * @see #getVisualHighlightShape(TextHitInfo, TextHitInfo, Rectangle2D)
                  */
                 // @ts-ignore
-                getLogicalHighlightShape(firstEndpoint: number /*int*/, secondEndpoint: number /*int*/, bounds: java.awt.geom.Rectangle2D): java.awt.Shape
+                public getLogicalHighlightShape(firstEndpoint: number /*int*/, secondEndpoint: number /*int*/, bounds: java.awt.geom.Rectangle2D): java.awt.Shape
                 /**
                  * Returns a <code>Shape</code> enclosing the logical selection in the
                  * specified range, extended to the natural bounds of this
@@ -737,7 +737,7 @@ declare namespace java {
                  *      standard coordinates.
                  */
                 // @ts-ignore
-                getLogicalHighlightShape(firstEndpoint: number /*int*/, secondEndpoint: number /*int*/): java.awt.Shape
+                public getLogicalHighlightShape(firstEndpoint: number /*int*/, secondEndpoint: number /*int*/): java.awt.Shape
                 /**
                  * Returns the black box bounds of the characters in the specified range.
                  * The black box bounds is an area consisting of the union of the bounding
@@ -750,7 +750,7 @@ declare namespace java {
                  *      in standard coordinates.
                  */
                 // @ts-ignore
-                getBlackBoxBounds(firstEndpoint: number /*int*/, secondEndpoint: number /*int*/): java.awt.Shape
+                public getBlackBoxBounds(firstEndpoint: number /*int*/, secondEndpoint: number /*int*/): java.awt.Shape
                 /**
                  * Returns a <code>TextHitInfo</code> corresponding to the
                  * specified point.
@@ -769,7 +769,7 @@ declare namespace java {
                  *      under the specified point.
                  */
                 // @ts-ignore
-                hitTestChar(x: number /*float*/, y: number /*float*/, bounds: java.awt.geom.Rectangle2D): java.awt.font.TextHitInfo
+                public hitTestChar(x: number /*float*/, y: number /*float*/, bounds: java.awt.geom.Rectangle2D): java.awt.font.TextHitInfo
                 /**
                  * Returns a <code>TextHitInfo</code> corresponding to the
                  * specified point.  This method is a convenience overload of
@@ -783,13 +783,13 @@ declare namespace java {
                  *  under the specified point.
                  */
                 // @ts-ignore
-                hitTestChar(x: number /*float*/, y: number /*float*/): java.awt.font.TextHitInfo
+                public hitTestChar(x: number /*float*/, y: number /*float*/): java.awt.font.TextHitInfo
                 /**
                  * Returns the hash code of this <code>TextLayout</code>.
                  * @return the hash code of this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns <code>true</code> if the specified <code>Object</code> is a
                  * <code>TextLayout</code> object and if the specified <code>Object</code>
@@ -800,7 +800,7 @@ declare namespace java {
                  *       otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns <code>true</code> if the two layouts are equal.
                  * Two layouts are equal if they contain equal glyphvectors in the same order.
@@ -810,14 +810,14 @@ declare namespace java {
                  *       equals this <code>TextLayout</code>.
                  */
                 // @ts-ignore
-                equals(rhs: java.awt.font.TextLayout): boolean
+                public equals(rhs: java.awt.font.TextLayout): boolean
                 /**
                  * Returns debugging information for this <code>TextLayout</code>.
                  * @return the <code>textLine</code> of this <code>TextLayout</code>
                  *         as a <code>String</code>.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Renders this <code>TextLayout</code> at the specified location in
                  * the specified {@link java.awt.Graphics2D Graphics2D} context.
@@ -832,7 +832,7 @@ declare namespace java {
                  * @see #getBounds()
                  */
                 // @ts-ignore
-                draw(g2: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
+                public draw(g2: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
                 /**
                  * Returns a <code>Shape</code> representing the outline of this
                  * <code>TextLayout</code>.
@@ -842,7 +842,7 @@ declare namespace java {
                  *      <code>TextLayout</code>.  This is in standard coordinates.
                  */
                 // @ts-ignore
-                getOutline(tx: java.awt.geom.AffineTransform): java.awt.Shape
+                public getOutline(tx: java.awt.geom.AffineTransform): java.awt.Shape
                 /**
                  * Return the LayoutPath, or null if the layout path is the
                  * default path (x maps to advance, y maps to offset).
@@ -850,7 +850,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getLayoutPath(): java.awt.font.LayoutPath
+                public getLayoutPath(): java.awt.font.LayoutPath
                 /**
                  * Convert a hit to a point in standard coordinates.  The point is
                  * on the baseline of the character at the leading or trailing
@@ -867,7 +867,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                hitToPoint(hit: java.awt.font.TextHitInfo, point: java.awt.geom.Point2D): void
+                public hitToPoint(hit: java.awt.font.TextHitInfo, point: java.awt.geom.Point2D): void
             }
         }
     }

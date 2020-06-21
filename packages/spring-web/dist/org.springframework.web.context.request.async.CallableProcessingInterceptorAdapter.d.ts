@@ -13,21 +13,21 @@ declare namespace org {
                          * @deprecated as of 5.0 where CallableProcessingInterceptor has default methods
                          */
                         // @ts-ignore
-                        class CallableProcessingInterceptorAdapter extends java.lang.Object implements org.springframework.web.context.request.async.CallableProcessingInterceptor {
+                        abstract class CallableProcessingInterceptorAdapter extends java.lang.Object implements org.springframework.web.context.request.async.CallableProcessingInterceptor {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            beforeConcurrentHandling<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): void
+                            public beforeConcurrentHandling<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): void
                             // @ts-ignore
-                            preProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): void
+                            public preProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): void
                             // @ts-ignore
-                            postProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, concurrentResult: any): void
+                            public postProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, concurrentResult: java.lang.Object | any): void
                             // @ts-ignore
-                            handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): java.lang.Object
+                            public handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): any
                             // @ts-ignore
-                            handleError<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, t: Error): java.lang.Object
+                            public handleError<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>, t: java.lang.Throwable | Error): any
                             // @ts-ignore
-                            afterCompletion<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): void
+                            public afterCompletion<T>(request: org.springframework.web.context.request.NativeWebRequest, task: java.util.concurrent.Callable<T>): void
                         }
                     }
                 }

@@ -65,21 +65,21 @@ declare namespace javax {
                  * @see #setObservedAttribute
                  */
                 // @ts-ignore
-                getObservedAttribute(): java.lang.String
+                getObservedAttribute(): string
                 /**
                  * Sets the attribute to observe.
                  * @param attribute The attribute to observe.
                  * @see #getObservedAttribute
                  */
                 // @ts-ignore
-                setObservedAttribute(attribute: string): void
+                setObservedAttribute(attribute: java.lang.String | string): void
                 /**
                  * Gets the granularity period (in milliseconds).
                  * @return The granularity period.
                  * @see #setGranularityPeriod
                  */
                 // @ts-ignore
-                getGranularityPeriod(): long
+                getGranularityPeriod(): number /*long*/
                 /**
                  * Sets the granularity period (in milliseconds).
                  * @param period The granularity period.

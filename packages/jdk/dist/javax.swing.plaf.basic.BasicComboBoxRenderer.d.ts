@@ -16,7 +16,7 @@ declare namespace javax {
                  * @author Arnaud Weber
                  */
                 // @ts-ignore
-                class BasicComboBoxRenderer extends javax.swing.JLabel implements javax.swing.ListCellRenderer, java.io.Serializable {
+                class BasicComboBoxRenderer extends javax.swing.JLabel implements javax.swing.ListCellRenderer<any>, java.io.Serializable {
                     // @ts-ignore
                     constructor()
                     /**
@@ -25,11 +25,11 @@ declare namespace javax {
                      * the <code>setBorder</code> method.
                      */
                     // @ts-ignore
-                    noFocusBorder: javax.swing.border.Border
+                    static noFocusBorder: javax.swing.border.Border
                     // @ts-ignore
-                    getPreferredSize(): java.awt.Dimension
+                    public getPreferredSize(): java.awt.Dimension
                     // @ts-ignore
-                    getListCellRendererComponent(list: javax.swing.JList, value: any, index: number /*int*/, isSelected: boolean, cellHasFocus: boolean): java.awt.Component
+                    public getListCellRendererComponent(list: javax.swing.JList<any>, value: java.lang.Object | any, index: number /*int*/, isSelected: boolean, cellHasFocus: boolean): java.awt.Component
                 }
             }
         }

@@ -13,7 +13,7 @@ declare namespace org {
                          * @return The ban class
                          */
                         // @ts-ignore
-                        getBanClass(): java.lang.Class<? extends org.spongepowered.api.util.ban.Ban>
+                        getBanClass(): java.lang.Class<any>
                     }
                 }
             }

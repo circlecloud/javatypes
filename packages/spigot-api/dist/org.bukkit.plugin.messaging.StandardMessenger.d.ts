@@ -10,50 +10,50 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    isReservedChannel(channel: string): boolean
+                    public isReservedChannel(channel: java.lang.String | string): boolean
                     // @ts-ignore
-                    registerOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string): void
+                    public registerOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): void
                     // @ts-ignore
-                    unregisterOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string): void
+                    public unregisterOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): void
                     // @ts-ignore
-                    unregisterOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin): void
+                    public unregisterOutgoingPluginChannel(plugin: org.bukkit.plugin.Plugin): void
                     // @ts-ignore
-                    registerIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string, listener: org.bukkit.plugin.messaging.PluginMessageListener): org.bukkit.plugin.messaging.PluginMessageListenerRegistration
+                    public registerIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string, listener: org.bukkit.plugin.messaging.PluginMessageListener): org.bukkit.plugin.messaging.PluginMessageListenerRegistration
                     // @ts-ignore
-                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string, listener: org.bukkit.plugin.messaging.PluginMessageListener): void
+                    public unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string, listener: org.bukkit.plugin.messaging.PluginMessageListener): void
                     // @ts-ignore
-                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: string): void
+                    public unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): void
                     // @ts-ignore
-                    unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin): void
+                    public unregisterIncomingPluginChannel(plugin: org.bukkit.plugin.Plugin): void
                     // @ts-ignore
-                    getOutgoingChannels(): java.util.Set<java.lang.String>
+                    public getOutgoingChannels(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getOutgoingChannels(plugin: org.bukkit.plugin.Plugin): java.util.Set<java.lang.String>
+                    public getOutgoingChannels(plugin: org.bukkit.plugin.Plugin): Array<java.lang.String | string>
                     // @ts-ignore
-                    getIncomingChannels(): java.util.Set<java.lang.String>
+                    public getIncomingChannels(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getIncomingChannels(plugin: org.bukkit.plugin.Plugin): java.util.Set<java.lang.String>
+                    public getIncomingChannels(plugin: org.bukkit.plugin.Plugin): Array<java.lang.String | string>
                     // @ts-ignore
-                    getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin): java.util.Set<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
+                    public getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin): Array<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
                     // @ts-ignore
-                    getIncomingChannelRegistrations(channel: string): java.util.Set<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
+                    public getIncomingChannelRegistrations(channel: java.lang.String | string): Array<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
                     // @ts-ignore
-                    getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin, channel: string): java.util.Set<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
+                    public getIncomingChannelRegistrations(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): Array<org.bukkit.plugin.messaging.PluginMessageListenerRegistration>
                     // @ts-ignore
-                    isRegistrationValid(registration: org.bukkit.plugin.messaging.PluginMessageListenerRegistration): boolean
+                    public isRegistrationValid(registration: org.bukkit.plugin.messaging.PluginMessageListenerRegistration): boolean
                     // @ts-ignore
-                    isIncomingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: string): boolean
+                    public isIncomingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): boolean
                     // @ts-ignore
-                    isOutgoingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: string): boolean
+                    public isOutgoingChannelRegistered(plugin: org.bukkit.plugin.Plugin, channel: java.lang.String | string): boolean
                     // @ts-ignore
-                    dispatchIncomingMessage(source: org.bukkit.entity.Player, channel: string, message: number /*byte*/[]): void
+                    public dispatchIncomingMessage(source: org.bukkit.entity.Player, channel: java.lang.String | string, message: number /*byte*/[]): void
                     /**
                      * Validates a Plugin Channel name.
                      * @param channel Channel name to validate.
                      * @deprecated not an API method
                      */
                     // @ts-ignore
-                    validateChannel(channel: string): void
+                    public static validateChannel(channel: java.lang.String | string): void
                     /**
                      * Validates and corrects a Plugin Channel name. Method is not reentrant / idempotent.
                      * @param channel Channel name to validate.
@@ -61,7 +61,7 @@ declare namespace org {
                      * @deprecated not an API method
                      */
                     // @ts-ignore
-                    validateAndCorrectChannel(channel: string): java.lang.String
+                    public static validateAndCorrectChannel(channel: java.lang.String | string): string
                     /**
                      * Validates the input of a Plugin Message, ensuring the arguments are all
                      * valid.
@@ -80,7 +80,7 @@ declare namespace org {
                      *      registered for this plugin.
                      */
                     // @ts-ignore
-                    validatePluginMessage(messenger: org.bukkit.plugin.messaging.Messenger, source: org.bukkit.plugin.Plugin, channel: string, message: number /*byte*/[]): void
+                    public static validatePluginMessage(messenger: org.bukkit.plugin.messaging.Messenger, source: org.bukkit.plugin.Plugin, channel: java.lang.String | string, message: number /*byte*/[]): void
                 }
             }
         }

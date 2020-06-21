@@ -18,49 +18,49 @@ declare namespace javax {
                          * @param data the char array of data
                          */
                         // @ts-ignore
-                        constructor(name: string, type: number /*int*/, data: string[])
+                        constructor(name: java.lang.String | string, type: number /*int*/, data: string[])
                         // @ts-ignore
-                        name: string
+                        public name: java.lang.String | string
                         // @ts-ignore
-                        type: number /*int*/
+                        public type: number /*int*/
                         // @ts-ignore
-                        data: string[]
+                        public data: string[]
                         /**
                          * Gets the name of the entity.
                          * @return the name of the entity, as a <code>String</code>
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Gets the type of the entity.
                          * @return the type of the entity
                          */
                         // @ts-ignore
-                        getType(): int
+                        public getType(): number /*int*/
                         /**
                          * Returns <code>true</code> if it is a parameter entity.
                          * @return <code>true</code> if it is a parameter entity
                          */
                         // @ts-ignore
-                        isParameter(): boolean
+                        public isParameter(): boolean
                         /**
                          * Returns <code>true</code> if it is a general entity.
                          * @return <code>true</code> if it is a general entity
                          */
                         // @ts-ignore
-                        isGeneral(): boolean
+                        public isGeneral(): boolean
                         /**
                          * Returns the <code>data</code>.
                          * @return the <code>data</code>
                          */
                         // @ts-ignore
-                        getData(): char[]
+                        public getData(): string[]
                         /**
                          * Returns the data as a <code>String</code>.
                          * @return the data as a <code>String</code>
                          */
                         // @ts-ignore
-                        getString(): java.lang.String
+                        public getString(): string
                         /**
                          * Converts <code>nm</code> string to the corresponding
                          * entity type.  If the string does not have a corresponding
@@ -72,7 +72,7 @@ declare namespace javax {
                          *    to "CDATA", if none exists
                          */
                         // @ts-ignore
-                        name2type(nm: string): int
+                        public static name2type(nm: java.lang.String | string): number /*int*/
                     }
                 }
             }

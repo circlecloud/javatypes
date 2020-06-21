@@ -23,7 +23,7 @@ declare namespace org {
                      * @param arguments the arguments.
                      */
                     // @ts-ignore
-                    constructor(arguments: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     /**
                      * Construct a queue with a name provided by the supplied naming strategy.
                      * @param namingStrategy the naming strategy.
@@ -41,7 +41,7 @@ declare namespace org {
                      * @since 1.5.3
                      */
                     // @ts-ignore
-                    constructor(namingStrategy: org.springframework.amqp.core.AnonymousQueue.NamingStrategy, arguments: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(namingStrategy: org.springframework.amqp.core.AnonymousQueue.NamingStrategy, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     /**
                      * Construct a queue with a name provided by the supplied naming strategy.
                      * @param namingStrategy the naming strategy.
@@ -57,7 +57,7 @@ declare namespace org {
                      * @since 2.1
                      */
                     // @ts-ignore
-                    constructor(namingStrategy: org.springframework.amqp.core.NamingStrategy, arguments: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(namingStrategy: org.springframework.amqp.core.NamingStrategy, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                 }
             }
         }

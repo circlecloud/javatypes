@@ -22,14 +22,14 @@ declare namespace javax {
                      *                   if {@code prompt} has a length of 0.
                      */
                     // @ts-ignore
-                    constructor(prompt: string, echoOn: boolean)
+                    constructor(prompt: java.lang.String | string, echoOn: boolean)
                     /**
                      * Get the prompt.
                      * <p>
                      * @return the prompt.
                      */
                     // @ts-ignore
-                    getPrompt(): java.lang.String
+                    public getPrompt(): string
                     /**
                      * Return whether the password
                      * should be displayed as it is being typed.
@@ -38,7 +38,7 @@ declare namespace javax {
                      *           should be displayed as it is being typed.
                      */
                     // @ts-ignore
-                    isEchoOn(): boolean
+                    public isEchoOn(): boolean
                     /**
                      * Set the retrieved password.
                      * <p> This method makes a copy of the input <i>password</i>
@@ -48,7 +48,7 @@ declare namespace javax {
                      * @see #getPassword
                      */
                     // @ts-ignore
-                    setPassword(password: string[]): void
+                    public setPassword(password: string[]): void
                     /**
                      * Get the retrieved password.
                      * <p> This method returns a copy of the retrieved password.
@@ -57,12 +57,12 @@ declare namespace javax {
                      * @see #setPassword
                      */
                     // @ts-ignore
-                    getPassword(): char[]
+                    public getPassword(): string[]
                     /**
                      * Clear the retrieved password.
                      */
                     // @ts-ignore
-                    clearPassword(): void
+                    public clearPassword(): void
                 }
             }
         }

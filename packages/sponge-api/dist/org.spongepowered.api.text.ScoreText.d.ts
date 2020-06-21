@@ -14,7 +14,7 @@ declare namespace org {
                      * @return The score in this text
                      */
                     // @ts-ignore
-                    getScore(): org.spongepowered.api.scoreboard.Score
+                    public getScore(): org.spongepowered.api.scoreboard.Score
                     /**
                      * Returns a value that is displayed instead of the real score.
                      * @return The value displayed instead of the real score, or
@@ -22,13 +22,13 @@ declare namespace org {
                      *          instead
                      */
                     // @ts-ignore
-                    getOverride(): java.util.Optional<java.lang.String>
+                    public getOverride(): java.util.Optional<java.lang.String | string>
                     // @ts-ignore
-                    toBuilder(): org.spongepowered.api.text.ScoreText.Builder
+                    public toBuilder(): org.spongepowered.api.text.ScoreText.Builder
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

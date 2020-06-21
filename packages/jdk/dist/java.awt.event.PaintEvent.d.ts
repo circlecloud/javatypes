@@ -40,37 +40,37 @@ declare namespace java {
                  * Marks the first integer id for the range of paint event ids.
                  */
                 // @ts-ignore
-                readonly PAINT_FIRST: number /*int*/
+                public static readonly PAINT_FIRST: number /*int*/
                 /**
                  * Marks the last integer id for the range of paint event ids.
                  */
                 // @ts-ignore
-                readonly PAINT_LAST: number /*int*/
+                public static readonly PAINT_LAST: number /*int*/
                 /**
                  * The paint event type.
                  */
                 // @ts-ignore
-                readonly PAINT: number /*int*/
+                public static readonly PAINT: number /*int*/
                 /**
                  * The update event type.
                  */
                 // @ts-ignore
-                readonly UPDATE: number /*int*/
+                public static readonly UPDATE: number /*int*/
                 /**
                  * Returns the rectangle representing the area which needs to be
                  * repainted in response to this event.
                  */
                 // @ts-ignore
-                getUpdateRect(): java.awt.Rectangle
+                public getUpdateRect(): java.awt.Rectangle
                 /**
                  * Sets the rectangle representing the area which needs to be
                  * repainted in response to this event.
                  * @param updateRect the rectangle area which needs to be repainted
                  */
                 // @ts-ignore
-                setUpdateRect(updateRect: java.awt.Rectangle): void
+                public setUpdateRect(updateRect: java.awt.Rectangle): void
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

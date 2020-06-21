@@ -16,21 +16,21 @@ declare namespace org {
                      * Represents an identity transformation. Does nothing!
                      */
                     // @ts-ignore
-                    readonly IDENTITY: org.spongepowered.api.util.DiscreteTransform2
+                    public static readonly IDENTITY: org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns the matrix representation of the transform. It is 3D to allow it
                      * to include a translation.
                      * @return The matrix for this transform
                      */
                     // @ts-ignore
-                    getMatrix(): Matrix3d
+                    public getMatrix(): Matrix3d
                     /**
                      * Transforms a vector using this transforms.
                      * @param vector The original vector
                      * @return The transformed vector
                      */
                     // @ts-ignore
-                    transform(vector: Vector2i): Vector2i
+                    public transform(vector: Vector2i): Vector2i
                     /**
                      * Transform a vector represented as a pair of coordinates using this
                      * transform.
@@ -39,7 +39,7 @@ declare namespace org {
                      * @return The transformed vector
                      */
                     // @ts-ignore
-                    transform(x: number /*int*/, y: number /*int*/): Vector2i
+                    public transform(x: number /*int*/, y: number /*int*/): Vector2i
                     /**
                      * Transforms the x coordinate of a vector using this transform. Only
                      * creates a new object on the first call.
@@ -47,7 +47,7 @@ declare namespace org {
                      * @return The transformed x coordinate
                      */
                     // @ts-ignore
-                    transformX(vector: Vector2i): int
+                    public transformX(vector: Vector2i): number /*int*/
                     /**
                      * Transforms the x coordinate of a vector using this transform. Only
                      * creates a new object on the first call.
@@ -56,7 +56,7 @@ declare namespace org {
                      * @return The transformed x coordinate
                      */
                     // @ts-ignore
-                    transformX(x: number /*int*/, y: number /*int*/): int
+                    public transformX(x: number /*int*/, y: number /*int*/): number /*int*/
                     /**
                      * Transforms the y coordinate of a vector using this transform. Only
                      * creates a new object on the first call.
@@ -64,7 +64,7 @@ declare namespace org {
                      * @return The transformed y coordinate
                      */
                     // @ts-ignore
-                    transformY(vector: Vector2i): int
+                    public transformY(vector: Vector2i): number /*int*/
                     /**
                      * Transforms the y coordinate of a vector using this transform. Only
                      * creates a new object on the first call.
@@ -73,13 +73,13 @@ declare namespace org {
                      * @return The transformed y coordinate
                      */
                     // @ts-ignore
-                    transformY(x: number /*int*/, y: number /*int*/): int
+                    public transformY(x: number /*int*/, y: number /*int*/): number /*int*/
                     /**
                      * Inverts the transform and returns it as a new transform.
                      * @return The inverse of this transform
                      */
                     // @ts-ignore
-                    invert(): org.spongepowered.api.util.DiscreteTransform2
+                    public invert(): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a transform that is the composition of this transform and the
                      * given transform. The result will apply this transformation after the
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return The new composed transform
                      */
                     // @ts-ignore
-                    compose(that: org.spongepowered.api.util.DiscreteTransform2): org.spongepowered.api.util.DiscreteTransform2
+                    public compose(that: org.spongepowered.api.util.DiscreteTransform2): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a transform that is the composition of the given transform with
                      * this transform. The result will apply the given transformation after
@@ -97,14 +97,14 @@ declare namespace org {
                      * @return The new composed transform
                      */
                     // @ts-ignore
-                    andThen(that: org.spongepowered.api.util.DiscreteTransform2): org.spongepowered.api.util.DiscreteTransform2
+                    public andThen(that: org.spongepowered.api.util.DiscreteTransform2): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a translation to this transform and returns it as a new transform.
                      * @param vector The translation vector
                      * @return The translated transform as a copy
                      */
                     // @ts-ignore
-                    withTranslation(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
+                    public withTranslation(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a translation to this transform and returns it as a new transform.
                      * @param x The x coordinate of the translation
@@ -112,7 +112,7 @@ declare namespace org {
                      * @return The translated transform as a copy
                      */
                     // @ts-ignore
-                    withTranslation(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public withTranslation(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a scale factor to this transform and returns it as a new transform.
                      * This factor must be non-zero.
@@ -120,7 +120,7 @@ declare namespace org {
                      * @return The scaled transform as a copy
                      */
                     // @ts-ignore
-                    withScale(a: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public withScale(a: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a scale factor for each axis to this transform and returns it as a
                      * new transform. The factors must be non-zero.
@@ -128,7 +128,7 @@ declare namespace org {
                      * @return The scaled transform as a copy
                      */
                     // @ts-ignore
-                    withScale(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
+                    public withScale(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a scale factor for each axis to this transform and returns it as a
                      * new transform. The factors must be non-zero.
@@ -137,7 +137,7 @@ declare namespace org {
                      * @return The scaled transform as a copy
                      */
                     // @ts-ignore
-                    withScale(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public withScale(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a rotation to this transform, in the xy plane, around the origin and
                      * returns it as a new transform. The rotation is given is quarter turns.
@@ -147,7 +147,7 @@ declare namespace org {
                      * @return The rotated transform as a copy
                      */
                     // @ts-ignore
-                    withRotation(quarterTurns: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public withRotation(quarterTurns: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a a rotation to this transform, in the xy plane, around a given
                      * point, and returns it as a new transform. The rotation is given is
@@ -161,7 +161,7 @@ declare namespace org {
                      * @return The rotated transform as a copy
                      */
                     // @ts-ignore
-                    withRotation(quarterTurns: number /*int*/, point: Vector2i, tileCorner: boolean): org.spongepowered.api.util.DiscreteTransform2
+                    public withRotation(quarterTurns: number /*int*/, point: Vector2i, tileCorner: boolean): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds a a rotation to this transform, in the xy plane, around a given
                      * point, and returns it as a new transform. The rotation is given is half
@@ -179,7 +179,7 @@ declare namespace org {
                      * @return The rotated transform as a copy
                      */
                     // @ts-ignore
-                    withRotation(halfTurns: number /*int*/, point: Vector2i, tileCornerX: boolean, tileCornerY: boolean): org.spongepowered.api.util.DiscreteTransform2
+                    public withRotation(halfTurns: number /*int*/, point: Vector2i, tileCornerX: boolean, tileCornerY: boolean): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Adds another transformation to this transformation and returns int as a
                      * new transform.
@@ -187,7 +187,7 @@ declare namespace org {
                      * @return The added transforms as a copy
                      */
                     // @ts-ignore
-                    withTransformation(transform: org.spongepowered.api.util.DiscreteTransform2): org.spongepowered.api.util.DiscreteTransform2
+                    public withTransformation(transform: org.spongepowered.api.util.DiscreteTransform2): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform from the given transformation matrix, if the
                      * resulting transform would be discrete.
@@ -195,14 +195,14 @@ declare namespace org {
                      * @return The new transform, or {#link Optional#empty()}
                      */
                     // @ts-ignore
-                    of(matrix: Matrix3d): java.util.Optional<org.spongepowered.api.util.DiscreteTransform2>
+                    public static of(matrix: Matrix3d): java.util.Optional<org.spongepowered.api.util.DiscreteTransform2>
                     /**
                      * Returns a new transform representing a translation.
                      * @param vector The translation vector
                      * @return The new translation transform
                      */
                     // @ts-ignore
-                    fromTranslation(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromTranslation(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a translation.
                      * @param x The x coordinate of the translation
@@ -210,7 +210,7 @@ declare namespace org {
                      * @return The new translation transform
                      */
                     // @ts-ignore
-                    fromTranslation(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromTranslation(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a scaling.
                      * The scale factor must be non-zero.
@@ -218,7 +218,7 @@ declare namespace org {
                      * @return The new scale transform
                      */
                     // @ts-ignore
-                    fromScale(a: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromScale(a: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a scaling on each axis. The scale
                      * factors must be non-zero.
@@ -226,7 +226,7 @@ declare namespace org {
                      * @return The new scale transform
                      */
                     // @ts-ignore
-                    fromScale(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromScale(vector: Vector2i): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a scaling on each axis. The scale
                      * factors must be non-zero.
@@ -235,7 +235,7 @@ declare namespace org {
                      * @return The new scale transform
                      */
                     // @ts-ignore
-                    fromScale(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromScale(x: number /*int*/, y: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a rotation in the xy plane around
                      * the origin. The rotation is given is quarter turns. The actual rotation
@@ -245,7 +245,7 @@ declare namespace org {
                      * @return The new rotation transform
                      */
                     // @ts-ignore
-                    fromRotation(quarterTurns: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromRotation(quarterTurns: number /*int*/): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a rotation in the xy plane, around a
                      * given point. The rotation is given is quarter turns. The actual rotation
@@ -258,7 +258,7 @@ declare namespace org {
                      * @return The new rotation transform
                      */
                     // @ts-ignore
-                    fromRotation(quarterTurns: number /*int*/, point: Vector2i, tileCorner: boolean): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromRotation(quarterTurns: number /*int*/, point: Vector2i, tileCorner: boolean): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a rotation in the xy plane, around a
                      * given point. The rotation is given is half turns. The actual rotation is
@@ -275,7 +275,7 @@ declare namespace org {
                      * @return The new rotation transform
                      */
                     // @ts-ignore
-                    fromRotation(halfTurns: number /*int*/, point: Vector2i, tileCornerX: boolean, tileCornerY: boolean): org.spongepowered.api.util.DiscreteTransform2
+                    public static fromRotation(halfTurns: number /*int*/, point: Vector2i, tileCornerX: boolean, tileCornerY: boolean): org.spongepowered.api.util.DiscreteTransform2
                     /**
                      * Returns a new transform representing a centered rotation of an area of
                      * tiles. The rotation is given is quarter turns. The actual rotation is
@@ -286,7 +286,7 @@ declare namespace org {
                      * @return The new rotation transform
                      */
                     // @ts-ignore
-                    rotationAroundCenter(quarterTurns: number /*int*/, size: Vector2i): org.spongepowered.api.util.DiscreteTransform2
+                    public static rotationAroundCenter(quarterTurns: number /*int*/, size: Vector2i): org.spongepowered.api.util.DiscreteTransform2
                 }
             }
         }

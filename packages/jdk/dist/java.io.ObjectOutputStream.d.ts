@@ -166,7 +166,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            useProtocolVersion(version: number /*int*/): void
+            public useProtocolVersion(version: number /*int*/): void
             /**
              * Write the specified object to the ObjectOutputStream.  The class of the
              * object, the signature of the class, and the values of the non-transient
@@ -187,7 +187,7 @@ declare namespace java {
              *           OutputStream.
              */
             // @ts-ignore
-            writeObject(obj: any): void
+            public writeObject(obj: java.lang.Object | any): void
             /**
              * Method used by subclasses to override the default writeObject method.
              * This method is called by trusted subclasses of ObjectInputStream that
@@ -202,7 +202,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            writeObjectOverride(obj: any): void
+            writeObjectOverride(obj: java.lang.Object | any): void
             /**
              * Writes an "unshared" object to the ObjectOutputStream.  This method is
              * identical to writeObject, except that it always writes the given object
@@ -240,7 +240,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            writeUnshared(obj: any): void
+            public writeUnshared(obj: java.lang.Object | any): void
             /**
              * Write the non-static and non-transient fields of the current class to
              * this stream.  This may only be called from the writeObject method of the
@@ -250,7 +250,7 @@ declare namespace java {
              *           <code>OutputStream</code>
              */
             // @ts-ignore
-            defaultWriteObject(): void
+            public defaultWriteObject(): void
             /**
              * Retrieve the object used to buffer persistent fields to be written to
              * the stream.  The fields will be written to the stream when writeFields
@@ -261,7 +261,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            putFields(): java.io.ObjectOutputStream.PutField
+            public putFields(): java.io.ObjectOutputStream.PutField
             /**
              * Write the buffered fields to the stream.
              * @throws IOException if I/O errors occur while writing to the underlying
@@ -271,7 +271,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            writeFields(): void
+            public writeFields(): void
             /**
              * Reset will disregard the state of any objects already written to the
              * stream.  The state is reset to be the same as a new ObjectOutputStream.
@@ -282,7 +282,7 @@ declare namespace java {
              * @throws IOException if reset() is invoked while serializing an object.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Subclasses may implement this method to allow class data to be stored in
              * the stream. By default this method does nothing.  The corresponding
@@ -354,7 +354,7 @@ declare namespace java {
              *           OutputStream.
              */
             // @ts-ignore
-            replaceObject(obj: any): java.lang.Object
+            replaceObject(obj: java.lang.Object | any): any
             /**
              * Enable the stream to do replacement of objects in the stream.  When
              * enabled, the replaceObject method is called for every object being
@@ -416,7 +416,7 @@ declare namespace java {
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            write(val: number /*int*/): void
+            public write(val: number /*int*/): void
             /**
              * Writes an array of bytes. This method will block until the bytes are
              * actually written.
@@ -424,7 +424,7 @@ declare namespace java {
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            write(buf: number /*byte*/[]): void
+            public write(buf: number /*byte*/[]): void
             /**
              * Writes a sub array of bytes.
              * @param buf the data to be written
@@ -433,14 +433,14 @@ declare namespace java {
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            write(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes the stream. This will write any buffered output bytes and flush
              * through to the underlying stream.
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Drain any buffered data in ObjectOutputStream.  Similar to flush but
              * does not propagate the flush to the underlying stream.
@@ -455,7 +455,7 @@ declare namespace java {
              * @throws IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Writes a boolean.
              * @param val the boolean to be written
@@ -463,7 +463,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeBoolean(val: boolean): void
+            public writeBoolean(val: boolean): void
             /**
              * Writes an 8 bit byte.
              * @param val the byte value to be written
@@ -471,7 +471,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeByte(val: number /*int*/): void
+            public writeByte(val: number /*int*/): void
             /**
              * Writes a 16 bit short.
              * @param val the short value to be written
@@ -479,7 +479,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeShort(val: number /*int*/): void
+            public writeShort(val: number /*int*/): void
             /**
              * Writes a 16 bit char.
              * @param val the char value to be written
@@ -487,7 +487,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeChar(val: number /*int*/): void
+            public writeChar(val: number /*int*/): void
             /**
              * Writes a 32 bit int.
              * @param val the integer value to be written
@@ -495,7 +495,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeInt(val: number /*int*/): void
+            public writeInt(val: number /*int*/): void
             /**
              * Writes a 64 bit long.
              * @param val the long value to be written
@@ -503,7 +503,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeLong(val: number /*long*/): void
+            public writeLong(val: number /*long*/): void
             /**
              * Writes a 32 bit float.
              * @param val the float value to be written
@@ -511,7 +511,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeFloat(val: number /*float*/): void
+            public writeFloat(val: number /*float*/): void
             /**
              * Writes a 64 bit double.
              * @param val the double value to be written
@@ -519,7 +519,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeDouble(val: number /*double*/): void
+            public writeDouble(val: number /*double*/): void
             /**
              * Writes a String as a sequence of bytes.
              * @param str the String of bytes to be written
@@ -527,7 +527,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeBytes(str: string): void
+            public writeBytes(str: java.lang.String | string): void
             /**
              * Writes a String as a sequence of chars.
              * @param str the String of chars to be written
@@ -535,7 +535,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeChars(str: string): void
+            public writeChars(str: java.lang.String | string): void
             /**
              * Primitive data write of this String in
              * <a href="DataInput.html#modified-utf-8">modified UTF-8</a>
@@ -549,7 +549,7 @@ declare namespace java {
              *           stream
              */
             // @ts-ignore
-            writeUTF(str: string): void
+            public writeUTF(str: java.lang.String | string): void
         }
     }
 }

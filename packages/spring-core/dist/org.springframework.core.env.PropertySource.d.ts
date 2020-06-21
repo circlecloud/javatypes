@@ -33,12 +33,12 @@ declare namespace org {
                  * @see org.springframework.context.annotation.PropertySource
                  */
                 // @ts-ignore
-                class PropertySource<T> extends java.lang.Object {
+                abstract class PropertySource<T> extends java.lang.Object {
                     /**
                      * Create a new {@code PropertySource} with the given name and source object.
                      */
                     // @ts-ignore
-                    constructor(name: string, source: T)
+                    constructor(name: java.lang.String | string, source: T)
                     /**
                      * Create a new {@code PropertySource} with the given name and with a new
                      * {@code Object} instance as the underlying source.
@@ -46,23 +46,23 @@ declare namespace org {
                      * that never query an actual source but rather return hard-coded values.
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    readonly name: string
+                    readonly name: java.lang.String | string
                     // @ts-ignore
                     readonly source: T
                     /**
                      * Return the name of this {@code PropertySource}.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Return the underlying source object for this {@code PropertySource}.
                      */
                     // @ts-ignore
-                    getSource(): T
+                    public getSource(): T
                     /**
                      * Return whether this {@code PropertySource} contains the given name.
                      * <p>This implementation simply checks for a {@code null} return value
@@ -71,7 +71,7 @@ declare namespace org {
                      * @param name the property name to find
                      */
                     // @ts-ignore
-                    containsProperty(name: string): boolean
+                    public containsProperty(name: java.lang.String | string): boolean
                     /**
                      * Return the value associated with the given name,
                      * or {@code null} if not found.
@@ -79,7 +79,7 @@ declare namespace org {
                      * @see PropertyResolver#getRequiredProperty(String)
                      */
                     // @ts-ignore
-                    abstract getProperty(name: string): java.lang.Object
+                    public abstract getProperty(name: java.lang.String | string): any
                     /**
                      * This {@code PropertySource} object is equal to the given object if:
                      * <ul>
@@ -89,13 +89,13 @@ declare namespace org {
                      * <p>No properties other than {@code name} are evaluated.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * Return a hash code derived from the {@code name} property
                      * of this {@code PropertySource} object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Produce concise output (type and name) if the current log level does not include
                      * debug. If debug is enabled, produce verbose output including the hash code of the
@@ -106,7 +106,7 @@ declare namespace org {
                      * @see Log#isDebugEnabled()
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Return a {@code PropertySource} implementation intended for collection comparison purposes only.
                      * <p>Primarily for internal use, but given a collection of {@code PropertySource} objects, may be
@@ -125,7 +125,7 @@ declare namespace org {
                      * @param name the name of the comparison {#code PropertySource} to be created and returned.
                      */
                     // @ts-ignore
-                    named(name: string): org.springframework.core.env.PropertySource<?>
+                    public static named(name: java.lang.String | string): org.springframework.core.env.PropertySource<any>
                 }
             }
         }

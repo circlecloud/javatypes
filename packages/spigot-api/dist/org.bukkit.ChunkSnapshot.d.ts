@@ -13,19 +13,19 @@ declare namespace org {
              * @return X-coordinate
              */
             // @ts-ignore
-            getX(): int
+            getX(): number /*int*/
             /**
              * Gets the Z-coordinate of this chunk
              * @return Z-coordinate
              */
             // @ts-ignore
-            getZ(): int
+            getZ(): number /*int*/
             /**
              * Gets name of the world containing this chunk
              * @return Parent World Name
              */
             // @ts-ignore
-            getWorldName(): java.lang.String
+            getWorldName(): string
             /**
              * Get block type for block at corresponding coordinate in the chunk
              * @param x 0-15
@@ -53,7 +53,7 @@ declare namespace org {
              * @deprecated Magic value
              */
             // @ts-ignore
-            getData(x: number /*int*/, y: number /*int*/, z: number /*int*/): int
+            getData(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*int*/
             /**
              * Get sky light level for block at corresponding coordinate in the chunk
              * @param x 0-15
@@ -62,7 +62,7 @@ declare namespace org {
              * @return 0-15
              */
             // @ts-ignore
-            getBlockSkyLight(x: number /*int*/, y: number /*int*/, z: number /*int*/): int
+            getBlockSkyLight(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*int*/
             /**
              * Get light level emitted by block at corresponding coordinate in the
              * chunk
@@ -72,7 +72,7 @@ declare namespace org {
              * @return 0-15
              */
             // @ts-ignore
-            getBlockEmittedLight(x: number /*int*/, y: number /*int*/, z: number /*int*/): int
+            getBlockEmittedLight(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*int*/
             /**
              * Gets the highest non-air coordinate at the given coordinates
              * @param x X-coordinate of the blocks (0-15)
@@ -80,7 +80,7 @@ declare namespace org {
              * @return Y-coordinate of the highest non-air block
              */
             // @ts-ignore
-            getHighestBlockYAt(x: number /*int*/, z: number /*int*/): int
+            getHighestBlockYAt(x: number /*int*/, z: number /*int*/): number /*int*/
             /**
              * Get biome at given coordinates
              * @param x X-coordinate (0-15)
@@ -107,7 +107,7 @@ declare namespace org {
              * @deprecated biomes are now 3-dimensional
              */
             // @ts-ignore
-            getRawBiomeTemperature(x: number /*int*/, z: number /*int*/): double
+            getRawBiomeTemperature(x: number /*int*/, z: number /*int*/): number /*double*/
             /**
              * Get raw biome temperature at given coordinates
              * @param x X-coordinate (0-15)
@@ -116,13 +116,13 @@ declare namespace org {
              * @return temperature at given coordinate
              */
             // @ts-ignore
-            getRawBiomeTemperature(x: number /*int*/, y: number /*int*/, z: number /*int*/): double
+            getRawBiomeTemperature(x: number /*int*/, y: number /*int*/, z: number /*int*/): number /*double*/
             /**
              * Get world full time when chunk snapshot was captured
              * @return time in ticks
              */
             // @ts-ignore
-            getCaptureFullTime(): long
+            getCaptureFullTime(): number /*long*/
             /**
              * Test if section is empty
              * @param sy - section Y coordinate (block Y / 16, 0-255)

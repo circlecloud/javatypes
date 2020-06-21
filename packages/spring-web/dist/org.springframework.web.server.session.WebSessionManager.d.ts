@@ -21,7 +21,7 @@ declare namespace org {
                          * @return promise for the WebSession
                          */
                         // @ts-ignore
-                        getSession(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        getSession(exchange: org.springframework.web.server.ServerWebExchange): object
                     }
                 }
             }

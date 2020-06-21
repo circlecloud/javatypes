@@ -79,37 +79,37 @@ declare namespace java {
                  * Constant for the raw text state.
                  */
                 // @ts-ignore
-                readonly RAW_TEXT: number /*int*/
+                public static readonly RAW_TEXT: number /*int*/
                 /**
                  * Constant for the converted text state.
                  */
                 // @ts-ignore
-                readonly CONVERTED_TEXT: number /*int*/
+                public static readonly CONVERTED_TEXT: number /*int*/
                 /**
                  * Constant for the default highlight for unselected raw text.
                  */
                 // @ts-ignore
-                readonly UNSELECTED_RAW_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
+                public static readonly UNSELECTED_RAW_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
                 /**
                  * Constant for the default highlight for selected raw text.
                  */
                 // @ts-ignore
-                readonly SELECTED_RAW_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
+                public static readonly SELECTED_RAW_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
                 /**
                  * Constant for the default highlight for unselected converted text.
                  */
                 // @ts-ignore
-                readonly UNSELECTED_CONVERTED_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
+                public static readonly UNSELECTED_CONVERTED_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
                 /**
                  * Constant for the default highlight for selected converted text.
                  */
                 // @ts-ignore
-                readonly SELECTED_CONVERTED_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
+                public static readonly SELECTED_CONVERTED_TEXT_HIGHLIGHT: java.awt.im.InputMethodHighlight
                 /**
                  * Returns whether the text range is selected.
                  */
                 // @ts-ignore
-                isSelected(): boolean
+                public isSelected(): boolean
                 /**
                  * Returns the conversion state of the text range.
                  * @return The conversion state for the text range - RAW_TEXT or CONVERTED_TEXT.
@@ -117,18 +117,18 @@ declare namespace java {
                  * @see InputMethodHighlight#CONVERTED_TEXT
                  */
                 // @ts-ignore
-                getState(): int
+                public getState(): number /*int*/
                 /**
                  * Returns the variation of the text range.
                  */
                 // @ts-ignore
-                getVariation(): int
+                public getVariation(): number /*int*/
                 /**
                  * Returns the rendering style attributes for the text range, or null.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getStyle(): java.util.Map<java.awt.font.TextAttribute, ?>
+                public getStyle(): java.util.Map<java.awt.font.TextAttribute, any>
             }
         }
     }

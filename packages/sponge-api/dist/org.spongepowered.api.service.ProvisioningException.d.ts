@@ -21,7 +21,7 @@ declare namespace org {
                      * @param service The service requested
                      */
                     // @ts-ignore
-                    constructor(message: string, service: java.lang.Class<any>)
+                    constructor(message: java.lang.String | string, service: java.lang.Class<any>)
                     /**
                      * Constructs a new {@link ProvisioningException} for the specified service with
                      * the specified service and cause.
@@ -30,7 +30,7 @@ declare namespace org {
                      * @param service The service requested
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error, service: java.lang.Class<any>)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, service: java.lang.Class<any>)
                     /**
                      * Constructs a new {@link ProvisioningException} for the specified service with
                      * the specified cause and a null message.
@@ -38,13 +38,13 @@ declare namespace org {
                      * @param service The service requested
                      */
                     // @ts-ignore
-                    constructor(cause: Error, service: java.lang.Class<any>)
+                    constructor(cause: java.lang.Throwable | Error, service: java.lang.Class<any>)
                     /**
                      * Gets the service that was requested.
                      * @return The service
                      */
                     // @ts-ignore
-                    getService(): java.lang.Class<?>
+                    getService(): java.lang.Class<any>
                 }
             }
         }

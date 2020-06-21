@@ -18,7 +18,7 @@ declare namespace org {
                      * @return the order source for that object, or {#code null} if none found
                      */
                     // @ts-ignore
-                    getOrderSource(obj: any): java.lang.Object
+                    getOrderSource(obj: java.lang.Object | any): any
                 }
             }
         }

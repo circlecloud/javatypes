@@ -23,7 +23,7 @@ declare namespace javax {
              * @return <CODE>true</CODE> if the notification has to be sent to the listener, <CODE>false</CODE> otherwise.
              */
             // @ts-ignore
-            isNotificationEnabled(notification: javax.management.Notification): boolean
+            public isNotificationEnabled(notification: javax.management.Notification): boolean
             /**
              * Enables all the attribute change notifications the attribute name of which equals
              * the specified name to be sent to the listener.
@@ -33,7 +33,7 @@ declare namespace javax {
              * @exception java.lang.IllegalArgumentException The attribute name parameter is null.
              */
             // @ts-ignore
-            enableAttribute(name: string): void
+            public enableAttribute(name: java.lang.String | string): void
             /**
              * Disables all the attribute change notifications the attribute name of which equals
              * the specified attribute name to be sent to the listener.
@@ -42,18 +42,18 @@ declare namespace javax {
              * @param name The attribute name.
              */
             // @ts-ignore
-            disableAttribute(name: string): void
+            public disableAttribute(name: java.lang.String | string): void
             /**
              * Disables all the attribute names.
              */
             // @ts-ignore
-            disableAllAttributes(): void
+            public disableAllAttributes(): void
             /**
              * Gets all the enabled attribute names for this filter.
              * @return The list containing all the enabled attribute names.
              */
             // @ts-ignore
-            getEnabledAttributes(): java.util.Vector<java.lang.String>
+            public getEnabledAttributes(): java.util.Vector<java.lang.String | string>
         }
     }
 }

@@ -22,31 +22,31 @@ declare namespace org {
                  * @param threadNamePrefix the prefix to use for the names of newly created threads
                  */
                 // @ts-ignore
-                constructor(threadNamePrefix: string)
+                constructor(threadNamePrefix: java.lang.String | string)
                 /**
                  * Specify the prefix to use for the names of newly created threads.
                  * Default is "SimpleAsyncTaskExecutor-".
                  */
                 // @ts-ignore
-                setThreadNamePrefix(threadNamePrefix: string): void
+                public setThreadNamePrefix(threadNamePrefix: java.lang.String | string): void
                 /**
                  * Return the thread name prefix to use for the names of newly
                  * created threads.
                  */
                 // @ts-ignore
-                getThreadNamePrefix(): java.lang.String
+                public getThreadNamePrefix(): string
                 /**
                  * Set the priority of the threads that this factory creates.
                  * Default is 5.
                  * @see java.lang.Thread#NORM_PRIORITY
                  */
                 // @ts-ignore
-                setThreadPriority(threadPriority: number /*int*/): void
+                public setThreadPriority(threadPriority: number /*int*/): void
                 /**
                  * Return the priority of the threads that this factory creates.
                  */
                 // @ts-ignore
-                getThreadPriority(): int
+                public getThreadPriority(): number /*int*/
                 /**
                  * Set whether this factory is supposed to create daemon threads,
                  * just executing as long as the application itself is running.
@@ -58,30 +58,30 @@ declare namespace org {
                  * @see java.lang.Thread#setDaemon
                  */
                 // @ts-ignore
-                setDaemon(daemon: boolean): void
+                public setDaemon(daemon: boolean): void
                 /**
                  * Return whether this factory should create daemon threads.
                  */
                 // @ts-ignore
-                isDaemon(): boolean
+                public isDaemon(): boolean
                 /**
                  * Specify the name of the thread group that threads should be created in.
                  * @see #setThreadGroup
                  */
                 // @ts-ignore
-                setThreadGroupName(name: string): void
+                public setThreadGroupName(name: java.lang.String | string): void
                 /**
                  * Specify the thread group that threads should be created in.
                  * @see #setThreadGroupName
                  */
                 // @ts-ignore
-                setThreadGroup(threadGroup: java.lang.ThreadGroup): void
+                public setThreadGroup(threadGroup: java.lang.ThreadGroup): void
                 /**
                  * Return the thread group that threads should be created in
                  * (or {@code null} for the default group).
                  */
                 // @ts-ignore
-                getThreadGroup(): java.lang.ThreadGroup
+                public getThreadGroup(): java.lang.ThreadGroup
                 /**
                  * Template method for the creation of a new {@link Thread}.
                  * <p>The default implementation creates a new Thread for the given
@@ -90,7 +90,7 @@ declare namespace org {
                  * @see #nextThreadName()
                  */
                 // @ts-ignore
-                createThread(runnable: java.lang.Runnable): java.lang.Thread
+                public createThread(runnable: java.lang.Runnable): java.lang.Thread
                 /**
                  * Return the thread name to use for a newly created {@link Thread}.
                  * <p>The default implementation returns the specified thread name prefix
@@ -98,13 +98,13 @@ declare namespace org {
                  * @see #getThreadNamePrefix()
                  */
                 // @ts-ignore
-                nextThreadName(): java.lang.String
+                nextThreadName(): string
                 /**
                  * Build the default thread name prefix for this factory.
                  * @return the default thread name prefix (never {#code null})
                  */
                 // @ts-ignore
-                getDefaultThreadNamePrefix(): java.lang.String
+                getDefaultThreadNamePrefix(): string
             }
         }
     }

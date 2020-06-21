@@ -12,7 +12,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class LayoutPath extends java.lang.Object {
+            abstract class LayoutPath extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -33,7 +33,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract pointToPath(point: java.awt.geom.Point2D, location: java.awt.geom.Point2D): boolean
+                public abstract pointToPath(point: java.awt.geom.Point2D, location: java.awt.geom.Point2D): boolean
                 /**
                  * Convert a location relative to the path to a point in user
                  * coordinates.  The path might bend abruptly or be disjoint at
@@ -54,7 +54,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                abstract pathToPoint(location: java.awt.geom.Point2D, preceding: boolean, point: java.awt.geom.Point2D): void
+                public abstract pathToPoint(location: java.awt.geom.Point2D, preceding: boolean, point: java.awt.geom.Point2D): void
             }
         }
     }

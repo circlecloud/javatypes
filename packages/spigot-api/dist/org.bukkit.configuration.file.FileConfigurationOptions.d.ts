@@ -11,11 +11,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor(configuration: org.bukkit.configuration.MemoryConfiguration)
                     // @ts-ignore
-                    configuration(): org.bukkit.configuration.file.FileConfiguration
+                    public configuration(): org.bukkit.configuration.file.FileConfiguration
                     // @ts-ignore
-                    copyDefaults(value: boolean): org.bukkit.configuration.file.FileConfigurationOptions
+                    public copyDefaults(value: boolean): org.bukkit.configuration.file.FileConfigurationOptions
                     // @ts-ignore
-                    pathSeparator(value: string): org.bukkit.configuration.file.FileConfigurationOptions
+                    public pathSeparator(value: string): org.bukkit.configuration.file.FileConfigurationOptions
                     /**
                      * Gets the header that will be applied to the top of the saved output.
                      * <p>
@@ -30,7 +30,7 @@ declare namespace org {
                      * @return Header
                      */
                     // @ts-ignore
-                    header(): java.lang.String
+                    public header(): string
                     /**
                      * Sets the header that will be applied to the top of the saved output.
                      * <p>
@@ -46,7 +46,7 @@ declare namespace org {
                      * @return This object, for chaining
                      */
                     // @ts-ignore
-                    header(value: string): org.bukkit.configuration.file.FileConfigurationOptions
+                    public header(value: java.lang.String | string): org.bukkit.configuration.file.FileConfigurationOptions
                     /**
                      * Gets whether or not the header should be copied from a default source.
                      * <p>
@@ -65,7 +65,7 @@ declare namespace org {
                      * @return Whether or not to copy the header
                      */
                     // @ts-ignore
-                    copyHeader(): boolean
+                    public copyHeader(): boolean
                     /**
                      * Sets whether or not the header should be copied from a default source.
                      * <p>
@@ -85,7 +85,7 @@ declare namespace org {
                      * @return This object, for chaining
                      */
                     // @ts-ignore
-                    copyHeader(value: boolean): org.bukkit.configuration.file.FileConfigurationOptions
+                    public copyHeader(value: boolean): org.bukkit.configuration.file.FileConfigurationOptions
                 }
             }
         }

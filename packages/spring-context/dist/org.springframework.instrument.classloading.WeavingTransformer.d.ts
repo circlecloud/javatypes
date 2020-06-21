@@ -25,7 +25,7 @@ declare namespace org {
                      * @param transformer the class file transformer to register
                      */
                     // @ts-ignore
-                    addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
+                    public addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
                     /**
                      * Apply transformation on a given class byte definition.
                      * The method will always return a non-null byte array (if no transformation has taken place
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return (possibly transformed) class byte definition
                      */
                     // @ts-ignore
-                    transformIfNecessary(className: string, bytes: number /*byte*/[]): byte[]
+                    public transformIfNecessary(className: java.lang.String | string, bytes: number /*byte*/[]): number /*byte*/[]
                     /**
                      * Apply transformation on a given class byte definition.
                      * The method will always return a non-null byte array (if no transformation has taken place
@@ -47,7 +47,7 @@ declare namespace org {
                      * @return (possibly transformed) class byte definition
                      */
                     // @ts-ignore
-                    transformIfNecessary(className: string, internalName: string, bytes: number /*byte*/[], pd: java.security.ProtectionDomain): byte[]
+                    public transformIfNecessary(className: java.lang.String | string, internalName: java.lang.String | string, bytes: number /*byte*/[], pd: java.security.ProtectionDomain): number /*byte*/[]
                 }
             }
         }

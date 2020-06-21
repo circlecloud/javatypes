@@ -9,19 +9,19 @@ declare namespace org {
                     // @ts-ignore
                     class HorseColors extends java.lang.Object {
                         // @ts-ignore
-                        readonly BLACK: org.spongepowered.api.data.type.HorseColor
+                        public static readonly BLACK: org.spongepowered.api.data.type.HorseColor
                         // @ts-ignore
-                        readonly BROWN: org.spongepowered.api.data.type.HorseColor
+                        public static readonly BROWN: org.spongepowered.api.data.type.HorseColor
                         // @ts-ignore
-                        readonly CHESTNUT: org.spongepowered.api.data.type.HorseColor
+                        public static readonly CHESTNUT: org.spongepowered.api.data.type.HorseColor
                         // @ts-ignore
-                        readonly CREAMY: org.spongepowered.api.data.type.HorseColor
+                        public static readonly CREAMY: org.spongepowered.api.data.type.HorseColor
                         // @ts-ignore
-                        readonly DARK_BROWN: org.spongepowered.api.data.type.HorseColor
+                        public static readonly DARK_BROWN: org.spongepowered.api.data.type.HorseColor
                         // @ts-ignore
-                        readonly GRAY: org.spongepowered.api.data.type.HorseColor
+                        public static readonly GRAY: org.spongepowered.api.data.type.HorseColor
                         // @ts-ignore
-                        readonly WHITE: org.spongepowered.api.data.type.HorseColor
+                        public static readonly WHITE: org.spongepowered.api.data.type.HorseColor
                     }
                 }
             }

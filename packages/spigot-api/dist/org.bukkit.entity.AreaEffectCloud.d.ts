@@ -12,7 +12,7 @@ declare namespace org {
                  * @return cloud duration
                  */
                 // @ts-ignore
-                getDuration(): int
+                getDuration(): number /*int*/
                 /**
                  * Sets the duration which this cloud will exist for (in ticks).
                  * @param duration cloud duration
@@ -25,7 +25,7 @@ declare namespace org {
                  * @return wait time
                  */
                 // @ts-ignore
-                getWaitTime(): int
+                getWaitTime(): number /*int*/
                 /**
                  * Sets the time which an entity has to be exposed to the cloud before the
                  * effect is applied.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @return reapplication delay
                  */
                 // @ts-ignore
-                getReapplicationDelay(): int
+                getReapplicationDelay(): number /*int*/
                 /**
                  * Sets the time that an entity will be immune from subsequent exposure.
                  * @param delay reapplication delay
@@ -51,7 +51,7 @@ declare namespace org {
                  * @return duration on use delta
                  */
                 // @ts-ignore
-                getDurationOnUse(): int
+                getDurationOnUse(): number /*int*/
                 /**
                  * Sets the amount that the duration of this cloud will decrease by when it
                  * applies an effect to an entity.
@@ -64,7 +64,7 @@ declare namespace org {
                  * @return radius
                  */
                 // @ts-ignore
-                getRadius(): float
+                getRadius(): number /*float*/
                 /**
                  * Sets the initial radius of the cloud.
                  * @param radius radius
@@ -77,7 +77,7 @@ declare namespace org {
                  * @return radius on use delta
                  */
                 // @ts-ignore
-                getRadiusOnUse(): float
+                getRadiusOnUse(): number /*float*/
                 /**
                  * Sets the amount that the radius of this cloud will decrease by when it
                  * applies an effect to an entity.
@@ -90,7 +90,7 @@ declare namespace org {
                  * @return radius per tick delta
                  */
                 // @ts-ignore
-                getRadiusPerTick(): float
+                getRadiusPerTick(): number /*float*/
                 /**
                  * Gets the amount that the radius of this cloud will decrease by each tick.
                  * @param radius per tick delta
@@ -145,7 +145,7 @@ declare namespace org {
                  * @return the immutable list of custom potion effects
                  */
                 // @ts-ignore
-                getCustomEffects(): java.util.List<org.bukkit.potion.PotionEffect>
+                getCustomEffects(): Array<org.bukkit.potion.PotionEffect>
                 /**
                  * Adds a custom potion effect to this cloud.
                  * @param effect the potion effect to add

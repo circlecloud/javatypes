@@ -25,29 +25,29 @@ declare namespace org {
                  * @return true if powered, otherwise false
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 /**
                  * Sets the current state of this button
                  * @param bool
                  *             whether or not the button is powered
                  */
                 // @ts-ignore
-                setPowered(bool: boolean): void
+                public setPowered(bool: boolean): void
                 /**
                  * Gets the face that this block is attached on
                  * @return BlockFace attached to
                  */
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 /**
                  * Sets the direction this button is pointing toward
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Button
+                public clone(): org.bukkit.material.Button
             }
         }
     }

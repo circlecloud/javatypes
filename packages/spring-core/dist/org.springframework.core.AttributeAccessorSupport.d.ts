@@ -10,19 +10,19 @@ declare namespace org {
              * @since 2.0
              */
             // @ts-ignore
-            class AttributeAccessorSupport extends java.lang.Object implements org.springframework.core.AttributeAccessor, java.io.Serializable {
+            abstract class AttributeAccessorSupport extends java.lang.Object implements org.springframework.core.AttributeAccessor, java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                setAttribute(name: string, value: any): void
+                public setAttribute(name: java.lang.String | string, value: java.lang.Object | any): void
                 // @ts-ignore
-                getAttribute(name: string): java.lang.Object
+                public getAttribute(name: java.lang.String | string): any
                 // @ts-ignore
-                removeAttribute(name: string): java.lang.Object
+                public removeAttribute(name: java.lang.String | string): any
                 // @ts-ignore
-                hasAttribute(name: string): boolean
+                public hasAttribute(name: java.lang.String | string): boolean
                 // @ts-ignore
-                attributeNames(): java.lang.String[]
+                public attributeNames(): string[]
                 /**
                  * Copy the attributes from the supplied AttributeAccessor to this accessor.
                  * @param source the AttributeAccessor to copy from
@@ -30,9 +30,9 @@ declare namespace org {
                 // @ts-ignore
                 copyAttributesFrom(source: org.springframework.core.AttributeAccessor): void
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

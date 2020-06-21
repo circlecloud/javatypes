@@ -18,7 +18,7 @@ declare namespace org {
                      *          downloaded from the URI
                      */
                     // @ts-ignore
-                    fromUri(uri: java.net.URI): org.spongepowered.api.resourcepack.ResourcePack
+                    public static fromUri(uri: java.net.URI): org.spongepowered.api.resourcepack.ResourcePack
                     /**
                      * Creates a {@link ResourcePack} from a URI, without checking ("unchecked")
                      * if there is a valid pack at the URI.
@@ -26,7 +26,7 @@ declare namespace org {
                      * @return A ResourcePack with the specified URI
                      */
                     // @ts-ignore
-                    fromUriUnchecked(uri: java.net.URI): org.spongepowered.api.resourcepack.ResourcePack
+                    public static fromUriUnchecked(uri: java.net.URI): org.spongepowered.api.resourcepack.ResourcePack
                 }
             }
         }

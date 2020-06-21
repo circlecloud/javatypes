@@ -30,13 +30,13 @@ declare namespace java {
                  * @param event  the AWT event
                  */
                 // @ts-ignore
-                eventDispatched(event: java.awt.AWTEvent): void
+                public eventDispatched(event: java.awt.AWTEvent): void
                 /**
                  * Returns the event mask associated with the listener.
                  * @return the event mask associated with the listener
                  */
                 // @ts-ignore
-                getEventMask(): long
+                public getEventMask(): number /*long*/
             }
         }
     }

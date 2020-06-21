@@ -23,27 +23,27 @@ declare namespace org {
                                      * Generally used to describe the damage taken when by the dragon breath attack.
                                      */
                                     // @ts-ignore
-                                    readonly DRAGON_BREATH: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly DRAGON_BREATH: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly DROWNING: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly DROWNING: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly FALLING: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly FALLING: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly FIRE_TICK: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly FIRE_TICK: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly GENERIC: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly GENERIC: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly MAGIC: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly MAGIC: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly MELTING: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly MELTING: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly POISON: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly POISON: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly STARVATION: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly STARVATION: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly VOID: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly VOID: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                     // @ts-ignore
-                                    readonly WITHER: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
+                                    public static readonly WITHER: org.spongepowered.api.event.cause.entity.damage.source.DamageSource
                                 }
                             }
                         }

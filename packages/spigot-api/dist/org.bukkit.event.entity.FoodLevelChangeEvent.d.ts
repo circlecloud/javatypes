@@ -12,13 +12,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(what: org.bukkit.entity.HumanEntity, level: number /*int*/, item: org.bukkit.inventory.ItemStack)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.HumanEntity
+                    public getEntity(): org.bukkit.entity.HumanEntity
                     /**
                      * Gets the item that triggered this event, if any.
                      * @return an ItemStack for the item being consumed
                      */
                     // @ts-ignore
-                    getItem(): org.bukkit.inventory.ItemStack
+                    public getItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the resultant food level that the entity involved in this event
                      * should be set to.
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return The resultant food level
                      */
                     // @ts-ignore
-                    getFoodLevel(): int
+                    public getFoodLevel(): number /*int*/
                     /**
                      * Sets the resultant food level that the entity involved in this event
                      * should be set to
@@ -35,15 +35,15 @@ declare namespace org {
                      *      event should be set to
                      */
                     // @ts-ignore
-                    setFoodLevel(level: number /*int*/): void
+                    public setFoodLevel(level: number /*int*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

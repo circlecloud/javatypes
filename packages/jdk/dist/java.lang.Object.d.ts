@@ -28,7 +28,7 @@ declare namespace java {
              * 					the interface Cloneable.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
             /**
              * Compares the argument to the receiver, and answers true
              * if they represent the <em>same</em> object using a class
@@ -45,7 +45,7 @@ declare namespace java {
              * @see #hashCode
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Called by the virtual machine when there are no longer any (non-weak)
              * references to the receiver. Subclasses can use this facility to
@@ -68,7 +68,7 @@ declare namespace java {
              * @return the receiver's Class
              */
             // @ts-ignore
-            getClass(): java.lang.Class<? extends java.lang.Object>
+            public getClass(): java.lang.Class<any>
             /**
              * Answers an integer hash code for the receiver. Any two
              * objects which answer <code>true</code> when passed to
@@ -78,7 +78,7 @@ declare namespace java {
              * @see #equals
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Causes one thread which is <code>wait</code>ing on the
              * receiver to be made ready to run. This does not guarantee
@@ -91,7 +91,7 @@ declare namespace java {
              * @see java.lang.Thread
              */
             // @ts-ignore
-            notify(): void
+            public notify(): void
             /**
              * Causes all threads which are <code>wait</code>ing on the
              * receiver to be made ready to run. The threads are scheduled
@@ -107,7 +107,7 @@ declare namespace java {
              * @see java.lang.Thread
              */
             // @ts-ignore
-            notifyAll(): void
+            public notifyAll(): void
             /**
              * Answers a string containing a concise, human-readable
              * description of the receiver.
@@ -115,7 +115,7 @@ declare namespace java {
              * 					a printable representation for the receiver.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Causes the thread which sent this message to be made not
              * ready to run pending some change in the receiver (as
@@ -139,7 +139,7 @@ declare namespace java {
              * @see java.lang.Thread
              */
             // @ts-ignore
-            wait(): void
+            public wait(): void
             /**
              * Causes the thread which sent this message to be made not
              * ready to run either pending some change in the receiver
@@ -164,7 +164,7 @@ declare namespace java {
              * @see java.lang.Thread
              */
             // @ts-ignore
-            wait(time: number /*long*/): void
+            public wait(time: number /*long*/): void
             /**
              * Causes the thread which sent this message to be made not
              * ready to run either pending some change in the receiver
@@ -192,7 +192,7 @@ declare namespace java {
              * @see java.lang.Thread
              */
             // @ts-ignore
-            wait(time: number /*long*/, frac: number /*int*/): void
+            public wait(time: number /*long*/, frac: number /*int*/): void
         }
     }
 }

@@ -14,7 +14,7 @@ declare namespace javax {
              *  appears more than once.
              */
             // @ts-ignore
-            constructor(fieldNames: string[], fieldValues: any[])
+            constructor(fieldNames: java.lang.String[] | string[], fieldValues: java.lang.Object[] | any[])
             /**
              * Construct a descriptor containing the given fields.  Each String
              * must be of the form {@code fieldName=fieldValue}.  The field name
@@ -27,7 +27,7 @@ declare namespace javax {
              *  an {#code =} character.
              */
             // @ts-ignore
-            constructor(...fields: string[])
+            constructor(...fields: java.lang.String[] | string[])
             /**
              * <p>Construct a descriptor where the names and values of the fields
              * are the keys and values of the given Map.</p>
@@ -37,12 +37,12 @@ declare namespace javax {
              *  sensitive).
              */
             // @ts-ignore
-            constructor(fields: java.util.Map<java.lang.String, any>)
+            constructor(fields: java.util.Map<java.lang.String | string, any>)
             /**
              * An empty descriptor.
              */
             // @ts-ignore
-            readonly EMPTY_DESCRIPTOR: javax.management.ImmutableDescriptor
+            public static readonly EMPTY_DESCRIPTOR: javax.management.ImmutableDescriptor
             /**
              * <p>Return an {@code ImmutableDescriptor} whose contents are the union of
              * the given descriptors.  Every field name that appears in any of
@@ -70,15 +70,15 @@ declare namespace javax {
              *  {#link Arrays#deepEquals(Object[],Object[])} returns true.
              */
             // @ts-ignore
-            union(...descriptors: javax.management.Descriptor[]): javax.management.ImmutableDescriptor
+            public static union(...descriptors: javax.management.Descriptor[]): javax.management.ImmutableDescriptor
             // @ts-ignore
-            getFieldValue(fieldName: string): java.lang.Object
+            public getFieldValue(fieldName: java.lang.String | string): any
             // @ts-ignore
-            getFields(): java.lang.String[]
+            public getFields(): string[]
             // @ts-ignore
-            getFieldValues(...fieldNames: string[]): java.lang.Object[]
+            public getFieldValues(...fieldNames: java.lang.String[] | string[]): any[]
             // @ts-ignore
-            getFieldNames(): java.lang.String[]
+            public getFieldNames(): string[]
             /**
              * Compares this descriptor to the given object.  The objects are equal if
              * the given object is also a Descriptor, and if the two Descriptors have
@@ -98,7 +98,7 @@ declare namespace javax {
              *  otherwise.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * <p>Returns the hash code value for this descriptor.  The hash
              * code is computed as the sum of the hash codes for each field in
@@ -117,9 +117,9 @@ declare namespace javax {
              * @return A hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns true if all of the fields have legal values given their
              * names.  This method always returns true, but a subclass can
@@ -130,7 +130,7 @@ declare namespace javax {
              *  this exception if the attempt to determine validity fails.
              */
             // @ts-ignore
-            isValid(): boolean
+            public isValid(): boolean
             /**
              * <p>Returns a descriptor which is equal to this descriptor.
              * Changes to the returned descriptor will have no effect on this
@@ -144,7 +144,7 @@ declare namespace javax {
              *  be thrown.
              */
             // @ts-ignore
-            clone(): javax.management.Descriptor
+            public clone(): javax.management.Descriptor
             /**
              * This operation is unsupported since this class is immutable.  If
              * this call would change a mutable descriptor with the same contents,
@@ -155,7 +155,7 @@ declare namespace javax {
              * there is no effect.
              */
             // @ts-ignore
-            setFields(fieldNames: string[], fieldValues: any[]): void
+            public setFields(fieldNames: java.lang.String[] | string[], fieldValues: java.lang.Object[] | any[]): void
             /**
              * This operation is unsupported since this class is immutable.  If
              * this call would change a mutable descriptor with the same contents,
@@ -166,7 +166,7 @@ declare namespace javax {
              * there is no effect.
              */
             // @ts-ignore
-            setField(fieldName: string, fieldValue: any): void
+            public setField(fieldName: java.lang.String | string, fieldValue: java.lang.Object | any): void
             /**
              * Removes a field from the descriptor.
              * @param fieldName String name of the field to be removed.
@@ -177,7 +177,7 @@ declare namespace javax {
              *  be an {#link UnsupportedOperationException}.
              */
             // @ts-ignore
-            removeField(fieldName: string): void
+            public removeField(fieldName: java.lang.String | string): void
         }
     }
 }

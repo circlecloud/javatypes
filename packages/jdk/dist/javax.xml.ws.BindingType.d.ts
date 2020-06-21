@@ -11,7 +11,7 @@ declare namespace javax {
              * @since JAX-WS 2.0
              */
             // @ts-ignore
-            class BindingType implements java.lang.annotation.Annotation {
+            abstract class BindingType implements java.lang.annotation.Annotation {
             }
         }
     }

@@ -109,7 +109,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                add(rhs: java.awt.geom.Area): void
+                public add(rhs: java.awt.geom.Area): void
                 /**
                  * Subtracts the shape of the specified <code>Area</code> from the
                  * shape of this <code>Area</code>.
@@ -137,7 +137,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                subtract(rhs: java.awt.geom.Area): void
+                public subtract(rhs: java.awt.geom.Area): void
                 /**
                  * Sets the shape of this <code>Area</code> to the intersection of
                  * its current shape and the shape of the specified <code>Area</code>.
@@ -165,7 +165,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersect(rhs: java.awt.geom.Area): void
+                public intersect(rhs: java.awt.geom.Area): void
                 /**
                  * Sets the shape of this <code>Area</code> to be the combined area
                  * of its current shape and the shape of the specified <code>Area</code>,
@@ -194,14 +194,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exclusiveOr(rhs: java.awt.geom.Area): void
+                public exclusiveOr(rhs: java.awt.geom.Area): void
                 /**
                  * Removes all of the geometry from this <code>Area</code> and
                  * restores it to an empty area.
                  * @since 1.2
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Tests whether this <code>Area</code> object encloses any area.
                  * @return <code>true</code> if this <code>Area</code> object
@@ -209,7 +209,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Tests whether this <code>Area</code> consists entirely of
                  * straight edged polygonal geometry.
@@ -219,7 +219,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                isPolygonal(): boolean
+                public isPolygonal(): boolean
                 /**
                  * Tests whether this <code>Area</code> is rectangular in shape.
                  * @return <code>true</code> if the geometry of this
@@ -228,7 +228,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                isRectangular(): boolean
+                public isRectangular(): boolean
                 /**
                  * Tests whether this <code>Area</code> is comprised of a single
                  * closed subpath.  This method returns <code>true</code> if the
@@ -241,7 +241,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                isSingular(): boolean
+                public isSingular(): boolean
                 /**
                  * Returns a high precision bounding {@link Rectangle2D} that
                  * completely encloses this <code>Area</code>.
@@ -256,7 +256,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds2D(): java.awt.geom.Rectangle2D
+                public getBounds2D(): java.awt.geom.Rectangle2D
                 /**
                  * Returns a bounding {@link Rectangle} that completely encloses
                  * this <code>Area</code>.
@@ -274,14 +274,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getBounds(): java.awt.Rectangle
+                public getBounds(): java.awt.Rectangle
                 /**
                  * Returns an exact copy of this <code>Area</code> object.
                  * @return Created clone object
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Tests whether the geometries of the two <code>Area</code> objects
                  * are equal.
@@ -293,7 +293,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(other: java.awt.geom.Area): boolean
+                public equals(other: java.awt.geom.Area): boolean
                 /**
                  * Transforms the geometry of this <code>Area</code> using the specified
                  * {@link AffineTransform}.  The geometry is transformed in place, which
@@ -303,7 +303,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                transform(t: java.awt.geom.AffineTransform): void
+                public transform(t: java.awt.geom.AffineTransform): void
                 /**
                  * Creates a new <code>Area</code> object that contains the same
                  * geometry as this <code>Area</code> transformed by the specified
@@ -317,43 +317,43 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                createTransformedArea(t: java.awt.geom.AffineTransform): java.awt.geom.Area
+                public createTransformedArea(t: java.awt.geom.AffineTransform): java.awt.geom.Area
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(p: java.awt.geom.Point2D): boolean
+                public contains(p: java.awt.geom.Point2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(r: java.awt.geom.Rectangle2D): boolean
+                public contains(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(r: java.awt.geom.Rectangle2D): boolean
+                public intersects(r: java.awt.geom.Rectangle2D): boolean
                 /**
                  * Creates a {@link PathIterator} for the outline of this
                  * <code>Area</code> object.  This <code>Area</code> object is unchanged.
@@ -366,7 +366,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                 /**
                  * Creates a <code>PathIterator</code> for the flattened outline of
                  * this <code>Area</code> object.  Only uncurved path segments
@@ -386,7 +386,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform, flatness: number /*double*/): java.awt.geom.PathIterator
             }
         }
     }

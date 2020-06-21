@@ -14,17 +14,17 @@ declare namespace org {
                      * @return The old level of the player
                      */
                     // @ts-ignore
-                    getOldLevel(): int
+                    public getOldLevel(): number /*int*/
                     /**
                      * Gets the new level of the player
                      * @return The new (current) level of the player
                      */
                     // @ts-ignore
-                    getNewLevel(): int
+                    public getNewLevel(): number /*int*/
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

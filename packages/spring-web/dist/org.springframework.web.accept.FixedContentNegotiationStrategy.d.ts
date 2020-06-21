@@ -22,14 +22,14 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    constructor(contentTypes: Array<org.springframework.http.MediaType>)
+                    constructor(contentTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>)
                     /**
                      * Return the configured list of media types.
                      */
                     // @ts-ignore
-                    getContentTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getContentTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    resolveMediaTypes(request: org.springframework.web.context.request.NativeWebRequest): java.util.List<org.springframework.http.MediaType>
+                    public resolveMediaTypes(request: org.springframework.web.context.request.NativeWebRequest): Array<org.springframework.http.MediaType>
                 }
             }
         }

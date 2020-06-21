@@ -42,33 +42,33 @@ declare namespace org {
                 // @ts-ignore
                 class InventoryDragEvent extends org.bukkit.event.inventory.InventoryInteractEvent {
                     // @ts-ignore
-                    constructor(what: org.bukkit.inventory.InventoryView, newCursor: org.bukkit.inventory.ItemStack, oldCursor: org.bukkit.inventory.ItemStack, right: boolean, slots: java.util.Map<java.lang.Integer, org.bukkit.inventory.ItemStack>)
+                    constructor(what: org.bukkit.inventory.InventoryView, newCursor: org.bukkit.inventory.ItemStack, oldCursor: org.bukkit.inventory.ItemStack, right: boolean, slots: java.util.Map<java.lang.Integer | number, org.bukkit.inventory.ItemStack>)
                     /**
                      * Gets all items to be added to the inventory in this drag.
                      * @return map from raw slot id to new ItemStack
                      */
                     // @ts-ignore
-                    getNewItems(): java.util.Map<java.lang.Integer, org.bukkit.inventory.ItemStack>
+                    public getNewItems(): java.util.Map<java.lang.Integer | number, org.bukkit.inventory.ItemStack>
                     /**
                      * Gets the raw slot ids to be changed in this drag.
                      * @return list of raw slot ids, suitable for getView().getItem(int)
                      */
                     // @ts-ignore
-                    getRawSlots(): java.util.Set<java.lang.Integer>
+                    public getRawSlots(): Array<java.lang.Integer | number>
                     /**
                      * Gets the slots to be changed in this drag.
                      * @return list of converted slot ids, suitable for {#link
                      *      org.bukkit.inventory.Inventory#getItem(int)}.
                      */
                     // @ts-ignore
-                    getInventorySlots(): java.util.Set<java.lang.Integer>
+                    public getInventorySlots(): Array<java.lang.Integer | number>
                     /**
                      * Gets the result cursor after the drag is done. The returned value is
                      * mutable.
                      * @return the result cursor
                      */
                     // @ts-ignore
-                    getCursor(): org.bukkit.inventory.ItemStack
+                    public getCursor(): org.bukkit.inventory.ItemStack
                     /**
                      * Sets the result cursor after the drag is done.
                      * <p>
@@ -78,14 +78,14 @@ declare namespace org {
                      * @param newCursor the new cursor ItemStack
                      */
                     // @ts-ignore
-                    setCursor(newCursor: org.bukkit.inventory.ItemStack): void
+                    public setCursor(newCursor: org.bukkit.inventory.ItemStack): void
                     /**
                      * Gets an ItemStack representing the cursor prior to any modifications
                      * as a result of this drag.
                      * @return the original cursor
                      */
                     // @ts-ignore
-                    getOldCursor(): org.bukkit.inventory.ItemStack
+                    public getOldCursor(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the DragType that describes the behavior of ItemStacks placed
                      * after this InventoryDragEvent.
@@ -95,11 +95,11 @@ declare namespace org {
                      * @return the DragType of this InventoryDragEvent
                      */
                     // @ts-ignore
-                    getType(): org.bukkit.event.inventory.DragType
+                    public getType(): org.bukkit.event.inventory.DragType
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

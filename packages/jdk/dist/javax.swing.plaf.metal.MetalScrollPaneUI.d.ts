@@ -20,13 +20,13 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    installListeners(scrollPane: javax.swing.JScrollPane): void
+                    public installListeners(scrollPane: javax.swing.JScrollPane): void
                     /**
                      * {@inheritDoc}
                      */
@@ -36,7 +36,7 @@ declare namespace javax {
                      * @deprecated - Replaced by {#link #uninstallListeners(JComponent)}
                      */
                     // @ts-ignore
-                    uninstallListeners(scrollPane: javax.swing.JScrollPane): void
+                    public uninstallListeners(scrollPane: javax.swing.JScrollPane): void
                     // @ts-ignore
                     createScrollBarSwapListener(): java.beans.PropertyChangeListener
                 }

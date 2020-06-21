@@ -38,22 +38,22 @@ declare namespace org {
                          * Indicates that the validation should be disabled.
                          */
                         // @ts-ignore
-                        readonly VALIDATION_NONE: number /*int*/
+                        public static readonly VALIDATION_NONE: number /*int*/
                         /**
                          * Indicates that the validation mode should be detected automatically.
                          */
                         // @ts-ignore
-                        readonly VALIDATION_AUTO: number /*int*/
+                        public static readonly VALIDATION_AUTO: number /*int*/
                         /**
                          * Indicates that DTD validation should be used.
                          */
                         // @ts-ignore
-                        readonly VALIDATION_DTD: number /*int*/
+                        public static readonly VALIDATION_DTD: number /*int*/
                         /**
                          * Indicates that XSD validation should be used.
                          */
                         // @ts-ignore
-                        readonly VALIDATION_XSD: number /*int*/
+                        public static readonly VALIDATION_XSD: number /*int*/
                         /**
                          * Set whether to use XML validation. Default is {@code true}.
                          * <p>This method switches namespace awareness on if validation is turned off,
@@ -62,13 +62,13 @@ declare namespace org {
                          * @see #setNamespaceAware
                          */
                         // @ts-ignore
-                        setValidating(validating: boolean): void
+                        public setValidating(validating: boolean): void
                         /**
                          * Set the validation mode to use by name. Defaults to {@link #VALIDATION_AUTO}.
                          * @see #setValidationMode
                          */
                         // @ts-ignore
-                        setValidationModeName(validationModeName: string): void
+                        public setValidationModeName(validationModeName: java.lang.String | string): void
                         /**
                          * Set the validation mode to use. Defaults to {@link #VALIDATION_AUTO}.
                          * <p>Note that this only activates or deactivates validation itself.
@@ -76,12 +76,12 @@ declare namespace org {
                          * activate schema namespace support explicitly: see {@link #setNamespaceAware}.
                          */
                         // @ts-ignore
-                        setValidationMode(validationMode: number /*int*/): void
+                        public setValidationMode(validationMode: number /*int*/): void
                         /**
                          * Return the validation mode to use.
                          */
                         // @ts-ignore
-                        getValidationMode(): int
+                        public getValidationMode(): number /*int*/
                         /**
                          * Set whether or not the XML parser should be XML namespace aware.
                          * Default is "false".
@@ -90,12 +90,12 @@ declare namespace org {
                          * in order to properly process schema namespaces.
                          */
                         // @ts-ignore
-                        setNamespaceAware(namespaceAware: boolean): void
+                        public setNamespaceAware(namespaceAware: boolean): void
                         /**
                          * Return whether or not the XML parser should be XML namespace aware.
                          */
                         // @ts-ignore
-                        isNamespaceAware(): boolean
+                        public isNamespaceAware(): boolean
                         /**
                          * Specify which {@link org.springframework.beans.factory.parsing.ProblemReporter} to use.
                          * <p>The default implementation is {@link org.springframework.beans.factory.parsing.FailFastProblemReporter}
@@ -103,7 +103,7 @@ declare namespace org {
                          * that collates errors and warnings for display in the tool UI.
                          */
                         // @ts-ignore
-                        setProblemReporter(problemReporter: org.springframework.beans.factory.parsing.ProblemReporter): void
+                        public setProblemReporter(problemReporter: org.springframework.beans.factory.parsing.ProblemReporter): void
                         /**
                          * Specify which {@link ReaderEventListener} to use.
                          * <p>The default implementation is EmptyReaderEventListener which discards every event notification.
@@ -111,7 +111,7 @@ declare namespace org {
                          * registered in the BeanFactory.
                          */
                         // @ts-ignore
-                        setEventListener(eventListener: org.springframework.beans.factory.parsing.ReaderEventListener): void
+                        public setEventListener(eventListener: org.springframework.beans.factory.parsing.ReaderEventListener): void
                         /**
                          * Specify the {@link SourceExtractor} to use.
                          * <p>The default implementation is {@link NullSourceExtractor} which simply returns {@code null}
@@ -119,28 +119,28 @@ declare namespace org {
                          * no additional source metadata is attached to the bean configuration metadata.
                          */
                         // @ts-ignore
-                        setSourceExtractor(sourceExtractor: org.springframework.beans.factory.parsing.SourceExtractor): void
+                        public setSourceExtractor(sourceExtractor: org.springframework.beans.factory.parsing.SourceExtractor): void
                         /**
                          * Specify the {@link NamespaceHandlerResolver} to use.
                          * <p>If none is specified, a default instance will be created through
                          * {@link #createDefaultNamespaceHandlerResolver()}.
                          */
                         // @ts-ignore
-                        setNamespaceHandlerResolver(namespaceHandlerResolver: org.springframework.beans.factory.xml.NamespaceHandlerResolver): void
+                        public setNamespaceHandlerResolver(namespaceHandlerResolver: org.springframework.beans.factory.xml.NamespaceHandlerResolver): void
                         /**
                          * Specify the {@link DocumentLoader} to use.
                          * <p>The default implementation is {@link DefaultDocumentLoader}
                          * which loads {@link Document} instances using JAXP.
                          */
                         // @ts-ignore
-                        setDocumentLoader(documentLoader: org.springframework.beans.factory.xml.DocumentLoader): void
+                        public setDocumentLoader(documentLoader: org.springframework.beans.factory.xml.DocumentLoader): void
                         /**
                          * Set a SAX entity resolver to be used for parsing.
                          * <p>By default, {@link ResourceEntityResolver} will be used. Can be overridden
                          * for custom entity resolution, for example relative to some specific base path.
                          */
                         // @ts-ignore
-                        setEntityResolver(entityResolver: org.xml.sax.EntityResolver): void
+                        public setEntityResolver(entityResolver: org.xml.sax.EntityResolver): void
                         /**
                          * Return the EntityResolver to use, building a default resolver
                          * if none specified.
@@ -156,7 +156,7 @@ declare namespace org {
                          * @see SimpleSaxErrorHandler
                          */
                         // @ts-ignore
-                        setErrorHandler(errorHandler: org.xml.sax.ErrorHandler): void
+                        public setErrorHandler(errorHandler: org.xml.sax.ErrorHandler): void
                         /**
                          * Specify the {@link BeanDefinitionDocumentReader} implementation to use,
                          * responsible for the actual reading of the XML bean definition document.
@@ -164,7 +164,7 @@ declare namespace org {
                          * @param documentReaderClass the desired BeanDefinitionDocumentReader implementation class
                          */
                         // @ts-ignore
-                        setDocumentReaderClass(documentReaderClass: java.lang.Class<org.springframework.beans.factory.xml.BeanDefinitionDocumentReader>): void
+                        public setDocumentReaderClass(documentReaderClass: java.lang.Class<any>): void
                         /**
                          * Load bean definitions from the specified XML file.
                          * @param resource the resource descriptor for the XML file
@@ -172,7 +172,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(resource: Resource): int
+                        public loadBeanDefinitions(resource: Resource): number /*int*/
                         /**
                          * Load bean definitions from the specified XML file.
                          * @param encodedResource the resource descriptor for the XML file,
@@ -181,7 +181,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(encodedResource: EncodedResource): int
+                        public loadBeanDefinitions(encodedResource: EncodedResource): number /*int*/
                         /**
                          * Load bean definitions from the specified XML file.
                          * @param inputSource the SAX InputSource to read from
@@ -191,7 +191,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(inputSource: org.xml.sax.InputSource, resourceDescription: string): int
+                        public loadBeanDefinitions(inputSource: org.xml.sax.InputSource, resourceDescription: java.lang.String | string): number /*int*/
                         /**
                          * Actually load bean definitions from the specified XML file.
                          * @param inputSource the SAX InputSource to read from
@@ -202,7 +202,7 @@ declare namespace org {
                          * @see #registerBeanDefinitions
                          */
                         // @ts-ignore
-                        doLoadBeanDefinitions(inputSource: org.xml.sax.InputSource, resource: Resource): int
+                        doLoadBeanDefinitions(inputSource: org.xml.sax.InputSource, resource: Resource): number /*int*/
                         /**
                          * Actually load the specified document using the configured DocumentLoader.
                          * @param inputSource the SAX InputSource to read from
@@ -223,7 +223,7 @@ declare namespace org {
                          * @see #detectValidationMode
                          */
                         // @ts-ignore
-                        getValidationModeForResource(resource: Resource): int
+                        getValidationModeForResource(resource: Resource): number /*int*/
                         /**
                          * Detect which kind of validation to perform on the XML file identified
                          * by the supplied {@link Resource}. If the file has a {@code DOCTYPE}
@@ -232,7 +232,7 @@ declare namespace org {
                          * of the {@link #VALIDATION_AUTO} mode.
                          */
                         // @ts-ignore
-                        detectValidationMode(resource: Resource): int
+                        detectValidationMode(resource: Resource): number /*int*/
                         /**
                          * Register the bean definitions contained in the given DOM document.
                          * Called by {@code loadBeanDefinitions}.
@@ -247,7 +247,7 @@ declare namespace org {
                          * @see BeanDefinitionDocumentReader#registerBeanDefinitions
                          */
                         // @ts-ignore
-                        registerBeanDefinitions(doc: org.w3c.dom.Document, resource: Resource): int
+                        public registerBeanDefinitions(doc: org.w3c.dom.Document, resource: Resource): number /*int*/
                         /**
                          * Create the {@link BeanDefinitionDocumentReader} to use for actually
                          * reading bean definitions from an XML document.
@@ -260,13 +260,13 @@ declare namespace org {
                          * Create the {@link XmlReaderContext} to pass over to the document reader.
                          */
                         // @ts-ignore
-                        createReaderContext(resource: Resource): org.springframework.beans.factory.xml.XmlReaderContext
+                        public createReaderContext(resource: Resource): org.springframework.beans.factory.xml.XmlReaderContext
                         /**
                          * Lazily create a default NamespaceHandlerResolver, if not set before.
                          * @see #createDefaultNamespaceHandlerResolver()
                          */
                         // @ts-ignore
-                        getNamespaceHandlerResolver(): org.springframework.beans.factory.xml.NamespaceHandlerResolver
+                        public getNamespaceHandlerResolver(): org.springframework.beans.factory.xml.NamespaceHandlerResolver
                         /**
                          * Create the default implementation of {@link NamespaceHandlerResolver} used if none is specified.
                          * <p>The default implementation returns an instance of {@link DefaultNamespaceHandlerResolver}.

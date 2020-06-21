@@ -18,17 +18,17 @@ declare namespace org {
                      *      bobber has gotten stuck in the ground or nothing has been caught
                      */
                     // @ts-ignore
-                    getCaught(): org.bukkit.entity.Entity
+                    public getCaught(): org.bukkit.entity.Entity
                     /**
                      * Gets the fishing hook.
                      * @return the entity representing the fishing hook/bobber.
                      */
                     // @ts-ignore
-                    getHook(): org.bukkit.entity.FishHook
+                    public getHook(): org.bukkit.entity.FishHook
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the amount of experience received when fishing.
                      * <p>
@@ -37,7 +37,7 @@ declare namespace org {
                      * @return the amount of experience to drop
                      */
                     // @ts-ignore
-                    getExpToDrop(): int
+                    public getExpToDrop(): number /*int*/
                     /**
                      * Sets the amount of experience received when fishing.
                      * <p>
@@ -46,17 +46,17 @@ declare namespace org {
                      * @param amount the amount of experience to drop
                      */
                     // @ts-ignore
-                    setExpToDrop(amount: number /*int*/): void
+                    public setExpToDrop(amount: number /*int*/): void
                     /**
                      * Gets the state of the fishing
                      * @return A State detailing the state of the fishing
                      */
                     // @ts-ignore
-                    getState(): org.bukkit.event.player.PlayerFishEvent.State
+                    public getState(): org.bukkit.event.player.PlayerFishEvent.State
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

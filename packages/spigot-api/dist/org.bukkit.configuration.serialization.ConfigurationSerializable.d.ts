@@ -30,7 +30,7 @@ declare namespace org {
                      * @return Map containing the current state of this class
                      */
                     // @ts-ignore
-                    serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                    serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 }
             }
         }

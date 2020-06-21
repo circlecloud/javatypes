@@ -23,7 +23,7 @@ declare namespace org {
                              * @return The unary operator
                              */
                             // @ts-ignore
-                            getFunction(): java.util.function.DoubleUnaryOperator
+                            getFunction(): java.util.function$.DoubleUnaryOperator
                         }
                     }
                 }

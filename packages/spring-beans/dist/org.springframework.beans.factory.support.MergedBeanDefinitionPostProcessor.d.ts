@@ -28,7 +28,7 @@ declare namespace org {
                          * @see AbstractAutowireCapableBeanFactory#applyMergedBeanDefinitionPostProcessors
                          */
                         // @ts-ignore
-                        postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                        postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                         /**
                          * A notification that the bean definition for the specified name has been reset,
                          * and that this post-processor should clear any metadata for the affected bean.
@@ -38,7 +38,7 @@ declare namespace org {
                          * @see DefaultListableBeanFactory#resetBeanDefinition
                          */
                         // @ts-ignore
-                        resetBeanDefinition(beanName: string): void
+                        resetBeanDefinition(beanName: java.lang.String | string): void
                     }
                 }
             }

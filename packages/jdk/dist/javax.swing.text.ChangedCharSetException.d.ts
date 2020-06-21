@@ -9,9 +9,9 @@ declare namespace javax {
             // @ts-ignore
             class ChangedCharSetException extends java.io.IOException {
                 // @ts-ignore
-                constructor(charSetSpec: string, charSetKey: boolean)
+                constructor(charSetSpec: java.lang.String | string, charSetKey: boolean)
                 // @ts-ignore
-                getCharSetSpec(): java.lang.String
+                getCharSetSpec(): string
                 // @ts-ignore
                 keyEqualsCharSet(): boolean
             }

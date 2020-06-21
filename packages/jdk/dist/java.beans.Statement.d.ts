@@ -31,7 +31,7 @@ declare namespace java {
              * @param arguments  the array of arguments to invoke the specified method
              */
             // @ts-ignore
-            constructor(target: any, methodName: string, arguments: any[])
+            constructor(target: java.lang.Object | any, methodName: java.lang.String | string, arguments: java.lang.Object[] | any[])
             /**
              * Returns the target object of this statement.
              * If this method returns {@code null},
@@ -40,7 +40,7 @@ declare namespace java {
              * @return the target object of this statement
              */
             // @ts-ignore
-            getTarget(): java.lang.Object
+            public getTarget(): any
             /**
              * Returns the name of the method to invoke.
              * If this method returns {@code null},
@@ -49,7 +49,7 @@ declare namespace java {
              * @return the name of the method
              */
             // @ts-ignore
-            getMethodName(): java.lang.String
+            public getMethodName(): string
             /**
              * Returns the arguments for the method to invoke.
              * The number of arguments and their types
@@ -58,7 +58,7 @@ declare namespace java {
              * @return the array of arguments
              */
             // @ts-ignore
-            getArguments(): java.lang.Object[]
+            public getArguments(): any[]
             /**
              * The {@code execute} method finds a method whose name is the same
              * as the {@code methodName} property, and invokes the method on
@@ -95,12 +95,12 @@ declare namespace java {
              * @see java.lang.reflect.Method
              */
             // @ts-ignore
-            execute(): void
+            public execute(): void
             /**
              * Prints the value of this statement using a Java-style syntax.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

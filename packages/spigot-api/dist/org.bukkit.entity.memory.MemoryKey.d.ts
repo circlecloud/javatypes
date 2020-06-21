@@ -10,25 +10,25 @@ declare namespace org {
                 // @ts-ignore
                 class MemoryKey<T> extends java.lang.Object implements org.bukkit.Keyed {
                     // @ts-ignore
-                    readonly HOME: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
+                    public static readonly HOME: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
                     // @ts-ignore
-                    readonly MEETING_POINT: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
+                    public static readonly MEETING_POINT: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
                     // @ts-ignore
-                    readonly JOB_SITE: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
+                    public static readonly JOB_SITE: org.bukkit.entity.memory.MemoryKey<org.bukkit.Location>
                     // @ts-ignore
-                    readonly LAST_SLEPT: org.bukkit.entity.memory.MemoryKey<java.lang.Long>
+                    public static readonly LAST_SLEPT: org.bukkit.entity.memory.MemoryKey<java.lang.Long | number>
                     // @ts-ignore
-                    readonly LAST_WOKEN: org.bukkit.entity.memory.MemoryKey<java.lang.Long>
+                    public static readonly LAST_WOKEN: org.bukkit.entity.memory.MemoryKey<java.lang.Long | number>
                     // @ts-ignore
-                    readonly LAST_WORKED_AT_POI: org.bukkit.entity.memory.MemoryKey<java.lang.Long>
+                    public static readonly LAST_WORKED_AT_POI: org.bukkit.entity.memory.MemoryKey<java.lang.Long | number>
                     // @ts-ignore
-                    getKey(): org.bukkit.NamespacedKey
+                    public getKey(): org.bukkit.NamespacedKey
                     /**
                      * Gets the class of values associated with this memory.
                      * @return the class of value objects
                      */
                     // @ts-ignore
-                    getMemoryClass(): java.lang.Class<T>
+                    public getMemoryClass(): java.lang.Class<T>
                     /**
                      * Returns a {@link MemoryKey} by a {@link NamespacedKey}.
                      * @param namespacedKey the {#link NamespacedKey} referencing a
@@ -37,13 +37,13 @@ declare namespace org {
                      *  available under that key
                      */
                     // @ts-ignore
-                    getByKey(namespacedKey: org.bukkit.NamespacedKey): org.bukkit.entity.memory.MemoryKey
+                    public static getByKey(namespacedKey: org.bukkit.NamespacedKey): org.bukkit.entity.memory.MemoryKey<any>
                     /**
                      * Returns the set of all MemoryKeys.
                      * @return the memoryKeys
                      */
                     // @ts-ignore
-                    values(): java.util.Set<org.bukkit.entity.memory.MemoryKey>
+                    public static values(): Array<org.bukkit.entity.memory.MemoryKey<any>>
                 }
             }
         }

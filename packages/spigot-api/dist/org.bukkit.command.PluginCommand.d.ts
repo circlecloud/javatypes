@@ -7,7 +7,7 @@ declare namespace org {
             // @ts-ignore
             class PluginCommand extends org.bukkit.command.Command implements org.bukkit.command.PluginIdentifiableCommand {
                 // @ts-ignore
-                constructor(name: string, owner: org.bukkit.plugin.Plugin)
+                constructor(name: java.lang.String | string, owner: org.bukkit.plugin.Plugin)
                 /**
                  * Executes the command, returning its success
                  * @param sender Source object which is executing this command
@@ -16,19 +16,19 @@ declare namespace org {
                  * @return true if the command was successful, otherwise false
                  */
                 // @ts-ignore
-                execute(sender: org.bukkit.command.CommandSender, commandLabel: string, args: string[]): boolean
+                public execute(sender: org.bukkit.command.CommandSender, commandLabel: java.lang.String | string, args: java.lang.String[] | string[]): boolean
                 /**
                  * Sets the {@link CommandExecutor} to run when parsing this command
                  * @param executor New executor to run
                  */
                 // @ts-ignore
-                setExecutor(executor: org.bukkit.command.CommandExecutor): void
+                public setExecutor(executor: org.bukkit.command.CommandExecutor): void
                 /**
                  * Gets the {@link CommandExecutor} associated with this command
                  * @return CommandExecutor object linked to this command
                  */
                 // @ts-ignore
-                getExecutor(): org.bukkit.command.CommandExecutor
+                public getExecutor(): org.bukkit.command.CommandExecutor
                 /**
                  * Sets the {@link TabCompleter} to run when tab-completing this command.
                  * <p>
@@ -37,19 +37,19 @@ declare namespace org {
                  * @param completer New tab completer
                  */
                 // @ts-ignore
-                setTabCompleter(completer: org.bukkit.command.TabCompleter): void
+                public setTabCompleter(completer: org.bukkit.command.TabCompleter): void
                 /**
                  * Gets the {@link TabCompleter} associated with this command.
                  * @return TabCompleter object linked to this command
                  */
                 // @ts-ignore
-                getTabCompleter(): org.bukkit.command.TabCompleter
+                public getTabCompleter(): org.bukkit.command.TabCompleter
                 /**
                  * Gets the owner of this PluginCommand
                  * @return Plugin that owns this command
                  */
                 // @ts-ignore
-                getPlugin(): org.bukkit.plugin.Plugin
+                public getPlugin(): org.bukkit.plugin.Plugin
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -67,9 +67,9 @@ declare namespace org {
                  * @throws IllegalArgumentException if sender, alias, or args is null
                  */
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, alias: string, args: string[]): java.util.List<java.lang.String>
+                public tabComplete(sender: org.bukkit.command.CommandSender, alias: java.lang.String | string, args: java.lang.String[] | string[]): Array<java.lang.String | string>
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

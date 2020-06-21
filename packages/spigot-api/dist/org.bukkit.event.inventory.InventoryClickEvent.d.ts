@@ -45,19 +45,19 @@ declare namespace org {
                      * @return the slot type
                      */
                     // @ts-ignore
-                    getSlotType(): org.bukkit.event.inventory.InventoryType.SlotType
+                    public getSlotType(): org.bukkit.event.inventory.InventoryType.SlotType
                     /**
                      * Gets the current ItemStack on the cursor.
                      * @return the cursor ItemStack
                      */
                     // @ts-ignore
-                    getCursor(): org.bukkit.inventory.ItemStack
+                    public getCursor(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the ItemStack currently in the clicked slot.
                      * @return the item in the clicked
                      */
                     // @ts-ignore
-                    getCurrentItem(): org.bukkit.inventory.ItemStack
+                    public getCurrentItem(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets whether or not the ClickType for this event represents a right
                      * click.
@@ -65,7 +65,7 @@ declare namespace org {
                      * @see ClickType#isRightClick()
                      */
                     // @ts-ignore
-                    isRightClick(): boolean
+                    public isRightClick(): boolean
                     /**
                      * Gets whether or not the ClickType for this event represents a left
                      * click.
@@ -73,7 +73,7 @@ declare namespace org {
                      * @see ClickType#isLeftClick()
                      */
                     // @ts-ignore
-                    isLeftClick(): boolean
+                    public isLeftClick(): boolean
                     /**
                      * Gets whether the ClickType for this event indicates that the key was
                      * pressed down when the click was made.
@@ -81,7 +81,7 @@ declare namespace org {
                      * @see ClickType#isShiftClick()
                      */
                     // @ts-ignore
-                    isShiftClick(): boolean
+                    public isShiftClick(): boolean
                     /**
                      * Sets the item on the cursor.
                      * @param stack the new cursor item
@@ -91,20 +91,20 @@ declare namespace org {
                      *      make unexpected changes in the behavior of the clicked Inventory.
                      */
                     // @ts-ignore
-                    setCursor(stack: org.bukkit.inventory.ItemStack): void
+                    public setCursor(stack: org.bukkit.inventory.ItemStack): void
                     /**
                      * Sets the ItemStack currently in the clicked slot.
                      * @param stack the item to be placed in the current slot
                      */
                     // @ts-ignore
-                    setCurrentItem(stack: org.bukkit.inventory.ItemStack): void
+                    public setCurrentItem(stack: org.bukkit.inventory.ItemStack): void
                     /**
                      * Gets the inventory corresponding to the clicked slot.
                      * @see InventoryView#getInventory(int)
                      * @return inventory, or null if clicked outside
                      */
                     // @ts-ignore
-                    getClickedInventory(): org.bukkit.inventory.Inventory
+                    public getClickedInventory(): org.bukkit.inventory.Inventory
                     /**
                      * The slot number that was clicked, ready for passing to
                      * {@link Inventory#getItem(int)}. Note that there may be two slots with
@@ -112,14 +112,14 @@ declare namespace org {
                      * @return The slot number.
                      */
                     // @ts-ignore
-                    getSlot(): int
+                    public getSlot(): number /*int*/
                     /**
                      * The raw slot number clicked, ready for passing to {@link InventoryView
                      * #getItem(int)} This slot number is unique for the view.
                      * @return the slot number
                      */
                     // @ts-ignore
-                    getRawSlot(): int
+                    public getRawSlot(): number /*int*/
                     /**
                      * If the ClickType is NUMBER_KEY, this method will return the index of
                      * the pressed key (0-8).
@@ -127,7 +127,7 @@ declare namespace org {
                      *      a NUMBER_KEY action
                      */
                     // @ts-ignore
-                    getHotbarButton(): int
+                    public getHotbarButton(): number /*int*/
                     /**
                      * Gets the InventoryAction that triggered this event.
                      * <p>
@@ -137,7 +137,7 @@ declare namespace org {
                      * @return the InventoryAction that triggered this event.
                      */
                     // @ts-ignore
-                    getAction(): org.bukkit.event.inventory.InventoryAction
+                    public getAction(): org.bukkit.event.inventory.InventoryAction
                     /**
                      * Gets the ClickType for this event.
                      * <p>
@@ -145,11 +145,11 @@ declare namespace org {
                      * @return the type of inventory click
                      */
                     // @ts-ignore
-                    getClick(): org.bukkit.event.inventory.ClickType
+                    public getClick(): org.bukkit.event.inventory.ClickType
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

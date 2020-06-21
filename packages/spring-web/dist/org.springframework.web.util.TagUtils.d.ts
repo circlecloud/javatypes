@@ -22,29 +22,29 @@ declare namespace org {
                  * @author Rick Evans
                  */
                 // @ts-ignore
-                class TagUtils extends java.lang.Object {
+                abstract class TagUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
                      * Constant identifying the page scope.
                      */
                     // @ts-ignore
-                    readonly SCOPE_PAGE: string
+                    public static readonly SCOPE_PAGE: java.lang.String | string
                     /**
                      * Constant identifying the request scope.
                      */
                     // @ts-ignore
-                    readonly SCOPE_REQUEST: string
+                    public static readonly SCOPE_REQUEST: java.lang.String | string
                     /**
                      * Constant identifying the session scope.
                      */
                     // @ts-ignore
-                    readonly SCOPE_SESSION: string
+                    public static readonly SCOPE_SESSION: java.lang.String | string
                     /**
                      * Constant identifying the application scope.
                      */
                     // @ts-ignore
-                    readonly SCOPE_APPLICATION: string
+                    public static readonly SCOPE_APPLICATION: java.lang.String | string
                     /**
                      * Determines the scope for a given input {@code String}.
                      * <p>If the {@code String} does not match 'request', 'session',
@@ -54,7 +54,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if the supplied {#code scope} is {@code null}
                      */
                     // @ts-ignore
-                    getScope(scope: string): int
+                    public static getScope(scope: java.lang.String | string): number /*int*/
                     /**
                      * Determine whether the supplied {@link Tag} has any ancestor tag
                      * of the supplied type.
@@ -67,7 +67,7 @@ declare namespace org {
                      *  the {@link Tag} class
                      */
                     // @ts-ignore
-                    hasAncestorOfType(tag: Tag, ancestorTagClass: java.lang.Class<any>): boolean
+                    public static hasAncestorOfType(tag: Tag, ancestorTagClass: java.lang.Class<any>): boolean
                     /**
                      * Determine whether the supplied {@link Tag} has any ancestor tag
                      * of the supplied type, throwing an {@link IllegalStateException}
@@ -85,7 +85,7 @@ declare namespace org {
                      * @see #hasAncestorOfType(javax.servlet.jsp.tagext.Tag, Class)
                      */
                     // @ts-ignore
-                    assertHasAncestorOfType(tag: Tag, ancestorTagClass: java.lang.Class<any>, tagName: string, ancestorTagName: string): void
+                    public static assertHasAncestorOfType(tag: Tag, ancestorTagClass: java.lang.Class<any>, tagName: java.lang.String | string, ancestorTagName: java.lang.String | string): void
                 }
             }
         }

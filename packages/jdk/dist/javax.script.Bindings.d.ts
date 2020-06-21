@@ -7,7 +7,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        interface Bindings extends java.util.Map<java.lang.String, java.lang.Object> {
+        interface Bindings extends java.util.Map<java.lang.String | string, java.lang.Object | any> {
             /**
              * Set a named value.
              * @param name The name associated with the value.
@@ -18,7 +18,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if the name is empty String.
              */
             // @ts-ignore
-            put(name: string, value: any): java.lang.Object
+            put(name: java.lang.String | string, value: java.lang.Object | any): any
             /**
              * Adds all the mappings in a given <code>Map</code> to this <code>Bindings</code>.
              * @param toMerge The <code>Map</code> to merge with this one.
@@ -28,7 +28,7 @@ declare namespace javax {
              *          if some key in the map is an empty String.
              */
             // @ts-ignore
-            putAll(toMerge: java.util.Map<java.lang.String, java.lang.Object>): void
+            putAll(toMerge: java.util.Map<any, any>): void
             /**
              * Returns <tt>true</tt> if this map contains a mapping for the specified
              * key.  More formally, returns <tt>true</tt> if and only if
@@ -43,7 +43,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty String
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            containsKey(key: java.lang.Object | any): boolean
             /**
              * Returns the value to which this map maps the specified key.  Returns
              * <tt>null</tt> if the map contains no mapping for this key.  A return
@@ -63,7 +63,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty String
              */
             // @ts-ignore
-            get(key: any): java.lang.Object
+            get(key: java.lang.Object | any): any
             /**
              * Removes the mapping for this key from this map if it is present
              * (optional operation).   More formally, if this map contains a mapping
@@ -84,7 +84,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty String
              */
             // @ts-ignore
-            remove(key: any): java.lang.Object
+            remove(key: java.lang.Object | any): any
         }
     }
 }

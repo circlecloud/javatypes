@@ -14,19 +14,19 @@ declare namespace org {
                      * @return the relevant player
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Get the Material of the item being retrieved
                      * @return the material of the item
                      */
                     // @ts-ignore
-                    getItemType(): org.bukkit.Material
+                    public getItemType(): org.bukkit.Material
                     /**
                      * Get the item count being retrieved
                      * @return the amount of the item
                      */
                     // @ts-ignore
-                    getItemAmount(): int
+                    public getItemAmount(): number /*int*/
                 }
             }
         }

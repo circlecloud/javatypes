@@ -37,7 +37,7 @@ declare namespace javax {
                          * @return the truncation length in number of bits
                          */
                         // @ts-ignore
-                        getOutputLength(): int
+                        public getOutputLength(): number /*int*/
                     }
                 }
             }

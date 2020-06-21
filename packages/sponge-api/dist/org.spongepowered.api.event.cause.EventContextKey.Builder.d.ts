@@ -9,9 +9,9 @@ declare namespace org {
                             // @ts-ignore
                             type(tClass: java.lang.Class<T>): org.spongepowered.api.event.cause.EventContextKey.Builder<T>
                             // @ts-ignore
-                            id(id: string): org.spongepowered.api.event.cause.EventContextKey.Builder<T>
+                            id(id: java.lang.String | string): org.spongepowered.api.event.cause.EventContextKey.Builder<T>
                             // @ts-ignore
-                            name(name: string): org.spongepowered.api.event.cause.EventContextKey.Builder<T>
+                            name(name: java.lang.String | string): org.spongepowered.api.event.cause.EventContextKey.Builder<T>
                             // @ts-ignore
                             build(): org.spongepowered.api.event.cause.EventContextKey<T>
                             // @ts-ignore

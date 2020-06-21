@@ -58,7 +58,7 @@ declare namespace javax {
                  * @see javax.swing.JComponent#isPaintingForPrint()
                  */
                 // @ts-ignore
-                getTableCellRendererComponent(table: javax.swing.JTable, value: any, isSelected: boolean, hasFocus: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
+                getTableCellRendererComponent(table: javax.swing.JTable, value: java.lang.Object | any, isSelected: boolean, hasFocus: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
             }
         }
     }

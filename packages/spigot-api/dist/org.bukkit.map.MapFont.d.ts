@@ -17,7 +17,7 @@ declare namespace org {
                  * @throws IllegalStateException if this font is static.
                  */
                 // @ts-ignore
-                setChar(ch: string, sprite: org.bukkit.map.MapFont.CharacterSprite): void
+                public setChar(ch: string, sprite: org.bukkit.map.MapFont.CharacterSprite): void
                 /**
                  * Get the sprite for a given character.
                  * @param ch The character to get the sprite for.
@@ -25,7 +25,7 @@ declare namespace org {
                  *      there is none.
                  */
                 // @ts-ignore
-                getChar(ch: string): org.bukkit.map.MapFont.CharacterSprite
+                public getChar(ch: string): org.bukkit.map.MapFont.CharacterSprite
                 /**
                  * Get the width of the given text as it would be rendered using this
                  * font.
@@ -33,13 +33,13 @@ declare namespace org {
                  * @return The width in pixels.
                  */
                 // @ts-ignore
-                getWidth(text: string): int
+                public getWidth(text: java.lang.String | string): number /*int*/
                 /**
                  * Get the height of this font.
                  * @return The height of the font.
                  */
                 // @ts-ignore
-                getHeight(): int
+                public getHeight(): number /*int*/
                 /**
                  * Check whether the given text is valid.
                  * @param text The text.
@@ -47,7 +47,7 @@ declare namespace org {
                  *      otherwise.
                  */
                 // @ts-ignore
-                isValid(text: string): boolean
+                public isValid(text: java.lang.String | string): boolean
             }
         }
     }

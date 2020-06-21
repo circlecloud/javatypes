@@ -28,13 +28,13 @@ declare namespace org {
                      *          the set will be empty if no names match
                      */
                     // @ts-ignore
-                    getTasksByName(pattern: string): java.util.Set<org.spongepowered.api.scheduler.Task>
+                    getTasksByName(pattern: java.lang.String | string): Array<org.spongepowered.api.scheduler.Task>
                     /**
                      * Returns a set of all currently scheduled tasks.
                      * @return A set of scheduled tasks
                      */
                     // @ts-ignore
-                    getScheduledTasks(): java.util.Set<org.spongepowered.api.scheduler.Task>
+                    getScheduledTasks(): Array<org.spongepowered.api.scheduler.Task>
                     /**
                      * Returns a set of all currently scheduled tasks for either asynchronous or
                      * synchronous execution.
@@ -42,21 +42,21 @@ declare namespace org {
                      * @return A set of scheduled tasks for the given sync type
                      */
                     // @ts-ignore
-                    getScheduledTasks(async: boolean): java.util.Set<org.spongepowered.api.scheduler.Task>
+                    getScheduledTasks(async: boolean): Array<org.spongepowered.api.scheduler.Task>
                     /**
                      * Returns a set of all currently scheduled tasks owned by the given plugin.
                      * @param plugin The plugin that created the tasks
                      * @return A set of scheduled tasks
                      */
                     // @ts-ignore
-                    getScheduledTasks(plugin: any): java.util.Set<org.spongepowered.api.scheduler.Task>
+                    getScheduledTasks(plugin: java.lang.Object | any): Array<org.spongepowered.api.scheduler.Task>
                     /**
                      * Gets the ideal delay between ticks in milliseconds. The server aims to
                      * stabilise at this value.
                      * @return The preferred tick interval
                      */
                     // @ts-ignore
-                    getPreferredTickInterval(): int
+                    getPreferredTickInterval(): number /*int*/
                     /**
                      * Creates a new {@link ExecutorService} that can be used to schedule
                      * synchronous tasks through the standard Java concurrency interfaces.
@@ -65,7 +65,7 @@ declare namespace org {
                      *      synchronous tasks
                      */
                     // @ts-ignore
-                    createSyncExecutor(plugin: any): org.spongepowered.api.scheduler.SpongeExecutorService
+                    createSyncExecutor(plugin: java.lang.Object | any): org.spongepowered.api.scheduler.SpongeExecutorService
                     /**
                      * Creates a new {@link ExecutorService} that can be used to schedule
                      * asynchronous tasks through the standard Java concurrency interfaces.
@@ -75,7 +75,7 @@ declare namespace org {
                      * @see Task.Builder#async()
                      */
                     // @ts-ignore
-                    createAsyncExecutor(plugin: any): org.spongepowered.api.scheduler.SpongeExecutorService
+                    createAsyncExecutor(plugin: java.lang.Object | any): org.spongepowered.api.scheduler.SpongeExecutorService
                 }
             }
         }

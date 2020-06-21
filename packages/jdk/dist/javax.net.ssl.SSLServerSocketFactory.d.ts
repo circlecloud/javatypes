@@ -10,7 +10,7 @@ declare namespace javax {
              * @author David Brownell
              */
             // @ts-ignore
-            class SSLServerSocketFactory extends javax.net.ServerSocketFactory {
+            abstract class SSLServerSocketFactory extends javax.net.ServerSocketFactory {
                 /**
                  * Constructor is used only by subclasses.
                  */
@@ -30,7 +30,7 @@ declare namespace javax {
                  * @see SSLContext#getDefault
                  */
                 // @ts-ignore
-                getDefault(): javax.net.ServerSocketFactory
+                public static getDefault(): javax.net.ServerSocketFactory
                 /**
                  * Returns the list of cipher suites which are enabled by default.
                  * Unless a different list is enabled, handshaking on an SSL connection
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @return array of the cipher suites enabled by default
                  */
                 // @ts-ignore
-                abstract getDefaultCipherSuites(): java.lang.String[]
+                public abstract getDefaultCipherSuites(): string[]
                 /**
                  * Returns the names of the cipher suites which could be enabled for use
                  * on an SSL connection created by this factory.
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @see #getDefaultCipherSuites()
                  */
                 // @ts-ignore
-                abstract getSupportedCipherSuites(): java.lang.String[]
+                public abstract getSupportedCipherSuites(): string[]
             }
         }
     }

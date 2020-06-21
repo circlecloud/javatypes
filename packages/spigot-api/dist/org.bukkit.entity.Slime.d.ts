@@ -10,7 +10,7 @@ declare namespace org {
                  * @return The size of the slime
                  */
                 // @ts-ignore
-                getSize(): int
+                getSize(): number /*int*/
                 /**
                  * @param sz The new size of the slime.
                  */

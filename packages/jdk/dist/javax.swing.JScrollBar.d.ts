@@ -109,20 +109,20 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ScrollBarUI): void
+            public setUI(ui: javax.swing.plaf.ScrollBarUI): void
             /**
              * Returns the delegate that implements the look and feel for
              * this component.
              * @see JComponent#setUI
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ScrollBarUI
+            public getUI(): javax.swing.plaf.ScrollBarUI
             /**
              * Overrides <code>JComponent.updateUI</code>.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the LookAndFeel class for this component.
              * @return "ScrollBarUI"
@@ -130,7 +130,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the component's orientation (horizontal or vertical).
              * @return VERTICAL or HORIZONTAL
@@ -138,7 +138,7 @@ declare namespace javax {
              * @see java.awt.Adjustable#getOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Set the scrollbar's orientation to either VERTICAL or
              * HORIZONTAL.
@@ -152,14 +152,14 @@ declare namespace javax {
              *                HORIZONTAL JScrollBar.HORIZONTAL
              */
             // @ts-ignore
-            setOrientation(orientation: number /*int*/): void
+            public setOrientation(orientation: number /*int*/): void
             /**
              * Returns data model that handles the scrollbar's four
              * fundamental properties: minimum, maximum, value, extent.
              * @see #setModel
              */
             // @ts-ignore
-            getModel(): javax.swing.BoundedRangeModel
+            public getModel(): javax.swing.BoundedRangeModel
             /**
              * Sets the model that handles the scrollbar's four
              * fundamental properties: minimum, maximum, value, extent.
@@ -169,7 +169,7 @@ declare namespace javax {
              *  description: The scrollbar's BoundedRangeModel.
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.BoundedRangeModel): void
+            public setModel(newModel: javax.swing.BoundedRangeModel): void
             /**
              * Returns the amount to change the scrollbar's value by,
              * given a unit up/down request.  A ScrollBarUI implementation
@@ -193,7 +193,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableUnitIncrement
              */
             // @ts-ignore
-            getUnitIncrement(direction: number /*int*/): int
+            public getUnitIncrement(direction: number /*int*/): number /*int*/
             /**
              * Sets the unitIncrement property.
              * <p>
@@ -208,7 +208,7 @@ declare namespace javax {
              *  description: The scrollbar's unit increment.
              */
             // @ts-ignore
-            setUnitIncrement(unitIncrement: number /*int*/): void
+            public setUnitIncrement(unitIncrement: number /*int*/): void
             /**
              * Returns the amount to change the scrollbar's value by,
              * given a block (usually "page") up/down request.  A ScrollBarUI
@@ -232,7 +232,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableBlockIncrement
              */
             // @ts-ignore
-            getBlockIncrement(direction: number /*int*/): int
+            public getBlockIncrement(direction: number /*int*/): number /*int*/
             /**
              * Sets the blockIncrement property.
              * <p>
@@ -247,28 +247,28 @@ declare namespace javax {
              *  description: The scrollbar's block increment.
              */
             // @ts-ignore
-            setBlockIncrement(blockIncrement: number /*int*/): void
+            public setBlockIncrement(blockIncrement: number /*int*/): void
             /**
              * For backwards compatibility with java.awt.Scrollbar.
              * @see Adjustable#getUnitIncrement
              * @see #getUnitIncrement(int)
              */
             // @ts-ignore
-            getUnitIncrement(): int
+            public getUnitIncrement(): number /*int*/
             /**
              * For backwards compatibility with java.awt.Scrollbar.
              * @see Adjustable#getBlockIncrement
              * @see #getBlockIncrement(int)
              */
             // @ts-ignore
-            getBlockIncrement(): int
+            public getBlockIncrement(): number /*int*/
             /**
              * Returns the scrollbar's value.
              * @return the model's value property
              * @see #setValue
              */
             // @ts-ignore
-            getValue(): int
+            public getValue(): number /*int*/
             /**
              * Sets the scrollbar's value.  This method just forwards the value
              * to the model.
@@ -278,7 +278,7 @@ declare namespace javax {
              *  description: The scrollbar's current value.
              */
             // @ts-ignore
-            setValue(value: number /*int*/): void
+            public setValue(value: number /*int*/): void
             /**
              * Returns the scrollbar's extent, aka its "visibleAmount".  In many
              * scrollbar look and feel implementations the size of the
@@ -287,7 +287,7 @@ declare namespace javax {
              * @see #setVisibleAmount
              */
             // @ts-ignore
-            getVisibleAmount(): int
+            public getVisibleAmount(): number /*int*/
             /**
              * Set the model's extent property.
              * @see #getVisibleAmount
@@ -296,7 +296,7 @@ declare namespace javax {
              *  description: The amount of the view that is currently visible.
              */
             // @ts-ignore
-            setVisibleAmount(extent: number /*int*/): void
+            public setVisibleAmount(extent: number /*int*/): void
             /**
              * Returns the minimum value supported by the scrollbar
              * (usually zero).
@@ -304,7 +304,7 @@ declare namespace javax {
              * @see #setMinimum
              */
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * Sets the model's minimum property.
              * @see #getMinimum
@@ -313,14 +313,14 @@ declare namespace javax {
              *  description: The scrollbar's minimum value.
              */
             // @ts-ignore
-            setMinimum(minimum: number /*int*/): void
+            public setMinimum(minimum: number /*int*/): void
             /**
              * The maximum value of the scrollbar is maximum - extent.
              * @return the value of the model's maximum property
              * @see #setMaximum
              */
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             /**
              * Sets the model's maximum property.  Note that the scrollbar's value
              * can only be set to maximum - extent.
@@ -330,14 +330,14 @@ declare namespace javax {
              *  description: The scrollbar's maximum value.
              */
             // @ts-ignore
-            setMaximum(maximum: number /*int*/): void
+            public setMaximum(maximum: number /*int*/): void
             /**
              * True if the scrollbar knob is being dragged.
              * @return the value of the model's valueIsAdjusting property
              * @see #setValueIsAdjusting
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * Sets the model's valueIsAdjusting property.  Scrollbar look and
              * feel implementations should set this property to true when
@@ -350,7 +350,7 @@ declare namespace javax {
              *  description: True if the scrollbar thumb is being dragged.
              */
             // @ts-ignore
-            setValueIsAdjusting(b: boolean): void
+            public setValueIsAdjusting(b: boolean): void
             /**
              * Sets the four BoundedRangeModel properties after forcing
              * the arguments to obey the usual constraints:
@@ -364,7 +364,7 @@ declare namespace javax {
              * @see #setMaximum
              */
             // @ts-ignore
-            setValues(newValue: number /*int*/, newExtent: number /*int*/, newMin: number /*int*/, newMax: number /*int*/): void
+            public setValues(newValue: number /*int*/, newExtent: number /*int*/, newMin: number /*int*/, newMax: number /*int*/): void
             /**
              * Adds an AdjustmentListener.  Adjustment listeners are notified
              * each time the scrollbar's model changes.  Adjustment events are
@@ -382,14 +382,14 @@ declare namespace javax {
              * @see BoundedRangeModel#addChangeListener
              */
             // @ts-ignore
-            addAdjustmentListener(l: java.awt.event.AdjustmentListener): void
+            public addAdjustmentListener(l: java.awt.event.AdjustmentListener): void
             /**
              * Removes an AdjustmentEvent listener.
              * @param l the AdjustmentLister to remove
              * @see #addAdjustmentListener
              */
             // @ts-ignore
-            removeAdjustmentListener(l: java.awt.event.AdjustmentListener): void
+            public removeAdjustmentListener(l: java.awt.event.AdjustmentListener): void
             /**
              * Returns an array of all the <code>AdjustmentListener</code>s added
              * to this JScrollBar with addAdjustmentListener().
@@ -398,7 +398,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getAdjustmentListeners(): java.awt.event.AdjustmentListener[]
+            public getAdjustmentListeners(): java.awt.event.AdjustmentListener[]
             /**
              * Notify listeners that the scrollbar's model has changed.
              * @see #addAdjustmentListener
@@ -411,13 +411,13 @@ declare namespace javax {
              * rigid along the other axis.
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * The scrollbar is flexible along it's scrolling axis and
              * rigid along the other axis.
              */
             // @ts-ignore
-            getMaximumSize(): java.awt.Dimension
+            public getMaximumSize(): java.awt.Dimension
             /**
              * Enables the component so that the knob position can be changed.
              * When the disabled, the knob position cannot be changed.
@@ -425,7 +425,7 @@ declare namespace javax {
              *           false disables it
              */
             // @ts-ignore
-            setEnabled(x: boolean): void
+            public setEnabled(x: boolean): void
             /**
              * Returns a string representation of this JScrollBar. This method
              * is intended to be used only for debugging purposes, and the
@@ -435,7 +435,7 @@ declare namespace javax {
              * @return a string representation of this JScrollBar.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JScrollBar.
              * For JScrollBar, the AccessibleContext takes the form of an
@@ -445,7 +445,7 @@ declare namespace javax {
              *          AccessibleContext of this JScrollBar
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

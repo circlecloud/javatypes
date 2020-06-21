@@ -19,23 +19,23 @@ declare namespace org {
                          * @param source the source element that defines the root of the composite component
                          */
                         // @ts-ignore
-                        constructor(name: string, source: any)
+                        constructor(name: java.lang.String | string, source: java.lang.Object | any)
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         /**
                          * Add the given component as nested element of this composite component.
                          * @param component the nested component to add
                          */
                         // @ts-ignore
-                        addNestedComponent(component: org.springframework.beans.factory.parsing.ComponentDefinition): void
+                        public addNestedComponent(component: org.springframework.beans.factory.parsing.ComponentDefinition): void
                         /**
                          * Return the nested components that this composite component holds.
                          * @return the array of nested components, or an empty array if none
                          */
                         // @ts-ignore
-                        getNestedComponents(): org.springframework.beans.factory.parsing.ComponentDefinition[]
+                        public getNestedComponents(): org.springframework.beans.factory.parsing.ComponentDefinition[]
                     }
                 }
             }

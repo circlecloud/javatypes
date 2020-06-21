@@ -19,12 +19,12 @@ declare namespace org {
                          * @param cookieName the cookie name
                          */
                         // @ts-ignore
-                        setCookieName(cookieName: string): void
+                        public setCookieName(cookieName: java.lang.String | string): void
                         /**
                          * Return the configured cookie name.
                          */
                         // @ts-ignore
-                        getCookieName(): java.lang.String
+                        public getCookieName(): string
                         /**
                          * Set the value for the "Max-Age" attribute of the cookie that holds the
                          * session id. For the range of values see {@link ResponseCookie#getMaxAge()}.
@@ -32,12 +32,12 @@ declare namespace org {
                          * @param maxAge the maxAge duration value
                          */
                         // @ts-ignore
-                        setCookieMaxAge(maxAge: java.time.Duration): void
+                        public setCookieMaxAge(maxAge: java.time.Duration): void
                         /**
                          * Return the configured "Max-Age" attribute value for the session cookie.
                          */
                         // @ts-ignore
-                        getCookieMaxAge(): java.time.Duration
+                        public getCookieMaxAge(): java.time.Duration
                         /**
                          * Add a {@link Consumer} for a {@code ResponseCookieBuilder} that will be invoked
                          * for each cookie being built, just before the call to {@code build()}.
@@ -45,13 +45,13 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        addCookieInitializer(initializer: java.util.function.Consumer<org.springframework.http.ResponseCookie.ResponseCookieBuilder> | java.util.function$.Consumer<org.springframework.http.ResponseCookie.ResponseCookieBuilder>): void
+                        public addCookieInitializer(initializer: java.util.function$.Consumer<org.springframework.http.ResponseCookie.ResponseCookieBuilder>): void
                         // @ts-ignore
-                        resolveSessionIds(exchange: org.springframework.web.server.ServerWebExchange): java.util.List<java.lang.String>
+                        public resolveSessionIds(exchange: org.springframework.web.server.ServerWebExchange): Array<java.lang.String | string>
                         // @ts-ignore
-                        setSessionId(exchange: org.springframework.web.server.ServerWebExchange, id: string): void
+                        public setSessionId(exchange: org.springframework.web.server.ServerWebExchange, id: java.lang.String | string): void
                         // @ts-ignore
-                        expireSession(exchange: org.springframework.web.server.ServerWebExchange): void
+                        public expireSession(exchange: org.springframework.web.server.ServerWebExchange): void
                     }
                 }
             }

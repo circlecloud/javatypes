@@ -37,11 +37,11 @@ declare namespace org {
                          * @deprecated as of 5.2, in favor of {#link JettyClientHttpConnector#JettyClientHttpConnector(HttpClient, JettyResourceFactory)}
                          */
                         // @ts-ignore
-                        constructor(resourceFactory: org.springframework.http.client.reactive.JettyResourceFactory, customizer: java.util.function.Consumer<HttpClient> | java.util.function$.Consumer<HttpClient>)
+                        constructor(resourceFactory: org.springframework.http.client.reactive.JettyResourceFactory, customizer: java.util.function$.Consumer<HttpClient>)
                         // @ts-ignore
-                        setBufferFactory(bufferFactory: DataBufferFactory): void
+                        public setBufferFactory(bufferFactory: DataBufferFactory): void
                         // @ts-ignore
-                        connect(method: org.springframework.http.HttpMethod, uri: java.net.URI, requestCallback: java.util.function.Function<any super org.springframework.http.client.reactive.ClientHttpRequest, <any>> | java.util.function$.Function<? super org.springframework.http.client.reactive.ClientHttpRequest, <any>>): <any>
+                        public connect(method: org.springframework.http.HttpMethod, uri: java.net.URI, requestCallback: java.util.function$.Function<any, object>): object
                     }
                 }
             }

@@ -23,7 +23,7 @@ declare namespace java {
              * @exception NullPointerException if <code>text</code> is null.
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs an AttributedString instance with the given text and attributes.
              * @param text The text for this attributed string.
@@ -35,7 +35,7 @@ declare namespace java {
              *  cannot be applied to a 0-length range).
              */
             // @ts-ignore
-            constructor(text: string, attributes: java.util.Map<java.text.AttributedCharacterIterator.Attribute, any>)
+            constructor(text: java.lang.String | string, attributes: java.util.Map<any, any>)
             /**
              * Constructs an AttributedString instance with the given attributed
              * text represented by AttributedCharacterIterator.
@@ -94,7 +94,7 @@ declare namespace java {
              *  (attributes cannot be applied to a 0-length range).
              */
             // @ts-ignore
-            addAttribute(attribute: java.text.AttributedCharacterIterator.Attribute, value: any): void
+            public addAttribute(attribute: java.text.AttributedCharacterIterator.Attribute, value: java.lang.Object | any): void
             /**
              * Adds an attribute to a subrange of the string.
              * @param attribute the attribute key
@@ -107,7 +107,7 @@ declare namespace java {
              *  define a non-empty subrange of the string.
              */
             // @ts-ignore
-            addAttribute(attribute: java.text.AttributedCharacterIterator.Attribute, value: any, beginIndex: number /*int*/, endIndex: number /*int*/): void
+            public addAttribute(attribute: java.text.AttributedCharacterIterator.Attribute, value: java.lang.Object | any, beginIndex: number /*int*/, endIndex: number /*int*/): void
             /**
              * Adds a set of attributes to a subrange of the string.
              * @param attributes The attributes to be added to the string.
@@ -122,14 +122,14 @@ declare namespace java {
              *  empty Map.
              */
             // @ts-ignore
-            addAttributes(attributes: java.util.Map<java.text.AttributedCharacterIterator.Attribute, any>, beginIndex: number /*int*/, endIndex: number /*int*/): void
+            public addAttributes(attributes: java.util.Map<any, any>, beginIndex: number /*int*/, endIndex: number /*int*/): void
             /**
              * Creates an AttributedCharacterIterator instance that provides access to the entire contents of
              * this string.
              * @return An iterator providing access to the text and its attributes.
              */
             // @ts-ignore
-            getIterator(): java.text.AttributedCharacterIterator
+            public getIterator(): java.text.AttributedCharacterIterator
             /**
              * Creates an AttributedCharacterIterator instance that provides access to
              * selected contents of this string.
@@ -141,7 +141,7 @@ declare namespace java {
              * @return an iterator providing access to the entire text and its selected attributes
              */
             // @ts-ignore
-            getIterator(attributes: java.text.AttributedCharacterIterator.Attribute[]): java.text.AttributedCharacterIterator
+            public getIterator(attributes: java.text.AttributedCharacterIterator.Attribute[]): java.text.AttributedCharacterIterator
             /**
              * Creates an AttributedCharacterIterator instance that provides access to
              * selected contents of this string.
@@ -158,7 +158,7 @@ declare namespace java {
              *  greater than endIndex.
              */
             // @ts-ignore
-            getIterator(attributes: java.text.AttributedCharacterIterator.Attribute[], beginIndex: number /*int*/, endIndex: number /*int*/): java.text.AttributedCharacterIterator
+            public getIterator(attributes: java.text.AttributedCharacterIterator.Attribute[], beginIndex: number /*int*/, endIndex: number /*int*/): java.text.AttributedCharacterIterator
         }
     }
 }

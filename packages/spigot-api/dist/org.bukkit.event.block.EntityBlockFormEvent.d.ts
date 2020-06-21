@@ -20,7 +20,7 @@ declare namespace org {
                      * @return Entity involved in event
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                 }
             }
         }

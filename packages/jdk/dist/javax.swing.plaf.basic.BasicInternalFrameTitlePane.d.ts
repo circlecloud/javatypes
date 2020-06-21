@@ -63,17 +63,17 @@ declare namespace javax {
                     // @ts-ignore
                     sizeAction: javax.swing.Action
                     // @ts-ignore
-                    readonly CLOSE_CMD: string
+                    static readonly CLOSE_CMD: java.lang.String | string
                     // @ts-ignore
-                    readonly ICONIFY_CMD: string
+                    static readonly ICONIFY_CMD: java.lang.String | string
                     // @ts-ignore
-                    readonly RESTORE_CMD: string
+                    static readonly RESTORE_CMD: java.lang.String | string
                     // @ts-ignore
-                    readonly MAXIMIZE_CMD: string
+                    static readonly MAXIMIZE_CMD: java.lang.String | string
                     // @ts-ignore
-                    readonly MOVE_CMD: string
+                    static readonly MOVE_CMD: java.lang.String | string
                     // @ts-ignore
-                    readonly SIZE_CMD: string
+                    static readonly SIZE_CMD: java.lang.String | string
                     // @ts-ignore
                     installTitlePane(): void
                     // @ts-ignore
@@ -103,7 +103,7 @@ declare namespace javax {
                     // @ts-ignore
                     showSystemMenu(): void
                     // @ts-ignore
-                    paintComponent(g: java.awt.Graphics): void
+                    public paintComponent(g: java.awt.Graphics): void
                     /**
                      * Invoked from paintComponent.
                      * Paints the background of the titlepane.  All text and icons will
@@ -114,7 +114,7 @@ declare namespace javax {
                     // @ts-ignore
                     paintTitleBackground(g: java.awt.Graphics): void
                     // @ts-ignore
-                    getTitle(text: string, fm: java.awt.FontMetrics, availTextWidth: number /*int*/): java.lang.String
+                    getTitle(text: java.lang.String | string, fm: java.awt.FontMetrics, availTextWidth: number /*int*/): string
                     /**
                      * Post a WINDOW_CLOSING-like event to the frame, so that it can
                      * be treated like a regular Frame.

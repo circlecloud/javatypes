@@ -25,28 +25,28 @@ declare namespace org {
                  * @return this byte vector.
                  */
                 // @ts-ignore
-                putByte(byteValue: number /*int*/): org.springframework.asm.ByteVector
+                public putByte(byteValue: number /*int*/): org.springframework.asm.ByteVector
                 /**
                  * Puts a short into this byte vector. The byte vector is automatically enlarged if necessary.
                  * @param shortValue a short.
                  * @return this byte vector.
                  */
                 // @ts-ignore
-                putShort(shortValue: number /*int*/): org.springframework.asm.ByteVector
+                public putShort(shortValue: number /*int*/): org.springframework.asm.ByteVector
                 /**
                  * Puts an int into this byte vector. The byte vector is automatically enlarged if necessary.
                  * @param intValue an int.
                  * @return this byte vector.
                  */
                 // @ts-ignore
-                putInt(intValue: number /*int*/): org.springframework.asm.ByteVector
+                public putInt(intValue: number /*int*/): org.springframework.asm.ByteVector
                 /**
                  * Puts a long into this byte vector. The byte vector is automatically enlarged if necessary.
                  * @param longValue a long.
                  * @return this byte vector.
                  */
                 // @ts-ignore
-                putLong(longValue: number /*long*/): org.springframework.asm.ByteVector
+                public putLong(longValue: number /*long*/): org.springframework.asm.ByteVector
                 /**
                  * Puts an UTF8 string into this byte vector. The byte vector is automatically enlarged if
                  * necessary.
@@ -54,7 +54,7 @@ declare namespace org {
                  * @return this byte vector.
                  */
                 // @ts-ignore
-                putUTF8(stringValue: string): org.springframework.asm.ByteVector
+                public putUTF8(stringValue: java.lang.String | string): org.springframework.asm.ByteVector
                 /**
                  * Puts an array of bytes into this byte vector. The byte vector is automatically enlarged if
                  * necessary.
@@ -65,7 +65,7 @@ declare namespace org {
                  * @return this byte vector.
                  */
                 // @ts-ignore
-                putByteArray(byteArrayValue: number /*byte*/[], byteOffset: number /*int*/, byteLength: number /*int*/): org.springframework.asm.ByteVector
+                public putByteArray(byteArrayValue: number /*byte*/[], byteOffset: number /*int*/, byteLength: number /*int*/): org.springframework.asm.ByteVector
             }
         }
     }

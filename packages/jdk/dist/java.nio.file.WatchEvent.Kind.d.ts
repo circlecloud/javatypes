@@ -14,7 +14,7 @@ declare namespace java {
                      * @return the name of the event kind
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * Returns the type of the {@link WatchEvent#context context} value.
                      * @return the type of the context value

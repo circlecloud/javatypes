@@ -23,13 +23,13 @@ declare namespace org {
                      * @return the patterns
                      */
                     // @ts-ignore
-                    getPatterns(): java.util.List<org.bukkit.block.banner.Pattern>
+                    getPatterns(): Array<org.bukkit.block.banner.Pattern>
                     /**
                      * Sets the patterns used on this banner
                      * @param patterns the new list of patterns
                      */
                     // @ts-ignore
-                    setPatterns(patterns: Array<org.bukkit.block.banner.Pattern>): void
+                    setPatterns(patterns: java.util.List<org.bukkit.block.banner.Pattern> | Array<org.bukkit.block.banner.Pattern>): void
                     /**
                      * Adds a new pattern on top of the existing
                      * patterns
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return the number of patterns
                      */
                     // @ts-ignore
-                    numberOfPatterns(): int
+                    numberOfPatterns(): number /*int*/
                 }
             }
         }

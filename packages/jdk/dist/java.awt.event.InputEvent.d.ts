@@ -19,104 +19,104 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            class InputEvent extends java.awt.event.ComponentEvent {
+            abstract class InputEvent extends java.awt.event.ComponentEvent {
                 /**
                  * The Shift key modifier constant.
                  * It is recommended that SHIFT_DOWN_MASK be used instead.
                  */
                 // @ts-ignore
-                readonly SHIFT_MASK: number /*int*/
+                public static readonly SHIFT_MASK: number /*int*/
                 /**
                  * The Control key modifier constant.
                  * It is recommended that CTRL_DOWN_MASK be used instead.
                  */
                 // @ts-ignore
-                readonly CTRL_MASK: number /*int*/
+                public static readonly CTRL_MASK: number /*int*/
                 /**
                  * The Meta key modifier constant.
                  * It is recommended that META_DOWN_MASK be used instead.
                  */
                 // @ts-ignore
-                readonly META_MASK: number /*int*/
+                public static readonly META_MASK: number /*int*/
                 /**
                  * The Alt key modifier constant.
                  * It is recommended that ALT_DOWN_MASK be used instead.
                  */
                 // @ts-ignore
-                readonly ALT_MASK: number /*int*/
+                public static readonly ALT_MASK: number /*int*/
                 /**
                  * The AltGraph key modifier constant.
                  */
                 // @ts-ignore
-                readonly ALT_GRAPH_MASK: number /*int*/
+                public static readonly ALT_GRAPH_MASK: number /*int*/
                 /**
                  * The Mouse Button1 modifier constant.
                  * It is recommended that BUTTON1_DOWN_MASK be used instead.
                  */
                 // @ts-ignore
-                readonly BUTTON1_MASK: number /*int*/
+                public static readonly BUTTON1_MASK: number /*int*/
                 /**
                  * The Mouse Button2 modifier constant.
                  * It is recommended that BUTTON2_DOWN_MASK be used instead.
                  * Note that BUTTON2_MASK has the same value as ALT_MASK.
                  */
                 // @ts-ignore
-                readonly BUTTON2_MASK: number /*int*/
+                public static readonly BUTTON2_MASK: number /*int*/
                 /**
                  * The Mouse Button3 modifier constant.
                  * It is recommended that BUTTON3_DOWN_MASK be used instead.
                  * Note that BUTTON3_MASK has the same value as META_MASK.
                  */
                 // @ts-ignore
-                readonly BUTTON3_MASK: number /*int*/
+                public static readonly BUTTON3_MASK: number /*int*/
                 /**
                  * The Shift key extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly SHIFT_DOWN_MASK: number /*int*/
+                public static readonly SHIFT_DOWN_MASK: number /*int*/
                 /**
                  * The Control key extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly CTRL_DOWN_MASK: number /*int*/
+                public static readonly CTRL_DOWN_MASK: number /*int*/
                 /**
                  * The Meta key extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly META_DOWN_MASK: number /*int*/
+                public static readonly META_DOWN_MASK: number /*int*/
                 /**
                  * The Alt key extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly ALT_DOWN_MASK: number /*int*/
+                public static readonly ALT_DOWN_MASK: number /*int*/
                 /**
                  * The Mouse Button1 extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly BUTTON1_DOWN_MASK: number /*int*/
+                public static readonly BUTTON1_DOWN_MASK: number /*int*/
                 /**
                  * The Mouse Button2 extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly BUTTON2_DOWN_MASK: number /*int*/
+                public static readonly BUTTON2_DOWN_MASK: number /*int*/
                 /**
                  * The Mouse Button3 extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly BUTTON3_DOWN_MASK: number /*int*/
+                public static readonly BUTTON3_DOWN_MASK: number /*int*/
                 /**
                  * The AltGraph key extended modifier constant.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly ALT_GRAPH_DOWN_MASK: number /*int*/
+                public static readonly ALT_GRAPH_DOWN_MASK: number /*int*/
                 /**
                  * A method to obtain a mask for any existing mouse button.
                  * The returned mask may be used for different purposes. Following are some of them:
@@ -166,43 +166,43 @@ declare namespace java {
                  * @see MouseEvent#getModifiersEx()
                  */
                 // @ts-ignore
-                getMaskForButton(button: number /*int*/): int
+                public static getMaskForButton(button: number /*int*/): number /*int*/
                 /**
                  * Returns whether or not the Shift modifier is down on this event.
                  */
                 // @ts-ignore
-                isShiftDown(): boolean
+                public isShiftDown(): boolean
                 /**
                  * Returns whether or not the Control modifier is down on this event.
                  */
                 // @ts-ignore
-                isControlDown(): boolean
+                public isControlDown(): boolean
                 /**
                  * Returns whether or not the Meta modifier is down on this event.
                  */
                 // @ts-ignore
-                isMetaDown(): boolean
+                public isMetaDown(): boolean
                 /**
                  * Returns whether or not the Alt modifier is down on this event.
                  */
                 // @ts-ignore
-                isAltDown(): boolean
+                public isAltDown(): boolean
                 /**
                  * Returns whether or not the AltGraph modifier is down on this event.
                  */
                 // @ts-ignore
-                isAltGraphDown(): boolean
+                public isAltGraphDown(): boolean
                 /**
                  * Returns the difference in milliseconds between the timestamp of when this event occurred and
                  * midnight, January 1, 1970 UTC.
                  */
                 // @ts-ignore
-                getWhen(): long
+                public getWhen(): number /*long*/
                 /**
                  * Returns the modifier mask for this event.
                  */
                 // @ts-ignore
-                getModifiers(): int
+                public getModifiers(): number /*int*/
                 /**
                  * Returns the extended modifier mask for this event.
                  * <P>
@@ -240,19 +240,19 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getModifiersEx(): int
+                public getModifiersEx(): number /*int*/
                 /**
                  * Consumes this event so that it will not be processed
                  * in the default manner by the source which originated it.
                  */
                 // @ts-ignore
-                consume(): void
+                public consume(): void
                 /**
                  * Returns whether or not this event has been consumed.
                  * @see #consume
                  */
                 // @ts-ignore
-                isConsumed(): boolean
+                public isConsumed(): boolean
                 /**
                  * Returns a String describing the extended modifier keys and
                  * mouse buttons, such as "Shift", "Button1", or "Ctrl+Shift".
@@ -271,7 +271,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getModifiersExText(modifiers: number /*int*/): java.lang.String
+                public static getModifiersExText(modifiers: number /*int*/): string
             }
         }
     }

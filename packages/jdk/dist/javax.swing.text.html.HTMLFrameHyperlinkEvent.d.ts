@@ -18,7 +18,7 @@ declare namespace javax {
                      * @param targetFrame the Frame to display the document in
                      */
                     // @ts-ignore
-                    constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, targetFrame: string)
+                    constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, targetFrame: java.lang.String | string)
                     /**
                      * Creates a new object representing a hypertext link event.
                      * @param source the object responsible for the event
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @param targetFrame the Frame to display the document in
                      */
                     // @ts-ignore
-                    constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, desc: string, targetFrame: string)
+                    constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, desc: java.lang.String | string, targetFrame: java.lang.String | string)
                     /**
                      * Creates a new object representing a hypertext link event.
                      * @param source the object responsible for the event
@@ -39,7 +39,7 @@ declare namespace javax {
                      * @param targetFrame the Frame to display the document in
                      */
                     // @ts-ignore
-                    constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, sourceElement: javax.swing.text.Element, targetFrame: string)
+                    constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, sourceElement: javax.swing.text.Element, targetFrame: java.lang.String | string)
                     /**
                      * Creates a new object representing a hypertext link event.
                      * @param source the object responsible for the event
@@ -51,7 +51,7 @@ declare namespace javax {
                      * @param targetFrame the Frame to display the document in
                      */
                     // @ts-ignore
-                    constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, desc: string, sourceElement: javax.swing.text.Element, targetFrame: string)
+                    constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, desc: java.lang.String | string, sourceElement: javax.swing.text.Element, targetFrame: java.lang.String | string)
                     /**
                      * Creates a new object representing a hypertext link event.
                      * @param source the object responsible for the event
@@ -65,12 +65,12 @@ declare namespace javax {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    constructor(source: any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, desc: string, sourceElement: javax.swing.text.Element, inputEvent: java.awt.event.InputEvent, targetFrame: string)
+                    constructor(source: java.lang.Object | any, type: javax.swing.event.HyperlinkEvent.EventType, targetURL: java.net.URL, desc: java.lang.String | string, sourceElement: javax.swing.text.Element, inputEvent: java.awt.event.InputEvent, targetFrame: java.lang.String | string)
                     /**
                      * returns the target for the link.
                      */
                     // @ts-ignore
-                    getTarget(): java.lang.String
+                    public getTarget(): string
                 }
             }
         }

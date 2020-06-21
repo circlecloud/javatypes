@@ -39,7 +39,7 @@ declare namespace java {
              * Writes a character to the buffer.
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Writes characters to the buffer.
              * @param c the data to be written
@@ -47,7 +47,7 @@ declare namespace java {
              * @param len       the number of chars that are written
              */
             // @ts-ignore
-            write(c: string[], off: number /*int*/, len: number /*int*/): void
+            public write(c: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Write a portion of a string to the buffer.
              * @param str  String to be written from
@@ -55,14 +55,14 @@ declare namespace java {
              * @param len  Number of characters to be written
              */
             // @ts-ignore
-            write(str: string, off: number /*int*/, len: number /*int*/): void
+            public write(str: java.lang.String | string, off: number /*int*/, len: number /*int*/): void
             /**
              * Writes the contents of the buffer to another character stream.
              * @param out       the output stream to write to
              * @throws IOException If an I/O error occurs.
              */
             // @ts-ignore
-            writeTo(out: java.io.Writer): void
+            public writeTo(out: java.io.Writer): void
             /**
              * Appends the specified character sequence to this writer.
              * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
@@ -82,7 +82,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence): java.io.CharArrayWriter
+            public append(csq: java.lang.CharSequence): java.io.CharArrayWriter
             /**
              * Appends a subsequence of the specified character sequence to this writer.
              * <p> An invocation of this method of the form <tt>out.append(csq, start,
@@ -108,7 +108,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.CharArrayWriter
+            public append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.CharArrayWriter
             /**
              * Appends the specified character to this writer.
              * <p> An invocation of this method of the form <tt>out.append(c)</tt>
@@ -121,43 +121,43 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(c: string): java.io.CharArrayWriter
+            public append(c: string): java.io.CharArrayWriter
             /**
              * Resets the buffer so that you can use it again without
              * throwing away the already allocated buffer.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Returns a copy of the input data.
              * @return an array of chars copied from the input data.
              */
             // @ts-ignore
-            toCharArray(): char[]
+            public toCharArray(): string[]
             /**
              * Returns the current size of the buffer.
              * @return an int representing the current size of the buffer.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Converts input data to a string.
              * @return the string.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Flush the stream.
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Close the stream.  This method does not release the buffer, since its
              * contents might still be required. Note: Invoking this method in this class
              * will have no effect.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

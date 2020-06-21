@@ -79,7 +79,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs a new empty text field with the specified number
              * of columns.  A column is an approximate average character
@@ -109,13 +109,13 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(text: string, columns: number /*int*/)
+            constructor(text: java.lang.String | string, columns: number /*int*/)
             /**
              * Creates the TextField's peer.  The peer allows us to modify the
              * appearance of the TextField without changing its functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the character that is to be used for echoing.
              * <p>
@@ -135,7 +135,7 @@ declare namespace java {
              * @see java.awt.TextField#setEchoChar
              */
             // @ts-ignore
-            getEchoChar(): char
+            public getEchoChar(): string
             /**
              * Sets the echo character for this text field.
              * <p>
@@ -158,13 +158,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setEchoChar(c: string): void
+            public setEchoChar(c: string): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEchoChar(char)</code>.
              */
             // @ts-ignore
-            setEchoCharacter(c: string): void
+            public setEchoCharacter(c: string): void
             /**
              * Sets the text that is presented by this
              * text component to be the specified text.
@@ -172,7 +172,7 @@ declare namespace java {
              * @see java.awt.TextComponent#getText
              */
             // @ts-ignore
-            setText(t: string): void
+            public setText(t: java.lang.String | string): void
             /**
              * Indicates whether or not this text field has a
              * character set for echoing.
@@ -187,7 +187,7 @@ declare namespace java {
              * @see java.awt.TextField#getEchoChar
              */
             // @ts-ignore
-            echoCharIsSet(): boolean
+            public echoCharIsSet(): boolean
             /**
              * Gets the number of columns in this text field. A column is an
              * approximate average character width that is platform-dependent.
@@ -196,7 +196,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getColumns(): int
+            public getColumns(): number /*int*/
             /**
              * Sets the number of columns in this text field. A column is an
              * approximate average character width that is platform-dependent.
@@ -208,7 +208,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setColumns(columns: number /*int*/): void
+            public setColumns(columns: number /*int*/): void
             /**
              * Gets the preferred size of this text field
              * with the specified number of columns.
@@ -219,13 +219,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getPreferredSize(columns: number /*int*/): java.awt.Dimension
+            public getPreferredSize(columns: number /*int*/): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize(int)</code>.
              */
             // @ts-ignore
-            preferredSize(columns: number /*int*/): java.awt.Dimension
+            public preferredSize(columns: number /*int*/): java.awt.Dimension
             /**
              * Gets the preferred size of this text field.
              * @return the preferred dimensions for
@@ -233,13 +233,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize()</code>.
              */
             // @ts-ignore
-            preferredSize(): java.awt.Dimension
+            public preferredSize(): java.awt.Dimension
             /**
              * Gets the minimum dimensions for a text field with
              * the specified number of columns.
@@ -248,13 +248,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(columns: number /*int*/): java.awt.Dimension
+            public getMinimumSize(columns: number /*int*/): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize(int)</code>.
              */
             // @ts-ignore
-            minimumSize(columns: number /*int*/): java.awt.Dimension
+            public minimumSize(columns: number /*int*/): java.awt.Dimension
             /**
              * Gets the minimum dimensions for this text field.
              * @return the minimum dimensions for
@@ -262,13 +262,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize()</code>.
              */
             // @ts-ignore
-            minimumSize(): java.awt.Dimension
+            public minimumSize(): java.awt.Dimension
             /**
              * Adds the specified action listener to receive
              * action events from this text field.
@@ -282,7 +282,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener so that it no longer
              * receives action events from this text field.
@@ -296,7 +296,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this textfield.
@@ -309,7 +309,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -339,7 +339,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this text field. If the event
              * is an instance of <code>ActionEvent</code>,
@@ -389,7 +389,7 @@ declare namespace java {
              * @return the parameter string of this text field
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this TextField.
              * For text fields, the AccessibleContext takes the form of an
@@ -400,7 +400,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -123,7 +123,7 @@ declare namespace javax {
                  * methods may also accept or return this value, as documented.
                  */
                 // @ts-ignore
-                readonly NOT_SPECIFIED: number /*int*/
+                public static readonly NOT_SPECIFIED: number /*int*/
                 /**
                  * Obtains an array of mixer info objects that represents
                  * the set of audio mixers that are currently installed on the system.
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @see #getMixer
                  */
                 // @ts-ignore
-                getMixerInfo(): javax.sound.sampled.Mixer.Info[]
+                public static getMixerInfo(): javax.sound.sampled.Mixer.Info[]
                 /**
                  * Obtains the requested audio mixer.
                  * @param info a <code>Mixer.Info</code> object representing the desired
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @see #getMixerInfo
                  */
                 // @ts-ignore
-                getMixer(info: javax.sound.sampled.Mixer.Info): javax.sound.sampled.Mixer
+                public static getMixer(info: javax.sound.sampled.Mixer.Info): javax.sound.sampled.Mixer
                 /**
                  * Obtains information about all source lines of a particular type that are supported
                  * by the installed mixers.
@@ -157,7 +157,7 @@ declare namespace javax {
                  * @see Mixer#getSourceLineInfo(Line.Info)
                  */
                 // @ts-ignore
-                getSourceLineInfo(info: javax.sound.sampled.Line.Info): javax.sound.sampled.Line.Info[]
+                public static getSourceLineInfo(info: javax.sound.sampled.Line.Info): javax.sound.sampled.Line.Info[]
                 /**
                  * Obtains information about all target lines of a particular type that are supported
                  * by the installed mixers.
@@ -169,7 +169,7 @@ declare namespace javax {
                  * @see Mixer#getTargetLineInfo(Line.Info)
                  */
                 // @ts-ignore
-                getTargetLineInfo(info: javax.sound.sampled.Line.Info): javax.sound.sampled.Line.Info[]
+                public static getTargetLineInfo(info: javax.sound.sampled.Line.Info): javax.sound.sampled.Line.Info[]
                 /**
                  * Indicates whether the system supports any lines that match
                  * the specified <code>Line.Info</code> object.  A line is supported if
@@ -180,7 +180,7 @@ declare namespace javax {
                  * @see Mixer#isLineSupported(Line.Info)
                  */
                 // @ts-ignore
-                isLineSupported(info: javax.sound.sampled.Line.Info): boolean
+                public static isLineSupported(info: javax.sound.sampled.Line.Info): boolean
                 /**
                  * Obtains a line that matches the description in the specified
                  * <code>Line.Info</code> object.
@@ -214,7 +214,7 @@ declare namespace javax {
                  *  through any installed mixer
                  */
                 // @ts-ignore
-                getLine(info: javax.sound.sampled.Line.Info): javax.sound.sampled.Line
+                public static getLine(info: javax.sound.sampled.Line.Info): javax.sound.sampled.Line
                 /**
                  * Obtains a clip that can be used for playing back
                  * an audio file or an audio stream. The returned clip
@@ -243,7 +243,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getClip(): javax.sound.sampled.Clip
+                public static getClip(): javax.sound.sampled.Clip
                 /**
                  * Obtains a clip from the specified mixer that can be
                  * used for playing back an audio file or an audio stream.
@@ -265,7 +265,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getClip(mixerInfo: javax.sound.sampled.Mixer.Info): javax.sound.sampled.Clip
+                public static getClip(mixerInfo: javax.sound.sampled.Mixer.Info): javax.sound.sampled.Clip
                 /**
                  * Obtains a source data line that can be used for playing back
                  * audio data in the format specified by the
@@ -301,7 +301,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSourceDataLine(format: javax.sound.sampled.AudioFormat): javax.sound.sampled.SourceDataLine
+                public static getSourceDataLine(format: javax.sound.sampled.AudioFormat): javax.sound.sampled.SourceDataLine
                 /**
                  * Obtains a source data line that can be used for playing back
                  * audio data in the format specified by the
@@ -334,7 +334,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSourceDataLine(format: javax.sound.sampled.AudioFormat, mixerinfo: javax.sound.sampled.Mixer.Info): javax.sound.sampled.SourceDataLine
+                public static getSourceDataLine(format: javax.sound.sampled.AudioFormat, mixerinfo: javax.sound.sampled.Mixer.Info): javax.sound.sampled.SourceDataLine
                 /**
                  * Obtains a target data line that can be used for recording
                  * audio data in the format specified by the
@@ -371,7 +371,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTargetDataLine(format: javax.sound.sampled.AudioFormat): javax.sound.sampled.TargetDataLine
+                public static getTargetDataLine(format: javax.sound.sampled.AudioFormat): javax.sound.sampled.TargetDataLine
                 /**
                  * Obtains a target data line that can be used for recording
                  * audio data in the format specified by the
@@ -404,7 +404,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTargetDataLine(format: javax.sound.sampled.AudioFormat, mixerinfo: javax.sound.sampled.Mixer.Info): javax.sound.sampled.TargetDataLine
+                public static getTargetDataLine(format: javax.sound.sampled.AudioFormat, mixerinfo: javax.sound.sampled.Mixer.Info): javax.sound.sampled.TargetDataLine
                 /**
                  * Obtains the encodings that the system can obtain from an
                  * audio input stream with the specified encoding using the set
@@ -416,7 +416,7 @@ declare namespace javax {
                  *  of at least 1, representing <code>sourceEncoding</code> (no conversion).
                  */
                 // @ts-ignore
-                getTargetEncodings(sourceEncoding: javax.sound.sampled.AudioFormat.Encoding): javax.sound.sampled.AudioFormat.Encoding[]
+                public static getTargetEncodings(sourceEncoding: javax.sound.sampled.AudioFormat.Encoding): javax.sound.sampled.AudioFormat.Encoding[]
                 /**
                  * Obtains the encodings that the system can obtain from an
                  * audio input stream with the specified format using the set
@@ -428,7 +428,7 @@ declare namespace javax {
                  *  of at least 1, representing the encoding of <code>sourceFormat</code> (no conversion).
                  */
                 // @ts-ignore
-                getTargetEncodings(sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat.Encoding[]
+                public static getTargetEncodings(sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat.Encoding[]
                 /**
                  * Indicates whether an audio input stream of the specified encoding
                  * can be obtained from an audio input stream that has the specified
@@ -439,7 +439,7 @@ declare namespace javax {
                  *  otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isConversionSupported(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): boolean
+                public static isConversionSupported(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): boolean
                 /**
                  * Obtains an audio input stream of the indicated encoding, by converting the
                  * provided audio input stream.
@@ -453,7 +453,7 @@ declare namespace javax {
                  * @see #getAudioInputStream(AudioFormat, AudioInputStream)
                  */
                 // @ts-ignore
-                getAudioInputStream(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
+                public static getAudioInputStream(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
                 /**
                  * Obtains the formats that have a particular encoding and that the system can
                  * obtain from a stream of the specified format using the set of
@@ -464,7 +464,7 @@ declare namespace javax {
                  *  encoding are supported, an array of length 0 is returned.
                  */
                 // @ts-ignore
-                getTargetFormats(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat[]
+                public static getTargetFormats(targetEncoding: javax.sound.sampled.AudioFormat.Encoding, sourceFormat: javax.sound.sampled.AudioFormat): javax.sound.sampled.AudioFormat[]
                 /**
                  * Indicates whether an audio input stream of a specified format
                  * can be obtained from an audio input stream of another specified format.
@@ -474,7 +474,7 @@ declare namespace javax {
                  *  otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isConversionSupported(targetFormat: javax.sound.sampled.AudioFormat, sourceFormat: javax.sound.sampled.AudioFormat): boolean
+                public static isConversionSupported(targetFormat: javax.sound.sampled.AudioFormat, sourceFormat: javax.sound.sampled.AudioFormat): boolean
                 /**
                  * Obtains an audio input stream of the indicated format, by converting the
                  * provided audio input stream.
@@ -488,7 +488,7 @@ declare namespace javax {
                  * @see #getAudioInputStream(AudioFormat.Encoding, AudioInputStream)
                  */
                 // @ts-ignore
-                getAudioInputStream(targetFormat: javax.sound.sampled.AudioFormat, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
+                public static getAudioInputStream(targetFormat: javax.sound.sampled.AudioFormat, sourceStream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioInputStream
                 /**
                  * Obtains the audio file format of the provided input stream.  The stream must
                  * point to valid audio file data.  The implementation of this method may require
@@ -507,7 +507,7 @@ declare namespace javax {
                  * @see InputStream#mark
                  */
                 // @ts-ignore
-                getAudioFileFormat(stream: java.io.InputStream): javax.sound.sampled.AudioFileFormat
+                public static getAudioFileFormat(stream: java.io.InputStream): javax.sound.sampled.AudioFileFormat
                 /**
                  * Obtains the audio file format of the specified URL.  The URL must
                  * point to valid audio file data.
@@ -519,7 +519,7 @@ declare namespace javax {
                  * @throws IOException if an input/output exception occurs
                  */
                 // @ts-ignore
-                getAudioFileFormat(url: java.net.URL): javax.sound.sampled.AudioFileFormat
+                public static getAudioFileFormat(url: java.net.URL): javax.sound.sampled.AudioFileFormat
                 /**
                  * Obtains the audio file format of the specified <code>File</code>.  The <code>File</code> must
                  * point to valid audio file data.
@@ -531,7 +531,7 @@ declare namespace javax {
                  * @throws IOException if an I/O exception occurs
                  */
                 // @ts-ignore
-                getAudioFileFormat(file: java.io.File): javax.sound.sampled.AudioFileFormat
+                public static getAudioFileFormat(file: java.io.File): javax.sound.sampled.AudioFileFormat
                 /**
                  * Obtains an audio input stream from the provided input stream.  The stream must
                  * point to valid audio file data.  The implementation of this method may
@@ -552,7 +552,7 @@ declare namespace javax {
                  * @see InputStream#mark
                  */
                 // @ts-ignore
-                getAudioInputStream(stream: java.io.InputStream): javax.sound.sampled.AudioInputStream
+                public static getAudioInputStream(stream: java.io.InputStream): javax.sound.sampled.AudioInputStream
                 /**
                  * Obtains an audio input stream from the URL provided.  The URL must
                  * point to valid audio file data.
@@ -565,7 +565,7 @@ declare namespace javax {
                  * @throws IOException if an I/O exception occurs
                  */
                 // @ts-ignore
-                getAudioInputStream(url: java.net.URL): javax.sound.sampled.AudioInputStream
+                public static getAudioInputStream(url: java.net.URL): javax.sound.sampled.AudioInputStream
                 /**
                  * Obtains an audio input stream from the provided <code>File</code>.  The <code>File</code> must
                  * point to valid audio file data.
@@ -578,14 +578,14 @@ declare namespace javax {
                  * @throws IOException if an I/O exception occurs
                  */
                 // @ts-ignore
-                getAudioInputStream(file: java.io.File): javax.sound.sampled.AudioInputStream
+                public static getAudioInputStream(file: java.io.File): javax.sound.sampled.AudioInputStream
                 /**
                  * Obtains the file types for which file writing support is provided by the system.
                  * @return array of unique file types.  If no file types are supported,
                  *  an array of length 0 is returned.
                  */
                 // @ts-ignore
-                getAudioFileTypes(): javax.sound.sampled.AudioFileFormat.Type[]
+                public static getAudioFileTypes(): javax.sound.sampled.AudioFileFormat.Type[]
                 /**
                  * Indicates whether file writing support for the specified file type is provided
                  * by the system.
@@ -594,7 +594,7 @@ declare namespace javax {
                  *  otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type): boolean
+                public static isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type): boolean
                 /**
                  * Obtains the file types that the system can write from the
                  * audio input stream specified.
@@ -604,7 +604,7 @@ declare namespace javax {
                  *  an array of length 0 is returned.
                  */
                 // @ts-ignore
-                getAudioFileTypes(stream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioFileFormat.Type[]
+                public static getAudioFileTypes(stream: javax.sound.sampled.AudioInputStream): javax.sound.sampled.AudioFileFormat.Type[]
                 /**
                  * Indicates whether an audio file of the specified file type can be written
                  * from the indicated audio input stream.
@@ -614,7 +614,7 @@ declare namespace javax {
                  *  otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type, stream: javax.sound.sampled.AudioInputStream): boolean
+                public static isFileTypeSupported(fileType: javax.sound.sampled.AudioFileFormat.Type, stream: javax.sound.sampled.AudioInputStream): boolean
                 /**
                  * Writes a stream of bytes representing an audio file of the specified file type
                  * to the output stream provided.  Some file types require that
@@ -634,7 +634,7 @@ declare namespace javax {
                  * @see #getAudioFileTypes
                  */
                 // @ts-ignore
-                write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.OutputStream): int
+                public static write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.OutputStream): number /*int*/
                 /**
                  * Writes a stream of bytes representing an audio file of the specified file type
                  * to the external file provided.
@@ -650,7 +650,7 @@ declare namespace javax {
                  * @see #getAudioFileTypes
                  */
                 // @ts-ignore
-                write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.File): int
+                public static write(stream: javax.sound.sampled.AudioInputStream, fileType: javax.sound.sampled.AudioFileFormat.Type, out: java.io.File): number /*int*/
             }
         }
     }

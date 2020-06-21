@@ -23,7 +23,7 @@ declare namespace javax {
                      * @return the type
                      */
                     // @ts-ignore
-                    getContentType(): java.lang.String
+                    public getContentType(): string
                     /**
                      * Insert content from the given stream which is expected
                      * to be in a format appropriate for this kind of content
@@ -37,7 +37,7 @@ declare namespace javax {
                      *    location within the document.
                      */
                     // @ts-ignore
-                    read(input: java.io.InputStream, doc: javax.swing.text.Document, pos: number /*int*/): void
+                    public read(input: java.io.InputStream, doc: javax.swing.text.Document, pos: number /*int*/): void
                     /**
                      * Write content from a document to the given stream
                      * in a format appropriate for this kind of content handler.
@@ -51,7 +51,7 @@ declare namespace javax {
                      *    location within the document.
                      */
                     // @ts-ignore
-                    write(out: java.io.OutputStream, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                    public write(out: java.io.OutputStream, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
                     /**
                      * Insert content from the given stream, which will be
                      * treated as plain text.
@@ -64,7 +64,7 @@ declare namespace javax {
                      *    location within the document.
                      */
                     // @ts-ignore
-                    read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
+                    public read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
                     /**
                      * Write content from a document to the given stream
                      * as plain text.
@@ -78,7 +78,7 @@ declare namespace javax {
                      *    location within the document.
                      */
                     // @ts-ignore
-                    write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                    public write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
                 }
             }
         }

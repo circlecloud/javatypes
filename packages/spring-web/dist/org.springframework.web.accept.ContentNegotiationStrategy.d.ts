@@ -15,7 +15,7 @@ declare namespace org {
                      * @since 5.0.5
                      */
                     // @ts-ignore
-                    
+                    readonly MEDIA_TYPE_ALL_LIST: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>
                     /**
                      * Resolve the given request to a list of media types. The returned list is
                      * ordered by specificity first and by quality parameter second.
@@ -26,7 +26,7 @@ declare namespace org {
                      *  types cannot be parsed
                      */
                     // @ts-ignore
-                    resolveMediaTypes(webRequest: org.springframework.web.context.request.NativeWebRequest): java.util.List<org.springframework.http.MediaType>
+                    resolveMediaTypes(webRequest: org.springframework.web.context.request.NativeWebRequest): Array<org.springframework.http.MediaType>
                 }
             }
         }

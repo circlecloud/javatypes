@@ -51,7 +51,7 @@ declare namespace java {
                  *  {@code null}
                  */
                 // @ts-ignore
-                constructor(collection: Array<any>)
+                constructor(collection: java.util.Collection<any> | Array<any>)
                 /**
                  * Creates an instance of {@code CollectionCertStoreParameters} with
                  * the default parameter values (an empty and immutable
@@ -68,20 +68,20 @@ declare namespace java {
                  * @return the {#code Collection} (never null)
                  */
                 // @ts-ignore
-                getCollection(): java.util.Collection<?>
+                public getCollection(): Array<any>
                 /**
                  * Returns a copy of this object. Note that only a reference to the
                  * {@code Collection} is copied, and not the contents.
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a formatted string describing the parameters.
                  * @return a formatted string describing the parameters
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

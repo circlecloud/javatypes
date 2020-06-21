@@ -10,13 +10,13 @@ declare namespace org {
              * @return X-coordinate
              */
             // @ts-ignore
-            getX(): int
+            getX(): number /*int*/
             /**
              * Gets the Z-coordinate of this chunk
              * @return Z-coordinate
              */
             // @ts-ignore
-            getZ(): int
+            getZ(): number /*int*/
             /**
              * Gets the world containing this chunk
              * @return Parent World
@@ -165,14 +165,14 @@ declare namespace org {
              * @see World#getPluginChunkTickets(int, int)
              */
             // @ts-ignore
-            getPluginChunkTickets(): java.util.Collection<org.bukkit.plugin.Plugin>
+            getPluginChunkTickets(): Array<org.bukkit.plugin.Plugin>
             /**
              * Gets the amount of time in ticks that this chunk has been inhabited.
              * Note that the time is incremented once per tick per player in the chunk.
              * @return inhabited time
              */
             // @ts-ignore
-            getInhabitedTime(): long
+            getInhabitedTime(): number /*long*/
             /**
              * Sets the amount of time in ticks that this chunk has been inhabited.
              * @param ticks new inhabited time

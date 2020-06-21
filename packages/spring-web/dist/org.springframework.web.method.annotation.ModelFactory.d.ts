@@ -22,7 +22,7 @@ declare namespace org {
                          * @param attributeHandler for access to session attributes
                          */
                         // @ts-ignore
-                        constructor(handlerMethods: Array<org.springframework.web.method.support.InvocableHandlerMethod>, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, attributeHandler: org.springframework.web.method.annotation.SessionAttributesHandler)
+                        constructor(handlerMethods: java.util.List<org.springframework.web.method.support.InvocableHandlerMethod> | Array<org.springframework.web.method.support.InvocableHandlerMethod>, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, attributeHandler: org.springframework.web.method.annotation.SessionAttributesHandler)
                         /**
                          * Populate the model in the following order:
                          * <ol>
@@ -38,7 +38,7 @@ declare namespace org {
                          * @throws Exception may arise from {#code @ModelAttribute} methods
                          */
                         // @ts-ignore
-                        initModel(request: org.springframework.web.context.request.NativeWebRequest, container: org.springframework.web.method.support.ModelAndViewContainer, handlerMethod: org.springframework.web.method.HandlerMethod): void
+                        public initModel(request: org.springframework.web.context.request.NativeWebRequest, container: org.springframework.web.method.support.ModelAndViewContainer, handlerMethod: org.springframework.web.method.HandlerMethod): void
                         /**
                          * Promote model attributes listed as {@code @SessionAttributes} to the session.
                          * Add {@link BindingResult} attributes where necessary.
@@ -47,7 +47,7 @@ declare namespace org {
                          * @throws Exception if creating BindingResult attributes fails
                          */
                         // @ts-ignore
-                        updateModel(request: org.springframework.web.context.request.NativeWebRequest, container: org.springframework.web.method.support.ModelAndViewContainer): void
+                        public updateModel(request: org.springframework.web.context.request.NativeWebRequest, container: org.springframework.web.method.support.ModelAndViewContainer): void
                         /**
                          * Derive the model attribute name for the given method parameter based on
                          * a {@code @ModelAttribute} parameter annotation (if present) or falling
@@ -57,7 +57,7 @@ declare namespace org {
                          * @see Conventions#getVariableNameForParameter(MethodParameter)
                          */
                         // @ts-ignore
-                        getNameForParameter(parameter: MethodParameter): java.lang.String
+                        public static getNameForParameter(parameter: MethodParameter): string
                         /**
                          * Derive the model attribute name for the given return value. Results will be
                          * based on:
@@ -71,7 +71,7 @@ declare namespace org {
                          * @return the derived name (never {#code null} or empty String)
                          */
                         // @ts-ignore
-                        getNameForReturnValue(returnValue: any, returnType: MethodParameter): java.lang.String
+                        public static getNameForReturnValue(returnValue: java.lang.Object | any, returnType: MethodParameter): string
                     }
                 }
             }

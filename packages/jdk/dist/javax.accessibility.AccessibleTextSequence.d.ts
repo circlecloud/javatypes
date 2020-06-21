@@ -19,22 +19,22 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(start: number /*int*/, end: number /*int*/, txt: string)
+            constructor(start: number /*int*/, end: number /*int*/, txt: java.lang.String | string)
             /**
              * The start index of the text sequence
              */
             // @ts-ignore
-            startIndex: number /*int*/
+            public startIndex: number /*int*/
             /**
              * The end index of the text sequence
              */
             // @ts-ignore
-            endIndex: number /*int*/
+            public endIndex: number /*int*/
             /**
              * The text
              */
             // @ts-ignore
-            text: string
+            public text: java.lang.String | string
         }
     }
 }

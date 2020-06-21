@@ -14,7 +14,7 @@ declare namespace javax {
          * @author Lynn Monsanto
          */
         // @ts-ignore
-        class AccessibleBundle extends java.lang.Object {
+        abstract class AccessibleBundle extends java.lang.Object {
             /**
              * Construct an {@code AccessibleBundle}.
              */
@@ -26,7 +26,7 @@ declare namespace javax {
              * @see #toDisplayString
              */
             // @ts-ignore
-            key: string
+            key: java.lang.String | string
             /**
              * Obtains the key as a localized string.
              * If a localized string cannot be found for the key, the
@@ -40,7 +40,7 @@ declare namespace javax {
              * @return a localized String for the key.
              */
             // @ts-ignore
-            toDisplayString(resourceBundleName: string, locale: java.util.Locale): java.lang.String
+            toDisplayString(resourceBundleName: java.lang.String | string, locale: java.util.Locale): string
             /**
              * Obtains the key as a localized string.
              * If a localized string cannot be found for the key, the
@@ -49,20 +49,20 @@ declare namespace javax {
              * @return a localized String for the key.
              */
             // @ts-ignore
-            toDisplayString(locale: java.util.Locale): java.lang.String
+            public toDisplayString(locale: java.util.Locale): string
             /**
              * Gets localized string describing the key using the default locale.
              * @return a localized String describing the key for the default locale
              */
             // @ts-ignore
-            toDisplayString(): java.lang.String
+            public toDisplayString(): string
             /**
              * Gets localized string describing the key using the default locale.
              * @return a localized String describing the key using the default locale
              * @see #toDisplayString
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

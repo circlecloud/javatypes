@@ -23,7 +23,7 @@ declare namespace org {
                      * @see #doParse
                      */
                     // @ts-ignore
-                    class AbstractSingleBeanDefinitionParser extends org.springframework.beans.factory.xml.AbstractBeanDefinitionParser {
+                    abstract class AbstractSingleBeanDefinitionParser extends org.springframework.beans.factory.xml.AbstractBeanDefinitionParser {
                         // @ts-ignore
                         constructor()
                         /**
@@ -49,7 +49,7 @@ declare namespace org {
                          *  or {#code null} if none
                          */
                         // @ts-ignore
-                        getParentName(element: org.w3c.dom.Element): java.lang.String
+                        getParentName(element: org.w3c.dom.Element): string
                         /**
                          * Determine the bean class corresponding to the supplied {@link Element}.
                          * <p>Note that, for application classes, it is generally preferable to
@@ -63,7 +63,7 @@ declare namespace org {
                          * @see #getBeanClassName
                          */
                         // @ts-ignore
-                        getBeanClass(element: org.w3c.dom.Element): java.lang.Class<?>
+                        getBeanClass(element: org.w3c.dom.Element): java.lang.Class<any>
                         /**
                          * Determine the bean class name corresponding to the supplied {@link Element}.
                          * @param element the {#code Element} that is being parsed
@@ -72,7 +72,7 @@ declare namespace org {
                          * @see #getBeanClass
                          */
                         // @ts-ignore
-                        getBeanClassName(element: org.w3c.dom.Element): java.lang.String
+                        getBeanClassName(element: org.w3c.dom.Element): string
                         /**
                          * Parse the supplied {@link Element} and populate the supplied
                          * {@link BeanDefinitionBuilder} as required.

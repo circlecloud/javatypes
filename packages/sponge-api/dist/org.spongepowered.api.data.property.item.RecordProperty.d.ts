@@ -9,7 +9,7 @@ declare namespace org {
                          * from a {@link ItemType} or {@link ItemStack}.
                          */
                         // @ts-ignore
-                        class RecordProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, org.spongepowered.api.effect.sound.record.RecordType> {
+                        class RecordProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, org.spongepowered.api.effect.sound.record.RecordType> {
                             /**
                              * Constructs a new record property with the specified record type.
                              * @param instrument The record type the record plays
@@ -17,7 +17,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(instrument: org.spongepowered.api.effect.sound.record.RecordType)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

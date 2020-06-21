@@ -36,7 +36,7 @@ declare namespace org {
                      * in particular a custom HessianProxyFactory subclass.
                      */
                     // @ts-ignore
-                    setProxyFactory(proxyFactory: HessianProxyFactory): void
+                    public setProxyFactory(proxyFactory: HessianProxyFactory): void
                     /**
                      * Specify the Hessian SerializerFactory to use.
                      * <p>This will typically be passed in as an inner bean definition
@@ -44,26 +44,26 @@ declare namespace org {
                      * with custom bean property values applied.
                      */
                     // @ts-ignore
-                    setSerializerFactory(serializerFactory: SerializerFactory): void
+                    public setSerializerFactory(serializerFactory: SerializerFactory): void
                     /**
                      * Set whether to send the Java collection type for each serialized
                      * collection. Default is "true".
                      */
                     // @ts-ignore
-                    setSendCollectionType(sendCollectionType: boolean): void
+                    public setSendCollectionType(sendCollectionType: boolean): void
                     /**
                      * Set whether to allow non-serializable types as Hessian arguments
                      * and return values. Default is "true".
                      */
                     // @ts-ignore
-                    setAllowNonSerializable(allowNonSerializable: boolean): void
+                    public setAllowNonSerializable(allowNonSerializable: boolean): void
                     /**
                      * Set whether overloaded methods should be enabled for remote invocations.
                      * Default is "false".
                      * @see com.caucho.hessian.client.HessianProxyFactory#setOverloadEnabled
                      */
                     // @ts-ignore
-                    setOverloadEnabled(overloadEnabled: boolean): void
+                    public setOverloadEnabled(overloadEnabled: boolean): void
                     /**
                      * Set the username that this factory should use to access the remote service.
                      * Default is none.
@@ -71,7 +71,7 @@ declare namespace org {
                      * @see com.caucho.hessian.client.HessianProxyFactory#setUser
                      */
                     // @ts-ignore
-                    setUsername(username: string): void
+                    public setUsername(username: java.lang.String | string): void
                     /**
                      * Set the password that this factory should use to access the remote service.
                      * Default is none.
@@ -79,66 +79,66 @@ declare namespace org {
                      * @see com.caucho.hessian.client.HessianProxyFactory#setPassword
                      */
                     // @ts-ignore
-                    setPassword(password: string): void
+                    public setPassword(password: java.lang.String | string): void
                     /**
                      * Set whether Hessian's debug mode should be enabled.
                      * Default is "false".
                      * @see com.caucho.hessian.client.HessianProxyFactory#setDebug
                      */
                     // @ts-ignore
-                    setDebug(debug: boolean): void
+                    public setDebug(debug: boolean): void
                     /**
                      * Set whether to use a chunked post for sending a Hessian request.
                      * @see com.caucho.hessian.client.HessianProxyFactory#setChunkedPost
                      */
                     // @ts-ignore
-                    setChunkedPost(chunkedPost: boolean): void
+                    public setChunkedPost(chunkedPost: boolean): void
                     /**
                      * Specify a custom HessianConnectionFactory to use for the Hessian client.
                      */
                     // @ts-ignore
-                    setConnectionFactory(connectionFactory: HessianConnectionFactory): void
+                    public setConnectionFactory(connectionFactory: HessianConnectionFactory): void
                     /**
                      * Set the socket connect timeout to use for the Hessian client.
                      * @see com.caucho.hessian.client.HessianProxyFactory#setConnectTimeout
                      */
                     // @ts-ignore
-                    setConnectTimeout(timeout: number /*long*/): void
+                    public setConnectTimeout(timeout: number /*long*/): void
                     /**
                      * Set the timeout to use when waiting for a reply from the Hessian service.
                      * @see com.caucho.hessian.client.HessianProxyFactory#setReadTimeout
                      */
                     // @ts-ignore
-                    setReadTimeout(timeout: number /*long*/): void
+                    public setReadTimeout(timeout: number /*long*/): void
                     /**
                      * Set whether version 2 of the Hessian protocol should be used for
                      * parsing requests and replies. Default is "false".
                      * @see com.caucho.hessian.client.HessianProxyFactory#setHessian2Request
                      */
                     // @ts-ignore
-                    setHessian2(hessian2: boolean): void
+                    public setHessian2(hessian2: boolean): void
                     /**
                      * Set whether version 2 of the Hessian protocol should be used for
                      * parsing requests. Default is "false".
                      * @see com.caucho.hessian.client.HessianProxyFactory#setHessian2Request
                      */
                     // @ts-ignore
-                    setHessian2Request(hessian2: boolean): void
+                    public setHessian2Request(hessian2: boolean): void
                     /**
                      * Set whether version 2 of the Hessian protocol should be used for
                      * parsing replies. Default is "false".
                      * @see com.caucho.hessian.client.HessianProxyFactory#setHessian2Reply
                      */
                     // @ts-ignore
-                    setHessian2Reply(hessian2: boolean): void
+                    public setHessian2Reply(hessian2: boolean): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Initialize the Hessian proxy for this interceptor.
                      * @throws RemoteLookupFailureException if the service URL is invalid
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Create the Hessian proxy that is wrapped by this interceptor.
                      * @param proxyFactory the proxy factory to use
@@ -147,9 +147,9 @@ declare namespace org {
                      * @see com.caucho.hessian.client.HessianProxyFactory#create
                      */
                     // @ts-ignore
-                    createHessianProxy(proxyFactory: HessianProxyFactory): java.lang.Object
+                    createHessianProxy(proxyFactory: HessianProxyFactory): any
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                     /**
                      * Convert the given Hessian access exception to an appropriate
                      * Spring RemoteAccessException.
@@ -157,7 +157,7 @@ declare namespace org {
                      * @return the RemoteAccessException to throw
                      */
                     // @ts-ignore
-                    convertHessianAccessException(ex: Error): RemoteAccessException
+                    convertHessianAccessException(ex: java.lang.Throwable | Error): RemoteAccessException
                 }
             }
         }

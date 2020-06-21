@@ -6,13 +6,13 @@ declare namespace org {
                     // @ts-ignore
                     class LlamaVariants extends java.lang.Object {
                         // @ts-ignore
-                        readonly CREAMY: org.spongepowered.api.data.type.LlamaVariant
+                        public static readonly CREAMY: org.spongepowered.api.data.type.LlamaVariant
                         // @ts-ignore
-                        readonly WHITE: org.spongepowered.api.data.type.LlamaVariant
+                        public static readonly WHITE: org.spongepowered.api.data.type.LlamaVariant
                         // @ts-ignore
-                        readonly BROWN: org.spongepowered.api.data.type.LlamaVariant
+                        public static readonly BROWN: org.spongepowered.api.data.type.LlamaVariant
                         // @ts-ignore
-                        readonly GRAY: org.spongepowered.api.data.type.LlamaVariant
+                        public static readonly GRAY: org.spongepowered.api.data.type.LlamaVariant
                     }
                 }
             }

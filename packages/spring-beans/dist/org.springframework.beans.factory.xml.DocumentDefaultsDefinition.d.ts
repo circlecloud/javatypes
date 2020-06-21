@@ -18,72 +18,72 @@ declare namespace org {
                          * Set the default lazy-init flag for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        setLazyInit(lazyInit: string): void
+                        public setLazyInit(lazyInit: java.lang.String | string): void
                         /**
                          * Return the default lazy-init flag for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        getLazyInit(): java.lang.String
+                        public getLazyInit(): string
                         /**
                          * Set the default merge setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        setMerge(merge: string): void
+                        public setMerge(merge: java.lang.String | string): void
                         /**
                          * Return the default merge setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        getMerge(): java.lang.String
+                        public getMerge(): string
                         /**
                          * Set the default autowire setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        setAutowire(autowire: string): void
+                        public setAutowire(autowire: java.lang.String | string): void
                         /**
                          * Return the default autowire setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        getAutowire(): java.lang.String
+                        public getAutowire(): string
                         /**
                          * Set the default autowire-candidate pattern for the document that's currently parsed.
                          * Also accepts a comma-separated list of patterns.
                          */
                         // @ts-ignore
-                        setAutowireCandidates(autowireCandidates: string): void
+                        public setAutowireCandidates(autowireCandidates: java.lang.String | string): void
                         /**
                          * Return the default autowire-candidate pattern for the document that's currently parsed.
                          * May also return a comma-separated list of patterns.
                          */
                         // @ts-ignore
-                        getAutowireCandidates(): java.lang.String
+                        public getAutowireCandidates(): string
                         /**
                          * Set the default init-method setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        setInitMethod(initMethod: string): void
+                        public setInitMethod(initMethod: java.lang.String | string): void
                         /**
                          * Return the default init-method setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        getInitMethod(): java.lang.String
+                        public getInitMethod(): string
                         /**
                          * Set the default destroy-method setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        setDestroyMethod(destroyMethod: string): void
+                        public setDestroyMethod(destroyMethod: java.lang.String | string): void
                         /**
                          * Return the default destroy-method setting for the document that's currently parsed.
                          */
                         // @ts-ignore
-                        getDestroyMethod(): java.lang.String
+                        public getDestroyMethod(): string
                         /**
                          * Set the configuration source {@code Object} for this metadata element.
                          * <p>The exact type of the object will depend on the configuration mechanism used.
                          */
                         // @ts-ignore
-                        setSource(source: any): void
+                        public setSource(source: java.lang.Object | any): void
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                     }
                 }
             }

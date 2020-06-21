@@ -11,7 +11,7 @@ declare namespace org {
                          * @see Cause#root()
                          */
                         // @ts-ignore
-                        class Root implements java.lang.annotation.Annotation {
+                        abstract class Root implements java.lang.annotation.Annotation {
                         }
                     }
                 }

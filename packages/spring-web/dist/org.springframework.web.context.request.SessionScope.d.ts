@@ -25,13 +25,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getScope(): int
+                        getScope(): number /*int*/
                         // @ts-ignore
-                        getConversationId(): java.lang.String
+                        public getConversationId(): string
                         // @ts-ignore
-                        get(name: string, objectFactory: object): java.lang.Object
+                        public get(name: java.lang.String | string, objectFactory: object): any
                         // @ts-ignore
-                        remove(name: string): java.lang.Object
+                        public remove(name: java.lang.String | string): any
                     }
                 }
             }

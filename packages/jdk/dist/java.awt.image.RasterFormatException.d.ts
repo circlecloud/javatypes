@@ -14,7 +14,7 @@ declare namespace java {
                  *  <code>RasterFormatException</code> is thrown
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
             }
         }
     }

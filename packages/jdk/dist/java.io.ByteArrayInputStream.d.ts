@@ -87,7 +87,7 @@ declare namespace java {
              *           stream has been reached.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data into an array of bytes
              * from this input stream.
@@ -117,7 +117,7 @@ declare namespace java {
              *  <code>b.length - off</code>
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips <code>n</code> bytes of input from this input stream. Fewer
              * bytes might be skipped if the end of the input stream is reached.
@@ -130,7 +130,7 @@ declare namespace java {
              * @return the actual number of bytes skipped.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns the number of remaining bytes that can be read (or skipped over)
              * from this input stream.
@@ -141,7 +141,7 @@ declare namespace java {
              *           over) from this input stream without blocking.
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Tests if this <code>InputStream</code> supports mark/reset. The
              * <code>markSupported</code> method of <code>ByteArrayInputStream</code>
@@ -149,7 +149,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Set the current marked position in the stream.
              * ByteArrayInputStream objects are marked at position zero by
@@ -164,21 +164,21 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Resets the buffer to the marked position.  The marked position
              * is 0 unless another position was marked or an offset was specified
              * in the constructor.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Closing a <tt>ByteArrayInputStream</tt> has no effect. The methods in
              * this class can be called after the stream has been closed without
              * generating an <tt>IOException</tt>.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

@@ -17,13 +17,13 @@ declare namespace org {
              * @see NestedRuntimeException
              */
             // @ts-ignore
-            class NestedCheckedException extends java.lang.Exception {
+            abstract class NestedCheckedException extends java.lang.Exception {
                 /**
                  * Construct a {@code NestedCheckedException} with the specified detail message.
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Construct a {@code NestedCheckedException} with the specified detail message
                  * and nested exception.
@@ -31,19 +31,19 @@ declare namespace org {
                  * @param cause the nested exception
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Return the detail message, including the message from the nested exception
                  * if there is one.
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 /**
                  * Retrieve the innermost cause of this exception, if any.
                  * @return the innermost exception, or {#code null} if none
                  */
                 // @ts-ignore
-                getRootCause(): java.lang.Throwable
+                getRootCause(): Error
                 /**
                  * Retrieve the most specific cause of this exception, that is,
                  * either the innermost cause (root cause) or this exception itself.
@@ -53,7 +53,7 @@ declare namespace org {
                  * @since 2.0.3
                  */
                 // @ts-ignore
-                getMostSpecificCause(): java.lang.Throwable
+                getMostSpecificCause(): Error
                 /**
                  * Check whether this exception contains an exception of the given type:
                  * either it is of the given class itself or it contains a nested cause

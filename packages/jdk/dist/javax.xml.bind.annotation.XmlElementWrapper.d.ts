@@ -51,7 +51,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlElementWrapper implements java.lang.annotation.Annotation {
+                abstract class XmlElementWrapper implements java.lang.annotation.Annotation {
                 }
             }
         }

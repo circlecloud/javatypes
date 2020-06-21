@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 2.0
                  */
                 // @ts-ignore
-                class BshScriptUtils extends java.lang.Object {
+                abstract class BshScriptUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -21,7 +21,7 @@ declare namespace org {
                      * @throws EvalError in case of BeanShell parsing failure
                      */
                     // @ts-ignore
-                    createBshObject(scriptSource: string): java.lang.Object
+                    public static createBshObject(scriptSource: java.lang.String | string): any
                     /**
                      * Create a new BeanShell-scripted object from the given script source,
                      * using the default ClassLoader.
@@ -38,7 +38,7 @@ declare namespace org {
                      * @see #createBshObject(String, Class[], ClassLoader)
                      */
                     // @ts-ignore
-                    createBshObject(scriptSource: string, ...scriptInterfaces: java.lang.Class[]): java.lang.Object
+                    public static createBshObject(scriptSource: java.lang.String | string, ...scriptInterfaces: java.lang.Class<any>[]): any
                     /**
                      * Create a new BeanShell-scripted object from the given script source.
                      * <p>The script may either be a simple script that needs a corresponding proxy
@@ -54,7 +54,7 @@ declare namespace org {
                      * @throws EvalError in case of BeanShell parsing failure
                      */
                     // @ts-ignore
-                    createBshObject(scriptSource: string, scriptInterfaces: java.lang.Class[], classLoader: java.lang.ClassLoader): java.lang.Object
+                    public static createBshObject(scriptSource: java.lang.String | string, scriptInterfaces: java.lang.Class<any>[], classLoader: java.lang.ClassLoader): any
                 }
             }
         }

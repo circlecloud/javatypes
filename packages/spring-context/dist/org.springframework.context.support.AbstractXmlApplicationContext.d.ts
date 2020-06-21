@@ -18,7 +18,7 @@ declare namespace org {
                  * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
                  */
                 // @ts-ignore
-                class AbstractXmlApplicationContext extends org.springframework.context.support.AbstractRefreshableConfigApplicationContext {
+                abstract class AbstractXmlApplicationContext extends org.springframework.context.support.AbstractRefreshableConfigApplicationContext {
                     /**
                      * Create a new AbstractXmlApplicationContext with no parent.
                      */
@@ -34,7 +34,7 @@ declare namespace org {
                      * Set whether to use XML validation. Default is {@code true}.
                      */
                     // @ts-ignore
-                    setValidating(validating: boolean): void
+                    public setValidating(validating: boolean): void
                     /**
                      * Loads the bean definitions via an XmlBeanDefinitionReader.
                      * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader

@@ -89,20 +89,20 @@ declare namespace org {
                         // @ts-ignore
                         constructor(xmlBeanDefinitionReader: org.springframework.beans.factory.xml.XmlBeanDefinitionReader)
                         // @ts-ignore
-                        setMetaClass(metaClass: MetaClass): void
+                        public setMetaClass(metaClass: MetaClass): void
                         // @ts-ignore
-                        getMetaClass(): MetaClass
+                        public getMetaClass(): MetaClass
                         /**
                          * Set the binding, i.e. the Groovy variables available in the scope
                          * of a {@code GroovyBeanDefinitionReader} closure.
                          */
                         // @ts-ignore
-                        setBinding(binding: Binding): void
+                        public setBinding(binding: Binding): void
                         /**
                          * Return a specified binding for Groovy variables, if any.
                          */
                         // @ts-ignore
-                        getBinding(): Binding
+                        public getBinding(): Binding
                         /**
                          * Load bean definitions from the specified Groovy script or XML file.
                          * <p>Note that {@code ".xml"} files will be parsed as XML content; all other kinds
@@ -112,7 +112,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(resource: Resource): int
+                        public loadBeanDefinitions(resource: Resource): number /*int*/
                         /**
                          * Load bean definitions from the specified Groovy script or XML file.
                          * <p>Note that {@code ".xml"} files will be parsed as XML content; all other kinds
@@ -123,21 +123,21 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException in case of loading or parsing errors
                          */
                         // @ts-ignore
-                        loadBeanDefinitions(encodedResource: EncodedResource): int
+                        public loadBeanDefinitions(encodedResource: EncodedResource): number /*int*/
                         /**
                          * Defines a set of beans for the given block or closure.
                          * @param closure the block or closure
                          * @return this {#code GroovyBeanDefinitionReader} instance
                          */
                         // @ts-ignore
-                        beans(closure: object): org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
+                        public beans(closure: object): org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
                         /**
                          * Define an inner bean definition.
                          * @param type the bean type
                          * @return the bean definition
                          */
                         // @ts-ignore
-                        bean(type: java.lang.Class<any>): org.springframework.beans.factory.support.GenericBeanDefinition
+                        public bean(type: java.lang.Class<any>): org.springframework.beans.factory.support.GenericBeanDefinition
                         /**
                          * Define an inner bean definition.
                          * @param type the bean type
@@ -145,26 +145,26 @@ declare namespace org {
                          * @return the bean definition
                          */
                         // @ts-ignore
-                        bean(type: java.lang.Class<any>, ...args: any[]): org.springframework.beans.factory.support.AbstractBeanDefinition
+                        public bean(type: java.lang.Class<any>, ...args: java.lang.Object[] | any[]): org.springframework.beans.factory.support.AbstractBeanDefinition
                         /**
                          * Define a Spring XML namespace definition to use.
                          * @param definition the namespace definition
                          */
                         // @ts-ignore
-                        xmlns(definition: java.util.Map<java.lang.String, java.lang.String>): void
+                        public xmlns(definition: java.util.Map<java.lang.String | string, java.lang.String | string>): void
                         /**
                          * Import Spring bean definitions from either XML or Groovy sources into the
                          * current bean builder instance.
                          * @param resourcePattern the resource pattern
                          */
                         // @ts-ignore
-                        importBeans(resourcePattern: string): void
+                        public importBeans(resourcePattern: java.lang.String | string): void
                         /**
                          * This method overrides method invocation to create beans for each method name that
                          * takes a class argument.
                          */
                         // @ts-ignore
-                        invokeMethod(name: string, arg: any): java.lang.Object
+                        public invokeMethod(name: java.lang.String | string, arg: java.lang.Object | any): any
                         /**
                          * When a method argument is only a closure it is a set of bean definitions.
                          * @param callable the closure argument
@@ -173,15 +173,15 @@ declare namespace org {
                         // @ts-ignore
                         invokeBeanDefiningClosure(callable: object): org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader
                         // @ts-ignore
-                        resolveConstructorArguments(args: any[], start: number /*int*/, end: number /*int*/): java.util.List<java.lang.Object>
+                        resolveConstructorArguments(args: java.lang.Object[] | any[], start: number /*int*/, end: number /*int*/): Array<java.lang.Object | any>
                         /**
                          * This method overrides property setting in the scope of the {@code GroovyBeanDefinitionReader}
                          * to set properties on the current bean definition.
                          */
                         // @ts-ignore
-                        setProperty(name: string, value: any): void
+                        public setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                         // @ts-ignore
-                        applyPropertyToBeanDefinition(name: string, value: any): void
+                        applyPropertyToBeanDefinition(name: java.lang.String | string, value: java.lang.Object | any): void
                         /**
                          * This method overrides property retrieval in the scope of the
                          * {@code GroovyBeanDefinitionReader}. A property retrieval will either:
@@ -193,7 +193,7 @@ declare namespace org {
                          * </ul>
                          */
                         // @ts-ignore
-                        getProperty(name: string): java.lang.Object
+                        public getProperty(name: java.lang.String | string): any
                     }
                 }
             }

@@ -24,7 +24,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    constructor(cmdpath: string, argv: string[])
+                    constructor(cmdpath: java.lang.String | string, argv: java.lang.String[] | string[])
                     /**
                      * Fetch the configured path-qualified java command name.
                      * @return the configured name, or <code>null</code> if configured to
@@ -32,7 +32,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getCommandPath(): java.lang.String
+                    public getCommandPath(): string
                     /**
                      * Fetch the configured java command options.
                      * @return An array of the command options which will be passed
@@ -43,7 +43,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getCommandOptions(): java.lang.String[]
+                    public getCommandOptions(): string[]
                     /**
                      * Compares two command environments for content equality.
                      * @param obj     the Object to compare with
@@ -52,7 +52,7 @@ declare namespace java {
                      * @since 1.2
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Return identical values for similar
                      * <code>CommandEnvironment</code>s.
@@ -60,7 +60,7 @@ declare namespace java {
                      * @see java.util.Hashtable
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

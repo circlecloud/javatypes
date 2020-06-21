@@ -18,7 +18,7 @@ declare namespace org {
                      * Set the {@link Proxy} to use for this request factory.
                      */
                     // @ts-ignore
-                    setProxy(proxy: java.net.Proxy): void
+                    public setProxy(proxy: java.net.Proxy): void
                     /**
                      * Indicate whether this request factory should buffer the
                      * {@linkplain ClientHttpRequest#getBody() request body} internally.
@@ -33,7 +33,7 @@ declare namespace org {
                      * @see HttpURLConnection#setFixedLengthStreamingMode(int)
                      */
                     // @ts-ignore
-                    setBufferRequestBody(bufferRequestBody: boolean): void
+                    public setBufferRequestBody(bufferRequestBody: boolean): void
                     /**
                      * Set the number of bytes to write in each chunk when not buffering request
                      * bodies locally.
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see #setBufferRequestBody(boolean)
                      */
                     // @ts-ignore
-                    setChunkSize(chunkSize: number /*int*/): void
+                    public setChunkSize(chunkSize: number /*int*/): void
                     /**
                      * Set the underlying URLConnection's connect timeout (in milliseconds).
                      * A timeout value of 0 specifies an infinite timeout.
@@ -52,7 +52,7 @@ declare namespace org {
                      * @see URLConnection#setConnectTimeout(int)
                      */
                     // @ts-ignore
-                    setConnectTimeout(connectTimeout: number /*int*/): void
+                    public setConnectTimeout(connectTimeout: number /*int*/): void
                     /**
                      * Set the underlying URLConnection's read timeout (in milliseconds).
                      * A timeout value of 0 specifies an infinite timeout.
@@ -60,7 +60,7 @@ declare namespace org {
                      * @see URLConnection#setReadTimeout(int)
                      */
                     // @ts-ignore
-                    setReadTimeout(readTimeout: number /*int*/): void
+                    public setReadTimeout(readTimeout: number /*int*/): void
                     /**
                      * Set if the underlying URLConnection can be set to 'output streaming' mode.
                      * Default is {@code true}.
@@ -71,22 +71,22 @@ declare namespace org {
                      * @param outputStreaming if output streaming is enabled
                      */
                     // @ts-ignore
-                    setOutputStreaming(outputStreaming: boolean): void
+                    public setOutputStreaming(outputStreaming: boolean): void
                     /**
                      * Set the task executor for this request factory. Setting this property is required
                      * for {@linkplain #createAsyncRequest(URI, HttpMethod) creating asynchronous requests}.
                      * @param taskExecutor the task executor
                      */
                     // @ts-ignore
-                    setTaskExecutor(taskExecutor: AsyncListenableTaskExecutor): void
+                    public setTaskExecutor(taskExecutor: AsyncListenableTaskExecutor): void
                     // @ts-ignore
-                    createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
+                    public createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
                     /**
                      * {@inheritDoc}
                      * <p>Setting the {@link #setTaskExecutor taskExecutor} property is required before calling this method.
                      */
                     // @ts-ignore
-                    createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
+                    public createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
                     /**
                      * Opens and returns a connection to the given URL.
                      * <p>The default implementation uses the given {@linkplain #setProxy(java.net.Proxy) proxy} -
@@ -106,7 +106,7 @@ declare namespace org {
                      * @throws IOException in case of I/O errors
                      */
                     // @ts-ignore
-                    prepareConnection(connection: java.net.HttpURLConnection, httpMethod: string): void
+                    prepareConnection(connection: java.net.HttpURLConnection, httpMethod: java.lang.String | string): void
                 }
             }
         }

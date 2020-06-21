@@ -41,7 +41,7 @@ declare namespace java {
              * @param owner The owner of this stream.
              */
             // @ts-ignore
-            constructor(input: java.io.InputStream, owner: any)
+            constructor(input: java.io.InputStream, owner: java.lang.Object | any)
             /**
              * Creates a new input stream for reading archives
              * created by the <code>XMLEncoder</code> class.
@@ -51,7 +51,7 @@ declare namespace java {
              *         if <code>null</code> the default exception listener will be used.
              */
             // @ts-ignore
-            constructor(input: java.io.InputStream, owner: any, exceptionListener: java.beans.ExceptionListener)
+            constructor(input: java.io.InputStream, owner: java.lang.Object | any, exceptionListener: java.beans.ExceptionListener)
             /**
              * Creates a new input stream for reading archives
              * created by the <code>XMLEncoder</code> class.
@@ -67,7 +67,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(input: java.io.InputStream, owner: any, exceptionListener: java.beans.ExceptionListener, cl: java.lang.ClassLoader)
+            constructor(input: java.io.InputStream, owner: java.lang.Object | any, exceptionListener: java.beans.ExceptionListener, cl: java.lang.ClassLoader)
             /**
              * Creates a new decoder to parse XML archives
              * created by the {@code XMLEncoder} class.
@@ -85,7 +85,7 @@ declare namespace java {
              * with this stream.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Sets the exception handler for this stream to <code>exceptionListener</code>.
              * The exception handler is notified when this stream catches recoverable
@@ -95,7 +95,7 @@ declare namespace java {
              * @see #getExceptionListener
              */
             // @ts-ignore
-            setExceptionListener(exceptionListener: java.beans.ExceptionListener): void
+            public setExceptionListener(exceptionListener: java.beans.ExceptionListener): void
             /**
              * Gets the exception handler for this stream.
              * @return The exception handler for this stream.
@@ -103,7 +103,7 @@ declare namespace java {
              * @see #setExceptionListener
              */
             // @ts-ignore
-            getExceptionListener(): java.beans.ExceptionListener
+            public getExceptionListener(): java.beans.ExceptionListener
             /**
              * Reads the next object from the underlying input stream.
              * @return the next object read
@@ -112,21 +112,21 @@ declare namespace java {
              * @see XMLEncoder#writeObject
              */
             // @ts-ignore
-            readObject(): java.lang.Object
+            public readObject(): any
             /**
              * Sets the owner of this decoder to <code>owner</code>.
              * @param owner The owner of this decoder.
              * @see #getOwner
              */
             // @ts-ignore
-            setOwner(owner: any): void
+            public setOwner(owner: java.lang.Object | any): void
             /**
              * Gets the owner of this decoder.
              * @return The owner of this decoder.
              * @see #setOwner
              */
             // @ts-ignore
-            getOwner(): java.lang.Object
+            public getOwner(): any
             /**
              * Creates a new handler for SAX parser
              * that can be used to parse embedded XML archives
@@ -147,7 +147,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            createHandler(owner: any, el: java.beans.ExceptionListener, cl: java.lang.ClassLoader): org.xml.sax.helpers.DefaultHandler
+            public static createHandler(owner: java.lang.Object | any, el: java.beans.ExceptionListener, cl: java.lang.ClassLoader): org.xml.sax.helpers.DefaultHandler
         }
     }
 }

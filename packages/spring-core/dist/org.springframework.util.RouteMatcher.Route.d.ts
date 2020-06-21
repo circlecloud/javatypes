@@ -11,7 +11,7 @@ declare namespace org {
                      * The original route value.
                      */
                     // @ts-ignore
-                    value(): java.lang.String
+                    value(): string
                 }
             }
         }

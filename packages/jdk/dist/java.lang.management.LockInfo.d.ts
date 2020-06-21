@@ -21,20 +21,20 @@ declare namespace java {
                  *              if <code>className</code> is <code>null</code>
                  */
                 // @ts-ignore
-                constructor(className: string, identityHashCode: number /*int*/)
+                constructor(className: java.lang.String | string, identityHashCode: number /*int*/)
                 /**
                  * Returns the name of the lock object's class in fully qualified form (i.e.
                  * including the package prefix).
                  * @return the associated lock object's class name
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Returns the value of the associated lock object's identity hash code
                  * @return the identity hash code of the lock object
                  */
                 // @ts-ignore
-                getIdentityHashCode(): int
+                public getIdentityHashCode(): number /*int*/
                 /**
                  * Returns a {@code LockInfo} object represented by the given
                  * {@code CompositeData}. The given {@code CompositeData} must contain the
@@ -65,7 +65,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                from(compositeData: javax.management.openmbean.CompositeData): java.lang.management.LockInfo
+                public static from(compositeData: javax.management.openmbean.CompositeData): java.lang.management.LockInfo
                 /**
                  * Provides callers with a string value that represents the associated lock.
                  * The string will hold both the name of the lock object's class and it's
@@ -76,7 +76,7 @@ declare namespace java {
                  * @return a string containing the key details of the lock
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -45,7 +45,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class XMLInputFactory extends java.lang.Object {
+            abstract class XMLInputFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -54,57 +54,57 @@ declare namespace javax {
                  * only the true setting must be supported
                  */
                 // @ts-ignore
-                readonly IS_NAMESPACE_AWARE: string
+                public static readonly IS_NAMESPACE_AWARE: java.lang.String | string
                 /**
                  * The property used to turn on/off implementation specific validation
                  */
                 // @ts-ignore
-                readonly IS_VALIDATING: string
+                public static readonly IS_VALIDATING: java.lang.String | string
                 /**
                  * The property that requires the parser to coalesce adjacent character data sections
                  */
                 // @ts-ignore
-                readonly IS_COALESCING: string
+                public static readonly IS_COALESCING: java.lang.String | string
                 /**
                  * Requires the parser to replace internal
                  * entity references with their replacement
                  * text and report them as characters
                  */
                 // @ts-ignore
-                readonly IS_REPLACING_ENTITY_REFERENCES: string
+                public static readonly IS_REPLACING_ENTITY_REFERENCES: java.lang.String | string
                 /**
                  * The property that requires the parser to resolve external parsed entities
                  */
                 // @ts-ignore
-                readonly IS_SUPPORTING_EXTERNAL_ENTITIES: string
+                public static readonly IS_SUPPORTING_EXTERNAL_ENTITIES: java.lang.String | string
                 /**
                  * The property that requires the parser to support DTDs
                  */
                 // @ts-ignore
-                readonly SUPPORT_DTD: string
+                public static readonly SUPPORT_DTD: java.lang.String | string
                 /**
                  * The property used to
                  * set/get the implementation of the XMLReporter interface
                  */
                 // @ts-ignore
-                readonly REPORTER: string
+                public static readonly REPORTER: java.lang.String | string
                 /**
                  * The property used to set/get the implementation of the XMLResolver
                  */
                 // @ts-ignore
-                readonly RESOLVER: string
+                public static readonly RESOLVER: java.lang.String | string
                 /**
                  * The property used to set/get the implementation of the allocator
                  */
                 // @ts-ignore
-                readonly ALLOCATOR: string
+                public static readonly ALLOCATOR: java.lang.String | string
                 /**
                  * Creates a new instance of the factory in exactly the same manner as the
                  * {@link #newFactory()} method.
                  * @throws FactoryConfigurationError if an instance of this factory cannot be loaded
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.stream.XMLInputFactory
+                public static newInstance(): javax.xml.stream.XMLInputFactory
                 /**
                  * Create a new instance of the factory.
                  * <p>
@@ -151,7 +151,7 @@ declare namespace javax {
                  *    the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newFactory(): javax.xml.stream.XMLInputFactory
+                public static newFactory(): javax.xml.stream.XMLInputFactory
                 /**
                  * Create a new instance of the factory
                  * @param factoryId             Name of the factory to find, same as
@@ -166,7 +166,7 @@ declare namespace javax {
                  *               defines no changes in behavior.
                  */
                 // @ts-ignore
-                newInstance(factoryId: string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLInputFactory
+                public static newInstance(factoryId: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLInputFactory
                 /**
                  * Create a new instance of the factory.
                  * If the classLoader argument is null, then the ContextClassLoader is used.
@@ -222,14 +222,14 @@ declare namespace javax {
                  * @throws FactoryConfigurationError if an instance of this factory cannot be loaded
                  */
                 // @ts-ignore
-                newFactory(factoryId: string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLInputFactory
+                public static newFactory(factoryId: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.stream.XMLInputFactory
                 /**
                  * Create a new XMLStreamReader from a reader
                  * @param reader the XML data to read from
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamReader(reader: java.io.Reader): javax.xml.stream.XMLStreamReader
+                public abstract createXMLStreamReader(reader: java.io.Reader): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a new XMLStreamReader from a JAXP source.  This method is optional.
                  * @param source the source to read from
@@ -238,14 +238,14 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamReader(source: javax.xml.transform.Source): javax.xml.stream.XMLStreamReader
+                public abstract createXMLStreamReader(source: javax.xml.transform.Source): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a new XMLStreamReader from a java.io.InputStream
                  * @param stream the InputStream to read from
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamReader(stream: java.io.InputStream): javax.xml.stream.XMLStreamReader
+                public abstract createXMLStreamReader(stream: java.io.InputStream): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a new XMLStreamReader from a java.io.InputStream
                  * @param stream the InputStream to read from
@@ -253,28 +253,28 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLStreamReader(stream: java.io.InputStream, encoding: string): javax.xml.stream.XMLStreamReader
+                public abstract createXMLStreamReader(stream: java.io.InputStream, encoding: java.lang.String | string): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a new XMLStreamReader from a java.io.InputStream
                  * @param systemId the system ID of the stream
                  * @param stream the InputStream to read from
                  */
                 // @ts-ignore
-                abstract createXMLStreamReader(systemId: string, stream: java.io.InputStream): javax.xml.stream.XMLStreamReader
+                public abstract createXMLStreamReader(systemId: java.lang.String | string, stream: java.io.InputStream): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a new XMLStreamReader from a java.io.InputStream
                  * @param systemId the system ID of the stream
                  * @param reader the InputStream to read from
                  */
                 // @ts-ignore
-                abstract createXMLStreamReader(systemId: string, reader: java.io.Reader): javax.xml.stream.XMLStreamReader
+                public abstract createXMLStreamReader(systemId: java.lang.String | string, reader: java.io.Reader): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a new XMLEventReader from a reader
                  * @param reader the XML data to read from
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(reader: java.io.Reader): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(reader: java.io.Reader): javax.xml.stream.XMLEventReader
                 /**
                  * Create a new XMLEventReader from a reader
                  * @param systemId the system ID of the input
@@ -282,7 +282,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(systemId: string, reader: java.io.Reader): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(systemId: java.lang.String | string, reader: java.io.Reader): javax.xml.stream.XMLEventReader
                 /**
                  * Create a new XMLEventReader from an XMLStreamReader.  After being used
                  * to construct the XMLEventReader instance returned from this method
@@ -292,7 +292,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(reader: javax.xml.stream.XMLStreamReader): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(reader: javax.xml.stream.XMLStreamReader): javax.xml.stream.XMLEventReader
                 /**
                  * Create a new XMLEventReader from a JAXP source.
                  * Support of this method is optional.
@@ -301,14 +301,14 @@ declare namespace javax {
                  *  supported by this XMLInputFactory
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(source: javax.xml.transform.Source): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(source: javax.xml.transform.Source): javax.xml.stream.XMLEventReader
                 /**
                  * Create a new XMLEventReader from a java.io.InputStream
                  * @param stream the InputStream to read from
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(stream: java.io.InputStream): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(stream: java.io.InputStream): javax.xml.stream.XMLEventReader
                 /**
                  * Create a new XMLEventReader from a java.io.InputStream
                  * @param stream the InputStream to read from
@@ -316,7 +316,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(stream: java.io.InputStream, encoding: string): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(stream: java.io.InputStream, encoding: java.lang.String | string): javax.xml.stream.XMLEventReader
                 /**
                  * Create a new XMLEventReader from a java.io.InputStream
                  * @param systemId the system ID of the stream
@@ -324,7 +324,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createXMLEventReader(systemId: string, stream: java.io.InputStream): javax.xml.stream.XMLEventReader
+                public abstract createXMLEventReader(systemId: java.lang.String | string, stream: java.io.InputStream): javax.xml.stream.XMLEventReader
                 /**
                  * Create a filtered reader that wraps the filter around the reader
                  * @param reader the reader to filter
@@ -332,7 +332,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createFilteredReader(reader: javax.xml.stream.XMLStreamReader, filter: javax.xml.stream.StreamFilter): javax.xml.stream.XMLStreamReader
+                public abstract createFilteredReader(reader: javax.xml.stream.XMLStreamReader, filter: javax.xml.stream.StreamFilter): javax.xml.stream.XMLStreamReader
                 /**
                  * Create a filtered event reader that wraps the filter around the event reader
                  * @param reader the event reader to wrap
@@ -340,33 +340,33 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                abstract createFilteredReader(reader: javax.xml.stream.XMLEventReader, filter: javax.xml.stream.EventFilter): javax.xml.stream.XMLEventReader
+                public abstract createFilteredReader(reader: javax.xml.stream.XMLEventReader, filter: javax.xml.stream.EventFilter): javax.xml.stream.XMLEventReader
                 /**
                  * The resolver that will be set on any XMLStreamReader or XMLEventReader created
                  * by this factory instance.
                  */
                 // @ts-ignore
-                abstract getXMLResolver(): javax.xml.stream.XMLResolver
+                public abstract getXMLResolver(): javax.xml.stream.XMLResolver
                 /**
                  * The resolver that will be set on any XMLStreamReader or XMLEventReader created
                  * by this factory instance.
                  * @param resolver the resolver to use to resolve references
                  */
                 // @ts-ignore
-                abstract setXMLResolver(resolver: javax.xml.stream.XMLResolver): void
+                public abstract setXMLResolver(resolver: javax.xml.stream.XMLResolver): void
                 /**
                  * The reporter that will be set on any XMLStreamReader or XMLEventReader created
                  * by this factory instance.
                  */
                 // @ts-ignore
-                abstract getXMLReporter(): javax.xml.stream.XMLReporter
+                public abstract getXMLReporter(): javax.xml.stream.XMLReporter
                 /**
                  * The reporter that will be set on any XMLStreamReader or XMLEventReader created
                  * by this factory instance.
                  * @param reporter the resolver to use to report non fatal errors
                  */
                 // @ts-ignore
-                abstract setXMLReporter(reporter: javax.xml.stream.XMLReporter): void
+                public abstract setXMLReporter(reporter: javax.xml.stream.XMLReporter): void
                 /**
                  * Allows the user to set specific feature/property on the underlying
                  * implementation. The underlying implementation is not required to support
@@ -393,7 +393,7 @@ declare namespace javax {
                  * @throws java.lang.IllegalArgumentException if the property is not supported
                  */
                 // @ts-ignore
-                abstract setProperty(name: string, value: any): void
+                public abstract setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get the value of a feature/property from the underlying implementation
                  * @param name The name of the property (may not be null)
@@ -401,25 +401,25 @@ declare namespace javax {
                  * @throws IllegalArgumentException if the property is not supported
                  */
                 // @ts-ignore
-                abstract getProperty(name: string): java.lang.Object
+                public abstract getProperty(name: java.lang.String | string): any
                 /**
                  * Query the set of properties that this factory supports.
                  * @param name The name of the property (may not be null)
                  * @return true if the property is supported and false otherwise
                  */
                 // @ts-ignore
-                abstract isPropertySupported(name: string): boolean
+                public abstract isPropertySupported(name: java.lang.String | string): boolean
                 /**
                  * Set a user defined event allocator for events
                  * @param allocator the user defined allocator
                  */
                 // @ts-ignore
-                abstract setEventAllocator(allocator: javax.xml.stream.util.XMLEventAllocator): void
+                public abstract setEventAllocator(allocator: javax.xml.stream.util.XMLEventAllocator): void
                 /**
                  * Gets the allocator used by streams created with this factory
                  */
                 // @ts-ignore
-                abstract getEventAllocator(): javax.xml.stream.util.XMLEventAllocator
+                public abstract getEventAllocator(): javax.xml.stream.util.XMLEventAllocator
             }
         }
     }

@@ -17,7 +17,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    sendAndReceive(message: org.springframework.amqp.core.Message): <any>
+                    sendAndReceive(message: org.springframework.amqp.core.Message): object
                     /**
                      * Send a message to the default exchange with the supplied routing key. If the message
                      * contains a correlationId property, it must be unique.
@@ -26,7 +26,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    sendAndReceive(routingKey: string, message: org.springframework.amqp.core.Message): <any>
+                    sendAndReceive(routingKey: java.lang.String | string, message: org.springframework.amqp.core.Message): object
                     /**
                      * Send a message to the supplied exchange and routing key. If the message
                      * contains a correlationId property, it must be unique.
@@ -36,7 +36,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    sendAndReceive(exchange: string, routingKey: string, message: org.springframework.amqp.core.Message): <any>
+                    sendAndReceive(exchange: java.lang.String | string, routingKey: java.lang.String | string, message: org.springframework.amqp.core.Message): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * default routing key.
@@ -45,7 +45,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceive<C>(object: any): <any>
+                    convertSendAndReceive<C>(object: java.lang.Object | any): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * provided routing key.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceive<C>(routingKey: string, object: any): <any>
+                    convertSendAndReceive<C>(routingKey: java.lang.String | string, object: java.lang.Object | any): object
                     /**
                      * Convert the object to a message and send it to the provided exchange and
                      * routing key.
@@ -66,7 +66,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceive<C>(exchange: string, routingKey: string, object: any): <any>
+                    convertSendAndReceive<C>(exchange: java.lang.String | string, routingKey: java.lang.String | string, object: java.lang.Object | any): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * default routing key after invoking the {@link MessagePostProcessor}.
@@ -77,7 +77,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceive<C>(object: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): <any>
+                    convertSendAndReceive<C>(object: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * provided routing key after invoking the {@link MessagePostProcessor}.
@@ -89,7 +89,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceive<C>(routingKey: string, object: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): <any>
+                    convertSendAndReceive<C>(routingKey: java.lang.String | string, object: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): object
                     /**
                      * Convert the object to a message and send it to the provided exchange and
                      * routing key after invoking the {@link MessagePostProcessor}.
@@ -102,7 +102,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceive<C>(exchange: string, routingKey: string, object: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): <any>
+                    convertSendAndReceive<C>(exchange: java.lang.String | string, routingKey: java.lang.String | string, object: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * default routing key.
@@ -112,7 +112,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<C>(object: any, responseType: object): <any>
+                    convertSendAndReceiveAsType<C>(object: java.lang.Object | any, responseType: object): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * provided routing key.
@@ -123,7 +123,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<C>(routingKey: string, object: any, responseType: object): <any>
+                    convertSendAndReceiveAsType<C>(routingKey: java.lang.String | string, object: java.lang.Object | any, responseType: object): object
                     /**
                      * Convert the object to a message and send it to the provided exchange and
                      * routing key.
@@ -135,7 +135,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<C>(exchange: string, routingKey: string, object: any, responseType: object): <any>
+                    convertSendAndReceiveAsType<C>(exchange: java.lang.String | string, routingKey: java.lang.String | string, object: java.lang.Object | any, responseType: object): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * default routing key after invoking the {@link MessagePostProcessor}.
@@ -147,7 +147,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<C>(object: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): <any>
+                    convertSendAndReceiveAsType<C>(object: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): object
                     /**
                      * Convert the object to a message and send it to the default exchange with the
                      * provided routing key after invoking the {@link MessagePostProcessor}.
@@ -160,7 +160,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<C>(routingKey: string, object: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): <any>
+                    convertSendAndReceiveAsType<C>(routingKey: java.lang.String | string, object: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): object
                     /**
                      * Convert the object to a message and send it to the provided exchange and
                      * routing key after invoking the {@link MessagePostProcessor}.
@@ -174,7 +174,7 @@ declare namespace org {
                      * @return the {#link ListenableFuture}.
                      */
                     // @ts-ignore
-                    convertSendAndReceiveAsType<C>(exchange: string, routingKey: string, object: any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): <any>
+                    convertSendAndReceiveAsType<C>(exchange: java.lang.String | string, routingKey: java.lang.String | string, object: java.lang.Object | any, messagePostProcessor: org.springframework.amqp.core.MessagePostProcessor, responseType: object): object
                 }
             }
         }

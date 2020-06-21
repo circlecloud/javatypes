@@ -35,7 +35,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
             /**
              * Constructs a <code>SQLTimeoutException</code> object
              * with a given <code>reason</code> and <code>SQLState</code>.
@@ -49,7 +49,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string)
             /**
              * Constructs a <code>SQLTimeoutException</code> object
              * with a given <code>reason</code>, <code>SQLState</code>  and
@@ -64,7 +64,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/)
             /**
              * Constructs a <code>SQLTimeoutException</code> object
              * with a given  <code>cause</code>.
@@ -79,7 +79,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLTimeoutException</code> object
              * with a given
@@ -93,7 +93,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, cause: Error)
+            constructor(reason: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLTimeoutException</code> object
              * with a given
@@ -107,7 +107,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a <code>SQLTimeoutException</code> object
              * with a given
@@ -122,7 +122,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            constructor(reason: string, SQLState: string, vendorCode: number /*int*/, cause: Error)
+            constructor(reason: java.lang.String | string, SQLState: java.lang.String | string, vendorCode: number /*int*/, cause: java.lang.Throwable | Error)
         }
     }
 }

@@ -8,14 +8,14 @@ declare namespace org {
                      *      due to accidental existence in the API
                      */
                     // @ts-ignore
-                    class DisplacementProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, java.util.Set<org.spongepowered.api.block.BlockType>> {
+                    class DisplacementProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, java.util.Set<org.spongepowered.api.block.BlockType> | Array<org.spongepowered.api.block.BlockType>> {
                         /**
                          * Creates a {@link DisplacementProperty} with a specific set of
                          * {@link BlockType}s.
                          * @param value The displaceable block types
                          */
                         // @ts-ignore
-                        constructor(value: Array<org.spongepowered.api.block.BlockType>)
+                        constructor(value: java.util.Set<org.spongepowered.api.block.BlockType> | Array<org.spongepowered.api.block.BlockType>)
                         /**
                          * Creates a {@link DisplacementProperty} with a specific set of
                          * {@link BlockType}s.
@@ -23,9 +23,9 @@ declare namespace org {
                          * @param op The operator to use when comparing against other properties
                          */
                         // @ts-ignore
-                        constructor(value: Array<org.spongepowered.api.block.BlockType>, op: org.spongepowered.api.data.Property.Operator)
+                        constructor(value: java.util.Set<org.spongepowered.api.block.BlockType> | Array<org.spongepowered.api.block.BlockType>, op: org.spongepowered.api.data.Property.Operator)
                         // @ts-ignore
-                        compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                        public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                     }
                 }
             }

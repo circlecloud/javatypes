@@ -125,7 +125,7 @@ declare namespace java {
                  *          denies access.
                  */
                 // @ts-ignore
-                shutdownNow(): java.util.List<java.lang.Runnable>
+                shutdownNow(): Array<java.lang.Runnable>
                 /**
                  * Returns {@code true} if this executor has been shut down.
                  * @return {#code true} if this executor has been shut down
@@ -199,7 +199,7 @@ declare namespace java {
                  * @throws NullPointerException if the task is null
                  */
                 // @ts-ignore
-                submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                 /**
                  * Executes the given tasks, returning a list of Futures holding
                  * their status and results when all complete.
@@ -221,7 +221,7 @@ declare namespace java {
                  *          scheduled for execution
                  */
                 // @ts-ignore
-                invokeAll<T>(tasks: Array<java.util.concurrent.Callable<T>>): java.util.List<java.util.concurrent.Future<T>>
+                invokeAll<T>(tasks: java.util.Collection<any> | Array<any>): Array<java.util.concurrent.Future<T>>
                 /**
                  * Executes the given tasks, returning a list of Futures holding
                  * their status and results
@@ -250,7 +250,7 @@ declare namespace java {
                  *          for execution
                  */
                 // @ts-ignore
-                invokeAll<T>(tasks: Array<java.util.concurrent.Callable<T>>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): java.util.List<java.util.concurrent.Future<T>>
+                invokeAll<T>(tasks: java.util.Collection<any> | Array<any>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): Array<java.util.concurrent.Future<T>>
                 /**
                  * Executes the given tasks, returning the result
                  * of one that has completed successfully (i.e., without throwing
@@ -270,7 +270,7 @@ declare namespace java {
                  *          for execution
                  */
                 // @ts-ignore
-                invokeAny<T>(tasks: Array<java.util.concurrent.Callable<T>>): T
+                invokeAny<T>(tasks: java.util.Collection<any> | Array<any>): T
                 /**
                  * Executes the given tasks, returning the result
                  * of one that has completed successfully (i.e., without throwing
@@ -294,7 +294,7 @@ declare namespace java {
                  *          for execution
                  */
                 // @ts-ignore
-                invokeAny<T>(tasks: Array<java.util.concurrent.Callable<T>>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+                invokeAny<T>(tasks: java.util.Collection<any> | Array<any>, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
             }
         }
     }

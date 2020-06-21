@@ -14,11 +14,11 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setDefaultDTD(): void
+                        static setDefaultDTD(): void
                         // @ts-ignore
-                        createDTD(dtd: javax.swing.text.html.parser.DTD, name: string): javax.swing.text.html.parser.DTD
+                        static createDTD(dtd: javax.swing.text.html.parser.DTD, name: java.lang.String | string): javax.swing.text.html.parser.DTD
                         // @ts-ignore
-                        parse(r: java.io.Reader, cb: javax.swing.text.html.HTMLEditorKit.ParserCallback, ignoreCharSet: boolean): void
+                        public parse(r: java.io.Reader, cb: javax.swing.text.html.HTMLEditorKit.ParserCallback, ignoreCharSet: boolean): void
                     }
                 }
             }

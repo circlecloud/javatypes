@@ -20,7 +20,7 @@ declare namespace org {
                  * @param defaultMessage the default message to be used to resolve this message
                  */
                 // @ts-ignore
-                constructor(objectName: string, field: string, defaultMessage: string)
+                constructor(objectName: java.lang.String | string, field: java.lang.String | string, defaultMessage: java.lang.String | string)
                 /**
                  * Create a new FieldError instance.
                  * @param objectName the name of the affected object
@@ -33,29 +33,29 @@ declare namespace org {
                  * @param defaultMessage the default message to be used to resolve this message
                  */
                 // @ts-ignore
-                constructor(objectName: string, field: string, rejectedValue: any, bindingFailure: boolean, codes: string[], arguments: any[], defaultMessage: string)
+                constructor(objectName: java.lang.String | string, field: java.lang.String | string, rejectedValue: java.lang.Object | any, bindingFailure: boolean, codes: java.lang.String[] | string[], arguments: java.lang.Object[] | any[], defaultMessage: java.lang.String | string)
                 /**
                  * Return the affected field of the object.
                  */
                 // @ts-ignore
-                getField(): java.lang.String
+                public getField(): string
                 /**
                  * Return the rejected field value.
                  */
                 // @ts-ignore
-                getRejectedValue(): java.lang.Object
+                public getRejectedValue(): any
                 /**
                  * Return whether this error represents a binding failure
                  * (like a type mismatch); otherwise it is a validation failure.
                  */
                 // @ts-ignore
-                isBindingFailure(): boolean
+                public isBindingFailure(): boolean
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

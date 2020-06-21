@@ -12,7 +12,7 @@ declare namespace org {
                      * @since 17.06.2003
                      */
                     // @ts-ignore
-                    class UiApplicationContextUtils extends java.lang.Object {
+                    abstract class UiApplicationContextUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -21,7 +21,7 @@ declare namespace org {
                          * @see org.springframework.ui.context.ThemeSource
                          */
                         // @ts-ignore
-                        readonly THEME_SOURCE_BEAN_NAME: string
+                        public static readonly THEME_SOURCE_BEAN_NAME: java.lang.String | string
                         /**
                          * Initialize the ThemeSource for the given application context,
                          * autodetecting a bean with the name "themeSource". If no such
@@ -31,7 +31,7 @@ declare namespace org {
                          * @see #THEME_SOURCE_BEAN_NAME
                          */
                         // @ts-ignore
-                        initThemeSource(context: org.springframework.context.ApplicationContext): org.springframework.ui.context.ThemeSource
+                        public static initThemeSource(context: org.springframework.context.ApplicationContext): org.springframework.ui.context.ThemeSource
                     }
                 }
             }

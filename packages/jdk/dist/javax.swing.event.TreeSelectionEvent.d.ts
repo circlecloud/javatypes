@@ -30,7 +30,7 @@ declare namespace javax {
                  * @param paths the paths that have changed in the selection
                  */
                 // @ts-ignore
-                constructor(source: any, paths: javax.swing.tree.TreePath[], areNew: boolean[], oldLeadSelectionPath: javax.swing.tree.TreePath, newLeadSelectionPath: javax.swing.tree.TreePath)
+                constructor(source: java.lang.Object | any, paths: javax.swing.tree.TreePath[], areNew: boolean[], oldLeadSelectionPath: javax.swing.tree.TreePath, newLeadSelectionPath: javax.swing.tree.TreePath)
                 /**
                  * Represents a change in the selection of a TreeSelectionModel.
                  * path identifies the path that have been either added or
@@ -41,7 +41,7 @@ declare namespace javax {
                  *  means path was removed from the selection.
                  */
                 // @ts-ignore
-                constructor(source: any, path: javax.swing.tree.TreePath, isNew: boolean, oldLeadSelectionPath: javax.swing.tree.TreePath, newLeadSelectionPath: javax.swing.tree.TreePath)
+                constructor(source: java.lang.Object | any, path: javax.swing.tree.TreePath, isNew: boolean, oldLeadSelectionPath: javax.swing.tree.TreePath, newLeadSelectionPath: javax.swing.tree.TreePath)
                 /**
                  * Paths this event represents.
                  */
@@ -67,12 +67,12 @@ declare namespace javax {
                  * selection.
                  */
                 // @ts-ignore
-                getPaths(): javax.swing.tree.TreePath[]
+                public getPaths(): javax.swing.tree.TreePath[]
                 /**
                  * Returns the first path element.
                  */
                 // @ts-ignore
-                getPath(): javax.swing.tree.TreePath
+                public getPath(): javax.swing.tree.TreePath
                 /**
                  * Returns whether the path identified by {@code getPath} was
                  * added to the selection.  A return value of {@code true}
@@ -83,7 +83,7 @@ declare namespace javax {
                  *          {@code false} otherwise
                  */
                 // @ts-ignore
-                isAddedPath(): boolean
+                public isAddedPath(): boolean
                 /**
                  * Returns whether the specified path was added to the selection.
                  * A return value of {@code true} indicates the path identified by
@@ -100,7 +100,7 @@ declare namespace javax {
                  * @see #getPaths
                  */
                 // @ts-ignore
-                isAddedPath(path: javax.swing.tree.TreePath): boolean
+                public isAddedPath(path: javax.swing.tree.TreePath): boolean
                 /**
                  * Returns whether the path at {@code getPaths()[index]} was added
                  * to the selection.  A return value of {@code true} indicates the
@@ -115,22 +115,22 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                isAddedPath(index: number /*int*/): boolean
+                public isAddedPath(index: number /*int*/): boolean
                 /**
                  * Returns the path that was previously the lead path.
                  */
                 // @ts-ignore
-                getOldLeadSelectionPath(): javax.swing.tree.TreePath
+                public getOldLeadSelectionPath(): javax.swing.tree.TreePath
                 /**
                  * Returns the current lead path.
                  */
                 // @ts-ignore
-                getNewLeadSelectionPath(): javax.swing.tree.TreePath
+                public getNewLeadSelectionPath(): javax.swing.tree.TreePath
                 /**
                  * Returns a copy of the receiver, but with the source being newSource.
                  */
                 // @ts-ignore
-                cloneWithSource(newSource: any): java.lang.Object
+                public cloneWithSource(newSource: java.lang.Object | any): any
             }
         }
     }

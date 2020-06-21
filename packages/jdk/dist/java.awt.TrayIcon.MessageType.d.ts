@@ -11,10 +11,30 @@ declare namespace java {
              */
             // @ts-ignore
             class MessageType extends java.lang.Enum<java.awt.TrayIcon.MessageType> {
+                /**
+                 * An error message
+                 */
+                // @ts-ignore
+                readonly ERROR: java.awt.TrayIcon.MessageType
+                /**
+                 * A warning message
+                 */
+                // @ts-ignore
+                readonly WARNING: java.awt.TrayIcon.MessageType
+                /**
+                 * An information message
+                 */
+                // @ts-ignore
+                readonly INFO: java.awt.TrayIcon.MessageType
+                /**
+                 * Simple message
+                 */
+                // @ts-ignore
+                readonly NONE: java.awt.TrayIcon.MessageType
                 // @ts-ignore
                 values(): java.awt.TrayIcon.MessageType[]
                 // @ts-ignore
-                valueOf(name: string): java.awt.TrayIcon.MessageType
+                valueOf(name: java.lang.String | string): java.awt.TrayIcon.MessageType
             }
         }
     }

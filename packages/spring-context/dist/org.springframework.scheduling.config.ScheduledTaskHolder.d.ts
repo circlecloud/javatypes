@@ -15,7 +15,7 @@ declare namespace org {
                      * Return an overview of the tasks that have been scheduled by this instance.
                      */
                     // @ts-ignore
-                    getScheduledTasks(): java.util.Set<org.springframework.scheduling.config.ScheduledTask>
+                    getScheduledTasks(): Array<org.springframework.scheduling.config.ScheduledTask>
                 }
             }
         }

@@ -35,7 +35,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AbstractSequentialList<E> extends java.util.AbstractList<E> {
+        abstract class AbstractSequentialList<E> extends java.util.AbstractList<E> {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -50,7 +50,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            get(index: number /*int*/): E
+            public get(index: number /*int*/): E
             /**
              * Replaces the element at the specified position in this list with the
              * specified element (optional operation).
@@ -68,7 +68,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            set(index: number /*int*/, element: E): E
+            public set(index: number /*int*/, element: E): E
             /**
              * Inserts the specified element at the specified position in this list
              * (optional operation).  Shifts the element currently at that position
@@ -87,7 +87,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            add(index: number /*int*/, element: E): void
+            public add(index: number /*int*/, element: E): void
             /**
              * Removes the element at the specified position in this list (optional
              * operation).  Shifts any subsequent elements to the left (subtracts one
@@ -103,7 +103,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            remove(index: number /*int*/): E
+            public remove(index: number /*int*/): E
             /**
              * Inserts all of the elements in the specified collection into this
              * list at the specified position (optional operation).  Shifts the
@@ -131,7 +131,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<E>): boolean
+            public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Returns an iterator over the elements in this list (in proper
              * sequence).<p>
@@ -139,7 +139,7 @@ declare namespace java {
              * @return an iterator over the elements in this list (in proper sequence)
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             /**
              * Returns a list iterator over the elements in this list (in proper
              * sequence).
@@ -150,7 +150,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            abstract listIterator(index: number /*int*/): java.util.ListIterator<E>
+            public abstract listIterator(index: number /*int*/): java.util.ListIterator<E>
         }
     }
 }

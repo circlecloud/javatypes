@@ -12,12 +12,12 @@ declare namespace org {
                              * @param <I> The immutable manipulator type
                              */
                             // @ts-ignore
-                            class AbstractBooleanData<M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<java.lang.Boolean, M, I> {
+                            abstract class AbstractBooleanData<M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<java.lang.Boolean, M, I> {
                                 /**
                                  * @deprecated Use {#link #AbstractBooleanData(Key, boolean, boolean)} instead.
                                  */
                                 // @ts-ignore
-                                constructor(value: boolean, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<java.lang.Boolean>>, defaultValue: boolean)
+                                constructor(value: boolean, usedKey: org.spongepowered.api.data.key.Key<any>, defaultValue: boolean)
                                 // @ts-ignore
                                 constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<java.lang.Boolean>>, value: boolean)
                                 // @ts-ignore
@@ -25,7 +25,7 @@ declare namespace org {
                                 // @ts-ignore
                                 getValueGetter(): org.spongepowered.api.data.value.mutable.Value<java.lang.Boolean>
                                 // @ts-ignore
-                                toContainer(): org.spongepowered.api.data.DataContainer
+                                public toContainer(): org.spongepowered.api.data.DataContainer
                             }
                         }
                     }

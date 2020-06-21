@@ -66,14 +66,14 @@ declare namespace javax {
                  * @return the authentication tag length (in bits)
                  */
                 // @ts-ignore
-                getTLen(): int
+                public getTLen(): number /*int*/
                 /**
                  * Returns the Initialization Vector (IV).
                  * @return the IV.  Creates a new array each time this method
                  *  is called.
                  */
                 // @ts-ignore
-                getIV(): byte[]
+                public getIV(): number /*byte*/[]
             }
         }
     }

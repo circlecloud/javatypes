@@ -14,7 +14,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(length: number /*int*/)
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                 }
             }
         }

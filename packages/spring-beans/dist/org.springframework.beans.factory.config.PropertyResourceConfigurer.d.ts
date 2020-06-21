@@ -23,7 +23,7 @@ declare namespace org {
                      * @see PropertyPlaceholderConfigurer
                      */
                     // @ts-ignore
-                    class PropertyResourceConfigurer extends PropertiesLoaderSupport implements org.springframework.beans.factory.config.BeanFactoryPostProcessor {
+                    abstract class PropertyResourceConfigurer extends PropertiesLoaderSupport implements org.springframework.beans.factory.config.BeanFactoryPostProcessor {
                         // @ts-ignore
                         constructor()
                         /**
@@ -31,16 +31,16 @@ declare namespace org {
                          * @see PriorityOrdered
                          */
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         /**
                          * {@linkplain #mergeProperties Merge}, {@linkplain #convertProperties convert} and
                          * {@linkplain #processProperties process} properties against the given bean factory.
                          * @throws BeanInitializationException if any properties cannot be loaded
                          */
                         // @ts-ignore
-                        postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
+                        public postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
                         /**
                          * Convert the given merged properties, converting property values
                          * if necessary. The result will then be processed.
@@ -61,7 +61,7 @@ declare namespace org {
                          * @see #convertPropertyValue(String)
                          */
                         // @ts-ignore
-                        convertProperty(propertyName: string, propertyValue: string): java.lang.String
+                        convertProperty(propertyName: java.lang.String | string, propertyValue: java.lang.String | string): string
                         /**
                          * Convert the given property value from the properties source to the value
                          * which should be applied.
@@ -77,7 +77,7 @@ declare namespace org {
                          * @see #convertProperty(String, String)
                          */
                         // @ts-ignore
-                        convertPropertyValue(originalValue: string): java.lang.String
+                        convertPropertyValue(originalValue: java.lang.String | string): string
                         /**
                          * Apply the given Properties to the given BeanFactory.
                          * @param beanFactory the BeanFactory used by the application context

@@ -49,7 +49,7 @@ declare namespace javax {
                  *          or {@code false} otherwise
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
                 /**
                  * Paints the compound border by painting the outside border
                  * with the specified position and size and then painting the
@@ -63,24 +63,24 @@ declare namespace javax {
                  * @param height the height of the painted border
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitialize the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
                  * @param insets the object to be reinitialized
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns the outside border object.
                  */
                 // @ts-ignore
-                getOutsideBorder(): javax.swing.border.Border
+                public getOutsideBorder(): javax.swing.border.Border
                 /**
                  * Returns the inside border object.
                  */
                 // @ts-ignore
-                getInsideBorder(): javax.swing.border.Border
+                public getInsideBorder(): javax.swing.border.Border
             }
         }
     }

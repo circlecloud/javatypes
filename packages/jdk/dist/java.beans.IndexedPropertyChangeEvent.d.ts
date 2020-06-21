@@ -27,14 +27,14 @@ declare namespace java {
              * @param index index of the property element that was changed.
              */
             // @ts-ignore
-            constructor(source: any, propertyName: string, oldValue: any, newValue: any, index: number /*int*/)
+            constructor(source: java.lang.Object | any, propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any, index: number /*int*/)
             /**
              * Gets the index of the property that was changed.
              * @return The index specifying the property element that was
              *          changed.
              */
             // @ts-ignore
-            getIndex(): int
+            public getIndex(): number /*int*/
         }
     }
 }

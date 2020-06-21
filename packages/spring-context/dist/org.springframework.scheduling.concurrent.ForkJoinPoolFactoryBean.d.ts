@@ -25,24 +25,24 @@ declare namespace org {
                      * @see java.util.concurrent.ForkJoinPool#commonPool()
                      */
                     // @ts-ignore
-                    setCommonPool(commonPool: boolean): void
+                    public setCommonPool(commonPool: boolean): void
                     /**
                      * Specify the parallelism level. Default is {@link Runtime#availableProcessors()}.
                      */
                     // @ts-ignore
-                    setParallelism(parallelism: number /*int*/): void
+                    public setParallelism(parallelism: number /*int*/): void
                     /**
                      * Set the factory for creating new ForkJoinWorkerThreads.
                      * Default is {@link ForkJoinPool#defaultForkJoinWorkerThreadFactory}.
                      */
                     // @ts-ignore
-                    setThreadFactory(threadFactory: java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory): void
+                    public setThreadFactory(threadFactory: java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory): void
                     /**
                      * Set the handler for internal worker threads that terminate due to unrecoverable errors
                      * encountered while executing tasks. Default is none.
                      */
                     // @ts-ignore
-                    setUncaughtExceptionHandler(uncaughtExceptionHandler: java.lang.Thread.UncaughtExceptionHandler): void
+                    public setUncaughtExceptionHandler(uncaughtExceptionHandler: java.lang.Thread.UncaughtExceptionHandler): void
                     /**
                      * Specify whether to establish a local first-in-first-out scheduling mode for forked tasks
                      * that are never joined. This mode (asyncMode = {@code true}) may be more appropriate
@@ -50,7 +50,7 @@ declare namespace org {
                      * process event-style asynchronous tasks. Default is {@code false}.
                      */
                     // @ts-ignore
-                    setAsyncMode(asyncMode: boolean): void
+                    public setAsyncMode(asyncMode: boolean): void
                     /**
                      * Set the maximum number of seconds that this ForkJoinPool is supposed to block
                      * on shutdown in order to wait for remaining tasks to complete their execution
@@ -69,17 +69,17 @@ declare namespace org {
                      * @see java.util.concurrent.ForkJoinPool#awaitTermination
                      */
                     // @ts-ignore
-                    setAwaitTerminationSeconds(awaitTerminationSeconds: number /*int*/): void
+                    public setAwaitTerminationSeconds(awaitTerminationSeconds: number /*int*/): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): java.util.concurrent.ForkJoinPool
+                    public getObject(): java.util.concurrent.ForkJoinPool
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

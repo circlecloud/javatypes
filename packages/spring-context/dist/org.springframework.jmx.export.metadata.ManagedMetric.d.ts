@@ -19,62 +19,62 @@ declare namespace org {
                          * The category of this metric (ex. throughput, performance, utilization).
                          */
                         // @ts-ignore
-                        setCategory(category: string): void
+                        public setCategory(category: java.lang.String | string): void
                         /**
                          * The category of this metric (ex. throughput, performance, utilization).
                          */
                         // @ts-ignore
-                        getCategory(): java.lang.String
+                        public getCategory(): string
                         /**
                          * A display name for this metric.
                          */
                         // @ts-ignore
-                        setDisplayName(displayName: string): void
+                        public setDisplayName(displayName: java.lang.String | string): void
                         /**
                          * A display name for this metric.
                          */
                         // @ts-ignore
-                        getDisplayName(): java.lang.String
+                        public getDisplayName(): string
                         /**
                          * A description of how this metric's values change over time.
                          */
                         // @ts-ignore
-                        setMetricType(metricType: org.springframework.jmx.support.MetricType): void
+                        public setMetricType(metricType: org.springframework.jmx.support.MetricType): void
                         /**
                          * A description of how this metric's values change over time.
                          */
                         // @ts-ignore
-                        getMetricType(): org.springframework.jmx.support.MetricType
+                        public getMetricType(): org.springframework.jmx.support.MetricType
                         /**
                          * The persist period for this metric.
                          */
                         // @ts-ignore
-                        setPersistPeriod(persistPeriod: number /*int*/): void
+                        public setPersistPeriod(persistPeriod: number /*int*/): void
                         /**
                          * The persist period for this metric.
                          */
                         // @ts-ignore
-                        getPersistPeriod(): int
+                        public getPersistPeriod(): number /*int*/
                         /**
                          * The persist policy for this metric.
                          */
                         // @ts-ignore
-                        setPersistPolicy(persistPolicy: string): void
+                        public setPersistPolicy(persistPolicy: java.lang.String | string): void
                         /**
                          * The persist policy for this metric.
                          */
                         // @ts-ignore
-                        getPersistPolicy(): java.lang.String
+                        public getPersistPolicy(): string
                         /**
                          * The expected unit of measurement values.
                          */
                         // @ts-ignore
-                        setUnit(unit: string): void
+                        public setUnit(unit: java.lang.String | string): void
                         /**
                          * The expected unit of measurement values.
                          */
                         // @ts-ignore
-                        getUnit(): java.lang.String
+                        public getUnit(): string
                     }
                 }
             }

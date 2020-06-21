@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable bounded value for the "moisture" state
                                  */
                                 // @ts-ignore
-                                moisture(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                moisture(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

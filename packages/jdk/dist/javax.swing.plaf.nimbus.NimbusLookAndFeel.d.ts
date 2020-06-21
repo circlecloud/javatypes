@@ -18,17 +18,17 @@ declare namespace javax {
                      * Called by UIManager when this look and feel is installed.
                      */
                     // @ts-ignore
-                    initialize(): void
+                    public initialize(): void
                     /**
                      * Called by UIManager when this look and feel is uninstalled.
                      */
                     // @ts-ignore
-                    uninitialize(): void
+                    public uninitialize(): void
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getDefaults(): javax.swing.UIDefaults
+                    public getDefaults(): javax.swing.UIDefaults
                     /**
                      * Gets the style associated with the given component and region. This
                      * will never return null. If an appropriate component and region cannot
@@ -38,33 +38,33 @@ declare namespace javax {
                      * @return a non-null reference to a NimbusStyle.
                      */
                     // @ts-ignore
-                    getStyle(c: javax.swing.JComponent, r: javax.swing.plaf.synth.Region): javax.swing.plaf.nimbus.NimbusStyle
+                    public static getStyle(c: javax.swing.JComponent, r: javax.swing.plaf.synth.Region): javax.swing.plaf.nimbus.NimbusStyle
                     /**
                      * Return a short string that identifies this look and feel. This
                      * String will be the unquoted String "Nimbus".
                      * @return a short string identifying this look and feel.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Return a string that identifies this look and feel. This String will
                      * be the unquoted String "Nimbus".
                      * @return a short string identifying this look and feel.
                      */
                     // @ts-ignore
-                    getID(): java.lang.String
+                    public getID(): string
                     /**
                      * Returns a textual description of this look and feel.
                      * @return textual description of this look and feel.
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * {@inheritDoc}
                      * @return {#code true}
                      */
                     // @ts-ignore
-                    shouldUpdateStyleOnAncestorChanged(): boolean
+                    public shouldUpdateStyleOnAncestorChanged(): boolean
                     /**
                      * {@inheritDoc}
                      * <p>Overridden to return {@code true} when one of the following
@@ -114,9 +114,9 @@ declare namespace javax {
                      *         ToolBar."MyComboBox"."ComboBox.arrowButton"
                      */
                     // @ts-ignore
-                    register(region: javax.swing.plaf.synth.Region, prefix: string): void
+                    public register(region: javax.swing.plaf.synth.Region, prefix: java.lang.String | string): void
                     // @ts-ignore
-                    getDisabledIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
+                    public getDisabledIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
                     /**
                      * Get a derived color, derived colors are shared instances and is color
                      * value will change when its parent UIDefault color changes.
@@ -130,7 +130,7 @@ declare namespace javax {
                      * @return The stored derived color
                      */
                     // @ts-ignore
-                    getDerivedColor(uiDefaultParentName: string, hOffset: number /*float*/, sOffset: number /*float*/, bOffset: number /*float*/, aOffset: number /*int*/, uiResource: boolean): java.awt.Color
+                    public getDerivedColor(uiDefaultParentName: java.lang.String | string, hOffset: number /*float*/, sOffset: number /*float*/, bOffset: number /*float*/, aOffset: number /*int*/, uiResource: boolean): java.awt.Color
                     /**
                      * Decodes and returns a color, which is derived from an offset between two
                      * other colors.

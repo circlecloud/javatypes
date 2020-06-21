@@ -106,7 +106,7 @@ declare namespace org {
                  * @see AsyncConfigurationSelector
                  */
                 // @ts-ignore
-                class EnableAsync implements java.lang.annotation.Annotation {
+                abstract class EnableAsync implements java.lang.annotation.Annotation {
                 }
             }
         }

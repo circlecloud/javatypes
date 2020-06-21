@@ -15,7 +15,7 @@ declare namespace org {
              * @see NonNull
              */
             // @ts-ignore
-            class NonNullFields implements java.lang.annotation.Annotation {
+            abstract class NonNullFields implements java.lang.annotation.Annotation {
             }
         }
     }

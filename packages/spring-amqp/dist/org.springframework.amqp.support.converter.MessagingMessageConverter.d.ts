@@ -38,27 +38,27 @@ declare namespace org {
                          * @param payloadConverter the target {#link MessageConverter} for {@code payload}.
                          */
                         // @ts-ignore
-                        setPayloadConverter(payloadConverter: org.springframework.amqp.support.converter.MessageConverter): void
+                        public setPayloadConverter(payloadConverter: org.springframework.amqp.support.converter.MessageConverter): void
                         /**
                          * Set the {@link AmqpHeaderMapper} to use to map AMQP headers to and from
                          * standard message headers.
                          * @param headerMapper the {#link AmqpHeaderMapper} to map AMQP header to {@code MessageHeaders}.
                          */
                         // @ts-ignore
-                        setHeaderMapper(headerMapper: org.springframework.amqp.support.AmqpHeaderMapper): void
+                        public setHeaderMapper(headerMapper: org.springframework.amqp.support.AmqpHeaderMapper): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        toMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        public toMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                         /**
                          * Extract the payload of the specified {@link org.springframework.amqp.core.Message}.
                          * @param message the AMQP Message to extract {#code payload}.
                          * @return the extracted {#code payload}.
                          */
                         // @ts-ignore
-                        extractPayload(message: org.springframework.amqp.core.Message): java.lang.Object
+                        extractPayload(message: org.springframework.amqp.core.Message): any
                     }
                 }
             }

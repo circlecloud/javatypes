@@ -13,7 +13,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class MultipartHttpMessageReader extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageReader<<any>> {
+                    class MultipartHttpMessageReader extends org.springframework.http.codec.LoggingCodecSupport implements org.springframework.http.codec.HttpMessageReader<object> {
                         // @ts-ignore
                         constructor(partReader: org.springframework.http.codec.HttpMessageReader<org.springframework.http.codec.multipart.Part>)
                         /**
@@ -21,15 +21,15 @@ declare namespace org {
                          * @since 5.1.11
                          */
                         // @ts-ignore
-                        getPartReader(): org.springframework.http.codec.HttpMessageReader<org.springframework.http.codec.multipart.Part>
+                        public getPartReader(): org.springframework.http.codec.HttpMessageReader<org.springframework.http.codec.multipart.Part>
                         // @ts-ignore
-                        getReadableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                        public getReadableMediaTypes(): Array<org.springframework.http.MediaType>
                         // @ts-ignore
-                        canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                        public canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        readMono(elementType: ResolvableType, inputMessage: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public readMono(elementType: ResolvableType, inputMessage: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     }
                 }
             }

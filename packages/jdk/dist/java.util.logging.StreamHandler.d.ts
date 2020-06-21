@@ -85,7 +85,7 @@ declare namespace java {
                  *           not supported.
                  */
                 // @ts-ignore
-                setEncoding(encoding: string): void
+                public setEncoding(encoding: java.lang.String | string): void
                 /**
                  * Format and publish a <tt>LogRecord</tt>.
                  * <p>
@@ -103,7 +103,7 @@ declare namespace java {
                  *                  silently ignored and is not published
                  */
                 // @ts-ignore
-                publish(record: java.util.logging.LogRecord): void
+                public publish(record: java.util.logging.LogRecord): void
                 /**
                  * Check if this <tt>Handler</tt> would actually log a given <tt>LogRecord</tt>.
                  * <p>
@@ -115,12 +115,12 @@ declare namespace java {
                  * @return true if the <tt>LogRecord</tt> would be logged.
                  */
                 // @ts-ignore
-                isLoggable(record: java.util.logging.LogRecord): boolean
+                public isLoggable(record: java.util.logging.LogRecord): boolean
                 /**
                  * Flush any buffered messages.
                  */
                 // @ts-ignore
-                flush(): void
+                public flush(): void
                 /**
                  * Close the current output stream.
                  * <p>
@@ -132,7 +132,7 @@ declare namespace java {
                  *              the caller does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
             }
         }
     }

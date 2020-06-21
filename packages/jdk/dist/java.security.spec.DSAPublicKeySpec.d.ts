@@ -27,25 +27,25 @@ declare namespace java {
                  * @return the public key {#code y}.
                  */
                 // @ts-ignore
-                getY(): java.math.BigInteger
+                public getY(): java.math.BigInteger
                 /**
                  * Returns the prime {@code p}.
                  * @return the prime {#code p}.
                  */
                 // @ts-ignore
-                getP(): java.math.BigInteger
+                public getP(): java.math.BigInteger
                 /**
                  * Returns the sub-prime {@code q}.
                  * @return the sub-prime {#code q}.
                  */
                 // @ts-ignore
-                getQ(): java.math.BigInteger
+                public getQ(): java.math.BigInteger
                 /**
                  * Returns the base {@code g}.
                  * @return the base {#code g}.
                  */
                 // @ts-ignore
-                getG(): java.math.BigInteger
+                public getG(): java.math.BigInteger
             }
         }
     }

@@ -33,7 +33,7 @@ declare namespace org {
                          *  or {@link HandlerMethodArgumentResolver HandlerMethodArgumentResolvers}.
                          */
                         // @ts-ignore
-                        constructor(contributors: Array<any>)
+                        constructor(contributors: java.util.Collection<any> | Array<any>)
                         /**
                          * Create an instance from a collection of {@link UriComponentsContributor UriComponentsContributors} or
                          * {@link HandlerMethodArgumentResolver HandlerMethodArgumentResolvers}. Since both of these tend to be implemented
@@ -49,18 +49,18 @@ declare namespace org {
                          *  need to be formatted as Strings before being added to the URI
                          */
                         // @ts-ignore
-                        constructor(contributors: Array<any>, cs: ConversionService)
+                        constructor(contributors: java.util.Collection<any> | Array<any>, cs: ConversionService)
                         // @ts-ignore
-                        hasContributors(): boolean
+                        public hasContributors(): boolean
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         // @ts-ignore
-                        contributeMethodArgument(parameter: MethodParameter, value: any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String, java.lang.Object>, conversionService: ConversionService): void
+                        public contributeMethodArgument(parameter: MethodParameter, value: java.lang.Object | any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String | string, java.lang.Object | any>, conversionService: ConversionService): void
                         /**
                          * An overloaded method that uses the ConversionService created at construction.
                          */
                         // @ts-ignore
-                        contributeMethodArgument(parameter: MethodParameter, value: any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String, java.lang.Object>): void
+                        public contributeMethodArgument(parameter: MethodParameter, value: java.lang.Object | any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                     }
                 }
             }

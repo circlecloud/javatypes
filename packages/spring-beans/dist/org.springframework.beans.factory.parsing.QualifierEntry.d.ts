@@ -11,9 +11,9 @@ declare namespace org {
                     // @ts-ignore
                     class QualifierEntry extends java.lang.Object implements org.springframework.beans.factory.parsing.ParseState.Entry {
                         // @ts-ignore
-                        constructor(typeName: string)
+                        constructor(typeName: java.lang.String | string)
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

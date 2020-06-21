@@ -9,7 +9,7 @@ declare namespace javax {
                      * implementation provided by this editor kit.
                      */
                     // @ts-ignore
-                    class Parser extends java.lang.Object {
+                    abstract class Parser extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -18,7 +18,7 @@ declare namespace javax {
                          * be implemented to be thread-safe.
                          */
                         // @ts-ignore
-                        abstract parse(r: java.io.Reader, cb: javax.swing.text.html.HTMLEditorKit.ParserCallback, ignoreCharSet: boolean): void
+                        public abstract parse(r: java.io.Reader, cb: javax.swing.text.html.HTMLEditorKit.ParserCallback, ignoreCharSet: boolean): void
                     }
                 }
             }

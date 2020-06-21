@@ -15,14 +15,14 @@ declare namespace org {
                          * @return {#code this} builder
                          */
                         // @ts-ignore
-                        id(id: string): org.springframework.http.codec.ServerSentEvent.Builder<T>
+                        id(id: java.lang.String | string): org.springframework.http.codec.ServerSentEvent.Builder<T>
                         /**
                          * Set the value of the {@code event} field.
                          * @param event the value of the event field
                          * @return {#code this} builder
                          */
                         // @ts-ignore
-                        event(event: string): org.springframework.http.codec.ServerSentEvent.Builder<T>
+                        event(event: java.lang.String | string): org.springframework.http.codec.ServerSentEvent.Builder<T>
                         /**
                          * Set the value of the {@code retry} field.
                          * @param retry the value of the retry field
@@ -37,7 +37,7 @@ declare namespace org {
                          * @return {#code this} builder
                          */
                         // @ts-ignore
-                        comment(comment: string): org.springframework.http.codec.ServerSentEvent.Builder<T>
+                        comment(comment: java.lang.String | string): org.springframework.http.codec.ServerSentEvent.Builder<T>
                         /**
                          * Set the value of the {@code data} field. If the {@code data} argument is a multi-line
                          * {@code String}, it will be turned into multiple {@code data} field lines as defined

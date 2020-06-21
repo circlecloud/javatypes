@@ -16,7 +16,7 @@ declare namespace org {
                                  * @return The immutable bounded value for the "age"
                                  */
                                 // @ts-ignore
-                                age(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                age(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableValue} for whether the {@link #age()} is
                                  * considered to be an "adult".

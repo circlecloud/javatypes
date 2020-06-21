@@ -43,7 +43,7 @@ declare namespace java {
          * @see GraphicsConfiguration
          */
         // @ts-ignore
-        class GraphicsDevice extends java.lang.Object {
+        abstract class GraphicsDevice extends java.lang.Object {
             /**
              * This is an abstract class that cannot be instantiated directly.
              * Instances must be obtained from a suitable factory or query method.
@@ -57,18 +57,18 @@ declare namespace java {
              * Device is a raster screen.
              */
             // @ts-ignore
-            readonly TYPE_RASTER_SCREEN: number /*int*/
+            public static readonly TYPE_RASTER_SCREEN: number /*int*/
             /**
              * Device is a printer.
              */
             // @ts-ignore
-            readonly TYPE_PRINTER: number /*int*/
+            public static readonly TYPE_PRINTER: number /*int*/
             /**
              * Device is an image buffer.  This buffer can reside in device
              * or system memory but it is not physically viewable by the user.
              */
             // @ts-ignore
-            readonly TYPE_IMAGE_BUFFER: number /*int*/
+            public static readonly TYPE_IMAGE_BUFFER: number /*int*/
             /**
              * Returns the type of this <code>GraphicsDevice</code>.
              * @return the type of this <code>GraphicsDevice</code>, which can
@@ -78,7 +78,7 @@ declare namespace java {
              * @see #TYPE_IMAGE_BUFFER
              */
             // @ts-ignore
-            abstract getType(): int
+            public abstract getType(): number /*int*/
             /**
              * Returns the identification string associated with this
              * <code>GraphicsDevice</code>.
@@ -101,7 +101,7 @@ declare namespace java {
              *  of this <code>GraphicsDevice</code>.
              */
             // @ts-ignore
-            abstract getIDstring(): java.lang.String
+            public abstract getIDstring(): string
             /**
              * Returns all of the <code>GraphicsConfiguration</code>
              * objects associated with this <code>GraphicsDevice</code>.
@@ -110,7 +110,7 @@ declare namespace java {
              *  <code>GraphicsDevice</code>.
              */
             // @ts-ignore
-            abstract getConfigurations(): java.awt.GraphicsConfiguration[]
+            public abstract getConfigurations(): java.awt.GraphicsConfiguration[]
             /**
              * Returns the default <code>GraphicsConfiguration</code>
              * associated with this <code>GraphicsDevice</code>.
@@ -118,7 +118,7 @@ declare namespace java {
              *  of this <code>GraphicsDevice</code>.
              */
             // @ts-ignore
-            abstract getDefaultConfiguration(): java.awt.GraphicsConfiguration
+            public abstract getDefaultConfiguration(): java.awt.GraphicsConfiguration
             /**
              * Returns the "best" configuration possible that passes the
              * criteria defined in the {@link GraphicsConfigTemplate}.
@@ -130,7 +130,7 @@ declare namespace java {
              * @see GraphicsConfigTemplate
              */
             // @ts-ignore
-            getBestConfiguration(gct: java.awt.GraphicsConfigTemplate): java.awt.GraphicsConfiguration
+            public getBestConfiguration(gct: java.awt.GraphicsConfigTemplate): java.awt.GraphicsConfiguration
             /**
              * Returns <code>true</code> if this <code>GraphicsDevice</code>
              * supports full-screen exclusive mode.
@@ -145,7 +145,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFullScreenSupported(): boolean
+            public isFullScreenSupported(): boolean
             /**
              * Enter full-screen mode, or return to windowed mode.  The entered
              * full-screen mode may be either exclusive or simulated.  Exclusive
@@ -202,7 +202,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setFullScreenWindow(w: java.awt.Window): void
+            public setFullScreenWindow(w: java.awt.Window): void
             /**
              * Returns the <code>Window</code> object representing the
              * full-screen window if the device is in full-screen mode.
@@ -212,7 +212,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFullScreenWindow(): java.awt.Window
+            public getFullScreenWindow(): java.awt.Window
             /**
              * Returns <code>true</code> if this <code>GraphicsDevice</code>
              * supports low-level display changes.
@@ -228,7 +228,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isDisplayChangeSupported(): boolean
+            public isDisplayChangeSupported(): boolean
             /**
              * Sets the display mode of this graphics device. This is only allowed
              * if {@link #isDisplayChangeSupported()} returns {@code true} and may
@@ -277,7 +277,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setDisplayMode(dm: java.awt.DisplayMode): void
+            public setDisplayMode(dm: java.awt.DisplayMode): void
             /**
              * Returns the current display mode of this
              * <code>GraphicsDevice</code>.
@@ -291,7 +291,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDisplayMode(): java.awt.DisplayMode
+            public getDisplayMode(): java.awt.DisplayMode
             /**
              * Returns all display modes available for this
              * <code>GraphicsDevice</code>.
@@ -304,7 +304,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getDisplayModes(): java.awt.DisplayMode[]
+            public getDisplayModes(): java.awt.DisplayMode[]
             /**
              * This method returns the number of bytes available in
              * accelerated memory on this device.
@@ -334,7 +334,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAvailableAcceleratedMemory(): int
+            public getAvailableAcceleratedMemory(): number /*int*/
             /**
              * Returns whether the given level of translucency is supported by
              * this graphics device.
@@ -343,7 +343,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            isWindowTranslucencySupported(translucencyKind: java.awt.GraphicsDevice.WindowTranslucency): boolean
+            public isWindowTranslucencySupported(translucencyKind: java.awt.GraphicsDevice.WindowTranslucency): boolean
         }
     }
 }

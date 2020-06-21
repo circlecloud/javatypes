@@ -19,7 +19,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class XPathFactory extends java.lang.Object {
+            abstract class XPathFactory extends java.lang.Object {
                 /**
                  * <p>Protected constructor as {@link #newInstance()} or {@link #newInstance(String uri)}
                  * or {@link #newInstance(String uri, String factoryClassName, ClassLoader classLoader)}
@@ -31,12 +31,12 @@ declare namespace javax {
                  * <p>The default property name according to the JAXP spec.</p>
                  */
                 // @ts-ignore
-                readonly DEFAULT_PROPERTY_NAME: string
+                public static readonly DEFAULT_PROPERTY_NAME: java.lang.String | string
                 /**
                  * <p>Default Object Model URI.</p>
                  */
                 // @ts-ignore
-                readonly DEFAULT_OBJECT_MODEL_URI: string
+                public static readonly DEFAULT_OBJECT_MODEL_URI: java.lang.String | string
                 /**
                  * <p>Get a new <code>XPathFactory</code> instance using the default object model,
                  * {@link #DEFAULT_OBJECT_MODEL_URI},
@@ -51,7 +51,7 @@ declare namespace javax {
                  *    <code>XPathFactory</code> for the default object model.
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.xpath.XPathFactory
+                public static newInstance(): javax.xml.xpath.XPathFactory
                 /**
                  * <p>Get a new <code>XPathFactory</code> instance using the specified object model.</p>
                  * <p>To find a <code>XPathFactory</code> object,
@@ -111,7 +111,7 @@ declare namespace javax {
                  *    or <code>uri.length() == 0</code>.
                  */
                 // @ts-ignore
-                newInstance(uri: string): javax.xml.xpath.XPathFactory
+                public static newInstance(uri: java.lang.String | string): javax.xml.xpath.XPathFactory
                 /**
                  * <p>Obtain a new instance of a <code>XPathFactory</code> from a factory class name. <code>XPathFactory</code>
                  * is returned if specified factory class supports the specified object model.
@@ -147,7 +147,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                newInstance(uri: string, factoryClassName: string, classLoader: java.lang.ClassLoader): javax.xml.xpath.XPathFactory
+                public static newInstance(uri: java.lang.String | string, factoryClassName: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.xpath.XPathFactory
                 /**
                  * <p>Is specified object model supported by this <code>XPathFactory</code>?</p>
                  * @param objectModel Specifies the object model which the returned <code>XPathFactory</code> will understand.
@@ -156,7 +156,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException If <code>objectModel.length() == 0</code>.
                  */
                 // @ts-ignore
-                abstract isObjectModelSupported(objectModel: string): boolean
+                public abstract isObjectModelSupported(objectModel: java.lang.String | string): boolean
                 /**
                  * <p>Set a feature for this <code>XPathFactory</code> and
                  * <code>XPath</code>s created by this factory.</p>
@@ -182,7 +182,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>name</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract setFeature(name: string, value: boolean): void
+                public abstract setFeature(name: java.lang.String | string, value: boolean): void
                 /**
                  * <p>Get the state of the named feature.</p>
                  * <p>
@@ -202,7 +202,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>name</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract getFeature(name: string): boolean
+                public abstract getFeature(name: java.lang.String | string): boolean
                 /**
                  * <p>Establish a default variable resolver.</p>
                  * <p>Any <code>XPath</code> objects constructed from this factory will use
@@ -214,7 +214,7 @@ declare namespace javax {
                  *    <code>null</code>.
                  */
                 // @ts-ignore
-                abstract setXPathVariableResolver(resolver: javax.xml.xpath.XPathVariableResolver): void
+                public abstract setXPathVariableResolver(resolver: javax.xml.xpath.XPathVariableResolver): void
                 /**
                  * <p>Establish a default function resolver.</p>
                  * <p>Any <code>XPath</code> objects constructed from this factory will
@@ -226,14 +226,14 @@ declare namespace javax {
                  *    <code>null</code>.
                  */
                 // @ts-ignore
-                abstract setXPathFunctionResolver(resolver: javax.xml.xpath.XPathFunctionResolver): void
+                public abstract setXPathFunctionResolver(resolver: javax.xml.xpath.XPathFunctionResolver): void
                 /**
                  * <p>Return a new <code>XPath</code> using the underlying object
                  * model determined when the <code>XPathFactory</code> was instantiated.</p>
                  * @return New instance of an <code>XPath</code>.
                  */
                 // @ts-ignore
-                abstract newXPath(): javax.xml.xpath.XPath
+                public abstract newXPath(): javax.xml.xpath.XPath
             }
         }
     }

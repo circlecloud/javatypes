@@ -13,7 +13,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly NULL_ATTRIBUTE_VALUE: string
+                    public static readonly NULL_ATTRIBUTE_VALUE: java.lang.String | string
                     /**
                      * Returns the set of actual HTML tags that
                      * are recognized by the default HTML reader.
@@ -21,7 +21,7 @@ declare namespace javax {
                      * manufactured by the reader.
                      */
                     // @ts-ignore
-                    getAllTags(): javax.swing.text.html.HTML.Tag[]
+                    public static getAllTags(): javax.swing.text.html.HTML.Tag[]
                     /**
                      * Fetches a tag constant for a well-known tag name (i.e. one of
                      * the tags in the set {A, ADDRESS, APPLET, AREA, B,
@@ -41,7 +41,7 @@ declare namespace javax {
                      *     or <code>null</code> if not found
                      */
                     // @ts-ignore
-                    getTag(tagName: string): javax.swing.text.html.HTML.Tag
+                    public static getTag(tagName: java.lang.String | string): javax.swing.text.html.HTML.Tag
                     /**
                      * Fetches an integer attribute value.  Attribute values
                      * are stored as a string, and this is a convenience method
@@ -52,13 +52,13 @@ declare namespace javax {
                      *   defined or there is an error converting to an integer
                      */
                     // @ts-ignore
-                    getIntegerAttributeValue(attr: javax.swing.text.AttributeSet, key: javax.swing.text.html.HTML.Attribute, def: number /*int*/): int
+                    public static getIntegerAttributeValue(attr: javax.swing.text.AttributeSet, key: javax.swing.text.html.HTML.Attribute, def: number /*int*/): number /*int*/
                     /**
                      * Returns the set of HTML attributes recognized.
                      * @return the set of HTML attributes recognized
                      */
                     // @ts-ignore
-                    getAllAttributeKeys(): javax.swing.text.html.HTML.Attribute[]
+                    public static getAllAttributeKeys(): javax.swing.text.html.HTML.Attribute[]
                     /**
                      * Fetches an attribute constant for a well-known attribute name
                      * (i.e. one of the attributes in the set {FACE, COMMENT, SIZE,
@@ -79,7 +79,7 @@ declare namespace javax {
                      * @return the <code>Attribute</code> corresponding to <code>attName</code>
                      */
                     // @ts-ignore
-                    getAttributeKey(attName: string): javax.swing.text.html.HTML.Attribute
+                    public static getAttributeKey(attName: java.lang.String | string): javax.swing.text.html.HTML.Attribute
                 }
             }
         }

@@ -8,7 +8,7 @@ declare namespace org {
                  * also public.</p>
                  */
                 // @ts-ignore
-                class Listener implements java.lang.annotation.Annotation {
+                abstract class Listener implements java.lang.annotation.Annotation {
                 }
             }
         }

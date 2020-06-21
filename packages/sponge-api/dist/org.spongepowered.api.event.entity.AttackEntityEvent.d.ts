@@ -87,21 +87,21 @@ declare namespace org {
                          * of the damage.
                          */
                         // @ts-ignore
-                        
+                        readonly SOURCE: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#HARD_HAT} and the {@link Cause} contains
                          * an {@link ItemStackSnapshot}, usually a helmet.
                          */
                         // @ts-ignore
-                        
+                        readonly HARD_HAT_ARMOR: java.lang.String | string
                         /**
                          * or use with a {@link DamageModifier} where its type is a
                          * {@link DamageModifierTypes#SHIELD} and the {@link Cause} contains
                          * an {@link ItemStackSnapshot} (in Vanilla, a shield).
                          */
                         // @ts-ignore
-                        
+                        readonly SHIELD: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#ARMOR} and the {@link Cause} contains
@@ -110,55 +110,55 @@ declare namespace org {
                          * before dealing damage to the wearer.
                          */
                         // @ts-ignore
-                        
+                        readonly GENERAL_ARMOR: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#ARMOR} and the {@link Cause} contains
                          * an {@link ItemStackSnapshot} for a "helmet".
                          */
                         // @ts-ignore
-                        
+                        readonly HELMET: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#ARMOR} and the {@link Cause} contains
                          * an {@link ItemStackSnapshot} for a "chestplate".
                          */
                         // @ts-ignore
-                        
+                        readonly CHESTPLATE: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#ARMOR} and the {@link Cause} contains
                          * an {@link ItemStackSnapshot} for "leggings".
                          */
                         // @ts-ignore
-                        
+                        readonly LEGGINGS: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#ARMOR} and the {@link Cause} contains
                          * an {@link ItemStackSnapshot} for "boots".
                          */
                         // @ts-ignore
-                        
+                        readonly BOOTS: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#HARD_HAT} and the {@link Cause} contains
                          * a {@link PotionEffect}.
                          */
                         // @ts-ignore
-                        
+                        readonly RESISTANCE: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where it's type is a
                          * {@link DamageModifierTypes#ABSORPTION} and the {@link Cause} contains
                          * a {@link PotionEffect}.
                          */
                         // @ts-ignore
-                        
+                        readonly ABSORPTION: java.lang.String | string
                         /**
                          * For use with a {@link DamageModifier} where the root cause is "created"
                          * by an object, usually the {@link Entity} or {@link Living} entity.
                          */
                         // @ts-ignore
-                        
+                        readonly CREATOR: java.lang.String | string
                         /**
                          * For use with a {@link DamageSource} where it is either a
                          * {@link BlockDamageSource} or {@link EntityDamageSource} such that
@@ -167,14 +167,14 @@ declare namespace org {
                          * now {@link DamageSource} such that they </p>
                          */
                         // @ts-ignore
-                        
+                        readonly NOTIFIER: java.lang.String | string
                         /**
                          * Gets the original "raw" amount of damage to deal to the targeted
                          * {@link Entity}.
                          * @return The original "raw" damage
                          */
                         // @ts-ignore
-                        getOriginalDamage(): double
+                        getOriginalDamage(): number /*double*/
                         /**
                          * Gets the original "final" amount of damage after all original
                          * {@link DamageModifier}s are applied to {@link #getOriginalDamage()}.
@@ -183,7 +183,7 @@ declare namespace org {
                          * @return The final amount of damage to originally deal
                          */
                         // @ts-ignore
-                        getOriginalFinalDamage(): double
+                        getOriginalFinalDamage(): number /*double*/
                         /**
                          * Gets an {@link ImmutableMap} of all original {@link DamageModifier}s
                          * and their associated "modified" damage. Note that ordering is not
@@ -191,7 +191,7 @@ declare namespace org {
                          * @return An immutable map of the original modified damages
                          */
                         // @ts-ignore
-                        getOriginalDamages(): java.util.Map<org.spongepowered.api.event.cause.entity.damage.DamageModifier, java.lang.Double>
+                        getOriginalDamages(): java.util.Map<org.spongepowered.api.event.cause.entity.damage.DamageModifier, java.lang.Double | number>
                         /**
                          * Gets the original damage for the provided {@link DamageModifier}. If
                          * the provided {@link DamageModifier} was not included in
@@ -201,14 +201,14 @@ declare namespace org {
                          * @return The original damage change
                          */
                         // @ts-ignore
-                        getOriginalModifierDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): double
+                        getOriginalModifierDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): number /*double*/
                         /**
                          * Gets the original {@link List} of {@link DamageModifier} to
                          * {@link Function} that was originally passed into the event.
                          * @return The list of damage modifier functions
                          */
                         // @ts-ignore
-                        getOriginalFunctions(): java.util.List<org.spongepowered.api.event.cause.entity.ModifierFunction<org.spongepowered.api.event.cause.entity.damage.DamageModifier>>
+                        getOriginalFunctions(): Array<org.spongepowered.api.event.cause.entity.ModifierFunction<org.spongepowered.api.event.cause.entity.damage.DamageModifier>>
                         /**
                          * Gets the "base" damage to deal to the targeted {@link Entity}. The
                          * "base" damage is the original value before passing along the chain of
@@ -216,7 +216,7 @@ declare namespace org {
                          * @return The base damage
                          */
                         // @ts-ignore
-                        getBaseOutputDamage(): double
+                        getBaseOutputDamage(): number /*double*/
                         /**
                          * Sets the "base" damage to deal to the targeted {@link Entity}. The
                          * "base" damage is the original value before passing along the chain of
@@ -234,7 +234,7 @@ declare namespace org {
                          * @return The final damage to deal
                          */
                         // @ts-ignore
-                        getFinalOutputDamage(): double
+                        getFinalOutputDamage(): number /*double*/
                         /**
                          * Checks whether the provided {@link DamageModifier} is applicable to the
                          * current available {@link DamageModifier}s.
@@ -251,7 +251,7 @@ declare namespace org {
                          * @return The modifier
                          */
                         // @ts-ignore
-                        getOutputDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): double
+                        getOutputDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier): number /*double*/
                         /**
                          * Sets the provided {@link Function} to be used for the given
                          * {@link DamageModifier}. If the {@link DamageModifier} is already
@@ -268,7 +268,7 @@ declare namespace org {
                          * @param function The function to map to the modifier
                          */
                         // @ts-ignore
-                        setOutputDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): void
+                        setOutputDamage(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator): void
                         /**
                          * Adds the provided {@link DamageModifier} and {@link Function} to the
                          * list of modifiers, such that the {@link Set} containing
@@ -280,7 +280,7 @@ declare namespace org {
                          *      the provided modifier
                          */
                         // @ts-ignore
-                        addDamageModifierBefore(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator, before: Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
+                        addDamageModifierBefore(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator, before: java.util.Set<org.spongepowered.api.event.cause.entity.damage.DamageModifierType> | Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
                         /**
                          * Adds the provided {@link DamageModifier} and {@link Function} to the list
                          * of modifiers, such that the modifier will appear in order after any
@@ -291,7 +291,7 @@ declare namespace org {
                          * @param after The set of modifier types to come before the new modifier
                          */
                         // @ts-ignore
-                        addDamageModifierAfter(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator, after: Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
+                        addDamageModifierAfter(damageModifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator, after: java.util.Set<org.spongepowered.api.event.cause.entity.damage.DamageModifierType> | Array<org.spongepowered.api.event.cause.entity.damage.DamageModifierType>): void
                         /**
                          * Gets a list of simple {@link Tuple}s of {@link DamageModifier} keyed to
                          * their representative {@link Function}s. All {@link DamageModifier}s are
@@ -300,14 +300,14 @@ declare namespace org {
                          * @return A list of damage modifiers to functions
                          */
                         // @ts-ignore
-                        getModifiers(): java.util.List<org.spongepowered.api.event.cause.entity.damage.DamageFunction>
+                        getModifiers(): Array<org.spongepowered.api.event.cause.entity.damage.DamageFunction>
                         /**
                          * Gets the knock back modifier. The modifier itself will apply to the
                          * momentum of the attacked entity.
                          * @return The knock back modifier
                          */
                         // @ts-ignore
-                        getKnockbackModifier(): int
+                        getKnockbackModifier(): number /*int*/
                         /**
                          * Sets the knock back modifier. The modifier itself will apply to the
                          * momentum of the attacked entity.

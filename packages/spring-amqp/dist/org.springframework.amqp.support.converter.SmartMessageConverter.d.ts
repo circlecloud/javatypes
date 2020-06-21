@@ -24,7 +24,7 @@ declare namespace org {
                          * @see #fromMessage(Message)
                          */
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message, conversionHint: any): java.lang.Object
+                        fromMessage(message: org.springframework.amqp.core.Message, conversionHint: java.lang.Object | any): any
                     }
                 }
             }

@@ -30,7 +30,7 @@ declare namespace javax {
                  *           {@code SubjectDomainCombiner}.
                  */
                 // @ts-ignore
-                getSubject(): javax.security.auth.Subject
+                public getSubject(): javax.security.auth.Subject
                 /**
                  * Update the relevant ProtectionDomains with the Principals
                  * from the {@code Subject} associated with this
@@ -71,7 +71,7 @@ declare namespace javax {
                  *           or {#code null}.
                  */
                 // @ts-ignore
-                combine(currentDomains: java.security.ProtectionDomain[], assignedDomains: java.security.ProtectionDomain[]): java.security.ProtectionDomain[]
+                public combine(currentDomains: java.security.ProtectionDomain[], assignedDomains: java.security.ProtectionDomain[]): java.security.ProtectionDomain[]
             }
         }
     }

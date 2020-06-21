@@ -10,25 +10,25 @@ declare namespace org {
                     // @ts-ignore
                     constructor(player: org.bukkit.entity.Player, velocity: org.bukkit.util.Vector)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the velocity vector that will be sent to the player
                      * @return Vector the player will get
                      */
                     // @ts-ignore
-                    getVelocity(): org.bukkit.util.Vector
+                    public getVelocity(): org.bukkit.util.Vector
                     /**
                      * Sets the velocity vector that will be sent to the player
                      * @param velocity The velocity vector that will be sent to the player
                      */
                     // @ts-ignore
-                    setVelocity(velocity: org.bukkit.util.Vector): void
+                    public setVelocity(velocity: org.bukkit.util.Vector): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

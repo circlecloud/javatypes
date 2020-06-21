@@ -110,42 +110,42 @@ declare namespace javax {
              * @param transformation the transformation
              */
             // @ts-ignore
-            constructor(cipherSpi: javax.crypto.CipherSpi, provider: java.security.Provider, transformation: string)
+            constructor(cipherSpi: javax.crypto.CipherSpi, provider: java.security.Provider, transformation: java.lang.String | string)
             /**
              * Constant used to initialize cipher to encryption mode.
              */
             // @ts-ignore
-            readonly ENCRYPT_MODE: number /*int*/
+            public static readonly ENCRYPT_MODE: number /*int*/
             /**
              * Constant used to initialize cipher to decryption mode.
              */
             // @ts-ignore
-            readonly DECRYPT_MODE: number /*int*/
+            public static readonly DECRYPT_MODE: number /*int*/
             /**
              * Constant used to initialize cipher to key-wrapping mode.
              */
             // @ts-ignore
-            readonly WRAP_MODE: number /*int*/
+            public static readonly WRAP_MODE: number /*int*/
             /**
              * Constant used to initialize cipher to key-unwrapping mode.
              */
             // @ts-ignore
-            readonly UNWRAP_MODE: number /*int*/
+            public static readonly UNWRAP_MODE: number /*int*/
             /**
              * Constant used to indicate the to-be-unwrapped key is a "public key".
              */
             // @ts-ignore
-            readonly PUBLIC_KEY: number /*int*/
+            public static readonly PUBLIC_KEY: number /*int*/
             /**
              * Constant used to indicate the to-be-unwrapped key is a "private key".
              */
             // @ts-ignore
-            readonly PRIVATE_KEY: number /*int*/
+            public static readonly PRIVATE_KEY: number /*int*/
             /**
              * Constant used to indicate the to-be-unwrapped key is a "secret key".
              */
             // @ts-ignore
-            readonly SECRET_KEY: number /*int*/
+            public static readonly SECRET_KEY: number /*int*/
             /**
              * Returns a <code>Cipher</code> object that implements the specified
              * transformation.
@@ -172,7 +172,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(transformation: string): javax.crypto.Cipher
+            public static getInstance(transformation: java.lang.String | string): javax.crypto.Cipher
             /**
              * Returns a <code>Cipher</code> object that implements the specified
              * transformation.
@@ -203,7 +203,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(transformation: string, provider: string): javax.crypto.Cipher
+            public static getInstance(transformation: java.lang.String | string, provider: java.lang.String | string): javax.crypto.Cipher
             /**
              * Returns a <code>Cipher</code> object that implements the specified
              * transformation.
@@ -230,13 +230,13 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(transformation: string, provider: java.security.Provider): javax.crypto.Cipher
+            public static getInstance(transformation: java.lang.String | string, provider: java.security.Provider): javax.crypto.Cipher
             /**
              * Returns the provider of this <code>Cipher</code> object.
              * @return the provider of this <code>Cipher</code> object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns the algorithm name of this <code>Cipher</code> object.
              * <p>This is the same name that was specified in one of the
@@ -245,14 +245,14 @@ declare namespace javax {
              * @return the algorithm name of this <code>Cipher</code> object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Returns the block size (in bytes).
              * @return the block size (in bytes), or 0 if the underlying algorithm is
              *  not a block cipher
              */
             // @ts-ignore
-            getBlockSize(): int
+            public getBlockSize(): number /*int*/
             /**
              * Returns the length in bytes that an output buffer would need to be in
              * order to hold the result of the next <code>update</code> or
@@ -269,7 +269,7 @@ declare namespace javax {
              *  (e.g., has not yet been initialized)
              */
             // @ts-ignore
-            getOutputSize(inputLen: number /*int*/): int
+            public getOutputSize(inputLen: number /*int*/): number /*int*/
             /**
              * Returns the initialization vector (IV) in a new buffer.
              * <p>This is useful in the case where a random IV was created,
@@ -280,7 +280,7 @@ declare namespace javax {
              *  been set.
              */
             // @ts-ignore
-            getIV(): byte[]
+            public getIV(): number /*byte*/[]
             /**
              * Returns the parameters used with this cipher.
              * <p>The returned parameters may be the same that were used to initialize
@@ -291,14 +291,14 @@ declare namespace javax {
              *  does not use any parameters.
              */
             // @ts-ignore
-            getParameters(): java.security.AlgorithmParameters
+            public getParameters(): java.security.AlgorithmParameters
             /**
              * Returns the exemption mechanism object used with this cipher.
              * @return the exemption mechanism object used with this cipher, or
              *  null if this cipher does not use any exemption mechanism.
              */
             // @ts-ignore
-            getExemptionMechanism(): javax.crypto.ExemptionMechanism
+            public getExemptionMechanism(): javax.crypto.ExemptionMechanism
             /**
              * Initializes this cipher with a key.
              * <p>The cipher is initialized for one of the following four operations:
@@ -345,7 +345,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, key: java.security.Key): void
+            public init(opmode: number /*int*/, key: java.security.Key): void
             /**
              * Initializes this cipher with a key and a source of randomness.
              * <p>The cipher is initialized for one of the following four operations:
@@ -389,7 +389,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, key: java.security.Key, random: java.security.SecureRandom): void
+            public init(opmode: number /*int*/, key: java.security.Key, random: java.security.SecureRandom): void
             /**
              * Initializes this cipher with a key and a set of algorithm
              * parameters.
@@ -442,7 +442,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
+            public init(opmode: number /*int*/, key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec): void
             /**
              * Initializes this cipher with a key, a set of algorithm
              * parameters, and a source of randomness.
@@ -492,7 +492,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
+            public init(opmode: number /*int*/, key: java.security.Key, params: java.security.spec.AlgorithmParameterSpec, random: java.security.SecureRandom): void
             /**
              * Initializes this cipher with a key and a set of algorithm
              * parameters.
@@ -545,7 +545,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, key: java.security.Key, params: java.security.AlgorithmParameters): void
+            public init(opmode: number /*int*/, key: java.security.Key, params: java.security.AlgorithmParameters): void
             /**
              * Initializes this cipher with a key, a set of algorithm
              * parameters, and a source of randomness.
@@ -595,7 +595,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, key: java.security.Key, params: java.security.AlgorithmParameters, random: java.security.SecureRandom): void
+            public init(opmode: number /*int*/, key: java.security.Key, params: java.security.AlgorithmParameters, random: java.security.SecureRandom): void
             /**
              * Initializes this cipher with the public key from the given certificate.
              * <p> The cipher is initialized for one of the following four operations:
@@ -653,7 +653,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, certificate: java.security.cert.Certificate): void
+            public init(opmode: number /*int*/, certificate: java.security.cert.Certificate): void
             /**
              * Initializes this cipher with the public key from the given certificate
              * and
@@ -711,7 +711,7 @@ declare namespace javax {
              *  by the underlying {@code CipherSpi}.
              */
             // @ts-ignore
-            init(opmode: number /*int*/, certificate: java.security.cert.Certificate, random: java.security.SecureRandom): void
+            public init(opmode: number /*int*/, certificate: java.security.cert.Certificate, random: java.security.SecureRandom): void
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -728,7 +728,7 @@ declare namespace javax {
              *  (e.g., has not been initialized)
              */
             // @ts-ignore
-            update(input: number /*byte*/[]): byte[]
+            public update(input: number /*byte*/[]): number /*byte*/[]
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -749,7 +749,7 @@ declare namespace javax {
              *  (e.g., has not been initialized)
              */
             // @ts-ignore
-            update(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): byte[]
+            public update(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): number /*byte*/[]
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -780,7 +780,7 @@ declare namespace javax {
              *  to hold the result
              */
             // @ts-ignore
-            update(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[]): int
+            public update(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[]): number /*int*/
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -814,7 +814,7 @@ declare namespace javax {
              *  to hold the result
              */
             // @ts-ignore
-            update(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): int
+            public update(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
             /**
              * Continues a multiple-part encryption or decryption operation
              * (depending on how this cipher was initialized), processing another data
@@ -848,7 +848,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            update(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): int
+            public update(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): number /*int*/
             /**
              * Finishes a multiple-part encryption or decryption operation, depending
              * on how this cipher was initialized.
@@ -882,7 +882,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            doFinal(): byte[]
+            public doFinal(): number /*byte*/[]
             /**
              * Finishes a multiple-part encryption or decryption operation, depending
              * on how this cipher was initialized.
@@ -927,7 +927,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            doFinal(output: number /*byte*/[], outputOffset: number /*int*/): int
+            public doFinal(output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
             /**
              * Encrypts or decrypts data in a single-part operation, or finishes a
              * multiple-part operation. The data is encrypted or decrypted,
@@ -963,7 +963,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            doFinal(input: number /*byte*/[]): byte[]
+            public doFinal(input: number /*byte*/[]): number /*byte*/[]
             /**
              * Encrypts or decrypts data in a single-part operation, or finishes a
              * multiple-part operation. The data is encrypted or decrypted,
@@ -1003,7 +1003,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            doFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): byte[]
+            public doFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/): number /*byte*/[]
             /**
              * Encrypts or decrypts data in a single-part operation, or finishes a
              * multiple-part operation. The data is encrypted or decrypted,
@@ -1055,7 +1055,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            doFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[]): int
+            public doFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[]): number /*int*/
             /**
              * Encrypts or decrypts data in a single-part operation, or finishes a
              * multiple-part operation. The data is encrypted or decrypted,
@@ -1111,7 +1111,7 @@ declare namespace javax {
              *  does not match the calculated value
              */
             // @ts-ignore
-            doFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): int
+            public doFinal(input: number /*byte*/[], inputOffset: number /*int*/, inputLen: number /*int*/, output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
             /**
              * Encrypts or decrypts data in a single-part operation, or finishes a
              * multiple-part operation. The data is encrypted or decrypted,
@@ -1166,7 +1166,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            doFinal(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): int
+            public doFinal(input: java.nio.ByteBuffer, output: java.nio.ByteBuffer): number /*int*/
             /**
              * Wrap a key.
              * @param key the key to be wrapped.
@@ -1184,7 +1184,7 @@ declare namespace javax {
              *  {#code CipherSpi} is not supported.
              */
             // @ts-ignore
-            wrap(key: java.security.Key): byte[]
+            public wrap(key: java.security.Key): number /*byte*/[]
             /**
              * Unwrap a previously wrapped key.
              * @param wrappedKey the key to be unwrapped.
@@ -1206,7 +1206,7 @@ declare namespace javax {
              *  {#code CipherSpi} is not supported.
              */
             // @ts-ignore
-            unwrap(wrappedKey: number /*byte*/[], wrappedKeyAlgorithm: string, wrappedKeyType: number /*int*/): java.security.Key
+            public unwrap(wrappedKey: number /*byte*/[], wrappedKeyAlgorithm: java.lang.String | string, wrappedKeyType: number /*int*/): java.security.Key
             /**
              * Returns the maximum key length for the specified transformation
              * according to the installed JCE jurisdiction policy files. If
@@ -1226,7 +1226,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getMaxAllowedKeyLength(transformation: string): int
+            public static getMaxAllowedKeyLength(transformation: java.lang.String | string): number /*int*/
             /**
              * Returns an AlgorithmParameterSpec object which contains
              * the maximum cipher parameter value according to the
@@ -1245,7 +1245,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getMaxAllowedParameterSpec(transformation: string): java.security.spec.AlgorithmParameterSpec
+            public static getMaxAllowedParameterSpec(transformation: java.lang.String | string): java.security.spec.AlgorithmParameterSpec
             /**
              * Continues a multi-part update of the Additional Authentication
              * Data (AAD).
@@ -1269,7 +1269,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            updateAAD(src: number /*byte*/[]): void
+            public updateAAD(src: number /*byte*/[]): void
             /**
              * Continues a multi-part update of the Additional Authentication
              * Data (AAD), using a subset of the provided buffer.
@@ -1298,7 +1298,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            updateAAD(src: number /*byte*/[], offset: number /*int*/, len: number /*int*/): void
+            public updateAAD(src: number /*byte*/[], offset: number /*int*/, len: number /*int*/): void
             /**
              * Continues a multi-part update of the Additional Authentication
              * Data (AAD).
@@ -1327,7 +1327,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            updateAAD(src: java.nio.ByteBuffer): void
+            public updateAAD(src: java.nio.ByteBuffer): void
         }
     }
 }

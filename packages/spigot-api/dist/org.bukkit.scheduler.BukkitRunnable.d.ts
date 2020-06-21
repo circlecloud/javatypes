@@ -5,7 +5,7 @@ declare namespace org {
              * This class is provided as an easy way to handle scheduling tasks.
              */
             // @ts-ignore
-            class BukkitRunnable extends java.lang.Object implements java.lang.Runnable {
+            abstract class BukkitRunnable extends java.lang.Object implements java.lang.Runnable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -14,13 +14,13 @@ declare namespace org {
                  * @throws IllegalStateException if task was not scheduled yet
                  */
                 // @ts-ignore
-                isCancelled(): boolean
+                public isCancelled(): boolean
                 /**
                  * Attempts to cancel this task.
                  * @throws IllegalStateException if task was not scheduled yet
                  */
                 // @ts-ignore
-                cancel(): void
+                public cancel(): void
                 /**
                  * Schedules this in the Bukkit scheduler to run on next tick.
                  * @param plugin the reference to the plugin scheduling task
@@ -30,7 +30,7 @@ declare namespace org {
                  * @see BukkitScheduler#runTask(Plugin, Runnable)
                  */
                 // @ts-ignore
-                runTask(plugin: org.bukkit.plugin.Plugin): org.bukkit.scheduler.BukkitTask
+                public runTask(plugin: org.bukkit.plugin.Plugin): org.bukkit.scheduler.BukkitTask
                 /**
                  * <b>Asynchronous tasks should never access any API in Bukkit. Great care
                  * should be taken to assure the thread-safety of asynchronous tasks.</b>
@@ -43,7 +43,7 @@ declare namespace org {
                  * @see BukkitScheduler#runTaskAsynchronously(Plugin, Runnable)
                  */
                 // @ts-ignore
-                runTaskAsynchronously(plugin: org.bukkit.plugin.Plugin): org.bukkit.scheduler.BukkitTask
+                public runTaskAsynchronously(plugin: org.bukkit.plugin.Plugin): org.bukkit.scheduler.BukkitTask
                 /**
                  * Schedules this to run after the specified number of server ticks.
                  * @param plugin the reference to the plugin scheduling task
@@ -54,7 +54,7 @@ declare namespace org {
                  * @see BukkitScheduler#runTaskLater(Plugin, Runnable, long)
                  */
                 // @ts-ignore
-                runTaskLater(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/): org.bukkit.scheduler.BukkitTask
+                public runTaskLater(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/): org.bukkit.scheduler.BukkitTask
                 /**
                  * <b>Asynchronous tasks should never access any API in Bukkit. Great care
                  * should be taken to assure the thread-safety of asynchronous tasks.</b>
@@ -69,7 +69,7 @@ declare namespace org {
                  * @see BukkitScheduler#runTaskLaterAsynchronously(Plugin, Runnable, long)
                  */
                 // @ts-ignore
-                runTaskLaterAsynchronously(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/): org.bukkit.scheduler.BukkitTask
+                public runTaskLaterAsynchronously(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/): org.bukkit.scheduler.BukkitTask
                 /**
                  * Schedules this to repeatedly run until cancelled, starting after the
                  * specified number of server ticks.
@@ -82,7 +82,7 @@ declare namespace org {
                  * @see BukkitScheduler#runTaskTimer(Plugin, Runnable, long, long)
                  */
                 // @ts-ignore
-                runTaskTimer(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/, period: number /*long*/): org.bukkit.scheduler.BukkitTask
+                public runTaskTimer(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/, period: number /*long*/): org.bukkit.scheduler.BukkitTask
                 /**
                  * <b>Asynchronous tasks should never access any API in Bukkit. Great care
                  * should be taken to assure the thread-safety of asynchronous tasks.</b>
@@ -100,14 +100,14 @@ declare namespace org {
                  *      long)
                  */
                 // @ts-ignore
-                runTaskTimerAsynchronously(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/, period: number /*long*/): org.bukkit.scheduler.BukkitTask
+                public runTaskTimerAsynchronously(plugin: org.bukkit.plugin.Plugin, delay: number /*long*/, period: number /*long*/): org.bukkit.scheduler.BukkitTask
                 /**
                  * Gets the task id for this runnable.
                  * @return the task id that this runnable was scheduled as
                  * @throws IllegalStateException if task was not scheduled yet
                  */
                 // @ts-ignore
-                getTaskId(): int
+                public getTaskId(): number /*int*/
             }
         }
     }

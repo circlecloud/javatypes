@@ -14,7 +14,7 @@ declare namespace org {
                      * @see Jaxb2XmlDecoder
                      */
                     // @ts-ignore
-                    class Jaxb2XmlEncoder extends <any> {
+                    class Jaxb2XmlEncoder extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -23,19 +23,19 @@ declare namespace org {
                          * @since 5.1.3
                          */
                         // @ts-ignore
-                        setMarshallerProcessor(processor: java.util.function.Function<javax.xml.bind.Marshaller, javax.xml.bind.Marshaller> | java.util.function$.Function<javax.xml.bind.Marshaller, javax.xml.bind.Marshaller>): void
+                        public setMarshallerProcessor(processor: java.util.function$.Function<javax.xml.bind.Marshaller, javax.xml.bind.Marshaller>): void
                         /**
                          * Return the configured processor for customizing Marshaller instances.
                          * @since 5.1.3
                          */
                         // @ts-ignore
-                        getMarshallerProcessor(): java.util.function.Function<javax.xml.bind.Marshaller, javax.xml.bind.Marshaller>
+                        public getMarshallerProcessor(): java.util.function$.Function<javax.xml.bind.Marshaller, javax.xml.bind.Marshaller>
                         // @ts-ignore
-                        canEncode(elementType: ResolvableType, mimeType: MimeType): boolean
+                        public canEncode(elementType: ResolvableType, mimeType: MimeType): boolean
                         // @ts-ignore
-                        encode(value: any, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        encode(value: java.lang.Object | any, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        encodeValue(value: any, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): DataBuffer
+                        public encodeValue(value: java.lang.Object | any, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): DataBuffer
                     }
                 }
             }

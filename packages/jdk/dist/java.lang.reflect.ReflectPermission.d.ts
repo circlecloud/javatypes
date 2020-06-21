@@ -51,7 +51,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code name} is empty.
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Constructs a ReflectPermission with the specified name and actions.
                  * The actions should be null; they are ignored.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @throws IllegalArgumentException if {#code name} is empty.
                  */
                 // @ts-ignore
-                constructor(name: string, actions: string)
+                constructor(name: java.lang.String | string, actions: java.lang.String | string)
             }
         }
     }

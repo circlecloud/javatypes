@@ -34,7 +34,7 @@ declare namespace org {
                          * @since 4.3.5
                          */
                         // @ts-ignore
-                        getSharedInstance(): org.springframework.core.convert.ConversionService
+                        public static getSharedInstance(): org.springframework.core.convert.ConversionService
                         /**
                          * Add converters appropriate for most environments.
                          * @param converterRegistry the registry of converters to add to
@@ -42,7 +42,7 @@ declare namespace org {
                          * @throws ClassCastException if the given ConverterRegistry could not be cast to a ConversionService
                          */
                         // @ts-ignore
-                        addDefaultConverters(converterRegistry: org.springframework.core.convert.converter.ConverterRegistry): void
+                        public static addDefaultConverters(converterRegistry: org.springframework.core.convert.converter.ConverterRegistry): void
                         /**
                          * Add common collection converters.
                          * @param converterRegistry the registry of converters to add to
@@ -51,7 +51,7 @@ declare namespace org {
                          * @since 4.2.3
                          */
                         // @ts-ignore
-                        addCollectionConverters(converterRegistry: org.springframework.core.convert.converter.ConverterRegistry): void
+                        public static addCollectionConverters(converterRegistry: org.springframework.core.convert.converter.ConverterRegistry): void
                     }
                 }
             }

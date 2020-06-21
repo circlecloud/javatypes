@@ -138,7 +138,7 @@ declare namespace java {
                  * @see Instrumentation#redefineClasses
                  */
                 // @ts-ignore
-                transform(loader: java.lang.ClassLoader, className: string, classBeingRedefined: java.lang.Class<any>, protectionDomain: java.security.ProtectionDomain, classfileBuffer: number /*byte*/[]): byte[]
+                transform(loader: java.lang.ClassLoader, className: java.lang.String | string, classBeingRedefined: java.lang.Class<any>, protectionDomain: java.security.ProtectionDomain, classfileBuffer: number /*byte*/[]): number /*byte*/[]
             }
         }
     }

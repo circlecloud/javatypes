@@ -29,7 +29,7 @@ declare namespace javax {
                      * @return the root element
                      */
                     // @ts-ignore
-                    getRootElement(): javax.swing.text.Element
+                    public getRootElement(): javax.swing.text.Element
                     /**
                      * Inserts new content.
                      * @param offset the starting offset &gt;= 0
@@ -38,7 +38,7 @@ declare namespace javax {
                      * @param de the event capturing this edit
                      */
                     // @ts-ignore
-                    insert(offset: number /*int*/, length: number /*int*/, data: javax.swing.text.DefaultStyledDocument.ElementSpec[], de: javax.swing.text.AbstractDocument.DefaultDocumentEvent): void
+                    public insert(offset: number /*int*/, length: number /*int*/, data: javax.swing.text.DefaultStyledDocument.ElementSpec[], de: javax.swing.text.AbstractDocument.DefaultDocumentEvent): void
                     /**
                      * Removes content.
                      * @param offset the starting offset &gt;= 0
@@ -46,7 +46,7 @@ declare namespace javax {
                      * @param de the event capturing this edit
                      */
                     // @ts-ignore
-                    remove(offset: number /*int*/, length: number /*int*/, de: javax.swing.text.AbstractDocument.DefaultDocumentEvent): void
+                    public remove(offset: number /*int*/, length: number /*int*/, de: javax.swing.text.AbstractDocument.DefaultDocumentEvent): void
                     /**
                      * Changes content.
                      * @param offset the starting offset &gt;= 0
@@ -54,7 +54,7 @@ declare namespace javax {
                      * @param de the event capturing this edit
                      */
                     // @ts-ignore
-                    change(offset: number /*int*/, length: number /*int*/, de: javax.swing.text.AbstractDocument.DefaultDocumentEvent): void
+                    public change(offset: number /*int*/, length: number /*int*/, de: javax.swing.text.AbstractDocument.DefaultDocumentEvent): void
                     /**
                      * Inserts an update into the document.
                      * @param data the elements to insert
@@ -82,7 +82,7 @@ declare namespace javax {
                      * @return the copy
                      */
                     // @ts-ignore
-                    clone(parent: javax.swing.text.Element, clonee: javax.swing.text.Element): javax.swing.text.Element
+                    public clone(parent: javax.swing.text.Element, clonee: javax.swing.text.Element): javax.swing.text.Element
                 }
             }
         }

@@ -10,7 +10,7 @@ declare namespace javax {
              * @author Sunita Mani
              */
             // @ts-ignore
-            class AbstractWriter extends java.lang.Object {
+            abstract class AbstractWriter extends java.lang.Object {
                 /**
                  * Creates a new AbstractWriter.
                  * Initializes the ElementIterator with the default
@@ -58,19 +58,19 @@ declare namespace javax {
                  * @see #getLineSeparator
                  */
                 // @ts-ignore
-                readonly NEWLINE: string
+                static readonly NEWLINE: string
                 /**
                  * Returns the first offset to be output.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getStartOffset(): int
+                public getStartOffset(): number /*int*/
                 /**
                  * Returns the last offset to be output.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getEndOffset(): int
+                public getEndOffset(): number /*int*/
                 /**
                  * Fetches the ElementIterator.
                  * @return the ElementIterator.
@@ -120,7 +120,7 @@ declare namespace javax {
                  * @return the text as a <code>String</code>
                  */
                 // @ts-ignore
-                getText(elem: javax.swing.text.Element): java.lang.String
+                getText(elem: javax.swing.text.Element): string
                 /**
                  * Writes out text.  If a range is specified when the constructor
                  * is invoked, then only the appropriate range of text is written
@@ -144,7 +144,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getLineLength(): int
+                getLineLength(): number /*int*/
                 /**
                  * Sets the current line length.
                  * @since 1.3
@@ -156,7 +156,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getCurrentLineLength(): int
+                getCurrentLineLength(): number /*int*/
                 /**
                  * Returns true if the current line should be considered empty. This
                  * is true when <code>getCurrentLineLength</code> == 0 ||
@@ -193,7 +193,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getIndentSpace(): int
+                getIndentSpace(): number /*int*/
                 /**
                  * Sets the String used to represent newlines. This is initialized
                  * in the constructor from either the Document, or the System property
@@ -201,13 +201,13 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                setLineSeparator(value: string): void
+                public setLineSeparator(value: java.lang.String | string): void
                 /**
                  * Returns the string used to represent newlines.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getLineSeparator(): java.lang.String
+                public getLineSeparator(): string
                 /**
                  * Increments the indent level. If indenting would cause
                  * <code>getIndentSpace()</code> *<code>getIndentLevel()</code> to be &gt;
@@ -227,7 +227,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getIndentLevel(): int
+                getIndentLevel(): number /*int*/
                 /**
                  * Does indentation. The number of spaces written
                  * out is indent level times the space to map mapping. If the current
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @exception IOException on any I/O error
                  */
                 // @ts-ignore
-                write(content: string): void
+                write(content: java.lang.String | string): void
                 /**
                  * Writes the line separator. This invokes <code>output</code> directly
                  * as well as setting the <code>lineLength</code> to 0.

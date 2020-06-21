@@ -18,7 +18,7 @@ declare namespace org {
                              * @return The task
                              */
                             // @ts-ignore
-                            build(owner: O extends org.spongepowered.api.entity.living.Agent): A
+                            build(owner: O): A
                         }
                     }
                 }

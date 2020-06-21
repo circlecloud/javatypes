@@ -12,7 +12,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class SocketAddress extends java.lang.Object implements java.io.Serializable {
+        abstract class SocketAddress extends java.lang.Object implements java.io.Serializable {
             // @ts-ignore
             constructor()
         }

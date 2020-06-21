@@ -32,14 +32,14 @@ declare namespace org {
                          * @return This goal, for chaining
                          */
                         // @ts-ignore
-                        addTask(priority: number /*int*/, task: org.spongepowered.api.entity.ai.task.AITask<O>): org.spongepowered.api.entity.ai.Goal<O>
+                        addTask(priority: number /*int*/, task: org.spongepowered.api.entity.ai.task.AITask<any>): org.spongepowered.api.entity.ai.Goal<O>
                         /**
                          * Removes a specific {@link AITask} from this goal.
                          * @param task The task to remove
                          * @return This goal, for chaining
                          */
                         // @ts-ignore
-                        removeTask(task: org.spongepowered.api.entity.ai.task.AITask<O>): org.spongepowered.api.entity.ai.Goal<O>
+                        removeTask(task: org.spongepowered.api.entity.ai.task.AITask<any>): org.spongepowered.api.entity.ai.Goal<O>
                         /**
                          * Removes all {@link AITask}s whose {@link AITaskType} matches
                          * the provided type.
@@ -55,13 +55,13 @@ declare namespace org {
                          * @return All the tasks found
                          */
                         // @ts-ignore
-                        getTasksByType(type: org.spongepowered.api.entity.ai.task.AITaskType): java.util.List<? super org.spongepowered.api.entity.ai.task.AITask<? extends O>>
+                        getTasksByType(type: org.spongepowered.api.entity.ai.task.AITaskType): Array<any>
                         /**
                          * Gets all {@link AITask}s in this goal.
                          * @return The tasks
                          */
                         // @ts-ignore
-                        getTasks(): java.util.List<? super org.spongepowered.api.entity.ai.task.AITask<? extends O>>
+                        getTasks(): Array<any>
                         /**
                          * Clears all {@link AITask}s from this goal.
                          */

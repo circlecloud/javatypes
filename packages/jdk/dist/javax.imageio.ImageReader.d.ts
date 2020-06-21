@@ -21,7 +21,7 @@ declare namespace javax {
          * @see javax.imageio.spi.ImageReaderSpi
          */
         // @ts-ignore
-        class ImageReader extends java.lang.Object {
+        abstract class ImageReader extends java.lang.Object {
             /**
              * Constructs an <code>ImageReader</code> and sets its
              * <code>originatingProvider</code> field to the supplied value.
@@ -49,7 +49,7 @@ declare namespace javax {
              * <code>null</code>.
              */
             // @ts-ignore
-            input: any
+            input: java.lang.Object | any
             /**
              * <code>true</code> if the current input source has been marked
              * as allowing only forward seeking by <code>setInput</code>.  By
@@ -98,7 +98,7 @@ declare namespace javax {
              * <code>List</code>.
              */
             // @ts-ignore
-            warningListeners: Array<javax.imageio.event.IIOReadWarningListener>
+            warningListeners: java.util.List<javax.imageio.event.IIOReadWarningListener> | Array<javax.imageio.event.IIOReadWarningListener>
             /**
              * A <code>List</code> of the <code>Locale</code>s associated with
              * each currently registered <code>IIOReadWarningListener</code>,
@@ -106,7 +106,7 @@ declare namespace javax {
              * synonymous with an empty <code>List</code>.
              */
             // @ts-ignore
-            warningLocales: Array<java.util.Locale>
+            warningLocales: java.util.List<java.util.Locale> | Array<java.util.Locale>
             /**
              * A <code>List</code> of currently registered
              * <code>IIOReadProgressListener</code>s, initialized by default
@@ -114,7 +114,7 @@ declare namespace javax {
              * <code>List</code>.
              */
             // @ts-ignore
-            progressListeners: Array<javax.imageio.event.IIOReadProgressListener>
+            progressListeners: java.util.List<javax.imageio.event.IIOReadProgressListener> | Array<javax.imageio.event.IIOReadProgressListener>
             /**
              * A <code>List</code> of currently registered
              * <code>IIOReadUpdateListener</code>s, initialized by default to
@@ -122,7 +122,7 @@ declare namespace javax {
              * <code>List</code>.
              */
             // @ts-ignore
-            updateListeners: Array<javax.imageio.event.IIOReadUpdateListener>
+            updateListeners: java.util.List<javax.imageio.event.IIOReadUpdateListener> | Array<javax.imageio.event.IIOReadUpdateListener>
             /**
              * Returns a <code>String</code> identifying the format of the
              * input source.
@@ -136,7 +136,7 @@ declare namespace javax {
              * @return the format name, as a <code>String</code>.
              */
             // @ts-ignore
-            getFormatName(): java.lang.String
+            public getFormatName(): string
             /**
              * Returns the <code>ImageReaderSpi</code> that was passed in on
              * the constructor.  Note that this value may be <code>null</code>.
@@ -144,7 +144,7 @@ declare namespace javax {
              * @see ImageReaderSpi
              */
             // @ts-ignore
-            getOriginatingProvider(): javax.imageio.spi.ImageReaderSpi
+            public getOriginatingProvider(): javax.imageio.spi.ImageReaderSpi
             /**
              * Sets the input source to use to the given
              * <code>ImageInputStream</code> or other <code>Object</code>.
@@ -206,7 +206,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageReaderSpi#getInputTypes
              */
             // @ts-ignore
-            setInput(input: any, seekForwardOnly: boolean, ignoreMetadata: boolean): void
+            public setInput(input: java.lang.Object | any, seekForwardOnly: boolean, ignoreMetadata: boolean): void
             /**
              * Sets the input source to use to the given
              * <code>ImageInputStream</code> or other <code>Object</code>.
@@ -238,7 +238,7 @@ declare namespace javax {
              * @see #getInput
              */
             // @ts-ignore
-            setInput(input: any, seekForwardOnly: boolean): void
+            public setInput(input: java.lang.Object | any, seekForwardOnly: boolean): void
             /**
              * Sets the input source to use to the given
              * <code>ImageInputStream</code> or other <code>Object</code>.
@@ -257,7 +257,7 @@ declare namespace javax {
              * @see #getInput
              */
             // @ts-ignore
-            setInput(input: any): void
+            public setInput(input: java.lang.Object | any): void
             /**
              * Returns the <code>ImageInputStream</code> or other
              * <code>Object</code> previously set as the input source.  If the
@@ -268,7 +268,7 @@ declare namespace javax {
              * @see #setInput
              */
             // @ts-ignore
-            getInput(): java.lang.Object
+            public getInput(): any
             /**
              * Returns <code>true</code> if the current input source has been
              * marked as seek forward only by passing <code>true</code> as the
@@ -279,7 +279,7 @@ declare namespace javax {
              * @see #setInput
              */
             // @ts-ignore
-            isSeekForwardOnly(): boolean
+            public isSeekForwardOnly(): boolean
             /**
              * Returns <code>true</code> if the current input source has been
              * marked as allowing metadata to be ignored by passing
@@ -289,7 +289,7 @@ declare namespace javax {
              * @see #setInput
              */
             // @ts-ignore
-            isIgnoringMetadata(): boolean
+            public isIgnoringMetadata(): boolean
             /**
              * Returns the lowest valid index for reading an image, thumbnail,
              * or image metadata.  If <code>seekForwardOnly()</code> is
@@ -300,7 +300,7 @@ declare namespace javax {
              * @return the minimum legal index for reading.
              */
             // @ts-ignore
-            getMinIndex(): int
+            public getMinIndex(): number /*int*/
             /**
              * Returns an array of <code>Locale</code>s that may be used to
              * localize warning listeners and compression settings.  A return
@@ -313,7 +313,7 @@ declare namespace javax {
              *  arguments to <code>setLocale</code>, or <code>null</code>.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public getAvailableLocales(): java.util.Locale[]
             /**
              * Sets the current <code>Locale</code> of this
              * <code>ImageReader</code> to the given value.  A value of
@@ -327,7 +327,7 @@ declare namespace javax {
              * @see #getLocale
              */
             // @ts-ignore
-            setLocale(locale: java.util.Locale): void
+            public setLocale(locale: java.util.Locale): void
             /**
              * Returns the currently set <code>Locale</code>, or
              * <code>null</code> if none has been set.
@@ -335,7 +335,7 @@ declare namespace javax {
              * @see #setLocale
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Returns the number of images, not including thumbnails, available
              * from the current input source.
@@ -369,7 +369,7 @@ declare namespace javax {
              * @see #setInput
              */
             // @ts-ignore
-            abstract getNumImages(allowSearch: boolean): int
+            public abstract getNumImages(allowSearch: boolean): number /*int*/
             /**
              * Returns the width in pixels of the given image within the input
              * source.
@@ -384,7 +384,7 @@ declare namespace javax {
              *  information from the input source.
              */
             // @ts-ignore
-            abstract getWidth(imageIndex: number /*int*/): int
+            public abstract getWidth(imageIndex: number /*int*/): number /*int*/
             /**
              * Returns the height in pixels of the given image within the
              * input source.
@@ -399,7 +399,7 @@ declare namespace javax {
              *  information from the input source.
              */
             // @ts-ignore
-            abstract getHeight(imageIndex: number /*int*/): int
+            public abstract getHeight(imageIndex: number /*int*/): number /*int*/
             /**
              * Returns <code>true</code> if the storage format of the given
              * image places no inherent impediment on random access to pixels.
@@ -432,7 +432,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            isRandomAccessEasy(imageIndex: number /*int*/): boolean
+            public isRandomAccessEasy(imageIndex: number /*int*/): boolean
             /**
              * Returns the aspect ratio of the given image (that is, its width
              * divided by its height) as a <code>float</code>.  For images
@@ -451,7 +451,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getAspectRatio(imageIndex: number /*int*/): float
+            public getAspectRatio(imageIndex: number /*int*/): number /*float*/
             /**
              * Returns an <code>ImageTypeSpecifier</code> indicating the
              * <code>SampleModel</code> and <code>ColorModel</code> which most
@@ -472,7 +472,7 @@ declare namespace javax {
              *  information from the input source.
              */
             // @ts-ignore
-            getRawImageType(imageIndex: number /*int*/): javax.imageio.ImageTypeSpecifier
+            public getRawImageType(imageIndex: number /*int*/): javax.imageio.ImageTypeSpecifier
             /**
              * Returns an <code>Iterator</code> containing possible image
              * types to which the given image may be decoded, in the form of
@@ -497,7 +497,7 @@ declare namespace javax {
              * @see ImageReadParam#setDestinationType(ImageTypeSpecifier)
              */
             // @ts-ignore
-            abstract getImageTypes(imageIndex: number /*int*/): java.util.Iterator<javax.imageio.ImageTypeSpecifier>
+            public abstract getImageTypes(imageIndex: number /*int*/): java.util.Iterator<javax.imageio.ImageTypeSpecifier>
             /**
              * Returns a default <code>ImageReadParam</code> object
              * appropriate for this format.  All subclasses should define a
@@ -512,7 +512,7 @@ declare namespace javax {
              *  to control the decoding process using a set of default settings.
              */
             // @ts-ignore
-            getDefaultReadParam(): javax.imageio.ImageReadParam
+            public getDefaultReadParam(): javax.imageio.ImageReadParam
             /**
              * Returns an <code>IIOMetadata</code> object representing the
              * metadata associated with the input source as a whole (i.e., not
@@ -523,7 +523,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            abstract getStreamMetadata(): javax.imageio.metadata.IIOMetadata
+            public abstract getStreamMetadata(): javax.imageio.metadata.IIOMetadata
             /**
              * Returns an <code>IIOMetadata</code> object representing the
              * metadata associated with the input source as a whole (i.e.,
@@ -559,7 +559,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getStreamMetadata(formatName: string, nodeNames: Array<java.lang.String>): javax.imageio.metadata.IIOMetadata
+            public getStreamMetadata(formatName: java.lang.String | string, nodeNames: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): javax.imageio.metadata.IIOMetadata
             /**
              * Returns an <code>IIOMetadata</code> object containing metadata
              * associated with the given image, or <code>null</code> if the
@@ -576,7 +576,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            abstract getImageMetadata(imageIndex: number /*int*/): javax.imageio.metadata.IIOMetadata
+            public abstract getImageMetadata(imageIndex: number /*int*/): javax.imageio.metadata.IIOMetadata
             /**
              * Returns an <code>IIOMetadata</code> object representing the
              * metadata associated with the given image, or <code>null</code>
@@ -618,7 +618,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getImageMetadata(imageIndex: number /*int*/, formatName: string, nodeNames: Array<java.lang.String>): javax.imageio.metadata.IIOMetadata
+            public getImageMetadata(imageIndex: number /*int*/, formatName: java.lang.String | string, nodeNames: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): javax.imageio.metadata.IIOMetadata
             /**
              * Reads the image indexed by <code>imageIndex</code> and returns
              * it as a complete <code>BufferedImage</code>, using a default
@@ -647,7 +647,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            read(imageIndex: number /*int*/): java.awt.image.BufferedImage
+            public read(imageIndex: number /*int*/): java.awt.image.BufferedImage
             /**
              * Reads the image indexed by <code>imageIndex</code> and returns
              * it as a complete <code>BufferedImage</code>, using a supplied
@@ -697,7 +697,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            abstract read(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): java.awt.image.BufferedImage
+            public abstract read(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): java.awt.image.BufferedImage
             /**
              * Reads the image indexed by <code>imageIndex</code> and returns
              * an <code>IIOImage</code> containing the image, thumbnails, and
@@ -751,7 +751,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            readAll(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): javax.imageio.IIOImage
+            public readAll(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): javax.imageio.IIOImage
             /**
              * Returns an <code>Iterator</code> containing all the images,
              * thumbnails, and metadata, starting at the index given by
@@ -817,7 +817,7 @@ declare namespace javax {
              * @see IIOImage
              */
             // @ts-ignore
-            readAll(params: java.util.Iterator<javax.imageio.ImageReadParam>): java.util.Iterator<javax.imageio.IIOImage>
+            public readAll(params: java.util.Iterator<any>): java.util.Iterator<javax.imageio.IIOImage>
             /**
              * Returns <code>true</code> if this plug-in supports reading
              * just a {@link java.awt.image.Raster Raster} of pixel data.
@@ -831,7 +831,7 @@ declare namespace javax {
              * @see #readTileRaster
              */
             // @ts-ignore
-            canReadRaster(): boolean
+            public canReadRaster(): boolean
             /**
              * Returns a new <code>Raster</code> object containing the raw pixel data
              * from the image stream, without any color conversion applied.  The
@@ -876,7 +876,7 @@ declare namespace javax {
              * @see java.awt.image.Raster
              */
             // @ts-ignore
-            readRaster(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): java.awt.image.Raster
+            public readRaster(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): java.awt.image.Raster
             /**
              * Returns <code>true</code> if the image is organized into
              * <i>tiles</i>, that is, equal-sized non-overlapping rectangles.
@@ -905,7 +905,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            isImageTiled(imageIndex: number /*int*/): boolean
+            public isImageTiled(imageIndex: number /*int*/): boolean
             /**
              * Returns the width of a tile in the given image.
              * <p> The default implementation simply returns
@@ -920,7 +920,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getTileWidth(imageIndex: number /*int*/): int
+            public getTileWidth(imageIndex: number /*int*/): number /*int*/
             /**
              * Returns the height of a tile in the given image.
              * <p> The default implementation simply returns
@@ -935,7 +935,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getTileHeight(imageIndex: number /*int*/): int
+            public getTileHeight(imageIndex: number /*int*/): number /*int*/
             /**
              * Returns the X coordinate of the upper-left corner of tile (0,
              * 0) in the given image.
@@ -958,7 +958,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getTileGridXOffset(imageIndex: number /*int*/): int
+            public getTileGridXOffset(imageIndex: number /*int*/): number /*int*/
             /**
              * Returns the Y coordinate of the upper-left corner of tile (0,
              * 0) in the given image.
@@ -981,7 +981,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getTileGridYOffset(imageIndex: number /*int*/): int
+            public getTileGridYOffset(imageIndex: number /*int*/): number /*int*/
             /**
              * Reads the tile indicated by the <code>tileX</code> and
              * <code>tileY</code> arguments, returning it as a
@@ -1018,7 +1018,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            readTile(imageIndex: number /*int*/, tileX: number /*int*/, tileY: number /*int*/): java.awt.image.BufferedImage
+            public readTile(imageIndex: number /*int*/, tileX: number /*int*/, tileY: number /*int*/): java.awt.image.BufferedImage
             /**
              * Returns a new <code>Raster</code> object containing the raw
              * pixel data from the tile, without any color conversion applied.
@@ -1052,7 +1052,7 @@ declare namespace javax {
              * @see java.awt.image.Raster
              */
             // @ts-ignore
-            readTileRaster(imageIndex: number /*int*/, tileX: number /*int*/, tileY: number /*int*/): java.awt.image.Raster
+            public readTileRaster(imageIndex: number /*int*/, tileX: number /*int*/, tileY: number /*int*/): java.awt.image.Raster
             /**
              * Returns a <code>RenderedImage</code> object that contains the
              * contents of the image indexed by <code>imageIndex</code>.  By
@@ -1092,7 +1092,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            readAsRenderedImage(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): java.awt.image.RenderedImage
+            public readAsRenderedImage(imageIndex: number /*int*/, param: javax.imageio.ImageReadParam): java.awt.image.RenderedImage
             /**
              * Returns <code>true</code> if the image format understood by
              * this reader supports thumbnail preview images associated with
@@ -1108,7 +1108,7 @@ declare namespace javax {
              * @return <code>true</code> if thumbnails are supported.
              */
             // @ts-ignore
-            readerSupportsThumbnails(): boolean
+            public readerSupportsThumbnails(): boolean
             /**
              * Returns <code>true</code> if the given image has thumbnail
              * preview images associated with it.  If the format does not
@@ -1127,7 +1127,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            hasThumbnails(imageIndex: number /*int*/): boolean
+            public hasThumbnails(imageIndex: number /*int*/): boolean
             /**
              * Returns the number of thumbnail preview images associated with
              * the given image.  If the format does not support thumbnails,
@@ -1147,7 +1147,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getNumThumbnails(imageIndex: number /*int*/): int
+            public getNumThumbnails(imageIndex: number /*int*/): number /*int*/
             /**
              * Returns the width of the thumbnail preview image indexed by
              * <code>thumbnailIndex</code>, associated with the image indexed
@@ -1172,7 +1172,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getThumbnailWidth(imageIndex: number /*int*/, thumbnailIndex: number /*int*/): int
+            public getThumbnailWidth(imageIndex: number /*int*/, thumbnailIndex: number /*int*/): number /*int*/
             /**
              * Returns the height of the thumbnail preview image indexed by
              * <code>thumbnailIndex</code>, associated with the image indexed
@@ -1197,7 +1197,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            getThumbnailHeight(imageIndex: number /*int*/, thumbnailIndex: number /*int*/): int
+            public getThumbnailHeight(imageIndex: number /*int*/, thumbnailIndex: number /*int*/): number /*int*/
             /**
              * Returns the thumbnail preview image indexed by
              * <code>thumbnailIndex</code>, associated with the image indexed
@@ -1224,7 +1224,7 @@ declare namespace javax {
              * @exception IOException if an error occurs during reading.
              */
             // @ts-ignore
-            readThumbnail(imageIndex: number /*int*/, thumbnailIndex: number /*int*/): java.awt.image.BufferedImage
+            public readThumbnail(imageIndex: number /*int*/, thumbnailIndex: number /*int*/): java.awt.image.BufferedImage
             /**
              * Requests that any current read operation be aborted.  The
              * contents of the image following the abort will be undefined.
@@ -1233,7 +1233,7 @@ declare namespace javax {
              * <code>abortRequested</code> regularly during the read.
              */
             // @ts-ignore
-            abort(): void
+            public abort(): void
             /**
              * Returns <code>true</code> if a request to abort the current
              * read operation has been made since the reader was instantiated or
@@ -1266,7 +1266,7 @@ declare namespace javax {
              * @see #removeIIOReadWarningListener
              */
             // @ts-ignore
-            addIIOReadWarningListener(listener: javax.imageio.event.IIOReadWarningListener): void
+            public addIIOReadWarningListener(listener: javax.imageio.event.IIOReadWarningListener): void
             /**
              * Removes an <code>IIOReadWarningListener</code> from the list of
              * registered error listeners.  If the listener was not previously
@@ -1276,7 +1276,7 @@ declare namespace javax {
              * @see #addIIOReadWarningListener
              */
             // @ts-ignore
-            removeIIOReadWarningListener(listener: javax.imageio.event.IIOReadWarningListener): void
+            public removeIIOReadWarningListener(listener: javax.imageio.event.IIOReadWarningListener): void
             /**
              * Removes all currently registered
              * <code>IIOReadWarningListener</code> objects.
@@ -1285,7 +1285,7 @@ declare namespace javax {
              * instance variables to <code>null</code>.
              */
             // @ts-ignore
-            removeAllIIOReadWarningListeners(): void
+            public removeAllIIOReadWarningListeners(): void
             /**
              * Adds an <code>IIOReadProgressListener</code> to the list of
              * registered progress listeners.  If <code>listener</code> is
@@ -1295,7 +1295,7 @@ declare namespace javax {
              * @see #removeIIOReadProgressListener
              */
             // @ts-ignore
-            addIIOReadProgressListener(listener: javax.imageio.event.IIOReadProgressListener): void
+            public addIIOReadProgressListener(listener: javax.imageio.event.IIOReadProgressListener): void
             /**
              * Removes an <code>IIOReadProgressListener</code> from the list
              * of registered progress listeners.  If the listener was not
@@ -1306,7 +1306,7 @@ declare namespace javax {
              * @see #addIIOReadProgressListener
              */
             // @ts-ignore
-            removeIIOReadProgressListener(listener: javax.imageio.event.IIOReadProgressListener): void
+            public removeIIOReadProgressListener(listener: javax.imageio.event.IIOReadProgressListener): void
             /**
              * Removes all currently registered
              * <code>IIOReadProgressListener</code> objects.
@@ -1315,7 +1315,7 @@ declare namespace javax {
              * <code>null</code>.
              */
             // @ts-ignore
-            removeAllIIOReadProgressListeners(): void
+            public removeAllIIOReadProgressListeners(): void
             /**
              * Adds an <code>IIOReadUpdateListener</code> to the list of
              * registered update listeners.  If <code>listener</code> is
@@ -1345,7 +1345,7 @@ declare namespace javax {
              * @see #removeIIOReadUpdateListener
              */
             // @ts-ignore
-            addIIOReadUpdateListener(listener: javax.imageio.event.IIOReadUpdateListener): void
+            public addIIOReadUpdateListener(listener: javax.imageio.event.IIOReadUpdateListener): void
             /**
              * Removes an <code>IIOReadUpdateListener</code> from the list of
              * registered update listeners.  If the listener was not
@@ -1356,7 +1356,7 @@ declare namespace javax {
              * @see #addIIOReadUpdateListener
              */
             // @ts-ignore
-            removeIIOReadUpdateListener(listener: javax.imageio.event.IIOReadUpdateListener): void
+            public removeIIOReadUpdateListener(listener: javax.imageio.event.IIOReadUpdateListener): void
             /**
              * Removes all currently registered
              * <code>IIOReadUpdateListener</code> objects.
@@ -1365,7 +1365,7 @@ declare namespace javax {
              * <code>null</code>.
              */
             // @ts-ignore
-            removeAllIIOReadUpdateListeners(): void
+            public removeAllIIOReadUpdateListeners(): void
             /**
              * Broadcasts the start of an sequence of image reads to all
              * registered <code>IIOReadProgressListener</code>s by calling
@@ -1560,7 +1560,7 @@ declare namespace javax {
              *  is <code>null</code>.
              */
             // @ts-ignore
-            processWarningOccurred(warning: string): void
+            processWarningOccurred(warning: java.lang.String | string): void
             /**
              * Broadcasts a localized warning message to all registered
              * <code>IIOReadWarningListener</code>s by calling their
@@ -1585,7 +1585,7 @@ declare namespace javax {
              *  <code>String</code>.
              */
             // @ts-ignore
-            processWarningOccurred(baseName: string, keyword: string): void
+            processWarningOccurred(baseName: java.lang.String | string, keyword: java.lang.String | string): void
             /**
              * Restores the <code>ImageReader</code> to its initial state.
              * <p> The default implementation calls <code>setInput(null,
@@ -1596,7 +1596,7 @@ declare namespace javax {
              * <code>clearAbortRequest</code>.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Allows any resources held by this object to be released.  The
              * result of calling any other method (other than
@@ -1611,7 +1611,7 @@ declare namespace javax {
              * especially native resources, are released.
              */
             // @ts-ignore
-            dispose(): void
+            public dispose(): void
             /**
              * A utility method that may be used by readers to compute the
              * region of the source image that should be read, taking into
@@ -1628,7 +1628,7 @@ declare namespace javax {
              * @return the source region as a <code>Rectangle</code>.
              */
             // @ts-ignore
-            getSourceRegion(param: javax.imageio.ImageReadParam, srcWidth: number /*int*/, srcHeight: number /*int*/): java.awt.Rectangle
+            static getSourceRegion(param: javax.imageio.ImageReadParam, srcWidth: number /*int*/, srcHeight: number /*int*/): java.awt.Rectangle
             /**
              * Computes the source region of interest and the destination
              * region of interest, taking the width and height of the source
@@ -1669,7 +1669,7 @@ declare namespace javax {
              *  destination region is empty.
              */
             // @ts-ignore
-            computeRegions(param: javax.imageio.ImageReadParam, srcWidth: number /*int*/, srcHeight: number /*int*/, image: java.awt.image.BufferedImage, srcRegion: java.awt.Rectangle, destRegion: java.awt.Rectangle): void
+            static computeRegions(param: javax.imageio.ImageReadParam, srcWidth: number /*int*/, srcHeight: number /*int*/, image: java.awt.image.BufferedImage, srcRegion: java.awt.Rectangle, destRegion: java.awt.Rectangle): void
             /**
              * A utility method that may be used by readers to test the
              * validity of the source and destination band settings of an
@@ -1702,7 +1702,7 @@ declare namespace javax {
              *  destination band subset.
              */
             // @ts-ignore
-            checkReadParamBandSettings(param: javax.imageio.ImageReadParam, numSrcBands: number /*int*/, numDstBands: number /*int*/): void
+            static checkReadParamBandSettings(param: javax.imageio.ImageReadParam, numSrcBands: number /*int*/, numDstBands: number /*int*/): void
             /**
              * Returns the <code>BufferedImage</code> to which decoded pixel
              * data should be written.  The image is determined by inspecting
@@ -1747,7 +1747,7 @@ declare namespace javax {
              *  <code>Integer.MAX_VALUE</code>.
              */
             // @ts-ignore
-            getDestination(param: javax.imageio.ImageReadParam, imageTypes: java.util.Iterator<javax.imageio.ImageTypeSpecifier>, width: number /*int*/, height: number /*int*/): java.awt.image.BufferedImage
+            static getDestination(param: javax.imageio.ImageReadParam, imageTypes: java.util.Iterator<javax.imageio.ImageTypeSpecifier>, width: number /*int*/, height: number /*int*/): java.awt.image.BufferedImage
         }
     }
 }

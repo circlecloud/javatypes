@@ -61,7 +61,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                read(dst: java.nio.ByteBuffer): int
+                read(dst: java.nio.ByteBuffer): number /*int*/
             }
         }
     }

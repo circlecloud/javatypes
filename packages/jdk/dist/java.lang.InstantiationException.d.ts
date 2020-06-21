@@ -26,7 +26,7 @@ declare namespace java {
              * 				The detail message for the exception.
              */
             // @ts-ignore
-            constructor(detailMessage: string)
+            constructor(detailMessage: java.lang.String | string)
         }
     }
 }

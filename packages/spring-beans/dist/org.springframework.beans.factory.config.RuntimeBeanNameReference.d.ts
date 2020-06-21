@@ -19,23 +19,23 @@ declare namespace org {
                          * @param beanName name of the target bean
                          */
                         // @ts-ignore
-                        constructor(beanName: string)
+                        constructor(beanName: java.lang.String | string)
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Set the configuration source {@code Object} for this metadata element.
                          * <p>The exact type of the object will depend on the configuration mechanism used.
                          */
                         // @ts-ignore
-                        setSource(source: any): void
+                        public setSource(source: java.lang.Object | any): void
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

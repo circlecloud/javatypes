@@ -16,7 +16,7 @@ declare namespace org {
              * @see Repository
              */
             // @ts-ignore
-            class Service implements java.lang.annotation.Annotation {
+            abstract class Service implements java.lang.annotation.Annotation {
             }
         }
     }

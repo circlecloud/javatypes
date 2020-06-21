@@ -22,7 +22,7 @@ declare namespace org {
                                      * @return The predicate used to filter which entities to avoid
                                      */
                                     // @ts-ignore
-                                    getTargetSelector(): java.util.function.Predicate<org.spongepowered.api.entity.Entity>
+                                    getTargetSelector(): java.util.function$.Predicate<org.spongepowered.api.entity.Entity>
                                     /**
                                      * Sets the {@link Predicate} for filtering which {@link Entity} instances
                                      * are considered to be "avoided" by the owning {@link Agent}.
@@ -30,14 +30,14 @@ declare namespace org {
                                      * @return This task, for chaining
                                      */
                                     // @ts-ignore
-                                    setTargetSelector(predicate: java.util.function.Predicate<org.spongepowered.api.entity.Entity> | java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): org.spongepowered.api.entity.ai.task.builtin.creature.AvoidEntityAITask
+                                    setTargetSelector(predicate: java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): org.spongepowered.api.entity.ai.task.builtin.creature.AvoidEntityAITask
                                     /**
                                      * Gets the search distance at which any {@link Entity} instances in a
                                      * radius of the parent {@link Agent} are considered for avoiding.
                                      * @return The search distance
                                      */
                                     // @ts-ignore
-                                    getSearchDistance(): float
+                                    getSearchDistance(): number /*float*/
                                     /**
                                      * Sets the search distance at which any {@link Entity} instances in a
                                      * radius of the parent {@link Agent} are considered for avoiding.
@@ -53,7 +53,7 @@ declare namespace org {
                                      * @return The close range movement speed modifier
                                      */
                                     // @ts-ignore
-                                    getCloseRangeSpeed(): double
+                                    getCloseRangeSpeed(): number /*double*/
                                     /**
                                      * Sets the peed "modifier" for which the parent {@link Agent} will
                                      * move away from a found {@link Entity} to "avoid" when in close
@@ -70,7 +70,7 @@ declare namespace org {
                                      * @return The close range speed
                                      */
                                     // @ts-ignore
-                                    getFarRangeSpeed(): double
+                                    getFarRangeSpeed(): number /*double*/
                                     /**
                                      * Sets the close range speed "modifier" for which the parent {@link Agent}
                                      * will move away from a found {@link Entity} to "avoid" when in

@@ -14,7 +14,7 @@ declare namespace org {
                      * The singleton instance of this utility class.
                      */
                     // @ts-ignore
-                    readonly INSTANCE: org.springframework.amqp.utils.JavaUtils
+                    public static readonly INSTANCE: org.springframework.amqp.utils.JavaUtils
                     /**
                      * Invoke {@link Consumer#accept(Object)} with the value if the condition is true.
                      * @param condition the condition.
@@ -24,7 +24,7 @@ declare namespace org {
                      * @return this.
                      */
                     // @ts-ignore
-                    acceptIfCondition<T>(condition: boolean, value: T, consumer: java.util.function.Consumer<T> | java.util.function$.Consumer<T>): org.springframework.amqp.utils.JavaUtils
+                    public acceptIfCondition<T>(condition: boolean, value: T, consumer: java.util.function$.Consumer<T>): org.springframework.amqp.utils.JavaUtils
                     /**
                      * Invoke {@link Consumer#accept(Object)} with the value if it is not null.
                      * @param value the value.
@@ -33,7 +33,7 @@ declare namespace org {
                      * @return this.
                      */
                     // @ts-ignore
-                    acceptIfNotNull<T>(value: T, consumer: java.util.function.Consumer<T> | java.util.function$.Consumer<T>): org.springframework.amqp.utils.JavaUtils
+                    public acceptIfNotNull<T>(value: T, consumer: java.util.function$.Consumer<T>): org.springframework.amqp.utils.JavaUtils
                     /**
                      * Invoke {@link Consumer#accept(Object)} with the value if it is not null or empty.
                      * @param value the value.
@@ -41,7 +41,7 @@ declare namespace org {
                      * @return this.
                      */
                     // @ts-ignore
-                    acceptIfHasText(value: string, consumer: java.util.function.Consumer<java.lang.String> | java.util.function$.Consumer<java.lang.String>): org.springframework.amqp.utils.JavaUtils
+                    public acceptIfHasText(value: java.lang.String | string, consumer: java.util.function$.Consumer<java.lang.String | string>): org.springframework.amqp.utils.JavaUtils
                     /**
                      * Invoke {@link BiConsumer#accept(Object, Object)} with the arguments if the
                      * condition is true.
@@ -54,7 +54,7 @@ declare namespace org {
                      * @return this.
                      */
                     // @ts-ignore
-                    acceptIfCondition<T1, T2>(condition: boolean, t1: T1, t2: T2, consumer: java.util.function.BiConsumer<T1, T2> | java.util.function$.BiConsumer<T1, T2>): org.springframework.amqp.utils.JavaUtils
+                    public acceptIfCondition<T1, T2>(condition: boolean, t1: T1, t2: T2, consumer: java.util.function$.BiConsumer<T1, T2>): org.springframework.amqp.utils.JavaUtils
                     /**
                      * Invoke {@link BiConsumer#accept(Object, Object)} with the arguments if the t2
                      * argument is not null.
@@ -66,7 +66,7 @@ declare namespace org {
                      * @return this.
                      */
                     // @ts-ignore
-                    acceptIfNotNull<T1, T2>(t1: T1, t2: T2, consumer: java.util.function.BiConsumer<T1, T2> | java.util.function$.BiConsumer<T1, T2>): org.springframework.amqp.utils.JavaUtils
+                    public acceptIfNotNull<T1, T2>(t1: T1, t2: T2, consumer: java.util.function$.BiConsumer<T1, T2>): org.springframework.amqp.utils.JavaUtils
                     /**
                      * Invoke {@link BiConsumer#accept(Object, Object)} with the arguments if the value
                      * argument is not null or empty.
@@ -77,7 +77,7 @@ declare namespace org {
                      * @return this.
                      */
                     // @ts-ignore
-                    acceptIfHasText<T>(t1: T, value: string, consumer: java.util.function.BiConsumer<T, java.lang.String> | java.util.function$.BiConsumer<T, java.lang.String>): org.springframework.amqp.utils.JavaUtils
+                    public acceptIfHasText<T>(t1: T, value: java.lang.String | string, consumer: java.util.function$.BiConsumer<T, java.lang.String | string>): org.springframework.amqp.utils.JavaUtils
                 }
             }
         }

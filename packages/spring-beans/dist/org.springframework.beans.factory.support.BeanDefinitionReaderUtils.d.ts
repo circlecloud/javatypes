@@ -13,7 +13,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
                      */
                     // @ts-ignore
-                    class BeanDefinitionReaderUtils extends java.lang.Object {
+                    abstract class BeanDefinitionReaderUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -21,7 +21,7 @@ declare namespace org {
                          * unique, "#1", "#2" etc will be appended, until the name becomes unique.
                          */
                         // @ts-ignore
-                        readonly GENERATED_BEAN_NAME_SEPARATOR: string
+                        public static readonly GENERATED_BEAN_NAME_SEPARATOR: java.lang.String | string
                         /**
                          * Create a new GenericBeanDefinition for the given parent name and class name,
                          * eagerly loading the bean class if a ClassLoader has been specified.
@@ -33,7 +33,7 @@ declare namespace org {
                          * @throws ClassNotFoundException if the bean class could not be loaded
                          */
                         // @ts-ignore
-                        createBeanDefinition(parentName: string, className: string, classLoader: java.lang.ClassLoader): org.springframework.beans.factory.support.AbstractBeanDefinition
+                        public static createBeanDefinition(parentName: java.lang.String | string, className: java.lang.String | string, classLoader: java.lang.ClassLoader): org.springframework.beans.factory.support.AbstractBeanDefinition
                         /**
                          * Generate a bean name for the given top-level bean definition,
                          * unique within the given bean factory.
@@ -46,7 +46,7 @@ declare namespace org {
                          * @see #generateBeanName(BeanDefinition, BeanDefinitionRegistry, boolean)
                          */
                         // @ts-ignore
-                        generateBeanName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): java.lang.String
+                        public static generateBeanName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): string
                         /**
                          * Generate a bean name for the given bean definition, unique within the
                          * given bean factory.
@@ -61,7 +61,7 @@ declare namespace org {
                          *  for the given bean definition
                          */
                         // @ts-ignore
-                        generateBeanName(definition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry, isInnerBean: boolean): java.lang.String
+                        public static generateBeanName(definition: org.springframework.beans.factory.config.BeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry, isInnerBean: boolean): string
                         /**
                          * Turn the given bean name into a unique bean name for the given bean factory,
                          * appending a unique counter as suffix if necessary.
@@ -72,7 +72,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        uniqueBeanName(beanName: string, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): java.lang.String
+                        public static uniqueBeanName(beanName: java.lang.String | string, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): string
                         /**
                          * Register the given bean definition with the given bean factory.
                          * @param definitionHolder the bean definition including name and aliases
@@ -80,7 +80,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException if registration failed
                          */
                         // @ts-ignore
-                        registerBeanDefinition(definitionHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): void
+                        public static registerBeanDefinition(definitionHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): void
                         /**
                          * Register the given bean definition with a generated name,
                          * unique within the given bean factory.
@@ -91,7 +91,7 @@ declare namespace org {
                          *  for the given bean definition or the definition cannot be registered
                          */
                         // @ts-ignore
-                        registerWithGeneratedName(definition: org.springframework.beans.factory.support.AbstractBeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): java.lang.String
+                        public static registerWithGeneratedName(definition: org.springframework.beans.factory.support.AbstractBeanDefinition, registry: org.springframework.beans.factory.support.BeanDefinitionRegistry): string
                     }
                 }
             }

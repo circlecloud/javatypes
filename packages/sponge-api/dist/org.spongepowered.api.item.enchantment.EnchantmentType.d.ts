@@ -15,20 +15,20 @@ declare namespace org {
                          * @return The weight of this enchantment type
                          */
                         // @ts-ignore
-                        getWeight(): int
+                        getWeight(): number /*int*/
                         /**
                          * Gets the minimum level of this enchantment type allowed where
                          * it is present.
                          * @return The minimum level
                          */
                         // @ts-ignore
-                        getMinimumLevel(): int
+                        getMinimumLevel(): number /*int*/
                         /**
                          * Gets the maximum level of this enchantment type normally allowed.
                          * @return The maximum level
                          */
                         // @ts-ignore
-                        getMaximumLevel(): int
+                        getMaximumLevel(): number /*int*/
                         /**
                          * Gets the minimum item enchantability for this level to be normally added
                          * by enchanting tables.
@@ -36,7 +36,7 @@ declare namespace org {
                          * @return The minimum enchantability
                          */
                         // @ts-ignore
-                        getMinimumEnchantabilityForLevel(level: number /*int*/): int
+                        getMinimumEnchantabilityForLevel(level: number /*int*/): number /*int*/
                         /**
                          * Gets the maximum item enchantability for this level to be normally added
                          * by enchanting tables.
@@ -44,7 +44,7 @@ declare namespace org {
                          * @return The maximum enchantability
                          */
                         // @ts-ignore
-                        getMaximumEnchantabilityForLevel(level: number /*int*/): int
+                        getMaximumEnchantabilityForLevel(level: number /*int*/): number /*int*/
                         /**
                          * Test if this enchantment type can be applied to an {@link ItemStack}.
                          * @param stack The item stack to check

@@ -149,7 +149,7 @@ declare namespace java {
                  * @see #getFormats(String)
                  */
                 // @ts-ignore
-                readonly FORMAT_DEFAULT: Array<java.lang.String>
+                public static readonly FORMAT_DEFAULT: java.util.List<java.lang.String | string> | Array<java.lang.String | string>
                 /**
                  * The class-only format <code>List</code> containing
                  * <code>"java.class"</code>. This <code>List</code> is {@linkplain
@@ -157,7 +157,7 @@ declare namespace java {
                  * @see #getFormats(String)
                  */
                 // @ts-ignore
-                readonly FORMAT_CLASS: Array<java.lang.String>
+                public static readonly FORMAT_CLASS: java.util.List<java.lang.String | string> | Array<java.lang.String | string>
                 /**
                  * The properties-only format <code>List</code> containing
                  * <code>"java.properties"</code>. This <code>List</code> is
@@ -165,21 +165,21 @@ declare namespace java {
                  * @see #getFormats(String)
                  */
                 // @ts-ignore
-                readonly FORMAT_PROPERTIES: Array<java.lang.String>
+                public static readonly FORMAT_PROPERTIES: java.util.List<java.lang.String | string> | Array<java.lang.String | string>
                 /**
                  * The time-to-live constant for not caching loaded resource bundle
                  * instances.
                  * @see #getTimeToLive(String, Locale)
                  */
                 // @ts-ignore
-                readonly TTL_DONT_CACHE: number /*long*/
+                public static readonly TTL_DONT_CACHE: number /*long*/
                 /**
                  * The time-to-live constant for disabling the expiration control
                  * for loaded resource bundle instances in the cache.
                  * @see #getTimeToLive(String, Locale)
                  */
                 // @ts-ignore
-                readonly TTL_NO_EXPIRATION_CONTROL: number /*long*/
+                public static readonly TTL_NO_EXPIRATION_CONTROL: number /*long*/
                 /**
                  * Returns a <code>ResourceBundle.Control</code> in which the {@link
                  * #getFormats(String) getFormats} method returns the specified
@@ -202,7 +202,7 @@ declare namespace java {
                  *         if <code>formats</code> is unknown
                  */
                 // @ts-ignore
-                getControl(formats: Array<java.lang.String>): java.util.ResourceBundle.Control
+                public static getControl(formats: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): java.util.ResourceBundle.Control
                 /**
                  * Returns a <code>ResourceBundle.Control</code> in which the {@link
                  * #getFormats(String) getFormats} method returns the specified
@@ -225,7 +225,7 @@ declare namespace java {
                  *         if <code>formats</code> is unknown
                  */
                 // @ts-ignore
-                getNoFallbackControl(formats: Array<java.lang.String>): java.util.ResourceBundle.Control
+                public static getNoFallbackControl(formats: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): java.util.ResourceBundle.Control
                 /**
                  * Returns a <code>List</code> of <code>String</code>s containing
                  * formats to be used to load resource bundles for the given
@@ -258,7 +258,7 @@ declare namespace java {
                  * @see #FORMAT_PROPERTIES
                  */
                 // @ts-ignore
-                getFormats(baseName: string): java.util.List<java.lang.String>
+                public getFormats(baseName: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Returns a <code>List</code> of <code>Locale</code>s as candidate
                  * locales for <code>baseName</code> and <code>locale</code>. This
@@ -417,7 +417,7 @@ declare namespace java {
                  *         <code>null</code>
                  */
                 // @ts-ignore
-                getCandidateLocales(baseName: string, locale: java.util.Locale): java.util.List<java.util.Locale>
+                public getCandidateLocales(baseName: java.lang.String | string, locale: java.util.Locale): Array<java.util.Locale>
                 /**
                  * Returns a <code>Locale</code> to be used as a fallback locale for
                  * further resource bundle searches by the
@@ -452,7 +452,7 @@ declare namespace java {
                  *         is <code>null</code>
                  */
                 // @ts-ignore
-                getFallbackLocale(baseName: string, locale: java.util.Locale): java.util.Locale
+                public getFallbackLocale(baseName: java.lang.String | string, locale: java.util.Locale): java.util.Locale
                 /**
                  * Instantiates a resource bundle for the given bundle name of the
                  * given format and locale, using the given class loader if
@@ -541,7 +541,7 @@ declare namespace java {
                  *         any I/O operations
                  */
                 // @ts-ignore
-                newBundle(baseName: string, locale: java.util.Locale, format: string, loader: java.lang.ClassLoader, reload: boolean): java.util.ResourceBundle
+                public newBundle(baseName: java.lang.String | string, locale: java.util.Locale, format: java.lang.String | string, loader: java.lang.ClassLoader, reload: boolean): java.util.ResourceBundle
                 /**
                  * Returns the time-to-live (TTL) value for resource bundles that
                  * are loaded under this
@@ -585,7 +585,7 @@ declare namespace java {
                  *         <code>null</code>
                  */
                 // @ts-ignore
-                getTimeToLive(baseName: string, locale: java.util.Locale): long
+                public getTimeToLive(baseName: java.lang.String | string, locale: java.util.Locale): number /*long*/
                 /**
                  * Determines if the expired <code>bundle</code> in the cache needs
                  * to be reloaded based on the loading time given by
@@ -632,7 +632,7 @@ declare namespace java {
                  *         <code>bundle</code> is <code>null</code>
                  */
                 // @ts-ignore
-                needsReload(baseName: string, locale: java.util.Locale, format: string, loader: java.lang.ClassLoader, bundle: java.util.ResourceBundle, loadTime: number /*long*/): boolean
+                public needsReload(baseName: java.lang.String | string, locale: java.util.Locale, format: java.lang.String | string, loader: java.lang.ClassLoader, bundle: java.util.ResourceBundle, loadTime: number /*long*/): boolean
                 /**
                  * Converts the given <code>baseName</code> and <code>locale</code>
                  * to the bundle name. This method is called from the default
@@ -672,7 +672,7 @@ declare namespace java {
                  *         is <code>null</code>
                  */
                 // @ts-ignore
-                toBundleName(baseName: string, locale: java.util.Locale): java.lang.String
+                public toBundleName(baseName: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Converts the given <code>bundleName</code> to the form required
                  * by the {@link ClassLoader#getResource ClassLoader.getResource}
@@ -693,7 +693,7 @@ declare namespace java {
                  *          is <code>null</code>
                  */
                 // @ts-ignore
-                toResourceName(bundleName: string, suffix: string): java.lang.String
+                public toResourceName(bundleName: java.lang.String | string, suffix: java.lang.String | string): string
             }
         }
     }

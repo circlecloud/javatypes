@@ -10,11 +10,11 @@ declare namespace org {
                 // @ts-ignore
                 constructor(configuration: org.bukkit.configuration.MemoryConfiguration)
                 // @ts-ignore
-                configuration(): org.bukkit.configuration.MemoryConfiguration
+                public configuration(): org.bukkit.configuration.MemoryConfiguration
                 // @ts-ignore
-                copyDefaults(value: boolean): org.bukkit.configuration.MemoryConfigurationOptions
+                public copyDefaults(value: boolean): org.bukkit.configuration.MemoryConfigurationOptions
                 // @ts-ignore
-                pathSeparator(value: string): org.bukkit.configuration.MemoryConfigurationOptions
+                public pathSeparator(value: string): org.bukkit.configuration.MemoryConfigurationOptions
             }
         }
     }

@@ -16,25 +16,25 @@ declare namespace javax {
                      * @return the public ID for this declaration or null
                      */
                     // @ts-ignore
-                    getPublicId(): java.lang.String
+                    getPublicId(): string
                     /**
                      * The entity's system identifier.
                      * @return the system ID for this declaration or null
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    getSystemId(): string
                     /**
                      * The entity's name
                      * @return the name, may not be null
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * The name of the associated notation.
                      * @return the notation name
                      */
                     // @ts-ignore
-                    getNotationName(): java.lang.String
+                    getNotationName(): string
                     /**
                      * The replacement text of the entity.
                      * This method will only return non-null
@@ -42,14 +42,14 @@ declare namespace javax {
                      * @return null or the replacment text
                      */
                     // @ts-ignore
-                    getReplacementText(): java.lang.String
+                    getReplacementText(): string
                     /**
                      * Get the base URI for this reference
                      * or null if this information is not available
                      * @return the base URI or null
                      */
                     // @ts-ignore
-                    getBaseURI(): java.lang.String
+                    getBaseURI(): string
                 }
             }
         }

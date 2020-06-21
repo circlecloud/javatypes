@@ -15,7 +15,7 @@ declare namespace javax {
              * @param val the detail message of this exception.
              */
             // @ts-ignore
-            constructor(val: any)
+            constructor(val: java.lang.Object | any)
         }
     }
 }

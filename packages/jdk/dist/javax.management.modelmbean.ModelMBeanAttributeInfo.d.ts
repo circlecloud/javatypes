@@ -76,7 +76,7 @@ declare namespace javax {
                  *  problem in the definition of this attribute.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method)
                 /**
                  * Constructs a ModelMBeanAttributeInfo object.  The {@link
                  * Descriptor} of the constructed object will include fields
@@ -102,7 +102,7 @@ declare namespace javax {
                  *  "descriptorType" is not equal to "attribute".
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method, descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, getter: java.lang.reflect.Method, setter: java.lang.reflect.Method, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs a ModelMBeanAttributeInfo object with a default descriptor.
                  * @param name The name of the attribute
@@ -113,7 +113,7 @@ declare namespace javax {
                  * @param isIs True if the attribute has an "is" getter, false otherwise.
                  */
                 // @ts-ignore
-                constructor(name: string, type: string, description: string, isReadable: boolean, isWritable: boolean, isIs: boolean)
+                constructor(name: java.lang.String | string, type: java.lang.String | string, description: java.lang.String | string, isReadable: boolean, isWritable: boolean, isIs: boolean)
                 /**
                  * Constructs a ModelMBeanAttributeInfo object.
                  * @param name The name of the attribute
@@ -133,7 +133,7 @@ declare namespace javax {
                  *  "descriptorType" is not equal to "attribute".
                  */
                 // @ts-ignore
-                constructor(name: string, type: string, description: string, isReadable: boolean, isWritable: boolean, isIs: boolean, descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, type: java.lang.String | string, description: java.lang.String | string, isReadable: boolean, isWritable: boolean, isIs: boolean, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs a new ModelMBeanAttributeInfo object from this
                  * ModelMBeanAttributeInfo Object.  A default descriptor will
@@ -150,7 +150,7 @@ declare namespace javax {
                  * @see #setDescriptor
                  */
                 // @ts-ignore
-                getDescriptor(): javax.management.Descriptor
+                public getDescriptor(): javax.management.Descriptor
                 /**
                  * Sets associated Descriptor (full replace) for the
                  * ModelMBeanAttributeDescriptor.  If the new Descriptor is
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @see #getDescriptor
                  */
                 // @ts-ignore
-                setDescriptor(inDescriptor: javax.management.Descriptor): void
+                public setDescriptor(inDescriptor: javax.management.Descriptor): void
                 /**
                  * Creates and returns a new ModelMBeanAttributeInfo which is a duplicate of this ModelMBeanAttributeInfo.
                  * @exception RuntimeOperationsException for illegal value for
@@ -174,13 +174,13 @@ declare namespace javax {
                  *  fails for any reason, this exception will be thrown.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a human-readable version of the
                  * ModelMBeanAttributeInfo instance.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -65,7 +65,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class FontMetrics extends java.lang.Object implements java.io.Serializable {
+        abstract class FontMetrics extends java.lang.Object implements java.io.Serializable {
             /**
              * Creates a new <code>FontMetrics</code> object for finding out
              * height and width information about the specified <code>Font</code>
@@ -91,7 +91,7 @@ declare namespace java {
              *  <code>FontMetrics</code> object.
              */
             // @ts-ignore
-            getFont(): java.awt.Font
+            public getFont(): java.awt.Font
             /**
              * Gets the <code>FontRenderContext</code> used by this
              * <code>FontMetrics</code> object to measure text.
@@ -105,7 +105,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getFontRenderContext(): java.awt.font.FontRenderContext
+            public getFontRenderContext(): java.awt.font.FontRenderContext
             /**
              * Determines the <em>standard leading</em> of the
              * <code>Font</code> described by this <code>FontMetrics</code>
@@ -119,7 +119,7 @@ declare namespace java {
              * @see #getDescent()
              */
             // @ts-ignore
-            getLeading(): int
+            public getLeading(): number /*int*/
             /**
              * Determines the <em>font ascent</em> of the <code>Font</code>
              * described by this <code>FontMetrics</code> object. The font ascent
@@ -130,7 +130,7 @@ declare namespace java {
              * @see #getMaxAscent()
              */
             // @ts-ignore
-            getAscent(): int
+            public getAscent(): number /*int*/
             /**
              * Determines the <em>font descent</em> of the <code>Font</code>
              * described by this
@@ -143,7 +143,7 @@ declare namespace java {
              * @see #getMaxDescent()
              */
             // @ts-ignore
-            getDescent(): int
+            public getDescent(): number /*int*/
             /**
              * Gets the standard height of a line of text in this font.  This
              * is the distance between the baseline of adjacent lines of text.
@@ -158,7 +158,7 @@ declare namespace java {
              * @see #getDescent()
              */
             // @ts-ignore
-            getHeight(): int
+            public getHeight(): number /*int*/
             /**
              * Determines the maximum ascent of the <code>Font</code>
              * described by this <code>FontMetrics</code> object.  No character
@@ -168,7 +168,7 @@ declare namespace java {
              * @see #getAscent()
              */
             // @ts-ignore
-            getMaxAscent(): int
+            public getMaxAscent(): number /*int*/
             /**
              * Determines the maximum descent of the <code>Font</code>
              * described by this <code>FontMetrics</code> object.  No character
@@ -178,7 +178,7 @@ declare namespace java {
              * @see #getDescent()
              */
             // @ts-ignore
-            getMaxDescent(): int
+            public getMaxDescent(): number /*int*/
             /**
              * For backward compatibility only.
              * @return the maximum descent of any character in the
@@ -188,7 +188,7 @@ declare namespace java {
              *  replaced by <code>getMaxDescent()</code>.
              */
             // @ts-ignore
-            getMaxDecent(): int
+            public getMaxDecent(): number /*int*/
             /**
              * Gets the maximum advance width of any character in this
              * <code>Font</code>.  The advance is the
@@ -200,7 +200,7 @@ declare namespace java {
              *             maximum advance width is not known.
              */
             // @ts-ignore
-            getMaxAdvance(): int
+            public getMaxAdvance(): number /*int*/
             /**
              * Returns the advance width of the specified character in this
              * <code>Font</code>.  The advance is the
@@ -221,7 +221,7 @@ declare namespace java {
              * @see #stringWidth(String)
              */
             // @ts-ignore
-            charWidth(codePoint: number /*int*/): int
+            public charWidth(codePoint: number /*int*/): number /*int*/
             /**
              * Returns the advance width of the specified character in this
              * <code>Font</code>.  The advance is the
@@ -241,7 +241,7 @@ declare namespace java {
              * @see #stringWidth(String)
              */
             // @ts-ignore
-            charWidth(ch: string): int
+            public charWidth(ch: string): number /*int*/
             /**
              * Returns the total advance width for showing the specified
              * <code>String</code> in this <code>Font</code>.  The advance
@@ -260,7 +260,7 @@ declare namespace java {
              * @see #getStringBounds(String, Graphics)
              */
             // @ts-ignore
-            stringWidth(str: string): int
+            public stringWidth(str: java.lang.String | string): number /*int*/
             /**
              * Returns the total advance width for showing the specified array
              * of characters in this <code>Font</code>.  The advance is the
@@ -285,7 +285,7 @@ declare namespace java {
              * @see #stringWidth(String)
              */
             // @ts-ignore
-            charsWidth(data: string[], off: number /*int*/, len: number /*int*/): int
+            public charsWidth(data: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Returns the total advance width for showing the specified array
              * of bytes in this <code>Font</code>.  The advance is the
@@ -309,7 +309,7 @@ declare namespace java {
              * @see #stringWidth(String)
              */
             // @ts-ignore
-            bytesWidth(data: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public bytesWidth(data: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Gets the advance widths of the first 256 characters in the
              * <code>Font</code>.  The advance is the
@@ -322,7 +322,7 @@ declare namespace java {
              *                  described by this <code>FontMetrics</code> object.
              */
             // @ts-ignore
-            getWidths(): int[]
+            public getWidths(): number /*int*/[]
             /**
              * Checks to see if the <code>Font</code> has uniform line metrics.  A
              * composite font may consist of several different fonts to cover
@@ -336,7 +336,7 @@ declare namespace java {
              * @see java.awt.Font#hasUniformLineMetrics()
              */
             // @ts-ignore
-            hasUniformLineMetrics(): boolean
+            public hasUniformLineMetrics(): boolean
             /**
              * Returns the {@link LineMetrics} object for the specified
              * <code>String</code> in the specified {@link Graphics} context.
@@ -347,7 +347,7 @@ declare namespace java {
              * @see java.awt.Font#getLineMetrics(String, FontRenderContext)
              */
             // @ts-ignore
-            getLineMetrics(str: string, context: java.awt.Graphics): java.awt.font.LineMetrics
+            public getLineMetrics(str: java.lang.String | string, context: java.awt.Graphics): java.awt.font.LineMetrics
             /**
              * Returns the {@link LineMetrics} object for the specified
              * <code>String</code> in the specified {@link Graphics} context.
@@ -360,7 +360,7 @@ declare namespace java {
              * @see java.awt.Font#getLineMetrics(String, int, int, FontRenderContext)
              */
             // @ts-ignore
-            getLineMetrics(str: string, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.font.LineMetrics
+            public getLineMetrics(str: java.lang.String | string, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.font.LineMetrics
             /**
              * Returns the {@link LineMetrics} object for the specified
              * character array in the specified {@link Graphics} context.
@@ -373,7 +373,7 @@ declare namespace java {
              * @see java.awt.Font#getLineMetrics(char[], int, int, FontRenderContext)
              */
             // @ts-ignore
-            getLineMetrics(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.font.LineMetrics
+            public getLineMetrics(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.font.LineMetrics
             /**
              * Returns the {@link LineMetrics} object for the specified
              * {@link CharacterIterator} in the specified {@link Graphics}
@@ -387,7 +387,7 @@ declare namespace java {
              * @see java.awt.Font#getLineMetrics(CharacterIterator, int, int, FontRenderContext)
              */
             // @ts-ignore
-            getLineMetrics(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.font.LineMetrics
+            public getLineMetrics(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.font.LineMetrics
             /**
              * Returns the bounds of the specified <code>String</code> in the
              * specified <code>Graphics</code> context.  The bounds is used
@@ -402,7 +402,7 @@ declare namespace java {
              * @see java.awt.Font#getStringBounds(String, FontRenderContext)
              */
             // @ts-ignore
-            getStringBounds(str: string, context: java.awt.Graphics): java.awt.geom.Rectangle2D
+            public getStringBounds(str: java.lang.String | string, context: java.awt.Graphics): java.awt.geom.Rectangle2D
             /**
              * Returns the bounds of the specified <code>String</code> in the
              * specified <code>Graphics</code> context.  The bounds is used
@@ -419,7 +419,7 @@ declare namespace java {
              * @see java.awt.Font#getStringBounds(String, int, int, FontRenderContext)
              */
             // @ts-ignore
-            getStringBounds(str: string, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.geom.Rectangle2D
+            public getStringBounds(str: java.lang.String | string, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.geom.Rectangle2D
             /**
              * Returns the bounds of the specified array of characters
              * in the specified <code>Graphics</code> context.
@@ -439,7 +439,7 @@ declare namespace java {
              * @see java.awt.Font#getStringBounds(char[], int, int, FontRenderContext)
              */
             // @ts-ignore
-            getStringBounds(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.geom.Rectangle2D
+            public getStringBounds(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.geom.Rectangle2D
             /**
              * Returns the bounds of the characters indexed in the specified
              * <code>CharacterIterator</code> in the
@@ -456,7 +456,7 @@ declare namespace java {
              * @see java.awt.Font#getStringBounds(CharacterIterator, int, int, FontRenderContext)
              */
             // @ts-ignore
-            getStringBounds(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.geom.Rectangle2D
+            public getStringBounds(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, context: java.awt.Graphics): java.awt.geom.Rectangle2D
             /**
              * Returns the bounds for the character with the maximum bounds
              * in the specified <code>Graphics</code> context.
@@ -466,7 +466,7 @@ declare namespace java {
              * @see java.awt.Font#getMaxCharBounds(FontRenderContext)
              */
             // @ts-ignore
-            getMaxCharBounds(context: java.awt.Graphics): java.awt.geom.Rectangle2D
+            public getMaxCharBounds(context: java.awt.Graphics): java.awt.geom.Rectangle2D
             /**
              * Returns a representation of this <code>FontMetrics</code>
              * object's values as a <code>String</code>.
@@ -475,7 +475,7 @@ declare namespace java {
              * @since JDK1.0.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

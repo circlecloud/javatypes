@@ -9,15 +9,15 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class AbstractClientHttpRequest extends java.lang.Object implements org.springframework.http.client.ClientHttpRequest {
+                abstract class AbstractClientHttpRequest extends java.lang.Object implements org.springframework.http.client.ClientHttpRequest {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getHeaders(): org.springframework.http.HttpHeaders
+                    public getHeaders(): org.springframework.http.HttpHeaders
                     // @ts-ignore
-                    getBody(): java.io.OutputStream
+                    public getBody(): java.io.OutputStream
                     // @ts-ignore
-                    execute(): org.springframework.http.client.ClientHttpResponse
+                    public execute(): org.springframework.http.client.ClientHttpResponse
                     /**
                      * Assert that this request has not been {@linkplain #execute() executed} yet.
                      * @throws IllegalStateException if this request has been executed

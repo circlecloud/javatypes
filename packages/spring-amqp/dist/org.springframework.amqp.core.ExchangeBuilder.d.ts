@@ -18,48 +18,48 @@ declare namespace org {
                      * @see ExchangeTypes
                      */
                     // @ts-ignore
-                    constructor(name: string, type: string)
+                    constructor(name: java.lang.String | string, type: java.lang.String | string)
                     /**
                      * Return a {@link DirectExchange} builder.
                      * @param name the name.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    directExchange(name: string): org.springframework.amqp.core.ExchangeBuilder
+                    public static directExchange(name: java.lang.String | string): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Return a {@link TopicExchange} builder.
                      * @param name the name.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    topicExchange(name: string): org.springframework.amqp.core.ExchangeBuilder
+                    public static topicExchange(name: java.lang.String | string): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Return a {@link FanoutExchange} builder.
                      * @param name the name.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    fanoutExchange(name: string): org.springframework.amqp.core.ExchangeBuilder
+                    public static fanoutExchange(name: java.lang.String | string): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Return a {@link HeadersExchange} builder.
                      * @param name the name.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    headersExchange(name: string): org.springframework.amqp.core.ExchangeBuilder
+                    public static headersExchange(name: java.lang.String | string): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Set the auto delete flag.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    autoDelete(): org.springframework.amqp.core.ExchangeBuilder
+                    public autoDelete(): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Set the durable flag.
                      * @param durable the durable flag (default true).
                      * @return the builder.
                      */
                     // @ts-ignore
-                    durable(durable: boolean): org.springframework.amqp.core.ExchangeBuilder
+                    public durable(durable: boolean): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Add an argument.
                      * @param key the argument key.
@@ -67,40 +67,40 @@ declare namespace org {
                      * @return the builder.
                      */
                     // @ts-ignore
-                    withArgument(key: string, value: any): org.springframework.amqp.core.ExchangeBuilder
+                    public withArgument(key: java.lang.String | string, value: java.lang.Object | any): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Add the arguments.
                      * @param arguments the arguments map.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    withArguments(arguments: java.util.Map<java.lang.String, java.lang.Object>): org.springframework.amqp.core.ExchangeBuilder
+                    public withArguments(arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Set the internal flag.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    internal(): org.springframework.amqp.core.ExchangeBuilder
+                    public internal(): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Set the delayed flag.
                      * @return the builder.
                      */
                     // @ts-ignore
-                    delayed(): org.springframework.amqp.core.ExchangeBuilder
+                    public delayed(): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Switch on ignore exceptions such as mismatched properties when declaring.
                      * @return the builder.
                      * @since 2.0
                      */
                     // @ts-ignore
-                    ignoreDeclarationExceptions(): org.springframework.amqp.core.ExchangeBuilder
+                    public ignoreDeclarationExceptions(): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Switch to disable declaration of the exchange by any admin.
                      * @return the builder.
                      * @since 2.1
                      */
                     // @ts-ignore
-                    suppressDeclaration(): org.springframework.amqp.core.ExchangeBuilder
+                    public suppressDeclaration(): org.springframework.amqp.core.ExchangeBuilder
                     /**
                      * Admins, or admin bean names that should declare this exchange.
                      * @param admins the admins.
@@ -108,9 +108,9 @@ declare namespace org {
                      * @since 2.1
                      */
                     // @ts-ignore
-                    admins(...admins: any[]): org.springframework.amqp.core.ExchangeBuilder
+                    public admins(...admins: java.lang.Object[] | any[]): org.springframework.amqp.core.ExchangeBuilder
                     // @ts-ignore
-                    build(): org.springframework.amqp.core.Exchange
+                    public build(): org.springframework.amqp.core.Exchange
                 }
             }
         }

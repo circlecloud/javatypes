@@ -37,7 +37,7 @@ declare namespace java {
                  * @return the main Attributes for the Manifest
                  */
                 // @ts-ignore
-                getMainAttributes(): java.util.jar.Attributes
+                public getMainAttributes(): java.util.jar.Attributes
                 /**
                  * Returns a Map of the entries contained in this Manifest. Each entry
                  * is represented by a String name (key) and associated Attributes (value).
@@ -47,7 +47,7 @@ declare namespace java {
                  * @return a Map of the entries contained in this Manifest
                  */
                 // @ts-ignore
-                getEntries(): java.util.Map<java.lang.String, java.util.jar.Attributes>
+                public getEntries(): java.util.Map<java.lang.String | string, java.util.jar.Attributes>
                 /**
                  * Returns the Attributes for the specified entry name.
                  * This method is defined as:
@@ -70,12 +70,12 @@ declare namespace java {
                  * @return the Attributes for the specified entry name
                  */
                 // @ts-ignore
-                getAttributes(name: string): java.util.jar.Attributes
+                public getAttributes(name: java.lang.String | string): java.util.jar.Attributes
                 /**
                  * Clears the main Attributes as well as the entries in this Manifest.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Writes the Manifest to the specified OutputStream.
                  * Attributes.Name.MANIFEST_VERSION must be set in
@@ -85,7 +85,7 @@ declare namespace java {
                  * @see #getMainAttributes
                  */
                 // @ts-ignore
-                write(out: java.io.OutputStream): void
+                public write(out: java.io.OutputStream): void
                 /**
                  * Reads the Manifest from the specified InputStream. The entry
                  * names and attributes read will be merged in with the current
@@ -94,7 +94,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                read(jis: java.io.InputStream): void
+                public read(jis: java.io.InputStream): void
                 /**
                  * Returns true if the specified Object is also a Manifest and has
                  * the same main Attributes and entries.
@@ -103,12 +103,12 @@ declare namespace java {
                  *  the same main Attributes and entries
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code for this Manifest.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a shallow copy of this Manifest.  The shallow copy is
                  * implemented as follows:
@@ -118,7 +118,7 @@ declare namespace java {
                  * @return a shallow copy of this Manifest
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

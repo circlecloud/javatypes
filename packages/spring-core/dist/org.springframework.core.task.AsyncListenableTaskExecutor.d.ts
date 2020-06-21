@@ -19,7 +19,7 @@ declare namespace org {
                      * @throws TaskRejectedException if the given task was not accepted
                      */
                     // @ts-ignore
-                    submitListenable(task: java.lang.Runnable): org.springframework.util.concurrent.ListenableFuture<?>
+                    submitListenable(task: java.lang.Runnable): org.springframework.util.concurrent.ListenableFuture<any>
                     /**
                      * Submit a {@code Callable} task for execution, receiving a {@code ListenableFuture}
                      * representing that task. The Future will return the Callable's result upon

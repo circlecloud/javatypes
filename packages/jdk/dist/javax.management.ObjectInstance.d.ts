@@ -21,7 +21,7 @@ declare namespace javax {
              *  parameter does not have the right format.
              */
             // @ts-ignore
-            constructor(objectName: string, className: string)
+            constructor(objectName: java.lang.String | string, className: java.lang.String | string)
             /**
              * Allows an object instance to be created given an object name and
              * the full class name, including the package name.
@@ -35,7 +35,7 @@ declare namespace javax {
              *  from the <CODE>MBeanInfo</CODE> it provides.
              */
             // @ts-ignore
-            constructor(objectName: javax.management.ObjectName, className: string)
+            constructor(objectName: javax.management.ObjectName, className: java.lang.String | string)
             /**
              * Compares the current object instance with another object instance.
              * @param object  The object instance that the current object instance is
@@ -43,28 +43,28 @@ declare namespace javax {
              * @return True if the two object instances are equal, otherwise false.
              */
             // @ts-ignore
-            equals(object: any): boolean
+            public equals(object: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the object name part.
              * @return the object name.
              */
             // @ts-ignore
-            getObjectName(): javax.management.ObjectName
+            public getObjectName(): javax.management.ObjectName
             /**
              * Returns the class part.
              * @return the class name.
              */
             // @ts-ignore
-            getClassName(): java.lang.String
+            public getClassName(): string
             /**
              * Returns a string representing this ObjectInstance object. The format of this string
              * is not specified, but users can expect that two ObjectInstances return the same
              * string if and only if they are equal.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

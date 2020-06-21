@@ -26,7 +26,7 @@ declare namespace org {
                      *  Interpreted by the post-processor that actually creates the script.
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string)
+                    constructor(scriptSourceLocator: java.lang.String | string)
                     /**
                      * Create a new GroovyScriptFactory for the given script source,
                      * specifying a strategy interface that can create a custom MetaClass
@@ -39,7 +39,7 @@ declare namespace org {
                      * @see GroovyObjectCustomizer#customize
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string, groovyObjectCustomizer: org.springframework.scripting.groovy.GroovyObjectCustomizer)
+                    constructor(scriptSourceLocator: java.lang.String | string, groovyObjectCustomizer: org.springframework.scripting.groovy.GroovyObjectCustomizer)
                     /**
                      * Create a new GroovyScriptFactory for the given script source,
                      * specifying a strategy interface that can create a custom MetaClass
@@ -52,7 +52,7 @@ declare namespace org {
                      * @see GroovyClassLoader#GroovyClassLoader(ClassLoader, CompilerConfiguration)
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string, compilerConfiguration: CompilerConfiguration)
+                    constructor(scriptSourceLocator: java.lang.String | string, compilerConfiguration: CompilerConfiguration)
                     /**
                      * Create a new GroovyScriptFactory for the given script source,
                      * specifying a strategy interface that can customize Groovy's compilation
@@ -66,16 +66,16 @@ declare namespace org {
                      * @see org.codehaus.groovy.control.customizers.ImportCustomizer
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string, ...compilationCustomizers: CompilationCustomizer[])
+                    constructor(scriptSourceLocator: java.lang.String | string, ...compilationCustomizers: CompilationCustomizer[])
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     /**
                      * Return the GroovyClassLoader used by this script factory.
                      */
                     // @ts-ignore
-                    getGroovyClassLoader(): GroovyClassLoader
+                    public getGroovyClassLoader(): GroovyClassLoader
                     /**
                      * Build a {@link GroovyClassLoader} for the given {@code ClassLoader}.
                      * @param classLoader the ClassLoader to build a GroovyClassLoader for
@@ -84,30 +84,30 @@ declare namespace org {
                     // @ts-ignore
                     buildGroovyClassLoader(classLoader: java.lang.ClassLoader): GroovyClassLoader
                     // @ts-ignore
-                    getScriptSourceLocator(): java.lang.String
+                    public getScriptSourceLocator(): string
                     /**
                      * Groovy scripts determine their interfaces themselves,
                      * hence we don't need to explicitly expose interfaces here.
                      * @return {#code null} always
                      */
                     // @ts-ignore
-                    getScriptInterfaces(): java.lang.Class[]
+                    public getScriptInterfaces(): java.lang.Class<any>[]
                     /**
                      * Groovy scripts do not need a config interface,
                      * since they expose their setters as public methods.
                      */
                     // @ts-ignore
-                    requiresConfigInterface(): boolean
+                    public requiresConfigInterface(): boolean
                     /**
                      * Loads and parses the Groovy script via the GroovyClassLoader.
                      * @see groovy.lang.GroovyClassLoader
                      */
                     // @ts-ignore
-                    getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class[]): java.lang.Object
+                    public getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class<any>[]): any
                     // @ts-ignore
-                    getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<?>
+                    public getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<any>
                     // @ts-ignore
-                    requiresScriptedObjectRefresh(scriptSource: org.springframework.scripting.ScriptSource): boolean
+                    public requiresScriptedObjectRefresh(scriptSource: org.springframework.scripting.ScriptSource): boolean
                     /**
                      * Instantiate the given Groovy script class and run it if necessary.
                      * @param scriptSource the source for the underlying script
@@ -117,9 +117,9 @@ declare namespace org {
                      * @throws ScriptCompilationException in case of instantiation failure
                      */
                     // @ts-ignore
-                    executeScript(scriptSource: org.springframework.scripting.ScriptSource, scriptClass: java.lang.Class<any>): java.lang.Object
+                    executeScript(scriptSource: org.springframework.scripting.ScriptSource, scriptClass: java.lang.Class<any>): any
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

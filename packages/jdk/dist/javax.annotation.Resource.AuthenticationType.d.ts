@@ -7,9 +7,13 @@ declare namespace javax {
             // @ts-ignore
             class AuthenticationType extends java.lang.Enum<javax.annotation.Resource.AuthenticationType> {
                 // @ts-ignore
+                readonly CONTAINER: javax.annotation.Resource.AuthenticationType
+                // @ts-ignore
+                readonly APPLICATION: javax.annotation.Resource.AuthenticationType
+                // @ts-ignore
                 values(): javax.annotation.Resource.AuthenticationType[]
                 // @ts-ignore
-                valueOf(name: string): javax.annotation.Resource.AuthenticationType
+                valueOf(name: java.lang.String | string): javax.annotation.Resource.AuthenticationType
             }
         }
     }

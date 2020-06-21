@@ -13,21 +13,21 @@ declare namespace org {
                          * @return Applier parameters
                          */
                         // @ts-ignore
-                        getParameters(): <any>
+                        getParameters(): object
                         /**
                          * Returns the current value of the parameter with the specified key.
                          * @param key Parameter key
                          * @return Parameter value
                          */
                         // @ts-ignore
-                        getParameter(key: string): org.spongepowered.api.text.TextElement
+                        getParameter(key: java.lang.String | string): org.spongepowered.api.text.TextElement
                         /**
                          * Sets the value of the specified parameter key within this applier.
                          * @param key Parameter key
                          * @param value Parameter value
                          */
                         // @ts-ignore
-                        setParameter(key: string, value: org.spongepowered.api.text.TextElement): void
+                        setParameter(key: java.lang.String | string, value: org.spongepowered.api.text.TextElement): void
                         /**
                          * Returns the current {@link TextTemplate} for this applier.
                          * @return TextTemplate

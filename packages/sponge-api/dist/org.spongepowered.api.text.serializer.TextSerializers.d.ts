@@ -13,7 +13,7 @@ declare namespace org {
                          * formatting or special text types.
                          */
                         // @ts-ignore
-                        readonly PLAIN: org.spongepowered.api.text.serializer.SafeTextSerializer
+                        public static readonly PLAIN: org.spongepowered.api.text.serializer.SafeTextSerializer
                         /**
                          * The {@link FormattingCodeTextSerializer} using the internal formatting
                          * char.
@@ -27,7 +27,7 @@ declare namespace org {
                          * @deprecated Legacy formatting codes are being phased out of Minecraft
                          */
                         // @ts-ignore
-                        readonly LEGACY_FORMATTING_CODE: org.spongepowered.api.text.serializer.FormattingCodeTextSerializer
+                        public static readonly LEGACY_FORMATTING_CODE: org.spongepowered.api.text.serializer.FormattingCodeTextSerializer
                         /**
                          * A {@link FormattingCodeTextSerializer} for a simple {@link Text}
                          * representation similar to {@link #LEGACY_FORMATTING_CODE} but using the
@@ -43,13 +43,13 @@ declare namespace org {
                          * @see FormattingCodeTextSerializer
                          */
                         // @ts-ignore
-                        readonly FORMATTING_CODE: org.spongepowered.api.text.serializer.FormattingCodeTextSerializer
+                        public static readonly FORMATTING_CODE: org.spongepowered.api.text.serializer.FormattingCodeTextSerializer
                         /**
                          * The {@link TextSerializer} for Mojang's JSON (<i>Mojangson</i>)
                          * representation of a {@link Text} object.
                          */
                         // @ts-ignore
-                        readonly JSON: org.spongepowered.api.text.serializer.TextSerializer
+                        public static readonly JSON: org.spongepowered.api.text.serializer.TextSerializer
                         /**
                          * Returns a representation that accepts and outputs formatting codes, using
                          * the provided formatting character.
@@ -58,7 +58,7 @@ declare namespace org {
                          * @return The appropriate legacy representation handler
                          */
                         // @ts-ignore
-                        formattingCode(formattingChar: string): org.spongepowered.api.text.serializer.FormattingCodeTextSerializer
+                        public static formattingCode(formattingChar: string): org.spongepowered.api.text.serializer.FormattingCodeTextSerializer
                     }
                 }
             }

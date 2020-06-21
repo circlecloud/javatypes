@@ -112,7 +112,7 @@ declare namespace java {
                  * @return the target drop action.
                  */
                 // @ts-ignore
-                getTargetActions(): int
+                public getTargetActions(): number /*int*/
                 /**
                  * This method returns an <code>int</code> representing
                  * the current state of the input device modifiers
@@ -124,7 +124,7 @@ declare namespace java {
                  * @return the current state of the input device modifiers
                  */
                 // @ts-ignore
-                getGestureModifiers(): int
+                public getGestureModifiers(): number /*int*/
                 /**
                  * This method returns an <code>int</code> representing
                  * the current state of the input device extended modifiers
@@ -137,13 +137,13 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getGestureModifiersEx(): int
+                public getGestureModifiersEx(): number /*int*/
                 /**
                  * This method returns the user drop action.
                  * @return the user drop action.
                  */
                 // @ts-ignore
-                getUserAction(): int
+                public getUserAction(): number /*int*/
                 /**
                  * This method returns the logical intersection of
                  * the target drop action and the set of drop actions supported by
@@ -152,7 +152,7 @@ declare namespace java {
                  *          the set of drop actions supported by the drag source.
                  */
                 // @ts-ignore
-                getDropAction(): int
+                public getDropAction(): number /*int*/
             }
         }
     }

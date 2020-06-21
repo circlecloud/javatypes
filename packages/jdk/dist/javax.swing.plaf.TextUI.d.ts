@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Timothy Prinzing
              */
             // @ts-ignore
-            class TextUI extends javax.swing.plaf.ComponentUI {
+            abstract class TextUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
                 /**
@@ -18,7 +18,7 @@ declare namespace javax {
                  *    represent a valid location in the associated document
                  */
                 // @ts-ignore
-                abstract modelToView(t: javax.swing.text.JTextComponent, pos: number /*int*/): java.awt.Rectangle
+                public abstract modelToView(t: javax.swing.text.JTextComponent, pos: number /*int*/): java.awt.Rectangle
                 /**
                  * Converts the given location in the model to a place in
                  * the view coordinate system.
@@ -28,7 +28,7 @@ declare namespace javax {
                  *    represent a valid location in the associated document
                  */
                 // @ts-ignore
-                abstract modelToView(t: javax.swing.text.JTextComponent, pos: number /*int*/, bias: javax.swing.text.Position.Bias): java.awt.Rectangle
+                public abstract modelToView(t: javax.swing.text.JTextComponent, pos: number /*int*/, bias: javax.swing.text.Position.Bias): java.awt.Rectangle
                 /**
                  * Converts the given place in the view coordinate system
                  * to the nearest representative location in the model.
@@ -38,7 +38,7 @@ declare namespace javax {
                  * @return the offset from the start of the document &gt;= 0
                  */
                 // @ts-ignore
-                abstract viewToModel(t: javax.swing.text.JTextComponent, pt: java.awt.Point): int
+                public abstract viewToModel(t: javax.swing.text.JTextComponent, pt: java.awt.Point): number /*int*/
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.
@@ -53,7 +53,7 @@ declare namespace javax {
                  *          given point in the view &gt;= 0
                  */
                 // @ts-ignore
-                abstract viewToModel(t: javax.swing.text.JTextComponent, pt: java.awt.Point, biasReturn: javax.swing.text.Position.Bias[]): int
+                public abstract viewToModel(t: javax.swing.text.JTextComponent, pt: java.awt.Point, biasReturn: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Provides a way to determine the next visually represented model
                  * location that one might place a caret.  Some views may not be visible,
@@ -73,7 +73,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid direction
                  */
                 // @ts-ignore
-                abstract getNextVisualPositionFrom(t: javax.swing.text.JTextComponent, pos: number /*int*/, b: javax.swing.text.Position.Bias, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                public abstract getNextVisualPositionFrom(t: javax.swing.text.JTextComponent, pos: number /*int*/, b: javax.swing.text.Position.Bias, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Causes the portion of the view responsible for the
                  * given part of the model to be repainted.
@@ -81,7 +81,7 @@ declare namespace javax {
                  * @param p1 the end of the range &gt;= p0
                  */
                 // @ts-ignore
-                abstract damageRange(t: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/): void
+                public abstract damageRange(t: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/): void
                 /**
                  * Causes the portion of the view responsible for the
                  * given part of the model to be repainted.
@@ -89,7 +89,7 @@ declare namespace javax {
                  * @param p1 the end of the range &gt;= p0
                  */
                 // @ts-ignore
-                abstract damageRange(t: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/, firstBias: javax.swing.text.Position.Bias, secondBias: javax.swing.text.Position.Bias): void
+                public abstract damageRange(t: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/, firstBias: javax.swing.text.Position.Bias, secondBias: javax.swing.text.Position.Bias): void
                 /**
                  * Fetches the binding of services that set a policy
                  * for the type of document being edited.  This contains
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @return the editor kit binding
                  */
                 // @ts-ignore
-                abstract getEditorKit(t: javax.swing.text.JTextComponent): javax.swing.text.EditorKit
+                public abstract getEditorKit(t: javax.swing.text.JTextComponent): javax.swing.text.EditorKit
                 /**
                  * Fetches a View with the allocation of the associated
                  * text component (i.e. the root of the hierarchy) that
@@ -107,14 +107,14 @@ declare namespace javax {
                  * @return the view
                  */
                 // @ts-ignore
-                abstract getRootView(t: javax.swing.text.JTextComponent): javax.swing.text.View
+                public abstract getRootView(t: javax.swing.text.JTextComponent): javax.swing.text.View
                 /**
                  * Returns the string to be used as the tooltip at the passed in location.
                  * @see javax.swing.text.JTextComponent#getToolTipText
                  * @since 1.4
                  */
                 // @ts-ignore
-                getToolTipText(t: javax.swing.text.JTextComponent, pt: java.awt.Point): java.lang.String
+                public getToolTipText(t: javax.swing.text.JTextComponent, pt: java.awt.Point): string
             }
         }
     }

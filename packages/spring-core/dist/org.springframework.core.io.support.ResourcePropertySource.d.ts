@@ -24,7 +24,7 @@ declare namespace org {
                          * loaded from the given encoded resource.
                          */
                         // @ts-ignore
-                        constructor(name: string, resource: org.springframework.core.io.support.EncodedResource)
+                        constructor(name: java.lang.String | string, resource: org.springframework.core.io.support.EncodedResource)
                         /**
                          * Create a PropertySource based on Properties loaded from the given resource.
                          * The name of the PropertySource will be generated based on the
@@ -37,7 +37,7 @@ declare namespace org {
                          * loaded from the given encoded resource.
                          */
                         // @ts-ignore
-                        constructor(name: string, resource: org.springframework.core.io.Resource)
+                        constructor(name: java.lang.String | string, resource: org.springframework.core.io.Resource)
                         /**
                          * Create a PropertySource based on Properties loaded from the given resource.
                          * The name of the PropertySource will be generated based on the
@@ -51,7 +51,7 @@ declare namespace org {
                          * resource (assuming it is prefixed with {@code classpath:}).
                          */
                         // @ts-ignore
-                        constructor(name: string, location: string, classLoader: java.lang.ClassLoader)
+                        constructor(name: java.lang.String | string, location: java.lang.String | string, classLoader: java.lang.ClassLoader)
                         /**
                          * Create a PropertySource based on Properties loaded from the given resource
                          * location and use the given class loader to load the resource, assuming it is
@@ -60,7 +60,7 @@ declare namespace org {
                          * resource.
                          */
                         // @ts-ignore
-                        constructor(location: string, classLoader: java.lang.ClassLoader)
+                        constructor(location: java.lang.String | string, classLoader: java.lang.ClassLoader)
                         /**
                          * Create a PropertySource having the given name based on Properties loaded from
                          * the given resource location. The default thread context class loader will be
@@ -68,21 +68,21 @@ declare namespace org {
                          * {@code classpath:}.
                          */
                         // @ts-ignore
-                        constructor(name: string, location: string)
+                        constructor(name: java.lang.String | string, location: java.lang.String | string)
                         /**
                          * Create a PropertySource based on Properties loaded from the given resource
                          * location. The name of the PropertySource will be generated based on the
                          * {@link Resource#getDescription() description} of the resource.
                          */
                         // @ts-ignore
-                        constructor(location: string)
+                        constructor(location: java.lang.String | string)
                         /**
                          * Return a potentially adapted variant of this {@link ResourcePropertySource},
                          * overriding the previously given (or derived) name with the specified name.
                          * @since 4.0.4
                          */
                         // @ts-ignore
-                        withName(name: string): org.springframework.core.io.support.ResourcePropertySource
+                        public withName(name: java.lang.String | string): org.springframework.core.io.support.ResourcePropertySource
                         /**
                          * Return a potentially adapted variant of this {@link ResourcePropertySource},
                          * overriding the previously given name (if any) with the original resource name
@@ -90,7 +90,7 @@ declare namespace org {
                          * @since 4.1
                          */
                         // @ts-ignore
-                        withResourceName(): org.springframework.core.io.support.ResourcePropertySource
+                        public withResourceName(): org.springframework.core.io.support.ResourcePropertySource
                     }
                 }
             }

@@ -15,7 +15,7 @@ declare namespace java {
                  *           not known
                  */
                 // @ts-ignore
-                constructor(file: string)
+                constructor(file: java.lang.String | string)
             }
         }
     }

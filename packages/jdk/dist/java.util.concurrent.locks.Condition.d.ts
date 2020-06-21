@@ -282,7 +282,7 @@ declare namespace java {
                      *          (and interruption of thread suspension is supported)
                      */
                     // @ts-ignore
-                    awaitNanos(nanosTimeout: number /*long*/): long
+                    awaitNanos(nanosTimeout: number /*long*/): number /*long*/
                     /**
                      * Causes the current thread to wait until it is signalled or interrupted,
                      * or the specified waiting time elapses. This method is behaviorally

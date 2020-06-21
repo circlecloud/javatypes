@@ -12,7 +12,7 @@ declare namespace org {
                  * @return an immutable list of trades
                  */
                 // @ts-ignore
-                getRecipes(): java.util.List<org.bukkit.inventory.MerchantRecipe>
+                getRecipes(): Array<org.bukkit.inventory.MerchantRecipe>
                 /**
                  * Set the list of trades currently available from this merchant.
                  * <br>
@@ -21,7 +21,7 @@ declare namespace org {
                  * @param recipes a list of recipes
                  */
                 // @ts-ignore
-                setRecipes(recipes: Array<org.bukkit.inventory.MerchantRecipe>): void
+                setRecipes(recipes: java.util.List<org.bukkit.inventory.MerchantRecipe> | Array<org.bukkit.inventory.MerchantRecipe>): void
                 /**
                  * Get the recipe at a certain index of this merchant's trade list.
                  * @param i the index
@@ -43,7 +43,7 @@ declare namespace org {
                  * @return the recipe count
                  */
                 // @ts-ignore
-                getRecipeCount(): int
+                getRecipeCount(): number /*int*/
                 /**
                  * Gets whether this merchant is currently trading.
                  * @return whether the merchant is trading

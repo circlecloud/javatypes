@@ -60,7 +60,7 @@ declare namespace javax {
              * @param text the text of the <code>JMenuItem</code>
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a menu item whose properties are taken from the
              * specified <code>Action</code>.
@@ -75,7 +75,7 @@ declare namespace javax {
              * @param icon the icon of the <code>JMenuItem</code>
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Creates a <code>JMenuItem</code> with the specified text and
              * keyboard mnemonic.
@@ -83,19 +83,19 @@ declare namespace javax {
              * @param mnemonic the keyboard mnemonic for the <code>JMenuItem</code>
              */
             // @ts-ignore
-            constructor(text: string, mnemonic: number /*int*/)
+            constructor(text: java.lang.String | string, mnemonic: number /*int*/)
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.ButtonModel): void
+            public setModel(newModel: javax.swing.ButtonModel): void
             /**
              * Initializes the menu item with the specified text and icon.
              * @param text the text of the <code>JMenuItem</code>
              * @param icon the icon of the <code>JMenuItem</code>
              */
             // @ts-ignore
-            init(text: string, icon: javax.swing.Icon): void
+            init(text: java.lang.String | string, icon: javax.swing.Icon): void
             /**
              * Sets the look and feel object that renders this component.
              * @param ui  the <code>JMenuItemUI</code> L&amp;F object
@@ -106,13 +106,13 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.MenuItemUI): void
+            public setUI(ui: javax.swing.plaf.MenuItemUI): void
             /**
              * Resets the UI property with a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the suffix used to construct the name of the L&amp;F class used to
              * render this component.
@@ -121,7 +121,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Identifies the menu item as "armed". If the mouse button is
              * released while it is over this item, the menu's action event
@@ -132,14 +132,14 @@ declare namespace javax {
              *          hidden: true
              */
             // @ts-ignore
-            setArmed(b: boolean): void
+            public setArmed(b: boolean): void
             /**
              * Returns whether the menu item is "armed".
              * @return true if the menu item is armed, and it can be selected
              * @see #setArmed
              */
             // @ts-ignore
-            isArmed(): boolean
+            public isArmed(): boolean
             /**
              * Enables or disables the menu item.
              * @param b  true to enable the item
@@ -148,7 +148,7 @@ declare namespace javax {
              *       preferred: true
              */
             // @ts-ignore
-            setEnabled(b: boolean): void
+            public setEnabled(b: boolean): void
             /**
              * Sets the key combination which invokes the menu item's
              * action listeners without navigating the menu hierarchy. It is the
@@ -164,7 +164,7 @@ declare namespace javax {
              *        preferred: true
              */
             // @ts-ignore
-            setAccelerator(keyStroke: javax.swing.KeyStroke): void
+            public setAccelerator(keyStroke: javax.swing.KeyStroke): void
             /**
              * Returns the <code>KeyStroke</code> which serves as an accelerator
              * for the menu item.
@@ -172,7 +172,7 @@ declare namespace javax {
              *           accelerator key
              */
             // @ts-ignore
-            getAccelerator(): javax.swing.KeyStroke
+            public getAccelerator(): javax.swing.KeyStroke
             /**
              * {@inheritDoc}
              * @since 1.3
@@ -184,7 +184,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            actionPropertyChanged(action: javax.swing.Action, propertyName: string): void
+            actionPropertyChanged(action: javax.swing.Action, propertyName: java.lang.String | string): void
             /**
              * Processes a mouse event forwarded from the
              * <code>MenuSelectionManager</code> and changes the menu
@@ -198,7 +198,7 @@ declare namespace javax {
              * @param manager   the <code>MenuSelectionManager</code>
              */
             // @ts-ignore
-            processMouseEvent(e: java.awt.event.MouseEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
+            public processMouseEvent(e: java.awt.event.MouseEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
             /**
              * Processes a key event forwarded from the
              * <code>MenuSelectionManager</code> and changes the menu selection,
@@ -211,19 +211,19 @@ declare namespace javax {
              * @param manager   the <code>MenuSelectionManager</code>
              */
             // @ts-ignore
-            processKeyEvent(e: java.awt.event.KeyEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
+            public processKeyEvent(e: java.awt.event.KeyEvent, path: javax.swing.MenuElement[], manager: javax.swing.MenuSelectionManager): void
             /**
              * Handles mouse drag in a menu.
              * @param e  a <code>MenuDragMouseEvent</code> object
              */
             // @ts-ignore
-            processMenuDragMouseEvent(e: javax.swing.event.MenuDragMouseEvent): void
+            public processMenuDragMouseEvent(e: javax.swing.event.MenuDragMouseEvent): void
             /**
              * Handles a keystroke in a menu.
              * @param e  a <code>MenuKeyEvent</code> object
              */
             // @ts-ignore
-            processMenuKeyEvent(e: javax.swing.event.MenuKeyEvent): void
+            public processMenuKeyEvent(e: javax.swing.event.MenuKeyEvent): void
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.
@@ -290,14 +290,14 @@ declare namespace javax {
              * @see MenuSelectionManager#setSelectedPath(MenuElement[])
              */
             // @ts-ignore
-            menuSelectionChanged(isIncluded: boolean): void
+            public menuSelectionChanged(isIncluded: boolean): void
             /**
              * This method returns an array containing the sub-menu
              * components for this menu component.
              * @return an array of <code>MenuElement</code>s
              */
             // @ts-ignore
-            getSubElements(): javax.swing.MenuElement[]
+            public getSubElements(): javax.swing.MenuElement[]
             /**
              * Returns the <code>java.awt.Component</code> used to paint
              * this object. The returned component will be used to convert
@@ -305,19 +305,19 @@ declare namespace javax {
              * @return the <code>Component</code> that paints this menu item
              */
             // @ts-ignore
-            getComponent(): java.awt.Component
+            public getComponent(): java.awt.Component
             /**
              * Adds a <code>MenuDragMouseListener</code> to the menu item.
              * @param l the <code>MenuDragMouseListener</code> to be added
              */
             // @ts-ignore
-            addMenuDragMouseListener(l: javax.swing.event.MenuDragMouseListener): void
+            public addMenuDragMouseListener(l: javax.swing.event.MenuDragMouseListener): void
             /**
              * Removes a <code>MenuDragMouseListener</code> from the menu item.
              * @param l the <code>MenuDragMouseListener</code> to be removed
              */
             // @ts-ignore
-            removeMenuDragMouseListener(l: javax.swing.event.MenuDragMouseListener): void
+            public removeMenuDragMouseListener(l: javax.swing.event.MenuDragMouseListener): void
             /**
              * Returns an array of all the <code>MenuDragMouseListener</code>s added
              * to this JMenuItem with addMenuDragMouseListener().
@@ -326,19 +326,19 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getMenuDragMouseListeners(): javax.swing.event.MenuDragMouseListener[]
+            public getMenuDragMouseListeners(): javax.swing.event.MenuDragMouseListener[]
             /**
              * Adds a <code>MenuKeyListener</code> to the menu item.
              * @param l the <code>MenuKeyListener</code> to be added
              */
             // @ts-ignore
-            addMenuKeyListener(l: javax.swing.event.MenuKeyListener): void
+            public addMenuKeyListener(l: javax.swing.event.MenuKeyListener): void
             /**
              * Removes a <code>MenuKeyListener</code> from the menu item.
              * @param l the <code>MenuKeyListener</code> to be removed
              */
             // @ts-ignore
-            removeMenuKeyListener(l: javax.swing.event.MenuKeyListener): void
+            public removeMenuKeyListener(l: javax.swing.event.MenuKeyListener): void
             /**
              * Returns an array of all the <code>MenuKeyListener</code>s added
              * to this JMenuItem with addMenuKeyListener().
@@ -347,7 +347,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getMenuKeyListeners(): javax.swing.event.MenuKeyListener[]
+            public getMenuKeyListeners(): javax.swing.event.MenuKeyListener[]
             /**
              * Returns a string representation of this <code>JMenuItem</code>.
              * This method is intended to be used only for debugging purposes,
@@ -357,7 +357,7 @@ declare namespace javax {
              * @return a string representation of this <code>JMenuItem</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns the <code>AccessibleContext</code> associated with this
              * <code>JMenuItem</code>. For <code>JMenuItem</code>s,
@@ -368,7 +368,7 @@ declare namespace javax {
              *          <code>AccessibleContext</code> of this <code>JMenuItem</code>
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -62,7 +62,7 @@ declare namespace org {
                                  * @return The entries on the list
                                  */
                                 // @ts-ignore
-                                getEntries(): java.util.Collection<org.spongepowered.api.entity.living.player.tab.TabListEntry>
+                                getEntries(): Array<org.spongepowered.api.entity.living.player.tab.TabListEntry>
                                 /**
                                  * Gets a {@link TabListEntry} matching the specified unique id.
                                  * @param uniqueId The unique id to search for

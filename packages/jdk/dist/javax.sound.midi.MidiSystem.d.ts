@@ -122,7 +122,7 @@ declare namespace javax {
                  *  an array of length 0 is returned.
                  */
                 // @ts-ignore
-                getMidiDeviceInfo(): javax.sound.midi.MidiDevice.Info[]
+                public static getMidiDeviceInfo(): javax.sound.midi.MidiDevice.Info[]
                 /**
                  * Obtains the requested MIDI device.
                  * @param info a device information object representing the desired device.
@@ -134,7 +134,7 @@ declare namespace javax {
                  * @see #getMidiDeviceInfo
                  */
                 // @ts-ignore
-                getMidiDevice(info: javax.sound.midi.MidiDevice.Info): javax.sound.midi.MidiDevice
+                public static getMidiDevice(info: javax.sound.midi.MidiDevice.Info): javax.sound.midi.MidiDevice
                 /**
                  * Obtains a MIDI receiver from an external MIDI port
                  * or other default device.
@@ -168,7 +168,7 @@ declare namespace javax {
                  *          or no device providing receivers is installed in the system
                  */
                 // @ts-ignore
-                getReceiver(): javax.sound.midi.Receiver
+                public static getReceiver(): javax.sound.midi.Receiver
                 /**
                  * Obtains a MIDI transmitter from an external MIDI port
                  * or other default source.
@@ -201,7 +201,7 @@ declare namespace javax {
                  *          or no device providing transmitters is installed in the system
                  */
                 // @ts-ignore
-                getTransmitter(): javax.sound.midi.Transmitter
+                public static getTransmitter(): javax.sound.midi.Transmitter
                 /**
                  * Obtains the default synthesizer.
                  * <p>If the system property
@@ -215,7 +215,7 @@ declare namespace javax {
                  *          or no synthesizer is installed in the system
                  */
                 // @ts-ignore
-                getSynthesizer(): javax.sound.midi.Synthesizer
+                public static getSynthesizer(): javax.sound.midi.Synthesizer
                 /**
                  * Obtains the default <code>Sequencer</code>, connected to
                  * a default device.
@@ -250,7 +250,7 @@ declare namespace javax {
                  * @see #getReceiver
                  */
                 // @ts-ignore
-                getSequencer(): javax.sound.midi.Sequencer
+                public static getSequencer(): javax.sound.midi.Sequencer
                 /**
                  * Obtains the default <code>Sequencer</code>, optionally
                  * connected to a default device.
@@ -293,7 +293,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSequencer(connected: boolean): javax.sound.midi.Sequencer
+                public static getSequencer(connected: boolean): javax.sound.midi.Sequencer
                 /**
                  * Constructs a MIDI sound bank by reading it from the specified stream.
                  * The stream must point to
@@ -313,7 +313,7 @@ declare namespace javax {
                  * @see InputStream#mark
                  */
                 // @ts-ignore
-                getSoundbank(stream: java.io.InputStream): javax.sound.midi.Soundbank
+                public static getSoundbank(stream: java.io.InputStream): javax.sound.midi.Soundbank
                 /**
                  * Constructs a <code>Soundbank</code> by reading it from the specified URL.
                  * The URL must point to a valid MIDI soundbank file.
@@ -324,7 +324,7 @@ declare namespace javax {
                  * @throws IOException if an I/O error occurred when loading the soundbank
                  */
                 // @ts-ignore
-                getSoundbank(url: java.net.URL): javax.sound.midi.Soundbank
+                public static getSoundbank(url: java.net.URL): javax.sound.midi.Soundbank
                 /**
                  * Constructs a <code>Soundbank</code> by reading it from the specified
                  * <code>File</code>.
@@ -336,7 +336,7 @@ declare namespace javax {
                  * @throws IOException if an I/O error occurred when loading the soundbank
                  */
                 // @ts-ignore
-                getSoundbank(file: java.io.File): javax.sound.midi.Soundbank
+                public static getSoundbank(file: java.io.File): javax.sound.midi.Soundbank
                 /**
                  * Obtains the MIDI file format of the data in the specified input stream.
                  * The stream must point to valid MIDI file data for a file type recognized
@@ -369,7 +369,7 @@ declare namespace javax {
                  * @see InputStream#mark
                  */
                 // @ts-ignore
-                getMidiFileFormat(stream: java.io.InputStream): javax.sound.midi.MidiFileFormat
+                public static getMidiFileFormat(stream: java.io.InputStream): javax.sound.midi.MidiFileFormat
                 /**
                  * Obtains the MIDI file format of the data in the specified URL.  The URL
                  * must point to valid MIDI file data for a file type recognized
@@ -391,7 +391,7 @@ declare namespace javax {
                  * @see #getMidiFileFormat(File)
                  */
                 // @ts-ignore
-                getMidiFileFormat(url: java.net.URL): javax.sound.midi.MidiFileFormat
+                public static getMidiFileFormat(url: java.net.URL): javax.sound.midi.MidiFileFormat
                 /**
                  * Obtains the MIDI file format of the specified <code>File</code>.  The
                  * <code>File</code> must point to valid MIDI file data for a file type
@@ -413,7 +413,7 @@ declare namespace javax {
                  * @see #getMidiFileFormat(URL)
                  */
                 // @ts-ignore
-                getMidiFileFormat(file: java.io.File): javax.sound.midi.MidiFileFormat
+                public static getMidiFileFormat(file: java.io.File): javax.sound.midi.MidiFileFormat
                 /**
                  * Obtains a MIDI sequence from the specified input stream.  The stream must
                  * point to valid MIDI file data for a file type recognized
@@ -445,7 +445,7 @@ declare namespace javax {
                  * @see InputStream#mark
                  */
                 // @ts-ignore
-                getSequence(stream: java.io.InputStream): javax.sound.midi.Sequence
+                public static getSequence(stream: java.io.InputStream): javax.sound.midi.Sequence
                 /**
                  * Obtains a MIDI sequence from the specified URL.  The URL must
                  * point to valid MIDI file data for a file type recognized
@@ -466,7 +466,7 @@ declare namespace javax {
                  * @throws IOException if an I/O exception occurs while accessing the URL
                  */
                 // @ts-ignore
-                getSequence(url: java.net.URL): javax.sound.midi.Sequence
+                public static getSequence(url: java.net.URL): javax.sound.midi.Sequence
                 /**
                  * Obtains a MIDI sequence from the specified <code>File</code>.
                  * The <code>File</code> must point to valid MIDI file data
@@ -487,7 +487,7 @@ declare namespace javax {
                  * @throws IOException if an I/O exception occurs
                  */
                 // @ts-ignore
-                getSequence(file: java.io.File): javax.sound.midi.Sequence
+                public static getSequence(file: java.io.File): javax.sound.midi.Sequence
                 /**
                  * Obtains the set of MIDI file types for which file writing support is
                  * provided by the system.
@@ -495,7 +495,7 @@ declare namespace javax {
                  *  an array of length 0 is returned.
                  */
                 // @ts-ignore
-                getMidiFileTypes(): int[]
+                public static getMidiFileTypes(): number /*int*/[]
                 /**
                  * Indicates whether file writing support for the specified MIDI file type
                  * is provided by the system.
@@ -504,7 +504,7 @@ declare namespace javax {
                  *  otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isFileTypeSupported(fileType: number /*int*/): boolean
+                public static isFileTypeSupported(fileType: number /*int*/): boolean
                 /**
                  * Obtains the set of MIDI file types that the system can write from the
                  * sequence specified.
@@ -514,7 +514,7 @@ declare namespace javax {
                  *  returns an array of length 0.
                  */
                 // @ts-ignore
-                getMidiFileTypes(sequence: javax.sound.midi.Sequence): int[]
+                public static getMidiFileTypes(sequence: javax.sound.midi.Sequence): number /*int*/[]
                 /**
                  * Indicates whether a MIDI file of the file type specified can be written
                  * from the sequence indicated.
@@ -525,7 +525,7 @@ declare namespace javax {
                  *  sequence, otherwise <code>false</code>
                  */
                 // @ts-ignore
-                isFileTypeSupported(fileType: number /*int*/, sequence: javax.sound.midi.Sequence): boolean
+                public static isFileTypeSupported(fileType: number /*int*/, sequence: javax.sound.midi.Sequence): boolean
                 /**
                  * Writes a stream of bytes representing a file of the MIDI file type
                  * indicated to the output stream provided.
@@ -540,7 +540,7 @@ declare namespace javax {
                  * @see #getMidiFileTypes(Sequence)
                  */
                 // @ts-ignore
-                write(input: javax.sound.midi.Sequence, fileType: number /*int*/, out: java.io.OutputStream): int
+                public static write(input: javax.sound.midi.Sequence, fileType: number /*int*/, out: java.io.OutputStream): number /*int*/
                 /**
                  * Writes a stream of bytes representing a file of the MIDI file type
                  * indicated to the external file provided.
@@ -555,7 +555,7 @@ declare namespace javax {
                  * @see #getMidiFileTypes(Sequence)
                  */
                 // @ts-ignore
-                write(input: javax.sound.midi.Sequence, type: number /*int*/, out: java.io.File): int
+                public static write(input: javax.sound.midi.Sequence, type: number /*int*/, out: java.io.File): number /*int*/
             }
         }
     }

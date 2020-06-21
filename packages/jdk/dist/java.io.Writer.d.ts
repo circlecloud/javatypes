@@ -19,7 +19,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class Writer extends java.lang.Object implements java.lang.Appendable, java.io.Closeable, java.io.Flushable {
+        abstract class Writer extends java.lang.Object implements java.lang.Appendable, java.io.Closeable, java.io.Flushable {
             /**
              * Creates a new character-stream writer whose critical sections will
              * synchronize on the writer itself.
@@ -33,7 +33,7 @@ declare namespace java {
              *          Object to synchronize on
              */
             // @ts-ignore
-            constructor(lock: any)
+            constructor(lock: java.lang.Object | any)
             /**
              * The object used to synchronize operations on this stream.  For
              * efficiency, a character-stream object may use an object other than
@@ -42,7 +42,7 @@ declare namespace java {
              * method.
              */
             // @ts-ignore
-            lock: any
+            lock: java.lang.Object | any
             /**
              * Writes a single character.  The character to be written is contained in
              * the 16 low-order bits of the given integer value; the 16 high-order bits
@@ -55,7 +55,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Writes an array of characters.
              * @param cbuf
@@ -64,7 +64,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            write(cbuf: string[]): void
+            public write(cbuf: string[]): void
             /**
              * Writes a portion of an array of characters.
              * @param cbuf
@@ -77,7 +77,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            abstract write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public abstract write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Writes a string.
              * @param str
@@ -86,7 +86,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            write(str: string): void
+            public write(str: java.lang.String | string): void
             /**
              * Writes a portion of a string.
              * @param str
@@ -103,7 +103,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            write(str: string, off: number /*int*/, len: number /*int*/): void
+            public write(str: java.lang.String | string, off: number /*int*/, len: number /*int*/): void
             /**
              * Appends the specified character sequence to this writer.
              * <p> An invocation of this method of the form <tt>out.append(csq)</tt>
@@ -125,7 +125,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence): java.io.Writer
+            public append(csq: java.lang.CharSequence): java.io.Writer
             /**
              * Appends a subsequence of the specified character sequence to this writer.
              * <tt>Appendable</tt>.
@@ -154,7 +154,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.Writer
+            public append(csq: java.lang.CharSequence, start: number /*int*/, end: number /*int*/): java.io.Writer
             /**
              * Appends the specified character to this writer.
              * <p> An invocation of this method of the form <tt>out.append(c)</tt>
@@ -169,7 +169,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            append(c: string): java.io.Writer
+            public append(c: string): java.io.Writer
             /**
              * Flushes the stream.  If the stream has saved any characters from the
              * various write() methods in a buffer, write them immediately to their
@@ -185,7 +185,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            abstract flush(): void
+            public abstract flush(): void
             /**
              * Closes the stream, flushing it first. Once the stream has been closed,
              * further write() or flush() invocations will cause an IOException to be
@@ -194,7 +194,7 @@ declare namespace java {
              *           If an I/O error occurs
              */
             // @ts-ignore
-            abstract close(): void
+            public abstract close(): void
         }
     }
 }

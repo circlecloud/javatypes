@@ -24,25 +24,25 @@ declare namespace javax {
              * an array of positional arguments to a script.
              */
             // @ts-ignore
-            
+            readonly ARGV: java.lang.String | string
             /**
              * Reserved key for a named value that is
              * the name of the file being executed.
              */
             // @ts-ignore
-            
+            readonly FILENAME: java.lang.String | string
             /**
              * Reserved key for a named value that is
              * the name of the <code>ScriptEngine</code> implementation.
              */
             // @ts-ignore
-            
+            readonly ENGINE: java.lang.String | string
             /**
              * Reserved key for a named value that identifies
              * the version of the <code>ScriptEngine</code> implementation.
              */
             // @ts-ignore
-            
+            readonly ENGINE_VERSION: java.lang.String | string
             /**
              * Reserved key for a named value that identifies
              * the short name of the scripting language.  The name is used by the
@@ -50,19 +50,19 @@ declare namespace javax {
              * with a given name in the <code>getEngineByName</code> method.
              */
             // @ts-ignore
-            
+            readonly NAME: java.lang.String | string
             /**
              * Reserved key for a named value that is
              * the full name of Scripting Language supported by the implementation.
              */
             // @ts-ignore
-            
+            readonly LANGUAGE: java.lang.String | string
             /**
              * Reserved key for the named value that identifies
              * the version of the scripting language supported by the implementation.
              */
             // @ts-ignore
-            
+            readonly LANGUAGE_VERSION: java.lang.String | string
             /**
              * Causes the immediate execution of the script whose source is the String
              * passed as the first argument.  The script may be reparsed or recompiled before
@@ -83,7 +83,7 @@ declare namespace javax {
              * @throws NullPointerException if either argument is null.
              */
             // @ts-ignore
-            eval(script: string, context: javax.script.ScriptContext): java.lang.Object
+            eval(script: java.lang.String | string, context: javax.script.ScriptContext): any
             /**
              * Same as <code>eval(String, ScriptContext)</code> where the source of the script
              * is read from a <code>Reader</code>.
@@ -94,7 +94,7 @@ declare namespace javax {
              * @throws NullPointerException if either argument is null.
              */
             // @ts-ignore
-            eval(reader: java.io.Reader, context: javax.script.ScriptContext): java.lang.Object
+            eval(reader: java.io.Reader, context: javax.script.ScriptContext): any
             /**
              * Executes the specified script.  The default <code>ScriptContext</code> for the <code>ScriptEngine</code>
              * is used.
@@ -104,7 +104,7 @@ declare namespace javax {
              * @throws NullPointerException if the argument is null.
              */
             // @ts-ignore
-            eval(script: string): java.lang.Object
+            eval(script: java.lang.String | string): any
             /**
              * Same as <code>eval(String)</code> except that the source of the script is
              * provided as a <code>Reader</code>
@@ -114,7 +114,7 @@ declare namespace javax {
              * @throws NullPointerException if the argument is null.
              */
             // @ts-ignore
-            eval(reader: java.io.Reader): java.lang.Object
+            eval(reader: java.io.Reader): any
             /**
              * Executes the script using the <code>Bindings</code> argument as the <code>ENGINE_SCOPE</code>
              * <code>Bindings</code> of the <code>ScriptEngine</code> during the script execution.  The
@@ -129,7 +129,7 @@ declare namespace javax {
              * @throws NullPointerException if either argument is null.
              */
             // @ts-ignore
-            eval(script: string, n: javax.script.Bindings): java.lang.Object
+            eval(script: java.lang.String | string, n: javax.script.Bindings): any
             /**
              * Same as <code>eval(String, Bindings)</code> except that the source of the script
              * is provided as a <code>Reader</code>.
@@ -140,7 +140,7 @@ declare namespace javax {
              * @throws NullPointerException if either argument is null.
              */
             // @ts-ignore
-            eval(reader: java.io.Reader, n: javax.script.Bindings): java.lang.Object
+            eval(reader: java.io.Reader, n: javax.script.Bindings): any
             /**
              * Sets a key/value pair in the state of the ScriptEngine that may either create
              * a Java Language Binding to be used in the execution of scripts or be used in some
@@ -152,7 +152,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty.
              */
             // @ts-ignore
-            put(key: string, value: any): void
+            put(key: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * Retrieves a value set in the state of this engine.  The value might be one
              * which was set using <code>setValue</code> or some other value in the state
@@ -164,7 +164,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty.
              */
             // @ts-ignore
-            get(key: string): java.lang.Object
+            get(key: java.lang.String | string): any
             /**
              * Returns a scope of named values.  The possible scopes are:
              * <br><br>

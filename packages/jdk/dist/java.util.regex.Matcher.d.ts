@@ -66,7 +66,7 @@ declare namespace java {
                  * @return The pattern for which this matcher was created
                  */
                 // @ts-ignore
-                pattern(): java.util.regex.Pattern
+                public pattern(): java.util.regex.Pattern
                 /**
                  * Returns the match state of this matcher as a {@link MatchResult}.
                  * The result is unaffected by subsequent operations performed upon this
@@ -75,7 +75,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                toMatchResult(): java.util.regex.MatchResult
+                public toMatchResult(): java.util.regex.MatchResult
                 /**
                  * Changes the <tt>Pattern</tt> that this <tt>Matcher</tt> uses to
                  * find matches with.
@@ -91,7 +91,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                usePattern(newPattern: java.util.regex.Pattern): java.util.regex.Matcher
+                public usePattern(newPattern: java.util.regex.Pattern): java.util.regex.Matcher
                 /**
                  * Resets this matcher.
                  * <p> Resetting a matcher discards all of its explicit state information
@@ -101,7 +101,7 @@ declare namespace java {
                  * @return This matcher
                  */
                 // @ts-ignore
-                reset(): java.util.regex.Matcher
+                public reset(): java.util.regex.Matcher
                 /**
                  * Resets this matcher with a new input sequence.
                  * <p> Resetting a matcher discards all of its explicit state information
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return This matcher
                  */
                 // @ts-ignore
-                reset(input: java.lang.CharSequence): java.util.regex.Matcher
+                public reset(input: java.lang.CharSequence): java.util.regex.Matcher
                 /**
                  * Returns the start index of the previous match.
                  * @return The index of the first character matched
@@ -123,7 +123,7 @@ declare namespace java {
                  *           or if the previous match operation failed
                  */
                 // @ts-ignore
-                start(): int
+                public start(): number /*int*/
                 /**
                  * Returns the start index of the subsequence captured by the given group
                  * during the previous match operation.
@@ -144,7 +144,7 @@ declare namespace java {
                  *           with the given index
                  */
                 // @ts-ignore
-                start(group: number /*int*/): int
+                public start(group: number /*int*/): number /*int*/
                 /**
                  * Returns the start index of the subsequence captured by the given
                  * <a href="Pattern.html#groupname">named-capturing group</a> during the
@@ -163,7 +163,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                start(name: string): int
+                public start(name: java.lang.String | string): number /*int*/
                 /**
                  * Returns the offset after the last character matched.
                  * @return The offset after the last character matched
@@ -172,7 +172,7 @@ declare namespace java {
                  *           or if the previous match operation failed
                  */
                 // @ts-ignore
-                end(): int
+                public end(): number /*int*/
                 /**
                  * Returns the offset after the last character of the subsequence
                  * captured by the given group during the previous match operation.
@@ -193,7 +193,7 @@ declare namespace java {
                  *           with the given index
                  */
                 // @ts-ignore
-                end(group: number /*int*/): int
+                public end(group: number /*int*/): number /*int*/
                 /**
                  * Returns the offset after the last character of the subsequence
                  * captured by the given <a href="Pattern.html#groupname">named-capturing
@@ -212,7 +212,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                end(name: string): int
+                public end(name: java.lang.String | string): number /*int*/
                 /**
                  * Returns the input subsequence matched by the previous match.
                  * <p> For a matcher <i>m</i> with input sequence <i>s</i>,
@@ -229,7 +229,7 @@ declare namespace java {
                  *           or if the previous match operation failed
                  */
                 // @ts-ignore
-                group(): java.lang.String
+                public group(): string
                 /**
                  * Returns the input subsequence captured by the given group during the
                  * previous match operation.
@@ -259,7 +259,7 @@ declare namespace java {
                  *           with the given index
                  */
                 // @ts-ignore
-                group(group: number /*int*/): java.lang.String
+                public group(group: number /*int*/): string
                 /**
                  * Returns the input subsequence captured by the given
                  * <a href="Pattern.html#groupname">named-capturing group</a> during the previous
@@ -283,7 +283,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                group(name: string): java.lang.String
+                public group(name: java.lang.String | string): string
                 /**
                  * Returns the number of capturing groups in this matcher's pattern.
                  * <p> Group zero denotes the entire pattern by convention. It is not
@@ -294,7 +294,7 @@ declare namespace java {
                  * @return The number of capturing groups in this matcher's pattern
                  */
                 // @ts-ignore
-                groupCount(): int
+                public groupCount(): number /*int*/
                 /**
                  * Attempts to match the entire region against the pattern.
                  * <p> If the match succeeds then more information can be obtained via the
@@ -303,7 +303,7 @@ declare namespace java {
                  *           matches this matcher's pattern
                  */
                 // @ts-ignore
-                matches(): boolean
+                public matches(): boolean
                 /**
                  * Attempts to find the next subsequence of the input sequence that matches
                  * the pattern.
@@ -317,7 +317,7 @@ declare namespace java {
                  *           sequence matches this matcher's pattern
                  */
                 // @ts-ignore
-                find(): boolean
+                public find(): boolean
                 /**
                  * Resets this matcher and then attempts to find the next subsequence of
                  * the input sequence that matches the pattern, starting at the specified
@@ -335,7 +335,7 @@ declare namespace java {
                  *           pattern
                  */
                 // @ts-ignore
-                find(start: number /*int*/): boolean
+                public find(start: number /*int*/): boolean
                 /**
                  * Attempts to match the input sequence, starting at the beginning of the
                  * region, against the pattern.
@@ -348,7 +348,7 @@ declare namespace java {
                  *           sequence matches this matcher's pattern
                  */
                 // @ts-ignore
-                lookingAt(): boolean
+                public lookingAt(): boolean
                 /**
                  * Returns a literal replacement <code>String</code> for the specified
                  * <code>String</code>.
@@ -363,7 +363,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                quoteReplacement(s: string): java.lang.String
+                public static quoteReplacement(s: java.lang.String | string): string
                 /**
                  * Implements a non-terminal append-and-replace step.
                  * <p> This method performs the following actions: </p>
@@ -429,7 +429,7 @@ declare namespace java {
                  *           that does not exist in the pattern
                  */
                 // @ts-ignore
-                appendReplacement(sb: java.lang.StringBuffer, replacement: string): java.util.regex.Matcher
+                public appendReplacement(sb: java.lang.StringBuffer, replacement: java.lang.String | string): java.util.regex.Matcher
                 /**
                  * Implements a terminal append-and-replace step.
                  * <p> This method reads characters from the input sequence, starting at
@@ -442,7 +442,7 @@ declare namespace java {
                  * @return The target string buffer
                  */
                 // @ts-ignore
-                appendTail(sb: java.lang.StringBuffer): java.lang.StringBuffer
+                public appendTail(sb: java.lang.StringBuffer): java.lang.StringBuffer
                 /**
                  * Replaces every subsequence of the input sequence that matches the
                  * pattern with the given replacement string.
@@ -472,7 +472,7 @@ declare namespace java {
                  *           as needed
                  */
                 // @ts-ignore
-                replaceAll(replacement: string): java.lang.String
+                public replaceAll(replacement: java.lang.String | string): string
                 /**
                  * Replaces the first subsequence of the input sequence that matches the
                  * pattern with the given replacement string.
@@ -502,7 +502,7 @@ declare namespace java {
                  *           subsequences as needed
                  */
                 // @ts-ignore
-                replaceFirst(replacement: string): java.lang.String
+                public replaceFirst(replacement: java.lang.String | string): string
                 /**
                  * Sets the limits of this matcher's region. The region is the part of the
                  * input sequence that will be searched to find a match. Invoking this
@@ -527,7 +527,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                region(start: number /*int*/, end: number /*int*/): java.util.regex.Matcher
+                public region(start: number /*int*/, end: number /*int*/): java.util.regex.Matcher
                 /**
                  * Reports the start index of this matcher's region. The
                  * searches this matcher conducts are limited to finding matches
@@ -537,7 +537,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                regionStart(): int
+                public regionStart(): number /*int*/
                 /**
                  * Reports the end index (exclusive) of this matcher's region.
                  * The searches this matcher conducts are limited to finding matches
@@ -547,7 +547,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                regionEnd(): int
+                public regionEnd(): number /*int*/
                 /**
                  * Queries the transparency of region bounds for this matcher.
                  * <p> This method returns <tt>true</tt> if this matcher uses
@@ -562,7 +562,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                hasTransparentBounds(): boolean
+                public hasTransparentBounds(): boolean
                 /**
                  * Sets the transparency of region bounds for this matcher.
                  * <p> Invoking this method with an argument of <tt>true</tt> will set this
@@ -585,7 +585,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                useTransparentBounds(b: boolean): java.util.regex.Matcher
+                public useTransparentBounds(b: boolean): java.util.regex.Matcher
                 /**
                  * Queries the anchoring of region bounds for this matcher.
                  * <p> This method returns <tt>true</tt> if this matcher uses
@@ -599,7 +599,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                hasAnchoringBounds(): boolean
+                public hasAnchoringBounds(): boolean
                 /**
                  * Sets the anchoring of region bounds for this matcher.
                  * <p> Invoking this method with an argument of <tt>true</tt> will set this
@@ -617,7 +617,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                useAnchoringBounds(b: boolean): java.util.regex.Matcher
+                public useAnchoringBounds(b: boolean): java.util.regex.Matcher
                 /**
                  * <p>Returns the string representation of this matcher. The
                  * string representation of a <code>Matcher</code> contains information
@@ -626,7 +626,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * <p>Returns true if the end of input was hit by the search engine in
                  * the last match operation performed by this matcher.
@@ -637,7 +637,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                hitEnd(): boolean
+                public hitEnd(): boolean
                 /**
                  * <p>Returns true if more input could change a positive match into a
                  * negative one.
@@ -651,7 +651,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                requireEnd(): boolean
+                public requireEnd(): boolean
             }
         }
     }

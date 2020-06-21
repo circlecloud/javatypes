@@ -21,7 +21,7 @@ declare namespace org {
                          * @return The formatting character
                          */
                         // @ts-ignore
-                        getCharacter(): char
+                        getCharacter(): string
                         /**
                          * Removes the color codes for this {@link FormattingCodeTextSerializer}
                          * from a string.
@@ -29,7 +29,7 @@ declare namespace org {
                          * @return The stripped text
                          */
                         // @ts-ignore
-                        stripCodes(text: string): java.lang.String
+                        stripCodes(text: java.lang.String | string): string
                         /**
                          * Replaces the formatting codes in the specified string with a different
                          * specified character, e.g. {@code &cHello &eSponge! -> $cHello $eSponge!}
@@ -38,7 +38,7 @@ declare namespace org {
                          * @return The replaced text
                          */
                         // @ts-ignore
-                        replaceCodes(text: string, to: string): java.lang.String
+                        replaceCodes(text: java.lang.String | string, to: string): string
                         /**
                          * Replaces the formatting codes in the specified string with a different
                          * character for the specified {@link FormattingCodeTextSerializer},
@@ -48,7 +48,7 @@ declare namespace org {
                          * @return The replaced text
                          */
                         // @ts-ignore
-                        replaceCodes(text: string, serializer: org.spongepowered.api.text.serializer.FormattingCodeTextSerializer): java.lang.String
+                        replaceCodes(text: java.lang.String | string, serializer: org.spongepowered.api.text.serializer.FormattingCodeTextSerializer): string
                     }
                 }
             }

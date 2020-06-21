@@ -35,7 +35,7 @@ declare namespace javax {
                  *  connection cannot be made because of a communication problem.
                  */
                 // @ts-ignore
-                newJMXConnector(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>): javax.management.remote.JMXConnector
+                newJMXConnector(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>): javax.management.remote.JMXConnector
             }
         }
     }

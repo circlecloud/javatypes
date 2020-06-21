@@ -36,7 +36,7 @@ declare namespace org {
                      * <p>Default is {@code false}.
                      */
                     // @ts-ignore
-                    setLocateExistingServerIfPossible(locateExistingServerIfPossible: boolean): void
+                    public setLocateExistingServerIfPossible(locateExistingServerIfPossible: boolean): void
                     /**
                      * Set the agent id of the {@code MBeanServer} to locate.
                      * <p>Default is none. If specified, this will result in an
@@ -48,7 +48,7 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#findMBeanServer(String)
                      */
                     // @ts-ignore
-                    setAgentId(agentId: string): void
+                    public setAgentId(agentId: java.lang.String | string): void
                     /**
                      * Set the default domain to be used by the {@code MBeanServer},
                      * to be passed to {@code MBeanServerFactory.createMBeanServer()}
@@ -58,7 +58,7 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#findMBeanServer(String)
                      */
                     // @ts-ignore
-                    setDefaultDomain(defaultDomain: string): void
+                    public setDefaultDomain(defaultDomain: java.lang.String | string): void
                     /**
                      * Set whether to register the {@code MBeanServer} with the
                      * {@code MBeanServerFactory}, making it available through
@@ -68,12 +68,12 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#findMBeanServer
                      */
                     // @ts-ignore
-                    setRegisterWithFactory(registerWithFactory: boolean): void
+                    public setRegisterWithFactory(registerWithFactory: boolean): void
                     /**
                      * Creates the {@code MBeanServer} instance.
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Attempt to locate an existing {@code MBeanServer}.
                      * Called if {@code locateExistingServerIfPossible} is set to {@code true}.
@@ -90,7 +90,7 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#findMBeanServer(String)
                      */
                     // @ts-ignore
-                    locateMBeanServer(agentId: string): javax.management.MBeanServer
+                    locateMBeanServer(agentId: java.lang.String | string): javax.management.MBeanServer
                     /**
                      * Create a new {@code MBeanServer} instance and register it with the
                      * {@code MBeanServerFactory}, if desired.
@@ -101,18 +101,18 @@ declare namespace org {
                      * @see javax.management.MBeanServerFactory#newMBeanServer
                      */
                     // @ts-ignore
-                    createMBeanServer(defaultDomain: string, registerWithFactory: boolean): javax.management.MBeanServer
+                    createMBeanServer(defaultDomain: java.lang.String | string, registerWithFactory: boolean): javax.management.MBeanServer
                     // @ts-ignore
-                    getObject(): javax.management.MBeanServer
+                    public getObject(): javax.management.MBeanServer
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends javax.management.MBeanServer>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                     /**
                      * Unregisters the {@code MBeanServer} instance, if necessary.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

@@ -26,13 +26,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(targetValidator: javax.validation.Validator)
                     // @ts-ignore
-                    supports(clazz: java.lang.Class<any>): boolean
+                    public supports(clazz: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    validate(target: any, errors: org.springframework.validation.Errors): void
+                    public validate(target: java.lang.Object | any, errors: org.springframework.validation.Errors): void
                     // @ts-ignore
-                    validate(target: any, errors: org.springframework.validation.Errors, ...validationHints: any[]): void
+                    public validate(target: java.lang.Object | any, errors: org.springframework.validation.Errors, ...validationHints: java.lang.Object[] | any[]): void
                     // @ts-ignore
-                    validateValue(targetType: java.lang.Class<any>, fieldName: string, value: any, errors: org.springframework.validation.Errors, ...validationHints: any[]): void
+                    public validateValue(targetType: java.lang.Class<any>, fieldName: java.lang.String | string, value: java.lang.Object | any, errors: org.springframework.validation.Errors, ...validationHints: java.lang.Object[] | any[]): void
                     /**
                      * Process the given JSR-303 ConstraintViolations, adding corresponding errors to
                      * the provided Spring {@link Errors} object.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @param errors the Spring errors object to register to
                      */
                     // @ts-ignore
-                    processConstraintViolations(violations: Array<<any>>, errors: org.springframework.validation.Errors): void
+                    processConstraintViolations(violations: java.util.Set<object> | Array<object>, errors: org.springframework.validation.Errors): void
                     /**
                      * Determine a field for the given constraint violation.
                      * <p>The default implementation returns the stringified property path.
@@ -51,7 +51,7 @@ declare namespace org {
                      * @see org.springframework.validation.FieldError#getField()
                      */
                     // @ts-ignore
-                    determineField(violation: object): java.lang.String
+                    determineField(violation: object): string
                     /**
                      * Determine a Spring-reported error code for the given constraint descriptor.
                      * <p>The default implementation returns the simple class name of the descriptor's
@@ -65,7 +65,7 @@ declare namespace org {
                      * @see org.springframework.validation.MessageCodesResolver
                      */
                     // @ts-ignore
-                    determineErrorCode(descriptor: object): java.lang.String
+                    determineErrorCode(descriptor: object): string
                     /**
                      * Return FieldError arguments for a validation error on the given field.
                      * Invoked for each violated constraint.
@@ -83,7 +83,7 @@ declare namespace org {
                      * @see org.springframework.validation.DefaultBindingErrorProcessor#getArgumentsForBindError
                      */
                     // @ts-ignore
-                    getArgumentsForConstraint(objectName: string, field: string, descriptor: object): java.lang.Object[]
+                    getArgumentsForConstraint(objectName: java.lang.String | string, field: java.lang.String | string, descriptor: object): any[]
                     /**
                      * Build a resolvable wrapper for the specified field, allowing to resolve the field's
                      * name in a {@code MessageSource}.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @see #getArgumentsForConstraint
                      */
                     // @ts-ignore
-                    getResolvableField(objectName: string, field: string): org.springframework.context.MessageSourceResolvable
+                    getResolvableField(objectName: java.lang.String | string, field: java.lang.String | string): org.springframework.context.MessageSourceResolvable
                     /**
                      * Extract the rejected value behind the given constraint violation,
                      * for exposure through the Spring errors representation.
@@ -111,7 +111,7 @@ declare namespace org {
                      * @see org.springframework.validation.FieldError#getRejectedValue()
                      */
                     // @ts-ignore
-                    getRejectedValue(field: string, violation: object, bindingResult: org.springframework.validation.BindingResult): java.lang.Object
+                    getRejectedValue(field: java.lang.String | string, violation: object, bindingResult: org.springframework.validation.BindingResult): any
                     /**
                      * Indicate whether this violation's interpolated message has remaining
                      * placeholders and therefore requires {@link java.text.MessageFormat}
@@ -134,17 +134,17 @@ declare namespace org {
                     // @ts-ignore
                     requiresMessageFormat(violation: object): boolean
                     // @ts-ignore
-                    validate<T>(object: T, ...groups: java.lang.Class[]): java.util.Set<<any>>
+                    public validate<T>(object: T, ...groups: java.lang.Class<any>[]): Array<object>
                     // @ts-ignore
-                    validateProperty<T>(object: T, propertyName: string, ...groups: java.lang.Class[]): java.util.Set<<any>>
+                    public validateProperty<T>(object: T, propertyName: java.lang.String | string, ...groups: java.lang.Class<any>[]): Array<object>
                     // @ts-ignore
-                    validateValue<T>(beanType: java.lang.Class<T>, propertyName: string, value: any, ...groups: java.lang.Class[]): java.util.Set<<any>>
+                    public validateValue<T>(beanType: java.lang.Class<T>, propertyName: java.lang.String | string, value: java.lang.Object | any, ...groups: java.lang.Class<any>[]): Array<object>
                     // @ts-ignore
-                    getConstraintsForClass(clazz: java.lang.Class<any>): BeanDescriptor
+                    public getConstraintsForClass(clazz: java.lang.Class<any>): BeanDescriptor
                     // @ts-ignore
-                    unwrap<T>(type: java.lang.Class<T>): T
+                    public unwrap<T>(type: java.lang.Class<T>): T
                     // @ts-ignore
-                    forExecutables(): ExecutableValidator
+                    public forExecutables(): ExecutableValidator
                 }
             }
         }

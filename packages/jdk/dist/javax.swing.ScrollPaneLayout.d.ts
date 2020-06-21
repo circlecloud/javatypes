@@ -117,7 +117,7 @@ declare namespace javax {
              * </pre>
              */
             // @ts-ignore
-            syncWithScrollPane(sp: javax.swing.JScrollPane): void
+            public syncWithScrollPane(sp: javax.swing.JScrollPane): void
             /**
              * Removes an existing component.  When a new component, such as
              * the left corner, or vertical scrollbar, is added, the old one,
@@ -151,20 +151,20 @@ declare namespace javax {
              * @exception IllegalArgumentException if <code>s</code> is an invalid key
              */
             // @ts-ignore
-            addLayoutComponent(s: string, c: java.awt.Component): void
+            public addLayoutComponent(s: java.lang.String | string, c: java.awt.Component): void
             /**
              * Removes the specified component from the layout.
              * @param c the component to remove
              */
             // @ts-ignore
-            removeLayoutComponent(c: java.awt.Component): void
+            public removeLayoutComponent(c: java.awt.Component): void
             /**
              * Returns the vertical scrollbar-display policy.
              * @return an integer giving the display policy
              * @see #setVerticalScrollBarPolicy
              */
             // @ts-ignore
-            getVerticalScrollBarPolicy(): int
+            public getVerticalScrollBarPolicy(): number /*int*/
             /**
              * Sets the vertical scrollbar-display policy. The options
              * are:
@@ -181,14 +181,14 @@ declare namespace javax {
              *           vertical scroll bar policy, as listed above
              */
             // @ts-ignore
-            setVerticalScrollBarPolicy(x: number /*int*/): void
+            public setVerticalScrollBarPolicy(x: number /*int*/): void
             /**
              * Returns the horizontal scrollbar-display policy.
              * @return an integer giving the display policy
              * @see #setHorizontalScrollBarPolicy
              */
             // @ts-ignore
-            getHorizontalScrollBarPolicy(): int
+            public getHorizontalScrollBarPolicy(): number /*int*/
             /**
              * Sets the horizontal scrollbar-display policy.
              * The options are:<ul>
@@ -204,7 +204,7 @@ declare namespace javax {
              *           horizontal scrollbar policy, as listed above
              */
             // @ts-ignore
-            setHorizontalScrollBarPolicy(x: number /*int*/): void
+            public setHorizontalScrollBarPolicy(x: number /*int*/): void
             /**
              * Returns the <code>JViewport</code> object that displays the
              * scrollable contents.
@@ -212,35 +212,35 @@ declare namespace javax {
              * @see JScrollPane#getViewport
              */
             // @ts-ignore
-            getViewport(): javax.swing.JViewport
+            public getViewport(): javax.swing.JViewport
             /**
              * Returns the <code>JScrollBar</code> object that handles horizontal scrolling.
              * @return the <code>JScrollBar</code> object that handles horizontal scrolling
              * @see JScrollPane#getHorizontalScrollBar
              */
             // @ts-ignore
-            getHorizontalScrollBar(): javax.swing.JScrollBar
+            public getHorizontalScrollBar(): javax.swing.JScrollBar
             /**
              * Returns the <code>JScrollBar</code> object that handles vertical scrolling.
              * @return the <code>JScrollBar</code> object that handles vertical scrolling
              * @see JScrollPane#getVerticalScrollBar
              */
             // @ts-ignore
-            getVerticalScrollBar(): javax.swing.JScrollBar
+            public getVerticalScrollBar(): javax.swing.JScrollBar
             /**
              * Returns the <code>JViewport</code> object that is the row header.
              * @return the <code>JViewport</code> object that is the row header
              * @see JScrollPane#getRowHeader
              */
             // @ts-ignore
-            getRowHeader(): javax.swing.JViewport
+            public getRowHeader(): javax.swing.JViewport
             /**
              * Returns the <code>JViewport</code> object that is the column header.
              * @return the <code>JViewport</code> object that is the column header
              * @see JScrollPane#getColumnHeader
              */
             // @ts-ignore
-            getColumnHeader(): javax.swing.JViewport
+            public getColumnHeader(): javax.swing.JViewport
             /**
              * Returns the <code>Component</code> at the specified corner.
              * @param key the <code>String</code> specifying the corner
@@ -250,7 +250,7 @@ declare namespace javax {
              * @see JScrollPane#getCorner
              */
             // @ts-ignore
-            getCorner(key: string): java.awt.Component
+            public getCorner(key: java.lang.String | string): java.awt.Component
             /**
              * The preferred size of a <code>ScrollPane</code> is the size of the insets,
              * plus the preferred size of the viewport, plus the preferred size of
@@ -266,7 +266,7 @@ declare namespace javax {
              * @see LayoutManager
              */
             // @ts-ignore
-            preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * The minimum size of a <code>ScrollPane</code> is the size of the insets
              * plus minimum size of the viewport, plus the scrollpane's
@@ -277,7 +277,7 @@ declare namespace javax {
              * @return a <code>Dimension</code> object specifying the minimum size
              */
             // @ts-ignore
-            minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Lays out the scrollpane. The positioning of components depends on
              * the following constraints:
@@ -305,7 +305,7 @@ declare namespace javax {
              * @param parent the <code>Container</code> to lay out
              */
             // @ts-ignore
-            layoutContainer(parent: java.awt.Container): void
+            public layoutContainer(parent: java.awt.Container): void
             /**
              * Returns the bounds of the border around the specified scroll pane's
              * viewport.
@@ -314,7 +314,7 @@ declare namespace javax {
              *     replaced by <code>JScrollPane.getViewportBorderBounds()</code>.
              */
             // @ts-ignore
-            getViewportBorderBounds(scrollpane: javax.swing.JScrollPane): java.awt.Rectangle
+            public getViewportBorderBounds(scrollpane: javax.swing.JScrollPane): java.awt.Rectangle
         }
     }
 }

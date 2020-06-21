@@ -55,7 +55,7 @@ declare namespace javax {
                      * of an element.
                      */
                     // @ts-ignore
-                    readonly StartTagType: number /*short*/
+                    public static readonly StartTagType: number /*short*/
                     /**
                      * A possible value for getType.  This specifies
                      * that this record type is a end tag and
@@ -63,27 +63,27 @@ declare namespace javax {
                      * of an element.
                      */
                     // @ts-ignore
-                    readonly EndTagType: number /*short*/
+                    public static readonly EndTagType: number /*short*/
                     /**
                      * A possible value for getType.  This specifies
                      * that this record type represents content.
                      */
                     // @ts-ignore
-                    readonly ContentType: number /*short*/
+                    public static readonly ContentType: number /*short*/
                     /**
                      * A possible value for getDirection.  This specifies
                      * that the data associated with this record should
                      * be joined to what precedes it.
                      */
                     // @ts-ignore
-                    readonly JoinPreviousDirection: number /*short*/
+                    public static readonly JoinPreviousDirection: number /*short*/
                     /**
                      * A possible value for getDirection.  This specifies
                      * that the data associated with this record should
                      * be joined to what follows it.
                      */
                     // @ts-ignore
-                    readonly JoinNextDirection: number /*short*/
+                    public static readonly JoinNextDirection: number /*short*/
                     /**
                      * A possible value for getDirection.  This specifies
                      * that the data associated with this record should
@@ -91,71 +91,71 @@ declare namespace javax {
                      * the normal value.
                      */
                     // @ts-ignore
-                    readonly OriginateDirection: number /*short*/
+                    public static readonly OriginateDirection: number /*short*/
                     /**
                      * A possible value for getDirection.  This specifies
                      * that the data associated with this record should
                      * be joined to the fractured element.
                      */
                     // @ts-ignore
-                    readonly JoinFractureDirection: number /*short*/
+                    public static readonly JoinFractureDirection: number /*short*/
                     /**
                      * Sets the element type.
                      * @param type the type of the element (StartTagType, EndTagType,
                      *   ContentType)
                      */
                     // @ts-ignore
-                    setType(type: number /*short*/): void
+                    public setType(type: number /*short*/): void
                     /**
                      * Gets the element type.
                      * @return the type of the element (StartTagType, EndTagType,
                      *   ContentType)
                      */
                     // @ts-ignore
-                    getType(): short
+                    public getType(): number /*short*/
                     /**
                      * Sets the direction.
                      * @param direction the direction (JoinPreviousDirection,
                      *    JoinNextDirection)
                      */
                     // @ts-ignore
-                    setDirection(direction: number /*short*/): void
+                    public setDirection(direction: number /*short*/): void
                     /**
                      * Gets the direction.
                      * @return the direction (JoinPreviousDirection, JoinNextDirection)
                      */
                     // @ts-ignore
-                    getDirection(): short
+                    public getDirection(): number /*short*/
                     /**
                      * Gets the element attributes.
                      * @return the attribute set
                      */
                     // @ts-ignore
-                    getAttributes(): javax.swing.text.AttributeSet
+                    public getAttributes(): javax.swing.text.AttributeSet
                     /**
                      * Gets the array of characters.
                      * @return the array
                      */
                     // @ts-ignore
-                    getArray(): char[]
+                    public getArray(): string[]
                     /**
                      * Gets the starting offset.
                      * @return the offset &gt;= 0
                      */
                     // @ts-ignore
-                    getOffset(): int
+                    public getOffset(): number /*int*/
                     /**
                      * Gets the length.
                      * @return the length &gt;= 0
                      */
                     // @ts-ignore
-                    getLength(): int
+                    public getLength(): number /*int*/
                     /**
                      * Converts the element to a string.
                      * @return the string
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

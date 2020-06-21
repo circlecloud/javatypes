@@ -26,9 +26,9 @@ declare namespace org {
                          * @see MetadataNamingStrategy#setDefaultDomain
                          */
                         // @ts-ignore
-                        setDefaultDomain(defaultDomain: string): void
+                        public setDefaultDomain(defaultDomain: java.lang.String | string): void
                         // @ts-ignore
-                        setBeanFactory(beanFactory: BeanFactory): void
+                        public setBeanFactory(beanFactory: BeanFactory): void
                     }
                 }
             }

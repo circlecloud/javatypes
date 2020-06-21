@@ -43,7 +43,7 @@ declare namespace javax {
                  * is required to be a leaf node.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_EMPTY: number /*int*/
                 /**
                  * A constant returned by <code>getChildPolicy</code> to indicate
                  * that an element must have a single instance of each of its
@@ -51,7 +51,7 @@ declare namespace javax {
                  * the element are defined by a sequence <code>a,b,c,d,...</code>.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_ALL: number /*int*/
                 /**
                  * A constant returned by <code>getChildPolicy</code> to indicate
                  * that an element must have zero or one instance of each of its
@@ -60,7 +60,7 @@ declare namespace javax {
                  * <code>a?,b?,c?,d?,...</code>.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_SOME: number /*int*/
                 /**
                  * A constant returned by <code>getChildPolicy</code> to indicate
                  * that an element must have zero or one children, selected from
@@ -69,7 +69,7 @@ declare namespace javax {
                  * <code>a|b|c|d|...</code>.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_CHOICE: number /*int*/
                 /**
                  * A constant returned by <code>getChildPolicy</code> to indicate
                  * that an element must have a sequence of instances of any of its
@@ -77,7 +77,7 @@ declare namespace javax {
                  * element are defined by a sequence <code>(a|b|c|d|...)*</code>.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_SEQUENCE: number /*int*/
                 /**
                  * A constant returned by <code>getChildPolicy</code> to indicate
                  * that an element must have zero or more instances of its unique
@@ -85,26 +85,26 @@ declare namespace javax {
                  * are defined by a starred expression <code>a*</code>.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_REPEAT: number /*int*/
                 /**
                  * The largest valid <code>CHILD_POLICY_*</code> constant,
                  * to be used for range checks.
                  */
                 // @ts-ignore
-                
+                readonly CHILD_POLICY_MAX: number /*int*/
                 /**
                  * A constant returned by <code>getObjectValueType</code> to
                  * indicate the absence of a user object.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_NONE: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
                  * or user object may be set a single, arbitrary value.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_ARBITRARY: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
@@ -115,7 +115,7 @@ declare namespace javax {
                  * @see #VALUE_RANGE_MIN_MAX_INCLUSIVE
                  */
                 // @ts-ignore
-                
+                readonly VALUE_RANGE: number /*int*/
                 /**
                  * A value that may be or'ed with <code>VALUE_RANGE</code> to
                  * obtain <code>VALUE_RANGE_MIN_INCLUSIVE</code>, and with
@@ -127,7 +127,7 @@ declare namespace javax {
                  * value of the range is inclusive.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_RANGE_MIN_INCLUSIVE_MASK: number /*int*/
                 /**
                  * A value that may be or'ed with <code>VALUE_RANGE</code> to
                  * obtain <code>VALUE_RANGE_MAX_INCLUSIVE</code>, and with
@@ -139,7 +139,7 @@ declare namespace javax {
                  * value of the range is inclusive.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_RANGE_MAX_INCLUSIVE_MASK: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
@@ -147,7 +147,7 @@ declare namespace javax {
                  * (but not the maximum) value of the range is inclusive.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_RANGE_MIN_INCLUSIVE: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
@@ -155,7 +155,7 @@ declare namespace javax {
                  * (but not the minimum) value of the range is inclusive.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_RANGE_MAX_INCLUSIVE: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
@@ -165,7 +165,7 @@ declare namespace javax {
                  * and that exclusive ranges be used only for floating-point data.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_RANGE_MIN_MAX_INCLUSIVE: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
@@ -177,7 +177,7 @@ declare namespace javax {
                  * should be marked as enumerations.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_ENUMERATION: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeValueType</code> and
                  * <code>getObjectValueType</code> to indicate that the attribute
@@ -187,14 +187,14 @@ declare namespace javax {
                  * objects, an array will be used.
                  */
                 // @ts-ignore
-                
+                readonly VALUE_LIST: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeDataType</code>
                  * indicating that the value of an attribute is a general Unicode
                  * string.
                  */
                 // @ts-ignore
-                
+                readonly DATATYPE_STRING: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeDataType</code>
                  * indicating that the value of an attribute is one of the boolean
@@ -205,21 +205,21 @@ declare namespace javax {
                  * recognise lower or mixed case equivalents.
                  */
                 // @ts-ignore
-                
+                readonly DATATYPE_BOOLEAN: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeDataType</code>
                  * indicating that the value of an attribute is a string
                  * representation of an integer.
                  */
                 // @ts-ignore
-                
+                readonly DATATYPE_INTEGER: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeDataType</code>
                  * indicating that the value of an attribute is a string
                  * representation of a decimal floating-point number.
                  */
                 // @ts-ignore
-                
+                readonly DATATYPE_FLOAT: number /*int*/
                 /**
                  * A constant returned by <code>getAttributeDataType</code>
                  * indicating that the value of an attribute is a string
@@ -227,13 +227,13 @@ declare namespace javax {
                  * number.
                  */
                 // @ts-ignore
-                
+                readonly DATATYPE_DOUBLE: number /*int*/
                 /**
                  * Returns the name of the root element of the format.
                  * @return a <code>String</code>.
                  */
                 // @ts-ignore
-                getRootName(): java.lang.String
+                getRootName(): string
                 /**
                  * Returns <code>true</code> if the element (and the subtree below
                  * it) is allowed to appear in a metadata document for an image of
@@ -249,7 +249,7 @@ declare namespace javax {
                  *  of the given type.
                  */
                 // @ts-ignore
-                canNodeAppear(elementName: string, imageType: javax.imageio.ImageTypeSpecifier): boolean
+                canNodeAppear(elementName: java.lang.String | string, imageType: javax.imageio.ImageTypeSpecifier): boolean
                 /**
                  * Returns the minimum number of children of the named element
                  * with child policy <code>CHILD_POLICY_REPEAT</code>.  For
@@ -265,7 +265,7 @@ declare namespace javax {
                  *  not have a child policy of <code>CHILD_POLICY_REPEAT</code>.
                  */
                 // @ts-ignore
-                getElementMinChildren(elementName: string): int
+                getElementMinChildren(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns the maximum number of children of the named element
                  * with child policy <code>CHILD_POLICY_REPEAT</code>.  For
@@ -282,7 +282,7 @@ declare namespace javax {
                  *  not have a child policy of <code>CHILD_POLICY_REPEAT</code>.
                  */
                 // @ts-ignore
-                getElementMaxChildren(elementName: string): int
+                getElementMaxChildren(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns a <code>String</code> containing a description of the
                  * named element, or <code>null</code>.  The description will be
@@ -298,7 +298,7 @@ declare namespace javax {
                  *  is <code>null</code>, or is not a legal element name for this format.
                  */
                 // @ts-ignore
-                getElementDescription(elementName: string, locale: java.util.Locale): java.lang.String
+                getElementDescription(elementName: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Returns one of the constants starting with
                  * <code>CHILD_POLICY_</code>, indicating the legal pattern of
@@ -310,7 +310,7 @@ declare namespace javax {
                  *  format.
                  */
                 // @ts-ignore
-                getChildPolicy(elementName: string): int
+                getChildPolicy(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns an array of <code>String</code>s indicating the names
                  * of the element which are allowed to be children of the named
@@ -323,7 +323,7 @@ declare namespace javax {
                  *  format.
                  */
                 // @ts-ignore
-                getChildNames(elementName: string): java.lang.String[]
+                getChildNames(elementName: java.lang.String | string): string[]
                 /**
                  * Returns an array of <code>String</code>s listing the names of
                  * the attributes that may be associated with the named element.
@@ -334,7 +334,7 @@ declare namespace javax {
                  *  format.
                  */
                 // @ts-ignore
-                getAttributeNames(elementName: string): java.lang.String[]
+                getAttributeNames(elementName: java.lang.String | string): string[]
                 /**
                  * Returns one of the constants starting with <code>VALUE_</code>,
                  * indicating whether the values of the given attribute within the
@@ -352,7 +352,7 @@ declare namespace javax {
                  *  element.
                  */
                 // @ts-ignore
-                getAttributeValueType(elementName: string, attrName: string): int
+                getAttributeValueType(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 /**
                  * Returns one of the constants starting with
                  * <code>DATATYPE_</code>, indicating the format and
@@ -371,7 +371,7 @@ declare namespace javax {
                  *  element.
                  */
                 // @ts-ignore
-                getAttributeDataType(elementName: string, attrName: string): int
+                getAttributeDataType(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 /**
                  * Returns <code>true</code> if the named attribute must be
                  * present within the named element.
@@ -386,7 +386,7 @@ declare namespace javax {
                  *  element.
                  */
                 // @ts-ignore
-                isAttributeRequired(elementName: string, attrName: string): boolean
+                isAttributeRequired(elementName: java.lang.String | string, attrName: java.lang.String | string): boolean
                 /**
                  * Returns the default value of the named attribute, if it is not
                  * explicitly present within the named element, as a
@@ -404,7 +404,7 @@ declare namespace javax {
                  *  element.
                  */
                 // @ts-ignore
-                getAttributeDefaultValue(elementName: string, attrName: string): java.lang.String
+                getAttributeDefaultValue(elementName: java.lang.String | string, attrName: java.lang.String | string): string
                 /**
                  * Returns an array of <code>String</code>s containing the legal
                  * enumerated values for the given attribute within the named
@@ -424,7 +424,7 @@ declare namespace javax {
                  *  not defined as an enumeration.
                  */
                 // @ts-ignore
-                getAttributeEnumerations(elementName: string, attrName: string): java.lang.String[]
+                getAttributeEnumerations(elementName: java.lang.String | string, attrName: java.lang.String | string): string[]
                 /**
                  * Returns the minimum legal value for the attribute.  Whether
                  * this value is inclusive or exclusive may be determined by the
@@ -448,7 +448,7 @@ declare namespace javax {
                  *  not defined as a range.
                  */
                 // @ts-ignore
-                getAttributeMinValue(elementName: string, attrName: string): java.lang.String
+                getAttributeMinValue(elementName: java.lang.String | string, attrName: java.lang.String | string): string
                 /**
                  * Returns the maximum legal value for the attribute.  Whether
                  * this value is inclusive or exclusive may be determined by the
@@ -473,7 +473,7 @@ declare namespace javax {
                  *  not defined as a range.
                  */
                 // @ts-ignore
-                getAttributeMaxValue(elementName: string, attrName: string): java.lang.String
+                getAttributeMaxValue(elementName: java.lang.String | string, attrName: java.lang.String | string): string
                 /**
                  * Returns the minimum number of list items that may be used to
                  * define this attribute.  The attribute itself is defined as a
@@ -495,7 +495,7 @@ declare namespace javax {
                  *  not defined as a list.
                  */
                 // @ts-ignore
-                getAttributeListMinLength(elementName: string, attrName: string): int
+                getAttributeListMinLength(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 /**
                  * Returns the maximum number of list items that may be used to
                  * define this attribute.  A value of
@@ -519,7 +519,7 @@ declare namespace javax {
                  *  not defined as a list.
                  */
                 // @ts-ignore
-                getAttributeListMaxLength(elementName: string, attrName: string): int
+                getAttributeListMaxLength(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 /**
                  * Returns a <code>String</code> containing a description of the
                  * named attribute, or <code>null</code>.  The description will be
@@ -539,7 +539,7 @@ declare namespace javax {
                  *  element.
                  */
                 // @ts-ignore
-                getAttributeDescription(elementName: string, attrName: string, locale: java.util.Locale): java.lang.String
+                getAttributeDescription(elementName: java.lang.String | string, attrName: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Returns one of the enumerated values starting with
                  * <code>VALUE_</code>, indicating the type of values
@@ -558,7 +558,7 @@ declare namespace javax {
                  * @see Comparable
                  */
                 // @ts-ignore
-                getObjectValueType(elementName: string): int
+                getObjectValueType(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns the <code>Class</code> type of the <code>Object</code>
                  * reference stored within the element.  If this element may not
@@ -580,7 +580,7 @@ declare namespace javax {
                  *  <code>getObjectValueType(elementName) == VALUE_NONE</code>).
                  */
                 // @ts-ignore
-                getObjectClass(elementName: string): java.lang.Class<?>
+                getObjectClass(elementName: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Returns an <code>Object</code>s containing the default
                  * value for the <code>Object</code> reference within
@@ -595,7 +595,7 @@ declare namespace javax {
                  *  <code>getObjectValueType(elementName) == VALUE_NONE</code>).
                  */
                 // @ts-ignore
-                getObjectDefaultValue(elementName: string): java.lang.Object
+                getObjectDefaultValue(elementName: java.lang.String | string): any
                 /**
                  * Returns an array of <code>Object</code>s containing the legal
                  * enumerated values for the <code>Object</code> reference within
@@ -618,7 +618,7 @@ declare namespace javax {
                  *  is not defined as an enumeration.
                  */
                 // @ts-ignore
-                getObjectEnumerations(elementName: string): java.lang.Object[]
+                getObjectEnumerations(elementName: java.lang.String | string): any[]
                 /**
                  * Returns the minimum legal value for the <code>Object</code>
                  * reference within the named element.  Whether this value is
@@ -638,7 +638,7 @@ declare namespace javax {
                  *  is not defined as a range.
                  */
                 // @ts-ignore
-                getObjectMinValue(elementName: string): java.lang.Comparable<?>
+                getObjectMinValue(elementName: java.lang.String | string): java.lang.Comparable<any>
                 /**
                  * Returns the maximum legal value for the <code>Object</code>
                  * reference within the named element.  Whether this value is
@@ -658,7 +658,7 @@ declare namespace javax {
                  *  is not defined as a range.
                  */
                 // @ts-ignore
-                getObjectMaxValue(elementName: string): java.lang.Comparable<?>
+                getObjectMaxValue(elementName: java.lang.String | string): java.lang.Comparable<any>
                 /**
                  * Returns the minimum number of array elements that may be used
                  * to define the <code>Object</code> reference within the named
@@ -678,7 +678,7 @@ declare namespace javax {
                  *  an array.
                  */
                 // @ts-ignore
-                getObjectArrayMinLength(elementName: string): int
+                getObjectArrayMinLength(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns the maximum number of array elements that may be used
                  * to define the <code>Object</code> reference within the named
@@ -699,7 +699,7 @@ declare namespace javax {
                  *  an array.
                  */
                 // @ts-ignore
-                getObjectArrayMaxLength(elementName: string): int
+                getObjectArrayMaxLength(elementName: java.lang.String | string): number /*int*/
             }
         }
     }

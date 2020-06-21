@@ -156,7 +156,7 @@ declare namespace javax {
                  * @return the size of the buffer in bytes
                  */
                 // @ts-ignore
-                getBufferSize(): int
+                getBufferSize(): number /*int*/
                 /**
                  * Obtains the number of bytes of data currently available to the
                  * application for processing in the data line's internal buffer.  For a
@@ -176,7 +176,7 @@ declare namespace javax {
                  * @return the amount of data available, in bytes
                  */
                 // @ts-ignore
-                available(): int
+                available(): number /*int*/
                 /**
                  * Obtains the current position in the audio data, in sample frames.
                  * The frame position measures the number of sample
@@ -187,7 +187,7 @@ declare namespace javax {
                  * @see #getLongFramePosition()
                  */
                 // @ts-ignore
-                getFramePosition(): int
+                getFramePosition(): number /*int*/
                 /**
                  * Obtains the current position in the audio data, in sample frames.
                  * The frame position measures the number of sample
@@ -196,7 +196,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLongFramePosition(): long
+                getLongFramePosition(): number /*long*/
                 /**
                  * Obtains the current position in the audio data, in microseconds.
                  * The microsecond position measures the time corresponding to the number
@@ -208,7 +208,7 @@ declare namespace javax {
                  * @return the number of microseconds of data processed since the line was opened
                  */
                 // @ts-ignore
-                getMicrosecondPosition(): long
+                getMicrosecondPosition(): number /*long*/
                 /**
                  * Obtains the current volume level for the line.  This level is a measure
                  * of the signal's current amplitude, and should not be confused with the
@@ -219,7 +219,7 @@ declare namespace javax {
                  *  <code>{#link AudioSystem#NOT_SPECIFIED}</code>
                  */
                 // @ts-ignore
-                getLevel(): float
+                getLevel(): number /*float*/
             }
         }
     }

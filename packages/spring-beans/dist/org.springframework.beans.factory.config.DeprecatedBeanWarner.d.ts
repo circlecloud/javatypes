@@ -27,9 +27,9 @@ declare namespace org {
                          * @see java.util.logging.Logger#getLogger(String)
                          */
                         // @ts-ignore
-                        setLoggerName(loggerName: string): void
+                        public setLoggerName(loggerName: java.lang.String | string): void
                         // @ts-ignore
-                        postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
+                        public postProcessBeanFactory(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory): void
                         /**
                          * Logs a warning for a bean annotated with {@link Deprecated @Deprecated}.
                          * @param beanName the name of the deprecated bean
@@ -37,14 +37,14 @@ declare namespace org {
                          * @param beanDefinition the definition of the deprecated bean
                          */
                         // @ts-ignore
-                        logDeprecatedBean(beanName: string, beanType: java.lang.Class<any>, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
+                        logDeprecatedBean(beanName: java.lang.String | string, beanType: java.lang.Class<any>, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
                         /**
                          * Actually write to the underlying log.
                          * <p>The default implementations logs the message at "warn" level.
                          * @param message the message to write
                          */
                         // @ts-ignore
-                        writeToLog(message: string): void
+                        writeToLog(message: java.lang.String | string): void
                         /**
                          * Determine whether the {@link #logger} field is enabled.
                          * <p>Default is {@code true} when the "warn" level is enabled.

@@ -12,14 +12,14 @@ declare namespace org {
                      * @return The catalog type, if available
                      */
                     // @ts-ignore
-                    getById(id: string): java.util.Optional<T>
+                    getById(id: java.lang.String | string): java.util.Optional<T>
                     /**
                      * Gets all registered {@link CatalogType}s registered in this
                      * {@link RegistryModule}.
                      * @return All catalog types registered in this module
                      */
                     // @ts-ignore
-                    getAll(): java.util.Collection<T>
+                    getAll(): Array<T>
                 }
             }
         }

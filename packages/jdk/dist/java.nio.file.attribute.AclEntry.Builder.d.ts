@@ -23,21 +23,21 @@ declare namespace java {
                          *           if the type or who component have not been set
                          */
                         // @ts-ignore
-                        build(): java.nio.file.attribute.AclEntry
+                        public build(): java.nio.file.attribute.AclEntry
                         /**
                          * Sets the type component of this builder.
                          * @param type  the component type
                          * @return this builder
                          */
                         // @ts-ignore
-                        setType(type: java.nio.file.attribute.AclEntryType): java.nio.file.attribute.AclEntry.Builder
+                        public setType(type: java.nio.file.attribute.AclEntryType): java.nio.file.attribute.AclEntry.Builder
                         /**
                          * Sets the principal component of this builder.
                          * @param who  the principal component
                          * @return this builder
                          */
                         // @ts-ignore
-                        setPrincipal(who: java.nio.file.attribute.UserPrincipal): java.nio.file.attribute.AclEntry.Builder
+                        public setPrincipal(who: java.nio.file.attribute.UserPrincipal): java.nio.file.attribute.AclEntry.Builder
                         /**
                          * Sets the permissions component of this builder. On return, the
                          * permissions component of this builder is a copy of the given set.
@@ -48,7 +48,7 @@ declare namespace java {
                          *           AclEntryPermission}
                          */
                         // @ts-ignore
-                        setPermissions(perms: Array<java.nio.file.attribute.AclEntryPermission>): java.nio.file.attribute.AclEntry.Builder
+                        public setPermissions(perms: java.util.Set<java.nio.file.attribute.AclEntryPermission> | Array<java.nio.file.attribute.AclEntryPermission>): java.nio.file.attribute.AclEntry.Builder
                         /**
                          * Sets the permissions component of this builder. On return, the
                          * permissions component of this builder is a copy of the permissions in
@@ -57,7 +57,7 @@ declare namespace java {
                          * @return this builder
                          */
                         // @ts-ignore
-                        setPermissions(...perms: java.nio.file.attribute.AclEntryPermission[]): java.nio.file.attribute.AclEntry.Builder
+                        public setPermissions(...perms: java.nio.file.attribute.AclEntryPermission[]): java.nio.file.attribute.AclEntry.Builder
                         /**
                          * Sets the flags component of this builder. On return, the flags
                          * component of this builder is a copy of the given set.
@@ -68,7 +68,7 @@ declare namespace java {
                          *           AclEntryFlag}
                          */
                         // @ts-ignore
-                        setFlags(flags: Array<java.nio.file.attribute.AclEntryFlag>): java.nio.file.attribute.AclEntry.Builder
+                        public setFlags(flags: java.util.Set<java.nio.file.attribute.AclEntryFlag> | Array<java.nio.file.attribute.AclEntryFlag>): java.nio.file.attribute.AclEntry.Builder
                         /**
                          * Sets the flags component of this builder. On return, the flags
                          * component of this builder is a copy of the flags in the given
@@ -77,7 +77,7 @@ declare namespace java {
                          * @return this builder
                          */
                         // @ts-ignore
-                        setFlags(...flags: java.nio.file.attribute.AclEntryFlag[]): java.nio.file.attribute.AclEntry.Builder
+                        public setFlags(...flags: java.nio.file.attribute.AclEntryFlag[]): java.nio.file.attribute.AclEntry.Builder
                     }
                 }
             }

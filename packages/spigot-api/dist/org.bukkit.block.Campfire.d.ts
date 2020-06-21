@@ -11,7 +11,7 @@ declare namespace org {
                  * @see Inventory#getSize()
                  */
                 // @ts-ignore
-                getSize(): int
+                getSize(): number /*int*/
                 /**
                  * @param index The index of the Slot's ItemStack to return
                  * @return The ItemStack in the slot
@@ -33,7 +33,7 @@ declare namespace org {
                  * @return Cook time
                  */
                 // @ts-ignore
-                getCookTime(index: number /*int*/): int
+                getCookTime(index: number /*int*/): number /*int*/
                 /**
                  * Set cook time.
                  * This is the amount of time the item has been cooking for.
@@ -49,7 +49,7 @@ declare namespace org {
                  * @return Cook time total
                  */
                 // @ts-ignore
-                getCookTimeTotal(index: number /*int*/): int
+                getCookTimeTotal(index: number /*int*/): number /*int*/
                 /**
                  * Set cook time.
                  * This is the amount of time the item is required to cook for.

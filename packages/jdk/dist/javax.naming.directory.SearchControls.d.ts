@@ -47,7 +47,7 @@ declare namespace javax {
                  *                   return no attributes.
                  */
                 // @ts-ignore
-                constructor(scope: number /*int*/, countlim: number /*long*/, timelim: number /*int*/, attrs: string[], retobj: boolean, deref: boolean)
+                constructor(scope: number /*int*/, countlim: number /*long*/, timelim: number /*int*/, attrs: java.lang.String[] | string[], retobj: boolean, deref: boolean)
                 /**
                  * Search the named object.
                  * <p>
@@ -64,7 +64,7 @@ declare namespace javax {
                  * The value of this constant is <tt>0</tt>.
                  */
                 // @ts-ignore
-                readonly OBJECT_SCOPE: number /*int*/
+                public static readonly OBJECT_SCOPE: number /*int*/
                 /**
                  * Search one level of the named context.
                  * <p>
@@ -78,7 +78,7 @@ declare namespace javax {
                  * The value of this constant is <tt>1</tt>.
                  */
                 // @ts-ignore
-                readonly ONELEVEL_SCOPE: number /*int*/
+                public static readonly ONELEVEL_SCOPE: number /*int*/
                 /**
                  * Search the entire subtree rooted at the named object.
                  * <p>
@@ -101,7 +101,7 @@ declare namespace javax {
                  * The value of this constant is <tt>2</tt>.
                  */
                 // @ts-ignore
-                readonly SUBTREE_SCOPE: number /*int*/
+                public static readonly SUBTREE_SCOPE: number /*int*/
                 /**
                  * Retrieves the search scope of these SearchControls.
                  * <p>
@@ -110,7 +110,7 @@ declare namespace javax {
                  * @see #setSearchScope
                  */
                 // @ts-ignore
-                getSearchScope(): int
+                public getSearchScope(): number /*int*/
                 /**
                  * Retrieves the time limit of these SearchControls in milliseconds.
                  * <p>
@@ -119,21 +119,21 @@ declare namespace javax {
                  * @see #setTimeLimit
                  */
                 // @ts-ignore
-                getTimeLimit(): int
+                public getTimeLimit(): number /*int*/
                 /**
                  * Determines whether links will be dereferenced during the search.
                  * @return true if links will be dereferenced; false otherwise.
                  * @see #setDerefLinkFlag
                  */
                 // @ts-ignore
-                getDerefLinkFlag(): boolean
+                public getDerefLinkFlag(): boolean
                 /**
                  * Determines whether objects will be returned as part of the result.
                  * @return true if objects will be returned; false otherwise.
                  * @see #setReturningObjFlag
                  */
                 // @ts-ignore
-                getReturningObjFlag(): boolean
+                public getReturningObjFlag(): boolean
                 /**
                  * Retrieves the maximum number of entries that will be returned
                  * as a result of the search.
@@ -143,7 +143,7 @@ declare namespace javax {
                  * @see #setCountLimit
                  */
                 // @ts-ignore
-                getCountLimit(): long
+                public getCountLimit(): number /*long*/
                 /**
                  * Retrieves the attributes that will be returned as part of the search.
                  * <p>
@@ -154,7 +154,7 @@ declare namespace javax {
                  * @see #setReturningAttributes
                  */
                 // @ts-ignore
-                getReturningAttributes(): java.lang.String[]
+                public getReturningAttributes(): string[]
                 /**
                  * Sets the search scope to one of:
                  * OBJECT_SCOPE, ONELEVEL_SCOPE, SUBTREE_SCOPE.
@@ -162,7 +162,7 @@ declare namespace javax {
                  * @see #getSearchScope
                  */
                 // @ts-ignore
-                setSearchScope(scope: number /*int*/): void
+                public setSearchScope(scope: number /*int*/): void
                 /**
                  * Sets the time limit of these SearchControls in milliseconds.
                  * <p>
@@ -171,14 +171,14 @@ declare namespace javax {
                  * @see #getTimeLimit
                  */
                 // @ts-ignore
-                setTimeLimit(ms: number /*int*/): void
+                public setTimeLimit(ms: number /*int*/): void
                 /**
                  * Enables/disables link dereferencing during the search.
                  * @param on        if true links will be dereferenced; if false, not followed.
                  * @see #getDerefLinkFlag
                  */
                 // @ts-ignore
-                setDerefLinkFlag(on: boolean): void
+                public setDerefLinkFlag(on: boolean): void
                 /**
                  * Enables/disables returning objects returned as part of the result.
                  * <p>
@@ -189,7 +189,7 @@ declare namespace javax {
                  * @see #getReturningObjFlag
                  */
                 // @ts-ignore
-                setReturningObjFlag(on: boolean): void
+                public setReturningObjFlag(on: boolean): void
                 /**
                  * Sets the maximum number of entries to be returned
                  * as a result of the search.
@@ -199,7 +199,7 @@ declare namespace javax {
                  * @see #getCountLimit
                  */
                 // @ts-ignore
-                setCountLimit(limit: number /*long*/): void
+                public setCountLimit(limit: number /*long*/): void
                 /**
                  * Specifies the attributes that will be returned as part of the search.
                  * <p>
@@ -210,7 +210,7 @@ declare namespace javax {
                  * @see #getReturningAttributes
                  */
                 // @ts-ignore
-                setReturningAttributes(attrs: string[]): void
+                public setReturningAttributes(attrs: java.lang.String[] | string[]): void
             }
         }
     }

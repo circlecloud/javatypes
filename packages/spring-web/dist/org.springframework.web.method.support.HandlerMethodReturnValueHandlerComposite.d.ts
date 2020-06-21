@@ -19,29 +19,29 @@ declare namespace org {
                          * Return a read-only list with the registered handlers, or an empty list.
                          */
                         // @ts-ignore
-                        getHandlers(): java.util.List<org.springframework.web.method.support.HandlerMethodReturnValueHandler>
+                        public getHandlers(): Array<org.springframework.web.method.support.HandlerMethodReturnValueHandler>
                         /**
                          * Whether the given {@linkplain MethodParameter method return type} is supported by any registered
                          * {@link HandlerMethodReturnValueHandler}.
                          */
                         // @ts-ignore
-                        supportsReturnType(returnType: MethodParameter): boolean
+                        public supportsReturnType(returnType: MethodParameter): boolean
                         /**
                          * Iterate over registered {@link HandlerMethodReturnValueHandler HandlerMethodReturnValueHandlers} and invoke the one that supports it.
                          * @throws IllegalStateException if no suitable {#link HandlerMethodReturnValueHandler} is found.
                          */
                         // @ts-ignore
-                        handleReturnValue(returnValue: any, returnType: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest): void
+                        public handleReturnValue(returnValue: java.lang.Object | any, returnType: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest): void
                         /**
                          * Add the given {@link HandlerMethodReturnValueHandler}.
                          */
                         // @ts-ignore
-                        addHandler(handler: org.springframework.web.method.support.HandlerMethodReturnValueHandler): org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite
+                        public addHandler(handler: org.springframework.web.method.support.HandlerMethodReturnValueHandler): org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite
                         /**
                          * Add the given {@link HandlerMethodReturnValueHandler HandlerMethodReturnValueHandlers}.
                          */
                         // @ts-ignore
-                        addHandlers(handlers: Array<org.springframework.web.method.support.HandlerMethodReturnValueHandler>): org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite
+                        public addHandlers(handlers: java.util.List<any> | Array<any>): org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite
                     }
                 }
             }

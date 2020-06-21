@@ -15,17 +15,17 @@ declare namespace org {
                      * A {@link SerializationBehavior} where data is saved automatically. This is considered the default across the game.
                      */
                     // @ts-ignore
-                    readonly AUTOMATIC: org.spongepowered.api.world.SerializationBehavior
+                    public static readonly AUTOMATIC: org.spongepowered.api.world.SerializationBehavior
                     /**
                      * A {@link SerializationBehavior} where data is only saved when requested.
                      */
                     // @ts-ignore
-                    readonly MANUAL: org.spongepowered.api.world.SerializationBehavior
+                    public static readonly MANUAL: org.spongepowered.api.world.SerializationBehavior
                     /**
                      * A {@link SerializationBehavior} where data is not saved to disk.
                      */
                     // @ts-ignore
-                    readonly NONE: org.spongepowered.api.world.SerializationBehavior
+                    public static readonly NONE: org.spongepowered.api.world.SerializationBehavior
                 }
             }
         }

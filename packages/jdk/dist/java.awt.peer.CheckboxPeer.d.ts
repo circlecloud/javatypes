@@ -36,7 +36,7 @@ declare namespace java {
                  *               {#code null} when no label should be displayed.
                  */
                 // @ts-ignore
-                setLabel(label: string): void
+                setLabel(label: java.lang.String | string): void
             }
         }
     }

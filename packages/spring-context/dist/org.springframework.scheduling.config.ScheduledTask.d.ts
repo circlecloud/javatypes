@@ -19,14 +19,14 @@ declare namespace org {
                      * @since 5.0.2
                      */
                     // @ts-ignore
-                    getTask(): org.springframework.scheduling.config.Task
+                    public getTask(): org.springframework.scheduling.config.Task
                     /**
                      * Trigger cancellation of this scheduled task.
                      */
                     // @ts-ignore
-                    cancel(): void
+                    public cancel(): void
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

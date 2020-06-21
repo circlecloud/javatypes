@@ -22,7 +22,7 @@ declare namespace org {
                              * @return The immutable value for the knockback strength
                              */
                             // @ts-ignore
-                            knockbackStrength(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                            knockbackStrength(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                         }
                     }
                 }

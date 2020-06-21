@@ -9,7 +9,7 @@ declare namespace org {
              * @author Eugene Kuleshov
              */
             // @ts-ignore
-            class AnnotationVisitor extends java.lang.Object {
+            abstract class AnnotationVisitor extends java.lang.Object {
                 /**
                  * Constructs a new {@link AnnotationVisitor}.
                  * @param api the ASM API version implemented by this visitor. Must be one of {#link
@@ -49,7 +49,7 @@ declare namespace org {
                  *      but is more convenient).
                  */
                 // @ts-ignore
-                visit(name: string, value: any): void
+                public visit(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Visits an enumeration value of the annotation.
                  * @param name the value name.
@@ -57,7 +57,7 @@ declare namespace org {
                  * @param value the actual enumeration value.
                  */
                 // @ts-ignore
-                visitEnum(name: string, descriptor: string, value: string): void
+                public visitEnum(name: java.lang.String | string, descriptor: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Visits a nested annotation value of the annotation.
                  * @param name the value name.
@@ -67,7 +67,7 @@ declare namespace org {
                  *      value must be fully visited before calling other methods on this annotation visitor</i>.
                  */
                 // @ts-ignore
-                visitAnnotation(name: string, descriptor: string): org.springframework.asm.AnnotationVisitor
+                public visitAnnotation(name: java.lang.String | string, descriptor: java.lang.String | string): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits an array value of the annotation. Note that arrays of primitive types (such as byte,
                  * boolean, short, char, int, long, float or double) can be passed as value to {@link #visit
@@ -79,12 +79,12 @@ declare namespace org {
                  *      methods on this annotation visitor</i>.
                  */
                 // @ts-ignore
-                visitArray(name: string): org.springframework.asm.AnnotationVisitor
+                public visitArray(name: java.lang.String | string): org.springframework.asm.AnnotationVisitor
                 /**
                  * Visits the end of the annotation.
                  */
                 // @ts-ignore
-                visitEnd(): void
+                public visitEnd(): void
             }
         }
     }

@@ -8,20 +8,20 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class ConversionException extends org.springframework.core.NestedRuntimeException {
+                abstract class ConversionException extends org.springframework.core.NestedRuntimeException {
                     /**
                      * Construct a new conversion exception.
                      * @param message the exception message
                      */
                     // @ts-ignore
-                    constructor(message: string)
+                    constructor(message: java.lang.String | string)
                     /**
                      * Construct a new conversion exception.
                      * @param message the exception message
                      * @param cause the cause
                      */
                     // @ts-ignore
-                    constructor(message: string, cause: Error)
+                    constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
                 }
             }
         }

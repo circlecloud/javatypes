@@ -25,14 +25,14 @@ declare namespace org {
              * @see java.util.Arrays#sort(Object[], java.util.Comparator)
              */
             // @ts-ignore
-            class OrderComparator extends java.lang.Object implements java.util.Comparator<java.lang.Object> {
+            class OrderComparator extends java.lang.Object implements java.util.Comparator<java.lang.Object | any> {
                 // @ts-ignore
                 constructor()
                 /**
                  * Shared default instance of {@code OrderComparator}.
                  */
                 // @ts-ignore
-                readonly INSTANCE: org.springframework.core.OrderComparator
+                public static readonly INSTANCE: org.springframework.core.OrderComparator
                 /**
                  * Build an adapted order comparator with the given source provider.
                  * @param sourceProvider the order source provider to use
@@ -40,9 +40,9 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                withSourceProvider(sourceProvider: org.springframework.core.OrderComparator.OrderSourceProvider): java.util.Comparator<java.lang.Object>
+                public withSourceProvider(sourceProvider: org.springframework.core.OrderComparator.OrderSourceProvider): java.util.Comparator<java.lang.Object | any>
                 // @ts-ignore
-                compare(o1: any, o2: any): int
+                public compare(o1: java.lang.Object | any, o2: java.lang.Object | any): number /*int*/
                 /**
                  * Determine the order value for the given object.
                  * <p>The default implementation checks against the {@link Ordered} interface
@@ -51,7 +51,7 @@ declare namespace org {
                  * @return the order value, or {#code Ordered.LOWEST_PRECEDENCE} as fallback
                  */
                 // @ts-ignore
-                getOrder(obj: any): int
+                getOrder(obj: java.lang.Object | any): number /*int*/
                 /**
                  * Find an order value indicated by the given object.
                  * <p>The default implementation checks against the {@link Ordered} interface.
@@ -60,7 +60,7 @@ declare namespace org {
                  * @return the order value, or {#code null} if none found
                  */
                 // @ts-ignore
-                findOrder(obj: any): java.lang.Integer
+                findOrder(obj: java.lang.Object | any): number
                 /**
                  * Determine a priority value for the given object, if any.
                  * <p>The default implementation always returns {@code null}.
@@ -73,7 +73,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                getPriority(obj: any): java.lang.Integer
+                public getPriority(obj: java.lang.Object | any): number
                 /**
                  * Sort the given List with a default OrderComparator.
                  * <p>Optimized to skip sorting for lists with size 0 or 1,
@@ -82,7 +82,7 @@ declare namespace org {
                  * @see java.util.List#sort(java.util.Comparator)
                  */
                 // @ts-ignore
-                sort(list: Array<any>): void
+                public static sort(list: java.util.List<any> | Array<any>): void
                 /**
                  * Sort the given array with a default OrderComparator.
                  * <p>Optimized to skip sorting for lists with size 0 or 1,
@@ -91,7 +91,7 @@ declare namespace org {
                  * @see java.util.Arrays#sort(Object[], java.util.Comparator)
                  */
                 // @ts-ignore
-                sort(array: any[]): void
+                public static sort(array: java.lang.Object[] | any[]): void
                 /**
                  * Sort the given array or List with a default OrderComparator,
                  * if necessary. Simply skips sorting when given any other value.
@@ -101,7 +101,7 @@ declare namespace org {
                  * @see java.util.Arrays#sort(Object[], java.util.Comparator)
                  */
                 // @ts-ignore
-                sortIfNecessary(value: any): void
+                public static sortIfNecessary(value: java.lang.Object | any): void
             }
         }
     }

@@ -34,14 +34,14 @@ declare namespace org {
                          * @see #setPropertyValues
                          */
                         // @ts-ignore
-                        constructor(parentName: string)
+                        constructor(parentName: java.lang.String | string)
                         /**
                          * Create a new ChildBeanDefinition for the given parent.
                          * @param parentName the name of the parent bean
                          * @param pvs the additional property values of the child
                          */
                         // @ts-ignore
-                        constructor(parentName: string, pvs: org.springframework.beans.MutablePropertyValues)
+                        constructor(parentName: java.lang.String | string, pvs: org.springframework.beans.MutablePropertyValues)
                         /**
                          * Create a new ChildBeanDefinition for the given parent.
                          * @param parentName the name of the parent bean
@@ -49,7 +49,7 @@ declare namespace org {
                          * @param pvs the additional property values of the child
                          */
                         // @ts-ignore
-                        constructor(parentName: string, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
+                        constructor(parentName: java.lang.String | string, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
                         /**
                          * Create a new ChildBeanDefinition for the given parent,
                          * providing constructor arguments and property values.
@@ -59,7 +59,7 @@ declare namespace org {
                          * @param pvs the property values to apply
                          */
                         // @ts-ignore
-                        constructor(parentName: string, beanClass: java.lang.Class<any>, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
+                        constructor(parentName: java.lang.String | string, beanClass: java.lang.Class<any>, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
                         /**
                          * Create a new ChildBeanDefinition for the given parent,
                          * providing constructor arguments and property values.
@@ -70,7 +70,7 @@ declare namespace org {
                          * @param pvs the property values to apply
                          */
                         // @ts-ignore
-                        constructor(parentName: string, beanClassName: string, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
+                        constructor(parentName: java.lang.String | string, beanClassName: java.lang.String | string, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
                         /**
                          * Create a new ChildBeanDefinition as deep copy of the given
                          * bean definition.
@@ -79,19 +79,19 @@ declare namespace org {
                         // @ts-ignore
                         constructor(original: org.springframework.beans.factory.support.ChildBeanDefinition)
                         // @ts-ignore
-                        setParentName(parentName: string): void
+                        public setParentName(parentName: java.lang.String | string): void
                         // @ts-ignore
-                        getParentName(): java.lang.String
+                        public getParentName(): string
                         // @ts-ignore
-                        validate(): void
+                        public validate(): void
                         // @ts-ignore
-                        cloneBeanDefinition(): org.springframework.beans.factory.support.AbstractBeanDefinition
+                        public cloneBeanDefinition(): org.springframework.beans.factory.support.AbstractBeanDefinition
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

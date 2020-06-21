@@ -16,14 +16,14 @@ declare namespace org {
                          * @see TranslatableText#getTranslation()
                          */
                         // @ts-ignore
-                        getTranslation(): org.spongepowered.api.text.translation.Translation
+                        public getTranslation(): org.spongepowered.api.text.translation.Translation
                         /**
                          * Returns the current translation arguments of this builder.
                          * @return The current translation arguments
                          * @see TranslatableText#getArguments()
                          */
                         // @ts-ignore
-                        getArguments(): <any>
+                        public getArguments(): object
                         /**
                          * Sets the translation of the text.
                          * @param translation The translation to use for this builder
@@ -31,7 +31,7 @@ declare namespace org {
                          * @return This text builder
                          */
                         // @ts-ignore
-                        translation(translation: org.spongepowered.api.text.translation.Translation, ...args: any[]): org.spongepowered.api.text.TranslatableText.Builder
+                        public translation(translation: org.spongepowered.api.text.translation.Translation, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText.Builder
                         /**
                          * Sets the translation of the text.
                          * @param translatable The translatable object to use for this builder
@@ -39,51 +39,51 @@ declare namespace org {
                          * @return This text builder
                          */
                         // @ts-ignore
-                        translation(translatable: org.spongepowered.api.text.translation.Translatable, ...args: any[]): org.spongepowered.api.text.TranslatableText.Builder
+                        public translation(translatable: org.spongepowered.api.text.translation.Translatable, ...args: java.lang.Object[] | any[]): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        build(): org.spongepowered.api.text.TranslatableText
+                        public build(): org.spongepowered.api.text.TranslatableText
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.TranslatableText.Builder
+                        public format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.TranslatableText.Builder
+                        public color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.TranslatableText.Builder
+                        public style(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.TranslatableText.Builder
+                        public onClick(clickAction: org.spongepowered.api.text.action.ClickAction<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.TranslatableText.Builder
+                        public onHover(hoverAction: org.spongepowered.api.text.action.HoverAction<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.TranslatableText.Builder
+                        public onShiftClick(shiftClickAction: org.spongepowered.api.text.action.ShiftClickAction<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.TranslatableText.Builder
+                        public append(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        append(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public append(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        append(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public append(children: java.lang.Iterable<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        append(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public append(children: java.util.Iterator<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.TranslatableText.Builder
+                        public insert(pos: number /*int*/, ...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public insert(pos: number /*int*/, children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public insert(pos: number /*int*/, children: java.lang.Iterable<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        insert(pos: number /*int*/, children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public insert(pos: number /*int*/, children: java.util.Iterator<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.TranslatableText.Builder
+                        public remove(...children: org.spongepowered.api.text.Text[]): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        remove(children: Array<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public remove(children: java.util.Collection<any> | Array<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        remove(children: java.lang.Iterable<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public remove(children: java.lang.Iterable<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        remove(children: java.util.Iterator<org.spongepowered.api.text.Text>): org.spongepowered.api.text.TranslatableText.Builder
+                        public remove(children: java.util.Iterator<any>): org.spongepowered.api.text.TranslatableText.Builder
                         // @ts-ignore
-                        removeAll(): org.spongepowered.api.text.TranslatableText.Builder
+                        public removeAll(): org.spongepowered.api.text.TranslatableText.Builder
                     }
                 }
             }

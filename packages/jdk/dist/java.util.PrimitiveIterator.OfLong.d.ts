@@ -6,14 +6,14 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            interface OfLong extends java.util.PrimitiveIterator<java.lang.Long, java.util.function.LongConsumer> {
+            interface OfLong extends java.util.PrimitiveIterator<java.lang.Long | number, java.util.function$.LongConsumer> {
                 /**
                  * Returns the next {@code long} element in the iteration.
                  * @return the next {#code long} element in the iteration
                  * @throws NoSuchElementException if the iteration has no more elements
                  */
                 // @ts-ignore
-                nextLong(): long
+                nextLong(): number /*long*/
                 /**
                  * Performs the given action for each remaining element until all elements
                  * have been processed or the action throws an exception.  Actions are
@@ -28,14 +28,14 @@ declare namespace java {
                  * @throws NullPointerException if the specified action is null
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.LongConsumer | java.util.function$.LongConsumer): void
+                forEachRemaining(action: java.util.function$.LongConsumer): void
                 /**
                  * {@inheritDoc}
                  * @implSpec The default implementation boxes the result of calling
                  *  {#link #nextLong()}, and returns that boxed result.
                  */
                 // @ts-ignore
-                next(): java.lang.Long
+                next(): number
                 /**
                  * {@inheritDoc}
                  * @implSpec If the action is an instance of {#code LongConsumer} then it is cast
@@ -45,7 +45,7 @@ declare namespace java {
                  *  and then passed to {@link #forEachRemaining}.
                  */
                 // @ts-ignore
-                forEachRemaining(action: java.util.function.Consumer<any super java.lang.Long> | java.util.function$.Consumer<? super java.lang.Long>): void
+                forEachRemaining(action: java.util.function$.Consumer<any>): void
             }
         }
     }

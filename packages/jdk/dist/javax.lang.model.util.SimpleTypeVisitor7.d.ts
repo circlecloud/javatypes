@@ -68,7 +68,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitUnion(t: javax.lang.model.type.UnionType, p: P): R
+                    public visitUnion(t: javax.lang.model.type.UnionType, p: P): R
                 }
             }
         }

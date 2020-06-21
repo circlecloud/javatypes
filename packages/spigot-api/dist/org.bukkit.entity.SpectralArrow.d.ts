@@ -12,7 +12,7 @@ declare namespace org {
                  * @return the glowing effect ticks
                  */
                 // @ts-ignore
-                getGlowingTicks(): int
+                getGlowingTicks(): number /*int*/
                 /**
                  * Sets the amount of time to apply the glowing effect for.
                  * @param duration the glowing effect ticks

@@ -50,7 +50,7 @@ declare namespace javax {
              *    specification
              */
             // @ts-ignore
-            constructor(terminalName: string, actions: string)
+            constructor(terminalName: java.lang.String | string, actions: java.lang.String | string)
             /**
              * Returns the canonical string representation of the actions.
              * It is <code>*</code> to signify all actions defined by this class or
@@ -59,7 +59,7 @@ declare namespace javax {
              * @return the canonical string representation of the actions.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Checks if this CardPermission object implies the specified permission.
              * That is the case, if and only if
@@ -76,7 +76,7 @@ declare namespace javax {
              *    specified permission.
              */
             // @ts-ignore
-            implies(permission: java.security.Permission): boolean
+            public implies(permission: java.security.Permission): boolean
             /**
              * Compares the specified object with this CardPermission for equality.
              * This CardPermission is equal to another Object <code>object</code>, if
@@ -93,13 +93,13 @@ declare namespace javax {
              *    CardPermission
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this CardPermission object.
              * @return the hash code value for this CardPermission object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

@@ -15,13 +15,13 @@ declare namespace org {
                      * @return the name of the exchange.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * The type of the exchange. See {@link ExchangeTypes} for some well-known examples.
                      * @return the type of the exchange.
                      */
                     // @ts-ignore
-                    getType(): java.lang.String
+                    getType(): string
                     /**
                      * A durable exchange will survive a server restart.
                      * @return true if durable.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @return the arguments.
                      */
                     // @ts-ignore
-                    getArguments(): java.util.Map<java.lang.String, java.lang.Object>
+                    getArguments(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Is a delayed message exchange; currently requires a broker plugin.
                      * @return true if delayed.

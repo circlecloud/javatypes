@@ -40,7 +40,7 @@ declare namespace org {
                              * @return The new level after death
                              */
                             // @ts-ignore
-                            getLevel(): int
+                            getLevel(): number /*int*/
                             /**
                              * Sets the new level the player will have after death.
                              * @param level The new level after death

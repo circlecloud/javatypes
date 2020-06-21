@@ -23,7 +23,7 @@ declare namespace java {
              *  opposed to residing in system memory).
              */
             // @ts-ignore
-            isAccelerated(): boolean
+            public isAccelerated(): boolean
             /**
              * Returns <code>true</code> if the <code>VolatileImage</code>
              * described by this <code>ImageCapabilities</code> can lose
@@ -32,12 +32,12 @@ declare namespace java {
              *  at the whim of the operating system.
              */
             // @ts-ignore
-            isTrueVolatile(): boolean
+            public isTrueVolatile(): boolean
             /**
              * @return a copy of this ImageCapabilities object.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

@@ -9,7 +9,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class AbstractServerHttpRequest extends java.lang.Object implements org.springframework.http.server.reactive.ServerHttpRequest {
+                    abstract class AbstractServerHttpRequest extends java.lang.Object implements org.springframework.http.server.reactive.ServerHttpRequest {
                         /**
                          * Constructor with the URI and headers for the request.
                          * @param uri the URI for the request
@@ -17,26 +17,26 @@ declare namespace org {
                          * @param headers the headers for the request
                          */
                         // @ts-ignore
-                        constructor(uri: java.net.URI, contextPath: string, headers: org.springframework.http.HttpHeaders)
+                        constructor(uri: java.net.URI, contextPath: java.lang.String | string, headers: org.springframework.http.HttpHeaders)
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        getId(): java.lang.String
+                        public getId(): string
                         /**
                          * Obtain the request id to use, or {@code null} in which case the Object
                          * identity of this request instance is used.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        initId(): java.lang.String
+                        initId(): string
                         // @ts-ignore
-                        getURI(): java.net.URI
+                        public getURI(): java.net.URI
                         // @ts-ignore
-                        getPath(): org.springframework.http.server.RequestPath
+                        public getPath(): org.springframework.http.server.RequestPath
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getQueryParams(): <any>
+                        public getQueryParams(): object
                         /**
                          * A method for parsing of the query into name-value pairs. The return
                          * value is turned into an immutable map and cached.
@@ -45,9 +45,9 @@ declare namespace org {
                          * parsing is thread-safe nevertheless.
                          */
                         // @ts-ignore
-                        initQueryParams(): <any>
+                        initQueryParams(): object
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         /**
                          * Obtain the cookies from the underlying "native" request and adapt those to
                          * an {@link HttpCookie} map. The return value is turned into an immutable
@@ -58,9 +58,9 @@ declare namespace org {
                          * thread-safe access to cookie data.
                          */
                         // @ts-ignore
-                        abstract initCookies(): <any>
+                        abstract initCookies(): object
                         // @ts-ignore
-                        getSslInfo(): org.springframework.http.server.reactive.SslInfo
+                        public getSslInfo(): org.springframework.http.server.reactive.SslInfo
                         /**
                          * Obtain SSL session information from the underlying "native" request.
                          * @return the session information, or {#code null} if none available
@@ -74,7 +74,7 @@ declare namespace org {
                          * use such as WebSocket upgrades in the spring-webflux module.
                          */
                         // @ts-ignore
-                        abstract getNativeRequest<T>(): T
+                        public abstract getNativeRequest<T>(): T
                     }
                 }
             }

@@ -1,0 +1,28 @@
+declare namespace cn {
+    namespace nukkit {
+        namespace inventory {
+            namespace transaction {
+                namespace action {
+                    /**
+                     * @author CreeperFace
+                     */
+                    // @ts-ignore
+                    class CraftingTransferMaterialAction extends cn.nukkit.inventory.transaction.action.InventoryAction {
+                        // @ts-ignore
+                        constructor(sourceItem: cn.nukkit.item.Item, targetItem: cn.nukkit.item.Item, slot: number /*int*/)
+                        // @ts-ignore
+                        public onAddToTransaction(transaction: cn.nukkit.inventory.transaction.InventoryTransaction): void
+                        // @ts-ignore
+                        public isValid(source: cn.nukkit.Player): boolean
+                        // @ts-ignore
+                        public execute(source: cn.nukkit.Player): boolean
+                        // @ts-ignore
+                        public onExecuteSuccess($source: cn.nukkit.Player): void
+                        // @ts-ignore
+                        public onExecuteFail(source: cn.nukkit.Player): void
+                    }
+                }
+            }
+        }
+    }
+}

@@ -53,7 +53,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if {#code hostname} is illegal
                  */
                 // @ts-ignore
-                constructor(hostname: string)
+                constructor(hostname: java.lang.String | string)
                 /**
                  * Creates an {@code SNIHostName} using the specified encoded value.
                  * <P>
@@ -118,7 +118,7 @@ declare namespace javax {
                  *          of this {@code SNIHostName} object
                  */
                 // @ts-ignore
-                getAsciiName(): java.lang.String
+                public getAsciiName(): string
                 /**
                  * Compares this server name to the specified object.
                  * <P>
@@ -132,7 +132,7 @@ declare namespace javax {
                  *          equal to this instance
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this {@code SNIHostName}.
                  * <P>
@@ -141,7 +141,7 @@ declare namespace javax {
                  * @return a hash code value for this {#code SNIHostName}.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of the object, including the DNS
                  * hostname in this {@code SNIHostName} object.
@@ -167,7 +167,7 @@ declare namespace javax {
                  * @return a string representation of the object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Creates an {@link SNIMatcher} object for {@code SNIHostName}s.
                  * <P>
@@ -194,7 +194,7 @@ declare namespace javax {
                  *          syntax is invalid
                  */
                 // @ts-ignore
-                createSNIMatcher(regex: string): javax.net.ssl.SNIMatcher
+                public static createSNIMatcher(regex: java.lang.String | string): javax.net.ssl.SNIMatcher
             }
         }
     }

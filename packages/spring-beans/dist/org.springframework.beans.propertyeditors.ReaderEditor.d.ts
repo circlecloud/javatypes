@@ -30,13 +30,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor(resourceEditor: ResourceEditor)
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * This implementation returns {@code null} to indicate that
                      * there is no appropriate text representation.
                      */
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

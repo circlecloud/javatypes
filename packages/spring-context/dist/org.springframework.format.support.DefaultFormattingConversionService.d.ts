@@ -51,7 +51,7 @@ declare namespace org {
                      * @param formatterRegistry the service to register default formatters with
                      */
                     // @ts-ignore
-                    addDefaultFormatters(formatterRegistry: org.springframework.format.FormatterRegistry): void
+                    public static addDefaultFormatters(formatterRegistry: org.springframework.format.FormatterRegistry): void
                 }
             }
         }

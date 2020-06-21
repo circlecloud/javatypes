@@ -17,7 +17,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getTypeName(): java.lang.String
+                getTypeName(): string
             }
         }
     }

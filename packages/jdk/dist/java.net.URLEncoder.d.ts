@@ -48,7 +48,7 @@ declare namespace java {
              * @return the translated {#code String}.
              */
             // @ts-ignore
-            encode(s: string): java.lang.String
+            public static encode(s: java.lang.String | string): string
             /**
              * Translates a string into {@code application/x-www-form-urlencoded}
              * format using a specific encoding scheme. This method uses the
@@ -71,7 +71,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            encode(s: string, enc: string): java.lang.String
+            public static encode(s: java.lang.String | string, enc: java.lang.String | string): string
         }
     }
 }

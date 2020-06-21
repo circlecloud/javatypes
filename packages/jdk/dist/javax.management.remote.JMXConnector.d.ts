@@ -21,7 +21,7 @@ declare namespace javax {
                  * JMXAuthenticator}.
                  */
                 // @ts-ignore
-                
+                readonly CREDENTIALS: java.lang.String | string
                 /**
                  * <p>Establishes the connection to the connector server.  This
                  * method is equivalent to {@link #connect(Map)
@@ -53,7 +53,7 @@ declare namespace javax {
                  *  made for security reasons.
                  */
                 // @ts-ignore
-                connect(env: java.util.Map<java.lang.String, any>): void
+                connect(env: java.util.Map<java.lang.String | string, any>): void
                 /**
                  * <p>Returns an <code>MBeanServerConnection</code> object
                  * representing a remote MBean server.  For a given
@@ -168,7 +168,7 @@ declare namespace javax {
                  * @see javax.management.NotificationBroadcaster#addNotificationListener
                  */
                 // @ts-ignore
-                addConnectionNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+                addConnectionNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
                 /**
                  * <p>Removes a listener from the list to be informed of changes
                  * in status.  The listener must previously have been added.  If
@@ -204,7 +204,7 @@ declare namespace javax {
                  * @see javax.management.NotificationEmitter#removeNotificationListener
                  */
                 // @ts-ignore
-                removeConnectionNotificationListener(l: javax.management.NotificationListener, f: javax.management.NotificationFilter, handback: any): void
+                removeConnectionNotificationListener(l: javax.management.NotificationListener, f: javax.management.NotificationFilter, handback: java.lang.Object | any): void
                 /**
                  * <p>Gets this connection's ID from the connector server.  For a
                  * given connector server, every connection will have a unique id
@@ -219,7 +219,7 @@ declare namespace javax {
                  *  for instance because the connection is closed or broken.
                  */
                 // @ts-ignore
-                getConnectionId(): java.lang.String
+                getConnectionId(): string
             }
         }
     }

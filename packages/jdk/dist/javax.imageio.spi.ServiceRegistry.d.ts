@@ -94,7 +94,7 @@ declare namespace javax {
                  *  <code>providerClass</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                lookupProviders<T>(providerClass: java.lang.Class<T>, loader: java.lang.ClassLoader): java.util.Iterator<T>
+                public static lookupProviders<T>(providerClass: java.lang.Class<T>, loader: java.lang.ClassLoader): java.util.Iterator<T>
                 /**
                  * Locates and incrementally instantiates the available providers
                  * of a given service using the context class loader.  This
@@ -115,7 +115,7 @@ declare namespace javax {
                  *  <code>providerClass</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                lookupProviders<T>(providerClass: java.lang.Class<T>): java.util.Iterator<T>
+                public static lookupProviders<T>(providerClass: java.lang.Class<T>): java.util.Iterator<T>
                 /**
                  * Returns an <code>Iterator</code> of <code>Class</code> objects
                  * indicating the current set of categories.  The iterator will be
@@ -124,7 +124,7 @@ declare namespace javax {
                  *  <code>Class</code>objects.
                  */
                 // @ts-ignore
-                getCategories(): java.util.Iterator<java.lang.Class<?>>
+                public getCategories(): java.util.Iterator<java.lang.Class<any>>
                 /**
                  * Adds a service provider object to the registry.  The provider
                  * is associated with the given category.
@@ -148,7 +148,7 @@ declare namespace javax {
                  *  the <code>Class</code> defined by <code>category</code>.
                  */
                 // @ts-ignore
-                registerServiceProvider<T>(provider: T, category: java.lang.Class<T>): boolean
+                public registerServiceProvider<T>(provider: T, category: java.lang.Class<T>): boolean
                 /**
                  * Adds a service provider object to the registry.  The provider
                  * is associated within each category present in the registry
@@ -165,7 +165,7 @@ declare namespace javax {
                  *  <code>provider</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                registerServiceProvider(provider: any): void
+                public registerServiceProvider(provider: java.lang.Object | any): void
                 /**
                  * Adds a set of service provider objects, taken from an
                  * <code>Iterator</code> to the registry.  Each provider is
@@ -184,7 +184,7 @@ declare namespace javax {
                  *  is <code>null</code> or contains a <code>null</code> entry.
                  */
                 // @ts-ignore
-                registerServiceProviders(providers: java.util.Iterator<any>): void
+                public registerServiceProviders(providers: java.util.Iterator<any>): void
                 /**
                  * Removes a service provider object from the given category.  If
                  * the provider was not previously registered, nothing happens and
@@ -211,7 +211,7 @@ declare namespace javax {
                  *  the class defined by <code>category</code>.
                  */
                 // @ts-ignore
-                deregisterServiceProvider<T>(provider: T, category: java.lang.Class<T>): boolean
+                public deregisterServiceProvider<T>(provider: T, category: java.lang.Class<T>): boolean
                 /**
                  * Removes a service provider object from all categories that
                  * contain it.
@@ -220,7 +220,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                deregisterServiceProvider(provider: any): void
+                public deregisterServiceProvider(provider: java.lang.Object | any): void
                 /**
                  * Returns <code>true</code> if <code>provider</code> is currently
                  * registered.
@@ -231,7 +231,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                contains(provider: any): boolean
+                public contains(provider: java.lang.Object | any): boolean
                 /**
                  * Returns an <code>Iterator</code> containing all registered
                  * service providers in the given category.  If
@@ -251,7 +251,7 @@ declare namespace javax {
                  *  corresponding to <code>category</code>.
                  */
                 // @ts-ignore
-                getServiceProviders<T>(category: java.lang.Class<T>, useOrdering: boolean): java.util.Iterator<T>
+                public getServiceProviders<T>(category: java.lang.Class<T>, useOrdering: boolean): java.util.Iterator<T>
                 /**
                  * Returns an <code>Iterator</code> containing service provider
                  * objects within a given category that satisfy a criterion
@@ -272,7 +272,7 @@ declare namespace javax {
                  *  corresponding to <code>category</code>.
                  */
                 // @ts-ignore
-                getServiceProviders<T>(category: java.lang.Class<T>, filter: javax.imageio.spi.ServiceRegistry.Filter, useOrdering: boolean): java.util.Iterator<T>
+                public getServiceProviders<T>(category: java.lang.Class<T>, filter: javax.imageio.spi.ServiceRegistry.Filter, useOrdering: boolean): java.util.Iterator<T>
                 /**
                  * Returns the currently registered service provider object that
                  * is of the given class type.  At most one object of a given
@@ -289,7 +289,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                getServiceProviderByClass<T>(providerClass: java.lang.Class<T>): T
+                public getServiceProviderByClass<T>(providerClass: java.lang.Class<T>): T
                 /**
                  * Sets a pairwise ordering between two service provider objects
                  * within a given category.  If one or both objects are not
@@ -315,7 +315,7 @@ declare namespace javax {
                  *  corresponding to <code>category</code>.
                  */
                 // @ts-ignore
-                setOrdering<T>(category: java.lang.Class<T>, firstProvider: T, secondProvider: T): boolean
+                public setOrdering<T>(category: java.lang.Class<T>, firstProvider: T, secondProvider: T): boolean
                 /**
                  * Sets a pairwise ordering between two service provider objects
                  * within a given category.  If one or both objects are not
@@ -339,7 +339,7 @@ declare namespace javax {
                  *  corresponding to <code>category</code>.
                  */
                 // @ts-ignore
-                unsetOrdering<T>(category: java.lang.Class<T>, firstProvider: T, secondProvider: T): boolean
+                public unsetOrdering<T>(category: java.lang.Class<T>, firstProvider: T, secondProvider: T): boolean
                 /**
                  * Deregisters all service provider object currently registered
                  * under the given category.
@@ -348,13 +348,13 @@ declare namespace javax {
                  *  corresponding to <code>category</code>.
                  */
                 // @ts-ignore
-                deregisterAll(category: java.lang.Class<any>): void
+                public deregisterAll(category: java.lang.Class<any>): void
                 /**
                  * Deregisters all currently registered service providers from all
                  * categories.
                  */
                 // @ts-ignore
-                deregisterAll(): void
+                public deregisterAll(): void
                 /**
                  * Finalizes this object prior to garbage collection.  The
                  * <code>deregisterAll</code> method is called to deregister all
@@ -364,7 +364,7 @@ declare namespace javax {
                  *  finalization.
                  */
                 // @ts-ignore
-                finalize(): void
+                public finalize(): void
             }
         }
     }

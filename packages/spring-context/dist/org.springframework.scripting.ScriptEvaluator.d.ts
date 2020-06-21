@@ -20,7 +20,7 @@ declare namespace org {
                  *  compile or evaluate the script
                  */
                 // @ts-ignore
-                evaluate(script: org.springframework.scripting.ScriptSource): java.lang.Object
+                evaluate(script: org.springframework.scripting.ScriptSource): any
                 /**
                  * Evaluate the given script with the given arguments.
                  * @param script the ScriptSource for the script to evaluate
@@ -31,7 +31,7 @@ declare namespace org {
                  *  compile or evaluate the script
                  */
                 // @ts-ignore
-                evaluate(script: org.springframework.scripting.ScriptSource, arguments: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                evaluate(script: org.springframework.scripting.ScriptSource, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
             }
         }
     }

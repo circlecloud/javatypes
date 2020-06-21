@@ -75,7 +75,7 @@ declare namespace javax {
                      * @return the result of the kind-specific visit method
                      */
                     // @ts-ignore
-                    visitPrimitive(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitive(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code BOOLEAN} primitive type by calling
                      * {@code defaultAction}.
@@ -84,7 +84,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsBoolean(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsBoolean(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code BYTE} primitive type by calling
                      * {@code defaultAction}.
@@ -93,7 +93,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsByte(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsByte(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code SHORT} primitive type by calling
                      * {@code defaultAction}.
@@ -102,7 +102,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsShort(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsShort(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits an {@code INT} primitive type by calling
                      * {@code defaultAction}.
@@ -111,7 +111,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsInt(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsInt(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code LONG} primitive type by calling
                      * {@code defaultAction}.
@@ -120,7 +120,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsLong(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsLong(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code CHAR} primitive type by calling
                      * {@code defaultAction}.
@@ -129,7 +129,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsChar(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsChar(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code FLOAT} primitive type by calling
                      * {@code defaultAction}.
@@ -138,7 +138,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsFloat(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsFloat(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@code DOUBLE} primitive type by calling
                      * {@code defaultAction}.
@@ -147,7 +147,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitPrimitiveAsDouble(t: javax.lang.model.type.PrimitiveType, p: P): R
+                    public visitPrimitiveAsDouble(t: javax.lang.model.type.PrimitiveType, p: P): R
                     /**
                      * Visits a {@link NoType} instance, dispatching to the visit method for
                      * the specific {@linkplain TypeKind kind} of pseudo-type:
@@ -157,7 +157,7 @@ declare namespace javax {
                      * @return the result of the kind-specific visit method
                      */
                     // @ts-ignore
-                    visitNoType(t: javax.lang.model.type.NoType, p: P): R
+                    public visitNoType(t: javax.lang.model.type.NoType, p: P): R
                     /**
                      * Visits a {@link TypeKind#VOID VOID} pseudo-type by calling
                      * {@code defaultAction}.
@@ -166,7 +166,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitNoTypeAsVoid(t: javax.lang.model.type.NoType, p: P): R
+                    public visitNoTypeAsVoid(t: javax.lang.model.type.NoType, p: P): R
                     /**
                      * Visits a {@link TypeKind#PACKAGE PACKAGE} pseudo-type by calling
                      * {@code defaultAction}.
@@ -175,7 +175,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitNoTypeAsPackage(t: javax.lang.model.type.NoType, p: P): R
+                    public visitNoTypeAsPackage(t: javax.lang.model.type.NoType, p: P): R
                     /**
                      * Visits a {@link TypeKind#NONE NONE} pseudo-type by calling
                      * {@code defaultAction}.
@@ -184,7 +184,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitNoTypeAsNone(t: javax.lang.model.type.NoType, p: P): R
+                    public visitNoTypeAsNone(t: javax.lang.model.type.NoType, p: P): R
                 }
             }
         }

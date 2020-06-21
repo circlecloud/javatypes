@@ -50,39 +50,39 @@ declare namespace javax {
                     // @ts-ignore
                     directoryOpenButtonMnemonic: number /*int*/
                     // @ts-ignore
-                    saveButtonText: string
+                    saveButtonText: java.lang.String | string
                     // @ts-ignore
-                    openButtonText: string
+                    openButtonText: java.lang.String | string
                     // @ts-ignore
-                    cancelButtonText: string
+                    cancelButtonText: java.lang.String | string
                     // @ts-ignore
-                    updateButtonText: string
+                    updateButtonText: java.lang.String | string
                     // @ts-ignore
-                    helpButtonText: string
+                    helpButtonText: java.lang.String | string
                     /**
                      * The label text displayed on the approve button when a directory
                      * is selected and the current selection mode is FILES_ONLY.
                      * @since 1.4
                      */
                     // @ts-ignore
-                    directoryOpenButtonText: string
+                    directoryOpenButtonText: java.lang.String | string
                     // @ts-ignore
-                    saveButtonToolTipText: string
+                    saveButtonToolTipText: java.lang.String | string
                     // @ts-ignore
-                    openButtonToolTipText: string
+                    openButtonToolTipText: java.lang.String | string
                     // @ts-ignore
-                    cancelButtonToolTipText: string
+                    cancelButtonToolTipText: java.lang.String | string
                     // @ts-ignore
-                    updateButtonToolTipText: string
+                    updateButtonToolTipText: java.lang.String | string
                     // @ts-ignore
-                    helpButtonToolTipText: string
+                    helpButtonToolTipText: java.lang.String | string
                     /**
                      * The tooltip text displayed on the approve button when a directory
                      * is selected and the current selection mode is FILES_ONLY.
                      * @since 1.4
                      */
                     // @ts-ignore
-                    directoryOpenButtonToolTipText: string
+                    directoryOpenButtonToolTipText: java.lang.String | string
                     /**
                      * Creates a {@code BasicFileChooserUI} implementation
                      * for the specified component. By default
@@ -95,15 +95,15 @@ declare namespace javax {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    installComponents(fc: javax.swing.JFileChooser): void
+                    public installComponents(fc: javax.swing.JFileChooser): void
                     // @ts-ignore
-                    uninstallComponents(fc: javax.swing.JFileChooser): void
+                    public uninstallComponents(fc: javax.swing.JFileChooser): void
                     // @ts-ignore
                     installListeners(fc: javax.swing.JFileChooser): void
                     // @ts-ignore
@@ -123,37 +123,37 @@ declare namespace javax {
                     // @ts-ignore
                     createModel(): void
                     // @ts-ignore
-                    getModel(): javax.swing.plaf.basic.BasicDirectoryModel
+                    public getModel(): javax.swing.plaf.basic.BasicDirectoryModel
                     // @ts-ignore
-                    createPropertyChangeListener(fc: javax.swing.JFileChooser): java.beans.PropertyChangeListener
+                    public createPropertyChangeListener(fc: javax.swing.JFileChooser): java.beans.PropertyChangeListener
                     // @ts-ignore
-                    getFileName(): java.lang.String
+                    public getFileName(): string
                     // @ts-ignore
-                    getDirectoryName(): java.lang.String
+                    public getDirectoryName(): string
                     // @ts-ignore
-                    setFileName(filename: string): void
+                    public setFileName(filename: java.lang.String | string): void
                     // @ts-ignore
-                    setDirectoryName(dirname: string): void
+                    public setDirectoryName(dirname: java.lang.String | string): void
                     // @ts-ignore
-                    rescanCurrentDirectory(fc: javax.swing.JFileChooser): void
+                    public rescanCurrentDirectory(fc: javax.swing.JFileChooser): void
                     // @ts-ignore
-                    ensureFileIsVisible(fc: javax.swing.JFileChooser, f: java.io.File): void
+                    public ensureFileIsVisible(fc: javax.swing.JFileChooser, f: java.io.File): void
                     // @ts-ignore
-                    getFileChooser(): javax.swing.JFileChooser
+                    public getFileChooser(): javax.swing.JFileChooser
                     // @ts-ignore
-                    getAccessoryPanel(): javax.swing.JPanel
+                    public getAccessoryPanel(): javax.swing.JPanel
                     // @ts-ignore
                     getApproveButton(fc: javax.swing.JFileChooser): javax.swing.JButton
                     // @ts-ignore
-                    getDefaultButton(fc: javax.swing.JFileChooser): javax.swing.JButton
+                    public getDefaultButton(fc: javax.swing.JFileChooser): javax.swing.JButton
                     // @ts-ignore
-                    getApproveButtonToolTipText(fc: javax.swing.JFileChooser): java.lang.String
+                    public getApproveButtonToolTipText(fc: javax.swing.JFileChooser): string
                     // @ts-ignore
-                    clearIconCache(): void
+                    public clearIconCache(): void
                     // @ts-ignore
-                    createDoubleClickListener(fc: javax.swing.JFileChooser, list: javax.swing.JList): java.awt.event.MouseListener
+                    createDoubleClickListener(fc: javax.swing.JFileChooser, list: javax.swing.JList<any>): java.awt.event.MouseListener
                     // @ts-ignore
-                    createListSelectionListener(fc: javax.swing.JFileChooser): javax.swing.event.ListSelectionListener
+                    public createListSelectionListener(fc: javax.swing.JFileChooser): javax.swing.event.ListSelectionListener
                     /**
                      * Property to remember whether a directory is currently selected in the UI.
                      * @return <code>true</code> iff a directory is currently selected.
@@ -190,30 +190,30 @@ declare namespace javax {
                      * Returns the default accept all file filter
                      */
                     // @ts-ignore
-                    getAcceptAllFileFilter(fc: javax.swing.JFileChooser): javax.swing.filechooser.FileFilter
+                    public getAcceptAllFileFilter(fc: javax.swing.JFileChooser): javax.swing.filechooser.FileFilter
                     // @ts-ignore
-                    getFileView(fc: javax.swing.JFileChooser): javax.swing.filechooser.FileView
+                    public getFileView(fc: javax.swing.JFileChooser): javax.swing.filechooser.FileView
                     /**
                      * Returns the title of this dialog
                      */
                     // @ts-ignore
-                    getDialogTitle(fc: javax.swing.JFileChooser): java.lang.String
+                    public getDialogTitle(fc: javax.swing.JFileChooser): string
                     // @ts-ignore
-                    getApproveButtonMnemonic(fc: javax.swing.JFileChooser): int
+                    public getApproveButtonMnemonic(fc: javax.swing.JFileChooser): number /*int*/
                     // @ts-ignore
-                    getApproveButtonText(fc: javax.swing.JFileChooser): java.lang.String
+                    public getApproveButtonText(fc: javax.swing.JFileChooser): string
                     // @ts-ignore
-                    getNewFolderAction(): javax.swing.Action
+                    public getNewFolderAction(): javax.swing.Action
                     // @ts-ignore
-                    getGoHomeAction(): javax.swing.Action
+                    public getGoHomeAction(): javax.swing.Action
                     // @ts-ignore
-                    getChangeToParentDirectoryAction(): javax.swing.Action
+                    public getChangeToParentDirectoryAction(): javax.swing.Action
                     // @ts-ignore
-                    getApproveSelectionAction(): javax.swing.Action
+                    public getApproveSelectionAction(): javax.swing.Action
                     // @ts-ignore
-                    getCancelSelectionAction(): javax.swing.Action
+                    public getCancelSelectionAction(): javax.swing.Action
                     // @ts-ignore
-                    getUpdateAction(): javax.swing.Action
+                    public getUpdateAction(): javax.swing.Action
                 }
             }
         }

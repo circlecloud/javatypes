@@ -166,7 +166,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            bind(endpoint: java.net.SocketAddress): void
+            public bind(endpoint: java.net.SocketAddress): void
             /**
              * Binds the {@code ServerSocket} to a specific address
              * (IP address and port number).
@@ -192,7 +192,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            bind(endpoint: java.net.SocketAddress, backlog: number /*int*/): void
+            public bind(endpoint: java.net.SocketAddress, backlog: number /*int*/): void
             /**
              * Returns the local address of this server socket.
              * <p>
@@ -210,7 +210,7 @@ declare namespace java {
              * @see SecurityManager#checkConnect
              */
             // @ts-ignore
-            getInetAddress(): java.net.InetAddress
+            public getInetAddress(): java.net.InetAddress
             /**
              * Returns the port number on which this socket is listening.
              * <p>
@@ -221,7 +221,7 @@ declare namespace java {
              *           -1 if the socket is not bound yet.
              */
             // @ts-ignore
-            getLocalPort(): int
+            public getLocalPort(): number /*int*/
             /**
              * Returns the address of the endpoint this socket is bound to.
              * <p>
@@ -246,7 +246,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getLocalSocketAddress(): java.net.SocketAddress
+            public getLocalSocketAddress(): java.net.SocketAddress
             /**
              * Listens for a connection to be made to this socket and accepts
              * it. The method blocks until a connection is made.
@@ -273,7 +273,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            accept(): java.net.Socket
+            public accept(): java.net.Socket
             /**
              * Subclasses of ServerSocket use this method to override accept()
              * to return their own subclass of socket.  So a FooServerSocket
@@ -302,7 +302,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns the unique {@link java.nio.channels.ServerSocketChannel} object
              * associated with this socket, if any.
@@ -317,21 +317,21 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getChannel(): java.nio.channels.ServerSocketChannel
+            public getChannel(): java.nio.channels.ServerSocketChannel
             /**
              * Returns the binding state of the ServerSocket.
              * @return true if the ServerSocket successfully bound to an address
              * @since 1.4
              */
             // @ts-ignore
-            isBound(): boolean
+            public isBound(): boolean
             /**
              * Returns the closed state of the ServerSocket.
              * @return true if the socket has been closed
              * @since 1.4
              */
             // @ts-ignore
-            isClosed(): boolean
+            public isClosed(): boolean
             /**
              * Enable/disable {@link SocketOptions#SO_TIMEOUT SO_TIMEOUT} with the
              * specified timeout, in milliseconds.  With this option set to a non-zero
@@ -349,7 +349,7 @@ declare namespace java {
              * @see #getSoTimeout()
              */
             // @ts-ignore
-            setSoTimeout(timeout: number /*int*/): void
+            public setSoTimeout(timeout: number /*int*/): void
             /**
              * Retrieve setting for {@link SocketOptions#SO_TIMEOUT SO_TIMEOUT}.
              * 0 returns implies that the option is disabled (i.e., timeout of infinity).
@@ -359,7 +359,7 @@ declare namespace java {
              * @see #setSoTimeout(int)
              */
             // @ts-ignore
-            getSoTimeout(): int
+            public getSoTimeout(): number /*int*/
             /**
              * Enable/disable the {@link SocketOptions#SO_REUSEADDR SO_REUSEADDR}
              * socket option.
@@ -396,7 +396,7 @@ declare namespace java {
              * @see #isClosed()
              */
             // @ts-ignore
-            setReuseAddress(on: boolean): void
+            public setReuseAddress(on: boolean): void
             /**
              * Tests if {@link SocketOptions#SO_REUSEADDR SO_REUSEADDR} is enabled.
              * @return a {#code boolean} indicating whether or not
@@ -407,7 +407,7 @@ declare namespace java {
              * @see #setReuseAddress(boolean)
              */
             // @ts-ignore
-            getReuseAddress(): boolean
+            public getReuseAddress(): boolean
             /**
              * Returns the implementation address and implementation port of
              * this socket as a {@code String}.
@@ -421,7 +421,7 @@ declare namespace java {
              * @return a string representation of this socket.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Sets the server socket implementation factory for the
              * application. The factory can be specified only once.
@@ -447,7 +447,7 @@ declare namespace java {
              * @see SecurityManager#checkSetFactory
              */
             // @ts-ignore
-            setSocketFactory(fac: java.net.SocketImplFactory): void
+            public static setSocketFactory(fac: java.net.SocketImplFactory): void
             /**
              * Sets a default proposed value for the
              * {@link SocketOptions#SO_RCVBUF SO_RCVBUF} option for sockets
@@ -481,7 +481,7 @@ declare namespace java {
              * @see #getReceiveBufferSize
              */
             // @ts-ignore
-            setReceiveBufferSize(size: number /*int*/): void
+            public setReceiveBufferSize(size: number /*int*/): void
             /**
              * Gets the value of the {@link SocketOptions#SO_RCVBUF SO_RCVBUF} option
              * for this {@code ServerSocket}, that is the proposed buffer size that
@@ -496,7 +496,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getReceiveBufferSize(): int
+            public getReceiveBufferSize(): number /*int*/
             /**
              * Sets performance preferences for this ServerSocket.
              * <p> Sockets use the TCP/IP protocol by default.  Some implementations
@@ -529,7 +529,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setPerformancePreferences(connectionTime: number /*int*/, latency: number /*int*/, bandwidth: number /*int*/): void
+            public setPerformancePreferences(connectionTime: number /*int*/, latency: number /*int*/, bandwidth: number /*int*/): void
         }
     }
 }

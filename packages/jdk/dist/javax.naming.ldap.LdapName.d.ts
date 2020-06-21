@@ -72,7 +72,7 @@ declare namespace javax {
                  * @see Rdn#escapeValue(Object value)
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Constructs an LDAP name given its parsed RDN components.
                  * <p>
@@ -81,20 +81,20 @@ declare namespace javax {
                  * @param rdns The non-null list of <tt>Rdn</tt>s forming this LDAP name.
                  */
                 // @ts-ignore
-                constructor(rdns: Array<javax.naming.ldap.Rdn>)
+                constructor(rdns: java.util.List<javax.naming.ldap.Rdn> | Array<javax.naming.ldap.Rdn>)
                 /**
                  * Retrieves the number of components in this LDAP name.
                  * @return The non-negative number of components in this LDAP name.
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Determines whether this LDAP name is empty.
                  * An empty name is one with zero components.
                  * @return true if this LDAP name is empty, false otherwise.
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Retrieves the components of this name as an enumeration
                  * of strings. The effect of updates to this name on this enumeration
@@ -107,7 +107,7 @@ declare namespace javax {
                  *  Each element of the enumeration is of class String.
                  */
                 // @ts-ignore
-                getAll(): java.util.Enumeration<java.lang.String>
+                public getAll(): java.util.Enumeration<java.lang.String | string>
                 /**
                  * Retrieves a component of this LDAP name as a string.
                  * @param posn The 0-based index of the component to retrieve.
@@ -117,7 +117,7 @@ declare namespace javax {
                  *           specified range.
                  */
                 // @ts-ignore
-                get(posn: number /*int*/): java.lang.String
+                public get(posn: number /*int*/): string
                 /**
                  * Retrieves an RDN of this LDAP name as an Rdn.
                  * @param posn The 0-based index of the RDN to retrieve.
@@ -127,7 +127,7 @@ declare namespace javax {
                  *             specified range.
                  */
                 // @ts-ignore
-                getRdn(posn: number /*int*/): javax.naming.ldap.Rdn
+                public getRdn(posn: number /*int*/): javax.naming.ldap.Rdn
                 /**
                  * Creates a name whose components consist of a prefix of the
                  * components of this LDAP name.
@@ -142,7 +142,7 @@ declare namespace javax {
                  *               If posn is outside the specified range.
                  */
                 // @ts-ignore
-                getPrefix(posn: number /*int*/): javax.naming.Name
+                public getPrefix(posn: number /*int*/): javax.naming.Name
                 /**
                  * Creates a name whose components consist of a suffix of the
                  * components in this LDAP name.
@@ -158,7 +158,7 @@ declare namespace javax {
                  *           If posn is outside the specified range.
                  */
                 // @ts-ignore
-                getSuffix(posn: number /*int*/): javax.naming.Name
+                public getSuffix(posn: number /*int*/): javax.naming.Name
                 /**
                  * Determines whether this LDAP name starts with a specified LDAP name
                  * prefix.
@@ -172,7 +172,7 @@ declare namespace javax {
                  * @see #getPrefix(int posn)
                  */
                 // @ts-ignore
-                startsWith(n: javax.naming.Name): boolean
+                public startsWith(n: javax.naming.Name): boolean
                 /**
                  * Determines whether the specified RDN sequence forms a prefix of this
                  * LDAP name.  Returns true if this LdapName is at least as long as rdns,
@@ -184,7 +184,7 @@ declare namespace javax {
                  *           false otherwise.
                  */
                 // @ts-ignore
-                startsWith(rdns: Array<javax.naming.ldap.Rdn>): boolean
+                public startsWith(rdns: java.util.List<javax.naming.ldap.Rdn> | Array<javax.naming.ldap.Rdn>): boolean
                 /**
                  * Determines whether this LDAP name ends with a specified
                  * LDAP name suffix.
@@ -197,7 +197,7 @@ declare namespace javax {
                  * @see #getSuffix(int posn)
                  */
                 // @ts-ignore
-                endsWith(n: javax.naming.Name): boolean
+                public endsWith(n: javax.naming.Name): boolean
                 /**
                  * Determines whether the specified RDN sequence forms a suffix of this
                  * LDAP name.  Returns true if this LdapName is at least as long as rdns,
@@ -209,7 +209,7 @@ declare namespace javax {
                  *           false otherwise.
                  */
                 // @ts-ignore
-                endsWith(rdns: Array<javax.naming.ldap.Rdn>): boolean
+                public endsWith(rdns: java.util.List<javax.naming.ldap.Rdn> | Array<javax.naming.ldap.Rdn>): boolean
                 /**
                  * Adds the components of a name -- in order -- to the end of this name.
                  * @param suffix The non-null components to add.
@@ -219,14 +219,14 @@ declare namespace javax {
                  *           syntax rules of this LDAP name.
                  */
                 // @ts-ignore
-                addAll(suffix: javax.naming.Name): javax.naming.Name
+                public addAll(suffix: javax.naming.Name): javax.naming.Name
                 /**
                  * Adds the RDNs of a name -- in order -- to the end of this name.
                  * @param suffixRdns The non-null suffix <tt>Rdn</tt>s to add.
                  * @return The updated name (not a new instance).
                  */
                 // @ts-ignore
-                addAll(suffixRdns: Array<javax.naming.ldap.Rdn>): javax.naming.Name
+                public addAll(suffixRdns: java.util.List<javax.naming.ldap.Rdn> | Array<javax.naming.ldap.Rdn>): javax.naming.Name
                 /**
                  * Adds the components of a name -- in order -- at a specified position
                  * within this name. Components of this LDAP name at or after the
@@ -243,7 +243,7 @@ declare namespace javax {
                  *           If posn is outside the specified range.
                  */
                 // @ts-ignore
-                addAll(posn: number /*int*/, suffix: javax.naming.Name): javax.naming.Name
+                public addAll(posn: number /*int*/, suffix: javax.naming.Name): javax.naming.Name
                 /**
                  * Adds the RDNs of a name -- in order -- at a specified position
                  * within this name. RDNs of this LDAP name at or after the
@@ -257,7 +257,7 @@ declare namespace javax {
                  *           If posn is outside the specified range.
                  */
                 // @ts-ignore
-                addAll(posn: number /*int*/, suffixRdns: Array<javax.naming.ldap.Rdn>): javax.naming.Name
+                public addAll(posn: number /*int*/, suffixRdns: java.util.List<javax.naming.ldap.Rdn> | Array<javax.naming.ldap.Rdn>): javax.naming.Name
                 /**
                  * Adds a single component to the end of this LDAP name.
                  * @param comp      The non-null component to add.
@@ -267,7 +267,7 @@ declare namespace javax {
                  *                   would violate the name's syntax.
                  */
                 // @ts-ignore
-                add(comp: string): javax.naming.Name
+                public add(comp: java.lang.String | string): javax.naming.Name
                 /**
                  * Adds a single RDN to the end of this LDAP name.
                  * @param comp      The non-null RDN to add.
@@ -275,7 +275,7 @@ declare namespace javax {
                  *                   Cannot be null.
                  */
                 // @ts-ignore
-                add(comp: javax.naming.ldap.Rdn): javax.naming.Name
+                public add(comp: javax.naming.ldap.Rdn): javax.naming.Name
                 /**
                  * Adds a single component at a specified position within this
                  * LDAP name.
@@ -293,7 +293,7 @@ declare namespace javax {
                  *                   specified position would violate the name's syntax.
                  */
                 // @ts-ignore
-                add(posn: number /*int*/, comp: string): javax.naming.Name
+                public add(posn: number /*int*/, comp: java.lang.String | string): javax.naming.Name
                 /**
                  * Adds a single RDN at a specified position within this
                  * LDAP name.
@@ -309,7 +309,7 @@ declare namespace javax {
                  *                   If posn is outside the specified range.
                  */
                 // @ts-ignore
-                add(posn: number /*int*/, comp: javax.naming.ldap.Rdn): javax.naming.Name
+                public add(posn: number /*int*/, comp: javax.naming.ldap.Rdn): javax.naming.Name
                 /**
                  * Removes a component from this LDAP name.
                  * The component of this name at the specified position is removed.
@@ -324,7 +324,7 @@ declare namespace javax {
                  *                   would violate the syntax rules of the name.
                  */
                 // @ts-ignore
-                remove(posn: number /*int*/): java.lang.Object
+                public remove(posn: number /*int*/): any
                 /**
                  * Retrieves the list of relative distinguished names.
                  * The contents of the list are unmodifiable.
@@ -335,7 +335,7 @@ declare namespace javax {
                  *           the class {#link Rdn Rdn}.
                  */
                 // @ts-ignore
-                getRdns(): java.util.List<javax.naming.ldap.Rdn>
+                public getRdns(): Array<javax.naming.ldap.Rdn>
                 /**
                  * Generates a new copy of this name.
                  * Subsequent changes to the components of this name will not
@@ -343,7 +343,7 @@ declare namespace javax {
                  * @return A copy of the this LDAP name.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a string representation of this LDAP name in a format
                  * defined by <a href="http://www.ietf.org/rfc/rfc2253.txt">RFC 2253</a>
@@ -352,7 +352,7 @@ declare namespace javax {
                  * @return The string representation of the LdapName.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Determines whether two LDAP names are equal.
                  * If obj is null or not an LDAP name, false is returned.
@@ -369,7 +369,7 @@ declare namespace javax {
                  * @see #hashCode
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Compares this LdapName with the specified Object for order.
                  * Returns a negative integer, zero, or a positive integer as this
@@ -395,7 +395,7 @@ declare namespace javax {
                  * @exception ClassCastException if obj is null or not a LdapName.
                  */
                 // @ts-ignore
-                compareTo(obj: any): int
+                public compareTo(obj: java.lang.Object | any): number /*int*/
                 /**
                  * Computes the hash code of this LDAP name.
                  * The hash code is the sum of the hash codes of individual RDNs
@@ -404,7 +404,7 @@ declare namespace javax {
                  * @see #equals
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

@@ -29,13 +29,13 @@ declare namespace org {
                      *      none
                      */
                     // @ts-ignore
-                    getStoredEnchantLevel(ench: org.bukkit.enchantments.Enchantment): int
+                    getStoredEnchantLevel(ench: org.bukkit.enchantments.Enchantment): number /*int*/
                     /**
                      * Gets a copy the stored enchantments in this ItemMeta.
                      * @return An immutable copy of the stored enchantments
                      */
                     // @ts-ignore
-                    getStoredEnchants(): java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer>
+                    getStoredEnchants(): java.util.Map<org.bukkit.enchantments.Enchantment, java.lang.Integer | number>
                     /**
                      * Stores the specified enchantment in this item meta.
                      * @param ench Enchantment to store

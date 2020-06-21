@@ -9,7 +9,7 @@ declare namespace org {
                  * @since 5.2
                  */
                 // @ts-ignore
-                class MergedAnnotationCollectors extends java.lang.Object {
+                abstract class MergedAnnotationCollectors extends java.lang.Object {
                     /**
                      * Create a new {@link Collector} that accumulates merged annotations to a
                      * {@link LinkedHashSet} containing {@linkplain MergedAnnotation#synthesize()
@@ -19,7 +19,7 @@ declare namespace org {
                      *  annotations into a {@link Set}
                      */
                     // @ts-ignore
-                    toAnnotationSet<A extends java.lang.annotation.Annotation>(): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, ?, java.util.Set<A>>
+                    public static toAnnotationSet<A extends java.lang.annotation.Annotation>(): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, any, java.util.Set<A> | Array<A>>
                     /**
                      * Create a new {@link Collector} that accumulates merged annotations to an
                      * {@link Annotation} array containing {@linkplain MergedAnnotation#synthesize()
@@ -30,7 +30,7 @@ declare namespace org {
                      * @see #toAnnotationArray(IntFunction)
                      */
                     // @ts-ignore
-                    toAnnotationArray<A extends java.lang.annotation.Annotation>(): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, ?, java.lang.annotation.Annotation[]>
+                    public static toAnnotationArray<A extends java.lang.annotation.Annotation>(): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, any, java.lang.annotation.Annotation[]>
                     /**
                      * Create a new {@link Collector} that accumulates merged annotations to an
                      * {@link Annotation} array containing {@linkplain MergedAnnotation#synthesize()
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see #toAnnotationArray
                      */
                     // @ts-ignore
-                    toAnnotationArray<R extends java.lang.annotation.Annotation, A extends R>(generator: java.util.function.IntFunction<R[]> | java.util.function$.IntFunction<R[]>): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, ?, R[]>
+                    public static toAnnotationArray<R extends java.lang.annotation.Annotation, A extends R>(generator: java.util.function$.IntFunction<R[]>): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, any, R[]>
                     /**
                      * Create a new {@link Collector} that accumulates merged annotations to an
                      * {@link MultiValueMap} with items {@linkplain MultiValueMap#add(Object, Object)
@@ -57,7 +57,7 @@ declare namespace org {
                      * @see #toMultiValueMap(Function, MergedAnnotation.Adapt...)
                      */
                     // @ts-ignore
-                    toMultiValueMap<A extends java.lang.annotation.Annotation>(...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, ?, org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>>
+                    public static toMultiValueMap<A extends java.lang.annotation.Annotation>(...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, any, org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>>
                     /**
                      * Create a new {@link Collector} that accumulates merged annotations to an
                      * {@link MultiValueMap} with items {@linkplain MultiValueMap#add(Object, Object)
@@ -71,7 +71,7 @@ declare namespace org {
                      * @see #toMultiValueMap(MergedAnnotation.Adapt...)
                      */
                     // @ts-ignore
-                    toMultiValueMap<A extends java.lang.annotation.Annotation>(finisher: java.util.function.Function<org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>, org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>> | java.util.function$.Function<org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>, org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>>, ...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, ?, org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>>
+                    public static toMultiValueMap<A extends java.lang.annotation.Annotation>(finisher: java.util.function$.Function<org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>, org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>>, ...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): java.util.stream.Collector<org.springframework.core.annotation.MergedAnnotation<A>, any, org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>>
                 }
             }
         }

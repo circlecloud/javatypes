@@ -21,14 +21,14 @@ declare namespace javax {
              * @param message the detail message.
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs a new throwable with the specified cause.
              * @param cause a chained exception of type
              *  <code>Throwable</code>.
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a new throwable with the specified detail message and cause.
              * @param message the detail message.
@@ -36,7 +36,7 @@ declare namespace javax {
              *  <code>Throwable</code>.
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
         }
     }
 }

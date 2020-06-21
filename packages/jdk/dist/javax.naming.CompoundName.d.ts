@@ -123,7 +123,7 @@ declare namespace javax {
              *                  contents of properties.
              */
             // @ts-ignore
-            constructor(comps: java.util.Enumeration<java.lang.String>, syntax: java.util.Properties)
+            constructor(comps: java.util.Enumeration<java.lang.String | string>, syntax: java.util.Properties)
             /**
              * Constructs a new compound name instance by parsing the string n
              * using the syntax specified by the syntax properties supplied.
@@ -135,7 +135,7 @@ declare namespace javax {
              *                  by <code>syntax</code>.
              */
             // @ts-ignore
-            constructor(n: string, syntax: java.util.Properties)
+            constructor(n: java.lang.String | string, syntax: java.util.Properties)
             /**
              * Implementation of this compound name.
              * This field is initialized by the constructors and cannot be null.
@@ -163,7 +163,7 @@ declare namespace javax {
              * @return A non-null string representation of this compound name.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Determines whether obj is syntactically equal to this compound name.
              * If obj is null or not a CompoundName, false is returned.
@@ -187,7 +187,7 @@ declare namespace javax {
              * @see #compareTo(java.lang.Object obj)
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Computes the hash code of this compound name.
              * The hash code is the sum of the hash codes of the "canonicalized"
@@ -199,7 +199,7 @@ declare namespace javax {
              * @return An int representing the hash code of this name.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Creates a copy of this compound name.
              * Changes to the components of this compound name won't
@@ -208,7 +208,7 @@ declare namespace javax {
              * @return A non-null copy of this compound name.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Compares this CompoundName with the specified Object for order.
              * Returns a
@@ -241,20 +241,20 @@ declare namespace javax {
              * @see #equals(java.lang.Object)
              */
             // @ts-ignore
-            compareTo(obj: any): int
+            public compareTo(obj: java.lang.Object | any): number /*int*/
             /**
              * Retrieves the number of components in this compound name.
              * @return The nonnegative number of components in this compound name.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Determines whether this compound name is empty.
              * A compound name is empty if it has zero components.
              * @return true if this compound name is empty, false otherwise.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Retrieves the components of this compound name as an enumeration
              * of strings.
@@ -264,7 +264,7 @@ declare namespace javax {
              *  compound name. Each element of the enumeration is of class String.
              */
             // @ts-ignore
-            getAll(): java.util.Enumeration<java.lang.String>
+            public getAll(): java.util.Enumeration<java.lang.String | string>
             /**
              * Retrieves a component of this compound name.
              * @param posn    The 0-based index of the component to retrieve.
@@ -274,7 +274,7 @@ declare namespace javax {
              *          specified range.
              */
             // @ts-ignore
-            get(posn: number /*int*/): java.lang.String
+            public get(posn: number /*int*/): string
             /**
              * Creates a compound name whose components consist of a prefix of the
              * components in this compound name.
@@ -290,7 +290,7 @@ declare namespace javax {
              *          If posn is outside the specified range.
              */
             // @ts-ignore
-            getPrefix(posn: number /*int*/): javax.naming.Name
+            public getPrefix(posn: number /*int*/): javax.naming.Name
             /**
              * Creates a compound name whose components consist of a suffix of the
              * components in this compound name.
@@ -306,7 +306,7 @@ declare namespace javax {
              *          If posn is outside the specified range.
              */
             // @ts-ignore
-            getSuffix(posn: number /*int*/): javax.naming.Name
+            public getSuffix(posn: number /*int*/): javax.naming.Name
             /**
              * Determines whether a compound name is a prefix of this compound name.
              * A compound name 'n' is a prefix if it is equal to
@@ -321,7 +321,7 @@ declare namespace javax {
              *                  is a prefix of this compound name, false otherwise.
              */
             // @ts-ignore
-            startsWith(n: javax.naming.Name): boolean
+            public startsWith(n: javax.naming.Name): boolean
             /**
              * Determines whether a compound name is a suffix of this compound name.
              * A compound name 'n' is a suffix if it it is equal to
@@ -336,7 +336,7 @@ declare namespace javax {
              *          is a suffix of this compound name, false otherwise.
              */
             // @ts-ignore
-            endsWith(n: javax.naming.Name): boolean
+            public endsWith(n: javax.naming.Name): boolean
             /**
              * Adds the components of a compound name -- in order -- to the end of
              * this compound name.
@@ -350,7 +350,7 @@ declare namespace javax {
              *             of this compound name (e.g. exceeding number of components).
              */
             // @ts-ignore
-            addAll(suffix: javax.naming.Name): javax.naming.Name
+            public addAll(suffix: javax.naming.Name): javax.naming.Name
             /**
              * Adds the components of a compound name -- in order -- at a specified
              * position within this compound name.
@@ -371,7 +371,7 @@ declare namespace javax {
              *             of this compound name (e.g. exceeding number of components).
              */
             // @ts-ignore
-            addAll(posn: number /*int*/, n: javax.naming.Name): javax.naming.Name
+            public addAll(posn: number /*int*/, n: javax.naming.Name): javax.naming.Name
             /**
              * Adds a single component to the end of this compound name.
              * @param comp     The non-null component to add.
@@ -380,7 +380,7 @@ declare namespace javax {
              *                          would violate the compound name's syntax.
              */
             // @ts-ignore
-            add(comp: string): javax.naming.Name
+            public add(comp: java.lang.String | string): javax.naming.Name
             /**
              * Adds a single component at a specified position within this
              * compound name.
@@ -397,7 +397,7 @@ declare namespace javax {
              *                          would violate the compound name's syntax.
              */
             // @ts-ignore
-            add(posn: number /*int*/, comp: string): javax.naming.Name
+            public add(posn: number /*int*/, comp: java.lang.String | string): javax.naming.Name
             /**
              * Deletes a component from this compound name.
              * The component of this compound name at position 'posn' is removed,
@@ -413,7 +413,7 @@ declare namespace javax {
              *                          would violate the compound name's syntax.
              */
             // @ts-ignore
-            remove(posn: number /*int*/): java.lang.Object
+            public remove(posn: number /*int*/): any
         }
     }
 }

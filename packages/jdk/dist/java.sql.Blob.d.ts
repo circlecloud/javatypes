@@ -40,7 +40,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            length(): long
+            length(): number /*long*/
             /**
              * Retrieves all or part of the <code>BLOB</code>
              * value that this <code>Blob</code> object represents, as an array of
@@ -64,7 +64,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBytes(pos: number /*long*/, length: number /*int*/): byte[]
+            getBytes(pos: number /*long*/, length: number /*int*/): number /*byte*/[]
             /**
              * Retrieves the <code>BLOB</code> value designated by this
              * <code>Blob</code> instance as a stream.
@@ -95,7 +95,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            position(pattern: number /*byte*/[], start: number /*long*/): long
+            position(pattern: number /*byte*/[], start: number /*long*/): number /*long*/
             /**
              * Retrieves the byte position in the <code>BLOB</code> value
              * designated by this <code>Blob</code> object at which
@@ -113,7 +113,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            position(pattern: java.sql.Blob, start: number /*long*/): long
+            position(pattern: java.sql.Blob, start: number /*long*/): number /*long*/
             /**
              * Writes the given array of bytes to the <code>BLOB</code> value that
              * this <code>Blob</code> object represents, starting at position
@@ -142,7 +142,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setBytes(pos: number /*long*/, bytes: number /*byte*/[]): int
+            setBytes(pos: number /*long*/, bytes: number /*byte*/[]): number /*int*/
             /**
              * Writes all or part of the given <code>byte</code> array to the
              * <code>BLOB</code> value that this <code>Blob</code> object represents
@@ -177,7 +177,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setBytes(pos: number /*long*/, bytes: number /*byte*/[], offset: number /*int*/, len: number /*int*/): int
+            setBytes(pos: number /*long*/, bytes: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Retrieves a stream that can be used to write to the <code>BLOB</code>
              * value that this <code>Blob</code> object represents.  The stream begins

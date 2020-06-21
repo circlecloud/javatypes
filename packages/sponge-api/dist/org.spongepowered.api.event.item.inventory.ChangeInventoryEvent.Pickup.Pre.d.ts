@@ -26,7 +26,7 @@ declare namespace org {
                                      * @return The custom set list
                                      */
                                     // @ts-ignore
-                                    getCustom(): java.util.Optional<java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
+                                    getCustom(): java.util.Optional<java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot> | Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>>
                                     /**
                                      * Sets the items to add to the inventory.
                                      * <p>If all items do not fit the inventory this event will be
@@ -34,7 +34,7 @@ declare namespace org {
                                      * @param items The items to add to the inventory
                                      */
                                     // @ts-ignore
-                                    setCustom(items: Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>): void
+                                    setCustom(items: java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot> | Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>): void
                                     /**
                                      * Returns the proposed final list of items to add to the inventory.
                                      * <p>If a custom list was set all items have to fit the inventory
@@ -42,7 +42,7 @@ declare namespace org {
                                      * @return The proposed final list
                                      */
                                     // @ts-ignore
-                                    getFinal(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                                    getFinal(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                                 }
                             }
                         }

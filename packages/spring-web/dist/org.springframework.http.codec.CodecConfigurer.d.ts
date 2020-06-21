@@ -58,12 +58,12 @@ declare namespace org {
                      * Obtain the configured HTTP message readers.
                      */
                     // @ts-ignore
-                    getReaders(): java.util.List<org.springframework.http.codec.HttpMessageReader<?>>
+                    getReaders(): Array<org.springframework.http.codec.HttpMessageReader<any>>
                     /**
                      * Obtain the configured HTTP message writers.
                      */
                     // @ts-ignore
-                    getWriters(): java.util.List<org.springframework.http.codec.HttpMessageWriter<?>>
+                    getWriters(): Array<org.springframework.http.codec.HttpMessageWriter<any>>
                     /**
                      * Create a copy of this {@link CodecConfigurer}. The returned clone has its
                      * own lists of default and custom codecs and generally can be configured

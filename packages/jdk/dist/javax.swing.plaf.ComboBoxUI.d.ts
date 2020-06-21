@@ -7,24 +7,24 @@ declare namespace javax {
              * @author Tom Santos
              */
             // @ts-ignore
-            class ComboBoxUI extends javax.swing.plaf.ComponentUI {
+            abstract class ComboBoxUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
                 /**
                  * Set the visibility of the popup
                  */
                 // @ts-ignore
-                abstract setPopupVisible(c: javax.swing.JComboBox, v: boolean): void
+                public abstract setPopupVisible(c: javax.swing.JComboBox<any>, v: boolean): void
                 /**
                  * Determine the visibility of the popup
                  */
                 // @ts-ignore
-                abstract isPopupVisible(c: javax.swing.JComboBox): boolean
+                public abstract isPopupVisible(c: javax.swing.JComboBox<any>): boolean
                 /**
                  * Determine whether or not the combo box itself is traversable
                  */
                 // @ts-ignore
-                abstract isFocusTraversable(c: javax.swing.JComboBox): boolean
+                public abstract isFocusTraversable(c: javax.swing.JComboBox<any>): boolean
             }
         }
     }

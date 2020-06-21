@@ -22,13 +22,13 @@ declare namespace org {
                      * Prefix for ApplicationContext ids that refer to context path and/or servlet name.
                      */
                     // @ts-ignore
-                    
+                    readonly APPLICATION_CONTEXT_ID_PREFIX: java.lang.String | string
                     /**
                      * Name of the ServletConfig environment bean in the factory.
                      * @see javax.servlet.ServletConfig
                      */
                     // @ts-ignore
-                    
+                    readonly SERVLET_CONFIG_BEAN_NAME: java.lang.String | string
                     /**
                      * Set the ServletContext for this web application context.
                      * <p>Does not cause an initialization of the context: refresh needs to be
@@ -55,12 +55,12 @@ declare namespace org {
                      * The root web application context does not have a namespace.
                      */
                     // @ts-ignore
-                    setNamespace(namespace: string): void
+                    setNamespace(namespace: java.lang.String | string): void
                     /**
                      * Return the namespace for this web application context, if any.
                      */
                     // @ts-ignore
-                    getNamespace(): java.lang.String
+                    getNamespace(): string
                     /**
                      * Set the config locations for this web application context in init-param style,
                      * i.e. with distinct locations separated by commas, semicolons or whitespace.
@@ -68,20 +68,20 @@ declare namespace org {
                      * given namespace or the root web application context, as appropriate.
                      */
                     // @ts-ignore
-                    setConfigLocation(configLocation: string): void
+                    setConfigLocation(configLocation: java.lang.String | string): void
                     /**
                      * Set the config locations for this web application context.
                      * <p>If not set, the implementation is supposed to use a default for the
                      * given namespace or the root web application context, as appropriate.
                      */
                     // @ts-ignore
-                    setConfigLocations(...configLocations: string[]): void
+                    setConfigLocations(...configLocations: java.lang.String[] | string[]): void
                     /**
                      * Return the config locations for this web application context,
                      * or {@code null} if none specified.
                      */
                     // @ts-ignore
-                    getConfigLocations(): java.lang.String[]
+                    getConfigLocations(): string[]
                 }
             }
         }

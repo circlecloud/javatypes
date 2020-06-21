@@ -64,31 +64,31 @@ declare namespace javax {
                 // @ts-ignore
                 class NimbusStyle extends javax.swing.plaf.synth.SynthStyle {
                     // @ts-ignore
-                    readonly LARGE_KEY: string
+                    public static readonly LARGE_KEY: java.lang.String | string
                     // @ts-ignore
-                    readonly SMALL_KEY: string
+                    public static readonly SMALL_KEY: java.lang.String | string
                     // @ts-ignore
-                    readonly MINI_KEY: string
+                    public static readonly MINI_KEY: java.lang.String | string
                     // @ts-ignore
-                    readonly LARGE_SCALE: number /*double*/
+                    public static readonly LARGE_SCALE: number /*double*/
                     // @ts-ignore
-                    readonly SMALL_SCALE: number /*double*/
+                    public static readonly SMALL_SCALE: number /*double*/
                     // @ts-ignore
-                    readonly MINI_SCALE: number /*double*/
+                    public static readonly MINI_SCALE: number /*double*/
                     /**
                      * {@inheritDoc}
                      * Overridden to cause this style to populate itself with data from
                      * UIDefaults, if necessary.
                      */
                     // @ts-ignore
-                    installDefaults(ctx: javax.swing.plaf.synth.SynthContext): void
+                    public installDefaults(ctx: javax.swing.plaf.synth.SynthContext): void
                     /**
                      * {@inheritDoc}
                      * Overridden to cause this style to populate itself with data from
                      * UIDefaults, if necessary.
                      */
                     // @ts-ignore
-                    getInsets(ctx: javax.swing.plaf.synth.SynthContext, input: java.awt.Insets): java.awt.Insets
+                    public getInsets(ctx: javax.swing.plaf.synth.SynthContext, input: java.awt.Insets): java.awt.Insets
                     /**
                      * {@inheritDoc}
                      * <p>Overridden to cause this style to populate itself with data from
@@ -123,7 +123,7 @@ declare namespace javax {
                      * the Painters installed in this style.
                      */
                     // @ts-ignore
-                    getPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.plaf.synth.SynthPainter
+                    public getPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.plaf.synth.SynthPainter
                     /**
                      * {@inheritDoc}
                      * Overridden to cause this style to populate itself with data from
@@ -131,7 +131,7 @@ declare namespace javax {
                      * then it defaults to being non-opaque.
                      */
                     // @ts-ignore
-                    isOpaque(ctx: javax.swing.plaf.synth.SynthContext): boolean
+                    public isOpaque(ctx: javax.swing.plaf.synth.SynthContext): boolean
                     /**
                      * {@inheritDoc}
                      * <p>Overridden to cause this style to populate itself with data from
@@ -160,7 +160,7 @@ declare namespace javax {
                      * @param key must not be null
                      */
                     // @ts-ignore
-                    get(ctx: javax.swing.plaf.synth.SynthContext, key: any): java.lang.Object
+                    public get(ctx: javax.swing.plaf.synth.SynthContext, key: java.lang.Object | any): any
                     /**
                      * Gets the appropriate background Painter, if there is one, for the state
                      * specified in the given SynthContext. This method does appropriate
@@ -170,7 +170,7 @@ declare namespace javax {
                      *  none could be found.
                      */
                     // @ts-ignore
-                    getBackgroundPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.Painter
+                    public getBackgroundPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.Painter<any>
                     /**
                      * Gets the appropriate foreground Painter, if there is one, for the state
                      * specified in the given SynthContext. This method does appropriate
@@ -180,7 +180,7 @@ declare namespace javax {
                      *  none could be found.
                      */
                     // @ts-ignore
-                    getForegroundPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.Painter
+                    public getForegroundPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.Painter<any>
                     /**
                      * Gets the appropriate border Painter, if there is one, for the state
                      * specified in the given SynthContext. This method does appropriate
@@ -190,7 +190,7 @@ declare namespace javax {
                      *  none could be found.
                      */
                     // @ts-ignore
-                    getBorderPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.Painter
+                    public getBorderPainter(ctx: javax.swing.plaf.synth.SynthContext): javax.swing.Painter<any>
                 }
             }
         }

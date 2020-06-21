@@ -22,14 +22,14 @@ declare namespace javax {
                      * Gets the normalized value of this attribute
                      */
                     // @ts-ignore
-                    getValue(): java.lang.String
+                    getValue(): string
                     /**
                      * Gets the type of this attribute, default is
                      * the String "CDATA"
                      * @return the type as a String, default is "CDATA"
                      */
                     // @ts-ignore
-                    getDTDType(): java.lang.String
+                    getDTDType(): string
                     /**
                      * A flag indicating whether this attribute was actually
                      * specified in the start-tag of its element, or was defaulted from the schema.

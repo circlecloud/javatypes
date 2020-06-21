@@ -41,7 +41,7 @@ declare namespace java {
              * @see java.lang.SecurityManager#checkWrite(java.lang.String)
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a file output stream to write to the file with the specified
              * name.  If the second argument is <code>true</code>, then
@@ -68,7 +68,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(name: string, append: boolean)
+            constructor(name: java.lang.String | string, append: boolean)
             /**
              * Creates a file output stream to write to the file represented by
              * the specified <code>File</code> object. A new
@@ -156,7 +156,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>b.length</code> bytes from the specified byte array
              * to this file output stream.
@@ -164,7 +164,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*byte*/[]): void
+            public write(b: number /*byte*/[]): void
             /**
              * Writes <code>len</code> bytes from the specified byte array
              * starting at offset <code>off</code> to this file output stream.
@@ -174,7 +174,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Closes this file output stream and releases any system resources
              * associated with this stream. This file output stream may no longer
@@ -186,7 +186,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns the file descriptor associated with this stream.
              * @return the <code>FileDescriptor</code> object that represents
@@ -196,7 +196,7 @@ declare namespace java {
              * @see java.io.FileDescriptor
              */
             // @ts-ignore
-            getFD(): java.io.FileDescriptor
+            public getFD(): java.io.FileDescriptor
             /**
              * Returns the unique {@link java.nio.channels.FileChannel FileChannel}
              * object associated with this file output stream.
@@ -212,7 +212,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getChannel(): java.nio.channels.FileChannel
+            public getChannel(): java.nio.channels.FileChannel
             /**
              * Cleans up the connection to the file, and ensures that the
              * <code>close</code> method of this file output stream is

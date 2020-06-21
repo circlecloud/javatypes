@@ -5,17 +5,17 @@ declare namespace org {
              * Represents a Command, which executes various tasks upon user input
              */
             // @ts-ignore
-            class Command extends java.lang.Object {
+            abstract class Command extends java.lang.Object {
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 // @ts-ignore
-                constructor(name: string, description: string, usageMessage: string, aliases: Array<java.lang.String>)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, usageMessage: java.lang.String | string, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>)
                 // @ts-ignore
-                description: string
+                description: java.lang.String | string
                 // @ts-ignore
-                usageMessage: string
+                usageMessage: java.lang.String | string
                 // @ts-ignore
-                timings: org.spigotmc.CustomTimingsHandler
+                public timings: org.spigotmc.CustomTimingsHandler
                 /**
                  * Executes the command, returning its success
                  * @param sender Source object which is executing this command
@@ -24,7 +24,7 @@ declare namespace org {
                  * @return true if the command was successful, otherwise false
                  */
                 // @ts-ignore
-                abstract execute(sender: org.bukkit.command.CommandSender, commandLabel: string, args: string[]): boolean
+                public abstract execute(sender: org.bukkit.command.CommandSender, commandLabel: java.lang.String | string, args: java.lang.String[] | string[]): boolean
                 /**
                  * Executed on tab completion for this command, returning a list of
                  * options the player can tab through.
@@ -36,7 +36,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if sender, alias, or args is null
                  */
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, alias: string, args: string[]): java.util.List<java.lang.String>
+                public tabComplete(sender: org.bukkit.command.CommandSender, alias: java.lang.String | string, args: java.lang.String[] | string[]): Array<java.lang.String | string>
                 /**
                  * Executed on tab completion for this command, returning a list of
                  * options the player can tab through.
@@ -49,13 +49,13 @@ declare namespace org {
                  * @throws IllegalArgumentException if sender, alias, or args is null
                  */
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, alias: string, args: string[], location: org.bukkit.Location): java.util.List<java.lang.String>
+                public tabComplete(sender: org.bukkit.command.CommandSender, alias: java.lang.String | string, args: java.lang.String[] | string[], location: org.bukkit.Location): Array<java.lang.String | string>
                 /**
                  * Returns the name of this command
                  * @return Name of this command
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Sets the name of this command.
                  * <p>
@@ -67,21 +67,21 @@ declare namespace org {
                  *      the command was already registered
                  */
                 // @ts-ignore
-                setName(name: string): boolean
+                public setName(name: java.lang.String | string): boolean
                 /**
                  * Gets the permission required by users to be able to perform this
                  * command
                  * @return Permission name, or null if none
                  */
                 // @ts-ignore
-                getPermission(): java.lang.String
+                public getPermission(): string
                 /**
                  * Sets the permission required by users to be able to perform this
                  * command
                  * @param permission Permission name or null
                  */
                 // @ts-ignore
-                setPermission(permission: string): void
+                public setPermission(permission: java.lang.String | string): void
                 /**
                  * Tests the given {@link CommandSender} to see if they can perform this
                  * command.
@@ -92,7 +92,7 @@ declare namespace org {
                  * @return true if they can use it, otherwise false
                  */
                 // @ts-ignore
-                testPermission(target: org.bukkit.command.CommandSender): boolean
+                public testPermission(target: org.bukkit.command.CommandSender): boolean
                 /**
                  * Tests the given {@link CommandSender} to see if they can perform this
                  * command.
@@ -102,13 +102,13 @@ declare namespace org {
                  * @return true if they can use it, otherwise false
                  */
                 // @ts-ignore
-                testPermissionSilent(target: org.bukkit.command.CommandSender): boolean
+                public testPermissionSilent(target: org.bukkit.command.CommandSender): boolean
                 /**
                  * Returns the label for this command
                  * @return Label of this command
                  */
                 // @ts-ignore
-                getLabel(): java.lang.String
+                public getLabel(): string
                 /**
                  * Sets the label of this command.
                  * <p>
@@ -120,7 +120,7 @@ declare namespace org {
                  *      the command was already registered
                  */
                 // @ts-ignore
-                setLabel(name: string): boolean
+                public setLabel(name: java.lang.String | string): boolean
                 /**
                  * Registers this command to a CommandMap.
                  * Once called it only allows changes the registered CommandMap
@@ -129,7 +129,7 @@ declare namespace org {
                  *      CommandMap was the passed CommandMap or null) false otherwise
                  */
                 // @ts-ignore
-                register(commandMap: org.bukkit.command.CommandMap): boolean
+                public register(commandMap: org.bukkit.command.CommandMap): boolean
                 /**
                  * Unregisters this command from the passed CommandMap applying any
                  * outstanding changes
@@ -139,38 +139,38 @@ declare namespace org {
                  *      otherwise
                  */
                 // @ts-ignore
-                unregister(commandMap: org.bukkit.command.CommandMap): boolean
+                public unregister(commandMap: org.bukkit.command.CommandMap): boolean
                 /**
                  * Returns the current registered state of this command
                  * @return true if this command is currently registered false otherwise
                  */
                 // @ts-ignore
-                isRegistered(): boolean
+                public isRegistered(): boolean
                 /**
                  * Returns a list of active aliases of this command
                  * @return List of aliases
                  */
                 // @ts-ignore
-                getAliases(): java.util.List<java.lang.String>
+                public getAliases(): Array<java.lang.String | string>
                 /**
                  * Returns a message to be displayed on a failed permission check for this
                  * command
                  * @return Permission check failed message
                  */
                 // @ts-ignore
-                getPermissionMessage(): java.lang.String
+                public getPermissionMessage(): string
                 /**
                  * Gets a brief description of this command
                  * @return Description of this command
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                public getDescription(): string
                 /**
                  * Gets an example usage of this command
                  * @return One or more example usages
                  */
                 // @ts-ignore
-                getUsage(): java.lang.String
+                public getUsage(): string
                 /**
                  * Sets the list of aliases to request on registration for this command.
                  * This is not effective outside of defining aliases in the {@link
@@ -180,7 +180,7 @@ declare namespace org {
                  * @return this command object, for chaining
                  */
                 // @ts-ignore
-                setAliases(aliases: Array<java.lang.String>): org.bukkit.command.Command
+                public setAliases(aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): org.bukkit.command.Command
                 /**
                  * Sets a brief description of this command. Defining a description in the
                  * {@link PluginDescriptionFile#getCommands()} (under the
@@ -189,7 +189,7 @@ declare namespace org {
                  * @return this command object, for chaining
                  */
                 // @ts-ignore
-                setDescription(description: string): org.bukkit.command.Command
+                public setDescription(description: java.lang.String | string): org.bukkit.command.Command
                 /**
                  * Sets the message sent when a permission check fails
                  * @param permissionMessage new permission message, null to indicate
@@ -197,20 +197,20 @@ declare namespace org {
                  * @return this command object, for chaining
                  */
                 // @ts-ignore
-                setPermissionMessage(permissionMessage: string): org.bukkit.command.Command
+                public setPermissionMessage(permissionMessage: java.lang.String | string): org.bukkit.command.Command
                 /**
                  * Sets the example usage of this command
                  * @param usage new example usage
                  * @return this command object, for chaining
                  */
                 // @ts-ignore
-                setUsage(usage: string): org.bukkit.command.Command
+                public setUsage(usage: java.lang.String | string): org.bukkit.command.Command
                 // @ts-ignore
-                broadcastCommandMessage(source: org.bukkit.command.CommandSender, message: string): void
+                public static broadcastCommandMessage(source: org.bukkit.command.CommandSender, message: java.lang.String | string): void
                 // @ts-ignore
-                broadcastCommandMessage(source: org.bukkit.command.CommandSender, message: string, sendToSource: boolean): void
+                public static broadcastCommandMessage(source: org.bukkit.command.CommandSender, message: java.lang.String | string, sendToSource: boolean): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

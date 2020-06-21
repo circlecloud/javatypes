@@ -23,7 +23,7 @@ declare namespace javax {
                  *  by a URL string. If null, no referral was sent by the server.
                  */
                 // @ts-ignore
-                getReferrals(): java.lang.String[]
+                getReferrals(): string[]
                 /**
                  * Retrieves the exception as constructed using information
                  * sent by the server.

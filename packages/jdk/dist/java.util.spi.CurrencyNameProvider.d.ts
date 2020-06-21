@@ -12,7 +12,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class CurrencyNameProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class CurrencyNameProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -40,7 +40,7 @@ declare namespace java {
                  * @see java.util.Currency#getSymbol(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getSymbol(currencyCode: string, locale: java.util.Locale): java.lang.String
+                public abstract getSymbol(currencyCode: java.lang.String | string, locale: java.util.Locale): string
                 /**
                  * Returns a name for the currency that is appropriate for display to the
                  * user.  The default implementation returns null.
@@ -60,7 +60,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getDisplayName(currencyCode: string, locale: java.util.Locale): java.lang.String
+                public getDisplayName(currencyCode: java.lang.String | string, locale: java.util.Locale): string
             }
         }
     }

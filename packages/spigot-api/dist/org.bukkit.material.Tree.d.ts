@@ -59,9 +59,9 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_TYPE: org.bukkit.Material
+                static readonly DEFAULT_TYPE: org.bukkit.Material
                 // @ts-ignore
-                readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
+                static readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
                 /**
                  * Get direction of the log
                  * @return one of:
@@ -73,17 +73,17 @@ declare namespace org {
                  *  </ul>
                  */
                 // @ts-ignore
-                getDirection(): org.bukkit.block.BlockFace
+                public getDirection(): org.bukkit.block.BlockFace
                 /**
                  * Set direction of the log
                  * @param dir - direction of end of log (BlockFace.SELF for no direction)
                  */
                 // @ts-ignore
-                setDirection(dir: org.bukkit.block.BlockFace): void
+                public setDirection(dir: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Tree
+                public clone(): org.bukkit.material.Tree
             }
         }
     }

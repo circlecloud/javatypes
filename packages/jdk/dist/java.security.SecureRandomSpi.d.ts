@@ -10,7 +10,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class SecureRandomSpi extends java.lang.Object implements java.io.Serializable {
+        abstract class SecureRandomSpi extends java.lang.Object implements java.io.Serializable {
             // @ts-ignore
             constructor()
             /**
@@ -38,7 +38,7 @@ declare namespace java {
              * @return the seed bytes.
              */
             // @ts-ignore
-            abstract engineGenerateSeed(numBytes: number /*int*/): byte[]
+            abstract engineGenerateSeed(numBytes: number /*int*/): number /*byte*/[]
         }
     }
 }

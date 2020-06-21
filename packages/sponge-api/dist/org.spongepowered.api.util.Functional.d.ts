@@ -14,7 +14,7 @@ declare namespace org {
                      * @return The combined predicate
                      */
                     // @ts-ignore
-                    predicateAnd<E>(...predicates: java.util.function.Predicate[] | java.util.function$.Predicate[]): java.util.function.Predicate<E>
+                    public static predicateAnd<E>(...predicates: java.util.function$.Predicate<E>[]): java.util.function$.Predicate<E>
                     /**
                      * Perform an AND using an iterable of predicates.
                      * @param predicates The predicates to and
@@ -22,7 +22,7 @@ declare namespace org {
                      * @return The combined predicate
                      */
                     // @ts-ignore
-                    predicateAnd<E>(predicates: java.lang.Iterable<java.util.function.Predicate<E>> | java.lang.Iterable<java.util.function$.Predicate<E>>): java.util.function.Predicate<E>
+                    public static predicateAnd<E>(predicates: java.lang.Iterable<java.util.function$.Predicate<E>> | java.lang.Iterable<java.util.function$$.Predicate<E>>): java.util.function$.Predicate<E>
                     /**
                      * Perform an AND using an array of bi-predicates.
                      * @param predicates The bi-predicates to AND
@@ -31,7 +31,7 @@ declare namespace org {
                      * @return The combined bi-predicate
                      */
                     // @ts-ignore
-                    biPredicateAnd<L, R>(...predicates: java.util.function.BiPredicate[] | java.util.function$.BiPredicate[]): java.util.function.BiPredicate<L, R>
+                    public static biPredicateAnd<L, R>(...predicates: java.util.function$.BiPredicate<L, R>[]): java.util.function$.BiPredicate<L, R>
                     /**
                      * Perform an AND using an iterable of bi-predicates.
                      * @param predicates The bi-predicates to and
@@ -40,7 +40,7 @@ declare namespace org {
                      * @return The combined bi-predicate
                      */
                     // @ts-ignore
-                    biPredicateAnd<L, R>(predicates: java.lang.Iterable<java.util.function.BiPredicate<L, R>> | java.lang.Iterable<java.util.function$.BiPredicate<L, R>>): java.util.function.BiPredicate<L, R>
+                    public static biPredicateAnd<L, R>(predicates: java.lang.Iterable<java.util.function$.BiPredicate<L, R>> | java.lang.Iterable<java.util.function$$.BiPredicate<L, R>>): java.util.function$.BiPredicate<L, R>
                     /**
                      * Creates a new {@link Predicate} defining whether an {@link Object}
                      * is contained within the provided {@link Collection}.
@@ -49,7 +49,7 @@ declare namespace org {
                      * @return The predicate
                      */
                     // @ts-ignore
-                    predicateIn<E>(collection: Array<E>): java.util.function.Predicate<E>
+                    public static predicateIn<E>(collection: java.util.Collection<E> | Array<E>): java.util.function$.Predicate<E>
                     /**
                      * Creates a {@link com.google.common.base.Predicate} based on the provided {@link Predicate}, used
                      * to transform between Java 8 specific code to those from the guava
@@ -59,7 +59,7 @@ declare namespace org {
                      * @return The guava predicate
                      */
                     // @ts-ignore
-                    java8ToGuava<E>(predicate: java.util.function.Predicate<E> | java.util.function$.Predicate<E>): <any>
+                    public static java8ToGuava<E>(predicate: java.util.function$.Predicate<E>): object
                     /**
                      * Creates a new {@link Predicate} based on the provided {@link com.google.common.base.Predicate},
                      * used to transform between Java 8 specific code to those from the guava
@@ -70,7 +70,7 @@ declare namespace org {
                      * @deprecated {#link com.google.common.base.Predicate} extends {@link Predicate}
                      */
                     // @ts-ignore
-                    guavaToJava8<E>(p: object): java.util.function.Predicate<E>
+                    public static guavaToJava8<E>(p: object): java.util.function$.Predicate<E>
                     /**
                      * Gets the value of an {@link Optional} as either a zero- or one-element immutable set.
                      * @param value The value to get as a set
@@ -78,7 +78,7 @@ declare namespace org {
                      * @return The immutable set containing any value the optional has
                      */
                     // @ts-ignore
-                    optionalAsSet<T>(value: java.util.Optional<T>): java.util.Set<T>
+                    public static optionalAsSet<T>(value: java.util.Optional<T>): Array<T>
                     /**
                      * Execute a callable on <strong>the current thread</strong>, capturing the result or any exceptions that may be thrown into a {@link
                      * CompletableFuture}.
@@ -87,7 +87,7 @@ declare namespace org {
                      * @return The future holding the result
                      */
                     // @ts-ignore
-                    failableFuture<T>(call: java.util.concurrent.Callable<T>): java.util.concurrent.CompletableFuture<T>
+                    public static failableFuture<T>(call: java.util.concurrent.Callable<T>): java.util.concurrent.CompletableFuture<T>
                     /**
                      * Execute a callable on the provided executor, capturing the result or any exceptions that may be thrown into a {@link
                      * CompletableFuture}.
@@ -97,7 +97,7 @@ declare namespace org {
                      * @return The future holding the result
                      */
                     // @ts-ignore
-                    asyncFailableFuture<T>(call: java.util.concurrent.Callable<T>, exec: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<T>
+                    public static asyncFailableFuture<T>(call: java.util.concurrent.Callable<T>, exec: java.util.concurrent.Executor): java.util.concurrent.CompletableFuture<T>
                 }
             }
         }

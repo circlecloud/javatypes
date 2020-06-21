@@ -28,25 +28,25 @@ declare namespace org {
                      * A value of 0 specifies an infinite timeout.
                      */
                     // @ts-ignore
-                    setReadTimeout(readTimeout: number /*int*/): void
+                    public setReadTimeout(readTimeout: number /*int*/): void
                     /**
                      * Set the underlying write timeout in milliseconds.
                      * A value of 0 specifies an infinite timeout.
                      */
                     // @ts-ignore
-                    setWriteTimeout(writeTimeout: number /*int*/): void
+                    public setWriteTimeout(writeTimeout: number /*int*/): void
                     /**
                      * Set the underlying connect timeout in milliseconds.
                      * A value of 0 specifies an infinite timeout.
                      */
                     // @ts-ignore
-                    setConnectTimeout(connectTimeout: number /*int*/): void
+                    public setConnectTimeout(connectTimeout: number /*int*/): void
                     // @ts-ignore
-                    createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
+                    public createRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.ClientHttpRequest
                     // @ts-ignore
-                    createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
+                    public createAsyncRequest(uri: java.net.URI, httpMethod: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

@@ -31,7 +31,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(out: java.io.OutputStream)
                     // @ts-ignore
-                    replaceObject(obj: any): java.lang.Object
+                    replaceObject(obj: java.lang.Object | any): any
                 }
             }
         }

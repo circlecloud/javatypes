@@ -15,7 +15,7 @@ declare namespace java {
                      * @param data the encoded form of the certification path
                      */
                     // @ts-ignore
-                    constructor(type: string, data: number /*byte*/[])
+                    constructor(type: java.lang.String | string, data: number /*byte*/[])
                     /**
                      * Returns a {@code CertPath} constructed from the type and data.
                      * @return the resolved {#code CertPath} object
@@ -23,7 +23,7 @@ declare namespace java {
                      *  be constructed
                      */
                     // @ts-ignore
-                    readResolve(): java.lang.Object
+                    readResolve(): any
                 }
             }
         }

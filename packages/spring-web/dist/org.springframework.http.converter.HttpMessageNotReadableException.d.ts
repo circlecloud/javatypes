@@ -17,7 +17,7 @@ declare namespace org {
                      * @deprecated as of 5.1, in favor of {#link #HttpMessageNotReadableException(String, HttpInputMessage)}
                      */
                     // @ts-ignore
-                    constructor(msg: string)
+                    constructor(msg: java.lang.String | string)
                     /**
                      * Create a new HttpMessageNotReadableException.
                      * @param msg the detail message
@@ -25,7 +25,7 @@ declare namespace org {
                      * @deprecated as of 5.1, in favor of {#link #HttpMessageNotReadableException(String, Throwable, HttpInputMessage)}
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Create a new HttpMessageNotReadableException.
                      * @param msg the detail message
@@ -33,7 +33,7 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    constructor(msg: string, httpInputMessage: org.springframework.http.HttpInputMessage)
+                    constructor(msg: java.lang.String | string, httpInputMessage: org.springframework.http.HttpInputMessage)
                     /**
                      * Create a new HttpMessageNotReadableException.
                      * @param msg the detail message
@@ -42,13 +42,13 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error, httpInputMessage: org.springframework.http.HttpInputMessage)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error, httpInputMessage: org.springframework.http.HttpInputMessage)
                     /**
                      * Return the original HTTP message.
                      * @since 5.1
                      */
                     // @ts-ignore
-                    getHttpInputMessage(): org.springframework.http.HttpInputMessage
+                    public getHttpInputMessage(): org.springframework.http.HttpInputMessage
                 }
             }
         }

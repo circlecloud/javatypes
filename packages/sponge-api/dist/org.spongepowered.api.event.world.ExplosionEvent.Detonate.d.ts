@@ -20,7 +20,7 @@ declare namespace org {
                              * @return The list of blocks that will be affected by the explosion
                              */
                             // @ts-ignore
-                            getAffectedLocations(): java.util.List<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
+                            getAffectedLocations(): Array<org.spongepowered.api.world.Location<org.spongepowered.api.world.World>>
                         }
                     }
                 }

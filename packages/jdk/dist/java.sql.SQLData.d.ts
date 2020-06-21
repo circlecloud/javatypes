@@ -51,7 +51,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getSQLTypeName(): java.lang.String
+            getSQLTypeName(): string
             /**
              * Populates this object with data read from the database.
              * The implementation of the method must follow this protocol:
@@ -83,7 +83,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readSQL(stream: java.sql.SQLInput, typeName: string): void
+            readSQL(stream: java.sql.SQLInput, typeName: java.lang.String | string): void
             /**
              * Writes this object to the given SQL data stream, converting it back to
              * its SQL value in the data source.

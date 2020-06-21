@@ -31,26 +31,26 @@ declare namespace org {
                     // @ts-ignore
                     constructor(request: HttpServletRequest, contentCacheLimit: number /*int*/)
                     // @ts-ignore
-                    getInputStream(): ServletInputStream
+                    public getInputStream(): ServletInputStream
                     // @ts-ignore
-                    getCharacterEncoding(): java.lang.String
+                    public getCharacterEncoding(): string
                     // @ts-ignore
-                    getReader(): java.io.BufferedReader
+                    public getReader(): java.io.BufferedReader
                     // @ts-ignore
-                    getParameter(name: string): java.lang.String
+                    public getParameter(name: java.lang.String | string): string
                     // @ts-ignore
-                    getParameterMap(): java.util.Map<java.lang.String, java.lang.String[]>
+                    public getParameterMap(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                     // @ts-ignore
-                    getParameterNames(): java.util.Enumeration<java.lang.String>
+                    public getParameterNames(): java.util.Enumeration<java.lang.String | string>
                     // @ts-ignore
-                    getParameterValues(name: string): java.lang.String[]
+                    public getParameterValues(name: java.lang.String | string): string[]
                     /**
                      * Return the cached request content as a byte array.
                      * <p>The returned array will never be larger than the content cache limit.
                      * @see #ContentCachingRequestWrapper(HttpServletRequest, int)
                      */
                     // @ts-ignore
-                    getContentAsByteArray(): byte[]
+                    public getContentAsByteArray(): number /*byte*/[]
                     /**
                      * Template method for handling a content overflow: specifically, a request
                      * body being read that exceeds the specified content cache limit.

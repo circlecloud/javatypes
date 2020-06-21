@@ -13,38 +13,38 @@ declare namespace java {
              * Default input stream
              */
             // @ts-ignore
-            readonly in: java.io.InputStream
+            public static readonly in: java.io.InputStream
             /**
              * Default output stream
              */
             // @ts-ignore
-            readonly out: java.io.PrintStream
+            public static readonly out: java.io.PrintStream
             /**
              * Default error output stream
              */
             // @ts-ignore
-            readonly err: java.io.PrintStream
+            public static readonly err: java.io.PrintStream
             /**
              * Sets the value of the static slot "in" in the receiver
              * to the passed in argument.
              * @param newIn 		the new value for in.
              */
             // @ts-ignore
-            setIn(newIn: java.io.InputStream): void
+            public static setIn(newIn: java.io.InputStream): void
             /**
              * Sets the value of the static slot "out" in the receiver
              * to the passed in argument.
              * @param newOut 		the new value for out.
              */
             // @ts-ignore
-            setOut(newOut: java.io.PrintStream): void
+            public static setOut(newOut: java.io.PrintStream): void
             /**
              * Sets the value of the static slot "err" in the receiver
              * to the passed in argument.
              * @param newErr  	the new value for err.
              */
             // @ts-ignore
-            setErr(newErr: java.io.PrintStream): void
+            public static setErr(newErr: java.io.PrintStream): void
             /**
              * Copies the contents of <code>array1</code> starting at offset <code>start1</code>
              * into <code>array2</code> starting at offset <code>start2</code> for
@@ -56,14 +56,14 @@ declare namespace java {
              * @param length 		the number of elements in the array to copy
              */
             // @ts-ignore
-            arraycopy(array1: any, start1: number /*int*/, array2: any, start2: number /*int*/, length: number /*int*/): void
+            public static arraycopy(array1: java.lang.Object | any, start1: number /*int*/, array2: java.lang.Object | any, start2: number /*int*/, length: number /*int*/): void
             /**
              * Answers the current time expressed as milliseconds since
              * the time 00:00:00 UTC on January 1, 1970.
              * @return the time in milliseconds.
              */
             // @ts-ignore
-            currentTimeMillis(): long
+            public static currentTimeMillis(): number /*long*/
             /**
              * Causes the virtual machine to stop running, and the
              * program to exit. If runFinalizersOnExit(true) has been
@@ -73,21 +73,21 @@ declare namespace java {
              * @see SecurityManager#checkExit
              */
             // @ts-ignore
-            exit(code: number /*int*/): void
+            public static exit(code: number /*int*/): void
             /**
              * Indicate to the virtual machine that it would be a
              * good time to collect available memory. Note that, this
              * is a hint only.
              */
             // @ts-ignore
-            gc(): void
+            public static gc(): void
             /**
              * Returns an environment variable.
              * @param var			the name of the environment variable
              * @return the value of the specified environment variable
              */
             // @ts-ignore
-            getenv(variable: string): java.lang.String
+            public static getenv(variable: java.lang.String | string): string
             /**
              * Answers the system properties. Note that this is
              * not a copy, so that changes made to the returned
@@ -99,7 +99,7 @@ declare namespace java {
              * @return the system properties
              */
             // @ts-ignore
-            getProperties(): java.util.Properties
+            public static getProperties(): java.util.Properties
             /**
              * Answers the value of a particular system property.
              * Answers null if no such property exists,
@@ -128,7 +128,7 @@ declare namespace java {
              * @return the value of the specified system property, or null if the property doesn't exist
              */
             // @ts-ignore
-            getProperty(prop: string): java.lang.String
+            public static getProperty(prop: java.lang.String | string): string
             /**
              * Answers the value of a particular system property.
              * If no such property is found, answers the defaultValue.
@@ -137,7 +137,7 @@ declare namespace java {
              * @return the value of the specified system property, or defaultValue if the property doesn't exist
              */
             // @ts-ignore
-            getProperty(prop: string, defaultValue: string): java.lang.String
+            public static getProperty(prop: java.lang.String | string, defaultValue: java.lang.String | string): string
             /**
              * Sets the value of a particular system property.
              * @param prop		the system property to change
@@ -145,13 +145,13 @@ declare namespace java {
              * @return the old value of the property, or null
              */
             // @ts-ignore
-            setProperty(prop: string, value: string): java.lang.String
+            public static setProperty(prop: java.lang.String | string, value: java.lang.String | string): string
             /**
              * Answers the active security manager.
              * @return the system security manager object.
              */
             // @ts-ignore
-            getSecurityManager(): java.lang.SecurityManager
+            public static getSecurityManager(): java.lang.SecurityManager
             /**
              * Answers an integer hash code for the parameter.
              * The hash code returned is the same one that would
@@ -163,13 +163,13 @@ declare namespace java {
              * @see java.lang.Object#hashCode
              */
             // @ts-ignore
-            identityHashCode(anObject: any): int
+            public static identityHashCode(anObject: java.lang.Object | any): number /*int*/
             /**
              * Loads the specified file as a dynamic library.
              * @param pathName	the path of the file to be loaded
              */
             // @ts-ignore
-            load(pathName: string): void
+            public static load(pathName: java.lang.String | string): void
             /**
              * Loads and links the library specified by the argument.
              * @param libName		the name of the library to load
@@ -177,14 +177,14 @@ declare namespace java {
              * @throws SecurityException 		if the library was not allowed to be loaded
              */
             // @ts-ignore
-            loadLibrary(libName: string): void
+            public static loadLibrary(libName: java.lang.String | string): void
             /**
              * Provides a hint to the virtual machine that it would
              * be useful to attempt to perform any outstanding
              * object finalizations.
              */
             // @ts-ignore
-            runFinalization(): void
+            public static runFinalization(): void
             /**
              * Ensure that, when the virtual machine is about to exit,
              * all objects are finalized. Note that all finalization
@@ -194,7 +194,7 @@ declare namespace java {
              * @deprecated This method is unsafe.
              */
             // @ts-ignore
-            runFinalizersOnExit(flag: boolean): void
+            public static runFinalizersOnExit(flag: boolean): void
             /**
              * Answers the system properties. Note that the object
              * which is passed in not copied, so that subsequent
@@ -206,7 +206,7 @@ declare namespace java {
              * @param p			the property to set
              */
             // @ts-ignore
-            setProperties(p: java.util.Properties): void
+            public static setProperties(p: java.util.Properties): void
             /**
              * Sets the active security manager. Note that once
              * the security manager has been set, it can not be
@@ -216,7 +216,7 @@ declare namespace java {
              * @throws SecurityException 	if the security manager has already been set.
              */
             // @ts-ignore
-            setSecurityManager(s: java.lang.SecurityManager): void
+            public static setSecurityManager(s: java.lang.SecurityManager): void
             /**
              * Answers the platform specific file name format for the shared
              * library named by the argument.
@@ -224,7 +224,7 @@ declare namespace java {
              * @return the platform specific filename for the library
              */
             // @ts-ignore
-            mapLibraryName(userLibName: string): java.lang.String
+            public static mapLibraryName(userLibName: java.lang.String | string): string
             /**
              * Return the channel inherited by the invocation of the running vm. The channel is
              * obtained by calling SelectorProvider.inheritedChannel().
@@ -232,33 +232,33 @@ declare namespace java {
              * @throws IOException if an IO error occurs getting the inherited channel
              */
             // @ts-ignore
-            inheritedChannel(): java.nio.channels.Channel
+            public static inheritedChannel(): java.nio.channels.Channel
             /**
              * Returns the current tick count in nanoseconds. The tick count
              * only reflects elapsed time.
              * @return the current nanosecond tick count, which may be negative
              */
             // @ts-ignore
-            nanoTime(): long
+            public static nanoTime(): number /*long*/
             /**
              * Removes the property.
              * @param prop		the name of the property to remove
              * @return the value of the property removed
              */
             // @ts-ignore
-            clearProperty(prop: string): java.lang.String
+            public static clearProperty(prop: java.lang.String | string): string
             /**
              * Returns all of the system environment variables in an unmodifiable Map.
              * @return an unmodifiable Map containing all of the system environment variables.
              */
             // @ts-ignore
-            getenv(): java.util.Map<java.lang.String, java.lang.String>
+            public static getenv(): java.util.Map<java.lang.String | string, java.lang.String | string>
             /**
              * Return the Console or null.
              * @return the Console or null
              */
             // @ts-ignore
-            console(): java.io.Console
+            public static console(): java.io.Console
             /**
              * Return platform specific line separator character(s)
              * Unix is \n while Windows is \r\n as per the prop set by the VM
@@ -266,7 +266,7 @@ declare namespace java {
              * @return platform specific line separator character(s)
              */
             // @ts-ignore
-            lineSeparator(): java.lang.String
+            public static lineSeparator(): string
         }
     }
 }

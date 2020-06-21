@@ -21,7 +21,7 @@ declare namespace javax {
              * @param explanation     Possibly null detail explaining the exception.
              */
             // @ts-ignore
-            constructor(explanation: string)
+            constructor(explanation: java.lang.String | string)
             /**
              * Constructs a new instance of PartialResultException.
              * All fields default to null.

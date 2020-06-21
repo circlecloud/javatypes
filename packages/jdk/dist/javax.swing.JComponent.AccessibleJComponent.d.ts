@@ -17,7 +17,7 @@ declare namespace javax {
              * Please see {@link java.beans.XMLEncoder}.
              */
             // @ts-ignore
-            class AccessibleJComponent extends java.awt.Container.AccessibleAWTContainer implements javax.accessibility.AccessibleExtendedComponent {
+            abstract class AccessibleJComponent extends java.awt.Container.AccessibleAWTContainer implements javax.accessibility.AccessibleExtendedComponent {
                 /**
                  * Though the class is abstract, this should be called by
                  * all sub-classes.
@@ -35,7 +35,7 @@ declare namespace javax {
                  * @param listener  the PropertyChangeListener to be added
                  */
                 // @ts-ignore
-                addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Removes a PropertyChangeListener from the listener list.
                  * This removes a PropertyChangeListener that was registered
@@ -43,7 +43,7 @@ declare namespace javax {
                  * @param listener  the PropertyChangeListener to be removed
                  */
                 // @ts-ignore
-                removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Recursively search through the border hierarchy (if it exists)
                  * for a TitledBorder with a non-null title.  This does a depth
@@ -54,7 +54,7 @@ declare namespace javax {
                  * not create multiple titled borders for the same component.
                  */
                 // @ts-ignore
-                getBorderTitle(b: javax.swing.border.Border): java.lang.String
+                getBorderTitle(b: javax.swing.border.Border): string
                 /**
                  * Gets the accessible name of this object.  This should almost never
                  * return java.awt.Component.getName(), as that generally isn't
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @see AccessibleContext#setAccessibleName
                  */
                 // @ts-ignore
-                getAccessibleName(): java.lang.String
+                public getAccessibleName(): string
                 /**
                  * Gets the accessible description of this object.  This should be
                  * a concise, localized description of what this object is - what
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @see AccessibleContext#setAccessibleDescription
                  */
                 // @ts-ignore
-                getAccessibleDescription(): java.lang.String
+                public getAccessibleDescription(): string
                 /**
                  * Gets the role of this object.
                  * @return an instance of AccessibleRole describing the role of the
@@ -93,7 +93,7 @@ declare namespace javax {
                  * @see AccessibleRole
                  */
                 // @ts-ignore
-                getAccessibleRole(): javax.accessibility.AccessibleRole
+                public getAccessibleRole(): javax.accessibility.AccessibleRole
                 /**
                  * Gets the state of this object.
                  * @return an instance of AccessibleStateSet containing the current
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @see AccessibleState
                  */
                 // @ts-ignore
-                getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
+                public getAccessibleStateSet(): javax.accessibility.AccessibleStateSet
                 /**
                  * Returns the number of accessible children in the object.  If all
                  * of the children of this object implement Accessible, than this
@@ -109,14 +109,14 @@ declare namespace javax {
                  * @return the number of accessible children in the object.
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the nth Accessible child of the object.
                  * @param i zero-based index of child
                  * @return the nth Accessible child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns the tool tip text
                  * @return the tool tip text, if supported, of the object;
@@ -124,7 +124,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getToolTipText(): java.lang.String
+                public getToolTipText(): string
                 /**
                  * Returns the titled border text
                  * @return the titled border text, if supported, of the object;
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getTitledBorderText(): java.lang.String
+                public getTitledBorderText(): string
                 /**
                  * Returns key bindings associated with this object
                  * @return the key bindings, if supported, of the object;
@@ -141,7 +141,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getAccessibleKeyBinding(): javax.accessibility.AccessibleKeyBinding
+                public getAccessibleKeyBinding(): javax.accessibility.AccessibleKeyBinding
             }
         }
     }

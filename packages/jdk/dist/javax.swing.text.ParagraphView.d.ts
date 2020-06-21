@@ -71,7 +71,7 @@ declare namespace javax {
                  *           is responsible for
                  */
                 // @ts-ignore
-                getLayoutViewCount(): int
+                getLayoutViewCount(): number /*int*/
                 /**
                  * Returns the view at a given <code>index</code>.
                  * The child views of the paragraph are rows which
@@ -102,7 +102,7 @@ declare namespace javax {
                  *   next location visual position
                  */
                 // @ts-ignore
-                getNextNorthSouthVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                getNextNorthSouthVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Returns the closest model position to <code>x</code>.
                  * <code>rowIndex</code> gives the index of the view that corresponds
@@ -121,7 +121,7 @@ declare namespace javax {
                  * @return the closest model position to <code>x</code>
                  */
                 // @ts-ignore
-                getClosestPositionTo(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[], rowIndex: number /*int*/, x: number /*int*/): int
+                getClosestPositionTo(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[], rowIndex: number /*int*/, x: number /*int*/): number /*int*/
                 /**
                  * Determines in which direction the next view lays.
                  * Consider the <code>View</code> at index n.
@@ -156,7 +156,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getFlowSpan(index: number /*int*/): int
+                public getFlowSpan(index: number /*int*/): number /*int*/
                 /**
                  * Fetches the location along the flow axis that the
                  * flow span will start at.
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getFlowStart(index: number /*int*/): int
+                public getFlowStart(index: number /*int*/): number /*int*/
                 /**
                  * Create a <code>View</code> that should be used to hold a
                  * a row's worth of children in a flow.
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @see LabelView
                  */
                 // @ts-ignore
-                nextTabStop(x: number /*float*/, tabOffset: number /*int*/): float
+                public nextTabStop(x: number /*float*/, tabOffset: number /*int*/): number /*float*/
                 /**
                  * Gets the <code>Tabset</code> to be used in calculating tabs.
                  * @return the <code>TabSet</code>
@@ -221,7 +221,7 @@ declare namespace javax {
                  * @return the size &gt;= 0
                  */
                 // @ts-ignore
-                getPartialSize(startOffset: number /*int*/, endOffset: number /*int*/): float
+                getPartialSize(startOffset: number /*int*/, endOffset: number /*int*/): number /*float*/
                 /**
                  * Finds the next character in the document with a character in
                  * <code>string</code>, starting at offset <code>start</code>. If
@@ -231,13 +231,13 @@ declare namespace javax {
                  * @return the document offset, or -1 if no characters found
                  */
                 // @ts-ignore
-                findOffsetToCharactersInString(string: string[], start: number /*int*/): int
+                findOffsetToCharactersInString(string: string[], start: number /*int*/): number /*int*/
                 /**
                  * Returns where the tabs are calculated from.
                  * @return where tabs are calculated from
                  */
                 // @ts-ignore
-                getTabBase(): float
+                getTabBase(): number /*float*/
                 /**
                  * Renders using the given rendering surface and area on that
                  * surface.  This is implemented to delegate to the superclass
@@ -247,7 +247,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                 /**
                  * Determines the desired alignment for this view along an
                  * axis.  This is implemented to give the alignment to the
@@ -262,7 +262,7 @@ declare namespace javax {
                  *    center of the view.
                  */
                 // @ts-ignore
-                getAlignment(axis: number /*int*/): float
+                public getAlignment(axis: number /*int*/): number /*float*/
                 /**
                  * Breaks this view on the given axis at the given length.
                  * <p>
@@ -281,7 +281,7 @@ declare namespace javax {
                  * @see View#breakView
                  */
                 // @ts-ignore
-                breakView(axis: number /*int*/, len: number /*float*/, a: java.awt.Shape): javax.swing.text.View
+                public breakView(axis: number /*int*/, len: number /*float*/, a: java.awt.Shape): javax.swing.text.View
                 /**
                  * Gets the break weight for a given location.
                  * <p>
@@ -298,7 +298,7 @@ declare namespace javax {
                  * @see View#getBreakWeight
                  */
                 // @ts-ignore
-                getBreakWeight(axis: number /*int*/, len: number /*float*/): int
+                public getBreakWeight(axis: number /*int*/, len: number /*float*/): number /*int*/
                 /**
                  * Calculate the needs for the paragraph along the minor axis.
                  * <p>This uses size requirements of the superclass, modified to take into
@@ -327,7 +327,7 @@ declare namespace javax {
                  * @see View#changedUpdate
                  */
                 // @ts-ignore
-                changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                public changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
             }
         }
     }

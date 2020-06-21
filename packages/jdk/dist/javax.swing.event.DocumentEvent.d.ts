@@ -20,13 +20,13 @@ declare namespace javax {
                  * @return the offset &gt;= 0
                  */
                 // @ts-ignore
-                getOffset(): int
+                getOffset(): number /*int*/
                 /**
                  * Returns the length of the change.
                  * @return the length &gt;= 0
                  */
                 // @ts-ignore
-                getLength(): int
+                getLength(): number /*int*/
                 /**
                  * Gets the document that sourced the change event.
                  * @return the document

@@ -25,12 +25,12 @@ declare namespace javax {
              * Creates a disabled image
              */
             // @ts-ignore
-            createDisabledImage(i: java.awt.Image): java.awt.Image
+            public static createDisabledImage(i: java.awt.Image): java.awt.Image
             /**
              * Overrides <code>RGBImageFilter.filterRGB</code>.
              */
             // @ts-ignore
-            filterRGB(x: number /*int*/, y: number /*int*/, rgb: number /*int*/): int
+            public filterRGB(x: number /*int*/, y: number /*int*/, rgb: number /*int*/): number /*int*/
         }
     }
 }

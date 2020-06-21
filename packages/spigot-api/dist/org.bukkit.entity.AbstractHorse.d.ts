@@ -32,7 +32,7 @@ declare namespace org {
                  * @return domestication level
                  */
                 // @ts-ignore
-                getDomestication(): int
+                getDomestication(): number /*int*/
                 /**
                  * Sets the domestication level of this horse.
                  * <p>
@@ -54,7 +54,7 @@ declare namespace org {
                  * @return the max domestication level
                  */
                 // @ts-ignore
-                getMaxDomestication(): int
+                getMaxDomestication(): number /*int*/
                 /**
                  * Sets the maximum domestication level of this horse.
                  * <p>
@@ -75,7 +75,7 @@ declare namespace org {
                  * @return the horse's jump strength
                  */
                 // @ts-ignore
-                getJumpStrength(): double
+                getJumpStrength(): number /*double*/
                 /**
                  * Sets the jump strength of this horse.
                  * <p>

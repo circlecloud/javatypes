@@ -44,7 +44,7 @@ declare namespace org {
                  * @throws IllegalStateException if {#link #isConverting()} is false.
                  */
                 // @ts-ignore
-                getConversionTime(): int
+                getConversionTime(): number /*int*/
                 /**
                  * Sets the amount of ticks until this entity will be converted to a
                  * Villager as a result of being cured.

@@ -54,13 +54,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                constructor(privateKey: java.security.PrivateKey, chain: java.security.cert.Certificate[], attributes: Array<java.security.KeyStore.Entry.Attribute>)
+                constructor(privateKey: java.security.PrivateKey, chain: java.security.cert.Certificate[], attributes: java.util.Set<java.security.KeyStore.Entry.Attribute> | Array<java.security.KeyStore.Entry.Attribute>)
                 /**
                  * Gets the {@code PrivateKey} from this entry.
                  * @return the {#code PrivateKey} from this entry
                  */
                 // @ts-ignore
-                getPrivateKey(): java.security.PrivateKey
+                public getPrivateKey(): java.security.PrivateKey
                 /**
                  * Gets the {@code Certificate} chain from this entry.
                  * <p> The stored chain is cloned before being returned.
@@ -71,7 +71,7 @@ declare namespace java {
                  *       {@code X509Certificate[]}.
                  */
                 // @ts-ignore
-                getCertificateChain(): java.security.cert.Certificate[]
+                public getCertificateChain(): java.security.cert.Certificate[]
                 /**
                  * Gets the end entity {@code Certificate}
                  * from the certificate chain in this entry.
@@ -82,7 +82,7 @@ declare namespace java {
                  *       {@code X509Certificate}.
                  */
                 // @ts-ignore
-                getCertificate(): java.security.cert.Certificate
+                public getCertificate(): java.security.cert.Certificate
                 /**
                  * Retrieves the attributes associated with an entry.
                  * <p>
@@ -90,13 +90,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAttributes(): java.util.Set<java.security.KeyStore.Entry.Attribute>
+                public getAttributes(): Array<java.security.KeyStore.Entry.Attribute>
                 /**
                  * Returns a string representation of this PrivateKeyEntry.
                  * @return a string representation of this PrivateKeyEntry.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

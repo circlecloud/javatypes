@@ -49,7 +49,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getXAConnection(user: string, password: string): javax.sql.XAConnection
+            getXAConnection(user: java.lang.String | string, password: java.lang.String | string): javax.sql.XAConnection
         }
     }
 }

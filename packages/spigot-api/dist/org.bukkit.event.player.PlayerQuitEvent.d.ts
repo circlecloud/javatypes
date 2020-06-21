@@ -8,23 +8,23 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerQuitEvent extends org.bukkit.event.player.PlayerEvent {
                     // @ts-ignore
-                    constructor(who: org.bukkit.entity.Player, quitMessage: string)
+                    constructor(who: org.bukkit.entity.Player, quitMessage: java.lang.String | string)
                     /**
                      * Gets the quit message to send to all online players
                      * @return string quit message
                      */
                     // @ts-ignore
-                    getQuitMessage(): java.lang.String
+                    public getQuitMessage(): string
                     /**
                      * Sets the quit message to send to all online players
                      * @param quitMessage quit message
                      */
                     // @ts-ignore
-                    setQuitMessage(quitMessage: string): void
+                    public setQuitMessage(quitMessage: java.lang.String | string): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

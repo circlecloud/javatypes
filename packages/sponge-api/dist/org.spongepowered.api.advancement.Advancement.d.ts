@@ -26,7 +26,7 @@ declare namespace org {
                      * @return The children advancements
                      */
                     // @ts-ignore
-                    getChildren(): java.util.Collection<org.spongepowered.api.advancement.Advancement>
+                    getChildren(): Array<org.spongepowered.api.advancement.Advancement>
                     /**
                      * Gets all the {@link AdvancementCriterion} that should be achieved
                      * before this advancement is unlocked. {@link AdvancementCriterion#EMPTY}
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return The text lines
                      */
                     // @ts-ignore
-                    toToastText(): java.util.List<org.spongepowered.api.text.Text>
+                    toToastText(): Array<org.spongepowered.api.text.Text>
                 }
             }
         }

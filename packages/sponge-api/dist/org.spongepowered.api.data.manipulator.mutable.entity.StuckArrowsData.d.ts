@@ -17,7 +17,7 @@ declare namespace org {
                                  * @see Keys#STUCK_ARROWS
                                  */
                                 // @ts-ignore
-                                stuckArrows(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                stuckArrows(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

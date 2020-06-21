@@ -14,7 +14,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class Byte extends java.lang.Number implements java.lang.Comparable<java.lang.Byte> {
+        class Byte extends java.lang.Number implements java.lang.Comparable<java.lang.Byte | number> {
             /**
              * Constructs a newly allocated {@code Byte} object that
              * represents the specified {@code byte} value.
@@ -36,39 +36,39 @@ declare namespace java {
              * @see java.lang.Byte#parseByte(java.lang.String, int)
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * A constant holding the minimum value a {@code byte} can
              * have, -2<sup>7</sup>.
              */
             // @ts-ignore
-            readonly MIN_VALUE: number /*byte*/
+            public static readonly MIN_VALUE: number /*byte*/
             /**
              * A constant holding the maximum value a {@code byte} can
              * have, 2<sup>7</sup>-1.
              */
             // @ts-ignore
-            readonly MAX_VALUE: number /*byte*/
+            public static readonly MAX_VALUE: number /*byte*/
             /**
              * The {@code Class} instance representing the primitive type
              * {@code byte}.
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Byte>
+            public static readonly TYPE: java.lang.Class<java.lang.Byte | number>
             /**
              * The number of bits used to represent a {@code byte} value in two's
              * complement binary form.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code byte} value in two's
              * complement binary form.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * Returns a new {@code String} object representing the
              * specified {@code byte}. The radix is assumed to be 10.
@@ -77,7 +77,7 @@ declare namespace java {
              * @see java.lang.Integer#toString(int)
              */
             // @ts-ignore
-            toString(b: number /*byte*/): java.lang.String
+            public static toString(b: number /*byte*/): string
             /**
              * Returns a {@code Byte} instance representing the specified
              * {@code byte} value.
@@ -91,7 +91,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(b: number /*byte*/): java.lang.Byte
+            public static valueOf(b: number /*byte*/): number
             /**
              * Parses the string argument as a signed {@code byte} in the
              * radix specified by the second argument. The characters in the
@@ -129,7 +129,7 @@ declare namespace java {
              *                   not contain a parsable {#code byte}.
              */
             // @ts-ignore
-            parseByte(s: string, radix: number /*int*/): byte
+            public static parseByte(s: java.lang.String | string, radix: number /*int*/): number /*byte*/
             /**
              * Parses the string argument as a signed decimal {@code
              * byte}. The characters in the string must all be decimal digits,
@@ -148,7 +148,7 @@ declare namespace java {
              *                   contain a parsable {#code byte}.
              */
             // @ts-ignore
-            parseByte(s: string): byte
+            public static parseByte(s: java.lang.String | string): number /*byte*/
             /**
              * Returns a {@code Byte} object holding the value
              * extracted from the specified {@code String} when parsed
@@ -172,7 +172,7 @@ declare namespace java {
              *                   not contain a parsable {@code byte}.
              */
             // @ts-ignore
-            valueOf(s: string, radix: number /*int*/): java.lang.Byte
+            public static valueOf(s: java.lang.String | string, radix: number /*int*/): number
             /**
              * Returns a {@code Byte} object holding the value
              * given by the specified {@code String}. The argument is
@@ -193,7 +193,7 @@ declare namespace java {
              *                   not contain a parsable {@code byte}.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Byte
+            public static valueOf(s: java.lang.String | string): number
             /**
              * Decodes a {@code String} into a {@code Byte}.
              * Accepts decimal, hexadecimal, and octal numbers given by
@@ -232,48 +232,48 @@ declare namespace java {
              * @see java.lang.Byte#parseByte(java.lang.String, int)
              */
             // @ts-ignore
-            decode(nm: string): java.lang.Byte
+            public static decode(nm: java.lang.String | string): number
             /**
              * Returns the value of this {@code Byte} as a
              * {@code byte}.
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of this {@code Byte} as a {@code short} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
             /**
              * Returns the value of this {@code Byte} as an {@code int} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Returns the value of this {@code Byte} as a {@code long} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Returns the value of this {@code Byte} as a {@code float} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Returns the value of this {@code Byte} as a {@code double}
              * after a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns a {@code String} object representing this
              * {@code Byte}'s value.  The value is converted to signed
@@ -284,14 +284,14 @@ declare namespace java {
              *           base&nbsp;10.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this {@code Byte}; equal to the result
              * of invoking {@code intValue()}.
              * @return a hash code value for this {#code Byte}
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code byte} value; compatible with
              * {@code Byte.hashCode()}.
@@ -300,7 +300,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hashCode(value: number /*byte*/): int
+            public static hashCode(value: number /*byte*/): number /*int*/
             /**
              * Compares this object to the specified object.  The result is
              * {@code true} if and only if the argument is not
@@ -311,7 +311,7 @@ declare namespace java {
              *                   {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Compares two {@code Byte} objects numerically.
              * @param anotherByte   the {#code Byte} to be compared.
@@ -325,7 +325,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(anotherByte: number): int
+            public compareTo(anotherByte: java.lang.Byte | number): number /*int*/
             /**
              * Compares two {@code byte} values numerically.
              * The value returned is identical to what would be returned by:
@@ -340,7 +340,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            compare(x: number /*byte*/, y: number /*byte*/): int
+            public static compare(x: number /*byte*/, y: number /*byte*/): number /*int*/
             /**
              * Converts the argument to an {@code int} by an unsigned
              * conversion.  In an unsigned conversion to an {@code int}, the
@@ -356,7 +356,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedInt(x: number /*byte*/): int
+            public static toUnsignedInt(x: number /*byte*/): number /*int*/
             /**
              * Converts the argument to a {@code long} by an unsigned
              * conversion.  In an unsigned conversion to a {@code long}, the
@@ -372,7 +372,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedLong(x: number /*byte*/): long
+            public static toUnsignedLong(x: number /*byte*/): number /*long*/
         }
     }
 }

@@ -15,7 +15,7 @@ declare namespace java {
                  * package of system <code>LoaderHandler</code> implementation.
                  */
                 // @ts-ignore
-                
+                readonly packagePrefix: java.lang.String | string
                 /**
                  * Loads a class from the location specified by the
                  * <code>java.rmi.server.codebase</code> property.
@@ -31,7 +31,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                loadClass(name: string): java.lang.Class<?>
+                loadClass(name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Loads a class from a URL.
                  * @param codebase  the URL from which to load the class
@@ -47,7 +47,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                loadClass(codebase: java.net.URL, name: string): java.lang.Class<?>
+                loadClass(codebase: java.net.URL, name: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Returns the security context of the given class loader.
                  * @param loader  a class loader from which to get the security context
@@ -56,7 +56,7 @@ declare namespace java {
                  * @deprecated no replacement
                  */
                 // @ts-ignore
-                getSecurityContext(loader: java.lang.ClassLoader): java.lang.Object
+                getSecurityContext(loader: java.lang.ClassLoader): any
             }
         }
     }

@@ -33,31 +33,31 @@ declare namespace javax {
                      * transform algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly BASE64: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2000/09/xmldsig#enveloped-signature">
                      * Enveloped Signature</a> transform algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly ENVELOPED: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/TR/1999/REC-xpath-19991116">XPath</a>
                      * transform algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly XPATH: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2002/06/xmldsig-filter2">
                      * XPath Filter 2</a> transform algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly XPATH2: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/TR/1999/REC-xslt-19991116">XSLT</a>
                      * transform algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly XSLT: java.lang.String | string
                     /**
                      * Returns the algorithm-specific input parameters associated with this
                      * <code>Transform</code>.

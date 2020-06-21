@@ -13,7 +13,7 @@ declare namespace org {
                  *      valid PluginLoader
                  */
                 // @ts-ignore
-                registerInterface(loader: java.lang.Class<org.bukkit.plugin.PluginLoader>): void
+                registerInterface(loader: java.lang.Class<any>): void
                 /**
                  * Checks if the given plugin is loaded and returns it when applicable
                  * <p>
@@ -22,7 +22,7 @@ declare namespace org {
                  * @return Plugin if it exists, otherwise null
                  */
                 // @ts-ignore
-                getPlugin(name: string): org.bukkit.plugin.Plugin
+                getPlugin(name: java.lang.String | string): org.bukkit.plugin.Plugin
                 /**
                  * Gets a list of all currently loaded plugins
                  * @return Array of Plugins
@@ -37,7 +37,7 @@ declare namespace org {
                  * @return true if the plugin is enabled, otherwise false
                  */
                 // @ts-ignore
-                isPluginEnabled(name: string): boolean
+                isPluginEnabled(name: java.lang.String | string): boolean
                 /**
                  * Checks if the given plugin is enabled or not
                  * @param plugin Plugin to check
@@ -104,7 +104,7 @@ declare namespace org {
                  * @param plugin Plugin to register
                  */
                 // @ts-ignore
-                registerEvent(event: java.lang.Class<org.bukkit.event.Event>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin): void
+                registerEvent(event: java.lang.Class<any>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Registers the specified executor to the given event class
                  * @param event Event type to register
@@ -115,7 +115,7 @@ declare namespace org {
                  * @param ignoreCancelled Whether to pass cancelled events or not
                  */
                 // @ts-ignore
-                registerEvent(event: java.lang.Class<org.bukkit.event.Event>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin, ignoreCancelled: boolean): void
+                registerEvent(event: java.lang.Class<any>, listener: org.bukkit.event.Listener, priority: org.bukkit.event.EventPriority, executor: org.bukkit.plugin.EventExecutor, plugin: org.bukkit.plugin.Plugin, ignoreCancelled: boolean): void
                 /**
                  * Enables the specified plugin
                  * <p>
@@ -139,7 +139,7 @@ declare namespace org {
                  * @return Permission, or null if none
                  */
                 // @ts-ignore
-                getPermission(name: string): org.bukkit.permissions.Permission
+                getPermission(name: java.lang.String | string): org.bukkit.permissions.Permission
                 /**
                  * Adds a {@link Permission} to this plugin manager.
                  * <p>
@@ -174,14 +174,14 @@ declare namespace org {
                  * @param name Permission to remove
                  */
                 // @ts-ignore
-                removePermission(name: string): void
+                removePermission(name: java.lang.String | string): void
                 /**
                  * Gets the default permissions for the given op status
                  * @param op Which set of default permissions to get
                  * @return The default permissions
                  */
                 // @ts-ignore
-                getDefaultPermissions(op: boolean): java.util.Set<org.bukkit.permissions.Permission>
+                getDefaultPermissions(op: boolean): Array<org.bukkit.permissions.Permission>
                 /**
                  * Recalculates the defaults for the given {@link Permission}.
                  * <p>
@@ -201,7 +201,7 @@ declare namespace org {
                  * @param permissible Permissible subscribing
                  */
                 // @ts-ignore
-                subscribeToPermission(permission: string, permissible: org.bukkit.permissions.Permissible): void
+                subscribeToPermission(permission: java.lang.String | string, permissible: org.bukkit.permissions.Permissible): void
                 /**
                  * Unsubscribes the given Permissible for information about the requested
                  * Permission, by name.
@@ -209,7 +209,7 @@ declare namespace org {
                  * @param permissible Permissible subscribing
                  */
                 // @ts-ignore
-                unsubscribeFromPermission(permission: string, permissible: org.bukkit.permissions.Permissible): void
+                unsubscribeFromPermission(permission: java.lang.String | string, permissible: org.bukkit.permissions.Permissible): void
                 /**
                  * Gets a set containing all subscribed {@link Permissible}s to the given
                  * permission, by name
@@ -217,7 +217,7 @@ declare namespace org {
                  * @return Set containing all subscribed permissions
                  */
                 // @ts-ignore
-                getPermissionSubscriptions(permission: string): java.util.Set<org.bukkit.permissions.Permissible>
+                getPermissionSubscriptions(permission: java.lang.String | string): Array<org.bukkit.permissions.Permissible>
                 /**
                  * Subscribes to the given Default permissions by operator status
                  * <p>
@@ -242,7 +242,7 @@ declare namespace org {
                  * @return Set containing all subscribed permissions
                  */
                 // @ts-ignore
-                getDefaultPermSubscriptions(op: boolean): java.util.Set<org.bukkit.permissions.Permissible>
+                getDefaultPermSubscriptions(op: boolean): Array<org.bukkit.permissions.Permissible>
                 /**
                  * Gets a set of all registered permissions.
                  * <p>
@@ -250,7 +250,7 @@ declare namespace org {
                  * @return Set containing all current registered permissions
                  */
                 // @ts-ignore
-                getPermissions(): java.util.Set<org.bukkit.permissions.Permission>
+                getPermissions(): Array<org.bukkit.permissions.Permission>
                 /**
                  * Returns whether or not timing code should be used for event calls
                  * @return True if event timings are to be used

@@ -36,7 +36,7 @@ declare namespace javax {
                  * @param bias Bias to place the dot at
                  */
                 // @ts-ignore
-                setDot(fb: javax.swing.text.NavigationFilter.FilterBypass, dot: number /*int*/, bias: javax.swing.text.Position.Bias): void
+                public setDot(fb: javax.swing.text.NavigationFilter.FilterBypass, dot: number /*int*/, bias: javax.swing.text.Position.Bias): void
                 /**
                  * Invoked prior to the Caret moving the dot. The default implementation
                  * calls directly into the <code>FilterBypass</code> with the passed
@@ -48,7 +48,7 @@ declare namespace javax {
                  * @param bias Bias for new location
                  */
                 // @ts-ignore
-                moveDot(fb: javax.swing.text.NavigationFilter.FilterBypass, dot: number /*int*/, bias: javax.swing.text.Position.Bias): void
+                public moveDot(fb: javax.swing.text.NavigationFilter.FilterBypass, dot: number /*int*/, bias: javax.swing.text.Position.Bias): void
                 /**
                  * Returns the next visual position to place the caret at from an
                  * existing position. The default implementation simply forwards the
@@ -74,7 +74,7 @@ declare namespace javax {
                  *           doesn't have one of the legal values above
                  */
                 // @ts-ignore
-                getNextVisualPositionFrom(text: javax.swing.text.JTextComponent, pos: number /*int*/, bias: javax.swing.text.Position.Bias, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                public getNextVisualPositionFrom(text: javax.swing.text.JTextComponent, pos: number /*int*/, bias: javax.swing.text.Position.Bias, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
             }
         }
     }

@@ -18,7 +18,7 @@ declare namespace org {
                                  * @return The immutable value for the lock token
                                  */
                                 // @ts-ignore
-                                lockToken(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.String>
+                                lockToken(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.String | string>
                             }
                         }
                     }

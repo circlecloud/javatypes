@@ -32,7 +32,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlAnyAttribute implements java.lang.annotation.Annotation {
+                abstract class XmlAnyAttribute implements java.lang.annotation.Annotation {
                 }
             }
         }

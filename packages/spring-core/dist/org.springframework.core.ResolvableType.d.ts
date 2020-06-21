@@ -43,18 +43,18 @@ declare namespace org {
                  * in preference to {@code null} so that multiple method calls can be safely chained.
                  */
                 // @ts-ignore
-                readonly NONE: org.springframework.core.ResolvableType
+                public static readonly NONE: org.springframework.core.ResolvableType
                 /**
                  * Return the underling Java {@link Type} being managed.
                  */
                 // @ts-ignore
-                getType(): java.lang.reflect.Type
+                public getType(): java.lang.reflect.Type
                 /**
                  * Return the underlying Java {@link Class} being managed, if available;
                  * otherwise {@code null}.
                  */
                 // @ts-ignore
-                getRawClass(): java.lang.Class<?>
+                public getRawClass(): java.lang.Class<any>
                 /**
                  * Return the underlying source of the resolvable type. Will return a {@link Field},
                  * {@link MethodParameter} or {@link Type} depending on how the {@link ResolvableType}
@@ -63,7 +63,7 @@ declare namespace org {
                  * type information or meta-data that alternative JVM languages may provide.
                  */
                 // @ts-ignore
-                getSource(): java.lang.Object
+                public getSource(): any
                 /**
                  * Return this type as a resolved {@code Class}, falling back to
                  * {@link java.lang.Object} if no specific class can be resolved.
@@ -73,7 +73,7 @@ declare namespace org {
                  * @see #resolve(Class)
                  */
                 // @ts-ignore
-                toClass(): java.lang.Class<?>
+                public toClass(): java.lang.Class<any>
                 /**
                  * Determine whether the given object is an instance of this {@code ResolvableType}.
                  * @param obj the object to check
@@ -81,7 +81,7 @@ declare namespace org {
                  * @see #isAssignableFrom(Class)
                  */
                 // @ts-ignore
-                isInstance(obj: any): boolean
+                public isInstance(obj: java.lang.Object | any): boolean
                 /**
                  * Determine whether this {@code ResolvableType} is assignable from the
                  * specified other type.
@@ -90,7 +90,7 @@ declare namespace org {
                  * @see #isAssignableFrom(ResolvableType)
                  */
                 // @ts-ignore
-                isAssignableFrom(other: java.lang.Class<any>): boolean
+                public isAssignableFrom(other: java.lang.Class<any>): boolean
                 /**
                  * Determine whether this {@code ResolvableType} is assignable from the
                  * specified other type.
@@ -103,20 +103,20 @@ declare namespace org {
                  *  {@code ResolvableType}; {@code false} otherwise
                  */
                 // @ts-ignore
-                isAssignableFrom(other: org.springframework.core.ResolvableType): boolean
+                public isAssignableFrom(other: org.springframework.core.ResolvableType): boolean
                 /**
                  * Return {@code true} if this type resolves to a Class that represents an array.
                  * @see #getComponentType()
                  */
                 // @ts-ignore
-                isArray(): boolean
+                public isArray(): boolean
                 /**
                  * Return the ResolvableType representing the component type of the array or
                  * {@link #NONE} if this type does not represent an array.
                  * @see #isArray()
                  */
                 // @ts-ignore
-                getComponentType(): org.springframework.core.ResolvableType
+                public getComponentType(): org.springframework.core.ResolvableType
                 /**
                  * Convenience method to return this type as a resolvable {@link Collection} type.
                  * Returns {@link #NONE} if this type does not implement or extend
@@ -125,7 +125,7 @@ declare namespace org {
                  * @see #asMap()
                  */
                 // @ts-ignore
-                asCollection(): org.springframework.core.ResolvableType
+                public asCollection(): org.springframework.core.ResolvableType
                 /**
                  * Convenience method to return this type as a resolvable {@link Map} type.
                  * Returns {@link #NONE} if this type does not implement or extend
@@ -134,7 +134,7 @@ declare namespace org {
                  * @see #asCollection()
                  */
                 // @ts-ignore
-                asMap(): org.springframework.core.ResolvableType
+                public asMap(): org.springframework.core.ResolvableType
                 /**
                  * Return this type as a {@link ResolvableType} of the specified class. Searches
                  * {@link #getSuperType() supertype} and {@link #getInterfaces() interface}
@@ -149,7 +149,7 @@ declare namespace org {
                  * @see #getInterfaces()
                  */
                 // @ts-ignore
-                as(type: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public as(type: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} representing the direct supertype of this type.
                  * If no supertype is available this method returns {@link #NONE}.
@@ -157,7 +157,7 @@ declare namespace org {
                  * @see #getInterfaces()
                  */
                 // @ts-ignore
-                getSuperType(): org.springframework.core.ResolvableType
+                public getSuperType(): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} array representing the direct interfaces
                  * implemented by this type. If this type does not implement any interfaces an
@@ -166,14 +166,14 @@ declare namespace org {
                  * @see #getSuperType()
                  */
                 // @ts-ignore
-                getInterfaces(): org.springframework.core.ResolvableType[]
+                public getInterfaces(): org.springframework.core.ResolvableType[]
                 /**
                  * Return {@code true} if this type contains generic parameters.
                  * @see #getGeneric(int...)
                  * @see #getGenerics()
                  */
                 // @ts-ignore
-                hasGenerics(): boolean
+                public hasGenerics(): boolean
                 /**
                  * Determine whether the underlying type has any unresolvable generics:
                  * either through an unresolvable type variable on the type itself
@@ -182,7 +182,7 @@ declare namespace org {
                  * The result will be {@code true} only in those two scenarios.
                  */
                 // @ts-ignore
-                hasUnresolvableGenerics(): boolean
+                public hasUnresolvableGenerics(): boolean
                 /**
                  * Return a {@link ResolvableType} for the specified nesting level.
                  * See {@link #getNested(int, Map)} for details.
@@ -190,7 +190,7 @@ declare namespace org {
                  * @return the {#link ResolvableType} type, or {@code #NONE}
                  */
                 // @ts-ignore
-                getNested(nestingLevel: number /*int*/): org.springframework.core.ResolvableType
+                public getNested(nestingLevel: number /*int*/): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified nesting level.
                  * <p>The nesting level refers to the specific generic parameter that should be returned.
@@ -212,7 +212,7 @@ declare namespace org {
                  * @return a {#link ResolvableType} for the nested level, or {@link #NONE}
                  */
                 // @ts-ignore
-                getNested(nestingLevel: number /*int*/, typeIndexesPerLevel: java.util.Map<java.lang.Integer, java.lang.Integer>): org.springframework.core.ResolvableType
+                public getNested(nestingLevel: number /*int*/, typeIndexesPerLevel: java.util.Map<java.lang.Integer | number, java.lang.Integer | number>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} representing the generic parameter for the
                  * given indexes. Indexes are zero based; for example given the type
@@ -231,7 +231,7 @@ declare namespace org {
                  * @see #resolveGenerics()
                  */
                 // @ts-ignore
-                getGeneric(...indexes: number /*int*/[]): org.springframework.core.ResolvableType
+                public getGeneric(...indexes: number /*int*/[]): org.springframework.core.ResolvableType
                 /**
                  * Return an array of {@link ResolvableType ResolvableTypes} representing the generic parameters of
                  * this type. If no generics are available an empty array is returned. If you need to
@@ -246,7 +246,7 @@ declare namespace org {
                  * @see #resolveGenerics()
                  */
                 // @ts-ignore
-                getGenerics(): org.springframework.core.ResolvableType[]
+                public getGenerics(): org.springframework.core.ResolvableType[]
                 /**
                  * Convenience method that will {@link #getGenerics() get} and
                  * {@link #resolve() resolve} generic parameters.
@@ -256,7 +256,7 @@ declare namespace org {
                  * @see #resolve()
                  */
                 // @ts-ignore
-                resolveGenerics(): java.lang.Class[]
+                public resolveGenerics(): java.lang.Class<any>[]
                 /**
                  * Convenience method that will {@link #getGenerics() get} and {@link #resolve()
                  * resolve} generic parameters, using the specified {@code fallback} if any type
@@ -267,7 +267,7 @@ declare namespace org {
                  * @see #resolve()
                  */
                 // @ts-ignore
-                resolveGenerics(fallback: java.lang.Class<any>): java.lang.Class[]
+                public resolveGenerics(fallback: java.lang.Class<any>): java.lang.Class<any>[]
                 /**
                  * Convenience method that will {@link #getGeneric(int...) get} and
                  * {@link #resolve() resolve} a specific generic parameters.
@@ -278,7 +278,7 @@ declare namespace org {
                  * @see #resolve()
                  */
                 // @ts-ignore
-                resolveGeneric(...indexes: number /*int*/[]): java.lang.Class<?>
+                public resolveGeneric(...indexes: number /*int*/[]): java.lang.Class<any>
                 /**
                  * Resolve this type to a {@link java.lang.Class}, returning {@code null}
                  * if the type cannot be resolved. This method will consider bounds of
@@ -293,7 +293,7 @@ declare namespace org {
                  * @see #resolveGenerics()
                  */
                 // @ts-ignore
-                resolve(): java.lang.Class<?>
+                public resolve(): java.lang.Class<any>
                 /**
                  * Resolve this type to a {@link java.lang.Class}, returning the specified
                  * {@code fallback} if the type cannot be resolved. This method will consider bounds
@@ -306,17 +306,17 @@ declare namespace org {
                  * @see #resolveGenerics()
                  */
                 // @ts-ignore
-                resolve(fallback: java.lang.Class<any>): java.lang.Class<?>
+                public resolve(fallback: java.lang.Class<any>): java.lang.Class<any>
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Return a String representation of this type in its fully resolved form
                  * (including any generic parameters).
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Class},
                  * using the full generic type information for assignability checks.
@@ -328,7 +328,7 @@ declare namespace org {
                  * @see #forClassWithGenerics(Class, Class...)
                  */
                 // @ts-ignore
-                forClass(clazz: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forClass(clazz: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Class},
                  * doing assignability checks against the raw class only (analogous to
@@ -342,7 +342,7 @@ declare namespace org {
                  * @see #getRawClass()
                  */
                 // @ts-ignore
-                forRawClass(clazz: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forRawClass(clazz: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified base type
                  * (interface or base class) with a given implementation class.
@@ -355,7 +355,7 @@ declare namespace org {
                  * @see #forClassWithGenerics(Class, Class...)
                  */
                 // @ts-ignore
-                forClass(baseType: java.lang.Class<any>, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forClass(baseType: java.lang.Class<any>, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Class} with pre-declared generics.
                  * @param clazz the class (or interface) to introspect
@@ -364,7 +364,7 @@ declare namespace org {
                  * @see #forClassWithGenerics(Class, ResolvableType...)
                  */
                 // @ts-ignore
-                forClassWithGenerics(clazz: java.lang.Class<any>, ...generics: java.lang.Class[]): org.springframework.core.ResolvableType
+                public static forClassWithGenerics(clazz: java.lang.Class<any>, ...generics: java.lang.Class<any>[]): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Class} with pre-declared generics.
                  * @param clazz the class (or interface) to introspect
@@ -373,7 +373,7 @@ declare namespace org {
                  * @see #forClassWithGenerics(Class, Class...)
                  */
                 // @ts-ignore
-                forClassWithGenerics(clazz: java.lang.Class<any>, ...generics: org.springframework.core.ResolvableType[]): org.springframework.core.ResolvableType
+                public static forClassWithGenerics(clazz: java.lang.Class<any>, ...generics: org.springframework.core.ResolvableType[]): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified instance. The instance does not
                  * convey generic information but if it implements {@link ResolvableTypeProvider} a
@@ -385,7 +385,7 @@ declare namespace org {
                  * @see ResolvableTypeProvider
                  */
                 // @ts-ignore
-                forInstance(instance: any): org.springframework.core.ResolvableType
+                public static forInstance(instance: java.lang.Object | any): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Field}.
                  * @param field the source field
@@ -393,7 +393,7 @@ declare namespace org {
                  * @see #forField(Field, Class)
                  */
                 // @ts-ignore
-                forField(field: java.lang.reflect.Field): org.springframework.core.ResolvableType
+                public static forField(field: java.lang.reflect.Field): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Field} with a given
                  * implementation.
@@ -405,7 +405,7 @@ declare namespace org {
                  * @see #forField(Field)
                  */
                 // @ts-ignore
-                forField(field: java.lang.reflect.Field, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forField(field: java.lang.reflect.Field, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Field} with a given
                  * implementation.
@@ -417,7 +417,7 @@ declare namespace org {
                  * @see #forField(Field)
                  */
                 // @ts-ignore
-                forField(field: java.lang.reflect.Field, implementationType: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
+                public static forField(field: java.lang.reflect.Field, implementationType: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Field} with the
                  * given nesting level.
@@ -427,7 +427,7 @@ declare namespace org {
                  * @see #forField(Field)
                  */
                 // @ts-ignore
-                forField(field: java.lang.reflect.Field, nestingLevel: number /*int*/): org.springframework.core.ResolvableType
+                public static forField(field: java.lang.reflect.Field, nestingLevel: number /*int*/): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Field} with a given
                  * implementation and the given nesting level.
@@ -441,7 +441,7 @@ declare namespace org {
                  * @see #forField(Field)
                  */
                 // @ts-ignore
-                forField(field: java.lang.reflect.Field, nestingLevel: number /*int*/, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forField(field: java.lang.reflect.Field, nestingLevel: number /*int*/, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Constructor} parameter.
                  * @param constructor the source constructor (must not be {#code null})
@@ -450,7 +450,7 @@ declare namespace org {
                  * @see #forConstructorParameter(Constructor, int, Class)
                  */
                 // @ts-ignore
-                forConstructorParameter(constructor: java.lang.reflect.Constructor<any>, parameterIndex: number /*int*/): org.springframework.core.ResolvableType
+                public static forConstructorParameter(constructor: java.lang.reflect.Constructor<any>, parameterIndex: number /*int*/): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Constructor} parameter
                  * with a given implementation. Use this variant when the class that declares the
@@ -463,7 +463,7 @@ declare namespace org {
                  * @see #forConstructorParameter(Constructor, int)
                  */
                 // @ts-ignore
-                forConstructorParameter(constructor: java.lang.reflect.Constructor<any>, parameterIndex: number /*int*/, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forConstructorParameter(constructor: java.lang.reflect.Constructor<any>, parameterIndex: number /*int*/, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Method} return type.
                  * @param method the source for the method return type
@@ -471,7 +471,7 @@ declare namespace org {
                  * @see #forMethodReturnType(Method, Class)
                  */
                 // @ts-ignore
-                forMethodReturnType(method: java.lang.reflect.Method): org.springframework.core.ResolvableType
+                public static forMethodReturnType(method: java.lang.reflect.Method): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Method} return type.
                  * Use this variant when the class that declares the method includes generic
@@ -482,7 +482,7 @@ declare namespace org {
                  * @see #forMethodReturnType(Method)
                  */
                 // @ts-ignore
-                forMethodReturnType(method: java.lang.reflect.Method, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forMethodReturnType(method: java.lang.reflect.Method, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Method} parameter.
                  * @param method the source method (must not be {#code null})
@@ -492,7 +492,7 @@ declare namespace org {
                  * @see #forMethodParameter(MethodParameter)
                  */
                 // @ts-ignore
-                forMethodParameter(method: java.lang.reflect.Method, parameterIndex: number /*int*/): org.springframework.core.ResolvableType
+                public static forMethodParameter(method: java.lang.reflect.Method, parameterIndex: number /*int*/): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Method} parameter with a
                  * given implementation. Use this variant when the class that declares the method
@@ -505,7 +505,7 @@ declare namespace org {
                  * @see #forMethodParameter(MethodParameter)
                  */
                 // @ts-ignore
-                forMethodParameter(method: java.lang.reflect.Method, parameterIndex: number /*int*/, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
+                public static forMethodParameter(method: java.lang.reflect.Method, parameterIndex: number /*int*/, implementationClass: java.lang.Class<any>): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link MethodParameter}.
                  * @param methodParameter the source method parameter (must not be {#code null})
@@ -513,7 +513,7 @@ declare namespace org {
                  * @see #forMethodParameter(Method, int)
                  */
                 // @ts-ignore
-                forMethodParameter(methodParameter: org.springframework.core.MethodParameter): org.springframework.core.ResolvableType
+                public static forMethodParameter(methodParameter: org.springframework.core.MethodParameter): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link MethodParameter} with a
                  * given implementation type. Use this variant when the class that declares the method
@@ -524,7 +524,7 @@ declare namespace org {
                  * @see #forMethodParameter(MethodParameter)
                  */
                 // @ts-ignore
-                forMethodParameter(methodParameter: org.springframework.core.MethodParameter, implementationType: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
+                public static forMethodParameter(methodParameter: org.springframework.core.MethodParameter, implementationType: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link MethodParameter},
                  * overriding the target type to resolve with a specific given type.
@@ -534,14 +534,14 @@ declare namespace org {
                  * @see #forMethodParameter(Method, int)
                  */
                 // @ts-ignore
-                forMethodParameter(methodParameter: org.springframework.core.MethodParameter, targetType: java.lang.reflect.Type): org.springframework.core.ResolvableType
+                public static forMethodParameter(methodParameter: org.springframework.core.MethodParameter, targetType: java.lang.reflect.Type): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} as a array of the specified {@code componentType}.
                  * @param componentType the component type
                  * @return a {#link ResolvableType} as an array of the specified component type
                  */
                 // @ts-ignore
-                forArrayComponent(componentType: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
+                public static forArrayComponent(componentType: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Type}.
                  * <p>Note: The resulting {@link ResolvableType} instance may not be {@link Serializable}.
@@ -550,7 +550,7 @@ declare namespace org {
                  * @see #forType(Type, ResolvableType)
                  */
                 // @ts-ignore
-                forType(type: java.lang.reflect.Type): org.springframework.core.ResolvableType
+                public static forType(type: java.lang.reflect.Type): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link Type} backed by the given
                  * owner type.
@@ -561,7 +561,7 @@ declare namespace org {
                  * @see #forType(Type)
                  */
                 // @ts-ignore
-                forType(type: java.lang.reflect.Type, owner: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
+                public static forType(type: java.lang.reflect.Type, owner: org.springframework.core.ResolvableType): org.springframework.core.ResolvableType
                 /**
                  * Return a {@link ResolvableType} for the specified {@link ParameterizedTypeReference}.
                  * <p>Note: The resulting {@link ResolvableType} instance may not be {@link Serializable}.
@@ -571,13 +571,13 @@ declare namespace org {
                  * @see #forType(Type)
                  */
                 // @ts-ignore
-                forType(typeReference: org.springframework.core.ParameterizedTypeReference<any>): org.springframework.core.ResolvableType
+                public static forType(typeReference: org.springframework.core.ParameterizedTypeReference<any>): org.springframework.core.ResolvableType
                 /**
                  * Clear the internal {@code ResolvableType}/{@code SerializableTypeWrapper} cache.
                  * @since 4.2
                  */
                 // @ts-ignore
-                clearCache(): void
+                public static clearCache(): void
             }
         }
     }

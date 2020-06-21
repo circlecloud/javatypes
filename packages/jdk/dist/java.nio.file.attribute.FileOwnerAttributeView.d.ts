@@ -24,7 +24,7 @@ declare namespace java {
                      * have the name {@code "owner"}.
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * Read the file owner.
                      * <p> It it implementation specific if the file owner can be a {@link

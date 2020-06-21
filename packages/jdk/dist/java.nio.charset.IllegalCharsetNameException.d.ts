@@ -14,13 +14,13 @@ declare namespace java {
                  *          The illegal charset name
                  */
                 // @ts-ignore
-                constructor(charsetName: string)
+                constructor(charsetName: java.lang.String | string)
                 /**
                  * Retrieves the illegal charset name.
                  * @return The illegal charset name
                  */
                 // @ts-ignore
-                getCharsetName(): java.lang.String
+                getCharsetName(): string
             }
         }
     }

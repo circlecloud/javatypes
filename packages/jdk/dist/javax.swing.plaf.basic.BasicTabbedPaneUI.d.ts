@@ -101,11 +101,11 @@ declare namespace javax {
                     // @ts-ignore
                     calcRect: java.awt.Rectangle
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Invoked by <code>installUI</code> to create
                      * a layout manager object to manage
@@ -183,11 +183,11 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getRolloverTab(): int
+                    getRolloverTab(): number /*int*/
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -196,7 +196,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -205,7 +205,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     /**
                      * Returns the baseline for the specified tab.
                      * @param tab index of tab to get baseline for
@@ -216,7 +216,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(tab: number /*int*/): int
+                    getBaseline(tab: number /*int*/): number /*int*/
                     /**
                      * Returns the amount the baseline is offset by.  This is typically
                      * the same as <code>getTabLabelShiftY</code>.
@@ -224,9 +224,9 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineOffset(): int
+                    getBaselineOffset(): number /*int*/
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the tabs in the tab area.
                      * Invoked by paint().
@@ -247,15 +247,15 @@ declare namespace javax {
                     // @ts-ignore
                     paintTab(g: java.awt.Graphics, tabPlacement: number /*int*/, rects: java.awt.Rectangle[], tabIndex: number /*int*/, iconRect: java.awt.Rectangle, textRect: java.awt.Rectangle): void
                     // @ts-ignore
-                    layoutLabel(tabPlacement: number /*int*/, metrics: java.awt.FontMetrics, tabIndex: number /*int*/, title: string, icon: javax.swing.Icon, tabRect: java.awt.Rectangle, iconRect: java.awt.Rectangle, textRect: java.awt.Rectangle, isSelected: boolean): void
+                    layoutLabel(tabPlacement: number /*int*/, metrics: java.awt.FontMetrics, tabIndex: number /*int*/, title: java.lang.String | string, icon: javax.swing.Icon, tabRect: java.awt.Rectangle, iconRect: java.awt.Rectangle, textRect: java.awt.Rectangle, isSelected: boolean): void
                     // @ts-ignore
                     paintIcon(g: java.awt.Graphics, tabPlacement: number /*int*/, tabIndex: number /*int*/, icon: javax.swing.Icon, iconRect: java.awt.Rectangle, isSelected: boolean): void
                     // @ts-ignore
-                    paintText(g: java.awt.Graphics, tabPlacement: number /*int*/, font: java.awt.Font, metrics: java.awt.FontMetrics, tabIndex: number /*int*/, title: string, textRect: java.awt.Rectangle, isSelected: boolean): void
+                    paintText(g: java.awt.Graphics, tabPlacement: number /*int*/, font: java.awt.Font, metrics: java.awt.FontMetrics, tabIndex: number /*int*/, title: java.lang.String | string, textRect: java.awt.Rectangle, isSelected: boolean): void
                     // @ts-ignore
-                    getTabLabelShiftX(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): int
+                    getTabLabelShiftX(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): number /*int*/
                     // @ts-ignore
-                    getTabLabelShiftY(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): int
+                    getTabLabelShiftY(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): number /*int*/
                     // @ts-ignore
                     paintFocusIndicator(g: java.awt.Graphics, tabPlacement: number /*int*/, rects: java.awt.Rectangle[], tabIndex: number /*int*/, iconRect: java.awt.Rectangle, textRect: java.awt.Rectangle, isSelected: boolean): void
                     /**
@@ -282,15 +282,15 @@ declare namespace javax {
                      * with respect to the JTabbedPane's coordinate space.
                      */
                     // @ts-ignore
-                    getTabBounds(pane: javax.swing.JTabbedPane, i: number /*int*/): java.awt.Rectangle
+                    public getTabBounds(pane: javax.swing.JTabbedPane, i: number /*int*/): java.awt.Rectangle
                     // @ts-ignore
-                    getTabRunCount(pane: javax.swing.JTabbedPane): int
+                    public getTabRunCount(pane: javax.swing.JTabbedPane): number /*int*/
                     /**
                      * Returns the tab index which intersects the specified point
                      * in the JTabbedPane's coordinate space.
                      */
                     // @ts-ignore
-                    tabForCoordinate(pane: javax.swing.JTabbedPane, x: number /*int*/, y: number /*int*/): int
+                    public tabForCoordinate(pane: javax.swing.JTabbedPane, x: number /*int*/, y: number /*int*/): number /*int*/
                     /**
                      * Returns the bounds of the specified tab in the coordinate space
                      * of the JTabbedPane component.  This is required because the tab rects
@@ -320,13 +320,13 @@ declare namespace javax {
                     // @ts-ignore
                     expandTabRunsArray(): void
                     // @ts-ignore
-                    getRunForTab(tabCount: number /*int*/, tabIndex: number /*int*/): int
+                    getRunForTab(tabCount: number /*int*/, tabIndex: number /*int*/): number /*int*/
                     // @ts-ignore
-                    lastTabInRun(tabCount: number /*int*/, run: number /*int*/): int
+                    lastTabInRun(tabCount: number /*int*/, run: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getTabRunOverlay(tabPlacement: number /*int*/): int
+                    getTabRunOverlay(tabPlacement: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getTabRunIndent(tabPlacement: number /*int*/, run: number /*int*/): int
+                    getTabRunIndent(tabPlacement: number /*int*/, run: number /*int*/): number /*int*/
                     // @ts-ignore
                     shouldPadTabRun(tabPlacement: number /*int*/, run: number /*int*/): boolean
                     // @ts-ignore
@@ -345,17 +345,17 @@ declare namespace javax {
                     // @ts-ignore
                     getTextViewForTab(tabIndex: number /*int*/): javax.swing.text.View
                     // @ts-ignore
-                    calculateTabHeight(tabPlacement: number /*int*/, tabIndex: number /*int*/, fontHeight: number /*int*/): int
+                    calculateTabHeight(tabPlacement: number /*int*/, tabIndex: number /*int*/, fontHeight: number /*int*/): number /*int*/
                     // @ts-ignore
-                    calculateMaxTabHeight(tabPlacement: number /*int*/): int
+                    calculateMaxTabHeight(tabPlacement: number /*int*/): number /*int*/
                     // @ts-ignore
-                    calculateTabWidth(tabPlacement: number /*int*/, tabIndex: number /*int*/, metrics: java.awt.FontMetrics): int
+                    calculateTabWidth(tabPlacement: number /*int*/, tabIndex: number /*int*/, metrics: java.awt.FontMetrics): number /*int*/
                     // @ts-ignore
-                    calculateMaxTabWidth(tabPlacement: number /*int*/): int
+                    calculateMaxTabWidth(tabPlacement: number /*int*/): number /*int*/
                     // @ts-ignore
-                    calculateTabAreaHeight(tabPlacement: number /*int*/, horizRunCount: number /*int*/, maxTabHeight: number /*int*/): int
+                    calculateTabAreaHeight(tabPlacement: number /*int*/, horizRunCount: number /*int*/, maxTabHeight: number /*int*/): number /*int*/
                     // @ts-ignore
-                    calculateTabAreaWidth(tabPlacement: number /*int*/, vertRunCount: number /*int*/, maxTabWidth: number /*int*/): int
+                    calculateTabAreaWidth(tabPlacement: number /*int*/, vertRunCount: number /*int*/, maxTabWidth: number /*int*/): number /*int*/
                     // @ts-ignore
                     getTabInsets(tabPlacement: number /*int*/, tabIndex: number /*int*/): java.awt.Insets
                     // @ts-ignore
@@ -384,23 +384,23 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getFocusIndex(): int
+                    getFocusIndex(): number /*int*/
                     // @ts-ignore
-                    getTabRunOffset(tabPlacement: number /*int*/, tabCount: number /*int*/, tabIndex: number /*int*/, forward: boolean): int
+                    getTabRunOffset(tabPlacement: number /*int*/, tabCount: number /*int*/, tabIndex: number /*int*/, forward: boolean): number /*int*/
                     // @ts-ignore
-                    getPreviousTabIndex(base: number /*int*/): int
+                    getPreviousTabIndex(base: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getNextTabIndex(base: number /*int*/): int
+                    getNextTabIndex(base: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getNextTabIndexInRun(tabCount: number /*int*/, base: number /*int*/): int
+                    getNextTabIndexInRun(tabCount: number /*int*/, base: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getPreviousTabIndexInRun(tabCount: number /*int*/, base: number /*int*/): int
+                    getPreviousTabIndexInRun(tabCount: number /*int*/, base: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getPreviousTabRun(baseRun: number /*int*/): int
+                    getPreviousTabRun(baseRun: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getNextTabRun(baseRun: number /*int*/): int
+                    getNextTabRun(baseRun: number /*int*/): number /*int*/
                     // @ts-ignore
-                    rotateInsets(topInsets: java.awt.Insets, targetInsets: java.awt.Insets, targetPlacement: number /*int*/): void
+                    static rotateInsets(topInsets: java.awt.Insets, targetInsets: java.awt.Insets, targetPlacement: number /*int*/): void
                 }
             }
         }

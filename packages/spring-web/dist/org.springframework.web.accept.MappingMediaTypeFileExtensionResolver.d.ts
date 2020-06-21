@@ -17,26 +17,26 @@ declare namespace org {
                      * Create an instance with the given map of file extensions and media types.
                      */
                     // @ts-ignore
-                    constructor(mediaTypes: java.util.Map<java.lang.String, org.springframework.http.MediaType>)
+                    constructor(mediaTypes: java.util.Map<java.lang.String | string, org.springframework.http.MediaType>)
                     // @ts-ignore
-                    getMediaTypes(): java.util.Map<java.lang.String, org.springframework.http.MediaType>
+                    public getMediaTypes(): java.util.Map<java.lang.String | string, org.springframework.http.MediaType>
                     // @ts-ignore
-                    getAllMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    getAllMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Map an extension to a MediaType. Ignore if extension already mapped.
                      */
                     // @ts-ignore
-                    addMapping(extension: string, mediaType: org.springframework.http.MediaType): void
+                    addMapping(extension: java.lang.String | string, mediaType: org.springframework.http.MediaType): void
                     // @ts-ignore
-                    resolveFileExtensions(mediaType: org.springframework.http.MediaType): java.util.List<java.lang.String>
+                    public resolveFileExtensions(mediaType: org.springframework.http.MediaType): Array<java.lang.String | string>
                     // @ts-ignore
-                    getAllFileExtensions(): java.util.List<java.lang.String>
+                    public getAllFileExtensions(): Array<java.lang.String | string>
                     /**
                      * Use this method for a reverse lookup from extension to MediaType.
                      * @return a MediaType for the extension, or {#code null} if none found
                      */
                     // @ts-ignore
-                    lookupMediaType(extension: string): org.springframework.http.MediaType
+                    lookupMediaType(extension: java.lang.String | string): org.springframework.http.MediaType
                 }
             }
         }

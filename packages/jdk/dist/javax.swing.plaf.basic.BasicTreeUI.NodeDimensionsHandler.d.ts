@@ -16,12 +16,12 @@ declare namespace javax {
                          * Responsible for getting the size of a particular node.
                          */
                         // @ts-ignore
-                        getNodeDimensions(value: any, row: number /*int*/, depth: number /*int*/, expanded: boolean, size: java.awt.Rectangle): java.awt.Rectangle
+                        public getNodeDimensions(value: java.lang.Object | any, row: number /*int*/, depth: number /*int*/, expanded: boolean, size: java.awt.Rectangle): java.awt.Rectangle
                         /**
                          * @return amount to indent the given row.
                          */
                         // @ts-ignore
-                        getRowX(row: number /*int*/, depth: number /*int*/): int
+                        getRowX(row: number /*int*/, depth: number /*int*/): number /*int*/
                     }
                 }
             }

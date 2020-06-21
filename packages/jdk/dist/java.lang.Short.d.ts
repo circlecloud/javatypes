@@ -14,7 +14,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class Short extends java.lang.Number implements java.lang.Comparable<java.lang.Short> {
+        class Short extends java.lang.Number implements java.lang.Comparable<java.lang.Short | number> {
             /**
              * Constructs a newly allocated {@code Short} object that
              * represents the specified {@code short} value.
@@ -36,39 +36,39 @@ declare namespace java {
              * @see java.lang.Short#parseShort(java.lang.String, int)
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * A constant holding the minimum value a {@code short} can
              * have, -2<sup>15</sup>.
              */
             // @ts-ignore
-            readonly MIN_VALUE: number /*short*/
+            public static readonly MIN_VALUE: number /*short*/
             /**
              * A constant holding the maximum value a {@code short} can
              * have, 2<sup>15</sup>-1.
              */
             // @ts-ignore
-            readonly MAX_VALUE: number /*short*/
+            public static readonly MAX_VALUE: number /*short*/
             /**
              * The {@code Class} instance representing the primitive type
              * {@code short}.
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Short>
+            public static readonly TYPE: java.lang.Class<java.lang.Short | number>
             /**
              * The number of bits used to represent a {@code short} value in two's
              * complement binary form.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code short} value in two's
              * complement binary form.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * Returns a new {@code String} object representing the
              * specified {@code short}. The radix is assumed to be 10.
@@ -77,7 +77,7 @@ declare namespace java {
              * @see java.lang.Integer#toString(int)
              */
             // @ts-ignore
-            toString(s: number /*short*/): java.lang.String
+            public static toString(s: number /*short*/): string
             /**
              * Parses the string argument as a signed {@code short} in the
              * radix specified by the second argument. The characters in the
@@ -114,7 +114,7 @@ declare namespace java {
              *                   does not contain a parsable {@code short}.
              */
             // @ts-ignore
-            parseShort(s: string, radix: number /*int*/): short
+            public static parseShort(s: java.lang.String | string, radix: number /*int*/): number /*short*/
             /**
              * Parses the string argument as a signed decimal {@code
              * short}. The characters in the string must all be decimal
@@ -133,7 +133,7 @@ declare namespace java {
              *           contain a parsable {#code short}.
              */
             // @ts-ignore
-            parseShort(s: string): short
+            public static parseShort(s: java.lang.String | string): number /*short*/
             /**
              * Returns a {@code Short} object holding the value
              * extracted from the specified {@code String} when parsed
@@ -157,7 +157,7 @@ declare namespace java {
              *                   not contain a parsable {@code short}.
              */
             // @ts-ignore
-            valueOf(s: string, radix: number /*int*/): java.lang.Short
+            public static valueOf(s: java.lang.String | string, radix: number /*int*/): number
             /**
              * Returns a {@code Short} object holding the
              * value given by the specified {@code String}. The argument
@@ -178,7 +178,7 @@ declare namespace java {
              *           not contain a parsable {@code short}.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Short
+            public static valueOf(s: java.lang.String | string): number
             /**
              * Returns a {@code Short} instance representing the specified
              * {@code short} value.
@@ -194,7 +194,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(s: number /*short*/): java.lang.Short
+            public static valueOf(s: number /*short*/): number
             /**
              * Decodes a {@code String} into a {@code Short}.
              * Accepts decimal, hexadecimal, and octal numbers given by
@@ -233,48 +233,48 @@ declare namespace java {
              * @see java.lang.Short#parseShort(java.lang.String, int)
              */
             // @ts-ignore
-            decode(nm: string): java.lang.Short
+            public static decode(nm: java.lang.String | string): number
             /**
              * Returns the value of this {@code Short} as a {@code byte} after
              * a narrowing primitive conversion.
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of this {@code Short} as a
              * {@code short}.
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
             /**
              * Returns the value of this {@code Short} as an {@code int} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Returns the value of this {@code Short} as a {@code long} after
              * a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Returns the value of this {@code Short} as a {@code float}
              * after a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Returns the value of this {@code Short} as a {@code double}
              * after a widening primitive conversion.
              * @jls 5.1.2 Widening Primitive Conversions
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns a {@code String} object representing this
              * {@code Short}'s value.  The value is converted to signed
@@ -285,14 +285,14 @@ declare namespace java {
              *           base&nbsp;10.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this {@code Short}; equal to the result
              * of invoking {@code intValue()}.
              * @return a hash code value for this {#code Short}
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code short} value; compatible with
              * {@code Short.hashCode()}.
@@ -301,7 +301,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hashCode(value: number /*short*/): int
+            public static hashCode(value: number /*short*/): number /*int*/
             /**
              * Compares this object to the specified object.  The result is
              * {@code true} if and only if the argument is not
@@ -312,7 +312,7 @@ declare namespace java {
              *                   {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Compares two {@code Short} objects numerically.
              * @param anotherShort   the {#code Short} to be compared.
@@ -326,7 +326,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(anotherShort: number): int
+            public compareTo(anotherShort: java.lang.Short | number): number /*int*/
             /**
              * Compares two {@code short} values numerically.
              * The value returned is identical to what would be returned by:
@@ -341,7 +341,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            compare(x: number /*short*/, y: number /*short*/): int
+            public static compare(x: number /*short*/, y: number /*short*/): number /*int*/
             /**
              * Returns the value obtained by reversing the order of the bytes in the
              * two's complement representation of the specified {@code short} value.
@@ -351,7 +351,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverseBytes(i: number /*short*/): short
+            public static reverseBytes(i: number /*short*/): number /*short*/
             /**
              * Converts the argument to an {@code int} by an unsigned
              * conversion.  In an unsigned conversion to an {@code int}, the
@@ -367,7 +367,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedInt(x: number /*short*/): int
+            public static toUnsignedInt(x: number /*short*/): number /*int*/
             /**
              * Converts the argument to a {@code long} by an unsigned
              * conversion.  In an unsigned conversion to a {@code long}, the
@@ -383,7 +383,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toUnsignedLong(x: number /*short*/): long
+            public static toUnsignedLong(x: number /*short*/): number /*long*/
         }
     }
 }

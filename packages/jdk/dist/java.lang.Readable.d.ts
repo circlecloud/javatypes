@@ -21,7 +21,7 @@ declare namespace java {
              * @throws java.nio.ReadOnlyBufferException if cb is a read only buffer
              */
             // @ts-ignore
-            read(cb: java.nio.CharBuffer): int
+            read(cb: java.nio.CharBuffer): number /*int*/
         }
     }
 }

@@ -9,9 +9,9 @@ declare namespace org {
                     // @ts-ignore
                     class CoalTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly CHARCOAL: org.spongepowered.api.data.type.CoalType
+                        public static readonly CHARCOAL: org.spongepowered.api.data.type.CoalType
                         // @ts-ignore
-                        readonly COAL: org.spongepowered.api.data.type.CoalType
+                        public static readonly COAL: org.spongepowered.api.data.type.CoalType
                     }
                 }
             }

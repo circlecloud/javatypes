@@ -12,17 +12,17 @@ declare namespace org {
                          * Parameter for header section in header partition.
                          */
                         // @ts-ignore
-                        
+                        readonly PARAM_MESSAGE_HEADER: java.lang.String | string
                         /**
                          * Parameter for body section in body partition.
                          */
                         // @ts-ignore
-                        
+                        readonly PARAM_MESSAGE_BODY: java.lang.String | string
                         /**
                          * Parameter for footer section in footer partition.
                          */
                         // @ts-ignore
-                        
+                        readonly PARAM_MESSAGE_FOOTER: java.lang.String | string
                         /**
                          * Gets the original {@link Text} message.
                          * @return The message

@@ -78,7 +78,7 @@ declare namespace javax {
                  * Clears the internal copy of the password.
                  */
                 // @ts-ignore
-                clearPassword(): void
+                public clearPassword(): void
                 /**
                  * Returns a copy of the password.
                  * <p> Note: this method returns a copy of the password. It is
@@ -89,7 +89,7 @@ declare namespace javax {
                  * @return the password.
                  */
                 // @ts-ignore
-                getPassword(): char[]
+                public getPassword(): string[]
                 /**
                  * Returns a copy of the salt or null if not specified.
                  * <p> Note: this method should return a copy of the salt. It is
@@ -98,13 +98,13 @@ declare namespace javax {
                  * @return the salt.
                  */
                 // @ts-ignore
-                getSalt(): byte[]
+                public getSalt(): number /*byte*/[]
                 /**
                  * Returns the iteration count or 0 if not specified.
                  * @return the iteration count.
                  */
                 // @ts-ignore
-                getIterationCount(): int
+                public getIterationCount(): number /*int*/
                 /**
                  * Returns the to-be-derived key length or 0 if not specified.
                  * <p> Note: this is used to indicate the preference on key length
@@ -113,7 +113,7 @@ declare namespace javax {
                  * @return the to-be-derived key length.
                  */
                 // @ts-ignore
-                getKeyLength(): int
+                public getKeyLength(): number /*int*/
             }
         }
     }

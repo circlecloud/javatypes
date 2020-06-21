@@ -43,14 +43,14 @@ declare namespace java {
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getEncoded(): byte[]
+                public getEncoded(): number /*byte*/[]
                 /**
                  * Returns the name of the encoding format associated with this
                  * key specification.
                  * @return the string {#code "PKCS#8"}.
                  */
                 // @ts-ignore
-                getFormat(): java.lang.String
+                public getFormat(): string
             }
         }
     }

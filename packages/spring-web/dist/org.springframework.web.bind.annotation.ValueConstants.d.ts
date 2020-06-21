@@ -20,7 +20,7 @@ declare namespace org {
                          * @see CookieValue#defaultValue()
                          */
                         // @ts-ignore
-                        
+                        readonly DEFAULT_NONE: java.lang.String | string
                     }
                 }
             }

@@ -18,7 +18,7 @@ declare namespace javax {
              * @author Timothy Prinzing
              */
             // @ts-ignore
-            class EditorKit extends java.lang.Object implements java.lang.Cloneable, java.io.Serializable {
+            abstract class EditorKit extends java.lang.Object implements java.lang.Cloneable, java.io.Serializable {
                 /**
                  * Construct an EditorKit.
                  */
@@ -31,14 +31,14 @@ declare namespace javax {
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Called when the kit is being installed into the
                  * a JEditorPane.
                  * @param c the JEditorPane
                  */
                 // @ts-ignore
-                install(c: javax.swing.JEditorPane): void
+                public install(c: javax.swing.JEditorPane): void
                 /**
                  * Called when the kit is being removed from the
                  * JEditorPane.  This is used to unregister any
@@ -46,14 +46,14 @@ declare namespace javax {
                  * @param c the JEditorPane
                  */
                 // @ts-ignore
-                deinstall(c: javax.swing.JEditorPane): void
+                public deinstall(c: javax.swing.JEditorPane): void
                 /**
                  * Gets the MIME type of the data that this
                  * kit represents support for.
                  * @return the type
                  */
                 // @ts-ignore
-                abstract getContentType(): java.lang.String
+                public abstract getContentType(): string
                 /**
                  * Fetches a factory that is suitable for producing
                  * views of any models that are produced by this
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @return the factory
                  */
                 // @ts-ignore
-                abstract getViewFactory(): javax.swing.text.ViewFactory
+                public abstract getViewFactory(): javax.swing.text.ViewFactory
                 /**
                  * Fetches the set of commands that can be used
                  * on a text component that is using a model and
@@ -69,21 +69,21 @@ declare namespace javax {
                  * @return the set of actions
                  */
                 // @ts-ignore
-                abstract getActions(): javax.swing.Action[]
+                public abstract getActions(): javax.swing.Action[]
                 /**
                  * Fetches a caret that can navigate through views
                  * produced by the associated ViewFactory.
                  * @return the caret
                  */
                 // @ts-ignore
-                abstract createCaret(): javax.swing.text.Caret
+                public abstract createCaret(): javax.swing.text.Caret
                 /**
                  * Creates an uninitialized text storage model
                  * that is appropriate for this type of editor.
                  * @return the model
                  */
                 // @ts-ignore
-                abstract createDefaultDocument(): javax.swing.text.Document
+                public abstract createDefaultDocument(): javax.swing.text.Document
                 /**
                  * Inserts content from the given stream which is expected
                  * to be in a format appropriate for this kind of content
@@ -97,7 +97,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                abstract read(input: java.io.InputStream, doc: javax.swing.text.Document, pos: number /*int*/): void
+                public abstract read(input: java.io.InputStream, doc: javax.swing.text.Document, pos: number /*int*/): void
                 /**
                  * Writes content from a document to the given stream
                  * in a format appropriate for this kind of content handler.
@@ -111,7 +111,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                abstract write(out: java.io.OutputStream, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                public abstract write(out: java.io.OutputStream, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
                 /**
                  * Inserts content from the given stream which is expected
                  * to be in a format appropriate for this kind of content
@@ -130,7 +130,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                abstract read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
+                public abstract read(input: java.io.Reader, doc: javax.swing.text.Document, pos: number /*int*/): void
                 /**
                  * Writes content from a document to the given stream
                  * in a format appropriate for this kind of content handler.
@@ -149,7 +149,7 @@ declare namespace javax {
                  *    location within the document.
                  */
                 // @ts-ignore
-                abstract write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
+                public abstract write(out: java.io.Writer, doc: javax.swing.text.Document, pos: number /*int*/, len: number /*int*/): void
             }
         }
     }

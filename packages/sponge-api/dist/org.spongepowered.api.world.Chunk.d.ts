@@ -62,7 +62,7 @@ declare namespace org {
                      * @deprecated Due to misspelling, use {#link #getInhabitedTime()} instead
                      */
                     // @ts-ignore
-                    getInhabittedTime(): int
+                    getInhabittedTime(): number /*int*/
                     /**
                      * Gets the number of ticks players have been present in this chunk, used
                      * for calculation of the regional difficulty factor. In vanilla, it is
@@ -71,7 +71,7 @@ declare namespace org {
                      * @return The number of ticks
                      */
                     // @ts-ignore
-                    getInhabitedTime(): int
+                    getInhabitedTime(): number /*int*/
                     /**
                      * Gets the regional difficulty factor for this chunk. In vanilla, it is
                      * dependent on the playtime of the world, inhabited time of the chunk, the
@@ -81,7 +81,7 @@ declare namespace org {
                      * @return The regional difficulty factor for this chunk
                      */
                     // @ts-ignore
-                    getRegionalDifficultyFactor(): double
+                    getRegionalDifficultyFactor(): number /*double*/
                     /**
                      * Gets the regional difficulty percentage for this chunk. It is calculated
                      * by taking the regional difficulty factor and using the following rules:
@@ -93,7 +93,7 @@ declare namespace org {
                      * @return The regional difficulty percentage for this chunk
                      */
                     // @ts-ignore
-                    getRegionalDifficultyPercentage(): double
+                    getRegionalDifficultyPercentage(): number /*double*/
                     /**
                      * Gets the chunk in the given direction from this chunk, if it exists.
                      * @param direction The cardinal or ordinal direction to get the chunk from

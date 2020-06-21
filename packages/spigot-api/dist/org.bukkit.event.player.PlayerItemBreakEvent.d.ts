@@ -17,11 +17,11 @@ declare namespace org {
                      * @return The broken item
                      */
                     // @ts-ignore
-                    getBrokenItem(): org.bukkit.inventory.ItemStack
+                    public getBrokenItem(): org.bukkit.inventory.ItemStack
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

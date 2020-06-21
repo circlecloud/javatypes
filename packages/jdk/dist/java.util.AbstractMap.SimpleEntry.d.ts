@@ -26,19 +26,19 @@ declare namespace java {
                  * @param entry the entry to copy
                  */
                 // @ts-ignore
-                constructor(entry: java.util.Map.Entry<K, V>)
+                constructor(entry: java.util.Map.Entry<any, any>)
                 /**
                  * Returns the key corresponding to this entry.
                  * @return the key corresponding to this entry
                  */
                 // @ts-ignore
-                getKey(): K
+                public getKey(): K
                 /**
                  * Returns the value corresponding to this entry.
                  * @return the value corresponding to this entry
                  */
                 // @ts-ignore
-                getValue(): V
+                public getValue(): V
                 /**
                  * Replaces the value corresponding to this entry with the specified
                  * value.
@@ -46,7 +46,7 @@ declare namespace java {
                  * @return the old value corresponding to the entry
                  */
                 // @ts-ignore
-                setValue(value: V): V
+                public setValue(value: V): V
                 /**
                  * Compares the specified object with this entry for equality.
                  * Returns {@code true} if the given object is also a map entry and
@@ -68,7 +68,7 @@ declare namespace java {
                  * @see #hashCode
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this map entry.  The hash code
                  * of a map entry {@code e} is defined to be: <pre>
@@ -82,7 +82,7 @@ declare namespace java {
                  * @see #equals
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a String representation of this map entry.  This
                  * implementation returns the string representation of this
@@ -91,7 +91,7 @@ declare namespace java {
                  * @return a String representation of this map entry
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

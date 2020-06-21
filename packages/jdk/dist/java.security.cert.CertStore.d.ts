@@ -60,7 +60,7 @@ declare namespace java {
                  * @param params the initialization parameters (may be {#code null})
                  */
                 // @ts-ignore
-                constructor(storeSpi: java.security.cert.CertStoreSpi, provider: java.security.Provider, type: string, params: java.security.cert.CertStoreParameters)
+                constructor(storeSpi: java.security.cert.CertStoreSpi, provider: java.security.Provider, type: java.lang.String | string, params: java.security.cert.CertStoreParameters)
                 /**
                  * Returns a {@code Collection} of {@code Certificate}s that
                  * match the specified selector. If no {@code Certificate}s
@@ -86,7 +86,7 @@ declare namespace java {
                  * @throws CertStoreException if an exception occurs
                  */
                 // @ts-ignore
-                getCertificates(selector: java.security.cert.CertSelector): java.util.Collection<? extends java.security.cert.Certificate>
+                public getCertificates(selector: java.security.cert.CertSelector): Array<any>
                 /**
                  * Returns a {@code Collection} of {@code CRL}s that
                  * match the specified selector. If no {@code CRL}s
@@ -112,7 +112,7 @@ declare namespace java {
                  * @throws CertStoreException if an exception occurs
                  */
                 // @ts-ignore
-                getCRLs(selector: java.security.cert.CRLSelector): java.util.Collection<? extends java.security.cert.CRL>
+                public getCRLs(selector: java.security.cert.CRLSelector): Array<any>
                 /**
                  * Returns a {@code CertStore} object that implements the specified
                  * {@code CertStore} type and is initialized with the specified
@@ -145,7 +145,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(type: string, params: java.security.cert.CertStoreParameters): java.security.cert.CertStore
+                public static getInstance(type: java.lang.String | string, params: java.security.cert.CertStoreParameters): java.security.cert.CertStore
                 /**
                  * Returns a {@code CertStore} object that implements the specified
                  * {@code CertStore} type.
@@ -182,7 +182,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(type: string, params: java.security.cert.CertStoreParameters, provider: string): java.security.cert.CertStore
+                public static getInstance(type: java.lang.String | string, params: java.security.cert.CertStoreParameters, provider: java.lang.String | string): java.security.cert.CertStore
                 /**
                  * Returns a {@code CertStore} object that implements the specified
                  * {@code CertStore} type.
@@ -215,7 +215,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(type: string, params: java.security.cert.CertStoreParameters, provider: java.security.Provider): java.security.cert.CertStore
+                public static getInstance(type: java.lang.String | string, params: java.security.cert.CertStoreParameters, provider: java.security.Provider): java.security.cert.CertStore
                 /**
                  * Returns the parameters used to initialize this {@code CertStore}.
                  * Note that the {@code CertStoreParameters} object is cloned before
@@ -224,19 +224,19 @@ declare namespace java {
                  *  (may be {@code null})
                  */
                 // @ts-ignore
-                getCertStoreParameters(): java.security.cert.CertStoreParameters
+                public getCertStoreParameters(): java.security.cert.CertStoreParameters
                 /**
                  * Returns the type of this {@code CertStore}.
                  * @return the type of this {#code CertStore}
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Returns the provider of this {@code CertStore}.
                  * @return the provider of this {#code CertStore}
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Returns the default {@code CertStore} type as specified by the
                  * {@code certstore.type} security property, or the string
@@ -254,7 +254,7 @@ declare namespace java {
                  *  {@literal "LDAP"} if no such property exists.
                  */
                 // @ts-ignore
-                getDefaultType(): java.lang.String
+                public static getDefaultType(): string
             }
         }
     }

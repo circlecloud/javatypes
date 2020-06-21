@@ -202,7 +202,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            constructor(name: string, style: number /*int*/, size: number /*int*/)
+            constructor(name: java.lang.String | string, style: number /*int*/, size: number /*int*/)
             /**
              * Creates a new <code>Font</code> with the specified attributes.
              * Only keys defined in {@link java.awt.font.TextAttribute TextAttribute}
@@ -218,7 +218,7 @@ declare namespace java {
              *           <code>Font</code>, or <code>null</code>
              */
             // @ts-ignore
-            constructor(attributes: java.util.Map<java.text.AttributedCharacterIterator.Attribute, any>)
+            constructor(attributes: java.util.Map<any, any>)
             /**
              * Creates a new <code>Font</code> from the specified <code>font</code>.
              * This constructor is intended for use by subclasses.
@@ -235,7 +235,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly DIALOG: string
+            public static readonly DIALOG: java.lang.String | string
             /**
              * A String constant for the canonical family name of the
              * logical font "DialogInput". It is useful in Font construction
@@ -243,7 +243,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly DIALOG_INPUT: string
+            public static readonly DIALOG_INPUT: java.lang.String | string
             /**
              * A String constant for the canonical family name of the
              * logical font "SansSerif". It is useful in Font construction
@@ -251,7 +251,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly SANS_SERIF: string
+            public static readonly SANS_SERIF: java.lang.String | string
             /**
              * A String constant for the canonical family name of the
              * logical font "Serif". It is useful in Font construction
@@ -259,7 +259,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly SERIF: string
+            public static readonly SERIF: java.lang.String | string
             /**
              * A String constant for the canonical family name of the
              * logical font "Monospaced". It is useful in Font construction
@@ -267,41 +267,41 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MONOSPACED: string
+            public static readonly MONOSPACED: java.lang.String | string
             /**
              * The plain style constant.
              */
             // @ts-ignore
-            readonly PLAIN: number /*int*/
+            public static readonly PLAIN: number /*int*/
             /**
              * The bold style constant.  This can be combined with the other style
              * constants (except PLAIN) for mixed styles.
              */
             // @ts-ignore
-            readonly BOLD: number /*int*/
+            public static readonly BOLD: number /*int*/
             /**
              * The italicized style constant.  This can be combined with the other
              * style constants (except PLAIN) for mixed styles.
              */
             // @ts-ignore
-            readonly ITALIC: number /*int*/
+            public static readonly ITALIC: number /*int*/
             /**
              * The baseline used in most Roman scripts when laying out text.
              */
             // @ts-ignore
-            readonly ROMAN_BASELINE: number /*int*/
+            public static readonly ROMAN_BASELINE: number /*int*/
             /**
              * The baseline used in ideographic scripts like Chinese, Japanese,
              * and Korean when laying out text.
              */
             // @ts-ignore
-            readonly CENTER_BASELINE: number /*int*/
+            public static readonly CENTER_BASELINE: number /*int*/
             /**
              * The baseline used in Devanigiri and similar scripts when laying
              * out text.
              */
             // @ts-ignore
-            readonly HANGING_BASELINE: number /*int*/
+            public static readonly HANGING_BASELINE: number /*int*/
             /**
              * Identify a font resource of type TRUETYPE.
              * Used to specify a TrueType font resource to the
@@ -313,7 +313,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            readonly TRUETYPE_FONT: number /*int*/
+            public static readonly TRUETYPE_FONT: number /*int*/
             /**
              * Identify a font resource of type TYPE1.
              * Used to specify a Type1 font resource to the
@@ -321,7 +321,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            readonly TYPE1_FONT: number /*int*/
+            public static readonly TYPE1_FONT: number /*int*/
             /**
              * The logical name of this <code>Font</code>, as passed to the
              * constructor.
@@ -330,7 +330,7 @@ declare namespace java {
              * @see #getName
              */
             // @ts-ignore
-            name: string
+            name: java.lang.String | string
             /**
              * The style of this <code>Font</code>, as passed to the constructor.
              * This style can be PLAIN, BOLD, ITALIC, or BOLD+ITALIC.
@@ -361,25 +361,25 @@ declare namespace java {
              * determined by Bidi analysis.
              */
             // @ts-ignore
-            readonly LAYOUT_LEFT_TO_RIGHT: number /*int*/
+            public static readonly LAYOUT_LEFT_TO_RIGHT: number /*int*/
             /**
              * A flag to layoutGlyphVector indicating that text is right-to-left as
              * determined by Bidi analysis.
              */
             // @ts-ignore
-            readonly LAYOUT_RIGHT_TO_LEFT: number /*int*/
+            public static readonly LAYOUT_RIGHT_TO_LEFT: number /*int*/
             /**
              * A flag to layoutGlyphVector indicating that text in the char array
              * before the indicated start should not be examined.
              */
             // @ts-ignore
-            readonly LAYOUT_NO_START_CONTEXT: number /*int*/
+            public static readonly LAYOUT_NO_START_CONTEXT: number /*int*/
             /**
              * A flag to layoutGlyphVector indicating that text in the char array
              * after the indicated limit should not be examined.
              */
             // @ts-ignore
-            readonly LAYOUT_NO_LIMIT_CONTEXT: number /*int*/
+            public static readonly LAYOUT_NO_LIMIT_CONTEXT: number /*int*/
             /**
              * Gets the peer of this <code>Font</code>.
              * @return the peer of the <code>Font</code>.
@@ -387,7 +387,7 @@ declare namespace java {
              * @deprecated Font rendering is now platform independent.
              */
             // @ts-ignore
-            getPeer(): java.awt.peer.FontPeer
+            public getPeer(): java.awt.peer.FontPeer
             /**
              * Returns a <code>Font</code> appropriate to the attributes.
              * If <code>attributes</code>contains a <code>FONT</code> attribute
@@ -404,7 +404,7 @@ declare namespace java {
              * @see java.awt.font.TextAttribute
              */
             // @ts-ignore
-            getFont(attributes: java.util.Map<java.text.AttributedCharacterIterator.Attribute, any>): java.awt.Font
+            public static getFont(attributes: java.util.Map<any, any>): java.awt.Font
             /**
              * Returns a new <code>Font</code> using the specified font type
              * and input data.  The new <code>Font</code> is
@@ -434,7 +434,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            createFont(fontFormat: number /*int*/, fontStream: java.io.InputStream): java.awt.Font
+            public static createFont(fontFormat: number /*int*/, fontStream: java.io.InputStream): java.awt.Font
             /**
              * Returns a new <code>Font</code> using the specified font type
              * and the specified font file.  The new <code>Font</code> is
@@ -470,7 +470,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            createFont(fontFormat: number /*int*/, fontFile: java.io.File): java.awt.Font
+            public static createFont(fontFormat: number /*int*/, fontFile: java.io.File): java.awt.Font
             /**
              * Returns a copy of the transform associated with this
              * <code>Font</code>.  This transform is not necessarily the one
@@ -485,7 +485,7 @@ declare namespace java {
              *           transform attribute of this <code>Font</code> object.
              */
             // @ts-ignore
-            getTransform(): java.awt.geom.AffineTransform
+            public getTransform(): java.awt.geom.AffineTransform
             /**
              * Returns the family name of this <code>Font</code>.
              * <p>The family name of a font is font specific. Two fonts such as
@@ -503,7 +503,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getFamily(): java.lang.String
+            public getFamily(): string
             /**
              * Returns the family name of this <code>Font</code>, localized for
              * the specified locale.
@@ -522,7 +522,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getFamily(l: java.util.Locale): java.lang.String
+            public getFamily(l: java.util.Locale): string
             /**
              * Returns the postscript name of this <code>Font</code>.
              * Use <code>getFamily</code> to get the family name of the font.
@@ -532,7 +532,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getPSName(): java.lang.String
+            public getPSName(): string
             /**
              * Returns the logical name of this <code>Font</code>.
              * Use <code>getFamily</code> to get the family name of the font.
@@ -544,7 +544,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns the font face name of this <code>Font</code>.  For example,
              * Helvetica Bold could be returned as a font face name.
@@ -557,7 +557,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getFontName(): java.lang.String
+            public getFontName(): string
             /**
              * Returns the font face name of the <code>Font</code>, localized
              * for the specified locale. For example, Helvetica Fett could be
@@ -570,7 +570,7 @@ declare namespace java {
              * @see java.util.Locale
              */
             // @ts-ignore
-            getFontName(l: java.util.Locale): java.lang.String
+            public getFontName(l: java.util.Locale): string
             /**
              * Returns the style of this <code>Font</code>.  The style can be
              * PLAIN, BOLD, ITALIC, or BOLD+ITALIC.
@@ -581,7 +581,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getStyle(): int
+            public getStyle(): number /*int*/
             /**
              * Returns the point size of this <code>Font</code>, rounded to
              * an integer.
@@ -605,7 +605,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getSize(): int
+            public getSize(): number /*int*/
             /**
              * Returns the point size of this <code>Font</code> in
              * <code>float</code> value.
@@ -615,7 +615,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getSize2D(): float
+            public getSize2D(): number /*float*/
             /**
              * Indicates whether or not this <code>Font</code> object's style is
              * PLAIN.
@@ -626,7 +626,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isPlain(): boolean
+            public isPlain(): boolean
             /**
              * Indicates whether or not this <code>Font</code> object's style is
              * BOLD.
@@ -637,7 +637,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isBold(): boolean
+            public isBold(): boolean
             /**
              * Indicates whether or not this <code>Font</code> object's style is
              * ITALIC.
@@ -648,7 +648,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isItalic(): boolean
+            public isItalic(): boolean
             /**
              * Indicates whether or not this <code>Font</code> object has a
              * transform that affects its size in addition to the Size
@@ -660,7 +660,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isTransformed(): boolean
+            public isTransformed(): boolean
             /**
              * Return true if this Font contains attributes that require extra
              * layout processing.
@@ -668,7 +668,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            hasLayoutAttributes(): boolean
+            public hasLayoutAttributes(): boolean
             /**
              * Returns a <code>Font</code> object from the system properties list.
              * <code>nm</code> is treated as the name of a system property to be
@@ -685,7 +685,7 @@ declare namespace java {
              * @see #decode(String)
              */
             // @ts-ignore
-            getFont(nm: string): java.awt.Font
+            public static getFont(nm: java.lang.String | string): java.awt.Font
             /**
              * Returns the <code>Font</code> that the <code>str</code>
              * argument describes.
@@ -758,7 +758,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            decode(str: string): java.awt.Font
+            public static decode(str: java.lang.String | string): java.awt.Font
             /**
              * Gets the specified <code>Font</code> from the system properties
              * list.  As in the <code>getProperty</code> method of
@@ -780,14 +780,14 @@ declare namespace java {
              * @see #decode(String)
              */
             // @ts-ignore
-            getFont(nm: string, font: java.awt.Font): java.awt.Font
+            public static getFont(nm: java.lang.String | string, font: java.awt.Font): java.awt.Font
             /**
              * Returns a hashcode for this <code>Font</code>.
              * @return a hashcode value for this <code>Font</code>.
              * @since JDK1.0
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this <code>Font</code> object to the specified
              * <code>Object</code>.
@@ -799,7 +799,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Converts this <code>Font</code> object to a <code>String</code>
              * representation.
@@ -808,7 +808,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the number of glyphs in this <code>Font</code>. Glyph codes
              * for this <code>Font</code> range from 0 to
@@ -817,7 +817,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getNumGlyphs(): int
+            public getNumGlyphs(): number /*int*/
             /**
              * Returns the glyphCode which is used when this <code>Font</code>
              * does not have a glyph for a specified unicode code point.
@@ -825,7 +825,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getMissingGlyphCode(): int
+            public getMissingGlyphCode(): number /*int*/
             /**
              * Returns the baseline appropriate for displaying this character.
              * <p>
@@ -842,7 +842,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getBaselineFor(c: string): byte
+            public getBaselineFor(c: string): number /*byte*/
             /**
              * Returns a map of font attributes available in this
              * <code>Font</code>.  Attributes include things like ligatures and
@@ -850,7 +850,7 @@ declare namespace java {
              * @return the attributes map of this <code>Font</code>.
              */
             // @ts-ignore
-            getAttributes(): java.util.Map<java.awt.font.TextAttribute, ?>
+            public getAttributes(): java.util.Map<java.awt.font.TextAttribute, any>
             /**
              * Returns the keys of all the attributes supported by this
              * <code>Font</code>.  These attributes can be used to derive other
@@ -860,7 +860,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getAvailableAttributes(): java.text.AttributedCharacterIterator.Attribute[]
+            public getAvailableAttributes(): java.text.AttributedCharacterIterator.Attribute[]
             /**
              * Creates a new <code>Font</code> object by replicating this
              * <code>Font</code> object and applying a new style and size.
@@ -870,7 +870,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deriveFont(style: number /*int*/, size: number /*float*/): java.awt.Font
+            public deriveFont(style: number /*int*/, size: number /*float*/): java.awt.Font
             /**
              * Creates a new <code>Font</code> object by replicating this
              * <code>Font</code> object and applying a new style and transform.
@@ -883,7 +883,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deriveFont(style: number /*int*/, trans: java.awt.geom.AffineTransform): java.awt.Font
+            public deriveFont(style: number /*int*/, trans: java.awt.geom.AffineTransform): java.awt.Font
             /**
              * Creates a new <code>Font</code> object by replicating the current
              * <code>Font</code> object and applying a new size to it.
@@ -892,7 +892,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deriveFont(size: number /*float*/): java.awt.Font
+            public deriveFont(size: number /*float*/): java.awt.Font
             /**
              * Creates a new <code>Font</code> object by replicating the current
              * <code>Font</code> object and applying a new transform to it.
@@ -904,7 +904,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deriveFont(trans: java.awt.geom.AffineTransform): java.awt.Font
+            public deriveFont(trans: java.awt.geom.AffineTransform): java.awt.Font
             /**
              * Creates a new <code>Font</code> object by replicating the current
              * <code>Font</code> object and applying a new style to it.
@@ -913,7 +913,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deriveFont(style: number /*int*/): java.awt.Font
+            public deriveFont(style: number /*int*/): java.awt.Font
             /**
              * Creates a new <code>Font</code> object by replicating the current
              * <code>Font</code> object and applying a new set of font attributes
@@ -924,7 +924,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deriveFont(attributes: java.util.Map<java.text.AttributedCharacterIterator.Attribute, any>): java.awt.Font
+            public deriveFont(attributes: java.util.Map<any, any>): java.awt.Font
             /**
              * Checks if this <code>Font</code> has a glyph for the specified
              * character.
@@ -939,7 +939,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            canDisplay(c: string): boolean
+            public canDisplay(c: string): boolean
             /**
              * Checks if this <code>Font</code> has a glyph for the specified
              * character.
@@ -953,7 +953,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            canDisplay(codePoint: number /*int*/): boolean
+            public canDisplay(codePoint: number /*int*/): boolean
             /**
              * Indicates whether or not this <code>Font</code> can display a
              * specified <code>String</code>.  For strings with Unicode encoding,
@@ -972,7 +972,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            canDisplayUpTo(str: string): int
+            public canDisplayUpTo(str: java.lang.String | string): number /*int*/
             /**
              * Indicates whether or not this <code>Font</code> can display
              * the characters in the specified <code>text</code>
@@ -993,7 +993,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            canDisplayUpTo(text: string[], start: number /*int*/, limit: number /*int*/): int
+            public canDisplayUpTo(text: string[], start: number /*int*/, limit: number /*int*/): number /*int*/
             /**
              * Indicates whether or not this <code>Font</code> can display the
              * text specified by the <code>iter</code> starting at
@@ -1011,7 +1011,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            canDisplayUpTo(iter: java.text.CharacterIterator, start: number /*int*/, limit: number /*int*/): int
+            public canDisplayUpTo(iter: java.text.CharacterIterator, start: number /*int*/, limit: number /*int*/): number /*int*/
             /**
              * Returns the italic angle of this <code>Font</code>.  The italic angle
              * is the inverse slope of the caret which best matches the posture of this
@@ -1020,7 +1020,7 @@ declare namespace java {
              * @return the angle of the ITALIC style of this <code>Font</code>.
              */
             // @ts-ignore
-            getItalicAngle(): float
+            public getItalicAngle(): number /*float*/
             /**
              * Checks whether or not this <code>Font</code> has uniform
              * line metrics.  A logical <code>Font</code> might be a
@@ -1033,7 +1033,7 @@ declare namespace java {
              *  uniform line metrics; <code>false</code> otherwise.
              */
             // @ts-ignore
-            hasUniformLineMetrics(): boolean
+            public hasUniformLineMetrics(): boolean
             /**
              * Returns a {@link LineMetrics} object created with the specified
              * <code>String</code> and {@link FontRenderContext}.
@@ -1043,7 +1043,7 @@ declare namespace java {
              *  specified <code>String</code> and {#link FontRenderContext}.
              */
             // @ts-ignore
-            getLineMetrics(str: string, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
+            public getLineMetrics(str: java.lang.String | string, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
             /**
              * Returns a <code>LineMetrics</code> object created with the
              * specified arguments.
@@ -1055,7 +1055,7 @@ declare namespace java {
              *  specified arguments.
              */
             // @ts-ignore
-            getLineMetrics(str: string, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
+            public getLineMetrics(str: java.lang.String | string, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
             /**
              * Returns a <code>LineMetrics</code> object created with the
              * specified arguments.
@@ -1067,7 +1067,7 @@ declare namespace java {
              *  specified arguments.
              */
             // @ts-ignore
-            getLineMetrics(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
+            public getLineMetrics(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
             /**
              * Returns a <code>LineMetrics</code> object created with the
              * specified arguments.
@@ -1079,7 +1079,7 @@ declare namespace java {
              *  specified arguments.
              */
             // @ts-ignore
-            getLineMetrics(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
+            public getLineMetrics(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.font.LineMetrics
             /**
              * Returns the logical bounds of the specified <code>String</code> in
              * the specified <code>FontRenderContext</code>.  The logical bounds
@@ -1102,7 +1102,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getStringBounds(str: string, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
+            public getStringBounds(str: java.lang.String | string, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
             /**
              * Returns the logical bounds of the specified <code>String</code> in
              * the specified <code>FontRenderContext</code>.  The logical bounds
@@ -1131,7 +1131,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getStringBounds(str: string, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
+            public getStringBounds(str: java.lang.String | string, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
             /**
              * Returns the logical bounds of the specified array of characters
              * in the specified <code>FontRenderContext</code>.  The logical
@@ -1161,7 +1161,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getStringBounds(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
+            public getStringBounds(chars: string[], beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
             /**
              * Returns the logical bounds of the characters indexed in the
              * specified {@link CharacterIterator} in the
@@ -1192,7 +1192,7 @@ declare namespace java {
              *          than <code>limit</code>
              */
             // @ts-ignore
-            getStringBounds(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
+            public getStringBounds(ci: java.text.CharacterIterator, beginIndex: number /*int*/, limit: number /*int*/, frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
             /**
              * Returns the bounds for the character with the maximum
              * bounds as defined in the specified <code>FontRenderContext</code>.
@@ -1203,7 +1203,7 @@ declare namespace java {
              *  for the character with the maximum bounds.
              */
             // @ts-ignore
-            getMaxCharBounds(frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
+            public getMaxCharBounds(frc: java.awt.font.FontRenderContext): java.awt.geom.Rectangle2D
             /**
              * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
              * mapping characters to glyphs one-to-one based on the
@@ -1219,7 +1219,7 @@ declare namespace java {
              *  <code>FontRenderContext</code>.
              */
             // @ts-ignore
-            createGlyphVector(frc: java.awt.font.FontRenderContext, str: string): java.awt.font.GlyphVector
+            public createGlyphVector(frc: java.awt.font.FontRenderContext, str: java.lang.String | string): java.awt.font.GlyphVector
             /**
              * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
              * mapping characters to glyphs one-to-one based on the
@@ -1235,7 +1235,7 @@ declare namespace java {
              *  <code>FontRenderContext</code>.
              */
             // @ts-ignore
-            createGlyphVector(frc: java.awt.font.FontRenderContext, chars: string[]): java.awt.font.GlyphVector
+            public createGlyphVector(frc: java.awt.font.FontRenderContext, chars: string[]): java.awt.font.GlyphVector
             /**
              * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
              * mapping the specified characters to glyphs one-to-one based on the
@@ -1251,7 +1251,7 @@ declare namespace java {
              *  <code>FontRenderContext</code>.
              */
             // @ts-ignore
-            createGlyphVector(frc: java.awt.font.FontRenderContext, ci: java.text.CharacterIterator): java.awt.font.GlyphVector
+            public createGlyphVector(frc: java.awt.font.FontRenderContext, ci: java.text.CharacterIterator): java.awt.font.GlyphVector
             /**
              * Creates a {@link java.awt.font.GlyphVector GlyphVector} by
              * mapping characters to glyphs one-to-one based on the
@@ -1267,7 +1267,7 @@ declare namespace java {
              *  <code>FontRenderContext</code>.
              */
             // @ts-ignore
-            createGlyphVector(frc: java.awt.font.FontRenderContext, glyphCodes: number /*int*/[]): java.awt.font.GlyphVector
+            public createGlyphVector(frc: java.awt.font.FontRenderContext, glyphCodes: number /*int*/[]): java.awt.font.GlyphVector
             /**
              * Returns a new <code>GlyphVector</code> object, performing full
              * layout of the text if possible.  Full layout is required for
@@ -1310,7 +1310,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            layoutGlyphVector(frc: java.awt.font.FontRenderContext, text: string[], start: number /*int*/, limit: number /*int*/, flags: number /*int*/): java.awt.font.GlyphVector
+            public layoutGlyphVector(frc: java.awt.font.FontRenderContext, text: string[], start: number /*int*/, limit: number /*int*/, flags: number /*int*/): java.awt.font.GlyphVector
         }
     }
 }

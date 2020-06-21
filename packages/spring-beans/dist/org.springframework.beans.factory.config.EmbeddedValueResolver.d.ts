@@ -21,7 +21,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory)
                         // @ts-ignore
-                        resolveStringValue(strVal: string): java.lang.String
+                        public resolveStringValue(strVal: java.lang.String | string): string
                     }
                 }
             }

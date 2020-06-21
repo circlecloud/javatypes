@@ -88,7 +88,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class BufferStrategy extends java.lang.Object {
+            abstract class BufferStrategy extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -97,7 +97,7 @@ declare namespace java {
                  * @return the buffering capabilities of this strategy
                  */
                 // @ts-ignore
-                abstract getCapabilities(): java.awt.BufferCapabilities
+                public abstract getCapabilities(): java.awt.BufferCapabilities
                 /**
                  * Creates a graphics context for the drawing buffer.  This method may not
                  * be synchronized for performance reasons; use of this method by multiple
@@ -106,7 +106,7 @@ declare namespace java {
                  * @return a graphics context for the drawing buffer
                  */
                 // @ts-ignore
-                abstract getDrawGraphics(): java.awt.Graphics
+                public abstract getDrawGraphics(): java.awt.Graphics
                 /**
                  * Returns whether the drawing buffer was lost since the last call to
                  * <code>getDrawGraphics</code>.  Since the buffers in a buffer strategy
@@ -117,7 +117,7 @@ declare namespace java {
                  * @see java.awt.image.VolatileImage
                  */
                 // @ts-ignore
-                abstract contentsLost(): boolean
+                public abstract contentsLost(): boolean
                 /**
                  * Returns whether the drawing buffer was recently restored from a lost
                  * state and reinitialized to the default background color (white).
@@ -131,13 +131,13 @@ declare namespace java {
                  * @see java.awt.image.VolatileImage
                  */
                 // @ts-ignore
-                abstract contentsRestored(): boolean
+                public abstract contentsRestored(): boolean
                 /**
                  * Makes the next available buffer visible by either copying the memory
                  * (blitting) or changing the display pointer (flipping).
                  */
                 // @ts-ignore
-                abstract show(): void
+                public abstract show(): void
                 /**
                  * Releases system resources currently consumed by this
                  * <code>BufferStrategy</code> and
@@ -152,7 +152,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                dispose(): void
+                public dispose(): void
             }
         }
     }

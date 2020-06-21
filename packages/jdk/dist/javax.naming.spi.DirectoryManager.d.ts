@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see NamingManager#getContinuationContext(CannotProceedException)
                  */
                 // @ts-ignore
-                getContinuationDirContext(cpe: javax.naming.CannotProceedException): javax.naming.directory.DirContext
+                public static getContinuationDirContext(cpe: javax.naming.CannotProceedException): javax.naming.directory.DirContext
                 /**
                  * Creates an instance of an object for the specified object,
                  * attributes, and environment.
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getObjectInstance(refInfo: any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, ?>, attrs: javax.naming.directory.Attributes): java.lang.Object
+                public static getObjectInstance(refInfo: java.lang.Object | any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, any>, attrs: javax.naming.directory.Attributes): any
                 /**
                  * Retrieves the state of an object for binding when given the original
                  * object and its attributes.
@@ -145,7 +145,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getStateToBind(obj: any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, ?>, attrs: javax.naming.directory.Attributes): javax.naming.spi.DirStateFactory.Result
+                public static getStateToBind(obj: java.lang.Object | any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, any>, attrs: javax.naming.directory.Attributes): javax.naming.spi.DirStateFactory.Result
             }
         }
     }

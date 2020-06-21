@@ -18,7 +18,7 @@ declare namespace org {
                              * @return The number of levels
                              */
                             // @ts-ignore
-                            getCompletedLevels(): int
+                            getCompletedLevels(): number /*int*/
                             /**
                              * Gets the current {@link BeaconData} for this beacon.
                              * @return The current beacon data for this beacon

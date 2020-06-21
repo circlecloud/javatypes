@@ -6,16 +6,20 @@ declare namespace org {
         // @ts-ignore
         class CoalType extends java.lang.Enum<org.bukkit.CoalType> {
             // @ts-ignore
+            readonly COAL: org.bukkit.CoalType
+            // @ts-ignore
+            readonly CHARCOAL: org.bukkit.CoalType
+            // @ts-ignore
             values(): org.bukkit.CoalType[]
             // @ts-ignore
-            valueOf(name: string): org.bukkit.CoalType
+            valueOf(name: java.lang.String | string): org.bukkit.CoalType
             /**
              * Gets the associated data value representing this type of coal
              * @return A byte containing the data value of this coal type
              * @deprecated Magic value
              */
             // @ts-ignore
-            getData(): byte
+            getData(): number /*byte*/
             /**
              * Gets the type of coal with the given data value
              * @param data Data value to fetch

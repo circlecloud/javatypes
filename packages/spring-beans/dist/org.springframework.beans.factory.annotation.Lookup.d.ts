@@ -31,7 +31,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.BeanFactory#getBean(String, Object...)
                      */
                     // @ts-ignore
-                    class Lookup implements java.lang.annotation.Annotation {
+                    abstract class Lookup implements java.lang.annotation.Annotation {
                     }
                 }
             }

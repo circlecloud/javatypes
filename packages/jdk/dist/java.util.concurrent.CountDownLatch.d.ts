@@ -135,7 +135,7 @@ declare namespace java {
                  *          while waiting
                  */
                 // @ts-ignore
-                await(): void
+                public await(): void
                 /**
                  * Causes the current thread to wait until the latch has counted down to
                  * zero, unless the thread is {@linkplain Thread#interrupt interrupted},
@@ -172,7 +172,7 @@ declare namespace java {
                  *          while waiting
                  */
                 // @ts-ignore
-                await(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public await(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Decrements the count of the latch, releasing all waiting threads if
                  * the count reaches zero.
@@ -182,14 +182,14 @@ declare namespace java {
                  * <p>If the current count equals zero then nothing happens.
                  */
                 // @ts-ignore
-                countDown(): void
+                public countDown(): void
                 /**
                  * Returns the current count.
                  * <p>This method is typically used for debugging and testing purposes.
                  * @return the current count
                  */
                 // @ts-ignore
-                getCount(): long
+                public getCount(): number /*long*/
                 /**
                  * Returns a string identifying this latch, as well as its state.
                  * The state, in brackets, includes the String {@code "Count ="}
@@ -197,7 +197,7 @@ declare namespace java {
                  * @return a string identifying this latch, as well as its state
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

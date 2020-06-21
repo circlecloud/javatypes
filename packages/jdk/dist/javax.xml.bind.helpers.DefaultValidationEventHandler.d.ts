@@ -26,7 +26,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    handleEvent(event: javax.xml.bind.ValidationEvent): boolean
+                    public handleEvent(event: javax.xml.bind.ValidationEvent): boolean
                 }
             }
         }

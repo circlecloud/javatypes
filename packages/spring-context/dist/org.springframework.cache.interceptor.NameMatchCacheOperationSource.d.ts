@@ -17,7 +17,7 @@ declare namespace org {
                      * <p>Static for optimal serialization.
                      */
                     // @ts-ignore
-                    readonly logger: Log
+                    static readonly logger: Log
                     /**
                      * Set a name/attribute map, consisting of method names
                      * (e.g. "myMethod") and CacheOperation instances
@@ -25,7 +25,7 @@ declare namespace org {
                      * @see CacheOperation
                      */
                     // @ts-ignore
-                    setNameMap(nameMap: java.util.Map<java.lang.String, java.util.Collection<org.springframework.cache.interceptor.CacheOperation>>): void
+                    public setNameMap(nameMap: java.util.Map<java.lang.String | string, java.util.Collection<org.springframework.cache.interceptor.CacheOperation> | Array<org.springframework.cache.interceptor.CacheOperation>>): void
                     /**
                      * Add an attribute for a cacheable method.
                      * <p>Method names can be exact matches, or of the pattern "xxx*",
@@ -34,9 +34,9 @@ declare namespace org {
                      * @param ops operation associated with the method
                      */
                     // @ts-ignore
-                    addCacheMethod(methodName: string, ops: Array<org.springframework.cache.interceptor.CacheOperation>): void
+                    public addCacheMethod(methodName: java.lang.String | string, ops: java.util.Collection<org.springframework.cache.interceptor.CacheOperation> | Array<org.springframework.cache.interceptor.CacheOperation>): void
                     // @ts-ignore
-                    getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                    public getCacheOperations(method: java.lang.reflect.Method, targetClass: java.lang.Class<any>): Array<org.springframework.cache.interceptor.CacheOperation>
                     /**
                      * Return if the given method name matches the mapped name.
                      * <p>The default implementation checks for "xxx*", "*xxx" and "*xxx*" matches,
@@ -47,13 +47,13 @@ declare namespace org {
                      * @see org.springframework.util.PatternMatchUtils#simpleMatch(String, String)
                      */
                     // @ts-ignore
-                    isMatch(methodName: string, mappedName: string): boolean
+                    isMatch(methodName: java.lang.String | string, mappedName: java.lang.String | string): boolean
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

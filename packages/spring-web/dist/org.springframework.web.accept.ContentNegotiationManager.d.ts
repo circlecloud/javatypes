@@ -30,7 +30,7 @@ declare namespace org {
                      * @since 3.2.2
                      */
                     // @ts-ignore
-                    constructor(strategies: Array<org.springframework.web.accept.ContentNegotiationStrategy>)
+                    constructor(strategies: java.util.Collection<org.springframework.web.accept.ContentNegotiationStrategy> | Array<org.springframework.web.accept.ContentNegotiationStrategy>)
                     /**
                      * Create a default instance with a {@link HeaderContentNegotiationStrategy}.
                      */
@@ -41,7 +41,7 @@ declare namespace org {
                      * @since 3.2.16
                      */
                     // @ts-ignore
-                    getStrategies(): java.util.List<org.springframework.web.accept.ContentNegotiationStrategy>
+                    public getStrategies(): Array<org.springframework.web.accept.ContentNegotiationStrategy>
                     /**
                      * Find a {@code ContentNegotiationStrategy} of the given type.
                      * @param strategyType the strategy type
@@ -49,18 +49,18 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getStrategy<T extends org.springframework.web.accept.ContentNegotiationStrategy>(strategyType: java.lang.Class<T>): T
+                    public getStrategy<T extends org.springframework.web.accept.ContentNegotiationStrategy>(strategyType: java.lang.Class<T>): T
                     /**
                      * Register more {@code MediaTypeFileExtensionResolver} instances in addition
                      * to those detected at construction.
                      * @param resolvers the resolvers to add
                      */
                     // @ts-ignore
-                    addFileExtensionResolvers(...resolvers: org.springframework.web.accept.MediaTypeFileExtensionResolver[]): void
+                    public addFileExtensionResolvers(...resolvers: org.springframework.web.accept.MediaTypeFileExtensionResolver[]): void
                     // @ts-ignore
-                    resolveMediaTypes(request: org.springframework.web.context.request.NativeWebRequest): java.util.List<org.springframework.http.MediaType>
+                    public resolveMediaTypes(request: org.springframework.web.context.request.NativeWebRequest): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    resolveFileExtensions(mediaType: org.springframework.http.MediaType): java.util.List<java.lang.String>
+                    public resolveFileExtensions(mediaType: org.springframework.http.MediaType): Array<java.lang.String | string>
                     /**
                      * {@inheritDoc}
                      * <p>At startup this method returns extensions explicitly registered with
@@ -73,14 +73,14 @@ declare namespace org {
                      * {@link org.springframework.http.MediaTypeFactory} and cached.
                      */
                     // @ts-ignore
-                    getAllFileExtensions(): java.util.List<java.lang.String>
+                    public getAllFileExtensions(): Array<java.lang.String | string>
                     /**
                      * Return all registered lookup key to media type mappings by iterating
                      * {@link MediaTypeFileExtensionResolver}s.
                      * @since 5.2.4
                      */
                     // @ts-ignore
-                    getMediaTypeMappings(): java.util.Map<java.lang.String, org.springframework.http.MediaType>
+                    public getMediaTypeMappings(): java.util.Map<java.lang.String | string, org.springframework.http.MediaType>
                 }
             }
         }

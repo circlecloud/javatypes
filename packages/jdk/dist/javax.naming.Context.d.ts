@@ -250,7 +250,7 @@ declare namespace javax {
              * @see #APPLET
              */
             // @ts-ignore
-            
+            readonly INITIAL_CONTEXT_FACTORY: java.lang.String | string
             /**
              * Constant that holds the name of the environment property
              * for specifying the list of object factories to use. The value
@@ -267,7 +267,7 @@ declare namespace javax {
              * @see #APPLET
              */
             // @ts-ignore
-            
+            readonly OBJECT_FACTORIES: java.lang.String | string
             /**
              * Constant that holds the name of the environment property
              * for specifying the list of state factories to use. The value
@@ -285,7 +285,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            
+            readonly STATE_FACTORIES: java.lang.String | string
             /**
              * Constant that holds the name of the environment property
              * for specifying the list of package prefixes to use when
@@ -307,7 +307,7 @@ declare namespace javax {
              * @see #APPLET
              */
             // @ts-ignore
-            
+            readonly URL_PKG_PREFIXES: java.lang.String | string
             /**
              * Constant that holds the name of the environment property
              * for specifying configuration information for the service provider
@@ -323,7 +323,7 @@ declare namespace javax {
              * @see #APPLET
              */
             // @ts-ignore
-            
+            readonly PROVIDER_URL: java.lang.String | string
             /**
              * Constant that holds the name of the environment property
              * for specifying the DNS host and domain names to use for the
@@ -338,7 +338,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly DNS_URL: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the authoritativeness of the service requested.
@@ -352,7 +352,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly AUTHORITATIVE: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the batch size to use when returning data via the
@@ -368,7 +368,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly BATCHSIZE: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying how referrals encountered by the service provider
@@ -389,7 +389,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly REFERRAL: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the security protocol to use.
@@ -402,7 +402,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly SECURITY_PROTOCOL: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the security level to use.
@@ -415,7 +415,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly SECURITY_AUTHENTICATION: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the identity of the principal for authenticating
@@ -428,7 +428,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly SECURITY_PRINCIPAL: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the credentials of the principal for authenticating
@@ -442,7 +442,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly SECURITY_CREDENTIALS: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying the preferred language to use with the service.
@@ -455,7 +455,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            
+            readonly LANGUAGE: java.lang.String | string
             /**
              * Constant that holds the name of the environment property for
              * specifying an applet for the initial context constructor to use
@@ -477,7 +477,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            
+            readonly APPLET: java.lang.String | string
             /**
              * Retrieves the named object.
              * If <tt>name</tt> is empty, returns a new instance of this context
@@ -492,7 +492,7 @@ declare namespace javax {
              * @see #lookupLink(Name)
              */
             // @ts-ignore
-            lookup(name: javax.naming.Name): java.lang.Object
+            lookup(name: javax.naming.Name): any
             /**
              * Retrieves the named object.
              * See {@link #lookup(Name)} for details.
@@ -502,7 +502,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            lookup(name: string): java.lang.Object
+            lookup(name: java.lang.String | string): any
             /**
              * Binds a name to an object.
              * All intermediate contexts and the target context (that named by all
@@ -521,7 +521,7 @@ declare namespace javax {
              *           javax.naming.directory.Attributes)
              */
             // @ts-ignore
-            bind(name: javax.naming.Name, obj: any): void
+            bind(name: javax.naming.Name, obj: java.lang.Object | any): void
             /**
              * Binds a name to an object.
              * See {@link #bind(Name, Object)} for details.
@@ -535,7 +535,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            bind(name: string, obj: any): void
+            bind(name: java.lang.String | string, obj: java.lang.Object | any): void
             /**
              * Binds a name to an object, overwriting any existing binding.
              * All intermediate contexts and the target context (that named by all
@@ -558,7 +558,7 @@ declare namespace javax {
              * @see javax.naming.directory.DirContext
              */
             // @ts-ignore
-            rebind(name: javax.naming.Name, obj: any): void
+            rebind(name: javax.naming.Name, obj: java.lang.Object | any): void
             /**
              * Binds a name to an object, overwriting any existing binding.
              * See {@link #rebind(Name, Object)} for details.
@@ -571,7 +571,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            rebind(name: string, obj: any): void
+            rebind(name: java.lang.String | string, obj: java.lang.Object | any): void
             /**
              * Unbinds the named object.
              * Removes the terminal atomic name in <code>name</code>
@@ -601,7 +601,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            unbind(name: string): void
+            unbind(name: java.lang.String | string): void
             /**
              * Binds a new name to the object bound to an old name, and unbinds
              * the old name.  Both names are relative to this context.
@@ -632,7 +632,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            rename(oldName: string, newName: string): void
+            rename(oldName: java.lang.String | string, newName: java.lang.String | string): void
             /**
              * Enumerates the names bound in the named context, along with the
              * class names of objects bound to them.
@@ -663,7 +663,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            list(name: string): javax.naming.NamingEnumeration<javax.naming.NameClassPair>
+            list(name: java.lang.String | string): javax.naming.NamingEnumeration<javax.naming.NameClassPair>
             /**
              * Enumerates the names bound in the named context, along with the
              * objects bound to them.
@@ -694,7 +694,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            listBindings(name: string): javax.naming.NamingEnumeration<javax.naming.Binding>
+            listBindings(name: java.lang.String | string): javax.naming.NamingEnumeration<javax.naming.Binding>
             /**
              * Destroys the named context and removes it from the namespace.
              * Any attributes associated with the name are also removed.
@@ -738,7 +738,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            destroySubcontext(name: string): void
+            destroySubcontext(name: java.lang.String | string): void
             /**
              * Creates and binds a new context.
              * Creates a new context with the given name and binds it in
@@ -771,7 +771,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            createSubcontext(name: string): javax.naming.Context
+            createSubcontext(name: java.lang.String | string): javax.naming.Context
             /**
              * Retrieves the named object, following links except
              * for the terminal atomic component of the name.
@@ -785,7 +785,7 @@ declare namespace javax {
              * @see #lookupLink(String)
              */
             // @ts-ignore
-            lookupLink(name: javax.naming.Name): java.lang.Object
+            lookupLink(name: javax.naming.Name): any
             /**
              * Retrieves the named object, following links except
              * for the terminal atomic component of the name.
@@ -797,7 +797,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            lookupLink(name: string): java.lang.Object
+            lookupLink(name: java.lang.String | string): any
             /**
              * Retrieves the parser associated with the named context.
              * In a federation of namespaces, different naming systems will
@@ -827,7 +827,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            getNameParser(name: string): javax.naming.NameParser
+            getNameParser(name: java.lang.String | string): javax.naming.NameParser
             /**
              * Composes the name of this context with a name relative to
              * this context.
@@ -874,7 +874,7 @@ declare namespace javax {
              * @throws NamingException if a naming exception is encountered
              */
             // @ts-ignore
-            composeName(name: string, prefix: string): java.lang.String
+            composeName(name: java.lang.String | string, prefix: java.lang.String | string): string
             /**
              * Adds a new environment property to the environment of this
              * context.  If the property already exists, its value is overwritten.
@@ -890,7 +890,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            addToEnvironment(propName: string, propVal: any): java.lang.Object
+            addToEnvironment(propName: java.lang.String | string, propVal: java.lang.Object | any): any
             /**
              * Removes an environment property from the environment of this
              * context.  See class description for more details on environment
@@ -904,7 +904,7 @@ declare namespace javax {
              * @see #addToEnvironment(String, Object)
              */
             // @ts-ignore
-            removeFromEnvironment(propName: string): java.lang.Object
+            removeFromEnvironment(propName: java.lang.String | string): any
             /**
              * Retrieves the environment in effect for this context.
              * See class description for more details on environment properties.
@@ -918,7 +918,7 @@ declare namespace javax {
              * @see #removeFromEnvironment(String)
              */
             // @ts-ignore
-            getEnvironment(): java.util.Hashtable<?, ?>
+            getEnvironment(): java.util.Hashtable<any, any>
             /**
              * Closes this context.
              * This method releases this context's resources immediately, instead of
@@ -947,7 +947,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getNameInNamespace(): java.lang.String
+            getNameInNamespace(): string
         }
     }
 }

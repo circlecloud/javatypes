@@ -10,19 +10,19 @@ declare namespace org {
                     // @ts-ignore
                     constructor(player: org.bukkit.entity.Player, newGameMode: org.bukkit.GameMode)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the GameMode the player is switched to.
                      * @return player's new GameMode
                      */
                     // @ts-ignore
-                    getNewGameMode(): org.bukkit.GameMode
+                    public getNewGameMode(): org.bukkit.GameMode
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

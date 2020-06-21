@@ -29,15 +29,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor(safety: org.spongepowered.api.data.DataView.SafetyMode)
                     // @ts-ignore
-                    getParent(): java.util.Optional<org.spongepowered.api.data.DataView>
+                    public getParent(): java.util.Optional<org.spongepowered.api.data.DataView>
                     // @ts-ignore
-                    getContainer(): org.spongepowered.api.data.DataContainer
+                    public getContainer(): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    set(path: org.spongepowered.api.data.DataQuery, value: any): org.spongepowered.api.data.DataContainer
+                    public set(path: org.spongepowered.api.data.DataQuery, value: java.lang.Object | any): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    set<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataContainer
+                    public set<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    remove(path: org.spongepowered.api.data.DataQuery): org.spongepowered.api.data.DataContainer
+                    public remove(path: org.spongepowered.api.data.DataQuery): org.spongepowered.api.data.DataContainer
                 }
             }
         }

@@ -259,7 +259,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ScrollPaneUI
+            public getUI(): javax.swing.plaf.ScrollPaneUI
             /**
              * Sets the <code>ScrollPaneUI</code> object that provides the
              * look and feel (L&amp;F) for this component.
@@ -267,7 +267,7 @@ declare namespace javax {
              * @see #getUI
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ScrollPaneUI): void
+            public setUI(ui: javax.swing.plaf.ScrollPaneUI): void
             /**
              * Replaces the current <code>ScrollPaneUI</code> object with a version
              * from the current default look and feel.
@@ -276,7 +276,7 @@ declare namespace javax {
              * @see UIManager#getUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the suffix used to construct the name of the L&amp;F class used to
              * render this component.
@@ -286,7 +286,7 @@ declare namespace javax {
              * @beaninfo hidden: true
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the layout manager for this <code>JScrollPane</code>.
              * This method overrides <code>setLayout</code> in
@@ -303,7 +303,7 @@ declare namespace javax {
              * @beaninfo hidden: true
              */
             // @ts-ignore
-            setLayout(layout: java.awt.LayoutManager): void
+            public setLayout(layout: java.awt.LayoutManager): void
             /**
              * Overridden to return true so that any calls to <code>revalidate</code>
              * on any descendants of this <code>JScrollPane</code> will cause the
@@ -317,14 +317,14 @@ declare namespace javax {
              * @beaninfo hidden: true
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * Returns the vertical scroll bar policy value.
              * @return the <code>verticalScrollBarPolicy</code> property
              * @see #setVerticalScrollBarPolicy
              */
             // @ts-ignore
-            getVerticalScrollBarPolicy(): int
+            public getVerticalScrollBarPolicy(): number /*int*/
             /**
              * Determines when the vertical scrollbar appears in the scrollpane.
              * Legal values are:
@@ -345,14 +345,14 @@ declare namespace javax {
              *               VERTICAL_SCROLLBAR_ALWAYS ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS
              */
             // @ts-ignore
-            setVerticalScrollBarPolicy(policy: number /*int*/): void
+            public setVerticalScrollBarPolicy(policy: number /*int*/): void
             /**
              * Returns the horizontal scroll bar policy value.
              * @return the <code>horizontalScrollBarPolicy</code> property
              * @see #setHorizontalScrollBarPolicy
              */
             // @ts-ignore
-            getHorizontalScrollBarPolicy(): int
+            public getHorizontalScrollBarPolicy(): number /*int*/
             /**
              * Determines when the horizontal scrollbar appears in the scrollpane.
              * The options are:<ul>
@@ -372,14 +372,14 @@ declare namespace javax {
              *               HORIZONTAL_SCROLLBAR_ALWAYS ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS
              */
             // @ts-ignore
-            setHorizontalScrollBarPolicy(policy: number /*int*/): void
+            public setHorizontalScrollBarPolicy(policy: number /*int*/): void
             /**
              * Returns the <code>Border</code> object that surrounds the viewport.
              * @return the <code>viewportBorder</code> property
              * @see #setViewportBorder
              */
             // @ts-ignore
-            getViewportBorder(): javax.swing.border.Border
+            public getViewportBorder(): javax.swing.border.Border
             /**
              * Adds a border around the viewport.  Note that the border isn't
              * set on the viewport directly, <code>JViewport</code> doesn't support
@@ -397,13 +397,13 @@ declare namespace javax {
              *  description: The border around the viewport.
              */
             // @ts-ignore
-            setViewportBorder(viewportBorder: javax.swing.border.Border): void
+            public setViewportBorder(viewportBorder: javax.swing.border.Border): void
             /**
              * Returns the bounds of the viewport's border.
              * @return a <code>Rectangle</code> object specifying the viewport border
              */
             // @ts-ignore
-            getViewportBorderBounds(): java.awt.Rectangle
+            public getViewportBorderBounds(): java.awt.Rectangle
             /**
              * Returns a <code>JScrollPane.ScrollBar</code> by default.
              * Subclasses may override this method to force <code>ScrollPaneUI</code>
@@ -414,7 +414,7 @@ declare namespace javax {
              * @see JScrollBar
              */
             // @ts-ignore
-            createHorizontalScrollBar(): javax.swing.JScrollBar
+            public createHorizontalScrollBar(): javax.swing.JScrollBar
             /**
              * Returns the horizontal scroll bar that controls the viewport's
              * horizontal view position.
@@ -422,7 +422,7 @@ declare namespace javax {
              * @see #setHorizontalScrollBar
              */
             // @ts-ignore
-            getHorizontalScrollBar(): javax.swing.JScrollBar
+            public getHorizontalScrollBar(): javax.swing.JScrollBar
             /**
              * Adds the scrollbar that controls the viewport's horizontal view
              * position to the scrollpane.
@@ -436,7 +436,7 @@ declare namespace javax {
              *    description: The horizontal scrollbar.
              */
             // @ts-ignore
-            setHorizontalScrollBar(horizontalScrollBar: javax.swing.JScrollBar): void
+            public setHorizontalScrollBar(horizontalScrollBar: javax.swing.JScrollBar): void
             /**
              * Returns a <code>JScrollPane.ScrollBar</code> by default.  Subclasses
              * may override this method to force <code>ScrollPaneUI</code>
@@ -447,7 +447,7 @@ declare namespace javax {
              * @see JScrollBar
              */
             // @ts-ignore
-            createVerticalScrollBar(): javax.swing.JScrollBar
+            public createVerticalScrollBar(): javax.swing.JScrollBar
             /**
              * Returns the vertical scroll bar that controls the viewports
              * vertical view position.
@@ -455,7 +455,7 @@ declare namespace javax {
              * @see #setVerticalScrollBar
              */
             // @ts-ignore
-            getVerticalScrollBar(): javax.swing.JScrollBar
+            public getVerticalScrollBar(): javax.swing.JScrollBar
             /**
              * Adds the scrollbar that controls the viewports vertical view position
              * to the scrollpane.  This is usually unnecessary,
@@ -469,7 +469,7 @@ declare namespace javax {
              *    description: The vertical scrollbar.
              */
             // @ts-ignore
-            setVerticalScrollBar(verticalScrollBar: javax.swing.JScrollBar): void
+            public setVerticalScrollBar(verticalScrollBar: javax.swing.JScrollBar): void
             /**
              * Returns a new <code>JViewport</code> by default.
              * Used to create the
@@ -487,7 +487,7 @@ declare namespace javax {
              * @return the <code>viewport</code> property
              */
             // @ts-ignore
-            getViewport(): javax.swing.JViewport
+            public getViewport(): javax.swing.JViewport
             /**
              * Removes the old viewport (if there is one); forces the
              * viewPosition of the new viewport to be in the +x,+y quadrant;
@@ -510,7 +510,7 @@ declare namespace javax {
              *   description: The viewport child for this scrollpane
              */
             // @ts-ignore
-            setViewport(viewport: javax.swing.JViewport): void
+            public setViewport(viewport: javax.swing.JViewport): void
             /**
              * Creates a viewport if necessary and then sets its view.  Applications
              * that don't provide the view directly to the <code>JScrollPane</code>
@@ -527,14 +527,14 @@ declare namespace javax {
              * @see JViewport#setView
              */
             // @ts-ignore
-            setViewportView(view: java.awt.Component): void
+            public setViewportView(view: java.awt.Component): void
             /**
              * Returns the row header.
              * @return the <code>rowHeader</code> property
              * @see #setRowHeader
              */
             // @ts-ignore
-            getRowHeader(): javax.swing.JViewport
+            public getRowHeader(): javax.swing.JViewport
             /**
              * Removes the old rowHeader, if it exists; if the new rowHeader
              * isn't <code>null</code>, syncs the y coordinate of its
@@ -554,7 +554,7 @@ declare namespace javax {
              *   description: The row header child for this scrollpane
              */
             // @ts-ignore
-            setRowHeader(rowHeader: javax.swing.JViewport): void
+            public setRowHeader(rowHeader: javax.swing.JViewport): void
             /**
              * Creates a row-header viewport if necessary, sets
              * its view and then adds the row-header viewport
@@ -569,14 +569,14 @@ declare namespace javax {
              * @param view the component to display as the row header
              */
             // @ts-ignore
-            setRowHeaderView(view: java.awt.Component): void
+            public setRowHeaderView(view: java.awt.Component): void
             /**
              * Returns the column header.
              * @return the <code>columnHeader</code> property
              * @see #setColumnHeader
              */
             // @ts-ignore
-            getColumnHeader(): javax.swing.JViewport
+            public getColumnHeader(): javax.swing.JViewport
             /**
              * Removes the old columnHeader, if it exists; if the new columnHeader
              * isn't <code>null</code>, syncs the x coordinate of its viewPosition
@@ -592,7 +592,7 @@ declare namespace javax {
              *     attribute: visualUpdate true
              */
             // @ts-ignore
-            setColumnHeader(columnHeader: javax.swing.JViewport): void
+            public setColumnHeader(columnHeader: javax.swing.JViewport): void
             /**
              * Creates a column-header viewport if necessary, sets
              * its view, and then adds the column-header viewport
@@ -607,7 +607,7 @@ declare namespace javax {
              * @param view the component to display as the column header
              */
             // @ts-ignore
-            setColumnHeaderView(view: java.awt.Component): void
+            public setColumnHeaderView(view: java.awt.Component): void
             /**
              * Returns the component at the specified corner. The
              * <code>key</code> value specifying the corner is one of:
@@ -628,7 +628,7 @@ declare namespace javax {
              * @see #setCorner
              */
             // @ts-ignore
-            getCorner(key: string): java.awt.Component
+            public getCorner(key: java.lang.String | string): java.awt.Component
             /**
              * Adds a child that will appear in one of the scroll panes
              * corners, if there's room.   For example with both scrollbars
@@ -661,7 +661,7 @@ declare namespace javax {
              * @exception IllegalArgumentException if corner key is invalid
              */
             // @ts-ignore
-            setCorner(key: string, corner: java.awt.Component): void
+            public setCorner(key: java.lang.String | string, corner: java.awt.Component): void
             /**
              * Sets the orientation for the vertical and horizontal
              * scrollbars as determined by the
@@ -675,7 +675,7 @@ declare namespace javax {
              * @see java.awt.ComponentOrientation
              */
             // @ts-ignore
-            setComponentOrientation(co: java.awt.ComponentOrientation): void
+            public setComponentOrientation(co: java.awt.ComponentOrientation): void
             /**
              * Indicates whether or not scrolling will take place in response to the
              * mouse wheel.  Wheel scrolling is enabled by default.
@@ -685,7 +685,7 @@ declare namespace javax {
              *  description: Flag for enabling/disabling mouse wheel scrolling
              */
             // @ts-ignore
-            isWheelScrollingEnabled(): boolean
+            public isWheelScrollingEnabled(): boolean
             /**
              * Enables/disables scrolling in response to movement of the mouse wheel.
              * Wheel scrolling is enabled by default.
@@ -700,7 +700,7 @@ declare namespace javax {
              *  description: Flag for enabling/disabling mouse wheel scrolling
              */
             // @ts-ignore
-            setWheelScrollingEnabled(handleWheel: boolean): void
+            public setWheelScrollingEnabled(handleWheel: boolean): void
             /**
              * Returns a string representation of this <code>JScrollPane</code>.
              * This method
@@ -711,7 +711,7 @@ declare namespace javax {
              * @return a string representation of this <code>JScrollPane</code>.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JScrollPane.
              * For scroll panes, the AccessibleContext takes the form of an
@@ -721,7 +721,7 @@ declare namespace javax {
              *          AccessibleContext of this JScrollPane
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

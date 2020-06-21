@@ -10,19 +10,19 @@ declare namespace org {
              * @see org.springframework.context.event.EventListener
              */
             // @ts-ignore
-            class ApplicationEvent extends java.util.EventObject {
+            abstract class ApplicationEvent extends java.util.EventObject {
                 /**
                  * Create a new {@code ApplicationEvent}.
                  * @param source the object on which the event initially occurred or with
                  *  which the event is associated (never {#code null})
                  */
                 // @ts-ignore
-                constructor(source: any)
+                constructor(source: java.lang.Object | any)
                 /**
                  * Return the system time in milliseconds when the event occurred.
                  */
                 // @ts-ignore
-                getTimestamp(): long
+                public getTimestamp(): number /*long*/
             }
         }
     }

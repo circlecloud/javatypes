@@ -23,12 +23,12 @@ declare namespace org {
                          * @param sessionManager the session manager to use
                          */
                         // @ts-ignore
-                        setSessionManager(sessionManager: org.springframework.web.server.session.WebSessionManager): void
+                        public setSessionManager(sessionManager: org.springframework.web.server.session.WebSessionManager): void
                         /**
                          * Return the configured {@link WebSessionManager}.
                          */
                         // @ts-ignore
-                        getSessionManager(): org.springframework.web.server.session.WebSessionManager
+                        public getSessionManager(): org.springframework.web.server.session.WebSessionManager
                         /**
                          * Configure a custom {@link ServerCodecConfigurer}. The provided instance is set on
                          * each created {@link DefaultServerWebExchange}.
@@ -36,12 +36,12 @@ declare namespace org {
                          * @param codecConfigurer the codec configurer to use
                          */
                         // @ts-ignore
-                        setCodecConfigurer(codecConfigurer: org.springframework.http.codec.ServerCodecConfigurer): void
+                        public setCodecConfigurer(codecConfigurer: org.springframework.http.codec.ServerCodecConfigurer): void
                         /**
                          * Return the configured {@link ServerCodecConfigurer}.
                          */
                         // @ts-ignore
-                        getCodecConfigurer(): org.springframework.http.codec.ServerCodecConfigurer
+                        public getCodecConfigurer(): org.springframework.http.codec.ServerCodecConfigurer
                         /**
                          * Configure a custom {@link LocaleContextResolver}. The provided instance is set on
                          * each created {@link DefaultServerWebExchange}.
@@ -50,12 +50,12 @@ declare namespace org {
                          * @param resolver the locale context resolver to use
                          */
                         // @ts-ignore
-                        setLocaleContextResolver(resolver: org.springframework.web.server.i18n.LocaleContextResolver): void
+                        public setLocaleContextResolver(resolver: org.springframework.web.server.i18n.LocaleContextResolver): void
                         /**
                          * Return the configured {@link LocaleContextResolver}.
                          */
                         // @ts-ignore
-                        getLocaleContextResolver(): org.springframework.web.server.i18n.LocaleContextResolver
+                        public getLocaleContextResolver(): org.springframework.web.server.i18n.LocaleContextResolver
                         /**
                          * Enable processing of forwarded headers, either extracting and removing,
                          * or remove only.
@@ -64,13 +64,13 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        setForwardedHeaderTransformer(transformer: org.springframework.web.server.adapter.ForwardedHeaderTransformer): void
+                        public setForwardedHeaderTransformer(transformer: org.springframework.web.server.adapter.ForwardedHeaderTransformer): void
                         /**
                          * Return the configured {@link ForwardedHeaderTransformer}.
                          * @since 5.1
                          */
                         // @ts-ignore
-                        getForwardedHeaderTransformer(): org.springframework.web.server.adapter.ForwardedHeaderTransformer
+                        public getForwardedHeaderTransformer(): org.springframework.web.server.adapter.ForwardedHeaderTransformer
                         /**
                          * Configure the {@code ApplicationContext} associated with the web application,
                          * if it was initialized with one via
@@ -79,21 +79,21 @@ declare namespace org {
                          * @since 5.0.3
                          */
                         // @ts-ignore
-                        setApplicationContext(applicationContext: ApplicationContext): void
+                        public setApplicationContext(applicationContext: ApplicationContext): void
                         /**
                          * Return the configured {@code ApplicationContext}, if any.
                          * @since 5.0.3
                          */
                         // @ts-ignore
-                        getApplicationContext(): ApplicationContext
+                        public getApplicationContext(): ApplicationContext
                         /**
                          * This method must be invoked after all properties have been set to
                          * complete initialization.
                          */
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        handle(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): <any>
+                        public handle(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): object
                         // @ts-ignore
                         createExchange(request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse): org.springframework.web.server.ServerWebExchange
                         /**
@@ -103,7 +103,7 @@ declare namespace org {
                          * @return the String to display, never empty or {#code null}
                          */
                         // @ts-ignore
-                        formatRequest(request: org.springframework.http.server.reactive.ServerHttpRequest): java.lang.String
+                        formatRequest(request: org.springframework.http.server.reactive.ServerHttpRequest): string
                     }
                 }
             }

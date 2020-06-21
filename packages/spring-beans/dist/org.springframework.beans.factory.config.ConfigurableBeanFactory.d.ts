@@ -27,14 +27,14 @@ declare namespace org {
                          * @see #registerScope
                          */
                         // @ts-ignore
-                        
+                        readonly SCOPE_SINGLETON: java.lang.String | string
                         /**
                          * Scope identifier for the standard prototype scope: {@value}.
                          * <p>Custom scopes can be added via {@code registerScope}.
                          * @see #registerScope
                          */
                         // @ts-ignore
-                        
+                        readonly SCOPE_PROTOTYPE: java.lang.String | string
                         /**
                          * Set the parent of this bean factory.
                          * <p>Note that the parent cannot be changed: It should only be set outside
@@ -147,7 +147,7 @@ declare namespace org {
                          * @param propertyEditorClass the {#link PropertyEditor} class to register
                          */
                         // @ts-ignore
-                        registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditorClass: java.lang.Class<java.beans.PropertyEditor>): void
+                        registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditorClass: java.lang.Class<any>): void
                         /**
                          * Initialize the given PropertyEditorRegistry with the custom editors
                          * that have been registered with this BeanFactory.
@@ -196,7 +196,7 @@ declare namespace org {
                          * @since 3.0
                          */
                         // @ts-ignore
-                        resolveEmbeddedValue(value: string): java.lang.String
+                        resolveEmbeddedValue(value: java.lang.String | string): string
                         /**
                          * Add a new BeanPostProcessor that will get applied to beans created
                          * by this factory. To be invoked during factory configuration.
@@ -213,14 +213,14 @@ declare namespace org {
                          * Return the current number of registered BeanPostProcessors, if any.
                          */
                         // @ts-ignore
-                        getBeanPostProcessorCount(): int
+                        getBeanPostProcessorCount(): number /*int*/
                         /**
                          * Register the given scope, backed by the given Scope implementation.
                          * @param scopeName the scope identifier
                          * @param scope the backing Scope implementation
                          */
                         // @ts-ignore
-                        registerScope(scopeName: string, scope: org.springframework.beans.factory.config.Scope): void
+                        registerScope(scopeName: java.lang.String | string, scope: org.springframework.beans.factory.config.Scope): void
                         /**
                          * Return the names of all currently registered scopes.
                          * <p>This will only return the names of explicitly registered scopes.
@@ -229,7 +229,7 @@ declare namespace org {
                          * @see #registerScope
                          */
                         // @ts-ignore
-                        getRegisteredScopeNames(): java.lang.String[]
+                        getRegisteredScopeNames(): string[]
                         /**
                          * Return the Scope implementation for the given scope name, if any.
                          * <p>This will only return explicitly registered scopes.
@@ -239,7 +239,7 @@ declare namespace org {
                          * @see #registerScope
                          */
                         // @ts-ignore
-                        getRegisteredScope(scopeName: string): org.springframework.beans.factory.config.Scope
+                        getRegisteredScope(scopeName: java.lang.String | string): org.springframework.beans.factory.config.Scope
                         /**
                          * Provides a security access control context relevant to this factory.
                          * @return the applicable AccessControlContext (never {#code null})
@@ -268,7 +268,7 @@ declare namespace org {
                          * @throws BeanDefinitionStoreException if the alias is already in use
                          */
                         // @ts-ignore
-                        registerAlias(beanName: string, alias: string): void
+                        registerAlias(beanName: java.lang.String | string, alias: java.lang.String | string): void
                         /**
                          * Resolve all alias target names and aliases registered in this
                          * factory, applying the given StringValueResolver to them.
@@ -289,7 +289,7 @@ declare namespace org {
                          * @since 2.5
                          */
                         // @ts-ignore
-                        getMergedBeanDefinition(beanName: string): org.springframework.beans.factory.config.BeanDefinition
+                        getMergedBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Determine whether the bean with the given name is a FactoryBean.
                          * @param name the name of the bean to check
@@ -299,7 +299,7 @@ declare namespace org {
                          * @since 2.5
                          */
                         // @ts-ignore
-                        isFactoryBean(name: string): boolean
+                        isFactoryBean(name: java.lang.String | string): boolean
                         /**
                          * Explicitly control the current in-creation status of the specified bean.
                          * For container-internal use only.
@@ -308,7 +308,7 @@ declare namespace org {
                          * @since 3.1
                          */
                         // @ts-ignore
-                        setCurrentlyInCreation(beanName: string, inCreation: boolean): void
+                        setCurrentlyInCreation(beanName: java.lang.String | string, inCreation: boolean): void
                         /**
                          * Determine whether the specified bean is currently in creation.
                          * @param beanName the name of the bean
@@ -316,7 +316,7 @@ declare namespace org {
                          * @since 2.5
                          */
                         // @ts-ignore
-                        isCurrentlyInCreation(beanName: string): boolean
+                        isCurrentlyInCreation(beanName: java.lang.String | string): boolean
                         /**
                          * Register a dependent bean for the given bean,
                          * to be destroyed before the given bean is destroyed.
@@ -325,7 +325,7 @@ declare namespace org {
                          * @since 2.5
                          */
                         // @ts-ignore
-                        registerDependentBean(beanName: string, dependentBeanName: string): void
+                        registerDependentBean(beanName: java.lang.String | string, dependentBeanName: java.lang.String | string): void
                         /**
                          * Return the names of all beans which depend on the specified bean, if any.
                          * @param beanName the name of the bean
@@ -333,7 +333,7 @@ declare namespace org {
                          * @since 2.5
                          */
                         // @ts-ignore
-                        getDependentBeans(beanName: string): java.lang.String[]
+                        getDependentBeans(beanName: java.lang.String | string): string[]
                         /**
                          * Return the names of all beans that the specified bean depends on, if any.
                          * @param beanName the name of the bean
@@ -342,7 +342,7 @@ declare namespace org {
                          * @since 2.5
                          */
                         // @ts-ignore
-                        getDependenciesForBean(beanName: string): java.lang.String[]
+                        getDependenciesForBean(beanName: java.lang.String | string): string[]
                         /**
                          * Destroy the given bean instance (usually a prototype instance
                          * obtained from this factory) according to its bean definition.
@@ -352,7 +352,7 @@ declare namespace org {
                          * @param beanInstance the bean instance to destroy
                          */
                         // @ts-ignore
-                        destroyBean(beanName: string, beanInstance: any): void
+                        destroyBean(beanName: java.lang.String | string, beanInstance: java.lang.Object | any): void
                         /**
                          * Destroy the specified scoped bean in the current target scope, if any.
                          * <p>Any exception that arises during destruction should be caught
@@ -360,7 +360,7 @@ declare namespace org {
                          * @param beanName the name of the scoped bean
                          */
                         // @ts-ignore
-                        destroyScopedBean(beanName: string): void
+                        destroyScopedBean(beanName: java.lang.String | string): void
                         /**
                          * Destroy all singleton beans in this factory, including inner beans that have
                          * been registered as disposable. To be called on shutdown of a factory.

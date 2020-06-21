@@ -17,13 +17,13 @@ declare namespace javax {
                      * with this object.
                      */
                     // @ts-ignore
-                    readonly NON_CONTINUOUS_DIVIDER: string
+                    static readonly NON_CONTINUOUS_DIVIDER: java.lang.String | string
                     /**
                      * How far (relative) the divider does move when it is moved around by
                      * the cursor keys on the keyboard.
                      */
                     // @ts-ignore
-                    KEYBOARD_DIVIDER_MOVE_OFFSET: number /*int*/
+                    static KEYBOARD_DIVIDER_MOVE_OFFSET: number /*int*/
                     /**
                      * JSplitPane instance this instance is providing
                      * the look and feel for.
@@ -184,12 +184,12 @@ declare namespace javax {
                      * Creates a new BasicSplitPaneUI instance
                      */
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Installs the UI.
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Installs the UI defaults.
                      */
@@ -209,7 +209,7 @@ declare namespace javax {
                      * Uninstalls the UI.
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Uninstalls the UI defaults.
                      */
@@ -309,37 +309,37 @@ declare namespace javax {
                      * Returns the orientation for the JSplitPane.
                      */
                     // @ts-ignore
-                    getOrientation(): int
+                    public getOrientation(): number /*int*/
                     /**
                      * Set the orientation for the JSplitPane.
                      */
                     // @ts-ignore
-                    setOrientation(orientation: number /*int*/): void
+                    public setOrientation(orientation: number /*int*/): void
                     /**
                      * Determines whether the JSplitPane is set to use a continuous layout.
                      */
                     // @ts-ignore
-                    isContinuousLayout(): boolean
+                    public isContinuousLayout(): boolean
                     /**
                      * Turn continuous layout on/off.
                      */
                     // @ts-ignore
-                    setContinuousLayout(b: boolean): void
+                    public setContinuousLayout(b: boolean): void
                     /**
                      * Returns the last drag location of the JSplitPane.
                      */
                     // @ts-ignore
-                    getLastDragLocation(): int
+                    public getLastDragLocation(): number /*int*/
                     /**
                      * Set the last drag location of the JSplitPane.
                      */
                     // @ts-ignore
-                    setLastDragLocation(l: number /*int*/): void
+                    public setLastDragLocation(l: number /*int*/): void
                     /**
                      * Returns the divider between the top Components.
                      */
                     // @ts-ignore
-                    getDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
+                    public getDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
                     /**
                      * Returns the default non continuous layout divider, which is an
                      * instance of {@code Canvas} that fills in the background with dark gray.
@@ -365,79 +365,79 @@ declare namespace javax {
                      * dragging session.
                      */
                     // @ts-ignore
-                    getNonContinuousLayoutDivider(): java.awt.Component
+                    public getNonContinuousLayoutDivider(): java.awt.Component
                     /**
                      * Returns the splitpane this instance is currently contained
                      * in.
                      */
                     // @ts-ignore
-                    getSplitPane(): javax.swing.JSplitPane
+                    public getSplitPane(): javax.swing.JSplitPane
                     /**
                      * Creates the default divider.
                      */
                     // @ts-ignore
-                    createDefaultDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
+                    public createDefaultDivider(): javax.swing.plaf.basic.BasicSplitPaneDivider
                     /**
                      * Messaged to reset the preferred sizes.
                      */
                     // @ts-ignore
-                    resetToPreferredSizes(jc: javax.swing.JSplitPane): void
+                    public resetToPreferredSizes(jc: javax.swing.JSplitPane): void
                     /**
                      * Sets the location of the divider to location.
                      */
                     // @ts-ignore
-                    setDividerLocation(jc: javax.swing.JSplitPane, location: number /*int*/): void
+                    public setDividerLocation(jc: javax.swing.JSplitPane, location: number /*int*/): void
                     /**
                      * Returns the location of the divider, which may differ from what
                      * the splitpane thinks the location of the divider is.
                      */
                     // @ts-ignore
-                    getDividerLocation(jc: javax.swing.JSplitPane): int
+                    public getDividerLocation(jc: javax.swing.JSplitPane): number /*int*/
                     /**
                      * Gets the minimum location of the divider.
                      */
                     // @ts-ignore
-                    getMinimumDividerLocation(jc: javax.swing.JSplitPane): int
+                    public getMinimumDividerLocation(jc: javax.swing.JSplitPane): number /*int*/
                     /**
                      * Gets the maximum location of the divider.
                      */
                     // @ts-ignore
-                    getMaximumDividerLocation(jc: javax.swing.JSplitPane): int
+                    public getMaximumDividerLocation(jc: javax.swing.JSplitPane): number /*int*/
                     /**
                      * Called when the specified split pane has finished painting
                      * its children.
                      */
                     // @ts-ignore
-                    finishedPaintingChildren(sp: javax.swing.JSplitPane, g: java.awt.Graphics): void
+                    public finishedPaintingChildren(sp: javax.swing.JSplitPane, g: java.awt.Graphics): void
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, jc: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, jc: javax.swing.JComponent): void
                     /**
                      * Returns the preferred size for the passed in component,
                      * This is passed off to the current layout manager.
                      */
                     // @ts-ignore
-                    getPreferredSize(jc: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(jc: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the minimum size for the passed in component,
                      * This is passed off to the current layout manager.
                      */
                     // @ts-ignore
-                    getMinimumSize(jc: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(jc: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the maximum size for the passed in component,
                      * This is passed off to the current layout manager.
                      */
                     // @ts-ignore
-                    getMaximumSize(jc: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(jc: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Returns the insets. The insets are returned from the border insets
                      * of the current border.
                      */
                     // @ts-ignore
-                    getInsets(jc: javax.swing.JComponent): java.awt.Insets
+                    public getInsets(jc: javax.swing.JComponent): java.awt.Insets
                     /**
                      * Resets the layout manager based on orientation and messages it
                      * with invalidateLayout to pull in appropriate Components.
@@ -472,7 +472,7 @@ declare namespace javax {
                      *  divider.
                      */
                     // @ts-ignore
-                    getDividerBorderSize(): int
+                    getDividerBorderSize(): number /*int*/
                 }
             }
         }

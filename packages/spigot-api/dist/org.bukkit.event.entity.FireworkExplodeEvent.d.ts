@@ -10,7 +10,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(what: org.bukkit.entity.Firework)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     /**
                      * Set the cancelled state of this event. If the firework explosion is
                      * cancelled, the firework will still be removed, but no particles will be
@@ -18,13 +18,13 @@ declare namespace org {
                      * @param cancel whether to cancel or not.
                      */
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Firework
+                    public getEntity(): org.bukkit.entity.Firework
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

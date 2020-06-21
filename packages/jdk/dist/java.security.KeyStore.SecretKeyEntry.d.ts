@@ -28,13 +28,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                constructor(secretKey: javax.crypto.SecretKey, attributes: Array<java.security.KeyStore.Entry.Attribute>)
+                constructor(secretKey: javax.crypto.SecretKey, attributes: java.util.Set<java.security.KeyStore.Entry.Attribute> | Array<java.security.KeyStore.Entry.Attribute>)
                 /**
                  * Gets the {@code SecretKey} from this entry.
                  * @return the {#code SecretKey} from this entry
                  */
                 // @ts-ignore
-                getSecretKey(): javax.crypto.SecretKey
+                public getSecretKey(): javax.crypto.SecretKey
                 /**
                  * Retrieves the attributes associated with an entry.
                  * <p>
@@ -42,13 +42,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAttributes(): java.util.Set<java.security.KeyStore.Entry.Attribute>
+                public getAttributes(): Array<java.security.KeyStore.Entry.Attribute>
                 /**
                  * Returns a string representation of this SecretKeyEntry.
                  * @return a string representation of this SecretKeyEntry.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

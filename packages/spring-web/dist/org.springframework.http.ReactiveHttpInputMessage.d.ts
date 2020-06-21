@@ -15,7 +15,7 @@ declare namespace org {
                  * @return the body content publisher
                  */
                 // @ts-ignore
-                getBody(): <any>
+                getBody(): object
             }
         }
     }

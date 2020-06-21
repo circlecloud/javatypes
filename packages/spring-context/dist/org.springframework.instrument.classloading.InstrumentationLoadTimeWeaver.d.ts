@@ -32,30 +32,30 @@ declare namespace org {
                     // @ts-ignore
                     constructor(classLoader: java.lang.ClassLoader)
                     // @ts-ignore
-                    addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
+                    public addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
                     /**
                      * We have the ability to weave the current class loader when starting the
                      * JVM in this way, so the instrumentable class loader will always be the
                      * current loader.
                      */
                     // @ts-ignore
-                    getInstrumentableClassLoader(): java.lang.ClassLoader
+                    public getInstrumentableClassLoader(): java.lang.ClassLoader
                     /**
                      * This implementation always returns a {@link SimpleThrowawayClassLoader}.
                      */
                     // @ts-ignore
-                    getThrowawayClassLoader(): java.lang.ClassLoader
+                    public getThrowawayClassLoader(): java.lang.ClassLoader
                     /**
                      * Remove all registered transformers, in inverse order of registration.
                      */
                     // @ts-ignore
-                    removeTransformers(): void
+                    public removeTransformers(): void
                     /**
                      * Check whether an Instrumentation instance is available for the current VM.
                      * @see #getInstrumentation()
                      */
                     // @ts-ignore
-                    isInstrumentationAvailable(): boolean
+                    public static isInstrumentationAvailable(): boolean
                 }
             }
         }

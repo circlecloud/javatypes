@@ -84,7 +84,7 @@ declare namespace org {
                  * @see org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter
                  */
                 // @ts-ignore
-                class EnableLoadTimeWeaving implements java.lang.annotation.Annotation {
+                abstract class EnableLoadTimeWeaving implements java.lang.annotation.Annotation {
                 }
             }
         }

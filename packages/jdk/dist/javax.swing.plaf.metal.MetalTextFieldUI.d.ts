@@ -20,7 +20,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * This method gets called when a bound property is changed
                      * on the associated JTextComponent.  This is a hook
@@ -29,7 +29,7 @@ declare namespace javax {
                      * @param evt the property change event
                      */
                     // @ts-ignore
-                    propertyChange(evt: java.beans.PropertyChangeEvent): void
+                    public propertyChange(evt: java.beans.PropertyChangeEvent): void
                 }
             }
         }

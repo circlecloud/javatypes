@@ -57,7 +57,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>locale</code> is null.
                  */
                 // @ts-ignore
-                setLocale(locale: java.util.Locale): java.util.Locale.Builder
+                public setLocale(locale: java.util.Locale): java.util.Locale.Builder
                 /**
                  * Resets the Builder to match the provided IETF BCP 47
                  * language tag.  Discards the existing state.  Null and the
@@ -75,7 +75,7 @@ declare namespace java {
                  * @see Locale#forLanguageTag(String)
                  */
                 // @ts-ignore
-                setLanguageTag(languageTag: string): java.util.Locale.Builder
+                public setLanguageTag(languageTag: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Sets the language.  If <code>language</code> is the empty string or
                  * null, the language in this <code>Builder</code> is removed.  Otherwise,
@@ -88,7 +88,7 @@ declare namespace java {
                  * @throws IllformedLocaleException if <code>language</code> is ill-formed
                  */
                 // @ts-ignore
-                setLanguage(language: string): java.util.Locale.Builder
+                public setLanguage(language: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Sets the script. If <code>script</code> is null or the empty string,
                  * the script in this <code>Builder</code> is removed.
@@ -100,7 +100,7 @@ declare namespace java {
                  * @throws IllformedLocaleException if <code>script</code> is ill-formed
                  */
                 // @ts-ignore
-                setScript(script: string): java.util.Locale.Builder
+                public setScript(script: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Sets the region.  If region is null or the empty string, the region
                  * in this <code>Builder</code> is removed.  Otherwise,
@@ -115,7 +115,7 @@ declare namespace java {
                  * @throws IllformedLocaleException if <code>region</code> is ill-formed
                  */
                 // @ts-ignore
-                setRegion(region: string): java.util.Locale.Builder
+                public setRegion(region: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Sets the variant.  If variant is null or the empty string, the
                  * variant in this <code>Builder</code> is removed.  Otherwise, it
@@ -133,7 +133,7 @@ declare namespace java {
                  * @throws IllformedLocaleException if <code>variant</code> is ill-formed
                  */
                 // @ts-ignore
-                setVariant(variant: string): java.util.Locale.Builder
+                public setVariant(variant: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Sets the extension for the given key. If the value is null or the
                  * empty string, the extension is removed.  Otherwise, the extension
@@ -155,7 +155,7 @@ declare namespace java {
                  * @see #setUnicodeLocaleKeyword(String, String)
                  */
                 // @ts-ignore
-                setExtension(key: string, value: string): java.util.Locale.Builder
+                public setExtension(key: string, value: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Sets the Unicode locale keyword type for the given key.  If the type
                  * is null, the Unicode keyword is removed.  Otherwise, the key must be
@@ -175,7 +175,7 @@ declare namespace java {
                  * @see #setExtension(char, String)
                  */
                 // @ts-ignore
-                setUnicodeLocaleKeyword(key: string, type: string): java.util.Locale.Builder
+                public setUnicodeLocaleKeyword(key: java.lang.String | string, type: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Adds a unicode locale attribute, if not already present, otherwise
                  * has no effect.  The attribute must not be null and must be <a
@@ -188,7 +188,7 @@ declare namespace java {
                  * @see #setExtension(char, String)
                  */
                 // @ts-ignore
-                addUnicodeLocaleAttribute(attribute: string): java.util.Locale.Builder
+                public addUnicodeLocaleAttribute(attribute: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Removes a unicode locale attribute, if present, otherwise has no
                  * effect.  The attribute must not be null and must be <a
@@ -202,13 +202,13 @@ declare namespace java {
                  * @see #setExtension(char, String)
                  */
                 // @ts-ignore
-                removeUnicodeLocaleAttribute(attribute: string): java.util.Locale.Builder
+                public removeUnicodeLocaleAttribute(attribute: java.lang.String | string): java.util.Locale.Builder
                 /**
                  * Resets the builder to its initial, empty state.
                  * @return This builder.
                  */
                 // @ts-ignore
-                clear(): java.util.Locale.Builder
+                public clear(): java.util.Locale.Builder
                 /**
                  * Resets the extensions to their initial, empty state.
                  * Language, script, region and variant are unchanged.
@@ -216,7 +216,7 @@ declare namespace java {
                  * @see #setExtension(char, String)
                  */
                 // @ts-ignore
-                clearExtensions(): java.util.Locale.Builder
+                public clearExtensions(): java.util.Locale.Builder
                 /**
                  * Returns an instance of <code>Locale</code> created from the fields set
                  * on this builder.
@@ -226,7 +226,7 @@ declare namespace java {
                  * @return A Locale.
                  */
                 // @ts-ignore
-                build(): java.util.Locale
+                public build(): java.util.Locale
             }
         }
     }

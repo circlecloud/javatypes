@@ -39,19 +39,19 @@ declare namespace javax {
                  *                           the control's value.
                  */
                 // @ts-ignore
-                constructor(id: string, criticality: boolean, value: number /*byte*/[])
+                constructor(id: java.lang.String | string, criticality: boolean, value: number /*byte*/[])
                 /**
                  * The paged-results response control's assigned object identifier
                  * is 1.2.840.113556.1.4.319.
                  */
                 // @ts-ignore
-                readonly OID: string
+                public static readonly OID: java.lang.String | string
                 /**
                  * Retrieves (an estimate of) the number of entries in the search result.
                  * @return The number of entries in the search result, or zero if unknown.
                  */
                 // @ts-ignore
-                getResultSize(): int
+                public getResultSize(): number /*int*/
                 /**
                  * Retrieves the server-generated cookie. Null is returned when there are
                  * no more entries for the server to return.
@@ -60,7 +60,7 @@ declare namespace javax {
                  *          are not recommended.
                  */
                 // @ts-ignore
-                getCookie(): byte[]
+                public getCookie(): number /*byte*/[]
             }
         }
     }

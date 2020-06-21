@@ -18,9 +18,9 @@ declare namespace org {
                 // @ts-ignore
                 class MethodBasedEvaluationContext extends StandardEvaluationContext {
                     // @ts-ignore
-                    constructor(rootObject: any, method: java.lang.reflect.Method, arguments: any[], parameterNameDiscoverer: ParameterNameDiscoverer)
+                    constructor(rootObject: java.lang.Object | any, method: java.lang.reflect.Method, arguments: java.lang.Object[] | any[], parameterNameDiscoverer: ParameterNameDiscoverer)
                     // @ts-ignore
-                    lookupVariable(name: string): java.lang.Object
+                    public lookupVariable(name: java.lang.String | string): any
                     /**
                      * Load the param information only when needed.
                      */

@@ -10,11 +10,11 @@ declare namespace org {
             // @ts-ignore
             class HelpTopicComparator extends java.lang.Object implements java.util.Comparator<org.bukkit.help.HelpTopic> {
                 // @ts-ignore
-                topicNameComparatorInstance(): org.bukkit.help.HelpTopicComparator.TopicNameComparator
+                public static topicNameComparatorInstance(): org.bukkit.help.HelpTopicComparator.TopicNameComparator
                 // @ts-ignore
-                helpTopicComparatorInstance(): org.bukkit.help.HelpTopicComparator
+                public static helpTopicComparatorInstance(): org.bukkit.help.HelpTopicComparator
                 // @ts-ignore
-                compare(lhs: org.bukkit.help.HelpTopic, rhs: org.bukkit.help.HelpTopic): int
+                public compare(lhs: org.bukkit.help.HelpTopic, rhs: org.bukkit.help.HelpTopic): number /*int*/
             }
         }
     }

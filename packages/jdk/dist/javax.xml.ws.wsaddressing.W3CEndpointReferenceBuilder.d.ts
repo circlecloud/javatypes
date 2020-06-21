@@ -50,7 +50,7 @@ declare namespace javax {
                      *    the <code>address</code> set to the <code>wsa:Address</code>.
                      */
                     // @ts-ignore
-                    address(address: string): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public address(address: java.lang.String | string): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Sets the <code>interfaceName</code> as the
                      * <code>wsam:InterfaceName</code> element in the
@@ -64,7 +64,7 @@ declare namespace javax {
                      *    element added to the <code>wsa:Metadata</code> element
                      */
                     // @ts-ignore
-                    interfaceName(interfaceName: javax.xml.namespace.QName): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public interfaceName(interfaceName: javax.xml.namespace.QName): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Sets the <code>serviceName</code> as the
                      * <code>wsam:ServiceName</code> element in the
@@ -81,7 +81,7 @@ declare namespace javax {
                      *    element added to the <code>wsa:Metadata</code> element
                      */
                     // @ts-ignore
-                    serviceName(serviceName: javax.xml.namespace.QName): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public serviceName(serviceName: javax.xml.namespace.QName): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Sets the <code>endpointName</code> as
                      * <code>wsam:ServiceName/@EndpointName</code> in the
@@ -106,7 +106,7 @@ declare namespace javax {
                      *  Namespace URI doesn't match <code>serviceName</code>'s Namespace URI
                      */
                     // @ts-ignore
-                    endpointName(endpointName: javax.xml.namespace.QName): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public endpointName(endpointName: javax.xml.namespace.QName): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Sets the <code>wsdlDocumentLocation</code> that will be referenced
                      * as <code>wsa:Metadata/@wsdli:wsdlLocation</code>. The namespace name
@@ -121,7 +121,7 @@ declare namespace javax {
                      *    the <code>wsdlDocumentLocation</code> that is to be referenced.
                      */
                     // @ts-ignore
-                    wsdlDocumentLocation(wsdlDocumentLocation: string): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public wsdlDocumentLocation(wsdlDocumentLocation: java.lang.String | string): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Adds the <code>referenceParameter</code> to the
                      * <code>W3CEndpointReference</code> instance
@@ -135,7 +135,7 @@ declare namespace javax {
                      *  is <code>null</code>.
                      */
                     // @ts-ignore
-                    referenceParameter(referenceParameter: org.w3c.dom.Element): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public referenceParameter(referenceParameter: org.w3c.dom.Element): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Adds the <code>metadataElement</code> to the
                      * <code>W3CEndpointReference</code> instance's
@@ -149,7 +149,7 @@ declare namespace javax {
                      *  is <code>null</code>.
                      */
                     // @ts-ignore
-                    metadata(metadataElement: org.w3c.dom.Element): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public metadata(metadataElement: org.w3c.dom.Element): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Adds an extension element to the
                      * <code>W3CEndpointReference</code> instance's
@@ -164,7 +164,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    element(element: org.w3c.dom.Element): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public element(element: org.w3c.dom.Element): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Adds an extension attribute to the
                      * <code>W3CEndpointReference</code> instance's
@@ -180,7 +180,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    attribute(name: javax.xml.namespace.QName, value: string): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
+                    public attribute(name: javax.xml.namespace.QName, value: java.lang.String | string): javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder
                     /**
                      * Builds a <code>W3CEndpointReference</code> from the accumulated
                      * properties set on this <code>W3CEndpointReferenceBuilder</code>
@@ -223,7 +223,7 @@ declare namespace javax {
                      *                              <code>W3CEndpointReference</code>.
                      */
                     // @ts-ignore
-                    build(): javax.xml.ws.wsaddressing.W3CEndpointReference
+                    public build(): javax.xml.ws.wsaddressing.W3CEndpointReference
                 }
             }
         }

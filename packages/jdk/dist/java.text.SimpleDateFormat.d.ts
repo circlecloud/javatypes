@@ -379,7 +379,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid
              */
             // @ts-ignore
-            constructor(pattern: string)
+            constructor(pattern: java.lang.String | string)
             /**
              * Constructs a <code>SimpleDateFormat</code> using the given pattern and
              * the default date format symbols for the given locale.
@@ -392,7 +392,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid
              */
             // @ts-ignore
-            constructor(pattern: string, locale: java.util.Locale)
+            constructor(pattern: java.lang.String | string, locale: java.util.Locale)
             /**
              * Constructs a <code>SimpleDateFormat</code> using the given pattern and
              * date format symbols.
@@ -402,7 +402,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid
              */
             // @ts-ignore
-            constructor(pattern: string, formatSymbols: java.text.DateFormatSymbols)
+            constructor(pattern: java.lang.String | string, formatSymbols: java.text.DateFormatSymbols)
             /**
              * Sets the 100-year period 2-digit years will be interpreted as being in
              * to begin on the date the user specifies.
@@ -412,7 +412,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            set2DigitYearStart(startDate: java.util.Date): void
+            public set2DigitYearStart(startDate: java.util.Date): void
             /**
              * Returns the beginning date of the 100-year period 2-digit years are interpreted
              * as being within.
@@ -422,7 +422,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            get2DigitYearStart(): java.util.Date
+            public get2DigitYearStart(): java.util.Date
             /**
              * Formats the given <code>Date</code> into a date/time string and appends
              * the result to the given <code>StringBuffer</code>.
@@ -434,7 +434,7 @@ declare namespace java {
              * @exception NullPointerException if the given {#code date} is {@code null}.
              */
             // @ts-ignore
-            format(date: java.util.Date, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
+            public format(date: java.util.Date, toAppendTo: java.lang.StringBuffer, pos: java.text.FieldPosition): java.lang.StringBuffer
             /**
              * Formats an Object producing an <code>AttributedCharacterIterator</code>.
              * You can use the returned <code>AttributedCharacterIterator</code>
@@ -452,7 +452,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            formatToCharacterIterator(obj: any): java.text.AttributedCharacterIterator
+            public formatToCharacterIterator(obj: java.lang.Object | any): java.text.AttributedCharacterIterator
             /**
              * Parses text from a string to produce a <code>Date</code>.
              * <p>
@@ -487,19 +487,19 @@ declare namespace java {
              * @exception NullPointerException if <code>text</code> or <code>pos</code> is null.
              */
             // @ts-ignore
-            parse(text: string, pos: java.text.ParsePosition): java.util.Date
+            public parse(text: java.lang.String | string, pos: java.text.ParsePosition): java.util.Date
             /**
              * Returns a pattern string describing this date format.
              * @return a pattern string describing this date format.
              */
             // @ts-ignore
-            toPattern(): java.lang.String
+            public toPattern(): string
             /**
              * Returns a localized pattern string describing this date format.
              * @return a localized pattern string describing this date format.
              */
             // @ts-ignore
-            toLocalizedPattern(): java.lang.String
+            public toLocalizedPattern(): string
             /**
              * Applies the given pattern string to this date format.
              * @param pattern the new date and time pattern for this date format
@@ -507,7 +507,7 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid
              */
             // @ts-ignore
-            applyPattern(pattern: string): void
+            public applyPattern(pattern: java.lang.String | string): void
             /**
              * Applies the given localized pattern string to this date format.
              * @param pattern a String to be mapped to the new date and time format
@@ -516,14 +516,14 @@ declare namespace java {
              * @exception IllegalArgumentException if the given pattern is invalid
              */
             // @ts-ignore
-            applyLocalizedPattern(pattern: string): void
+            public applyLocalizedPattern(pattern: java.lang.String | string): void
             /**
              * Gets a copy of the date and time format symbols of this date format.
              * @return the date and time format symbols of this date format
              * @see #setDateFormatSymbols
              */
             // @ts-ignore
-            getDateFormatSymbols(): java.text.DateFormatSymbols
+            public getDateFormatSymbols(): java.text.DateFormatSymbols
             /**
              * Sets the date and time format symbols of this date format.
              * @param newFormatSymbols the new date and time format symbols
@@ -531,20 +531,20 @@ declare namespace java {
              * @see #getDateFormatSymbols
              */
             // @ts-ignore
-            setDateFormatSymbols(newFormatSymbols: java.text.DateFormatSymbols): void
+            public setDateFormatSymbols(newFormatSymbols: java.text.DateFormatSymbols): void
             /**
              * Creates a copy of this <code>SimpleDateFormat</code>. This also
              * clones the format's date format symbols.
              * @return a clone of this <code>SimpleDateFormat</code>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the hash code value for this <code>SimpleDateFormat</code> object.
              * @return the hash code value for this <code>SimpleDateFormat</code> object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares the given object with this <code>SimpleDateFormat</code> for
              * equality.
@@ -552,7 +552,7 @@ declare namespace java {
              *  <code>SimpleDateFormat</code>
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

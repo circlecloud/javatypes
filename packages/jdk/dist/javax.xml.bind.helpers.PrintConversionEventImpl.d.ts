@@ -28,7 +28,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if an illegal severity field is supplied
                      */
                     // @ts-ignore
-                    constructor(_severity: number /*int*/, _message: string, _locator: javax.xml.bind.ValidationEventLocator)
+                    constructor(_severity: number /*int*/, _message: java.lang.String | string, _locator: javax.xml.bind.ValidationEventLocator)
                     /**
                      * Create a new PrintConversionEventImpl.
                      * @param _severity The severity value for this event.  Must be one of
@@ -41,7 +41,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if an illegal severity field is supplied
                      */
                     // @ts-ignore
-                    constructor(_severity: number /*int*/, _message: string, _locator: javax.xml.bind.ValidationEventLocator, _linkedException: Error)
+                    constructor(_severity: number /*int*/, _message: java.lang.String | string, _locator: javax.xml.bind.ValidationEventLocator, _linkedException: java.lang.Throwable | Error)
                 }
             }
         }

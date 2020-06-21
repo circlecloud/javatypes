@@ -17,14 +17,14 @@ declare namespace javax {
                  * @return the current line number
                  */
                 // @ts-ignore
-                getLineNumber(): int
+                getLineNumber(): number /*int*/
                 /**
                  * Return the column number where the current event ends,
                  * returns -1 if none is available.
                  * @return the current column number
                  */
                 // @ts-ignore
-                getColumnNumber(): int
+                getColumnNumber(): number /*int*/
                 /**
                  * Return the byte or character offset into the input source this location
                  * is pointing to. If the input source is a file or a byte stream then
@@ -34,19 +34,19 @@ declare namespace javax {
                  * @return the current offset
                  */
                 // @ts-ignore
-                getCharacterOffset(): int
+                getCharacterOffset(): number /*int*/
                 /**
                  * Returns the public ID of the XML
                  * @return the public ID, or null if not available
                  */
                 // @ts-ignore
-                getPublicId(): java.lang.String
+                getPublicId(): string
                 /**
                  * Returns the system ID of the XML
                  * @return the system ID, or null if not available
                  */
                 // @ts-ignore
-                getSystemId(): java.lang.String
+                getSystemId(): string
             }
         }
     }

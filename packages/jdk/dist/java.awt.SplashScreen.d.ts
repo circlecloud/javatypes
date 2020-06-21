@@ -74,7 +74,7 @@ declare namespace java {
              *          none or it has already been closed
              */
             // @ts-ignore
-            getSplashScreen(): java.awt.SplashScreen
+            public static getSplashScreen(): java.awt.SplashScreen
             /**
              * Changes the splash screen image. The new image is loaded from the
              * specified URL; GIF, JPEG and PNG image formats are supported.
@@ -90,14 +90,14 @@ declare namespace java {
              *          closed
              */
             // @ts-ignore
-            setImageURL(imageURL: java.net.URL): void
+            public setImageURL(imageURL: java.net.URL): void
             /**
              * Returns the current splash screen image.
              * @return URL for the current splash screen image file
              * @throws IllegalStateException if the splash screen has already been closed
              */
             // @ts-ignore
-            getImageURL(): java.net.URL
+            public getImageURL(): java.net.URL
             /**
              * Returns the bounds of the splash screen window as a {@link Rectangle}.
              * This may be useful if, for example, you want to replace the splash
@@ -112,7 +112,7 @@ declare namespace java {
              * @throws IllegalStateException if the splash screen has already been closed
              */
             // @ts-ignore
-            getBounds(): java.awt.Rectangle
+            public getBounds(): java.awt.Rectangle
             /**
              * Returns the size of the splash screen window as a {@link Dimension}.
              * This may be useful if, for example,
@@ -127,7 +127,7 @@ declare namespace java {
              * @throws IllegalStateException if the splash screen has already been closed
              */
             // @ts-ignore
-            getSize(): java.awt.Dimension
+            public getSize(): java.awt.Dimension
             /**
              * Creates a graphics context (as a {@link Graphics2D} object) for the splash
              * screen overlay image, which allows you to draw over the splash screen.
@@ -145,7 +145,7 @@ declare namespace java {
              * @throws IllegalStateException if the splash screen has already been closed
              */
             // @ts-ignore
-            createGraphics(): java.awt.Graphics2D
+            public createGraphics(): java.awt.Graphics2D
             /**
              * Updates the splash window with current contents of the overlay image.
              * @throws IllegalStateException if the overlay image does not exist;
@@ -153,14 +153,14 @@ declare namespace java {
              *          or if the splash screen has already been closed
              */
             // @ts-ignore
-            update(): void
+            public update(): void
             /**
              * Hides the splash screen, closes the window, and releases all associated
              * resources.
              * @throws IllegalStateException if the splash screen has already been closed
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Determines whether the splash screen is visible. The splash screen may
              * be hidden using {@link #close()}, it is also hidden automatically when
@@ -174,7 +174,7 @@ declare namespace java {
              *          false otherwise
              */
             // @ts-ignore
-            isVisible(): boolean
+            public isVisible(): boolean
         }
     }
 }

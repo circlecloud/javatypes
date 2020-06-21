@@ -12,9 +12,9 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        layoutContainer(parent: java.awt.Container): void
+                        public layoutContainer(parent: java.awt.Container): void
                         // @ts-ignore
-                        superLayout(parent: java.awt.Container): void
+                        public superLayout(parent: java.awt.Container): void
                     }
                 }
             }

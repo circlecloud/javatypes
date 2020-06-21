@@ -31,13 +31,13 @@ declare namespace org {
                              * @return The width of the grid
                              */
                             // @ts-ignore
-                            getWidth(): int
+                            getWidth(): number /*int*/
                             /**
                              * Gets the height of the grid this ShapedCraftingRecipe fits into.
                              * @return The height of the grid
                              */
                             // @ts-ignore
-                            getHeight(): int
+                            getHeight(): number /*int*/
                         }
                     }
                 }

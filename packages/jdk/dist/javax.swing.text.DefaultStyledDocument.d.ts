@@ -51,7 +51,7 @@ declare namespace javax {
                  * The default size of the initial content buffer.
                  */
                 // @ts-ignore
-                readonly BUFFER_SIZE_DEFAULT: number /*int*/
+                public static readonly BUFFER_SIZE_DEFAULT: number /*int*/
                 // @ts-ignore
                 buffer: javax.swing.text.DefaultStyledDocument.ElementBuffer
                 /**
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @see Document#getDefaultRootElement
                  */
                 // @ts-ignore
-                getDefaultRootElement(): javax.swing.text.Element
+                public getDefaultRootElement(): javax.swing.text.Element
                 /**
                  * Initialize the document to reflect the given element
                  * structure (i.e. the structure reported by the
@@ -118,7 +118,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                removeElement(elem: javax.swing.text.Element): void
+                public removeElement(elem: javax.swing.text.Element): void
                 /**
                  * Adds a new style into the logical style hierarchy.  Style attributes
                  * resolve from bottom up so an attribute specified in a child
@@ -135,26 +135,26 @@ declare namespace javax {
                  * @return the style
                  */
                 // @ts-ignore
-                addStyle(nm: string, parent: javax.swing.text.Style): javax.swing.text.Style
+                public addStyle(nm: java.lang.String | string, parent: javax.swing.text.Style): javax.swing.text.Style
                 /**
                  * Removes a named style previously added to the document.
                  * @param nm  the name of the style to remove
                  */
                 // @ts-ignore
-                removeStyle(nm: string): void
+                public removeStyle(nm: java.lang.String | string): void
                 /**
                  * Fetches a named style previously added.
                  * @param nm  the name of the style
                  * @return the style
                  */
                 // @ts-ignore
-                getStyle(nm: string): javax.swing.text.Style
+                public getStyle(nm: java.lang.String | string): javax.swing.text.Style
                 /**
                  * Fetches the list of of style names.
                  * @return all the style names
                  */
                 // @ts-ignore
-                getStyleNames(): java.util.Enumeration<?>
+                public getStyleNames(): java.util.Enumeration<any>
                 /**
                  * Sets the logical style to use for the paragraph at the
                  * given position.  If attributes aren't explicitly set
@@ -171,7 +171,7 @@ declare namespace javax {
                  * @param s  the logical style to assign to the paragraph, null if none
                  */
                 // @ts-ignore
-                setLogicalStyle(pos: number /*int*/, s: javax.swing.text.Style): void
+                public setLogicalStyle(pos: number /*int*/, s: javax.swing.text.Style): void
                 /**
                  * Fetches the logical style assigned to the paragraph
                  * represented by the given position.
@@ -181,7 +181,7 @@ declare namespace javax {
                  * @return the style, null if none
                  */
                 // @ts-ignore
-                getLogicalStyle(p: number /*int*/): javax.swing.text.Style
+                public getLogicalStyle(p: number /*int*/): javax.swing.text.Style
                 /**
                  * Sets attributes for some part of the document.
                  * A write lock is held by this operation while changes
@@ -199,7 +199,7 @@ declare namespace javax {
                  *   before setting the new attributes
                  */
                 // @ts-ignore
-                setCharacterAttributes(offset: number /*int*/, length: number /*int*/, s: javax.swing.text.AttributeSet, replace: boolean): void
+                public setCharacterAttributes(offset: number /*int*/, length: number /*int*/, s: javax.swing.text.AttributeSet, replace: boolean): void
                 /**
                  * Sets attributes for a paragraph.
                  * <p>
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @param replace whether to replace existing attributes, or merge them
                  */
                 // @ts-ignore
-                setParagraphAttributes(offset: number /*int*/, length: number /*int*/, s: javax.swing.text.AttributeSet, replace: boolean): void
+                public setParagraphAttributes(offset: number /*int*/, length: number /*int*/, s: javax.swing.text.AttributeSet, replace: boolean): void
                 /**
                  * Gets the paragraph element at the offset <code>pos</code>.
                  * A paragraph consists of at least one child Element, which is usually
@@ -222,14 +222,14 @@ declare namespace javax {
                  * @return the element
                  */
                 // @ts-ignore
-                getParagraphElement(pos: number /*int*/): javax.swing.text.Element
+                public getParagraphElement(pos: number /*int*/): javax.swing.text.Element
                 /**
                  * Gets a character element based on a position.
                  * @param pos the position in the document &gt;= 0
                  * @return the element
                  */
                 // @ts-ignore
-                getCharacterElement(pos: number /*int*/): javax.swing.text.Element
+                public getCharacterElement(pos: number /*int*/): javax.swing.text.Element
                 /**
                  * Updates document structure as a result of text insertion.  This
                  * will happen within a write lock.  This implementation simply
@@ -259,21 +259,21 @@ declare namespace javax {
                  * @return the color
                  */
                 // @ts-ignore
-                getForeground(attr: javax.swing.text.AttributeSet): java.awt.Color
+                public getForeground(attr: javax.swing.text.AttributeSet): java.awt.Color
                 /**
                  * Gets the background color from an attribute set.
                  * @param attr the attribute set
                  * @return the color
                  */
                 // @ts-ignore
-                getBackground(attr: javax.swing.text.AttributeSet): java.awt.Color
+                public getBackground(attr: javax.swing.text.AttributeSet): java.awt.Color
                 /**
                  * Gets the font from an attribute set.
                  * @param attr the attribute set
                  * @return the font
                  */
                 // @ts-ignore
-                getFont(attr: javax.swing.text.AttributeSet): java.awt.Font
+                public getFont(attr: javax.swing.text.AttributeSet): java.awt.Font
                 /**
                  * Called when any of this document's styles have changed.
                  * Subclasses may wish to be intelligent about what gets damaged.
@@ -287,14 +287,14 @@ declare namespace javax {
                  * @see Document#addDocumentListener
                  */
                 // @ts-ignore
-                addDocumentListener(listener: javax.swing.event.DocumentListener): void
+                public addDocumentListener(listener: javax.swing.event.DocumentListener): void
                 /**
                  * Removes a document listener.
                  * @param listener the listener
                  * @see Document#removeDocumentListener
                  */
                 // @ts-ignore
-                removeDocumentListener(listener: javax.swing.event.DocumentListener): void
+                public removeDocumentListener(listener: javax.swing.event.DocumentListener): void
             }
         }
     }

@@ -28,13 +28,13 @@ declare namespace org {
                          * Return the XML bean definition reader in use.
                          */
                         // @ts-ignore
-                        getReader(): org.springframework.beans.factory.xml.XmlBeanDefinitionReader
+                        public getReader(): org.springframework.beans.factory.xml.XmlBeanDefinitionReader
                         /**
                          * Return the bean definition registry to use.
                          * @see XmlBeanDefinitionReader#XmlBeanDefinitionReader(BeanDefinitionRegistry)
                          */
                         // @ts-ignore
-                        getRegistry(): org.springframework.beans.factory.support.BeanDefinitionRegistry
+                        public getRegistry(): org.springframework.beans.factory.support.BeanDefinitionRegistry
                         /**
                          * Return the resource loader to use, if any.
                          * <p>This will be non-null in regular scenarios,
@@ -43,7 +43,7 @@ declare namespace org {
                          * @see ResourceLoader#getClassLoader()
                          */
                         // @ts-ignore
-                        getResourceLoader(): ResourceLoader
+                        public getResourceLoader(): ResourceLoader
                         /**
                          * Return the bean class loader to use, if any.
                          * <p>Note that this will be null in regular scenarios,
@@ -51,26 +51,26 @@ declare namespace org {
                          * @see XmlBeanDefinitionReader#setBeanClassLoader
                          */
                         // @ts-ignore
-                        getBeanClassLoader(): java.lang.ClassLoader
+                        public getBeanClassLoader(): java.lang.ClassLoader
                         /**
                          * Return the environment to use.
                          * @see XmlBeanDefinitionReader#setEnvironment
                          */
                         // @ts-ignore
-                        getEnvironment(): Environment
+                        public getEnvironment(): Environment
                         /**
                          * Return the namespace resolver.
                          * @see XmlBeanDefinitionReader#setNamespaceHandlerResolver
                          */
                         // @ts-ignore
-                        getNamespaceHandlerResolver(): org.springframework.beans.factory.xml.NamespaceHandlerResolver
+                        public getNamespaceHandlerResolver(): org.springframework.beans.factory.xml.NamespaceHandlerResolver
                         /**
                          * Call the bean name generator for the given bean definition.
                          * @see XmlBeanDefinitionReader#getBeanNameGenerator()
                          * @see org.springframework.beans.factory.support.BeanNameGenerator#generateBeanName
                          */
                         // @ts-ignore
-                        generateBeanName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): java.lang.String
+                        public generateBeanName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): string
                         /**
                          * Call the bean name generator for the given bean definition
                          * and register the bean definition under the generated name.
@@ -79,13 +79,13 @@ declare namespace org {
                          * @see BeanDefinitionRegistry#registerBeanDefinition
                          */
                         // @ts-ignore
-                        registerWithGeneratedName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): java.lang.String
+                        public registerWithGeneratedName(beanDefinition: org.springframework.beans.factory.config.BeanDefinition): string
                         /**
                          * Read an XML document from the given String.
                          * @see #getReader()
                          */
                         // @ts-ignore
-                        readDocumentFromString(documentContent: string): org.w3c.dom.Document
+                        public readDocumentFromString(documentContent: java.lang.String | string): org.w3c.dom.Document
                     }
                 }
             }

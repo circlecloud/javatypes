@@ -200,7 +200,7 @@ declare namespace org {
                          * @return the number non-empty in the inventory
                          */
                         // @ts-ignore
-                        size(): int
+                        size(): number /*int*/
                         /**
                          * Returns the number total number of individual <em>items</em> in this
                          * inventory.
@@ -208,14 +208,14 @@ declare namespace org {
                          * @return the total number of items in the inventory
                          */
                         // @ts-ignore
-                        totalItems(): int
+                        totalItems(): number /*int*/
                         /**
                          * The maximum number of stacks the Inventory can hold. Always 1 for
                          * {@link Slot}s and always 0 for {@link EmptyInventory}s.
                          * @return the number of stacks the inventory can hold
                          */
                         // @ts-ignore
-                        capacity(): int
+                        capacity(): number /*int*/
                         /**
                          * Returns true if this Inventory contains children. If false, this does not
                          * imply that the Inventory accepts no items, and an Inventory is perfectly
@@ -260,7 +260,7 @@ declare namespace org {
                          * @return The maximum stack size of this list
                          */
                         // @ts-ignore
-                        getMaxStackSize(): int
+                        getMaxStackSize(): number /*int*/
                         /**
                          * Sets the maximum stack size of any stack in this ItemList.
                          * @param size The new maximum stack size
@@ -279,7 +279,7 @@ declare namespace org {
                          *       no properties match the supplied criterion
                          */
                         // @ts-ignore
-                        getProperties<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(child: org.spongepowered.api.item.inventory.Inventory, property: java.lang.Class<T>): java.util.Collection<T>
+                        getProperties<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(child: org.spongepowered.api.item.inventory.Inventory, property: java.lang.Class<T>): Array<T>
                         /**
                          * Gets all properties of the specified type defined directly on this
                          * Inventory. For sub-inventories this is effectively the same as
@@ -293,7 +293,7 @@ declare namespace org {
                          *       no properties match the supplied criterion
                          */
                         // @ts-ignore
-                        getProperties<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(property: java.lang.Class<T>): java.util.Collection<T>
+                        getProperties<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(property: java.lang.Class<T>): Array<T>
                         /**
                          * Gets the property with the specified key defined in <em>this</em>
                          * inventory for the specified (immediate) sub-inventory.
@@ -306,7 +306,7 @@ declare namespace org {
                          *       supplied criteria
                          */
                         // @ts-ignore
-                        getProperty<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(child: org.spongepowered.api.item.inventory.Inventory, property: java.lang.Class<T>, key: any): java.util.Optional<T>
+                        getProperty<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(child: org.spongepowered.api.item.inventory.Inventory, property: java.lang.Class<T>, key: java.lang.Object | any): java.util.Optional<T>
                         /**
                          * Gets a property with the specified key defined directly on this Inventory
                          * if one is defined. For sub-inventories this is effectively the same as
@@ -321,7 +321,7 @@ declare namespace org {
                          *       supplied criteria
                          */
                         // @ts-ignore
-                        getProperty<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(property: java.lang.Class<T>, key: any): java.util.Optional<T>
+                        getProperty<T extends org.spongepowered.api.item.inventory.InventoryProperty<?, ?>>(property: java.lang.Class<T>, key: java.lang.Object | any): java.util.Optional<T>
                         /**
                          * Gets the property with the default key defined in <em>this</em>
                          * inventory for the specified (immediate) sub-inventory.
@@ -359,7 +359,7 @@ declare namespace org {
                          * @deprecated use {#link #query(QueryOperation...)} instead
                          */
                         // @ts-ignore
-                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...types: java.lang.Class[]): T
+                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...types: java.lang.Class<any>[]): T
                         /**
                          * Query this inventory for inventories containing any of the supplied item
                          * types. This query operates directly on {@link Slot} leaf nodes in the
@@ -404,7 +404,7 @@ declare namespace org {
                          * @deprecated use {#link #query(QueryOperation...)} instead
                          */
                         // @ts-ignore
-                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...props: org.spongepowered.api.item.inventory.InventoryProperty[]): T
+                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...props: org.spongepowered.api.item.inventory.InventoryProperty<any, any>[]): T
                         /**
                          * Query this inventory for inventories matching any of the supplied titles.
                          * Logical <code>OR</code> is applied between operands.
@@ -433,7 +433,7 @@ declare namespace org {
                          * @deprecated use {#link #query(QueryOperation...) instead}
                          */
                         // @ts-ignore
-                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...args: any[]): T
+                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...args: java.lang.Object[] | any[]): T
                         /**
                          * Query this inventory for inventories containing any stacks which match
                          * the supplied stack operands ignoring its quantity. This query operates
@@ -459,7 +459,7 @@ declare namespace org {
                          * @return the query result
                          */
                         // @ts-ignore
-                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...operations: org.spongepowered.api.item.inventory.query.QueryOperation[]): T
+                        query<T extends org.spongepowered.api.item.inventory.Inventory>(...operations: org.spongepowered.api.item.inventory.query.QueryOperation<any>[]): T
                         /**
                          * Returns the {@link PluginContainer} who built this inventory.
                          * @return The container

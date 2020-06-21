@@ -31,7 +31,7 @@ declare namespace org {
                          *      being removed in future API versions
                          */
                         // @ts-ignore
-                        makeSingleKey<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: string, name: string): org.spongepowered.api.data.key.Key<V>
+                        public static makeSingleKey<E, V extends org.spongepowered.api.data.value.BaseValue<E>>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.data.key.Key<V>
                         /**
                          * Creates a new {@link Key} based on a {@link ListValue} of a type
                          * <code>E</code> element along with the provided {@link DataQuery}.
@@ -46,7 +46,7 @@ declare namespace org {
                          *      being removed in future API versions
                          */
                         // @ts-ignore
-                        makeListKey<E>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: string, name: string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>
+                        public static makeListKey<E>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>
                         /**
                          * Creates a new {@link Key} based on a {@link SetValue} of a type
                          * <code>E</code> element along with the provided {@link DataQuery}.
@@ -61,7 +61,7 @@ declare namespace org {
                          *      being removed in future API versions
                          */
                         // @ts-ignore
-                        makeSetKey<E>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: string, name: string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>
+                        public static makeSetKey<E>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.SetValue<E>>
                         /**
                          * Creates a new {@link Key} based on a {@link MapValue} of the types
                          * <code>K</code> keys and <code>V</code> values with the provided
@@ -78,7 +78,7 @@ declare namespace org {
                          *      being removed in future API versions
                          */
                         // @ts-ignore
-                        makeMapKey<K, V>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: string, name: string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MapValue<K, V>>
+                        public static makeMapKey<K, V>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.MapValue<K, V>>
                         /**
                          * Creates a new {@link Key} based on an {@link OptionalValue} of the type
                          * <code>E</code> element type with the provided {@link DataQuery} for
@@ -94,7 +94,7 @@ declare namespace org {
                          *      being removed in future API versions
                          */
                         // @ts-ignore
-                        makeOptionalKey<E>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: string, name: string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.OptionalValue<E>>
+                        public static makeOptionalKey<E>(elementToken: object, valueToken: object, query: org.spongepowered.api.data.DataQuery, id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.OptionalValue<E>>
                     }
                 }
             }

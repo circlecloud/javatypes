@@ -13,18 +13,18 @@ declare namespace org {
                              * @param <I> The immutable manipulator type
                              */
                             // @ts-ignore
-                            class AbstractSingleEnumData<E extends java.lang.Enum<E>, M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<E, M, I> {
+                            abstract class AbstractSingleEnumData<E extends java.lang.Enum<E>, M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractSingleData<E, M, I> {
                                 /**
                                  * @deprecated Use {#link #AbstractSingleEnumData(Key, Enum, Enum)} instead.
                                  */
                                 // @ts-ignore
-                                constructor(value: E extends java.lang.Enum<E>, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, defaultValue: E extends java.lang.Enum<E>)
+                                constructor(value: E, usedKey: org.spongepowered.api.data.key.Key<any>, defaultValue: E)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E extends java.lang.Enum<E>)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E extends java.lang.Enum<E>, defaultValue: E extends java.lang.Enum<E>)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<E>>, value: E, defaultValue: E)
                                 // @ts-ignore
-                                toContainer(): org.spongepowered.api.data.DataContainer
+                                public toContainer(): org.spongepowered.api.data.DataContainer
                                 // @ts-ignore
                                 fillContainer(dataContainer: org.spongepowered.api.data.DataContainer): org.spongepowered.api.data.DataContainer
                                 // @ts-ignore

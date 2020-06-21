@@ -24,7 +24,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(taskExecutor: org.springframework.core.task.TaskExecutor)
                         // @ts-ignore
-                        execute(command: java.lang.Runnable): void
+                        public execute(command: java.lang.Runnable): void
                     }
                 }
             }

@@ -27,23 +27,23 @@ declare namespace java {
                  * @deprecated 
                  */
                 // @ts-ignore
-                isUnique(): boolean
+                public static isUnique(): boolean
                 /**
                  * Compute hash code for this VMID.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compare this VMID to another, and return true if they are the
                  * same identifier.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Return string representation of this VMID.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

@@ -87,21 +87,21 @@ declare namespace javax {
                  * @see LdapContext#reconnect
                  */
                 // @ts-ignore
-                constructor(environment: java.util.Hashtable<any, ?>, connCtls: javax.naming.ldap.Control[])
+                constructor(environment: java.util.Hashtable<any, any>, connCtls: javax.naming.ldap.Control[])
                 // @ts-ignore
-                extendedOperation(request: javax.naming.ldap.ExtendedRequest): javax.naming.ldap.ExtendedResponse
+                public extendedOperation(request: javax.naming.ldap.ExtendedRequest): javax.naming.ldap.ExtendedResponse
                 // @ts-ignore
-                newInstance(reqCtls: javax.naming.ldap.Control[]): javax.naming.ldap.LdapContext
+                public newInstance(reqCtls: javax.naming.ldap.Control[]): javax.naming.ldap.LdapContext
                 // @ts-ignore
-                reconnect(connCtls: javax.naming.ldap.Control[]): void
+                public reconnect(connCtls: javax.naming.ldap.Control[]): void
                 // @ts-ignore
-                getConnectControls(): javax.naming.ldap.Control[]
+                public getConnectControls(): javax.naming.ldap.Control[]
                 // @ts-ignore
-                setRequestControls(requestControls: javax.naming.ldap.Control[]): void
+                public setRequestControls(requestControls: javax.naming.ldap.Control[]): void
                 // @ts-ignore
-                getRequestControls(): javax.naming.ldap.Control[]
+                public getRequestControls(): javax.naming.ldap.Control[]
                 // @ts-ignore
-                getResponseControls(): javax.naming.ldap.Control[]
+                public getResponseControls(): javax.naming.ldap.Control[]
             }
         }
     }

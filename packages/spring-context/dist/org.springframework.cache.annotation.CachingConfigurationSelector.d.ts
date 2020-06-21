@@ -23,7 +23,7 @@ declare namespace org {
                      * respectively. Potentially includes corresponding JCache configuration as well.
                      */
                     // @ts-ignore
-                    selectImports(adviceMode: org.springframework.context.annotation.AdviceMode): java.lang.String[]
+                    public selectImports(adviceMode: org.springframework.context.annotation.AdviceMode): string[]
                 }
             }
         }

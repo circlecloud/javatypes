@@ -15,13 +15,13 @@ declare namespace javax {
                      * @return the system ID, defaults to ""
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    getSystemId(): string
                     /**
                      * Returns the encoding style of the XML data
                      * @return the character encoding, defaults to "UTF-8"
                      */
                     // @ts-ignore
-                    getCharacterEncodingScheme(): java.lang.String
+                    getCharacterEncodingScheme(): string
                     /**
                      * Returns true if CharacterEncodingScheme was set in
                      * the encoding declaration of the document
@@ -45,7 +45,7 @@ declare namespace javax {
                      * @return the version of XML, defaults to "1.0"
                      */
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    getVersion(): string
                 }
             }
         }

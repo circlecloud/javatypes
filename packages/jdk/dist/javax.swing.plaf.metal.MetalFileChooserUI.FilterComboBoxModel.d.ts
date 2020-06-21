@@ -7,21 +7,21 @@ declare namespace javax {
                      * Data model for a type-face selection combo-box.
                      */
                     // @ts-ignore
-                    class FilterComboBoxModel extends javax.swing.AbstractListModel<java.lang.Object> implements javax.swing.ComboBoxModel<java.lang.Object>, java.beans.PropertyChangeListener {
+                    class FilterComboBoxModel extends javax.swing.AbstractListModel<java.lang.Object | any> implements javax.swing.ComboBoxModel<java.lang.Object | any>, java.beans.PropertyChangeListener {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
                         filters: javax.swing.filechooser.FileFilter[]
                         // @ts-ignore
-                        propertyChange(e: java.beans.PropertyChangeEvent): void
+                        public propertyChange(e: java.beans.PropertyChangeEvent): void
                         // @ts-ignore
-                        setSelectedItem(filter: any): void
+                        public setSelectedItem(filter: java.lang.Object | any): void
                         // @ts-ignore
-                        getSelectedItem(): java.lang.Object
+                        public getSelectedItem(): any
                         // @ts-ignore
-                        getSize(): int
+                        public getSize(): number /*int*/
                         // @ts-ignore
-                        getElementAt(index: number /*int*/): java.lang.Object
+                        public getElementAt(index: number /*int*/): any
                     }
                 }
             }

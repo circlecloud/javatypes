@@ -9,7 +9,7 @@ declare namespace org {
                          * equipment inventory.
                          */
                         // @ts-ignore
-                        class EquipmentProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, org.spongepowered.api.item.inventory.equipment.EquipmentType> {
+                        class EquipmentProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, org.spongepowered.api.item.inventory.equipment.EquipmentType> {
                             /**
                              * Constructs a new {@link EquipmentProperty}.
                              * @param value The equipment type
@@ -30,9 +30,9 @@ declare namespace org {
                              *       properties
                              */
                             // @ts-ignore
-                            constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                            constructor(value: java.lang.Object | any, operator: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

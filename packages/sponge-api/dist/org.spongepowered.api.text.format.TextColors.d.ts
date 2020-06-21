@@ -14,45 +14,45 @@ declare namespace org {
                          * it from a parent {@link Text}.
                          */
                         // @ts-ignore
-                        readonly NONE: org.spongepowered.api.text.format.TextColor
+                        public static readonly NONE: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly AQUA: org.spongepowered.api.text.format.TextColor
+                        public static readonly AQUA: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly BLACK: org.spongepowered.api.text.format.TextColor
+                        public static readonly BLACK: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly BLUE: org.spongepowered.api.text.format.TextColor
+                        public static readonly BLUE: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly DARK_AQUA: org.spongepowered.api.text.format.TextColor
+                        public static readonly DARK_AQUA: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly DARK_BLUE: org.spongepowered.api.text.format.TextColor
+                        public static readonly DARK_BLUE: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly DARK_GRAY: org.spongepowered.api.text.format.TextColor
+                        public static readonly DARK_GRAY: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly DARK_GREEN: org.spongepowered.api.text.format.TextColor
+                        public static readonly DARK_GREEN: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly DARK_PURPLE: org.spongepowered.api.text.format.TextColor
+                        public static readonly DARK_PURPLE: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly DARK_RED: org.spongepowered.api.text.format.TextColor
+                        public static readonly DARK_RED: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly GOLD: org.spongepowered.api.text.format.TextColor
+                        public static readonly GOLD: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly GRAY: org.spongepowered.api.text.format.TextColor
+                        public static readonly GRAY: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly GREEN: org.spongepowered.api.text.format.TextColor
+                        public static readonly GREEN: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly LIGHT_PURPLE: org.spongepowered.api.text.format.TextColor
+                        public static readonly LIGHT_PURPLE: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly RED: org.spongepowered.api.text.format.TextColor
+                        public static readonly RED: org.spongepowered.api.text.format.TextColor
                         /**
                          * Resets the current color to the default one on the client. In most cases
                          * this should be the same as {@link #WHITE}.
                          */
                         // @ts-ignore
-                        readonly RESET: org.spongepowered.api.text.format.TextColor
+                        public static readonly RESET: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly WHITE: org.spongepowered.api.text.format.TextColor
+                        public static readonly WHITE: org.spongepowered.api.text.format.TextColor
                         // @ts-ignore
-                        readonly YELLOW: org.spongepowered.api.text.format.TextColor
+                        public static readonly YELLOW: org.spongepowered.api.text.format.TextColor
                     }
                 }
             }

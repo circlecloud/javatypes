@@ -57,9 +57,9 @@ declare namespace javax {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            start(t: javax.swing.text.html.HTML.Tag, attr: javax.swing.text.MutableAttributeSet): void
+                            public start(t: javax.swing.text.html.HTML.Tag, attr: javax.swing.text.MutableAttributeSet): void
                             // @ts-ignore
-                            end(t: javax.swing.text.html.HTML.Tag): void
+                            public end(t: javax.swing.text.html.HTML.Tag): void
                         }
                     }
                 }

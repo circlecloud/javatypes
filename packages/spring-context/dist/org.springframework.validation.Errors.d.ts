@@ -28,12 +28,12 @@ declare namespace org {
                  * in the beans package.
                  */
                 // @ts-ignore
-                
+                readonly NESTED_PATH_SEPARATOR: java.lang.String | string
                 /**
                  * Return the name of the bound root object.
                  */
                 // @ts-ignore
-                getObjectName(): java.lang.String
+                getObjectName(): string
                 /**
                  * Allow context to be changed so that standard validators can validate
                  * subtrees. Reject calls prepend the given path to the field names.
@@ -44,14 +44,14 @@ declare namespace org {
                  *  Can end with a dot: both "address" and "address." are valid.
                  */
                 // @ts-ignore
-                setNestedPath(nestedPath: string): void
+                setNestedPath(nestedPath: java.lang.String | string): void
                 /**
                  * Return the current nested path of this {@link Errors} object.
                  * <p>Returns a nested path with a dot, i.e. "address.", for easy
                  * building of concatenated paths. Default is an empty String.
                  */
                 // @ts-ignore
-                getNestedPath(): java.lang.String
+                getNestedPath(): string
                 /**
                  * Push the given sub path onto the nested path stack.
                  * <p>A {@link #popNestedPath()} call will reset the original
@@ -65,7 +65,7 @@ declare namespace org {
                  * @see #popNestedPath
                  */
                 // @ts-ignore
-                pushNestedPath(subPath: string): void
+                pushNestedPath(subPath: java.lang.String | string): void
                 /**
                  * Pop the former nested path from the nested path stack.
                  * @throws IllegalStateException if there is no former nested path on the stack
@@ -79,7 +79,7 @@ declare namespace org {
                  * @param errorCode error code, interpretable as a message key
                  */
                 // @ts-ignore
-                reject(errorCode: string): void
+                reject(errorCode: java.lang.String | string): void
                 /**
                  * Register a global error for the entire target object,
                  * using the given error description.
@@ -87,7 +87,7 @@ declare namespace org {
                  * @param defaultMessage fallback default message
                  */
                 // @ts-ignore
-                reject(errorCode: string, defaultMessage: string): void
+                reject(errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 /**
                  * Register a global error for the entire target object,
                  * using the given error description.
@@ -97,7 +97,7 @@ declare namespace org {
                  * @param defaultMessage fallback default message
                  */
                 // @ts-ignore
-                reject(errorCode: string, errorArgs: any[], defaultMessage: string): void
+                reject(errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                 /**
                  * Register a field error for the specified field of the current object
                  * (respecting the current nested path, if any), using the given error
@@ -111,7 +111,7 @@ declare namespace org {
                  * @see #getNestedPath()
                  */
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string): void
+                rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string): void
                 /**
                  * Register a field error for the specified field of the current object
                  * (respecting the current nested path, if any), using the given error
@@ -126,7 +126,7 @@ declare namespace org {
                  * @see #getNestedPath()
                  */
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string, defaultMessage: string): void
+                rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 /**
                  * Register a field error for the specified field of the current object
                  * (respecting the current nested path, if any), using the given error
@@ -143,7 +143,7 @@ declare namespace org {
                  * @see #getNestedPath()
                  */
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string, errorArgs: any[], defaultMessage: string): void
+                rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                 /**
                  * Add all errors from the given {@code Errors} instance to this
                  * {@code Errors} instance.
@@ -166,13 +166,13 @@ declare namespace org {
                  * Return the total number of errors.
                  */
                 // @ts-ignore
-                getErrorCount(): int
+                getErrorCount(): number /*int*/
                 /**
                  * Get all errors, both global and field ones.
                  * @return a list of {#link ObjectError} instances
                  */
                 // @ts-ignore
-                getAllErrors(): java.util.List<org.springframework.validation.ObjectError>
+                getAllErrors(): Array<org.springframework.validation.ObjectError>
                 /**
                  * Are there any global errors?
                  * @return {#code true} if there are any global errors
@@ -186,13 +186,13 @@ declare namespace org {
                  * @see #getFieldErrorCount()
                  */
                 // @ts-ignore
-                getGlobalErrorCount(): int
+                getGlobalErrorCount(): number /*int*/
                 /**
                  * Get all global errors.
                  * @return a list of {#link ObjectError} instances
                  */
                 // @ts-ignore
-                getGlobalErrors(): java.util.List<org.springframework.validation.ObjectError>
+                getGlobalErrors(): Array<org.springframework.validation.ObjectError>
                 /**
                  * Get the <i>first</i> global error, if any.
                  * @return the global error, or {#code null}
@@ -212,13 +212,13 @@ declare namespace org {
                  * @see #getGlobalErrorCount()
                  */
                 // @ts-ignore
-                getFieldErrorCount(): int
+                getFieldErrorCount(): number /*int*/
                 /**
                  * Get all errors associated with a field.
                  * @return a List of {#link FieldError} instances
                  */
                 // @ts-ignore
-                getFieldErrors(): java.util.List<org.springframework.validation.FieldError>
+                getFieldErrors(): Array<org.springframework.validation.FieldError>
                 /**
                  * Get the <i>first</i> error associated with a field, if any.
                  * @return the field-specific error, or {#code null}
@@ -231,14 +231,14 @@ declare namespace org {
                  * @return {#code true} if there were any errors associated with the given field
                  */
                 // @ts-ignore
-                hasFieldErrors(field: string): boolean
+                hasFieldErrors(field: java.lang.String | string): boolean
                 /**
                  * Return the number of errors associated with the given field.
                  * @param field the field name
                  * @return the number of errors associated with the given field
                  */
                 // @ts-ignore
-                getFieldErrorCount(field: string): int
+                getFieldErrorCount(field: java.lang.String | string): number /*int*/
                 /**
                  * Get all errors associated with the given field.
                  * <p>Implementations should support not only full field names like
@@ -247,14 +247,14 @@ declare namespace org {
                  * @return a List of {#link FieldError} instances
                  */
                 // @ts-ignore
-                getFieldErrors(field: string): java.util.List<org.springframework.validation.FieldError>
+                getFieldErrors(field: java.lang.String | string): Array<org.springframework.validation.FieldError>
                 /**
                  * Get the first error associated with the given field, if any.
                  * @param field the field name
                  * @return the field-specific error, or {#code null}
                  */
                 // @ts-ignore
-                getFieldError(field: string): org.springframework.validation.FieldError
+                getFieldError(field: java.lang.String | string): org.springframework.validation.FieldError
                 /**
                  * Return the current value of the given field, either the current
                  * bean property value or a rejected update from the last binding.
@@ -264,7 +264,7 @@ declare namespace org {
                  * @return the current value of the given field
                  */
                 // @ts-ignore
-                getFieldValue(field: string): java.lang.Object
+                getFieldValue(field: java.lang.String | string): any
                 /**
                  * Return the type of a given field.
                  * <p>Implementations should be able to determine the type even
@@ -274,7 +274,7 @@ declare namespace org {
                  * @return the type of the field, or {#code null} if not determinable
                  */
                 // @ts-ignore
-                getFieldType(field: string): java.lang.Class<?>
+                getFieldType(field: java.lang.String | string): java.lang.Class<any>
             }
         }
     }

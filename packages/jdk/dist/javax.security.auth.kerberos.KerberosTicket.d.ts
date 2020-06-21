@@ -75,19 +75,19 @@ declare namespace javax {
                      * @return the client principal.
                      */
                     // @ts-ignore
-                    getClient(): javax.security.auth.kerberos.KerberosPrincipal
+                    public getClient(): javax.security.auth.kerberos.KerberosPrincipal
                     /**
                      * Returns the service principal associated with this ticket.
                      * @return the service principal.
                      */
                     // @ts-ignore
-                    getServer(): javax.security.auth.kerberos.KerberosPrincipal
+                    public getServer(): javax.security.auth.kerberos.KerberosPrincipal
                     /**
                      * Returns the session key associated with this ticket.
                      * @return the session key.
                      */
                     // @ts-ignore
-                    getSessionKey(): javax.crypto.SecretKey
+                    public getSessionKey(): javax.crypto.SecretKey
                     /**
                      * Returns the key type of the session key associated with this
                      * ticket as defined by the Kerberos Protocol Specification.
@@ -96,13 +96,13 @@ declare namespace javax {
                      * @see #getSessionKey()
                      */
                     // @ts-ignore
-                    getSessionKeyType(): int
+                    public getSessionKeyType(): number /*int*/
                     /**
                      * Determines if this ticket is forwardable.
                      * @return true if this ticket is forwardable, false if not.
                      */
                     // @ts-ignore
-                    isForwardable(): boolean
+                    public isForwardable(): boolean
                     /**
                      * Determines if this ticket had been forwarded or was issued based on
                      * authentication involving a forwarded ticket-granting ticket.
@@ -111,25 +111,25 @@ declare namespace javax {
                      *  false otherwise.
                      */
                     // @ts-ignore
-                    isForwarded(): boolean
+                    public isForwarded(): boolean
                     /**
                      * Determines if this ticket is proxiable.
                      * @return true if this ticket is proxiable, false if not.
                      */
                     // @ts-ignore
-                    isProxiable(): boolean
+                    public isProxiable(): boolean
                     /**
                      * Determines is this ticket is a proxy-ticket.
                      * @return true if this ticket is a proxy-ticket, false if not.
                      */
                     // @ts-ignore
-                    isProxy(): boolean
+                    public isProxy(): boolean
                     /**
                      * Determines is this ticket is post-dated.
                      * @return true if this ticket is post-dated, false if not.
                      */
                     // @ts-ignore
-                    isPostdated(): boolean
+                    public isPostdated(): boolean
                     /**
                      * Determines is this ticket is renewable. If so, the {@link #refresh()
                      * refresh} method can be called, assuming the validity period for
@@ -137,7 +137,7 @@ declare namespace javax {
                      * @return true if this ticket is renewable, false if not.
                      */
                     // @ts-ignore
-                    isRenewable(): boolean
+                    public isRenewable(): boolean
                     /**
                      * Determines if this ticket was issued using the Kerberos AS-Exchange
                      * protocol, and not issued based on some ticket-granting ticket.
@@ -145,7 +145,7 @@ declare namespace javax {
                      *  protocol, false if not.
                      */
                     // @ts-ignore
-                    isInitial(): boolean
+                    public isInitial(): boolean
                     /**
                      * Returns the flags associated with this ticket. Each element in the
                      * returned array indicates the value for the corresponding bit in the
@@ -153,52 +153,52 @@ declare namespace javax {
                      * @return the flags associated with this ticket.
                      */
                     // @ts-ignore
-                    getFlags(): boolean[]
+                    public getFlags(): boolean[]
                     /**
                      * Returns the time that the client was authenticated.
                      * @return the time that the client was authenticated
                      *          or null if not set.
                      */
                     // @ts-ignore
-                    getAuthTime(): java.util.Date
+                    public getAuthTime(): java.util.Date
                     /**
                      * Returns the start time for this ticket's validity period.
                      * @return the start time for this ticket's validity period
                      *          or null if not set.
                      */
                     // @ts-ignore
-                    getStartTime(): java.util.Date
+                    public getStartTime(): java.util.Date
                     /**
                      * Returns the expiration time for this ticket's validity period.
                      * @return the expiration time for this ticket's validity period.
                      */
                     // @ts-ignore
-                    getEndTime(): java.util.Date
+                    public getEndTime(): java.util.Date
                     /**
                      * Returns the latest expiration time for this ticket, including all
                      * renewals. This will return a null value for non-renewable tickets.
                      * @return the latest expiration time for this ticket.
                      */
                     // @ts-ignore
-                    getRenewTill(): java.util.Date
+                    public getRenewTill(): java.util.Date
                     /**
                      * Returns a list of addresses from where the ticket can be used.
                      * @return ths list of addresses or null, if the field was not
                      *  provided.
                      */
                     // @ts-ignore
-                    getClientAddresses(): java.net.InetAddress[]
+                    public getClientAddresses(): java.net.InetAddress[]
                     /**
                      * Returns an ASN.1 encoding of the entire ticket.
                      * @return an ASN.1 encoding of the entire ticket.
                      */
                     // @ts-ignore
-                    getEncoded(): byte[]
+                    public getEncoded(): number /*byte*/[]
                     /**
                      * Determines if this ticket is still current.
                      */
                     // @ts-ignore
-                    isCurrent(): boolean
+                    public isCurrent(): boolean
                     /**
                      * Extends the validity period of this ticket. The ticket will contain
                      * a new session key if the refresh operation succeeds. The refresh
@@ -216,27 +216,27 @@ declare namespace javax {
                      * @see #getRenewTill()
                      */
                     // @ts-ignore
-                    refresh(): void
+                    public refresh(): void
                     /**
                      * Destroys the ticket and destroys any sensitive information stored in
                      * it.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Determines if this ticket has been destroyed.
                      */
                     // @ts-ignore
-                    isDestroyed(): boolean
+                    public isDestroyed(): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Returns a hashcode for this KerberosTicket.
                      * @return a hashCode() for the {#code KerberosTicket}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Compares the specified Object with this KerberosTicket for equality.
                      * Returns true if the given object is also a
@@ -249,7 +249,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                 }
             }
         }

@@ -33,7 +33,7 @@ declare namespace javax {
                  * @see #loop
                  */
                 // @ts-ignore
-                
+                readonly LOOP_CONTINUOUSLY: number /*int*/
                 /**
                  * Opens the clip, meaning that it should acquire any required
                  * system resources and become operational.  The clip is opened
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getFrameLength(): int
+                getFrameLength(): number /*int*/
                 /**
                  * Obtains the media duration in microseconds
                  * @return the media duration, expressed in microseconds,
@@ -115,7 +115,7 @@ declare namespace javax {
                  * @see AudioSystem#NOT_SPECIFIED
                  */
                 // @ts-ignore
-                getMicrosecondLength(): long
+                getMicrosecondLength(): number /*long*/
                 /**
                  * Sets the media position in sample frames.  The position is zero-based;
                  * the first frame is frame number zero.  When the clip begins playing the

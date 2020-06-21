@@ -16,7 +16,7 @@ declare namespace org {
                      * @see org.springframework.web.bind.annotation.RequestMapping
                      */
                     // @ts-ignore
-                    class CookieValue implements java.lang.annotation.Annotation {
+                    abstract class CookieValue implements java.lang.annotation.Annotation {
                     }
                 }
             }

@@ -117,7 +117,7 @@ declare namespace java {
              * @param action the action string.
              */
             // @ts-ignore
-            constructor(host: string, action: string)
+            constructor(host: java.lang.String | string, action: java.lang.String | string)
             /**
              * Checks if this socket permission object "implies" the
              * specified permission.
@@ -150,7 +150,7 @@ declare namespace java {
              *  false if not.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two SocketPermission objects for equality.
              * <P>
@@ -161,13 +161,13 @@ declare namespace java {
              *   in the comparison if <i>obj</i> only contains the action, 'resolve'.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this object.
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the canonical string representation of the actions.
              * Always returns present actions in the following order:
@@ -175,7 +175,7 @@ declare namespace java {
              * @return the canonical string representation of the actions.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Returns a new PermissionCollection object for storing SocketPermission
              * objects.
@@ -187,7 +187,7 @@ declare namespace java {
              * @return a new PermissionCollection object suitable for storing SocketPermissions.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

@@ -69,7 +69,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(label: string)
+            constructor(label: java.lang.String | string)
             /**
              * Creates the peer of the button.  The button's peer allows the
              * application to change the look of the button without changing
@@ -78,7 +78,7 @@ declare namespace java {
              * @see java.awt.Component#getToolkit()
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the label of this button.
              * @return the button's label, or <code>null</code>
@@ -86,7 +86,7 @@ declare namespace java {
              * @see java.awt.Button#setLabel
              */
             // @ts-ignore
-            getLabel(): java.lang.String
+            public getLabel(): string
             /**
              * Sets the button's label to be the specified string.
              * @param label   the new label, or <code>null</code>
@@ -94,7 +94,7 @@ declare namespace java {
              * @see java.awt.Button#getLabel
              */
             // @ts-ignore
-            setLabel(label: string): void
+            public setLabel(label: java.lang.String | string): void
             /**
              * Sets the command name for the action event fired
              * by this button. By default this action command is
@@ -107,14 +107,14 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setActionCommand(command: string): void
+            public setActionCommand(command: java.lang.String | string): void
             /**
              * Returns the command name of the action event fired by this button.
              * If the command name is <code>null</code> (default) then this method
              * returns the label of the button.
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * Adds the specified action listener to receive action events from
              * this button. Action events occur when a user presses or releases
@@ -129,7 +129,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes the specified action listener so that it no longer
              * receives action events from this button. Action events occur
@@ -144,7 +144,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the action listeners
              * registered on this button.
@@ -157,7 +157,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -187,7 +187,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this button. If an event is
              * an instance of <code>ActionEvent</code>, this method invokes
@@ -236,7 +236,7 @@ declare namespace java {
              * @return the parameter string of this button
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with
              * this <code>Button</code>. For buttons, the
@@ -251,7 +251,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

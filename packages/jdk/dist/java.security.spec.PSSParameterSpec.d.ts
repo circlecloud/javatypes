@@ -64,7 +64,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                constructor(mdName: string, mgfName: string, mgfSpec: java.security.spec.AlgorithmParameterSpec, saltLen: number /*int*/, trailerField: number /*int*/)
+                constructor(mdName: java.lang.String | string, mgfName: java.lang.String | string, mgfSpec: java.security.spec.AlgorithmParameterSpec, saltLen: number /*int*/, trailerField: number /*int*/)
                 /**
                  * Creates a new {@code PSSParameterSpec}
                  * using the specified salt length and other default values as
@@ -81,41 +81,41 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly DEFAULT: java.security.spec.PSSParameterSpec
+                public static readonly DEFAULT: java.security.spec.PSSParameterSpec
                 /**
                  * Returns the message digest algorithm name.
                  * @return the message digest algorithm name.
                  * @since 1.5
                  */
                 // @ts-ignore
-                getDigestAlgorithm(): java.lang.String
+                public getDigestAlgorithm(): string
                 /**
                  * Returns the mask generation function algorithm name.
                  * @return the mask generation function algorithm name.
                  * @since 1.5
                  */
                 // @ts-ignore
-                getMGFAlgorithm(): java.lang.String
+                public getMGFAlgorithm(): string
                 /**
                  * Returns the parameters for the mask generation function.
                  * @return the parameters for the mask generation function.
                  * @since 1.5
                  */
                 // @ts-ignore
-                getMGFParameters(): java.security.spec.AlgorithmParameterSpec
+                public getMGFParameters(): java.security.spec.AlgorithmParameterSpec
                 /**
                  * Returns the salt length in bits.
                  * @return the salt length.
                  */
                 // @ts-ignore
-                getSaltLength(): int
+                public getSaltLength(): number /*int*/
                 /**
                  * Returns the value for the trailer field, i.e. bc in PKCS#1 v2.1.
                  * @return the value for the trailer field, i.e. bc in PKCS#1 v2.1.
                  * @since 1.5
                  */
                 // @ts-ignore
-                getTrailerField(): int
+                public getTrailerField(): number /*int*/
             }
         }
     }

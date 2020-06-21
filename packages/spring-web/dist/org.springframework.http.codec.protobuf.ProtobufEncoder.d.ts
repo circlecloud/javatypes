@@ -23,15 +23,15 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        canEncode(elementType: ResolvableType, mimeType: MimeType): boolean
+                        public canEncode(elementType: ResolvableType, mimeType: MimeType): boolean
                         // @ts-ignore
-                        encode(inputStream: object, bufferFactory: DataBufferFactory, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                        public encode(inputStream: object, bufferFactory: DataBufferFactory, elementType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                         // @ts-ignore
-                        encodeValue(message: Message, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): DataBuffer
+                        public encodeValue(message: Message, bufferFactory: DataBufferFactory, valueType: ResolvableType, mimeType: MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): DataBuffer
                         // @ts-ignore
-                        getStreamingMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                        public getStreamingMediaTypes(): Array<org.springframework.http.MediaType>
                         // @ts-ignore
-                        getEncodableMimeTypes(): java.util.List<MimeType>
+                        public getEncodableMimeTypes(): Array<MimeType>
                     }
                 }
             }

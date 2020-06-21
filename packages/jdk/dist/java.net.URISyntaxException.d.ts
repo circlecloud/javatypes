@@ -22,7 +22,7 @@ declare namespace java {
              *           If the error index is less than {#code -1}
              */
             // @ts-ignore
-            constructor(input: string, reason: string, index: number /*int*/)
+            constructor(input: java.lang.String | string, reason: java.lang.String | string, index: number /*int*/)
             /**
              * Constructs an instance from the given input string and reason.  The
              * resulting object will have an error index of {@code -1}.
@@ -32,26 +32,26 @@ declare namespace java {
              *           If either the input or reason strings are {#code null}
              */
             // @ts-ignore
-            constructor(input: string, reason: string)
+            constructor(input: java.lang.String | string, reason: java.lang.String | string)
             /**
              * Returns the input string.
              * @return The input string
              */
             // @ts-ignore
-            getInput(): java.lang.String
+            getInput(): string
             /**
              * Returns a string explaining why the input string could not be parsed.
              * @return The reason string
              */
             // @ts-ignore
-            getReason(): java.lang.String
+            getReason(): string
             /**
              * Returns an index into the input string of the position at which the
              * parse error occurred, or {@code -1} if this position is not known.
              * @return The error index
              */
             // @ts-ignore
-            getIndex(): int
+            getIndex(): number /*int*/
             /**
              * Returns a string describing the parse error.  The resulting string
              * consists of the reason string followed by a colon character
@@ -62,7 +62,7 @@ declare namespace java {
              * @return A string describing the parse error
              */
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

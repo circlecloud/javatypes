@@ -8,13 +8,13 @@ declare namespace org {
                 // @ts-ignore
                 class PropertyTokenHolder extends java.lang.Object {
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
-                    actualName: string
+                    public actualName: java.lang.String | string
                     // @ts-ignore
-                    canonicalName: string
+                    public canonicalName: java.lang.String | string
                     // @ts-ignore
-                    keys: string[]
+                    public keys: java.lang.String[] | string[]
                 }
             }
         }

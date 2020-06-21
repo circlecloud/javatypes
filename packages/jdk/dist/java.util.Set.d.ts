@@ -58,7 +58,7 @@ declare namespace java {
              * @return the number of elements in this set (its cardinality)
              */
             // @ts-ignore
-            size(): int
+            size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this set contains no elements.
              * @return <tt>true</tt> if this set contains no elements
@@ -80,7 +80,7 @@ declare namespace java {
              *  (<a href="Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            contains(o: any): boolean
+            contains(o: java.lang.Object | any): boolean
             /**
              * Returns an iterator over the elements in this set.  The elements are
              * returned in no particular order (unless this set is an instance of some
@@ -103,7 +103,7 @@ declare namespace java {
              * @return an array containing all the elements in this set
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            toArray(): any[]
             /**
              * Returns an array containing all of the elements in this set; the
              * runtime type of the returned array is that of the specified array.
@@ -192,7 +192,7 @@ declare namespace java {
              *          is not supported by this set
              */
             // @ts-ignore
-            remove(o: any): boolean
+            remove(o: java.lang.Object | any): boolean
             /**
              * Returns <tt>true</tt> if this set contains all of the elements of the
              * specified collection.  If the specified collection is also a set, this
@@ -212,7 +212,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            containsAll(c: Array<any>): boolean
+            containsAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Adds all of the elements in the specified collection to this set if
              * they're not already present (optional operation).  If the specified
@@ -234,7 +234,7 @@ declare namespace java {
              * @see #add(Object)
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Retains only the elements in this set that are contained in the
              * specified collection (optional operation).  In other words, removes
@@ -256,7 +256,7 @@ declare namespace java {
              * @see #remove(Object)
              */
             // @ts-ignore
-            retainAll(c: Array<any>): boolean
+            retainAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes from this set all of its elements that are contained in the
              * specified collection (optional operation).  If the specified
@@ -278,7 +278,7 @@ declare namespace java {
              * @see #contains(Object)
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            removeAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes all of the elements from this set (optional operation).
              * The set will be empty after this call returns.
@@ -299,7 +299,7 @@ declare namespace java {
              * @return <tt>true</tt> if the specified object is equal to this set
              */
             // @ts-ignore
-            equals(o: any): boolean
+            equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this set.  The hash code of a set is
              * defined to be the sum of the hash codes of the elements in the set,
@@ -313,7 +313,7 @@ declare namespace java {
              * @see Set#equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
             /**
              * Creates a {@code Spliterator} over the elements in this set.
              * <p>The {@code Spliterator} reports {@link Spliterator#DISTINCT}.

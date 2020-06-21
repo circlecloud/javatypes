@@ -24,34 +24,34 @@ declare namespace org {
                          * Well-known name for the target WebHandler in the bean factory.
                          */
                         // @ts-ignore
-                        readonly WEB_HANDLER_BEAN_NAME: string
+                        public static readonly WEB_HANDLER_BEAN_NAME: java.lang.String | string
                         /**
                          * Well-known name for the WebSessionManager in the bean factory.
                          */
                         // @ts-ignore
-                        readonly WEB_SESSION_MANAGER_BEAN_NAME: string
+                        public static readonly WEB_SESSION_MANAGER_BEAN_NAME: java.lang.String | string
                         /**
                          * Well-known name for the ServerCodecConfigurer in the bean factory.
                          */
                         // @ts-ignore
-                        readonly SERVER_CODEC_CONFIGURER_BEAN_NAME: string
+                        public static readonly SERVER_CODEC_CONFIGURER_BEAN_NAME: java.lang.String | string
                         /**
                          * Well-known name for the LocaleContextResolver in the bean factory.
                          */
                         // @ts-ignore
-                        readonly LOCALE_CONTEXT_RESOLVER_BEAN_NAME: string
+                        public static readonly LOCALE_CONTEXT_RESOLVER_BEAN_NAME: java.lang.String | string
                         /**
                          * Well-known name for the ForwardedHeaderTransformer in the bean factory.
                          */
                         // @ts-ignore
-                        readonly FORWARDED_HEADER_TRANSFORMER_BEAN_NAME: string
+                        public static readonly FORWARDED_HEADER_TRANSFORMER_BEAN_NAME: java.lang.String | string
                         /**
                          * Static factory method to create a new builder instance.
                          * @param webHandler the target handler for the request
                          * @return the prepared builder
                          */
                         // @ts-ignore
-                        webHandler(webHandler: org.springframework.web.server.WebHandler): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public static webHandler(webHandler: org.springframework.web.server.WebHandler): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Static factory method to create a new builder instance by detecting beans
                          * in an {@link ApplicationContext}. The following are detected:
@@ -73,31 +73,31 @@ declare namespace org {
                          * @return the prepared builder
                          */
                         // @ts-ignore
-                        applicationContext(context: ApplicationContext): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public static applicationContext(context: ApplicationContext): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Add the given filter(s).
                          * @param filters the filter(s) to add that's
                          */
                         // @ts-ignore
-                        filter(...filters: org.springframework.web.server.WebFilter[]): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public filter(...filters: org.springframework.web.server.WebFilter[]): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Manipulate the "live" list of currently configured filters.
                          * @param consumer the consumer to use
                          */
                         // @ts-ignore
-                        filters(consumer: java.util.function.Consumer<java.util.List<org.springframework.web.server.WebFilter>> | java.util.function$.Consumer<java.util.List<org.springframework.web.server.WebFilter>>): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public filters(consumer: java.util.function$.Consumer<java.util.List<org.springframework.web.server.WebFilter> | Array<org.springframework.web.server.WebFilter>>): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Add the given exception handler(s).
                          * @param handlers the exception handler(s)
                          */
                         // @ts-ignore
-                        exceptionHandler(...handlers: org.springframework.web.server.WebExceptionHandler[]): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public exceptionHandler(...handlers: org.springframework.web.server.WebExceptionHandler[]): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Manipulate the "live" list of currently configured exception handlers.
                          * @param consumer the consumer to use
                          */
                         // @ts-ignore
-                        exceptionHandlers(consumer: java.util.function.Consumer<java.util.List<org.springframework.web.server.WebExceptionHandler>> | java.util.function$.Consumer<java.util.List<org.springframework.web.server.WebExceptionHandler>>): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public exceptionHandlers(consumer: java.util.function$.Consumer<java.util.List<org.springframework.web.server.WebExceptionHandler> | Array<org.springframework.web.server.WebExceptionHandler>>): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Configure the {@link WebSessionManager} to set on the
                          * {@link ServerWebExchange WebServerExchange}.
@@ -106,41 +106,41 @@ declare namespace org {
                          * @see HttpWebHandlerAdapter#setSessionManager(WebSessionManager)
                          */
                         // @ts-ignore
-                        sessionManager(manager: org.springframework.web.server.session.WebSessionManager): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public sessionManager(manager: org.springframework.web.server.session.WebSessionManager): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Whether a {@code WebSessionManager} is configured or not, either detected from an
                          * {@code ApplicationContext} or explicitly configured via {@link #sessionManager}.
                          * @since 5.0.9
                          */
                         // @ts-ignore
-                        hasSessionManager(): boolean
+                        public hasSessionManager(): boolean
                         /**
                          * Configure the {@link ServerCodecConfigurer} to set on the {@code WebServerExchange}.
                          * @param codecConfigurer the codec configurer
                          */
                         // @ts-ignore
-                        codecConfigurer(codecConfigurer: org.springframework.http.codec.ServerCodecConfigurer): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public codecConfigurer(codecConfigurer: org.springframework.http.codec.ServerCodecConfigurer): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Whether a {@code ServerCodecConfigurer} is configured or not, either detected from an
                          * {@code ApplicationContext} or explicitly configured via {@link #codecConfigurer}.
                          * @since 5.0.9
                          */
                         // @ts-ignore
-                        hasCodecConfigurer(): boolean
+                        public hasCodecConfigurer(): boolean
                         /**
                          * Configure the {@link LocaleContextResolver} to set on the
                          * {@link ServerWebExchange WebServerExchange}.
                          * @param localeContextResolver the locale context resolver
                          */
                         // @ts-ignore
-                        localeContextResolver(localeContextResolver: org.springframework.web.server.i18n.LocaleContextResolver): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public localeContextResolver(localeContextResolver: org.springframework.web.server.i18n.LocaleContextResolver): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Whether a {@code LocaleContextResolver} is configured or not, either detected from an
                          * {@code ApplicationContext} or explicitly configured via {@link #localeContextResolver}.
                          * @since 5.0.9
                          */
                         // @ts-ignore
-                        hasLocaleContextResolver(): boolean
+                        public hasLocaleContextResolver(): boolean
                         /**
                          * Configure the {@link ForwardedHeaderTransformer} for extracting and/or
                          * removing forwarded headers.
@@ -148,7 +148,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        forwardedHeaderTransformer(transformer: org.springframework.web.server.adapter.ForwardedHeaderTransformer): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public forwardedHeaderTransformer(transformer: org.springframework.web.server.adapter.ForwardedHeaderTransformer): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                         /**
                          * Whether a {@code ForwardedHeaderTransformer} is configured or not, either
                          * detected from an {@code ApplicationContext} or explicitly configured via
@@ -156,18 +156,18 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        hasForwardedHeaderTransformer(): boolean
+                        public hasForwardedHeaderTransformer(): boolean
                         /**
                          * Build the {@link HttpHandler}.
                          */
                         // @ts-ignore
-                        build(): org.springframework.http.server.reactive.HttpHandler
+                        public build(): org.springframework.http.server.reactive.HttpHandler
                         /**
                          * Clone this {@link WebHttpHandlerBuilder}.
                          * @return the cloned builder instance
                          */
                         // @ts-ignore
-                        clone(): org.springframework.web.server.adapter.WebHttpHandlerBuilder
+                        public clone(): org.springframework.web.server.adapter.WebHttpHandlerBuilder
                     }
                 }
             }

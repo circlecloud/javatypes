@@ -63,7 +63,7 @@ declare namespace javax {
                      * @return the name of this theme.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns the primary 1 color. This returns a color with rgb values
                      * of 102, 102, and 153, respectively.
@@ -114,19 +114,19 @@ declare namespace javax {
                      * @return the control text font
                      */
                     // @ts-ignore
-                    getControlTextFont(): javax.swing.plaf.FontUIResource
+                    public getControlTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the system text font. This returns Dialog, 12pt, plain.
                      * @return the system text font
                      */
                     // @ts-ignore
-                    getSystemTextFont(): javax.swing.plaf.FontUIResource
+                    public getSystemTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the user text font. This returns Dialog, 12pt, plain.
                      * @return the user text font
                      */
                     // @ts-ignore
-                    getUserTextFont(): javax.swing.plaf.FontUIResource
+                    public getUserTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the menu text font. This returns Dialog, 12pt. If
                      * plain fonts have been enabled as described in <a href="#fontStyle">
@@ -135,19 +135,19 @@ declare namespace javax {
                      * @return the menu text font
                      */
                     // @ts-ignore
-                    getMenuTextFont(): javax.swing.plaf.FontUIResource
+                    public getMenuTextFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the window title font. This returns Dialog, 12pt, bold.
                      * @return the window title font
                      */
                     // @ts-ignore
-                    getWindowTitleFont(): javax.swing.plaf.FontUIResource
+                    public getWindowTitleFont(): javax.swing.plaf.FontUIResource
                     /**
                      * Returns the sub-text font. This returns Dialog, 10pt, plain.
                      * @return the sub-text font
                      */
                     // @ts-ignore
-                    getSubTextFont(): javax.swing.plaf.FontUIResource
+                    public getSubTextFont(): javax.swing.plaf.FontUIResource
                 }
             }
         }

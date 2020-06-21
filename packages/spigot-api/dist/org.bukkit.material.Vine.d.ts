@@ -35,23 +35,23 @@ declare namespace org {
                  * @return Whether it is attached to that face.
                  */
                 // @ts-ignore
-                isOnFace(face: org.bukkit.block.BlockFace): boolean
+                public isOnFace(face: org.bukkit.block.BlockFace): boolean
                 /**
                  * Attach the vine to the specified face of an adjacent block.
                  * @param face The face to attach.
                  */
                 // @ts-ignore
-                putOnFace(face: org.bukkit.block.BlockFace): void
+                public putOnFace(face: org.bukkit.block.BlockFace): void
                 /**
                  * Detach the vine from the specified face of an adjacent block.
                  * @param face The face to detach.
                  */
                 // @ts-ignore
-                removeFromFace(face: org.bukkit.block.BlockFace): void
+                public removeFromFace(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Vine
+                public clone(): org.bukkit.material.Vine
             }
         }
     }

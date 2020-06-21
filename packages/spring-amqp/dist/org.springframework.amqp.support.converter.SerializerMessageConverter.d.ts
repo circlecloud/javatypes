@@ -22,43 +22,43 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: string
+                        public static readonly DEFAULT_CHARSET: java.lang.String | string
                         /**
                          * Flag to signal that the content type should be ignored and the deserializer used irrespective if it is a text
                          * message. Defaults to false, in which case the default encoding is used to convert a text message to a String.
                          * @param ignoreContentType the flag value to set
                          */
                         // @ts-ignore
-                        setIgnoreContentType(ignoreContentType: boolean): void
+                        public setIgnoreContentType(ignoreContentType: boolean): void
                         /**
                          * Specify the default charset to use when converting to or from text-based Message body content. If not specified,
                          * the charset will be "UTF-8".
                          * @param defaultCharset The default charset.
                          */
                         // @ts-ignore
-                        setDefaultCharset(defaultCharset: string): void
+                        public setDefaultCharset(defaultCharset: java.lang.String | string): void
                         /**
                          * The serializer to use for converting Java objects to message bodies.
                          * @param serializer the serializer to set
                          */
                         // @ts-ignore
-                        setSerializer(serializer: object): void
+                        public setSerializer(serializer: object): void
                         /**
                          * The deserializer to use for converting from message body to Java object.
                          * @param deserializer the deserializer to set
                          */
                         // @ts-ignore
-                        setDeserializer(deserializer: object): void
+                        public setDeserializer(deserializer: object): void
                         /**
                          * Converts from a AMQP Message to an Object.
                          */
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                         /**
                          * Creates an AMQP Message from the provided Object.
                          */
                         // @ts-ignore
-                        createMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        createMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                     }
                 }
             }

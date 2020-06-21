@@ -35,7 +35,7 @@ declare namespace org {
                      * @return The name of this DataView
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Gets the parent {@link DataView} of this view. The parent directly
                      * contains this view according to the {@link #getCurrentPath()}.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return A set of current keys in this container
                      */
                     // @ts-ignore
-                    getKeys(deep: boolean): java.util.Set<org.spongepowered.api.data.DataQuery>
+                    getKeys(deep: boolean): Array<org.spongepowered.api.data.DataQuery>
                     /**
                      * Gets a Map containing all keys and their values for this {@link DataView}.
                      * <p>If deep is set to true, then this will contain all the keys and
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return Map of keys and values of this container
                      */
                     // @ts-ignore
-                    getValues(deep: boolean): java.util.Map<org.spongepowered.api.data.DataQuery, java.lang.Object>
+                    getValues(deep: boolean): java.util.Map<org.spongepowered.api.data.DataQuery, java.lang.Object | any>
                     /**
                      * Returns whether this {@link DataView} contains the given path.
                      * @param path The path relative to this data view
@@ -100,7 +100,7 @@ declare namespace org {
                      * @return True if the path exists
                      */
                     // @ts-ignore
-                    contains(key: org.spongepowered.api.data.key.Key<any>, ...keys: org.spongepowered.api.data.key.Key[]): boolean
+                    contains(key: org.spongepowered.api.data.key.Key<any>, ...keys: org.spongepowered.api.data.key.Key<any>[]): boolean
                     /**
                      * Gets an object from the desired path. If the path is not defined,
                      * an absent Optional is returned.
@@ -108,7 +108,7 @@ declare namespace org {
                      * @return The Object, if available
                      */
                     // @ts-ignore
-                    get(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Object>
+                    get(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Object | any>
                     /**
                      * Sets the given Object value according to the given path relative to
                      * this {@link DataView}'s path.
@@ -117,7 +117,7 @@ declare namespace org {
                      * @return This view, for chaining
                      */
                     // @ts-ignore
-                    set(path: org.spongepowered.api.data.DataQuery, value: any): org.spongepowered.api.data.DataView
+                    set(path: org.spongepowered.api.data.DataQuery, value: java.lang.Object | any): org.spongepowered.api.data.DataView
                     /**
                      * Sets the given {@link Key}ed value according to the provided
                      * {@link Key}'s {@link Key#getQuery()}.
@@ -127,7 +127,7 @@ declare namespace org {
                      * @return This view, for chaining
                      */
                     // @ts-ignore
-                    set<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataView
+                    set<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataView
                     /**
                      * Removes the data associated to the given path relative to this
                      * {@link DataView}'s path.
@@ -157,7 +157,7 @@ declare namespace org {
                      * @return The new view
                      */
                     // @ts-ignore
-                    createView(path: org.spongepowered.api.data.DataQuery, map: java.util.Map<any, ?>): org.spongepowered.api.data.DataView
+                    createView(path: org.spongepowered.api.data.DataQuery, map: java.util.Map<any, any>): org.spongepowered.api.data.DataView
                     /**
                      * Gets the {@link DataView} by path, if available.
                      * <p>If a {@link DataView} does not exist, or the data residing at
@@ -176,7 +176,7 @@ declare namespace org {
                      * @return The map, if available
                      */
                     // @ts-ignore
-                    getMap(path: org.spongepowered.api.data.DataQuery): java.util.Optional<? extends java.util.Map<?, ?>>
+                    getMap(path: org.spongepowered.api.data.DataQuery): java.util.Optional<any>
                     /**
                      * Gets the {@link Boolean} by path, if available.
                      * <p>If a {@link Boolean} does not exist, or the data residing at
@@ -196,7 +196,7 @@ declare namespace org {
                      * @return The boolean, if available
                      */
                     // @ts-ignore
-                    getShort(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Short>
+                    getShort(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Short | number>
                     /**
                      * Gets the {@link Byte} by path, if available.
                      * <p>If a {@link Byte} does not exist, or the data residing at
@@ -206,7 +206,7 @@ declare namespace org {
                      * @return The boolean, if available
                      */
                     // @ts-ignore
-                    getByte(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Byte>
+                    getByte(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Byte | number>
                     /**
                      * Gets the {@link Integer} by path, if available.
                      * <p>If a {@link Integer} does not exist, or the data residing at
@@ -216,7 +216,7 @@ declare namespace org {
                      * @return The integer, if available
                      */
                     // @ts-ignore
-                    getInt(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Integer>
+                    getInt(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Integer | number>
                     /**
                      * Gets the {@link Long} by path, if available.
                      * <p>If a {@link Long} does not exist, or the data residing at
@@ -226,7 +226,7 @@ declare namespace org {
                      * @return The long, if available
                      */
                     // @ts-ignore
-                    getLong(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Long>
+                    getLong(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Long | number>
                     /**
                      * Gets the {@link Float} by path, if available.
                      * <p>If a {@link Float} does not exist, or the data residing at
@@ -236,7 +236,7 @@ declare namespace org {
                      * @return The boolean, if available
                      */
                     // @ts-ignore
-                    getFloat(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Float>
+                    getFloat(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Float | number>
                     /**
                      * Gets the {@link Double} by path, if available.
                      * <p>If a {@link Double} does not exist, or the data residing at
@@ -246,7 +246,7 @@ declare namespace org {
                      * @return The double, if available
                      */
                     // @ts-ignore
-                    getDouble(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Double>
+                    getDouble(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.Double | number>
                     /**
                      * Gets the {@link String} by path, if available.
                      * <p>If a {@link String} does not exist, or the data residing at
@@ -256,7 +256,7 @@ declare namespace org {
                      * @return The string, if available
                      */
                     // @ts-ignore
-                    getString(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.String>
+                    getString(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.lang.String | string>
                     /**
                      * Gets the {@link List} of something by path, if available.
                      * <p>If a {@link List} of something does not exist, or the data
@@ -266,7 +266,7 @@ declare namespace org {
                      * @return The list, if available
                      */
                     // @ts-ignore
-                    getList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<?>>
+                    getList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<any> | Array<any>>
                     /**
                      * Gets the {@link List} of {@link String} by path, if available.
                      * <p>If a {@link List} of {@link String} does not exist, or the data
@@ -276,7 +276,7 @@ declare namespace org {
                      * @return The list of strings, if available
                      */
                     // @ts-ignore
-                    getStringList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.String>>
+                    getStringList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                     /**
                      * Gets the {@link List} of {@link Character} by path, if available.
                      * <p>If a {@link List} of {@link Character} does not exist, or the data
@@ -286,7 +286,7 @@ declare namespace org {
                      * @return The list of characters, if available
                      */
                     // @ts-ignore
-                    getCharacterList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Character>>
+                    getCharacterList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Character> | Array<java.lang.Character>>
                     /**
                      * Gets the {@link List} of {@link Boolean} by path, if available.
                      * <p>If a {@link List} of {@link Boolean} does not exist, or the data
@@ -296,7 +296,7 @@ declare namespace org {
                      * @return The list of booleans, if available
                      */
                     // @ts-ignore
-                    getBooleanList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Boolean>>
+                    getBooleanList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Boolean> | Array<java.lang.Boolean>>
                     /**
                      * Gets the {@link List} of {@link Byte} by path, if available.
                      * <p>If a {@link List} of {@link Byte} does not exist, or the data
@@ -306,7 +306,7 @@ declare namespace org {
                      * @return The list of bytes, if available
                      */
                     // @ts-ignore
-                    getByteList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Byte>>
+                    getByteList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Byte | number> | Array<java.lang.Byte | number>>
                     /**
                      * Gets the {@link List} of {@link Short} by path, if available.
                      * <p>If a {@link List} of {@link Short} does not exist, or the data
@@ -316,7 +316,7 @@ declare namespace org {
                      * @return The list of shorts, if available
                      */
                     // @ts-ignore
-                    getShortList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Short>>
+                    getShortList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Short | number> | Array<java.lang.Short | number>>
                     /**
                      * Gets the {@link List} of {@link Integer} by path, if available.
                      * <p>If a {@link List} of {@link Integer} does not exist, or the data
@@ -326,7 +326,7 @@ declare namespace org {
                      * @return The list of integers, if available
                      */
                     // @ts-ignore
-                    getIntegerList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Integer>>
+                    getIntegerList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Integer | number> | Array<java.lang.Integer | number>>
                     /**
                      * Gets the {@link List} of {@link Long} by path, if available.
                      * <p>If a {@link List} of {@link Long} does not exist, or the data
@@ -336,7 +336,7 @@ declare namespace org {
                      * @return The list of longs, if available
                      */
                     // @ts-ignore
-                    getLongList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Long>>
+                    getLongList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Long | number> | Array<java.lang.Long | number>>
                     /**
                      * Gets the {@link List} of {@link Float} by path, if available.
                      * <p>If a {@link List} of {@link Float} does not exist, or the data
@@ -346,7 +346,7 @@ declare namespace org {
                      * @return The list of floats, if available
                      */
                     // @ts-ignore
-                    getFloatList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Float>>
+                    getFloatList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Float | number> | Array<java.lang.Float | number>>
                     /**
                      * Gets the {@link List} of {@link Double} by path, if available.
                      * <p>If a {@link List} of {@link Double} does not exist, or the data
@@ -356,7 +356,7 @@ declare namespace org {
                      * @return The list of doubles, if available
                      */
                     // @ts-ignore
-                    getDoubleList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Double>>
+                    getDoubleList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.lang.Double | number> | Array<java.lang.Double | number>>
                     /**
                      * Gets the {@link List} of {@link Map} by path, if available.
                      * <p>If a {@link List} of {@link Map} does not exist, or the data
@@ -366,7 +366,7 @@ declare namespace org {
                      * @return The list of maps, if available
                      */
                     // @ts-ignore
-                    getMapList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.util.Map<?, ?>>>
+                    getMapList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<java.util.Map<any, any>> | Array<java.util.Map<any, any>>>
                     /**
                      * Gets the {@link List} of {@link DataView} by path, if available.
                      * <p>If a {@link List} of {@link DataView} does not exist, or the data
@@ -376,7 +376,7 @@ declare namespace org {
                      * @return The list of data views, if available
                      */
                     // @ts-ignore
-                    getViewList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<org.spongepowered.api.data.DataView>>
+                    getViewList(path: org.spongepowered.api.data.DataQuery): java.util.Optional<java.util.List<org.spongepowered.api.data.DataView> | Array<org.spongepowered.api.data.DataView>>
                     /**
                      * Gets the {@link DataSerializable} object by path, if available.
                      * <p>If a {@link DataSerializable} exists, but is not the proper class
@@ -407,7 +407,7 @@ declare namespace org {
                      * @return The deserialized objects in a list, if available
                      */
                     // @ts-ignore
-                    getSerializableList<T extends org.spongepowered.api.data.DataSerializable>(path: org.spongepowered.api.data.DataQuery, clazz: java.lang.Class<T>): java.util.Optional<java.util.List<T>>
+                    getSerializableList<T extends org.spongepowered.api.data.DataSerializable>(path: org.spongepowered.api.data.DataQuery, clazz: java.lang.Class<T>): java.util.Optional<java.util.List<T> | Array<T>>
                     /**
                      * Gets the {@link Object} object by path, if available.
                      * <p>If a {@link Object} exists, but is not the proper class
@@ -438,7 +438,7 @@ declare namespace org {
                      * @return The deserialized objects in a list, if available
                      */
                     // @ts-ignore
-                    getObjectList<T>(path: org.spongepowered.api.data.DataQuery, objectClass: java.lang.Class<T>): java.util.Optional<java.util.List<T>>
+                    getObjectList<T>(path: org.spongepowered.api.data.DataQuery, objectClass: java.lang.Class<T>): java.util.Optional<java.util.List<T> | Array<T>>
                     /**
                      * Gets the {@link CatalogType} object by path, if available.
                      * <p>If a {@link CatalogType} exists, but is not named properly, not
@@ -462,7 +462,7 @@ declare namespace org {
                      * @return The list of dummy types, if available
                      */
                     // @ts-ignore
-                    getCatalogTypeList<T extends org.spongepowered.api.CatalogType>(path: org.spongepowered.api.data.DataQuery, catalogType: java.lang.Class<T>): java.util.Optional<java.util.List<T>>
+                    getCatalogTypeList<T extends org.spongepowered.api.CatalogType>(path: org.spongepowered.api.data.DataQuery, catalogType: java.lang.Class<T>): java.util.Optional<java.util.List<T> | Array<T>>
                     /**
                      * Copies this {@link DataView} and all of it's contents into a new
                      * {@link DataContainer}.

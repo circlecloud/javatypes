@@ -83,7 +83,7 @@ declare namespace javax {
              * @return the algorithm that was used to seal this object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Retrieves the original (encapsulated) object.
              * <p>This method creates a cipher for the algorithm that had been used in
@@ -109,7 +109,7 @@ declare namespace javax {
              * @exception NullPointerException if <code>key</code> is null.
              */
             // @ts-ignore
-            getObject(key: java.security.Key): java.lang.Object
+            public getObject(key: java.security.Key): any
             /**
              * Retrieves the original (encapsulated) object.
              * <p>The encapsulated object is unsealed (using the given Cipher,
@@ -129,7 +129,7 @@ declare namespace javax {
              *  the input data does not have proper expected padding bytes
              */
             // @ts-ignore
-            getObject(c: javax.crypto.Cipher): java.lang.Object
+            public getObject(c: javax.crypto.Cipher): any
             /**
              * Retrieves the original (encapsulated) object.
              * <p>This method creates a cipher for the algorithm that had been used in
@@ -158,7 +158,7 @@ declare namespace javax {
              * @exception NullPointerException if <code>key</code> is null.
              */
             // @ts-ignore
-            getObject(key: java.security.Key, provider: string): java.lang.Object
+            public getObject(key: java.security.Key, provider: java.lang.String | string): any
         }
     }
 }

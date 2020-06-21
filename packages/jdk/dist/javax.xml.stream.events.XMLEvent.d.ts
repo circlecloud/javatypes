@@ -37,7 +37,7 @@ declare namespace javax {
                      * @see #DTD
                      */
                     // @ts-ignore
-                    getEventType(): int
+                    getEventType(): number /*int*/
                     /**
                      * Return the location of this event.  The Location
                      * returned from this method is non-volatile and

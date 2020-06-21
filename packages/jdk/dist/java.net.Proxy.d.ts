@@ -34,13 +34,13 @@ declare namespace java {
              * {@code Socket s = new Socket(Proxy.NO_PROXY);}
              */
             // @ts-ignore
-            readonly NO_PROXY: java.net.Proxy
+            public static readonly NO_PROXY: java.net.Proxy
             /**
              * Returns the proxy type.
              * @return a Type representing the proxy type
              */
             // @ts-ignore
-            type(): java.net.Proxy.Type
+            public type(): java.net.Proxy.Type
             /**
              * Returns the socket address of the proxy, or
              * {@code null} if its a direct connection.
@@ -48,7 +48,7 @@ declare namespace java {
              *          point of the proxy
              */
             // @ts-ignore
-            address(): java.net.SocketAddress
+            public address(): java.net.SocketAddress
             /**
              * Constructs a string representation of this Proxy.
              * This String is constructed by calling toString() on its type
@@ -57,7 +57,7 @@ declare namespace java {
              * @return a string representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -72,13 +72,13 @@ declare namespace java {
              * @see java.net.InetSocketAddress#equals(java.lang.Object)
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a hashcode for this Proxy.
              * @return a hash code value for this Proxy.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

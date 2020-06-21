@@ -14,7 +14,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AlgorithmParametersSpi extends java.lang.Object {
+        abstract class AlgorithmParametersSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -49,7 +49,7 @@ declare namespace java {
              * @exception IOException on decoding errors
              */
             // @ts-ignore
-            abstract engineInit(params: number /*byte*/[], format: string): void
+            abstract engineInit(params: number /*byte*/[], format: java.lang.String | string): void
             /**
              * Returns a (transparent) specification of this parameters
              * object.
@@ -75,7 +75,7 @@ declare namespace java {
              * @exception IOException on encoding errors.
              */
             // @ts-ignore
-            abstract engineGetEncoded(): byte[]
+            abstract engineGetEncoded(): number /*byte*/[]
             /**
              * Returns the parameters encoded in the specified format.
              * If {@code format} is null, the
@@ -87,13 +87,13 @@ declare namespace java {
              * @exception IOException on encoding errors.
              */
             // @ts-ignore
-            abstract engineGetEncoded(format: string): byte[]
+            abstract engineGetEncoded(format: java.lang.String | string): number /*byte*/[]
             /**
              * Returns a formatted string describing the parameters.
              * @return a formatted string describing the parameters.
              */
             // @ts-ignore
-            abstract engineToString(): java.lang.String
+            abstract engineToString(): string
         }
     }
 }

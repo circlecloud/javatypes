@@ -8,13 +8,13 @@ declare namespace org {
                  * @return the title of the bar
                  */
                 // @ts-ignore
-                getTitle(): java.lang.String
+                getTitle(): string
                 /**
                  * Sets the title of this boss bar
                  * @param title the title of the bar
                  */
                 // @ts-ignore
-                setTitle(title: string): void
+                setTitle(title: java.lang.String | string): void
                 /**
                  * Returns the color of this boss bar
                  * @return the color of the bar
@@ -70,7 +70,7 @@ declare namespace org {
                  * @return the progress of the bar
                  */
                 // @ts-ignore
-                getProgress(): double
+                getProgress(): number /*double*/
                 /**
                  * Adds the player to this boss bar causing it to display on their screen.
                  * @param player the player to add
@@ -95,7 +95,7 @@ declare namespace org {
                  * @return a immutable list of players
                  */
                 // @ts-ignore
-                getPlayers(): java.util.List<org.bukkit.entity.Player>
+                getPlayers(): Array<org.bukkit.entity.Player>
                 /**
                  * Set if the boss bar is displayed to attached players.
                  * @param visible visible status

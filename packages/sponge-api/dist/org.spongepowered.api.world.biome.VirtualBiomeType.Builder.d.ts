@@ -15,7 +15,7 @@ declare namespace org {
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            name(name: string): org.spongepowered.api.world.biome.VirtualBiomeType.Builder
+                            name(name: java.lang.String | string): org.spongepowered.api.world.biome.VirtualBiomeType.Builder
                             /**
                              * Sets the temperature of the virtual biome.
                              * @param temp The temperature
@@ -45,7 +45,7 @@ declare namespace org {
                              * @return This builder, for chaining
                              */
                             // @ts-ignore
-                            settingsBuilder(settingsBuilder: java.util.function.Function<org.spongepowered.api.world.World, org.spongepowered.api.world.biome.BiomeGenerationSettings> | java.util.function$.Function<org.spongepowered.api.world.World, org.spongepowered.api.world.biome.BiomeGenerationSettings>): org.spongepowered.api.world.biome.VirtualBiomeType.Builder
+                            settingsBuilder(settingsBuilder: java.util.function$.Function<org.spongepowered.api.world.World, org.spongepowered.api.world.biome.BiomeGenerationSettings>): org.spongepowered.api.world.biome.VirtualBiomeType.Builder
                             /**
                              * Builds a new {@link VirtualBiomeType} with the given unique id.
                              * @param id The biome id, must be unique
@@ -53,7 +53,7 @@ declare namespace org {
                              * @throws IllegalStateException If any required fields were missing
                              */
                             // @ts-ignore
-                            build(id: string): org.spongepowered.api.world.biome.VirtualBiomeType
+                            build(id: java.lang.String | string): org.spongepowered.api.world.biome.VirtualBiomeType
                         }
                     }
                 }

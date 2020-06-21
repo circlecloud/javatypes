@@ -51,12 +51,12 @@ declare namespace javax {
                  * Convenience method for getting the Color.black LineBorder of thickness 1.
                  */
                 // @ts-ignore
-                createBlackLineBorder(): javax.swing.border.Border
+                public static createBlackLineBorder(): javax.swing.border.Border
                 /**
                  * Convenience method for getting the Color.gray LineBorder of thickness 1.
                  */
                 // @ts-ignore
-                createGrayLineBorder(): javax.swing.border.Border
+                public static createGrayLineBorder(): javax.swing.border.Border
                 /**
                  * Paints the border for the specified component with the
                  * specified position and size.
@@ -68,35 +68,35 @@ declare namespace javax {
                  * @param height the height of the painted border
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Reinitialize the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
                  * @param insets the object to be reinitialized
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * Returns the color of the border.
                  */
                 // @ts-ignore
-                getLineColor(): java.awt.Color
+                public getLineColor(): java.awt.Color
                 /**
                  * Returns the thickness of the border.
                  */
                 // @ts-ignore
-                getThickness(): int
+                public getThickness(): number /*int*/
                 /**
                  * Returns whether this border will be drawn with rounded corners.
                  * @since 1.3
                  */
                 // @ts-ignore
-                getRoundedCorners(): boolean
+                public getRoundedCorners(): boolean
                 /**
                  * Returns whether or not the border is opaque.
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
             }
         }
     }

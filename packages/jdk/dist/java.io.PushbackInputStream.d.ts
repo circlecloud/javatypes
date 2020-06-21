@@ -84,7 +84,7 @@ declare namespace java {
              * @see java.io.InputStream#read()
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this input stream into
              * an array of bytes.  This method first reads any pushed-back bytes; after
@@ -108,7 +108,7 @@ declare namespace java {
              * @see java.io.InputStream#read(byte[], int, int)
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Pushes back a byte by copying it to the front of the pushback buffer.
              * After this method returns, the next byte to be read will have the value
@@ -120,7 +120,7 @@ declare namespace java {
              *             invoking its {#link #close()} method.
              */
             // @ts-ignore
-            unread(b: number /*int*/): void
+            public unread(b: number /*int*/): void
             /**
              * Pushes back a portion of an array of bytes by copying it to the front
              * of the pushback buffer.  After this method returns, the next byte to be
@@ -136,7 +136,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            unread(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public unread(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Pushes back an array of bytes by copying it to the front of the
              * pushback buffer.  After this method returns, the next byte to be read
@@ -150,7 +150,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            unread(b: number /*byte*/[]): void
+            public unread(b: number /*byte*/[]): void
             /**
              * Returns an estimate of the number of bytes that can be read (or
              * skipped over) from this input stream without blocking by the next
@@ -169,7 +169,7 @@ declare namespace java {
              * @see java.io.InputStream#available()
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Skips over and discards <code>n</code> bytes of data from this
              * input stream. The <code>skip</code> method may, for a variety of
@@ -191,7 +191,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Tests if this input stream supports the <code>mark</code> and
              * <code>reset</code> methods, which it does not.
@@ -201,7 +201,7 @@ declare namespace java {
              * @see java.io.InputStream#reset()
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Marks the current position in this input stream.
              * <p> The <code>mark</code> method of <code>PushbackInputStream</code>
@@ -211,7 +211,7 @@ declare namespace java {
              * @see java.io.InputStream#reset()
              */
             // @ts-ignore
-            mark(readlimit: number /*int*/): void
+            public mark(readlimit: number /*int*/): void
             /**
              * Repositions this stream to the position at the time the
              * <code>mark</code> method was last called on this input stream.
@@ -223,7 +223,7 @@ declare namespace java {
              * @see java.io.IOException
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Closes this input stream and releases any system resources
              * associated with the stream.
@@ -233,7 +233,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

@@ -125,7 +125,7 @@ declare namespace org {
                  * @return drop chance
                  */
                 // @ts-ignore
-                getItemInHandDropChance(): float
+                getItemInHandDropChance(): number /*float*/
                 /**
                  * @deprecated entities can duel wield now use the methods for the specific
                  *  hand instead
@@ -145,7 +145,7 @@ declare namespace org {
                  * @return chance of the currently held item being dropped (1 for players)
                  */
                 // @ts-ignore
-                getItemInMainHandDropChance(): float
+                getItemInMainHandDropChance(): number /*float*/
                 /**
                  * Sets the chance of the item this creature is currently holding in their
                  * main hand being dropped upon this creature's death.
@@ -168,7 +168,7 @@ declare namespace org {
                  * @return chance of the off hand item being dropped (1 for players)
                  */
                 // @ts-ignore
-                getItemInOffHandDropChance(): float
+                getItemInOffHandDropChance(): number /*float*/
                 /**
                  * Sets the chance of the off hand item being dropped upon this creature's
                  * death.
@@ -190,7 +190,7 @@ declare namespace org {
                  * @return the chance of the helmet being dropped (1 for players)
                  */
                 // @ts-ignore
-                getHelmetDropChance(): float
+                getHelmetDropChance(): number /*float*/
                 /**
                  * Sets the chance of the helmet being dropped upon this creature's death.
                  * <ul>
@@ -212,7 +212,7 @@ declare namespace org {
                  * @return the chance of the chest plate being dropped (1 for players)
                  */
                 // @ts-ignore
-                getChestplateDropChance(): float
+                getChestplateDropChance(): number /*float*/
                 /**
                  * Sets the chance of the chest plate being dropped upon this creature's
                  * death.
@@ -235,7 +235,7 @@ declare namespace org {
                  * @return the chance of the leggings being dropped (1 for players)
                  */
                 // @ts-ignore
-                getLeggingsDropChance(): float
+                getLeggingsDropChance(): number /*float*/
                 /**
                  * Sets the chance of the leggings being dropped upon this creature's
                  * death.
@@ -257,7 +257,7 @@ declare namespace org {
                  * @return the chance of the boots being dropped (1 for players)
                  */
                 // @ts-ignore
-                getBootsDropChance(): float
+                getBootsDropChance(): number /*float*/
                 /**
                  * Sets the chance of the boots being dropped upon this creature's death.
                  * <ul>

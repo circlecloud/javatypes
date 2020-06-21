@@ -19,14 +19,14 @@ declare namespace org {
                          * factories that perform eager initialization of singletons.
                          */
                         // @ts-ignore
-                        setLazyInit(lazyInit: boolean): void
+                        public setLazyInit(lazyInit: boolean): void
                         /**
                          * Return whether beans should be lazily initialized by default, i.e. not
                          * eagerly instantiated on startup. Only applicable to singleton beans.
                          * @return whether to apply lazy-init semantics ({#code false} by default)
                          */
                         // @ts-ignore
-                        isLazyInit(): boolean
+                        public isLazyInit(): boolean
                         /**
                          * Return whether beans should be lazily initialized by default, i.e. not
                          * eagerly instantiated on startup. Only applicable to singleton beans.
@@ -34,7 +34,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        getLazyInit(): java.lang.Boolean
+                        public getLazyInit(): java.lang.Boolean
                         /**
                          * Set the autowire mode. This determines whether any automagical detection
                          * and setting of bean references will happen. Default is AUTOWIRE_NO
@@ -44,44 +44,44 @@ declare namespace org {
                          *  Must be one of the constants defined in {#link AbstractBeanDefinition}.
                          */
                         // @ts-ignore
-                        setAutowireMode(autowireMode: number /*int*/): void
+                        public setAutowireMode(autowireMode: number /*int*/): void
                         /**
                          * Return the default autowire mode.
                          */
                         // @ts-ignore
-                        getAutowireMode(): int
+                        public getAutowireMode(): number /*int*/
                         /**
                          * Set the dependency check code.
                          * @param dependencyCheck the code to set.
                          *  Must be one of the constants defined in {#link AbstractBeanDefinition}.
                          */
                         // @ts-ignore
-                        setDependencyCheck(dependencyCheck: number /*int*/): void
+                        public setDependencyCheck(dependencyCheck: number /*int*/): void
                         /**
                          * Return the default dependency check code.
                          */
                         // @ts-ignore
-                        getDependencyCheck(): int
+                        public getDependencyCheck(): number /*int*/
                         /**
                          * Set the name of the default initializer method.
                          */
                         // @ts-ignore
-                        setInitMethodName(initMethodName: string): void
+                        public setInitMethodName(initMethodName: java.lang.String | string): void
                         /**
                          * Return the name of the default initializer method.
                          */
                         // @ts-ignore
-                        getInitMethodName(): java.lang.String
+                        public getInitMethodName(): string
                         /**
                          * Set the name of the default destroy method.
                          */
                         // @ts-ignore
-                        setDestroyMethodName(destroyMethodName: string): void
+                        public setDestroyMethodName(destroyMethodName: java.lang.String | string): void
                         /**
                          * Return the name of the default destroy method.
                          */
                         // @ts-ignore
-                        getDestroyMethodName(): java.lang.String
+                        public getDestroyMethodName(): string
                     }
                 }
             }

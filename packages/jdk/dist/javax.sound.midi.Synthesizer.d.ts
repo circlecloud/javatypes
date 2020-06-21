@@ -54,7 +54,7 @@ declare namespace javax {
                  * @see #getVoiceStatus
                  */
                 // @ts-ignore
-                getMaxPolyphony(): int
+                getMaxPolyphony(): number /*int*/
                 /**
                  * Obtains the processing latency incurred by this synthesizer, expressed in
                  * microseconds.  This latency measures the worst-case delay between the
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @return the worst-case delay, in microseconds
                  */
                 // @ts-ignore
-                getLatency(): long
+                getLatency(): number /*long*/
                 /**
                  * Obtains the set of MIDI channels controlled by this synthesizer.  Each
                  * non-null element in the returned array is a <code>MidiChannel</code> that

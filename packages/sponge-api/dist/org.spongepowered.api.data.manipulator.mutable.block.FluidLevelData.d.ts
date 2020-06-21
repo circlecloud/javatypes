@@ -20,7 +20,7 @@ declare namespace org {
                                  * @see Keys#FLUID_LEVEL
                                  */
                                 // @ts-ignore
-                                level(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                level(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

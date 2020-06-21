@@ -30,12 +30,12 @@ declare namespace javax {
                      * The job state is unknown.
                      */
                     // @ts-ignore
-                    readonly UNKNOWN: javax.print.attribute.standard.JobState
+                    public static readonly UNKNOWN: javax.print.attribute.standard.JobState
                     /**
                      * The job is a candidate to start processing, but is not yet processing.
                      */
                     // @ts-ignore
-                    readonly PENDING: javax.print.attribute.standard.JobState
+                    public static readonly PENDING: javax.print.attribute.standard.JobState
                     /**
                      * The job is not a candidate for processing for any number of reasons but
                      * will return to the PENDING state as soon as the reasons are no longer
@@ -43,7 +43,7 @@ declare namespace javax {
                      * indicate why the job is no longer a candidate for processing.
                      */
                     // @ts-ignore
-                    readonly PENDING_HELD: javax.print.attribute.standard.JobState
+                    public static readonly PENDING_HELD: javax.print.attribute.standard.JobState
                     /**
                      * The job is processing. One or more of the following activities is
                      * occurring:
@@ -77,7 +77,7 @@ declare namespace javax {
                      * process of canceling or aborting the job.
                      */
                     // @ts-ignore
-                    readonly PROCESSING: javax.print.attribute.standard.JobState
+                    public static readonly PROCESSING: javax.print.attribute.standard.JobState
                     /**
                      * The job has stopped while processing for any number of reasons and will
                      * return to the PROCESSING state as soon as the reasons are no longer
@@ -95,7 +95,7 @@ declare namespace javax {
                      * PrinterStateReasons PrinterStateReasons} attributes.
                      */
                     // @ts-ignore
-                    readonly PROCESSING_STOPPED: javax.print.attribute.standard.JobState
+                    public static readonly PROCESSING_STOPPED: javax.print.attribute.standard.JobState
                     /**
                      * The job has been canceled by some human agency, the printer has completed
                      * canceling the job, and all job status attributes have reached their final
@@ -108,7 +108,7 @@ declare namespace javax {
                      * CANCELED_BY_<I>xxx</I> value, if present, must remain.
                      */
                     // @ts-ignore
-                    readonly CANCELED: javax.print.attribute.standard.JobState
+                    public static readonly CANCELED: javax.print.attribute.standard.JobState
                     /**
                      * The job has been aborted by the system (usually while the job was in the
                      * PROCESSING or PROCESSING_STOPPED state), the printer has completed
@@ -121,7 +121,7 @@ declare namespace javax {
                      * ABORTED_BY_SYSTEM value, if present, must remain.
                      */
                     // @ts-ignore
-                    readonly ABORTED: javax.print.attribute.standard.JobState
+                    public static readonly ABORTED: javax.print.attribute.standard.JobState
                     /**
                      * The job has completed successfully or with warnings or errors after
                      * processing, all of the job media sheets have been successfully stacked in
@@ -132,12 +132,12 @@ declare namespace javax {
                      * COMPLETED_WITH_ERRORS.
                      */
                     // @ts-ignore
-                    readonly COMPLETED: javax.print.attribute.standard.JobState
+                    public static readonly COMPLETED: javax.print.attribute.standard.JobState
                     /**
                      * Returns the string table for class JobState.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class JobState.
                      */
@@ -153,7 +153,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -163,7 +163,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

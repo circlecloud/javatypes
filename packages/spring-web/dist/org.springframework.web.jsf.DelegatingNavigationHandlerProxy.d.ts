@@ -60,7 +60,7 @@ declare namespace org {
                      * "jsfNavigationHandler".
                      */
                     // @ts-ignore
-                    readonly DEFAULT_TARGET_BEAN_NAME: string
+                    public static readonly DEFAULT_TARGET_BEAN_NAME: java.lang.String | string
                     /**
                      * Handle the navigation request implied by the specified parameters,
                      * through delegating to the target bean in the Spring application context.
@@ -71,7 +71,7 @@ declare namespace org {
                      * method will be called.
                      */
                     // @ts-ignore
-                    handleNavigation(facesContext: FacesContext, fromAction: string, outcome: string): void
+                    public handleNavigation(facesContext: FacesContext, fromAction: java.lang.String | string, outcome: java.lang.String | string): void
                     /**
                      * Return the target NavigationHandler to delegate to.
                      * <p>By default, a bean with the name "jsfNavigationHandler" is obtained
@@ -90,7 +90,7 @@ declare namespace org {
                      * @return the name of the target bean
                      */
                     // @ts-ignore
-                    getTargetBeanName(facesContext: FacesContext): java.lang.String
+                    getTargetBeanName(facesContext: FacesContext): string
                     /**
                      * Retrieve the Spring BeanFactory to delegate bean name resolution to.
                      * <p>Default implementation delegates to {@code getWebApplicationContext}.

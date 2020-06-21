@@ -16,7 +16,7 @@ declare namespace java {
                  *           a string identifying the file or {#code null} if not known.
                  */
                 // @ts-ignore
-                constructor(file: string)
+                constructor(file: java.lang.String | string)
                 /**
                  * Constructs an instance of this class. This constructor should be used
                  * when an operation involving two files fails, or there is additional
@@ -30,30 +30,30 @@ declare namespace java {
                  *           a reason message with additional information or {#code null}
                  */
                 // @ts-ignore
-                constructor(file: string, other: string, reason: string)
+                constructor(file: java.lang.String | string, other: java.lang.String | string, reason: java.lang.String | string)
                 /**
                  * Returns the file used to create this exception.
                  * @return the file (can be {#code null})
                  */
                 // @ts-ignore
-                getFile(): java.lang.String
+                getFile(): string
                 /**
                  * Returns the other file used to create this exception.
                  * @return the other file (can be {#code null})
                  */
                 // @ts-ignore
-                getOtherFile(): java.lang.String
+                getOtherFile(): string
                 /**
                  * Returns the string explaining why the file system operation failed.
                  * @return the string explaining why the file system operation failed
                  */
                 // @ts-ignore
-                getReason(): java.lang.String
+                getReason(): string
                 /**
                  * Returns the detail message string.
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

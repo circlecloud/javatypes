@@ -24,13 +24,13 @@ declare namespace javax {
              *  of this {#link ValueExp}.
              */
             // @ts-ignore
-            constructor(attr: string)
+            constructor(attr: java.lang.String | string)
             /**
              * Returns a string representation of the name of the attribute.
              * @return the attribute name.
              */
             // @ts-ignore
-            getAttributeName(): java.lang.String
+            public getAttributeName(): string
             /**
              * <p>Applies the <CODE>AttributeValueExp</CODE> on an MBean.
              * This method calls {@link #getAttribute getAttribute(name)} and wraps
@@ -47,12 +47,12 @@ declare namespace javax {
              * @exception BadBinaryOpValueExpException
              */
             // @ts-ignore
-            apply(name: javax.management.ObjectName): javax.management.ValueExp
+            public apply(name: javax.management.ObjectName): javax.management.ValueExp
             /**
              * Returns the string representing its value.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Sets the MBean server on which the query is to be performed.
              * @param s The MBean server on which the query is to be performed.
@@ -60,7 +60,7 @@ declare namespace javax {
              *  obtain an attribute value is {#link QueryEval#getMBeanServer()}.
              */
             // @ts-ignore
-            setMBeanServer(s: javax.management.MBeanServer): void
+            public setMBeanServer(s: javax.management.MBeanServer): void
             /**
              * <p>Return the value of the given attribute in the named MBean.
              * If the attempt to access the attribute generates an exception,
@@ -72,7 +72,7 @@ declare namespace javax {
              *  obtained.
              */
             // @ts-ignore
-            getAttribute(name: javax.management.ObjectName): java.lang.Object
+            getAttribute(name: javax.management.ObjectName): any
         }
     }
 }

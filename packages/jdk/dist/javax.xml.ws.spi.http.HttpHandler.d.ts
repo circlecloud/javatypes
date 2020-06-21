@@ -13,7 +13,7 @@ declare namespace javax {
                      * @since JAX-WS 2.2
                      */
                     // @ts-ignore
-                    class HttpHandler extends java.lang.Object {
+                    abstract class HttpHandler extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -27,7 +27,7 @@ declare namespace javax {
                          *       handling
                          */
                         // @ts-ignore
-                        abstract handle(exchange: javax.xml.ws.spi.http.HttpExchange): void
+                        public abstract handle(exchange: javax.xml.ws.spi.http.HttpExchange): void
                     }
                 }
             }

@@ -40,25 +40,25 @@ declare namespace java {
              * @param s   the string to be converted to a {#code Boolean}.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * The {@code Boolean} object corresponding to the primitive
              * value {@code true}.
              */
             // @ts-ignore
-            readonly TRUE: java.lang.Boolean
+            public static readonly TRUE: java.lang.Boolean
             /**
              * The {@code Boolean} object corresponding to the primitive
              * value {@code false}.
              */
             // @ts-ignore
-            readonly FALSE: java.lang.Boolean
+            public static readonly FALSE: java.lang.Boolean
             /**
              * The Class object representing the primitive type boolean.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Boolean>
+            public static readonly TYPE: java.lang.Class<java.lang.Boolean>
             /**
              * Parses the string argument as a boolean.  The {@code boolean}
              * returned represents the value {@code true} if the string argument
@@ -72,14 +72,14 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            parseBoolean(s: string): boolean
+            public static parseBoolean(s: java.lang.String | string): boolean
             /**
              * Returns the value of this {@code Boolean} object as a boolean
              * primitive.
              * @return the primitive {#code boolean} value of this object.
              */
             // @ts-ignore
-            booleanValue(): boolean
+            public booleanValue(): boolean
             /**
              * Returns a {@code Boolean} instance representing the specified
              * {@code boolean} value.  If the specified {@code boolean} value
@@ -94,7 +94,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            valueOf(b: boolean): java.lang.Boolean
+            public static valueOf(b: boolean): java.lang.Boolean
             /**
              * Returns a {@code Boolean} with a value represented by the
              * specified string.  The {@code Boolean} returned represents a
@@ -104,7 +104,7 @@ declare namespace java {
              * @return the {#code Boolean} value represented by the string.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Boolean
+            public static valueOf(s: java.lang.String | string): java.lang.Boolean
             /**
              * Returns a {@code String} object representing the specified
              * boolean.  If the specified boolean is {@code true}, then
@@ -115,7 +115,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            toString(b: boolean): java.lang.String
+            public static toString(b: boolean): string
             /**
              * Returns a {@code String} object representing this Boolean's
              * value.  If this object represents the value {@code true},
@@ -124,7 +124,7 @@ declare namespace java {
              * @return a string representation of this object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this {@code Boolean} object.
              * @return the integer {#code 1231} if this object represents
@@ -132,7 +132,7 @@ declare namespace java {
              *  object represents {@code false}.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code boolean} value; compatible with
              * {@code Boolean.hashCode()}.
@@ -141,7 +141,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hashCode(value: boolean): int
+            public static hashCode(value: boolean): number /*int*/
             /**
              * Returns {@code true} if and only if the argument is not
              * {@code null} and is a {@code Boolean} object that
@@ -151,7 +151,7 @@ declare namespace java {
              *           same value; {@code false} otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns {@code true} if and only if the system property
              * named by the argument exists and is equal to the string
@@ -171,7 +171,7 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String, java.lang.String)
              */
             // @ts-ignore
-            getBoolean(name: string): boolean
+            public static getBoolean(name: java.lang.String | string): boolean
             /**
              * Compares this {@code Boolean} instance with another.
              * @param b the {#code Boolean} instance to be compared
@@ -184,7 +184,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            compareTo(b: java.lang.Boolean): int
+            public compareTo(b: java.lang.Boolean): number /*int*/
             /**
              * Compares two {@code boolean} values.
              * The value returned is identical to what would be returned by:
@@ -199,7 +199,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            compare(x: boolean, y: boolean): int
+            public static compare(x: boolean, y: boolean): number /*int*/
             /**
              * Returns the result of applying the logical AND operator to the
              * specified {@code boolean} operands.
@@ -210,7 +210,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            logicalAnd(a: boolean, b: boolean): boolean
+            public static logicalAnd(a: boolean, b: boolean): boolean
             /**
              * Returns the result of applying the logical OR operator to the
              * specified {@code boolean} operands.
@@ -221,7 +221,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            logicalOr(a: boolean, b: boolean): boolean
+            public static logicalOr(a: boolean, b: boolean): boolean
             /**
              * Returns the result of applying the logical XOR operator to the
              * specified {@code boolean} operands.
@@ -232,7 +232,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            logicalXor(a: boolean, b: boolean): boolean
+            public static logicalXor(a: boolean, b: boolean): boolean
         }
     }
 }

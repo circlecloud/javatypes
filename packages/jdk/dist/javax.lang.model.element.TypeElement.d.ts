@@ -49,7 +49,7 @@ declare namespace javax {
                      * @return the enclosed elements in proper order, or an empty list if none
                      */
                     // @ts-ignore
-                    getEnclosedElements(): java.util.List<? extends javax.lang.model.element.Element>
+                    getEnclosedElements(): Array<any>
                     /**
                      * Returns the <i>nesting kind</i> of this type element.
                      * @return the nesting kind of this type element
@@ -98,7 +98,7 @@ declare namespace javax {
                      *  or extended by this interface, or an empty list if there are none
                      */
                     // @ts-ignore
-                    getInterfaces(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getInterfaces(): Array<any>
                     /**
                      * Returns the formal type parameters of this type element
                      * in declaration order.
@@ -106,7 +106,7 @@ declare namespace javax {
                      *  if there are none
                      */
                     // @ts-ignore
-                    getTypeParameters(): java.util.List<? extends javax.lang.model.element.TypeParameterElement>
+                    getTypeParameters(): Array<any>
                     /**
                      * Returns the package of a top-level type and returns the
                      * immediately lexically enclosing element for a {@linkplain

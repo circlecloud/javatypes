@@ -46,7 +46,7 @@ declare namespace org {
                  * @param propertyEditor editor to register
                  */
                 // @ts-ignore
-                registerCustomEditor(requiredType: java.lang.Class<any>, propertyPath: string, propertyEditor: java.beans.PropertyEditor): void
+                registerCustomEditor(requiredType: java.lang.Class<any>, propertyPath: java.lang.String | string, propertyEditor: java.beans.PropertyEditor): void
                 /**
                  * Find a custom property editor for the given type and property.
                  * @param requiredType the type of the property (can be {#code null} if a property
@@ -56,7 +56,7 @@ declare namespace org {
                  * @return the registered editor, or {#code null} if none
                  */
                 // @ts-ignore
-                findCustomEditor(requiredType: java.lang.Class<any>, propertyPath: string): java.beans.PropertyEditor
+                findCustomEditor(requiredType: java.lang.Class<any>, propertyPath: java.lang.String | string): java.beans.PropertyEditor
             }
         }
     }

@@ -13,7 +13,7 @@ declare namespace org {
                  * @since 4.2.2
                  */
                 // @ts-ignore
-                class AbstractValueAdaptingCache extends java.lang.Object implements org.springframework.cache.Cache {
+                abstract class AbstractValueAdaptingCache extends java.lang.Object implements org.springframework.cache.Cache {
                     /**
                      * Create an {@code AbstractValueAdaptingCache} with the given setting.
                      * @param allowNullValues whether to allow for {#code null} values
@@ -24,18 +24,18 @@ declare namespace org {
                      * Return whether {@code null} values are allowed in this cache.
                      */
                     // @ts-ignore
-                    isAllowNullValues(): boolean
+                    public isAllowNullValues(): boolean
                     // @ts-ignore
-                    get(key: any): org.springframework.cache.Cache.ValueWrapper
+                    public get(key: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                     // @ts-ignore
-                    get<T>(key: any, type: java.lang.Class<T>): T
+                    public get<T>(key: java.lang.Object | any, type: java.lang.Class<T>): T
                     /**
                      * Perform an actual lookup in the underlying store.
                      * @param key the key whose associated value is to be returned
                      * @return the raw store value for the key, or {#code null} if none
                      */
                     // @ts-ignore
-                    abstract lookup(key: any): java.lang.Object
+                    abstract lookup(key: java.lang.Object | any): any
                     /**
                      * Convert the given value from the internal store to a user value
                      * returned from the get method (adapting {@code null}).
@@ -43,7 +43,7 @@ declare namespace org {
                      * @return the value to return to the user
                      */
                     // @ts-ignore
-                    fromStoreValue(storeValue: any): java.lang.Object
+                    fromStoreValue(storeValue: java.lang.Object | any): any
                     /**
                      * Convert the given user value, as passed into the put method,
                      * to a value in the internal store (adapting {@code null}).
@@ -51,7 +51,7 @@ declare namespace org {
                      * @return the value to store
                      */
                     // @ts-ignore
-                    toStoreValue(userValue: any): java.lang.Object
+                    toStoreValue(userValue: java.lang.Object | any): any
                     /**
                      * Wrap the given store value with a {@link SimpleValueWrapper}, also going
                      * through {@link #fromStoreValue} conversion. Useful for {@link #get(Object)}
@@ -60,7 +60,7 @@ declare namespace org {
                      * @return the wrapped value
                      */
                     // @ts-ignore
-                    toValueWrapper(storeValue: any): org.springframework.cache.Cache.ValueWrapper
+                    toValueWrapper(storeValue: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                 }
             }
         }

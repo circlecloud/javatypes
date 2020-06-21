@@ -47,7 +47,7 @@ declare namespace org {
                  * @return age in ticks
                  */
                 // @ts-ignore
-                getAge(): long
+                getAge(): number /*long*/
                 /**
                  * Sets the age in ticks of the gateway.
                  * <br>

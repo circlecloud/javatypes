@@ -11,7 +11,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                class AbstractCacheResolver extends java.lang.Object implements org.springframework.cache.interceptor.CacheResolver {
+                abstract class AbstractCacheResolver extends java.lang.Object implements org.springframework.cache.interceptor.CacheResolver {
                     /**
                      * Construct a new {@code AbstractCacheResolver}.
                      * @see #setCacheManager
@@ -28,16 +28,16 @@ declare namespace org {
                      * Set the {@link CacheManager} that this instance should use.
                      */
                     // @ts-ignore
-                    setCacheManager(cacheManager: org.springframework.cache.CacheManager): void
+                    public setCacheManager(cacheManager: org.springframework.cache.CacheManager): void
                     /**
                      * Return the {@link CacheManager} that this instance uses.
                      */
                     // @ts-ignore
-                    getCacheManager(): org.springframework.cache.CacheManager
+                    public getCacheManager(): org.springframework.cache.CacheManager
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    resolveCaches(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): java.util.Collection<? extends org.springframework.cache.Cache>
+                    public resolveCaches(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): Array<any>
                     /**
                      * Provide the name of the cache(s) to resolve against the current cache manager.
                      * <p>It is acceptable to return {@code null} to indicate that no cache could
@@ -46,7 +46,7 @@ declare namespace org {
                      * @return the cache name(s) to resolve, or {#code null} if no cache should be resolved
                      */
                     // @ts-ignore
-                    abstract getCacheNames(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): java.util.Collection<java.lang.String>
+                    abstract getCacheNames(context: org.springframework.cache.interceptor.CacheOperationInvocationContext<any>): Array<java.lang.String | string>
                 }
             }
         }

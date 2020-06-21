@@ -41,7 +41,7 @@ declare namespace javax {
                  * @return an enumeration of all the Session id's
                  */
                 // @ts-ignore
-                getIds(): java.util.Enumeration<byte[]>
+                getIds(): java.util.Enumeration<number /*byte*/[]>
                 /**
                  * Sets the timeout limit for <code>SSLSession</code> objects grouped
                  * under this <code>SSLSessionContext</code>.
@@ -77,7 +77,7 @@ declare namespace javax {
                  * @see #setSessionTimeout
                  */
                 // @ts-ignore
-                getSessionTimeout(): int
+                getSessionTimeout(): number /*int*/
                 /**
                  * Sets the size of the cache used for storing
                  * <code>SSLSession</code> objects grouped under this
@@ -97,7 +97,7 @@ declare namespace javax {
                  * @see #setSessionCacheSize
                  */
                 // @ts-ignore
-                getSessionCacheSize(): int
+                getSessionCacheSize(): number /*int*/
             }
         }
     }

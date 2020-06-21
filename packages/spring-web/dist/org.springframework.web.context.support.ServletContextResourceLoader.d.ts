@@ -30,7 +30,7 @@ declare namespace org {
                          * @see ServletContextResource
                          */
                         // @ts-ignore
-                        getResourceByPath(path: string): Resource
+                        getResourceByPath(path: java.lang.String | string): Resource
                     }
                 }
             }

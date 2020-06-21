@@ -30,7 +30,7 @@ declare namespace org {
                      * @see CacheInterceptor#setCacheOperationSources
                      */
                     // @ts-ignore
-                    setCacheOperationSources(...cacheOperationSources: org.springframework.cache.interceptor.CacheOperationSource[]): void
+                    public setCacheOperationSources(...cacheOperationSources: org.springframework.cache.interceptor.CacheOperationSource[]): void
                     /**
                      * Set the default {@link KeyGenerator} that this cache aspect should delegate to
                      * if no specific key generator has been set for the operation.
@@ -39,7 +39,7 @@ declare namespace org {
                      * @see CacheInterceptor#setKeyGenerator
                      */
                     // @ts-ignore
-                    setKeyGenerator(keyGenerator: org.springframework.cache.interceptor.KeyGenerator): void
+                    public setKeyGenerator(keyGenerator: org.springframework.cache.interceptor.KeyGenerator): void
                     /**
                      * Set the default {@link CacheResolver} that this cache aspect should delegate
                      * to if no specific cache resolver has been set for the operation.
@@ -49,7 +49,7 @@ declare namespace org {
                      * @see CacheInterceptor#setCacheResolver
                      */
                     // @ts-ignore
-                    setCacheResolver(cacheResolver: org.springframework.cache.interceptor.CacheResolver): void
+                    public setCacheResolver(cacheResolver: org.springframework.cache.interceptor.CacheResolver): void
                     /**
                      * Set the {@link CacheManager} to use to create a default {@link CacheResolver}.
                      * Replace the current {@link CacheResolver}, if any.
@@ -57,7 +57,7 @@ declare namespace org {
                      * @see CacheInterceptor#setCacheManager
                      */
                     // @ts-ignore
-                    setCacheManager(cacheManager: org.springframework.cache.CacheManager): void
+                    public setCacheManager(cacheManager: org.springframework.cache.CacheManager): void
                     /**
                      * Set a pointcut, i.e. a bean that triggers conditional invocation of the
                      * {@link CacheInterceptor} depending on the method and attributes passed.
@@ -66,13 +66,13 @@ declare namespace org {
                      * @see #setPostInterceptors
                      */
                     // @ts-ignore
-                    setPointcut(pointcut: Pointcut): void
+                    public setPointcut(pointcut: Pointcut): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    afterSingletonsInstantiated(): void
+                    public afterSingletonsInstantiated(): void
                     // @ts-ignore
-                    createMainInterceptor(): java.lang.Object
+                    createMainInterceptor(): any
                 }
             }
         }

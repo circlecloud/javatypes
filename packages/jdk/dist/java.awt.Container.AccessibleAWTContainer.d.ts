@@ -25,14 +25,14 @@ declare namespace java {
                  * @return the number of accessible children in the object
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(): int
+                public getAccessibleChildrenCount(): number /*int*/
                 /**
                  * Returns the nth <code>Accessible</code> child of the object.
                  * @param i zero-based index of child
                  * @return the nth <code>Accessible</code> child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 /**
                  * Returns the <code>Accessible</code> child, if one exists,
                  * contained at the local coordinate <code>Point</code>.
@@ -43,13 +43,13 @@ declare namespace java {
                  *     at the specified location; else <code>null</code>
                  */
                 // @ts-ignore
-                getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                 /**
                  * Adds a PropertyChangeListener to the listener list.
                  * @param listener  the PropertyChangeListener to be added
                  */
                 // @ts-ignore
-                addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Remove a PropertyChangeListener from the listener list.
                  * This removes a PropertyChangeListener that was registered
@@ -57,7 +57,7 @@ declare namespace java {
                  * @param listener the PropertyChangeListener to be removed
                  */
                 // @ts-ignore
-                removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             }
         }
     }

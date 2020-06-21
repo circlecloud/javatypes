@@ -40,31 +40,31 @@ declare namespace javax {
                  * @param nodeName the name of the node, as a <code>String</code>.
                  */
                 // @ts-ignore
-                constructor(nodeName: string)
+                constructor(nodeName: java.lang.String | string)
                 /**
                  * Returns the node name associated with this node.
                  * @return the node name, as a <code>String</code>.
                  */
                 // @ts-ignore
-                getNodeName(): java.lang.String
+                public getNodeName(): string
                 /**
                  * Returns the value associated with this node.
                  * @return the node value, as a <code>String</code>.
                  */
                 // @ts-ignore
-                getNodeValue(): java.lang.String
+                public getNodeValue(): string
                 /**
                  * Sets the <code>String</code> value associated with this node.
                  */
                 // @ts-ignore
-                setNodeValue(nodeValue: string): void
+                public setNodeValue(nodeValue: java.lang.String | string): void
                 /**
                  * Returns the node type, which is always
                  * <code>ELEMENT_NODE</code>.
                  * @return the <code>short</code> value <code>ELEMENT_NODE</code>.
                  */
                 // @ts-ignore
-                getNodeType(): short
+                public getNodeType(): number /*short*/
                 /**
                  * Returns the parent of this node.  A <code>null</code> value
                  * indicates that the node is the root of its own tree.  To add a
@@ -77,7 +77,7 @@ declare namespace javax {
                  * @see #appendChild
                  */
                 // @ts-ignore
-                getParentNode(): org.w3c.dom.Node
+                public getParentNode(): org.w3c.dom.Node
                 /**
                  * Returns a <code>NodeList</code> that contains all children of this node.
                  * If there are no children, this is a <code>NodeList</code> containing
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @return the children as a <code>NodeList</code>
                  */
                 // @ts-ignore
-                getChildNodes(): org.w3c.dom.NodeList
+                public getChildNodes(): org.w3c.dom.NodeList
                 /**
                  * Returns the first child of this node, or <code>null</code> if
                  * the node has no children.
@@ -93,7 +93,7 @@ declare namespace javax {
                  *  <code>null</code>
                  */
                 // @ts-ignore
-                getFirstChild(): org.w3c.dom.Node
+                public getFirstChild(): org.w3c.dom.Node
                 /**
                  * Returns the last child of this node, or <code>null</code> if
                  * the node has no children.
@@ -101,7 +101,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                getLastChild(): org.w3c.dom.Node
+                public getLastChild(): org.w3c.dom.Node
                 /**
                  * Returns the previous sibling of this node, or <code>null</code>
                  * if this node has no previous sibling.
@@ -109,7 +109,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                getPreviousSibling(): org.w3c.dom.Node
+                public getPreviousSibling(): org.w3c.dom.Node
                 /**
                  * Returns the next sibling of this node, or <code>null</code> if
                  * the node has no next sibling.
@@ -117,7 +117,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                getNextSibling(): org.w3c.dom.Node
+                public getNextSibling(): org.w3c.dom.Node
                 /**
                  * Returns a <code>NamedNodeMap</code> containing the attributes of
                  * this node.
@@ -125,14 +125,14 @@ declare namespace javax {
                  *  this node.
                  */
                 // @ts-ignore
-                getAttributes(): org.w3c.dom.NamedNodeMap
+                public getAttributes(): org.w3c.dom.NamedNodeMap
                 /**
                  * Returns <code>null</code>, since <code>IIOMetadataNode</code>s
                  * do not belong to any <code>Document</code>.
                  * @return <code>null</code>.
                  */
                 // @ts-ignore
-                getOwnerDocument(): org.w3c.dom.Document
+                public getOwnerDocument(): org.w3c.dom.Document
                 /**
                  * Inserts the node <code>newChild</code> before the existing
                  * child node <code>refChild</code>. If <code>refChild</code> is
@@ -145,7 +145,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                insertBefore(newChild: org.w3c.dom.Node, refChild: org.w3c.dom.Node): org.w3c.dom.Node
+                public insertBefore(newChild: org.w3c.dom.Node, refChild: org.w3c.dom.Node): org.w3c.dom.Node
                 /**
                  * Replaces the child node <code>oldChild</code> with
                  * <code>newChild</code> in the list of children, and returns the
@@ -157,7 +157,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                replaceChild(newChild: org.w3c.dom.Node, oldChild: org.w3c.dom.Node): org.w3c.dom.Node
+                public replaceChild(newChild: org.w3c.dom.Node, oldChild: org.w3c.dom.Node): org.w3c.dom.Node
                 /**
                  * Removes the child node indicated by <code>oldChild</code> from
                  * the list of children, and returns it.
@@ -167,7 +167,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                removeChild(oldChild: org.w3c.dom.Node): org.w3c.dom.Node
+                public removeChild(oldChild: org.w3c.dom.Node): org.w3c.dom.Node
                 /**
                  * Adds the node <code>newChild</code> to the end of the list of
                  * children of this node.
@@ -177,13 +177,13 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                appendChild(newChild: org.w3c.dom.Node): org.w3c.dom.Node
+                public appendChild(newChild: org.w3c.dom.Node): org.w3c.dom.Node
                 /**
                  * Returns <code>true</code> if this node has child nodes.
                  * @return <code>true</code> if this node has children.
                  */
                 // @ts-ignore
-                hasChildNodes(): boolean
+                public hasChildNodes(): boolean
                 /**
                  * Returns a duplicate of this node.  The duplicate node has no
                  * parent (<code>getParentNode</code> returns <code>null</code>).
@@ -197,13 +197,13 @@ declare namespace javax {
                  * @return the duplicate node.
                  */
                 // @ts-ignore
-                cloneNode(deep: boolean): org.w3c.dom.Node
+                public cloneNode(deep: boolean): org.w3c.dom.Node
                 /**
                  * Does nothing, since <code>IIOMetadataNode</code>s do not
                  * contain <code>Text</code> children.
                  */
                 // @ts-ignore
-                normalize(): void
+                public normalize(): void
                 /**
                  * Returns <code>false</code> since DOM features are not
                  * supported.
@@ -212,38 +212,38 @@ declare namespace javax {
                  * @param version a <code>String</code>, which is ignored.
                  */
                 // @ts-ignore
-                isSupported(feature: string, version: string): boolean
+                public isSupported(feature: java.lang.String | string, version: java.lang.String | string): boolean
                 /**
                  * Returns <code>null</code>, since namespaces are not supported.
                  */
                 // @ts-ignore
-                getNamespaceURI(): java.lang.String
+                public getNamespaceURI(): string
                 /**
                  * Returns <code>null</code>, since namespaces are not supported.
                  * @return <code>null</code>.
                  * @see #setPrefix
                  */
                 // @ts-ignore
-                getPrefix(): java.lang.String
+                public getPrefix(): string
                 /**
                  * Does nothing, since namespaces are not supported.
                  * @param prefix a <code>String</code>, which is ignored.
                  * @see #getPrefix
                  */
                 // @ts-ignore
-                setPrefix(prefix: string): void
+                public setPrefix(prefix: java.lang.String | string): void
                 /**
                  * Equivalent to <code>getNodeName</code>.
                  * @return the node name, as a <code>String</code>.
                  */
                 // @ts-ignore
-                getLocalName(): java.lang.String
+                public getLocalName(): string
                 /**
                  * Equivalent to <code>getNodeName</code>.
                  * @return the node name, as a <code>String</code>
                  */
                 // @ts-ignore
-                getTagName(): java.lang.String
+                public getTagName(): string
                 /**
                  * Retrieves an attribute value by name.
                  * @param name The name of the attribute to retrieve.
@@ -251,192 +251,192 @@ declare namespace javax {
                  *  if that attribute does not have a specified or default value.
                  */
                 // @ts-ignore
-                getAttribute(name: string): java.lang.String
+                public getAttribute(name: java.lang.String | string): string
                 /**
                  * Equivalent to <code>getAttribute(localName)</code>.
                  * @see #setAttributeNS
                  */
                 // @ts-ignore
-                getAttributeNS(namespaceURI: string, localName: string): java.lang.String
+                public getAttributeNS(namespaceURI: java.lang.String | string, localName: java.lang.String | string): string
                 // @ts-ignore
-                setAttribute(name: string, value: string): void
+                public setAttribute(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Equivalent to <code>setAttribute(qualifiedName, value)</code>.
                  * @see #getAttributeNS
                  */
                 // @ts-ignore
-                setAttributeNS(namespaceURI: string, qualifiedName: string, value: string): void
+                public setAttributeNS(namespaceURI: java.lang.String | string, qualifiedName: java.lang.String | string, value: java.lang.String | string): void
                 // @ts-ignore
-                removeAttribute(name: string): void
+                public removeAttribute(name: java.lang.String | string): void
                 /**
                  * Equivalent to <code>removeAttribute(localName)</code>.
                  */
                 // @ts-ignore
-                removeAttributeNS(namespaceURI: string, localName: string): void
+                public removeAttributeNS(namespaceURI: java.lang.String | string, localName: java.lang.String | string): void
                 // @ts-ignore
-                getAttributeNode(name: string): org.w3c.dom.Attr
+                public getAttributeNode(name: java.lang.String | string): org.w3c.dom.Attr
                 /**
                  * Equivalent to <code>getAttributeNode(localName)</code>.
                  * @see #setAttributeNodeNS
                  */
                 // @ts-ignore
-                getAttributeNodeNS(namespaceURI: string, localName: string): org.w3c.dom.Attr
+                public getAttributeNodeNS(namespaceURI: java.lang.String | string, localName: java.lang.String | string): org.w3c.dom.Attr
                 // @ts-ignore
-                setAttributeNode(newAttr: org.w3c.dom.Attr): org.w3c.dom.Attr
+                public setAttributeNode(newAttr: org.w3c.dom.Attr): org.w3c.dom.Attr
                 /**
                  * Equivalent to <code>setAttributeNode(newAttr)</code>.
                  * @see #getAttributeNodeNS
                  */
                 // @ts-ignore
-                setAttributeNodeNS(newAttr: org.w3c.dom.Attr): org.w3c.dom.Attr
+                public setAttributeNodeNS(newAttr: org.w3c.dom.Attr): org.w3c.dom.Attr
                 // @ts-ignore
-                removeAttributeNode(oldAttr: org.w3c.dom.Attr): org.w3c.dom.Attr
+                public removeAttributeNode(oldAttr: org.w3c.dom.Attr): org.w3c.dom.Attr
                 // @ts-ignore
-                getElementsByTagName(name: string): org.w3c.dom.NodeList
+                public getElementsByTagName(name: java.lang.String | string): org.w3c.dom.NodeList
                 /**
                  * Equivalent to <code>getElementsByTagName(localName)</code>.
                  */
                 // @ts-ignore
-                getElementsByTagNameNS(namespaceURI: string, localName: string): org.w3c.dom.NodeList
+                public getElementsByTagNameNS(namespaceURI: java.lang.String | string, localName: java.lang.String | string): org.w3c.dom.NodeList
                 // @ts-ignore
-                hasAttributes(): boolean
+                public hasAttributes(): boolean
                 // @ts-ignore
-                hasAttribute(name: string): boolean
+                public hasAttribute(name: java.lang.String | string): boolean
                 /**
                  * Equivalent to <code>hasAttribute(localName)</code>.
                  */
                 // @ts-ignore
-                hasAttributeNS(namespaceURI: string, localName: string): boolean
+                public hasAttributeNS(namespaceURI: java.lang.String | string, localName: java.lang.String | string): boolean
                 // @ts-ignore
-                getLength(): int
+                public getLength(): number /*int*/
                 // @ts-ignore
-                item(index: number /*int*/): org.w3c.dom.Node
+                public item(index: number /*int*/): org.w3c.dom.Node
                 /**
                  * Returns the <code>Object</code> value associated with this node.
                  * @return the user <code>Object</code>.
                  * @see #setUserObject
                  */
                 // @ts-ignore
-                getUserObject(): java.lang.Object
+                public getUserObject(): any
                 /**
                  * Sets the value associated with this node.
                  * @param userObject the user <code>Object</code>.
                  * @see #getUserObject
                  */
                 // @ts-ignore
-                setUserObject(userObject: any): void
+                public setUserObject(userObject: java.lang.Object | any): void
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                setIdAttribute(name: string, isId: boolean): void
+                public setIdAttribute(name: java.lang.String | string, isId: boolean): void
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                setIdAttributeNS(namespaceURI: string, localName: string, isId: boolean): void
+                public setIdAttributeNS(namespaceURI: java.lang.String | string, localName: java.lang.String | string, isId: boolean): void
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                setIdAttributeNode(idAttr: org.w3c.dom.Attr, isId: boolean): void
+                public setIdAttributeNode(idAttr: org.w3c.dom.Attr, isId: boolean): void
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                getSchemaTypeInfo(): org.w3c.dom.TypeInfo
+                public getSchemaTypeInfo(): org.w3c.dom.TypeInfo
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                setUserData(key: string, data: any, handler: org.w3c.dom.UserDataHandler): java.lang.Object
+                public setUserData(key: java.lang.String | string, data: java.lang.Object | any, handler: org.w3c.dom.UserDataHandler): any
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                getUserData(key: string): java.lang.Object
+                public getUserData(key: java.lang.String | string): any
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                getFeature(feature: string, version: string): java.lang.Object
+                public getFeature(feature: java.lang.String | string, version: java.lang.String | string): any
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                isSameNode(node: org.w3c.dom.Node): boolean
+                public isSameNode(node: org.w3c.dom.Node): boolean
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                isEqualNode(node: org.w3c.dom.Node): boolean
+                public isEqualNode(node: org.w3c.dom.Node): boolean
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                lookupNamespaceURI(prefix: string): java.lang.String
+                public lookupNamespaceURI(prefix: java.lang.String | string): string
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                isDefaultNamespace(namespaceURI: string): boolean
+                public isDefaultNamespace(namespaceURI: java.lang.String | string): boolean
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                lookupPrefix(namespaceURI: string): java.lang.String
+                public lookupPrefix(namespaceURI: java.lang.String | string): string
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                getTextContent(): java.lang.String
+                public getTextContent(): string
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                setTextContent(textContent: string): void
+                public setTextContent(textContent: java.lang.String | string): void
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                compareDocumentPosition(other: org.w3c.dom.Node): short
+                public compareDocumentPosition(other: org.w3c.dom.Node): number /*short*/
                 /**
                  * This DOM Level 3 method is not supported for {@code IIOMetadataNode}
                  * and will throw a {@code DOMException}.
                  * @throws DOMException - always.
                  */
                 // @ts-ignore
-                getBaseURI(): java.lang.String
+                public getBaseURI(): string
             }
         }
     }

@@ -26,48 +26,48 @@ declare namespace org {
                     // @ts-ignore
                     hand: org.bukkit.inventory.EquipmentSlot
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the player who placed the block involved in this event.
                      * @return The Player who placed the block involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Clarity method for getting the placed block. Not really needed except
                      * for reasons of clarity.
                      * @return The Block that was placed
                      */
                     // @ts-ignore
-                    getBlockPlaced(): org.bukkit.block.Block
+                    public getBlockPlaced(): org.bukkit.block.Block
                     /**
                      * Gets the BlockState for the block which was replaced. Material type air
                      * mostly.
                      * @return The BlockState for the block which was replaced.
                      */
                     // @ts-ignore
-                    getBlockReplacedState(): org.bukkit.block.BlockState
+                    public getBlockReplacedState(): org.bukkit.block.BlockState
                     /**
                      * Gets the block that this block was placed against
                      * @return Block the block that the new block was placed against
                      */
                     // @ts-ignore
-                    getBlockAgainst(): org.bukkit.block.Block
+                    public getBlockAgainst(): org.bukkit.block.Block
                     /**
                      * Gets the item in the player's hand when they placed the block.
                      * @return The ItemStack for the item in the player's hand when they
                      *      placed the block
                      */
                     // @ts-ignore
-                    getItemInHand(): org.bukkit.inventory.ItemStack
+                    public getItemInHand(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the hand which placed the block
                      * @return Main or off-hand, depending on which hand was used to place the block
                      */
                     // @ts-ignore
-                    getHand(): org.bukkit.inventory.EquipmentSlot
+                    public getHand(): org.bukkit.inventory.EquipmentSlot
                     /**
                      * Gets the value whether the player would be allowed to build here.
                      * Defaults to spawn if the server was going to stop them (such as, the
@@ -77,18 +77,18 @@ declare namespace org {
                      * @return boolean whether the server would allow a player to build here
                      */
                     // @ts-ignore
-                    canBuild(): boolean
+                    public canBuild(): boolean
                     /**
                      * Sets the canBuild state of this event. Set to true if you want the
                      * player to be able to build.
                      * @param canBuild true if you want the player to be able to build
                      */
                     // @ts-ignore
-                    setBuild(canBuild: boolean): void
+                    public setBuild(canBuild: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

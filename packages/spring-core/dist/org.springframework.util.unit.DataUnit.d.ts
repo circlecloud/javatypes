@@ -24,10 +24,35 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class DataUnit extends java.lang.Enum<org.springframework.util.unit.DataUnit> {
+                    /**
+                     * Bytes, represented by suffix {@code B}.
+                     */
+                    // @ts-ignore
+                    readonly BYTES: org.springframework.util.unit.DataUnit
+                    /**
+                     * Kilobytes, represented by suffix {@code KB}.
+                     */
+                    // @ts-ignore
+                    readonly KILOBYTES: org.springframework.util.unit.DataUnit
+                    /**
+                     * Megabytes, represented by suffix {@code MB}.
+                     */
+                    // @ts-ignore
+                    readonly MEGABYTES: org.springframework.util.unit.DataUnit
+                    /**
+                     * Gigabytes, represented by suffix {@code GB}.
+                     */
+                    // @ts-ignore
+                    readonly GIGABYTES: org.springframework.util.unit.DataUnit
+                    /**
+                     * Terabytes, represented by suffix {@code TB}.
+                     */
+                    // @ts-ignore
+                    readonly TERABYTES: org.springframework.util.unit.DataUnit
                     // @ts-ignore
                     values(): org.springframework.util.unit.DataUnit[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.util.unit.DataUnit
+                    valueOf(name: java.lang.String | string): org.springframework.util.unit.DataUnit
                     /**
                      * Return the {@link DataUnit} matching the specified {@code suffix}.
                      * @param suffix one of the standard suffixes
@@ -36,7 +61,7 @@ declare namespace org {
                      *  of any of this enum's constants
                      */
                     // @ts-ignore
-                    fromSuffix(suffix: string): org.springframework.util.unit.DataUnit
+                    fromSuffix(suffix: java.lang.String | string): org.springframework.util.unit.DataUnit
                 }
             }
         }

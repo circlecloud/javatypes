@@ -57,7 +57,7 @@ declare namespace java {
              *  the currently running {@code Statement}
              */
             // @ts-ignore
-            executeUpdate(): int
+            executeUpdate(): number /*int*/
             /**
              * Sets the designated parameter to SQL <code>NULL</code>.
              * <P><B>Note:</B> You must specify the parameter's SQL type.
@@ -187,7 +187,7 @@ declare namespace java {
              *  this method is called on a closed <code>PreparedStatement</code>
              */
             // @ts-ignore
-            setString(parameterIndex: number /*int*/, x: string): void
+            setString(parameterIndex: number /*int*/, x: java.lang.String | string): void
             /**
              * Sets the designated parameter to the given Java array of bytes.  The driver converts
              * this to an SQL <code>VARBINARY</code> or <code>LONGVARBINARY</code>
@@ -334,7 +334,7 @@ declare namespace java {
              * @see Types
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any, targetSqlType: number /*int*/): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: number /*int*/): void
             /**
              * <p>Sets the value of the designated parameter using the given object.
              * <p>The JDBC specification specifies a standard mapping from
@@ -369,7 +369,7 @@ declare namespace java {
              *  or the type of the given object is ambiguous
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any): void
             /**
              * Executes the SQL statement in this <code>PreparedStatement</code> object,
              * which may be any kind of SQL statement.
@@ -610,7 +610,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setNull(parameterIndex: number /*int*/, sqlType: number /*int*/, typeName: string): void
+            setNull(parameterIndex: number /*int*/, sqlType: number /*int*/, typeName: java.lang.String | string): void
             /**
              * Sets the designated parameter to the given <code>java.net.URL</code> value.
              * The driver converts this to an SQL <code>DATALINK</code> value
@@ -670,7 +670,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setNString(parameterIndex: number /*int*/, value: string): void
+            setNString(parameterIndex: number /*int*/, value: java.lang.String | string): void
             /**
              * Sets the designated parameter to a <code>Reader</code> object. The
              * <code>Reader</code> reads the data till end-of-file is reached. The
@@ -832,7 +832,7 @@ declare namespace java {
              * @see Types
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any, targetSqlType: number /*int*/, scaleOrLength: number /*int*/): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: number /*int*/, scaleOrLength: number /*int*/): void
             /**
              * Sets the designated parameter to the given input stream, which will have
              * the specified number of bytes.
@@ -1104,7 +1104,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: java.sql.SQLType, scaleOrLength: number /*int*/): void
             /**
              * Sets the value of the designated parameter with the given object.
              * This method is similar to {@link #setObject(int parameterIndex,
@@ -1125,7 +1125,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            setObject(parameterIndex: number /*int*/, x: any, targetSqlType: java.sql.SQLType): void
+            setObject(parameterIndex: number /*int*/, x: java.lang.Object | any, targetSqlType: java.sql.SQLType): void
             /**
              * Executes the SQL statement in this <code>PreparedStatement</code> object,
              * which must be an SQL Data Manipulation Language (DML) statement,
@@ -1149,7 +1149,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            executeLargeUpdate(): long
+            executeLargeUpdate(): number /*long*/
         }
     }
 }

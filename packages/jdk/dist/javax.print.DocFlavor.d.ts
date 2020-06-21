@@ -424,7 +424,7 @@ declare namespace javax {
              *      obey the syntax for a MIME media type string.
              */
             // @ts-ignore
-            constructor(mimeType: string, className: string)
+            constructor(mimeType: java.lang.String | string, className: java.lang.String | string)
             /**
              * A String representing the host operating system encoding.
              * This will follow the conventions documented in
@@ -438,26 +438,26 @@ declare namespace javax {
              * the executing VM.
              */
             // @ts-ignore
-            readonly hostEncoding: string
+            public static readonly hostEncoding: java.lang.String | string
             /**
              * Returns this doc flavor object's MIME type string based on the
              * canonical form. Each parameter value is enclosed in quotes.
              * @return the mime type
              */
             // @ts-ignore
-            getMimeType(): java.lang.String
+            public getMimeType(): string
             /**
              * Returns this doc flavor object's media type (from the MIME type).
              * @return the media type
              */
             // @ts-ignore
-            getMediaType(): java.lang.String
+            public getMediaType(): string
             /**
              * Returns this doc flavor object's media subtype (from the MIME type).
              * @return the media sub-type
              */
             // @ts-ignore
-            getMediaSubtype(): java.lang.String
+            public getMediaSubtype(): string
             /**
              * Returns a <code>String</code> representing a MIME
              * parameter.
@@ -474,13 +474,13 @@ declare namespace javax {
              * @exception NullPointerException if paramName is null.
              */
             // @ts-ignore
-            getParameter(paramName: string): java.lang.String
+            public getParameter(paramName: java.lang.String | string): string
             /**
              * Returns the name of this doc flavor object's representation class.
              * @return the name of the representation class.
              */
             // @ts-ignore
-            getRepresentationClassName(): java.lang.String
+            public getRepresentationClassName(): string
             /**
              * Converts this <code>DocFlavor</code> to a string.
              * @return MIME type string based on the canonical form. Each parameter
@@ -489,12 +489,12 @@ declare namespace javax {
              *           MIME type string to indicate the representation class name.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a hash code for this doc flavor object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Determines if this doc flavor object is equal to the given object.
              * The two are equal if the given object is not null, is an instance
@@ -512,7 +512,7 @@ declare namespace javax {
              *           otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

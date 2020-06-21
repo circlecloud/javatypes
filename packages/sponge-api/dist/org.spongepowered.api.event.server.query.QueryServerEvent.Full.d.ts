@@ -13,7 +13,7 @@ declare namespace org {
                                  * @return The GameId to respond with.
                                  */
                                 // @ts-ignore
-                                getGameId(): java.lang.String
+                                getGameId(): string
                                 /**
                                  * Gets the version to respond with.
                                  * <p>By default, this is the server's Minecraft version (e.g 1.8.1).
@@ -21,7 +21,7 @@ declare namespace org {
                                  * @return The version to respond with
                                  */
                                 // @ts-ignore
-                                getVersion(): java.lang.String
+                                getVersion(): string
                                 /**
                                  * Sets the version to respond with.
                                  * <p>If setting the string causes the message to go over the
@@ -29,13 +29,13 @@ declare namespace org {
                                  * @param version The version to respond with
                                  */
                                 // @ts-ignore
-                                setVersion(version: string): void
+                                setVersion(version: java.lang.String | string): void
                                 /**
                                  * Gets the list of plugins to respond with.
                                  * @return The list of plugins to respond with
                                  */
                                 // @ts-ignore
-                                getPlugins(): java.lang.String
+                                getPlugins(): string
                                 /**
                                  * Sets the list of plugins to respond with.
                                  * <p>If setting the string causes the message to go over the
@@ -43,7 +43,7 @@ declare namespace org {
                                  * @param plugins The list of plugins to respond with
                                  */
                                 // @ts-ignore
-                                setPlugins(plugins: string): void
+                                setPlugins(plugins: java.lang.String | string): void
                                 /**
                                  * Gets the map of custom keys and values to respond with.
                                  * <p>If settings any of the keys or values causes the message
@@ -52,13 +52,13 @@ declare namespace org {
                                  * @return The map of custom keys and values to respond with
                                  */
                                 // @ts-ignore
-                                getCustomValuesMap(): java.util.Map<java.lang.String, java.lang.String>
+                                getCustomValuesMap(): java.util.Map<java.lang.String | string, java.lang.String | string>
                                 /**
                                  * Gets the list of player names to respond with.
                                  * @return The list of player names to respond with
                                  */
                                 // @ts-ignore
-                                getPlayers(): java.util.List<java.lang.String>
+                                getPlayers(): Array<java.lang.String | string>
                             }
                         }
                     }

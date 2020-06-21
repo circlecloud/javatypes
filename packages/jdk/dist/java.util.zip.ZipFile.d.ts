@@ -25,7 +25,7 @@ declare namespace java {
                  * @see SecurityManager#checkRead(java.lang.String)
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Opens a new <code>ZipFile</code> to read from the specified
                  * <code>File</code> object in the specified mode.  The mode argument
@@ -107,7 +107,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                constructor(name: string, charset: java.nio.charset.Charset)
+                constructor(name: java.lang.String | string, charset: java.nio.charset.Charset)
                 /**
                  * Opens a ZIP file for reading given the specified File object.
                  * @param file the ZIP file to be opened for reading
@@ -127,7 +127,7 @@ declare namespace java {
                  * Mode flag to open a zip file for reading.
                  */
                 // @ts-ignore
-                readonly OPEN_READ: number /*int*/
+                public static readonly OPEN_READ: number /*int*/
                 /**
                  * Mode flag to open a zip file and mark it for deletion.  The file will be
                  * deleted some time between the moment that it is opened and the moment
@@ -136,7 +136,7 @@ declare namespace java {
                  * virtual machine exits.
                  */
                 // @ts-ignore
-                readonly OPEN_DELETE: number /*int*/
+                public static readonly OPEN_DELETE: number /*int*/
                 /**
                  * Returns the zip file comment, or null if none.
                  * @return the comment string for the zip file, or null if none
@@ -145,7 +145,7 @@ declare namespace java {
                  *  Since 1.7
                  */
                 // @ts-ignore
-                getComment(): java.lang.String
+                public getComment(): string
                 /**
                  * Returns the zip file entry for the specified name, or null
                  * if not found.
@@ -154,7 +154,7 @@ declare namespace java {
                  * @throws IllegalStateException if the zip file has been closed
                  */
                 // @ts-ignore
-                getEntry(name: string): java.util.zip.ZipEntry
+                public getEntry(name: java.lang.String | string): java.util.zip.ZipEntry
                 /**
                  * Returns an input stream for reading the contents of the specified
                  * zip file entry.
@@ -168,20 +168,20 @@ declare namespace java {
                  * @throws IllegalStateException if the zip file has been closed
                  */
                 // @ts-ignore
-                getInputStream(entry: java.util.zip.ZipEntry): java.io.InputStream
+                public getInputStream(entry: java.util.zip.ZipEntry): java.io.InputStream
                 /**
                  * Returns the path name of the ZIP file.
                  * @return the path name of the ZIP file
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns an enumeration of the ZIP file entries.
                  * @return an enumeration of the ZIP file entries
                  * @throws IllegalStateException if the zip file has been closed
                  */
                 // @ts-ignore
-                entries(): java.util.Enumeration<? extends java.util.zip.ZipEntry>
+                public entries(): java.util.Enumeration<any>
                 /**
                  * Return an ordered {@code Stream} over the ZIP file entries.
                  * Entries appear in the {@code Stream} in the order they appear in
@@ -191,14 +191,14 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                stream(): java.util.stream.Stream<? extends java.util.zip.ZipEntry>
+                public stream(): java.util.stream.Stream<any>
                 /**
                  * Returns the number of entries in the ZIP file.
                  * @return the number of entries in the ZIP file
                  * @throws IllegalStateException if the zip file has been closed
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Closes the ZIP file.
                  * <p> Closing this ZIP file will close all of the input streams
@@ -207,7 +207,7 @@ declare namespace java {
                  * @throws IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Ensures that the system resources held by this ZipFile object are
                  * released when there are no more references to it.

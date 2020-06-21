@@ -62,7 +62,7 @@ declare namespace javax {
              * @param s  the text for the menu label
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs a menu whose properties are taken from the
              * <code>Action</code> supplied.
@@ -78,7 +78,7 @@ declare namespace javax {
              * @param b can the menu be torn off (not yet implemented)
              */
             // @ts-ignore
-            constructor(s: string, b: boolean)
+            constructor(s: java.lang.String | string, b: boolean)
             /**
              * The window-closing listener for the popup.
              * @see WinListener
@@ -90,7 +90,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "MenuUI"
@@ -98,7 +98,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Sets the data model for the "menu button" -- the label
              * that the user clicks to open or close the menu.
@@ -110,13 +110,13 @@ declare namespace javax {
              *       hidden: true
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.ButtonModel): void
+            public setModel(newModel: javax.swing.ButtonModel): void
             /**
              * Returns true if the menu is currently selected (highlighted).
              * @return true if the menu is selected, else false
              */
             // @ts-ignore
-            isSelected(): boolean
+            public isSelected(): boolean
             /**
              * Sets the selection status of the menu.
              * @param b  true to select (highlight) the menu; false to de-select
@@ -126,13 +126,13 @@ declare namespace javax {
              *            hidden: true
              */
             // @ts-ignore
-            setSelected(b: boolean): void
+            public setSelected(b: boolean): void
             /**
              * Returns true if the menu's popup window is visible.
              * @return true if the menu is visible, else false
              */
             // @ts-ignore
-            isPopupMenuVisible(): boolean
+            public isPopupMenuVisible(): boolean
             /**
              * Sets the visibility of the menu's popup.  If the menu is
              * not enabled, this method will have no effect.
@@ -143,7 +143,7 @@ declare namespace javax {
              *            hidden: true
              */
             // @ts-ignore
-            setPopupMenuVisible(b: boolean): void
+            public setPopupMenuVisible(b: boolean): void
             /**
              * Computes the origin for the <code>JMenu</code>'s popup menu.
              * This method uses Look and Feel properties named
@@ -171,7 +171,7 @@ declare namespace javax {
              * @return the <code>delay</code> property
              */
             // @ts-ignore
-            getDelay(): int
+            public getDelay(): number /*int*/
             /**
              * Sets the suggested delay before the menu's <code>PopupMenu</code>
              * is popped up or down.  Each look and feel (L&amp;F) may determine
@@ -186,14 +186,14 @@ declare namespace javax {
              *            expert: true
              */
             // @ts-ignore
-            setDelay(d: number /*int*/): void
+            public setDelay(d: number /*int*/): void
             /**
              * Sets the location of the popup component.
              * @param x the x coordinate of the popup's new position
              * @param y the y coordinate of the popup's new position
              */
             // @ts-ignore
-            setMenuLocation(x: number /*int*/, y: number /*int*/): void
+            public setMenuLocation(x: number /*int*/, y: number /*int*/): void
             /**
              * Appends a menu item to the end of this menu.
              * Returns the menu item added.
@@ -201,7 +201,7 @@ declare namespace javax {
              * @return the <code>JMenuItem</code> added
              */
             // @ts-ignore
-            add(menuItem: javax.swing.JMenuItem): javax.swing.JMenuItem
+            public add(menuItem: javax.swing.JMenuItem): javax.swing.JMenuItem
             /**
              * Appends a component to the end of this menu.
              * Returns the component added.
@@ -209,7 +209,7 @@ declare namespace javax {
              * @return the <code>Component</code> added
              */
             // @ts-ignore
-            add(c: java.awt.Component): java.awt.Component
+            public add(c: java.awt.Component): java.awt.Component
             /**
              * Adds the specified component to this container at the given
              * position. If <code>index</code> equals -1, the component will
@@ -221,14 +221,14 @@ declare namespace javax {
              * @see java.awt.Container#add(Component, int)
              */
             // @ts-ignore
-            add(c: java.awt.Component, index: number /*int*/): java.awt.Component
+            public add(c: java.awt.Component, index: number /*int*/): java.awt.Component
             /**
              * Creates a new menu item with the specified text and appends
              * it to the end of this menu.
              * @param s the string for the menu item to be added
              */
             // @ts-ignore
-            add(s: string): javax.swing.JMenuItem
+            public add(s: java.lang.String | string): javax.swing.JMenuItem
             /**
              * Creates a new menu item attached to the specified
              * <code>Action</code> object and appends it to the end of this menu.
@@ -236,7 +236,7 @@ declare namespace javax {
              * @see Action
              */
             // @ts-ignore
-            add(a: javax.swing.Action): javax.swing.JMenuItem
+            public add(a: javax.swing.Action): javax.swing.JMenuItem
             /**
              * Factory method which creates the <code>JMenuItem</code> for
              * <code>Action</code>s added to the <code>JMenu</code>.
@@ -257,7 +257,7 @@ declare namespace javax {
              * Appends a new separator to the end of the menu.
              */
             // @ts-ignore
-            addSeparator(): void
+            public addSeparator(): void
             /**
              * Inserts a new menu item with the specified text at a
              * given position.
@@ -268,7 +268,7 @@ declare namespace javax {
              *                   <code>pos</code> &lt; 0
              */
             // @ts-ignore
-            insert(s: string, pos: number /*int*/): void
+            public insert(s: java.lang.String | string, pos: number /*int*/): void
             /**
              * Inserts the specified <code>JMenuitem</code> at a given position.
              * @param mi the <code>JMenuitem</code> to add
@@ -279,7 +279,7 @@ declare namespace javax {
              *                   <code>pos</code> &lt; 0
              */
             // @ts-ignore
-            insert(mi: javax.swing.JMenuItem, pos: number /*int*/): javax.swing.JMenuItem
+            public insert(mi: javax.swing.JMenuItem, pos: number /*int*/): javax.swing.JMenuItem
             /**
              * Inserts a new menu item attached to the specified <code>Action</code>
              * object at a given position.
@@ -290,7 +290,7 @@ declare namespace javax {
              *                   <code>pos</code> &lt; 0
              */
             // @ts-ignore
-            insert(a: javax.swing.Action, pos: number /*int*/): javax.swing.JMenuItem
+            public insert(a: javax.swing.Action, pos: number /*int*/): javax.swing.JMenuItem
             /**
              * Inserts a separator at the specified position.
              * @param index an integer specifying the position at which to
@@ -299,7 +299,7 @@ declare namespace javax {
              *                        <code>index</code> &lt; 0
              */
             // @ts-ignore
-            insertSeparator(index: number /*int*/): void
+            public insertSeparator(index: number /*int*/): void
             /**
              * Returns the <code>JMenuItem</code> at the specified position.
              * If the component at <code>pos</code> is not a menu item,
@@ -312,7 +312,7 @@ declare namespace javax {
              *           if the item as the specified position is not a menu item
              */
             // @ts-ignore
-            getItem(pos: number /*int*/): javax.swing.JMenuItem
+            public getItem(pos: number /*int*/): javax.swing.JMenuItem
             /**
              * Returns the number of items on the menu, including separators.
              * This method is included for AWT compatibility.
@@ -320,7 +320,7 @@ declare namespace javax {
              * @see #getMenuComponentCount
              */
             // @ts-ignore
-            getItemCount(): int
+            public getItemCount(): number /*int*/
             /**
              * Returns true if the menu can be torn off.  This method is not
              * yet implemented.
@@ -328,14 +328,14 @@ declare namespace javax {
              * @exception Error  if invoked -- this method is not yet implemented
              */
             // @ts-ignore
-            isTearOff(): boolean
+            public isTearOff(): boolean
             /**
              * Removes the specified menu item from this menu.  If there is no
              * popup menu, this method will have no effect.
              * @param item the <code>JMenuItem</code> to be removed from the menu
              */
             // @ts-ignore
-            remove(item: javax.swing.JMenuItem): void
+            public remove(item: javax.swing.JMenuItem): void
             /**
              * Removes the menu item at the specified index from this menu.
              * @param pos the position of the item to be removed
@@ -344,24 +344,24 @@ declare namespace javax {
              *                        is greater than the number of menu items
              */
             // @ts-ignore
-            remove(pos: number /*int*/): void
+            public remove(pos: number /*int*/): void
             /**
              * Removes the component <code>c</code> from this menu.
              * @param c the component to be removed
              */
             // @ts-ignore
-            remove(c: java.awt.Component): void
+            public remove(c: java.awt.Component): void
             /**
              * Removes all menu items from this menu.
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Returns the number of components on the menu.
              * @return an integer containing the number of components on the menu
              */
             // @ts-ignore
-            getMenuComponentCount(): int
+            public getMenuComponentCount(): number /*int*/
             /**
              * Returns the component at position <code>n</code>.
              * @param n the position of the component to be returned
@@ -369,7 +369,7 @@ declare namespace javax {
              *                   if there is no popup menu
              */
             // @ts-ignore
-            getMenuComponent(n: number /*int*/): java.awt.Component
+            public getMenuComponent(n: number /*int*/): java.awt.Component
             /**
              * Returns an array of <code>Component</code>s of the menu's
              * subcomponents.  Note that this returns all <code>Component</code>s
@@ -378,7 +378,7 @@ declare namespace javax {
              *           if there is no popup menu
              */
             // @ts-ignore
-            getMenuComponents(): java.awt.Component[]
+            public getMenuComponents(): java.awt.Component[]
             /**
              * Returns true if the menu is a 'top-level menu', that is, if it is
              * the direct child of a menubar.
@@ -387,7 +387,7 @@ declare namespace javax {
              *          on another menu
              */
             // @ts-ignore
-            isTopLevelMenu(): boolean
+            public isTopLevelMenu(): boolean
             /**
              * Returns true if the specified component exists in the
              * submenu hierarchy.
@@ -395,25 +395,25 @@ declare namespace javax {
              * @return true if the <code>Component</code> exists, false otherwise
              */
             // @ts-ignore
-            isMenuComponent(c: java.awt.Component): boolean
+            public isMenuComponent(c: java.awt.Component): boolean
             /**
              * Returns the popupmenu associated with this menu.  If there is
              * no popupmenu, it will create one.
              */
             // @ts-ignore
-            getPopupMenu(): javax.swing.JPopupMenu
+            public getPopupMenu(): javax.swing.JPopupMenu
             /**
              * Adds a listener for menu events.
              * @param l the listener to be added
              */
             // @ts-ignore
-            addMenuListener(l: javax.swing.event.MenuListener): void
+            public addMenuListener(l: javax.swing.event.MenuListener): void
             /**
              * Removes a listener for menu events.
              * @param l the listener to be removed
              */
             // @ts-ignore
-            removeMenuListener(l: javax.swing.event.MenuListener): void
+            public removeMenuListener(l: javax.swing.event.MenuListener): void
             /**
              * Returns an array of all the <code>MenuListener</code>s added
              * to this JMenu with addMenuListener().
@@ -422,7 +422,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getMenuListeners(): javax.swing.event.MenuListener[]
+            public getMenuListeners(): javax.swing.event.MenuListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -466,7 +466,7 @@ declare namespace javax {
              *         it is not
              */
             // @ts-ignore
-            menuSelectionChanged(isIncluded: boolean): void
+            public menuSelectionChanged(isIncluded: boolean): void
             /**
              * Returns an array of <code>MenuElement</code>s containing the submenu
              * for this menu component.  If popup menu is <code>null</code> returns
@@ -477,7 +477,7 @@ declare namespace javax {
              * @return an array of <code>MenuElement</code> objects
              */
             // @ts-ignore
-            getSubElements(): javax.swing.MenuElement[]
+            public getSubElements(): javax.swing.MenuElement[]
             /**
              * Returns the <code>java.awt.Component</code> used to
              * paint this <code>MenuElement</code>.
@@ -485,7 +485,7 @@ declare namespace javax {
              * an event is inside a menu component.
              */
             // @ts-ignore
-            getComponent(): java.awt.Component
+            public getComponent(): java.awt.Component
             /**
              * Sets the <code>ComponentOrientation</code> property of this menu
              * and all components contained within it. This includes all
@@ -498,9 +498,9 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            applyComponentOrientation(o: java.awt.ComponentOrientation): void
+            public applyComponentOrientation(o: java.awt.ComponentOrientation): void
             // @ts-ignore
-            setComponentOrientation(o: java.awt.ComponentOrientation): void
+            public setComponentOrientation(o: java.awt.ComponentOrientation): void
             /**
              * <code>setAccelerator</code> is not defined for <code>JMenu</code>.
              * Use <code>setMnemonic</code> instead.
@@ -514,7 +514,7 @@ declare namespace javax {
              *           hidden: true
              */
             // @ts-ignore
-            setAccelerator(keyStroke: javax.swing.KeyStroke): void
+            public setAccelerator(keyStroke: javax.swing.KeyStroke): void
             /**
              * Processes key stroke events such as mnemonics and accelerators.
              * @param evt  the key event to be processed
@@ -528,7 +528,7 @@ declare namespace javax {
              *           button was pressed for
              */
             // @ts-ignore
-            doClick(pressTime: number /*int*/): void
+            public doClick(pressTime: number /*int*/): void
             /**
              * Returns a string representation of this <code>JMenu</code>. This
              * method is intended to be used only for debugging purposes, and the
@@ -538,7 +538,7 @@ declare namespace javax {
              * @return a string representation of this JMenu.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JMenu.
              * For JMenus, the AccessibleContext takes the form of an
@@ -548,7 +548,7 @@ declare namespace javax {
              *          AccessibleContext of this JMenu
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

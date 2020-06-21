@@ -34,7 +34,7 @@ declare namespace java {
                  * Singleton instance for Japanese chronology.
                  */
                 // @ts-ignore
-                readonly INSTANCE: java.time.chrono.JapaneseChronology
+                public static readonly INSTANCE: java.time.chrono.JapaneseChronology
                 /**
                  * Gets the ID of the chronology - 'Japanese'.
                  * <p>
@@ -44,7 +44,7 @@ declare namespace java {
                  * @see #getCalendarType()
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                public getId(): string
                 /**
                  * Gets the calendar type of the underlying calendar system - 'japanese'.
                  * <p>
@@ -57,7 +57,7 @@ declare namespace java {
                  * @see #getId()
                  */
                 // @ts-ignore
-                getCalendarType(): java.lang.String
+                public getCalendarType(): string
                 /**
                  * Obtains a local date in Japanese calendar system from the
                  * era, year-of-era, month-of-year and day-of-month fields.
@@ -80,7 +80,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not a {@code JapaneseEra}
                  */
                 // @ts-ignore
-                date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.JapaneseDate
+                public date(era: java.time.chrono.Era, yearOfEra: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.JapaneseDate
                 /**
                  * Obtains a local date in Japanese calendar system from the
                  * proleptic-year, month-of-year and day-of-month fields.
@@ -94,7 +94,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.JapaneseDate
+                public date(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.JapaneseDate
                 /**
                  * Obtains a local date in Japanese calendar system from the
                  * era, year-of-era and day-of-year fields.
@@ -117,7 +117,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not a {@code JapaneseEra}
                  */
                 // @ts-ignore
-                dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.JapaneseDate
+                public dateYearDay(era: java.time.chrono.Era, yearOfEra: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.JapaneseDate
                 /**
                  * Obtains a local date in Japanese calendar system from the
                  * proleptic-year and day-of-year fields.
@@ -131,7 +131,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.JapaneseDate
+                public dateYearDay(prolepticYear: number /*int*/, dayOfYear: number /*int*/): java.time.chrono.JapaneseDate
                 /**
                  * Obtains a local date in the Japanese calendar system from the epoch-day.
                  * @param epochDay  the epoch day
@@ -139,21 +139,21 @@ declare namespace java {
                  * @throws DateTimeException if unable to create the date
                  */
                 // @ts-ignore
-                dateEpochDay(epochDay: number /*long*/): java.time.chrono.JapaneseDate
+                public dateEpochDay(epochDay: number /*long*/): java.time.chrono.JapaneseDate
                 // @ts-ignore
-                dateNow(): java.time.chrono.JapaneseDate
+                public dateNow(): java.time.chrono.JapaneseDate
                 // @ts-ignore
-                dateNow(zone: java.time.ZoneId): java.time.chrono.JapaneseDate
+                public dateNow(zone: java.time.ZoneId): java.time.chrono.JapaneseDate
                 // @ts-ignore
-                dateNow(clock: java.time.Clock): java.time.chrono.JapaneseDate
+                public dateNow(clock: java.time.Clock): java.time.chrono.JapaneseDate
                 // @ts-ignore
-                date(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.JapaneseDate
+                public date(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.JapaneseDate
                 // @ts-ignore
-                localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<java.time.chrono.JapaneseDate>
+                public localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<java.time.chrono.JapaneseDate>
                 // @ts-ignore
-                zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<java.time.chrono.JapaneseDate>
+                public zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<java.time.chrono.JapaneseDate>
                 // @ts-ignore
-                zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<java.time.chrono.JapaneseDate>
+                public zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<java.time.chrono.JapaneseDate>
                 /**
                  * Checks if the specified year is a leap year.
                  * <p>
@@ -164,9 +164,9 @@ declare namespace java {
                  * @return true if the year is a leap year
                  */
                 // @ts-ignore
-                isLeapYear(prolepticYear: number /*long*/): boolean
+                public isLeapYear(prolepticYear: number /*long*/): boolean
                 // @ts-ignore
-                prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): int
+                public prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): number /*int*/
                 /**
                  * Returns the calendar system era object from the given numeric value.
                  * See the description of each Era for the numeric values of:
@@ -177,13 +177,13 @@ declare namespace java {
                  * @throws DateTimeException if {#code eraValue} is invalid
                  */
                 // @ts-ignore
-                eraOf(eraValue: number /*int*/): java.time.chrono.JapaneseEra
+                public eraOf(eraValue: number /*int*/): java.time.chrono.JapaneseEra
                 // @ts-ignore
-                eras(): java.util.List<java.time.chrono.Era>
+                public eras(): Array<java.time.chrono.Era>
                 // @ts-ignore
-                range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.ChronoField): java.time.temporal.ValueRange
                 // @ts-ignore
-                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.JapaneseDate
+                public resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.JapaneseDate
             }
         }
     }

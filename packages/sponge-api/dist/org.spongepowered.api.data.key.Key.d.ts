@@ -19,13 +19,13 @@ declare namespace org {
                          * @return The key builder
                          */
                         // @ts-ignore
-                        builder(): org.spongepowered.api.data.key.Key.Builder<?, ?>
+                        builder(): org.spongepowered.api.data.key.Key.Builder<any, any>
                         /**
                          * Gets the class of the {@link BaseValue} this {@link Key} is representing.
                          * @return The value class
                          */
                         // @ts-ignore
-                        getValueToken(): <any>
+                        getValueToken(): object
                         /**
                          * Gets the class of the element of the {@link BaseValue} this {@link Key}
                          * is representing. On occasion, if the element is a {@link Collection} type,
@@ -36,7 +36,7 @@ declare namespace org {
                          * @return The element class
                          */
                         // @ts-ignore
-                        getElementToken(): <any>
+                        getElementToken(): object
                         /**
                          * Gets the {@link DataQuery} for recommended use with
                          * {@link DataContainer}s.

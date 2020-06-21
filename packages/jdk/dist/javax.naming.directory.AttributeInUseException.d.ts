@@ -21,7 +21,7 @@ declare namespace javax {
                  * @see java.lang.Throwable#getMessage
                  */
                 // @ts-ignore
-                constructor(explanation: string)
+                constructor(explanation: java.lang.String | string)
                 /**
                  * Constructs a new instance of AttributeInUseException.
                  * All fields are initialized to null.

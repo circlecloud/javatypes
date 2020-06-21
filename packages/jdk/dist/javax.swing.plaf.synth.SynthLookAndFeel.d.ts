@@ -42,13 +42,13 @@ declare namespace javax {
                      * @param cache SynthStyleFactory the UIs should use.
                      */
                     // @ts-ignore
-                    setStyleFactory(cache: javax.swing.plaf.synth.SynthStyleFactory): void
+                    public static setStyleFactory(cache: javax.swing.plaf.synth.SynthStyleFactory): void
                     /**
                      * Returns the current SynthStyleFactory.
                      * @return SynthStyleFactory
                      */
                     // @ts-ignore
-                    getStyleFactory(): javax.swing.plaf.synth.SynthStyleFactory
+                    public static getStyleFactory(): javax.swing.plaf.synth.SynthStyleFactory
                     /**
                      * Gets a SynthStyle for the specified region of the specified component.
                      * This is not for general consumption, only custom UIs should call this
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @return SynthStyle to use.
                      */
                     // @ts-ignore
-                    getStyle(c: javax.swing.JComponent, region: javax.swing.plaf.synth.Region): javax.swing.plaf.synth.SynthStyle
+                    public static getStyle(c: javax.swing.JComponent, region: javax.swing.plaf.synth.Region): javax.swing.plaf.synth.SynthStyle
                     /**
                      * Updates the style associated with <code>c</code>, and all its children.
                      * This is a lighter version of
@@ -66,14 +66,14 @@ declare namespace javax {
                      * @param c Component to update style for.
                      */
                     // @ts-ignore
-                    updateStyles(c: java.awt.Component): void
+                    public static updateStyles(c: java.awt.Component): void
                     /**
                      * Returns the Region for the JComponent <code>c</code>.
                      * @param c JComponent to fetch the Region for
                      * @return Region corresponding to <code>c</code>
                      */
                     // @ts-ignore
-                    getRegion(c: javax.swing.JComponent): javax.swing.plaf.synth.Region
+                    public static getRegion(c: javax.swing.JComponent): javax.swing.plaf.synth.Region
                     /**
                      * Creates the Synth look and feel <code>ComponentUI</code> for
                      * the passed in <code>JComponent</code>.
@@ -81,7 +81,7 @@ declare namespace javax {
                      * @return ComponentUI to use for <code>c</code>
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Loads the set of <code>SynthStyle</code>s that will be used by
                      * this <code>SynthLookAndFeel</code>. <code>resourceBase</code> is
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if input or resourceBase is <code>null</code>
                      */
                     // @ts-ignore
-                    load(input: java.io.InputStream, resourceBase: java.lang.Class<any>): void
+                    public load(input: java.io.InputStream, resourceBase: java.lang.Class<any>): void
                     /**
                      * Loads the set of <code>SynthStyle</code>s that will be used by
                      * this <code>SynthLookAndFeel</code>. Path based resources are resolved
@@ -113,53 +113,53 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    load(url: java.net.URL): void
+                    public load(url: java.net.URL): void
                     /**
                      * Called by UIManager when this look and feel is installed.
                      */
                     // @ts-ignore
-                    initialize(): void
+                    public initialize(): void
                     /**
                      * Called by UIManager when this look and feel is uninstalled.
                      */
                     // @ts-ignore
-                    uninitialize(): void
+                    public uninitialize(): void
                     /**
                      * Returns the defaults for this SynthLookAndFeel.
                      * @return Defaults table.
                      */
                     // @ts-ignore
-                    getDefaults(): javax.swing.UIDefaults
+                    public getDefaults(): javax.swing.UIDefaults
                     /**
                      * Returns true, SynthLookAndFeel is always supported.
                      * @return true.
                      */
                     // @ts-ignore
-                    isSupportedLookAndFeel(): boolean
+                    public isSupportedLookAndFeel(): boolean
                     /**
                      * Returns false, SynthLookAndFeel is not a native look and feel.
                      * @return false
                      */
                     // @ts-ignore
-                    isNativeLookAndFeel(): boolean
+                    public isNativeLookAndFeel(): boolean
                     /**
                      * Returns a textual description of SynthLookAndFeel.
                      * @return textual description of synth.
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * Return a short string that identifies this look and feel.
                      * @return a short string identifying this look and feel.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Return a string that identifies this look and feel.
                      * @return a short string identifying this look and feel.
                      */
                     // @ts-ignore
-                    getID(): java.lang.String
+                    public getID(): string
                     /**
                      * Returns whether or not the UIs should update their
                      * <code>SynthStyles</code> from the <code>SynthStyleFactory</code>
@@ -172,7 +172,7 @@ declare namespace javax {
                      *  when the ancestor changed.
                      */
                     // @ts-ignore
-                    shouldUpdateStyleOnAncestorChanged(): boolean
+                    public shouldUpdateStyleOnAncestorChanged(): boolean
                     /**
                      * Returns whether or not the UIs should update their styles when a
                      * particular event occurs.

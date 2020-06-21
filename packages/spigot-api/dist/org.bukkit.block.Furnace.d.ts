@@ -11,7 +11,7 @@ declare namespace org {
                  * @return Burn time
                  */
                 // @ts-ignore
-                getBurnTime(): short
+                getBurnTime(): number /*short*/
                 /**
                  * Set burn time.
                  * A burn time greater than 0 will cause this block to be lit, whilst a time
@@ -26,7 +26,7 @@ declare namespace org {
                  * @return Cook time
                  */
                 // @ts-ignore
-                getCookTime(): short
+                getCookTime(): number /*short*/
                 /**
                  * Set cook time.
                  * This is the amount of time the item has been cooking for.
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return Cook time total
                  */
                 // @ts-ignore
-                getCookTimeTotal(): int
+                getCookTimeTotal(): number /*int*/
                 /**
                  * Set cook time.
                  * This is the amount of time the item is required to cook for.

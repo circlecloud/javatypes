@@ -20,7 +20,7 @@ declare namespace javax {
                      * @see View#getPreferredSpan
                      */
                     // @ts-ignore
-                    getAlignment(axis: number /*int*/): float
+                    public getAlignment(axis: number /*int*/): number /*float*/
                     /**
                      * Renders using the given rendering surface and area on that
                      * surface.
@@ -29,7 +29,7 @@ declare namespace javax {
                      * @see View#paint
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, allocation: java.awt.Shape): void
+                    public paint(g: java.awt.Graphics, allocation: java.awt.Shape): void
                     /**
                      * Paints one of the children; called by paint().  By default
                      * that is all it does, but a subclass can use this to paint

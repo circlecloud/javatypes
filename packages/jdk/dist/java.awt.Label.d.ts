@@ -43,7 +43,7 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Constructs a new label that presents the specified string of
              * text with the specified alignment.
@@ -59,30 +59,30 @@ declare namespace java {
              * @see java.awt.GraphicsEnvironment#isHeadless
              */
             // @ts-ignore
-            constructor(text: string, alignment: number /*int*/)
+            constructor(text: java.lang.String | string, alignment: number /*int*/)
             /**
              * Indicates that the label should be left justified.
              */
             // @ts-ignore
-            readonly LEFT: number /*int*/
+            public static readonly LEFT: number /*int*/
             /**
              * Indicates that the label should be centered.
              */
             // @ts-ignore
-            readonly CENTER: number /*int*/
+            public static readonly CENTER: number /*int*/
             /**
              * Indicates that the label should be right justified.
              * @since JDK1.0t.
              */
             // @ts-ignore
-            readonly RIGHT: number /*int*/
+            public static readonly RIGHT: number /*int*/
             /**
              * Creates the peer for this label.  The peer allows us to
              * modify the appearance of the label without changing its
              * functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Gets the current alignment of this label. Possible values are
              * <code>Label.LEFT</code>, <code>Label.RIGHT</code>, and
@@ -90,7 +90,7 @@ declare namespace java {
              * @see java.awt.Label#setAlignment
              */
             // @ts-ignore
-            getAlignment(): int
+            public getAlignment(): number /*int*/
             /**
              * Sets the alignment for this label to the specified alignment.
              * Possible values are <code>Label.LEFT</code>,
@@ -101,7 +101,7 @@ declare namespace java {
              * @see java.awt.Label#getAlignment
              */
             // @ts-ignore
-            setAlignment(alignment: number /*int*/): void
+            public setAlignment(alignment: number /*int*/): void
             /**
              * Gets the text of this label.
              * @return the text of this label, or <code>null</code> if
@@ -109,7 +109,7 @@ declare namespace java {
              * @see java.awt.Label#setText
              */
             // @ts-ignore
-            getText(): java.lang.String
+            public getText(): string
             /**
              * Sets the text for this label to the specified text.
              * @param text the text that this label displays. If
@@ -119,7 +119,7 @@ declare namespace java {
              * @see java.awt.Label#getText
              */
             // @ts-ignore
-            setText(text: string): void
+            public setText(text: java.lang.String | string): void
             /**
              * Returns a string representing the state of this <code>Label</code>.
              * This method is intended to be used only for debugging purposes, and the
@@ -129,7 +129,7 @@ declare namespace java {
              * @return the parameter string of this label
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this Label.
              * For labels, the AccessibleContext takes the form of an
@@ -140,7 +140,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

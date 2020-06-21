@@ -18,7 +18,7 @@ declare namespace javax {
              * @author Steve Wilson
              */
             // @ts-ignore
-            class AbstractColorChooserPanel extends javax.swing.JPanel {
+            abstract class AbstractColorChooserPanel extends javax.swing.JPanel {
                 // @ts-ignore
                 constructor()
                 /**
@@ -28,7 +28,7 @@ declare namespace javax {
                  * Override this method to update your <code>ChooserPanel</code>.
                  */
                 // @ts-ignore
-                abstract updateChooser(): void
+                public abstract updateChooser(): void
                 /**
                  * Builds a new chooser panel.
                  */
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @return the name of the display panel
                  */
                 // @ts-ignore
-                abstract getDisplayName(): java.lang.String
+                public abstract getDisplayName(): string
                 /**
                  * Provides a hint to the look and feel as to the
                  * <code>KeyEvent.VK</code> constant that can be used as a mnemonic to
@@ -57,7 +57,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getMnemonic(): int
+                public getMnemonic(): number /*int*/
                 /**
                  * Provides a hint to the look and feel as to the index of the character in
                  * <code>getDisplayName</code> that should be visually identified as the
@@ -80,19 +80,19 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getDisplayedMnemonicIndex(): int
+                public getDisplayedMnemonicIndex(): number /*int*/
                 /**
                  * Returns the small display icon for the panel.
                  * @return the small display icon
                  */
                 // @ts-ignore
-                abstract getSmallDisplayIcon(): javax.swing.Icon
+                public abstract getSmallDisplayIcon(): javax.swing.Icon
                 /**
                  * Returns the large display icon for the panel.
                  * @return the large display icon
                  */
                 // @ts-ignore
-                abstract getLargeDisplayIcon(): javax.swing.Icon
+                public abstract getLargeDisplayIcon(): javax.swing.Icon
                 /**
                  * Invoked when the panel is added to the chooser.
                  * If you override this, be sure to call <code>super</code>.
@@ -101,20 +101,20 @@ declare namespace javax {
                  *                           installed
                  */
                 // @ts-ignore
-                installChooserPanel(enclosingChooser: javax.swing.JColorChooser): void
+                public installChooserPanel(enclosingChooser: javax.swing.JColorChooser): void
                 /**
                  * Invoked when the panel is removed from the chooser.
                  * If override this, be sure to call <code>super</code>.
                  */
                 // @ts-ignore
-                uninstallChooserPanel(enclosingChooser: javax.swing.JColorChooser): void
+                public uninstallChooserPanel(enclosingChooser: javax.swing.JColorChooser): void
                 /**
                  * Returns the model that the chooser panel is editing.
                  * @return the <code>ColorSelectionModel</code> model this panel
                  *          is editing
                  */
                 // @ts-ignore
-                getColorSelectionModel(): javax.swing.colorchooser.ColorSelectionModel
+                public getColorSelectionModel(): javax.swing.colorchooser.ColorSelectionModel
                 /**
                  * Returns the color that is currently selected.
                  * @return the <code>Color</code> that is selected
@@ -126,7 +126,7 @@ declare namespace javax {
                  * @param g  the <code>Graphics</code> object
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics): void
+                public paint(g: java.awt.Graphics): void
             }
         }
     }

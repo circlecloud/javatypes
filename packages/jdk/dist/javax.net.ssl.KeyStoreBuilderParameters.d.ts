@@ -28,7 +28,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException if parameters is an empty list
                  */
                 // @ts-ignore
-                constructor(parameters: Array<java.security.KeyStore.Builder>)
+                constructor(parameters: java.util.List<java.security.KeyStore.Builder> | Array<java.security.KeyStore.Builder>)
                 /**
                  * Return the unmodifiable List of the
                  * {@linkplain java.security.KeyStore.Builder}s
@@ -38,7 +38,7 @@ declare namespace javax {
                  *  encapsulated by this object.
                  */
                 // @ts-ignore
-                getParameters(): java.util.List<java.security.KeyStore.Builder>
+                public getParameters(): Array<java.security.KeyStore.Builder>
             }
         }
     }

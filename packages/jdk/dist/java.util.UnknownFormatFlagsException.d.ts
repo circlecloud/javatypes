@@ -15,15 +15,15 @@ declare namespace java {
              *          The set of format flags which contain an unknown flag
              */
             // @ts-ignore
-            constructor(f: string)
+            constructor(f: java.lang.String | string)
             /**
              * Returns the set of flags which contains an unknown flag.
              * @return The flags
              */
             // @ts-ignore
-            getFlags(): java.lang.String
+            getFlags(): string
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

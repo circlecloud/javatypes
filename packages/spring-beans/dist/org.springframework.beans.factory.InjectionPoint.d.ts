@@ -35,14 +35,14 @@ declare namespace org {
                      * @return the MethodParameter, or {#code null} if none
                      */
                     // @ts-ignore
-                    getMethodParameter(): MethodParameter
+                    public getMethodParameter(): MethodParameter
                     /**
                      * Return the wrapped Field, if any.
                      * <p>Note: Either MethodParameter or Field is available.
                      * @return the Field, or {#code null} if none
                      */
                     // @ts-ignore
-                    getField(): java.lang.reflect.Field
+                    public getField(): java.lang.reflect.Field
                     /**
                      * Return the wrapped MethodParameter, assuming it is present.
                      * @return the MethodParameter (never {#code null})
@@ -55,7 +55,7 @@ declare namespace org {
                      * Obtain the annotations associated with the wrapped field or method/constructor parameter.
                      */
                     // @ts-ignore
-                    getAnnotations(): java.lang.annotation.Annotation[]
+                    public getAnnotations(): java.lang.annotation.Annotation[]
                     /**
                      * Retrieve a field/parameter annotation of the given type, if any.
                      * @param annotationType the annotation type to retrieve
@@ -63,19 +63,19 @@ declare namespace org {
                      * @since 4.3.9
                      */
                     // @ts-ignore
-                    getAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
+                    public getAnnotation<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>): A
                     /**
                      * Return the type declared by the underlying field or method/constructor parameter,
                      * indicating the injection type.
                      */
                     // @ts-ignore
-                    getDeclaredType(): java.lang.Class<?>
+                    public getDeclaredType(): java.lang.Class<any>
                     /**
                      * Returns the wrapped member, containing the injection point.
                      * @return the Field / Method / Constructor as Member
                      */
                     // @ts-ignore
-                    getMember(): java.lang.reflect.Member
+                    public getMember(): java.lang.reflect.Member
                     /**
                      * Return the wrapped annotated element.
                      * <p>Note: In case of a method/constructor parameter, this exposes
@@ -86,13 +86,13 @@ declare namespace org {
                      * @return the Field / Method / Constructor as AnnotatedElement
                      */
                     // @ts-ignore
-                    getAnnotatedElement(): java.lang.reflect.AnnotatedElement
+                    public getAnnotatedElement(): java.lang.reflect.AnnotatedElement
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

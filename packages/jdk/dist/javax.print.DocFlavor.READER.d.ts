@@ -25,21 +25,21 @@ declare namespace javax {
                  *      obey the syntax for a MIME media type string.
                  */
                 // @ts-ignore
-                constructor(mimeType: string)
+                constructor(mimeType: java.lang.String | string)
                 /**
                  * Doc flavor with MIME type = <CODE>"text/plain;
                  * charset=utf-16"</CODE>, print data representation class name =
                  * <CODE>"java.io.Reader"</CODE> (character stream).
                  */
                 // @ts-ignore
-                readonly TEXT_PLAIN: javax.print.DocFlavor.READER
+                public static readonly TEXT_PLAIN: javax.print.DocFlavor.READER
                 /**
                  * Doc flavor with MIME type = <CODE>"text/html;
                  * charset=utf-16"</CODE>, print data representation class name =
                  * <CODE>"java.io.Reader"</CODE> (character stream).
                  */
                 // @ts-ignore
-                readonly TEXT_HTML: javax.print.DocFlavor.READER
+                public static readonly TEXT_HTML: javax.print.DocFlavor.READER
             }
         }
     }

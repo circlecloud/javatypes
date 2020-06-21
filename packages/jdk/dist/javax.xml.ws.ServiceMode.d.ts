@@ -7,7 +7,7 @@ declare namespace javax {
              * @since JAX-WS 2.0
              */
             // @ts-ignore
-            class ServiceMode implements java.lang.annotation.Annotation {
+            abstract class ServiceMode implements java.lang.annotation.Annotation {
             }
         }
     }

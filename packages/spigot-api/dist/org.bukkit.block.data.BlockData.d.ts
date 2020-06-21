@@ -17,7 +17,7 @@ declare namespace org {
                      * @return serialized data string for this block
                      */
                     // @ts-ignore
-                    getAsString(): java.lang.String
+                    getAsString(): string
                     /**
                      * Gets a string, which when passed into a method such as
                      * {@link Server#createBlockData(java.lang.String)} will recreate this or a
@@ -43,7 +43,7 @@ declare namespace org {
                      * @return serialized data string for this block
                      */
                     // @ts-ignore
-                    getAsString(hideUnspecified: boolean): java.lang.String
+                    getAsString(hideUnspecified: boolean): string
                     /**
                      * Merges all explicitly set states from the given data with this BlockData.
                      * <br>

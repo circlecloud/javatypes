@@ -7,10 +7,25 @@ declare namespace org {
          */
         // @ts-ignore
         class Axis extends java.lang.Enum<org.bukkit.Axis> {
+            /**
+             * The x axis.
+             */
+            // @ts-ignore
+            readonly X: org.bukkit.Axis
+            /**
+             * The y axis.
+             */
+            // @ts-ignore
+            readonly Y: org.bukkit.Axis
+            /**
+             * The z axis.
+             */
+            // @ts-ignore
+            readonly Z: org.bukkit.Axis
             // @ts-ignore
             values(): org.bukkit.Axis[]
             // @ts-ignore
-            valueOf(name: string): org.bukkit.Axis
+            valueOf(name: java.lang.String | string): org.bukkit.Axis
         }
     }
 }

@@ -16,21 +16,21 @@ declare namespace org {
                  * @see CharSequenceEncoder
                  */
                 // @ts-ignore
-                class StringDecoder extends org.springframework.core.codec.AbstractDataBufferDecoder<java.lang.String> {
+                class StringDecoder extends org.springframework.core.codec.AbstractDataBufferDecoder<java.lang.String | string> {
                     /**
                      * The default charset to use, i.e. "UTF-8".
                      */
                     // @ts-ignore
-                    readonly DEFAULT_CHARSET: java.nio.charset.Charset
+                    public static readonly DEFAULT_CHARSET: java.nio.charset.Charset
                     /**
                      * The default delimiter strings to use, i.e. {@code \r\n} and {@code \n}.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_DELIMITERS: Array<java.lang.String>
+                    public static readonly DEFAULT_DELIMITERS: java.util.List<java.lang.String | string> | Array<java.lang.String | string>
                     // @ts-ignore
-                    canDecode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canDecode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                     // @ts-ignore
-                    decode(input: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public decode(input: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Create a {@code StringDecoder} for {@code "text/plain"}.
                      * @param stripDelimiter this flag is ignored
@@ -38,12 +38,12 @@ declare namespace org {
                      *  {@link #textPlainOnly(List, boolean)}
                      */
                     // @ts-ignore
-                    textPlainOnly(stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
+                    public static textPlainOnly(stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
                     /**
                      * Create a {@code StringDecoder} for {@code "text/plain"}.
                      */
                     // @ts-ignore
-                    textPlainOnly(): org.springframework.core.codec.StringDecoder
+                    public static textPlainOnly(): org.springframework.core.codec.StringDecoder
                     /**
                      * Create a {@code StringDecoder} for {@code "text/plain"}.
                      * @param delimiters delimiter strings to use to split the input stream
@@ -51,7 +51,7 @@ declare namespace org {
                      *  input strings
                      */
                     // @ts-ignore
-                    textPlainOnly(delimiters: Array<java.lang.String>, stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
+                    public static textPlainOnly(delimiters: java.util.List<java.lang.String | string> | Array<java.lang.String | string>, stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
                     /**
                      * Create a {@code StringDecoder} that supports all MIME types.
                      * @param stripDelimiter this flag is ignored
@@ -59,12 +59,12 @@ declare namespace org {
                      *  {@link #allMimeTypes(List, boolean)}
                      */
                     // @ts-ignore
-                    allMimeTypes(stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
+                    public static allMimeTypes(stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
                     /**
                      * Create a {@code StringDecoder} that supports all MIME types.
                      */
                     // @ts-ignore
-                    allMimeTypes(): org.springframework.core.codec.StringDecoder
+                    public static allMimeTypes(): org.springframework.core.codec.StringDecoder
                     /**
                      * Create a {@code StringDecoder} that supports all MIME types.
                      * @param delimiters delimiter strings to use to split the input stream
@@ -72,7 +72,7 @@ declare namespace org {
                      *  input strings
                      */
                     // @ts-ignore
-                    allMimeTypes(delimiters: Array<java.lang.String>, stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
+                    public static allMimeTypes(delimiters: java.util.List<java.lang.String | string> | Array<java.lang.String | string>, stripDelimiter: boolean): org.springframework.core.codec.StringDecoder
                 }
             }
         }

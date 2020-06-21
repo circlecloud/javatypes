@@ -16,7 +16,7 @@ declare namespace org {
                                  * @see Keys#DELAY
                                  */
                                 // @ts-ignore
-                                delay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                delay(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

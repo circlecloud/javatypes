@@ -14,13 +14,13 @@ declare namespace java {
                  * that the job should be divided into separate, collated copies.
                  */
                 // @ts-ignore
-                readonly SEPARATE_DOCUMENTS_COLLATED_COPIES: java.awt.JobAttributes.MultipleDocumentHandlingType
+                public static readonly SEPARATE_DOCUMENTS_COLLATED_COPIES: java.awt.JobAttributes.MultipleDocumentHandlingType
                 /**
                  * The <code>MultipleDocumentHandlingType</code> instance to use for specifying
                  * that the job should be divided into separate, uncollated copies.
                  */
                 // @ts-ignore
-                readonly SEPARATE_DOCUMENTS_UNCOLLATED_COPIES: java.awt.JobAttributes.MultipleDocumentHandlingType
+                public static readonly SEPARATE_DOCUMENTS_UNCOLLATED_COPIES: java.awt.JobAttributes.MultipleDocumentHandlingType
             }
         }
     }

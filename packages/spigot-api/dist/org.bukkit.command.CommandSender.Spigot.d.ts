@@ -11,13 +11,13 @@ declare namespace org {
                      * @param component the components to send
                      */
                     // @ts-ignore
-                    sendMessage(component: net.md_5.bungee.api.chat.BaseComponent): void
+                    public sendMessage(component: net.md_5.bungee.api.chat.BaseComponent): void
                     /**
                      * Sends an array of components as a single message to the sender.
                      * @param components the components to send
                      */
                     // @ts-ignore
-                    sendMessage(...components: net.md_5.bungee.api.chat.BaseComponent[]): void
+                    public sendMessage(...components: net.md_5.bungee.api.chat.BaseComponent[]): void
                 }
             }
         }

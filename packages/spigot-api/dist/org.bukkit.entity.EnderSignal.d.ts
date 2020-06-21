@@ -44,7 +44,7 @@ declare namespace org {
                  * @return the number of ticks this EnderSignal has been alive.
                  */
                 // @ts-ignore
-                getDespawnTimer(): int
+                getDespawnTimer(): number /*int*/
                 /**
                  * Set how long this entity has been alive (in ticks).
                  * <br>

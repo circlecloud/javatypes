@@ -24,7 +24,7 @@ declare namespace org {
                  * @see Configuration
                  */
                 // @ts-ignore
-                class ComponentScan implements java.lang.annotation.Annotation {
+                abstract class ComponentScan implements java.lang.annotation.Annotation {
                 }
             }
         }

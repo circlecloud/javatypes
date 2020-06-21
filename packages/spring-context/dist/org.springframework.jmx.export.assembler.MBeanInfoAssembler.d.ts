@@ -23,7 +23,7 @@ declare namespace org {
                          * @throws JMException in case of errors
                          */
                         // @ts-ignore
-                        getMBeanInfo(managedBean: any, beanKey: string): javax.management.modelmbean.ModelMBeanInfo
+                        getMBeanInfo(managedBean: java.lang.Object | any, beanKey: java.lang.String | string): javax.management.modelmbean.ModelMBeanInfo
                     }
                 }
             }

@@ -35,7 +35,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getArch(): java.lang.String
+                getArch(): string
                 /**
                  * Returns the number of processors that are available for the virtual
                  * machine to run on. The information returned from this method is identical
@@ -44,7 +44,7 @@ declare namespace java {
                  * @return the number of available processors.
                  */
                 // @ts-ignore
-                getAvailableProcessors(): int
+                getAvailableProcessors(): number /*int*/
                 /**
                  * Returns the name of the underlying operating system. The value is
                  * identical to that which would be obtained from a call to
@@ -57,7 +57,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns the version string for the underlying operating system. The value
                  * is identical to that which would be obtained from a call to
@@ -70,7 +70,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                getVersion(): string
                 /**
                  * Returns a double value which holds the system load average calculated for
                  * the minute preceding the call, where <i>system load average</i> is taken
@@ -87,7 +87,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getSystemLoadAverage(): double
+                getSystemLoadAverage(): number /*double*/
             }
         }
     }

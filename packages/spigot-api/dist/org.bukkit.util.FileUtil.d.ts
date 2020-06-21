@@ -15,7 +15,7 @@ declare namespace org {
                  * @return true on success
                  */
                 // @ts-ignore
-                copy(inFile: java.io.File, outFile: java.io.File): boolean
+                public static copy(inFile: java.io.File, outFile: java.io.File): boolean
             }
         }
     }

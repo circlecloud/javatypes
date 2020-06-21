@@ -15,7 +15,7 @@ declare namespace org {
                              * @return The parts belonging to this entity
                              */
                             // @ts-ignore
-                            getParts(): java.util.Set<? extends org.spongepowered.api.entity.living.complex.ComplexLivingPart>
+                            getParts(): Array<any>
                         }
                     }
                 }

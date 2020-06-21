@@ -25,27 +25,27 @@ declare namespace javax {
                         // @ts-ignore
                         centersChildren: boolean
                         // @ts-ignore
-                        setSyncAllWidths(newValue: boolean): void
+                        public setSyncAllWidths(newValue: boolean): void
                         // @ts-ignore
-                        getSyncAllWidths(): boolean
+                        public getSyncAllWidths(): boolean
                         // @ts-ignore
-                        setPadding(newPadding: number /*int*/): void
+                        public setPadding(newPadding: number /*int*/): void
                         // @ts-ignore
-                        getPadding(): int
+                        public getPadding(): number /*int*/
                         // @ts-ignore
-                        setCentersChildren(newValue: boolean): void
+                        public setCentersChildren(newValue: boolean): void
                         // @ts-ignore
-                        getCentersChildren(): boolean
+                        public getCentersChildren(): boolean
                         // @ts-ignore
-                        addLayoutComponent(string: string, comp: java.awt.Component): void
+                        public addLayoutComponent(string: java.lang.String | string, comp: java.awt.Component): void
                         // @ts-ignore
-                        layoutContainer(container: java.awt.Container): void
+                        public layoutContainer(container: java.awt.Container): void
                         // @ts-ignore
-                        minimumLayoutSize(c: java.awt.Container): java.awt.Dimension
+                        public minimumLayoutSize(c: java.awt.Container): java.awt.Dimension
                         // @ts-ignore
-                        preferredLayoutSize(c: java.awt.Container): java.awt.Dimension
+                        public preferredLayoutSize(c: java.awt.Container): java.awt.Dimension
                         // @ts-ignore
-                        removeLayoutComponent(c: java.awt.Component): void
+                        public removeLayoutComponent(c: java.awt.Component): void
                     }
                 }
             }

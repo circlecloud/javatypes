@@ -19,7 +19,7 @@ declare namespace org {
                      *  currently active
                      */
                     // @ts-ignore
-                    matches(activeProfiles: java.util.function.Predicate<java.lang.String> | java.util.function$.Predicate<java.lang.String>): boolean
+                    matches(activeProfiles: java.util.function$.Predicate<java.lang.String | string>): boolean
                     /**
                      * Create a new {@link Profiles} instance that checks for matches against
                      * the given <em>profile strings</em>.
@@ -43,7 +43,7 @@ declare namespace org {
                      * @return a new {#link Profiles} instance
                      */
                     // @ts-ignore
-                    of(...profiles: string[]): org.springframework.core.env.Profiles
+                    of(...profiles: java.lang.String[] | string[]): org.springframework.core.env.Profiles
                 }
             }
         }

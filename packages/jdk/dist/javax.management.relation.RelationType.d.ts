@@ -13,13 +13,13 @@ declare namespace javax {
                  * @return the relation type name.
                  */
                 // @ts-ignore
-                getRelationTypeName(): java.lang.String
+                getRelationTypeName(): string
                 /**
                  * Returns the list of role definitions (ArrayList of RoleInfo objects).
                  * @return an {#link ArrayList} of {@link RoleInfo}.
                  */
                 // @ts-ignore
-                getRoleInfos(): java.util.List<javax.management.relation.RoleInfo>
+                getRoleInfos(): Array<javax.management.relation.RoleInfo>
                 /**
                  * Returns the role info (RoleInfo object) for the given role info name
                  * (null if not found).
@@ -31,7 +31,7 @@ declare namespace javax {
                  *  relation type.
                  */
                 // @ts-ignore
-                getRoleInfo(roleInfoName: string): javax.management.relation.RoleInfo
+                getRoleInfo(roleInfoName: java.lang.String | string): javax.management.relation.RoleInfo
             }
         }
     }

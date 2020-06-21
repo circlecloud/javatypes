@@ -78,7 +78,7 @@ declare namespace javax {
              *      to display in the title bar
              */
             // @ts-ignore
-            constructor(title: string)
+            constructor(title: java.lang.String | string)
             /**
              * Creates a non-closable, non-maximizable, non-iconifiable
              * <code>JInternalFrame</code> with the specified title
@@ -87,7 +87,7 @@ declare namespace javax {
              * @param resizable  if <code>true</code>, the internal frame can be resized
              */
             // @ts-ignore
-            constructor(title: string, resizable: boolean)
+            constructor(title: java.lang.String | string, resizable: boolean)
             /**
              * Creates a non-maximizable, non-iconifiable <code>JInternalFrame</code>
              * with the specified title, resizability, and
@@ -97,7 +97,7 @@ declare namespace javax {
              * @param closable   if <code>true</code>, the internal frame can be closed
              */
             // @ts-ignore
-            constructor(title: string, resizable: boolean, closable: boolean)
+            constructor(title: java.lang.String | string, resizable: boolean, closable: boolean)
             /**
              * Creates a non-iconifiable <code>JInternalFrame</code>
              * with the specified title,
@@ -108,7 +108,7 @@ declare namespace javax {
              * @param maximizable if <code>true</code>, the internal frame can be maximized
              */
             // @ts-ignore
-            constructor(title: string, resizable: boolean, closable: boolean, maximizable: boolean)
+            constructor(title: java.lang.String | string, resizable: boolean, closable: boolean, maximizable: boolean)
             /**
              * Creates a <code>JInternalFrame</code> with the specified title,
              * resizability, closability, maximizability, and iconifiability.
@@ -120,7 +120,7 @@ declare namespace javax {
              * @param iconifiable if <code>true</code>, the internal frame can be iconified
              */
             // @ts-ignore
-            constructor(title: string, resizable: boolean, closable: boolean, maximizable: boolean, iconifiable: boolean)
+            constructor(title: java.lang.String | string, resizable: boolean, closable: boolean, maximizable: boolean, iconifiable: boolean)
             /**
              * The <code>JRootPane</code> instance that manages the
              * content pane
@@ -174,7 +174,7 @@ declare namespace javax {
              * The title displayed in this internal frame's title bar.
              */
             // @ts-ignore
-            title: string
+            title: java.lang.String | string
             /**
              * The icon that is displayed when this internal frame is iconified.
              * @see #iconable
@@ -185,58 +185,58 @@ declare namespace javax {
              * Bound property name.
              */
             // @ts-ignore
-            readonly CONTENT_PANE_PROPERTY: string
+            public static readonly CONTENT_PANE_PROPERTY: java.lang.String | string
             /**
              * Bound property name.
              */
             // @ts-ignore
-            readonly MENU_BAR_PROPERTY: string
+            public static readonly MENU_BAR_PROPERTY: java.lang.String | string
             /**
              * Bound property name.
              */
             // @ts-ignore
-            readonly TITLE_PROPERTY: string
+            public static readonly TITLE_PROPERTY: java.lang.String | string
             /**
              * Bound property name.
              */
             // @ts-ignore
-            readonly LAYERED_PANE_PROPERTY: string
+            public static readonly LAYERED_PANE_PROPERTY: java.lang.String | string
             /**
              * Bound property name.
              */
             // @ts-ignore
-            readonly ROOT_PANE_PROPERTY: string
+            public static readonly ROOT_PANE_PROPERTY: java.lang.String | string
             /**
              * Bound property name.
              */
             // @ts-ignore
-            readonly GLASS_PANE_PROPERTY: string
+            public static readonly GLASS_PANE_PROPERTY: java.lang.String | string
             /**
              * Bound property name.
              */
             // @ts-ignore
-            readonly FRAME_ICON_PROPERTY: string
+            public static readonly FRAME_ICON_PROPERTY: java.lang.String | string
             /**
              * Constrained property name indicated that this frame has
              * selected status.
              */
             // @ts-ignore
-            readonly IS_SELECTED_PROPERTY: string
+            public static readonly IS_SELECTED_PROPERTY: java.lang.String | string
             /**
              * Constrained property name indicating that the internal frame is closed.
              */
             // @ts-ignore
-            readonly IS_CLOSED_PROPERTY: string
+            public static readonly IS_CLOSED_PROPERTY: java.lang.String | string
             /**
              * Constrained property name indicating that the internal frame is maximized.
              */
             // @ts-ignore
-            readonly IS_MAXIMUM_PROPERTY: string
+            public static readonly IS_MAXIMUM_PROPERTY: java.lang.String | string
             /**
              * Constrained property name indicating that the internal frame is iconified.
              */
             // @ts-ignore
-            readonly IS_ICON_PROPERTY: string
+            public static readonly IS_ICON_PROPERTY: java.lang.String | string
             /**
              * Called by the constructor to set up the <code>JRootPane</code>.
              * @return a new <code>JRootPane</code>
@@ -250,7 +250,7 @@ declare namespace javax {
              *           this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.InternalFrameUI
+            public getUI(): javax.swing.plaf.InternalFrameUI
             /**
              * Sets the UI delegate for this <code>JInternalFrame</code>.
              * @param ui  the UI delegate
@@ -260,7 +260,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.InternalFrameUI): void
+            public setUI(ui: javax.swing.plaf.InternalFrameUI): void
             /**
              * Notification from the <code>UIManager</code> that the look and feel
              * has changed.
@@ -269,7 +269,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the look-and-feel
              * class that renders this component.
@@ -279,7 +279,7 @@ declare namespace javax {
              * @beaninfo description: UIClassID
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns whether calls to <code>add</code> and
              * <code>setLayout</code> are forwarded to the <code>contentPane</code>.
@@ -325,7 +325,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Removes the specified component from the container. If
              * <code>comp</code> is not a child of the <code>JInternalFrame</code>
@@ -336,7 +336,7 @@ declare namespace javax {
              * @see javax.swing.RootPaneContainer
              */
             // @ts-ignore
-            remove(comp: java.awt.Component): void
+            public remove(comp: java.awt.Component): void
             /**
              * Ensures that, by default, the layout of this component cannot be set.
              * Overridden to conditionally forward the call to the
@@ -347,7 +347,7 @@ declare namespace javax {
              * @see #setRootPaneCheckingEnabled
              */
             // @ts-ignore
-            setLayout(manager: java.awt.LayoutManager): void
+            public setLayout(manager: java.awt.LayoutManager): void
             /**
              * Returns the current <code>JMenuBar</code> for this
              * <code>JInternalFrame</code>, or <code>null</code>
@@ -357,7 +357,7 @@ declare namespace javax {
              *  replaced by <code>getJMenuBar()</code>.
              */
             // @ts-ignore
-            getMenuBar(): javax.swing.JMenuBar
+            public getMenuBar(): javax.swing.JMenuBar
             /**
              * Returns the current <code>JMenuBar</code> for this
              * <code>JInternalFrame</code>, or <code>null</code>
@@ -366,7 +366,7 @@ declare namespace javax {
              * @see #setJMenuBar
              */
             // @ts-ignore
-            getJMenuBar(): javax.swing.JMenuBar
+            public getJMenuBar(): javax.swing.JMenuBar
             /**
              * Sets the <code>menuBar</code> property for this <code>JInternalFrame</code>.
              * @param m  the <code>JMenuBar</code> to use in this internal frame
@@ -375,7 +375,7 @@ declare namespace javax {
              *   replaced by <code>setJMenuBar(JMenuBar m)</code>.
              */
             // @ts-ignore
-            setMenuBar(m: javax.swing.JMenuBar): void
+            public setMenuBar(m: javax.swing.JMenuBar): void
             /**
              * Sets the <code>menuBar</code> property for this <code>JInternalFrame</code>.
              * @param m  the <code>JMenuBar</code> to use in this internal frame
@@ -386,13 +386,13 @@ declare namespace javax {
              *                   from this internal frame.
              */
             // @ts-ignore
-            setJMenuBar(m: javax.swing.JMenuBar): void
+            public setJMenuBar(m: javax.swing.JMenuBar): void
             /**
              * Returns the content pane for this internal frame.
              * @return the content pane
              */
             // @ts-ignore
-            getContentPane(): java.awt.Container
+            public getContentPane(): java.awt.Container
             /**
              * Sets this <code>JInternalFrame</code>'s <code>contentPane</code>
              * property.
@@ -406,7 +406,7 @@ declare namespace javax {
              *                   components are normally inserted.
              */
             // @ts-ignore
-            setContentPane(c: java.awt.Container): void
+            public setContentPane(c: java.awt.Container): void
             /**
              * Returns the layered pane for this internal frame.
              * @return a <code>JLayeredPane</code> object
@@ -414,7 +414,7 @@ declare namespace javax {
              * @see RootPaneContainer#getLayeredPane
              */
             // @ts-ignore
-            getLayeredPane(): javax.swing.JLayeredPane
+            public getLayeredPane(): javax.swing.JLayeredPane
             /**
              * Sets this <code>JInternalFrame</code>'s
              * <code>layeredPane</code> property.
@@ -427,14 +427,14 @@ declare namespace javax {
              *      description: The pane which holds the various desktop layers.
              */
             // @ts-ignore
-            setLayeredPane(layered: javax.swing.JLayeredPane): void
+            public setLayeredPane(layered: javax.swing.JLayeredPane): void
             /**
              * Returns the glass pane for this internal frame.
              * @return the glass pane
              * @see RootPaneContainer#setGlassPane
              */
             // @ts-ignore
-            getGlassPane(): java.awt.Component
+            public getGlassPane(): java.awt.Component
             /**
              * Sets this <code>JInternalFrame</code>'s
              * <code>glassPane</code> property.
@@ -445,14 +445,14 @@ declare namespace javax {
              *      description: A transparent pane used for menu rendering.
              */
             // @ts-ignore
-            setGlassPane(glass: java.awt.Component): void
+            public setGlassPane(glass: java.awt.Component): void
             /**
              * Returns the <code>rootPane</code> object for this internal frame.
              * @return the <code>rootPane</code> property
              * @see RootPaneContainer#getRootPane
              */
             // @ts-ignore
-            getRootPane(): javax.swing.JRootPane
+            public getRootPane(): javax.swing.JRootPane
             /**
              * Sets the <code>rootPane</code> property
              * for this <code>JInternalFrame</code>.
@@ -473,20 +473,20 @@ declare namespace javax {
              *      description: Indicates whether this internal frame can be closed.
              */
             // @ts-ignore
-            setClosable(b: boolean): void
+            public setClosable(b: boolean): void
             /**
              * Returns whether this <code>JInternalFrame</code> can be closed by
              * some user action.
              * @return <code>true</code> if this internal frame can be closed
              */
             // @ts-ignore
-            isClosable(): boolean
+            public isClosable(): boolean
             /**
              * Returns whether this <code>JInternalFrame</code> is currently closed.
              * @return <code>true</code> if this internal frame is closed, <code>false</code> otherwise
              */
             // @ts-ignore
-            isClosed(): boolean
+            public isClosed(): boolean
             /**
              * Closes this internal frame if the argument is <code>true</code>.
              * Do not invoke this method with a <code>false</code> argument;
@@ -522,7 +522,7 @@ declare namespace javax {
              *      description: Indicates whether this internal frame has been closed.
              */
             // @ts-ignore
-            setClosed(b: boolean): void
+            public setClosed(b: boolean): void
             /**
              * Sets whether the <code>JInternalFrame</code> can be resized by some
              * user action.
@@ -533,14 +533,14 @@ declare namespace javax {
              *                   by the user.
              */
             // @ts-ignore
-            setResizable(b: boolean): void
+            public setResizable(b: boolean): void
             /**
              * Returns whether the <code>JInternalFrame</code> can be resized
              * by some user action.
              * @return <code>true</code> if this internal frame can be resized, <code>false</code> otherwise
              */
             // @ts-ignore
-            isResizable(): boolean
+            public isResizable(): boolean
             /**
              * Sets the <code>iconable</code> property,
              * which must be <code>true</code>
@@ -554,7 +554,7 @@ declare namespace javax {
              *      description: Determines whether this internal frame can be iconified.
              */
             // @ts-ignore
-            setIconifiable(b: boolean): void
+            public setIconifiable(b: boolean): void
             /**
              * Gets the <code>iconable</code> property,
              * which by default is <code>false</code>.
@@ -562,13 +562,13 @@ declare namespace javax {
              * @see #setIconifiable
              */
             // @ts-ignore
-            isIconifiable(): boolean
+            public isIconifiable(): boolean
             /**
              * Returns whether the <code>JInternalFrame</code> is currently iconified.
              * @return <code>true</code> if this internal frame is iconified
              */
             // @ts-ignore
-            isIcon(): boolean
+            public isIcon(): boolean
             /**
              * Iconifies or de-iconifies this internal frame,
              * if the look and feel supports iconification.
@@ -587,7 +587,7 @@ declare namespace javax {
              *      description: The image displayed when this internal frame is minimized.
              */
             // @ts-ignore
-            setIcon(b: boolean): void
+            public setIcon(b: boolean): void
             /**
              * Sets the <code>maximizable</code> property,
              * which determines whether the <code>JInternalFrame</code>
@@ -601,20 +601,20 @@ declare namespace javax {
              *      description: Determines whether this internal frame can be maximized.
              */
             // @ts-ignore
-            setMaximizable(b: boolean): void
+            public setMaximizable(b: boolean): void
             /**
              * Gets the value of the <code>maximizable</code> property.
              * @return the value of the <code>maximizable</code> property
              * @see #setMaximizable
              */
             // @ts-ignore
-            isMaximizable(): boolean
+            public isMaximizable(): boolean
             /**
              * Returns whether the <code>JInternalFrame</code> is currently maximized.
              * @return <code>true</code> if this internal frame is maximized, <code>false</code> otherwise
              */
             // @ts-ignore
-            isMaximum(): boolean
+            public isMaximum(): boolean
             /**
              * Maximizes and restores this internal frame.  A maximized frame is resized to
              * fully fit the <code>JDesktopPane</code> area associated with the
@@ -630,14 +630,14 @@ declare namespace javax {
              *      description: Indicates whether this internal frame is maximized.
              */
             // @ts-ignore
-            setMaximum(b: boolean): void
+            public setMaximum(b: boolean): void
             /**
              * Returns the title of the <code>JInternalFrame</code>.
              * @return a <code>String</code> containing this internal frame's title
              * @see #setTitle
              */
             // @ts-ignore
-            getTitle(): java.lang.String
+            public getTitle(): string
             /**
              * Sets the <code>JInternalFrame</code> title. <code>title</code>
              * may have a <code>null</code> value.
@@ -648,7 +648,7 @@ declare namespace javax {
              *      description: The text displayed in the title bar.
              */
             // @ts-ignore
-            setTitle(title: string): void
+            public setTitle(title: java.lang.String | string): void
             /**
              * Selects or deselects the internal frame
              * if it's showing.
@@ -676,7 +676,7 @@ declare namespace javax {
              *                   the active frame.
              */
             // @ts-ignore
-            setSelected(selected: boolean): void
+            public setSelected(selected: boolean): void
             /**
              * Returns whether the <code>JInternalFrame</code> is the
              * currently "selected" or active frame.
@@ -684,7 +684,7 @@ declare namespace javax {
              * @see #setSelected
              */
             // @ts-ignore
-            isSelected(): boolean
+            public isSelected(): boolean
             /**
              * Sets an image to be displayed in the titlebar of this internal frame (usually
              * in the top-left corner).
@@ -702,7 +702,7 @@ declare namespace javax {
              *      description: The icon shown in the top-left corner of this internal frame.
              */
             // @ts-ignore
-            setFrameIcon(icon: javax.swing.Icon): void
+            public setFrameIcon(icon: javax.swing.Icon): void
             /**
              * Returns the image displayed in the title bar of this internal frame (usually
              * in the top-left corner).
@@ -710,19 +710,19 @@ declare namespace javax {
              * @see #setFrameIcon
              */
             // @ts-ignore
-            getFrameIcon(): javax.swing.Icon
+            public getFrameIcon(): javax.swing.Icon
             /**
              * Convenience method that moves this component to position 0 if its
              * parent is a <code>JLayeredPane</code>.
              */
             // @ts-ignore
-            moveToFront(): void
+            public moveToFront(): void
             /**
              * Convenience method that moves this component to position -1 if its
              * parent is a <code>JLayeredPane</code>.
              */
             // @ts-ignore
-            moveToBack(): void
+            public moveToBack(): void
             /**
              * Returns the last <code>Cursor</code> that was set by the
              * <code>setCursor</code> method that is not a resizable
@@ -731,13 +731,13 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getLastCursor(): java.awt.Cursor
+            public getLastCursor(): java.awt.Cursor
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            setCursor(cursor: java.awt.Cursor): void
+            public setCursor(cursor: java.awt.Cursor): void
             /**
              * Convenience method for setting the layer attribute of this component.
              * @param layer  an <code>Integer</code> object specifying this
@@ -747,7 +747,7 @@ declare namespace javax {
              *      description: Specifies what desktop layer is used.
              */
             // @ts-ignore
-            setLayer(layer: number): void
+            public setLayer(layer: java.lang.Integer | number): void
             /**
              * Convenience method for setting the layer attribute of this component.
              * The method <code>setLayer(Integer)</code> should be used for
@@ -762,7 +762,7 @@ declare namespace javax {
              *      description: Specifies what desktop layer is used.
              */
             // @ts-ignore
-            setLayer(layer: number /*int*/): void
+            public setLayer(layer: number /*int*/): void
             /**
              * Convenience method for getting the layer attribute of this component.
              * @return an <code>Integer</code> object specifying this
@@ -770,7 +770,7 @@ declare namespace javax {
              * @see JLayeredPane
              */
             // @ts-ignore
-            getLayer(): int
+            public getLayer(): number /*int*/
             /**
              * Convenience method that searches the ancestor hierarchy for a
              * <code>JDesktop</code> instance. If <code>JInternalFrame</code>
@@ -779,7 +779,7 @@ declare namespace javax {
              *          or <code>null</code> if none is found
              */
             // @ts-ignore
-            getDesktopPane(): javax.swing.JDesktopPane
+            public getDesktopPane(): javax.swing.JDesktopPane
             /**
              * Sets the <code>JDesktopIcon</code> associated with this
              * <code>JInternalFrame</code>.
@@ -789,7 +789,7 @@ declare namespace javax {
              *      description: The icon shown when this internal frame is minimized.
              */
             // @ts-ignore
-            setDesktopIcon(d: javax.swing.JInternalFrame.JDesktopIcon): void
+            public setDesktopIcon(d: javax.swing.JInternalFrame.JDesktopIcon): void
             /**
              * Returns the <code>JDesktopIcon</code> used when this
              * <code>JInternalFrame</code> is iconified.
@@ -797,7 +797,7 @@ declare namespace javax {
              * @see #setDesktopIcon
              */
             // @ts-ignore
-            getDesktopIcon(): javax.swing.JInternalFrame.JDesktopIcon
+            public getDesktopIcon(): javax.swing.JInternalFrame.JDesktopIcon
             /**
              * If the <code>JInternalFrame</code> is not in maximized state, returns
              * <code>getBounds()</code>; otherwise, returns the bounds that the
@@ -807,7 +807,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getNormalBounds(): java.awt.Rectangle
+            public getNormalBounds(): java.awt.Rectangle
             /**
              * Sets the normal bounds for this internal frame, the bounds that
              * this internal frame would be restored to from its maximized state.
@@ -816,7 +816,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setNormalBounds(r: java.awt.Rectangle): void
+            public setNormalBounds(r: java.awt.Rectangle): void
             /**
              * If this <code>JInternalFrame</code> is active,
              * returns the child that has focus.
@@ -825,7 +825,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getFocusOwner(): java.awt.Component
+            public getFocusOwner(): java.awt.Component
             /**
              * Returns the child component of this <code>JInternalFrame</code>
              * that will receive the
@@ -847,7 +847,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getMostRecentFocusOwner(): java.awt.Component
+            public getMostRecentFocusOwner(): java.awt.Component
             /**
              * Requests the internal frame to restore focus to the
              * last subcomponent that had focus. This is used by the UI when
@@ -856,7 +856,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            restoreSubcomponentFocus(): void
+            public restoreSubcomponentFocus(): void
             /**
              * Moves and resizes this component.  Unlike other components,
              * this implementation also forces re-layout, so that frame
@@ -869,21 +869,21 @@ declare namespace javax {
              * @param height an integer giving the component's new height in pixels
              */
             // @ts-ignore
-            reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Adds the specified listener to receive internal
              * frame events from this internal frame.
              * @param l the internal frame listener
              */
             // @ts-ignore
-            addInternalFrameListener(l: javax.swing.event.InternalFrameListener): void
+            public addInternalFrameListener(l: javax.swing.event.InternalFrameListener): void
             /**
              * Removes the specified internal frame listener so that it no longer
              * receives internal frame events from this internal frame.
              * @param l the internal frame listener
              */
             // @ts-ignore
-            removeInternalFrameListener(l: javax.swing.event.InternalFrameListener): void
+            public removeInternalFrameListener(l: javax.swing.event.InternalFrameListener): void
             /**
              * Returns an array of all the <code>InternalFrameListener</code>s added
              * to this <code>JInternalFrame</code> with
@@ -894,7 +894,7 @@ declare namespace javax {
              * @see #addInternalFrameListener
              */
             // @ts-ignore
-            getInternalFrameListeners(): javax.swing.event.InternalFrameListener[]
+            public getInternalFrameListeners(): javax.swing.event.InternalFrameListener[]
             /**
              * Fires an internal frame event.
              * @param id  the type of the event being fired; one of the following:
@@ -924,7 +924,7 @@ declare namespace javax {
              * @see javax.swing.event.InternalFrameEvent#INTERNAL_FRAME_CLOSING
              */
             // @ts-ignore
-            doDefaultCloseAction(): void
+            public doDefaultCloseAction(): void
             /**
              * Sets the operation that will happen by default when
              * the user initiates a "close" on this internal frame.
@@ -960,7 +960,7 @@ declare namespace javax {
              * @see InternalFrameEvent#INTERNAL_FRAME_CLOSING
              */
             // @ts-ignore
-            setDefaultCloseOperation(operation: number /*int*/): void
+            public setDefaultCloseOperation(operation: number /*int*/): void
             /**
              * Returns the default operation that occurs when the user
              * initiates a "close" on this internal frame.
@@ -969,7 +969,7 @@ declare namespace javax {
              * @see #setDefaultCloseOperation
              */
             // @ts-ignore
-            getDefaultCloseOperation(): int
+            public getDefaultCloseOperation(): number /*int*/
             /**
              * Causes subcomponents of this <code>JInternalFrame</code>
              * to be laid out at their preferred size.  Internal frames that are
@@ -979,7 +979,7 @@ declare namespace javax {
              * @see java.awt.Window#pack
              */
             // @ts-ignore
-            pack(): void
+            public pack(): void
             /**
              * If the internal frame is not visible,
              * brings the internal frame to the front,
@@ -997,9 +997,9 @@ declare namespace javax {
              * @see #setVisible
              */
             // @ts-ignore
-            show(): void
+            public show(): void
             // @ts-ignore
-            hide(): void
+            public hide(): void
             /**
              * Makes this internal frame
              * invisible, unselected, and closed.
@@ -1017,7 +1017,7 @@ declare namespace javax {
              * @see #setClosed
              */
             // @ts-ignore
-            dispose(): void
+            public dispose(): void
             /**
              * Brings this internal frame to the front.
              * Places this internal frame  at the top of the stacking order
@@ -1027,7 +1027,7 @@ declare namespace javax {
              * @see #moveToFront
              */
             // @ts-ignore
-            toFront(): void
+            public toFront(): void
             /**
              * Sends this internal frame to the back.
              * Places this internal frame at the bottom of the stacking order
@@ -1037,7 +1037,7 @@ declare namespace javax {
              * @see #moveToBack
              */
             // @ts-ignore
-            toBack(): void
+            public toBack(): void
             /**
              * Does nothing because <code>JInternalFrame</code>s must always be roots of a focus
              * traversal cycle.
@@ -1048,7 +1048,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setFocusCycleRoot(focusCycleRoot: boolean): void
+            public setFocusCycleRoot(focusCycleRoot: boolean): void
             /**
              * Always returns <code>true</code> because all <code>JInternalFrame</code>s must be
              * roots of a focus traversal cycle.
@@ -1059,7 +1059,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusCycleRoot(): boolean
+            public isFocusCycleRoot(): boolean
             /**
              * Always returns <code>null</code> because <code>JInternalFrame</code>s
              * must always be roots of a focus
@@ -1069,7 +1069,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusCycleRootAncestor(): java.awt.Container
+            public getFocusCycleRootAncestor(): java.awt.Container
             /**
              * Gets the warning string that is displayed with this internal frame.
              * Since an internal frame is always secure (since it's fully
@@ -1079,7 +1079,7 @@ declare namespace javax {
              * @see java.awt.Window#getWarningString
              */
             // @ts-ignore
-            getWarningString(): java.lang.String
+            public getWarningString(): string
             /**
              * Returns a string representation of this <code>JInternalFrame</code>.
              * This method
@@ -1090,7 +1090,7 @@ declare namespace javax {
              * @return a string representation of this <code>JInternalFrame</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Overridden to allow optimized painting when the
              * internal frame is being dragged.
@@ -1110,7 +1110,7 @@ declare namespace javax {
              * @see AccessibleJInternalFrame
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

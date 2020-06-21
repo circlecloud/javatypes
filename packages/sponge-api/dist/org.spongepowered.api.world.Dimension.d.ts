@@ -30,7 +30,7 @@ declare namespace org {
                      * @return The minimum spawn height
                      */
                     // @ts-ignore
-                    getMinimumSpawnHeight(): int
+                    getMinimumSpawnHeight(): number /*int*/
                     /**
                      * Returns whether water evaporates for {@link Dimension}.
                      * @return True if water evaporates, false if not
@@ -49,14 +49,14 @@ declare namespace org {
                      * @return The generated height
                      */
                     // @ts-ignore
-                    getHeight(): int
+                    getHeight(): number /*int*/
                     /**
                      * Gets the maximum y-coordinate a non-air cuboid can exist at of
                      * {@link World}s in this dimension. Usually 256.
                      * @return The build height
                      */
                     // @ts-ignore
-                    getBuildHeight(): int
+                    getBuildHeight(): number /*int*/
                 }
             }
         }

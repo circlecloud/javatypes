@@ -20,27 +20,27 @@ declare namespace org {
                          * @param methodReplacerBeanName the bean name of the MethodReplacer
                          */
                         // @ts-ignore
-                        constructor(methodName: string, methodReplacerBeanName: string)
+                        constructor(methodName: java.lang.String | string, methodReplacerBeanName: java.lang.String | string)
                         /**
                          * Return the name of the bean implementing MethodReplacer.
                          */
                         // @ts-ignore
-                        getMethodReplacerBeanName(): java.lang.String
+                        public getMethodReplacerBeanName(): string
                         /**
                          * Add a fragment of a class string, like "Exception"
                          * or "java.lang.Exc", to identify a parameter type.
                          * @param identifier a substring of the fully qualified class name
                          */
                         // @ts-ignore
-                        addTypeIdentifier(identifier: string): void
+                        public addTypeIdentifier(identifier: java.lang.String | string): void
                         // @ts-ignore
-                        matches(method: java.lang.reflect.Method): boolean
+                        public matches(method: java.lang.reflect.Method): boolean
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

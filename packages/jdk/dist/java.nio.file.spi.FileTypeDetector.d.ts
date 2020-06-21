@@ -17,7 +17,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                class FileTypeDetector extends java.lang.Object {
+                abstract class FileTypeDetector extends java.lang.Object {
                     /**
                      * Initializes a new instance of this class.
                      * @throws SecurityException
@@ -54,7 +54,7 @@ declare namespace java {
                      * @see java.nio.file.Files#probeContentType
                      */
                     // @ts-ignore
-                    abstract probeContentType(path: java.nio.file.Path): java.lang.String
+                    public abstract probeContentType(path: java.nio.file.Path): string
                 }
             }
         }

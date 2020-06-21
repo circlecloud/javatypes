@@ -590,7 +590,7 @@ declare namespace javax {
                  * @see #rollback
                  */
                 // @ts-ignore
-                
+                readonly COMMIT_ON_ACCEPT_CHANGES: boolean
                 /**
                  * Populates this <code>CachedRowSet</code> object with data from
                  * the given <code>ResultSet</code> object.
@@ -915,7 +915,7 @@ declare namespace javax {
                  * @see java.sql.DatabaseMetaData#updatesAreDetected
                  */
                 // @ts-ignore
-                columnUpdated(columnName: string): boolean
+                columnUpdated(columnName: java.lang.String | string): boolean
                 /**
                  * Converts this <code>CachedRowSet</code> object to a <code>Collection</code>
                  * object that contains all of this <code>CachedRowSet</code> object's data.
@@ -954,7 +954,7 @@ declare namespace javax {
                  * @see #toCollection(String)
                  */
                 // @ts-ignore
-                toCollection(): java.util.Collection<?>
+                toCollection(): Array<any>
                 /**
                  * Converts the designated column in this <code>CachedRowSet</code> object
                  * to a <code>Collection</code> object. Implementations have some latitude in
@@ -982,7 +982,7 @@ declare namespace javax {
                  * @see #toCollection(String)
                  */
                 // @ts-ignore
-                toCollection(column: number /*int*/): java.util.Collection<?>
+                toCollection(column: number /*int*/): Array<any>
                 /**
                  * Converts the designated column in this <code>CachedRowSet</code> object
                  * to a <code>Collection</code> object. Implementations have some latitude in
@@ -1010,7 +1010,7 @@ declare namespace javax {
                  * @see #toCollection(int)
                  */
                 // @ts-ignore
-                toCollection(column: string): java.util.Collection<?>
+                toCollection(column: java.lang.String | string): Array<any>
                 /**
                  * Retrieves the <code>SyncProvider</code> implementation for this
                  * <code>CachedRowSet</code> object. Internally, this method is used by a rowset
@@ -1072,14 +1072,14 @@ declare namespace javax {
                  * @see #getSyncProvider
                  */
                 // @ts-ignore
-                setSyncProvider(provider: string): void
+                setSyncProvider(provider: java.lang.String | string): void
                 /**
                  * Returns the number of rows in this <code>CachedRowSet</code>
                  * object.
                  * @return number of rows in the rowset
                  */
                 // @ts-ignore
-                size(): int
+                size(): number /*int*/
                 /**
                  * Sets the metadata for this <code>CachedRowSet</code> object with
                  * the given <code>RowSetMetaData</code> object. When a
@@ -1171,7 +1171,7 @@ declare namespace javax {
                  * @see javax.sql.RowSetMetaData#getTableName
                  */
                 // @ts-ignore
-                getTableName(): java.lang.String
+                getTableName(): string
                 /**
                  * Sets the identifier for the table from which this <code>CachedRowSet</code>
                  * object was derived to the given table name. The writer uses this name to
@@ -1192,7 +1192,7 @@ declare namespace javax {
                  * @see javax.sql.rowset.spi.SyncProvider
                  */
                 // @ts-ignore
-                setTableName(tabName: string): void
+                setTableName(tabName: java.lang.String | string): void
                 /**
                  * Returns an array containing one or more column numbers indicating the columns
                  * that form a key that uniquely
@@ -1207,7 +1207,7 @@ declare namespace javax {
                  * @see Joinable#getMatchColumnNames
                  */
                 // @ts-ignore
-                getKeyColumns(): int[]
+                getKeyColumns(): number /*int*/[]
                 /**
                  * Sets this <code>CachedRowSet</code> object's <code>keyCols</code>
                  * field with the given array of column numbers, which forms a key
@@ -1498,7 +1498,7 @@ declare namespace javax {
                  * @return an <code>int</code> page size
                  */
                 // @ts-ignore
-                getPageSize(): int
+                getPageSize(): number /*int*/
                 /**
                  * Increments the current page of the <code>CachedRowSet</code>. This causes
                  * the <code>CachedRowSet</code> implementation to fetch the next page-size

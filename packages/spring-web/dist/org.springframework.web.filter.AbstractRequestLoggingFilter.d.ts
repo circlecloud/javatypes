@@ -26,7 +26,7 @@ declare namespace org {
                  * @see #afterRequest
                  */
                 // @ts-ignore
-                class AbstractRequestLoggingFilter extends org.springframework.web.filter.OncePerRequestFilter {
+                abstract class AbstractRequestLoggingFilter extends org.springframework.web.filter.OncePerRequestFilter {
                     // @ts-ignore
                     constructor()
                     /**
@@ -34,32 +34,32 @@ declare namespace org {
                      * processed.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_BEFORE_MESSAGE_PREFIX: string
+                    public static readonly DEFAULT_BEFORE_MESSAGE_PREFIX: java.lang.String | string
                     /**
                      * The default value appended to the log message written <i>before</i> a request is
                      * processed.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_BEFORE_MESSAGE_SUFFIX: string
+                    public static readonly DEFAULT_BEFORE_MESSAGE_SUFFIX: java.lang.String | string
                     /**
                      * The default value prepended to the log message written <i>after</i> a request is
                      * processed.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_AFTER_MESSAGE_PREFIX: string
+                    public static readonly DEFAULT_AFTER_MESSAGE_PREFIX: java.lang.String | string
                     /**
                      * The default value appended to the log message written <i>after</i> a request is
                      * processed.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_AFTER_MESSAGE_SUFFIX: string
+                    public static readonly DEFAULT_AFTER_MESSAGE_SUFFIX: java.lang.String | string
                     /**
                      * Set whether the query string should be included in the log message.
                      * <p>Should be configured using an {@code <init-param>} for parameter name
                      * "includeQueryString" in the filter definition in {@code web.xml}.
                      */
                     // @ts-ignore
-                    setIncludeQueryString(includeQueryString: boolean): void
+                    public setIncludeQueryString(includeQueryString: boolean): void
                     /**
                      * Return whether the query string should be included in the log message.
                      */
@@ -72,7 +72,7 @@ declare namespace org {
                      * "includeClientInfo" in the filter definition in {@code web.xml}.
                      */
                     // @ts-ignore
-                    setIncludeClientInfo(includeClientInfo: boolean): void
+                    public setIncludeClientInfo(includeClientInfo: boolean): void
                     /**
                      * Return whether the client address and session id should be included in the
                      * log message.
@@ -86,7 +86,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setIncludeHeaders(includeHeaders: boolean): void
+                    public setIncludeHeaders(includeHeaders: boolean): void
                     /**
                      * Return whether the request headers should be included in the log message.
                      * @since 4.3
@@ -100,7 +100,7 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    setIncludePayload(includePayload: boolean): void
+                    public setIncludePayload(includePayload: boolean): void
                     /**
                      * Return whether the request payload (body) should be included in the log message.
                      * @since 3.0
@@ -115,50 +115,50 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    setHeaderPredicate(headerPredicate: java.util.function.Predicate<java.lang.String> | java.util.function$.Predicate<java.lang.String>): void
+                    public setHeaderPredicate(headerPredicate: java.util.function$.Predicate<java.lang.String | string>): void
                     /**
                      * The configured {@link #setHeaderPredicate(Predicate) headerPredicate}.
                      * @since 5.2
                      */
                     // @ts-ignore
-                    getHeaderPredicate(): java.util.function.Predicate<java.lang.String>
+                    getHeaderPredicate(): java.util.function$.Predicate<java.lang.String | string>
                     /**
                      * Set the maximum length of the payload body to be included in the log message.
                      * Default is 50 characters.
                      * @since 3.0
                      */
                     // @ts-ignore
-                    setMaxPayloadLength(maxPayloadLength: number /*int*/): void
+                    public setMaxPayloadLength(maxPayloadLength: number /*int*/): void
                     /**
                      * Return the maximum length of the payload body to be included in the log message.
                      * @since 3.0
                      */
                     // @ts-ignore
-                    getMaxPayloadLength(): int
+                    getMaxPayloadLength(): number /*int*/
                     /**
                      * Set the value that should be prepended to the log message written
                      * <i>before</i> a request is processed.
                      */
                     // @ts-ignore
-                    setBeforeMessagePrefix(beforeMessagePrefix: string): void
+                    public setBeforeMessagePrefix(beforeMessagePrefix: java.lang.String | string): void
                     /**
                      * Set the value that should be appended to the log message written
                      * <i>before</i> a request is processed.
                      */
                     // @ts-ignore
-                    setBeforeMessageSuffix(beforeMessageSuffix: string): void
+                    public setBeforeMessageSuffix(beforeMessageSuffix: java.lang.String | string): void
                     /**
                      * Set the value that should be prepended to the log message written
                      * <i>after</i> a request is processed.
                      */
                     // @ts-ignore
-                    setAfterMessagePrefix(afterMessagePrefix: string): void
+                    public setAfterMessagePrefix(afterMessagePrefix: java.lang.String | string): void
                     /**
                      * Set the value that should be appended to the log message written
                      * <i>after</i> a request is processed.
                      */
                     // @ts-ignore
-                    setAfterMessageSuffix(afterMessageSuffix: string): void
+                    public setAfterMessageSuffix(afterMessageSuffix: java.lang.String | string): void
                     /**
                      * The default value is "false" so that the filter may log a "before" message
                      * at the start of request processing and an "after" message at the end from
@@ -183,7 +183,7 @@ declare namespace org {
                      * the supplied prefix and suffix.
                      */
                     // @ts-ignore
-                    createMessage(request: HttpServletRequest, prefix: string, suffix: string): java.lang.String
+                    createMessage(request: HttpServletRequest, prefix: java.lang.String | string, suffix: java.lang.String | string): string
                     /**
                      * Extracts the message payload portion of the message created by
                      * {@link #createMessage(HttpServletRequest, String, String)} when
@@ -191,7 +191,7 @@ declare namespace org {
                      * @since 5.0.3
                      */
                     // @ts-ignore
-                    getMessagePayload(request: HttpServletRequest): java.lang.String
+                    getMessagePayload(request: HttpServletRequest): string
                     /**
                      * Determine whether to call the {@link #beforeRequest}/{@link #afterRequest}
                      * methods for the current request, i.e. whether logging is currently active
@@ -212,7 +212,7 @@ declare namespace org {
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    abstract beforeRequest(request: HttpServletRequest, message: string): void
+                    abstract beforeRequest(request: HttpServletRequest, message: java.lang.String | string): void
                     /**
                      * Concrete subclasses should implement this method to write a log message
                      * <i>after</i> the request is processed.
@@ -220,7 +220,7 @@ declare namespace org {
                      * @param message the message to log
                      */
                     // @ts-ignore
-                    abstract afterRequest(request: HttpServletRequest, message: string): void
+                    abstract afterRequest(request: HttpServletRequest, message: java.lang.String | string): void
                 }
             }
         }

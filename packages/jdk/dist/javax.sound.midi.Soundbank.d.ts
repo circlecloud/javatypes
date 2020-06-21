@@ -46,26 +46,26 @@ declare namespace javax {
                  * @return a <code>String</code> naming the sound bank
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Obtains the version string for the sound bank.
                  * @return a <code>String</code> that indicates the sound bank's version
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                getVersion(): string
                 /**
                  * Obtains a <code>string</code> naming the company that provides the
                  * sound bank
                  * @return the vendor string
                  */
                 // @ts-ignore
-                getVendor(): java.lang.String
+                getVendor(): string
                 /**
                  * Obtains a textual description of the sound bank, suitable for display.
                  * @return a <code>String</code> that describes the sound bank
                  */
                 // @ts-ignore
-                getDescription(): java.lang.String
+                getDescription(): string
                 /**
                  * Extracts a list of non-Instrument resources contained in the sound bank.
                  * @return an array of resources, excluding instruments.  If the sound bank contains

@@ -57,7 +57,7 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                put(e: E): void
+                public put(e: E): void
                 /**
                  * Inserts the specified element into this queue, waiting if necessary
                  * up to the specified wait time for another thread to receive it.
@@ -67,7 +67,7 @@ declare namespace java {
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                public offer(e: E, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                 /**
                  * Inserts the specified element into this queue, if another thread is
                  * waiting to receive it.
@@ -77,7 +77,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified element is null
                  */
                 // @ts-ignore
-                offer(e: E): boolean
+                public offer(e: E): boolean
                 /**
                  * Retrieves and removes the head of this queue, waiting if necessary
                  * for another thread to insert it.
@@ -85,7 +85,7 @@ declare namespace java {
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                take(): E
+                public take(): E
                 /**
                  * Retrieves and removes the head of this queue, waiting
                  * if necessary up to the specified wait time, for another thread
@@ -95,7 +95,7 @@ declare namespace java {
                  * @throws InterruptedException {#inheritDoc}
                  */
                 // @ts-ignore
-                poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
+                public poll(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): E
                 /**
                  * Retrieves and removes the head of this queue, if another thread
                  * is currently making an element available.
@@ -103,34 +103,34 @@ declare namespace java {
                  *          element is available
                  */
                 // @ts-ignore
-                poll(): E
+                public poll(): E
                 /**
                  * Always returns {@code true}.
                  * A {@code SynchronousQueue} has no internal capacity.
                  * @return {#code true}
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 /**
                  * Always returns zero.
                  * A {@code SynchronousQueue} has no internal capacity.
                  * @return zero
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Always returns zero.
                  * A {@code SynchronousQueue} has no internal capacity.
                  * @return zero
                  */
                 // @ts-ignore
-                remainingCapacity(): int
+                public remainingCapacity(): number /*int*/
                 /**
                  * Does nothing.
                  * A {@code SynchronousQueue} has no internal capacity.
                  */
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 /**
                  * Always returns {@code false}.
                  * A {@code SynchronousQueue} has no internal capacity.
@@ -138,7 +138,7 @@ declare namespace java {
                  * @return {#code false}
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 /**
                  * Always returns {@code false}.
                  * A {@code SynchronousQueue} has no internal capacity.
@@ -146,7 +146,7 @@ declare namespace java {
                  * @return {#code false}
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 /**
                  * Returns {@code false} unless the given collection is empty.
                  * A {@code SynchronousQueue} has no internal capacity.
@@ -154,7 +154,7 @@ declare namespace java {
                  * @return {#code false} unless given collection is empty
                  */
                 // @ts-ignore
-                containsAll(c: Array<any>): boolean
+                public containsAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Always returns {@code false}.
                  * A {@code SynchronousQueue} has no internal capacity.
@@ -162,7 +162,7 @@ declare namespace java {
                  * @return {#code false}
                  */
                 // @ts-ignore
-                removeAll(c: Array<any>): boolean
+                public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Always returns {@code false}.
                  * A {@code SynchronousQueue} has no internal capacity.
@@ -170,7 +170,7 @@ declare namespace java {
                  * @return {#code false}
                  */
                 // @ts-ignore
-                retainAll(c: Array<any>): boolean
+                public retainAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Always returns {@code null}.
                  * A {@code SynchronousQueue} does not return elements
@@ -178,14 +178,14 @@ declare namespace java {
                  * @return {#code null}
                  */
                 // @ts-ignore
-                peek(): E
+                public peek(): E
                 /**
                  * Returns an empty iterator in which {@code hasNext} always returns
                  * {@code false}.
                  * @return an empty iterator
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 /**
                  * Returns an empty spliterator in which calls to
                  * {@link java.util.Spliterator#trySplit()} always return {@code null}.
@@ -193,13 +193,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                spliterator(): java.util.Spliterator<E>
+                public spliterator(): java.util.Spliterator<E>
                 /**
                  * Returns a zero-length array.
                  * @return a zero-length array
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Sets the zeroeth element of the specified array to {@code null}
                  * (if the array has non-zero length) and returns it.
@@ -208,7 +208,7 @@ declare namespace java {
                  * @throws NullPointerException if the specified array is null
                  */
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -216,7 +216,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>): int
+                public drainTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * @throws UnsupportedOperationException {#inheritDoc}
                  * @throws ClassCastException            {#inheritDoc}
@@ -224,7 +224,7 @@ declare namespace java {
                  * @throws IllegalArgumentException      {#inheritDoc}
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>, maxElements: number /*int*/): int
+                public drainTo(c: java.util.Collection<any> | Array<any>, maxElements: number /*int*/): number /*int*/
             }
         }
     }

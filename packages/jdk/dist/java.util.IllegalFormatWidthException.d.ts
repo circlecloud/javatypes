@@ -19,9 +19,9 @@ declare namespace java {
              * @return The width
              */
             // @ts-ignore
-            getWidth(): int
+            getWidth(): number /*int*/
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

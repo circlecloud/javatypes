@@ -8,7 +8,7 @@ declare namespace org {
                             namespace source {
                                 namespace common {
                                     // @ts-ignore
-                                    class AbstractDamageSourceBuilder<T extends org.spongepowered.api.event.cause.entity.damage.source.DamageSource, B extends org.spongepowered.api.event.cause.entity.damage.source.DamageSource.DamageSourceBuilder<T, B>> extends java.lang.Object implements org.spongepowered.api.event.cause.entity.damage.source.DamageSource.DamageSourceBuilder<T, B> {
+                                    abstract class AbstractDamageSourceBuilder<T extends org.spongepowered.api.event.cause.entity.damage.source.DamageSource, B extends org.spongepowered.api.event.cause.entity.damage.source.DamageSource.DamageSourceBuilder<T, B>> extends java.lang.Object implements org.spongepowered.api.event.cause.entity.damage.source.DamageSource.DamageSourceBuilder<T, B> {
                                         // @ts-ignore
                                         constructor()
                                         // @ts-ignore
@@ -18,25 +18,25 @@ declare namespace org {
                                         // @ts-ignore
                                         damageType: org.spongepowered.api.event.cause.entity.damage.DamageType
                                         // @ts-ignore
-                                        scalesWithDifficulty(): B
+                                        public scalesWithDifficulty(): B
                                         // @ts-ignore
-                                        bypassesArmor(): B
+                                        public bypassesArmor(): B
                                         // @ts-ignore
-                                        explosion(): B
+                                        public explosion(): B
                                         // @ts-ignore
-                                        absolute(): B
+                                        public absolute(): B
                                         // @ts-ignore
-                                        magical(): B
+                                        public magical(): B
                                         // @ts-ignore
-                                        creative(): B
+                                        public creative(): B
                                         // @ts-ignore
-                                        exhaustion(exhaustion: number /*double*/): B
+                                        public exhaustion(exhaustion: number /*double*/): B
                                         // @ts-ignore
-                                        type(damageType: org.spongepowered.api.event.cause.entity.damage.DamageType): B
+                                        public type(damageType: org.spongepowered.api.event.cause.entity.damage.DamageType): B
                                         // @ts-ignore
-                                        from(value: T extends org.spongepowered.api.event.cause.entity.damage.source.DamageSource): B
+                                        public from(value: T): B
                                         // @ts-ignore
-                                        reset(): B
+                                        public reset(): B
                                     }
                                 }
                             }

@@ -58,7 +58,7 @@ declare namespace java {
                  * @return the hash code value for this <code>UID</code>
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares the specified object with this <code>UID</code> for
                  * equality.
@@ -71,13 +71,13 @@ declare namespace java {
                  *  this one, and <code>false</code> otherwise
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a string representation of this <code>UID</code>.
                  * @return a string representation of this <code>UID</code>
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Marshals a binary representation of this <code>UID</code> to
                  * a <code>DataOutput</code> instance.
@@ -94,7 +94,7 @@ declare namespace java {
                  *  this operation
                  */
                 // @ts-ignore
-                write(out: java.io.DataOutput): void
+                public write(out: java.io.DataOutput): void
                 /**
                  * Constructs and returns a new <code>UID</code> instance by
                  * unmarshalling a binary representation from an
@@ -115,7 +115,7 @@ declare namespace java {
                  *  this operation
                  */
                 // @ts-ignore
-                read(input: java.io.DataInput): java.rmi.server.UID
+                public static read(input: java.io.DataInput): java.rmi.server.UID
             }
         }
     }

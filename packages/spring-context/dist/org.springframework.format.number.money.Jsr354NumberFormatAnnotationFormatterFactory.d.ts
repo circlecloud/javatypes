@@ -15,11 +15,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getFieldTypes(): java.util.Set<java.lang.Class<?>>
+                        public getFieldTypes(): Array<java.lang.Class<any>>
                         // @ts-ignore
-                        getPrinter(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Printer<MonetaryAmount>
+                        public getPrinter(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Printer<MonetaryAmount>
                         // @ts-ignore
-                        getParser(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Parser<MonetaryAmount>
+                        public getParser(annotation: org.springframework.format.annotation.NumberFormat, fieldType: java.lang.Class<any>): org.springframework.format.Parser<MonetaryAmount>
                     }
                 }
             }

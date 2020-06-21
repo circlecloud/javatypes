@@ -16,7 +16,7 @@ declare namespace java {
                      * @param data the Certificate data.
                      */
                     // @ts-ignore
-                    constructor(type: string, data: number /*byte*/[])
+                    constructor(type: java.lang.String | string, data: number /*byte*/[])
                     /**
                      * Resolve the Certificate Object.
                      * <p>
@@ -25,7 +25,7 @@ declare namespace java {
                      *       could not be resolved
                      */
                     // @ts-ignore
-                    readResolve(): java.lang.Object
+                    readResolve(): any
                 }
             }
         }

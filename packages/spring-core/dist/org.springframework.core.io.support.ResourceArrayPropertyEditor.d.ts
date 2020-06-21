@@ -53,13 +53,13 @@ declare namespace org {
                          * Treat the given text as a location pattern and convert it to a Resource array.
                          */
                         // @ts-ignore
-                        setAsText(text: string): void
+                        public setAsText(text: java.lang.String | string): void
                         /**
                          * Treat the given value as a collection or array and convert it to a Resource array.
                          * Considers String elements as location patterns and takes Resource elements as-is.
                          */
                         // @ts-ignore
-                        setValue(value: any): void
+                        public setValue(value: java.lang.Object | any): void
                         /**
                          * Resolve the given path, replacing placeholders with
                          * corresponding system property values if necessary.
@@ -69,7 +69,7 @@ declare namespace org {
                          * @see PropertyResolver#resolveRequiredPlaceholders(String)
                          */
                         // @ts-ignore
-                        resolvePath(path: string): java.lang.String
+                        resolvePath(path: java.lang.String | string): string
                     }
                 }
             }

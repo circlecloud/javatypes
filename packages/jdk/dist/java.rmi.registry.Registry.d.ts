@@ -47,7 +47,7 @@ declare namespace java {
                  * Well known port for registry.
                  */
                 // @ts-ignore
-                
+                readonly REGISTRY_PORT: number /*int*/
                 /**
                  * Returns the remote reference bound to the specified
                  * <code>name</code> in this registry.
@@ -63,7 +63,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>name</code> is <code>null</code>
                  */
                 // @ts-ignore
-                lookup(name: string): java.rmi.Remote
+                lookup(name: java.lang.String | string): java.rmi.Remote
                 /**
                  * Binds a remote reference to the specified <code>name</code> in
                  * this registry.
@@ -81,7 +81,7 @@ declare namespace java {
                  *  <code>null</code>, or if <code>obj</code> is <code>null</code>
                  */
                 // @ts-ignore
-                bind(name: string, obj: java.rmi.Remote): void
+                bind(name: java.lang.String | string, obj: java.rmi.Remote): void
                 /**
                  * Removes the binding for the specified <code>name</code> in
                  * this registry.
@@ -97,7 +97,7 @@ declare namespace java {
                  * @throws NullPointerException if <code>name</code> is <code>null</code>
                  */
                 // @ts-ignore
-                unbind(name: string): void
+                unbind(name: java.lang.String | string): void
                 /**
                  * Replaces the binding for the specified <code>name</code> in
                  * this registry with the supplied remote reference.  If there is
@@ -116,7 +116,7 @@ declare namespace java {
                  *  <code>null</code>, or if <code>obj</code> is <code>null</code>
                  */
                 // @ts-ignore
-                rebind(name: string, obj: java.rmi.Remote): void
+                rebind(name: java.lang.String | string, obj: java.rmi.Remote): void
                 /**
                  * Returns an array of the names bound in this registry.  The
                  * array will contain a snapshot of the names bound in this
@@ -130,7 +130,7 @@ declare namespace java {
                  *  the caller access to perform this operation
                  */
                 // @ts-ignore
-                list(): java.lang.String[]
+                list(): string[]
             }
         }
     }

@@ -26,7 +26,7 @@ declare namespace java {
                      * @return a {#code FileTime} representing the given value
                      */
                     // @ts-ignore
-                    from(value: number /*long*/, unit: java.util.concurrent.TimeUnit): java.nio.file.attribute.FileTime
+                    public static from(value: number /*long*/, unit: java.util.concurrent.TimeUnit): java.nio.file.attribute.FileTime
                     /**
                      * Returns a {@code FileTime} representing the given value in milliseconds.
                      * @param value
@@ -35,7 +35,7 @@ declare namespace java {
                      * @return a {#code FileTime} representing the given value
                      */
                     // @ts-ignore
-                    fromMillis(value: number /*long*/): java.nio.file.attribute.FileTime
+                    public static fromMillis(value: number /*long*/): java.nio.file.attribute.FileTime
                     /**
                      * Returns a {@code FileTime} representing the same point of time value
                      * on the time-line as the provided {@code Instant} object.
@@ -46,7 +46,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    from(instant: java.time.Instant): java.nio.file.attribute.FileTime
+                    public static from(instant: java.time.Instant): java.nio.file.attribute.FileTime
                     /**
                      * Returns the value at the given unit of granularity.
                      * <p> Conversion from a coarser granularity that would numerically overflow
@@ -58,7 +58,7 @@ declare namespace java {
                      *           since the epoch (1970-01-01T00:00:00Z); can be negative
                      */
                     // @ts-ignore
-                    to(unit: java.util.concurrent.TimeUnit): long
+                    public to(unit: java.util.concurrent.TimeUnit): number /*long*/
                     /**
                      * Returns the value in milliseconds.
                      * <p> Conversion from a coarser granularity that would numerically overflow
@@ -67,7 +67,7 @@ declare namespace java {
                      * @return the value in milliseconds, since the epoch (1970-01-01T00:00:00Z)
                      */
                     // @ts-ignore
-                    toMillis(): long
+                    public toMillis(): number /*long*/
                     /**
                      * Converts this {@code FileTime} object to an {@code Instant}.
                      * <p> The conversion creates an {@code Instant} that represents the
@@ -82,7 +82,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    toInstant(): java.time.Instant
+                    public toInstant(): java.time.Instant
                     /**
                      * Tests this {@code FileTime} for equality with the given object.
                      * <p> The result is {@code true} if and only if the argument is not {@code
@@ -94,7 +94,7 @@ declare namespace java {
                      *           FileTime} that represents the same time
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Computes a hash code for this file time.
                      * <p> The hash code is based upon the value represented, and satisfies the
@@ -102,7 +102,7 @@ declare namespace java {
                      * @return the hash-code value
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Compares the value of two {@code FileTime} objects for order.
                      * @param other
@@ -113,7 +113,7 @@ declare namespace java {
                      *           {@code FileTime} represents a time that is after {@code other}
                      */
                     // @ts-ignore
-                    compareTo(other: java.nio.file.attribute.FileTime): int
+                    public compareTo(other: java.nio.file.attribute.FileTime): number /*int*/
                     /**
                      * Returns the string representation of this {@code FileTime}. The string
                      * is returned in the <a
@@ -138,7 +138,7 @@ declare namespace java {
                      * @return the string representation of this file time
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

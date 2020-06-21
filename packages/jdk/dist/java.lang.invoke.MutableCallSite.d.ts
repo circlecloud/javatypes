@@ -32,11 +32,11 @@ declare namespace java {
                 // @ts-ignore
                 constructor(type: java.lang.invoke.MethodType)
                 // @ts-ignore
-                dynamicInvoker(): java.lang.invoke.MethodHandle
+                public dynamicInvoker(): java.lang.invoke.MethodHandle
                 // @ts-ignore
-                getTarget(): java.lang.invoke.MethodHandle
+                public getTarget(): java.lang.invoke.MethodHandle
                 // @ts-ignore
-                setTarget(newTarget: java.lang.invoke.MethodHandle): void
+                public setTarget(newTarget: java.lang.invoke.MethodHandle): void
                 /**
                  * Forces the current target MethodHandle of each of the MutableCallSites in the <i>sites</i> array to be seen by all threads.
                  * Loads of the target from any of the CallSites that has already begun will continue to use the old value.
@@ -50,7 +50,7 @@ declare namespace java {
                  * @throws NullPointerException - if sites or any of its elements are null.
                  */
                 // @ts-ignore
-                syncAll(sites: java.lang.invoke.MutableCallSite[]): void
+                public static syncAll(sites: java.lang.invoke.MutableCallSite[]): void
             }
         }
     }

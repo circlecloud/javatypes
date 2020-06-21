@@ -52,7 +52,7 @@ declare namespace javax {
              * @see #setMinimum
              */
             // @ts-ignore
-            getMinimum(): int
+            getMinimum(): number /*int*/
             /**
              * Sets the model's minimum to <I>newMinimum</I>.   The
              * other three properties may be changed as well, to ensure
@@ -76,7 +76,7 @@ declare namespace javax {
              * @see #setExtent
              */
             // @ts-ignore
-            getMaximum(): int
+            getMaximum(): number /*int*/
             /**
              * Sets the model's maximum to <I>newMaximum</I>. The other
              * three properties may be changed as well, to ensure that
@@ -99,7 +99,7 @@ declare namespace javax {
              * @see #setValue
              */
             // @ts-ignore
-            getValue(): int
+            getValue(): number /*int*/
             /**
              * Sets the model's current value to <code>newValue</code> if <code>newValue</code>
              * satisfies the model's constraints. Those constraints are:
@@ -152,7 +152,7 @@ declare namespace javax {
              * @see #setValue
              */
             // @ts-ignore
-            getExtent(): int
+            getExtent(): number /*int*/
             /**
              * Sets the model's extent.  The <I>newExtent</I> is forced to
              * be greater than or equal to zero and less than or equal to

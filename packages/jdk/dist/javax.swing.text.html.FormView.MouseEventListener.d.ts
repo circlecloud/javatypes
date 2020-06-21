@@ -15,7 +15,7 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        mouseReleased(evt: java.awt.event.MouseEvent): void
+                        public mouseReleased(evt: java.awt.event.MouseEvent): void
                     }
                 }
             }

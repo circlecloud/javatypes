@@ -27,13 +27,13 @@ declare namespace javax {
                  *  is null.
                  */
                 // @ts-ignore
-                constructor(pSrcName: string)
+                constructor(pSrcName: java.lang.String | string)
                 /**
                  * Returns the PSource algorithm name.
                  * @return the PSource algorithm name.
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
             }
         }
     }

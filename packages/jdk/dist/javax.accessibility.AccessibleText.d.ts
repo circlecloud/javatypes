@@ -26,7 +26,7 @@ declare namespace javax {
              * @see #getBeforeIndex
              */
             // @ts-ignore
-            
+            readonly CHARACTER: number /*int*/
             /**
              * Constant used to indicate that the part of the text that should be
              * retrieved is a word.
@@ -35,7 +35,7 @@ declare namespace javax {
              * @see #getBeforeIndex
              */
             // @ts-ignore
-            
+            readonly WORD: number /*int*/
             /**
              * Constant used to indicate that the part of the text that should be
              * retrieved is a sentence.
@@ -50,7 +50,7 @@ declare namespace javax {
              * @see #getBeforeIndex
              */
             // @ts-ignore
-            
+            readonly SENTENCE: number /*int*/
             /**
              * Given a point in local coordinates, return the zero-based index
              * of the character under that Point.  If the point is invalid,
@@ -60,7 +60,7 @@ declare namespace javax {
              *  Point is invalid return -1.
              */
             // @ts-ignore
-            getIndexAtPoint(p: java.awt.Point): int
+            getIndexAtPoint(p: java.awt.Point): number /*int*/
             /**
              * Determines the bounding box of the character at the given
              * index into the string.  The bounds are returned in local
@@ -76,7 +76,7 @@ declare namespace javax {
              * @return the number of characters
              */
             // @ts-ignore
-            getCharCount(): int
+            getCharCount(): number /*int*/
             /**
              * Returns the zero-based offset of the caret.
              * Note: That to the right of the caret will have the same index
@@ -84,7 +84,7 @@ declare namespace javax {
              * @return the zero-based offset of the caret.
              */
             // @ts-ignore
-            getCaretPosition(): int
+            getCaretPosition(): number /*int*/
             /**
              * Returns the String at a given index.
              * @param part the CHARACTER, WORD, or SENTENCE to retrieve
@@ -92,7 +92,7 @@ declare namespace javax {
              * @return the letter, word, or sentence
              */
             // @ts-ignore
-            getAtIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+            getAtIndex(part: number /*int*/, index: number /*int*/): string
             /**
              * Returns the String after a given index.
              * @param part the CHARACTER, WORD, or SENTENCE to retrieve
@@ -100,7 +100,7 @@ declare namespace javax {
              * @return the letter, word, or sentence
              */
             // @ts-ignore
-            getAfterIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+            getAfterIndex(part: number /*int*/, index: number /*int*/): string
             /**
              * Returns the String before a given index.
              * @param part the CHARACTER, WORD, or SENTENCE to retrieve
@@ -108,7 +108,7 @@ declare namespace javax {
              * @return the letter, word, or sentence
              */
             // @ts-ignore
-            getBeforeIndex(part: number /*int*/, index: number /*int*/): java.lang.String
+            getBeforeIndex(part: number /*int*/, index: number /*int*/): string
             /**
              * Returns the AttributeSet for a given character at a given index
              * @param i the zero-based index into the text
@@ -123,7 +123,7 @@ declare namespace javax {
              * @return the index into the text of the start of the selection
              */
             // @ts-ignore
-            getSelectionStart(): int
+            getSelectionStart(): number /*int*/
             /**
              * Returns the end offset within the selected text.
              * If there is no selection, but there is
@@ -131,13 +131,13 @@ declare namespace javax {
              * @return the index into the text of the end of the selection
              */
             // @ts-ignore
-            getSelectionEnd(): int
+            getSelectionEnd(): number /*int*/
             /**
              * Returns the portion of the text that is selected.
              * @return the String portion of the text that is selected
              */
             // @ts-ignore
-            getSelectedText(): java.lang.String
+            getSelectedText(): string
         }
     }
 }

@@ -19,7 +19,7 @@ declare namespace org {
                  * currently {@link Opcodes#ASM8_EXPERIMENTAL}, as of Spring Framework 5.2.5.
                  */
                 // @ts-ignore
-                readonly ASM_VERSION: number /*int*/
+                public static readonly ASM_VERSION: number /*int*/
             }
         }
     }

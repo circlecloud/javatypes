@@ -72,7 +72,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class DatagramChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.ByteChannel, java.nio.channels.ScatteringByteChannel, java.nio.channels.GatheringByteChannel, java.nio.channels.MulticastChannel {
+            abstract class DatagramChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.ByteChannel, java.nio.channels.ScatteringByteChannel, java.nio.channels.GatheringByteChannel, java.nio.channels.MulticastChannel {
                 /**
                  * Initializes a new instance of this class.
                  * @param provider
@@ -97,7 +97,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.DatagramChannel
+                public static open(): java.nio.channels.DatagramChannel
                 /**
                  * Opens a datagram channel.
                  * <p> The {@code family} parameter is used to specify the {@link
@@ -122,7 +122,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                open(family: java.net.ProtocolFamily): java.nio.channels.DatagramChannel
+                public static open(family: java.net.ProtocolFamily): java.nio.channels.DatagramChannel
                 /**
                  * Returns an operation set identifying this channel's supported
                  * operations.
@@ -132,7 +132,7 @@ declare namespace java {
                  * @return The valid-operation set
                  */
                 // @ts-ignore
-                validOps(): int
+                public validOps(): number /*int*/
                 /**
                  * @throws AlreadyBoundException               {#inheritDoc}
                  * @throws UnsupportedAddressTypeException     {#inheritDoc}
@@ -145,7 +145,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract bind(local: java.net.SocketAddress): java.nio.channels.DatagramChannel
+                public abstract bind(local: java.net.SocketAddress): java.nio.channels.DatagramChannel
                 /**
                  * @throws UnsupportedOperationException           {#inheritDoc}
                  * @throws IllegalArgumentException                {#inheritDoc}
@@ -154,7 +154,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.DatagramChannel
+                public abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.DatagramChannel
                 /**
                  * Retrieves a datagram socket associated with this channel.
                  * <p> The returned object will not declare any public methods that are not
@@ -162,14 +162,14 @@ declare namespace java {
                  * @return A datagram socket associated with this channel
                  */
                 // @ts-ignore
-                abstract socket(): java.net.DatagramSocket
+                public abstract socket(): java.net.DatagramSocket
                 /**
                  * Tells whether or not this channel's socket is connected.
                  * @return {#code true} if, and only if, this channel's socket
                  *           is {@link #isOpen open} and connected
                  */
                 // @ts-ignore
-                abstract isConnected(): boolean
+                public abstract isConnected(): boolean
                 /**
                  * Connects this channel's socket.
                  * <p> The channel's socket is configured so that it only receives
@@ -211,7 +211,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract connect(remote: java.net.SocketAddress): java.nio.channels.DatagramChannel
+                public abstract connect(remote: java.net.SocketAddress): java.nio.channels.DatagramChannel
                 /**
                  * Disconnects this channel's socket.
                  * <p> The channel's socket is configured so that it can receive datagrams
@@ -227,7 +227,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract disconnect(): java.nio.channels.DatagramChannel
+                public abstract disconnect(): java.nio.channels.DatagramChannel
                 /**
                  * Returns the remote address to which this channel's socket is connected.
                  * @return The remote address; {#code null} if the channel's socket is not
@@ -239,7 +239,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract getRemoteAddress(): java.net.SocketAddress
+                public abstract getRemoteAddress(): java.net.SocketAddress
                 /**
                  * Receives a datagram via this channel.
                  * <p> If a datagram is immediately available, or if this channel is in
@@ -292,7 +292,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract receive(dst: java.nio.ByteBuffer): java.net.SocketAddress
+                public abstract receive(dst: java.nio.ByteBuffer): java.net.SocketAddress
                 /**
                  * Sends a datagram via this channel.
                  * <p> If this channel is in non-blocking mode and there is sufficient room
@@ -345,7 +345,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract send(src: java.nio.ByteBuffer, target: java.net.SocketAddress): int
+                public abstract send(src: java.nio.ByteBuffer, target: java.net.SocketAddress): number /*int*/
                 /**
                  * Reads a datagram from this channel.
                  * <p> This method may only be invoked if this channel's socket is
@@ -358,7 +358,7 @@ declare namespace java {
                  *           If this channel's socket is not connected
                  */
                 // @ts-ignore
-                abstract read(dst: java.nio.ByteBuffer): int
+                public abstract read(dst: java.nio.ByteBuffer): number /*int*/
                 /**
                  * Reads a datagram from this channel.
                  * <p> This method may only be invoked if this channel's socket is
@@ -371,7 +371,7 @@ declare namespace java {
                  *           If this channel's socket is not connected
                  */
                 // @ts-ignore
-                abstract read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                public abstract read(dsts: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * Reads a datagram from this channel.
                  * <p> This method may only be invoked if this channel's socket is
@@ -384,7 +384,7 @@ declare namespace java {
                  *           If this channel's socket is not connected
                  */
                 // @ts-ignore
-                read(dsts: java.nio.ByteBuffer[]): long
+                public read(dsts: java.nio.ByteBuffer[]): number /*long*/
                 /**
                  * Writes a datagram to this channel.
                  * <p> This method may only be invoked if this channel's socket is
@@ -395,7 +395,7 @@ declare namespace java {
                  *           If this channel's socket is not connected
                  */
                 // @ts-ignore
-                abstract write(src: java.nio.ByteBuffer): int
+                public abstract write(src: java.nio.ByteBuffer): number /*int*/
                 /**
                  * Writes a datagram to this channel.
                  * <p> This method may only be invoked if this channel's socket is
@@ -411,7 +411,7 @@ declare namespace java {
                  *           If this channel's socket is not connected
                  */
                 // @ts-ignore
-                abstract write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): long
+                public abstract write(srcs: java.nio.ByteBuffer[], offset: number /*int*/, length: number /*int*/): number /*long*/
                 /**
                  * Writes a datagram to this channel.
                  * <p> This method may only be invoked if this channel's socket is
@@ -427,7 +427,7 @@ declare namespace java {
                  *           If this channel's socket is not connected
                  */
                 // @ts-ignore
-                write(srcs: java.nio.ByteBuffer[]): long
+                public write(srcs: java.nio.ByteBuffer[]): number /*long*/
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -445,7 +445,7 @@ declare namespace java {
                  * @throws IOException                {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract getLocalAddress(): java.net.SocketAddress
+                public abstract getLocalAddress(): java.net.SocketAddress
             }
         }
     }

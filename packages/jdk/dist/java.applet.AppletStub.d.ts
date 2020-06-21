@@ -62,7 +62,7 @@ declare namespace java {
              *  or <tt>null</tt> if not set.
              */
             // @ts-ignore
-            getParameter(name: string): java.lang.String
+            getParameter(name: java.lang.String | string): string
             /**
              * Returns the applet's context.
              * @return the applet's context.

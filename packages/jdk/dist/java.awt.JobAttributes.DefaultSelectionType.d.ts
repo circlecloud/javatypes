@@ -12,19 +12,19 @@ declare namespace java {
                  * specifying that all pages of the job should be printed.
                  */
                 // @ts-ignore
-                readonly ALL: java.awt.JobAttributes.DefaultSelectionType
+                public static readonly ALL: java.awt.JobAttributes.DefaultSelectionType
                 /**
                  * The <code>DefaultSelectionType</code> instance to use for
                  * specifying that a range of pages of the job should be printed.
                  */
                 // @ts-ignore
-                readonly RANGE: java.awt.JobAttributes.DefaultSelectionType
+                public static readonly RANGE: java.awt.JobAttributes.DefaultSelectionType
                 /**
                  * The <code>DefaultSelectionType</code> instance to use for
                  * specifying that the current selection should be printed.
                  */
                 // @ts-ignore
-                readonly SELECTION: java.awt.JobAttributes.DefaultSelectionType
+                public static readonly SELECTION: java.awt.JobAttributes.DefaultSelectionType
             }
         }
     }

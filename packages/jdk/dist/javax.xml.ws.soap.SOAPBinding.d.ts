@@ -13,30 +13,30 @@ declare namespace javax {
                      * A constant representing the identity of the SOAP 1.1 over HTTP binding.
                      */
                     // @ts-ignore
-                    
+                    readonly SOAP11HTTP_BINDING: java.lang.String | string
                     /**
                      * A constant representing the identity of the SOAP 1.2 over HTTP binding.
                      */
                     // @ts-ignore
-                    
+                    readonly SOAP12HTTP_BINDING: java.lang.String | string
                     /**
                      * A constant representing the identity of the SOAP 1.1 over HTTP binding
                      * with MTOM enabled by default.
                      */
                     // @ts-ignore
-                    
+                    readonly SOAP11HTTP_MTOM_BINDING: java.lang.String | string
                     /**
                      * A constant representing the identity of the SOAP 1.2 over HTTP binding
                      * with MTOM enabled by default.
                      */
                     // @ts-ignore
-                    
+                    readonly SOAP12HTTP_MTOM_BINDING: java.lang.String | string
                     /**
                      * Gets the roles played by the SOAP binding instance.
                      * @return Set&lt;String> The set of roles played by the binding instance.
                      */
                     // @ts-ignore
-                    getRoles(): java.util.Set<java.lang.String>
+                    getRoles(): Array<java.lang.String | string>
                     /**
                      * Sets the roles played by the SOAP binding instance.
                      * @param roles    The set of roles played by the binding instance.
@@ -44,7 +44,7 @@ declare namespace javax {
                      *                   the list of roles.
                      */
                     // @ts-ignore
-                    setRoles(roles: Array<java.lang.String>): void
+                    setRoles(roles: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): void
                     /**
                      * Returns <code>true</code> if the use of MTOM is enabled.
                      * @return <code>true</code> if and only if the use of MTOM is enabled.

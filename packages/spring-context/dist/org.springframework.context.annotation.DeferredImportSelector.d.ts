@@ -24,7 +24,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    getImportGroup(): java.lang.Class<? extends org.springframework.context.annotation.DeferredImportSelector.Group>
+                    getImportGroup(): java.lang.Class<any>
                 }
             }
         }

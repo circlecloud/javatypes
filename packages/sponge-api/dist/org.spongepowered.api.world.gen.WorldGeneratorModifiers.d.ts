@@ -12,9 +12,9 @@ declare namespace org {
                          * @deprecated Will be removed from the api
                          */
                         // @ts-ignore
-                        readonly SKYLANDS: org.spongepowered.api.world.gen.WorldGeneratorModifier
+                        public static readonly SKYLANDS: org.spongepowered.api.world.gen.WorldGeneratorModifier
                         // @ts-ignore
-                        readonly VOID: org.spongepowered.api.world.gen.WorldGeneratorModifier
+                        public static readonly VOID: org.spongepowered.api.world.gen.WorldGeneratorModifier
                     }
                 }
             }

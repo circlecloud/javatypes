@@ -14,7 +14,7 @@ declare namespace java {
                  * @return the number of multiple master design controls
                  */
                 // @ts-ignore
-                getNumDesignAxes(): int
+                getNumDesignAxes(): number /*int*/
                 /**
                  * Returns an array of design limits interleaved in the form [from&rarr;to]
                  * for each axis.  For example,
@@ -24,7 +24,7 @@ declare namespace java {
                  * @return an array of design limits for each axis.
                  */
                 // @ts-ignore
-                getDesignAxisRanges(): float[]
+                getDesignAxisRanges(): number /*float*/[]
                 /**
                  * Returns an array of default design values for each axis.  For example,
                  * the default value for weight could be 1.6. The values are returned
@@ -32,14 +32,14 @@ declare namespace java {
                  * @return an array of default design values for each axis.
                  */
                 // @ts-ignore
-                getDesignAxisDefaults(): float[]
+                getDesignAxisDefaults(): number /*float*/[]
                 /**
                  * Returns the name for each design axis. This also determines the order in
                  * which the values for each axis are returned.
                  * @return an array containing the names of each design axis.
                  */
                 // @ts-ignore
-                getDesignAxisNames(): java.lang.String[]
+                getDesignAxisNames(): string[]
                 /**
                  * Creates a new instance of a multiple master font based on the design
                  * axis values contained in the specified array. The size of the array

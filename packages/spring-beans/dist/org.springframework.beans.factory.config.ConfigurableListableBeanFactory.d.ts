@@ -56,7 +56,7 @@ declare namespace org {
                          *  interface, which allows for lazy resolution of the actual target value.
                          */
                         // @ts-ignore
-                        registerResolvableDependency(dependencyType: java.lang.Class<any>, autowiredValue: any): void
+                        registerResolvableDependency(dependencyType: java.lang.Class<any>, autowiredValue: java.lang.Object | any): void
                         /**
                          * Determine whether the specified bean qualifies as an autowire candidate,
                          * to be injected into other beans which declare a dependency of matching type.
@@ -67,7 +67,7 @@ declare namespace org {
                          * @throws NoSuchBeanDefinitionException if there is no bean with the given name
                          */
                         // @ts-ignore
-                        isAutowireCandidate(beanName: string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        isAutowireCandidate(beanName: java.lang.String | string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         /**
                          * Return the registered BeanDefinition for the specified bean, allowing access
                          * to its property values and constructor argument value (which can be
@@ -83,7 +83,7 @@ declare namespace org {
                          *  defined in this factory
                          */
                         // @ts-ignore
-                        getBeanDefinition(beanName: string): org.springframework.beans.factory.config.BeanDefinition
+                        getBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Return a unified view over all bean names managed by this factory.
                          * <p>Includes bean definition names as well as names of manually registered
@@ -97,7 +97,7 @@ declare namespace org {
                          * @see #getBeanNamesForAnnotation
                          */
                         // @ts-ignore
-                        getBeanNamesIterator(): java.util.Iterator<java.lang.String>
+                        getBeanNamesIterator(): java.util.Iterator<java.lang.String | string>
                         /**
                          * Clear the merged bean definition cache, removing entries for beans
                          * which are not considered eligible for full metadata caching yet.

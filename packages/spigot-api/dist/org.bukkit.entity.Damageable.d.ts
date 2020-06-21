@@ -25,7 +25,7 @@ declare namespace org {
                  * @return Health represented from 0 to max
                  */
                 // @ts-ignore
-                getHealth(): double
+                getHealth(): number /*double*/
                 /**
                  * Sets the entity's health from 0 to {@link #getMaxHealth()}, where 0 is
                  * dead.
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return absorption amount from 0
                  */
                 // @ts-ignore
-                getAbsorptionAmount(): double
+                getAbsorptionAmount(): number /*double*/
                 /**
                  * Sets the entity's absorption amount.
                  * @param amount new absorption amount from 0
@@ -55,7 +55,7 @@ declare namespace org {
                  * @deprecated use {#link Attribute#GENERIC_MAX_HEALTH}.
                  */
                 // @ts-ignore
-                getMaxHealth(): double
+                getMaxHealth(): number /*double*/
                 /**
                  * Sets the maximum health this entity can have.
                  * <p>

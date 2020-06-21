@@ -44,12 +44,12 @@ declare namespace org {
                      * but can also be optional if the lookup returns a typed stub.
                      */
                     // @ts-ignore
-                    setServiceInterface(serviceInterface: java.lang.Class<any>): void
+                    public setServiceInterface(serviceInterface: java.lang.Class<any>): void
                     /**
                      * Return the interface of the service to access.
                      */
                     // @ts-ignore
-                    getServiceInterface(): java.lang.Class<?>
+                    public getServiceInterface(): java.lang.Class<any>
                     /**
                      * Set the RemoteInvocationFactory to use for this accessor.
                      * Default is a {@link DefaultRemoteInvocationFactory}.
@@ -57,12 +57,12 @@ declare namespace org {
                      * to the invocation, for example user credentials.
                      */
                     // @ts-ignore
-                    setRemoteInvocationFactory(remoteInvocationFactory: org.springframework.remoting.support.RemoteInvocationFactory): void
+                    public setRemoteInvocationFactory(remoteInvocationFactory: org.springframework.remoting.support.RemoteInvocationFactory): void
                     /**
                      * Return the RemoteInvocationFactory used by this accessor.
                      */
                     // @ts-ignore
-                    getRemoteInvocationFactory(): org.springframework.remoting.support.RemoteInvocationFactory
+                    public getRemoteInvocationFactory(): org.springframework.remoting.support.RemoteInvocationFactory
                     /**
                      * Set whether to look up the RMI stub on startup. Default is "true".
                      * <p>Can be turned off to allow for late start of the RMI server.
@@ -70,7 +70,7 @@ declare namespace org {
                      * @see #setCacheStub
                      */
                     // @ts-ignore
-                    setLookupStubOnStartup(lookupStubOnStartup: boolean): void
+                    public setLookupStubOnStartup(lookupStubOnStartup: boolean): void
                     /**
                      * Set whether to cache the RMI stub once it has been located.
                      * Default is "true".
@@ -79,7 +79,7 @@ declare namespace org {
                      * @see #setLookupStubOnStartup
                      */
                     // @ts-ignore
-                    setCacheStub(cacheStub: boolean): void
+                    public setCacheStub(cacheStub: boolean): void
                     /**
                      * Set whether to refresh the RMI stub on connect failure.
                      * Default is "false".
@@ -92,7 +92,7 @@ declare namespace org {
                      * @see java.rmi.NoSuchObjectException
                      */
                     // @ts-ignore
-                    setRefreshStubOnConnectFailure(refreshStubOnConnectFailure: boolean): void
+                    public setRefreshStubOnConnectFailure(refreshStubOnConnectFailure: boolean): void
                     /**
                      * Set whether to expose the JNDI environment context for all access to the target
                      * RMI stub, i.e. for all method invocations on the exposed object reference.
@@ -102,9 +102,9 @@ declare namespace org {
                      * for RMI stubs with authorization requirements.
                      */
                     // @ts-ignore
-                    setExposeAccessContext(exposeAccessContext: boolean): void
+                    public setExposeAccessContext(exposeAccessContext: boolean): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Fetches the RMI stub on startup, if necessary.
                      * @throws RemoteLookupFailureException if RMI stub creation failed
@@ -112,7 +112,7 @@ declare namespace org {
                      * @see #lookupStub
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Create the RMI stub, typically by looking it up.
                      * <p>Called on interceptor initialization if "cacheStub" is "true";
@@ -125,7 +125,7 @@ declare namespace org {
                      * @see #lookup
                      */
                     // @ts-ignore
-                    lookupStub(): java.lang.Object
+                    lookupStub(): any
                     /**
                      * Return the RMI stub to use. Called for each invocation.
                      * <p>The default implementation returns the stub created on initialization,
@@ -138,7 +138,7 @@ declare namespace org {
                      * @throws RemoteLookupFailureException if RMI stub creation failed
                      */
                     // @ts-ignore
-                    getStub(): java.lang.Object
+                    getStub(): any
                     /**
                      * Fetches an RMI stub and delegates to {@link #doInvoke}.
                      * If configured to refresh on connect failure, it will call
@@ -151,7 +151,7 @@ declare namespace org {
                      * @see java.rmi.NoSuchObjectException
                      */
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                     /**
                      * Determine whether the given RMI exception indicates a connect failure.
                      * <p>The default implementation delegates to
@@ -170,7 +170,7 @@ declare namespace org {
                      * @see #invoke
                      */
                     // @ts-ignore
-                    refreshAndRetry(invocation: MethodInvocation): java.lang.Object
+                    refreshAndRetry(invocation: MethodInvocation): any
                     /**
                      * Perform the given invocation on the given RMI stub.
                      * @param invocation the AOP method invocation
@@ -179,7 +179,7 @@ declare namespace org {
                      * @throws Throwable in case of invocation failure
                      */
                     // @ts-ignore
-                    doInvoke(invocation: MethodInvocation, stub: any): java.lang.Object
+                    doInvoke(invocation: MethodInvocation, stub: java.lang.Object | any): any
                     /**
                      * Apply the given AOP method invocation to the given {@link RmiInvocationHandler}.
                      * <p>The default implementation delegates to {@link #createRemoteInvocation}.
@@ -193,7 +193,7 @@ declare namespace org {
                      * @see org.springframework.remoting.support.RemoteInvocation
                      */
                     // @ts-ignore
-                    doInvoke(methodInvocation: MethodInvocation, invocationHandler: org.springframework.remoting.rmi.RmiInvocationHandler): java.lang.Object
+                    doInvoke(methodInvocation: MethodInvocation, invocationHandler: org.springframework.remoting.rmi.RmiInvocationHandler): any
                     /**
                      * Create a new RemoteInvocation object for the given AOP method invocation.
                      * <p>The default implementation delegates to the configured

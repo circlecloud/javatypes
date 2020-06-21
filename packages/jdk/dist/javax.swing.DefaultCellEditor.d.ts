@@ -34,7 +34,7 @@ declare namespace javax {
              * @param comboBox  a <code>JComboBox</code> object
              */
             // @ts-ignore
-            constructor(comboBox: javax.swing.JComboBox)
+            constructor(comboBox: javax.swing.JComboBox<any>)
             /**
              * The Swing component being edited.
              */
@@ -58,65 +58,65 @@ declare namespace javax {
              * @return the editor <code>Component</code>
              */
             // @ts-ignore
-            getComponent(): java.awt.Component
+            public getComponent(): java.awt.Component
             /**
              * Specifies the number of clicks needed to start editing.
              * @param count  an int specifying the number of clicks needed to start editing
              * @see #getClickCountToStart
              */
             // @ts-ignore
-            setClickCountToStart(count: number /*int*/): void
+            public setClickCountToStart(count: number /*int*/): void
             /**
              * Returns the number of clicks needed to start editing.
              * @return the number of clicks needed to start editing
              */
             // @ts-ignore
-            getClickCountToStart(): int
+            public getClickCountToStart(): number /*int*/
             /**
              * Forwards the message from the <code>CellEditor</code> to
              * the <code>delegate</code>.
              * @see EditorDelegate#getCellEditorValue
              */
             // @ts-ignore
-            getCellEditorValue(): java.lang.Object
+            public getCellEditorValue(): any
             /**
              * Forwards the message from the <code>CellEditor</code> to
              * the <code>delegate</code>.
              * @see EditorDelegate#isCellEditable(EventObject)
              */
             // @ts-ignore
-            isCellEditable(anEvent: java.util.EventObject): boolean
+            public isCellEditable(anEvent: java.util.EventObject): boolean
             /**
              * Forwards the message from the <code>CellEditor</code> to
              * the <code>delegate</code>.
              * @see EditorDelegate#shouldSelectCell(EventObject)
              */
             // @ts-ignore
-            shouldSelectCell(anEvent: java.util.EventObject): boolean
+            public shouldSelectCell(anEvent: java.util.EventObject): boolean
             /**
              * Forwards the message from the <code>CellEditor</code> to
              * the <code>delegate</code>.
              * @see EditorDelegate#stopCellEditing
              */
             // @ts-ignore
-            stopCellEditing(): boolean
+            public stopCellEditing(): boolean
             /**
              * Forwards the message from the <code>CellEditor</code> to
              * the <code>delegate</code>.
              * @see EditorDelegate#cancelCellEditing
              */
             // @ts-ignore
-            cancelCellEditing(): void
+            public cancelCellEditing(): void
             /**
              * Implements the <code>TreeCellEditor</code> interface.
              */
             // @ts-ignore
-            getTreeCellEditorComponent(tree: javax.swing.JTree, value: any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): java.awt.Component
+            public getTreeCellEditorComponent(tree: javax.swing.JTree, value: java.lang.Object | any, isSelected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/): java.awt.Component
             /**
              * Implements the <code>TableCellEditor</code> interface.
              */
             // @ts-ignore
-            getTableCellEditorComponent(table: javax.swing.JTable, value: any, isSelected: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
+            public getTableCellEditorComponent(table: javax.swing.JTable, value: java.lang.Object | any, isSelected: boolean, row: number /*int*/, column: number /*int*/): java.awt.Component
         }
     }
 }

@@ -18,17 +18,17 @@ declare namespace org {
                          * @param beanInstance the corresponding bean instance
                          */
                         // @ts-ignore
-                        constructor(beanName: string, beanInstance: T)
+                        constructor(beanName: java.lang.String | string, beanInstance: T)
                         /**
                          * Return the name of the bean.
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Return the corresponding bean instance.
                          */
                         // @ts-ignore
-                        getBeanInstance(): T
+                        public getBeanInstance(): T
                     }
                 }
             }

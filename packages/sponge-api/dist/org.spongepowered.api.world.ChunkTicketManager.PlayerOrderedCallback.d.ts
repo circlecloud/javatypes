@@ -18,7 +18,7 @@ declare namespace org {
                          * @return All tickets per-player that you wish to keep
                          */
                         // @ts-ignore
-                        onPlayerLoaded(tickets: object, world: org.spongepowered.api.world.World): <any>
+                        onPlayerLoaded(tickets: object, world: org.spongepowered.api.world.World): object
                     }
                 }
             }

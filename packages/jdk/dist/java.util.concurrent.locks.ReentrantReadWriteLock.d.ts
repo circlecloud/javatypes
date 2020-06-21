@@ -168,15 +168,15 @@ declare namespace java {
                     // @ts-ignore
                     constructor(fair: boolean)
                     // @ts-ignore
-                    writeLock(): java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock
+                    public writeLock(): java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock
                     // @ts-ignore
-                    readLock(): java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock
+                    public readLock(): java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock
                     /**
                      * Returns {@code true} if this lock has fairness set true.
                      * @return {#code true} if this lock has fairness set true
                      */
                     // @ts-ignore
-                    isFair(): boolean
+                    public isFair(): boolean
                     /**
                      * Returns the thread that currently owns the write lock, or
                      * {@code null} if not owned. When this method is called by a
@@ -198,7 +198,7 @@ declare namespace java {
                      * @return the number of read locks held
                      */
                     // @ts-ignore
-                    getReadLockCount(): int
+                    public getReadLockCount(): number /*int*/
                     /**
                      * Queries if the write lock is held by any thread. This method is
                      * designed for use in monitoring system state, not for
@@ -207,14 +207,14 @@ declare namespace java {
                      *          {@code false} otherwise
                      */
                     // @ts-ignore
-                    isWriteLocked(): boolean
+                    public isWriteLocked(): boolean
                     /**
                      * Queries if the write lock is held by the current thread.
                      * @return {#code true} if the current thread holds the write lock and
                      *          {@code false} otherwise
                      */
                     // @ts-ignore
-                    isWriteLockedByCurrentThread(): boolean
+                    public isWriteLockedByCurrentThread(): boolean
                     /**
                      * Queries the number of reentrant write holds on this lock by the
                      * current thread.  A writer thread has a hold on a lock for
@@ -223,7 +223,7 @@ declare namespace java {
                      *          or zero if the write lock is not held by the current thread
                      */
                     // @ts-ignore
-                    getWriteHoldCount(): int
+                    public getWriteHoldCount(): number /*int*/
                     /**
                      * Queries the number of reentrant read holds on this lock by the
                      * current thread.  A reader thread has a hold on a lock for
@@ -233,7 +233,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getReadHoldCount(): int
+                    public getReadHoldCount(): number /*int*/
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire the write lock.  Because the actual set of threads may
@@ -245,7 +245,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getQueuedWriterThreads(): java.util.Collection<java.lang.Thread>
+                    getQueuedWriterThreads(): Array<java.lang.Thread>
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire the read lock.  Because the actual set of threads may
@@ -257,7 +257,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getQueuedReaderThreads(): java.util.Collection<java.lang.Thread>
+                    getQueuedReaderThreads(): Array<java.lang.Thread>
                     /**
                      * Queries whether any threads are waiting to acquire the read or
                      * write lock. Note that because cancellations may occur at any
@@ -268,7 +268,7 @@ declare namespace java {
                      *          acquire the lock
                      */
                     // @ts-ignore
-                    hasQueuedThreads(): boolean
+                    public hasQueuedThreads(): boolean
                     /**
                      * Queries whether the given thread is waiting to acquire either
                      * the read or write lock. Note that because cancellations may
@@ -280,7 +280,7 @@ declare namespace java {
                      * @throws NullPointerException if the thread is null
                      */
                     // @ts-ignore
-                    hasQueuedThread(thread: java.lang.Thread): boolean
+                    public hasQueuedThread(thread: java.lang.Thread): boolean
                     /**
                      * Returns an estimate of the number of threads waiting to acquire
                      * either the read or write lock.  The value is only an estimate
@@ -291,7 +291,7 @@ declare namespace java {
                      * @return the estimated number of threads waiting for this lock
                      */
                     // @ts-ignore
-                    getQueueLength(): int
+                    public getQueueLength(): number /*int*/
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire either the read or write lock.  Because the actual set
@@ -303,7 +303,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getQueuedThreads(): java.util.Collection<java.lang.Thread>
+                    getQueuedThreads(): Array<java.lang.Thread>
                     /**
                      * Queries whether any threads are waiting on the given condition
                      * associated with the write lock. Note that because timeouts and
@@ -319,7 +319,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    hasWaiters(condition: java.util.concurrent.locks.Condition): boolean
+                    public hasWaiters(condition: java.util.concurrent.locks.Condition): boolean
                     /**
                      * Returns an estimate of the number of threads waiting on the
                      * given condition associated with the write lock. Note that because
@@ -335,7 +335,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    getWaitQueueLength(condition: java.util.concurrent.locks.Condition): int
+                    public getWaitQueueLength(condition: java.util.concurrent.locks.Condition): number /*int*/
                     /**
                      * Returns a collection containing those threads that may be
                      * waiting on the given condition associated with the write lock.
@@ -353,7 +353,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    getWaitingThreads(condition: java.util.concurrent.locks.Condition): java.util.Collection<java.lang.Thread>
+                    getWaitingThreads(condition: java.util.concurrent.locks.Condition): Array<java.lang.Thread>
                     /**
                      * Returns a string identifying this lock, as well as its lock state.
                      * The state, in brackets, includes the String {@code "Write locks ="}
@@ -363,7 +363,7 @@ declare namespace java {
                      * @return a string identifying this lock, as well as its lock state
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

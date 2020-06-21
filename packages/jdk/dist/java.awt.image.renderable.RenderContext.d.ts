@@ -63,7 +63,7 @@ declare namespace java {
                      * @see #setRenderingHints(RenderingHints)
                      */
                     // @ts-ignore
-                    getRenderingHints(): java.awt.RenderingHints
+                    public getRenderingHints(): java.awt.RenderingHints
                     /**
                      * Sets the rendering hints of this <code>RenderContext</code>.
                      * @param hints a <code>RenderingHints</code> object that represents
@@ -71,7 +71,7 @@ declare namespace java {
                      * @see #getRenderingHints
                      */
                     // @ts-ignore
-                    setRenderingHints(hints: java.awt.RenderingHints): void
+                    public setRenderingHints(hints: java.awt.RenderingHints): void
                     /**
                      * Sets the current user-to-device AffineTransform contained
                      * in the RenderContext to a given transform.
@@ -79,7 +79,7 @@ declare namespace java {
                      * @see #getTransform
                      */
                     // @ts-ignore
-                    setTransform(newTransform: java.awt.geom.AffineTransform): void
+                    public setTransform(newTransform: java.awt.geom.AffineTransform): void
                     /**
                      * Modifies the current user-to-device transform by prepending another
                      * transform.  In matrix notation the operation is:
@@ -91,7 +91,7 @@ declare namespace java {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    preConcatenateTransform(modTransform: java.awt.geom.AffineTransform): void
+                    public preConcatenateTransform(modTransform: java.awt.geom.AffineTransform): void
                     /**
                      * Modifies the current user-to-device transform by prepending another
                      * transform.  In matrix notation the operation is:
@@ -107,7 +107,7 @@ declare namespace java {
                      *                  <code>preConcatenateTransform(AffineTransform)</code>.
                      */
                     // @ts-ignore
-                    preConcetenateTransform(modTransform: java.awt.geom.AffineTransform): void
+                    public preConcetenateTransform(modTransform: java.awt.geom.AffineTransform): void
                     /**
                      * Modifies the current user-to-device transform by appending another
                      * transform.  In matrix notation the operation is:
@@ -119,7 +119,7 @@ declare namespace java {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    concatenateTransform(modTransform: java.awt.geom.AffineTransform): void
+                    public concatenateTransform(modTransform: java.awt.geom.AffineTransform): void
                     /**
                      * Modifies the current user-to-device transform by appending another
                      * transform.  In matrix notation the operation is:
@@ -135,21 +135,21 @@ declare namespace java {
                      *                  <code>concatenateTransform(AffineTransform)</code>.
                      */
                     // @ts-ignore
-                    concetenateTransform(modTransform: java.awt.geom.AffineTransform): void
+                    public concetenateTransform(modTransform: java.awt.geom.AffineTransform): void
                     /**
                      * Gets the current user-to-device AffineTransform.
                      * @return a reference to the current AffineTransform.
                      * @see #setTransform(AffineTransform)
                      */
                     // @ts-ignore
-                    getTransform(): java.awt.geom.AffineTransform
+                    public getTransform(): java.awt.geom.AffineTransform
                     /**
                      * Sets the current area of interest.  The old area is discarded.
                      * @param newAoi The new area of interest.
                      * @see #getAreaOfInterest
                      */
                     // @ts-ignore
-                    setAreaOfInterest(newAoi: java.awt.Shape): void
+                    public setAreaOfInterest(newAoi: java.awt.Shape): void
                     /**
                      * Gets the ares of interest currently contained in the
                      * RenderContext.
@@ -158,7 +158,7 @@ declare namespace java {
                      * @see #setAreaOfInterest(Shape)
                      */
                     // @ts-ignore
-                    getAreaOfInterest(): java.awt.Shape
+                    public getAreaOfInterest(): java.awt.Shape
                     /**
                      * Makes a copy of a RenderContext. The area of interest is copied
                      * by reference.  The usr2dev AffineTransform and hints are cloned,
@@ -166,7 +166,7 @@ declare namespace java {
                      * @return the new cloned RenderContext.
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

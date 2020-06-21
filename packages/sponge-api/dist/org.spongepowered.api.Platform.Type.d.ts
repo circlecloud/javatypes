@@ -10,10 +10,25 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class Type extends java.lang.Enum<org.spongepowered.api.Platform.Type> {
+                    /**
+                     * The platform of a Minecraft CLIENT is expected.
+                     */
+                    // @ts-ignore
+                    readonly CLIENT: org.spongepowered.api.Platform.Type
+                    /**
+                     * The platform of a Minecraft SERVER is expected.
+                     */
+                    // @ts-ignore
+                    readonly SERVER: org.spongepowered.api.Platform.Type
+                    /**
+                     * It is unknown what platform the game is running on.
+                     */
+                    // @ts-ignore
+                    readonly UNKNOWN: org.spongepowered.api.Platform.Type
                     // @ts-ignore
                     values(): org.spongepowered.api.Platform.Type[]
                     // @ts-ignore
-                    valueOf(name: string): org.spongepowered.api.Platform.Type
+                    valueOf(name: java.lang.String | string): org.spongepowered.api.Platform.Type
                     /**
                      * Checks for whether the platform is {@link #SERVER}.
                      * @return True if the platform is {#link #SERVER}, false otherwise

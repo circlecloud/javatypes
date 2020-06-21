@@ -6,11 +6,11 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: java.lang.Class<T>)
                 // @ts-ignore
-                constructor(type: java.lang.Class<T>, predicate: java.util.function.Predicate<T> | java.util.function$.Predicate<T>)
+                constructor(type: java.lang.Class<T>, predicate: java.util.function$.Predicate<T>)
                 // @ts-ignore
-                get(key: org.bukkit.NamespacedKey): T
+                public get(key: org.bukkit.NamespacedKey): T
                 // @ts-ignore
-                iterator(): java.util.Iterator<T>
+                public iterator(): java.util.Iterator<T>
             }
         }
     }

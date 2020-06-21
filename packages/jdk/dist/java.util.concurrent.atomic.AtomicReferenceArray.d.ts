@@ -33,21 +33,21 @@ declare namespace java {
                      * @return the length of the array
                      */
                     // @ts-ignore
-                    length(): int
+                    public length(): number /*int*/
                     /**
                      * Gets the current value at position {@code i}.
                      * @param i the index
                      * @return the current value
                      */
                     // @ts-ignore
-                    get(i: number /*int*/): E
+                    public get(i: number /*int*/): E
                     /**
                      * Sets the element at position {@code i} to the given value.
                      * @param i the index
                      * @param newValue the new value
                      */
                     // @ts-ignore
-                    set(i: number /*int*/, newValue: E): void
+                    public set(i: number /*int*/, newValue: E): void
                     /**
                      * Eventually sets the element at position {@code i} to the given value.
                      * @param i the index
@@ -55,7 +55,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    lazySet(i: number /*int*/, newValue: E): void
+                    public lazySet(i: number /*int*/, newValue: E): void
                     /**
                      * Atomically sets the element at position {@code i} to the given
                      * value and returns the old value.
@@ -64,7 +64,7 @@ declare namespace java {
                      * @return the previous value
                      */
                     // @ts-ignore
-                    getAndSet(i: number /*int*/, newValue: E): E
+                    public getAndSet(i: number /*int*/, newValue: E): E
                     /**
                      * Atomically sets the element at position {@code i} to the given
                      * updated value if the current value {@code ==} the expected value.
@@ -75,7 +75,7 @@ declare namespace java {
                      *  the actual value was not equal to the expected value.
                      */
                     // @ts-ignore
-                    compareAndSet(i: number /*int*/, expect: E, update: E): boolean
+                    public compareAndSet(i: number /*int*/, expect: E, update: E): boolean
                     /**
                      * Atomically sets the element at position {@code i} to the given
                      * updated value if the current value {@code ==} the expected value.
@@ -88,7 +88,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    weakCompareAndSet(i: number /*int*/, expect: E, update: E): boolean
+                    public weakCompareAndSet(i: number /*int*/, expect: E, update: E): boolean
                     /**
                      * Atomically updates the element at index {@code i} with the results
                      * of applying the given function, returning the previous value. The
@@ -100,7 +100,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndUpdate(i: number /*int*/, updateFunction: java.util.function.UnaryOperator<E> | java.util.function$.UnaryOperator<E>): E
+                    public getAndUpdate(i: number /*int*/, updateFunction: java.util.function$.UnaryOperator<E>): E
                     /**
                      * Atomically updates the element at index {@code i} with the results
                      * of applying the given function, returning the updated value. The
@@ -112,7 +112,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    updateAndGet(i: number /*int*/, updateFunction: java.util.function.UnaryOperator<E> | java.util.function$.UnaryOperator<E>): E
+                    public updateAndGet(i: number /*int*/, updateFunction: java.util.function$.UnaryOperator<E>): E
                     /**
                      * Atomically updates the element at index {@code i} with the
                      * results of applying the given function to the current and
@@ -128,7 +128,7 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    getAndAccumulate(i: number /*int*/, x: E, accumulatorFunction: java.util.function.BinaryOperator<E> | java.util.function$.BinaryOperator<E>): E
+                    public getAndAccumulate(i: number /*int*/, x: E, accumulatorFunction: java.util.function$.BinaryOperator<E>): E
                     /**
                      * Atomically updates the element at index {@code i} with the
                      * results of applying the given function to the current and
@@ -144,13 +144,13 @@ declare namespace java {
                      * @since 1.8
                      */
                     // @ts-ignore
-                    accumulateAndGet(i: number /*int*/, x: E, accumulatorFunction: java.util.function.BinaryOperator<E> | java.util.function$.BinaryOperator<E>): E
+                    public accumulateAndGet(i: number /*int*/, x: E, accumulatorFunction: java.util.function$.BinaryOperator<E>): E
                     /**
                      * Returns the String representation of the current values of array.
                      * @return the String representation of the current values of array
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

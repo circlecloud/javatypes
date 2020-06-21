@@ -129,7 +129,7 @@ declare namespace java {
                  * @exception IllegalArgumentException if pattern is an empty string
                  */
                 // @ts-ignore
-                constructor(pattern: string)
+                constructor(pattern: java.lang.String | string)
                 /**
                  * Initialize a <tt>FileHandler</tt> to write to the given filename,
                  * with optional append.
@@ -150,7 +150,7 @@ declare namespace java {
                  * @exception IllegalArgumentException if pattern is an empty string
                  */
                 // @ts-ignore
-                constructor(pattern: string, append: boolean)
+                constructor(pattern: java.lang.String | string, append: boolean)
                 /**
                  * Initialize a <tt>FileHandler</tt> to write to a set of files.  When
                  * (approximately) the given limit has been written to one file,
@@ -174,7 +174,7 @@ declare namespace java {
                  * @exception IllegalArgumentException if pattern is an empty string
                  */
                 // @ts-ignore
-                constructor(pattern: string, limit: number /*int*/, count: number /*int*/)
+                constructor(pattern: java.lang.String | string, limit: number /*int*/, count: number /*int*/)
                 /**
                  * Initialize a <tt>FileHandler</tt> to write to a set of files
                  * with optional append.  When (approximately) the given limit has
@@ -200,21 +200,21 @@ declare namespace java {
                  * @exception IllegalArgumentException if pattern is an empty string
                  */
                 // @ts-ignore
-                constructor(pattern: string, limit: number /*int*/, count: number /*int*/, append: boolean)
+                constructor(pattern: java.lang.String | string, limit: number /*int*/, count: number /*int*/, append: boolean)
                 /**
                  * Format and publish a <tt>LogRecord</tt>.
                  * @param record  description of the log event. A null record is
                  *                  silently ignored and is not published
                  */
                 // @ts-ignore
-                publish(record: java.util.logging.LogRecord): void
+                public publish(record: java.util.logging.LogRecord): void
                 /**
                  * Close all the files.
                  * @exception SecurityException  if a security manager exists and if
                  *              the caller does not have <tt>LoggingPermission("control")</tt>.
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
             }
         }
     }

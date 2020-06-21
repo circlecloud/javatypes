@@ -43,7 +43,7 @@ declare namespace org {
                      * @see #setCacheHome
                      */
                     // @ts-ignore
-                    setCacheSessionBean(cacheSessionBean: boolean): void
+                    public setCacheSessionBean(cacheSessionBean: boolean): void
                     /**
                      * This implementation "creates" a new EJB instance for each invocation.
                      * Can be overridden for custom invocation strategies.
@@ -52,7 +52,7 @@ declare namespace org {
                      * for example to hold a single shared EJB component instance.
                      */
                     // @ts-ignore
-                    doInvoke(invocation: MethodInvocation): java.lang.Object
+                    doInvoke(invocation: MethodInvocation): any
                     /**
                      * Return an EJB component instance to delegate the call to.
                      * <p>The default implementation delegates to {@link #newSessionBeanInstance}.
@@ -62,7 +62,7 @@ declare namespace org {
                      * @see #newSessionBeanInstance
                      */
                     // @ts-ignore
-                    getSessionBeanInstance(): java.lang.Object
+                    getSessionBeanInstance(): any
                     /**
                      * Release the given EJB instance.
                      * <p>The default implementation delegates to {@link #removeSessionBeanInstance}.
@@ -80,7 +80,7 @@ declare namespace org {
                      * Remove the cached session bean instance, if necessary.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

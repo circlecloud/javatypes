@@ -7,14 +7,14 @@ declare namespace javax {
              * @author David Karlton
              */
             // @ts-ignore
-            class PopupMenuUI extends javax.swing.plaf.ComponentUI {
+            abstract class PopupMenuUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
                 /**
                  * @since 1.3
                  */
                 // @ts-ignore
-                isPopupTrigger(e: java.awt.event.MouseEvent): boolean
+                public isPopupTrigger(e: java.awt.event.MouseEvent): boolean
                 /**
                  * Returns the <code>Popup</code> that will be responsible for
                  * displaying the <code>JPopupMenu</code>.
@@ -25,7 +25,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getPopup(popup: javax.swing.JPopupMenu, x: number /*int*/, y: number /*int*/): javax.swing.Popup
+                public getPopup(popup: javax.swing.JPopupMenu, x: number /*int*/, y: number /*int*/): javax.swing.Popup
             }
         }
     }

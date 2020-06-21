@@ -17,7 +17,7 @@ declare namespace org {
                      * @see RequestMapping
                      */
                     // @ts-ignore
-                    class DeleteMapping implements java.lang.annotation.Annotation {
+                    abstract class DeleteMapping implements java.lang.annotation.Annotation {
                     }
                 }
             }

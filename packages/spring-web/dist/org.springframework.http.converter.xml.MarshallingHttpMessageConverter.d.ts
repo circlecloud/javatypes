@@ -15,7 +15,7 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    class MarshallingHttpMessageConverter extends org.springframework.http.converter.xml.AbstractXmlHttpMessageConverter<java.lang.Object> {
+                    class MarshallingHttpMessageConverter extends org.springframework.http.converter.xml.AbstractXmlHttpMessageConverter<java.lang.Object | any> {
                         /**
                          * Construct a new {@code MarshallingHttpMessageConverter} with no {@link Marshaller} or
                          * {@link Unmarshaller} set. The Marshaller and Unmarshaller must be set after construction
@@ -45,22 +45,22 @@ declare namespace org {
                          * Set the {@link Marshaller} to be used by this message converter.
                          */
                         // @ts-ignore
-                        setMarshaller(marshaller: Marshaller): void
+                        public setMarshaller(marshaller: Marshaller): void
                         /**
                          * Set the {@link Unmarshaller} to be used by this message converter.
                          */
                         // @ts-ignore
-                        setUnmarshaller(unmarshaller: Unmarshaller): void
+                        public setUnmarshaller(unmarshaller: Unmarshaller): void
                         // @ts-ignore
-                        canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
-                        canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                        public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                         // @ts-ignore
                         supports(clazz: java.lang.Class<any>): boolean
                         // @ts-ignore
-                        readFromSource(clazz: java.lang.Class<any>, headers: org.springframework.http.HttpHeaders, source: javax.xml.transform.Source): java.lang.Object
+                        readFromSource(clazz: java.lang.Class<any>, headers: org.springframework.http.HttpHeaders, source: javax.xml.transform.Source): any
                         // @ts-ignore
-                        writeToResult(o: any, headers: org.springframework.http.HttpHeaders, result: javax.xml.transform.Result): void
+                        writeToResult(o: java.lang.Object | any, headers: org.springframework.http.HttpHeaders, result: javax.xml.transform.Result): void
                     }
                 }
             }

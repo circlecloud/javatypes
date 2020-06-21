@@ -42,7 +42,7 @@ declare namespace org {
                      * Get the BeanDefinitionRegistry that this reader operates on.
                      */
                     // @ts-ignore
-                    getRegistry(): BeanDefinitionRegistry
+                    public getRegistry(): BeanDefinitionRegistry
                     /**
                      * Set the {@code Environment} to use when evaluating whether
                      * {@link Conditional @Conditional}-annotated component classes should be registered.
@@ -50,19 +50,19 @@ declare namespace org {
                      * @see #registerBean(Class, String, Class...)
                      */
                     // @ts-ignore
-                    setEnvironment(environment: Environment): void
+                    public setEnvironment(environment: Environment): void
                     /**
                      * Set the {@code BeanNameGenerator} to use for detected bean classes.
                      * <p>The default is a {@link AnnotationBeanNameGenerator}.
                      */
                     // @ts-ignore
-                    setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
+                    public setBeanNameGenerator(beanNameGenerator: BeanNameGenerator): void
                     /**
                      * Set the {@code ScopeMetadataResolver} to use for registered component classes.
                      * <p>The default is an {@link AnnotationScopeMetadataResolver}.
                      */
                     // @ts-ignore
-                    setScopeMetadataResolver(scopeMetadataResolver: org.springframework.context.annotation.ScopeMetadataResolver): void
+                    public setScopeMetadataResolver(scopeMetadataResolver: org.springframework.context.annotation.ScopeMetadataResolver): void
                     /**
                      * Register one or more component classes to be processed.
                      * <p>Calls to {@code register} are idempotent; adding the same
@@ -71,14 +71,14 @@ declare namespace org {
                      *  e.g. {#link Configuration @Configuration} classes
                      */
                     // @ts-ignore
-                    register(...componentClasses: java.lang.Class[]): void
+                    public register(...componentClasses: java.lang.Class<any>[]): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations.
                      * @param beanClass the class of the bean
                      */
                     // @ts-ignore
-                    registerBean(beanClass: java.lang.Class<any>): void
+                    public registerBean(beanClass: java.lang.Class<any>): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations.
@@ -88,7 +88,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    registerBean(beanClass: java.lang.Class<any>, name: string): void
+                    public registerBean(beanClass: java.lang.Class<any>, name: java.lang.String | string): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations.
@@ -97,7 +97,7 @@ declare namespace org {
                      *  in addition to qualifiers at the bean class level
                      */
                     // @ts-ignore
-                    registerBean(beanClass: java.lang.Class<any>, ...qualifiers: java.lang.Class[]): void
+                    public registerBean(beanClass: java.lang.Class<any>, ...qualifiers: java.lang.Class<any>[]): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations.
@@ -108,7 +108,7 @@ declare namespace org {
                      *  in addition to qualifiers at the bean class level
                      */
                     // @ts-ignore
-                    registerBean(beanClass: java.lang.Class<any>, name: string, ...qualifiers: java.lang.Class[]): void
+                    public registerBean(beanClass: java.lang.Class<any>, name: java.lang.String | string, ...qualifiers: java.lang.Class<any>[]): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations, using the given supplier for obtaining a new
@@ -119,7 +119,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    registerBean<T>(beanClass: java.lang.Class<T>, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): void
+                    public registerBean<T>(beanClass: java.lang.Class<T>, supplier: java.util.function$.Supplier<T>): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations, using the given supplier for obtaining a new
@@ -132,7 +132,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    registerBean<T>(beanClass: java.lang.Class<T>, name: string, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): void
+                    public registerBean<T>(beanClass: java.lang.Class<T>, name: java.lang.String | string, supplier: java.util.function$.Supplier<T>): void
                     /**
                      * Register a bean from the given bean class, deriving its metadata from
                      * class-declared annotations.
@@ -146,7 +146,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    registerBean<T>(beanClass: java.lang.Class<T>, name: string, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
+                    public registerBean<T>(beanClass: java.lang.Class<T>, name: java.lang.String | string, supplier: java.util.function$.Supplier<T>, ...customizers: BeanDefinitionCustomizer[]): void
                 }
             }
         }

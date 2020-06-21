@@ -10,7 +10,7 @@ declare namespace org {
              * @since 2.0.7
              */
             // @ts-ignore
-            class TypeUtils extends java.lang.Object {
+            abstract class TypeUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -21,9 +21,9 @@ declare namespace org {
                  * @return true if rhs is assignable to lhs
                  */
                 // @ts-ignore
-                isAssignable(lhsType: java.lang.reflect.Type, rhsType: java.lang.reflect.Type): boolean
+                public static isAssignable(lhsType: java.lang.reflect.Type, rhsType: java.lang.reflect.Type): boolean
                 // @ts-ignore
-                isAssignableBound(lhsType: java.lang.reflect.Type, rhsType: java.lang.reflect.Type): boolean
+                public static isAssignableBound(lhsType: java.lang.reflect.Type, rhsType: java.lang.reflect.Type): boolean
             }
         }
     }

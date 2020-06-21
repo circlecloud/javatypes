@@ -11,7 +11,7 @@ declare namespace org {
                  * @see org.springframework.cache.interceptor.CacheErrorHandler
                  */
                 // @ts-ignore
-                class AbstractCacheInvoker extends java.lang.Object {
+                abstract class AbstractCacheInvoker extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
@@ -24,12 +24,12 @@ declare namespace org {
                      * is used who throws any exception as is.
                      */
                     // @ts-ignore
-                    setErrorHandler(errorHandler: org.springframework.cache.interceptor.CacheErrorHandler): void
+                    public setErrorHandler(errorHandler: org.springframework.cache.interceptor.CacheErrorHandler): void
                     /**
                      * Return the {@link CacheErrorHandler} to use.
                      */
                     // @ts-ignore
-                    getErrorHandler(): org.springframework.cache.interceptor.CacheErrorHandler
+                    public getErrorHandler(): org.springframework.cache.interceptor.CacheErrorHandler
                     /**
                      * Execute {@link Cache#get(Object)} on the specified {@link Cache} and
                      * invoke the error handler if an exception occurs. Return {@code null}
@@ -38,19 +38,19 @@ declare namespace org {
                      * @see Cache#get(Object)
                      */
                     // @ts-ignore
-                    doGet(cache: org.springframework.cache.Cache, key: any): org.springframework.cache.Cache.ValueWrapper
+                    doGet(cache: org.springframework.cache.Cache, key: java.lang.Object | any): org.springframework.cache.Cache.ValueWrapper
                     /**
                      * Execute {@link Cache#put(Object, Object)} on the specified {@link Cache}
                      * and invoke the error handler if an exception occurs.
                      */
                     // @ts-ignore
-                    doPut(cache: org.springframework.cache.Cache, key: any, result: any): void
+                    doPut(cache: org.springframework.cache.Cache, key: java.lang.Object | any, result: java.lang.Object | any): void
                     /**
                      * Execute {@link Cache#evict(Object)}/{@link Cache#evictIfPresent(Object)} on the
                      * specified {@link Cache} and invoke the error handler if an exception occurs.
                      */
                     // @ts-ignore
-                    doEvict(cache: org.springframework.cache.Cache, key: any, immediate: boolean): void
+                    doEvict(cache: org.springframework.cache.Cache, key: java.lang.Object | any, immediate: boolean): void
                     /**
                      * Execute {@link Cache#clear()} on the specified {@link Cache} and
                      * invoke the error handler if an exception occurs.

@@ -186,25 +186,25 @@ declare namespace javax {
              * Not currently used.
              */
             // @ts-ignore
-            
+            readonly DEFAULT: java.lang.String | string
             /**
              * The key used for storing the <code>String</code> name
              * for the action, used for a menu or button.
              */
             // @ts-ignore
-            
+            readonly NAME: java.lang.String | string
             /**
              * The key used for storing a short <code>String</code>
              * description for the action, used for tooltip text.
              */
             // @ts-ignore
-            
+            readonly SHORT_DESCRIPTION: java.lang.String | string
             /**
              * The key used for storing a longer <code>String</code>
              * description for the action, could be used for context-sensitive help.
              */
             // @ts-ignore
-            
+            readonly LONG_DESCRIPTION: java.lang.String | string
             /**
              * The key used for storing a small <code>Icon</code>, such
              * as <code>ImageIcon</code>.  This is typically used with
@@ -217,7 +217,7 @@ declare namespace javax {
              * <code>LARGE_ICON_KEY</code>.
              */
             // @ts-ignore
-            
+            readonly SMALL_ICON: java.lang.String | string
             /**
              * The key used to determine the command <code>String</code> for the
              * <code>ActionEvent</code> that will be created when an
@@ -226,14 +226,14 @@ declare namespace javax {
              * <code>JComponent</code>.
              */
             // @ts-ignore
-            
+            readonly ACTION_COMMAND_KEY: java.lang.String | string
             /**
              * The key used for storing a <code>KeyStroke</code> to be used as the
              * accelerator for the action.
              * @since 1.3
              */
             // @ts-ignore
-            
+            readonly ACCELERATOR_KEY: java.lang.String | string
             /**
              * The key used for storing an <code>Integer</code> that corresponds to
              * one of the <code>KeyEvent</code> key codes.  The value is
@@ -245,7 +245,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            
+            readonly MNEMONIC_KEY: java.lang.String | string
             /**
              * The key used for storing a <code>Boolean</code> that corresponds
              * to the selected state.  This is typically used only for components
@@ -266,7 +266,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly SELECTED_KEY: java.lang.String | string
             /**
              * The key used for storing an <code>Integer</code> that corresponds
              * to the index in the text (identified by the <code>NAME</code>
@@ -280,7 +280,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly DISPLAYED_MNEMONIC_INDEX_KEY: java.lang.String | string
             /**
              * The key used for storing an <code>Icon</code>.  This is typically
              * used by buttons, such as <code>JButton</code> and
@@ -296,14 +296,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            
+            readonly LARGE_ICON_KEY: java.lang.String | string
             /**
              * Gets one of this object's properties
              * using the associated key.
              * @see #putValue
              */
             // @ts-ignore
-            getValue(key: string): java.lang.Object
+            getValue(key: java.lang.String | string): any
             /**
              * Sets one of this object's properties
              * using the associated key. If the value has
@@ -313,7 +313,7 @@ declare namespace javax {
              * @param value  an <code>Object</code> value
              */
             // @ts-ignore
-            putValue(key: string, value: any): void
+            putValue(key: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * Sets the enabled state of the <code>Action</code>.  When enabled,
              * any component associated with this object is active and

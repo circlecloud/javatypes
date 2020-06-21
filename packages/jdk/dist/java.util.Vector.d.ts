@@ -85,7 +85,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * The array buffer into which the components of the vector are
              * stored. The capacity of the vector is the length of this array buffer,
@@ -94,7 +94,7 @@ declare namespace java {
              * @serial 
              */
             // @ts-ignore
-            elementData: any[]
+            elementData: java.lang.Object[] | any[]
             /**
              * The number of valid components in this {@code Vector} object.
              * Components {@code elementData[0]} through
@@ -125,7 +125,7 @@ declare namespace java {
              * @see #toArray(Object[])
              */
             // @ts-ignore
-            copyInto(anArray: any[]): void
+            public copyInto(anArray: java.lang.Object[] | any[]): void
             /**
              * Trims the capacity of this vector to be the vector's current
              * size. If the capacity of this vector is larger than its current
@@ -135,7 +135,7 @@ declare namespace java {
              * minimize the storage of a vector.
              */
             // @ts-ignore
-            trimToSize(): void
+            public trimToSize(): void
             /**
              * Increases the capacity of this vector, if necessary, to ensure
              * that it can hold at least the number of components specified by
@@ -152,7 +152,7 @@ declare namespace java {
              * @param minCapacity the desired minimum capacity
              */
             // @ts-ignore
-            ensureCapacity(minCapacity: number /*int*/): void
+            public ensureCapacity(minCapacity: number /*int*/): void
             /**
              * Sets the size of this vector. If the new size is greater than the
              * current size, new {@code null} items are added to the end of
@@ -162,7 +162,7 @@ declare namespace java {
              * @throws ArrayIndexOutOfBoundsException if the new size is negative
              */
             // @ts-ignore
-            setSize(newSize: number /*int*/): void
+            public setSize(newSize: number /*int*/): void
             /**
              * Returns the current capacity of this vector.
              * @return the current capacity (the length of its internal
@@ -170,13 +170,13 @@ declare namespace java {
              *           of this vector)
              */
             // @ts-ignore
-            capacity(): int
+            public capacity(): number /*int*/
             /**
              * Returns the number of components in this vector.
              * @return the number of components in this vector
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Tests if this vector has no components.
              * @return {#code true} if and only if this vector has
@@ -184,7 +184,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns an enumeration of the components of this vector. The
              * returned {@code Enumeration} object will generate all items in
@@ -194,7 +194,7 @@ declare namespace java {
              * @see Iterator
              */
             // @ts-ignore
-            elements(): java.util.Enumeration<E>
+            public elements(): java.util.Enumeration<E>
             /**
              * Returns {@code true} if this vector contains the specified element.
              * More formally, returns {@code true} if and only if this vector
@@ -204,7 +204,7 @@ declare namespace java {
              * @return {#code true} if this vector contains the specified element
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Returns the index of the first occurrence of the specified element
              * in this vector, or -1 if this vector does not contain the element.
@@ -216,7 +216,7 @@ declare namespace java {
              *          this vector, or -1 if this vector does not contain the element
              */
             // @ts-ignore
-            indexOf(o: any): int
+            public indexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns the index of the first occurrence of the specified element in
              * this vector, searching forwards from {@code index}, or returns -1 if
@@ -233,7 +233,7 @@ declare namespace java {
              * @see Object#equals(Object)
              */
             // @ts-ignore
-            indexOf(o: any, index: number /*int*/): int
+            public indexOf(o: java.lang.Object | any, index: number /*int*/): number /*int*/
             /**
              * Returns the index of the last occurrence of the specified element
              * in this vector, or -1 if this vector does not contain the element.
@@ -245,7 +245,7 @@ declare namespace java {
              *          this vector, or -1 if this vector does not contain the element
              */
             // @ts-ignore
-            lastIndexOf(o: any): int
+            public lastIndexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Returns the index of the last occurrence of the specified element in
              * this vector, searching backwards from {@code index}, or returns -1 if
@@ -262,7 +262,7 @@ declare namespace java {
              *          than or equal to the current size of this vector
              */
             // @ts-ignore
-            lastIndexOf(o: any, index: number /*int*/): int
+            public lastIndexOf(o: java.lang.Object | any, index: number /*int*/): number /*int*/
             /**
              * Returns the component at the specified index.
              * <p>This method is identical in functionality to the {@link #get(int)}
@@ -273,7 +273,7 @@ declare namespace java {
              *          ({#code index < 0 || index >= size()})
              */
             // @ts-ignore
-            elementAt(index: number /*int*/): E
+            public elementAt(index: number /*int*/): E
             /**
              * Returns the first component (the item at index {@code 0}) of
              * this vector.
@@ -281,7 +281,7 @@ declare namespace java {
              * @throws NoSuchElementException if this vector has no components
              */
             // @ts-ignore
-            firstElement(): E
+            public firstElement(): E
             /**
              * Returns the last component of the vector.
              * @return the last component of the vector, i.e., the component at index
@@ -289,7 +289,7 @@ declare namespace java {
              * @throws NoSuchElementException if this vector is empty
              */
             // @ts-ignore
-            lastElement(): E
+            public lastElement(): E
             /**
              * Sets the component at the specified {@code index} of this
              * vector to be the specified object. The previous component at that
@@ -308,7 +308,7 @@ declare namespace java {
              *          ({#code index < 0 || index >= size()})
              */
             // @ts-ignore
-            setElementAt(obj: E, index: number /*int*/): void
+            public setElementAt(obj: E, index: number /*int*/): void
             /**
              * Deletes the component at the specified index. Each component in
              * this vector with an index greater or equal to the specified
@@ -326,7 +326,7 @@ declare namespace java {
              *          ({#code index < 0 || index >= size()})
              */
             // @ts-ignore
-            removeElementAt(index: number /*int*/): void
+            public removeElementAt(index: number /*int*/): void
             /**
              * Inserts the specified object as a component in this vector at the
              * specified {@code index}. Each component in this vector with
@@ -348,7 +348,7 @@ declare namespace java {
              *          ({#code index < 0 || index > size()})
              */
             // @ts-ignore
-            insertElementAt(obj: E, index: number /*int*/): void
+            public insertElementAt(obj: E, index: number /*int*/): void
             /**
              * Adds the specified component to the end of this vector,
              * increasing its size by one. The capacity of this vector is
@@ -359,7 +359,7 @@ declare namespace java {
              * @param obj   the component to be added
              */
             // @ts-ignore
-            addElement(obj: E): void
+            public addElement(obj: E): void
             /**
              * Removes the first (lowest-indexed) occurrence of the argument
              * from this vector. If the object is found in this vector, each
@@ -374,14 +374,14 @@ declare namespace java {
              *           vector; {@code false} otherwise.
              */
             // @ts-ignore
-            removeElement(obj: any): boolean
+            public removeElement(obj: java.lang.Object | any): boolean
             /**
              * Removes all components from this vector and sets its size to zero.
              * <p>This method is identical in functionality to the {@link #clear}
              * method (which is part of the {@link List} interface).
              */
             // @ts-ignore
-            removeAllElements(): void
+            public removeAllElements(): void
             /**
              * Returns a clone of this vector. The copy will contain a
              * reference to a clone of the internal data array, not a reference
@@ -389,14 +389,14 @@ declare namespace java {
              * @return a clone of this vector
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns an array containing all of the elements in this Vector
              * in the correct order.
              * @since 1.2
              */
             // @ts-ignore
-            toArray(): java.lang.Object[]
+            public toArray(): any[]
             /**
              * Returns an array containing all of the elements in this Vector in the
              * correct order; the runtime type of the returned array is that of the
@@ -419,7 +419,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            toArray<T>(a: T[]): T
+            public toArray<T>(a: T[]): T
             /**
              * Returns the element at the specified position in this Vector.
              * @param index index of the element to return
@@ -429,7 +429,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            get(index: number /*int*/): E
+            public get(index: number /*int*/): E
             /**
              * Replaces the element at the specified position in this Vector with the
              * specified element.
@@ -441,7 +441,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            set(index: number /*int*/, element: E): E
+            public set(index: number /*int*/, element: E): E
             /**
              * Appends the specified element to the end of this Vector.
              * @param e element to be appended to this Vector
@@ -449,7 +449,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Removes the first occurrence of the specified element in this Vector
              * If the Vector does not contain the element, it is unchanged.  More
@@ -461,7 +461,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Inserts the specified element at the specified position in this Vector.
              * Shifts the element currently at that position (if any) and any
@@ -473,7 +473,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            add(index: number /*int*/, element: E): void
+            public add(index: number /*int*/, element: E): void
             /**
              * Removes the element at the specified position in this Vector.
              * Shifts any subsequent elements to the left (subtracts one from their
@@ -485,14 +485,14 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            remove(index: number /*int*/): E
+            public remove(index: number /*int*/): E
             /**
              * Removes all of the elements from this Vector.  The Vector will
              * be empty after this call returns (unless it throws an exception).
              * @since 1.2
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns true if this Vector contains all of the elements in the
              * specified Collection.
@@ -503,7 +503,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            containsAll(c: Array<any>): boolean
+            public containsAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Appends all of the elements in the specified Collection to the end of
              * this Vector, in the order that they are returned by the specified
@@ -517,7 +517,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Removes from this Vector all of its elements that are contained in the
              * specified Collection.
@@ -535,7 +535,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            removeAll(c: Array<any>): boolean
+            public removeAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Retains only the elements in this Vector that are contained in the
              * specified Collection.  In other words, removes from this Vector all
@@ -555,7 +555,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            retainAll(c: Array<any>): boolean
+            public retainAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Inserts all of the elements in the specified Collection into this
              * Vector at the specified position.  Shifts the element currently at
@@ -573,7 +573,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<E>): boolean
+            public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Compares the specified Object with this Vector for equality.  Returns
              * true if and only if the specified Object is also a List, both Lists
@@ -586,18 +586,18 @@ declare namespace java {
              * @return true if the specified Object is equal to this Vector
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this Vector.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a string representation of this Vector, containing
              * the String representation of each element.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a view of the portion of this List between fromIndex,
              * inclusive, and toIndex, exclusive.  (If fromIndex and toIndex are
@@ -630,7 +630,7 @@ declare namespace java {
              *          {#code (fromIndex > toIndex)}
              */
             // @ts-ignore
-            subList(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.List<E>
+            public subList(fromIndex: number /*int*/, toIndex: number /*int*/): Array<E>
             /**
              * Removes from this list all of the elements whose index is between
              * {@code fromIndex}, inclusive, and {@code toIndex}, exclusive.
@@ -651,7 +651,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            listIterator(index: number /*int*/): java.util.ListIterator<E>
+            public listIterator(index: number /*int*/): java.util.ListIterator<E>
             /**
              * Returns a list iterator over the elements in this list (in proper
              * sequence).
@@ -659,22 +659,22 @@ declare namespace java {
              * @see #listIterator(int)
              */
             // @ts-ignore
-            listIterator(): java.util.ListIterator<E>
+            public listIterator(): java.util.ListIterator<E>
             /**
              * Returns an iterator over the elements in this list in proper sequence.
              * <p>The returned iterator is <a href="#fail-fast"><i>fail-fast</i></a>.
              * @return an iterator over the elements in this list in proper sequence
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             // @ts-ignore
-            forEach(action: java.util.function.Consumer<any super E> | java.util.function$.Consumer<? super E>): void
+            public forEach(action: java.util.function$.Consumer<any>): void
             // @ts-ignore
-            removeIf(filter: java.util.function.Predicate<any super E> | java.util.function$.Predicate<? super E>): boolean
+            public removeIf(filter: java.util.function$.Predicate<any>): boolean
             // @ts-ignore
-            replaceAll(operator: java.util.function.UnaryOperator<E> | java.util.function$.UnaryOperator<E>): void
+            public replaceAll(operator: java.util.function$.UnaryOperator<E>): void
             // @ts-ignore
-            sort(c: java.util.Comparator<any super E>): void
+            public sort(c: java.util.Comparator<any>): void
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -687,7 +687,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

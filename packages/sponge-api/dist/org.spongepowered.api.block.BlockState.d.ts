@@ -60,7 +60,7 @@ declare namespace org {
                      * @return The blockstate instance with the cycled value
                      */
                     // @ts-ignore
-                    cycleValue(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<org.spongepowered.api.util.Cycleable<any>>>): org.spongepowered.api.block.BlockState
+                    cycleValue(key: org.spongepowered.api.data.key.Key<any>): org.spongepowered.api.block.BlockState
                     /**
                      * Creates a new {@link BlockSnapshot} with this current {@link BlockState}
                      * at the desired {@link Location}. If the {@link Location} has the same
@@ -90,7 +90,7 @@ declare namespace org {
                      * @return The block trait, if available
                      */
                     // @ts-ignore
-                    getTrait(blockTrait: string): java.util.Optional<org.spongepowered.api.block.trait.BlockTrait<?>>
+                    getTrait(blockTrait: java.lang.String | string): java.util.Optional<org.spongepowered.api.block.trait.BlockTrait<any>>
                     /**
                      * Gets the {@link BlockState} with the appropriate value for the given
                      * {@link BlockTrait}. If the {@link BlockTrait} is not supported,
@@ -103,14 +103,14 @@ declare namespace org {
                      * @return The blockstate, if supported
                      */
                     // @ts-ignore
-                    withTrait(trait: org.spongepowered.api.block.trait.BlockTrait<any>, value: any): java.util.Optional<org.spongepowered.api.block.BlockState>
+                    withTrait(trait: org.spongepowered.api.block.trait.BlockTrait<any>, value: java.lang.Object | any): java.util.Optional<org.spongepowered.api.block.BlockState>
                     /**
                      * Gets an immutable {@link Collection} of all applicable
                      * {@link BlockTrait}s for this {@link BlockState}.
                      * @return An immutable collection of all applicable block traits
                      */
                     // @ts-ignore
-                    getTraits(): java.util.Collection<org.spongepowered.api.block.trait.BlockTrait<?>>
+                    getTraits(): Array<org.spongepowered.api.block.trait.BlockTrait<any>>
                     /**
                      * Gets an immutable {@link Collection} of all the values for all
                      * {@link BlockTrait}s for this {@link BlockState}.
@@ -118,7 +118,7 @@ declare namespace org {
                      *      traits
                      */
                     // @ts-ignore
-                    getTraitValues(): java.util.Collection<?>
+                    getTraitValues(): Array<any>
                     /**
                      * Gets an immutable or unmodifiable {@link Map} of the known {@link BlockTrait}s
                      * to their current values for this {@link BlockState}.
@@ -126,7 +126,7 @@ declare namespace org {
                      *      this block state
                      */
                     // @ts-ignore
-                    getTraitMap(): java.util.Map<org.spongepowered.api.block.trait.BlockTrait<?>, ?>
+                    getTraitMap(): java.util.Map<org.spongepowered.api.block.trait.BlockTrait<any>, any>
                 }
             }
         }

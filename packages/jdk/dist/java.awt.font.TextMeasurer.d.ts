@@ -46,7 +46,7 @@ declare namespace java {
                 // @ts-ignore
                 constructor(text: java.text.AttributedCharacterIterator, frc: java.awt.font.FontRenderContext)
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
                 /**
                  * Returns the index of the first character which will not fit on
                  * on a line beginning at <code>start</code> and possible
@@ -62,7 +62,7 @@ declare namespace java {
                  *           less than the beginning of the paragraph.
                  */
                 // @ts-ignore
-                getLineBreakIndex(start: number /*int*/, maxAdvance: number /*float*/): int
+                public getLineBreakIndex(start: number /*int*/, maxAdvance: number /*float*/): number /*int*/
                 /**
                  * Returns the graphical width of a line beginning at <code>start</code>
                  * and including characters up to <code>limit</code>.
@@ -79,7 +79,7 @@ declare namespace java {
                  *           the paragraph and the end of the paragraph.
                  */
                 // @ts-ignore
-                getAdvanceBetween(start: number /*int*/, limit: number /*int*/): float
+                public getAdvanceBetween(start: number /*int*/, limit: number /*int*/): number /*float*/
                 /**
                  * Returns a <code>TextLayout</code> on the given character range.
                  * @param start the index of the first character
@@ -94,7 +94,7 @@ declare namespace java {
                  *           the paragraph and the end of the paragraph.
                  */
                 // @ts-ignore
-                getLayout(start: number /*int*/, limit: number /*int*/): java.awt.font.TextLayout
+                public getLayout(start: number /*int*/, limit: number /*int*/): java.awt.font.TextLayout
                 /**
                  * Updates the <code>TextMeasurer</code> after a single character has
                  * been inserted
@@ -117,7 +117,7 @@ declare namespace java {
                  *          <code>null</code>
                  */
                 // @ts-ignore
-                insertChar(newParagraph: java.text.AttributedCharacterIterator, insertPos: number /*int*/): void
+                public insertChar(newParagraph: java.text.AttributedCharacterIterator, insertPos: number /*int*/): void
                 /**
                  * Updates the <code>TextMeasurer</code> after a single character has
                  * been deleted
@@ -140,7 +140,7 @@ declare namespace java {
                  *          <code>null</code>
                  */
                 // @ts-ignore
-                deleteChar(newParagraph: java.text.AttributedCharacterIterator, deletePos: number /*int*/): void
+                public deleteChar(newParagraph: java.text.AttributedCharacterIterator, deletePos: number /*int*/): void
             }
         }
     }

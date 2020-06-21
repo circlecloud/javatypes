@@ -14,21 +14,21 @@ declare namespace org {
                      * @return the entity that was sheared.
                      */
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.Entity
+                    public getEntity(): org.bukkit.entity.Entity
                     /**
                      * Gets the item used to shear this sheep.
                      * @return the item used to shear this sheep.
                      */
                     // @ts-ignore
-                    getTool(): org.bukkit.inventory.ItemStack
+                    public getTool(): org.bukkit.inventory.ItemStack
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

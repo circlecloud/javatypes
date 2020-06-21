@@ -34,28 +34,28 @@ declare namespace javax {
                      * XML (without comments)</a> canonicalization method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly INCLUSIVE: java.lang.String | string
                     /**
                      * The
                      * <a href="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments">
                      * Canonical XML with comments</a> canonicalization method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly INCLUSIVE_WITH_COMMENTS: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2001/10/xml-exc-c14n#">Exclusive
                      * Canonical XML (without comments)</a> canonicalization method algorithm
                      * URI.
                      */
                     // @ts-ignore
-                    
+                    readonly EXCLUSIVE: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2001/10/xml-exc-c14n#WithComments">
                      * Exclusive Canonical XML with comments</a> canonicalization method
                      * algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly EXCLUSIVE_WITH_COMMENTS: java.lang.String | string
                     /**
                      * Returns the algorithm-specific input parameters associated with this
                      * <code>CanonicalizationMethod</code>.

@@ -80,7 +80,7 @@ declare namespace java {
              * @return the current date-time using the system clock, not null
              */
             // @ts-ignore
-            now(): java.time.ZonedDateTime
+            public static now(): java.time.ZonedDateTime
             /**
              * Obtains the current date-time from the system clock in the specified time-zone.
              * <p>
@@ -94,7 +94,7 @@ declare namespace java {
              * @return the current date-time using the system clock, not null
              */
             // @ts-ignore
-            now(zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static now(zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains the current date-time from the specified clock.
              * <p>
@@ -107,7 +107,7 @@ declare namespace java {
              * @return the current date-time, not null
              */
             // @ts-ignore
-            now(clock: java.time.Clock): java.time.ZonedDateTime
+            public static now(clock: java.time.Clock): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a local date and time.
              * <p>
@@ -134,7 +134,7 @@ declare namespace java {
              * @return the offset date-time, not null
              */
             // @ts-ignore
-            of(date: java.time.LocalDate, time: java.time.LocalTime, zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static of(date: java.time.LocalDate, time: java.time.LocalTime, zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a local date-time.
              * <p>
@@ -159,7 +159,7 @@ declare namespace java {
              * @return the zoned date-time, not null
              */
             // @ts-ignore
-            of(localDateTime: java.time.LocalDateTime, zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static of(localDateTime: java.time.LocalDateTime, zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a year, month, day,
              * hour, minute, second, nanosecond and time-zone.
@@ -200,7 +200,7 @@ declare namespace java {
              *   if the day-of-month is invalid for the month-year
              */
             // @ts-ignore
-            of(year: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/, nanoOfSecond: number /*int*/, zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static of(year: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/, hour: number /*int*/, minute: number /*int*/, second: number /*int*/, nanoOfSecond: number /*int*/, zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a local date-time
              * using the preferred offset if possible.
@@ -224,7 +224,7 @@ declare namespace java {
              * @return the zoned date-time, not null
              */
             // @ts-ignore
-            ofLocal(localDateTime: java.time.LocalDateTime, zone: java.time.ZoneId, preferredOffset: java.time.ZoneOffset): java.time.ZonedDateTime
+            public static ofLocal(localDateTime: java.time.LocalDateTime, zone: java.time.ZoneId, preferredOffset: java.time.ZoneOffset): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from an {@code Instant}.
              * <p>
@@ -239,7 +239,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported range
              */
             // @ts-ignore
-            ofInstant(instant: java.time.Instant, zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static ofInstant(instant: java.time.Instant, zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from the instant formed by combining
              * the local date-time and offset.
@@ -260,7 +260,7 @@ declare namespace java {
              * @return the zoned date-time, not null
              */
             // @ts-ignore
-            ofInstant(localDateTime: java.time.LocalDateTime, offset: java.time.ZoneOffset, zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static ofInstant(localDateTime: java.time.LocalDateTime, offset: java.time.ZoneOffset, zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} strictly validating the
              * combination of local date-time, offset and zone ID.
@@ -274,7 +274,7 @@ declare namespace java {
              * @return the zoned date-time, not null
              */
             // @ts-ignore
-            ofStrict(localDateTime: java.time.LocalDateTime, offset: java.time.ZoneOffset, zone: java.time.ZoneId): java.time.ZonedDateTime
+            public static ofStrict(localDateTime: java.time.LocalDateTime, offset: java.time.ZoneOffset, zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a temporal object.
              * <p>
@@ -297,7 +297,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to an {#code ZonedDateTime}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.ZonedDateTime
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a text string such as
              * {@code 2007-12-03T10:15:30+01:00[Europe/Paris]}.
@@ -309,7 +309,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.ZonedDateTime
+            public static parse(text: java.lang.CharSequence): java.time.ZonedDateTime
             /**
              * Obtains an instance of {@code ZonedDateTime} from a text string using a specific formatter.
              * <p>
@@ -320,7 +320,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.ZonedDateTime
+            public static parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.ZonedDateTime
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -373,7 +373,7 @@ declare namespace java {
              * @return true if the field is supported on this date-time, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Checks if the specified unit is supported.
              * <p>
@@ -410,7 +410,7 @@ declare namespace java {
              * @return true if the unit can be added/subtracted, false if not
              */
             // @ts-ignore
-            isSupported(unit: java.time.temporal.TemporalUnit): boolean
+            public isSupported(unit: java.time.temporal.TemporalUnit): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -434,7 +434,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this date-time as an {@code int}.
              * <p>
@@ -463,7 +463,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this date-time as a {@code long}.
              * <p>
@@ -487,7 +487,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Gets the zone offset, such as '+01:00'.
              * <p>
@@ -495,7 +495,7 @@ declare namespace java {
              * @return the zone offset, not null
              */
             // @ts-ignore
-            getOffset(): java.time.ZoneOffset
+            public getOffset(): java.time.ZoneOffset
             /**
              * Returns a copy of this date-time changing the zone offset to the
              * earlier of the two valid offsets at a local time-line overlap.
@@ -512,7 +512,7 @@ declare namespace java {
              * @return a {#code ZonedDateTime} based on this date-time with the earlier offset, not null
              */
             // @ts-ignore
-            withEarlierOffsetAtOverlap(): java.time.ZonedDateTime
+            public withEarlierOffsetAtOverlap(): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time changing the zone offset to the
              * later of the two valid offsets at a local time-line overlap.
@@ -529,7 +529,7 @@ declare namespace java {
              * @return a {#code ZonedDateTime} based on this date-time with the later offset, not null
              */
             // @ts-ignore
-            withLaterOffsetAtOverlap(): java.time.ZonedDateTime
+            public withLaterOffsetAtOverlap(): java.time.ZonedDateTime
             /**
              * Gets the time-zone, such as 'Europe/Paris'.
              * <p>
@@ -543,7 +543,7 @@ declare namespace java {
              * @return the time-zone, not null
              */
             // @ts-ignore
-            getZone(): java.time.ZoneId
+            public getZone(): java.time.ZoneId
             /**
              * Returns a copy of this date-time with a different time-zone,
              * retaining the local date-time if possible.
@@ -561,7 +561,7 @@ declare namespace java {
              * @return a {#code ZonedDateTime} based on this date-time with the requested zone, not null
              */
             // @ts-ignore
-            withZoneSameLocal(zone: java.time.ZoneId): java.time.ZonedDateTime
+            public withZoneSameLocal(zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with a different time-zone,
              * retaining the instant.
@@ -579,7 +579,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            withZoneSameInstant(zone: java.time.ZoneId): java.time.ZonedDateTime
+            public withZoneSameInstant(zone: java.time.ZoneId): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with the zone ID set to the offset.
              * <p>
@@ -597,7 +597,7 @@ declare namespace java {
              * @return a {#code ZonedDateTime} with the zone ID set to the offset, not null
              */
             // @ts-ignore
-            withFixedOffsetZone(): java.time.ZonedDateTime
+            public withFixedOffsetZone(): java.time.ZonedDateTime
             /**
              * Gets the {@code LocalDateTime} part of this date-time.
              * <p>
@@ -606,7 +606,7 @@ declare namespace java {
              * @return the local date-time part of this date-time, not null
              */
             // @ts-ignore
-            toLocalDateTime(): java.time.LocalDateTime
+            public toLocalDateTime(): java.time.LocalDateTime
             /**
              * Gets the {@code LocalDate} part of this date-time.
              * <p>
@@ -615,7 +615,7 @@ declare namespace java {
              * @return the date part of this date-time, not null
              */
             // @ts-ignore
-            toLocalDate(): java.time.LocalDate
+            public toLocalDate(): java.time.LocalDate
             /**
              * Gets the year field.
              * <p>
@@ -626,7 +626,7 @@ declare namespace java {
              * @return the year, from MIN_YEAR to MAX_YEAR
              */
             // @ts-ignore
-            getYear(): int
+            public getYear(): number /*int*/
             /**
              * Gets the month-of-year field from 1 to 12.
              * <p>
@@ -637,7 +637,7 @@ declare namespace java {
              * @see #getMonth()
              */
             // @ts-ignore
-            getMonthValue(): int
+            public getMonthValue(): number /*int*/
             /**
              * Gets the month-of-year field using the {@code Month} enum.
              * <p>
@@ -649,7 +649,7 @@ declare namespace java {
              * @see #getMonthValue()
              */
             // @ts-ignore
-            getMonth(): java.time.Month
+            public getMonth(): java.time.Month
             /**
              * Gets the day-of-month field.
              * <p>
@@ -657,7 +657,7 @@ declare namespace java {
              * @return the day-of-month, from 1 to 31
              */
             // @ts-ignore
-            getDayOfMonth(): int
+            public getDayOfMonth(): number /*int*/
             /**
              * Gets the day-of-year field.
              * <p>
@@ -665,7 +665,7 @@ declare namespace java {
              * @return the day-of-year, from 1 to 365, or 366 in a leap year
              */
             // @ts-ignore
-            getDayOfYear(): int
+            public getDayOfYear(): number /*int*/
             /**
              * Gets the day-of-week field, which is an enum {@code DayOfWeek}.
              * <p>
@@ -679,7 +679,7 @@ declare namespace java {
              * @return the day-of-week, not null
              */
             // @ts-ignore
-            getDayOfWeek(): java.time.DayOfWeek
+            public getDayOfWeek(): java.time.DayOfWeek
             /**
              * Gets the {@code LocalTime} part of this date-time.
              * <p>
@@ -688,31 +688,31 @@ declare namespace java {
              * @return the time part of this date-time, not null
              */
             // @ts-ignore
-            toLocalTime(): java.time.LocalTime
+            public toLocalTime(): java.time.LocalTime
             /**
              * Gets the hour-of-day field.
              * @return the hour-of-day, from 0 to 23
              */
             // @ts-ignore
-            getHour(): int
+            public getHour(): number /*int*/
             /**
              * Gets the minute-of-hour field.
              * @return the minute-of-hour, from 0 to 59
              */
             // @ts-ignore
-            getMinute(): int
+            public getMinute(): number /*int*/
             /**
              * Gets the second-of-minute field.
              * @return the second-of-minute, from 0 to 59
              */
             // @ts-ignore
-            getSecond(): int
+            public getSecond(): number /*int*/
             /**
              * Gets the nano-of-second field.
              * @return the nano-of-second, from 0 to 999,999,999
              */
             // @ts-ignore
-            getNano(): int
+            public getNano(): number /*int*/
             /**
              * Returns an adjusted copy of this date-time.
              * <p>
@@ -762,7 +762,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(adjuster: java.time.temporal.TemporalAdjuster): java.time.ZonedDateTime
+            public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with the specified field set to a new value.
              * <p>
@@ -815,7 +815,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.ZonedDateTime
+            public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the year altered.
              * <p>
@@ -834,7 +834,7 @@ declare namespace java {
              * @throws DateTimeException if the year value is invalid
              */
             // @ts-ignore
-            withYear(year: number /*int*/): java.time.ZonedDateTime
+            public withYear(year: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the month-of-year altered.
              * <p>
@@ -853,7 +853,7 @@ declare namespace java {
              * @throws DateTimeException if the month-of-year value is invalid
              */
             // @ts-ignore
-            withMonth(month: number /*int*/): java.time.ZonedDateTime
+            public withMonth(month: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the day-of-month altered.
              * <p>
@@ -873,7 +873,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month-year
              */
             // @ts-ignore
-            withDayOfMonth(dayOfMonth: number /*int*/): java.time.ZonedDateTime
+            public withDayOfMonth(dayOfMonth: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the day-of-year altered.
              * <p>
@@ -893,7 +893,7 @@ declare namespace java {
              *   or if the day-of-year is invalid for the year
              */
             // @ts-ignore
-            withDayOfYear(dayOfYear: number /*int*/): java.time.ZonedDateTime
+            public withDayOfYear(dayOfYear: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the hour-of-day altered.
              * <p>
@@ -912,7 +912,7 @@ declare namespace java {
              * @throws DateTimeException if the hour value is invalid
              */
             // @ts-ignore
-            withHour(hour: number /*int*/): java.time.ZonedDateTime
+            public withHour(hour: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the minute-of-hour altered.
              * <p>
@@ -931,7 +931,7 @@ declare namespace java {
              * @throws DateTimeException if the minute value is invalid
              */
             // @ts-ignore
-            withMinute(minute: number /*int*/): java.time.ZonedDateTime
+            public withMinute(minute: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the second-of-minute altered.
              * <p>
@@ -950,7 +950,7 @@ declare namespace java {
              * @throws DateTimeException if the second value is invalid
              */
             // @ts-ignore
-            withSecond(second: number /*int*/): java.time.ZonedDateTime
+            public withSecond(second: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the nano-of-second altered.
              * <p>
@@ -969,7 +969,7 @@ declare namespace java {
              * @throws DateTimeException if the nano value is invalid
              */
             // @ts-ignore
-            withNano(nanoOfSecond: number /*int*/): java.time.ZonedDateTime
+            public withNano(nanoOfSecond: number /*int*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the time truncated.
              * <p>
@@ -999,7 +999,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the unit is not supported
              */
             // @ts-ignore
-            truncatedTo(unit: java.time.temporal.TemporalUnit): java.time.ZonedDateTime
+            public truncatedTo(unit: java.time.temporal.TemporalUnit): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with the specified amount added.
              * <p>
@@ -1020,7 +1020,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.ZonedDateTime
+            public plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with the specified amount added.
              * <p>
@@ -1058,7 +1058,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.ZonedDateTime
+            public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of years added.
              * <p>
@@ -1077,7 +1077,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusYears(years: number /*long*/): java.time.ZonedDateTime
+            public plusYears(years: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of months added.
              * <p>
@@ -1096,7 +1096,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusMonths(months: number /*long*/): java.time.ZonedDateTime
+            public plusMonths(months: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of weeks added.
              * <p>
@@ -1115,7 +1115,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusWeeks(weeks: number /*long*/): java.time.ZonedDateTime
+            public plusWeeks(weeks: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of days added.
              * <p>
@@ -1134,7 +1134,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusDays(days: number /*long*/): java.time.ZonedDateTime
+            public plusDays(days: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of hours added.
              * <p>
@@ -1159,7 +1159,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusHours(hours: number /*long*/): java.time.ZonedDateTime
+            public plusHours(hours: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of minutes added.
              * <p>
@@ -1174,7 +1174,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusMinutes(minutes: number /*long*/): java.time.ZonedDateTime
+            public plusMinutes(minutes: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of seconds added.
              * <p>
@@ -1189,7 +1189,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusSeconds(seconds: number /*long*/): java.time.ZonedDateTime
+            public plusSeconds(seconds: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of nanoseconds added.
              * <p>
@@ -1204,7 +1204,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusNanos(nanos: number /*long*/): java.time.ZonedDateTime
+            public plusNanos(nanos: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with the specified amount subtracted.
              * <p>
@@ -1225,7 +1225,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.ZonedDateTime
+            public minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.ZonedDateTime
             /**
              * Returns a copy of this date-time with the specified amount subtracted.
              * <p>
@@ -1259,7 +1259,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.ZonedDateTime
+            public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of years subtracted.
              * <p>
@@ -1278,7 +1278,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusYears(years: number /*long*/): java.time.ZonedDateTime
+            public minusYears(years: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of months subtracted.
              * <p>
@@ -1297,7 +1297,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusMonths(months: number /*long*/): java.time.ZonedDateTime
+            public minusMonths(months: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of weeks subtracted.
              * <p>
@@ -1316,7 +1316,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusWeeks(weeks: number /*long*/): java.time.ZonedDateTime
+            public minusWeeks(weeks: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of days subtracted.
              * <p>
@@ -1335,7 +1335,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusDays(days: number /*long*/): java.time.ZonedDateTime
+            public minusDays(days: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of hours subtracted.
              * <p>
@@ -1360,7 +1360,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusHours(hours: number /*long*/): java.time.ZonedDateTime
+            public minusHours(hours: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of minutes subtracted.
              * <p>
@@ -1375,7 +1375,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusMinutes(minutes: number /*long*/): java.time.ZonedDateTime
+            public minusMinutes(minutes: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of seconds subtracted.
              * <p>
@@ -1390,7 +1390,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusSeconds(seconds: number /*long*/): java.time.ZonedDateTime
+            public minusSeconds(seconds: number /*long*/): java.time.ZonedDateTime
             /**
              * Returns a copy of this {@code ZonedDateTime} with the specified number of nanoseconds subtracted.
              * <p>
@@ -1405,7 +1405,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusNanos(nanos: number /*long*/): java.time.ZonedDateTime
+            public minusNanos(nanos: number /*long*/): java.time.ZonedDateTime
             /**
              * Queries this date-time using the specified query.
              * <p>
@@ -1424,7 +1424,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Calculates the amount of time until another date-time in terms of the specified unit.
              * <p>
@@ -1491,7 +1491,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+            public until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Formats this date-time using the specified formatter.
              * <p>
@@ -1501,7 +1501,7 @@ declare namespace java {
              * @throws DateTimeException if an error occurs during printing
              */
             // @ts-ignore
-            format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+            public format(formatter: java.time.format.DateTimeFormatter): string
             /**
              * Converts this date-time to an {@code OffsetDateTime}.
              * <p>
@@ -1510,7 +1510,7 @@ declare namespace java {
              * @return an offset date-time representing the same local date-time and offset, not null
              */
             // @ts-ignore
-            toOffsetDateTime(): java.time.OffsetDateTime
+            public toOffsetDateTime(): java.time.OffsetDateTime
             /**
              * Checks if this date-time is equal to another date-time.
              * <p>
@@ -1520,13 +1520,13 @@ declare namespace java {
              * @return true if this is equal to the other date-time
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this date-time.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this date-time as a {@code String}, such as
              * {@code 2007-12-03T10:15:30+01:00[Europe/Paris]}.
@@ -1537,7 +1537,7 @@ declare namespace java {
              * @return a string representation of this date-time, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

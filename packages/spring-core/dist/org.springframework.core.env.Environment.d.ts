@@ -64,7 +64,7 @@ declare namespace org {
                      * @see AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME
                      */
                     // @ts-ignore
-                    getActiveProfiles(): java.lang.String[]
+                    getActiveProfiles(): string[]
                     /**
                      * Return the set of profiles to be active by default when no active profiles have
                      * been set explicitly.
@@ -73,7 +73,7 @@ declare namespace org {
                      * @see AbstractEnvironment#DEFAULT_PROFILES_PROPERTY_NAME
                      */
                     // @ts-ignore
-                    getDefaultProfiles(): java.lang.String[]
+                    getDefaultProfiles(): string[]
                     /**
                      * Return whether one or more of the given profiles is active or, in the case of no
                      * explicit active profiles, whether one or more of the given profiles is included in
@@ -89,7 +89,7 @@ declare namespace org {
                      * @deprecated as of 5.1 in favor of {#link #acceptsProfiles(Profiles)}
                      */
                     // @ts-ignore
-                    acceptsProfiles(...profiles: string[]): boolean
+                    acceptsProfiles(...profiles: java.lang.String[] | string[]): boolean
                     /**
                      * Return whether the {@linkplain #getActiveProfiles() active profiles}
                      * match the given {@link Profiles} predicate.

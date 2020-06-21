@@ -153,7 +153,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class Preferences extends java.lang.Object {
+            abstract class Preferences extends java.lang.Object {
                 /**
                  * Sole constructor. (For invocation by subclass constructors, typically
                  * implicit.)
@@ -164,17 +164,17 @@ declare namespace java {
                  * Maximum length of string allowed as a key (80 characters).
                  */
                 // @ts-ignore
-                readonly MAX_KEY_LENGTH: number /*int*/
+                public static readonly MAX_KEY_LENGTH: number /*int*/
                 /**
                  * Maximum length of string allowed as a value (8192 characters).
                  */
                 // @ts-ignore
-                readonly MAX_VALUE_LENGTH: number /*int*/
+                public static readonly MAX_VALUE_LENGTH: number /*int*/
                 /**
                  * Maximum length of a node name (80 characters).
                  */
                 // @ts-ignore
-                readonly MAX_NAME_LENGTH: number /*int*/
+                public static readonly MAX_NAME_LENGTH: number /*int*/
                 /**
                  * Returns the preference node from the calling user's preference tree
                  * that is associated (by convention) with the specified class's package.
@@ -212,7 +212,7 @@ declare namespace java {
                  * @see RuntimePermission
                  */
                 // @ts-ignore
-                userNodeForPackage(c: java.lang.Class<any>): java.util.prefs.Preferences
+                public static userNodeForPackage(c: java.lang.Class<any>): java.util.prefs.Preferences
                 /**
                  * Returns the preference node from the system preference tree that is
                  * associated (by convention) with the specified class's package.  The
@@ -250,7 +250,7 @@ declare namespace java {
                  * @see RuntimePermission
                  */
                 // @ts-ignore
-                systemNodeForPackage(c: java.lang.Class<any>): java.util.prefs.Preferences
+                public static systemNodeForPackage(c: java.lang.Class<any>): java.util.prefs.Preferences
                 /**
                  * Returns the root preference node for the calling user.
                  * @return the root preference node for the calling user.
@@ -259,7 +259,7 @@ declare namespace java {
                  * @see RuntimePermission
                  */
                 // @ts-ignore
-                userRoot(): java.util.prefs.Preferences
+                public static userRoot(): java.util.prefs.Preferences
                 /**
                  * Returns the root preference node for the system.
                  * @return the root preference node for the system.
@@ -268,7 +268,7 @@ declare namespace java {
                  * @see RuntimePermission
                  */
                 // @ts-ignore
-                systemRoot(): java.util.prefs.Preferences
+                public static systemRoot(): java.util.prefs.Preferences
                 /**
                  * Associates the specified value with the specified key in this
                  * preference node.
@@ -282,7 +282,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                abstract put(key: string, value: string): void
+                public abstract put(key: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Returns the value associated with the specified key in this preference
                  * node.  Returns the specified default if there is no value associated
@@ -303,7 +303,7 @@ declare namespace java {
                  *          <tt>null</tt> value for <tt>def</tt> <i>is</i> permitted.)
                  */
                 // @ts-ignore
-                abstract get(key: string, def: string): java.lang.String
+                public abstract get(key: java.lang.String | string, def: java.lang.String | string): string
                 /**
                  * Removes the value associated with the specified key in this preference
                  * node, if any.
@@ -317,7 +317,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                abstract remove(key: string): void
+                public abstract remove(key: java.lang.String | string): void
                 /**
                  * Removes all of the preferences (key-value associations) in this
                  * preference node.  This call has no effect on any descendants
@@ -334,7 +334,7 @@ declare namespace java {
                  * @see #removeNode()
                  */
                 // @ts-ignore
-                abstract clear(): void
+                public abstract clear(): void
                 /**
                  * Associates a string representing the specified int value with the
                  * specified key in this preference node.  The associated string is the
@@ -351,7 +351,7 @@ declare namespace java {
                  * @see #getInt(String,int)
                  */
                 // @ts-ignore
-                abstract putInt(key: string, value: number /*int*/): void
+                public abstract putInt(key: java.lang.String | string, value: number /*int*/): void
                 /**
                  * Returns the int value represented by the string associated with the
                  * specified key in this preference node.  The string is converted to
@@ -381,7 +381,7 @@ declare namespace java {
                  * @see #get(String,String)
                  */
                 // @ts-ignore
-                abstract getInt(key: string, def: number /*int*/): int
+                public abstract getInt(key: java.lang.String | string, def: number /*int*/): number /*int*/
                 /**
                  * Associates a string representing the specified long value with the
                  * specified key in this preference node.  The associated string is the
@@ -398,7 +398,7 @@ declare namespace java {
                  * @see #getLong(String,long)
                  */
                 // @ts-ignore
-                abstract putLong(key: string, value: number /*long*/): void
+                public abstract putLong(key: java.lang.String | string, value: number /*long*/): void
                 /**
                  * Returns the long value represented by the string associated with the
                  * specified key in this preference node.  The string is converted to
@@ -428,7 +428,7 @@ declare namespace java {
                  * @see #get(String,String)
                  */
                 // @ts-ignore
-                abstract getLong(key: string, def: number /*long*/): long
+                public abstract getLong(key: java.lang.String | string, def: number /*long*/): number /*long*/
                 /**
                  * Associates a string representing the specified boolean value with the
                  * specified key in this preference node.  The associated string is
@@ -446,7 +446,7 @@ declare namespace java {
                  * @see #get(String,String)
                  */
                 // @ts-ignore
-                abstract putBoolean(key: string, value: boolean): void
+                public abstract putBoolean(key: java.lang.String | string, value: boolean): void
                 /**
                  * Returns the boolean value represented by the string associated with the
                  * specified key in this preference node.  Valid strings
@@ -479,7 +479,7 @@ declare namespace java {
                  * @see #putBoolean(String,boolean)
                  */
                 // @ts-ignore
-                abstract getBoolean(key: string, def: boolean): boolean
+                public abstract getBoolean(key: java.lang.String | string, def: boolean): boolean
                 /**
                  * Associates a string representing the specified float value with the
                  * specified key in this preference node.  The associated string is the
@@ -496,7 +496,7 @@ declare namespace java {
                  * @see #getFloat(String,float)
                  */
                 // @ts-ignore
-                abstract putFloat(key: string, value: number /*float*/): void
+                public abstract putFloat(key: java.lang.String | string, value: number /*float*/): void
                 /**
                  * Returns the float value represented by the string associated with the
                  * specified key in this preference node.  The string is converted to an
@@ -525,7 +525,7 @@ declare namespace java {
                  * @see #get(String,String)
                  */
                 // @ts-ignore
-                abstract getFloat(key: string, def: number /*float*/): float
+                public abstract getFloat(key: java.lang.String | string, def: number /*float*/): number /*float*/
                 /**
                  * Associates a string representing the specified double value with the
                  * specified key in this preference node.  The associated string is the
@@ -542,7 +542,7 @@ declare namespace java {
                  * @see #getDouble(String,double)
                  */
                 // @ts-ignore
-                abstract putDouble(key: string, value: number /*double*/): void
+                public abstract putDouble(key: java.lang.String | string, value: number /*double*/): void
                 /**
                  * Returns the double value represented by the string associated with the
                  * specified key in this preference node.  The string is converted to an
@@ -571,7 +571,7 @@ declare namespace java {
                  * @see #get(String,String)
                  */
                 // @ts-ignore
-                abstract getDouble(key: string, def: number /*double*/): double
+                public abstract getDouble(key: java.lang.String | string, def: number /*double*/): number /*double*/
                 /**
                  * Associates a string representing the specified byte array with the
                  * specified key in this preference node.  The associated string is
@@ -595,7 +595,7 @@ declare namespace java {
                  * @see #get(String,String)
                  */
                 // @ts-ignore
-                abstract putByteArray(key: string, value: number /*byte*/[]): void
+                public abstract putByteArray(key: java.lang.String | string, value: number /*byte*/[]): void
                 /**
                  * Returns the byte array value represented by the string associated with
                  * the specified key in this preference node.  Valid strings are
@@ -631,7 +631,7 @@ declare namespace java {
                  * @see #putByteArray(String,byte[])
                  */
                 // @ts-ignore
-                abstract getByteArray(key: string, def: number /*byte*/[]): byte[]
+                public abstract getByteArray(key: java.lang.String | string, def: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Returns all of the keys that have an associated value in this
                  * preference node.  (The returned array will be of size zero if
@@ -649,7 +649,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                abstract keys(): java.lang.String[]
+                public abstract keys(): string[]
                 /**
                  * Returns the names of the children of this preference node, relative to
                  * this node.  (The returned array will be of size zero if this node has
@@ -662,7 +662,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                abstract childrenNames(): java.lang.String[]
+                public abstract childrenNames(): string[]
                 /**
                  * Returns the parent of this preference node, or <tt>null</tt> if this is
                  * the root.
@@ -671,7 +671,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                abstract parent(): java.util.prefs.Preferences
+                public abstract parent(): java.util.prefs.Preferences
                 /**
                  * Returns the named preference node in the same tree as this node,
                  * creating it and any of its ancestors if they do not already exist.
@@ -693,7 +693,7 @@ declare namespace java {
                  * @see #flush()
                  */
                 // @ts-ignore
-                abstract node(pathName: string): java.util.prefs.Preferences
+                public abstract node(pathName: java.lang.String | string): java.util.prefs.Preferences
                 /**
                  * Returns true if the named preference node exists in the same tree
                  * as this node.  Relative path names (which do not begin with the slash
@@ -719,7 +719,7 @@ declare namespace java {
                  *          <tt>pathName</tt> is not the empty string (<tt>""</tt>).
                  */
                 // @ts-ignore
-                abstract nodeExists(pathName: string): boolean
+                public abstract nodeExists(pathName: java.lang.String | string): boolean
                 /**
                  * Removes this preference node and all of its descendants, invalidating
                  * any preferences contained in the removed nodes.  Once a node has been
@@ -748,19 +748,19 @@ declare namespace java {
                  * @see #flush()
                  */
                 // @ts-ignore
-                abstract removeNode(): void
+                public abstract removeNode(): void
                 /**
                  * Returns this preference node's name, relative to its parent.
                  * @return this preference node's name, relative to its parent.
                  */
                 // @ts-ignore
-                abstract name(): java.lang.String
+                public abstract name(): string
                 /**
                  * Returns this preference node's absolute path name.
                  * @return this preference node's absolute path name.
                  */
                 // @ts-ignore
-                abstract absolutePath(): java.lang.String
+                public abstract absolutePath(): string
                 /**
                  * Returns <tt>true</tt> if this preference node is in the user
                  * preference tree, <tt>false</tt> if it's in the system preference tree.
@@ -769,14 +769,14 @@ declare namespace java {
                  *          preference tree.
                  */
                 // @ts-ignore
-                abstract isUserNode(): boolean
+                public abstract isUserNode(): boolean
                 /**
                  * Returns a string representation of this preferences node,
                  * as if computed by the expression:<tt>(this.isUserNode() ? "User" :
                  * "System") + " Preference Node: " + this.absolutePath()</tt>.
                  */
                 // @ts-ignore
-                abstract toString(): java.lang.String
+                public abstract toString(): string
                 /**
                  * Forces any changes in the contents of this preference node and its
                  * descendants to the persistent store.  Once this method returns
@@ -798,7 +798,7 @@ declare namespace java {
                  * @see #sync()
                  */
                 // @ts-ignore
-                abstract flush(): void
+                public abstract flush(): void
                 /**
                  * Ensures that future reads from this preference node and its
                  * descendants reflect any changes that were committed to the persistent
@@ -814,7 +814,7 @@ declare namespace java {
                  * @see #flush()
                  */
                 // @ts-ignore
-                abstract sync(): void
+                public abstract sync(): void
                 /**
                  * Registers the specified listener to receive <i>preference change
                  * events</i> for this preference node.  A preference change event is
@@ -838,7 +838,7 @@ declare namespace java {
                  * @see #addNodeChangeListener(NodeChangeListener)
                  */
                 // @ts-ignore
-                abstract addPreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
+                public abstract addPreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
                 /**
                  * Removes the specified preference change listener, so it no longer
                  * receives preference change events.
@@ -850,7 +850,7 @@ declare namespace java {
                  * @see #addPreferenceChangeListener(PreferenceChangeListener)
                  */
                 // @ts-ignore
-                abstract removePreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
+                public abstract removePreferenceChangeListener(pcl: java.util.prefs.PreferenceChangeListener): void
                 /**
                  * Registers the specified listener to receive <i>node change events</i>
                  * for this node.  A node change event is generated when a child node is
@@ -878,7 +878,7 @@ declare namespace java {
                  * @see #addPreferenceChangeListener(PreferenceChangeListener)
                  */
                 // @ts-ignore
-                abstract addNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
+                public abstract addNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
                 /**
                  * Removes the specified <tt>NodeChangeListener</tt>, so it no longer
                  * receives change events.
@@ -890,7 +890,7 @@ declare namespace java {
                  * @see #addNodeChangeListener(NodeChangeListener)
                  */
                 // @ts-ignore
-                abstract removeNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
+                public abstract removeNodeChangeListener(ncl: java.util.prefs.NodeChangeListener): void
                 /**
                  * Emits on the specified output stream an XML document representing all
                  * of the preferences contained in this node (but not its descendants).
@@ -917,7 +917,7 @@ declare namespace java {
                  *          removed with the {#link #removeNode()} method.
                  */
                 // @ts-ignore
-                abstract exportNode(os: java.io.OutputStream): void
+                public abstract exportNode(os: java.io.OutputStream): void
                 /**
                  * Emits an XML document representing all of the preferences contained
                  * in this node and all of its descendants.  This XML document is, in
@@ -945,7 +945,7 @@ declare namespace java {
                  * @see #exportNode(OutputStream)
                  */
                 // @ts-ignore
-                abstract exportSubtree(os: java.io.OutputStream): void
+                public abstract exportSubtree(os: java.io.OutputStream): void
                 /**
                  * Imports all of the preferences represented by the XML document on the
                  * specified input stream.  The document may represent user preferences or
@@ -976,7 +976,7 @@ declare namespace java {
                  * @see RuntimePermission
                  */
                 // @ts-ignore
-                importPreferences(jis: java.io.InputStream): void
+                public static importPreferences(jis: java.io.InputStream): void
             }
         }
     }

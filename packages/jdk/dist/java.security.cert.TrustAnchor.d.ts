@@ -134,14 +134,14 @@ declare namespace java {
                  *  {@code pubKey} parameter is {@code null}
                  */
                 // @ts-ignore
-                constructor(caName: string, pubKey: java.security.PublicKey, nameConstraints: number /*byte*/[])
+                constructor(caName: java.lang.String | string, pubKey: java.security.PublicKey, nameConstraints: number /*byte*/[])
                 /**
                  * Returns the most-trusted CA certificate.
                  * @return a trusted {#code X509Certificate} or {@code null}
                  *  if the trust anchor was not specified as a trusted certificate
                  */
                 // @ts-ignore
-                getTrustedCert(): java.security.cert.X509Certificate
+                public getTrustedCert(): java.security.cert.X509Certificate
                 /**
                  * Returns the name of the most-trusted CA as an X500Principal.
                  * @return the X.500 distinguished name of the most-trusted CA, or
@@ -150,7 +150,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getCA(): javax.security.auth.x500.X500Principal
+                public getCA(): javax.security.auth.x500.X500Principal
                 /**
                  * Returns the name of the most-trusted CA in RFC 2253 {@code String}
                  * format.
@@ -159,7 +159,7 @@ declare namespace java {
                  *  public key and name or X500Principal pair
                  */
                 // @ts-ignore
-                getCAName(): java.lang.String
+                public getCAName(): string
                 /**
                  * Returns the public key of the most-trusted CA.
                  * @return the public key of the most-trusted CA, or {#code null}
@@ -167,7 +167,7 @@ declare namespace java {
                  *  or X500Principal pair
                  */
                 // @ts-ignore
-                getCAPublicKey(): java.security.PublicKey
+                public getCAPublicKey(): java.security.PublicKey
                 /**
                  * Returns the name constraints parameter. The specified name constraints
                  * are associated with this trust anchor and are intended to be used
@@ -188,13 +188,13 @@ declare namespace java {
                  *          or {#code null} if not set.
                  */
                 // @ts-ignore
-                getNameConstraints(): byte[]
+                public getNameConstraints(): number /*byte*/[]
                 /**
                  * Returns a formatted string describing the {@code TrustAnchor}.
                  * @return a formatted string describing the {#code TrustAnchor}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

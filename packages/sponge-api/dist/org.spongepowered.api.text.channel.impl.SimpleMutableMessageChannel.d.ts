@@ -20,7 +20,7 @@ declare namespace org {
                              * @param members The members to add to this channel by default
                              */
                             // @ts-ignore
-                            constructor(members: Array<org.spongepowered.api.text.channel.MessageReceiver>)
+                            constructor(members: java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver> | Array<org.spongepowered.api.text.channel.MessageReceiver>)
                         }
                     }
                 }

@@ -20,7 +20,7 @@ declare namespace org {
                      * @return a generated key
                      */
                     // @ts-ignore
-                    generate(target: any, method: java.lang.reflect.Method, ...params: any[]): java.lang.Object
+                    generate(target: java.lang.Object | any, method: java.lang.reflect.Method, ...params: java.lang.Object[] | any[]): any
                 }
             }
         }

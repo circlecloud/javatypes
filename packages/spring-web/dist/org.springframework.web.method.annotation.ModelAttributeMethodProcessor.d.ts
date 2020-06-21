@@ -37,7 +37,7 @@ declare namespace org {
                          * method parameter that is not a simple type.
                          */
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         /**
                          * Resolve the argument from the model or if not found instantiate it with
                          * its default if it is available. The model attribute is then populated
@@ -48,7 +48,7 @@ declare namespace org {
                          * @throws Exception if WebDataBinder initialization fails
                          */
                         // @ts-ignore
-                        resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): java.lang.Object
+                        public resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): any
                         /**
                          * Extension point to create the model attribute if not found in the model,
                          * with subsequent parameter binding through bean properties (unless suppressed).
@@ -70,7 +70,7 @@ declare namespace org {
                          * @see BeanUtils#findPrimaryConstructor(Class)
                          */
                         // @ts-ignore
-                        createAttribute(attributeName: string, parameter: MethodParameter, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, webRequest: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        createAttribute(attributeName: java.lang.String | string, parameter: MethodParameter, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, webRequest: org.springframework.web.context.request.NativeWebRequest): any
                         /**
                          * Construct a new attribute instance with the given constructor.
                          * <p>Called from
@@ -86,7 +86,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        constructAttribute(ctor: java.lang.reflect.Constructor<any>, attributeName: string, parameter: MethodParameter, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, webRequest: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        constructAttribute(ctor: java.lang.reflect.Constructor<any>, attributeName: java.lang.String | string, parameter: MethodParameter, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, webRequest: org.springframework.web.context.request.NativeWebRequest): any
                         /**
                          * Construct a new attribute instance with the given constructor.
                          * @since 5.0
@@ -94,7 +94,7 @@ declare namespace org {
                          *  {#link #constructAttribute(Constructor, String, MethodParameter, WebDataBinderFactory, NativeWebRequest)}
                          */
                         // @ts-ignore
-                        constructAttribute(ctor: java.lang.reflect.Constructor<any>, attributeName: string, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, webRequest: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        constructAttribute(ctor: java.lang.reflect.Constructor<any>, attributeName: java.lang.String | string, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory, webRequest: org.springframework.web.context.request.NativeWebRequest): any
                         /**
                          * Extension point to bind the request to the target object.
                          * @param binder the data binder instance to use for the binding
@@ -129,7 +129,7 @@ declare namespace org {
                          * @see SmartValidator#validateValue(Class, String, Object, Errors, Object...)
                          */
                         // @ts-ignore
-                        validateValueIfApplicable(binder: org.springframework.web.bind.WebDataBinder, parameter: MethodParameter, targetType: java.lang.Class<any>, fieldName: string, value: any): void
+                        validateValueIfApplicable(binder: org.springframework.web.bind.WebDataBinder, parameter: MethodParameter, targetType: java.lang.Class<any>, fieldName: java.lang.String | string, value: java.lang.Object | any): void
                         /**
                          * Whether to raise a fatal bind exception on validation errors.
                          * <p>The default implementation delegates to {@link #isBindExceptionRequired(MethodParameter)}.
@@ -154,12 +154,12 @@ declare namespace org {
                          * a simple type.
                          */
                         // @ts-ignore
-                        supportsReturnType(returnType: MethodParameter): boolean
+                        public supportsReturnType(returnType: MethodParameter): boolean
                         /**
                          * Add non-null return values to the {@link ModelAndViewContainer}.
                          */
                         // @ts-ignore
-                        handleReturnValue(returnValue: any, returnType: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest): void
+                        public handleReturnValue(returnValue: java.lang.Object | any, returnType: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest): void
                     }
                 }
             }

@@ -31,43 +31,43 @@ declare namespace javax {
                      *  (such as a speaker).
                      */
                     // @ts-ignore
-                    constructor(lineClass: java.lang.Class<any>, name: string, isSource: boolean)
+                    constructor(lineClass: java.lang.Class<any>, name: java.lang.String | string, isSource: boolean)
                     /**
                      * A type of port that gets audio from a built-in microphone or a microphone jack.
                      */
                     // @ts-ignore
-                    readonly MICROPHONE: javax.sound.sampled.Port.Info
+                    public static readonly MICROPHONE: javax.sound.sampled.Port.Info
                     /**
                      * A type of port that gets audio from a line-level audio input jack.
                      */
                     // @ts-ignore
-                    readonly LINE_IN: javax.sound.sampled.Port.Info
+                    public static readonly LINE_IN: javax.sound.sampled.Port.Info
                     /**
                      * A type of port that gets audio from a CD-ROM drive.
                      */
                     // @ts-ignore
-                    readonly COMPACT_DISC: javax.sound.sampled.Port.Info
+                    public static readonly COMPACT_DISC: javax.sound.sampled.Port.Info
                     /**
                      * A type of port that sends audio to a built-in speaker or a speaker jack.
                      */
                     // @ts-ignore
-                    readonly SPEAKER: javax.sound.sampled.Port.Info
+                    public static readonly SPEAKER: javax.sound.sampled.Port.Info
                     /**
                      * A type of port that sends audio to a headphone jack.
                      */
                     // @ts-ignore
-                    readonly HEADPHONE: javax.sound.sampled.Port.Info
+                    public static readonly HEADPHONE: javax.sound.sampled.Port.Info
                     /**
                      * A type of port that sends audio to a line-level audio output jack.
                      */
                     // @ts-ignore
-                    readonly LINE_OUT: javax.sound.sampled.Port.Info
+                    public static readonly LINE_OUT: javax.sound.sampled.Port.Info
                     /**
                      * Obtains the name of the port.
                      * @return the string that names the port
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Indicates whether the port is a source or a target for its mixer.
                      * @return <code>true</code> if the port is a source port (such
@@ -75,7 +75,7 @@ declare namespace javax {
                      *  (such as a speaker).
                      */
                     // @ts-ignore
-                    isSource(): boolean
+                    public isSource(): boolean
                     /**
                      * Indicates whether this info object specified matches this one.
                      * To match, the match requirements of the superclass must be
@@ -83,24 +83,24 @@ declare namespace javax {
                      * @param info the info object for which the match is queried
                      */
                     // @ts-ignore
-                    matches(info: javax.sound.sampled.Line.Info): boolean
+                    public matches(info: javax.sound.sampled.Line.Info): boolean
                     /**
                      * Finalizes the equals method
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashCode method
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Provides a <code>String</code> representation
                      * of the port.
                      * @return a string that describes the port
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -145,7 +145,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class XMLGregorianCalendar extends java.lang.Object implements java.lang.Cloneable {
+            abstract class XMLGregorianCalendar extends java.lang.Object implements java.lang.Cloneable {
                 /**
                  * Default no-arg constructor.
                  * <p>Note: Always use the {@link DatatypeFactory} to
@@ -162,7 +162,7 @@ declare namespace javax {
                  * to null.</p>
                  */
                 // @ts-ignore
-                abstract clear(): void
+                public abstract clear(): void
                 /**
                  * <p>Reset this <code>XMLGregorianCalendar</code> to its original values.</p>
                  * <p><code>XMLGregorianCalendar</code> is reset to the same values as when it was created with
@@ -214,7 +214,7 @@ declare namespace javax {
                  * thus saving resources associated with the creation of new <code>XMLGregorianCalendar</code>s.</p>
                  */
                 // @ts-ignore
-                abstract reset(): void
+                public abstract reset(): void
                 /**
                  * <p>Set low and high order component of XSD <code>dateTime</code> year field.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of <code>null</code>.</p>
@@ -224,7 +224,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setYear(year: java.math.BigInteger): void
+                public abstract setYear(year: java.math.BigInteger): void
                 /**
                  * <p>Set year of XSD <code>dateTime</code> year field.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of
@@ -236,7 +236,7 @@ declare namespace javax {
                  *    If year is {#link DatatypeConstants#FIELD_UNDEFINED}, then eon is set to <code>null</code>.
                  */
                 // @ts-ignore
-                abstract setYear(year: number /*int*/): void
+                public abstract setYear(year: number /*int*/): void
                 /**
                  * <p>Set month.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -246,7 +246,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setMonth(month: number /*int*/): void
+                public abstract setMonth(month: number /*int*/): void
                 /**
                  * <p>Set days in month.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -256,7 +256,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setDay(day: number /*int*/): void
+                public abstract setDay(day: number /*int*/): void
                 /**
                  * <p>Set the number of minutes in the timezone offset.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -267,7 +267,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setTimezone(offset: number /*int*/): void
+                public abstract setTimezone(offset: number /*int*/): void
                 /**
                  * <p>Set time as one unit.</p>
                  * @param hour value constraints are summarized in
@@ -282,7 +282,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                setTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/): void
+                public setTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/): void
                 /**
                  * <p>Set hours.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -291,7 +291,7 @@ declare namespace javax {
                  *    <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setHour(hour: number /*int*/): void
+                public abstract setHour(hour: number /*int*/): void
                 /**
                  * <p>Set minutes.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -300,7 +300,7 @@ declare namespace javax {
                  *    <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setMinute(minute: number /*int*/): void
+                public abstract setMinute(minute: number /*int*/): void
                 /**
                  * <p>Set seconds.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -309,7 +309,7 @@ declare namespace javax {
                  *    <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setSecond(second: number /*int*/): void
+                public abstract setSecond(second: number /*int*/): void
                 /**
                  * <p>Set milliseconds.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -319,7 +319,7 @@ declare namespace javax {
                  *    in <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setMillisecond(millisecond: number /*int*/): void
+                public abstract setMillisecond(millisecond: number /*int*/): void
                 /**
                  * <p>Set fractional seconds.</p>
                  * <p>Unset this field by invoking the setter with a parameter value of <code>null</code>.</p>
@@ -329,7 +329,7 @@ declare namespace javax {
                  *    in <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                abstract setFractionalSecond(fractional: java.math.BigDecimal): void
+                public abstract setFractionalSecond(fractional: java.math.BigDecimal): void
                 /**
                  * <p>Set time as one unit, including the optional infinite precision
                  * fractional seconds.</p>
@@ -346,7 +346,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                setTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, fractional: java.math.BigDecimal): void
+                public setTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, fractional: java.math.BigDecimal): void
                 /**
                  * <p>Set time as one unit, including optional milliseconds.</p>
                  * @param hour value constraints are summarized in
@@ -362,7 +362,7 @@ declare namespace javax {
                  *  <a href="#datetimefieldmapping">date/time field mapping table</a>.
                  */
                 // @ts-ignore
-                setTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, millisecond: number /*int*/): void
+                public setTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, millisecond: number /*int*/): void
                 /**
                  * <p>Return high order component for XML Schema 1.0 dateTime datatype field for
                  * <code>year</code>.
@@ -375,7 +375,7 @@ declare namespace javax {
                  * @see #getEonAndYear()
                  */
                 // @ts-ignore
-                abstract getEon(): java.math.BigInteger
+                public abstract getEon(): java.math.BigInteger
                 /**
                  * <p>Return low order component for XML Schema 1.0 dateTime datatype field for
                  * <code>year</code> or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
@@ -386,7 +386,7 @@ declare namespace javax {
                  * @see #getEonAndYear()
                  */
                 // @ts-ignore
-                abstract getYear(): int
+                public abstract getYear(): number /*int*/
                 /**
                  * <p>Return XML Schema 1.0 dateTime datatype field for
                  * <code>year</code>.</p>
@@ -400,7 +400,7 @@ declare namespace javax {
                  * @see #getYear()
                  */
                 // @ts-ignore
-                abstract getEonAndYear(): java.math.BigInteger
+                public abstract getEonAndYear(): java.math.BigInteger
                 /**
                  * <p>Return number of month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
                  * <p>Value constraints for this value are summarized in
@@ -408,7 +408,7 @@ declare namespace javax {
                  * @return year  of this <code>XMLGregorianCalendar</code>.
                  */
                 // @ts-ignore
-                abstract getMonth(): int
+                public abstract getMonth(): number /*int*/
                 /**
                  * Return day in month or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
                  * <p>Value constraints for this value are summarized in
@@ -416,7 +416,7 @@ declare namespace javax {
                  * @see #setDay(int)
                  */
                 // @ts-ignore
-                abstract getDay(): int
+                public abstract getDay(): number /*int*/
                 /**
                  * Return timezone offset in minutes or
                  * {@link DatatypeConstants#FIELD_UNDEFINED} if this optional field is not defined.
@@ -425,7 +425,7 @@ declare namespace javax {
                  * @see #setTimezone(int)
                  */
                 // @ts-ignore
-                abstract getTimezone(): int
+                public abstract getTimezone(): number /*int*/
                 /**
                  * Return hours or {@link DatatypeConstants#FIELD_UNDEFINED}.
                  * Returns {@link DatatypeConstants#FIELD_UNDEFINED} if this field is not defined.
@@ -434,7 +434,7 @@ declare namespace javax {
                  * @see #setTime(int, int, int)
                  */
                 // @ts-ignore
-                abstract getHour(): int
+                public abstract getHour(): number /*int*/
                 /**
                  * Return minutes or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
                  * Returns {@link DatatypeConstants#FIELD_UNDEFINED} if this field is not defined.
@@ -443,7 +443,7 @@ declare namespace javax {
                  * @see #setTime(int, int, int)
                  */
                 // @ts-ignore
-                abstract getMinute(): int
+                public abstract getMinute(): number /*int*/
                 /**
                  * <p>Return seconds or {@link DatatypeConstants#FIELD_UNDEFINED}.</p>
                  * <p>Returns {@link DatatypeConstants#FIELD_UNDEFINED} if this field is not defined.
@@ -459,7 +459,7 @@ declare namespace javax {
                  * @see #setTime(int, int, int)
                  */
                 // @ts-ignore
-                abstract getSecond(): int
+                public abstract getSecond(): number /*int*/
                 /**
                  * <p>Return millisecond precision of {@link #getFractionalSecond()}.</p>
                  * <p>This method represents a convenience accessor to infinite
@@ -476,7 +476,7 @@ declare namespace javax {
                  * @see #setTime(int, int, int)
                  */
                 // @ts-ignore
-                getMillisecond(): int
+                public getMillisecond(): number /*int*/
                 /**
                  * <p>Return fractional seconds.</p>
                  * <p><code>null</code> is returned when this optional field is not defined.</p>
@@ -490,7 +490,7 @@ declare namespace javax {
                  * @see #setTime(int, int, int, BigDecimal)
                  */
                 // @ts-ignore
-                abstract getFractionalSecond(): java.math.BigDecimal
+                public abstract getFractionalSecond(): java.math.BigDecimal
                 /**
                  * <p>Compare two instances of W3C XML Schema 1.0 date/time datatypes
                  * according to partial order relation defined in
@@ -509,7 +509,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>xmlGregorianCalendar</code> is null.
                  */
                 // @ts-ignore
-                abstract compare(xmlGregorianCalendar: javax.xml.datatype.XMLGregorianCalendar): int
+                public abstract compare(xmlGregorianCalendar: javax.xml.datatype.XMLGregorianCalendar): number /*int*/
                 /**
                  * <p>Normalize this instance to UTC.</p>
                  * <p>2000-03-04T23:00:00+03:00 normalizes to 2000-03-04T20:00:00Z</p>
@@ -517,7 +517,7 @@ declare namespace javax {
                  * @return <code>this</code> <code>XMLGregorianCalendar</code> normalized to UTC.
                  */
                 // @ts-ignore
-                abstract normalize(): javax.xml.datatype.XMLGregorianCalendar
+                public abstract normalize(): javax.xml.datatype.XMLGregorianCalendar
                 /**
                  * <p>Compares this calendar to the specified object. The result is
                  * <code>true</code> if and only if the argument is not null and is an
@@ -531,13 +531,13 @@ declare namespace javax {
                  *  otherwise <code>false</code>.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * <p>Returns a hash code consistent with the definition of the equals method.</p>
                  * @return hash code of this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * <p>Return the lexical representation of <code>this</code> instance.
                  * The format is specified in
@@ -550,7 +550,7 @@ declare namespace javax {
                  *     does not match one of the eight defined XML Schema builtin date/time datatypes.
                  */
                 // @ts-ignore
-                abstract toXMLFormat(): java.lang.String
+                public abstract toXMLFormat(): string
                 /**
                  * <p>Return the name of the XML Schema date/time type that this instance
                  * maps to. Type is computed based on fields that are set.</p>
@@ -661,7 +661,7 @@ declare namespace javax {
                  *    {@link DatatypeConstants#GDAY}.
                  */
                 // @ts-ignore
-                abstract getXMLSchemaType(): javax.xml.namespace.QName
+                public abstract getXMLSchemaType(): javax.xml.namespace.QName
                 /**
                  * <p>Returns a <code>String</code> representation of this <code>XMLGregorianCalendar</code> <code>Object</code>.</p>
                  * <p>The result is a lexical representation generated by {@link #toXMLFormat()}.</p>
@@ -671,13 +671,13 @@ declare namespace javax {
                  * @see #toXMLFormat()
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Validate instance by <code>getXMLSchemaType()</code> constraints.
                  * @return true if data values are valid.
                  */
                 // @ts-ignore
-                abstract isValid(): boolean
+                public abstract isValid(): boolean
                 /**
                  * <p>Add <code>duration</code> to this instance.</p>
                  * <p>The computation is specified in
@@ -690,7 +690,7 @@ declare namespace javax {
                  * @throws NullPointerException  when <code>duration</code> parameter is <code>null</code>.
                  */
                 // @ts-ignore
-                abstract add(duration: javax.xml.datatype.Duration): void
+                public abstract add(duration: javax.xml.datatype.Duration): void
                 /**
                  * <p>Convert this <code>XMLGregorianCalendar</code> to a {@link GregorianCalendar}.</p>
                  * <p>When <code>this</code> instance has an undefined field, this
@@ -776,7 +776,7 @@ declare namespace javax {
                  * @see #toGregorianCalendar(java.util.TimeZone, java.util.Locale, XMLGregorianCalendar)
                  */
                 // @ts-ignore
-                abstract toGregorianCalendar(): java.util.GregorianCalendar
+                public abstract toGregorianCalendar(): java.util.GregorianCalendar
                 /**
                  * <p>Convert this <code>XMLGregorianCalendar</code> along with provided parameters
                  * to a {@link GregorianCalendar} instance.</p>
@@ -824,7 +824,7 @@ declare namespace javax {
                  * @return a java.util.GregorianCalendar conversion of this instance.
                  */
                 // @ts-ignore
-                abstract toGregorianCalendar(timezone: java.util.TimeZone, aLocale: java.util.Locale, defaults: javax.xml.datatype.XMLGregorianCalendar): java.util.GregorianCalendar
+                public abstract toGregorianCalendar(timezone: java.util.TimeZone, aLocale: java.util.Locale, defaults: javax.xml.datatype.XMLGregorianCalendar): java.util.GregorianCalendar
                 /**
                  * <p>Returns a <code>java.util.TimeZone</code> for this class.</p>
                  * <p>If timezone field is defined for this instance,
@@ -839,13 +839,13 @@ declare namespace javax {
                  * @return TimeZone for this.
                  */
                 // @ts-ignore
-                abstract getTimeZone(defaultZoneoffset: number /*int*/): java.util.TimeZone
+                public abstract getTimeZone(defaultZoneoffset: number /*int*/): java.util.TimeZone
                 /**
                  * <p>Creates and returns a copy of this object.</p>
                  * @return copy of this <code>Object</code>
                  */
                 // @ts-ignore
-                abstract clone(): java.lang.Object
+                public abstract clone(): any
             }
         }
     }

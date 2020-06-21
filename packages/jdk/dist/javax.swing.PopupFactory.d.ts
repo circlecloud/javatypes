@@ -32,14 +32,14 @@ declare namespace javax {
              * @see #getPopup
              */
             // @ts-ignore
-            setSharedInstance(factory: javax.swing.PopupFactory): void
+            public static setSharedInstance(factory: javax.swing.PopupFactory): void
             /**
              * Returns the shared <code>PopupFactory</code> which can be used
              * to obtain <code>Popup</code>s.
              * @return Shared PopupFactory
              */
             // @ts-ignore
-            getSharedInstance(): javax.swing.PopupFactory
+            public static getSharedInstance(): javax.swing.PopupFactory
             /**
              * Creates a <code>Popup</code> for the Component <code>owner</code>
              * containing the Component <code>contents</code>. <code>owner</code>
@@ -59,7 +59,7 @@ declare namespace javax {
              * @return Popup containing Contents
              */
             // @ts-ignore
-            getPopup(owner: java.awt.Component, contents: java.awt.Component, x: number /*int*/, y: number /*int*/): javax.swing.Popup
+            public getPopup(owner: java.awt.Component, contents: java.awt.Component, x: number /*int*/, y: number /*int*/): javax.swing.Popup
         }
     }
 }

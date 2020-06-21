@@ -15,21 +15,21 @@ declare namespace org {
                      * @return an array of bytes representing the object in a portable fashion
                      */
                     // @ts-ignore
-                    serialize(object: any): byte[]
+                    public static serialize(object: java.lang.Object | any): number /*byte*/[]
                     /**
                      * Deserialize the bytes.
                      * @param bytes a serialized object created
                      * @return the result of deserializing the bytes
                      */
                     // @ts-ignore
-                    deserialize(bytes: number /*byte*/[]): java.lang.Object
+                    public static deserialize(bytes: number /*byte*/[]): any
                     /**
                      * Deserialize the stream.
                      * @param stream an object stream created from a serialized object
                      * @return the result of deserializing the bytes
                      */
                     // @ts-ignore
-                    deserialize(stream: java.io.ObjectInputStream): java.lang.Object
+                    public static deserialize(stream: java.io.ObjectInputStream): any
                     /**
                      * Deserialize the stream.
                      * @param inputStream the stream.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @since 2.1
                      */
                     // @ts-ignore
-                    deserialize(inputStream: java.io.InputStream, whiteListPatterns: Array<java.lang.String>, classLoader: java.lang.ClassLoader): java.lang.Object
+                    public static deserialize(inputStream: java.io.InputStream, whiteListPatterns: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>, classLoader: java.lang.ClassLoader): any
                     /**
                      * Verify that the class is in the white list.
                      * @param clazz the class.
@@ -48,7 +48,7 @@ declare namespace org {
                      * @since 2.1
                      */
                     // @ts-ignore
-                    checkWhiteList(clazz: java.lang.Class<any>, whiteListPatterns: Array<java.lang.String>): void
+                    public static checkWhiteList(clazz: java.lang.Class<any>, whiteListPatterns: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): void
                 }
             }
         }

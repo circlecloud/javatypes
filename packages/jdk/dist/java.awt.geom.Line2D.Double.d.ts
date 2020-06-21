@@ -40,76 +40,76 @@ declare namespace java {
                      * @serial 
                      */
                     // @ts-ignore
-                    x1: number /*double*/
+                    public x1: number /*double*/
                     /**
                      * The Y coordinate of the start point of the line segment.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y1: number /*double*/
+                    public y1: number /*double*/
                     /**
                      * The X coordinate of the end point of the line segment.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    x2: number /*double*/
+                    public x2: number /*double*/
                     /**
                      * The Y coordinate of the end point of the line segment.
                      * @since 1.2
                      * @serial 
                      */
                     // @ts-ignore
-                    y2: number /*double*/
+                    public y2: number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX1(): double
+                    public getX1(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY1(): double
+                    public getY1(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getP1(): java.awt.geom.Point2D
+                    public getP1(): java.awt.geom.Point2D
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getX2(): double
+                    public getX2(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getY2(): double
+                    public getY2(): number /*double*/
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getP2(): java.awt.geom.Point2D
+                    public getP2(): java.awt.geom.Point2D
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    setLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
+                    public setLine(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): void
                     /**
                      * {@inheritDoc}
                      * @since 1.2
                      */
                     // @ts-ignore
-                    getBounds2D(): java.awt.geom.Rectangle2D
+                    public getBounds2D(): java.awt.geom.Rectangle2D
                 }
             }
         }

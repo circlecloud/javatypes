@@ -41,7 +41,7 @@ declare namespace java {
                  *          <code>null</code> if none.
                  */
                 // @ts-ignore
-                getManifest(): java.util.jar.Manifest
+                public getManifest(): java.util.jar.Manifest
                 /**
                  * Reads the next ZIP file entry and positions the stream at the
                  * beginning of the entry data. If verification has been enabled,
@@ -53,7 +53,7 @@ declare namespace java {
                  *          are incorrectly signed.
                  */
                 // @ts-ignore
-                getNextEntry(): java.util.zip.ZipEntry
+                public getNextEntry(): java.util.zip.ZipEntry
                 /**
                  * Reads the next JAR file entry and positions the stream at the
                  * beginning of the entry data. If verification has been enabled,
@@ -66,7 +66,7 @@ declare namespace java {
                  *          are incorrectly signed.
                  */
                 // @ts-ignore
-                getNextJarEntry(): java.util.jar.JarEntry
+                public getNextJarEntry(): java.util.jar.JarEntry
                 /**
                  * Reads from the current JAR file entry into an array of bytes.
                  * If <code>len</code> is not zero, the method
@@ -90,7 +90,7 @@ declare namespace java {
                  *          are incorrectly signed.
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Creates a new <code>JarEntry</code> (<code>ZipEntry</code>) for the
                  * specified JAR file entry name. The manifest attributes of
@@ -100,7 +100,7 @@ declare namespace java {
                  * @return the <code>JarEntry</code> object just created
                  */
                 // @ts-ignore
-                createZipEntry(name: string): java.util.zip.ZipEntry
+                createZipEntry(name: java.lang.String | string): java.util.zip.ZipEntry
             }
         }
     }

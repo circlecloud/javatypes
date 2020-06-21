@@ -64,7 +64,7 @@ declare namespace org {
                  * @see org.springframework.test.context.ActiveProfiles
                  */
                 // @ts-ignore
-                class Profile implements java.lang.annotation.Annotation {
+                abstract class Profile implements java.lang.annotation.Annotation {
                 }
             }
         }

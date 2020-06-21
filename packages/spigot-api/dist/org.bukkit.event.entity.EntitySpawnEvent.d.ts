@@ -12,19 +12,19 @@ declare namespace org {
                     // @ts-ignore
                     constructor(spawnee: org.bukkit.entity.Entity)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the location at which the entity is spawning.
                      * @return The location at which the entity is spawning
                      */
                     // @ts-ignore
-                    getLocation(): org.bukkit.Location
+                    public getLocation(): org.bukkit.Location
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

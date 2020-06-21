@@ -58,7 +58,7 @@ declare namespace java {
                  *          <code>LookupOp</code>.
                  */
                 // @ts-ignore
-                getTable(): java.awt.image.LookupTable
+                public getTable(): java.awt.image.LookupTable
                 /**
                  * Performs a lookup operation on a <code>BufferedImage</code>.
                  * If the color model in the source image is not the same as that
@@ -80,7 +80,7 @@ declare namespace java {
                  *          has an <code>IndexColorModel</code>.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
+                public filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
                 /**
                  * Performs a lookup operation on a <code>Raster</code>.
                  * If the destination <code>Raster</code> is <code>null</code>,
@@ -101,7 +101,7 @@ declare namespace java {
                  *          not meet the restrictions described in the class comments.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Returns the bounding box of the filtered destination image.  Since
                  * this is not a geometric operation, the bounding box does not
@@ -110,7 +110,7 @@ declare namespace java {
                  * @return the bounds of the filtered definition image.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
                 /**
                  * Returns the bounding box of the filtered destination Raster.  Since
                  * this is not a geometric operation, the bounding box does not
@@ -119,7 +119,7 @@ declare namespace java {
                  * @return the bounds of the filtered definition <code>Raster</code>.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
                 /**
                  * Creates a zeroed destination image with the correct size and number of
                  * bands.  If destCM is <code>null</code>, an appropriate
@@ -130,7 +130,7 @@ declare namespace java {
                  * @return a filtered destination <code>BufferedImage</code>.
                  */
                 // @ts-ignore
-                createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
+                public createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
                 /**
                  * Creates a zeroed-destination <code>Raster</code> with the
                  * correct size and number of bands, given this source.
@@ -138,7 +138,7 @@ declare namespace java {
                  * @return the zeroed-destination <code>Raster</code>.
                  */
                 // @ts-ignore
-                createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
+                public createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
                 /**
                  * Returns the location of the destination point given a
                  * point in the source.  If <code>dstPt</code> is not
@@ -153,14 +153,14 @@ declare namespace java {
                  *          corresponds to the specified point in the source.
                  */
                 // @ts-ignore
-                getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Returns the rendering hints for this op.
                  * @return the <code>RenderingHints</code> object associated
                  *          with this op.
                  */
                 // @ts-ignore
-                getRenderingHints(): java.awt.RenderingHints
+                public getRenderingHints(): java.awt.RenderingHints
             }
         }
     }

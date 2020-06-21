@@ -33,17 +33,17 @@ declare namespace org {
                      * @since 1.5.7
                      */
                     // @ts-ignore
-                    addWhiteListPatterns(...patterns: string[]): void
+                    public static addWhiteListPatterns(...patterns: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    getBody(): byte[]
+                    public getBody(): number /*byte*/[]
                     // @ts-ignore
-                    getMessageProperties(): org.springframework.amqp.core.MessageProperties
+                    public getMessageProperties(): org.springframework.amqp.core.MessageProperties
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                 }
             }
         }

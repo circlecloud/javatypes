@@ -14,7 +14,7 @@ declare namespace org {
                          * will continue to function.</p>
                          */
                         // @ts-ignore
-                        class FactoryMethod implements java.lang.annotation.Annotation {
+                        abstract class FactoryMethod implements java.lang.annotation.Annotation {
                         }
                     }
                 }

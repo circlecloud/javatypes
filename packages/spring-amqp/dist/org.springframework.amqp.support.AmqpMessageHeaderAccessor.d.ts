@@ -12,11 +12,11 @@ declare namespace org {
                 // @ts-ignore
                 class AmqpMessageHeaderAccessor extends NativeMessageHeaderAccessor {
                     // @ts-ignore
-                    constructor(nativeHeaders: java.util.Map<java.lang.String, java.util.List<java.lang.String>>)
+                    constructor(nativeHeaders: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>)
                     // @ts-ignore
                     constructor(message: object)
                     // @ts-ignore
-                    readonly PRIORITY: string
+                    public static readonly PRIORITY: java.lang.String | string
                     /**
                      * Create a {@link AmqpMessageHeaderAccessor} from the headers of an existing message.
                      * @param message the {#link Message} to be wrapped for this
@@ -24,55 +24,55 @@ declare namespace org {
                      * @return the {#link AmqpMessageHeaderAccessor} instance.
                      */
                     // @ts-ignore
-                    wrap(message: object): org.springframework.amqp.support.AmqpMessageHeaderAccessor
+                    public static wrap(message: object): org.springframework.amqp.support.AmqpMessageHeaderAccessor
                     // @ts-ignore
-                    verifyType(headerName: string, headerValue: any): void
+                    verifyType(headerName: java.lang.String | string, headerValue: java.lang.Object | any): void
                     // @ts-ignore
-                    getAppId(): java.lang.String
+                    public getAppId(): string
                     // @ts-ignore
-                    getClusterId(): java.lang.String
+                    public getClusterId(): string
                     // @ts-ignore
-                    getContentEncoding(): java.lang.String
+                    public getContentEncoding(): string
                     // @ts-ignore
-                    getContentLength(): java.lang.Long
+                    public getContentLength(): number
                     // @ts-ignore
-                    getContentType(): MimeType
+                    public getContentType(): MimeType
                     // @ts-ignore
-                    getCorrelationId(): java.lang.String
+                    public getCorrelationId(): string
                     // @ts-ignore
-                    getDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
+                    public getDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    getReceivedDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
+                    public getReceivedDeliveryMode(): org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    getDeliveryTag(): java.lang.Long
+                    public getDeliveryTag(): number
                     // @ts-ignore
-                    getExpiration(): java.lang.String
+                    public getExpiration(): string
                     // @ts-ignore
-                    getMessageCount(): java.lang.Integer
+                    public getMessageCount(): number
                     // @ts-ignore
-                    getMessageId(): java.lang.String
+                    public getMessageId(): string
                     // @ts-ignore
-                    getPriority(): java.lang.Integer
+                    public getPriority(): number
                     // @ts-ignore
-                    getReceivedExchange(): java.lang.String
+                    public getReceivedExchange(): string
                     // @ts-ignore
-                    getReceivedRoutingKey(): java.lang.String
+                    public getReceivedRoutingKey(): string
                     // @ts-ignore
-                    getReceivedUserId(): java.lang.String
+                    public getReceivedUserId(): string
                     // @ts-ignore
-                    getRedelivered(): java.lang.Boolean
+                    public getRedelivered(): java.lang.Boolean
                     // @ts-ignore
-                    getReplyTo(): java.lang.String
+                    public getReplyTo(): string
                     // @ts-ignore
-                    getTimestamp(): java.lang.Long
+                    public getTimestamp(): number
                     // @ts-ignore
-                    getType(): java.lang.String
+                    public getType(): string
                     // @ts-ignore
-                    getUserId(): java.lang.String
+                    public getUserId(): string
                     // @ts-ignore
-                    getConsumerTag(): java.lang.String
+                    public getConsumerTag(): string
                     // @ts-ignore
-                    getConsumerQueue(): java.lang.String
+                    public getConsumerQueue(): string
                 }
             }
         }

@@ -8,7 +8,7 @@ declare namespace org {
              * @author Juergen Hoeller
              */
             // @ts-ignore
-            class PropertyAccessException extends org.springframework.beans.BeansException {
+            abstract class PropertyAccessException extends org.springframework.beans.BeansException {
                 /**
                  * Create a new PropertyAccessException.
                  * @param propertyChangeEvent the PropertyChangeEvent that resulted in the problem
@@ -16,36 +16,36 @@ declare namespace org {
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, msg: string, cause: Error)
+                constructor(propertyChangeEvent: java.beans.PropertyChangeEvent, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Create a new PropertyAccessException without PropertyChangeEvent.
                  * @param msg the detail message
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Return the PropertyChangeEvent that resulted in the problem.
                  * <p>May be {@code null}; only available if an actual bean property
                  * was affected.
                  */
                 // @ts-ignore
-                getPropertyChangeEvent(): java.beans.PropertyChangeEvent
+                public getPropertyChangeEvent(): java.beans.PropertyChangeEvent
                 /**
                  * Return the name of the affected property, if available.
                  */
                 // @ts-ignore
-                getPropertyName(): java.lang.String
+                public getPropertyName(): string
                 /**
                  * Return the affected value that was about to be set, if any.
                  */
                 // @ts-ignore
-                getValue(): java.lang.Object
+                public getValue(): any
                 /**
                  * Return a corresponding error code for this type of exception.
                  */
                 // @ts-ignore
-                abstract getErrorCode(): java.lang.String
+                public abstract getErrorCode(): string
             }
         }
     }

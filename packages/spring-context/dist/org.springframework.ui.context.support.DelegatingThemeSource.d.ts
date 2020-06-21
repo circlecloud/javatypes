@@ -17,11 +17,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setParentThemeSource(parentThemeSource: org.springframework.ui.context.ThemeSource): void
+                        public setParentThemeSource(parentThemeSource: org.springframework.ui.context.ThemeSource): void
                         // @ts-ignore
-                        getParentThemeSource(): org.springframework.ui.context.ThemeSource
+                        public getParentThemeSource(): org.springframework.ui.context.ThemeSource
                         // @ts-ignore
-                        getTheme(themeName: string): org.springframework.ui.context.Theme
+                        public getTheme(themeName: java.lang.String | string): org.springframework.ui.context.Theme
                     }
                 }
             }

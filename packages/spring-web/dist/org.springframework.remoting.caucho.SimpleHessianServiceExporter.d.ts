@@ -27,7 +27,7 @@ declare namespace org {
                      * Processes the incoming Hessian request and creates a Hessian response.
                      */
                     // @ts-ignore
-                    handle(exchange: com.sun.net.httpserver.HttpExchange): void
+                    public handle(exchange: com.sun.net.httpserver.HttpExchange): void
                 }
             }
         }

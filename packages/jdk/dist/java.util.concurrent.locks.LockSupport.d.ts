@@ -85,7 +85,7 @@ declare namespace java {
                      *         this operation has no effect
                      */
                     // @ts-ignore
-                    unpark(thread: java.lang.Thread): void
+                    public static unpark(thread: java.lang.Thread): void
                     /**
                      * Disables the current thread for thread scheduling purposes unless the
                      * permit is available.
@@ -109,7 +109,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    park(blocker: any): void
+                    public static park(blocker: java.lang.Object | any): void
                     /**
                      * Disables the current thread for thread scheduling purposes, for up to
                      * the specified waiting time, unless the permit is available.
@@ -136,7 +136,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    parkNanos(blocker: any, nanos: number /*long*/): void
+                    public static parkNanos(blocker: java.lang.Object | any, nanos: number /*long*/): void
                     /**
                      * Disables the current thread for thread scheduling purposes, until
                      * the specified deadline, unless the permit is available.
@@ -164,7 +164,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    parkUntil(blocker: any, deadline: number /*long*/): void
+                    public static parkUntil(blocker: java.lang.Object | any, deadline: number /*long*/): void
                     /**
                      * Returns the blocker object supplied to the most recent
                      * invocation of a park method that has not yet unblocked, or null
@@ -177,7 +177,7 @@ declare namespace java {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBlocker(t: java.lang.Thread): java.lang.Object
+                    public static getBlocker(t: java.lang.Thread): any
                     /**
                      * Disables the current thread for thread scheduling purposes unless the
                      * permit is available.
@@ -198,7 +198,7 @@ declare namespace java {
                      * for example, the interrupt status of the thread upon return.
                      */
                     // @ts-ignore
-                    park(): void
+                    public static park(): void
                     /**
                      * Disables the current thread for thread scheduling purposes, for up to
                      * the specified waiting time, unless the permit is available.
@@ -222,7 +222,7 @@ declare namespace java {
                      * @param nanos the maximum number of nanoseconds to wait
                      */
                     // @ts-ignore
-                    parkNanos(nanos: number /*long*/): void
+                    public static parkNanos(nanos: number /*long*/): void
                     /**
                      * Disables the current thread for thread scheduling purposes, until
                      * the specified deadline, unless the permit is available.
@@ -247,7 +247,7 @@ declare namespace java {
                      *         to wait until
                      */
                     // @ts-ignore
-                    parkUntil(deadline: number /*long*/): void
+                    public static parkUntil(deadline: number /*long*/): void
                 }
             }
         }

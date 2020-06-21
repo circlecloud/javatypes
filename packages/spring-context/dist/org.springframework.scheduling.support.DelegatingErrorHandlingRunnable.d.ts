@@ -19,9 +19,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(delegate: java.lang.Runnable, errorHandler: ErrorHandler)
                     // @ts-ignore
-                    run(): void
+                    public run(): void
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

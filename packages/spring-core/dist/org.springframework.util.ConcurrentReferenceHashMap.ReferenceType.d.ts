@@ -7,10 +7,20 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class ReferenceType extends java.lang.Enum<org.springframework.util.ConcurrentReferenceHashMap.ReferenceType> {
+                    /**
+                     * Use {@link SoftReference SoftReferences}.
+                     */
+                    // @ts-ignore
+                    readonly SOFT: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
+                    /**
+                     * Use {@link WeakReference WeakReferences}.
+                     */
+                    // @ts-ignore
+                    readonly WEAK: org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
                     // @ts-ignore
                     values(): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
+                    valueOf(name: java.lang.String | string): org.springframework.util.ConcurrentReferenceHashMap.ReferenceType
                 }
             }
         }

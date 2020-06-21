@@ -41,58 +41,58 @@ declare namespace javax {
                  * either X_AXIS or Y_AXIS.
                  */
                 // @ts-ignore
-                getMajorAxis(): int
+                public getMajorAxis(): number /*int*/
                 /**
                  * Fetch the minor axis (the axis orthogonal
                  * to the tiled axis).  This will have a value of
                  * either X_AXIS or Y_AXIS.
                  */
                 // @ts-ignore
-                getMinorAxis(): int
+                public getMinorAxis(): number /*int*/
                 /**
                  * Get the top part of the margin around the view.
                  */
                 // @ts-ignore
-                getTopInset(): float
+                public getTopInset(): number /*float*/
                 /**
                  * Set the top part of the margin around the view.
                  * @param i the value of the inset
                  */
                 // @ts-ignore
-                setTopInset(i: number /*float*/): void
+                public setTopInset(i: number /*float*/): void
                 /**
                  * Get the bottom part of the margin around the view.
                  */
                 // @ts-ignore
-                getBottomInset(): float
+                public getBottomInset(): number /*float*/
                 /**
                  * Set the bottom part of the margin around the view.
                  * @param i the value of the inset
                  */
                 // @ts-ignore
-                setBottomInset(i: number /*float*/): void
+                public setBottomInset(i: number /*float*/): void
                 /**
                  * Get the left part of the margin around the view.
                  */
                 // @ts-ignore
-                getLeftInset(): float
+                public getLeftInset(): number /*float*/
                 /**
                  * Set the left part of the margin around the view.
                  * @param i the value of the inset
                  */
                 // @ts-ignore
-                setLeftInset(i: number /*float*/): void
+                public setLeftInset(i: number /*float*/): void
                 /**
                  * Get the right part of the margin around the view.
                  */
                 // @ts-ignore
-                getRightInset(): float
+                public getRightInset(): number /*float*/
                 /**
                  * Set the right part of the margin around the view.
                  * @param i the value of the inset
                  */
                 // @ts-ignore
-                setRightInset(i: number /*float*/): void
+                public setRightInset(i: number /*float*/): void
                 /**
                  * Fetch the span along an axis that is taken up by the insets.
                  * @param axis the axis to determine the total insets along,
@@ -100,7 +100,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getInsetSpan(axis: number /*int*/): float
+                getInsetSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Set the estimatedMajorSpan property that determines if the
                  * major span should be treated as being estimated.  If this
@@ -191,7 +191,7 @@ declare namespace javax {
                  * @param views the child views to insert
                  */
                 // @ts-ignore
-                replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
+                public replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
                 /**
                  * Loads all of the children to initialize the view.
                  * This is called by the {@link #setParent setParent}
@@ -220,7 +220,7 @@ declare namespace javax {
                  *    -1 if no view represents that position
                  */
                 // @ts-ignore
-                getViewIndexAtPosition(pos: number /*int*/, b: javax.swing.text.Position.Bias): int
+                getViewIndexAtPosition(pos: number /*int*/, b: javax.swing.text.Position.Bias): number /*int*/
                 /**
                  * Update the layout in response to receiving notification of
                  * change from the model.  This is implemented to note the
@@ -251,7 +251,7 @@ declare namespace javax {
                  * @param parent the parent of the view, null if none
                  */
                 // @ts-ignore
-                setParent(parent: javax.swing.text.View): void
+                public setParent(parent: javax.swing.text.View): void
                 /**
                  * Child views can call this on the parent to indicate that
                  * the preference has changed and should be reconsidered
@@ -264,7 +264,7 @@ declare namespace javax {
                  * @see javax.swing.JComponent#revalidate
                  */
                 // @ts-ignore
-                preferenceChanged(child: javax.swing.text.View, width: boolean, height: boolean): void
+                public preferenceChanged(child: javax.swing.text.View, width: boolean, height: boolean): void
                 /**
                  * Sets the size of the view.  This should cause
                  * layout of the view if the view caches any layout
@@ -278,7 +278,7 @@ declare namespace javax {
                  * @param height the height &gt;= 0
                  */
                 // @ts-ignore
-                setSize(width: number /*float*/, height: number /*float*/): void
+                public setSize(width: number /*float*/, height: number /*float*/): void
                 /**
                  * Render the view using the given allocation and
                  * rendering surface.
@@ -297,7 +297,7 @@ declare namespace javax {
                  * @see View#paint
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, alloc: java.awt.Shape): void
+                public paint(g: java.awt.Graphics, alloc: java.awt.Shape): void
                 /**
                  * Determines the preferred span for this view along an
                  * axis.
@@ -309,7 +309,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis type
                  */
                 // @ts-ignore
-                getPreferredSpan(axis: number /*int*/): float
+                public getPreferredSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the minimum span for this view along an
                  * axis.
@@ -321,7 +321,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis type
                  */
                 // @ts-ignore
-                getMinimumSpan(axis: number /*int*/): float
+                public getMinimumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Determines the maximum span for this view along an
                  * axis.
@@ -333,7 +333,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException for an invalid axis type
                  */
                 // @ts-ignore
-                getMaximumSpan(axis: number /*int*/): float
+                public getMaximumSpan(axis: number /*int*/): number /*float*/
                 /**
                  * Returns the number of views in this view.  Since
                  * the default is to not be a composite view this
@@ -342,7 +342,7 @@ declare namespace javax {
                  * @see View#getViewCount
                  */
                 // @ts-ignore
-                getViewCount(): int
+                public getViewCount(): number /*int*/
                 /**
                  * Gets the nth child view.  Since there are no
                  * children by default, this returns null.
@@ -350,7 +350,7 @@ declare namespace javax {
                  * @return the view
                  */
                 // @ts-ignore
-                getView(n: number /*int*/): javax.swing.text.View
+                public getView(n: number /*int*/): javax.swing.text.View
                 /**
                  * Fetches the allocation for the given child view.
                  * This enables finding out where various views
@@ -362,7 +362,7 @@ declare namespace javax {
                  * @return the allocation to the child
                  */
                 // @ts-ignore
-                getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
+                public getChildAllocation(index: number /*int*/, a: java.awt.Shape): java.awt.Shape
                 /**
                  * Returns the child view index representing the given position in
                  * the model.  By default a view has no children so this is implemented
@@ -374,7 +374,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getViewIndex(pos: number /*int*/, b: javax.swing.text.Position.Bias): int
+                public getViewIndex(pos: number /*int*/, b: javax.swing.text.Position.Bias): number /*int*/
                 /**
                  * Provides a mapping from the document model coordinate space
                  * to the coordinate space of the view mapped to it.
@@ -390,7 +390,7 @@ declare namespace javax {
                  * @see View#viewToModel
                  */
                 // @ts-ignore
-                modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                 /**
                  * Provides a mapping from the view coordinate space to the logical
                  * coordinate space of the model.  The biasReturn argument will be
@@ -412,7 +412,7 @@ declare namespace javax {
                  *  character in the model or the previous character in the model.
                  */
                 // @ts-ignore
-                viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, biasReturn: javax.swing.text.Position.Bias[]): int
+                public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, biasReturn: javax.swing.text.Position.Bias[]): number /*int*/
                 /**
                  * Provides a way to determine the next visually represented model
                  * location that one might place a caret.  Some views may not be visible,
@@ -441,7 +441,7 @@ declare namespace javax {
                  * @exception IllegalArgumentException if <code>direction</code> is invalid
                  */
                 // @ts-ignore
-                getNextVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                public getNextVisualPositionFrom(pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
             }
         }
     }

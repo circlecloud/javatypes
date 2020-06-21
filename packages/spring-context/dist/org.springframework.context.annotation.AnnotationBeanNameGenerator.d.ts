@@ -36,16 +36,16 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    readonly INSTANCE: org.springframework.context.annotation.AnnotationBeanNameGenerator
+                    public static readonly INSTANCE: org.springframework.context.annotation.AnnotationBeanNameGenerator
                     // @ts-ignore
-                    generateBeanName(definition: BeanDefinition, registry: BeanDefinitionRegistry): java.lang.String
+                    public generateBeanName(definition: BeanDefinition, registry: BeanDefinitionRegistry): string
                     /**
                      * Derive a bean name from one of the annotations on the class.
                      * @param annotatedDef the annotation-aware bean definition
                      * @return the bean name, or {#code null} if none is found
                      */
                     // @ts-ignore
-                    determineBeanNameFromAnnotation(annotatedDef: AnnotatedBeanDefinition): java.lang.String
+                    determineBeanNameFromAnnotation(annotatedDef: AnnotatedBeanDefinition): string
                     /**
                      * Check whether the given annotation is a stereotype that is allowed
                      * to suggest a component name through its annotation {@code value()}.
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return whether the annotation qualifies as a stereotype with component name
                      */
                     // @ts-ignore
-                    isStereotypeWithNameValue(annotationType: string, metaAnnotationTypes: Array<java.lang.String>, attributes: java.util.Map<java.lang.String, java.lang.Object>): boolean
+                    isStereotypeWithNameValue(annotationType: java.lang.String | string, metaAnnotationTypes: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>, attributes: java.util.Map<java.lang.String | string, java.lang.Object | any>): boolean
                     /**
                      * Derive a default bean name from the given bean definition.
                      * <p>The default implementation delegates to {@link #buildDefaultBeanName(BeanDefinition)}.
@@ -64,7 +64,7 @@ declare namespace org {
                      * @return the default bean name (never {#code null})
                      */
                     // @ts-ignore
-                    buildDefaultBeanName(definition: BeanDefinition, registry: BeanDefinitionRegistry): java.lang.String
+                    buildDefaultBeanName(definition: BeanDefinition, registry: BeanDefinitionRegistry): string
                     /**
                      * Derive a default bean name from the given bean definition.
                      * <p>The default implementation simply builds a decapitalized version
@@ -76,7 +76,7 @@ declare namespace org {
                      * @return the default bean name (never {#code null})
                      */
                     // @ts-ignore
-                    buildDefaultBeanName(definition: BeanDefinition): java.lang.String
+                    buildDefaultBeanName(definition: BeanDefinition): string
                 }
             }
         }

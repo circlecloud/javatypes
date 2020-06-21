@@ -52,7 +52,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class SetOfIntegerSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class SetOfIntegerSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Construct a new set-of-integer attribute with the given members in
                  * string form.
@@ -63,7 +63,7 @@ declare namespace javax {
                  *     obey  the proper syntax.
                  */
                 // @ts-ignore
-                constructor(members: string)
+                constructor(members: java.lang.String | string)
                 /**
                  * Construct a new set-of-integer attribute with the given members in
                  * array form.
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @return This set-of-integer attribute's members in canonical array form.
                  */
                 // @ts-ignore
-                getMembers(): int[][]
+                public getMembers(): number /*int*/[][]
                 /**
                  * Determine if this set-of-integer attribute contains the given value.
                  * @param x  Integer value.
@@ -116,7 +116,7 @@ declare namespace javax {
                  *           <CODE>x</CODE>, false otherwise.
                  */
                 // @ts-ignore
-                contains(x: number /*int*/): boolean
+                public contains(x: number /*int*/): boolean
                 /**
                  * Determine if this set-of-integer attribute contains the given integer
                  * attribute's value.
@@ -125,7 +125,7 @@ declare namespace javax {
                  *           <CODE>theAttribute</CODE>'s value, false otherwise.
                  */
                 // @ts-ignore
-                contains(attribute: javax.print.attribute.IntegerSyntax): boolean
+                public contains(attribute: javax.print.attribute.IntegerSyntax): boolean
                 /**
                  * Determine the smallest integer in this set-of-integer attribute that is
                  * greater than the given value. If there are no integers in this
@@ -148,7 +148,7 @@ declare namespace javax {
                  *           this set-of-integer attribute is greater than <CODE>x</CODE>.
                  */
                 // @ts-ignore
-                next(x: number /*int*/): int
+                public next(x: number /*int*/): number /*int*/
                 /**
                  * Returns whether this set-of-integer attribute is equivalent to the passed
                  * in object. To be equivalent, all of the following conditions must be
@@ -167,14 +167,14 @@ declare namespace javax {
                  *           set-of-integer attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this set-of-integer attribute. The hash
                  * code is the sum of the lower and upper bounds of the ranges in the
                  * canonical array form, or 0 for an empty set.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string value corresponding to this set-of-integer attribute.
                  * The string value is a zero-length string if this set is empty. Otherwise,
@@ -184,7 +184,7 @@ declare namespace javax {
                  * <CODE>"<I>i</I>-<I>j</I>"</CODE> otherwise.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

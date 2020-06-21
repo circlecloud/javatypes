@@ -23,7 +23,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class Listener extends java.lang.Object {
+                abstract class Listener extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -40,7 +40,7 @@ declare namespace javax {
                      *                <tt>null</tt> when <tt>target</tt> is root element.
                      */
                     // @ts-ignore
-                    beforeUnmarshal(target: any, parent: any): void
+                    public beforeUnmarshal(target: java.lang.Object | any, parent: java.lang.Object | any): void
                     /**
                      * <p/>
                      * Callback method invoked after unmarshalling XML data into <tt>target</tt>.
@@ -55,7 +55,7 @@ declare namespace javax {
                      *                <tt>null</tt> when <tt>target</tt> is root element.
                      */
                     // @ts-ignore
-                    afterUnmarshal(target: any, parent: any): void
+                    public afterUnmarshal(target: java.lang.Object | any, parent: java.lang.Object | any): void
                 }
             }
         }

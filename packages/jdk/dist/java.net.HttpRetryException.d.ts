@@ -16,7 +16,7 @@ declare namespace java {
              * @param code   the HTTP response code from server.
              */
             // @ts-ignore
-            constructor(detail: string, code: number /*int*/)
+            constructor(detail: java.lang.String | string, code: number /*int*/)
             /**
              * Constructs a new {@code HttpRetryException} with detail message
              * responseCode and the contents of the Location response header field.
@@ -25,27 +25,27 @@ declare namespace java {
              * @param location   the URL to be redirected to
              */
             // @ts-ignore
-            constructor(detail: string, code: number /*int*/, location: string)
+            constructor(detail: java.lang.String | string, code: number /*int*/, location: java.lang.String | string)
             /**
              * Returns the http response code
              * @return The http response code.
              */
             // @ts-ignore
-            responseCode(): int
+            responseCode(): number /*int*/
             /**
              * Returns a string explaining why the http request could
              * not be retried.
              * @return The reason string
              */
             // @ts-ignore
-            getReason(): java.lang.String
+            getReason(): string
             /**
              * Returns the value of the Location header field if the
              * error resulted from redirection.
              * @return The location string
              */
             // @ts-ignore
-            getLocation(): java.lang.String
+            getLocation(): string
         }
     }
 }

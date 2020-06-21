@@ -13,7 +13,7 @@ declare namespace org {
                                  * @return The smelt items
                                  */
                                 // @ts-ignore
-                                getSmeltedItems(): java.util.List<org.spongepowered.api.item.inventory.ItemStackSnapshot>
+                                getSmeltedItems(): Array<org.spongepowered.api.item.inventory.ItemStackSnapshot>
                             }
                         }
                     }

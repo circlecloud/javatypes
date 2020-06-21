@@ -10,11 +10,11 @@ declare namespace org {
                 // @ts-ignore
                 class AmqpReplyTimeoutException extends org.springframework.amqp.AmqpException {
                     // @ts-ignore
-                    constructor(message: string, requestMessage: org.springframework.amqp.core.Message)
+                    constructor(message: java.lang.String | string, requestMessage: org.springframework.amqp.core.Message)
                     // @ts-ignore
                     getRequestMessage(): org.springframework.amqp.core.Message
                     // @ts-ignore
-                    toString(): java.lang.String
+                    toString(): string
                 }
             }
         }

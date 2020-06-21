@@ -10,13 +10,13 @@ declare namespace org {
                      * @see ServletContextPropertySource
                      */
                     // @ts-ignore
-                    class ServletConfigPropertySource extends <any> {
+                    class ServletConfigPropertySource extends java.lang.Object {
                         // @ts-ignore
-                        constructor(name: string, servletConfig: ServletConfig)
+                        constructor(name: java.lang.String | string, servletConfig: ServletConfig)
                         // @ts-ignore
-                        getPropertyNames(): java.lang.String[]
+                        public getPropertyNames(): string[]
                         // @ts-ignore
-                        getProperty(name: string): java.lang.String
+                        public getProperty(name: java.lang.String | string): string
                     }
                 }
             }

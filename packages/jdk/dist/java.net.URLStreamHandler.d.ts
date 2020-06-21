@@ -16,7 +16,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class URLStreamHandler extends java.lang.Object {
+        abstract class URLStreamHandler extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -84,7 +84,7 @@ declare namespace java {
              *                   after the sharp sign indicates an anchor.
              */
             // @ts-ignore
-            parseURL(u: java.net.URL, spec: string, start: number /*int*/, limit: number /*int*/): void
+            parseURL(u: java.net.URL, spec: java.lang.String | string, start: number /*int*/, limit: number /*int*/): void
             /**
              * Returns the default port for a URL parsed by this handler. This method
              * is meant to be overidden by handlers with default port numbers.
@@ -92,7 +92,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getDefaultPort(): int
+            getDefaultPort(): number /*int*/
             /**
              * Provides the default equals calculation. May be overidden by handlers
              * for other protocols that have different requirements for equals().
@@ -116,7 +116,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            hashCode(u: java.net.URL): int
+            hashCode(u: java.net.URL): number /*int*/
             /**
              * Compare two urls to see whether they refer to the same file,
              * i.e., having the same protocol, host, port, and path.
@@ -157,7 +157,7 @@ declare namespace java {
              * @return a string representation of the {#code URL} argument.
              */
             // @ts-ignore
-            toExternalForm(u: java.net.URL): java.lang.String
+            toExternalForm(u: java.net.URL): string
             /**
              * Sets the fields of the {@code URL} argument to the indicated values.
              * Only classes derived from URLStreamHandler are able
@@ -177,7 +177,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            setURL(u: java.net.URL, protocol: string, host: string, port: number /*int*/, authority: string, userInfo: string, path: string, query: string, ref: string): void
+            setURL(u: java.net.URL, protocol: java.lang.String | string, host: java.lang.String | string, port: number /*int*/, authority: java.lang.String | string, userInfo: java.lang.String | string, path: java.lang.String | string, query: java.lang.String | string, ref: java.lang.String | string): void
             /**
              * Sets the fields of the {@code URL} argument to the indicated values.
              * Only classes derived from URLStreamHandler are able
@@ -194,7 +194,7 @@ declare namespace java {
              *              String);
              */
             // @ts-ignore
-            setURL(u: java.net.URL, protocol: string, host: string, port: number /*int*/, file: string, ref: string): void
+            setURL(u: java.net.URL, protocol: java.lang.String | string, host: java.lang.String | string, port: number /*int*/, file: java.lang.String | string, ref: java.lang.String | string): void
         }
     }
 }

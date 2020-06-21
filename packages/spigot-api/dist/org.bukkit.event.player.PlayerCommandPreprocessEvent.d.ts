@@ -42,13 +42,13 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerCommandPreprocessEvent extends org.bukkit.event.player.PlayerEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, message: string)
+                    constructor(player: org.bukkit.entity.Player, message: java.lang.String | string)
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, message: string, recipients: Array<org.bukkit.entity.Player>)
+                    constructor(player: org.bukkit.entity.Player, message: java.lang.String | string, recipients: java.util.Set<org.bukkit.entity.Player> | Array<org.bukkit.entity.Player>)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the command that the player is attempting to send.
                      * <p>
@@ -57,7 +57,7 @@ declare namespace org {
                      * @return Message the player is attempting to send
                      */
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Sets the command that the player will send.
                      * <p>
@@ -67,14 +67,14 @@ declare namespace org {
                      * @throws IllegalArgumentException if command is null or empty
                      */
                     // @ts-ignore
-                    setMessage(command: string): void
+                    public setMessage(command: java.lang.String | string): void
                     /**
                      * Sets the player that this command will be executed as.
                      * @param player New player which this event will execute as
                      * @throws IllegalArgumentException if the player provided is null
                      */
                     // @ts-ignore
-                    setPlayer(player: org.bukkit.entity.Player): void
+                    public setPlayer(player: org.bukkit.entity.Player): void
                     /**
                      * Gets a set of recipients that this chat message will be displayed to.
                      * <p>
@@ -89,11 +89,11 @@ declare namespace org {
                      * @return All Players who will see this chat message
                      */
                     // @ts-ignore
-                    getRecipients(): java.util.Set<org.bukkit.entity.Player>
+                    public getRecipients(): Array<org.bukkit.entity.Player>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

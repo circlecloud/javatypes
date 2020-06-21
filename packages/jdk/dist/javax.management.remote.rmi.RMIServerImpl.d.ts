@@ -17,7 +17,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                class RMIServerImpl extends java.lang.Object implements java.io.Closeable, javax.management.remote.rmi.RMIServer {
+                abstract class RMIServerImpl extends java.lang.Object implements java.io.Closeable, javax.management.remote.rmi.RMIServer {
                     /**
                      * <p>Constructs a new <code>RMIServerImpl</code>.</p>
                      * @param env the environment containing attributes for the new
@@ -25,7 +25,7 @@ declare namespace javax {
                      *  to an empty Map.
                      */
                     // @ts-ignore
-                    constructor(env: java.util.Map<java.lang.String, any>)
+                    constructor(env: java.util.Map<java.lang.String | string, any>)
                     /**
                      * <p>Exports this RMI object.</p>
                      * @exception IOException if this RMI object cannot be exported.
@@ -39,7 +39,7 @@ declare namespace javax {
                      *             RMIServerImpl has not been exported yet.
                      */
                     // @ts-ignore
-                    abstract toStub(): java.rmi.Remote
+                    public abstract toStub(): java.rmi.Remote
                     /**
                      * <p>Sets the default <code>ClassLoader</code> for this connector
                      * server. New client connections will use this classloader.
@@ -49,7 +49,7 @@ declare namespace javax {
                      * @see #getDefaultClassLoader
                      */
                     // @ts-ignore
-                    setDefaultClassLoader(cl: java.lang.ClassLoader): void
+                    public setDefaultClassLoader(cl: java.lang.ClassLoader): void
                     /**
                      * <p>Gets the default <code>ClassLoader</code> used by this connector
                      * server.</p>
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @see #setDefaultClassLoader
                      */
                     // @ts-ignore
-                    getDefaultClassLoader(): java.lang.ClassLoader
+                    public getDefaultClassLoader(): java.lang.ClassLoader
                     /**
                      * <p>Sets the <code>MBeanServer</code> to which this connector
                      * server is attached. New client connections will interact
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @see #getMBeanServer
                      */
                     // @ts-ignore
-                    setMBeanServer(mbs: javax.management.MBeanServer): void
+                    public setMBeanServer(mbs: javax.management.MBeanServer): void
                     /**
                      * <p>The <code>MBeanServer</code> to which this connector server
                      * is attached.  This is the last value passed to {@link
@@ -80,9 +80,9 @@ declare namespace javax {
                      * @see #setMBeanServer
                      */
                     // @ts-ignore
-                    getMBeanServer(): javax.management.MBeanServer
+                    public getMBeanServer(): javax.management.MBeanServer
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    public getVersion(): string
                     /**
                      * <p>Creates a new client connection.  This method calls {@link
                      * #makeClient makeClient} and adds the returned client connection
@@ -108,7 +108,7 @@ declare namespace javax {
                      *  is null.
                      */
                     // @ts-ignore
-                    newClient(credentials: any): javax.management.remote.rmi.RMIConnection
+                    public newClient(credentials: java.lang.Object | any): javax.management.remote.rmi.RMIConnection
                     /**
                      * <p>Creates a new client connection.  This method is called by
                      * the public method {@link #newClient(Object)}.</p>
@@ -122,7 +122,7 @@ declare namespace javax {
                      *  created or exported.
                      */
                     // @ts-ignore
-                    abstract makeClient(connectionId: string, subject: javax.security.auth.Subject): javax.management.remote.rmi.RMIConnection
+                    abstract makeClient(connectionId: java.lang.String | string, subject: javax.security.auth.Subject): javax.management.remote.rmi.RMIConnection
                     /**
                      * <p>Closes a client connection made by {@link #makeClient makeClient}.
                      * @param client a connection previously returned by
@@ -141,7 +141,7 @@ declare namespace javax {
                      * @return the protocol string for this object.
                      */
                     // @ts-ignore
-                    abstract getProtocol(): java.lang.String
+                    abstract getProtocol(): string
                     /**
                      * <p>Method called when a client connection created by {@link
                      * #makeClient makeClient} is closed.  A subclass that defines
@@ -186,7 +186,7 @@ declare namespace javax {
                      *  <code>IOException</code>.
                      */
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     /**
                      * <p>Called by {@link #close()} to close the connector server.
                      * After returning from this method, the connector server must

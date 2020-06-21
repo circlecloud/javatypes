@@ -63,18 +63,18 @@ declare namespace org {
                  * @return true if the Sapling would grow when next ticked with bonemeal
                  */
                 // @ts-ignore
-                isInstantGrowable(): boolean
+                public isInstantGrowable(): boolean
                 /**
                  * Set whether this sapling will grow when next ticked with bonemeal
                  * @param isInstantGrowable true if the Sapling should grow when next ticked
                  *  with bonemeal
                  */
                 // @ts-ignore
-                setIsInstantGrowable(isInstantGrowable: boolean): void
+                public setIsInstantGrowable(isInstantGrowable: boolean): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Sapling
+                public clone(): org.bukkit.material.Sapling
             }
         }
     }

@@ -71,7 +71,7 @@ declare namespace org {
                      * @return A collection of profiles successfully removed
                      */
                     // @ts-ignore
-                    remove(profiles: java.lang.Iterable<org.spongepowered.api.profile.GameProfile>): java.util.Collection<org.spongepowered.api.profile.GameProfile>
+                    remove(profiles: java.lang.Iterable<org.spongepowered.api.profile.GameProfile>): Array<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Clear all entries from this cache.
                      */
@@ -134,14 +134,14 @@ declare namespace org {
                      *      the cache did not contain a profile with the provided name
                      */
                     // @ts-ignore
-                    getByName(name: string): java.util.Optional<org.spongepowered.api.profile.GameProfile>
+                    getByName(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Gets {@link GameProfile}s in bulk by their name.
                      * @param names The names
                      * @return A collection of successfully found up profiles
                      */
                     // @ts-ignore
-                    getByNames(names: java.lang.Iterable<java.lang.String>): java.util.Map<java.lang.String, java.util.Optional<org.spongepowered.api.profile.GameProfile>>
+                    getByNames(names: java.lang.Iterable<java.lang.String | string>): java.util.Map<java.lang.String | string, java.util.Optional<org.spongepowered.api.profile.GameProfile>>
                     /**
                      * Looks a {@link GameProfile} up by its name and
                      * loads it into this cache.
@@ -150,7 +150,7 @@ declare namespace org {
                      *      we couldn't find a profile with the provided name
                      */
                     // @ts-ignore
-                    lookupByName(name: string): java.util.Optional<org.spongepowered.api.profile.GameProfile>
+                    lookupByName(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Looks up {@link GameProfile}s in bulk by their name  and
                      * loads them into this cache.
@@ -158,7 +158,7 @@ declare namespace org {
                      * @return A collection of successfully looked up profiles
                      */
                     // @ts-ignore
-                    lookupByNames(names: java.lang.Iterable<java.lang.String>): java.util.Map<java.lang.String, java.util.Optional<org.spongepowered.api.profile.GameProfile>>
+                    lookupByNames(names: java.lang.Iterable<java.lang.String | string>): java.util.Map<java.lang.String | string, java.util.Optional<org.spongepowered.api.profile.GameProfile>>
                     /**
                      * Gets a {@link GameProfile} from this cache by its if available,
                      * or lookups the profile by its name.
@@ -168,7 +168,7 @@ declare namespace org {
                      *      we couldn't lookup a profile with the provided name
                      */
                     // @ts-ignore
-                    getOrLookupByName(name: string): java.util.Optional<org.spongepowered.api.profile.GameProfile>
+                    getOrLookupByName(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Gets {@link GameProfile}s in bulk from this cache by when available,
                      * and lookups the profiles by their unique id when not cached.
@@ -176,7 +176,7 @@ declare namespace org {
                      * @return A collection of successfully found profiles
                      */
                     // @ts-ignore
-                    getOrLookupByNames(names: java.lang.Iterable<java.lang.String>): java.util.Map<java.lang.String, java.util.Optional<org.spongepowered.api.profile.GameProfile>>
+                    getOrLookupByNames(names: java.lang.Iterable<java.lang.String | string>): java.util.Map<java.lang.String | string, java.util.Optional<org.spongepowered.api.profile.GameProfile>>
                     /**
                      * Fills a {@link GameProfile} from cached values.
                      * @param profile The profile to fill
@@ -199,7 +199,7 @@ declare namespace org {
                      * @return A {#link Collection} of cached {@link GameProfile}s
                      */
                     // @ts-ignore
-                    getProfiles(): java.util.Collection<org.spongepowered.api.profile.GameProfile>
+                    getProfiles(): Array<org.spongepowered.api.profile.GameProfile>
                     /**
                      * Returns a collection of matching cached {@link GameProfile}s whose last
                      * known names start with the given string (case-insensitive).
@@ -213,7 +213,7 @@ declare namespace org {
                      * @return A {#link Collection} of matching {@link GameProfile}s
                      */
                     // @ts-ignore
-                    match(name: string): java.util.Collection<org.spongepowered.api.profile.GameProfile>
+                    match(name: java.lang.String | string): Array<org.spongepowered.api.profile.GameProfile>
                 }
             }
         }

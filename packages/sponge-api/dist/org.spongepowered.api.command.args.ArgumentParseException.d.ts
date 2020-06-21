@@ -15,7 +15,7 @@ declare namespace org {
                          * @param position The current position in the source string
                          */
                         // @ts-ignore
-                        constructor(message: org.spongepowered.api.text.Text, source: string, position: number /*int*/)
+                        constructor(message: org.spongepowered.api.text.Text, source: java.lang.String | string, position: number /*int*/)
                         /**
                          * Return a new {@link ArgumentParseException} with the given message, cause, source and position.
                          * @param message The message to use for this exception
@@ -24,7 +24,7 @@ declare namespace org {
                          * @param position The current position in the source string
                          */
                         // @ts-ignore
-                        constructor(message: org.spongepowered.api.text.Text, cause: Error, source: string, position: number /*int*/)
+                        constructor(message: org.spongepowered.api.text.Text, cause: java.lang.Throwable | Error, source: java.lang.String | string, position: number /*int*/)
                         // @ts-ignore
                         getText(): org.spongepowered.api.text.Text
                         /**
@@ -33,20 +33,20 @@ declare namespace org {
                          * @return The appropriate position string
                          */
                         // @ts-ignore
-                        getAnnotatedPosition(): java.lang.String
+                        getAnnotatedPosition(): string
                         /**
                          * Gets the position of the last fetched argument in the provided source
                          * string.
                          * @return The source string to get position for
                          */
                         // @ts-ignore
-                        getPosition(): int
+                        getPosition(): number /*int*/
                         /**
                          * Returns the source string arguments are being parsed from.
                          * @return The source string
                          */
                         // @ts-ignore
-                        getSourceString(): java.lang.String
+                        getSourceString(): string
                     }
                 }
             }

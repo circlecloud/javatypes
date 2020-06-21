@@ -12,7 +12,7 @@ declare namespace java {
              * @param reason  a String describing the reason for the exception.
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
             /**
              * Constructor to create a new NotActiveException without a reason.
              */

@@ -142,7 +142,7 @@ declare namespace org {
                  * @see ScheduledAnnotationBeanPostProcessor
                  */
                 // @ts-ignore
-                class EnableScheduling implements java.lang.annotation.Annotation {
+                abstract class EnableScheduling implements java.lang.annotation.Annotation {
                 }
             }
         }

@@ -12,7 +12,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            class RemoteObject extends java.lang.Object implements java.rmi.Remote, java.io.Serializable {
+            abstract class RemoteObject extends java.lang.Object implements java.rmi.Remote, java.io.Serializable {
                 /**
                  * Creates a remote object.
                  */
@@ -44,7 +44,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getRef(): java.rmi.server.RemoteRef
+                public getRef(): java.rmi.server.RemoteRef
                 /**
                  * Returns the stub for the remote object <code>obj</code> passed
                  * as a parameter. This operation is only valid <i>after</i>
@@ -56,7 +56,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                toStub(obj: java.rmi.Remote): java.rmi.Remote
+                public static toStub(obj: java.rmi.Remote): java.rmi.Remote
                 /**
                  * Returns a hashcode for a remote object.  Two remote object stubs
                  * that refer to the same remote object will have the same hash code
@@ -64,7 +64,7 @@ declare namespace java {
                  * @see java.util.Hashtable
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares two remote objects for equality.
                  * Returns a boolean that indicates whether this remote object is
@@ -79,12 +79,12 @@ declare namespace java {
                  * @see java.util.Hashtable
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a String that represents the value of this remote object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

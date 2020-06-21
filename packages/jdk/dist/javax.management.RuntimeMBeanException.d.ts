@@ -22,7 +22,7 @@ declare namespace javax {
              * @param message the detail message.
              */
             // @ts-ignore
-            constructor(e: java.lang.RuntimeException, message: string)
+            constructor(e: java.lang.RuntimeException, message: java.lang.String | string)
             /**
              * Returns the actual {@link RuntimeException} thrown.
              * @return the wrapped {#link RuntimeException}.
@@ -34,7 +34,7 @@ declare namespace javax {
              * @return the wrapped {#link RuntimeException}.
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
         }
     }
 }

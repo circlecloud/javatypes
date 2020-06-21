@@ -9,7 +9,7 @@ declare namespace org {
                          * for {@link InventoryRow} of length 9 or {@link GridInventory} of size 3x3.
                          */
                         // @ts-ignore
-                        class InventoryDimension extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String, Vector2i> {
+                        class InventoryDimension extends org.spongepowered.api.item.inventory.property.AbstractInventoryProperty<java.lang.String | string, Vector2i> {
                             /**
                              * Create a new InventoryDimension property with the specified value.
                              * @param value size to match
@@ -41,21 +41,21 @@ declare namespace org {
                             // @ts-ignore
                             constructor(width: number /*int*/, height: number /*int*/, operator: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            readonly PROPERTY_NAME: string
+                            public static readonly PROPERTY_NAME: java.lang.String | string
                             /**
                              * Gets the number of columns in this inventory.
                              * @return column count
                              */
                             // @ts-ignore
-                            getColumns(): int
+                            public getColumns(): number /*int*/
                             /**
                              * Gets the number of rows in this inventory.
                              * @return row count
                              */
                             // @ts-ignore
-                            getRows(): int
+                            public getRows(): number /*int*/
                             // @ts-ignore
-                            compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(other: org.spongepowered.api.data.Property<any, any>): number /*int*/
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with equal value.
@@ -63,7 +63,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(value: any): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static of(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.InventoryDimension
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with equal value.
@@ -72,7 +72,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            of(width: number /*int*/, height: number /*int*/): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static of(width: number /*int*/, height: number /*int*/): org.spongepowered.api.item.inventory.property.InventoryDimension
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with unequal value.
@@ -80,7 +80,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            not(value: any): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static not(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.InventoryDimension
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with value greater than this value.
@@ -88,7 +88,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThan(value: any): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static greaterThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.InventoryDimension
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with value greater than or equal to this value.
@@ -96,7 +96,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            greaterThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static greaterThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.InventoryDimension
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with value less than this value.
@@ -104,7 +104,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThan(value: any): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static lessThan(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.InventoryDimension
                             /**
                              * Create an InventoryDimension property which matches InventoryDimension
                              * properties with value less than or equal to this value.
@@ -112,7 +112,7 @@ declare namespace org {
                              * @return new property
                              */
                             // @ts-ignore
-                            lessThanOrEqual(value: any): org.spongepowered.api.item.inventory.property.InventoryDimension
+                            public static lessThanOrEqual(value: java.lang.Object | any): org.spongepowered.api.item.inventory.property.InventoryDimension
                         }
                     }
                 }

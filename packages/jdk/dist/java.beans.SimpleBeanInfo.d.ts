@@ -19,50 +19,50 @@ declare namespace java {
              * You can override this if you wish to provide explicit info.
              */
             // @ts-ignore
-            getBeanDescriptor(): java.beans.BeanDescriptor
+            public getBeanDescriptor(): java.beans.BeanDescriptor
             /**
              * Deny knowledge of properties. You can override this
              * if you wish to provide explicit property info.
              */
             // @ts-ignore
-            getPropertyDescriptors(): java.beans.PropertyDescriptor[]
+            public getPropertyDescriptors(): java.beans.PropertyDescriptor[]
             /**
              * Deny knowledge of a default property. You can override this
              * if you wish to define a default property for the bean.
              */
             // @ts-ignore
-            getDefaultPropertyIndex(): int
+            public getDefaultPropertyIndex(): number /*int*/
             /**
              * Deny knowledge of event sets. You can override this
              * if you wish to provide explicit event set info.
              */
             // @ts-ignore
-            getEventSetDescriptors(): java.beans.EventSetDescriptor[]
+            public getEventSetDescriptors(): java.beans.EventSetDescriptor[]
             /**
              * Deny knowledge of a default event. You can override this
              * if you wish to define a default event for the bean.
              */
             // @ts-ignore
-            getDefaultEventIndex(): int
+            public getDefaultEventIndex(): number /*int*/
             /**
              * Deny knowledge of methods. You can override this
              * if you wish to provide explicit method info.
              */
             // @ts-ignore
-            getMethodDescriptors(): java.beans.MethodDescriptor[]
+            public getMethodDescriptors(): java.beans.MethodDescriptor[]
             /**
              * Claim there are no other relevant BeanInfo objects.  You
              * may override this if you want to (for example) return a
              * BeanInfo for a base class.
              */
             // @ts-ignore
-            getAdditionalBeanInfo(): java.beans.BeanInfo[]
+            public getAdditionalBeanInfo(): java.beans.BeanInfo[]
             /**
              * Claim there are no icons available.  You can override
              * this if you want to provide icons for your bean.
              */
             // @ts-ignore
-            getIcon(iconKind: number /*int*/): java.awt.Image
+            public getIcon(iconKind: number /*int*/): java.awt.Image
             /**
              * This is a utility method to help in loading icon images.
              * It takes the name of a resource file associated with the
@@ -75,7 +75,7 @@ declare namespace java {
              * @return an image object.  May be null if the load failed.
              */
             // @ts-ignore
-            loadImage(resourceName: string): java.awt.Image
+            public loadImage(resourceName: java.lang.String | string): java.awt.Image
         }
     }
 }

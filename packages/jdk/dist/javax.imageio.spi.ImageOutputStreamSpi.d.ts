@@ -22,7 +22,7 @@ declare namespace javax {
              * @see javax.imageio.stream.ImageOutputStream
              */
             // @ts-ignore
-            class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider {
+            abstract class ImageOutputStreamSpi extends javax.imageio.spi.IIOServiceProvider {
                 /**
                  * Constructs a blank <code>ImageOutputStreamSpi</code>.  It is up
                  * to the subclass to initialize instance variables and/or
@@ -45,7 +45,7 @@ declare namespace javax {
                  *  is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string, outputClass: java.lang.Class<any>)
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string, outputClass: java.lang.Class<any>)
                 /**
                  * A <code>Class</code> object indicating the legal object type
                  * for use by the <code>createInputStreamInstance</code> method.
@@ -65,7 +65,7 @@ declare namespace javax {
                  * @see #createOutputStreamInstance(Object, boolean, File)
                  */
                 // @ts-ignore
-                getOutputClass(): java.lang.Class<?>
+                public getOutputClass(): java.lang.Class<any>
                 /**
                  * Returns <code>true</code> if the <code>ImageOutputStream</code>
                  * implementation associated with this service provider can
@@ -78,7 +78,7 @@ declare namespace javax {
                  *  output streams created by this service provider.
                  */
                 // @ts-ignore
-                canUseCacheFile(): boolean
+                public canUseCacheFile(): boolean
                 /**
                  * Returns <code>true</code> if the <code>ImageOutputStream</code>
                  * implementation associated with this service provider requires
@@ -88,7 +88,7 @@ declare namespace javax {
                  *  output streams created by this service provider.
                  */
                 // @ts-ignore
-                needsCacheFile(): boolean
+                public needsCacheFile(): boolean
                 /**
                  * Returns an instance of the <code>ImageOutputStream</code>
                  * implementation associated with this service provider.  If the
@@ -113,7 +113,7 @@ declare namespace javax {
                  * @see #getOutputClass
                  */
                 // @ts-ignore
-                abstract createOutputStreamInstance(output: any, useCache: boolean, cacheDir: java.io.File): javax.imageio.stream.ImageOutputStream
+                public abstract createOutputStreamInstance(output: java.lang.Object | any, useCache: boolean, cacheDir: java.io.File): javax.imageio.stream.ImageOutputStream
                 /**
                  * Returns an instance of the <code>ImageOutputStream</code>
                  * implementation associated with this service provider.  A cache
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @see #getOutputClass()
                  */
                 // @ts-ignore
-                createOutputStreamInstance(output: any): javax.imageio.stream.ImageOutputStream
+                public createOutputStreamInstance(output: java.lang.Object | any): javax.imageio.stream.ImageOutputStream
             }
         }
     }

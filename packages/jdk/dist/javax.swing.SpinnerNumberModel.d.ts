@@ -80,7 +80,7 @@ declare namespace javax {
              *      <code>minimum &lt;= value &lt;= maximum</code>
              */
             // @ts-ignore
-            constructor(value: java.lang.Number, minimum: java.lang.Comparable, maximum: java.lang.Comparable, stepSize: java.lang.Number)
+            constructor(value: java.lang.Number, minimum: java.lang.Comparable<any>, maximum: java.lang.Comparable<any>, stepSize: java.lang.Number)
             /**
              * Constructs a <code>SpinnerNumberModel</code> with the specified
              * <code>value</code>, <code>minimum</code>/<code>maximum</code> bounds,
@@ -150,14 +150,14 @@ declare namespace javax {
              * @see SpinnerModel#addChangeListener
              */
             // @ts-ignore
-            setMinimum(minimum: java.lang.Comparable): void
+            public setMinimum(minimum: java.lang.Comparable<any>): void
             /**
              * Returns the first number in this sequence.
              * @return the value of the <code>minimum</code> property
              * @see #setMinimum
              */
             // @ts-ignore
-            getMinimum(): java.lang.Comparable
+            public getMinimum(): java.lang.Comparable<any>
             /**
              * Changes the upper bound for numbers in this sequence.
              * If <code>maximum</code> is <code>null</code>, then there
@@ -186,14 +186,14 @@ declare namespace javax {
              * @see SpinnerModel#addChangeListener
              */
             // @ts-ignore
-            setMaximum(maximum: java.lang.Comparable): void
+            public setMaximum(maximum: java.lang.Comparable<any>): void
             /**
              * Returns the last number in the sequence.
              * @return the value of the <code>maximum</code> property
              * @see #setMaximum
              */
             // @ts-ignore
-            getMaximum(): java.lang.Comparable
+            public getMaximum(): java.lang.Comparable<any>
             /**
              * Changes the size of the value change computed by the
              * <code>getNextValue</code> and <code>getPreviousValue</code>
@@ -210,7 +210,7 @@ declare namespace javax {
              * @see SpinnerModel#addChangeListener
              */
             // @ts-ignore
-            setStepSize(stepSize: java.lang.Number): void
+            public setStepSize(stepSize: java.lang.Number): void
             /**
              * Returns the size of the value change computed by the
              * <code>getNextValue</code>
@@ -219,7 +219,7 @@ declare namespace javax {
              * @see #setStepSize
              */
             // @ts-ignore
-            getStepSize(): java.lang.Number
+            public getStepSize(): java.lang.Number
             /**
              * Returns the next number in the sequence.
              * @return <code>value + stepSize</code> or <code>null</code> if the sum
@@ -229,7 +229,7 @@ declare namespace javax {
              * @see #setStepSize
              */
             // @ts-ignore
-            getNextValue(): java.lang.Object
+            public getNextValue(): any
             /**
              * Returns the previous number in the sequence.
              * @return <code>value - stepSize</code>, or
@@ -240,14 +240,14 @@ declare namespace javax {
              * @see #setStepSize
              */
             // @ts-ignore
-            getPreviousValue(): java.lang.Object
+            public getPreviousValue(): any
             /**
              * Returns the value of the current element of the sequence.
              * @return the value property
              * @see #setValue
              */
             // @ts-ignore
-            getNumber(): java.lang.Number
+            public getNumber(): java.lang.Number
             /**
              * Returns the value of the current element of the sequence.
              * @return the value property
@@ -255,7 +255,7 @@ declare namespace javax {
              * @see #getNumber
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Sets the current value for this sequence.  If <code>value</code> is
              * <code>null</code>, or not a <code>Number</code>, an
@@ -282,7 +282,7 @@ declare namespace javax {
              * @see SpinnerModel#addChangeListener
              */
             // @ts-ignore
-            setValue(value: any): void
+            public setValue(value: java.lang.Object | any): void
         }
     }
 }

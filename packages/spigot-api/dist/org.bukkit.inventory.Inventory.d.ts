@@ -20,13 +20,13 @@ declare namespace org {
                  * @return The size of the inventory
                  */
                 // @ts-ignore
-                getSize(): int
+                getSize(): number /*int*/
                 /**
                  * Returns the maximum stack size for an ItemStack in this inventory.
                  * @return The maximum size for an ItemStack in this inventory.
                  */
                 // @ts-ignore
-                getMaxStackSize(): int
+                getMaxStackSize(): number /*int*/
                 /**
                  * This method allows you to change the maximum stack size for an
                  * inventory.
@@ -82,7 +82,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if items or any element in it is null
                  */
                 // @ts-ignore
-                addItem(...items: org.bukkit.inventory.ItemStack[]): java.util.HashMap<java.lang.Integer, org.bukkit.inventory.ItemStack>
+                addItem(...items: org.bukkit.inventory.ItemStack[]): java.util.HashMap<java.lang.Integer | number, org.bukkit.inventory.ItemStack>
                 /**
                  * Removes the given ItemStacks from the inventory.
                  * <p>
@@ -102,7 +102,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if items is null
                  */
                 // @ts-ignore
-                removeItem(...items: org.bukkit.inventory.ItemStack[]): java.util.HashMap<java.lang.Integer, org.bukkit.inventory.ItemStack>
+                removeItem(...items: org.bukkit.inventory.ItemStack[]): java.util.HashMap<java.lang.Integer | number, org.bukkit.inventory.ItemStack>
                 /**
                  * Returns all ItemStacks from the inventory
                  * @return An array of ItemStacks from the inventory. Individual items may be null.
@@ -207,7 +207,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if material is null
                  */
                 // @ts-ignore
-                all(material: org.bukkit.Material): java.util.HashMap<java.lang.Integer, ? extends org.bukkit.inventory.ItemStack>
+                all(material: org.bukkit.Material): java.util.HashMap<java.lang.Integer | number, any>
                 /**
                  * Finds all slots in the inventory containing any ItemStacks with the
                  * given ItemStack. This will only match slots if both the type and the
@@ -220,7 +220,7 @@ declare namespace org {
                  * @return A map from slot indexes to item at index
                  */
                 // @ts-ignore
-                all(item: org.bukkit.inventory.ItemStack): java.util.HashMap<java.lang.Integer, ? extends org.bukkit.inventory.ItemStack>
+                all(item: org.bukkit.inventory.ItemStack): java.util.HashMap<java.lang.Integer | number, any>
                 /**
                  * Finds the first slot in the inventory containing an ItemStack with the
                  * given material
@@ -229,7 +229,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if material is null
                  */
                 // @ts-ignore
-                first(material: org.bukkit.Material): int
+                first(material: org.bukkit.Material): number /*int*/
                 /**
                  * Returns the first slot in the inventory containing an ItemStack with
                  * the given stack. This will only match a slot if both the type and the
@@ -238,13 +238,13 @@ declare namespace org {
                  * @return The slot index of the given ItemStack or -1 if not found
                  */
                 // @ts-ignore
-                first(item: org.bukkit.inventory.ItemStack): int
+                first(item: org.bukkit.inventory.ItemStack): number /*int*/
                 /**
                  * Returns the first empty Slot.
                  * @return The first empty Slot found, or -1 if no empty slots.
                  */
                 // @ts-ignore
-                firstEmpty(): int
+                firstEmpty(): number /*int*/
                 /**
                  * Removes all stacks in the inventory matching the given material.
                  * @param material The material to remove
@@ -283,7 +283,7 @@ declare namespace org {
                  * @return A list of HumanEntities who are viewing this Inventory.
                  */
                 // @ts-ignore
-                getViewers(): java.util.List<org.bukkit.entity.HumanEntity>
+                getViewers(): Array<org.bukkit.entity.HumanEntity>
                 /**
                  * Returns what type of inventory this is.
                  * @return The InventoryType representing the type of inventory.

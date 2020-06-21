@@ -32,7 +32,7 @@ declare namespace java {
              *           later retrieval by the {#link #getMessage()} method.
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs a new exception with the specified detail message and
              * cause.  <p>Note that the detail message associated with
@@ -47,7 +47,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Constructs a new exception with the specified cause and a detail
              * message of <tt>(cause==null ? null : cause.toString())</tt> (which
@@ -62,7 +62,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            constructor(cause: Error)
+            constructor(cause: java.lang.Throwable | Error)
             /**
              * Constructs a new exception with the specified detail message,
              * cause, suppression enabled or disabled, and writable stack
@@ -77,7 +77,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            constructor(message: string, cause: Error, enableSuppression: boolean, writableStackTrace: boolean)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error, enableSuppression: boolean, writableStackTrace: boolean)
         }
     }
 }

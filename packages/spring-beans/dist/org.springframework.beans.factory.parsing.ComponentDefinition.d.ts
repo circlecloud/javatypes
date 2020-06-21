@@ -60,14 +60,14 @@ declare namespace org {
                          * for this component in a given context.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                         /**
                          * Return a friendly description of the described component.
                          * <p>Implementations are encouraged to return the same value from
                          * {@code toString()}.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        getDescription(): string
                         /**
                          * Return the {@link BeanDefinition BeanDefinitions} that were registered
                          * to form this {@code ComponentDefinition}.

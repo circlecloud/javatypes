@@ -22,27 +22,27 @@ declare namespace org {
                          * Return the wrapped request.
                          */
                         // @ts-ignore
-                        getRequest(): org.springframework.http.HttpRequest
+                        public getRequest(): org.springframework.http.HttpRequest
                         /**
                          * Return the method of the wrapped request.
                          */
                         // @ts-ignore
-                        getMethod(): org.springframework.http.HttpMethod
+                        public getMethod(): org.springframework.http.HttpMethod
                         /**
                          * Return the method value of the wrapped request.
                          */
                         // @ts-ignore
-                        getMethodValue(): java.lang.String
+                        public getMethodValue(): string
                         /**
                          * Return the URI of the wrapped request.
                          */
                         // @ts-ignore
-                        getURI(): java.net.URI
+                        public getURI(): java.net.URI
                         /**
                          * Return the headers of the wrapped request.
                          */
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                     }
                 }
             }

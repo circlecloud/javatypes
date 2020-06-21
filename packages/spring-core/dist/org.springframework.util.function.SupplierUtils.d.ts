@@ -9,7 +9,7 @@ declare namespace org {
                  * @see SingletonSupplier
                  */
                 // @ts-ignore
-                class SupplierUtils extends java.lang.Object {
+                abstract class SupplierUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -19,7 +19,7 @@ declare namespace org {
                      * @return the supplier's result, or {#code null} if none
                      */
                     // @ts-ignore
-                    resolve<T>(supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): T
+                    public static resolve<T>(supplier: java.util.function$.Supplier<T>): T
                 }
             }
         }

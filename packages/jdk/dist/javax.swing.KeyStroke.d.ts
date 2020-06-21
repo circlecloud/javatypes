@@ -42,7 +42,7 @@ declare namespace javax {
              * @return a KeyStroke object for that key
              */
             // @ts-ignore
-            getKeyStroke(keyChar: string): javax.swing.KeyStroke
+            public static getKeyStroke(keyChar: string): javax.swing.KeyStroke
             /**
              * Returns an instance of a KeyStroke, specifying whether the key is
              * considered to be activated when it is pressed or released. Unlike all
@@ -55,7 +55,7 @@ declare namespace javax {
              * @deprecated use getKeyStroke(char)
              */
             // @ts-ignore
-            getKeyStroke(keyChar: string, onKeyRelease: boolean): javax.swing.KeyStroke
+            public static getKeyStroke(keyChar: string, onKeyRelease: boolean): javax.swing.KeyStroke
             /**
              * Returns a shared instance of a {@code KeyStroke}
              * that represents a {@code KEY_TYPED} event for the
@@ -90,7 +90,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getKeyStroke(keyChar: java.lang.Character, modifiers: number /*int*/): javax.swing.KeyStroke
+            public static getKeyStroke(keyChar: java.lang.Character, modifiers: number /*int*/): javax.swing.KeyStroke
             /**
              * Returns a shared instance of a KeyStroke, given a numeric key code and a
              * set of modifiers, specifying whether the key is activated when it is
@@ -131,7 +131,7 @@ declare namespace javax {
              * @see java.awt.event.InputEvent
              */
             // @ts-ignore
-            getKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/, onKeyRelease: boolean): javax.swing.KeyStroke
+            public static getKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/, onKeyRelease: boolean): javax.swing.KeyStroke
             /**
              * Returns a shared instance of a KeyStroke, given a numeric key code and a
              * set of modifiers. The returned KeyStroke will correspond to a key press.
@@ -169,7 +169,7 @@ declare namespace javax {
              * @see java.awt.event.InputEvent
              */
             // @ts-ignore
-            getKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/): javax.swing.KeyStroke
+            public static getKeyStroke(keyCode: number /*int*/, modifiers: number /*int*/): javax.swing.KeyStroke
             /**
              * Returns a KeyStroke which represents the stroke which generated a given
              * KeyEvent.
@@ -182,7 +182,7 @@ declare namespace javax {
              * @return the KeyStroke that precipitated the event
              */
             // @ts-ignore
-            getKeyStrokeForEvent(anEvent: java.awt.event.KeyEvent): javax.swing.KeyStroke
+            public static getKeyStrokeForEvent(anEvent: java.awt.event.KeyEvent): javax.swing.KeyStroke
             /**
              * Parses a string and returns a <code>KeyStroke</code>.
              * The string must have the following syntax:
@@ -211,7 +211,7 @@ declare namespace javax {
              * @see java.awt.event.KeyEvent
              */
             // @ts-ignore
-            getKeyStroke(s: string): javax.swing.KeyStroke
+            public static getKeyStroke(s: java.lang.String | string): javax.swing.KeyStroke
         }
     }
 }

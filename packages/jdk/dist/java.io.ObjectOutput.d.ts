@@ -20,7 +20,7 @@ declare namespace java {
              * @exception IOException Any of the usual Input/Output related exceptions.
              */
             // @ts-ignore
-            writeObject(obj: any): void
+            writeObject(obj: java.lang.Object | any): void
             /**
              * Writes a byte. This method will block until the byte is actually
              * written.

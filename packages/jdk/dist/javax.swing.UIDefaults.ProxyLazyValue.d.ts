@@ -22,7 +22,7 @@ declare namespace javax {
                  *              of the instance to be created on demand
                  */
                 // @ts-ignore
-                constructor(c: string)
+                constructor(c: java.lang.String | string)
                 /**
                  * Creates a <code>LazyValue</code> which will construct an instance
                  * when asked.
@@ -34,7 +34,7 @@ declare namespace javax {
                  *               method to be called on class c
                  */
                 // @ts-ignore
-                constructor(c: string, m: string)
+                constructor(c: java.lang.String | string, m: java.lang.String | string)
                 /**
                  * Creates a <code>LazyValue</code> which will construct an instance
                  * when asked.
@@ -44,7 +44,7 @@ declare namespace javax {
                  *               paramaters to the constructor in class c
                  */
                 // @ts-ignore
-                constructor(c: string, o: any[])
+                constructor(c: java.lang.String | string, o: java.lang.Object[] | any[])
                 /**
                  * Creates a <code>LazyValue</code> which will construct an instance
                  * when asked.
@@ -58,7 +58,7 @@ declare namespace javax {
                  *               paramaters to the static method in class c
                  */
                 // @ts-ignore
-                constructor(c: string, m: string, o: any[])
+                constructor(c: java.lang.String | string, m: java.lang.String | string, o: java.lang.Object[] | any[])
                 /**
                  * Creates the value retrieved from the <code>UIDefaults</code> table.
                  * The object is created each time it is accessed.
@@ -66,7 +66,7 @@ declare namespace javax {
                  * @return the created <code>Object</code>
                  */
                 // @ts-ignore
-                createValue(table: javax.swing.UIDefaults): java.lang.Object
+                public createValue(table: javax.swing.UIDefaults): any
             }
         }
     }

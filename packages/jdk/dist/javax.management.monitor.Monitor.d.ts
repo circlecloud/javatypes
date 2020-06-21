@@ -10,7 +10,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            class Monitor extends javax.management.NotificationBroadcasterSupport implements javax.management.monitor.MonitorMBean, javax.management.MBeanRegistration {
+            abstract class Monitor extends javax.management.NotificationBroadcasterSupport implements javax.management.monitor.MonitorMBean, javax.management.MBeanRegistration {
                 // @ts-ignore
                 constructor()
                 /**
@@ -19,7 +19,7 @@ declare namespace javax {
                  * their capacity.
                  */
                 // @ts-ignore
-                readonly capacityIncrement: number /*int*/
+                static readonly capacityIncrement: number /*int*/
                 /**
                  * The number of valid components in the vector of observed objects.
                  */
@@ -55,7 +55,7 @@ declare namespace javax {
                  * alreadyNotifieds} monitor attribute.
                  */
                 // @ts-ignore
-                readonly RESET_FLAGS_ALREADY_NOTIFIED: number /*int*/
+                static readonly RESET_FLAGS_ALREADY_NOTIFIED: number /*int*/
                 /**
                  * Flag denoting that a notification has occurred after changing
                  * the observed object.  This flag is used to check that the new
@@ -63,7 +63,7 @@ declare namespace javax {
                  * of the first notification.
                  */
                 // @ts-ignore
-                readonly OBSERVED_OBJECT_ERROR_NOTIFIED: number /*int*/
+                static readonly OBSERVED_OBJECT_ERROR_NOTIFIED: number /*int*/
                 /**
                  * Flag denoting that a notification has occurred after changing
                  * the observed attribute.  This flag is used to check that the
@@ -71,7 +71,7 @@ declare namespace javax {
                  * time of the first notification.
                  */
                 // @ts-ignore
-                readonly OBSERVED_ATTRIBUTE_ERROR_NOTIFIED: number /*int*/
+                static readonly OBSERVED_ATTRIBUTE_ERROR_NOTIFIED: number /*int*/
                 /**
                  * Flag denoting that a notification has occurred after changing
                  * the observed object or the observed attribute.  This flag is
@@ -80,7 +80,7 @@ declare namespace javax {
                  * notification.
                  */
                 // @ts-ignore
-                readonly OBSERVED_ATTRIBUTE_TYPE_ERROR_NOTIFIED: number /*int*/
+                static readonly OBSERVED_ATTRIBUTE_TYPE_ERROR_NOTIFIED: number /*int*/
                 /**
                  * Flag denoting that a notification has occurred after changing
                  * the observed object or the observed attribute.  This flag is
@@ -89,13 +89,13 @@ declare namespace javax {
                  * time of the first notification.
                  */
                 // @ts-ignore
-                readonly RUNTIME_ERROR_NOTIFIED: number /*int*/
+                static readonly RUNTIME_ERROR_NOTIFIED: number /*int*/
                 /**
                  * This field is retained for compatibility but should not be referenced.
                  * @deprecated No replacement.
                  */
                 // @ts-ignore
-                dbgTag: string
+                dbgTag: java.lang.String | string
                 /**
                  * Allows the monitor MBean to perform any operations it needs
                  * before being registered in the MBean server.
@@ -108,7 +108,7 @@ declare namespace javax {
                  * @exception Exception
                  */
                 // @ts-ignore
-                preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
+                public preRegister(server: javax.management.MBeanServer, name: javax.management.ObjectName): javax.management.ObjectName
                 /**
                  * Allows the monitor MBean to perform any operations needed after
                  * having been registered in the MBean server or after the
@@ -117,7 +117,7 @@ declare namespace javax {
                  * Not used in this context.
                  */
                 // @ts-ignore
-                postRegister(registrationDone: java.lang.Boolean): void
+                public postRegister(registrationDone: java.lang.Boolean): void
                 /**
                  * Allows the monitor MBean to perform any operations it needs
                  * before being unregistered by the MBean server.
@@ -126,7 +126,7 @@ declare namespace javax {
                  * @exception Exception
                  */
                 // @ts-ignore
-                preDeregister(): void
+                public preDeregister(): void
                 /**
                  * Allows the monitor MBean to perform any operations needed after
                  * having been unregistered by the MBean server.
@@ -134,17 +134,17 @@ declare namespace javax {
                  * Not used in this context.
                  */
                 // @ts-ignore
-                postDeregister(): void
+                public postDeregister(): void
                 /**
                  * Starts the monitor.
                  */
                 // @ts-ignore
-                abstract start(): void
+                public abstract start(): void
                 /**
                  * Stops the monitor.
                  */
                 // @ts-ignore
-                abstract stop(): void
+                public abstract stop(): void
                 /**
                  * Returns the object name of the first object in the set of observed
                  * MBeans, or <code>null</code> if there is no such object.
@@ -153,7 +153,7 @@ declare namespace javax {
                  * @deprecated As of JMX 1.2, replaced by {#link #getObservedObjects}
                  */
                 // @ts-ignore
-                getObservedObject(): javax.management.ObjectName
+                public getObservedObject(): javax.management.ObjectName
                 /**
                  * Removes all objects from the set of observed objects, and then adds the
                  * specified object.
@@ -164,7 +164,7 @@ declare namespace javax {
                  * @deprecated As of JMX 1.2, replaced by {#link #addObservedObject}
                  */
                 // @ts-ignore
-                setObservedObject(object: javax.management.ObjectName): void
+                public setObservedObject(object: javax.management.ObjectName): void
                 /**
                  * Adds the specified object in the set of observed MBeans, if this object
                  * is not already present.
@@ -172,13 +172,13 @@ declare namespace javax {
                  * @exception IllegalArgumentException The specified object is null.
                  */
                 // @ts-ignore
-                addObservedObject(object: javax.management.ObjectName): void
+                public addObservedObject(object: javax.management.ObjectName): void
                 /**
                  * Removes the specified object from the set of observed MBeans.
                  * @param object The object to remove.
                  */
                 // @ts-ignore
-                removeObservedObject(object: javax.management.ObjectName): void
+                public removeObservedObject(object: javax.management.ObjectName): void
                 /**
                  * Tests whether the specified object is in the set of observed MBeans.
                  * @param object The object to check.
@@ -186,13 +186,13 @@ declare namespace javax {
                  *  <CODE>false</CODE> otherwise.
                  */
                 // @ts-ignore
-                containsObservedObject(object: javax.management.ObjectName): boolean
+                public containsObservedObject(object: javax.management.ObjectName): boolean
                 /**
                  * Returns an array containing the objects being observed.
                  * @return The objects being observed.
                  */
                 // @ts-ignore
-                getObservedObjects(): javax.management.ObjectName[]
+                public getObservedObjects(): javax.management.ObjectName[]
                 /**
                  * Gets the attribute being observed.
                  * <BR>The observed attribute is not initialized by default (set to null).
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @see #setObservedAttribute
                  */
                 // @ts-ignore
-                getObservedAttribute(): java.lang.String
+                public getObservedAttribute(): string
                 /**
                  * Sets the attribute to observe.
                  * <BR>The observed attribute is not initialized by default (set to null).
@@ -210,7 +210,7 @@ declare namespace javax {
                  * @see #getObservedAttribute
                  */
                 // @ts-ignore
-                setObservedAttribute(attribute: string): void
+                public setObservedAttribute(attribute: java.lang.String | string): void
                 /**
                  * Gets the granularity period (in milliseconds).
                  * <BR>The default value of the granularity period is 10 seconds.
@@ -218,7 +218,7 @@ declare namespace javax {
                  * @see #setGranularityPeriod
                  */
                 // @ts-ignore
-                getGranularityPeriod(): long
+                public getGranularityPeriod(): number /*long*/
                 /**
                  * Sets the granularity period (in milliseconds).
                  * <BR>The default value of the granularity period is 10 seconds.
@@ -228,7 +228,7 @@ declare namespace javax {
                  * @see #getGranularityPeriod
                  */
                 // @ts-ignore
-                setGranularityPeriod(period: number /*long*/): void
+                public setGranularityPeriod(period: number /*long*/): void
                 /**
                  * Tests whether the monitor MBean is active.  A monitor MBean is
                  * marked active when the {@link #start start} method is called.
@@ -238,7 +238,7 @@ declare namespace javax {
                  *  <CODE>false</CODE> otherwise.
                  */
                 // @ts-ignore
-                isActive(): boolean
+                public isActive(): boolean
             }
         }
     }

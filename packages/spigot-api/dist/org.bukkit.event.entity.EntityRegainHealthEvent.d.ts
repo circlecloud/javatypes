@@ -14,28 +14,28 @@ declare namespace org {
                      * @return The amount of health regained
                      */
                     // @ts-ignore
-                    getAmount(): double
+                    public getAmount(): number /*double*/
                     /**
                      * Sets the amount of regained health
                      * @param amount the amount of health the entity will regain
                      */
                     // @ts-ignore
-                    setAmount(amount: number /*double*/): void
+                    public setAmount(amount: number /*double*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the reason for why the entity is regaining health
                      * @return A RegainReason detailing the reason for the entity regaining
                      *      health
                      */
                     // @ts-ignore
-                    getRegainReason(): org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason
+                    public getRegainReason(): org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

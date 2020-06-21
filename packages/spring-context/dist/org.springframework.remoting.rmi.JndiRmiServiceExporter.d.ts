@@ -44,40 +44,40 @@ declare namespace org {
                      * @see #setJndiEnvironment
                      */
                     // @ts-ignore
-                    setJndiTemplate(jndiTemplate: org.springframework.jndi.JndiTemplate): void
+                    public setJndiTemplate(jndiTemplate: org.springframework.jndi.JndiTemplate): void
                     /**
                      * Set the JNDI environment to use for JNDI lookups.
                      * Creates a JndiTemplate with the given environment settings.
                      * @see #setJndiTemplate
                      */
                     // @ts-ignore
-                    setJndiEnvironment(jndiEnvironment: java.util.Properties): void
+                    public setJndiEnvironment(jndiEnvironment: java.util.Properties): void
                     /**
                      * Set the JNDI name of the exported RMI service.
                      */
                     // @ts-ignore
-                    setJndiName(jndiName: string): void
+                    public setJndiName(jndiName: java.lang.String | string): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Initialize this service exporter, binding the specified service to JNDI.
                      * @throws NamingException if service binding failed
                      * @throws RemoteException if service export failed
                      */
                     // @ts-ignore
-                    prepare(): void
+                    public prepare(): void
                     /**
                      * Rebind the specified service to JNDI, for recovering in case
                      * of the target registry having been restarted.
                      * @throws NamingException if service binding failed
                      */
                     // @ts-ignore
-                    rebind(): void
+                    public rebind(): void
                     /**
                      * Unbind the RMI service from JNDI on bean factory shutdown.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

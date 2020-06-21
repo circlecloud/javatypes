@@ -15,7 +15,7 @@ declare namespace org {
                              * @return This builder
                              */
                             // @ts-ignore
-                            name(name: string): org.spongepowered.api.scoreboard.objective.Objective.Builder
+                            name(name: java.lang.String | string): org.spongepowered.api.scoreboard.objective.Objective.Builder
                             /**
                              * Sets the display name of the {@link Objective}.
                              * @param displayName The display name to set

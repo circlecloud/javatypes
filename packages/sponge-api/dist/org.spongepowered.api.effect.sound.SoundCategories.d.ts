@@ -6,25 +6,25 @@ declare namespace org {
                     // @ts-ignore
                     class SoundCategories extends java.lang.Object {
                         // @ts-ignore
-                        readonly AMBIENT: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly AMBIENT: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly BLOCK: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly BLOCK: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly HOSTILE: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly HOSTILE: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly MASTER: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly MASTER: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly MUSIC: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly MUSIC: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly NEUTRAL: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly NEUTRAL: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly PLAYER: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly PLAYER: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly RECORD: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly RECORD: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly VOICE: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly VOICE: org.spongepowered.api.effect.sound.SoundCategory
                         // @ts-ignore
-                        readonly WEATHER: org.spongepowered.api.effect.sound.SoundCategory
+                        public static readonly WEATHER: org.spongepowered.api.effect.sound.SoundCategory
                     }
                 }
             }

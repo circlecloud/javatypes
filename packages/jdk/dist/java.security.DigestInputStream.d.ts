@@ -43,14 +43,14 @@ declare namespace java {
              * @see #setMessageDigest(java.security.MessageDigest)
              */
             // @ts-ignore
-            getMessageDigest(): java.security.MessageDigest
+            public getMessageDigest(): java.security.MessageDigest
             /**
              * Associates the specified message digest with this stream.
              * @param digest the message digest to be associated with this stream.
              * @see #getMessageDigest()
              */
             // @ts-ignore
-            setMessageDigest(digest: java.security.MessageDigest): void
+            public setMessageDigest(digest: java.security.MessageDigest): void
             /**
              * Reads a byte, and updates the message digest (if the digest
              * function is on).  That is, this method reads a byte from the
@@ -63,7 +63,7 @@ declare namespace java {
              * @see MessageDigest#update(byte)
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads into a byte array, and updates the message digest (if the
              * digest function is on).  That is, this method reads up to
@@ -88,7 +88,7 @@ declare namespace java {
              * @see MessageDigest#update(byte[], int, int)
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Turns the digest function on or off. The default is on.  When
              * it is on, a call to one of the {@code read} methods results in an
@@ -98,13 +98,13 @@ declare namespace java {
              *  it off.
              */
             // @ts-ignore
-            on(on: boolean): void
+            public on(on: boolean): void
             /**
              * Prints a string representation of this digest input stream and
              * its associated message digest object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

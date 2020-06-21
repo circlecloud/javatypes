@@ -8,11 +8,11 @@ declare namespace org {
              * @since 4.1
              */
             // @ts-ignore
-            class ExceptionTypeFilter extends org.springframework.util.InstanceFilter<java.lang.Class<? extends java.lang.Throwable>> {
+            class ExceptionTypeFilter extends org.springframework.util.InstanceFilter<java.lang.Class<any>> {
                 // @ts-ignore
-                constructor(includes: Array<java.lang.Class<java.lang.Throwable>>, excludes: Array<java.lang.Class<java.lang.Throwable>>, matchIfEmpty: boolean)
+                constructor(includes: java.util.Collection<any> | Array<any>, excludes: java.util.Collection<any> | Array<any>, matchIfEmpty: boolean)
                 // @ts-ignore
-                match(instance: java.lang.Class<java.lang.Throwable>, candidate: java.lang.Class<java.lang.Throwable>): boolean
+                match(instance: java.lang.Class<any>, candidate: java.lang.Class<any>): boolean
             }
         }
     }

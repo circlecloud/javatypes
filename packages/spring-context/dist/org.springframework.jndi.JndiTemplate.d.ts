@@ -28,12 +28,12 @@ declare namespace org {
                  * Set the environment for the JNDI InitialContext.
                  */
                 // @ts-ignore
-                setEnvironment(environment: java.util.Properties): void
+                public setEnvironment(environment: java.util.Properties): void
                 /**
                  * Return the environment for the JNDI InitialContext, if any.
                  */
                 // @ts-ignore
-                getEnvironment(): java.util.Properties
+                public getEnvironment(): java.util.Properties
                 /**
                  * Execute the given JNDI context callback implementation.
                  * @param contextCallback the JndiCallback implementation to use
@@ -42,7 +42,7 @@ declare namespace org {
                  * @see #createInitialContext
                  */
                 // @ts-ignore
-                execute<T>(contextCallback: org.springframework.jndi.JndiCallback<T>): T
+                public execute<T>(contextCallback: org.springframework.jndi.JndiCallback<T>): T
                 /**
                  * Obtain a JNDI context corresponding to this template's configuration.
                  * Called by {@link #execute}; may also be called directly.
@@ -52,14 +52,14 @@ declare namespace org {
                  * @see #releaseContext
                  */
                 // @ts-ignore
-                getContext(): javax.naming.Context
+                public getContext(): javax.naming.Context
                 /**
                  * Release a JNDI context as obtained from {@link #getContext()}.
                  * @param ctx the JNDI context to release (may be {#code null})
                  * @see #getContext
                  */
                 // @ts-ignore
-                releaseContext(ctx: javax.naming.Context): void
+                public releaseContext(ctx: javax.naming.Context): void
                 /**
                  * Create a new JNDI initial context. Invoked by {@link #getContext}.
                  * <p>The default implementation use this template's environment settings.
@@ -78,7 +78,7 @@ declare namespace org {
                  *  name bound to JNDI
                  */
                 // @ts-ignore
-                lookup(name: string): java.lang.Object
+                public lookup(name: java.lang.String | string): any
                 /**
                  * Look up the object with the given name in the current JNDI context.
                  * @param name the JNDI name of the object
@@ -92,7 +92,7 @@ declare namespace org {
                  *  name bound to JNDI
                  */
                 // @ts-ignore
-                lookup<T>(name: string, requiredType: java.lang.Class<T>): T
+                public lookup<T>(name: java.lang.String | string, requiredType: java.lang.Class<T>): T
                 /**
                  * Bind the given object to the current JNDI context, using the given name.
                  * @param name the JNDI name of the object
@@ -100,7 +100,7 @@ declare namespace org {
                  * @throws NamingException thrown by JNDI, mostly name already bound
                  */
                 // @ts-ignore
-                bind(name: string, object: any): void
+                public bind(name: java.lang.String | string, object: java.lang.Object | any): void
                 /**
                  * Rebind the given object to the current JNDI context, using the given name.
                  * Overwrites any existing binding.
@@ -109,14 +109,14 @@ declare namespace org {
                  * @throws NamingException thrown by JNDI
                  */
                 // @ts-ignore
-                rebind(name: string, object: any): void
+                public rebind(name: java.lang.String | string, object: java.lang.Object | any): void
                 /**
                  * Remove the binding for the given name from the current JNDI context.
                  * @param name the JNDI name of the object
                  * @throws NamingException thrown by JNDI, mostly name not found
                  */
                 // @ts-ignore
-                unbind(name: string): void
+                public unbind(name: java.lang.String | string): void
             }
         }
     }

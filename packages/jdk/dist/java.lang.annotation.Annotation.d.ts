@@ -48,7 +48,7 @@ declare namespace java {
                  *      that is logically equivalent to this one, otherwise false
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code of this annotation, as defined below:
                  * <p>The hash code of an annotation is the sum of the hash codes
@@ -78,7 +78,7 @@ declare namespace java {
                  * @return the hash code of this annotation
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this annotation.  The details
                  * of the representation are implementation-dependent, but the following
@@ -89,13 +89,13 @@ declare namespace java {
                  * @return a string representation of this annotation
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
                 /**
                  * Returns the annotation type of this annotation.
                  * @return the annotation type of this annotation
                  */
                 // @ts-ignore
-                annotationType(): java.lang.Class<? extends java.lang.annotation.Annotation>
+                annotationType(): java.lang.Class<any>
             }
         }
     }

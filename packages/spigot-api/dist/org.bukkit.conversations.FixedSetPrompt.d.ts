@@ -6,7 +6,7 @@ declare namespace org {
              * response from the user.
              */
             // @ts-ignore
-            class FixedSetPrompt extends org.bukkit.conversations.ValidatingPrompt {
+            abstract class FixedSetPrompt extends org.bukkit.conversations.ValidatingPrompt {
                 /**
                  * Creates a FixedSetPrompt from a set of strings.
                  * <p>
@@ -15,11 +15,11 @@ declare namespace org {
                  *      type.
                  */
                 // @ts-ignore
-                constructor(...fixedSet: string[])
+                constructor(...fixedSet: java.lang.String[] | string[])
                 // @ts-ignore
-                fixedSet: Array<java.lang.String>
+                fixedSet: java.util.List<java.lang.String | string> | Array<java.lang.String | string>
                 // @ts-ignore
-                isInputValid(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                isInputValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 /**
                  * Utility function to create a formatted string containing all the
                  * options declared in the constructor.
@@ -27,7 +27,7 @@ declare namespace org {
                  *      cheese, and panda were the options used
                  */
                 // @ts-ignore
-                formatFixedSet(): java.lang.String
+                formatFixedSet(): string
             }
         }
     }

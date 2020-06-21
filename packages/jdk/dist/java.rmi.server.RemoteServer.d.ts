@@ -12,7 +12,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            class RemoteServer extends java.rmi.server.RemoteObject {
+            abstract class RemoteServer extends java.rmi.server.RemoteObject {
                 /**
                  * Constructs a <code>RemoteServer</code>.
                  * @since JDK1.1
@@ -35,7 +35,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getClientHost(): java.lang.String
+                public static getClientHost(): string
                 /**
                  * Log RMI calls to the output stream <code>out</code>. If
                  * <code>out</code> is <code>null</code>, call logging is turned off.
@@ -51,7 +51,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                setLog(out: java.io.OutputStream): void
+                public static setLog(out: java.io.OutputStream): void
                 /**
                  * Returns stream for the RMI call log.
                  * @return the call log
@@ -59,7 +59,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getLog(): java.io.PrintStream
+                public static getLog(): java.io.PrintStream
             }
         }
     }

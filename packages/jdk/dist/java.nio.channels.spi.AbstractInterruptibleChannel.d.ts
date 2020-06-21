@@ -42,7 +42,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class AbstractInterruptibleChannel extends java.lang.Object implements java.nio.channels.Channel, java.nio.channels.InterruptibleChannel {
+                abstract class AbstractInterruptibleChannel extends java.lang.Object implements java.nio.channels.Channel, java.nio.channels.InterruptibleChannel {
                     /**
                      * Initializes a new instance of this class.
                      */
@@ -58,7 +58,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     /**
                      * Closes this channel.
                      * <p> This method is invoked by the {@link #close close} method in order
@@ -75,7 +75,7 @@ declare namespace java {
                     // @ts-ignore
                     abstract implCloseChannel(): void
                     // @ts-ignore
-                    isOpen(): boolean
+                    public isOpen(): boolean
                     /**
                      * Marks the beginning of an I/O operation that might block indefinitely.
                      * <p> This method should be invoked in tandem with the {@link #end end}

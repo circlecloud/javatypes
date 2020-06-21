@@ -70,7 +70,7 @@ declare namespace java {
                  * @param pcl the <code>PropertyChangeListener</code> to add
                  */
                 // @ts-ignore
-                addPropertyChangeListener(name: string, pcl: java.beans.PropertyChangeListener): void
+                addPropertyChangeListener(name: java.lang.String | string, pcl: java.beans.PropertyChangeListener): void
                 /**
                  * Removes a <code>PropertyChangeListener</code> from this
                  * <code>BeanContextChild</code>  so that it no longer
@@ -80,7 +80,7 @@ declare namespace java {
                  * @param pcl the <code>PropertyChangeListener</code> to remove
                  */
                 // @ts-ignore
-                removePropertyChangeListener(name: string, pcl: java.beans.PropertyChangeListener): void
+                removePropertyChangeListener(name: java.lang.String | string, pcl: java.beans.PropertyChangeListener): void
                 /**
                  * Adds a <code>VetoableChangeListener</code> to
                  * this <code>BeanContextChild</code>
@@ -89,7 +89,7 @@ declare namespace java {
                  * @param vcl the <code>VetoableChangeListener</code> to add
                  */
                 // @ts-ignore
-                addVetoableChangeListener(name: string, vcl: java.beans.VetoableChangeListener): void
+                addVetoableChangeListener(name: java.lang.String | string, vcl: java.beans.VetoableChangeListener): void
                 /**
                  * Removes a <code>VetoableChangeListener</code> from this
                  * <code>BeanContextChild</code> so that it no longer receives
@@ -98,7 +98,7 @@ declare namespace java {
                  * @param vcl the <code>VetoableChangeListener</code> to remove.
                  */
                 // @ts-ignore
-                removeVetoableChangeListener(name: string, vcl: java.beans.VetoableChangeListener): void
+                removeVetoableChangeListener(name: java.lang.String | string, vcl: java.beans.VetoableChangeListener): void
             }
         }
     }

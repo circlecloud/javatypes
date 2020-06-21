@@ -33,7 +33,7 @@ declare namespace org {
                      * @see #DEFAULT_OBJECT_NAME
                      */
                     // @ts-ignore
-                    constructor(target: any)
+                    constructor(target: java.lang.Object | any)
                     /**
                      * Create a new WebDataBinder instance.
                      * @param target the target object to bind onto (or {#code null}
@@ -41,7 +41,7 @@ declare namespace org {
                      * @param objectName the name of the target object
                      */
                     // @ts-ignore
-                    constructor(target: any, objectName: string)
+                    constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                     /**
                      * Default prefix that field marker parameters start with, followed by the field
                      * name: e.g. "_subscribeToNewsletter" for a field "subscribeToNewsletter".
@@ -53,7 +53,7 @@ declare namespace org {
                      * @see #setFieldMarkerPrefix
                      */
                     // @ts-ignore
-                    readonly DEFAULT_FIELD_MARKER_PREFIX: string
+                    public static readonly DEFAULT_FIELD_MARKER_PREFIX: java.lang.String | string
                     /**
                      * Default prefix that field default parameters start with, followed by the field
                      * name: e.g. "!subscribeToNewsletter" for a field "subscribeToNewsletter".
@@ -62,7 +62,7 @@ declare namespace org {
                      * @see #setFieldDefaultPrefix
                      */
                     // @ts-ignore
-                    readonly DEFAULT_FIELD_DEFAULT_PREFIX: string
+                    public static readonly DEFAULT_FIELD_DEFAULT_PREFIX: java.lang.String | string
                     /**
                      * Specify a prefix that can be used for parameters that mark potentially
                      * empty fields, having "prefix + field" as name. Such a marker parameter is
@@ -85,12 +85,12 @@ declare namespace org {
                      * @see #DEFAULT_FIELD_MARKER_PREFIX
                      */
                     // @ts-ignore
-                    setFieldMarkerPrefix(fieldMarkerPrefix: string): void
+                    public setFieldMarkerPrefix(fieldMarkerPrefix: java.lang.String | string): void
                     /**
                      * Return the prefix for parameters that mark potentially empty fields.
                      */
                     // @ts-ignore
-                    getFieldMarkerPrefix(): java.lang.String
+                    public getFieldMarkerPrefix(): string
                     /**
                      * Specify a prefix that can be used for parameters that indicate default
                      * value fields, having "prefix + field" as name. The value of the default
@@ -106,12 +106,12 @@ declare namespace org {
                      * @see #DEFAULT_FIELD_DEFAULT_PREFIX
                      */
                     // @ts-ignore
-                    setFieldDefaultPrefix(fieldDefaultPrefix: string): void
+                    public setFieldDefaultPrefix(fieldDefaultPrefix: java.lang.String | string): void
                     /**
                      * Return the prefix for parameters that mark default fields.
                      */
                     // @ts-ignore
-                    getFieldDefaultPrefix(): java.lang.String
+                    public getFieldDefaultPrefix(): string
                     /**
                      * Set whether to bind empty MultipartFile parameters. Default is "true".
                      * <p>Turn this off if you want to keep an already bound MultipartFile
@@ -121,12 +121,12 @@ declare namespace org {
                      * @see org.springframework.web.multipart.MultipartFile
                      */
                     // @ts-ignore
-                    setBindEmptyMultipartFiles(bindEmptyMultipartFiles: boolean): void
+                    public setBindEmptyMultipartFiles(bindEmptyMultipartFiles: boolean): void
                     /**
                      * Return whether to bind empty MultipartFile parameters.
                      */
                     // @ts-ignore
-                    isBindEmptyMultipartFiles(): boolean
+                    public isBindEmptyMultipartFiles(): boolean
                     /**
                      * This implementation performs a field default and marker check
                      * before delegating to the superclass binding process.
@@ -167,7 +167,7 @@ declare namespace org {
                      * @return the empty value (for most fields: {#code null})
                      */
                     // @ts-ignore
-                    getEmptyValue(field: string, fieldType: java.lang.Class<any>): java.lang.Object
+                    getEmptyValue(field: java.lang.String | string, fieldType: java.lang.Class<any>): any
                     /**
                      * Determine an empty value for the specified field.
                      * <p>The default implementation returns:
@@ -183,7 +183,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    getEmptyValue(fieldType: java.lang.Class<any>): java.lang.Object
+                    public getEmptyValue(fieldType: java.lang.Class<any>): any
                     /**
                      * Bind all multipart files contained in the given request, if any
                      * (in case of a multipart request). To be called by subclasses.
@@ -195,7 +195,7 @@ declare namespace org {
                      * @see #setBindEmptyMultipartFiles
                      */
                     // @ts-ignore
-                    bindMultipart(multipartFiles: java.util.Map<java.lang.String, java.util.List<org.springframework.web.multipart.MultipartFile>>, mpvs: MutablePropertyValues): void
+                    bindMultipart(multipartFiles: java.util.Map<java.lang.String | string, java.util.List<org.springframework.web.multipart.MultipartFile> | Array<org.springframework.web.multipart.MultipartFile>>, mpvs: MutablePropertyValues): void
                 }
             }
         }

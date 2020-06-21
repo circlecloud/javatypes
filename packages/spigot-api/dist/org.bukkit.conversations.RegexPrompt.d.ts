@@ -6,13 +6,13 @@ declare namespace org {
              * validated by a regular expression.
              */
             // @ts-ignore
-            class RegexPrompt extends org.bukkit.conversations.ValidatingPrompt {
+            abstract class RegexPrompt extends org.bukkit.conversations.ValidatingPrompt {
                 // @ts-ignore
-                constructor(regex: string)
+                constructor(regex: java.lang.String | string)
                 // @ts-ignore
                 constructor(pattern: java.util.regex.Pattern)
                 // @ts-ignore
-                isInputValid(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                isInputValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
             }
         }
     }

@@ -31,7 +31,7 @@ declare namespace org {
                              * @return Fluent pattern
                              */
                             // @ts-ignore
-                            property(property: org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String, any>): org.spongepowered.api.item.inventory.InventoryArchetype.Builder
+                            property(property: org.spongepowered.api.item.inventory.InventoryProperty<java.lang.String | string, any>): org.spongepowered.api.item.inventory.InventoryArchetype.Builder
                             /**
                              * Adds an {@link InventoryArchetype} to this Archetype.
                              * @param archetype The Archetype to add
@@ -51,7 +51,7 @@ declare namespace org {
                              * @return The registered InventoryArchetype
                              */
                             // @ts-ignore
-                            build(id: string, name: string): org.spongepowered.api.item.inventory.InventoryArchetype
+                            build(id: java.lang.String | string, name: java.lang.String | string): org.spongepowered.api.item.inventory.InventoryArchetype
                         }
                     }
                 }

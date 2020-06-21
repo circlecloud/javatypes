@@ -14,9 +14,9 @@ declare namespace org {
                                          * @param builder The builder providing the information
                                          */
                                         // @ts-ignore
-                                        constructor(builder: org.spongepowered.api.event.cause.entity.health.source.common.AbstractEntityHealingSourceBuilder<any, ?>)
+                                        constructor(builder: org.spongepowered.api.event.cause.entity.health.source.common.AbstractEntityHealingSourceBuilder<any, any>)
                                         // @ts-ignore
-                                        getSource(): org.spongepowered.api.entity.Entity
+                                        public getSource(): org.spongepowered.api.entity.Entity
                                     }
                                 }
                             }

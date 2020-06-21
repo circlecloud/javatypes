@@ -41,7 +41,7 @@ declare namespace java {
                  * @return the number of bytes committed to memory.
                  */
                 // @ts-ignore
-                getCommitted(): long
+                public getCommitted(): number /*long*/
                 /**
                  * Returns the initial amount of memory requested from the underlying
                  * operating system when the virtual machine started up. The value is given
@@ -54,7 +54,7 @@ declare namespace java {
                  *          up. <code>-1</code> if not defined.
                  */
                 // @ts-ignore
-                getInit(): long
+                public getInit(): number /*long*/
                 /**
                  * Returns the maximum amount of memory that is available to the virtual
                  * machine which may change over the lifecycle of the virtual machine. The
@@ -63,20 +63,20 @@ declare namespace java {
                  *          <code>-1</code>.
                  */
                 // @ts-ignore
-                getMax(): long
+                public getMax(): number /*long*/
                 /**
                  * Returns the number of bytes currently used for memory management
                  * purposes.
                  * @return the current number of bytes used for memory.
                  */
                 // @ts-ignore
-                getUsed(): long
+                public getUsed(): number /*long*/
                 /**
                  * Returns a text description of this memory usage.
                  * @return a text description of this memory usage.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Receives a {@link CompositeData} representing a <code>MemoryUsage</code>
                  * object and attempts to return the root <code>MemoryUsage</code>
@@ -99,17 +99,17 @@ declare namespace java {
                  *              </ul>
                  */
                 // @ts-ignore
-                from(cd: javax.management.openmbean.CompositeData): java.lang.management.MemoryUsage
+                public static from(cd: javax.management.openmbean.CompositeData): java.lang.management.MemoryUsage
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

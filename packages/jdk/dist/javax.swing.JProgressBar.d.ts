@@ -187,7 +187,7 @@ declare namespace javax {
              * @see #setStringPainted
              */
             // @ts-ignore
-            progressString: string
+            progressString: java.lang.String | string
             /**
              * Whether to display a string of text on the progress bar.
              * The default is <code>false</code>.
@@ -230,7 +230,7 @@ declare namespace javax {
              * @see #setOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Sets the progress bar's orientation to <code>newOrientation</code>,
              * which must be {@code SwingConstants.VERTICAL} or
@@ -246,7 +246,7 @@ declare namespace javax {
              *   description: Set the progress bar's orientation.
              */
             // @ts-ignore
-            setOrientation(newOrientation: number /*int*/): void
+            public setOrientation(newOrientation: number /*int*/): void
             /**
              * Returns the value of the <code>stringPainted</code> property.
              * @return the value of the <code>stringPainted</code> property
@@ -254,7 +254,7 @@ declare namespace javax {
              * @see #setString
              */
             // @ts-ignore
-            isStringPainted(): boolean
+            public isStringPainted(): boolean
             /**
              * Sets the value of the <code>stringPainted</code> property,
              * which determines whether the progress bar
@@ -271,7 +271,7 @@ declare namespace javax {
              *   description: Whether the progress bar should render a string.
              */
             // @ts-ignore
-            setStringPainted(b: boolean): void
+            public setStringPainted(b: boolean): void
             /**
              * Returns a {@code String} representation of the current progress.
              * By default, this returns a simple percentage {@code String} based on
@@ -282,7 +282,7 @@ declare namespace javax {
              * @see #setString
              */
             // @ts-ignore
-            getString(): java.lang.String
+            public getString(): string
             /**
              * Sets the value of the progress string. By default,
              * this string is <code>null</code>, implying the built-in behavior of
@@ -301,14 +301,14 @@ declare namespace javax {
              *   description: Specifies the progress string to paint
              */
             // @ts-ignore
-            setString(s: string): void
+            public setString(s: java.lang.String | string): void
             /**
              * Returns the percent complete for the progress bar.
              * Note that this number is between 0.0 and 1.0.
              * @return the percent complete for this progress bar
              */
             // @ts-ignore
-            getPercentComplete(): double
+            public getPercentComplete(): number /*double*/
             /**
              * Returns the <code>borderPainted</code> property.
              * @return the value of the <code>borderPainted</code> property
@@ -316,7 +316,7 @@ declare namespace javax {
              * @beaninfo description: Does the progress bar paint its border
              */
             // @ts-ignore
-            isBorderPainted(): boolean
+            public isBorderPainted(): boolean
             /**
              * Sets the <code>borderPainted</code> property, which is
              * <code>true</code> if the progress bar should paint its border.
@@ -332,7 +332,7 @@ declare namespace javax {
              *   description: Whether the progress bar should paint its border.
              */
             // @ts-ignore
-            setBorderPainted(b: boolean): void
+            public setBorderPainted(b: boolean): void
             /**
              * Paints the progress bar's border if the <code>borderPainted</code>
              * property is <code>true</code>.
@@ -349,7 +349,7 @@ declare namespace javax {
              * @return the <code>ProgressBarUI</code> object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ProgressBarUI
+            public getUI(): javax.swing.plaf.ProgressBarUI
             /**
              * Sets the look-and-feel object that renders this component.
              * @param ui  a <code>ProgressBarUI</code> object
@@ -360,13 +360,13 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ProgressBarUI): void
+            public setUI(ui: javax.swing.plaf.ProgressBarUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the look-and-feel class that renders this component.
              * @return the string "ProgressBarUI"
@@ -376,7 +376,7 @@ declare namespace javax {
              *    description: A string that specifies the name of the look-and-feel class.
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Subclasses that want to handle change events
              * from the model differently
@@ -398,13 +398,13 @@ declare namespace javax {
              * @param l the <code>ChangeListener</code> to add
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a <code>ChangeListener</code> from the progress bar.
              * @param l the <code>ChangeListener</code> to remove
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this progress bar with <code>addChangeListener</code>.
@@ -413,7 +413,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Send a {@code ChangeEvent}, whose source is this {@code JProgressBar}, to
              * all {@code ChangeListener}s that have registered interest in
@@ -435,7 +435,7 @@ declare namespace javax {
              * @see BoundedRangeModel
              */
             // @ts-ignore
-            getModel(): javax.swing.BoundedRangeModel
+            public getModel(): javax.swing.BoundedRangeModel
             /**
              * Sets the data model used by the <code>JProgressBar</code>.
              * Note that the {@code BoundedRangeModel}'s {@code extent} is not used,
@@ -445,7 +445,7 @@ declare namespace javax {
              *  description: The data model used by the JProgressBar.
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.BoundedRangeModel): void
+            public setModel(newModel: javax.swing.BoundedRangeModel): void
             /**
              * Returns the progress bar's current {@code value}
              * from the <code>BoundedRangeModel</code>.
@@ -456,7 +456,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getValue
              */
             // @ts-ignore
-            getValue(): int
+            public getValue(): number /*int*/
             /**
              * Returns the progress bar's {@code minimum} value
              * from the <code>BoundedRangeModel</code>.
@@ -465,7 +465,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getMinimum
              */
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * Returns the progress bar's {@code maximum} value
              * from the <code>BoundedRangeModel</code>.
@@ -474,7 +474,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getMaximum
              */
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             /**
              * Sets the progress bar's current value to {@code n}.  This method
              * forwards the new value to the model.
@@ -494,7 +494,7 @@ declare namespace javax {
              *   description: The progress bar's current value.
              */
             // @ts-ignore
-            setValue(n: number /*int*/): void
+            public setValue(n: number /*int*/): void
             /**
              * Sets the progress bar's minimum value
              * (stored in the progress bar's data model) to <code>n</code>.
@@ -514,7 +514,7 @@ declare namespace javax {
              *  description: The progress bar's minimum value.
              */
             // @ts-ignore
-            setMinimum(n: number /*int*/): void
+            public setMinimum(n: number /*int*/): void
             /**
              * Sets the progress bar's maximum value
              * (stored in the progress bar's data model) to <code>n</code>.
@@ -533,7 +533,7 @@ declare namespace javax {
              *   description: The progress bar's maximum value.
              */
             // @ts-ignore
-            setMaximum(n: number /*int*/): void
+            public setMaximum(n: number /*int*/): void
             /**
              * Sets the <code>indeterminate</code> property of the progress bar,
              * which determines whether the progress bar is in determinate
@@ -559,7 +559,7 @@ declare namespace javax {
              *                or normal (false).
              */
             // @ts-ignore
-            setIndeterminate(newValue: boolean): void
+            public setIndeterminate(newValue: boolean): void
             /**
              * Returns the value of the <code>indeterminate</code> property.
              * @return the value of the <code>indeterminate</code> property
@@ -569,7 +569,7 @@ declare namespace javax {
              *                or normal (false)?
              */
             // @ts-ignore
-            isIndeterminate(): boolean
+            public isIndeterminate(): boolean
             /**
              * Returns a string representation of this <code>JProgressBar</code>.
              * This method is intended to be used only for debugging purposes. The
@@ -579,7 +579,7 @@ declare namespace javax {
              * @return a string representation of this <code>JProgressBar</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>JProgressBar</code>. For progress bars, the
@@ -592,7 +592,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this ProgressBar.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

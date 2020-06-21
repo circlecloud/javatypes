@@ -19,7 +19,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(clazz: java.lang.Class<any>)
                     // @ts-ignore
-                    getResourceByPath(path: string): org.springframework.core.io.Resource
+                    getResourceByPath(path: java.lang.String | string): org.springframework.core.io.Resource
                 }
             }
         }

@@ -15,22 +15,22 @@ declare namespace org {
                      * Constructor with an explanation only.
                      */
                     // @ts-ignore
-                    constructor(reason: string)
+                    constructor(reason: java.lang.String | string)
                     /**
                      * Constructor for a 400 error linked to a specific {@code MethodParameter}.
                      */
                     // @ts-ignore
-                    constructor(reason: string, parameter: MethodParameter)
+                    constructor(reason: java.lang.String | string, parameter: MethodParameter)
                     /**
                      * Constructor for a 400 error with a root cause.
                      */
                     // @ts-ignore
-                    constructor(reason: string, parameter: MethodParameter, cause: Error)
+                    constructor(reason: java.lang.String | string, parameter: MethodParameter, cause: java.lang.Throwable | Error)
                     /**
                      * Return the {@code MethodParameter} associated with this error, if any.
                      */
                     // @ts-ignore
-                    getMethodParameter(): MethodParameter
+                    public getMethodParameter(): MethodParameter
                 }
             }
         }

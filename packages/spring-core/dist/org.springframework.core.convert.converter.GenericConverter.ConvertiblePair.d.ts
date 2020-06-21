@@ -17,15 +17,15 @@ declare namespace org {
                             // @ts-ignore
                             constructor(sourceType: java.lang.Class<any>, targetType: java.lang.Class<any>)
                             // @ts-ignore
-                            getSourceType(): java.lang.Class<?>
+                            public getSourceType(): java.lang.Class<any>
                             // @ts-ignore
-                            getTargetType(): java.lang.Class<?>
+                            public getTargetType(): java.lang.Class<any>
                             // @ts-ignore
-                            equals(other: any): boolean
+                            public equals(other: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

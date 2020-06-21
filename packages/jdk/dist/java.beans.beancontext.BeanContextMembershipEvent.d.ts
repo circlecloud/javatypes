@@ -29,7 +29,7 @@ declare namespace java {
                  * @throws NullPointerException if <CODE>changes</CODE> is <CODE>null</CODE>
                  */
                 // @ts-ignore
-                constructor(bc: java.beans.beancontext.BeanContext, changes: Array)
+                constructor(bc: java.beans.beancontext.BeanContext, changes: java.util.Collection<any> | Array<any>)
                 /**
                  * Contruct a BeanContextMembershipEvent
                  * @param bc        The BeanContext source
@@ -38,19 +38,19 @@ declare namespace java {
                  *                   event are null.
                  */
                 // @ts-ignore
-                constructor(bc: java.beans.beancontext.BeanContext, changes: any[])
+                constructor(bc: java.beans.beancontext.BeanContext, changes: java.lang.Object[] | any[])
                 /**
                  * The list of children affected by this
                  * event notification.
                  */
                 // @ts-ignore
-                children: Array
+                children: java.util.Collection<any> | Array<any>
                 /**
                  * Gets the number of children affected by the notification.
                  * @return the number of children affected by the notification
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Is the child specified affected by the event?
                  * @return <code>true</code> if affected, <code>false</code>
@@ -58,19 +58,19 @@ declare namespace java {
                  * @param child the object to check for being affected
                  */
                 // @ts-ignore
-                contains(child: any): boolean
+                public contains(child: java.lang.Object | any): boolean
                 /**
                  * Gets the array of children affected by this event.
                  * @return the array of children affected
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Gets the array of children affected by this event.
                  * @return the array of children effected
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator
+                public iterator(): java.util.Iterator<any>
             }
         }
     }

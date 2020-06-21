@@ -24,29 +24,29 @@ declare namespace org {
                      * The default service URL.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_SERVICE_URL: string
+                    public static readonly DEFAULT_SERVICE_URL: java.lang.String | string
                     /**
                      * Set the service URL for the {@code JMXConnectorServer}.
                      */
                     // @ts-ignore
-                    setServiceUrl(serviceUrl: string): void
+                    public setServiceUrl(serviceUrl: java.lang.String | string): void
                     /**
                      * Set the environment properties used to construct the {@code JMXConnectorServer}
                      * as {@code java.util.Properties} (String key/value pairs).
                      */
                     // @ts-ignore
-                    setEnvironment(environment: java.util.Properties): void
+                    public setEnvironment(environment: java.util.Properties): void
                     /**
                      * Set the environment properties used to construct the {@code JMXConnector}
                      * as a {@code Map} of String keys and arbitrary Object values.
                      */
                     // @ts-ignore
-                    setEnvironmentMap(environment: java.util.Map<java.lang.String, any>): void
+                    public setEnvironmentMap(environment: java.util.Map<java.lang.String | string, any>): void
                     /**
                      * Set an MBeanServerForwarder to be applied to the {@code JMXConnectorServer}.
                      */
                     // @ts-ignore
-                    setForwarder(forwarder: javax.management.remote.MBeanServerForwarder): void
+                    public setForwarder(forwarder: javax.management.remote.MBeanServerForwarder): void
                     /**
                      * Set the {@code ObjectName} used to register the {@code JMXConnectorServer}
                      * itself with the {@code MBeanServer}, as {@code ObjectName} instance
@@ -54,18 +54,18 @@ declare namespace org {
                      * @throws MalformedObjectNameException if the {#code ObjectName} is malformed
                      */
                     // @ts-ignore
-                    setObjectName(objectName: any): void
+                    public setObjectName(objectName: java.lang.Object | any): void
                     /**
                      * Set whether the {@code JMXConnectorServer} should be started in a separate thread.
                      */
                     // @ts-ignore
-                    setThreaded(threaded: boolean): void
+                    public setThreaded(threaded: boolean): void
                     /**
                      * Set whether any threads started for the {@code JMXConnectorServer} should be
                      * started as daemon threads.
                      */
                     // @ts-ignore
-                    setDaemon(daemon: boolean): void
+                    public setDaemon(daemon: boolean): void
                     /**
                      * Start the connector server. If the {@code threaded} flag is set to {@code true},
                      * the {@code JMXConnectorServer} will be started in a separate thread.
@@ -76,20 +76,20 @@ declare namespace org {
                      * @throws IOException if there is a problem starting the connector server
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): javax.management.remote.JMXConnectorServer
+                    public getObject(): javax.management.remote.JMXConnectorServer
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends javax.management.remote.JMXConnectorServer>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                     /**
                      * Stop the {@code JMXConnectorServer} managed by an instance of this class.
                      * Automatically called on {@code ApplicationContext} shutdown.
                      * @throws IOException if there is an error stopping the connector server
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

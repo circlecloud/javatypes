@@ -9,7 +9,7 @@ declare namespace org {
                     // @ts-ignore
                     interface PotionType extends org.spongepowered.api.CatalogType {
                         // @ts-ignore
-                        getEffects(): java.util.List<org.spongepowered.api.effect.potion.PotionEffect>
+                        getEffects(): Array<org.spongepowered.api.effect.potion.PotionEffect>
                     }
                 }
             }

@@ -35,12 +35,12 @@ declare namespace org {
                          * @see org.springframework.beans.factory.annotation.AnnotationBeanWiringInfoResolver
                          */
                         // @ts-ignore
-                        setBeanWiringInfoResolver(beanWiringInfoResolver: org.springframework.beans.factory.wiring.BeanWiringInfoResolver): void
+                        public setBeanWiringInfoResolver(beanWiringInfoResolver: org.springframework.beans.factory.wiring.BeanWiringInfoResolver): void
                         /**
                          * Set the {@link BeanFactory} in which this aspect must configure beans.
                          */
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         /**
                          * Create the default BeanWiringInfoResolver to be used if none was
                          * specified explicitly.
@@ -53,13 +53,13 @@ declare namespace org {
                          * Check that a {@link BeanFactory} has been set.
                          */
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Release references to the {@link BeanFactory} and
                          * {@link BeanWiringInfoResolver} when the container is destroyed.
                          */
                         // @ts-ignore
-                        destroy(): void
+                        public destroy(): void
                         /**
                          * Configure the bean instance.
                          * <p>Subclasses can override this to provide custom configuration logic.
@@ -67,7 +67,7 @@ declare namespace org {
                          * @param beanInstance the bean instance to configure (must <b>not</b> be {#code null})
                          */
                         // @ts-ignore
-                        configureBean(beanInstance: any): void
+                        public configureBean(beanInstance: java.lang.Object | any): void
                     }
                 }
             }

@@ -16,11 +16,11 @@ declare namespace javax {
                         // @ts-ignore
                         shadow: java.awt.Color
                         // @ts-ignore
-                        paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                        public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                         // @ts-ignore
-                        getBorderInsets(c: java.awt.Component): java.awt.Insets
+                        public getBorderInsets(c: java.awt.Component): java.awt.Insets
                         // @ts-ignore
-                        isBorderOpaque(): boolean
+                        public isBorderOpaque(): boolean
                     }
                 }
             }

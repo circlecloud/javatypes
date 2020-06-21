@@ -42,7 +42,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

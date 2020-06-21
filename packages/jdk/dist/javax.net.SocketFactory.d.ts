@@ -29,7 +29,7 @@ declare namespace javax {
          * @author David Brownell
          */
         // @ts-ignore
-        class SocketFactory extends java.lang.Object {
+        abstract class SocketFactory extends java.lang.Object {
             /**
              * Creates a <code>SocketFactory</code>.
              */
@@ -40,7 +40,7 @@ declare namespace javax {
              * @return the default <code>SocketFactory</code>
              */
             // @ts-ignore
-            getDefault(): javax.net.SocketFactory
+            public static getDefault(): javax.net.SocketFactory
             /**
              * Creates an unconnected socket.
              * @return the unconnected socket
@@ -50,7 +50,7 @@ declare namespace javax {
              * @see java.net.Socket#Socket()
              */
             // @ts-ignore
-            createSocket(): java.net.Socket
+            public createSocket(): java.net.Socket
             /**
              * Creates a socket and connects it to the specified remote host
              * at the specified remote port.  This socket is configured using
@@ -74,7 +74,7 @@ declare namespace javax {
              * @see java.net.Socket#Socket(String, int)
              */
             // @ts-ignore
-            abstract createSocket(host: string, port: number /*int*/): java.net.Socket
+            public abstract createSocket(host: java.lang.String | string, port: number /*int*/): java.net.Socket
             /**
              * Creates a socket and connects it to the specified remote host
              * on the specified remote port.
@@ -102,7 +102,7 @@ declare namespace javax {
              * @see java.net.Socket#Socket(String, int, java.net.InetAddress, int)
              */
             // @ts-ignore
-            abstract createSocket(host: string, port: number /*int*/, localHost: java.net.InetAddress, localPort: number /*int*/): java.net.Socket
+            public abstract createSocket(host: java.lang.String | string, port: number /*int*/, localHost: java.net.InetAddress, localPort: number /*int*/): java.net.Socket
             /**
              * Creates a socket and connects it to the specified port number
              * at the specified address.  This socket is configured using
@@ -125,7 +125,7 @@ declare namespace javax {
              * @see java.net.Socket#Socket(java.net.InetAddress, int)
              */
             // @ts-ignore
-            abstract createSocket(host: java.net.InetAddress, port: number /*int*/): java.net.Socket
+            public abstract createSocket(host: java.net.InetAddress, port: number /*int*/): java.net.Socket
             /**
              * Creates a socket and connect it to the specified remote address
              * on the specified remote port.  The socket will also be bound
@@ -152,7 +152,7 @@ declare namespace javax {
              *      java.net.InetAddress, int)
              */
             // @ts-ignore
-            abstract createSocket(address: java.net.InetAddress, port: number /*int*/, localAddress: java.net.InetAddress, localPort: number /*int*/): java.net.Socket
+            public abstract createSocket(address: java.net.InetAddress, port: number /*int*/, localAddress: java.net.InetAddress, localPort: number /*int*/): java.net.Socket
         }
     }
 }

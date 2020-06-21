@@ -29,13 +29,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                constructor(trustedCert: java.security.cert.Certificate, attributes: Array<java.security.KeyStore.Entry.Attribute>)
+                constructor(trustedCert: java.security.cert.Certificate, attributes: java.util.Set<java.security.KeyStore.Entry.Attribute> | Array<java.security.KeyStore.Entry.Attribute>)
                 /**
                  * Gets the trusted {@code Certficate} from this entry.
                  * @return the trusted {#code Certificate} from this entry
                  */
                 // @ts-ignore
-                getTrustedCertificate(): java.security.cert.Certificate
+                public getTrustedCertificate(): java.security.cert.Certificate
                 /**
                  * Retrieves the attributes associated with an entry.
                  * <p>
@@ -43,13 +43,13 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getAttributes(): java.util.Set<java.security.KeyStore.Entry.Attribute>
+                public getAttributes(): Array<java.security.KeyStore.Entry.Attribute>
                 /**
                  * Returns a string representation of this TrustedCertificateEntry.
                  * @return a string representation of this TrustedCertificateEntry.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

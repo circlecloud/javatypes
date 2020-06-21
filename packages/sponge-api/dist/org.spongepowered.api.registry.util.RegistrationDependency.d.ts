@@ -8,7 +8,7 @@ declare namespace org {
                      * initial registration of values before this one can continue.
                      */
                     // @ts-ignore
-                    class RegistrationDependency implements java.lang.annotation.Annotation {
+                    abstract class RegistrationDependency implements java.lang.annotation.Annotation {
                     }
                 }
             }

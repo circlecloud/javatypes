@@ -9,9 +9,9 @@ declare namespace org {
             // @ts-ignore
             class UncategorizedAmqpException extends org.springframework.amqp.AmqpException {
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

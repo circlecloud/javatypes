@@ -25,7 +25,7 @@ declare namespace org {
                      *      plugin instance
                      */
                     // @ts-ignore
-                    register(plugin: any, callable: org.spongepowered.api.command.CommandCallable, ...alias: string[]): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                    register(plugin: java.lang.Object | any, callable: org.spongepowered.api.command.CommandCallable, ...alias: java.lang.String[] | string[]): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                     /**
                      * Register a given command using the given list of aliases.
                      * <p>If there is a conflict with one of the aliases (i.e. that alias
@@ -43,7 +43,7 @@ declare namespace org {
                      *      plugin instance
                      */
                     // @ts-ignore
-                    register(plugin: any, callable: org.spongepowered.api.command.CommandCallable, aliases: Array<java.lang.String>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                    register(plugin: java.lang.Object | any, callable: org.spongepowered.api.command.CommandCallable, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                     /**
                      * Register a given command using a given list of aliases.
                      * <p>The provided callback function will be called with a list of aliases
@@ -67,7 +67,7 @@ declare namespace org {
                      *      plugin instance
                      */
                     // @ts-ignore
-                    register(plugin: any, callable: org.spongepowered.api.command.CommandCallable, aliases: Array<java.lang.String>, callback: java.util.function.Function<java.util.List<java.lang.String>, java.util.List<java.lang.String>> | java.util.function$.Function<java.util.List<java.lang.String>, java.util.List<java.lang.String>>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                    register(plugin: java.lang.Object | any, callable: org.spongepowered.api.command.CommandCallable, aliases: java.util.List<java.lang.String | string> | Array<java.lang.String | string>, callback: java.util.function$.Function<java.util.List<java.lang.String | string> | Array<java.lang.String | string>, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                     /**
                      * Remove a command identified by the given mapping.
                      * @param mapping The mapping
@@ -80,14 +80,14 @@ declare namespace org {
                      * @return A set of plugin containers
                      */
                     // @ts-ignore
-                    getPluginContainers(): java.util.Set<org.spongepowered.api.plugin.PluginContainer>
+                    getPluginContainers(): Array<org.spongepowered.api.plugin.PluginContainer>
                     /**
                      * Gets a set of commands owned by the given plugin instance.
                      * @param instance The plugin instance
                      * @return A set of mappings
                      */
                     // @ts-ignore
-                    getOwnedBy(instance: any): java.util.Set<org.spongepowered.api.command.CommandMapping>
+                    getOwnedBy(instance: java.lang.Object | any): Array<org.spongepowered.api.command.CommandMapping>
                     /**
                      * Gets the owner of a CommandMapping, if any is present.
                      * @param mapping The mapping to get an owner for
@@ -100,7 +100,7 @@ declare namespace org {
                      * @return The number of aliases
                      */
                     // @ts-ignore
-                    size(): int
+                    size(): number /*int*/
                     /**
                      * Execute the command based on input arguments.
                      * <p>The implementing class must perform the necessary permission
@@ -110,7 +110,7 @@ declare namespace org {
                      * @return The result of a command being processed
                      */
                     // @ts-ignore
-                    process(source: org.spongepowered.api.command.CommandSource, arguments: string): org.spongepowered.api.command.CommandResult
+                    process(source: org.spongepowered.api.command.CommandSource, arguments: java.lang.String | string): org.spongepowered.api.command.CommandResult
                     /**
                      * Gets a list of suggestions based on input.
                      * <p>If a suggestion is chosen by the user, it will replace the last
@@ -120,7 +120,7 @@ declare namespace org {
                      * @return A list of suggestions
                      */
                     // @ts-ignore
-                    getSuggestions(source: org.spongepowered.api.command.CommandSource, arguments: string, targetPosition: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): java.util.List<java.lang.String>
+                    getSuggestions(source: org.spongepowered.api.command.CommandSource, arguments: java.lang.String | string, targetPosition: org.spongepowered.api.world.Location<org.spongepowered.api.world.World>): Array<java.lang.String | string>
                 }
             }
         }

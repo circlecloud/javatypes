@@ -156,7 +156,7 @@ declare namespace org {
                          * @return The block worker
                          */
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.BlockVolumeWorker<? extends org.spongepowered.api.world.extent.BlockVolume>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.BlockVolumeWorker<any>
                     }
                 }
             }

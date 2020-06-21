@@ -15,21 +15,21 @@ declare namespace org {
                 // @ts-ignore
                 class Binding extends org.springframework.amqp.core.AbstractDeclarable {
                     // @ts-ignore
-                    constructor(destination: string, destinationType: org.springframework.amqp.core.Binding.DestinationType, exchange: string, routingKey: string, arguments: java.util.Map<java.lang.String, java.lang.Object>)
+                    constructor(destination: java.lang.String | string, destinationType: org.springframework.amqp.core.Binding.DestinationType, exchange: java.lang.String | string, routingKey: java.lang.String | string, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                     // @ts-ignore
-                    getDestination(): java.lang.String
+                    public getDestination(): string
                     // @ts-ignore
-                    getDestinationType(): org.springframework.amqp.core.Binding.DestinationType
+                    public getDestinationType(): org.springframework.amqp.core.Binding.DestinationType
                     // @ts-ignore
-                    getExchange(): java.lang.String
+                    public getExchange(): string
                     // @ts-ignore
-                    getRoutingKey(): java.lang.String
+                    public getRoutingKey(): string
                     // @ts-ignore
-                    getArguments(): java.util.Map<java.lang.String, java.lang.Object>
+                    public getArguments(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    isDestinationQueue(): boolean
+                    public isDestinationQueue(): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -23,13 +23,13 @@ declare namespace org {
                          * same name as in the model.
                          */
                         // @ts-ignore
-                        setAttributeNamePrefix(attributeNamePrefix: string): void
+                        public setAttributeNamePrefix(attributeNamePrefix: java.lang.String | string): void
                         // @ts-ignore
-                        storeAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: string, attributeValue: any): void
+                        public storeAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string, attributeValue: java.lang.Object | any): void
                         // @ts-ignore
-                        retrieveAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: string): java.lang.Object
+                        public retrieveAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string): any
                         // @ts-ignore
-                        cleanupAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: string): void
+                        public cleanupAttribute(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string): void
                         /**
                          * Calculate the attribute name in the backend session.
                          * <p>The default implementation simply prepends the configured
@@ -39,7 +39,7 @@ declare namespace org {
                          * @return the attribute name in the backend session
                          */
                         // @ts-ignore
-                        getAttributeNameInSession(request: org.springframework.web.context.request.WebRequest, attributeName: string): java.lang.String
+                        getAttributeNameInSession(request: org.springframework.web.context.request.WebRequest, attributeName: java.lang.String | string): string
                     }
                 }
             }

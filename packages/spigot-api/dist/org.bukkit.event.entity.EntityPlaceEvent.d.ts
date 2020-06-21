@@ -19,27 +19,27 @@ declare namespace org {
                      * @return the player placing the entity
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     /**
                      * Returns the block that the entity was placed on
                      * @return the block that the entity was placed on
                      */
                     // @ts-ignore
-                    getBlock(): org.bukkit.block.Block
+                    public getBlock(): org.bukkit.block.Block
                     /**
                      * Returns the face of the block that the entity was placed on
                      * @return the face of the block that the entity was placed on
                      */
                     // @ts-ignore
-                    getBlockFace(): org.bukkit.block.BlockFace
+                    public getBlockFace(): org.bukkit.block.BlockFace
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

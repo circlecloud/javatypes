@@ -19,7 +19,7 @@ declare namespace javax {
              * @param message the detail message.
              */
             // @ts-ignore
-            constructor(e: java.lang.Error, message: string)
+            constructor(e: java.lang.Error, message: java.lang.String | string)
             /**
              * Returns the actual {@link Error} thrown.
              * @return the wrapped {#link Error}.
@@ -31,7 +31,7 @@ declare namespace javax {
              * @return the wrapped {#link Error}.
              */
             // @ts-ignore
-            getCause(): java.lang.Throwable
+            getCause(): Error
         }
     }
 }

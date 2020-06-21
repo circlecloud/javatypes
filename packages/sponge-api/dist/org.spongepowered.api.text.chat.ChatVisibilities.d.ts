@@ -12,17 +12,17 @@ declare namespace org {
                          * All chat is visible.
                          */
                         // @ts-ignore
-                        readonly FULL: org.spongepowered.api.text.chat.ChatVisibility
+                        public static readonly FULL: org.spongepowered.api.text.chat.ChatVisibility
                         /**
                          * No chat is visible.
                          */
                         // @ts-ignore
-                        readonly HIDDEN: org.spongepowered.api.text.chat.ChatVisibility
+                        public static readonly HIDDEN: org.spongepowered.api.text.chat.ChatVisibility
                         /**
                          * Only {@link ChatTypes#SYSTEM} is visible.
                          */
                         // @ts-ignore
-                        readonly SYSTEM: org.spongepowered.api.text.chat.ChatVisibility
+                        public static readonly SYSTEM: org.spongepowered.api.text.chat.ChatVisibility
                     }
                 }
             }

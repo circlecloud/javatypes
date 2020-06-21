@@ -56,7 +56,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                write(src: java.nio.ByteBuffer): int
+                write(src: java.nio.ByteBuffer): number /*int*/
             }
         }
     }

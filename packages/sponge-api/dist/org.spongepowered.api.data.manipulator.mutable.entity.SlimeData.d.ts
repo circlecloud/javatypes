@@ -18,7 +18,7 @@ declare namespace org {
                                  * @see Keys#SLIME_SIZE
                                  */
                                 // @ts-ignore
-                                size(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                size(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

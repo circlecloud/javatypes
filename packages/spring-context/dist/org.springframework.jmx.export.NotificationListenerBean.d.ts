@@ -33,7 +33,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(notificationListener: javax.management.NotificationListener)
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                 }
             }
         }

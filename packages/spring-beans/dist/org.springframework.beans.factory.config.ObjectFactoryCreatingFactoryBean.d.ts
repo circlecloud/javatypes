@@ -59,7 +59,7 @@ declare namespace org {
                      * @see ServiceLocatorFactoryBean
                      */
                     // @ts-ignore
-                    class ObjectFactoryCreatingFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<org.springframework.beans.factory.ObjectFactory<java.lang.Object>> {
+                    class ObjectFactoryCreatingFactoryBean extends org.springframework.beans.factory.config.AbstractFactoryBean<org.springframework.beans.factory.ObjectFactory<java.lang.Object | any>> {
                         // @ts-ignore
                         constructor()
                         /**
@@ -70,13 +70,13 @@ declare namespace org {
                          * the need for the extra level of indirection afforded by this factory approach).
                          */
                         // @ts-ignore
-                        setTargetBeanName(targetBeanName: string): void
+                        public setTargetBeanName(targetBeanName: java.lang.String | string): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        createInstance(): org.springframework.beans.factory.ObjectFactory<java.lang.Object>
+                        createInstance(): org.springframework.beans.factory.ObjectFactory<java.lang.Object | any>
                     }
                 }
             }

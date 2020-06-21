@@ -34,7 +34,7 @@ declare namespace javax {
              * @see ResourceBundle#getBundle(String,Locale)
              */
             // @ts-ignore
-            class IIOMetadataFormatImpl extends java.lang.Object implements javax.imageio.metadata.IIOMetadataFormat {
+            abstract class IIOMetadataFormatImpl extends java.lang.Object implements javax.imageio.metadata.IIOMetadataFormat {
                 /**
                  * Constructs a blank <code>IIOMetadataFormatImpl</code> instance,
                  * with a given root element name and child policy (other than
@@ -50,7 +50,7 @@ declare namespace javax {
                  *  not one of the predefined constants.
                  */
                 // @ts-ignore
-                constructor(rootName: string, childPolicy: number /*int*/)
+                constructor(rootName: java.lang.String | string, childPolicy: number /*int*/)
                 /**
                  * Constructs a blank <code>IIOMetadataFormatImpl</code> instance,
                  * with a given root element name and a child policy of
@@ -66,13 +66,13 @@ declare namespace javax {
                  *  is negative or larger than <code>maxChildren</code>.
                  */
                 // @ts-ignore
-                constructor(rootName: string, minChildren: number /*int*/, maxChildren: number /*int*/)
+                constructor(rootName: java.lang.String | string, minChildren: number /*int*/, maxChildren: number /*int*/)
                 /**
                  * A <code>String</code> constant containing the standard format
                  * name, <code>"javax_imageio_1.0"</code>.
                  */
                 // @ts-ignore
-                readonly standardMetadataFormatName: string
+                public static readonly standardMetadataFormatName: java.lang.String | string
                 /**
                  * Sets a new base name for locating <code>ResourceBundle</code>s
                  * containing descriptions of elements and attributes for this
@@ -87,7 +87,7 @@ declare namespace javax {
                  * @see #getResourceBaseName
                  */
                 // @ts-ignore
-                setResourceBaseName(resourceBaseName: string): void
+                setResourceBaseName(resourceBaseName: java.lang.String | string): void
                 /**
                  * Returns the currently set base name for locating
                  * <code>ResourceBundle</code>s.
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @see #setResourceBaseName
                  */
                 // @ts-ignore
-                getResourceBaseName(): java.lang.String
+                getResourceBaseName(): string
                 /**
                  * Adds a new element type to this metadata document format with a
                  * child policy other than <code>CHILD_POLICY_REPEAT</code>.
@@ -112,7 +112,7 @@ declare namespace javax {
                  *  is not one of the predefined constants.
                  */
                 // @ts-ignore
-                addElement(elementName: string, parentName: string, childPolicy: number /*int*/): void
+                addElement(elementName: java.lang.String | string, parentName: java.lang.String | string, childPolicy: number /*int*/): void
                 /**
                  * Adds a new element type to this metadata document format with a
                  * child policy of <code>CHILD_POLICY_REPEAT</code>.
@@ -128,7 +128,7 @@ declare namespace javax {
                  *  is negative or larger than <code>maxChildren</code>.
                  */
                 // @ts-ignore
-                addElement(elementName: string, parentName: string, minChildren: number /*int*/, maxChildren: number /*int*/): void
+                addElement(elementName: java.lang.String | string, parentName: java.lang.String | string, minChildren: number /*int*/, maxChildren: number /*int*/): void
                 /**
                  * Adds an existing element to the list of legal children for a
                  * given parent node type.
@@ -144,7 +144,7 @@ declare namespace javax {
                  *  format.
                  */
                 // @ts-ignore
-                addChildElement(elementName: string, parentName: string): void
+                addChildElement(elementName: java.lang.String | string, parentName: java.lang.String | string): void
                 /**
                  * Removes an element from the format.  If no element with the
                  * given name was present, nothing happens and no exception is
@@ -152,7 +152,7 @@ declare namespace javax {
                  * @param elementName the name of the element to be removed.
                  */
                 // @ts-ignore
-                removeElement(elementName: string): void
+                removeElement(elementName: java.lang.String | string): void
                 /**
                  * Adds a new attribute to a previously defined element that may
                  * be set to an arbitrary value.
@@ -172,7 +172,7 @@ declare namespace javax {
                  *  not one of the predefined constants.
                  */
                 // @ts-ignore
-                addAttribute(elementName: string, attrName: string, dataType: number /*int*/, required: boolean, defaultValue: string): void
+                addAttribute(elementName: java.lang.String | string, attrName: java.lang.String | string, dataType: number /*int*/, required: boolean, defaultValue: java.lang.String | string): void
                 /**
                  * Adds a new attribute to a previously defined element that will
                  * be defined by a set of enumerated values.
@@ -203,7 +203,7 @@ declare namespace javax {
                  *  <code>String</code> or is <code>null</code>.
                  */
                 // @ts-ignore
-                addAttribute(elementName: string, attrName: string, dataType: number /*int*/, required: boolean, defaultValue: string, enumeratedValues: Array<java.lang.String>): void
+                addAttribute(elementName: java.lang.String | string, attrName: java.lang.String | string, dataType: number /*int*/, required: boolean, defaultValue: java.lang.String | string, enumeratedValues: java.util.List<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Adds a new attribute to a previously defined element that will
                  * be defined by a range of values.
@@ -233,7 +233,7 @@ declare namespace javax {
                  *  not one of the predefined constants.
                  */
                 // @ts-ignore
-                addAttribute(elementName: string, attrName: string, dataType: number /*int*/, required: boolean, defaultValue: string, minValue: string, maxValue: string, minInclusive: boolean, maxInclusive: boolean): void
+                addAttribute(elementName: java.lang.String | string, attrName: java.lang.String | string, dataType: number /*int*/, required: boolean, defaultValue: java.lang.String | string, minValue: java.lang.String | string, maxValue: java.lang.String | string, minInclusive: boolean, maxInclusive: boolean): void
                 /**
                  * Adds a new attribute to a previously defined element that will
                  * be defined by a list of values.
@@ -256,7 +256,7 @@ declare namespace javax {
                  *  <code>listMaxLength</code>.
                  */
                 // @ts-ignore
-                addAttribute(elementName: string, attrName: string, dataType: number /*int*/, required: boolean, listMinLength: number /*int*/, listMaxLength: number /*int*/): void
+                addAttribute(elementName: java.lang.String | string, attrName: java.lang.String | string, dataType: number /*int*/, required: boolean, listMinLength: number /*int*/, listMaxLength: number /*int*/): void
                 /**
                  * Adds a new attribute to a previously defined element that will
                  * be defined by the enumerated values <code>TRUE</code> and
@@ -276,7 +276,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                addBooleanAttribute(elementName: string, attrName: string, hasDefaultValue: boolean, defaultValue: boolean): void
+                addBooleanAttribute(elementName: java.lang.String | string, attrName: java.lang.String | string, hasDefaultValue: boolean, defaultValue: boolean): void
                 /**
                  * Removes an attribute from a previously defined element.  If no
                  * attribute with the given name was present in the given element,
@@ -287,7 +287,7 @@ declare namespace javax {
                  *  is <code>null</code>, or is not a legal element name for this format.
                  */
                 // @ts-ignore
-                removeAttribute(elementName: string, attrName: string): void
+                removeAttribute(elementName: java.lang.String | string, attrName: java.lang.String | string): void
                 /**
                  * Allows an <code>Object</code> reference of a given class type
                  * to be stored in nodes implementing the named element.  The
@@ -306,7 +306,7 @@ declare namespace javax {
                  *  is <code>null</code>, or is not a legal element name for this format.
                  */
                 // @ts-ignore
-                addObjectValue<T>(elementName: string, classType: java.lang.Class<T>, required: boolean, defaultValue: T): void
+                addObjectValue<T>(elementName: java.lang.String | string, classType: java.lang.Class<T>, required: boolean, defaultValue: T): void
                 /**
                  * Allows an <code>Object</code> reference of a given class type
                  * to be stored in nodes implementing the named element.  The
@@ -337,7 +337,7 @@ declare namespace javax {
                  *  or is <code>null</code>.
                  */
                 // @ts-ignore
-                addObjectValue<T>(elementName: string, classType: java.lang.Class<T>, required: boolean, defaultValue: T, enumeratedValues: Array<T>): void
+                addObjectValue<T>(elementName: java.lang.String | string, classType: java.lang.Class<T>, required: boolean, defaultValue: T, enumeratedValues: java.util.List<any> | Array<any>): void
                 /**
                  * Allows an <code>Object</code> reference of a given class type
                  * to be stored in nodes implementing the named element.  The
@@ -367,7 +367,7 @@ declare namespace javax {
                  *  format.
                  */
                 // @ts-ignore
-                addObjectValue<T extends java.lang.Object & java.lang.Comparable<? super T>>(elementName: string, classType: java.lang.Class<T>, defaultValue: T extends java.lang.Object & java.lang.Comparable<any super T>, minValue: java.lang.Comparable<any super T>, maxValue: java.lang.Comparable<any super T>, minInclusive: boolean, maxInclusive: boolean): void
+                addObjectValue<T extends java.lang.Object & java.lang.Comparable>(elementName: java.lang.String | string, classType: java.lang.Class<T>, defaultValue: T, minValue: java.lang.Comparable<any>, maxValue: java.lang.Comparable<any>, minInclusive: boolean, maxInclusive: boolean): void
                 /**
                  * Allows an <code>Object</code> reference of a given class type
                  * to be stored in nodes implementing the named element.  The
@@ -386,7 +386,7 @@ declare namespace javax {
                  *  not a legal element name for this format.
                  */
                 // @ts-ignore
-                addObjectValue(elementName: string, classType: java.lang.Class<any>, arrayMinLength: number /*int*/, arrayMaxLength: number /*int*/): void
+                addObjectValue(elementName: java.lang.String | string, classType: java.lang.Class<any>, arrayMinLength: number /*int*/, arrayMaxLength: number /*int*/): void
                 /**
                  * Disallows an <code>Object</code> reference from being stored in
                  * nodes implementing the named element.
@@ -395,15 +395,15 @@ declare namespace javax {
                  *  not a legal element name for this format.
                  */
                 // @ts-ignore
-                removeObjectValue(elementName: string): void
+                removeObjectValue(elementName: java.lang.String | string): void
                 // @ts-ignore
-                getRootName(): java.lang.String
+                public getRootName(): string
                 // @ts-ignore
-                abstract canNodeAppear(elementName: string, imageType: javax.imageio.ImageTypeSpecifier): boolean
+                public abstract canNodeAppear(elementName: java.lang.String | string, imageType: javax.imageio.ImageTypeSpecifier): boolean
                 // @ts-ignore
-                getElementMinChildren(elementName: string): int
+                public getElementMinChildren(elementName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getElementMaxChildren(elementName: string): int
+                public getElementMaxChildren(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns a <code>String</code> containing a description of the
                  * named element, or <code>null</code>.  The description will be
@@ -429,31 +429,31 @@ declare namespace javax {
                  * @see #setResourceBaseName
                  */
                 // @ts-ignore
-                getElementDescription(elementName: string, locale: java.util.Locale): java.lang.String
+                public getElementDescription(elementName: java.lang.String | string, locale: java.util.Locale): string
                 // @ts-ignore
-                getChildPolicy(elementName: string): int
+                public getChildPolicy(elementName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getChildNames(elementName: string): java.lang.String[]
+                public getChildNames(elementName: java.lang.String | string): string[]
                 // @ts-ignore
-                getAttributeNames(elementName: string): java.lang.String[]
+                public getAttributeNames(elementName: java.lang.String | string): string[]
                 // @ts-ignore
-                getAttributeValueType(elementName: string, attrName: string): int
+                public getAttributeValueType(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getAttributeDataType(elementName: string, attrName: string): int
+                public getAttributeDataType(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                isAttributeRequired(elementName: string, attrName: string): boolean
+                public isAttributeRequired(elementName: java.lang.String | string, attrName: java.lang.String | string): boolean
                 // @ts-ignore
-                getAttributeDefaultValue(elementName: string, attrName: string): java.lang.String
+                public getAttributeDefaultValue(elementName: java.lang.String | string, attrName: java.lang.String | string): string
                 // @ts-ignore
-                getAttributeEnumerations(elementName: string, attrName: string): java.lang.String[]
+                public getAttributeEnumerations(elementName: java.lang.String | string, attrName: java.lang.String | string): string[]
                 // @ts-ignore
-                getAttributeMinValue(elementName: string, attrName: string): java.lang.String
+                public getAttributeMinValue(elementName: java.lang.String | string, attrName: java.lang.String | string): string
                 // @ts-ignore
-                getAttributeMaxValue(elementName: string, attrName: string): java.lang.String
+                public getAttributeMaxValue(elementName: java.lang.String | string, attrName: java.lang.String | string): string
                 // @ts-ignore
-                getAttributeListMinLength(elementName: string, attrName: string): int
+                public getAttributeListMinLength(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getAttributeListMaxLength(elementName: string, attrName: string): int
+                public getAttributeListMaxLength(elementName: java.lang.String | string, attrName: java.lang.String | string): number /*int*/
                 /**
                  * Returns a <code>String</code> containing a description of the
                  * named attribute, or <code>null</code>.  The description will be
@@ -485,23 +485,23 @@ declare namespace javax {
                  * @see #setResourceBaseName
                  */
                 // @ts-ignore
-                getAttributeDescription(elementName: string, attrName: string, locale: java.util.Locale): java.lang.String
+                public getAttributeDescription(elementName: java.lang.String | string, attrName: java.lang.String | string, locale: java.util.Locale): string
                 // @ts-ignore
-                getObjectValueType(elementName: string): int
+                public getObjectValueType(elementName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getObjectClass(elementName: string): java.lang.Class<?>
+                public getObjectClass(elementName: java.lang.String | string): java.lang.Class<any>
                 // @ts-ignore
-                getObjectDefaultValue(elementName: string): java.lang.Object
+                public getObjectDefaultValue(elementName: java.lang.String | string): any
                 // @ts-ignore
-                getObjectEnumerations(elementName: string): java.lang.Object[]
+                public getObjectEnumerations(elementName: java.lang.String | string): any[]
                 // @ts-ignore
-                getObjectMinValue(elementName: string): java.lang.Comparable<?>
+                public getObjectMinValue(elementName: java.lang.String | string): java.lang.Comparable<any>
                 // @ts-ignore
-                getObjectMaxValue(elementName: string): java.lang.Comparable<?>
+                public getObjectMaxValue(elementName: java.lang.String | string): java.lang.Comparable<any>
                 // @ts-ignore
-                getObjectArrayMinLength(elementName: string): int
+                public getObjectArrayMinLength(elementName: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getObjectArrayMaxLength(elementName: string): int
+                public getObjectArrayMaxLength(elementName: java.lang.String | string): number /*int*/
                 /**
                  * Returns an <code>IIOMetadataFormat</code> object describing the
                  * standard, plug-in neutral <code>javax.imageio_1.0</code>
@@ -510,7 +510,7 @@ declare namespace javax {
                  * @return a predefined <code>IIOMetadataFormat</code> instance.
                  */
                 // @ts-ignore
-                getStandardFormatInstance(): javax.imageio.metadata.IIOMetadataFormat
+                public static getStandardFormatInstance(): javax.imageio.metadata.IIOMetadataFormat
             }
         }
     }

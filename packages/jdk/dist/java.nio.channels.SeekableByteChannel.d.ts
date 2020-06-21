@@ -29,7 +29,7 @@ declare namespace java {
                  * ReadableByteChannel} interface.
                  */
                 // @ts-ignore
-                read(dst: java.nio.ByteBuffer): int
+                read(dst: java.nio.ByteBuffer): number /*int*/
                 /**
                  * Writes a sequence of bytes to this channel from the given buffer.
                  * <p> Bytes are written starting at this channel's current position, unless
@@ -42,7 +42,7 @@ declare namespace java {
                  * the {@link WritableByteChannel} interface.
                  */
                 // @ts-ignore
-                write(src: java.nio.ByteBuffer): int
+                write(src: java.nio.ByteBuffer): number /*int*/
                 /**
                  * Returns this channel's position.
                  * @return This channel's position,
@@ -54,7 +54,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                position(): long
+                position(): number /*long*/
                 /**
                  * Sets this channel's position.
                  * <p> Setting the position to a value that is greater than the current size
@@ -90,7 +90,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                size(): long
+                size(): number /*long*/
                 /**
                  * Truncates the entity, to which this channel is connected, to the given
                  * size.

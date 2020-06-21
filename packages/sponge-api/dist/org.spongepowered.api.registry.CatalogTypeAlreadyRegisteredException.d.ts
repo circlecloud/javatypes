@@ -10,13 +10,13 @@ declare namespace org {
                      * @param id The id of the catalog type already registered
                      */
                     // @ts-ignore
-                    constructor(id: string)
+                    constructor(id: java.lang.String | string)
                     /**
                      * Gets the {@link CatalogType} id already registered.
                      * @return The catalog type id already registered
                      */
                     // @ts-ignore
-                    getAlreadyRegisteredId(): java.lang.String
+                    getAlreadyRegisteredId(): string
                 }
             }
         }

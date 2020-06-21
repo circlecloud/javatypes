@@ -20,7 +20,7 @@ declare namespace javax {
                      * @return the UI
                      */
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Fetches the name used as a key to look up properties through the
                      * UIManager.  This is used as a prefix to all the standard
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return the name ("PasswordField")
                      */
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     /**
                      * Installs the necessary properties on the JPasswordField.
                      * @since 1.6
@@ -41,7 +41,7 @@ declare namespace javax {
                      * @return the view
                      */
                     // @ts-ignore
-                    create(elem: javax.swing.text.Element): javax.swing.text.View
+                    public create(elem: javax.swing.text.Element): javax.swing.text.View
                 }
             }
         }

@@ -121,106 +121,106 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                updateUI(): void
+                public updateUI(): void
                 /**
                  * Returns the default icon, for the current laf, that is used to
                  * represent non-leaf nodes that are expanded.
                  */
                 // @ts-ignore
-                getDefaultOpenIcon(): javax.swing.Icon
+                public getDefaultOpenIcon(): javax.swing.Icon
                 /**
                  * Returns the default icon, for the current laf, that is used to
                  * represent non-leaf nodes that are not expanded.
                  */
                 // @ts-ignore
-                getDefaultClosedIcon(): javax.swing.Icon
+                public getDefaultClosedIcon(): javax.swing.Icon
                 /**
                  * Returns the default icon, for the current laf, that is used to
                  * represent leaf nodes.
                  */
                 // @ts-ignore
-                getDefaultLeafIcon(): javax.swing.Icon
+                public getDefaultLeafIcon(): javax.swing.Icon
                 /**
                  * Sets the icon used to represent non-leaf nodes that are expanded.
                  */
                 // @ts-ignore
-                setOpenIcon(newIcon: javax.swing.Icon): void
+                public setOpenIcon(newIcon: javax.swing.Icon): void
                 /**
                  * Returns the icon used to represent non-leaf nodes that are expanded.
                  */
                 // @ts-ignore
-                getOpenIcon(): javax.swing.Icon
+                public getOpenIcon(): javax.swing.Icon
                 /**
                  * Sets the icon used to represent non-leaf nodes that are not expanded.
                  */
                 // @ts-ignore
-                setClosedIcon(newIcon: javax.swing.Icon): void
+                public setClosedIcon(newIcon: javax.swing.Icon): void
                 /**
                  * Returns the icon used to represent non-leaf nodes that are not
                  * expanded.
                  */
                 // @ts-ignore
-                getClosedIcon(): javax.swing.Icon
+                public getClosedIcon(): javax.swing.Icon
                 /**
                  * Sets the icon used to represent leaf nodes.
                  */
                 // @ts-ignore
-                setLeafIcon(newIcon: javax.swing.Icon): void
+                public setLeafIcon(newIcon: javax.swing.Icon): void
                 /**
                  * Returns the icon used to represent leaf nodes.
                  */
                 // @ts-ignore
-                getLeafIcon(): javax.swing.Icon
+                public getLeafIcon(): javax.swing.Icon
                 /**
                  * Sets the color the text is drawn with when the node is selected.
                  */
                 // @ts-ignore
-                setTextSelectionColor(newColor: java.awt.Color): void
+                public setTextSelectionColor(newColor: java.awt.Color): void
                 /**
                  * Returns the color the text is drawn with when the node is selected.
                  */
                 // @ts-ignore
-                getTextSelectionColor(): java.awt.Color
+                public getTextSelectionColor(): java.awt.Color
                 /**
                  * Sets the color the text is drawn with when the node isn't selected.
                  */
                 // @ts-ignore
-                setTextNonSelectionColor(newColor: java.awt.Color): void
+                public setTextNonSelectionColor(newColor: java.awt.Color): void
                 /**
                  * Returns the color the text is drawn with when the node isn't selected.
                  */
                 // @ts-ignore
-                getTextNonSelectionColor(): java.awt.Color
+                public getTextNonSelectionColor(): java.awt.Color
                 /**
                  * Sets the color to use for the background if node is selected.
                  */
                 // @ts-ignore
-                setBackgroundSelectionColor(newColor: java.awt.Color): void
+                public setBackgroundSelectionColor(newColor: java.awt.Color): void
                 /**
                  * Returns the color to use for the background if node is selected.
                  */
                 // @ts-ignore
-                getBackgroundSelectionColor(): java.awt.Color
+                public getBackgroundSelectionColor(): java.awt.Color
                 /**
                  * Sets the background color to be used for non selected nodes.
                  */
                 // @ts-ignore
-                setBackgroundNonSelectionColor(newColor: java.awt.Color): void
+                public setBackgroundNonSelectionColor(newColor: java.awt.Color): void
                 /**
                  * Returns the background color to be used for non selected nodes.
                  */
                 // @ts-ignore
-                getBackgroundNonSelectionColor(): java.awt.Color
+                public getBackgroundNonSelectionColor(): java.awt.Color
                 /**
                  * Sets the color to use for the border.
                  */
                 // @ts-ignore
-                setBorderSelectionColor(newColor: java.awt.Color): void
+                public setBorderSelectionColor(newColor: java.awt.Color): void
                 /**
                  * Returns the color the border is drawn.
                  */
                 // @ts-ignore
-                getBorderSelectionColor(): java.awt.Color
+                public getBorderSelectionColor(): java.awt.Color
                 /**
                  * Subclassed to map <code>FontUIResource</code>s to null. If
                  * <code>font</code> is null, or a <code>FontUIResource</code>, this
@@ -229,14 +229,14 @@ declare namespace javax {
                  * a <code>FontUIResource</code>, the font becomes <code>font</code>.
                  */
                 // @ts-ignore
-                setFont(font: java.awt.Font): void
+                public setFont(font: java.awt.Font): void
                 /**
                  * Gets the font of this component.
                  * @return this component's font; if a font has not been set
                  *  for this component, the font of its parent is returned
                  */
                 // @ts-ignore
-                getFont(): java.awt.Font
+                public getFont(): java.awt.Font
                 /**
                  * Subclassed to map <code>ColorUIResource</code>s to null. If
                  * <code>color</code> is null, or a <code>ColorUIResource</code>, this
@@ -246,7 +246,7 @@ declare namespace javax {
                  * <code>color</code>.
                  */
                 // @ts-ignore
-                setBackground(color: java.awt.Color): void
+                public setBackground(color: java.awt.Color): void
                 /**
                  * Configures the renderer based on the passed in components.
                  * The value is set from messaging the tree with
@@ -257,54 +257,25 @@ declare namespace javax {
                  * parameters.
                  */
                 // @ts-ignore
-                getTreeCellRendererComponent(tree: javax.swing.JTree, value: any, sel: boolean, expanded: boolean, leaf: boolean, row: number /*int*/, hasFocus: boolean): java.awt.Component
+                public getTreeCellRendererComponent(tree: javax.swing.JTree, value: java.lang.Object | any, sel: boolean, expanded: boolean, leaf: boolean, row: number /*int*/, hasFocus: boolean): java.awt.Component
                 /**
                  * Paints the value.  The background is filled based on selected.
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics): void
+                public paint(g: java.awt.Graphics): void
                 /**
                  * Overrides <code>JComponent.getPreferredSize</code> to
                  * return slightly wider preferred size value.
                  */
                 // @ts-ignore
-                getPreferredSize(): java.awt.Dimension
+                public getPreferredSize(): java.awt.Dimension
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                validate(): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 * @since 1.5
-                 */
-                // @ts-ignore
-                invalidate(): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                revalidate(): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
-                /**
-                 * Overridden for performance reasons.
-                 * See the <a href="#override">Implementation Note</a>
-                 * for more information.
-                 */
-                // @ts-ignore
-                repaint(r: java.awt.Rectangle): void
+                public validate(): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
@@ -312,70 +283,99 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                repaint(): void
+                public invalidate(): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+                public revalidate(): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: number /*byte*/, newValue: number /*byte*/): void
+                public repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: string, newValue: string): void
+                public repaint(r: java.awt.Rectangle): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 * @since 1.5
+                 */
+                // @ts-ignore
+                public repaint(): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: number /*short*/, newValue: number /*short*/): void
+                firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: number /*int*/, newValue: number /*int*/): void
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*byte*/, newValue: number /*byte*/): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: number /*long*/, newValue: number /*long*/): void
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: string, newValue: string): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: number /*float*/, newValue: number /*float*/): void
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*short*/, newValue: number /*short*/): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: number /*double*/, newValue: number /*double*/): void
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*int*/, newValue: number /*int*/): void
                 /**
                  * Overridden for performance reasons.
                  * See the <a href="#override">Implementation Note</a>
                  * for more information.
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*long*/, newValue: number /*long*/): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*float*/, newValue: number /*float*/): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*double*/, newValue: number /*double*/): void
+                /**
+                 * Overridden for performance reasons.
+                 * See the <a href="#override">Implementation Note</a>
+                 * for more information.
+                 */
+                // @ts-ignore
+                public firePropertyChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
             }
         }
     }

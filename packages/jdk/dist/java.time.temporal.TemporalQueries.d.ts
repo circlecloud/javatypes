@@ -78,7 +78,7 @@ declare namespace java {
                  * @return a query that can obtain the zone ID of a temporal, not null
                  */
                 // @ts-ignore
-                zoneId(): java.time.temporal.TemporalQuery<java.time.ZoneId>
+                public static zoneId(): java.time.temporal.TemporalQuery<java.time.ZoneId>
                 /**
                  * A query for the {@code Chronology}.
                  * <p>
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return a query that can obtain the chronology of a temporal, not null
                  */
                 // @ts-ignore
-                chronology(): java.time.temporal.TemporalQuery<java.time.chrono.Chronology>
+                public static chronology(): java.time.temporal.TemporalQuery<java.time.chrono.Chronology>
                 /**
                  * A query for the smallest supported unit.
                  * <p>
@@ -148,7 +148,7 @@ declare namespace java {
                  * @return a query that can obtain the precision of a temporal, not null
                  */
                 // @ts-ignore
-                precision(): java.time.temporal.TemporalQuery<java.time.temporal.TemporalUnit>
+                public static precision(): java.time.temporal.TemporalQuery<java.time.temporal.TemporalUnit>
                 /**
                  * A lenient query for the {@code ZoneId}, falling back to the {@code ZoneOffset}.
                  * <p>
@@ -167,7 +167,7 @@ declare namespace java {
                  * @return a query that can obtain the zone ID or offset of a temporal, not null
                  */
                 // @ts-ignore
-                zone(): java.time.temporal.TemporalQuery<java.time.ZoneId>
+                public static zone(): java.time.temporal.TemporalQuery<java.time.ZoneId>
                 /**
                  * A query for {@code ZoneOffset} returning null if not found.
                  * <p>
@@ -187,7 +187,7 @@ declare namespace java {
                  * @return a query that can obtain the offset of a temporal, not null
                  */
                 // @ts-ignore
-                offset(): java.time.temporal.TemporalQuery<java.time.ZoneOffset>
+                public static offset(): java.time.temporal.TemporalQuery<java.time.ZoneOffset>
                 /**
                  * A query for {@code LocalDate} returning null if not found.
                  * <p>
@@ -207,7 +207,7 @@ declare namespace java {
                  * @return a query that can obtain the date of a temporal, not null
                  */
                 // @ts-ignore
-                localDate(): java.time.temporal.TemporalQuery<java.time.LocalDate>
+                public static localDate(): java.time.temporal.TemporalQuery<java.time.LocalDate>
                 /**
                  * A query for {@code LocalTime} returning null if not found.
                  * <p>
@@ -227,7 +227,7 @@ declare namespace java {
                  * @return a query that can obtain the time of a temporal, not null
                  */
                 // @ts-ignore
-                localTime(): java.time.temporal.TemporalQuery<java.time.LocalTime>
+                public static localTime(): java.time.temporal.TemporalQuery<java.time.LocalTime>
             }
         }
     }

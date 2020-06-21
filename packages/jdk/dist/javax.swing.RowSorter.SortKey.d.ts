@@ -24,19 +24,19 @@ declare namespace javax {
                  * @return index of column
                  */
                 // @ts-ignore
-                getColumn(): int
+                public getColumn(): number /*int*/
                 /**
                  * Returns the sort order of the column.
                  * @return the sort order of the column
                  */
                 // @ts-ignore
-                getSortOrder(): javax.swing.SortOrder
+                public getSortOrder(): javax.swing.SortOrder
                 /**
                  * Returns the hash code for this <code>SortKey</code>.
                  * @return hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns true if this object equals the specified object.
                  * If the specified object is a <code>SortKey</code> and
@@ -46,7 +46,7 @@ declare namespace javax {
                  * @return true if <code>o</code> is equal to this <code>SortKey</code>
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
             }
         }
     }

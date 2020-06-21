@@ -47,7 +47,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if bindings is null.
              */
             // @ts-ignore
-            setBindings(bindings: javax.script.Bindings): void
+            public setBindings(bindings: javax.script.Bindings): void
             /**
              * <code>getBindings</code> returns the value of the <code>globalScope</code> field.
              * ScriptEngineManager sets this <code>Bindings</code> as global bindings for
@@ -55,7 +55,7 @@ declare namespace javax {
              * @return The globalScope field.
              */
             // @ts-ignore
-            getBindings(): javax.script.Bindings
+            public getBindings(): javax.script.Bindings
             /**
              * Sets the specified key/value pair in the Global Scope.
              * @param key Key to set
@@ -64,14 +64,14 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty string.
              */
             // @ts-ignore
-            put(key: string, value: any): void
+            public put(key: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * Gets the value for the specified key in the Global Scope
              * @param key The key whose value is to be returned.
              * @return The value for the specified key.
              */
             // @ts-ignore
-            get(key: string): java.lang.Object
+            public get(key: java.lang.String | string): any
             /**
              * Looks up and creates a <code>ScriptEngine</code> for a given  name.
              * The algorithm first searches for a <code>ScriptEngineFactory</code> that has been
@@ -89,7 +89,7 @@ declare namespace javax {
              * @throws NullPointerException if shortName is null.
              */
             // @ts-ignore
-            getEngineByName(shortName: string): javax.script.ScriptEngine
+            public getEngineByName(shortName: java.lang.String | string): javax.script.ScriptEngine
             /**
              * Look up and create a <code>ScriptEngine</code> for a given extension.  The algorithm
              * used by <code>getEngineByName</code> is used except that the search starts
@@ -101,7 +101,7 @@ declare namespace javax {
              * @throws NullPointerException if extension is null.
              */
             // @ts-ignore
-            getEngineByExtension(extension: string): javax.script.ScriptEngine
+            public getEngineByExtension(extension: java.lang.String | string): javax.script.ScriptEngine
             /**
              * Look up and create a <code>ScriptEngine</code> for a given mime type.  The algorithm
              * used by <code>getEngineByName</code> is used except that the search starts
@@ -113,14 +113,14 @@ declare namespace javax {
              * @throws NullPointerException if mimeType is null.
              */
             // @ts-ignore
-            getEngineByMimeType(mimeType: string): javax.script.ScriptEngine
+            public getEngineByMimeType(mimeType: java.lang.String | string): javax.script.ScriptEngine
             /**
              * Returns a list whose elements are instances of all the <code>ScriptEngineFactory</code> classes
              * found by the discovery mechanism.
              * @return List of all discovered <code>ScriptEngineFactory</code>s.
              */
             // @ts-ignore
-            getEngineFactories(): java.util.List<javax.script.ScriptEngineFactory>
+            public getEngineFactories(): Array<javax.script.ScriptEngineFactory>
             /**
              * Registers a <code>ScriptEngineFactory</code> to handle a language
              * name.  Overrides any such association found using the Discovery mechanism.
@@ -129,7 +129,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            registerEngineName(name: string, factory: javax.script.ScriptEngineFactory): void
+            public registerEngineName(name: java.lang.String | string, factory: javax.script.ScriptEngineFactory): void
             /**
              * Registers a <code>ScriptEngineFactory</code> to handle a mime type.
              * Overrides any such association found using the Discovery mechanism.
@@ -139,7 +139,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            registerEngineMimeType(type: string, factory: javax.script.ScriptEngineFactory): void
+            public registerEngineMimeType(type: java.lang.String | string, factory: javax.script.ScriptEngineFactory): void
             /**
              * Registers a <code>ScriptEngineFactory</code> to handle an extension.
              * Overrides any such association found using the Discovery mechanism.
@@ -149,7 +149,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            registerEngineExtension(extension: string, factory: javax.script.ScriptEngineFactory): void
+            public registerEngineExtension(extension: java.lang.String | string, factory: javax.script.ScriptEngineFactory): void
         }
     }
 }

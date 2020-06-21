@@ -36,13 +36,13 @@ declare namespace java {
              * This could be used by an application as a "far past" date.
              */
             // @ts-ignore
-            readonly MIN: java.time.LocalDate
+            public static readonly MIN: java.time.LocalDate
             /**
              * The maximum supported {@code LocalDate}, '+999999999-12-31'.
              * This could be used by an application as a "far future" date.
              */
             // @ts-ignore
-            readonly MAX: java.time.LocalDate
+            public static readonly MAX: java.time.LocalDate
             /**
              * Obtains the current date from the system clock in the default time-zone.
              * <p>
@@ -54,7 +54,7 @@ declare namespace java {
              * @return the current date using the system clock and default time-zone, not null
              */
             // @ts-ignore
-            now(): java.time.LocalDate
+            public static now(): java.time.LocalDate
             /**
              * Obtains the current date from the system clock in the specified time-zone.
              * <p>
@@ -67,7 +67,7 @@ declare namespace java {
              * @return the current date using the system clock, not null
              */
             // @ts-ignore
-            now(zone: java.time.ZoneId): java.time.LocalDate
+            public static now(zone: java.time.ZoneId): java.time.LocalDate
             /**
              * Obtains the current date from the specified clock.
              * <p>
@@ -78,7 +78,7 @@ declare namespace java {
              * @return the current date, not null
              */
             // @ts-ignore
-            now(clock: java.time.Clock): java.time.LocalDate
+            public static now(clock: java.time.Clock): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from a year, month and day.
              * <p>
@@ -92,7 +92,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month-year
              */
             // @ts-ignore
-            of(year: number /*int*/, month: java.time.Month, dayOfMonth: number /*int*/): java.time.LocalDate
+            public static of(year: number /*int*/, month: java.time.Month, dayOfMonth: number /*int*/): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from a year, month and day.
              * <p>
@@ -106,7 +106,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month-year
              */
             // @ts-ignore
-            of(year: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.LocalDate
+            public static of(year: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from a year and day-of-year.
              * <p>
@@ -119,7 +119,7 @@ declare namespace java {
              *   or if the day-of-year is invalid for the year
              */
             // @ts-ignore
-            ofYearDay(year: number /*int*/, dayOfYear: number /*int*/): java.time.LocalDate
+            public static ofYearDay(year: number /*int*/, dayOfYear: number /*int*/): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from the epoch day count.
              * <p>
@@ -131,7 +131,7 @@ declare namespace java {
              * @throws DateTimeException if the epoch day exceeds the supported date range
              */
             // @ts-ignore
-            ofEpochDay(epochDay: number /*long*/): java.time.LocalDate
+            public static ofEpochDay(epochDay: number /*long*/): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from a temporal object.
              * <p>
@@ -149,7 +149,7 @@ declare namespace java {
              * @throws DateTimeException if unable to convert to a {#code LocalDate}
              */
             // @ts-ignore
-            from(temporal: java.time.temporal.TemporalAccessor): java.time.LocalDate
+            public static from(temporal: java.time.temporal.TemporalAccessor): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from a text string such as {@code 2007-12-03}.
              * <p>
@@ -160,7 +160,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.LocalDate
+            public static parse(text: java.lang.CharSequence): java.time.LocalDate
             /**
              * Obtains an instance of {@code LocalDate} from a text string using a specific formatter.
              * <p>
@@ -171,7 +171,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.LocalDate
+            public static parse(text: java.lang.CharSequence, formatter: java.time.format.DateTimeFormatter): java.time.LocalDate
             /**
              * Checks if the specified field is supported.
              * <p>
@@ -207,7 +207,7 @@ declare namespace java {
              * @return true if the field is supported on this date, false if not
              */
             // @ts-ignore
-            isSupported(field: java.time.temporal.TemporalField): boolean
+            public isSupported(field: java.time.temporal.TemporalField): boolean
             /**
              * Checks if the specified unit is supported.
              * <p>
@@ -237,7 +237,7 @@ declare namespace java {
              * @return true if the unit can be added/subtracted, false if not
              */
             // @ts-ignore
-            isSupported(unit: java.time.temporal.TemporalUnit): boolean
+            public isSupported(unit: java.time.temporal.TemporalUnit): boolean
             /**
              * Gets the range of valid values for the specified field.
              * <p>
@@ -261,7 +261,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the field is not supported
              */
             // @ts-ignore
-            range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+            public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
             /**
              * Gets the value of the specified field from this date as an {@code int}.
              * <p>
@@ -289,7 +289,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            get(field: java.time.temporal.TemporalField): int
+            public get(field: java.time.temporal.TemporalField): number /*int*/
             /**
              * Gets the value of the specified field from this date as a {@code long}.
              * <p>
@@ -313,7 +313,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            getLong(field: java.time.temporal.TemporalField): long
+            public getLong(field: java.time.temporal.TemporalField): number /*long*/
             /**
              * Gets the chronology of this date, which is the ISO calendar system.
              * <p>
@@ -324,7 +324,7 @@ declare namespace java {
              * @return the ISO chronology, not null
              */
             // @ts-ignore
-            getChronology(): java.time.chrono.IsoChronology
+            public getChronology(): java.time.chrono.IsoChronology
             /**
              * Gets the era applicable at this date.
              * <p>
@@ -343,7 +343,7 @@ declare namespace java {
              * @return the {#code IsoChronology} era constant applicable at this date, not null
              */
             // @ts-ignore
-            getEra(): java.time.chrono.Era
+            public getEra(): java.time.chrono.Era
             /**
              * Gets the year field.
              * <p>
@@ -354,7 +354,7 @@ declare namespace java {
              * @return the year, from MIN_YEAR to MAX_YEAR
              */
             // @ts-ignore
-            getYear(): int
+            public getYear(): number /*int*/
             /**
              * Gets the month-of-year field from 1 to 12.
              * <p>
@@ -365,7 +365,7 @@ declare namespace java {
              * @see #getMonth()
              */
             // @ts-ignore
-            getMonthValue(): int
+            public getMonthValue(): number /*int*/
             /**
              * Gets the month-of-year field using the {@code Month} enum.
              * <p>
@@ -377,7 +377,7 @@ declare namespace java {
              * @see #getMonthValue()
              */
             // @ts-ignore
-            getMonth(): java.time.Month
+            public getMonth(): java.time.Month
             /**
              * Gets the day-of-month field.
              * <p>
@@ -385,7 +385,7 @@ declare namespace java {
              * @return the day-of-month, from 1 to 31
              */
             // @ts-ignore
-            getDayOfMonth(): int
+            public getDayOfMonth(): number /*int*/
             /**
              * Gets the day-of-year field.
              * <p>
@@ -393,7 +393,7 @@ declare namespace java {
              * @return the day-of-year, from 1 to 365, or 366 in a leap year
              */
             // @ts-ignore
-            getDayOfYear(): int
+            public getDayOfYear(): number /*int*/
             /**
              * Gets the day-of-week field, which is an enum {@code DayOfWeek}.
              * <p>
@@ -407,7 +407,7 @@ declare namespace java {
              * @return the day-of-week, not null
              */
             // @ts-ignore
-            getDayOfWeek(): java.time.DayOfWeek
+            public getDayOfWeek(): java.time.DayOfWeek
             /**
              * Checks if the year is a leap year, according to the ISO proleptic
              * calendar system rules.
@@ -426,7 +426,7 @@ declare namespace java {
              * @return true if the year is leap, false otherwise
              */
             // @ts-ignore
-            isLeapYear(): boolean
+            public isLeapYear(): boolean
             /**
              * Returns the length of the month represented by this date.
              * <p>
@@ -435,7 +435,7 @@ declare namespace java {
              * @return the length of the month in days
              */
             // @ts-ignore
-            lengthOfMonth(): int
+            public lengthOfMonth(): number /*int*/
             /**
              * Returns the length of the year represented by this date.
              * <p>
@@ -443,7 +443,7 @@ declare namespace java {
              * @return 366 if the year is leap, 365 otherwise
              */
             // @ts-ignore
-            lengthOfYear(): int
+            public lengthOfYear(): number /*int*/
             /**
              * Returns an adjusted copy of this date.
              * <p>
@@ -480,7 +480,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(adjuster: java.time.temporal.TemporalAdjuster): java.time.LocalDate
+            public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.LocalDate
             /**
              * Returns a copy of this date with the specified field set to a new value.
              * <p>
@@ -585,7 +585,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.LocalDate
+            public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the year altered.
              * <p>
@@ -597,7 +597,7 @@ declare namespace java {
              * @throws DateTimeException if the year value is invalid
              */
             // @ts-ignore
-            withYear(year: number /*int*/): java.time.LocalDate
+            public withYear(year: number /*int*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the month-of-year altered.
              * <p>
@@ -609,7 +609,7 @@ declare namespace java {
              * @throws DateTimeException if the month-of-year value is invalid
              */
             // @ts-ignore
-            withMonth(month: number /*int*/): java.time.LocalDate
+            public withMonth(month: number /*int*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the day-of-month altered.
              * <p>
@@ -622,7 +622,7 @@ declare namespace java {
              *   or if the day-of-month is invalid for the month-year
              */
             // @ts-ignore
-            withDayOfMonth(dayOfMonth: number /*int*/): java.time.LocalDate
+            public withDayOfMonth(dayOfMonth: number /*int*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the day-of-year altered.
              * <p>
@@ -635,7 +635,7 @@ declare namespace java {
              *   or if the day-of-year is invalid for the year
              */
             // @ts-ignore
-            withDayOfYear(dayOfYear: number /*int*/): java.time.LocalDate
+            public withDayOfYear(dayOfYear: number /*int*/): java.time.LocalDate
             /**
              * Returns a copy of this date with the specified amount added.
              * <p>
@@ -656,7 +656,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.LocalDate
+            public plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.LocalDate
             /**
              * Returns a copy of this date with the specified amount added.
              * <p>
@@ -738,7 +738,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalDate
+            public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of years added.
              * <p>
@@ -759,7 +759,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusYears(yearsToAdd: number /*long*/): java.time.LocalDate
+            public plusYears(yearsToAdd: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of months added.
              * <p>
@@ -780,7 +780,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusMonths(monthsToAdd: number /*long*/): java.time.LocalDate
+            public plusMonths(monthsToAdd: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of weeks added.
              * <p>
@@ -796,7 +796,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusWeeks(weeksToAdd: number /*long*/): java.time.LocalDate
+            public plusWeeks(weeksToAdd: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of days added.
              * <p>
@@ -812,7 +812,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            plusDays(daysToAdd: number /*long*/): java.time.LocalDate
+            public plusDays(daysToAdd: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this date with the specified amount subtracted.
              * <p>
@@ -833,7 +833,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.LocalDate
+            public minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.LocalDate
             /**
              * Returns a copy of this date with the specified amount subtracted.
              * <p>
@@ -853,7 +853,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalDate
+            public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of years subtracted.
              * <p>
@@ -874,7 +874,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusYears(yearsToSubtract: number /*long*/): java.time.LocalDate
+            public minusYears(yearsToSubtract: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of months subtracted.
              * <p>
@@ -895,7 +895,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusMonths(monthsToSubtract: number /*long*/): java.time.LocalDate
+            public minusMonths(monthsToSubtract: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of weeks subtracted.
              * <p>
@@ -911,7 +911,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusWeeks(weeksToSubtract: number /*long*/): java.time.LocalDate
+            public minusWeeks(weeksToSubtract: number /*long*/): java.time.LocalDate
             /**
              * Returns a copy of this {@code LocalDate} with the specified number of days subtracted.
              * <p>
@@ -927,7 +927,7 @@ declare namespace java {
              * @throws DateTimeException if the result exceeds the supported date range
              */
             // @ts-ignore
-            minusDays(daysToSubtract: number /*long*/): java.time.LocalDate
+            public minusDays(daysToSubtract: number /*long*/): java.time.LocalDate
             /**
              * Queries this date using the specified query.
              * <p>
@@ -946,7 +946,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs (defined by the query)
              */
             // @ts-ignore
-            query<R>(query: java.time.temporal.TemporalQuery<R>): R
+            public query<R>(query: java.time.temporal.TemporalQuery<R>): R
             /**
              * Adjusts the specified temporal object to have the same date as this object.
              * <p>
@@ -971,7 +971,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public adjustInto(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Calculates the amount of time until another date in terms of the specified unit.
              * <p>
@@ -1019,7 +1019,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+            public until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Calculates the period between this date and another date as a {@code Period}.
              * <p>
@@ -1052,7 +1052,7 @@ declare namespace java {
              * @return the period between this date and the end date, not null
              */
             // @ts-ignore
-            until(endDateExclusive: java.time.chrono.ChronoLocalDate): java.time.Period
+            public until(endDateExclusive: java.time.chrono.ChronoLocalDate): java.time.Period
             /**
              * Formats this date using the specified formatter.
              * <p>
@@ -1062,7 +1062,7 @@ declare namespace java {
              * @throws DateTimeException if an error occurs during printing
              */
             // @ts-ignore
-            format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+            public format(formatter: java.time.format.DateTimeFormatter): string
             /**
              * Combines this date with a time to create a {@code LocalDateTime}.
              * <p>
@@ -1072,7 +1072,7 @@ declare namespace java {
              * @return the local date-time formed from this date and the specified time, not null
              */
             // @ts-ignore
-            atTime(time: java.time.LocalTime): java.time.LocalDateTime
+            public atTime(time: java.time.LocalTime): java.time.LocalDateTime
             /**
              * Combines this date with a time to create a {@code LocalDateTime}.
              * <p>
@@ -1087,7 +1087,7 @@ declare namespace java {
              * @throws DateTimeException if the value of any field is out of range
              */
             // @ts-ignore
-            atTime(hour: number /*int*/, minute: number /*int*/): java.time.LocalDateTime
+            public atTime(hour: number /*int*/, minute: number /*int*/): java.time.LocalDateTime
             /**
              * Combines this date with a time to create a {@code LocalDateTime}.
              * <p>
@@ -1103,7 +1103,7 @@ declare namespace java {
              * @throws DateTimeException if the value of any field is out of range
              */
             // @ts-ignore
-            atTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/): java.time.LocalDateTime
+            public atTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/): java.time.LocalDateTime
             /**
              * Combines this date with a time to create a {@code LocalDateTime}.
              * <p>
@@ -1119,7 +1119,7 @@ declare namespace java {
              * @throws DateTimeException if the value of any field is out of range
              */
             // @ts-ignore
-            atTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, nanoOfSecond: number /*int*/): java.time.LocalDateTime
+            public atTime(hour: number /*int*/, minute: number /*int*/, second: number /*int*/, nanoOfSecond: number /*int*/): java.time.LocalDateTime
             /**
              * Combines this date with an offset time to create an {@code OffsetDateTime}.
              * <p>
@@ -1129,7 +1129,7 @@ declare namespace java {
              * @return the offset date-time formed from this date and the specified time, not null
              */
             // @ts-ignore
-            atTime(time: java.time.OffsetTime): java.time.OffsetDateTime
+            public atTime(time: java.time.OffsetTime): java.time.OffsetDateTime
             /**
              * Combines this date with the time of midnight to create a {@code LocalDateTime}
              * at the start of this date.
@@ -1139,7 +1139,7 @@ declare namespace java {
              * @return the local date-time of midnight at the start of this date, not null
              */
             // @ts-ignore
-            atStartOfDay(): java.time.LocalDateTime
+            public atStartOfDay(): java.time.LocalDateTime
             /**
              * Returns a zoned date-time from this date at the earliest valid time according
              * to the rules in the time-zone.
@@ -1160,9 +1160,9 @@ declare namespace java {
              * @return the zoned date-time formed from this date and the earliest valid time for the zone, not null
              */
             // @ts-ignore
-            atStartOfDay(zone: java.time.ZoneId): java.time.ZonedDateTime
+            public atStartOfDay(zone: java.time.ZoneId): java.time.ZonedDateTime
             // @ts-ignore
-            toEpochDay(): long
+            public toEpochDay(): number /*long*/
             /**
              * Compares this date to another date.
              * <p>
@@ -1177,7 +1177,7 @@ declare namespace java {
              * @return the comparator value, negative if less, positive if greater
              */
             // @ts-ignore
-            compareTo(other: java.time.chrono.ChronoLocalDate): int
+            public compareTo(other: java.time.chrono.ChronoLocalDate): number /*int*/
             /**
              * Checks if this date is after the specified date.
              * <p>
@@ -1199,7 +1199,7 @@ declare namespace java {
              * @return true if this date is after the specified date
              */
             // @ts-ignore
-            isAfter(other: java.time.chrono.ChronoLocalDate): boolean
+            public isAfter(other: java.time.chrono.ChronoLocalDate): boolean
             /**
              * Checks if this date is before the specified date.
              * <p>
@@ -1221,7 +1221,7 @@ declare namespace java {
              * @return true if this date is before the specified date
              */
             // @ts-ignore
-            isBefore(other: java.time.chrono.ChronoLocalDate): boolean
+            public isBefore(other: java.time.chrono.ChronoLocalDate): boolean
             /**
              * Checks if this date is equal to the specified date.
              * <p>
@@ -1243,7 +1243,7 @@ declare namespace java {
              * @return true if this date is equal to the specified date
              */
             // @ts-ignore
-            isEqual(other: java.time.chrono.ChronoLocalDate): boolean
+            public isEqual(other: java.time.chrono.ChronoLocalDate): boolean
             /**
              * Checks if this date is equal to another date.
              * <p>
@@ -1256,13 +1256,13 @@ declare namespace java {
              * @return true if this is equal to the other date
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this date.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this date as a {@code String}, such as {@code 2007-12-03}.
              * <p>
@@ -1270,7 +1270,7 @@ declare namespace java {
              * @return a string representation of this date, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

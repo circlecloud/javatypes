@@ -28,17 +28,17 @@ declare namespace org {
                  * @return True if it is full.
                  */
                 // @ts-ignore
-                isFull(): boolean
+                public isFull(): boolean
                 /**
                  * Check if the cauldron is empty.
                  * @return True if it is empty.
                  */
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Cauldron
+                public clone(): org.bukkit.material.Cauldron
             }
         }
     }

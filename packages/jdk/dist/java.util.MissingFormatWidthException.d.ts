@@ -16,15 +16,15 @@ declare namespace java {
              *          The format specifier which does not have a width
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Returns the format specifier which does not have a width.
              * @return The format specifier which does not have a width
              */
             // @ts-ignore
-            getFormatSpecifier(): java.lang.String
+            getFormatSpecifier(): string
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

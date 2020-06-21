@@ -12,7 +12,7 @@ declare namespace org {
                  * @return List of parts
                  */
                 // @ts-ignore
-                getParts(): java.util.Set<org.bukkit.entity.ComplexEntityPart>
+                getParts(): Array<org.bukkit.entity.ComplexEntityPart>
             }
         }
     }

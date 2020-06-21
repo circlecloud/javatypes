@@ -114,102 +114,102 @@ declare namespace javax {
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly MIDI_TIME_CODE: number /*int*/
+                public static readonly MIDI_TIME_CODE: number /*int*/
                 /**
                  * Status byte for Song Position Pointer message (0xF2, or 242).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly SONG_POSITION_POINTER: number /*int*/
+                public static readonly SONG_POSITION_POINTER: number /*int*/
                 /**
                  * Status byte for MIDI Song Select message (0xF3, or 243).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly SONG_SELECT: number /*int*/
+                public static readonly SONG_SELECT: number /*int*/
                 /**
                  * Status byte for Tune Request message (0xF6, or 246).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly TUNE_REQUEST: number /*int*/
+                public static readonly TUNE_REQUEST: number /*int*/
                 /**
                  * Status byte for End of System Exclusive message (0xF7, or 247).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly END_OF_EXCLUSIVE: number /*int*/
+                public static readonly END_OF_EXCLUSIVE: number /*int*/
                 /**
                  * Status byte for Timing Clock message (0xF8, or 248).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly TIMING_CLOCK: number /*int*/
+                public static readonly TIMING_CLOCK: number /*int*/
                 /**
                  * Status byte for Start message (0xFA, or 250).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly START: number /*int*/
+                public static readonly START: number /*int*/
                 /**
                  * Status byte for Continue message (0xFB, or 251).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly CONTINUE: number /*int*/
+                public static readonly CONTINUE: number /*int*/
                 /**
                  * Status byte for Stop message (0xFC, or 252).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly STOP: number /*int*/
+                public static readonly STOP: number /*int*/
                 /**
                  * Status byte for Active Sensing message (0xFE, or 254).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly ACTIVE_SENSING: number /*int*/
+                public static readonly ACTIVE_SENSING: number /*int*/
                 /**
                  * Status byte for System Reset message (0xFF, or 255).
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly SYSTEM_RESET: number /*int*/
+                public static readonly SYSTEM_RESET: number /*int*/
                 /**
                  * Command value for Note Off message (0x80, or 128)
                  */
                 // @ts-ignore
-                readonly NOTE_OFF: number /*int*/
+                public static readonly NOTE_OFF: number /*int*/
                 /**
                  * Command value for Note On message (0x90, or 144)
                  */
                 // @ts-ignore
-                readonly NOTE_ON: number /*int*/
+                public static readonly NOTE_ON: number /*int*/
                 /**
                  * Command value for Polyphonic Key Pressure (Aftertouch) message (0xA0, or 160)
                  */
                 // @ts-ignore
-                readonly POLY_PRESSURE: number /*int*/
+                public static readonly POLY_PRESSURE: number /*int*/
                 /**
                  * Command value for Control Change message (0xB0, or 176)
                  */
                 // @ts-ignore
-                readonly CONTROL_CHANGE: number /*int*/
+                public static readonly CONTROL_CHANGE: number /*int*/
                 /**
                  * Command value for Program Change message (0xC0, or 192)
                  */
                 // @ts-ignore
-                readonly PROGRAM_CHANGE: number /*int*/
+                public static readonly PROGRAM_CHANGE: number /*int*/
                 /**
                  * Command value for Channel Pressure (Aftertouch) message (0xD0, or 208)
                  */
                 // @ts-ignore
-                readonly CHANNEL_PRESSURE: number /*int*/
+                public static readonly CHANNEL_PRESSURE: number /*int*/
                 /**
                  * Command value for Pitch Bend message (0xE0, or 224)
                  */
                 // @ts-ignore
-                readonly PITCH_BEND: number /*int*/
+                public static readonly PITCH_BEND: number /*int*/
                 /**
                  * Sets the parameters for a MIDI message that takes no data bytes.
                  * @param status    the MIDI status byte
@@ -219,7 +219,7 @@ declare namespace javax {
                  * @see #setMessage(int, int, int, int)
                  */
                 // @ts-ignore
-                setMessage(status: number /*int*/): void
+                public setMessage(status: number /*int*/): void
                 /**
                  * Sets the  parameters for a MIDI message that takes one or two data
                  * bytes.  If the message takes only one data byte, the second data
@@ -235,7 +235,7 @@ declare namespace javax {
                  * @see #setMessage(int)
                  */
                 // @ts-ignore
-                setMessage(status: number /*int*/, data1: number /*int*/, data2: number /*int*/): void
+                public setMessage(status: number /*int*/, data1: number /*int*/, data2: number /*int*/): void
                 /**
                  * Sets the short message parameters for a  channel message
                  * which takes up to two data bytes.  If the message only
@@ -257,7 +257,7 @@ declare namespace javax {
                  * @see #getData2
                  */
                 // @ts-ignore
-                setMessage(command: number /*int*/, channel: number /*int*/, data1: number /*int*/, data2: number /*int*/): void
+                public setMessage(command: number /*int*/, channel: number /*int*/, data1: number /*int*/, data2: number /*int*/): void
                 /**
                  * Obtains the MIDI channel associated with this event.  This method
                  * assumes that the event is a MIDI channel message; if not, the return
@@ -266,7 +266,7 @@ declare namespace javax {
                  * @see #setMessage(int, int, int, int)
                  */
                 // @ts-ignore
-                getChannel(): int
+                public getChannel(): number /*int*/
                 /**
                  * Obtains the MIDI command associated with this event.  This method
                  * assumes that the event is a MIDI channel message; if not, the return
@@ -275,28 +275,28 @@ declare namespace javax {
                  * @see #setMessage(int, int, int, int)
                  */
                 // @ts-ignore
-                getCommand(): int
+                public getCommand(): number /*int*/
                 /**
                  * Obtains the first data byte in the message.
                  * @return the value of the <code>data1</code> field
                  * @see #setMessage(int, int, int)
                  */
                 // @ts-ignore
-                getData1(): int
+                public getData1(): number /*int*/
                 /**
                  * Obtains the second data byte in the message.
                  * @return the value of the <code>data2</code> field
                  * @see #setMessage(int, int, int)
                  */
                 // @ts-ignore
-                getData2(): int
+                public getData2(): number /*int*/
                 /**
                  * Creates a new object of the same class and with the same contents
                  * as this object.
                  * @return a clone of this instance.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Retrieves the number of data bytes associated with a particular
                  * status byte value.
@@ -307,7 +307,7 @@ declare namespace javax {
                  *  short message
                  */
                 // @ts-ignore
-                getDataLength(status: number /*int*/): int
+                getDataLength(status: number /*int*/): number /*int*/
             }
         }
     }

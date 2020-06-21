@@ -13,23 +13,23 @@ declare namespace java {
                      * Mode for a read-only mapping.
                      */
                     // @ts-ignore
-                    readonly READ_ONLY: java.nio.channels.FileChannel.MapMode
+                    public static readonly READ_ONLY: java.nio.channels.FileChannel.MapMode
                     /**
                      * Mode for a read/write mapping.
                      */
                     // @ts-ignore
-                    readonly READ_WRITE: java.nio.channels.FileChannel.MapMode
+                    public static readonly READ_WRITE: java.nio.channels.FileChannel.MapMode
                     /**
                      * Mode for a private (copy-on-write) mapping.
                      */
                     // @ts-ignore
-                    readonly PRIVATE: java.nio.channels.FileChannel.MapMode
+                    public static readonly PRIVATE: java.nio.channels.FileChannel.MapMode
                     /**
                      * Returns a string describing this file-mapping mode.
                      * @return A descriptive string
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

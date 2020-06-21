@@ -54,7 +54,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            equals(obj: java.lang.Object | any): boolean
             /**
              * Returns an array of bytes representing the value of the SQL <code>ROWID</code>
              * designated by this <code>java.sql.RowId</code> object.
@@ -63,7 +63,7 @@ declare namespace java {
              *      java.sql.RowId object.
              */
             // @ts-ignore
-            getBytes(): byte[]
+            getBytes(): number /*byte*/[]
             /**
              * Returns a String representing the value of the SQL ROWID designated by this
              * <code>java.sql.RowId</code> object.
@@ -79,13 +79,13 @@ declare namespace java {
              *      by this <code>java.sql.RowId</code>  object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
             /**
              * Returns a hash code value of this <code>RowId</code> object.
              * @return a hash code for the <code>RowId</code>
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
         }
     }
 }

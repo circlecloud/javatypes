@@ -18,7 +18,7 @@ declare namespace javax {
                  *           message.
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Create an XAException with a given error code.
                  * @param errcode The error code identifying the exception.

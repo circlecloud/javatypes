@@ -23,7 +23,7 @@ declare namespace java {
              * @see <a href="package-summary.html">java.util.stream</a>
              */
             // @ts-ignore
-            interface DoubleStream extends java.util.stream.BaseStream<java.lang.Double, java.util.stream.DoubleStream> {
+            interface DoubleStream extends java.util.stream.BaseStream<java.lang.Double | number, java.util.stream.DoubleStream> {
                 /**
                  * Returns a stream consisting of the elements of this stream that match
                  * the given predicate.
@@ -36,7 +36,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                filter(predicate: java.util.function.DoublePredicate | java.util.function$.DoublePredicate): java.util.stream.DoubleStream
+                filter(predicate: java.util.function$.DoublePredicate): java.util.stream.DoubleStream
                 /**
                  * Returns a stream consisting of the results of applying the given
                  * function to the elements of this stream.
@@ -48,7 +48,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                map(mapper: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): java.util.stream.DoubleStream
+                map(mapper: java.util.function$.DoubleUnaryOperator): java.util.stream.DoubleStream
                 /**
                  * Returns an object-valued {@code Stream} consisting of the results of
                  * applying the given function to the elements of this stream.
@@ -61,7 +61,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToObj<U>(mapper: java.util.function.DoubleFunction<U> | java.util.function$.DoubleFunction<U>): java.util.stream.Stream<U>
+                mapToObj<U>(mapper: java.util.function$.DoubleFunction<any>): java.util.stream.Stream<U>
                 /**
                  * Returns an {@code IntStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -73,7 +73,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToInt(mapper: java.util.function.DoubleToIntFunction | java.util.function$.DoubleToIntFunction): java.util.stream.IntStream
+                mapToInt(mapper: java.util.function$.DoubleToIntFunction): java.util.stream.IntStream
                 /**
                  * Returns a {@code LongStream} consisting of the results of applying the
                  * given function to the elements of this stream.
@@ -85,7 +85,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                mapToLong(mapper: java.util.function.DoubleToLongFunction | java.util.function$.DoubleToLongFunction): java.util.stream.LongStream
+                mapToLong(mapper: java.util.function$.DoubleToLongFunction): java.util.stream.LongStream
                 /**
                  * Returns a stream consisting of the results of replacing each element of
                  * this stream with the contents of a mapped stream produced by applying
@@ -103,7 +103,7 @@ declare namespace java {
                  * @see Stream#flatMap(Function)
                  */
                 // @ts-ignore
-                flatMap(mapper: java.util.function.DoubleFunction<java.util.stream.DoubleStream> | java.util.function$.DoubleFunction<java.util.stream.DoubleStream>): java.util.stream.DoubleStream
+                flatMap(mapper: java.util.function$.DoubleFunction<any>): java.util.stream.DoubleStream
                 /**
                  * Returns a stream consisting of the distinct elements of this stream. The
                  * elements are compared for equality according to
@@ -150,7 +150,7 @@ declare namespace java {
                  * @return the new stream
                  */
                 // @ts-ignore
-                peek(action: java.util.function.DoubleConsumer | java.util.function$.DoubleConsumer): java.util.stream.DoubleStream
+                peek(action: java.util.function$.DoubleConsumer): java.util.stream.DoubleStream
                 /**
                  * Returns a stream consisting of the elements of this stream, truncated
                  * to be no longer than {@code maxSize} in length.
@@ -213,7 +213,7 @@ declare namespace java {
                  *                non-interfering</a> action to perform on the elements
                  */
                 // @ts-ignore
-                forEach(action: java.util.function.DoubleConsumer | java.util.function$.DoubleConsumer): void
+                forEach(action: java.util.function$.DoubleConsumer): void
                 /**
                  * Performs an action for each element of this stream, guaranteeing that
                  * each element is processed in encounter order for streams that have a
@@ -225,7 +225,7 @@ declare namespace java {
                  * @see #forEach(DoubleConsumer)
                  */
                 // @ts-ignore
-                forEachOrdered(action: java.util.function.DoubleConsumer | java.util.function$.DoubleConsumer): void
+                forEachOrdered(action: java.util.function$.DoubleConsumer): void
                 /**
                  * Returns an array containing the elements of this stream.
                  * <p>This is a <a href="package-summary.html#StreamOps">terminal
@@ -233,7 +233,7 @@ declare namespace java {
                  * @return an array containing the elements of this stream
                  */
                 // @ts-ignore
-                toArray(): double[]
+                toArray(): number /*double*/[]
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using the provided identity value and an
@@ -283,7 +283,7 @@ declare namespace java {
                  * @see #average()
                  */
                 // @ts-ignore
-                reduce(identity: number /*double*/, op: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): double
+                reduce(identity: number /*double*/, op: java.util.function$.DoubleBinaryOperator): number /*double*/
                 /**
                  * Performs a <a href="package-summary.html#Reduction">reduction</a> on the
                  * elements of this stream, using an
@@ -316,7 +316,7 @@ declare namespace java {
                  * @see #reduce(double, DoubleBinaryOperator)
                  */
                 // @ts-ignore
-                reduce(op: java.util.function.DoubleBinaryOperator | java.util.function$.DoubleBinaryOperator): java.util.OptionalDouble
+                reduce(op: java.util.function$.DoubleBinaryOperator): java.util.OptionalDouble
                 /**
                  * Performs a <a href="package-summary.html#MutableReduction">mutable
                  * reduction</a> operation on the elements of this stream.  A mutable
@@ -352,7 +352,7 @@ declare namespace java {
                  * @see Stream#collect(Supplier, BiConsumer, BiConsumer)
                  */
                 // @ts-ignore
-                collect<R>(supplier: java.util.function.Supplier<R> | java.util.function$.Supplier<R>, accumulator: java.util.function.ObjDoubleConsumer<R> | java.util.function$.ObjDoubleConsumer<R>, combiner: java.util.function.BiConsumer<R, R> | java.util.function$.BiConsumer<R, R>): R
+                collect<R>(supplier: java.util.function$.Supplier<R>, accumulator: java.util.function$.ObjDoubleConsumer<R>, combiner: java.util.function$.BiConsumer<R, R>): R
                 /**
                  * Returns the sum of elements in this stream.
                  * Summation is a special case of a <a
@@ -384,7 +384,7 @@ declare namespace java {
                  * @return the sum of elements in this stream
                  */
                 // @ts-ignore
-                sum(): double
+                sum(): number /*double*/
                 /**
                  * Returns an {@code OptionalDouble} describing the minimum element of this
                  * stream, or an empty OptionalDouble if this stream is empty.  The minimum
@@ -433,7 +433,7 @@ declare namespace java {
                  * @return the count of elements in this stream
                  */
                 // @ts-ignore
-                count(): long
+                count(): number /*long*/
                 /**
                  * Returns an {@code OptionalDouble} describing the arithmetic
                  * mean of elements of this stream, or an empty optional if this
@@ -483,7 +483,7 @@ declare namespace java {
                  *  predicate, otherwise {@code false}
                  */
                 // @ts-ignore
-                anyMatch(predicate: java.util.function.DoublePredicate | java.util.function$.DoublePredicate): boolean
+                anyMatch(predicate: java.util.function$.DoublePredicate): boolean
                 /**
                  * Returns whether all elements of this stream match the provided predicate.
                  * May not evaluate the predicate on all elements if not necessary for
@@ -502,7 +502,7 @@ declare namespace java {
                  *  provided predicate or the stream is empty, otherwise {@code false}
                  */
                 // @ts-ignore
-                allMatch(predicate: java.util.function.DoublePredicate | java.util.function$.DoublePredicate): boolean
+                allMatch(predicate: java.util.function$.DoublePredicate): boolean
                 /**
                  * Returns whether no elements of this stream match the provided predicate.
                  * May not evaluate the predicate on all elements if not necessary for
@@ -521,7 +521,7 @@ declare namespace java {
                  *  provided predicate or the stream is empty, otherwise {@code false}
                  */
                 // @ts-ignore
-                noneMatch(predicate: java.util.function.DoublePredicate | java.util.function$.DoublePredicate): boolean
+                noneMatch(predicate: java.util.function$.DoublePredicate): boolean
                 /**
                  * Returns an {@link OptionalDouble} describing the first element of this
                  * stream, or an empty {@code OptionalDouble} if the stream is empty.  If
@@ -558,7 +558,7 @@ declare namespace java {
                  *  each boxed to a {@code Double}
                  */
                 // @ts-ignore
-                boxed(): java.util.stream.Stream<java.lang.Double>
+                boxed(): java.util.stream.Stream<java.lang.Double | number>
                 // @ts-ignore
                 sequential(): java.util.stream.DoubleStream
                 // @ts-ignore
@@ -608,7 +608,7 @@ declare namespace java {
                  * @return a new sequential {#code DoubleStream}
                  */
                 // @ts-ignore
-                iterate(seed: number /*double*/, f: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): java.util.stream.DoubleStream
+                iterate(seed: number /*double*/, f: java.util.function$.DoubleUnaryOperator): java.util.stream.DoubleStream
                 /**
                  * Returns an infinite sequential unordered stream where each element is
                  * generated by the provided {@code DoubleSupplier}.  This is suitable for
@@ -617,7 +617,7 @@ declare namespace java {
                  * @return a new infinite sequential unordered {#code DoubleStream}
                  */
                 // @ts-ignore
-                generate(s: java.util.function.DoubleSupplier | java.util.function$.DoubleSupplier): java.util.stream.DoubleStream
+                generate(s: java.util.function$.DoubleSupplier): java.util.stream.DoubleStream
                 /**
                  * Creates a lazily concatenated stream whose elements are all the
                  * elements of the first stream followed by all the elements of the

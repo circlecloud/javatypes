@@ -76,7 +76,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class TimeZone extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+        abstract class TimeZone extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -90,7 +90,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly SHORT: number /*int*/
+            public static readonly SHORT: number /*int*/
             /**
              * A style specifier for <code>getDisplayName()</code> indicating
              * a long name, such as "Pacific Standard Time."
@@ -98,7 +98,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly LONG: number /*int*/
+            public static readonly LONG: number /*int*/
             /**
              * Gets the time zone offset, for current date, modified in case of
              * daylight savings. This is the offset to add to UTC to get local time.
@@ -120,7 +120,7 @@ declare namespace java {
              * @see Calendar#DST_OFFSET
              */
             // @ts-ignore
-            abstract getOffset(era: number /*int*/, year: number /*int*/, month: number /*int*/, day: number /*int*/, dayOfWeek: number /*int*/, milliseconds: number /*int*/): int
+            public abstract getOffset(era: number /*int*/, year: number /*int*/, month: number /*int*/, day: number /*int*/, dayOfWeek: number /*int*/, milliseconds: number /*int*/): number /*int*/
             /**
              * Returns the offset of this time zone from UTC at the specified
              * date. If Daylight Saving Time is in effect at the specified
@@ -137,7 +137,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getOffset(date: number /*long*/): int
+            public getOffset(date: number /*long*/): number /*int*/
             /**
              * Sets the base time zone offset to GMT.
              * This is the offset to add to UTC to get local time.
@@ -150,7 +150,7 @@ declare namespace java {
              * @param offsetMillis the given base time zone offset to GMT.
              */
             // @ts-ignore
-            abstract setRawOffset(offsetMillis: number /*int*/): void
+            public abstract setRawOffset(offsetMillis: number /*int*/): void
             /**
              * Returns the amount of time in milliseconds to add to UTC to get
              * standard time in this time zone. Because this value is not
@@ -167,20 +167,20 @@ declare namespace java {
              * @see Calendar#ZONE_OFFSET
              */
             // @ts-ignore
-            abstract getRawOffset(): int
+            public abstract getRawOffset(): number /*int*/
             /**
              * Gets the ID of this time zone.
              * @return the ID of this time zone.
              */
             // @ts-ignore
-            getID(): java.lang.String
+            public getID(): string
             /**
              * Sets the time zone ID. This does not change any other data in
              * the time zone object.
              * @param ID the new time zone ID.
              */
             // @ts-ignore
-            setID(ID: string): void
+            public setID(ID: java.lang.String | string): void
             /**
              * Returns a long standard time name of this {@code TimeZone} suitable for
              * presentation to the user in the default locale.
@@ -196,7 +196,7 @@ declare namespace java {
              * @see Locale.Category
              */
             // @ts-ignore
-            getDisplayName(): java.lang.String
+            public getDisplayName(): string
             /**
              * Returns a long standard time name of this {@code TimeZone} suitable for
              * presentation to the user in the specified {@code locale}.
@@ -211,7 +211,7 @@ declare namespace java {
              * @see #getDisplayName(boolean, int, Locale)
              */
             // @ts-ignore
-            getDisplayName(locale: java.util.Locale): java.lang.String
+            public getDisplayName(locale: java.util.Locale): string
             /**
              * Returns a name in the specified {@code style} of this {@code TimeZone}
              * suitable for presentation to the user in the default locale. If the
@@ -235,7 +235,7 @@ declare namespace java {
              * @see java.text.DateFormatSymbols#getZoneStrings()
              */
             // @ts-ignore
-            getDisplayName(daylight: boolean, style: number /*int*/): java.lang.String
+            public getDisplayName(daylight: boolean, style: number /*int*/): string
             /**
              * Returns a name in the specified {@code style} of this {@code TimeZone}
              * suitable for presentation to the user in the specified {@code
@@ -263,7 +263,7 @@ declare namespace java {
              * @see java.text.DateFormatSymbols#getZoneStrings()
              */
             // @ts-ignore
-            getDisplayName(daylight: boolean, style: number /*int*/, locale: java.util.Locale): java.lang.String
+            public getDisplayName(daylight: boolean, style: number /*int*/, locale: java.util.Locale): string
             /**
              * Returns the amount of time to be added to local standard time
              * to get local wall clock time.
@@ -287,7 +287,7 @@ declare namespace java {
              * @see Calendar#ZONE_OFFSET
              */
             // @ts-ignore
-            getDSTSavings(): int
+            public getDSTSavings(): number /*int*/
             /**
              * Queries if this {@code TimeZone} uses Daylight Saving Time.
              * <p>If an underlying {@code TimeZone} implementation subclass
@@ -302,7 +302,7 @@ declare namespace java {
              * @see Calendar#DST_OFFSET
              */
             // @ts-ignore
-            abstract useDaylightTime(): boolean
+            public abstract useDaylightTime(): boolean
             /**
              * Returns {@code true} if this {@code TimeZone} is currently in
              * Daylight Saving Time, or if a transition from Standard Time to
@@ -320,7 +320,7 @@ declare namespace java {
              * @see Calendar#DST_OFFSET
              */
             // @ts-ignore
-            observesDaylightTime(): boolean
+            public observesDaylightTime(): boolean
             /**
              * Queries if the given {@code date} is in Daylight Saving Time in
              * this time zone.
@@ -329,7 +329,7 @@ declare namespace java {
              *          {@code false}, otherwise.
              */
             // @ts-ignore
-            abstract inDaylightTime(date: java.util.Date): boolean
+            public abstract inDaylightTime(date: java.util.Date): boolean
             /**
              * Gets the <code>TimeZone</code> for the given ID.
              * @param ID the ID for a <code>TimeZone</code>, either an abbreviation
@@ -340,7 +340,7 @@ declare namespace java {
              *  cannot be understood.
              */
             // @ts-ignore
-            getTimeZone(ID: string): java.util.TimeZone
+            public static getTimeZone(ID: java.lang.String | string): java.util.TimeZone
             /**
              * Gets the {@code TimeZone} for the given {@code zoneId}.
              * @param zoneId a {#link ZoneId} from which the time zone ID is obtained
@@ -350,7 +350,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getTimeZone(zoneId: java.time.ZoneId): java.util.TimeZone
+            public static getTimeZone(zoneId: java.time.ZoneId): java.util.TimeZone
             /**
              * Converts this {@code TimeZone} object to a {@code ZoneId}.
              * @return a {#code ZoneId} representing the same time zone as this
@@ -358,7 +358,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toZoneId(): java.time.ZoneId
+            public toZoneId(): java.time.ZoneId
             /**
              * Gets the available IDs according to the given time zone offset in milliseconds.
              * @param rawOffset the given time zone GMT offset in milliseconds.
@@ -368,13 +368,13 @@ declare namespace java {
              * @see #getRawOffset()
              */
             // @ts-ignore
-            getAvailableIDs(rawOffset: number /*int*/): java.lang.String[]
+            public static getAvailableIDs(rawOffset: number /*int*/): string[]
             /**
              * Gets all the available IDs supported.
              * @return an array of IDs.
              */
             // @ts-ignore
-            getAvailableIDs(): java.lang.String[]
+            public static getAvailableIDs(): string[]
             /**
              * Gets the default {@code TimeZone} of the Java virtual machine. If the
              * cached default {@code TimeZone} is available, its clone is returned.
@@ -395,7 +395,7 @@ declare namespace java {
              * @see #setDefault(TimeZone)
              */
             // @ts-ignore
-            getDefault(): java.util.TimeZone
+            public static getDefault(): java.util.TimeZone
             /**
              * Sets the {@code TimeZone} that is returned by the {@code getDefault}
              * method. {@code zone} is cached. If {@code zone} is null, the cached
@@ -409,7 +409,7 @@ declare namespace java {
              * @see PropertyPermission
              */
             // @ts-ignore
-            setDefault(zone: java.util.TimeZone): void
+            public static setDefault(zone: java.util.TimeZone): void
             /**
              * Returns true if this zone has the same rule and offset as another zone.
              * That is, if this zone differs only in ID, if at all.  Returns false
@@ -420,13 +420,13 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            hasSameRules(other: java.util.TimeZone): boolean
+            public hasSameRules(other: java.util.TimeZone): boolean
             /**
              * Creates a copy of this <code>TimeZone</code>.
              * @return a clone of this <code>TimeZone</code>
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
         }
     }
 }

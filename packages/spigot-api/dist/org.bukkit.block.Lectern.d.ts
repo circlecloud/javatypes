@@ -11,7 +11,7 @@ declare namespace org {
                  * @return current page
                  */
                 // @ts-ignore
-                getPage(): int
+                getPage(): number /*int*/
                 /**
                  * Set the current lectern page.
                  * If the page is greater than the number of pages of the book currently in

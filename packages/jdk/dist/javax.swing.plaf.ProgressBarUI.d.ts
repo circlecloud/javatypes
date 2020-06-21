@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Rob Davis
              */
             // @ts-ignore
-            class ProgressBarUI extends javax.swing.plaf.ComponentUI {
+            abstract class ProgressBarUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

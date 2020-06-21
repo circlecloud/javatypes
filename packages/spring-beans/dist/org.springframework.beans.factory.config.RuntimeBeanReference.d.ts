@@ -19,7 +19,7 @@ declare namespace org {
                          * @param beanName name of the target bean
                          */
                         // @ts-ignore
-                        constructor(beanName: string)
+                        constructor(beanName: java.lang.String | string)
                         /**
                          * Create a new RuntimeBeanReference to the given bean name,
                          * with the option to mark it as reference to a bean in the parent factory.
@@ -28,7 +28,7 @@ declare namespace org {
                          *  parent factory
                          */
                         // @ts-ignore
-                        constructor(beanName: string, toParent: boolean)
+                        constructor(beanName: java.lang.String | string, toParent: boolean)
                         /**
                          * Create a new RuntimeBeanReference to a bean of the given type.
                          * @param beanType type of the target bean
@@ -52,32 +52,32 @@ declare namespace org {
                          * @see #getBeanType()
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Return the requested bean type if resolution by type is demanded.
                          * @since 5.2
                          */
                         // @ts-ignore
-                        getBeanType(): java.lang.Class<?>
+                        public getBeanType(): java.lang.Class<any>
                         /**
                          * Return whether this is an explicit reference to a bean in the parent factory.
                          */
                         // @ts-ignore
-                        isToParent(): boolean
+                        public isToParent(): boolean
                         /**
                          * Set the configuration source {@code Object} for this metadata element.
                          * <p>The exact type of the object will depend on the configuration mechanism used.
                          */
                         // @ts-ignore
-                        setSource(source: any): void
+                        public setSource(source: java.lang.Object | any): void
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

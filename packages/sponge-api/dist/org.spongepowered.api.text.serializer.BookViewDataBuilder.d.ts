@@ -17,9 +17,9 @@ declare namespace org {
                         // @ts-ignore
                         buildContent(container: org.spongepowered.api.data.DataView): java.util.Optional<org.spongepowered.api.text.BookView>
                         // @ts-ignore
-                        deserialize(type: object, value: ConfigurationNode): org.spongepowered.api.text.BookView
+                        public deserialize(type: object, value: ConfigurationNode): org.spongepowered.api.text.BookView
                         // @ts-ignore
-                        serialize(type: object, bookView: org.spongepowered.api.text.BookView, value: ConfigurationNode): void
+                        public serialize(type: object, bookView: org.spongepowered.api.text.BookView, value: ConfigurationNode): void
                     }
                 }
             }

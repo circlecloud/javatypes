@@ -28,19 +28,19 @@ declare namespace javax {
                  * @return the MIDI message
                  */
                 // @ts-ignore
-                getMessage(): javax.sound.midi.MidiMessage
+                public getMessage(): javax.sound.midi.MidiMessage
                 /**
                  * Sets the time-stamp for the event, in MIDI ticks
                  * @param tick the new time-stamp, in MIDI ticks
                  */
                 // @ts-ignore
-                setTick(tick: number /*long*/): void
+                public setTick(tick: number /*long*/): void
                 /**
                  * Obtains the time-stamp for the event, in MIDI ticks
                  * @return the time-stamp for the event, in MIDI ticks
                  */
                 // @ts-ignore
-                getTick(): long
+                public getTick(): number /*long*/
             }
         }
     }

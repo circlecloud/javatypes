@@ -16,14 +16,14 @@ declare namespace org {
                      * @return The builder.
                      */
                     // @ts-ignore
-                    withBody(body: number /*byte*/[]): org.springframework.amqp.core.MessageBuilder
+                    public static withBody(body: number /*byte*/[]): org.springframework.amqp.core.MessageBuilder
                     /**
                      * The final message body will be a copy of 'body' in a new array.
                      * @param body The body.
                      * @return The builder.
                      */
                     // @ts-ignore
-                    withClonedBody(body: number /*byte*/[]): org.springframework.amqp.core.MessageBuilder
+                    public static withClonedBody(body: number /*byte*/[]): org.springframework.amqp.core.MessageBuilder
                     /**
                      * The final message body will be a new array containing the byte range from
                      * 'body'.
@@ -34,7 +34,7 @@ declare namespace org {
                      * @see Arrays#copyOfRange(byte[], int, int)
                      */
                     // @ts-ignore
-                    withBody(body: number /*byte*/[], from: number /*int*/, to: number /*int*/): org.springframework.amqp.core.MessageBuilder
+                    public static withBody(body: number /*byte*/[], from: number /*int*/, to: number /*int*/): org.springframework.amqp.core.MessageBuilder
                     /**
                      * The final message body will be a direct reference to the message
                      * body, the MessageProperties will be a shallow copy.
@@ -42,7 +42,7 @@ declare namespace org {
                      * @return The builder.
                      */
                     // @ts-ignore
-                    fromMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.MessageBuilder
+                    public static fromMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.MessageBuilder
                     /**
                      * The final message will have a copy of the message
                      * body, the MessageProperties will be cloned (top level only).
@@ -50,16 +50,16 @@ declare namespace org {
                      * @return The builder.
                      */
                     // @ts-ignore
-                    fromClonedMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.MessageBuilder
+                    public static fromClonedMessage(message: org.springframework.amqp.core.Message): org.springframework.amqp.core.MessageBuilder
                     /**
                      * Makes this builder's properties builder use a reference to properties.
                      * @param properties The properties.
                      * @return this.
                      */
                     // @ts-ignore
-                    andProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessageBuilder
+                    public andProperties(properties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.MessageBuilder
                     // @ts-ignore
-                    build(): org.springframework.amqp.core.Message
+                    public build(): org.springframework.amqp.core.Message
                 }
             }
         }

@@ -28,113 +28,113 @@ declare namespace javax {
          * @author Jeff Dinkins
          */
         // @ts-ignore
-        class AbstractButton extends javax.swing.JComponent implements java.awt.ItemSelectable, javax.swing.SwingConstants {
+        abstract class AbstractButton extends javax.swing.JComponent implements java.awt.ItemSelectable, javax.swing.SwingConstants {
             // @ts-ignore
             constructor()
             /**
              * Identifies a change in the button model.
              */
             // @ts-ignore
-            readonly MODEL_CHANGED_PROPERTY: string
+            public static readonly MODEL_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the button's text.
              */
             // @ts-ignore
-            readonly TEXT_CHANGED_PROPERTY: string
+            public static readonly TEXT_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the button's mnemonic.
              */
             // @ts-ignore
-            readonly MNEMONIC_CHANGED_PROPERTY: string
+            public static readonly MNEMONIC_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the button's margins.
              */
             // @ts-ignore
-            readonly MARGIN_CHANGED_PROPERTY: string
+            public static readonly MARGIN_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the button's vertical alignment.
              */
             // @ts-ignore
-            readonly VERTICAL_ALIGNMENT_CHANGED_PROPERTY: string
+            public static readonly VERTICAL_ALIGNMENT_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the button's horizontal alignment.
              */
             // @ts-ignore
-            readonly HORIZONTAL_ALIGNMENT_CHANGED_PROPERTY: string
+            public static readonly HORIZONTAL_ALIGNMENT_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the button's vertical text position.
              */
             // @ts-ignore
-            readonly VERTICAL_TEXT_POSITION_CHANGED_PROPERTY: string
+            public static readonly VERTICAL_TEXT_POSITION_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change in the button's horizontal text position.
              */
             // @ts-ignore
-            readonly HORIZONTAL_TEXT_POSITION_CHANGED_PROPERTY: string
+            public static readonly HORIZONTAL_TEXT_POSITION_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to having the border drawn,
              * or having it not drawn.
              */
             // @ts-ignore
-            readonly BORDER_PAINTED_CHANGED_PROPERTY: string
+            public static readonly BORDER_PAINTED_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to having the border highlighted when focused,
              * or not.
              */
             // @ts-ignore
-            readonly FOCUS_PAINTED_CHANGED_PROPERTY: string
+            public static readonly FOCUS_PAINTED_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change from rollover enabled to disabled or back
              * to enabled.
              */
             // @ts-ignore
-            readonly ROLLOVER_ENABLED_CHANGED_PROPERTY: string
+            public static readonly ROLLOVER_ENABLED_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to having the button paint the content area.
              */
             // @ts-ignore
-            readonly CONTENT_AREA_FILLED_CHANGED_PROPERTY: string
+            public static readonly CONTENT_AREA_FILLED_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon that represents the button.
              */
             // @ts-ignore
-            readonly ICON_CHANGED_PROPERTY: string
+            public static readonly ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon used when the button has been
              * pressed.
              */
             // @ts-ignore
-            readonly PRESSED_ICON_CHANGED_PROPERTY: string
+            public static readonly PRESSED_ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon used when the button has
              * been selected.
              */
             // @ts-ignore
-            readonly SELECTED_ICON_CHANGED_PROPERTY: string
+            public static readonly SELECTED_ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon used when the cursor is over
              * the button.
              */
             // @ts-ignore
-            readonly ROLLOVER_ICON_CHANGED_PROPERTY: string
+            public static readonly ROLLOVER_ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon used when the cursor is
              * over the button and it has been selected.
              */
             // @ts-ignore
-            readonly ROLLOVER_SELECTED_ICON_CHANGED_PROPERTY: string
+            public static readonly ROLLOVER_SELECTED_ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon used when the button has
              * been disabled.
              */
             // @ts-ignore
-            readonly DISABLED_ICON_CHANGED_PROPERTY: string
+            public static readonly DISABLED_ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * Identifies a change to the icon used when the button has been
              * disabled and selected.
              */
             // @ts-ignore
-            readonly DISABLED_SELECTED_ICON_CHANGED_PROPERTY: string
+            public static readonly DISABLED_SELECTED_ICON_CHANGED_PROPERTY: java.lang.String | string
             /**
              * The data model that determines the button's state.
              */
@@ -181,7 +181,7 @@ declare namespace javax {
              *                the <code>Action</code>.
              */
             // @ts-ignore
-            setHideActionText(hideActionText: boolean): void
+            public setHideActionText(hideActionText: boolean): void
             /**
              * Returns the value of the <code>hideActionText</code> property, which
              * determines whether the button displays text from the
@@ -193,14 +193,14 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getHideActionText(): boolean
+            public getHideActionText(): boolean
             /**
              * Returns the button's text.
              * @return the buttons text
              * @see #setText
              */
             // @ts-ignore
-            getText(): java.lang.String
+            public getText(): string
             /**
              * Sets the button's text.
              * @param text the string used to set the text
@@ -211,14 +211,14 @@ declare namespace javax {
              *   description: The button's text.
              */
             // @ts-ignore
-            setText(text: string): void
+            public setText(text: java.lang.String | string): void
             /**
              * Returns the state of the button. True if the
              * toggle button is selected, false if it's not.
              * @return true if the toggle button is selected, otherwise false
              */
             // @ts-ignore
-            isSelected(): boolean
+            public isSelected(): boolean
             /**
              * Sets the state of the button. Note that this method does not
              * trigger an <code>actionEvent</code>.
@@ -226,13 +226,13 @@ declare namespace javax {
              * @param b  true if the button is selected, otherwise false
              */
             // @ts-ignore
-            setSelected(b: boolean): void
+            public setSelected(b: boolean): void
             /**
              * Programmatically perform a "click". This does the same
              * thing as if the user had pressed and released the button.
              */
             // @ts-ignore
-            doClick(): void
+            public doClick(): void
             /**
              * Programmatically perform a "click". This does the same
              * thing as if the user had pressed and released the button.
@@ -241,7 +241,7 @@ declare namespace javax {
              * @param pressTime the time to "hold down" the button, in milliseconds
              */
             // @ts-ignore
-            doClick(pressTime: number /*int*/): void
+            public doClick(pressTime: number /*int*/): void
             /**
              * Sets space for margin between the button's border and
              * the label. Setting to <code>null</code> will cause the button to
@@ -257,7 +257,7 @@ declare namespace javax {
              *   description: The space between the button's border and the label.
              */
             // @ts-ignore
-            setMargin(m: java.awt.Insets): void
+            public setMargin(m: java.awt.Insets): void
             /**
              * Returns the margin between the button's border and
              * the label.
@@ -266,14 +266,14 @@ declare namespace javax {
              * @see #setMargin
              */
             // @ts-ignore
-            getMargin(): java.awt.Insets
+            public getMargin(): java.awt.Insets
             /**
              * Returns the default icon.
              * @return the default <code>Icon</code>
              * @see #setIcon
              */
             // @ts-ignore
-            getIcon(): javax.swing.Icon
+            public getIcon(): javax.swing.Icon
             /**
              * Sets the button's default icon. This icon is
              * also used as the "pressed" and "disabled" icon if
@@ -286,14 +286,14 @@ declare namespace javax {
              *      description: The button's default icon
              */
             // @ts-ignore
-            setIcon(defaultIcon: javax.swing.Icon): void
+            public setIcon(defaultIcon: javax.swing.Icon): void
             /**
              * Returns the pressed icon for the button.
              * @return the <code>pressedIcon</code> property
              * @see #setPressedIcon
              */
             // @ts-ignore
-            getPressedIcon(): javax.swing.Icon
+            public getPressedIcon(): javax.swing.Icon
             /**
              * Sets the pressed icon for the button.
              * @param pressedIcon the icon used as the "pressed" image
@@ -303,14 +303,14 @@ declare namespace javax {
              *   description: The pressed icon for the button.
              */
             // @ts-ignore
-            setPressedIcon(pressedIcon: javax.swing.Icon): void
+            public setPressedIcon(pressedIcon: javax.swing.Icon): void
             /**
              * Returns the selected icon for the button.
              * @return the <code>selectedIcon</code> property
              * @see #setSelectedIcon
              */
             // @ts-ignore
-            getSelectedIcon(): javax.swing.Icon
+            public getSelectedIcon(): javax.swing.Icon
             /**
              * Sets the selected icon for the button.
              * @param selectedIcon the icon used as the "selected" image
@@ -320,14 +320,14 @@ declare namespace javax {
              *   description: The selected icon for the button.
              */
             // @ts-ignore
-            setSelectedIcon(selectedIcon: javax.swing.Icon): void
+            public setSelectedIcon(selectedIcon: javax.swing.Icon): void
             /**
              * Returns the rollover icon for the button.
              * @return the <code>rolloverIcon</code> property
              * @see #setRolloverIcon
              */
             // @ts-ignore
-            getRolloverIcon(): javax.swing.Icon
+            public getRolloverIcon(): javax.swing.Icon
             /**
              * Sets the rollover icon for the button.
              * @param rolloverIcon the icon used as the "rollover" image
@@ -337,14 +337,14 @@ declare namespace javax {
              *   description: The rollover icon for the button.
              */
             // @ts-ignore
-            setRolloverIcon(rolloverIcon: javax.swing.Icon): void
+            public setRolloverIcon(rolloverIcon: javax.swing.Icon): void
             /**
              * Returns the rollover selection icon for the button.
              * @return the <code>rolloverSelectedIcon</code> property
              * @see #setRolloverSelectedIcon
              */
             // @ts-ignore
-            getRolloverSelectedIcon(): javax.swing.Icon
+            public getRolloverSelectedIcon(): javax.swing.Icon
             /**
              * Sets the rollover selected icon for the button.
              * @param rolloverSelectedIcon the icon used as the
@@ -355,7 +355,7 @@ declare namespace javax {
              *   description: The rollover selected icon for the button.
              */
             // @ts-ignore
-            setRolloverSelectedIcon(rolloverSelectedIcon: javax.swing.Icon): void
+            public setRolloverSelectedIcon(rolloverSelectedIcon: javax.swing.Icon): void
             /**
              * Returns the icon used by the button when it's disabled.
              * If no disabled icon has been set this will forward the call to
@@ -369,7 +369,7 @@ declare namespace javax {
              * @see javax.swing.LookAndFeel#getDisabledIcon
              */
             // @ts-ignore
-            getDisabledIcon(): javax.swing.Icon
+            public getDisabledIcon(): javax.swing.Icon
             /**
              * Sets the disabled icon for the button.
              * @param disabledIcon the icon used as the disabled image
@@ -379,7 +379,7 @@ declare namespace javax {
              *   description: The disabled icon for the button.
              */
             // @ts-ignore
-            setDisabledIcon(disabledIcon: javax.swing.Icon): void
+            public setDisabledIcon(disabledIcon: javax.swing.Icon): void
             /**
              * Returns the icon used by the button when it's disabled and selected.
              * If no disabled selection icon has been set, this will forward
@@ -395,7 +395,7 @@ declare namespace javax {
              * @see javax.swing.LookAndFeel#getDisabledSelectedIcon
              */
             // @ts-ignore
-            getDisabledSelectedIcon(): javax.swing.Icon
+            public getDisabledSelectedIcon(): javax.swing.Icon
             /**
              * Sets the disabled selection icon for the button.
              * @param disabledSelectedIcon the icon used as the disabled
@@ -406,7 +406,7 @@ declare namespace javax {
              *   description: The disabled selection icon for the button.
              */
             // @ts-ignore
-            setDisabledSelectedIcon(disabledSelectedIcon: javax.swing.Icon): void
+            public setDisabledSelectedIcon(disabledSelectedIcon: javax.swing.Icon): void
             /**
              * Returns the vertical alignment of the text and icon.
              * @return the <code>verticalAlignment</code> property, one of the
@@ -418,7 +418,7 @@ declare namespace javax {
              *  </ul>
              */
             // @ts-ignore
-            getVerticalAlignment(): int
+            public getVerticalAlignment(): number /*int*/
             /**
              * Sets the vertical alignment of the icon and text.
              * @param alignment one of the following values:
@@ -437,7 +437,7 @@ declare namespace javax {
              *   description: The vertical alignment of the icon and text.
              */
             // @ts-ignore
-            setVerticalAlignment(alignment: number /*int*/): void
+            public setVerticalAlignment(alignment: number /*int*/): void
             /**
              * Returns the horizontal alignment of the icon and text.
              * {@code AbstractButton}'s default is {@code SwingConstants.CENTER},
@@ -453,7 +453,7 @@ declare namespace javax {
              *  </ul>
              */
             // @ts-ignore
-            getHorizontalAlignment(): int
+            public getHorizontalAlignment(): number /*int*/
             /**
              * Sets the horizontal alignment of the icon and text.
              * {@code AbstractButton}'s default is {@code SwingConstants.CENTER},
@@ -478,7 +478,7 @@ declare namespace javax {
              *   description: The horizontal alignment of the icon and text.
              */
             // @ts-ignore
-            setHorizontalAlignment(alignment: number /*int*/): void
+            public setHorizontalAlignment(alignment: number /*int*/): void
             /**
              * Returns the vertical position of the text relative to the icon.
              * @return the <code>verticalTextPosition</code> property,
@@ -490,7 +490,7 @@ declare namespace javax {
              *  </ul>
              */
             // @ts-ignore
-            getVerticalTextPosition(): int
+            public getVerticalTextPosition(): number /*int*/
             /**
              * Sets the vertical position of the text relative to the icon.
              * @param textPosition  one of the following values:
@@ -507,7 +507,7 @@ declare namespace javax {
              *   description: The vertical position of the text relative to the icon.
              */
             // @ts-ignore
-            setVerticalTextPosition(textPosition: number /*int*/): void
+            public setVerticalTextPosition(textPosition: number /*int*/): void
             /**
              * Returns the horizontal position of the text relative to the icon.
              * @return the <code>horizontalTextPosition</code> property,
@@ -521,7 +521,7 @@ declare namespace javax {
              *  </ul>
              */
             // @ts-ignore
-            getHorizontalTextPosition(): int
+            public getHorizontalTextPosition(): number /*int*/
             /**
              * Sets the horizontal position of the text relative to the icon.
              * @param textPosition one of the following values:
@@ -544,7 +544,7 @@ declare namespace javax {
              *   description: The horizontal position of the text relative to the icon.
              */
             // @ts-ignore
-            setHorizontalTextPosition(textPosition: number /*int*/): void
+            public setHorizontalTextPosition(textPosition: number /*int*/): void
             /**
              * Returns the amount of space between the text and the icon
              * displayed in this button.
@@ -554,7 +554,7 @@ declare namespace javax {
              * @see #setIconTextGap
              */
             // @ts-ignore
-            getIconTextGap(): int
+            public getIconTextGap(): number /*int*/
             /**
              * If both the icon and text properties are set, this property
              * defines the space between them.
@@ -570,7 +570,7 @@ declare namespace javax {
              *                property defines the space between them.
              */
             // @ts-ignore
-            setIconTextGap(iconTextGap: number /*int*/): void
+            public setIconTextGap(iconTextGap: number /*int*/): void
             /**
              * Verify that the {@code key} argument is a legal value for the
              * {@code horizontalAlignment} and {@code horizontalTextPosition}
@@ -593,7 +593,7 @@ declare namespace javax {
              * @see #setHorizontalAlignment
              */
             // @ts-ignore
-            checkHorizontalKey(key: number /*int*/, exception: string): int
+            checkHorizontalKey(key: number /*int*/, exception: java.lang.String | string): number /*int*/
             /**
              * Verify that the {@code key} argument is a legal value for the
              * vertical properties. Valid values are:
@@ -611,25 +611,25 @@ declare namespace javax {
              *             values listed above
              */
             // @ts-ignore
-            checkVerticalKey(key: number /*int*/, exception: string): int
+            checkVerticalKey(key: number /*int*/, exception: java.lang.String | string): number /*int*/
             /**
              * {@inheritDoc}
              * @since 1.6
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Sets the action command for this button.
              * @param actionCommand the action command for this button
              */
             // @ts-ignore
-            setActionCommand(actionCommand: string): void
+            public setActionCommand(actionCommand: java.lang.String | string): void
             /**
              * Returns the action command for this button.
              * @return the action command for this button
              */
             // @ts-ignore
-            getActionCommand(): java.lang.String
+            public getActionCommand(): string
             /**
              * Sets the <code>Action</code>.
              * The new <code>Action</code> replaces any previously set
@@ -667,7 +667,7 @@ declare namespace javax {
              *   description: the Action instance connected with this ActionEvent source
              */
             // @ts-ignore
-            setAction(a: javax.swing.Action): void
+            public setAction(a: javax.swing.Action): void
             /**
              * Returns the currently set <code>Action</code> for this
              * <code>ActionEvent</code> source, or <code>null</code>
@@ -679,7 +679,7 @@ declare namespace javax {
              * @see #setAction
              */
             // @ts-ignore
-            getAction(): javax.swing.Action
+            public getAction(): javax.swing.Action
             /**
              * Sets the properties on this button to match those in the specified
              * <code>Action</code>.  Refer to <a href="Action.html#buttonActions">
@@ -712,7 +712,7 @@ declare namespace javax {
              * @see #configurePropertiesFromAction
              */
             // @ts-ignore
-            actionPropertyChanged(action: javax.swing.Action, propertyName: string): void
+            actionPropertyChanged(action: javax.swing.Action, propertyName: java.lang.String | string): void
             /**
              * Creates and returns a <code>PropertyChangeListener</code> that is
              * responsible for listening for changes from the specified
@@ -734,7 +734,7 @@ declare namespace javax {
              * @see #setBorderPainted
              */
             // @ts-ignore
-            isBorderPainted(): boolean
+            public isBorderPainted(): boolean
             /**
              * Sets the <code>borderPainted</code> property.
              * If <code>true</code> and the button has a border,
@@ -752,7 +752,7 @@ declare namespace javax {
              *   description: Whether the border should be painted.
              */
             // @ts-ignore
-            setBorderPainted(b: boolean): void
+            public setBorderPainted(b: boolean): void
             /**
              * Paint the button's border if <code>BorderPainted</code>
              * property is true and the button has a border.
@@ -768,7 +768,7 @@ declare namespace javax {
              * @see #setFocusPainted
              */
             // @ts-ignore
-            isFocusPainted(): boolean
+            public isFocusPainted(): boolean
             /**
              * Sets the <code>paintFocus</code> property, which must
              * be <code>true</code> for the focus state to be painted.
@@ -783,14 +783,14 @@ declare namespace javax {
              *   description: Whether focus should be painted
              */
             // @ts-ignore
-            setFocusPainted(b: boolean): void
+            public setFocusPainted(b: boolean): void
             /**
              * Gets the <code>contentAreaFilled</code> property.
              * @return the <code>contentAreaFilled</code> property
              * @see #setContentAreaFilled
              */
             // @ts-ignore
-            isContentAreaFilled(): boolean
+            public isContentAreaFilled(): boolean
             /**
              * Sets the <code>contentAreaFilled</code> property.
              * If <code>true</code> the button will paint the content
@@ -814,14 +814,14 @@ declare namespace javax {
              *                or leave it transparent.
              */
             // @ts-ignore
-            setContentAreaFilled(b: boolean): void
+            public setContentAreaFilled(b: boolean): void
             /**
              * Gets the <code>rolloverEnabled</code> property.
              * @return the value of the <code>rolloverEnabled</code> property
              * @see #setRolloverEnabled
              */
             // @ts-ignore
-            isRolloverEnabled(): boolean
+            public isRolloverEnabled(): boolean
             /**
              * Sets the <code>rolloverEnabled</code> property, which
              * must be <code>true</code> for rollover effects to occur.
@@ -836,13 +836,13 @@ declare namespace javax {
              *   description: Whether rollover effects should be enabled.
              */
             // @ts-ignore
-            setRolloverEnabled(b: boolean): void
+            public setRolloverEnabled(b: boolean): void
             /**
              * Returns the keyboard mnemonic from the the current model.
              * @return the keyboard mnemonic from the model
              */
             // @ts-ignore
-            getMnemonic(): int
+            public getMnemonic(): number /*int*/
             /**
              * Sets the keyboard mnemonic on the current model.
              * The mnemonic is the key which when combined with the look and feel's
@@ -871,7 +871,7 @@ declare namespace javax {
              *   description: the keyboard character mnemonic
              */
             // @ts-ignore
-            setMnemonic(mnemonic: number /*int*/): void
+            public setMnemonic(mnemonic: number /*int*/): void
             /**
              * This method is now obsolete, please use <code>setMnemonic(int)</code>
              * to set the mnemonic for a button.  This method is only designed
@@ -884,7 +884,7 @@ declare namespace javax {
              *   description: the keyboard character mnemonic
              */
             // @ts-ignore
-            setMnemonic(mnemonic: string): void
+            public setMnemonic(mnemonic: string): void
             /**
              * Provides a hint to the look and feel as to which character in the
              * text should be decorated to represent the mnemonic. Not all look and
@@ -911,7 +911,7 @@ declare namespace javax {
              *                mnemonic at
              */
             // @ts-ignore
-            setDisplayedMnemonicIndex(index: number /*int*/): void
+            public setDisplayedMnemonicIndex(index: number /*int*/): void
             /**
              * Returns the character, as an index, that the look and feel should
              * provide decoration for as representing the mnemonic character.
@@ -920,7 +920,7 @@ declare namespace javax {
              * @see #setDisplayedMnemonicIndex
              */
             // @ts-ignore
-            getDisplayedMnemonicIndex(): int
+            public getDisplayedMnemonicIndex(): number /*int*/
             /**
              * Sets the amount of time (in milliseconds) required between
              * mouse press events for the button to generate the corresponding
@@ -940,7 +940,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            setMultiClickThreshhold(threshhold: number /*long*/): void
+            public setMultiClickThreshhold(threshhold: number /*long*/): void
             /**
              * Gets the amount of time (in milliseconds) required between
              * mouse press events for the button to generate the corresponding
@@ -951,14 +951,14 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getMultiClickThreshhold(): long
+            public getMultiClickThreshhold(): number /*long*/
             /**
              * Returns the model that this button represents.
              * @return the <code>model</code> property
              * @see #setModel
              */
             // @ts-ignore
-            getModel(): javax.swing.ButtonModel
+            public getModel(): javax.swing.ButtonModel
             /**
              * Sets the model that this button represents.
              * @param newModel the new <code>ButtonModel</code>
@@ -967,14 +967,14 @@ declare namespace javax {
              *   description: Model that the Button uses.
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.ButtonModel): void
+            public setModel(newModel: javax.swing.ButtonModel): void
             /**
              * Returns the L&amp;F object that renders this component.
              * @return the ButtonUI object
              * @see #setUI
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.ButtonUI
+            public getUI(): javax.swing.plaf.ButtonUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui the <code>ButtonUI</code> L&amp;F object
@@ -985,7 +985,7 @@ declare namespace javax {
              *   description: The UI object that implements the LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.ButtonUI): void
+            public setUI(ui: javax.swing.plaf.ButtonUI): void
             /**
              * Resets the UI property to a value from the current look
              * and feel.  Subtypes of <code>AbstractButton</code>
@@ -997,7 +997,7 @@ declare namespace javax {
              * </pre>
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Adds the specified component to this container at the specified
              * index, refer to
@@ -1016,7 +1016,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Sets the layout manager for this container, refer to
              * {@link java.awt.Container#setLayout(LayoutManager)}
@@ -1025,19 +1025,19 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            setLayout(mgr: java.awt.LayoutManager): void
+            public setLayout(mgr: java.awt.LayoutManager): void
             /**
              * Adds a <code>ChangeListener</code> to the button.
              * @param l the listener to be added
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a ChangeListener from the button.
              * @param l the listener to be removed
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this AbstractButton with addChangeListener().
@@ -1046,7 +1046,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -1060,7 +1060,7 @@ declare namespace javax {
              * @param l the <code>ActionListener</code> to be added
              */
             // @ts-ignore
-            addActionListener(l: java.awt.event.ActionListener): void
+            public addActionListener(l: java.awt.event.ActionListener): void
             /**
              * Removes an <code>ActionListener</code> from the button.
              * If the listener is the currently set <code>Action</code>
@@ -1069,7 +1069,7 @@ declare namespace javax {
              * @param l the listener to be removed
              */
             // @ts-ignore
-            removeActionListener(l: java.awt.event.ActionListener): void
+            public removeActionListener(l: java.awt.event.ActionListener): void
             /**
              * Returns an array of all the <code>ActionListener</code>s added
              * to this AbstractButton with addActionListener().
@@ -1078,7 +1078,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getActionListeners(): java.awt.event.ActionListener[]
+            public getActionListeners(): java.awt.event.ActionListener[]
             /**
              * Subclasses that want to handle <code>ChangeEvents</code> differently
              * can override this to return another <code>ChangeListener</code>
@@ -1115,14 +1115,14 @@ declare namespace javax {
              * @param b  true to enable the button, otherwise false
              */
             // @ts-ignore
-            setEnabled(b: boolean): void
+            public setEnabled(b: boolean): void
             /**
              * Returns the label text.
              * @return a <code>String</code> containing the label
              * @deprecated - Replaced by <code>getText</code>
              */
             // @ts-ignore
-            getLabel(): java.lang.String
+            public getLabel(): string
             /**
              * Sets the label text.
              * @param label  a <code>String</code> containing the text
@@ -1131,19 +1131,19 @@ declare namespace javax {
              *   description: Replace by setText(text)
              */
             // @ts-ignore
-            setLabel(label: string): void
+            public setLabel(label: java.lang.String | string): void
             /**
              * Adds an <code>ItemListener</code> to the <code>checkbox</code>.
              * @param l  the <code>ItemListener</code> to be added
              */
             // @ts-ignore
-            addItemListener(l: java.awt.event.ItemListener): void
+            public addItemListener(l: java.awt.event.ItemListener): void
             /**
              * Removes an <code>ItemListener</code> from the button.
              * @param l the <code>ItemListener</code> to be removed
              */
             // @ts-ignore
-            removeItemListener(l: java.awt.event.ItemListener): void
+            public removeItemListener(l: java.awt.event.ItemListener): void
             /**
              * Returns an array of all the <code>ItemListener</code>s added
              * to this AbstractButton with addItemListener().
@@ -1152,7 +1152,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getItemListeners(): java.awt.event.ItemListener[]
+            public getItemListeners(): java.awt.event.ItemListener[]
             /**
              * Returns an array (length 1) containing the label or
              * <code>null</code> if the button is not selected.
@@ -1160,9 +1160,9 @@ declare namespace javax {
              *          if the item is selected; otherwise <code>null</code>
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             // @ts-ignore
-            init(text: string, icon: javax.swing.Icon): void
+            init(text: java.lang.String | string, icon: javax.swing.Icon): void
             /**
              * This is overridden to return false if the current <code>Icon</code>'s
              * <code>Image</code> is not equal to the
@@ -1178,7 +1178,7 @@ declare namespace javax {
              * @see java.awt.Component#imageUpdate(java.awt.Image, int, int, int, int, int)
              */
             // @ts-ignore
-            imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
+            public imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
             /**
              * Returns a string representation of this <code>AbstractButton</code>.
              * This method
@@ -1192,7 +1192,7 @@ declare namespace javax {
              * @return a string representation of this <code>AbstractButton</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
         }
     }
 }

@@ -28,7 +28,7 @@ declare namespace javax {
                      * @see AccessibleRole
                      */
                     // @ts-ignore
-                    getAccessibleRole(): javax.accessibility.AccessibleRole
+                    public getAccessibleRole(): javax.accessibility.AccessibleRole
                     /**
                      * Returns the Accessible child, if one exists, contained at the local
                      * coordinate Point.
@@ -38,7 +38,7 @@ declare namespace javax {
                      *  else null
                      */
                     // @ts-ignore
-                    getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
+                    public getAccessibleAt(p: java.awt.Point): javax.accessibility.Accessible
                     /**
                      * Returns the number of accessible children in the object.  If all
                      * of the children of this object implement Accessible, than this
@@ -46,14 +46,14 @@ declare namespace javax {
                      * @return the number of accessible children in the object.
                      */
                     // @ts-ignore
-                    getAccessibleChildrenCount(): int
+                    public getAccessibleChildrenCount(): number /*int*/
                     /**
                      * Return the nth Accessible child of the object.
                      * @param i zero-based index of child
                      * @return the nth Accessible child of the object
                      */
                     // @ts-ignore
-                    getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
+                    public getAccessibleChild(i: number /*int*/): javax.accessibility.Accessible
                 }
             }
         }

@@ -49,7 +49,7 @@ declare namespace java {
                  * @return The matrix associated with this band combine operation.
                  */
                 // @ts-ignore
-                getMatrix(): float[][]
+                public getMatrix(): number /*float*/[][]
                 /**
                  * Transforms the <CODE>Raster</CODE> using the matrix specified in the
                  * constructor. An <CODE>IllegalArgumentException</CODE> may be thrown if
@@ -67,7 +67,7 @@ declare namespace java {
                  *  source or destination is incompatible with the matrix.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Returns the bounding box of the transformed destination.  Since
                  * this is not a geometric operation, the bounding box is the same for
@@ -82,7 +82,7 @@ declare namespace java {
                  *  is incompatible with the matrix.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
                 /**
                  * Creates a zeroed destination <CODE>Raster</CODE> with the correct size
                  * and number of bands.
@@ -93,7 +93,7 @@ declare namespace java {
                  * @return The zeroed destination <CODE>Raster</CODE>.
                  */
                 // @ts-ignore
-                createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
+                public createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
                 /**
                  * Returns the location of the corresponding destination point given a
                  * point in the source <CODE>Raster</CODE>.  If <CODE>dstPt</CODE> is
@@ -107,14 +107,14 @@ declare namespace java {
                  *  corresponds to the specified point in the source image.
                  */
                 // @ts-ignore
-                getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Returns the rendering hints for this operation.
                  * @return The <CODE>RenderingHints</CODE> object associated with this
                  *  operation.  Returns null if no hints have been set.
                  */
                 // @ts-ignore
-                getRenderingHints(): java.awt.RenderingHints
+                public getRenderingHints(): java.awt.RenderingHints
             }
         }
     }

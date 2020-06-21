@@ -12,7 +12,7 @@ declare namespace java {
              * @jls 9.7 Annotations
              */
             // @ts-ignore
-            class Repeatable implements java.lang.annotation.Annotation {
+            abstract class Repeatable implements java.lang.annotation.Annotation {
             }
         }
     }

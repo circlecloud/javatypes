@@ -22,14 +22,14 @@ declare namespace org {
                  * to the backing {@link List} on demand.
                  */
                 // @ts-ignore
-                constructor(elementClass: java.lang.Class<E>)
+                constructor(elementClass: java.lang.Class<any>)
                 /**
                  * Creates a new {@code AutoPopulatingList} that is backed by the supplied {@link List}
                  * and adds new instances of the supplied {@link Class element Class} to the backing
                  * {@link List} on demand.
                  */
                 // @ts-ignore
-                constructor(backingList: Array<E>, elementClass: java.lang.Class<E>)
+                constructor(backingList: java.util.List<E> | Array<E>, elementClass: java.lang.Class<any>)
                 /**
                  * Creates a new {@code AutoPopulatingList} that is backed by a standard
                  * {@link ArrayList} and creates new elements on demand using the supplied {@link ElementFactory}.
@@ -41,61 +41,61 @@ declare namespace org {
                  * and creates new elements on demand using the supplied {@link ElementFactory}.
                  */
                 // @ts-ignore
-                constructor(backingList: Array<E>, elementFactory: org.springframework.util.AutoPopulatingList.ElementFactory<E>)
+                constructor(backingList: java.util.List<E> | Array<E>, elementFactory: org.springframework.util.AutoPopulatingList.ElementFactory<E>)
                 // @ts-ignore
-                add(index: number /*int*/, element: E): void
+                public add(index: number /*int*/, element: E): void
                 // @ts-ignore
-                add(o: E): boolean
+                public add(o: E): boolean
                 // @ts-ignore
-                addAll(c: Array<E>): boolean
+                public addAll(c: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                addAll(index: number /*int*/, c: Array<E>): boolean
+                public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 // @ts-ignore
-                contains(o: any): boolean
+                public contains(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                containsAll(c: Array<any>): boolean
+                public containsAll(c: java.util.Collection<any> | Array<any>): boolean
                 /**
                  * Get the element at the supplied index, creating it if there is
                  * no element at that index.
                  */
                 // @ts-ignore
-                get(index: number /*int*/): E
+                public get(index: number /*int*/): E
                 // @ts-ignore
-                indexOf(o: any): int
+                public indexOf(o: java.lang.Object | any): number /*int*/
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                iterator(): java.util.Iterator<E>
+                public iterator(): java.util.Iterator<E>
                 // @ts-ignore
-                lastIndexOf(o: any): int
+                public lastIndexOf(o: java.lang.Object | any): number /*int*/
                 // @ts-ignore
-                listIterator(): java.util.ListIterator<E>
+                public listIterator(): java.util.ListIterator<E>
                 // @ts-ignore
-                listIterator(index: number /*int*/): java.util.ListIterator<E>
+                public listIterator(index: number /*int*/): java.util.ListIterator<E>
                 // @ts-ignore
-                remove(index: number /*int*/): E
+                public remove(index: number /*int*/): E
                 // @ts-ignore
-                remove(o: any): boolean
+                public remove(o: java.lang.Object | any): boolean
                 // @ts-ignore
-                removeAll(c: Array<any>): boolean
+                public removeAll(c: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                retainAll(c: Array<any>): boolean
+                public retainAll(c: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                set(index: number /*int*/, element: E): E
+                public set(index: number /*int*/, element: E): E
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                subList(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.List<E>
+                public subList(fromIndex: number /*int*/, toIndex: number /*int*/): Array<E>
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 // @ts-ignore
-                toArray<T>(a: T[]): T
+                public toArray<T>(a: T[]): T
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

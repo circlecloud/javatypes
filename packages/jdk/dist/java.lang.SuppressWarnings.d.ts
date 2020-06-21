@@ -20,7 +20,7 @@ declare namespace java {
          * @jls 9.6.3.5 #SuppressWarnings
          */
         // @ts-ignore
-        class SuppressWarnings implements java.lang.annotation.Annotation {
+        abstract class SuppressWarnings implements java.lang.annotation.Annotation {
         }
     }
 }

@@ -26,7 +26,7 @@ declare namespace java {
              * @see Socket#getTcpNoDelay
              */
             // @ts-ignore
-            
+            readonly TCP_NODELAY: number /*int*/
             /**
              * Fetch the local address binding of a socket (this option cannot
              * be "set" only "gotten", since sockets are bound at creation time,
@@ -45,7 +45,7 @@ declare namespace java {
              * @see DatagramSocket#getLocalAddress
              */
             // @ts-ignore
-            
+            readonly SO_BINDADDR: number /*int*/
             /**
              * Sets SO_REUSEADDR for a socket.  This is used only for MulticastSockets
              * in java, and it is set by default for MulticastSockets.
@@ -53,7 +53,7 @@ declare namespace java {
              * Valid for: DatagramSocketImpl
              */
             // @ts-ignore
-            
+            readonly SO_REUSEADDR: number /*int*/
             /**
              * Sets SO_BROADCAST for a socket. This option enables and disables
              * the ability of the process to send broadcast messages. It is supported
@@ -63,7 +63,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly SO_BROADCAST: number /*int*/
             /**
              * Set which outgoing interface on which to send multicast packets.
              * Useful on hosts with multiple network interfaces, where applications
@@ -74,7 +74,7 @@ declare namespace java {
              * @see MulticastSocket#getInterface()
              */
             // @ts-ignore
-            
+            readonly IP_MULTICAST_IF: number /*int*/
             /**
              * Same as above. This option is introduced so that the behaviour
              * with IP_MULTICAST_IF will be kept the same as before, while
@@ -86,21 +86,21 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly IP_MULTICAST_IF2: number /*int*/
             /**
              * This option enables or disables local loopback of multicast datagrams.
              * This option is enabled by default for Multicast Sockets.
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly IP_MULTICAST_LOOP: number /*int*/
             /**
              * This option sets the type-of-service or traffic class field
              * in the IP header for a TCP or UDP socket.
              * @since 1.4
              */
             // @ts-ignore
-            
+            readonly IP_TOS: number /*int*/
             /**
              * Specify a linger-on-close timeout.  This option disables/enables
              * immediate return from a <B>close()</B> of a TCP Socket.  Enabling
@@ -117,7 +117,7 @@ declare namespace java {
              * @see Socket#getSoLinger
              */
             // @ts-ignore
-            
+            readonly SO_LINGER: number /*int*/
             /**
              * Set a timeout on blocking Socket operations:
              * <PRE>
@@ -136,7 +136,7 @@ declare namespace java {
              * @see DatagramSocket#setSoTimeout
              */
             // @ts-ignore
-            
+            readonly SO_TIMEOUT: number /*int*/
             /**
              * Set a hint the size of the underlying buffers used by the
              * platform for outgoing network I/O. When used in set, this is a
@@ -151,7 +151,7 @@ declare namespace java {
              * @see DatagramSocket#getSendBufferSize
              */
             // @ts-ignore
-            
+            readonly SO_SNDBUF: number /*int*/
             /**
              * Set a hint the size of the underlying buffers used by the
              * platform for incoming network I/O. When used in set, this is a
@@ -167,7 +167,7 @@ declare namespace java {
              * @see DatagramSocket#getReceiveBufferSize
              */
             // @ts-ignore
-            
+            readonly SO_RCVBUF: number /*int*/
             /**
              * When the keepalive option is set for a TCP socket and no data
              * has been exchanged across the socket in either direction for
@@ -187,7 +187,7 @@ declare namespace java {
              * @see Socket#getKeepAlive
              */
             // @ts-ignore
-            
+            readonly SO_KEEPALIVE: number /*int*/
             /**
              * When the OOBINLINE option is set, any TCP urgent data received on
              * the socket will be received through the socket input stream.
@@ -197,7 +197,7 @@ declare namespace java {
              * @see Socket#getOOBInline
              */
             // @ts-ignore
-            
+            readonly SO_OOBINLINE: number /*int*/
             /**
              * Enable/disable the option specified by <I>optID</I>.  If the option
              * is to be enabled, and it takes an option-specific "value",  this is
@@ -240,7 +240,7 @@ declare namespace java {
              * @see #getOption(int)
              */
             // @ts-ignore
-            setOption(optID: number /*int*/, value: any): void
+            setOption(optID: number /*int*/, value: java.lang.Object | any): void
             /**
              * Fetch the value of an option.
              * Binary options will return java.lang.Boolean(true)
@@ -274,7 +274,7 @@ declare namespace java {
              * @see #setOption(int, java.lang.Object)
              */
             // @ts-ignore
-            getOption(optID: number /*int*/): java.lang.Object
+            getOption(optID: number /*int*/): any
         }
     }
 }

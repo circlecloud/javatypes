@@ -10,7 +10,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class CorsUtils extends java.lang.Object {
+                    abstract class CorsUtils extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -18,13 +18,13 @@ declare namespace org {
                          * header presence and ensuring that origins are different via {@link #isSameOrigin}.
                          */
                         // @ts-ignore
-                        isCorsRequest(request: org.springframework.http.server.reactive.ServerHttpRequest): boolean
+                        public static isCorsRequest(request: org.springframework.http.server.reactive.ServerHttpRequest): boolean
                         /**
                          * Returns {@code true} if the request is a valid CORS pre-flight one by checking {code OPTIONS} method with
                          * {@code Origin} and {@code Access-Control-Request-Method} headers presence.
                          */
                         // @ts-ignore
-                        isPreFlightRequest(request: org.springframework.http.server.reactive.ServerHttpRequest): boolean
+                        public static isPreFlightRequest(request: org.springframework.http.server.reactive.ServerHttpRequest): boolean
                         /**
                          * Check if the request is a same-origin one, based on {@code Origin}, and
                          * {@code Host} headers.
@@ -37,7 +37,7 @@ declare namespace org {
                          * @deprecated as of 5.2, same-origin checks are performed directly by {#link #isCorsRequest}
                          */
                         // @ts-ignore
-                        isSameOrigin(request: org.springframework.http.server.reactive.ServerHttpRequest): boolean
+                        public static isSameOrigin(request: org.springframework.http.server.reactive.ServerHttpRequest): boolean
                     }
                 }
             }

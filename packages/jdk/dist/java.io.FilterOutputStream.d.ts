@@ -44,7 +44,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>b.length</code> bytes to this output stream.
              * <p>
@@ -61,7 +61,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#write(byte[], int, int)
              */
             // @ts-ignore
-            write(b: number /*byte*/[]): void
+            public write(b: number /*byte*/[]): void
             /**
              * Writes <code>len</code> bytes from the specified
              * <code>byte</code> array starting at offset <code>off</code> to
@@ -82,7 +82,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#write(int)
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes this output stream and forces any buffered output bytes
              * to be written out to the stream.
@@ -93,7 +93,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             /**
              * Closes this output stream and releases any system resources
              * associated with the stream.
@@ -106,7 +106,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

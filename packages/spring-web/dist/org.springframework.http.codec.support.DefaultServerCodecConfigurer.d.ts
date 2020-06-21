@@ -13,9 +13,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        defaultCodecs(): org.springframework.http.codec.ServerCodecConfigurer.ServerDefaultCodecs
+                        public defaultCodecs(): org.springframework.http.codec.ServerCodecConfigurer.ServerDefaultCodecs
                         // @ts-ignore
-                        clone(): org.springframework.http.codec.support.DefaultServerCodecConfigurer
+                        public clone(): org.springframework.http.codec.support.DefaultServerCodecConfigurer
                         // @ts-ignore
                         cloneDefaultCodecs(): org.springframework.http.codec.support.BaseDefaultCodecs
                     }

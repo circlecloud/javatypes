@@ -18,15 +18,15 @@ declare namespace org {
                      * set on the cache interceptor itself.
                      */
                     // @ts-ignore
-                    setCacheOperationSource(cacheOperationSource: org.springframework.cache.interceptor.CacheOperationSource): void
+                    public setCacheOperationSource(cacheOperationSource: org.springframework.cache.interceptor.CacheOperationSource): void
                     /**
                      * Set the {@link ClassFilter} to use for this pointcut.
                      * Default is {@link ClassFilter#TRUE}.
                      */
                     // @ts-ignore
-                    setClassFilter(classFilter: ClassFilter): void
+                    public setClassFilter(classFilter: ClassFilter): void
                     // @ts-ignore
-                    getPointcut(): Pointcut
+                    public getPointcut(): Pointcut
                 }
             }
         }

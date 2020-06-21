@@ -11,7 +11,7 @@ declare namespace org {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class AmqpHeaders extends java.lang.Object {
+                abstract class AmqpHeaders extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -20,86 +20,86 @@ declare namespace org {
                      * @see SimpleAmqpHeaderMapper
                      */
                     // @ts-ignore
-                    readonly PREFIX: string
+                    public static readonly PREFIX: java.lang.String | string
                     // @ts-ignore
-                    readonly APP_ID: string
+                    public static readonly APP_ID: java.lang.String | string
                     // @ts-ignore
-                    readonly CLUSTER_ID: string
+                    public static readonly CLUSTER_ID: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_ENCODING: string
+                    public static readonly CONTENT_ENCODING: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_LENGTH: string
+                    public static readonly CONTENT_LENGTH: java.lang.String | string
                     // @ts-ignore
-                    readonly CONTENT_TYPE: string
+                    public static readonly CONTENT_TYPE: java.lang.String | string
                     // @ts-ignore
-                    readonly CORRELATION_ID: string
+                    public static readonly CORRELATION_ID: java.lang.String | string
                     // @ts-ignore
-                    readonly DELAY: string
+                    public static readonly DELAY: java.lang.String | string
                     // @ts-ignore
-                    readonly DELIVERY_MODE: string
+                    public static readonly DELIVERY_MODE: java.lang.String | string
                     // @ts-ignore
-                    readonly DELIVERY_TAG: string
+                    public static readonly DELIVERY_TAG: java.lang.String | string
                     // @ts-ignore
-                    readonly EXPIRATION: string
+                    public static readonly EXPIRATION: java.lang.String | string
                     // @ts-ignore
-                    readonly MESSAGE_COUNT: string
+                    public static readonly MESSAGE_COUNT: java.lang.String | string
                     // @ts-ignore
-                    readonly MESSAGE_ID: string
+                    public static readonly MESSAGE_ID: java.lang.String | string
                     // @ts-ignore
-                    readonly RECEIVED_DELAY: string
+                    public static readonly RECEIVED_DELAY: java.lang.String | string
                     // @ts-ignore
-                    readonly RECEIVED_DELIVERY_MODE: string
+                    public static readonly RECEIVED_DELIVERY_MODE: java.lang.String | string
                     // @ts-ignore
-                    readonly RECEIVED_EXCHANGE: string
+                    public static readonly RECEIVED_EXCHANGE: java.lang.String | string
                     // @ts-ignore
-                    readonly RECEIVED_ROUTING_KEY: string
+                    public static readonly RECEIVED_ROUTING_KEY: java.lang.String | string
                     // @ts-ignore
-                    readonly RECEIVED_USER_ID: string
+                    public static readonly RECEIVED_USER_ID: java.lang.String | string
                     // @ts-ignore
-                    readonly REDELIVERED: string
+                    public static readonly REDELIVERED: java.lang.String | string
                     // @ts-ignore
-                    readonly REPLY_TO: string
+                    public static readonly REPLY_TO: java.lang.String | string
                     // @ts-ignore
-                    readonly TIMESTAMP: string
+                    public static readonly TIMESTAMP: java.lang.String | string
                     // @ts-ignore
-                    readonly TYPE: string
+                    public static readonly TYPE: java.lang.String | string
                     // @ts-ignore
-                    readonly USER_ID: string
+                    public static readonly USER_ID: java.lang.String | string
                     // @ts-ignore
-                    readonly SPRING_REPLY_CORRELATION: string
+                    public static readonly SPRING_REPLY_CORRELATION: java.lang.String | string
                     // @ts-ignore
-                    readonly SPRING_REPLY_TO_STACK: string
+                    public static readonly SPRING_REPLY_TO_STACK: java.lang.String | string
                     // @ts-ignore
-                    readonly PUBLISH_CONFIRM: string
+                    public static readonly PUBLISH_CONFIRM: java.lang.String | string
                     // @ts-ignore
-                    readonly PUBLISH_CONFIRM_NACK_CAUSE: string
+                    public static readonly PUBLISH_CONFIRM_NACK_CAUSE: java.lang.String | string
                     // @ts-ignore
-                    readonly RETURN_REPLY_CODE: string
+                    public static readonly RETURN_REPLY_CODE: java.lang.String | string
                     // @ts-ignore
-                    readonly RETURN_REPLY_TEXT: string
+                    public static readonly RETURN_REPLY_TEXT: java.lang.String | string
                     // @ts-ignore
-                    readonly RETURN_EXCHANGE: string
+                    public static readonly RETURN_EXCHANGE: java.lang.String | string
                     // @ts-ignore
-                    readonly RETURN_ROUTING_KEY: string
+                    public static readonly RETURN_ROUTING_KEY: java.lang.String | string
                     // @ts-ignore
-                    readonly CHANNEL: string
+                    public static readonly CHANNEL: java.lang.String | string
                     /**
                      * The tag of the listener container consumer that received the message.
                      */
                     // @ts-ignore
-                    readonly CONSUMER_TAG: string
+                    public static readonly CONSUMER_TAG: java.lang.String | string
                     /**
                      * The queue from which the listener container consumer received the message.
                      */
                     // @ts-ignore
-                    readonly CONSUMER_QUEUE: string
+                    public static readonly CONSUMER_QUEUE: java.lang.String | string
                     /**
                      * The received raw message before conversion; this header usually only appears in
                      * an {@link org.springframework.messaging.support.ErrorMessage}.
                      * @since 2.0
                      */
                     // @ts-ignore
-                    readonly RAW_MESSAGE: string
+                    public static readonly RAW_MESSAGE: java.lang.String | string
                 }
             }
         }

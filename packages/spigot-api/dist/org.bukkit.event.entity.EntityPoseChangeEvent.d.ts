@@ -15,11 +15,11 @@ declare namespace org {
                      * @return the new pose
                      */
                     // @ts-ignore
-                    getPose(): org.bukkit.entity.Pose
+                    public getPose(): org.bukkit.entity.Pose
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

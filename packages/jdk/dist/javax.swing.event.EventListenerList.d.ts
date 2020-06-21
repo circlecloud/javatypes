@@ -66,7 +66,7 @@ declare namespace javax {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                listenerList: any[]
+                listenerList: java.lang.Object[] | any[]
                 /**
                  * Passes back the event listener list as an array
                  * of ListenerType-listener pairs.  Note that for
@@ -84,7 +84,7 @@ declare namespace javax {
                  * itself.
                  */
                 // @ts-ignore
-                getListenerList(): java.lang.Object[]
+                public getListenerList(): any[]
                 /**
                  * Return an array of all the listeners of the given type.
                  * @return all of the listeners of the specified type.
@@ -93,37 +93,37 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(t: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(t: java.lang.Class<T>): T
                 /**
                  * Returns the total number of listeners for this listener list.
                  */
                 // @ts-ignore
-                getListenerCount(): int
+                public getListenerCount(): number /*int*/
                 /**
                  * Returns the total number of listeners of the supplied type
                  * for this listener list.
                  */
                 // @ts-ignore
-                getListenerCount(t: java.lang.Class<any>): int
+                public getListenerCount(t: java.lang.Class<any>): number /*int*/
                 /**
                  * Adds the listener as a listener of the specified type.
                  * @param t the type of the listener to be added
                  * @param l the listener to be added
                  */
                 // @ts-ignore
-                add<T extends java.util.EventListener>(t: java.lang.Class<T>, l: T extends java.util.EventListener): void
+                public add<T extends java.util.EventListener>(t: java.lang.Class<T>, l: T): void
                 /**
                  * Removes the listener as a listener of the specified type.
                  * @param t the type of the listener to be removed
                  * @param l the listener to be removed
                  */
                 // @ts-ignore
-                remove<T extends java.util.EventListener>(t: java.lang.Class<T>, l: T extends java.util.EventListener): void
+                public remove<T extends java.util.EventListener>(t: java.lang.Class<T>, l: T): void
                 /**
                  * Returns a string representation of the EventListenerList.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

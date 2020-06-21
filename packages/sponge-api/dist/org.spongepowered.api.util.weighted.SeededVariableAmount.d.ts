@@ -35,7 +35,7 @@ declare namespace org {
                          * @return The amount
                          */
                         // @ts-ignore
-                        getAmount(rand: java.util.Random, seed: T): double
+                        getAmount(rand: java.util.Random, seed: T): number /*double*/
                         /**
                          * Gets the amount as if from {@link #getAmount(Random, Object)} but floored
                          * to the nearest integer equivalent.
@@ -44,7 +44,7 @@ declare namespace org {
                          * @return The floored amount
                          */
                         // @ts-ignore
-                        getFlooredAmount(rand: java.util.Random, seed: T): int
+                        getFlooredAmount(rand: java.util.Random, seed: T): number /*int*/
                     }
                 }
             }

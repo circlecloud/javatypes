@@ -11,7 +11,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class FilterWriter extends java.io.Writer {
+        abstract class FilterWriter extends java.io.Writer {
             /**
              * Create a new filtered writer.
              * @param out  a Writer object to provide the underlying stream.
@@ -29,7 +29,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(c: number /*int*/): void
+            public write(c: number /*int*/): void
             /**
              * Writes a portion of an array of characters.
              * @param cbuf  Buffer of characters to be written
@@ -38,7 +38,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
+            public write(cbuf: string[], off: number /*int*/, len: number /*int*/): void
             /**
              * Writes a portion of a string.
              * @param str  String to be written
@@ -47,15 +47,15 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            write(str: string, off: number /*int*/, len: number /*int*/): void
+            public write(str: java.lang.String | string, off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes the stream.
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
             // @ts-ignore
-            close(): void
+            public close(): void
         }
     }
 }

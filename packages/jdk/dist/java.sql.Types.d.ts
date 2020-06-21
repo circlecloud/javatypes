@@ -14,140 +14,140 @@ declare namespace java {
              * <code>BIT</code>.
              */
             // @ts-ignore
-            readonly BIT: number /*int*/
+            public static readonly BIT: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>TINYINT</code>.
              */
             // @ts-ignore
-            readonly TINYINT: number /*int*/
+            public static readonly TINYINT: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>SMALLINT</code>.
              */
             // @ts-ignore
-            readonly SMALLINT: number /*int*/
+            public static readonly SMALLINT: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>INTEGER</code>.
              */
             // @ts-ignore
-            readonly INTEGER: number /*int*/
+            public static readonly INTEGER: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>BIGINT</code>.
              */
             // @ts-ignore
-            readonly BIGINT: number /*int*/
+            public static readonly BIGINT: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>FLOAT</code>.
              */
             // @ts-ignore
-            readonly FLOAT: number /*int*/
+            public static readonly FLOAT: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>REAL</code>.
              */
             // @ts-ignore
-            readonly REAL: number /*int*/
+            public static readonly REAL: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>DOUBLE</code>.
              */
             // @ts-ignore
-            readonly DOUBLE: number /*int*/
+            public static readonly DOUBLE: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>NUMERIC</code>.
              */
             // @ts-ignore
-            readonly NUMERIC: number /*int*/
+            public static readonly NUMERIC: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>DECIMAL</code>.
              */
             // @ts-ignore
-            readonly DECIMAL: number /*int*/
+            public static readonly DECIMAL: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>CHAR</code>.
              */
             // @ts-ignore
-            readonly CHAR: number /*int*/
+            public static readonly CHAR: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>VARCHAR</code>.
              */
             // @ts-ignore
-            readonly VARCHAR: number /*int*/
+            public static readonly VARCHAR: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>LONGVARCHAR</code>.
              */
             // @ts-ignore
-            readonly LONGVARCHAR: number /*int*/
+            public static readonly LONGVARCHAR: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>DATE</code>.
              */
             // @ts-ignore
-            readonly DATE: number /*int*/
+            public static readonly DATE: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>TIME</code>.
              */
             // @ts-ignore
-            readonly TIME: number /*int*/
+            public static readonly TIME: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>TIMESTAMP</code>.
              */
             // @ts-ignore
-            readonly TIMESTAMP: number /*int*/
+            public static readonly TIMESTAMP: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>BINARY</code>.
              */
             // @ts-ignore
-            readonly BINARY: number /*int*/
+            public static readonly BINARY: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>VARBINARY</code>.
              */
             // @ts-ignore
-            readonly VARBINARY: number /*int*/
+            public static readonly VARBINARY: number /*int*/
             /**
              * <P>The constant in the Java programming language, sometimes referred
              * to as a type code, that identifies the generic SQL type
              * <code>LONGVARBINARY</code>.
              */
             // @ts-ignore
-            readonly LONGVARBINARY: number /*int*/
+            public static readonly LONGVARBINARY: number /*int*/
             /**
              * <P>The constant in the Java programming language
              * that identifies the generic SQL value
              * <code>NULL</code>.
              */
             // @ts-ignore
-            readonly NULL: number /*int*/
+            public static readonly NULL: number /*int*/
             /**
              * The constant in the Java programming language that indicates
              * that the SQL type is database-specific and
@@ -155,7 +155,7 @@ declare namespace java {
              * the methods <code>getObject</code> and <code>setObject</code>.
              */
             // @ts-ignore
-            readonly OTHER: number /*int*/
+            public static readonly OTHER: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -163,7 +163,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly JAVA_OBJECT: number /*int*/
+            public static readonly JAVA_OBJECT: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -171,7 +171,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly DISTINCT: number /*int*/
+            public static readonly DISTINCT: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -179,7 +179,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly STRUCT: number /*int*/
+            public static readonly STRUCT: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -187,7 +187,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly ARRAY: number /*int*/
+            public static readonly ARRAY: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -195,7 +195,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly BLOB: number /*int*/
+            public static readonly BLOB: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -203,7 +203,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly CLOB: number /*int*/
+            public static readonly CLOB: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -211,70 +211,70 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly REF: number /*int*/
+            public static readonly REF: number /*int*/
             /**
              * The constant in the Java programming language, somtimes referred to
              * as a type code, that identifies the generic SQL type <code>DATALINK</code>.
              * @since 1.4
              */
             // @ts-ignore
-            readonly DATALINK: number /*int*/
+            public static readonly DATALINK: number /*int*/
             /**
              * The constant in the Java programming language, somtimes referred to
              * as a type code, that identifies the generic SQL type <code>BOOLEAN</code>.
              * @since 1.4
              */
             // @ts-ignore
-            readonly BOOLEAN: number /*int*/
+            public static readonly BOOLEAN: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type <code>ROWID</code>
              * @since 1.6
              */
             // @ts-ignore
-            readonly ROWID: number /*int*/
+            public static readonly ROWID: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type <code>NCHAR</code>
              * @since 1.6
              */
             // @ts-ignore
-            readonly NCHAR: number /*int*/
+            public static readonly NCHAR: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type <code>NVARCHAR</code>.
              * @since 1.6
              */
             // @ts-ignore
-            readonly NVARCHAR: number /*int*/
+            public static readonly NVARCHAR: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type <code>LONGNVARCHAR</code>.
              * @since 1.6
              */
             // @ts-ignore
-            readonly LONGNVARCHAR: number /*int*/
+            public static readonly LONGNVARCHAR: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type <code>NCLOB</code>.
              * @since 1.6
              */
             // @ts-ignore
-            readonly NCLOB: number /*int*/
+            public static readonly NCLOB: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type <code>XML</code>.
              * @since 1.6
              */
             // @ts-ignore
-            readonly SQLXML: number /*int*/
+            public static readonly SQLXML: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type {@code REF CURSOR}.
              * @since 1.8
              */
             // @ts-ignore
-            readonly REF_CURSOR: number /*int*/
+            public static readonly REF_CURSOR: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -282,7 +282,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly TIME_WITH_TIMEZONE: number /*int*/
+            public static readonly TIME_WITH_TIMEZONE: number /*int*/
             /**
              * The constant in the Java programming language, sometimes referred to
              * as a type code, that identifies the generic SQL type
@@ -290,7 +290,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            readonly TIMESTAMP_WITH_TIMEZONE: number /*int*/
+            public static readonly TIMESTAMP_WITH_TIMEZONE: number /*int*/
         }
     }
 }

@@ -10,7 +10,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class Jackson2CodecSupport extends java.lang.Object {
+                    abstract class Jackson2CodecSupport extends java.lang.Object {
                         /**
                          * Constructor with a Jackson {@link ObjectMapper} to use.
                          */
@@ -22,22 +22,22 @@ declare namespace org {
                          * @see <a href="https://www.baeldung.com/jackson-json-view-annotation">Jackson JSON Views</a>
                          */
                         // @ts-ignore
-                        readonly JSON_VIEW_HINT: string
+                        public static readonly JSON_VIEW_HINT: java.lang.String | string
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        getObjectMapper(): ObjectMapper
+                        public getObjectMapper(): ObjectMapper
                         /**
                          * Subclasses should expose this as "decodable" or "encodable" mime types.
                          */
                         // @ts-ignore
-                        getMimeTypes(): java.util.List<MimeType>
+                        getMimeTypes(): Array<MimeType>
                         // @ts-ignore
                         supportsMimeType(mimeType: MimeType): boolean
                         // @ts-ignore
                         getJavaType(type: java.lang.reflect.Type, contextClass: java.lang.Class<any>): JavaType
                         // @ts-ignore
-                        getHints(resolvableType: ResolvableType): java.util.Map<java.lang.String, java.lang.Object>
+                        getHints(resolvableType: ResolvableType): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
                         getParameter(type: ResolvableType): MethodParameter
                         // @ts-ignore

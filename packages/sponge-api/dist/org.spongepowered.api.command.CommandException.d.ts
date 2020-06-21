@@ -21,7 +21,7 @@ declare namespace org {
                      * @param cause The cause
                      */
                     // @ts-ignore
-                    constructor(message: org.spongepowered.api.text.Text, cause: Error)
+                    constructor(message: org.spongepowered.api.text.Text, cause: java.lang.Throwable | Error)
                     /**
                      * Constructs a new {@link CommandException} with the given message.
                      * @param message The detail message
@@ -37,7 +37,7 @@ declare namespace org {
                      * @param includeUsage Whether to include the usage in the exception
                      */
                     // @ts-ignore
-                    constructor(message: org.spongepowered.api.text.Text, cause: Error, includeUsage: boolean)
+                    constructor(message: org.spongepowered.api.text.Text, cause: java.lang.Throwable | Error, includeUsage: boolean)
                     /**
                      * Gets whether the exception should include usage in
                      * the presentation of the exception/stack-trace.

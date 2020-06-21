@@ -43,25 +43,25 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_TYPE: org.bukkit.Material
+                static readonly DEFAULT_TYPE: org.bukkit.Material
                 // @ts-ignore
-                readonly DEFAULT_SPECIES: org.bukkit.TreeSpecies
+                static readonly DEFAULT_SPECIES: org.bukkit.TreeSpecies
                 /**
                  * Gets the current species of this wood block
                  * @return TreeSpecies of this wood block
                  */
                 // @ts-ignore
-                getSpecies(): org.bukkit.TreeSpecies
+                public getSpecies(): org.bukkit.TreeSpecies
                 /**
                  * Sets the species of this wood block
                  * @param species New species of this wood block
                  */
                 // @ts-ignore
-                setSpecies(species: org.bukkit.TreeSpecies): void
+                public setSpecies(species: org.bukkit.TreeSpecies): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Wood
+                public clone(): org.bukkit.material.Wood
             }
         }
     }

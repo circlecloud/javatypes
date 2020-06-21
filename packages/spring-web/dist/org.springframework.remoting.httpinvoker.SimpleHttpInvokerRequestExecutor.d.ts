@@ -24,7 +24,7 @@ declare namespace org {
                      * @see URLConnection#setConnectTimeout(int)
                      */
                     // @ts-ignore
-                    setConnectTimeout(connectTimeout: number /*int*/): void
+                    public setConnectTimeout(connectTimeout: number /*int*/): void
                     /**
                      * Set the underlying URLConnection's read timeout (in milliseconds).
                      * A timeout value of 0 specifies an infinite timeout.
@@ -32,7 +32,7 @@ declare namespace org {
                      * @see URLConnection#setReadTimeout(int)
                      */
                     // @ts-ignore
-                    setReadTimeout(readTimeout: number /*int*/): void
+                    public setReadTimeout(readTimeout: number /*int*/): void
                     /**
                      * Execute the given request through a standard {@link HttpURLConnection}.
                      * <p>This method implements the basic processing workflow:

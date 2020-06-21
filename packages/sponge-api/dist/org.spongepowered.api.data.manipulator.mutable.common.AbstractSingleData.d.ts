@@ -16,18 +16,18 @@ declare namespace org {
                              * @param <I> The type of {#link ImmutableDataManipulator}
                              */
                             // @ts-ignore
-                            class AbstractSingleData<T, M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractData<M, I> {
+                            abstract class AbstractSingleData<T, M extends org.spongepowered.api.data.manipulator.DataManipulator<M, I>, I extends org.spongepowered.api.data.manipulator.ImmutableDataManipulator<I, M>> extends org.spongepowered.api.data.manipulator.mutable.common.AbstractData<M, I> {
                                 /**
                                  * @deprecated Use {#link #AbstractSingleData(Key, Object)} instead.
                                  */
                                 // @ts-ignore
-                                constructor(value: T, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<T>>)
+                                constructor(value: T, usedKey: org.spongepowered.api.data.key.Key<any>)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<T>>, value: T)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<any>, value: T)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.Value<T>>, value: T, defaultValue: T)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<any>, value: T, defaultValue: T)
                                 // @ts-ignore
-                                readonly usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<T>>
+                                readonly usedKey: org.spongepowered.api.data.key.Key<any>
                                 // @ts-ignore
                                 readonly defaultValue: T
                                 // @ts-ignore
@@ -40,13 +40,13 @@ declare namespace org {
                                  * @return The constructed value
                                  */
                                 // @ts-ignore
-                                abstract getValueGetter(): org.spongepowered.api.data.value.mutable.Value<?>
+                                abstract getValueGetter(): org.spongepowered.api.data.value.mutable.Value<any>
                                 // @ts-ignore
-                                get<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): java.util.Optional<E>
+                                public get<E>(key: org.spongepowered.api.data.key.Key<any>): java.util.Optional<E>
                                 // @ts-ignore
-                                supports(key: org.spongepowered.api.data.key.Key<any>): boolean
+                                public supports(key: org.spongepowered.api.data.key.Key<any>): boolean
                                 // @ts-ignore
-                                abstract asImmutable(): I
+                                public abstract asImmutable(): I
                                 /**
                                  * A simple getter for usage with a {@link Supplier} for
                                  * the {@link #registerFieldGetter(Key, Supplier)} method.
@@ -65,9 +65,9 @@ declare namespace org {
                                 // @ts-ignore
                                 fillContainer(dataContainer: org.spongepowered.api.data.DataContainer): org.spongepowered.api.data.DataContainer
                                 // @ts-ignore
-                                hashCode(): int
+                                public hashCode(): number /*int*/
                                 // @ts-ignore
-                                equals(obj: any): boolean
+                                public equals(obj: java.lang.Object | any): boolean
                             }
                         }
                     }

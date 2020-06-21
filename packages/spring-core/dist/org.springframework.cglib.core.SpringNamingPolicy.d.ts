@@ -16,9 +16,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    readonly INSTANCE: org.springframework.cglib.core.SpringNamingPolicy
+                    public static readonly INSTANCE: org.springframework.cglib.core.SpringNamingPolicy
                     // @ts-ignore
-                    getTag(): java.lang.String
+                    getTag(): string
                 }
             }
         }

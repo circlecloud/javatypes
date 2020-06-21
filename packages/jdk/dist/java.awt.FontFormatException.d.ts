@@ -15,7 +15,7 @@ declare namespace java {
              *         the font is not accepted.
              */
             // @ts-ignore
-            constructor(reason: string)
+            constructor(reason: java.lang.String | string)
         }
     }
 }

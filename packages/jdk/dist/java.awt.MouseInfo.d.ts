@@ -35,7 +35,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getPointerInfo(): java.awt.PointerInfo
+            public static getPointerInfo(): java.awt.PointerInfo
             /**
              * Returns the number of buttons on the mouse.
              * On systems without a mouse, returns <code>-1</code>.
@@ -44,7 +44,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getNumberOfButtons(): int
+            public static getNumberOfButtons(): number /*int*/
         }
     }
 }

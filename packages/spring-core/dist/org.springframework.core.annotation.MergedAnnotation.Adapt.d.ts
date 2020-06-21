@@ -10,10 +10,21 @@ declare namespace org {
                      */
                     // @ts-ignore
                     class Adapt extends java.lang.Enum<org.springframework.core.annotation.MergedAnnotation.Adapt> {
+                        /**
+                         * Adapt class or class array attributes to strings.
+                         */
+                        // @ts-ignore
+                        readonly CLASS_TO_STRING: org.springframework.core.annotation.MergedAnnotation.Adapt
+                        /**
+                         * Adapt nested annotation or annotation arrays to maps rather
+                         * than synthesizing the values.
+                         */
+                        // @ts-ignore
+                        readonly ANNOTATION_TO_MAP: org.springframework.core.annotation.MergedAnnotation.Adapt
                         // @ts-ignore
                         values(): org.springframework.core.annotation.MergedAnnotation.Adapt[]
                         // @ts-ignore
-                        valueOf(name: string): org.springframework.core.annotation.MergedAnnotation.Adapt
+                        valueOf(name: java.lang.String | string): org.springframework.core.annotation.MergedAnnotation.Adapt
                         // @ts-ignore
                         isIn(...adaptations: org.springframework.core.annotation.MergedAnnotation.Adapt[]): boolean
                         /**

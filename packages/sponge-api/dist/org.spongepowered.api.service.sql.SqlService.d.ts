@@ -22,7 +22,7 @@ declare namespace org {
                          *      be established
                          */
                         // @ts-ignore
-                        getDataSource(jdbcConnection: string): javax.sql.DataSource
+                        getDataSource(jdbcConnection: java.lang.String | string): javax.sql.DataSource
                         /**
                          * Returns a data source for the provided JDBC connection string or an
                          * alias.
@@ -39,7 +39,7 @@ declare namespace org {
                          *      be established
                          */
                         // @ts-ignore
-                        getDataSource(plugin: any, jdbcConnection: string): javax.sql.DataSource
+                        getDataSource(plugin: java.lang.Object | any, jdbcConnection: java.lang.String | string): javax.sql.DataSource
                         /**
                          * Returns a possible connection URL for a given alias.
                          * @param alias The alias to check
@@ -47,7 +47,7 @@ declare namespace org {
                          *           or {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        getConnectionUrlFromAlias(alias: string): java.util.Optional<java.lang.String>
+                        getConnectionUrlFromAlias(alias: java.lang.String | string): java.util.Optional<java.lang.String | string>
                     }
                 }
             }

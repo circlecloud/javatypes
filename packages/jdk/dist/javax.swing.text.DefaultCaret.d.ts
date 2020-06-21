@@ -83,7 +83,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly UPDATE_WHEN_ON_EDT: number /*int*/
+                public static readonly UPDATE_WHEN_ON_EDT: number /*int*/
                 /**
                  * Indicates that the caret should remain at the same
                  * absolute position in the document regardless of any document
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly NEVER_UPDATE: number /*int*/
+                public static readonly NEVER_UPDATE: number /*int*/
                 /**
                  * Indicates that the caret position is to be <b>always</b>
                  * updated accordingly to the document changes regardless whether
@@ -106,7 +106,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly ALWAYS_UPDATE: number /*int*/
+                public static readonly ALWAYS_UPDATE: number /*int*/
                 /**
                  * The event listener list.
                  */
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setUpdatePolicy(policy: number /*int*/): void
+                public setUpdatePolicy(policy: number /*int*/): void
                 /**
                  * Gets the caret movement policy on document updates.
                  * @return one of the following values : <code>UPDATE_WHEN_ON_EDT</code>,
@@ -182,7 +182,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getUpdatePolicy(): int
+                public getUpdatePolicy(): number /*int*/
                 /**
                  * Gets the text editor component that this caret is
                  * is bound to.
@@ -254,7 +254,7 @@ declare namespace javax {
                  * @see FocusListener#focusGained
                  */
                 // @ts-ignore
-                focusGained(e: java.awt.event.FocusEvent): void
+                public focusGained(e: java.awt.event.FocusEvent): void
                 /**
                  * Called when the component containing the caret loses
                  * focus.  This is implemented to set the caret to visibility
@@ -263,7 +263,7 @@ declare namespace javax {
                  * @see FocusListener#focusLost
                  */
                 // @ts-ignore
-                focusLost(e: java.awt.event.FocusEvent): void
+                public focusLost(e: java.awt.event.FocusEvent): void
                 /**
                  * Called when the mouse is clicked.  If the click was generated
                  * from button1, a double click selects a word,
@@ -272,7 +272,7 @@ declare namespace javax {
                  * @see MouseListener#mouseClicked
                  */
                 // @ts-ignore
-                mouseClicked(e: java.awt.event.MouseEvent): void
+                public mouseClicked(e: java.awt.event.MouseEvent): void
                 /**
                  * If button 1 is pressed, this is implemented to
                  * request focus on the associated text component,
@@ -285,28 +285,28 @@ declare namespace javax {
                  * @see MouseListener#mousePressed
                  */
                 // @ts-ignore
-                mousePressed(e: java.awt.event.MouseEvent): void
+                public mousePressed(e: java.awt.event.MouseEvent): void
                 /**
                  * Called when the mouse is released.
                  * @param e the mouse event
                  * @see MouseListener#mouseReleased
                  */
                 // @ts-ignore
-                mouseReleased(e: java.awt.event.MouseEvent): void
+                public mouseReleased(e: java.awt.event.MouseEvent): void
                 /**
                  * Called when the mouse enters a region.
                  * @param e the mouse event
                  * @see MouseListener#mouseEntered
                  */
                 // @ts-ignore
-                mouseEntered(e: java.awt.event.MouseEvent): void
+                public mouseEntered(e: java.awt.event.MouseEvent): void
                 /**
                  * Called when the mouse exits a region.
                  * @param e the mouse event
                  * @see MouseListener#mouseExited
                  */
                 // @ts-ignore
-                mouseExited(e: java.awt.event.MouseEvent): void
+                public mouseExited(e: java.awt.event.MouseEvent): void
                 /**
                  * Moves the caret position
                  * according to the mouse pointer's current
@@ -317,14 +317,14 @@ declare namespace javax {
                  * @see MouseMotionListener#mouseDragged
                  */
                 // @ts-ignore
-                mouseDragged(e: java.awt.event.MouseEvent): void
+                public mouseDragged(e: java.awt.event.MouseEvent): void
                 /**
                  * Called when the mouse is moved.
                  * @param e the mouse event
                  * @see MouseMotionListener#mouseMoved
                  */
                 // @ts-ignore
-                mouseMoved(e: java.awt.event.MouseEvent): void
+                public mouseMoved(e: java.awt.event.MouseEvent): void
                 /**
                  * Renders the caret as a vertical line.  If this is reimplemented
                  * the damage method should also be reimplemented as it assumes the
@@ -341,7 +341,7 @@ declare namespace javax {
                  * @see #damage
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics): void
+                public paint(g: java.awt.Graphics): void
                 /**
                  * Called when the UI is being installed into the
                  * interface of a JTextComponent.  This can be used
@@ -353,7 +353,7 @@ declare namespace javax {
                  * @see Caret#install
                  */
                 // @ts-ignore
-                install(c: javax.swing.text.JTextComponent): void
+                public install(c: javax.swing.text.JTextComponent): void
                 /**
                  * Called when the UI is being removed from the
                  * interface of a JTextComponent.  This is used to
@@ -362,7 +362,7 @@ declare namespace javax {
                  * @see Caret#deinstall
                  */
                 // @ts-ignore
-                deinstall(c: javax.swing.text.JTextComponent): void
+                public deinstall(c: javax.swing.text.JTextComponent): void
                 /**
                  * Adds a listener to track whenever the caret position has
                  * been changed.
@@ -370,14 +370,14 @@ declare namespace javax {
                  * @see Caret#addChangeListener
                  */
                 // @ts-ignore
-                addChangeListener(l: javax.swing.event.ChangeListener): void
+                public addChangeListener(l: javax.swing.event.ChangeListener): void
                 /**
                  * Removes a listener that was tracking caret position changes.
                  * @param l the listener
                  * @see Caret#removeChangeListener
                  */
                 // @ts-ignore
-                removeChangeListener(l: javax.swing.event.ChangeListener): void
+                public removeChangeListener(l: javax.swing.event.ChangeListener): void
                 /**
                  * Returns an array of all the change listeners
                  * registered on this caret.
@@ -389,7 +389,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getChangeListeners(): javax.swing.event.ChangeListener[]
+                public getChangeListeners(): javax.swing.event.ChangeListener[]
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -429,19 +429,19 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
                 /**
                  * Changes the selection visibility.
                  * @param vis the new visibility
                  */
                 // @ts-ignore
-                setSelectionVisible(vis: boolean): void
+                public setSelectionVisible(vis: boolean): void
                 /**
                  * Checks whether the current selection is visible.
                  * @return true if the selection is visible
                  */
                 // @ts-ignore
-                isSelectionVisible(): boolean
+                public isSelectionVisible(): boolean
                 /**
                  * Determines if the caret is currently active.
                  * <p>
@@ -455,7 +455,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isActive(): boolean
+                public isActive(): boolean
                 /**
                  * Indicates whether or not the caret is currently visible. As the
                  * caret flashes on and off the return value of this will change
@@ -473,7 +473,7 @@ declare namespace javax {
                  * @see #isActive
                  */
                 // @ts-ignore
-                isVisible(): boolean
+                public isVisible(): boolean
                 /**
                  * Sets the caret visibility, and repaints the caret.
                  * It is important to understand the relationship between this method,
@@ -508,14 +508,14 @@ declare namespace javax {
                  * @see Caret#setVisible
                  */
                 // @ts-ignore
-                setVisible(e: boolean): void
+                public setVisible(e: boolean): void
                 /**
                  * Sets the caret blink rate.
                  * @param rate the rate in milliseconds, 0 to stop blinking
                  * @see Caret#setBlinkRate
                  */
                 // @ts-ignore
-                setBlinkRate(rate: number /*int*/): void
+                public setBlinkRate(rate: number /*int*/): void
                 /**
                  * Gets the caret blink rate.
                  * @return the delay in milliseconds.  If this is
@@ -523,14 +523,14 @@ declare namespace javax {
                  * @see Caret#getBlinkRate
                  */
                 // @ts-ignore
-                getBlinkRate(): int
+                public getBlinkRate(): number /*int*/
                 /**
                  * Fetches the current position of the caret.
                  * @return the position &gt;= 0
                  * @see Caret#getDot
                  */
                 // @ts-ignore
-                getDot(): int
+                public getDot(): number /*int*/
                 /**
                  * Fetches the current position of the mark.  If there is a selection,
                  * the dot and mark will not be the same.
@@ -538,7 +538,7 @@ declare namespace javax {
                  * @see Caret#getMark
                  */
                 // @ts-ignore
-                getMark(): int
+                public getMark(): number /*int*/
                 /**
                  * Sets the caret position and mark to the specified position,
                  * with a forward bias. This implicitly sets the
@@ -548,7 +548,7 @@ declare namespace javax {
                  * @see Caret#setDot
                  */
                 // @ts-ignore
-                setDot(dot: number /*int*/): void
+                public setDot(dot: number /*int*/): void
                 /**
                  * Moves the caret position to the specified position,
                  * with a forward bias.
@@ -557,7 +557,7 @@ declare namespace javax {
                  * @see Caret#moveDot
                  */
                 // @ts-ignore
-                moveDot(dot: number /*int*/): void
+                public moveDot(dot: number /*int*/): void
                 /**
                  * Moves the caret position to the specified position, with the
                  * specified bias.
@@ -568,7 +568,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                moveDot(dot: number /*int*/, dotBias: javax.swing.text.Position.Bias): void
+                public moveDot(dot: number /*int*/, dotBias: javax.swing.text.Position.Bias): void
                 /**
                  * Sets the caret position and mark to the specified position, with the
                  * specified bias. This implicitly sets the selection range
@@ -580,21 +580,21 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setDot(dot: number /*int*/, dotBias: javax.swing.text.Position.Bias): void
+                public setDot(dot: number /*int*/, dotBias: javax.swing.text.Position.Bias): void
                 /**
                  * Returns the bias of the caret position.
                  * @return the bias of the caret position
                  * @since 1.6
                  */
                 // @ts-ignore
-                getDotBias(): javax.swing.text.Position.Bias
+                public getDotBias(): javax.swing.text.Position.Bias
                 /**
                  * Returns the bias of the mark.
                  * @return the bias of the mark
                  * @since 1.6
                  */
                 // @ts-ignore
-                getMarkBias(): javax.swing.text.Position.Bias
+                public getMarkBias(): javax.swing.text.Position.Bias
                 /**
                  * Saves the current caret position.  This is used when
                  * caret up/down actions occur, moving between lines
@@ -603,14 +603,14 @@ declare namespace javax {
                  * @see #getMagicCaretPosition
                  */
                 // @ts-ignore
-                setMagicCaretPosition(p: java.awt.Point): void
+                public setMagicCaretPosition(p: java.awt.Point): void
                 /**
                  * Gets the saved caret position.
                  * @return the position
                  *  see #setMagicCaretPosition
                  */
                 // @ts-ignore
-                getMagicCaretPosition(): java.awt.Point
+                public getMagicCaretPosition(): java.awt.Point
                 /**
                  * Compares this object to the specified object.
                  * The superclass behavior of comparing rectangles
@@ -621,9 +621,9 @@ declare namespace javax {
                  *             <code>false</code> otherwise
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

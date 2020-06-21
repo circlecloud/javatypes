@@ -20,7 +20,7 @@ declare namespace org {
                  * @param objectName the name of the target object
                  */
                 // @ts-ignore
-                constructor(target: any, objectName: string)
+                constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                 /**
                  * Create a new DirectFieldBindingResult instance.
                  * @param target the target object to bind onto
@@ -28,16 +28,16 @@ declare namespace org {
                  * @param autoGrowNestedPaths whether to "auto-grow" a nested path that contains a null value
                  */
                 // @ts-ignore
-                constructor(target: any, objectName: string, autoGrowNestedPaths: boolean)
+                constructor(target: java.lang.Object | any, objectName: java.lang.String | string, autoGrowNestedPaths: boolean)
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                public getTarget(): any
                 /**
                  * Returns the DirectFieldAccessor that this instance uses.
                  * Creates a new one if none existed before.
                  * @see #createDirectFieldAccessor()
                  */
                 // @ts-ignore
-                getPropertyAccessor(): ConfigurablePropertyAccessor
+                public getPropertyAccessor(): ConfigurablePropertyAccessor
                 /**
                  * Create a new DirectFieldAccessor for the underlying target object.
                  * @see #getTarget()

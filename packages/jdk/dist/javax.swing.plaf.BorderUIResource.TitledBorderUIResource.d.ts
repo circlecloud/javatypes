@@ -5,17 +5,17 @@ declare namespace javax {
                 // @ts-ignore
                 class TitledBorderUIResource extends javax.swing.border.TitledBorder implements javax.swing.plaf.UIResource {
                     // @ts-ignore
-                    constructor(title: string)
+                    constructor(title: java.lang.String | string)
                     // @ts-ignore
                     constructor(border: javax.swing.border.Border)
                     // @ts-ignore
-                    constructor(border: javax.swing.border.Border, title: string)
+                    constructor(border: javax.swing.border.Border, title: java.lang.String | string)
                     // @ts-ignore
-                    constructor(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/)
+                    constructor(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/)
                     // @ts-ignore
-                    constructor(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font)
+                    constructor(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font)
                     // @ts-ignore
-                    constructor(border: javax.swing.border.Border, title: string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font, titleColor: java.awt.Color)
+                    constructor(border: javax.swing.border.Border, title: java.lang.String | string, titleJustification: number /*int*/, titlePosition: number /*int*/, titleFont: java.awt.Font, titleColor: java.awt.Color)
                 }
             }
         }

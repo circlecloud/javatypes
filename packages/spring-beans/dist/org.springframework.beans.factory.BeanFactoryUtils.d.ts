@@ -15,7 +15,7 @@ declare namespace org {
                  * @since 04.07.2003
                  */
                 // @ts-ignore
-                class BeanFactoryUtils extends java.lang.Object {
+                abstract class BeanFactoryUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,7 +23,7 @@ declare namespace org {
                      * unique, "#1", "#2" etc will be appended, until the name becomes unique.
                      */
                     // @ts-ignore
-                    readonly GENERATED_BEAN_NAME_SEPARATOR: string
+                    public static readonly GENERATED_BEAN_NAME_SEPARATOR: java.lang.String | string
                     /**
                      * Return whether the given name is a factory dereference
                      * (beginning with the factory dereference prefix).
@@ -32,7 +32,7 @@ declare namespace org {
                      * @see BeanFactory#FACTORY_BEAN_PREFIX
                      */
                     // @ts-ignore
-                    isFactoryDereference(name: string): boolean
+                    public static isFactoryDereference(name: java.lang.String | string): boolean
                     /**
                      * Return the actual bean name, stripping out the factory dereference
                      * prefix (if any, also stripping repeated factory prefixes if found).
@@ -41,7 +41,7 @@ declare namespace org {
                      * @see BeanFactory#FACTORY_BEAN_PREFIX
                      */
                     // @ts-ignore
-                    transformedBeanName(name: string): java.lang.String
+                    public static transformedBeanName(name: java.lang.String | string): string
                     /**
                      * Return whether the given name is a bean name which has been generated
                      * by the default naming strategy (containing a "#..." part).
@@ -52,7 +52,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.support.DefaultBeanNameGenerator
                      */
                     // @ts-ignore
-                    isGeneratedBeanName(name: string): boolean
+                    public static isGeneratedBeanName(name: java.lang.String | string): boolean
                     /**
                      * Extract the "raw" bean name from the given (potentially generated) bean name,
                      * excluding any "#..." suffixes which might have been added for uniqueness.
@@ -61,7 +61,7 @@ declare namespace org {
                      * @see #GENERATED_BEAN_NAME_SEPARATOR
                      */
                     // @ts-ignore
-                    originalBeanName(name: string): java.lang.String
+                    public static originalBeanName(name: java.lang.String | string): string
                     /**
                      * Count all beans in any hierarchy in which this factory participates.
                      * Includes counts of ancestor bean factories.
@@ -72,7 +72,7 @@ declare namespace org {
                      * @see #beanNamesIncludingAncestors
                      */
                     // @ts-ignore
-                    countBeansIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory): int
+                    public static countBeansIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory): number /*int*/
                     /**
                      * Return all bean names in the factory, including ancestor factories.
                      * @param lbf the bean factory
@@ -80,7 +80,7 @@ declare namespace org {
                      * @see #beanNamesForTypeIncludingAncestors
                      */
                     // @ts-ignore
-                    beanNamesIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory): java.lang.String[]
+                    public static beanNamesIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory): string[]
                     /**
                      * Get all bean names for the given type, including those defined in ancestor
                      * factories. Will return unique names in case of overridden bean definitions.
@@ -96,7 +96,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeanNamesForType(ResolvableType)
                      */
                     // @ts-ignore
-                    beanNamesForTypeIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory, type: ResolvableType): java.lang.String[]
+                    public static beanNamesForTypeIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory, type: ResolvableType): string[]
                     /**
                      * Get all bean names for the given type, including those defined in ancestor
                      * factories. Will return unique names in case of overridden bean definitions.
@@ -120,7 +120,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeanNamesForType(ResolvableType, boolean, boolean)
                      */
                     // @ts-ignore
-                    beanNamesForTypeIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory, type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): java.lang.String[]
+                    public static beanNamesForTypeIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory, type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): string[]
                     /**
                      * Get all bean names whose {@code Class} has the supplied {@link Annotation}
                      * type, including those defined in ancestor factories, without creating any bean
@@ -132,7 +132,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeanNamesForAnnotation(Class)
                      */
                     // @ts-ignore
-                    beanNamesForAnnotationIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory, annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.lang.String[]
+                    public static beanNamesForAnnotationIncludingAncestors(lbf: org.springframework.beans.factory.ListableBeanFactory, annotationType: java.lang.Class<any>): string[]
                     /**
                      * Return all beans of the given type or subtypes, also picking up beans defined in
                      * ancestor bean factories if the current bean factory is a HierarchicalBeanFactory.
@@ -152,7 +152,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeansOfType(Class)
                      */
                     // @ts-ignore
-                    beansOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>): java.util.Map<java.lang.String, T>
+                    public static beansOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>): java.util.Map<java.lang.String | string, T>
                     /**
                      * Return all beans of the given type or subtypes, also picking up beans defined in
                      * ancestor bean factories if the current bean factory is a HierarchicalBeanFactory.
@@ -181,7 +181,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeansOfType(Class, boolean, boolean)
                      */
                     // @ts-ignore
-                    beansOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String, T>
+                    public static beansOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String | string, T>
                     /**
                      * Return a single bean of the given type or subtypes, also picking up beans
                      * defined in ancestor bean factories if the current bean factory is a
@@ -206,7 +206,7 @@ declare namespace org {
                      * @see #beansOfTypeIncludingAncestors(ListableBeanFactory, Class)
                      */
                     // @ts-ignore
-                    beanOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>): T
+                    public static beanOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>): T
                     /**
                      * Return a single bean of the given type or subtypes, also picking up beans
                      * defined in ancestor bean factories if the current bean factory is a
@@ -238,7 +238,7 @@ declare namespace org {
                      * @see #beansOfTypeIncludingAncestors(ListableBeanFactory, Class, boolean, boolean)
                      */
                     // @ts-ignore
-                    beanOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): T
+                    public static beanOfTypeIncludingAncestors<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): T
                     /**
                      * Return a single bean of the given type or subtypes, not looking in ancestor
                      * factories. Useful convenience method when we expect a single bean and
@@ -257,7 +257,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeansOfType(Class)
                      */
                     // @ts-ignore
-                    beanOfType<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>): T
+                    public static beanOfType<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>): T
                     /**
                      * Return a single bean of the given type or subtypes, not looking in ancestor
                      * factories. Useful convenience method when we expect a single bean and
@@ -284,7 +284,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeansOfType(Class, boolean, boolean)
                      */
                     // @ts-ignore
-                    beanOfType<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): T
+                    public static beanOfType<T>(lbf: org.springframework.beans.factory.ListableBeanFactory, type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): T
                 }
             }
         }

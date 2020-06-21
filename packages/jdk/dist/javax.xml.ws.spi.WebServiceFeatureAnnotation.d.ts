@@ -31,7 +31,7 @@ declare namespace javax {
                  * @since JAX-WS 2.1
                  */
                 // @ts-ignore
-                class WebServiceFeatureAnnotation implements java.lang.annotation.Annotation {
+                abstract class WebServiceFeatureAnnotation implements java.lang.annotation.Annotation {
                 }
             }
         }

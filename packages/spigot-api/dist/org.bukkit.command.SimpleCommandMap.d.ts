@@ -6,41 +6,41 @@ declare namespace org {
                 // @ts-ignore
                 constructor(server: org.bukkit.Server)
                 // @ts-ignore
-                readonly knownCommands: java.util.Map<java.lang.String, org.bukkit.command.Command>
+                readonly knownCommands: java.util.Map<java.lang.String | string, org.bukkit.command.Command>
                 // @ts-ignore
-                setFallbackCommands(): void
+                public setFallbackCommands(): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                registerAll(fallbackPrefix: string, commands: Array<org.bukkit.command.Command>): void
+                public registerAll(fallbackPrefix: java.lang.String | string, commands: java.util.List<org.bukkit.command.Command> | Array<org.bukkit.command.Command>): void
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                register(fallbackPrefix: string, command: org.bukkit.command.Command): boolean
+                public register(fallbackPrefix: java.lang.String | string, command: org.bukkit.command.Command): boolean
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                register(label: string, fallbackPrefix: string, command: org.bukkit.command.Command): boolean
+                public register(label: java.lang.String | string, fallbackPrefix: java.lang.String | string, command: org.bukkit.command.Command): boolean
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                dispatch(sender: org.bukkit.command.CommandSender, commandLine: string): boolean
+                public dispatch(sender: org.bukkit.command.CommandSender, commandLine: java.lang.String | string): boolean
                 // @ts-ignore
-                clearCommands(): void
+                public clearCommands(): void
                 // @ts-ignore
-                getCommand(name: string): org.bukkit.command.Command
+                public getCommand(name: java.lang.String | string): org.bukkit.command.Command
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: string): java.util.List<java.lang.String>
+                public tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: java.lang.String | string): Array<java.lang.String | string>
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: string, location: org.bukkit.Location): java.util.List<java.lang.String>
+                public tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: java.lang.String | string, location: org.bukkit.Location): Array<java.lang.String | string>
                 // @ts-ignore
-                getCommands(): java.util.Collection<org.bukkit.command.Command>
+                public getCommands(): Array<org.bukkit.command.Command>
                 // @ts-ignore
-                registerServerAliases(): void
+                public registerServerAliases(): void
             }
         }
     }

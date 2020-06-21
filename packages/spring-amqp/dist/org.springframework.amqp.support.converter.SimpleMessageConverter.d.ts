@@ -18,9 +18,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        readonly DEFAULT_CHARSET: string
+                        public static readonly DEFAULT_CHARSET: java.lang.String | string
                         // @ts-ignore
-                        setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
+                        public setBeanClassLoader(beanClassLoader: java.lang.ClassLoader): void
                         /**
                          * Set the codebase URL to download classes from if not found locally. Can consists of multiple URLs, separated by
                          * spaces.
@@ -31,24 +31,24 @@ declare namespace org {
                          * @see java.rmi.server.RMIClassLoader
                          */
                         // @ts-ignore
-                        setCodebaseUrl(codebaseUrl: string): void
+                        public setCodebaseUrl(codebaseUrl: java.lang.String | string): void
                         /**
                          * Specify the default charset to use when converting to or from text-based
                          * Message body content. If not specified, the charset will be "UTF-8".
                          * @param defaultCharset The default charset.
                          */
                         // @ts-ignore
-                        setDefaultCharset(defaultCharset: string): void
+                        public setDefaultCharset(defaultCharset: java.lang.String | string): void
                         /**
                          * Converts from a AMQP Message to an Object.
                          */
                         // @ts-ignore
-                        fromMessage(message: org.springframework.amqp.core.Message): java.lang.Object
+                        public fromMessage(message: org.springframework.amqp.core.Message): any
                         /**
                          * Creates an AMQP Message from the provided Object.
                          */
                         // @ts-ignore
-                        createMessage(object: any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
+                        createMessage(object: java.lang.Object | any, messageProperties: org.springframework.amqp.core.MessageProperties): org.springframework.amqp.core.Message
                         /**
                          * Create an ObjectInputStream for the given InputStream and codebase. The default implementation creates a
                          * CodebaseAwareObjectInputStream.
@@ -59,7 +59,7 @@ declare namespace org {
                          * @see org.springframework.remoting.rmi.CodebaseAwareObjectInputStream
                          */
                         // @ts-ignore
-                        createObjectInputStream(jis: java.io.InputStream, codebaseUrl: string): java.io.ObjectInputStream
+                        createObjectInputStream(jis: java.io.InputStream, codebaseUrl: java.lang.String | string): java.io.ObjectInputStream
                     }
                 }
             }

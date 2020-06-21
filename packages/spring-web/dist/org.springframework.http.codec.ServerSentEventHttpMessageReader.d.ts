@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 5.0
                  */
                 // @ts-ignore
-                class ServerSentEventHttpMessageReader extends java.lang.Object implements org.springframework.http.codec.HttpMessageReader<java.lang.Object> {
+                class ServerSentEventHttpMessageReader extends java.lang.Object implements org.springframework.http.codec.HttpMessageReader<java.lang.Object | any> {
                     /**
                      * Constructor without a {@code Decoder}. In this mode only {@code String}
                      * is supported as the data of an event.
@@ -27,7 +27,7 @@ declare namespace org {
                      * Return the configured {@code Decoder}.
                      */
                     // @ts-ignore
-                    getDecoder(): <any>
+                    public getDecoder(): object
                     /**
                      * Configure a limit on the maximum number of bytes per SSE event which are
                      * buffered before the event is parsed.
@@ -39,21 +39,21 @@ declare namespace org {
                      * @since 5.1.13
                      */
                     // @ts-ignore
-                    setMaxInMemorySize(byteCount: number /*int*/): void
+                    public setMaxInMemorySize(byteCount: number /*int*/): void
                     /**
                      * Return the {@link #setMaxInMemorySize configured} byte count limit.
                      * @since 5.1.13
                      */
                     // @ts-ignore
-                    getMaxInMemorySize(): int
+                    public getMaxInMemorySize(): number /*int*/
                     // @ts-ignore
-                    getReadableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getReadableMediaTypes(): Array<org.springframework.http.MediaType>
                     // @ts-ignore
-                    canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(elementType: ResolvableType, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     // @ts-ignore
-                    readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

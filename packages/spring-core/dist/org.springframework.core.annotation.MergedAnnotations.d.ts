@@ -112,7 +112,7 @@ declare namespace org {
                      * @return {#code true} if the annotation is present
                      */
                     // @ts-ignore
-                    isPresent(annotationType: string): boolean
+                    isPresent(annotationType: java.lang.String | string): boolean
                     /**
                      * Determine if the specified annotation is directly present.
                      * <p>Equivalent to calling {@code get(annotationType).isDirectlyPresent()}.
@@ -129,7 +129,7 @@ declare namespace org {
                      * @return {#code true} if the annotation is directly present
                      */
                     // @ts-ignore
-                    isDirectlyPresent(annotationType: string): boolean
+                    isDirectlyPresent(annotationType: java.lang.String | string): boolean
                     /**
                      * Get the {@linkplain MergedAnnotationSelectors#nearest() nearest} matching
                      * annotation or meta-annotation of the specified type, or
@@ -150,7 +150,7 @@ declare namespace org {
                      * @see MergedAnnotationPredicates
                      */
                     // @ts-ignore
-                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>, predicate: java.util.function.Predicate<any super org.springframework.core.annotation.MergedAnnotation<A>> | java.util.function$.Predicate<? super org.springframework.core.annotation.MergedAnnotation<A>>): org.springframework.core.annotation.MergedAnnotation<A>
+                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>, predicate: java.util.function$.Predicate<any>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Get a matching annotation or meta-annotation of the specified type, or
                      * {@link MergedAnnotation#missing()} if none is present.
@@ -165,7 +165,7 @@ declare namespace org {
                      * @see MergedAnnotationSelectors
                      */
                     // @ts-ignore
-                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>, predicate: java.util.function.Predicate<any super org.springframework.core.annotation.MergedAnnotation<A>> | java.util.function$.Predicate<? super org.springframework.core.annotation.MergedAnnotation<A>>, selector: org.springframework.core.annotation.MergedAnnotationSelector<A>): org.springframework.core.annotation.MergedAnnotation<A>
+                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.Class<A>, predicate: java.util.function$.Predicate<any>, selector: org.springframework.core.annotation.MergedAnnotationSelector<A>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Get the {@linkplain MergedAnnotationSelectors#nearest() nearest} matching
                      * annotation or meta-annotation of the specified type, or
@@ -175,7 +175,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotation} instance
                      */
                     // @ts-ignore
-                    get<A extends java.lang.annotation.Annotation>(annotationType: string): org.springframework.core.annotation.MergedAnnotation<A>
+                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.String | string): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Get the {@linkplain MergedAnnotationSelectors#nearest() nearest} matching
                      * annotation or meta-annotation of the specified type, or
@@ -188,7 +188,7 @@ declare namespace org {
                      * @see MergedAnnotationPredicates
                      */
                     // @ts-ignore
-                    get<A extends java.lang.annotation.Annotation>(annotationType: string, predicate: java.util.function.Predicate<any super org.springframework.core.annotation.MergedAnnotation<A>> | java.util.function$.Predicate<? super org.springframework.core.annotation.MergedAnnotation<A>>): org.springframework.core.annotation.MergedAnnotation<A>
+                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.String | string, predicate: java.util.function$.Predicate<any>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Get a matching annotation or meta-annotation of the specified type, or
                      * {@link MergedAnnotation#missing()} if none is present.
@@ -204,7 +204,7 @@ declare namespace org {
                      * @see MergedAnnotationSelectors
                      */
                     // @ts-ignore
-                    get<A extends java.lang.annotation.Annotation>(annotationType: string, predicate: java.util.function.Predicate<any super org.springframework.core.annotation.MergedAnnotation<A>> | java.util.function$.Predicate<? super org.springframework.core.annotation.MergedAnnotation<A>>, selector: org.springframework.core.annotation.MergedAnnotationSelector<A>): org.springframework.core.annotation.MergedAnnotation<A>
+                    get<A extends java.lang.annotation.Annotation>(annotationType: java.lang.String | string, predicate: java.util.function$.Predicate<any>, selector: org.springframework.core.annotation.MergedAnnotationSelector<A>): org.springframework.core.annotation.MergedAnnotation<A>
                     /**
                      * Stream all annotations and meta-annotations that match the specified
                      * type. The resulting stream follows the same ordering rules as
@@ -223,7 +223,7 @@ declare namespace org {
                      * @return a stream of matching annotations
                      */
                     // @ts-ignore
-                    stream<A extends java.lang.annotation.Annotation>(annotationType: string): java.util.stream.Stream<org.springframework.core.annotation.MergedAnnotation<A>>
+                    stream<A extends java.lang.annotation.Annotation>(annotationType: java.lang.String | string): java.util.stream.Stream<org.springframework.core.annotation.MergedAnnotation<A>>
                     /**
                      * Stream all annotations and meta-annotations contained in this collection.
                      * The resulting stream is ordered first by the
@@ -308,7 +308,7 @@ declare namespace org {
                      * @see #from(AnnotatedElement)
                      */
                     // @ts-ignore
-                    from(source: any, ...annotations: java.lang.annotation.Annotation[]): org.springframework.core.annotation.MergedAnnotations
+                    from(source: java.lang.Object | any, ...annotations: java.lang.annotation.Annotation[]): org.springframework.core.annotation.MergedAnnotations
                     /**
                      * Create a new {@link MergedAnnotations} instance from the specified
                      * annotations.
@@ -321,7 +321,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotations} instance containing the annotations
                      */
                     // @ts-ignore
-                    from(source: any, annotations: java.lang.annotation.Annotation[], repeatableContainers: org.springframework.core.annotation.RepeatableContainers): org.springframework.core.annotation.MergedAnnotations
+                    from(source: java.lang.Object | any, annotations: java.lang.annotation.Annotation[], repeatableContainers: org.springframework.core.annotation.RepeatableContainers): org.springframework.core.annotation.MergedAnnotations
                     /**
                      * Create a new {@link MergedAnnotations} instance from the specified
                      * annotations.
@@ -336,7 +336,7 @@ declare namespace org {
                      * @return a {#link MergedAnnotations} instance containing the annotations
                      */
                     // @ts-ignore
-                    from(source: any, annotations: java.lang.annotation.Annotation[], repeatableContainers: org.springframework.core.annotation.RepeatableContainers, annotationFilter: org.springframework.core.annotation.AnnotationFilter): org.springframework.core.annotation.MergedAnnotations
+                    from(source: java.lang.Object | any, annotations: java.lang.annotation.Annotation[], repeatableContainers: org.springframework.core.annotation.RepeatableContainers, annotationFilter: org.springframework.core.annotation.AnnotationFilter): org.springframework.core.annotation.MergedAnnotations
                     /**
                      * Create a new {@link MergedAnnotations} instance from the specified
                      * collection of directly present annotations. This method allows a
@@ -354,7 +354,7 @@ declare namespace org {
                      * @see MergedAnnotation#of(ClassLoader, Object, Class, java.util.Map)
                      */
                     // @ts-ignore
-                    of(annotations: Array<org.springframework.core.annotation.MergedAnnotation<any>>): org.springframework.core.annotation.MergedAnnotations
+                    of(annotations: java.util.Collection<org.springframework.core.annotation.MergedAnnotation<any>> | Array<org.springframework.core.annotation.MergedAnnotation<any>>): org.springframework.core.annotation.MergedAnnotations
                 }
             }
         }

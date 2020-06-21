@@ -59,7 +59,7 @@ declare namespace org {
                              * @return The supplier override
                              */
                             // @ts-ignore
-                            getSupplierOverride(): java.util.Optional<java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject>>
+                            getSupplierOverride(): java.util.Optional<java.util.function$$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject>>
                             /**
                              * Sets the overriding supplier. If the supplier is present then it is used
                              * in place of the weighted table while determining what PopulatorObject to
@@ -67,7 +67,7 @@ declare namespace org {
                              * @param override The new supplier override, or null
                              */
                             // @ts-ignore
-                            setSupplierOverride(override: java.util.function.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject> | java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject>): void
+                            setSupplierOverride(override: java.util.function$.Function<org.spongepowered.api.world.Location<org.spongepowered.api.world.extent.Extent>, org.spongepowered.api.world.gen.PopulatorObject>): void
                             /**
                              * Clears the supplier override to force the weighted table to be used
                              * instead.

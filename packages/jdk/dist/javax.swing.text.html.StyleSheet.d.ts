@@ -114,7 +114,7 @@ declare namespace javax {
                      *   the tag
                      */
                     // @ts-ignore
-                    getRule(t: javax.swing.text.html.HTML.Tag, e: javax.swing.text.Element): javax.swing.text.Style
+                    public getRule(t: javax.swing.text.html.HTML.Tag, e: javax.swing.text.Element): javax.swing.text.Style
                     /**
                      * Fetches the rule that best matches the selector given
                      * in string form. Where <code>selector</code> is a space separated
@@ -127,21 +127,21 @@ declare namespace javax {
                      * the rule "p".
                      */
                     // @ts-ignore
-                    getRule(selector: string): javax.swing.text.Style
+                    public getRule(selector: java.lang.String | string): javax.swing.text.Style
                     /**
                      * Adds a set of rules to the sheet.  The rules are expected to
                      * be in valid CSS format.  Typically this would be called as
                      * a result of parsing a &lt;style&gt; tag.
                      */
                     // @ts-ignore
-                    addRule(rule: string): void
+                    public addRule(rule: java.lang.String | string): void
                     /**
                      * Translates a CSS declaration to an AttributeSet that represents
                      * the CSS declaration.  Typically this would be called as a
                      * result of encountering an HTML style attribute.
                      */
                     // @ts-ignore
-                    getDeclaration(decl: string): javax.swing.text.AttributeSet
+                    public getDeclaration(decl: java.lang.String | string): javax.swing.text.AttributeSet
                     /**
                      * Loads a set of rules that have been specified in terms of
                      * CSS1 grammar.  If there are collisions with existing rules,
@@ -153,20 +153,20 @@ declare namespace javax {
                      *   parameter.
                      */
                     // @ts-ignore
-                    loadRules(input: java.io.Reader, ref: java.net.URL): void
+                    public loadRules(input: java.io.Reader, ref: java.net.URL): void
                     /**
                      * Fetches a set of attributes to use in the view for
                      * displaying.  This is basically a set of attributes that
                      * can be used for View.getAttributes.
                      */
                     // @ts-ignore
-                    getViewAttributes(v: javax.swing.text.View): javax.swing.text.AttributeSet
+                    public getViewAttributes(v: javax.swing.text.View): javax.swing.text.AttributeSet
                     /**
                      * Removes a named style previously added to the document.
                      * @param nm  the name of the style to remove
                      */
                     // @ts-ignore
-                    removeStyle(nm: string): void
+                    public removeStyle(nm: java.lang.String | string): void
                     /**
                      * Adds the rules from the StyleSheet <code>ss</code> to those of
                      * the receiver. <code>ss's</code> rules will override the rules of
@@ -175,20 +175,20 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    addStyleSheet(ss: javax.swing.text.html.StyleSheet): void
+                    public addStyleSheet(ss: javax.swing.text.html.StyleSheet): void
                     /**
                      * Removes the StyleSheet <code>ss</code> from those of the receiver.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    removeStyleSheet(ss: javax.swing.text.html.StyleSheet): void
+                    public removeStyleSheet(ss: javax.swing.text.html.StyleSheet): void
                     /**
                      * Returns an array of the linked StyleSheets. Will return null
                      * if there are no linked StyleSheets.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getStyleSheets(): javax.swing.text.html.StyleSheet[]
+                    public getStyleSheets(): javax.swing.text.html.StyleSheet[]
                     /**
                      * Imports a style sheet from <code>url</code>. The resulting rules
                      * are directly added to the receiver. If you do not want the rules
@@ -197,39 +197,39 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    importStyleSheet(url: java.net.URL): void
+                    public importStyleSheet(url: java.net.URL): void
                     /**
                      * Sets the base. All import statements that are relative, will be
                      * relative to <code>base</code>.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setBase(base: java.net.URL): void
+                    public setBase(base: java.net.URL): void
                     /**
                      * Returns the base.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getBase(): java.net.URL
+                    public getBase(): java.net.URL
                     /**
                      * Adds a CSS attribute to the given set.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    addCSSAttribute(attr: javax.swing.text.MutableAttributeSet, key: javax.swing.text.html.CSS.Attribute, value: string): void
+                    public addCSSAttribute(attr: javax.swing.text.MutableAttributeSet, key: javax.swing.text.html.CSS.Attribute, value: java.lang.String | string): void
                     /**
                      * Adds a CSS attribute to the given set.
                      * @since 1.3
                      */
                     // @ts-ignore
-                    addCSSAttributeFromHTML(attr: javax.swing.text.MutableAttributeSet, key: javax.swing.text.html.CSS.Attribute, value: string): boolean
+                    public addCSSAttributeFromHTML(attr: javax.swing.text.MutableAttributeSet, key: javax.swing.text.html.CSS.Attribute, value: java.lang.String | string): boolean
                     /**
                      * Converts a set of HTML attributes to an equivalent
                      * set of CSS attributes.
                      * @param htmlAttrSet AttributeSet containing the HTML attributes.
                      */
                     // @ts-ignore
-                    translateHTMLToCSS(htmlAttrSet: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
+                    public translateHTMLToCSS(htmlAttrSet: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
                     /**
                      * Adds an attribute to the given set, and returns
                      * the new representative set.  This is reimplemented to
@@ -244,7 +244,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#addAttribute
                      */
                     // @ts-ignore
-                    addAttribute(old: javax.swing.text.AttributeSet, key: any, value: any): javax.swing.text.AttributeSet
+                    public addAttribute(old: javax.swing.text.AttributeSet, key: java.lang.Object | any, value: java.lang.Object | any): javax.swing.text.AttributeSet
                     /**
                      * Adds a set of attributes to the element.  If any of these attributes
                      * are StyleConstants attributes, they will be converted to CSS prior
@@ -255,7 +255,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#addAttribute
                      */
                     // @ts-ignore
-                    addAttributes(old: javax.swing.text.AttributeSet, attr: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
+                    public addAttributes(old: javax.swing.text.AttributeSet, attr: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
                     /**
                      * Removes an attribute from the set.  If the attribute is a StyleConstants
                      * attribute, the request will be converted to a CSS attribute prior to
@@ -266,7 +266,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#removeAttribute
                      */
                     // @ts-ignore
-                    removeAttribute(old: javax.swing.text.AttributeSet, key: any): javax.swing.text.AttributeSet
+                    public removeAttribute(old: javax.swing.text.AttributeSet, key: java.lang.Object | any): javax.swing.text.AttributeSet
                     /**
                      * Removes a set of attributes for the element.  If any of the attributes
                      * is a StyleConstants attribute, the request will be converted to a CSS
@@ -277,7 +277,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#removeAttributes
                      */
                     // @ts-ignore
-                    removeAttributes(old: javax.swing.text.AttributeSet, names: java.util.Enumeration<any>): javax.swing.text.AttributeSet
+                    public removeAttributes(old: javax.swing.text.AttributeSet, names: java.util.Enumeration<any>): javax.swing.text.AttributeSet
                     /**
                      * Removes a set of attributes. If any of the attributes
                      * is a StyleConstants attribute, the request will be converted to a CSS
@@ -288,7 +288,7 @@ declare namespace javax {
                      * @see MutableAttributeSet#removeAttributes
                      */
                     // @ts-ignore
-                    removeAttributes(old: javax.swing.text.AttributeSet, attrs: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
+                    public removeAttributes(old: javax.swing.text.AttributeSet, attrs: javax.swing.text.AttributeSet): javax.swing.text.AttributeSet
                     /**
                      * Creates a compact set of attributes that might be shared.
                      * This is a hook for subclasses that want to alter the
@@ -317,7 +317,7 @@ declare namespace javax {
                      * Fetches the font to use for the given set of attributes.
                      */
                     // @ts-ignore
-                    getFont(a: javax.swing.text.AttributeSet): java.awt.Font
+                    public getFont(a: javax.swing.text.AttributeSet): java.awt.Font
                     /**
                      * Takes a set of attributes and turn it into a foreground color
                      * specification.  This might be used to specify things
@@ -326,7 +326,7 @@ declare namespace javax {
                      * @return the color
                      */
                     // @ts-ignore
-                    getForeground(a: javax.swing.text.AttributeSet): java.awt.Color
+                    public getForeground(a: javax.swing.text.AttributeSet): java.awt.Color
                     /**
                      * Takes a set of attributes and turn it into a background color
                      * specification.  This might be used to specify things
@@ -335,44 +335,44 @@ declare namespace javax {
                      * @return the color
                      */
                     // @ts-ignore
-                    getBackground(a: javax.swing.text.AttributeSet): java.awt.Color
+                    public getBackground(a: javax.swing.text.AttributeSet): java.awt.Color
                     /**
                      * Fetches the box formatter to use for the given set
                      * of CSS attributes.
                      */
                     // @ts-ignore
-                    getBoxPainter(a: javax.swing.text.AttributeSet): javax.swing.text.html.StyleSheet.BoxPainter
+                    public getBoxPainter(a: javax.swing.text.AttributeSet): javax.swing.text.html.StyleSheet.BoxPainter
                     /**
                      * Fetches the list formatter to use for the given set
                      * of CSS attributes.
                      */
                     // @ts-ignore
-                    getListPainter(a: javax.swing.text.AttributeSet): javax.swing.text.html.StyleSheet.ListPainter
+                    public getListPainter(a: javax.swing.text.AttributeSet): javax.swing.text.html.StyleSheet.ListPainter
                     /**
                      * Sets the base font size, with valid values between 1 and 7.
                      */
                     // @ts-ignore
-                    setBaseFontSize(sz: number /*int*/): void
+                    public setBaseFontSize(sz: number /*int*/): void
                     /**
                      * Sets the base font size from the passed in String. The string
                      * can either identify a specific font size, with legal values between
                      * 1 and 7, or identify a relative font size such as +1 or -2.
                      */
                     // @ts-ignore
-                    setBaseFontSize(size: string): void
+                    public setBaseFontSize(size: java.lang.String | string): void
                     // @ts-ignore
-                    getIndexOfSize(pt: number /*float*/): int
+                    public static getIndexOfSize(pt: number /*float*/): number /*int*/
                     /**
                      * Returns the point size, given a size index.
                      */
                     // @ts-ignore
-                    getPointSize(index: number /*int*/): float
+                    public getPointSize(index: number /*int*/): number /*float*/
                     /**
                      * Given a string such as "+2", "-2", or "2",
                      * returns a point size value.
                      */
                     // @ts-ignore
-                    getPointSize(size: string): float
+                    public getPointSize(size: java.lang.String | string): number /*float*/
                     /**
                      * Converts a color string such as "RED" or "#NNNNNN" to a Color.
                      * Note: This will only convert the HTML3.2 color strings
@@ -380,7 +380,7 @@ declare namespace javax {
                      * otherwise, it will return null.
                      */
                     // @ts-ignore
-                    stringToColor(string: string): java.awt.Color
+                    public stringToColor(string: java.lang.String | string): java.awt.Color
                 }
             }
         }

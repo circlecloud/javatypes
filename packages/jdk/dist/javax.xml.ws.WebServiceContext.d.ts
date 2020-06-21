@@ -55,7 +55,7 @@ declare namespace javax {
                  *          being serviced.
                  */
                 // @ts-ignore
-                isUserInRole(role: string): boolean
+                isUserInRole(role: java.lang.String | string): boolean
                 /**
                  * Returns the <code>EndpointReference</code> for this
                  * endpoint.

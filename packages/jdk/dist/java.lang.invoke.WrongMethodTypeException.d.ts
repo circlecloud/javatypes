@@ -19,7 +19,7 @@ declare namespace java {
                  * Construct a WrongMethodTypeException with the supplied message.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
             }
         }
     }

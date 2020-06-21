@@ -27,7 +27,7 @@ declare namespace org {
                          * @return the source metadata object to store (may be {#code null})
                          */
                         // @ts-ignore
-                        extractSource(sourceCandidate: any, definingResource: Resource): java.lang.Object
+                        extractSource(sourceCandidate: java.lang.Object | any, definingResource: Resource): any
                     }
                 }
             }

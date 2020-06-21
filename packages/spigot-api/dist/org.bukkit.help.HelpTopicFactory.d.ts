@@ -37,7 +37,7 @@ declare namespace org {
                  *      create a topic.
                  */
                 // @ts-ignore
-                createTopic(command: TCommand extends org.bukkit.command.Command): org.bukkit.help.HelpTopic
+                createTopic(command: TCommand): org.bukkit.help.HelpTopic
             }
         }
     }

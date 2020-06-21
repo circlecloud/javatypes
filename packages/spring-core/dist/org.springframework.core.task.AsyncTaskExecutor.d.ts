@@ -25,12 +25,12 @@ declare namespace org {
                      * Constant that indicates immediate execution.
                      */
                     // @ts-ignore
-                    
+                    readonly TIMEOUT_IMMEDIATE: number /*long*/
                     /**
                      * Constant that indicates no time limit.
                      */
                     // @ts-ignore
-                    
+                    readonly TIMEOUT_INDEFINITE: number /*long*/
                     /**
                      * Execute the given {@code task}.
                      * @param task the {#code Runnable} to execute (never {@code null})
@@ -53,7 +53,7 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    submit(task: java.lang.Runnable): java.util.concurrent.Future<?>
+                    submit(task: java.lang.Runnable): java.util.concurrent.Future<any>
                     /**
                      * Submit a Callable task for execution, receiving a Future representing that task.
                      * The Future will return the Callable's result upon completion.

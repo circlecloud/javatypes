@@ -23,7 +23,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor()
                             // @ts-ignore
-                            handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, result: org.springframework.web.context.request.async.DeferredResult<T>): boolean
+                            public handleTimeout<T>(request: org.springframework.web.context.request.NativeWebRequest, result: org.springframework.web.context.request.async.DeferredResult<T>): boolean
                         }
                     }
                 }

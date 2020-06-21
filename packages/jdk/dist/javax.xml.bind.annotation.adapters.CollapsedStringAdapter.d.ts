@@ -12,7 +12,7 @@ declare namespace javax {
                      * @since JAXB 2.0
                      */
                     // @ts-ignore
-                    class CollapsedStringAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<java.lang.String, java.lang.String> {
+                    class CollapsedStringAdapter extends javax.xml.bind.annotation.adapters.XmlAdapter<java.lang.String | string, java.lang.String | string> {
                         // @ts-ignore
                         constructor()
                         /**
@@ -21,18 +21,18 @@ declare namespace javax {
                          * sequnce of tab, CR, LF, and SP by a single whitespace character ' '.
                          */
                         // @ts-ignore
-                        unmarshal(text: string): java.lang.String
+                        public unmarshal(text: java.lang.String | string): string
                         /**
                          * No-op.
                          * Just return the same string given as the parameter.
                          */
                         // @ts-ignore
-                        marshal(s: string): java.lang.String
+                        public marshal(s: java.lang.String | string): string
                         /**
                          * returns true if the specified char is a white space character.
                          */
                         // @ts-ignore
-                        isWhiteSpace(ch: string): boolean
+                        static isWhiteSpace(ch: string): boolean
                     }
                 }
             }

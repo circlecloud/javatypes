@@ -39,7 +39,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                class AbstractTypeVisitor8<R, P> extends javax.lang.model.util.AbstractTypeVisitor7<R, P> {
+                abstract class AbstractTypeVisitor8<R, P> extends javax.lang.model.util.AbstractTypeVisitor7<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */
@@ -52,7 +52,7 @@ declare namespace javax {
                      * @return the result of the visit as defined by a subclass
                      */
                     // @ts-ignore
-                    abstract visitIntersection(t: javax.lang.model.type.IntersectionType, p: P): R
+                    public abstract visitIntersection(t: javax.lang.model.type.IntersectionType, p: P): R
                 }
             }
         }

@@ -54,7 +54,7 @@ declare namespace org {
                  * @see BridgeMethodResolver
                  */
                 // @ts-ignore
-                class AnnotatedElementUtils extends java.lang.Object {
+                abstract class AnnotatedElementUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -64,7 +64,7 @@ declare namespace org {
                      * @since 4.3
                      */
                     // @ts-ignore
-                    forAnnotations(...annotations: java.lang.annotation.Annotation[]): java.lang.reflect.AnnotatedElement
+                    public static forAnnotations(...annotations: java.lang.annotation.Annotation[]): java.lang.reflect.AnnotatedElement
                     /**
                      * Get the fully qualified class names of all meta-annotation types
                      * <em>present</em> on the annotation (of the specified {@code annotationType})
@@ -80,7 +80,7 @@ declare namespace org {
                      * @see #hasMetaAnnotationTypes
                      */
                     // @ts-ignore
-                    getMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Set<java.lang.String>
+                    public static getMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<any>): Array<java.lang.String | string>
                     /**
                      * Get the fully qualified class names of all meta-annotation
                      * types <em>present</em> on the annotation (of the specified
@@ -96,7 +96,7 @@ declare namespace org {
                      * @see #hasMetaAnnotationTypes
                      */
                     // @ts-ignore
-                    getMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationName: string): java.util.Set<java.lang.String>
+                    public static getMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string): Array<java.lang.String | string>
                     /**
                      * Determine if the supplied {@link AnnotatedElement} is annotated with
                      * a <em>composed annotation</em> that is meta-annotated with an
@@ -110,7 +110,7 @@ declare namespace org {
                      * @see #getMetaAnnotationTypes
                      */
                     // @ts-ignore
-                    hasMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                    public static hasMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<any>): boolean
                     /**
                      * Determine if the supplied {@link AnnotatedElement} is annotated with a
                      * <em>composed annotation</em> that is meta-annotated with an annotation
@@ -124,7 +124,7 @@ declare namespace org {
                      * @see #getMetaAnnotationTypes
                      */
                     // @ts-ignore
-                    hasMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationName: string): boolean
+                    public static hasMetaAnnotationTypes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string): boolean
                     /**
                      * Determine if an annotation of the specified {@code annotationType}
                      * is <em>present</em> on the supplied {@link AnnotatedElement} or
@@ -140,7 +140,7 @@ declare namespace org {
                      * @see #hasAnnotation(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    isAnnotated(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                    public static isAnnotated(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<any>): boolean
                     /**
                      * Determine if an annotation of the specified {@code annotationName} is
                      * <em>present</em> on the supplied {@link AnnotatedElement} or within the
@@ -154,7 +154,7 @@ declare namespace org {
                      * @return {#code true} if a matching annotation is present
                      */
                     // @ts-ignore
-                    isAnnotated(element: java.lang.reflect.AnnotatedElement, annotationName: string): boolean
+                    public static isAnnotated(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string): boolean
                     /**
                      * Get the first annotation of the specified {@code annotationType} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element} and
@@ -173,7 +173,7 @@ declare namespace org {
                      * @see #findMergedAnnotation(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    getMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<java.lang.annotation.Annotation>): org.springframework.core.annotation.AnnotationAttributes
+                    public static getMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<any>): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Get the first annotation of the specified {@code annotationName} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element} and
@@ -193,7 +193,7 @@ declare namespace org {
                      * @see #getAllAnnotationAttributes(AnnotatedElement, String)
                      */
                     // @ts-ignore
-                    getMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: string): org.springframework.core.annotation.AnnotationAttributes
+                    public static getMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Get the first annotation of the specified {@code annotationName} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element} and
@@ -221,7 +221,7 @@ declare namespace org {
                      * @see #getAllAnnotationAttributes(AnnotatedElement, String, boolean, boolean)
                      */
                     // @ts-ignore
-                    getMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: string, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
+                    public static getMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Get the first annotation of the specified {@code annotationType} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element},
@@ -237,7 +237,7 @@ declare namespace org {
                      * @see #findMergedAnnotation(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    getMergedAnnotation<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
+                    public static getMergedAnnotation<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
                     /**
                      * Get <strong>all</strong> annotations of the specified {@code annotationType}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -259,7 +259,7 @@ declare namespace org {
                      * @see #findAllMergedAnnotations(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    getAllMergedAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): java.util.Set<A>
+                    public static getAllMergedAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): Array<A>
                     /**
                      * Get <strong>all</strong> annotations of the specified {@code annotationTypes}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -279,7 +279,7 @@ declare namespace org {
                      * @see #getAllMergedAnnotations(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    getAllMergedAnnotations(element: java.lang.reflect.AnnotatedElement, annotationTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>): java.util.Set<java.lang.annotation.Annotation>
+                    public static getAllMergedAnnotations(element: java.lang.reflect.AnnotatedElement, annotationTypes: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>): Array<java.lang.annotation.Annotation>
                     /**
                      * Get all <em>repeatable annotations</em> of the specified {@code annotationType}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -305,7 +305,7 @@ declare namespace org {
                      * @see #getMergedRepeatableAnnotations(AnnotatedElement, Class, Class)
                      */
                     // @ts-ignore
-                    getMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): java.util.Set<A>
+                    public static getMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): Array<A>
                     /**
                      * Get all <em>repeatable annotations</em> of the specified {@code annotationType}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -333,7 +333,7 @@ declare namespace org {
                      * @see #getAllMergedAnnotations(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    getMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Set<A>
+                    public static getMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerType: java.lang.Class<any>): Array<A>
                     /**
                      * Get the annotation attributes of <strong>all</strong> annotations of the specified
                      * {@code annotationName} in the annotation hierarchy above the supplied
@@ -349,7 +349,7 @@ declare namespace org {
                      * @see #getAllAnnotationAttributes(AnnotatedElement, String, boolean, boolean)
                      */
                     // @ts-ignore
-                    getAllAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: string): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                    public static getAllAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Get the annotation attributes of <strong>all</strong> annotations of
                      * the specified {@code annotationName} in the annotation hierarchy above
@@ -369,7 +369,7 @@ declare namespace org {
                      *  attributes from all annotations found, or {@code null} if not found
                      */
                     // @ts-ignore
-                    getAllAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: string, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                    public static getAllAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Determine if an annotation of the specified {@code annotationType}
                      * is <em>available</em> on the supplied {@link AnnotatedElement} or
@@ -385,7 +385,7 @@ declare namespace org {
                      * @see #isAnnotated(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    hasAnnotation(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                    public static hasAnnotation(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<any>): boolean
                     /**
                      * Find the first annotation of the specified {@code annotationType} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element} and
@@ -414,7 +414,7 @@ declare namespace org {
                      * @see #getMergedAnnotationAttributes(AnnotatedElement, String, boolean, boolean)
                      */
                     // @ts-ignore
-                    findMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<java.lang.annotation.Annotation>, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
+                    public static findMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<any>, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Find the first annotation of the specified {@code annotationName} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element} and
@@ -443,7 +443,7 @@ declare namespace org {
                      * @see #getMergedAnnotationAttributes(AnnotatedElement, String, boolean, boolean)
                      */
                     // @ts-ignore
-                    findMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: string, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
+                    public static findMergedAnnotationAttributes(element: java.lang.reflect.AnnotatedElement, annotationName: java.lang.String | string, classValuesAsString: boolean, nestedAnnotationsAsMap: boolean): org.springframework.core.annotation.AnnotationAttributes
                     /**
                      * Find the first annotation of the specified {@code annotationType} within
                      * the annotation hierarchy <em>above</em> the supplied {@code element},
@@ -463,7 +463,7 @@ declare namespace org {
                      * @see #getMergedAnnotationAttributes(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    findMergedAnnotation<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
+                    public static findMergedAnnotation<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): A
                     /**
                      * Find <strong>all</strong> annotations of the specified {@code annotationType}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -484,7 +484,7 @@ declare namespace org {
                      * @see #getAllMergedAnnotations(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    findAllMergedAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): java.util.Set<A>
+                    public static findAllMergedAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): Array<A>
                     /**
                      * Find <strong>all</strong> annotations of the specified {@code annotationTypes}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -504,7 +504,7 @@ declare namespace org {
                      * @see #findAllMergedAnnotations(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    findAllMergedAnnotations(element: java.lang.reflect.AnnotatedElement, annotationTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>): java.util.Set<java.lang.annotation.Annotation>
+                    public static findAllMergedAnnotations(element: java.lang.reflect.AnnotatedElement, annotationTypes: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>): Array<java.lang.annotation.Annotation>
                     /**
                      * Find all <em>repeatable annotations</em> of the specified {@code annotationType}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -530,7 +530,7 @@ declare namespace org {
                      * @see #findMergedRepeatableAnnotations(AnnotatedElement, Class, Class)
                      */
                     // @ts-ignore
-                    findMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): java.util.Set<A>
+                    public static findMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>): Array<A>
                     /**
                      * Find all <em>repeatable annotations</em> of the specified {@code annotationType}
                      * within the annotation hierarchy <em>above</em> the supplied {@code element};
@@ -558,7 +558,7 @@ declare namespace org {
                      * @see #findAllMergedAnnotations(AnnotatedElement, Class)
                      */
                     // @ts-ignore
-                    findMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Set<A>
+                    public static findMergedRepeatableAnnotations<A extends java.lang.annotation.Annotation>(element: java.lang.reflect.AnnotatedElement, annotationType: java.lang.Class<A>, containerType: java.lang.Class<any>): Array<A>
                 }
             }
         }

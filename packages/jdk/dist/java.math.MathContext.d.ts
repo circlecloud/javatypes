@@ -55,7 +55,7 @@ declare namespace java {
              * @throws NullPointerException if the argument is {#code null}
              */
             // @ts-ignore
-            constructor(val: string)
+            constructor(val: java.lang.String | string)
             /**
              * A {@code MathContext} object whose settings have the values
              * required for unlimited precision arithmetic.
@@ -65,7 +65,7 @@ declare namespace java {
              * </code>
              */
             // @ts-ignore
-            readonly UNLIMITED: java.math.MathContext
+            public static readonly UNLIMITED: java.math.MathContext
             /**
              * A {@code MathContext} object with a precision setting
              * matching the IEEE 754R Decimal32 format, 7 digits, and a
@@ -73,7 +73,7 @@ declare namespace java {
              * IEEE 754R default.
              */
             // @ts-ignore
-            readonly DECIMAL32: java.math.MathContext
+            public static readonly DECIMAL32: java.math.MathContext
             /**
              * A {@code MathContext} object with a precision setting
              * matching the IEEE 754R Decimal64 format, 16 digits, and a
@@ -81,7 +81,7 @@ declare namespace java {
              * IEEE 754R default.
              */
             // @ts-ignore
-            readonly DECIMAL64: java.math.MathContext
+            public static readonly DECIMAL64: java.math.MathContext
             /**
              * A {@code MathContext} object with a precision setting
              * matching the IEEE 754R Decimal128 format, 34 digits, and a
@@ -89,7 +89,7 @@ declare namespace java {
              * IEEE 754R default.
              */
             // @ts-ignore
-            readonly DECIMAL128: java.math.MathContext
+            public static readonly DECIMAL128: java.math.MathContext
             /**
              * Returns the {@code precision} setting.
              * This value is always non-negative.
@@ -97,7 +97,7 @@ declare namespace java {
              *          setting
              */
             // @ts-ignore
-            getPrecision(): int
+            public getPrecision(): number /*int*/
             /**
              * Returns the roundingMode setting.
              * This will be one of
@@ -113,7 +113,7 @@ declare namespace java {
              *          {@code roundingMode} setting
              */
             // @ts-ignore
-            getRoundingMode(): java.math.RoundingMode
+            public getRoundingMode(): java.math.RoundingMode
             /**
              * Compares this {@code MathContext} with the specified
              * {@code Object} for equality.
@@ -124,13 +124,13 @@ declare namespace java {
              *          settings as this object
              */
             // @ts-ignore
-            equals(x: any): boolean
+            public equals(x: java.lang.Object | any): boolean
             /**
              * Returns the hash code for this {@code MathContext}.
              * @return hash code for this {#code MathContext}
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the string representation of this {@code MathContext}.
              * The {@code String} returned represents the settings of the
@@ -161,7 +161,7 @@ declare namespace java {
              * @return a {#code String} representing the context settings
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

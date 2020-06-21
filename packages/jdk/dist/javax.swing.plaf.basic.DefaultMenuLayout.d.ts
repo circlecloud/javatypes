@@ -14,7 +14,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor(target: java.awt.Container, axis: number /*int*/)
                     // @ts-ignore
-                    preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
+                    public preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
                 }
             }
         }

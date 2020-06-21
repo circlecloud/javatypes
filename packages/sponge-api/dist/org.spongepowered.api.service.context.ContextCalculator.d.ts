@@ -48,7 +48,7 @@ declare namespace org {
                          * @return The resultant calculator
                          */
                         // @ts-ignore
-                        forSingleContext<T extends org.spongepowered.api.service.context.Contextual>(key: string, valueFunction: java.util.function.Function<T, java.lang.String> | java.util.function$.Function<T, java.lang.String>): org.spongepowered.api.service.context.ContextCalculator<T>
+                        forSingleContext<T extends org.spongepowered.api.service.context.Contextual>(key: java.lang.String | string, valueFunction: java.util.function$.Function<T, java.lang.String | string>): org.spongepowered.api.service.context.ContextCalculator<T>
                         /**
                          * Adds any {@link Context}s this calculator determines to be applicable to
                          * the {@code target} contextual.
@@ -63,7 +63,7 @@ declare namespace org {
                          *                     will accumulate to.
                          */
                         // @ts-ignore
-                        accumulateContexts(target: T extends org.spongepowered.api.service.context.Contextual, accumulator: Array<org.spongepowered.api.service.context.Context>): void
+                        accumulateContexts(target: T, accumulator: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): void
                         /**
                          * Checks if a {@link Context} is currently applicable to a
                          * {@link Contextual}.
@@ -79,7 +79,7 @@ declare namespace org {
                          *          false.
                          */
                         // @ts-ignore
-                        matches(context: org.spongepowered.api.service.context.Context, target: T extends org.spongepowered.api.service.context.Contextual): boolean
+                        matches(context: org.spongepowered.api.service.context.Context, target: T): boolean
                     }
                 }
             }

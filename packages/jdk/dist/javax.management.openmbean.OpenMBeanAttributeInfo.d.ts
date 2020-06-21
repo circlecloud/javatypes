@@ -52,7 +52,7 @@ declare namespace javax {
                  * @return <code>true</code> if the specified object is equal to this <code>OpenMBeanAttributeInfo</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>OpenMBeanAttributeInfo</code> instance.
                  * <p>
@@ -68,7 +68,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>OpenMBeanAttributeInfo</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>OpenMBeanAttributeInfo</code> instance.
                  * <p>
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @return a string representation of this <code>OpenMBeanAttributeInfo</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

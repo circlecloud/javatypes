@@ -36,7 +36,7 @@ declare namespace java {
          * @since 1.2
          */
         // @ts-ignore
-        class AbstractList<E> extends java.util.AbstractCollection<E> implements java.util.List<E> {
+        abstract class AbstractList<E> extends java.util.AbstractCollection<E> implements java.util.List<E> {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -94,13 +94,13 @@ declare namespace java {
              *          prevents it from being added to this list
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * {@inheritDoc}
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            abstract get(index: number /*int*/): E
+            public abstract get(index: number /*int*/): E
             /**
              * {@inheritDoc}
              * <p>This implementation always throws an
@@ -112,7 +112,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            set(index: number /*int*/, element: E): E
+            public set(index: number /*int*/, element: E): E
             /**
              * {@inheritDoc}
              * <p>This implementation always throws an
@@ -124,7 +124,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            add(index: number /*int*/, element: E): void
+            public add(index: number /*int*/, element: E): void
             /**
              * {@inheritDoc}
              * <p>This implementation always throws an
@@ -133,7 +133,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            remove(index: number /*int*/): E
+            public remove(index: number /*int*/): E
             /**
              * {@inheritDoc}
              * <p>This implementation first gets a list iterator (with
@@ -143,7 +143,7 @@ declare namespace java {
              * @throws NullPointerException {#inheritDoc}
              */
             // @ts-ignore
-            indexOf(o: any): int
+            public indexOf(o: java.lang.Object | any): number /*int*/
             /**
              * {@inheritDoc}
              * <p>This implementation first gets a list iterator that points to the end
@@ -154,7 +154,7 @@ declare namespace java {
              * @throws NullPointerException {#inheritDoc}
              */
             // @ts-ignore
-            lastIndexOf(o: any): int
+            public lastIndexOf(o: java.lang.Object | any): number /*int*/
             /**
              * Removes all of the elements from this list (optional operation).
              * The list will be empty after this call returns.
@@ -167,7 +167,7 @@ declare namespace java {
              *          is not supported by this list
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * {@inheritDoc}
              * <p>This implementation gets an iterator over the specified collection
@@ -185,7 +185,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException     {#inheritDoc}
              */
             // @ts-ignore
-            addAll(index: number /*int*/, c: Array<E>): boolean
+            public addAll(index: number /*int*/, c: java.util.Collection<any> | Array<any>): boolean
             /**
              * Returns an iterator over the elements in this list in proper sequence.
              * <p>This implementation returns a straightforward implementation of the
@@ -201,14 +201,14 @@ declare namespace java {
              * @return an iterator over the elements in this list in proper sequence
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             /**
              * {@inheritDoc}
              * <p>This implementation returns {@code listIterator(0)}.
              * @see #listIterator(int)
              */
             // @ts-ignore
-            listIterator(): java.util.ListIterator<E>
+            public listIterator(): java.util.ListIterator<E>
             /**
              * {@inheritDoc}
              * <p>This implementation returns a straightforward implementation of the
@@ -228,7 +228,7 @@ declare namespace java {
              * @throws IndexOutOfBoundsException {#inheritDoc}
              */
             // @ts-ignore
-            listIterator(index: number /*int*/): java.util.ListIterator<E>
+            public listIterator(index: number /*int*/): java.util.ListIterator<E>
             /**
              * {@inheritDoc}
              * <p>This implementation returns a list that subclasses
@@ -260,7 +260,7 @@ declare namespace java {
              *          {#code (fromIndex > toIndex)}
              */
             // @ts-ignore
-            subList(fromIndex: number /*int*/, toIndex: number /*int*/): java.util.List<E>
+            public subList(fromIndex: number /*int*/, toIndex: number /*int*/): Array<E>
             /**
              * Compares the specified object with this list for equality.  Returns
              * {@code true} if and only if the specified object is also a list, both
@@ -281,7 +281,7 @@ declare namespace java {
              * @return {#code true} if the specified object is equal to this list
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this list.
              * <p>This implementation uses exactly the code that is used to define the
@@ -290,7 +290,7 @@ declare namespace java {
              * @return the hash code value for this list
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Removes from this list all of the elements whose index is between
              * {@code fromIndex}, inclusive, and {@code toIndex}, exclusive.

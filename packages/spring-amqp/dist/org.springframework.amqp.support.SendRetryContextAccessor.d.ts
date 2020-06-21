@@ -13,12 +13,12 @@ declare namespace org {
                      * Key for the message we tried to send.
                      */
                     // @ts-ignore
-                    readonly MESSAGE: string
+                    public static readonly MESSAGE: java.lang.String | string
                     /**
                      * Key for the Address we tried to send to.
                      */
                     // @ts-ignore
-                    readonly ADDRESS: string
+                    public static readonly ADDRESS: java.lang.String | string
                     /**
                      * Retrieve the {@link Message} from the context.
                      * @param context the context.
@@ -26,7 +26,7 @@ declare namespace org {
                      * @see #MESSAGE
                      */
                     // @ts-ignore
-                    getMessage(context: RetryContext): org.springframework.amqp.core.Message
+                    public static getMessage(context: RetryContext): org.springframework.amqp.core.Message
                     /**
                      * Retrieve the {@link Address} from the context.
                      * @param context the context.
@@ -34,7 +34,7 @@ declare namespace org {
                      * @see #ADDRESS
                      */
                     // @ts-ignore
-                    getAddress(context: RetryContext): org.springframework.amqp.core.Address
+                    public static getAddress(context: RetryContext): org.springframework.amqp.core.Address
                 }
             }
         }

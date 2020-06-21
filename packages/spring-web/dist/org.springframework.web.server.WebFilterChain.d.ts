@@ -15,7 +15,7 @@ declare namespace org {
                      * @return {#code Mono<Void>} to indicate when request handling is complete
                      */
                     // @ts-ignore
-                    filter(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                    filter(exchange: org.springframework.web.server.ServerWebExchange): object
                 }
             }
         }

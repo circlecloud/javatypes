@@ -37,7 +37,7 @@ declare namespace org {
                          * @see #setMethodMappings
                          */
                         // @ts-ignore
-                        setManagedMethods(...methodNames: string[]): void
+                        public setManagedMethods(...methodNames: java.lang.String[] | string[]): void
                         /**
                          * Set the mappings of bean keys to a comma-separated list of method names.
                          * The property key should match the bean key and the property value should match
@@ -46,15 +46,15 @@ declare namespace org {
                          * @param mappings the mappings of bean keys to method names
                          */
                         // @ts-ignore
-                        setMethodMappings(mappings: java.util.Properties): void
+                        public setMethodMappings(mappings: java.util.Properties): void
                         // @ts-ignore
-                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeReadAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         // @ts-ignore
-                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeWriteAttribute(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         // @ts-ignore
-                        includeOperation(method: java.lang.reflect.Method, beanKey: string): boolean
+                        includeOperation(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                         // @ts-ignore
-                        isMatch(method: java.lang.reflect.Method, beanKey: string): boolean
+                        isMatch(method: java.lang.reflect.Method, beanKey: java.lang.String | string): boolean
                     }
                 }
             }

@@ -17,7 +17,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(world: org.spongepowered.api.world.World)
                             // @ts-ignore
-                            getMembers(): java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver>
+                            public getMembers(): Array<org.spongepowered.api.text.channel.MessageReceiver>
                         }
                     }
                 }

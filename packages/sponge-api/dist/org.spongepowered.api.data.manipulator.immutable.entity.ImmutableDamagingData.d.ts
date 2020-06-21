@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The damage to deal as a value
                                  */
                                 // @ts-ignore
-                                damage(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Double>
+                                damage(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link ImmutableMapValue} for representing the custom damage
                                  * values to use if the owner strikes an entity of that type.
@@ -27,7 +27,7 @@ declare namespace org {
                                  * @return The immutable map value for the entity damage values
                                  */
                                 // @ts-ignore
-                                damageForEntityTypes(): org.spongepowered.api.data.value.immutable.ImmutableMapValue<org.spongepowered.api.entity.EntityType, java.lang.Double>
+                                damageForEntityTypes(): org.spongepowered.api.data.value.immutable.ImmutableMapValue<org.spongepowered.api.entity.EntityType, java.lang.Double | number>
                             }
                         }
                     }

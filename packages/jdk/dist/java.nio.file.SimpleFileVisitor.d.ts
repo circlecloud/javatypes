@@ -21,21 +21,21 @@ declare namespace java {
                  * CONTINUE}.
                  */
                 // @ts-ignore
-                preVisitDirectory(dir: T, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
+                public preVisitDirectory(dir: T, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
                 /**
                  * Invoked for a file in a directory.
                  * <p> Unless overridden, this method returns {@link FileVisitResult#CONTINUE
                  * CONTINUE}.
                  */
                 // @ts-ignore
-                visitFile(file: T, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
+                public visitFile(file: T, attrs: java.nio.file.attribute.BasicFileAttributes): java.nio.file.FileVisitResult
                 /**
                  * Invoked for a file that could not be visited.
                  * <p> Unless overridden, this method re-throws the I/O exception that prevented
                  * the file from being visited.
                  */
                 // @ts-ignore
-                visitFileFailed(file: T, exc: java.io.IOException): java.nio.file.FileVisitResult
+                public visitFileFailed(file: T, exc: java.io.IOException): java.nio.file.FileVisitResult
                 /**
                  * Invoked for a directory after entries in the directory, and all of their
                  * descendants, have been visited.
@@ -45,7 +45,7 @@ declare namespace java {
                  * of the directory to terminate prematurely.
                  */
                 // @ts-ignore
-                postVisitDirectory(dir: T, exc: java.io.IOException): java.nio.file.FileVisitResult
+                public postVisitDirectory(dir: T, exc: java.io.IOException): java.nio.file.FileVisitResult
             }
         }
     }

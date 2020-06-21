@@ -43,7 +43,7 @@ declare namespace org {
                          * @return The level of this enchantment
                          */
                         // @ts-ignore
-                        getLevel(): int
+                        getLevel(): number /*int*/
                     }
                 }
             }

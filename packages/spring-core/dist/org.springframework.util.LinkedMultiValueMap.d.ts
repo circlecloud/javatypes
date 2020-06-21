@@ -35,45 +35,45 @@ declare namespace org {
                  * @see #deepCopy()
                  */
                 // @ts-ignore
-                constructor(otherMap: java.util.Map<K, java.util.List<V>>)
+                constructor(otherMap: java.util.Map<K, java.util.List<V> | Array<V>>)
                 // @ts-ignore
-                getFirst(key: K): V
+                public getFirst(key: K): V
                 // @ts-ignore
-                add(key: K, value: V): void
+                public add(key: K, value: V): void
                 // @ts-ignore
-                addAll(key: K, values: Array<V>): void
+                public addAll(key: K, values: java.util.List<any> | Array<any>): void
                 // @ts-ignore
-                addAll(values: org.springframework.util.MultiValueMap<K, V>): void
+                public addAll(values: org.springframework.util.MultiValueMap<K, V>): void
                 // @ts-ignore
-                set(key: K, value: V): void
+                public set(key: K, value: V): void
                 // @ts-ignore
-                setAll(values: java.util.Map<K, V>): void
+                public setAll(values: java.util.Map<K, V>): void
                 // @ts-ignore
-                toSingleValueMap(): java.util.Map<K, V>
+                public toSingleValueMap(): java.util.Map<K, V>
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 // @ts-ignore
-                isEmpty(): boolean
+                public isEmpty(): boolean
                 // @ts-ignore
-                containsKey(key: any): boolean
+                public containsKey(key: java.lang.Object | any): boolean
                 // @ts-ignore
-                containsValue(value: any): boolean
+                public containsValue(value: java.lang.Object | any): boolean
                 // @ts-ignore
-                get(key: any): java.util.List<V>
+                public get(key: java.lang.Object | any): Array<V>
                 // @ts-ignore
-                put(key: K, value: Array<V>): java.util.List<V>
+                public put(key: K, value: java.util.List<V> | Array<V>): Array<V>
                 // @ts-ignore
-                remove(key: any): java.util.List<V>
+                public remove(key: java.lang.Object | any): Array<V>
                 // @ts-ignore
-                putAll(map: java.util.Map<K, java.util.List<V>>): void
+                public putAll(map: java.util.Map<any, any>): void
                 // @ts-ignore
-                clear(): void
+                public clear(): void
                 // @ts-ignore
-                keySet(): java.util.Set<K>
+                public keySet(): Array<K>
                 // @ts-ignore
-                values(): java.util.Collection<java.util.List<V>>
+                public values(): Array<java.util.List<V> | Array<V>>
                 // @ts-ignore
-                entrySet(): java.util.Set<java.util.Map.Entry<K, java.util.List<V>>>
+                public entrySet(): Array<java.util.Map.Entry<K, java.util.List<V> | Array<V>>>
                 /**
                  * Create a deep copy of this Map.
                  * @return a copy of this Map, including a copy of each value-holding List entry
@@ -84,7 +84,7 @@ declare namespace org {
                  * @see #clone()
                  */
                 // @ts-ignore
-                deepCopy(): org.springframework.util.LinkedMultiValueMap<K, V>
+                public deepCopy(): org.springframework.util.LinkedMultiValueMap<K, V>
                 /**
                  * Create a regular copy of this Map.
                  * @return a shallow copy of this Map, reusing this Map's value-holding List entries
@@ -97,13 +97,13 @@ declare namespace org {
                  * @see #deepCopy()
                  */
                 // @ts-ignore
-                clone(): org.springframework.util.LinkedMultiValueMap<K, V>
+                public clone(): org.springframework.util.LinkedMultiValueMap<K, V>
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

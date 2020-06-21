@@ -14,7 +14,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            class SupportedOptions implements java.lang.annotation.Annotation {
+            abstract class SupportedOptions implements java.lang.annotation.Annotation {
             }
         }
     }

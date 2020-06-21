@@ -57,7 +57,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            class FileSystem extends java.lang.Object implements java.io.Closeable {
+            abstract class FileSystem extends java.lang.Object implements java.io.Closeable {
                 /**
                  * Initializes a new instance of this class.
                  */
@@ -68,7 +68,7 @@ declare namespace java {
                  * @return The provider that created this file system.
                  */
                 // @ts-ignore
-                abstract provider(): java.nio.file.spi.FileSystemProvider
+                public abstract provider(): java.nio.file.spi.FileSystemProvider
                 /**
                  * Closes this file system.
                  * <p> After a file system is closed then all subsequent access to the file
@@ -86,14 +86,14 @@ declare namespace java {
                  *           Thrown in the case of the default file system
                  */
                 // @ts-ignore
-                abstract close(): void
+                public abstract close(): void
                 /**
                  * Tells whether or not this file system is open.
                  * <p> File systems created by the default provider are always open.
                  * @return {#code true} if, and only if, this file system is open
                  */
                 // @ts-ignore
-                abstract isOpen(): boolean
+                public abstract isOpen(): boolean
                 /**
                  * Tells whether or not this file system allows only read-only access to
                  * its file stores.
@@ -101,7 +101,7 @@ declare namespace java {
                  *           read-only access
                  */
                 // @ts-ignore
-                abstract isReadOnly(): boolean
+                public abstract isReadOnly(): boolean
                 /**
                  * Returns the name separator, represented as a string.
                  * <p> The name separator is used to separate names in a path string. An
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return The name separator
                  */
                 // @ts-ignore
-                abstract getSeparator(): java.lang.String
+                public abstract getSeparator(): string
                 /**
                  * Returns an object to iterate over the paths of the root directories.
                  * <p> A file system provides access to a file store that may be composed
@@ -135,7 +135,7 @@ declare namespace java {
                  * @return An object to iterate over the root directories
                  */
                 // @ts-ignore
-                abstract getRootDirectories(): java.lang.Iterable<java.nio.file.Path>
+                public abstract getRootDirectories(): java.lang.Iterable<java.nio.file.Path>
                 /**
                  * Returns an object to iterate over the underlying file stores.
                  * <p> The elements of the returned iterator are the {@link
@@ -165,7 +165,7 @@ declare namespace java {
                  * @return An object to iterate over the backing file stores
                  */
                 // @ts-ignore
-                abstract getFileStores(): java.lang.Iterable<java.nio.file.FileStore>
+                public abstract getFileStores(): java.lang.Iterable<java.nio.file.FileStore>
                 /**
                  * Returns the set of the {@link FileAttributeView#name names} of the file
                  * attribute views supported by this {@code FileSystem}.
@@ -179,7 +179,7 @@ declare namespace java {
                  *           views
                  */
                 // @ts-ignore
-                abstract supportedFileAttributeViews(): java.util.Set<java.lang.String>
+                public abstract supportedFileAttributeViews(): Array<java.lang.String | string>
                 /**
                  * Converts a path string, or a sequence of strings that when joined form
                  * a path string, to a {@code Path}. If {@code more} does not specify any
@@ -225,7 +225,7 @@ declare namespace java {
                  *           If the path string cannot be converted
                  */
                 // @ts-ignore
-                abstract getPath(first: string, ...more: string[]): java.nio.file.Path
+                public abstract getPath(first: java.lang.String | string, ...more: java.lang.String[] | string[]): java.nio.file.Path
                 /**
                  * Returns a {@code PathMatcher} that performs match operations on the
                  * {@code String} representation of {@link Path} objects by interpreting a
@@ -339,7 +339,7 @@ declare namespace java {
                  * @see Files#newDirectoryStream(Path,String)
                  */
                 // @ts-ignore
-                abstract getPathMatcher(syntaxAndPattern: string): java.nio.file.PathMatcher
+                public abstract getPathMatcher(syntaxAndPattern: java.lang.String | string): java.nio.file.PathMatcher
                 /**
                  * Returns the {@code UserPrincipalLookupService} for this file system
                  * <i>(optional operation)</i>. The resulting lookup service may be used to
@@ -355,7 +355,7 @@ declare namespace java {
                  * @return The {#code UserPrincipalLookupService} for this file system
                  */
                 // @ts-ignore
-                abstract getUserPrincipalLookupService(): java.nio.file.attribute.UserPrincipalLookupService
+                public abstract getUserPrincipalLookupService(): java.nio.file.attribute.UserPrincipalLookupService
                 /**
                  * Constructs a new {@link WatchService} <i>(optional operation)</i>.
                  * <p> This method constructs a new watch service that may be used to watch
@@ -369,7 +369,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                abstract newWatchService(): java.nio.file.WatchService
+                public abstract newWatchService(): java.nio.file.WatchService
             }
         }
     }

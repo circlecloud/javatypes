@@ -20,7 +20,7 @@ declare namespace javax {
                  *           key.
                  */
                 // @ts-ignore
-                constructor(attrID: string)
+                constructor(attrID: java.lang.String | string)
                 /**
                  * Creates a sort key for an attribute. Entries will be sorted according to
                  * the specified attribute in the specified sort order and using the
@@ -36,19 +36,19 @@ declare namespace javax {
                  *                           defined for the sort key attribute is used.
                  */
                 // @ts-ignore
-                constructor(attrID: string, ascendingOrder: boolean, matchingRuleID: string)
+                constructor(attrID: java.lang.String | string, ascendingOrder: boolean, matchingRuleID: java.lang.String | string)
                 /**
                  * Retrieves the attribute ID of the sort key.
                  * @return The non-null Attribute ID of the sort key.
                  */
                 // @ts-ignore
-                getAttributeID(): java.lang.String
+                public getAttributeID(): string
                 /**
                  * Determines the sort order.
                  * @return true if the sort order is ascending, false if descending.
                  */
                 // @ts-ignore
-                isAscending(): boolean
+                public isAscending(): boolean
                 /**
                  * Retrieves the matching rule ID used to order the attribute values.
                  * @return The possibly null matching rule ID. If null then the
@@ -56,7 +56,7 @@ declare namespace javax {
                  *             is used.
                  */
                 // @ts-ignore
-                getMatchingRuleID(): java.lang.String
+                public getMatchingRuleID(): string
             }
         }
     }

@@ -32,7 +32,7 @@ declare namespace javax {
              * @see #ImageIcon(String)
              */
             // @ts-ignore
-            constructor(filename: string, description: string)
+            constructor(filename: java.lang.String | string, description: java.lang.String | string)
             /**
              * Creates an ImageIcon from the specified file. The image will
              * be preloaded by using MediaTracker to monitor the loading state
@@ -49,7 +49,7 @@ declare namespace javax {
              * @see #getDescription
              */
             // @ts-ignore
-            constructor(filename: string)
+            constructor(filename: java.lang.String | string)
             /**
              * Creates an ImageIcon from the specified URL. The image will
              * be preloaded by using MediaTracker to monitor the loaded state
@@ -59,7 +59,7 @@ declare namespace javax {
              * @see #ImageIcon(String)
              */
             // @ts-ignore
-            constructor(location: java.net.URL, description: string)
+            constructor(location: java.net.URL, description: java.lang.String | string)
             /**
              * Creates an ImageIcon from the specified URL. The image will
              * be preloaded by using MediaTracker to monitor the loaded state
@@ -77,7 +77,7 @@ declare namespace javax {
              * @param description a brief textual description of the image
              */
             // @ts-ignore
-            constructor(image: java.awt.Image, description: string)
+            constructor(image: java.awt.Image, description: java.lang.String | string)
             /**
              * Creates an ImageIcon from an image object.
              * If the image has a "comment" property that is a string,
@@ -101,7 +101,7 @@ declare namespace javax {
              * @see java.awt.Toolkit#createImage
              */
             // @ts-ignore
-            constructor(imageData: number /*byte*/[], description: string)
+            constructor(imageData: number /*byte*/[], description: java.lang.String | string)
             /**
              * Creates an ImageIcon from an array of bytes which were
              * read from an image file containing a supported image format,
@@ -130,14 +130,14 @@ declare namespace javax {
              * @deprecated since 1.8
              */
             // @ts-ignore
-            readonly component: java.awt.Component
+            static readonly component: java.awt.Component
             /**
              * Do not use this shared media tracker, which is used to load images.
              * It is left for backward compatibility only.
              * @deprecated since 1.8
              */
             // @ts-ignore
-            readonly tracker: java.awt.MediaTracker
+            static readonly tracker: java.awt.MediaTracker
             /**
              * Loads the image, returning only when the image is loaded.
              * @param image the image
@@ -152,19 +152,19 @@ declare namespace javax {
              * @see java.awt.MediaTracker#COMPLETE
              */
             // @ts-ignore
-            getImageLoadStatus(): int
+            public getImageLoadStatus(): number /*int*/
             /**
              * Returns this icon's <code>Image</code>.
              * @return the <code>Image</code> object for this <code>ImageIcon</code>
              */
             // @ts-ignore
-            getImage(): java.awt.Image
+            public getImage(): java.awt.Image
             /**
              * Sets the image displayed by this icon.
              * @param image the image
              */
             // @ts-ignore
-            setImage(image: java.awt.Image): void
+            public setImage(image: java.awt.Image): void
             /**
              * Gets the description of the image.  This is meant to be a brief
              * textual description of the object.  For example, it might be
@@ -174,7 +174,7 @@ declare namespace javax {
              * @return a brief textual description of the image
              */
             // @ts-ignore
-            getDescription(): java.lang.String
+            public getDescription(): string
             /**
              * Sets the description of the image.  This is meant to be a brief
              * textual description of the object.  For example, it might be
@@ -183,7 +183,7 @@ declare namespace javax {
              * @param description a brief textual description of the image
              */
             // @ts-ignore
-            setDescription(description: string): void
+            public setDescription(description: java.lang.String | string): void
             /**
              * Paints the icon.
              * The top-left corner of the icon is drawn at
@@ -199,19 +199,19 @@ declare namespace javax {
              * @param y the Y coordinate of the icon's top-left corner
              */
             // @ts-ignore
-            paintIcon(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
+            public paintIcon(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
             /**
              * Gets the width of the icon.
              * @return the width in pixels of this icon
              */
             // @ts-ignore
-            getIconWidth(): int
+            public getIconWidth(): number /*int*/
             /**
              * Gets the height of the icon.
              * @return the height in pixels of this icon
              */
             // @ts-ignore
-            getIconHeight(): int
+            public getIconHeight(): number /*int*/
             /**
              * Sets the image observer for the image.  Set this
              * property if the ImageIcon contains an animated GIF, so
@@ -225,19 +225,19 @@ declare namespace javax {
              * @param observer the image observer
              */
             // @ts-ignore
-            setImageObserver(observer: java.awt.image.ImageObserver): void
+            public setImageObserver(observer: java.awt.image.ImageObserver): void
             /**
              * Returns the image observer for the image.
              * @return the image observer, which may be null
              */
             // @ts-ignore
-            getImageObserver(): java.awt.image.ImageObserver
+            public getImageObserver(): java.awt.image.ImageObserver
             /**
              * Returns a string representation of this image.
              * @return a string representing this image
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Gets the AccessibleContext associated with this ImageIcon.
              * For image icons, the AccessibleContext takes the form of an
@@ -250,7 +250,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -166,7 +166,7 @@ declare namespace javax {
              *           cannot be accessed
              */
             // @ts-ignore
-            constructor(url: string)
+            constructor(url: java.lang.String | string)
             /**
              * Creates a <code>JEditorPane</code> that has been initialized
              * to the given text.  This is a convenience constructor that calls the
@@ -177,7 +177,7 @@ declare namespace javax {
              *           is <code>null</code>
              */
             // @ts-ignore
-            constructor(type: string, text: string)
+            constructor(type: java.lang.String | string, text: java.lang.String | string)
             /**
              * Key for a client property used to indicate whether
              * <a href="http://www.w3.org/TR/CSS21/syndata.html#length-units">
@@ -189,7 +189,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            readonly W3C_LENGTH_UNITS: string
+            public static readonly W3C_LENGTH_UNITS: java.lang.String | string
             /**
              * Key for a client property used to indicate whether
              * the default font and foreground color from the component are
@@ -202,20 +202,20 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            readonly HONOR_DISPLAY_PROPERTIES: string
+            public static readonly HONOR_DISPLAY_PROPERTIES: java.lang.String | string
             /**
              * Adds a hyperlink listener for notification of any changes, for example
              * when a link is selected and entered.
              * @param listener the listener
              */
             // @ts-ignore
-            addHyperlinkListener(listener: javax.swing.event.HyperlinkListener): void
+            public addHyperlinkListener(listener: javax.swing.event.HyperlinkListener): void
             /**
              * Removes a hyperlink listener.
              * @param listener the listener
              */
             // @ts-ignore
-            removeHyperlinkListener(listener: javax.swing.event.HyperlinkListener): void
+            public removeHyperlinkListener(listener: javax.swing.event.HyperlinkListener): void
             /**
              * Returns an array of all the <code>HyperLinkListener</code>s added
              * to this JEditorPane with addHyperlinkListener().
@@ -224,7 +224,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getHyperlinkListeners(): javax.swing.event.HyperlinkListener[]
+            public getHyperlinkListeners(): javax.swing.event.HyperlinkListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  This is normally called
@@ -236,7 +236,7 @@ declare namespace javax {
              * @see EventListenerList
              */
             // @ts-ignore
-            fireHyperlinkUpdate(e: javax.swing.event.HyperlinkEvent): void
+            public fireHyperlinkUpdate(e: javax.swing.event.HyperlinkEvent): void
             /**
              * Sets the current URL being displayed.  The content type of the
              * pane is set, and if the editor kit for the pane is
@@ -299,7 +299,7 @@ declare namespace javax {
              *        expert: true
              */
             // @ts-ignore
-            setPage(page: java.net.URL): void
+            public setPage(page: java.net.URL): void
             /**
              * This method initializes from a stream.  If the kit is
              * set to be of type <code>HTMLEditorKit</code>, and the
@@ -315,7 +315,7 @@ declare namespace javax {
              * @see #setDocument
              */
             // @ts-ignore
-            read(input: java.io.InputStream, desc: any): void
+            public read(input: java.io.InputStream, desc: java.lang.Object | any): void
             /**
              * Fetches a stream for the given URL, which is about to
              * be loaded by the <code>setPage</code> method.  By
@@ -351,7 +351,7 @@ declare namespace javax {
              * @param reference the named location to scroll to
              */
             // @ts-ignore
-            scrollToReference(reference: string): void
+            public scrollToReference(reference: java.lang.String | string): void
             /**
              * Gets the current URL being displayed.  If a URL was
              * not specified in the creation of the document, this
@@ -360,7 +360,7 @@ declare namespace javax {
              * @return the URL, or <code>null</code> if none
              */
             // @ts-ignore
-            getPage(): java.net.URL
+            public getPage(): java.net.URL
             /**
              * Sets the current URL being displayed.
              * @param url the URL for display
@@ -368,7 +368,7 @@ declare namespace javax {
              *           specification
              */
             // @ts-ignore
-            setPage(url: string): void
+            public setPage(url: java.lang.String | string): void
             /**
              * Gets the class ID for the UI.
              * @return the string "EditorPaneUI"
@@ -376,7 +376,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Creates the default editor kit (<code>PlainEditorKit</code>) for when
              * the component is first created.
@@ -391,7 +391,7 @@ declare namespace javax {
              * @return the editor kit
              */
             // @ts-ignore
-            getEditorKit(): javax.swing.text.EditorKit
+            public getEditorKit(): javax.swing.text.EditorKit
             /**
              * Gets the type of content that this editor
              * is currently set to deal with.  This is
@@ -400,7 +400,7 @@ declare namespace javax {
              * @return the content type, <code>null</code> if no editor kit set
              */
             // @ts-ignore
-            getContentType(): java.lang.String
+            public getContentType(): string
             /**
              * Sets the type of content that this editor
              * handles.  This calls <code>getEditorKitForContentType</code>,
@@ -429,7 +429,7 @@ declare namespace javax {
              *           is <code>null</code>
              */
             // @ts-ignore
-            setContentType(type: string): void
+            public setContentType(type: java.lang.String | string): void
             /**
              * Sets the currently installed kit for handling
              * content.  This is the bound property that
@@ -453,7 +453,7 @@ declare namespace javax {
              *        expert: true
              */
             // @ts-ignore
-            setEditorKit(kit: javax.swing.text.EditorKit): void
+            public setEditorKit(kit: javax.swing.text.EditorKit): void
             /**
              * Fetches the editor kit to use for the given type
              * of content.  This is called when a type is requested
@@ -473,7 +473,7 @@ declare namespace javax {
              * @return the editor kit
              */
             // @ts-ignore
-            getEditorKitForContentType(type: string): javax.swing.text.EditorKit
+            public getEditorKitForContentType(type: java.lang.String | string): javax.swing.text.EditorKit
             /**
              * Directly sets the editor kit to use for the given type.  A
              * look-and-feel implementation might use this in conjunction
@@ -483,7 +483,7 @@ declare namespace javax {
              * @param k the editor kit to be set
              */
             // @ts-ignore
-            setEditorKitForContentType(type: string, k: javax.swing.text.EditorKit): void
+            public setEditorKitForContentType(type: java.lang.String | string, k: javax.swing.text.EditorKit): void
             /**
              * Replaces the currently selected content with new content
              * represented by the given string.  If there is no selection
@@ -497,7 +497,7 @@ declare namespace javax {
              *    value can be <code>null</code>
              */
             // @ts-ignore
-            replaceSelection(content: string): void
+            public replaceSelection(content: java.lang.String | string): void
             /**
              * Creates a handler for the given type from the default registry
              * of editor kits.  The registry is created if necessary.  If the
@@ -515,7 +515,7 @@ declare namespace javax {
              *    registered for the given type
              */
             // @ts-ignore
-            createEditorKitForContentType(type: string): javax.swing.text.EditorKit
+            public static createEditorKitForContentType(type: java.lang.String | string): javax.swing.text.EditorKit
             /**
              * Establishes the default bindings of <code>type</code> to
              * <code>classname</code>.
@@ -528,7 +528,7 @@ declare namespace javax {
              * @param classname the class to load later
              */
             // @ts-ignore
-            registerEditorKitForContentType(type: string, classname: string): void
+            public static registerEditorKitForContentType(type: java.lang.String | string, classname: java.lang.String | string): void
             /**
              * Establishes the default bindings of <code>type</code> to
              * <code>classname</code>.
@@ -541,7 +541,7 @@ declare namespace javax {
              * @param loader the <code>ClassLoader</code> to use to load the name
              */
             // @ts-ignore
-            registerEditorKitForContentType(type: string, classname: string, loader: java.lang.ClassLoader): void
+            public static registerEditorKitForContentType(type: java.lang.String | string, classname: java.lang.String | string, loader: java.lang.ClassLoader): void
             /**
              * Returns the currently registered <code>EditorKit</code>
              * class name for the type <code>type</code>.
@@ -549,7 +549,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getEditorKitClassNameForContentType(type: string): java.lang.String
+            public static getEditorKitClassNameForContentType(type: java.lang.String | string): string
             /**
              * Returns the preferred size for the <code>JEditorPane</code>.
              * The preferred size for <code>JEditorPane</code> is slightly altered
@@ -566,7 +566,7 @@ declare namespace javax {
              * @return a <code>Dimension</code> containing the preferred size
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * Sets the text of this <code>TextComponent</code> to the specified
              * content,
@@ -608,7 +608,7 @@ declare namespace javax {
              * @beaninfo description: the text of this component
              */
             // @ts-ignore
-            setText(t: string): void
+            public setText(t: java.lang.String | string): void
             /**
              * Returns the text contained in this <code>TextComponent</code>
              * in terms of the
@@ -620,7 +620,7 @@ declare namespace javax {
              * @see #setText
              */
             // @ts-ignore
-            getText(): java.lang.String
+            public getText(): string
             /**
              * Returns true if a viewport should always force the width of this
              * <code>Scrollable</code> to match the width of the viewport.
@@ -628,7 +628,7 @@ declare namespace javax {
              *  match its own, false otherwise
              */
             // @ts-ignore
-            getScrollableTracksViewportWidth(): boolean
+            public getScrollableTracksViewportWidth(): boolean
             /**
              * Returns true if a viewport should always force the height of this
              * <code>Scrollable</code> to match the height of the viewport.
@@ -637,7 +637,7 @@ declare namespace javax {
              *           false otherwise
              */
             // @ts-ignore
-            getScrollableTracksViewportHeight(): boolean
+            public getScrollableTracksViewportHeight(): boolean
             /**
              * Returns a string representation of this <code>JEditorPane</code>.
              * This method
@@ -648,7 +648,7 @@ declare namespace javax {
              * @return a string representation of this <code>JEditorPane</code>
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JEditorPane.
              * For editor panes, the AccessibleContext takes the form of an
@@ -658,7 +658,7 @@ declare namespace javax {
              *          AccessibleContext of this JEditorPane
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

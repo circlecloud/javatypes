@@ -22,62 +22,62 @@ declare namespace java {
              * @return The programmatic name of the property/method/event
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Sets the programmatic name of this feature.
              * @param name  The programmatic name of the property/method/event
              */
             // @ts-ignore
-            setName(name: string): void
+            public setName(name: java.lang.String | string): void
             /**
              * Gets the localized display name of this feature.
              * @return The localized display name for the property/method/event.
              *   This defaults to the same as its programmatic name from getName.
              */
             // @ts-ignore
-            getDisplayName(): java.lang.String
+            public getDisplayName(): string
             /**
              * Sets the localized display name of this feature.
              * @param displayName  The localized display name for the
              *           property/method/event.
              */
             // @ts-ignore
-            setDisplayName(displayName: string): void
+            public setDisplayName(displayName: java.lang.String | string): void
             /**
              * The "expert" flag is used to distinguish between those features that are
              * intended for expert users from those that are intended for normal users.
              * @return True if this feature is intended for use by experts only.
              */
             // @ts-ignore
-            isExpert(): boolean
+            public isExpert(): boolean
             /**
              * The "expert" flag is used to distinguish between features that are
              * intended for expert users from those that are intended for normal users.
              * @param expert True if this feature is intended for use by experts only.
              */
             // @ts-ignore
-            setExpert(expert: boolean): void
+            public setExpert(expert: boolean): void
             /**
              * The "hidden" flag is used to identify features that are intended only
              * for tool use, and which should not be exposed to humans.
              * @return True if this feature should be hidden from human users.
              */
             // @ts-ignore
-            isHidden(): boolean
+            public isHidden(): boolean
             /**
              * The "hidden" flag is used to identify features that are intended only
              * for tool use, and which should not be exposed to humans.
              * @param hidden  True if this feature should be hidden from human users.
              */
             // @ts-ignore
-            setHidden(hidden: boolean): void
+            public setHidden(hidden: boolean): void
             /**
              * The "preferred" flag is used to identify features that are particularly
              * important for presenting to humans.
              * @return True if this feature should be preferentially shown to human users.
              */
             // @ts-ignore
-            isPreferred(): boolean
+            public isPreferred(): boolean
             /**
              * The "preferred" flag is used to identify features that are particularly
              * important for presenting to humans.
@@ -85,14 +85,14 @@ declare namespace java {
              *                    to human users.
              */
             // @ts-ignore
-            setPreferred(preferred: boolean): void
+            public setPreferred(preferred: boolean): void
             /**
              * Gets the short description of this feature.
              * @return A localized short description associated with this
              *    property/method/event.  This defaults to be the display name.
              */
             // @ts-ignore
-            getShortDescription(): java.lang.String
+            public getShortDescription(): string
             /**
              * You can associate a short descriptive string with a feature.  Normally
              * these descriptive strings should be less than about 40 characters.
@@ -100,14 +100,14 @@ declare namespace java {
              *  this property/method/event.
              */
             // @ts-ignore
-            setShortDescription(text: string): void
+            public setShortDescription(text: java.lang.String | string): void
             /**
              * Associate a named attribute with this feature.
              * @param attributeName  The locale-independent name of the attribute
              * @param value  The value.
              */
             // @ts-ignore
-            setValue(attributeName: string, value: any): void
+            public setValue(attributeName: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * Retrieve a named attribute with this feature.
              * @param attributeName  The locale-independent name of the attribute
@@ -115,7 +115,7 @@ declare namespace java {
              *      the attribute is unknown.
              */
             // @ts-ignore
-            getValue(attributeName: string): java.lang.Object
+            public getValue(attributeName: java.lang.String | string): any
             /**
              * Gets an enumeration of the locale-independent names of this
              * feature.
@@ -123,14 +123,14 @@ declare namespace java {
              *     attributes that have been registered with setValue.
              */
             // @ts-ignore
-            attributeNames(): java.util.Enumeration<java.lang.String>
+            public attributeNames(): java.util.Enumeration<java.lang.String | string>
             /**
              * Returns a string representation of the object.
              * @return a string representation of the object
              * @since 1.7
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

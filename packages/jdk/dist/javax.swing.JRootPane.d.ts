@@ -172,7 +172,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly NONE: number /*int*/
+            public static readonly NONE: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -180,7 +180,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly FRAME: number /*int*/
+            public static readonly FRAME: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -188,7 +188,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly PLAIN_DIALOG: number /*int*/
+            public static readonly PLAIN_DIALOG: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -196,7 +196,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly INFORMATION_DIALOG: number /*int*/
+            public static readonly INFORMATION_DIALOG: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -204,7 +204,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly ERROR_DIALOG: number /*int*/
+            public static readonly ERROR_DIALOG: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -212,7 +212,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly COLOR_CHOOSER_DIALOG: number /*int*/
+            public static readonly COLOR_CHOOSER_DIALOG: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -220,7 +220,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly FILE_CHOOSER_DIALOG: number /*int*/
+            public static readonly FILE_CHOOSER_DIALOG: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -228,7 +228,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly QUESTION_DIALOG: number /*int*/
+            public static readonly QUESTION_DIALOG: number /*int*/
             /**
              * Constant used for the windowDecorationStyle property. Indicates that
              * the <code>JRootPane</code> should provide decorations appropriate for
@@ -236,7 +236,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            readonly WARNING_DIALOG: number /*int*/
+            public static readonly WARNING_DIALOG: number /*int*/
             /**
              * The menu bar.
              */
@@ -289,7 +289,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setDoubleBuffered(aFlag: boolean): void
+            public setDoubleBuffered(aFlag: boolean): void
             /**
              * Returns a constant identifying the type of Window decorations the
              * <code>JRootPane</code> is providing.
@@ -302,7 +302,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getWindowDecorationStyle(): int
+            public getWindowDecorationStyle(): number /*int*/
             /**
              * Sets the type of Window decorations (such as borders, widgets for
              * closing a Window, title ...) the <code>JRootPane</code> should
@@ -339,14 +339,14 @@ declare namespace javax {
              *   description: Identifies the type of Window decorations to provide
              */
             // @ts-ignore
-            setWindowDecorationStyle(windowDecorationStyle: number /*int*/): void
+            public setWindowDecorationStyle(windowDecorationStyle: number /*int*/): void
             /**
              * Returns the L&amp;F object that renders this component.
              * @return <code>LabelUI</code> object
              * @since 1.3
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.RootPaneUI
+            public getUI(): javax.swing.plaf.RootPaneUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the <code>LabelUI</code> L&amp;F object
@@ -359,13 +359,13 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.RootPaneUI): void
+            public setUI(ui: javax.swing.plaf.RootPaneUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the L&amp;F class
              * that renders this component.
@@ -374,7 +374,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Called by the constructor methods to create the default
              * <code>layeredPane</code>.
@@ -413,7 +413,7 @@ declare namespace javax {
              * @param menu the <code>JMenuBar</code> to add
              */
             // @ts-ignore
-            setJMenuBar(menu: javax.swing.JMenuBar): void
+            public setJMenuBar(menu: javax.swing.JMenuBar): void
             /**
              * Specifies the menu bar value.
              * @deprecated As of Swing version 1.0.3
@@ -421,13 +421,13 @@ declare namespace javax {
              * @param menu the <code>JMenuBar</code> to add.
              */
             // @ts-ignore
-            setMenuBar(menu: javax.swing.JMenuBar): void
+            public setMenuBar(menu: javax.swing.JMenuBar): void
             /**
              * Returns the menu bar from the layered pane.
              * @return the <code>JMenuBar</code> used in the pane
              */
             // @ts-ignore
-            getJMenuBar(): javax.swing.JMenuBar
+            public getJMenuBar(): javax.swing.JMenuBar
             /**
              * Returns the menu bar value.
              * @deprecated As of Swing version 1.0.3
@@ -435,7 +435,7 @@ declare namespace javax {
              * @return the <code>JMenuBar</code> used in the pane
              */
             // @ts-ignore
-            getMenuBar(): javax.swing.JMenuBar
+            public getMenuBar(): javax.swing.JMenuBar
             /**
              * Sets the content pane -- the container that holds the components
              * parented by the root pane.
@@ -449,14 +449,14 @@ declare namespace javax {
              *             exception) if the content pane parameter is <code>null</code>
              */
             // @ts-ignore
-            setContentPane(content: java.awt.Container): void
+            public setContentPane(content: java.awt.Container): void
             /**
              * Returns the content pane -- the container that holds the components
              * parented by the root pane.
              * @return the <code>Container</code> that holds the component-contents
              */
             // @ts-ignore
-            getContentPane(): java.awt.Container
+            public getContentPane(): java.awt.Container
             /**
              * Sets the layered pane for the root pane. The layered pane
              * typically holds a content pane and an optional <code>JMenuBar</code>.
@@ -465,14 +465,14 @@ declare namespace javax {
              *             exception) if the layered pane parameter is <code>null</code>
              */
             // @ts-ignore
-            setLayeredPane(layered: javax.swing.JLayeredPane): void
+            public setLayeredPane(layered: javax.swing.JLayeredPane): void
             /**
              * Gets the layered pane used by the root pane. The layered pane
              * typically holds a content pane and an optional <code>JMenuBar</code>.
              * @return the <code>JLayeredPane</code> currently in use
              */
             // @ts-ignore
-            getLayeredPane(): javax.swing.JLayeredPane
+            public getLayeredPane(): javax.swing.JLayeredPane
             /**
              * Sets a specified <code>Component</code> to be the glass pane for this
              * root pane.  The glass pane should normally be a lightweight,
@@ -498,14 +498,14 @@ declare namespace javax {
              *           <code>null</code>
              */
             // @ts-ignore
-            setGlassPane(glass: java.awt.Component): void
+            public setGlassPane(glass: java.awt.Component): void
             /**
              * Returns the current glass pane for this <code>JRootPane</code>.
              * @return the current glass pane
              * @see #setGlassPane
              */
             // @ts-ignore
-            getGlassPane(): java.awt.Component
+            public getGlassPane(): java.awt.Component
             /**
              * If a descendant of this <code>JRootPane</code> calls
              * <code>revalidate</code>, validate from here on down.
@@ -519,7 +519,7 @@ declare namespace javax {
              * @return true
              */
             // @ts-ignore
-            isValidateRoot(): boolean
+            public isValidateRoot(): boolean
             /**
              * The <code>glassPane</code> and <code>contentPane</code>
              * have the same bounds, which means <code>JRootPane</code>
@@ -532,17 +532,17 @@ declare namespace javax {
              * @return true if this component's children don't overlap
              */
             // @ts-ignore
-            isOptimizedDrawingEnabled(): boolean
+            public isOptimizedDrawingEnabled(): boolean
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * {@inheritDoc}
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * Sets the <code>defaultButton</code> property,
              * which determines the current default button for this <code>JRootPane</code>.
@@ -561,14 +561,14 @@ declare namespace javax {
              * @beaninfo description: The button activated by default in this root pane
              */
             // @ts-ignore
-            setDefaultButton(defaultButton: javax.swing.JButton): void
+            public setDefaultButton(defaultButton: javax.swing.JButton): void
             /**
              * Returns the value of the <code>defaultButton</code> property.
              * @return the <code>JButton</code> which is currently the default button
              * @see #setDefaultButton
              */
             // @ts-ignore
-            getDefaultButton(): javax.swing.JButton
+            public getDefaultButton(): javax.swing.JButton
             /**
              * Overridden to enforce the position of the glass component as
              * the zero child.
@@ -577,7 +577,7 @@ declare namespace javax {
              * @param index the index
              */
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Returns a string representation of this <code>JRootPane</code>.
              * This method is intended to be used only for debugging purposes,
@@ -587,7 +587,7 @@ declare namespace javax {
              * @return a string representation of this <code>JRootPane</code>.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>JRootPane</code>. For root panes, the
@@ -598,7 +598,7 @@ declare namespace javax {
              *          <code>AccessibleContext</code> of this <code>JRootPane</code>
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -16,14 +16,14 @@ declare namespace org {
                      * @see org.springframework.web.context.support.ServletContextPropertySource
                      */
                     // @ts-ignore
-                    class StubPropertySource extends org.springframework.core.env.PropertySource<java.lang.Object> {
+                    class StubPropertySource extends org.springframework.core.env.PropertySource<java.lang.Object | any> {
                         // @ts-ignore
-                        constructor(name: string)
+                        constructor(name: java.lang.String | string)
                         /**
                          * Always returns {@code null}.
                          */
                         // @ts-ignore
-                        getProperty(name: string): java.lang.String
+                        public getProperty(name: java.lang.String | string): string
                     }
                 }
             }

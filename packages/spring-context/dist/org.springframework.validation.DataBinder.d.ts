@@ -60,7 +60,7 @@ declare namespace org {
                  * @see #DEFAULT_OBJECT_NAME
                  */
                 // @ts-ignore
-                constructor(target: any)
+                constructor(target: java.lang.Object | any)
                 /**
                  * Create a new DataBinder instance.
                  * @param target the target object to bind onto (or {#code null}
@@ -68,32 +68,32 @@ declare namespace org {
                  * @param objectName the name of the target object
                  */
                 // @ts-ignore
-                constructor(target: any, objectName: string)
+                constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                 /**
                  * Default object name used for binding: "target".
                  */
                 // @ts-ignore
-                readonly DEFAULT_OBJECT_NAME: string
+                public static readonly DEFAULT_OBJECT_NAME: java.lang.String | string
                 /**
                  * Default limit for array and collection growing: 256.
                  */
                 // @ts-ignore
-                readonly DEFAULT_AUTO_GROW_COLLECTION_LIMIT: number /*int*/
+                public static readonly DEFAULT_AUTO_GROW_COLLECTION_LIMIT: number /*int*/
                 /**
                  * We'll create a lot of DataBinder instances: Let's use a static logger.
                  */
                 // @ts-ignore
-                readonly logger: Log
+                static readonly logger: Log
                 /**
                  * Return the wrapped target object.
                  */
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                public getTarget(): any
                 /**
                  * Return the name of the bound object.
                  */
                 // @ts-ignore
-                getObjectName(): java.lang.String
+                public getObjectName(): string
                 /**
                  * Set whether this binder should attempt to "auto-grow" a nested path that contains a null value.
                  * <p>If "true", a null path location will be populated with a default object value and traversed
@@ -105,12 +105,12 @@ declare namespace org {
                  * @see org.springframework.beans.BeanWrapper#setAutoGrowNestedPaths
                  */
                 // @ts-ignore
-                setAutoGrowNestedPaths(autoGrowNestedPaths: boolean): void
+                public setAutoGrowNestedPaths(autoGrowNestedPaths: boolean): void
                 /**
                  * Return whether "auto-growing" of nested paths has been activated.
                  */
                 // @ts-ignore
-                isAutoGrowNestedPaths(): boolean
+                public isAutoGrowNestedPaths(): boolean
                 /**
                  * Specify the limit for array and collection auto-growing.
                  * <p>Default is 256, preventing OutOfMemoryErrors in case of large indexes.
@@ -119,12 +119,12 @@ declare namespace org {
                  * @see org.springframework.beans.BeanWrapper#setAutoGrowCollectionLimit
                  */
                 // @ts-ignore
-                setAutoGrowCollectionLimit(autoGrowCollectionLimit: number /*int*/): void
+                public setAutoGrowCollectionLimit(autoGrowCollectionLimit: number /*int*/): void
                 /**
                  * Return the current limit for array and collection auto-growing.
                  */
                 // @ts-ignore
-                getAutoGrowCollectionLimit(): int
+                public getAutoGrowCollectionLimit(): number /*int*/
                 /**
                  * Initialize standard JavaBean property access for this DataBinder.
                  * <p>This is the default; an explicit call just leads to eager initialization.
@@ -132,7 +132,7 @@ declare namespace org {
                  * @see #createBeanPropertyBindingResult()
                  */
                 // @ts-ignore
-                initBeanPropertyAccess(): void
+                public initBeanPropertyAccess(): void
                 /**
                  * Create the {@link AbstractPropertyBindingResult} instance using standard
                  * JavaBean property access.
@@ -147,7 +147,7 @@ declare namespace org {
                  * @see #createDirectFieldBindingResult()
                  */
                 // @ts-ignore
-                initDirectFieldAccess(): void
+                public initDirectFieldAccess(): void
                 /**
                  * Create the {@link AbstractPropertyBindingResult} instance using direct
                  * field access.
@@ -191,7 +191,7 @@ declare namespace org {
                  * @see #bind
                  */
                 // @ts-ignore
-                getBindingResult(): org.springframework.validation.BindingResult
+                public getBindingResult(): org.springframework.validation.BindingResult
                 /**
                  * Set whether to ignore unknown fields, that is, whether to ignore bind
                  * parameters that do not have corresponding fields in the target object.
@@ -203,12 +203,12 @@ declare namespace org {
                  * @see #bind
                  */
                 // @ts-ignore
-                setIgnoreUnknownFields(ignoreUnknownFields: boolean): void
+                public setIgnoreUnknownFields(ignoreUnknownFields: boolean): void
                 /**
                  * Return whether to ignore unknown fields when binding.
                  */
                 // @ts-ignore
-                isIgnoreUnknownFields(): boolean
+                public isIgnoreUnknownFields(): boolean
                 /**
                  * Set whether to ignore invalid fields, that is, whether to ignore bind
                  * parameters that have corresponding fields in the target object which are
@@ -221,12 +221,12 @@ declare namespace org {
                  * @see #bind
                  */
                 // @ts-ignore
-                setIgnoreInvalidFields(ignoreInvalidFields: boolean): void
+                public setIgnoreInvalidFields(ignoreInvalidFields: boolean): void
                 /**
                  * Return whether to ignore invalid fields when binding.
                  */
                 // @ts-ignore
-                isIgnoreInvalidFields(): boolean
+                public isIgnoreInvalidFields(): boolean
                 /**
                  * Register fields that should be allowed for binding. Default is all
                  * fields. Restrict this for example to avoid unwanted modifications
@@ -239,13 +239,13 @@ declare namespace org {
                  * @see #isAllowed(String)
                  */
                 // @ts-ignore
-                setAllowedFields(...allowedFields: string[]): void
+                public setAllowedFields(...allowedFields: java.lang.String[] | string[]): void
                 /**
                  * Return the fields that should be allowed for binding.
                  * @return array of field names
                  */
                 // @ts-ignore
-                getAllowedFields(): java.lang.String[]
+                public getAllowedFields(): string[]
                 /**
                  * Register fields that should <i>not</i> be allowed for binding. Default is none.
                  * Mark fields as disallowed for example to avoid unwanted modifications
@@ -258,13 +258,13 @@ declare namespace org {
                  * @see #isAllowed(String)
                  */
                 // @ts-ignore
-                setDisallowedFields(...disallowedFields: string[]): void
+                public setDisallowedFields(...disallowedFields: java.lang.String[] | string[]): void
                 /**
                  * Return the fields that should <i>not</i> be allowed for binding.
                  * @return array of field names
                  */
                 // @ts-ignore
-                getDisallowedFields(): java.lang.String[]
+                public getDisallowedFields(): string[]
                 /**
                  * Register fields that are required for each binding process.
                  * <p>If one of the specified fields is not contained in the list of
@@ -276,13 +276,13 @@ declare namespace org {
                  * @see DefaultBindingErrorProcessor#MISSING_FIELD_ERROR_CODE
                  */
                 // @ts-ignore
-                setRequiredFields(...requiredFields: string[]): void
+                public setRequiredFields(...requiredFields: java.lang.String[] | string[]): void
                 /**
                  * Return the fields that are required for each binding process.
                  * @return array of field names
                  */
                 // @ts-ignore
-                getRequiredFields(): java.lang.String[]
+                public getRequiredFields(): string[]
                 /**
                  * Set the strategy to use for resolving errors into message codes.
                  * Applies the given strategy to the underlying errors holder.
@@ -291,7 +291,7 @@ declare namespace org {
                  * @see DefaultMessageCodesResolver
                  */
                 // @ts-ignore
-                setMessageCodesResolver(messageCodesResolver: org.springframework.validation.MessageCodesResolver): void
+                public setMessageCodesResolver(messageCodesResolver: org.springframework.validation.MessageCodesResolver): void
                 /**
                  * Set the strategy to use for processing binding errors, that is,
                  * required field errors and {@code PropertyAccessException}s.
@@ -299,54 +299,54 @@ declare namespace org {
                  * @see DefaultBindingErrorProcessor
                  */
                 // @ts-ignore
-                setBindingErrorProcessor(bindingErrorProcessor: org.springframework.validation.BindingErrorProcessor): void
+                public setBindingErrorProcessor(bindingErrorProcessor: org.springframework.validation.BindingErrorProcessor): void
                 /**
                  * Return the strategy for processing binding errors.
                  */
                 // @ts-ignore
-                getBindingErrorProcessor(): org.springframework.validation.BindingErrorProcessor
+                public getBindingErrorProcessor(): org.springframework.validation.BindingErrorProcessor
                 /**
                  * Set the Validator to apply after each binding step.
                  * @see #addValidators(Validator...)
                  * @see #replaceValidators(Validator...)
                  */
                 // @ts-ignore
-                setValidator(validator: org.springframework.validation.Validator): void
+                public setValidator(validator: org.springframework.validation.Validator): void
                 /**
                  * Add Validators to apply after each binding step.
                  * @see #setValidator(Validator)
                  * @see #replaceValidators(Validator...)
                  */
                 // @ts-ignore
-                addValidators(...validators: org.springframework.validation.Validator[]): void
+                public addValidators(...validators: org.springframework.validation.Validator[]): void
                 /**
                  * Replace the Validators to apply after each binding step.
                  * @see #setValidator(Validator)
                  * @see #addValidators(Validator...)
                  */
                 // @ts-ignore
-                replaceValidators(...validators: org.springframework.validation.Validator[]): void
+                public replaceValidators(...validators: org.springframework.validation.Validator[]): void
                 /**
                  * Return the primary Validator to apply after each binding step, if any.
                  */
                 // @ts-ignore
-                getValidator(): org.springframework.validation.Validator
+                public getValidator(): org.springframework.validation.Validator
                 /**
                  * Return the Validators to apply after data binding.
                  */
                 // @ts-ignore
-                getValidators(): java.util.List<org.springframework.validation.Validator>
+                public getValidators(): Array<org.springframework.validation.Validator>
                 /**
                  * Specify a Spring 3.0 ConversionService to use for converting
                  * property values, as an alternative to JavaBeans PropertyEditors.
                  */
                 // @ts-ignore
-                setConversionService(conversionService: ConversionService): void
+                public setConversionService(conversionService: ConversionService): void
                 /**
                  * Return the associated ConversionService, if any.
                  */
                 // @ts-ignore
-                getConversionService(): ConversionService
+                public getConversionService(): ConversionService
                 /**
                  * Add a custom formatter, applying it to all fields matching the
                  * {@link Formatter}-declared type.
@@ -356,7 +356,7 @@ declare namespace org {
                  * @see #registerCustomEditor(Class, PropertyEditor)
                  */
                 // @ts-ignore
-                addCustomFormatter(formatter: org.springframework.format.Formatter<any>): void
+                public addCustomFormatter(formatter: org.springframework.format.Formatter<any>): void
                 /**
                  * Add a custom formatter for the field type specified in {@link Formatter} class,
                  * applying it to the specified fields only, if any, or otherwise to all fields.
@@ -367,7 +367,7 @@ declare namespace org {
                  * @see #registerCustomEditor(Class, String, PropertyEditor)
                  */
                 // @ts-ignore
-                addCustomFormatter(formatter: org.springframework.format.Formatter<any>, ...fields: string[]): void
+                public addCustomFormatter(formatter: org.springframework.format.Formatter<any>, ...fields: java.lang.String[] | string[]): void
                 /**
                  * Add a custom formatter, applying it to the specified field types only, if any,
                  * or otherwise to all fields matching the {@link Formatter}-declared type.
@@ -380,19 +380,19 @@ declare namespace org {
                  * @see #registerCustomEditor(Class, PropertyEditor)
                  */
                 // @ts-ignore
-                addCustomFormatter(formatter: org.springframework.format.Formatter<any>, ...fieldTypes: java.lang.Class[]): void
+                public addCustomFormatter(formatter: org.springframework.format.Formatter<any>, ...fieldTypes: java.lang.Class<any>[]): void
                 // @ts-ignore
-                registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
+                public registerCustomEditor(requiredType: java.lang.Class<any>, propertyEditor: java.beans.PropertyEditor): void
                 // @ts-ignore
-                registerCustomEditor(requiredType: java.lang.Class<any>, field: string, propertyEditor: java.beans.PropertyEditor): void
+                public registerCustomEditor(requiredType: java.lang.Class<any>, field: java.lang.String | string, propertyEditor: java.beans.PropertyEditor): void
                 // @ts-ignore
-                findCustomEditor(requiredType: java.lang.Class<any>, propertyPath: string): java.beans.PropertyEditor
+                public findCustomEditor(requiredType: java.lang.Class<any>, propertyPath: java.lang.String | string): java.beans.PropertyEditor
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>): T
+                public convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>): T
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>, methodParam: MethodParameter): T
+                public convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>, methodParam: MethodParameter): T
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>, typeDescriptor: TypeDescriptor): T
+                public convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>, typeDescriptor: TypeDescriptor): T
                 /**
                  * Bind the given property values to this binder's target.
                  * <p>This call can create field errors, representing basic binding
@@ -407,7 +407,7 @@ declare namespace org {
                  * @see #doBind(org.springframework.beans.MutablePropertyValues)
                  */
                 // @ts-ignore
-                bind(pvs: PropertyValues): void
+                public bind(pvs: PropertyValues): void
                 /**
                  * Actual implementation of the binding process, working with the
                  * passed-in MutablePropertyValues instance.
@@ -443,7 +443,7 @@ declare namespace org {
                  * @see org.springframework.util.PatternMatchUtils#simpleMatch(String, String)
                  */
                 // @ts-ignore
-                isAllowed(field: string): boolean
+                isAllowed(field: java.lang.String | string): boolean
                 /**
                  * Check the given property values against the required fields,
                  * generating missing field errors where appropriate.
@@ -474,7 +474,7 @@ declare namespace org {
                  * @see #getBindingResult()
                  */
                 // @ts-ignore
-                validate(): void
+                public validate(): void
                 /**
                  * Invoke the specified Validators, if any, with the given validation hints.
                  * <p>Note: Validation hints may get ignored by the actual target Validator.
@@ -484,7 +484,7 @@ declare namespace org {
                  * @see SmartValidator#validate(Object, Errors, Object...)
                  */
                 // @ts-ignore
-                validate(...validationHints: any[]): void
+                public validate(...validationHints: java.lang.Object[] | any[]): void
                 /**
                  * Close this DataBinder, which may result in throwing
                  * a BindException if it encountered any errors.
@@ -493,7 +493,7 @@ declare namespace org {
                  * @see BindingResult#getModel()
                  */
                 // @ts-ignore
-                close(): java.util.Map<?, ?>
+                public close(): java.util.Map<any, any>
             }
         }
     }

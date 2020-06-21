@@ -33,25 +33,25 @@ declare namespace javax {
                      * SHA1</a> digest method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly SHA1: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2001/04/xmlenc#sha256">
                      * SHA256</a> digest method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly SHA256: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2001/04/xmlenc#sha512">
                      * SHA512</a> digest method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly SHA512: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2001/04/xmlenc#ripemd160">
                      * RIPEMD-160</a> digest method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly RIPEMD160: java.lang.String | string
                     /**
                      * Returns the algorithm-specific input parameters associated with this
                      * <code>DigestMethod</code>.

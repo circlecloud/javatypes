@@ -7,7 +7,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                class SourceChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.ReadableByteChannel, java.nio.channels.ScatteringByteChannel {
+                abstract class SourceChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.ReadableByteChannel, java.nio.channels.ScatteringByteChannel {
                     /**
                      * Constructs a new instance of this class.
                      * @param provider
@@ -23,7 +23,7 @@ declare namespace java {
                      * @return The valid-operation set
                      */
                     // @ts-ignore
-                    validOps(): int
+                    public validOps(): number /*int*/
                 }
             }
         }

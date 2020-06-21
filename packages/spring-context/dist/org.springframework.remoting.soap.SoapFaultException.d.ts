@@ -11,34 +11,34 @@ declare namespace org {
                  * @see javax.xml.ws.soap.SOAPFaultException
                  */
                 // @ts-ignore
-                class SoapFaultException extends org.springframework.remoting.RemoteInvocationFailureException {
+                abstract class SoapFaultException extends org.springframework.remoting.RemoteInvocationFailureException {
                     /**
                      * Constructor for SoapFaultException.
                      * @param msg the detail message
                      * @param cause the root cause from the SOAP API in use
                      */
                     // @ts-ignore
-                    constructor(msg: string, cause: Error)
+                    constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                     /**
                      * Return the SOAP fault code.
                      */
                     // @ts-ignore
-                    abstract getFaultCode(): java.lang.String
+                    public abstract getFaultCode(): string
                     /**
                      * Return the SOAP fault code as a {@code QName} object.
                      */
                     // @ts-ignore
-                    abstract getFaultCodeAsQName(): javax.xml.namespace.QName
+                    public abstract getFaultCodeAsQName(): javax.xml.namespace.QName
                     /**
                      * Return the descriptive SOAP fault string.
                      */
                     // @ts-ignore
-                    abstract getFaultString(): java.lang.String
+                    public abstract getFaultString(): string
                     /**
                      * Return the actor that caused this fault.
                      */
                     // @ts-ignore
-                    abstract getFaultActor(): java.lang.String
+                    public abstract getFaultActor(): string
                 }
             }
         }

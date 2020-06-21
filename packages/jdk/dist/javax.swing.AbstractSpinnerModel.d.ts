@@ -15,7 +15,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class AbstractSpinnerModel extends java.lang.Object implements javax.swing.SpinnerModel, java.io.Serializable {
+        abstract class AbstractSpinnerModel extends java.lang.Object implements javax.swing.SpinnerModel, java.io.Serializable {
             // @ts-ignore
             constructor()
             /**
@@ -32,7 +32,7 @@ declare namespace javax {
              * @see SpinnerModel#addChangeListener
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a ChangeListener from the model's listener list.
              * @param l the ChangeListener to remove
@@ -40,7 +40,7 @@ declare namespace javax {
              * @see SpinnerModel#removeChangeListener
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the <code>ChangeListener</code>s added
              * to this AbstractSpinnerModel with addChangeListener().
@@ -49,7 +49,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Run each ChangeListeners stateChanged() method.
              * @see #setValue
@@ -69,7 +69,7 @@ declare namespace javax {
              *          from this model
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
         }
     }
 }

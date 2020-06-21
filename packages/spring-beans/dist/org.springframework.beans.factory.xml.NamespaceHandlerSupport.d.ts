@@ -17,7 +17,7 @@ declare namespace org {
                      * @see #registerBeanDefinitionDecorator(String, BeanDefinitionDecorator)
                      */
                     // @ts-ignore
-                    class NamespaceHandlerSupport extends java.lang.Object implements org.springframework.beans.factory.xml.NamespaceHandler {
+                    abstract class NamespaceHandlerSupport extends java.lang.Object implements org.springframework.beans.factory.xml.NamespaceHandler {
                         // @ts-ignore
                         constructor()
                         /**
@@ -25,34 +25,34 @@ declare namespace org {
                          * registered for that {@link Element}.
                          */
                         // @ts-ignore
-                        parse(element: org.w3c.dom.Element, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinition
+                        public parse(element: org.w3c.dom.Element, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinition
                         /**
                          * Decorates the supplied {@link Node} by delegating to the {@link BeanDefinitionDecorator} that
                          * is registered to handle that {@link Node}.
                          */
                         // @ts-ignore
-                        decorate(node: org.w3c.dom.Node, definition: org.springframework.beans.factory.config.BeanDefinitionHolder, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinitionHolder
+                        public decorate(node: org.w3c.dom.Node, definition: org.springframework.beans.factory.config.BeanDefinitionHolder, parserContext: org.springframework.beans.factory.xml.ParserContext): org.springframework.beans.factory.config.BeanDefinitionHolder
                         /**
                          * Subclasses can call this to register the supplied {@link BeanDefinitionParser} to
                          * handle the specified element. The element name is the local (non-namespace qualified)
                          * name.
                          */
                         // @ts-ignore
-                        registerBeanDefinitionParser(elementName: string, parser: org.springframework.beans.factory.xml.BeanDefinitionParser): void
+                        registerBeanDefinitionParser(elementName: java.lang.String | string, parser: org.springframework.beans.factory.xml.BeanDefinitionParser): void
                         /**
                          * Subclasses can call this to register the supplied {@link BeanDefinitionDecorator} to
                          * handle the specified element. The element name is the local (non-namespace qualified)
                          * name.
                          */
                         // @ts-ignore
-                        registerBeanDefinitionDecorator(elementName: string, dec: org.springframework.beans.factory.xml.BeanDefinitionDecorator): void
+                        registerBeanDefinitionDecorator(elementName: java.lang.String | string, dec: org.springframework.beans.factory.xml.BeanDefinitionDecorator): void
                         /**
                          * Subclasses can call this to register the supplied {@link BeanDefinitionDecorator} to
                          * handle the specified attribute. The attribute name is the local (non-namespace qualified)
                          * name.
                          */
                         // @ts-ignore
-                        registerBeanDefinitionDecoratorForAttribute(attrName: string, dec: org.springframework.beans.factory.xml.BeanDefinitionDecorator): void
+                        registerBeanDefinitionDecoratorForAttribute(attrName: java.lang.String | string, dec: org.springframework.beans.factory.xml.BeanDefinitionDecorator): void
                     }
                 }
             }

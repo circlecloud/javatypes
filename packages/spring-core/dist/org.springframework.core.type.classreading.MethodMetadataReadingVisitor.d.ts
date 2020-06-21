@@ -20,47 +20,47 @@ declare namespace org {
                     // @ts-ignore
                     class MethodMetadataReadingVisitor extends org.springframework.asm.MethodVisitor implements org.springframework.core.type.MethodMetadata {
                         // @ts-ignore
-                        constructor(methodName: string, access: number /*int*/, declaringClassName: string, returnTypeName: string, classLoader: java.lang.ClassLoader, methodMetadataSet: Array<org.springframework.core.type.MethodMetadata>)
+                        constructor(methodName: java.lang.String | string, access: number /*int*/, declaringClassName: java.lang.String | string, returnTypeName: java.lang.String | string, classLoader: java.lang.ClassLoader, methodMetadataSet: java.util.Set<org.springframework.core.type.MethodMetadata> | Array<org.springframework.core.type.MethodMetadata>)
                         // @ts-ignore
-                        readonly methodName: string
+                        readonly methodName: java.lang.String | string
                         // @ts-ignore
                         readonly access: number /*int*/
                         // @ts-ignore
-                        readonly declaringClassName: string
+                        readonly declaringClassName: java.lang.String | string
                         // @ts-ignore
-                        readonly returnTypeName: string
+                        readonly returnTypeName: java.lang.String | string
                         // @ts-ignore
                         readonly classLoader: java.lang.ClassLoader
                         // @ts-ignore
-                        readonly methodMetadataSet: Array<org.springframework.core.type.MethodMetadata>
+                        readonly methodMetadataSet: java.util.Set<org.springframework.core.type.MethodMetadata> | Array<org.springframework.core.type.MethodMetadata>
                         // @ts-ignore
-                        readonly metaAnnotationMap: java.util.Map<java.lang.String, java.util.Set<java.lang.String>>
+                        readonly metaAnnotationMap: java.util.Map<java.lang.String | string, java.util.Set<java.lang.String | string> | Array<java.lang.String | string>>
                         // @ts-ignore
-                        readonly attributesMap: org.springframework.util.LinkedMultiValueMap<java.lang.String, org.springframework.core.annotation.AnnotationAttributes>
+                        readonly attributesMap: org.springframework.util.LinkedMultiValueMap<java.lang.String | string, org.springframework.core.annotation.AnnotationAttributes>
                         // @ts-ignore
-                        getAnnotations(): org.springframework.core.annotation.MergedAnnotations
+                        public getAnnotations(): org.springframework.core.annotation.MergedAnnotations
                         // @ts-ignore
-                        visitAnnotation(desc: string, visible: boolean): org.springframework.asm.AnnotationVisitor
+                        public visitAnnotation(desc: java.lang.String | string, visible: boolean): org.springframework.asm.AnnotationVisitor
                         // @ts-ignore
-                        getMethodName(): java.lang.String
+                        public getMethodName(): string
                         // @ts-ignore
-                        isAbstract(): boolean
+                        public isAbstract(): boolean
                         // @ts-ignore
-                        isStatic(): boolean
+                        public isStatic(): boolean
                         // @ts-ignore
-                        isFinal(): boolean
+                        public isFinal(): boolean
                         // @ts-ignore
-                        isOverridable(): boolean
+                        public isOverridable(): boolean
                         // @ts-ignore
-                        isAnnotated(annotationName: string): boolean
+                        public isAnnotated(annotationName: java.lang.String | string): boolean
                         // @ts-ignore
-                        getAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.core.annotation.AnnotationAttributes
+                        public getAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.core.annotation.AnnotationAttributes
                         // @ts-ignore
-                        getAllAnnotationAttributes(annotationName: string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String, java.lang.Object>
+                        public getAllAnnotationAttributes(annotationName: java.lang.String | string, classValuesAsString: boolean): org.springframework.util.MultiValueMap<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        getDeclaringClassName(): java.lang.String
+                        public getDeclaringClassName(): string
                         // @ts-ignore
-                        getReturnTypeName(): java.lang.String
+                        public getReturnTypeName(): string
                     }
                 }
             }

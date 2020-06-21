@@ -14,7 +14,7 @@ declare namespace java {
                  * indicate compatibility with JDK 1.1.x version of class.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Creates a client stub object for the supplied Remote object.
                  * If the call completes successfully, the remote object should
@@ -27,7 +27,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, data: any): java.rmi.server.RemoteStub
+                exportObject(obj: java.rmi.Remote, data: java.lang.Object | any): java.rmi.server.RemoteStub
                 /**
                  * Returns the hostname of the current client.  When called from a
                  * thread actively handling a remote method invocation the
@@ -38,7 +38,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getClientHost(): java.lang.String
+                getClientHost(): string
             }
         }
     }

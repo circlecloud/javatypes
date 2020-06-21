@@ -20,7 +20,7 @@ declare namespace javax {
              * @param s The detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
         }
     }
 }

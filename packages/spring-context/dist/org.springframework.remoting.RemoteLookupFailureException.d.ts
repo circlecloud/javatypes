@@ -14,14 +14,14 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Constructor for RemoteLookupFailureException.
                  * @param msg message
                  * @param cause the root cause from the remoting API in use
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

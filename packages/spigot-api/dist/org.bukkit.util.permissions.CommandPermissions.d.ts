@@ -5,7 +5,7 @@ declare namespace org {
                 // @ts-ignore
                 class CommandPermissions extends java.lang.Object {
                     // @ts-ignore
-                    registerPermissions(parent: org.bukkit.permissions.Permission): org.bukkit.permissions.Permission
+                    public static registerPermissions(parent: org.bukkit.permissions.Permission): org.bukkit.permissions.Permission
                 }
             }
         }

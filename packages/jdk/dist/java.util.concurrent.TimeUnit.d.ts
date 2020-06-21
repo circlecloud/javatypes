@@ -31,10 +31,45 @@ declare namespace java {
              */
             // @ts-ignore
             class TimeUnit extends java.lang.Enum<java.util.concurrent.TimeUnit> {
+                /**
+                 * Time unit representing one thousandth of a microsecond
+                 */
+                // @ts-ignore
+                readonly NANOSECONDS: java.util.concurrent.TimeUnit
+                /**
+                 * Time unit representing one thousandth of a millisecond
+                 */
+                // @ts-ignore
+                readonly MICROSECONDS: java.util.concurrent.TimeUnit
+                /**
+                 * Time unit representing one thousandth of a second
+                 */
+                // @ts-ignore
+                readonly MILLISECONDS: java.util.concurrent.TimeUnit
+                /**
+                 * Time unit representing one second
+                 */
+                // @ts-ignore
+                readonly SECONDS: java.util.concurrent.TimeUnit
+                /**
+                 * Time unit representing sixty seconds
+                 */
+                // @ts-ignore
+                readonly MINUTES: java.util.concurrent.TimeUnit
+                /**
+                 * Time unit representing sixty minutes
+                 */
+                // @ts-ignore
+                readonly HOURS: java.util.concurrent.TimeUnit
+                /**
+                 * Time unit representing twenty four hours
+                 */
+                // @ts-ignore
+                readonly DAYS: java.util.concurrent.TimeUnit
                 // @ts-ignore
                 values(): java.util.concurrent.TimeUnit[]
                 // @ts-ignore
-                valueOf(name: string): java.util.concurrent.TimeUnit
+                valueOf(name: java.lang.String | string): java.util.concurrent.TimeUnit
                 /**
                  * Converts the given time duration in the given unit to this unit.
                  * Conversions from finer to coarser granularities truncate, so
@@ -52,7 +87,7 @@ declare namespace java {
                  *  overflow, or {@code Long.MAX_VALUE} if it would positively overflow.
                  */
                 // @ts-ignore
-                convert(sourceDuration: number /*long*/, sourceUnit: java.util.concurrent.TimeUnit): long
+                convert(sourceDuration: number /*long*/, sourceUnit: java.util.concurrent.TimeUnit): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) NANOSECONDS.convert(duration, this)}.
@@ -62,7 +97,7 @@ declare namespace java {
                  *  overflow, or {@code Long.MAX_VALUE} if it would positively overflow.
                  */
                 // @ts-ignore
-                toNanos(duration: number /*long*/): long
+                toNanos(duration: number /*long*/): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) MICROSECONDS.convert(duration, this)}.
@@ -72,7 +107,7 @@ declare namespace java {
                  *  overflow, or {@code Long.MAX_VALUE} if it would positively overflow.
                  */
                 // @ts-ignore
-                toMicros(duration: number /*long*/): long
+                toMicros(duration: number /*long*/): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) MILLISECONDS.convert(duration, this)}.
@@ -82,7 +117,7 @@ declare namespace java {
                  *  overflow, or {@code Long.MAX_VALUE} if it would positively overflow.
                  */
                 // @ts-ignore
-                toMillis(duration: number /*long*/): long
+                toMillis(duration: number /*long*/): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) SECONDS.convert(duration, this)}.
@@ -92,7 +127,7 @@ declare namespace java {
                  *  overflow, or {@code Long.MAX_VALUE} if it would positively overflow.
                  */
                 // @ts-ignore
-                toSeconds(duration: number /*long*/): long
+                toSeconds(duration: number /*long*/): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) MINUTES.convert(duration, this)}.
@@ -103,7 +138,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                toMinutes(duration: number /*long*/): long
+                toMinutes(duration: number /*long*/): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) HOURS.convert(duration, this)}.
@@ -114,7 +149,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                toHours(duration: number /*long*/): long
+                toHours(duration: number /*long*/): number /*long*/
                 /**
                  * Equivalent to
                  * {@link #convert(long, TimeUnit) DAYS.convert(duration, this)}.
@@ -123,7 +158,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                toDays(duration: number /*long*/): long
+                toDays(duration: number /*long*/): number /*long*/
                 /**
                  * Performs a timed {@link Object#wait(long, int) Object.wait}
                  * using this time unit.
@@ -146,7 +181,7 @@ declare namespace java {
                  * @throws InterruptedException if interrupted while waiting
                  */
                 // @ts-ignore
-                timedWait(obj: any, timeout: number /*long*/): void
+                timedWait(obj: java.lang.Object | any, timeout: number /*long*/): void
                 /**
                  * Performs a timed {@link Thread#join(long, int) Thread.join}
                  * using this time unit.

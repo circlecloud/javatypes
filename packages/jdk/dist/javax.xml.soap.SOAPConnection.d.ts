@@ -22,7 +22,7 @@ declare namespace javax {
              * message and then waits until it gets a reply.
              */
             // @ts-ignore
-            class SOAPConnection extends java.lang.Object {
+            abstract class SOAPConnection extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -40,7 +40,7 @@ declare namespace javax {
                  * @throws SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                abstract call(request: javax.xml.soap.SOAPMessage, to: any): javax.xml.soap.SOAPMessage
+                public abstract call(request: javax.xml.soap.SOAPMessage, to: java.lang.Object | any): javax.xml.soap.SOAPMessage
                 /**
                  * Gets a message from a specific endpoint and blocks until it receives,
                  * @param to an <code>Object</code> that identifies where
@@ -53,13 +53,13 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                get(to: any): javax.xml.soap.SOAPMessage
+                public get(to: java.lang.Object | any): javax.xml.soap.SOAPMessage
                 /**
                  * Closes this <code>SOAPConnection</code> object.
                  * @throws SOAPException if there is a SOAP error
                  */
                 // @ts-ignore
-                abstract close(): void
+                public abstract close(): void
             }
         }
     }

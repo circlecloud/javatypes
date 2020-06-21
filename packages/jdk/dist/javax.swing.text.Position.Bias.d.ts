@@ -17,18 +17,18 @@ declare namespace javax {
                      * in the model.
                      */
                     // @ts-ignore
-                    readonly Forward: javax.swing.text.Position.Bias
+                    public static readonly Forward: javax.swing.text.Position.Bias
                     /**
                      * Indicates a bias toward the previous character
                      * in the model.
                      */
                     // @ts-ignore
-                    readonly Backward: javax.swing.text.Position.Bias
+                    public static readonly Backward: javax.swing.text.Position.Bias
                     /**
                      * string representation
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

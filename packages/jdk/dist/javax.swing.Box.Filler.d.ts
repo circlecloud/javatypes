@@ -33,7 +33,7 @@ declare namespace javax {
                  * @param max   Value to return for getMaximumSize
                  */
                 // @ts-ignore
-                changeShape(min: java.awt.Dimension, pref: java.awt.Dimension, max: java.awt.Dimension): void
+                public changeShape(min: java.awt.Dimension, pref: java.awt.Dimension, max: java.awt.Dimension): void
                 /**
                  * Paints this <code>Filler</code>.  If this
                  * <code>Filler</code> has a UI this method invokes super's
@@ -55,7 +55,7 @@ declare namespace javax {
                  *          AccessibleContext of this Box.Filler.
                  */
                 // @ts-ignore
-                getAccessibleContext(): javax.accessibility.AccessibleContext
+                public getAccessibleContext(): javax.accessibility.AccessibleContext
             }
         }
     }

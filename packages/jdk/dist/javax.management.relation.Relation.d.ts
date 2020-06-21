@@ -34,7 +34,7 @@ declare namespace javax {
                  * @see #setRole
                  */
                 // @ts-ignore
-                getRole(roleName: string): java.util.List<javax.management.ObjectName>
+                getRole(roleName: java.lang.String | string): Array<javax.management.ObjectName>
                 /**
                  * Retrieves values of roles with given names.
                  * <P>Checks for each role if it exists and is readable according to the
@@ -49,7 +49,7 @@ declare namespace javax {
                  * @see #setRoles
                  */
                 // @ts-ignore
-                getRoles(roleNameArray: string[]): javax.management.relation.RoleResult
+                getRoles(roleNameArray: java.lang.String[] | string[]): javax.management.relation.RoleResult
                 /**
                  * Returns the number of MBeans currently referenced in the given role.
                  * @param roleName  name of role
@@ -58,7 +58,7 @@ declare namespace javax {
                  * @exception RoleNotFoundException  if there is no role with given name
                  */
                 // @ts-ignore
-                getRoleCardinality(roleName: string): java.lang.Integer
+                getRoleCardinality(roleName: java.lang.String | string): number
                 /**
                  * Returns all roles present in the relation.
                  * @return a RoleResult object, including a RoleList (for roles
@@ -153,20 +153,20 @@ declare namespace javax {
                  *  relation MBean not added in the Relation Service.
                  */
                 // @ts-ignore
-                handleMBeanUnregistration(objectName: javax.management.ObjectName, roleName: string): void
+                handleMBeanUnregistration(objectName: javax.management.ObjectName, roleName: java.lang.String | string): void
                 /**
                  * Retrieves MBeans referenced in the various roles of the relation.
                  * @return a HashMap mapping:
                  *  <P> ObjectName {#literal ->} ArrayList of String (role names)
                  */
                 // @ts-ignore
-                getReferencedMBeans(): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String>>
+                getReferencedMBeans(): java.util.Map<javax.management.ObjectName, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>
                 /**
                  * Returns name of associated relation type.
                  * @return the name of the relation type.
                  */
                 // @ts-ignore
-                getRelationTypeName(): java.lang.String
+                getRelationTypeName(): string
                 /**
                  * Returns ObjectName of the Relation Service handling the relation.
                  * @return the ObjectName of the Relation Service.
@@ -179,7 +179,7 @@ declare namespace javax {
                  * @return the relation id.
                  */
                 // @ts-ignore
-                getRelationId(): java.lang.String
+                getRelationId(): string
             }
         }
     }

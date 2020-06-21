@@ -12,23 +12,23 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        addLayoutComponent(name: string, comp: java.awt.Component): void
+                        public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
                         // @ts-ignore
-                        removeLayoutComponent(comp: java.awt.Component): void
+                        public removeLayoutComponent(comp: java.awt.Component): void
                         // @ts-ignore
-                        preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+                        public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
                         // @ts-ignore
-                        minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+                        public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
                         // @ts-ignore
                         calculateSize(minimum: boolean): java.awt.Dimension
                         // @ts-ignore
-                        preferredTabAreaHeight(tabPlacement: number /*int*/, width: number /*int*/): int
+                        preferredTabAreaHeight(tabPlacement: number /*int*/, width: number /*int*/): number /*int*/
                         // @ts-ignore
-                        preferredTabAreaWidth(tabPlacement: number /*int*/, height: number /*int*/): int
+                        preferredTabAreaWidth(tabPlacement: number /*int*/, height: number /*int*/): number /*int*/
                         // @ts-ignore
-                        layoutContainer(parent: java.awt.Container): void
+                        public layoutContainer(parent: java.awt.Container): void
                         // @ts-ignore
-                        calculateLayoutInfo(): void
+                        public calculateLayoutInfo(): void
                         // @ts-ignore
                         calculateTabRects(tabPlacement: number /*int*/, tabCount: number /*int*/): void
                         // @ts-ignore

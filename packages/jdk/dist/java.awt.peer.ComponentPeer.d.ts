@@ -21,21 +21,21 @@ declare namespace java {
                  * @see #setBounds(int, int, int, int, int)
                  */
                 // @ts-ignore
-                
+                readonly SET_LOCATION: number /*int*/
                 /**
                  * Operation for {@link #setBounds(int, int, int, int, int)}, indicating
                  * a change in the component size only.
                  * @see #setBounds(int, int, int, int, int)
                  */
                 // @ts-ignore
-                
+                readonly SET_SIZE: number /*int*/
                 /**
                  * Operation for {@link #setBounds(int, int, int, int, int)}, indicating
                  * a change in the component size and location.
                  * @see #setBounds(int, int, int, int, int)
                  */
                 // @ts-ignore
-                
+                readonly SET_BOUNDS: number /*int*/
                 /**
                  * Operation for {@link #setBounds(int, int, int, int, int)}, indicating
                  * a change in the component client size. This is used for setting
@@ -43,7 +43,7 @@ declare namespace java {
                  * @see #setBounds(int, int, int, int, int)
                  */
                 // @ts-ignore
-                
+                readonly SET_CLIENT_SIZE: number /*int*/
                 /**
                  * Resets the setBounds() operation to DEFAULT_OPERATION. This is not
                  * passed into {@link #setBounds(int, int, int, int, int)}.
@@ -52,14 +52,14 @@ declare namespace java {
                  * @see Component#setBoundsOp
                  */
                 // @ts-ignore
-                
+                readonly RESET_OPERATION: number /*int*/
                 /**
                  * A flag that is used to suppress checks for embedded frames.
                  * TODO: This is only used internally and should probably be moved outside
                  * the peer interface.
                  */
                 // @ts-ignore
-                
+                readonly NO_EMBEDDED_CHECK: number /*int*/
                 /**
                  * The default operation, which is to set size and location.
                  * TODO: This is only used internally and should probably be moved outside
@@ -67,7 +67,7 @@ declare namespace java {
                  * @see Component#setBoundsOp
                  */
                 // @ts-ignore
-                
+                readonly DEFAULT_OPERATION: number /*int*/
                 /**
                  * Determines if a component has been obscured, i.e. by an overlapping
                  * window or similar. This is used by JViewport for optimizing performance.
@@ -319,7 +319,7 @@ declare namespace java {
                  * @see Component#checkImage(Image, int, int, ImageObserver)
                  */
                 // @ts-ignore
-                checkImage(img: java.awt.Image, w: number /*int*/, h: number /*int*/, o: java.awt.image.ImageObserver): int
+                checkImage(img: java.awt.Image, w: number /*int*/, h: number /*int*/, o: java.awt.image.ImageObserver): number /*int*/
                 /**
                  * Returns the graphics configuration that corresponds to this component.
                  * @return the graphics configuration that corresponds to this component

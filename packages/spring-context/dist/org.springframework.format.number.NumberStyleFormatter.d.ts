@@ -27,16 +27,16 @@ declare namespace org {
                      * @see #setPattern
                      */
                     // @ts-ignore
-                    constructor(pattern: string)
+                    constructor(pattern: java.lang.String | string)
                     /**
                      * Specify the pattern to use to format number values.
                      * If not specified, the default DecimalFormat pattern is used.
                      * @see java.text.DecimalFormat#applyPattern(String)
                      */
                     // @ts-ignore
-                    setPattern(pattern: string): void
+                    public setPattern(pattern: java.lang.String | string): void
                     // @ts-ignore
-                    getNumberFormat(locale: java.util.Locale): java.text.NumberFormat
+                    public getNumberFormat(locale: java.util.Locale): java.text.NumberFormat
                 }
             }
         }

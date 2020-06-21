@@ -39,7 +39,7 @@ declare namespace org {
                      * @see #getConfigPath()
                      */
                     // @ts-ignore
-                    getConfig(): <any>
+                    getConfig(): object
                     /**
                      * Gets the directory that this configuration root refers to.
                      * <p>The returned pathname may not refer to a directory that exists

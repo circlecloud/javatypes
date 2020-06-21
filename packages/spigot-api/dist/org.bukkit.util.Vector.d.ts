@@ -50,35 +50,35 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                add(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public add(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Subtracts a vector from this one.
                  * @param vec The other vector
                  * @return the same vector
                  */
                 // @ts-ignore
-                subtract(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public subtract(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Multiplies the vector by another.
                  * @param vec The other vector
                  * @return the same vector
                  */
                 // @ts-ignore
-                multiply(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public multiply(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Divides the vector by another.
                  * @param vec The other vector
                  * @return the same vector
                  */
                 // @ts-ignore
-                divide(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public divide(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Copies another vector
                  * @param vec The other vector
                  * @return the same vector
                  */
                 // @ts-ignore
-                copy(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public copy(vec: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Gets the magnitude of the vector, defined as sqrt(x^2+y^2+z^2). The
                  * value of this method is not cached and uses a costly square-root
@@ -88,13 +88,13 @@ declare namespace org {
                  * @return the magnitude
                  */
                 // @ts-ignore
-                length(): double
+                public length(): number /*double*/
                 /**
                  * Gets the magnitude of the vector squared.
                  * @return the magnitude
                  */
                 // @ts-ignore
-                lengthSquared(): double
+                public lengthSquared(): number /*double*/
                 /**
                  * Get the distance between this vector and another. The value of this
                  * method is not cached and uses a costly square-root function, so do not
@@ -105,35 +105,35 @@ declare namespace org {
                  * @return the distance
                  */
                 // @ts-ignore
-                distance(o: org.bukkit.util.Vector): double
+                public distance(o: org.bukkit.util.Vector): number /*double*/
                 /**
                  * Get the squared distance between this vector and another.
                  * @param o The other vector
                  * @return the distance
                  */
                 // @ts-ignore
-                distanceSquared(o: org.bukkit.util.Vector): double
+                public distanceSquared(o: org.bukkit.util.Vector): number /*double*/
                 /**
                  * Gets the angle between this vector and another in radians.
                  * @param other The other vector
                  * @return angle in radians
                  */
                 // @ts-ignore
-                angle(other: org.bukkit.util.Vector): float
+                public angle(other: org.bukkit.util.Vector): number /*float*/
                 /**
                  * Sets this vector to the midpoint between this vector and another.
                  * @param other The other vector
                  * @return this same vector (now a midpoint)
                  */
                 // @ts-ignore
-                midpoint(other: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public midpoint(other: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Gets a new midpoint vector between this vector and another.
                  * @param other The other vector
                  * @return a new midpoint vector
                  */
                 // @ts-ignore
-                getMidpoint(other: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public getMidpoint(other: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Performs scalar multiplication, multiplying all components with a
                  * scalar.
@@ -141,7 +141,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                multiply(m: number /*int*/): org.bukkit.util.Vector
+                public multiply(m: number /*int*/): org.bukkit.util.Vector
                 /**
                  * Performs scalar multiplication, multiplying all components with a
                  * scalar.
@@ -149,7 +149,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                multiply(m: number /*double*/): org.bukkit.util.Vector
+                public multiply(m: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Performs scalar multiplication, multiplying all components with a
                  * scalar.
@@ -157,7 +157,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                multiply(m: number /*float*/): org.bukkit.util.Vector
+                public multiply(m: number /*float*/): org.bukkit.util.Vector
                 /**
                  * Calculates the dot product of this vector with another. The dot product
                  * is defined as x1*x2+y1*y2+z1*z2. The returned value is a scalar.
@@ -165,7 +165,7 @@ declare namespace org {
                  * @return dot product
                  */
                 // @ts-ignore
-                dot(other: org.bukkit.util.Vector): double
+                public dot(other: org.bukkit.util.Vector): number /*double*/
                 /**
                  * Calculates the cross product of this vector with another. The cross
                  * product is defined as:
@@ -178,7 +178,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                crossProduct(o: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public crossProduct(o: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Calculates the cross product of this vector with another without mutating
                  * the original. The cross product is defined as:
@@ -191,19 +191,19 @@ declare namespace org {
                  * @return a new vector
                  */
                 // @ts-ignore
-                getCrossProduct(o: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public getCrossProduct(o: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Converts this vector to a unit vector (a vector with length of 1).
                  * @return the same vector
                  */
                 // @ts-ignore
-                normalize(): org.bukkit.util.Vector
+                public normalize(): org.bukkit.util.Vector
                 /**
                  * Zero this vector's components.
                  * @return the same vector
                  */
                 // @ts-ignore
-                zero(): org.bukkit.util.Vector
+                public zero(): org.bukkit.util.Vector
                 /**
                  * Returns whether this vector is in an axis-aligned bounding box.
                  * <p>
@@ -214,7 +214,7 @@ declare namespace org {
                  * @return whether this vector is in the AABB
                  */
                 // @ts-ignore
-                isInAABB(min: org.bukkit.util.Vector, max: org.bukkit.util.Vector): boolean
+                public isInAABB(min: org.bukkit.util.Vector, max: org.bukkit.util.Vector): boolean
                 /**
                  * Returns whether this vector is within a sphere.
                  * @param origin Sphere origin.
@@ -222,13 +222,13 @@ declare namespace org {
                  * @return whether this vector is in the sphere
                  */
                 // @ts-ignore
-                isInSphere(origin: org.bukkit.util.Vector, radius: number /*double*/): boolean
+                public isInSphere(origin: org.bukkit.util.Vector, radius: number /*double*/): boolean
                 /**
                  * Returns if a vector is normalized
                  * @return whether the vector is normalised
                  */
                 // @ts-ignore
-                isNormalized(): boolean
+                public isNormalized(): boolean
                 /**
                  * Rotates the vector around the x axis.
                  * <p>
@@ -241,7 +241,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                rotateAroundX(angle: number /*double*/): org.bukkit.util.Vector
+                public rotateAroundX(angle: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Rotates the vector around the y axis.
                  * <p>
@@ -254,7 +254,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                rotateAroundY(angle: number /*double*/): org.bukkit.util.Vector
+                public rotateAroundY(angle: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Rotates the vector around the z axis
                  * <p>
@@ -267,7 +267,7 @@ declare namespace org {
                  * @return the same vector
                  */
                 // @ts-ignore
-                rotateAroundZ(angle: number /*double*/): org.bukkit.util.Vector
+                public rotateAroundZ(angle: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Rotates the vector around a given arbitrary axis in 3 dimensional space.
                  * <p>
@@ -288,7 +288,7 @@ declare namespace org {
                  *  null
                  */
                 // @ts-ignore
-                rotateAroundAxis(axis: org.bukkit.util.Vector, angle: number /*double*/): org.bukkit.util.Vector
+                public rotateAroundAxis(axis: org.bukkit.util.Vector, angle: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Rotates the vector around a given arbitrary axis in 3 dimensional space.
                  * <p>
@@ -308,109 +308,109 @@ declare namespace org {
                  *  null
                  */
                 // @ts-ignore
-                rotateAroundNonUnitAxis(axis: org.bukkit.util.Vector, angle: number /*double*/): org.bukkit.util.Vector
+                public rotateAroundNonUnitAxis(axis: org.bukkit.util.Vector, angle: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Gets the X component.
                  * @return The X component.
                  */
                 // @ts-ignore
-                getX(): double
+                public getX(): number /*double*/
                 /**
                  * Gets the floored value of the X component, indicating the block that
                  * this vector is contained with.
                  * @return block X
                  */
                 // @ts-ignore
-                getBlockX(): int
+                public getBlockX(): number /*int*/
                 /**
                  * Gets the Y component.
                  * @return The Y component.
                  */
                 // @ts-ignore
-                getY(): double
+                public getY(): number /*double*/
                 /**
                  * Gets the floored value of the Y component, indicating the block that
                  * this vector is contained with.
                  * @return block y
                  */
                 // @ts-ignore
-                getBlockY(): int
+                public getBlockY(): number /*int*/
                 /**
                  * Gets the Z component.
                  * @return The Z component.
                  */
                 // @ts-ignore
-                getZ(): double
+                public getZ(): number /*double*/
                 /**
                  * Gets the floored value of the Z component, indicating the block that
                  * this vector is contained with.
                  * @return block z
                  */
                 // @ts-ignore
-                getBlockZ(): int
+                public getBlockZ(): number /*int*/
                 /**
                  * Set the X component.
                  * @param x The new X component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setX(x: number /*int*/): org.bukkit.util.Vector
+                public setX(x: number /*int*/): org.bukkit.util.Vector
                 /**
                  * Set the X component.
                  * @param x The new X component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setX(x: number /*double*/): org.bukkit.util.Vector
+                public setX(x: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Set the X component.
                  * @param x The new X component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setX(x: number /*float*/): org.bukkit.util.Vector
+                public setX(x: number /*float*/): org.bukkit.util.Vector
                 /**
                  * Set the Y component.
                  * @param y The new Y component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setY(y: number /*int*/): org.bukkit.util.Vector
+                public setY(y: number /*int*/): org.bukkit.util.Vector
                 /**
                  * Set the Y component.
                  * @param y The new Y component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setY(y: number /*double*/): org.bukkit.util.Vector
+                public setY(y: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Set the Y component.
                  * @param y The new Y component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setY(y: number /*float*/): org.bukkit.util.Vector
+                public setY(y: number /*float*/): org.bukkit.util.Vector
                 /**
                  * Set the Z component.
                  * @param z The new Z component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setZ(z: number /*int*/): org.bukkit.util.Vector
+                public setZ(z: number /*int*/): org.bukkit.util.Vector
                 /**
                  * Set the Z component.
                  * @param z The new Z component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setZ(z: number /*double*/): org.bukkit.util.Vector
+                public setZ(z: number /*double*/): org.bukkit.util.Vector
                 /**
                  * Set the Z component.
                  * @param z The new Z component.
                  * @return This vector.
                  */
                 // @ts-ignore
-                setZ(z: number /*float*/): org.bukkit.util.Vector
+                public setZ(z: number /*float*/): org.bukkit.util.Vector
                 /**
                  * Checks to see if two objects are equal.
                  * <p>
@@ -419,31 +419,31 @@ declare namespace org {
                  * with epsilon.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code for this vector
                  * @return hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Get a new vector.
                  * @return vector
                  */
                 // @ts-ignore
-                clone(): org.bukkit.util.Vector
+                public clone(): org.bukkit.util.Vector
                 /**
                  * Returns this vector's components as x,y,z.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Gets a Location version of this vector with yaw and pitch being 0.
                  * @param world The world to link the location to.
                  * @return the location
                  */
                 // @ts-ignore
-                toLocation(world: org.bukkit.World): org.bukkit.Location
+                public toLocation(world: org.bukkit.World): org.bukkit.Location
                 /**
                  * Gets a Location version of this vector.
                  * @param world The world to link the location to.
@@ -452,25 +452,25 @@ declare namespace org {
                  * @return the location
                  */
                 // @ts-ignore
-                toLocation(world: org.bukkit.World, yaw: number /*float*/, pitch: number /*float*/): org.bukkit.Location
+                public toLocation(world: org.bukkit.World, yaw: number /*float*/, pitch: number /*float*/): org.bukkit.Location
                 /**
                  * Get the block vector of this vector.
                  * @return A block vector.
                  */
                 // @ts-ignore
-                toBlockVector(): org.bukkit.util.BlockVector
+                public toBlockVector(): org.bukkit.util.BlockVector
                 /**
                  * Check if each component of this Vector is finite.
                  * @throws IllegalArgumentException if any component is not finite
                  */
                 // @ts-ignore
-                checkFinite(): void
+                public checkFinite(): void
                 /**
                  * Get the threshold used for equals().
                  * @return The epsilon.
                  */
                 // @ts-ignore
-                getEpsilon(): double
+                public static getEpsilon(): number /*double*/
                 /**
                  * Gets the minimum components of two vectors.
                  * @param v1 The first vector.
@@ -478,7 +478,7 @@ declare namespace org {
                  * @return minimum
                  */
                 // @ts-ignore
-                getMinimum(v1: org.bukkit.util.Vector, v2: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public static getMinimum(v1: org.bukkit.util.Vector, v2: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Gets the maximum components of two vectors.
                  * @param v1 The first vector.
@@ -486,18 +486,18 @@ declare namespace org {
                  * @return maximum
                  */
                 // @ts-ignore
-                getMaximum(v1: org.bukkit.util.Vector, v2: org.bukkit.util.Vector): org.bukkit.util.Vector
+                public static getMaximum(v1: org.bukkit.util.Vector, v2: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Gets a random vector with components having a random value between 0
                  * and 1.
                  * @return A random vector.
                  */
                 // @ts-ignore
-                getRandom(): org.bukkit.util.Vector
+                public static getRandom(): org.bukkit.util.Vector
                 // @ts-ignore
-                serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 // @ts-ignore
-                deserialize(args: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.util.Vector
+                public static deserialize(args: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.util.Vector
             }
         }
     }

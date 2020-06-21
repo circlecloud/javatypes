@@ -20,30 +20,30 @@ declare namespace org {
                  * @see SimpleApplicationEventMulticaster
                  */
                 // @ts-ignore
-                class AbstractApplicationEventMulticaster extends java.lang.Object implements org.springframework.context.event.ApplicationEventMulticaster {
+                abstract class AbstractApplicationEventMulticaster extends java.lang.Object implements org.springframework.context.event.ApplicationEventMulticaster {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    addApplicationListener(listener: org.springframework.context.ApplicationListener<any>): void
+                    public addApplicationListener(listener: org.springframework.context.ApplicationListener<any>): void
                     // @ts-ignore
-                    addApplicationListenerBean(listenerBeanName: string): void
+                    public addApplicationListenerBean(listenerBeanName: java.lang.String | string): void
                     // @ts-ignore
-                    removeApplicationListener(listener: org.springframework.context.ApplicationListener<any>): void
+                    public removeApplicationListener(listener: org.springframework.context.ApplicationListener<any>): void
                     // @ts-ignore
-                    removeApplicationListenerBean(listenerBeanName: string): void
+                    public removeApplicationListenerBean(listenerBeanName: java.lang.String | string): void
                     // @ts-ignore
-                    removeAllListeners(): void
+                    public removeAllListeners(): void
                     /**
                      * Return a Collection containing all ApplicationListeners.
                      * @return a Collection of ApplicationListeners
                      * @see org.springframework.context.ApplicationListener
                      */
                     // @ts-ignore
-                    getApplicationListeners(): java.util.Collection<org.springframework.context.ApplicationListener<?>>
+                    getApplicationListeners(): Array<org.springframework.context.ApplicationListener<any>>
                     /**
                      * Return a Collection of ApplicationListeners matching the given
                      * event type. Non-matching listeners get excluded early.
@@ -54,7 +54,7 @@ declare namespace org {
                      * @see org.springframework.context.ApplicationListener
                      */
                     // @ts-ignore
-                    getApplicationListeners(event: org.springframework.context.ApplicationEvent, eventType: ResolvableType): java.util.Collection<org.springframework.context.ApplicationListener<?>>
+                    getApplicationListeners(event: org.springframework.context.ApplicationEvent, eventType: ResolvableType): Array<org.springframework.context.ApplicationListener<any>>
                     /**
                      * Filter a listener early through checking its generically declared event
                      * type before trying to instantiate it.

@@ -16,17 +16,17 @@ declare namespace javax {
                     // @ts-ignore
                     popupMenu: javax.swing.JPopupMenu
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     // @ts-ignore
-                    installDefaults(): void
+                    public installDefaults(): void
                     // @ts-ignore
                     installListeners(): void
                     // @ts-ignore
                     installKeyboardActions(): void
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     // @ts-ignore
                     uninstallDefaults(): void
                     // @ts-ignore
@@ -34,7 +34,7 @@ declare namespace javax {
                     // @ts-ignore
                     uninstallKeyboardActions(): void
                     // @ts-ignore
-                    isPopupTrigger(e: java.awt.event.MouseEvent): boolean
+                    public isPopupTrigger(e: java.awt.event.MouseEvent): boolean
                 }
             }
         }

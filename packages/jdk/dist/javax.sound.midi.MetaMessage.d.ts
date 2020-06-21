@@ -69,7 +69,7 @@ declare namespace javax {
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly META: number /*int*/
+                public static readonly META: number /*int*/
                 /**
                  * Sets the message parameters for a <code>MetaMessage</code>.
                  * Since only one status byte value, <code>0xFF</code>, is allowed for meta-messages,
@@ -88,13 +88,13 @@ declare namespace javax {
                  *  parameter values do not specify a valid MIDI meta message
                  */
                 // @ts-ignore
-                setMessage(type: number /*int*/, data: number /*byte*/[], length: number /*int*/): void
+                public setMessage(type: number /*int*/, data: number /*byte*/[], length: number /*int*/): void
                 /**
                  * Obtains the type of the <code>MetaMessage</code>.
                  * @return an integer representing the <code>MetaMessage</code> type
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Obtains a copy of the data for the meta message.  The returned
                  * array of bytes does not include the status byte or the message
@@ -106,14 +106,14 @@ declare namespace javax {
                  * @see MidiMessage#getLength
                  */
                 // @ts-ignore
-                getData(): byte[]
+                public getData(): number /*byte*/[]
                 /**
                  * Creates a new object of the same class and with the same contents
                  * as this object.
                  * @return a clone of this instance
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

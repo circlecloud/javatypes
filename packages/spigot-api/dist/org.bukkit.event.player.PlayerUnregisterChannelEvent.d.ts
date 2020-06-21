@@ -8,7 +8,7 @@ declare namespace org {
                 // @ts-ignore
                 class PlayerUnregisterChannelEvent extends org.bukkit.event.player.PlayerChannelEvent {
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, channel: string)
+                    constructor(player: org.bukkit.entity.Player, channel: java.lang.String | string)
                 }
             }
         }

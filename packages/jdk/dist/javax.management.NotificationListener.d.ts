@@ -17,7 +17,7 @@ declare namespace javax {
              *  listener.
              */
             // @ts-ignore
-            handleNotification(notification: javax.management.Notification, handback: any): void
+            handleNotification(notification: javax.management.Notification, handback: java.lang.Object | any): void
         }
     }
 }

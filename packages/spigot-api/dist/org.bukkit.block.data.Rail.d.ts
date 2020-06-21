@@ -27,7 +27,7 @@ declare namespace org {
                      * @return the allowed 'shape' values
                      */
                     // @ts-ignore
-                    getShapes(): java.util.Set<org.bukkit.block.data.Rail.Shape>
+                    getShapes(): Array<org.bukkit.block.data.Rail.Shape>
                 }
             }
         }

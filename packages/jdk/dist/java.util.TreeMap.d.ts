@@ -98,7 +98,7 @@ declare namespace java {
              *         ordering} of the keys will be used.
              */
             // @ts-ignore
-            constructor(comparator: java.util.Comparator<any super K>)
+            constructor(comparator: java.util.Comparator<any>)
             /**
              * Constructs a new tree map containing the same mappings as the given
              * map, ordered according to the <em>natural ordering</em> of its keys.
@@ -113,7 +113,7 @@ declare namespace java {
              * @throws NullPointerException if the specified map is null
              */
             // @ts-ignore
-            constructor(m: java.util.Map<K, V>)
+            constructor(m: java.util.Map<any, any>)
             /**
              * Constructs a new tree map containing the same mappings and
              * using the same ordering as the specified sorted map.  This
@@ -123,13 +123,13 @@ declare namespace java {
              * @throws NullPointerException if the specified map is null
              */
             // @ts-ignore
-            constructor(m: java.util.SortedMap<K, V>)
+            constructor(m: java.util.SortedMap<K, any>)
             /**
              * Returns the number of key-value mappings in this map.
              * @return the number of key-value mappings in this map
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns {@code true} if this map contains a mapping for the specified
              * key.
@@ -143,7 +143,7 @@ declare namespace java {
              *          does not permit null keys
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * Returns {@code true} if this map maps one or more keys to the
              * specified value.  More formally, returns {@code true} if and only if
@@ -157,7 +157,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -178,19 +178,19 @@ declare namespace java {
              *          does not permit null keys
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             // @ts-ignore
-            comparator(): java.util.Comparator<? super K>
+            public comparator(): java.util.Comparator<any>
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            firstKey(): K
+            public firstKey(): K
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            lastKey(): K
+            public lastKey(): K
             /**
              * Copies all of the mappings from the specified map to this map.
              * These mappings replace any mappings that this map had for any
@@ -203,7 +203,7 @@ declare namespace java {
              *          permit null keys
              */
             // @ts-ignore
-            putAll(map: java.util.Map<K, V>): void
+            public putAll(map: java.util.Map<any, any>): void
             /**
              * Associates the specified value with the specified key in this map.
              * If the map previously contained a mapping for the key, the old
@@ -221,7 +221,7 @@ declare namespace java {
              *          does not permit null keys
              */
             // @ts-ignore
-            put(key: K, value: V): V
+            public put(key: K, value: V): V
             /**
              * Removes the mapping for this key from this TreeMap if present.
              * @param key key for which mapping should be removed
@@ -236,49 +236,40 @@ declare namespace java {
              *          does not permit null keys
              */
             // @ts-ignore
-            remove(key: any): V
+            public remove(key: java.lang.Object | any): V
             /**
              * Removes all of the mappings from this map.
              * The map will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns a shallow copy of this {@code TreeMap} instance. (The keys and
              * values themselves are not cloned.)
              * @return a shallow copy of this map
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * @since 1.6
              */
             // @ts-ignore
-            firstEntry(): java.util.Map.Entry<K, V>
+            public firstEntry(): java.util.Map.Entry<K, V>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            lastEntry(): java.util.Map.Entry<K, V>
+            public lastEntry(): java.util.Map.Entry<K, V>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            pollFirstEntry(): java.util.Map.Entry<K, V>
+            public pollFirstEntry(): java.util.Map.Entry<K, V>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            pollLastEntry(): java.util.Map.Entry<K, V>
-            /**
-             * @throws ClassCastException {#inheritDoc}
-             * @throws NullPointerException if the specified key is null
-             *          and this map uses natural ordering, or its comparator
-             *          does not permit null keys
-             * @since 1.6
-             */
-            // @ts-ignore
-            lowerEntry(key: K): java.util.Map.Entry<K, V>
+            public pollLastEntry(): java.util.Map.Entry<K, V>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -287,7 +278,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            lowerKey(key: K): K
+            public lowerEntry(key: K): java.util.Map.Entry<K, V>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -296,7 +287,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            floorEntry(key: K): java.util.Map.Entry<K, V>
+            public lowerKey(key: K): K
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -305,7 +296,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            floorKey(key: K): K
+            public floorEntry(key: K): java.util.Map.Entry<K, V>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -314,7 +305,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            ceilingEntry(key: K): java.util.Map.Entry<K, V>
+            public floorKey(key: K): K
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -323,7 +314,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            ceilingKey(key: K): K
+            public ceilingEntry(key: K): java.util.Map.Entry<K, V>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -332,7 +323,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            higherEntry(key: K): java.util.Map.Entry<K, V>
+            public ceilingKey(key: K): K
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified key is null
@@ -341,7 +332,16 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            higherKey(key: K): K
+            public higherEntry(key: K): java.util.Map.Entry<K, V>
+            /**
+             * @throws ClassCastException {#inheritDoc}
+             * @throws NullPointerException if the specified key is null
+             *          and this map uses natural ordering, or its comparator
+             *          does not permit null keys
+             * @since 1.6
+             */
+            // @ts-ignore
+            public higherKey(key: K): K
             /**
              * Returns a {@link Set} view of the keys contained in this map.
              * <p>The set's iterator returns the keys in ascending order.
@@ -366,17 +366,17 @@ declare namespace java {
              * operations.
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            navigableKeySet(): java.util.NavigableSet<K>
+            public navigableKeySet(): java.util.NavigableSet<K>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            descendingKeySet(): java.util.NavigableSet<K>
+            public descendingKeySet(): java.util.NavigableSet<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * <p>The collection's iterator returns the values in ascending order
@@ -397,7 +397,7 @@ declare namespace java {
              * support the {@code add} or {@code addAll} operations.
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * <p>The set's iterator returns the entries in ascending key order. The
@@ -419,12 +419,12 @@ declare namespace java {
              * {@code add} or {@code addAll} operations.
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public entrySet(): Array<java.util.Map.Entry<K, V>>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            descendingMap(): java.util.NavigableMap<K, V>
+            public descendingMap(): java.util.NavigableMap<K, V>
             /**
              * @throws ClassCastException       {#inheritDoc}
              * @throws NullPointerException if {#code fromKey} or {@code toKey} is
@@ -434,7 +434,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            subMap(fromKey: K, fromInclusive: boolean, toKey: K, toInclusive: boolean): java.util.NavigableMap<K, V>
+            public subMap(fromKey: K, fromInclusive: boolean, toKey: K, toInclusive: boolean): java.util.NavigableMap<K, V>
             /**
              * @throws ClassCastException       {#inheritDoc}
              * @throws NullPointerException if {#code toKey} is null
@@ -444,7 +444,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            headMap(toKey: K, inclusive: boolean): java.util.NavigableMap<K, V>
+            public headMap(toKey: K, inclusive: boolean): java.util.NavigableMap<K, V>
             /**
              * @throws ClassCastException       {#inheritDoc}
              * @throws NullPointerException if {#code fromKey} is null
@@ -454,7 +454,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            tailMap(fromKey: K, inclusive: boolean): java.util.NavigableMap<K, V>
+            public tailMap(fromKey: K, inclusive: boolean): java.util.NavigableMap<K, V>
             /**
              * @throws ClassCastException       {#inheritDoc}
              * @throws NullPointerException if {#code fromKey} or {@code toKey} is
@@ -463,7 +463,7 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            subMap(fromKey: K, toKey: K): java.util.SortedMap<K, V>
+            public subMap(fromKey: K, toKey: K): java.util.SortedMap<K, V>
             /**
              * @throws ClassCastException       {#inheritDoc}
              * @throws NullPointerException if {#code toKey} is null
@@ -472,7 +472,7 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            headMap(toKey: K): java.util.SortedMap<K, V>
+            public headMap(toKey: K): java.util.SortedMap<K, V>
             /**
              * @throws ClassCastException       {#inheritDoc}
              * @throws NullPointerException if {#code fromKey} is null
@@ -481,15 +481,15 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            tailMap(fromKey: K): java.util.SortedMap<K, V>
+            public tailMap(fromKey: K): java.util.SortedMap<K, V>
             // @ts-ignore
-            replace(key: K, oldValue: V, newValue: V): boolean
+            public replace(key: K, oldValue: V, newValue: V): boolean
             // @ts-ignore
-            replace(key: K, value: V): V
+            public replace(key: K, value: V): V
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+            public forEach(action: java.util.function$.BiConsumer<any, any>): void
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+            public replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
         }
     }
 }

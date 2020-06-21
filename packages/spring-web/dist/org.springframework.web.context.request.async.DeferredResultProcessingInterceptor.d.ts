@@ -60,7 +60,7 @@ declare namespace org {
                              * @throws Exception in case of errors
                              */
                             // @ts-ignore
-                            postProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, deferredResult: org.springframework.web.context.request.async.DeferredResult<T>, concurrentResult: any): void
+                            postProcess<T>(request: org.springframework.web.context.request.NativeWebRequest, deferredResult: org.springframework.web.context.request.async.DeferredResult<T>, concurrentResult: java.lang.Object | any): void
                             /**
                              * Invoked from a container thread when an async request times out before
                              * the {@code DeferredResult} has been set. Implementations may invoke
@@ -91,7 +91,7 @@ declare namespace org {
                              * @throws Exception in case of errors
                              */
                             // @ts-ignore
-                            handleError<T>(request: org.springframework.web.context.request.NativeWebRequest, deferredResult: org.springframework.web.context.request.async.DeferredResult<T>, t: Error): boolean
+                            handleError<T>(request: org.springframework.web.context.request.NativeWebRequest, deferredResult: org.springframework.web.context.request.async.DeferredResult<T>, t: java.lang.Throwable | Error): boolean
                             /**
                              * Invoked from a container thread when an async request completed for any
                              * reason including timeout and network error. This method is useful for

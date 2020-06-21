@@ -54,7 +54,7 @@ declare namespace javax {
                  *      Notification. Optional.
                  */
                 // @ts-ignore
-                constructor(notifTypes: string[], name: string, description: string)
+                constructor(notifTypes: java.lang.String[] | string[], name: java.lang.String | string, description: java.lang.String | string)
                 /**
                  * Constructs a ModelMBeanNotificationInfo object.
                  * @param notifTypes The array of strings (in dot notation)
@@ -74,7 +74,7 @@ declare namespace javax {
                  *     descriptor field "descriptorType" is not equal to "notification".
                  */
                 // @ts-ignore
-                constructor(notifTypes: string[], name: string, description: string, descriptor: javax.management.Descriptor)
+                constructor(notifTypes: java.lang.String[] | string[], name: java.lang.String | string, description: java.lang.String | string, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs a new ModelMBeanNotificationInfo object from this
                  * ModelMBeanNotfication Object.
@@ -87,7 +87,7 @@ declare namespace javax {
                  * duplicate of this ModelMBeanNotificationInfo.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a copy of the associated Descriptor for the
                  * ModelMBeanNotificationInfo.
@@ -96,7 +96,7 @@ declare namespace javax {
                  * @see #setDescriptor
                  */
                 // @ts-ignore
-                getDescriptor(): javax.management.Descriptor
+                public getDescriptor(): javax.management.Descriptor
                 /**
                  * Sets associated Descriptor (full replace) for the
                  * ModelMBeanNotificationInfo If the new Descriptor is null,
@@ -112,14 +112,14 @@ declare namespace javax {
                  * @see #getDescriptor
                  */
                 // @ts-ignore
-                setDescriptor(inDescriptor: javax.management.Descriptor): void
+                public setDescriptor(inDescriptor: javax.management.Descriptor): void
                 /**
                  * Returns a human readable string containing
                  * ModelMBeanNotificationInfo.
                  * @return a string describing this object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

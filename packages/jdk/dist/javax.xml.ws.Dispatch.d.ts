@@ -67,7 +67,7 @@ declare namespace javax {
                  *      the <code>Dispatch</code> instance
                  */
                 // @ts-ignore
-                invokeAsync(msg: T, handler: javax.xml.ws.AsyncHandler<T>): java.util.concurrent.Future<?>
+                invokeAsync(msg: T, handler: javax.xml.ws.AsyncHandler<T>): java.util.concurrent.Future<any>
                 /**
                  * Invokes a service operation using the one-way
                  * interaction mode. The operation invocation is logically non-blocking,

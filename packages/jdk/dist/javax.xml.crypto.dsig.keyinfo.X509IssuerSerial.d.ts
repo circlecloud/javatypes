@@ -47,7 +47,7 @@ declare namespace javax {
                          *     <code>null</code>)
                          */
                         // @ts-ignore
-                        getIssuerName(): java.lang.String
+                        getIssuerName(): string
                         /**
                          * Returns the serial number of this <code>X509IssuerSerial</code>.
                          * @return the serial number (never <code>null</code>)

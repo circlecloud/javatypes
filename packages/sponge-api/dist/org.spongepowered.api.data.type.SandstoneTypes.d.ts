@@ -6,11 +6,11 @@ declare namespace org {
                     // @ts-ignore
                     class SandstoneTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly CHISELED: org.spongepowered.api.data.type.SandstoneType
+                        public static readonly CHISELED: org.spongepowered.api.data.type.SandstoneType
                         // @ts-ignore
-                        readonly DEFAULT: org.spongepowered.api.data.type.SandstoneType
+                        public static readonly DEFAULT: org.spongepowered.api.data.type.SandstoneType
                         // @ts-ignore
-                        readonly SMOOTH: org.spongepowered.api.data.type.SandstoneType
+                        public static readonly SMOOTH: org.spongepowered.api.data.type.SandstoneType
                     }
                 }
             }

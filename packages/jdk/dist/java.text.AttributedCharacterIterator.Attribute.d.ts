@@ -15,14 +15,14 @@ declare namespace java {
                  * @param name the name of {#code Attribute}
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Attribute key for the language of some text.
                  * <p> Values are instances of {@link java.util.Locale Locale}.
                  * @see java.util.Locale
                  */
                 // @ts-ignore
-                readonly LANGUAGE: java.text.AttributedCharacterIterator.Attribute
+                public static readonly LANGUAGE: java.text.AttributedCharacterIterator.Attribute
                 /**
                  * Attribute key for the reading of some text. In languages where the written form
                  * and the pronunciation of a word are only loosely related (such as Japanese),
@@ -33,7 +33,7 @@ declare namespace java {
                  * @see java.lang.String
                  */
                 // @ts-ignore
-                readonly READING: java.text.AttributedCharacterIterator.Attribute
+                public static readonly READING: java.text.AttributedCharacterIterator.Attribute
                 /**
                  * Attribute key for input method segments. Input methods often break
                  * up text into segments, which usually correspond to words.
@@ -41,33 +41,33 @@ declare namespace java {
                  * @see Annotation
                  */
                 // @ts-ignore
-                readonly INPUT_METHOD_SEGMENT: java.text.AttributedCharacterIterator.Attribute
+                public static readonly INPUT_METHOD_SEGMENT: java.text.AttributedCharacterIterator.Attribute
                 /**
                  * Compares two objects for equality. This version only returns true
                  * for {@code x.equals(y)} if {@code x} and {@code y} refer
                  * to the same object, and guarantees this for all subclasses.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for the object. This version is identical to
                  * the one in {@code Object}, but is also final.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of the object. This version returns the
                  * concatenation of class name, {@code "("}, a name identifying the attribute
                  * and {@code ")"}.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns the name of the attribute.
                  * @return the name of {#code Attribute}
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Resolves instances being deserialized to the predefined constants.
                  * @return the resolved {#code Attribute} object
@@ -75,7 +75,7 @@ declare namespace java {
                  *                                 an instance of {#code Attribute}
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                readResolve(): any
             }
         }
     }

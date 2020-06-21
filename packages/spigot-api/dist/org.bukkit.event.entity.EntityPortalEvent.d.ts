@@ -20,17 +20,17 @@ declare namespace org {
                      *  location
                      */
                     // @ts-ignore
-                    setSearchRadius(searchRadius: number /*int*/): void
+                    public setSearchRadius(searchRadius: number /*int*/): void
                     /**
                      * Gets the search radius value for finding an available portal.
                      * @return the currently set search radius
                      */
                     // @ts-ignore
-                    getSearchRadius(): int
+                    public getSearchRadius(): number /*int*/
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

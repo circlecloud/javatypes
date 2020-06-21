@@ -15,7 +15,7 @@ declare namespace java {
              *             <code>Adjustable.VERTICAL</code>
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * This method should <strong>NOT</strong> be called by user code.
              * This method is public for this class to properly implement
@@ -23,9 +23,9 @@ declare namespace java {
              * @throws AWTError Always throws an error when called.
              */
             // @ts-ignore
-            setMinimum(min: number /*int*/): void
+            public setMinimum(min: number /*int*/): void
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * This method should <strong>NOT</strong> be called by user code.
              * This method is public for this class to properly implement
@@ -33,17 +33,17 @@ declare namespace java {
              * @throws AWTError Always throws an error when called.
              */
             // @ts-ignore
-            setMaximum(max: number /*int*/): void
+            public setMaximum(max: number /*int*/): void
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             // @ts-ignore
-            setUnitIncrement(u: number /*int*/): void
+            public setUnitIncrement(u: number /*int*/): void
             // @ts-ignore
-            getUnitIncrement(): int
+            public getUnitIncrement(): number /*int*/
             // @ts-ignore
-            setBlockIncrement(b: number /*int*/): void
+            public setBlockIncrement(b: number /*int*/): void
             // @ts-ignore
-            getBlockIncrement(): int
+            public getBlockIncrement(): number /*int*/
             /**
              * This method should <strong>NOT</strong> be called by user code.
              * This method is public for this class to properly implement
@@ -51,9 +51,9 @@ declare namespace java {
              * @throws AWTError Always throws an error when called.
              */
             // @ts-ignore
-            setVisibleAmount(v: number /*int*/): void
+            public setVisibleAmount(v: number /*int*/): void
             // @ts-ignore
-            getVisibleAmount(): int
+            public getVisibleAmount(): number /*int*/
             /**
              * Sets the <code>valueIsAdjusting</code> property.
              * @param b new adjustment-in-progress status
@@ -61,7 +61,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setValueIsAdjusting(b: boolean): void
+            public setValueIsAdjusting(b: boolean): void
             /**
              * Returns true if the value is in the process of changing as a
              * result of actions being taken by the user.
@@ -69,7 +69,7 @@ declare namespace java {
              * @see #setValueIsAdjusting
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * Sets the value of this scrollbar to the specified value.
              * <p>
@@ -79,9 +79,9 @@ declare namespace java {
              * @param v the new value of the scrollbar
              */
             // @ts-ignore
-            setValue(v: number /*int*/): void
+            public setValue(v: number /*int*/): void
             // @ts-ignore
-            getValue(): int
+            public getValue(): number /*int*/
             /**
              * Adds the specified adjustment listener to receive adjustment
              * events from this <code>ScrollPaneAdjustable</code>.
@@ -96,7 +96,7 @@ declare namespace java {
              * @see java.awt.event.AdjustmentEvent
              */
             // @ts-ignore
-            addAdjustmentListener(l: java.awt.event.AdjustmentListener): void
+            public addAdjustmentListener(l: java.awt.event.AdjustmentListener): void
             /**
              * Removes the specified adjustment listener so that it no longer
              * receives adjustment events from this <code>ScrollPaneAdjustable</code>.
@@ -112,7 +112,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeAdjustmentListener(l: java.awt.event.AdjustmentListener): void
+            public removeAdjustmentListener(l: java.awt.event.AdjustmentListener): void
             /**
              * Returns an array of all the adjustment listeners
              * registered on this <code>ScrollPaneAdjustable</code>.
@@ -127,13 +127,13 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAdjustmentListeners(): java.awt.event.AdjustmentListener[]
+            public getAdjustmentListeners(): java.awt.event.AdjustmentListener[]
             /**
              * Returns a string representation of this scrollbar and its values.
              * @return a string representation of this scrollbar.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a string representing the state of this scrollbar.
              * This method is intended to be used only for debugging purposes,
@@ -143,7 +143,7 @@ declare namespace java {
              * @return the parameter string of this scrollbar.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            public paramString(): string
         }
     }
 }

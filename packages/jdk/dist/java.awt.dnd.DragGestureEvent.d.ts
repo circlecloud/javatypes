@@ -45,14 +45,14 @@ declare namespace java {
                  * @see java.awt.dnd.DnDConstants
                  */
                 // @ts-ignore
-                constructor(dgr: java.awt.dnd.DragGestureRecognizer, act: number /*int*/, ori: java.awt.Point, evs: Array<java.awt.event.InputEvent>)
+                constructor(dgr: java.awt.dnd.DragGestureRecognizer, act: number /*int*/, ori: java.awt.Point, evs: java.util.List<any> | Array<any>)
                 /**
                  * Returns the source as a <code>DragGestureRecognizer</code>.
                  * <P>
                  * @return the source as a <code>DragGestureRecognizer</code>
                  */
                 // @ts-ignore
-                getSourceAsDragGestureRecognizer(): java.awt.dnd.DragGestureRecognizer
+                public getSourceAsDragGestureRecognizer(): java.awt.dnd.DragGestureRecognizer
                 /**
                  * Returns the <code>Component</code> associated
                  * with this <code>DragGestureEvent</code>.
@@ -60,14 +60,14 @@ declare namespace java {
                  * @return the Component
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * Returns the <code>DragSource</code>.
                  * <P>
                  * @return the <code>DragSource</code>
                  */
                 // @ts-ignore
-                getDragSource(): java.awt.dnd.DragSource
+                public getDragSource(): java.awt.dnd.DragSource
                 /**
                  * Returns a <code>Point</code> in the coordinates
                  * of the <code>Component</code> over which the drag originated.
@@ -75,7 +75,7 @@ declare namespace java {
                  * @return the Point where the drag originated in Component coords.
                  */
                 // @ts-ignore
-                getDragOrigin(): java.awt.Point
+                public getDragOrigin(): java.awt.Point
                 /**
                  * Returns an <code>Iterator</code> for the events
                  * comprising the gesture.
@@ -83,7 +83,7 @@ declare namespace java {
                  * @return an Iterator for the events comprising the gesture
                  */
                 // @ts-ignore
-                iterator(): java.util.Iterator<java.awt.event.InputEvent>
+                public iterator(): java.util.Iterator<java.awt.event.InputEvent>
                 /**
                  * Returns an <code>Object</code> array of the
                  * events comprising the drag gesture.
@@ -91,7 +91,7 @@ declare namespace java {
                  * @return an array of the events comprising the gesture
                  */
                 // @ts-ignore
-                toArray(): java.lang.Object[]
+                public toArray(): any[]
                 /**
                  * Returns an array of the events comprising the drag gesture.
                  * <P>
@@ -100,7 +100,7 @@ declare namespace java {
                  * @return an array of the events comprising the gesture
                  */
                 // @ts-ignore
-                toArray(array: any[]): java.lang.Object[]
+                public toArray(array: java.lang.Object[] | any[]): any[]
                 /**
                  * Returns an <code>int</code> representing the
                  * action selected by the user.
@@ -108,14 +108,14 @@ declare namespace java {
                  * @return the action selected by the user
                  */
                 // @ts-ignore
-                getDragAction(): int
+                public getDragAction(): number /*int*/
                 /**
                  * Returns the initial event that triggered the gesture.
                  * <P>
                  * @return the first "triggering" event in the sequence of the gesture
                  */
                 // @ts-ignore
-                getTriggerEvent(): java.awt.event.InputEvent
+                public getTriggerEvent(): java.awt.event.InputEvent
                 /**
                  * Starts the drag operation given the <code>Cursor</code> for this drag
                  * operation and the <code>Transferable</code> representing the source data
@@ -142,7 +142,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                startDrag(dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable): void
+                public startDrag(dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable): void
                 /**
                  * Starts the drag given the initial <code>Cursor</code> to display,
                  * the <code>Transferable</code> object,
@@ -164,7 +164,7 @@ declare namespace java {
                  *  drag operation is still executing.
                  */
                 // @ts-ignore
-                startDrag(dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
+                public startDrag(dragCursor: java.awt.Cursor, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
                 /**
                  * Start the drag given the initial <code>Cursor</code> to display,
                  * a drag <code>Image</code>, the offset of
@@ -190,7 +190,7 @@ declare namespace java {
                  *  drag operation is still executing.
                  */
                 // @ts-ignore
-                startDrag(dragCursor: java.awt.Cursor, dragImage: java.awt.Image, imageOffset: java.awt.Point, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
+                public startDrag(dragCursor: java.awt.Cursor, dragImage: java.awt.Image, imageOffset: java.awt.Point, transferable: java.awt.datatransfer.Transferable, dsl: java.awt.dnd.DragSourceListener): void
             }
         }
     }

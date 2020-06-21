@@ -18,7 +18,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    scheduledAnnotationProcessor(): org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor
+                    public scheduledAnnotationProcessor(): org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor
                 }
             }
         }

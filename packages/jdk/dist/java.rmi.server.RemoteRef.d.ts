@@ -15,7 +15,7 @@ declare namespace java {
                  * indicate compatibility with JDK 1.1.x version of class.
                  */
                 // @ts-ignore
-                
+                readonly serialVersionUID: number /*long*/
                 /**
                  * Initialize the server package prefix: assumes that the
                  * implementation of server ref classes (e.g., UnicastRef,
@@ -23,7 +23,7 @@ declare namespace java {
                  * prefix.
                  */
                 // @ts-ignore
-                
+                readonly packagePrefix: java.lang.String | string
                 /**
                  * Invoke a method. This form of delegating method invocation
                  * to the reference allows the reference to take care of
@@ -46,7 +46,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                invoke(obj: java.rmi.Remote, method: java.lang.reflect.Method, params: any[], opnum: number /*long*/): java.lang.Object
+                invoke(obj: java.rmi.Remote, method: java.lang.reflect.Method, params: java.lang.Object[] | any[], opnum: number /*long*/): any
                 /**
                  * Creates an appropriate call object for a new remote method
                  * invocation on this object.  Passing operation array and index,
@@ -119,7 +119,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getRefClass(out: java.io.ObjectOutput): java.lang.String
+                getRefClass(out: java.io.ObjectOutput): string
                 /**
                  * Returns a hashcode for a remote object.  Two remote object stubs
                  * that refer to the same remote object will have the same hash code
@@ -129,7 +129,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                remoteHashCode(): int
+                remoteHashCode(): number /*int*/
                 /**
                  * Compares two remote objects for equality.
                  * Returns a boolean that indicates whether this remote object is
@@ -149,7 +149,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                remoteToString(): java.lang.String
+                remoteToString(): string
             }
         }
     }

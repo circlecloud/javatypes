@@ -39,7 +39,7 @@ declare namespace java {
                  * @return the numeric era value
                  */
                 // @ts-ignore
-                getValue(): int
+                getValue(): number /*int*/
                 /**
                  * Checks if the specified field is supported.
                  * <p>
@@ -111,7 +111,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                get(field: java.time.temporal.TemporalField): int
+                get(field: java.time.temporal.TemporalField): number /*int*/
                 /**
                  * Gets the value of the specified field from this era as a {@code long}.
                  * <p>
@@ -134,7 +134,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                getLong(field: java.time.temporal.TemporalField): long
+                getLong(field: java.time.temporal.TemporalField): number /*long*/
                 /**
                  * Queries this era using the specified query.
                  * <p>
@@ -193,7 +193,7 @@ declare namespace java {
                  * @return the text value of the era, not null
                  */
                 // @ts-ignore
-                getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): java.lang.String
+                getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
             }
         }
     }

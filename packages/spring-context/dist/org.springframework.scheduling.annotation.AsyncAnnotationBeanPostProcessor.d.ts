@@ -40,7 +40,7 @@ declare namespace org {
                      * @see AnnotationAsyncExecutionInterceptor#DEFAULT_TASK_EXECUTOR_BEAN_NAME
                      */
                     // @ts-ignore
-                    readonly DEFAULT_TASK_EXECUTOR_BEAN_NAME: string
+                    public static readonly DEFAULT_TASK_EXECUTOR_BEAN_NAME: java.lang.String | string
                     // @ts-ignore
                     readonly logger: Log
                     /**
@@ -49,7 +49,7 @@ declare namespace org {
                      * @since 5.1
                      */
                     // @ts-ignore
-                    configure(executor: java.util.function.Supplier<java.util.concurrent.Executor> | java.util.function$.Supplier<java.util.concurrent.Executor>, exceptionHandler: java.util.function.Supplier<AsyncUncaughtExceptionHandler> | java.util.function$.Supplier<AsyncUncaughtExceptionHandler>): void
+                    public configure(executor: java.util.function$.Supplier<java.util.concurrent.Executor>, exceptionHandler: java.util.function$.Supplier<AsyncUncaughtExceptionHandler>): void
                     /**
                      * Set the {@link Executor} to use when invoking methods asynchronously.
                      * <p>If not specified, default executor resolution will apply: searching for a
@@ -60,14 +60,14 @@ declare namespace org {
                      * @see #DEFAULT_TASK_EXECUTOR_BEAN_NAME
                      */
                     // @ts-ignore
-                    setExecutor(executor: java.util.concurrent.Executor): void
+                    public setExecutor(executor: java.util.concurrent.Executor): void
                     /**
                      * Set the {@link AsyncUncaughtExceptionHandler} to use to handle uncaught
                      * exceptions thrown by asynchronous method executions.
                      * @since 4.1
                      */
                     // @ts-ignore
-                    setExceptionHandler(exceptionHandler: AsyncUncaughtExceptionHandler): void
+                    public setExceptionHandler(exceptionHandler: AsyncUncaughtExceptionHandler): void
                     /**
                      * Set the 'async' annotation type to be detected at either class or method
                      * level. By default, both the {@link Async} annotation and the EJB 3.1
@@ -78,9 +78,9 @@ declare namespace org {
                      * @param asyncAnnotationType the desired annotation type
                      */
                     // @ts-ignore
-                    setAsyncAnnotationType(asyncAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                    public setAsyncAnnotationType(asyncAnnotationType: java.lang.Class<any>): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                 }
             }
         }

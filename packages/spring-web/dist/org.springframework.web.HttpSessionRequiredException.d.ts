@@ -13,7 +13,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Create a new HttpSessionRequiredException.
                  * @param msg the detail message
@@ -21,13 +21,13 @@ declare namespace org {
                  * @since 4.3
                  */
                 // @ts-ignore
-                constructor(msg: string, expectedAttribute: string)
+                constructor(msg: java.lang.String | string, expectedAttribute: java.lang.String | string)
                 /**
                  * Return the name of the expected session attribute, if any.
                  * @since 4.3
                  */
                 // @ts-ignore
-                getExpectedAttribute(): java.lang.String
+                public getExpectedAttribute(): string
             }
         }
     }

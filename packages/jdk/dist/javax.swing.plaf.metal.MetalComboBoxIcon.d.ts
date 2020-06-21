@@ -15,17 +15,17 @@ declare namespace javax {
                      * Paints the horizontal bars for the
                      */
                     // @ts-ignore
-                    paintIcon(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
+                    public paintIcon(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/): void
                     /**
                      * Created a stub to satisfy the interface.
                      */
                     // @ts-ignore
-                    getIconWidth(): int
+                    public getIconWidth(): number /*int*/
                     /**
                      * Created a stub to satisfy the interface.
                      */
                     // @ts-ignore
-                    getIconHeight(): int
+                    public getIconHeight(): number /*int*/
                 }
             }
         }

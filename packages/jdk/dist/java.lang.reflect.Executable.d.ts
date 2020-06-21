@@ -7,24 +7,24 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            class Executable extends java.lang.reflect.AccessibleObject implements java.lang.reflect.Member, java.lang.reflect.GenericDeclaration {
+            abstract class Executable extends java.lang.reflect.AccessibleObject implements java.lang.reflect.Member, java.lang.reflect.GenericDeclaration {
                 /**
                  * Returns the {@code Class} object representing the class or interface
                  * that declares the executable represented by this object.
                  */
                 // @ts-ignore
-                abstract getDeclaringClass(): java.lang.Class<?>
+                public abstract getDeclaringClass(): java.lang.Class<any>
                 /**
                  * Returns the name of the executable represented by this object.
                  */
                 // @ts-ignore
-                abstract getName(): java.lang.String
+                public abstract getName(): string
                 /**
                  * Returns the Java language {@linkplain Modifier modifiers} for
                  * the executable represented by this object.
                  */
                 // @ts-ignore
-                abstract getModifiers(): int
+                public abstract getModifiers(): number /*int*/
                 /**
                  * Returns an array of {@code TypeVariable} objects that represent the
                  * type variables declared by the generic declaration represented by this
@@ -39,7 +39,7 @@ declare namespace java {
                  *      <cite>The Java&trade; Virtual Machine Specification</cite>
                  */
                 // @ts-ignore
-                abstract getTypeParameters(): java.lang.reflect.TypeVariable[]
+                public abstract getTypeParameters(): java.lang.reflect.TypeVariable<any>[]
                 /**
                  * Returns an array of {@code Class} objects that represent the formal
                  * parameter types, in declaration order, of the executable
@@ -49,7 +49,7 @@ declare namespace java {
                  *  represents
                  */
                 // @ts-ignore
-                abstract getParameterTypes(): java.lang.Class[]
+                public abstract getParameterTypes(): java.lang.Class<any>[]
                 /**
                  * Returns the number of formal parameters (whether explicitly
                  * declared or implicitly declared or neither) for the executable
@@ -58,7 +58,7 @@ declare namespace java {
                  *  object represents
                  */
                 // @ts-ignore
-                getParameterCount(): int
+                public getParameterCount(): number /*int*/
                 /**
                  * Returns an array of {@code Type} objects that represent the formal
                  * parameter types, in declaration order, of the executable represented by
@@ -83,7 +83,7 @@ declare namespace java {
                  *      type that cannot be instantiated for any reason
                  */
                 // @ts-ignore
-                getGenericParameterTypes(): java.lang.reflect.Type[]
+                public getGenericParameterTypes(): java.lang.reflect.Type[]
                 /**
                  * Returns an array of {@code Parameter} objects that represent
                  * all the parameters to the underlying executable represented by
@@ -98,7 +98,7 @@ declare namespace java {
                  *  the parameters to the executable this object represents.
                  */
                 // @ts-ignore
-                getParameters(): java.lang.reflect.Parameter[]
+                public getParameters(): java.lang.reflect.Parameter[]
                 /**
                  * Returns an array of {@code Class} objects that represent the
                  * types of exceptions declared to be thrown by the underlying
@@ -109,7 +109,7 @@ declare namespace java {
                  *  executable this object represents
                  */
                 // @ts-ignore
-                abstract getExceptionTypes(): java.lang.Class[]
+                public abstract getExceptionTypes(): java.lang.Class<any>[]
                 /**
                  * Returns an array of {@code Type} objects that represent the
                  * exceptions declared to be thrown by this executable object.
@@ -130,7 +130,7 @@ declare namespace java {
                  *      parameterized type that cannot be instantiated for any reason
                  */
                 // @ts-ignore
-                getGenericExceptionTypes(): java.lang.reflect.Type[]
+                public getGenericExceptionTypes(): java.lang.reflect.Type[]
                 /**
                  * Returns a string describing this {@code Executable}, including
                  * any type parameters.
@@ -138,7 +138,7 @@ declare namespace java {
                  *  any type parameters
                  */
                 // @ts-ignore
-                abstract toGenericString(): java.lang.String
+                public abstract toGenericString(): string
                 /**
                  * Returns {@code true} if this executable was declared to take a
                  * variable number of arguments; returns {@code false} otherwise.
@@ -146,7 +146,7 @@ declare namespace java {
                  *  to take a variable number of arguments.
                  */
                 // @ts-ignore
-                isVarArgs(): boolean
+                public isVarArgs(): boolean
                 /**
                  * Returns {@code true} if this executable is a synthetic
                  * construct; returns {@code false} otherwise.
@@ -156,7 +156,7 @@ declare namespace java {
                  * @jls 13.1 The Form of a Binary
                  */
                 // @ts-ignore
-                isSynthetic(): boolean
+                public isSynthetic(): boolean
                 /**
                  * Returns an array of arrays of {@code Annotation}s that
                  * represent the annotations on the formal parameters, in
@@ -184,24 +184,24 @@ declare namespace java {
                  *     the executable represented by this object
                  */
                 // @ts-ignore
-                abstract getParameterAnnotations(): java.lang.annotation.Annotation[][]
+                public abstract getParameterAnnotations(): java.lang.annotation.Annotation[][]
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException  {#inheritDoc}
                  */
                 // @ts-ignore
-                getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotation<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  * @throws NullPointerException {#inheritDoc}
                  */
                 // @ts-ignore
-                getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
+                public getAnnotationsByType<T extends java.lang.annotation.Annotation>(annotationClass: java.lang.Class<T>): T
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getDeclaredAnnotations(): java.lang.annotation.Annotation[]
+                public getDeclaredAnnotations(): java.lang.annotation.Annotation[]
                 /**
                  * Returns an {@code AnnotatedType} object that represents the use of a type to
                  * specify the return type of the method/constructor represented by this
@@ -215,7 +215,7 @@ declare namespace java {
                  *  or constructor represented by this {#code Executable}
                  */
                 // @ts-ignore
-                abstract getAnnotatedReturnType(): java.lang.reflect.AnnotatedType
+                public abstract getAnnotatedReturnType(): java.lang.reflect.AnnotatedType
                 /**
                  * Returns an {@code AnnotatedType} object that represents the use of a
                  * type to specify the receiver type of the method/constructor represented
@@ -233,7 +233,7 @@ declare namespace java {
                  *  constructor represented by this {#code Executable}
                  */
                 // @ts-ignore
-                getAnnotatedReceiverType(): java.lang.reflect.AnnotatedType
+                public getAnnotatedReceiverType(): java.lang.reflect.AnnotatedType
                 /**
                  * Returns an array of {@code AnnotatedType} objects that represent the use
                  * of types to specify formal parameter types of the method/constructor
@@ -247,7 +247,7 @@ declare namespace java {
                  *  {#code Executable}
                  */
                 // @ts-ignore
-                getAnnotatedParameterTypes(): java.lang.reflect.AnnotatedType[]
+                public getAnnotatedParameterTypes(): java.lang.reflect.AnnotatedType[]
                 /**
                  * Returns an array of {@code AnnotatedType} objects that represent the use
                  * of types to specify the declared exceptions of the method/constructor
@@ -261,7 +261,7 @@ declare namespace java {
                  *  Executable}
                  */
                 // @ts-ignore
-                getAnnotatedExceptionTypes(): java.lang.reflect.AnnotatedType[]
+                public getAnnotatedExceptionTypes(): java.lang.reflect.AnnotatedType[]
             }
         }
     }

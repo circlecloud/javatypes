@@ -10,66 +10,66 @@ declare namespace org {
              * @param name Name of the world that will be created
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Copies the options from the specified world
              * @param world World to copy options from
              * @return This object, for chaining
              */
             // @ts-ignore
-            copy(world: org.bukkit.World): org.bukkit.WorldCreator
+            public copy(world: org.bukkit.World): org.bukkit.WorldCreator
             /**
              * Copies the options from the specified {@link WorldCreator}
              * @param creator World creator to copy options from
              * @return This object, for chaining
              */
             // @ts-ignore
-            copy(creator: org.bukkit.WorldCreator): org.bukkit.WorldCreator
+            public copy(creator: org.bukkit.WorldCreator): org.bukkit.WorldCreator
             /**
              * Gets the name of the world that is to be loaded or created.
              * @return World name
              */
             // @ts-ignore
-            name(): java.lang.String
+            public name(): string
             /**
              * Gets the seed that will be used to create this world
              * @return World seed
              */
             // @ts-ignore
-            seed(): long
+            public seed(): number /*long*/
             /**
              * Sets the seed that will be used to create this world
              * @param seed World seed
              * @return This object, for chaining
              */
             // @ts-ignore
-            seed(seed: number /*long*/): org.bukkit.WorldCreator
+            public seed(seed: number /*long*/): org.bukkit.WorldCreator
             /**
              * Gets the environment that will be used to create or load the world
              * @return World environment
              */
             // @ts-ignore
-            environment(): org.bukkit.World.Environment
+            public environment(): org.bukkit.World.Environment
             /**
              * Sets the environment that will be used to create or load the world
              * @param env World environment
              * @return This object, for chaining
              */
             // @ts-ignore
-            environment(env: org.bukkit.World.Environment): org.bukkit.WorldCreator
+            public environment(env: org.bukkit.World.Environment): org.bukkit.WorldCreator
             /**
              * Gets the type of the world that will be created or loaded
              * @return World type
              */
             // @ts-ignore
-            type(): org.bukkit.WorldType
+            public type(): org.bukkit.WorldType
             /**
              * Sets the type of the world that will be created or loaded
              * @param type World type
              * @return This object, for chaining
              */
             // @ts-ignore
-            type(type: org.bukkit.WorldType): org.bukkit.WorldCreator
+            public type(type: org.bukkit.WorldType): org.bukkit.WorldCreator
             /**
              * Gets the generator that will be used to create or load the world.
              * <p>
@@ -78,7 +78,7 @@ declare namespace org {
              * @return Chunk generator
              */
             // @ts-ignore
-            generator(): org.bukkit.generator.ChunkGenerator
+            public generator(): org.bukkit.generator.ChunkGenerator
             /**
              * Sets the generator that will be used to create or load the world.
              * <p>
@@ -88,7 +88,7 @@ declare namespace org {
              * @return This object, for chaining
              */
             // @ts-ignore
-            generator(generator: org.bukkit.generator.ChunkGenerator): org.bukkit.WorldCreator
+            public generator(generator: org.bukkit.generator.ChunkGenerator): org.bukkit.WorldCreator
             /**
              * Sets the generator that will be used to create or load the world.
              * <p>
@@ -102,7 +102,7 @@ declare namespace org {
              * @return This object, for chaining
              */
             // @ts-ignore
-            generator(generator: string): org.bukkit.WorldCreator
+            public generator(generator: java.lang.String | string): org.bukkit.WorldCreator
             /**
              * Sets the generator that will be used to create or load the world.
              * <p>
@@ -118,7 +118,7 @@ declare namespace org {
              * @return This object, for chaining
              */
             // @ts-ignore
-            generator(generator: string, output: org.bukkit.command.CommandSender): org.bukkit.WorldCreator
+            public generator(generator: java.lang.String | string, output: org.bukkit.command.CommandSender): org.bukkit.WorldCreator
             /**
              * Sets the generator settings of the world that will be created or loaded.
              * <p>
@@ -131,14 +131,14 @@ declare namespace org {
              * @return This object, for chaining
              */
             // @ts-ignore
-            generatorSettings(generatorSettings: string): org.bukkit.WorldCreator
+            public generatorSettings(generatorSettings: java.lang.String | string): org.bukkit.WorldCreator
             /**
              * Gets the generator settings of the world that will be created or loaded.
              * @return The settings that should be used by the generator
              * @see #generatorSettings(java.lang.String)
              */
             // @ts-ignore
-            generatorSettings(): java.lang.String
+            public generatorSettings(): string
             /**
              * Sets whether or not worlds created or loaded with this creator will
              * have structures.
@@ -146,13 +146,13 @@ declare namespace org {
              * @return This object, for chaining
              */
             // @ts-ignore
-            generateStructures(generate: boolean): org.bukkit.WorldCreator
+            public generateStructures(generate: boolean): org.bukkit.WorldCreator
             /**
              * Gets whether or not structures will be generated in the world.
              * @return True if structures will be generated
              */
             // @ts-ignore
-            generateStructures(): boolean
+            public generateStructures(): boolean
             /**
              * Sets whether the world will be hardcore or not.
              * In a hardcore world the difficulty will be locked to hard.
@@ -160,14 +160,14 @@ declare namespace org {
              * @return This object, for chaining
              */
             // @ts-ignore
-            hardcore(hardcore: boolean): org.bukkit.WorldCreator
+            public hardcore(hardcore: boolean): org.bukkit.WorldCreator
             /**
              * Gets whether the world will be hardcore or not.
              * In a hardcore world the difficulty will be locked to hard.
              * @return hardcore status
              */
             // @ts-ignore
-            hardcore(): boolean
+            public hardcore(): boolean
             /**
              * Creates a world with the specified options.
              * <p>
@@ -176,14 +176,14 @@ declare namespace org {
              * @return Newly created or loaded world
              */
             // @ts-ignore
-            createWorld(): org.bukkit.World
+            public createWorld(): org.bukkit.World
             /**
              * Creates a new {@link WorldCreator} for the given world name
              * @param name Name of the world to load or create
              * @return Resulting WorldCreator
              */
             // @ts-ignore
-            name(name: string): org.bukkit.WorldCreator
+            public static name(name: java.lang.String | string): org.bukkit.WorldCreator
             /**
              * Attempts to get the {@link ChunkGenerator} with the given name.
              * <p>
@@ -200,7 +200,7 @@ declare namespace org {
              * @return Resulting generator, or null
              */
             // @ts-ignore
-            getGeneratorForName(world: string, name: string, output: org.bukkit.command.CommandSender): org.bukkit.generator.ChunkGenerator
+            public static getGeneratorForName(world: java.lang.String | string, name: java.lang.String | string, output: org.bukkit.command.CommandSender): org.bukkit.generator.ChunkGenerator
         }
     }
 }

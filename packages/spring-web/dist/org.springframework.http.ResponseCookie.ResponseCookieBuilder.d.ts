@@ -25,12 +25,12 @@ declare namespace org {
                      * Set the cookie "Path" attribute.
                      */
                     // @ts-ignore
-                    path(path: string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
+                    path(path: java.lang.String | string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
                     /**
                      * Set the cookie "Domain" attribute.
                      */
                     // @ts-ignore
-                    domain(domain: string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
+                    domain(domain: java.lang.String | string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
                     /**
                      * Add the "Secure" attribute to the cookie.
                      */
@@ -51,7 +51,7 @@ declare namespace org {
                      * @see <a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis#section-4.1.2.7">RFC6265 bis</a>
                      */
                     // @ts-ignore
-                    sameSite(sameSite: string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
+                    sameSite(sameSite: java.lang.String | string): org.springframework.http.ResponseCookie.ResponseCookieBuilder
                     /**
                      * Create the HttpCookie.
                      */

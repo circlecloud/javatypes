@@ -13,7 +13,7 @@ declare namespace javax {
              * @see javax.imageio.spi.ImageInputStreamSpi
              */
             // @ts-ignore
-            class IIOServiceProvider extends java.lang.Object implements javax.imageio.spi.RegisterableService {
+            abstract class IIOServiceProvider extends java.lang.Object implements javax.imageio.spi.RegisterableService {
                 /**
                  * Constructs an <code>IIOServiceProvider</code> with a given
                  * vendor name and version identifier.
@@ -25,7 +25,7 @@ declare namespace javax {
                  *  is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string)
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string)
                 /**
                  * Constructs a blank <code>IIOServiceProvider</code>.  It is up
                  * to the subclass to initialize instance variables and/or
@@ -41,14 +41,14 @@ declare namespace javax {
                  * Constructors should set this to a non-<code>null</code> value.
                  */
                 // @ts-ignore
-                vendorName: string
+                vendorName: java.lang.String | string
                 /**
                  * A <code>String</code> to be returned from
                  * <code>getVersion</code>, initially null.  Constructors should
                  * set this to a non-<code>null</code> value.
                  */
                 // @ts-ignore
-                version: string
+                version: java.lang.String | string
                 /**
                  * A callback that will be called exactly once after the Spi class
                  * has been instantiated and registered in a
@@ -62,7 +62,7 @@ declare namespace javax {
                  * @see ServiceRegistry#registerServiceProvider(Object provider)
                  */
                 // @ts-ignore
-                onRegistration(registry: javax.imageio.spi.ServiceRegistry, category: java.lang.Class<any>): void
+                public onRegistration(registry: javax.imageio.spi.ServiceRegistry, category: java.lang.Class<any>): void
                 /**
                  * A callback that will be whenever the Spi class has been
                  * deregistered from a <code>ServiceRegistry</code>.
@@ -71,7 +71,7 @@ declare namespace javax {
                  * @see ServiceRegistry#deregisterServiceProvider(Object provider)
                  */
                 // @ts-ignore
-                onDeregistration(registry: javax.imageio.spi.ServiceRegistry, category: java.lang.Class<any>): void
+                public onDeregistration(registry: javax.imageio.spi.ServiceRegistry, category: java.lang.Class<any>): void
                 /**
                  * Returns the name of the vendor responsible for creating this
                  * service provider and its associated implementation.  Because
@@ -83,7 +83,7 @@ declare namespace javax {
                  *  the name of the vendor.
                  */
                 // @ts-ignore
-                getVendorName(): java.lang.String
+                public getVendorName(): string
                 /**
                  * Returns a string describing the version
                  * number of this service provider and its associated
@@ -96,7 +96,7 @@ declare namespace javax {
                  *  the version of this service provider.
                  */
                 // @ts-ignore
-                getVersion(): java.lang.String
+                public getVersion(): string
                 /**
                  * Returns a brief, human-readable description of this service
                  * provider and its associated implementation.  The resulting
@@ -108,7 +108,7 @@ declare namespace javax {
                  *  service provider.
                  */
                 // @ts-ignore
-                abstract getDescription(locale: java.util.Locale): java.lang.String
+                public abstract getDescription(locale: java.util.Locale): string
             }
         }
     }

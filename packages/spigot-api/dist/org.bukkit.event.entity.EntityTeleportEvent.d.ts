@@ -13,37 +13,37 @@ declare namespace org {
                     // @ts-ignore
                     constructor(what: org.bukkit.entity.Entity, from: org.bukkit.Location, to: org.bukkit.Location)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the location that this entity moved from
                      * @return Location this entity moved from
                      */
                     // @ts-ignore
-                    getFrom(): org.bukkit.Location
+                    public getFrom(): org.bukkit.Location
                     /**
                      * Sets the location that this entity moved from
                      * @param from New location this entity moved from
                      */
                     // @ts-ignore
-                    setFrom(from: org.bukkit.Location): void
+                    public setFrom(from: org.bukkit.Location): void
                     /**
                      * Gets the location that this entity moved to
                      * @return Location the entity moved to
                      */
                     // @ts-ignore
-                    getTo(): org.bukkit.Location
+                    public getTo(): org.bukkit.Location
                     /**
                      * Sets the location that this entity moved to
                      * @param to New Location this entity moved to
                      */
                     // @ts-ignore
-                    setTo(to: org.bukkit.Location): void
+                    public setTo(to: org.bukkit.Location): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

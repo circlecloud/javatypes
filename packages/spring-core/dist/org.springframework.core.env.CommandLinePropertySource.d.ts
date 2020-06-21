@@ -153,7 +153,7 @@ declare namespace org {
                  * @see JOptCommandLinePropertySource
                  */
                 // @ts-ignore
-                class CommandLinePropertySource<T> extends org.springframework.core.env.EnumerablePropertySource<T> {
+                abstract class CommandLinePropertySource<T> extends org.springframework.core.env.EnumerablePropertySource<T> {
                     /**
                      * Create a new {@code CommandLinePropertySource} having the default name
                      * {@value #COMMAND_LINE_PROPERTY_SOURCE_NAME} and backed by the given source object.
@@ -165,23 +165,23 @@ declare namespace org {
                      * and backed by the given source object.
                      */
                     // @ts-ignore
-                    constructor(name: string, source: T)
+                    constructor(name: java.lang.String | string, source: T)
                     /**
                      * The default name given to {@link CommandLinePropertySource} instances: {@value}.
                      */
                     // @ts-ignore
-                    readonly COMMAND_LINE_PROPERTY_SOURCE_NAME: string
+                    public static readonly COMMAND_LINE_PROPERTY_SOURCE_NAME: java.lang.String | string
                     /**
                      * The default name of the property representing non-option arguments: {@value}.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME: string
+                    public static readonly DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME: java.lang.String | string
                     /**
                      * Specify the name of the special "non-option arguments" property.
                      * The default is {@value #DEFAULT_NON_OPTION_ARGS_PROPERTY_NAME}.
                      */
                     // @ts-ignore
-                    setNonOptionArgsPropertyName(nonOptionArgsPropertyName: string): void
+                    public setNonOptionArgsPropertyName(nonOptionArgsPropertyName: java.lang.String | string): void
                     /**
                      * This implementation first checks to see if the name specified is the special
                      * {@linkplain #setNonOptionArgsPropertyName(String) "non-option arguments" property},
@@ -190,7 +190,7 @@ declare namespace org {
                      * returns the value of the abstract {@link #containsOption(String)} method.
                      */
                     // @ts-ignore
-                    containsProperty(name: string): boolean
+                    public containsProperty(name: java.lang.String | string): boolean
                     /**
                      * This implementation first checks to see if the name specified is the special
                      * {@linkplain #setNonOptionArgsPropertyName(String) "non-option arguments" property},
@@ -201,13 +201,13 @@ declare namespace org {
                      * #getOptionValues(String)} method.
                      */
                     // @ts-ignore
-                    getProperty(name: string): java.lang.String
+                    public getProperty(name: java.lang.String | string): string
                     /**
                      * Return whether the set of option arguments parsed from the command line contains
                      * an option with the given name.
                      */
                     // @ts-ignore
-                    abstract containsOption(name: string): boolean
+                    abstract containsOption(name: java.lang.String | string): boolean
                     /**
                      * Return the collection of values associated with the command line option having the
                      * given name.
@@ -223,13 +223,13 @@ declare namespace org {
                      * </ul>
                      */
                     // @ts-ignore
-                    abstract getOptionValues(name: string): java.util.List<java.lang.String>
+                    abstract getOptionValues(name: java.lang.String | string): Array<java.lang.String | string>
                     /**
                      * Return the collection of non-option arguments parsed from the command line.
                      * Never {@code null}.
                      */
                     // @ts-ignore
-                    abstract getNonOptionArgs(): java.util.List<java.lang.String>
+                    abstract getNonOptionArgs(): Array<java.lang.String | string>
                 }
             }
         }

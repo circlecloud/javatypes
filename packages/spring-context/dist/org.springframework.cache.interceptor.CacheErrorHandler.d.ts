@@ -25,7 +25,7 @@ declare namespace org {
                      * @see Cache#get(Object)
                      */
                     // @ts-ignore
-                    handleCacheGetError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: any): void
+                    handleCacheGetError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: java.lang.Object | any): void
                     /**
                      * Handle the given runtime exception thrown by the cache provider when
                      * updating an item with the specified {@code key} and {@code value},
@@ -37,7 +37,7 @@ declare namespace org {
                      * @see Cache#put(Object, Object)
                      */
                     // @ts-ignore
-                    handleCachePutError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: any, value: any): void
+                    handleCachePutError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: java.lang.Object | any, value: java.lang.Object | any): void
                     /**
                      * Handle the given runtime exception thrown by the cache provider when
                      * clearing an item with the specified {@code key}, possibly rethrowing
@@ -47,7 +47,7 @@ declare namespace org {
                      * @param key the key used to clear the item
                      */
                     // @ts-ignore
-                    handleCacheEvictError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: any): void
+                    handleCacheEvictError(exception: java.lang.RuntimeException, cache: org.springframework.cache.Cache, key: java.lang.Object | any): void
                     /**
                      * Handle the given runtime exception thrown by the cache provider when
                      * clearing the specified {@link Cache}, possibly rethrowing it as a

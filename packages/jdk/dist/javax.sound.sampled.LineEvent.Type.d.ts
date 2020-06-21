@@ -14,7 +14,7 @@ declare namespace javax {
                      * @param name name of the type
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * A type of event that is sent when a line opens, reserving system
                      * resources for itself.
@@ -22,7 +22,7 @@ declare namespace javax {
                      * @see Line#open
                      */
                     // @ts-ignore
-                    readonly OPEN: javax.sound.sampled.LineEvent.Type
+                    public static readonly OPEN: javax.sound.sampled.LineEvent.Type
                     /**
                      * A type of event that is sent when a line closes, freeing the system
                      * resources it had obtained when it was opened.
@@ -30,7 +30,7 @@ declare namespace javax {
                      * @see Line#close
                      */
                     // @ts-ignore
-                    readonly CLOSE: javax.sound.sampled.LineEvent.Type
+                    public static readonly CLOSE: javax.sound.sampled.LineEvent.Type
                     /**
                      * A type of event that is sent when a line begins to engage in active
                      * input or output of audio data in response to a
@@ -39,7 +39,7 @@ declare namespace javax {
                      * @see DataLine#start
                      */
                     // @ts-ignore
-                    readonly START: javax.sound.sampled.LineEvent.Type
+                    public static readonly START: javax.sound.sampled.LineEvent.Type
                     /**
                      * A type of event that is sent when a line ceases active input or output
                      * of audio data in response to a {@link DataLine#stop stop} request,
@@ -48,7 +48,7 @@ declare namespace javax {
                      * @see DataLine#stop
                      */
                     // @ts-ignore
-                    readonly STOP: javax.sound.sampled.LineEvent.Type
+                    public static readonly STOP: javax.sound.sampled.LineEvent.Type
                     /**
                      * Indicates whether the specified object is equal to this event type,
                      * returning <code>true</code> if the objects are identical.
@@ -57,17 +57,17 @@ declare namespace javax {
                      *  <code>obj</code>; <code>false</code> otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashcode method.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns the type name as the string representation.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

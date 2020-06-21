@@ -18,13 +18,13 @@ declare namespace org {
                              * @return the position of the final matching delimiter, or {#code -1} if not found.
                              */
                             // @ts-ignore
-                            match(dataBuffer: org.springframework.core.io.buffer.DataBuffer): int
+                            match(dataBuffer: org.springframework.core.io.buffer.DataBuffer): number /*int*/
                             /**
                              * Return the delimiter used for this matcher.
                              * @return the delimiter
                              */
                             // @ts-ignore
-                            delimiter(): byte[]
+                            delimiter(): number /*byte*/[]
                             /**
                              * Resets the state of this matcher.
                              */

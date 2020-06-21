@@ -29,7 +29,7 @@ declare namespace org {
                          * @param conversionService a ConversionService to format values as Strings
                          */
                         // @ts-ignore
-                        contributeMethodArgument(parameter: MethodParameter, value: any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String, java.lang.Object>, conversionService: ConversionService): void
+                        contributeMethodArgument(parameter: MethodParameter, value: java.lang.Object | any, builder: org.springframework.web.util.UriComponentsBuilder, uriVariables: java.util.Map<java.lang.String | string, java.lang.Object | any>, conversionService: ConversionService): void
                     }
                 }
             }

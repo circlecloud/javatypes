@@ -99,14 +99,14 @@ declare namespace java {
                  * @return the current <code>Cursor</code> location in Component's coords.
                  */
                 // @ts-ignore
-                getLocation(): java.awt.Point
+                public getLocation(): java.awt.Point
                 /**
                  * This method returns the current DataFlavors.
                  * <P>
                  * @return current DataFlavors
                  */
                 // @ts-ignore
-                getCurrentDataFlavors(): java.awt.datatransfer.DataFlavor[]
+                public getCurrentDataFlavors(): java.awt.datatransfer.DataFlavor[]
                 /**
                  * This method returns the currently available
                  * <code>DataFlavor</code>s as a <code>java.util.List</code>.
@@ -114,7 +114,7 @@ declare namespace java {
                  * @return the currently available DataFlavors as a java.util.List
                  */
                 // @ts-ignore
-                getCurrentDataFlavorsAsList(): java.util.List<java.awt.datatransfer.DataFlavor>
+                public getCurrentDataFlavorsAsList(): Array<java.awt.datatransfer.DataFlavor>
                 /**
                  * This method returns a <code>boolean</code> indicating if the
                  * specified <code>DataFlavor</code> is available
@@ -125,19 +125,19 @@ declare namespace java {
                  * @return if the DataFlavor specified is available from the source
                  */
                 // @ts-ignore
-                isDataFlavorSupported(df: java.awt.datatransfer.DataFlavor): boolean
+                public isDataFlavorSupported(df: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * This method returns the source drop actions.
                  * @return the source drop actions.
                  */
                 // @ts-ignore
-                getSourceActions(): int
+                public getSourceActions(): number /*int*/
                 /**
                  * This method returns the user drop action.
                  * @return the user drop actions.
                  */
                 // @ts-ignore
-                getDropAction(): int
+                public getDropAction(): number /*int*/
                 /**
                  * This method returns the <code>Transferable</code> object
                  * associated with the drop.
@@ -145,19 +145,19 @@ declare namespace java {
                  * @return the <code>Transferable</code> associated with the drop
                  */
                 // @ts-ignore
-                getTransferable(): java.awt.datatransfer.Transferable
+                public getTransferable(): java.awt.datatransfer.Transferable
                 /**
                  * accept the drop, using the specified action.
                  * <P>
                  * @param dropAction the specified action
                  */
                 // @ts-ignore
-                acceptDrop(dropAction: number /*int*/): void
+                public acceptDrop(dropAction: number /*int*/): void
                 /**
                  * reject the Drop.
                  */
                 // @ts-ignore
-                rejectDrop(): void
+                public rejectDrop(): void
                 /**
                  * This method notifies the <code>DragSource</code>
                  * that the drop transfer(s) are completed.
@@ -165,7 +165,7 @@ declare namespace java {
                  * @param success a <code>boolean</code> indicating that the drop transfer(s) are completed.
                  */
                 // @ts-ignore
-                dropComplete(success: boolean): void
+                public dropComplete(success: boolean): void
                 /**
                  * This method returns an <code>int</code> indicating if
                  * the source is in the same JVM as the target.
@@ -173,7 +173,7 @@ declare namespace java {
                  * @return if the Source is in the same JVM
                  */
                 // @ts-ignore
-                isLocalTransfer(): boolean
+                public isLocalTransfer(): boolean
             }
         }
     }

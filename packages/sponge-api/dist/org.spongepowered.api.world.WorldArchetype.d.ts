@@ -44,7 +44,7 @@ declare namespace org {
                      * @return The seed
                      */
                     // @ts-ignore
-                    getSeed(): long
+                    getSeed(): number /*long*/
                     /**
                      * Gets if the seed will be randomized for each world generated.
                      * @return If the seed is randomized
@@ -68,7 +68,7 @@ declare namespace org {
                      * @return The modifiers
                      */
                     // @ts-ignore
-                    getGeneratorModifiers(): java.util.Collection<org.spongepowered.api.world.gen.WorldGeneratorModifier>
+                    getGeneratorModifiers(): Array<org.spongepowered.api.world.gen.WorldGeneratorModifier>
                     /**
                      * Gets whether map features are enabled.
                      * <p>Examples include Villages, Temples, etc.</p>

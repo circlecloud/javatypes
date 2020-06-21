@@ -23,11 +23,11 @@ declare namespace org {
                          * @see java.lang.String#String(byte[],String)
                          */
                         // @ts-ignore
-                        constructor(charsetName: string)
+                        constructor(charsetName: java.lang.String | string)
                         // @ts-ignore
-                        setAsText(text: string): void
+                        public setAsText(text: java.lang.String | string): void
                         // @ts-ignore
-                        setValue(value: any): void
+                        public setValue(value: java.lang.Object | any): void
                     }
                 }
             }

@@ -23,7 +23,7 @@ declare namespace org {
                                  * @see Keys#HEALTH
                                  */
                                 // @ts-ignore
-                                health(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                health(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the current maximum health.
                                  * <p>The maximum health set here may affect the attribute increasing
@@ -33,7 +33,7 @@ declare namespace org {
                                  * @see Keys#MAX_HEALTH
                                  */
                                 // @ts-ignore
-                                maxHealth(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                maxHealth(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                             }
                         }
                     }

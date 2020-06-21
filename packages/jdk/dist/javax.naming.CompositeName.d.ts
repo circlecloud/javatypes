@@ -160,7 +160,7 @@ declare namespace javax {
              *                elements.
              */
             // @ts-ignore
-            constructor(comps: java.util.Enumeration<java.lang.String>)
+            constructor(comps: java.util.Enumeration<java.lang.String | string>)
             /**
              * Constructs a new composite name instance by parsing the string n
              * using the composite name syntax (left-to-right, slash separated).
@@ -170,7 +170,7 @@ declare namespace javax {
              * @exception InvalidNameException If n has invalid composite name syntax.
              */
             // @ts-ignore
-            constructor(n: string)
+            constructor(n: java.lang.String | string)
             /**
              * Constructs a new empty composite name. Such a name returns true
              * when <code>isEmpty()</code> is invoked on it.
@@ -191,7 +191,7 @@ declare namespace javax {
              * @return A non-null string representation of this composite name.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Determines whether two composite names are equal.
              * If obj is null or not a composite name, false is returned.
@@ -205,7 +205,7 @@ declare namespace javax {
              * @see #hashCode
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Computes the hash code of this composite name.
              * The hash code is the sum of the hash codes of individual components
@@ -214,7 +214,7 @@ declare namespace javax {
              * @see #equals
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this CompositeName with the specified Object for order.
              * Returns a
@@ -242,7 +242,7 @@ declare namespace javax {
              * @exception ClassCastException if obj is not a CompositeName.
              */
             // @ts-ignore
-            compareTo(obj: any): int
+            public compareTo(obj: java.lang.Object | any): number /*int*/
             /**
              * Generates a copy of this composite name.
              * Changes to the components of this composite name won't
@@ -250,20 +250,20 @@ declare namespace javax {
              * @return A non-null copy of this composite name.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Retrieves the number of components in this composite name.
              * @return The nonnegative number of components in this composite name.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Determines whether this composite name is empty. A composite name
              * is empty if it has zero components.
              * @return true if this composite name is empty, false otherwise.
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Retrieves the components of this composite name as an enumeration
              * of strings.
@@ -274,7 +274,7 @@ declare namespace javax {
              *          class String.
              */
             // @ts-ignore
-            getAll(): java.util.Enumeration<java.lang.String>
+            public getAll(): java.util.Enumeration<java.lang.String | string>
             /**
              * Retrieves a component of this composite name.
              * @param posn    The 0-based index of the component to retrieve.
@@ -284,7 +284,7 @@ declare namespace javax {
              *          specified range.
              */
             // @ts-ignore
-            get(posn: number /*int*/): java.lang.String
+            public get(posn: number /*int*/): string
             /**
              * Creates a composite name whose components consist of a prefix of the
              * components in this composite name. Subsequent changes to
@@ -297,7 +297,7 @@ declare namespace javax {
              *          If posn is outside the specified range.
              */
             // @ts-ignore
-            getPrefix(posn: number /*int*/): javax.naming.Name
+            public getPrefix(posn: number /*int*/): javax.naming.Name
             /**
              * Creates a composite name whose components consist of a suffix of the
              * components in this composite name. Subsequent changes to
@@ -311,7 +311,7 @@ declare namespace javax {
              *          If posn is outside the specified range.
              */
             // @ts-ignore
-            getSuffix(posn: number /*int*/): javax.naming.Name
+            public getSuffix(posn: number /*int*/): javax.naming.Name
             /**
              * Determines whether a composite name is a prefix of this composite name.
              * A composite name 'n' is a prefix if it is equal to
@@ -322,7 +322,7 @@ declare namespace javax {
              *          is a prefix of this composite name, false otherwise.
              */
             // @ts-ignore
-            startsWith(n: javax.naming.Name): boolean
+            public startsWith(n: javax.naming.Name): boolean
             /**
              * Determines whether a composite name is a suffix of this composite name.
              * A composite name 'n' is a suffix if it it is equal to
@@ -334,7 +334,7 @@ declare namespace javax {
              *          is a suffix of this composite name, false otherwise.
              */
             // @ts-ignore
-            endsWith(n: javax.naming.Name): boolean
+            public endsWith(n: javax.naming.Name): boolean
             /**
              * Adds the components of a composite name -- in order -- to the end of
              * this composite name.
@@ -343,7 +343,7 @@ declare namespace javax {
              * @exception InvalidNameException If suffix is not a composite name.
              */
             // @ts-ignore
-            addAll(suffix: javax.naming.Name): javax.naming.Name
+            public addAll(suffix: javax.naming.Name): javax.naming.Name
             /**
              * Adds the components of a composite name -- in order -- at a specified
              * position within this composite name.
@@ -359,7 +359,7 @@ declare namespace javax {
              *          If posn is outside the specified range.
              */
             // @ts-ignore
-            addAll(posn: number /*int*/, n: javax.naming.Name): javax.naming.Name
+            public addAll(posn: number /*int*/, n: javax.naming.Name): javax.naming.Name
             /**
              * Adds a single component to the end of this composite name.
              * @param comp     The non-null component to add.
@@ -368,7 +368,7 @@ declare namespace javax {
              *                          would violate the name's syntax.
              */
             // @ts-ignore
-            add(comp: string): javax.naming.Name
+            public add(comp: java.lang.String | string): javax.naming.Name
             /**
              * Adds a single component at a specified position within this
              * composite name.
@@ -385,7 +385,7 @@ declare namespace javax {
              *                          would violate the name's syntax.
              */
             // @ts-ignore
-            add(posn: number /*int*/, comp: string): javax.naming.Name
+            public add(posn: number /*int*/, comp: java.lang.String | string): javax.naming.Name
             /**
              * Deletes a component from this composite name.
              * The component of this composite name at position 'posn' is removed,
@@ -401,7 +401,7 @@ declare namespace javax {
              *                          would violate the name's syntax.
              */
             // @ts-ignore
-            remove(posn: number /*int*/): java.lang.Object
+            public remove(posn: number /*int*/): any
         }
     }
 }

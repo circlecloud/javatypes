@@ -29,7 +29,7 @@ declare namespace org {
              * @see org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor
              */
             // @ts-ignore
-            class Repository implements java.lang.annotation.Annotation {
+            abstract class Repository implements java.lang.annotation.Annotation {
             }
         }
     }

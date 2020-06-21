@@ -37,7 +37,7 @@ declare namespace org {
                          * @param parameters The parameters to apply to the template
                          */
                         // @ts-ignore
-                        sendMessage(type: org.spongepowered.api.text.chat.ChatType, template: org.spongepowered.api.text.TextTemplate, parameters: java.util.Map<java.lang.String, org.spongepowered.api.text.TextElement>): void
+                        sendMessage(type: org.spongepowered.api.text.chat.ChatType, template: org.spongepowered.api.text.TextTemplate, parameters: java.util.Map<java.lang.String | string, org.spongepowered.api.text.TextElement>): void
                         /**
                          * Sends the message(s) with the specified {@link ChatType} to this receiver.
                          * <p>If text formatting is not supported in the implementation

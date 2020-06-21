@@ -79,13 +79,13 @@ declare namespace javax {
                  * @return an array of MenuElement objects representing the path value
                  */
                 // @ts-ignore
-                getPath(): javax.swing.MenuElement[]
+                public getPath(): javax.swing.MenuElement[]
                 /**
                  * Returns the current menu selection manager.
                  * @return a MenuSelectionManager object
                  */
                 // @ts-ignore
-                getMenuSelectionManager(): javax.swing.MenuSelectionManager
+                public getMenuSelectionManager(): javax.swing.MenuSelectionManager
             }
         }
     }

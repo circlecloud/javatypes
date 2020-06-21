@@ -19,7 +19,7 @@ declare namespace org {
                      * @param method the target method to call
                      */
                     // @ts-ignore
-                    constructor(target: any, method: java.lang.reflect.Method)
+                    constructor(target: java.lang.Object | any, method: java.lang.reflect.Method)
                     /**
                      * Create a {@code ScheduledMethodRunnable} for the given target instance,
                      * calling the specified method by name.
@@ -28,21 +28,21 @@ declare namespace org {
                      * @throws NoSuchMethodException if the specified method does not exist
                      */
                     // @ts-ignore
-                    constructor(target: any, methodName: string)
+                    constructor(target: java.lang.Object | any, methodName: java.lang.String | string)
                     /**
                      * Return the target instance to call the method on.
                      */
                     // @ts-ignore
-                    getTarget(): java.lang.Object
+                    public getTarget(): any
                     /**
                      * Return the target method to call.
                      */
                     // @ts-ignore
-                    getMethod(): java.lang.reflect.Method
+                    public getMethod(): java.lang.reflect.Method
                     // @ts-ignore
-                    run(): void
+                    public run(): void
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

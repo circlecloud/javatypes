@@ -10,7 +10,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class ExemptionMechanismSpi extends java.lang.Object {
+        abstract class ExemptionMechanismSpi extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -25,7 +25,7 @@ declare namespace javax {
              * @return the required output buffer size (in bytes)
              */
             // @ts-ignore
-            abstract engineGetOutputSize(inputLen: number /*int*/): int
+            abstract engineGetOutputSize(inputLen: number /*int*/): number /*int*/
             /**
              * Initializes this exemption mechanism with a key.
              * <p>If this exemption mechanism requires any algorithm parameters
@@ -89,7 +89,7 @@ declare namespace javax {
              *  process of generating.
              */
             // @ts-ignore
-            abstract engineGenExemptionBlob(): byte[]
+            abstract engineGenExemptionBlob(): number /*byte*/[]
             /**
              * Generates the exemption mechanism key blob, and stores the result in
              * the <code>output</code> buffer, starting at <code>outputOffset</code>
@@ -109,7 +109,7 @@ declare namespace javax {
              *  process of generating.
              */
             // @ts-ignore
-            abstract engineGenExemptionBlob(output: number /*byte*/[], outputOffset: number /*int*/): int
+            abstract engineGenExemptionBlob(output: number /*byte*/[], outputOffset: number /*int*/): number /*int*/
         }
     }
 }

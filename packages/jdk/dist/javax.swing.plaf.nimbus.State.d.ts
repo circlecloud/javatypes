@@ -38,7 +38,7 @@ declare namespace javax {
                  * </code></pre>
                  */
                 // @ts-ignore
-                class State<T extends javax.swing.JComponent> extends java.lang.Object {
+                abstract class State<T extends javax.swing.JComponent> extends java.lang.Object {
                     /**
                      * <p>Create a new custom State. Specify the name for the state. The name should
                      * be unique within the states set for any one particular component.
@@ -53,9 +53,9 @@ declare namespace javax {
                      *         with the first letter capitalized.
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * <p>Gets whether the specified JComponent is in the custom state represented
                      * by this class. <em>This is an extremely performance sensitive loop.</em>
@@ -70,7 +70,7 @@ declare namespace javax {
                      *          this <code>State</code> instance
                      */
                     // @ts-ignore
-                    abstract isInState(c: T extends javax.swing.JComponent): boolean
+                    abstract isInState(c: T): boolean
                 }
             }
         }

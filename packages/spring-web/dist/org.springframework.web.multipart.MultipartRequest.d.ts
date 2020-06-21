@@ -19,7 +19,7 @@ declare namespace org {
                      * @return the names of the files
                      */
                     // @ts-ignore
-                    getFileNames(): java.util.Iterator<java.lang.String>
+                    getFileNames(): java.util.Iterator<java.lang.String | string>
                     /**
                      * Return the contents plus description of an uploaded file in this request,
                      * or {@code null} if it does not exist.
@@ -27,7 +27,7 @@ declare namespace org {
                      * @return the uploaded content in the form of a {#link MultipartFile} object
                      */
                     // @ts-ignore
-                    getFile(name: string): org.springframework.web.multipart.MultipartFile
+                    getFile(name: java.lang.String | string): org.springframework.web.multipart.MultipartFile
                     /**
                      * Return the contents plus description of uploaded files in this request,
                      * or an empty list if it does not exist.
@@ -36,14 +36,14 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    getFiles(name: string): java.util.List<org.springframework.web.multipart.MultipartFile>
+                    getFiles(name: java.lang.String | string): Array<org.springframework.web.multipart.MultipartFile>
                     /**
                      * Return a {@link java.util.Map} of the multipart files contained in this request.
                      * @return a map containing the parameter names as keys, and the
                      *  {#link MultipartFile} objects as values
                      */
                     // @ts-ignore
-                    getFileMap(): java.util.Map<java.lang.String, org.springframework.web.multipart.MultipartFile>
+                    getFileMap(): java.util.Map<java.lang.String | string, org.springframework.web.multipart.MultipartFile>
                     /**
                      * Return a {@link MultiValueMap} of the multipart files contained in this request.
                      * @return a map containing the parameter names as keys, and a list of
@@ -51,7 +51,7 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    getMultiFileMap(): <any>
+                    getMultiFileMap(): object
                     /**
                      * Determine the content type of the specified request part.
                      * @param paramOrFileName the name of the part
@@ -59,7 +59,7 @@ declare namespace org {
                      * @since 3.1
                      */
                     // @ts-ignore
-                    getMultipartContentType(paramOrFileName: string): java.lang.String
+                    getMultipartContentType(paramOrFileName: java.lang.String | string): string
                 }
             }
         }

@@ -391,87 +391,87 @@ declare namespace java {
                  * The first number in the range of ids used for mouse events.
                  */
                 // @ts-ignore
-                readonly MOUSE_FIRST: number /*int*/
+                public static readonly MOUSE_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for mouse events.
                  */
                 // @ts-ignore
-                readonly MOUSE_LAST: number /*int*/
+                public static readonly MOUSE_LAST: number /*int*/
                 /**
                  * The "mouse clicked" event. This <code>MouseEvent</code>
                  * occurs when a mouse button is pressed and released.
                  */
                 // @ts-ignore
-                readonly MOUSE_CLICKED: number /*int*/
+                public static readonly MOUSE_CLICKED: number /*int*/
                 /**
                  * The "mouse pressed" event. This <code>MouseEvent</code>
                  * occurs when a mouse button is pushed down.
                  */
                 // @ts-ignore
-                readonly MOUSE_PRESSED: number /*int*/
+                public static readonly MOUSE_PRESSED: number /*int*/
                 /**
                  * The "mouse released" event. This <code>MouseEvent</code>
                  * occurs when a mouse button is let up.
                  */
                 // @ts-ignore
-                readonly MOUSE_RELEASED: number /*int*/
+                public static readonly MOUSE_RELEASED: number /*int*/
                 /**
                  * The "mouse moved" event. This <code>MouseEvent</code>
                  * occurs when the mouse position changes.
                  */
                 // @ts-ignore
-                readonly MOUSE_MOVED: number /*int*/
+                public static readonly MOUSE_MOVED: number /*int*/
                 /**
                  * The "mouse entered" event. This <code>MouseEvent</code>
                  * occurs when the mouse cursor enters the unobscured part of component's
                  * geometry.
                  */
                 // @ts-ignore
-                readonly MOUSE_ENTERED: number /*int*/
+                public static readonly MOUSE_ENTERED: number /*int*/
                 /**
                  * The "mouse exited" event. This <code>MouseEvent</code>
                  * occurs when the mouse cursor exits the unobscured part of component's
                  * geometry.
                  */
                 // @ts-ignore
-                readonly MOUSE_EXITED: number /*int*/
+                public static readonly MOUSE_EXITED: number /*int*/
                 /**
                  * The "mouse dragged" event. This <code>MouseEvent</code>
                  * occurs when the mouse position changes while a mouse button is pressed.
                  */
                 // @ts-ignore
-                readonly MOUSE_DRAGGED: number /*int*/
+                public static readonly MOUSE_DRAGGED: number /*int*/
                 /**
                  * The "mouse wheel" event.  This is the only <code>MouseWheelEvent</code>.
                  * It occurs when a mouse equipped with a wheel has its wheel rotated.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly MOUSE_WHEEL: number /*int*/
+                public static readonly MOUSE_WHEEL: number /*int*/
                 /**
                  * Indicates no mouse buttons; used by {@link #getButton}.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly NOBUTTON: number /*int*/
+                public static readonly NOBUTTON: number /*int*/
                 /**
                  * Indicates mouse button #1; used by {@link #getButton}.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly BUTTON1: number /*int*/
+                public static readonly BUTTON1: number /*int*/
                 /**
                  * Indicates mouse button #2; used by {@link #getButton}.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly BUTTON2: number /*int*/
+                public static readonly BUTTON2: number /*int*/
                 /**
                  * Indicates mouse button #3; used by {@link #getButton}.
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly BUTTON3: number /*int*/
+                public static readonly BUTTON3: number /*int*/
                 /**
                  * Returns the absolute x, y position of the event.
                  * In a virtual device multi-screen environment in which the
@@ -485,7 +485,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getLocationOnScreen(): java.awt.Point
+                public getLocationOnScreen(): java.awt.Point
                 /**
                  * Returns the absolute horizontal x position of the event.
                  * In a virtual device multi-screen environment in which the
@@ -498,7 +498,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getXOnScreen(): int
+                public getXOnScreen(): number /*int*/
                 /**
                  * Returns the absolute vertical y position of the event.
                  * In a virtual device multi-screen environment in which the
@@ -511,12 +511,12 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getYOnScreen(): int
+                public getYOnScreen(): number /*int*/
                 /**
                  * {@inheritDoc}
                  */
                 // @ts-ignore
-                getModifiersEx(): int
+                public getModifiersEx(): number /*int*/
                 /**
                  * Returns the horizontal x position of the event relative to the
                  * source component.
@@ -524,7 +524,7 @@ declare namespace java {
                  *             the component
                  */
                 // @ts-ignore
-                getX(): int
+                public getX(): number /*int*/
                 /**
                  * Returns the vertical y position of the event relative to the
                  * source component.
@@ -532,14 +532,14 @@ declare namespace java {
                  *             the component
                  */
                 // @ts-ignore
-                getY(): int
+                public getY(): number /*int*/
                 /**
                  * Returns the x,y position of the event relative to the source component.
                  * @return a <code>Point</code> object containing the x and y coordinates
                  *          relative to the source component
                  */
                 // @ts-ignore
-                getPoint(): java.awt.Point
+                public getPoint(): java.awt.Point
                 /**
                  * Translates the event's coordinates to a new position
                  * by adding specified <code>x</code> (horizontal) and <code>y</code>
@@ -550,13 +550,13 @@ declare namespace java {
                  *                 coordinate position
                  */
                 // @ts-ignore
-                translatePoint(x: number /*int*/, y: number /*int*/): void
+                public translatePoint(x: number /*int*/, y: number /*int*/): void
                 /**
                  * Returns the number of mouse clicks associated with this event.
                  * @return integer value for the number of clicks
                  */
                 // @ts-ignore
-                getClickCount(): int
+                public getClickCount(): number /*int*/
                 /**
                  * Returns which, if any, of the mouse buttons has changed state.
                  * The returned value is ranged
@@ -609,7 +609,7 @@ declare namespace java {
                  * @see InputEvent#getMaskForButton(int)
                  */
                 // @ts-ignore
-                getButton(): int
+                public getButton(): number /*int*/
                 /**
                  * Returns whether or not this mouse event is the popup menu
                  * trigger event for the platform.
@@ -622,7 +622,7 @@ declare namespace java {
                  *          for this platform
                  */
                 // @ts-ignore
-                isPopupTrigger(): boolean
+                public isPopupTrigger(): boolean
                 /**
                  * Returns a <code>String</code> instance describing the modifier keys and
                  * mouse buttons that were down during the event, such as "Shift",
@@ -649,14 +649,14 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getMouseModifiersText(modifiers: number /*int*/): java.lang.String
+                public static getMouseModifiersText(modifiers: number /*int*/): string
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

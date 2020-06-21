@@ -76,7 +76,7 @@ declare namespace javax {
              *  <code>DataBuffer.TYPE_INT</code>.
              */
             // @ts-ignore
-            createPacked(colorSpace: java.awt.color.ColorSpace, redMask: number /*int*/, greenMask: number /*int*/, blueMask: number /*int*/, alphaMask: number /*int*/, transferType: number /*int*/, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
+            public static createPacked(colorSpace: java.awt.color.ColorSpace, redMask: number /*int*/, greenMask: number /*int*/, blueMask: number /*int*/, alphaMask: number /*int*/, transferType: number /*int*/, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
             /**
              * Returns a specifier for an interleaved image format that will
              * use a <code>ComponentColorModel</code> and a
@@ -104,7 +104,7 @@ declare namespace javax {
              *  <code>true</code>.
              */
             // @ts-ignore
-            createInterleaved(colorSpace: java.awt.color.ColorSpace, bandOffsets: number /*int*/[], dataType: number /*int*/, hasAlpha: boolean, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
+            public static createInterleaved(colorSpace: java.awt.color.ColorSpace, bandOffsets: number /*int*/[], dataType: number /*int*/, hasAlpha: boolean, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
             /**
              * Returns a specifier for a banded image format that will use a
              * <code>ComponentColorModel</code> and a
@@ -138,7 +138,7 @@ declare namespace javax {
              *  not one of the legal <code>DataBuffer.TYPE_*</code> constants.
              */
             // @ts-ignore
-            createBanded(colorSpace: java.awt.color.ColorSpace, bankIndices: number /*int*/[], bandOffsets: number /*int*/[], dataType: number /*int*/, hasAlpha: boolean, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
+            public static createBanded(colorSpace: java.awt.color.ColorSpace, bankIndices: number /*int*/[], bandOffsets: number /*int*/[], dataType: number /*int*/, hasAlpha: boolean, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
             /**
              * Returns a specifier for a grayscale image format that will pack
              * pixels of the given bit depth into array elements of
@@ -160,7 +160,7 @@ declare namespace javax {
              *  larger than the bit size of the given <code>dataType</code>.
              */
             // @ts-ignore
-            createGrayscale(bits: number /*int*/, dataType: number /*int*/, isSigned: boolean): javax.imageio.ImageTypeSpecifier
+            public static createGrayscale(bits: number /*int*/, dataType: number /*int*/, isSigned: boolean): javax.imageio.ImageTypeSpecifier
             /**
              * Returns a specifier for a grayscale plus alpha image format
              * that will pack pixels of the given bit depth into array
@@ -184,7 +184,7 @@ declare namespace javax {
              *  larger than the bit size of the given <code>dataType</code>.
              */
             // @ts-ignore
-            createGrayscale(bits: number /*int*/, dataType: number /*int*/, isSigned: boolean, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
+            public static createGrayscale(bits: number /*int*/, dataType: number /*int*/, isSigned: boolean, isAlphaPremultiplied: boolean): javax.imageio.ImageTypeSpecifier
             /**
              * Returns a specifier for an indexed-color image format that will pack
              * index values of the given bit depth into array elements of
@@ -223,7 +223,7 @@ declare namespace javax {
              *  larger than the bit size of the given <code>dataType</code>.
              */
             // @ts-ignore
-            createIndexed(redLUT: number /*byte*/[], greenLUT: number /*byte*/[], blueLUT: number /*byte*/[], alphaLUT: number /*byte*/[], bits: number /*int*/, dataType: number /*int*/): javax.imageio.ImageTypeSpecifier
+            public static createIndexed(redLUT: number /*byte*/[], greenLUT: number /*byte*/[], blueLUT: number /*byte*/[], alphaLUT: number /*byte*/[], bits: number /*int*/, dataType: number /*int*/): javax.imageio.ImageTypeSpecifier
             /**
              * Returns an <code>ImageTypeSpecifier</code> that encodes
              * one of the standard <code>BufferedImage</code> types
@@ -251,7 +251,7 @@ declare namespace javax {
              * @see java.awt.image.BufferedImage#TYPE_BYTE_INDEXED
              */
             // @ts-ignore
-            createFromBufferedImageType(bufferedImageType: number /*int*/): javax.imageio.ImageTypeSpecifier
+            public static createFromBufferedImageType(bufferedImageType: number /*int*/): javax.imageio.ImageTypeSpecifier
             /**
              * Returns an <code>ImageTypeSpecifier</code> that encodes the
              * layout of a <code>RenderedImage</code> (which may be a
@@ -263,7 +263,7 @@ declare namespace javax {
              *  <code>null</code>.
              */
             // @ts-ignore
-            createFromRenderedImage(image: java.awt.image.RenderedImage): javax.imageio.ImageTypeSpecifier
+            public static createFromRenderedImage(image: java.awt.image.RenderedImage): javax.imageio.ImageTypeSpecifier
             /**
              * Returns an int containing one of the enumerated constant values
              * describing image formats from <code>BufferedImage</code>.
@@ -286,7 +286,7 @@ declare namespace javax {
              * @see java.awt.image.BufferedImage#TYPE_BYTE_INDEXED
              */
             // @ts-ignore
-            getBufferedImageType(): int
+            public getBufferedImageType(): number /*int*/
             /**
              * Return the number of color components
              * specified by this object.  This is the same value as returned by
@@ -294,7 +294,7 @@ declare namespace javax {
              * @return the number of components in the image.
              */
             // @ts-ignore
-            getNumComponents(): int
+            public getNumComponents(): number /*int*/
             /**
              * Return the number of bands
              * specified by this object.  This is the same value as returned by
@@ -302,7 +302,7 @@ declare namespace javax {
              * @return the number of bands in the image.
              */
             // @ts-ignore
-            getNumBands(): int
+            public getNumBands(): number /*int*/
             /**
              * Return the number of bits used to represent samples of the given band.
              * @param band the index of the band to be queried, as an
@@ -312,7 +312,7 @@ declare namespace javax {
              *  negative or greater than the largest band index.
              */
             // @ts-ignore
-            getBitsPerBand(band: number /*int*/): int
+            public getBitsPerBand(band: number /*int*/): number /*int*/
             /**
              * Returns a <code>SampleModel</code> based on the settings
              * encapsulated within this object.  The width and height of the
@@ -320,7 +320,7 @@ declare namespace javax {
              * @return a <code>SampleModel</code> with arbitrary dimensions.
              */
             // @ts-ignore
-            getSampleModel(): java.awt.image.SampleModel
+            public getSampleModel(): java.awt.image.SampleModel
             /**
              * Returns a <code>SampleModel</code> based on the settings
              * encapsulated within this object.  The width and height of the
@@ -336,13 +336,13 @@ declare namespace javax {
              *  <code>Integer.MAX_VALUE</code>
              */
             // @ts-ignore
-            getSampleModel(width: number /*int*/, height: number /*int*/): java.awt.image.SampleModel
+            public getSampleModel(width: number /*int*/, height: number /*int*/): java.awt.image.SampleModel
             /**
              * Returns the <code>ColorModel</code> specified by this object.
              * @return a <code>ColorModel</code>.
              */
             // @ts-ignore
-            getColorModel(): java.awt.image.ColorModel
+            public getColorModel(): java.awt.image.ColorModel
             /**
              * Creates a <code>BufferedImage</code> with a given width and
              * height according to the specification embodied in this object.
@@ -360,7 +360,7 @@ declare namespace javax {
              *  <code>Integer.MAX_VALUE</code>.
              */
             // @ts-ignore
-            createBufferedImage(width: number /*int*/, height: number /*int*/): java.awt.image.BufferedImage
+            public createBufferedImage(width: number /*int*/, height: number /*int*/): java.awt.image.BufferedImage
             /**
              * Returns <code>true</code> if the given <code>Object</code> is
              * an <code>ImageTypeSpecifier</code> and has a
@@ -371,13 +371,13 @@ declare namespace javax {
              *  <code>ImageTypeSpecifier</code>.
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code for this ImageTypeSpecifier.
              * @return a hash code for this ImageTypeSpecifier
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

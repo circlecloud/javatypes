@@ -20,7 +20,7 @@ declare namespace java {
              * @param s   the detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs an {@code AccessControlException} with the
              * specified, detailed message, and the requested permission that caused
@@ -29,7 +29,7 @@ declare namespace java {
              * @param p   the permission that caused the exception.
              */
             // @ts-ignore
-            constructor(s: string, p: java.security.Permission)
+            constructor(s: java.lang.String | string, p: java.security.Permission)
             /**
              * Gets the Permission object associated with this exception, or
              * null if there was no corresponding Permission object.

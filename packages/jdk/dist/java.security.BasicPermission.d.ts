@@ -30,7 +30,7 @@ declare namespace java {
          * @author Roland Schemers
          */
         // @ts-ignore
-        class BasicPermission extends java.security.Permission implements java.io.Serializable {
+        abstract class BasicPermission extends java.security.Permission implements java.io.Serializable {
             /**
              * Creates a new BasicPermission with the specified name.
              * Name is the symbolic name of the permission, such as
@@ -41,7 +41,7 @@ declare namespace java {
              * @throws IllegalArgumentException if {#code name} is empty.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a new BasicPermission object with the specified name.
              * The name is the symbolic name of the BasicPermission, and the
@@ -52,7 +52,7 @@ declare namespace java {
              * @throws IllegalArgumentException if {#code name} is empty.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
             /**
              * Checks if the specified permission is "implied" by
              * this object.
@@ -69,7 +69,7 @@ declare namespace java {
              *  implied by this permission, false otherwise.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two BasicPermission objects for equality.
              * Checks that <i>obj</i>'s class is the same as this object's class
@@ -80,7 +80,7 @@ declare namespace java {
              *   and has the same name as this BasicPermission object, false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this object.
              * The hash code used is the hash code of the name, that is,
@@ -89,7 +89,7 @@ declare namespace java {
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the canonical string representation of the actions,
              * which currently is the empty string "", since there are no actions for
@@ -97,7 +97,7 @@ declare namespace java {
              * @return the empty string "".
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Returns a new PermissionCollection object for storing BasicPermission
              * objects.
@@ -109,7 +109,7 @@ declare namespace java {
              *  storing BasicPermissions.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

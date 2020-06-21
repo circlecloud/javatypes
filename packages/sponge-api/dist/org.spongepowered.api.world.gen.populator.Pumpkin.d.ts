@@ -42,7 +42,7 @@ declare namespace org {
                              * @return The probability of a patch spawning
                              */
                             // @ts-ignore
-                            getPumpkinChance(): double
+                            getPumpkinChance(): number /*double*/
                             /**
                              * Sets the probability of a pumpkin patch spawning within a chunk.
                              * @param p The new probability of a patch spawning

@@ -23,9 +23,9 @@ declare namespace org {
                      *  objects. Classes earlier in the list will be given a higher priority.
                      */
                     // @ts-ignore
-                    constructor(...instanceOrder: java.lang.Class[])
+                    constructor(...instanceOrder: java.lang.Class<any>[])
                     // @ts-ignore
-                    compare(o1: T, o2: T): int
+                    public compare(o1: T, o2: T): number /*int*/
                 }
             }
         }

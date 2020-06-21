@@ -21,7 +21,7 @@ declare namespace org {
                              * @see Keys#FIREWORK_FLIGHT_MODIFIER
                              */
                             // @ts-ignore
-                            flightModifier(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                            flightModifier(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                         }
                     }
                 }

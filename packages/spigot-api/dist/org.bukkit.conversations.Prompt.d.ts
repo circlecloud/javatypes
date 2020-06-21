@@ -14,7 +14,7 @@ declare namespace org {
                  * A convenience constant for indicating the end of a conversation.
                  */
                 // @ts-ignore
-                
+                readonly END_OF_CONVERSATION: org.bukkit.conversations.Prompt
                 /**
                  * Gets the text to display to the user when this prompt is first
                  * presented.
@@ -22,7 +22,7 @@ declare namespace org {
                  * @return The text to display.
                  */
                 // @ts-ignore
-                getPromptText(context: org.bukkit.conversations.ConversationContext): java.lang.String
+                getPromptText(context: org.bukkit.conversations.ConversationContext): string
                 /**
                  * Checks to see if this prompt implementation should wait for user input
                  * or immediately display the next prompt.
@@ -40,7 +40,7 @@ declare namespace org {
                  * @return The next Prompt in the prompt graph.
                  */
                 // @ts-ignore
-                acceptInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                acceptInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
             }
         }
     }

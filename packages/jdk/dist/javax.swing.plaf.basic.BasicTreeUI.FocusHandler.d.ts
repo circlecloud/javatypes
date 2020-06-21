@@ -15,13 +15,13 @@ declare namespace javax {
                          * lead row.
                          */
                         // @ts-ignore
-                        focusGained(e: java.awt.event.FocusEvent): void
+                        public focusGained(e: java.awt.event.FocusEvent): void
                         /**
                          * Invoked when focus is activated on the tree we're in, redraws the
                          * lead row.
                          */
                         // @ts-ignore
-                        focusLost(e: java.awt.event.FocusEvent): void
+                        public focusLost(e: java.awt.event.FocusEvent): void
                     }
                 }
             }

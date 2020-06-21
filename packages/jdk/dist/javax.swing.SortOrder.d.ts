@@ -7,10 +7,31 @@ declare namespace javax {
          */
         // @ts-ignore
         class SortOrder extends java.lang.Enum<javax.swing.SortOrder> {
+            /**
+             * Enumeration value indicating the items are sorted in increasing order.
+             * For example, the set <code>1, 4, 0</code> sorted in
+             * <code>ASCENDING</code> order is <code>0, 1, 4</code>.
+             */
+            // @ts-ignore
+            readonly ASCENDING: javax.swing.SortOrder
+            /**
+             * Enumeration value indicating the items are sorted in decreasing order.
+             * For example, the set <code>1, 4, 0</code> sorted in
+             * <code>DESCENDING</code> order is <code>4, 1, 0</code>.
+             */
+            // @ts-ignore
+            readonly DESCENDING: javax.swing.SortOrder
+            /**
+             * Enumeration value indicating the items are unordered.
+             * For example, the set <code>1, 4, 0</code> in
+             * <code>UNSORTED</code> order is <code>1, 4, 0</code>.
+             */
+            // @ts-ignore
+            readonly UNSORTED: javax.swing.SortOrder
             // @ts-ignore
             values(): javax.swing.SortOrder[]
             // @ts-ignore
-            valueOf(name: string): javax.swing.SortOrder
+            valueOf(name: java.lang.String | string): javax.swing.SortOrder
         }
     }
 }

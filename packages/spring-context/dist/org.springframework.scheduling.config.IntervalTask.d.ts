@@ -32,12 +32,12 @@ declare namespace org {
                      * Return how often in milliseconds the task should be executed.
                      */
                     // @ts-ignore
-                    getInterval(): long
+                    public getInterval(): number /*long*/
                     /**
                      * Return the initial delay before first execution of the task.
                      */
                     // @ts-ignore
-                    getInitialDelay(): long
+                    public getInitialDelay(): number /*long*/
                 }
             }
         }

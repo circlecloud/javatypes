@@ -20,7 +20,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Draws a bit of special highlighting on the progress bar.
                      * The core painting is deferred to the BasicProgressBar's
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    paintDeterminate(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paintDeterminate(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Draws a bit of special highlighting on the progress bar
                      * and bouncing box.
@@ -37,7 +37,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    paintIndeterminate(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paintIndeterminate(g: java.awt.Graphics, c: javax.swing.JComponent): void
                 }
             }
         }

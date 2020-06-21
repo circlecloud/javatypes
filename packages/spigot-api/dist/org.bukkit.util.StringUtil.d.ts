@@ -22,7 +22,7 @@ declare namespace org {
                  *      <b>Note: the collection may be modified before this is thrown</b>
                  */
                 // @ts-ignore
-                copyPartialMatches<T extends java.util.Collection<? super java.lang.String>>(token: string, originals: java.lang.Iterable<java.lang.String>, collection: T extends java.util.Collection<any super java.lang.String>): T
+                public static copyPartialMatches<T extends java.util.Collection>(token: java.lang.String | string, originals: java.lang.Iterable<java.lang.String | string>, collection: T): T
                 /**
                  * This method uses a region to check case-insensitive equality. This
                  * means the internal array does not need to be copied like a
@@ -35,7 +35,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if string is null
                  */
                 // @ts-ignore
-                startsWithIgnoreCase(string: string, prefix: string): boolean
+                public static startsWithIgnoreCase(string: java.lang.String | string, prefix: java.lang.String | string): boolean
             }
         }
     }

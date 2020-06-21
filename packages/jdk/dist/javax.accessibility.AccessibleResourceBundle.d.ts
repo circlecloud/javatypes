@@ -17,7 +17,7 @@ declare namespace javax {
              * localized display strings.
              */
             // @ts-ignore
-            getContents(): java.lang.Object[][]
+            public getContents(): any[][]
         }
     }
 }

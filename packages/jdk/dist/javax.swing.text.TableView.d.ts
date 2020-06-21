@@ -34,7 +34,7 @@ declare namespace javax {
              * @see View
              */
             // @ts-ignore
-            class TableView extends javax.swing.text.BoxView {
+            abstract class TableView extends javax.swing.text.BoxView {
                 /**
                  * Constructs a TableView for the given element.
                  * @param elem the element that this view is responsible for
@@ -65,7 +65,7 @@ declare namespace javax {
                  * grid so that rows and columns will be recalculated.
                  */
                 // @ts-ignore
-                replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
+                public replace(offset: number /*int*/, length: number /*int*/, views: javax.swing.text.View[]): void
                 /**
                  * Lays out the columns to fit within the given target span.
                  * Returns the results through {@code offsets} and {@code spans}.

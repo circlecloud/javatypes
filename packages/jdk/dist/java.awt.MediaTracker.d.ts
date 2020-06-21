@@ -140,14 +140,14 @@ declare namespace java {
              * @see java.awt.MediaTracker#statusID
              */
             // @ts-ignore
-            readonly LOADING: number /*int*/
+            public static readonly LOADING: number /*int*/
             /**
              * Flag indicating that the downloading of media was aborted.
              * @see java.awt.MediaTracker#statusAll
              * @see java.awt.MediaTracker#statusID
              */
             // @ts-ignore
-            readonly ABORTED: number /*int*/
+            public static readonly ABORTED: number /*int*/
             /**
              * Flag indicating that the downloading of media encountered
              * an error.
@@ -155,7 +155,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#statusID
              */
             // @ts-ignore
-            readonly ERRORED: number /*int*/
+            public static readonly ERRORED: number /*int*/
             /**
              * Flag indicating that the downloading of media was completed
              * successfully.
@@ -163,7 +163,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#statusID
              */
             // @ts-ignore
-            readonly COMPLETE: number /*int*/
+            public static readonly COMPLETE: number /*int*/
             /**
              * Adds an image to the list of images being tracked by this media
              * tracker. The image will eventually be rendered at its default
@@ -172,7 +172,7 @@ declare namespace java {
              * @param id      an identifier used to track this image
              */
             // @ts-ignore
-            addImage(image: java.awt.Image, id: number /*int*/): void
+            public addImage(image: java.awt.Image, id: number /*int*/): void
             /**
              * Adds a scaled image to the list of images being tracked
              * by this media tracker. The image will eventually be
@@ -183,7 +183,7 @@ declare namespace java {
              * @param h    the height at which the image is rendered
              */
             // @ts-ignore
-            addImage(image: java.awt.Image, id: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public addImage(image: java.awt.Image, id: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Checks to see if all images being tracked by this media tracker
              * have finished loading.
@@ -204,7 +204,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#isErrorID
              */
             // @ts-ignore
-            checkAll(): boolean
+            public checkAll(): boolean
             /**
              * Checks to see if all images being tracked by this media tracker
              * have finished loading.
@@ -228,7 +228,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#isErrorID(int)
              */
             // @ts-ignore
-            checkAll(load: boolean): boolean
+            public checkAll(load: boolean): boolean
             /**
              * Checks the error status of all of the images.
              * @return <code>true</code> if any of the images tracked
@@ -238,7 +238,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#getErrorsAny
              */
             // @ts-ignore
-            isErrorAny(): boolean
+            public isErrorAny(): boolean
             /**
              * Returns a list of all media that have encountered an error.
              * @return an array of media objects tracked by this
@@ -249,7 +249,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#getErrorsID
              */
             // @ts-ignore
-            getErrorsAny(): java.lang.Object[]
+            public getErrorsAny(): any[]
             /**
              * Starts loading all images tracked by this media tracker. This
              * method waits until all the images being tracked have finished
@@ -267,7 +267,7 @@ declare namespace java {
              *                                      interrupted this thread
              */
             // @ts-ignore
-            waitForAll(): void
+            public waitForAll(): void
             /**
              * Starts loading all images tracked by this media tracker. This
              * method waits until all the images being tracked have finished
@@ -290,7 +290,7 @@ declare namespace java {
              *                                      interrupted this thread.
              */
             // @ts-ignore
-            waitForAll(ms: number /*long*/): boolean
+            public waitForAll(ms: number /*long*/): boolean
             /**
              * Calculates and returns the bitwise inclusive <b>OR</b> of the
              * status of all media that are tracked by this media tracker.
@@ -314,7 +314,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#COMPLETE
              */
             // @ts-ignore
-            statusAll(load: boolean): int
+            public statusAll(load: boolean): number /*int*/
             /**
              * Checks to see if all images tracked by this media tracker that
              * are tagged with the specified identifier have finished loading.
@@ -336,7 +336,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#isErrorID(int)
              */
             // @ts-ignore
-            checkID(id: number /*int*/): boolean
+            public checkID(id: number /*int*/): boolean
             /**
              * Checks to see if all images tracked by this media tracker that
              * are tagged with the specified identifier have finished loading.
@@ -361,7 +361,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#isErrorID(int)
              */
             // @ts-ignore
-            checkID(id: number /*int*/, load: boolean): boolean
+            public checkID(id: number /*int*/, load: boolean): boolean
             /**
              * Checks the error status of all of the images tracked by this
              * media tracker with the specified identifier.
@@ -373,7 +373,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#getErrorsID
              */
             // @ts-ignore
-            isErrorID(id: number /*int*/): boolean
+            public isErrorID(id: number /*int*/): boolean
             /**
              * Returns a list of media with the specified ID that
              * have encountered an error.
@@ -387,7 +387,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#getErrorsAny
              */
             // @ts-ignore
-            getErrorsID(id: number /*int*/): java.lang.Object[]
+            public getErrorsID(id: number /*int*/): any[]
             /**
              * Starts loading all images tracked by this media tracker with the
              * specified identifier. This method waits until all the images with
@@ -405,7 +405,7 @@ declare namespace java {
              *                           interrupted this thread.
              */
             // @ts-ignore
-            waitForID(id: number /*int*/): void
+            public waitForID(id: number /*int*/): void
             /**
              * Starts loading all images tracked by this media tracker with the
              * specified identifier. This method waits until all the images with
@@ -429,7 +429,7 @@ declare namespace java {
              *                           interrupted this thread.
              */
             // @ts-ignore
-            waitForID(id: number /*int*/, ms: number /*long*/): boolean
+            public waitForID(id: number /*int*/, ms: number /*long*/): boolean
             /**
              * Calculates and returns the bitwise inclusive <b>OR</b> of the
              * status of all media with the specified identifier that are
@@ -456,7 +456,7 @@ declare namespace java {
              * @see java.awt.MediaTracker#COMPLETE
              */
             // @ts-ignore
-            statusID(id: number /*int*/, load: boolean): int
+            public statusID(id: number /*int*/, load: boolean): number /*int*/
             /**
              * Removes the specified image from this media tracker.
              * All instances of the specified image are removed,
@@ -467,7 +467,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeImage(image: java.awt.Image): void
+            public removeImage(image: java.awt.Image): void
             /**
              * Removes the specified image from the specified tracking
              * ID of this media tracker.
@@ -480,7 +480,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeImage(image: java.awt.Image, id: number /*int*/): void
+            public removeImage(image: java.awt.Image, id: number /*int*/): void
             /**
              * Removes the specified image with the specified
              * width, height, and ID from this media tracker.
@@ -494,7 +494,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeImage(image: java.awt.Image, id: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public removeImage(image: java.awt.Image, id: number /*int*/, width: number /*int*/, height: number /*int*/): void
         }
     }
 }

@@ -9,7 +9,7 @@ declare namespace javax {
                  * @see XmlElementDecl
                  */
                 // @ts-ignore
-                class XmlRegistry implements java.lang.annotation.Annotation {
+                abstract class XmlRegistry implements java.lang.annotation.Annotation {
                 }
             }
         }

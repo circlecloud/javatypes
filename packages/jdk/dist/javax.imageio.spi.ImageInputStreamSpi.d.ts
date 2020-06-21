@@ -21,7 +21,7 @@ declare namespace javax {
              * @see javax.imageio.stream.ImageInputStream
              */
             // @ts-ignore
-            class ImageInputStreamSpi extends javax.imageio.spi.IIOServiceProvider {
+            abstract class ImageInputStreamSpi extends javax.imageio.spi.IIOServiceProvider {
                 /**
                  * Constructs a blank <code>ImageInputStreamSpi</code>.  It is up
                  * to the subclass to initialize instance variables and/or
@@ -44,7 +44,7 @@ declare namespace javax {
                  *  is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string, inputClass: java.lang.Class<any>)
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string, inputClass: java.lang.Class<any>)
                 /**
                  * A <code>Class</code> object indicating the legal object type
                  * for use by the <code>createInputStreamInstance</code> method.
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @see #createInputStreamInstance(Object, boolean, File)
                  */
                 // @ts-ignore
-                getInputClass(): java.lang.Class<?>
+                public getInputClass(): java.lang.Class<any>
                 /**
                  * Returns <code>true</code> if the <code>ImageInputStream</code>
                  * implementation associated with this service provider can
@@ -76,7 +76,7 @@ declare namespace javax {
                  *  input streams created by this service provider.
                  */
                 // @ts-ignore
-                canUseCacheFile(): boolean
+                public canUseCacheFile(): boolean
                 /**
                  * Returns <code>true</code> if the <code>ImageInputStream</code>
                  * implementation associated with this service provider requires
@@ -88,7 +88,7 @@ declare namespace javax {
                  *  input streams created by this service provider.
                  */
                 // @ts-ignore
-                needsCacheFile(): boolean
+                public needsCacheFile(): boolean
                 /**
                  * Returns an instance of the <code>ImageInputStream</code>
                  * implementation associated with this service provider.  If the
@@ -115,7 +115,7 @@ declare namespace javax {
                  * @see #needsCacheFile
                  */
                 // @ts-ignore
-                abstract createInputStreamInstance(input: any, useCache: boolean, cacheDir: java.io.File): javax.imageio.stream.ImageInputStream
+                public abstract createInputStreamInstance(input: java.lang.Object | any, useCache: boolean, cacheDir: java.io.File): javax.imageio.stream.ImageInputStream
                 /**
                  * Returns an instance of the <code>ImageInputStream</code>
                  * implementation associated with this service provider.  A cache
@@ -131,7 +131,7 @@ declare namespace javax {
                  * @see #getInputClass()
                  */
                 // @ts-ignore
-                createInputStreamInstance(input: any): javax.imageio.stream.ImageInputStream
+                public createInputStreamInstance(input: java.lang.Object | any): javax.imageio.stream.ImageInputStream
             }
         }
     }

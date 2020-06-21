@@ -19,7 +19,7 @@ declare namespace org {
                      * @see RmiServiceExporter#getServiceInterface()
                      */
                     // @ts-ignore
-                    getTargetInterfaceName(): java.lang.String
+                    getTargetInterfaceName(): string
                     /**
                      * Apply the given invocation to the target object.
                      * <p>Called by
@@ -32,7 +32,7 @@ declare namespace org {
                      * @throws InvocationTargetException if the method invocation resulted in an exception
                      */
                     // @ts-ignore
-                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation): java.lang.Object
+                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation): any
                 }
             }
         }

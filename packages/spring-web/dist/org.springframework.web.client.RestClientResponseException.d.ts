@@ -18,33 +18,33 @@ declare namespace org {
                      * @param responseCharset the response body charset (may be {#code null})
                      */
                     // @ts-ignore
-                    constructor(message: string, statusCode: number /*int*/, statusText: string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
+                    constructor(message: java.lang.String | string, statusCode: number /*int*/, statusText: java.lang.String | string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
                     /**
                      * Return the raw HTTP status code value.
                      */
                     // @ts-ignore
-                    getRawStatusCode(): int
+                    public getRawStatusCode(): number /*int*/
                     /**
                      * Return the HTTP status text.
                      */
                     // @ts-ignore
-                    getStatusText(): java.lang.String
+                    public getStatusText(): string
                     /**
                      * Return the HTTP response headers.
                      */
                     // @ts-ignore
-                    getResponseHeaders(): org.springframework.http.HttpHeaders
+                    public getResponseHeaders(): org.springframework.http.HttpHeaders
                     /**
                      * Return the response body as a byte array.
                      */
                     // @ts-ignore
-                    getResponseBodyAsByteArray(): byte[]
+                    public getResponseBodyAsByteArray(): number /*byte*/[]
                     /**
                      * Return the response body converted to String. The charset used is that
                      * of the response "Content-Type" or otherwise {@code "UTF-8"}.
                      */
                     // @ts-ignore
-                    getResponseBodyAsString(): java.lang.String
+                    public getResponseBodyAsString(): string
                     /**
                      * Return the response body converted to String. The charset used is that
                      * of the response "Content-Type" or otherwise the one given.
@@ -52,7 +52,7 @@ declare namespace org {
                      * @since 5.1.11
                      */
                     // @ts-ignore
-                    getResponseBodyAsString(fallbackCharset: java.nio.charset.Charset): java.lang.String
+                    public getResponseBodyAsString(fallbackCharset: java.nio.charset.Charset): string
                 }
             }
         }

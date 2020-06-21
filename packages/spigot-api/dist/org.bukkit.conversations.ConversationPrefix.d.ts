@@ -14,7 +14,7 @@ declare namespace org {
                  * @return The prefix text.
                  */
                 // @ts-ignore
-                getPrefix(context: org.bukkit.conversations.ConversationContext): java.lang.String
+                getPrefix(context: org.bukkit.conversations.ConversationContext): string
             }
         }
     }

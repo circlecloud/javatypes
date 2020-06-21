@@ -6,15 +6,15 @@ declare namespace org {
                     // @ts-ignore
                     class CommandFlags extends org.spongepowered.api.command.args.CommandElement {
                         // @ts-ignore
-                        constructor(childElement: org.spongepowered.api.command.args.CommandElement, usageFlags: java.util.Map<java.util.List<java.lang.String>, org.spongepowered.api.command.args.CommandElement>, shortFlags: java.util.Map<java.lang.String, org.spongepowered.api.command.args.CommandElement>, longFlags: java.util.Map<java.lang.String, org.spongepowered.api.command.args.CommandElement>, unknownShortFlagBehavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior, unknownLongFlagBehavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior, anchorFlags: boolean)
+                        constructor(childElement: org.spongepowered.api.command.args.CommandElement, usageFlags: java.util.Map<java.util.List<java.lang.String | string> | Array<java.lang.String | string>, org.spongepowered.api.command.args.CommandElement>, shortFlags: java.util.Map<java.lang.String | string, org.spongepowered.api.command.args.CommandElement>, longFlags: java.util.Map<java.lang.String | string, org.spongepowered.api.command.args.CommandElement>, unknownShortFlagBehavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior, unknownLongFlagBehavior: org.spongepowered.api.command.args.CommandFlags.UnknownFlagBehavior, anchorFlags: boolean)
                         // @ts-ignore
-                        parse(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): void
+                        public parse(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): void
                         // @ts-ignore
-                        getUsage(src: org.spongepowered.api.command.CommandSource): org.spongepowered.api.text.Text
+                        public getUsage(src: org.spongepowered.api.command.CommandSource): org.spongepowered.api.text.Text
                         // @ts-ignore
-                        parseValue(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs): java.lang.Object
+                        parseValue(source: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs): any
                         // @ts-ignore
-                        complete(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): java.util.List<java.lang.String>
+                        public complete(src: org.spongepowered.api.command.CommandSource, args: org.spongepowered.api.command.args.CommandArgs, context: org.spongepowered.api.command.args.CommandContext): Array<java.lang.String | string>
                     }
                 }
             }

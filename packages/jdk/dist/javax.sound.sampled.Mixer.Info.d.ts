@@ -23,7 +23,7 @@ declare namespace javax {
                      * @param version version information for the mixer
                      */
                     // @ts-ignore
-                    constructor(name: string, vendor: string, description: string, version: string)
+                    constructor(name: java.lang.String | string, vendor: java.lang.String | string, description: java.lang.String | string, version: java.lang.String | string)
                     /**
                      * Indicates whether two info objects are equal, returning <code>true</code> if
                      * they are identical.
@@ -33,43 +33,43 @@ declare namespace javax {
                      *  <code>obj</code> argument; <code>false</code> otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Finalizes the hashcode method.
                      * @return the hashcode for this object
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Obtains the name of the mixer.
                      * @return a string that names the mixer
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Obtains the vendor of the mixer.
                      * @return a string that names the mixer's vendor
                      */
                     // @ts-ignore
-                    getVendor(): java.lang.String
+                    public getVendor(): string
                     /**
                      * Obtains the description of the mixer.
                      * @return a textual description of the mixer
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * Obtains the version of the mixer.
                      * @return textual version information for the mixer
                      */
                     // @ts-ignore
-                    getVersion(): java.lang.String
+                    public getVersion(): string
                     /**
                      * Provides a string representation of the mixer info.
                      * @return a string describing the info object
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

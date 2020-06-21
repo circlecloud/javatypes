@@ -136,7 +136,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            bind(addr: java.net.SocketAddress): void
+            public bind(addr: java.net.SocketAddress): void
             /**
              * Connects the socket to a remote address for this socket. When a
              * socket is connected to a remote address, packets may only be
@@ -177,7 +177,7 @@ declare namespace java {
              * @see #disconnect
              */
             // @ts-ignore
-            connect(address: java.net.InetAddress, port: number /*int*/): void
+            public connect(address: java.net.InetAddress, port: number /*int*/): void
             /**
              * Connects this socket to a remote socket address (IP address + port number).
              * <p> If given an {@link InetSocketAddress InetSocketAddress}, this method
@@ -195,14 +195,14 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            connect(addr: java.net.SocketAddress): void
+            public connect(addr: java.net.SocketAddress): void
             /**
              * Disconnects the socket. If the socket is closed or not connected,
              * then this method has no effect.
              * @see #connect
              */
             // @ts-ignore
-            disconnect(): void
+            public disconnect(): void
             /**
              * Returns the binding state of the socket.
              * <p>
@@ -213,7 +213,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isBound(): boolean
+            public isBound(): boolean
             /**
              * Returns the connection state of the socket.
              * <p>
@@ -224,7 +224,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isConnected(): boolean
+            public isConnected(): boolean
             /**
              * Returns the address to which this socket is connected. Returns
              * {@code null} if the socket is not connected.
@@ -235,7 +235,7 @@ declare namespace java {
              * @return the address to which this socket is connected.
              */
             // @ts-ignore
-            getInetAddress(): java.net.InetAddress
+            public getInetAddress(): java.net.InetAddress
             /**
              * Returns the port number to which this socket is connected.
              * Returns {@code -1} if the socket is not connected.
@@ -246,7 +246,7 @@ declare namespace java {
              * @return the port number to which this socket is connected.
              */
             // @ts-ignore
-            getPort(): int
+            public getPort(): number /*int*/
             /**
              * Returns the address of the endpoint this socket is connected to, or
              * {@code null} if it is unconnected.
@@ -263,7 +263,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getRemoteSocketAddress(): java.net.SocketAddress
+            public getRemoteSocketAddress(): java.net.SocketAddress
             /**
              * Returns the address of the endpoint this socket is bound to.
              * @return a {#code SocketAddress} representing the local endpoint of this
@@ -274,7 +274,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getLocalSocketAddress(): java.net.SocketAddress
+            public getLocalSocketAddress(): java.net.SocketAddress
             /**
              * Sends a datagram packet from this socket. The
              * {@code DatagramPacket} includes information indicating the
@@ -312,7 +312,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            send(p: java.net.DatagramPacket): void
+            public send(p: java.net.DatagramPacket): void
             /**
              * Receives a datagram packet from this socket. When this method
              * returns, the {@code DatagramPacket}'s buffer is filled with
@@ -344,7 +344,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            receive(p: java.net.DatagramPacket): void
+            public receive(p: java.net.DatagramPacket): void
             /**
              * Gets the local address to which the socket is bound.
              * <p>If there is a security manager, its
@@ -362,7 +362,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getLocalAddress(): java.net.InetAddress
+            public getLocalAddress(): java.net.InetAddress
             /**
              * Returns the port number on the local host to which this socket
              * is bound.
@@ -371,7 +371,7 @@ declare namespace java {
              *                 {@code 0} if it is not bound yet.
              */
             // @ts-ignore
-            getLocalPort(): int
+            public getLocalPort(): number /*int*/
             /**
              * Enable/disable SO_TIMEOUT with the specified timeout, in
              * milliseconds. With this option set to a non-zero timeout,
@@ -388,7 +388,7 @@ declare namespace java {
              * @see #getSoTimeout()
              */
             // @ts-ignore
-            setSoTimeout(timeout: number /*int*/): void
+            public setSoTimeout(timeout: number /*int*/): void
             /**
              * Retrieve setting for SO_TIMEOUT.  0 returns implies that the
              * option is disabled (i.e., timeout of infinity).
@@ -398,7 +398,7 @@ declare namespace java {
              * @see #setSoTimeout(int)
              */
             // @ts-ignore
-            getSoTimeout(): int
+            public getSoTimeout(): number /*int*/
             /**
              * Sets the SO_SNDBUF option to the specified value for this
              * {@code DatagramSocket}. The SO_SNDBUF option is used by the
@@ -427,7 +427,7 @@ declare namespace java {
              * @see #getSendBufferSize()
              */
             // @ts-ignore
-            setSendBufferSize(size: number /*int*/): void
+            public setSendBufferSize(size: number /*int*/): void
             /**
              * Get value of the SO_SNDBUF option for this {@code DatagramSocket}, that is the
              * buffer size used by the platform for output on this {@code DatagramSocket}.
@@ -437,7 +437,7 @@ declare namespace java {
              * @see #setSendBufferSize
              */
             // @ts-ignore
-            getSendBufferSize(): int
+            public getSendBufferSize(): number /*int*/
             /**
              * Sets the SO_RCVBUF option to the specified value for this
              * {@code DatagramSocket}. The SO_RCVBUF option is used by the
@@ -465,7 +465,7 @@ declare namespace java {
              * @see #getReceiveBufferSize()
              */
             // @ts-ignore
-            setReceiveBufferSize(size: number /*int*/): void
+            public setReceiveBufferSize(size: number /*int*/): void
             /**
              * Get value of the SO_RCVBUF option for this {@code DatagramSocket}, that is the
              * buffer size used by the platform for input on this {@code DatagramSocket}.
@@ -474,7 +474,7 @@ declare namespace java {
              * @see #setReceiveBufferSize(int)
              */
             // @ts-ignore
-            getReceiveBufferSize(): int
+            public getReceiveBufferSize(): number /*int*/
             /**
              * Enable/disable the SO_REUSEADDR socket option.
              * <p>
@@ -509,7 +509,7 @@ declare namespace java {
              * @see #isClosed()
              */
             // @ts-ignore
-            setReuseAddress(on: boolean): void
+            public setReuseAddress(on: boolean): void
             /**
              * Tests if SO_REUSEADDR is enabled.
              * @return a {#code boolean} indicating whether or not SO_REUSEADDR is enabled.
@@ -519,7 +519,7 @@ declare namespace java {
              * @see #setReuseAddress(boolean)
              */
             // @ts-ignore
-            getReuseAddress(): boolean
+            public getReuseAddress(): boolean
             /**
              * Enable/disable SO_BROADCAST.
              * <p> Some operating systems may require that the Java virtual machine be
@@ -534,7 +534,7 @@ declare namespace java {
              * @see #getBroadcast()
              */
             // @ts-ignore
-            setBroadcast(on: boolean): void
+            public setBroadcast(on: boolean): void
             /**
              * Tests if SO_BROADCAST is enabled.
              * @return a {#code boolean} indicating whether or not SO_BROADCAST is enabled.
@@ -544,7 +544,7 @@ declare namespace java {
              * @see #setBroadcast(boolean)
              */
             // @ts-ignore
-            getBroadcast(): boolean
+            public getBroadcast(): boolean
             /**
              * Sets traffic class or type-of-service octet in the IP
              * datagram header for datagrams sent from this DatagramSocket.
@@ -580,7 +580,7 @@ declare namespace java {
              * @see #getTrafficClass
              */
             // @ts-ignore
-            setTrafficClass(tc: number /*int*/): void
+            public setTrafficClass(tc: number /*int*/): void
             /**
              * Gets traffic class or type-of-service in the IP datagram
              * header for packets sent from this DatagramSocket.
@@ -597,7 +597,7 @@ declare namespace java {
              * @see #setTrafficClass(int)
              */
             // @ts-ignore
-            getTrafficClass(): int
+            public getTrafficClass(): number /*int*/
             /**
              * Closes this datagram socket.
              * <p>
@@ -609,14 +609,14 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns whether the socket is closed or not.
              * @return true if the socket has been closed
              * @since 1.4
              */
             // @ts-ignore
-            isClosed(): boolean
+            public isClosed(): boolean
             /**
              * Returns the unique {@link java.nio.channels.DatagramChannel} object
              * associated with this datagram socket, if any.
@@ -629,7 +629,7 @@ declare namespace java {
              * @spec JSR-51
              */
             // @ts-ignore
-            getChannel(): java.nio.channels.DatagramChannel
+            public getChannel(): java.nio.channels.DatagramChannel
             /**
              * Sets the datagram socket implementation factory for the
              * application. The factory can be specified only once.
@@ -656,7 +656,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            setDatagramSocketImplFactory(fac: java.net.DatagramSocketImplFactory): void
+            public static setDatagramSocketImplFactory(fac: java.net.DatagramSocketImplFactory): void
         }
     }
 }

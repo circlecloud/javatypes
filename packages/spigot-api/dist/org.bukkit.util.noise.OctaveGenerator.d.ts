@@ -6,7 +6,7 @@ declare namespace org {
                  * Creates noise using unbiased octaves
                  */
                 // @ts-ignore
-                class OctaveGenerator extends java.lang.Object {
+                abstract class OctaveGenerator extends java.lang.Object {
                     // @ts-ignore
                     constructor(octaves: org.bukkit.util.noise.NoiseGenerator[])
                     // @ts-ignore
@@ -25,49 +25,49 @@ declare namespace org {
                      * @param scale New value to scale each coordinate by
                      */
                     // @ts-ignore
-                    setScale(scale: number /*double*/): void
+                    public setScale(scale: number /*double*/): void
                     /**
                      * Gets the scale used for each X-coordinates passed
                      * @return X scale
                      */
                     // @ts-ignore
-                    getXScale(): double
+                    public getXScale(): number /*double*/
                     /**
                      * Sets the scale used for each X-coordinates passed
                      * @param scale New X scale
                      */
                     // @ts-ignore
-                    setXScale(scale: number /*double*/): void
+                    public setXScale(scale: number /*double*/): void
                     /**
                      * Gets the scale used for each Y-coordinates passed
                      * @return Y scale
                      */
                     // @ts-ignore
-                    getYScale(): double
+                    public getYScale(): number /*double*/
                     /**
                      * Sets the scale used for each Y-coordinates passed
                      * @param scale New Y scale
                      */
                     // @ts-ignore
-                    setYScale(scale: number /*double*/): void
+                    public setYScale(scale: number /*double*/): void
                     /**
                      * Gets the scale used for each Z-coordinates passed
                      * @return Z scale
                      */
                     // @ts-ignore
-                    getZScale(): double
+                    public getZScale(): number /*double*/
                     /**
                      * Sets the scale used for each Z-coordinates passed
                      * @param scale New Z scale
                      */
                     // @ts-ignore
-                    setZScale(scale: number /*double*/): void
+                    public setZScale(scale: number /*double*/): void
                     /**
                      * Gets a clone of the individual octaves used within this generator
                      * @return Clone of the individual octaves
                      */
                     // @ts-ignore
-                    getOctaves(): org.bukkit.util.noise.NoiseGenerator[]
+                    public getOctaves(): org.bukkit.util.noise.NoiseGenerator[]
                     /**
                      * Generates noise for the 1D coordinates using the specified number of
                      * octaves and parameters
@@ -77,7 +77,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 1D coordinates using the specified number of
                      * octaves and parameters
@@ -88,7 +88,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                     /**
                      * Generates noise for the 2D coordinates using the specified number of
                      * octaves and parameters
@@ -99,7 +99,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 2D coordinates using the specified number of
                      * octaves and parameters
@@ -111,7 +111,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, y: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -123,7 +123,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/): number /*double*/
                     /**
                      * Generates noise for the 3D coordinates using the specified number of
                      * octaves and parameters
@@ -136,7 +136,7 @@ declare namespace org {
                      * @return Resulting noise
                      */
                     // @ts-ignore
-                    noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): double
+                    public noise(x: number /*double*/, y: number /*double*/, z: number /*double*/, frequency: number /*double*/, amplitude: number /*double*/, normalized: boolean): number /*double*/
                 }
             }
         }

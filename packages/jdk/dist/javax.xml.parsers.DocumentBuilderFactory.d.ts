@@ -9,7 +9,7 @@ declare namespace javax {
              * @version $Revision: 1.9 $, $Date: 2010/05/25 16:19:44 $
              */
             // @ts-ignore
-            class DocumentBuilderFactory extends java.lang.Object {
+            abstract class DocumentBuilderFactory extends java.lang.Object {
                 /**
                  * <p>Protected constructor to prevent instantiation.
                  * Use {@link #newInstance()}.</p>
@@ -72,7 +72,7 @@ declare namespace javax {
                  *  the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.parsers.DocumentBuilderFactory
+                public static newInstance(): javax.xml.parsers.DocumentBuilderFactory
                 /**
                  * <p>Obtain a new instance of a <code>DocumentBuilderFactory</code> from class name.
                  * This function is useful when there are multiple providers in the classpath.
@@ -98,7 +98,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                newInstance(factoryClassName: string, classLoader: java.lang.ClassLoader): javax.xml.parsers.DocumentBuilderFactory
+                public static newInstance(factoryClassName: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.parsers.DocumentBuilderFactory
                 /**
                  * Creates a new instance of a {@link javax.xml.parsers.DocumentBuilder}
                  * using the currently configured parameters.
@@ -107,7 +107,7 @@ declare namespace javax {
                  *    cannot be created which satisfies the configuration requested.
                  */
                 // @ts-ignore
-                abstract newDocumentBuilder(): javax.xml.parsers.DocumentBuilder
+                public abstract newDocumentBuilder(): javax.xml.parsers.DocumentBuilder
                 /**
                  * Specifies that the parser produced by this code will
                  * provide support for XML namespaces. By default the value of this is set
@@ -116,7 +116,7 @@ declare namespace javax {
                  *                   for XML namespaces; false otherwise.
                  */
                 // @ts-ignore
-                setNamespaceAware(awareness: boolean): void
+                public setNamespaceAware(awareness: boolean): void
                 /**
                  * Specifies that the parser produced by this code will
                  * validate documents as they are parsed. By default the value of this
@@ -139,7 +139,7 @@ declare namespace javax {
                  *                    as they are parsed; false otherwise.
                  */
                 // @ts-ignore
-                setValidating(validating: boolean): void
+                public setValidating(validating: boolean): void
                 /**
                  * Specifies that the parsers created by this  factory must eliminate
                  * whitespace in element content (sometimes known loosely as
@@ -154,7 +154,7 @@ declare namespace javax {
                  *                    false otherwise.
                  */
                 // @ts-ignore
-                setIgnoringElementContentWhitespace(whitespace: boolean): void
+                public setIgnoringElementContentWhitespace(whitespace: boolean): void
                 /**
                  * Specifies that the parser produced by this code will
                  * expand entity reference nodes. By default the value of this is set to
@@ -163,7 +163,7 @@ declare namespace javax {
                  *                         reference nodes; false otherwise.
                  */
                 // @ts-ignore
-                setExpandEntityReferences(expandEntityRef: boolean): void
+                public setExpandEntityReferences(expandEntityRef: boolean): void
                 /**
                  * <p>Specifies that the parser produced by this code will
                  * ignore comments. By default the value of this is set to <code>false
@@ -171,7 +171,7 @@ declare namespace javax {
                  * @param ignoreComments <code>boolean</code> value to ignore comments during processing
                  */
                 // @ts-ignore
-                setIgnoringComments(ignoreComments: boolean): void
+                public setIgnoringComments(ignoreComments: boolean): void
                 /**
                  * Specifies that the parser produced by this code will
                  * convert CDATA nodes to Text nodes and append it to the
@@ -182,7 +182,7 @@ declare namespace javax {
                  *                     text node; false otherwise.
                  */
                 // @ts-ignore
-                setCoalescing(coalescing: boolean): void
+                public setCoalescing(coalescing: boolean): void
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which are namespace aware.
@@ -190,7 +190,7 @@ declare namespace javax {
                  *           are namespace aware; false otherwise.
                  */
                 // @ts-ignore
-                isNamespaceAware(): boolean
+                public isNamespaceAware(): boolean
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which validate the XML content during parse.
@@ -198,7 +198,7 @@ declare namespace javax {
                  *           which validate the XML content during parse; false otherwise.
                  */
                 // @ts-ignore
-                isValidating(): boolean
+                public isValidating(): boolean
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which ignore ignorable whitespace in element content.
@@ -207,7 +207,7 @@ declare namespace javax {
                  *           false otherwise.
                  */
                 // @ts-ignore
-                isIgnoringElementContentWhitespace(): boolean
+                public isIgnoringElementContentWhitespace(): boolean
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which expand entity reference nodes.
@@ -215,7 +215,7 @@ declare namespace javax {
                  *           which expand entity reference nodes; false otherwise.
                  */
                 // @ts-ignore
-                isExpandEntityReferences(): boolean
+                public isExpandEntityReferences(): boolean
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which ignores comments.
@@ -223,7 +223,7 @@ declare namespace javax {
                  *           which ignores comments; false otherwise.
                  */
                 // @ts-ignore
-                isIgnoringComments(): boolean
+                public isIgnoringComments(): boolean
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which converts CDATA nodes to Text nodes and appends it to
@@ -233,7 +233,7 @@ declare namespace javax {
                  *           the adjacent (if any) Text node; false otherwise.
                  */
                 // @ts-ignore
-                isCoalescing(): boolean
+                public isCoalescing(): boolean
                 /**
                  * Allows the user to set specific attributes on the underlying
                  * implementation.
@@ -268,7 +268,7 @@ declare namespace javax {
                  *    implementation doesn't recognize the attribute.
                  */
                 // @ts-ignore
-                abstract setAttribute(name: string, value: any): void
+                public abstract setAttribute(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Allows the user to retrieve specific attributes on the underlying
                  * implementation.
@@ -278,7 +278,7 @@ declare namespace javax {
                  *    implementation doesn't recognize the attribute.
                  */
                 // @ts-ignore
-                abstract getAttribute(name: string): java.lang.Object
+                public abstract getAttribute(name: java.lang.String | string): any
                 /**
                  * <p>Set a feature for this <code>DocumentBuilderFactory</code> and <code>DocumentBuilder</code>s created by this factory.</p>
                  * <p>
@@ -311,7 +311,7 @@ declare namespace javax {
                  * @throws NullPointerException If the <code>name</code> parameter is null.
                  */
                 // @ts-ignore
-                abstract setFeature(name: string, value: boolean): void
+                public abstract setFeature(name: java.lang.String | string, value: boolean): void
                 /**
                  * <p>Get the state of the named feature.</p>
                  * <p>
@@ -327,7 +327,7 @@ declare namespace javax {
                  *    or the <code>DocumentBuilder</code>s it creates cannot support this feature.
                  */
                 // @ts-ignore
-                abstract getFeature(name: string): boolean
+                public abstract getFeature(name: java.lang.String | string): boolean
                 /**
                  * Gets the {@link Schema} object specified through
                  * the {@link #setSchema(Schema schema)} method.
@@ -340,7 +340,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSchema(): javax.xml.validation.Schema
+                public getSchema(): javax.xml.validation.Schema
                 /**
                  * <p>Set the {@link Schema} to be used by parsers created
                  * from this factory.
@@ -386,7 +386,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setSchema(schema: javax.xml.validation.Schema): void
+                public setSchema(schema: javax.xml.validation.Schema): void
                 /**
                  * <p>Set state of XInclude processing.</p>
                  * <p>If XInclude markup is found in the document instance, should it be
@@ -400,7 +400,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setXIncludeAware(state: boolean): void
+                public setXIncludeAware(state: boolean): void
                 /**
                  * <p>Get state of XInclude processing.</p>
                  * @return current state of XInclude processing
@@ -409,7 +409,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isXIncludeAware(): boolean
+                public isXIncludeAware(): boolean
             }
         }
     }

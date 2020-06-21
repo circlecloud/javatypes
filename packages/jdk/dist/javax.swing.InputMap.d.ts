@@ -32,55 +32,55 @@ declare namespace javax {
              * @param map  the <code>InputMap</code> that is the parent of this one
              */
             // @ts-ignore
-            setParent(map: javax.swing.InputMap): void
+            public setParent(map: javax.swing.InputMap): void
             /**
              * Gets this <code>InputMap</code>'s parent.
              * @return map  the <code>InputMap</code> that is the parent of this one,
              *               or null if this <code>InputMap</code> has no parent
              */
             // @ts-ignore
-            getParent(): javax.swing.InputMap
+            public getParent(): javax.swing.InputMap
             /**
              * Adds a binding for <code>keyStroke</code> to <code>actionMapKey</code>.
              * If <code>actionMapKey</code> is null, this removes the current binding
              * for <code>keyStroke</code>.
              */
             // @ts-ignore
-            put(keyStroke: javax.swing.KeyStroke, actionMapKey: any): void
+            public put(keyStroke: javax.swing.KeyStroke, actionMapKey: java.lang.Object | any): void
             /**
              * Returns the binding for <code>keyStroke</code>, messaging the
              * parent <code>InputMap</code> if the binding is not locally defined.
              */
             // @ts-ignore
-            get(keyStroke: javax.swing.KeyStroke): java.lang.Object
+            public get(keyStroke: javax.swing.KeyStroke): any
             /**
              * Removes the binding for <code>key</code> from this
              * <code>InputMap</code>.
              */
             // @ts-ignore
-            remove(key: javax.swing.KeyStroke): void
+            public remove(key: javax.swing.KeyStroke): void
             /**
              * Removes all the mappings from this <code>InputMap</code>.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns the <code>KeyStroke</code>s that are bound in this <code>InputMap</code>.
              */
             // @ts-ignore
-            keys(): javax.swing.KeyStroke[]
+            public keys(): javax.swing.KeyStroke[]
             /**
              * Returns the number of <code>KeyStroke</code> bindings.
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns an array of the <code>KeyStroke</code>s defined in this
              * <code>InputMap</code> and its parent. This differs from <code>keys()</code> in that
              * this method includes the keys defined in the parent.
              */
             // @ts-ignore
-            allKeys(): javax.swing.KeyStroke[]
+            public allKeys(): javax.swing.KeyStroke[]
         }
     }
 }

@@ -20,7 +20,7 @@ declare namespace org {
                          * @param messageId A unique ID for this message
                          */
                         // @ts-ignore
-                        registerMessage(messageClass: java.lang.Class<org.spongepowered.api.network.Message>, messageId: number /*int*/): void
+                        registerMessage(messageClass: java.lang.Class<any>, messageId: number /*int*/): void
                         /**
                          * Register a message class to this channel and a handler for receiving
                          * the message. The handler is invoked every time the message is sent to

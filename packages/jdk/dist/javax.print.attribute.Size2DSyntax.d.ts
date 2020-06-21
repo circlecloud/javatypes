@@ -54,7 +54,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class Size2DSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class Size2DSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Construct a new two-dimensional size attribute from the given
                  * floating-point values.
@@ -88,13 +88,13 @@ declare namespace javax {
                  * factor by which to multiply inches to yield &#181;m (25400).
                  */
                 // @ts-ignore
-                readonly INCH: number /*int*/
+                public static readonly INCH: number /*int*/
                 /**
                  * Value to indicate units of millimeters (mm). It is actually the
                  * conversion factor by which to multiply mm to yield &#181;m (1000).
                  */
                 // @ts-ignore
-                readonly MM: number /*int*/
+                public static readonly MM: number /*int*/
                 /**
                  * Get this two-dimensional size attribute's dimensions in the given units
                  * as floating-point values.
@@ -106,7 +106,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                getSize(units: number /*int*/): float[]
+                public getSize(units: number /*int*/): number /*float*/[]
                 /**
                  * Returns this two-dimensional size attribute's X dimension in the given
                  * units as a floating-point value.
@@ -117,7 +117,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                getX(units: number /*int*/): float
+                public getX(units: number /*int*/): number /*float*/
                 /**
                  * Returns this two-dimensional size attribute's Y dimension in the given
                  * units as a floating-point value.
@@ -128,7 +128,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                getY(units: number /*int*/): float
+                public getY(units: number /*int*/): number /*float*/
                 /**
                  * Returns a string version of this two-dimensional size attribute in the
                  * given units. The string takes the form <CODE>"<I>X</I>x<I>Y</I>
@@ -145,7 +145,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                toString(units: number /*int*/, unitsName: string): java.lang.String
+                public toString(units: number /*int*/, unitsName: java.lang.String | string): string
                 /**
                  * Returns whether this two-dimensional size attribute is equivalent to the
                  * passed in object. To be equivalent, all of the following conditions must
@@ -167,12 +167,12 @@ declare namespace javax {
                  *           two-dimensional size attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this two-dimensional size attribute.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string version of this two-dimensional size attribute. The
                  * string takes the form <CODE>"<I>X</I>x<I>Y</I> um"</CODE>, where
@@ -180,21 +180,21 @@ declare namespace javax {
                  * The values are reported in the internal units of micrometers.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns this two-dimensional size attribute's X dimension in units of
                  * micrometers (&#181;m). (For use in a subclass.)
                  * @return X dimension (&#181;m).
                  */
                 // @ts-ignore
-                getXMicrometers(): int
+                getXMicrometers(): number /*int*/
                 /**
                  * Returns this two-dimensional size attribute's Y dimension in units of
                  * micrometers (&#181;m). (For use in a subclass.)
                  * @return Y dimension (&#181;m).
                  */
                 // @ts-ignore
-                getYMicrometers(): int
+                getYMicrometers(): number /*int*/
             }
         }
     }

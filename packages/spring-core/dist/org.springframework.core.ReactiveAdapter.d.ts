@@ -18,32 +18,32 @@ declare namespace org {
                  * @param fromPublisherFunction adapter from a Publisher
                  */
                 // @ts-ignore
-                constructor(descriptor: org.springframework.core.ReactiveTypeDescriptor, toPublisherFunction: java.util.function.Function<java.lang.Object, <any>> | java.util.function$.Function<java.lang.Object, <any>>, fromPublisherFunction: java.util.function.Function<<any>, java.lang.Object> | java.util.function$.Function<<any>, java.lang.Object>)
+                constructor(descriptor: org.springframework.core.ReactiveTypeDescriptor, toPublisherFunction: java.util.function$.Function<java.lang.Object | any, object>, fromPublisherFunction: java.util.function$.Function<object, java.lang.Object | any>)
                 /**
                  * Return the descriptor of the reactive type for the adapter.
                  */
                 // @ts-ignore
-                getDescriptor(): org.springframework.core.ReactiveTypeDescriptor
+                public getDescriptor(): org.springframework.core.ReactiveTypeDescriptor
                 /**
                  * Shortcut for {@code getDescriptor().getReactiveType()}.
                  */
                 // @ts-ignore
-                getReactiveType(): java.lang.Class<?>
+                public getReactiveType(): java.lang.Class<any>
                 /**
                  * Shortcut for {@code getDescriptor().isMultiValue()}.
                  */
                 // @ts-ignore
-                isMultiValue(): boolean
+                public isMultiValue(): boolean
                 /**
                  * Shortcut for {@code getDescriptor().isNoValue()}.
                  */
                 // @ts-ignore
-                isNoValue(): boolean
+                public isNoValue(): boolean
                 /**
                  * Shortcut for {@code getDescriptor().supportsEmpty()}.
                  */
                 // @ts-ignore
-                supportsEmpty(): boolean
+                public supportsEmpty(): boolean
                 /**
                  * Adapt the given instance to a Reactive Streams {@code Publisher}.
                  * @param source the source object to adapt from; if the given object is
@@ -51,14 +51,14 @@ declare namespace org {
                  * @return the Publisher representing the adaptation
                  */
                 // @ts-ignore
-                toPublisher<T>(source: any): <any>
+                public toPublisher<T>(source: java.lang.Object | any): object
                 /**
                  * Adapt from the given Reactive Streams Publisher.
                  * @param publisher the publisher to adapt from
                  * @return the reactive type instance representing the adapted publisher
                  */
                 // @ts-ignore
-                fromPublisher(publisher: object): java.lang.Object
+                public fromPublisher(publisher: object): any
             }
         }
     }

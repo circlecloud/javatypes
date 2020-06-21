@@ -72,7 +72,7 @@ declare namespace java {
                      * have the name {@code "basic"}.
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * Reads the basic file attributes as a bulk operation.
                      * <p> It is implementation specific if all file attributes are read as an

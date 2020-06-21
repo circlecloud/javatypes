@@ -29,13 +29,13 @@ declare namespace org {
                          * org.springframework.http.client.ClientHttpRequest HttpRequests}.
                          */
                         // @ts-ignore
-                        setAsyncRequestFactory(asyncRequestFactory: org.springframework.http.client.AsyncClientHttpRequestFactory): void
+                        public setAsyncRequestFactory(asyncRequestFactory: org.springframework.http.client.AsyncClientHttpRequestFactory): void
                         /**
                          * Return the request factory that this accessor uses for obtaining {@link
                          * org.springframework.http.client.ClientHttpRequest HttpRequests}.
                          */
                         // @ts-ignore
-                        getAsyncRequestFactory(): org.springframework.http.client.AsyncClientHttpRequestFactory
+                        public getAsyncRequestFactory(): org.springframework.http.client.AsyncClientHttpRequestFactory
                         /**
                          * Create a new {@link org.springframework.http.client.AsyncClientHttpRequest} via this template's
                          * {@link org.springframework.http.client.AsyncClientHttpRequestFactory}.

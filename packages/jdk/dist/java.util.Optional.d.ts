@@ -28,7 +28,7 @@ declare namespace java {
              * @return an empty {#code Optional}
              */
             // @ts-ignore
-            empty<T>(): java.util.Optional<T>
+            public static empty<T>(): java.util.Optional<T>
             /**
              * Returns an {@code Optional} with the specified present non-null value.
              * @param <T> the class of the value
@@ -37,7 +37,7 @@ declare namespace java {
              * @throws NullPointerException if value is null
              */
             // @ts-ignore
-            of<T>(value: T): java.util.Optional<T>
+            public static of<T>(value: T): java.util.Optional<T>
             /**
              * Returns an {@code Optional} describing the specified value, if non-null,
              * otherwise returns an empty {@code Optional}.
@@ -47,7 +47,7 @@ declare namespace java {
              *  is non-null, otherwise an empty {@code Optional}
              */
             // @ts-ignore
-            ofNullable<T>(value: T): java.util.Optional<T>
+            public static ofNullable<T>(value: T): java.util.Optional<T>
             /**
              * If a value is present in this {@code Optional}, returns the value,
              * otherwise throws {@code NoSuchElementException}.
@@ -56,13 +56,13 @@ declare namespace java {
              * @see Optional#isPresent()
              */
             // @ts-ignore
-            get(): T
+            public get(): T
             /**
              * Return {@code true} if there is a value present, otherwise {@code false}.
              * @return {#code true} if there is a value present, otherwise {@code false}
              */
             // @ts-ignore
-            isPresent(): boolean
+            public isPresent(): boolean
             /**
              * If a value is present, invoke the specified consumer with the value,
              * otherwise do nothing.
@@ -71,7 +71,7 @@ declare namespace java {
              *  null
              */
             // @ts-ignore
-            ifPresent(consumer: java.util.function.Consumer<any super T> | java.util.function$.Consumer<? super T>): void
+            public ifPresent(consumer: java.util.function$.Consumer<any>): void
             /**
              * If a value is present, and the value matches the given predicate,
              * return an {@code Optional} describing the value, otherwise return an
@@ -83,7 +83,7 @@ declare namespace java {
              * @throws NullPointerException if the predicate is null
              */
             // @ts-ignore
-            filter(predicate: java.util.function.Predicate<any super T> | java.util.function$.Predicate<? super T>): java.util.Optional<T>
+            public filter(predicate: java.util.function$.Predicate<any>): java.util.Optional<T>
             /**
              * If a value is present, apply the provided mapping function to it,
              * and if the result is non-null, return an {@code Optional} describing the
@@ -112,7 +112,7 @@ declare namespace java {
              * @throws NullPointerException if the mapping function is null
              */
             // @ts-ignore
-            map<U>(mapper: java.util.function.Function<any super T, U> | java.util.function$.Function<? super T, U>): java.util.Optional<U>
+            public map<U>(mapper: java.util.function$.Function<any, any>): java.util.Optional<U>
             /**
              * If a value is present, apply the provided {@code Optional}-bearing
              * mapping function to it, return that result, otherwise return an empty
@@ -130,7 +130,7 @@ declare namespace java {
              *  a null result
              */
             // @ts-ignore
-            flatMap<U>(mapper: java.util.function.Function<any super T, java.util.Optional<U>> | java.util.function$.Function<? super T, java.util.Optional<U>>): java.util.Optional<U>
+            public flatMap<U>(mapper: java.util.function$.Function<any, java.util.Optional<U>>): java.util.Optional<U>
             /**
              * Return the value if present, otherwise return {@code other}.
              * @param other the value to be returned if there is no value present, may
@@ -138,7 +138,7 @@ declare namespace java {
              * @return the value, if present, otherwise {#code other}
              */
             // @ts-ignore
-            orElse(other: T): T
+            public orElse(other: T): T
             /**
              * Return the value if present, otherwise invoke {@code other} and return
              * the result of that invocation.
@@ -149,7 +149,7 @@ declare namespace java {
              *  null
              */
             // @ts-ignore
-            orElseGet(other: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): T
+            public orElseGet(other: java.util.function$.Supplier<any>): T
             /**
              * Return the contained value, if present, otherwise throw an exception
              * to be created by the provided supplier.
@@ -165,7 +165,7 @@ declare namespace java {
              *  {#code exceptionSupplier} is null
              */
             // @ts-ignore
-            orElseThrow<X extends java.lang.Throwable>(exceptionSupplier: java.util.function.Supplier<X> | java.util.function$.Supplier<X>): T
+            public orElseThrow<X extends java.lang.Throwable>(exceptionSupplier: java.util.function$.Supplier<any>): T
             /**
              * Indicates whether some other object is "equal to" this Optional. The
              * other object is considered equal if:
@@ -179,14 +179,14 @@ declare namespace java {
              *  otherwise {#code false}
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value of the present value, if any, or 0 (zero) if
              * no value is present.
              * @return hash code value of the present value or 0 if no value is present
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a non-empty string representation of this Optional suitable for
              * debugging. The exact presentation format is unspecified and may vary
@@ -197,7 +197,7 @@ declare namespace java {
              * @return the string representation of this instance
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

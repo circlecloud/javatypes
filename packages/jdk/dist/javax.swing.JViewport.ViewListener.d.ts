@@ -18,7 +18,7 @@ declare namespace javax {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                componentResized(e: java.awt.event.ComponentEvent): void
+                public componentResized(e: java.awt.event.ComponentEvent): void
             }
         }
     }

@@ -20,7 +20,7 @@ declare namespace org {
                      * @param callback the callback to register
                      */
                     // @ts-ignore
-                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any super T>): void
+                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any>): void
                     /**
                      * Java 8 lambda-friendly alternative with success and failure callbacks.
                      * @param successCallback the success callback
@@ -28,7 +28,7 @@ declare namespace org {
                      * @since 4.1
                      */
                     // @ts-ignore
-                    addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any super T>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
+                    addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
                     /**
                      * Expose this {@link ListenableFuture} as a JDK {@link CompletableFuture}.
                      * @since 5.0

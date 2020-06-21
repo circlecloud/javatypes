@@ -94,7 +94,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getMBeanServerConnection(): javax.management.MBeanServerConnection
+            public getMBeanServerConnection(): javax.management.MBeanServerConnection
             /**
              * <p>The name of the MBean within the MBean server to which methods
              * are forwarded.
@@ -102,7 +102,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getObjectName(): javax.management.ObjectName
+            public getObjectName(): javax.management.ObjectName
             /**
              * <p>If true, the proxy is for an MXBean, and appropriate mappings
              * are applied to method parameters and return values.
@@ -110,7 +110,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            isMXBean(): boolean
+            public isMXBean(): boolean
             /**
              * <p>Return a proxy that implements the given interface by
              * forwarding its methods through the given MBean server to the
@@ -149,9 +149,9 @@ declare namespace javax {
              * @see JMX#newMBeanProxy(MBeanServerConnection, ObjectName, Class, boolean)
              */
             // @ts-ignore
-            newProxyInstance<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>, notificationBroadcaster: boolean): T
+            public static newProxyInstance<T>(connection: javax.management.MBeanServerConnection, objectName: javax.management.ObjectName, interfaceClass: java.lang.Class<T>, notificationBroadcaster: boolean): T
             // @ts-ignore
-            invoke(proxy: any, method: java.lang.reflect.Method, args: any[]): java.lang.Object
+            public invoke(proxy: java.lang.Object | any, method: java.lang.reflect.Method, args: java.lang.Object[] | any[]): any
         }
     }
 }

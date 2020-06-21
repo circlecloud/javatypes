@@ -28,7 +28,7 @@ declare namespace java {
              * @return The low-level description of the method
              */
             // @ts-ignore
-            getMethod(): java.lang.reflect.Method
+            public getMethod(): java.lang.reflect.Method
             /**
              * Gets the ParameterDescriptor for each of this MethodDescriptor's
              * method's parameters.
@@ -36,7 +36,7 @@ declare namespace java {
              *           a null array if the parameter names aren't known.
              */
             // @ts-ignore
-            getParameterDescriptors(): java.beans.ParameterDescriptor[]
+            public getParameterDescriptors(): java.beans.ParameterDescriptor[]
         }
     }
 }

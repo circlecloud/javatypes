@@ -67,7 +67,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
+                    public visitVariable(e: javax.lang.model.element.VariableElement, p: P): R
                 }
             }
         }

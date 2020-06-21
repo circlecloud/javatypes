@@ -92,7 +92,7 @@ declare namespace java {
              *          from being compared to this object.
              */
             // @ts-ignore
-            compareTo(o: T): int
+            compareTo(o: T): number /*int*/
         }
     }
 }

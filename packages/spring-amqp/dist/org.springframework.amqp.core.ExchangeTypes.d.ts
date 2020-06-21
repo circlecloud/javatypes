@@ -8,34 +8,34 @@ declare namespace org {
                  * @author Gary Russell
                  */
                 // @ts-ignore
-                class ExchangeTypes extends java.lang.Object {
+                abstract class ExchangeTypes extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
                      * Direct exchange.
                      */
                     // @ts-ignore
-                    readonly DIRECT: string
+                    public static readonly DIRECT: java.lang.String | string
                     /**
                      * Topic exchange.
                      */
                     // @ts-ignore
-                    readonly TOPIC: string
+                    public static readonly TOPIC: java.lang.String | string
                     /**
                      * Fanout exchange.
                      */
                     // @ts-ignore
-                    readonly FANOUT: string
+                    public static readonly FANOUT: java.lang.String | string
                     /**
                      * Headers exchange.
                      */
                     // @ts-ignore
-                    readonly HEADERS: string
+                    public static readonly HEADERS: java.lang.String | string
                     /**
                      * System exchange.
                      */
                     // @ts-ignore
-                    readonly SYSTEM: string
+                    public static readonly SYSTEM: java.lang.String | string
                 }
             }
         }

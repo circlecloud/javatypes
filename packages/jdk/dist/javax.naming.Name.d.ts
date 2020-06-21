@@ -23,14 +23,14 @@ declare namespace javax {
          * @since 1.3
          */
         // @ts-ignore
-        interface Name extends java.lang.Cloneable, java.io.Serializable, java.lang.Comparable<java.lang.Object> {
+        interface Name extends java.lang.Cloneable, java.io.Serializable, java.lang.Comparable<java.lang.Object | any> {
             /**
              * The class fingerprint that is set to indicate
              * serialization compatibility with a previous
              * version of the class.
              */
             // @ts-ignore
-            
+            readonly serialVersionUID: number /*long*/
             /**
              * Generates a new copy of this name.
              * Subsequent changes to the components of this name will not
@@ -39,7 +39,7 @@ declare namespace javax {
              * @see Object#clone()
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
             /**
              * Compares this name with another name for order.
              * Returns a negative integer, zero, or a positive integer as this
@@ -59,13 +59,13 @@ declare namespace javax {
              * @see Comparable#compareTo(Object)
              */
             // @ts-ignore
-            compareTo(obj: any): int
+            compareTo(obj: java.lang.Object | any): number /*int*/
             /**
              * Returns the number of components in this name.
              * @return the number of components in this name
              */
             // @ts-ignore
-            size(): int
+            size(): number /*int*/
             /**
              * Determines whether this name is empty.
              * An empty name is one with zero components.
@@ -81,7 +81,7 @@ declare namespace javax {
              * @return an enumeration of the components of this name, each a string
              */
             // @ts-ignore
-            getAll(): java.util.Enumeration<java.lang.String>
+            getAll(): java.util.Enumeration<java.lang.String | string>
             /**
              * Retrieves a component of this name.
              * @param posn
@@ -92,7 +92,7 @@ declare namespace javax {
              *           if posn is outside the specified range
              */
             // @ts-ignore
-            get(posn: number /*int*/): java.lang.String
+            get(posn: number /*int*/): string
             /**
              * Creates a name whose components consist of a prefix of the
              * components of this name.  Subsequent changes to
@@ -182,7 +182,7 @@ declare namespace javax {
              *           the syntax rules of this name
              */
             // @ts-ignore
-            add(comp: string): javax.naming.Name
+            add(comp: java.lang.String | string): javax.naming.Name
             /**
              * Adds a single component at a specified position within this name.
              * Components of this name at or after the index of the new component
@@ -200,7 +200,7 @@ declare namespace javax {
              *           the syntax rules of this name
              */
             // @ts-ignore
-            add(posn: number /*int*/, comp: string): javax.naming.Name
+            add(posn: number /*int*/, comp: java.lang.String | string): javax.naming.Name
             /**
              * Removes a component from this name.
              * The component of this name at the specified position is removed.
@@ -216,7 +216,7 @@ declare namespace javax {
              *           would violate the syntax rules of the name
              */
             // @ts-ignore
-            remove(posn: number /*int*/): java.lang.Object
+            remove(posn: number /*int*/): any
         }
     }
 }

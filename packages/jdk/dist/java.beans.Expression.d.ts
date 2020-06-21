@@ -34,7 +34,7 @@ declare namespace java {
              * @see #getValue
              */
             // @ts-ignore
-            constructor(target: any, methodName: string, arguments: any[])
+            constructor(target: java.lang.Object | any, methodName: java.lang.String | string, arguments: java.lang.Object[] | any[])
             /**
              * Creates a new {@link Expression} object with the specified value
              * for the specified target object to invoke the  method
@@ -55,7 +55,7 @@ declare namespace java {
              * @see #setValue
              */
             // @ts-ignore
-            constructor(value: any, target: any, methodName: string, arguments: any[])
+            constructor(value: java.lang.Object | any, target: java.lang.Object | any, methodName: java.lang.String | string, arguments: java.lang.Object[] | any[])
             /**
              * {@inheritDoc}
              * <p>
@@ -73,7 +73,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            execute(): void
+            public execute(): void
             /**
              * If the value property of this instance is not already set,
              * this method dynamically finds the method with the specified
@@ -102,7 +102,7 @@ declare namespace java {
              *  throws an exception
              */
             // @ts-ignore
-            getValue(): java.lang.Object
+            public getValue(): any
             /**
              * Sets the value of this expression to <code>value</code>.
              * This value will be returned by the getValue method
@@ -112,12 +112,12 @@ declare namespace java {
              * @see #getValue
              */
             // @ts-ignore
-            setValue(value: any): void
+            public setValue(value: java.lang.Object | any): void
             /**
              * Prints the value of this expression using a Java-style syntax.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

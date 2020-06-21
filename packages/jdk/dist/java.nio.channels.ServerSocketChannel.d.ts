@@ -36,7 +36,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.NetworkChannel {
+            abstract class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectableChannel implements java.nio.channels.NetworkChannel {
                 /**
                  * Initializes a new instance of this class.
                  * @param provider
@@ -59,7 +59,7 @@ declare namespace java {
                  *           If an I/O error occurs
                  */
                 // @ts-ignore
-                open(): java.nio.channels.ServerSocketChannel
+                public static open(): java.nio.channels.ServerSocketChannel
                 /**
                  * Returns an operation set identifying this channel's supported
                  * operations.
@@ -69,7 +69,7 @@ declare namespace java {
                  * @return The valid-operation set
                  */
                 // @ts-ignore
-                validOps(): int
+                public validOps(): number /*int*/
                 /**
                  * Binds the channel's socket to a local address and configures the socket
                  * to listen for connections.
@@ -92,7 +92,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                bind(local: java.net.SocketAddress): java.nio.channels.ServerSocketChannel
+                public bind(local: java.net.SocketAddress): java.nio.channels.ServerSocketChannel
                 /**
                  * Binds the channel's socket to a local address and configures the socket to
                  * listen for connections.
@@ -126,7 +126,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract bind(local: java.net.SocketAddress, backlog: number /*int*/): java.nio.channels.ServerSocketChannel
+                public abstract bind(local: java.net.SocketAddress, backlog: number /*int*/): java.nio.channels.ServerSocketChannel
                 /**
                  * @throws UnsupportedOperationException           {#inheritDoc}
                  * @throws IllegalArgumentException                {#inheritDoc}
@@ -135,7 +135,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.ServerSocketChannel
+                public abstract setOption<T>(name: java.net.SocketOption<T>, value: T): java.nio.channels.ServerSocketChannel
                 /**
                  * Retrieves a server socket associated with this channel.
                  * <p> The returned object will not declare any public methods that are not
@@ -143,7 +143,7 @@ declare namespace java {
                  * @return A server socket associated with this channel
                  */
                 // @ts-ignore
-                abstract socket(): java.net.ServerSocket
+                public abstract socket(): java.net.ServerSocket
                 /**
                  * Accepts a connection made to this channel's socket.
                  * <p> If this channel is in non-blocking mode then this method will
@@ -182,7 +182,7 @@ declare namespace java {
                  *           If some other I/O error occurs
                  */
                 // @ts-ignore
-                abstract accept(): java.nio.channels.SocketChannel
+                public abstract accept(): java.nio.channels.SocketChannel
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -200,7 +200,7 @@ declare namespace java {
                  * @throws IOException                {#inheritDoc}
                  */
                 // @ts-ignore
-                abstract getLocalAddress(): java.net.SocketAddress
+                public abstract getLocalAddress(): java.net.SocketAddress
             }
         }
     }

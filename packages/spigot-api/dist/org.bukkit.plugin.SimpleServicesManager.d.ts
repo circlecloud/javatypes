@@ -17,26 +17,26 @@ declare namespace org {
                  * @param priority priority of the provider
                  */
                 // @ts-ignore
-                register<T>(service: java.lang.Class<T>, provider: T, plugin: org.bukkit.plugin.Plugin, priority: org.bukkit.plugin.ServicePriority): void
+                public register<T>(service: java.lang.Class<T>, provider: T, plugin: org.bukkit.plugin.Plugin, priority: org.bukkit.plugin.ServicePriority): void
                 /**
                  * Unregister all the providers registered by a particular plugin.
                  * @param plugin The plugin
                  */
                 // @ts-ignore
-                unregisterAll(plugin: org.bukkit.plugin.Plugin): void
+                public unregisterAll(plugin: org.bukkit.plugin.Plugin): void
                 /**
                  * Unregister a particular provider for a particular service.
                  * @param service The service interface
                  * @param provider The service provider implementation
                  */
                 // @ts-ignore
-                unregister(service: java.lang.Class<any>, provider: any): void
+                public unregister(service: java.lang.Class<any>, provider: java.lang.Object | any): void
                 /**
                  * Unregister a particular provider.
                  * @param provider The service provider implementation
                  */
                 // @ts-ignore
-                unregister(provider: any): void
+                public unregister(provider: java.lang.Object | any): void
                 /**
                  * Queries for a provider. This may return if no provider has been
                  * registered for a service. The highest priority provider is returned.
@@ -45,7 +45,7 @@ declare namespace org {
                  * @return provider or null
                  */
                 // @ts-ignore
-                load<T>(service: java.lang.Class<T>): T
+                public load<T>(service: java.lang.Class<T>): T
                 /**
                  * Queries for a provider registration. This may return if no provider
                  * has been registered for a service.
@@ -54,14 +54,14 @@ declare namespace org {
                  * @return provider registration or null
                  */
                 // @ts-ignore
-                getRegistration<T>(service: java.lang.Class<T>): org.bukkit.plugin.RegisteredServiceProvider<T>
+                public getRegistration<T>(service: java.lang.Class<T>): org.bukkit.plugin.RegisteredServiceProvider<T>
                 /**
                  * Get registrations of providers for a plugin.
                  * @param plugin The plugin
                  * @return provider registrations
                  */
                 // @ts-ignore
-                getRegistrations(plugin: org.bukkit.plugin.Plugin): java.util.List<org.bukkit.plugin.RegisteredServiceProvider<?>>
+                public getRegistrations(plugin: org.bukkit.plugin.Plugin): Array<org.bukkit.plugin.RegisteredServiceProvider<any>>
                 /**
                  * Get registrations of providers for a service. The returned list is
                  * an unmodifiable copy.
@@ -70,14 +70,14 @@ declare namespace org {
                  * @return a copy of the list of registrations
                  */
                 // @ts-ignore
-                getRegistrations<T>(service: java.lang.Class<T>): java.util.List<org.bukkit.plugin.RegisteredServiceProvider<T>>
+                public getRegistrations<T>(service: java.lang.Class<T>): Array<org.bukkit.plugin.RegisteredServiceProvider<T>>
                 /**
                  * Get a list of known services. A service is known if it has registered
                  * providers for it.
                  * @return a copy of the set of known services
                  */
                 // @ts-ignore
-                getKnownServices(): java.util.Set<java.lang.Class<?>>
+                public getKnownServices(): Array<java.lang.Class<any>>
                 /**
                  * Returns whether a provider has been registered for a service.
                  * @param <T> service
@@ -85,7 +85,7 @@ declare namespace org {
                  * @return true if and only if there are registered providers
                  */
                 // @ts-ignore
-                isProvidedFor<T>(service: java.lang.Class<T>): boolean
+                public isProvidedFor<T>(service: java.lang.Class<T>): boolean
             }
         }
     }

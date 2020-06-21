@@ -18,7 +18,7 @@ declare namespace org {
                  * @return base value
                  */
                 // @ts-ignore
-                getBaseValue(): double
+                getBaseValue(): number /*double*/
                 /**
                  * Set the base value of this instance.
                  * @param value new base value
@@ -30,7 +30,7 @@ declare namespace org {
                  * @return a copied collection of all modifiers
                  */
                 // @ts-ignore
-                getModifiers(): java.util.Collection<org.bukkit.attribute.AttributeModifier>
+                getModifiers(): Array<org.bukkit.attribute.AttributeModifier>
                 /**
                  * Add a modifier to this instance.
                  * @param modifier to add
@@ -49,13 +49,13 @@ declare namespace org {
                  * @return the total attribute value
                  */
                 // @ts-ignore
-                getValue(): double
+                getValue(): number /*double*/
                 /**
                  * Gets the default value of the Attribute attached to this instance.
                  * @return server default value
                  */
                 // @ts-ignore
-                getDefaultValue(): double
+                getDefaultValue(): number /*double*/
             }
         }
     }

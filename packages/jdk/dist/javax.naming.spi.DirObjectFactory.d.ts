@@ -94,7 +94,7 @@ declare namespace javax {
                  * @see NamingManager#getURLContext
                  */
                 // @ts-ignore
-                getObjectInstance(obj: any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, ?>, attrs: javax.naming.directory.Attributes): java.lang.Object
+                getObjectInstance(obj: java.lang.Object | any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, any>, attrs: javax.naming.directory.Attributes): any
             }
         }
     }

@@ -18,15 +18,15 @@ declare namespace org {
                      * type and message converters. The given converters must support the response type.
                      */
                     // @ts-ignore
-                    constructor(responseType: java.lang.Class<T>, messageConverters: Array<org.springframework.http.converter.HttpMessageConverter<any>>)
+                    constructor(responseType: java.lang.Class<T>, messageConverters: java.util.List<org.springframework.http.converter.HttpMessageConverter<any>> | Array<org.springframework.http.converter.HttpMessageConverter<any>>)
                     /**
                      * Creates a new instance of the {@code HttpMessageConverterExtractor} with the given response
                      * type and message converters. The given converters must support the response type.
                      */
                     // @ts-ignore
-                    constructor(responseType: java.lang.reflect.Type, messageConverters: Array<org.springframework.http.converter.HttpMessageConverter<any>>)
+                    constructor(responseType: java.lang.reflect.Type, messageConverters: java.util.List<org.springframework.http.converter.HttpMessageConverter<any>> | Array<org.springframework.http.converter.HttpMessageConverter<any>>)
                     // @ts-ignore
-                    extractData(response: org.springframework.http.client.ClientHttpResponse): T
+                    public extractData(response: org.springframework.http.client.ClientHttpResponse): T
                     /**
                      * Determine the Content-Type of the response based on the "Content-Type"
                      * header or otherwise default to {@link MediaType#APPLICATION_OCTET_STREAM}.

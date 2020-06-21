@@ -42,7 +42,7 @@ declare namespace org {
                          * @see #shouldSkip
                          */
                         // @ts-ignore
-                        readonly SKIP_REQUIRED_CHECK_ATTRIBUTE: string
+                        public static readonly SKIP_REQUIRED_CHECK_ATTRIBUTE: java.lang.String | string
                         /**
                          * Set the 'required' annotation type, to be used on bean property
                          * setter methods.
@@ -53,22 +53,22 @@ declare namespace org {
                          * is required.
                          */
                         // @ts-ignore
-                        setRequiredAnnotationType(requiredAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                        public setRequiredAnnotationType(requiredAnnotationType: java.lang.Class<any>): void
                         /**
                          * Return the 'required' annotation type.
                          */
                         // @ts-ignore
-                        getRequiredAnnotationType(): java.lang.Class<? extends java.lang.annotation.Annotation>
+                        getRequiredAnnotationType(): java.lang.Class<any>
                         // @ts-ignore
-                        setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
+                        public setBeanFactory(beanFactory: org.springframework.beans.factory.BeanFactory): void
                         // @ts-ignore
-                        setOrder(order: number /*int*/): void
+                        public setOrder(order: number /*int*/): void
                         // @ts-ignore
-                        getOrder(): int
+                        public getOrder(): number /*int*/
                         // @ts-ignore
-                        postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                        public postProcessMergedBeanDefinition(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                         // @ts-ignore
-                        postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        public postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                         /**
                          * Check whether the given bean definition is not subject to the annotation-based
                          * required property check as performed by this post-processor.
@@ -81,7 +81,7 @@ declare namespace org {
                          * @return {#code true} to skip the bean; {@code false} to process it
                          */
                         // @ts-ignore
-                        shouldSkip(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, beanName: string): boolean
+                        shouldSkip(beanFactory: org.springframework.beans.factory.config.ConfigurableListableBeanFactory, beanName: java.lang.String | string): boolean
                         /**
                          * Is the supplied property required to have a value (that is, to be dependency-injected)?
                          * <p>This implementation looks for the existence of a

@@ -8,9 +8,15 @@ declare namespace org {
                 // @ts-ignore
                 class Tristate extends java.lang.Enum<org.spongepowered.api.util.Tristate> {
                     // @ts-ignore
+                    readonly TRUE: org.spongepowered.api.util.Tristate
+                    // @ts-ignore
+                    readonly FALSE: org.spongepowered.api.util.Tristate
+                    // @ts-ignore
+                    readonly UNDEFINED: org.spongepowered.api.util.Tristate
+                    // @ts-ignore
                     values(): org.spongepowered.api.util.Tristate[]
                     // @ts-ignore
-                    valueOf(name: string): org.spongepowered.api.util.Tristate
+                    valueOf(name: java.lang.String | string): org.spongepowered.api.util.Tristate
                     /**
                      * Return the appropriate tristate for a given boolean value.
                      * @param val The boolean value

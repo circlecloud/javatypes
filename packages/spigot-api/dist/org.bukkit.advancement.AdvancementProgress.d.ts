@@ -26,33 +26,33 @@ declare namespace org {
                  *  awarded.
                  */
                 // @ts-ignore
-                awardCriteria(criteria: string): boolean
+                awardCriteria(criteria: java.lang.String | string): boolean
                 /**
                  * Mark the specified criteria as uncompleted.
                  * @param criteria the criteria to mark
                  * @return true if removed, false if criteria does not exist or not awarded
                  */
                 // @ts-ignore
-                revokeCriteria(criteria: string): boolean
+                revokeCriteria(criteria: java.lang.String | string): boolean
                 /**
                  * Get the date the specified criteria was awarded.
                  * @param criteria the criteria to check
                  * @return date awarded or null if unawarded or criteria does not exist
                  */
                 // @ts-ignore
-                getDateAwarded(criteria: string): java.util.Date
+                getDateAwarded(criteria: java.lang.String | string): java.util.Date
                 /**
                  * Get the criteria which have not been awarded.
                  * @return unmodifiable copy of criteria remaining
                  */
                 // @ts-ignore
-                getRemainingCriteria(): java.util.Collection<java.lang.String>
+                getRemainingCriteria(): Array<java.lang.String | string>
                 /**
                  * Gets the criteria which have been awarded.
                  * @return unmodifiable copy of criteria awarded
                  */
                 // @ts-ignore
-                getAwardedCriteria(): java.util.Collection<java.lang.String>
+                getAwardedCriteria(): Array<java.lang.String | string>
             }
         }
     }

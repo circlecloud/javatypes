@@ -113,25 +113,25 @@ declare namespace javax {
                  * properties.
                  */
                 // @ts-ignore
-                readonly COLUMN_WIDTH_PROPERTY: string
+                public static readonly COLUMN_WIDTH_PROPERTY: java.lang.String | string
                 /**
                  * Obsolete as of Java 2 platform v1.3.  Please use string literals to identify
                  * properties.
                  */
                 // @ts-ignore
-                readonly HEADER_VALUE_PROPERTY: string
+                public static readonly HEADER_VALUE_PROPERTY: java.lang.String | string
                 /**
                  * Obsolete as of Java 2 platform v1.3.  Please use string literals to identify
                  * properties.
                  */
                 // @ts-ignore
-                readonly HEADER_RENDERER_PROPERTY: string
+                public static readonly HEADER_RENDERER_PROPERTY: java.lang.String | string
                 /**
                  * Obsolete as of Java 2 platform v1.3.  Please use string literals to identify
                  * properties.
                  */
                 // @ts-ignore
-                readonly CELL_RENDERER_PROPERTY: string
+                public static readonly CELL_RENDERER_PROPERTY: java.lang.String | string
                 /**
                  * The index of the column in the model which is to be displayed by
                  * this <code>TableColumn</code>. As columns are moved around in the
@@ -150,7 +150,7 @@ declare namespace javax {
                  * <code>DefaultTableColumnModel</code>.
                  */
                 // @ts-ignore
-                identifier: any
+                identifier: java.lang.Object | any
                 /**
                  * The width of the column.
                  */
@@ -175,7 +175,7 @@ declare namespace javax {
                  * The header value of the column.
                  */
                 // @ts-ignore
-                headerValue: any
+                headerValue: java.lang.Object | any
                 /**
                  * The renderer used to draw the data cells of the column.
                  */
@@ -208,13 +208,13 @@ declare namespace javax {
                  *   description: The model index.
                  */
                 // @ts-ignore
-                setModelIndex(modelIndex: number /*int*/): void
+                public setModelIndex(modelIndex: number /*int*/): void
                 /**
                  * Returns the model index for this column.
                  * @return the <code>modelIndex</code> property
                  */
                 // @ts-ignore
-                getModelIndex(): int
+                public getModelIndex(): number /*int*/
                 /**
                  * Sets the <code>TableColumn</code>'s identifier to
                  * <code>anIdentifier</code>. <p>
@@ -227,7 +227,7 @@ declare namespace javax {
                  *   description: A unique identifier for this column.
                  */
                 // @ts-ignore
-                setIdentifier(identifier: any): void
+                public setIdentifier(identifier: java.lang.Object | any): void
                 /**
                  * Returns the <code>identifier</code> object for this column.
                  * Note identifiers are not used by <code>JTable</code>,
@@ -239,7 +239,7 @@ declare namespace javax {
                  * @see #setIdentifier
                  */
                 // @ts-ignore
-                getIdentifier(): java.lang.Object
+                public getIdentifier(): any
                 /**
                  * Sets the <code>Object</code> whose string representation will be
                  * used as the value for the <code>headerRenderer</code>.  When the
@@ -251,7 +251,7 @@ declare namespace javax {
                  *   description: The text to be used by the header renderer.
                  */
                 // @ts-ignore
-                setHeaderValue(headerValue: any): void
+                public setHeaderValue(headerValue: java.lang.Object | any): void
                 /**
                  * Returns the <code>Object</code> used as the value for the header
                  * renderer.
@@ -259,7 +259,7 @@ declare namespace javax {
                  * @see #setHeaderValue
                  */
                 // @ts-ignore
-                getHeaderValue(): java.lang.Object
+                public getHeaderValue(): any
                 /**
                  * Sets the <code>TableCellRenderer</code> used to draw the
                  * <code>TableColumn</code>'s header to <code>headerRenderer</code>.
@@ -273,7 +273,7 @@ declare namespace javax {
                  *   description: The header renderer.
                  */
                 // @ts-ignore
-                setHeaderRenderer(headerRenderer: javax.swing.table.TableCellRenderer): void
+                public setHeaderRenderer(headerRenderer: javax.swing.table.TableCellRenderer): void
                 /**
                  * Returns the <code>TableCellRenderer</code> used to draw the header of the
                  * <code>TableColumn</code>. When the <code>headerRenderer</code> is
@@ -286,7 +286,7 @@ declare namespace javax {
                  * @see javax.swing.table.JTableHeader#getDefaultRenderer()
                  */
                 // @ts-ignore
-                getHeaderRenderer(): javax.swing.table.TableCellRenderer
+                public getHeaderRenderer(): javax.swing.table.TableCellRenderer
                 /**
                  * Sets the <code>TableCellRenderer</code> used by <code>JTable</code>
                  * to draw individual values for this column.
@@ -296,7 +296,7 @@ declare namespace javax {
                  *   description: The renderer to use for cell values.
                  */
                 // @ts-ignore
-                setCellRenderer(cellRenderer: javax.swing.table.TableCellRenderer): void
+                public setCellRenderer(cellRenderer: javax.swing.table.TableCellRenderer): void
                 /**
                  * Returns the <code>TableCellRenderer</code> used by the
                  * <code>JTable</code> to draw
@@ -312,7 +312,7 @@ declare namespace javax {
                  * @see JTable#setDefaultRenderer
                  */
                 // @ts-ignore
-                getCellRenderer(): javax.swing.table.TableCellRenderer
+                public getCellRenderer(): javax.swing.table.TableCellRenderer
                 /**
                  * Sets the editor to used by when a cell in this column is edited.
                  * @param cellEditor  the new cellEditor
@@ -321,7 +321,7 @@ declare namespace javax {
                  *   description: The editor to use for cell values.
                  */
                 // @ts-ignore
-                setCellEditor(cellEditor: javax.swing.table.TableCellEditor): void
+                public setCellEditor(cellEditor: javax.swing.table.TableCellEditor): void
                 /**
                  * Returns the <code>TableCellEditor</code> used by the
                  * <code>JTable</code> to edit values for this column.  When the
@@ -334,7 +334,7 @@ declare namespace javax {
                  * @see JTable#setDefaultEditor
                  */
                 // @ts-ignore
-                getCellEditor(): javax.swing.table.TableCellEditor
+                public getCellEditor(): javax.swing.table.TableCellEditor
                 /**
                  * This method should not be used to set the widths of columns in the
                  * <code>JTable</code>, use <code>setPreferredWidth</code> instead.
@@ -357,7 +357,7 @@ declare namespace javax {
                  *   description: The width of the column.
                  */
                 // @ts-ignore
-                setWidth(width: number /*int*/): void
+                public setWidth(width: number /*int*/): void
                 /**
                  * Returns the width of the <code>TableColumn</code>. The default width is
                  * 75.
@@ -365,7 +365,7 @@ declare namespace javax {
                  * @see #setWidth
                  */
                 // @ts-ignore
-                getWidth(): int
+                public getWidth(): number /*int*/
                 /**
                  * Sets this column's preferred width to <code>preferredWidth</code>.
                  * If <code>preferredWidth</code> exceeds the minimum or maximum width,
@@ -382,7 +382,7 @@ declare namespace javax {
                  *   description: The preferred width of the column.
                  */
                 // @ts-ignore
-                setPreferredWidth(preferredWidth: number /*int*/): void
+                public setPreferredWidth(preferredWidth: number /*int*/): void
                 /**
                  * Returns the preferred width of the <code>TableColumn</code>.
                  * The default preferred width is 75.
@@ -390,7 +390,7 @@ declare namespace javax {
                  * @see #setPreferredWidth
                  */
                 // @ts-ignore
-                getPreferredWidth(): int
+                public getPreferredWidth(): number /*int*/
                 /**
                  * Sets the <code>TableColumn</code>'s minimum width to
                  * <code>minWidth</code>,
@@ -411,7 +411,7 @@ declare namespace javax {
                  *   description: The minimum width of the column.
                  */
                 // @ts-ignore
-                setMinWidth(minWidth: number /*int*/): void
+                public setMinWidth(minWidth: number /*int*/): void
                 /**
                  * Returns the minimum width for the <code>TableColumn</code>. The
                  * <code>TableColumn</code>'s width can't be made less than this either
@@ -421,7 +421,7 @@ declare namespace javax {
                  * @see #TableColumn(int, int, TableCellRenderer, TableCellEditor)
                  */
                 // @ts-ignore
-                getMinWidth(): int
+                public getMinWidth(): number /*int*/
                 /**
                  * Sets the <code>TableColumn</code>'s maximum width to
                  * <code>maxWidth</code> or,
@@ -440,7 +440,7 @@ declare namespace javax {
                  *   description: The maximum width of the column.
                  */
                 // @ts-ignore
-                setMaxWidth(maxWidth: number /*int*/): void
+                public setMaxWidth(maxWidth: number /*int*/): void
                 /**
                  * Returns the maximum width for the <code>TableColumn</code>. The
                  * <code>TableColumn</code>'s width can't be made larger than this
@@ -450,7 +450,7 @@ declare namespace javax {
                  * @see #setMaxWidth
                  */
                 // @ts-ignore
-                getMaxWidth(): int
+                public getMaxWidth(): number /*int*/
                 /**
                  * Sets whether this column can be resized.
                  * @param isResizable  if true, resizing is allowed; otherwise false
@@ -459,7 +459,7 @@ declare namespace javax {
                  *   description: Whether or not this column can be resized.
                  */
                 // @ts-ignore
-                setResizable(isResizable: boolean): void
+                public setResizable(isResizable: boolean): void
                 /**
                  * Returns true if the user is allowed to resize the
                  * <code>TableColumn</code>'s
@@ -469,7 +469,7 @@ declare namespace javax {
                  * @see #setResizable
                  */
                 // @ts-ignore
-                getResizable(): boolean
+                public getResizable(): boolean
                 /**
                  * Resizes the <code>TableColumn</code> to fit the width of its header cell.
                  * This method does nothing if the header renderer is <code>null</code>
@@ -482,21 +482,21 @@ declare namespace javax {
                  * @see #setPreferredWidth
                  */
                 // @ts-ignore
-                sizeWidthToFit(): void
+                public sizeWidthToFit(): void
                 /**
                  * This field was not used in previous releases and there are
                  * currently no plans to support it in the future.
                  * @deprecated as of Java 2 platform v1.3
                  */
                 // @ts-ignore
-                disableResizedPosting(): void
+                public disableResizedPosting(): void
                 /**
                  * This field was not used in previous releases and there are
                  * currently no plans to support it in the future.
                  * @deprecated as of Java 2 platform v1.3
                  */
                 // @ts-ignore
-                enableResizedPosting(): void
+                public enableResizedPosting(): void
                 /**
                  * Adds a <code>PropertyChangeListener</code> to the listener list.
                  * The listener is registered for all properties.
@@ -511,7 +511,7 @@ declare namespace javax {
                  * @param listener  the listener to be added
                  */
                 // @ts-ignore
-                addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Removes a <code>PropertyChangeListener</code> from the listener list.
                  * The <code>PropertyChangeListener</code> to be removed was registered
@@ -519,7 +519,7 @@ declare namespace javax {
                  * @param listener  the listener to be removed
                  */
                 // @ts-ignore
-                removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Returns an array of all the <code>PropertyChangeListener</code>s added
                  * to this TableColumn with addPropertyChangeListener().
@@ -528,7 +528,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+                public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
                 /**
                  * As of Java 2 platform v1.3, this method is not called by the <code>TableColumn</code>
                  * constructor.  Previously this method was used by the

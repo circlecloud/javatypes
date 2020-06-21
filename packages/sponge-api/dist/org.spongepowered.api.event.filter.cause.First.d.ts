@@ -10,7 +10,7 @@ declare namespace org {
                          * @see Cause#first(Class)
                          */
                         // @ts-ignore
-                        class First implements java.lang.annotation.Annotation {
+                        abstract class First implements java.lang.annotation.Annotation {
                         }
                     }
                 }

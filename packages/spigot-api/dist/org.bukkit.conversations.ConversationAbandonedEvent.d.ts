@@ -16,13 +16,13 @@ declare namespace org {
                  * @return The object that abandoned the conversation.
                  */
                 // @ts-ignore
-                getCanceller(): org.bukkit.conversations.ConversationCanceller
+                public getCanceller(): org.bukkit.conversations.ConversationCanceller
                 /**
                  * Gets the abandoned conversation's conversation context.
                  * @return The abandoned conversation's conversation context.
                  */
                 // @ts-ignore
-                getContext(): org.bukkit.conversations.ConversationContext
+                public getContext(): org.bukkit.conversations.ConversationContext
                 /**
                  * Indicates how the conversation was abandoned - naturally as part of the
                  * prompt chain or prematurely via a {@link ConversationCanceller}.
@@ -31,7 +31,7 @@ declare namespace org {
                  *      conversations is abandoned prematurely by a ConversationCanceller.
                  */
                 // @ts-ignore
-                gracefulExit(): boolean
+                public gracefulExit(): boolean
             }
         }
     }

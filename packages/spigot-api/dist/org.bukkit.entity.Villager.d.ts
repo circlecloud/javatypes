@@ -37,7 +37,7 @@ declare namespace org {
                  * @return this villager's level
                  */
                 // @ts-ignore
-                getVillagerLevel(): int
+                getVillagerLevel(): number /*int*/
                 /**
                  * Sets the level of this villager.
                  * A villager with a level of 1 and no experience is liable to lose its
@@ -52,7 +52,7 @@ declare namespace org {
                  * @return trading experience
                  */
                 // @ts-ignore
-                getVillagerExperience(): int
+                getVillagerExperience(): number /*int*/
                 /**
                  * Sets the trading experience of this villager.
                  * @param experience new experience

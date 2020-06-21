@@ -24,7 +24,7 @@ declare namespace org {
                      * @return {#code true} if the value was successfully set, else {@code false}
                      */
                     // @ts-ignore
-                    set(value: T): boolean
+                    public set(value: T): boolean
                     /**
                      * Set the exception of this future. This method will return {@code true} if the
                      * exception was set successfully, or {@code false} if the future has already been
@@ -33,19 +33,19 @@ declare namespace org {
                      * @return {#code true} if the exception was successfully set, else {@code false}
                      */
                     // @ts-ignore
-                    setException(exception: Error): boolean
+                    public setException(exception: java.lang.Throwable | Error): boolean
                     // @ts-ignore
-                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any super T>): void
+                    public addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any>): void
                     // @ts-ignore
-                    addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any super T>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
+                    public addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
                     // @ts-ignore
-                    completable(): java.util.concurrent.CompletableFuture<T>
+                    public completable(): java.util.concurrent.CompletableFuture<T>
                     // @ts-ignore
-                    cancel(mayInterruptIfRunning: boolean): boolean
+                    public cancel(mayInterruptIfRunning: boolean): boolean
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    isDone(): boolean
+                    public isDone(): boolean
                     /**
                      * Retrieve the value.
                      * <p>This method returns the value if it has been set via {@link #set(Object)},
@@ -55,7 +55,7 @@ declare namespace org {
                      * @return the value associated with this future
                      */
                     // @ts-ignore
-                    get(): T
+                    public get(): T
                     /**
                      * Retrieve the value.
                      * <p>This method returns the value if it has been set via {@link #set(Object)},
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return the value associated with this future
                      */
                     // @ts-ignore
-                    get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
+                    public get(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): T
                     /**
                      * Subclasses can override this method to implement interruption of the future's
                      * computation. The method is invoked automatically by a successful call to

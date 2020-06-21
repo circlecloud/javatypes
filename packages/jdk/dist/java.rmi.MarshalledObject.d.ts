@@ -55,13 +55,13 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            get(): T
+            public get(): T
             /**
              * Return a hash code for this <code>MarshalledObject</code>.
              * @return a hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this <code>MarshalledObject</code> to another object.
              * Returns true if and only if the argument refers to a
@@ -77,7 +77,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

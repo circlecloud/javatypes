@@ -14,7 +14,7 @@ declare namespace org {
                         // @ts-ignore
                         fromClass(clazz: java.lang.Class<any>, properties: org.springframework.amqp.core.MessageProperties): void
                         // @ts-ignore
-                        toClass(properties: org.springframework.amqp.core.MessageProperties): java.lang.Class<?>
+                        toClass(properties: org.springframework.amqp.core.MessageProperties): java.lang.Class<any>
                     }
                 }
             }

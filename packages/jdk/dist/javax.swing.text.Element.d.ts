@@ -28,7 +28,7 @@ declare namespace javax {
                  * @return the element name
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Fetches the collection of attributes this element contains.
                  * @return the attributes for the element
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @see AbstractDocument
                  */
                 // @ts-ignore
-                getStartOffset(): int
+                getStartOffset(): number /*int*/
                 /**
                  * Fetches the offset from the beginning of the document
                  * that this element ends at.  If this element has
@@ -63,7 +63,7 @@ declare namespace javax {
                  * @see AbstractDocument
                  */
                 // @ts-ignore
-                getEndOffset(): int
+                getEndOffset(): number /*int*/
                 /**
                  * Gets the child element index closest to the given offset.
                  * The offset is specified relative to the beginning of the
@@ -78,14 +78,14 @@ declare namespace javax {
                  * @return the element index &gt;= 0
                  */
                 // @ts-ignore
-                getElementIndex(offset: number /*int*/): int
+                getElementIndex(offset: number /*int*/): number /*int*/
                 /**
                  * Gets the number of child elements contained by this element.
                  * If this element is a leaf, a count of zero is returned.
                  * @return the number of child elements &gt;= 0
                  */
                 // @ts-ignore
-                getElementCount(): int
+                getElementCount(): number /*int*/
                 /**
                  * Fetches the child element at the given index.
                  * @param index the specified index &gt;= 0

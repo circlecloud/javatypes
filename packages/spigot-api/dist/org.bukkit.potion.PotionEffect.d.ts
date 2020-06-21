@@ -56,9 +56,9 @@ declare namespace org {
                  * @param map the map to deserialize from
                  */
                 // @ts-ignore
-                constructor(map: java.util.Map<java.lang.String, java.lang.Object>)
+                constructor(map: java.util.Map<java.lang.String | string, java.lang.Object | any>)
                 // @ts-ignore
-                serialize(): java.util.Map<java.lang.String, java.lang.Object>
+                public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Attempts to add the effect represented by this object to the given
                  * {@link LivingEntity}.
@@ -67,9 +67,9 @@ declare namespace org {
                  * @see LivingEntity#addPotionEffect(PotionEffect)
                  */
                 // @ts-ignore
-                apply(entity: org.bukkit.entity.LivingEntity): boolean
+                public apply(entity: org.bukkit.entity.LivingEntity): boolean
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the amplifier of this effect. A higher amplifier means the
                  * potion effect happens more often over its duration and in some cases
@@ -77,46 +77,46 @@ declare namespace org {
                  * @return The effect amplifier
                  */
                 // @ts-ignore
-                getAmplifier(): int
+                public getAmplifier(): number /*int*/
                 /**
                  * Returns the duration (in ticks) that this effect will run for when
                  * applied to a {@link LivingEntity}.
                  * @return The duration of the effect
                  */
                 // @ts-ignore
-                getDuration(): int
+                public getDuration(): number /*int*/
                 /**
                  * Returns the {@link PotionEffectType} of this effect.
                  * @return The potion type of this effect
                  */
                 // @ts-ignore
-                getType(): org.bukkit.potion.PotionEffectType
+                public getType(): org.bukkit.potion.PotionEffectType
                 /**
                  * Makes potion effect produce more, translucent, particles.
                  * @return if this effect is ambient
                  */
                 // @ts-ignore
-                isAmbient(): boolean
+                public isAmbient(): boolean
                 /**
                  * @return whether this effect has particles or not
                  */
                 // @ts-ignore
-                hasParticles(): boolean
+                public hasParticles(): boolean
                 /**
                  * @return color of this potion's particles. May be null if the potion has no particles or defined color.
                  * @deprecated color is not part of potion effects
                  */
                 // @ts-ignore
-                getColor(): org.bukkit.Color
+                public getColor(): org.bukkit.Color
                 /**
                  * @return whether this effect has an icon or not
                  */
                 // @ts-ignore
-                hasIcon(): boolean
+                public hasIcon(): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

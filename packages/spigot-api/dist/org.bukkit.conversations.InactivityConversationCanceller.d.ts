@@ -21,11 +21,11 @@ declare namespace org {
                 // @ts-ignore
                 conversation: org.bukkit.conversations.Conversation
                 // @ts-ignore
-                setConversation(conversation: org.bukkit.conversations.Conversation): void
+                public setConversation(conversation: org.bukkit.conversations.Conversation): void
                 // @ts-ignore
-                cancelBasedOnInput(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                public cancelBasedOnInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 // @ts-ignore
-                clone(): org.bukkit.conversations.ConversationCanceller
+                public clone(): org.bukkit.conversations.ConversationCanceller
                 /**
                  * Subclasses of InactivityConversationCanceller can override this method
                  * to take additional actions when the inactivity timer abandons the

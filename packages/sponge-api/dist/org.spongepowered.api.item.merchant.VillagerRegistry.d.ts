@@ -13,7 +13,7 @@ declare namespace org {
                          * @return The immutable multimap
                          */
                         // @ts-ignore
-                        getTradeOfferLevelMap(career: org.spongepowered.api.data.type.Career): <any>
+                        getTradeOfferLevelMap(career: org.spongepowered.api.data.type.Career): object
                         /**
                          * Gets the available {@link TradeOfferListMutator}s for the desired
                          * {@link Career} and {@code level}.
@@ -22,7 +22,7 @@ declare namespace org {
                          * @return The collection of trade offer mutators, if available
                          */
                         // @ts-ignore
-                        getMutatorsForCareer(career: org.spongepowered.api.data.type.Career, level: number /*int*/): java.util.Collection<org.spongepowered.api.item.merchant.TradeOfferListMutator>
+                        getMutatorsForCareer(career: org.spongepowered.api.data.type.Career, level: number /*int*/): Array<org.spongepowered.api.item.merchant.TradeOfferListMutator>
                         /**
                          * Adds the provided {@link TradeOfferListMutator} for the given
                          * {@link Career} and {@code level}. Note that the level
@@ -60,7 +60,7 @@ declare namespace org {
                          * @return This registry, for chaining
                          */
                         // @ts-ignore
-                        setMutators(career: org.spongepowered.api.data.type.Career, level: number /*int*/, mutators: Array<org.spongepowered.api.item.merchant.TradeOfferListMutator>): org.spongepowered.api.item.merchant.VillagerRegistry
+                        setMutators(career: org.spongepowered.api.data.type.Career, level: number /*int*/, mutators: java.util.List<org.spongepowered.api.item.merchant.TradeOfferListMutator> | Array<org.spongepowered.api.item.merchant.TradeOfferListMutator>): org.spongepowered.api.item.merchant.VillagerRegistry
                         /**
                          * Sets the provided {@link TradeOfferListMutator} for the given
                          * {@link Career} and {@code level}. Note that the level
@@ -83,7 +83,7 @@ declare namespace org {
                          * @return The generated list of trade offers
                          */
                         // @ts-ignore
-                        generateTradeOffers(merchant: org.spongepowered.api.item.merchant.Merchant, career: org.spongepowered.api.data.type.Career, level: number /*int*/, random: java.util.Random): java.util.Collection<org.spongepowered.api.item.merchant.TradeOffer>
+                        generateTradeOffers(merchant: org.spongepowered.api.item.merchant.Merchant, career: org.spongepowered.api.data.type.Career, level: number /*int*/, random: java.util.Random): Array<org.spongepowered.api.item.merchant.TradeOffer>
                         /**
                          * Populates the provided {@link List} of {@link TradeOffer}s with
                          * potentially new {@link TradeOffer}s based on the
@@ -98,7 +98,7 @@ declare namespace org {
                          * @return The list of offers modified
                          */
                         // @ts-ignore
-                        populateOffers(merchant: org.spongepowered.api.item.merchant.Merchant, currentOffers: Array<org.spongepowered.api.item.merchant.TradeOffer>, career: org.spongepowered.api.data.type.Career, level: number /*int*/, random: java.util.Random): java.util.List<org.spongepowered.api.item.merchant.TradeOffer>
+                        populateOffers(merchant: org.spongepowered.api.item.merchant.Merchant, currentOffers: java.util.List<org.spongepowered.api.item.merchant.TradeOffer> | Array<org.spongepowered.api.item.merchant.TradeOffer>, career: org.spongepowered.api.data.type.Career, level: number /*int*/, random: java.util.Random): Array<org.spongepowered.api.item.merchant.TradeOffer>
                     }
                 }
             }

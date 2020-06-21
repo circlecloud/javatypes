@@ -46,7 +46,7 @@ declare namespace java {
              * @param sourceBean  The bean to be given as the source for any events.
              */
             // @ts-ignore
-            constructor(sourceBean: any)
+            constructor(sourceBean: java.lang.Object | any)
             /**
              * Add a PropertyChangeListener to the listener list.
              * The listener is registered for all properties.
@@ -57,7 +57,7 @@ declare namespace java {
              * @param listener  The PropertyChangeListener to be added
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Remove a PropertyChangeListener from the listener list.
              * This removes a PropertyChangeListener that was registered
@@ -69,7 +69,7 @@ declare namespace java {
              * @param listener  The PropertyChangeListener to be removed
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the listeners that were added to the
              * PropertyChangeSupport object with addPropertyChangeListener().
@@ -100,7 +100,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
             /**
              * Add a PropertyChangeListener for a specific property.  The listener
              * will be invoked only when a call on firePropertyChange names that
@@ -114,7 +114,7 @@ declare namespace java {
              * @param listener  The PropertyChangeListener to be added
              */
             // @ts-ignore
-            addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Remove a PropertyChangeListener for a specific property.
              * If <code>listener</code> was added more than once to the same event
@@ -128,7 +128,7 @@ declare namespace java {
              * @param listener  The PropertyChangeListener to be removed
              */
             // @ts-ignore
-            removePropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the listeners which have been associated
              * with the named property.
@@ -140,7 +140,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(propertyName: string): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(propertyName: java.lang.String | string): java.beans.PropertyChangeListener[]
             /**
              * Reports a bound property update to listeners
              * that have been registered to track updates of
@@ -155,7 +155,7 @@ declare namespace java {
              * @param newValue      the new value of the property
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Reports an integer bound property update to listeners
              * that have been registered to track updates of
@@ -170,7 +170,7 @@ declare namespace java {
              * @param newValue      the new value of the property
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*int*/, newValue: number /*int*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*int*/, newValue: number /*int*/): void
             /**
              * Reports a boolean bound property update to listeners
              * that have been registered to track updates of
@@ -185,7 +185,7 @@ declare namespace java {
              * @param newValue      the new value of the property
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
             /**
              * Fires a property change event to listeners
              * that have been registered to track updates of
@@ -195,7 +195,7 @@ declare namespace java {
              * @param event  the {#code PropertyChangeEvent} to be fired
              */
             // @ts-ignore
-            firePropertyChange(event: java.beans.PropertyChangeEvent): void
+            public firePropertyChange(event: java.beans.PropertyChangeEvent): void
             /**
              * Reports a bound indexed property update to listeners
              * that have been registered to track updates of
@@ -212,7 +212,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            fireIndexedPropertyChange(propertyName: string, index: number /*int*/, oldValue: any, newValue: any): void
+            public fireIndexedPropertyChange(propertyName: java.lang.String | string, index: number /*int*/, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Reports an integer bound indexed property update to listeners
              * that have been registered to track updates of
@@ -229,7 +229,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            fireIndexedPropertyChange(propertyName: string, index: number /*int*/, oldValue: number /*int*/, newValue: number /*int*/): void
+            public fireIndexedPropertyChange(propertyName: java.lang.String | string, index: number /*int*/, oldValue: number /*int*/, newValue: number /*int*/): void
             /**
              * Reports a boolean bound indexed property update to listeners
              * that have been registered to track updates of
@@ -246,7 +246,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            fireIndexedPropertyChange(propertyName: string, index: number /*int*/, oldValue: boolean, newValue: boolean): void
+            public fireIndexedPropertyChange(propertyName: java.lang.String | string, index: number /*int*/, oldValue: boolean, newValue: boolean): void
             /**
              * Check if there are any listeners for a specific property, including
              * those registered on all properties.  If <code>propertyName</code>
@@ -255,7 +255,7 @@ declare namespace java {
              * @return true if there are one or more listeners for the given property
              */
             // @ts-ignore
-            hasListeners(propertyName: string): boolean
+            public hasListeners(propertyName: java.lang.String | string): boolean
         }
     }
 }

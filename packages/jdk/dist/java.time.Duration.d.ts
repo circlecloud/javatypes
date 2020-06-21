@@ -39,7 +39,7 @@ declare namespace java {
              * Constant for a duration of zero.
              */
             // @ts-ignore
-            readonly ZERO: java.time.Duration
+            public static readonly ZERO: java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of standard 24 hour days.
              * <p>
@@ -51,7 +51,7 @@ declare namespace java {
              * @throws ArithmeticException if the input days exceeds the capacity of {#code Duration}
              */
             // @ts-ignore
-            ofDays(days: number /*long*/): java.time.Duration
+            public static ofDays(days: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of standard hours.
              * <p>
@@ -63,7 +63,7 @@ declare namespace java {
              * @throws ArithmeticException if the input hours exceeds the capacity of {#code Duration}
              */
             // @ts-ignore
-            ofHours(hours: number /*long*/): java.time.Duration
+            public static ofHours(hours: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of standard minutes.
              * <p>
@@ -75,7 +75,7 @@ declare namespace java {
              * @throws ArithmeticException if the input minutes exceeds the capacity of {#code Duration}
              */
             // @ts-ignore
-            ofMinutes(minutes: number /*long*/): java.time.Duration
+            public static ofMinutes(minutes: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of seconds.
              * <p>
@@ -84,7 +84,7 @@ declare namespace java {
              * @return a {#code Duration}, not null
              */
             // @ts-ignore
-            ofSeconds(seconds: number /*long*/): java.time.Duration
+            public static ofSeconds(seconds: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of seconds and an
              * adjustment in nanoseconds.
@@ -104,7 +104,7 @@ declare namespace java {
              * @throws ArithmeticException if the adjustment causes the seconds to exceed the capacity of {#code Duration}
              */
             // @ts-ignore
-            ofSeconds(seconds: number /*long*/, nanoAdjustment: number /*long*/): java.time.Duration
+            public static ofSeconds(seconds: number /*long*/, nanoAdjustment: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of milliseconds.
              * <p>
@@ -113,7 +113,7 @@ declare namespace java {
              * @return a {#code Duration}, not null
              */
             // @ts-ignore
-            ofMillis(millis: number /*long*/): java.time.Duration
+            public static ofMillis(millis: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing a number of nanoseconds.
              * <p>
@@ -122,7 +122,7 @@ declare namespace java {
              * @return a {#code Duration}, not null
              */
             // @ts-ignore
-            ofNanos(nanos: number /*long*/): java.time.Duration
+            public static ofNanos(nanos: number /*long*/): java.time.Duration
             /**
              * Obtains a {@code Duration} representing an amount in the specified unit.
              * <p>
@@ -141,7 +141,7 @@ declare namespace java {
              * @throws ArithmeticException if a numeric overflow occurs
              */
             // @ts-ignore
-            of(amount: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Duration
+            public static of(amount: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Duration
             /**
              * Obtains an instance of {@code Duration} from a temporal amount.
              * <p>
@@ -162,7 +162,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            from(amount: java.time.temporal.TemporalAmount): java.time.Duration
+            public static from(amount: java.time.temporal.TemporalAmount): java.time.Duration
             /**
              * Obtains a {@code Duration} from a text string such as {@code PnDTnHnMn.nS}.
              * <p>
@@ -207,7 +207,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed to a duration
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.Duration
+            public static parse(text: java.lang.CharSequence): java.time.Duration
             /**
              * Obtains a {@code Duration} representing the duration between two temporal objects.
              * <p>
@@ -229,7 +229,7 @@ declare namespace java {
              * @throws ArithmeticException if the calculation exceeds the capacity of {#code Duration}
              */
             // @ts-ignore
-            between(startInclusive: java.time.temporal.Temporal, endExclusive: java.time.temporal.Temporal): java.time.Duration
+            public static between(startInclusive: java.time.temporal.Temporal, endExclusive: java.time.temporal.Temporal): java.time.Duration
             /**
              * Gets the value of the requested unit.
              * <p>
@@ -242,7 +242,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the unit is not supported
              */
             // @ts-ignore
-            get(unit: java.time.temporal.TemporalUnit): long
+            public get(unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Gets the set of units supported by this duration.
              * <p>
@@ -255,7 +255,7 @@ declare namespace java {
              * @return a list containing the seconds and nanos units, not null
              */
             // @ts-ignore
-            getUnits(): java.util.List<java.time.temporal.TemporalUnit>
+            public getUnits(): Array<java.time.temporal.TemporalUnit>
             /**
              * Checks if this duration is zero length.
              * <p>
@@ -265,7 +265,7 @@ declare namespace java {
              * @return true if this duration has a total length equal to zero
              */
             // @ts-ignore
-            isZero(): boolean
+            public isZero(): boolean
             /**
              * Checks if this duration is negative, excluding zero.
              * <p>
@@ -275,7 +275,7 @@ declare namespace java {
              * @return true if this duration has a total length less than zero
              */
             // @ts-ignore
-            isNegative(): boolean
+            public isNegative(): boolean
             /**
              * Gets the number of seconds in this duration.
              * <p>
@@ -290,7 +290,7 @@ declare namespace java {
              * @return the whole seconds part of the length of the duration, positive or negative
              */
             // @ts-ignore
-            getSeconds(): long
+            public getSeconds(): number /*long*/
             /**
              * Gets the number of nanoseconds within the second in this duration.
              * <p>
@@ -305,7 +305,7 @@ declare namespace java {
              * @return the nanoseconds within the second part of the length of the duration, from 0 to 999,999,999
              */
             // @ts-ignore
-            getNano(): int
+            public getNano(): number /*int*/
             /**
              * Returns a copy of this duration with the specified amount of seconds.
              * <p>
@@ -317,7 +317,7 @@ declare namespace java {
              * @return a {#code Duration} based on this period with the requested seconds, not null
              */
             // @ts-ignore
-            withSeconds(seconds: number /*long*/): java.time.Duration
+            public withSeconds(seconds: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified nano-of-second.
              * <p>
@@ -330,7 +330,7 @@ declare namespace java {
              * @throws DateTimeException if the nano-of-second is invalid
              */
             // @ts-ignore
-            withNanos(nanoOfSecond: number /*int*/): java.time.Duration
+            public withNanos(nanoOfSecond: number /*int*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration added.
              * <p>
@@ -340,7 +340,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(duration: java.time.Duration): java.time.Duration
+            public plus(duration: java.time.Duration): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration added.
              * <p>
@@ -357,7 +357,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Duration
+            public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in standard 24 hour days added.
              * <p>
@@ -370,7 +370,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusDays(daysToAdd: number /*long*/): java.time.Duration
+            public plusDays(daysToAdd: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in hours added.
              * <p>
@@ -380,7 +380,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusHours(hoursToAdd: number /*long*/): java.time.Duration
+            public plusHours(hoursToAdd: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in minutes added.
              * <p>
@@ -390,7 +390,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusMinutes(minutesToAdd: number /*long*/): java.time.Duration
+            public plusMinutes(minutesToAdd: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in seconds added.
              * <p>
@@ -400,7 +400,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusSeconds(secondsToAdd: number /*long*/): java.time.Duration
+            public plusSeconds(secondsToAdd: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in milliseconds added.
              * <p>
@@ -410,7 +410,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusMillis(millisToAdd: number /*long*/): java.time.Duration
+            public plusMillis(millisToAdd: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in nanoseconds added.
              * <p>
@@ -420,7 +420,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusNanos(nanosToAdd: number /*long*/): java.time.Duration
+            public plusNanos(nanosToAdd: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration subtracted.
              * <p>
@@ -430,7 +430,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(duration: java.time.Duration): java.time.Duration
+            public minus(duration: java.time.Duration): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration subtracted.
              * <p>
@@ -446,7 +446,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Duration
+            public minus(amountToSubtract: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in standard 24 hour days subtracted.
              * <p>
@@ -459,7 +459,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusDays(daysToSubtract: number /*long*/): java.time.Duration
+            public minusDays(daysToSubtract: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in hours subtracted.
              * <p>
@@ -471,7 +471,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusHours(hoursToSubtract: number /*long*/): java.time.Duration
+            public minusHours(hoursToSubtract: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in minutes subtracted.
              * <p>
@@ -483,7 +483,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusMinutes(minutesToSubtract: number /*long*/): java.time.Duration
+            public minusMinutes(minutesToSubtract: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in seconds subtracted.
              * <p>
@@ -493,7 +493,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusSeconds(secondsToSubtract: number /*long*/): java.time.Duration
+            public minusSeconds(secondsToSubtract: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in milliseconds subtracted.
              * <p>
@@ -503,7 +503,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusMillis(millisToSubtract: number /*long*/): java.time.Duration
+            public minusMillis(millisToSubtract: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the specified duration in nanoseconds subtracted.
              * <p>
@@ -513,7 +513,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusNanos(nanosToSubtract: number /*long*/): java.time.Duration
+            public minusNanos(nanosToSubtract: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration multiplied by the scalar.
              * <p>
@@ -523,7 +523,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            multipliedBy(multiplicand: number /*long*/): java.time.Duration
+            public multipliedBy(multiplicand: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration divided by the specified value.
              * <p>
@@ -533,7 +533,7 @@ declare namespace java {
              * @throws ArithmeticException if the divisor is zero or if numeric overflow occurs
              */
             // @ts-ignore
-            dividedBy(divisor: number /*long*/): java.time.Duration
+            public dividedBy(divisor: number /*long*/): java.time.Duration
             /**
              * Returns a copy of this duration with the length negated.
              * <p>
@@ -545,7 +545,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            negated(): java.time.Duration
+            public negated(): java.time.Duration
             /**
              * Returns a copy of this duration with a positive length.
              * <p>
@@ -557,7 +557,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            abs(): java.time.Duration
+            public abs(): java.time.Duration
             /**
              * Adds this duration to the specified temporal object.
              * <p>
@@ -582,7 +582,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            addTo(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public addTo(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Subtracts this duration from the specified temporal object.
              * <p>
@@ -607,7 +607,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            subtractFrom(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public subtractFrom(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Gets the number of days in this duration.
              * <p>
@@ -619,7 +619,7 @@ declare namespace java {
              * @return the number of days in the duration, may be negative
              */
             // @ts-ignore
-            toDays(): long
+            public toDays(): number /*long*/
             /**
              * Gets the number of hours in this duration.
              * <p>
@@ -630,7 +630,7 @@ declare namespace java {
              * @return the number of hours in the duration, may be negative
              */
             // @ts-ignore
-            toHours(): long
+            public toHours(): number /*long*/
             /**
              * Gets the number of minutes in this duration.
              * <p>
@@ -641,7 +641,7 @@ declare namespace java {
              * @return the number of minutes in the duration, may be negative
              */
             // @ts-ignore
-            toMinutes(): long
+            public toMinutes(): number /*long*/
             /**
              * Converts this duration to the total length in milliseconds.
              * <p>
@@ -655,7 +655,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            toMillis(): long
+            public toMillis(): number /*long*/
             /**
              * Converts this duration to the total length in nanoseconds expressed as a {@code long}.
              * <p>
@@ -665,7 +665,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            toNanos(): long
+            public toNanos(): number /*long*/
             /**
              * Compares this duration to the specified {@code Duration}.
              * <p>
@@ -675,7 +675,7 @@ declare namespace java {
              * @return the comparator value, negative if less, positive if greater
              */
             // @ts-ignore
-            compareTo(otherDuration: java.time.Duration): int
+            public compareTo(otherDuration: java.time.Duration): number /*int*/
             /**
              * Checks if this duration is equal to the specified {@code Duration}.
              * <p>
@@ -684,13 +684,13 @@ declare namespace java {
              * @return true if the other duration is equal to this one
              */
             // @ts-ignore
-            equals(otherDuration: any): boolean
+            public equals(otherDuration: java.lang.Object | any): boolean
             /**
              * A hash code for this duration.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * A string representation of this duration using ISO-8601 seconds
              * based representation, such as {@code PT8H6M12.345S}.
@@ -713,7 +713,7 @@ declare namespace java {
              * @return an ISO-8601 representation of this duration, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

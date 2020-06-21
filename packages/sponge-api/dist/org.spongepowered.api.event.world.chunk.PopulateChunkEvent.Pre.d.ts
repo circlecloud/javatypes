@@ -15,7 +15,7 @@ declare namespace org {
                                  * @return The populators
                                  */
                                 // @ts-ignore
-                                getPendingPopulators(): java.util.List<org.spongepowered.api.world.gen.Populator>
+                                getPendingPopulators(): Array<org.spongepowered.api.world.gen.Populator>
                             }
                         }
                     }

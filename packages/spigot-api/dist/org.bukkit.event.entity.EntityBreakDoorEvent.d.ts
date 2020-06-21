@@ -12,7 +12,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(entity: org.bukkit.entity.LivingEntity, targetBlock: org.bukkit.block.Block)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                 }
             }
         }

@@ -14,7 +14,7 @@ declare namespace org {
                 // @ts-ignore
                 command: org.bukkit.command.Command
                 // @ts-ignore
-                canSee(sender: org.bukkit.command.CommandSender): boolean
+                public canSee(sender: org.bukkit.command.CommandSender): boolean
             }
         }
     }

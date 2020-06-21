@@ -6,22 +6,22 @@ declare namespace org {
                     namespace immutable {
                         namespace common {
                             // @ts-ignore
-                            class AbstractImmutableListData<E, I extends org.spongepowered.api.data.manipulator.immutable.ImmutableListData<E, I, M>, M extends org.spongepowered.api.data.manipulator.mutable.ListData<E, M, I>> extends org.spongepowered.api.data.manipulator.immutable.common.AbstractImmutableSingleData<java.util.List<E>, I, M> implements org.spongepowered.api.data.manipulator.immutable.ImmutableListData<E, I, M> {
+                            abstract class AbstractImmutableListData<E, I extends org.spongepowered.api.data.manipulator.immutable.ImmutableListData<E, I, M>, M extends org.spongepowered.api.data.manipulator.mutable.ListData<E, M, I>> extends org.spongepowered.api.data.manipulator.immutable.common.AbstractImmutableSingleData<java.util.List<E> | Array<E>, I, M> implements org.spongepowered.api.data.manipulator.immutable.ImmutableListData<E, I, M> {
                                 /**
                                  * @deprecated Use {#link #AbstractImmutableListData(Key, List)} instead.
                                  */
                                 // @ts-ignore
-                                constructor(value: Array<E>, usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<java.util.List<E>>>)
+                                constructor(value: java.util.List<E> | Array<E>, usedKey: org.spongepowered.api.data.key.Key<any>)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, value: Array<E>)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, value: java.util.List<E> | Array<E>)
                                 // @ts-ignore
-                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, value: Array<E>, defaultValue: Array<E>)
+                                constructor(usedKey: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.mutable.ListValue<E>>, value: java.util.List<E> | Array<E>, defaultValue: java.util.List<E> | Array<E>)
                                 // @ts-ignore
                                 getValueGetter(): org.spongepowered.api.data.value.immutable.ImmutableListValue<E>
                                 // @ts-ignore
-                                getListValue(): org.spongepowered.api.data.value.immutable.ImmutableListValue<E>
+                                public getListValue(): org.spongepowered.api.data.value.immutable.ImmutableListValue<E>
                                 // @ts-ignore
-                                asList(): java.util.List<E>
+                                public asList(): Array<E>
                             }
                         }
                     }

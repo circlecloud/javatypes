@@ -10,7 +10,7 @@ declare namespace org {
                  * @see AnnotatedElementKey
                  */
                 // @ts-ignore
-                class CachedExpressionEvaluator extends java.lang.Object {
+                abstract class CachedExpressionEvaluator extends java.lang.Object {
                     /**
                      * Create a new instance with the specified {@link SpelExpressionParser}.
                      */
@@ -40,7 +40,7 @@ declare namespace org {
                      * @param expression the expression to parse
                      */
                     // @ts-ignore
-                    getExpression(cache: java.util.Map<org.springframework.context.expression.CachedExpressionEvaluator.ExpressionKey, Expression>, elementKey: org.springframework.context.expression.AnnotatedElementKey, expression: string): Expression
+                    getExpression(cache: java.util.Map<org.springframework.context.expression.CachedExpressionEvaluator.ExpressionKey, Expression>, elementKey: org.springframework.context.expression.AnnotatedElementKey, expression: java.lang.String | string): Expression
                 }
             }
         }

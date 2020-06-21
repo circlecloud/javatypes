@@ -52,14 +52,14 @@ declare namespace java {
              * <i>e</i>, the base of the natural logarithms.
              */
             // @ts-ignore
-            readonly E: number /*double*/
+            public static readonly E: number /*double*/
             /**
              * The {@code double} value that is closer than any other to
              * <i>pi</i>, the ratio of the circumference of a circle to its
              * diameter.
              */
             // @ts-ignore
-            readonly PI: number /*double*/
+            public static readonly PI: number /*double*/
             /**
              * Returns the trigonometric sine of an angle. Special cases:
              * <ul><li>If the argument is NaN or an infinity, then the
@@ -70,7 +70,7 @@ declare namespace java {
              * @return the sine of the argument.
              */
             // @ts-ignore
-            sin(a: number /*double*/): double
+            public static sin(a: number /*double*/): number /*double*/
             /**
              * Returns the trigonometric cosine of an angle. Special cases:
              * <ul><li>If the argument is NaN or an infinity, then the
@@ -79,7 +79,7 @@ declare namespace java {
              * @return the cosine of the argument.
              */
             // @ts-ignore
-            cos(a: number /*double*/): double
+            public static cos(a: number /*double*/): number /*double*/
             /**
              * Returns the trigonometric tangent of an angle. Special cases:
              * <ul><li>If the argument is NaN or an infinity, then the result
@@ -90,7 +90,7 @@ declare namespace java {
              * @return the tangent of the argument.
              */
             // @ts-ignore
-            tan(a: number /*double*/): double
+            public static tan(a: number /*double*/): number /*double*/
             /**
              * Returns the arc sine of a value; the returned angle is in the
              * range -<i>pi</i>/2 through <i>pi</i>/2.  Special cases:
@@ -102,7 +102,7 @@ declare namespace java {
              * @return the arc sine of the argument.
              */
             // @ts-ignore
-            asin(a: number /*double*/): double
+            public static asin(a: number /*double*/): number /*double*/
             /**
              * Returns the arc cosine of a value; the returned angle is in the
              * range 0.0 through <i>pi</i>.  Special case:
@@ -112,7 +112,7 @@ declare namespace java {
              * @return the arc cosine of the argument.
              */
             // @ts-ignore
-            acos(a: number /*double*/): double
+            public static acos(a: number /*double*/): number /*double*/
             /**
              * Returns the arc tangent of a value; the returned angle is in the
              * range -<i>pi</i>/2 through <i>pi</i>/2.  Special cases:
@@ -123,7 +123,7 @@ declare namespace java {
              * @return the arc tangent of the argument.
              */
             // @ts-ignore
-            atan(a: number /*double*/): double
+            public static atan(a: number /*double*/): number /*double*/
             /**
              * Converts an angle measured in degrees to an approximately
              * equivalent angle measured in radians.  The conversion from
@@ -133,7 +133,7 @@ declare namespace java {
              *           in radians.
              */
             // @ts-ignore
-            toRadians(angdeg: number /*double*/): double
+            public static toRadians(angdeg: number /*double*/): number /*double*/
             /**
              * Converts an angle measured in radians to an approximately
              * equivalent angle measured in degrees.  The conversion from
@@ -145,7 +145,7 @@ declare namespace java {
              *           in degrees.
              */
             // @ts-ignore
-            toDegrees(angrad: number /*double*/): double
+            public static toDegrees(angrad: number /*double*/): number /*double*/
             /**
              * Returns Euler's number <i>e</i> raised to the power of a
              * {@code double} value. Special cases:
@@ -159,7 +159,7 @@ declare namespace java {
              *           where <i>e</i> is the base of the natural logarithms.
              */
             // @ts-ignore
-            exp(a: number /*double*/): double
+            public static exp(a: number /*double*/): number /*double*/
             /**
              * Returns the natural logarithm (base <i>e</i>) of a {@code double}
              * value. Special cases:
@@ -174,7 +174,7 @@ declare namespace java {
              *           {@code a}.
              */
             // @ts-ignore
-            log(a: number /*double*/): double
+            public static log(a: number /*double*/): number /*double*/
             /**
              * Returns the base 10 logarithm of a {@code double} value.
              * Special cases:
@@ -192,7 +192,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            log10(a: number /*double*/): double
+            public static log10(a: number /*double*/): number /*double*/
             /**
              * Returns the correctly rounded positive square root of a
              * {@code double} value.
@@ -209,7 +209,7 @@ declare namespace java {
              * @return the positive square root of {#code a}.
              */
             // @ts-ignore
-            sqrt(a: number /*double*/): double
+            public static sqrt(a: number /*double*/): number /*double*/
             /**
              * Returns the cube root of a {@code double} value.  For
              * positive finite {@code x}, {@code cbrt(-x) ==
@@ -228,7 +228,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            cbrt(a: number /*double*/): double
+            public static cbrt(a: number /*double*/): number /*double*/
             /**
              * Computes the remainder operation on two arguments as prescribed
              * by the IEEE 754 standard.
@@ -251,7 +251,7 @@ declare namespace java {
              *           {@code f2}.
              */
             // @ts-ignore
-            IEEEremainder(f1: number /*double*/, f2: number /*double*/): double
+            public static IEEEremainder(f1: number /*double*/, f2: number /*double*/): number /*double*/
             /**
              * Returns the smallest (closest to negative infinity)
              * {@code double} value that is greater than or equal to the
@@ -270,7 +270,7 @@ declare namespace java {
              *           the argument and is equal to a mathematical integer.
              */
             // @ts-ignore
-            ceil(a: number /*double*/): double
+            public static ceil(a: number /*double*/): number /*double*/
             /**
              * Returns the largest (closest to positive infinity)
              * {@code double} value that is less than or equal to the
@@ -286,7 +286,7 @@ declare namespace java {
              *           and is equal to a mathematical integer.
              */
             // @ts-ignore
-            floor(a: number /*double*/): double
+            public static floor(a: number /*double*/): number /*double*/
             /**
              * Returns the {@code double} value that is closest in value
              * to the argument and is equal to a mathematical integer. If two
@@ -303,7 +303,7 @@ declare namespace java {
              * @author Joseph D. Darcy
              */
             // @ts-ignore
-            rint(a: number /*double*/): double
+            public static rint(a: number /*double*/): number /*double*/
             /**
              * Returns the angle <i>theta</i> from the conversion of rectangular
              * coordinates ({@code x},&nbsp;{@code y}) to polar
@@ -353,7 +353,7 @@ declare namespace java {
              *           (<i>x</i>,&nbsp;<i>y</i>) in Cartesian coordinates.
              */
             // @ts-ignore
-            atan2(y: number /*double*/, x: number /*double*/): double
+            public static atan2(y: number /*double*/, x: number /*double*/): number /*double*/
             /**
              * Returns the value of the first argument raised to the power of the
              * second argument. Special cases:
@@ -459,7 +459,7 @@ declare namespace java {
              * @return the value {#code a}<sup>{@code b}</sup>.
              */
             // @ts-ignore
-            pow(a: number /*double*/, b: number /*double*/): double
+            public static pow(a: number /*double*/, b: number /*double*/): number /*double*/
             /**
              * Returns the closest {@code int} to the argument, with ties
              * rounding to positive infinity.
@@ -478,7 +478,7 @@ declare namespace java {
              * @see java.lang.Integer#MIN_VALUE
              */
             // @ts-ignore
-            round(a: number /*float*/): int
+            public static round(a: number /*float*/): number /*int*/
             /**
              * Returns the closest {@code long} to the argument, with ties
              * rounding to positive infinity.
@@ -498,7 +498,7 @@ declare namespace java {
              * @see java.lang.Long#MIN_VALUE
              */
             // @ts-ignore
-            round(a: number /*double*/): long
+            public static round(a: number /*double*/): number /*long*/
             /**
              * Returns a {@code double} value with a positive sign, greater
              * than or equal to {@code 0.0} and less than {@code 1.0}.
@@ -518,7 +518,7 @@ declare namespace java {
              * @see Random#nextDouble()
              */
             // @ts-ignore
-            random(): double
+            public static random(): number /*double*/
             /**
              * Returns the sum of its arguments,
              * throwing an exception if the result overflows an {@code int}.
@@ -530,7 +530,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            addExact(x: number /*int*/, y: number /*int*/): int
+            public static addExact(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the sum of its arguments,
              * throwing an exception if the result overflows a {@code long}.
@@ -542,7 +542,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            addExact(x: number /*long*/, y: number /*long*/): long
+            public static addExact(x: number /*long*/, y: number /*long*/): number /*long*/
             /**
              * Returns the difference of the arguments,
              * throwing an exception if the result overflows an {@code int}.
@@ -554,7 +554,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            subtractExact(x: number /*int*/, y: number /*int*/): int
+            public static subtractExact(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the difference of the arguments,
              * throwing an exception if the result overflows a {@code long}.
@@ -566,7 +566,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            subtractExact(x: number /*long*/, y: number /*long*/): long
+            public static subtractExact(x: number /*long*/, y: number /*long*/): number /*long*/
             /**
              * Returns the product of the arguments,
              * throwing an exception if the result overflows an {@code int}.
@@ -578,7 +578,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            multiplyExact(x: number /*int*/, y: number /*int*/): int
+            public static multiplyExact(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the product of the arguments,
              * throwing an exception if the result overflows a {@code long}.
@@ -590,7 +590,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            multiplyExact(x: number /*long*/, y: number /*long*/): long
+            public static multiplyExact(x: number /*long*/, y: number /*long*/): number /*long*/
             /**
              * Returns the value of the {@code long} argument;
              * throwing an exception if the value overflows an {@code int}.
@@ -601,7 +601,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toIntExact(value: number /*long*/): int
+            public static toIntExact(value: number /*long*/): number /*int*/
             /**
              * Returns the largest (closest to positive infinity)
              * {@code int} value that is less than or equal to the algebraic quotient.
@@ -622,7 +622,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            floorDiv(x: number /*int*/, y: number /*int*/): int
+            public static floorDiv(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the largest (closest to positive infinity)
              * {@code long} value that is less than or equal to the algebraic quotient.
@@ -643,7 +643,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            floorDiv(x: number /*long*/, y: number /*long*/): long
+            public static floorDiv(x: number /*long*/, y: number /*long*/): number /*long*/
             /**
              * Returns the floor modulus of the {@code int} arguments.
              * <p>
@@ -667,7 +667,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            floorMod(x: number /*int*/, y: number /*int*/): int
+            public static floorMod(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the floor modulus of the {@code long} arguments.
              * <p>
@@ -691,7 +691,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            floorMod(x: number /*long*/, y: number /*long*/): long
+            public static floorMod(x: number /*long*/, y: number /*long*/): number /*long*/
             /**
              * Returns the absolute value of an {@code int} value.
              * If the argument is not negative, the argument is returned.
@@ -704,7 +704,7 @@ declare namespace java {
              * @return the absolute value of the argument.
              */
             // @ts-ignore
-            abs(a: number /*int*/): int
+            public static abs(a: number /*int*/): number /*int*/
             /**
              * Returns the absolute value of a {@code long} value.
              * If the argument is not negative, the argument is returned.
@@ -717,7 +717,7 @@ declare namespace java {
              * @return the absolute value of the argument.
              */
             // @ts-ignore
-            abs(a: number /*long*/): long
+            public static abs(a: number /*long*/): number /*long*/
             /**
              * Returns the absolute value of a {@code float} value.
              * If the argument is not negative, the argument is returned.
@@ -733,7 +733,7 @@ declare namespace java {
              * @return the absolute value of the argument.
              */
             // @ts-ignore
-            abs(a: number /*float*/): float
+            public static abs(a: number /*float*/): number /*float*/
             /**
              * Returns the absolute value of a {@code double} value.
              * If the argument is not negative, the argument is returned.
@@ -749,7 +749,7 @@ declare namespace java {
              * @return the absolute value of the argument.
              */
             // @ts-ignore
-            abs(a: number /*double*/): double
+            public static abs(a: number /*double*/): number /*double*/
             /**
              * Returns the greater of two {@code int} values. That is, the
              * result is the argument closer to the value of
@@ -760,7 +760,7 @@ declare namespace java {
              * @return the larger of {#code a} and {@code b}.
              */
             // @ts-ignore
-            max(a: number /*int*/, b: number /*int*/): int
+            public static max(a: number /*int*/, b: number /*int*/): number /*int*/
             /**
              * Returns the greater of two {@code long} values. That is, the
              * result is the argument closer to the value of
@@ -771,7 +771,7 @@ declare namespace java {
              * @return the larger of {#code a} and {@code b}.
              */
             // @ts-ignore
-            max(a: number /*long*/, b: number /*long*/): long
+            public static max(a: number /*long*/, b: number /*long*/): number /*long*/
             /**
              * Returns the greater of two {@code float} values.  That is,
              * the result is the argument closer to positive infinity. If the
@@ -786,7 +786,7 @@ declare namespace java {
              * @return the larger of {#code a} and {@code b}.
              */
             // @ts-ignore
-            max(a: number /*float*/, b: number /*float*/): float
+            public static max(a: number /*float*/, b: number /*float*/): number /*float*/
             /**
              * Returns the greater of two {@code double} values.  That
              * is, the result is the argument closer to positive infinity. If
@@ -801,7 +801,7 @@ declare namespace java {
              * @return the larger of {#code a} and {@code b}.
              */
             // @ts-ignore
-            max(a: number /*double*/, b: number /*double*/): double
+            public static max(a: number /*double*/, b: number /*double*/): number /*double*/
             /**
              * Returns the smaller of two {@code int} values. That is,
              * the result the argument closer to the value of
@@ -812,7 +812,7 @@ declare namespace java {
              * @return the smaller of {#code a} and {@code b}.
              */
             // @ts-ignore
-            min(a: number /*int*/, b: number /*int*/): int
+            public static min(a: number /*int*/, b: number /*int*/): number /*int*/
             /**
              * Returns the smaller of two {@code long} values. That is,
              * the result is the argument closer to the value of
@@ -823,7 +823,7 @@ declare namespace java {
              * @return the smaller of {#code a} and {@code b}.
              */
             // @ts-ignore
-            min(a: number /*long*/, b: number /*long*/): long
+            public static min(a: number /*long*/, b: number /*long*/): number /*long*/
             /**
              * Returns the smaller of two {@code float} values.  That is,
              * the result is the value closer to negative infinity. If the
@@ -838,7 +838,7 @@ declare namespace java {
              * @return the smaller of {#code a} and {@code b.}
              */
             // @ts-ignore
-            min(a: number /*float*/, b: number /*float*/): float
+            public static min(a: number /*float*/, b: number /*float*/): number /*float*/
             /**
              * Returns the smaller of two {@code double} values.  That
              * is, the result is the value closer to negative infinity. If the
@@ -853,7 +853,7 @@ declare namespace java {
              * @return the smaller of {#code a} and {@code b}.
              */
             // @ts-ignore
-            min(a: number /*double*/, b: number /*double*/): double
+            public static min(a: number /*double*/, b: number /*double*/): number /*double*/
             /**
              * Returns the size of an ulp of the argument.  An ulp, unit in
              * the last place, of a {@code double} value is the positive
@@ -876,7 +876,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            ulp(d: number /*double*/): double
+            public static ulp(d: number /*double*/): number /*double*/
             /**
              * Returns the size of an ulp of the argument.  An ulp, unit in
              * the last place, of a {@code float} value is the positive
@@ -899,7 +899,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            ulp(f: number /*float*/): float
+            public static ulp(f: number /*float*/): number /*float*/
             /**
              * Returns the signum function of the argument; zero if the argument
              * is zero, 1.0 if the argument is greater than zero, -1.0 if the
@@ -916,7 +916,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            signum(d: number /*double*/): double
+            public static signum(d: number /*double*/): number /*double*/
             /**
              * Returns the signum function of the argument; zero if the argument
              * is zero, 1.0f if the argument is greater than zero, -1.0f if the
@@ -933,7 +933,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            signum(f: number /*float*/): float
+            public static signum(f: number /*float*/): number /*float*/
             /**
              * Returns the hyperbolic sine of a {@code double} value.
              * The hyperbolic sine of <i>x</i> is defined to be
@@ -952,7 +952,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            sinh(x: number /*double*/): double
+            public static sinh(x: number /*double*/): number /*double*/
             /**
              * Returns the hyperbolic cosine of a {@code double} value.
              * The hyperbolic cosine of <i>x</i> is defined to be
@@ -970,7 +970,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            cosh(x: number /*double*/): double
+            public static cosh(x: number /*double*/): number /*double*/
             /**
              * Returns the hyperbolic tangent of a {@code double} value.
              * The hyperbolic tangent of <i>x</i> is defined to be
@@ -994,7 +994,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            tanh(x: number /*double*/): double
+            public static tanh(x: number /*double*/): number /*double*/
             /**
              * Returns sqrt(<i>x</i><sup>2</sup>&nbsp;+<i>y</i><sup>2</sup>)
              * without intermediate overflow or underflow.
@@ -1012,7 +1012,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            hypot(x: number /*double*/, y: number /*double*/): double
+            public static hypot(x: number /*double*/, y: number /*double*/): number /*double*/
             /**
              * Returns <i>e</i><sup>x</sup>&nbsp;-1.  Note that for values of
              * <i>x</i> near 0, the exact sum of
@@ -1034,7 +1034,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            expm1(x: number /*double*/): double
+            public static expm1(x: number /*double*/): number /*double*/
             /**
              * Returns the natural logarithm of the sum of the argument and 1.
              * Note that for small values {@code x}, the result of
@@ -1058,7 +1058,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            log1p(x: number /*double*/): double
+            public static log1p(x: number /*double*/): number /*double*/
             /**
              * Returns the first floating-point argument with the sign of the
              * second floating-point argument.  For this method, a NaN
@@ -1071,7 +1071,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copySign(magnitude: number /*double*/, sign: number /*double*/): double
+            public static copySign(magnitude: number /*double*/, sign: number /*double*/): number /*double*/
             /**
              * Returns the first floating-point argument with the sign of the
              * second floating-point argument.  For this method, a NaN
@@ -1084,7 +1084,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            copySign(magnitude: number /*float*/, sign: number /*float*/): float
+            public static copySign(magnitude: number /*float*/, sign: number /*float*/): number /*float*/
             /**
              * Returns the unbiased exponent used in the representation of a
              * {@code float}.  Special cases:
@@ -1099,7 +1099,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getExponent(f: number /*float*/): int
+            public static getExponent(f: number /*float*/): number /*int*/
             /**
              * Returns the unbiased exponent used in the representation of a
              * {@code double}.  Special cases:
@@ -1114,7 +1114,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getExponent(d: number /*double*/): int
+            public static getExponent(d: number /*double*/): number /*int*/
             /**
              * Returns the floating-point number adjacent to the first
              * argument in the direction of the second argument.  If both
@@ -1149,7 +1149,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            nextAfter(start: number /*double*/, direction: number /*double*/): double
+            public static nextAfter(start: number /*double*/, direction: number /*double*/): number /*double*/
             /**
              * Returns the floating-point number adjacent to the first
              * argument in the direction of the second argument.  If both
@@ -1183,7 +1183,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            nextAfter(start: number /*float*/, direction: number /*double*/): float
+            public static nextAfter(start: number /*float*/, direction: number /*double*/): number /*float*/
             /**
              * Returns the floating-point value adjacent to {@code d} in
              * the direction of positive infinity.  This method is
@@ -1205,7 +1205,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            nextUp(d: number /*double*/): double
+            public static nextUp(d: number /*double*/): number /*double*/
             /**
              * Returns the floating-point value adjacent to {@code f} in
              * the direction of positive infinity.  This method is
@@ -1227,7 +1227,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            nextUp(f: number /*float*/): float
+            public static nextUp(f: number /*float*/): number /*float*/
             /**
              * Returns the floating-point value adjacent to {@code d} in
              * the direction of negative infinity.  This method is
@@ -1249,7 +1249,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            nextDown(d: number /*double*/): double
+            public static nextDown(d: number /*double*/): number /*double*/
             /**
              * Returns the floating-point value adjacent to {@code f} in
              * the direction of negative infinity.  This method is
@@ -1271,7 +1271,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            nextDown(f: number /*float*/): float
+            public static nextDown(f: number /*float*/): number /*float*/
             /**
              * Returns {@code d} &times;
              * 2<sup>{@code scaleFactor}</sup> rounded as if performed
@@ -1301,7 +1301,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            scalb(d: number /*double*/, scaleFactor: number /*int*/): double
+            public static scalb(d: number /*double*/, scaleFactor: number /*int*/): number /*double*/
             /**
              * Returns {@code f} &times;
              * 2<sup>{@code scaleFactor}</sup> rounded as if performed
@@ -1331,7 +1331,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            scalb(f: number /*float*/, scaleFactor: number /*int*/): float
+            public static scalb(f: number /*float*/, scaleFactor: number /*int*/): number /*float*/
         }
     }
 }

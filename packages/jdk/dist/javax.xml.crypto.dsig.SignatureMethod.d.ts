@@ -34,19 +34,19 @@ declare namespace javax {
                      * (DSS) signature method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly DSA_SHA1: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2000/09/xmldsig#rsa-sha1">RSAwithSHA1</a>
                      * (PKCS #1) signature method algorithm URI.
                      */
                     // @ts-ignore
-                    
+                    readonly RSA_SHA1: java.lang.String | string
                     /**
                      * The <a href="http://www.w3.org/2000/09/xmldsig#hmac-sha1">HMAC-SHA1</a>
                      * MAC signature method algorithm URI
                      */
                     // @ts-ignore
-                    
+                    readonly HMAC_SHA1: java.lang.String | string
                     /**
                      * Returns the algorithm-specific input parameters of this
                      * <code>SignatureMethod</code>.

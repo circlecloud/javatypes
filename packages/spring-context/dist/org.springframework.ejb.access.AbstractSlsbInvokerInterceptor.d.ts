@@ -12,7 +12,7 @@ declare namespace org {
                  * @author Juergen Hoeller
                  */
                 // @ts-ignore
-                class AbstractSlsbInvokerInterceptor extends org.springframework.jndi.JndiObjectLocator {
+                abstract class AbstractSlsbInvokerInterceptor extends org.springframework.jndi.JndiObjectLocator {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,7 +23,7 @@ declare namespace org {
                      * @see #setCacheHome
                      */
                     // @ts-ignore
-                    setLookupHomeOnStartup(lookupHomeOnStartup: boolean): void
+                    public setLookupHomeOnStartup(lookupHomeOnStartup: boolean): void
                     /**
                      * Set whether to cache the EJB home object once it has been located.
                      * Default is "true".
@@ -32,7 +32,7 @@ declare namespace org {
                      * @see #setLookupHomeOnStartup
                      */
                     // @ts-ignore
-                    setCacheHome(cacheHome: boolean): void
+                    public setCacheHome(cacheHome: boolean): void
                     /**
                      * Set whether to expose the JNDI environment context for all access to the target
                      * EJB, i.e. for all method invocations on the exposed object reference.
@@ -42,14 +42,14 @@ declare namespace org {
                      * for EJBs with authorization requirements.
                      */
                     // @ts-ignore
-                    setExposeAccessContext(exposeAccessContext: boolean): void
+                    public setExposeAccessContext(exposeAccessContext: boolean): void
                     /**
                      * Fetches EJB home on startup, if necessary.
                      * @see #setLookupHomeOnStartup
                      * @see #refreshHome
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Refresh the cached home object, if applicable.
                      * Also caches the create method on the home object.
@@ -66,7 +66,7 @@ declare namespace org {
                      * @throws EjbAccessException if the method couldn't be retrieved
                      */
                     // @ts-ignore
-                    getCreateMethod(home: any): java.lang.reflect.Method
+                    getCreateMethod(home: java.lang.Object | any): java.lang.reflect.Method
                     /**
                      * Return the EJB home object to use. Called for each invocation.
                      * <p>Default implementation returns the home created on initialization,
@@ -80,7 +80,7 @@ declare namespace org {
                      * @see #getCreateMethod
                      */
                     // @ts-ignore
-                    getHome(): java.lang.Object
+                    getHome(): any
                     /**
                      * Return whether the cached EJB home object is potentially
                      * subject to on-demand refreshing. Default is "false".
@@ -92,7 +92,7 @@ declare namespace org {
                      * {@link #invokeInContext}.
                      */
                     // @ts-ignore
-                    invoke(invocation: MethodInvocation): java.lang.Object
+                    public invoke(invocation: MethodInvocation): any
                     /**
                      * Perform the given invocation on the current EJB home,
                      * within the thread context being prepared accordingly.
@@ -102,7 +102,7 @@ declare namespace org {
                      * @throws Throwable in case of invocation failure
                      */
                     // @ts-ignore
-                    abstract invokeInContext(invocation: MethodInvocation): java.lang.Object
+                    abstract invokeInContext(invocation: MethodInvocation): any
                     /**
                      * Invokes the {@code create()} method on the cached EJB home object.
                      * @return a new EJBObject or EJBLocalObject
@@ -110,7 +110,7 @@ declare namespace org {
                      * @throws InvocationTargetException if thrown by the create method
                      */
                     // @ts-ignore
-                    create(): java.lang.Object
+                    create(): any
                 }
             }
         }

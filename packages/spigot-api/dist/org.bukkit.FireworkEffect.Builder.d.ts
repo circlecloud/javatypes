@@ -14,33 +14,33 @@ declare namespace org {
                  * @throws IllegalArgumentException If type is null
                  */
                 // @ts-ignore
-                with(type: org.bukkit.FireworkEffect.Type): org.bukkit.FireworkEffect.Builder
+                public with(type: org.bukkit.FireworkEffect.Type): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add a flicker to the firework effect.
                  * @return This object, for chaining
                  */
                 // @ts-ignore
-                withFlicker(): org.bukkit.FireworkEffect.Builder
+                public withFlicker(): org.bukkit.FireworkEffect.Builder
                 /**
                  * Set whether the firework effect should flicker.
                  * @param flicker true if it should flicker, false if not
                  * @return This object, for chaining
                  */
                 // @ts-ignore
-                flicker(flicker: boolean): org.bukkit.FireworkEffect.Builder
+                public flicker(flicker: boolean): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add a trail to the firework effect.
                  * @return This object, for chaining
                  */
                 // @ts-ignore
-                withTrail(): org.bukkit.FireworkEffect.Builder
+                public withTrail(): org.bukkit.FireworkEffect.Builder
                 /**
                  * Set whether the firework effect should have a trail.
                  * @param trail true if it should have a trail, false for no trail
                  * @return This object, for chaining
                  */
                 // @ts-ignore
-                trail(trail: boolean): org.bukkit.FireworkEffect.Builder
+                public trail(trail: boolean): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add a primary color to the firework effect.
                  * @param color The color to add
@@ -48,7 +48,7 @@ declare namespace org {
                  * @throws IllegalArgumentException If color is null
                  */
                 // @ts-ignore
-                withColor(color: org.bukkit.Color): org.bukkit.FireworkEffect.Builder
+                public withColor(color: org.bukkit.Color): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add several primary colors to the firework effect.
                  * @param colors The colors to add
@@ -58,7 +58,7 @@ declare namespace org {
                  *      thrown after changes have occurred)
                  */
                 // @ts-ignore
-                withColor(...colors: org.bukkit.Color[]): org.bukkit.FireworkEffect.Builder
+                public withColor(...colors: org.bukkit.Color[]): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add several primary colors to the firework effect.
                  * @param colors An iterable object whose iterator yields the desired
@@ -69,7 +69,7 @@ declare namespace org {
                  *      thrown after changes have occurred)
                  */
                 // @ts-ignore
-                withColor(colors: java.lang.Iterable<any>): org.bukkit.FireworkEffect.Builder
+                public withColor(colors: java.lang.Iterable<any>): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add a fade color to the firework effect.
                  * @param color The color to add
@@ -79,7 +79,7 @@ declare namespace org {
                  *      thrown after changes have occurred)
                  */
                 // @ts-ignore
-                withFade(color: org.bukkit.Color): org.bukkit.FireworkEffect.Builder
+                public withFade(color: org.bukkit.Color): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add several fade colors to the firework effect.
                  * @param colors The colors to add
@@ -89,7 +89,7 @@ declare namespace org {
                  *      thrown after changes have occurred)
                  */
                 // @ts-ignore
-                withFade(...colors: org.bukkit.Color[]): org.bukkit.FireworkEffect.Builder
+                public withFade(...colors: org.bukkit.Color[]): org.bukkit.FireworkEffect.Builder
                 /**
                  * Add several fade colors to the firework effect.
                  * @param colors An iterable object whose iterator yields the desired
@@ -100,7 +100,7 @@ declare namespace org {
                  *      thrown after changes have occurred)
                  */
                 // @ts-ignore
-                withFade(colors: java.lang.Iterable<any>): org.bukkit.FireworkEffect.Builder
+                public withFade(colors: java.lang.Iterable<any>): org.bukkit.FireworkEffect.Builder
                 /**
                  * Create a {@link FireworkEffect} from the current contents of this
                  * builder.
@@ -109,7 +109,7 @@ declare namespace org {
                  * @return The representative firework effect
                  */
                 // @ts-ignore
-                build(): org.bukkit.FireworkEffect
+                public build(): org.bukkit.FireworkEffect
             }
         }
     }

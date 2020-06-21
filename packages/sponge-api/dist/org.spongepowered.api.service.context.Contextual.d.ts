@@ -19,7 +19,7 @@ declare namespace org {
                          * @return The identifier for this subject
                          */
                         // @ts-ignore
-                        getIdentifier(): java.lang.String
+                        getIdentifier(): string
                         /**
                          * Returns the friendly identifier associated with this Contextual.
                          * <p>Unlike {@link #getIdentifier()}, this value is not guaranteed to be
@@ -31,7 +31,7 @@ declare namespace org {
                          * @return The friendly identifier for this contextual
                          */
                         // @ts-ignore
-                        getFriendlyIdentifier(): java.util.Optional<java.lang.String>
+                        getFriendlyIdentifier(): java.util.Optional<java.lang.String | string>
                         /**
                          * Calculates the objects active contexts at the given moment, using the
                          * {@link ContextCalculator}s held by the {@link ContextualService}.
@@ -41,7 +41,7 @@ declare namespace org {
                          * @return An immutable set of active contexts
                          */
                         // @ts-ignore
-                        getActiveContexts(): java.util.Set<org.spongepowered.api.service.context.Context>
+                        getActiveContexts(): Array<org.spongepowered.api.service.context.Context>
                     }
                 }
             }

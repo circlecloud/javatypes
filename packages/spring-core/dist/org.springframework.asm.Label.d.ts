@@ -21,7 +21,7 @@ declare namespace org {
                  * in MethodNode.
                  */
                 // @ts-ignore
-                info: any
+                public info: java.lang.Object | any
                 /**
                  * Returns the bytecode offset corresponding to this label. This offset is computed from the start
                  * of the method's bytecode. <i>This method is intended for {@link Attribute} sub classes, and is
@@ -30,13 +30,13 @@ declare namespace org {
                  * @throws IllegalStateException if this label is not resolved yet.
                  */
                 // @ts-ignore
-                getOffset(): int
+                public getOffset(): number /*int*/
                 /**
                  * Returns a string representation of this label.
                  * @return a string representation of this label.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

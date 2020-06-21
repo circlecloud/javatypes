@@ -30,13 +30,13 @@ declare namespace javax {
                  * @return the size in bits of the prime modulus
                  */
                 // @ts-ignore
-                getPrimeSize(): int
+                public getPrimeSize(): number /*int*/
                 /**
                  * Returns the size in bits of the random exponent (private value).
                  * @return the size in bits of the random exponent (private value)
                  */
                 // @ts-ignore
-                getExponentSize(): int
+                public getExponentSize(): number /*int*/
             }
         }
     }

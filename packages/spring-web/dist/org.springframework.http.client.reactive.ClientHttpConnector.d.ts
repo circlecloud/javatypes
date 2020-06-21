@@ -25,7 +25,7 @@ declare namespace org {
                          * @return publisher for the {#link ClientHttpResponse}
                          */
                         // @ts-ignore
-                        connect(method: org.springframework.http.HttpMethod, uri: java.net.URI, requestCallback: java.util.function.Function<any super org.springframework.http.client.reactive.ClientHttpRequest, <any>> | java.util.function$.Function<? super org.springframework.http.client.reactive.ClientHttpRequest, <any>>): <any>
+                        connect(method: org.springframework.http.HttpMethod, uri: java.net.URI, requestCallback: java.util.function$.Function<any, object>): object
                     }
                 }
             }

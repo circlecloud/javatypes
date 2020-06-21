@@ -8,11 +8,11 @@ declare namespace org {
             // @ts-ignore
             class AmqpException extends java.lang.RuntimeException {
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

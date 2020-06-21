@@ -246,7 +246,7 @@ declare namespace javax {
                      * of Strings that are comments not found in the body.
                      */
                     // @ts-ignore
-                    readonly AdditionalComments: string
+                    public static readonly AdditionalComments: java.lang.String | string
                     /**
                      * Fetches the reader for the parser to use when loading the document
                      * with HTML.  This is implemented to return an instance of
@@ -259,7 +259,7 @@ declare namespace javax {
                      * @return the reader used by the parser to load the document
                      */
                     // @ts-ignore
-                    getReader(pos: number /*int*/): javax.swing.text.html.HTMLEditorKit.ParserCallback
+                    public getReader(pos: number /*int*/): javax.swing.text.html.HTMLEditorKit.ParserCallback
                     /**
                      * Returns the reader for the parser to use to load the document
                      * with HTML.  This is implemented to return an instance of
@@ -280,7 +280,7 @@ declare namespace javax {
                      * @return the reader used by the parser to load the document
                      */
                     // @ts-ignore
-                    getReader(pos: number /*int*/, popDepth: number /*int*/, pushDepth: number /*int*/, insertTag: javax.swing.text.html.HTML.Tag): javax.swing.text.html.HTMLEditorKit.ParserCallback
+                    public getReader(pos: number /*int*/, popDepth: number /*int*/, pushDepth: number /*int*/, insertTag: javax.swing.text.html.HTML.Tag): javax.swing.text.html.HTMLEditorKit.ParserCallback
                     /**
                      * Returns the location to resolve relative URLs against.  By
                      * default this will be the document's URL if the document
@@ -289,7 +289,7 @@ declare namespace javax {
                      * @return the base location
                      */
                     // @ts-ignore
-                    getBase(): java.net.URL
+                    public getBase(): java.net.URL
                     /**
                      * Sets the location to resolve relative URLs against.  By
                      * default this will be the document's URL if the document
@@ -300,7 +300,7 @@ declare namespace javax {
                      * @param u  the desired base URL
                      */
                     // @ts-ignore
-                    setBase(u: java.net.URL): void
+                    public setBase(u: java.net.URL): void
                     /**
                      * Inserts new elements in bulk.  This is how elements get created
                      * in the document.  The parsing determines what structure is needed
@@ -348,14 +348,14 @@ declare namespace javax {
                      * @param replace whether to replace existing attributes, or merge them
                      */
                     // @ts-ignore
-                    setParagraphAttributes(offset: number /*int*/, length: number /*int*/, s: javax.swing.text.AttributeSet, replace: boolean): void
+                    public setParagraphAttributes(offset: number /*int*/, length: number /*int*/, s: javax.swing.text.AttributeSet, replace: boolean): void
                     /**
                      * Fetches the <code>StyleSheet</code> with the document-specific display
                      * rules (CSS) that were specified in the HTML document itself.
                      * @return the <code>StyleSheet</code>
                      */
                     // @ts-ignore
-                    getStyleSheet(): javax.swing.text.html.StyleSheet
+                    public getStyleSheet(): javax.swing.text.html.StyleSheet
                     /**
                      * Fetches an iterator for the specified HTML tag.
                      * This can be used for things like iterating over the
@@ -366,7 +366,7 @@ declare namespace javax {
                      * @see javax.swing.text.html.HTML.Tag
                      */
                     // @ts-ignore
-                    getIterator(t: javax.swing.text.html.HTML.Tag): javax.swing.text.html.HTMLDocument.Iterator
+                    public getIterator(t: javax.swing.text.html.HTML.Tag): javax.swing.text.html.HTMLDocument.Iterator
                     /**
                      * Creates a document leaf element that directly represents
                      * text (doesn't have any children).  This is implemented
@@ -403,7 +403,7 @@ declare namespace javax {
                      * @param n  the number of tokens to buffer
                      */
                     // @ts-ignore
-                    setTokenThreshold(n: number /*int*/): void
+                    public setTokenThreshold(n: number /*int*/): void
                     /**
                      * Gets the number of tokens to buffer before trying to update
                      * the documents element structure.  The default value is
@@ -411,7 +411,7 @@ declare namespace javax {
                      * @return the number of tokens to buffer
                      */
                     // @ts-ignore
-                    getTokenThreshold(): int
+                    public getTokenThreshold(): number /*int*/
                     /**
                      * Determines how unknown tags are handled by the parser.
                      * If set to true, unknown
@@ -421,7 +421,7 @@ declare namespace javax {
                      * @see javax.swing.text.html.HTML.Tag
                      */
                     // @ts-ignore
-                    setPreservesUnknownTags(preservesTags: boolean): void
+                    public setPreservesUnknownTags(preservesTags: boolean): void
                     /**
                      * Returns the behavior the parser observes when encountering
                      * unknown tags.
@@ -429,7 +429,7 @@ declare namespace javax {
                      * @return true if unknown tags are to be preserved when parsing
                      */
                     // @ts-ignore
-                    getPreservesUnknownTags(): boolean
+                    public getPreservesUnknownTags(): boolean
                     /**
                      * Processes <code>HyperlinkEvents</code> that
                      * are generated by documents in an HTML frame.
@@ -469,7 +469,7 @@ declare namespace javax {
                      * @param e the event
                      */
                     // @ts-ignore
-                    processHTMLFrameHyperlinkEvent(e: javax.swing.text.html.HTMLFrameHyperlinkEvent): void
+                    public processHTMLFrameHyperlinkEvent(e: javax.swing.text.html.HTMLFrameHyperlinkEvent): void
                     /**
                      * Sets the parser that is used by the methods that insert html
                      * into the existing document, such as <code>setInnerHTML</code>,
@@ -482,7 +482,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setParser(parser: javax.swing.text.html.HTMLEditorKit.Parser): void
+                    public setParser(parser: javax.swing.text.html.HTMLEditorKit.Parser): void
                     /**
                      * Returns the parser that is used when inserting HTML into the existing
                      * document.
@@ -490,7 +490,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getParser(): javax.swing.text.html.HTMLEditorKit.Parser
+                    public getParser(): javax.swing.text.html.HTMLEditorKit.Parser
                     /**
                      * Replaces the children of the given element with the contents
                      * specified as an HTML string.
@@ -533,7 +533,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setInnerHTML(elem: javax.swing.text.Element, htmlText: string): void
+                    public setInnerHTML(elem: javax.swing.text.Element, htmlText: java.lang.String | string): void
                     /**
                      * Replaces the given element in the parent with the contents
                      * specified as an HTML string.
@@ -583,7 +583,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    setOuterHTML(elem: javax.swing.text.Element, htmlText: string): void
+                    public setOuterHTML(elem: javax.swing.text.Element, htmlText: java.lang.String | string): void
                     /**
                      * Inserts the HTML specified as a string at the start
                      * of the element.
@@ -627,7 +627,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    insertAfterStart(elem: javax.swing.text.Element, htmlText: string): void
+                    public insertAfterStart(elem: javax.swing.text.Element, htmlText: java.lang.String | string): void
                     /**
                      * Inserts the HTML specified as a string at the end of
                      * the element.
@@ -675,7 +675,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    insertBeforeEnd(elem: javax.swing.text.Element, htmlText: string): void
+                    public insertBeforeEnd(elem: javax.swing.text.Element, htmlText: java.lang.String | string): void
                     /**
                      * Inserts the HTML specified as a string before the start of
                      * the given element.
@@ -715,7 +715,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    insertBeforeStart(elem: javax.swing.text.Element, htmlText: string): void
+                    public insertBeforeStart(elem: javax.swing.text.Element, htmlText: java.lang.String | string): void
                     /**
                      * Inserts the HTML specified as a string after the the end of the
                      * given element.
@@ -755,7 +755,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    insertAfterEnd(elem: javax.swing.text.Element, htmlText: string): void
+                    public insertAfterEnd(elem: javax.swing.text.Element, htmlText: java.lang.String | string): void
                     /**
                      * Returns the element that has the given id <code>Attribute</code>.
                      * If the element can't be found, <code>null</code> is returned.
@@ -774,7 +774,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getElement(id: string): javax.swing.text.Element
+                    public getElement(id: java.lang.String | string): javax.swing.text.Element
                     /**
                      * Returns the child element of <code>e</code> that contains the
                      * attribute, <code>attribute</code> with value <code>value</code>, or
@@ -789,7 +789,7 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getElement(e: javax.swing.text.Element, attribute: any, value: any): javax.swing.text.Element
+                    public getElement(e: javax.swing.text.Element, attribute: java.lang.Object | any, value: java.lang.Object | any): javax.swing.text.Element
                     /**
                      * Notifies all listeners that have registered interest for
                      * notification on this event type.  The event instance

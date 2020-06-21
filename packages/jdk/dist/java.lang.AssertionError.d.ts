@@ -32,7 +32,7 @@ declare namespace java {
              * @see Throwable#getCause()
              */
             // @ts-ignore
-            constructor(detailMessage: any)
+            constructor(detailMessage: java.lang.Object | any)
             /**
              * Constructs an AssertionError with its detail message derived
              * from the specified <code>boolean</code>, which is converted to
@@ -98,7 +98,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
         }
     }
 }

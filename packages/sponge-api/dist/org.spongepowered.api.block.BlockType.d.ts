@@ -18,7 +18,7 @@ declare namespace org {
                      * @return The id
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Return the default state for this block.
                      * @return The default state
@@ -31,7 +31,7 @@ declare namespace org {
                      * @return An immutable collection of all block states for this block type
                      */
                     // @ts-ignore
-                    getAllBlockStates(): java.util.Collection<org.spongepowered.api.block.BlockState>
+                    getAllBlockStates(): Array<org.spongepowered.api.block.BlockState>
                     /**
                      * Return the {@link ItemType} that represents this block.
                      * @return The item type or {#link Optional#empty()} otherwise
@@ -58,7 +58,7 @@ declare namespace org {
                      * @return An immutable collection of all applicable block traits
                      */
                     // @ts-ignore
-                    getTraits(): java.util.Collection<org.spongepowered.api.block.trait.BlockTrait<?>>
+                    getTraits(): Array<org.spongepowered.api.block.trait.BlockTrait<any>>
                     /**
                      * Attempts to retrieve the {@link BlockTrait} instance associated with
                      * this {@link BlockState}s {@link BlockType} by string id. If there is no
@@ -67,7 +67,7 @@ declare namespace org {
                      * @return The block trait, if available
                      */
                     // @ts-ignore
-                    getTrait(blockTrait: string): java.util.Optional<org.spongepowered.api.block.trait.BlockTrait<?>>
+                    getTrait(blockTrait: java.lang.String | string): java.util.Optional<org.spongepowered.api.block.trait.BlockTrait<any>>
                     /**
                      * Gets the {@link BlockSoundGroup} for this block.
                      * @return This block's sound group.

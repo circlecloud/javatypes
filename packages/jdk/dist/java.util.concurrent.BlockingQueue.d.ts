@@ -231,7 +231,7 @@ declare namespace java {
                  * @return the remaining capacity
                  */
                 // @ts-ignore
-                remainingCapacity(): int
+                remainingCapacity(): number /*int*/
                 /**
                  * Removes a single instance of the specified element from this queue,
                  * if it is present.  More formally, removes an element {@code e} such
@@ -248,7 +248,7 @@ declare namespace java {
                  *          (<a href="../Collection.html#optional-restrictions">optional</a>)
                  */
                 // @ts-ignore
-                remove(o: any): boolean
+                remove(o: java.lang.Object | any): boolean
                 /**
                  * Returns {@code true} if this queue contains the specified element.
                  * More formally, returns {@code true} if and only if this queue contains
@@ -262,7 +262,7 @@ declare namespace java {
                  *          (<a href="../Collection.html#optional-restrictions">optional</a>)
                  */
                 // @ts-ignore
-                contains(o: any): boolean
+                contains(o: java.lang.Object | any): boolean
                 /**
                  * Removes all available elements from this queue and adds them
                  * to the given collection.  This operation may be more
@@ -286,7 +286,7 @@ declare namespace java {
                  *          it from being added to the specified collection
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>): int
+                drainTo(c: java.util.Collection<any> | Array<any>): number /*int*/
                 /**
                  * Removes at most the given number of available elements from
                  * this queue and adds them to the given collection.  A failure
@@ -310,7 +310,7 @@ declare namespace java {
                  *          it from being added to the specified collection
                  */
                 // @ts-ignore
-                drainTo(c: Array<any super E>, maxElements: number /*int*/): int
+                drainTo(c: java.util.Collection<any> | Array<any>, maxElements: number /*int*/): number /*int*/
             }
         }
     }

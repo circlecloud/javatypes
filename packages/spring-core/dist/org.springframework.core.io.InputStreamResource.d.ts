@@ -34,39 +34,39 @@ declare namespace org {
                      * @param description where the InputStream comes from
                      */
                     // @ts-ignore
-                    constructor(inputStream: java.io.InputStream, description: string)
+                    constructor(inputStream: java.io.InputStream, description: java.lang.String | string)
                     /**
                      * This implementation always returns {@code true}.
                      */
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     /**
                      * This implementation always returns {@code true}.
                      */
                     // @ts-ignore
-                    isOpen(): boolean
+                    public isOpen(): boolean
                     /**
                      * This implementation throws IllegalStateException if attempting to
                      * read the underlying stream multiple times.
                      */
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     /**
                      * This implementation returns a description that includes the passed-in
                      * description, if any.
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * This implementation compares the underlying InputStream.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the hash code of the underlying InputStream.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

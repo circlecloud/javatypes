@@ -25,7 +25,7 @@ declare namespace org {
                          * @return {#code true} if the return value type represents an async value
                          */
                         // @ts-ignore
-                        isAsyncReturnValue(returnValue: any, returnType: MethodParameter): boolean
+                        isAsyncReturnValue(returnValue: java.lang.Object | any, returnType: MethodParameter): boolean
                     }
                 }
             }

@@ -235,19 +235,19 @@ declare namespace java {
              * A constant that indicates a horizontal scroll bar.
              */
             // @ts-ignore
-            readonly HORIZONTAL: number /*int*/
+            public static readonly HORIZONTAL: number /*int*/
             /**
              * A constant that indicates a vertical scroll bar.
              */
             // @ts-ignore
-            readonly VERTICAL: number /*int*/
+            public static readonly VERTICAL: number /*int*/
             /**
              * Creates the <code>Scrollbar</code>'s peer.  The peer allows you to modify
              * the appearance of the <code>Scrollbar</code> without changing any of its
              * functionality.
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Returns the orientation of this scroll bar.
              * @return the orientation of this scroll bar, either
@@ -256,7 +256,7 @@ declare namespace java {
              * @see java.awt.Scrollbar#setOrientation
              */
             // @ts-ignore
-            getOrientation(): int
+            public getOrientation(): number /*int*/
             /**
              * Sets the orientation for this scroll bar.
              * @param orientation  the orientation of this scroll bar, either
@@ -269,7 +269,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setOrientation(orientation: number /*int*/): void
+            public setOrientation(orientation: number /*int*/): void
             /**
              * Gets the current value of this scroll bar.
              * @return the current value of this scroll bar
@@ -277,7 +277,7 @@ declare namespace java {
              * @see java.awt.Scrollbar#getMaximum
              */
             // @ts-ignore
-            getValue(): int
+            public getValue(): number /*int*/
             /**
              * Sets the value of this scroll bar to the specified value.
              * <p>
@@ -302,7 +302,7 @@ declare namespace java {
              * @see java.awt.Scrollbar#getMaximum
              */
             // @ts-ignore
-            setValue(newValue: number /*int*/): void
+            public setValue(newValue: number /*int*/): void
             /**
              * Gets the minimum value of this scroll bar.
              * @return the minimum value of this scroll bar
@@ -310,7 +310,7 @@ declare namespace java {
              * @see java.awt.Scrollbar#getMaximum
              */
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * Sets the minimum value of this scroll bar.
              * <p>
@@ -335,7 +335,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setMinimum(newMinimum: number /*int*/): void
+            public setMinimum(newMinimum: number /*int*/): void
             /**
              * Gets the maximum value of this scroll bar.
              * @return the maximum value of this scroll bar
@@ -343,7 +343,7 @@ declare namespace java {
              * @see java.awt.Scrollbar#getMinimum
              */
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             /**
              * Sets the maximum value of this scroll bar.
              * <p>
@@ -369,7 +369,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setMaximum(newMaximum: number /*int*/): void
+            public setMaximum(newMaximum: number /*int*/): void
             /**
              * Gets the visible amount of this scroll bar.
              * <p>
@@ -392,13 +392,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getVisibleAmount(): int
+            public getVisibleAmount(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getVisibleAmount()</code>.
              */
             // @ts-ignore
-            getVisible(): int
+            public getVisible(): number /*int*/
             /**
              * Sets the visible amount of this scroll bar.
              * <p>
@@ -434,7 +434,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setVisibleAmount(newAmount: number /*int*/): void
+            public setVisibleAmount(newAmount: number /*int*/): void
             /**
              * Sets the unit increment for this scroll bar.
              * <p>
@@ -454,13 +454,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setUnitIncrement(v: number /*int*/): void
+            public setUnitIncrement(v: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setUnitIncrement(int)</code>.
              */
             // @ts-ignore
-            setLineIncrement(v: number /*int*/): void
+            public setLineIncrement(v: number /*int*/): void
             /**
              * Gets the unit increment for this scrollbar.
              * <p>
@@ -477,13 +477,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getUnitIncrement(): int
+            public getUnitIncrement(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getUnitIncrement()</code>.
              */
             // @ts-ignore
-            getLineIncrement(): int
+            public getLineIncrement(): number /*int*/
             /**
              * Sets the block increment for this scroll bar.
              * <p>
@@ -500,13 +500,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setBlockIncrement(v: number /*int*/): void
+            public setBlockIncrement(v: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setBlockIncrement()</code>.
              */
             // @ts-ignore
-            setPageIncrement(v: number /*int*/): void
+            public setPageIncrement(v: number /*int*/): void
             /**
              * Gets the block increment of this scroll bar.
              * <p>
@@ -520,13 +520,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getBlockIncrement(): int
+            public getBlockIncrement(): number /*int*/
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getBlockIncrement()</code>.
              */
             // @ts-ignore
-            getPageIncrement(): int
+            public getPageIncrement(): number /*int*/
             /**
              * Sets the values of four properties for this scroll bar:
              * <code>value</code>, <code>visibleAmount</code>,
@@ -560,7 +560,7 @@ declare namespace java {
              * @see #setValue
              */
             // @ts-ignore
-            setValues(value: number /*int*/, visible: number /*int*/, minimum: number /*int*/, maximum: number /*int*/): void
+            public setValues(value: number /*int*/, visible: number /*int*/, minimum: number /*int*/, maximum: number /*int*/): void
             /**
              * Returns true if the value is in the process of changing as a
              * result of actions being taken by the user.
@@ -569,7 +569,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * Sets the <code>valueIsAdjusting</code> property.
              * @param b new adjustment-in-progress status
@@ -577,7 +577,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            setValueIsAdjusting(b: boolean): void
+            public setValueIsAdjusting(b: boolean): void
             /**
              * Adds the specified adjustment listener to receive instances of
              * <code>AdjustmentEvent</code> from this scroll bar.
@@ -593,7 +593,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addAdjustmentListener(l: java.awt.event.AdjustmentListener): void
+            public addAdjustmentListener(l: java.awt.event.AdjustmentListener): void
             /**
              * Removes the specified adjustment listener so that it no longer
              * receives instances of <code>AdjustmentEvent</code> from this scroll bar.
@@ -609,7 +609,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeAdjustmentListener(l: java.awt.event.AdjustmentListener): void
+            public removeAdjustmentListener(l: java.awt.event.AdjustmentListener): void
             /**
              * Returns an array of all the adjustment listeners
              * registered on this scrollbar.
@@ -623,7 +623,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAdjustmentListeners(): java.awt.event.AdjustmentListener[]
+            public getAdjustmentListeners(): java.awt.event.AdjustmentListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -651,7 +651,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Processes events on this scroll bar. If the event is an
              * instance of <code>AdjustmentEvent</code>, it invokes the
@@ -702,7 +702,7 @@ declare namespace java {
              * @return the parameter string of this scroll bar
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the <code>AccessibleContext</code> associated with this
              * <code>Scrollbar</code>. For scrollbars, the
@@ -714,7 +714,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

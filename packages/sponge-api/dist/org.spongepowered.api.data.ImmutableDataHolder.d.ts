@@ -14,14 +14,14 @@ declare namespace org {
                  * @param <T> The sub type of immutable data holder
                  */
                 // @ts-ignore
-                interface ImmutableDataHolder<T extends org.spongepowered.api.data.ImmutableDataHolder<T>> extends org.spongepowered.api.data.DataSerializable, org.spongepowered.api.data.property.PropertyHolder, org.spongepowered.api.data.value.immutable.ImmutableValueStore<T, org.spongepowered.api.data.manipulator.ImmutableDataManipulator<?, ?>> {
+                interface ImmutableDataHolder<T extends org.spongepowered.api.data.ImmutableDataHolder<T>> extends org.spongepowered.api.data.DataSerializable, org.spongepowered.api.data.property.PropertyHolder, org.spongepowered.api.data.value.immutable.ImmutableValueStore<T, org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, any>> {
                     /**
                      * Gets a copy of all properties defined on this
                      * {@link ImmutableDataHolder}, with their current values.
                      * @return A collection of all known manipulators
                      */
                     // @ts-ignore
-                    getManipulators(): java.util.List<org.spongepowered.api.data.manipulator.ImmutableDataManipulator<?, ?>>
+                    getManipulators(): Array<org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, any>>
                 }
             }
         }

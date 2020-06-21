@@ -12,7 +12,7 @@ declare namespace javax {
              * only need to define the methods you need, rather than all of the methods.
              */
             // @ts-ignore
-            class PrintJobAdapter extends java.lang.Object implements javax.print.event.PrintJobListener {
+            abstract class PrintJobAdapter extends java.lang.Object implements javax.print.event.PrintJobListener {
                 // @ts-ignore
                 constructor()
                 /**
@@ -24,27 +24,27 @@ declare namespace javax {
                  * @param pje the event being notified
                  */
                 // @ts-ignore
-                printDataTransferCompleted(pje: javax.print.event.PrintJobEvent): void
+                public printDataTransferCompleted(pje: javax.print.event.PrintJobEvent): void
                 /**
                  * Called to notify the client that the job completed successfully.
                  * @param pje the event being notified
                  */
                 // @ts-ignore
-                printJobCompleted(pje: javax.print.event.PrintJobEvent): void
+                public printJobCompleted(pje: javax.print.event.PrintJobEvent): void
                 /**
                  * Called to notify the client that the job failed to complete
                  * successfully and will have to be resubmitted.
                  * @param pje the event being notified
                  */
                 // @ts-ignore
-                printJobFailed(pje: javax.print.event.PrintJobEvent): void
+                public printJobFailed(pje: javax.print.event.PrintJobEvent): void
                 /**
                  * Called to notify the client that the job was canceled
                  * by user or program.
                  * @param pje the event being notified
                  */
                 // @ts-ignore
-                printJobCanceled(pje: javax.print.event.PrintJobEvent): void
+                public printJobCanceled(pje: javax.print.event.PrintJobEvent): void
                 /**
                  * Called to notify the client that no more events will be delivered.
                  * One cause of this event being generated is if the job
@@ -55,14 +55,14 @@ declare namespace javax {
                  * @param pje the event being notified
                  */
                 // @ts-ignore
-                printJobNoMoreEvents(pje: javax.print.event.PrintJobEvent): void
+                public printJobNoMoreEvents(pje: javax.print.event.PrintJobEvent): void
                 /**
                  * Called to notify the client that some possibly user rectifiable
                  * problem occurs (eg printer out of paper).
                  * @param pje the event being notified
                  */
                 // @ts-ignore
-                printJobRequiresAttention(pje: javax.print.event.PrintJobEvent): void
+                public printJobRequiresAttention(pje: javax.print.event.PrintJobEvent): void
             }
         }
     }

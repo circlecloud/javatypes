@@ -20,7 +20,7 @@ declare namespace org {
                  * @see StandardEnvironment
                  */
                 // @ts-ignore
-                class AbstractEnvironment extends java.lang.Object implements org.springframework.core.env.ConfigurableEnvironment {
+                abstract class AbstractEnvironment extends java.lang.Object implements org.springframework.core.env.ConfigurableEnvironment {
                     /**
                      * Create a new {@code Environment} instance, calling back to
                      * {@link #customizePropertySources(MutablePropertySources)} during construction to
@@ -41,7 +41,7 @@ declare namespace org {
                      * @see #suppressGetenvAccess()
                      */
                     // @ts-ignore
-                    readonly IGNORE_GETENV_PROPERTY_NAME: string
+                    public static readonly IGNORE_GETENV_PROPERTY_NAME: java.lang.String | string
                     /**
                      * Name of property to set to specify active profiles: {@value}. Value may be comma
                      * delimited.
@@ -52,7 +52,7 @@ declare namespace org {
                      * @see ConfigurableEnvironment#setActiveProfiles
                      */
                     // @ts-ignore
-                    readonly ACTIVE_PROFILES_PROPERTY_NAME: string
+                    public static readonly ACTIVE_PROFILES_PROPERTY_NAME: java.lang.String | string
                     /**
                      * Name of property to set to specify profiles active by default: {@value}. Value may
                      * be comma delimited.
@@ -63,7 +63,7 @@ declare namespace org {
                      * @see ConfigurableEnvironment#setDefaultProfiles
                      */
                     // @ts-ignore
-                    readonly DEFAULT_PROFILES_PROPERTY_NAME: string
+                    public static readonly DEFAULT_PROFILES_PROPERTY_NAME: java.lang.String | string
                     /**
                      * Name of reserved default profile name: {@value}. If no default profile names are
                      * explicitly and no active profile names are explicitly set, this profile will
@@ -75,7 +75,7 @@ declare namespace org {
                      * @see AbstractEnvironment#ACTIVE_PROFILES_PROPERTY_NAME
                      */
                     // @ts-ignore
-                    readonly RESERVED_DEFAULT_PROFILE_NAME: string
+                    static readonly RESERVED_DEFAULT_PROFILE_NAME: java.lang.String | string
                     // @ts-ignore
                     readonly logger: Log
                     /**
@@ -156,9 +156,9 @@ declare namespace org {
                      * @see #doGetDefaultProfiles()
                      */
                     // @ts-ignore
-                    getReservedDefaultProfiles(): java.util.Set<java.lang.String>
+                    getReservedDefaultProfiles(): Array<java.lang.String | string>
                     // @ts-ignore
-                    getActiveProfiles(): java.lang.String[]
+                    public getActiveProfiles(): string[]
                     /**
                      * Return the set of active profiles as explicitly set through
                      * {@link #setActiveProfiles} or if the current set of active profiles
@@ -168,13 +168,13 @@ declare namespace org {
                      * @see #ACTIVE_PROFILES_PROPERTY_NAME
                      */
                     // @ts-ignore
-                    doGetActiveProfiles(): java.util.Set<java.lang.String>
+                    doGetActiveProfiles(): Array<java.lang.String | string>
                     // @ts-ignore
-                    setActiveProfiles(...profiles: string[]): void
+                    public setActiveProfiles(...profiles: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    addActiveProfile(profile: string): void
+                    public addActiveProfile(profile: java.lang.String | string): void
                     // @ts-ignore
-                    getDefaultProfiles(): java.lang.String[]
+                    public getDefaultProfiles(): string[]
                     /**
                      * Return the set of default profiles explicitly set via
                      * {@link #setDefaultProfiles(String...)} or if the current set of default profiles
@@ -188,7 +188,7 @@ declare namespace org {
                      * @see #getReservedDefaultProfiles()
                      */
                     // @ts-ignore
-                    doGetDefaultProfiles(): java.util.Set<java.lang.String>
+                    doGetDefaultProfiles(): Array<java.lang.String | string>
                     /**
                      * Specify the set of profiles to be made active by default if no other profiles
                      * are explicitly made active through {@link #setActiveProfiles}.
@@ -198,18 +198,18 @@ declare namespace org {
                      * @see #getReservedDefaultProfiles()
                      */
                     // @ts-ignore
-                    setDefaultProfiles(...profiles: string[]): void
+                    public setDefaultProfiles(...profiles: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    acceptsProfiles(...profiles: string[]): boolean
+                    public acceptsProfiles(...profiles: java.lang.String[] | string[]): boolean
                     // @ts-ignore
-                    acceptsProfiles(profiles: org.springframework.core.env.Profiles): boolean
+                    public acceptsProfiles(profiles: org.springframework.core.env.Profiles): boolean
                     /**
                      * Return whether the given profile is active, or if active profiles are empty
                      * whether the profile should be active by default.
                      * @throws IllegalArgumentException per {#link #validateProfile(String)}
                      */
                     // @ts-ignore
-                    isProfileActive(profile: string): boolean
+                    isProfileActive(profile: java.lang.String | string): boolean
                     /**
                      * Validate the given profile, called internally prior to adding to the set of
                      * active or default profiles.
@@ -221,13 +221,13 @@ declare namespace org {
                      * @see #setDefaultProfiles
                      */
                     // @ts-ignore
-                    validateProfile(profile: string): void
+                    validateProfile(profile: java.lang.String | string): void
                     // @ts-ignore
-                    getPropertySources(): org.springframework.core.env.MutablePropertySources
+                    public getPropertySources(): org.springframework.core.env.MutablePropertySources
                     // @ts-ignore
-                    getSystemProperties(): java.util.Map<java.lang.String, java.lang.Object>
+                    public getSystemProperties(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     // @ts-ignore
-                    getSystemEnvironment(): java.util.Map<java.lang.String, java.lang.Object>
+                    public getSystemEnvironment(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Determine whether to suppress {@link System#getenv()}/{@link System#getenv(String)}
                      * access for the purposes of {@link #getSystemEnvironment()}.
@@ -242,43 +242,43 @@ declare namespace org {
                     // @ts-ignore
                     suppressGetenvAccess(): boolean
                     // @ts-ignore
-                    merge(parent: org.springframework.core.env.ConfigurableEnvironment): void
+                    public merge(parent: org.springframework.core.env.ConfigurableEnvironment): void
                     // @ts-ignore
-                    getConversionService(): org.springframework.core.convert.support.ConfigurableConversionService
+                    public getConversionService(): org.springframework.core.convert.support.ConfigurableConversionService
                     // @ts-ignore
-                    setConversionService(conversionService: org.springframework.core.convert.support.ConfigurableConversionService): void
+                    public setConversionService(conversionService: org.springframework.core.convert.support.ConfigurableConversionService): void
                     // @ts-ignore
-                    setPlaceholderPrefix(placeholderPrefix: string): void
+                    public setPlaceholderPrefix(placeholderPrefix: java.lang.String | string): void
                     // @ts-ignore
-                    setPlaceholderSuffix(placeholderSuffix: string): void
+                    public setPlaceholderSuffix(placeholderSuffix: java.lang.String | string): void
                     // @ts-ignore
-                    setValueSeparator(valueSeparator: string): void
+                    public setValueSeparator(valueSeparator: java.lang.String | string): void
                     // @ts-ignore
-                    setIgnoreUnresolvableNestedPlaceholders(ignoreUnresolvableNestedPlaceholders: boolean): void
+                    public setIgnoreUnresolvableNestedPlaceholders(ignoreUnresolvableNestedPlaceholders: boolean): void
                     // @ts-ignore
-                    setRequiredProperties(...requiredProperties: string[]): void
+                    public setRequiredProperties(...requiredProperties: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    validateRequiredProperties(): void
+                    public validateRequiredProperties(): void
                     // @ts-ignore
-                    containsProperty(key: string): boolean
+                    public containsProperty(key: java.lang.String | string): boolean
                     // @ts-ignore
-                    getProperty(key: string): java.lang.String
+                    public getProperty(key: java.lang.String | string): string
                     // @ts-ignore
-                    getProperty(key: string, defaultValue: string): java.lang.String
+                    public getProperty(key: java.lang.String | string, defaultValue: java.lang.String | string): string
                     // @ts-ignore
-                    getProperty<T>(key: string, targetType: java.lang.Class<T>): T
+                    public getProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>): T
                     // @ts-ignore
-                    getProperty<T>(key: string, targetType: java.lang.Class<T>, defaultValue: T): T
+                    public getProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>, defaultValue: T): T
                     // @ts-ignore
-                    getRequiredProperty(key: string): java.lang.String
+                    public getRequiredProperty(key: java.lang.String | string): string
                     // @ts-ignore
-                    getRequiredProperty<T>(key: string, targetType: java.lang.Class<T>): T
+                    public getRequiredProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>): T
                     // @ts-ignore
-                    resolvePlaceholders(text: string): java.lang.String
+                    public resolvePlaceholders(text: java.lang.String | string): string
                     // @ts-ignore
-                    resolveRequiredPlaceholders(text: string): java.lang.String
+                    public resolveRequiredPlaceholders(text: java.lang.String | string): string
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

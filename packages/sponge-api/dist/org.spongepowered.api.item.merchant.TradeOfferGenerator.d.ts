@@ -26,7 +26,7 @@ declare namespace org {
                         // @ts-ignore
                         builder(): org.spongepowered.api.item.merchant.TradeOfferGenerator.Builder
                         // @ts-ignore
-                        accept(owner: org.spongepowered.api.item.merchant.Merchant, tradeOffers: Array<org.spongepowered.api.item.merchant.TradeOffer>, random: java.util.Random): void
+                        accept(owner: org.spongepowered.api.item.merchant.Merchant, tradeOffers: java.util.List<org.spongepowered.api.item.merchant.TradeOffer> | Array<org.spongepowered.api.item.merchant.TradeOffer>, random: java.util.Random): void
                     }
                 }
             }

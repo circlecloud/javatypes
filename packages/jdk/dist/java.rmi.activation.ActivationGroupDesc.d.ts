@@ -61,7 +61,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                constructor(className: string, location: string, data: java.rmi.MarshalledObject<any>, overrides: java.util.Properties, cmd: java.rmi.activation.ActivationGroupDesc.CommandEnvironment)
+                constructor(className: java.lang.String | string, location: java.lang.String | string, data: java.rmi.MarshalledObject<any>, overrides: java.util.Properties, cmd: java.rmi.activation.ActivationGroupDesc.CommandEnvironment)
                 /**
                  * Returns the group's class name (possibly <code>null</code>).  A
                  * <code>null</code> group class name indicates the system's default
@@ -70,35 +70,35 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getClassName(): java.lang.String
+                public getClassName(): string
                 /**
                  * Returns the group's code location.
                  * @return the group's code location
                  * @since 1.2
                  */
                 // @ts-ignore
-                getLocation(): java.lang.String
+                public getLocation(): string
                 /**
                  * Returns the group's initialization data.
                  * @return the group's initialization data
                  * @since 1.2
                  */
                 // @ts-ignore
-                getData(): java.rmi.MarshalledObject<?>
+                public getData(): java.rmi.MarshalledObject<any>
                 /**
                  * Returns the group's property-override list.
                  * @return the property-override list, or <code>null</code>
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPropertyOverrides(): java.util.Properties
+                public getPropertyOverrides(): java.util.Properties
                 /**
                  * Returns the group's command-environment control object.
                  * @return the command-environment object, or <code>null</code>
                  * @since 1.2
                  */
                 // @ts-ignore
-                getCommandEnvironment(): java.rmi.activation.ActivationGroupDesc.CommandEnvironment
+                public getCommandEnvironment(): java.rmi.activation.ActivationGroupDesc.CommandEnvironment
                 /**
                  * Compares two activation group descriptors for content equality.
                  * @param obj     the Object to compare with
@@ -107,14 +107,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Produce identical numbers for similar <code>ActivationGroupDesc</code>s.
                  * @return an integer
                  * @see java.util.Hashtable
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

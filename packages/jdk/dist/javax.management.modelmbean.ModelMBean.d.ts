@@ -69,7 +69,7 @@ declare namespace javax {
                  *  ModelMBean or JMX Agent.
                  */
                 // @ts-ignore
-                setManagedResource(mr: any, mr_type: string): void
+                setManagedResource(mr: java.lang.Object | any, mr_type: java.lang.String | string): void
             }
         }
     }

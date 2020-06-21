@@ -16,7 +16,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Double extends java.lang.Number implements java.lang.Comparable<java.lang.Double> {
+        class Double extends java.lang.Number implements java.lang.Comparable<java.lang.Double | number> {
             /**
              * Constructs a newly allocated {@code Double} object that
              * represents the primitive {@code double} argument.
@@ -35,28 +35,28 @@ declare namespace java {
              * @see java.lang.Double#valueOf(java.lang.String)
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * A constant holding the positive infinity of type
              * {@code double}. It is equal to the value returned by
              * {@code Double.longBitsToDouble(0x7ff0000000000000L)}.
              */
             // @ts-ignore
-            readonly POSITIVE_INFINITY: number /*double*/
+            public static readonly POSITIVE_INFINITY: number /*double*/
             /**
              * A constant holding the negative infinity of type
              * {@code double}. It is equal to the value returned by
              * {@code Double.longBitsToDouble(0xfff0000000000000L)}.
              */
             // @ts-ignore
-            readonly NEGATIVE_INFINITY: number /*double*/
+            public static readonly NEGATIVE_INFINITY: number /*double*/
             /**
              * A constant holding a Not-a-Number (NaN) value of type
              * {@code double}. It is equivalent to the value returned by
              * {@code Double.longBitsToDouble(0x7ff8000000000000L)}.
              */
             // @ts-ignore
-            readonly NaN: number /*double*/
+            public static readonly NaN: number /*double*/
             /**
              * A constant holding the largest positive finite value of type
              * {@code double},
@@ -66,7 +66,7 @@ declare namespace java {
              * {@code Double.longBitsToDouble(0x7fefffffffffffffL)}.
              */
             // @ts-ignore
-            readonly MAX_VALUE: number /*double*/
+            public static readonly MAX_VALUE: number /*double*/
             /**
              * A constant holding the smallest positive normal value of type
              * {@code double}, 2<sup>-1022</sup>.  It is equal to the
@@ -75,7 +75,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MIN_NORMAL: number /*double*/
+            public static readonly MIN_NORMAL: number /*double*/
             /**
              * A constant holding the smallest positive nonzero value of type
              * {@code double}, 2<sup>-1074</sup>. It is equal to the
@@ -84,7 +84,7 @@ declare namespace java {
              * {@code Double.longBitsToDouble(0x1L)}.
              */
             // @ts-ignore
-            readonly MIN_VALUE: number /*double*/
+            public static readonly MIN_VALUE: number /*double*/
             /**
              * Maximum exponent a finite {@code double} variable may have.
              * It is equal to the value returned by
@@ -92,7 +92,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MAX_EXPONENT: number /*int*/
+            public static readonly MAX_EXPONENT: number /*int*/
             /**
              * Minimum exponent a normalized {@code double} variable may
              * have.  It is equal to the value returned by
@@ -100,26 +100,26 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            readonly MIN_EXPONENT: number /*int*/
+            public static readonly MIN_EXPONENT: number /*int*/
             /**
              * The number of bits used to represent a {@code double} value.
              * @since 1.5
              */
             // @ts-ignore
-            readonly SIZE: number /*int*/
+            public static readonly SIZE: number /*int*/
             /**
              * The number of bytes used to represent a {@code double} value.
              * @since 1.8
              */
             // @ts-ignore
-            readonly BYTES: number /*int*/
+            public static readonly BYTES: number /*int*/
             /**
              * The {@code Class} instance representing the primitive type
              * {@code double}.
              * @since JDK1.1
              */
             // @ts-ignore
-            readonly TYPE: java.lang.Class<java.lang.Double>
+            public static readonly TYPE: java.lang.Class<java.lang.Double | number>
             /**
              * Returns a string representation of the {@code double}
              * argument. All characters mentioned below are ASCII characters.
@@ -178,7 +178,7 @@ declare namespace java {
              * @return a string representation of the argument.
              */
             // @ts-ignore
-            toString(d: number /*double*/): java.lang.String
+            public static toString(d: number /*double*/): string
             /**
              * Returns a hexadecimal string representation of the
              * {@code double} argument. All characters mentioned below
@@ -246,7 +246,7 @@ declare namespace java {
              * @author Joseph D. Darcy
              */
             // @ts-ignore
-            toHexString(d: number /*double*/): java.lang.String
+            public static toHexString(d: number /*double*/): string
             /**
              * Returns a {@code Double} object holding the
              * {@code double} value represented by the argument string
@@ -387,7 +387,7 @@ declare namespace java {
              *              parsable number.
              */
             // @ts-ignore
-            valueOf(s: string): java.lang.Double
+            public static valueOf(s: java.lang.String | string): number
             /**
              * Returns a {@code Double} instance representing the specified
              * {@code double} value.
@@ -401,7 +401,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            valueOf(d: number /*double*/): java.lang.Double
+            public static valueOf(d: number /*double*/): number
             /**
              * Returns a new {@code double} initialized to the value
              * represented by the specified {@code String}, as performed
@@ -417,7 +417,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            parseDouble(s: string): double
+            public static parseDouble(s: java.lang.String | string): number /*double*/
             /**
              * Returns {@code true} if the specified number is a
              * Not-a-Number (NaN) value, {@code false} otherwise.
@@ -426,7 +426,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            isNaN(v: number /*double*/): boolean
+            public static isNaN(v: number /*double*/): boolean
             /**
              * Returns {@code true} if the specified number is infinitely
              * large in magnitude, {@code false} otherwise.
@@ -435,7 +435,7 @@ declare namespace java {
              *           infinity or negative infinity; {@code false} otherwise.
              */
             // @ts-ignore
-            isInfinite(v: number /*double*/): boolean
+            public static isInfinite(v: number /*double*/): boolean
             /**
              * Returns {@code true} if the argument is a finite floating-point
              * value; returns {@code false} otherwise (for NaN and infinity
@@ -446,7 +446,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            isFinite(d: number /*double*/): boolean
+            public static isFinite(d: number /*double*/): boolean
             /**
              * Returns {@code true} if this {@code Double} value is
              * a Not-a-Number (NaN), {@code false} otherwise.
@@ -454,7 +454,7 @@ declare namespace java {
              *           NaN; {@code false} otherwise.
              */
             // @ts-ignore
-            isNaN(): boolean
+            public isNaN(): boolean
             /**
              * Returns {@code true} if this {@code Double} value is
              * infinitely large in magnitude, {@code false} otherwise.
@@ -463,7 +463,7 @@ declare namespace java {
              *           {@code false} otherwise.
              */
             // @ts-ignore
-            isInfinite(): boolean
+            public isInfinite(): boolean
             /**
              * Returns a string representation of this {@code Double} object.
              * The primitive {@code double} value represented by this
@@ -473,7 +473,7 @@ declare namespace java {
              * @see java.lang.Double#toString(double)
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the value of this {@code Double} as a {@code byte}
              * after a narrowing primitive conversion.
@@ -483,7 +483,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            byteValue(): byte
+            public byteValue(): number /*byte*/
             /**
              * Returns the value of this {@code Double} as a {@code short}
              * after a narrowing primitive conversion.
@@ -493,7 +493,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            shortValue(): short
+            public shortValue(): number /*short*/
             /**
              * Returns the value of this {@code Double} as an {@code int}
              * after a narrowing primitive conversion.
@@ -502,7 +502,7 @@ declare namespace java {
              *           converted to type {@code int}
              */
             // @ts-ignore
-            intValue(): int
+            public intValue(): number /*int*/
             /**
              * Returns the value of this {@code Double} as a {@code long}
              * after a narrowing primitive conversion.
@@ -511,7 +511,7 @@ declare namespace java {
              * @jls 5.1.3 Narrowing Primitive Conversions
              */
             // @ts-ignore
-            longValue(): long
+            public longValue(): number /*long*/
             /**
              * Returns the value of this {@code Double} as a {@code float}
              * after a narrowing primitive conversion.
@@ -521,13 +521,13 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            floatValue(): float
+            public floatValue(): number /*float*/
             /**
              * Returns the {@code double} value of this {@code Double} object.
              * @return the {#code double} value represented by this object
              */
             // @ts-ignore
-            doubleValue(): double
+            public doubleValue(): number /*double*/
             /**
              * Returns a hash code for this {@code Double} object. The
              * result is the exclusive OR of the two halves of the
@@ -546,7 +546,7 @@ declare namespace java {
              * @return a {#code hash code} value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a hash code for a {@code double} value; compatible with
              * {@code Double.hashCode()}.
@@ -555,7 +555,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            hashCode(value: number /*double*/): int
+            public static hashCode(value: number /*double*/): number /*int*/
             /**
              * Compares this object against the specified object.  The result
              * is {@code true} if and only if the argument is not
@@ -593,7 +593,7 @@ declare namespace java {
              * @see java.lang.Double#doubleToLongBits(double)
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a representation of the specified floating-point value
              * according to the IEEE 754 floating-point "double
@@ -621,7 +621,7 @@ declare namespace java {
              * @return the bits that represent the floating-point number.
              */
             // @ts-ignore
-            doubleToLongBits(value: number /*double*/): long
+            public static doubleToLongBits(value: number /*double*/): number /*long*/
             /**
              * Returns a representation of the specified floating-point value
              * according to the IEEE 754 floating-point "double
@@ -653,7 +653,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            doubleToRawLongBits(value: number /*double*/): long
+            public static doubleToRawLongBits(value: number /*double*/): number /*long*/
             /**
              * Returns the {@code double} value corresponding to a given
              * bit representation.
@@ -708,7 +708,7 @@ declare namespace java {
              *           bit pattern.
              */
             // @ts-ignore
-            longBitsToDouble(bits: number /*long*/): double
+            public static longBitsToDouble(bits: number /*long*/): number /*double*/
             /**
              * Compares two {@code Double} objects numerically.  There
              * are two ways in which comparisons performed by this method
@@ -738,7 +738,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(anotherDouble: number): int
+            public compareTo(anotherDouble: java.lang.Double | number): number /*int*/
             /**
              * Compares the two specified {@code double} values. The sign
              * of the integer value returned is the same as that of the
@@ -757,7 +757,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            compare(d1: number /*double*/, d2: number /*double*/): int
+            public static compare(d1: number /*double*/, d2: number /*double*/): number /*int*/
             /**
              * Adds two {@code double} values together as per the + operator.
              * @param a the first operand
@@ -768,7 +768,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            sum(a: number /*double*/, b: number /*double*/): double
+            public static sum(a: number /*double*/, b: number /*double*/): number /*double*/
             /**
              * Returns the greater of two {@code double} values
              * as if by calling {@link Math#max(double, double) Math.max}.
@@ -779,7 +779,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            max(a: number /*double*/, b: number /*double*/): double
+            public static max(a: number /*double*/, b: number /*double*/): number /*double*/
             /**
              * Returns the smaller of two {@code double} values
              * as if by calling {@link Math#min(double, double) Math.min}.
@@ -790,7 +790,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            min(a: number /*double*/, b: number /*double*/): double
+            public static min(a: number /*double*/, b: number /*double*/): number /*double*/
         }
     }
 }

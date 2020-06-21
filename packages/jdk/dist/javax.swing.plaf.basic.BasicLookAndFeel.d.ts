@@ -24,7 +24,7 @@ declare namespace javax {
                  * @author unattributed
                  */
                 // @ts-ignore
-                class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io.Serializable {
+                abstract class BasicLookAndFeel extends javax.swing.LookAndFeel implements java.io.Serializable {
                     // @ts-ignore
                     constructor()
                     /**
@@ -41,17 +41,17 @@ declare namespace javax {
                      * @see #initComponentDefaults
                      */
                     // @ts-ignore
-                    getDefaults(): javax.swing.UIDefaults
+                    public getDefaults(): javax.swing.UIDefaults
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    initialize(): void
+                    public initialize(): void
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    uninitialize(): void
+                    public uninitialize(): void
                     /**
                      * Populates {@code table} with mappings from {@code uiClassID} to the
                      * fully qualified name of the ui class. The value for a
@@ -149,7 +149,7 @@ declare namespace javax {
                      * @see java.awt.Color#decode(String)
                      */
                     // @ts-ignore
-                    loadSystemColors(table: javax.swing.UIDefaults, systemColors: string[], useNative: boolean): void
+                    loadSystemColors(table: javax.swing.UIDefaults, systemColors: java.lang.String[] | string[], useNative: boolean): void
                     /**
                      * Populates {@code table} with the defaults for the basic look and
                      * feel.
@@ -222,7 +222,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    createAudioAction(key: any): javax.swing.Action
+                    createAudioAction(key: java.lang.Object | any): javax.swing.Action
                     /**
                      * If necessary, invokes {@code actionPerformed} on
                      * {@code audioAction} to play a sound.

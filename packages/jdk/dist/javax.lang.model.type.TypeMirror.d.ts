@@ -46,13 +46,13 @@ declare namespace javax {
                      * @return {#code true} if the specified object is equal to this one
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    equals(obj: java.lang.Object | any): boolean
                     /**
                      * Obeys the general contract of {@link Object#hashCode Object.hashCode}.
                      * @see #equals
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    hashCode(): number /*int*/
                     /**
                      * Returns an informative string representation of this type.  If
                      * possible, the string should be of a form suitable for
@@ -61,7 +61,7 @@ declare namespace javax {
                      * @return a string representation of this type
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    toString(): string
                     /**
                      * Applies a visitor to this type.
                      * @param <R> the return type of the visitor's methods

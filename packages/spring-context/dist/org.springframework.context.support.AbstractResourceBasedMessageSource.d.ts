@@ -13,7 +13,7 @@ declare namespace org {
                  * @see ReloadableResourceBundleMessageSource
                  */
                 // @ts-ignore
-                class AbstractResourceBasedMessageSource extends org.springframework.context.support.AbstractMessageSource {
+                abstract class AbstractResourceBasedMessageSource extends org.springframework.context.support.AbstractMessageSource {
                     // @ts-ignore
                     constructor()
                     /**
@@ -29,7 +29,7 @@ declare namespace org {
                      * @see java.util.ResourceBundle
                      */
                     // @ts-ignore
-                    setBasename(basename: string): void
+                    public setBasename(basename: java.lang.String | string): void
                     /**
                      * Set an array of basenames, each following the basic ResourceBundle convention
                      * of not specifying file extension or language codes. The resource location
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see java.util.ResourceBundle
                      */
                     // @ts-ignore
-                    setBasenames(...basenames: string[]): void
+                    public setBasenames(...basenames: java.lang.String[] | string[]): void
                     /**
                      * Add the specified basenames to the existing basename configuration.
                      * <p>Note: If a given basename already exists, the position of its entry
@@ -58,7 +58,7 @@ declare namespace org {
                      * @see java.util.ResourceBundle
                      */
                     // @ts-ignore
-                    addBasenames(...basenames: string[]): void
+                    public addBasenames(...basenames: java.lang.String[] | string[]): void
                     /**
                      * Return this {@code MessageSource}'s basename set, containing entries
                      * in the order of registration.
@@ -67,7 +67,7 @@ declare namespace org {
                      * @see #addBasenames
                      */
                     // @ts-ignore
-                    getBasenameSet(): java.util.Set<java.lang.String>
+                    public getBasenameSet(): Array<java.lang.String | string>
                     /**
                      * Set the default charset to use for parsing properties files.
                      * Used if no file-specific charset is specified for a file.
@@ -78,13 +78,13 @@ declare namespace org {
                      * @param defaultEncoding the default charset
                      */
                     // @ts-ignore
-                    setDefaultEncoding(defaultEncoding: string): void
+                    public setDefaultEncoding(defaultEncoding: java.lang.String | string): void
                     /**
                      * Return the default charset to use for parsing properties files, if any.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getDefaultEncoding(): java.lang.String
+                    getDefaultEncoding(): string
                     /**
                      * Set whether to fall back to the system Locale if no files for a specific
                      * Locale have been found. Default is "true"; if this is turned off, the only
@@ -97,7 +97,7 @@ declare namespace org {
                      * @see #setDefaultLocale
                      */
                     // @ts-ignore
-                    setFallbackToSystemLocale(fallbackToSystemLocale: boolean): void
+                    public setFallbackToSystemLocale(fallbackToSystemLocale: boolean): void
                     /**
                      * Return whether to fall back to the system Locale if no files for a specific
                      * Locale have been found.
@@ -117,7 +117,7 @@ declare namespace org {
                      * @see #getDefaultLocale()
                      */
                     // @ts-ignore
-                    setDefaultLocale(defaultLocale: java.util.Locale): void
+                    public setDefaultLocale(defaultLocale: java.util.Locale): void
                     /**
                      * Determine a default Locale to fall back to: either a locally specified default
                      * Locale or the system Locale, or {@code null} for no fallback locale at all.
@@ -149,7 +149,7 @@ declare namespace org {
                      * a non-classpath location.
                      */
                     // @ts-ignore
-                    setCacheSeconds(cacheSeconds: number /*int*/): void
+                    public setCacheSeconds(cacheSeconds: number /*int*/): void
                     /**
                      * Set the number of milliseconds to cache loaded properties files.
                      * Note that it is common to set seconds instead: {@link #setCacheSeconds}.
@@ -169,13 +169,13 @@ declare namespace org {
                      * @see #setCacheSeconds
                      */
                     // @ts-ignore
-                    setCacheMillis(cacheMillis: number /*long*/): void
+                    public setCacheMillis(cacheMillis: number /*long*/): void
                     /**
                      * Return the number of milliseconds to cache loaded properties files.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getCacheMillis(): long
+                    getCacheMillis(): number /*long*/
                 }
             }
         }

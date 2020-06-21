@@ -22,7 +22,7 @@ declare namespace org {
                      * @return the immutable list of custom potion effects
                      */
                     // @ts-ignore
-                    getCustomEffects(): java.util.List<org.bukkit.potion.PotionEffect>
+                    getCustomEffects(): Array<org.bukkit.potion.PotionEffect>
                     /**
                      * Adds a custom potion effect to this suspicious stew.
                      * @param effect the potion effect to add

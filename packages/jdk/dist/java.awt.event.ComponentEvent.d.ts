@@ -55,32 +55,32 @@ declare namespace java {
                  * The first number in the range of ids used for component events.
                  */
                 // @ts-ignore
-                readonly COMPONENT_FIRST: number /*int*/
+                public static readonly COMPONENT_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for component events.
                  */
                 // @ts-ignore
-                readonly COMPONENT_LAST: number /*int*/
+                public static readonly COMPONENT_LAST: number /*int*/
                 /**
                  * This event indicates that the component's position changed.
                  */
                 // @ts-ignore
-                readonly COMPONENT_MOVED: number /*int*/
+                public static readonly COMPONENT_MOVED: number /*int*/
                 /**
                  * This event indicates that the component's size changed.
                  */
                 // @ts-ignore
-                readonly COMPONENT_RESIZED: number /*int*/
+                public static readonly COMPONENT_RESIZED: number /*int*/
                 /**
                  * This event indicates that the component was made visible.
                  */
                 // @ts-ignore
-                readonly COMPONENT_SHOWN: number /*int*/
+                public static readonly COMPONENT_SHOWN: number /*int*/
                 /**
                  * This event indicates that the component was rendered invisible.
                  */
                 // @ts-ignore
-                readonly COMPONENT_HIDDEN: number /*int*/
+                public static readonly COMPONENT_HIDDEN: number /*int*/
                 /**
                  * Returns the originator of the event.
                  * @return the <code>Component</code> object that originated
@@ -88,14 +88,14 @@ declare namespace java {
                  *  <code>Component</code>.
                  */
                 // @ts-ignore
-                getComponent(): java.awt.Component
+                public getComponent(): java.awt.Component
                 /**
                  * Returns a parameter string identifying this event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

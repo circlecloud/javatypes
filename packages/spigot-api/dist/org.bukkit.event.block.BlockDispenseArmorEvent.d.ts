@@ -18,7 +18,7 @@ declare namespace org {
                      * @return the target entity
                      */
                     // @ts-ignore
-                    getTargetEntity(): org.bukkit.entity.LivingEntity
+                    public getTargetEntity(): org.bukkit.entity.LivingEntity
                 }
             }
         }

@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#EXPIRATION_TICKS
                                  */
                                 // @ts-ignore
-                                expireTicks(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                expireTicks(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

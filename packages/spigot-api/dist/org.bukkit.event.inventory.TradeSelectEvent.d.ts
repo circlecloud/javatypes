@@ -18,19 +18,19 @@ declare namespace org {
                      * @return The index of the trade clicked by the player
                      */
                     // @ts-ignore
-                    getIndex(): int
+                    public getIndex(): number /*int*/
                     // @ts-ignore
-                    getInventory(): org.bukkit.inventory.MerchantInventory
+                    public getInventory(): org.bukkit.inventory.MerchantInventory
                     /**
                      * Get the Merchant involved.
                      * @return the Merchant
                      */
                     // @ts-ignore
-                    getMerchant(): org.bukkit.inventory.Merchant
+                    public getMerchant(): org.bukkit.inventory.Merchant
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

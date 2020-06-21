@@ -15,7 +15,7 @@ declare namespace org {
                  * @return the friendly name
                  */
                 // @ts-ignore
-                getDisplayName(): java.lang.String
+                getDisplayName(): string
                 /**
                  * Sets the "friendly" name to display of this player. This may include
                  * color.
@@ -25,13 +25,13 @@ declare namespace org {
                  * @param name The new display name.
                  */
                 // @ts-ignore
-                setDisplayName(name: string): void
+                setDisplayName(name: java.lang.String | string): void
                 /**
                  * Gets the name that is shown on the player list.
                  * @return the player list name
                  */
                 // @ts-ignore
-                getPlayerListName(): java.lang.String
+                getPlayerListName(): string
                 /**
                  * Sets the name that is shown on the in-game player list.
                  * <p>
@@ -39,31 +39,31 @@ declare namespace org {
                  * @param name new player list name
                  */
                 // @ts-ignore
-                setPlayerListName(name: string): void
+                setPlayerListName(name: java.lang.String | string): void
                 /**
                  * Gets the currently displayed player list header for this player.
                  * @return player list header or null
                  */
                 // @ts-ignore
-                getPlayerListHeader(): java.lang.String
+                getPlayerListHeader(): string
                 /**
                  * Gets the currently displayed player list footer for this player.
                  * @return player list header or null
                  */
                 // @ts-ignore
-                getPlayerListFooter(): java.lang.String
+                getPlayerListFooter(): string
                 /**
                  * Sets the currently displayed player list header for this player.
                  * @param header player list header, null for empty
                  */
                 // @ts-ignore
-                setPlayerListHeader(header: string): void
+                setPlayerListHeader(header: java.lang.String | string): void
                 /**
                  * Sets the currently displayed player list footer for this player.
                  * @param footer player list footer, null for empty
                  */
                 // @ts-ignore
-                setPlayerListFooter(footer: string): void
+                setPlayerListFooter(footer: java.lang.String | string): void
                 /**
                  * Sets the currently displayed player list header and footer for this
                  * player.
@@ -71,7 +71,7 @@ declare namespace org {
                  * @param footer player list footer, null for empty
                  */
                 // @ts-ignore
-                setPlayerListHeaderFooter(header: string, footer: string): void
+                setPlayerListHeaderFooter(header: java.lang.String | string, footer: java.lang.String | string): void
                 /**
                  * Set the target of the player's compass.
                  * @param loc Location to point to
@@ -95,26 +95,26 @@ declare namespace org {
                  * @param message Message to be displayed
                  */
                 // @ts-ignore
-                sendRawMessage(message: string): void
+                sendRawMessage(message: java.lang.String | string): void
                 /**
                  * Kicks player with custom kick message.
                  * @param message kick message
                  */
                 // @ts-ignore
-                kickPlayer(message: string): void
+                kickPlayer(message: java.lang.String | string): void
                 /**
                  * Says a message (or runs a command).
                  * @param msg message to print
                  */
                 // @ts-ignore
-                chat(msg: string): void
+                chat(msg: java.lang.String | string): void
                 /**
                  * Makes the player perform the given command
                  * @param command Command to perform
                  * @return true if the command was successful, otherwise false
                  */
                 // @ts-ignore
-                performCommand(command: string): boolean
+                performCommand(command: java.lang.String | string): boolean
                 /**
                  * Returns if the player is in sneak mode
                  * @return true if player is in sneak mode
@@ -215,7 +215,7 @@ declare namespace org {
                  * @param pitch the pitch of the sound
                  */
                 // @ts-ignore
-                playSound(location: org.bukkit.Location, sound: string, volume: number /*float*/, pitch: number /*float*/): void
+                playSound(location: org.bukkit.Location, sound: java.lang.String | string, volume: number /*float*/, pitch: number /*float*/): void
                 /**
                  * Play a sound for a player at the location.
                  * <p>
@@ -241,7 +241,7 @@ declare namespace org {
                  * @param pitch the pitch of the sound
                  */
                 // @ts-ignore
-                playSound(location: org.bukkit.Location, sound: string, category: org.bukkit.SoundCategory, volume: number /*float*/, pitch: number /*float*/): void
+                playSound(location: org.bukkit.Location, sound: java.lang.String | string, category: org.bukkit.SoundCategory, volume: number /*float*/, pitch: number /*float*/): void
                 /**
                  * Stop the specified sound from playing.
                  * @param sound the sound to stop
@@ -253,7 +253,7 @@ declare namespace org {
                  * @param sound the sound to stop
                  */
                 // @ts-ignore
-                stopSound(sound: string): void
+                stopSound(sound: java.lang.String | string): void
                 /**
                  * Stop the specified sound from playing.
                  * @param sound the sound to stop
@@ -267,7 +267,7 @@ declare namespace org {
                  * @param category the category of the sound
                  */
                 // @ts-ignore
-                stopSound(sound: string, category: org.bukkit.SoundCategory): void
+                stopSound(sound: java.lang.String | string, category: org.bukkit.SoundCategory): void
                 /**
                  * Plays an effect to just this player.
                  * @param loc the location to play the effect at
@@ -337,7 +337,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if lines is non-null and has a length less than 4
                  */
                 // @ts-ignore
-                sendSignChange(loc: org.bukkit.Location, lines: string[]): void
+                sendSignChange(loc: org.bukkit.Location, lines: java.lang.String[] | string[]): void
                 /**
                  * Send a sign change. This fakes a sign change packet for a user at
                  * a certain location. This will not actually change the world in any way.
@@ -355,7 +355,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if lines is non-null and has a length less than 4
                  */
                 // @ts-ignore
-                sendSignChange(loc: org.bukkit.Location, lines: string[], dyeColor: org.bukkit.DyeColor): void
+                sendSignChange(loc: org.bukkit.Location, lines: java.lang.String[] | string[], dyeColor: org.bukkit.DyeColor): void
                 /**
                  * Render a map and send it to the player in its entirety. This may be
                  * used when streaming the map in the normal manner is not desirable.
@@ -389,14 +389,14 @@ declare namespace org {
                  * @return The player's time
                  */
                 // @ts-ignore
-                getPlayerTime(): long
+                getPlayerTime(): number /*long*/
                 /**
                  * Returns the player's current time offset relative to server time, or
                  * the current player's fixed time if the player's time is absolute.
                  * @return The player's time
                  */
                 // @ts-ignore
-                getPlayerTimeOffset(): long
+                getPlayerTimeOffset(): number /*long*/
                 /**
                  * Returns true if the player's time is relative to the server time,
                  * otherwise the player's time is absolute and will not change its current
@@ -454,7 +454,7 @@ declare namespace org {
                  * @return Current experience points
                  */
                 // @ts-ignore
-                getExp(): float
+                getExp(): number /*float*/
                 /**
                  * Sets the players current experience points towards the next level
                  * <p>
@@ -468,7 +468,7 @@ declare namespace org {
                  * @return Current experience level
                  */
                 // @ts-ignore
-                getLevel(): int
+                getLevel(): number /*int*/
                 /**
                  * Sets the players current experience level
                  * @param level New experience level
@@ -483,7 +483,7 @@ declare namespace org {
                  * @return Current total experience points
                  */
                 // @ts-ignore
-                getTotalExperience(): int
+                getTotalExperience(): number /*int*/
                 /**
                  * Sets the players current experience points.
                  * <br>
@@ -522,7 +522,7 @@ declare namespace org {
                  * @return Exhaustion level
                  */
                 // @ts-ignore
-                getExhaustion(): float
+                getExhaustion(): number /*float*/
                 /**
                  * Sets the players current exhaustion level
                  * @param value Exhaustion level
@@ -537,7 +537,7 @@ declare namespace org {
                  * @return Saturation level
                  */
                 // @ts-ignore
-                getSaturation(): float
+                getSaturation(): number /*float*/
                 /**
                  * Sets the players current saturation level
                  * @param value Saturation level
@@ -549,7 +549,7 @@ declare namespace org {
                  * @return Food level
                  */
                 // @ts-ignore
-                getFoodLevel(): int
+                getFoodLevel(): number /*int*/
                 /**
                  * Sets the players current food level
                  * @param value New food level
@@ -643,13 +643,13 @@ declare namespace org {
                  * @return The current allowed speed, from -1 to 1
                  */
                 // @ts-ignore
-                getFlySpeed(): float
+                getFlySpeed(): number /*float*/
                 /**
                  * Gets the current allowed speed that a client can walk.
                  * @return The current allowed speed, from -1 to 1
                  */
                 // @ts-ignore
-                getWalkSpeed(): float
+                getWalkSpeed(): number /*float*/
                 /**
                  * Request that the player's client download and switch texture packs.
                  * <p>
@@ -683,7 +683,7 @@ declare namespace org {
                  *      should use {#link #setResourcePack(String)}.
                  */
                 // @ts-ignore
-                setTexturePack(url: string): void
+                setTexturePack(url: java.lang.String | string): void
                 /**
                  * Request that the player's client download and switch resource packs.
                  * <p>
@@ -716,7 +716,7 @@ declare namespace org {
                  *      length restriction is an implementation specific arbitrary value.
                  */
                 // @ts-ignore
-                setResourcePack(url: string): void
+                setResourcePack(url: java.lang.String | string): void
                 /**
                  * Request that the player's client download and switch resource packs.
                  * <p>
@@ -752,7 +752,7 @@ declare namespace org {
                  *      long.
                  */
                 // @ts-ignore
-                setResourcePack(url: string, hash: number /*byte*/[]): void
+                setResourcePack(url: java.lang.String | string, hash: number /*byte*/[]): void
                 /**
                  * Gets the Scoreboard displayed to this player
                  * @return The current scoreboard seen by this player
@@ -809,7 +809,7 @@ declare namespace org {
                  * @see Player#setHealthScaled(boolean)
                  */
                 // @ts-ignore
-                getHealthScale(): double
+                getHealthScale(): number /*double*/
                 /**
                  * Gets the entity which is followed by the camera when in
                  * {@link GameMode#SPECTATOR}.
@@ -838,7 +838,7 @@ declare namespace org {
                  * @deprecated API behavior subject to change
                  */
                 // @ts-ignore
-                sendTitle(title: string, subtitle: string): void
+                sendTitle(title: java.lang.String | string, subtitle: java.lang.String | string): void
                 /**
                  * Sends a title and a subtitle message to the player. If either of these
                  * values are null, they will not be sent and the display will remain
@@ -854,7 +854,7 @@ declare namespace org {
                  * @param fadeOut time in ticks for titles to fade out. Defaults to 20.
                  */
                 // @ts-ignore
-                sendTitle(title: string, subtitle: string, fadeIn: number /*int*/, stay: number /*int*/, fadeOut: number /*int*/): void
+                sendTitle(title: java.lang.String | string, subtitle: java.lang.String | string, fadeIn: number /*int*/, stay: number /*int*/, fadeOut: number /*int*/): void
                 /**
                  * Resets the title displayed to the player. This will clear the displayed
                  * title / subtitle and reset timings to their default values.
@@ -1062,7 +1062,7 @@ declare namespace org {
                  * @return client view distance as above
                  */
                 // @ts-ignore
-                getClientViewDistance(): int
+                getClientViewDistance(): number /*int*/
                 /**
                  * Gets the player's current locale.
                  * The value of the locale String is not defined properly.
@@ -1073,7 +1073,7 @@ declare namespace org {
                  * @return the player's locale
                  */
                 // @ts-ignore
-                getLocale(): java.lang.String
+                getLocale(): string
                 /**
                  * Update the list of commands sent to the client.
                  * <br>

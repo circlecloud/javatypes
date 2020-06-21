@@ -27,34 +27,34 @@ declare namespace org {
                      * The default recovery interval: 5000 ms = 5 seconds.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_INTERVAL: number /*long*/
+                    public static readonly DEFAULT_INTERVAL: number /*long*/
                     /**
                      * Constant value indicating an unlimited number of attempts.
                      */
                     // @ts-ignore
-                    readonly UNLIMITED_ATTEMPTS: number /*long*/
+                    public static readonly UNLIMITED_ATTEMPTS: number /*long*/
                     /**
                      * Set the interval between two attempts in milliseconds.
                      */
                     // @ts-ignore
-                    setInterval(interval: number /*long*/): void
+                    public setInterval(interval: number /*long*/): void
                     /**
                      * Return the interval between two attempts in milliseconds.
                      */
                     // @ts-ignore
-                    getInterval(): long
+                    public getInterval(): number /*long*/
                     /**
                      * Set the maximum number of attempts in milliseconds.
                      */
                     // @ts-ignore
-                    setMaxAttempts(maxAttempts: number /*long*/): void
+                    public setMaxAttempts(maxAttempts: number /*long*/): void
                     /**
                      * Return the maximum number of attempts in milliseconds.
                      */
                     // @ts-ignore
-                    getMaxAttempts(): long
+                    public getMaxAttempts(): number /*long*/
                     // @ts-ignore
-                    start(): org.springframework.util.backoff.BackOffExecution
+                    public start(): org.springframework.util.backoff.BackOffExecution
                 }
             }
         }

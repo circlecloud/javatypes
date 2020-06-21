@@ -19,13 +19,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): javax.xml.ws.Service
+                    public getObject(): javax.xml.ws.Service
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends javax.xml.ws.Service>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                 }
             }
         }

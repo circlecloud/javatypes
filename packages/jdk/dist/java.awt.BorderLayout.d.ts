@@ -114,27 +114,27 @@ declare namespace java {
              * The north layout constraint (top of container).
              */
             // @ts-ignore
-            readonly NORTH: string
+            public static readonly NORTH: java.lang.String | string
             /**
              * The south layout constraint (bottom of container).
              */
             // @ts-ignore
-            readonly SOUTH: string
+            public static readonly SOUTH: java.lang.String | string
             /**
              * The east layout constraint (right side of container).
              */
             // @ts-ignore
-            readonly EAST: string
+            public static readonly EAST: java.lang.String | string
             /**
              * The west layout constraint (left side of container).
              */
             // @ts-ignore
-            readonly WEST: string
+            public static readonly WEST: java.lang.String | string
             /**
              * The center layout constraint (middle of container).
              */
             // @ts-ignore
-            readonly CENTER: string
+            public static readonly CENTER: java.lang.String | string
             /**
              * Synonym for PAGE_START.  Exists for compatibility with previous
              * versions.  PAGE_START is preferred.
@@ -142,7 +142,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly BEFORE_FIRST_LINE: string
+            public static readonly BEFORE_FIRST_LINE: java.lang.String | string
             /**
              * Synonym for PAGE_END.  Exists for compatibility with previous
              * versions.  PAGE_END is preferred.
@@ -150,7 +150,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly AFTER_LAST_LINE: string
+            public static readonly AFTER_LAST_LINE: java.lang.String | string
             /**
              * Synonym for LINE_START.  Exists for compatibility with previous
              * versions.  LINE_START is preferred.
@@ -158,7 +158,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly BEFORE_LINE_BEGINS: string
+            public static readonly BEFORE_LINE_BEGINS: java.lang.String | string
             /**
              * Synonym for LINE_END.  Exists for compatibility with previous
              * versions.  LINE_END is preferred.
@@ -166,7 +166,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            readonly AFTER_LINE_ENDS: string
+            public static readonly AFTER_LINE_ENDS: java.lang.String | string
             /**
              * The component comes before the first line of the layout's content.
              * For Western, left-to-right and top-to-bottom orientations, this is
@@ -175,7 +175,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly PAGE_START: string
+            public static readonly PAGE_START: java.lang.String | string
             /**
              * The component comes after the last line of the layout's content.
              * For Western, left-to-right and top-to-bottom orientations, this is
@@ -184,7 +184,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly PAGE_END: string
+            public static readonly PAGE_END: java.lang.String | string
             /**
              * The component goes at the beginning of the line direction for the
              * layout. For Western, left-to-right and top-to-bottom orientations,
@@ -193,7 +193,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly LINE_START: string
+            public static readonly LINE_START: java.lang.String | string
             /**
              * The component goes at the end of the line direction for the
              * layout. For Western, left-to-right and top-to-bottom orientations,
@@ -202,33 +202,33 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            readonly LINE_END: string
+            public static readonly LINE_END: java.lang.String | string
             /**
              * Returns the horizontal gap between components.
              * @since JDK1.1
              */
             // @ts-ignore
-            getHgap(): int
+            public getHgap(): number /*int*/
             /**
              * Sets the horizontal gap between components.
              * @param hgap the horizontal gap between components
              * @since JDK1.1
              */
             // @ts-ignore
-            setHgap(hgap: number /*int*/): void
+            public setHgap(hgap: number /*int*/): void
             /**
              * Returns the vertical gap between components.
              * @since JDK1.1
              */
             // @ts-ignore
-            getVgap(): int
+            public getVgap(): number /*int*/
             /**
              * Sets the vertical gap between components.
              * @param vgap the vertical gap between components
              * @since JDK1.1
              */
             // @ts-ignore
-            setVgap(vgap: number /*int*/): void
+            public setVgap(vgap: number /*int*/): void
             /**
              * Adds the specified component to the layout, using the specified
              * constraint object.  For border layouts, the constraint must be
@@ -249,12 +249,12 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addLayoutComponent(comp: java.awt.Component, constraints: any): void
+            public addLayoutComponent(comp: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * @deprecated replaced by <code>addLayoutComponent(Component, Object)</code>.
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Removes the specified component from this border layout. This
              * method is called when a container calls its <code>remove</code> or
@@ -265,7 +265,7 @@ declare namespace java {
              * @see java.awt.Container#removeAll()
              */
             // @ts-ignore
-            removeLayoutComponent(comp: java.awt.Component): void
+            public removeLayoutComponent(comp: java.awt.Component): void
             /**
              * Gets the component that was added using the given constraint
              * @param constraints  the desired constraint, one of <code>CENTER</code>,
@@ -281,7 +281,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getLayoutComponent(constraints: any): java.awt.Component
+            public getLayoutComponent(constraints: java.lang.Object | any): java.awt.Component
             /**
              * Returns the component that corresponds to the given constraint location
              * based on the target <code>Container</code>'s component orientation.
@@ -306,7 +306,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getLayoutComponent(target: java.awt.Container, constraints: any): java.awt.Component
+            public getLayoutComponent(target: java.awt.Container, constraints: java.lang.Object | any): java.awt.Component
             /**
              * Gets the constraints for the specified component
              * @param comp the component to be queried
@@ -317,7 +317,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getConstraints(comp: java.awt.Component): java.lang.Object
+            public getConstraints(comp: java.awt.Component): any
             /**
              * Determines the minimum size of the <code>target</code> container
              * using this layout manager.
@@ -333,7 +333,7 @@ declare namespace java {
              * @see java.awt.Container#getMinimumSize()
              */
             // @ts-ignore
-            minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Determines the preferred size of the <code>target</code>
              * container using this layout manager, based on the components
@@ -350,7 +350,7 @@ declare namespace java {
              * @see java.awt.Container#getPreferredSize()
              */
             // @ts-ignore
-            preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the maximum dimensions for this layout given the components
              * in the specified target container.
@@ -360,7 +360,7 @@ declare namespace java {
              * @see #preferredLayoutSize
              */
             // @ts-ignore
-            maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the alignment along the x axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -369,7 +369,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getLayoutAlignmentX(parent: java.awt.Container): float
+            public getLayoutAlignmentX(parent: java.awt.Container): number /*float*/
             /**
              * Returns the alignment along the y axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -378,13 +378,13 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getLayoutAlignmentY(parent: java.awt.Container): float
+            public getLayoutAlignmentY(parent: java.awt.Container): number /*float*/
             /**
              * Invalidates the layout, indicating that if the layout manager
              * has cached information it should be discarded.
              */
             // @ts-ignore
-            invalidateLayout(target: java.awt.Container): void
+            public invalidateLayout(target: java.awt.Container): void
             /**
              * Lays out the container argument using this border layout.
              * <p>
@@ -405,13 +405,13 @@ declare namespace java {
              * @see java.awt.Container#doLayout()
              */
             // @ts-ignore
-            layoutContainer(target: java.awt.Container): void
+            public layoutContainer(target: java.awt.Container): void
             /**
              * Returns a string representation of the state of this border layout.
              * @return a string representation of this border layout.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

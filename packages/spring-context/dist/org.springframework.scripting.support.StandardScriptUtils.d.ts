@@ -8,7 +8,7 @@ declare namespace org {
                  * @since 4.2.2
                  */
                 // @ts-ignore
-                class StandardScriptUtils extends java.lang.Object {
+                abstract class StandardScriptUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -22,7 +22,7 @@ declare namespace org {
                      * @throws IllegalStateException if the desired engine failed to initialize
                      */
                     // @ts-ignore
-                    retrieveEngineByName(scriptEngineManager: javax.script.ScriptEngineManager, engineName: string): javax.script.ScriptEngine
+                    public static retrieveEngineByName(scriptEngineManager: javax.script.ScriptEngineManager, engineName: java.lang.String | string): javax.script.ScriptEngine
                 }
             }
         }

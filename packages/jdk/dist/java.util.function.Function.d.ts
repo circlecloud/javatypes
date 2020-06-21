@@ -32,7 +32,7 @@ declare namespace java {
                  * @see #andThen(Function)
                  */
                 // @ts-ignore
-                compose<V>(before: java.util.function.Function<any super V, T> | java.util.function$.Function<? super V, T>): java.util.function.Function<V, R>
+                compose<V>(before: java.util.function$.Function<any, any>): java.util.function$.Function<V, R>
                 /**
                  * Returns a composed function that first applies this function to
                  * its input, and then applies the {@code after} function to the result.
@@ -47,14 +47,14 @@ declare namespace java {
                  * @see #compose(Function)
                  */
                 // @ts-ignore
-                andThen<V>(after: java.util.function.Function<any super R, V> | java.util.function$.Function<? super R, V>): java.util.function.Function<T, V>
+                andThen<V>(after: java.util.function$.Function<any, any>): java.util.function$.Function<T, V>
                 /**
                  * Returns a function that always returns its input argument.
                  * @param <T> the type of the input and output objects to the function
                  * @return a function that always returns its input argument
                  */
                 // @ts-ignore
-                identity<T>(): java.util.function.Function<T, T>
+                identity<T>(): java.util.function$.Function<T, T>
             }
         }
     }

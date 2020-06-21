@@ -63,7 +63,7 @@ declare namespace java {
              * character" value which should not occur in any valid Unicode string.
              */
             // @ts-ignore
-            
+            readonly DONE: string
             /**
              * Sets the position to getBeginIndex() and returns the character at that
              * position.
@@ -71,7 +71,7 @@ declare namespace java {
              * @see #getBeginIndex()
              */
             // @ts-ignore
-            first(): char
+            first(): string
             /**
              * Sets the position to getEndIndex()-1 (getEndIndex() if the text is empty)
              * and returns the character at that position.
@@ -79,7 +79,7 @@ declare namespace java {
              * @see #getEndIndex()
              */
             // @ts-ignore
-            last(): char
+            last(): string
             /**
              * Gets the character at the current position (as returned by getIndex()).
              * @return the character at the current position or DONE if the current
@@ -87,7 +87,7 @@ declare namespace java {
              * @see #getIndex()
              */
             // @ts-ignore
-            current(): char
+            current(): string
             /**
              * Increments the iterator's index by one and returns the character
              * at the new index.  If the resulting index is greater or equal
@@ -97,7 +97,7 @@ declare namespace java {
              *  position is off the end of the text range.
              */
             // @ts-ignore
-            next(): char
+            next(): string
             /**
              * Decrements the iterator's index by one and returns the character
              * at the new index. If the current index is getBeginIndex(), the index
@@ -106,7 +106,7 @@ declare namespace java {
              *  position is equal to getBeginIndex().
              */
             // @ts-ignore
-            previous(): char
+            previous(): string
             /**
              * Sets the position to the specified position in the text and returns that
              * character.
@@ -116,32 +116,32 @@ declare namespace java {
              * @return the character at the specified position or DONE if the specified position is equal to getEndIndex()
              */
             // @ts-ignore
-            setIndex(position: number /*int*/): char
+            setIndex(position: number /*int*/): string
             /**
              * Returns the start index of the text.
              * @return the index at which the text begins.
              */
             // @ts-ignore
-            getBeginIndex(): int
+            getBeginIndex(): number /*int*/
             /**
              * Returns the end index of the text.  This index is the index of the first
              * character following the end of the text.
              * @return the index after the last character in the text
              */
             // @ts-ignore
-            getEndIndex(): int
+            getEndIndex(): number /*int*/
             /**
              * Returns the current index.
              * @return the current index.
              */
             // @ts-ignore
-            getIndex(): int
+            getIndex(): number /*int*/
             /**
              * Create a copy of this iterator
              * @return A copy of this
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            clone(): any
         }
     }
 }

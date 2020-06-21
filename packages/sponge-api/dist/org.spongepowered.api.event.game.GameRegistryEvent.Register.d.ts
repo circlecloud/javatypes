@@ -40,7 +40,7 @@ declare namespace org {
                              *      registered because a matching type was already registered
                              */
                             // @ts-ignore
-                            register(catalogType: T extends org.spongepowered.api.CatalogType): void
+                            register(catalogType: T): void
                         }
                     }
                 }

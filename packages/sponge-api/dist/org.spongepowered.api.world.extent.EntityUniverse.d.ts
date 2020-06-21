@@ -28,7 +28,7 @@ declare namespace org {
                          * @return A collection of entities
                          */
                         // @ts-ignore
-                        getEntities(): java.util.Collection<org.spongepowered.api.entity.Entity>
+                        getEntities(): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Return a collection of entities contained within this universe, possibly
                          * only returning entities only in loaded areas. The returned entities are
@@ -40,7 +40,7 @@ declare namespace org {
                          * @return A collection of filtered entities
                          */
                         // @ts-ignore
-                        getEntities(filter: java.util.function.Predicate<org.spongepowered.api.entity.Entity> | java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): java.util.Collection<org.spongepowered.api.entity.Entity>
+                        getEntities(filter: java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Return a collection of entities contained within {@code distance} blocks
                          * of the specified location. This uses a sphere to test distances.
@@ -52,7 +52,7 @@ declare namespace org {
                          * @return A collection of nearby entities
                          */
                         // @ts-ignore
-                        getNearbyEntities(location: Vector3d, distance: number /*double*/): java.util.Collection<org.spongepowered.api.entity.Entity>
+                        getNearbyEntities(location: Vector3d, distance: number /*double*/): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Create an entity instance at the given position.
                          * <p>Creating an entity does not spawn the entity into the world. An entity
@@ -187,7 +187,7 @@ declare namespace org {
                          * @return The entities which spawned correctly, or empty if none
                          */
                         // @ts-ignore
-                        spawnEntities(entities: java.lang.Iterable<org.spongepowered.api.entity.Entity>): java.util.Collection<org.spongepowered.api.entity.Entity>
+                        spawnEntities(entities: java.lang.Iterable<any>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Gets all the entities that intersect the bounding box, in no particular
                          * order.
@@ -195,7 +195,7 @@ declare namespace org {
                          * @return All the intersecting entities
                          */
                         // @ts-ignore
-                        getIntersectingEntities(box: org.spongepowered.api.util.AABB): java.util.Set<org.spongepowered.api.entity.Entity>
+                        getIntersectingEntities(box: org.spongepowered.api.util.AABB): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Gets all the entities that intersect the bounding box, in no particular
                          * order, as long as the pass the given filter test.
@@ -204,7 +204,7 @@ declare namespace org {
                          * @return All the intersecting entities that pass the filter test
                          */
                         // @ts-ignore
-                        getIntersectingEntities(box: org.spongepowered.api.util.AABB, filter: java.util.function.Predicate<org.spongepowered.api.entity.Entity> | java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): java.util.Set<org.spongepowered.api.entity.Entity>
+                        getIntersectingEntities(box: org.spongepowered.api.util.AABB, filter: java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): Array<org.spongepowered.api.entity.Entity>
                         /**
                          * Gets all the entities that intersect the ray (by their bounding box)
                          * The ray is defined by its start and end point.
@@ -214,7 +214,7 @@ declare namespace org {
                          *       associated intersection point and normal
                          */
                         // @ts-ignore
-                        getIntersectingEntities(start: Vector3d, end: Vector3d): java.util.Set<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
+                        getIntersectingEntities(start: Vector3d, end: Vector3d): Array<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
                         /**
                          * Gets all the entities that intersect the ray (by their bounding box)
                          * The ray is defined by its start and end point. Only the entities that
@@ -226,7 +226,7 @@ declare namespace org {
                          *       associated intersection point and normal
                          */
                         // @ts-ignore
-                        getIntersectingEntities(start: Vector3d, end: Vector3d, filter: java.util.function.Predicate<org.spongepowered.api.world.extent.EntityUniverse.EntityHit> | java.util.function$.Predicate<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>): java.util.Set<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
+                        getIntersectingEntities(start: Vector3d, end: Vector3d, filter: java.util.function$.Predicate<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>): Array<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
                         /**
                          * Gets all the entities that intersect the ray (by their bounding box)
                          * The ray is defined by its start, direction and distance.
@@ -237,7 +237,7 @@ declare namespace org {
                          *       associated intersection point and normal
                          */
                         // @ts-ignore
-                        getIntersectingEntities(start: Vector3d, direction: Vector3d, distance: number /*double*/): java.util.Set<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
+                        getIntersectingEntities(start: Vector3d, direction: Vector3d, distance: number /*double*/): Array<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
                         /**
                          * Gets all the entities that intersect the ray (by their bounding box)
                          * The ray is defined by its start, direction and distance. Only the
@@ -250,7 +250,7 @@ declare namespace org {
                          *       associated intersection point and normal
                          */
                         // @ts-ignore
-                        getIntersectingEntities(start: Vector3d, direction: Vector3d, distance: number /*double*/, filter: java.util.function.Predicate<org.spongepowered.api.world.extent.EntityUniverse.EntityHit> | java.util.function$.Predicate<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>): java.util.Set<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
+                        getIntersectingEntities(start: Vector3d, direction: Vector3d, distance: number /*double*/, filter: java.util.function$.Predicate<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>): Array<org.spongepowered.api.world.extent.EntityUniverse.EntityHit>
                     }
                 }
             }

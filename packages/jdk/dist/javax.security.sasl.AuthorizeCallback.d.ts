@@ -18,19 +18,19 @@ declare namespace javax {
                  * @param authzID   The authorization id.
                  */
                 // @ts-ignore
-                constructor(authnID: string, authzID: string)
+                constructor(authnID: java.lang.String | string, authzID: java.lang.String | string)
                 /**
                  * Returns the authentication id to check.
                  * @return The authentication id to check.
                  */
                 // @ts-ignore
-                getAuthenticationID(): java.lang.String
+                public getAuthenticationID(): string
                 /**
                  * Returns the authorization id to check.
                  * @return The authentication id to check.
                  */
                 // @ts-ignore
-                getAuthorizationID(): java.lang.String
+                public getAuthorizationID(): string
                 /**
                  * Determines whether the authentication id is allowed to
                  * act on behalf of the authorization id.
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @see #getAuthorizedID()
                  */
                 // @ts-ignore
-                isAuthorized(): boolean
+                public isAuthorized(): boolean
                 /**
                  * Sets whether the authorization is allowed.
                  * @param ok {#code true} if authorization is allowed; {@code false} otherwise
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @see #setAuthorizedID(java.lang.String)
                  */
                 // @ts-ignore
-                setAuthorized(ok: boolean): void
+                public setAuthorized(ok: boolean): void
                 /**
                  * Returns the id of the authorized user.
                  * @return The id of the authorized user. {#code null} means the
@@ -56,7 +56,7 @@ declare namespace javax {
                  * @see #setAuthorizedID(java.lang.String)
                  */
                 // @ts-ignore
-                getAuthorizedID(): java.lang.String
+                public getAuthorizedID(): string
                 /**
                  * Sets the id of the authorized entity. Called by handler only when the id
                  * is different from getAuthorizationID(). For example, the id
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @see #getAuthorizedID
                  */
                 // @ts-ignore
-                setAuthorizedID(id: string): void
+                public setAuthorizedID(id: java.lang.String | string): void
             }
         }
     }

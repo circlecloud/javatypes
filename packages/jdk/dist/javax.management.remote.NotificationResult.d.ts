@@ -45,7 +45,7 @@ declare namespace javax {
                  *  in the buffer.
                  */
                 // @ts-ignore
-                getEarliestSequenceNumber(): long
+                public getEarliestSequenceNumber(): number /*long*/
                 /**
                  * Returns the sequence number of the next notification available
                  * for querying.
@@ -53,7 +53,7 @@ declare namespace javax {
                  *  for querying.
                  */
                 // @ts-ignore
-                getNextSequenceNumber(): long
+                public getNextSequenceNumber(): number /*long*/
                 /**
                  * Returns the notifications resulting from the query, and the
                  * listeners they correspond to.
@@ -61,7 +61,7 @@ declare namespace javax {
                  *  listeners they correspond to.  This array can be empty.
                  */
                 // @ts-ignore
-                getTargetedNotifications(): javax.management.remote.TargetedNotification[]
+                public getTargetedNotifications(): javax.management.remote.TargetedNotification[]
                 /**
                  * Returns a string representation of the object.  The result
                  * should be a concise but informative representation that is easy
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @return a string representation of the object.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

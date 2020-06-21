@@ -45,7 +45,7 @@ declare namespace org {
                                  * @return The builder
                                  */
                                 // @ts-ignore
-                                aisle(...aisle: string[]): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.AisleStep
+                                aisle(...aisle: java.lang.String[] | string[]): org.spongepowered.api.item.recipe.crafting.ShapedCraftingRecipe.Builder.AisleStep
                                 /**
                                  * Start building a new recipe with ingredients based on rows.
                                  * After this call {@link RowsStep#row} for each row of your recipe.

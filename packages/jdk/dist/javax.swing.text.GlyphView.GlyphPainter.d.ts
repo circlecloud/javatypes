@@ -15,7 +15,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class GlyphPainter extends java.lang.Object {
+                abstract class GlyphPainter extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,18 +23,18 @@ declare namespace javax {
                      * (for tab expansion).
                      */
                     // @ts-ignore
-                    abstract getSpan(v: javax.swing.text.GlyphView, p0: number /*int*/, p1: number /*int*/, e: javax.swing.text.TabExpander, x: number /*float*/): float
+                    public abstract getSpan(v: javax.swing.text.GlyphView, p0: number /*int*/, p1: number /*int*/, e: javax.swing.text.TabExpander, x: number /*float*/): number /*float*/
                     // @ts-ignore
-                    abstract getHeight(v: javax.swing.text.GlyphView): float
+                    public abstract getHeight(v: javax.swing.text.GlyphView): number /*float*/
                     // @ts-ignore
-                    abstract getAscent(v: javax.swing.text.GlyphView): float
+                    public abstract getAscent(v: javax.swing.text.GlyphView): number /*float*/
                     // @ts-ignore
-                    abstract getDescent(v: javax.swing.text.GlyphView): float
+                    public abstract getDescent(v: javax.swing.text.GlyphView): number /*float*/
                     /**
                      * Paint the glyphs representing the given range.
                      */
                     // @ts-ignore
-                    abstract paint(v: javax.swing.text.GlyphView, g: java.awt.Graphics, a: java.awt.Shape, p0: number /*int*/, p1: number /*int*/): void
+                    public abstract paint(v: javax.swing.text.GlyphView, g: java.awt.Graphics, a: java.awt.Shape, p0: number /*int*/, p1: number /*int*/): void
                     /**
                      * Provides a mapping from the document model coordinate space
                      * to the coordinate space of the view mapped to it.
@@ -51,7 +51,7 @@ declare namespace javax {
                      * @see View#modelToView
                      */
                     // @ts-ignore
-                    abstract modelToView(v: javax.swing.text.GlyphView, pos: number /*int*/, bias: javax.swing.text.Position.Bias, a: java.awt.Shape): java.awt.Shape
+                    public abstract modelToView(v: javax.swing.text.GlyphView, pos: number /*int*/, bias: javax.swing.text.Position.Bias, a: java.awt.Shape): java.awt.Shape
                     /**
                      * Provides a mapping from the view coordinate space to the logical
                      * coordinate space of the model.
@@ -67,7 +67,7 @@ declare namespace javax {
                      * @see View#viewToModel
                      */
                     // @ts-ignore
-                    abstract viewToModel(v: javax.swing.text.GlyphView, x: number /*float*/, y: number /*float*/, a: java.awt.Shape, biasReturn: javax.swing.text.Position.Bias[]): int
+                    public abstract viewToModel(v: javax.swing.text.GlyphView, x: number /*float*/, y: number /*float*/, a: java.awt.Shape, biasReturn: javax.swing.text.Position.Bias[]): number /*int*/
                     /**
                      * Determines the model location that represents the
                      * maximum advance that fits within the given span.
@@ -87,7 +87,7 @@ declare namespace javax {
                      * @see View#breakView
                      */
                     // @ts-ignore
-                    abstract getBoundedPosition(v: javax.swing.text.GlyphView, p0: number /*int*/, x: number /*float*/, len: number /*float*/): int
+                    public abstract getBoundedPosition(v: javax.swing.text.GlyphView, p0: number /*int*/, x: number /*float*/, len: number /*float*/): number /*int*/
                     /**
                      * Create a painter to use for the given GlyphView.  If
                      * the painter carries state it can create another painter
@@ -99,7 +99,7 @@ declare namespace javax {
                      * @param p1 the ending document offset &gt;= p0
                      */
                     // @ts-ignore
-                    getPainter(v: javax.swing.text.GlyphView, p0: number /*int*/, p1: number /*int*/): javax.swing.text.GlyphView.GlyphPainter
+                    public getPainter(v: javax.swing.text.GlyphView, p0: number /*int*/, p1: number /*int*/): javax.swing.text.GlyphView.GlyphPainter
                     /**
                      * Provides a way to determine the next visually represented model
                      * location that one might place a caret.  Some views may not be
@@ -124,7 +124,7 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid direction
                      */
                     // @ts-ignore
-                    getNextVisualPositionFrom(v: javax.swing.text.GlyphView, pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                    public getNextVisualPositionFrom(v: javax.swing.text.GlyphView, pos: number /*int*/, b: javax.swing.text.Position.Bias, a: java.awt.Shape, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                 }
             }
         }

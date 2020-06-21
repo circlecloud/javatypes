@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable value of remaining air
                                  */
                                 // @ts-ignore
-                                remainingAir(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                remainingAir(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the maximum air capacity.
                                  * The reasoning for it being bounded is that the air capacity must always
@@ -25,7 +25,7 @@ declare namespace org {
                                  * @return The immutable bounded value of maximum air capacity
                                  */
                                 // @ts-ignore
-                                maxAir(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                maxAir(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

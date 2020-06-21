@@ -15,41 +15,41 @@ declare namespace org {
                      * @return the fuel ItemStack
                      */
                     // @ts-ignore
-                    getFuel(): org.bukkit.inventory.ItemStack
+                    public getFuel(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the fuel power for this fuel. Each unit of power can fuel one
                      * brewing operation.
                      * @return the fuel power for this fuel
                      */
                     // @ts-ignore
-                    getFuelPower(): int
+                    public getFuelPower(): number /*int*/
                     /**
                      * Sets the fuel power for this fuel. Each unit of power can fuel one
                      * brewing operation.
                      * @param fuelPower the fuel power for this fuel
                      */
                     // @ts-ignore
-                    setFuelPower(fuelPower: number /*int*/): void
+                    public setFuelPower(fuelPower: number /*int*/): void
                     /**
                      * Gets whether the brewing stand's fuel will be reduced / consumed or not.
                      * @return whether the fuel will be reduced or not
                      */
                     // @ts-ignore
-                    isConsuming(): boolean
+                    public isConsuming(): boolean
                     /**
                      * Sets whether the brewing stand's fuel will be reduced / consumed or not.
                      * @param consuming whether the fuel will be reduced or not
                      */
                     // @ts-ignore
-                    setConsuming(consuming: boolean): void
+                    public setConsuming(consuming: boolean): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -15,7 +15,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class CRL extends java.lang.Object {
+            abstract class CRL extends java.lang.Object {
                 /**
                  * Creates a CRL of the specified type.
                  * @param type the standard name of the CRL type.
@@ -25,19 +25,19 @@ declare namespace java {
                  *  for information about standard CRL types.
                  */
                 // @ts-ignore
-                constructor(type: string)
+                constructor(type: java.lang.String | string)
                 /**
                  * Returns the type of this CRL.
                  * @return the type of this CRL.
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Returns a string representation of this CRL.
                  * @return a string representation of this CRL.
                  */
                 // @ts-ignore
-                abstract toString(): java.lang.String
+                public abstract toString(): string
                 /**
                  * Checks whether the given certificate is on this CRL.
                  * @param cert the certificate to check for.
@@ -45,7 +45,7 @@ declare namespace java {
                  *  false otherwise.
                  */
                 // @ts-ignore
-                abstract isRevoked(cert: java.security.cert.Certificate): boolean
+                public abstract isRevoked(cert: java.security.cert.Certificate): boolean
             }
         }
     }

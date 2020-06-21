@@ -90,7 +90,7 @@ declare namespace javax {
                  * @see TreePath
                  */
                 // @ts-ignore
-                constructor(source: any, path: any[], childIndices: number /*int*/[], children: any[])
+                constructor(source: java.lang.Object | any, path: java.lang.Object[] | any[], childIndices: number /*int*/[], children: java.lang.Object[] | any[])
                 /**
                  * Used to create an event when nodes have been changed, inserted, or
                  * removed, identifying the path to the parent of the modified items as
@@ -109,7 +109,7 @@ declare namespace javax {
                  * @see #TreeModelEvent(Object,Object[],int[],Object[])
                  */
                 // @ts-ignore
-                constructor(source: any, path: javax.swing.tree.TreePath, childIndices: number /*int*/[], children: any[])
+                constructor(source: java.lang.Object | any, path: javax.swing.tree.TreePath, childIndices: number /*int*/[], children: java.lang.Object[] | any[])
                 /**
                  * Used to create an event when the node structure has changed in some way,
                  * identifying the path to the root of a modified subtree as an array of
@@ -132,7 +132,7 @@ declare namespace javax {
                  * @see TreePath
                  */
                 // @ts-ignore
-                constructor(source: any, path: any[])
+                constructor(source: java.lang.Object | any, path: java.lang.Object[] | any[])
                 /**
                  * Used to create an event when the node structure has changed in some way,
                  * identifying the path to the root of the modified subtree as a TreePath
@@ -149,7 +149,7 @@ declare namespace javax {
                  * @see #TreeModelEvent(Object,Object[])
                  */
                 // @ts-ignore
-                constructor(source: any, path: javax.swing.tree.TreePath)
+                constructor(source: java.lang.Object | any, path: javax.swing.tree.TreePath)
                 /**
                  * Path to the parent of the nodes that have changed.
                  */
@@ -164,7 +164,7 @@ declare namespace javax {
                  * Children that have been removed.
                  */
                 // @ts-ignore
-                children: any[]
+                children: java.lang.Object[] | any[]
                 /**
                  * For all events, except treeStructureChanged,
                  * returns the parent of the changed nodes.
@@ -180,7 +180,7 @@ declare namespace javax {
                  * @see TreePath#getLastPathComponent
                  */
                 // @ts-ignore
-                getTreePath(): javax.swing.tree.TreePath
+                public getTreePath(): javax.swing.tree.TreePath
                 /**
                  * Convenience method to get the array of objects from the TreePath
                  * instance that this event wraps.
@@ -189,7 +189,7 @@ declare namespace javax {
                  *          stored at the node identified by the path
                  */
                 // @ts-ignore
-                getPath(): java.lang.Object[]
+                public getPath(): any[]
                 /**
                  * Returns the objects that are children of the node identified by
                  * <code>getPath</code> at the locations specified by
@@ -201,7 +201,7 @@ declare namespace javax {
                  * @see #getChildIndices
                  */
                 // @ts-ignore
-                getChildren(): java.lang.Object[]
+                public getChildren(): any[]
                 /**
                  * Returns the values of the child indexes. If this is a removal event
                  * the indexes point to locations in the initial list where items
@@ -212,14 +212,14 @@ declare namespace javax {
                  *          the children specified by the event
                  */
                 // @ts-ignore
-                getChildIndices(): int[]
+                public getChildIndices(): number /*int*/[]
                 /**
                  * Returns a string that displays and identifies this object's
                  * properties.
                  * @return a String representation of this object
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

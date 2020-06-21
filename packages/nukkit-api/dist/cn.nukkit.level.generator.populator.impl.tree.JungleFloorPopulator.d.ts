@@ -1,0 +1,32 @@
+declare namespace cn {
+    namespace nukkit {
+        namespace level {
+            namespace generator {
+                namespace populator {
+                    namespace impl {
+                        namespace tree {
+                            /**
+                             * @author DaPorkchop_
+                             * 
+                             *  Used for the dense foliage on the floor in the jungle M biome
+                             */
+                            // @ts-ignore
+                            class JungleFloorPopulator extends cn.nukkit.level.generator.populator.type.Populator {
+                                // @ts-ignore
+                                constructor()
+                                // @ts-ignore
+                                constructor(type: number /*int*/)
+                                // @ts-ignore
+                                public setRandomAmount(randomAmount: number /*int*/): void
+                                // @ts-ignore
+                                public setBaseAmount(baseAmount: number /*int*/): void
+                                // @ts-ignore
+                                public populate(level: cn.nukkit.level.ChunkManager, chunkX: number /*int*/, chunkZ: number /*int*/, random: cn.nukkit.math.NukkitRandom, chunk: cn.nukkit.level.format.FullChunk): void
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

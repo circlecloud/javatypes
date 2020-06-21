@@ -7,7 +7,7 @@ declare namespace org {
                      * An abstract implementation of {@link MutableMessageChannel}.
                      */
                     // @ts-ignore
-                    class AbstractMutableMessageChannel extends java.lang.Object implements org.spongepowered.api.text.channel.MutableMessageChannel {
+                    abstract class AbstractMutableMessageChannel extends java.lang.Object implements org.spongepowered.api.text.channel.MutableMessageChannel {
                         /**
                          * The default implementation uses a {@link WeakHashMap} implementation of {@link Set}.
                          */
@@ -24,17 +24,17 @@ declare namespace org {
                          * @param members The collection of members
                          */
                         // @ts-ignore
-                        constructor(members: Array<org.spongepowered.api.text.channel.MessageReceiver>)
+                        constructor(members: java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver> | Array<org.spongepowered.api.text.channel.MessageReceiver>)
                         // @ts-ignore
-                        readonly members: Array<org.spongepowered.api.text.channel.MessageReceiver>
+                        readonly members: java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver> | Array<org.spongepowered.api.text.channel.MessageReceiver>
                         // @ts-ignore
-                        addMember(member: org.spongepowered.api.text.channel.MessageReceiver): boolean
+                        public addMember(member: org.spongepowered.api.text.channel.MessageReceiver): boolean
                         // @ts-ignore
-                        removeMember(member: org.spongepowered.api.text.channel.MessageReceiver): boolean
+                        public removeMember(member: org.spongepowered.api.text.channel.MessageReceiver): boolean
                         // @ts-ignore
-                        clearMembers(): void
+                        public clearMembers(): void
                         // @ts-ignore
-                        getMembers(): java.util.Collection<org.spongepowered.api.text.channel.MessageReceiver>
+                        public getMembers(): Array<org.spongepowered.api.text.channel.MessageReceiver>
                     }
                 }
             }

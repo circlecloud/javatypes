@@ -13,7 +13,7 @@ declare namespace org {
                  * @since 28.12.2003
                  */
                 // @ts-ignore
-                class AbstractResource extends java.lang.Object implements org.springframework.core.io.Resource {
+                abstract class AbstractResource extends java.lang.Object implements org.springframework.core.io.Resource {
                     // @ts-ignore
                     constructor()
                     /**
@@ -22,41 +22,41 @@ declare namespace org {
                      * This will cover both directories and content resources.
                      */
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     /**
                      * This implementation always returns {@code true} for a resource
                      * that {@link #exists() exists} (revised as of 5.1).
                      */
                     // @ts-ignore
-                    isReadable(): boolean
+                    public isReadable(): boolean
                     /**
                      * This implementation always returns {@code false}.
                      */
                     // @ts-ignore
-                    isOpen(): boolean
+                    public isOpen(): boolean
                     /**
                      * This implementation always returns {@code false}.
                      */
                     // @ts-ignore
-                    isFile(): boolean
+                    public isFile(): boolean
                     /**
                      * This implementation throws a FileNotFoundException, assuming
                      * that the resource cannot be resolved to a URL.
                      */
                     // @ts-ignore
-                    getURL(): java.net.URL
+                    public getURL(): java.net.URL
                     /**
                      * This implementation builds a URI based on the URL returned
                      * by {@link #getURL()}.
                      */
                     // @ts-ignore
-                    getURI(): java.net.URI
+                    public getURI(): java.net.URI
                     /**
                      * This implementation throws a FileNotFoundException, assuming
                      * that the resource cannot be resolved to an absolute file path.
                      */
                     // @ts-ignore
-                    getFile(): java.io.File
+                    public getFile(): java.io.File
                     /**
                      * This implementation returns {@link Channels#newChannel(InputStream)}
                      * with the result of {@link #getInputStream()}.
@@ -64,7 +64,7 @@ declare namespace org {
                      * but mirrored here for efficient JVM-level dispatching in a class hierarchy.
                      */
                     // @ts-ignore
-                    readableChannel(): java.nio.channels.ReadableByteChannel
+                    public readableChannel(): java.nio.channels.ReadableByteChannel
                     /**
                      * This method reads the entire InputStream to determine the content length.
                      * <p>For a custom sub-class of {@code InputStreamResource}, we strongly
@@ -74,14 +74,14 @@ declare namespace org {
                      * @see #getInputStream()
                      */
                     // @ts-ignore
-                    contentLength(): long
+                    public contentLength(): number /*long*/
                     /**
                      * This implementation checks the timestamp of the underlying File,
                      * if available.
                      * @see #getFileForLastModifiedCheck()
                      */
                     // @ts-ignore
-                    lastModified(): long
+                    public lastModified(): number /*long*/
                     /**
                      * Determine the File to use for timestamp checking.
                      * <p>The default implementation delegates to {@link #getFile()}.
@@ -97,31 +97,31 @@ declare namespace org {
                      * that relative resources cannot be created for this resource.
                      */
                     // @ts-ignore
-                    createRelative(relativePath: string): org.springframework.core.io.Resource
+                    public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     /**
                      * This implementation always returns {@code null},
                      * assuming that this resource type does not have a filename.
                      */
                     // @ts-ignore
-                    getFilename(): java.lang.String
+                    public getFilename(): string
                     /**
                      * This implementation compares description strings.
                      * @see #getDescription()
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the description's hash code.
                      * @see #getDescription()
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * This implementation returns the description of this resource.
                      * @see #getDescription()
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

@@ -30,7 +30,7 @@ declare namespace javax {
                      * @return the UI
                      */
                     // @ts-ignore
-                    createUI(ta: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(ta: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Fetches the name used as a key to look up properties through the
                      * UIManager.  This is used as a prefix to all the standard
@@ -38,7 +38,7 @@ declare namespace javax {
                      * @return the name ("TextArea")
                      */
                     // @ts-ignore
-                    getPropertyPrefix(): java.lang.String
+                    getPropertyPrefix(): string
                     // @ts-ignore
                     installDefaults(): void
                     /**
@@ -60,7 +60,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * The method is overridden to take into account caret width.
                      * @param c the editor component
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Creates the view for an element.  Returns a WrappedPlainView or
                      * PlainView.
@@ -77,7 +77,7 @@ declare namespace javax {
                      * @return the view
                      */
                     // @ts-ignore
-                    create(elem: javax.swing.text.Element): javax.swing.text.View
+                    public create(elem: javax.swing.text.Element): javax.swing.text.View
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -86,7 +86,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -95,7 +95,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 }
             }
         }

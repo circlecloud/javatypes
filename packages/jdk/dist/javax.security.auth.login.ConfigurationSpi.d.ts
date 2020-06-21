@@ -15,7 +15,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class ConfigurationSpi extends java.lang.Object {
+                abstract class ConfigurationSpi extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -26,7 +26,7 @@ declare namespace javax {
                      *           <i>name</i>, or null if there are no entries.
                      */
                     // @ts-ignore
-                    abstract engineGetAppConfigurationEntry(name: string): javax.security.auth.login.AppConfigurationEntry[]
+                    abstract engineGetAppConfigurationEntry(name: java.lang.String | string): javax.security.auth.login.AppConfigurationEntry[]
                     /**
                      * Refresh and reload the Configuration.
                      * <p> This method causes this Configuration object to refresh/reload its

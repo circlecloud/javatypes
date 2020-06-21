@@ -13,12 +13,12 @@ declare namespace javax {
              * @param message the detail message.
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Returns the string representing the object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
         }
     }
 }

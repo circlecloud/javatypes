@@ -58,47 +58,47 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
+                static readonly DEFAULT_DIRECTION: org.bukkit.block.BlockFace
                 // @ts-ignore
-                readonly DEFAULT_DELAY: number /*int*/
+                static readonly DEFAULT_DELAY: number /*int*/
                 // @ts-ignore
-                readonly DEFAULT_STATE: boolean
+                static readonly DEFAULT_STATE: boolean
                 /**
                  * Sets the delay of the repeater.
                  * @param delay The new delay (1-4)
                  */
                 // @ts-ignore
-                setDelay(delay: number /*int*/): void
+                public setDelay(delay: number /*int*/): void
                 /**
                  * Gets the delay of the repeater in ticks.
                  * @return The delay (1-4)
                  */
                 // @ts-ignore
-                getDelay(): int
+                public getDelay(): number /*int*/
                 /**
                  * Sets the direction this diode is facing.
                  * @param face The direction to set this diode to
                  * @see BlockFace
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 /**
                  * Gets the direction this diode is facing
                  * @return The direction this diode is facing
                  * @see BlockFace
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Diode
+                public clone(): org.bukkit.material.Diode
                 /**
                  * Checks if the diode is powered.
                  * @return true if the diode is powered
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
             }
         }
     }

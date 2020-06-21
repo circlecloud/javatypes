@@ -51,7 +51,7 @@ declare namespace org {
              * @since 5.0
              */
             // @ts-ignore
-            class Indexed implements java.lang.annotation.Annotation {
+            abstract class Indexed implements java.lang.annotation.Annotation {
             }
         }
     }

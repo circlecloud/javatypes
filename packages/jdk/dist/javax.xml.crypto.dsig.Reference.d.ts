@@ -50,7 +50,7 @@ declare namespace javax {
                      *     (may be empty but never <code>null</code>)
                      */
                     // @ts-ignore
-                    getTransforms(): java.util.List
+                    getTransforms(): Array<any>
                     /**
                      * Returns the digest method of this <code>Reference</code>.
                      * @return the digest method
@@ -65,7 +65,7 @@ declare namespace javax {
                      *     specified)
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Returns the digest value of this <code>Reference</code>.
                      * @return the raw digest value, or <code>null</code> if this reference has
@@ -73,7 +73,7 @@ declare namespace javax {
                      *     clone to protect against subsequent modification.
                      */
                     // @ts-ignore
-                    getDigestValue(): byte[]
+                    getDigestValue(): number /*byte*/[]
                     /**
                      * Returns the calculated digest value of this <code>Reference</code>
                      * after a validation operation. This method is useful for debugging if
@@ -83,7 +83,7 @@ declare namespace javax {
                      *     returns a new clone to protect against subsequent modification.
                      */
                     // @ts-ignore
-                    getCalculatedDigestValue(): byte[]
+                    getCalculatedDigestValue(): number /*byte*/[]
                     /**
                      * Validates this reference. This method verifies the digest of this
                      * reference.

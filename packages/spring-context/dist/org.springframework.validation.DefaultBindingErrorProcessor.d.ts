@@ -29,11 +29,11 @@ declare namespace org {
                  * "required".
                  */
                 // @ts-ignore
-                readonly MISSING_FIELD_ERROR_CODE: string
+                public static readonly MISSING_FIELD_ERROR_CODE: java.lang.String | string
                 // @ts-ignore
-                processMissingFieldError(missingField: string, bindingResult: org.springframework.validation.BindingResult): void
+                public processMissingFieldError(missingField: java.lang.String | string, bindingResult: org.springframework.validation.BindingResult): void
                 // @ts-ignore
-                processPropertyAccessException(ex: PropertyAccessException, bindingResult: org.springframework.validation.BindingResult): void
+                public processPropertyAccessException(ex: PropertyAccessException, bindingResult: org.springframework.validation.BindingResult): void
                 /**
                  * Return FieldError arguments for a binding error on the given field.
                  * Invoked for each missing required field and each type mismatch.
@@ -46,7 +46,7 @@ declare namespace org {
                  * @see org.springframework.context.support.DefaultMessageSourceResolvable
                  */
                 // @ts-ignore
-                getArgumentsForBindError(objectName: string, field: string): java.lang.Object[]
+                getArgumentsForBindError(objectName: java.lang.String | string, field: java.lang.String | string): any[]
             }
         }
     }

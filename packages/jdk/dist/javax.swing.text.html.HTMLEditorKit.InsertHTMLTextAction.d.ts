@@ -23,14 +23,14 @@ declare namespace javax {
                     // @ts-ignore
                     class InsertHTMLTextAction extends javax.swing.text.html.HTMLEditorKit.HTMLTextAction {
                         // @ts-ignore
-                        constructor(name: string, html: string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag)
+                        constructor(name: java.lang.String | string, html: java.lang.String | string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag)
                         // @ts-ignore
-                        constructor(name: string, html: string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag, alternateParentTag: javax.swing.text.html.HTML.Tag, alternateAddTag: javax.swing.text.html.HTML.Tag)
+                        constructor(name: java.lang.String | string, html: java.lang.String | string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag, alternateParentTag: javax.swing.text.html.HTML.Tag, alternateAddTag: javax.swing.text.html.HTML.Tag)
                         /**
                          * HTML to insert.
                          */
                         // @ts-ignore
-                        html: string
+                        html: java.lang.String | string
                         /**
                          * Tag to check for in the document.
                          */
@@ -58,7 +58,7 @@ declare namespace javax {
                          * thrown it is wrapped in a RuntimeException and thrown.
                          */
                         // @ts-ignore
-                        insertHTML(editor: javax.swing.JEditorPane, doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, html: string, popDepth: number /*int*/, pushDepth: number /*int*/, addTag: javax.swing.text.html.HTML.Tag): void
+                        insertHTML(editor: javax.swing.JEditorPane, doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, html: java.lang.String | string, popDepth: number /*int*/, pushDepth: number /*int*/, addTag: javax.swing.text.html.HTML.Tag): void
                         /**
                          * This is invoked when inserting at a boundary. It determines
                          * the number of pops, and then the number of pushes that need
@@ -66,7 +66,7 @@ declare namespace javax {
                          * @since 1.3
                          */
                         // @ts-ignore
-                        insertAtBoundary(editor: javax.swing.JEditorPane, doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, insertElement: javax.swing.text.Element, html: string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag): void
+                        insertAtBoundary(editor: javax.swing.JEditorPane, doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, insertElement: javax.swing.text.Element, html: java.lang.String | string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag): void
                         /**
                          * This is invoked when inserting at a boundary. It determines
                          * the number of pops, and then the number of pushes that need
@@ -74,13 +74,13 @@ declare namespace javax {
                          * @deprecated As of Java 2 platform v1.3, use insertAtBoundary
                          */
                         // @ts-ignore
-                        insertAtBoundry(editor: javax.swing.JEditorPane, doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, insertElement: javax.swing.text.Element, html: string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag): void
+                        insertAtBoundry(editor: javax.swing.JEditorPane, doc: javax.swing.text.html.HTMLDocument, offset: number /*int*/, insertElement: javax.swing.text.Element, html: java.lang.String | string, parentTag: javax.swing.text.html.HTML.Tag, addTag: javax.swing.text.html.HTML.Tag): void
                         /**
                          * Inserts the HTML into the document.
                          * @param ae the event
                          */
                         // @ts-ignore
-                        actionPerformed(ae: java.awt.event.ActionEvent): void
+                        public actionPerformed(ae: java.awt.event.ActionEvent): void
                     }
                 }
             }

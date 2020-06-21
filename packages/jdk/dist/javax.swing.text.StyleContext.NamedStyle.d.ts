@@ -28,7 +28,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    constructor(name: string, parent: javax.swing.text.Style)
+                    constructor(name: java.lang.String | string, parent: javax.swing.text.Style)
                     /**
                      * Creates a new named style.
                      * @param parent the parent style, null if none
@@ -58,32 +58,32 @@ declare namespace javax {
                      * @return the string
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Fetches the name of the style.   A style is not required to be named,
                      * so null is returned if there is no name associated with the style.
                      * @return the name
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Changes the name of the style.  Does nothing with a null name.
                      * @param name the new name
                      */
                     // @ts-ignore
-                    setName(name: string): void
+                    public setName(name: java.lang.String | string): void
                     /**
                      * Adds a change listener.
                      * @param l the change listener
                      */
                     // @ts-ignore
-                    addChangeListener(l: javax.swing.event.ChangeListener): void
+                    public addChangeListener(l: javax.swing.event.ChangeListener): void
                     /**
                      * Removes a change listener.
                      * @param l the change listener
                      */
                     // @ts-ignore
-                    removeChangeListener(l: javax.swing.event.ChangeListener): void
+                    public removeChangeListener(l: javax.swing.event.ChangeListener): void
                     /**
                      * Returns an array of all the <code>ChangeListener</code>s added
                      * to this NamedStyle with addChangeListener().
@@ -92,7 +92,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getChangeListeners(): javax.swing.event.ChangeListener[]
+                    public getChangeListeners(): javax.swing.event.ChangeListener[]
                     /**
                      * Notifies all listeners that have registered interest for
                      * notification on this event type.  The event instance
@@ -110,14 +110,14 @@ declare namespace javax {
                      * @since 1.3
                      */
                     // @ts-ignore
-                    getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                    public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
                     /**
                      * Gets the number of attributes that are defined.
                      * @return the number of attributes &gt;= 0
                      * @see AttributeSet#getAttributeCount
                      */
                     // @ts-ignore
-                    getAttributeCount(): int
+                    public getAttributeCount(): number /*int*/
                     /**
                      * Checks whether a given attribute is defined.
                      * @param attrName the non-null attribute name
@@ -125,7 +125,7 @@ declare namespace javax {
                      * @see AttributeSet#isDefined
                      */
                     // @ts-ignore
-                    isDefined(attrName: any): boolean
+                    public isDefined(attrName: java.lang.Object | any): boolean
                     /**
                      * Checks whether two attribute sets are equal.
                      * @param attr the attribute set to check against
@@ -133,14 +133,14 @@ declare namespace javax {
                      * @see AttributeSet#isEqual
                      */
                     // @ts-ignore
-                    isEqual(attr: javax.swing.text.AttributeSet): boolean
+                    public isEqual(attr: javax.swing.text.AttributeSet): boolean
                     /**
                      * Copies a set of attributes.
                      * @return the copy
                      * @see AttributeSet#copyAttributes
                      */
                     // @ts-ignore
-                    copyAttributes(): javax.swing.text.AttributeSet
+                    public copyAttributes(): javax.swing.text.AttributeSet
                     /**
                      * Gets the value of an attribute.
                      * @param attrName the non-null attribute name
@@ -148,14 +148,14 @@ declare namespace javax {
                      * @see AttributeSet#getAttribute
                      */
                     // @ts-ignore
-                    getAttribute(attrName: any): java.lang.Object
+                    public getAttribute(attrName: java.lang.Object | any): any
                     /**
                      * Gets the names of all attributes.
                      * @return the attribute names as an enumeration
                      * @see AttributeSet#getAttributeNames
                      */
                     // @ts-ignore
-                    getAttributeNames(): java.util.Enumeration<?>
+                    public getAttributeNames(): java.util.Enumeration<any>
                     /**
                      * Checks whether a given attribute name/value is defined.
                      * @param name the non-null attribute name
@@ -164,7 +164,7 @@ declare namespace javax {
                      * @see AttributeSet#containsAttribute
                      */
                     // @ts-ignore
-                    containsAttribute(name: any, value: any): boolean
+                    public containsAttribute(name: java.lang.Object | any, value: java.lang.Object | any): boolean
                     /**
                      * Checks whether the element contains all the attributes.
                      * @param attrs the attributes to check
@@ -172,7 +172,7 @@ declare namespace javax {
                      * @see AttributeSet#containsAttributes
                      */
                     // @ts-ignore
-                    containsAttributes(attrs: javax.swing.text.AttributeSet): boolean
+                    public containsAttributes(attrs: javax.swing.text.AttributeSet): boolean
                     /**
                      * Gets attributes from the parent.
                      * If not overriden, the resolving parent defaults to
@@ -181,7 +181,7 @@ declare namespace javax {
                      * @see AttributeSet#getResolveParent
                      */
                     // @ts-ignore
-                    getResolveParent(): javax.swing.text.AttributeSet
+                    public getResolveParent(): javax.swing.text.AttributeSet
                     /**
                      * Adds an attribute.
                      * @param name the non-null attribute name
@@ -189,42 +189,42 @@ declare namespace javax {
                      * @see MutableAttributeSet#addAttribute
                      */
                     // @ts-ignore
-                    addAttribute(name: any, value: any): void
+                    public addAttribute(name: java.lang.Object | any, value: java.lang.Object | any): void
                     /**
                      * Adds a set of attributes to the element.
                      * @param attr the attributes to add
                      * @see MutableAttributeSet#addAttribute
                      */
                     // @ts-ignore
-                    addAttributes(attr: javax.swing.text.AttributeSet): void
+                    public addAttributes(attr: javax.swing.text.AttributeSet): void
                     /**
                      * Removes an attribute from the set.
                      * @param name the non-null attribute name
                      * @see MutableAttributeSet#removeAttribute
                      */
                     // @ts-ignore
-                    removeAttribute(name: any): void
+                    public removeAttribute(name: java.lang.Object | any): void
                     /**
                      * Removes a set of attributes for the element.
                      * @param names the attribute names
                      * @see MutableAttributeSet#removeAttributes
                      */
                     // @ts-ignore
-                    removeAttributes(names: java.util.Enumeration<any>): void
+                    public removeAttributes(names: java.util.Enumeration<any>): void
                     /**
                      * Removes a set of attributes for the element.
                      * @param attrs the attributes
                      * @see MutableAttributeSet#removeAttributes
                      */
                     // @ts-ignore
-                    removeAttributes(attrs: javax.swing.text.AttributeSet): void
+                    public removeAttributes(attrs: javax.swing.text.AttributeSet): void
                     /**
                      * Sets the resolving parent.
                      * @param parent the parent, null if none
                      * @see MutableAttributeSet#setResolveParent
                      */
                     // @ts-ignore
-                    setResolveParent(parent: javax.swing.text.AttributeSet): void
+                    public setResolveParent(parent: javax.swing.text.AttributeSet): void
                 }
             }
         }

@@ -32,63 +32,63 @@ declare namespace javax {
                      *  empty map.
                      */
                     // @ts-ignore
-                    constructor(rmiServer: javax.management.remote.rmi.RMIServerImpl, connectionId: string, defaultClassLoader: java.lang.ClassLoader, subject: javax.security.auth.Subject, env: java.util.Map<java.lang.String, any>)
+                    constructor(rmiServer: javax.management.remote.rmi.RMIServerImpl, connectionId: java.lang.String | string, defaultClassLoader: java.lang.ClassLoader, subject: javax.security.auth.Subject, env: java.util.Map<java.lang.String | string, any>)
                     // @ts-ignore
-                    getConnectionId(): java.lang.String
+                    public getConnectionId(): string
                     // @ts-ignore
-                    close(): void
+                    public close(): void
                     // @ts-ignore
-                    unreferenced(): void
+                    public unreferenced(): void
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    public createMBean(className: java.lang.String | string, name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    public createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, params: java.rmi.MarshalledObject, signature: string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    public createMBean(className: java.lang.String | string, name: javax.management.ObjectName, params: java.rmi.MarshalledObject<any>, signature: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     // @ts-ignore
-                    createMBean(className: string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: java.rmi.MarshalledObject, signature: string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    public createMBean(className: java.lang.String | string, name: javax.management.ObjectName, loaderName: javax.management.ObjectName, params: java.rmi.MarshalledObject<any>, signature: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     // @ts-ignore
-                    unregisterMBean(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): void
+                    public unregisterMBean(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): void
                     // @ts-ignore
-                    getObjectInstance(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
+                    public getObjectInstance(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.ObjectInstance
                     // @ts-ignore
-                    queryMBeans(name: javax.management.ObjectName, query: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): java.util.Set<javax.management.ObjectInstance>
+                    public queryMBeans(name: javax.management.ObjectName, query: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): Array<javax.management.ObjectInstance>
                     // @ts-ignore
-                    queryNames(name: javax.management.ObjectName, query: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): java.util.Set<javax.management.ObjectName>
+                    public queryNames(name: javax.management.ObjectName, query: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): Array<javax.management.ObjectName>
                     // @ts-ignore
-                    isRegistered(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): boolean
+                    public isRegistered(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): boolean
                     // @ts-ignore
-                    getMBeanCount(delegationSubject: javax.security.auth.Subject): java.lang.Integer
+                    public getMBeanCount(delegationSubject: javax.security.auth.Subject): number
                     // @ts-ignore
-                    getAttribute(name: javax.management.ObjectName, attribute: string, delegationSubject: javax.security.auth.Subject): java.lang.Object
+                    public getAttribute(name: javax.management.ObjectName, attribute: java.lang.String | string, delegationSubject: javax.security.auth.Subject): any
                     // @ts-ignore
-                    getAttributes(name: javax.management.ObjectName, attributes: string[], delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
+                    public getAttributes(name: javax.management.ObjectName, attributes: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
                     // @ts-ignore
-                    setAttribute(name: javax.management.ObjectName, attribute: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): void
+                    public setAttribute(name: javax.management.ObjectName, attribute: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): void
                     // @ts-ignore
-                    setAttributes(name: javax.management.ObjectName, attributes: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
+                    public setAttributes(name: javax.management.ObjectName, attributes: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): javax.management.AttributeList
                     // @ts-ignore
-                    invoke(name: javax.management.ObjectName, operationName: string, params: java.rmi.MarshalledObject, signature: string[], delegationSubject: javax.security.auth.Subject): java.lang.Object
+                    public invoke(name: javax.management.ObjectName, operationName: java.lang.String | string, params: java.rmi.MarshalledObject<any>, signature: java.lang.String[] | string[], delegationSubject: javax.security.auth.Subject): any
                     // @ts-ignore
-                    getDefaultDomain(delegationSubject: javax.security.auth.Subject): java.lang.String
+                    public getDefaultDomain(delegationSubject: javax.security.auth.Subject): string
                     // @ts-ignore
-                    getDomains(delegationSubject: javax.security.auth.Subject): java.lang.String[]
+                    public getDomains(delegationSubject: javax.security.auth.Subject): string[]
                     // @ts-ignore
-                    getMBeanInfo(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.MBeanInfo
+                    public getMBeanInfo(name: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): javax.management.MBeanInfo
                     // @ts-ignore
-                    isInstanceOf(name: javax.management.ObjectName, className: string, delegationSubject: javax.security.auth.Subject): boolean
+                    public isInstanceOf(name: javax.management.ObjectName, className: java.lang.String | string, delegationSubject: javax.security.auth.Subject): boolean
                     // @ts-ignore
-                    addNotificationListeners(names: javax.management.ObjectName[], filters: java.rmi.MarshalledObject[], delegationSubjects: javax.security.auth.Subject[]): java.lang.Integer[]
+                    public addNotificationListeners(names: javax.management.ObjectName[], filters: java.rmi.MarshalledObject<any>[], delegationSubjects: javax.security.auth.Subject[]): number[]
                     // @ts-ignore
-                    addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject, handback: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): void
+                    public addNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject<any>, handback: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): void
                     // @ts-ignore
-                    removeNotificationListeners(name: javax.management.ObjectName, listenerIDs: number[], delegationSubject: javax.security.auth.Subject): void
+                    public removeNotificationListeners(name: javax.management.ObjectName, listenerIDs: java.lang.Integer[] | number[], delegationSubject: javax.security.auth.Subject): void
                     // @ts-ignore
-                    removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): void
+                    public removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, delegationSubject: javax.security.auth.Subject): void
                     // @ts-ignore
-                    removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject, handback: java.rmi.MarshalledObject, delegationSubject: javax.security.auth.Subject): void
+                    public removeNotificationListener(name: javax.management.ObjectName, listener: javax.management.ObjectName, filter: java.rmi.MarshalledObject<any>, handback: java.rmi.MarshalledObject<any>, delegationSubject: javax.security.auth.Subject): void
                     // @ts-ignore
-                    fetchNotifications(clientSequenceNumber: number /*long*/, maxNotifications: number /*int*/, timeout: number /*long*/): javax.management.remote.NotificationResult
+                    public fetchNotifications(clientSequenceNumber: number /*long*/, maxNotifications: number /*int*/, timeout: number /*long*/): javax.management.remote.NotificationResult
                     /**
                      * <p>Returns a string representation of this object.  In general,
                      * the <code>toString</code> method returns a string that
@@ -98,7 +98,7 @@ declare namespace javax {
                      * @return a String representation of this object.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

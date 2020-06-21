@@ -231,7 +231,7 @@ declare namespace java {
                  * @return the length of the month in days
                  */
                 // @ts-ignore
-                lengthOfMonth(): int
+                lengthOfMonth(): number /*int*/
                 /**
                  * Returns the length of the year represented by this date, as defined by the calendar system.
                  * <p>
@@ -241,7 +241,7 @@ declare namespace java {
                  * @return the length of the year in days
                  */
                 // @ts-ignore
-                lengthOfYear(): int
+                lengthOfYear(): number /*int*/
                 /**
                  * Checks if the specified field is supported.
                  * <p>
@@ -415,7 +415,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): long
+                until(endExclusive: java.time.temporal.Temporal, unit: java.time.temporal.TemporalUnit): number /*long*/
                 /**
                  * Calculates the period between this date and another date as a {@code ChronoPeriod}.
                  * <p>
@@ -452,7 +452,7 @@ declare namespace java {
                  * @throws DateTimeException if an error occurs during printing
                  */
                 // @ts-ignore
-                format(formatter: java.time.format.DateTimeFormatter): java.lang.String
+                format(formatter: java.time.format.DateTimeFormatter): string
                 /**
                  * Combines this date with a time to create a {@code ChronoLocalDateTime}.
                  * <p>
@@ -462,7 +462,7 @@ declare namespace java {
                  * @return the local date-time formed from this date and the specified time, not null
                  */
                 // @ts-ignore
-                atTime(localTime: java.time.LocalTime): java.time.chrono.ChronoLocalDateTime<?>
+                atTime(localTime: java.time.LocalTime): java.time.chrono.ChronoLocalDateTime<any>
                 /**
                  * Converts this date to the Epoch Day.
                  * <p>
@@ -474,7 +474,7 @@ declare namespace java {
                  * @return the Epoch Day equivalent to this date
                  */
                 // @ts-ignore
-                toEpochDay(): long
+                toEpochDay(): number /*long*/
                 /**
                  * Compares this date to another date, including the chronology.
                  * <p>
@@ -503,7 +503,7 @@ declare namespace java {
                  * @return the comparator value, negative if less, positive if greater
                  */
                 // @ts-ignore
-                compareTo(other: java.time.chrono.ChronoLocalDate): int
+                compareTo(other: java.time.chrono.ChronoLocalDate): number /*int*/
                 /**
                  * Checks if this date is after the specified date ignoring the chronology.
                  * <p>
@@ -560,13 +560,13 @@ declare namespace java {
                  * @return true if this is equal to the other date
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this date.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Outputs this date as a {@code String}.
                  * <p>
@@ -574,7 +574,7 @@ declare namespace java {
                  * @return the formatted date, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

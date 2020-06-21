@@ -18,7 +18,7 @@ declare namespace org {
                  * @throws IllegalArgumentException when a parse exception occurs
                  */
                 // @ts-ignore
-                parse(text: string, locale: java.util.Locale): T
+                parse(text: java.lang.String | string, locale: java.util.Locale): T
             }
         }
     }

@@ -23,7 +23,7 @@ declare namespace org {
                  * @return the message codes to use
                  */
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string, objectName: string): java.lang.String[]
+                resolveMessageCodes(errorCode: java.lang.String | string, objectName: java.lang.String | string): string[]
                 /**
                  * Build message codes for the given error code and field specification.
                  * Used for building the codes list of an FieldError.
@@ -34,7 +34,7 @@ declare namespace org {
                  * @return the message codes to use
                  */
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string, objectName: string, field: string, fieldType: java.lang.Class<any>): java.lang.String[]
+                resolveMessageCodes(errorCode: java.lang.String | string, objectName: java.lang.String | string, field: java.lang.String | string, fieldType: java.lang.Class<any>): string[]
             }
         }
     }

@@ -16,22 +16,22 @@ declare namespace org {
                          * for {@link Hotbar} with the query for {@link MainPlayerInventory} as parameter.</p>
                          */
                         // @ts-ignore
-                        readonly PLAYER_MAIN_HOTBAR_FIRST: org.spongepowered.api.item.inventory.InventoryTransformation
+                        public static readonly PLAYER_MAIN_HOTBAR_FIRST: org.spongepowered.api.item.inventory.InventoryTransformation
                         /**
                          * A transformations that reverses the slot order.
                          */
                         // @ts-ignore
-                        readonly REVERSE: org.spongepowered.api.item.inventory.InventoryTransformation
+                        public static readonly REVERSE: org.spongepowered.api.item.inventory.InventoryTransformation
                         /**
                          * A transformation that returns the incoming inventory without changing anything.
                          */
                         // @ts-ignore
-                        readonly NO_OP: org.spongepowered.api.item.inventory.InventoryTransformation
+                        public static readonly NO_OP: org.spongepowered.api.item.inventory.InventoryTransformation
                         /**
                          * A transformation that returns an empty inventory.
                          */
                         // @ts-ignore
-                        readonly EMPTY: org.spongepowered.api.item.inventory.InventoryTransformation
+                        public static readonly EMPTY: org.spongepowered.api.item.inventory.InventoryTransformation
                     }
                 }
             }

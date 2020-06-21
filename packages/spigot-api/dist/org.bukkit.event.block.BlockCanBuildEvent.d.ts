@@ -37,26 +37,26 @@ declare namespace org {
                      * @return boolean whether or not the block can be built
                      */
                     // @ts-ignore
-                    isBuildable(): boolean
+                    public isBuildable(): boolean
                     /**
                      * Sets whether the block can be built here or not.
                      * @param cancel true if you want to allow the block to be built here
                      *      despite Minecraft's default behaviour
                      */
                     // @ts-ignore
-                    setBuildable(cancel: boolean): void
+                    public setBuildable(cancel: boolean): void
                     /**
                      * Gets the Material that we are trying to place.
                      * @return The Material that we are trying to place
                      */
                     // @ts-ignore
-                    getMaterial(): org.bukkit.Material
+                    public getMaterial(): org.bukkit.Material
                     /**
                      * Gets the BlockData that we are trying to place.
                      * @return The BlockData that we are trying to place
                      */
                     // @ts-ignore
-                    getBlockData(): org.bukkit.block.data.BlockData
+                    public getBlockData(): org.bukkit.block.data.BlockData
                     /**
                      * Gets the player who placed the block involved in this event.
                      * <br>
@@ -64,11 +64,11 @@ declare namespace org {
                      * @return The Player who placed the block involved in this event
                      */
                     // @ts-ignore
-                    getPlayer(): org.bukkit.entity.Player
+                    public getPlayer(): org.bukkit.entity.Player
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

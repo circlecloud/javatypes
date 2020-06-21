@@ -16,18 +16,18 @@ declare namespace org {
                      * The default height radius to scan for safe locations.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFAULT_HEIGHT: number /*int*/
                     /**
                      * The default width radius to scan for safe locations.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFAULT_WIDTH: number /*int*/
                     /**
                      * The default distance to check for a suitable floor below any candidate
                      * location.
                      */
                     // @ts-ignore
-                    
+                    readonly DEFAULT_FLOOR_CHECK_DISTANCE: number /*int*/
                     /**
                      * Gets the next safe {@link Location} around the given location.
                      * <p>Safe entails that the returned location will not be somewhere that

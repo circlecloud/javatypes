@@ -19,9 +19,9 @@ declare namespace org {
                             // @ts-ignore
                             builder(): org.spongepowered.api.item.recipe.smelting.SmeltingRecipe.Builder
                             // @ts-ignore
-                            getId(): java.lang.String
+                            getId(): string
                             // @ts-ignore
-                            getName(): java.lang.String
+                            getName(): string
                             /**
                              * An exemplary {@link ItemStackSnapshot}, which will always make
                              * {@link #isValid(ItemStackSnapshot)} return {@code true}.

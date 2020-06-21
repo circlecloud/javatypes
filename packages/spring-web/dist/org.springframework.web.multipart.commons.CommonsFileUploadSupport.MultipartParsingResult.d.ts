@@ -11,13 +11,13 @@ declare namespace org {
                         // @ts-ignore
                         class MultipartParsingResult extends java.lang.Object {
                             // @ts-ignore
-                            constructor(mpFiles: object, mpParams: java.util.Map<java.lang.String, java.lang.String[]>, mpParamContentTypes: java.util.Map<java.lang.String, java.lang.String>)
+                            constructor(mpFiles: object, mpParams: java.util.Map<java.lang.String | string, java.lang.String[] | string[]>, mpParamContentTypes: java.util.Map<java.lang.String | string, java.lang.String | string>)
                             // @ts-ignore
-                            getMultipartFiles(): <any>
+                            public getMultipartFiles(): object
                             // @ts-ignore
-                            getMultipartParameters(): java.util.Map<java.lang.String, java.lang.String[]>
+                            public getMultipartParameters(): java.util.Map<java.lang.String | string, java.lang.String[] | string[]>
                             // @ts-ignore
-                            getMultipartParameterContentTypes(): java.util.Map<java.lang.String, java.lang.String>
+                            public getMultipartParameterContentTypes(): java.util.Map<java.lang.String | string, java.lang.String | string>
                         }
                     }
                 }

@@ -22,7 +22,7 @@ declare namespace javax {
                  * @param message The error message for the exception.
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Create a new <code>SchemaFactoryConfigurationError</code> with the
                  * given <code>Throwable</code> base cause.
@@ -30,7 +30,7 @@ declare namespace javax {
                  *  SchemaFactoryConfigurationError.
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Create a new <code>SchemaFactoryConfigurationError</code> with the
                  * given <code>Throwable</code> base cause and detail message.
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @param message The detail message.
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

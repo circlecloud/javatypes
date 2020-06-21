@@ -38,7 +38,7 @@ declare namespace java {
                      *         strong caret.
                      */
                     // @ts-ignore
-                    getStrongCaret(hit1: java.awt.font.TextHitInfo, hit2: java.awt.font.TextHitInfo, layout: java.awt.font.TextLayout): java.awt.font.TextHitInfo
+                    public getStrongCaret(hit1: java.awt.font.TextHitInfo, hit2: java.awt.font.TextHitInfo, layout: java.awt.font.TextLayout): java.awt.font.TextHitInfo
                 }
             }
         }

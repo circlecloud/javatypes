@@ -28,7 +28,7 @@ declare namespace javax {
                     // @ts-ignore
                     selectHighlight: java.awt.Color
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
                     createLayoutManager(): java.awt.LayoutManager
                     // @ts-ignore
@@ -48,27 +48,27 @@ declare namespace javax {
                     // @ts-ignore
                     paintRightTabBorder(tabIndex: number /*int*/, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, btm: number /*int*/, rght: number /*int*/, isSelected: boolean): void
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintTabBackground(g: java.awt.Graphics, tabPlacement: number /*int*/, tabIndex: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, isSelected: boolean): void
                     /**
                      * Overridden to do nothing for the Java L&amp;F.
                      */
                     // @ts-ignore
-                    getTabLabelShiftX(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): int
+                    getTabLabelShiftX(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): number /*int*/
                     /**
                      * Overridden to do nothing for the Java L&amp;F.
                      */
                     // @ts-ignore
-                    getTabLabelShiftY(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): int
+                    getTabLabelShiftY(tabPlacement: number /*int*/, tabIndex: number /*int*/, isSelected: boolean): number /*int*/
                     /**
                      * {@inheritDoc}
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineOffset(): int
+                    getBaselineOffset(): number /*int*/
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintHighlightBelowTab(): void
                     // @ts-ignore
@@ -82,9 +82,9 @@ declare namespace javax {
                     // @ts-ignore
                     paintContentBorderRightEdge(g: java.awt.Graphics, tabPlacement: number /*int*/, selectedIndex: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
                     // @ts-ignore
-                    calculateMaxTabHeight(tabPlacement: number /*int*/): int
+                    calculateMaxTabHeight(tabPlacement: number /*int*/): number /*int*/
                     // @ts-ignore
-                    getTabRunOverlay(tabPlacement: number /*int*/): int
+                    getTabRunOverlay(tabPlacement: number /*int*/): number /*int*/
                     // @ts-ignore
                     shouldRotateTabRuns(tabPlacement: number /*int*/, selectedRun: number /*int*/): boolean
                     // @ts-ignore

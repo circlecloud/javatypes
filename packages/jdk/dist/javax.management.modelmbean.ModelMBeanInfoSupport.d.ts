@@ -63,7 +63,7 @@ declare namespace javax {
                  *  objects which have descriptors
                  */
                 // @ts-ignore
-                constructor(className: string, description: string, attributes: javax.management.modelmbean.ModelMBeanAttributeInfo[], constructors: javax.management.modelmbean.ModelMBeanConstructorInfo[], operations: javax.management.modelmbean.ModelMBeanOperationInfo[], notifications: javax.management.modelmbean.ModelMBeanNotificationInfo[])
+                constructor(className: java.lang.String | string, description: java.lang.String | string, attributes: javax.management.modelmbean.ModelMBeanAttributeInfo[], constructors: javax.management.modelmbean.ModelMBeanConstructorInfo[], operations: javax.management.modelmbean.ModelMBeanOperationInfo[], notifications: javax.management.modelmbean.ModelMBeanNotificationInfo[])
                 /**
                  * Creates a ModelMBeanInfoSupport with the provided information
                  * and the descriptor given in parameter.
@@ -93,7 +93,7 @@ declare namespace javax {
                  *  descriptor.)
                  */
                 // @ts-ignore
-                constructor(className: string, description: string, attributes: javax.management.modelmbean.ModelMBeanAttributeInfo[], constructors: javax.management.modelmbean.ModelMBeanConstructorInfo[], operations: javax.management.modelmbean.ModelMBeanOperationInfo[], notifications: javax.management.modelmbean.ModelMBeanNotificationInfo[], mbeandescriptor: javax.management.Descriptor)
+                constructor(className: java.lang.String | string, description: java.lang.String | string, attributes: javax.management.modelmbean.ModelMBeanAttributeInfo[], constructors: javax.management.modelmbean.ModelMBeanConstructorInfo[], operations: javax.management.modelmbean.ModelMBeanOperationInfo[], notifications: javax.management.modelmbean.ModelMBeanNotificationInfo[], mbeandescriptor: javax.management.Descriptor)
                 /**
                  * Returns a shallow clone of this instance.  Neither the Descriptor nor
                  * the contained arrays ({@code ModelMBeanAttributeInfo[]} etc) are
@@ -103,11 +103,11 @@ declare namespace javax {
                  * @return a shallow clone of this instance.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 // @ts-ignore
-                getDescriptors(inDescriptorType: string): javax.management.Descriptor[]
+                public getDescriptors(inDescriptorType: java.lang.String | string): javax.management.Descriptor[]
                 // @ts-ignore
-                setDescriptors(inDescriptors: javax.management.Descriptor[]): void
+                public setDescriptors(inDescriptors: javax.management.Descriptor[]): void
                 /**
                  * Returns a Descriptor requested by name.
                  * @param inDescriptorName The name of the descriptor.
@@ -119,15 +119,15 @@ declare namespace javax {
                  * @see #setDescriptor
                  */
                 // @ts-ignore
-                getDescriptor(inDescriptorName: string): javax.management.Descriptor
+                public getDescriptor(inDescriptorName: java.lang.String | string): javax.management.Descriptor
                 // @ts-ignore
-                getDescriptor(inDescriptorName: string, inDescriptorType: string): javax.management.Descriptor
+                public getDescriptor(inDescriptorName: java.lang.String | string, inDescriptorType: java.lang.String | string): javax.management.Descriptor
                 // @ts-ignore
-                setDescriptor(inDescriptor: javax.management.Descriptor, inDescriptorType: string): void
+                public setDescriptor(inDescriptor: javax.management.Descriptor, inDescriptorType: java.lang.String | string): void
                 // @ts-ignore
-                getAttribute(inName: string): javax.management.modelmbean.ModelMBeanAttributeInfo
+                public getAttribute(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanAttributeInfo
                 // @ts-ignore
-                getOperation(inName: string): javax.management.modelmbean.ModelMBeanOperationInfo
+                public getOperation(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanOperationInfo
                 /**
                  * Returns the ModelMBeanConstructorInfo requested by name.
                  * If no ModelMBeanConstructorInfo exists for this name null is returned.
@@ -139,18 +139,18 @@ declare namespace javax {
                  *             for a null constructor name.
                  */
                 // @ts-ignore
-                getConstructor(inName: string): javax.management.modelmbean.ModelMBeanConstructorInfo
+                public getConstructor(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanConstructorInfo
                 // @ts-ignore
-                getNotification(inName: string): javax.management.modelmbean.ModelMBeanNotificationInfo
+                public getNotification(inName: java.lang.String | string): javax.management.modelmbean.ModelMBeanNotificationInfo
                 /**
                  * @since 1.6
                  */
                 // @ts-ignore
-                getDescriptor(): javax.management.Descriptor
+                public getDescriptor(): javax.management.Descriptor
                 // @ts-ignore
-                getMBeanDescriptor(): javax.management.Descriptor
+                public getMBeanDescriptor(): javax.management.Descriptor
                 // @ts-ignore
-                setMBeanDescriptor(inMBeanDescriptor: javax.management.Descriptor): void
+                public setMBeanDescriptor(inMBeanDescriptor: javax.management.Descriptor): void
             }
         }
     }

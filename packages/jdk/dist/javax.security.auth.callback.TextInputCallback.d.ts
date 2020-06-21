@@ -19,7 +19,7 @@ declare namespace javax {
                      *                   or if {@code prompt} has a length of 0.
                      */
                     // @ts-ignore
-                    constructor(prompt: string)
+                    constructor(prompt: java.lang.String | string)
                     /**
                      * Construct a {@code TextInputCallback} with a prompt
                      * and default input value.
@@ -33,14 +33,14 @@ declare namespace javax {
                      *                   or if {@code defaultText} has a length of 0.
                      */
                     // @ts-ignore
-                    constructor(prompt: string, defaultText: string)
+                    constructor(prompt: java.lang.String | string, defaultText: java.lang.String | string)
                     /**
                      * Get the prompt.
                      * <p>
                      * @return the prompt.
                      */
                     // @ts-ignore
-                    getPrompt(): java.lang.String
+                    public getPrompt(): string
                     /**
                      * Get the default text.
                      * <p>
@@ -48,7 +48,7 @@ declare namespace javax {
                      *           was not instantiated with {@code defaultText}.
                      */
                     // @ts-ignore
-                    getDefaultText(): java.lang.String
+                    public getDefaultText(): string
                     /**
                      * Set the retrieved text.
                      * <p>
@@ -56,7 +56,7 @@ declare namespace javax {
                      * @see #getText
                      */
                     // @ts-ignore
-                    setText(text: string): void
+                    public setText(text: java.lang.String | string): void
                     /**
                      * Get the retrieved text.
                      * <p>
@@ -64,7 +64,7 @@ declare namespace javax {
                      * @see #setText
                      */
                     // @ts-ignore
-                    getText(): java.lang.String
+                    public getText(): string
                 }
             }
         }

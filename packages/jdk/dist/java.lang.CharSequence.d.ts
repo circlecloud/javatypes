@@ -28,7 +28,7 @@ declare namespace java {
              * @return the number of <code>char</code>s in this sequence
              */
             // @ts-ignore
-            length(): int
+            length(): number /*int*/
             /**
              * Returns the <code>char</code> value at the specified index.  An index ranges from zero
              * to <tt>length() - 1</tt>.  The first <code>char</code> value of the sequence is at
@@ -44,7 +44,7 @@ declare namespace java {
              *           <tt>length()</tt>
              */
             // @ts-ignore
-            charAt(index: number /*int*/): char
+            charAt(index: number /*int*/): string
             /**
              * Returns a <code>CharSequence</code> that is a subsequence of this sequence.
              * The subsequence starts with the <code>char</code> value at the specified index and
@@ -69,7 +69,7 @@ declare namespace java {
              * @return a string consisting of exactly this sequence of characters
              */
             // @ts-ignore
-            toString(): java.lang.String
+            toString(): string
             /**
              * Returns a stream of {@code int} zero-extending the {@code char} values
              * from this sequence.  Any char which maps to a <a

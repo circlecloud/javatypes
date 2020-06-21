@@ -49,7 +49,7 @@ declare namespace javax {
              * @see JOptionPane
              */
             // @ts-ignore
-            constructor(parentComponent: java.awt.Component, message: any, note: string, min: number /*int*/, max: number /*int*/)
+            constructor(parentComponent: java.awt.Component, message: java.lang.Object | any, note: java.lang.String | string, min: number /*int*/, max: number /*int*/)
             /**
              * The <code>AccessibleContext</code> for the <code>ProgressMonitor</code>
              * @since 1.5
@@ -67,47 +67,47 @@ declare namespace javax {
              * @see #close
              */
             // @ts-ignore
-            setProgress(nv: number /*int*/): void
+            public setProgress(nv: number /*int*/): void
             /**
              * Indicate that the operation is complete.  This happens automatically
              * when the value set by setProgress is &gt;= max, but it may be called
              * earlier if the operation ends early.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Returns the minimum value -- the lower end of the progress value.
              * @return an int representing the minimum value
              * @see #setMinimum
              */
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * Specifies the minimum value.
              * @param m  an int specifying the minimum value
              * @see #getMinimum
              */
             // @ts-ignore
-            setMinimum(m: number /*int*/): void
+            public setMinimum(m: number /*int*/): void
             /**
              * Returns the maximum value -- the higher end of the progress value.
              * @return an int representing the maximum value
              * @see #setMaximum
              */
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             /**
              * Specifies the maximum value.
              * @param m  an int specifying the maximum value
              * @see #getMaximum
              */
             // @ts-ignore
-            setMaximum(m: number /*int*/): void
+            public setMaximum(m: number /*int*/): void
             /**
              * Returns true if the user hits the Cancel button in the progress dialog.
              */
             // @ts-ignore
-            isCanceled(): boolean
+            public isCanceled(): boolean
             /**
              * Specifies the amount of time to wait before deciding whether or
              * not to popup a progress monitor.
@@ -116,14 +116,14 @@ declare namespace javax {
              * @see #getMillisToDecideToPopup
              */
             // @ts-ignore
-            setMillisToDecideToPopup(millisToDecideToPopup: number /*int*/): void
+            public setMillisToDecideToPopup(millisToDecideToPopup: number /*int*/): void
             /**
              * Returns the amount of time this object waits before deciding whether
              * or not to popup a progress monitor.
              * @see #setMillisToDecideToPopup
              */
             // @ts-ignore
-            getMillisToDecideToPopup(): int
+            public getMillisToDecideToPopup(): number /*int*/
             /**
              * Specifies the amount of time it will take for the popup to appear.
              * (If the predicted time remaining is less than this time, the popup
@@ -132,13 +132,13 @@ declare namespace javax {
              * @see #getMillisToPopup
              */
             // @ts-ignore
-            setMillisToPopup(millisToPopup: number /*int*/): void
+            public setMillisToPopup(millisToPopup: number /*int*/): void
             /**
              * Returns the amount of time it will take for the popup to appear.
              * @see #setMillisToPopup
              */
             // @ts-ignore
-            getMillisToPopup(): int
+            public getMillisToPopup(): number /*int*/
             /**
              * Specifies the additional note that is displayed along with the
              * progress message. Used, for example, to show which file the
@@ -147,7 +147,7 @@ declare namespace javax {
              * @see #getNote
              */
             // @ts-ignore
-            setNote(note: string): void
+            public setNote(note: java.lang.String | string): void
             /**
              * Specifies the additional note that is displayed along with the
              * progress message.
@@ -155,7 +155,7 @@ declare namespace javax {
              * @see #setNote
              */
             // @ts-ignore
-            getNote(): java.lang.String
+            public getNote(): string
             /**
              * Gets the <code>AccessibleContext</code> for the
              * <code>ProgressMonitor</code>
@@ -164,7 +164,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

@@ -11,7 +11,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class SocketImpl extends java.lang.Object implements java.net.SocketOptions {
+        abstract class SocketImpl extends java.lang.Object implements java.net.SocketOptions {
             // @ts-ignore
             constructor()
             /**
@@ -51,7 +51,7 @@ declare namespace java {
              *                remote host.
              */
             // @ts-ignore
-            abstract connect(host: string, port: number /*int*/): void
+            abstract connect(host: java.lang.String | string, port: number /*int*/): void
             /**
              * Connects this socket to the specified port number on the specified host.
              * @param address   the IP address of the remote host.
@@ -124,7 +124,7 @@ declare namespace java {
              *                number of bytes available.
              */
             // @ts-ignore
-            abstract available(): int
+            abstract available(): number /*int*/
             /**
              * Closes this socket.
              * @exception IOException  if an I/O error occurs when closing this socket.
@@ -183,7 +183,7 @@ declare namespace java {
              * @see java.net.SocketImpl#port
              */
             // @ts-ignore
-            getPort(): int
+            getPort(): number /*int*/
             /**
              * Returns whether or not this SocketImpl supports sending
              * urgent data. By default, false is returned
@@ -210,13 +210,13 @@ declare namespace java {
              * @see java.net.SocketImpl#localport
              */
             // @ts-ignore
-            getLocalPort(): int
+            getLocalPort(): number /*int*/
             /**
              * Returns the address and port of this socket as a {@code String}.
              * @return a string representation of this socket.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Sets performance preferences for this socket.
              * <p> Sockets use the TCP/IP protocol by default.  Some implementations

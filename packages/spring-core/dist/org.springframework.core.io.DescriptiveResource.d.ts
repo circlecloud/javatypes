@@ -17,25 +17,25 @@ declare namespace org {
                      * @param description the resource description
                      */
                     // @ts-ignore
-                    constructor(description: string)
+                    constructor(description: java.lang.String | string)
                     // @ts-ignore
-                    exists(): boolean
+                    public exists(): boolean
                     // @ts-ignore
-                    isReadable(): boolean
+                    public isReadable(): boolean
                     // @ts-ignore
-                    getInputStream(): java.io.InputStream
+                    public getInputStream(): java.io.InputStream
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * This implementation compares the underlying description String.
                      */
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     /**
                      * This implementation returns the hash code of the underlying description String.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

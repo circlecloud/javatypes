@@ -135,7 +135,7 @@ declare namespace javax {
                      * @return the result of the visit
                      */
                     // @ts-ignore
-                    visitString(s: string, p: P): R
+                    visitString(s: java.lang.String | string, p: P): R
                     /**
                      * Visits a type value in an annotation.
                      * @param t the value being visited
@@ -167,7 +167,7 @@ declare namespace javax {
                      * @return the result of the visit
                      */
                     // @ts-ignore
-                    visitArray(vals: Array<javax.lang.model.element.AnnotationValue>, p: P): R
+                    visitArray(vals: java.util.List<any> | Array<any>, p: P): R
                     /**
                      * Visits an unknown kind of annotation value.
                      * This can occur if the language evolves and new kinds

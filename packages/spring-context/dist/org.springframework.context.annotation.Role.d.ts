@@ -21,7 +21,7 @@ declare namespace org {
                  * @see Bean
                  */
                 // @ts-ignore
-                class Role implements java.lang.annotation.Annotation {
+                abstract class Role implements java.lang.annotation.Annotation {
                 }
             }
         }

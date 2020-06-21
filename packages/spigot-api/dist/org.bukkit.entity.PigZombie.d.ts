@@ -11,7 +11,7 @@ declare namespace org {
                  * @return The anger level.
                  */
                 // @ts-ignore
-                getAnger(): int
+                getAnger(): number /*int*/
                 /**
                  * Set the pig zombie's current anger level.
                  * @param level The anger level. Higher levels of anger take longer to
@@ -42,7 +42,7 @@ declare namespace org {
                  * @return UnsuppotedOperationException
                  */
                 // @ts-ignore
-                getConversionTime(): int
+                getConversionTime(): number /*int*/
                 /**
                  * <b>Not applicable to this entity</b>
                  * @param time unused

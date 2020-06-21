@@ -69,7 +69,7 @@ declare namespace org {
                                  * @return This builder, for chaining
                                  */
                                 // @ts-ignore
-                                replace(check: java.util.function.Predicate<org.spongepowered.api.block.BlockState> | java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): org.spongepowered.api.world.gen.populator.SeaFloor.Builder
+                                replace(check: java.util.function$.Predicate<org.spongepowered.api.block.BlockState>): org.spongepowered.api.world.gen.populator.SeaFloor.Builder
                                 /**
                                  * Builds a new instance of a {@link SeaFloor} populator with the
                                  * settings set within the builder.

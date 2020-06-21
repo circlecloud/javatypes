@@ -34,7 +34,7 @@ declare namespace java {
              * @param actions ignored.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
             /**
              * Checks if the specified permission is "implied" by
              * this object. This method always returns true.
@@ -42,7 +42,7 @@ declare namespace java {
              * @return return
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two AllPermission objects for equality. Two AllPermission
              * objects are always equal.
@@ -50,19 +50,19 @@ declare namespace java {
              * @return true if <i>obj</i> is an AllPermission, false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this object.
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the canonical string representation of the actions.
              * @return the actions.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Returns a new PermissionCollection object for storing AllPermission
              * objects.
@@ -71,7 +71,7 @@ declare namespace java {
              *  storing AllPermissions.
              */
             // @ts-ignore
-            newPermissionCollection(): java.security.PermissionCollection
+            public newPermissionCollection(): java.security.PermissionCollection
         }
     }
 }

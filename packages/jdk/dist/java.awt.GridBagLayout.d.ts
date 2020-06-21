@@ -328,17 +328,17 @@ declare namespace java {
              * on the size of a grid.
              */
             // @ts-ignore
-            readonly MAXGRIDSIZE: number /*int*/
+            static readonly MAXGRIDSIZE: number /*int*/
             /**
              * The smallest grid that can be laid out by the grid bag layout.
              */
             // @ts-ignore
-            readonly MINSIZE: number /*int*/
+            static readonly MINSIZE: number /*int*/
             /**
              * The preferred grid size that can be laid out by the grid bag layout.
              */
             // @ts-ignore
-            readonly PREFERREDSIZE: number /*int*/
+            static readonly PREFERREDSIZE: number /*int*/
             /**
              * This hashtable maintains the association between
              * a component and its gridbag constraints.
@@ -388,7 +388,7 @@ declare namespace java {
              * @see #getLayoutDimensions()
              */
             // @ts-ignore
-            columnWidths: number /*int*/[]
+            public columnWidths: number /*int*/[]
             /**
              * This field holds the overrides to the row minimum
              * heights.  If this field is non-<code>null</code> the values are
@@ -401,7 +401,7 @@ declare namespace java {
              * @see #getLayoutDimensions()
              */
             // @ts-ignore
-            rowHeights: number /*int*/[]
+            public rowHeights: number /*int*/[]
             /**
              * This field holds the overrides to the column weights.
              * If this field is non-<code>null</code> the values are
@@ -415,7 +415,7 @@ declare namespace java {
              * @serial 
              */
             // @ts-ignore
-            columnWeights: number /*double*/[]
+            public columnWeights: number /*double*/[]
             /**
              * This field holds the overrides to the row weights.
              * If this field is non-<code>null</code> the values are
@@ -429,14 +429,14 @@ declare namespace java {
              * @serial 
              */
             // @ts-ignore
-            rowWeights: number /*double*/[]
+            public rowWeights: number /*double*/[]
             /**
              * Sets the constraints for the specified component in this layout.
              * @param comp the component to be modified
              * @param constraints the constraints to be applied
              */
             // @ts-ignore
-            setConstraints(comp: java.awt.Component, constraints: java.awt.GridBagConstraints): void
+            public setConstraints(comp: java.awt.Component, constraints: java.awt.GridBagConstraints): void
             /**
              * Gets the constraints for the specified component.  A copy of
              * the actual <code>GridBagConstraints</code> object is returned.
@@ -446,7 +446,7 @@ declare namespace java {
              *                   object is returned
              */
             // @ts-ignore
-            getConstraints(comp: java.awt.Component): java.awt.GridBagConstraints
+            public getConstraints(comp: java.awt.Component): java.awt.GridBagConstraints
             /**
              * Retrieves the constraints for the specified component.
              * The return value is not a copy, but is the actual
@@ -474,7 +474,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLayoutOrigin(): java.awt.Point
+            public getLayoutOrigin(): java.awt.Point
             /**
              * Determines column widths and row heights for the layout grid.
              * <p>
@@ -485,7 +485,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLayoutDimensions(): int[][]
+            public getLayoutDimensions(): number /*int*/[][]
             /**
              * Determines the weights of the layout grid's columns and rows.
              * Weights are used to calculate how much a given column or row
@@ -499,7 +499,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLayoutWeights(): double[][]
+            public getLayoutWeights(): number /*double*/[][]
             /**
              * Determines which cell in the layout grid contains the point
              * specified by <code>(x,&nbsp;y)</code>. Each cell is identified
@@ -528,12 +528,12 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            location(x: number /*int*/, y: number /*int*/): java.awt.Point
+            public location(x: number /*int*/, y: number /*int*/): java.awt.Point
             /**
              * Has no effect, since this layout manager does not use a per-component string.
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Adds the specified component to the layout, using the specified
              * <code>constraints</code> object.  Note that constraints
@@ -545,7 +545,7 @@ declare namespace java {
              *             is not a <code>GridBagConstraint</code>
              */
             // @ts-ignore
-            addLayoutComponent(comp: java.awt.Component, constraints: any): void
+            public addLayoutComponent(comp: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Removes the specified component from this layout.
              * <p>
@@ -555,7 +555,7 @@ declare namespace java {
              * @see java.awt.Container#removeAll()
              */
             // @ts-ignore
-            removeLayoutComponent(comp: java.awt.Component): void
+            public removeLayoutComponent(comp: java.awt.Component): void
             /**
              * Determines the preferred size of the <code>parent</code>
              * container using this grid bag layout.
@@ -567,7 +567,7 @@ declare namespace java {
              *   container
              */
             // @ts-ignore
-            preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Determines the minimum size of the <code>parent</code> container
              * using this grid bag layout.
@@ -578,7 +578,7 @@ declare namespace java {
              * @return the minimum size of the <code>parent</code> container
              */
             // @ts-ignore
-            minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Returns the maximum dimensions for this layout given the components
              * in the specified target container.
@@ -589,7 +589,7 @@ declare namespace java {
              * @return the maximum dimensions for this layout
              */
             // @ts-ignore
-            maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the alignment along the x axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -600,7 +600,7 @@ declare namespace java {
              * @return the value <code>0.5f</code> to indicate centered
              */
             // @ts-ignore
-            getLayoutAlignmentX(parent: java.awt.Container): float
+            public getLayoutAlignmentX(parent: java.awt.Container): number /*float*/
             /**
              * Returns the alignment along the y axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -611,13 +611,13 @@ declare namespace java {
              * @return the value <code>0.5f</code> to indicate centered
              */
             // @ts-ignore
-            getLayoutAlignmentY(parent: java.awt.Container): float
+            public getLayoutAlignmentY(parent: java.awt.Container): number /*float*/
             /**
              * Invalidates the layout, indicating that if the layout manager
              * has cached information it should be discarded.
              */
             // @ts-ignore
-            invalidateLayout(target: java.awt.Container): void
+            public invalidateLayout(target: java.awt.Container): void
             /**
              * Lays out the specified container using this grid bag layout.
              * This method reshapes components in the specified container in
@@ -630,13 +630,13 @@ declare namespace java {
              * @see java.awt.Container#doLayout
              */
             // @ts-ignore
-            layoutContainer(parent: java.awt.Container): void
+            public layoutContainer(parent: java.awt.Container): void
             /**
              * Returns a string representation of this grid bag layout's values.
              * @return a string representation of this grid bag layout.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Fills in an instance of <code>GridBagLayoutInfo</code> for the
              * current set of managed children. This requires three passes through the

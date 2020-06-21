@@ -14,9 +14,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        setValue(value: any): void
+                        public setValue(value: java.lang.Object | any): void
                         // @ts-ignore
-                        getAsText(): java.lang.String
+                        public getAsText(): string
                     }
                 }
             }

@@ -22,7 +22,7 @@ declare namespace java {
              *  related exceptions occur.
              */
             // @ts-ignore
-            readObject(): java.lang.Object
+            readObject(): any
             /**
              * Reads a byte of data. This method will block if no input is
              * available.
@@ -31,7 +31,7 @@ declare namespace java {
              * @exception IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            read(): int
+            read(): number /*int*/
             /**
              * Reads into an array of bytes.  This method will
              * block until some input is available.
@@ -41,7 +41,7 @@ declare namespace java {
              * @exception IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads into an array of bytes.  This method will
              * block until some input is available.
@@ -53,7 +53,7 @@ declare namespace java {
              * @exception IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips n bytes of input.
              * @param n the number of bytes to be skipped
@@ -61,7 +61,7 @@ declare namespace java {
              * @exception IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            skip(n: number /*long*/): number /*long*/
             /**
              * Returns the number of bytes that can be read
              * without blocking.
@@ -69,7 +69,7 @@ declare namespace java {
              * @exception IOException If an I/O error has occurred.
              */
             // @ts-ignore
-            available(): int
+            available(): number /*int*/
             /**
              * Closes the input stream. Must be called
              * to release any resources associated with

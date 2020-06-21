@@ -8,9 +8,9 @@ declare namespace org {
                  * @param message Brief message explaining the cause of the exception
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
             }
         }
     }

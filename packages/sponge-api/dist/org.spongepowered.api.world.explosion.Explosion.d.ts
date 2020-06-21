@@ -25,7 +25,7 @@ declare namespace org {
                          * @return The radius
                          */
                         // @ts-ignore
-                        getRadius(): float
+                        getRadius(): number /*float*/
                         /**
                          * Gets whether the affected blocks have a chance to catch on fire.
                          * @return Whether the affected blocks can catch on fire
@@ -55,7 +55,7 @@ declare namespace org {
                          * @return The number of rays cast per length of each side of the explosion bounding box
                          */
                         // @ts-ignore
-                        getResolution(): int
+                        getResolution(): number /*int*/
                         /**
                          * <pre>
                          * A numerical representation of variation in blast strength per ray.
@@ -66,13 +66,13 @@ declare namespace org {
                          * @return A numerical representation of variation in blast strength per ray
                          */
                         // @ts-ignore
-                        getRandomness(): float
+                        getRandomness(): number /*float*/
                         /**
                          * Knockback multiplier for entities effected by the explosion.
                          * @return The multiple by which the knockback of entities will be changed
                          */
                         // @ts-ignore
-                        getKnockback(): double
+                        getKnockback(): number /*double*/
                     }
                 }
             }

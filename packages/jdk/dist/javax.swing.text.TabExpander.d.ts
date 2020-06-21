@@ -17,7 +17,7 @@ declare namespace javax {
                  * @return the next tab stop &gt;= 0
                  */
                 // @ts-ignore
-                nextTabStop(x: number /*float*/, tabOffset: number /*int*/): float
+                nextTabStop(x: number /*float*/, tabOffset: number /*int*/): number /*float*/
             }
         }
     }

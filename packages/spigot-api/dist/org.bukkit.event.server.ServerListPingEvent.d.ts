@@ -9,7 +9,7 @@ declare namespace org {
                 // @ts-ignore
                 class ServerListPingEvent extends org.bukkit.event.server.ServerEvent implements java.lang.Iterable<org.bukkit.entity.Player> {
                     // @ts-ignore
-                    constructor(address: java.net.InetAddress, motd: string, numPlayers: number /*int*/, maxPlayers: number /*int*/)
+                    constructor(address: java.net.InetAddress, motd: java.lang.String | string, numPlayers: number /*int*/, maxPlayers: number /*int*/)
                     /**
                      * This constructor is intended for implementations that provide the
                      * {@link #iterator()} method, thus provided the {@link #getNumPlayers()}
@@ -19,43 +19,43 @@ declare namespace org {
                      * @param maxPlayers the max number of players
                      */
                     // @ts-ignore
-                    constructor(address: java.net.InetAddress, motd: string, maxPlayers: number /*int*/)
+                    constructor(address: java.net.InetAddress, motd: java.lang.String | string, maxPlayers: number /*int*/)
                     /**
                      * Get the address the ping is coming from.
                      * @return the address
                      */
                     // @ts-ignore
-                    getAddress(): java.net.InetAddress
+                    public getAddress(): java.net.InetAddress
                     /**
                      * Get the message of the day message.
                      * @return the message of the day
                      */
                     // @ts-ignore
-                    getMotd(): java.lang.String
+                    public getMotd(): string
                     /**
                      * Change the message of the day message.
                      * @param motd the message of the day
                      */
                     // @ts-ignore
-                    setMotd(motd: string): void
+                    public setMotd(motd: java.lang.String | string): void
                     /**
                      * Get the number of players sent.
                      * @return the number of players
                      */
                     // @ts-ignore
-                    getNumPlayers(): int
+                    public getNumPlayers(): number /*int*/
                     /**
                      * Get the maximum number of players sent.
                      * @return the maximum number of players
                      */
                     // @ts-ignore
-                    getMaxPlayers(): int
+                    public getMaxPlayers(): number /*int*/
                     /**
                      * Set the maximum number of players sent.
                      * @param maxPlayers the maximum number of player
                      */
                     // @ts-ignore
-                    setMaxPlayers(maxPlayers: number /*int*/): void
+                    public setMaxPlayers(maxPlayers: number /*int*/): void
                     /**
                      * Sets the server-icon sent to the client.
                      * @param icon the icon to send to the client
@@ -66,11 +66,11 @@ declare namespace org {
                      *      not support setting the server icon
                      */
                     // @ts-ignore
-                    setServerIcon(icon: org.bukkit.util.CachedServerIcon): void
+                    public setServerIcon(icon: org.bukkit.util.CachedServerIcon): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                     /**
                      * {@inheritDoc}
                      * <p>
@@ -82,7 +82,7 @@ declare namespace org {
                      *      not support removing players
                      */
                     // @ts-ignore
-                    iterator(): java.util.Iterator<org.bukkit.entity.Player>
+                    public iterator(): java.util.Iterator<org.bukkit.entity.Player>
                 }
             }
         }

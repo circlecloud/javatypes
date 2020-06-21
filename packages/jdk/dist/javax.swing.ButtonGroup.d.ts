@@ -49,33 +49,33 @@ declare namespace javax {
              * @param b the button to be added
              */
             // @ts-ignore
-            add(b: javax.swing.AbstractButton): void
+            public add(b: javax.swing.AbstractButton): void
             /**
              * Removes the button from the group.
              * @param b the button to be removed
              */
             // @ts-ignore
-            remove(b: javax.swing.AbstractButton): void
+            public remove(b: javax.swing.AbstractButton): void
             /**
              * Clears the selection such that none of the buttons
              * in the <code>ButtonGroup</code> are selected.
              * @since 1.6
              */
             // @ts-ignore
-            clearSelection(): void
+            public clearSelection(): void
             /**
              * Returns all the buttons that are participating in
              * this group.
              * @return an <code>Enumeration</code> of the buttons in this group
              */
             // @ts-ignore
-            getElements(): java.util.Enumeration<javax.swing.AbstractButton>
+            public getElements(): java.util.Enumeration<javax.swing.AbstractButton>
             /**
              * Returns the model of the selected button.
              * @return the selected button model
              */
             // @ts-ignore
-            getSelection(): javax.swing.ButtonModel
+            public getSelection(): javax.swing.ButtonModel
             /**
              * Sets the selected value for the <code>ButtonModel</code>.
              * Only one button in the group may be selected at a time.
@@ -84,21 +84,21 @@ declare namespace javax {
              *    selected, otherwise <code>false</code>
              */
             // @ts-ignore
-            setSelected(m: javax.swing.ButtonModel, b: boolean): void
+            public setSelected(m: javax.swing.ButtonModel, b: boolean): void
             /**
              * Returns whether a <code>ButtonModel</code> is selected.
              * @return <code>true</code> if the button is selected,
              *    otherwise returns <code>false</code>
              */
             // @ts-ignore
-            isSelected(m: javax.swing.ButtonModel): boolean
+            public isSelected(m: javax.swing.ButtonModel): boolean
             /**
              * Returns the number of buttons in the group.
              * @return the button count
              * @since 1.3
              */
             // @ts-ignore
-            getButtonCount(): int
+            public getButtonCount(): number /*int*/
         }
     }
 }

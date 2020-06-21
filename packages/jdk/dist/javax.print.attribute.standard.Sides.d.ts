@@ -101,7 +101,7 @@ declare namespace javax {
                      * consecutive media sheets.
                      */
                     // @ts-ignore
-                    readonly ONE_SIDED: javax.print.attribute.standard.Sides
+                    public static readonly ONE_SIDED: javax.print.attribute.standard.Sides
                     /**
                      * Imposes each consecutive pair of print-stream pages upon front and back
                      * sides of consecutive media sheets, such that the orientation of each
@@ -110,7 +110,7 @@ declare namespace javax {
                      * known as "duplex" (see {@link #DUPLEX DUPLEX}).
                      */
                     // @ts-ignore
-                    readonly TWO_SIDED_LONG_EDGE: javax.print.attribute.standard.Sides
+                    public static readonly TWO_SIDED_LONG_EDGE: javax.print.attribute.standard.Sides
                     /**
                      * Imposes each consecutive pair of print-stream pages upon front and back
                      * sides of consecutive media sheets, such that the orientation of each
@@ -119,24 +119,24 @@ declare namespace javax {
                      * known as "tumble" (see {@link #TUMBLE TUMBLE}).
                      */
                     // @ts-ignore
-                    readonly TWO_SIDED_SHORT_EDGE: javax.print.attribute.standard.Sides
+                    public static readonly TWO_SIDED_SHORT_EDGE: javax.print.attribute.standard.Sides
                     /**
                      * An alias for "two sided long edge" (see {@link #TWO_SIDED_LONG_EDGE
                      * TWO_SIDED_LONG_EDGE}).
                      */
                     // @ts-ignore
-                    readonly DUPLEX: javax.print.attribute.standard.Sides
+                    public static readonly DUPLEX: javax.print.attribute.standard.Sides
                     /**
                      * An alias for "two sided short edge" (see {@link #TWO_SIDED_SHORT_EDGE
                      * TWO_SIDED_SHORT_EDGE}).
                      */
                     // @ts-ignore
-                    readonly TUMBLE: javax.print.attribute.standard.Sides
+                    public static readonly TUMBLE: javax.print.attribute.standard.Sides
                     /**
                      * Returns the string table for class Sides.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class Sides.
                      */
@@ -151,7 +151,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -160,7 +160,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

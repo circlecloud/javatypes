@@ -56,24 +56,24 @@ declare namespace org {
                      * Set the Runnable to schedule as executor task.
                      */
                     // @ts-ignore
-                    setRunnable(executorTask: java.lang.Runnable): void
+                    public setRunnable(executorTask: java.lang.Runnable): void
                     /**
                      * Return the Runnable to schedule as executor task.
                      */
                     // @ts-ignore
-                    getRunnable(): java.lang.Runnable
+                    public getRunnable(): java.lang.Runnable
                     /**
                      * Set the delay before starting the task for the first time,
                      * in milliseconds. Default is 0, immediately starting the
                      * task after successful scheduling.
                      */
                     // @ts-ignore
-                    setDelay(delay: number /*long*/): void
+                    public setDelay(delay: number /*long*/): void
                     /**
                      * Return the delay before starting the job for the first time.
                      */
                     // @ts-ignore
-                    getDelay(): long
+                    public getDelay(): number /*long*/
                     /**
                      * Set the period between repeated task executions, in milliseconds.
                      * <p>Default is -1, leading to one-time execution. In case of a positive value,
@@ -89,19 +89,19 @@ declare namespace org {
                      * @see java.util.concurrent.ScheduledExecutorService#scheduleWithFixedDelay(Runnable, long, long, java.util.concurrent.TimeUnit)
                      */
                     // @ts-ignore
-                    setPeriod(period: number /*long*/): void
+                    public setPeriod(period: number /*long*/): void
                     /**
                      * Return the period between repeated task executions.
                      */
                     // @ts-ignore
-                    getPeriod(): long
+                    public getPeriod(): number /*long*/
                     /**
                      * Is this task only ever going to execute once?
                      * @return {#code true} if this task is only ever going to execute once
                      * @see #getPeriod()
                      */
                     // @ts-ignore
-                    isOneTimeTask(): boolean
+                    public isOneTimeTask(): boolean
                     /**
                      * Specify the time unit for the delay and period values.
                      * Default is milliseconds ({@code TimeUnit.MILLISECONDS}).
@@ -109,12 +109,12 @@ declare namespace org {
                      * @see java.util.concurrent.TimeUnit#SECONDS
                      */
                     // @ts-ignore
-                    setTimeUnit(timeUnit: java.util.concurrent.TimeUnit): void
+                    public setTimeUnit(timeUnit: java.util.concurrent.TimeUnit): void
                     /**
                      * Return the time unit for the delay and period values.
                      */
                     // @ts-ignore
-                    getTimeUnit(): java.util.concurrent.TimeUnit
+                    public getTimeUnit(): java.util.concurrent.TimeUnit
                     /**
                      * Set whether to schedule as fixed-rate execution, rather than
                      * fixed-delay execution. Default is "false", that is, fixed delay.
@@ -123,12 +123,12 @@ declare namespace org {
                      * @see java.util.concurrent.ScheduledExecutorService#scheduleAtFixedRate(java.lang.Runnable, long, long, java.util.concurrent.TimeUnit)
                      */
                     // @ts-ignore
-                    setFixedRate(fixedRate: boolean): void
+                    public setFixedRate(fixedRate: boolean): void
                     /**
                      * Return whether to schedule as fixed-rate execution.
                      */
                     // @ts-ignore
-                    isFixedRate(): boolean
+                    public isFixedRate(): boolean
                 }
             }
         }

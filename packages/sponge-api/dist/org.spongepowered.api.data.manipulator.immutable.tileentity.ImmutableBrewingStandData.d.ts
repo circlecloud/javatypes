@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable value for the remaining brew time
                                  */
                                 // @ts-ignore
-                                remainingBrewTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                remainingBrewTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

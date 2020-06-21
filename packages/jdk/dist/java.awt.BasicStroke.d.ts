@@ -168,39 +168,39 @@ declare namespace java {
              * they meet.
              */
             // @ts-ignore
-            readonly JOIN_MITER: number /*int*/
+            public static readonly JOIN_MITER: number /*int*/
             /**
              * Joins path segments by rounding off the corner at a radius
              * of half the line width.
              */
             // @ts-ignore
-            readonly JOIN_ROUND: number /*int*/
+            public static readonly JOIN_ROUND: number /*int*/
             /**
              * Joins path segments by connecting the outer corners of their
              * wide outlines with a straight segment.
              */
             // @ts-ignore
-            readonly JOIN_BEVEL: number /*int*/
+            public static readonly JOIN_BEVEL: number /*int*/
             /**
              * Ends unclosed subpaths and dash segments with no added
              * decoration.
              */
             // @ts-ignore
-            readonly CAP_BUTT: number /*int*/
+            public static readonly CAP_BUTT: number /*int*/
             /**
              * Ends unclosed subpaths and dash segments with a round
              * decoration that has a radius equal to half of the width
              * of the pen.
              */
             // @ts-ignore
-            readonly CAP_ROUND: number /*int*/
+            public static readonly CAP_ROUND: number /*int*/
             /**
              * Ends unclosed subpaths and dash segments with a square
              * projection that extends beyond the end of the segment
              * to a distance equal to half of the line width.
              */
             // @ts-ignore
-            readonly CAP_SQUARE: number /*int*/
+            public static readonly CAP_SQUARE: number /*int*/
             /**
              * Returns a <code>Shape</code> whose interior defines the
              * stroked outline of a specified <code>Shape</code>.
@@ -208,7 +208,7 @@ declare namespace java {
              * @return the <code>Shape</code> of the stroked outline.
              */
             // @ts-ignore
-            createStrokedShape(s: java.awt.Shape): java.awt.Shape
+            public createStrokedShape(s: java.awt.Shape): java.awt.Shape
             /**
              * Returns the line width.  Line width is represented in user space,
              * which is the default-coordinate space used by Java 2D.  See the
@@ -218,7 +218,7 @@ declare namespace java {
              * @see Graphics2D
              */
             // @ts-ignore
-            getLineWidth(): float
+            public getLineWidth(): number /*float*/
             /**
              * Returns the end cap style.
              * @return the end cap style of this <code>BasicStroke</code> as one
@@ -226,7 +226,7 @@ declare namespace java {
              *  styles.
              */
             // @ts-ignore
-            getEndCap(): int
+            public getEndCap(): number /*int*/
             /**
              * Returns the line join style.
              * @return the line join style of the <code>BasicStroke</code> as one
@@ -234,13 +234,13 @@ declare namespace java {
              *  join styles.
              */
             // @ts-ignore
-            getLineJoin(): int
+            public getLineJoin(): number /*int*/
             /**
              * Returns the limit of miter joins.
              * @return the limit of miter joins of the <code>BasicStroke</code>.
              */
             // @ts-ignore
-            getMiterLimit(): float
+            public getMiterLimit(): number /*float*/
             /**
              * Returns the array representing the lengths of the dash segments.
              * Alternate entries in the array represent the user space lengths
@@ -254,7 +254,7 @@ declare namespace java {
              * @return the dash array.
              */
             // @ts-ignore
-            getDashArray(): float[]
+            public getDashArray(): number /*float*/[]
             /**
              * Returns the current dash phase.
              * The dash phase is a distance specified in user coordinates that
@@ -264,13 +264,13 @@ declare namespace java {
              * @return the dash phase as a <code>float</code> value.
              */
             // @ts-ignore
-            getDashPhase(): float
+            public getDashPhase(): number /*float*/
             /**
              * Returns the hashcode for this stroke.
              * @return a hash code for this stroke.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Tests if a specified object is equal to this <code>BasicStroke</code>
              * by first testing if it is a <code>BasicStroke</code> and then comparing
@@ -283,7 +283,7 @@ declare namespace java {
              *             <code>false</code> otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

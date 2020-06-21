@@ -16,7 +16,7 @@ declare namespace org {
                      * @return The numerical input version
                      */
                     // @ts-ignore
-                    getInputVersion(): int
+                    getInputVersion(): number /*int*/
                     /**
                      * The outputted {@code version} that this {@link Updater} will
                      * output to. Note that it is possible multiple updaters are able to
@@ -24,7 +24,7 @@ declare namespace org {
                      * @return The numerical output version
                      */
                     // @ts-ignore
-                    getOutputVersion(): int
+                    getOutputVersion(): number /*int*/
                     /**
                      * Attempts to update the content of {@code C} as long as the content
                      * version itself has been abided by.

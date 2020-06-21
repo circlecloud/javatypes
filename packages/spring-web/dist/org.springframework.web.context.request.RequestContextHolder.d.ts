@@ -21,14 +21,14 @@ declare namespace org {
                      * @see org.springframework.web.servlet.DispatcherServlet
                      */
                     // @ts-ignore
-                    class RequestContextHolder extends java.lang.Object {
+                    abstract class RequestContextHolder extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
                          * Reset the RequestAttributes for the current thread.
                          */
                         // @ts-ignore
-                        resetRequestAttributes(): void
+                        public static resetRequestAttributes(): void
                         /**
                          * Bind the given RequestAttributes to the current thread,
                          * <i>not</i> exposing it as inheritable for child threads.
@@ -36,7 +36,7 @@ declare namespace org {
                          * @see #setRequestAttributes(RequestAttributes, boolean)
                          */
                         // @ts-ignore
-                        setRequestAttributes(attributes: org.springframework.web.context.request.RequestAttributes): void
+                        public static setRequestAttributes(attributes: org.springframework.web.context.request.RequestAttributes): void
                         /**
                          * Bind the given RequestAttributes to the current thread.
                          * @param attributes the RequestAttributes to expose,
@@ -45,14 +45,14 @@ declare namespace org {
                          *  for child threads (using an {#link InheritableThreadLocal})
                          */
                         // @ts-ignore
-                        setRequestAttributes(attributes: org.springframework.web.context.request.RequestAttributes, inheritable: boolean): void
+                        public static setRequestAttributes(attributes: org.springframework.web.context.request.RequestAttributes, inheritable: boolean): void
                         /**
                          * Return the RequestAttributes currently bound to the thread.
                          * @return the RequestAttributes currently bound to the thread,
                          *  or {#code null} if none bound
                          */
                         // @ts-ignore
-                        getRequestAttributes(): org.springframework.web.context.request.RequestAttributes
+                        public static getRequestAttributes(): org.springframework.web.context.request.RequestAttributes
                         /**
                          * Return the RequestAttributes currently bound to the thread.
                          * <p>Exposes the previously bound RequestAttributes instance, if any.
@@ -66,7 +66,7 @@ declare namespace org {
                          * @see javax.faces.context.FacesContext#getCurrentInstance()
                          */
                         // @ts-ignore
-                        currentRequestAttributes(): org.springframework.web.context.request.RequestAttributes
+                        public static currentRequestAttributes(): org.springframework.web.context.request.RequestAttributes
                     }
                 }
             }

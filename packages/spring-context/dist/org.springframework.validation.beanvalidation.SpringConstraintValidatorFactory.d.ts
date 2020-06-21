@@ -23,9 +23,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(beanFactory: AutowireCapableBeanFactory)
                     // @ts-ignore
-                    getInstance<T extends <any>>(key: java.lang.Class<T>): T
+                    public getInstance<T extends java.lang.Object>(key: java.lang.Class<T>): T
                     // @ts-ignore
-                    releaseInstance(instance: object): void
+                    public releaseInstance(instance: object): void
                 }
             }
         }

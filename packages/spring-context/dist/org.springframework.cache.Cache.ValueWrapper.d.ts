@@ -11,7 +11,7 @@ declare namespace org {
                      * Return the actual value in the cache.
                      */
                     // @ts-ignore
-                    get(): java.lang.Object
+                    get(): any
                 }
             }
         }

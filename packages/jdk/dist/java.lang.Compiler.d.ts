@@ -21,7 +21,7 @@ declare namespace java {
              * 					a command for the JIT compiler
              */
             // @ts-ignore
-            command(cmd: any): java.lang.Object
+            public static command(cmd: java.lang.Object | any): any
             /**
              * Compiles the class using the JIT compiler. Answers
              * true if the compilation was successful, or false if
@@ -32,7 +32,7 @@ declare namespace java {
              * 					the class to JIT compile
              */
             // @ts-ignore
-            compileClass(classToCompile: java.lang.Class<any>): boolean
+            public static compileClass(classToCompile: java.lang.Class<any>): boolean
             /**
              * Compiles all classes whose name matches the argument
              * using the JIT compiler. Answers true if the compilation
@@ -44,17 +44,17 @@ declare namespace java {
              * 					the string to match against class names
              */
             // @ts-ignore
-            compileClasses(nameRoot: string): boolean
+            public static compileClasses(nameRoot: java.lang.String | string): boolean
             /**
              * Disable the JIT compiler
              */
             // @ts-ignore
-            disable(): void
+            public static disable(): void
             /**
              * Enable the JIT compiler
              */
             // @ts-ignore
-            enable(): void
+            public static enable(): void
         }
     }
 }

@@ -38,7 +38,7 @@ declare namespace javax {
                      * @throws SerialException if the <code>URL</code> object cannot be de-serialized
                      */
                     // @ts-ignore
-                    getDatalink(): java.net.URL
+                    public getDatalink(): java.net.URL
                     /**
                      * Compares this {@code SerialDatalink} to the specified object.
                      * The result is {@code true} if and only if the argument is not
@@ -49,7 +49,7 @@ declare namespace javax {
                      *           equivalent to this SerialDatalink, {@code false} otherwise
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns a hash code for this {@code SerialDatalink}. The hash code for a
                      * {@code SerialDatalink} object is taken as the hash code of
@@ -57,13 +57,13 @@ declare namespace javax {
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a clone of this {@code SerialDatalink}.
                      * @return a clone of this SerialDatalink
                      */
                     // @ts-ignore
-                    clone(): java.lang.Object
+                    public clone(): any
                 }
             }
         }

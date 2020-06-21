@@ -8,7 +8,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class DateFormatProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class DateFormatProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -34,7 +34,7 @@ declare namespace java {
                  * @see java.text.DateFormat#getTimeInstance(int, java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getTimeInstance(style: number /*int*/, locale: java.util.Locale): java.text.DateFormat
+                public abstract getTimeInstance(style: number /*int*/, locale: java.util.Locale): java.text.DateFormat
                 /**
                  * Returns a new <code>DateFormat</code> instance which formats date
                  * with the given formatting style for the specified locale.
@@ -54,7 +54,7 @@ declare namespace java {
                  * @see java.text.DateFormat#getDateInstance(int, java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getDateInstance(style: number /*int*/, locale: java.util.Locale): java.text.DateFormat
+                public abstract getDateInstance(style: number /*int*/, locale: java.util.Locale): java.text.DateFormat
                 /**
                  * Returns a new <code>DateFormat</code> instance which formats date and time
                  * with the given formatting style for the specified locale.
@@ -80,7 +80,7 @@ declare namespace java {
                  * @see java.text.DateFormat#getDateTimeInstance(int, int, java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getDateTimeInstance(dateStyle: number /*int*/, timeStyle: number /*int*/, locale: java.util.Locale): java.text.DateFormat
+                public abstract getDateTimeInstance(dateStyle: number /*int*/, timeStyle: number /*int*/, locale: java.util.Locale): java.text.DateFormat
             }
         }
     }

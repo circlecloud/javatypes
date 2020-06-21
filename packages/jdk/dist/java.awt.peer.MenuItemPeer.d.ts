@@ -16,7 +16,7 @@ declare namespace java {
                  * @param label the label to be displayed
                  */
                 // @ts-ignore
-                setLabel(label: string): void
+                setLabel(label: java.lang.String | string): void
                 /**
                  * Enables or disables the menu item.
                  * @param e {#code true} to enable the menu item, {@code false}

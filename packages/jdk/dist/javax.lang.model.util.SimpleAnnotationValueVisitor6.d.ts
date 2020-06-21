@@ -75,7 +75,7 @@ declare namespace javax {
                      * @return {#code DEFAULT_VALUE} unless overridden
                      */
                     // @ts-ignore
-                    defaultAction(o: any, p: P): R
+                    defaultAction(o: java.lang.Object | any, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param b {#inheritDoc}
@@ -83,7 +83,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitBoolean(b: boolean, p: P): R
+                    public visitBoolean(b: boolean, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param b {#inheritDoc}
@@ -91,7 +91,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitByte(b: number /*byte*/, p: P): R
+                    public visitByte(b: number /*byte*/, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param c {#inheritDoc}
@@ -99,7 +99,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitChar(c: string, p: P): R
+                    public visitChar(c: string, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param d {#inheritDoc}
@@ -107,7 +107,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitDouble(d: number /*double*/, p: P): R
+                    public visitDouble(d: number /*double*/, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param f {#inheritDoc}
@@ -115,7 +115,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitFloat(f: number /*float*/, p: P): R
+                    public visitFloat(f: number /*float*/, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param i {#inheritDoc}
@@ -123,7 +123,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitInt(i: number /*int*/, p: P): R
+                    public visitInt(i: number /*int*/, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param i {#inheritDoc}
@@ -131,7 +131,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitLong(i: number /*long*/, p: P): R
+                    public visitLong(i: number /*long*/, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param s {#inheritDoc}
@@ -139,7 +139,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitShort(s: number /*short*/, p: P): R
+                    public visitShort(s: number /*short*/, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param s {#inheritDoc}
@@ -147,7 +147,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitString(s: string, p: P): R
+                    public visitString(s: java.lang.String | string, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param t {#inheritDoc}
@@ -155,7 +155,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitType(t: javax.lang.model.type.TypeMirror, p: P): R
+                    public visitType(t: javax.lang.model.type.TypeMirror, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param c {#inheritDoc}
@@ -163,7 +163,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitEnumConstant(c: javax.lang.model.element.VariableElement, p: P): R
+                    public visitEnumConstant(c: javax.lang.model.element.VariableElement, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param a {#inheritDoc}
@@ -171,7 +171,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitAnnotation(a: javax.lang.model.element.AnnotationMirror, p: P): R
+                    public visitAnnotation(a: javax.lang.model.element.AnnotationMirror, p: P): R
                     /**
                      * {@inheritDoc} This implementation calls {@code defaultAction}.
                      * @param vals {#inheritDoc}
@@ -179,7 +179,7 @@ declare namespace javax {
                      * @return the result of {#code defaultAction}
                      */
                     // @ts-ignore
-                    visitArray(vals: Array<javax.lang.model.element.AnnotationValue>, p: P): R
+                    public visitArray(vals: java.util.List<any> | Array<any>, p: P): R
                 }
             }
         }

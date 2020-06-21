@@ -53,7 +53,7 @@ declare namespace javax {
                  *        The Notification text string passed in parameter is null.
                  */
                 // @ts-ignore
-                sendNotification(ntfyText: string): void
+                sendNotification(ntfyText: java.lang.String | string): void
                 /**
                  * Sends an attributeChangeNotification which is passed in to
                  * the registered attributeChangeNotification listeners on the
@@ -102,7 +102,7 @@ declare namespace javax {
                  * @see #removeAttributeChangeNotificationListener
                  */
                 // @ts-ignore
-                addAttributeChangeNotificationListener(listener: javax.management.NotificationListener, attributeName: string, handback: any): void
+                addAttributeChangeNotificationListener(listener: javax.management.NotificationListener, attributeName: java.lang.String | string, handback: java.lang.Object | any): void
                 /**
                  * Removes a listener for attributeChangeNotifications from the RequiredModelMBean.
                  * @param listener The listener name which was handling notifications emitted by the registered MBean.
@@ -116,7 +116,7 @@ declare namespace javax {
                  * @see #addAttributeChangeNotificationListener
                  */
                 // @ts-ignore
-                removeAttributeChangeNotificationListener(listener: javax.management.NotificationListener, attributeName: string): void
+                removeAttributeChangeNotificationListener(listener: javax.management.NotificationListener, attributeName: java.lang.String | string): void
             }
         }
     }

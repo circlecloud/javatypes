@@ -17,7 +17,7 @@ declare namespace java {
              * <code>TextLayout</code>.
              */
             // @ts-ignore
-            class GraphicAttribute extends java.lang.Object {
+            abstract class GraphicAttribute extends java.lang.Object {
                 /**
                  * Constructs a <code>GraphicAttribute</code>.
                  * Subclasses use this to define the alignment of the graphic.
@@ -32,27 +32,27 @@ declare namespace java {
                  * Aligns top of graphic to top of line.
                  */
                 // @ts-ignore
-                readonly TOP_ALIGNMENT: number /*int*/
+                public static readonly TOP_ALIGNMENT: number /*int*/
                 /**
                  * Aligns bottom of graphic to bottom of line.
                  */
                 // @ts-ignore
-                readonly BOTTOM_ALIGNMENT: number /*int*/
+                public static readonly BOTTOM_ALIGNMENT: number /*int*/
                 /**
                  * Aligns origin of graphic to roman baseline of line.
                  */
                 // @ts-ignore
-                readonly ROMAN_BASELINE: number /*int*/
+                public static readonly ROMAN_BASELINE: number /*int*/
                 /**
                  * Aligns origin of graphic to center baseline of line.
                  */
                 // @ts-ignore
-                readonly CENTER_BASELINE: number /*int*/
+                public static readonly CENTER_BASELINE: number /*int*/
                 /**
                  * Aligns origin of graphic to hanging baseline of line.
                  */
                 // @ts-ignore
-                readonly HANGING_BASELINE: number /*int*/
+                public static readonly HANGING_BASELINE: number /*int*/
                 /**
                  * Returns the ascent of this <code>GraphicAttribute</code>.  A
                  * graphic can be rendered above its ascent.
@@ -60,7 +60,7 @@ declare namespace java {
                  * @see #getBounds()
                  */
                 // @ts-ignore
-                abstract getAscent(): float
+                public abstract getAscent(): number /*float*/
                 /**
                  * Returns the descent of this <code>GraphicAttribute</code>.  A
                  * graphic can be rendered below its descent.
@@ -68,7 +68,7 @@ declare namespace java {
                  * @see #getBounds()
                  */
                 // @ts-ignore
-                abstract getDescent(): float
+                public abstract getDescent(): number /*float*/
                 /**
                  * Returns the advance of this <code>GraphicAttribute</code>.  The
                  * <code>GraphicAttribute</code> object's advance is the distance
@@ -79,7 +79,7 @@ declare namespace java {
                  * @see #getBounds()
                  */
                 // @ts-ignore
-                abstract getAdvance(): float
+                public abstract getAdvance(): number /*float*/
                 /**
                  * Returns a {@link Rectangle2D} that encloses all of the
                  * bits drawn by this <code>GraphicAttribute</code> relative to the
@@ -92,7 +92,7 @@ declare namespace java {
                  *  rendered by this <code>GraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getBounds(): java.awt.geom.Rectangle2D
+                public getBounds(): java.awt.geom.Rectangle2D
                 /**
                  * Return a {@link java.awt.Shape} that represents the region that
                  * this <code>GraphicAttribute</code> renders.  This is used when a
@@ -109,7 +109,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getOutline(tx: java.awt.geom.AffineTransform): java.awt.Shape
+                public getOutline(tx: java.awt.geom.AffineTransform): java.awt.Shape
                 /**
                  * Renders this <code>GraphicAttribute</code> at the specified
                  * location.
@@ -119,7 +119,7 @@ declare namespace java {
                  * @param y the user-space Y coordinate where the graphic is rendered
                  */
                 // @ts-ignore
-                abstract draw(graphics: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
+                public abstract draw(graphics: java.awt.Graphics2D, x: number /*float*/, y: number /*float*/): void
                 /**
                  * Returns the alignment of this <code>GraphicAttribute</code>.
                  * Alignment can be to a particular baseline, or to the absolute top
@@ -127,7 +127,7 @@ declare namespace java {
                  * @return the alignment of this <code>GraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getAlignment(): int
+                public getAlignment(): number /*int*/
                 /**
                  * Returns the justification information for this
                  * <code>GraphicAttribute</code>.  Subclasses
@@ -137,7 +137,7 @@ declare namespace java {
                  *  justification information for this <code>GraphicAttribute</code>.
                  */
                 // @ts-ignore
-                getJustificationInfo(): java.awt.font.GlyphJustificationInfo
+                public getJustificationInfo(): java.awt.font.GlyphJustificationInfo
             }
         }
     }

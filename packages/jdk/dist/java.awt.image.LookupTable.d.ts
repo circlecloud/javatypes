@@ -18,7 +18,7 @@ declare namespace java {
              * @see LookupOp
              */
             // @ts-ignore
-            class LookupTable extends java.lang.Object {
+            abstract class LookupTable extends java.lang.Object {
                 /**
                  * Constructs a new LookupTable from the number of components and an offset
                  * into the lookup table.
@@ -36,13 +36,13 @@ declare namespace java {
                  * @return the number of components in this <code>LookupTable</code>.
                  */
                 // @ts-ignore
-                getNumComponents(): int
+                public getNumComponents(): number /*int*/
                 /**
                  * Returns the offset.
                  * @return the offset of this <code>LookupTable</code>.
                  */
                 // @ts-ignore
-                getOffset(): int
+                public getOffset(): number /*int*/
                 /**
                  * Returns an <code>int</code> array of components for
                  * one pixel.  The <code>dest</code> array contains the
@@ -56,7 +56,7 @@ declare namespace java {
                  *          pixel.
                  */
                 // @ts-ignore
-                abstract lookupPixel(src: number /*int*/[], dest: number /*int*/[]): int[]
+                public abstract lookupPixel(src: number /*int*/[], dest: number /*int*/[]): number /*int*/[]
             }
         }
     }

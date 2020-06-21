@@ -34,7 +34,7 @@ declare namespace java {
                  * @throws NullPointerException if {#code after} is null
                  */
                 // @ts-ignore
-                andThen(after: java.util.function.BiConsumer<any super T, ? super U> | java.util.function$.BiConsumer<? super T, ? super U>): java.util.function.BiConsumer<T, U>
+                andThen(after: java.util.function$.BiConsumer<any, any>): java.util.function$.BiConsumer<T, U>
             }
         }
     }

@@ -15,14 +15,14 @@ declare namespace org {
                      * @return list of all the recipes in the book
                      */
                     // @ts-ignore
-                    getRecipes(): java.util.List<org.bukkit.NamespacedKey>
+                    getRecipes(): Array<org.bukkit.NamespacedKey>
                     /**
                      * Clears the existing book recipes, and sets the book to use the provided
                      * recipes.
                      * @param recipes A list of recipes to set the book to use
                      */
                     // @ts-ignore
-                    setRecipes(recipes: Array<org.bukkit.NamespacedKey>): void
+                    setRecipes(recipes: java.util.List<org.bukkit.NamespacedKey> | Array<org.bukkit.NamespacedKey>): void
                     /**
                      * Adds new recipe to the end of the book.
                      * @param recipes A list of recipe keys

@@ -150,30 +150,30 @@ declare namespace javax {
                      * information</A>.
                      */
                     // @ts-ignore
-                    readonly SINGLE_DOCUMENT: javax.print.attribute.standard.MultipleDocumentHandling
+                    public static readonly SINGLE_DOCUMENT: javax.print.attribute.standard.MultipleDocumentHandling
                     /**
                      * Separate documents uncollated copies -- see above for
                      * <A HREF="#sducfi">further information</A>.
                      */
                     // @ts-ignore
-                    readonly SEPARATE_DOCUMENTS_UNCOLLATED_COPIES: javax.print.attribute.standard.MultipleDocumentHandling
+                    public static readonly SEPARATE_DOCUMENTS_UNCOLLATED_COPIES: javax.print.attribute.standard.MultipleDocumentHandling
                     /**
                      * Separate documents collated copies -- see above for
                      * <A HREF="#sdccfi">further information</A>.
                      */
                     // @ts-ignore
-                    readonly SEPARATE_DOCUMENTS_COLLATED_COPIES: javax.print.attribute.standard.MultipleDocumentHandling
+                    public static readonly SEPARATE_DOCUMENTS_COLLATED_COPIES: javax.print.attribute.standard.MultipleDocumentHandling
                     /**
                      * Single document new sheet -- see above for
                      * <A HREF="#sdnsfi">further information</A>.
                      */
                     // @ts-ignore
-                    readonly SINGLE_DOCUMENT_NEW_SHEET: javax.print.attribute.standard.MultipleDocumentHandling
+                    public static readonly SINGLE_DOCUMENT_NEW_SHEET: javax.print.attribute.standard.MultipleDocumentHandling
                     /**
                      * Returns the string table for class MultipleDocumentHandling.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class MultipleDocumentHandling.
                      */
@@ -189,7 +189,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -199,7 +199,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

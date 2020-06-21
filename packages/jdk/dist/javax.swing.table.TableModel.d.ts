@@ -27,7 +27,7 @@ declare namespace javax {
                  * @see #getColumnCount
                  */
                 // @ts-ignore
-                getRowCount(): int
+                getRowCount(): number /*int*/
                 /**
                  * Returns the number of columns in the model. A
                  * <code>JTable</code> uses this method to determine how many columns it
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see #getRowCount
                  */
                 // @ts-ignore
-                getColumnCount(): int
+                getColumnCount(): number /*int*/
                 /**
                  * Returns the name of the column at <code>columnIndex</code>.  This is used
                  * to initialize the table's column header name.  Note: this name does
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @return the name of the column
                  */
                 // @ts-ignore
-                getColumnName(columnIndex: number /*int*/): java.lang.String
+                getColumnName(columnIndex: number /*int*/): string
                 /**
                  * Returns the most specific superclass for all the cell values
                  * in the column.  This is used by the <code>JTable</code> to set up a
@@ -54,7 +54,7 @@ declare namespace javax {
                  * @return the common ancestor class of the object values in the model.
                  */
                 // @ts-ignore
-                getColumnClass(columnIndex: number /*int*/): java.lang.Class<?>
+                getColumnClass(columnIndex: number /*int*/): java.lang.Class<any>
                 /**
                  * Returns true if the cell at <code>rowIndex</code> and
                  * <code>columnIndex</code>
@@ -75,7 +75,7 @@ declare namespace javax {
                  * @return the value Object at the specified cell
                  */
                 // @ts-ignore
-                getValueAt(rowIndex: number /*int*/, columnIndex: number /*int*/): java.lang.Object
+                getValueAt(rowIndex: number /*int*/, columnIndex: number /*int*/): any
                 /**
                  * Sets the value in the cell at <code>columnIndex</code> and
                  * <code>rowIndex</code> to <code>aValue</code>.
@@ -86,7 +86,7 @@ declare namespace javax {
                  * @see #isCellEditable
                  */
                 // @ts-ignore
-                setValueAt(aValue: any, rowIndex: number /*int*/, columnIndex: number /*int*/): void
+                setValueAt(aValue: java.lang.Object | any, rowIndex: number /*int*/, columnIndex: number /*int*/): void
                 /**
                  * Adds a listener to the list that is notified each time a change
                  * to the data model occurs.

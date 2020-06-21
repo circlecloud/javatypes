@@ -15,7 +15,7 @@ declare namespace javax {
                  * @param reason describes the problem.
                  */
                 // @ts-ignore
-                constructor(reason: string)
+                constructor(reason: java.lang.String | string)
             }
         }
     }

@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#LAYER
                                  */
                                 // @ts-ignore
-                                layer(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                layer(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

@@ -18,7 +18,7 @@ declare namespace java {
              * @see java.beans.beancontext.BeanContext
              */
             // @ts-ignore
-            class BeanContextEvent extends java.util.EventObject {
+            abstract class BeanContextEvent extends java.util.EventObject {
                 /**
                  * Contruct a BeanContextEvent
                  * @param bc        The BeanContext source
@@ -35,21 +35,21 @@ declare namespace java {
                  * @return the <code>BeanContext</code> associated with this event.
                  */
                 // @ts-ignore
-                getBeanContext(): java.beans.beancontext.BeanContext
+                public getBeanContext(): java.beans.beancontext.BeanContext
                 /**
                  * Sets the <code>BeanContext</code> from which this event was propagated.
                  * @param bc the <code>BeanContext</code> from which this event
                  *  was propagated
                  */
                 // @ts-ignore
-                setPropagatedFrom(bc: java.beans.beancontext.BeanContext): void
+                public setPropagatedFrom(bc: java.beans.beancontext.BeanContext): void
                 /**
                  * Gets the <code>BeanContext</code> from which this event was propagated.
                  * @return the <code>BeanContext</code> from which this
                  *  event was propagated
                  */
                 // @ts-ignore
-                getPropagatedFrom(): java.beans.beancontext.BeanContext
+                public getPropagatedFrom(): java.beans.beancontext.BeanContext
                 /**
                  * Reports whether or not this event is
                  * propagated from some other <code>BeanContext</code>.
@@ -57,7 +57,7 @@ declare namespace java {
                  *  if not
                  */
                 // @ts-ignore
-                isPropagated(): boolean
+                public isPropagated(): boolean
             }
         }
     }

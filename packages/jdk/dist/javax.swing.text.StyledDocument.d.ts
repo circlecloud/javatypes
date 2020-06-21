@@ -23,20 +23,20 @@ declare namespace javax {
                  * @return the style
                  */
                 // @ts-ignore
-                addStyle(nm: string, parent: javax.swing.text.Style): javax.swing.text.Style
+                addStyle(nm: java.lang.String | string, parent: javax.swing.text.Style): javax.swing.text.Style
                 /**
                  * Removes a named style previously added to the document.
                  * @param nm  the name of the style to remove
                  */
                 // @ts-ignore
-                removeStyle(nm: string): void
+                removeStyle(nm: java.lang.String | string): void
                 /**
                  * Fetches a named style previously added.
                  * @param nm  the name of the style
                  * @return the style
                  */
                 // @ts-ignore
-                getStyle(nm: string): javax.swing.text.Style
+                getStyle(nm: java.lang.String | string): javax.swing.text.Style
                 /**
                  * Changes the content element attributes used for the given range of
                  * existing content in the document.  All of the attributes

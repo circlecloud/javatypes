@@ -215,7 +215,7 @@ declare namespace java {
                  * @author Doug Lea
                  */
                 // @ts-ignore
-                class AbstractQueuedSynchronizer extends java.util.concurrent.locks.AbstractOwnableSynchronizer implements java.io.Serializable {
+                abstract class AbstractQueuedSynchronizer extends java.util.concurrent.locks.AbstractOwnableSynchronizer implements java.io.Serializable {
                     /**
                      * Creates a new {@code AbstractQueuedSynchronizer} instance
                      * with initial synchronization state of zero.
@@ -228,7 +228,7 @@ declare namespace java {
                      * @return current state value
                      */
                     // @ts-ignore
-                    getState(): int
+                    getState(): number /*int*/
                     /**
                      * Sets the value of synchronization state.
                      * This operation has memory semantics of a {@code volatile} write.
@@ -324,7 +324,7 @@ declare namespace java {
                      * @throws UnsupportedOperationException if shared mode is not supported
                      */
                     // @ts-ignore
-                    tryAcquireShared(arg: number /*int*/): int
+                    tryAcquireShared(arg: number /*int*/): number /*int*/
                     /**
                      * Attempts to set the state to reflect a release in shared mode.
                      * <p>This method is always invoked by the thread performing release.
@@ -372,7 +372,7 @@ declare namespace java {
                      *         can represent anything you like.
                      */
                     // @ts-ignore
-                    acquire(arg: number /*int*/): void
+                    public acquire(arg: number /*int*/): void
                     /**
                      * Acquires in exclusive mode, aborting if interrupted.
                      * Implemented by first checking interrupt status, then invoking
@@ -387,7 +387,7 @@ declare namespace java {
                      * @throws InterruptedException if the current thread is interrupted
                      */
                     // @ts-ignore
-                    acquireInterruptibly(arg: number /*int*/): void
+                    public acquireInterruptibly(arg: number /*int*/): void
                     /**
                      * Attempts to acquire in exclusive mode, aborting if interrupted,
                      * and failing if the given timeout elapses.  Implemented by first
@@ -405,7 +405,7 @@ declare namespace java {
                      * @throws InterruptedException if the current thread is interrupted
                      */
                     // @ts-ignore
-                    tryAcquireNanos(arg: number /*int*/, nanosTimeout: number /*long*/): boolean
+                    public tryAcquireNanos(arg: number /*int*/, nanosTimeout: number /*long*/): boolean
                     /**
                      * Releases in exclusive mode.  Implemented by unblocking one or
                      * more threads if {@link #tryRelease} returns true.
@@ -416,7 +416,7 @@ declare namespace java {
                      * @return the value returned from {#link #tryRelease}
                      */
                     // @ts-ignore
-                    release(arg: number /*int*/): boolean
+                    public release(arg: number /*int*/): boolean
                     /**
                      * Acquires in shared mode, ignoring interrupts.  Implemented by
                      * first invoking at least once {@link #tryAcquireShared},
@@ -428,7 +428,7 @@ declare namespace java {
                      *         and can represent anything you like.
                      */
                     // @ts-ignore
-                    acquireShared(arg: number /*int*/): void
+                    public acquireShared(arg: number /*int*/): void
                     /**
                      * Acquires in shared mode, aborting if interrupted.  Implemented
                      * by first checking interrupt status, then invoking at least once
@@ -443,7 +443,7 @@ declare namespace java {
                      * @throws InterruptedException if the current thread is interrupted
                      */
                     // @ts-ignore
-                    acquireSharedInterruptibly(arg: number /*int*/): void
+                    public acquireSharedInterruptibly(arg: number /*int*/): void
                     /**
                      * Attempts to acquire in shared mode, aborting if interrupted, and
                      * failing if the given timeout elapses.  Implemented by first
@@ -460,7 +460,7 @@ declare namespace java {
                      * @throws InterruptedException if the current thread is interrupted
                      */
                     // @ts-ignore
-                    tryAcquireSharedNanos(arg: number /*int*/, nanosTimeout: number /*long*/): boolean
+                    public tryAcquireSharedNanos(arg: number /*int*/, nanosTimeout: number /*long*/): boolean
                     /**
                      * Releases in shared mode.  Implemented by unblocking one or more
                      * threads if {@link #tryReleaseShared} returns true.
@@ -470,7 +470,7 @@ declare namespace java {
                      * @return the value returned from {#link #tryReleaseShared}
                      */
                     // @ts-ignore
-                    releaseShared(arg: number /*int*/): boolean
+                    public releaseShared(arg: number /*int*/): boolean
                     /**
                      * Queries whether any threads are waiting to acquire. Note that
                      * because cancellations due to interrupts and timeouts may occur
@@ -481,7 +481,7 @@ declare namespace java {
                      * @return {#code true} if there may be other threads waiting to acquire
                      */
                     // @ts-ignore
-                    hasQueuedThreads(): boolean
+                    public hasQueuedThreads(): boolean
                     /**
                      * Queries whether any threads have ever contended to acquire this
                      * synchronizer; that is if an acquire method has ever blocked.
@@ -490,7 +490,7 @@ declare namespace java {
                      * @return {#code true} if there has ever been contention
                      */
                     // @ts-ignore
-                    hasContended(): boolean
+                    public hasContended(): boolean
                     /**
                      * Returns the first (longest-waiting) thread in the queue, or
                      * {@code null} if no threads are currently queued.
@@ -501,7 +501,7 @@ declare namespace java {
                      *          {#code null} if no threads are currently queued
                      */
                     // @ts-ignore
-                    getFirstQueuedThread(): java.lang.Thread
+                    public getFirstQueuedThread(): java.lang.Thread
                     /**
                      * Returns true if the given thread is currently queued.
                      * <p>This implementation traverses the queue to determine
@@ -511,7 +511,7 @@ declare namespace java {
                      * @throws NullPointerException if the thread is null
                      */
                     // @ts-ignore
-                    isQueued(thread: java.lang.Thread): boolean
+                    public isQueued(thread: java.lang.Thread): boolean
                     /**
                      * Queries whether any threads have been waiting to acquire longer
                      * than the current thread.
@@ -551,7 +551,7 @@ declare namespace java {
                      * @since 1.7
                      */
                     // @ts-ignore
-                    hasQueuedPredecessors(): boolean
+                    public hasQueuedPredecessors(): boolean
                     /**
                      * Returns an estimate of the number of threads waiting to
                      * acquire.  The value is only an estimate because the number of
@@ -562,7 +562,7 @@ declare namespace java {
                      * @return the estimated number of threads waiting to acquire
                      */
                     // @ts-ignore
-                    getQueueLength(): int
+                    public getQueueLength(): number /*int*/
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire.  Because the actual set of threads may change
@@ -574,7 +574,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getQueuedThreads(): java.util.Collection<java.lang.Thread>
+                    public getQueuedThreads(): Array<java.lang.Thread>
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire in exclusive mode. This has the same properties
@@ -583,7 +583,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getExclusiveQueuedThreads(): java.util.Collection<java.lang.Thread>
+                    public getExclusiveQueuedThreads(): Array<java.lang.Thread>
                     /**
                      * Returns a collection containing threads that may be waiting to
                      * acquire in shared mode. This has the same properties
@@ -592,7 +592,7 @@ declare namespace java {
                      * @return the collection of threads
                      */
                     // @ts-ignore
-                    getSharedQueuedThreads(): java.util.Collection<java.lang.Thread>
+                    public getSharedQueuedThreads(): Array<java.lang.Thread>
                     /**
                      * Returns a string identifying this synchronizer, as well as its state.
                      * The state, in brackets, includes the String {@code "State ="}
@@ -602,7 +602,7 @@ declare namespace java {
                      * @return a string identifying this synchronizer, as well as its state
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Queries whether the given ConditionObject
                      * uses this synchronizer as its lock.
@@ -611,7 +611,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    owns(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): boolean
+                    public owns(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): boolean
                     /**
                      * Queries whether any threads are waiting on the given condition
                      * associated with this synchronizer. Note that because timeouts
@@ -628,7 +628,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    hasWaiters(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): boolean
+                    public hasWaiters(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): boolean
                     /**
                      * Returns an estimate of the number of threads waiting on the
                      * given condition associated with this synchronizer. Note that
@@ -645,7 +645,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    getWaitQueueLength(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): int
+                    public getWaitQueueLength(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): number /*int*/
                     /**
                      * Returns a collection containing those threads that may be
                      * waiting on the given condition associated with this
@@ -662,7 +662,7 @@ declare namespace java {
                      * @throws NullPointerException if the condition is null
                      */
                     // @ts-ignore
-                    getWaitingThreads(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): java.util.Collection<java.lang.Thread>
+                    public getWaitingThreads(condition: java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject): Array<java.lang.Thread>
                 }
             }
         }

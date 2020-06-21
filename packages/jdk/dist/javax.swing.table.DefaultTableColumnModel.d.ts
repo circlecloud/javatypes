@@ -69,7 +69,7 @@ declare namespace javax {
                  * @see #removeColumn
                  */
                 // @ts-ignore
-                addColumn(aColumn: javax.swing.table.TableColumn): void
+                public addColumn(aColumn: javax.swing.table.TableColumn): void
                 /**
                  * Deletes the <code>column</code> from the
                  * <code>tableColumns</code> array.  This method will do nothing if
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @see #addColumn
                  */
                 // @ts-ignore
-                removeColumn(column: javax.swing.table.TableColumn): void
+                public removeColumn(column: javax.swing.table.TableColumn): void
                 /**
                  * Moves the column and heading at <code>columnIndex</code> to
                  * <code>newIndex</code>.  The old column at <code>columnIndex</code>
@@ -98,7 +98,7 @@ declare namespace javax {
                  *                                           are not in the valid range
                  */
                 // @ts-ignore
-                moveColumn(columnIndex: number /*int*/, newIndex: number /*int*/): void
+                public moveColumn(columnIndex: number /*int*/, newIndex: number /*int*/): void
                 /**
                  * Sets the column margin to <code>newMargin</code>.  This method
                  * also posts a <code>columnMarginChanged</code> event to its
@@ -108,20 +108,20 @@ declare namespace javax {
                  * @see #getTotalColumnWidth
                  */
                 // @ts-ignore
-                setColumnMargin(newMargin: number /*int*/): void
+                public setColumnMargin(newMargin: number /*int*/): void
                 /**
                  * Returns the number of columns in the <code>tableColumns</code> array.
                  * @return the number of columns in the <code>tableColumns</code> array
                  * @see #getColumns
                  */
                 // @ts-ignore
-                getColumnCount(): int
+                public getColumnCount(): number /*int*/
                 /**
                  * Returns an <code>Enumeration</code> of all the columns in the model.
                  * @return an <code>Enumeration</code> of the columns in the model
                  */
                 // @ts-ignore
-                getColumns(): java.util.Enumeration<javax.swing.table.TableColumn>
+                public getColumns(): java.util.Enumeration<javax.swing.table.TableColumn>
                 /**
                  * Returns the index of the first column in the <code>tableColumns</code>
                  * array whose identifier is equal to <code>identifier</code>,
@@ -137,7 +137,7 @@ declare namespace javax {
                  * @see #getColumn
                  */
                 // @ts-ignore
-                getColumnIndex(identifier: any): int
+                public getColumnIndex(identifier: java.lang.Object | any): number /*int*/
                 /**
                  * Returns the <code>TableColumn</code> object for the column
                  * at <code>columnIndex</code>.
@@ -146,7 +146,7 @@ declare namespace javax {
                  *                           at <code>columnIndex</code>
                  */
                 // @ts-ignore
-                getColumn(columnIndex: number /*int*/): javax.swing.table.TableColumn
+                public getColumn(columnIndex: number /*int*/): javax.swing.table.TableColumn
                 /**
                  * Returns the width margin for <code>TableColumn</code>.
                  * The default <code>columnMargin</code> is 1.
@@ -154,7 +154,7 @@ declare namespace javax {
                  * @see #setColumnMargin
                  */
                 // @ts-ignore
-                getColumnMargin(): int
+                public getColumnMargin(): number /*int*/
                 /**
                  * Returns the index of the column that lies at position <code>x</code>,
                  * or -1 if no column covers this point.
@@ -176,13 +176,13 @@ declare namespace javax {
                  * @see javax.swing.JTable#columnAtPoint
                  */
                 // @ts-ignore
-                getColumnIndexAtX(x: number /*int*/): int
+                public getColumnIndexAtX(x: number /*int*/): number /*int*/
                 /**
                  * Returns the total combined width of all columns.
                  * @return the <code>totalColumnWidth</code> property
                  */
                 // @ts-ignore
-                getTotalColumnWidth(): int
+                public getTotalColumnWidth(): number /*int*/
                 /**
                  * Sets the selection model for this <code>TableColumnModel</code>
                  * to <code>newModel</code>
@@ -195,7 +195,7 @@ declare namespace javax {
                  * @see #getSelectionModel
                  */
                 // @ts-ignore
-                setSelectionModel(newModel: javax.swing.ListSelectionModel): void
+                public setSelectionModel(newModel: javax.swing.ListSelectionModel): void
                 /**
                  * Returns the <code>ListSelectionModel</code> that is used to
                  * maintain column selection state.
@@ -204,20 +204,20 @@ declare namespace javax {
                  * @see #setSelectionModel
                  */
                 // @ts-ignore
-                getSelectionModel(): javax.swing.ListSelectionModel
+                public getSelectionModel(): javax.swing.ListSelectionModel
                 /**
                  * Sets whether column selection is allowed.  The default is false.
                  * @param flag true if column selection will be allowed, false otherwise
                  */
                 // @ts-ignore
-                setColumnSelectionAllowed(flag: boolean): void
+                public setColumnSelectionAllowed(flag: boolean): void
                 /**
                  * Returns true if column selection is allowed, otherwise false.
                  * The default is false.
                  * @return the <code>columnSelectionAllowed</code> property
                  */
                 // @ts-ignore
-                getColumnSelectionAllowed(): boolean
+                public getColumnSelectionAllowed(): boolean
                 /**
                  * Returns an array of selected columns.  If <code>selectionModel</code>
                  * is <code>null</code>, returns an empty array.
@@ -226,25 +226,25 @@ declare namespace javax {
                  *                   <code>null</code>
                  */
                 // @ts-ignore
-                getSelectedColumns(): int[]
+                public getSelectedColumns(): number /*int*/[]
                 /**
                  * Returns the number of columns selected.
                  * @return the number of columns selected
                  */
                 // @ts-ignore
-                getSelectedColumnCount(): int
+                public getSelectedColumnCount(): number /*int*/
                 /**
                  * Adds a listener for table column model events.
                  * @param x  a <code>TableColumnModelListener</code> object
                  */
                 // @ts-ignore
-                addColumnModelListener(x: javax.swing.event.TableColumnModelListener): void
+                public addColumnModelListener(x: javax.swing.event.TableColumnModelListener): void
                 /**
                  * Removes a listener for table column model events.
                  * @param x  a <code>TableColumnModelListener</code> object
                  */
                 // @ts-ignore
-                removeColumnModelListener(x: javax.swing.event.TableColumnModelListener): void
+                public removeColumnModelListener(x: javax.swing.event.TableColumnModelListener): void
                 /**
                  * Returns an array of all the column model listeners
                  * registered on this model.
@@ -256,7 +256,7 @@ declare namespace javax {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getColumnModelListeners(): javax.swing.event.TableColumnModelListener[]
+                public getColumnModelListeners(): javax.swing.event.TableColumnModelListener[]
                 /**
                  * Notifies all listeners that have registered interest for
                  * notification on this event type.  The event instance
@@ -336,14 +336,14 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+                public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
                 /**
                  * Property Change Listener change method.  Used to track changes
                  * to the column width or preferred column width.
                  * @param evt  <code>PropertyChangeEvent</code>
                  */
                 // @ts-ignore
-                propertyChange(evt: java.beans.PropertyChangeEvent): void
+                public propertyChange(evt: java.beans.PropertyChangeEvent): void
                 /**
                  * A <code>ListSelectionListener</code> that forwards
                  * <code>ListSelectionEvents</code> when there is a column
@@ -351,7 +351,7 @@ declare namespace javax {
                  * @param e  the change event
                  */
                 // @ts-ignore
-                valueChanged(e: javax.swing.event.ListSelectionEvent): void
+                public valueChanged(e: javax.swing.event.ListSelectionEvent): void
                 /**
                  * Creates a new default list selection model.
                  */

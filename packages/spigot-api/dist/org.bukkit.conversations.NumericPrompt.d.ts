@@ -6,11 +6,11 @@ declare namespace org {
              * Number} response from the user.
              */
             // @ts-ignore
-            class NumericPrompt extends org.bukkit.conversations.ValidatingPrompt {
+            abstract class NumericPrompt extends org.bukkit.conversations.ValidatingPrompt {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                isInputValid(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                isInputValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 /**
                  * Override this method to do further validation on the numeric player
                  * input after the input has been determined to actually be a number.
@@ -21,7 +21,7 @@ declare namespace org {
                 // @ts-ignore
                 isNumberValid(context: org.bukkit.conversations.ConversationContext, input: java.lang.Number): boolean
                 // @ts-ignore
-                acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: string): org.bukkit.conversations.Prompt
+                acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): org.bukkit.conversations.Prompt
                 /**
                  * Override this method to perform some action with the user's integer
                  * response.
@@ -32,7 +32,7 @@ declare namespace org {
                 // @ts-ignore
                 abstract acceptValidatedInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.Number): org.bukkit.conversations.Prompt
                 // @ts-ignore
-                getFailedValidationText(context: org.bukkit.conversations.ConversationContext, invalidInput: string): java.lang.String
+                getFailedValidationText(context: org.bukkit.conversations.ConversationContext, invalidInput: java.lang.String | string): string
                 /**
                  * Optionally override this method to display an additional message if the
                  * user enters an invalid number.
@@ -41,7 +41,7 @@ declare namespace org {
                  * @return A message explaining how to correct the input.
                  */
                 // @ts-ignore
-                getInputNotNumericText(context: org.bukkit.conversations.ConversationContext, invalidInput: string): java.lang.String
+                getInputNotNumericText(context: org.bukkit.conversations.ConversationContext, invalidInput: java.lang.String | string): string
                 /**
                  * Optionally override this method to display an additional message if the
                  * user enters an invalid numeric input.
@@ -50,7 +50,7 @@ declare namespace org {
                  * @return A message explaining how to correct the input.
                  */
                 // @ts-ignore
-                getFailedValidationText(context: org.bukkit.conversations.ConversationContext, invalidInput: java.lang.Number): java.lang.String
+                getFailedValidationText(context: org.bukkit.conversations.ConversationContext, invalidInput: java.lang.Number): string
             }
         }
     }

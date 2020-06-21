@@ -33,7 +33,7 @@ declare namespace org {
                  * @see BeanPropertyBindingResult#resolveMessageCodes
                  */
                 // @ts-ignore
-                processMissingFieldError(missingField: string, bindingResult: org.springframework.validation.BindingResult): void
+                processMissingFieldError(missingField: java.lang.String | string, bindingResult: org.springframework.validation.BindingResult): void
                 /**
                  * Translate the given {@code PropertyAccessException} to an appropriate
                  * error registered on the given {@code Errors} instance.

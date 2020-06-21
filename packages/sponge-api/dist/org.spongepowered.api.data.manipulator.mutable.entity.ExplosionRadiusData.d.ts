@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#EXPLOSION_RADIUS
                                  */
                                 // @ts-ignore
-                                explosionRadius(): org.spongepowered.api.data.value.mutable.OptionalValue<java.lang.Integer>
+                                explosionRadius(): org.spongepowered.api.data.value.mutable.OptionalValue<java.lang.Integer | number>
                             }
                         }
                     }

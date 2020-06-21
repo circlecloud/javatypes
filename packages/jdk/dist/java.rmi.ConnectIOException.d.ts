@@ -16,7 +16,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs a <code>ConnectIOException</code> with the specified
              * detail message and nested exception.
@@ -25,7 +25,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            constructor(s: string, ex: java.lang.Exception)
+            constructor(s: java.lang.String | string, ex: java.lang.Exception)
         }
     }
 }

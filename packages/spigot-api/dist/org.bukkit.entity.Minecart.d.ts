@@ -17,14 +17,14 @@ declare namespace org {
                  * @return The damage
                  */
                 // @ts-ignore
-                getDamage(): double
+                getDamage(): number /*double*/
                 /**
                  * Gets the maximum speed of a minecart. The speed is unrelated to the
                  * velocity.
                  * @return The max speed
                  */
                 // @ts-ignore
-                getMaxSpeed(): double
+                getMaxSpeed(): number /*double*/
                 /**
                  * Sets the maximum speed of a minecart. Must be nonnegative. Default is
                  * 0.4D.
@@ -118,7 +118,7 @@ declare namespace org {
                  * @return the current block offset for this minecart.
                  */
                 // @ts-ignore
-                getDisplayBlockOffset(): int
+                getDisplayBlockOffset(): number /*int*/
             }
         }
     }

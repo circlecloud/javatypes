@@ -104,7 +104,7 @@ declare namespace javax {
                  * @see DirectoryManager#getStateToBind
                  */
                 // @ts-ignore
-                getStateToBind(obj: any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, ?>): java.lang.Object
+                getStateToBind(obj: java.lang.Object | any, name: javax.naming.Name, nameCtx: javax.naming.Context, environment: java.util.Hashtable<any, any>): any
             }
         }
     }

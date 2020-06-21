@@ -19,7 +19,7 @@ declare namespace javax {
          * @since 1.6
          */
         // @ts-ignore
-        class AbstractScriptEngine extends java.lang.Object implements javax.script.ScriptEngine {
+        abstract class AbstractScriptEngine extends java.lang.Object implements javax.script.ScriptEngine {
             /**
              * Creates a new instance of AbstractScriptEngine using a <code>SimpleScriptContext</code>
              * as its default <code>ScriptContext</code>.
@@ -46,13 +46,13 @@ declare namespace javax {
              * @throws NullPointerException if ctxt is null.
              */
             // @ts-ignore
-            setContext(ctxt: javax.script.ScriptContext): void
+            public setContext(ctxt: javax.script.ScriptContext): void
             /**
              * Returns the value of the protected <code>context</code> field.
              * @return The value of the protected <code>context</code> field.
              */
             // @ts-ignore
-            getContext(): javax.script.ScriptContext
+            public getContext(): javax.script.ScriptContext
             /**
              * Returns the <code>Bindings</code> with the specified scope value in
              * the protected <code>context</code> field.
@@ -62,7 +62,7 @@ declare namespace javax {
              *  invalid for the type the protected <code>context</code> field.
              */
             // @ts-ignore
-            getBindings(scope: number /*int*/): javax.script.Bindings
+            public getBindings(scope: number /*int*/): javax.script.Bindings
             /**
              * Sets the <code>Bindings</code> with the corresponding scope value in the
              * <code>context</code> field.
@@ -74,7 +74,7 @@ declare namespace javax {
              *  <code>ScriptContext.ENGINE_SCOPE</code>
              */
             // @ts-ignore
-            setBindings(bindings: javax.script.Bindings, scope: number /*int*/): void
+            public setBindings(bindings: javax.script.Bindings, scope: number /*int*/): void
             /**
              * Sets the specified value with the specified key in the <code>ENGINE_SCOPE</code>
              * <code>Bindings</code> of the protected <code>context</code> field.
@@ -84,7 +84,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty.
              */
             // @ts-ignore
-            put(key: string, value: any): void
+            public put(key: java.lang.String | string, value: java.lang.Object | any): void
             /**
              * Gets the value for the specified key in the <code>ENGINE_SCOPE</code> of the
              * protected <code>context</code> field.
@@ -93,7 +93,7 @@ declare namespace javax {
              * @throws IllegalArgumentException if key is empty.
              */
             // @ts-ignore
-            get(key: string): java.lang.Object
+            public get(key: java.lang.String | string): any
             /**
              * <code>eval(Reader, Bindings)</code> calls the abstract
              * <code>eval(Reader, ScriptContext)</code> method, passing it a <code>ScriptContext</code>
@@ -109,7 +109,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            eval(reader: java.io.Reader, bindings: javax.script.Bindings): java.lang.Object
+            public eval(reader: java.io.Reader, bindings: javax.script.Bindings): any
             /**
              * Same as <code>eval(Reader, Bindings)</code> except that the abstract
              * <code>eval(String, ScriptContext)</code> is used.
@@ -121,7 +121,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            eval(script: string, bindings: javax.script.Bindings): java.lang.Object
+            public eval(script: java.lang.String | string, bindings: javax.script.Bindings): any
             /**
              * <code>eval(Reader)</code> calls the abstract
              * <code>eval(Reader, ScriptContext)</code> passing the value of the <code>context</code>
@@ -132,7 +132,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            eval(reader: java.io.Reader): java.lang.Object
+            public eval(reader: java.io.Reader): any
             /**
              * Same as <code>eval(Reader)</code> except that the abstract
              * <code>eval(String, ScriptContext)</code> is used.
@@ -142,7 +142,7 @@ declare namespace javax {
              * @throws NullPointerException if any of the parameters is null.
              */
             // @ts-ignore
-            eval(script: string): java.lang.Object
+            public eval(script: java.lang.String | string): any
             /**
              * Returns a <code>SimpleScriptContext</code>.  The <code>SimpleScriptContext</code>:
              * <br><br>

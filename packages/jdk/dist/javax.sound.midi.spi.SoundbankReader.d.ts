@@ -11,7 +11,7 @@ declare namespace javax {
                  * @author Kara Kytle
                  */
                 // @ts-ignore
-                class SoundbankReader extends java.lang.Object {
+                abstract class SoundbankReader extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -23,7 +23,7 @@ declare namespace javax {
                      * @throws IOException if an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract getSoundbank(url: java.net.URL): javax.sound.midi.Soundbank
+                    public abstract getSoundbank(url: java.net.URL): javax.sound.midi.Soundbank
                     /**
                      * Obtains a soundbank object from the {@code InputStream} provided.
                      * @param stream {#code InputStream} representing the soundbank
@@ -33,7 +33,7 @@ declare namespace javax {
                      * @throws IOException if an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract getSoundbank(stream: java.io.InputStream): javax.sound.midi.Soundbank
+                    public abstract getSoundbank(stream: java.io.InputStream): javax.sound.midi.Soundbank
                     /**
                      * Obtains a soundbank object from the {@code File} provided.
                      * @param file the {#code File} representing the soundbank
@@ -43,7 +43,7 @@ declare namespace javax {
                      * @throws IOException if an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract getSoundbank(file: java.io.File): javax.sound.midi.Soundbank
+                    public abstract getSoundbank(file: java.io.File): javax.sound.midi.Soundbank
                 }
             }
         }

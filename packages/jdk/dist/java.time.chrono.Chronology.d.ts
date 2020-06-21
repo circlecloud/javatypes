@@ -150,7 +150,7 @@ declare namespace java {
                  * @throws DateTimeException if the chronology cannot be found
                  */
                 // @ts-ignore
-                of(id: string): java.time.chrono.Chronology
+                of(id: java.lang.String | string): java.time.chrono.Chronology
                 /**
                  * Returns the available chronologies.
                  * <p>
@@ -161,7 +161,7 @@ declare namespace java {
                  * @return the independent, modifiable set of the available chronology IDs, not null
                  */
                 // @ts-ignore
-                getAvailableChronologies(): java.util.Set<java.time.chrono.Chronology>
+                getAvailableChronologies(): Array<java.time.chrono.Chronology>
                 /**
                  * Gets the ID of the chronology.
                  * <p>
@@ -171,7 +171,7 @@ declare namespace java {
                  * @see #getCalendarType()
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                getId(): string
                 /**
                  * Gets the calendar type of the calendar system.
                  * <p>
@@ -185,7 +185,7 @@ declare namespace java {
                  * @see #getId()
                  */
                 // @ts-ignore
-                getCalendarType(): java.lang.String
+                getCalendarType(): string
                 /**
                  * Obtains a local date in this chronology from the era, year-of-era,
                  * month-of-year and day-of-month fields.
@@ -329,7 +329,7 @@ declare namespace java {
                  * @see ChronoLocalDateTime#from(TemporalAccessor)
                  */
                 // @ts-ignore
-                localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<? extends java.time.chrono.ChronoLocalDate>
+                localDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoLocalDateTime<any>
                 /**
                  * Obtains a {@code ChronoZonedDateTime} in this chronology from another temporal object.
                  * <p>
@@ -354,7 +354,7 @@ declare namespace java {
                  * @see ChronoZonedDateTime#from(TemporalAccessor)
                  */
                 // @ts-ignore
-                zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<? extends java.time.chrono.ChronoLocalDate>
+                zonedDateTime(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.ChronoZonedDateTime<any>
                 /**
                  * Obtains a {@code ChronoZonedDateTime} in this chronology from an {@code Instant}.
                  * <p>
@@ -365,7 +365,7 @@ declare namespace java {
                  * @throws DateTimeException if the result exceeds the supported range
                  */
                 // @ts-ignore
-                zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<? extends java.time.chrono.ChronoLocalDate>
+                zonedDateTime(instant: java.time.Instant, zone: java.time.ZoneId): java.time.chrono.ChronoZonedDateTime<any>
                 /**
                  * Checks if the specified year is a leap year.
                  * <p>
@@ -396,7 +396,7 @@ declare namespace java {
                  * @throws ClassCastException if the {#code era} is not of the correct type for the chronology
                  */
                 // @ts-ignore
-                prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): int
+                prolepticYear(era: java.time.chrono.Era, yearOfEra: number /*int*/): number /*int*/
                 /**
                  * Creates the chronology era object from the numeric value.
                  * <p>
@@ -426,7 +426,7 @@ declare namespace java {
                  * @return the list of eras for the chronology, may be immutable, not null
                  */
                 // @ts-ignore
-                eras(): java.util.List<java.time.chrono.Era>
+                eras(): Array<java.time.chrono.Era>
                 /**
                  * Gets the range of valid values for the specified field.
                  * <p>
@@ -457,7 +457,7 @@ declare namespace java {
                  * @return the text value of the chronology, not null
                  */
                 // @ts-ignore
-                getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): java.lang.String
+                getDisplayName(style: java.time.format.TextStyle, locale: java.util.Locale): string
                 /**
                  * Resolves parsed {@code ChronoField} values into a date during parsing.
                  * <p>
@@ -476,7 +476,7 @@ declare namespace java {
                  *   because of a conflict in the input data
                  */
                 // @ts-ignore
-                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.ChronoLocalDate
+                resolveDate(fieldValues: java.util.Map<java.time.temporal.TemporalField, java.lang.Long | number>, resolverStyle: java.time.format.ResolverStyle): java.time.chrono.ChronoLocalDate
                 /**
                  * Obtains a period for this chronology based on years, months and days.
                  * <p>
@@ -513,7 +513,7 @@ declare namespace java {
                  * @return the comparator value, negative if less, positive if greater
                  */
                 // @ts-ignore
-                compareTo(other: java.time.chrono.Chronology): int
+                compareTo(other: java.time.chrono.Chronology): number /*int*/
                 /**
                  * Checks if this chronology is equal to another chronology.
                  * <p>
@@ -522,7 +522,7 @@ declare namespace java {
                  * @return true if this is equal to the other chronology
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this chronology.
                  * <p>
@@ -530,7 +530,7 @@ declare namespace java {
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Outputs this chronology as a {@code String}.
                  * <p>
@@ -538,7 +538,7 @@ declare namespace java {
                  * @return a string representation of this chronology, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

@@ -30,7 +30,7 @@ declare namespace java {
              *  classes (introduced in the J2SE version 1.2 platform) instead.
              */
             // @ts-ignore
-            getAlgorithmProperty(algName: string, propName: string): java.lang.String
+            public static getAlgorithmProperty(algName: java.lang.String | string, propName: java.lang.String | string): string
             /**
              * Adds a new provider, at a specified position. The position is
              * the preference order in which providers are searched for
@@ -64,7 +64,7 @@ declare namespace java {
              * @see java.security.SecurityPermission
              */
             // @ts-ignore
-            insertProviderAt(provider: java.security.Provider, position: number /*int*/): int
+            public static insertProviderAt(provider: java.security.Provider, position: number /*int*/): number /*int*/
             /**
              * Adds a provider to the next position available.
              * <p>If there is a security manager, the
@@ -88,7 +88,7 @@ declare namespace java {
              * @see java.security.SecurityPermission
              */
             // @ts-ignore
-            addProvider(provider: java.security.Provider): int
+            public static addProvider(provider: java.security.Provider): number /*int*/
             /**
              * Removes the provider with the specified name.
              * <p>When the specified provider is removed, all providers located
@@ -116,14 +116,14 @@ declare namespace java {
              * @see #addProvider
              */
             // @ts-ignore
-            removeProvider(name: string): void
+            public static removeProvider(name: java.lang.String | string): void
             /**
              * Returns an array containing all the installed providers. The order of
              * the providers in the array is their preference order.
              * @return an array of all the installed providers.
              */
             // @ts-ignore
-            getProviders(): java.security.Provider[]
+            public static getProviders(): java.security.Provider[]
             /**
              * Returns the provider installed with the specified name, if
              * any. Returns null if no provider with the specified name is
@@ -134,7 +134,7 @@ declare namespace java {
              * @see #addProvider
              */
             // @ts-ignore
-            getProvider(name: string): java.security.Provider
+            public static getProvider(name: java.lang.String | string): java.security.Provider
             /**
              * Returns an array containing all installed providers that satisfy the
              * specified selection criterion, or null if no such providers have been
@@ -188,7 +188,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getProviders(filter: string): java.security.Provider[]
+            public static getProviders(filter: java.lang.String | string): java.security.Provider[]
             /**
              * Returns an array containing all installed providers that satisfy the
              * specified* selection criteria, or null if no such providers have been
@@ -236,7 +236,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getProviders(filter: java.util.Map<java.lang.String, java.lang.String>): java.security.Provider[]
+            public static getProviders(filter: java.util.Map<java.lang.String | string, java.lang.String | string>): java.security.Provider[]
             /**
              * Gets a security property value.
              * <p>First, if there is a security manager, its
@@ -256,7 +256,7 @@ declare namespace java {
              * @see java.security.SecurityPermission
              */
             // @ts-ignore
-            getProperty(key: string): java.lang.String
+            public static getProperty(key: java.lang.String | string): string
             /**
              * Sets a security property value.
              * <p>First, if there is a security manager, its
@@ -275,7 +275,7 @@ declare namespace java {
              * @see java.security.SecurityPermission
              */
             // @ts-ignore
-            setProperty(key: string, datum: string): void
+            public static setProperty(key: java.lang.String | string, datum: java.lang.String | string): void
             /**
              * Returns a Set of Strings containing the names of all available
              * algorithms or types for the specified Java cryptographic service
@@ -295,7 +295,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getAlgorithms(serviceName: string): java.util.Set<java.lang.String>
+            public static getAlgorithms(serviceName: java.lang.String | string): Array<java.lang.String | string>
         }
     }
 }

@@ -15,15 +15,15 @@ declare namespace java {
              *          Unknown conversion
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Returns the unknown conversion.
              * @return The unknown conversion.
              */
             // @ts-ignore
-            getConversion(): java.lang.String
+            getConversion(): string
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

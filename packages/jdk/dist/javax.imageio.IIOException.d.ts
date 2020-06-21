@@ -20,7 +20,7 @@ declare namespace javax {
              * @see #getMessage
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs an <code>IIOException</code> with a given message
              * <code>String</code> and a <code>Throwable</code> that was its
@@ -32,7 +32,7 @@ declare namespace javax {
              * @see #getMessage
              */
             // @ts-ignore
-            constructor(message: string, cause: Error)
+            constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
         }
     }
 }

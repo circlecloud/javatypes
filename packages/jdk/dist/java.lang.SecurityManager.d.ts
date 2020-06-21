@@ -207,7 +207,7 @@ declare namespace java {
              *   call be used instead.
              */
             // @ts-ignore
-            getInCheck(): boolean
+            public getInCheck(): boolean
             /**
              * Returns the current execution stack as an array of classes.
              * <p>
@@ -218,7 +218,7 @@ declare namespace java {
              * @return the execution stack.
              */
             // @ts-ignore
-            getClassContext(): java.lang.Class[]
+            getClassContext(): java.lang.Class<any>[]
             /**
              * Returns the class loader of the most recently executing method from
              * a class defined using a non-system class loader. A non-system
@@ -282,7 +282,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            currentLoadedClass(): java.lang.Class<?>
+            currentLoadedClass(): java.lang.Class<any>
             /**
              * Returns the stack depth of the specified class.
              * @param name   the fully qualified name of the class to search for.
@@ -294,7 +294,7 @@ declare namespace java {
              *   call be used instead.
              */
             // @ts-ignore
-            classDepth(name: string): int
+            classDepth(name: java.lang.String | string): number /*int*/
             /**
              * Returns the stack depth of the most recently executing method
              * from a class defined using a non-system class loader.  A non-system
@@ -325,7 +325,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            classLoaderDepth(): int
+            classLoaderDepth(): number /*int*/
             /**
              * Tests if a method from a class with the specified
              * name is on the execution stack.
@@ -337,7 +337,7 @@ declare namespace java {
              *   call be used instead.
              */
             // @ts-ignore
-            inClass(name: string): boolean
+            inClass(name: java.lang.String | string): boolean
             /**
              * Basically, tests if a method from a class defined using a
              * class loader is on the execution stack.
@@ -372,7 +372,7 @@ declare namespace java {
              * @see java.security.AccessControlContext AccessControlContext
              */
             // @ts-ignore
-            getSecurityContext(): java.lang.Object
+            public getSecurityContext(): any
             /**
              * Throws a <code>SecurityException</code> if the requested
              * access, specified by the given permission, is not permitted based
@@ -388,7 +388,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            checkPermission(perm: java.security.Permission): void
+            public checkPermission(perm: java.security.Permission): void
             /**
              * Throws a <code>SecurityException</code> if the
              * specified security context is denied access to the resource
@@ -420,7 +420,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            checkPermission(perm: java.security.Permission, context: any): void
+            public checkPermission(perm: java.security.Permission, context: java.lang.Object | any): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to create a new class loader.
@@ -440,7 +440,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkCreateClassLoader(): void
+            public checkCreateClassLoader(): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to modify the thread argument.
@@ -483,7 +483,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkAccess(t: java.lang.Thread): void
+            public checkAccess(t: java.lang.Thread): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to modify the thread group argument.
@@ -527,7 +527,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkAccess(g: java.lang.ThreadGroup): void
+            public checkAccess(g: java.lang.ThreadGroup): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to cause the Java Virtual Machine to
@@ -553,7 +553,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkExit(status: number /*int*/): void
+            public checkExit(status: number /*int*/): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to create a subprocess.
@@ -583,7 +583,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkExec(cmd: string): void
+            public checkExec(cmd: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to dynamic link the library code
@@ -611,7 +611,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkLink(lib: string): void
+            public checkLink(lib: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to read from the specified file
@@ -634,7 +634,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkRead(fd: java.io.FileDescriptor): void
+            public checkRead(fd: java.io.FileDescriptor): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to read the file specified by the
@@ -655,7 +655,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkRead(file: string): void
+            public checkRead(file: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * specified security context is not allowed to read the file
@@ -686,7 +686,7 @@ declare namespace java {
              * @see java.security.AccessControlContext#checkPermission(java.security.Permission)
              */
             // @ts-ignore
-            checkRead(file: string, context: any): void
+            public checkRead(file: java.lang.String | string, context: java.lang.Object | any): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to write to the specified file
@@ -709,7 +709,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkWrite(fd: java.io.FileDescriptor): void
+            public checkWrite(fd: java.io.FileDescriptor): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to write to the file specified by
@@ -730,7 +730,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkWrite(file: string): void
+            public checkWrite(file: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to delete the specified file.
@@ -754,7 +754,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkDelete(file: string): void
+            public checkDelete(file: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to open a socket connection to the
@@ -784,7 +784,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkConnect(host: string, port: number /*int*/): void
+            public checkConnect(host: java.lang.String | string, port: number /*int*/): void
             /**
              * Throws a <code>SecurityException</code> if the
              * specified security context is not allowed to open a socket
@@ -824,7 +824,7 @@ declare namespace java {
              * @see java.security.AccessControlContext#checkPermission(java.security.Permission)
              */
             // @ts-ignore
-            checkConnect(host: string, port: number /*int*/, context: any): void
+            public checkConnect(host: java.lang.String | string, port: number /*int*/, context: java.lang.Object | any): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to wait for a connection request on
@@ -843,7 +843,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkListen(port: number /*int*/): void
+            public checkListen(port: number /*int*/): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not permitted to accept a socket connection from
@@ -869,7 +869,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkAccept(host: string, port: number /*int*/): void
+            public checkAccept(host: java.lang.String | string, port: number /*int*/): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to use
@@ -892,7 +892,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkMulticast(maddr: java.net.InetAddress): void
+            public checkMulticast(maddr: java.net.InetAddress): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to use
@@ -919,7 +919,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkMulticast(maddr: java.net.InetAddress, ttl: number /*byte*/): void
+            public checkMulticast(maddr: java.net.InetAddress, ttl: number /*byte*/): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to access or modify the system
@@ -943,7 +943,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkPropertiesAccess(): void
+            public checkPropertiesAccess(): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to access the system property with
@@ -969,7 +969,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkPropertyAccess(key: string): void
+            public checkPropertyAccess(key: java.lang.String | string): void
             /**
              * Returns <code>false</code> if the calling
              * thread is not trusted to bring up the top-level window indicated
@@ -1012,7 +1012,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkTopLevelWindow(window: any): boolean
+            public checkTopLevelWindow(window: java.lang.Object | any): boolean
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to initiate a print job request.
@@ -1032,7 +1032,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkPrintJobAccess(): void
+            public checkPrintJobAccess(): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to access the system clipboard.
@@ -1060,7 +1060,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkSystemClipboardAccess(): void
+            public checkSystemClipboardAccess(): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to access the AWT event queue.
@@ -1087,7 +1087,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkAwtEventQueueAccess(): void
+            public checkAwtEventQueueAccess(): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to access the package specified by
@@ -1120,7 +1120,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkPackageAccess(pkg: string): void
+            public checkPackageAccess(pkg: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to define classes in the package
@@ -1149,7 +1149,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkPackageDefinition(pkg: string): void
+            public checkPackageDefinition(pkg: java.lang.String | string): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to set the socket factory used by
@@ -1173,7 +1173,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkSetFactory(): void
+            public checkSetFactory(): void
             /**
              * Throws a <code>SecurityException</code> if the
              * calling thread is not allowed to access members.
@@ -1205,7 +1205,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkMemberAccess(clazz: java.lang.Class<any>, which: number /*int*/): void
+            public checkMemberAccess(clazz: java.lang.Class<any>, which: number /*int*/): void
             /**
              * Determines whether the permission with the specified permission target
              * name should be granted or denied.
@@ -1230,7 +1230,7 @@ declare namespace java {
              * @see #checkPermission(java.security.Permission) checkPermission
              */
             // @ts-ignore
-            checkSecurityAccess(target: string): void
+            public checkSecurityAccess(target: java.lang.String | string): void
             /**
              * Returns the thread group into which to instantiate any new
              * thread being created at the time this is being called.
@@ -1242,7 +1242,7 @@ declare namespace java {
              * @see java.lang.ThreadGroup
              */
             // @ts-ignore
-            getThreadGroup(): java.lang.ThreadGroup
+            public getThreadGroup(): java.lang.ThreadGroup
         }
     }
 }

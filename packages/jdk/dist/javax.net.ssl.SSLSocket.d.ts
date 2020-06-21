@@ -89,7 +89,7 @@ declare namespace javax {
              * @author David Brownell
              */
             // @ts-ignore
-            class SSLSocket extends java.net.Socket {
+            abstract class SSLSocket extends java.net.Socket {
                 /**
                  * Used only by subclasses.
                  * Constructs an uninitialized, unconnected TCP socket.
@@ -117,7 +117,7 @@ declare namespace javax {
                  * @see SecurityManager#checkConnect
                  */
                 // @ts-ignore
-                constructor(host: string, port: number /*int*/)
+                constructor(host: java.lang.String | string, port: number /*int*/)
                 /**
                  * Used only by subclasses.
                  * Constructs a TCP connection to a server at a specified address
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @see SecurityManager#checkConnect
                  */
                 // @ts-ignore
-                constructor(host: string, port: number /*int*/, clientAddress: java.net.InetAddress, clientPort: number /*int*/)
+                constructor(host: java.lang.String | string, port: number /*int*/, clientAddress: java.net.InetAddress, clientPort: number /*int*/)
                 /**
                  * Used only by subclasses.
                  * Constructs an SSL connection to a server at a specified address
@@ -203,7 +203,7 @@ declare namespace javax {
                  * @see #setEnabledCipherSuites(String [])
                  */
                 // @ts-ignore
-                abstract getSupportedCipherSuites(): java.lang.String[]
+                public abstract getSupportedCipherSuites(): string[]
                 /**
                  * Returns the names of the SSL cipher suites which are currently
                  * enabled for use on this connection.  When an SSLSocket is first
@@ -219,7 +219,7 @@ declare namespace javax {
                  * @see #setEnabledCipherSuites(String [])
                  */
                 // @ts-ignore
-                abstract getEnabledCipherSuites(): java.lang.String[]
+                public abstract getEnabledCipherSuites(): string[]
                 /**
                  * Sets the cipher suites enabled for use on this connection.
                  * <P>
@@ -238,14 +238,14 @@ declare namespace javax {
                  * @see #getEnabledCipherSuites()
                  */
                 // @ts-ignore
-                abstract setEnabledCipherSuites(suites: string[]): void
+                public abstract setEnabledCipherSuites(suites: java.lang.String[] | string[]): void
                 /**
                  * Returns the names of the protocols which could be enabled for use
                  * on an SSL connection.
                  * @return an array of protocols supported
                  */
                 // @ts-ignore
-                abstract getSupportedProtocols(): java.lang.String[]
+                public abstract getSupportedProtocols(): string[]
                 /**
                  * Returns the names of the protocol versions which are currently
                  * enabled for use on this connection.
@@ -253,7 +253,7 @@ declare namespace javax {
                  * @return an array of protocols
                  */
                 // @ts-ignore
-                abstract getEnabledProtocols(): java.lang.String[]
+                public abstract getEnabledProtocols(): string[]
                 /**
                  * Sets the protocol versions enabled for use on this connection.
                  * <P>
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @see #getEnabledProtocols()
                  */
                 // @ts-ignore
-                abstract setEnabledProtocols(protocols: string[]): void
+                public abstract setEnabledProtocols(protocols: java.lang.String[] | string[]): void
                 /**
                  * Returns the SSL Session in use by this connection.  These can
                  * be long lived, and frequently correspond to an entire login session
@@ -286,7 +286,7 @@ declare namespace javax {
                  * @return the <code>SSLSession</code>
                  */
                 // @ts-ignore
-                abstract getSession(): javax.net.ssl.SSLSession
+                public abstract getSession(): javax.net.ssl.SSLSession
                 /**
                  * Returns the {@code SSLSession} being constructed during a SSL/TLS
                  * handshake.
@@ -325,7 +325,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getHandshakeSession(): javax.net.ssl.SSLSession
+                public getHandshakeSession(): javax.net.ssl.SSLSession
                 /**
                  * Registers an event listener to receive notifications that an
                  * SSL handshake has completed on this connection.
@@ -335,7 +335,7 @@ declare namespace javax {
                  * @throws IllegalArgumentException if the argument is null.
                  */
                 // @ts-ignore
-                abstract addHandshakeCompletedListener(listener: javax.net.ssl.HandshakeCompletedListener): void
+                public abstract addHandshakeCompletedListener(listener: javax.net.ssl.HandshakeCompletedListener): void
                 /**
                  * Removes a previously registered handshake completion listener.
                  * @param listener the HandShake Completed event listener
@@ -344,7 +344,7 @@ declare namespace javax {
                  * @see #addHandshakeCompletedListener(HandshakeCompletedListener)
                  */
                 // @ts-ignore
-                abstract removeHandshakeCompletedListener(listener: javax.net.ssl.HandshakeCompletedListener): void
+                public abstract removeHandshakeCompletedListener(listener: javax.net.ssl.HandshakeCompletedListener): void
                 /**
                  * Starts an SSL handshake on this connection.  Common reasons include
                  * a need to use new encryption keys, to change cipher suites, or to
@@ -361,7 +361,7 @@ declare namespace javax {
                  * @see #addHandshakeCompletedListener(HandshakeCompletedListener)
                  */
                 // @ts-ignore
-                abstract startHandshake(): void
+                public abstract startHandshake(): void
                 /**
                  * Configures the socket to use client (or server) mode when
                  * handshaking.
@@ -379,7 +379,7 @@ declare namespace javax {
                  * @see #getUseClientMode()
                  */
                 // @ts-ignore
-                abstract setUseClientMode(mode: boolean): void
+                public abstract setUseClientMode(mode: boolean): void
                 /**
                  * Returns true if the socket is set to use client mode when
                  * handshaking.
@@ -388,7 +388,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getUseClientMode(): boolean
+                public abstract getUseClientMode(): boolean
                 /**
                  * Configures the socket to <i>require</i> client authentication.  This
                  * option is only useful for sockets in the server mode.
@@ -415,7 +415,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract setNeedClientAuth(need: boolean): void
+                public abstract setNeedClientAuth(need: boolean): void
                 /**
                  * Returns true if the socket will <i>require</i> client authentication.
                  * This option is only useful to sockets in the server mode.
@@ -427,7 +427,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getNeedClientAuth(): boolean
+                public abstract getNeedClientAuth(): boolean
                 /**
                  * Configures the socket to <i>request</i> client authentication.
                  * This option is only useful for sockets in the server mode.
@@ -453,7 +453,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract setWantClientAuth(want: boolean): void
+                public abstract setWantClientAuth(want: boolean): void
                 /**
                  * Returns true if the socket will <i>request</i> client authentication.
                  * This option is only useful for sockets in the server mode.
@@ -465,7 +465,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getWantClientAuth(): boolean
+                public abstract getWantClientAuth(): boolean
                 /**
                  * Controls whether new SSL sessions may be established by this socket.
                  * If session creations are not allowed, and there are no
@@ -477,7 +477,7 @@ declare namespace javax {
                  * @see #getEnableSessionCreation()
                  */
                 // @ts-ignore
-                abstract setEnableSessionCreation(flag: boolean): void
+                public abstract setEnableSessionCreation(flag: boolean): void
                 /**
                  * Returns true if new SSL sessions may be established by this socket.
                  * @return true indicates that sessions may be created; this
@@ -486,7 +486,7 @@ declare namespace javax {
                  * @see #setEnableSessionCreation(boolean)
                  */
                 // @ts-ignore
-                abstract getEnableSessionCreation(): boolean
+                public abstract getEnableSessionCreation(): boolean
                 /**
                  * Returns the SSLParameters in effect for this SSLSocket.
                  * The ciphersuites and protocols of the returned SSLParameters
@@ -495,7 +495,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getSSLParameters(): javax.net.ssl.SSLParameters
+                public getSSLParameters(): javax.net.ssl.SSLParameters
                 /**
                  * Applies SSLParameters to this socket.
                  * <p>This means:
@@ -520,7 +520,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                setSSLParameters(params: javax.net.ssl.SSLParameters): void
+                public setSSLParameters(params: javax.net.ssl.SSLParameters): void
             }
         }
     }

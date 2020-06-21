@@ -12,7 +12,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor(spawnee: org.bukkit.entity.Entity, spawner: org.bukkit.block.CreatureSpawner)
                     // @ts-ignore
-                    getSpawner(): org.bukkit.block.CreatureSpawner
+                    public getSpawner(): org.bukkit.block.CreatureSpawner
                 }
             }
         }

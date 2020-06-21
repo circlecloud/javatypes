@@ -10,7 +10,7 @@ declare namespace javax {
              * @deprecated 
              */
             // @ts-ignore
-            class DefaultTextUI extends javax.swing.plaf.basic.BasicTextUI {
+            abstract class DefaultTextUI extends javax.swing.plaf.basic.BasicTextUI {
                 // @ts-ignore
                 constructor()
             }

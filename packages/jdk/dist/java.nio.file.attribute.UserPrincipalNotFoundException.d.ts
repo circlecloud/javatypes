@@ -15,14 +15,14 @@ declare namespace java {
                      *           the principal name; may be {#code null}
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Returns the user principal name if this exception was created with the
                      * user principal name that was not found, otherwise <tt>null</tt>.
                      * @return the user principal name or {#code null}
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                 }
             }
         }

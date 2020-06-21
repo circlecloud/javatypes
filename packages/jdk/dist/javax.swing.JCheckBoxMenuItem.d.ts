@@ -65,7 +65,7 @@ declare namespace javax {
              * @param text the text of the CheckBoxMenuItem
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a menu item whose properties are taken from the
              * Action supplied.
@@ -79,14 +79,14 @@ declare namespace javax {
              * @param icon the icon of the CheckBoxMenuItem
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Creates a check box menu item with the specified text and selection state.
              * @param text the text of the check box menu item.
              * @param b the selected state of the check box menu item
              */
             // @ts-ignore
-            constructor(text: string, b: boolean)
+            constructor(text: java.lang.String | string, b: boolean)
             /**
              * Creates a check box menu item with the specified text, icon, and selection state.
              * @param text the text of the check box menu item
@@ -94,7 +94,7 @@ declare namespace javax {
              * @param b the selected state of the check box menu item
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon, b: boolean)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon, b: boolean)
             /**
              * Returns the name of the L&amp;F class
              * that renders this component.
@@ -103,7 +103,7 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the selected-state of the item. This method
              * exists for AWT compatibility only.  New code should
@@ -111,7 +111,7 @@ declare namespace javax {
              * @return true  if the item is selected
              */
             // @ts-ignore
-            getState(): boolean
+            public getState(): boolean
             /**
              * Sets the selected-state of the item. This method
              * exists for AWT compatibility only.  New code should
@@ -122,7 +122,7 @@ declare namespace javax {
              *       hidden: true
              */
             // @ts-ignore
-            setState(b: boolean): void
+            public setState(b: boolean): void
             /**
              * Returns an array (length 1) containing the check box menu item
              * label or null if the check box is not selected.
@@ -130,7 +130,7 @@ declare namespace javax {
              *          -- if the item is selected; otherwise null
              */
             // @ts-ignore
-            getSelectedObjects(): java.lang.Object[]
+            public getSelectedObjects(): any[]
             /**
              * Returns a string representation of this JCheckBoxMenuItem. This method
              * is intended to be used only for debugging purposes, and the
@@ -140,7 +140,7 @@ declare namespace javax {
              * @return a string representation of this JCheckBoxMenuItem.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JCheckBoxMenuItem.
              * For JCheckBoxMenuItems, the AccessibleContext takes the form of an
@@ -150,7 +150,7 @@ declare namespace javax {
              *          AccessibleContext of this AccessibleJCheckBoxMenuItem
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

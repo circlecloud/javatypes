@@ -15,7 +15,7 @@ declare namespace org {
                                  * @return The value for the author
                                  */
                                 // @ts-ignore
-                                author(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.String>
+                                author(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.String | string>
                                 /**
                                  * Gets the {@link ImmutableValue} for the ignore entities state of the {@link Structure}.
                                  * @return The value for the ignore entities state
@@ -27,7 +27,7 @@ declare namespace org {
                                  * @return The value for the integrity
                                  */
                                 // @ts-ignore
-                                integrity(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Float>
+                                integrity(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Float | number>
                                 /**
                                  * Gets the {@link ImmutableValue} for the mode of the {@link Structure}.
                                  * @return The value for the mode
@@ -51,7 +51,7 @@ declare namespace org {
                                  * @return The value for the seed
                                  */
                                 // @ts-ignore
-                                seed(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Long>
+                                seed(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Long | number>
                                 /**
                                  * Gets the {@link ImmutableValue} for the show air state of the {@link Structure}.
                                  * @return The value for the show air state

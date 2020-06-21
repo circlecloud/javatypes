@@ -30,14 +30,14 @@ declare namespace javax {
              * @param c the the component to be added
              */
             // @ts-ignore
-            addLayoutComponent(name: string, c: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, c: java.awt.Component): void
             /**
              * Removes the specified component from the layout. Not used by
              * this class.
              * @param c the component to remove
              */
             // @ts-ignore
-            removeLayoutComponent(c: java.awt.Component): void
+            public removeLayoutComponent(c: java.awt.Component): void
             /**
              * Returns the preferred dimensions for this layout given the components
              * in the specified target container.
@@ -47,7 +47,7 @@ declare namespace javax {
              * @see #minimumLayoutSize
              */
             // @ts-ignore
-            preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Returns the minimum dimensions needed to layout the components
              * contained in the specified target container.
@@ -57,7 +57,7 @@ declare namespace javax {
              * @see #preferredLayoutSize
              */
             // @ts-ignore
-            minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(parent: java.awt.Container): java.awt.Dimension
             /**
              * Called by the AWT when the specified container needs to be laid out.
              * @param parent  the container to lay out
@@ -65,7 +65,7 @@ declare namespace javax {
              *                       <code>BoxLayout</code> constructor
              */
             // @ts-ignore
-            layoutContainer(parent: java.awt.Container): void
+            public layoutContainer(parent: java.awt.Container): void
         }
     }
 }

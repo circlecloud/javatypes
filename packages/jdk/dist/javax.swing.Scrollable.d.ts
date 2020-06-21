@@ -43,7 +43,7 @@ declare namespace javax {
              * @see JScrollBar#setUnitIncrement
              */
             // @ts-ignore
-            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Components that display logical rows or columns should compute
              * the scroll increment that will completely expose one block
@@ -59,7 +59,7 @@ declare namespace javax {
              * @see JScrollBar#setBlockIncrement
              */
             // @ts-ignore
-            getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Return true if a viewport should always force the width of this
              * <code>Scrollable</code> to match the width of the viewport.

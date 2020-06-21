@@ -26,7 +26,7 @@ declare namespace org {
                      * @see java.lang.reflect.Method#invoke
                      */
                     // @ts-ignore
-                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: any): java.lang.Object
+                    invoke(invocation: org.springframework.remoting.support.RemoteInvocation, targetObject: java.lang.Object | any): any
                 }
             }
         }

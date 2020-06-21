@@ -23,7 +23,7 @@ declare namespace org {
                                  * @return The immutable bounded value for "redstone power"
                                  */
                                 // @ts-ignore
-                                power(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                power(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

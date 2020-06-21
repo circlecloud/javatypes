@@ -21,7 +21,7 @@ declare namespace java {
                  *           or if the previous match operation failed
                  */
                 // @ts-ignore
-                start(): int
+                start(): number /*int*/
                 /**
                  * Returns the start index of the subsequence captured by the given group
                  * during this match.
@@ -42,7 +42,7 @@ declare namespace java {
                  *           with the given index
                  */
                 // @ts-ignore
-                start(group: number /*int*/): int
+                start(group: number /*int*/): number /*int*/
                 /**
                  * Returns the offset after the last character matched.
                  * @return The offset after the last character matched
@@ -51,7 +51,7 @@ declare namespace java {
                  *           or if the previous match operation failed
                  */
                 // @ts-ignore
-                end(): int
+                end(): number /*int*/
                 /**
                  * Returns the offset after the last character of the subsequence
                  * captured by the given group during this match.
@@ -72,7 +72,7 @@ declare namespace java {
                  *           with the given index
                  */
                 // @ts-ignore
-                end(group: number /*int*/): int
+                end(group: number /*int*/): number /*int*/
                 /**
                  * Returns the input subsequence matched by the previous match.
                  * <p> For a matcher <i>m</i> with input sequence <i>s</i>,
@@ -89,7 +89,7 @@ declare namespace java {
                  *           or if the previous match operation failed
                  */
                 // @ts-ignore
-                group(): java.lang.String
+                group(): string
                 /**
                  * Returns the input subsequence captured by the given group during the
                  * previous match operation.
@@ -119,7 +119,7 @@ declare namespace java {
                  *           with the given index
                  */
                 // @ts-ignore
-                group(group: number /*int*/): java.lang.String
+                group(group: number /*int*/): string
                 /**
                  * Returns the number of capturing groups in this match result's pattern.
                  * <p> Group zero denotes the entire pattern by convention. It is not
@@ -130,7 +130,7 @@ declare namespace java {
                  * @return The number of capturing groups in this matcher's pattern
                  */
                 // @ts-ignore
-                groupCount(): int
+                groupCount(): number /*int*/
             }
         }
     }

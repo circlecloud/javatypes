@@ -17,7 +17,7 @@ declare namespace org {
                              *  in the YAML document)
                              */
                             // @ts-ignore
-                            process(properties: java.util.Properties, map: java.util.Map<java.lang.String, java.lang.Object>): void
+                            process(properties: java.util.Properties, map: java.util.Map<java.lang.String | string, java.lang.Object | any>): void
                         }
                     }
                 }

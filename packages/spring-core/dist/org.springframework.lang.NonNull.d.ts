@@ -18,7 +18,7 @@ declare namespace org {
              * @see Nullable
              */
             // @ts-ignore
-            class NonNull implements java.lang.annotation.Annotation {
+            abstract class NonNull implements java.lang.annotation.Annotation {
             }
         }
     }

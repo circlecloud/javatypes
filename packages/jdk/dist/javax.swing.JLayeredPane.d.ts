@@ -125,27 +125,27 @@ declare namespace javax {
              * Convenience object defining the Default layer. Equivalent to new Integer(0).
              */
             // @ts-ignore
-            readonly DEFAULT_LAYER: number
+            public static readonly DEFAULT_LAYER: java.lang.Integer | number
             /**
              * Convenience object defining the Palette layer. Equivalent to new Integer(100).
              */
             // @ts-ignore
-            readonly PALETTE_LAYER: number
+            public static readonly PALETTE_LAYER: java.lang.Integer | number
             /**
              * Convenience object defining the Modal layer. Equivalent to new Integer(200).
              */
             // @ts-ignore
-            readonly MODAL_LAYER: number
+            public static readonly MODAL_LAYER: java.lang.Integer | number
             /**
              * Convenience object defining the Popup layer. Equivalent to new Integer(300).
              */
             // @ts-ignore
-            readonly POPUP_LAYER: number
+            public static readonly POPUP_LAYER: java.lang.Integer | number
             /**
              * Convenience object defining the Drag layer. Equivalent to new Integer(400).
              */
             // @ts-ignore
-            readonly DRAG_LAYER: number
+            public static readonly DRAG_LAYER: java.lang.Integer | number
             /**
              * Convenience object defining the Frame Content layer.
              * This layer is normally only use to position the contentPane and menuBar
@@ -154,14 +154,14 @@ declare namespace javax {
              * @see JFrame
              */
             // @ts-ignore
-            readonly FRAME_CONTENT_LAYER: number
+            public static readonly FRAME_CONTENT_LAYER: java.lang.Integer | number
             /**
              * Bound property
              */
             // @ts-ignore
-            readonly LAYER_PROPERTY: string
+            public static readonly LAYER_PROPERTY: java.lang.String | string
             // @ts-ignore
-            addImpl(comp: java.awt.Component, constraints: any, index: number /*int*/): void
+            addImpl(comp: java.awt.Component, constraints: java.lang.Object | any, index: number /*int*/): void
             /**
              * Remove the indexed component from this pane.
              * This is the absolute index, ignoring layers.
@@ -169,13 +169,13 @@ declare namespace javax {
              * @see #getIndexOf
              */
             // @ts-ignore
-            remove(index: number /*int*/): void
+            public remove(index: number /*int*/): void
             /**
              * Removes all the components from this container.
              * @since 1.5
              */
             // @ts-ignore
-            removeAll(): void
+            public removeAll(): void
             /**
              * Returns false if components in the pane can overlap, which makes
              * optimized drawing impossible. Otherwise, returns true.
@@ -183,7 +183,7 @@ declare namespace javax {
              * @see JComponent#isOptimizedDrawingEnabled
              */
             // @ts-ignore
-            isOptimizedDrawingEnabled(): boolean
+            public isOptimizedDrawingEnabled(): boolean
             /**
              * Sets the layer property on a JComponent. This method does not cause
              * any side effects like setLayer() (painting, add/remove, etc).
@@ -194,7 +194,7 @@ declare namespace javax {
              * @see #setLayer
              */
             // @ts-ignore
-            putLayer(c: javax.swing.JComponent, layer: number /*int*/): void
+            public static putLayer(c: javax.swing.JComponent, layer: number /*int*/): void
             /**
              * Gets the layer property for a JComponent, it
              * does not cause any side effects like setLayer(). (painting, add/remove, etc)
@@ -203,7 +203,7 @@ declare namespace javax {
              * @return an int specifying the component's layer
              */
             // @ts-ignore
-            getLayer(c: javax.swing.JComponent): int
+            public static getLayer(c: javax.swing.JComponent): number /*int*/
             /**
              * Convenience method that returns the first JLayeredPane which
              * contains the specified component. Note that all JFrames have a
@@ -217,7 +217,7 @@ declare namespace javax {
              * @see JRootPane
              */
             // @ts-ignore
-            getLayeredPaneAbove(c: java.awt.Component): javax.swing.JLayeredPane
+            public static getLayeredPaneAbove(c: java.awt.Component): javax.swing.JLayeredPane
             /**
              * Sets the layer attribute on the specified component,
              * making it the bottommost component in that layer.
@@ -227,7 +227,7 @@ declare namespace javax {
              *               lower numbers are closer to the bottom
              */
             // @ts-ignore
-            setLayer(c: java.awt.Component, layer: number /*int*/): void
+            public setLayer(c: java.awt.Component, layer: number /*int*/): void
             /**
              * Sets the layer attribute for the specified component and
              * also sets its position within that layer.
@@ -239,14 +239,14 @@ declare namespace javax {
              *                   is the bottommost position
              */
             // @ts-ignore
-            setLayer(c: java.awt.Component, layer: number /*int*/, position: number /*int*/): void
+            public setLayer(c: java.awt.Component, layer: number /*int*/, position: number /*int*/): void
             /**
              * Returns the layer attribute for the specified Component.
              * @param c  the Component to check
              * @return an int specifying the component's current layer
              */
             // @ts-ignore
-            getLayer(c: java.awt.Component): int
+            public getLayer(c: java.awt.Component): number /*int*/
             /**
              * Returns the index of the specified Component.
              * This is the absolute index, ignoring layers.
@@ -256,7 +256,7 @@ declare namespace javax {
              * @return an int specifying the component's index
              */
             // @ts-ignore
-            getIndexOf(c: java.awt.Component): int
+            public getIndexOf(c: java.awt.Component): number /*int*/
             /**
              * Moves the component to the top of the components in its current layer
              * (position 0).
@@ -264,7 +264,7 @@ declare namespace javax {
              * @see #setPosition(Component, int)
              */
             // @ts-ignore
-            moveToFront(c: java.awt.Component): void
+            public moveToFront(c: java.awt.Component): void
             /**
              * Moves the component to the bottom of the components in its current layer
              * (position -1).
@@ -272,7 +272,7 @@ declare namespace javax {
              * @see #setPosition(Component, int)
              */
             // @ts-ignore
-            moveToBack(c: java.awt.Component): void
+            public moveToBack(c: java.awt.Component): void
             /**
              * Moves the component to <code>position</code> within its current layer,
              * where 0 is the topmost position within the layer and -1 is the bottommost
@@ -287,7 +287,7 @@ declare namespace javax {
              *                   components in the component's current layer
              */
             // @ts-ignore
-            setPosition(c: java.awt.Component, position: number /*int*/): void
+            public setPosition(c: java.awt.Component, position: number /*int*/): void
             /**
              * Get the relative position of the component within its layer.
              * @param c  the Component to check
@@ -297,7 +297,7 @@ declare namespace javax {
              * @see #getComponentCountInLayer
              */
             // @ts-ignore
-            getPosition(c: java.awt.Component): int
+            public getPosition(c: java.awt.Component): number /*int*/
             /**
              * Returns the highest layer value from all current children.
              * Returns 0 if there are no children.
@@ -305,7 +305,7 @@ declare namespace javax {
              *          pane, or zero if there are no children
              */
             // @ts-ignore
-            highestLayer(): int
+            public highestLayer(): number /*int*/
             /**
              * Returns the lowest layer value from all current children.
              * Returns 0 if there are no children.
@@ -313,40 +313,40 @@ declare namespace javax {
              *          pane, or zero if there are no children
              */
             // @ts-ignore
-            lowestLayer(): int
+            public lowestLayer(): number /*int*/
             /**
              * Returns the number of children currently in the specified layer.
              * @param layer  an int specifying the layer to check
              * @return an int specifying the number of components in that layer
              */
             // @ts-ignore
-            getComponentCountInLayer(layer: number /*int*/): int
+            public getComponentCountInLayer(layer: number /*int*/): number /*int*/
             /**
              * Returns an array of the components in the specified layer.
              * @param layer  an int specifying the layer to check
              * @return an array of Components contained in that layer
              */
             // @ts-ignore
-            getComponentsInLayer(layer: number /*int*/): java.awt.Component[]
+            public getComponentsInLayer(layer: number /*int*/): java.awt.Component[]
             /**
              * Paints this JLayeredPane within the specified graphics context.
              * @param g  the Graphics context within which to paint
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Returns the hashtable that maps components to layers.
              * @return the Hashtable used to map components to their layers
              */
             // @ts-ignore
-            getComponentToLayer(): java.util.Hashtable<java.awt.Component, java.lang.Integer>
+            getComponentToLayer(): java.util.Hashtable<java.awt.Component, java.lang.Integer | number>
             /**
              * Returns the Integer object associated with a specified layer.
              * @param layer an int specifying the layer
              * @return an Integer object for that layer
              */
             // @ts-ignore
-            getObjectForLayer(layer: number /*int*/): java.lang.Integer
+            getObjectForLayer(layer: number /*int*/): number
             /**
              * Primitive method that determines the proper location to
              * insert a new child based on layer and position requests.
@@ -356,7 +356,7 @@ declare namespace javax {
              * @see #getIndexOf
              */
             // @ts-ignore
-            insertIndexForLayer(layer: number /*int*/, position: number /*int*/): int
+            insertIndexForLayer(layer: number /*int*/, position: number /*int*/): number /*int*/
             /**
              * Returns a string representation of this JLayeredPane. This method
              * is intended to be used only for debugging purposes, and the
@@ -366,7 +366,7 @@ declare namespace javax {
              * @return a string representation of this JLayeredPane.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JLayeredPane.
              * For layered panes, the AccessibleContext takes the form of an
@@ -376,7 +376,7 @@ declare namespace javax {
              *          AccessibleContext of this JLayeredPane
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

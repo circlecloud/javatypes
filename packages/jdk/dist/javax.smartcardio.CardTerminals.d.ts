@@ -18,7 +18,7 @@ declare namespace javax {
          * @author JSR 268 Expert Group
          */
         // @ts-ignore
-        class CardTerminals extends java.lang.Object {
+        abstract class CardTerminals extends java.lang.Object {
             /**
              * Constructs a new CardTerminals object.
              * <p>This constructor is called by subclasses only. Application should
@@ -33,7 +33,7 @@ declare namespace javax {
              * @throws CardException if the card operation failed
              */
             // @ts-ignore
-            list(): java.util.List<javax.smartcardio.CardTerminal>
+            public list(): Array<javax.smartcardio.CardTerminal>
             /**
              * Returns an unmodifiable list of all terminals matching the specified
              * state.
@@ -58,7 +58,7 @@ declare namespace javax {
              * @throws CardException if the card operation failed
              */
             // @ts-ignore
-            abstract list(state: javax.smartcardio.CardTerminals.State): java.util.List<javax.smartcardio.CardTerminal>
+            public abstract list(state: javax.smartcardio.CardTerminals.State): Array<javax.smartcardio.CardTerminal>
             /**
              * Returns the terminal with the specified name or null if no such
              * terminal exists.
@@ -67,7 +67,7 @@ declare namespace javax {
              * @throws NullPointerException if name is null
              */
             // @ts-ignore
-            getTerminal(name: string): javax.smartcardio.CardTerminal
+            public getTerminal(name: java.lang.String | string): javax.smartcardio.CardTerminal
             /**
              * Waits for card insertion or removal in any of the terminals of this
              * object.
@@ -78,7 +78,7 @@ declare namespace javax {
              * @throws CardException if the card operation failed
              */
             // @ts-ignore
-            waitForChange(): void
+            public waitForChange(): void
             /**
              * Waits for card insertion or removal in any of the terminals of this
              * object or until the timeout expires.
@@ -115,7 +115,7 @@ declare namespace javax {
              * @throws CardException if the card operation failed
              */
             // @ts-ignore
-            abstract waitForChange(timeout: number /*long*/): boolean
+            public abstract waitForChange(timeout: number /*long*/): boolean
         }
     }
 }

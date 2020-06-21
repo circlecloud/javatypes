@@ -19,7 +19,7 @@ declare namespace org {
                      * @return the name of the theme (never {#code null})
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Return the specific MessageSource that resolves messages
                      * with respect to this theme.

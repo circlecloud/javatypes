@@ -11,7 +11,7 @@ declare namespace org {
                      * @see ShiftClickAction
                      */
                     // @ts-ignore
-                    class TextAction<R> extends java.lang.Object implements org.spongepowered.api.text.TextElement {
+                    abstract class TextAction<R> extends java.lang.Object implements org.spongepowered.api.text.TextElement {
                         /**
                          * Constructs a new {@link TextAction} with the given result.
                          * @param result The result of the text action
@@ -25,13 +25,13 @@ declare namespace org {
                          * @return The result
                          */
                         // @ts-ignore
-                        getResult(): R
+                        public getResult(): R
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

@@ -28,7 +28,7 @@ declare namespace org {
              * @return The new note.
              */
             // @ts-ignore
-            flat(octave: number /*int*/, tone: org.bukkit.Note.Tone): org.bukkit.Note
+            public static flat(octave: number /*int*/, tone: org.bukkit.Note.Tone): org.bukkit.Note
             /**
              * Creates a new note for a sharp tone, such as A-sharp.
              * @param octave The octave where the note is in. Has to be 0 - 2.
@@ -37,7 +37,7 @@ declare namespace org {
              * @return The new note.
              */
             // @ts-ignore
-            sharp(octave: number /*int*/, tone: org.bukkit.Note.Tone): org.bukkit.Note
+            public static sharp(octave: number /*int*/, tone: org.bukkit.Note.Tone): org.bukkit.Note
             /**
              * Creates a new note for a natural tone, such as A-natural.
              * @param octave The octave where the note is in. Has to be 0 - 1.
@@ -45,48 +45,48 @@ declare namespace org {
              * @return The new note.
              */
             // @ts-ignore
-            natural(octave: number /*int*/, tone: org.bukkit.Note.Tone): org.bukkit.Note
+            public static natural(octave: number /*int*/, tone: org.bukkit.Note.Tone): org.bukkit.Note
             /**
              * @return The note a semitone above this one.
              */
             // @ts-ignore
-            sharped(): org.bukkit.Note
+            public sharped(): org.bukkit.Note
             /**
              * @return The note a semitone below this one.
              */
             // @ts-ignore
-            flattened(): org.bukkit.Note
+            public flattened(): org.bukkit.Note
             /**
              * Returns the internal id of this note.
              * @return the internal id of this note.
              * @deprecated Magic value
              */
             // @ts-ignore
-            getId(): byte
+            public getId(): number /*byte*/
             /**
              * Returns the octave of this note.
              * @return the octave of this note.
              */
             // @ts-ignore
-            getOctave(): int
+            public getOctave(): number /*int*/
             /**
              * Returns the tone of this note.
              * @return the tone of this note.
              */
             // @ts-ignore
-            getTone(): org.bukkit.Note.Tone
+            public getTone(): org.bukkit.Note.Tone
             /**
              * Returns if this note is sharped.
              * @return if this note is sharped.
              */
             // @ts-ignore
-            isSharped(): boolean
+            public isSharped(): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -45,7 +45,7 @@ declare namespace javax {
                  *             found.
                  */
                 // @ts-ignore
-                loadClass(className: string): java.lang.Class<?>
+                loadClass(className: java.lang.String | string): java.lang.Class<any>
                 /**
                  * <p>Load the given class name through the list of class loaders,
                  * excluding the given one.  Each ClassLoader in turn from the
@@ -72,7 +72,7 @@ declare namespace javax {
                  *  be found.
                  */
                 // @ts-ignore
-                loadClassWithout(exclude: java.lang.ClassLoader, className: string): java.lang.Class<?>
+                loadClassWithout(exclude: java.lang.ClassLoader, className: java.lang.String | string): java.lang.Class<any>
                 /**
                  * <p>Load the given class name through the list of class loaders,
                  * stopping at the given one.  Each ClassLoader in turn from the
@@ -99,7 +99,7 @@ declare namespace javax {
                  *  be found.
                  */
                 // @ts-ignore
-                loadClassBefore(stop: java.lang.ClassLoader, className: string): java.lang.Class<?>
+                loadClassBefore(stop: java.lang.ClassLoader, className: java.lang.String | string): java.lang.Class<any>
             }
         }
     }

@@ -31,7 +31,7 @@ declare namespace org {
                  * @see BeanPropertyBindingResult
                  */
                 // @ts-ignore
-                constructor(target: any, objectName: string)
+                constructor(target: java.lang.Object | any, objectName: java.lang.String | string)
                 /**
                  * Return the BindingResult that this BindException wraps.
                  * Will typically be a BeanPropertyBindingResult.
@@ -40,94 +40,94 @@ declare namespace org {
                 // @ts-ignore
                 getBindingResult(): org.springframework.validation.BindingResult
                 // @ts-ignore
-                getObjectName(): java.lang.String
+                getObjectName(): string
                 // @ts-ignore
-                setNestedPath(nestedPath: string): void
+                setNestedPath(nestedPath: java.lang.String | string): void
                 // @ts-ignore
-                getNestedPath(): java.lang.String
+                getNestedPath(): string
                 // @ts-ignore
-                pushNestedPath(subPath: string): void
+                pushNestedPath(subPath: java.lang.String | string): void
                 // @ts-ignore
                 popNestedPath(): void
                 // @ts-ignore
-                reject(errorCode: string): void
+                reject(errorCode: java.lang.String | string): void
                 // @ts-ignore
-                reject(errorCode: string, defaultMessage: string): void
+                reject(errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 // @ts-ignore
-                reject(errorCode: string, errorArgs: any[], defaultMessage: string): void
+                reject(errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string): void
+                rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string): void
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string, defaultMessage: string): void
+                rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                 // @ts-ignore
-                rejectValue(field: string, errorCode: string, errorArgs: any[], defaultMessage: string): void
+                rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                 // @ts-ignore
                 addAllErrors(errors: org.springframework.validation.Errors): void
                 // @ts-ignore
                 hasErrors(): boolean
                 // @ts-ignore
-                getErrorCount(): int
+                getErrorCount(): number /*int*/
                 // @ts-ignore
-                getAllErrors(): java.util.List<org.springframework.validation.ObjectError>
+                getAllErrors(): Array<org.springframework.validation.ObjectError>
                 // @ts-ignore
                 hasGlobalErrors(): boolean
                 // @ts-ignore
-                getGlobalErrorCount(): int
+                getGlobalErrorCount(): number /*int*/
                 // @ts-ignore
-                getGlobalErrors(): java.util.List<org.springframework.validation.ObjectError>
+                getGlobalErrors(): Array<org.springframework.validation.ObjectError>
                 // @ts-ignore
                 getGlobalError(): org.springframework.validation.ObjectError
                 // @ts-ignore
                 hasFieldErrors(): boolean
                 // @ts-ignore
-                getFieldErrorCount(): int
+                getFieldErrorCount(): number /*int*/
                 // @ts-ignore
-                getFieldErrors(): java.util.List<org.springframework.validation.FieldError>
+                getFieldErrors(): Array<org.springframework.validation.FieldError>
                 // @ts-ignore
                 getFieldError(): org.springframework.validation.FieldError
                 // @ts-ignore
-                hasFieldErrors(field: string): boolean
+                hasFieldErrors(field: java.lang.String | string): boolean
                 // @ts-ignore
-                getFieldErrorCount(field: string): int
+                getFieldErrorCount(field: java.lang.String | string): number /*int*/
                 // @ts-ignore
-                getFieldErrors(field: string): java.util.List<org.springframework.validation.FieldError>
+                getFieldErrors(field: java.lang.String | string): Array<org.springframework.validation.FieldError>
                 // @ts-ignore
-                getFieldError(field: string): org.springframework.validation.FieldError
+                getFieldError(field: java.lang.String | string): org.springframework.validation.FieldError
                 // @ts-ignore
-                getFieldValue(field: string): java.lang.Object
+                getFieldValue(field: java.lang.String | string): any
                 // @ts-ignore
-                getFieldType(field: string): java.lang.Class<?>
+                getFieldType(field: java.lang.String | string): java.lang.Class<any>
                 // @ts-ignore
-                getTarget(): java.lang.Object
+                getTarget(): any
                 // @ts-ignore
-                getModel(): java.util.Map<java.lang.String, java.lang.Object>
+                getModel(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 // @ts-ignore
-                getRawFieldValue(field: string): java.lang.Object
+                getRawFieldValue(field: java.lang.String | string): any
                 // @ts-ignore
-                findEditor(field: string, valueType: java.lang.Class): java.beans.PropertyEditor
+                findEditor(field: java.lang.String | string, valueType: java.lang.Class<any>): java.beans.PropertyEditor
                 // @ts-ignore
                 getPropertyEditorRegistry(): PropertyEditorRegistry
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string): java.lang.String[]
+                resolveMessageCodes(errorCode: java.lang.String | string): string[]
                 // @ts-ignore
-                resolveMessageCodes(errorCode: string, field: string): java.lang.String[]
+                resolveMessageCodes(errorCode: java.lang.String | string, field: java.lang.String | string): string[]
                 // @ts-ignore
                 addError(error: org.springframework.validation.ObjectError): void
                 // @ts-ignore
-                recordFieldValue(field: string, type: java.lang.Class<any>, value: any): void
+                recordFieldValue(field: java.lang.String | string, type: java.lang.Class<any>, value: java.lang.Object | any): void
                 // @ts-ignore
-                recordSuppressedField(field: string): void
+                recordSuppressedField(field: java.lang.String | string): void
                 // @ts-ignore
-                getSuppressedFields(): java.lang.String[]
+                getSuppressedFields(): string[]
                 /**
                  * Returns diagnostic information about the errors held in this object.
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 // @ts-ignore
-                equals(other: any): boolean
+                equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
             }
         }
     }

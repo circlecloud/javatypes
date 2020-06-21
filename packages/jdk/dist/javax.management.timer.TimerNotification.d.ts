@@ -21,13 +21,13 @@ declare namespace javax {
                  * @param id The notification identifier.
                  */
                 // @ts-ignore
-                constructor(type: string, source: any, sequenceNumber: number /*long*/, timeStamp: number /*long*/, msg: string, id: number)
+                constructor(type: java.lang.String | string, source: java.lang.Object | any, sequenceNumber: number /*long*/, timeStamp: number /*long*/, msg: java.lang.String | string, id: java.lang.Integer | number)
                 /**
                  * Gets the identifier of this timer notification.
                  * @return The identifier.
                  */
                 // @ts-ignore
-                getNotificationID(): java.lang.Integer
+                public getNotificationID(): number
             }
         }
     }

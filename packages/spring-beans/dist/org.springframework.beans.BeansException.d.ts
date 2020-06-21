@@ -10,13 +10,13 @@ declare namespace org {
              * @author Juergen Hoeller
              */
             // @ts-ignore
-            class BeansException extends NestedRuntimeException {
+            abstract class BeansException extends NestedRuntimeException {
                 /**
                  * Create a new BeansException with the specified message.
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Create a new BeansException with the specified message
                  * and root cause.
@@ -24,7 +24,7 @@ declare namespace org {
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

@@ -102,14 +102,14 @@ declare namespace java {
              *  <code>GradientPaint</code>.
              */
             // @ts-ignore
-            getPoint1(): java.awt.geom.Point2D
+            public getPoint1(): java.awt.geom.Point2D
             /**
              * Returns the color C1 anchored by the point P1.
              * @return a <code>Color</code> object that is the color
              *  anchored by P1.
              */
             // @ts-ignore
-            getColor1(): java.awt.Color
+            public getColor1(): java.awt.Color
             /**
              * Returns a copy of the point P2 which anchors the second color.
              * @return a {#link Point2D} object that is a copy of the point
@@ -117,14 +117,14 @@ declare namespace java {
              *  <code>GradientPaint</code>.
              */
             // @ts-ignore
-            getPoint2(): java.awt.geom.Point2D
+            public getPoint2(): java.awt.geom.Point2D
             /**
              * Returns the color C2 anchored by the point P2.
              * @return a <code>Color</code> object that is the color
              *  anchored by P2.
              */
             // @ts-ignore
-            getColor2(): java.awt.Color
+            public getColor2(): java.awt.Color
             /**
              * Returns <code>true</code> if the gradient cycles repeatedly
              * between the two colors C1 and C2.
@@ -132,7 +132,7 @@ declare namespace java {
              *  between the two colors; <code>false</code> otherwise.
              */
             // @ts-ignore
-            isCyclic(): boolean
+            public isCyclic(): boolean
             /**
              * Creates and returns a {@link PaintContext} used to
              * generate a linear color gradient pattern.
@@ -161,7 +161,7 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, xform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
+            public createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, xform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
             /**
              * Returns the transparency mode for this <code>GradientPaint</code>.
              * @return an integer value representing this <code>GradientPaint</code>
@@ -169,7 +169,7 @@ declare namespace java {
              * @see Transparency
              */
             // @ts-ignore
-            getTransparency(): int
+            public getTransparency(): number /*int*/
         }
     }
 }

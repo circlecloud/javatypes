@@ -14,18 +14,18 @@ declare namespace org {
                      * @since 1.1
                      */
                     // @ts-ignore
-                    class MethodOverride extends java.lang.Object implements org.springframework.beans.BeanMetadataElement {
+                    abstract class MethodOverride extends java.lang.Object implements org.springframework.beans.BeanMetadataElement {
                         /**
                          * Construct a new override for the given method.
                          * @param methodName the name of the method to override
                          */
                         // @ts-ignore
-                        constructor(methodName: string)
+                        constructor(methodName: java.lang.String | string)
                         /**
                          * Return the name of the method to be overridden.
                          */
                         // @ts-ignore
-                        getMethodName(): java.lang.String
+                        public getMethodName(): string
                         /**
                          * Set whether the overridden method is <em>overloaded</em> (i.e., whether argument
                          * type matching needs to occur to disambiguate methods of the same name).
@@ -45,9 +45,9 @@ declare namespace org {
                          * <p>The exact type of the object will depend on the configuration mechanism used.
                          */
                         // @ts-ignore
-                        setSource(source: any): void
+                        public setSource(source: java.lang.Object | any): void
                         // @ts-ignore
-                        getSource(): java.lang.Object
+                        public getSource(): any
                         /**
                          * Subclasses must override this to indicate whether they <em>match</em> the
                          * given method. This allows for argument list checking as well as method
@@ -56,11 +56,11 @@ declare namespace org {
                          * @return whether this override matches the given method
                          */
                         // @ts-ignore
-                        abstract matches(method: java.lang.reflect.Method): boolean
+                        public abstract matches(method: java.lang.reflect.Method): boolean
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

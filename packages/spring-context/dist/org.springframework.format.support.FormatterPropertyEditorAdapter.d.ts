@@ -23,11 +23,11 @@ declare namespace org {
                      *  cannot be inferred
                      */
                     // @ts-ignore
-                    getFieldType(): java.lang.Class<?>
+                    public getFieldType(): java.lang.Class<any>
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     // @ts-ignore
-                    getAsText(): java.lang.String
+                    public getAsText(): string
                 }
             }
         }

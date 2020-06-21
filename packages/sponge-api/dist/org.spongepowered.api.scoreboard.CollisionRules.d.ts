@@ -29,22 +29,22 @@ declare namespace org {
                      * <p>This is the default value.</p>
                      */
                     // @ts-ignore
-                    readonly ALWAYS: org.spongepowered.api.scoreboard.CollisionRule
+                    public static readonly ALWAYS: org.spongepowered.api.scoreboard.CollisionRule
                     /**
                      * Members will never collide.
                      */
                     // @ts-ignore
-                    readonly NEVER: org.spongepowered.api.scoreboard.CollisionRule
+                    public static readonly NEVER: org.spongepowered.api.scoreboard.CollisionRule
                     /**
                      * Members will only push members on opposing teams.
                      */
                     // @ts-ignore
-                    readonly PUSH_OTHER_TEAMS: org.spongepowered.api.scoreboard.CollisionRule
+                    public static readonly PUSH_OTHER_TEAMS: org.spongepowered.api.scoreboard.CollisionRule
                     /**
                      * Members will only push other members on their team and mobs.
                      */
                     // @ts-ignore
-                    readonly PUSH_OWN_TEAM: org.spongepowered.api.scoreboard.CollisionRule
+                    public static readonly PUSH_OWN_TEAM: org.spongepowered.api.scoreboard.CollisionRule
                 }
             }
         }

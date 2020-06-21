@@ -19,7 +19,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                constructor(op: string)
+                constructor(op: java.lang.String | string)
                 /**
                  * Returns the name of the method.
                  * @return method name
@@ -27,14 +27,14 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getOperation(): java.lang.String
+                public getOperation(): string
                 /**
                  * Returns the string representation of the operation.
                  * @deprecated no replacement
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

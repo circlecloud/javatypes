@@ -26,14 +26,14 @@ declare namespace javax {
                  * @return the drop index
                  */
                 // @ts-ignore
-                getIndex(): int
+                public getIndex(): number /*int*/
                 /**
                  * Returns whether or not this location represents an insert
                  * location.
                  * @return whether or not this is an insert location
                  */
                 // @ts-ignore
-                isInsert(): boolean
+                public isInsert(): boolean
                 /**
                  * Returns a string representation of this drop location.
                  * This method is intended to be used for debugging purposes,
@@ -42,7 +42,7 @@ declare namespace javax {
                  * @return a string representation of this drop location
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

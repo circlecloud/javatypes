@@ -16,7 +16,7 @@ declare namespace javax {
              *  {#code null} if no compiler is provided
              */
             // @ts-ignore
-            getSystemJavaCompiler(): javax.tools.JavaCompiler
+            public static getSystemJavaCompiler(): javax.tools.JavaCompiler
             /**
              * Gets the Java&trade; programming language documentation tool provided
              * with this platform.
@@ -24,7 +24,7 @@ declare namespace javax {
              *  {#code null} if no documentation tool is provided
              */
             // @ts-ignore
-            getSystemDocumentationTool(): javax.tools.DocumentationTool
+            public static getSystemDocumentationTool(): javax.tools.DocumentationTool
             /**
              * Returns the class loader for tools provided with this platform.
              * This does not include user-installed tools.  Use the
@@ -34,7 +34,7 @@ declare namespace javax {
              *  or {#code null} if no tools are provided
              */
             // @ts-ignore
-            getSystemToolClassLoader(): java.lang.ClassLoader
+            public static getSystemToolClassLoader(): java.lang.ClassLoader
         }
     }
 }

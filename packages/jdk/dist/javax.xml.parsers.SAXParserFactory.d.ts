@@ -9,7 +9,7 @@ declare namespace javax {
              * @version $Revision: 1.9 $, $Date: 2010/05/25 16:19:44 $
              */
             // @ts-ignore
-            class SAXParserFactory extends java.lang.Object {
+            abstract class SAXParserFactory extends java.lang.Object {
                 /**
                  * <p>Protected constructor to force use of {@link #newInstance()}.</p>
                  */
@@ -70,7 +70,7 @@ declare namespace javax {
                  *  the implementation is not available or cannot be instantiated.
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.parsers.SAXParserFactory
+                public static newInstance(): javax.xml.parsers.SAXParserFactory
                 /**
                  * <p>Obtain a new instance of a <code>SAXParserFactory</code> from class name.
                  * This function is useful when there are multiple providers in the classpath.
@@ -96,7 +96,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                newInstance(factoryClassName: string, classLoader: java.lang.ClassLoader): javax.xml.parsers.SAXParserFactory
+                public static newInstance(factoryClassName: java.lang.String | string, classLoader: java.lang.ClassLoader): javax.xml.parsers.SAXParserFactory
                 /**
                  * <p>Creates a new instance of a SAXParser using the currently
                  * configured factory parameters.</p>
@@ -106,7 +106,7 @@ declare namespace javax {
                  * @throws SAXException for SAX errors.
                  */
                 // @ts-ignore
-                abstract newSAXParser(): javax.xml.parsers.SAXParser
+                public abstract newSAXParser(): javax.xml.parsers.SAXParser
                 /**
                  * Specifies that the parser produced by this code will
                  * provide support for XML namespaces. By default the value of this is set
@@ -115,7 +115,7 @@ declare namespace javax {
                  *                   provide support for XML namespaces; false otherwise.
                  */
                 // @ts-ignore
-                setNamespaceAware(awareness: boolean): void
+                public setNamespaceAware(awareness: boolean): void
                 /**
                  * Specifies that the parser produced by this code will
                  * validate documents as they are parsed. By default the value of this is
@@ -138,7 +138,7 @@ declare namespace javax {
                  *                    validate documents as they are parsed; false otherwise.
                  */
                 // @ts-ignore
-                setValidating(validating: boolean): void
+                public setValidating(validating: boolean): void
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which are namespace aware.
@@ -146,7 +146,7 @@ declare namespace javax {
                  *          parsers which are namespace aware; false otherwise.
                  */
                 // @ts-ignore
-                isNamespaceAware(): boolean
+                public isNamespaceAware(): boolean
                 /**
                  * Indicates whether or not the factory is configured to produce
                  * parsers which validate the XML content during parse.
@@ -154,7 +154,7 @@ declare namespace javax {
                  *          the XML content during parse; false otherwise.
                  */
                 // @ts-ignore
-                isValidating(): boolean
+                public isValidating(): boolean
                 /**
                  * <p>Sets the particular feature in the underlying implementation of
                  * org.xml.sax.XMLReader.
@@ -188,7 +188,7 @@ declare namespace javax {
                  * @see org.xml.sax.XMLReader#setFeature
                  */
                 // @ts-ignore
-                abstract setFeature(name: string, value: boolean): void
+                public abstract setFeature(name: java.lang.String | string, value: boolean): void
                 /**
                  * <p>Returns the particular property requested for in the underlying
                  * implementation of org.xml.sax.XMLReader.</p>
@@ -200,7 +200,7 @@ declare namespace javax {
                  * @see org.xml.sax.XMLReader#getProperty
                  */
                 // @ts-ignore
-                abstract getFeature(name: string): boolean
+                public abstract getFeature(name: java.lang.String | string): boolean
                 /**
                  * Gets the {@link Schema} object specified through
                  * the {@link #setSchema(Schema schema)} method.
@@ -213,7 +213,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSchema(): javax.xml.validation.Schema
+                public getSchema(): javax.xml.validation.Schema
                 /**
                  * <p>Set the {@link Schema} to be used by parsers created
                  * from this factory.</p>
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setSchema(schema: javax.xml.validation.Schema): void
+                public setSchema(schema: javax.xml.validation.Schema): void
                 /**
                  * <p>Set state of XInclude processing.</p>
                  * <p>If XInclude markup is found in the document instance, should it be
@@ -266,7 +266,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setXIncludeAware(state: boolean): void
+                public setXIncludeAware(state: boolean): void
                 /**
                  * <p>Get state of XInclude processing.</p>
                  * @return current state of XInclude processing
@@ -275,7 +275,7 @@ declare namespace javax {
                  * @since 1.5
                  */
                 // @ts-ignore
-                isXIncludeAware(): boolean
+                public isXIncludeAware(): boolean
             }
         }
     }

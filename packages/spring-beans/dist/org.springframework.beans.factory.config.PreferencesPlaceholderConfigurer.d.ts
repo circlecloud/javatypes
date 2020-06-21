@@ -29,26 +29,26 @@ declare namespace org {
                          * placeholders. Default is the root node.
                          */
                         // @ts-ignore
-                        setSystemTreePath(systemTreePath: string): void
+                        public setSystemTreePath(systemTreePath: java.lang.String | string): void
                         /**
                          * Set the path in the system preferences tree to use for resolving
                          * placeholders. Default is the root node.
                          */
                         // @ts-ignore
-                        setUserTreePath(userTreePath: string): void
+                        public setUserTreePath(userTreePath: java.lang.String | string): void
                         /**
                          * This implementation eagerly fetches the Preferences instances
                          * for the required system and user tree nodes.
                          */
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * This implementation tries to resolve placeholders as keys first
                          * in the user preferences, then in the system preferences, then in
                          * the passed-in properties.
                          */
                         // @ts-ignore
-                        resolvePlaceholder(placeholder: string, props: java.util.Properties): java.lang.String
+                        resolvePlaceholder(placeholder: java.lang.String | string, props: java.util.Properties): string
                         /**
                          * Resolve the given path and key against the given Preferences.
                          * @param path the preferences path (placeholder part before '/')
@@ -57,7 +57,7 @@ declare namespace org {
                          * @return the value for the placeholder, or {#code null} if none found
                          */
                         // @ts-ignore
-                        resolvePlaceholder(path: string, key: string, preferences: java.util.prefs.Preferences): java.lang.String
+                        resolvePlaceholder(path: java.lang.String | string, key: java.lang.String | string, preferences: java.util.prefs.Preferences): string
                     }
                 }
             }

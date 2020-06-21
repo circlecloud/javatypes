@@ -15,7 +15,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                class AsynchronousChannelProvider extends java.lang.Object {
+                abstract class AsynchronousChannelProvider extends java.lang.Object {
                     /**
                      * Initializes a new instance of this class.
                      * @throws SecurityException
@@ -52,7 +52,7 @@ declare namespace java {
                      * @return The system-wide default AsynchronousChannel provider
                      */
                     // @ts-ignore
-                    provider(): java.nio.channels.spi.AsynchronousChannelProvider
+                    public static provider(): java.nio.channels.spi.AsynchronousChannelProvider
                     /**
                      * Constructs a new asynchronous channel group with a fixed thread pool.
                      * @param nThreads
@@ -67,7 +67,7 @@ declare namespace java {
                      * @see AsynchronousChannelGroup#withFixedThreadPool
                      */
                     // @ts-ignore
-                    abstract openAsynchronousChannelGroup(nThreads: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.nio.channels.AsynchronousChannelGroup
+                    public abstract openAsynchronousChannelGroup(nThreads: number /*int*/, threadFactory: java.util.concurrent.ThreadFactory): java.nio.channels.AsynchronousChannelGroup
                     /**
                      * Constructs a new asynchronous channel group with the given thread pool.
                      * @param executor
@@ -81,7 +81,7 @@ declare namespace java {
                      * @see AsynchronousChannelGroup#withCachedThreadPool
                      */
                     // @ts-ignore
-                    abstract openAsynchronousChannelGroup(executor: java.util.concurrent.ExecutorService, initialSize: number /*int*/): java.nio.channels.AsynchronousChannelGroup
+                    public abstract openAsynchronousChannelGroup(executor: java.util.concurrent.ExecutorService, initialSize: number /*int*/): java.nio.channels.AsynchronousChannelGroup
                     /**
                      * Opens an asynchronous server-socket channel.
                      * @param group
@@ -96,7 +96,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openAsynchronousServerSocketChannel(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousServerSocketChannel
+                    public abstract openAsynchronousServerSocketChannel(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousServerSocketChannel
                     /**
                      * Opens an asynchronous socket channel.
                      * @param group
@@ -111,7 +111,7 @@ declare namespace java {
                      *           If an I/O error occurs
                      */
                     // @ts-ignore
-                    abstract openAsynchronousSocketChannel(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousSocketChannel
+                    public abstract openAsynchronousSocketChannel(group: java.nio.channels.AsynchronousChannelGroup): java.nio.channels.AsynchronousSocketChannel
                 }
             }
         }

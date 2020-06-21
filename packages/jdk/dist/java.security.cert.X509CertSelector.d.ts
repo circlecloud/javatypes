@@ -66,7 +66,7 @@ declare namespace java {
                  * @see #getCertificate
                  */
                 // @ts-ignore
-                setCertificate(cert: java.security.cert.X509Certificate): void
+                public setCertificate(cert: java.security.cert.X509Certificate): void
                 /**
                  * Sets the serialNumber criterion. The specified serial number
                  * must match the certificate serial number in the
@@ -77,7 +77,7 @@ declare namespace java {
                  * @see #getSerialNumber
                  */
                 // @ts-ignore
-                setSerialNumber(serial: java.math.BigInteger): void
+                public setSerialNumber(serial: java.math.BigInteger): void
                 /**
                  * Sets the issuer criterion. The specified distinguished name
                  * must match the issuer distinguished name in the
@@ -88,7 +88,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setIssuer(issuer: javax.security.auth.x500.X500Principal): void
+                public setIssuer(issuer: javax.security.auth.x500.X500Principal): void
                 /**
                  * <strong>Denigrated</strong>, use {@linkplain #setIssuer(X500Principal)}
                  * or {@linkplain #setIssuer(byte[])} instead. This method should not be
@@ -109,7 +109,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs (incorrect form for DN)
                  */
                 // @ts-ignore
-                setIssuer(issuerDN: string): void
+                public setIssuer(issuerDN: java.lang.String | string): void
                 /**
                  * Sets the issuer criterion. The specified distinguished name
                  * must match the issuer distinguished name in the
@@ -147,7 +147,7 @@ declare namespace java {
                  * @throws IOException if an encoding error occurs (incorrect form for DN)
                  */
                 // @ts-ignore
-                setIssuer(issuerDN: number /*byte*/[]): void
+                public setIssuer(issuerDN: number /*byte*/[]): void
                 /**
                  * Sets the subject criterion. The specified distinguished name
                  * must match the subject distinguished name in the
@@ -158,7 +158,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                setSubject(subject: javax.security.auth.x500.X500Principal): void
+                public setSubject(subject: javax.security.auth.x500.X500Principal): void
                 /**
                  * <strong>Denigrated</strong>, use {@linkplain #setSubject(X500Principal)}
                  * or {@linkplain #setSubject(byte[])} instead. This method should not be
@@ -178,7 +178,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs (incorrect form for DN)
                  */
                 // @ts-ignore
-                setSubject(subjectDN: string): void
+                public setSubject(subjectDN: java.lang.String | string): void
                 /**
                  * Sets the subject criterion. The specified distinguished name
                  * must match the subject distinguished name in the
@@ -194,7 +194,7 @@ declare namespace java {
                  * @throws IOException if an encoding error occurs (incorrect form for DN)
                  */
                 // @ts-ignore
-                setSubject(subjectDN: number /*byte*/[]): void
+                public setSubject(subjectDN: number /*byte*/[]): void
                 /**
                  * Sets the subjectKeyIdentifier criterion. The
                  * {@code X509Certificate} must contain a SubjectKeyIdentifier
@@ -225,7 +225,7 @@ declare namespace java {
                  * @see #getSubjectKeyIdentifier
                  */
                 // @ts-ignore
-                setSubjectKeyIdentifier(subjectKeyID: number /*byte*/[]): void
+                public setSubjectKeyIdentifier(subjectKeyID: number /*byte*/[]): void
                 /**
                  * Sets the authorityKeyIdentifier criterion. The
                  * {@code X509Certificate} must contain an
@@ -277,7 +277,7 @@ declare namespace java {
                  * @see #getAuthorityKeyIdentifier
                  */
                 // @ts-ignore
-                setAuthorityKeyIdentifier(authorityKeyID: number /*byte*/[]): void
+                public setAuthorityKeyIdentifier(authorityKeyID: number /*byte*/[]): void
                 /**
                  * Sets the certificateValid criterion. The specified date must fall
                  * within the certificate validity period for the
@@ -290,7 +290,7 @@ declare namespace java {
                  * @see #getCertificateValid
                  */
                 // @ts-ignore
-                setCertificateValid(certValid: java.util.Date): void
+                public setCertificateValid(certValid: java.util.Date): void
                 /**
                  * Sets the privateKeyValid criterion. The specified date must fall
                  * within the private key validity period for the
@@ -304,7 +304,7 @@ declare namespace java {
                  * @see #getPrivateKeyValid
                  */
                 // @ts-ignore
-                setPrivateKeyValid(privateKeyValid: java.util.Date): void
+                public setPrivateKeyValid(privateKeyValid: java.util.Date): void
                 /**
                  * Sets the subjectPublicKeyAlgID criterion. The
                  * {@code X509Certificate} must contain a subject public key
@@ -319,7 +319,7 @@ declare namespace java {
                  * @see #getSubjectPublicKeyAlgID
                  */
                 // @ts-ignore
-                setSubjectPublicKeyAlgID(oid: string): void
+                public setSubjectPublicKeyAlgID(oid: java.lang.String | string): void
                 /**
                  * Sets the subjectPublicKey criterion. The
                  * {@code X509Certificate} must contain the specified subject public
@@ -328,7 +328,7 @@ declare namespace java {
                  * @see #getSubjectPublicKey
                  */
                 // @ts-ignore
-                setSubjectPublicKey(key: java.security.PublicKey): void
+                public setSubjectPublicKey(key: java.security.PublicKey): void
                 /**
                  * Sets the subjectPublicKey criterion. The {@code X509Certificate}
                  * must contain the specified subject public key. If {@code null},
@@ -361,7 +361,7 @@ declare namespace java {
                  * @see #getSubjectPublicKey
                  */
                 // @ts-ignore
-                setSubjectPublicKey(key: number /*byte*/[]): void
+                public setSubjectPublicKey(key: number /*byte*/[]): void
                 /**
                  * Sets the keyUsage criterion. The {@code X509Certificate}
                  * must allow the specified keyUsage values. If {@code null}, no
@@ -377,7 +377,7 @@ declare namespace java {
                  * @see #getKeyUsage
                  */
                 // @ts-ignore
-                setKeyUsage(keyUsage: boolean[]): void
+                public setKeyUsage(keyUsage: boolean[]): void
                 /**
                  * Sets the extendedKeyUsage criterion. The {@code X509Certificate}
                  * must allow the specified key purposes in its extended key usage
@@ -397,7 +397,7 @@ declare namespace java {
                  * @see #getExtendedKeyUsage
                  */
                 // @ts-ignore
-                setExtendedKeyUsage(keyPurposeSet: Array<java.lang.String>): void
+                public setExtendedKeyUsage(keyPurposeSet: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Enables/disables matching all of the subjectAlternativeNames
                  * specified in the {@link #setSubjectAlternativeNames
@@ -413,7 +413,7 @@ declare namespace java {
                  * @see #getMatchAllSubjectAltNames
                  */
                 // @ts-ignore
-                setMatchAllSubjectAltNames(matchAllNames: boolean): void
+                public setMatchAllSubjectAltNames(matchAllNames: boolean): void
                 /**
                  * Sets the subjectAlternativeNames criterion. The
                  * {@code X509Certificate} must contain all or at least one of the
@@ -461,7 +461,7 @@ declare namespace java {
                  * @see #getSubjectAlternativeNames
                  */
                 // @ts-ignore
-                setSubjectAlternativeNames(names: Array<java.util.List<any>>): void
+                public setSubjectAlternativeNames(names: java.util.Collection<java.util.List<any> | Array<any>> | Array<java.util.List<any> | Array<any>>): void
                 /**
                  * Adds a name to the subjectAlternativeNames criterion. The
                  * {@code X509Certificate} must contain all or at least one
@@ -500,7 +500,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs
                  */
                 // @ts-ignore
-                addSubjectAlternativeName(type: number /*int*/, name: string): void
+                public addSubjectAlternativeName(type: number /*int*/, name: java.lang.String | string): void
                 /**
                  * Adds a name to the subjectAlternativeNames criterion. The
                  * {@code X509Certificate} must contain all or at least one
@@ -540,7 +540,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs
                  */
                 // @ts-ignore
-                addSubjectAlternativeName(type: number /*int*/, name: number /*byte*/[]): void
+                public addSubjectAlternativeName(type: number /*int*/, name: number /*byte*/[]): void
                 /**
                  * Sets the name constraints criterion. The {@code X509Certificate}
                  * must have subject and subject alternative names that
@@ -584,7 +584,7 @@ declare namespace java {
                  * @see #getNameConstraints
                  */
                 // @ts-ignore
-                setNameConstraints(bytes: number /*byte*/[]): void
+                public setNameConstraints(bytes: number /*byte*/[]): void
                 /**
                  * Sets the basic constraints constraint. If the value is greater than or
                  * equal to zero, {@code X509Certificates} must include a
@@ -601,7 +601,7 @@ declare namespace java {
                  * @see #getBasicConstraints
                  */
                 // @ts-ignore
-                setBasicConstraints(minMaxPathLen: number /*int*/): void
+                public setBasicConstraints(minMaxPathLen: number /*int*/): void
                 /**
                  * Sets the policy constraint. The {@code X509Certificate} must
                  * include at least one of the specified policies in its certificate
@@ -622,7 +622,7 @@ declare namespace java {
                  * @see #getPolicy
                  */
                 // @ts-ignore
-                setPolicy(certPolicySet: Array<java.lang.String>): void
+                public setPolicy(certPolicySet: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * Sets the pathToNames criterion. The {@code X509Certificate} must
                  * not include name constraints that would prohibit building a
@@ -674,7 +674,7 @@ declare namespace java {
                  * @see #getPathToNames
                  */
                 // @ts-ignore
-                setPathToNames(names: Array<java.util.List<any>>): void
+                public setPathToNames(names: java.util.Collection<java.util.List<any> | Array<any>> | Array<java.util.List<any> | Array<any>>): void
                 /**
                  * Adds a name to the pathToNames criterion. The {@code X509Certificate}
                  * must not include name constraints that would prohibit building a
@@ -708,7 +708,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs
                  */
                 // @ts-ignore
-                addPathToName(type: number /*int*/, name: string): void
+                public addPathToName(type: number /*int*/, name: java.lang.String | string): void
                 /**
                  * Adds a name to the pathToNames criterion. The {@code X509Certificate}
                  * must not include name constraints that would prohibit building a
@@ -734,7 +734,7 @@ declare namespace java {
                  * @throws IOException if a parsing error occurs
                  */
                 // @ts-ignore
-                addPathToName(type: number /*int*/, name: number /*byte*/[]): void
+                public addPathToName(type: number /*int*/, name: number /*byte*/[]): void
                 /**
                  * Returns the certificateEquals criterion. The specified
                  * {@code X509Certificate} must be equal to the
@@ -744,7 +744,7 @@ declare namespace java {
                  * @see #setCertificate
                  */
                 // @ts-ignore
-                getCertificate(): java.security.cert.X509Certificate
+                public getCertificate(): java.security.cert.X509Certificate
                 /**
                  * Returns the serialNumber criterion. The specified serial number
                  * must match the certificate serial number in the
@@ -755,7 +755,7 @@ declare namespace java {
                  * @see #setSerialNumber
                  */
                 // @ts-ignore
-                getSerialNumber(): java.math.BigInteger
+                public getSerialNumber(): java.math.BigInteger
                 /**
                  * Returns the issuer criterion as an {@code X500Principal}. This
                  * distinguished name must match the issuer distinguished name in the
@@ -766,7 +766,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getIssuer(): javax.security.auth.x500.X500Principal
+                public getIssuer(): javax.security.auth.x500.X500Principal
                 /**
                  * <strong>Denigrated</strong>, use {@linkplain #getIssuer()} or
                  * {@linkplain #getIssuerAsBytes()} instead. This method should not be
@@ -785,7 +785,7 @@ declare namespace java {
                  *          (or {#code null})
                  */
                 // @ts-ignore
-                getIssuerAsString(): java.lang.String
+                public getIssuerAsString(): string
                 /**
                  * Returns the issuer criterion as a byte array. This distinguished name
                  * must match the issuer distinguished name in the
@@ -805,7 +805,7 @@ declare namespace java {
                  * @throws IOException if an encoding error occurs
                  */
                 // @ts-ignore
-                getIssuerAsBytes(): byte[]
+                public getIssuerAsBytes(): number /*byte*/[]
                 /**
                  * Returns the subject criterion as an {@code X500Principal}. This
                  * distinguished name must match the subject distinguished name in the
@@ -816,7 +816,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getSubject(): javax.security.auth.x500.X500Principal
+                public getSubject(): javax.security.auth.x500.X500Principal
                 /**
                  * <strong>Denigrated</strong>, use {@linkplain #getSubject()} or
                  * {@linkplain #getSubjectAsBytes()} instead. This method should not be
@@ -835,7 +835,7 @@ declare namespace java {
                  *          (or {#code null})
                  */
                 // @ts-ignore
-                getSubjectAsString(): java.lang.String
+                public getSubjectAsString(): string
                 /**
                  * Returns the subject criterion as a byte array. This distinguished name
                  * must match the subject distinguished name in the
@@ -855,7 +855,7 @@ declare namespace java {
                  * @throws IOException if an encoding error occurs
                  */
                 // @ts-ignore
-                getSubjectAsBytes(): byte[]
+                public getSubjectAsBytes(): number /*byte*/[]
                 /**
                  * Returns the subjectKeyIdentifier criterion. The
                  * {@code X509Certificate} must contain a SubjectKeyIdentifier
@@ -868,7 +868,7 @@ declare namespace java {
                  * @see #setSubjectKeyIdentifier
                  */
                 // @ts-ignore
-                getSubjectKeyIdentifier(): byte[]
+                public getSubjectKeyIdentifier(): number /*byte*/[]
                 /**
                  * Returns the authorityKeyIdentifier criterion. The
                  * {@code X509Certificate} must contain a AuthorityKeyIdentifier
@@ -881,7 +881,7 @@ declare namespace java {
                  * @see #setAuthorityKeyIdentifier
                  */
                 // @ts-ignore
-                getAuthorityKeyIdentifier(): byte[]
+                public getAuthorityKeyIdentifier(): number /*byte*/[]
                 /**
                  * Returns the certificateValid criterion. The specified date must fall
                  * within the certificate validity period for the
@@ -894,7 +894,7 @@ declare namespace java {
                  * @see #setCertificateValid
                  */
                 // @ts-ignore
-                getCertificateValid(): java.util.Date
+                public getCertificateValid(): java.util.Date
                 /**
                  * Returns the privateKeyValid criterion. The specified date must fall
                  * within the private key validity period for the
@@ -907,7 +907,7 @@ declare namespace java {
                  * @see #setPrivateKeyValid
                  */
                 // @ts-ignore
-                getPrivateKeyValid(): java.util.Date
+                public getPrivateKeyValid(): java.util.Date
                 /**
                  * Returns the subjectPublicKeyAlgID criterion. The
                  * {@code X509Certificate} must contain a subject public key
@@ -919,7 +919,7 @@ declare namespace java {
                  * @see #setSubjectPublicKeyAlgID
                  */
                 // @ts-ignore
-                getSubjectPublicKeyAlgID(): java.lang.String
+                public getSubjectPublicKeyAlgID(): string
                 /**
                  * Returns the subjectPublicKey criterion. The
                  * {@code X509Certificate} must contain the specified subject
@@ -928,7 +928,7 @@ declare namespace java {
                  * @see #setSubjectPublicKey
                  */
                 // @ts-ignore
-                getSubjectPublicKey(): java.security.PublicKey
+                public getSubjectPublicKey(): java.security.PublicKey
                 /**
                  * Returns the keyUsage criterion. The {@code X509Certificate}
                  * must allow the specified keyUsage values. If null, no keyUsage
@@ -943,7 +943,7 @@ declare namespace java {
                  * @see #setKeyUsage
                  */
                 // @ts-ignore
-                getKeyUsage(): boolean[]
+                public getKeyUsage(): boolean[]
                 /**
                  * Returns the extendedKeyUsage criterion. The {@code X509Certificate}
                  * must allow the specified key purposes in its extended key usage
@@ -956,7 +956,7 @@ declare namespace java {
                  * @see #setExtendedKeyUsage
                  */
                 // @ts-ignore
-                getExtendedKeyUsage(): java.util.Set<java.lang.String>
+                public getExtendedKeyUsage(): Array<java.lang.String | string>
                 /**
                  * Indicates if the {@code X509Certificate} must contain all
                  * or at least one of the subjectAlternativeNames
@@ -973,7 +973,7 @@ declare namespace java {
                  * @see #setMatchAllSubjectAltNames
                  */
                 // @ts-ignore
-                getMatchAllSubjectAltNames(): boolean
+                public getMatchAllSubjectAltNames(): boolean
                 /**
                  * Returns a copy of the subjectAlternativeNames criterion.
                  * The {@code X509Certificate} must contain all or at least one
@@ -1007,7 +1007,7 @@ declare namespace java {
                  * @see #setSubjectAlternativeNames
                  */
                 // @ts-ignore
-                getSubjectAlternativeNames(): java.util.Collection<java.util.List<?>>
+                public getSubjectAlternativeNames(): Array<java.util.List<any> | Array<any>>
                 /**
                  * Returns the name constraints criterion. The {@code X509Certificate}
                  * must have subject and subject alternative names that
@@ -1028,7 +1028,7 @@ declare namespace java {
                  * @see #setNameConstraints
                  */
                 // @ts-ignore
-                getNameConstraints(): byte[]
+                public getNameConstraints(): number /*byte*/[]
                 /**
                  * Returns the basic constraints constraint. If the value is greater than
                  * or equal to zero, the {@code X509Certificates} must include a
@@ -1039,7 +1039,7 @@ declare namespace java {
                  * @see #setBasicConstraints
                  */
                 // @ts-ignore
-                getBasicConstraints(): int
+                public getBasicConstraints(): number /*int*/
                 /**
                  * Returns the policy criterion. The {@code X509Certificate} must
                  * include at least one of the specified policies in its certificate policies
@@ -1052,7 +1052,7 @@ declare namespace java {
                  * @see #setPolicy
                  */
                 // @ts-ignore
-                getPolicy(): java.util.Set<java.lang.String>
+                public getPolicy(): Array<java.lang.String | string>
                 /**
                  * Returns a copy of the pathToNames criterion. The
                  * {@code X509Certificate} must not include name constraints that would
@@ -1084,14 +1084,14 @@ declare namespace java {
                  * @see #setPathToNames
                  */
                 // @ts-ignore
-                getPathToNames(): java.util.Collection<java.util.List<?>>
+                public getPathToNames(): Array<java.util.List<any> | Array<any>>
                 /**
                  * Return a printable representation of the {@code CertSelector}.
                  * @return a {#code String} describing the contents of the
                  *          {@code CertSelector}
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Decides whether a {@code Certificate} should be selected.
                  * @param cert the {#code Certificate} to be checked
@@ -1099,13 +1099,13 @@ declare namespace java {
                  *          selected, {@code false} otherwise
                  */
                 // @ts-ignore
-                match(cert: java.security.cert.Certificate): boolean
+                public match(cert: java.security.cert.Certificate): boolean
                 /**
                  * Returns a copy of this object.
                  * @return the copy
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

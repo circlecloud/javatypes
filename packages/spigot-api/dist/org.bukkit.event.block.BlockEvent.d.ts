@@ -6,7 +6,7 @@ declare namespace org {
                  * Represents a block related event.
                  */
                 // @ts-ignore
-                class BlockEvent extends org.bukkit.event.Event {
+                abstract class BlockEvent extends org.bukkit.event.Event {
                     // @ts-ignore
                     constructor(theBlock: org.bukkit.block.Block)
                     // @ts-ignore
@@ -16,7 +16,7 @@ declare namespace org {
                      * @return The Block which block is involved in this event
                      */
                     // @ts-ignore
-                    getBlock(): org.bukkit.block.Block
+                    public getBlock(): org.bukkit.block.Block
                 }
             }
         }

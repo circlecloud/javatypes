@@ -28,21 +28,21 @@ declare namespace org {
                      *      or unmodifiable collection.
                      */
                     // @ts-ignore
-                    constructor(async: boolean, who: org.bukkit.entity.Player, message: string, players: Array<org.bukkit.entity.Player>)
+                    constructor(async: boolean, who: org.bukkit.entity.Player, message: java.lang.String | string, players: java.util.Set<org.bukkit.entity.Player> | Array<org.bukkit.entity.Player>)
                     /**
                      * Gets the message that the player is attempting to send. This message
                      * will be used with {@link #getFormat()}.
                      * @return Message the player is attempting to send
                      */
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Sets the message that the player will send. This message will be used
                      * with {@link #getFormat()}.
                      * @param message New message that the player will send
                      */
                     // @ts-ignore
-                    setMessage(message: string): void
+                    public setMessage(message: java.lang.String | string): void
                     /**
                      * Gets the format to use to display this chat message.
                      * <p>
@@ -53,7 +53,7 @@ declare namespace org {
                      *      string
                      */
                     // @ts-ignore
-                    getFormat(): java.lang.String
+                    public getFormat(): string
                     /**
                      * Sets the format to use to display this chat message.
                      * <p>
@@ -68,7 +68,7 @@ declare namespace org {
                      * @see String#format(String, Object...)
                      */
                     // @ts-ignore
-                    setFormat(format: string): void
+                    public setFormat(format: java.lang.String | string): void
                     /**
                      * Gets a set of recipients that this chat message will be displayed to.
                      * <p>
@@ -82,15 +82,15 @@ declare namespace org {
                      * @return All Players who will see this chat message
                      */
                     // @ts-ignore
-                    getRecipients(): java.util.Set<org.bukkit.entity.Player>
+                    public getRecipients(): Array<org.bukkit.entity.Player>
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

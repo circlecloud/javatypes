@@ -25,14 +25,14 @@ declare namespace org {
                          * @param prefix The prefix.
                          */
                         // @ts-ignore
-                        constructor(prefix: string)
+                        constructor(prefix: java.lang.String | string)
                         /**
                          * The default instance - using {@code spring.gen-} as the prefix.
                          */
                         // @ts-ignore
-                        readonly DEFAULT: org.springframework.amqp.core.AnonymousQueue.Base64UrlNamingStrategy
+                        public static readonly DEFAULT: org.springframework.amqp.core.AnonymousQueue.Base64UrlNamingStrategy
                         // @ts-ignore
-                        generateName(): java.lang.String
+                        public generateName(): string
                     }
                 }
             }

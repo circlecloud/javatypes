@@ -26,20 +26,20 @@ declare namespace org {
                  * present on the classpath.
                  */
                 // @ts-ignore
-                hasAdapters(): boolean
+                public hasAdapters(): boolean
                 /**
                  * Register a reactive type along with functions to adapt to and from a
                  * Reactive Streams {@link Publisher}. The function arguments assume that
                  * their input is neither {@code null} nor {@link Optional}.
                  */
                 // @ts-ignore
-                registerReactiveType(descriptor: org.springframework.core.ReactiveTypeDescriptor, toAdapter: java.util.function.Function<java.lang.Object, <any>> | java.util.function$.Function<java.lang.Object, <any>>, fromAdapter: java.util.function.Function<<any>, java.lang.Object> | java.util.function$.Function<<any>, java.lang.Object>): void
+                public registerReactiveType(descriptor: org.springframework.core.ReactiveTypeDescriptor, toAdapter: java.util.function$.Function<java.lang.Object | any, object>, fromAdapter: java.util.function$.Function<object, java.lang.Object | any>): void
                 /**
                  * Get the adapter for the given reactive type.
                  * @return the corresponding adapter, or {#code null} if none available
                  */
                 // @ts-ignore
-                getAdapter(reactiveType: java.lang.Class<any>): org.springframework.core.ReactiveAdapter
+                public getAdapter(reactiveType: java.lang.Class<any>): org.springframework.core.ReactiveAdapter
                 /**
                  * Get the adapter for the given reactive type. Or if a "source" object is
                  * provided, its actual type is used instead.
@@ -50,7 +50,7 @@ declare namespace org {
                  * @return the corresponding adapter, or {#code null} if none available
                  */
                 // @ts-ignore
-                getAdapter(reactiveType: java.lang.Class<any>, source: any): org.springframework.core.ReactiveAdapter
+                public getAdapter(reactiveType: java.lang.Class<any>, source: java.lang.Object | any): org.springframework.core.ReactiveAdapter
                 /**
                  * Return a shared default {@code ReactiveAdapterRegistry} instance,
                  * lazily building it once needed.
@@ -62,7 +62,7 @@ declare namespace org {
                  * @since 5.0.2
                  */
                 // @ts-ignore
-                getSharedInstance(): org.springframework.core.ReactiveAdapterRegistry
+                public static getSharedInstance(): org.springframework.core.ReactiveAdapterRegistry
             }
         }
     }

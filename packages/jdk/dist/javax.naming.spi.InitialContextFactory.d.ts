@@ -38,7 +38,7 @@ declare namespace javax {
                  * @exception NamingException If cannot create an initial context.
                  */
                 // @ts-ignore
-                getInitialContext(environment: java.util.Hashtable<any, ?>): javax.naming.Context
+                getInitialContext(environment: java.util.Hashtable<any, any>): javax.naming.Context
             }
         }
     }

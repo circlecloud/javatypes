@@ -50,7 +50,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>byte.length</code> bytes of data from this
              * input stream into an array of bytes. This method blocks until some
@@ -71,7 +71,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#read(byte[], int, int)
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this input stream
              * into an array of bytes. If <code>len</code> is not zero, the method
@@ -94,7 +94,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips over and discards <code>n</code> bytes of data from the
              * input stream. The <code>skip</code> method may, for a variety of
@@ -109,7 +109,7 @@ declare namespace java {
              *                           or if some other I/O error occurs.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns an estimate of the number of bytes that can be read (or
              * skipped over) from this input stream without blocking by the next
@@ -123,7 +123,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Closes this input stream and releases any system resources
              * associated with the stream.
@@ -133,7 +133,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Marks the current position in this input stream. A subsequent
              * call to the <code>reset</code> method repositions this stream at
@@ -150,7 +150,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#reset()
              */
             // @ts-ignore
-            mark(readlimit: number /*int*/): void
+            public mark(readlimit: number /*int*/): void
             /**
              * Repositions this stream to the position at the time the
              * <code>mark</code> method was last called on this input stream.
@@ -172,7 +172,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#mark(int)
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Tests if this input stream supports the <code>mark</code>
              * and <code>reset</code> methods.
@@ -186,7 +186,7 @@ declare namespace java {
              * @see java.io.InputStream#reset()
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
         }
     }
 }

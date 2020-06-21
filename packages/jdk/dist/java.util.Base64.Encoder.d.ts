@@ -25,7 +25,7 @@ declare namespace java {
                  *           encoded bytes.
                  */
                 // @ts-ignore
-                encode(src: number /*byte*/[]): byte[]
+                public encode(src: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Encodes all bytes from the specified byte array using the
                  * {@link Base64} encoding scheme, writing the resulting bytes to the
@@ -43,7 +43,7 @@ declare namespace java {
                  *           space for encoding all input bytes.
                  */
                 // @ts-ignore
-                encode(src: number /*byte*/[], dst: number /*byte*/[]): int
+                public encode(src: number /*byte*/[], dst: number /*byte*/[]): number /*int*/
                 /**
                  * Encodes the specified byte array into a String using the {@link Base64}
                  * encoding scheme.
@@ -59,7 +59,7 @@ declare namespace java {
                  * @return A String containing the resulting Base64 encoded characters
                  */
                 // @ts-ignore
-                encodeToString(src: number /*byte*/[]): java.lang.String
+                public encodeToString(src: number /*byte*/[]): string
                 /**
                  * Encodes all remaining bytes from the specified byte buffer into
                  * a newly-allocated ByteBuffer using the {@link Base64} encoding
@@ -73,7 +73,7 @@ declare namespace java {
                  * @return A newly-allocated byte buffer containing the encoded bytes.
                  */
                 // @ts-ignore
-                encode(buffer: java.nio.ByteBuffer): java.nio.ByteBuffer
+                public encode(buffer: java.nio.ByteBuffer): java.nio.ByteBuffer
                 /**
                  * Wraps an output stream for encoding byte data using the {@link Base64}
                  * encoding scheme.
@@ -87,7 +87,7 @@ declare namespace java {
                  *           specified Base64 encoded format
                  */
                 // @ts-ignore
-                wrap(os: java.io.OutputStream): java.io.OutputStream
+                public wrap(os: java.io.OutputStream): java.io.OutputStream
                 /**
                  * Returns an encoder instance that encodes equivalently to this one,
                  * but without adding any padding character at the end of the encoded
@@ -99,7 +99,7 @@ declare namespace java {
                  *          padding character at the end
                  */
                 // @ts-ignore
-                withoutPadding(): java.util.Base64.Encoder
+                public withoutPadding(): java.util.Base64.Encoder
             }
         }
     }

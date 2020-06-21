@@ -9,29 +9,29 @@ declare namespace org {
                  * @since 3.1
                  */
                 // @ts-ignore
-                class AbstractPropertyResolver extends java.lang.Object implements org.springframework.core.env.ConfigurablePropertyResolver {
+                abstract class AbstractPropertyResolver extends java.lang.Object implements org.springframework.core.env.ConfigurablePropertyResolver {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    getConversionService(): org.springframework.core.convert.support.ConfigurableConversionService
+                    public getConversionService(): org.springframework.core.convert.support.ConfigurableConversionService
                     // @ts-ignore
-                    setConversionService(conversionService: org.springframework.core.convert.support.ConfigurableConversionService): void
+                    public setConversionService(conversionService: org.springframework.core.convert.support.ConfigurableConversionService): void
                     /**
                      * Set the prefix that placeholders replaced by this resolver must begin with.
                      * <p>The default is "${".
                      * @see org.springframework.util.SystemPropertyUtils#PLACEHOLDER_PREFIX
                      */
                     // @ts-ignore
-                    setPlaceholderPrefix(placeholderPrefix: string): void
+                    public setPlaceholderPrefix(placeholderPrefix: java.lang.String | string): void
                     /**
                      * Set the suffix that placeholders replaced by this resolver must end with.
                      * <p>The default is "}".
                      * @see org.springframework.util.SystemPropertyUtils#PLACEHOLDER_SUFFIX
                      */
                     // @ts-ignore
-                    setPlaceholderSuffix(placeholderSuffix: string): void
+                    public setPlaceholderSuffix(placeholderSuffix: java.lang.String | string): void
                     /**
                      * Specify the separating character between the placeholders replaced by this
                      * resolver and their associated default value, or {@code null} if no such
@@ -40,7 +40,7 @@ declare namespace org {
                      * @see org.springframework.util.SystemPropertyUtils#VALUE_SEPARATOR
                      */
                     // @ts-ignore
-                    setValueSeparator(valueSeparator: string): void
+                    public setValueSeparator(valueSeparator: java.lang.String | string): void
                     /**
                      * Set whether to throw an exception when encountering an unresolvable placeholder
                      * nested within the value of a given property. A {@code false} value indicates strict
@@ -51,27 +51,27 @@ declare namespace org {
                      * @since 3.2
                      */
                     // @ts-ignore
-                    setIgnoreUnresolvableNestedPlaceholders(ignoreUnresolvableNestedPlaceholders: boolean): void
+                    public setIgnoreUnresolvableNestedPlaceholders(ignoreUnresolvableNestedPlaceholders: boolean): void
                     // @ts-ignore
-                    setRequiredProperties(...requiredProperties: string[]): void
+                    public setRequiredProperties(...requiredProperties: java.lang.String[] | string[]): void
                     // @ts-ignore
-                    validateRequiredProperties(): void
+                    public validateRequiredProperties(): void
                     // @ts-ignore
-                    containsProperty(key: string): boolean
+                    public containsProperty(key: java.lang.String | string): boolean
                     // @ts-ignore
-                    getProperty(key: string): java.lang.String
+                    public getProperty(key: java.lang.String | string): string
                     // @ts-ignore
-                    getProperty(key: string, defaultValue: string): java.lang.String
+                    public getProperty(key: java.lang.String | string, defaultValue: java.lang.String | string): string
                     // @ts-ignore
-                    getProperty<T>(key: string, targetType: java.lang.Class<T>, defaultValue: T): T
+                    public getProperty<T>(key: java.lang.String | string, targetType: java.lang.Class<T>, defaultValue: T): T
                     // @ts-ignore
-                    getRequiredProperty(key: string): java.lang.String
+                    public getRequiredProperty(key: java.lang.String | string): string
                     // @ts-ignore
-                    getRequiredProperty<T>(key: string, valueType: java.lang.Class<T>): T
+                    public getRequiredProperty<T>(key: java.lang.String | string, valueType: java.lang.Class<T>): T
                     // @ts-ignore
-                    resolvePlaceholders(text: string): java.lang.String
+                    public resolvePlaceholders(text: java.lang.String | string): string
                     // @ts-ignore
-                    resolveRequiredPlaceholders(text: string): java.lang.String
+                    public resolveRequiredPlaceholders(text: java.lang.String | string): string
                     /**
                      * Resolve placeholders within the given string, deferring to the value of
                      * {@link #setIgnoreUnresolvableNestedPlaceholders} to determine whether any
@@ -85,7 +85,7 @@ declare namespace org {
                      * @see #setIgnoreUnresolvableNestedPlaceholders
                      */
                     // @ts-ignore
-                    resolveNestedPlaceholders(value: string): java.lang.String
+                    resolveNestedPlaceholders(value: java.lang.String | string): string
                     /**
                      * Convert the given value to the specified target type, if necessary.
                      * @param value the original property value
@@ -95,7 +95,7 @@ declare namespace org {
                      * @since 4.3.5
                      */
                     // @ts-ignore
-                    convertValueIfNecessary<T>(value: any, targetType: java.lang.Class<T>): T
+                    convertValueIfNecessary<T>(value: java.lang.Object | any, targetType: java.lang.Class<T>): T
                     /**
                      * Retrieve the specified property as a raw String,
                      * i.e. without resolution of nested placeholders.
@@ -103,7 +103,7 @@ declare namespace org {
                      * @return the property value or {#code null} if none found
                      */
                     // @ts-ignore
-                    abstract getPropertyAsRawString(key: string): java.lang.String
+                    abstract getPropertyAsRawString(key: java.lang.String | string): string
                 }
             }
         }

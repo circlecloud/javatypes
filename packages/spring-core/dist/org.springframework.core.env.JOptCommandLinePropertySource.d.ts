@@ -42,15 +42,15 @@ declare namespace org {
                      * and backed by the given {@code OptionSet}.
                      */
                     // @ts-ignore
-                    constructor(name: string, options: OptionSet)
+                    constructor(name: java.lang.String | string, options: OptionSet)
                     // @ts-ignore
-                    containsOption(name: string): boolean
+                    containsOption(name: java.lang.String | string): boolean
                     // @ts-ignore
-                    getPropertyNames(): java.lang.String[]
+                    public getPropertyNames(): string[]
                     // @ts-ignore
-                    getOptionValues(name: string): java.util.List<java.lang.String>
+                    public getOptionValues(name: java.lang.String | string): Array<java.lang.String | string>
                     // @ts-ignore
-                    getNonOptionArgs(): java.util.List<java.lang.String>
+                    getNonOptionArgs(): Array<java.lang.String | string>
                 }
             }
         }

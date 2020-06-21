@@ -52,59 +52,59 @@ declare namespace javax {
                  * @throws NamingException if a naming exception is encountered
                  */
                 // @ts-ignore
-                constructor(environment: java.util.Hashtable<any, ?>)
+                constructor(environment: java.util.Hashtable<any, any>)
                 // @ts-ignore
-                getAttributes(name: string): javax.naming.directory.Attributes
+                public getAttributes(name: java.lang.String | string): javax.naming.directory.Attributes
                 // @ts-ignore
-                getAttributes(name: string, attrIds: string[]): javax.naming.directory.Attributes
+                public getAttributes(name: java.lang.String | string, attrIds: java.lang.String[] | string[]): javax.naming.directory.Attributes
                 // @ts-ignore
-                getAttributes(name: javax.naming.Name): javax.naming.directory.Attributes
+                public getAttributes(name: javax.naming.Name): javax.naming.directory.Attributes
                 // @ts-ignore
-                getAttributes(name: javax.naming.Name, attrIds: string[]): javax.naming.directory.Attributes
+                public getAttributes(name: javax.naming.Name, attrIds: java.lang.String[] | string[]): javax.naming.directory.Attributes
                 // @ts-ignore
-                modifyAttributes(name: string, mod_op: number /*int*/, attrs: javax.naming.directory.Attributes): void
+                public modifyAttributes(name: java.lang.String | string, mod_op: number /*int*/, attrs: javax.naming.directory.Attributes): void
                 // @ts-ignore
-                modifyAttributes(name: javax.naming.Name, mod_op: number /*int*/, attrs: javax.naming.directory.Attributes): void
+                public modifyAttributes(name: javax.naming.Name, mod_op: number /*int*/, attrs: javax.naming.directory.Attributes): void
                 // @ts-ignore
-                modifyAttributes(name: string, mods: javax.naming.directory.ModificationItem[]): void
+                public modifyAttributes(name: java.lang.String | string, mods: javax.naming.directory.ModificationItem[]): void
                 // @ts-ignore
-                modifyAttributes(name: javax.naming.Name, mods: javax.naming.directory.ModificationItem[]): void
+                public modifyAttributes(name: javax.naming.Name, mods: javax.naming.directory.ModificationItem[]): void
                 // @ts-ignore
-                bind(name: string, obj: any, attrs: javax.naming.directory.Attributes): void
+                public bind(name: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 // @ts-ignore
-                bind(name: javax.naming.Name, obj: any, attrs: javax.naming.directory.Attributes): void
+                public bind(name: javax.naming.Name, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 // @ts-ignore
-                rebind(name: string, obj: any, attrs: javax.naming.directory.Attributes): void
+                public rebind(name: java.lang.String | string, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 // @ts-ignore
-                rebind(name: javax.naming.Name, obj: any, attrs: javax.naming.directory.Attributes): void
+                public rebind(name: javax.naming.Name, obj: java.lang.Object | any, attrs: javax.naming.directory.Attributes): void
                 // @ts-ignore
-                createSubcontext(name: string, attrs: javax.naming.directory.Attributes): javax.naming.directory.DirContext
+                public createSubcontext(name: java.lang.String | string, attrs: javax.naming.directory.Attributes): javax.naming.directory.DirContext
                 // @ts-ignore
-                createSubcontext(name: javax.naming.Name, attrs: javax.naming.directory.Attributes): javax.naming.directory.DirContext
+                public createSubcontext(name: javax.naming.Name, attrs: javax.naming.directory.Attributes): javax.naming.directory.DirContext
                 // @ts-ignore
-                getSchema(name: string): javax.naming.directory.DirContext
+                public getSchema(name: java.lang.String | string): javax.naming.directory.DirContext
                 // @ts-ignore
-                getSchema(name: javax.naming.Name): javax.naming.directory.DirContext
+                public getSchema(name: javax.naming.Name): javax.naming.directory.DirContext
                 // @ts-ignore
-                getSchemaClassDefinition(name: string): javax.naming.directory.DirContext
+                public getSchemaClassDefinition(name: java.lang.String | string): javax.naming.directory.DirContext
                 // @ts-ignore
-                getSchemaClassDefinition(name: javax.naming.Name): javax.naming.directory.DirContext
+                public getSchemaClassDefinition(name: javax.naming.Name): javax.naming.directory.DirContext
                 // @ts-ignore
-                search(name: string, matchingAttributes: javax.naming.directory.Attributes): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: java.lang.String | string, matchingAttributes: javax.naming.directory.Attributes): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: javax.naming.Name, matchingAttributes: javax.naming.directory.Attributes): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: javax.naming.Name, matchingAttributes: javax.naming.directory.Attributes): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: string, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: java.lang.String | string, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: java.lang.String[] | string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: javax.naming.Name, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: javax.naming.Name, matchingAttributes: javax.naming.directory.Attributes, attributesToReturn: java.lang.String[] | string[]): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: string, filter: string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: java.lang.String | string, filter: java.lang.String | string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: javax.naming.Name, filter: string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: javax.naming.Name, filter: java.lang.String | string, cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: string, filterExpr: string, filterArgs: any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: java.lang.String | string, filterExpr: java.lang.String | string, filterArgs: java.lang.Object[] | any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
                 // @ts-ignore
-                search(name: javax.naming.Name, filterExpr: string, filterArgs: any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
+                public search(name: javax.naming.Name, filterExpr: java.lang.String | string, filterArgs: java.lang.Object[] | any[], cons: javax.naming.directory.SearchControls): javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>
             }
         }
     }

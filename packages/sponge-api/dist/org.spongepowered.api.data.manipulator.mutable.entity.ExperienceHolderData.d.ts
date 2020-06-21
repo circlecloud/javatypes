@@ -21,7 +21,7 @@ declare namespace org {
                                  * @see Keys#EXPERIENCE_SINCE_LEVEL
                                  */
                                 // @ts-ignore
-                                experienceSinceLevel(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                experienceSinceLevel(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the amount of experience
                                  * required between the current {@link #level()} and the next level.
@@ -31,7 +31,7 @@ declare namespace org {
                                  * @see Keys#EXPERIENCE_FROM_START_OF_LEVEL
                                  */
                                 // @ts-ignore
-                                getExperienceBetweenLevels(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                getExperienceBetweenLevels(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the current "level" of
                                  * experience deserved according to the {@link #totalExperience()} and
@@ -41,14 +41,14 @@ declare namespace org {
                                  * @see Keys#EXPERIENCE_LEVEL
                                  */
                                 // @ts-ignore
-                                level(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                level(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the total amount of experience stored.
                                  * @return The value of total amount of experience
                                  * @see Keys#TOTAL_EXPERIENCE
                                  */
                                 // @ts-ignore
-                                totalExperience(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                totalExperience(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

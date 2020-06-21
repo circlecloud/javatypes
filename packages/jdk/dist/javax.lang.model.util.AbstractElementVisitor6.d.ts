@@ -42,7 +42,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class AbstractElementVisitor6<R, P> extends java.lang.Object implements javax.lang.model.element.ElementVisitor<R, P> {
+                abstract class AbstractElementVisitor6<R, P> extends java.lang.Object implements javax.lang.model.element.ElementVisitor<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @return a visitor-specified result
                      */
                     // @ts-ignore
-                    visit(e: javax.lang.model.element.Element, p: P): R
+                    public visit(e: javax.lang.model.element.Element, p: P): R
                     /**
                      * Visits any program element as if by passing itself to that
                      * element's {@link Element#accept accept} method and passing
@@ -69,7 +69,7 @@ declare namespace javax {
                      * @return a visitor-specified result
                      */
                     // @ts-ignore
-                    visit(e: javax.lang.model.element.Element): R
+                    public visit(e: javax.lang.model.element.Element): R
                     /**
                      * {@inheritDoc}
                      * <p> The default implementation of this method in
@@ -83,7 +83,7 @@ declare namespace javax {
                      *           a visitor implementation may optionally throw this exception
                      */
                     // @ts-ignore
-                    visitUnknown(e: javax.lang.model.element.Element, p: P): R
+                    public visitUnknown(e: javax.lang.model.element.Element, p: P): R
                 }
             }
         }

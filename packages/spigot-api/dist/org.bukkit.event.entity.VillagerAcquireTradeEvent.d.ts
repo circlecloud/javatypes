@@ -14,23 +14,23 @@ declare namespace org {
                      * @return the new recipe
                      */
                     // @ts-ignore
-                    getRecipe(): org.bukkit.inventory.MerchantRecipe
+                    public getRecipe(): org.bukkit.inventory.MerchantRecipe
                     /**
                      * Set the recipe to be acquired.
                      * @param recipe the new recipe
                      */
                     // @ts-ignore
-                    setRecipe(recipe: org.bukkit.inventory.MerchantRecipe): void
+                    public setRecipe(recipe: org.bukkit.inventory.MerchantRecipe): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.AbstractVillager
+                    public getEntity(): org.bukkit.entity.AbstractVillager
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

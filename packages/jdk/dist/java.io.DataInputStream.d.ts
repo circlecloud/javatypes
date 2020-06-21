@@ -57,7 +57,7 @@ declare namespace java {
              * @see java.io.InputStream#read(byte[], int, int)
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from the contained
              * input stream into an array of bytes.  An attempt is made to read
@@ -99,7 +99,7 @@ declare namespace java {
              * @see java.io.InputStream#read(byte[], int, int)
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * See the general contract of the <code>readFully</code>
              * method of <code>DataInput</code>.
@@ -116,7 +116,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readFully(b: number /*byte*/[]): void
+            public readFully(b: number /*byte*/[]): void
             /**
              * See the general contract of the <code>readFully</code>
              * method of <code>DataInput</code>.
@@ -135,7 +135,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readFully(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public readFully(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * See the general contract of the <code>skipBytes</code>
              * method of <code>DataInput</code>.
@@ -150,7 +150,7 @@ declare namespace java {
              *              reading after close, or another I/O error occurs.
              */
             // @ts-ignore
-            skipBytes(n: number /*int*/): int
+            public skipBytes(n: number /*int*/): number /*int*/
             /**
              * See the general contract of the <code>readBoolean</code>
              * method of <code>DataInput</code>.
@@ -165,7 +165,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readBoolean(): boolean
+            public readBoolean(): boolean
             /**
              * See the general contract of the <code>readByte</code>
              * method of <code>DataInput</code>.
@@ -182,7 +182,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readByte(): byte
+            public readByte(): number /*byte*/
             /**
              * See the general contract of the <code>readUnsignedByte</code>
              * method of <code>DataInput</code>.
@@ -199,7 +199,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readUnsignedByte(): int
+            public readUnsignedByte(): number /*int*/
             /**
              * See the general contract of the <code>readShort</code>
              * method of <code>DataInput</code>.
@@ -217,7 +217,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readShort(): short
+            public readShort(): number /*short*/
             /**
              * See the general contract of the <code>readUnsignedShort</code>
              * method of <code>DataInput</code>.
@@ -235,7 +235,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readUnsignedShort(): int
+            public readUnsignedShort(): number /*int*/
             /**
              * See the general contract of the <code>readChar</code>
              * method of <code>DataInput</code>.
@@ -253,7 +253,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readChar(): char
+            public readChar(): string
             /**
              * See the general contract of the <code>readInt</code>
              * method of <code>DataInput</code>.
@@ -271,7 +271,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readInt(): int
+            public readInt(): number /*int*/
             /**
              * See the general contract of the <code>readLong</code>
              * method of <code>DataInput</code>.
@@ -289,7 +289,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readLong(): long
+            public readLong(): number /*long*/
             /**
              * See the general contract of the <code>readFloat</code>
              * method of <code>DataInput</code>.
@@ -308,7 +308,7 @@ declare namespace java {
              * @see java.lang.Float#intBitsToFloat(int)
              */
             // @ts-ignore
-            readFloat(): float
+            public readFloat(): number /*float*/
             /**
              * See the general contract of the <code>readDouble</code>
              * method of <code>DataInput</code>.
@@ -327,7 +327,7 @@ declare namespace java {
              * @see java.lang.Double#longBitsToDouble(long)
              */
             // @ts-ignore
-            readDouble(): double
+            public readDouble(): number /*double*/
             /**
              * See the general contract of the <code>readLine</code>
              * method of <code>DataInput</code>.
@@ -354,7 +354,7 @@ declare namespace java {
              * @see java.io.FilterInputStream#in
              */
             // @ts-ignore
-            readLine(): java.lang.String
+            public readLine(): string
             /**
              * See the general contract of the <code>readUTF</code>
              * method of <code>DataInput</code>.
@@ -373,7 +373,7 @@ declare namespace java {
              * @see java.io.DataInputStream#readUTF(java.io.DataInput)
              */
             // @ts-ignore
-            readUTF(): java.lang.String
+            public readUTF(): string
             /**
              * Reads from the
              * stream <code>in</code> a representation
@@ -395,7 +395,7 @@ declare namespace java {
              * @see java.io.DataInputStream#readUnsignedShort()
              */
             // @ts-ignore
-            readUTF(input: java.io.DataInput): java.lang.String
+            public static readUTF(input: java.io.DataInput): string
         }
     }
 }

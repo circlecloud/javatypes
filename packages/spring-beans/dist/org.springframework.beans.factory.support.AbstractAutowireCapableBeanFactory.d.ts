@@ -36,7 +36,7 @@ declare namespace org {
                      * @see BeanDefinitionRegistry
                      */
                     // @ts-ignore
-                    class AbstractAutowireCapableBeanFactory extends org.springframework.beans.factory.support.AbstractBeanFactory implements org.springframework.beans.factory.config.AutowireCapableBeanFactory {
+                    abstract class AbstractAutowireCapableBeanFactory extends org.springframework.beans.factory.support.AbstractBeanFactory implements org.springframework.beans.factory.config.AutowireCapableBeanFactory {
                         /**
                          * Create a new AbstractAutowireCapableBeanFactory.
                          */
@@ -54,7 +54,7 @@ declare namespace org {
                          * @see CglibSubclassingInstantiationStrategy
                          */
                         // @ts-ignore
-                        setInstantiationStrategy(instantiationStrategy: org.springframework.beans.factory.support.InstantiationStrategy): void
+                        public setInstantiationStrategy(instantiationStrategy: org.springframework.beans.factory.support.InstantiationStrategy): void
                         /**
                          * Return the instantiation strategy to use for creating bean instances.
                          */
@@ -66,7 +66,7 @@ declare namespace org {
                          * <p>Default is a {@link DefaultParameterNameDiscoverer}.
                          */
                         // @ts-ignore
-                        setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
+                        public setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
                         /**
                          * Return the ParameterNameDiscoverer to use for resolving method parameter
                          * names if needed.
@@ -87,7 +87,7 @@ declare namespace org {
                          * involved delegate to a third bean that encapsulates their common logic.
                          */
                         // @ts-ignore
-                        setAllowCircularReferences(allowCircularReferences: boolean): void
+                        public setAllowCircularReferences(allowCircularReferences: boolean): void
                         /**
                          * Set whether to allow the raw injection of a bean instance into some other
                          * bean's property, despite the injected bean eventually getting wrapped
@@ -103,13 +103,13 @@ declare namespace org {
                          * @see #setAllowCircularReferences
                          */
                         // @ts-ignore
-                        setAllowRawInjectionDespiteWrapping(allowRawInjectionDespiteWrapping: boolean): void
+                        public setAllowRawInjectionDespiteWrapping(allowRawInjectionDespiteWrapping: boolean): void
                         /**
                          * Ignore the given dependency type for autowiring:
                          * for example, String. Default is none.
                          */
                         // @ts-ignore
-                        ignoreDependencyType(type: java.lang.Class<any>): void
+                        public ignoreDependencyType(type: java.lang.Class<any>): void
                         /**
                          * Ignore the given dependency interface for autowiring.
                          * <p>This will typically be used by application contexts to register
@@ -121,42 +121,42 @@ declare namespace org {
                          * @see org.springframework.context.ApplicationContextAware
                          */
                         // @ts-ignore
-                        ignoreDependencyInterface(ifc: java.lang.Class<any>): void
+                        public ignoreDependencyInterface(ifc: java.lang.Class<any>): void
                         // @ts-ignore
-                        copyConfigurationFrom(otherFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory): void
+                        public copyConfigurationFrom(otherFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory): void
                         // @ts-ignore
-                        createBean<T>(beanClass: java.lang.Class<T>): T
+                        public createBean<T>(beanClass: java.lang.Class<T>): T
                         // @ts-ignore
-                        autowireBean(existingBean: any): void
+                        public autowireBean(existingBean: java.lang.Object | any): void
                         // @ts-ignore
-                        configureBean(existingBean: any, beanName: string): java.lang.Object
+                        public configureBean(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        createBean(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): java.lang.Object
+                        public createBean(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): any
                         // @ts-ignore
-                        autowire(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): java.lang.Object
+                        public autowire(beanClass: java.lang.Class<any>, autowireMode: number /*int*/, dependencyCheck: boolean): any
                         // @ts-ignore
-                        autowireBeanProperties(existingBean: any, autowireMode: number /*int*/, dependencyCheck: boolean): void
+                        public autowireBeanProperties(existingBean: java.lang.Object | any, autowireMode: number /*int*/, dependencyCheck: boolean): void
                         // @ts-ignore
-                        applyBeanPropertyValues(existingBean: any, beanName: string): void
+                        public applyBeanPropertyValues(existingBean: java.lang.Object | any, beanName: java.lang.String | string): void
                         // @ts-ignore
-                        initializeBean(existingBean: any, beanName: string): java.lang.Object
+                        public initializeBean(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        applyBeanPostProcessorsBeforeInitialization(existingBean: any, beanName: string): java.lang.Object
+                        public applyBeanPostProcessorsBeforeInitialization(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        applyBeanPostProcessorsAfterInitialization(existingBean: any, beanName: string): java.lang.Object
+                        public applyBeanPostProcessorsAfterInitialization(existingBean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        destroyBean(existingBean: any): void
+                        public destroyBean(existingBean: java.lang.Object | any): void
                         // @ts-ignore
-                        resolveBeanByName(name: string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.lang.Object
+                        public resolveBeanByName(name: java.lang.String | string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): any
                         // @ts-ignore
-                        resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: string): java.lang.Object
+                        public resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: java.lang.String | string): any
                         /**
                          * Central method of this class: creates a bean instance,
                          * populates the bean instance, applies post-processors, etc.
                          * @see #doCreateBean
                          */
                         // @ts-ignore
-                        createBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: any[]): java.lang.Object
+                        createBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: java.lang.Object[] | any[]): any
                         /**
                          * Actually create the specified bean. Pre-creation processing has already happened
                          * at this point, e.g. checking {@code postProcessBeforeInstantiation} callbacks.
@@ -172,9 +172,9 @@ declare namespace org {
                          * @see #autowireConstructor
                          */
                         // @ts-ignore
-                        doCreateBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: any[]): java.lang.Object
+                        doCreateBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: java.lang.Object[] | any[]): any
                         // @ts-ignore
-                        predictBeanType(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class[]): java.lang.Class<?>
+                        predictBeanType(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class<any>[]): java.lang.Class<any>
                         /**
                          * Determine the target type for the given bean definition.
                          * @param beanName the name of the bean (for error handling purposes)
@@ -184,7 +184,7 @@ declare namespace org {
                          * @return the type for the bean if determinable, or {#code null} otherwise
                          */
                         // @ts-ignore
-                        determineTargetType(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class[]): java.lang.Class<?>
+                        determineTargetType(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class<any>[]): java.lang.Class<any>
                         /**
                          * Determine the target type for the given bean definition which is based on
                          * a factory method. Only called if there is no singleton instance registered
@@ -200,7 +200,7 @@ declare namespace org {
                          * @see #createBean
                          */
                         // @ts-ignore
-                        getTypeForFactoryMethod(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class[]): java.lang.Class<?>
+                        getTypeForFactoryMethod(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ...typesToMatch: java.lang.Class<any>[]): java.lang.Class<any>
                         /**
                          * This implementation attempts to query the FactoryBean's generic parameter metadata
                          * if present to determine the object type. If not present, i.e. the FactoryBean is
@@ -214,7 +214,7 @@ declare namespace org {
                          * it will be fully created to check the type of its exposed object.
                          */
                         // @ts-ignore
-                        getTypeForFactoryBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, allowInit: boolean): ResolvableType
+                        getTypeForFactoryBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, allowInit: boolean): ResolvableType
                         /**
                          * This implementation attempts to query the FactoryBean's generic parameter metadata
                          * if present to determine the object type. If not present, i.e. the FactoryBean is
@@ -227,7 +227,7 @@ declare namespace org {
                          * it will be fully created to check the type of its exposed object.
                          */
                         // @ts-ignore
-                        getTypeForFactoryBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Class<?>
+                        getTypeForFactoryBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Class<any>
                         /**
                          * Obtain a reference for early access to the specified bean,
                          * typically for the purpose of resolving a circular reference.
@@ -237,7 +237,7 @@ declare namespace org {
                          * @return the object to expose as bean reference
                          */
                         // @ts-ignore
-                        getEarlyBeanReference(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, bean: any): java.lang.Object
+                        getEarlyBeanReference(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, bean: java.lang.Object | any): any
                         /**
                          * Apply MergedBeanDefinitionPostProcessors to the specified bean definition,
                          * invoking their {@code postProcessMergedBeanDefinition} methods.
@@ -247,7 +247,7 @@ declare namespace org {
                          * @see MergedBeanDefinitionPostProcessor#postProcessMergedBeanDefinition
                          */
                         // @ts-ignore
-                        applyMergedBeanDefinitionPostProcessors(mbd: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: string): void
+                        applyMergedBeanDefinitionPostProcessors(mbd: org.springframework.beans.factory.support.RootBeanDefinition, beanType: java.lang.Class<any>, beanName: java.lang.String | string): void
                         /**
                          * Apply before-instantiation post-processors, resolving whether there is a
                          * before-instantiation shortcut for the specified bean.
@@ -256,7 +256,7 @@ declare namespace org {
                          * @return the shortcut-determined bean instance, or {#code null} if none
                          */
                         // @ts-ignore
-                        resolveBeforeInstantiation(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Object
+                        resolveBeforeInstantiation(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): any
                         /**
                          * Apply InstantiationAwareBeanPostProcessors to the specified bean definition
                          * (by class and name), invoking their {@code postProcessBeforeInstantiation} methods.
@@ -269,7 +269,7 @@ declare namespace org {
                          * @see InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation
                          */
                         // @ts-ignore
-                        applyBeanPostProcessorsBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: string): java.lang.Object
+                        applyBeanPostProcessorsBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): any
                         /**
                          * Create a new instance for the specified bean, using an appropriate instantiation strategy:
                          * factory method, constructor autowiring, or simple instantiation.
@@ -283,7 +283,7 @@ declare namespace org {
                          * @see #instantiateBean
                          */
                         // @ts-ignore
-                        createBeanInstance(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: any[]): org.springframework.beans.BeanWrapper
+                        createBeanInstance(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, args: java.lang.Object[] | any[]): org.springframework.beans.BeanWrapper
                         /**
                          * Obtain a bean instance from the given supplier.
                          * @param instanceSupplier the configured supplier
@@ -293,7 +293,7 @@ declare namespace org {
                          * @see #getObjectForBeanInstance
                          */
                         // @ts-ignore
-                        obtainFromSupplier(instanceSupplier: java.util.function.Supplier<any> | java.util.function$.Supplier<?>, beanName: string): org.springframework.beans.BeanWrapper
+                        obtainFromSupplier(instanceSupplier: java.util.function$.Supplier<any>, beanName: java.lang.String | string): org.springframework.beans.BeanWrapper
                         /**
                          * Overridden in order to implicitly register the currently created bean as
                          * dependent on further beans getting programmatically retrieved during a
@@ -302,7 +302,7 @@ declare namespace org {
                          * @see #obtainFromSupplier
                          */
                         // @ts-ignore
-                        getObjectForBeanInstance(beanInstance: any, name: string, beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Object
+                        getObjectForBeanInstance(beanInstance: java.lang.Object | any, name: java.lang.String | string, beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): any
                         /**
                          * Determine candidate constructors to use for the given bean, checking all registered
                          * {@link SmartInstantiationAwareBeanPostProcessor SmartInstantiationAwareBeanPostProcessors}.
@@ -313,7 +313,7 @@ declare namespace org {
                          * @see org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor#determineCandidateConstructors
                          */
                         // @ts-ignore
-                        determineConstructorsFromBeanPostProcessors(beanClass: java.lang.Class<any>, beanName: string): java.lang.reflect.Constructor[]
+                        determineConstructorsFromBeanPostProcessors(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.reflect.Constructor<any>[]
                         /**
                          * Instantiate the given bean using its default constructor.
                          * @param beanName the name of the bean
@@ -321,7 +321,7 @@ declare namespace org {
                          * @return a BeanWrapper for the new instance
                          */
                         // @ts-ignore
-                        instantiateBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): org.springframework.beans.BeanWrapper
+                        instantiateBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition): org.springframework.beans.BeanWrapper
                         /**
                          * Instantiate the bean using a named factory method. The method may be static, if the
                          * mbd parameter specifies a class, rather than a factoryBean, or an instance variable
@@ -334,7 +334,7 @@ declare namespace org {
                          * @see #getBean(String, Object[])
                          */
                         // @ts-ignore
-                        instantiateUsingFactoryMethod(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, explicitArgs: any[]): org.springframework.beans.BeanWrapper
+                        instantiateUsingFactoryMethod(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, explicitArgs: java.lang.Object[] | any[]): org.springframework.beans.BeanWrapper
                         /**
                          * "autowire constructor" (with constructor arguments by type) behavior.
                          * Also applied if explicit constructor argument values are specified,
@@ -350,7 +350,7 @@ declare namespace org {
                          * @return a BeanWrapper for the new instance
                          */
                         // @ts-ignore
-                        autowireConstructor(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ctors: java.lang.reflect.Constructor[], explicitArgs: any[]): org.springframework.beans.BeanWrapper
+                        autowireConstructor(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, ctors: java.lang.reflect.Constructor<any>[], explicitArgs: java.lang.Object[] | any[]): org.springframework.beans.BeanWrapper
                         /**
                          * Populate the bean instance in the given BeanWrapper with the property values
                          * from the bean definition.
@@ -359,7 +359,7 @@ declare namespace org {
                          * @param bw the BeanWrapper with bean instance
                          */
                         // @ts-ignore
-                        populateBean(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, bw: org.springframework.beans.BeanWrapper): void
+                        populateBean(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, bw: org.springframework.beans.BeanWrapper): void
                         /**
                          * Fill in any missing property values with references to
                          * other beans in this factory if autowire is set to "byName".
@@ -370,7 +370,7 @@ declare namespace org {
                          * @param pvs the PropertyValues to register wired objects with
                          */
                         // @ts-ignore
-                        autowireByName(beanName: string, mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, bw: org.springframework.beans.BeanWrapper, pvs: org.springframework.beans.MutablePropertyValues): void
+                        autowireByName(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, bw: org.springframework.beans.BeanWrapper, pvs: org.springframework.beans.MutablePropertyValues): void
                         /**
                          * Abstract method defining "autowire by type" (bean properties by type) behavior.
                          * <p>This is like PicoContainer default, in which there must be exactly one bean
@@ -383,7 +383,7 @@ declare namespace org {
                          * @param pvs the PropertyValues to register wired objects with
                          */
                         // @ts-ignore
-                        autowireByType(beanName: string, mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, bw: org.springframework.beans.BeanWrapper, pvs: org.springframework.beans.MutablePropertyValues): void
+                        autowireByType(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, bw: org.springframework.beans.BeanWrapper, pvs: org.springframework.beans.MutablePropertyValues): void
                         /**
                          * Return an array of non-simple bean properties that are unsatisfied.
                          * These are probably unsatisfied references to other beans in the
@@ -394,7 +394,7 @@ declare namespace org {
                          * @see org.springframework.beans.BeanUtils#isSimpleProperty
                          */
                         // @ts-ignore
-                        unsatisfiedNonSimpleProperties(mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, bw: org.springframework.beans.BeanWrapper): java.lang.String[]
+                        unsatisfiedNonSimpleProperties(mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, bw: org.springframework.beans.BeanWrapper): string[]
                         /**
                          * Extract a filtered set of PropertyDescriptors from the given BeanWrapper,
                          * excluding ignored dependency types or properties defined on ignored dependency interfaces.
@@ -438,7 +438,7 @@ declare namespace org {
                          * @see #isExcludedFromDependencyCheck(java.beans.PropertyDescriptor)
                          */
                         // @ts-ignore
-                        checkDependencies(beanName: string, mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, pds: java.beans.PropertyDescriptor[], pvs: org.springframework.beans.PropertyValues): void
+                        checkDependencies(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.AbstractBeanDefinition, pds: java.beans.PropertyDescriptor[], pvs: org.springframework.beans.PropertyValues): void
                         /**
                          * Apply the given property values, resolving any runtime references
                          * to other beans in this bean factory. Must use deep copy, so we
@@ -449,7 +449,7 @@ declare namespace org {
                          * @param pvs the new property values
                          */
                         // @ts-ignore
-                        applyPropertyValues(beanName: string, mbd: org.springframework.beans.factory.config.BeanDefinition, bw: org.springframework.beans.BeanWrapper, pvs: org.springframework.beans.PropertyValues): void
+                        applyPropertyValues(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.config.BeanDefinition, bw: org.springframework.beans.BeanWrapper, pvs: org.springframework.beans.PropertyValues): void
                         /**
                          * Initialize the given bean instance, applying factory callbacks
                          * as well as init methods and bean post processors.
@@ -468,7 +468,7 @@ declare namespace org {
                          * @see #applyBeanPostProcessorsAfterInitialization
                          */
                         // @ts-ignore
-                        initializeBean(beanName: string, bean: any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): java.lang.Object
+                        initializeBean(beanName: java.lang.String | string, bean: java.lang.Object | any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): any
                         /**
                          * Give a bean a chance to react now all its properties are set,
                          * and a chance to know about its owning bean factory (this object).
@@ -482,7 +482,7 @@ declare namespace org {
                          * @see #invokeCustomInitMethod
                          */
                         // @ts-ignore
-                        invokeInitMethods(beanName: string, bean: any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
+                        invokeInitMethods(beanName: java.lang.String | string, bean: java.lang.Object | any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
                         /**
                          * Invoke the specified custom init method on the given bean.
                          * Called by invokeInitMethods.
@@ -491,7 +491,7 @@ declare namespace org {
                          * @see #invokeInitMethods
                          */
                         // @ts-ignore
-                        invokeCustomInitMethod(beanName: string, bean: any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
+                        invokeCustomInitMethod(beanName: java.lang.String | string, bean: java.lang.Object | any, mbd: org.springframework.beans.factory.support.RootBeanDefinition): void
                         /**
                          * Applies the {@code postProcessAfterInitialization} callback of all
                          * registered BeanPostProcessors, giving them a chance to post-process the
@@ -499,12 +499,12 @@ declare namespace org {
                          * @see #applyBeanPostProcessorsAfterInitialization
                          */
                         // @ts-ignore
-                        postProcessObjectFromFactoryBean(object: any, beanName: string): java.lang.Object
+                        postProcessObjectFromFactoryBean(object: java.lang.Object | any, beanName: java.lang.String | string): any
                         /**
                          * Overridden to clear FactoryBean instance cache as well.
                          */
                         // @ts-ignore
-                        removeSingleton(beanName: string): void
+                        removeSingleton(beanName: java.lang.String | string): void
                         /**
                          * Overridden to clear FactoryBean instance cache as well.
                          */

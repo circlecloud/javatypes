@@ -33,7 +33,7 @@ declare namespace org {
                  * @param id identifier for this stop watch
                  */
                 // @ts-ignore
-                constructor(id: string)
+                constructor(id: java.lang.String | string)
                 /**
                  * Get the ID of this {@code StopWatch}, as specified on construction.
                  * @return the ID (empty String by default)
@@ -41,7 +41,7 @@ declare namespace org {
                  * @see #StopWatch(String)
                  */
                 // @ts-ignore
-                getId(): java.lang.String
+                public getId(): string
                 /**
                  * Configure whether the {@link TaskInfo} array is built over time.
                  * <p>Set this to {@code false} when using a {@code StopWatch} for millions
@@ -50,7 +50,7 @@ declare namespace org {
                  * <p>Default is {@code true}.
                  */
                 // @ts-ignore
-                setKeepTaskList(keepTaskList: boolean): void
+                public setKeepTaskList(keepTaskList: boolean): void
                 /**
                  * Start an unnamed task.
                  * <p>The results are undefined if {@link #stop()} or timing methods are
@@ -59,7 +59,7 @@ declare namespace org {
                  * @see #stop()
                  */
                 // @ts-ignore
-                start(): void
+                public start(): void
                 /**
                  * Start a named task.
                  * <p>The results are undefined if {@link #stop()} or timing methods are
@@ -69,7 +69,7 @@ declare namespace org {
                  * @see #stop()
                  */
                 // @ts-ignore
-                start(taskName: string): void
+                public start(taskName: java.lang.String | string): void
                 /**
                  * Stop the current task.
                  * <p>The results are undefined if timing methods are called without invoking
@@ -78,43 +78,43 @@ declare namespace org {
                  * @see #start(String)
                  */
                 // @ts-ignore
-                stop(): void
+                public stop(): void
                 /**
                  * Determine whether this {@code StopWatch} is currently running.
                  * @see #currentTaskName()
                  */
                 // @ts-ignore
-                isRunning(): boolean
+                public isRunning(): boolean
                 /**
                  * Get the name of the currently running task, if any.
                  * @since 4.2.2
                  * @see #isRunning()
                  */
                 // @ts-ignore
-                currentTaskName(): java.lang.String
+                public currentTaskName(): string
                 /**
                  * Get the time taken by the last task in nanoseconds.
                  * @since 5.2
                  * @see #getLastTaskTimeMillis()
                  */
                 // @ts-ignore
-                getLastTaskTimeNanos(): long
+                public getLastTaskTimeNanos(): number /*long*/
                 /**
                  * Get the time taken by the last task in milliseconds.
                  * @see #getLastTaskTimeNanos()
                  */
                 // @ts-ignore
-                getLastTaskTimeMillis(): long
+                public getLastTaskTimeMillis(): number /*long*/
                 /**
                  * Get the name of the last task.
                  */
                 // @ts-ignore
-                getLastTaskName(): java.lang.String
+                public getLastTaskName(): string
                 /**
                  * Get the last task as a {@link TaskInfo} object.
                  */
                 // @ts-ignore
-                getLastTaskInfo(): org.springframework.util.StopWatch.TaskInfo
+                public getLastTaskInfo(): org.springframework.util.StopWatch.TaskInfo
                 /**
                  * Get the total time in nanoseconds for all tasks.
                  * @since 5.2
@@ -122,50 +122,50 @@ declare namespace org {
                  * @see #getTotalTimeSeconds()
                  */
                 // @ts-ignore
-                getTotalTimeNanos(): long
+                public getTotalTimeNanos(): number /*long*/
                 /**
                  * Get the total time in milliseconds for all tasks.
                  * @see #getTotalTimeNanos()
                  * @see #getTotalTimeSeconds()
                  */
                 // @ts-ignore
-                getTotalTimeMillis(): long
+                public getTotalTimeMillis(): number /*long*/
                 /**
                  * Get the total time in seconds for all tasks.
                  * @see #getTotalTimeNanos()
                  * @see #getTotalTimeMillis()
                  */
                 // @ts-ignore
-                getTotalTimeSeconds(): double
+                public getTotalTimeSeconds(): number /*double*/
                 /**
                  * Get the number of tasks timed.
                  */
                 // @ts-ignore
-                getTaskCount(): int
+                public getTaskCount(): number /*int*/
                 /**
                  * Get an array of the data for tasks performed.
                  */
                 // @ts-ignore
-                getTaskInfo(): org.springframework.util.StopWatch.TaskInfo[]
+                public getTaskInfo(): org.springframework.util.StopWatch.TaskInfo[]
                 /**
                  * Get a short description of the total running time.
                  */
                 // @ts-ignore
-                shortSummary(): java.lang.String
+                public shortSummary(): string
                 /**
                  * Generate a string with a table describing all tasks performed.
                  * <p>For custom reporting, call {@link #getTaskInfo()} and use the task info
                  * directly.
                  */
                 // @ts-ignore
-                prettyPrint(): java.lang.String
+                public prettyPrint(): string
                 /**
                  * Generate an informative string describing all tasks performed
                  * <p>For custom reporting, call {@link #getTaskInfo()} and use the task info
                  * directly.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

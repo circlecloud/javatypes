@@ -13,7 +13,7 @@ declare namespace org {
                      * Generate a JSON snapshot of current beans and their dependencies.
                      */
                     // @ts-ignore
-                    getSnapshotAsJson(): java.lang.String
+                    getSnapshotAsJson(): string
                 }
             }
         }

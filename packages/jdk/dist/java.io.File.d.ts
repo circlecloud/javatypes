@@ -102,7 +102,7 @@ declare namespace java {
              *           If the <code>pathname</code> argument is <code>null</code>
              */
             // @ts-ignore
-            constructor(pathname: string)
+            constructor(pathname: java.lang.String | string)
             /**
              * Creates a new <code>File</code> instance from a parent pathname string
              * and a child pathname string.
@@ -126,7 +126,7 @@ declare namespace java {
              *           If <code>child</code> is <code>null</code>
              */
             // @ts-ignore
-            constructor(parent: string, child: string)
+            constructor(parent: java.lang.String | string, child: java.lang.String | string)
             /**
              * Creates a new <code>File</code> instance from a parent abstract
              * pathname and a child pathname string.
@@ -150,7 +150,7 @@ declare namespace java {
              *           If <code>child</code> is <code>null</code>
              */
             // @ts-ignore
-            constructor(parent: java.io.File, child: string)
+            constructor(parent: java.io.File, child: java.lang.String | string)
             /**
              * Creates a new <tt>File</tt> instance by converting the given
              * <tt>file:</tt> URI into an abstract pathname.
@@ -189,14 +189,14 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String)
              */
             // @ts-ignore
-            readonly separatorChar: string
+            public static readonly separatorChar: string
             /**
              * The system-dependent default name-separator character, represented as a
              * string for convenience.  This string contains a single character, namely
              * <code>{@link #separatorChar}</code>.
              */
             // @ts-ignore
-            readonly separator: string
+            public static readonly separator: java.lang.String | string
             /**
              * The system-dependent path-separator character.  This field is
              * initialized to contain the first character of the value of the system
@@ -207,14 +207,14 @@ declare namespace java {
              * @see java.lang.System#getProperty(java.lang.String)
              */
             // @ts-ignore
-            readonly pathSeparatorChar: string
+            public static readonly pathSeparatorChar: string
             /**
              * The system-dependent path-separator character, represented as a string
              * for convenience.  This string contains a single character, namely
              * <code>{@link #pathSeparatorChar}</code>.
              */
             // @ts-ignore
-            readonly pathSeparator: string
+            public static readonly pathSeparator: java.lang.String | string
             /**
              * Returns the name of the file or directory denoted by this abstract
              * pathname.  This is just the last name in the pathname's name
@@ -225,7 +225,7 @@ declare namespace java {
              *           is empty
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Returns the pathname string of this abstract pathname's parent, or
              * <code>null</code> if this pathname does not name a parent directory.
@@ -238,7 +238,7 @@ declare namespace java {
              *           does not name a parent
              */
             // @ts-ignore
-            getParent(): java.lang.String
+            public getParent(): string
             /**
              * Returns the abstract pathname of this abstract pathname's parent,
              * or <code>null</code> if this pathname does not name a parent
@@ -253,7 +253,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getParentFile(): java.io.File
+            public getParentFile(): java.io.File
             /**
              * Converts this abstract pathname into a pathname string.  The resulting
              * string uses the {@link #separator default name-separator character} to
@@ -261,7 +261,7 @@ declare namespace java {
              * @return The string form of this abstract pathname
              */
             // @ts-ignore
-            getPath(): java.lang.String
+            public getPath(): string
             /**
              * Tests whether this abstract pathname is absolute.  The definition of
              * absolute pathname is system dependent.  On UNIX systems, a pathname is
@@ -272,7 +272,7 @@ declare namespace java {
              *           <code>false</code> otherwise
              */
             // @ts-ignore
-            isAbsolute(): boolean
+            public isAbsolute(): boolean
             /**
              * Returns the absolute pathname string of this abstract pathname.
              * <p> If this abstract pathname is already absolute, then the pathname
@@ -293,7 +293,7 @@ declare namespace java {
              * @see java.io.File#isAbsolute()
              */
             // @ts-ignore
-            getAbsolutePath(): java.lang.String
+            public getAbsolutePath(): string
             /**
              * Returns the absolute form of this abstract pathname.  Equivalent to
              * <code>new&nbsp;File(this.{@link #getAbsolutePath})</code>.
@@ -304,7 +304,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getAbsoluteFile(): java.io.File
+            public getAbsoluteFile(): java.io.File
             /**
              * Returns the canonical pathname string of this abstract pathname.
              * <p> A canonical pathname is both absolute and unique.  The precise
@@ -338,7 +338,7 @@ declare namespace java {
              * @see Path#toRealPath
              */
             // @ts-ignore
-            getCanonicalPath(): java.lang.String
+            public getCanonicalPath(): string
             /**
              * Returns the canonical form of this abstract pathname.  Equivalent to
              * <code>new&nbsp;File(this.{@link #getCanonicalPath})</code>.
@@ -357,7 +357,7 @@ declare namespace java {
              * @see Path#toRealPath
              */
             // @ts-ignore
-            getCanonicalFile(): java.io.File
+            public getCanonicalFile(): java.io.File
             /**
              * Converts this abstract pathname into a <code>file:</code> URL.  The
              * exact form of the URL is system-dependent.  If it can be determined that
@@ -378,7 +378,7 @@ declare namespace java {
              *  via the {@link java.net.URI#toURL() URI.toURL} method.
              */
             // @ts-ignore
-            toURL(): java.net.URL
+            public toURL(): java.net.URL
             /**
              * Constructs a <tt>file:</tt> URI that represents this abstract pathname.
              * <p> The exact form of the URI is system-dependent.  If it can be
@@ -413,7 +413,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            toURI(): java.net.URI
+            public toURI(): java.net.URI
             /**
              * Tests whether the application can read the file denoted by this
              * abstract pathname. On some platforms it may be possible to start the
@@ -429,7 +429,7 @@ declare namespace java {
              *           method denies read access to the file
              */
             // @ts-ignore
-            canRead(): boolean
+            public canRead(): boolean
             /**
              * Tests whether the application can modify the file denoted by this
              * abstract pathname. On some platforms it may be possible to start the
@@ -446,7 +446,7 @@ declare namespace java {
              *           method denies write access to the file
              */
             // @ts-ignore
-            canWrite(): boolean
+            public canWrite(): boolean
             /**
              * Tests whether the file or directory denoted by this abstract pathname
              * exists.
@@ -458,7 +458,7 @@ declare namespace java {
              *           method denies read access to the file or directory
              */
             // @ts-ignore
-            exists(): boolean
+            public exists(): boolean
             /**
              * Tests whether the file denoted by this abstract pathname is a
              * directory.
@@ -476,7 +476,7 @@ declare namespace java {
              *           method denies read access to the file
              */
             // @ts-ignore
-            isDirectory(): boolean
+            public isDirectory(): boolean
             /**
              * Tests whether the file denoted by this abstract pathname is a normal
              * file.  A file is <em>normal</em> if it is not a directory and, in
@@ -496,7 +496,7 @@ declare namespace java {
              *           method denies read access to the file
              */
             // @ts-ignore
-            isFile(): boolean
+            public isFile(): boolean
             /**
              * Tests whether the file named by this abstract pathname is a hidden
              * file.  The exact definition of <em>hidden</em> is system-dependent.  On
@@ -513,7 +513,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            isHidden(): boolean
+            public isHidden(): boolean
             /**
              * Returns the time that the file denoted by this abstract pathname was
              * last modified.
@@ -533,7 +533,7 @@ declare namespace java {
              *           method denies read access to the file
              */
             // @ts-ignore
-            lastModified(): long
+            public lastModified(): number /*long*/
             /**
              * Returns the length of the file denoted by this abstract pathname.
              * The return value is unspecified if this pathname denotes a directory.
@@ -552,7 +552,7 @@ declare namespace java {
              *           method denies read access to the file
              */
             // @ts-ignore
-            length(): long
+            public length(): number /*long*/
             /**
              * Atomically creates a new, empty file named by this abstract pathname if
              * and only if a file with this name does not yet exist.  The check for the
@@ -576,7 +576,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            createNewFile(): boolean
+            public createNewFile(): boolean
             /**
              * Deletes the file or directory denoted by this abstract pathname.  If
              * this pathname denotes a directory, then the directory must be empty in
@@ -593,7 +593,7 @@ declare namespace java {
              *           delete access to the file
              */
             // @ts-ignore
-            delete(): boolean
+            public delete(): boolean
             /**
              * Requests that the file or directory denoted by this abstract
              * pathname be deleted when the virtual machine terminates.
@@ -617,7 +617,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            deleteOnExit(): void
+            public deleteOnExit(): void
             /**
              * Returns an array of strings naming the files and directories in the
              * directory denoted by this abstract pathname.
@@ -646,7 +646,7 @@ declare namespace java {
              *           the directory
              */
             // @ts-ignore
-            list(): java.lang.String[]
+            public list(): string[]
             /**
              * Returns an array of strings naming the files and directories in the
              * directory denoted by this abstract pathname that satisfy the specified
@@ -673,7 +673,7 @@ declare namespace java {
              * @see java.nio.file.Files#newDirectoryStream(Path,String)
              */
             // @ts-ignore
-            list(filter: java.io.FilenameFilter): java.lang.String[]
+            public list(filter: java.io.FilenameFilter): string[]
             /**
              * Returns an array of abstract pathnames denoting the files in the
              * directory denoted by this abstract pathname.
@@ -707,7 +707,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            listFiles(): java.io.File[]
+            public listFiles(): java.io.File[]
             /**
              * Returns an array of abstract pathnames denoting the files and
              * directories in the directory denoted by this abstract pathname that
@@ -735,7 +735,7 @@ declare namespace java {
              * @see java.nio.file.Files#newDirectoryStream(Path,String)
              */
             // @ts-ignore
-            listFiles(filter: java.io.FilenameFilter): java.io.File[]
+            public listFiles(filter: java.io.FilenameFilter): java.io.File[]
             /**
              * Returns an array of abstract pathnames denoting the files and
              * directories in the directory denoted by this abstract pathname that
@@ -761,7 +761,7 @@ declare namespace java {
              * @see java.nio.file.Files#newDirectoryStream(Path,java.nio.file.DirectoryStream.Filter)
              */
             // @ts-ignore
-            listFiles(filter: java.io.FileFilter): java.io.File[]
+            public listFiles(filter: java.io.FileFilter): java.io.File[]
             /**
              * Creates the directory named by this abstract pathname.
              * @return <code>true</code> if and only if the directory was
@@ -772,7 +772,7 @@ declare namespace java {
              *           method does not permit the named directory to be created
              */
             // @ts-ignore
-            mkdir(): boolean
+            public mkdir(): boolean
             /**
              * Creates the directory named by this abstract pathname, including any
              * necessary but nonexistent parent directories.  Note that if this
@@ -792,7 +792,7 @@ declare namespace java {
              *           parent directories to be created
              */
             // @ts-ignore
-            mkdirs(): boolean
+            public mkdirs(): boolean
             /**
              * Renames the file denoted by this abstract pathname.
              * <p> Many aspects of the behavior of this method are inherently
@@ -815,7 +815,7 @@ declare namespace java {
              *           If parameter <code>dest</code> is <code>null</code>
              */
             // @ts-ignore
-            renameTo(dest: java.io.File): boolean
+            public renameTo(dest: java.io.File): boolean
             /**
              * Sets the last-modified time of the file or directory named by this
              * abstract pathname.
@@ -837,7 +837,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setLastModified(time: number /*long*/): boolean
+            public setLastModified(time: number /*long*/): boolean
             /**
              * Marks the file or directory named by this abstract pathname so that
              * only read operations are allowed. After invoking this method the file
@@ -855,7 +855,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setReadOnly(): boolean
+            public setReadOnly(): boolean
             /**
              * Sets the owner's or everybody's write permission for this abstract
              * pathname. On some platforms it may be possible to start the Java virtual
@@ -883,7 +883,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setWritable(writable: boolean, ownerOnly: boolean): boolean
+            public setWritable(writable: boolean, ownerOnly: boolean): boolean
             /**
              * A convenience method to set the owner's write permission for this abstract
              * pathname. On some platforms it may be possible to start the Java virtual
@@ -906,7 +906,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setWritable(writable: boolean): boolean
+            public setWritable(writable: boolean): boolean
             /**
              * Sets the owner's or everybody's read permission for this abstract
              * pathname. On some platforms it may be possible to start the Java virtual
@@ -937,7 +937,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setReadable(readable: boolean, ownerOnly: boolean): boolean
+            public setReadable(readable: boolean, ownerOnly: boolean): boolean
             /**
              * A convenience method to set the owner's read permission for this abstract
              * pathname. On some platforms it may be possible to start the Java virtual
@@ -963,7 +963,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setReadable(readable: boolean): boolean
+            public setReadable(readable: boolean): boolean
             /**
              * Sets the owner's or everybody's execute permission for this abstract
              * pathname. On some platforms it may be possible to start the Java virtual
@@ -994,7 +994,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setExecutable(executable: boolean, ownerOnly: boolean): boolean
+            public setExecutable(executable: boolean, ownerOnly: boolean): boolean
             /**
              * A convenience method to set the owner's execute permission for this
              * abstract pathname. On some platforms it may be possible to start the Java
@@ -1020,7 +1020,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setExecutable(executable: boolean): boolean
+            public setExecutable(executable: boolean): boolean
             /**
              * Tests whether the application can execute the file denoted by this
              * abstract pathname. On some platforms it may be possible to start the
@@ -1036,7 +1036,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            canExecute(): boolean
+            public canExecute(): boolean
             /**
              * List the available filesystem roots.
              * <p> A particular Java platform may support zero or more
@@ -1074,7 +1074,7 @@ declare namespace java {
              * @see java.nio.file.FileStore
              */
             // @ts-ignore
-            listRoots(): java.io.File[]
+            public static listRoots(): java.io.File[]
             /**
              * Returns the size of the partition <a href="#partName">named</a> by this
              * abstract pathname.
@@ -1088,7 +1088,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getTotalSpace(): long
+            public getTotalSpace(): number /*long*/
             /**
              * Returns the number of unallocated bytes in the partition <a
              * href="#partName">named</a> by this abstract path name.
@@ -1112,7 +1112,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getFreeSpace(): long
+            public getFreeSpace(): number /*long*/
             /**
              * Returns the number of bytes available to this virtual machine on the
              * partition <a href="#partName">named</a> by this abstract pathname.  When
@@ -1139,7 +1139,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getUsableSpace(): long
+            public getUsableSpace(): number /*long*/
             /**
              * <p> Creates a new empty file in the specified directory, using the
              * given prefix and suffix strings to generate its name.  If this method
@@ -1197,7 +1197,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            createTempFile(prefix: string, suffix: string, directory: java.io.File): java.io.File
+            public static createTempFile(prefix: java.lang.String | string, suffix: java.lang.String | string, directory: java.io.File): java.io.File
             /**
              * Creates an empty file in the default temporary-file directory, using
              * the given prefix and suffix to generate its name. Invoking this method
@@ -1228,7 +1228,7 @@ declare namespace java {
              * @see java.nio.file.Files#createTempDirectory(String,FileAttribute[])
              */
             // @ts-ignore
-            createTempFile(prefix: string, suffix: string): java.io.File
+            public static createTempFile(prefix: java.lang.String | string, suffix: java.lang.String | string): java.io.File
             /**
              * Compares two abstract pathnames lexicographically.  The ordering
              * defined by this method depends upon the underlying system.  On UNIX
@@ -1244,7 +1244,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            compareTo(pathname: java.io.File): int
+            public compareTo(pathname: java.io.File): number /*int*/
             /**
              * Tests this abstract pathname for equality with the given object.
              * Returns <code>true</code> if and only if the argument is not
@@ -1258,7 +1258,7 @@ declare namespace java {
              *           <code>false</code> otherwise
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Computes a hash code for this abstract pathname.  Because equality of
              * abstract pathnames is inherently system-dependent, so is the computation
@@ -1273,14 +1273,14 @@ declare namespace java {
              * @return A hash code for this abstract pathname
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns the pathname string of this abstract pathname.  This is just the
              * string returned by the <code>{@link #getPath}</code> method.
              * @return The string form of this abstract pathname
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns a {@link Path java.nio.file.Path} object constructed from the
              * this abstract path. The resulting {@code Path} is associated with the
@@ -1303,7 +1303,7 @@ declare namespace java {
              * @see Path#toFile
              */
             // @ts-ignore
-            toPath(): java.nio.file.Path
+            public toPath(): java.nio.file.Path
         }
     }
 }

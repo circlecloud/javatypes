@@ -17,36 +17,36 @@ declare namespace javax {
                          * of DragController.
                          */
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         /**
                          * If dragger is not null it is messaged with completeDrag.
                          */
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                         /**
                          * If dragger is not null it is messaged with continueDrag.
                          */
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         /**
                          * Resets the cursor based on the orientation.
                          */
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when the mouse enters a component.
                          * @param e MouseEvent describing the details of the enter event.
                          * @since 1.5
                          */
                         // @ts-ignore
-                        mouseEntered(e: java.awt.event.MouseEvent): void
+                        public mouseEntered(e: java.awt.event.MouseEvent): void
                         /**
                          * Invoked when the mouse exits a component.
                          * @param e MouseEvent describing the details of the exit event.
                          * @since 1.5
                          */
                         // @ts-ignore
-                        mouseExited(e: java.awt.event.MouseEvent): void
+                        public mouseExited(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

@@ -172,13 +172,13 @@ declare namespace javax {
                  * @return the dimension.
                  */
                 // @ts-ignore
-                getDimension(): int
+                public getDimension(): number /*int*/
                 /**
                  * Returns the <i>open type</i> of element values contained in the arrays described by this <tt>ArrayType</tt> instance.
                  * @return the element type.
                  */
                 // @ts-ignore
-                getElementOpenType(): javax.management.openmbean.OpenType<?>
+                public getElementOpenType(): javax.management.openmbean.OpenType<any>
                 /**
                  * Returns <code>true</code> if the open data values this open
                  * type describes are primitive arrays, <code>false</code> otherwise.
@@ -186,7 +186,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                isPrimitiveArray(): boolean
+                public isPrimitiveArray(): boolean
                 /**
                  * Tests whether <var>obj</var> is a value for this <code>ArrayType</code>
                  * instance.
@@ -213,7 +213,7 @@ declare namespace javax {
                  *  <code>ArrayType</code> instance.
                  */
                 // @ts-ignore
-                isValue(obj: any): boolean
+                public isValue(obj: java.lang.Object | any): boolean
                 /**
                  * Compares the specified <code>obj</code> parameter with this
                  * <code>ArrayType</code> instance for equality.
@@ -230,7 +230,7 @@ declare namespace javax {
                  *          this <code>ArrayType</code> instance.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * Returns the hash code value for this <code>ArrayType</code> instance.
                  * <p>
@@ -252,7 +252,7 @@ declare namespace javax {
                  * @return the hash code value for this <code>ArrayType</code> instance
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string representation of this <code>ArrayType</code> instance.
                  * <p>
@@ -268,7 +268,7 @@ declare namespace javax {
                  * @return a string representation of this <code>ArrayType</code> instance
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Create an {@code ArrayType} instance in a type-safe manner.
                  * <p>
@@ -308,7 +308,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getArrayType<E>(elementType: javax.management.openmbean.OpenType<E>): javax.management.openmbean.ArrayType<E[]>
+                public static getArrayType<E>(elementType: javax.management.openmbean.OpenType<E>): javax.management.openmbean.ArrayType<E[]>
                 /**
                  * Create an {@code ArrayType} instance in a type-safe manner.
                  * <p>
@@ -341,7 +341,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getPrimitiveArrayType<T>(arrayClass: java.lang.Class<T>): javax.management.openmbean.ArrayType<T>
+                public static getPrimitiveArrayType<T>(arrayClass: java.lang.Class<T>): javax.management.openmbean.ArrayType<T>
             }
         }
     }

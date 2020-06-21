@@ -158,20 +158,20 @@ declare namespace javax {
                  * anything is known about the stream.
                  */
                 // @ts-ignore
-                
+                readonly StreamDescriptionProperty: java.lang.String | string
                 /**
                  * The property name for the title of the document, if
                  * there is one.
                  */
                 // @ts-ignore
-                
+                readonly TitleProperty: java.lang.String | string
                 /**
                  * Returns number of characters of content currently
                  * in the document.
                  * @return number of characters &gt;= 0
                  */
                 // @ts-ignore
-                getLength(): int
+                getLength(): number /*int*/
                 /**
                  * Registers the given observer to begin receiving notifications
                  * when changes are made to the document.
@@ -211,7 +211,7 @@ declare namespace javax {
                  * @see #putProperty(Object, Object)
                  */
                 // @ts-ignore
-                getProperty(key: any): java.lang.Object
+                getProperty(key: java.lang.Object | any): any
                 /**
                  * Associates a property with the document.  Two standard
                  * property keys provided are: <a href="#StreamDescriptionProperty">
@@ -223,7 +223,7 @@ declare namespace javax {
                  * @see #getProperty(Object)
                  */
                 // @ts-ignore
-                putProperty(key: any, value: any): void
+                putProperty(key: java.lang.Object | any, value: java.lang.Object | any): void
                 /**
                  * Removes a portion of the content of the document.
                  * This will cause a DocumentEvent of type
@@ -300,7 +300,7 @@ declare namespace javax {
                  * @see javax.swing.event.UndoableEditListener
                  */
                 // @ts-ignore
-                insertString(offset: number /*int*/, str: string, a: javax.swing.text.AttributeSet): void
+                insertString(offset: number /*int*/, str: java.lang.String | string, a: javax.swing.text.AttributeSet): void
                 /**
                  * Fetches the text contained within the given portion
                  * of the document.
@@ -313,7 +313,7 @@ declare namespace javax {
                  *    is the first bad position encountered.
                  */
                 // @ts-ignore
-                getText(offset: number /*int*/, length: number /*int*/): java.lang.String
+                getText(offset: number /*int*/, length: number /*int*/): string
                 /**
                  * Fetches the text contained within the given portion
                  * of the document.

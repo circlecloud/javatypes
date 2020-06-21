@@ -48,7 +48,7 @@ declare namespace org {
                          * @see #setInstanceSupplier
                          */
                         // @ts-ignore
-                        constructor(beanClass: java.lang.Class<T>, instanceSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>)
+                        constructor(beanClass: java.lang.Class<T>, instanceSupplier: java.util.function$.Supplier<T>)
                         /**
                          * Create a new RootBeanDefinition for a scoped bean, constructing each instance
                          * through calling the given supplier (possibly a lambda or method reference).
@@ -60,7 +60,7 @@ declare namespace org {
                          * @see #setInstanceSupplier
                          */
                         // @ts-ignore
-                        constructor(beanClass: java.lang.Class<T>, scope: string, instanceSupplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>)
+                        constructor(beanClass: java.lang.Class<T>, scope: java.lang.String | string, instanceSupplier: java.util.function$.Supplier<T>)
                         /**
                          * Create a new RootBeanDefinition for a singleton,
                          * using the given autowire mode.
@@ -87,7 +87,7 @@ declare namespace org {
                          * @param beanClassName the name of the class to instantiate
                          */
                         // @ts-ignore
-                        constructor(beanClassName: string)
+                        constructor(beanClassName: java.lang.String | string)
                         /**
                          * Create a new RootBeanDefinition for a singleton,
                          * providing constructor arguments and property values.
@@ -97,7 +97,7 @@ declare namespace org {
                          * @param pvs the property values to apply
                          */
                         // @ts-ignore
-                        constructor(beanClassName: string, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
+                        constructor(beanClassName: java.lang.String | string, cargs: org.springframework.beans.factory.config.ConstructorArgumentValues, pvs: org.springframework.beans.MutablePropertyValues)
                         /**
                          * Create a new RootBeanDefinition as deep copy of the given
                          * bean definition.
@@ -106,19 +106,19 @@ declare namespace org {
                         // @ts-ignore
                         constructor(original: org.springframework.beans.factory.support.RootBeanDefinition)
                         // @ts-ignore
-                        getParentName(): java.lang.String
+                        public getParentName(): string
                         // @ts-ignore
-                        setParentName(parentName: string): void
+                        public setParentName(parentName: java.lang.String | string): void
                         /**
                          * Register a target definition that is being decorated by this bean definition.
                          */
                         // @ts-ignore
-                        setDecoratedDefinition(decoratedDefinition: org.springframework.beans.factory.config.BeanDefinitionHolder): void
+                        public setDecoratedDefinition(decoratedDefinition: org.springframework.beans.factory.config.BeanDefinitionHolder): void
                         /**
                          * Return the target definition that is being decorated by this bean definition, if any.
                          */
                         // @ts-ignore
-                        getDecoratedDefinition(): org.springframework.beans.factory.config.BeanDefinitionHolder
+                        public getDecoratedDefinition(): org.springframework.beans.factory.config.BeanDefinitionHolder
                         /**
                          * Specify the {@link AnnotatedElement} defining qualifiers,
                          * to be used instead of the target class or factory method.
@@ -127,27 +127,27 @@ declare namespace org {
                          * @see #getResolvedFactoryMethod()
                          */
                         // @ts-ignore
-                        setQualifiedElement(qualifiedElement: java.lang.reflect.AnnotatedElement): void
+                        public setQualifiedElement(qualifiedElement: java.lang.reflect.AnnotatedElement): void
                         /**
                          * Return the {@link AnnotatedElement} defining qualifiers, if any.
                          * Otherwise, the factory method and target class will be checked.
                          * @since 4.3.3
                          */
                         // @ts-ignore
-                        getQualifiedElement(): java.lang.reflect.AnnotatedElement
+                        public getQualifiedElement(): java.lang.reflect.AnnotatedElement
                         /**
                          * Specify a generics-containing target type of this bean definition, if known in advance.
                          * @since 4.3.3
                          */
                         // @ts-ignore
-                        setTargetType(targetType: ResolvableType): void
+                        public setTargetType(targetType: ResolvableType): void
                         /**
                          * Return the target type of this bean definition, if known
                          * (either specified in advance or resolved on first instantiation).
                          * @since 3.2.2
                          */
                         // @ts-ignore
-                        getTargetType(): java.lang.Class<?>
+                        public getTargetType(): java.lang.Class<any>
                         /**
                          * Return a {@link ResolvableType} for this bean definition,
                          * either from runtime-cached type information or from configuration-time
@@ -159,7 +159,7 @@ declare namespace org {
                          * @see #setResolvedFactoryMethod(Method)
                          */
                         // @ts-ignore
-                        getResolvableType(): ResolvableType
+                        public getResolvableType(): ResolvableType
                         /**
                          * Determine preferred constructors to use for default construction, if any.
                          * Constructor arguments will be autowired if necessary.
@@ -168,54 +168,54 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        getPreferredConstructors(): java.lang.reflect.Constructor[]
+                        public getPreferredConstructors(): java.lang.reflect.Constructor<any>[]
                         /**
                          * Specify a factory method name that refers to a non-overloaded method.
                          */
                         // @ts-ignore
-                        setUniqueFactoryMethodName(name: string): void
+                        public setUniqueFactoryMethodName(name: java.lang.String | string): void
                         /**
                          * Specify a factory method name that refers to an overloaded method.
                          * @since 5.2
                          */
                         // @ts-ignore
-                        setNonUniqueFactoryMethodName(name: string): void
+                        public setNonUniqueFactoryMethodName(name: java.lang.String | string): void
                         /**
                          * Check whether the given candidate qualifies as a factory method.
                          */
                         // @ts-ignore
-                        isFactoryMethod(candidate: java.lang.reflect.Method): boolean
+                        public isFactoryMethod(candidate: java.lang.reflect.Method): boolean
                         /**
                          * Set a resolved Java Method for the factory method on this bean definition.
                          * @param method the resolved factory method, or {#code null} to reset it
                          * @since 5.2
                          */
                         // @ts-ignore
-                        setResolvedFactoryMethod(method: java.lang.reflect.Method): void
+                        public setResolvedFactoryMethod(method: java.lang.reflect.Method): void
                         /**
                          * Return the resolved factory method as a Java Method object, if available.
                          * @return the factory method, or {#code null} if not found or not resolved yet
                          */
                         // @ts-ignore
-                        getResolvedFactoryMethod(): java.lang.reflect.Method
+                        public getResolvedFactoryMethod(): java.lang.reflect.Method
                         // @ts-ignore
-                        registerExternallyManagedConfigMember(configMember: java.lang.reflect.Member): void
+                        public registerExternallyManagedConfigMember(configMember: java.lang.reflect.Member): void
                         // @ts-ignore
-                        isExternallyManagedConfigMember(configMember: java.lang.reflect.Member): boolean
+                        public isExternallyManagedConfigMember(configMember: java.lang.reflect.Member): boolean
                         // @ts-ignore
-                        registerExternallyManagedInitMethod(initMethod: string): void
+                        public registerExternallyManagedInitMethod(initMethod: java.lang.String | string): void
                         // @ts-ignore
-                        isExternallyManagedInitMethod(initMethod: string): boolean
+                        public isExternallyManagedInitMethod(initMethod: java.lang.String | string): boolean
                         // @ts-ignore
-                        registerExternallyManagedDestroyMethod(destroyMethod: string): void
+                        public registerExternallyManagedDestroyMethod(destroyMethod: java.lang.String | string): void
                         // @ts-ignore
-                        isExternallyManagedDestroyMethod(destroyMethod: string): boolean
+                        public isExternallyManagedDestroyMethod(destroyMethod: java.lang.String | string): boolean
                         // @ts-ignore
-                        cloneBeanDefinition(): org.springframework.beans.factory.support.RootBeanDefinition
+                        public cloneBeanDefinition(): org.springframework.beans.factory.support.RootBeanDefinition
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

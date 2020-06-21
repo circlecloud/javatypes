@@ -9,29 +9,29 @@ declare namespace org {
                 // @ts-ignore
                 class EntityCreatePortalEvent extends org.bukkit.event.entity.EntityEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(what: org.bukkit.entity.LivingEntity, blocks: Array<org.bukkit.block.BlockState>, type: org.bukkit.PortalType)
+                    constructor(what: org.bukkit.entity.LivingEntity, blocks: java.util.List<org.bukkit.block.BlockState> | Array<org.bukkit.block.BlockState>, type: org.bukkit.PortalType)
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.LivingEntity
+                    public getEntity(): org.bukkit.entity.LivingEntity
                     /**
                      * Gets a list of all blocks associated with the portal.
                      * @return List of blocks that will be changed.
                      */
                     // @ts-ignore
-                    getBlocks(): java.util.List<org.bukkit.block.BlockState>
+                    public getBlocks(): Array<org.bukkit.block.BlockState>
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Gets the type of portal that is trying to be created.
                      * @return Type of portal.
                      */
                     // @ts-ignore
-                    getPortalType(): org.bukkit.PortalType
+                    public getPortalType(): org.bukkit.PortalType
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

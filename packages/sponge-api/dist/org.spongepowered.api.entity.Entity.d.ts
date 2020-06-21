@@ -215,7 +215,7 @@ declare namespace org {
                      * @return True if the teleport was successful
                      */
                     // @ts-ignore
-                    transferToWorld(worldName: string, position: Vector3d): boolean
+                    transferToWorld(worldName: java.lang.String | string, position: Vector3d): boolean
                     /**
                      * Sets the location of this entity to a new position in a world which does
                      * not have to be loaded (but must at least be enabled).
@@ -245,7 +245,7 @@ declare namespace org {
                      * @return The passenger entity, if it exists
                      */
                     // @ts-ignore
-                    getPassengers(): java.util.List<org.spongepowered.api.entity.Entity>
+                    getPassengers(): Array<org.spongepowered.api.entity.Entity>
                     /**
                      * Checks if the given entity is a passenger.
                      * @param entity The entity passenger
@@ -347,7 +347,7 @@ declare namespace org {
                      * @return The collection of nearby entities
                      */
                     // @ts-ignore
-                    getNearbyEntities(distance: number /*double*/): java.util.Collection<org.spongepowered.api.entity.Entity>
+                    getNearbyEntities(distance: number /*double*/): Array<org.spongepowered.api.entity.Entity>
                     /**
                      * Gets the nearby entities that satisfy the desired predicate.
                      * @see World#getEntities(Predicate)
@@ -355,7 +355,7 @@ declare namespace org {
                      * @return The collection of entities
                      */
                     // @ts-ignore
-                    getNearbyEntities(predicate: java.util.function.Predicate<org.spongepowered.api.entity.Entity> | java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): java.util.Collection<org.spongepowered.api.entity.Entity>
+                    getNearbyEntities(predicate: java.util.function$.Predicate<org.spongepowered.api.entity.Entity>): Array<org.spongepowered.api.entity.Entity>
                     /**
                      * Gets the {@link UUID}, if available, of the user who created this
                      * {@link Entity}.

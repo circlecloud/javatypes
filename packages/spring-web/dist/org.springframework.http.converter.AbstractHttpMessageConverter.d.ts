@@ -14,7 +14,7 @@ declare namespace org {
                  * @param <T> the converted object type
                  */
                 // @ts-ignore
-                class AbstractHttpMessageConverter<T> extends java.lang.Object implements org.springframework.http.converter.HttpMessageConverter<T> {
+                abstract class AbstractHttpMessageConverter<T> extends java.lang.Object implements org.springframework.http.converter.HttpMessageConverter<T> {
                     /**
                      * Construct an {@code AbstractHttpMessageConverter} with no supported media types.
                      * @see #setSupportedMediaTypes
@@ -51,28 +51,28 @@ declare namespace org {
                      * Set the list of {@link MediaType} objects supported by this converter.
                      */
                     // @ts-ignore
-                    setSupportedMediaTypes(supportedMediaTypes: Array<org.springframework.http.MediaType>): void
+                    public setSupportedMediaTypes(supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>): void
                     // @ts-ignore
-                    getSupportedMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    public getSupportedMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Set the default character set, if any.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    setDefaultCharset(defaultCharset: java.nio.charset.Charset): void
+                    public setDefaultCharset(defaultCharset: java.nio.charset.Charset): void
                     /**
                      * Return the default character set, if any.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    getDefaultCharset(): java.nio.charset.Charset
+                    public getDefaultCharset(): java.nio.charset.Charset
                     /**
                      * This implementation checks if the given class is {@linkplain #supports(Class) supported},
                      * and if the {@linkplain #getSupportedMediaTypes() supported media types}
                      * {@linkplain MediaType#includes(MediaType) include} the given media type.
                      */
                     // @ts-ignore
-                    canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     /**
                      * Returns {@code true} if any of the {@linkplain #setSupportedMediaTypes(List)
                      * supported} media types {@link MediaType#includes(MediaType) include} the
@@ -91,7 +91,7 @@ declare namespace org {
                      * {@linkplain MediaType#includes(MediaType) include} the given media type.
                      */
                     // @ts-ignore
-                    canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     /**
                      * Returns {@code true} if the given media type includes any of the
                      * {@linkplain #setSupportedMediaTypes(List) supported media types}.
@@ -107,13 +107,13 @@ declare namespace org {
                      * Future implementations might add some default behavior, however.
                      */
                     // @ts-ignore
-                    read(clazz: java.lang.Class<T>, inputMessage: org.springframework.http.HttpInputMessage): T
+                    public read(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): T
                     /**
                      * This implementation sets the default headers by calling {@link #addDefaultHeaders},
                      * and then calls {@link #writeInternal}.
                      */
                     // @ts-ignore
-                    write(t: T, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    public write(t: T, contentType: org.springframework.http.MediaType, outputMessage: org.springframework.http.HttpOutputMessage): void
                     /**
                      * Add default headers to the output message.
                      * <p>This implementation delegates to {@link #getDefaultContentType(Object)} if a
@@ -142,7 +142,7 @@ declare namespace org {
                      * @return the content length, or {#code null} if not known
                      */
                     // @ts-ignore
-                    getContentLength(t: T, contentType: org.springframework.http.MediaType): java.lang.Long
+                    getContentLength(t: T, contentType: org.springframework.http.MediaType): number
                     /**
                      * Indicates whether the given class is supported by this converter.
                      * @param clazz the class to test for support
@@ -159,7 +159,7 @@ declare namespace org {
                      * @throws HttpMessageNotReadableException in case of conversion errors
                      */
                     // @ts-ignore
-                    abstract readInternal(clazz: java.lang.Class<T>, inputMessage: org.springframework.http.HttpInputMessage): T
+                    abstract readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): T
                     /**
                      * Abstract template method that writes the actual body. Invoked from {@link #write}.
                      * @param t the object to write to the output message

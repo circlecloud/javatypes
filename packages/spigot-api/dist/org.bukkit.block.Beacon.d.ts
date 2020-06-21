@@ -15,7 +15,7 @@ declare namespace org {
                  * @throws IllegalStateException if this block state is not placed
                  */
                 // @ts-ignore
-                getEntitiesInRange(): java.util.Collection<org.bukkit.entity.LivingEntity>
+                getEntitiesInRange(): Array<org.bukkit.entity.LivingEntity>
                 /**
                  * Returns the tier of the beacon pyramid (0-4). The tier refers to the
                  * beacon's power level, based on how many layers of blocks are in the
@@ -23,7 +23,7 @@ declare namespace org {
                  * @return the beacon tier
                  */
                 // @ts-ignore
-                getTier(): int
+                getTier(): number /*int*/
                 /**
                  * Returns the primary effect set on the beacon
                  * @return the primary effect or null if not set

@@ -84,7 +84,7 @@ declare namespace javax {
                          * @see #getParent
                          */
                         // @ts-ignore
-                        setParent(parent: org.w3c.dom.Node): void
+                        public setParent(parent: org.w3c.dom.Node): void
                         /**
                          * Sets the next sibling node.
                          * @param nextSibling the next sibling node. The marshalled
@@ -93,21 +93,21 @@ declare namespace javax {
                          * @see #getNextSibling
                          */
                         // @ts-ignore
-                        setNextSibling(nextSibling: org.w3c.dom.Node): void
+                        public setNextSibling(nextSibling: org.w3c.dom.Node): void
                         /**
                          * Returns the parent node.
                          * @return the parent node (never <code>null</code>)
                          * @see #setParent(Node)
                          */
                         // @ts-ignore
-                        getParent(): org.w3c.dom.Node
+                        public getParent(): org.w3c.dom.Node
                         /**
                          * Returns the nextSibling node.
                          * @return the nextSibling node, or <code>null</code> if not specified.
                          * @see #setNextSibling(Node)
                          */
                         // @ts-ignore
-                        getNextSibling(): org.w3c.dom.Node
+                        public getNextSibling(): org.w3c.dom.Node
                     }
                 }
             }

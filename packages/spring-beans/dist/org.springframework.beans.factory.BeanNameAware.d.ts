@@ -32,7 +32,7 @@ declare namespace org {
                      *  method to extract the original bean name (without suffix), if desired.
                      */
                     // @ts-ignore
-                    setBeanName(name: string): void
+                    setBeanName(name: java.lang.String | string): void
                 }
             }
         }

@@ -10,7 +10,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            class Native implements java.lang.annotation.Annotation {
+            abstract class Native implements java.lang.annotation.Annotation {
             }
         }
     }

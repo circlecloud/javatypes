@@ -26,7 +26,7 @@ declare namespace javax {
                      * @param p an additional parameter, may be {#code null}
                      */
                     // @ts-ignore
-                    constructor(t: javax.lang.model.type.TypeMirror, p: any)
+                    constructor(t: javax.lang.model.type.TypeMirror, p: java.lang.Object | any)
                     /**
                      * Returns the unknown type.
                      * The value may be unavailable if this exception has been
@@ -40,7 +40,7 @@ declare namespace javax {
                      * @return the additional argument
                      */
                     // @ts-ignore
-                    getArgument(): java.lang.Object
+                    getArgument(): any
                 }
             }
         }

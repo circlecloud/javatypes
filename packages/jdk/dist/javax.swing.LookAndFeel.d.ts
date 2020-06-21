@@ -96,7 +96,7 @@ declare namespace javax {
          * @author Hans Muller
          */
         // @ts-ignore
-        class LookAndFeel extends java.lang.Object {
+        abstract class LookAndFeel extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -113,7 +113,7 @@ declare namespace javax {
              *          <a href="#exceptions">exceptions</a>
              */
             // @ts-ignore
-            installColors(c: javax.swing.JComponent, defaultBgName: string, defaultFgName: string): void
+            public static installColors(c: javax.swing.JComponent, defaultBgName: java.lang.String | string, defaultFgName: java.lang.String | string): void
             /**
              * Convenience method for setting a component's foreground,
              * background and font properties with values from the
@@ -130,7 +130,7 @@ declare namespace javax {
              * @see UIManager#getFont
              */
             // @ts-ignore
-            installColorsAndFont(c: javax.swing.JComponent, defaultBgName: string, defaultFgName: string, defaultFontName: string): void
+            public static installColorsAndFont(c: javax.swing.JComponent, defaultBgName: java.lang.String | string, defaultFgName: java.lang.String | string, defaultFontName: java.lang.String | string): void
             /**
              * Convenience method for setting a component's border property with
              * a value from the defaults. The border is only set if the border is
@@ -141,7 +141,7 @@ declare namespace javax {
              *          <a href="#exceptions">exceptions</a>
              */
             // @ts-ignore
-            installBorder(c: javax.swing.JComponent, defaultBorderName: string): void
+            public static installBorder(c: javax.swing.JComponent, defaultBorderName: java.lang.String | string): void
             /**
              * Convenience method for uninstalling a border. If the border of
              * the component is a {@code UIResource}, it is set to {@code
@@ -150,7 +150,7 @@ declare namespace javax {
              * @throws NullPointerException if {#code c} is {@code null}
              */
             // @ts-ignore
-            uninstallBorder(c: javax.swing.JComponent): void
+            public static uninstallBorder(c: javax.swing.JComponent): void
             /**
              * Convenience method for installing a property with the specified name
              * and value on a component if that property has not already been set
@@ -174,7 +174,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            installProperty(c: javax.swing.JComponent, propertyName: string, propertyValue: any): void
+            public static installProperty(c: javax.swing.JComponent, propertyName: java.lang.String | string, propertyValue: java.lang.Object | any): void
             /**
              * Convenience method for building an array of {@code
              * KeyBindings}. While this method is not deprecated, developers
@@ -222,7 +222,7 @@ declare namespace javax {
              * @see KeyStroke#getKeyStroke
              */
             // @ts-ignore
-            makeKeyBindings(keyBindingList: any[]): javax.swing.text.JTextComponent.KeyBinding[]
+            public static makeKeyBindings(keyBindingList: java.lang.Object[] | any[]): javax.swing.text.JTextComponent.KeyBinding[]
             /**
              * Creates a {@code InputMapUIResource} from <code>keys</code>. This is
              * a convenience method for creating a new {@code InputMapUIResource},
@@ -235,7 +235,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            makeInputMap(keys: any[]): javax.swing.InputMap
+            public static makeInputMap(keys: java.lang.Object[] | any[]): javax.swing.InputMap
             /**
              * Creates a {@code ComponentInputMapUIResource} from
              * <code>keys</code>. This is a convenience method for creating a
@@ -253,7 +253,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            makeComponentInputMap(c: javax.swing.JComponent, keys: any[]): javax.swing.ComponentInputMap
+            public static makeComponentInputMap(c: javax.swing.JComponent, keys: java.lang.Object[] | any[]): javax.swing.ComponentInputMap
             /**
              * Populates an {@code InputMap} with the specified bindings.
              * The bindings are supplied as a list of alternating
@@ -290,7 +290,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            loadKeyBindings(retMap: javax.swing.InputMap, keys: any[]): void
+            public static loadKeyBindings(retMap: javax.swing.InputMap, keys: java.lang.Object[] | any[]): void
             /**
              * Creates and returns a {@code UIDefault.LazyValue} that loads an
              * image. The returned value is an implementation of {@code
@@ -313,7 +313,7 @@ declare namespace javax {
              * @see Class#getResourceAsStream(String)
              */
             // @ts-ignore
-            makeIcon(baseClass: java.lang.Class<any>, gifFile: string): java.lang.Object
+            public static makeIcon(baseClass: java.lang.Class<any>, gifFile: java.lang.String | string): any
             /**
              * Returns the <code>LayoutStyle</code> for this look
              * and feel.  This never returns {@code null}.
@@ -326,7 +326,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getLayoutStyle(): javax.swing.LayoutStyle
+            public getLayoutStyle(): javax.swing.LayoutStyle
             /**
              * Invoked when the user attempts an invalid operation,
              * such as pasting into an uneditable <code>JTextField</code>
@@ -340,7 +340,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            provideErrorFeedback(component: java.awt.Component): void
+            public provideErrorFeedback(component: java.awt.Component): void
             /**
              * Returns the value of the specified system desktop property by
              * invoking <code>Toolkit.getDefaultToolkit().getDesktopProperty()</code>.
@@ -353,7 +353,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDesktopPropertyValue(systemPropertyName: string, fallbackValue: any): java.lang.Object
+            public static getDesktopPropertyValue(systemPropertyName: java.lang.String | string, fallbackValue: java.lang.Object | any): any
             /**
              * Returns an <code>Icon</code> with a disabled appearance.
              * This method is used to generate a disabled <code>Icon</code> when
@@ -373,7 +373,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getDisabledIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
+            public getDisabledIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
             /**
              * Returns an <code>Icon</code> for use by disabled
              * components that are also selected. This method is used to generate an
@@ -395,7 +395,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            getDisabledSelectedIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
+            public getDisabledSelectedIcon(component: javax.swing.JComponent, icon: javax.swing.Icon): javax.swing.Icon
             /**
              * Return a short string that identifies this look and feel, e.g.
              * "CDE/Motif".  This string should be appropriate for a menu item.
@@ -407,7 +407,7 @@ declare namespace javax {
              * @return short identifier for the look and feel
              */
             // @ts-ignore
-            abstract getName(): java.lang.String
+            public abstract getName(): string
             /**
              * Return a string that identifies this look and feel.  This string
              * will be used by applications/services that want to recognize
@@ -419,7 +419,7 @@ declare namespace javax {
              * @return identifier for the look and feel
              */
             // @ts-ignore
-            abstract getID(): java.lang.String
+            public abstract getID(): string
             /**
              * Return a one line description of this look and feel implementation,
              * e.g. "The CDE/Motif Look and Feel".   This string is intended for
@@ -427,7 +427,7 @@ declare namespace javax {
              * @return short description for the look and feel
              */
             // @ts-ignore
-            abstract getDescription(): java.lang.String
+            public abstract getDescription(): string
             /**
              * Returns {@code true} if the <code>LookAndFeel</code> returned
              * <code>RootPaneUI</code> instances support providing {@code Window}
@@ -444,7 +444,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getSupportsWindowDecorations(): boolean
+            public getSupportsWindowDecorations(): boolean
             /**
              * If the underlying platform has a "native" look and feel, and
              * this is an implementation of it, return {@code true}.  For
@@ -455,7 +455,7 @@ declare namespace javax {
              *          platform look and feel
              */
             // @ts-ignore
-            abstract isNativeLookAndFeel(): boolean
+            public abstract isNativeLookAndFeel(): boolean
             /**
              * Return {@code true} if the underlying platform supports and or permits
              * this look and feel.  This method returns {@code false} if the look
@@ -465,7 +465,7 @@ declare namespace javax {
              * @see UIManager#setLookAndFeel
              */
             // @ts-ignore
-            abstract isSupportedLookAndFeel(): boolean
+            public abstract isSupportedLookAndFeel(): boolean
             /**
              * Initializes the look and feel. While this method is public,
              * it should only be invoked by the {@code UIManager} when a
@@ -481,7 +481,7 @@ declare namespace javax {
              * @see UIManager#setLookAndFeel
              */
             // @ts-ignore
-            initialize(): void
+            public initialize(): void
             /**
              * Uninitializes the look and feel. While this method is public,
              * it should only be invoked by the {@code UIManager} when
@@ -494,7 +494,7 @@ declare namespace javax {
              * @see UIManager#setLookAndFeel
              */
             // @ts-ignore
-            uninitialize(): void
+            public uninitialize(): void
             /**
              * Returns the look and feel defaults. While this method is public,
              * it should only be invoked by the {@code UIManager} when the
@@ -506,14 +506,14 @@ declare namespace javax {
              * @see UIManager#setLookAndFeel
              */
             // @ts-ignore
-            getDefaults(): javax.swing.UIDefaults
+            public getDefaults(): javax.swing.UIDefaults
             /**
              * Returns a string that displays and identifies this
              * object's properties.
              * @return a String representation of this object
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

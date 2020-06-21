@@ -14,7 +14,7 @@ declare namespace org {
                  * @param <S> the type of the adaptee's {#code Future}
                  */
                 // @ts-ignore
-                class ListenableFutureAdapter<T, S> extends org.springframework.util.concurrent.FutureAdapter<T, S> implements org.springframework.util.concurrent.ListenableFuture<T> {
+                abstract class ListenableFutureAdapter<T, S> extends org.springframework.util.concurrent.FutureAdapter<T, S> implements org.springframework.util.concurrent.ListenableFuture<T> {
                     /**
                      * Construct a new {@code ListenableFutureAdapter} with the given adaptee.
                      * @param adaptee the future to adapt to
@@ -22,9 +22,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor(adaptee: org.springframework.util.concurrent.ListenableFuture<S>)
                     // @ts-ignore
-                    addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any super T>): void
+                    public addCallback(callback: org.springframework.util.concurrent.ListenableFutureCallback<any>): void
                     // @ts-ignore
-                    addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any super T>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
+                    public addCallback(successCallback: org.springframework.util.concurrent.SuccessCallback<any>, failureCallback: org.springframework.util.concurrent.FailureCallback): void
                 }
             }
         }

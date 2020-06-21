@@ -20,7 +20,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>x</code> is null
                      */
                     // @ts-ignore
-                    createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(x: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Configures the specified component appropriate for the metal look and
                      * feel.
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>c</code> is null.
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Reverses configuration which was done on the specified component during
                      * <code>installUI</code>.
@@ -36,7 +36,7 @@ declare namespace javax {
                      * @throws NullPointerException if <code>c</code> is null.
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * If necessary paints the background of the component, then
                      * invokes <code>paint</code>.
@@ -49,7 +49,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                 }
             }
         }

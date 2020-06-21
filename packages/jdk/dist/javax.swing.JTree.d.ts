@@ -119,7 +119,7 @@ declare namespace javax {
              * @see DefaultTreeModel#asksAllowsChildren
              */
             // @ts-ignore
-            constructor(value: any[])
+            constructor(value: java.lang.Object[] | any[])
             /**
              * Returns a <code>JTree</code> with each element of the specified
              * <code>Vector</code> as the
@@ -140,7 +140,7 @@ declare namespace javax {
              * @see DefaultTreeModel#asksAllowsChildren
              */
             // @ts-ignore
-            constructor(value: java.util.Hashtable<any, ?>)
+            constructor(value: java.util.Hashtable<any, any>)
             /**
              * Returns a <code>JTree</code> with the specified
              * <code>TreeNode</code> as its root,
@@ -287,92 +287,92 @@ declare namespace javax {
              * Bound property name for <code>cellRenderer</code>.
              */
             // @ts-ignore
-            readonly CELL_RENDERER_PROPERTY: string
+            public static readonly CELL_RENDERER_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>treeModel</code>.
              */
             // @ts-ignore
-            readonly TREE_MODEL_PROPERTY: string
+            public static readonly TREE_MODEL_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>rootVisible</code>.
              */
             // @ts-ignore
-            readonly ROOT_VISIBLE_PROPERTY: string
+            public static readonly ROOT_VISIBLE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>showsRootHandles</code>.
              */
             // @ts-ignore
-            readonly SHOWS_ROOT_HANDLES_PROPERTY: string
+            public static readonly SHOWS_ROOT_HANDLES_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>rowHeight</code>.
              */
             // @ts-ignore
-            readonly ROW_HEIGHT_PROPERTY: string
+            public static readonly ROW_HEIGHT_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>cellEditor</code>.
              */
             // @ts-ignore
-            readonly CELL_EDITOR_PROPERTY: string
+            public static readonly CELL_EDITOR_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>editable</code>.
              */
             // @ts-ignore
-            readonly EDITABLE_PROPERTY: string
+            public static readonly EDITABLE_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>largeModel</code>.
              */
             // @ts-ignore
-            readonly LARGE_MODEL_PROPERTY: string
+            public static readonly LARGE_MODEL_PROPERTY: java.lang.String | string
             /**
              * Bound property name for selectionModel.
              */
             // @ts-ignore
-            readonly SELECTION_MODEL_PROPERTY: string
+            public static readonly SELECTION_MODEL_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>visibleRowCount</code>.
              */
             // @ts-ignore
-            readonly VISIBLE_ROW_COUNT_PROPERTY: string
+            public static readonly VISIBLE_ROW_COUNT_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>messagesStopCellEditing</code>.
              */
             // @ts-ignore
-            readonly INVOKES_STOP_CELL_EDITING_PROPERTY: string
+            public static readonly INVOKES_STOP_CELL_EDITING_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>scrollsOnExpand</code>.
              */
             // @ts-ignore
-            readonly SCROLLS_ON_EXPAND_PROPERTY: string
+            public static readonly SCROLLS_ON_EXPAND_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>toggleClickCount</code>.
              */
             // @ts-ignore
-            readonly TOGGLE_CLICK_COUNT_PROPERTY: string
+            public static readonly TOGGLE_CLICK_COUNT_PROPERTY: java.lang.String | string
             /**
              * Bound property name for <code>leadSelectionPath</code>.
              * @since 1.3
              */
             // @ts-ignore
-            readonly LEAD_SELECTION_PATH_PROPERTY: string
+            public static readonly LEAD_SELECTION_PATH_PROPERTY: java.lang.String | string
             /**
              * Bound property name for anchor selection path.
              * @since 1.3
              */
             // @ts-ignore
-            readonly ANCHOR_SELECTION_PATH_PROPERTY: string
+            public static readonly ANCHOR_SELECTION_PATH_PROPERTY: java.lang.String | string
             /**
              * Bound property name for expands selected paths property
              * @since 1.3
              */
             // @ts-ignore
-            readonly EXPANDS_SELECTED_PATHS_PROPERTY: string
+            public static readonly EXPANDS_SELECTED_PATHS_PROPERTY: java.lang.String | string
             /**
              * Creates and returns a sample <code>TreeModel</code>.
              * Used primarily for beanbuilders to show something interesting.
              * @return the default <code>TreeModel</code>
              */
             // @ts-ignore
-            getDefaultTreeModel(): javax.swing.tree.TreeModel
+            static getDefaultTreeModel(): javax.swing.tree.TreeModel
             /**
              * Returns a <code>TreeModel</code> wrapping the specified object.
              * If the object is:<ul>
@@ -387,13 +387,13 @@ declare namespace javax {
              * @return a <code>TreeModel</code> wrapping the specified object
              */
             // @ts-ignore
-            createTreeModel(value: any): javax.swing.tree.TreeModel
+            static createTreeModel(value: java.lang.Object | any): javax.swing.tree.TreeModel
             /**
              * Returns the L&amp;F object that renders this component.
              * @return the <code>TreeUI</code> object that renders this component
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.TreeUI
+            public getUI(): javax.swing.plaf.TreeUI
             /**
              * Sets the L&amp;F object that renders this component.
              * <p>
@@ -406,7 +406,7 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.TreeUI): void
+            public setUI(ui: javax.swing.plaf.TreeUI): void
             /**
              * Notification from the <code>UIManager</code> that the L&amp;F has changed.
              * Replaces the current UI object with the latest version from the
@@ -414,7 +414,7 @@ declare namespace javax {
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class that renders this component.
              * @return the string "TreeUI"
@@ -422,14 +422,14 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the current <code>TreeCellRenderer</code>
              * that is rendering each cell.
              * @return the <code>TreeCellRenderer</code> that is rendering each cell
              */
             // @ts-ignore
-            getCellRenderer(): javax.swing.tree.TreeCellRenderer
+            public getCellRenderer(): javax.swing.tree.TreeCellRenderer
             /**
              * Sets the <code>TreeCellRenderer</code> that will be used to
              * draw each cell.
@@ -441,7 +441,7 @@ declare namespace javax {
              *                each cell.
              */
             // @ts-ignore
-            setCellRenderer(x: javax.swing.tree.TreeCellRenderer): void
+            public setCellRenderer(x: javax.swing.tree.TreeCellRenderer): void
             /**
              * Determines whether the tree is editable. Fires a property
              * change event if the new setting is different from the existing
@@ -453,13 +453,13 @@ declare namespace javax {
              *   description: Whether the tree is editable.
              */
             // @ts-ignore
-            setEditable(flag: boolean): void
+            public setEditable(flag: boolean): void
             /**
              * Returns true if the tree is editable.
              * @return true if the tree is editable
              */
             // @ts-ignore
-            isEditable(): boolean
+            public isEditable(): boolean
             /**
              * Sets the cell editor.  A <code>null</code> value implies that the
              * tree cannot be edited.  If this represents a change in the
@@ -473,20 +473,20 @@ declare namespace javax {
              *                cannot be edited.
              */
             // @ts-ignore
-            setCellEditor(cellEditor: javax.swing.tree.TreeCellEditor): void
+            public setCellEditor(cellEditor: javax.swing.tree.TreeCellEditor): void
             /**
              * Returns the editor used to edit entries in the tree.
              * @return the <code>TreeCellEditor</code> in use,
              *           or <code>null</code> if the tree cannot be edited
              */
             // @ts-ignore
-            getCellEditor(): javax.swing.tree.TreeCellEditor
+            public getCellEditor(): javax.swing.tree.TreeCellEditor
             /**
              * Returns the <code>TreeModel</code> that is providing the data.
              * @return the <code>TreeModel</code> that is providing the data
              */
             // @ts-ignore
-            getModel(): javax.swing.tree.TreeModel
+            public getModel(): javax.swing.tree.TreeModel
             /**
              * Sets the <code>TreeModel</code> that will provide the data.
              * <p>
@@ -496,14 +496,14 @@ declare namespace javax {
              *   description: The TreeModel that will provide the data.
              */
             // @ts-ignore
-            setModel(newModel: javax.swing.tree.TreeModel): void
+            public setModel(newModel: javax.swing.tree.TreeModel): void
             /**
              * Returns true if the root node of the tree is displayed.
              * @return true if the root node of the tree is displayed
              * @see #rootVisible
              */
             // @ts-ignore
-            isRootVisible(): boolean
+            public isRootVisible(): boolean
             /**
              * Determines whether or not the root node from
              * the <code>TreeModel</code> is visible.
@@ -516,7 +516,7 @@ declare namespace javax {
              *                from the TreeModel is visible.
              */
             // @ts-ignore
-            setRootVisible(rootVisible: boolean): void
+            public setRootVisible(rootVisible: boolean): void
             /**
              * Sets the value of the <code>showsRootHandles</code> property,
              * which specifies whether the node handles should be displayed.
@@ -535,14 +535,14 @@ declare namespace javax {
              *                displayed.
              */
             // @ts-ignore
-            setShowsRootHandles(newValue: boolean): void
+            public setShowsRootHandles(newValue: boolean): void
             /**
              * Returns the value of the <code>showsRootHandles</code> property.
              * @return the value of the <code>showsRootHandles</code> property
              * @see #showsRootHandles
              */
             // @ts-ignore
-            getShowsRootHandles(): boolean
+            public getShowsRootHandles(): boolean
             /**
              * Sets the height of each cell, in pixels.  If the specified value
              * is less than or equal to zero the current cell renderer is
@@ -554,20 +554,20 @@ declare namespace javax {
              *   description: The height of each cell.
              */
             // @ts-ignore
-            setRowHeight(rowHeight: number /*int*/): void
+            public setRowHeight(rowHeight: number /*int*/): void
             /**
              * Returns the height of each row.  If the returned value is less than
              * or equal to 0 the height for each row is determined by the
              * renderer.
              */
             // @ts-ignore
-            getRowHeight(): int
+            public getRowHeight(): number /*int*/
             /**
              * Returns true if the height of each display row is a fixed size.
              * @return true if the height of each row is a fixed size
              */
             // @ts-ignore
-            isFixedRowHeight(): boolean
+            public isFixedRowHeight(): boolean
             /**
              * Specifies whether the UI should use a large model.
              * (Not all UIs will implement this.) Fires a property change
@@ -581,14 +581,14 @@ declare namespace javax {
              *                large model.
              */
             // @ts-ignore
-            setLargeModel(newValue: boolean): void
+            public setLargeModel(newValue: boolean): void
             /**
              * Returns true if the tree is configured for a large model.
              * @return true if a large model is suggested
              * @see #largeModel
              */
             // @ts-ignore
-            isLargeModel(): boolean
+            public isLargeModel(): boolean
             /**
              * Determines what happens when editing is interrupted by selecting
              * another node in the tree, a change in the tree's data, or by some
@@ -605,7 +605,7 @@ declare namespace javax {
              *                tree's data, or some other means.
              */
             // @ts-ignore
-            setInvokesStopCellEditing(newValue: boolean): void
+            public setInvokesStopCellEditing(newValue: boolean): void
             /**
              * Returns the indicator that tells what happens when editing is
              * interrupted.
@@ -614,7 +614,7 @@ declare namespace javax {
              * @see #setInvokesStopCellEditing
              */
             // @ts-ignore
-            getInvokesStopCellEditing(): boolean
+            public getInvokesStopCellEditing(): boolean
             /**
              * Sets the <code>scrollsOnExpand</code> property,
              * which determines whether the
@@ -634,13 +634,13 @@ declare namespace javax {
              *   description: Indicates if a node descendant should be scrolled when expanded.
              */
             // @ts-ignore
-            setScrollsOnExpand(newValue: boolean): void
+            public setScrollsOnExpand(newValue: boolean): void
             /**
              * Returns the value of the <code>scrollsOnExpand</code> property.
              * @return the value of the <code>scrollsOnExpand</code> property
              */
             // @ts-ignore
-            getScrollsOnExpand(): boolean
+            public getScrollsOnExpand(): boolean
             /**
              * Sets the number of mouse clicks before a node will expand or close.
              * The default is two.
@@ -651,14 +651,14 @@ declare namespace javax {
              *   description: Number of clicks before a node will expand/collapse.
              */
             // @ts-ignore
-            setToggleClickCount(clickCount: number /*int*/): void
+            public setToggleClickCount(clickCount: number /*int*/): void
             /**
              * Returns the number of mouse clicks needed to expand or close a node.
              * @return number of mouse clicks before node is expanded
              * @since 1.3
              */
             // @ts-ignore
-            getToggleClickCount(): int
+            public getToggleClickCount(): number /*int*/
             /**
              * Configures the <code>expandsSelectedPaths</code> property. If
              * true, any time the selection is changed, either via the
@@ -679,7 +679,7 @@ declare namespace javax {
              *                the parent of the path visible.
              */
             // @ts-ignore
-            setExpandsSelectedPaths(newValue: boolean): void
+            public setExpandsSelectedPaths(newValue: boolean): void
             /**
              * Returns the <code>expandsSelectedPaths</code> property.
              * @return true if selection changes result in the parent path being
@@ -688,7 +688,7 @@ declare namespace javax {
              * @see #setExpandsSelectedPaths
              */
             // @ts-ignore
-            getExpandsSelectedPaths(): boolean
+            public getExpandsSelectedPaths(): boolean
             /**
              * Turns on or off automatic drag handling. In order to enable automatic
              * drag handling, this property should be set to {@code true}, and the
@@ -720,7 +720,7 @@ declare namespace javax {
              *         bound: false
              */
             // @ts-ignore
-            setDragEnabled(b: boolean): void
+            public setDragEnabled(b: boolean): void
             /**
              * Returns whether or not automatic drag handling is enabled.
              * @return the value of the {#code dragEnabled} property
@@ -728,7 +728,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getDragEnabled(): boolean
+            public getDragEnabled(): boolean
             /**
              * Sets the drop mode for this component. For backward compatibility,
              * the default for this property is <code>DropMode.USE_SELECTION</code>.
@@ -757,7 +757,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            setDropMode(dropMode: javax.swing.DropMode): void
+            public setDropMode(dropMode: javax.swing.DropMode): void
             /**
              * Returns the drop mode for this component.
              * @return the drop mode for this component
@@ -765,7 +765,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDropMode(): javax.swing.DropMode
+            public getDropMode(): javax.swing.DropMode
             /**
              * Returns the location that this component should visually indicate
              * as the drop location during a DnD operation over the component,
@@ -784,7 +784,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getDropLocation(): javax.swing.JTree.DropLocation
+            public getDropLocation(): javax.swing.JTree.DropLocation
             /**
              * Returns <code>isEditable</code>. This is invoked from the UI before
              * editing begins to insure that the given path can be edited. This
@@ -794,7 +794,7 @@ declare namespace javax {
              * @see #isEditable
              */
             // @ts-ignore
-            isPathEditable(path: javax.swing.tree.TreePath): boolean
+            public isPathEditable(path: javax.swing.tree.TreePath): boolean
             /**
              * Overrides <code>JComponent</code>'s <code>getToolTipText</code>
              * method in order to allow
@@ -811,7 +811,7 @@ declare namespace javax {
              *           if <code>event</code> is null
              */
             // @ts-ignore
-            getToolTipText(event: java.awt.event.MouseEvent): java.lang.String
+            public getToolTipText(event: java.awt.event.MouseEvent): string
             /**
              * Called by the renderers to convert the specified value to
              * text. This implementation returns <code>value.toString</code>, ignoring
@@ -827,7 +827,7 @@ declare namespace javax {
              * @return the <code>String</code> representation of the node's value
              */
             // @ts-ignore
-            convertValueToText(value: any, selected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/, hasFocus: boolean): java.lang.String
+            public convertValueToText(value: java.lang.Object | any, selected: boolean, expanded: boolean, leaf: boolean, row: number /*int*/, hasFocus: boolean): string
             /**
              * Returns the number of viewable nodes. A node is viewable if all of its
              * parents are expanded. The root is only included in this count if
@@ -836,7 +836,7 @@ declare namespace javax {
              * @return the number of viewable nodes
              */
             // @ts-ignore
-            getRowCount(): int
+            public getRowCount(): number /*int*/
             /**
              * Selects the node identified by the specified path. If any
              * component of the path is hidden (under a collapsed node), and
@@ -845,7 +845,7 @@ declare namespace javax {
              * @param path the <code>TreePath</code> specifying the node to select
              */
             // @ts-ignore
-            setSelectionPath(path: javax.swing.tree.TreePath): void
+            public setSelectionPath(path: javax.swing.tree.TreePath): void
             /**
              * Selects the nodes identified by the specified array of paths.
              * If any component in any of the paths is hidden (under a collapsed
@@ -855,7 +855,7 @@ declare namespace javax {
              *           the nodes to select
              */
             // @ts-ignore
-            setSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+            public setSelectionPaths(paths: javax.swing.tree.TreePath[]): void
             /**
              * Sets the path identifies as the lead. The lead may not be selected.
              * The lead is not maintained by <code>JTree</code>,
@@ -868,7 +868,7 @@ declare namespace javax {
              *   description: Lead selection path
              */
             // @ts-ignore
-            setLeadSelectionPath(newPath: javax.swing.tree.TreePath): void
+            public setLeadSelectionPath(newPath: javax.swing.tree.TreePath): void
             /**
              * Sets the path identified as the anchor.
              * The anchor is not maintained by <code>JTree</code>, rather the UI will
@@ -881,14 +881,14 @@ declare namespace javax {
              *   description: Anchor selection path
              */
             // @ts-ignore
-            setAnchorSelectionPath(newPath: javax.swing.tree.TreePath): void
+            public setAnchorSelectionPath(newPath: javax.swing.tree.TreePath): void
             /**
              * Selects the node at the specified row in the display.
              * @param row  the row to select, where 0 is the first row in
              *              the display
              */
             // @ts-ignore
-            setSelectionRow(row: number /*int*/): void
+            public setSelectionRow(row: number /*int*/): void
             /**
              * Selects the nodes corresponding to each of the specified rows
              * in the display. If a particular element of <code>rows</code> is
@@ -901,7 +901,7 @@ declare namespace javax {
              *               where 0 indicates the first row in the display
              */
             // @ts-ignore
-            setSelectionRows(rows: number /*int*/[]): void
+            public setSelectionRows(rows: number /*int*/[]): void
             /**
              * Adds the node identified by the specified <code>TreePath</code>
              * to the current selection. If any component of the path isn't
@@ -914,7 +914,7 @@ declare namespace javax {
              * @param path the <code>TreePath</code> to add
              */
             // @ts-ignore
-            addSelectionPath(path: javax.swing.tree.TreePath): void
+            public addSelectionPath(path: javax.swing.tree.TreePath): void
             /**
              * Adds each path in the array of paths to the current selection. If
              * any component of any of the paths isn't viewable and
@@ -928,21 +928,21 @@ declare namespace javax {
              *           the nodes to add
              */
             // @ts-ignore
-            addSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+            public addSelectionPaths(paths: javax.swing.tree.TreePath[]): void
             /**
              * Adds the path at the specified row to the current selection.
              * @param row  an integer specifying the row of the node to add,
              *              where 0 is the first row in the display
              */
             // @ts-ignore
-            addSelectionRow(row: number /*int*/): void
+            public addSelectionRow(row: number /*int*/): void
             /**
              * Adds the paths at each of the specified rows to the current selection.
              * @param rows  an array of ints specifying the rows to add,
              *               where 0 indicates the first row in the display
              */
             // @ts-ignore
-            addSelectionRows(rows: number /*int*/[]): void
+            public addSelectionRows(rows: number /*int*/[]): void
             /**
              * Returns the last path component of the selected path. This is
              * a convenience method for
@@ -953,34 +953,34 @@ declare namespace javax {
              * @see TreePath#getLastPathComponent
              */
             // @ts-ignore
-            getLastSelectedPathComponent(): java.lang.Object
+            public getLastSelectedPathComponent(): any
             /**
              * Returns the path identified as the lead.
              * @return path identified as the lead
              */
             // @ts-ignore
-            getLeadSelectionPath(): javax.swing.tree.TreePath
+            public getLeadSelectionPath(): javax.swing.tree.TreePath
             /**
              * Returns the path identified as the anchor.
              * @return path identified as the anchor
              * @since 1.3
              */
             // @ts-ignore
-            getAnchorSelectionPath(): javax.swing.tree.TreePath
+            public getAnchorSelectionPath(): javax.swing.tree.TreePath
             /**
              * Returns the path to the first selected node.
              * @return the <code>TreePath</code> for the first selected node,
              *           or <code>null</code> if nothing is currently selected
              */
             // @ts-ignore
-            getSelectionPath(): javax.swing.tree.TreePath
+            public getSelectionPath(): javax.swing.tree.TreePath
             /**
              * Returns the paths of all selected values.
              * @return an array of <code>TreePath</code> objects indicating the selected
              *          nodes, or <code>null</code> if nothing is currently selected
              */
             // @ts-ignore
-            getSelectionPaths(): javax.swing.tree.TreePath[]
+            public getSelectionPaths(): javax.swing.tree.TreePath[]
             /**
              * Returns all of the currently selected rows. This method is simply
              * forwarded to the <code>TreeSelectionModel</code>.
@@ -991,27 +991,27 @@ declare namespace javax {
              *          where 0 is the first row in the display
              */
             // @ts-ignore
-            getSelectionRows(): int[]
+            public getSelectionRows(): number /*int*/[]
             /**
              * Returns the number of nodes selected.
              * @return the number of nodes selected
              */
             // @ts-ignore
-            getSelectionCount(): int
+            public getSelectionCount(): number /*int*/
             /**
              * Returns the smallest selected row. If the selection is empty, or
              * none of the selected paths are viewable, {@code -1} is returned.
              * @return the smallest selected row
              */
             // @ts-ignore
-            getMinSelectionRow(): int
+            public getMinSelectionRow(): number /*int*/
             /**
              * Returns the largest selected row. If the selection is empty, or
              * none of the selected paths are viewable, {@code -1} is returned.
              * @return the largest selected row
              */
             // @ts-ignore
-            getMaxSelectionRow(): int
+            public getMaxSelectionRow(): number /*int*/
             /**
              * Returns the row index corresponding to the lead path.
              * @return an integer giving the row index of the lead path,
@@ -1019,14 +1019,14 @@ declare namespace javax {
              *           if <code>leadPath</code> is <code>null</code>
              */
             // @ts-ignore
-            getLeadSelectionRow(): int
+            public getLeadSelectionRow(): number /*int*/
             /**
              * Returns true if the item identified by the path is currently selected.
              * @param path a <code>TreePath</code> identifying a node
              * @return true if the node is selected
              */
             // @ts-ignore
-            isPathSelected(path: javax.swing.tree.TreePath): boolean
+            public isPathSelected(path: javax.swing.tree.TreePath): boolean
             /**
              * Returns true if the node identified by row is selected.
              * @param row  an integer specifying a display row, where 0 is the first
@@ -1034,7 +1034,7 @@ declare namespace javax {
              * @return true if the node is selected
              */
             // @ts-ignore
-            isRowSelected(row: number /*int*/): boolean
+            public isRowSelected(row: number /*int*/): boolean
             /**
              * Returns an <code>Enumeration</code> of the descendants of the
              * path <code>parent</code> that
@@ -1050,14 +1050,14 @@ declare namespace javax {
              *           <code>parent</code> is not currently expanded
              */
             // @ts-ignore
-            getExpandedDescendants(parent: javax.swing.tree.TreePath): java.util.Enumeration<javax.swing.tree.TreePath>
+            public getExpandedDescendants(parent: javax.swing.tree.TreePath): java.util.Enumeration<javax.swing.tree.TreePath>
             /**
              * Returns true if the node identified by the path has ever been
              * expanded.
              * @return true if the <code>path</code> has ever been expanded
              */
             // @ts-ignore
-            hasBeenExpanded(path: javax.swing.tree.TreePath): boolean
+            public hasBeenExpanded(path: javax.swing.tree.TreePath): boolean
             /**
              * Returns true if the node identified by the path is currently expanded,
              * @param path  the <code>TreePath</code> specifying the node to check
@@ -1065,7 +1065,7 @@ declare namespace javax {
              *                true if all nodes in the path are expanded
              */
             // @ts-ignore
-            isExpanded(path: javax.swing.tree.TreePath): boolean
+            public isExpanded(path: javax.swing.tree.TreePath): boolean
             /**
              * Returns true if the node at the specified display row is currently
              * expanded.
@@ -1074,7 +1074,7 @@ declare namespace javax {
              * @return true if the node is currently expanded, otherwise false
              */
             // @ts-ignore
-            isExpanded(row: number /*int*/): boolean
+            public isExpanded(row: number /*int*/): boolean
             /**
              * Returns true if the value identified by path is currently collapsed,
              * this will return false if any of the values in path are currently
@@ -1084,7 +1084,7 @@ declare namespace javax {
              *                false if all nodes in the path are expanded
              */
             // @ts-ignore
-            isCollapsed(path: javax.swing.tree.TreePath): boolean
+            public isCollapsed(path: javax.swing.tree.TreePath): boolean
             /**
              * Returns true if the node at the specified display row is collapsed.
              * @param row  the row to check, where 0 is the first row in the
@@ -1092,13 +1092,13 @@ declare namespace javax {
              * @return true if the node is currently collapsed, otherwise false
              */
             // @ts-ignore
-            isCollapsed(row: number /*int*/): boolean
+            public isCollapsed(row: number /*int*/): boolean
             /**
              * Ensures that the node identified by path is currently viewable.
              * @param path  the <code>TreePath</code> to make visible
              */
             // @ts-ignore
-            makeVisible(path: javax.swing.tree.TreePath): void
+            public makeVisible(path: javax.swing.tree.TreePath): void
             /**
              * Returns true if the value identified by path is currently viewable,
              * which means it is either the root or all of its parents are expanded.
@@ -1106,7 +1106,7 @@ declare namespace javax {
              * @return true if the node is viewable, otherwise false
              */
             // @ts-ignore
-            isVisible(path: javax.swing.tree.TreePath): boolean
+            public isVisible(path: javax.swing.tree.TreePath): boolean
             /**
              * Returns the <code>Rectangle</code> that the specified node will be drawn
              * into. Returns <code>null</code> if any component in the path is hidden
@@ -1120,7 +1120,7 @@ declare namespace javax {
              *           or <code>null</code>
              */
             // @ts-ignore
-            getPathBounds(path: javax.swing.tree.TreePath): java.awt.Rectangle
+            public getPathBounds(path: javax.swing.tree.TreePath): java.awt.Rectangle
             /**
              * Returns the <code>Rectangle</code> that the node at the specified row is
              * drawn in.
@@ -1129,7 +1129,7 @@ declare namespace javax {
              * @return the <code>Rectangle</code> the node is drawn in
              */
             // @ts-ignore
-            getRowBounds(row: number /*int*/): java.awt.Rectangle
+            public getRowBounds(row: number /*int*/): java.awt.Rectangle
             /**
              * Makes sure all the path components in path are expanded (except
              * for the last path component) and scrolls so that the
@@ -1139,7 +1139,7 @@ declare namespace javax {
              *           bring into view
              */
             // @ts-ignore
-            scrollPathToVisible(path: javax.swing.tree.TreePath): void
+            public scrollPathToVisible(path: javax.swing.tree.TreePath): void
             /**
              * Scrolls the item identified by row until it is displayed. The minimum
              * of amount of scrolling necessary to bring the row into view
@@ -1149,7 +1149,7 @@ declare namespace javax {
              *              first row in the display
              */
             // @ts-ignore
-            scrollRowToVisible(row: number /*int*/): void
+            public scrollRowToVisible(row: number /*int*/): void
             /**
              * Returns the path for the specified row.  If <code>row</code> is
              * not visible, or a {@code TreeUI} has not been set, <code>null</code>
@@ -1160,7 +1160,7 @@ declare namespace javax {
              *           or <code>row &gt;= getRowCount()</code>
              */
             // @ts-ignore
-            getPathForRow(row: number /*int*/): javax.swing.tree.TreePath
+            public getPathForRow(row: number /*int*/): javax.swing.tree.TreePath
             /**
              * Returns the row that displays the node identified by the specified
              * path.
@@ -1170,7 +1170,7 @@ declare namespace javax {
              *          are hidden under a collapsed parent.
              */
             // @ts-ignore
-            getRowForPath(path: javax.swing.tree.TreePath): int
+            public getRowForPath(path: javax.swing.tree.TreePath): number /*int*/
             /**
              * Ensures that the node identified by the specified path is
              * expanded and viewable. If the last item in the path is a
@@ -1178,7 +1178,7 @@ declare namespace javax {
              * @param path  the <code>TreePath</code> identifying a node
              */
             // @ts-ignore
-            expandPath(path: javax.swing.tree.TreePath): void
+            public expandPath(path: javax.swing.tree.TreePath): void
             /**
              * Ensures that the node in the specified row is expanded and
              * viewable.
@@ -1189,14 +1189,14 @@ declare namespace javax {
              *              first row in the display
              */
             // @ts-ignore
-            expandRow(row: number /*int*/): void
+            public expandRow(row: number /*int*/): void
             /**
              * Ensures that the node identified by the specified path is
              * collapsed and viewable.
              * @param path  the <code>TreePath</code> identifying a node
              */
             // @ts-ignore
-            collapsePath(path: javax.swing.tree.TreePath): void
+            public collapsePath(path: javax.swing.tree.TreePath): void
             /**
              * Ensures that the node in the specified row is collapsed.
              * <p>
@@ -1206,7 +1206,7 @@ declare namespace javax {
              *              first row in the display
              */
             // @ts-ignore
-            collapseRow(row: number /*int*/): void
+            public collapseRow(row: number /*int*/): void
             /**
              * Returns the path for the node at the specified location.
              * @param x an integer giving the number of pixels horizontally from
@@ -1216,7 +1216,7 @@ declare namespace javax {
              * @return the <code>TreePath</code> for the node at that location
              */
             // @ts-ignore
-            getPathForLocation(x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
+            public getPathForLocation(x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
             /**
              * Returns the row for the specified location.
              * @param x an integer giving the number of pixels horizontally from
@@ -1228,7 +1228,7 @@ declare namespace javax {
              * @see #getClosestRowForLocation
              */
             // @ts-ignore
-            getRowForLocation(x: number /*int*/, y: number /*int*/): int
+            public getRowForLocation(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns the path to the node that is closest to x,y.  If
              * no nodes are currently viewable, or there is no model, returns
@@ -1245,7 +1245,7 @@ declare namespace javax {
              * @see #getPathBounds
              */
             // @ts-ignore
-            getClosestPathForLocation(x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
+            public getClosestPathForLocation(x: number /*int*/, y: number /*int*/): javax.swing.tree.TreePath
             /**
              * Returns the row to the node that is closest to x,y.  If no nodes
              * are viewable or there is no model, returns -1. Otherwise,
@@ -1262,7 +1262,7 @@ declare namespace javax {
              * @see #getRowBounds
              */
             // @ts-ignore
-            getClosestRowForLocation(x: number /*int*/, y: number /*int*/): int
+            public getClosestRowForLocation(x: number /*int*/, y: number /*int*/): number /*int*/
             /**
              * Returns true if the tree is being edited. The item that is being
              * edited can be obtained using <code>getSelectionPath</code>.
@@ -1270,7 +1270,7 @@ declare namespace javax {
              * @see #getSelectionPath
              */
             // @ts-ignore
-            isEditing(): boolean
+            public isEditing(): boolean
             /**
              * Ends the current editing session.
              * (The <code>DefaultTreeCellEditor</code>
@@ -1286,13 +1286,13 @@ declare namespace javax {
              *               false if editing was not in progress
              */
             // @ts-ignore
-            stopEditing(): boolean
+            public stopEditing(): boolean
             /**
              * Cancels the current editing session. Has no effect if the
              * tree isn't being edited.
              */
             // @ts-ignore
-            cancelEditing(): void
+            public cancelEditing(): void
             /**
              * Selects the node identified by the specified path and initiates
              * editing.  The edit-attempt fails if the <code>CellEditor</code>
@@ -1301,13 +1301,13 @@ declare namespace javax {
              * @param path  the <code>TreePath</code> identifying a node
              */
             // @ts-ignore
-            startEditingAtPath(path: javax.swing.tree.TreePath): void
+            public startEditingAtPath(path: javax.swing.tree.TreePath): void
             /**
              * Returns the path to the element that is currently being edited.
              * @return the <code>TreePath</code> for the node being edited
              */
             // @ts-ignore
-            getEditingPath(): javax.swing.tree.TreePath
+            public getEditingPath(): javax.swing.tree.TreePath
             /**
              * Sets the tree's selection model. When a <code>null</code> value is
              * specified an empty
@@ -1321,7 +1321,7 @@ declare namespace javax {
              *   description: The tree's selection model.
              */
             // @ts-ignore
-            setSelectionModel(selectionModel: javax.swing.tree.TreeSelectionModel): void
+            public setSelectionModel(selectionModel: javax.swing.tree.TreeSelectionModel): void
             /**
              * Returns the model for selections. This should always return a
              * non-<code>null</code> value. If you don't want to allow anything
@@ -1331,7 +1331,7 @@ declare namespace javax {
              * @see #setSelectionModel
              */
             // @ts-ignore
-            getSelectionModel(): javax.swing.tree.TreeSelectionModel
+            public getSelectionModel(): javax.swing.tree.TreeSelectionModel
             /**
              * Returns the paths (inclusive) between the specified rows. If
              * the specified indices are within the viewable set of rows, or
@@ -1379,7 +1379,7 @@ declare namespace javax {
              * @param index1 the last index in the range to select
              */
             // @ts-ignore
-            setSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public setSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Adds the specified rows (inclusive) to the selection. If the
              * specified indices are within the viewable set of rows, or bound
@@ -1401,7 +1401,7 @@ declare namespace javax {
              * @param index1 the last index in the range to add to the selection
              */
             // @ts-ignore
-            addSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public addSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Removes the specified rows (inclusive) from the selection. If
              * the specified indices are within the viewable set of rows, or bound
@@ -1422,14 +1422,14 @@ declare namespace javax {
              * @param index1 the last row to remove from the selection
              */
             // @ts-ignore
-            removeSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
+            public removeSelectionInterval(index0: number /*int*/, index1: number /*int*/): void
             /**
              * Removes the node identified by the specified path from the current
              * selection.
              * @param path  the <code>TreePath</code> identifying a node
              */
             // @ts-ignore
-            removeSelectionPath(path: javax.swing.tree.TreePath): void
+            public removeSelectionPath(path: javax.swing.tree.TreePath): void
             /**
              * Removes the nodes identified by the specified paths from the
              * current selection.
@@ -1437,14 +1437,14 @@ declare namespace javax {
              *               specifies the nodes to remove
              */
             // @ts-ignore
-            removeSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+            public removeSelectionPaths(paths: javax.swing.tree.TreePath[]): void
             /**
              * Removes the row at the index <code>row</code> from the current
              * selection.
              * @param row  the row to remove
              */
             // @ts-ignore
-            removeSelectionRow(row: number /*int*/): void
+            public removeSelectionRow(row: number /*int*/): void
             /**
              * Removes the rows that are selected at each of the specified
              * rows.
@@ -1452,18 +1452,18 @@ declare namespace javax {
              *              the first row in the display
              */
             // @ts-ignore
-            removeSelectionRows(rows: number /*int*/[]): void
+            public removeSelectionRows(rows: number /*int*/[]): void
             /**
              * Clears the selection.
              */
             // @ts-ignore
-            clearSelection(): void
+            public clearSelection(): void
             /**
              * Returns true if the selection is currently empty.
              * @return true if the selection is currently empty
              */
             // @ts-ignore
-            isSelectionEmpty(): boolean
+            public isSelectionEmpty(): boolean
             /**
              * Adds a listener for <code>TreeExpansion</code> events.
              * @param tel a TreeExpansionListener that will be notified when
@@ -1471,13 +1471,13 @@ declare namespace javax {
              *             expansion")
              */
             // @ts-ignore
-            addTreeExpansionListener(tel: javax.swing.event.TreeExpansionListener): void
+            public addTreeExpansionListener(tel: javax.swing.event.TreeExpansionListener): void
             /**
              * Removes a listener for <code>TreeExpansion</code> events.
              * @param tel the <code>TreeExpansionListener</code> to remove
              */
             // @ts-ignore
-            removeTreeExpansionListener(tel: javax.swing.event.TreeExpansionListener): void
+            public removeTreeExpansionListener(tel: javax.swing.event.TreeExpansionListener): void
             /**
              * Returns an array of all the <code>TreeExpansionListener</code>s added
              * to this JTree with addTreeExpansionListener().
@@ -1486,7 +1486,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getTreeExpansionListeners(): javax.swing.event.TreeExpansionListener[]
+            public getTreeExpansionListeners(): javax.swing.event.TreeExpansionListener[]
             /**
              * Adds a listener for <code>TreeWillExpand</code> events.
              * @param tel a <code>TreeWillExpandListener</code> that will be notified
@@ -1494,13 +1494,13 @@ declare namespace javax {
              *             expansion")
              */
             // @ts-ignore
-            addTreeWillExpandListener(tel: javax.swing.event.TreeWillExpandListener): void
+            public addTreeWillExpandListener(tel: javax.swing.event.TreeWillExpandListener): void
             /**
              * Removes a listener for <code>TreeWillExpand</code> events.
              * @param tel the <code>TreeWillExpandListener</code> to remove
              */
             // @ts-ignore
-            removeTreeWillExpandListener(tel: javax.swing.event.TreeWillExpandListener): void
+            public removeTreeWillExpandListener(tel: javax.swing.event.TreeWillExpandListener): void
             /**
              * Returns an array of all the <code>TreeWillExpandListener</code>s added
              * to this JTree with addTreeWillExpandListener().
@@ -1509,7 +1509,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getTreeWillExpandListeners(): javax.swing.event.TreeWillExpandListener[]
+            public getTreeWillExpandListeners(): javax.swing.event.TreeWillExpandListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -1519,7 +1519,7 @@ declare namespace javax {
              * @see EventListenerList
              */
             // @ts-ignore
-            fireTreeExpanded(path: javax.swing.tree.TreePath): void
+            public fireTreeExpanded(path: javax.swing.tree.TreePath): void
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -1529,7 +1529,7 @@ declare namespace javax {
              * @see EventListenerList
              */
             // @ts-ignore
-            fireTreeCollapsed(path: javax.swing.tree.TreePath): void
+            public fireTreeCollapsed(path: javax.swing.tree.TreePath): void
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -1539,7 +1539,7 @@ declare namespace javax {
              * @see EventListenerList
              */
             // @ts-ignore
-            fireTreeWillExpand(path: javax.swing.tree.TreePath): void
+            public fireTreeWillExpand(path: javax.swing.tree.TreePath): void
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.  The event instance
@@ -1549,7 +1549,7 @@ declare namespace javax {
              * @see EventListenerList
              */
             // @ts-ignore
-            fireTreeWillCollapse(path: javax.swing.tree.TreePath): void
+            public fireTreeWillCollapse(path: javax.swing.tree.TreePath): void
             /**
              * Adds a listener for <code>TreeSelection</code> events.
              * @param tsl the <code>TreeSelectionListener</code> that will be notified
@@ -1557,13 +1557,13 @@ declare namespace javax {
              *             selection")
              */
             // @ts-ignore
-            addTreeSelectionListener(tsl: javax.swing.event.TreeSelectionListener): void
+            public addTreeSelectionListener(tsl: javax.swing.event.TreeSelectionListener): void
             /**
              * Removes a <code>TreeSelection</code> listener.
              * @param tsl the <code>TreeSelectionListener</code> to remove
              */
             // @ts-ignore
-            removeTreeSelectionListener(tsl: javax.swing.event.TreeSelectionListener): void
+            public removeTreeSelectionListener(tsl: javax.swing.event.TreeSelectionListener): void
             /**
              * Returns an array of all the <code>TreeSelectionListener</code>s added
              * to this JTree with addTreeSelectionListener().
@@ -1572,7 +1572,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getTreeSelectionListeners(): javax.swing.event.TreeSelectionListener[]
+            public getTreeSelectionListeners(): javax.swing.event.TreeSelectionListener[]
             /**
              * Notifies all listeners that have registered interest for
              * notification on this event type.
@@ -1592,7 +1592,7 @@ declare namespace javax {
              * invoke this, the UI will invoke this as it needs to.
              */
             // @ts-ignore
-            treeDidChange(): void
+            public treeDidChange(): void
             /**
              * Sets the number of rows that are to be displayed.
              * This will only work if the tree is contained in a
@@ -1605,13 +1605,13 @@ declare namespace javax {
              *   description: The number of rows that are to be displayed.
              */
             // @ts-ignore
-            setVisibleRowCount(newCount: number /*int*/): void
+            public setVisibleRowCount(newCount: number /*int*/): void
             /**
              * Returns the number of rows that are displayed in the display area.
              * @return the number of rows displayed
              */
             // @ts-ignore
-            getVisibleRowCount(): int
+            public getVisibleRowCount(): number /*int*/
             /**
              * Returns the TreePath to the next tree element that
              * begins with a prefix. To handle the conversion of a
@@ -1628,7 +1628,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getNextMatch(prefix: string, startingRow: number /*int*/, bias: javax.swing.text.Position.Bias): javax.swing.tree.TreePath
+            public getNextMatch(prefix: java.lang.String | string, startingRow: number /*int*/, bias: javax.swing.text.Position.Bias): javax.swing.tree.TreePath
             /**
              * Returns the preferred display size of a <code>JTree</code>. The height is
              * determined from <code>getVisibleRowCount</code> and the width
@@ -1636,7 +1636,7 @@ declare namespace javax {
              * @return a <code>Dimension</code> object containing the preferred size
              */
             // @ts-ignore
-            getPreferredScrollableViewportSize(): java.awt.Dimension
+            public getPreferredScrollableViewportSize(): java.awt.Dimension
             /**
              * Returns the amount to increment when scrolling. The amount is
              * the height of the first displayed row that isn't completely in view
@@ -1651,7 +1651,7 @@ declare namespace javax {
              * @see JScrollBar#setUnitIncrement(int)
              */
             // @ts-ignore
-            getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableUnitIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns the amount for a block increment, which is the height or
              * width of <code>visibleRect</code>, based on <code>orientation</code>.
@@ -1664,7 +1664,7 @@ declare namespace javax {
              * @see JScrollBar#setBlockIncrement(int)
              */
             // @ts-ignore
-            getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): int
+            public getScrollableBlockIncrement(visibleRect: java.awt.Rectangle, orientation: number /*int*/, direction: number /*int*/): number /*int*/
             /**
              * Returns false to indicate that the width of the viewport does not
              * determine the width of the table, unless the preferred width of
@@ -1674,7 +1674,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableTracksViewportWidth
              */
             // @ts-ignore
-            getScrollableTracksViewportWidth(): boolean
+            public getScrollableTracksViewportWidth(): boolean
             /**
              * Returns false to indicate that the height of the viewport does not
              * determine the height of the table, unless the preferred height
@@ -1684,7 +1684,7 @@ declare namespace javax {
              * @see Scrollable#getScrollableTracksViewportHeight
              */
             // @ts-ignore
-            getScrollableTracksViewportHeight(): boolean
+            public getScrollableTracksViewportHeight(): boolean
             /**
              * Sets the expanded state of this <code>JTree</code>.
              * If <code>state</code> is
@@ -1751,7 +1751,7 @@ declare namespace javax {
              * @return a string representation of this <code>JTree</code>.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JTree.
              * For JTrees, the AccessibleContext takes the form of an
@@ -1761,7 +1761,7 @@ declare namespace javax {
              *          AccessibleContext of this JTree
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

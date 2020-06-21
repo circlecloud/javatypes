@@ -24,7 +24,7 @@ declare namespace java {
              * @param s   the detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Constructs a new {@code StringIndexOutOfBoundsException}
              * class with an argument indicating the illegal index.

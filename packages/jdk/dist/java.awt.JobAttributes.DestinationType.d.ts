@@ -12,13 +12,13 @@ declare namespace java {
                  * specifying print to file.
                  */
                 // @ts-ignore
-                readonly FILE: java.awt.JobAttributes.DestinationType
+                public static readonly FILE: java.awt.JobAttributes.DestinationType
                 /**
                  * The <code>DestinationType</code> instance to use for
                  * specifying print to printer.
                  */
                 // @ts-ignore
-                readonly PRINTER: java.awt.JobAttributes.DestinationType
+                public static readonly PRINTER: java.awt.JobAttributes.DestinationType
             }
         }
     }

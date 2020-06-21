@@ -19,35 +19,35 @@ declare namespace org {
                          * Add the given {@link HandlerMethodArgumentResolver}.
                          */
                         // @ts-ignore
-                        addResolver(resolver: org.springframework.web.method.support.HandlerMethodArgumentResolver): org.springframework.web.method.support.HandlerMethodArgumentResolverComposite
+                        public addResolver(resolver: org.springframework.web.method.support.HandlerMethodArgumentResolver): org.springframework.web.method.support.HandlerMethodArgumentResolverComposite
                         /**
                          * Add the given {@link HandlerMethodArgumentResolver HandlerMethodArgumentResolvers}.
                          * @since 4.3
                          */
                         // @ts-ignore
-                        addResolvers(...resolvers: org.springframework.web.method.support.HandlerMethodArgumentResolver[]): org.springframework.web.method.support.HandlerMethodArgumentResolverComposite
+                        public addResolvers(...resolvers: org.springframework.web.method.support.HandlerMethodArgumentResolver[]): org.springframework.web.method.support.HandlerMethodArgumentResolverComposite
                         /**
                          * Add the given {@link HandlerMethodArgumentResolver HandlerMethodArgumentResolvers}.
                          */
                         // @ts-ignore
-                        addResolvers(resolvers: Array<org.springframework.web.method.support.HandlerMethodArgumentResolver>): org.springframework.web.method.support.HandlerMethodArgumentResolverComposite
+                        public addResolvers(resolvers: java.util.List<any> | Array<any>): org.springframework.web.method.support.HandlerMethodArgumentResolverComposite
                         /**
                          * Return a read-only list with the contained resolvers, or an empty list.
                          */
                         // @ts-ignore
-                        getResolvers(): java.util.List<org.springframework.web.method.support.HandlerMethodArgumentResolver>
+                        public getResolvers(): Array<org.springframework.web.method.support.HandlerMethodArgumentResolver>
                         /**
                          * Clear the list of configured resolvers.
                          * @since 4.3
                          */
                         // @ts-ignore
-                        clear(): void
+                        public clear(): void
                         /**
                          * Whether the given {@linkplain MethodParameter method parameter} is
                          * supported by any registered {@link HandlerMethodArgumentResolver}.
                          */
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         /**
                          * Iterate over registered
                          * {@link HandlerMethodArgumentResolver HandlerMethodArgumentResolvers}
@@ -55,7 +55,7 @@ declare namespace org {
                          * @throws IllegalArgumentException if no suitable argument resolver is found
                          */
                         // @ts-ignore
-                        resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): java.lang.Object
+                        public resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): any
                     }
                 }
             }

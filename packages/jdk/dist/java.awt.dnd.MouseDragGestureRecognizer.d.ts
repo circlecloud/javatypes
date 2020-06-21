@@ -29,7 +29,7 @@ declare namespace java {
              * @see java.awt.dnd.DragSource
              */
             // @ts-ignore
-            class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecognizer implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener {
+            abstract class MouseDragGestureRecognizer extends java.awt.dnd.DragGestureRecognizer implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener {
                 /**
                  * Construct a new <code>MouseDragGestureRecognizer</code>
                  * given the <code>DragSource</code> for the
@@ -95,7 +95,7 @@ declare namespace java {
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mouseClicked(e: java.awt.event.MouseEvent): void
+                public mouseClicked(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when a mouse button has been
                  * pressed on a <code>Component</code>.
@@ -103,35 +103,35 @@ declare namespace java {
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mousePressed(e: java.awt.event.MouseEvent): void
+                public mousePressed(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when a mouse button has been released on a component.
                  * <P>
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mouseReleased(e: java.awt.event.MouseEvent): void
+                public mouseReleased(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when the mouse enters a component.
                  * <P>
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mouseEntered(e: java.awt.event.MouseEvent): void
+                public mouseEntered(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when the mouse exits a component.
                  * <P>
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mouseExited(e: java.awt.event.MouseEvent): void
+                public mouseExited(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when a mouse button is pressed on a component.
                  * <P>
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mouseDragged(e: java.awt.event.MouseEvent): void
+                public mouseDragged(e: java.awt.event.MouseEvent): void
                 /**
                  * Invoked when the mouse button has been moved on a component
                  * (with no buttons no down).
@@ -139,7 +139,7 @@ declare namespace java {
                  * @param e the <code>MouseEvent</code>
                  */
                 // @ts-ignore
-                mouseMoved(e: java.awt.event.MouseEvent): void
+                public mouseMoved(e: java.awt.event.MouseEvent): void
             }
         }
     }

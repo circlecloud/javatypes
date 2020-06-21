@@ -12,7 +12,7 @@ declare namespace org {
                  * @see ObjectInputStream
                  */
                 // @ts-ignore
-                class DefaultDeserializer extends java.lang.Object implements org.springframework.core.serializer.Deserializer<java.lang.Object> {
+                class DefaultDeserializer extends java.lang.Object implements org.springframework.core.serializer.Deserializer<java.lang.Object | any> {
                     /**
                      * Create a {@code DefaultDeserializer} with default {@link ObjectInputStream}
                      * configuration, using the "latest user-defined ClassLoader".
@@ -33,7 +33,7 @@ declare namespace org {
                      * @see ObjectInputStream#readObject()
                      */
                     // @ts-ignore
-                    deserialize(inputStream: java.io.InputStream): java.lang.Object
+                    public deserialize(inputStream: java.io.InputStream): any
                 }
             }
         }

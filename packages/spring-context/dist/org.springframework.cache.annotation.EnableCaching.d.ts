@@ -120,7 +120,7 @@ declare namespace org {
                  * @see org.springframework.cache.aspectj.AspectJCachingConfiguration
                  */
                 // @ts-ignore
-                class EnableCaching implements java.lang.annotation.Annotation {
+                abstract class EnableCaching implements java.lang.annotation.Annotation {
                 }
             }
         }

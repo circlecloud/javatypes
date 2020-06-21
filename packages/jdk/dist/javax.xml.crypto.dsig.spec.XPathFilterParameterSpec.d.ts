@@ -26,7 +26,7 @@ declare namespace javax {
                          * @throws NullPointerException if <code>xPath</code> is <code>null</code>
                          */
                         // @ts-ignore
-                        constructor(xPath: string)
+                        constructor(xPath: java.lang.String | string)
                         /**
                          * Creates an <code>XPathFilterParameterSpec</code> with the specified
                          * XPath expression and namespace map. The map is copied to protect against
@@ -41,13 +41,13 @@ declare namespace javax {
                          *     of type <code>String</code>
                          */
                         // @ts-ignore
-                        constructor(xPath: string, namespaceMap: java.util.Map)
+                        constructor(xPath: java.lang.String | string, namespaceMap: java.util.Map<any>)
                         /**
                          * Returns the XPath expression to be evaluated.
                          * @return the XPath expression to be evaluated
                          */
                         // @ts-ignore
-                        getXPath(): java.lang.String
+                        public getXPath(): string
                         /**
                          * Returns a map of namespace prefixes. Each key is a namespace prefix
                          * <code>String</code> that maps to a corresponding namespace URI
@@ -59,7 +59,7 @@ declare namespace javax {
                          *     be empty, but never <code>null</code>)
                          */
                         // @ts-ignore
-                        getNamespaceMap(): java.util.Map
+                        public getNamespaceMap(): java.util.Map<any>
                     }
                 }
             }

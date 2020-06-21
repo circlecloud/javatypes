@@ -37,7 +37,7 @@ declare namespace javax {
              * @exception IOException   if the data can't be accessed
              */
             // @ts-ignore
-            getTransferData(df: java.awt.datatransfer.DataFlavor, ds: javax.activation.DataSource): java.lang.Object
+            getTransferData(df: java.awt.datatransfer.DataFlavor, ds: javax.activation.DataSource): any
             /**
              * Return an object representing the data in its most preferred form.
              * Generally this will be the form described by the first DataFlavor
@@ -47,7 +47,7 @@ declare namespace javax {
              * @exception IOException   if the data can't be accessed
              */
             // @ts-ignore
-            getContent(ds: javax.activation.DataSource): java.lang.Object
+            getContent(ds: javax.activation.DataSource): any
             /**
              * Convert the object to a byte stream of the specified MIME type
              * and write it to the output stream.
@@ -58,7 +58,7 @@ declare namespace javax {
              * @exception IOException   errors writing to the stream
              */
             // @ts-ignore
-            writeTo(obj: any, mimeType: string, os: java.io.OutputStream): void
+            writeTo(obj: java.lang.Object | any, mimeType: java.lang.String | string, os: java.io.OutputStream): void
         }
     }
 }

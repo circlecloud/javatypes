@@ -11,7 +11,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class MidiFileReader extends java.lang.Object {
+                abstract class MidiFileReader extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -32,7 +32,7 @@ declare namespace javax {
                      * @see InputStream#mark
                      */
                     // @ts-ignore
-                    abstract getMidiFileFormat(stream: java.io.InputStream): javax.sound.midi.MidiFileFormat
+                    public abstract getMidiFileFormat(stream: java.io.InputStream): javax.sound.midi.MidiFileFormat
                     /**
                      * Obtains the MIDI file format of the URL provided. The URL must point to
                      * valid MIDI file data.
@@ -44,7 +44,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getMidiFileFormat(url: java.net.URL): javax.sound.midi.MidiFileFormat
+                    public abstract getMidiFileFormat(url: java.net.URL): javax.sound.midi.MidiFileFormat
                     /**
                      * Obtains the MIDI file format of the {@code File} provided. The
                      * {@code File} must point to valid MIDI file data.
@@ -56,7 +56,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getMidiFileFormat(file: java.io.File): javax.sound.midi.MidiFileFormat
+                    public abstract getMidiFileFormat(file: java.io.File): javax.sound.midi.MidiFileFormat
                     /**
                      * Obtains a MIDI sequence from the input stream provided. The stream must
                      * point to valid MIDI file data. In general, MIDI file readers may need to
@@ -76,7 +76,7 @@ declare namespace javax {
                      * @see InputStream#mark
                      */
                     // @ts-ignore
-                    abstract getSequence(stream: java.io.InputStream): javax.sound.midi.Sequence
+                    public abstract getSequence(stream: java.io.InputStream): javax.sound.midi.Sequence
                     /**
                      * Obtains a MIDI sequence from the URL provided. The URL must point to
                      * valid MIDI file data.
@@ -88,7 +88,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getSequence(url: java.net.URL): javax.sound.midi.Sequence
+                    public abstract getSequence(url: java.net.URL): javax.sound.midi.Sequence
                     /**
                      * Obtains a MIDI sequence from the {@code File} provided. The {@code File}
                      * must point to valid MIDI file data.
@@ -101,7 +101,7 @@ declare namespace javax {
                      * @throws IOException if an I/O exception occurs
                      */
                     // @ts-ignore
-                    abstract getSequence(file: java.io.File): javax.sound.midi.Sequence
+                    public abstract getSequence(file: java.io.File): javax.sound.midi.Sequence
                 }
             }
         }

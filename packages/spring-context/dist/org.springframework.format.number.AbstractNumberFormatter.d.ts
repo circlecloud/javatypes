@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class AbstractNumberFormatter extends java.lang.Object implements org.springframework.format.Formatter<java.lang.Number> {
+                abstract class AbstractNumberFormatter extends java.lang.Object implements org.springframework.format.Formatter<java.lang.Number> {
                     // @ts-ignore
                     constructor()
                     /**
@@ -19,11 +19,11 @@ declare namespace org {
                      * With strict parsing, inputs must match the format exactly.
                      */
                     // @ts-ignore
-                    setLenient(lenient: boolean): void
+                    public setLenient(lenient: boolean): void
                     // @ts-ignore
-                    print(number: java.lang.Number, locale: java.util.Locale): java.lang.String
+                    public print(number: java.lang.Number, locale: java.util.Locale): string
                     // @ts-ignore
-                    parse(text: string, locale: java.util.Locale): java.lang.Number
+                    public parse(text: java.lang.String | string, locale: java.util.Locale): java.lang.Number
                     /**
                      * Obtain a concrete NumberFormat for the specified locale.
                      * @param locale the current locale

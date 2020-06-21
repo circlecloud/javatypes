@@ -58,7 +58,7 @@ declare namespace org {
                         // @ts-ignore
                         getRelativeBiomeView(): org.spongepowered.api.world.extent.MutableBiomeVolume
                         // @ts-ignore
-                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.MutableBiomeVolumeWorker<? extends org.spongepowered.api.world.extent.MutableBiomeVolume>
+                        getBiomeWorker(): org.spongepowered.api.world.extent.worker.MutableBiomeVolumeWorker<any>
                     }
                 }
             }

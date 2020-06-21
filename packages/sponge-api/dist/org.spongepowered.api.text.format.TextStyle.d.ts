@@ -40,34 +40,34 @@ declare namespace org {
                          * @return {#code true} if this text style is a composite
                          */
                         // @ts-ignore
-                        isComposite(): boolean
+                        public isComposite(): boolean
                         /**
                          * Returns whether this {@link TextStyle} has no set properties.
                          * @return {#code true} if this style is empty
                          */
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         /**
                          * Returns a new {@link TextStyle} with the bold property changed.
                          * @param bold Whether text where the new style is applied is bolded
                          * @return The new text style
                          */
                         // @ts-ignore
-                        bold(bold: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
+                        public bold(bold: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Returns a new {@link TextStyle} with the italic property changed.
                          * @param italic Whether text where the new style is applied is italicized
                          * @return The new text style
                          */
                         // @ts-ignore
-                        italic(italic: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
+                        public italic(italic: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Returns a new {@link TextStyle} with the underline property changed.
                          * @param underline Whether text where the new style is applied is underline
                          * @return The new text style
                          */
                         // @ts-ignore
-                        underline(underline: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
+                        public underline(underline: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Returns a new {@link TextStyle} with the strikethrough property changed.
                          * @param strikethrough Whether text where the new style is applied has a
@@ -75,7 +75,7 @@ declare namespace org {
                          * @return The new text style
                          */
                         // @ts-ignore
-                        strikethrough(strikethrough: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
+                        public strikethrough(strikethrough: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Returns a new {@link TextStyle} with the obfuscated property changed.
                          * @param obfuscated Whether text where the new style is applied is
@@ -83,39 +83,39 @@ declare namespace org {
                          * @return The new text style
                          */
                         // @ts-ignore
-                        obfuscated(obfuscated: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
+                        public obfuscated(obfuscated: java.lang.Boolean): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Checks for whether text where this style is applied is bolded.
                          * @return The value for the bold property, or {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        isBold(): java.util.Optional<java.lang.Boolean>
+                        public isBold(): java.util.Optional<java.lang.Boolean>
                         /**
                          * Checks for whether text where this style is applied is italicized.
                          * @return The value for the italic property, or {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        isItalic(): java.util.Optional<java.lang.Boolean>
+                        public isItalic(): java.util.Optional<java.lang.Boolean>
                         /**
                          * Checks for whether text where this style is applied has an underline.
                          * @return The value for the underline property, or {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        hasUnderline(): java.util.Optional<java.lang.Boolean>
+                        public hasUnderline(): java.util.Optional<java.lang.Boolean>
                         /**
                          * Checks for whether text where this style is applied has a strikethrough.
                          * @return The value for the strikethrough property, or
                          *          {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        hasStrikethrough(): java.util.Optional<java.lang.Boolean>
+                        public hasStrikethrough(): java.util.Optional<java.lang.Boolean>
                         /**
                          * Checks for whether text where this style is obfuscated.
                          * @return The value for the obfuscated property, or
                          *          {#link Optional#empty()}
                          */
                         // @ts-ignore
-                        isObfuscated(): java.util.Optional<java.lang.Boolean>
+                        public isObfuscated(): java.util.Optional<java.lang.Boolean>
                         /**
                          * Returns whether the given {@link TextStyle} is contained in this
                          * {@link TextStyle}.
@@ -131,21 +131,21 @@ declare namespace org {
                          *          style
                          */
                         // @ts-ignore
-                        contains(...styles: org.spongepowered.api.text.format.TextStyle[]): boolean
+                        public contains(...styles: org.spongepowered.api.text.format.TextStyle[]): boolean
                         /**
                          * Negates this {@link TextStyle}. This is useful for undoing text styles
                          * that are inherited from parent messages.
                          * @return The inverse of this text style
                          */
                         // @ts-ignore
-                        negate(): org.spongepowered.api.text.format.TextStyle
+                        public negate(): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Composes this {@link TextStyle} with the specified text styles.
                          * @param styles The text styles to compose this one with
                          * @return A new text style composed out of the given text styles
                          */
                         // @ts-ignore
-                        and(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.format.TextStyle
+                        public and(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.format.TextStyle
                         /**
                          * Composes this {@link TextStyle} with the passed in TextStyles, but
                          * negates them before composition. This is the same as negating all the
@@ -155,15 +155,15 @@ declare namespace org {
                          * @return A new text style composed out of the given text styles
                          */
                         // @ts-ignore
-                        andNot(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.format.TextStyle
+                        public andNot(...styles: org.spongepowered.api.text.format.TextStyle[]): org.spongepowered.api.text.format.TextStyle
                         // @ts-ignore
-                        applyTo(builder: org.spongepowered.api.text.Text.Builder): void
+                        public applyTo(builder: org.spongepowered.api.text.Text.Builder): void
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

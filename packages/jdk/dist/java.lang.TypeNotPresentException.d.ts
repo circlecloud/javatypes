@@ -26,13 +26,13 @@ declare namespace java {
              *     load the named type, or <tt>null</tt> if unavailable or inapplicable
              */
             // @ts-ignore
-            constructor(typeName: string, cause: Error)
+            constructor(typeName: java.lang.String | string, cause: java.lang.Throwable | Error)
             /**
              * Returns the fully qualified name of the unavailable type.
              * @return the fully qualified name of the unavailable type
              */
             // @ts-ignore
-            typeName(): java.lang.String
+            typeName(): string
         }
     }
 }

@@ -31,7 +31,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                class XmlEnum implements java.lang.annotation.Annotation {
+                abstract class XmlEnum implements java.lang.annotation.Annotation {
                 }
             }
         }

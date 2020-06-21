@@ -36,37 +36,37 @@ declare namespace org {
                          * <p>The default setting is {@code false}.
                          */
                         // @ts-ignore
-                        setIgnoreDefaultModelOnRedirect(ignoreDefaultModelOnRedirect: boolean): void
+                        public setIgnoreDefaultModelOnRedirect(ignoreDefaultModelOnRedirect: boolean): void
                         /**
                          * Set a view name to be resolved by the DispatcherServlet via a ViewResolver.
                          * Will override any pre-existing view name or View.
                          */
                         // @ts-ignore
-                        setViewName(viewName: string): void
+                        public setViewName(viewName: java.lang.String | string): void
                         /**
                          * Return the view name to be resolved by the DispatcherServlet via a
                          * ViewResolver, or {@code null} if a View object is set.
                          */
                         // @ts-ignore
-                        getViewName(): java.lang.String
+                        public getViewName(): string
                         /**
                          * Set a View object to be used by the DispatcherServlet.
                          * Will override any pre-existing view name or View.
                          */
                         // @ts-ignore
-                        setView(view: any): void
+                        public setView(view: java.lang.Object | any): void
                         /**
                          * Return the View object, or {@code null} if we using a view name
                          * to be resolved by the DispatcherServlet via a ViewResolver.
                          */
                         // @ts-ignore
-                        getView(): java.lang.Object
+                        public getView(): any
                         /**
                          * Whether the view is a view reference specified via a name to be
                          * resolved by the DispatcherServlet via a ViewResolver.
                          */
                         // @ts-ignore
-                        isViewReference(): boolean
+                        public isViewReference(): boolean
                         /**
                          * Return the model to use -- either the "default" or the "redirect" model.
                          * The default model is used if {@code redirectModelScenario=false} or
@@ -74,7 +74,7 @@ declare namespace org {
                          * a method argument) and {@code ignoreDefaultModelOnRedirect=false}.
                          */
                         // @ts-ignore
-                        getModel(): ModelMap
+                        public getModel(): ModelMap
                         /**
                          * Return the "default" model created at instantiation.
                          * <p>In general it is recommended to use {@link #getModel()} instead which
@@ -86,7 +86,7 @@ declare namespace org {
                          * @since 4.1.4
                          */
                         // @ts-ignore
-                        getDefaultModel(): ModelMap
+                        public getDefaultModel(): ModelMap
                         /**
                          * Provide a separate model instance to use in a redirect scenario.
                          * <p>The provided additional model however is not used unless
@@ -94,26 +94,26 @@ declare namespace org {
                          * to signal an actual redirect scenario.
                          */
                         // @ts-ignore
-                        setRedirectModel(redirectModel: ModelMap): void
+                        public setRedirectModel(redirectModel: ModelMap): void
                         /**
                          * Whether the controller has returned a redirect instruction, e.g. a
                          * "redirect:" prefixed view name, a RedirectView instance, etc.
                          */
                         // @ts-ignore
-                        setRedirectModelScenario(redirectModelScenario: boolean): void
+                        public setRedirectModelScenario(redirectModelScenario: boolean): void
                         /**
                          * Provide an HTTP status that will be passed on to with the
                          * {@code ModelAndView} used for view rendering purposes.
                          * @since 4.3
                          */
                         // @ts-ignore
-                        setStatus(status: org.springframework.http.HttpStatus): void
+                        public setStatus(status: org.springframework.http.HttpStatus): void
                         /**
                          * Return the configured HTTP status, if any.
                          * @since 4.3
                          */
                         // @ts-ignore
-                        getStatus(): org.springframework.http.HttpStatus
+                        public getStatus(): org.springframework.http.HttpStatus
                         /**
                          * Programmatically register an attribute for which data binding should not occur,
                          * not even for a subsequent {@code @ModelAttribute} declaration.
@@ -121,13 +121,13 @@ declare namespace org {
                          * @since 4.3
                          */
                         // @ts-ignore
-                        setBindingDisabled(attributeName: string): void
+                        public setBindingDisabled(attributeName: java.lang.String | string): void
                         /**
                          * Whether binding is disabled for the given model attribute.
                          * @since 4.3
                          */
                         // @ts-ignore
-                        isBindingDisabled(name: string): boolean
+                        public isBindingDisabled(name: java.lang.String | string): boolean
                         /**
                          * Register whether data binding should occur for a corresponding model attribute,
                          * corresponding to an {@code @ModelAttribute(binding=true/false)} declaration.
@@ -137,13 +137,13 @@ declare namespace org {
                          * @since 4.3.13
                          */
                         // @ts-ignore
-                        setBinding(attributeName: string, enabled: boolean): void
+                        public setBinding(attributeName: java.lang.String | string, enabled: boolean): void
                         /**
                          * Return the {@link SessionStatus} instance to use that can be used to
                          * signal that session processing is complete.
                          */
                         // @ts-ignore
-                        getSessionStatus(): org.springframework.web.bind.support.SessionStatus
+                        public getSessionStatus(): org.springframework.web.bind.support.SessionStatus
                         /**
                          * Whether the request has been handled fully within the handler, e.g.
                          * {@code @ResponseBody} method, and therefore view resolution is not
@@ -152,53 +152,53 @@ declare namespace org {
                          * <p>The default value is {@code false}.
                          */
                         // @ts-ignore
-                        setRequestHandled(requestHandled: boolean): void
+                        public setRequestHandled(requestHandled: boolean): void
                         /**
                          * Whether the request has been handled fully within the handler.
                          */
                         // @ts-ignore
-                        isRequestHandled(): boolean
+                        public isRequestHandled(): boolean
                         /**
                          * Add the supplied attribute to the underlying model.
                          * A shortcut for {@code getModel().addAttribute(String, Object)}.
                          */
                         // @ts-ignore
-                        addAttribute(name: string, value: any): org.springframework.web.method.support.ModelAndViewContainer
+                        public addAttribute(name: java.lang.String | string, value: java.lang.Object | any): org.springframework.web.method.support.ModelAndViewContainer
                         /**
                          * Add the supplied attribute to the underlying model.
                          * A shortcut for {@code getModel().addAttribute(Object)}.
                          */
                         // @ts-ignore
-                        addAttribute(value: any): org.springframework.web.method.support.ModelAndViewContainer
+                        public addAttribute(value: java.lang.Object | any): org.springframework.web.method.support.ModelAndViewContainer
                         /**
                          * Copy all attributes to the underlying model.
                          * A shortcut for {@code getModel().addAllAttributes(Map)}.
                          */
                         // @ts-ignore
-                        addAllAttributes(attributes: java.util.Map<java.lang.String, any>): org.springframework.web.method.support.ModelAndViewContainer
+                        public addAllAttributes(attributes: java.util.Map<java.lang.String | string, any>): org.springframework.web.method.support.ModelAndViewContainer
                         /**
                          * Copy attributes in the supplied {@code Map} with existing objects of
                          * the same name taking precedence (i.e. not getting replaced).
                          * A shortcut for {@code getModel().mergeAttributes(Map<String, ?>)}.
                          */
                         // @ts-ignore
-                        mergeAttributes(attributes: java.util.Map<java.lang.String, any>): org.springframework.web.method.support.ModelAndViewContainer
+                        public mergeAttributes(attributes: java.util.Map<java.lang.String | string, any>): org.springframework.web.method.support.ModelAndViewContainer
                         /**
                          * Remove the given attributes from the model.
                          */
                         // @ts-ignore
-                        removeAttributes(attributes: java.util.Map<java.lang.String, any>): org.springframework.web.method.support.ModelAndViewContainer
+                        public removeAttributes(attributes: java.util.Map<java.lang.String | string, any>): org.springframework.web.method.support.ModelAndViewContainer
                         /**
                          * Whether the underlying model contains the given attribute name.
                          * A shortcut for {@code getModel().containsAttribute(String)}.
                          */
                         // @ts-ignore
-                        containsAttribute(name: string): boolean
+                        public containsAttribute(name: java.lang.String | string): boolean
                         /**
                          * Return diagnostic information.
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

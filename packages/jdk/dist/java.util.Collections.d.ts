@@ -40,20 +40,20 @@ declare namespace java {
              * @see #emptySet()
              */
             // @ts-ignore
-            readonly EMPTY_SET: Array
+            public static readonly EMPTY_SET: java.util.Set<any> | Array<any>
             /**
              * The empty list (immutable).  This list is serializable.
              * @see #emptyList()
              */
             // @ts-ignore
-            readonly EMPTY_LIST: Array
+            public static readonly EMPTY_LIST: java.util.List<any> | Array<any>
             /**
              * The empty map (immutable).  This map is serializable.
              * @see #emptyMap()
              * @since 1.3
              */
             // @ts-ignore
-            readonly EMPTY_MAP: java.util.Map
+            public static readonly EMPTY_MAP: java.util.Map<any>
             /**
              * Sorts the specified list into ascending order, according to the
              * {@linkplain Comparable natural ordering} of its elements.
@@ -79,7 +79,7 @@ declare namespace java {
              * @see List#sort(Comparator)
              */
             // @ts-ignore
-            sort<T extends java.lang.Comparable<? super T>>(list: Array<T>): void
+            public static sort<T extends java.lang.Comparable>(list: java.util.List<T> | Array<T>): void
             /**
              * Sorts the specified list according to the order induced by the
              * specified comparator.  All elements in the list must be <i>mutually
@@ -105,7 +105,7 @@ declare namespace java {
              * @see List#sort(Comparator)
              */
             // @ts-ignore
-            sort<T>(list: Array<T>, c: java.util.Comparator<any super T>): void
+            public static sort<T>(list: java.util.List<T> | Array<T>, c: java.util.Comparator<any>): void
             /**
              * Searches the specified list for the specified object using the binary
              * search algorithm.  The list must be sorted into ascending order
@@ -136,7 +136,7 @@ declare namespace java {
              *          with the elements of the list.
              */
             // @ts-ignore
-            binarySearch<T>(list: Array<java.lang.Comparable<any super T>>, key: T): int
+            public static binarySearch<T>(list: java.util.List<any> | Array<any>, key: T): number /*int*/
             /**
              * Searches the specified list for the specified object using the binary
              * search algorithm.  The list must be sorted into ascending order
@@ -171,7 +171,7 @@ declare namespace java {
              *          elements of the list using this comparator.
              */
             // @ts-ignore
-            binarySearch<T>(list: Array<T>, key: T, c: java.util.Comparator<any super T>): int
+            public static binarySearch<T>(list: java.util.List<any> | Array<any>, key: T, c: java.util.Comparator<any>): number /*int*/
             /**
              * Reverses the order of the elements in the specified list.<p>
              * This method runs in linear time.
@@ -180,7 +180,7 @@ declare namespace java {
              *          its list-iterator does not support the <tt>set</tt> operation.
              */
             // @ts-ignore
-            reverse(list: Array<any>): void
+            public static reverse(list: java.util.List<any> | Array<any>): void
             /**
              * Randomly permutes the specified list using a default source of
              * randomness.  All permutations occur with approximately equal
@@ -206,7 +206,7 @@ declare namespace java {
              *          its list-iterator does not support the <tt>set</tt> operation.
              */
             // @ts-ignore
-            shuffle(list: Array<any>): void
+            public static shuffle(list: java.util.List<any> | Array<any>): void
             /**
              * Randomly permute the specified list using the specified source of
              * randomness.  All permutations occur with equal likelihood
@@ -228,7 +228,7 @@ declare namespace java {
              *          list-iterator does not support the <tt>set</tt> operation.
              */
             // @ts-ignore
-            shuffle(list: Array<any>, rnd: java.util.Random): void
+            public static shuffle(list: java.util.List<any> | Array<any>, rnd: java.util.Random): void
             /**
              * Swaps the elements at the specified positions in the specified list.
              * (If the specified positions are equal, invoking this method leaves
@@ -242,7 +242,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            swap(list: Array<any>, i: number /*int*/, j: number /*int*/): void
+            public static swap(list: java.util.List<any> | Array<any>, i: number /*int*/, j: number /*int*/): void
             /**
              * Replaces all of the elements of the specified list with the specified
              * element. <p>
@@ -254,7 +254,7 @@ declare namespace java {
              *          list-iterator does not support the <tt>set</tt> operation.
              */
             // @ts-ignore
-            fill<T>(list: Array<any super T>, obj: T): void
+            public static fill<T>(list: java.util.List<any> | Array<any>, obj: T): void
             /**
              * Copies all of the elements from one list into another.  After the
              * operation, the index of each copied element in the destination list
@@ -271,7 +271,7 @@ declare namespace java {
              *          list-iterator does not support the <tt>set</tt> operation.
              */
             // @ts-ignore
-            copy<T>(dest: Array<any super T>, src: Array<T>): void
+            public static copy<T>(dest: java.util.List<any> | Array<any>, src: java.util.List<any> | Array<any>): void
             /**
              * Returns the minimum element of the given collection, according to the
              * <i>natural ordering</i> of its elements.  All elements in the
@@ -293,7 +293,7 @@ declare namespace java {
              * @see Comparable
              */
             // @ts-ignore
-            min<T extends java.lang.Object & java.lang.Comparable<? super T>>(coll: Array<T>): T
+            public static min<T extends java.lang.Object & java.lang.Comparable>(coll: java.util.Collection<any> | Array<any>): T
             /**
              * Returns the minimum element of the given collection, according to the
              * order induced by the specified comparator.  All elements in the
@@ -316,7 +316,7 @@ declare namespace java {
              * @see Comparable
              */
             // @ts-ignore
-            min<T>(coll: Array<T>, comp: java.util.Comparator<any super T>): T
+            public static min<T>(coll: java.util.Collection<any> | Array<any>, comp: java.util.Comparator<any>): T
             /**
              * Returns the maximum element of the given collection, according to the
              * <i>natural ordering</i> of its elements.  All elements in the
@@ -338,7 +338,7 @@ declare namespace java {
              * @see Comparable
              */
             // @ts-ignore
-            max<T extends java.lang.Object & java.lang.Comparable<? super T>>(coll: Array<T>): T
+            public static max<T extends java.lang.Object & java.lang.Comparable>(coll: java.util.Collection<any> | Array<any>): T
             /**
              * Returns the maximum element of the given collection, according to the
              * order induced by the specified comparator.  All elements in the
@@ -361,7 +361,7 @@ declare namespace java {
              * @see Comparable
              */
             // @ts-ignore
-            max<T>(coll: Array<T>, comp: java.util.Comparator<any super T>): T
+            public static max<T>(coll: java.util.Collection<any> | Array<any>, comp: java.util.Comparator<any>): T
             /**
              * Rotates the elements in the specified list by the specified distance.
              * After calling this method, the element at index <tt>i</tt> will be
@@ -413,7 +413,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            rotate(list: Array<any>, distance: number /*int*/): void
+            public static rotate(list: java.util.List<any> | Array<any>, distance: number /*int*/): void
             /**
              * Replaces all occurrences of one specified value in a list with another.
              * More formally, replaces with <tt>newVal</tt> each element <tt>e</tt>
@@ -433,7 +433,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            replaceAll<T>(list: Array<T>, oldVal: T, newVal: T): boolean
+            public static replaceAll<T>(list: java.util.List<T> | Array<T>, oldVal: T, newVal: T): boolean
             /**
              * Returns the starting position of the first occurrence of the specified
              * target list within the specified source list, or -1 if there is no
@@ -453,7 +453,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            indexOfSubList(source: Array<any>, target: Array<any>): int
+            public static indexOfSubList(source: java.util.List<any> | Array<any>, target: java.util.List<any> | Array<any>): number /*int*/
             /**
              * Returns the starting position of the last occurrence of the specified
              * target list within the specified source list, or -1 if there is no such
@@ -473,7 +473,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            lastIndexOfSubList(source: Array<any>, target: Array<any>): int
+            public static lastIndexOfSubList(source: java.util.List<any> | Array<any>, target: java.util.List<any> | Array<any>): number /*int*/
             /**
              * Returns an unmodifiable view of the specified collection.  This method
              * allows modules to provide users with "read-only" access to internal
@@ -494,7 +494,7 @@ declare namespace java {
              * @return an unmodifiable view of the specified collection.
              */
             // @ts-ignore
-            unmodifiableCollection<T>(c: Array<T>): java.util.Collection<T>
+            public static unmodifiableCollection<T>(c: java.util.Collection<any> | Array<any>): Array<T>
             /**
              * Returns an unmodifiable view of the specified set.  This method allows
              * modules to provide users with "read-only" access to internal sets.
@@ -508,7 +508,7 @@ declare namespace java {
              * @return an unmodifiable view of the specified set.
              */
             // @ts-ignore
-            unmodifiableSet<T>(s: Array<T>): java.util.Set<T>
+            public static unmodifiableSet<T>(s: java.util.Set<any> | Array<any>): Array<T>
             /**
              * Returns an unmodifiable view of the specified sorted set.  This method
              * allows modules to provide users with "read-only" access to internal
@@ -525,7 +525,7 @@ declare namespace java {
              * @return an unmodifiable view of the specified sorted set.
              */
             // @ts-ignore
-            unmodifiableSortedSet<T>(s: java.util.SortedSet<T>): java.util.SortedSet<T>
+            public static unmodifiableSortedSet<T>(s: java.util.SortedSet<T>): java.util.SortedSet<T>
             /**
              * Returns an unmodifiable view of the specified navigable set.  This method
              * allows modules to provide users with "read-only" access to internal
@@ -543,7 +543,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            unmodifiableNavigableSet<T>(s: java.util.NavigableSet<T>): java.util.NavigableSet<T>
+            public static unmodifiableNavigableSet<T>(s: java.util.NavigableSet<T>): java.util.NavigableSet<T>
             /**
              * Returns an unmodifiable view of the specified list.  This method allows
              * modules to provide users with "read-only" access to internal
@@ -559,7 +559,7 @@ declare namespace java {
              * @return an unmodifiable view of the specified list.
              */
             // @ts-ignore
-            unmodifiableList<T>(list: Array<T>): java.util.List<T>
+            public static unmodifiableList<T>(list: java.util.List<any> | Array<any>): Array<T>
             /**
              * Returns an unmodifiable view of the specified map.  This method
              * allows modules to provide users with "read-only" access to internal
@@ -575,7 +575,7 @@ declare namespace java {
              * @return an unmodifiable view of the specified map.
              */
             // @ts-ignore
-            unmodifiableMap<K, V>(m: java.util.Map<K, V>): java.util.Map<K, V>
+            public static unmodifiableMap<K, V>(m: java.util.Map<any, any>): java.util.Map<K, V>
             /**
              * Returns an unmodifiable view of the specified sorted map.  This method
              * allows modules to provide users with "read-only" access to internal
@@ -593,7 +593,7 @@ declare namespace java {
              * @return an unmodifiable view of the specified sorted map.
              */
             // @ts-ignore
-            unmodifiableSortedMap<K, V>(m: java.util.SortedMap<K, V>): java.util.SortedMap<K, V>
+            public static unmodifiableSortedMap<K, V>(m: java.util.SortedMap<K, any>): java.util.SortedMap<K, V>
             /**
              * Returns an unmodifiable view of the specified navigable map.  This method
              * allows modules to provide users with "read-only" access to internal
@@ -612,7 +612,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            unmodifiableNavigableMap<K, V>(m: java.util.NavigableMap<K, V>): java.util.NavigableMap<K, V>
+            public static unmodifiableNavigableMap<K, V>(m: java.util.NavigableMap<K, any>): java.util.NavigableMap<K, V>
             /**
              * Returns a synchronized (thread-safe) collection backed by the specified
              * collection.  In order to guarantee serial access, it is critical that
@@ -643,7 +643,7 @@ declare namespace java {
              * @return a synchronized view of the specified collection.
              */
             // @ts-ignore
-            synchronizedCollection<T>(c: Array<T>): java.util.Collection<T>
+            public static synchronizedCollection<T>(c: java.util.Collection<T> | Array<T>): Array<T>
             /**
              * Returns a synchronized (thread-safe) set backed by the specified
              * set.  In order to guarantee serial access, it is critical that
@@ -668,7 +668,7 @@ declare namespace java {
              * @return a synchronized view of the specified set.
              */
             // @ts-ignore
-            synchronizedSet<T>(s: Array<T>): java.util.Set<T>
+            public static synchronizedSet<T>(s: java.util.Set<T> | Array<T>): Array<T>
             /**
              * Returns a synchronized (thread-safe) sorted set backed by the specified
              * sorted set.  In order to guarantee serial access, it is critical that
@@ -705,7 +705,7 @@ declare namespace java {
              * @return a synchronized view of the specified sorted set.
              */
             // @ts-ignore
-            synchronizedSortedSet<T>(s: java.util.SortedSet<T>): java.util.SortedSet<T>
+            public static synchronizedSortedSet<T>(s: java.util.SortedSet<T>): java.util.SortedSet<T>
             /**
              * Returns a synchronized (thread-safe) navigable set backed by the
              * specified navigable set.  In order to guarantee serial access, it is
@@ -744,7 +744,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            synchronizedNavigableSet<T>(s: java.util.NavigableSet<T>): java.util.NavigableSet<T>
+            public static synchronizedNavigableSet<T>(s: java.util.NavigableSet<T>): java.util.NavigableSet<T>
             /**
              * Returns a synchronized (thread-safe) list backed by the specified
              * list.  In order to guarantee serial access, it is critical that
@@ -769,7 +769,7 @@ declare namespace java {
              * @return a synchronized view of the specified list.
              */
             // @ts-ignore
-            synchronizedList<T>(list: Array<T>): java.util.List<T>
+            public static synchronizedList<T>(list: java.util.List<T> | Array<T>): Array<T>
             /**
              * Returns a synchronized (thread-safe) map backed by the specified
              * map.  In order to guarantee serial access, it is critical that
@@ -797,7 +797,7 @@ declare namespace java {
              * @return a synchronized view of the specified map.
              */
             // @ts-ignore
-            synchronizedMap<K, V>(m: java.util.Map<K, V>): java.util.Map<K, V>
+            public static synchronizedMap<K, V>(m: java.util.Map<K, V>): java.util.Map<K, V>
             /**
              * Returns a synchronized (thread-safe) sorted map backed by the specified
              * sorted map.  In order to guarantee serial access, it is critical that
@@ -840,7 +840,7 @@ declare namespace java {
              * @return a synchronized view of the specified sorted map.
              */
             // @ts-ignore
-            synchronizedSortedMap<K, V>(m: java.util.SortedMap<K, V>): java.util.SortedMap<K, V>
+            public static synchronizedSortedMap<K, V>(m: java.util.SortedMap<K, V>): java.util.SortedMap<K, V>
             /**
              * Returns a synchronized (thread-safe) navigable map backed by the
              * specified navigable map.  In order to guarantee serial access, it is
@@ -885,7 +885,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            synchronizedNavigableMap<K, V>(m: java.util.NavigableMap<K, V>): java.util.NavigableMap<K, V>
+            public static synchronizedNavigableMap<K, V>(m: java.util.NavigableMap<K, V>): java.util.NavigableMap<K, V>
             /**
              * Returns a dynamically typesafe view of the specified collection.
              * Any attempt to insert an element of the wrong type will result in an
@@ -942,7 +942,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            checkedCollection<E>(c: Array<E>, type: java.lang.Class<E>): java.util.Collection<E>
+            public static checkedCollection<E>(c: java.util.Collection<E> | Array<E>, type: java.lang.Class<E>): Array<E>
             /**
              * Returns a dynamically typesafe view of the specified queue.
              * Any attempt to insert an element of the wrong type will result in
@@ -967,7 +967,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            checkedQueue<E>(queue: java.util.Queue<E>, type: java.lang.Class<E>): java.util.Queue<E>
+            public static checkedQueue<E>(queue: java.util.Queue<E>, type: java.lang.Class<E>): java.util.Queue<E>
             /**
              * Returns a dynamically typesafe view of the specified set.
              * Any attempt to insert an element of the wrong type will result in
@@ -992,7 +992,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            checkedSet<E>(s: Array<E>, type: java.lang.Class<E>): java.util.Set<E>
+            public static checkedSet<E>(s: java.util.Set<E> | Array<E>, type: java.lang.Class<E>): Array<E>
             /**
              * Returns a dynamically typesafe view of the specified sorted set.
              * Any attempt to insert an element of the wrong type will result in an
@@ -1018,7 +1018,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            checkedSortedSet<E>(s: java.util.SortedSet<E>, type: java.lang.Class<E>): java.util.SortedSet<E>
+            public static checkedSortedSet<E>(s: java.util.SortedSet<E>, type: java.lang.Class<E>): java.util.SortedSet<E>
             /**
              * Returns a dynamically typesafe view of the specified navigable set.
              * Any attempt to insert an element of the wrong type will result in an
@@ -1044,7 +1044,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            checkedNavigableSet<E>(s: java.util.NavigableSet<E>, type: java.lang.Class<E>): java.util.NavigableSet<E>
+            public static checkedNavigableSet<E>(s: java.util.NavigableSet<E>, type: java.lang.Class<E>): java.util.NavigableSet<E>
             /**
              * Returns a dynamically typesafe view of the specified list.
              * Any attempt to insert an element of the wrong type will result in
@@ -1069,7 +1069,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            checkedList<E>(list: Array<E>, type: java.lang.Class<E>): java.util.List<E>
+            public static checkedList<E>(list: java.util.List<E> | Array<E>, type: java.lang.Class<E>): Array<E>
             /**
              * Returns a dynamically typesafe view of the specified map.
              * Any attempt to insert a mapping whose key or value have the wrong
@@ -1102,7 +1102,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            checkedMap<K, V>(m: java.util.Map<K, V>, keyType: java.lang.Class<K>, valueType: java.lang.Class<V>): java.util.Map<K, V>
+            public static checkedMap<K, V>(m: java.util.Map<K, V>, keyType: java.lang.Class<K>, valueType: java.lang.Class<V>): java.util.Map<K, V>
             /**
              * Returns a dynamically typesafe view of the specified sorted map.
              * Any attempt to insert a mapping whose key or value have the wrong
@@ -1135,7 +1135,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            checkedSortedMap<K, V>(m: java.util.SortedMap<K, V>, keyType: java.lang.Class<K>, valueType: java.lang.Class<V>): java.util.SortedMap<K, V>
+            public static checkedSortedMap<K, V>(m: java.util.SortedMap<K, V>, keyType: java.lang.Class<K>, valueType: java.lang.Class<V>): java.util.SortedMap<K, V>
             /**
              * Returns a dynamically typesafe view of the specified navigable map.
              * Any attempt to insert a mapping whose key or value have the wrong
@@ -1168,7 +1168,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            checkedNavigableMap<K, V>(m: java.util.NavigableMap<K, V>, keyType: java.lang.Class<K>, valueType: java.lang.Class<V>): java.util.NavigableMap<K, V>
+            public static checkedNavigableMap<K, V>(m: java.util.NavigableMap<K, V>, keyType: java.lang.Class<K>, valueType: java.lang.Class<V>): java.util.NavigableMap<K, V>
             /**
              * Returns an iterator that has no elements.  More precisely,
              * <ul>
@@ -1186,7 +1186,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            emptyIterator<T>(): java.util.Iterator<T>
+            public static emptyIterator<T>(): java.util.Iterator<T>
             /**
              * Returns a list iterator that has no elements.  More precisely,
              * <ul>
@@ -1211,7 +1211,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            emptyListIterator<T>(): java.util.ListIterator<T>
+            public static emptyListIterator<T>(): java.util.ListIterator<T>
             /**
              * Returns an enumeration that has no elements.  More precisely,
              * <ul>
@@ -1227,7 +1227,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            emptyEnumeration<T>(): java.util.Enumeration<T>
+            public static emptyEnumeration<T>(): java.util.Enumeration<T>
             /**
              * Returns an empty set (immutable).  This set is serializable.
              * Unlike the like-named field, this method is parameterized.
@@ -1245,7 +1245,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            emptySet<T>(): java.util.Set<T>
+            public static emptySet<T>(): Array<T>
             /**
              * Returns an empty sorted set (immutable).  This set is serializable.
              * <p>This example illustrates the type-safe way to obtain an empty
@@ -1260,7 +1260,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            emptySortedSet<E>(): java.util.SortedSet<E>
+            public static emptySortedSet<E>(): java.util.SortedSet<E>
             /**
              * Returns an empty navigable set (immutable).  This set is serializable.
              * <p>This example illustrates the type-safe way to obtain an empty
@@ -1275,7 +1275,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            emptyNavigableSet<E>(): java.util.NavigableSet<E>
+            public static emptyNavigableSet<E>(): java.util.NavigableSet<E>
             /**
              * Returns an empty list (immutable).  This list is serializable.
              * <p>This example illustrates the type-safe way to obtain an empty list:
@@ -1292,7 +1292,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            emptyList<T>(): java.util.List<T>
+            public static emptyList<T>(): Array<T>
             /**
              * Returns an empty map (immutable).  This map is serializable.
              * <p>This example illustrates the type-safe way to obtain an empty map:
@@ -1310,7 +1310,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            emptyMap<K, V>(): java.util.Map<K, V>
+            public static emptyMap<K, V>(): java.util.Map<K, V>
             /**
              * Returns an empty sorted map (immutable).  This map is serializable.
              * <p>This example illustrates the type-safe way to obtain an empty map:
@@ -1325,7 +1325,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            emptySortedMap<K, V>(): java.util.SortedMap<K, V>
+            public static emptySortedMap<K, V>(): java.util.SortedMap<K, V>
             /**
              * Returns an empty navigable map (immutable).  This map is serializable.
              * <p>This example illustrates the type-safe way to obtain an empty map:
@@ -1340,7 +1340,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            emptyNavigableMap<K, V>(): java.util.NavigableMap<K, V>
+            public static emptyNavigableMap<K, V>(): java.util.NavigableMap<K, V>
             /**
              * Returns an immutable set containing only the specified object.
              * The returned set is serializable.
@@ -1349,7 +1349,7 @@ declare namespace java {
              * @return an immutable set containing only the specified object.
              */
             // @ts-ignore
-            singleton<T>(o: T): java.util.Set<T>
+            public static singleton<T>(o: T): Array<T>
             /**
              * Returns an immutable list containing only the specified object.
              * The returned list is serializable.
@@ -1359,7 +1359,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            singletonList<T>(o: T): java.util.List<T>
+            public static singletonList<T>(o: T): Array<T>
             /**
              * Returns an immutable map, mapping only the specified key to the
              * specified value.  The returned map is serializable.
@@ -1372,7 +1372,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            singletonMap<K, V>(key: K, value: V): java.util.Map<K, V>
+            public static singletonMap<K, V>(key: K, value: V): java.util.Map<K, V>
             /**
              * Returns an immutable list consisting of <tt>n</tt> copies of the
              * specified object.  The newly allocated data object is tiny (it contains
@@ -1390,7 +1390,7 @@ declare namespace java {
              * @see List#addAll(int, Collection)
              */
             // @ts-ignore
-            nCopies<T>(n: number /*int*/, o: T): java.util.List<T>
+            public static nCopies<T>(n: number /*int*/, o: T): Array<T>
             /**
              * Returns a comparator that imposes the reverse of the <em>natural
              * ordering</em> on a collection of objects that implement the
@@ -1410,7 +1410,7 @@ declare namespace java {
              * @see Comparable
              */
             // @ts-ignore
-            reverseOrder<T>(): java.util.Comparator<T>
+            public static reverseOrder<T>(): java.util.Comparator<T>
             /**
              * Returns a comparator that imposes the reverse ordering of the specified
              * comparator.  If the specified comparator is {@code null}, this method is
@@ -1427,7 +1427,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            reverseOrder<T>(cmp: java.util.Comparator<T>): java.util.Comparator<T>
+            public static reverseOrder<T>(cmp: java.util.Comparator<T>): java.util.Comparator<T>
             /**
              * Returns an enumeration over the specified collection.  This provides
              * interoperability with legacy APIs that require an enumeration
@@ -1438,7 +1438,7 @@ declare namespace java {
              * @see Enumeration
              */
             // @ts-ignore
-            enumeration<T>(c: Array<T>): java.util.Enumeration<T>
+            public static enumeration<T>(c: java.util.Collection<T> | Array<T>): java.util.Enumeration<T>
             /**
              * Returns an array list containing the elements returned by the
              * specified enumeration in the order they are returned by the
@@ -1455,7 +1455,7 @@ declare namespace java {
              * @see ArrayList
              */
             // @ts-ignore
-            list<T>(e: java.util.Enumeration<T>): java.util.ArrayList<T>
+            public static list<T>(e: java.util.Enumeration<T>): java.util.ArrayList<T>
             /**
              * Returns the number of elements in the specified collection equal to the
              * specified object.  More formally, returns the number of elements
@@ -1469,7 +1469,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            frequency(c: Array<any>, o: any): int
+            public static frequency(c: java.util.Collection<any> | Array<any>, o: java.lang.Object | any): number /*int*/
             /**
              * Returns {@code true} if the two specified collections have no
              * elements in common.
@@ -1505,7 +1505,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            disjoint(c1: Array<any>, c2: Array<any>): boolean
+            public static disjoint(c1: java.util.Collection<any> | Array<any>, c2: java.util.Collection<any> | Array<any>): boolean
             /**
              * Adds all of the specified elements to the specified collection.
              * Elements to be added may be specified individually or as an array.
@@ -1532,7 +1532,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            addAll<T>(c: Array<any super T>, ...elements: T[]): boolean
+            public static addAll<T>(c: java.util.Collection<any> | Array<any>, ...elements: T[]): boolean
             /**
              * Returns a set backed by the specified map.  The resulting set displays
              * the same ordering, concurrency, and performance characteristics as the
@@ -1562,7 +1562,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            newSetFromMap<E>(map: java.util.Map<E, java.lang.Boolean>): java.util.Set<E>
+            public static newSetFromMap<E>(map: java.util.Map<E, java.lang.Boolean>): Array<E>
             /**
              * Returns a view of a {@link Deque} as a Last-in-first-out (Lifo)
              * {@link Queue}. Method <tt>add</tt> is mapped to <tt>push</tt>,
@@ -1580,7 +1580,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            asLifoQueue<T>(deque: java.util.Deque<T>): java.util.Queue<T>
+            public static asLifoQueue<T>(deque: java.util.Deque<T>): java.util.Queue<T>
         }
     }
 }

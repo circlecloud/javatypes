@@ -22,7 +22,7 @@ declare namespace org {
                  * @since 3.2
                  */
                 // @ts-ignore
-                class ObjectToStringHttpMessageConverter extends org.springframework.http.converter.AbstractHttpMessageConverter<java.lang.Object> {
+                class ObjectToStringHttpMessageConverter extends org.springframework.http.converter.AbstractHttpMessageConverter<java.lang.Object | any> {
                     /**
                      * A constructor accepting a {@code ConversionService} to use to convert the
                      * (String) message body to/from the target class type. This constructor uses
@@ -42,19 +42,19 @@ declare namespace org {
                      * Delegates to {@link StringHttpMessageConverter#setWriteAcceptCharset(boolean)}.
                      */
                     // @ts-ignore
-                    setWriteAcceptCharset(writeAcceptCharset: boolean): void
+                    public setWriteAcceptCharset(writeAcceptCharset: boolean): void
                     // @ts-ignore
-                    canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canRead(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
-                    canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
+                    public canWrite(clazz: java.lang.Class<any>, mediaType: org.springframework.http.MediaType): boolean
                     // @ts-ignore
                     supports(clazz: java.lang.Class<any>): boolean
                     // @ts-ignore
-                    readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): java.lang.Object
+                    readInternal(clazz: java.lang.Class<any>, inputMessage: org.springframework.http.HttpInputMessage): any
                     // @ts-ignore
-                    writeInternal(obj: any, outputMessage: org.springframework.http.HttpOutputMessage): void
+                    writeInternal(obj: java.lang.Object | any, outputMessage: org.springframework.http.HttpOutputMessage): void
                     // @ts-ignore
-                    getContentLength(obj: any, contentType: org.springframework.http.MediaType): java.lang.Long
+                    getContentLength(obj: java.lang.Object | any, contentType: org.springframework.http.MediaType): number
                 }
             }
         }

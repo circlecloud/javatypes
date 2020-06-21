@@ -22,7 +22,7 @@ declare namespace org {
                          * Create an instance from a bean instance and a method.
                          */
                         // @ts-ignore
-                        constructor(bean: any, method: java.lang.reflect.Method)
+                        constructor(bean: java.lang.Object | any, method: java.lang.reflect.Method)
                         /**
                          * Construct a new handler method with the given bean instance, method name and parameters.
                          * @param bean the object bean
@@ -31,26 +31,26 @@ declare namespace org {
                          * @throws NoSuchMethodException when the method cannot be found
                          */
                         // @ts-ignore
-                        constructor(bean: any, methodName: string, ...parameterTypes: java.lang.Class[])
+                        constructor(bean: java.lang.Object | any, methodName: java.lang.String | string, ...parameterTypes: java.lang.Class<any>[])
                         /**
                          * Set the {@link WebDataBinderFactory} to be passed to argument resolvers allowing them to create
                          * a {@link WebDataBinder} for data binding and type conversion purposes.
                          * @param dataBinderFactory the data binder factory.
                          */
                         // @ts-ignore
-                        setDataBinderFactory(dataBinderFactory: org.springframework.web.bind.support.WebDataBinderFactory): void
+                        public setDataBinderFactory(dataBinderFactory: org.springframework.web.bind.support.WebDataBinderFactory): void
                         /**
                          * Set {@link HandlerMethodArgumentResolver HandlerMethodArgumentResolvers} to use to use for resolving method argument values.
                          */
                         // @ts-ignore
-                        setHandlerMethodArgumentResolvers(argumentResolvers: org.springframework.web.method.support.HandlerMethodArgumentResolverComposite): void
+                        public setHandlerMethodArgumentResolvers(argumentResolvers: org.springframework.web.method.support.HandlerMethodArgumentResolverComposite): void
                         /**
                          * Set the ParameterNameDiscoverer for resolving parameter names when needed
                          * (e.g. default request attribute name).
                          * <p>Default is a {@link org.springframework.core.DefaultParameterNameDiscoverer}.
                          */
                         // @ts-ignore
-                        setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
+                        public setParameterNameDiscoverer(parameterNameDiscoverer: ParameterNameDiscoverer): void
                         /**
                          * Invoke the method after resolving its argument values in the context of the given request.
                          * <p>Argument values are commonly resolved through
@@ -71,7 +71,7 @@ declare namespace org {
                          * @see #doInvoke
                          */
                         // @ts-ignore
-                        invokeForRequest(request: org.springframework.web.context.request.NativeWebRequest, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, ...providedArgs: any[]): java.lang.Object
+                        public invokeForRequest(request: org.springframework.web.context.request.NativeWebRequest, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, ...providedArgs: java.lang.Object[] | any[]): any
                         /**
                          * Get the method argument values for the current request, checking the provided
                          * argument values and falling back to the configured argument resolvers.
@@ -79,12 +79,12 @@ declare namespace org {
                          * @since 5.1.2
                          */
                         // @ts-ignore
-                        getMethodArgumentValues(request: org.springframework.web.context.request.NativeWebRequest, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, ...providedArgs: any[]): java.lang.Object[]
+                        getMethodArgumentValues(request: org.springframework.web.context.request.NativeWebRequest, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, ...providedArgs: java.lang.Object[] | any[]): any[]
                         /**
                          * Invoke the handler method with the given argument values.
                          */
                         // @ts-ignore
-                        doInvoke(...args: any[]): java.lang.Object
+                        doInvoke(...args: java.lang.Object[] | any[]): any
                     }
                 }
             }

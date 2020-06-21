@@ -27,14 +27,14 @@ declare namespace org {
                      * @see #setCompilationCustomizers
                      */
                     // @ts-ignore
-                    setCompilerConfiguration(compilerConfiguration: CompilerConfiguration): void
+                    public setCompilerConfiguration(compilerConfiguration: CompilerConfiguration): void
                     /**
                      * Return this evaluator's compiler configuration (never {@code null}).
                      * @since 4.3.3
                      * @see #setCompilerConfiguration
                      */
                     // @ts-ignore
-                    getCompilerConfiguration(): CompilerConfiguration
+                    public getCompilerConfiguration(): CompilerConfiguration
                     /**
                      * Set one or more customizers to be applied to this evaluator's compiler configuration.
                      * <p>Note that this modifies the shared compiler configuration held by this evaluator.
@@ -42,13 +42,13 @@ declare namespace org {
                      * @see #setCompilerConfiguration
                      */
                     // @ts-ignore
-                    setCompilationCustomizers(...compilationCustomizers: CompilationCustomizer[]): void
+                    public setCompilationCustomizers(...compilationCustomizers: CompilationCustomizer[]): void
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    evaluate(script: org.springframework.scripting.ScriptSource): java.lang.Object
+                    public evaluate(script: org.springframework.scripting.ScriptSource): any
                     // @ts-ignore
-                    evaluate(script: org.springframework.scripting.ScriptSource, arguments: java.util.Map<java.lang.String, java.lang.Object>): java.lang.Object
+                    public evaluate(script: org.springframework.scripting.ScriptSource, arguments: java.util.Map<java.lang.String | string, java.lang.Object | any>): any
                 }
             }
         }

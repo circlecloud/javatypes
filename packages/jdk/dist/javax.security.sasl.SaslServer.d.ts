@@ -65,7 +65,7 @@ declare namespace javax {
                  * @return A non-null string representing the IANA-registered mechanism name.
                  */
                 // @ts-ignore
-                getMechanismName(): java.lang.String
+                getMechanismName(): string
                 /**
                  * Evaluates the response data and generates a challenge.
                  * If a response is received from the client during the authentication
@@ -87,7 +87,7 @@ declare namespace javax {
                  *  the response or generating a challenge.
                  */
                 // @ts-ignore
-                evaluateResponse(response: number /*byte*/[]): byte[]
+                evaluateResponse(response: number /*byte*/[]): number /*byte*/[]
                 /**
                  * Determines whether the authentication exchange has completed.
                  * This method is typically called after each invocation of
@@ -105,7 +105,7 @@ declare namespace javax {
                  * @exception IllegalStateException if this authentication session has not completed
                  */
                 // @ts-ignore
-                getAuthorizationID(): java.lang.String
+                getAuthorizationID(): string
                 /**
                  * Unwraps a byte array received from the client.
                  * This method can be called only after the authentication exchange has
@@ -130,7 +130,7 @@ declare namespace javax {
                  *  has neither integrity nor privacy
                  */
                 // @ts-ignore
-                unwrap(incoming: number /*byte*/[], offset: number /*int*/, len: number /*int*/): byte[]
+                unwrap(incoming: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*byte*/[]
                 /**
                  * Wraps a byte array to be sent to the client.
                  * This method can be called only after the authentication exchange has
@@ -154,7 +154,7 @@ declare namespace javax {
                  *  neither integrity nor privacy.
                  */
                 // @ts-ignore
-                wrap(outgoing: number /*byte*/[], offset: number /*int*/, len: number /*int*/): byte[]
+                wrap(outgoing: number /*byte*/[], offset: number /*int*/, len: number /*int*/): number /*byte*/[]
                 /**
                  * Retrieves the negotiated property.
                  * This method can be called only after the authentication exchange has
@@ -166,7 +166,7 @@ declare namespace javax {
                  * @exception IllegalStateException if this authentication exchange has not completed
                  */
                 // @ts-ignore
-                getNegotiatedProperty(propName: string): java.lang.Object
+                getNegotiatedProperty(propName: java.lang.String | string): any
                 /**
                  * Disposes of any system resources or security-sensitive information
                  * the SaslServer might be using. Invoking this method invalidates

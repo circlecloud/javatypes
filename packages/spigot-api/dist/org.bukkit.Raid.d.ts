@@ -16,13 +16,13 @@ declare namespace org {
              * @return active ticks
              */
             // @ts-ignore
-            getActiveTicks(): long
+            getActiveTicks(): number /*long*/
             /**
              * Gets the Bad Omen level of this raid.
              * @return Bad Omen level (between 0 and 5)
              */
             // @ts-ignore
-            getBadOmenLevel(): int
+            getBadOmenLevel(): number /*int*/
             /**
              * Sets the Bad Omen level.
              * <br>
@@ -53,7 +53,7 @@ declare namespace org {
              * @return total spawned groups
              */
             // @ts-ignore
-            getSpawnedGroups(): int
+            getSpawnedGroups(): number /*int*/
             /**
              * Gets the number of raider groups which would spawn.
              * <br>
@@ -62,31 +62,31 @@ declare namespace org {
              * @return total groups
              */
             // @ts-ignore
-            getTotalGroups(): int
+            getTotalGroups(): number /*int*/
             /**
              * Gets the number of waves in this raid (exclude the additional wave).
              * @return number of waves
              */
             // @ts-ignore
-            getTotalWaves(): int
+            getTotalWaves(): number /*int*/
             /**
              * Gets the sum of all raider's health.
              * @return total raiders health
              */
             // @ts-ignore
-            getTotalHealth(): float
+            getTotalHealth(): number /*float*/
             /**
              * Get the UUID of all heroes in this raid.
              * @return a set of unique ids
              */
             // @ts-ignore
-            getHeroes(): java.util.Set<java.util.UUID>
+            getHeroes(): Array<java.util.UUID>
             /**
              * Gets all remaining {@link Raider} in the present wave.
              * @return a list of current raiders
              */
             // @ts-ignore
-            getRaiders(): java.util.List<org.bukkit.entity.Raider>
+            getRaiders(): Array<org.bukkit.entity.Raider>
         }
     }
 }

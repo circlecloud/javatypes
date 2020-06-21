@@ -50,7 +50,7 @@ declare namespace org {
                      * @throws BeansException if context creation failed
                      */
                     // @ts-ignore
-                    constructor(configLocation: string)
+                    constructor(configLocation: java.lang.String | string)
                     /**
                      * Create a new ClassPathXmlApplicationContext, loading the definitions
                      * from the given XML files and automatically refreshing the context.
@@ -58,7 +58,7 @@ declare namespace org {
                      * @throws BeansException if context creation failed
                      */
                     // @ts-ignore
-                    constructor(...configLocations: string[])
+                    constructor(...configLocations: java.lang.String[] | string[])
                     /**
                      * Create a new ClassPathXmlApplicationContext with the given parent,
                      * loading the definitions from the given XML files and automatically
@@ -68,7 +68,7 @@ declare namespace org {
                      * @throws BeansException if context creation failed
                      */
                     // @ts-ignore
-                    constructor(configLocations: string[], parent: org.springframework.context.ApplicationContext)
+                    constructor(configLocations: java.lang.String[] | string[], parent: org.springframework.context.ApplicationContext)
                     /**
                      * Create a new ClassPathXmlApplicationContext, loading the definitions
                      * from the given XML files.
@@ -80,7 +80,7 @@ declare namespace org {
                      * @see #refresh()
                      */
                     // @ts-ignore
-                    constructor(configLocations: string[], refresh: boolean)
+                    constructor(configLocations: java.lang.String[] | string[], refresh: boolean)
                     /**
                      * Create a new ClassPathXmlApplicationContext with the given parent,
                      * loading the definitions from the given XML files.
@@ -93,7 +93,7 @@ declare namespace org {
                      * @see #refresh()
                      */
                     // @ts-ignore
-                    constructor(configLocations: string[], refresh: boolean, parent: org.springframework.context.ApplicationContext)
+                    constructor(configLocations: java.lang.String[] | string[], refresh: boolean, parent: org.springframework.context.ApplicationContext)
                     /**
                      * Create a new ClassPathXmlApplicationContext, loading the definitions
                      * from the given XML file and automatically refreshing the context.
@@ -108,7 +108,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
                      */
                     // @ts-ignore
-                    constructor(path: string, clazz: java.lang.Class<any>)
+                    constructor(path: java.lang.String | string, clazz: java.lang.Class<any>)
                     /**
                      * Create a new ClassPathXmlApplicationContext, loading the definitions
                      * from the given XML files and automatically refreshing the context.
@@ -120,7 +120,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
                      */
                     // @ts-ignore
-                    constructor(paths: string[], clazz: java.lang.Class<any>)
+                    constructor(paths: java.lang.String[] | string[], clazz: java.lang.Class<any>)
                     /**
                      * Create a new ClassPathXmlApplicationContext with the given parent,
                      * loading the definitions from the given XML files and automatically
@@ -134,7 +134,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
                      */
                     // @ts-ignore
-                    constructor(paths: string[], clazz: java.lang.Class<any>, parent: org.springframework.context.ApplicationContext)
+                    constructor(paths: java.lang.String[] | string[], clazz: java.lang.Class<any>, parent: org.springframework.context.ApplicationContext)
                     // @ts-ignore
                     getConfigResources(): Resource[]
                 }

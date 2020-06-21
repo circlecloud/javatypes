@@ -12,7 +12,7 @@ declare namespace org {
                  * @see ConfigManager For getting configuration without injection
                  */
                 // @ts-ignore
-                class DefaultConfig implements java.lang.annotation.Annotation {
+                abstract class DefaultConfig implements java.lang.annotation.Annotation {
                 }
             }
         }

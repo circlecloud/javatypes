@@ -193,13 +193,13 @@ declare namespace java {
                  *              no corresponding resource can be found.
                  */
                 // @ts-ignore
-                constructor(name: string, resourceBundleName: string)
+                constructor(name: java.lang.String | string, resourceBundleName: java.lang.String | string)
                 /**
                  * GLOBAL_LOGGER_NAME is a name for the global logger.
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly GLOBAL_LOGGER_NAME: string
+                public static readonly GLOBAL_LOGGER_NAME: java.lang.String | string
                 /**
                  * The "global" Logger object is provided as a convenience to developers
                  * who are making casual use of the Logging package.  Developers
@@ -222,14 +222,14 @@ declare namespace java {
                  *  or <code>Logger.getLogger("global")</code>.
                  */
                 // @ts-ignore
-                readonly global: java.util.logging.Logger
+                public static readonly global: java.util.logging.Logger
                 /**
                  * Return global logger object with the name Logger.GLOBAL_LOGGER_NAME.
                  * @return global logger object
                  * @since 1.7
                  */
                 // @ts-ignore
-                getGlobal(): java.util.logging.Logger
+                public static getGlobal(): java.util.logging.Logger
                 /**
                  * Find or create a logger for a named subsystem.  If a logger has
                  * already been created with the given name it is returned.  Otherwise
@@ -257,7 +257,7 @@ declare namespace java {
                  * @throws NullPointerException if the name is null.
                  */
                 // @ts-ignore
-                getLogger(name: string): java.util.logging.Logger
+                public static getLogger(name: java.lang.String | string): java.util.logging.Logger
                 /**
                  * Find or create a logger for a named subsystem.  If a logger has
                  * already been created with the given name it is returned.  Otherwise
@@ -301,7 +301,7 @@ declare namespace java {
                  * @throws NullPointerException if the name is null.
                  */
                 // @ts-ignore
-                getLogger(name: string, resourceBundleName: string): java.util.logging.Logger
+                public static getLogger(name: java.lang.String | string, resourceBundleName: java.lang.String | string): java.util.logging.Logger
                 /**
                  * Create an anonymous Logger.  The newly created Logger is not
                  * registered in the LogManager namespace.  There will be no
@@ -324,7 +324,7 @@ declare namespace java {
                  * @return a newly created private Logger
                  */
                 // @ts-ignore
-                getAnonymousLogger(): java.util.logging.Logger
+                public static getAnonymousLogger(): java.util.logging.Logger
                 /**
                  * Create an anonymous Logger.  The newly created Logger is not
                  * registered in the LogManager namespace.  There will be no
@@ -352,7 +352,7 @@ declare namespace java {
                  *              no corresponding resource can be found.
                  */
                 // @ts-ignore
-                getAnonymousLogger(resourceBundleName: string): java.util.logging.Logger
+                public static getAnonymousLogger(resourceBundleName: java.lang.String | string): java.util.logging.Logger
                 /**
                  * Retrieve the localization resource bundle for this
                  * logger.
@@ -368,7 +368,7 @@ declare namespace java {
                  * @return localization bundle (may be {#code null})
                  */
                 // @ts-ignore
-                getResourceBundle(): java.util.ResourceBundle
+                public getResourceBundle(): java.util.ResourceBundle
                 /**
                  * Retrieve the localization resource bundle name for this
                  * logger.
@@ -382,7 +382,7 @@ declare namespace java {
                  * @return localization bundle name (may be {#code null})
                  */
                 // @ts-ignore
-                getResourceBundleName(): java.lang.String
+                public getResourceBundleName(): string
                 /**
                  * Set a filter to control output on this Logger.
                  * <P>
@@ -395,13 +395,13 @@ declare namespace java {
                  *           does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                setFilter(newFilter: java.util.logging.Filter): void
+                public setFilter(newFilter: java.util.logging.Filter): void
                 /**
                  * Get the current filter for this Logger.
                  * @return a filter object (may be null)
                  */
                 // @ts-ignore
-                getFilter(): java.util.logging.Filter
+                public getFilter(): java.util.logging.Filter
                 /**
                  * Log a LogRecord.
                  * <p>
@@ -411,7 +411,7 @@ declare namespace java {
                  * @param record the LogRecord to be published
                  */
                 // @ts-ignore
-                log(record: java.util.logging.LogRecord): void
+                public log(record: java.util.logging.LogRecord): void
                 /**
                  * Log a message, with no arguments.
                  * <p>
@@ -423,7 +423,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                log(level: java.util.logging.Level, msg: string): void
+                public log(level: java.util.logging.Level, msg: java.lang.String | string): void
                 /**
                  * Log a message, which is only to be constructed if the logging level
                  * is such that the message will actually be logged.
@@ -439,7 +439,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                log(level: java.util.logging.Level, msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public log(level: java.util.logging.Level, msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a message, with one object parameter.
                  * <p>
@@ -452,7 +452,7 @@ declare namespace java {
                  * @param param1  parameter to the message
                  */
                 // @ts-ignore
-                log(level: java.util.logging.Level, msg: string, param1: any): void
+                public log(level: java.util.logging.Level, msg: java.lang.String | string, param1: java.lang.Object | any): void
                 /**
                  * Log a message, with an array of object arguments.
                  * <p>
@@ -465,7 +465,7 @@ declare namespace java {
                  * @param params  array of parameters to the message
                  */
                 // @ts-ignore
-                log(level: java.util.logging.Level, msg: string, params: any[]): void
+                public log(level: java.util.logging.Level, msg: java.lang.String | string, params: java.lang.Object[] | any[]): void
                 /**
                  * Log a message, with associated Throwable information.
                  * <p>
@@ -483,7 +483,7 @@ declare namespace java {
                  * @param thrown  Throwable associated with log message.
                  */
                 // @ts-ignore
-                log(level: java.util.logging.Level, msg: string, thrown: Error): void
+                public log(level: java.util.logging.Level, msg: java.lang.String | string, thrown: java.lang.Throwable | Error): void
                 /**
                  * Log a lazily constructed message, with associated Throwable information.
                  * <p>
@@ -504,7 +504,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                log(level: java.util.logging.Level, thrown: Error, msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public log(level: java.util.logging.Level, thrown: java.lang.Throwable | Error, msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a message, specifying source class and method,
                  * with no arguments.
@@ -519,7 +519,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                logp(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, msg: string): void
+                public logp(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, msg: java.lang.String | string): void
                 /**
                  * Log a lazily constructed message, specifying source class and method,
                  * with no arguments.
@@ -537,7 +537,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                logp(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public logp(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a message, specifying source class and method,
                  * with a single object parameter to the log message.
@@ -553,7 +553,7 @@ declare namespace java {
                  * @param param1    Parameter to the log message.
                  */
                 // @ts-ignore
-                logp(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, msg: string, param1: any): void
+                public logp(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, msg: java.lang.String | string, param1: java.lang.Object | any): void
                 /**
                  * Log a message, specifying source class and method,
                  * with an array of object arguments.
@@ -569,7 +569,7 @@ declare namespace java {
                  * @param params  Array of parameters to the message
                  */
                 // @ts-ignore
-                logp(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, msg: string, params: any[]): void
+                public logp(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, msg: java.lang.String | string, params: java.lang.Object[] | any[]): void
                 /**
                  * Log a message, specifying source class and method,
                  * with associated Throwable information.
@@ -590,7 +590,7 @@ declare namespace java {
                  * @param thrown  Throwable associated with log message.
                  */
                 // @ts-ignore
-                logp(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, msg: string, thrown: Error): void
+                public logp(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, msg: java.lang.String | string, thrown: java.lang.Throwable | Error): void
                 /**
                  * Log a lazily constructed message, specifying source class and method,
                  * with associated Throwable information.
@@ -614,7 +614,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                logp(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, thrown: Error, msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public logp(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, thrown: java.lang.Throwable | Error, msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a message, specifying source class, method, and resource bundle name
                  * with no arguments.
@@ -638,7 +638,7 @@ declare namespace java {
                  *  java.lang.Object...)} instead.
                  */
                 // @ts-ignore
-                logrb(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, bundleName: string, msg: string): void
+                public logrb(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, bundleName: java.lang.String | string, msg: java.lang.String | string): void
                 /**
                  * Log a message, specifying source class, method, and resource bundle name,
                  * with a single object parameter to the log message.
@@ -663,7 +663,7 @@ declare namespace java {
                  *    java.lang.Object...)} instead
                  */
                 // @ts-ignore
-                logrb(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, param1: any): void
+                public logrb(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, bundleName: java.lang.String | string, msg: java.lang.String | string, param1: java.lang.Object | any): void
                 /**
                  * Log a message, specifying source class, method, and resource bundle name,
                  * with an array of object arguments.
@@ -688,7 +688,7 @@ declare namespace java {
                  *       java.lang.Object...)} instead.
                  */
                 // @ts-ignore
-                logrb(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, params: any[]): void
+                public logrb(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, bundleName: java.lang.String | string, msg: java.lang.String | string, params: java.lang.Object[] | any[]): void
                 /**
                  * Log a message, specifying source class, method, and resource bundle,
                  * with an optional list of message parameters.
@@ -711,7 +711,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                logrb(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, bundle: java.util.ResourceBundle, msg: string, ...params: any[]): void
+                public logrb(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, bundle: java.util.ResourceBundle, msg: java.lang.String | string, ...params: java.lang.Object[] | any[]): void
                 /**
                  * Log a message, specifying source class, method, and resource bundle name,
                  * with associated Throwable information.
@@ -741,7 +741,7 @@ declare namespace java {
                  *      java.lang.Throwable)} instead.
                  */
                 // @ts-ignore
-                logrb(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, thrown: Error): void
+                public logrb(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, bundleName: java.lang.String | string, msg: java.lang.String | string, thrown: java.lang.Throwable | Error): void
                 /**
                  * Log a message, specifying source class, method, and resource bundle,
                  * with associated Throwable information.
@@ -769,7 +769,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                logrb(level: java.util.logging.Level, sourceClass: string, sourceMethod: string, bundle: java.util.ResourceBundle, msg: string, thrown: Error): void
+                public logrb(level: java.util.logging.Level, sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, bundle: java.util.ResourceBundle, msg: java.lang.String | string, thrown: java.lang.Throwable | Error): void
                 /**
                  * Log a method entry.
                  * <p>
@@ -781,7 +781,7 @@ declare namespace java {
                  * @param sourceMethod   name of method that is being entered
                  */
                 // @ts-ignore
-                entering(sourceClass: string, sourceMethod: string): void
+                public entering(sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string): void
                 /**
                  * Log a method entry, with one parameter.
                  * <p>
@@ -795,7 +795,7 @@ declare namespace java {
                  * @param param1         parameter to the method being entered
                  */
                 // @ts-ignore
-                entering(sourceClass: string, sourceMethod: string, param1: any): void
+                public entering(sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, param1: java.lang.Object | any): void
                 /**
                  * Log a method entry, with an array of parameters.
                  * <p>
@@ -810,7 +810,7 @@ declare namespace java {
                  * @param params         array of parameters to the method being entered
                  */
                 // @ts-ignore
-                entering(sourceClass: string, sourceMethod: string, params: any[]): void
+                public entering(sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, params: java.lang.Object[] | any[]): void
                 /**
                  * Log a method return.
                  * <p>
@@ -822,7 +822,7 @@ declare namespace java {
                  * @param sourceMethod   name of the method
                  */
                 // @ts-ignore
-                exiting(sourceClass: string, sourceMethod: string): void
+                public exiting(sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string): void
                 /**
                  * Log a method return, with result object.
                  * <p>
@@ -836,7 +836,7 @@ declare namespace java {
                  * @param result  Object that is being returned
                  */
                 // @ts-ignore
-                exiting(sourceClass: string, sourceMethod: string, result: any): void
+                public exiting(sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, result: java.lang.Object | any): void
                 /**
                  * Log throwing an exception.
                  * <p>
@@ -859,7 +859,7 @@ declare namespace java {
                  * @param thrown  The Throwable that is being thrown.
                  */
                 // @ts-ignore
-                throwing(sourceClass: string, sourceMethod: string, thrown: Error): void
+                public throwing(sourceClass: java.lang.String | string, sourceMethod: java.lang.String | string, thrown: java.lang.Throwable | Error): void
                 /**
                  * Log a SEVERE message.
                  * <p>
@@ -870,7 +870,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                severe(msg: string): void
+                public severe(msg: java.lang.String | string): void
                 /**
                  * Log a WARNING message.
                  * <p>
@@ -881,7 +881,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                warning(msg: string): void
+                public warning(msg: java.lang.String | string): void
                 /**
                  * Log an INFO message.
                  * <p>
@@ -892,7 +892,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                info(msg: string): void
+                public info(msg: java.lang.String | string): void
                 /**
                  * Log a CONFIG message.
                  * <p>
@@ -903,7 +903,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                config(msg: string): void
+                public config(msg: java.lang.String | string): void
                 /**
                  * Log a FINE message.
                  * <p>
@@ -914,7 +914,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                fine(msg: string): void
+                public fine(msg: java.lang.String | string): void
                 /**
                  * Log a FINER message.
                  * <p>
@@ -925,7 +925,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                finer(msg: string): void
+                public finer(msg: java.lang.String | string): void
                 /**
                  * Log a FINEST message.
                  * <p>
@@ -936,7 +936,7 @@ declare namespace java {
                  * @param msg     The string message (or a key in the message catalog)
                  */
                 // @ts-ignore
-                finest(msg: string): void
+                public finest(msg: java.lang.String | string): void
                 /**
                  * Log a SEVERE message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -951,7 +951,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                severe(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public severe(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a WARNING message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -966,7 +966,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                warning(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public warning(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a INFO message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -981,7 +981,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                info(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public info(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a CONFIG message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -996,7 +996,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                config(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public config(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a FINE message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -1011,7 +1011,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                fine(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public fine(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a FINER message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -1026,7 +1026,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                finer(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public finer(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Log a FINEST message, which is only to be constructed if the logging
                  * level is such that the message will actually be logged.
@@ -1041,7 +1041,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                finest(msgSupplier: java.util.function.Supplier<java.lang.String> | java.util.function$.Supplier<java.lang.String>): void
+                public finest(msgSupplier: java.util.function$.Supplier<java.lang.String | string>): void
                 /**
                  * Set the log level specifying which message levels will be
                  * logged by this logger.  Message levels lower than this
@@ -1057,7 +1057,7 @@ declare namespace java {
                  *           does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                setLevel(newLevel: java.util.logging.Level): void
+                public setLevel(newLevel: java.util.logging.Level): void
                 /**
                  * Get the log Level that has been specified for this Logger.
                  * The result may be null, which means that this logger's
@@ -1065,7 +1065,7 @@ declare namespace java {
                  * @return this Logger's level
                  */
                 // @ts-ignore
-                getLevel(): java.util.logging.Level
+                public getLevel(): java.util.logging.Level
                 /**
                  * Check if a message of the given level would actually be logged
                  * by this logger.  This check is based on the Loggers effective level,
@@ -1074,13 +1074,13 @@ declare namespace java {
                  * @return true if the given message level is currently being logged.
                  */
                 // @ts-ignore
-                isLoggable(level: java.util.logging.Level): boolean
+                public isLoggable(level: java.util.logging.Level): boolean
                 /**
                  * Get the name for this logger.
                  * @return logger name.  Will be null for anonymous Loggers.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Add a log Handler to receive logging messages.
                  * <p>
@@ -1093,7 +1093,7 @@ declare namespace java {
                  *           does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                addHandler(handler: java.util.logging.Handler): void
+                public addHandler(handler: java.util.logging.Handler): void
                 /**
                  * Remove a log Handler.
                  * <P>
@@ -1104,14 +1104,14 @@ declare namespace java {
                  *           does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                removeHandler(handler: java.util.logging.Handler): void
+                public removeHandler(handler: java.util.logging.Handler): void
                 /**
                  * Get the Handlers associated with this logger.
                  * <p>
                  * @return an array of all registered Handlers
                  */
                 // @ts-ignore
-                getHandlers(): java.util.logging.Handler[]
+                public getHandlers(): java.util.logging.Handler[]
                 /**
                  * Specify whether or not this logger should send its output
                  * to its parent Logger.  This means that any LogRecords will
@@ -1124,14 +1124,14 @@ declare namespace java {
                  *           does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                setUseParentHandlers(useParentHandlers: boolean): void
+                public setUseParentHandlers(useParentHandlers: boolean): void
                 /**
                  * Discover whether or not this logger is sending its output
                  * to its parent logger.
                  * @return true if output is to be sent to the logger's parent
                  */
                 // @ts-ignore
-                getUseParentHandlers(): boolean
+                public getUseParentHandlers(): boolean
                 /**
                  * Sets a resource bundle on this logger.
                  * All messages will be logged using the given resource bundle for its
@@ -1148,7 +1148,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                setResourceBundle(bundle: java.util.ResourceBundle): void
+                public setResourceBundle(bundle: java.util.ResourceBundle): void
                 /**
                  * Return the parent for this Logger.
                  * <p>
@@ -1162,7 +1162,7 @@ declare namespace java {
                  * @return nearest existing parent Logger
                  */
                 // @ts-ignore
-                getParent(): java.util.logging.Logger
+                public getParent(): java.util.logging.Logger
                 /**
                  * Set the parent for this Logger.  This method is used by
                  * the LogManager to update a Logger when the namespace changes.
@@ -1174,7 +1174,7 @@ declare namespace java {
                  *           the caller does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                setParent(parent: java.util.logging.Logger): void
+                public setParent(parent: java.util.logging.Logger): void
             }
         }
     }

@@ -22,7 +22,7 @@ declare namespace java {
              * @author Hemma Prafullchandra
              */
             // @ts-ignore
-            class Certificate extends java.lang.Object implements java.io.Serializable {
+            abstract class Certificate extends java.lang.Object implements java.io.Serializable {
                 /**
                  * Creates a certificate of the specified type.
                  * @param type the standard name of the certificate type.
@@ -32,13 +32,13 @@ declare namespace java {
                  *  for information about standard certificate types.
                  */
                 // @ts-ignore
-                constructor(type: string)
+                constructor(type: java.lang.String | string)
                 /**
                  * Returns the type of this certificate.
                  * @return the type of this certificate.
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Compares this certificate for equality with the specified
                  * object. If the {@code other} object is an
@@ -50,14 +50,14 @@ declare namespace java {
                  *  match, false otherwise.
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 /**
                  * Returns a hashcode value for this certificate from its
                  * encoded form.
                  * @return the hashcode value.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns the encoded form of this certificate. It is
                  * assumed that each certificate type would have only a single
@@ -67,7 +67,7 @@ declare namespace java {
                  * @exception CertificateEncodingException if an encoding error occurs.
                  */
                 // @ts-ignore
-                abstract getEncoded(): byte[]
+                public abstract getEncoded(): number /*byte*/[]
                 /**
                  * Verifies that this certificate was signed using the
                  * private key that corresponds to the specified public key.
@@ -80,7 +80,7 @@ declare namespace java {
                  * @exception CertificateException on encoding errors.
                  */
                 // @ts-ignore
-                abstract verify(key: java.security.PublicKey): void
+                public abstract verify(key: java.security.PublicKey): void
                 /**
                  * Verifies that this certificate was signed using the
                  * private key that corresponds to the specified public key.
@@ -96,7 +96,7 @@ declare namespace java {
                  * @exception CertificateException on encoding errors.
                  */
                 // @ts-ignore
-                abstract verify(key: java.security.PublicKey, sigProvider: string): void
+                public abstract verify(key: java.security.PublicKey, sigProvider: java.lang.String | string): void
                 /**
                  * Verifies that this certificate was signed using the
                  * private key that corresponds to the specified public key.
@@ -118,19 +118,19 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                verify(key: java.security.PublicKey, sigProvider: java.security.Provider): void
+                public verify(key: java.security.PublicKey, sigProvider: java.security.Provider): void
                 /**
                  * Returns a string representation of this certificate.
                  * @return a string representation of this certificate.
                  */
                 // @ts-ignore
-                abstract toString(): java.lang.String
+                public abstract toString(): string
                 /**
                  * Gets the public key from this certificate.
                  * @return the public key.
                  */
                 // @ts-ignore
-                abstract getPublicKey(): java.security.PublicKey
+                public abstract getPublicKey(): java.security.PublicKey
                 /**
                  * Replace the Certificate to be serialized.
                  * @return the alternate Certificate object to be serialized
@@ -139,7 +139,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                writeReplace(): java.lang.Object
+                writeReplace(): any
             }
         }
     }

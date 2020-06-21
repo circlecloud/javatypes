@@ -28,19 +28,19 @@ declare namespace org {
                          * @param removeOnly whether to discard and ignore forwarded headers
                          */
                         // @ts-ignore
-                        setRemoveOnly(removeOnly: boolean): void
+                        public setRemoveOnly(removeOnly: boolean): void
                         /**
                          * Whether the "remove only" mode is on.
                          * @see #setRemoveOnly
                          */
                         // @ts-ignore
-                        isRemoveOnly(): boolean
+                        public isRemoveOnly(): boolean
                         /**
                          * Apply and remove, or remove Forwarded type headers.
                          * @param request the request
                          */
                         // @ts-ignore
-                        apply(request: org.springframework.http.server.reactive.ServerHttpRequest): org.springframework.http.server.reactive.ServerHttpRequest
+                        public apply(request: org.springframework.http.server.reactive.ServerHttpRequest): org.springframework.http.server.reactive.ServerHttpRequest
                         /**
                          * Whether the request has any Forwarded headers.
                          * @param request the request

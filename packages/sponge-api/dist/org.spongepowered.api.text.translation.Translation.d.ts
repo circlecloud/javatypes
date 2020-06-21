@@ -21,27 +21,27 @@ declare namespace org {
                          * @return The translation identifier of this translation
                          */
                         // @ts-ignore
-                        getId(): java.lang.String
+                        getId(): string
                         /**
                          * Gets the default translation without extra parameters.
                          * @return The default translation
                          */
                         // @ts-ignore
-                        get(): java.lang.String
+                        get(): string
                         /**
                          * Gets the default translation format with the specified parameters.
                          * @param args The parameters for this translation
                          * @return The default translation with the specified parameters
                          */
                         // @ts-ignore
-                        get(...args: any[]): java.lang.String
+                        get(...args: java.lang.Object[] | any[]): string
                         /**
                          * Gets the translation without any parameters replaced.
                          * @param locale The language to get the translated format string for
                          * @return The translation without any parameters
                          */
                         // @ts-ignore
-                        get(locale: java.util.Locale): java.lang.String
+                        get(locale: java.util.Locale): string
                         /**
                          * Gets the translation format with the specified parameters.
                          * @param locale The language to get the translated string for
@@ -49,7 +49,7 @@ declare namespace org {
                          * @return The translation with the specified parameters
                          */
                         // @ts-ignore
-                        get(locale: java.util.Locale, ...args: any[]): java.lang.String
+                        get(locale: java.util.Locale, ...args: java.lang.Object[] | any[]): string
                     }
                 }
             }

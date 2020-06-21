@@ -14,7 +14,7 @@ declare namespace org {
                          * @return The specific command to use
                          */
                         // @ts-ignore
-                        disambiguate(source: org.spongepowered.api.command.CommandSource, aliasUsed: string, availableOptions: Array<org.spongepowered.api.command.CommandMapping>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
+                        disambiguate(source: org.spongepowered.api.command.CommandSource, aliasUsed: java.lang.String | string, availableOptions: java.util.List<org.spongepowered.api.command.CommandMapping> | Array<org.spongepowered.api.command.CommandMapping>): java.util.Optional<org.spongepowered.api.command.CommandMapping>
                     }
                 }
             }

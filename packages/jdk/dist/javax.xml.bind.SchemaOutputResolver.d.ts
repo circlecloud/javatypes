@@ -13,7 +13,7 @@ declare namespace javax {
              * @author Kohsuke Kawaguchi (kohsuke.kawaguchi#sun.com)
              */
             // @ts-ignore
-            class SchemaOutputResolver extends java.lang.Object {
+            abstract class SchemaOutputResolver extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -47,7 +47,7 @@ declare namespace javax {
                  *       namespace URI will be skipped.
                  */
                 // @ts-ignore
-                abstract createOutput(namespaceUri: string, suggestedFileName: string): javax.xml.transform.Result
+                public abstract createOutput(namespaceUri: java.lang.String | string, suggestedFileName: java.lang.String | string): javax.xml.transform.Result
             }
         }
     }

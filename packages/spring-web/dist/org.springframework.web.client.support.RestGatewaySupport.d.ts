@@ -33,12 +33,12 @@ declare namespace org {
                          * Sets the {@link RestTemplate} for the gateway.
                          */
                         // @ts-ignore
-                        setRestTemplate(restTemplate: org.springframework.web.client.RestTemplate): void
+                        public setRestTemplate(restTemplate: org.springframework.web.client.RestTemplate): void
                         /**
                          * Returns the {@link RestTemplate} for the gateway.
                          */
                         // @ts-ignore
-                        getRestTemplate(): org.springframework.web.client.RestTemplate
+                        public getRestTemplate(): org.springframework.web.client.RestTemplate
                     }
                 }
             }

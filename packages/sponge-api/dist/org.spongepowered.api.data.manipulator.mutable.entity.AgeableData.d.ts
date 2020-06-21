@@ -17,7 +17,7 @@ declare namespace org {
                                  * @see Keys#AGE
                                  */
                                 // @ts-ignore
-                                age(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                age(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link Value} for whether the {@link #age()} is
                                  * considered to be an "adult".

@@ -30,7 +30,7 @@ declare namespace javax {
                  * @see #getTextField
                  */
                 // @ts-ignore
-                getModel(): javax.swing.SpinnerListModel
+                public getModel(): javax.swing.SpinnerListModel
             }
         }
     }

@@ -6,7 +6,7 @@ declare namespace javax {
                     // @ts-ignore
                     class DoubleClickListener extends java.awt.event.MouseAdapter {
                         // @ts-ignore
-                        constructor(list: javax.swing.JList)
+                        constructor(list: javax.swing.JList<any>)
                         /**
                          * The JList used for representing the files is created by subclasses, but the
                          * selection is monitored in this class.  The TransferHandler installed in the
@@ -15,9 +15,9 @@ declare namespace javax {
                          * data transfer state of the file chooser.
                          */
                         // @ts-ignore
-                        mouseEntered(e: java.awt.event.MouseEvent): void
+                        public mouseEntered(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseClicked(e: java.awt.event.MouseEvent): void
+                        public mouseClicked(e: java.awt.event.MouseEvent): void
                     }
                 }
             }

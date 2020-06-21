@@ -71,7 +71,7 @@ declare namespace javax {
                  *  construct; an empty list if there are none
                  */
                 // @ts-ignore
-                getAnnotationMirrors(): java.util.List<? extends javax.lang.model.element.AnnotationMirror>
+                getAnnotationMirrors(): Array<any>
                 /**
                  * Returns this construct's annotation of the specified type if
                  * such an annotation is <em>present</em>, else {@code null}.

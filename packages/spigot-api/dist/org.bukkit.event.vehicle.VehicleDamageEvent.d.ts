@@ -14,27 +14,27 @@ declare namespace org {
                      * @return the Entity that is attacking the vehicle
                      */
                     // @ts-ignore
-                    getAttacker(): org.bukkit.entity.Entity
+                    public getAttacker(): org.bukkit.entity.Entity
                     /**
                      * Gets the damage done to the vehicle
                      * @return the damage done to the vehicle
                      */
                     // @ts-ignore
-                    getDamage(): double
+                    public getDamage(): number /*double*/
                     /**
                      * Sets the damage done to the vehicle
                      * @param damage The damage
                      */
                     // @ts-ignore
-                    setDamage(damage: number /*double*/): void
+                    public setDamage(damage: number /*double*/): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

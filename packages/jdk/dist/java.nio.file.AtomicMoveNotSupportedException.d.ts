@@ -18,7 +18,7 @@ declare namespace java {
                  *           a reason message with additional information
                  */
                 // @ts-ignore
-                constructor(source: string, target: string, reason: string)
+                constructor(source: java.lang.String | string, target: java.lang.String | string, reason: java.lang.String | string)
             }
         }
     }

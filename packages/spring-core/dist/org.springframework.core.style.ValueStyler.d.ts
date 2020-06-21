@@ -16,7 +16,7 @@ declare namespace org {
                      * @return the styled String
                      */
                     // @ts-ignore
-                    style(value: any): java.lang.String
+                    style(value: java.lang.Object | any): string
                 }
             }
         }

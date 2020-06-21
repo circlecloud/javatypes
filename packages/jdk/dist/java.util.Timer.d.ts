@@ -77,7 +77,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a new timer whose associated thread has the specified name,
              * and may be specified to
@@ -88,7 +88,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            constructor(name: string, isDaemon: boolean)
+            constructor(name: java.lang.String | string, isDaemon: boolean)
             /**
              * Schedules the specified task for execution after the specified delay.
              * @param task  task to be scheduled.
@@ -100,7 +100,7 @@ declare namespace java {
              * @throws NullPointerException if {#code task} is null
              */
             // @ts-ignore
-            schedule(task: java.util.TimerTask, delay: number /*long*/): void
+            public schedule(task: java.util.TimerTask, delay: number /*long*/): void
             /**
              * Schedules the specified task for execution at the specified time.  If
              * the time is in the past, the task is scheduled for immediate execution.
@@ -112,7 +112,7 @@ declare namespace java {
              * @throws NullPointerException if {#code task} or {@code time} is null
              */
             // @ts-ignore
-            schedule(task: java.util.TimerTask, time: java.util.Date): void
+            public schedule(task: java.util.TimerTask, time: java.util.Date): void
             /**
              * Schedules the specified task for repeated <i>fixed-delay execution</i>,
              * beginning after the specified delay.  Subsequent executions take place
@@ -143,7 +143,7 @@ declare namespace java {
              * @throws NullPointerException if {#code task} is null
              */
             // @ts-ignore
-            schedule(task: java.util.TimerTask, delay: number /*long*/, period: number /*long*/): void
+            public schedule(task: java.util.TimerTask, delay: number /*long*/, period: number /*long*/): void
             /**
              * Schedules the specified task for repeated <i>fixed-delay execution</i>,
              * beginning at the specified time. Subsequent executions take place at
@@ -175,7 +175,7 @@ declare namespace java {
              * @throws NullPointerException if {#code task} or {@code firstTime} is null
              */
             // @ts-ignore
-            schedule(task: java.util.TimerTask, firstTime: java.util.Date, period: number /*long*/): void
+            public schedule(task: java.util.TimerTask, firstTime: java.util.Date, period: number /*long*/): void
             /**
              * Schedules the specified task for repeated <i>fixed-rate execution</i>,
              * beginning after the specified delay.  Subsequent executions take place
@@ -207,7 +207,7 @@ declare namespace java {
              * @throws NullPointerException if {#code task} is null
              */
             // @ts-ignore
-            scheduleAtFixedRate(task: java.util.TimerTask, delay: number /*long*/, period: number /*long*/): void
+            public scheduleAtFixedRate(task: java.util.TimerTask, delay: number /*long*/, period: number /*long*/): void
             /**
              * Schedules the specified task for repeated <i>fixed-rate execution</i>,
              * beginning at the specified time. Subsequent executions take place at
@@ -241,7 +241,7 @@ declare namespace java {
              * @throws NullPointerException if {#code task} or {@code firstTime} is null
              */
             // @ts-ignore
-            scheduleAtFixedRate(task: java.util.TimerTask, firstTime: java.util.Date, period: number /*long*/): void
+            public scheduleAtFixedRate(task: java.util.TimerTask, firstTime: java.util.Date, period: number /*long*/): void
             /**
              * Terminates this timer, discarding any currently scheduled tasks.
              * Does not interfere with a currently executing task (if it exists).
@@ -255,7 +255,7 @@ declare namespace java {
              * calls have no effect.
              */
             // @ts-ignore
-            cancel(): void
+            public cancel(): void
             /**
              * Removes all cancelled tasks from this timer's task queue.  <i>Calling
              * this method has no effect on the behavior of the timer</i>, but
@@ -274,7 +274,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            purge(): int
+            public purge(): number /*int*/
         }
     }
 }

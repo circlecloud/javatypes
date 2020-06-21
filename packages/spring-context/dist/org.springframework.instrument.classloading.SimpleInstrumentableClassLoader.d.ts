@@ -22,9 +22,9 @@ declare namespace org {
                      * @param transformer the {#link ClassFileTransformer} to register
                      */
                     // @ts-ignore
-                    addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
+                    public addTransformer(transformer: java.lang.instrument.ClassFileTransformer): void
                     // @ts-ignore
-                    transformIfNecessary(name: string, bytes: number /*byte*/[]): byte[]
+                    transformIfNecessary(name: java.lang.String | string, bytes: number /*byte*/[]): number /*byte*/[]
                 }
             }
         }

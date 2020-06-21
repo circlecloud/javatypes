@@ -33,7 +33,7 @@ declare namespace javax {
                  * @see #getPath
                  */
                 // @ts-ignore
-                getChildIndex(): int
+                public getChildIndex(): number /*int*/
                 /**
                  * Returns the path where dropped data should be placed in the
                  * tree.
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @see #getChildIndex
                  */
                 // @ts-ignore
-                getPath(): javax.swing.tree.TreePath
+                public getPath(): javax.swing.tree.TreePath
                 /**
                  * Returns a string representation of this drop location.
                  * This method is intended to be used for debugging purposes,
@@ -78,7 +78,7 @@ declare namespace javax {
                  * @return a string representation of this drop location
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

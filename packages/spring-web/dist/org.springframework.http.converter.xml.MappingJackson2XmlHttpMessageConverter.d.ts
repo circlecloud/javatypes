@@ -36,7 +36,7 @@ declare namespace org {
                          * The {@code ObjectMapper} parameter must be a {@link XmlMapper} instance.
                          */
                         // @ts-ignore
-                        setObjectMapper(objectMapper: ObjectMapper): void
+                        public setObjectMapper(objectMapper: ObjectMapper): void
                     }
                 }
             }

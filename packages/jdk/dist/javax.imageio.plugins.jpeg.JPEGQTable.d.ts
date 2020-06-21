@@ -32,7 +32,7 @@ declare namespace javax {
                      * @see #K1Div2Luminance
                      */
                     // @ts-ignore
-                    readonly K1Luminance: javax.imageio.plugins.jpeg.JPEGQTable
+                    public static readonly K1Luminance: javax.imageio.plugins.jpeg.JPEGQTable
                     /**
                      * The sample luminance quantization table given in the JPEG
                      * specification, table K.1, with all elements divided by 2.
@@ -43,7 +43,7 @@ declare namespace javax {
                      * @see #K1Luminance
                      */
                     // @ts-ignore
-                    readonly K1Div2Luminance: javax.imageio.plugins.jpeg.JPEGQTable
+                    public static readonly K1Div2Luminance: javax.imageio.plugins.jpeg.JPEGQTable
                     /**
                      * The sample chrominance quantization table given in the JPEG
                      * specification, table K.2. According to the specification,
@@ -51,7 +51,7 @@ declare namespace javax {
                      * @see #K2Div2Chrominance
                      */
                     // @ts-ignore
-                    readonly K2Chrominance: javax.imageio.plugins.jpeg.JPEGQTable
+                    public static readonly K2Chrominance: javax.imageio.plugins.jpeg.JPEGQTable
                     /**
                      * The sample chrominance quantization table given in the JPEG
                      * specification, table K.1, with all elements divided by 2.
@@ -62,14 +62,14 @@ declare namespace javax {
                      * @see #K2Chrominance
                      */
                     // @ts-ignore
-                    readonly K2Div2Chrominance: javax.imageio.plugins.jpeg.JPEGQTable
+                    public static readonly K2Div2Chrominance: javax.imageio.plugins.jpeg.JPEGQTable
                     /**
                      * Returns a copy of the current quantization table as an array
                      * of {@code int}s in natural (not zig-zag) order.
                      * @return A copy of the current quantization table.
                      */
                     // @ts-ignore
-                    getTable(): int[]
+                    public getTable(): number /*int*/[]
                     /**
                      * Returns a new quantization table where the values are multiplied
                      * by <code>scaleFactor</code> and then clamped to the range 1..32767
@@ -85,13 +85,13 @@ declare namespace javax {
                      *  of the current table.
                      */
                     // @ts-ignore
-                    getScaledInstance(scaleFactor: number /*float*/, forceBaseline: boolean): javax.imageio.plugins.jpeg.JPEGQTable
+                    public getScaledInstance(scaleFactor: number /*float*/, forceBaseline: boolean): javax.imageio.plugins.jpeg.JPEGQTable
                     /**
                      * Returns a {@code String} representing this quantization table.
                      * @return a {#code String} representing this quantization table.
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

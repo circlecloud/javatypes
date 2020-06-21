@@ -13,13 +13,13 @@ declare namespace org {
                  *      cancel the conversation.
                  */
                 // @ts-ignore
-                constructor(escapeSequence: string)
+                constructor(escapeSequence: java.lang.String | string)
                 // @ts-ignore
-                setConversation(conversation: org.bukkit.conversations.Conversation): void
+                public setConversation(conversation: org.bukkit.conversations.Conversation): void
                 // @ts-ignore
-                cancelBasedOnInput(context: org.bukkit.conversations.ConversationContext, input: string): boolean
+                public cancelBasedOnInput(context: org.bukkit.conversations.ConversationContext, input: java.lang.String | string): boolean
                 // @ts-ignore
-                clone(): org.bukkit.conversations.ConversationCanceller
+                public clone(): org.bukkit.conversations.ConversationCanceller
             }
         }
     }

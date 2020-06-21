@@ -29,7 +29,7 @@ declare namespace javax {
                  * @param reason a description of what caused the exception
                  */
                 // @ts-ignore
-                constructor(reason: string)
+                constructor(reason: java.lang.String | string)
                 /**
                  * Constructs a <code>SOAPException</code> object with the given
                  * <code>String</code> as the reason for the exception being thrown
@@ -40,13 +40,13 @@ declare namespace javax {
                  *         be embedded in this <code>SOAPException</code> object
                  */
                 // @ts-ignore
-                constructor(reason: string, cause: Error)
+                constructor(reason: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Constructs a <code>SOAPException</code> object initialized
                  * with the given <code>Throwable</code> object.
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Returns the detail message for this <code>SOAPException</code>
                  * object.
@@ -61,7 +61,7 @@ declare namespace javax {
                  *          if there is one
                  */
                 // @ts-ignore
-                getMessage(): java.lang.String
+                getMessage(): string
                 /**
                  * Returns the <code>Throwable</code> object embedded in this
                  * <code>SOAPException</code> if there is one. Otherwise, this method
@@ -70,7 +70,7 @@ declare namespace javax {
                  *          if there is none
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
                 /**
                  * Initializes the <code>cause</code> field of this <code>SOAPException</code>
                  * object with the given <code>Throwable</code> object.
@@ -97,7 +97,7 @@ declare namespace javax {
                  *          has already been initialized
                  */
                 // @ts-ignore
-                initCause(cause: Error): java.lang.Throwable
+                initCause(cause: java.lang.Throwable | Error): Error
             }
         }
     }

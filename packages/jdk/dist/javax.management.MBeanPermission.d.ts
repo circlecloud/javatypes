@@ -122,7 +122,7 @@ declare namespace javax {
              *  <code>actions</code> is invalid.
              */
             // @ts-ignore
-            constructor(name: string, actions: string)
+            constructor(name: java.lang.String | string, actions: java.lang.String | string)
             /**
              * <p>Create a new MBeanPermission object with the specified target name
              * (class name, member, object name) and actions.</p>
@@ -148,20 +148,20 @@ declare namespace javax {
              * @param actions the action string.
              */
             // @ts-ignore
-            constructor(className: string, member: string, objectName: javax.management.ObjectName, actions: string)
+            constructor(className: java.lang.String | string, member: java.lang.String | string, objectName: javax.management.ObjectName, actions: java.lang.String | string)
             /**
              * Returns the "canonical string representation" of the actions. That is,
              * this method always returns present actions in alphabetical order.
              * @return the canonical string representation of the actions.
              */
             // @ts-ignore
-            getActions(): java.lang.String
+            public getActions(): string
             /**
              * Returns the hash code value for this object.
              * @return a hash code value for this object.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * <p>Checks if this MBeanPermission object "implies" the
              * specified permission.</p>
@@ -192,7 +192,7 @@ declare namespace javax {
              *  false if not.
              */
             // @ts-ignore
-            implies(p: java.security.Permission): boolean
+            public implies(p: java.security.Permission): boolean
             /**
              * Checks two MBeanPermission objects for equality. Checks
              * that <i>obj</i> is an MBeanPermission, and has the same
@@ -203,7 +203,7 @@ declare namespace javax {
              *  same name and actions as this MBeanPermission object.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

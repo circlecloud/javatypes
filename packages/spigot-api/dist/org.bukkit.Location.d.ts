@@ -35,13 +35,13 @@ declare namespace org {
              * @param world New world that this location resides in
              */
             // @ts-ignore
-            setWorld(world: org.bukkit.World): void
+            public setWorld(world: org.bukkit.World): void
             /**
              * Checks if world in this location is present and loaded.
              * @return true if is loaded, otherwise false
              */
             // @ts-ignore
-            isWorldLoaded(): boolean
+            public isWorldLoaded(): boolean
             /**
              * Gets the world that this location resides in
              * @return World that contains this location, or {#code null} if it is not set
@@ -49,76 +49,76 @@ declare namespace org {
              * @see #isWorldLoaded()
              */
             // @ts-ignore
-            getWorld(): org.bukkit.World
+            public getWorld(): org.bukkit.World
             /**
              * Gets the chunk at the represented location
              * @return Chunk at the represented location
              */
             // @ts-ignore
-            getChunk(): org.bukkit.Chunk
+            public getChunk(): org.bukkit.Chunk
             /**
              * Gets the block at the represented location
              * @return Block at the represented location
              */
             // @ts-ignore
-            getBlock(): org.bukkit.block.Block
+            public getBlock(): org.bukkit.block.Block
             /**
              * Sets the x-coordinate of this location
              * @param x X-coordinate
              */
             // @ts-ignore
-            setX(x: number /*double*/): void
+            public setX(x: number /*double*/): void
             /**
              * Gets the x-coordinate of this location
              * @return x-coordinate
              */
             // @ts-ignore
-            getX(): double
+            public getX(): number /*double*/
             /**
              * Gets the floored value of the X component, indicating the block that
              * this location is contained with.
              * @return block X
              */
             // @ts-ignore
-            getBlockX(): int
+            public getBlockX(): number /*int*/
             /**
              * Sets the y-coordinate of this location
              * @param y y-coordinate
              */
             // @ts-ignore
-            setY(y: number /*double*/): void
+            public setY(y: number /*double*/): void
             /**
              * Gets the y-coordinate of this location
              * @return y-coordinate
              */
             // @ts-ignore
-            getY(): double
+            public getY(): number /*double*/
             /**
              * Gets the floored value of the Y component, indicating the block that
              * this location is contained with.
              * @return block y
              */
             // @ts-ignore
-            getBlockY(): int
+            public getBlockY(): number /*int*/
             /**
              * Sets the z-coordinate of this location
              * @param z z-coordinate
              */
             // @ts-ignore
-            setZ(z: number /*double*/): void
+            public setZ(z: number /*double*/): void
             /**
              * Gets the z-coordinate of this location
              * @return z-coordinate
              */
             // @ts-ignore
-            getZ(): double
+            public getZ(): number /*double*/
             /**
              * Gets the floored value of the Z component, indicating the block that
              * this location is contained with.
              * @return block z
              */
             // @ts-ignore
-            getBlockZ(): int
+            public getBlockZ(): number /*int*/
             /**
              * Sets the yaw of this location, measured in degrees.
              * <ul>
@@ -133,7 +133,7 @@ declare namespace org {
              * @param yaw new rotation's yaw
              */
             // @ts-ignore
-            setYaw(yaw: number /*float*/): void
+            public setYaw(yaw: number /*float*/): void
             /**
              * Gets the yaw of this location, measured in degrees.
              * <ul>
@@ -148,7 +148,7 @@ declare namespace org {
              * @return the rotation's yaw
              */
             // @ts-ignore
-            getYaw(): float
+            public getYaw(): number /*float*/
             /**
              * Sets the pitch of this location, measured in degrees.
              * <ul>
@@ -161,7 +161,7 @@ declare namespace org {
              * @param pitch new incline's pitch
              */
             // @ts-ignore
-            setPitch(pitch: number /*float*/): void
+            public setPitch(pitch: number /*float*/): void
             /**
              * Gets the pitch of this location, measured in degrees.
              * <ul>
@@ -174,7 +174,7 @@ declare namespace org {
              * @return the incline's pitch
              */
             // @ts-ignore
-            getPitch(): float
+            public getPitch(): number /*float*/
             /**
              * Gets a unit-vector pointing in the direction that this Location is
              * facing.
@@ -182,7 +182,7 @@ declare namespace org {
              *      #getPitch() pitch} and {@link #getYaw() yaw}
              */
             // @ts-ignore
-            getDirection(): org.bukkit.util.Vector
+            public getDirection(): org.bukkit.util.Vector
             /**
              * Sets the {@link #getYaw() yaw} and {@link #getPitch() pitch} to point
              * in the direction of the vector.
@@ -190,7 +190,7 @@ declare namespace org {
              * @return the same location
              */
             // @ts-ignore
-            setDirection(vector: org.bukkit.util.Vector): org.bukkit.Location
+            public setDirection(vector: org.bukkit.util.Vector): org.bukkit.Location
             /**
              * Adds the location by another.
              * @see Vector
@@ -199,7 +199,7 @@ declare namespace org {
              * @throws IllegalArgumentException for differing worlds
              */
             // @ts-ignore
-            add(vec: org.bukkit.Location): org.bukkit.Location
+            public add(vec: org.bukkit.Location): org.bukkit.Location
             /**
              * Adds the location by a vector.
              * @see Vector
@@ -207,7 +207,7 @@ declare namespace org {
              * @return the same location
              */
             // @ts-ignore
-            add(vec: org.bukkit.util.Vector): org.bukkit.Location
+            public add(vec: org.bukkit.util.Vector): org.bukkit.Location
             /**
              * Adds the location by another. Not world-aware.
              * @see Vector
@@ -217,7 +217,7 @@ declare namespace org {
              * @return the same location
              */
             // @ts-ignore
-            add(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.Location
+            public add(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.Location
             /**
              * Subtracts the location by another.
              * @see Vector
@@ -226,7 +226,7 @@ declare namespace org {
              * @throws IllegalArgumentException for differing worlds
              */
             // @ts-ignore
-            subtract(vec: org.bukkit.Location): org.bukkit.Location
+            public subtract(vec: org.bukkit.Location): org.bukkit.Location
             /**
              * Subtracts the location by a vector.
              * @see Vector
@@ -234,7 +234,7 @@ declare namespace org {
              * @return the same location
              */
             // @ts-ignore
-            subtract(vec: org.bukkit.util.Vector): org.bukkit.Location
+            public subtract(vec: org.bukkit.util.Vector): org.bukkit.Location
             /**
              * Subtracts the location by another. Not world-aware and
              * orientation independent.
@@ -245,7 +245,7 @@ declare namespace org {
              * @return the same location
              */
             // @ts-ignore
-            subtract(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.Location
+            public subtract(x: number /*double*/, y: number /*double*/, z: number /*double*/): org.bukkit.Location
             /**
              * Gets the magnitude of the location, defined as sqrt(x^2+y^2+z^2). The
              * value of this method is not cached and uses a costly square-root
@@ -257,7 +257,7 @@ declare namespace org {
              * @see Vector
              */
             // @ts-ignore
-            length(): double
+            public length(): number /*double*/
             /**
              * Gets the magnitude of the location squared. Not world-aware and
              * orientation independent.
@@ -265,7 +265,7 @@ declare namespace org {
              * @see Vector
              */
             // @ts-ignore
-            lengthSquared(): double
+            public lengthSquared(): number /*double*/
             /**
              * Get the distance between this location and another. The value of this
              * method is not cached and uses a costly square-root function, so do not
@@ -278,7 +278,7 @@ declare namespace org {
              * @see Vector
              */
             // @ts-ignore
-            distance(o: org.bukkit.Location): double
+            public distance(o: org.bukkit.Location): number /*double*/
             /**
              * Get the squared distance between this location and another.
              * @param o The other location
@@ -287,7 +287,7 @@ declare namespace org {
              * @see Vector
              */
             // @ts-ignore
-            distanceSquared(o: org.bukkit.Location): double
+            public distanceSquared(o: org.bukkit.Location): number /*double*/
             /**
              * Performs scalar multiplication, multiplying all components with a
              * scalar. Not world-aware.
@@ -296,35 +296,35 @@ declare namespace org {
              * @see Vector
              */
             // @ts-ignore
-            multiply(m: number /*double*/): org.bukkit.Location
+            public multiply(m: number /*double*/): org.bukkit.Location
             /**
              * Zero this location's components. Not world-aware.
              * @return the same location
              * @see Vector
              */
             // @ts-ignore
-            zero(): org.bukkit.Location
+            public zero(): org.bukkit.Location
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Constructs a new {@link Vector} based on this Location
              * @return New Vector containing the coordinates represented by this
              *      Location
              */
             // @ts-ignore
-            toVector(): org.bukkit.util.Vector
+            public toVector(): org.bukkit.util.Vector
             // @ts-ignore
-            clone(): org.bukkit.Location
+            public clone(): org.bukkit.Location
             /**
              * Check if each component of this Location is finite.
              * @throws IllegalArgumentException if any component is not finite
              */
             // @ts-ignore
-            checkFinite(): void
+            public checkFinite(): void
             /**
              * Safely converts a double (location coordinate) to an int (block
              * coordinate)
@@ -332,9 +332,9 @@ declare namespace org {
              * @return Block coordinate
              */
             // @ts-ignore
-            locToBlock(loc: number /*double*/): int
+            public static locToBlock(loc: number /*double*/): number /*int*/
             // @ts-ignore
-            serialize(): java.util.Map<java.lang.String, java.lang.Object>
+            public serialize(): java.util.Map<java.lang.String | string, java.lang.Object | any>
             /**
              * Required method for deserialization
              * @param args map to deserialize
@@ -343,7 +343,7 @@ declare namespace org {
              * @see ConfigurationSerializable
              */
             // @ts-ignore
-            deserialize(args: java.util.Map<java.lang.String, java.lang.Object>): org.bukkit.Location
+            public static deserialize(args: java.util.Map<java.lang.String | string, java.lang.Object | any>): org.bukkit.Location
             /**
              * Normalizes the given yaw angle to a value between <code>+/-180</code>
              * degrees.
@@ -352,7 +352,7 @@ declare namespace org {
              * @see Location#getYaw()
              */
             // @ts-ignore
-            normalizeYaw(yaw: number /*float*/): float
+            public static normalizeYaw(yaw: number /*float*/): number /*float*/
             /**
              * Normalizes the given pitch angle to a value between <code>+/-90</code>
              * degrees.
@@ -361,7 +361,7 @@ declare namespace org {
              * @see Location#getPitch()
              */
             // @ts-ignore
-            normalizePitch(pitch: number /*float*/): float
+            public static normalizePitch(pitch: number /*float*/): number /*float*/
         }
     }
 }

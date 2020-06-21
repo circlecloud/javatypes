@@ -17,7 +17,7 @@ declare namespace org {
                      * Return the {@link MediaType}'s that this reader supports.
                      */
                     // @ts-ignore
-                    getReadableMediaTypes(): java.util.List<org.springframework.http.MediaType>
+                    getReadableMediaTypes(): Array<org.springframework.http.MediaType>
                     /**
                      * Whether the given object type is supported by this reader.
                      * @param elementType the type of object to check
@@ -35,7 +35,7 @@ declare namespace org {
                      * @return the decoded stream of elements
                      */
                     // @ts-ignore
-                    read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    read(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Read from the input message and encode to a single object.
                      * @param elementType the type of objects in the stream which must have been
@@ -45,7 +45,7 @@ declare namespace org {
                      * @return the decoded object
                      */
                     // @ts-ignore
-                    readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    readMono(elementType: ResolvableType, message: org.springframework.http.ReactiveHttpInputMessage, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Server-side only alternative to
                      * {@link #read(ResolvableType, ReactiveHttpInputMessage, Map)}
@@ -60,7 +60,7 @@ declare namespace org {
                      * @return the decoded stream of elements
                      */
                     // @ts-ignore
-                    read(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    read(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                     /**
                      * Server-side only alternative to
                      * {@link #readMono(ResolvableType, ReactiveHttpInputMessage, Map)}
@@ -75,7 +75,7 @@ declare namespace org {
                      * @return the decoded stream of elements
                      */
                     // @ts-ignore
-                    readMono(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    readMono(actualType: ResolvableType, elementType: ResolvableType, request: org.springframework.http.server.reactive.ServerHttpRequest, response: org.springframework.http.server.reactive.ServerHttpResponse, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

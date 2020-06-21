@@ -20,9 +20,9 @@ declare namespace java {
              * @return The precision
              */
             // @ts-ignore
-            getPrecision(): int
+            getPrecision(): number /*int*/
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

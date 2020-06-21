@@ -25,25 +25,25 @@ declare namespace org {
                  *      a block
                  */
                 // @ts-ignore
-                isWallSign(): boolean
+                public isWallSign(): boolean
                 /**
                  * Gets the face that this block is attached on
                  * @return BlockFace attached to
                  */
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 /**
                  * Gets the direction that this sign is currently facing
                  * @return BlockFace indicating where this sign is facing
                  */
                 // @ts-ignore
-                getFacing(): org.bukkit.block.BlockFace
+                public getFacing(): org.bukkit.block.BlockFace
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Sign
+                public clone(): org.bukkit.material.Sign
             }
         }
     }

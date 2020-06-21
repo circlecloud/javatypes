@@ -20,7 +20,7 @@ declare namespace org {
                  * @return Set of keys contained within this ConfigurationSection.
                  */
                 // @ts-ignore
-                getKeys(deep: boolean): java.util.Set<java.lang.String>
+                getKeys(deep: boolean): Array<java.lang.String | string>
                 /**
                  * Gets a Map containing all keys and their values for this section.
                  * <p>
@@ -35,7 +35,7 @@ declare namespace org {
                  * @return Map of keys and values of this section.
                  */
                 // @ts-ignore
-                getValues(deep: boolean): java.util.Map<java.lang.String, java.lang.Object>
+                getValues(deep: boolean): java.util.Map<java.lang.String | string, java.lang.Object | any>
                 /**
                  * Checks if this {@link ConfigurationSection} contains the given path.
                  * <p>
@@ -47,7 +47,7 @@ declare namespace org {
                  * @throws IllegalArgumentException Thrown when path is null.
                  */
                 // @ts-ignore
-                contains(path: string): boolean
+                contains(path: java.lang.String | string): boolean
                 /**
                  * Checks if this {@link ConfigurationSection} contains the given path.
                  * <p>
@@ -65,7 +65,7 @@ declare namespace org {
                  * @throws IllegalArgumentException Thrown when path is null.
                  */
                 // @ts-ignore
-                contains(path: string, ignoreDefault: boolean): boolean
+                contains(path: java.lang.String | string, ignoreDefault: boolean): boolean
                 /**
                  * Checks if this {@link ConfigurationSection} has a value set for the
                  * given path.
@@ -78,7 +78,7 @@ declare namespace org {
                  * @throws IllegalArgumentException Thrown when path is null.
                  */
                 // @ts-ignore
-                isSet(path: string): boolean
+                isSet(path: java.lang.String | string): boolean
                 /**
                  * Gets the path of this {@link ConfigurationSection} from its root {@link
                  * Configuration}
@@ -94,7 +94,7 @@ declare namespace org {
                  * @return Path of this section relative to its root
                  */
                 // @ts-ignore
-                getCurrentPath(): java.lang.String
+                getCurrentPath(): string
                 /**
                  * Gets the name of this individual {@link ConfigurationSection}, in the
                  * path.
@@ -104,7 +104,7 @@ declare namespace org {
                  * @return Name of this section
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Gets the root {@link Configuration} that contains this {@link
                  * ConfigurationSection}
@@ -140,7 +140,7 @@ declare namespace org {
                  * @return Requested Object.
                  */
                 // @ts-ignore
-                get(path: string): java.lang.Object
+                get(path: java.lang.String | string): any
                 /**
                  * Gets the requested Object by path, returning a default value if not
                  * found.
@@ -153,7 +153,7 @@ declare namespace org {
                  * @return Requested Object.
                  */
                 // @ts-ignore
-                get(path: string, def: any): java.lang.Object
+                get(path: java.lang.String | string, def: java.lang.Object | any): any
                 /**
                  * Sets the specified path to the given value.
                  * <p>
@@ -168,7 +168,7 @@ declare namespace org {
                  * @param value New value to set the path to.
                  */
                 // @ts-ignore
-                set(path: string, value: any): void
+                set(path: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Creates an empty {@link ConfigurationSection} at the specified path.
                  * <p>
@@ -179,7 +179,7 @@ declare namespace org {
                  * @return Newly created section
                  */
                 // @ts-ignore
-                createSection(path: string): org.bukkit.configuration.ConfigurationSection
+                createSection(path: java.lang.String | string): org.bukkit.configuration.ConfigurationSection
                 /**
                  * Creates a {@link ConfigurationSection} at the specified path, with
                  * specified values.
@@ -192,7 +192,7 @@ declare namespace org {
                  * @return Newly created section
                  */
                 // @ts-ignore
-                createSection(path: string, map: java.util.Map<any, ?>): org.bukkit.configuration.ConfigurationSection
+                createSection(path: java.lang.String | string, map: java.util.Map<any, any>): org.bukkit.configuration.ConfigurationSection
                 /**
                  * Gets the requested String by path.
                  * <p>
@@ -203,7 +203,7 @@ declare namespace org {
                  * @return Requested String.
                  */
                 // @ts-ignore
-                getString(path: string): java.lang.String
+                getString(path: java.lang.String | string): string
                 /**
                  * Gets the requested String by path, returning a default value if not
                  * found.
@@ -217,7 +217,7 @@ declare namespace org {
                  * @return Requested String.
                  */
                 // @ts-ignore
-                getString(path: string, def: string): java.lang.String
+                getString(path: java.lang.String | string, def: java.lang.String | string): string
                 /**
                  * Checks if the specified path is a String.
                  * <p>
@@ -229,7 +229,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a String.
                  */
                 // @ts-ignore
-                isString(path: string): boolean
+                isString(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested int by path.
                  * <p>
@@ -240,7 +240,7 @@ declare namespace org {
                  * @return Requested int.
                  */
                 // @ts-ignore
-                getInt(path: string): int
+                getInt(path: java.lang.String | string): number /*int*/
                 /**
                  * Gets the requested int by path, returning a default value if not found.
                  * <p>
@@ -253,7 +253,7 @@ declare namespace org {
                  * @return Requested int.
                  */
                 // @ts-ignore
-                getInt(path: string, def: number /*int*/): int
+                getInt(path: java.lang.String | string, def: number /*int*/): number /*int*/
                 /**
                  * Checks if the specified path is an int.
                  * <p>
@@ -265,7 +265,7 @@ declare namespace org {
                  * @return Whether or not the specified path is an int.
                  */
                 // @ts-ignore
-                isInt(path: string): boolean
+                isInt(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested boolean by path.
                  * <p>
@@ -276,7 +276,7 @@ declare namespace org {
                  * @return Requested boolean.
                  */
                 // @ts-ignore
-                getBoolean(path: string): boolean
+                getBoolean(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested boolean by path, returning a default value if not
                  * found.
@@ -290,7 +290,7 @@ declare namespace org {
                  * @return Requested boolean.
                  */
                 // @ts-ignore
-                getBoolean(path: string, def: boolean): boolean
+                getBoolean(path: java.lang.String | string, def: boolean): boolean
                 /**
                  * Checks if the specified path is a boolean.
                  * <p>
@@ -302,7 +302,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a boolean.
                  */
                 // @ts-ignore
-                isBoolean(path: string): boolean
+                isBoolean(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested double by path.
                  * <p>
@@ -313,7 +313,7 @@ declare namespace org {
                  * @return Requested double.
                  */
                 // @ts-ignore
-                getDouble(path: string): double
+                getDouble(path: java.lang.String | string): number /*double*/
                 /**
                  * Gets the requested double by path, returning a default value if not
                  * found.
@@ -327,7 +327,7 @@ declare namespace org {
                  * @return Requested double.
                  */
                 // @ts-ignore
-                getDouble(path: string, def: number /*double*/): double
+                getDouble(path: java.lang.String | string, def: number /*double*/): number /*double*/
                 /**
                  * Checks if the specified path is a double.
                  * <p>
@@ -339,7 +339,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a double.
                  */
                 // @ts-ignore
-                isDouble(path: string): boolean
+                isDouble(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested long by path.
                  * <p>
@@ -350,7 +350,7 @@ declare namespace org {
                  * @return Requested long.
                  */
                 // @ts-ignore
-                getLong(path: string): long
+                getLong(path: java.lang.String | string): number /*long*/
                 /**
                  * Gets the requested long by path, returning a default value if not
                  * found.
@@ -364,7 +364,7 @@ declare namespace org {
                  * @return Requested long.
                  */
                 // @ts-ignore
-                getLong(path: string, def: number /*long*/): long
+                getLong(path: java.lang.String | string, def: number /*long*/): number /*long*/
                 /**
                  * Checks if the specified path is a long.
                  * <p>
@@ -376,7 +376,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a long.
                  */
                 // @ts-ignore
-                isLong(path: string): boolean
+                isLong(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested List by path.
                  * <p>
@@ -387,7 +387,7 @@ declare namespace org {
                  * @return Requested List.
                  */
                 // @ts-ignore
-                getList(path: string): java.util.List<?>
+                getList(path: java.lang.String | string): Array<any>
                 /**
                  * Gets the requested List by path, returning a default value if not
                  * found.
@@ -401,7 +401,7 @@ declare namespace org {
                  * @return Requested List.
                  */
                 // @ts-ignore
-                getList(path: string, def: Array<any>): java.util.List<?>
+                getList(path: java.lang.String | string, def: java.util.List<any> | Array<any>): Array<any>
                 /**
                  * Checks if the specified path is a List.
                  * <p>
@@ -413,7 +413,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a List.
                  */
                 // @ts-ignore
-                isList(path: string): boolean
+                isList(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested List of String by path.
                  * <p>
@@ -427,7 +427,7 @@ declare namespace org {
                  * @return Requested List of String.
                  */
                 // @ts-ignore
-                getStringList(path: string): java.util.List<java.lang.String>
+                getStringList(path: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Gets the requested List of Integer by path.
                  * <p>
@@ -441,7 +441,7 @@ declare namespace org {
                  * @return Requested List of Integer.
                  */
                 // @ts-ignore
-                getIntegerList(path: string): java.util.List<java.lang.Integer>
+                getIntegerList(path: java.lang.String | string): Array<java.lang.Integer | number>
                 /**
                  * Gets the requested List of Boolean by path.
                  * <p>
@@ -455,7 +455,7 @@ declare namespace org {
                  * @return Requested List of Boolean.
                  */
                 // @ts-ignore
-                getBooleanList(path: string): java.util.List<java.lang.Boolean>
+                getBooleanList(path: java.lang.String | string): Array<java.lang.Boolean>
                 /**
                  * Gets the requested List of Double by path.
                  * <p>
@@ -469,7 +469,7 @@ declare namespace org {
                  * @return Requested List of Double.
                  */
                 // @ts-ignore
-                getDoubleList(path: string): java.util.List<java.lang.Double>
+                getDoubleList(path: java.lang.String | string): Array<java.lang.Double | number>
                 /**
                  * Gets the requested List of Float by path.
                  * <p>
@@ -483,7 +483,7 @@ declare namespace org {
                  * @return Requested List of Float.
                  */
                 // @ts-ignore
-                getFloatList(path: string): java.util.List<java.lang.Float>
+                getFloatList(path: java.lang.String | string): Array<java.lang.Float | number>
                 /**
                  * Gets the requested List of Long by path.
                  * <p>
@@ -497,7 +497,7 @@ declare namespace org {
                  * @return Requested List of Long.
                  */
                 // @ts-ignore
-                getLongList(path: string): java.util.List<java.lang.Long>
+                getLongList(path: java.lang.String | string): Array<java.lang.Long | number>
                 /**
                  * Gets the requested List of Byte by path.
                  * <p>
@@ -511,7 +511,7 @@ declare namespace org {
                  * @return Requested List of Byte.
                  */
                 // @ts-ignore
-                getByteList(path: string): java.util.List<java.lang.Byte>
+                getByteList(path: java.lang.String | string): Array<java.lang.Byte | number>
                 /**
                  * Gets the requested List of Character by path.
                  * <p>
@@ -525,7 +525,7 @@ declare namespace org {
                  * @return Requested List of Character.
                  */
                 // @ts-ignore
-                getCharacterList(path: string): java.util.List<java.lang.Character>
+                getCharacterList(path: java.lang.String | string): Array<java.lang.Character>
                 /**
                  * Gets the requested List of Short by path.
                  * <p>
@@ -539,7 +539,7 @@ declare namespace org {
                  * @return Requested List of Short.
                  */
                 // @ts-ignore
-                getShortList(path: string): java.util.List<java.lang.Short>
+                getShortList(path: java.lang.String | string): Array<java.lang.Short | number>
                 /**
                  * Gets the requested List of Maps by path.
                  * <p>
@@ -553,7 +553,7 @@ declare namespace org {
                  * @return Requested List of Maps.
                  */
                 // @ts-ignore
-                getMapList(path: string): java.util.List<java.util.Map<?, ?>>
+                getMapList(path: java.lang.String | string): Array<java.util.Map<any, any>>
                 /**
                  * Gets the requested object at the given path.
                  * If the Object does not exist but a default value has been specified, this
@@ -570,7 +570,7 @@ declare namespace org {
                  * @return Requested object
                  */
                 // @ts-ignore
-                getObject<T>(path: string, clazz: java.lang.Class<T>): T
+                getObject<T>(path: java.lang.String | string, clazz: java.lang.Class<T>): T
                 /**
                  * Gets the requested object at the given path, returning a default value if
                  * not found
@@ -592,7 +592,7 @@ declare namespace org {
                  * @return Requested object
                  */
                 // @ts-ignore
-                getObject<T>(path: string, clazz: java.lang.Class<T>, def: T): T
+                getObject<T>(path: java.lang.String | string, clazz: java.lang.Class<T>, def: T): T
                 /**
                  * Gets the requested {@link ConfigurationSerializable} object at the given
                  * path.
@@ -605,7 +605,7 @@ declare namespace org {
                  * @return Requested {#link ConfigurationSerializable} object
                  */
                 // @ts-ignore
-                getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: string, clazz: java.lang.Class<T>): T
+                getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: java.lang.String | string, clazz: java.lang.Class<T>): T
                 /**
                  * Gets the requested {@link ConfigurationSerializable} object at the given
                  * path, returning a default value if not found
@@ -620,7 +620,7 @@ declare namespace org {
                  * @return Requested {#link ConfigurationSerializable} object
                  */
                 // @ts-ignore
-                getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: string, clazz: java.lang.Class<T>, def: T extends org.bukkit.configuration.serialization.ConfigurationSerializable): T
+                getSerializable<T extends org.bukkit.configuration.serialization.ConfigurationSerializable>(path: java.lang.String | string, clazz: java.lang.Class<T>, def: T): T
                 /**
                  * Gets the requested Vector by path.
                  * <p>
@@ -631,7 +631,7 @@ declare namespace org {
                  * @return Requested Vector.
                  */
                 // @ts-ignore
-                getVector(path: string): org.bukkit.util.Vector
+                getVector(path: java.lang.String | string): org.bukkit.util.Vector
                 /**
                  * Gets the requested {@link Vector} by path, returning a default value if
                  * not found.
@@ -645,7 +645,7 @@ declare namespace org {
                  * @return Requested Vector.
                  */
                 // @ts-ignore
-                getVector(path: string, def: org.bukkit.util.Vector): org.bukkit.util.Vector
+                getVector(path: java.lang.String | string, def: org.bukkit.util.Vector): org.bukkit.util.Vector
                 /**
                  * Checks if the specified path is a Vector.
                  * <p>
@@ -657,7 +657,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a Vector.
                  */
                 // @ts-ignore
-                isVector(path: string): boolean
+                isVector(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested OfflinePlayer by path.
                  * <p>
@@ -669,7 +669,7 @@ declare namespace org {
                  * @return Requested OfflinePlayer.
                  */
                 // @ts-ignore
-                getOfflinePlayer(path: string): org.bukkit.OfflinePlayer
+                getOfflinePlayer(path: java.lang.String | string): org.bukkit.OfflinePlayer
                 /**
                  * Gets the requested {@link OfflinePlayer} by path, returning a default
                  * value if not found.
@@ -683,7 +683,7 @@ declare namespace org {
                  * @return Requested OfflinePlayer.
                  */
                 // @ts-ignore
-                getOfflinePlayer(path: string, def: org.bukkit.OfflinePlayer): org.bukkit.OfflinePlayer
+                getOfflinePlayer(path: java.lang.String | string, def: org.bukkit.OfflinePlayer): org.bukkit.OfflinePlayer
                 /**
                  * Checks if the specified path is an OfflinePlayer.
                  * <p>
@@ -695,7 +695,7 @@ declare namespace org {
                  * @return Whether or not the specified path is an OfflinePlayer.
                  */
                 // @ts-ignore
-                isOfflinePlayer(path: string): boolean
+                isOfflinePlayer(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested ItemStack by path.
                  * <p>
@@ -706,7 +706,7 @@ declare namespace org {
                  * @return Requested ItemStack.
                  */
                 // @ts-ignore
-                getItemStack(path: string): org.bukkit.inventory.ItemStack
+                getItemStack(path: java.lang.String | string): org.bukkit.inventory.ItemStack
                 /**
                  * Gets the requested {@link ItemStack} by path, returning a default value
                  * if not found.
@@ -720,7 +720,7 @@ declare namespace org {
                  * @return Requested ItemStack.
                  */
                 // @ts-ignore
-                getItemStack(path: string, def: org.bukkit.inventory.ItemStack): org.bukkit.inventory.ItemStack
+                getItemStack(path: java.lang.String | string, def: org.bukkit.inventory.ItemStack): org.bukkit.inventory.ItemStack
                 /**
                  * Checks if the specified path is an ItemStack.
                  * <p>
@@ -732,7 +732,7 @@ declare namespace org {
                  * @return Whether or not the specified path is an ItemStack.
                  */
                 // @ts-ignore
-                isItemStack(path: string): boolean
+                isItemStack(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested Color by path.
                  * <p>
@@ -743,7 +743,7 @@ declare namespace org {
                  * @return Requested Color.
                  */
                 // @ts-ignore
-                getColor(path: string): org.bukkit.Color
+                getColor(path: java.lang.String | string): org.bukkit.Color
                 /**
                  * Gets the requested {@link Color} by path, returning a default value if
                  * not found.
@@ -757,7 +757,7 @@ declare namespace org {
                  * @return Requested Color.
                  */
                 // @ts-ignore
-                getColor(path: string, def: org.bukkit.Color): org.bukkit.Color
+                getColor(path: java.lang.String | string, def: org.bukkit.Color): org.bukkit.Color
                 /**
                  * Checks if the specified path is a Color.
                  * <p>
@@ -769,7 +769,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a Color.
                  */
                 // @ts-ignore
-                isColor(path: string): boolean
+                isColor(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested Location by path.
                  * <p>
@@ -780,7 +780,7 @@ declare namespace org {
                  * @return Requested Location.
                  */
                 // @ts-ignore
-                getLocation(path: string): org.bukkit.Location
+                getLocation(path: java.lang.String | string): org.bukkit.Location
                 /**
                  * Gets the requested {@link Location} by path, returning a default value if
                  * not found.
@@ -794,7 +794,7 @@ declare namespace org {
                  * @return Requested Location.
                  */
                 // @ts-ignore
-                getLocation(path: string, def: org.bukkit.Location): org.bukkit.Location
+                getLocation(path: java.lang.String | string, def: org.bukkit.Location): org.bukkit.Location
                 /**
                  * Checks if the specified path is a Location.
                  * <p>
@@ -806,7 +806,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a Location.
                  */
                 // @ts-ignore
-                isLocation(path: string): boolean
+                isLocation(path: java.lang.String | string): boolean
                 /**
                  * Gets the requested ConfigurationSection by path.
                  * <p>
@@ -818,7 +818,7 @@ declare namespace org {
                  * @return Requested ConfigurationSection.
                  */
                 // @ts-ignore
-                getConfigurationSection(path: string): org.bukkit.configuration.ConfigurationSection
+                getConfigurationSection(path: java.lang.String | string): org.bukkit.configuration.ConfigurationSection
                 /**
                  * Checks if the specified path is a ConfigurationSection.
                  * <p>
@@ -831,7 +831,7 @@ declare namespace org {
                  * @return Whether or not the specified path is a ConfigurationSection.
                  */
                 // @ts-ignore
-                isConfigurationSection(path: string): boolean
+                isConfigurationSection(path: java.lang.String | string): boolean
                 /**
                  * Gets the equivalent {@link ConfigurationSection} from the default
                  * {@link Configuration} defined in {@link #getRoot()}.
@@ -861,7 +861,7 @@ declare namespace org {
                  * @throws IllegalArgumentException Thrown if path is null.
                  */
                 // @ts-ignore
-                addDefault(path: string, value: any): void
+                addDefault(path: java.lang.String | string, value: java.lang.Object | any): void
             }
         }
     }

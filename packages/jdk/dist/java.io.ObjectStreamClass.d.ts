@@ -19,7 +19,7 @@ declare namespace java {
              * serialPersistentFields value indicating no serializable fields
              */
             // @ts-ignore
-            readonly NO_FIELDS: java.io.ObjectStreamField[]
+            public static readonly NO_FIELDS: java.io.ObjectStreamField[]
             /**
              * Find the descriptor for a class that can be serialized.  Creates an
              * ObjectStreamClass instance if one does not exist yet for class. Null is
@@ -29,7 +29,7 @@ declare namespace java {
              * @return the class descriptor for the specified class
              */
             // @ts-ignore
-            lookup(cl: java.lang.Class<any>): java.io.ObjectStreamClass
+            public static lookup(cl: java.lang.Class<any>): java.io.ObjectStreamClass
             /**
              * Returns the descriptor for any class, regardless of whether it
              * implements {@link Serializable}.
@@ -38,7 +38,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            lookupAny(cl: java.lang.Class<any>): java.io.ObjectStreamClass
+            public static lookupAny(cl: java.lang.Class<any>): java.io.ObjectStreamClass
             /**
              * Returns the name of the class described by this descriptor.
              * This method returns the name of the class in the format that
@@ -46,7 +46,7 @@ declare namespace java {
              * @return a string representing the name of the class
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Return the serialVersionUID for this class.  The serialVersionUID
              * defines a set of classes all with the same name that have evolved from a
@@ -55,14 +55,14 @@ declare namespace java {
              * @return the SUID of the class described by this descriptor
              */
             // @ts-ignore
-            getSerialVersionUID(): long
+            public getSerialVersionUID(): number /*long*/
             /**
              * Return the class in the local VM that this version is mapped to.  Null
              * is returned if there is no corresponding local class.
              * @return the <code>Class</code> instance that this descriptor represents
              */
             // @ts-ignore
-            forClass(): java.lang.Class<?>
+            public forClass(): java.lang.Class<any>
             /**
              * Return an array of the fields of this serializable class.
              * @return an array containing an element for each persistent field of
@@ -71,7 +71,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getFields(): java.io.ObjectStreamField[]
+            public getFields(): java.io.ObjectStreamField[]
             /**
              * Get the field of this class by name.
              * @param name the name of the data field to look for
@@ -79,12 +79,12 @@ declare namespace java {
              *           there is no such named field.
              */
             // @ts-ignore
-            getField(name: string): java.io.ObjectStreamField
+            public getField(name: java.lang.String | string): java.io.ObjectStreamField
             /**
              * Return a string describing this ObjectStreamClass.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

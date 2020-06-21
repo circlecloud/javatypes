@@ -15,7 +15,7 @@ declare namespace org {
                  * A static non-malleable MinecraftFont.
                  */
                 // @ts-ignore
-                readonly Font: org.bukkit.map.MinecraftFont
+                public static readonly Font: org.bukkit.map.MinecraftFont
             }
         }
     }

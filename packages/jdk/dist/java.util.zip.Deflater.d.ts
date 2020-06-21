@@ -70,51 +70,51 @@ declare namespace java {
                  * supported).
                  */
                 // @ts-ignore
-                readonly DEFLATED: number /*int*/
+                public static readonly DEFLATED: number /*int*/
                 /**
                  * Compression level for no compression.
                  */
                 // @ts-ignore
-                readonly NO_COMPRESSION: number /*int*/
+                public static readonly NO_COMPRESSION: number /*int*/
                 /**
                  * Compression level for fastest compression.
                  */
                 // @ts-ignore
-                readonly BEST_SPEED: number /*int*/
+                public static readonly BEST_SPEED: number /*int*/
                 /**
                  * Compression level for best compression.
                  */
                 // @ts-ignore
-                readonly BEST_COMPRESSION: number /*int*/
+                public static readonly BEST_COMPRESSION: number /*int*/
                 /**
                  * Default compression level.
                  */
                 // @ts-ignore
-                readonly DEFAULT_COMPRESSION: number /*int*/
+                public static readonly DEFAULT_COMPRESSION: number /*int*/
                 /**
                  * Compression strategy best used for data consisting mostly of small
                  * values with a somewhat random distribution. Forces more Huffman coding
                  * and less string matching.
                  */
                 // @ts-ignore
-                readonly FILTERED: number /*int*/
+                public static readonly FILTERED: number /*int*/
                 /**
                  * Compression strategy for Huffman coding only.
                  */
                 // @ts-ignore
-                readonly HUFFMAN_ONLY: number /*int*/
+                public static readonly HUFFMAN_ONLY: number /*int*/
                 /**
                  * Default compression strategy.
                  */
                 // @ts-ignore
-                readonly DEFAULT_STRATEGY: number /*int*/
+                public static readonly DEFAULT_STRATEGY: number /*int*/
                 /**
                  * Compression flush mode used to achieve best compression result.
                  * @see Deflater#deflate(byte[], int, int, int)
                  * @since 1.7
                  */
                 // @ts-ignore
-                readonly NO_FLUSH: number /*int*/
+                public static readonly NO_FLUSH: number /*int*/
                 /**
                  * Compression flush mode used to flush out all pending output; may
                  * degrade compression for some compression algorithms.
@@ -122,7 +122,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                readonly SYNC_FLUSH: number /*int*/
+                public static readonly SYNC_FLUSH: number /*int*/
                 /**
                  * Compression flush mode used to flush out all pending output and
                  * reset the deflater. Using this mode too often can seriously degrade
@@ -131,7 +131,7 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                readonly FULL_FLUSH: number /*int*/
+                public static readonly FULL_FLUSH: number /*int*/
                 /**
                  * Sets input data for compression. This should be called whenever
                  * needsInput() returns true indicating that more input data is required.
@@ -141,7 +141,7 @@ declare namespace java {
                  * @see Deflater#needsInput
                  */
                 // @ts-ignore
-                setInput(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public setInput(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Sets input data for compression. This should be called whenever
                  * needsInput() returns true indicating that more input data is required.
@@ -149,7 +149,7 @@ declare namespace java {
                  * @see Deflater#needsInput
                  */
                 // @ts-ignore
-                setInput(b: number /*byte*/[]): void
+                public setInput(b: number /*byte*/[]): void
                 /**
                  * Sets preset dictionary for compression. A preset dictionary is used
                  * when the history buffer can be predetermined. When the data is later
@@ -163,7 +163,7 @@ declare namespace java {
                  * @see Inflater#getAdler
                  */
                 // @ts-ignore
-                setDictionary(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+                public setDictionary(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
                 /**
                  * Sets preset dictionary for compression. A preset dictionary is used
                  * when the history buffer can be predetermined. When the data is later
@@ -175,7 +175,7 @@ declare namespace java {
                  * @see Inflater#getAdler
                  */
                 // @ts-ignore
-                setDictionary(b: number /*byte*/[]): void
+                public setDictionary(b: number /*byte*/[]): void
                 /**
                  * Sets the compression strategy to the specified value.
                  * <p> If the compression strategy is changed, the next invocation
@@ -187,7 +187,7 @@ declare namespace java {
                  *                                      invalid
                  */
                 // @ts-ignore
-                setStrategy(strategy: number /*int*/): void
+                public setStrategy(strategy: number /*int*/): void
                 /**
                  * Sets the compression level to the specified value.
                  * <p> If the compression level is changed, the next invocation
@@ -198,7 +198,7 @@ declare namespace java {
                  * @exception IllegalArgumentException if the compression level is invalid
                  */
                 // @ts-ignore
-                setLevel(level: number /*int*/): void
+                public setLevel(level: number /*int*/): void
                 /**
                  * Returns true if the input data buffer is empty and setInput()
                  * should be called in order to provide more input.
@@ -206,13 +206,13 @@ declare namespace java {
                  *  should be called in order to provide more input
                  */
                 // @ts-ignore
-                needsInput(): boolean
+                public needsInput(): boolean
                 /**
                  * When called, indicates that compression should end with the current
                  * contents of the input buffer.
                  */
                 // @ts-ignore
-                finish(): void
+                public finish(): void
                 /**
                  * Returns true if the end of the compressed data output stream has
                  * been reached.
@@ -220,7 +220,7 @@ declare namespace java {
                  *  been reached
                  */
                 // @ts-ignore
-                finished(): boolean
+                public finished(): boolean
                 /**
                  * Compresses the input data and fills specified buffer with compressed
                  * data. Returns actual number of bytes of compressed data. A return value
@@ -237,7 +237,7 @@ declare namespace java {
                  *          output buffer
                  */
                 // @ts-ignore
-                deflate(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public deflate(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Compresses the input data and fills specified buffer with compressed
                  * data. Returns actual number of bytes of compressed data. A return value
@@ -252,7 +252,7 @@ declare namespace java {
                  *          output buffer
                  */
                 // @ts-ignore
-                deflate(b: number /*byte*/[]): int
+                public deflate(b: number /*byte*/[]): number /*int*/
                 /**
                  * Compresses the input data and fills the specified buffer with compressed
                  * data. Returns actual number of bytes of data compressed.
@@ -291,13 +291,13 @@ declare namespace java {
                  * @since 1.7
                  */
                 // @ts-ignore
-                deflate(b: number /*byte*/[], off: number /*int*/, len: number /*int*/, flush: number /*int*/): int
+                public deflate(b: number /*byte*/[], off: number /*int*/, len: number /*int*/, flush: number /*int*/): number /*int*/
                 /**
                  * Returns the ADLER-32 value of the uncompressed data.
                  * @return the ADLER-32 value of the uncompressed data
                  */
                 // @ts-ignore
-                getAdler(): int
+                public getAdler(): number /*int*/
                 /**
                  * Returns the total number of uncompressed bytes input so far.
                  * <p>Since the number of bytes may be greater than
@@ -306,14 +306,14 @@ declare namespace java {
                  * @return the total number of uncompressed bytes input so far
                  */
                 // @ts-ignore
-                getTotalIn(): int
+                public getTotalIn(): number /*int*/
                 /**
                  * Returns the total number of uncompressed bytes input so far.
                  * @return the total (non-negative) number of uncompressed bytes input so far
                  * @since 1.5
                  */
                 // @ts-ignore
-                getBytesRead(): long
+                public getBytesRead(): number /*long*/
                 /**
                  * Returns the total number of compressed bytes output so far.
                  * <p>Since the number of bytes may be greater than
@@ -322,20 +322,20 @@ declare namespace java {
                  * @return the total number of compressed bytes output so far
                  */
                 // @ts-ignore
-                getTotalOut(): int
+                public getTotalOut(): number /*int*/
                 /**
                  * Returns the total number of compressed bytes output so far.
                  * @return the total (non-negative) number of compressed bytes output so far
                  * @since 1.5
                  */
                 // @ts-ignore
-                getBytesWritten(): long
+                public getBytesWritten(): number /*long*/
                 /**
                  * Resets deflater so that a new set of input data can be processed.
                  * Keeps current compression level and strategy settings.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Closes the compressor and discards any unprocessed input.
                  * This method should be called when the compressor is no longer
@@ -344,7 +344,7 @@ declare namespace java {
                  * of the Deflater object is undefined.
                  */
                 // @ts-ignore
-                end(): void
+                public end(): void
                 /**
                  * Closes the compressor when garbage is collected.
                  */

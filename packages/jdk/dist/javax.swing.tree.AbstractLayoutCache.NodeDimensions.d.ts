@@ -7,7 +7,7 @@ declare namespace javax {
                  * and x origin of a particular node.
                  */
                 // @ts-ignore
-                class NodeDimensions extends java.lang.Object {
+                abstract class NodeDimensions extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -26,7 +26,7 @@ declare namespace javax {
                      *               or <code>null</code> if node has no dimension
                      */
                     // @ts-ignore
-                    abstract getNodeDimensions(value: any, row: number /*int*/, depth: number /*int*/, expanded: boolean, bounds: java.awt.Rectangle): java.awt.Rectangle
+                    public abstract getNodeDimensions(value: java.lang.Object | any, row: number /*int*/, depth: number /*int*/, expanded: boolean, bounds: java.awt.Rectangle): java.awt.Rectangle
                 }
             }
         }

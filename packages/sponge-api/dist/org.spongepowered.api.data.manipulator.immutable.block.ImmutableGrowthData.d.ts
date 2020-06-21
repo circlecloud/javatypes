@@ -18,7 +18,7 @@ declare namespace org {
                                  * @return The immutable bounded value growth stage
                                  */
                                 // @ts-ignore
-                                growthStage(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                growthStage(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

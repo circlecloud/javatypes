@@ -56,7 +56,7 @@ declare namespace java {
              * @throws NullPointerException if <tt>m</tt> is null
              */
             // @ts-ignore
-            constructor(m: java.util.EnumMap<K, V>)
+            constructor(m: java.util.EnumMap<K, any>)
             /**
              * Creates an enum map initialized from the specified map.  If the
              * specified map is an <tt>EnumMap</tt> instance, this constructor behaves
@@ -69,13 +69,13 @@ declare namespace java {
              * @throws NullPointerException if <tt>m</tt> is null
              */
             // @ts-ignore
-            constructor(m: java.util.Map<K, V>)
+            constructor(m: java.util.Map<K, any>)
             /**
              * Returns the number of key-value mappings in this map.
              * @return the number of key-value mappings in this map
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this map maps one or more keys to the
              * specified value.
@@ -83,7 +83,7 @@ declare namespace java {
              * @return <tt>true</tt> if this map maps one or more keys to this value
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            public containsValue(value: java.lang.Object | any): boolean
             /**
              * Returns <tt>true</tt> if this map contains a mapping for the specified
              * key.
@@ -92,7 +92,7 @@ declare namespace java {
              *             key
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            public containsKey(key: java.lang.Object | any): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -107,7 +107,7 @@ declare namespace java {
              * distinguish these two cases.
              */
             // @ts-ignore
-            get(key: any): V
+            public get(key: java.lang.Object | any): V
             /**
              * Associates the specified value with the specified key in this map.
              * If the map previously contained a mapping for this key, the old
@@ -121,7 +121,7 @@ declare namespace java {
              * @throws NullPointerException if the specified key is null
              */
             // @ts-ignore
-            put(key: K extends java.lang.Enum<K>, value: V): V
+            public put(key: K, value: V): V
             /**
              * Removes the mapping for this key from this map if present.
              * @param key the key whose mapping is to be removed from the map
@@ -131,7 +131,7 @@ declare namespace java {
              *      <tt>null</tt> with the specified key.)
              */
             // @ts-ignore
-            remove(key: any): V
+            public remove(key: java.lang.Object | any): V
             /**
              * Copies all of the mappings from the specified map to this map.
              * These mappings will replace any mappings that this map had for
@@ -141,12 +141,12 @@ declare namespace java {
              *      one or more keys in the specified map are null
              */
             // @ts-ignore
-            putAll(m: java.util.Map<K, V>): void
+            public putAll(m: java.util.Map<any, any>): void
             /**
              * Removes all mappings from this map.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Returns a {@link Set} view of the keys contained in this map.
              * The returned set obeys the general contract outlined in
@@ -156,7 +156,7 @@ declare namespace java {
              * @return a set view of the keys contained in this enum map
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            public keySet(): Array<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The returned collection obeys the general contract outlined in
@@ -167,7 +167,7 @@ declare namespace java {
              * @return a collection view of the values contained in this map
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            public values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * The returned set obeys the general contract outlined in
@@ -177,7 +177,7 @@ declare namespace java {
              * @return a set view of the mappings contained in this enum map
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            public entrySet(): Array<java.util.Map.Entry<K, V>>
             /**
              * Compares the specified object with this map for equality.  Returns
              * <tt>true</tt> if the given object is also a map and the two maps
@@ -187,20 +187,20 @@ declare namespace java {
              * @return <tt>true</tt> if the specified object is equal to this map
              */
             // @ts-ignore
-            equals(o: any): boolean
+            public equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this map.  The hash code of a map is
              * defined to be the sum of the hash codes of each entry in the map.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Returns a shallow copy of this enum map.  (The values themselves
              * are not cloned.
              * @return a shallow copy of this enum map
              */
             // @ts-ignore
-            clone(): java.util.EnumMap<K, V>
+            public clone(): java.util.EnumMap<K, V>
         }
     }
 }

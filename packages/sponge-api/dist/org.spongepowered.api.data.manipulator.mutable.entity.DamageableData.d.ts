@@ -32,7 +32,7 @@ declare namespace org {
                                  * @see Keys#LAST_DAMAGE
                                  */
                                 // @ts-ignore
-                                lastDamage(): org.spongepowered.api.data.value.mutable.OptionalValue<java.lang.Double>
+                                lastDamage(): org.spongepowered.api.data.value.mutable.OptionalValue<java.lang.Double | number>
                             }
                         }
                     }

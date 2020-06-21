@@ -14,27 +14,27 @@ declare namespace org {
                      * @return smelting source ItemStack
                      */
                     // @ts-ignore
-                    getSource(): org.bukkit.inventory.ItemStack
+                    public getSource(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the resultant ItemStack for this event
                      * @return smelting result ItemStack
                      */
                     // @ts-ignore
-                    getResult(): org.bukkit.inventory.ItemStack
+                    public getResult(): org.bukkit.inventory.ItemStack
                     /**
                      * Sets the resultant ItemStack for this event
                      * @param result new result ItemStack
                      */
                     // @ts-ignore
-                    setResult(result: org.bukkit.inventory.ItemStack): void
+                    public setResult(result: org.bukkit.inventory.ItemStack): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

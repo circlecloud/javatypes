@@ -15,30 +15,30 @@ declare namespace java {
                  * @param sc A <code>Class</code> reference to the newly available service
                  */
                 // @ts-ignore
-                constructor(bcs: java.beans.beancontext.BeanContextServices, sc: java.lang.Class)
+                constructor(bcs: java.beans.beancontext.BeanContextServices, sc: java.lang.Class<any>)
                 /**
                  * A <code>Class</code> reference to the newly available service
                  */
                 // @ts-ignore
-                serviceClass: java.lang.Class
+                serviceClass: java.lang.Class<any>
                 /**
                  * Gets the source as a reference of type <code>BeanContextServices</code>.
                  * @return The context in which the service has become available
                  */
                 // @ts-ignore
-                getSourceAsBeanContextServices(): java.beans.beancontext.BeanContextServices
+                public getSourceAsBeanContextServices(): java.beans.beancontext.BeanContextServices
                 /**
                  * Gets the service class that is the subject of this notification.
                  * @return A <code>Class</code> reference to the newly available service
                  */
                 // @ts-ignore
-                getServiceClass(): java.lang.Class
+                public getServiceClass(): java.lang.Class<any>
                 /**
                  * Gets the list of service dependent selectors.
                  * @return the current selectors available from the service
                  */
                 // @ts-ignore
-                getCurrentServiceSelectors(): java.util.Iterator
+                public getCurrentServiceSelectors(): java.util.Iterator<any>
             }
         }
     }

@@ -25,17 +25,17 @@ declare namespace org {
                         // @ts-ignore
                         constructor(parser: org.springframework.web.util.pattern.PathPatternParser)
                         // @ts-ignore
-                        parseRoute(routeValue: string): Route
+                        public parseRoute(routeValue: java.lang.String | string): Route
                         // @ts-ignore
-                        isPattern(route: string): boolean
+                        public isPattern(route: java.lang.String | string): boolean
                         // @ts-ignore
-                        combine(pattern1: string, pattern2: string): java.lang.String
+                        public combine(pattern1: java.lang.String | string, pattern2: java.lang.String | string): string
                         // @ts-ignore
-                        match(pattern: string, route: Route): boolean
+                        public match(pattern: java.lang.String | string, route: Route): boolean
                         // @ts-ignore
-                        matchAndExtract(pattern: string, route: Route): java.util.Map<java.lang.String, java.lang.String>
+                        public matchAndExtract(pattern: java.lang.String | string, route: Route): java.util.Map<java.lang.String | string, java.lang.String | string>
                         // @ts-ignore
-                        getPatternComparator(route: Route): java.util.Comparator<java.lang.String>
+                        public getPatternComparator(route: Route): java.util.Comparator<java.lang.String | string>
                     }
                 }
             }

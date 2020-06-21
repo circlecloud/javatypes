@@ -70,7 +70,7 @@ declare namespace java {
          * @since JDK1.0
          */
         // @ts-ignore
-        class Graphics extends java.lang.Object {
+        abstract class Graphics extends java.lang.Object {
             /**
              * Constructs a new <code>Graphics</code> object.
              * This constructor is the default constructor for a graphics
@@ -92,7 +92,7 @@ declare namespace java {
              *                        this graphics context.
              */
             // @ts-ignore
-            abstract create(): java.awt.Graphics
+            public abstract create(): java.awt.Graphics
             /**
              * Creates a new <code>Graphics</code> object based on this
              * <code>Graphics</code> object, but with a new translation and clip area.
@@ -127,7 +127,7 @@ declare namespace java {
              * @see java.awt.Graphics#clipRect
              */
             // @ts-ignore
-            create(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Graphics
+            public create(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Graphics
             /**
              * Translates the origin of the graphics context to the point
              * (<i>x</i>,&nbsp;<i>y</i>) in the current coordinate system.
@@ -140,7 +140,7 @@ declare namespace java {
              * @param y   the <i>y</i> coordinate.
              */
             // @ts-ignore
-            abstract translate(x: number /*int*/, y: number /*int*/): void
+            public abstract translate(x: number /*int*/, y: number /*int*/): void
             /**
              * Gets this graphics context's current color.
              * @return this graphics context's current color.
@@ -148,7 +148,7 @@ declare namespace java {
              * @see java.awt.Graphics#setColor(Color)
              */
             // @ts-ignore
-            abstract getColor(): java.awt.Color
+            public abstract getColor(): java.awt.Color
             /**
              * Sets this graphics context's current color to the specified
              * color. All subsequent graphics operations using this graphics
@@ -158,7 +158,7 @@ declare namespace java {
              * @see java.awt.Graphics#getColor
              */
             // @ts-ignore
-            abstract setColor(c: java.awt.Color): void
+            public abstract setColor(c: java.awt.Color): void
             /**
              * Sets the paint mode of this graphics context to overwrite the
              * destination with this graphics context's current color.
@@ -167,7 +167,7 @@ declare namespace java {
              * overwrite the destination with the current color.
              */
             // @ts-ignore
-            abstract setPaintMode(): void
+            public abstract setPaintMode(): void
             /**
              * Sets the paint mode of this graphics context to alternate between
              * this graphics context's current color and the new specified color.
@@ -184,7 +184,7 @@ declare namespace java {
              * @param c1 the XOR alternation color
              */
             // @ts-ignore
-            abstract setXORMode(c1: java.awt.Color): void
+            public abstract setXORMode(c1: java.awt.Color): void
             /**
              * Gets the current font.
              * @return this graphics context's current font.
@@ -192,7 +192,7 @@ declare namespace java {
              * @see java.awt.Graphics#setFont(Font)
              */
             // @ts-ignore
-            abstract getFont(): java.awt.Font
+            public abstract getFont(): java.awt.Font
             /**
              * Sets this graphics context's font to the specified font.
              * All subsequent text operations using this graphics context
@@ -204,7 +204,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawChars(char[], int, int, int, int)
              */
             // @ts-ignore
-            abstract setFont(font: java.awt.Font): void
+            public abstract setFont(font: java.awt.Font): void
             /**
              * Gets the font metrics of the current font.
              * @return the font metrics of this graphics
@@ -214,7 +214,7 @@ declare namespace java {
              * @see java.awt.Graphics#getFontMetrics(Font)
              */
             // @ts-ignore
-            getFontMetrics(): java.awt.FontMetrics
+            public getFontMetrics(): java.awt.FontMetrics
             /**
              * Gets the font metrics for the specified font.
              * @return the font metrics for the specified font.
@@ -224,7 +224,7 @@ declare namespace java {
              * @see java.awt.Graphics#getFontMetrics()
              */
             // @ts-ignore
-            abstract getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
+            public abstract getFontMetrics(f: java.awt.Font): java.awt.FontMetrics
             /**
              * Returns the bounding rectangle of the current clipping area.
              * This method refers to the user clip, which is independent of the
@@ -243,7 +243,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract getClipBounds(): java.awt.Rectangle
+            public abstract getClipBounds(): java.awt.Rectangle
             /**
              * Intersects the current clip with the specified rectangle.
              * The resulting clipping area is the intersection of the current
@@ -264,7 +264,7 @@ declare namespace java {
              * @see #setClip(Shape)
              */
             // @ts-ignore
-            abstract clipRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public abstract clipRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Sets the current clip to the rectangle specified by the given
              * coordinates.  This method sets the user clip, which is
@@ -281,7 +281,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract setClip(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public abstract setClip(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Gets the current clipping area.
              * This method returns the user clip, which is independent of the
@@ -299,7 +299,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract getClip(): java.awt.Shape
+            public abstract getClip(): java.awt.Shape
             /**
              * Sets the current clipping area to an arbitrary clip shape.
              * Not all objects that implement the <code>Shape</code>
@@ -317,7 +317,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract setClip(clip: java.awt.Shape): void
+            public abstract setClip(clip: java.awt.Shape): void
             /**
              * Copies an area of the component by a distance specified by
              * <code>dx</code> and <code>dy</code>. From the point specified
@@ -338,7 +338,7 @@ declare namespace java {
              * @param dy the vertical distance to copy the pixels.
              */
             // @ts-ignore
-            abstract copyArea(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, dx: number /*int*/, dy: number /*int*/): void
+            public abstract copyArea(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, dx: number /*int*/, dy: number /*int*/): void
             /**
              * Draws a line, using the current color, between the points
              * <code>(x1,&nbsp;y1)</code> and <code>(x2,&nbsp;y2)</code>
@@ -349,7 +349,7 @@ declare namespace java {
              * @param y2  the second point's <i>y</i> coordinate.
              */
             // @ts-ignore
-            abstract drawLine(x1: number /*int*/, y1: number /*int*/, x2: number /*int*/, y2: number /*int*/): void
+            public abstract drawLine(x1: number /*int*/, y1: number /*int*/, x2: number /*int*/, y2: number /*int*/): void
             /**
              * Fills the specified rectangle.
              * The left and right edges of the rectangle are at
@@ -370,7 +370,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawRect
              */
             // @ts-ignore
-            abstract fillRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public abstract fillRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Draws the outline of the specified rectangle.
              * The left and right edges of the rectangle are at
@@ -388,7 +388,7 @@ declare namespace java {
              * @see java.awt.Graphics#clearRect
              */
             // @ts-ignore
-            drawRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public drawRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Clears the specified rectangle by filling it with the background
              * color of the current drawing surface. This operation does not
@@ -409,7 +409,7 @@ declare namespace java {
              * @see java.awt.Graphics#setXORMode(java.awt.Color)
              */
             // @ts-ignore
-            abstract clearRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public abstract clearRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Draws an outlined round-cornered rectangle using this graphics
              * context's current color. The left and right edges of the rectangle
@@ -427,7 +427,7 @@ declare namespace java {
              * @see java.awt.Graphics#fillRoundRect
              */
             // @ts-ignore
-            abstract drawRoundRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, arcWidth: number /*int*/, arcHeight: number /*int*/): void
+            public abstract drawRoundRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, arcWidth: number /*int*/, arcHeight: number /*int*/): void
             /**
              * Fills the specified rounded corner rectangle with the current color.
              * The left and right edges of the rectangle
@@ -445,7 +445,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawRoundRect
              */
             // @ts-ignore
-            abstract fillRoundRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, arcWidth: number /*int*/, arcHeight: number /*int*/): void
+            public abstract fillRoundRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, arcWidth: number /*int*/, arcHeight: number /*int*/): void
             /**
              * Draws a 3-D highlighted outline of the specified rectangle.
              * The edges of the rectangle are highlighted so that they
@@ -466,7 +466,7 @@ declare namespace java {
              * @see java.awt.Graphics#fill3DRect
              */
             // @ts-ignore
-            draw3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
+            public draw3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
             /**
              * Paints a 3-D highlighted rectangle filled with the current color.
              * The edges of the rectangle will be highlighted so that it appears
@@ -483,7 +483,7 @@ declare namespace java {
              * @see java.awt.Graphics#draw3DRect
              */
             // @ts-ignore
-            fill3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
+            public fill3DRect(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, raised: boolean): void
             /**
              * Draws the outline of an oval.
              * The result is a circle or ellipse that fits within the
@@ -502,7 +502,7 @@ declare namespace java {
              * @see java.awt.Graphics#fillOval
              */
             // @ts-ignore
-            abstract drawOval(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public abstract drawOval(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Fills an oval bounded by the specified rectangle with the
              * current color.
@@ -515,7 +515,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawOval
              */
             // @ts-ignore
-            abstract fillOval(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public abstract fillOval(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Draws the outline of a circular or elliptical arc
              * covering the specified rectangle.
@@ -554,7 +554,7 @@ declare namespace java {
              * @see java.awt.Graphics#fillArc
              */
             // @ts-ignore
-            abstract drawArc(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, startAngle: number /*int*/, arcAngle: number /*int*/): void
+            public abstract drawArc(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, startAngle: number /*int*/, arcAngle: number /*int*/): void
             /**
              * Fills a circular or elliptical arc covering the specified rectangle.
              * <p>
@@ -592,7 +592,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawArc
              */
             // @ts-ignore
-            abstract fillArc(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, startAngle: number /*int*/, arcAngle: number /*int*/): void
+            public abstract fillArc(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, startAngle: number /*int*/, arcAngle: number /*int*/): void
             /**
              * Draws a sequence of connected lines defined by
              * arrays of <i>x</i> and <i>y</i> coordinates.
@@ -606,7 +606,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract drawPolyline(xPoints: number /*int*/[], yPoints: number /*int*/[], nPoints: number /*int*/): void
+            public abstract drawPolyline(xPoints: number /*int*/[], yPoints: number /*int*/[], nPoints: number /*int*/): void
             /**
              * Draws a closed polygon defined by
              * arrays of <i>x</i> and <i>y</i> coordinates.
@@ -627,7 +627,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawPolyline
              */
             // @ts-ignore
-            abstract drawPolygon(xPoints: number /*int*/[], yPoints: number /*int*/[], nPoints: number /*int*/): void
+            public abstract drawPolygon(xPoints: number /*int*/[], yPoints: number /*int*/[], nPoints: number /*int*/): void
             /**
              * Draws the outline of a polygon defined by the specified
              * <code>Polygon</code> object.
@@ -636,7 +636,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawPolyline
              */
             // @ts-ignore
-            drawPolygon(p: java.awt.Polygon): void
+            public drawPolygon(p: java.awt.Polygon): void
             /**
              * Fills a closed polygon defined by
              * arrays of <i>x</i> and <i>y</i> coordinates.
@@ -658,7 +658,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawPolygon(int[], int[], int)
              */
             // @ts-ignore
-            abstract fillPolygon(xPoints: number /*int*/[], yPoints: number /*int*/[], nPoints: number /*int*/): void
+            public abstract fillPolygon(xPoints: number /*int*/[], yPoints: number /*int*/[], nPoints: number /*int*/): void
             /**
              * Fills the polygon defined by the specified Polygon object with
              * the graphics context's current color.
@@ -669,7 +669,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawPolygon(int[], int[], int)
              */
             // @ts-ignore
-            fillPolygon(p: java.awt.Polygon): void
+            public fillPolygon(p: java.awt.Polygon): void
             /**
              * Draws the text given by the specified string, using this
              * graphics context's current font and color. The baseline of the
@@ -683,7 +683,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawChars
              */
             // @ts-ignore
-            abstract drawString(str: string, x: number /*int*/, y: number /*int*/): void
+            public abstract drawString(str: java.lang.String | string, x: number /*int*/, y: number /*int*/): void
             /**
              * Renders the text of the specified iterator applying its attributes
              * in accordance with the specification of the
@@ -700,7 +700,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawChars
              */
             // @ts-ignore
-            abstract drawString(iterator: java.text.AttributedCharacterIterator, x: number /*int*/, y: number /*int*/): void
+            public abstract drawString(iterator: java.text.AttributedCharacterIterator, x: number /*int*/, y: number /*int*/): void
             /**
              * Draws the text given by the specified character array, using this
              * graphics context's current font and color. The baseline of the
@@ -720,7 +720,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawString
              */
             // @ts-ignore
-            drawChars(data: string[], offset: number /*int*/, length: number /*int*/, x: number /*int*/, y: number /*int*/): void
+            public drawChars(data: string[], offset: number /*int*/, length: number /*int*/, x: number /*int*/, y: number /*int*/): void
             /**
              * Draws the text given by the specified byte array, using this
              * graphics context's current font and color. The baseline of the
@@ -743,7 +743,7 @@ declare namespace java {
              * @see java.awt.Graphics#drawString
              */
             // @ts-ignore
-            drawBytes(data: number /*byte*/[], offset: number /*int*/, length: number /*int*/, x: number /*int*/, y: number /*int*/): void
+            public drawBytes(data: number /*byte*/[], offset: number /*int*/, length: number /*int*/, x: number /*int*/, y: number /*int*/): void
             /**
              * Draws as much of the specified image as is currently available.
              * The image is drawn with its top-left corner at
@@ -777,7 +777,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, observer: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, observer: java.awt.image.ImageObserver): boolean
             /**
              * Draws as much of the specified image as has already been scaled
              * to fit inside the specified rectangle.
@@ -815,7 +815,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): boolean
             /**
              * Draws as much of the specified image as is currently available.
              * The image is drawn with its top-left corner at
@@ -855,7 +855,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, bgcolor: java.awt.Color, observer: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, bgcolor: java.awt.Color, observer: java.awt.image.ImageObserver): boolean
             /**
              * Draws as much of the specified image as has already been scaled
              * to fit inside the specified rectangle.
@@ -898,7 +898,7 @@ declare namespace java {
              * @see java.awt.image.ImageObserver#imageUpdate(java.awt.Image, int, int, int, int, int)
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, bgcolor: java.awt.Color, observer: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, bgcolor: java.awt.Color, observer: java.awt.image.ImageObserver): boolean
             /**
              * Draws as much of the specified area of the specified image as is
              * currently available, scaling it on the fly to fit inside the
@@ -950,7 +950,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, dx1: number /*int*/, dy1: number /*int*/, dx2: number /*int*/, dy2: number /*int*/, sx1: number /*int*/, sy1: number /*int*/, sx2: number /*int*/, sy2: number /*int*/, observer: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, dx1: number /*int*/, dy1: number /*int*/, dx2: number /*int*/, dy2: number /*int*/, sx1: number /*int*/, sy1: number /*int*/, sx2: number /*int*/, sy2: number /*int*/, observer: java.awt.image.ImageObserver): boolean
             /**
              * Draws as much of the specified area of the specified image as is
              * currently available, scaling it on the fly to fit inside the
@@ -1008,7 +1008,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            abstract drawImage(img: java.awt.Image, dx1: number /*int*/, dy1: number /*int*/, dx2: number /*int*/, dy2: number /*int*/, sx1: number /*int*/, sy1: number /*int*/, sx2: number /*int*/, sy2: number /*int*/, bgcolor: java.awt.Color, observer: java.awt.image.ImageObserver): boolean
+            public abstract drawImage(img: java.awt.Image, dx1: number /*int*/, dy1: number /*int*/, dx2: number /*int*/, dy2: number /*int*/, sx1: number /*int*/, sy1: number /*int*/, sx2: number /*int*/, sy2: number /*int*/, bgcolor: java.awt.Color, observer: java.awt.image.ImageObserver): boolean
             /**
              * Disposes of this graphics context and releases
              * any system resources that it is using.
@@ -1037,20 +1037,20 @@ declare namespace java {
              * @see java.awt.Graphics#create
              */
             // @ts-ignore
-            abstract dispose(): void
+            public abstract dispose(): void
             /**
              * Disposes of this graphics context once it is no longer referenced.
              * @see #dispose
              */
             // @ts-ignore
-            finalize(): void
+            public finalize(): void
             /**
              * Returns a <code>String</code> object representing this
              * <code>Graphics</code> object's value.
              * @return a string representation of this graphics context.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns the bounding rectangle of the current clipping area.
              * @return the bounding rectangle of the current clipping area
@@ -1059,7 +1059,7 @@ declare namespace java {
              *  replaced by <code>getClipBounds()</code>.
              */
             // @ts-ignore
-            getClipRect(): java.awt.Rectangle
+            public getClipRect(): java.awt.Rectangle
             /**
              * Returns true if the specified rectangular area might intersect
              * the current clipping area.
@@ -1086,7 +1086,7 @@ declare namespace java {
              *          otherwise.
              */
             // @ts-ignore
-            hitClip(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): boolean
+            public hitClip(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): boolean
             /**
              * Returns the bounding rectangle of the current clipping area.
              * The coordinates in the rectangle are relative to the coordinate
@@ -1104,7 +1104,7 @@ declare namespace java {
              * @return the bounding rectangle of the current clipping area.
              */
             // @ts-ignore
-            getClipBounds(r: java.awt.Rectangle): java.awt.Rectangle
+            public getClipBounds(r: java.awt.Rectangle): java.awt.Rectangle
         }
     }
 }

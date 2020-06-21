@@ -12,7 +12,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class TimeZoneNameProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class TimeZoneNameProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -48,7 +48,7 @@ declare namespace java {
                  * @see java.util.TimeZone#getDisplayName(boolean, int, java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getDisplayName(ID: string, daylight: boolean, style: number /*int*/, locale: java.util.Locale): java.lang.String
+                public abstract getDisplayName(ID: java.lang.String | string, daylight: boolean, style: number /*int*/, locale: java.util.Locale): string
                 /**
                  * Returns a generic name for the given time zone {@code ID} that's suitable
                  * for presentation to the user in the specified {@code locale}. Generic
@@ -74,7 +74,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getGenericDisplayName(ID: string, style: number /*int*/, locale: java.util.Locale): java.lang.String
+                public getGenericDisplayName(ID: java.lang.String | string, style: number /*int*/, locale: java.util.Locale): string
             }
         }
     }

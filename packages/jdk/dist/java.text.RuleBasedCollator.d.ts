@@ -205,14 +205,14 @@ declare namespace java {
              *  throw the ParseException because the '?' is not quoted.
              */
             // @ts-ignore
-            constructor(rules: string)
+            constructor(rules: java.lang.String | string)
             /**
              * Gets the table-based rules for the collation object.
              * @return returns the collation rules that the table collation object
              *  was created from.
              */
             // @ts-ignore
-            getRules(): java.lang.String
+            public getRules(): string
             /**
              * Returns a CollationElementIterator for the given String.
              * @param source the string to be collated
@@ -220,7 +220,7 @@ declare namespace java {
              * @see java.text.CollationElementIterator
              */
             // @ts-ignore
-            getCollationElementIterator(source: string): java.text.CollationElementIterator
+            public getCollationElementIterator(source: java.lang.String | string): java.text.CollationElementIterator
             /**
              * Returns a CollationElementIterator for the given CharacterIterator.
              * @param source the character iterator to be collated
@@ -229,7 +229,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getCollationElementIterator(source: java.text.CharacterIterator): java.text.CollationElementIterator
+            public getCollationElementIterator(source: java.text.CharacterIterator): java.text.CollationElementIterator
             /**
              * Compares the character data stored in two different strings based on the
              * collation rules.  Returns information about whether a string is less
@@ -238,19 +238,19 @@ declare namespace java {
              * @exception NullPointerException if <code>source</code> or <code>target</code> is null.
              */
             // @ts-ignore
-            compare(source: string, target: string): int
+            public compare(source: java.lang.String | string, target: java.lang.String | string): number /*int*/
             /**
              * Transforms the string into a series of characters that can be compared
              * with CollationKey.compareTo. This overrides java.text.Collator.getCollationKey.
              * It can be overriden in a subclass.
              */
             // @ts-ignore
-            getCollationKey(source: string): java.text.CollationKey
+            public getCollationKey(source: java.lang.String | string): java.text.CollationKey
             /**
              * Standard override; no change in semantics.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Compares the equality of two collation objects.
              * @param obj the table-based collation object to be compared with this.
@@ -258,12 +258,12 @@ declare namespace java {
              *  as the table-based collation object obj; false otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Generates the hash code for the table-based collation object
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

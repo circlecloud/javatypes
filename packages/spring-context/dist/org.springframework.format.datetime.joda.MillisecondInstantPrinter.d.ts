@@ -9,7 +9,7 @@ declare namespace org {
                      * @since 3.0
                      */
                     // @ts-ignore
-                    class MillisecondInstantPrinter extends java.lang.Object implements org.springframework.format.Printer<java.lang.Long> {
+                    class MillisecondInstantPrinter extends java.lang.Object implements org.springframework.format.Printer<java.lang.Long | number> {
                         /**
                          * Create a new ReadableInstantPrinter.
                          * @param formatter the Joda DateTimeFormatter instance
@@ -17,7 +17,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(formatter: DateTimeFormatter)
                         // @ts-ignore
-                        print(instant: number, locale: java.util.Locale): java.lang.String
+                        public print(instant: java.lang.Long | number, locale: java.util.Locale): string
                     }
                 }
             }

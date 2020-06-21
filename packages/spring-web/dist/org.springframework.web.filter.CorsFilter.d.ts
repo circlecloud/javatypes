@@ -34,7 +34,7 @@ declare namespace org {
                      * <p>By default {@link DefaultCorsProcessor} is used.
                      */
                     // @ts-ignore
-                    setCorsProcessor(processor: org.springframework.web.cors.CorsProcessor): void
+                    public setCorsProcessor(processor: org.springframework.web.cors.CorsProcessor): void
                     // @ts-ignore
                     doFilterInternal(request: HttpServletRequest, response: HttpServletResponse, filterChain: FilterChain): void
                 }

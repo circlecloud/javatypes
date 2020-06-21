@@ -19,9 +19,9 @@ declare namespace org {
                      * @param interceptors the list of interceptors to use
                      */
                     // @ts-ignore
-                    constructor(delegate: org.springframework.http.client.AsyncClientHttpRequestFactory, interceptors: Array<org.springframework.http.client.AsyncClientHttpRequestInterceptor>)
+                    constructor(delegate: org.springframework.http.client.AsyncClientHttpRequestFactory, interceptors: java.util.List<org.springframework.http.client.AsyncClientHttpRequestInterceptor> | Array<org.springframework.http.client.AsyncClientHttpRequestInterceptor>)
                     // @ts-ignore
-                    createAsyncRequest(uri: java.net.URI, method: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
+                    public createAsyncRequest(uri: java.net.URI, method: org.springframework.http.HttpMethod): org.springframework.http.client.AsyncClientHttpRequest
                 }
             }
         }

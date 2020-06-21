@@ -30,13 +30,13 @@ declare namespace org {
                          * @return set of all bottles
                          */
                         // @ts-ignore
-                        getBottles(): java.util.Set<java.lang.Integer>
+                        getBottles(): Array<java.lang.Integer | number>
                         /**
                          * Get the maximum amount of bottles present on this stand.
                          * @return maximum bottle count
                          */
                         // @ts-ignore
-                        getMaximumBottles(): int
+                        getMaximumBottles(): number /*int*/
                     }
                 }
             }

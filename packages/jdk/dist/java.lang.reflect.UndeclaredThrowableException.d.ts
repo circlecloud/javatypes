@@ -37,7 +37,7 @@ declare namespace java {
                  *           that was thrown
                  */
                 // @ts-ignore
-                constructor(undeclaredThrowable: Error)
+                constructor(undeclaredThrowable: java.lang.Throwable | Error)
                 /**
                  * Constructs an {@code UndeclaredThrowableException} with the
                  * specified {@code Throwable} and a detail message.
@@ -46,7 +46,7 @@ declare namespace java {
                  * @param s the detail message
                  */
                 // @ts-ignore
-                constructor(undeclaredThrowable: Error, s: string)
+                constructor(undeclaredThrowable: java.lang.Throwable | Error, s: java.lang.String | string)
                 /**
                  * Returns the {@code Throwable} instance wrapped in this
                  * {@code UndeclaredThrowableException}, which may be {@code null}.
@@ -56,7 +56,7 @@ declare namespace java {
                  * @return the undeclared checked exception that was thrown
                  */
                 // @ts-ignore
-                getUndeclaredThrowable(): java.lang.Throwable
+                getUndeclaredThrowable(): Error
                 /**
                  * Returns the cause of this exception (the {@code Throwable}
                  * instance wrapped in this {@code UndeclaredThrowableException},
@@ -65,7 +65,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getCause(): java.lang.Throwable
+                getCause(): Error
             }
         }
     }

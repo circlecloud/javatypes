@@ -10,7 +10,7 @@ declare namespace javax {
              * created <code>SOAPConnectionFactory</code> object.
              */
             // @ts-ignore
-            class SOAPConnectionFactory extends java.lang.Object {
+            abstract class SOAPConnectionFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -24,7 +24,7 @@ declare namespace javax {
                  *  supported.
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.soap.SOAPConnectionFactory
+                public static newInstance(): javax.xml.soap.SOAPConnectionFactory
                 /**
                  * Create a new <code>SOAPConnection</code>.
                  * @return the new <code>SOAPConnection</code> object.
@@ -32,7 +32,7 @@ declare namespace javax {
                  *  <code>SOAPConnection</code> object.
                  */
                 // @ts-ignore
-                abstract createConnection(): javax.xml.soap.SOAPConnection
+                public abstract createConnection(): javax.xml.soap.SOAPConnection
             }
         }
     }

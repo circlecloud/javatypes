@@ -40,16 +40,16 @@ declare namespace org {
                          * @see #GsonHttpMessageConverter(Gson)
                          */
                         // @ts-ignore
-                        setGson(gson: Gson): void
+                        public setGson(gson: Gson): void
                         /**
                          * Return the configured {@code Gson} instance for this converter.
                          */
                         // @ts-ignore
-                        getGson(): Gson
+                        public getGson(): Gson
                         // @ts-ignore
-                        readInternal(resolvedType: java.lang.reflect.Type, reader: java.io.Reader): java.lang.Object
+                        readInternal(resolvedType: java.lang.reflect.Type, reader: java.io.Reader): any
                         // @ts-ignore
-                        writeInternal(o: any, type: java.lang.reflect.Type, writer: java.io.Writer): void
+                        writeInternal(o: java.lang.Object | any, type: java.lang.reflect.Type, writer: java.io.Writer): void
                     }
                 }
             }

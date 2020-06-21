@@ -18,7 +18,7 @@ declare namespace org {
                                  * @return The immutable value for the knockback strength
                                  */
                                 // @ts-ignore
-                                knockbackStrength(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                knockbackStrength(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

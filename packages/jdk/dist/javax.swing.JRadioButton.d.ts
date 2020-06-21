@@ -83,7 +83,7 @@ declare namespace javax {
              * @param text  the string displayed on the radio button
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a radio button with the specified text
              * and selection state.
@@ -92,7 +92,7 @@ declare namespace javax {
              *                   otherwise, the button is initially unselected
              */
             // @ts-ignore
-            constructor(text: string, selected: boolean)
+            constructor(text: java.lang.String | string, selected: boolean)
             /**
              * Creates a radio button that has the specified text and image,
              * and that is initially unselected.
@@ -100,7 +100,7 @@ declare namespace javax {
              * @param icon  the image that the button should display
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon)
             /**
              * Creates a radio button that has the specified text, image,
              * and selection state.
@@ -108,13 +108,13 @@ declare namespace javax {
              * @param icon  the image that the button should display
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon, selected: boolean)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon, selected: boolean)
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns the name of the L&amp;F class
              * that renders this component.
@@ -125,7 +125,7 @@ declare namespace javax {
              *    description: A string that specifies the name of the L&amp;F class.
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns a string representation of this JRadioButton. This method
              * is intended to be used only for debugging purposes, and the
@@ -135,7 +135,7 @@ declare namespace javax {
              * @return a string representation of this JRadioButton.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Gets the AccessibleContext associated with this JRadioButton.
              * For JRadioButtons, the AccessibleContext takes the form of an
@@ -147,7 +147,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this Button
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

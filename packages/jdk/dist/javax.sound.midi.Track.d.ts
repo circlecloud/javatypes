@@ -42,7 +42,7 @@ declare namespace javax {
                  *  track and was added, otherwise <code>false</code>
                  */
                 // @ts-ignore
-                add(event: javax.sound.midi.MidiEvent): boolean
+                public add(event: javax.sound.midi.MidiEvent): boolean
                 /**
                  * Removes the specified event from the track.
                  * @param event the event to remove
@@ -50,7 +50,7 @@ declare namespace javax {
                  *  otherwise <code>false</code>
                  */
                 // @ts-ignore
-                remove(event: javax.sound.midi.MidiEvent): boolean
+                public remove(event: javax.sound.midi.MidiEvent): boolean
                 /**
                  * Obtains the event at the specified index.
                  * @param index the location of the desired event in the event vector
@@ -61,13 +61,13 @@ declare namespace javax {
                  * @return the event at the specified index
                  */
                 // @ts-ignore
-                get(index: number /*int*/): javax.sound.midi.MidiEvent
+                public get(index: number /*int*/): javax.sound.midi.MidiEvent
                 /**
                  * Obtains the number of events in this track.
                  * @return the size of the track's event vector
                  */
                 // @ts-ignore
-                size(): int
+                public size(): number /*int*/
                 /**
                  * Obtains the length of the track, expressed in MIDI ticks.  (The
                  * duration of a tick in seconds is determined by the timing resolution
@@ -79,7 +79,7 @@ declare namespace javax {
                  * @see Sequencer#getTickPosition()
                  */
                 // @ts-ignore
-                ticks(): long
+                public ticks(): number /*long*/
             }
         }
     }

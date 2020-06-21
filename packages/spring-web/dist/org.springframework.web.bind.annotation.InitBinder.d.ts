@@ -21,7 +21,7 @@ declare namespace org {
                      * @see org.springframework.web.context.request.WebRequest
                      */
                     // @ts-ignore
-                    class InitBinder implements java.lang.annotation.Annotation {
+                    abstract class InitBinder implements java.lang.annotation.Annotation {
                     }
                 }
             }

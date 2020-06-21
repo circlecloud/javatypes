@@ -107,7 +107,7 @@ declare namespace javax {
              *  list of browsable services.
              */
             // @ts-ignore
-            printDialog(gc: java.awt.GraphicsConfiguration, x: number /*int*/, y: number /*int*/, services: javax.print.PrintService[], defaultService: javax.print.PrintService, flavor: javax.print.DocFlavor, attributes: javax.print.attribute.PrintRequestAttributeSet): javax.print.PrintService
+            public static printDialog(gc: java.awt.GraphicsConfiguration, x: number /*int*/, y: number /*int*/, services: javax.print.PrintService[], defaultService: javax.print.PrintService, flavor: javax.print.DocFlavor, attributes: javax.print.attribute.PrintRequestAttributeSet): javax.print.PrintService
         }
     }
 }

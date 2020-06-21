@@ -11,21 +11,21 @@ declare namespace org {
                  * @param <A> annotation containing {#linkplain #getAdviceModeAttributeName() AdviceMode attribute}
                  */
                 // @ts-ignore
-                class AdviceModeImportSelector<A extends java.lang.annotation.Annotation> extends java.lang.Object implements org.springframework.context.annotation.ImportSelector {
+                abstract class AdviceModeImportSelector<A extends java.lang.annotation.Annotation> extends java.lang.Object implements org.springframework.context.annotation.ImportSelector {
                     // @ts-ignore
                     constructor()
                     /**
                      * The default advice mode attribute name.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_ADVICE_MODE_ATTRIBUTE_NAME: string
+                    public static readonly DEFAULT_ADVICE_MODE_ATTRIBUTE_NAME: java.lang.String | string
                     /**
                      * The name of the {@link AdviceMode} attribute for the annotation specified by the
                      * generic type {@code A}. The default is {@value #DEFAULT_ADVICE_MODE_ATTRIBUTE_NAME},
                      * but subclasses may override in order to customize.
                      */
                     // @ts-ignore
-                    getAdviceModeAttributeName(): java.lang.String
+                    getAdviceModeAttributeName(): string
                     /**
                      * This implementation resolves the type of annotation from generic metadata and
                      * validates that (a) the annotation is in fact present on the importing
@@ -39,7 +39,7 @@ declare namespace org {
                      *  returns {@code null}
                      */
                     // @ts-ignore
-                    selectImports(importingClassMetadata: AnnotationMetadata): java.lang.String[]
+                    public selectImports(importingClassMetadata: AnnotationMetadata): string[]
                 }
             }
         }

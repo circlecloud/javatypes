@@ -15,7 +15,7 @@ declare namespace org {
                      * @param message description of the problem
                      */
                     // @ts-ignore
-                    constructor(className: string, field: string, message: string)
+                    constructor(className: java.lang.String | string, field: java.lang.String | string, message: java.lang.String | string)
                     /**
                      * Thrown when an invalid constant value is looked up.
                      * @param className name of the class containing the constant definitions
@@ -23,7 +23,7 @@ declare namespace org {
                      * @param value the looked up constant value
                      */
                     // @ts-ignore
-                    constructor(className: string, namePrefix: string, value: any)
+                    constructor(className: java.lang.String | string, namePrefix: java.lang.String | string, value: java.lang.Object | any)
                 }
             }
         }

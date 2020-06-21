@@ -16,14 +16,14 @@ declare namespace org {
                          * @param filters the chain of filters
                          */
                         // @ts-ignore
-                        constructor(handler: org.springframework.web.server.WebHandler, filters: Array<org.springframework.web.server.WebFilter>)
+                        constructor(handler: org.springframework.web.server.WebHandler, filters: java.util.List<org.springframework.web.server.WebFilter> | Array<org.springframework.web.server.WebFilter>)
                         /**
                          * Return a read-only list of the configured filters.
                          */
                         // @ts-ignore
-                        getFilters(): java.util.List<org.springframework.web.server.WebFilter>
+                        public getFilters(): Array<org.springframework.web.server.WebFilter>
                         // @ts-ignore
-                        handle(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public handle(exchange: org.springframework.web.server.ServerWebExchange): object
                     }
                 }
             }

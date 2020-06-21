@@ -14,7 +14,7 @@ declare namespace org {
                          * @return The name of this criterion
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                     }
                 }
             }

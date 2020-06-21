@@ -26,7 +26,7 @@ declare namespace javax {
              * @author David Brownell
              */
             // @ts-ignore
-            class SSLServerSocket extends java.net.ServerSocket {
+            abstract class SSLServerSocket extends java.net.ServerSocket {
                 /**
                  * Used only by subclasses.
                  * <P>
@@ -153,7 +153,7 @@ declare namespace javax {
                  * @see #setEnabledCipherSuites(String [])
                  */
                 // @ts-ignore
-                abstract getEnabledCipherSuites(): java.lang.String[]
+                public abstract getEnabledCipherSuites(): string[]
                 /**
                  * Sets the cipher suites enabled for use by accepted connections.
                  * <P>
@@ -176,7 +176,7 @@ declare namespace javax {
                  * @see #getEnabledCipherSuites()
                  */
                 // @ts-ignore
-                abstract setEnabledCipherSuites(suites: string[]): void
+                public abstract setEnabledCipherSuites(suites: java.lang.String[] | string[]): void
                 /**
                  * Returns the names of the cipher suites which could be enabled for use
                  * on an SSL connection.
@@ -190,7 +190,7 @@ declare namespace javax {
                  * @see #setEnabledCipherSuites(String [])
                  */
                 // @ts-ignore
-                abstract getSupportedCipherSuites(): java.lang.String[]
+                public abstract getSupportedCipherSuites(): string[]
                 /**
                  * Returns the names of the protocols which could be enabled for use.
                  * @return an array of protocol names supported
@@ -198,7 +198,7 @@ declare namespace javax {
                  * @see #setEnabledProtocols(String [])
                  */
                 // @ts-ignore
-                abstract getSupportedProtocols(): java.lang.String[]
+                public abstract getSupportedProtocols(): string[]
                 /**
                  * Returns the names of the protocols which are currently
                  * enabled for use by the newly accepted connections.
@@ -207,7 +207,7 @@ declare namespace javax {
                  * @see #setEnabledProtocols(String [])
                  */
                 // @ts-ignore
-                abstract getEnabledProtocols(): java.lang.String[]
+                public abstract getEnabledProtocols(): string[]
                 /**
                  * Controls which particular protocols are enabled for use by
                  * accepted connections.
@@ -227,7 +227,7 @@ declare namespace javax {
                  * @see #getSupportedProtocols()
                  */
                 // @ts-ignore
-                abstract setEnabledProtocols(protocols: string[]): void
+                public abstract setEnabledProtocols(protocols: java.lang.String[] | string[]): void
                 /**
                  * Controls whether <code>accept</code>ed server-mode
                  * <code>SSLSockets</code> will be initially configured to
@@ -259,7 +259,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract setNeedClientAuth(need: boolean): void
+                public abstract setNeedClientAuth(need: boolean): void
                 /**
                  * Returns true if client authentication will be <i>required</i> on
                  * newly <code>accept</code>ed server-mode <code>SSLSocket</code>s.
@@ -275,7 +275,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getNeedClientAuth(): boolean
+                public abstract getNeedClientAuth(): boolean
                 /**
                  * Controls whether <code>accept</code>ed server-mode
                  * <code>SSLSockets</code> will be initially configured to
@@ -307,7 +307,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract setWantClientAuth(want: boolean): void
+                public abstract setWantClientAuth(want: boolean): void
                 /**
                  * Returns true if client authentication will be <i>requested</i> on
                  * newly accepted server-mode connections.
@@ -323,7 +323,7 @@ declare namespace javax {
                  * @see #setUseClientMode(boolean)
                  */
                 // @ts-ignore
-                abstract getWantClientAuth(): boolean
+                public abstract getWantClientAuth(): boolean
                 /**
                  * Controls whether accepted connections are in the (default) SSL
                  * server mode, or the SSL client mode.
@@ -348,14 +348,14 @@ declare namespace javax {
                  * @see #getUseClientMode()
                  */
                 // @ts-ignore
-                abstract setUseClientMode(mode: boolean): void
+                public abstract setUseClientMode(mode: boolean): void
                 /**
                  * Returns true if accepted connections will be in SSL client mode.
                  * @see #setUseClientMode(boolean)
                  * @return true if the connection should use SSL client mode.
                  */
                 // @ts-ignore
-                abstract getUseClientMode(): boolean
+                public abstract getUseClientMode(): boolean
                 /**
                  * Controls whether new SSL sessions may be established by the
                  * sockets which are created from this server socket.
@@ -368,7 +368,7 @@ declare namespace javax {
                  * @see #getEnableSessionCreation()
                  */
                 // @ts-ignore
-                abstract setEnableSessionCreation(flag: boolean): void
+                public abstract setEnableSessionCreation(flag: boolean): void
                 /**
                  * Returns true if new SSL sessions may be established by the
                  * sockets which are created from this server socket.
@@ -378,7 +378,7 @@ declare namespace javax {
                  * @see #setEnableSessionCreation(boolean)
                  */
                 // @ts-ignore
-                abstract getEnableSessionCreation(): boolean
+                public abstract getEnableSessionCreation(): boolean
                 /**
                  * Returns the SSLParameters in effect for newly accepted connections.
                  * The ciphersuites and protocols of the returned SSLParameters
@@ -388,7 +388,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                getSSLParameters(): javax.net.ssl.SSLParameters
+                public getSSLParameters(): javax.net.ssl.SSLParameters
                 /**
                  * Applies SSLParameters to newly accepted connections.
                  * <p>This means:
@@ -414,7 +414,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                setSSLParameters(params: javax.net.ssl.SSLParameters): void
+                public setSSLParameters(params: javax.net.ssl.SSLParameters): void
             }
         }
     }

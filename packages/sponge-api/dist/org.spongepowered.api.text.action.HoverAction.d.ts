@@ -8,9 +8,9 @@ declare namespace org {
                      * @param <R> The type of the result of the action
                      */
                     // @ts-ignore
-                    class HoverAction<R> extends org.spongepowered.api.text.action.TextAction<R> {
+                    abstract class HoverAction<R> extends org.spongepowered.api.text.action.TextAction<R> {
                         // @ts-ignore
-                        applyTo(builder: org.spongepowered.api.text.Text.Builder): void
+                        public applyTo(builder: org.spongepowered.api.text.Text.Builder): void
                     }
                 }
             }

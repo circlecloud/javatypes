@@ -21,22 +21,22 @@ declare namespace org {
                      * Set the name of the scope.
                      */
                     // @ts-ignore
-                    setScopeName(scopeName: string): void
+                    public setScopeName(scopeName: java.lang.String | string): void
                     /**
                      * Get the name of the scope.
                      */
                     // @ts-ignore
-                    getScopeName(): java.lang.String
+                    public getScopeName(): string
                     /**
                      * Set the proxy-mode to be applied to the scoped instance.
                      */
                     // @ts-ignore
-                    setScopedProxyMode(scopedProxyMode: org.springframework.context.annotation.ScopedProxyMode): void
+                    public setScopedProxyMode(scopedProxyMode: org.springframework.context.annotation.ScopedProxyMode): void
                     /**
                      * Get the proxy-mode to be applied to the scoped instance.
                      */
                     // @ts-ignore
-                    getScopedProxyMode(): org.springframework.context.annotation.ScopedProxyMode
+                    public getScopedProxyMode(): org.springframework.context.annotation.ScopedProxyMode
                 }
             }
         }

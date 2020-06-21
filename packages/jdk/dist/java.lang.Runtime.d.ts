@@ -21,7 +21,7 @@ declare namespace java {
              *           Java application.
              */
             // @ts-ignore
-            getRuntime(): java.lang.Runtime
+            public static getRuntime(): java.lang.Runtime
             /**
              * Terminates the currently running Java virtual machine by initiating its
              * shutdown sequence.  This method never returns normally.  The argument
@@ -57,7 +57,7 @@ declare namespace java {
              * @see #halt(int)
              */
             // @ts-ignore
-            exit(status: number /*int*/): void
+            public exit(status: number /*int*/): void
             /**
              * Registers a new virtual-machine shutdown hook.
              * <p> The Java virtual machine <i>shuts down</i> in response to two kinds
@@ -136,7 +136,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            addShutdownHook(hook: java.lang.Thread): void
+            public addShutdownHook(hook: java.lang.Thread): void
             /**
              * De-registers a previously-registered virtual-machine shutdown hook. <p>
              * @param hook the hook to remove
@@ -154,7 +154,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            removeShutdownHook(hook: java.lang.Thread): boolean
+            public removeShutdownHook(hook: java.lang.Thread): boolean
             /**
              * Forcibly terminates the currently running Java virtual machine.  This
              * method never returns normally.
@@ -180,7 +180,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            halt(status: number /*int*/): void
+            public halt(status: number /*int*/): void
             /**
              * Enable or disable finalization on exit; doing so specifies that the
              * finalizers of all objects that have finalizers that have not yet been
@@ -204,7 +204,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            runFinalizersOnExit(value: boolean): void
+            public static runFinalizersOnExit(value: boolean): void
             /**
              * Executes the specified string command in a separate process.
              * <p>This is a convenience method.  An invocation of the form
@@ -227,7 +227,7 @@ declare namespace java {
              * @see ProcessBuilder
              */
             // @ts-ignore
-            exec(command: string): java.lang.Process
+            public exec(command: java.lang.String | string): java.lang.Process
             /**
              * Executes the specified string command in a separate process with the
              * specified environment.
@@ -257,7 +257,7 @@ declare namespace java {
              * @see ProcessBuilder
              */
             // @ts-ignore
-            exec(command: string, envp: string[]): java.lang.Process
+            public exec(command: java.lang.String | string, envp: java.lang.String[] | string[]): java.lang.Process
             /**
              * Executes the specified string command in a separate process with the
              * specified environment and working directory.
@@ -298,7 +298,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            exec(command: string, envp: string[], dir: java.io.File): java.lang.Process
+            public exec(command: java.lang.String | string, envp: java.lang.String[] | string[], dir: java.io.File): java.lang.Process
             /**
              * Executes the specified command and arguments in a separate process.
              * <p>This is a convenience method.  An invocation of the form
@@ -323,7 +323,7 @@ declare namespace java {
              * @see ProcessBuilder
              */
             // @ts-ignore
-            exec(cmdarray: string[]): java.lang.Process
+            public exec(cmdarray: java.lang.String[] | string[]): java.lang.Process
             /**
              * Executes the specified command and arguments in a separate process
              * with the specified environment.
@@ -355,7 +355,7 @@ declare namespace java {
              * @see ProcessBuilder
              */
             // @ts-ignore
-            exec(cmdarray: string[], envp: string[]): java.lang.Process
+            public exec(cmdarray: java.lang.String[] | string[], envp: java.lang.String[] | string[]): java.lang.Process
             /**
              * Executes the specified command and arguments in a separate process with
              * the specified environment and working directory.
@@ -421,7 +421,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            exec(cmdarray: string[], envp: string[], dir: java.io.File): java.lang.Process
+            public exec(cmdarray: java.lang.String[] | string[], envp: java.lang.String[] | string[], dir: java.io.File): java.lang.Process
             /**
              * Returns the number of processors available to the Java virtual machine.
              * <p> This value may change during a particular invocation of the virtual
@@ -433,7 +433,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            availableProcessors(): int
+            public availableProcessors(): number /*int*/
             /**
              * Returns the amount of free memory in the Java Virtual Machine.
              * Calling the
@@ -443,7 +443,7 @@ declare namespace java {
              *           available for future allocated objects, measured in bytes.
              */
             // @ts-ignore
-            freeMemory(): long
+            public freeMemory(): number /*long*/
             /**
              * Returns the total amount of memory in the Java virtual machine.
              * The value returned by this method may vary over time, depending on
@@ -455,7 +455,7 @@ declare namespace java {
              *           and future objects, measured in bytes.
              */
             // @ts-ignore
-            totalMemory(): long
+            public totalMemory(): number /*long*/
             /**
              * Returns the maximum amount of memory that the Java virtual machine will
              * attempt to use.  If there is no inherent limit then the value {@link
@@ -465,7 +465,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            maxMemory(): long
+            public maxMemory(): number /*long*/
             /**
              * Runs the garbage collector.
              * Calling this method suggests that the Java virtual machine expend
@@ -483,7 +483,7 @@ declare namespace java {
              * means of invoking this method.
              */
             // @ts-ignore
-            gc(): void
+            public gc(): void
             /**
              * Runs the finalization methods of any objects pending finalization.
              * Calling this method suggests that the Java virtual machine expend
@@ -502,7 +502,7 @@ declare namespace java {
              * @see java.lang.Object#finalize()
              */
             // @ts-ignore
-            runFinalization(): void
+            public runFinalization(): void
             /**
              * Enables/Disables tracing of instructions.
              * If the <code>boolean</code> argument is <code>true</code>, this
@@ -521,7 +521,7 @@ declare namespace java {
              *                <code>false</code> to disable this feature.
              */
             // @ts-ignore
-            traceInstructions(on: boolean): void
+            public traceInstructions(on: boolean): void
             /**
              * Enables/Disables tracing of method calls.
              * If the <code>boolean</code> argument is <code>true</code>, this
@@ -538,7 +538,7 @@ declare namespace java {
              *                <code>false</code> to disable this feature.
              */
             // @ts-ignore
-            traceMethodCalls(on: boolean): void
+            public traceMethodCalls(on: boolean): void
             /**
              * Loads the native library specified by the filename argument.  The filename
              * argument must be an absolute path name.
@@ -579,7 +579,7 @@ declare namespace java {
              * @see java.lang.SecurityManager#checkLink(java.lang.String)
              */
             // @ts-ignore
-            load(filename: string): void
+            public load(filename: java.lang.String | string): void
             /**
              * Loads the native library specified by the <code>libname</code>
              * argument.  The <code>libname</code> argument must not contain any platform
@@ -623,7 +623,7 @@ declare namespace java {
              * @see java.lang.SecurityManager#checkLink(java.lang.String)
              */
             // @ts-ignore
-            loadLibrary(libname: string): void
+            public loadLibrary(libname: java.lang.String | string): void
             /**
              * Creates a localized version of an input stream. This method takes
              * an <code>InputStream</code> and returns an <code>InputStream</code>
@@ -645,7 +645,7 @@ declare namespace java {
              *  classes.
              */
             // @ts-ignore
-            getLocalizedInputStream(input: java.io.InputStream): java.io.InputStream
+            public getLocalizedInputStream(input: java.io.InputStream): java.io.InputStream
             /**
              * Creates a localized version of an output stream. This method
              * takes an <code>OutputStream</code> and returns an
@@ -668,7 +668,7 @@ declare namespace java {
              * @see java.io.PrintWriter#PrintWriter(java.io.OutputStream)
              */
             // @ts-ignore
-            getLocalizedOutputStream(out: java.io.OutputStream): java.io.OutputStream
+            public getLocalizedOutputStream(out: java.io.OutputStream): java.io.OutputStream
         }
     }
 }

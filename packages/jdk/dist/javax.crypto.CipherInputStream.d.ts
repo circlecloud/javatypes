@@ -75,7 +75,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>b.length</code> bytes of data from this input
              * stream into an array of bytes.
@@ -92,7 +92,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this input stream
              * into an array of bytes. This method blocks until some input is
@@ -110,7 +110,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips <code>n</code> bytes of input from the bytes that can be read
              * from this input stream without blocking.
@@ -127,7 +127,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns the number of bytes that can be read from this input
              * stream without blocking. The <code>available</code> method of
@@ -139,7 +139,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Closes this input stream and releases any system resources
              * associated with the stream.
@@ -151,7 +151,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Tests if this input stream supports the <code>mark</code>
              * and <code>reset</code> methods, which it does not.
@@ -162,7 +162,7 @@ declare namespace javax {
              * @since JCE1.2
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
         }
     }
 }

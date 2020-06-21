@@ -12,7 +12,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getBeanClassName(element: org.w3c.dom.Element): java.lang.String
+                    getBeanClassName(element: org.w3c.dom.Element): string
                     // @ts-ignore
                     doParse(element: org.w3c.dom.Element, builder: BeanDefinitionBuilder): void
                 }

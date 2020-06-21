@@ -63,7 +63,7 @@ declare namespace javax {
                  * @param description A human readable description of the operation.
                  */
                 // @ts-ignore
-                constructor(description: string, operationMethod: java.lang.reflect.Method)
+                constructor(description: java.lang.String | string, operationMethod: java.lang.reflect.Method)
                 /**
                  * Constructs a ModelMBeanOperationInfo object. The {@link
                  * Descriptor} of the constructed object will include fields
@@ -89,7 +89,7 @@ declare namespace javax {
                  *  "getter", or "setter".
                  */
                 // @ts-ignore
-                constructor(description: string, operationMethod: java.lang.reflect.Method, descriptor: javax.management.Descriptor)
+                constructor(description: java.lang.String | string, operationMethod: java.lang.reflect.Method, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs a ModelMBeanOperationInfo object with a default descriptor.
                  * @param name The name of the method.
@@ -101,7 +101,7 @@ declare namespace javax {
                  *  ACTION_INFO, UNKNOWN.
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[], type: string, impact: number /*int*/)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[], type: java.lang.String | string, impact: number /*int*/)
                 /**
                  * Constructs a ModelMBeanOperationInfo object.
                  * @param name The name of the method.
@@ -126,7 +126,7 @@ declare namespace javax {
                  *  "setter".
                  */
                 // @ts-ignore
-                constructor(name: string, description: string, signature: javax.management.MBeanParameterInfo[], type: string, impact: number /*int*/, descriptor: javax.management.Descriptor)
+                constructor(name: java.lang.String | string, description: java.lang.String | string, signature: javax.management.MBeanParameterInfo[], type: java.lang.String | string, impact: number /*int*/, descriptor: javax.management.Descriptor)
                 /**
                  * Constructs a new ModelMBeanOperationInfo object from this
                  * ModelMBeanOperation Object.
@@ -139,7 +139,7 @@ declare namespace javax {
                  * duplicate of this ModelMBeanOperationInfo.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns a copy of the associated Descriptor of the
                  * ModelMBeanOperationInfo.
@@ -148,7 +148,7 @@ declare namespace javax {
                  * @see #setDescriptor
                  */
                 // @ts-ignore
-                getDescriptor(): javax.management.Descriptor
+                public getDescriptor(): javax.management.Descriptor
                 /**
                  * Sets associated Descriptor (full replace) for the
                  * ModelMBeanOperationInfo If the new Descriptor is null, then
@@ -164,13 +164,13 @@ declare namespace javax {
                  * @see #getDescriptor
                  */
                 // @ts-ignore
-                setDescriptor(inDescriptor: javax.management.Descriptor): void
+                public setDescriptor(inDescriptor: javax.management.Descriptor): void
                 /**
                  * Returns a string containing the entire contents of the
                  * ModelMBeanOperationInfo in human readable form.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

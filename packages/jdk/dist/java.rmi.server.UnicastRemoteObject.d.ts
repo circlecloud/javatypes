@@ -135,7 +135,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Exports the remote object to make it available to receive incoming
                  * calls using an anonymous port. This method will always return a
@@ -153,7 +153,7 @@ declare namespace java {
                  *  instead.
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote): java.rmi.server.RemoteStub
+                public static exportObject(obj: java.rmi.Remote): java.rmi.server.RemoteStub
                 /**
                  * Exports the remote object to make it available to receive incoming
                  * calls, using the particular supplied port.
@@ -166,7 +166,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, port: number /*int*/): java.rmi.Remote
+                public static exportObject(obj: java.rmi.Remote, port: number /*int*/): java.rmi.Remote
                 /**
                  * Exports the remote object to make it available to receive incoming
                  * calls, using a transport specified by the given socket factory.
@@ -183,7 +183,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                exportObject(obj: java.rmi.Remote, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.Remote
+                public static exportObject(obj: java.rmi.Remote, port: number /*int*/, csf: java.rmi.server.RMIClientSocketFactory, ssf: java.rmi.server.RMIServerSocketFactory): java.rmi.Remote
                 /**
                  * Removes the remote object, obj, from the RMI runtime. If
                  * successful, the object can no longer accept incoming RMI calls.
@@ -202,7 +202,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                unexportObject(obj: java.rmi.Remote, force: boolean): boolean
+                public static unexportObject(obj: java.rmi.Remote, force: boolean): boolean
             }
         }
     }

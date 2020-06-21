@@ -119,13 +119,13 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                readonly LOGGING_MXBEAN_NAME: string
+                public static readonly LOGGING_MXBEAN_NAME: java.lang.String | string
                 /**
                  * Returns the global LogManager object.
                  * @return the global LogManager object
                  */
                 // @ts-ignore
-                getLogManager(): java.util.logging.LogManager
+                public static getLogManager(): java.util.logging.LogManager
                 /**
                  * Adds an event listener to be invoked when the logging
                  * properties are re-read. Adding multiple instances of
@@ -146,7 +146,7 @@ declare namespace java {
                  *              #readConfiguration readConfiguration} method.
                  */
                 // @ts-ignore
-                addPropertyChangeListener(l: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(l: java.beans.PropertyChangeListener): void
                 /**
                  * Removes an event listener for property change events.
                  * If the same listener instance has been added to the listener table
@@ -170,7 +170,7 @@ declare namespace java {
                  *              #readConfiguration readConfiguration} method.
                  */
                 // @ts-ignore
-                removePropertyChangeListener(l: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(l: java.beans.PropertyChangeListener): void
                 /**
                  * Add a named logger.  This does nothing and returns false if a logger
                  * with the same name is already registered.
@@ -187,7 +187,7 @@ declare namespace java {
                  * @exception NullPointerException if the logger name is null.
                  */
                 // @ts-ignore
-                addLogger(logger: java.util.logging.Logger): boolean
+                public addLogger(logger: java.util.logging.Logger): boolean
                 /**
                  * Method to find a named logger.
                  * <p>
@@ -204,7 +204,7 @@ declare namespace java {
                  * @return matching logger or null if none is found
                  */
                 // @ts-ignore
-                getLogger(name: string): java.util.logging.Logger
+                public getLogger(name: java.lang.String | string): java.util.logging.Logger
                 /**
                  * Get an enumeration of known logger names.
                  * <p>
@@ -222,7 +222,7 @@ declare namespace java {
                  * @return enumeration of logger name strings
                  */
                 // @ts-ignore
-                getLoggerNames(): java.util.Enumeration<java.lang.String>
+                public getLoggerNames(): java.util.Enumeration<java.lang.String | string>
                 /**
                  * Reinitialize the logging properties and reread the logging configuration.
                  * <p>
@@ -239,7 +239,7 @@ declare namespace java {
                  * @exception IOException if there are IO problems reading the configuration.
                  */
                 // @ts-ignore
-                readConfiguration(): void
+                public readConfiguration(): void
                 /**
                  * Reset the logging configuration.
                  * <p>
@@ -250,7 +250,7 @@ declare namespace java {
                  *              the caller does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Reinitialize the logging properties and reread the logging configuration
                  * from the given stream, which should be in java.util.Properties format.
@@ -264,7 +264,7 @@ declare namespace java {
                  * @exception IOException if there are problems reading from the stream.
                  */
                 // @ts-ignore
-                readConfiguration(ins: java.io.InputStream): void
+                public readConfiguration(ins: java.io.InputStream): void
                 /**
                  * Get the value of a logging property.
                  * The method returns null if the property is not found.
@@ -272,7 +272,7 @@ declare namespace java {
                  * @return property value
                  */
                 // @ts-ignore
-                getProperty(name: string): java.lang.String
+                public getProperty(name: java.lang.String | string): string
                 /**
                  * Check that the current context is trusted to modify the logging
                  * configuration.  This requires LoggingPermission("control").
@@ -283,7 +283,7 @@ declare namespace java {
                  *              the caller does not have LoggingPermission("control").
                  */
                 // @ts-ignore
-                checkAccess(): void
+                public checkAccess(): void
                 /**
                  * Returns <tt>LoggingMXBean</tt> for managing loggers.
                  * An alternative way to manage loggers is through the
@@ -298,7 +298,7 @@ declare namespace java {
                  * @since 1.5
                  */
                 // @ts-ignore
-                getLoggingMXBean(): java.util.logging.LoggingMXBean
+                public static getLoggingMXBean(): java.util.logging.LoggingMXBean
             }
         }
     }

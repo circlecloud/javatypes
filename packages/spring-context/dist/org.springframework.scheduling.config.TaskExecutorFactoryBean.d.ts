@@ -14,25 +14,25 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setPoolSize(poolSize: string): void
+                    public setPoolSize(poolSize: java.lang.String | string): void
                     // @ts-ignore
-                    setQueueCapacity(queueCapacity: number /*int*/): void
+                    public setQueueCapacity(queueCapacity: number /*int*/): void
                     // @ts-ignore
-                    setRejectedExecutionHandler(rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): void
+                    public setRejectedExecutionHandler(rejectedExecutionHandler: java.util.concurrent.RejectedExecutionHandler): void
                     // @ts-ignore
-                    setKeepAliveSeconds(keepAliveSeconds: number /*int*/): void
+                    public setKeepAliveSeconds(keepAliveSeconds: number /*int*/): void
                     // @ts-ignore
-                    setBeanName(beanName: string): void
+                    public setBeanName(beanName: java.lang.String | string): void
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    getObject(): TaskExecutor
+                    public getObject(): TaskExecutor
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<? extends TaskExecutor>
+                    public getObjectType(): java.lang.Class<any>
                     // @ts-ignore
-                    isSingleton(): boolean
+                    public isSingleton(): boolean
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

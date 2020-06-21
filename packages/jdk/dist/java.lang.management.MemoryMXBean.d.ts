@@ -49,7 +49,7 @@ declare namespace java {
                  * @return the number of objects awaiting finalization.
                  */
                 // @ts-ignore
-                getObjectPendingFinalizationCount(): int
+                getObjectPendingFinalizationCount(): number /*int*/
                 /**
                  * Returns a boolean indication of whether or not the memory system is
                  * producing verbose output.

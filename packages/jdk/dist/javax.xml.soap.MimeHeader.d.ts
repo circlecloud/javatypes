@@ -16,19 +16,19 @@ declare namespace javax {
                  * @param value a <code>String</code> giving the value of the header
                  */
                 // @ts-ignore
-                constructor(name: string, value: string)
+                constructor(name: java.lang.String | string, value: java.lang.String | string)
                 /**
                  * Returns the name of this <code>MimeHeader</code> object.
                  * @return the name of the header as a <code>String</code>
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Returns the value of this <code>MimeHeader</code> object.
                  * @return the value of the header as a <code>String</code>
                  */
                 // @ts-ignore
-                getValue(): java.lang.String
+                public getValue(): string
             }
         }
     }

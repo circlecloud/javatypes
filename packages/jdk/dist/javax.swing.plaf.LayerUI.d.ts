@@ -38,7 +38,7 @@ declare namespace javax {
                  * @param c the component being painted
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                 /**
                  * Processes {@code AWTEvent}s for {@code JLayer}
                  * and <b>all its descendants</b> to this {@code LayerUI} instance.
@@ -67,7 +67,7 @@ declare namespace javax {
                  * @see #processMouseWheelEvent
                  */
                 // @ts-ignore
-                eventDispatched(e: java.awt.AWTEvent, l: javax.swing.JLayer<V>): void
+                public eventDispatched(e: java.awt.AWTEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes component events occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -95,7 +95,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processComponentEvent(e: java.awt.event.ComponentEvent, l: javax.swing.JLayer<V>): void
+                processComponentEvent(e: java.awt.event.ComponentEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes focus events occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -123,7 +123,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processFocusEvent(e: java.awt.event.FocusEvent, l: javax.swing.JLayer<V>): void
+                processFocusEvent(e: java.awt.event.FocusEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes key events occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -151,7 +151,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processKeyEvent(e: java.awt.event.KeyEvent, l: javax.swing.JLayer<V>): void
+                processKeyEvent(e: java.awt.event.KeyEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes mouse events occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -179,7 +179,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processMouseEvent(e: java.awt.event.MouseEvent, l: javax.swing.JLayer<V>): void
+                processMouseEvent(e: java.awt.event.MouseEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes mouse motion event occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -207,7 +207,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processMouseMotionEvent(e: java.awt.event.MouseEvent, l: javax.swing.JLayer<V>): void
+                processMouseMotionEvent(e: java.awt.event.MouseEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes mouse wheel event occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -235,7 +235,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processMouseWheelEvent(e: java.awt.event.MouseWheelEvent, l: javax.swing.JLayer<V>): void
+                processMouseWheelEvent(e: java.awt.event.MouseWheelEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes input event occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -263,7 +263,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processInputMethodEvent(e: java.awt.event.InputMethodEvent, l: javax.swing.JLayer<V>): void
+                processInputMethodEvent(e: java.awt.event.InputMethodEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes hierarchy event occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -291,7 +291,7 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processHierarchyEvent(e: java.awt.event.HierarchyEvent, l: javax.swing.JLayer<V>): void
+                processHierarchyEvent(e: java.awt.event.HierarchyEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Processes hierarchy bounds event occurring on the {@link JLayer}
                  * or any of its subcomponents.
@@ -319,14 +319,14 @@ declare namespace javax {
                  * @see #uninstallUI(javax.swing.JComponent)
                  */
                 // @ts-ignore
-                processHierarchyBoundsEvent(e: java.awt.event.HierarchyEvent, l: javax.swing.JLayer<V>): void
+                processHierarchyBoundsEvent(e: java.awt.event.HierarchyEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * Invoked when {@link javax.swing.JLayer#updateUI()} is called
                  * by the {@code JLayer} this {@code LayerUI} is set to.
                  * @param l the {#code JLayer} which UI is updated
                  */
                 // @ts-ignore
-                updateUI(l: javax.swing.JLayer<V>): void
+                public updateUI(l: javax.swing.JLayer<any>): void
                 /**
                  * Configures the {@code JLayer} this {@code LayerUI} is set to.
                  * The default implementation registers the passed {@code JLayer} component
@@ -334,7 +334,7 @@ declare namespace javax {
                  * @param c the {#code JLayer} component where this UI delegate is being installed
                  */
                 // @ts-ignore
-                installUI(c: javax.swing.JComponent): void
+                public installUI(c: javax.swing.JComponent): void
                 /**
                  * Reverses the configuration which was previously set
                  * in the {@link #installUI(JComponent)} method.
@@ -343,7 +343,7 @@ declare namespace javax {
                  * @param c the component from which this UI delegate is being removed.
                  */
                 // @ts-ignore
-                uninstallUI(c: javax.swing.JComponent): void
+                public uninstallUI(c: javax.swing.JComponent): void
                 /**
                  * Adds a PropertyChangeListener to the listener list. The listener is
                  * registered for all bound properties of this class.
@@ -356,7 +356,7 @@ declare namespace javax {
                  * @see #addPropertyChangeListener(String, java.beans.PropertyChangeListener)
                  */
                 // @ts-ignore
-                addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Removes a PropertyChangeListener from the listener list. This method
                  * should be used to remove PropertyChangeListeners that were registered
@@ -370,7 +370,7 @@ declare namespace javax {
                  * @see #removePropertyChangeListener(String, PropertyChangeListener)
                  */
                 // @ts-ignore
-                removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * Returns an array of all the property change listeners
                  * registered on this component.
@@ -382,7 +382,7 @@ declare namespace javax {
                  * @see #getPropertyChangeListeners(String)
                  */
                 // @ts-ignore
-                getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+                public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
                 /**
                  * Adds a PropertyChangeListener to the listener list for a specific
                  * property.
@@ -396,7 +396,7 @@ declare namespace javax {
                  * @see #addPropertyChangeListener(String, PropertyChangeListener)
                  */
                 // @ts-ignore
-                addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
                 /**
                  * Removes a {@code PropertyChangeListener} from the listener
                  * list for a specific property. This method should be used to remove
@@ -412,7 +412,7 @@ declare namespace javax {
                  * @see #removePropertyChangeListener(PropertyChangeListener)
                  */
                 // @ts-ignore
-                removePropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
                 /**
                  * Returns an array of all the listeners which have been associated
                  * with the named property.
@@ -426,7 +426,7 @@ declare namespace javax {
                  * @see #getPropertyChangeListeners
                  */
                 // @ts-ignore
-                getPropertyChangeListeners(propertyName: string): java.beans.PropertyChangeListener[]
+                public getPropertyChangeListeners(propertyName: java.lang.String | string): java.beans.PropertyChangeListener[]
                 /**
                  * Support for reporting bound property changes for Object properties.
                  * This method can be called when a bound property has changed and it will
@@ -437,7 +437,7 @@ declare namespace javax {
                  * @param newValue     the property's new value
                  */
                 // @ts-ignore
-                firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+                firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
                 /**
                  * Notifies the {@code LayerUI} when any of its property are changed
                  * and enables updating every {@code JLayer}
@@ -446,7 +446,7 @@ declare namespace javax {
                  * @param l the {#code JLayer} this LayerUI is set to
                  */
                 // @ts-ignore
-                applyPropertyChange(evt: java.beans.PropertyChangeEvent, l: javax.swing.JLayer<V>): void
+                public applyPropertyChange(evt: java.beans.PropertyChangeEvent, l: javax.swing.JLayer<any>): void
                 /**
                  * If the {@code JLayer}'s view component is not {@code null},
                  * this calls the view's {@code getBaseline()} method.
@@ -458,7 +458,7 @@ declare namespace javax {
                  *                   baseline
                  */
                 // @ts-ignore
-                getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                 /**
                  * If the {@code JLayer}'s view component is not {@code null},
                  * this returns the result of the view's {@code getBaselineResizeBehavior()} method.
@@ -468,13 +468,13 @@ declare namespace javax {
                  *          size changes
                  */
                 // @ts-ignore
-                getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 /**
                  * Causes the passed instance of {@code JLayer} to lay out its components.
                  * @param l the {#code JLayer} component where this UI delegate is being installed
                  */
                 // @ts-ignore
-                doLayout(l: javax.swing.JLayer<V>): void
+                public doLayout(l: javax.swing.JLayer<any>): void
                 /**
                  * If the {@code JLayer}'s view component is not {@code null},
                  * this returns the result of  the view's {@code getPreferredSize()} method.
@@ -483,7 +483,7 @@ declare namespace javax {
                  * @return preferred size for the passed {#code JLayer}
                  */
                 // @ts-ignore
-                getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                 /**
                  * If the {@code JLayer}'s view component is not {@code null},
                  * this returns the result of  the view's {@code getMinimalSize()} method.
@@ -492,7 +492,7 @@ declare namespace javax {
                  * @return minimal size for the passed {#code JLayer}
                  */
                 // @ts-ignore
-                getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                 /**
                  * If the {@code JLayer}'s view component is not {@code null},
                  * this returns the result of  the view's {@code getMaximumSize()} method.
@@ -501,7 +501,7 @@ declare namespace javax {
                  * @return maximum size for the passed {#code JLayer}
                  */
                 // @ts-ignore
-                getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                 /**
                  * Paints the specified region in the {@code JLayer} this {@code LayerUI} is set to, immediately.
                  * <p>
@@ -514,7 +514,7 @@ declare namespace javax {
                  * @see JComponent#paintImmediately(int, int, int, int)
                  */
                 // @ts-ignore
-                paintImmediately(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, l: javax.swing.JLayer<V>): void
+                public paintImmediately(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, l: javax.swing.JLayer<any>): void
             }
         }
     }

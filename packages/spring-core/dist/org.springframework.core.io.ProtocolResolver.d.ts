@@ -22,7 +22,7 @@ declare namespace org {
                      *  matches this resolver's protocol, or {@code null} otherwise
                      */
                     // @ts-ignore
-                    resolve(location: string, resourceLoader: org.springframework.core.io.ResourceLoader): org.springframework.core.io.Resource
+                    resolve(location: java.lang.String | string, resourceLoader: org.springframework.core.io.ResourceLoader): org.springframework.core.io.Resource
                 }
             }
         }

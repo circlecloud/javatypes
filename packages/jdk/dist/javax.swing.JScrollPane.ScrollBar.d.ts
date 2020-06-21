@@ -43,7 +43,7 @@ declare namespace javax {
                  * @param unitIncrement the new unit increment value, in pixels
                  */
                 // @ts-ignore
-                setUnitIncrement(unitIncrement: number /*int*/): void
+                public setUnitIncrement(unitIncrement: number /*int*/): void
                 /**
                  * Computes the unit increment for scrolling if the viewport's
                  * view is a <code>Scrollable</code> object.
@@ -54,14 +54,14 @@ declare namespace javax {
                  * @see Scrollable#getScrollableUnitIncrement
                  */
                 // @ts-ignore
-                getUnitIncrement(direction: number /*int*/): int
+                public getUnitIncrement(direction: number /*int*/): number /*int*/
                 /**
                  * Messages super to set the value, and resets the
                  * <code>blockIncrementSet</code> instance variable to true.
                  * @param blockIncrement the new block increment value, in pixels
                  */
                 // @ts-ignore
-                setBlockIncrement(blockIncrement: number /*int*/): void
+                public setBlockIncrement(blockIncrement: number /*int*/): void
                 /**
                  * Computes the block increment for scrolling if the viewport's
                  * view is a <code>Scrollable</code> object.  Otherwise
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @see Scrollable#getScrollableBlockIncrement
                  */
                 // @ts-ignore
-                getBlockIncrement(direction: number /*int*/): int
+                public getBlockIncrement(direction: number /*int*/): number /*int*/
             }
         }
     }

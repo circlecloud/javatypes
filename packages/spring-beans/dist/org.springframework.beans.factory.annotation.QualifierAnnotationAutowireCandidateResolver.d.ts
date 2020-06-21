@@ -31,14 +31,14 @@ declare namespace org {
                          * @param qualifierType the qualifier annotation to look for
                          */
                         // @ts-ignore
-                        constructor(qualifierType: java.lang.Class<java.lang.annotation.Annotation>)
+                        constructor(qualifierType: java.lang.Class<any>)
                         /**
                          * Create a new QualifierAnnotationAutowireCandidateResolver
                          * for the given qualifier annotation types.
                          * @param qualifierTypes the qualifier annotations to look for
                          */
                         // @ts-ignore
-                        constructor(qualifierTypes: Array<java.lang.Class<java.lang.annotation.Annotation>>)
+                        constructor(qualifierTypes: java.util.Set<java.lang.Class<any>> | Array<java.lang.Class<any>>)
                         /**
                          * Register the given type to be used as a qualifier when autowiring.
                          * <p>This identifies qualifier annotations for direct use (on fields,
@@ -50,7 +50,7 @@ declare namespace org {
                          * @param qualifierType the annotation type to register
                          */
                         // @ts-ignore
-                        addQualifierType(qualifierType: java.lang.Class<java.lang.annotation.Annotation>): void
+                        public addQualifierType(qualifierType: java.lang.Class<any>): void
                         /**
                          * Set the 'value' annotation type, to be used on fields, method parameters
                          * and constructor parameters.
@@ -61,7 +61,7 @@ declare namespace org {
                          * expression for a specific argument.
                          */
                         // @ts-ignore
-                        setValueAnnotationType(valueAnnotationType: java.lang.Class<java.lang.annotation.Annotation>): void
+                        public setValueAnnotationType(valueAnnotationType: java.lang.Class<any>): void
                         /**
                          * Determine whether the provided bean definition is an autowire candidate.
                          * <p>To be considered a candidate the bean's <em>autowire-candidate</em>
@@ -75,7 +75,7 @@ declare namespace org {
                          * @see Qualifier
                          */
                         // @ts-ignore
-                        isAutowireCandidate(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public isAutowireCandidate(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         /**
                          * Match the given qualifier annotations against the candidate bean definition.
                          */
@@ -85,47 +85,47 @@ declare namespace org {
                          * Checks whether the given annotation type is a recognized qualifier type.
                          */
                         // @ts-ignore
-                        isQualifier(annotationType: java.lang.Class<java.lang.annotation.Annotation>): boolean
+                        isQualifier(annotationType: java.lang.Class<any>): boolean
                         /**
                          * Match the given qualifier annotation against the candidate bean definition.
                          */
                         // @ts-ignore
                         checkQualifier(bdHolder: org.springframework.beans.factory.config.BeanDefinitionHolder, annotation: java.lang.annotation.Annotation, typeConverter: org.springframework.beans.TypeConverter): boolean
                         // @ts-ignore
-                        getQualifiedElementAnnotation(bd: org.springframework.beans.factory.support.RootBeanDefinition, type: java.lang.Class<java.lang.annotation.Annotation>): java.lang.annotation.Annotation
+                        getQualifiedElementAnnotation(bd: org.springframework.beans.factory.support.RootBeanDefinition, type: java.lang.Class<any>): java.lang.annotation.Annotation
                         // @ts-ignore
-                        getFactoryMethodAnnotation(bd: org.springframework.beans.factory.support.RootBeanDefinition, type: java.lang.Class<java.lang.annotation.Annotation>): java.lang.annotation.Annotation
+                        getFactoryMethodAnnotation(bd: org.springframework.beans.factory.support.RootBeanDefinition, type: java.lang.Class<any>): java.lang.annotation.Annotation
                         /**
                          * Determine whether the given dependency declares an autowired annotation,
                          * checking its required flag.
                          * @see Autowired#required()
                          */
                         // @ts-ignore
-                        isRequired(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public isRequired(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         /**
                          * Determine whether the given dependency declares a qualifier annotation.
                          * @see #isQualifier(Class)
                          * @see Qualifier
                          */
                         // @ts-ignore
-                        hasQualifier(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public hasQualifier(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         /**
                          * Determine whether the given dependency declares a value annotation.
                          * @see Value
                          */
                         // @ts-ignore
-                        getSuggestedValue(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.lang.Object
+                        public getSuggestedValue(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): any
                         /**
                          * Determine a suggested value from any of the given candidate annotations.
                          */
                         // @ts-ignore
-                        findValue(annotationsToSearch: java.lang.annotation.Annotation[]): java.lang.Object
+                        findValue(annotationsToSearch: java.lang.annotation.Annotation[]): any
                         /**
                          * Extract the value attribute from the given annotation.
                          * @since 4.3
                          */
                         // @ts-ignore
-                        extractValue(attr: AnnotationAttributes): java.lang.Object
+                        extractValue(attr: AnnotationAttributes): any
                     }
                 }
             }

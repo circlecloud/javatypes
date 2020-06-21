@@ -9,13 +9,13 @@ declare namespace org {
                 // @ts-ignore
                 class AreaEffectCloudApplyEvent extends org.bukkit.event.entity.EntityEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(entity: org.bukkit.entity.AreaEffectCloud, affectedEntities: Array<org.bukkit.entity.LivingEntity>)
+                    constructor(entity: org.bukkit.entity.AreaEffectCloud, affectedEntities: java.util.List<org.bukkit.entity.LivingEntity> | Array<org.bukkit.entity.LivingEntity>)
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getEntity(): org.bukkit.entity.AreaEffectCloud
+                    public getEntity(): org.bukkit.entity.AreaEffectCloud
                     /**
                      * Retrieves a mutable list of the effected entities
                      * <p>
@@ -26,11 +26,11 @@ declare namespace org {
                      * @return the affected entity list
                      */
                     // @ts-ignore
-                    getAffectedEntities(): java.util.List<org.bukkit.entity.LivingEntity>
+                    public getAffectedEntities(): Array<org.bukkit.entity.LivingEntity>
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

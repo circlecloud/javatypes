@@ -187,25 +187,25 @@ declare namespace javax {
              * @return the value of the class byte CLA.
              */
             // @ts-ignore
-            getCLA(): int
+            public getCLA(): number /*int*/
             /**
              * Returns the value of the instruction byte INS.
              * @return the value of the instruction byte INS.
              */
             // @ts-ignore
-            getINS(): int
+            public getINS(): number /*int*/
             /**
              * Returns the value of the parameter byte P1.
              * @return the value of the parameter byte P1.
              */
             // @ts-ignore
-            getP1(): int
+            public getP1(): number /*int*/
             /**
              * Returns the value of the parameter byte P2.
              * @return the value of the parameter byte P2.
              */
             // @ts-ignore
-            getP2(): int
+            public getP2(): number /*int*/
             /**
              * Returns the number of data bytes in the command body (Nc) or 0 if this
              * APDU has no body. This call is equivalent to
@@ -214,7 +214,7 @@ declare namespace javax {
              *  has no body.
              */
             // @ts-ignore
-            getNc(): int
+            public getNc(): number /*int*/
             /**
              * Returns a copy of the data bytes in the command body. If this APDU as
              * no body, this method returns a byte array with length zero.
@@ -222,26 +222,26 @@ declare namespace javax {
              *     byte array if this APDU has no body.
              */
             // @ts-ignore
-            getData(): byte[]
+            public getData(): number /*byte*/[]
             /**
              * Returns the maximum number of expected data bytes in a response
              * APDU (Ne).
              * @return the maximum number of expected data bytes in a response APDU.
              */
             // @ts-ignore
-            getNe(): int
+            public getNe(): number /*int*/
             /**
              * Returns a copy of the bytes in this APDU.
              * @return a copy of the bytes in this APDU.
              */
             // @ts-ignore
-            getBytes(): byte[]
+            public getBytes(): number /*byte*/[]
             /**
              * Returns a string representation of this command APDU.
              * @return a String representation of this command APDU.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Compares the specified object with this command APDU for equality.
              * Returns true if the given object is also a CommandAPDU and its bytes are
@@ -250,13 +250,13 @@ declare namespace javax {
              * @return true if the specified object is equal to this command APDU
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this command APDU.
              * @return the hash code value for this command APDU.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

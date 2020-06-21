@@ -15,7 +15,7 @@ declare namespace org {
                     // @ts-ignore
                     shouldGenerateId(): boolean
                     // @ts-ignore
-                    getBeanClassName(element: org.w3c.dom.Element): java.lang.String
+                    getBeanClassName(element: org.w3c.dom.Element): string
                     // @ts-ignore
                     doParse(element: org.w3c.dom.Element, parserContext: ParserContext, builder: BeanDefinitionBuilder): void
                 }

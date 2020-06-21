@@ -36,14 +36,14 @@ declare namespace javax {
                  *               this component
                  */
                 // @ts-ignore
-                getUI(): javax.swing.plaf.DesktopIconUI
+                public getUI(): javax.swing.plaf.DesktopIconUI
                 /**
                  * Sets the look-and-feel object that renders this component.
                  * @param ui  the <code>DesktopIconUI</code> look-and-feel object
                  * @see UIDefaults#getUI
                  */
                 // @ts-ignore
-                setUI(ui: javax.swing.plaf.DesktopIconUI): void
+                public setUI(ui: javax.swing.plaf.DesktopIconUI): void
                 /**
                  * Returns the <code>JInternalFrame</code> that this
                  * <code>DesktopIcon</code> is associated with.
@@ -51,7 +51,7 @@ declare namespace javax {
                  *               is associated
                  */
                 // @ts-ignore
-                getInternalFrame(): javax.swing.JInternalFrame
+                public getInternalFrame(): javax.swing.JInternalFrame
                 /**
                  * Sets the <code>JInternalFrame</code> with which this
                  * <code>DesktopIcon</code> is associated.
@@ -59,7 +59,7 @@ declare namespace javax {
                  *               is associated
                  */
                 // @ts-ignore
-                setInternalFrame(f: javax.swing.JInternalFrame): void
+                public setInternalFrame(f: javax.swing.JInternalFrame): void
                 /**
                  * Convenience method to ask the icon for the <code>Desktop</code>
                  * object it belongs to.
@@ -67,7 +67,7 @@ declare namespace javax {
                  *            icon's internal frame, or <code>null</code> if none found
                  */
                 // @ts-ignore
-                getDesktopPane(): javax.swing.JDesktopPane
+                public getDesktopPane(): javax.swing.JDesktopPane
                 /**
                  * Notification from the <code>UIManager</code> that the look and feel
                  * has changed.
@@ -76,7 +76,7 @@ declare namespace javax {
                  * @see JComponent#updateUI
                  */
                 // @ts-ignore
-                updateUI(): void
+                public updateUI(): void
                 /**
                  * Returns the name of the look-and-feel
                  * class that renders this component.
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @see UIDefaults#getUI
                  */
                 // @ts-ignore
-                getUIClassID(): java.lang.String
+                public getUIClassID(): string
                 /**
                  * Gets the AccessibleContext associated with this JDesktopIcon.
                  * For desktop icons, the AccessibleContext takes the form of an
@@ -95,7 +95,7 @@ declare namespace javax {
                  *          AccessibleContext of this JDesktopIcon
                  */
                 // @ts-ignore
-                getAccessibleContext(): javax.accessibility.AccessibleContext
+                public getAccessibleContext(): javax.accessibility.AccessibleContext
             }
         }
     }

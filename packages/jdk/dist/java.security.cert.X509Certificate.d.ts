@@ -66,7 +66,7 @@ declare namespace java {
              * @see X509Extension
              */
             // @ts-ignore
-            class X509Certificate extends java.security.cert.Certificate implements java.security.cert.X509Extension {
+            abstract class X509Certificate extends java.security.cert.Certificate implements java.security.cert.X509Extension {
                 /**
                  * Constructor for X.509 certificates.
                  */
@@ -95,7 +95,7 @@ declare namespace java {
                  *  yet valid.
                  */
                 // @ts-ignore
-                abstract checkValidity(): void
+                public abstract checkValidity(): void
                 /**
                  * Checks that the given date is within the certificate's
                  * validity period. In other words, this determines whether the
@@ -109,7 +109,7 @@ declare namespace java {
                  * @see #checkValidity()
                  */
                 // @ts-ignore
-                abstract checkValidity(date: java.util.Date): void
+                public abstract checkValidity(date: java.util.Date): void
                 /**
                  * Gets the {@code version} (version number) value from the
                  * certificate.
@@ -121,7 +121,7 @@ declare namespace java {
                  * @return the version number, i.e. 1, 2 or 3.
                  */
                 // @ts-ignore
-                abstract getVersion(): int
+                public abstract getVersion(): number /*int*/
                 /**
                  * Gets the {@code serialNumber} value from the certificate.
                  * The serial number is an integer assigned by the certification
@@ -136,7 +136,7 @@ declare namespace java {
                  * @return the serial number.
                  */
                 // @ts-ignore
-                abstract getSerialNumber(): java.math.BigInteger
+                public abstract getSerialNumber(): java.math.BigInteger
                 /**
                  * <strong>Denigrated</strong>, replaced by {@linkplain
                  * #getIssuerX500Principal()}. This method returns the {@code issuer}
@@ -172,7 +172,7 @@ declare namespace java {
                  * @return a Principal whose name is the issuer distinguished name.
                  */
                 // @ts-ignore
-                abstract getIssuerDN(): java.security.Principal
+                public abstract getIssuerDN(): java.security.Principal
                 /**
                  * Returns the issuer (issuer distinguished name) value from the
                  * certificate as an {@code X500Principal}.
@@ -183,7 +183,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getIssuerX500Principal(): javax.security.auth.x500.X500Principal
+                public getIssuerX500Principal(): javax.security.auth.x500.X500Principal
                 /**
                  * <strong>Denigrated</strong>, replaced by {@linkplain
                  * #getSubjectX500Principal()}. This method returns the {@code subject}
@@ -203,7 +203,7 @@ declare namespace java {
                  * @return a Principal whose name is the subject name.
                  */
                 // @ts-ignore
-                abstract getSubjectDN(): java.security.Principal
+                public abstract getSubjectDN(): java.security.Principal
                 /**
                  * Returns the subject (subject distinguished name) value from the
                  * certificate as an {@code X500Principal}.  If the subject value
@@ -216,7 +216,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getSubjectX500Principal(): javax.security.auth.x500.X500Principal
+                public getSubjectX500Principal(): javax.security.auth.x500.X500Principal
                 /**
                  * Gets the {@code notBefore} date from the validity period of
                  * the certificate.
@@ -234,7 +234,7 @@ declare namespace java {
                  * @see #checkValidity
                  */
                 // @ts-ignore
-                abstract getNotBefore(): java.util.Date
+                public abstract getNotBefore(): java.util.Date
                 /**
                  * Gets the {@code notAfter} date from the validity period of
                  * the certificate. See {@link #getNotBefore() getNotBefore}
@@ -243,7 +243,7 @@ declare namespace java {
                  * @see #checkValidity
                  */
                 // @ts-ignore
-                abstract getNotAfter(): java.util.Date
+                public abstract getNotAfter(): java.util.Date
                 /**
                  * Gets the DER-encoded certificate information, the
                  * {@code tbsCertificate} from this certificate.
@@ -252,7 +252,7 @@ declare namespace java {
                  * @exception CertificateEncodingException if an encoding error occurs.
                  */
                 // @ts-ignore
-                abstract getTBSCertificate(): byte[]
+                public abstract getTBSCertificate(): number /*byte*/[]
                 /**
                  * Gets the {@code signature} value (the raw signature bits) from
                  * the certificate.
@@ -263,7 +263,7 @@ declare namespace java {
                  * @return the signature.
                  */
                 // @ts-ignore
-                abstract getSignature(): byte[]
+                public abstract getSignature(): number /*byte*/[]
                 /**
                  * Gets the signature algorithm name for the certificate
                  * signature algorithm. An example is the string "SHA256withRSA".
@@ -282,7 +282,7 @@ declare namespace java {
                  * @return the signature algorithm name.
                  */
                 // @ts-ignore
-                abstract getSigAlgName(): java.lang.String
+                public abstract getSigAlgName(): string
                 /**
                  * Gets the signature algorithm OID string from the certificate.
                  * An OID is represented by a set of nonnegative whole numbers separated
@@ -297,7 +297,7 @@ declare namespace java {
                  * @return the signature algorithm OID string.
                  */
                 // @ts-ignore
-                abstract getSigAlgOID(): java.lang.String
+                public abstract getSigAlgOID(): string
                 /**
                  * Gets the DER-encoded signature algorithm parameters from this
                  * certificate's signature algorithm. In most cases, the signature
@@ -313,7 +313,7 @@ declare namespace java {
                  *          null if no parameters are present.
                  */
                 // @ts-ignore
-                abstract getSigAlgParams(): byte[]
+                public abstract getSigAlgParams(): number /*byte*/[]
                 /**
                  * Gets the {@code issuerUniqueID} value from the certificate.
                  * The issuer unique identifier is present in the certificate
@@ -331,7 +331,7 @@ declare namespace java {
                  *  present in the certificate.
                  */
                 // @ts-ignore
-                abstract getIssuerUniqueID(): boolean[]
+                public abstract getIssuerUniqueID(): boolean[]
                 /**
                  * Gets the {@code subjectUniqueID} value from the certificate.
                  * <p>The ASN.1 definition for this is:
@@ -343,7 +343,7 @@ declare namespace java {
                  *  present in the certificate.
                  */
                 // @ts-ignore
-                abstract getSubjectUniqueID(): boolean[]
+                public abstract getSubjectUniqueID(): boolean[]
                 /**
                  * Gets a boolean array representing bits of
                  * the {@code KeyUsage} extension, (OID = 2.5.29.15).
@@ -374,7 +374,7 @@ declare namespace java {
                  *  contain a KeyUsage extension.
                  */
                 // @ts-ignore
-                abstract getKeyUsage(): boolean[]
+                public abstract getKeyUsage(): boolean[]
                 /**
                  * Gets an unmodifiable list of Strings representing the OBJECT
                  * IDENTIFIERs of the {@code ExtKeyUsageSyntax} field of the
@@ -405,7 +405,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getExtendedKeyUsage(): java.util.List<java.lang.String>
+                public getExtendedKeyUsage(): Array<java.lang.String | string>
                 /**
                  * Gets the certificate constraints path length from the
                  * critical {@code BasicConstraints} extension, (OID = 2.5.29.19).
@@ -434,7 +434,7 @@ declare namespace java {
                  *  limit to the allowed length of the certification path.
                  */
                 // @ts-ignore
-                abstract getBasicConstraints(): int
+                public abstract getBasicConstraints(): number /*int*/
                 /**
                  * Gets an immutable collection of subject alternative names from the
                  * {@code SubjectAltName} extension, (OID = 2.5.29.17).
@@ -495,7 +495,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getSubjectAlternativeNames(): java.util.Collection<java.util.List<?>>
+                public getSubjectAlternativeNames(): Array<java.util.List<any> | Array<any>>
                 /**
                  * Gets an immutable collection of issuer alternative names from the
                  * {@code IssuerAltName} extension, (OID = 2.5.29.18).
@@ -533,7 +533,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getIssuerAlternativeNames(): java.util.Collection<java.util.List<?>>
+                public getIssuerAlternativeNames(): Array<java.util.List<any> | Array<any>>
                 /**
                  * Verifies that this certificate was signed using the
                  * private key that corresponds to the specified public key.
@@ -555,7 +555,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                verify(key: java.security.PublicKey, sigProvider: java.security.Provider): void
+                public verify(key: java.security.PublicKey, sigProvider: java.security.Provider): void
             }
         }
     }

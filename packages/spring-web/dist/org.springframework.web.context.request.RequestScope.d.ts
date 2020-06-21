@@ -25,13 +25,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        getScope(): int
+                        getScope(): number /*int*/
                         /**
                          * There is no conversation id concept for a request, so this method
                          * returns {@code null}.
                          */
                         // @ts-ignore
-                        getConversationId(): java.lang.String
+                        public getConversationId(): string
                     }
                 }
             }

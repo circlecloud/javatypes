@@ -13,7 +13,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Ellipse2D extends java.awt.geom.RectangularShape {
+            abstract class Ellipse2D extends java.awt.geom.RectangularShape {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -31,19 +31,19 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public intersects(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * {@inheritDoc}
                  * @since 1.2
                  */
                 // @ts-ignore
-                contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
+                public contains(x: number /*double*/, y: number /*double*/, w: number /*double*/, h: number /*double*/): boolean
                 /**
                  * Returns an iteration object that defines the boundary of this
                  * <code>Ellipse2D</code>.
@@ -61,14 +61,14 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
+                public getPathIterator(at: java.awt.geom.AffineTransform): java.awt.geom.PathIterator
                 /**
                  * Returns the hashcode for this <code>Ellipse2D</code>.
                  * @return the hashcode for this <code>Ellipse2D</code>.
                  * @since 1.6
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Determines whether or not the specified <code>Object</code> is
                  * equal to this <code>Ellipse2D</code>.  The specified
@@ -83,7 +83,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

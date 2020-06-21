@@ -4,7 +4,7 @@ declare namespace org {
             namespace event {
                 namespace impl {
                     // @ts-ignore
-                    class AbstractSpawnEntityEvent extends org.spongepowered.api.event.impl.AbstractEvent implements org.spongepowered.api.event.entity.SpawnEntityEvent {
+                    abstract class AbstractSpawnEntityEvent extends org.spongepowered.api.event.impl.AbstractEvent implements org.spongepowered.api.event.entity.SpawnEntityEvent {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore

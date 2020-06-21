@@ -131,7 +131,7 @@ declare namespace javax {
                  * @throws ParseException if mask does not contain valid mask characters
                  */
                 // @ts-ignore
-                constructor(mask: string)
+                constructor(mask: java.lang.String | string)
                 /**
                  * Sets the mask dictating the legal characters.
                  * This will throw a <code>ParseException</code> if <code>mask</code> is
@@ -139,13 +139,13 @@ declare namespace javax {
                  * @throws ParseException if mask does not contain valid mask characters
                  */
                 // @ts-ignore
-                setMask(mask: string): void
+                public setMask(mask: java.lang.String | string): void
                 /**
                  * Returns the formatting mask.
                  * @return Mask dictating legal character values.
                  */
                 // @ts-ignore
-                getMask(): java.lang.String
+                public getMask(): string
                 /**
                  * Allows for further restricting of the characters that can be input.
                  * Only characters specified in the mask, not in the
@@ -156,13 +156,13 @@ declare namespace javax {
                  * @param validCharacters If non-null, specifies legal characters.
                  */
                 // @ts-ignore
-                setValidCharacters(validCharacters: string): void
+                public setValidCharacters(validCharacters: java.lang.String | string): void
                 /**
                  * Returns the valid characters that can be input.
                  * @return Legal characters
                  */
                 // @ts-ignore
-                getValidCharacters(): java.lang.String
+                public getValidCharacters(): string
                 /**
                  * Allows for further restricting of the characters that can be input.
                  * Only characters specified in the mask, not in the
@@ -173,13 +173,13 @@ declare namespace javax {
                  * @param invalidCharacters If non-null, specifies illegal characters.
                  */
                 // @ts-ignore
-                setInvalidCharacters(invalidCharacters: string): void
+                public setInvalidCharacters(invalidCharacters: java.lang.String | string): void
                 /**
                  * Returns the characters that are not valid for input.
                  * @return illegal characters.
                  */
                 // @ts-ignore
-                getInvalidCharacters(): java.lang.String
+                public getInvalidCharacters(): string
                 /**
                  * Sets the string to use if the value does not completely fill in
                  * the mask. A null value implies the placeholder char should be used.
@@ -187,7 +187,7 @@ declare namespace javax {
                  *         completely fill the mask
                  */
                 // @ts-ignore
-                setPlaceholder(placeholder: string): void
+                public setPlaceholder(placeholder: java.lang.String | string): void
                 /**
                  * Returns the String to use if the value does not completely fill
                  * in the mask.
@@ -195,7 +195,7 @@ declare namespace javax {
                  *         completely fill the mask
                  */
                 // @ts-ignore
-                getPlaceholder(): java.lang.String
+                public getPlaceholder(): string
                 /**
                  * Sets the character to use in place of characters that are not present
                  * in the value, ie the user must fill them in. The default value is
@@ -207,7 +207,7 @@ declare namespace javax {
                  *         completely fill the mask
                  */
                 // @ts-ignore
-                setPlaceholderCharacter(placeholder: string): void
+                public setPlaceholderCharacter(placeholder: string): void
                 /**
                  * Returns the character to use in place of characters that are not present
                  * in the value, ie the user must fill them in.
@@ -215,7 +215,7 @@ declare namespace javax {
                  *         completely fill the mask
                  */
                 // @ts-ignore
-                getPlaceholderCharacter(): char
+                public getPlaceholderCharacter(): string
                 /**
                  * If true, the returned value and set value will also contain the literal
                  * characters in mask.
@@ -231,7 +231,7 @@ declare namespace javax {
                  *         mask should be returned in stringToValue
                  */
                 // @ts-ignore
-                setValueContainsLiteralCharacters(containsLiteralChars: boolean): void
+                public setValueContainsLiteralCharacters(containsLiteralChars: boolean): void
                 /**
                  * Returns true if <code>stringToValue</code> should return literal
                  * characters in the mask.
@@ -239,7 +239,7 @@ declare namespace javax {
                  *          stringToValue
                  */
                 // @ts-ignore
-                getValueContainsLiteralCharacters(): boolean
+                public getValueContainsLiteralCharacters(): boolean
                 /**
                  * Parses the text, returning the appropriate Object representation of
                  * the String <code>value</code>. This strips the literal characters as
@@ -255,7 +255,7 @@ declare namespace javax {
                  * @return Object representation of text
                  */
                 // @ts-ignore
-                stringToValue(value: string): java.lang.Object
+                public stringToValue(value: java.lang.String | string): any
                 /**
                  * Returns a String representation of the Object <code>value</code>
                  * based on the mask.  Refer to
@@ -267,7 +267,7 @@ declare namespace javax {
                  * @return String representation of value
                  */
                 // @ts-ignore
-                valueToString(value: any): java.lang.String
+                public valueToString(value: java.lang.Object | any): string
                 /**
                  * Installs the <code>DefaultFormatter</code> onto a particular
                  * <code>JFormattedTextField</code>.
@@ -298,7 +298,7 @@ declare namespace javax {
                  *             uninstall from current JFormattedTextField.
                  */
                 // @ts-ignore
-                install(ftf: javax.swing.JFormattedTextField): void
+                public install(ftf: javax.swing.JFormattedTextField): void
             }
         }
     }

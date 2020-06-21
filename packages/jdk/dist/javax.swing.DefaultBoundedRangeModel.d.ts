@@ -59,7 +59,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getValue
              */
             // @ts-ignore
-            getValue(): int
+            public getValue(): number /*int*/
             /**
              * Returns the model's extent.
              * @return the model's extent
@@ -67,7 +67,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getExtent
              */
             // @ts-ignore
-            getExtent(): int
+            public getExtent(): number /*int*/
             /**
              * Returns the model's minimum.
              * @return the model's minimum
@@ -75,7 +75,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getMinimum
              */
             // @ts-ignore
-            getMinimum(): int
+            public getMinimum(): number /*int*/
             /**
              * Returns the model's maximum.
              * @return the model's maximum
@@ -83,7 +83,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getMaximum
              */
             // @ts-ignore
-            getMaximum(): int
+            public getMaximum(): number /*int*/
             /**
              * Sets the current value of the model. For a slider, that
              * determines where the knob appears. Ensures that the new
@@ -94,7 +94,7 @@ declare namespace javax {
              * @see BoundedRangeModel#setValue
              */
             // @ts-ignore
-            setValue(n: number /*int*/): void
+            public setValue(n: number /*int*/): void
             /**
              * Sets the extent to <I>n</I> after ensuring that <I>n</I>
              * is greater than or equal to zero and falls within the model's
@@ -105,7 +105,7 @@ declare namespace javax {
              * @see BoundedRangeModel#setExtent
              */
             // @ts-ignore
-            setExtent(n: number /*int*/): void
+            public setExtent(n: number /*int*/): void
             /**
              * Sets the minimum to <I>n</I> after ensuring that <I>n</I>
              * that the other three properties obey the model's constraints:
@@ -116,7 +116,7 @@ declare namespace javax {
              * @see BoundedRangeModel#setMinimum
              */
             // @ts-ignore
-            setMinimum(n: number /*int*/): void
+            public setMinimum(n: number /*int*/): void
             /**
              * Sets the maximum to <I>n</I> after ensuring that <I>n</I>
              * that the other three properties obey the model's constraints:
@@ -126,7 +126,7 @@ declare namespace javax {
              * @see BoundedRangeModel#setMaximum
              */
             // @ts-ignore
-            setMaximum(n: number /*int*/): void
+            public setMaximum(n: number /*int*/): void
             /**
              * Sets the <code>valueIsAdjusting</code> property.
              * @see #getValueIsAdjusting
@@ -134,7 +134,7 @@ declare namespace javax {
              * @see BoundedRangeModel#setValueIsAdjusting
              */
             // @ts-ignore
-            setValueIsAdjusting(b: boolean): void
+            public setValueIsAdjusting(b: boolean): void
             /**
              * Returns true if the value is in the process of changing
              * as a result of actions being taken by the user.
@@ -143,7 +143,7 @@ declare namespace javax {
              * @see BoundedRangeModel#getValueIsAdjusting
              */
             // @ts-ignore
-            getValueIsAdjusting(): boolean
+            public getValueIsAdjusting(): boolean
             /**
              * Sets all of the <code>BoundedRangeModel</code> properties after forcing
              * the arguments to obey the usual constraints:
@@ -160,7 +160,7 @@ declare namespace javax {
              * @see #setValueIsAdjusting
              */
             // @ts-ignore
-            setRangeProperties(newValue: number /*int*/, newExtent: number /*int*/, newMin: number /*int*/, newMax: number /*int*/, adjusting: boolean): void
+            public setRangeProperties(newValue: number /*int*/, newExtent: number /*int*/, newMin: number /*int*/, newMax: number /*int*/, adjusting: boolean): void
             /**
              * Adds a <code>ChangeListener</code>.  The change listeners are run each
              * time any one of the Bounded Range model properties changes.
@@ -169,7 +169,7 @@ declare namespace javax {
              * @see BoundedRangeModel#addChangeListener
              */
             // @ts-ignore
-            addChangeListener(l: javax.swing.event.ChangeListener): void
+            public addChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Removes a <code>ChangeListener</code>.
              * @param l the <code>ChangeListener</code> to remove
@@ -177,7 +177,7 @@ declare namespace javax {
              * @see BoundedRangeModel#removeChangeListener
              */
             // @ts-ignore
-            removeChangeListener(l: javax.swing.event.ChangeListener): void
+            public removeChangeListener(l: javax.swing.event.ChangeListener): void
             /**
              * Returns an array of all the change listeners
              * registered on this <code>DefaultBoundedRangeModel</code>.
@@ -189,7 +189,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            getChangeListeners(): javax.swing.event.ChangeListener[]
+            public getChangeListeners(): javax.swing.event.ChangeListener[]
             /**
              * Runs each <code>ChangeListener</code>'s <code>stateChanged</code> method.
              * @see #setRangeProperties
@@ -202,7 +202,7 @@ declare namespace javax {
              * <code>BoundedRangeModel</code> properties.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Returns an array of all the objects currently registered as
              * <code><em>Foo</em>Listener</code>s
@@ -234,7 +234,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
         }
     }
 }

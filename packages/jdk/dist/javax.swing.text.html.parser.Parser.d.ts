@@ -60,7 +60,7 @@ declare namespace javax {
                          * @return the line number of the line currently being parsed
                          */
                         // @ts-ignore
-                        getCurrentLine(): int
+                        getCurrentLine(): number /*int*/
                         /**
                          * Makes a TagElement.
                          */
@@ -108,18 +108,18 @@ declare namespace javax {
                          * An error has occurred.
                          */
                         // @ts-ignore
-                        handleError(ln: number /*int*/, msg: string): void
+                        handleError(ln: number /*int*/, msg: java.lang.String | string): void
                         /**
                          * Invoke the error handler.
                          */
                         // @ts-ignore
-                        error(err: string, arg1: string, arg2: string, arg3: string): void
+                        error(err: java.lang.String | string, arg1: java.lang.String | string, arg2: java.lang.String | string, arg3: java.lang.String | string): void
                         // @ts-ignore
-                        error(err: string, arg1: string, arg2: string): void
+                        error(err: java.lang.String | string, arg1: java.lang.String | string, arg2: java.lang.String | string): void
                         // @ts-ignore
-                        error(err: string, arg1: string): void
+                        error(err: java.lang.String | string, arg1: java.lang.String | string): void
                         // @ts-ignore
-                        error(err: string): void
+                        error(err: java.lang.String | string): void
                         /**
                          * Handle a start tag. The new tag is pushed
                          * onto the tag stack. The attribute list is
@@ -143,7 +143,7 @@ declare namespace javax {
                          * Currently ignores it.
                          */
                         // @ts-ignore
-                        parseDTDMarkup(): java.lang.String
+                        public parseDTDMarkup(): string
                         /**
                          * Parse markup declarations.
                          * Currently only handles the Document Type Declaration markup.
@@ -155,9 +155,9 @@ declare namespace javax {
                          * Parse an HTML stream, given a DTD.
                          */
                         // @ts-ignore
-                        parse(input: java.io.Reader): void
+                        public parse(input: java.io.Reader): void
                         // @ts-ignore
-                        getCurrentPos(): int
+                        getCurrentPos(): number /*int*/
                     }
                 }
             }

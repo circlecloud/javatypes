@@ -60,7 +60,7 @@ declare namespace javax {
                  * @author Shannon Hickey (drag and drop)
                  */
                 // @ts-ignore
-                class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.text.ViewFactory {
+                abstract class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.text.ViewFactory {
                     /**
                      * Creates a new UI.
                      */
@@ -92,7 +92,7 @@ declare namespace javax {
                      * @return the name
                      */
                     // @ts-ignore
-                    getKeymapName(): java.lang.String
+                    getKeymapName(): string
                     /**
                      * Creates the keymap to use for the text component, and installs
                      * any necessary bindings into it.  By default, the keymap is
@@ -132,7 +132,7 @@ declare namespace javax {
                      * @return the name
                      */
                     // @ts-ignore
-                    abstract getPropertyPrefix(): java.lang.String
+                    abstract getPropertyPrefix(): string
                     /**
                      * Initializes component properties, such as font, foreground,
                      * background, caret color, selection color, selected text color,
@@ -247,7 +247,7 @@ declare namespace javax {
                      * @see ComponentUI#installUI
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Deinstalls the UI for a component.  This removes the listeners,
                      * uninstalls the highlighter, removes views, and nulls out the keymap.
@@ -255,7 +255,7 @@ declare namespace javax {
                      * @see ComponentUI#uninstallUI
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Superclass paints background in an uncontrollable way
                      * (i.e. one might want an image tiled into the background).
@@ -267,7 +267,7 @@ declare namespace javax {
                      * default rendering.
                      */
                     // @ts-ignore
-                    update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Paints the interface.  This is routed to the
                      * paintSafely method under the guarantee that
@@ -279,7 +279,7 @@ declare namespace javax {
                      * @param c the editor component
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Gets the preferred size for the editor component.  If the component
                      * has been given a size prior to receiving this request, it will
@@ -292,21 +292,21 @@ declare namespace javax {
                      * @return the size
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Gets the minimum size for the editor component.
                      * @param c the editor component
                      * @return the size
                      */
                     // @ts-ignore
-                    getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Gets the maximum size for the editor component.
                      * @param c the editor component
                      * @return the size
                      */
                     // @ts-ignore
-                    getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Gets the allocation to give the root View.  Due
                      * to an unfortunate set of historical events this
@@ -331,7 +331,7 @@ declare namespace javax {
                      * @see TextUI#modelToView
                      */
                     // @ts-ignore
-                    modelToView(tc: javax.swing.text.JTextComponent, pos: number /*int*/): java.awt.Rectangle
+                    public modelToView(tc: javax.swing.text.JTextComponent, pos: number /*int*/): java.awt.Rectangle
                     /**
                      * Converts the given location in the model to a place in
                      * the view coordinate system.
@@ -345,7 +345,7 @@ declare namespace javax {
                      * @see TextUI#modelToView
                      */
                     // @ts-ignore
-                    modelToView(tc: javax.swing.text.JTextComponent, pos: number /*int*/, bias: javax.swing.text.Position.Bias): java.awt.Rectangle
+                    public modelToView(tc: javax.swing.text.JTextComponent, pos: number /*int*/, bias: javax.swing.text.Position.Bias): java.awt.Rectangle
                     /**
                      * Converts the given place in the view coordinate system
                      * to the nearest representative location in the model.
@@ -359,7 +359,7 @@ declare namespace javax {
                      * @see TextUI#viewToModel
                      */
                     // @ts-ignore
-                    viewToModel(tc: javax.swing.text.JTextComponent, pt: java.awt.Point): int
+                    public viewToModel(tc: javax.swing.text.JTextComponent, pt: java.awt.Point): number /*int*/
                     /**
                      * Converts the given place in the view coordinate system
                      * to the nearest representative location in the model.
@@ -373,12 +373,12 @@ declare namespace javax {
                      * @see TextUI#viewToModel
                      */
                     // @ts-ignore
-                    viewToModel(tc: javax.swing.text.JTextComponent, pt: java.awt.Point, biasReturn: javax.swing.text.Position.Bias[]): int
+                    public viewToModel(tc: javax.swing.text.JTextComponent, pt: java.awt.Point, biasReturn: javax.swing.text.Position.Bias[]): number /*int*/
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getNextVisualPositionFrom(t: javax.swing.text.JTextComponent, pos: number /*int*/, b: javax.swing.text.Position.Bias, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): int
+                    public getNextVisualPositionFrom(t: javax.swing.text.JTextComponent, pos: number /*int*/, b: javax.swing.text.Position.Bias, direction: number /*int*/, biasRet: javax.swing.text.Position.Bias[]): number /*int*/
                     /**
                      * Causes the portion of the view responsible for the
                      * given part of the model to be repainted.  Does nothing if
@@ -389,7 +389,7 @@ declare namespace javax {
                      * @see TextUI#damageRange
                      */
                     // @ts-ignore
-                    damageRange(tc: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/): void
+                    public damageRange(tc: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/): void
                     /**
                      * Causes the portion of the view responsible for the
                      * given part of the model to be repainted.
@@ -397,7 +397,7 @@ declare namespace javax {
                      * @param p1 the end of the range &gt;= p0
                      */
                     // @ts-ignore
-                    damageRange(t: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/, p0Bias: javax.swing.text.Position.Bias, p1Bias: javax.swing.text.Position.Bias): void
+                    public damageRange(t: javax.swing.text.JTextComponent, p0: number /*int*/, p1: number /*int*/, p0Bias: javax.swing.text.Position.Bias, p1Bias: javax.swing.text.Position.Bias): void
                     /**
                      * Fetches the EditorKit for the UI.
                      * @param tc the text component for which this UI is installed
@@ -405,7 +405,7 @@ declare namespace javax {
                      * @see TextUI#getEditorKit
                      */
                     // @ts-ignore
-                    getEditorKit(tc: javax.swing.text.JTextComponent): javax.swing.text.EditorKit
+                    public getEditorKit(tc: javax.swing.text.JTextComponent): javax.swing.text.EditorKit
                     /**
                      * Fetches a View with the allocation of the associated
                      * text component (i.e. the root of the hierarchy) that
@@ -424,7 +424,7 @@ declare namespace javax {
                      * @see TextUI#getRootView
                      */
                     // @ts-ignore
-                    getRootView(tc: javax.swing.text.JTextComponent): javax.swing.text.View
+                    public getRootView(tc: javax.swing.text.JTextComponent): javax.swing.text.View
                     /**
                      * Returns the string to be used as the tooltip at the passed in location.
                      * This forwards the method onto the root View.
@@ -433,7 +433,7 @@ declare namespace javax {
                      * @since 1.4
                      */
                     // @ts-ignore
-                    getToolTipText(t: javax.swing.text.JTextComponent, pt: java.awt.Point): java.lang.String
+                    public getToolTipText(t: javax.swing.text.JTextComponent, pt: java.awt.Point): string
                     /**
                      * Creates a view for an element.
                      * If a subclass wishes to directly implement the factory
@@ -444,7 +444,7 @@ declare namespace javax {
                      * @return the view
                      */
                     // @ts-ignore
-                    create(elem: javax.swing.text.Element): javax.swing.text.View
+                    public create(elem: javax.swing.text.Element): javax.swing.text.View
                     /**
                      * Creates a view for an element.
                      * If a subclass wishes to directly implement the factory
@@ -457,7 +457,7 @@ declare namespace javax {
                      * @return the view
                      */
                     // @ts-ignore
-                    create(elem: javax.swing.text.Element, p0: number /*int*/, p1: number /*int*/): javax.swing.text.View
+                    public create(elem: javax.swing.text.Element, p0: number /*int*/, p1: number /*int*/): javax.swing.text.View
                 }
             }
         }

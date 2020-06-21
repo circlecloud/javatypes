@@ -34,7 +34,7 @@ declare namespace java {
                      *          provided by the encapsulated transferable
                      */
                     // @ts-ignore
-                    getTransferDataFlavors(): java.awt.datatransfer.DataFlavor[]
+                    public getTransferDataFlavors(): java.awt.datatransfer.DataFlavor[]
                     /**
                      * Returns whether or not the specified data flavor is supported by
                      * the encapsulated transferable.
@@ -43,7 +43,7 @@ declare namespace java {
                      *          <code>false</code> otherwise
                      */
                     // @ts-ignore
-                    isDataFlavorSupported(flavor: java.awt.datatransfer.DataFlavor): boolean
+                    public isDataFlavorSupported(flavor: java.awt.datatransfer.DataFlavor): boolean
                     /**
                      * Returns an object which represents the data provided by
                      * the encapsulated transferable for the requested data flavor.
@@ -59,7 +59,7 @@ declare namespace java {
                      *               not supported.
                      */
                     // @ts-ignore
-                    getTransferData(df: java.awt.datatransfer.DataFlavor): java.lang.Object
+                    public getTransferData(df: java.awt.datatransfer.DataFlavor): any
                 }
             }
         }

@@ -27,7 +27,7 @@ declare namespace org {
                      * @see org.springframework.beans.factory.support.AutowireCandidateResolver#getSuggestedValue
                      */
                     // @ts-ignore
-                    class Value implements java.lang.annotation.Annotation {
+                    abstract class Value implements java.lang.annotation.Annotation {
                     }
                 }
             }

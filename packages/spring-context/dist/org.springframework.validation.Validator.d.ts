@@ -68,7 +68,7 @@ declare namespace org {
                  * @see ValidationUtils
                  */
                 // @ts-ignore
-                validate(target: any, errors: org.springframework.validation.Errors): void
+                validate(target: java.lang.Object | any, errors: org.springframework.validation.Errors): void
             }
         }
     }

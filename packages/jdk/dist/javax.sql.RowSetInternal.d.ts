@@ -18,7 +18,7 @@ declare namespace javax {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getParams(): java.lang.Object[]
+            getParams(): any[]
             /**
              * Retrieves the <code>Connection</code> object that was passed to this
              * <code>RowSet</code> object.

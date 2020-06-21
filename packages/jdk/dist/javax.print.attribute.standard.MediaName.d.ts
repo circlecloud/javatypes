@@ -29,28 +29,28 @@ declare namespace javax {
                      * white letter paper.
                      */
                     // @ts-ignore
-                    readonly NA_LETTER_WHITE: javax.print.attribute.standard.MediaName
+                    public static readonly NA_LETTER_WHITE: javax.print.attribute.standard.MediaName
                     /**
                      * letter transparency.
                      */
                     // @ts-ignore
-                    readonly NA_LETTER_TRANSPARENT: javax.print.attribute.standard.MediaName
+                    public static readonly NA_LETTER_TRANSPARENT: javax.print.attribute.standard.MediaName
                     /**
                      * white A4 paper.
                      */
                     // @ts-ignore
-                    readonly ISO_A4_WHITE: javax.print.attribute.standard.MediaName
+                    public static readonly ISO_A4_WHITE: javax.print.attribute.standard.MediaName
                     /**
                      * A4 transparency.
                      */
                     // @ts-ignore
-                    readonly ISO_A4_TRANSPARENT: javax.print.attribute.standard.MediaName
+                    public static readonly ISO_A4_TRANSPARENT: javax.print.attribute.standard.MediaName
                     /**
                      * Returns the string table for class MediaTray.
                      * @return the String table.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class MediaTray.
                      * @return the enumeration value table.

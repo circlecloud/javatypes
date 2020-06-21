@@ -45,7 +45,7 @@ declare namespace javax {
                      * @param systemId The system identifier which may be used in association with this node.
                      */
                     // @ts-ignore
-                    constructor(node: org.w3c.dom.Node, systemId: string)
+                    constructor(node: org.w3c.dom.Node, systemId: java.lang.String | string)
                     /**
                      * <p>Use a DOM node to create a new output target specifying the child node where the result nodes should be inserted before.</p>
                      * <p>In practice, <code>node</code> and <code>nextSibling</code> should be
@@ -99,14 +99,14 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    constructor(node: org.w3c.dom.Node, nextSibling: org.w3c.dom.Node, systemId: string)
+                    constructor(node: org.w3c.dom.Node, nextSibling: org.w3c.dom.Node, systemId: java.lang.String | string)
                     /**
                      * <p>If {@link javax.xml.transform.TransformerFactory#getFeature}
                      * returns <code>true</code> when passed this value as an argument,
                      * the <code>Transformer</code> supports <code>Result</code> output of this type.</p>
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * <p>Set the node that will contain the result DOM tree.<p>
                      * <p>In practice, the node should be
@@ -127,7 +127,7 @@ declare namespace javax {
                      *    <code>nextSibling</code> is not <code>null</code>.
                      */
                     // @ts-ignore
-                    setNode(node: org.w3c.dom.Node): void
+                    public setNode(node: org.w3c.dom.Node): void
                     /**
                      * <p>Get the node that will contain the result DOM tree.</p>
                      * <p>If no node was set via
@@ -141,7 +141,7 @@ declare namespace javax {
                      * @return The node to which the transformation will be appended.
                      */
                     // @ts-ignore
-                    getNode(): org.w3c.dom.Node
+                    public getNode(): org.w3c.dom.Node
                     /**
                      * <p>Set the child node before which the result nodes will be inserted.</p>
                      * <p>Use <code>nextSibling</code> to specify the child node
@@ -161,7 +161,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    setNextSibling(nextSibling: org.w3c.dom.Node): void
+                    public setNextSibling(nextSibling: org.w3c.dom.Node): void
                     /**
                      * <p>Get the child node before which the result nodes will be inserted.</p>
                      * <p>If no node was set via
@@ -173,13 +173,13 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    getNextSibling(): org.w3c.dom.Node
+                    public getNextSibling(): org.w3c.dom.Node
                     /**
                      * <p>Set the systemId that may be used in association with the node.</p>
                      * @param systemId The system identifier as a URI string.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * <p>Get the System Identifier.</p>
                      * <p>If no System ID was set via
@@ -190,7 +190,7 @@ declare namespace javax {
                      * @return The system identifier.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                 }
             }
         }

@@ -75,7 +75,7 @@ declare namespace javax {
                  *  contain any characters that are not printable ASCII characters.
                  */
                 // @ts-ignore
-                constructor(serviceURL: string)
+                constructor(serviceURL: java.lang.String | string)
                 /**
                  * <p>Constructs a <code>JMXServiceURL</code> with the given protocol,
                  * host, and port.  This constructor is equivalent to
@@ -95,7 +95,7 @@ declare namespace javax {
                  *  <code>port</code> is negative.
                  */
                 // @ts-ignore
-                constructor(protocol: string, host: string, port: number /*int*/)
+                constructor(protocol: java.lang.String | string, host: java.lang.String | string, port: number /*int*/)
                 /**
                  * <p>Constructs a <code>JMXServiceURL</code> with the given parts.
                  * @param protocol the protocol part of the URL.  If null, defaults
@@ -114,13 +114,13 @@ declare namespace javax {
                  *  <code>port</code> is negative.
                  */
                 // @ts-ignore
-                constructor(protocol: string, host: string, port: number /*int*/, urlPath: string)
+                constructor(protocol: java.lang.String | string, host: java.lang.String | string, port: number /*int*/, urlPath: java.lang.String | string)
                 /**
                  * <p>The protocol part of the Service URL.
                  * @return the protocol part of the Service URL.  This is never null.
                  */
                 // @ts-ignore
-                getProtocol(): java.lang.String
+                public getProtocol(): string
                 /**
                  * <p>The host part of the Service URL.  If the Service URL was
                  * constructed with the constructor that takes a URL string
@@ -136,14 +136,14 @@ declare namespace javax {
                  * @return the host part of the Service URL.  This is never null.
                  */
                 // @ts-ignore
-                getHost(): java.lang.String
+                public getHost(): string
                 /**
                  * <p>The port of the Service URL.  If no port was
                  * specified, the returned value is 0.</p>
                  * @return the port of the Service URL, or 0 if none.
                  */
                 // @ts-ignore
-                getPort(): int
+                public getPort(): number /*int*/
                 /**
                  * <p>The URL Path part of the Service URL.  This is an empty
                  * string, or a string beginning with a slash (<code>/</code>), or
@@ -152,7 +152,7 @@ declare namespace javax {
                  *  null.
                  */
                 // @ts-ignore
-                getURLPath(): java.lang.String
+                public getURLPath(): string
                 /**
                  * <p>The string representation of this Service URL.  If the value
                  * returned by this method is supplied to the
@@ -168,7 +168,7 @@ declare namespace javax {
                  * @return the string representation of this Service URL.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * <p>Indicates whether some other object is equal to this one.
                  * This method returns true if and only if <code>obj</code> is an
@@ -182,9 +182,9 @@ declare namespace javax {
                  *  <code>obj</code> argument; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

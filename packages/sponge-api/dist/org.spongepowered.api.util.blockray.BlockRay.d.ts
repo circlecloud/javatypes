@@ -39,11 +39,11 @@ declare namespace org {
                          * Resets the iterator; it will iterate from the starting location again.
                          */
                         // @ts-ignore
-                        reset(): void
+                        public reset(): void
                         // @ts-ignore
-                        hasNext(): boolean
+                        public hasNext(): boolean
                         // @ts-ignore
-                        next(): org.spongepowered.api.util.blockray.BlockRayHit<E>
+                        public next(): org.spongepowered.api.util.blockray.BlockRayHit<E>
                         /**
                          * Traces the block ray to the end and returns the last block
                          * accepted by the filter, or none if the extent or block limit was reached.
@@ -51,7 +51,7 @@ declare namespace org {
                          * @return The last block of the ray, if any
                          */
                         // @ts-ignore
-                        end(): java.util.Optional<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                        public end(): java.util.Optional<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                         /**
                          * Initializes a block ray builder with the given starting location.
                          * @param start The starting location
@@ -59,7 +59,7 @@ declare namespace org {
                          * @return A new block ray builder
                          */
                         // @ts-ignore
-                        from<E extends org.spongepowered.api.world.extent.Extent>(start: org.spongepowered.api.world.Location<E>): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                        public static from<E extends org.spongepowered.api.world.extent.Extent>(start: org.spongepowered.api.world.Location<E>): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                         /**
                          * Initializes a block ray builder with the given starting location.
                          * @param extent The extent in which to trace the ray
@@ -68,7 +68,7 @@ declare namespace org {
                          * @return A new block ray builder
                          */
                         // @ts-ignore
-                        from<E extends org.spongepowered.api.world.extent.Extent>(extent: E extends org.spongepowered.api.world.extent.Extent, start: Vector3d): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
+                        public static from<E extends org.spongepowered.api.world.extent.Extent>(extent: E, start: Vector3d): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<E>
                         /**
                          * Initializes a block ray builder for the entity's eye.
                          * If the eye location isn't defined for the entity, the
@@ -78,7 +78,7 @@ declare namespace org {
                          * @return A new block ray builder
                          */
                         // @ts-ignore
-                        from(entity: org.spongepowered.api.entity.Entity): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<org.spongepowered.api.world.World>
+                        public static from(entity: org.spongepowered.api.entity.Entity): org.spongepowered.api.util.blockray.BlockRay.BlockRayBuilder<org.spongepowered.api.world.World>
                         /**
                          * A filter that accepts all blocks. A {@link BlockRay} combined with no
                          * other filter than this one could run endlessly.
@@ -86,7 +86,7 @@ declare namespace org {
                          * @return A filter that accepts all blocks
                          */
                         // @ts-ignore
-                        allFilter<E extends org.spongepowered.api.world.extent.Extent>(): java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                        public static allFilter<E extends org.spongepowered.api.world.extent.Extent>(): java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                         /**
                          * A block type filter that only permits air as a transparent block.
                          * <p>This is provided for convenience, as the default behavior in previous
@@ -96,7 +96,7 @@ declare namespace org {
                          * @return A filter that only accepts air blocks
                          */
                         // @ts-ignore
-                        onlyAirFilter<E extends org.spongepowered.api.world.extent.Extent>(): java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                        public static onlyAirFilter<E extends org.spongepowered.api.world.extent.Extent>(): java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                         /**
                          * A filter that only allows blocks of a certain type.
                          * @param type The type of blocks to allow
@@ -104,7 +104,7 @@ declare namespace org {
                          * @return The filter instance
                          */
                         // @ts-ignore
-                        blockTypeFilter<E extends org.spongepowered.api.world.extent.Extent>(type: org.spongepowered.api.block.BlockType): java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                        public static blockTypeFilter<E extends org.spongepowered.api.world.extent.Extent>(type: org.spongepowered.api.block.BlockType): java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                         /**
                          * Extends a filter by a number of blocks, regardless of what the extended
                          * filter does.
@@ -114,7 +114,7 @@ declare namespace org {
                          * @return The extended block filter
                          */
                         // @ts-ignore
-                        continueAfterFilter<E extends org.spongepowered.api.world.extent.Extent>(filter: java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>> | java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>, numberOfBlocks: number /*int*/): java.util.function.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
+                        public static continueAfterFilter<E extends org.spongepowered.api.world.extent.Extent>(filter: java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>, numberOfBlocks: number /*int*/): java.util.function$.Predicate<org.spongepowered.api.util.blockray.BlockRayHit<E>>
                     }
                 }
             }

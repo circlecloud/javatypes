@@ -42,7 +42,7 @@ declare namespace javax {
          * @author JSR 268 Expert Group
          */
         // @ts-ignore
-        class TerminalFactorySpi extends java.lang.Object {
+        abstract class TerminalFactorySpi extends java.lang.Object {
             /**
              * Constructs a new TerminalFactorySpi object.
              * <p>This class is part of the service provider interface and not accessed

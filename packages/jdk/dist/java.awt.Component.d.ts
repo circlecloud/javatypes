@@ -92,7 +92,7 @@ declare namespace java {
          * @author Sami Shaio
          */
         // @ts-ignore
-        class Component extends java.lang.Object implements java.awt.image.ImageObserver, java.awt.MenuContainer, java.io.Serializable {
+        abstract class Component extends java.lang.Object implements java.awt.image.ImageObserver, java.awt.MenuContainer, java.io.Serializable {
             /**
              * Constructs a new component. Class <code>Component</code> can be
              * extended directly to create a lightweight component that does not
@@ -108,7 +108,7 @@ declare namespace java {
              * @see #getAlignmentY
              */
             // @ts-ignore
-            readonly TOP_ALIGNMENT: number /*float*/
+            public static readonly TOP_ALIGNMENT: number /*float*/
             /**
              * Ease-of-use constant for <code>getAlignmentY</code> and
              * <code>getAlignmentX</code>. Specifies an alignment to
@@ -117,28 +117,28 @@ declare namespace java {
              * @see #getAlignmentY
              */
             // @ts-ignore
-            readonly CENTER_ALIGNMENT: number /*float*/
+            public static readonly CENTER_ALIGNMENT: number /*float*/
             /**
              * Ease-of-use constant for <code>getAlignmentY</code>.
              * Specifies an alignment to the bottom of the component.
              * @see #getAlignmentY
              */
             // @ts-ignore
-            readonly BOTTOM_ALIGNMENT: number /*float*/
+            public static readonly BOTTOM_ALIGNMENT: number /*float*/
             /**
              * Ease-of-use constant for <code>getAlignmentX</code>.
              * Specifies an alignment to the left side of the component.
              * @see #getAlignmentX
              */
             // @ts-ignore
-            readonly LEFT_ALIGNMENT: number /*float*/
+            public static readonly LEFT_ALIGNMENT: number /*float*/
             /**
              * Ease-of-use constant for <code>getAlignmentX</code>.
              * Specifies an alignment to the right side of the component.
              * @see #getAlignmentX
              */
             // @ts-ignore
-            readonly RIGHT_ALIGNMENT: number /*float*/
+            public static readonly RIGHT_ALIGNMENT: number /*float*/
             /**
              * The {@code AccessibleContext} associated with this {@code Component}.
              */
@@ -151,7 +151,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getName(): java.lang.String
+            public getName(): string
             /**
              * Sets the name of the component to the specified string.
              * @param name  the string that is to be this
@@ -160,21 +160,21 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setName(name: string): void
+            public setName(name: java.lang.String | string): void
             /**
              * Gets the parent of this component.
              * @return the parent container of this component
              * @since JDK1.0
              */
             // @ts-ignore
-            getParent(): java.awt.Container
+            public getParent(): java.awt.Container
             /**
              * @deprecated As of JDK version 1.1,
              *  programs should not directly manipulate peers;
              *  replaced by <code>boolean isDisplayable()</code>.
              */
             // @ts-ignore
-            getPeer(): java.awt.peer.ComponentPeer
+            public getPeer(): java.awt.peer.ComponentPeer
             /**
              * Associate a <code>DropTarget</code> with this component.
              * The <code>Component</code> will receive drops only if it
@@ -183,13 +183,13 @@ declare namespace java {
              * @param dt The DropTarget
              */
             // @ts-ignore
-            setDropTarget(dt: java.awt.dnd.DropTarget): void
+            public setDropTarget(dt: java.awt.dnd.DropTarget): void
             /**
              * Gets the <code>DropTarget</code> associated with this
              * <code>Component</code>.
              */
             // @ts-ignore
-            getDropTarget(): java.awt.dnd.DropTarget
+            public getDropTarget(): java.awt.dnd.DropTarget
             /**
              * Gets the <code>GraphicsConfiguration</code> associated with this
              * <code>Component</code>.
@@ -205,7 +205,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getGraphicsConfiguration(): java.awt.GraphicsConfiguration
+            public getGraphicsConfiguration(): java.awt.GraphicsConfiguration
             /**
              * Gets this component's locking object (the object that owns the thread
              * synchronization monitor) for AWT component-tree and layout
@@ -213,7 +213,7 @@ declare namespace java {
              * @return this component's locking object
              */
             // @ts-ignore
-            getTreeLock(): java.lang.Object
+            public getTreeLock(): any
             /**
              * Gets the toolkit of this component. Note that
              * the frame that contains a component controls which
@@ -223,7 +223,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getToolkit(): java.awt.Toolkit
+            public getToolkit(): java.awt.Toolkit
             /**
              * Determines whether this component is valid. A component is valid
              * when it is correctly sized and positioned within its parent
@@ -238,7 +238,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isValid(): boolean
+            public isValid(): boolean
             /**
              * Determines whether this component is displayable. A component is
              * displayable when it is connected to a native screen resource.
@@ -263,7 +263,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            isDisplayable(): boolean
+            public isDisplayable(): boolean
             /**
              * Determines whether this component should be visible when its
              * parent is visible. Components are
@@ -275,7 +275,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isVisible(): boolean
+            public isVisible(): boolean
             /**
              * Returns the position of the mouse pointer in this <code>Component</code>'s
              * coordinate space if the <code>Component</code> is directly under the mouse
@@ -303,7 +303,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getMousePosition(): java.awt.Point
+            public getMousePosition(): java.awt.Point
             /**
              * Determines whether this component is showing on screen. This means
              * that the component must be visible, and it must be in a container
@@ -323,7 +323,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isShowing(): boolean
+            public isShowing(): boolean
             /**
              * Determines whether this component is enabled. An enabled component
              * can respond to user input and generate events. Components are
@@ -335,7 +335,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            isEnabled(): boolean
+            public isEnabled(): boolean
             /**
              * Enables or disables this component, depending on the value of the
              * parameter <code>b</code>. An enabled component can respond to user
@@ -352,25 +352,25 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setEnabled(b: boolean): void
+            public setEnabled(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            enable(): void
+            public enable(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            enable(b: boolean): void
+            public enable(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setEnabled(boolean)</code>.
              */
             // @ts-ignore
-            disable(): void
+            public disable(): void
             /**
              * Returns true if this component is painted to an offscreen image
              * ("buffer") that's copied to the screen later.  Component
@@ -379,7 +379,7 @@ declare namespace java {
              * @return false by default
              */
             // @ts-ignore
-            isDoubleBuffered(): boolean
+            public isDoubleBuffered(): boolean
             /**
              * Enables or disables input method support for this component. If input
              * method support is enabled and the component also processes key events,
@@ -392,7 +392,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            enableInputMethods(enable: boolean): void
+            public enableInputMethods(enable: boolean): void
             /**
              * Shows or hides this component depending on the value of parameter
              * <code>b</code>.
@@ -406,25 +406,25 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setVisible(b: boolean): void
+            public setVisible(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setVisible(boolean)</code>.
              */
             // @ts-ignore
-            show(): void
+            public show(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setVisible(boolean)</code>.
              */
             // @ts-ignore
-            show(b: boolean): void
+            public show(b: boolean): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setVisible(boolean)</code>.
              */
             // @ts-ignore
-            hide(): void
+            public hide(): void
             /**
              * Gets the foreground color of this component.
              * @return this component's foreground color; if this component does
@@ -435,7 +435,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            getForeground(): java.awt.Color
+            public getForeground(): java.awt.Color
             /**
              * Sets the foreground color of this component.
              * @param c the color to become this component's
@@ -446,7 +446,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            setForeground(c: java.awt.Color): void
+            public setForeground(c: java.awt.Color): void
             /**
              * Returns whether the foreground color has been explicitly set for this
              * Component. If this method returns <code>false</code>, this Component is
@@ -456,7 +456,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isForegroundSet(): boolean
+            public isForegroundSet(): boolean
             /**
              * Gets the background color of this component.
              * @return this component's background color; if this component does
@@ -466,7 +466,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getBackground(): java.awt.Color
+            public getBackground(): java.awt.Color
             /**
              * Sets the background color of this component.
              * <p>
@@ -481,7 +481,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setBackground(c: java.awt.Color): void
+            public setBackground(c: java.awt.Color): void
             /**
              * Returns whether the background color has been explicitly set for this
              * Component. If this method returns <code>false</code>, this Component is
@@ -491,7 +491,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isBackgroundSet(): boolean
+            public isBackgroundSet(): boolean
             /**
              * Gets the font of this component.
              * @return this component's font; if a font has not been set
@@ -500,7 +500,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getFont(): java.awt.Font
+            public getFont(): java.awt.Font
             /**
              * Sets the font of this component.
              * <p>
@@ -515,7 +515,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFont(f: java.awt.Font): void
+            public setFont(f: java.awt.Font): void
             /**
              * Returns whether the font has been explicitly set for this Component. If
              * this method returns <code>false</code>, this Component is inheriting its
@@ -525,7 +525,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFontSet(): boolean
+            public isFontSet(): boolean
             /**
              * Gets the locale of this component.
              * @return this component's locale; if this component does not
@@ -538,7 +538,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLocale(): java.util.Locale
+            public getLocale(): java.util.Locale
             /**
              * Sets the locale of this component.  This is a bound property.
              * <p>
@@ -550,7 +550,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setLocale(l: java.util.Locale): void
+            public setLocale(l: java.util.Locale): void
             /**
              * Gets the instance of <code>ColorModel</code> used to display
              * the component on the output device.
@@ -561,7 +561,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getColorModel(): java.awt.image.ColorModel
+            public getColorModel(): java.awt.image.ColorModel
             /**
              * Gets the location of this component in the form of a
              * point specifying the component's top-left corner.
@@ -583,7 +583,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getLocation(): java.awt.Point
+            public getLocation(): java.awt.Point
             /**
              * Gets the location of this component in the form of a point
              * specifying the component's top-left corner in the screen's
@@ -597,13 +597,13 @@ declare namespace java {
              * @see #getLocation
              */
             // @ts-ignore
-            getLocationOnScreen(): java.awt.Point
+            public getLocationOnScreen(): java.awt.Point
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getLocation()</code>.
              */
             // @ts-ignore
-            location(): java.awt.Point
+            public location(): java.awt.Point
             /**
              * Moves this component to a new location. The top-left corner of
              * the new location is specified by the <code>x</code> and <code>y</code>
@@ -621,13 +621,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setLocation(x: number /*int*/, y: number /*int*/): void
+            public setLocation(x: number /*int*/, y: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setLocation(int, int)</code>.
              */
             // @ts-ignore
-            move(x: number /*int*/, y: number /*int*/): void
+            public move(x: number /*int*/, y: number /*int*/): void
             /**
              * Moves this component to a new location. The top-left corner of
              * the new location is specified by point <code>p</code>. Point
@@ -644,7 +644,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setLocation(p: java.awt.Point): void
+            public setLocation(p: java.awt.Point): void
             /**
              * Returns the size of this component in the form of a
              * <code>Dimension</code> object. The <code>height</code>
@@ -658,13 +658,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getSize(): java.awt.Dimension
+            public getSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getSize()</code>.
              */
             // @ts-ignore
-            size(): java.awt.Dimension
+            public size(): java.awt.Dimension
             /**
              * Resizes this component so that it has width <code>width</code>
              * and height <code>height</code>.
@@ -679,13 +679,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setSize(width: number /*int*/, height: number /*int*/): void
+            public setSize(width: number /*int*/, height: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setSize(int, int)</code>.
              */
             // @ts-ignore
-            resize(width: number /*int*/, height: number /*int*/): void
+            public resize(width: number /*int*/, height: number /*int*/): void
             /**
              * Resizes this component so that it has width <code>d.width</code>
              * and height <code>d.height</code>.
@@ -701,13 +701,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setSize(d: java.awt.Dimension): void
+            public setSize(d: java.awt.Dimension): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setSize(Dimension)</code>.
              */
             // @ts-ignore
-            resize(d: java.awt.Dimension): void
+            public resize(d: java.awt.Dimension): void
             /**
              * Gets the bounds of this component in the form of a
              * <code>Rectangle</code> object. The bounds specify this
@@ -719,13 +719,13 @@ declare namespace java {
              * @see #getSize
              */
             // @ts-ignore
-            getBounds(): java.awt.Rectangle
+            public getBounds(): java.awt.Rectangle
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getBounds()</code>.
              */
             // @ts-ignore
-            bounds(): java.awt.Rectangle
+            public bounds(): java.awt.Rectangle
             /**
              * Moves and resizes this component. The new location of the top-left
              * corner is specified by <code>x</code> and <code>y</code>, and the
@@ -747,13 +747,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setBounds(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public setBounds(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setBounds(int, int, int, int)</code>.
              */
             // @ts-ignore
-            reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Moves and resizes this component to conform to the new
              * bounding rectangle <code>r</code>. This component's new
@@ -774,7 +774,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setBounds(r: java.awt.Rectangle): void
+            public setBounds(r: java.awt.Rectangle): void
             /**
              * Returns the current x coordinate of the components origin.
              * This method is preferable to writing
@@ -785,7 +785,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getX(): int
+            public getX(): number /*int*/
             /**
              * Returns the current y coordinate of the components origin.
              * This method is preferable to writing
@@ -796,7 +796,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getY(): int
+            public getY(): number /*int*/
             /**
              * Returns the current width of this component.
              * This method is preferable to writing
@@ -807,7 +807,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getWidth(): int
+            public getWidth(): number /*int*/
             /**
              * Returns the current height of this component.
              * This method is preferable to writing
@@ -818,7 +818,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getHeight(): int
+            public getHeight(): number /*int*/
             /**
              * Stores the bounds of this component into "return value" <b>rv</b> and
              * return <b>rv</b>.  If rv is <code>null</code> a new
@@ -830,7 +830,7 @@ declare namespace java {
              * @return rv
              */
             // @ts-ignore
-            getBounds(rv: java.awt.Rectangle): java.awt.Rectangle
+            public getBounds(rv: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Stores the width/height of this component into "return value" <b>rv</b>
              * and return <b>rv</b>.   If rv is <code>null</code> a new
@@ -841,7 +841,7 @@ declare namespace java {
              * @return rv
              */
             // @ts-ignore
-            getSize(rv: java.awt.Dimension): java.awt.Dimension
+            public getSize(rv: java.awt.Dimension): java.awt.Dimension
             /**
              * Stores the x,y origin of this component into "return value" <b>rv</b>
              * and return <b>rv</b>.   If rv is <code>null</code> a new
@@ -853,7 +853,7 @@ declare namespace java {
              * @return rv
              */
             // @ts-ignore
-            getLocation(rv: java.awt.Point): java.awt.Point
+            public getLocation(rv: java.awt.Point): java.awt.Point
             /**
              * Returns true if this component is completely opaque, returns
              * false by default.
@@ -871,7 +871,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            isOpaque(): boolean
+            public isOpaque(): boolean
             /**
              * A lightweight component doesn't have a native toolkit peer.
              * Subclasses of <code>Component</code> and <code>Container</code>,
@@ -888,7 +888,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            isLightweight(): boolean
+            public isLightweight(): boolean
             /**
              * Sets the preferred size of this component to a constant
              * value.  Subsequent calls to <code>getPreferredSize</code> will always
@@ -900,7 +900,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setPreferredSize(preferredSize: java.awt.Dimension): void
+            public setPreferredSize(preferredSize: java.awt.Dimension): void
             /**
              * Returns true if the preferred size has been set to a
              * non-<code>null</code> value otherwise returns false.
@@ -909,7 +909,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isPreferredSizeSet(): boolean
+            public isPreferredSizeSet(): boolean
             /**
              * Gets the preferred size of this component.
              * @return a dimension object indicating this component's preferred size
@@ -917,13 +917,13 @@ declare namespace java {
              * @see LayoutManager
              */
             // @ts-ignore
-            getPreferredSize(): java.awt.Dimension
+            public getPreferredSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getPreferredSize()</code>.
              */
             // @ts-ignore
-            preferredSize(): java.awt.Dimension
+            public preferredSize(): java.awt.Dimension
             /**
              * Sets the minimum size of this component to a constant
              * value.  Subsequent calls to <code>getMinimumSize</code> will always
@@ -935,7 +935,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setMinimumSize(minimumSize: java.awt.Dimension): void
+            public setMinimumSize(minimumSize: java.awt.Dimension): void
             /**
              * Returns whether or not <code>setMinimumSize</code> has been
              * invoked with a non-null value.
@@ -944,7 +944,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isMinimumSizeSet(): boolean
+            public isMinimumSizeSet(): boolean
             /**
              * Gets the minimum size of this component.
              * @return a dimension object indicating this component's minimum size
@@ -952,13 +952,13 @@ declare namespace java {
              * @see LayoutManager
              */
             // @ts-ignore
-            getMinimumSize(): java.awt.Dimension
+            public getMinimumSize(): java.awt.Dimension
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getMinimumSize()</code>.
              */
             // @ts-ignore
-            minimumSize(): java.awt.Dimension
+            public minimumSize(): java.awt.Dimension
             /**
              * Sets the maximum size of this component to a constant
              * value.  Subsequent calls to <code>getMaximumSize</code> will always
@@ -971,7 +971,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            setMaximumSize(maximumSize: java.awt.Dimension): void
+            public setMaximumSize(maximumSize: java.awt.Dimension): void
             /**
              * Returns true if the maximum size has been set to a non-<code>null</code>
              * value otherwise returns false.
@@ -980,7 +980,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            isMaximumSizeSet(): boolean
+            public isMaximumSizeSet(): boolean
             /**
              * Gets the maximum size of this component.
              * @return a dimension object indicating this component's maximum size
@@ -989,7 +989,7 @@ declare namespace java {
              * @see LayoutManager
              */
             // @ts-ignore
-            getMaximumSize(): java.awt.Dimension
+            public getMaximumSize(): java.awt.Dimension
             /**
              * Returns the alignment along the x axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -998,7 +998,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getAlignmentX(): float
+            public getAlignmentX(): number /*float*/
             /**
              * Returns the alignment along the y axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -1007,7 +1007,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getAlignmentY(): float
+            public getAlignmentY(): number /*float*/
             /**
              * Returns the baseline.  The baseline is measured from the top of
              * the component.  This method is primarily meant for
@@ -1032,7 +1032,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getBaseline(width: number /*int*/, height: number /*int*/): int
+            public getBaseline(width: number /*int*/, height: number /*int*/): number /*int*/
             /**
              * Returns an enum indicating how the baseline of the component
              * changes as the size changes.  This method is primarily meant for
@@ -1054,7 +1054,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getBaselineResizeBehavior(): java.awt.Component.BaselineResizeBehavior
+            public getBaselineResizeBehavior(): java.awt.Component.BaselineResizeBehavior
             /**
              * Prompts the layout manager to lay out this component. This is
              * usually called when the component (more specifically, container)
@@ -1063,13 +1063,13 @@ declare namespace java {
              * @see LayoutManager
              */
             // @ts-ignore
-            doLayout(): void
+            public doLayout(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>doLayout()</code>.
              */
             // @ts-ignore
-            layout(): void
+            public layout(): void
             /**
              * Validates this component.
              * <p>
@@ -1082,7 +1082,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            validate(): void
+            public validate(): void
             /**
              * Invalidates this component and its ancestors.
              * <p>
@@ -1105,7 +1105,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            invalidate(): void
+            public invalidate(): void
             /**
              * Revalidates the component hierarchy up to the nearest validate root.
              * <p>
@@ -1122,7 +1122,7 @@ declare namespace java {
              * @since 1.7
              */
             // @ts-ignore
-            revalidate(): void
+            public revalidate(): void
             /**
              * Creates a graphics context for this component. This method will
              * return <code>null</code> if this component is currently not
@@ -1133,7 +1133,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getGraphics(): java.awt.Graphics
+            public getGraphics(): java.awt.Graphics
             /**
              * Gets the font metrics for the specified font.
              * Warning: Since Font metrics are affected by the
@@ -1154,7 +1154,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getFontMetrics(font: java.awt.Font): java.awt.FontMetrics
+            public getFontMetrics(font: java.awt.Font): java.awt.FontMetrics
             /**
              * Sets the cursor image to the specified cursor.  This cursor
              * image is displayed when the <code>contains</code> method for
@@ -1181,7 +1181,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setCursor(cursor: java.awt.Cursor): void
+            public setCursor(cursor: java.awt.Cursor): void
             /**
              * Gets the cursor set in the component. If the component does
              * not have a cursor set, the cursor of its parent is returned.
@@ -1191,7 +1191,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getCursor(): java.awt.Cursor
+            public getCursor(): java.awt.Cursor
             /**
              * Returns whether the cursor has been explicitly set for this Component.
              * If this method returns <code>false</code>, this Component is inheriting
@@ -1201,7 +1201,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isCursorSet(): boolean
+            public isCursorSet(): boolean
             /**
              * Paints this component.
              * <p>
@@ -1226,7 +1226,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            paint(g: java.awt.Graphics): void
+            public paint(g: java.awt.Graphics): void
             /**
              * Updates this component.
              * <p>
@@ -1259,7 +1259,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            update(g: java.awt.Graphics): void
+            public update(g: java.awt.Graphics): void
             /**
              * Paints this component and all of its subcomponents.
              * <p>
@@ -1272,7 +1272,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            paintAll(g: java.awt.Graphics): void
+            public paintAll(g: java.awt.Graphics): void
             /**
              * Repaints this component.
              * <p>
@@ -1290,7 +1290,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            repaint(): void
+            public repaint(): void
             /**
              * Repaints the component.  If this component is a lightweight
              * component, this results in a call to <code>paint</code>
@@ -1306,7 +1306,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            repaint(tm: number /*long*/): void
+            public repaint(tm: number /*long*/): void
             /**
              * Repaints the specified rectangle of this component.
              * <p>
@@ -1327,7 +1327,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            repaint(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Repaints the specified rectangle of this component within
              * <code>tm</code> milliseconds.
@@ -1350,7 +1350,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public repaint(tm: number /*long*/, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Prints this component. Applications should override this method
              * for components that must do special processing before being
@@ -1368,7 +1368,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            print(g: java.awt.Graphics): void
+            public print(g: java.awt.Graphics): void
             /**
              * Prints this component and all of its subcomponents.
              * <p>
@@ -1381,7 +1381,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            printAll(g: java.awt.Graphics): void
+            public printAll(g: java.awt.Graphics): void
             /**
              * Repaints the component when the image has changed.
              * This <code>imageUpdate</code> method of an <code>ImageObserver</code>
@@ -1427,7 +1427,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
+            public imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
             /**
              * Creates an image from the specified image producer.
              * @param producer  the image producer
@@ -1435,7 +1435,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            createImage(producer: java.awt.image.ImageProducer): java.awt.Image
+            public createImage(producer: java.awt.image.ImageProducer): java.awt.Image
             /**
              * Creates an off-screen drawable image
              * to be used for double buffering.
@@ -1451,7 +1451,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            createImage(width: number /*int*/, height: number /*int*/): java.awt.Image
+            public createImage(width: number /*int*/, height: number /*int*/): java.awt.Image
             /**
              * Creates a volatile off-screen drawable image
              * to be used for double buffering.
@@ -1468,7 +1468,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createVolatileImage(width: number /*int*/, height: number /*int*/): java.awt.image.VolatileImage
+            public createVolatileImage(width: number /*int*/, height: number /*int*/): java.awt.image.VolatileImage
             /**
              * Creates a volatile off-screen drawable image, with the given capabilities.
              * The contents of this image may be lost at any time due
@@ -1485,7 +1485,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            createVolatileImage(width: number /*int*/, height: number /*int*/, caps: java.awt.ImageCapabilities): java.awt.image.VolatileImage
+            public createVolatileImage(width: number /*int*/, height: number /*int*/, caps: java.awt.ImageCapabilities): java.awt.image.VolatileImage
             /**
              * Prepares an image for rendering on this component.  The image
              * data is downloaded asynchronously in another thread and the
@@ -1499,7 +1499,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            prepareImage(image: java.awt.Image, observer: java.awt.image.ImageObserver): boolean
+            public prepareImage(image: java.awt.Image, observer: java.awt.image.ImageObserver): boolean
             /**
              * Prepares an image for rendering on this component at the
              * specified width and height.
@@ -1519,7 +1519,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            prepareImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): boolean
+            public prepareImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): boolean
             /**
              * Returns the status of the construction of a screen representation
              * of the specified image.
@@ -1543,7 +1543,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            checkImage(image: java.awt.Image, observer: java.awt.image.ImageObserver): int
+            public checkImage(image: java.awt.Image, observer: java.awt.image.ImageObserver): number /*int*/
             /**
              * Returns the status of the construction of a screen representation
              * of the specified image.
@@ -1577,7 +1577,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            checkImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): int
+            public checkImage(image: java.awt.Image, width: number /*int*/, height: number /*int*/, observer: java.awt.image.ImageObserver): number /*int*/
             /**
              * Sets whether or not paint messages received from the operating system
              * should be ignored.  This does not affect paint events generated in
@@ -1595,7 +1595,7 @@ declare namespace java {
              * @see GraphicsDevice#setFullScreenWindow
              */
             // @ts-ignore
-            setIgnoreRepaint(ignoreRepaint: boolean): void
+            public setIgnoreRepaint(ignoreRepaint: boolean): void
             /**
              * @return whether or not paint messages received from the operating system
              *  should be ignored.
@@ -1603,7 +1603,7 @@ declare namespace java {
              * @see #setIgnoreRepaint
              */
             // @ts-ignore
-            getIgnoreRepaint(): boolean
+            public getIgnoreRepaint(): boolean
             /**
              * Checks whether this component "contains" the specified point,
              * where <code>x</code> and <code>y</code> are defined to be
@@ -1614,13 +1614,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            contains(x: number /*int*/, y: number /*int*/): boolean
+            public contains(x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by contains(int, int).
              */
             // @ts-ignore
-            inside(x: number /*int*/, y: number /*int*/): boolean
+            public inside(x: number /*int*/, y: number /*int*/): boolean
             /**
              * Checks whether this component "contains" the specified point,
              * where the point's <i>x</i> and <i>y</i> coordinates are defined
@@ -1631,7 +1631,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            contains(p: java.awt.Point): boolean
+            public contains(p: java.awt.Point): boolean
             /**
              * Determines if this component or one of its immediate
              * subcomponents contains the (<i>x</i>,&nbsp;<i>y</i>) location,
@@ -1654,13 +1654,13 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            getComponentAt(x: number /*int*/, y: number /*int*/): java.awt.Component
+            public getComponentAt(x: number /*int*/, y: number /*int*/): java.awt.Component
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by getComponentAt(int, int).
              */
             // @ts-ignore
-            locate(x: number /*int*/, y: number /*int*/): java.awt.Component
+            public locate(x: number /*int*/, y: number /*int*/): java.awt.Component
             /**
              * Returns the component or subcomponent that contains the
              * specified point.
@@ -1669,13 +1669,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getComponentAt(p: java.awt.Point): java.awt.Component
+            public getComponentAt(p: java.awt.Point): java.awt.Component
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>dispatchEvent(AWTEvent e)</code>.
              */
             // @ts-ignore
-            deliverEvent(e: java.awt.Event): void
+            public deliverEvent(e: java.awt.Event): void
             /**
              * Dispatches an event to this component or one of its sub components.
              * Calls <code>processEvent</code> before returning for 1.1-style
@@ -1683,13 +1683,13 @@ declare namespace java {
              * @param e the event
              */
             // @ts-ignore
-            dispatchEvent(e: java.awt.AWTEvent): void
+            public dispatchEvent(e: java.awt.AWTEvent): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by dispatchEvent(AWTEvent).
              */
             // @ts-ignore
-            postEvent(e: java.awt.Event): boolean
+            public postEvent(e: java.awt.Event): boolean
             /**
              * Adds the specified component listener to receive component events from
              * this component.
@@ -1705,7 +1705,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addComponentListener(l: java.awt.event.ComponentListener): void
+            public addComponentListener(l: java.awt.event.ComponentListener): void
             /**
              * Removes the specified component listener so that it no longer
              * receives component events from this component. This method performs
@@ -1723,7 +1723,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeComponentListener(l: java.awt.event.ComponentListener): void
+            public removeComponentListener(l: java.awt.event.ComponentListener): void
             /**
              * Returns an array of all the component listeners
              * registered on this component.
@@ -1735,7 +1735,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getComponentListeners(): java.awt.event.ComponentListener[]
+            public getComponentListeners(): java.awt.event.ComponentListener[]
             /**
              * Adds the specified focus listener to receive focus events from
              * this component when this component gains input focus.
@@ -1751,7 +1751,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addFocusListener(l: java.awt.event.FocusListener): void
+            public addFocusListener(l: java.awt.event.FocusListener): void
             /**
              * Removes the specified focus listener so that it no longer
              * receives focus events from this component. This method performs
@@ -1769,7 +1769,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeFocusListener(l: java.awt.event.FocusListener): void
+            public removeFocusListener(l: java.awt.event.FocusListener): void
             /**
              * Returns an array of all the focus listeners
              * registered on this component.
@@ -1781,7 +1781,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusListeners(): java.awt.event.FocusListener[]
+            public getFocusListeners(): java.awt.event.FocusListener[]
             /**
              * Adds the specified hierarchy listener to receive hierarchy changed
              * events from this component when the hierarchy to which this container
@@ -1798,7 +1798,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            addHierarchyListener(l: java.awt.event.HierarchyListener): void
+            public addHierarchyListener(l: java.awt.event.HierarchyListener): void
             /**
              * Removes the specified hierarchy listener so that it no longer
              * receives hierarchy changed events from this component. This method
@@ -1816,7 +1816,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            removeHierarchyListener(l: java.awt.event.HierarchyListener): void
+            public removeHierarchyListener(l: java.awt.event.HierarchyListener): void
             /**
              * Returns an array of all the hierarchy listeners
              * registered on this component.
@@ -1828,7 +1828,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getHierarchyListeners(): java.awt.event.HierarchyListener[]
+            public getHierarchyListeners(): java.awt.event.HierarchyListener[]
             /**
              * Adds the specified hierarchy bounds listener to receive hierarchy
              * bounds events from this component when the hierarchy to which this
@@ -1845,7 +1845,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            addHierarchyBoundsListener(l: java.awt.event.HierarchyBoundsListener): void
+            public addHierarchyBoundsListener(l: java.awt.event.HierarchyBoundsListener): void
             /**
              * Removes the specified hierarchy bounds listener so that it no longer
              * receives hierarchy bounds events from this component. This method
@@ -1863,7 +1863,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            removeHierarchyBoundsListener(l: java.awt.event.HierarchyBoundsListener): void
+            public removeHierarchyBoundsListener(l: java.awt.event.HierarchyBoundsListener): void
             /**
              * Returns an array of all the hierarchy bounds listeners
              * registered on this component.
@@ -1875,7 +1875,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getHierarchyBoundsListeners(): java.awt.event.HierarchyBoundsListener[]
+            public getHierarchyBoundsListeners(): java.awt.event.HierarchyBoundsListener[]
             /**
              * Adds the specified key listener to receive key events from
              * this component.
@@ -1890,7 +1890,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addKeyListener(l: java.awt.event.KeyListener): void
+            public addKeyListener(l: java.awt.event.KeyListener): void
             /**
              * Removes the specified key listener so that it no longer
              * receives key events from this component. This method performs
@@ -1908,7 +1908,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeKeyListener(l: java.awt.event.KeyListener): void
+            public removeKeyListener(l: java.awt.event.KeyListener): void
             /**
              * Returns an array of all the key listeners
              * registered on this component.
@@ -1920,7 +1920,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getKeyListeners(): java.awt.event.KeyListener[]
+            public getKeyListeners(): java.awt.event.KeyListener[]
             /**
              * Adds the specified mouse listener to receive mouse events from
              * this component.
@@ -1936,7 +1936,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addMouseListener(l: java.awt.event.MouseListener): void
+            public addMouseListener(l: java.awt.event.MouseListener): void
             /**
              * Removes the specified mouse listener so that it no longer
              * receives mouse events from this component. This method performs
@@ -1954,7 +1954,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeMouseListener(l: java.awt.event.MouseListener): void
+            public removeMouseListener(l: java.awt.event.MouseListener): void
             /**
              * Returns an array of all the mouse listeners
              * registered on this component.
@@ -1966,7 +1966,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMouseListeners(): java.awt.event.MouseListener[]
+            public getMouseListeners(): java.awt.event.MouseListener[]
             /**
              * Adds the specified mouse motion listener to receive mouse motion
              * events from this component.
@@ -1982,7 +1982,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            addMouseMotionListener(l: java.awt.event.MouseMotionListener): void
+            public addMouseMotionListener(l: java.awt.event.MouseMotionListener): void
             /**
              * Removes the specified mouse motion listener so that it no longer
              * receives mouse motion events from this component. This method performs
@@ -2000,7 +2000,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            removeMouseMotionListener(l: java.awt.event.MouseMotionListener): void
+            public removeMouseMotionListener(l: java.awt.event.MouseMotionListener): void
             /**
              * Returns an array of all the mouse motion listeners
              * registered on this component.
@@ -2012,7 +2012,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMouseMotionListeners(): java.awt.event.MouseMotionListener[]
+            public getMouseMotionListeners(): java.awt.event.MouseMotionListener[]
             /**
              * Adds the specified mouse wheel listener to receive mouse wheel events
              * from this component.  Containers also receive mouse wheel events from
@@ -2033,7 +2033,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            addMouseWheelListener(l: java.awt.event.MouseWheelListener): void
+            public addMouseWheelListener(l: java.awt.event.MouseWheelListener): void
             /**
              * Removes the specified mouse wheel listener so that it no longer
              * receives mouse wheel events from this component. This method performs
@@ -2050,7 +2050,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            removeMouseWheelListener(l: java.awt.event.MouseWheelListener): void
+            public removeMouseWheelListener(l: java.awt.event.MouseWheelListener): void
             /**
              * Returns an array of all the mouse wheel listeners
              * registered on this component.
@@ -2062,7 +2062,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getMouseWheelListeners(): java.awt.event.MouseWheelListener[]
+            public getMouseWheelListeners(): java.awt.event.MouseWheelListener[]
             /**
              * Adds the specified input method listener to receive
              * input method events from this component. A component will
@@ -2082,7 +2082,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            addInputMethodListener(l: java.awt.event.InputMethodListener): void
+            public addInputMethodListener(l: java.awt.event.InputMethodListener): void
             /**
              * Removes the specified input method listener so that it no longer
              * receives input method events from this component. This method performs
@@ -2100,7 +2100,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            removeInputMethodListener(l: java.awt.event.InputMethodListener): void
+            public removeInputMethodListener(l: java.awt.event.InputMethodListener): void
             /**
              * Returns an array of all the input method listeners
              * registered on this component.
@@ -2112,7 +2112,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getInputMethodListeners(): java.awt.event.InputMethodListener[]
+            public getInputMethodListeners(): java.awt.event.InputMethodListener[]
             /**
              * Returns an array of all the objects currently registered
              * as <code><em>Foo</em>Listener</code>s
@@ -2151,7 +2151,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
+            public getListeners<T extends java.util.EventListener>(listenerType: java.lang.Class<T>): T
             /**
              * Gets the input method request handler which supports
              * requests from input methods for this component. A component
@@ -2164,7 +2164,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getInputMethodRequests(): java.awt.im.InputMethodRequests
+            public getInputMethodRequests(): java.awt.im.InputMethodRequests
             /**
              * Gets the input context used by this component for handling
              * the communication with input methods when text is entered
@@ -2176,7 +2176,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getInputContext(): java.awt.im.InputContext
+            public getInputContext(): java.awt.im.InputContext
             /**
              * Enables the events defined by the specified event mask parameter
              * to be delivered to this component.
@@ -2530,62 +2530,62 @@ declare namespace java {
              *  replaced by processEvent(AWTEvent).
              */
             // @ts-ignore
-            handleEvent(evt: java.awt.Event): boolean
+            public handleEvent(evt: java.awt.Event): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processMouseEvent(MouseEvent).
              */
             // @ts-ignore
-            mouseDown(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
+            public mouseDown(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processMouseMotionEvent(MouseEvent).
              */
             // @ts-ignore
-            mouseDrag(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
+            public mouseDrag(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processMouseEvent(MouseEvent).
              */
             // @ts-ignore
-            mouseUp(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
+            public mouseUp(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processMouseMotionEvent(MouseEvent).
              */
             // @ts-ignore
-            mouseMove(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
+            public mouseMove(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processMouseEvent(MouseEvent).
              */
             // @ts-ignore
-            mouseEnter(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
+            public mouseEnter(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processMouseEvent(MouseEvent).
              */
             // @ts-ignore
-            mouseExit(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
+            public mouseExit(evt: java.awt.Event, x: number /*int*/, y: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processKeyEvent(KeyEvent).
              */
             // @ts-ignore
-            keyDown(evt: java.awt.Event, key: number /*int*/): boolean
+            public keyDown(evt: java.awt.Event, key: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processKeyEvent(KeyEvent).
              */
             // @ts-ignore
-            keyUp(evt: java.awt.Event, key: number /*int*/): boolean
+            public keyUp(evt: java.awt.Event, key: number /*int*/): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  should register this component as ActionListener on component
              *  which fires action events.
              */
             // @ts-ignore
-            action(evt: java.awt.Event, what: any): boolean
+            public action(evt: java.awt.Event, what: java.lang.Object | any): boolean
             /**
              * Makes this <code>Component</code> displayable by connecting it to a
              * native screen resource.
@@ -2600,7 +2600,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            addNotify(): void
+            public addNotify(): void
             /**
              * Makes this <code>Component</code> undisplayable by destroying it native
              * screen resource.
@@ -2614,19 +2614,19 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            removeNotify(): void
+            public removeNotify(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processFocusEvent(FocusEvent).
              */
             // @ts-ignore
-            gotFocus(evt: java.awt.Event, what: any): boolean
+            public gotFocus(evt: java.awt.Event, what: java.lang.Object | any): boolean
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by processFocusEvent(FocusEvent).
              */
             // @ts-ignore
-            lostFocus(evt: java.awt.Event, what: any): boolean
+            public lostFocus(evt: java.awt.Event, what: java.lang.Object | any): boolean
             /**
              * Returns whether this <code>Component</code> can become the focus
              * owner.
@@ -2637,7 +2637,7 @@ declare namespace java {
              * @deprecated As of 1.4, replaced by <code>isFocusable()</code>.
              */
             // @ts-ignore
-            isFocusTraversable(): boolean
+            public isFocusTraversable(): boolean
             /**
              * Returns whether this Component can be focused.
              * @return <code>true</code> if this Component is focusable;
@@ -2646,7 +2646,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusable(): boolean
+            public isFocusable(): boolean
             /**
              * Sets the focusable state of this Component to the specified value. This
              * value overrides the Component's default focusability.
@@ -2656,7 +2656,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusable(focusable: boolean): void
+            public setFocusable(focusable: boolean): void
             /**
              * Sets the focus traversal keys for a given traversal operation for this
              * Component.
@@ -2726,7 +2726,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusTraversalKeys(id: number /*int*/, keystrokes: Array<java.awt.AWTKeyStroke>): void
+            public setFocusTraversalKeys(id: number /*int*/, keystrokes: java.util.Set<any> | Array<any>): void
             /**
              * Returns the Set of focus traversal keys for a given traversal operation
              * for this Component. (See
@@ -2753,7 +2753,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusTraversalKeys(id: number /*int*/): java.util.Set<java.awt.AWTKeyStroke>
+            public getFocusTraversalKeys(id: number /*int*/): Array<java.awt.AWTKeyStroke>
             /**
              * Returns whether the Set of focus traversal keys for the given focus
              * traversal operation has been explicitly defined for this Component. If
@@ -2772,7 +2772,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            areFocusTraversalKeysSet(id: number /*int*/): boolean
+            public areFocusTraversalKeysSet(id: number /*int*/): boolean
             /**
              * Sets whether focus traversal keys are enabled for this Component.
              * Components for which focus traversal keys are disabled receive key
@@ -2788,7 +2788,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setFocusTraversalKeysEnabled(focusTraversalKeysEnabled: boolean): void
+            public setFocusTraversalKeysEnabled(focusTraversalKeysEnabled: boolean): void
             /**
              * Returns whether focus traversal keys are enabled for this Component.
              * Components for which focus traversal keys are disabled receive key
@@ -2802,7 +2802,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusTraversalKeysEnabled(): boolean
+            public getFocusTraversalKeysEnabled(): boolean
             /**
              * Requests that this Component get the input focus, and that this
              * Component's top-level ancestor become the focused Window. This
@@ -2836,7 +2836,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            requestFocus(): void
+            public requestFocus(): void
             /**
              * Requests that this <code>Component</code> get the input focus,
              * and that this <code>Component</code>'s top-level ancestor
@@ -2939,7 +2939,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            requestFocusInWindow(): boolean
+            public requestFocusInWindow(): boolean
             /**
              * Requests that this <code>Component</code> get the input focus,
              * if this <code>Component</code>'s top-level ancestor is already
@@ -3011,7 +3011,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getFocusCycleRootAncestor(): java.awt.Container
+            public getFocusCycleRootAncestor(): java.awt.Container
             /**
              * Returns whether the specified Container is the focus cycle root of this
              * Component's focus traversal cycle. Each focus traversal cycle has only
@@ -3024,7 +3024,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusCycleRoot(container: java.awt.Container): boolean
+            public isFocusCycleRoot(container: java.awt.Container): boolean
             /**
              * Transfers the focus to the next component, as though this Component were
              * the focus owner.
@@ -3032,13 +3032,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            transferFocus(): void
+            public transferFocus(): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by transferFocus().
              */
             // @ts-ignore
-            nextFocus(): void
+            public nextFocus(): void
             /**
              * Transfers the focus to the previous component, as though this Component
              * were the focus owner.
@@ -3046,7 +3046,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            transferFocusBackward(): void
+            public transferFocusBackward(): void
             /**
              * Transfers the focus up one focus traversal cycle. Typically, the focus
              * owner is set to this Component's focus cycle root, and the current focus
@@ -3060,7 +3060,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            transferFocusUpCycle(): void
+            public transferFocusUpCycle(): void
             /**
              * Returns <code>true</code> if this <code>Component</code> is the
              * focus owner.  This method is obsolete, and has been replaced by
@@ -3070,7 +3070,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            hasFocus(): boolean
+            public hasFocus(): boolean
             /**
              * Returns <code>true</code> if this <code>Component</code> is the
              * focus owner.
@@ -3079,7 +3079,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isFocusOwner(): boolean
+            public isFocusOwner(): boolean
             /**
              * Adds the specified popup menu to the component.
              * @param popup the popup menu to be added to the component.
@@ -3088,7 +3088,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            add(popup: java.awt.PopupMenu): void
+            public add(popup: java.awt.PopupMenu): void
             /**
              * Removes the specified popup menu from the component.
              * @param popup the popup menu to be removed
@@ -3096,7 +3096,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            remove(popup: java.awt.MenuComponent): void
+            public remove(popup: java.awt.MenuComponent): void
             /**
              * Returns a string representing the state of this component. This
              * method is intended to be used only for debugging purposes, and the
@@ -3107,14 +3107,14 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Returns a string representation of this component and its values.
              * @return a string representation of this component
              * @since JDK1.0
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Prints a listing of this component to the standard system output
              * stream <code>System.out</code>.
@@ -3122,7 +3122,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            list(): void
+            public list(): void
             /**
              * Prints a listing of this component to the specified output
              * stream.
@@ -3131,7 +3131,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            list(out: java.io.PrintStream): void
+            public list(out: java.io.PrintStream): void
             /**
              * Prints out a list, starting at the specified indentation, to the
              * specified print stream.
@@ -3142,7 +3142,7 @@ declare namespace java {
              * @since JDK1.0
              */
             // @ts-ignore
-            list(out: java.io.PrintStream, indent: number /*int*/): void
+            public list(out: java.io.PrintStream, indent: number /*int*/): void
             /**
              * Prints a listing to the specified print writer.
              * @param out  the print writer to print to
@@ -3150,7 +3150,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            list(out: java.io.PrintWriter): void
+            public list(out: java.io.PrintWriter): void
             /**
              * Prints out a list, starting at the specified indentation, to
              * the specified print writer.
@@ -3161,7 +3161,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            list(out: java.io.PrintWriter, indent: number /*int*/): void
+            public list(out: java.io.PrintWriter, indent: number /*int*/): void
             /**
              * Adds a PropertyChangeListener to the listener list. The listener is
              * registered for all bound properties of this class, including the
@@ -3195,7 +3195,7 @@ declare namespace java {
              * @see #addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a PropertyChangeListener from the listener list. This method
              * should be used to remove PropertyChangeListeners that were registered
@@ -3208,7 +3208,7 @@ declare namespace java {
              * @see #removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the property change listeners
              * registered on this component.
@@ -3222,7 +3222,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(): java.beans.PropertyChangeListener[]
             /**
              * Adds a PropertyChangeListener to the listener list for a specific
              * property. The specified property may be user-defined, or one of the
@@ -3253,7 +3253,7 @@ declare namespace java {
              * @see #addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            addPropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public addPropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Removes a <code>PropertyChangeListener</code> from the listener
              * list for a specific property. This method should be used to remove
@@ -3269,7 +3269,7 @@ declare namespace java {
              * @see #removePropertyChangeListener(java.beans.PropertyChangeListener)
              */
             // @ts-ignore
-            removePropertyChangeListener(propertyName: string, listener: java.beans.PropertyChangeListener): void
+            public removePropertyChangeListener(propertyName: java.lang.String | string, listener: java.beans.PropertyChangeListener): void
             /**
              * Returns an array of all the listeners which have been associated
              * with the named property.
@@ -3283,7 +3283,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getPropertyChangeListeners(propertyName: string): java.beans.PropertyChangeListener[]
+            public getPropertyChangeListeners(propertyName: java.lang.String | string): java.beans.PropertyChangeListener[]
             /**
              * Support for reporting bound property changes for Object properties.
              * This method can be called when a bound property has changed and it will
@@ -3294,7 +3294,7 @@ declare namespace java {
              * @param newValue the property's new value
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: any, newValue: any): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: java.lang.Object | any, newValue: java.lang.Object | any): void
             /**
              * Support for reporting bound property changes for boolean properties.
              * This method can be called when a bound property has changed and it will
@@ -3306,7 +3306,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: boolean, newValue: boolean): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: boolean, newValue: boolean): void
             /**
              * Support for reporting bound property changes for integer properties.
              * This method can be called when a bound property has changed and it will
@@ -3318,7 +3318,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*int*/, newValue: number /*int*/): void
+            firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*int*/, newValue: number /*int*/): void
             /**
              * Reports a bound property change.
              * @param propertyName the programmatic name of the property
@@ -3330,7 +3330,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*byte*/, newValue: number /*byte*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*byte*/, newValue: number /*byte*/): void
             /**
              * Reports a bound property change.
              * @param propertyName the programmatic name of the property
@@ -3342,7 +3342,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: string, newValue: string): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: string, newValue: string): void
             /**
              * Reports a bound property change.
              * @param propertyName the programmatic name of the property
@@ -3354,7 +3354,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*short*/, newValue: number /*short*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*short*/, newValue: number /*short*/): void
             /**
              * Reports a bound property change.
              * @param propertyName the programmatic name of the property
@@ -3366,7 +3366,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*long*/, newValue: number /*long*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*long*/, newValue: number /*long*/): void
             /**
              * Reports a bound property change.
              * @param propertyName the programmatic name of the property
@@ -3378,7 +3378,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*float*/, newValue: number /*float*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*float*/, newValue: number /*float*/): void
             /**
              * Reports a bound property change.
              * @param propertyName the programmatic name of the property
@@ -3390,7 +3390,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            firePropertyChange(propertyName: string, oldValue: number /*double*/, newValue: number /*double*/): void
+            public firePropertyChange(propertyName: java.lang.String | string, oldValue: number /*double*/, newValue: number /*double*/): void
             /**
              * Sets the language-sensitive orientation that is to be used to order
              * the elements or text within this component.  Language-sensitive
@@ -3417,7 +3417,7 @@ declare namespace java {
              * @beaninfo bound: true
              */
             // @ts-ignore
-            setComponentOrientation(o: java.awt.ComponentOrientation): void
+            public setComponentOrientation(o: java.awt.ComponentOrientation): void
             /**
              * Retrieves the language-sensitive orientation that is to be used to order
              * the elements or text within this component.  <code>LayoutManager</code>
@@ -3428,7 +3428,7 @@ declare namespace java {
              * @author Laura Werner, IBM
              */
             // @ts-ignore
-            getComponentOrientation(): java.awt.ComponentOrientation
+            public getComponentOrientation(): java.awt.ComponentOrientation
             /**
              * Sets the <code>ComponentOrientation</code> property of this component
              * and all components contained within it.
@@ -3444,7 +3444,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            applyComponentOrientation(orientation: java.awt.ComponentOrientation): void
+            public applyComponentOrientation(orientation: java.awt.ComponentOrientation): void
             /**
              * Gets the <code>AccessibleContext</code> associated
              * with this <code>Component</code>.
@@ -3457,7 +3457,7 @@ declare namespace java {
              * @since 1.3
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

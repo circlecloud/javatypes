@@ -20,7 +20,7 @@ declare namespace java {
              * @param message the message
              */
             // @ts-ignore
-            constructor(message: string)
+            constructor(message: java.lang.String | string)
             /**
              * Constructs a new <code>IllformedLocaleException</code> with the
              * given message and the error index.  The error index is the approximate
@@ -31,14 +31,14 @@ declare namespace java {
              * @param errorIndex the index
              */
             // @ts-ignore
-            constructor(message: string, errorIndex: number /*int*/)
+            constructor(message: java.lang.String | string, errorIndex: number /*int*/)
             /**
              * Returns the index where the error was found. A negative value indicates
              * either the error index is not applicable or unknown.
              * @return the error index
              */
             // @ts-ignore
-            getErrorIndex(): int
+            getErrorIndex(): number /*int*/
         }
     }
 }

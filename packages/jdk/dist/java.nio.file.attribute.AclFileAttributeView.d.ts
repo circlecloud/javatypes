@@ -100,7 +100,7 @@ declare namespace java {
                      * have the name {@code "acl"}.
                      */
                     // @ts-ignore
-                    name(): java.lang.String
+                    name(): string
                     /**
                      * Reads the access control list.
                      * <p> When the file system uses an ACL model that differs from the NFSv4
@@ -120,7 +120,7 @@ declare namespace java {
                      *           denies read access to the file.
                      */
                     // @ts-ignore
-                    getAcl(): java.util.List<java.nio.file.attribute.AclEntry>
+                    getAcl(): Array<java.nio.file.attribute.AclEntry>
                     /**
                      * Updates (replace) the access control list.
                      * <p> Where the file system supports Access Control Lists, and it uses an
@@ -151,7 +151,7 @@ declare namespace java {
                      *           method denies write access to the file.
                      */
                     // @ts-ignore
-                    setAcl(acl: Array<java.nio.file.attribute.AclEntry>): void
+                    setAcl(acl: java.util.List<java.nio.file.attribute.AclEntry> | Array<java.nio.file.attribute.AclEntry>): void
                 }
             }
         }

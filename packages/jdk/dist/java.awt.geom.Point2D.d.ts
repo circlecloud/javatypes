@@ -13,7 +13,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            class Point2D extends java.lang.Object implements java.lang.Cloneable {
+            abstract class Point2D extends java.lang.Object implements java.lang.Cloneable {
                 /**
                  * This is an abstract class that cannot be instantiated directly.
                  * Type-specific implementation subclasses are available for
@@ -34,7 +34,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getX(): double
+                public abstract getX(): number /*double*/
                 /**
                  * Returns the Y coordinate of this <code>Point2D</code> in
                  * <code>double</code> precision.
@@ -42,7 +42,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract getY(): double
+                public abstract getY(): number /*double*/
                 /**
                  * Sets the location of this <code>Point2D</code> to the
                  * specified <code>double</code> coordinates.
@@ -51,7 +51,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract setLocation(x: number /*double*/, y: number /*double*/): void
+                public abstract setLocation(x: number /*double*/, y: number /*double*/): void
                 /**
                  * Sets the location of this <code>Point2D</code> to the same
                  * coordinates as the specified <code>Point2D</code> object.
@@ -60,7 +60,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                setLocation(p: java.awt.geom.Point2D): void
+                public setLocation(p: java.awt.geom.Point2D): void
                 /**
                  * Returns the square of the distance between two points.
                  * @param x1 the X coordinate of the first specified point
@@ -72,7 +72,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                distanceSq(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): double
+                public static distanceSq(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): number /*double*/
                 /**
                  * Returns the distance between two points.
                  * @param x1 the X coordinate of the first specified point
@@ -84,7 +84,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                distance(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): double
+                public static distance(x1: number /*double*/, y1: number /*double*/, x2: number /*double*/, y2: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the distance from this
                  * <code>Point2D</code> to a specified point.
@@ -97,7 +97,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                distanceSq(px: number /*double*/, py: number /*double*/): double
+                public distanceSq(px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the square of the distance from this
                  * <code>Point2D</code> to a specified <code>Point2D</code>.
@@ -108,7 +108,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                distanceSq(pt: java.awt.geom.Point2D): double
+                public distanceSq(pt: java.awt.geom.Point2D): number /*double*/
                 /**
                  * Returns the distance from this <code>Point2D</code> to
                  * a specified point.
@@ -121,7 +121,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                distance(px: number /*double*/, py: number /*double*/): double
+                public distance(px: number /*double*/, py: number /*double*/): number /*double*/
                 /**
                  * Returns the distance from this <code>Point2D</code> to a
                  * specified <code>Point2D</code>.
@@ -132,7 +132,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                distance(pt: java.awt.geom.Point2D): double
+                public distance(pt: java.awt.geom.Point2D): number /*double*/
                 /**
                  * Creates a new object of the same class and with the
                  * same contents as this object.
@@ -142,13 +142,13 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns the hashcode for this <code>Point2D</code>.
                  * @return a hash code for this <code>Point2D</code>.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Determines whether or not two points are equal. Two instances of
                  * <code>Point2D</code> are equal if the values of their
@@ -161,7 +161,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

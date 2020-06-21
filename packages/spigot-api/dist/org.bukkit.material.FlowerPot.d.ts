@@ -28,17 +28,17 @@ declare namespace org {
                  *      or null if empty
                  */
                 // @ts-ignore
-                getContents(): org.bukkit.material.MaterialData
+                public getContents(): org.bukkit.material.MaterialData
                 /**
                  * Set the contents of the flower pot
                  * @param materialData MaterialData of the block to put in the flower pot.
                  */
                 // @ts-ignore
-                setContents(materialData: org.bukkit.material.MaterialData): void
+                public setContents(materialData: org.bukkit.material.MaterialData): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.FlowerPot
+                public clone(): org.bukkit.material.FlowerPot
             }
         }
     }

@@ -27,7 +27,7 @@ declare namespace org {
                      * @see WebApplicationObjectSupport
                      */
                     // @ts-ignore
-                    class SpringBeanAutowiringSupport extends java.lang.Object {
+                    abstract class SpringBeanAutowiringSupport extends java.lang.Object {
                         /**
                          * This constructor performs injection on this instance,
                          * based on the current web application context.
@@ -44,7 +44,7 @@ declare namespace org {
                          * @see org.springframework.web.context.ContextLoader#getCurrentWebApplicationContext()
                          */
                         // @ts-ignore
-                        processInjectionBasedOnCurrentContext(target: any): void
+                        public static processInjectionBasedOnCurrentContext(target: java.lang.Object | any): void
                         /**
                          * Process {@code @Autowired} injection for the given target object,
                          * based on the current root web application context as stored in the ServletContext.
@@ -54,7 +54,7 @@ declare namespace org {
                          * @see WebApplicationContextUtils#getWebApplicationContext(javax.servlet.ServletContext)
                          */
                         // @ts-ignore
-                        processInjectionBasedOnServletContext(target: any, servletContext: ServletContext): void
+                        public static processInjectionBasedOnServletContext(target: java.lang.Object | any, servletContext: ServletContext): void
                     }
                 }
             }

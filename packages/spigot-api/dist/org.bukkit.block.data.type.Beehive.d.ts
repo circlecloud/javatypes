@@ -13,7 +13,7 @@ declare namespace org {
                          * @return the 'honey_level' value
                          */
                         // @ts-ignore
-                        getHoneyLevel(): int
+                        getHoneyLevel(): number /*int*/
                         /**
                          * Sets the value of the 'honey_level' property.
                          * @param honeyLevel the new 'honey_level' value
@@ -25,7 +25,7 @@ declare namespace org {
                          * @return the maximum 'honey_level' value
                          */
                         // @ts-ignore
-                        getMaximumHoneyLevel(): int
+                        getMaximumHoneyLevel(): number /*int*/
                     }
                 }
             }

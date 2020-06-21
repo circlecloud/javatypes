@@ -25,7 +25,7 @@ declare namespace java {
              *                    reading.
              */
             // @ts-ignore
-            constructor(fileName: string)
+            constructor(fileName: java.lang.String | string)
             /**
              * Creates a new <tt>FileReader</tt>, given the <tt>File</tt>
              * to read from.

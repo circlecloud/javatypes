@@ -35,7 +35,7 @@ declare namespace java {
                  *          by the SecurityManager
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Creates a new <code>JarFile</code> to read from the specified
                  * file <code>name</code>.
@@ -47,7 +47,7 @@ declare namespace java {
                  *          by the SecurityManager
                  */
                 // @ts-ignore
-                constructor(name: string, verify: boolean)
+                constructor(name: java.lang.String | string, verify: boolean)
                 /**
                  * Creates a new <code>JarFile</code> to read from the specified
                  * <code>File</code> object. The <code>JarFile</code> will be verified if
@@ -92,7 +92,7 @@ declare namespace java {
                  * The JAR manifest file name.
                  */
                 // @ts-ignore
-                readonly MANIFEST_NAME: string
+                public static readonly MANIFEST_NAME: java.lang.String | string
                 /**
                  * Returns the jar file manifest, or <code>null</code> if none.
                  * @return the jar file manifest, or <code>null</code> if none
@@ -101,7 +101,7 @@ declare namespace java {
                  * @throws IOException  if an I/O error has occurred
                  */
                 // @ts-ignore
-                getManifest(): java.util.jar.Manifest
+                public getManifest(): java.util.jar.Manifest
                 /**
                  * Returns the <code>JarEntry</code> for the given entry name or
                  * <code>null</code> if not found.
@@ -113,7 +113,7 @@ declare namespace java {
                  * @see java.util.jar.JarEntry
                  */
                 // @ts-ignore
-                getJarEntry(name: string): java.util.jar.JarEntry
+                public getJarEntry(name: java.lang.String | string): java.util.jar.JarEntry
                 /**
                  * Returns the <code>ZipEntry</code> for the given entry name or
                  * <code>null</code> if not found.
@@ -125,14 +125,14 @@ declare namespace java {
                  * @see java.util.zip.ZipEntry
                  */
                 // @ts-ignore
-                getEntry(name: string): java.util.zip.ZipEntry
+                public getEntry(name: java.lang.String | string): java.util.zip.ZipEntry
                 /**
                  * Returns an enumeration of the zip file entries.
                  */
                 // @ts-ignore
-                entries(): java.util.Enumeration<java.util.jar.JarEntry>
+                public entries(): java.util.Enumeration<java.util.jar.JarEntry>
                 // @ts-ignore
-                stream(): java.util.stream.Stream<java.util.jar.JarEntry>
+                public stream(): java.util.stream.Stream<java.util.jar.JarEntry>
                 /**
                  * Returns an input stream for reading the contents of the specified
                  * zip file entry.
@@ -147,7 +147,7 @@ declare namespace java {
                  *          may be thrown if the jar file has been closed
                  */
                 // @ts-ignore
-                getInputStream(ze: java.util.zip.ZipEntry): java.io.InputStream
+                public getInputStream(ze: java.util.zip.ZipEntry): java.io.InputStream
             }
         }
     }

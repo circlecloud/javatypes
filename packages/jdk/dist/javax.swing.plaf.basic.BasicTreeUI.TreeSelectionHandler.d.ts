@@ -16,7 +16,7 @@ declare namespace javax {
                          * for.  Stops editing, messages super and displays the changed paths.
                          */
                         // @ts-ignore
-                        valueChanged(event: javax.swing.event.TreeSelectionEvent): void
+                        public valueChanged(event: javax.swing.event.TreeSelectionEvent): void
                     }
                 }
             }

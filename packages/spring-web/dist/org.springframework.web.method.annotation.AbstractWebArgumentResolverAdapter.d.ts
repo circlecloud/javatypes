@@ -20,7 +20,7 @@ declare namespace org {
                      * @since 3.1
                      */
                     // @ts-ignore
-                    class AbstractWebArgumentResolverAdapter extends java.lang.Object implements org.springframework.web.method.support.HandlerMethodArgumentResolver {
+                    abstract class AbstractWebArgumentResolverAdapter extends java.lang.Object implements org.springframework.web.method.support.HandlerMethodArgumentResolver {
                         /**
                          * Create a new instance.
                          */
@@ -31,14 +31,14 @@ declare namespace org {
                          * {@link WebArgumentResolver#UNRESOLVED} absorbing _any_ exceptions.
                          */
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         /**
                          * Delegate to the {@link WebArgumentResolver} instance.
                          * @throws IllegalStateException if the resolved value is not assignable
                          *  to the method parameter.
                          */
                         // @ts-ignore
-                        resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): java.lang.Object
+                        public resolveArgument(parameter: MethodParameter, mavContainer: org.springframework.web.method.support.ModelAndViewContainer, webRequest: org.springframework.web.context.request.NativeWebRequest, binderFactory: org.springframework.web.bind.support.WebDataBinderFactory): any
                         /**
                          * Required for access to NativeWebRequest in {@link #supportsParameter}.
                          */

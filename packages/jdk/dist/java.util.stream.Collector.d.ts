@@ -152,13 +152,13 @@ declare namespace java {
                  * @return a function which returns a new, mutable result container
                  */
                 // @ts-ignore
-                supplier(): java.util.function.Supplier<A>
+                supplier(): java.util.function$.Supplier<A>
                 /**
                  * A function that folds a value into a mutable result container.
                  * @return a function which folds a value into a mutable result container
                  */
                 // @ts-ignore
-                accumulator(): java.util.function.BiConsumer<A, T>
+                accumulator(): java.util.function$.BiConsumer<A, T>
                 /**
                  * A function that accepts two partial results and merges them.  The
                  * combiner function may fold state from one argument into the other and
@@ -167,7 +167,7 @@ declare namespace java {
                  *  result
                  */
                 // @ts-ignore
-                combiner(): java.util.function.BinaryOperator<A>
+                combiner(): java.util.function$.BinaryOperator<A>
                 /**
                  * Perform the final transformation from the intermediate accumulation type
                  * {@code A} to the final result type {@code R}.
@@ -178,14 +178,14 @@ declare namespace java {
                  *  result
                  */
                 // @ts-ignore
-                finisher(): java.util.function.Function<A, R>
+                finisher(): java.util.function$.Function<A, R>
                 /**
                  * Returns a {@code Set} of {@code Collector.Characteristics} indicating
                  * the characteristics of this Collector.  This set should be immutable.
                  * @return an immutable set of collector characteristics
                  */
                 // @ts-ignore
-                characteristics(): java.util.Set<java.util.stream.Collector.Characteristics>
+                characteristics(): Array<java.util.stream.Collector.Characteristics>
                 /**
                  * Returns a new {@code Collector} described by the given {@code supplier},
                  * {@code accumulator}, and {@code combiner} functions.  The resulting
@@ -203,7 +203,7 @@ declare namespace java {
                  * @return the new {#code Collector}
                  */
                 // @ts-ignore
-                of<T, R>(supplier: java.util.function.Supplier<R> | java.util.function$.Supplier<R>, accumulator: java.util.function.BiConsumer<R, T> | java.util.function$.BiConsumer<R, T>, combiner: java.util.function.BinaryOperator<R> | java.util.function$.BinaryOperator<R>, ...characteristics: java.util.stream.Collector.Characteristics[]): java.util.stream.Collector<T, R, R>
+                of<T, R>(supplier: java.util.function$.Supplier<R>, accumulator: java.util.function$.BiConsumer<R, T>, combiner: java.util.function$.BinaryOperator<R>, ...characteristics: java.util.stream.Collector.Characteristics[]): java.util.stream.Collector<T, R, R>
                 /**
                  * Returns a new {@code Collector} described by the given {@code supplier},
                  * {@code accumulator}, {@code combiner}, and {@code finisher} functions.
@@ -220,7 +220,7 @@ declare namespace java {
                  * @return the new {#code Collector}
                  */
                 // @ts-ignore
-                of<T, A, R>(supplier: java.util.function.Supplier<A> | java.util.function$.Supplier<A>, accumulator: java.util.function.BiConsumer<A, T> | java.util.function$.BiConsumer<A, T>, combiner: java.util.function.BinaryOperator<A> | java.util.function$.BinaryOperator<A>, finisher: java.util.function.Function<A, R> | java.util.function$.Function<A, R>, ...characteristics: java.util.stream.Collector.Characteristics[]): java.util.stream.Collector<T, A, R>
+                of<T, A, R>(supplier: java.util.function$.Supplier<A>, accumulator: java.util.function$.BiConsumer<A, T>, combiner: java.util.function$.BinaryOperator<A>, finisher: java.util.function$.Function<A, R>, ...characteristics: java.util.stream.Collector.Characteristics[]): java.util.stream.Collector<T, A, R>
             }
         }
     }

@@ -33,7 +33,7 @@ declare namespace org {
                      * @see InvertibleComparator
                      */
                     // @ts-ignore
-                    constructor(...comparators: java.util.Comparator[])
+                    constructor(...comparators: java.util.Comparator<any>[])
                     /**
                      * Add a Comparator to the end of the chain.
                      * <p>The Comparator will default to ascending sort order,
@@ -42,14 +42,14 @@ declare namespace org {
                      * @see InvertibleComparator
                      */
                     // @ts-ignore
-                    addComparator(comparator: java.util.Comparator<T>): void
+                    public addComparator(comparator: java.util.Comparator<any>): void
                     /**
                      * Add a Comparator to the end of the chain using the provided sort order.
                      * @param comparator the Comparator to add to the end of the chain
                      * @param ascending the sort order: ascending (true) or descending (false)
                      */
                     // @ts-ignore
-                    addComparator(comparator: java.util.Comparator<T>, ascending: boolean): void
+                    public addComparator(comparator: java.util.Comparator<any>, ascending: boolean): void
                     /**
                      * Replace the Comparator at the given index.
                      * <p>The Comparator will default to ascending sort order,
@@ -59,7 +59,7 @@ declare namespace org {
                      * @see InvertibleComparator
                      */
                     // @ts-ignore
-                    setComparator(index: number /*int*/, comparator: java.util.Comparator<T>): void
+                    public setComparator(index: number /*int*/, comparator: java.util.Comparator<any>): void
                     /**
                      * Replace the Comparator at the given index using the given sort order.
                      * @param index the index of the Comparator to replace
@@ -67,44 +67,44 @@ declare namespace org {
                      * @param ascending the sort order: ascending (true) or descending (false)
                      */
                     // @ts-ignore
-                    setComparator(index: number /*int*/, comparator: java.util.Comparator<T>, ascending: boolean): void
+                    public setComparator(index: number /*int*/, comparator: java.util.Comparator<T>, ascending: boolean): void
                     /**
                      * Invert the sort order of each sort definition contained by this compound
                      * comparator.
                      */
                     // @ts-ignore
-                    invertOrder(): void
+                    public invertOrder(): void
                     /**
                      * Invert the sort order of the sort definition at the specified index.
                      * @param index the index of the comparator to invert
                      */
                     // @ts-ignore
-                    invertOrder(index: number /*int*/): void
+                    public invertOrder(index: number /*int*/): void
                     /**
                      * Change the sort order at the given index to ascending.
                      * @param index the index of the comparator to change
                      */
                     // @ts-ignore
-                    setAscendingOrder(index: number /*int*/): void
+                    public setAscendingOrder(index: number /*int*/): void
                     /**
                      * Change the sort order at the given index to descending sort.
                      * @param index the index of the comparator to change
                      */
                     // @ts-ignore
-                    setDescendingOrder(index: number /*int*/): void
+                    public setDescendingOrder(index: number /*int*/): void
                     /**
                      * Returns the number of aggregated comparators.
                      */
                     // @ts-ignore
-                    getComparatorCount(): int
+                    public getComparatorCount(): number /*int*/
                     // @ts-ignore
-                    compare(o1: T, o2: T): int
+                    public compare(o1: T, o2: T): number /*int*/
                     // @ts-ignore
-                    equals(other: any): boolean
+                    public equals(other: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

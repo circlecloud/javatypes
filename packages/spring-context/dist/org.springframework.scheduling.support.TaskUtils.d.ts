@@ -12,7 +12,7 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class TaskUtils extends java.lang.Object {
+                abstract class TaskUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -21,14 +21,14 @@ declare namespace org {
                      * subsequent executions of the task will not be prevented.
                      */
                     // @ts-ignore
-                    readonly LOG_AND_SUPPRESS_ERROR_HANDLER: ErrorHandler
+                    public static readonly LOG_AND_SUPPRESS_ERROR_HANDLER: ErrorHandler
                     /**
                      * An ErrorHandler strategy that will log at error level and then
                      * re-throw the Exception. Note: this will typically prevent subsequent
                      * execution of a scheduled task.
                      */
                     // @ts-ignore
-                    readonly LOG_AND_PROPAGATE_ERROR_HANDLER: ErrorHandler
+                    public static readonly LOG_AND_PROPAGATE_ERROR_HANDLER: ErrorHandler
                     /**
                      * Decorate the task for error handling. If the provided {@link ErrorHandler}
                      * is not {@code null}, it will be used. Otherwise, repeating tasks will have
@@ -37,7 +37,7 @@ declare namespace org {
                      * returned {@link Future}. In both cases, the errors will be logged.
                      */
                     // @ts-ignore
-                    decorateTaskWithErrorHandler(task: java.lang.Runnable, errorHandler: ErrorHandler, isRepeatingTask: boolean): org.springframework.scheduling.support.DelegatingErrorHandlingRunnable
+                    public static decorateTaskWithErrorHandler(task: java.lang.Runnable, errorHandler: ErrorHandler, isRepeatingTask: boolean): org.springframework.scheduling.support.DelegatingErrorHandlingRunnable
                     /**
                      * Return the default {@link ErrorHandler} implementation based on the boolean
                      * value indicating whether the task will be repeating or not. For repeating tasks
@@ -45,7 +45,7 @@ declare namespace org {
                      * cases, the error will be logged.
                      */
                     // @ts-ignore
-                    getDefaultErrorHandler(isRepeatingTask: boolean): ErrorHandler
+                    public static getDefaultErrorHandler(isRepeatingTask: boolean): ErrorHandler
                 }
             }
         }

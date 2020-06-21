@@ -13,7 +13,7 @@ declare namespace org {
                                  * @return The MOTD to respond with.
                                  */
                                 // @ts-ignore
-                                getMotd(): java.lang.String
+                                getMotd(): string
                                 /**
                                  * Sets the MOTD to respond with.
                                  * <p>If setting the string causes the message to go over the
@@ -21,7 +21,7 @@ declare namespace org {
                                  * @param motd The MOTD to respond with
                                  */
                                 // @ts-ignore
-                                setMotd(motd: string): void
+                                setMotd(motd: java.lang.String | string): void
                                 /**
                                  * Gets the GameType to respond with.
                                  * <p>By default, this is <code>SMP</code>.
@@ -30,7 +30,7 @@ declare namespace org {
                                  * @return The GameType to respond with
                                  */
                                 // @ts-ignore
-                                getGameType(): java.lang.String
+                                getGameType(): string
                                 /**
                                  * Sets the GameType to respond with.
                                  * <p>If setting the string causes the message to go over the
@@ -38,14 +38,14 @@ declare namespace org {
                                  * @param gameType The GameType to respond with
                                  */
                                 // @ts-ignore
-                                setGameType(gameType: string): void
+                                setGameType(gameType: java.lang.String | string): void
                                 /**
                                  * Gets the map (world) to respond with.
                                  * <p>By default, this is the current world on the server.</p>
                                  * @return The map to respond with
                                  */
                                 // @ts-ignore
-                                getMap(): java.lang.String
+                                getMap(): string
                                 /**
                                  * Sets the map (world) to respond with.
                                  * <p>If setting the string causes the message to go over the
@@ -53,7 +53,7 @@ declare namespace org {
                                  * @param map The map to respond with
                                  */
                                 // @ts-ignore
-                                setMap(map: string): void
+                                setMap(map: java.lang.String | string): void
                                 /**
                                  * Gets the player count to respond with.
                                  * <p>By default, this is the number of players present on the server.
@@ -62,7 +62,7 @@ declare namespace org {
                                  * @return The player count to respond with
                                  */
                                 // @ts-ignore
-                                getPlayerCount(): int
+                                getPlayerCount(): number /*int*/
                                 /**
                                  * Sets the player count to respond with.
                                  * <p>If setting the int causes the message to go over the
@@ -78,7 +78,7 @@ declare namespace org {
                                  * @return The max player count to respond with
                                  */
                                 // @ts-ignore
-                                getMaxPlayerCount(): int
+                                getMaxPlayerCount(): number /*int*/
                                 /**
                                  * Sets the max player count to respond with.
                                  * <p>If setting the int causes the message to go over the
@@ -107,7 +107,7 @@ declare namespace org {
                                  * @return The current size of the data to respond with
                                  */
                                 // @ts-ignore
-                                getSize(): int
+                                getSize(): number /*int*/
                                 /**
                                  * Gets the maximum size of the data to respond with.
                                  * <p>If the size of the data is greater than the returned value,
@@ -117,7 +117,7 @@ declare namespace org {
                                  * @return The maximum size of the data to respond with
                                  */
                                 // @ts-ignore
-                                getMaxSize(): int
+                                getMaxSize(): number /*int*/
                             }
                         }
                     }

@@ -12,20 +12,20 @@ declare namespace java {
              * @return The name of this {#code SQLType}.
              */
             // @ts-ignore
-            getName(): java.lang.String
+            getName(): string
             /**
              * Returns the name of the vendor that supports this data type. The value
              * returned typically is the package name for this vendor.
              * @return The name of the vendor for this data type
              */
             // @ts-ignore
-            getVendor(): java.lang.String
+            getVendor(): string
             /**
              * Returns the vendor specific type number for the data type.
              * @return An Integer representing the vendor specific data type
              */
             // @ts-ignore
-            getVendorTypeNumber(): java.lang.Integer
+            getVendorTypeNumber(): number
         }
     }
 }

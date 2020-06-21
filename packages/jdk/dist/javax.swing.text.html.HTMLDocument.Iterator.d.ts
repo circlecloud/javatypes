@@ -12,7 +12,7 @@ declare namespace javax {
                      * Document.render.
                      */
                     // @ts-ignore
-                    class Iterator extends java.lang.Object {
+                    abstract class Iterator extends java.lang.Object {
                         // @ts-ignore
                         constructor()
                         /**
@@ -21,27 +21,27 @@ declare namespace javax {
                          *       <code>null</code> if none can be found
                          */
                         // @ts-ignore
-                        abstract getAttributes(): javax.swing.text.AttributeSet
+                        public abstract getAttributes(): javax.swing.text.AttributeSet
                         /**
                          * Returns the start of the range for which the current occurrence of
                          * the tag is defined and has the same attributes.
                          * @return the start of the range, or -1 if it can't be found
                          */
                         // @ts-ignore
-                        abstract getStartOffset(): int
+                        public abstract getStartOffset(): number /*int*/
                         /**
                          * Returns the end of the range for which the current occurrence of
                          * the tag is defined and has the same attributes.
                          * @return the end of the range
                          */
                         // @ts-ignore
-                        abstract getEndOffset(): int
+                        public abstract getEndOffset(): number /*int*/
                         /**
                          * Move the iterator forward to the next occurrence
                          * of the tag it represents.
                          */
                         // @ts-ignore
-                        abstract next(): void
+                        public abstract next(): void
                         /**
                          * Indicates if the iterator is currently
                          * representing an occurrence of a tag.  If
@@ -50,12 +50,12 @@ declare namespace javax {
                          *               occurrence of a tag, otherwise returns false
                          */
                         // @ts-ignore
-                        abstract isValid(): boolean
+                        public abstract isValid(): boolean
                         /**
                          * Type of tag this iterator represents.
                          */
                         // @ts-ignore
-                        abstract getTag(): javax.swing.text.html.HTML.Tag
+                        public abstract getTag(): javax.swing.text.html.HTML.Tag
                     }
                 }
             }

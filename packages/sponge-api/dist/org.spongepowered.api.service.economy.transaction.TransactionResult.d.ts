@@ -34,7 +34,7 @@ declare namespace org {
                              * @return optional set of contexts
                              */
                             // @ts-ignore
-                            getContexts(): java.util.Set<org.spongepowered.api.service.context.Context>
+                            getContexts(): Array<org.spongepowered.api.service.context.Context>
                             /**
                              * Gets the {@link ResultType} of this transaction.
                              * @return resultType

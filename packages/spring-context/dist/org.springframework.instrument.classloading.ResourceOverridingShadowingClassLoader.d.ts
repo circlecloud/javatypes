@@ -25,26 +25,26 @@ declare namespace org {
                      * @param newPath the actual path to be looked up
                      */
                     // @ts-ignore
-                    override(oldPath: string, newPath: string): void
+                    public override(oldPath: java.lang.String | string, newPath: java.lang.String | string): void
                     /**
                      * Ensure that a resource with the given path is not found.
                      * @param oldPath the path of the resource to hide even if
                      *  it exists in the parent ClassLoader
                      */
                     // @ts-ignore
-                    suppress(oldPath: string): void
+                    public suppress(oldPath: java.lang.String | string): void
                     /**
                      * Copy all overrides from the given ClassLoader.
                      * @param other the other ClassLoader to copy from
                      */
                     // @ts-ignore
-                    copyOverrides(other: org.springframework.instrument.classloading.ResourceOverridingShadowingClassLoader): void
+                    public copyOverrides(other: org.springframework.instrument.classloading.ResourceOverridingShadowingClassLoader): void
                     // @ts-ignore
-                    getResource(requestedPath: string): java.net.URL
+                    public getResource(requestedPath: java.lang.String | string): java.net.URL
                     // @ts-ignore
-                    getResourceAsStream(requestedPath: string): java.io.InputStream
+                    public getResourceAsStream(requestedPath: java.lang.String | string): java.io.InputStream
                     // @ts-ignore
-                    getResources(requestedPath: string): java.util.Enumeration<java.net.URL>
+                    public getResources(requestedPath: java.lang.String | string): java.util.Enumeration<java.net.URL>
                 }
             }
         }

@@ -21,7 +21,7 @@ declare namespace org {
                              * @return The generated dummy class
                              */
                             // @ts-ignore
-                            createFor<T>(type: java.lang.Class<T>, fieldName: string): T
+                            public static createFor<T>(type: java.lang.Class<T>, fieldName: java.lang.String | string): T
                             /**
                              * Creates a new dummy class implementing the specified interface.
                              * @param type The interface to generate a dummy class for
@@ -31,7 +31,7 @@ declare namespace org {
                              * @return The generated dummy class
                              */
                             // @ts-ignore
-                            createExtendedFor<T, I extends T>(type: java.lang.Class<T>, fieldName: string): I
+                            public static createExtendedFor<T, I extends T>(type: java.lang.Class<T>, fieldName: java.lang.String | string): I
                         }
                     }
                 }

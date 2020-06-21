@@ -8,7 +8,7 @@ declare namespace java {
              * the pages of the job.
              */
             // @ts-ignore
-            class PrinterJob extends java.lang.Object {
+            abstract class PrinterJob extends java.lang.Object {
                 /**
                  * A <code>PrinterJob</code> object should be created using the
                  * static {@link #getPrinterJob() getPrinterJob} method.
@@ -32,7 +32,7 @@ declare namespace java {
                  *           method disallows this thread from creating a print job request
                  */
                 // @ts-ignore
-                getPrinterJob(): java.awt.print.PrinterJob
+                public static getPrinterJob(): java.awt.print.PrinterJob
                 /**
                  * A convenience method which looks up 2D print services.
                  * Services returned from this method may be installed on
@@ -46,7 +46,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                lookupPrintServices(): javax.print.PrintService[]
+                public static lookupPrintServices(): javax.print.PrintService[]
                 /**
                  * A convenience method which locates factories for stream print
                  * services which can image 2D graphics.
@@ -80,7 +80,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                lookupStreamPrintServices(mimeType: string): javax.print.StreamPrintServiceFactory[]
+                public static lookupStreamPrintServices(mimeType: java.lang.String | string): javax.print.StreamPrintServiceFactory[]
                 /**
                  * Returns the service (printer) for this printer job.
                  * Implementations of this class which do not support print services
@@ -92,7 +92,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                getPrintService(): javax.print.PrintService
+                public getPrintService(): javax.print.PrintService
                 /**
                  * Associate this PrinterJob with a new PrintService.
                  * This method is overridden by subclasses which support
@@ -109,7 +109,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                setPrintService(service: javax.print.PrintService): void
+                public setPrintService(service: javax.print.PrintService): void
                 /**
                  * Calls <code>painter</code> to render the pages.  The pages in the
                  * document to be printed by this
@@ -120,7 +120,7 @@ declare namespace java {
                  *  the document.
                  */
                 // @ts-ignore
-                abstract setPrintable(painter: java.awt.print.Printable): void
+                public abstract setPrintable(painter: java.awt.print.Printable): void
                 /**
                  * Calls <code>painter</code> to render the pages in the specified
                  * <code>format</code>.  The pages in the document to be printed by
@@ -133,7 +133,7 @@ declare namespace java {
                  *                    be printed
                  */
                 // @ts-ignore
-                abstract setPrintable(painter: java.awt.print.Printable, format: java.awt.print.PageFormat): void
+                public abstract setPrintable(painter: java.awt.print.Printable, format: java.awt.print.PageFormat): void
                 /**
                  * Queries <code>document</code> for the number of pages and
                  * the <code>PageFormat</code> and <code>Printable</code> for each
@@ -147,7 +147,7 @@ declare namespace java {
                  * @see Printable
                  */
                 // @ts-ignore
-                abstract setPageable(document: java.awt.print.Pageable): void
+                public abstract setPageable(document: java.awt.print.Pageable): void
                 /**
                  * Presents a dialog to the user for changing the properties of
                  * the print job.
@@ -168,7 +168,7 @@ declare namespace java {
                  * @see java.awt.GraphicsEnvironment#isHeadless
                  */
                 // @ts-ignore
-                abstract printDialog(): boolean
+                public abstract printDialog(): boolean
                 /**
                  * A convenience method which displays a cross-platform print dialog
                  * for all services which are capable of printing 2D graphics using the
@@ -215,7 +215,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                printDialog(attributes: javax.print.attribute.PrintRequestAttributeSet): boolean
+                public printDialog(attributes: javax.print.attribute.PrintRequestAttributeSet): boolean
                 /**
                  * Displays a dialog that allows modification of a
                  * <code>PageFormat</code> instance.
@@ -239,7 +239,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                abstract pageDialog(page: java.awt.print.PageFormat): java.awt.print.PageFormat
+                public abstract pageDialog(page: java.awt.print.PageFormat): java.awt.print.PageFormat
                 /**
                  * A convenience method which displays a cross-platform page setup dialog.
                  * The choices available will reflect the print service currently
@@ -269,7 +269,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                pageDialog(attributes: javax.print.attribute.PrintRequestAttributeSet): java.awt.print.PageFormat
+                public pageDialog(attributes: javax.print.attribute.PrintRequestAttributeSet): java.awt.print.PageFormat
                 /**
                  * Clones the <code>PageFormat</code> argument and alters the
                  * clone to describe a default page size and orientation.
@@ -278,7 +278,7 @@ declare namespace java {
                  *                       <code>PageFormat</code>.
                  */
                 // @ts-ignore
-                abstract defaultPage(page: java.awt.print.PageFormat): java.awt.print.PageFormat
+                public abstract defaultPage(page: java.awt.print.PageFormat): java.awt.print.PageFormat
                 /**
                  * Creates a new <code>PageFormat</code> instance and
                  * sets it to a default size and orientation.
@@ -286,7 +286,7 @@ declare namespace java {
                  *           orientation.
                  */
                 // @ts-ignore
-                defaultPage(): java.awt.print.PageFormat
+                public defaultPage(): java.awt.print.PageFormat
                 /**
                  * Calculates a <code>PageFormat</code> with values consistent with those
                  * supported by the current <code>PrintService</code> for this job
@@ -305,7 +305,7 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getPageFormat(attributes: javax.print.attribute.PrintRequestAttributeSet): java.awt.print.PageFormat
+                public getPageFormat(attributes: javax.print.attribute.PrintRequestAttributeSet): java.awt.print.PageFormat
                 /**
                  * Returns the clone of <code>page</code> with its settings
                  * adjusted to be compatible with the current printer of this
@@ -321,7 +321,7 @@ declare namespace java {
                  *           to conform with this <code>PrinterJob</code>.
                  */
                 // @ts-ignore
-                abstract validatePage(page: java.awt.print.PageFormat): java.awt.print.PageFormat
+                public abstract validatePage(page: java.awt.print.PageFormat): java.awt.print.PageFormat
                 /**
                  * Prints a set of pages.
                  * @exception PrinterException an error in the print system
@@ -331,7 +331,7 @@ declare namespace java {
                  * @see Printable
                  */
                 // @ts-ignore
-                abstract print(): void
+                public abstract print(): void
                 /**
                  * Prints a set of pages using the settings in the attribute
                  * set. The default implementation ignores the attribute set.
@@ -370,27 +370,27 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                print(attributes: javax.print.attribute.PrintRequestAttributeSet): void
+                public print(attributes: javax.print.attribute.PrintRequestAttributeSet): void
                 /**
                  * Sets the number of copies to be printed.
                  * @param copies the number of copies to be printed
                  * @see #getCopies
                  */
                 // @ts-ignore
-                abstract setCopies(copies: number /*int*/): void
+                public abstract setCopies(copies: number /*int*/): void
                 /**
                  * Gets the number of copies to be printed.
                  * @return the number of copies to be printed.
                  * @see #setCopies
                  */
                 // @ts-ignore
-                abstract getCopies(): int
+                public abstract getCopies(): number /*int*/
                 /**
                  * Gets the name of the printing user.
                  * @return the name of the printing user
                  */
                 // @ts-ignore
-                abstract getUserName(): java.lang.String
+                public abstract getUserName(): string
                 /**
                  * Sets the name of the document to be printed.
                  * The document name can not be <code>null</code>.
@@ -398,14 +398,14 @@ declare namespace java {
                  * @see #getJobName
                  */
                 // @ts-ignore
-                abstract setJobName(jobName: string): void
+                public abstract setJobName(jobName: java.lang.String | string): void
                 /**
                  * Gets the name of the document to be printed.
                  * @return the name of the document to be printed.
                  * @see #setJobName
                  */
                 // @ts-ignore
-                abstract getJobName(): java.lang.String
+                public abstract getJobName(): string
                 /**
                  * Cancels a print job that is in progress.  If
                  * {@link #print() print} has been called but has not
@@ -415,7 +415,7 @@ declare namespace java {
                  * this call does nothing.
                  */
                 // @ts-ignore
-                abstract cancel(): void
+                public abstract cancel(): void
                 /**
                  * Returns <code>true</code> if a print job is
                  * in progress, but is going to be cancelled
@@ -425,7 +425,7 @@ declare namespace java {
                  *  is going to be cancelled; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                abstract isCancelled(): boolean
+                public abstract isCancelled(): boolean
             }
         }
     }

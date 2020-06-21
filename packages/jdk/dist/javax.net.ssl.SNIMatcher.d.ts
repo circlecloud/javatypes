@@ -23,7 +23,7 @@ declare namespace javax {
              * @since 1.8
              */
             // @ts-ignore
-            class SNIMatcher extends java.lang.Object {
+            abstract class SNIMatcher extends java.lang.Object {
                 /**
                  * Creates an {@code SNIMatcher} using the specified server name type.
                  * @param type
@@ -39,7 +39,7 @@ declare namespace javax {
                  * @see SNIServerName
                  */
                 // @ts-ignore
-                getType(): int
+                public getType(): number /*int*/
                 /**
                  * Attempts to match the given {@link SNIServerName}.
                  * @param serverName
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @see SNIServerName
                  */
                 // @ts-ignore
-                abstract matches(serverName: javax.net.ssl.SNIServerName): boolean
+                public abstract matches(serverName: javax.net.ssl.SNIServerName): boolean
             }
         }
     }

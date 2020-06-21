@@ -47,14 +47,14 @@ declare namespace javax {
                      * @return an unmodifiable list of one or more {#link Reference}s
                      */
                     // @ts-ignore
-                    getReferences(): java.util.List
+                    getReferences(): Array<any>
                     /**
                      * Returns the optional <code>Id</code> attribute of this
                      * <code>SignedInfo</code>.
                      * @return the id (may be <code>null</code> if not specified)
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Returns the canonicalized signed info bytes after a signing or
                      * validation operation. This method is useful for debugging.

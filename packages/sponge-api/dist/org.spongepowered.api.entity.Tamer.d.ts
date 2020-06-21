@@ -12,7 +12,7 @@ declare namespace org {
                      * @return The name to reference this tamer
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                 }
             }
         }

@@ -17,7 +17,7 @@ declare namespace org {
                      * @return the URI builder instance
                      */
                     // @ts-ignore
-                    uriString(uriTemplate: string): org.springframework.web.util.UriBuilder
+                    uriString(uriTemplate: java.lang.String | string): org.springframework.web.util.UriBuilder
                     /**
                      * Create a URI builder with default settings.
                      * @return the builder instance

@@ -65,17 +65,17 @@ declare namespace java {
                  * Nearest-neighbor interpolation type.
                  */
                 // @ts-ignore
-                readonly TYPE_NEAREST_NEIGHBOR: number /*int*/
+                public static readonly TYPE_NEAREST_NEIGHBOR: number /*int*/
                 /**
                  * Bilinear interpolation type.
                  */
                 // @ts-ignore
-                readonly TYPE_BILINEAR: number /*int*/
+                public static readonly TYPE_BILINEAR: number /*int*/
                 /**
                  * Bicubic interpolation type.
                  */
                 // @ts-ignore
-                readonly TYPE_BICUBIC: number /*int*/
+                public static readonly TYPE_BICUBIC: number /*int*/
                 /**
                  * Returns the interpolation type used by this op.
                  * @return the interpolation type.
@@ -84,7 +84,7 @@ declare namespace java {
                  * @see #TYPE_BICUBIC
                  */
                 // @ts-ignore
-                getInterpolationType(): int
+                public getInterpolationType(): number /*int*/
                 /**
                  * Transforms the source <CODE>BufferedImage</CODE> and stores the results
                  * in the destination <CODE>BufferedImage</CODE>.
@@ -119,7 +119,7 @@ declare namespace java {
                  *          operation.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
+                public filter(src: java.awt.image.BufferedImage, dst: java.awt.image.BufferedImage): java.awt.image.BufferedImage
                 /**
                  * Transforms the source <CODE>Raster</CODE> and stores the results in
                  * the destination <CODE>Raster</CODE>.  This operation performs the
@@ -152,7 +152,7 @@ declare namespace java {
                  *          operation.
                  */
                 // @ts-ignore
-                filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public filter(src: java.awt.image.Raster, dst: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Returns the bounding box of the transformed destination.  The
                  * rectangle returned is the actual bounding box of the
@@ -163,7 +163,7 @@ declare namespace java {
                  *  bounding box.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.BufferedImage): java.awt.geom.Rectangle2D
                 /**
                  * Returns the bounding box of the transformed destination.  The
                  * rectangle returned will be the actual bounding box of the
@@ -174,7 +174,7 @@ declare namespace java {
                  *  bounding box.
                  */
                 // @ts-ignore
-                getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
+                public getBounds2D(src: java.awt.image.Raster): java.awt.geom.Rectangle2D
                 /**
                  * Creates a zeroed destination image with the correct size and number of
                  * bands.  A <CODE>RasterFormatException</CODE> may be thrown if the
@@ -190,7 +190,7 @@ declare namespace java {
                  * @return The zeroed destination image.
                  */
                 // @ts-ignore
-                createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
+                public createCompatibleDestImage(src: java.awt.image.BufferedImage, destCM: java.awt.image.ColorModel): java.awt.image.BufferedImage
                 /**
                  * Creates a zeroed destination <CODE>Raster</CODE> with the correct size
                  * and number of bands.  A <CODE>RasterFormatException</CODE> may be thrown
@@ -199,7 +199,7 @@ declare namespace java {
                  * @return The zeroed destination <CODE>Raster</CODE>.
                  */
                 // @ts-ignore
-                createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
+                public createCompatibleDestRaster(src: java.awt.image.Raster): java.awt.image.WritableRaster
                 /**
                  * Returns the location of the corresponding destination point given a
                  * point in the source.  If <CODE>dstPt</CODE> is specified, it
@@ -211,19 +211,19 @@ declare namespace java {
                  *  the specified point in the source.
                  */
                 // @ts-ignore
-                getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
+                public getPoint2D(srcPt: java.awt.geom.Point2D, dstPt: java.awt.geom.Point2D): java.awt.geom.Point2D
                 /**
                  * Returns the affine transform used by this transform operation.
                  * @return The <CODE>AffineTransform</CODE> associated with this op.
                  */
                 // @ts-ignore
-                getTransform(): java.awt.geom.AffineTransform
+                public getTransform(): java.awt.geom.AffineTransform
                 /**
                  * Returns the rendering hints used by this transform operation.
                  * @return The <CODE>RenderingHints</CODE> object associated with this op.
                  */
                 // @ts-ignore
-                getRenderingHints(): java.awt.RenderingHints
+                public getRenderingHints(): java.awt.RenderingHints
             }
         }
     }

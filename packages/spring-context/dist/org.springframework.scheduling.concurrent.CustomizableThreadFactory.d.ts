@@ -24,9 +24,9 @@ declare namespace org {
                      * @param threadNamePrefix the prefix to use for the names of newly created threads
                      */
                     // @ts-ignore
-                    constructor(threadNamePrefix: string)
+                    constructor(threadNamePrefix: java.lang.String | string)
                     // @ts-ignore
-                    newThread(runnable: java.lang.Runnable): java.lang.Thread
+                    public newThread(runnable: java.lang.Runnable): java.lang.Thread
                 }
             }
         }

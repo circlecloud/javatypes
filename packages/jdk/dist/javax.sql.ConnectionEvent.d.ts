@@ -40,7 +40,7 @@ declare namespace javax {
              * @return the SQLException about to be thrown or <code>null</code>
              */
             // @ts-ignore
-            getSQLException(): java.sql.SQLException
+            public getSQLException(): java.sql.SQLException
         }
     }
 }

@@ -10,13 +10,13 @@ declare namespace org {
                     // @ts-ignore
                     interface Schematic extends org.spongepowered.api.world.extent.ArchetypeVolume {
                         // @ts-ignore
-                        
+                        readonly METADATA_NAME: java.lang.String | string
                         // @ts-ignore
-                        
+                        readonly METADATA_AUTHOR: java.lang.String | string
                         // @ts-ignore
-                        
+                        readonly METADATA_DATE: java.lang.String | string
                         // @ts-ignore
-                        
+                        readonly METADATA_REQUIRED_MODS: java.lang.String | string
                         /**
                          * Gets a new builder for schematics.
                          * @return The new builder
@@ -59,9 +59,9 @@ declare namespace org {
                         // @ts-ignore
                         getBiomes(): java.util.Optional<org.spongepowered.api.world.extent.MutableBiomeVolume>
                         // @ts-ignore
-                        getEntitiesByPosition(): <any>
+                        getEntitiesByPosition(): object
                         // @ts-ignore
-                        getEntityArchetypes(): java.util.Collection<org.spongepowered.api.entity.EntityArchetype>
+                        getEntityArchetypes(): Array<org.spongepowered.api.entity.EntityArchetype>
                     }
                 }
             }

@@ -23,12 +23,12 @@ declare namespace java {
              * @param s   the underlying input buffer.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * The string from which bytes are read.
              */
             // @ts-ignore
-            buffer: string
+            buffer: java.lang.String | string
             /**
              * The index of the next character to read from the input stream buffer.
              * @see java.io.StringBufferInputStream#buffer
@@ -55,7 +55,7 @@ declare namespace java {
              *              stream is reached.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads up to <code>len</code> bytes of data from this input stream
              * into an array of bytes.
@@ -72,7 +72,7 @@ declare namespace java {
              *              the stream has been reached.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips <code>n</code> bytes of input from this input stream. Fewer
              * bytes might be skipped if the end of the input stream is reached.
@@ -80,7 +80,7 @@ declare namespace java {
              * @return the actual number of bytes skipped.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Returns the number of bytes that can be read from the input
              * stream without blocking.
@@ -88,13 +88,13 @@ declare namespace java {
              *              number of bytes remaining to be read from the input buffer.
              */
             // @ts-ignore
-            available(): int
+            public available(): number /*int*/
             /**
              * Resets the input stream to begin reading from the first character
              * of this input stream's underlying buffer.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
         }
     }
 }

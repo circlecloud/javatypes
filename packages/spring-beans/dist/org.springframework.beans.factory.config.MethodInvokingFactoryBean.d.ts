@@ -55,7 +55,7 @@ declare namespace org {
                      * @see org.springframework.util.MethodInvoker
                      */
                     // @ts-ignore
-                    class MethodInvokingFactoryBean extends org.springframework.beans.factory.config.MethodInvokingBean implements org.springframework.beans.factory.FactoryBean<java.lang.Object> {
+                    class MethodInvokingFactoryBean extends org.springframework.beans.factory.config.MethodInvokingBean implements org.springframework.beans.factory.FactoryBean<java.lang.Object | any> {
                         // @ts-ignore
                         constructor()
                         /**
@@ -63,24 +63,24 @@ declare namespace org {
                          * {@link #getObject()} request otherwise. Default is "true".
                          */
                         // @ts-ignore
-                        setSingleton(singleton: boolean): void
+                        public setSingleton(singleton: boolean): void
                         // @ts-ignore
-                        afterPropertiesSet(): void
+                        public afterPropertiesSet(): void
                         /**
                          * Returns the same value each time if the singleton property is set
                          * to "true", otherwise returns the value returned from invoking the
                          * specified method on the fly.
                          */
                         // @ts-ignore
-                        getObject(): java.lang.Object
+                        public getObject(): any
                         /**
                          * Return the type of object that this FactoryBean creates,
                          * or {@code null} if not known in advance.
                          */
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

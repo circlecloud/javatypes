@@ -16,7 +16,7 @@ declare namespace org {
                      * @see CommonsMultipartResolver
                      */
                     // @ts-ignore
-                    class CommonsFileUploadSupport extends java.lang.Object {
+                    abstract class CommonsFileUploadSupport extends java.lang.Object {
                         /**
                          * Instantiate a new CommonsFileUploadSupport with its
                          * corresponding FileItemFactory and FileUpload instances.
@@ -33,14 +33,14 @@ declare namespace org {
                          * @return the underlying DiskFileItemFactory instance
                          */
                         // @ts-ignore
-                        getFileItemFactory(): DiskFileItemFactory
+                        public getFileItemFactory(): DiskFileItemFactory
                         /**
                          * Return the underlying {@code org.apache.commons.fileupload.FileUpload}
                          * instance. There is hardly any need to access this.
                          * @return the underlying FileUpload instance
                          */
                         // @ts-ignore
-                        getFileUpload(): FileUpload
+                        public getFileUpload(): FileUpload
                         /**
                          * Set the maximum allowed size (in bytes) before an upload gets rejected.
                          * -1 indicates no limit (the default).
@@ -48,7 +48,7 @@ declare namespace org {
                          * @see org.apache.commons.fileupload.FileUploadBase#setSizeMax
                          */
                         // @ts-ignore
-                        setMaxUploadSize(maxUploadSize: number /*long*/): void
+                        public setMaxUploadSize(maxUploadSize: number /*long*/): void
                         /**
                          * Set the maximum allowed size (in bytes) for each individual file before
                          * an upload gets rejected. -1 indicates no limit (the default).
@@ -57,7 +57,7 @@ declare namespace org {
                          * @see org.apache.commons.fileupload.FileUploadBase#setFileSizeMax
                          */
                         // @ts-ignore
-                        setMaxUploadSizePerFile(maxUploadSizePerFile: number /*long*/): void
+                        public setMaxUploadSizePerFile(maxUploadSizePerFile: number /*long*/): void
                         /**
                          * Set the maximum allowed size (in bytes) before uploads are written to disk.
                          * Uploaded files will still be received past this amount, but they will not be
@@ -66,7 +66,7 @@ declare namespace org {
                          * @see org.apache.commons.fileupload.disk.DiskFileItemFactory#setSizeThreshold
                          */
                         // @ts-ignore
-                        setMaxInMemorySize(maxInMemorySize: number /*int*/): void
+                        public setMaxInMemorySize(maxInMemorySize: number /*int*/): void
                         /**
                          * Set the default character encoding to use for parsing requests,
                          * to be applied to headers of individual parts and to form fields.
@@ -82,20 +82,20 @@ declare namespace org {
                          * @see org.apache.commons.fileupload.FileUploadBase#setHeaderEncoding
                          */
                         // @ts-ignore
-                        setDefaultEncoding(defaultEncoding: string): void
+                        public setDefaultEncoding(defaultEncoding: java.lang.String | string): void
                         /**
                          * Determine the default encoding to use for parsing requests.
                          * @see #setDefaultEncoding
                          */
                         // @ts-ignore
-                        getDefaultEncoding(): java.lang.String
+                        getDefaultEncoding(): string
                         /**
                          * Set the temporary directory where uploaded files get stored.
                          * Default is the servlet container's temporary directory for the web application.
                          * @see org.springframework.web.util.WebUtils#TEMP_DIR_CONTEXT_ATTRIBUTE
                          */
                         // @ts-ignore
-                        setUploadTempDir(uploadTempDir: Resource): void
+                        public setUploadTempDir(uploadTempDir: Resource): void
                         /**
                          * Return the temporary directory where uploaded files get stored.
                          * @see #setUploadTempDir
@@ -113,7 +113,7 @@ declare namespace org {
                          * @see CommonsMultipartFile#setPreserveFilename(boolean)
                          */
                         // @ts-ignore
-                        setPreserveFilename(preserveFilename: boolean): void
+                        public setPreserveFilename(preserveFilename: boolean): void
                         /**
                          * Factory method for a Commons DiskFileItemFactory instance.
                          * <p>Default implementation returns a standard DiskFileItemFactory.
@@ -139,7 +139,7 @@ declare namespace org {
                          * @return an appropriate FileUpload instance.
                          */
                         // @ts-ignore
-                        prepareFileUpload(encoding: string): FileUpload
+                        prepareFileUpload(encoding: java.lang.String | string): FileUpload
                         /**
                          * Parse the given List of Commons FileItems into a Spring MultipartParsingResult,
                          * containing Spring MultipartFile instances and a Map of multipart parameter.
@@ -149,7 +149,7 @@ declare namespace org {
                          * @see CommonsMultipartFile#CommonsMultipartFile(org.apache.commons.fileupload.FileItem)
                          */
                         // @ts-ignore
-                        parseFileItems(fileItems: Array<FileItem>, encoding: string): org.springframework.web.multipart.commons.CommonsFileUploadSupport.MultipartParsingResult
+                        parseFileItems(fileItems: java.util.List<FileItem> | Array<FileItem>, encoding: java.lang.String | string): org.springframework.web.multipart.commons.CommonsFileUploadSupport.MultipartParsingResult
                         /**
                          * Create a {@link CommonsMultipartFile} wrapper for the given Commons {@link FileItem}.
                          * @param fileItem the Commons FileItem to wrap

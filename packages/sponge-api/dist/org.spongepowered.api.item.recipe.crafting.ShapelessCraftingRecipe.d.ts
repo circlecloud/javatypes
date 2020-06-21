@@ -21,7 +21,7 @@ declare namespace org {
                              * @return An unmodifiable list of the ingredient predicates
                              */
                             // @ts-ignore
-                            getIngredientPredicates(): java.util.List<org.spongepowered.api.item.recipe.crafting.Ingredient>
+                            getIngredientPredicates(): Array<org.spongepowered.api.item.recipe.crafting.Ingredient>
                         }
                     }
                 }

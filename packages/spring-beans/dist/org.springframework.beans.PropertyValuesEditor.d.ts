@@ -16,7 +16,7 @@ declare namespace org {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                setAsText(text: string): void
+                public setAsText(text: java.lang.String | string): void
             }
         }
     }

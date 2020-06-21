@@ -56,7 +56,7 @@ declare namespace javax {
              * @author Alan Kaminsky
              */
             // @ts-ignore
-            class ResolutionSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
+            abstract class ResolutionSyntax extends java.lang.Object implements java.io.Serializable, java.lang.Cloneable {
                 /**
                  * Construct a new resolution attribute from the given items.
                  * @param crossFeedResolution
@@ -77,13 +77,13 @@ declare namespace javax {
                  * conversion factor by which to multiply dpi to yield dphi (100).
                  */
                 // @ts-ignore
-                readonly DPI: number /*int*/
+                public static readonly DPI: number /*int*/
                 /**
                  * Value to indicate units of dots per centimeter (dpcm). It is actually
                  * the conversion factor by which to multiply dpcm to yield dphi (254).
                  */
                 // @ts-ignore
-                readonly DPCM: number /*int*/
+                public static readonly DPCM: number /*int*/
                 /**
                  * Get this resolution attribute's resolution values in the given units.
                  * The values are rounded to the nearest integer.
@@ -96,7 +96,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                getResolution(units: number /*int*/): int[]
+                public getResolution(units: number /*int*/): number /*int*/[]
                 /**
                  * Returns this resolution attribute's cross feed direction resolution in
                  * the given units. The value is rounded to the nearest integer.
@@ -108,7 +108,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                getCrossFeedResolution(units: number /*int*/): int
+                public getCrossFeedResolution(units: number /*int*/): number /*int*/
                 /**
                  * Returns this resolution attribute's feed direction resolution in the
                  * given units. The value is rounded to the nearest integer.
@@ -120,7 +120,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                getFeedResolution(units: number /*int*/): int
+                public getFeedResolution(units: number /*int*/): number /*int*/
                 /**
                  * Returns a string version of this resolution attribute in the given units.
                  * The string takes the form <CODE>"<I>C</I>x<I>F</I> <I>U</I>"</CODE>,
@@ -138,7 +138,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if {#code units < 1}.
                  */
                 // @ts-ignore
-                toString(units: number /*int*/, unitsName: string): java.lang.String
+                public toString(units: number /*int*/, unitsName: java.lang.String | string): string
                 /**
                  * Determine whether this resolution attribute's value is less than or
                  * equal to the given resolution attribute's value. This is true if all
@@ -158,7 +158,7 @@ declare namespace javax {
                  *      (unchecked exception) Thrown if <CODE>other</CODE> is null.
                  */
                 // @ts-ignore
-                lessThanOrEquals(other: javax.print.attribute.ResolutionSyntax): boolean
+                public lessThanOrEquals(other: javax.print.attribute.ResolutionSyntax): boolean
                 /**
                  * Returns whether this resolution attribute is equivalent to the passed in
                  * object. To be equivalent, all of the following conditions must be true:
@@ -179,12 +179,12 @@ declare namespace javax {
                  *           attribute, false otherwise.
                  */
                 // @ts-ignore
-                equals(object: any): boolean
+                public equals(object: java.lang.Object | any): boolean
                 /**
                  * Returns a hash code value for this resolution attribute.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Returns a string version of this resolution attribute. The string takes
                  * the form <CODE>"<I>C</I>x<I>F</I> dphi"</CODE>, where <I>C</I> is the
@@ -192,21 +192,21 @@ declare namespace javax {
                  * resolution. The values are reported in the internal units of dphi.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns this resolution attribute's cross feed direction resolution in
                  * units of dphi. (For use in a subclass.)
                  * @return Cross feed direction resolution.
                  */
                 // @ts-ignore
-                getCrossFeedResolutionDphi(): int
+                getCrossFeedResolutionDphi(): number /*int*/
                 /**
                  * Returns this resolution attribute's feed direction resolution in units
                  * of dphi. (For use in a subclass.)
                  * @return Feed direction resolution.
                  */
                 // @ts-ignore
-                getFeedResolutionDphi(): int
+                getFeedResolutionDphi(): number /*int*/
             }
         }
     }

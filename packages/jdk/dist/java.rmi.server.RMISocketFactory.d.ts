@@ -55,7 +55,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            class RMISocketFactory extends java.lang.Object implements java.rmi.server.RMIClientSocketFactory, java.rmi.server.RMIServerSocketFactory {
+            abstract class RMISocketFactory extends java.lang.Object implements java.rmi.server.RMIClientSocketFactory, java.rmi.server.RMIServerSocketFactory {
                 /**
                  * Constructs an <code>RMISocketFactory</code>.
                  * @since JDK1.1
@@ -71,7 +71,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                abstract createSocket(host: string, port: number /*int*/): java.net.Socket
+                public abstract createSocket(host: java.lang.String | string, port: number /*int*/): java.net.Socket
                 /**
                  * Create a server socket on the specified port (port 0 indicates
                  * an anonymous port).
@@ -82,7 +82,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                abstract createServerSocket(port: number /*int*/): java.net.ServerSocket
+                public abstract createServerSocket(port: number /*int*/): java.net.ServerSocket
                 /**
                  * Set the global socket factory from which RMI gets sockets (if the
                  * remote object is not associated with a specific client and/or server
@@ -99,7 +99,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                setSocketFactory(fac: java.rmi.server.RMISocketFactory): void
+                public static setSocketFactory(fac: java.rmi.server.RMISocketFactory): void
                 /**
                  * Returns the socket factory set by the <code>setSocketFactory</code>
                  * method. Returns <code>null</code> if no socket factory has been
@@ -109,7 +109,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getSocketFactory(): java.rmi.server.RMISocketFactory
+                public static getSocketFactory(): java.rmi.server.RMISocketFactory
                 /**
                  * Returns a reference to the default socket factory used
                  * by this RMI implementation.  This will be the factory used
@@ -119,7 +119,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getDefaultSocketFactory(): java.rmi.server.RMISocketFactory
+                public static getDefaultSocketFactory(): java.rmi.server.RMISocketFactory
                 /**
                  * Sets the failure handler to be called by the RMI runtime if server
                  * socket creation fails.  By default, if no failure handler is installed
@@ -138,7 +138,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                setFailureHandler(fh: java.rmi.server.RMIFailureHandler): void
+                public static setFailureHandler(fh: java.rmi.server.RMIFailureHandler): void
                 /**
                  * Returns the handler for socket creation failure set by the
                  * <code>setFailureHandler</code> method.
@@ -147,7 +147,7 @@ declare namespace java {
                  * @since JDK1.1
                  */
                 // @ts-ignore
-                getFailureHandler(): java.rmi.server.RMIFailureHandler
+                public static getFailureHandler(): java.rmi.server.RMIFailureHandler
             }
         }
     }

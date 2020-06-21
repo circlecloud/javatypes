@@ -26,7 +26,7 @@ declare namespace org {
                  * @see #doFilter
                  */
                 // @ts-ignore
-                class GenericFilterBean extends java.lang.Object implements org.springframework.web.context.ServletContextAware {
+                abstract class GenericFilterBean extends java.lang.Object implements org.springframework.web.context.ServletContextAware {
                     // @ts-ignore
                     constructor()
                     /**
@@ -42,7 +42,7 @@ declare namespace org {
                      * @see #getFilterName()
                      */
                     // @ts-ignore
-                    setBeanName(beanName: string): void
+                    public setBeanName(beanName: java.lang.String | string): void
                     /**
                      * Set the {@code Environment} that this filter runs in.
                      * <p>Any environment set here overrides the {@link StandardServletEnvironment}
@@ -52,7 +52,7 @@ declare namespace org {
                      * used, this {@code Environment} can be essentially ignored.
                      */
                     // @ts-ignore
-                    setEnvironment(environment: Environment): void
+                    public setEnvironment(environment: Environment): void
                     /**
                      * Return the {@link Environment} associated with this filter.
                      * <p>If none specified, a default environment will be initialized via
@@ -60,7 +60,7 @@ declare namespace org {
                      * @since 4.3.9
                      */
                     // @ts-ignore
-                    getEnvironment(): Environment
+                    public getEnvironment(): Environment
                     /**
                      * Create and return a new {@link StandardServletEnvironment}.
                      * <p>Subclasses may override this in order to configure the environment or
@@ -77,7 +77,7 @@ declare namespace org {
                      * @see #getServletContext()
                      */
                     // @ts-ignore
-                    setServletContext(servletContext: ServletContext): void
+                    public setServletContext(servletContext: ServletContext): void
                     /**
                      * Calls the {@code initFilterBean()} method that might
                      * contain custom initialization of a subclass.
@@ -87,7 +87,7 @@ declare namespace org {
                      * @see #init(javax.servlet.FilterConfig)
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Subclasses may override this to perform custom filter shutdown.
                      * <p>Note: This method will be called from standard filter destruction
@@ -95,7 +95,7 @@ declare namespace org {
                      * <p>This default implementation is empty.
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                     /**
                      * Subclasses can invoke this method to specify that this property
                      * (which must match a JavaBean property they expose) is mandatory,
@@ -106,7 +106,7 @@ declare namespace org {
                      * @param property name of the required property
                      */
                     // @ts-ignore
-                    addRequiredProperty(property: string): void
+                    addRequiredProperty(property: java.lang.String | string): void
                     /**
                      * Standard way of initializing this filter.
                      * Map config parameters onto bean properties of this filter, and
@@ -117,7 +117,7 @@ declare namespace org {
                      * @see #initFilterBean
                      */
                     // @ts-ignore
-                    init(filterConfig: FilterConfig): void
+                    public init(filterConfig: FilterConfig): void
                     /**
                      * Initialize the BeanWrapper for this GenericFilterBean,
                      * possibly with custom editors.
@@ -151,7 +151,7 @@ declare namespace org {
                      * @see javax.servlet.GenericServlet#getServletConfig()
                      */
                     // @ts-ignore
-                    getFilterConfig(): FilterConfig
+                    public getFilterConfig(): FilterConfig
                     /**
                      * Make the name of this filter available to subclasses.
                      * Analogous to GenericServlet's {@code getServletName()}.
@@ -164,7 +164,7 @@ declare namespace org {
                      * @see #setBeanName
                      */
                     // @ts-ignore
-                    getFilterName(): java.lang.String
+                    getFilterName(): string
                     /**
                      * Make the ServletContext of this filter available to subclasses.
                      * Analogous to GenericServlet's {@code getServletContext()}.

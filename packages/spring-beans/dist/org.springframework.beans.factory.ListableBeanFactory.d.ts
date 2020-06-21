@@ -42,7 +42,7 @@ declare namespace org {
                      * @see #containsBean
                      */
                     // @ts-ignore
-                    containsBeanDefinition(beanName: string): boolean
+                    containsBeanDefinition(beanName: java.lang.String | string): boolean
                     /**
                      * Return the number of beans defined in the factory.
                      * <p>Does not consider any hierarchy this factory may participate in,
@@ -51,7 +51,7 @@ declare namespace org {
                      * @return the number of beans defined in the factory
                      */
                     // @ts-ignore
-                    getBeanDefinitionCount(): int
+                    getBeanDefinitionCount(): number /*int*/
                     /**
                      * Return the names of all beans defined in this factory.
                      * <p>Does not consider any hierarchy this factory may participate in,
@@ -61,7 +61,7 @@ declare namespace org {
                      *  or an empty array if none defined
                      */
                     // @ts-ignore
-                    getBeanDefinitionNames(): java.lang.String[]
+                    getBeanDefinitionNames(): string[]
                     /**
                      * Return the names of beans matching the given type (including subclasses),
                      * judging from either bean definitions or the value of {@code getObjectType}
@@ -90,7 +90,7 @@ declare namespace org {
                      * @see BeanFactoryUtils#beanNamesForTypeIncludingAncestors(ListableBeanFactory, ResolvableType)
                      */
                     // @ts-ignore
-                    getBeanNamesForType(type: ResolvableType): java.lang.String[]
+                    getBeanNamesForType(type: ResolvableType): string[]
                     /**
                      * Return the names of beans matching the given type (including subclasses),
                      * judging from either bean definitions or the value of {@code getObjectType}
@@ -124,7 +124,7 @@ declare namespace org {
                      * @see BeanFactoryUtils#beanNamesForTypeIncludingAncestors(ListableBeanFactory, ResolvableType, boolean, boolean)
                      */
                     // @ts-ignore
-                    getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): java.lang.String[]
+                    getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): string[]
                     /**
                      * Return the bean instances that match the given object type (including
                      * subclasses), judging from either bean definitions or the value of
@@ -154,7 +154,7 @@ declare namespace org {
                      * @see BeanFactoryUtils#beansOfTypeIncludingAncestors(ListableBeanFactory, Class)
                      */
                     // @ts-ignore
-                    getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String, T>
+                    getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String | string, T>
                     /**
                      * Return the bean instances that match the given object type (including
                      * subclasses), judging from either bean definitions or the value of
@@ -189,7 +189,7 @@ declare namespace org {
                      * @see BeanFactoryUtils#beansOfTypeIncludingAncestors(ListableBeanFactory, Class, boolean, boolean)
                      */
                     // @ts-ignore
-                    getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String, T>
+                    getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String | string, T>
                     /**
                      * Find all names of beans which are annotated with the supplied {@link Annotation}
                      * type, without creating corresponding bean instances yet.
@@ -202,7 +202,7 @@ declare namespace org {
                      * @see #findAnnotationOnBean
                      */
                     // @ts-ignore
-                    getBeanNamesForAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.lang.String[]
+                    getBeanNamesForAnnotation(annotationType: java.lang.Class<any>): string[]
                     /**
                      * Find all beans which are annotated with the supplied {@link Annotation} type,
                      * returning a Map of bean names with corresponding bean instances.
@@ -217,7 +217,7 @@ declare namespace org {
                      * @see #findAnnotationOnBean
                      */
                     // @ts-ignore
-                    getBeansWithAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Map<java.lang.String, java.lang.Object>
+                    getBeansWithAnnotation(annotationType: java.lang.Class<any>): java.util.Map<java.lang.String | string, java.lang.Object | any>
                     /**
                      * Find an {@link Annotation} of {@code annotationType} on the specified bean,
                      * traversing its interfaces and super classes if no annotation can be found on
@@ -232,7 +232,7 @@ declare namespace org {
                      * @see #getBeansWithAnnotation
                      */
                     // @ts-ignore
-                    findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: string, annotationType: java.lang.Class<A>): A
+                    findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: java.lang.String | string, annotationType: java.lang.Class<A>): A
                 }
             }
         }

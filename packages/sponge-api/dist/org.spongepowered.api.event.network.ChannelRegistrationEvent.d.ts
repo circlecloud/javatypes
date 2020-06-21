@@ -15,7 +15,7 @@ declare namespace org {
                          * @return The channel name
                          */
                         // @ts-ignore
-                        getChannel(): java.lang.String
+                        getChannel(): string
                     }
                 }
             }

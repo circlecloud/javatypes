@@ -56,7 +56,7 @@ declare namespace java {
                  * @throws IOException if an I/O error occurs
                  */
                 // @ts-ignore
-                close(): void
+                public close(): void
                 /**
                  * Reads a single byte of compressed data from the input stream.
                  * This method will block until some input can be read and compressed.
@@ -66,7 +66,7 @@ declare namespace java {
                  *  already closed
                  */
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 /**
                  * Reads compressed data into a byte array.
                  * This method will block until some input can be read and compressed.
@@ -80,7 +80,7 @@ declare namespace java {
                  *  already closed
                  */
                 // @ts-ignore
-                read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Skips over and discards data from the input stream.
                  * This method may block until the specified number of bytes are read and
@@ -93,7 +93,7 @@ declare namespace java {
                  *  already closed
                  */
                 // @ts-ignore
-                skip(n: number /*long*/): long
+                public skip(n: number /*long*/): number /*long*/
                 /**
                  * Returns 0 after EOF has been reached, otherwise always return 1.
                  * <p>
@@ -105,26 +105,26 @@ declare namespace java {
                  *  already closed
                  */
                 // @ts-ignore
-                available(): int
+                public available(): number /*int*/
                 /**
                  * Always returns {@code false} because this input stream does not support
                  * the {@link #mark mark()} and {@link #reset reset()} methods.
                  * @return false, always
                  */
                 // @ts-ignore
-                markSupported(): boolean
+                public markSupported(): boolean
                 /**
                  * <i>This operation is not supported</i>.
                  * @param limit maximum bytes that can be read before invalidating the position marker
                  */
                 // @ts-ignore
-                mark(limit: number /*int*/): void
+                public mark(limit: number /*int*/): void
                 /**
                  * <i>This operation is not supported</i>.
                  * @throws IOException always thrown
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
             }
         }
     }

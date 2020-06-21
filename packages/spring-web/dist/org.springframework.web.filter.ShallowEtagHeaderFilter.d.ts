@@ -30,13 +30,13 @@ declare namespace org {
                      * @see <a href="https://tools.ietf.org/html/rfc7232#section-2.3">RFC 7232 section 2.3</a>
                      */
                     // @ts-ignore
-                    setWriteWeakETag(writeWeakETag: boolean): void
+                    public setWriteWeakETag(writeWeakETag: boolean): void
                     /**
                      * Return whether the ETag value written to the response should be weak, as per RFC 7232.
                      * @since 4.3
                      */
                     // @ts-ignore
-                    isWriteWeakETag(): boolean
+                    public isWriteWeakETag(): boolean
                     /**
                      * The default value is {@code false} so that the filter may delay the generation
                      * of an ETag until the last asynchronously dispatched thread.
@@ -71,7 +71,7 @@ declare namespace org {
                      * @see org.springframework.util.DigestUtils
                      */
                     // @ts-ignore
-                    generateETagHeaderValue(inputStream: java.io.InputStream, isWeak: boolean): java.lang.String
+                    generateETagHeaderValue(inputStream: java.io.InputStream, isWeak: boolean): string
                     /**
                      * This method can be used to suppress the content caching response wrapper
                      * of the ShallowEtagHeaderFilter. The main reason for this is streaming
@@ -82,7 +82,7 @@ declare namespace org {
                      * @since 4.2
                      */
                     // @ts-ignore
-                    disableContentCaching(request: ServletRequest): void
+                    public static disableContentCaching(request: ServletRequest): void
                 }
             }
         }

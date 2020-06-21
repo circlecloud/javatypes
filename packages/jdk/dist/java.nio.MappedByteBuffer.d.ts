@@ -27,7 +27,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class MappedByteBuffer extends java.nio.ByteBuffer {
+        abstract class MappedByteBuffer extends java.nio.ByteBuffer {
             /**
              * Tells whether or not this buffer's content is resident in physical
              * memory.
@@ -44,7 +44,7 @@ declare namespace java {
              *           is resident in physical memory
              */
             // @ts-ignore
-            isLoaded(): boolean
+            public isLoaded(): boolean
             /**
              * Loads this buffer's content into physical memory.
              * <p> This method makes a best effort to ensure that, when it returns,
@@ -54,7 +54,7 @@ declare namespace java {
              * @return This buffer
              */
             // @ts-ignore
-            load(): java.nio.MappedByteBuffer
+            public load(): java.nio.MappedByteBuffer
             /**
              * Forces any changes made to this buffer's content to be written to the
              * storage device containing the mapped file.
@@ -70,7 +70,7 @@ declare namespace java {
              * @return This buffer
              */
             // @ts-ignore
-            force(): java.nio.MappedByteBuffer
+            public force(): java.nio.MappedByteBuffer
         }
     }
 }

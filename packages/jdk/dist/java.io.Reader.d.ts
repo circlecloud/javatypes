@@ -19,7 +19,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class Reader extends java.lang.Object implements java.lang.Readable, java.io.Closeable {
+        abstract class Reader extends java.lang.Object implements java.lang.Readable, java.io.Closeable {
             /**
              * Creates a new character-stream reader whose critical sections will
              * synchronize on the reader itself.
@@ -32,7 +32,7 @@ declare namespace java {
              * @param lock  The Object to synchronize on.
              */
             // @ts-ignore
-            constructor(lock: any)
+            constructor(lock: java.lang.Object | any)
             /**
              * The object used to synchronize operations on this stream.  For
              * efficiency, a character-stream object may use an object other than
@@ -41,7 +41,7 @@ declare namespace java {
              * method.
              */
             // @ts-ignore
-            lock: any
+            lock: java.lang.Object | any
             /**
              * Attempts to read characters into the specified character buffer.
              * The buffer is used as a repository of characters as-is: the only
@@ -56,7 +56,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            read(target: java.nio.CharBuffer): int
+            public read(target: java.nio.CharBuffer): number /*int*/
             /**
              * Reads a single character.  This method will block until a character is
              * available, an I/O error occurs, or the end of the stream is reached.
@@ -68,7 +68,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Reads characters into an array.  This method will block until some input
              * is available, an I/O error occurs, or the end of the stream is reached.
@@ -79,7 +79,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            read(cbuf: string[]): int
+            public read(cbuf: string[]): number /*int*/
             /**
              * Reads characters into a portion of an array.  This method will block
              * until some input is available, an I/O error occurs, or the end of the
@@ -92,7 +92,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            abstract read(cbuf: string[], off: number /*int*/, len: number /*int*/): int
+            public abstract read(cbuf: string[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Skips characters.  This method will block until some characters are
              * available, an I/O error occurs, or the end of the stream is reached.
@@ -102,7 +102,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Tells whether this stream is ready to be read.
              * @return True if the next read() is guaranteed not to block for input,
@@ -111,7 +111,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            ready(): boolean
+            public ready(): boolean
             /**
              * Tells whether this stream supports the mark() operation. The default
              * implementation always returns false. Subclasses should override this
@@ -119,7 +119,7 @@ declare namespace java {
              * @return true if and only if this stream supports the mark operation.
              */
             // @ts-ignore
-            markSupported(): boolean
+            public markSupported(): boolean
             /**
              * Marks the present position in the stream.  Subsequent calls to reset()
              * will attempt to reposition the stream to this point.  Not all
@@ -132,7 +132,7 @@ declare namespace java {
              *                           or if some other I/O error occurs
              */
             // @ts-ignore
-            mark(readAheadLimit: number /*int*/): void
+            public mark(readAheadLimit: number /*int*/): void
             /**
              * Resets the stream.  If the stream has been marked, then attempt to
              * reposition it at the mark.  If the stream has not been marked, then
@@ -146,7 +146,7 @@ declare namespace java {
              *                           or if some other I/O error occurs
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
             /**
              * Closes the stream and releases any system resources associated with
              * it.  Once the stream has been closed, further read(), ready(),
@@ -155,7 +155,7 @@ declare namespace java {
              * @exception IOException  If an I/O error occurs
              */
             // @ts-ignore
-            abstract close(): void
+            public abstract close(): void
         }
     }
 }

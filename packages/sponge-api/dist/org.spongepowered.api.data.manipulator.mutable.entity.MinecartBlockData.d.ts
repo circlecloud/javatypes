@@ -22,7 +22,7 @@ declare namespace org {
                                  * @see Keys#OFFSET
                                  */
                                 // @ts-ignore
-                                offset(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                                offset(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                             }
                         }
                     }

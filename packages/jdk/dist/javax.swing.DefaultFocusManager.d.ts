@@ -20,15 +20,15 @@ declare namespace javax {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             // @ts-ignore
-            getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             // @ts-ignore
-            getFirstComponent(aContainer: java.awt.Container): java.awt.Component
+            public getFirstComponent(aContainer: java.awt.Container): java.awt.Component
             // @ts-ignore
-            getLastComponent(aContainer: java.awt.Container): java.awt.Component
+            public getLastComponent(aContainer: java.awt.Container): java.awt.Component
             // @ts-ignore
-            compareTabOrder(a: java.awt.Component, b: java.awt.Component): boolean
+            public compareTabOrder(a: java.awt.Component, b: java.awt.Component): boolean
         }
     }
 }

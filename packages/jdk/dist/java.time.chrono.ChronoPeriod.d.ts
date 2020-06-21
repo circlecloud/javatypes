@@ -54,7 +54,7 @@ declare namespace java {
                  * @throws UnsupportedTemporalTypeException if the unit is not supported
                  */
                 // @ts-ignore
-                get(unit: java.time.temporal.TemporalUnit): long
+                get(unit: java.time.temporal.TemporalUnit): number /*long*/
                 /**
                  * Gets the set of units supported by this period.
                  * <p>
@@ -68,7 +68,7 @@ declare namespace java {
                  * @return a list containing the supported units, not null
                  */
                 // @ts-ignore
-                getUnits(): java.util.List<java.time.temporal.TemporalUnit>
+                getUnits(): Array<java.time.temporal.TemporalUnit>
                 /**
                  * Gets the chronology that defines the meaning of the supported units.
                  * <p>
@@ -223,13 +223,13 @@ declare namespace java {
                  * @return true if this is equal to the other period
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this period.
                  * @return a suitable hash code
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Outputs this period as a {@code String}.
                  * <p>
@@ -237,7 +237,7 @@ declare namespace java {
                  * @return a string representation of this period, not null
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

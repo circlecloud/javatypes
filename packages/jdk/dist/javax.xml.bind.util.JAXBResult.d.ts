@@ -74,7 +74,7 @@ declare namespace javax {
                      *       during the parsing when it finds an error.
                      */
                     // @ts-ignore
-                    getResult(): java.lang.Object
+                    public getResult(): any
                 }
             }
         }

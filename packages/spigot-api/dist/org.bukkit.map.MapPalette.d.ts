@@ -13,79 +13,79 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly TRANSPARENT: number /*byte*/
+                public static readonly TRANSPARENT: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly LIGHT_GREEN: number /*byte*/
+                public static readonly LIGHT_GREEN: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly LIGHT_BROWN: number /*byte*/
+                public static readonly LIGHT_BROWN: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly GRAY_1: number /*byte*/
+                public static readonly GRAY_1: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly RED: number /*byte*/
+                public static readonly RED: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly PALE_BLUE: number /*byte*/
+                public static readonly PALE_BLUE: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly GRAY_2: number /*byte*/
+                public static readonly GRAY_2: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly DARK_GREEN: number /*byte*/
+                public static readonly DARK_GREEN: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly WHITE: number /*byte*/
+                public static readonly WHITE: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly LIGHT_GRAY: number /*byte*/
+                public static readonly LIGHT_GRAY: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly BROWN: number /*byte*/
+                public static readonly BROWN: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly DARK_GRAY: number /*byte*/
+                public static readonly DARK_GRAY: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly BLUE: number /*byte*/
+                public static readonly BLUE: number /*byte*/
                 /**
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                readonly DARK_BROWN: number /*byte*/
+                public static readonly DARK_BROWN: number /*byte*/
                 /**
                  * Resize an image to 128x128.
                  * @param image The image to resize.
                  * @return The resized image.
                  */
                 // @ts-ignore
-                resizeImage(image: java.awt.Image): java.awt.image.BufferedImage
+                public static resizeImage(image: java.awt.Image): java.awt.image.BufferedImage
                 /**
                  * Convert an Image to a byte[] using the palette.
                  * @param image The image to convert.
@@ -93,7 +93,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                imageToBytes(image: java.awt.Image): byte[]
+                public static imageToBytes(image: java.awt.Image): number /*byte*/[]
                 /**
                  * Get the index of the closest matching color in the palette to the given
                  * color.
@@ -104,7 +104,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                matchColor(r: number /*int*/, g: number /*int*/, b: number /*int*/): byte
+                public static matchColor(r: number /*int*/, g: number /*int*/, b: number /*int*/): number /*byte*/
                 /**
                  * Get the index of the closest matching color in the palette to the given
                  * color.
@@ -113,7 +113,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                matchColor(color: java.awt.Color): byte
+                public static matchColor(color: java.awt.Color): number /*byte*/
                 /**
                  * Get the value of the given color in the palette.
                  * @param index The index in the palette.
@@ -121,7 +121,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getColor(index: number /*byte*/): java.awt.Color
+                public static getColor(index: number /*byte*/): java.awt.Color
             }
         }
     }

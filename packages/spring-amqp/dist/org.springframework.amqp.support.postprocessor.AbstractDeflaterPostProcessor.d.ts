@@ -9,7 +9,7 @@ declare namespace org {
                      * @since 1.4.2
                      */
                     // @ts-ignore
-                    class AbstractDeflaterPostProcessor extends org.springframework.amqp.support.postprocessor.AbstractCompressingPostProcessor {
+                    abstract class AbstractDeflaterPostProcessor extends org.springframework.amqp.support.postprocessor.AbstractCompressingPostProcessor {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
@@ -22,7 +22,7 @@ declare namespace org {
                          * @see Deflater
                          */
                         // @ts-ignore
-                        setLevel(level: number /*int*/): void
+                        public setLevel(level: number /*int*/): void
                     }
                 }
             }

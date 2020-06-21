@@ -163,7 +163,7 @@ declare namespace java {
          * @see CharacterIterator
          */
         // @ts-ignore
-        class BreakIterator extends java.lang.Object implements java.lang.Cloneable {
+        abstract class BreakIterator extends java.lang.Object implements java.lang.Cloneable {
             /**
              * Constructor. BreakIterator is stateless and has no default behavior.
              */
@@ -175,27 +175,27 @@ declare namespace java {
              * reached.
              */
             // @ts-ignore
-            readonly DONE: number /*int*/
+            public static readonly DONE: number /*int*/
             /**
              * Create a copy of this iterator
              * @return A copy of this
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Returns the first boundary. The iterator's current position is set
              * to the first text boundary.
              * @return The character index of the first text boundary.
              */
             // @ts-ignore
-            abstract first(): int
+            public abstract first(): number /*int*/
             /**
              * Returns the last boundary. The iterator's current position is set
              * to the last text boundary.
              * @return The character index of the last text boundary.
              */
             // @ts-ignore
-            abstract last(): int
+            public abstract last(): number /*int*/
             /**
              * Returns the nth boundary from the current boundary. If either
              * the first or last text boundary has been reached, it returns
@@ -216,7 +216,7 @@ declare namespace java {
              *  has been reached.
              */
             // @ts-ignore
-            abstract next(n: number /*int*/): int
+            public abstract next(n: number /*int*/): number /*int*/
             /**
              * Returns the boundary following the current boundary. If the current boundary
              * is the last text boundary, it returns <code>BreakIterator.DONE</code> and
@@ -229,7 +229,7 @@ declare namespace java {
              * @see #next(int)
              */
             // @ts-ignore
-            abstract next(): int
+            public abstract next(): number /*int*/
             /**
              * Returns the boundary preceding the current boundary. If the current boundary
              * is the first text boundary, it returns <code>BreakIterator.DONE</code> and
@@ -240,7 +240,7 @@ declare namespace java {
              *  boundary.
              */
             // @ts-ignore
-            abstract previous(): int
+            public abstract previous(): number /*int*/
             /**
              * Returns the first boundary following the specified character offset. If the
              * specified offset equals to the last text boundary, it returns
@@ -256,7 +256,7 @@ declare namespace java {
              *  the first text boundary or greater than the last text boundary.
              */
             // @ts-ignore
-            abstract following(offset: number /*int*/): int
+            public abstract following(offset: number /*int*/): number /*int*/
             /**
              * Returns the last boundary preceding the specified character offset. If the
              * specified offset equals to the first text boundary, it returns
@@ -273,7 +273,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            preceding(offset: number /*int*/): int
+            public preceding(offset: number /*int*/): number /*int*/
             /**
              * Returns true if the specified character offset is a text boundary.
              * @param offset the character offset to check.
@@ -284,7 +284,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            isBoundary(offset: number /*int*/): boolean
+            public isBoundary(offset: number /*int*/): boolean
             /**
              * Returns character index of the text boundary that was most
              * recently returned by next(), next(int), previous(), first(), last(),
@@ -303,27 +303,27 @@ declare namespace java {
              * @see #preceding(int)
              */
             // @ts-ignore
-            abstract current(): int
+            public abstract current(): number /*int*/
             /**
              * Get the text being scanned
              * @return the text being scanned
              */
             // @ts-ignore
-            abstract getText(): java.text.CharacterIterator
+            public abstract getText(): java.text.CharacterIterator
             /**
              * Set a new text string to be scanned.  The current scan
              * position is reset to first().
              * @param newText new text to scan.
              */
             // @ts-ignore
-            setText(newText: string): void
+            public setText(newText: java.lang.String | string): void
             /**
              * Set a new text for scanning.  The current scan
              * position is reset to first().
              * @param newText new text to scan.
              */
             // @ts-ignore
-            abstract setText(newText: java.text.CharacterIterator): void
+            public abstract setText(newText: java.text.CharacterIterator): void
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#word">word breaks</a>
@@ -331,7 +331,7 @@ declare namespace java {
              * @return A break iterator for word breaks
              */
             // @ts-ignore
-            getWordInstance(): java.text.BreakIterator
+            public static getWordInstance(): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#word">word breaks</a>
@@ -341,7 +341,7 @@ declare namespace java {
              * @exception NullPointerException if <code>locale</code> is null
              */
             // @ts-ignore
-            getWordInstance(locale: java.util.Locale): java.text.BreakIterator
+            public static getWordInstance(locale: java.util.Locale): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#line">line breaks</a>
@@ -349,7 +349,7 @@ declare namespace java {
              * @return A break iterator for line breaks
              */
             // @ts-ignore
-            getLineInstance(): java.text.BreakIterator
+            public static getLineInstance(): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#line">line breaks</a>
@@ -359,7 +359,7 @@ declare namespace java {
              * @exception NullPointerException if <code>locale</code> is null
              */
             // @ts-ignore
-            getLineInstance(locale: java.util.Locale): java.text.BreakIterator
+            public static getLineInstance(locale: java.util.Locale): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#character">character breaks</a>
@@ -367,7 +367,7 @@ declare namespace java {
              * @return A break iterator for character breaks
              */
             // @ts-ignore
-            getCharacterInstance(): java.text.BreakIterator
+            public static getCharacterInstance(): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#character">character breaks</a>
@@ -377,7 +377,7 @@ declare namespace java {
              * @exception NullPointerException if <code>locale</code> is null
              */
             // @ts-ignore
-            getCharacterInstance(locale: java.util.Locale): java.text.BreakIterator
+            public static getCharacterInstance(locale: java.util.Locale): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#sentence">sentence breaks</a>
@@ -385,7 +385,7 @@ declare namespace java {
              * @return A break iterator for sentence breaks
              */
             // @ts-ignore
-            getSentenceInstance(): java.text.BreakIterator
+            public static getSentenceInstance(): java.text.BreakIterator
             /**
              * Returns a new <code>BreakIterator</code> instance
              * for <a href="BreakIterator.html#sentence">sentence breaks</a>
@@ -395,7 +395,7 @@ declare namespace java {
              * @exception NullPointerException if <code>locale</code> is null
              */
             // @ts-ignore
-            getSentenceInstance(locale: java.util.Locale): java.text.BreakIterator
+            public static getSentenceInstance(locale: java.util.Locale): java.text.BreakIterator
             /**
              * Returns an array of all locales for which the
              * <code>get*Instance</code> methods of this class can return
@@ -409,7 +409,7 @@ declare namespace java {
              *          <code>BreakIterator</code> instances are available.
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
         }
     }
 }

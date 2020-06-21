@@ -29,13 +29,13 @@ declare namespace org {
                                  * @return The value for the age
                                  */
                                 // @ts-ignore
-                                age(): org.spongepowered.api.data.value.mutable.Value<java.lang.Long>
+                                age(): org.spongepowered.api.data.value.mutable.Value<java.lang.Long | number>
                                 /**
                                  * Gets the {@link Value} for the teleport cooldown of the {@link EndGateway}.
                                  * @return The value for the teleport cooldown
                                  */
                                 // @ts-ignore
-                                teleportCooldown(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer>
+                                teleportCooldown(): org.spongepowered.api.data.value.mutable.Value<java.lang.Integer | number>
                             }
                         }
                     }

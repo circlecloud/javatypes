@@ -55,7 +55,7 @@ declare namespace java {
              * @author Sean Mullan
              */
             // @ts-ignore
-            class PKIXCertPathChecker extends java.lang.Object implements java.security.cert.CertPathChecker, java.lang.Cloneable {
+            abstract class PKIXCertPathChecker extends java.lang.Object implements java.security.cert.CertPathChecker, java.lang.Cloneable {
                 /**
                  * Default constructor.
                  */
@@ -78,7 +78,7 @@ declare namespace java {
                  *  is false since reverse checking must be supported
                  */
                 // @ts-ignore
-                abstract init(forward: boolean): void
+                public abstract init(forward: boolean): void
                 /**
                  * Indicates if forward checking is supported. Forward checking refers
                  * to the ability of the {@code PKIXCertPathChecker} to perform
@@ -88,7 +88,7 @@ declare namespace java {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                abstract isForwardCheckingSupported(): boolean
+                public abstract isForwardCheckingSupported(): boolean
                 /**
                  * Returns an immutable {@code Set} of X.509 certificate extensions
                  * that this {@code PKIXCertPathChecker} supports (i.e. recognizes, is
@@ -107,7 +107,7 @@ declare namespace java {
                  *  extensions are supported
                  */
                 // @ts-ignore
-                abstract getSupportedExtensions(): java.util.Set<java.lang.String>
+                public abstract getSupportedExtensions(): Array<java.lang.String | string>
                 /**
                  * Performs the check(s) on the specified certificate using its internal
                  * state and removes any critical extensions that it processes from the
@@ -121,14 +121,14 @@ declare namespace java {
                  *  not pass the check
                  */
                 // @ts-ignore
-                abstract check(cert: java.security.cert.Certificate, unresolvedCritExts: Array<java.lang.String>): void
+                public abstract check(cert: java.security.cert.Certificate, unresolvedCritExts: java.util.Collection<java.lang.String | string> | Array<java.lang.String | string>): void
                 /**
                  * {@inheritDoc}
                  * <p>This implementation calls
                  * {@code check(cert, java.util.Collections.<String>emptySet())}.
                  */
                 // @ts-ignore
-                check(cert: java.security.cert.Certificate): void
+                public check(cert: java.security.cert.Certificate): void
                 /**
                  * Returns a clone of this object. Calls the {@code Object.clone()}
                  * method.
@@ -137,7 +137,7 @@ declare namespace java {
                  * @return a copy of this {#code PKIXCertPathChecker}
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

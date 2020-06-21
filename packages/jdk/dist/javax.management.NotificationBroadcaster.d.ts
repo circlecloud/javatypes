@@ -50,7 +50,7 @@ declare namespace javax {
              * @see #removeNotificationListener
              */
             // @ts-ignore
-            addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: any): void
+            addNotificationListener(listener: javax.management.NotificationListener, filter: javax.management.NotificationFilter, handback: java.lang.Object | any): void
             /**
              * Removes a listener from this MBean.  If the listener
              * has been registered with different handback objects or

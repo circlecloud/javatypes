@@ -17,9 +17,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        invoke(invocation: MethodInvocation): java.lang.Object
+                        public invoke(invocation: MethodInvocation): any
                         // @ts-ignore
-                        getAmqpTemplate(): org.springframework.amqp.core.AmqpTemplate
+                        public getAmqpTemplate(): org.springframework.amqp.core.AmqpTemplate
                         /**
                          * The AMQP template to be used for sending messages and receiving results. This class is using "Request/Reply" for
                          * sending messages as described <a href=
@@ -28,9 +28,9 @@ declare namespace org {
                          * @param amqpTemplate The amqp template.
                          */
                         // @ts-ignore
-                        setAmqpTemplate(amqpTemplate: org.springframework.amqp.core.AmqpTemplate): void
+                        public setAmqpTemplate(amqpTemplate: org.springframework.amqp.core.AmqpTemplate): void
                         // @ts-ignore
-                        getRoutingKey(): java.lang.String
+                        public getRoutingKey(): string
                         /**
                          * The routing key to send calls to the service with. Use this to route the messages to a specific queue on the
                          * broker. If not set, the {@link AmqpTemplate}'s default routing key will be used.
@@ -39,9 +39,9 @@ declare namespace org {
                          * @param routingKey The routing key.
                          */
                         // @ts-ignore
-                        setRoutingKey(routingKey: string): void
+                        public setRoutingKey(routingKey: java.lang.String | string): void
                         // @ts-ignore
-                        getRemoteInvocationFactory(): RemoteInvocationFactory
+                        public getRemoteInvocationFactory(): RemoteInvocationFactory
                         /**
                          * Set the RemoteInvocationFactory to use for this accessor. Default is a {@link DefaultRemoteInvocationFactory}.
                          * <p>
@@ -49,7 +49,7 @@ declare namespace org {
                          * @param remoteInvocationFactory The remote invocation factory.
                          */
                         // @ts-ignore
-                        setRemoteInvocationFactory(remoteInvocationFactory: RemoteInvocationFactory): void
+                        public setRemoteInvocationFactory(remoteInvocationFactory: RemoteInvocationFactory): void
                     }
                 }
             }

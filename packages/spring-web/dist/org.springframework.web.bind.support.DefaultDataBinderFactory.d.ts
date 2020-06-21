@@ -24,7 +24,7 @@ declare namespace org {
                          * @throws Exception in case of invalid state or arguments
                          */
                         // @ts-ignore
-                        createBinder(webRequest: org.springframework.web.context.request.NativeWebRequest, target: any, objectName: string): org.springframework.web.bind.WebDataBinder
+                        public createBinder(webRequest: org.springframework.web.context.request.NativeWebRequest, target: java.lang.Object | any, objectName: java.lang.String | string): org.springframework.web.bind.WebDataBinder
                         /**
                          * Extension point to create the WebDataBinder instance.
                          * By default this is {@code WebRequestDataBinder}.
@@ -34,7 +34,7 @@ declare namespace org {
                          * @throws Exception in case of invalid state or arguments
                          */
                         // @ts-ignore
-                        createBinderInstance(target: any, objectName: string, webRequest: org.springframework.web.context.request.NativeWebRequest): org.springframework.web.bind.WebDataBinder
+                        createBinderInstance(target: java.lang.Object | any, objectName: java.lang.String | string, webRequest: org.springframework.web.context.request.NativeWebRequest): org.springframework.web.bind.WebDataBinder
                         /**
                          * Extension point to further initialize the created data binder instance
                          * (e.g. with {@code @InitBinder} methods) after "global" initialization

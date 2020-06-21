@@ -21,96 +21,96 @@ declare namespace org {
                          * @see BeanPropertyBindingResult
                          */
                         // @ts-ignore
-                        getBindingResult(): BindingResult
+                        public getBindingResult(): BindingResult
                         // @ts-ignore
-                        getObjectName(): java.lang.String
+                        public getObjectName(): string
                         // @ts-ignore
-                        setNestedPath(nestedPath: string): void
+                        public setNestedPath(nestedPath: java.lang.String | string): void
                         // @ts-ignore
-                        getNestedPath(): java.lang.String
+                        public getNestedPath(): string
                         // @ts-ignore
-                        pushNestedPath(subPath: string): void
+                        public pushNestedPath(subPath: java.lang.String | string): void
                         // @ts-ignore
-                        popNestedPath(): void
+                        public popNestedPath(): void
                         // @ts-ignore
-                        reject(errorCode: string): void
+                        public reject(errorCode: java.lang.String | string): void
                         // @ts-ignore
-                        reject(errorCode: string, defaultMessage: string): void
+                        public reject(errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                         // @ts-ignore
-                        reject(errorCode: string, errorArgs: any[], defaultMessage: string): void
+                        public reject(errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                         // @ts-ignore
-                        rejectValue(field: string, errorCode: string): void
+                        public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string): void
                         // @ts-ignore
-                        rejectValue(field: string, errorCode: string, defaultMessage: string): void
+                        public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, defaultMessage: java.lang.String | string): void
                         // @ts-ignore
-                        rejectValue(field: string, errorCode: string, errorArgs: any[], defaultMessage: string): void
+                        public rejectValue(field: java.lang.String | string, errorCode: java.lang.String | string, errorArgs: java.lang.Object[] | any[], defaultMessage: java.lang.String | string): void
                         // @ts-ignore
-                        addAllErrors(errors: Errors): void
+                        public addAllErrors(errors: Errors): void
                         // @ts-ignore
-                        hasErrors(): boolean
+                        public hasErrors(): boolean
                         // @ts-ignore
-                        getErrorCount(): int
+                        public getErrorCount(): number /*int*/
                         // @ts-ignore
-                        getAllErrors(): java.util.List<ObjectError>
+                        public getAllErrors(): Array<ObjectError>
                         // @ts-ignore
-                        hasGlobalErrors(): boolean
+                        public hasGlobalErrors(): boolean
                         // @ts-ignore
-                        getGlobalErrorCount(): int
+                        public getGlobalErrorCount(): number /*int*/
                         // @ts-ignore
-                        getGlobalErrors(): java.util.List<ObjectError>
+                        public getGlobalErrors(): Array<ObjectError>
                         // @ts-ignore
-                        getGlobalError(): ObjectError
+                        public getGlobalError(): ObjectError
                         // @ts-ignore
-                        hasFieldErrors(): boolean
+                        public hasFieldErrors(): boolean
                         // @ts-ignore
-                        getFieldErrorCount(): int
+                        public getFieldErrorCount(): number /*int*/
                         // @ts-ignore
-                        getFieldErrors(): java.util.List<FieldError>
+                        public getFieldErrors(): Array<FieldError>
                         // @ts-ignore
-                        getFieldError(): FieldError
+                        public getFieldError(): FieldError
                         // @ts-ignore
-                        hasFieldErrors(field: string): boolean
+                        public hasFieldErrors(field: java.lang.String | string): boolean
                         // @ts-ignore
-                        getFieldErrorCount(field: string): int
+                        public getFieldErrorCount(field: java.lang.String | string): number /*int*/
                         // @ts-ignore
-                        getFieldErrors(field: string): java.util.List<FieldError>
+                        public getFieldErrors(field: java.lang.String | string): Array<FieldError>
                         // @ts-ignore
-                        getFieldError(field: string): FieldError
+                        public getFieldError(field: java.lang.String | string): FieldError
                         // @ts-ignore
-                        getFieldValue(field: string): java.lang.Object
+                        public getFieldValue(field: java.lang.String | string): any
                         // @ts-ignore
-                        getFieldType(field: string): java.lang.Class<?>
+                        public getFieldType(field: java.lang.String | string): java.lang.Class<any>
                         // @ts-ignore
-                        getTarget(): java.lang.Object
+                        public getTarget(): any
                         // @ts-ignore
-                        getModel(): java.util.Map<java.lang.String, java.lang.Object>
+                        public getModel(): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        getRawFieldValue(field: string): java.lang.Object
+                        public getRawFieldValue(field: java.lang.String | string): any
                         // @ts-ignore
-                        findEditor(field: string, valueType: java.lang.Class): java.beans.PropertyEditor
+                        public findEditor(field: java.lang.String | string, valueType: java.lang.Class<any>): java.beans.PropertyEditor
                         // @ts-ignore
-                        getPropertyEditorRegistry(): PropertyEditorRegistry
+                        public getPropertyEditorRegistry(): PropertyEditorRegistry
                         // @ts-ignore
-                        resolveMessageCodes(errorCode: string): java.lang.String[]
+                        public resolveMessageCodes(errorCode: java.lang.String | string): string[]
                         // @ts-ignore
-                        resolveMessageCodes(errorCode: string, field: string): java.lang.String[]
+                        public resolveMessageCodes(errorCode: java.lang.String | string, field: java.lang.String | string): string[]
                         // @ts-ignore
-                        addError(error: ObjectError): void
+                        public addError(error: ObjectError): void
                         // @ts-ignore
-                        recordFieldValue(field: string, type: java.lang.Class<any>, value: any): void
+                        public recordFieldValue(field: java.lang.String | string, type: java.lang.Class<any>, value: java.lang.Object | any): void
                         // @ts-ignore
-                        recordSuppressedField(field: string): void
+                        public recordSuppressedField(field: java.lang.String | string): void
                         // @ts-ignore
-                        getSuppressedFields(): java.lang.String[]
+                        public getSuppressedFields(): string[]
                         /**
                          * Returns diagnostic information about the errors held in this object.
                          */
                         // @ts-ignore
-                        getMessage(): java.lang.String
+                        public getMessage(): string
                         // @ts-ignore
-                        equals(other: any): boolean
+                        public equals(other: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

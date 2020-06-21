@@ -17,7 +17,7 @@ declare namespace java {
                  * @see Label#setText
                  */
                 // @ts-ignore
-                setText(label: string): void
+                setText(label: java.lang.String | string): void
                 /**
                  * Sets the alignment of the label text.
                  * @param alignment the alignment of the label text

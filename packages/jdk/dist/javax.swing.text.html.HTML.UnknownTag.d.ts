@@ -11,13 +11,13 @@ declare namespace javax {
                          * @param id the id of the new tag
                          */
                         // @ts-ignore
-                        constructor(id: string)
+                        constructor(id: java.lang.String | string)
                         /**
                          * Returns the hash code which corresponds to the string
                          * for this tag.
                          */
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         /**
                          * Compares this object to the specified object.
                          * The result is <code>true</code> if and only if the argument is not
@@ -28,7 +28,7 @@ declare namespace javax {
                          *             <code>false</code> otherwise
                          */
                         // @ts-ignore
-                        equals(obj: any): boolean
+                        public equals(obj: java.lang.Object | any): boolean
                     }
                 }
             }

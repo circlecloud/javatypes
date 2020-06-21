@@ -19,7 +19,7 @@ declare namespace javax {
                  *     this exception.
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
                 /**
                  * Constructor taking an exception and a string.
                  * @param e Exception that we may have caught to reissue as an
@@ -30,7 +30,7 @@ declare namespace javax {
                  *     this exception.
                  */
                 // @ts-ignore
-                constructor(e: java.lang.Exception, s: string)
+                constructor(e: java.lang.Exception, s: java.lang.String | string)
             }
         }
     }

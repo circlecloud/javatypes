@@ -73,20 +73,20 @@ declare namespace org {
                  * @return the HTTP status as an HttpStatus enum entry
                  */
                 // @ts-ignore
-                getStatusCode(): org.springframework.http.HttpStatus
+                public getStatusCode(): org.springframework.http.HttpStatus
                 /**
                  * Return the HTTP status code of the response.
                  * @return the HTTP status as an int value
                  * @since 4.3
                  */
                 // @ts-ignore
-                getStatusCodeValue(): int
+                public getStatusCodeValue(): number /*int*/
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Create a builder with the given status.
                  * @param status the response status
@@ -94,7 +94,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                status(status: org.springframework.http.HttpStatus): org.springframework.http.ResponseEntity.BodyBuilder
+                public static status(status: org.springframework.http.HttpStatus): org.springframework.http.ResponseEntity.BodyBuilder
                 /**
                  * Create a builder with the given status.
                  * @param status the response status
@@ -102,7 +102,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                status(status: number /*int*/): org.springframework.http.ResponseEntity.BodyBuilder
+                public static status(status: number /*int*/): org.springframework.http.ResponseEntity.BodyBuilder
                 /**
                  * A shortcut for creating a {@code ResponseEntity} with the given body
                  * and the {@linkplain HttpStatus#OK OK} status, or an empty body and a
@@ -112,14 +112,14 @@ declare namespace org {
                  * @since 5.1
                  */
                 // @ts-ignore
-                of<T>(body: java.util.Optional<T>): org.springframework.http.ResponseEntity<T>
+                public static of<T>(body: java.util.Optional<T>): org.springframework.http.ResponseEntity<T>
                 /**
                  * Create a builder with the status set to {@linkplain HttpStatus#OK OK}.
                  * @return the created builder
                  * @since 4.1
                  */
                 // @ts-ignore
-                ok(): org.springframework.http.ResponseEntity.BodyBuilder
+                public static ok(): org.springframework.http.ResponseEntity.BodyBuilder
                 /**
                  * A shortcut for creating a {@code ResponseEntity} with the given body and
                  * the status set to {@linkplain HttpStatus#OK OK}.
@@ -127,7 +127,7 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                ok<T>(body: T): org.springframework.http.ResponseEntity<T>
+                public static ok<T>(body: T): org.springframework.http.ResponseEntity<T>
                 /**
                  * Create a new builder with a {@linkplain HttpStatus#CREATED CREATED} status
                  * and a location header set to the given URI.
@@ -136,35 +136,35 @@ declare namespace org {
                  * @since 4.1
                  */
                 // @ts-ignore
-                created(location: java.net.URI): org.springframework.http.ResponseEntity.BodyBuilder
+                public static created(location: java.net.URI): org.springframework.http.ResponseEntity.BodyBuilder
                 /**
                  * Create a builder with an {@linkplain HttpStatus#ACCEPTED ACCEPTED} status.
                  * @return the created builder
                  * @since 4.1
                  */
                 // @ts-ignore
-                accepted(): org.springframework.http.ResponseEntity.BodyBuilder
+                public static accepted(): org.springframework.http.ResponseEntity.BodyBuilder
                 /**
                  * Create a builder with a {@linkplain HttpStatus#NO_CONTENT NO_CONTENT} status.
                  * @return the created builder
                  * @since 4.1
                  */
                 // @ts-ignore
-                noContent(): org.springframework.http.ResponseEntity.HeadersBuilder<?>
+                public static noContent(): org.springframework.http.ResponseEntity.HeadersBuilder<any>
                 /**
                  * Create a builder with a {@linkplain HttpStatus#BAD_REQUEST BAD_REQUEST} status.
                  * @return the created builder
                  * @since 4.1
                  */
                 // @ts-ignore
-                badRequest(): org.springframework.http.ResponseEntity.BodyBuilder
+                public static badRequest(): org.springframework.http.ResponseEntity.BodyBuilder
                 /**
                  * Create a builder with a {@linkplain HttpStatus#NOT_FOUND NOT_FOUND} status.
                  * @return the created builder
                  * @since 4.1
                  */
                 // @ts-ignore
-                notFound(): org.springframework.http.ResponseEntity.HeadersBuilder<?>
+                public static notFound(): org.springframework.http.ResponseEntity.HeadersBuilder<any>
                 /**
                  * Create a builder with an
                  * {@linkplain HttpStatus#UNPROCESSABLE_ENTITY UNPROCESSABLE_ENTITY} status.
@@ -172,7 +172,7 @@ declare namespace org {
                  * @since 4.1.3
                  */
                 // @ts-ignore
-                unprocessableEntity(): org.springframework.http.ResponseEntity.BodyBuilder
+                public static unprocessableEntity(): org.springframework.http.ResponseEntity.BodyBuilder
             }
         }
     }

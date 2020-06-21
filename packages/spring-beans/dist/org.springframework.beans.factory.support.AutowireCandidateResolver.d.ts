@@ -56,7 +56,7 @@ declare namespace org {
                          * @since 3.0
                          */
                         // @ts-ignore
-                        getSuggestedValue(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.lang.Object
+                        getSuggestedValue(descriptor: org.springframework.beans.factory.config.DependencyDescriptor): any
                         /**
                          * Build a proxy for lazy resolution of the actual dependency target,
                          * if demanded by the injection point.
@@ -68,7 +68,7 @@ declare namespace org {
                          * @since 4.0
                          */
                         // @ts-ignore
-                        getLazyResolutionProxyIfNecessary(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, beanName: string): java.lang.Object
+                        getLazyResolutionProxyIfNecessary(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, beanName: java.lang.String | string): any
                     }
                 }
             }

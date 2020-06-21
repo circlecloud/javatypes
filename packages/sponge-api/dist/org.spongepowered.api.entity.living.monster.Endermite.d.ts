@@ -21,7 +21,7 @@ declare namespace org {
                              * @return The immutable bounded value for the amount of ticks remaining
                              */
                             // @ts-ignore
-                            expireTicks(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                            expireTicks(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                         }
                     }
                 }

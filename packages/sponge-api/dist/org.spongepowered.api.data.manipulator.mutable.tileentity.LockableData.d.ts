@@ -19,7 +19,7 @@ declare namespace org {
                                  * @see Keys#LOCK_TOKEN
                                  */
                                 // @ts-ignore
-                                lockToken(): org.spongepowered.api.data.value.mutable.Value<java.lang.String>
+                                lockToken(): org.spongepowered.api.data.value.mutable.Value<java.lang.String | string>
                             }
                         }
                     }

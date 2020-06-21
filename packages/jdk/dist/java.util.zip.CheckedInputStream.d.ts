@@ -22,7 +22,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                read(): int
+                public read(): number /*int*/
                 /**
                  * Reads into an array of bytes. If <code>len</code> is not zero, the method
                  * blocks until some input is available; otherwise, no
@@ -39,7 +39,7 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                read(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+                public read(buf: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
                 /**
                  * Skips specified number of bytes of input.
                  * @param n the number of bytes to skip
@@ -47,13 +47,13 @@ declare namespace java {
                  * @exception IOException if an I/O error has occurred
                  */
                 // @ts-ignore
-                skip(n: number /*long*/): long
+                public skip(n: number /*long*/): number /*long*/
                 /**
                  * Returns the Checksum for this input stream.
                  * @return the Checksum value
                  */
                 // @ts-ignore
-                getChecksum(): java.util.zip.Checksum
+                public getChecksum(): java.util.zip.Checksum
             }
         }
     }

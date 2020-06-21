@@ -30,7 +30,7 @@ declare namespace java {
          * @since 1.8
          */
         // @ts-ignore
-        class FunctionalInterface implements java.lang.annotation.Annotation {
+        abstract class FunctionalInterface implements java.lang.annotation.Annotation {
         }
     }
 }

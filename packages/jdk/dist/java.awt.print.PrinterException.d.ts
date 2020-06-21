@@ -21,7 +21,7 @@ declare namespace java {
                  *  <code>PrinterException</code> is thrown
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
             }
         }
     }

@@ -9,7 +9,7 @@ declare namespace javax {
              * @see ImageWriterSpi
              */
             // @ts-ignore
-            class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider {
+            abstract class ImageReaderWriterSpi extends javax.imageio.spi.IIOServiceProvider {
                 /**
                  * Constructs an <code>ImageReaderWriterSpi</code> with a given
                  * set of values.
@@ -79,7 +79,7 @@ declare namespace javax {
                  *  is <code>null</code>.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string, names: string[], suffixes: string[], MIMETypes: string[], pluginClassName: string, supportsStandardStreamMetadataFormat: boolean, nativeStreamMetadataFormatName: string, nativeStreamMetadataFormatClassName: string, extraStreamMetadataFormatNames: string[], extraStreamMetadataFormatClassNames: string[], supportsStandardImageMetadataFormat: boolean, nativeImageMetadataFormatName: string, nativeImageMetadataFormatClassName: string, extraImageMetadataFormatNames: string[], extraImageMetadataFormatClassNames: string[])
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string, names: java.lang.String[] | string[], suffixes: java.lang.String[] | string[], MIMETypes: java.lang.String[] | string[], pluginClassName: java.lang.String | string, supportsStandardStreamMetadataFormat: boolean, nativeStreamMetadataFormatName: java.lang.String | string, nativeStreamMetadataFormatClassName: java.lang.String | string, extraStreamMetadataFormatNames: java.lang.String[] | string[], extraStreamMetadataFormatClassNames: java.lang.String[] | string[], supportsStandardImageMetadataFormat: boolean, nativeImageMetadataFormatName: java.lang.String | string, nativeImageMetadataFormatClassName: java.lang.String | string, extraImageMetadataFormatNames: java.lang.String[] | string[], extraImageMetadataFormatClassNames: java.lang.String[] | string[])
                 /**
                  * Constructs a blank <code>ImageReaderWriterSpi</code>.  It is up
                  * to the subclass to initialize instance variables and/or
@@ -94,25 +94,25 @@ declare namespace javax {
                  * Constructors should set this to a non-<code>null</code> value.
                  */
                 // @ts-ignore
-                names: string[]
+                names: java.lang.String[] | string[]
                 /**
                  * An array of strings to be returned from
                  * <code>getFileSuffixes</code>, initially <code>null</code>.
                  */
                 // @ts-ignore
-                suffixes: string[]
+                suffixes: java.lang.String[] | string[]
                 /**
                  * An array of strings to be returned from
                  * <code>getMIMETypes</code>, initially <code>null</code>.
                  */
                 // @ts-ignore
-                MIMETypes: string[]
+                MIMETypes: java.lang.String[] | string[]
                 /**
                  * A <code>String</code> containing the name of the associated
                  * plug-in class, initially <code>null</code>.
                  */
                 // @ts-ignore
-                pluginClassName: string
+                pluginClassName: java.lang.String | string
                 /**
                  * A boolean indicating whether this plug-in supports the
                  * standard metadata format for stream metadata, initially
@@ -126,28 +126,28 @@ declare namespace javax {
                  * <code>null</code>.
                  */
                 // @ts-ignore
-                nativeStreamMetadataFormatName: string
+                nativeStreamMetadataFormatName: java.lang.String | string
                 /**
                  * A <code>String</code> containing the class name of the native
                  * stream metadata format supported by this plug-in, initially
                  * <code>null</code>.
                  */
                 // @ts-ignore
-                nativeStreamMetadataFormatClassName: string
+                nativeStreamMetadataFormatClassName: java.lang.String | string
                 /**
                  * An array of <code>String</code>s containing the names of any
                  * additional stream metadata formats supported by this plug-in,
                  * initially <code>null</code>.
                  */
                 // @ts-ignore
-                extraStreamMetadataFormatNames: string[]
+                extraStreamMetadataFormatNames: java.lang.String[] | string[]
                 /**
                  * An array of <code>String</code>s containing the class names of
                  * any additional stream metadata formats supported by this plug-in,
                  * initially <code>null</code>.
                  */
                 // @ts-ignore
-                extraStreamMetadataFormatClassNames: string[]
+                extraStreamMetadataFormatClassNames: java.lang.String[] | string[]
                 /**
                  * A boolean indicating whether this plug-in supports the
                  * standard metadata format for image metadata, initially
@@ -161,28 +161,28 @@ declare namespace javax {
                  * initially <code>null</code>.
                  */
                 // @ts-ignore
-                nativeImageMetadataFormatName: string
+                nativeImageMetadataFormatName: java.lang.String | string
                 /**
                  * A <code>String</code> containing the class name of the
                  * native stream metadata format supported by this plug-in,
                  * initially <code>null</code>.
                  */
                 // @ts-ignore
-                nativeImageMetadataFormatClassName: string
+                nativeImageMetadataFormatClassName: java.lang.String | string
                 /**
                  * An array of <code>String</code>s containing the names of any
                  * additional image metadata formats supported by this plug-in,
                  * initially <code>null</code>.
                  */
                 // @ts-ignore
-                extraImageMetadataFormatNames: string[]
+                extraImageMetadataFormatNames: java.lang.String[] | string[]
                 /**
                  * An array of <code>String</code>s containing the class names of
                  * any additional image metadata formats supported by this
                  * plug-in, initially <code>null</code>.
                  */
                 // @ts-ignore
-                extraImageMetadataFormatClassNames: string[]
+                extraImageMetadataFormatClassNames: java.lang.String[] | string[]
                 /**
                  * Returns an array of <code>String</code>s containing
                  * human-readable names for the formats that are generally usable
@@ -195,7 +195,7 @@ declare namespace javax {
                  *  associated with this reader or writer.
                  */
                 // @ts-ignore
-                getFormatNames(): java.lang.String[]
+                public getFormatNames(): string[]
                 /**
                  * Returns an array of <code>String</code>s containing a list of
                  * file suffixes associated with the formats that are generally
@@ -215,7 +215,7 @@ declare namespace javax {
                  *  writer, or <code>null</code>.
                  */
                 // @ts-ignore
-                getFileSuffixes(): java.lang.String[]
+                public getFileSuffixes(): string[]
                 /**
                  * Returns an array of <code>String</code>s containing a list of
                  * MIME types associated with the formats that are generally
@@ -245,7 +245,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                getMIMETypes(): java.lang.String[]
+                public getMIMETypes(): string[]
                 /**
                  * Returns the fully-qualified class name of the
                  * <code>ImageReader</code> or <code>ImageWriter</code> plug-in
@@ -254,7 +254,7 @@ declare namespace javax {
                  *  <code>String</code>.
                  */
                 // @ts-ignore
-                getPluginClassName(): java.lang.String
+                public getPluginClassName(): string
                 /**
                  * Returns <code>true</code> if the standard metadata format is
                  * among the document formats recognized by the
@@ -265,7 +265,7 @@ declare namespace javax {
                  *  for stream metadata.
                  */
                 // @ts-ignore
-                isStandardStreamMetadataFormatSupported(): boolean
+                public isStandardStreamMetadataFormatSupported(): boolean
                 /**
                  * Returns the name of the "native" stream metadata format for
                  * this plug-in, which typically allows for lossless encoding and
@@ -279,7 +279,7 @@ declare namespace javax {
                  *  <code>null</code>.
                  */
                 // @ts-ignore
-                getNativeStreamMetadataFormatName(): java.lang.String
+                public getNativeStreamMetadataFormatName(): string
                 /**
                  * Returns an array of <code>String</code>s containing the names
                  * of additional document formats, other than the native and
@@ -302,7 +302,7 @@ declare namespace javax {
                  * @see #getNativeStreamMetadataFormatName
                  */
                 // @ts-ignore
-                getExtraStreamMetadataFormatNames(): java.lang.String[]
+                public getExtraStreamMetadataFormatNames(): string[]
                 /**
                  * Returns <code>true</code> if the standard metadata format is
                  * among the document formats recognized by the
@@ -313,7 +313,7 @@ declare namespace javax {
                  *  for image metadata.
                  */
                 // @ts-ignore
-                isStandardImageMetadataFormatSupported(): boolean
+                public isStandardImageMetadataFormatSupported(): boolean
                 /**
                  * Returns the name of the "native" image metadata format for
                  * this plug-in, which typically allows for lossless encoding and
@@ -328,7 +328,7 @@ declare namespace javax {
                  * @see #getExtraImageMetadataFormatNames
                  */
                 // @ts-ignore
-                getNativeImageMetadataFormatName(): java.lang.String
+                public getNativeImageMetadataFormatName(): string
                 /**
                  * Returns an array of <code>String</code>s containing the names
                  * of additional document formats, other than the native and
@@ -350,7 +350,7 @@ declare namespace javax {
                  * @see #getNativeImageMetadataFormatName
                  */
                 // @ts-ignore
-                getExtraImageMetadataFormatNames(): java.lang.String[]
+                public getExtraImageMetadataFormatNames(): string[]
                 /**
                  * Returns an <code>IIOMetadataFormat</code> object describing the
                  * given stream metadata format, or <code>null</code> if no
@@ -364,7 +364,7 @@ declare namespace javax {
                  *  is <code>null</code> or is not a supported name.
                  */
                 // @ts-ignore
-                getStreamMetadataFormat(formatName: string): javax.imageio.metadata.IIOMetadataFormat
+                public getStreamMetadataFormat(formatName: java.lang.String | string): javax.imageio.metadata.IIOMetadataFormat
                 /**
                  * Returns an <code>IIOMetadataFormat</code> object describing the
                  * given image metadata format, or <code>null</code> if no
@@ -378,7 +378,7 @@ declare namespace javax {
                  *  is <code>null</code> or is not a supported name.
                  */
                 // @ts-ignore
-                getImageMetadataFormat(formatName: string): javax.imageio.metadata.IIOMetadataFormat
+                public getImageMetadataFormat(formatName: java.lang.String | string): javax.imageio.metadata.IIOMetadataFormat
             }
         }
     }

@@ -7,7 +7,7 @@ declare namespace java {
          * @see StringBuffer
          */
         // @ts-ignore
-        class String extends java.lang.Object implements java.io.Serializable, java.lang.Comparable<java.lang.String>, java.lang.CharSequence {
+        class String extends java.lang.Object implements java.io.Serializable, java.lang.Comparable<java.lang.String | string>, java.lang.CharSequence {
             /**
              * Answers an empty string.
              */
@@ -124,7 +124,7 @@ declare namespace java {
              * @see UnsupportedEncodingException
              */
             // @ts-ignore
-            constructor(data: number /*byte*/[], start: number /*int*/, length: number /*int*/, encoding: string)
+            constructor(data: number /*byte*/[], start: number /*int*/, length: number /*int*/, encoding: java.lang.String | string)
             /**
              * Converts the byte array to a String using the specified encoding.
              * @param data
@@ -150,7 +150,7 @@ declare namespace java {
              * @see UnsupportedEncodingException
              */
             // @ts-ignore
-            constructor(data: number /*byte*/[], encoding: string)
+            constructor(data: number /*byte*/[], encoding: java.lang.String | string)
             /**
              * Initializes this String to contain the characters in the specified character array. Modifying the character array after creating the String has
              * no effect on the String.
@@ -183,7 +183,7 @@ declare namespace java {
              * 			  the String to copy
              */
             // @ts-ignore
-            constructor(string: string)
+            constructor(string: java.lang.String | string)
             /**
              * Creates a string from the contents of a StringBuffer.
              * @param buffer
@@ -248,7 +248,7 @@ declare namespace java {
              * A Comparator which compares Strings ignoring the case of the characters.
              */
             // @ts-ignore
-            readonly CASE_INSENSITIVE_ORDER: java.util.Comparator<java.lang.String>
+            public static readonly CASE_INSENSITIVE_ORDER: java.util.Comparator<java.lang.String | string>
             /**
              * Answers the character at the specified offset in this String.
              * @param index
@@ -258,7 +258,7 @@ declare namespace java {
              * 				when {#code index < 0} or {@code index >= length()}
              */
             // @ts-ignore
-            charAt(index: number /*int*/): char
+            public charAt(index: number /*int*/): string
             /**
              * Compares the specified String to this String using the Unicode values of the characters. Answer 0 if the strings contain the same characters in
              * the same order. Answer a negative integer if the first non-equal character in this String has a Unicode value which is less than the Unicode
@@ -273,7 +273,7 @@ declare namespace java {
              * 				when string is null
              */
             // @ts-ignore
-            compareTo(string: string): int
+            public compareTo(string: java.lang.String | string): number /*int*/
             /**
              * Compare the receiver to the specified String to determine the relative ordering when the case of the characters is ignored.
              * @param string
@@ -281,7 +281,7 @@ declare namespace java {
              * @return an {#code int < 0} if this String is less than the specified String, 0 if they are equal, and {@code > 0} if this String is greater
              */
             // @ts-ignore
-            compareToIgnoreCase(string: string): int
+            public compareToIgnoreCase(string: java.lang.String | string): number /*int*/
             /**
              * Concatenates this String and the specified string.
              * @param string
@@ -291,7 +291,7 @@ declare namespace java {
              * 				if string is null
              */
             // @ts-ignore
-            concat(string: string): java.lang.String
+            public concat(string: java.lang.String | string): string
             /**
              * Creates a new String containing the characters in the specified character array. Modifying the character array after creating the String has no
              * effect on the String.
@@ -302,7 +302,7 @@ declare namespace java {
              * 				if data is null
              */
             // @ts-ignore
-            copyValueOf(data: string[]): java.lang.String
+            public static copyValueOf(data: string[]): string
             /**
              * Creates a new String containing the specified characters in the character array. Modifying the character array after creating the String has no
              * effect on the String.
@@ -319,7 +319,7 @@ declare namespace java {
              * 				if data is null
              */
             // @ts-ignore
-            copyValueOf(data: string[], start: number /*int*/, length: number /*int*/): java.lang.String
+            public static copyValueOf(data: string[], start: number /*int*/, length: number /*int*/): string
             /**
              * Compares the specified string to this String to determine if the specified string is a suffix.
              * @param suffix
@@ -329,7 +329,7 @@ declare namespace java {
              * 				if suffix is null
              */
             // @ts-ignore
-            endsWith(suffix: string): boolean
+            public endsWith(suffix: java.lang.String | string): boolean
             /**
              * Compares the specified object to this String and answer if they are equal. The object must be an instance of String with the same characters in
              * the same order.
@@ -339,7 +339,7 @@ declare namespace java {
              * @see #hashCode()
              */
             // @ts-ignore
-            equals(object: any): boolean
+            public equals(object: java.lang.Object | any): boolean
             /**
              * Compares the specified String to this String ignoring the case of the characters and answer if they are equal.
              * @param string
@@ -347,7 +347,7 @@ declare namespace java {
              * @return true if the specified string is equal to this String, false otherwise
              */
             // @ts-ignore
-            equalsIgnoreCase(string: string): boolean
+            public equalsIgnoreCase(string: java.lang.String | string): boolean
             /**
              * Converts this String to a byte encoding using the default encoding as specified by the file.encoding system property. If the system property is
              * not defined, the default encoding is ISO8859_1 (ISO-Latin-1). If 8859-1 is not available, an ASCII encoding is used.
@@ -355,7 +355,7 @@ declare namespace java {
              * @see String
              */
             // @ts-ignore
-            getBytes(): byte[]
+            public getBytes(): number /*byte*/[]
             /**
              * Converts this String to a byte array, ignoring the high order bits of each character.
              * @param start
@@ -373,7 +373,7 @@ declare namespace java {
              * @deprecated Use getBytes() or getBytes(String)
              */
             // @ts-ignore
-            getBytes(start: number /*int*/, end: number /*int*/, data: number /*byte*/[], index: number /*int*/): void
+            public getBytes(start: number /*int*/, end: number /*int*/, data: number /*byte*/[], index: number /*int*/): void
             /**
              * Converts this String to a byte encoding using the specified encoding.
              * @param encoding
@@ -385,7 +385,7 @@ declare namespace java {
              * @see UnsupportedEncodingException
              */
             // @ts-ignore
-            getBytes(encoding: string): byte[]
+            public getBytes(encoding: java.lang.String | string): number /*byte*/[]
             /**
              * Copies the specified characters in this String to the character array starting at the specified offset in the character array.
              * @param start
@@ -402,14 +402,14 @@ declare namespace java {
              * 				when buffer is null
              */
             // @ts-ignore
-            getChars(start: number /*int*/, end: number /*int*/, data: string[], index: number /*int*/): void
+            public getChars(start: number /*int*/, end: number /*int*/, data: string[], index: number /*int*/): void
             /**
              * Answers an integer hash code for the receiver. Objects which are equal answer the same value for this method.
              * @return the receiver's hash
              * @see #equals
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Searches in this String for the first index of the specified character. The search for the character starts at the beginning and moves towards
              * the end of this String.
@@ -422,7 +422,7 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            indexOf(c: number /*int*/): int
+            public indexOf(c: number /*int*/): number /*int*/
             /**
              * Searches in this String for the index of the specified character. The search for the character starts at the specified offset and moves towards
              * the end of this String.
@@ -437,7 +437,7 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            indexOf(c: number /*int*/, start: number /*int*/): int
+            public indexOf(c: number /*int*/, start: number /*int*/): number /*int*/
             /**
              * Searches in this String for the first index of the specified string. The search for the string starts at the beginning and moves towards the end
              * of this String.
@@ -452,7 +452,7 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            indexOf(string: string): int
+            public indexOf(string: java.lang.String | string): number /*int*/
             /**
              * Searches in this String for the index of the specified string. The search for the string starts at the specified offset and moves towards the
              * end of this String.
@@ -469,14 +469,14 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            indexOf(subString: string, start: number /*int*/): int
+            public indexOf(subString: java.lang.String | string, start: number /*int*/): number /*int*/
             /**
              * Searches an internal table of strings for a string equal to this String. If the string is not in the table, it is added. Answers the string
              * contained in the table which is equal to this String. The same string object is always answered for strings which are equal.
              * @return the interned string equal to this String
              */
             // @ts-ignore
-            intern(): java.lang.String
+            public intern(): string
             /**
              * Searches in this String for the last index of the specified character. The search for the character starts at the end and moves towards the
              * beginning of this String.
@@ -489,7 +489,7 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            lastIndexOf(c: number /*int*/): int
+            public lastIndexOf(c: number /*int*/): number /*int*/
             /**
              * Searches in this String for the index of the specified character. The search for the character starts at the specified offset and moves towards
              * the beginning of this String.
@@ -504,7 +504,7 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            lastIndexOf(c: number /*int*/, start: number /*int*/): int
+            public lastIndexOf(c: number /*int*/, start: number /*int*/): number /*int*/
             /**
              * Searches in this String for the last index of the specified string. The search for the string starts at the end and moves towards the beginning
              * of this String.
@@ -519,7 +519,7 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            lastIndexOf(string: string): int
+            public lastIndexOf(string: java.lang.String | string): number /*int*/
             /**
              * Searches in this String for the index of the specified string. The search for the string starts at the specified offset and moves towards the
              * beginning of this String.
@@ -536,13 +536,13 @@ declare namespace java {
              * @see #lastIndexOf(String, int)
              */
             // @ts-ignore
-            lastIndexOf(subString: string, start: number /*int*/): int
+            public lastIndexOf(subString: java.lang.String | string, start: number /*int*/): number /*int*/
             /**
              * Answers the size of this String.
              * @return the number of characters in this String
              */
             // @ts-ignore
-            length(): int
+            public length(): number /*int*/
             /**
              * Compares the specified string to this String and compares the specified range of characters to determine if they are the same.
              * @param thisStart
@@ -558,7 +558,7 @@ declare namespace java {
              * 				when string is null
              */
             // @ts-ignore
-            regionMatches(thisStart: number /*int*/, string: string, start: number /*int*/, length: number /*int*/): boolean
+            public regionMatches(thisStart: number /*int*/, string: java.lang.String | string, start: number /*int*/, length: number /*int*/): boolean
             /**
              * Compares the specified string to this String and compares the specified range of characters to determine if they are the same. When ignoreCase
              * is true, the case of the characters is ignored during the comparison.
@@ -577,7 +577,7 @@ declare namespace java {
              * 				when string is null
              */
             // @ts-ignore
-            regionMatches(ignoreCase: boolean, thisStart: number /*int*/, string: string, start: number /*int*/, length: number /*int*/): boolean
+            public regionMatches(ignoreCase: boolean, thisStart: number /*int*/, string: java.lang.String | string, start: number /*int*/, length: number /*int*/): boolean
             /**
              * Replaces occurrences of the specified character with another character.
              * @param oldChar
@@ -587,7 +587,7 @@ declare namespace java {
              * @return a String with occurrences of oldChar replaced by newChar
              */
             // @ts-ignore
-            replace(oldChar: string, newChar: string): java.lang.String
+            public replace(oldChar: string, newChar: string): string
             /**
              * Compares the specified string to this String to determine if the specified string is a prefix.
              * @param prefix
@@ -597,7 +597,7 @@ declare namespace java {
              * 				when prefix is null
              */
             // @ts-ignore
-            startsWith(prefix: string): boolean
+            public startsWith(prefix: java.lang.String | string): boolean
             /**
              * Compares the specified string to this String, starting at the specified offset, to determine if the specified string is a prefix.
              * @param prefix
@@ -609,7 +609,7 @@ declare namespace java {
              * 				when prefix is null
              */
             // @ts-ignore
-            startsWith(prefix: string, start: number /*int*/): boolean
+            public startsWith(prefix: java.lang.String | string, start: number /*int*/): boolean
             /**
              * Copies a range of characters into a new String.
              * @param start
@@ -619,7 +619,7 @@ declare namespace java {
              * 				when {#code start < 0} or {@code start > length()}
              */
             // @ts-ignore
-            substring(start: number /*int*/): java.lang.String
+            public substring(start: number /*int*/): string
             /**
              * Copies a range of characters.
              * @param start
@@ -631,20 +631,20 @@ declare namespace java {
              * 				when {#code start < 0, start > end} or {@code end > length()}
              */
             // @ts-ignore
-            substring(start: number /*int*/, end: number /*int*/): java.lang.String
+            public substring(start: number /*int*/, end: number /*int*/): string
             /**
              * Copies the characters in this String to a character array.
              * @return a character array containing the characters of this String
              */
             // @ts-ignore
-            toCharArray(): char[]
+            public toCharArray(): string[]
             /**
              * Converts the characters in this String to lowercase, using the default Locale. To convert to lower case independent of any locale, use
              * toLowerCase(Locale.ROOT).
              * @return a new String containing the lowercase characters equivalent to the characters in this String
              */
             // @ts-ignore
-            toLowerCase(): java.lang.String
+            public toLowerCase(): string
             /**
              * Converts the characters in this String to lowercase, using the specified Locale.
              * @param locale
@@ -652,20 +652,20 @@ declare namespace java {
              * @return a String containing the lowercase characters equivalent to the characters in this String
              */
             // @ts-ignore
-            toLowerCase(locale: java.util.Locale): java.lang.String
+            public toLowerCase(locale: java.util.Locale): string
             /**
              * Answers a string containing a concise, human-readable description of the receiver.
              * @return this String
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Converts the characters in this String to uppercase, using the default Locale. To convert to upper case independent of any locale, use
              * toUpperCase(Locale.ROOT).
              * @return a String containing the uppercase characters equivalent to the characters in this String
              */
             // @ts-ignore
-            toUpperCase(): java.lang.String
+            public toUpperCase(): string
             /**
              * Converts the characters in this String to uppercase, using the specified Locale.
              * @param locale
@@ -673,13 +673,13 @@ declare namespace java {
              * @return a String containing the uppercase characters equivalent to the characters in this String
              */
             // @ts-ignore
-            toUpperCase(locale: java.util.Locale): java.lang.String
+            public toUpperCase(locale: java.util.Locale): string
             /**
              * Removes white space characters from the beginning and end of the string.
              * @return a String with characters {#code <= \\u0020} removed from the beginning and the end
              */
             // @ts-ignore
-            trim(): java.lang.String
+            public trim(): string
             /**
              * Returns a String containing the characters in the specified character array. Modifying the character array after creating the String has no
              * effect on the String.
@@ -690,7 +690,7 @@ declare namespace java {
              * 				when data is null
              */
             // @ts-ignore
-            valueOf(data: string[]): java.lang.String
+            public static valueOf(data: string[]): string
             /**
              * Returns a String containing the specified characters in the character array. Modifying the character array after creating the String has no
              * effect on the String.
@@ -707,7 +707,7 @@ declare namespace java {
              * 				when data is null
              */
             // @ts-ignore
-            valueOf(data: string[], start: number /*int*/, length: number /*int*/): java.lang.String
+            public static valueOf(data: string[], start: number /*int*/, length: number /*int*/): string
             /**
              * Converts the specified character to its string representation.
              * @param value
@@ -715,7 +715,7 @@ declare namespace java {
              * @return the character converted to a string
              */
             // @ts-ignore
-            valueOf(value: string): java.lang.String
+            public static valueOf(value: string): string
             /**
              * Converts the specified double to its string representation.
              * @param value
@@ -723,7 +723,7 @@ declare namespace java {
              * @return the double converted to a string
              */
             // @ts-ignore
-            valueOf(value: number /*double*/): java.lang.String
+            public static valueOf(value: number /*double*/): string
             /**
              * Converts the specified float to its string representation.
              * @param value
@@ -731,7 +731,7 @@ declare namespace java {
              * @return the float converted to a string
              */
             // @ts-ignore
-            valueOf(value: number /*float*/): java.lang.String
+            public static valueOf(value: number /*float*/): string
             /**
              * Converts the specified integer to its string representation.
              * @param value
@@ -739,7 +739,7 @@ declare namespace java {
              * @return the integer converted to a string
              */
             // @ts-ignore
-            valueOf(value: number /*int*/): java.lang.String
+            public static valueOf(value: number /*int*/): string
             /**
              * Converts the specified long to its string representation.
              * @param value
@@ -747,7 +747,7 @@ declare namespace java {
              * @return the long converted to a string
              */
             // @ts-ignore
-            valueOf(value: number /*long*/): java.lang.String
+            public static valueOf(value: number /*long*/): string
             /**
              * Converts the specified object to its string representation. If the object is null answer the string {@code "null"}, otherwise use
              * {@code toString()} to get the string representation.
@@ -756,7 +756,7 @@ declare namespace java {
              * @return the object converted to a string
              */
             // @ts-ignore
-            valueOf(value: any): java.lang.String
+            public static valueOf(value: java.lang.Object | any): string
             /**
              * Converts the specified boolean to its string representation. When the boolean is true answer {@code "true"}, otherwise answer
              * {@code "false"}.
@@ -765,7 +765,7 @@ declare namespace java {
              * @return the boolean converted to a string
              */
             // @ts-ignore
-            valueOf(value: boolean): java.lang.String
+            public static valueOf(value: boolean): string
             /**
              * Answers whether the characters in the StringBuffer buffer are the same as those in this String.
              * @param buffer
@@ -776,7 +776,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            contentEquals(buffer: java.lang.StringBuffer): boolean
+            public contentEquals(buffer: java.lang.StringBuffer): boolean
             /**
              * Determines whether a this String matches a given regular expression.
              * @param expr
@@ -789,7 +789,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            matches(expr: string): boolean
+            public matches(expr: java.lang.String | string): boolean
             /**
              * Replace any substrings within this String that match the supplied regular expression expr, with the String substitute.
              * @param regex
@@ -802,7 +802,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            replaceAll(regex: string, substitute: string): java.lang.String
+            public replaceAll(regex: java.lang.String | string, substitute: java.lang.String | string): string
             /**
              * Replace any substrings within this String that match the supplied regular expression expr, with the String substitute.
              * @param expr
@@ -815,7 +815,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            replaceFirst(expr: string, substitute: string): java.lang.String
+            public replaceFirst(expr: java.lang.String | string, substitute: java.lang.String | string): string
             /**
              * Splits this string around matches of the given regular expression. Calling this method is same as calling split(regex,0). Therefore, empty
              * string(s) at the end of the returned array will be discarded.
@@ -827,7 +827,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            split(regex: string): java.lang.String[]
+            public split(regex: java.lang.String | string): string[]
             /**
              * Splits this String using the given regular expression.
              * max controls the number of times the regex is applied to this string.
@@ -844,7 +844,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            split(regex: string, max: number /*int*/): java.lang.String[]
+            public split(regex: java.lang.String | string, max: number /*int*/): string[]
             /**
              * Has the same result as the substring function, but is present so that String may implement the CharSequence interface.
              * @param start
@@ -858,7 +858,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
+            public subSequence(start: number /*int*/, end: number /*int*/): java.lang.CharSequence
             /**
              * Returns the Unicode character at the given point.
              * @param index
@@ -867,7 +867,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointAt(index: number /*int*/): int
+            public codePointAt(index: number /*int*/): number /*int*/
             /**
              * Returns the Unicode character before the given point.
              * @param index
@@ -876,7 +876,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointBefore(index: number /*int*/): int
+            public codePointBefore(index: number /*int*/): number /*int*/
             /**
              * Returns the total Unicode values in the specified range.
              * @param start
@@ -887,7 +887,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            codePointCount(start: number /*int*/, end: number /*int*/): int
+            public codePointCount(start: number /*int*/, end: number /*int*/): number /*int*/
             /**
              * Returns the index of the code point that was offset by codePointCount.
              * @param start
@@ -898,7 +898,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            offsetByCodePoints(start: number /*int*/, codePointCount: number /*int*/): int
+            public offsetByCodePoints(start: number /*int*/, codePointCount: number /*int*/): number /*int*/
             /**
              * Compares the content of the character sequence to this String
              * @param sequence
@@ -907,7 +907,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            contentEquals(sequence: java.lang.CharSequence): boolean
+            public contentEquals(sequence: java.lang.CharSequence): boolean
             /**
              * @param sequence
              * 			  the sequence to compare to
@@ -915,7 +915,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            contains(sequence: java.lang.CharSequence): boolean
+            public contains(sequence: java.lang.CharSequence): boolean
             /**
              * @param sequence1
              * 			  the old character sequence
@@ -925,7 +925,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            replace(sequence1: java.lang.CharSequence, sequence2: java.lang.CharSequence): java.lang.String
+            public replace(sequence1: java.lang.CharSequence, sequence2: java.lang.CharSequence): string
             /**
              * Format the receiver using the specified format and args.
              * @param format
@@ -936,7 +936,7 @@ declare namespace java {
              * @see java.util.Formatter#format(String, Object...)
              */
             // @ts-ignore
-            format(format: string, ...args: any[]): java.lang.String
+            public static format(format: java.lang.String | string, ...args: java.lang.Object[] | any[]): string
             /**
              * Format the receiver using the specified local, format and args.
              * @param locale
@@ -949,7 +949,7 @@ declare namespace java {
              * @see java.util.Formatter#format(String, Object...)
              */
             // @ts-ignore
-            format(locale: java.util.Locale, format: string, ...args: any[]): java.lang.String
+            public static format(locale: java.util.Locale, format: java.lang.String | string, ...args: java.lang.Object[] | any[]): string
             /**
              * Answers if this String has no characters, a length of zero.
              * @return true if this String has no characters, false otherwise
@@ -957,7 +957,7 @@ declare namespace java {
              * @see #length
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Converts this String to a byte encoding using the specified Charset.
              * @param charset
@@ -966,7 +966,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getBytes(charset: java.nio.charset.Charset): byte[]
+            public getBytes(charset: java.nio.charset.Charset): number /*byte*/[]
             /**
              * Creates a new String by putting each element together joined by the delimiter. If an element is null, then "null" is used as string to join.
              * @param delimiter
@@ -978,7 +978,7 @@ declare namespace java {
              * 				if one of the arguments is null
              */
             // @ts-ignore
-            join(delimiter: java.lang.CharSequence, ...elements: java.lang.CharSequence[]): java.lang.String
+            public static join(delimiter: java.lang.CharSequence, ...elements: java.lang.CharSequence[]): string
             /**
              * Creates a new String by putting each element together joined by the delimiter. If an element is null, then "null" is used as string to join.
              * @param delimiter
@@ -990,7 +990,7 @@ declare namespace java {
              * 				if one of the arguments is null
              */
             // @ts-ignore
-            join(delimiter: java.lang.CharSequence, elements: java.lang.Iterable<java.lang.CharSequence>): java.lang.String
+            public static join(delimiter: java.lang.CharSequence, elements: java.lang.Iterable<any>): string
         }
     }
 }

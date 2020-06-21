@@ -21,7 +21,7 @@ declare namespace org {
                      *  Interpreted by the post-processor that actually creates the script.
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string)
+                    constructor(scriptSourceLocator: java.lang.String | string)
                     /**
                      * Create a new StandardScriptFactory for the given script source.
                      * @param scriptSourceLocator a locator that points to the source of the script.
@@ -30,7 +30,7 @@ declare namespace org {
                      *  is supposed to implement
                      */
                     // @ts-ignore
-                    constructor(scriptSourceLocator: string, ...scriptInterfaces: java.lang.Class[])
+                    constructor(scriptSourceLocator: java.lang.String | string, ...scriptInterfaces: java.lang.Class<any>[])
                     /**
                      * Create a new StandardScriptFactory for the given script source.
                      * @param scriptEngineName the name of the JSR-223 ScriptEngine to use
@@ -39,7 +39,7 @@ declare namespace org {
                      *  Interpreted by the post-processor that actually creates the script.
                      */
                     // @ts-ignore
-                    constructor(scriptEngineName: string, scriptSourceLocator: string)
+                    constructor(scriptEngineName: java.lang.String | string, scriptSourceLocator: java.lang.String | string)
                     /**
                      * Create a new StandardScriptFactory for the given script source.
                      * @param scriptEngineName the name of the JSR-223 ScriptEngine to use
@@ -50,32 +50,32 @@ declare namespace org {
                      *  is supposed to implement
                      */
                     // @ts-ignore
-                    constructor(scriptEngineName: string, scriptSourceLocator: string, ...scriptInterfaces: java.lang.Class[])
+                    constructor(scriptEngineName: java.lang.String | string, scriptSourceLocator: java.lang.String | string, ...scriptInterfaces: java.lang.Class<any>[])
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    getScriptSourceLocator(): java.lang.String
+                    public getScriptSourceLocator(): string
                     // @ts-ignore
-                    getScriptInterfaces(): java.lang.Class[]
+                    public getScriptInterfaces(): java.lang.Class<any>[]
                     // @ts-ignore
-                    requiresConfigInterface(): boolean
+                    public requiresConfigInterface(): boolean
                     /**
                      * Load and parse the script via JSR-223's ScriptEngine.
                      */
                     // @ts-ignore
-                    getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class[]): java.lang.Object
+                    public getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class<any>[]): any
                     // @ts-ignore
-                    evaluateScript(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Object
+                    evaluateScript(scriptSource: org.springframework.scripting.ScriptSource): any
                     // @ts-ignore
                     retrieveScriptEngine(scriptSource: org.springframework.scripting.ScriptSource): javax.script.ScriptEngine
                     // @ts-ignore
-                    adaptToInterfaces(script: any, scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class[]): java.lang.Object
+                    adaptToInterfaces(script: java.lang.Object | any, scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class<any>[]): any
                     // @ts-ignore
-                    getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<?>
+                    public getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<any>
                     // @ts-ignore
-                    requiresScriptedObjectRefresh(scriptSource: org.springframework.scripting.ScriptSource): boolean
+                    public requiresScriptedObjectRefresh(scriptSource: org.springframework.scripting.ScriptSource): boolean
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                 }
             }
         }

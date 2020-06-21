@@ -111,7 +111,7 @@ declare namespace javax {
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly SYSTEM_EXCLUSIVE: number /*int*/
+                public static readonly SYSTEM_EXCLUSIVE: number /*int*/
                 /**
                  * Status byte for Special System Exclusive message (0xF7, or 247), which is used
                  * in MIDI files.  It has the same value as END_OF_EXCLUSIVE, which
@@ -119,7 +119,7 @@ declare namespace javax {
                  * @see MidiMessage#getStatus
                  */
                 // @ts-ignore
-                readonly SPECIAL_SYSTEM_EXCLUSIVE: number /*int*/
+                public static readonly SPECIAL_SYSTEM_EXCLUSIVE: number /*int*/
                 /**
                  * Sets the data for the system exclusive message.   The
                  * first byte of the data array must be a valid system
@@ -129,7 +129,7 @@ declare namespace javax {
                  *  the array, including the status byte.
                  */
                 // @ts-ignore
-                setMessage(data: number /*byte*/[], length: number /*int*/): void
+                public setMessage(data: number /*byte*/[], length: number /*int*/): void
                 /**
                  * Sets the data for the system exclusive message.
                  * @param status the status byte for the message (0xF0 or 0xF7)
@@ -139,21 +139,21 @@ declare namespace javax {
                  * @throws InvalidMidiDataException if the status byte is invalid for a sysex message
                  */
                 // @ts-ignore
-                setMessage(status: number /*int*/, data: number /*byte*/[], length: number /*int*/): void
+                public setMessage(status: number /*int*/, data: number /*byte*/[], length: number /*int*/): void
                 /**
                  * Obtains a copy of the data for the system exclusive message.
                  * The returned array of bytes does not include the status byte.
                  * @return array containing the system exclusive message data.
                  */
                 // @ts-ignore
-                getData(): byte[]
+                public getData(): number /*byte*/[]
                 /**
                  * Creates a new object of the same class and with the same contents
                  * as this object.
                  * @return a clone of this instance
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
             }
         }
     }

@@ -20,9 +20,9 @@ declare namespace org {
                          * @param password the password to use
                          */
                         // @ts-ignore
-                        constructor(username: string, password: string)
+                        constructor(username: java.lang.String | string, password: java.lang.String | string)
                         // @ts-ignore
-                        intercept(request: org.springframework.http.HttpRequest, body: number /*byte*/[], execution: org.springframework.http.client.ClientHttpRequestExecution): org.springframework.http.client.ClientHttpResponse
+                        public intercept(request: org.springframework.http.HttpRequest, body: number /*byte*/[], execution: org.springframework.http.client.ClientHttpRequestExecution): org.springframework.http.client.ClientHttpResponse
                     }
                 }
             }

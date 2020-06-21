@@ -11,15 +11,15 @@ declare namespace org {
                             // @ts-ignore
                             class GameModes extends java.lang.Object {
                                 // @ts-ignore
-                                readonly ADVENTURE: org.spongepowered.api.entity.living.player.gamemode.GameMode
+                                public static readonly ADVENTURE: org.spongepowered.api.entity.living.player.gamemode.GameMode
                                 // @ts-ignore
-                                readonly CREATIVE: org.spongepowered.api.entity.living.player.gamemode.GameMode
+                                public static readonly CREATIVE: org.spongepowered.api.entity.living.player.gamemode.GameMode
                                 // @ts-ignore
-                                readonly NOT_SET: org.spongepowered.api.entity.living.player.gamemode.GameMode
+                                public static readonly NOT_SET: org.spongepowered.api.entity.living.player.gamemode.GameMode
                                 // @ts-ignore
-                                readonly SPECTATOR: org.spongepowered.api.entity.living.player.gamemode.GameMode
+                                public static readonly SPECTATOR: org.spongepowered.api.entity.living.player.gamemode.GameMode
                                 // @ts-ignore
-                                readonly SURVIVAL: org.spongepowered.api.entity.living.player.gamemode.GameMode
+                                public static readonly SURVIVAL: org.spongepowered.api.entity.living.player.gamemode.GameMode
                             }
                         }
                     }

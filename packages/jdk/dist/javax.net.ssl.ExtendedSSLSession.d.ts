@@ -7,7 +7,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            class ExtendedSSLSession extends java.lang.Object implements javax.net.ssl.SSLSession {
+            abstract class ExtendedSSLSession extends java.lang.Object implements javax.net.ssl.SSLSession {
                 // @ts-ignore
                 constructor()
                 /**
@@ -35,7 +35,7 @@ declare namespace javax {
                  * @see SSLParameters#getAlgorithmConstraints
                  */
                 // @ts-ignore
-                abstract getLocalSupportedSignatureAlgorithms(): java.lang.String[]
+                public abstract getLocalSupportedSignatureAlgorithms(): string[]
                 /**
                  * Obtains an array of supported signature algorithms that the peer is
                  * able to use.
@@ -57,7 +57,7 @@ declare namespace javax {
                  * @see X509ExtendedKeyManager
                  */
                 // @ts-ignore
-                abstract getPeerSupportedSignatureAlgorithms(): java.lang.String[]
+                public abstract getPeerSupportedSignatureAlgorithms(): string[]
                 /**
                  * Obtains a {@link List} containing all {@link SNIServerName}s
                  * of the requested Server Name Indication (SNI) extension.
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getRequestedServerNames(): java.util.List<javax.net.ssl.SNIServerName>
+                public getRequestedServerNames(): Array<javax.net.ssl.SNIServerName>
             }
         }
     }

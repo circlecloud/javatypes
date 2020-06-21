@@ -213,7 +213,7 @@ declare namespace java {
                  *  <code>TextAttribute</code>
                  */
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Attribute key for the font name.  Values are instances of
                  * <b><code>String</code></b>.  The default value is
@@ -239,7 +239,7 @@ declare namespace java {
                  * request that the font's weight be bold.</p>
                  */
                 // @ts-ignore
-                readonly FAMILY: java.awt.font.TextAttribute
+                public static readonly FAMILY: java.awt.font.TextAttribute
                 /**
                  * Attribute key for the weight of a font.  Values are instances
                  * of <b><code>Number</code></b>.  The default value is
@@ -258,75 +258,75 @@ declare namespace java {
                  * <p>The system can interpolate the provided value.
                  */
                 // @ts-ignore
-                readonly WEIGHT: java.awt.font.TextAttribute
+                public static readonly WEIGHT: java.awt.font.TextAttribute
                 /**
                  * The lightest predefined weight.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_EXTRA_LIGHT: number
+                public static readonly WEIGHT_EXTRA_LIGHT: java.lang.Float | number
                 /**
                  * The standard light weight.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_LIGHT: number
+                public static readonly WEIGHT_LIGHT: java.lang.Float | number
                 /**
                  * An intermediate weight between <code>WEIGHT_LIGHT</code> and
                  * <code>WEIGHT_STANDARD</code>.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_DEMILIGHT: number
+                public static readonly WEIGHT_DEMILIGHT: java.lang.Float | number
                 /**
                  * The standard weight. This is the default value for <code>WEIGHT</code>.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_REGULAR: number
+                public static readonly WEIGHT_REGULAR: java.lang.Float | number
                 /**
                  * A moderately heavier weight than <code>WEIGHT_REGULAR</code>.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_SEMIBOLD: number
+                public static readonly WEIGHT_SEMIBOLD: java.lang.Float | number
                 /**
                  * An intermediate weight between <code>WEIGHT_REGULAR</code> and
                  * <code>WEIGHT_BOLD</code>.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_MEDIUM: number
+                public static readonly WEIGHT_MEDIUM: java.lang.Float | number
                 /**
                  * A moderately lighter weight than <code>WEIGHT_BOLD</code>.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_DEMIBOLD: number
+                public static readonly WEIGHT_DEMIBOLD: java.lang.Float | number
                 /**
                  * The standard bold weight.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_BOLD: number
+                public static readonly WEIGHT_BOLD: java.lang.Float | number
                 /**
                  * A moderately heavier weight than <code>WEIGHT_BOLD</code>.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_HEAVY: number
+                public static readonly WEIGHT_HEAVY: java.lang.Float | number
                 /**
                  * An extra heavy weight.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_EXTRABOLD: number
+                public static readonly WEIGHT_EXTRABOLD: java.lang.Float | number
                 /**
                  * The heaviest predefined weight.
                  * @see #WEIGHT
                  */
                 // @ts-ignore
-                readonly WEIGHT_ULTRABOLD: number
+                public static readonly WEIGHT_ULTRABOLD: java.lang.Float | number
                 /**
                  * Attribute key for the width of a font.  Values are instances of
                  * <b><code>Number</code></b>.  The default value is
@@ -340,38 +340,38 @@ declare namespace java {
                  * <p>The system can interpolate the provided value.
                  */
                 // @ts-ignore
-                readonly WIDTH: java.awt.font.TextAttribute
+                public static readonly WIDTH: java.awt.font.TextAttribute
                 /**
                  * The most condensed predefined width.
                  * @see #WIDTH
                  */
                 // @ts-ignore
-                readonly WIDTH_CONDENSED: number
+                public static readonly WIDTH_CONDENSED: java.lang.Float | number
                 /**
                  * A moderately condensed width.
                  * @see #WIDTH
                  */
                 // @ts-ignore
-                readonly WIDTH_SEMI_CONDENSED: number
+                public static readonly WIDTH_SEMI_CONDENSED: java.lang.Float | number
                 /**
                  * The standard width. This is the default value for
                  * <code>WIDTH</code>.
                  * @see #WIDTH
                  */
                 // @ts-ignore
-                readonly WIDTH_REGULAR: number
+                public static readonly WIDTH_REGULAR: java.lang.Float | number
                 /**
                  * A moderately extended width.
                  * @see #WIDTH
                  */
                 // @ts-ignore
-                readonly WIDTH_SEMI_EXTENDED: number
+                public static readonly WIDTH_SEMI_EXTENDED: java.lang.Float | number
                 /**
                  * The most extended predefined width.
                  * @see #WIDTH
                  */
                 // @ts-ignore
-                readonly WIDTH_EXTENDED: number
+                public static readonly WIDTH_EXTENDED: java.lang.Float | number
                 /**
                  * Attribute key for the posture of a font.  Values are instances
                  * of <b><code>Number</code></b>. The default value is
@@ -389,20 +389,20 @@ declare namespace java {
                  * @see java.awt.Font#getItalicAngle()
                  */
                 // @ts-ignore
-                readonly POSTURE: java.awt.font.TextAttribute
+                public static readonly POSTURE: java.awt.font.TextAttribute
                 /**
                  * The standard posture, upright.  This is the default value for
                  * <code>POSTURE</code>.
                  * @see #POSTURE
                  */
                 // @ts-ignore
-                readonly POSTURE_REGULAR: number
+                public static readonly POSTURE_REGULAR: java.lang.Float | number
                 /**
                  * The standard italic posture.
                  * @see #POSTURE
                  */
                 // @ts-ignore
-                readonly POSTURE_OBLIQUE: number
+                public static readonly POSTURE_OBLIQUE: java.lang.Float | number
                 /**
                  * Attribute key for the font size.  Values are instances of
                  * <b><code>Number</code></b>.  The default value is 12pt.
@@ -416,7 +416,7 @@ declare namespace java {
                  * with no transform.
                  */
                 // @ts-ignore
-                readonly SIZE: java.awt.font.TextAttribute
+                public static readonly SIZE: java.awt.font.TextAttribute
                 /**
                  * Attribute key for the transform of a font.  Values are
                  * instances of <b><code>TransformAttribute</code></b>.  The
@@ -447,7 +447,7 @@ declare namespace java {
                  * @see java.awt.geom.AffineTransform
                  */
                 // @ts-ignore
-                readonly TRANSFORM: java.awt.font.TextAttribute
+                public static readonly TRANSFORM: java.awt.font.TextAttribute
                 /**
                  * Attribute key for superscripting and subscripting.  Values are
                  * instances of <b><code>Integer</code></b>.  The default value is
@@ -465,19 +465,19 @@ declare namespace java {
                  * and descent can never become negative, however.
                  */
                 // @ts-ignore
-                readonly SUPERSCRIPT: java.awt.font.TextAttribute
+                public static readonly SUPERSCRIPT: java.awt.font.TextAttribute
                 /**
                  * Standard superscript.
                  * @see #SUPERSCRIPT
                  */
                 // @ts-ignore
-                readonly SUPERSCRIPT_SUPER: number
+                public static readonly SUPERSCRIPT_SUPER: java.lang.Integer | number
                 /**
                  * Standard subscript.
                  * @see #SUPERSCRIPT
                  */
                 // @ts-ignore
-                readonly SUPERSCRIPT_SUB: number
+                public static readonly SUPERSCRIPT_SUB: java.lang.Integer | number
                 /**
                  * Attribute key used to provide the font to use to render text.
                  * Values are instances of {@link java.awt.Font}.  The default
@@ -533,7 +533,7 @@ declare namespace java {
                  * @see java.awt.Font
                  */
                 // @ts-ignore
-                readonly FONT: java.awt.font.TextAttribute
+                public static readonly FONT: java.awt.font.TextAttribute
                 /**
                  * Attribute key for a user-defined glyph to display in lieu
                  * of the font's standard glyph for a character.  Values are
@@ -553,7 +553,7 @@ declare namespace java {
                  * @see GraphicAttribute
                  */
                 // @ts-ignore
-                readonly CHAR_REPLACEMENT: java.awt.font.TextAttribute
+                public static readonly CHAR_REPLACEMENT: java.awt.font.TextAttribute
                 /**
                  * Attribute key for the paint used to render the text.  Values are
                  * instances of <b><code>Paint</code></b>.  The default value is
@@ -566,7 +566,7 @@ declare namespace java {
                  * @see #SWAP_COLORS
                  */
                 // @ts-ignore
-                readonly FOREGROUND: java.awt.font.TextAttribute
+                public static readonly FOREGROUND: java.awt.font.TextAttribute
                 /**
                  * Attribute key for the paint used to render the background of
                  * the text.  Values are instances of <b><code>Paint</code></b>.
@@ -581,7 +581,7 @@ declare namespace java {
                  * @see #SWAP_COLORS
                  */
                 // @ts-ignore
-                readonly BACKGROUND: java.awt.font.TextAttribute
+                public static readonly BACKGROUND: java.awt.font.TextAttribute
                 /**
                  * Attribute key for underline.  Values are instances of
                  * <b><code>Integer</code></b>.  The default value is -1, which
@@ -591,13 +591,13 @@ declare namespace java {
                  * of the text.
                  */
                 // @ts-ignore
-                readonly UNDERLINE: java.awt.font.TextAttribute
+                public static readonly UNDERLINE: java.awt.font.TextAttribute
                 /**
                  * Standard underline.
                  * @see #UNDERLINE
                  */
                 // @ts-ignore
-                readonly UNDERLINE_ON: number
+                public static readonly UNDERLINE_ON: java.lang.Integer | number
                 /**
                  * Attribute key for strikethrough.  Values are instances of
                  * <b><code>Boolean</code></b>.  The default value is
@@ -607,13 +607,13 @@ declare namespace java {
                  * outline of the text.
                  */
                 // @ts-ignore
-                readonly STRIKETHROUGH: java.awt.font.TextAttribute
+                public static readonly STRIKETHROUGH: java.awt.font.TextAttribute
                 /**
                  * A single strikethrough.
                  * @see #STRIKETHROUGH
                  */
                 // @ts-ignore
-                readonly STRIKETHROUGH_ON: java.lang.Boolean
+                public static readonly STRIKETHROUGH_ON: java.lang.Boolean
                 /**
                  * Attribute key for the run direction of the line.  Values are
                  * instances of <b><code>Boolean</code></b>.  The default value is
@@ -631,19 +631,19 @@ declare namespace java {
                  * @see java.text.Bidi
                  */
                 // @ts-ignore
-                readonly RUN_DIRECTION: java.awt.font.TextAttribute
+                public static readonly RUN_DIRECTION: java.awt.font.TextAttribute
                 /**
                  * Left-to-right run direction.
                  * @see #RUN_DIRECTION
                  */
                 // @ts-ignore
-                readonly RUN_DIRECTION_LTR: java.lang.Boolean
+                public static readonly RUN_DIRECTION_LTR: java.lang.Boolean
                 /**
                  * Right-to-left run direction.
                  * @see #RUN_DIRECTION
                  */
                 // @ts-ignore
-                readonly RUN_DIRECTION_RTL: java.lang.Boolean
+                public static readonly RUN_DIRECTION_RTL: java.lang.Boolean
                 /**
                  * Attribute key for the embedding level of the text.  Values are
                  * instances of <b><code>Integer</code></b>.  The default value is
@@ -663,7 +663,7 @@ declare namespace java {
                  * @see java.text.Bidi
                  */
                 // @ts-ignore
-                readonly BIDI_EMBEDDING: java.awt.font.TextAttribute
+                public static readonly BIDI_EMBEDDING: java.awt.font.TextAttribute
                 /**
                  * Attribute key for the justification of a paragraph.  Values are
                  * instances of <b><code>Number</code></b>.  The default value is
@@ -682,20 +682,20 @@ declare namespace java {
                  * @see TextLayout#getJustifiedLayout
                  */
                 // @ts-ignore
-                readonly JUSTIFICATION: java.awt.font.TextAttribute
+                public static readonly JUSTIFICATION: java.awt.font.TextAttribute
                 /**
                  * Justify the line to the full requested width.  This is the
                  * default value for <code>JUSTIFICATION</code>.
                  * @see #JUSTIFICATION
                  */
                 // @ts-ignore
-                readonly JUSTIFICATION_FULL: number
+                public static readonly JUSTIFICATION_FULL: java.lang.Float | number
                 /**
                  * Do not allow the line to be justified.
                  * @see #JUSTIFICATION
                  */
                 // @ts-ignore
-                readonly JUSTIFICATION_NONE: number
+                public static readonly JUSTIFICATION_NONE: java.lang.Float | number
                 /**
                  * Attribute key for input method highlight styles.
                  * <p>Values are instances of {@link
@@ -716,7 +716,7 @@ declare namespace java {
                  * @see java.text.Annotation
                  */
                 // @ts-ignore
-                readonly INPUT_METHOD_HIGHLIGHT: java.awt.font.TextAttribute
+                public static readonly INPUT_METHOD_HIGHLIGHT: java.awt.font.TextAttribute
                 /**
                  * Attribute key for input method underlines.  Values
                  * are instances of <b><code>Integer</code></b>.  The default
@@ -734,42 +734,42 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly INPUT_METHOD_UNDERLINE: java.awt.font.TextAttribute
+                public static readonly INPUT_METHOD_UNDERLINE: java.awt.font.TextAttribute
                 /**
                  * Single pixel solid low underline.
                  * @see #INPUT_METHOD_UNDERLINE
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly UNDERLINE_LOW_ONE_PIXEL: number
+                public static readonly UNDERLINE_LOW_ONE_PIXEL: java.lang.Integer | number
                 /**
                  * Double pixel solid low underline.
                  * @see #INPUT_METHOD_UNDERLINE
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly UNDERLINE_LOW_TWO_PIXEL: number
+                public static readonly UNDERLINE_LOW_TWO_PIXEL: java.lang.Integer | number
                 /**
                  * Single pixel dotted low underline.
                  * @see #INPUT_METHOD_UNDERLINE
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly UNDERLINE_LOW_DOTTED: number
+                public static readonly UNDERLINE_LOW_DOTTED: java.lang.Integer | number
                 /**
                  * Double pixel gray low underline.
                  * @see #INPUT_METHOD_UNDERLINE
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly UNDERLINE_LOW_GRAY: number
+                public static readonly UNDERLINE_LOW_GRAY: java.lang.Integer | number
                 /**
                  * Single pixel dashed low underline.
                  * @see #INPUT_METHOD_UNDERLINE
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly UNDERLINE_LOW_DASHED: number
+                public static readonly UNDERLINE_LOW_DASHED: java.lang.Integer | number
                 /**
                  * Attribute key for swapping foreground and background
                  * <code>Paints</code>.  Values are instances of
@@ -787,14 +787,14 @@ declare namespace java {
                  * @see #BACKGROUND
                  */
                 // @ts-ignore
-                readonly SWAP_COLORS: java.awt.font.TextAttribute
+                public static readonly SWAP_COLORS: java.awt.font.TextAttribute
                 /**
                  * Swap foreground and background.
                  * @see #SWAP_COLORS
                  * @since 1.3
                  */
                 // @ts-ignore
-                readonly SWAP_COLORS_ON: java.lang.Boolean
+                public static readonly SWAP_COLORS_ON: java.lang.Boolean
                 /**
                  * Attribute key for converting ASCII decimal digits to other
                  * decimal ranges.  Values are instances of {@link NumericShaper}.
@@ -809,7 +809,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                readonly NUMERIC_SHAPING: java.awt.font.TextAttribute
+                public static readonly NUMERIC_SHAPING: java.awt.font.TextAttribute
                 /**
                  * Attribute key to request kerning. Values are instances of
                  * <b><code>Integer</code></b>.  The default value is
@@ -824,14 +824,14 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly KERNING: java.awt.font.TextAttribute
+                public static readonly KERNING: java.awt.font.TextAttribute
                 /**
                  * Request standard kerning.
                  * @see #KERNING
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly KERNING_ON: number
+                public static readonly KERNING_ON: java.lang.Integer | number
                 /**
                  * Attribute key for enabling optional ligatures. Values are
                  * instances of <b><code>Integer</code></b>.  The default value is
@@ -841,14 +841,14 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly LIGATURES: java.awt.font.TextAttribute
+                public static readonly LIGATURES: java.awt.font.TextAttribute
                 /**
                  * Request standard optional ligatures.
                  * @see #LIGATURES
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly LIGATURES_ON: number
+                public static readonly LIGATURES_ON: java.lang.Integer | number
                 /**
                  * Attribute key to control tracking.  Values are instances of
                  * <b><code>Number</code></b>.  The default value is
@@ -865,26 +865,26 @@ declare namespace java {
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly TRACKING: java.awt.font.TextAttribute
+                public static readonly TRACKING: java.awt.font.TextAttribute
                 /**
                  * Perform tight tracking.
                  * @see #TRACKING
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly TRACKING_TIGHT: number
+                public static readonly TRACKING_TIGHT: java.lang.Float | number
                 /**
                  * Perform loose tracking.
                  * @see #TRACKING
                  * @since 1.6
                  */
                 // @ts-ignore
-                readonly TRACKING_LOOSE: number
+                public static readonly TRACKING_LOOSE: java.lang.Float | number
                 /**
                  * Resolves instances being deserialized to the predefined constants.
                  */
                 // @ts-ignore
-                readResolve(): java.lang.Object
+                readResolve(): any
             }
         }
     }

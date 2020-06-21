@@ -24,7 +24,7 @@ declare namespace org {
                              * @return Header partition
                              */
                             // @ts-ignore
-                            getHeader(): org.spongepowered.api.text.transform.SimpleTextFormatter
+                            public getHeader(): org.spongepowered.api.text.transform.SimpleTextFormatter
                             /**
                              * Clears any existing components within the header partition and adds
                              * a new {@link TextTemplateApplier} to the partition with the
@@ -32,13 +32,13 @@ declare namespace org {
                              * @param header Header value
                              */
                             // @ts-ignore
-                            setHeader(header: org.spongepowered.api.text.TextRepresentable): void
+                            public setHeader(header: org.spongepowered.api.text.TextRepresentable): void
                             /**
                              * Returns the body partition within this formatter.
                              * @return Body partition
                              */
                             // @ts-ignore
-                            getBody(): org.spongepowered.api.text.transform.SimpleTextFormatter
+                            public getBody(): org.spongepowered.api.text.transform.SimpleTextFormatter
                             /**
                              * Clears any existing components within the body partition and adds
                              * a new {@link TextTemplateApplier} to the partition with the
@@ -46,13 +46,13 @@ declare namespace org {
                              * @param body Body value
                              */
                             // @ts-ignore
-                            setBody(body: org.spongepowered.api.text.TextRepresentable): void
+                            public setBody(body: org.spongepowered.api.text.TextRepresentable): void
                             /**
                              * Returns the footer partition within this formatter.
                              * @return Footer partition
                              */
                             // @ts-ignore
-                            getFooter(): org.spongepowered.api.text.transform.SimpleTextFormatter
+                            public getFooter(): org.spongepowered.api.text.transform.SimpleTextFormatter
                             /**
                              * Clears any existing components within the footer partition and adds
                              * a new {@link TextTemplateApplier} to the partition with the
@@ -60,7 +60,7 @@ declare namespace org {
                              * @param footer Footer value
                              */
                             // @ts-ignore
-                            setFooter(footer: org.spongepowered.api.text.TextRepresentable): void
+                            public setFooter(footer: org.spongepowered.api.text.TextRepresentable): void
                         }
                     }
                 }

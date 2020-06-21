@@ -39,7 +39,7 @@ declare namespace org {
                          * The {@code ObjectMapper} must be configured with a {@code CBORFactory} instance.
                          */
                         // @ts-ignore
-                        setObjectMapper(objectMapper: ObjectMapper): void
+                        public setObjectMapper(objectMapper: ObjectMapper): void
                     }
                 }
             }

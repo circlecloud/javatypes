@@ -21,9 +21,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        parse(text: string, locale: java.util.Locale): java.time.Instant
+                        public parse(text: java.lang.String | string, locale: java.util.Locale): java.time.Instant
                         // @ts-ignore
-                        print(object: java.time.Instant, locale: java.util.Locale): java.lang.String
+                        public print(object: java.time.Instant, locale: java.util.Locale): string
                     }
                 }
             }

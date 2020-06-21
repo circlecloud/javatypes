@@ -16,7 +16,7 @@ declare namespace javax {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    list: javax.swing.JList
+                    list: javax.swing.JList<any>
                     // @ts-ignore
                     rendererPane: javax.swing.CellRendererPane
                     // @ts-ignore
@@ -38,19 +38,19 @@ declare namespace javax {
                     // @ts-ignore
                     updateLayoutStateNeeded: number /*int*/
                     // @ts-ignore
-                    readonly modelChanged: number /*int*/
+                    static readonly modelChanged: number /*int*/
                     // @ts-ignore
-                    readonly selectionModelChanged: number /*int*/
+                    static readonly selectionModelChanged: number /*int*/
                     // @ts-ignore
-                    readonly fontChanged: number /*int*/
+                    static readonly fontChanged: number /*int*/
                     // @ts-ignore
-                    readonly fixedCellWidthChanged: number /*int*/
+                    static readonly fixedCellWidthChanged: number /*int*/
                     // @ts-ignore
-                    readonly fixedCellHeightChanged: number /*int*/
+                    static readonly fixedCellHeightChanged: number /*int*/
                     // @ts-ignore
-                    readonly prototypeCellValueChanged: number /*int*/
+                    static readonly prototypeCellValueChanged: number /*int*/
                     // @ts-ignore
-                    readonly cellRendererChanged: number /*int*/
+                    static readonly cellRendererChanged: number /*int*/
                     /**
                      * Paint one List cell: compute the relevant state, get the "rubber stamp"
                      * cell renderer component, and then use the CellRendererPane to paint it.
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @see #paint
                      */
                     // @ts-ignore
-                    paintCell(g: java.awt.Graphics, row: number /*int*/, rowBounds: java.awt.Rectangle, cellRenderer: javax.swing.ListCellRenderer, dataModel: javax.swing.ListModel, selModel: javax.swing.ListSelectionModel, leadIndex: number /*int*/): void
+                    paintCell(g: java.awt.Graphics, row: number /*int*/, rowBounds: java.awt.Rectangle, cellRenderer: javax.swing.ListCellRenderer<any>, dataModel: javax.swing.ListModel<any>, selModel: javax.swing.ListSelectionModel, leadIndex: number /*int*/): void
                     /**
                      * Paint the rows that intersect the Graphics objects clipRect.  This
                      * method calls paintCell as necessary.  Subclasses
@@ -66,7 +66,7 @@ declare namespace javax {
                      * @see #paintCell
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     /**
                      * Returns the baseline.
                      * @throws NullPointerException {#inheritDoc}
@@ -75,7 +75,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                    public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                     /**
                      * Returns an enum indicating how the baseline of the component
                      * changes as the size changes.
@@ -84,7 +84,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                    public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                     /**
                      * The preferredSize of the list depends upon the layout orientation.
                      * <table summary="Describes the preferred size for each layout orientation">
@@ -140,7 +140,7 @@ declare namespace javax {
                      * @return The total size of the list.
                      */
                     // @ts-ignore
-                    getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                    public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                     /**
                      * Selected the previous row and force it to be visible.
                      * @see JList#ensureIndexIsVisible
@@ -220,7 +220,7 @@ declare namespace javax {
                      * @see #installKeyboardActions
                      */
                     // @ts-ignore
-                    installUI(c: javax.swing.JComponent): void
+                    public installUI(c: javax.swing.JComponent): void
                     /**
                      * Uninitializes <code>this.list</code> by calling <code>uninstallListeners()</code>,
                      * <code>uninstallKeyboardActions()</code>, and <code>uninstallDefaults()</code>
@@ -230,30 +230,30 @@ declare namespace javax {
                      * @see #uninstallDefaults
                      */
                     // @ts-ignore
-                    uninstallUI(c: javax.swing.JComponent): void
+                    public uninstallUI(c: javax.swing.JComponent): void
                     /**
                      * Returns a new instance of BasicListUI.  BasicListUI delegates are
                      * allocated one per JList.
                      * @return A new ListUI implementation for the Windows look and feel.
                      */
                     // @ts-ignore
-                    createUI(list: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(list: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * {@inheritDoc}
                      * @throws NullPointerException {#inheritDoc}
                      */
                     // @ts-ignore
-                    locationToIndex(list: javax.swing.JList, location: java.awt.Point): int
+                    public locationToIndex(list: javax.swing.JList<any>, location: java.awt.Point): number /*int*/
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    indexToLocation(list: javax.swing.JList, index: number /*int*/): java.awt.Point
+                    public indexToLocation(list: javax.swing.JList<any>, index: number /*int*/): java.awt.Point
                     /**
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    getCellBounds(list: javax.swing.JList, index1: number /*int*/, index2: number /*int*/): java.awt.Rectangle
+                    public getCellBounds(list: javax.swing.JList<any>, index1: number /*int*/, index2: number /*int*/): java.awt.Rectangle
                     /**
                      * Returns the height of the specified row based on the current layout.
                      * @return The specified row height or -1 if row isn't valid.
@@ -262,7 +262,7 @@ declare namespace javax {
                      * @see #updateLayoutState
                      */
                     // @ts-ignore
-                    getRowHeight(row: number /*int*/): int
+                    getRowHeight(row: number /*int*/): number /*int*/
                     /**
                      * Convert the JList relative coordinate to the row that contains it,
                      * based on the current layout.  If y0 doesn't fall within any row,
@@ -272,7 +272,7 @@ declare namespace javax {
                      * @see #updateLayoutState
                      */
                     // @ts-ignore
-                    convertYToRow(y0: number /*int*/): int
+                    convertYToRow(y0: number /*int*/): number /*int*/
                     /**
                      * Return the JList relative Y coordinate of the origin of the specified
                      * row or -1 if row isn't valid.
@@ -281,7 +281,7 @@ declare namespace javax {
                      * @see #updateLayoutState
                      */
                     // @ts-ignore
-                    convertRowToY(row: number /*int*/): int
+                    convertRowToY(row: number /*int*/): number /*int*/
                     /**
                      * If updateLayoutStateNeeded is non zero, call updateLayoutState() and reset
                      * updateLayoutStateNeeded.  This method should be called by methods

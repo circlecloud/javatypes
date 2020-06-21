@@ -51,12 +51,12 @@ declare namespace javax {
                  * Starts the gauge monitor.
                  */
                 // @ts-ignore
-                start(): void
+                public start(): void
                 /**
                  * Stops the gauge monitor.
                  */
                 // @ts-ignore
-                stop(): void
+                public stop(): void
                 /**
                  * Gets the derived gauge of the specified object, if this object is
                  * contained in the set of observed MBeans, or <code>null</code> otherwise.
@@ -64,7 +64,7 @@ declare namespace javax {
                  * @return The derived gauge of the specified object.
                  */
                 // @ts-ignore
-                getDerivedGauge(object: javax.management.ObjectName): java.lang.Number
+                public getDerivedGauge(object: javax.management.ObjectName): java.lang.Number
                 /**
                  * Gets the derived gauge timestamp of the specified object, if
                  * this object is contained in the set of observed MBeans, or
@@ -74,7 +74,7 @@ declare namespace javax {
                  * @return The derived gauge timestamp of the specified object.
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(object: javax.management.ObjectName): long
+                public getDerivedGaugeTimeStamp(object: javax.management.ObjectName): number /*long*/
                 /**
                  * Returns the derived gauge of the first object in the set of
                  * observed MBeans.
@@ -83,7 +83,7 @@ declare namespace javax {
                  *  {#link #getDerivedGauge(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGauge(): java.lang.Number
+                public getDerivedGauge(): java.lang.Number
                 /**
                  * Gets the derived gauge timestamp of the first object in the set
                  * of observed MBeans.
@@ -92,21 +92,21 @@ declare namespace javax {
                  *  {#link #getDerivedGaugeTimeStamp(ObjectName)}
                  */
                 // @ts-ignore
-                getDerivedGaugeTimeStamp(): long
+                public getDerivedGaugeTimeStamp(): number /*long*/
                 /**
                  * Gets the high threshold value common to all observed MBeans.
                  * @return The high threshold value.
                  * @see #setThresholds
                  */
                 // @ts-ignore
-                getHighThreshold(): java.lang.Number
+                public getHighThreshold(): java.lang.Number
                 /**
                  * Gets the low threshold value common to all observed MBeans.
                  * @return The low threshold value.
                  * @see #setThresholds
                  */
                 // @ts-ignore
-                getLowThreshold(): java.lang.Number
+                public getLowThreshold(): java.lang.Number
                 /**
                  * Sets the high and the low threshold values common to all
                  * observed MBeans.
@@ -120,7 +120,7 @@ declare namespace javax {
                  * @see #getLowThreshold
                  */
                 // @ts-ignore
-                setThresholds(highValue: java.lang.Number, lowValue: java.lang.Number): void
+                public setThresholds(highValue: java.lang.Number, lowValue: java.lang.Number): void
                 /**
                  * Gets the high notification's on/off switch value common to all
                  * observed MBeans.
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @see #setNotifyHigh
                  */
                 // @ts-ignore
-                getNotifyHigh(): boolean
+                public getNotifyHigh(): boolean
                 /**
                  * Sets the high notification's on/off switch value common to all
                  * observed MBeans.
@@ -137,7 +137,7 @@ declare namespace javax {
                  * @see #getNotifyHigh
                  */
                 // @ts-ignore
-                setNotifyHigh(value: boolean): void
+                public setNotifyHigh(value: boolean): void
                 /**
                  * Gets the low notification's on/off switch value common to all
                  * observed MBeans.
@@ -146,7 +146,7 @@ declare namespace javax {
                  * @see #setNotifyLow
                  */
                 // @ts-ignore
-                getNotifyLow(): boolean
+                public getNotifyLow(): boolean
                 /**
                  * Sets the low notification's on/off switch value common to all
                  * observed MBeans.
@@ -154,7 +154,7 @@ declare namespace javax {
                  * @see #getNotifyLow
                  */
                 // @ts-ignore
-                setNotifyLow(value: boolean): void
+                public setNotifyLow(value: boolean): void
                 /**
                  * Gets the difference mode flag value common to all observed MBeans.
                  * @return <CODE>true</CODE> if the difference mode is used,
@@ -162,21 +162,21 @@ declare namespace javax {
                  * @see #setDifferenceMode
                  */
                 // @ts-ignore
-                getDifferenceMode(): boolean
+                public getDifferenceMode(): boolean
                 /**
                  * Sets the difference mode flag value common to all observed MBeans.
                  * @param value The difference mode flag value.
                  * @see #getDifferenceMode
                  */
                 // @ts-ignore
-                setDifferenceMode(value: boolean): void
+                public setDifferenceMode(value: boolean): void
                 /**
                  * Returns a <CODE>NotificationInfo</CODE> object containing the
                  * name of the Java class of the notification and the notification
                  * types sent by the gauge monitor.
                  */
                 // @ts-ignore
-                getNotificationInfo(): javax.management.MBeanNotificationInfo[]
+                public getNotificationInfo(): javax.management.MBeanNotificationInfo[]
             }
         }
     }

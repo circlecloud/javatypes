@@ -17,11 +17,11 @@ declare namespace org {
                          * @param messageSource the MessageSource that resolves theme messages
                          */
                         // @ts-ignore
-                        constructor(name: string, messageSource: org.springframework.context.MessageSource)
+                        constructor(name: java.lang.String | string, messageSource: org.springframework.context.MessageSource)
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         // @ts-ignore
-                        getMessageSource(): org.springframework.context.MessageSource
+                        public getMessageSource(): org.springframework.context.MessageSource
                     }
                 }
             }

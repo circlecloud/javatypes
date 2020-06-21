@@ -174,7 +174,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                getPrefix(uri: string): java.lang.String
+                getPrefix(uri: java.lang.String | string): string
                 /**
                  * Sets the prefix the uri is bound to.  This prefix is bound
                  * in the scope of the current START_ELEMENT / END_ELEMENT pair.
@@ -185,7 +185,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                setPrefix(prefix: string, uri: string): void
+                setPrefix(prefix: java.lang.String | string, uri: java.lang.String | string): void
                 /**
                  * Binds a URI to the default namespace
                  * This URI is bound
@@ -196,7 +196,7 @@ declare namespace javax {
                  * @throws XMLStreamException
                  */
                 // @ts-ignore
-                setDefaultNamespace(uri: string): void
+                setDefaultNamespace(uri: java.lang.String | string): void
                 /**
                  * Sets the current namespace context for prefix and uri bindings.
                  * This context becomes the root namespace context for writing and

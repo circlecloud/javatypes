@@ -17,7 +17,7 @@ declare namespace org {
                      * @return the 'age' value
                      */
                     // @ts-ignore
-                    getAge(): int
+                    getAge(): number /*int*/
                     /**
                      * Sets the value of the 'age' property.
                      * @param age the new 'age' value
@@ -29,7 +29,7 @@ declare namespace org {
                      * @return the maximum 'age' value
                      */
                     // @ts-ignore
-                    getMaximumAge(): int
+                    getMaximumAge(): number /*int*/
                 }
             }
         }

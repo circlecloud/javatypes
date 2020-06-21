@@ -10,11 +10,11 @@ declare namespace org {
                     // @ts-ignore
                     class ClassPathContextResource extends org.springframework.core.io.ClassPathResource implements org.springframework.core.io.ContextResource {
                         // @ts-ignore
-                        constructor(path: string, classLoader: java.lang.ClassLoader)
+                        constructor(path: java.lang.String | string, classLoader: java.lang.ClassLoader)
                         // @ts-ignore
-                        getPathWithinContext(): java.lang.String
+                        public getPathWithinContext(): string
                         // @ts-ignore
-                        createRelative(relativePath: string): org.springframework.core.io.Resource
+                        public createRelative(relativePath: java.lang.String | string): org.springframework.core.io.Resource
                     }
                 }
             }

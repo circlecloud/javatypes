@@ -144,7 +144,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>expression</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                compile(expression: string): javax.xml.xpath.XPathExpression
+                compile(expression: java.lang.String | string): javax.xml.xpath.XPathExpression
                 /**
                  * <p>Evaluate an <code>XPath</code> expression in the specified context and return the result as the specified type.</p>
                  * <p>See <a href="#XPath-evaluation">Evaluation of XPath Expressions</a> for context item evaluation,
@@ -170,7 +170,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>expression</code> or <code>returnType</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(expression: string, item: any, returnType: javax.xml.namespace.QName): java.lang.Object
+                evaluate(expression: java.lang.String | string, item: java.lang.Object | any, returnType: javax.xml.namespace.QName): any
                 /**
                  * <p>Evaluate an XPath expression in the specified context and return the result as a <code>String</code>.</p>
                  * <p>This method calls {@link #evaluate(String expression, Object item, QName returnType)} with a <code>returnType</code> of
@@ -189,7 +189,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>expression</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(expression: string, item: any): java.lang.String
+                evaluate(expression: java.lang.String | string, item: java.lang.Object | any): string
                 /**
                  * <p>Evaluate an XPath expression in the context of the specified <code>InputSource</code>
                  * and return the result as the specified type.</p>
@@ -211,7 +211,7 @@ declare namespace javax {
                  *    is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(expression: string, source: org.xml.sax.InputSource, returnType: javax.xml.namespace.QName): java.lang.Object
+                evaluate(expression: java.lang.String | string, source: org.xml.sax.InputSource, returnType: javax.xml.namespace.QName): any
                 /**
                  * <p>Evaluate an XPath expression in the context of the specified <code>InputSource</code>
                  * and return the result as a <code>String</code>.</p>
@@ -229,7 +229,7 @@ declare namespace javax {
                  * @throws NullPointerException If <code>expression</code> or <code>source</code> is <code>null</code>.
                  */
                 // @ts-ignore
-                evaluate(expression: string, source: org.xml.sax.InputSource): java.lang.String
+                evaluate(expression: java.lang.String | string, source: org.xml.sax.InputSource): string
             }
         }
     }

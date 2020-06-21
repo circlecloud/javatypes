@@ -9,7 +9,7 @@ declare namespace javax {
                  * @author Richard Bair
                  */
                 // @ts-ignore
-                class AbstractRegionPainter extends java.lang.Object implements javax.swing.Painter<javax.swing.JComponent> {
+                abstract class AbstractRegionPainter extends java.lang.Object implements javax.swing.Painter<javax.swing.JComponent> {
                     /**
                      * Create a new AbstractRegionPainter
                      */
@@ -19,7 +19,7 @@ declare namespace javax {
                      * {@inheritDoc}
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics2D, c: javax.swing.JComponent, w: number /*int*/, h: number /*int*/): void
+                    public paint(g: java.awt.Graphics2D, c: javax.swing.JComponent, w: number /*int*/, h: number /*int*/): void
                     /**
                      * Get any extra attributes which the painter implementation would like
                      * to include in the image cache lookups. This is checked for every call
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return Array of extra objects to be included in the cache key
                      */
                     // @ts-ignore
-                    getExtendedCacheKeys(c: javax.swing.JComponent): java.lang.Object[]
+                    getExtendedCacheKeys(c: javax.swing.JComponent): any[]
                     /**
                      * <p>Gets the PaintContext for this painting operation. This method is called on every
                      * paint, and so should be fast and produce no garbage. The PaintContext contains
@@ -70,7 +70,7 @@ declare namespace javax {
                      * @param extendedCacheKeys The result of the call to getExtendedCacheKeys()
                      */
                     // @ts-ignore
-                    abstract doPaint(g: java.awt.Graphics2D, c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/, extendedCacheKeys: any[]): void
+                    abstract doPaint(g: java.awt.Graphics2D, c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/, extendedCacheKeys: java.lang.Object[] | any[]): void
                     /**
                      * Decodes and returns a float value representing the actual pixel location for
                      * the given encoded X value.
@@ -80,7 +80,7 @@ declare namespace javax {
                      *       if {#code x < 0} or {@code x > 3}
                      */
                     // @ts-ignore
-                    decodeX(x: number /*float*/): float
+                    decodeX(x: number /*float*/): number /*float*/
                     /**
                      * Decodes and returns a float value representing the actual pixel location for
                      * the given encoded y value.
@@ -90,7 +90,7 @@ declare namespace javax {
                      *       if {#code y < 0} or {@code y > 3}
                      */
                     // @ts-ignore
-                    decodeY(y: number /*float*/): float
+                    decodeY(y: number /*float*/): number /*float*/
                     /**
                      * Decodes and returns a float value representing the actual pixel location for
                      * the anchor point given the encoded X value of the control point, and the offset
@@ -102,7 +102,7 @@ declare namespace javax {
                      *       if {#code x < 0} or {@code x > 3}
                      */
                     // @ts-ignore
-                    decodeAnchorX(x: number /*float*/, dx: number /*float*/): float
+                    decodeAnchorX(x: number /*float*/, dx: number /*float*/): number /*float*/
                     /**
                      * Decodes and returns a float value representing the actual pixel location for
                      * the anchor point given the encoded Y value of the control point, and the offset
@@ -114,7 +114,7 @@ declare namespace javax {
                      *       if {#code y < 0} or {@code y > 3}
                      */
                     // @ts-ignore
-                    decodeAnchorY(y: number /*float*/, dy: number /*float*/): float
+                    decodeAnchorY(y: number /*float*/, dy: number /*float*/): number /*float*/
                     /**
                      * Decodes and returns a color, which is derived from a base color in UI
                      * defaults.
@@ -128,7 +128,7 @@ declare namespace javax {
                      *          uiDefault color changes.
                      */
                     // @ts-ignore
-                    decodeColor(key: string, hOffset: number /*float*/, sOffset: number /*float*/, bOffset: number /*float*/, aOffset: number /*int*/): java.awt.Color
+                    decodeColor(key: java.lang.String | string, hOffset: number /*float*/, sOffset: number /*float*/, bOffset: number /*float*/, aOffset: number /*int*/): java.awt.Color
                     /**
                      * Decodes and returns a color, which is derived from a offset between two
                      * other colors.
@@ -201,7 +201,7 @@ declare namespace javax {
                      * @return The color that was obtained from the component or defaultColor
                      */
                     // @ts-ignore
-                    getComponentColor(c: javax.swing.JComponent, property: string, defaultColor: java.awt.Color, saturationOffset: number /*float*/, brightnessOffset: number /*float*/, alphaOffset: number /*int*/): java.awt.Color
+                    getComponentColor(c: javax.swing.JComponent, property: java.lang.String | string, defaultColor: java.awt.Color, saturationOffset: number /*float*/, brightnessOffset: number /*float*/, alphaOffset: number /*int*/): java.awt.Color
                 }
             }
         }

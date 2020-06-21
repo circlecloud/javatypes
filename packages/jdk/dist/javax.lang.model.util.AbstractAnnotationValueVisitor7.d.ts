@@ -36,7 +36,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                class AbstractAnnotationValueVisitor7<R, P> extends javax.lang.model.util.AbstractAnnotationValueVisitor6<R, P> {
+                abstract class AbstractAnnotationValueVisitor7<R, P> extends javax.lang.model.util.AbstractAnnotationValueVisitor6<R, P> {
                     /**
                      * Constructor for concrete subclasses to call.
                      */

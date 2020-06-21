@@ -27,13 +27,13 @@ declare namespace org {
                          * The default separator to use in-between file name parts: an underscore.
                          */
                         // @ts-ignore
-                        readonly DEFAULT_SEPARATOR: string
+                        public static readonly DEFAULT_SEPARATOR: java.lang.String | string
                         /**
                          * Set the separator to use in-between file name parts.
                          * Default is an underscore ("_").
                          */
                         // @ts-ignore
-                        setSeparator(separator: string): void
+                        public setSeparator(separator: java.lang.String | string): void
                         /**
                          * Find the most specific localized resource for the given name,
                          * extension and locale:
@@ -54,7 +54,7 @@ declare namespace org {
                          * @see java.util.ResourceBundle
                          */
                         // @ts-ignore
-                        findLocalizedResource(name: string, extension: string, locale: java.util.Locale): org.springframework.core.io.Resource
+                        public findLocalizedResource(name: java.lang.String | string, extension: java.lang.String | string, locale: java.util.Locale): org.springframework.core.io.Resource
                     }
                 }
             }

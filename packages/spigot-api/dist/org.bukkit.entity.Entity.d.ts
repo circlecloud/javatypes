@@ -39,13 +39,13 @@ declare namespace org {
                  * @return height of entity
                  */
                 // @ts-ignore
-                getHeight(): double
+                getHeight(): number /*double*/
                 /**
                  * Gets the entity's width
                  * @return width of entity
                  */
                 // @ts-ignore
-                getWidth(): double
+                getWidth(): number /*double*/
                 /**
                  * Gets the entity's current bounding box.
                  * <p>
@@ -122,26 +122,26 @@ declare namespace org {
                  * @return {#code List<Entity>} List of entities nearby
                  */
                 // @ts-ignore
-                getNearbyEntities(x: number /*double*/, y: number /*double*/, z: number /*double*/): java.util.List<org.bukkit.entity.Entity>
+                getNearbyEntities(x: number /*double*/, y: number /*double*/, z: number /*double*/): Array<org.bukkit.entity.Entity>
                 /**
                  * Returns a unique id for this entity
                  * @return Entity id
                  */
                 // @ts-ignore
-                getEntityId(): int
+                getEntityId(): number /*int*/
                 /**
                  * Returns the entity's current fire ticks (ticks before the entity stops
                  * being on fire).
                  * @return int fireTicks
                  */
                 // @ts-ignore
-                getFireTicks(): int
+                getFireTicks(): number /*int*/
                 /**
                  * Returns the entity's maximum fire ticks.
                  * @return int maxFireTicks
                  */
                 // @ts-ignore
-                getMaxFireTicks(): int
+                getMaxFireTicks(): number /*int*/
                 /**
                  * Sets the entity's current fire ticks (ticks before the entity stops
                  * being on fire).
@@ -226,7 +226,7 @@ declare namespace org {
                  * @return list of entities corresponding to current passengers.
                  */
                 // @ts-ignore
-                getPassengers(): java.util.List<org.bukkit.entity.Entity>
+                getPassengers(): Array<org.bukkit.entity.Entity>
                 /**
                  * Add a passenger to the vehicle.
                  * @param passenger The passenger to add
@@ -258,7 +258,7 @@ declare namespace org {
                  * @return The distance.
                  */
                 // @ts-ignore
-                getFallDistance(): float
+                getFallDistance(): number /*float*/
                 /**
                  * Sets the fall distance for this entity
                  * @param distance The new distance.
@@ -292,7 +292,7 @@ declare namespace org {
                  * @return Age of entity
                  */
                 // @ts-ignore
-                getTicksLived(): int
+                getTicksLived(): number /*int*/
                 /**
                  * Sets the amount of ticks this entity has lived for.
                  * <p>
@@ -420,7 +420,7 @@ declare namespace org {
                  * @return portal cooldown ticks
                  */
                 // @ts-ignore
-                getPortalCooldown(): int
+                getPortalCooldown(): number /*int*/
                 /**
                  * Sets the period of time (in ticks) before this entity can use a portal.
                  * @param cooldown portal cooldown ticks
@@ -434,7 +434,7 @@ declare namespace org {
                  * @return a set of tags for this entity
                  */
                 // @ts-ignore
-                getScoreboardTags(): java.util.Set<java.lang.String>
+                getScoreboardTags(): Array<java.lang.String | string>
                 /**
                  * Add a tag to this entity.
                  * <br>
@@ -443,14 +443,14 @@ declare namespace org {
                  * @return true if the tag was successfully added
                  */
                 // @ts-ignore
-                addScoreboardTag(tag: string): boolean
+                addScoreboardTag(tag: java.lang.String | string): boolean
                 /**
                  * Removes a given tag from this entity.
                  * @param tag the tag to remove
                  * @return true if the tag was successfully removed
                  */
                 // @ts-ignore
-                removeScoreboardTag(tag: string): boolean
+                removeScoreboardTag(tag: java.lang.String | string): boolean
                 /**
                  * Returns the reaction of the entity when moved by a piston.
                  * @return reaction

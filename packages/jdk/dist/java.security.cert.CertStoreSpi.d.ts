@@ -28,7 +28,7 @@ declare namespace java {
              * @author Steve Hanna
              */
             // @ts-ignore
-            class CertStoreSpi extends java.lang.Object {
+            abstract class CertStoreSpi extends java.lang.Object {
                 /**
                  * The sole constructor.
                  * @param params the initialization parameters (may be {#code null})
@@ -62,7 +62,7 @@ declare namespace java {
                  * @throws CertStoreException if an exception occurs
                  */
                 // @ts-ignore
-                abstract engineGetCertificates(selector: java.security.cert.CertSelector): java.util.Collection<? extends java.security.cert.Certificate>
+                public abstract engineGetCertificates(selector: java.security.cert.CertSelector): Array<any>
                 /**
                  * Returns a {@code Collection} of {@code CRL}s that
                  * match the specified selector. If no {@code CRL}s
@@ -88,7 +88,7 @@ declare namespace java {
                  * @throws CertStoreException if an exception occurs
                  */
                 // @ts-ignore
-                abstract engineGetCRLs(selector: java.security.cert.CRLSelector): java.util.Collection<? extends java.security.cert.CRL>
+                public abstract engineGetCRLs(selector: java.security.cert.CRLSelector): Array<any>
             }
         }
     }

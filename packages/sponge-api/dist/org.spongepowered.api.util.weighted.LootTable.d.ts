@@ -20,44 +20,44 @@ declare namespace org {
                          * @param table The new table
                          */
                         // @ts-ignore
-                        addTable(table: org.spongepowered.api.util.weighted.RandomObjectTable<T>): void
+                        public addTable(table: org.spongepowered.api.util.weighted.RandomObjectTable<T>): void
                         /**
                          * Adds all tables from the given {@link LootTable} to this LootTable's pool.
                          * @param other The other loot table
                          */
                         // @ts-ignore
-                        addAll(other: org.spongepowered.api.util.weighted.LootTable<T>): void
+                        public addAll(other: org.spongepowered.api.util.weighted.LootTable<T>): void
                         /**
                          * Removes a table from the pool.
                          * @param table The table to remove
                          * @return If the pool contained the table
                          */
                         // @ts-ignore
-                        removeTable(table: org.spongepowered.api.util.weighted.RandomObjectTable<T>): boolean
+                        public removeTable(table: org.spongepowered.api.util.weighted.RandomObjectTable<T>): boolean
                         /**
                          * Gets all tables in the pool.
                          * @return The tables
                          */
                         // @ts-ignore
-                        getTables(): java.util.List<org.spongepowered.api.util.weighted.RandomObjectTable<T>>
+                        public getTables(): Array<org.spongepowered.api.util.weighted.RandomObjectTable<T>>
                         /**
                          * Clears all tables from the pool.
                          */
                         // @ts-ignore
-                        clearPool(): void
+                        public clearPool(): void
                         /**
                          * Gets a List of objects as retrieved from all pools.
                          * @param rand The random object to use
                          * @return The retrieved entries
                          */
                         // @ts-ignore
-                        get(rand: java.util.Random): java.util.List<T>
+                        public get(rand: java.util.Random): Array<T>
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

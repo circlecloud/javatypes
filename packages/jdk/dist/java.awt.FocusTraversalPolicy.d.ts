@@ -42,7 +42,7 @@ declare namespace java {
          * @since 1.4
          */
         // @ts-ignore
-        class FocusTraversalPolicy extends java.lang.Object {
+        abstract class FocusTraversalPolicy extends java.lang.Object {
             // @ts-ignore
             constructor()
             /**
@@ -60,7 +60,7 @@ declare namespace java {
              *          either aContainer or aComponent is null
              */
             // @ts-ignore
-            abstract getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public abstract getComponentAfter(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             /**
              * Returns the Component that should receive the focus before aComponent.
              * aContainer must be a focus cycle root of aComponent or a focus traversal
@@ -76,7 +76,7 @@ declare namespace java {
              *          either aContainer or aComponent is null
              */
             // @ts-ignore
-            abstract getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
+            public abstract getComponentBefore(aContainer: java.awt.Container, aComponent: java.awt.Component): java.awt.Component
             /**
              * Returns the first Component in the traversal cycle. This method is used
              * to determine the next Component to focus when traversal wraps in the
@@ -88,7 +88,7 @@ declare namespace java {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            abstract getFirstComponent(aContainer: java.awt.Container): java.awt.Component
+            public abstract getFirstComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Returns the last Component in the traversal cycle. This method is used
              * to determine the next Component to focus when traversal wraps in the
@@ -100,7 +100,7 @@ declare namespace java {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            abstract getLastComponent(aContainer: java.awt.Container): java.awt.Component
+            public abstract getLastComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Returns the default Component to focus. This Component will be the first
              * to receive focus when traversing down into a new focus traversal cycle
@@ -112,7 +112,7 @@ declare namespace java {
              * @throws IllegalArgumentException if aContainer is null
              */
             // @ts-ignore
-            abstract getDefaultComponent(aContainer: java.awt.Container): java.awt.Component
+            public abstract getDefaultComponent(aContainer: java.awt.Container): java.awt.Component
             /**
              * Returns the Component that should receive the focus when a Window is
              * made visible for the first time. Once the Window has been made visible
@@ -131,7 +131,7 @@ declare namespace java {
              * @throws IllegalArgumentException if window is null
              */
             // @ts-ignore
-            getInitialComponent(window: java.awt.Window): java.awt.Component
+            public getInitialComponent(window: java.awt.Window): java.awt.Component
         }
     }
 }

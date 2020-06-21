@@ -24,13 +24,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor(beanFactory: ConfigurableBeanFactory)
                         // @ts-ignore
-                        supportsParameter(parameter: MethodParameter): boolean
+                        public supportsParameter(parameter: MethodParameter): boolean
                         // @ts-ignore
                         createNamedValueInfo(parameter: MethodParameter): org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.NamedValueInfo
                         // @ts-ignore
-                        resolveName(name: string, parameter: MethodParameter, webRequest: org.springframework.web.context.request.NativeWebRequest): java.lang.Object
+                        resolveName(name: java.lang.String | string, parameter: MethodParameter, webRequest: org.springframework.web.context.request.NativeWebRequest): any
                         // @ts-ignore
-                        handleMissingValue(name: string, parameter: MethodParameter): void
+                        handleMissingValue(name: java.lang.String | string, parameter: MethodParameter): void
                     }
                 }
             }

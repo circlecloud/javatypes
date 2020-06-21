@@ -24,7 +24,7 @@ declare namespace java {
              * @param constraints  where/how the component is added to the layout.
              */
             // @ts-ignore
-            addLayoutComponent(comp: java.awt.Component, constraints: any): void
+            addLayoutComponent(comp: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Calculates the maximum size dimensions for the specified container,
              * given the components it contains.
@@ -41,7 +41,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getLayoutAlignmentX(target: java.awt.Container): float
+            getLayoutAlignmentX(target: java.awt.Container): number /*float*/
             /**
              * Returns the alignment along the y axis.  This specifies how
              * the component would like to be aligned relative to other
@@ -50,7 +50,7 @@ declare namespace java {
              * the furthest away from the origin, 0.5 is centered, etc.
              */
             // @ts-ignore
-            getLayoutAlignmentY(target: java.awt.Container): float
+            getLayoutAlignmentY(target: java.awt.Container): number /*float*/
             /**
              * Invalidates the layout, indicating that if the layout manager
              * has cached information it should be discarded.

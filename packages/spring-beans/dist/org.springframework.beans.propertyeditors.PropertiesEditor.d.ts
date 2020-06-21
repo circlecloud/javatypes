@@ -23,12 +23,12 @@ declare namespace org {
                      * @param text the text to be so converted
                      */
                     // @ts-ignore
-                    setAsText(text: string): void
+                    public setAsText(text: java.lang.String | string): void
                     /**
                      * Take {@link Properties} as-is; convert {@link Map} into {@code Properties}.
                      */
                     // @ts-ignore
-                    setValue(value: any): void
+                    public setValue(value: java.lang.Object | any): void
                 }
             }
         }

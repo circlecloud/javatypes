@@ -19,19 +19,19 @@ declare namespace java {
              * @param constantName the name of the missing enum constant
              */
             // @ts-ignore
-            constructor(enumType: java.lang.Class<java.lang.Enum>, constantName: string)
+            constructor(enumType: java.lang.Class<any>, constantName: java.lang.String | string)
             /**
              * Returns the type of the missing enum constant.
              * @return the type of the missing enum constant
              */
             // @ts-ignore
-            enumType(): java.lang.Class<? extends java.lang.Enum>
+            enumType(): java.lang.Class<any>
             /**
              * Returns the name of the missing enum constant.
              * @return the name of the missing enum constant
              */
             // @ts-ignore
-            constantName(): java.lang.String
+            constantName(): string
         }
     }
 }

@@ -44,7 +44,7 @@ declare namespace java {
          * @serial exclude
          */
         // @ts-ignore
-        class EnumSet<E extends java.lang.Enum<E>> extends java.util.AbstractSet<E> implements java.lang.Cloneable, java.io.Serializable {
+        abstract class EnumSet<E extends java.lang.Enum<E>> extends java.util.AbstractSet<E> implements java.lang.Cloneable, java.io.Serializable {
             /**
              * Creates an empty enum set with the specified element type.
              * @param <E> The class of the elements in the set
@@ -54,7 +54,7 @@ declare namespace java {
              * @throws NullPointerException if <tt>elementType</tt> is null
              */
             // @ts-ignore
-            noneOf<E extends java.lang.Enum<E>>(elementType: java.lang.Class<E>): java.util.EnumSet<E>
+            public static noneOf<E extends java.lang.Enum<E>>(elementType: java.lang.Class<E>): java.util.EnumSet<E>
             /**
              * Creates an enum set containing all of the elements in the specified
              * element type.
@@ -65,7 +65,7 @@ declare namespace java {
              * @throws NullPointerException if <tt>elementType</tt> is null
              */
             // @ts-ignore
-            allOf<E extends java.lang.Enum<E>>(elementType: java.lang.Class<E>): java.util.EnumSet<E>
+            public static allOf<E extends java.lang.Enum<E>>(elementType: java.lang.Class<E>): java.util.EnumSet<E>
             /**
              * Creates an enum set with the same element type as the specified enum
              * set, initially containing the same elements (if any).
@@ -75,7 +75,7 @@ declare namespace java {
              * @throws NullPointerException if <tt>s</tt> is null
              */
             // @ts-ignore
-            copyOf<E extends java.lang.Enum<E>>(s: java.util.EnumSet<E>): java.util.EnumSet<E>
+            public static copyOf<E extends java.lang.Enum<E>>(s: java.util.EnumSet<E>): java.util.EnumSet<E>
             /**
              * Creates an enum set initialized from the specified collection.  If
              * the specified collection is an <tt>EnumSet</tt> instance, this static
@@ -90,7 +90,7 @@ declare namespace java {
              * @throws NullPointerException if <tt>c</tt> is null
              */
             // @ts-ignore
-            copyOf<E extends java.lang.Enum<E>>(c: Array<E>): java.util.EnumSet<E>
+            public static copyOf<E extends java.lang.Enum<E>>(c: java.util.Collection<E> | Array<E>): java.util.EnumSet<E>
             /**
              * Creates an enum set with the same element type as the specified enum
              * set, initially containing all the elements of this type that are
@@ -101,7 +101,7 @@ declare namespace java {
              * @throws NullPointerException if <tt>s</tt> is null
              */
             // @ts-ignore
-            complementOf<E extends java.lang.Enum<E>>(s: java.util.EnumSet<E>): java.util.EnumSet<E>
+            public static complementOf<E extends java.lang.Enum<E>>(s: java.util.EnumSet<E>): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing the specified element.
              * Overloadings of this method exist to initialize an enum set with
@@ -115,7 +115,7 @@ declare namespace java {
              * @return an enum set initially containing the specified element
              */
             // @ts-ignore
-            of<E extends java.lang.Enum<E>>(e: E extends java.lang.Enum<E>): java.util.EnumSet<E>
+            public static of<E extends java.lang.Enum<E>>(e: E): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing the specified elements.
              * Overloadings of this method exist to initialize an enum set with
@@ -130,7 +130,7 @@ declare namespace java {
              * @return an enum set initially containing the specified elements
              */
             // @ts-ignore
-            of<E extends java.lang.Enum<E>>(e1: E extends java.lang.Enum<E>, e2: E extends java.lang.Enum<E>): java.util.EnumSet<E>
+            public static of<E extends java.lang.Enum<E>>(e1: E, e2: E): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing the specified elements.
              * Overloadings of this method exist to initialize an enum set with
@@ -146,7 +146,7 @@ declare namespace java {
              * @return an enum set initially containing the specified elements
              */
             // @ts-ignore
-            of<E extends java.lang.Enum<E>>(e1: E extends java.lang.Enum<E>, e2: E extends java.lang.Enum<E>, e3: E extends java.lang.Enum<E>): java.util.EnumSet<E>
+            public static of<E extends java.lang.Enum<E>>(e1: E, e2: E, e3: E): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing the specified elements.
              * Overloadings of this method exist to initialize an enum set with
@@ -163,7 +163,7 @@ declare namespace java {
              * @return an enum set initially containing the specified elements
              */
             // @ts-ignore
-            of<E extends java.lang.Enum<E>>(e1: E extends java.lang.Enum<E>, e2: E extends java.lang.Enum<E>, e3: E extends java.lang.Enum<E>, e4: E extends java.lang.Enum<E>): java.util.EnumSet<E>
+            public static of<E extends java.lang.Enum<E>>(e1: E, e2: E, e3: E, e4: E): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing the specified elements.
              * Overloadings of this method exist to initialize an enum set with
@@ -181,7 +181,7 @@ declare namespace java {
              * @return an enum set initially containing the specified elements
              */
             // @ts-ignore
-            of<E extends java.lang.Enum<E>>(e1: E extends java.lang.Enum<E>, e2: E extends java.lang.Enum<E>, e3: E extends java.lang.Enum<E>, e4: E extends java.lang.Enum<E>, e5: E extends java.lang.Enum<E>): java.util.EnumSet<E>
+            public static of<E extends java.lang.Enum<E>>(e1: E, e2: E, e3: E, e4: E, e5: E): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing the specified elements.
              * This factory, whose parameter list uses the varargs feature, may
@@ -196,7 +196,7 @@ declare namespace java {
              * @return an enum set initially containing the specified elements
              */
             // @ts-ignore
-            of<E extends java.lang.Enum<E>>(first: E extends java.lang.Enum<E>, ...rest: E[]): java.util.EnumSet<E>
+            public static of<E extends java.lang.Enum<E>>(first: E, ...rest: E[]): java.util.EnumSet<E>
             /**
              * Creates an enum set initially containing all of the elements in the
              * range defined by the two specified endpoints.  The returned set will
@@ -211,13 +211,13 @@ declare namespace java {
              *          range defined by the two specified endpoints
              */
             // @ts-ignore
-            range<E extends java.lang.Enum<E>>(from: E extends java.lang.Enum<E>, to: E extends java.lang.Enum<E>): java.util.EnumSet<E>
+            public static range<E extends java.lang.Enum<E>>(from: E, to: E): java.util.EnumSet<E>
             /**
              * Returns a copy of this set.
              * @return a copy of this set
              */
             // @ts-ignore
-            clone(): java.util.EnumSet<E>
+            public clone(): java.util.EnumSet<E>
         }
     }
 }

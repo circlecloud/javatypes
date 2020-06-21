@@ -133,7 +133,7 @@ declare namespace org {
                          * @return The amount
                          */
                         // @ts-ignore
-                        getAmount(rand: java.util.Random): double
+                        getAmount(rand: java.util.Random): number /*double*/
                         /**
                          * Gets the amount as if from {@link #getAmount(Random)} but floored to the
                          * nearest integer equivalent.
@@ -141,11 +141,11 @@ declare namespace org {
                          * @return The floored amount
                          */
                         // @ts-ignore
-                        getFlooredAmount(rand: java.util.Random): int
+                        getFlooredAmount(rand: java.util.Random): number /*int*/
                         // @ts-ignore
                         toContainer(): org.spongepowered.api.data.DataContainer
                         // @ts-ignore
-                        getContentVersion(): int
+                        getContentVersion(): number /*int*/
                     }
                 }
             }

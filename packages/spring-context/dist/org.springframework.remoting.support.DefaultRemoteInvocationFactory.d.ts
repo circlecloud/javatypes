@@ -13,7 +13,7 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    createRemoteInvocation(methodInvocation: MethodInvocation): org.springframework.remoting.support.RemoteInvocation
+                    public createRemoteInvocation(methodInvocation: MethodInvocation): org.springframework.remoting.support.RemoteInvocation
                 }
             }
         }

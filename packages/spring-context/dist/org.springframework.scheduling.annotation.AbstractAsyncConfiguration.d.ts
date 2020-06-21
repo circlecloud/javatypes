@@ -12,17 +12,17 @@ declare namespace org {
                  * @see EnableAsync
                  */
                 // @ts-ignore
-                class AbstractAsyncConfiguration extends java.lang.Object implements org.springframework.context.annotation.ImportAware {
+                abstract class AbstractAsyncConfiguration extends java.lang.Object implements org.springframework.context.annotation.ImportAware {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
                     enableAsync: AnnotationAttributes
                     // @ts-ignore
-                    executor: java.util.function.Supplier<java.util.concurrent.Executor> | java.util.function$.Supplier<java.util.concurrent.Executor>
+                    executor: java.util.function$.Supplier<java.util.concurrent.Executor>
                     // @ts-ignore
-                    exceptionHandler: java.util.function.Supplier<AsyncUncaughtExceptionHandler> | java.util.function$.Supplier<AsyncUncaughtExceptionHandler>
+                    exceptionHandler: java.util.function$.Supplier<AsyncUncaughtExceptionHandler>
                     // @ts-ignore
-                    setImportMetadata(importMetadata: AnnotationMetadata): void
+                    public setImportMetadata(importMetadata: AnnotationMetadata): void
                 }
             }
         }

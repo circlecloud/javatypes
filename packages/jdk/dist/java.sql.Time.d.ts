@@ -43,20 +43,20 @@ declare namespace java {
              *                January 1, 1970, 00:00:00 GMT
              */
             // @ts-ignore
-            setTime(time: number /*long*/): void
+            public setTime(time: number /*long*/): void
             /**
              * Converts a string in JDBC time escape format to a <code>Time</code> value.
              * @param s time in format "hh:mm:ss"
              * @return a corresponding <code>Time</code> object
              */
             // @ts-ignore
-            valueOf(s: string): java.sql.Time
+            public static valueOf(s: java.lang.String | string): java.sql.Time
             /**
              * Formats a time in JDBC time escape format.
              * @return a <code>String</code> in hh:mm:ss format
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a year component.
@@ -66,7 +66,7 @@ declare namespace java {
              * @see #setYear
              */
             // @ts-ignore
-            getYear(): int
+            public getYear(): number /*int*/
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a month component.
@@ -76,7 +76,7 @@ declare namespace java {
              * @see #setMonth
              */
             // @ts-ignore
-            getMonth(): int
+            public getMonth(): number /*int*/
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a day component.
@@ -85,7 +85,7 @@ declare namespace java {
              *            method is invoked
              */
             // @ts-ignore
-            getDay(): int
+            public getDay(): number /*int*/
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a date component.
@@ -95,7 +95,7 @@ declare namespace java {
              * @see #setDate
              */
             // @ts-ignore
-            getDate(): int
+            public getDate(): number /*int*/
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a year component.
@@ -105,7 +105,7 @@ declare namespace java {
              * @see #getYear
              */
             // @ts-ignore
-            setYear(i: number /*int*/): void
+            public setYear(i: number /*int*/): void
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a month component.
@@ -115,7 +115,7 @@ declare namespace java {
              * @see #getMonth
              */
             // @ts-ignore
-            setMonth(i: number /*int*/): void
+            public setMonth(i: number /*int*/): void
             /**
              * This method is deprecated and should not be used because SQL <code>TIME</code>
              * values do not have a date component.
@@ -125,7 +125,7 @@ declare namespace java {
              * @see #getDate
              */
             // @ts-ignore
-            setDate(i: number /*int*/): void
+            public setDate(i: number /*int*/): void
             /**
              * Obtains an instance of {@code Time} from a {@link LocalTime} object
              * with the same hour, minute and second time value as the given
@@ -136,7 +136,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            valueOf(time: java.time.LocalTime): java.sql.Time
+            public static valueOf(time: java.time.LocalTime): java.sql.Time
             /**
              * Converts this {@code Time} object to a {@code LocalTime}.
              * <p>
@@ -146,7 +146,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            toLocalTime(): java.time.LocalTime
+            public toLocalTime(): java.time.LocalTime
             /**
              * This method always throws an UnsupportedOperationException and should
              * not be used because SQL {@code Time} values do not have a date
@@ -154,7 +154,7 @@ declare namespace java {
              * @exception java.lang.UnsupportedOperationException if this method is invoked
              */
             // @ts-ignore
-            toInstant(): java.time.Instant
+            public toInstant(): java.time.Instant
         }
     }
 }

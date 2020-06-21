@@ -22,7 +22,7 @@ declare namespace org {
                  * @since 2.0
                  */
                 // @ts-ignore
-                constructor(message: string, cause: Error)
+                constructor(message: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

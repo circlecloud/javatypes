@@ -18,25 +18,25 @@ declare namespace javax {
              * @param val the string that will be the value of this expression
              */
             // @ts-ignore
-            constructor(val: string)
+            constructor(val: java.lang.String | string)
             /**
              * Returns the string represented by the
              * <CODE>StringValueExp</CODE> instance.
              * @return the string.
              */
             // @ts-ignore
-            getValue(): java.lang.String
+            public getValue(): string
             /**
              * Returns the string representing the object.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
             /**
              * Sets the MBean server on which the query is to be performed.
              * @param s The MBean server on which the query is to be performed.
              */
             // @ts-ignore
-            setMBeanServer(s: javax.management.MBeanServer): void
+            public setMBeanServer(s: javax.management.MBeanServer): void
             /**
              * Applies the ValueExp on a MBean.
              * @param name The name of the MBean on which the ValueExp will be applied.
@@ -47,7 +47,7 @@ declare namespace javax {
              * @exception InvalidApplicationException
              */
             // @ts-ignore
-            apply(name: javax.management.ObjectName): javax.management.ValueExp
+            public apply(name: javax.management.ObjectName): javax.management.ValueExp
         }
     }
 }

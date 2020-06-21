@@ -17,7 +17,7 @@ declare namespace org {
                              * @return The strength value of the llama
                              */
                             // @ts-ignore
-                            strength(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                            strength(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                             /**
                              * Gets the {@link Value} for the {@link Keys#LLAMA_VARIANT llama variant}.
                              * @return The variant value of the llama

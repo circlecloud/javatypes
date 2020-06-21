@@ -8,7 +8,7 @@ declare namespace org {
                  * @since 2.5
                  */
                 // @ts-ignore
-                class ApplicationContextEvent extends org.springframework.context.ApplicationEvent {
+                abstract class ApplicationContextEvent extends org.springframework.context.ApplicationEvent {
                     /**
                      * Create a new ContextStartedEvent.
                      * @param source the {#code ApplicationContext} that the event is raised for
@@ -20,7 +20,7 @@ declare namespace org {
                      * Get the {@code ApplicationContext} that the event was raised for.
                      */
                     // @ts-ignore
-                    getApplicationContext(): org.springframework.context.ApplicationContext
+                    public getApplicationContext(): org.springframework.context.ApplicationContext
                 }
             }
         }

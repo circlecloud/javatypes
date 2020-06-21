@@ -14,36 +14,36 @@ declare namespace org {
                      * All the available flags are applied through the AND operator.
                      */
                     // @ts-ignore
-                    readonly ALL: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly ALL: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * A flag that defines whether a block change should notify
                      * neighboring blocks.
                      */
                     // @ts-ignore
-                    readonly NEIGHBOR: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly NEIGHBOR: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * The {@link #NEIGHBOR} and {@link #OBSERVER} flags combined
                      * with the AND operator.
                      */
                     // @ts-ignore
-                    readonly NEIGHBOR_OBSERVER: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly NEIGHBOR_OBSERVER: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * The {@link #NEIGHBOR} and {@link #PHYSICS} flags combined
                      * with the AND operator.
                      */
                     // @ts-ignore
-                    readonly NEIGHBOR_PHYSICS: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly NEIGHBOR_PHYSICS: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * The {@link #NEIGHBOR}, {@link #PHYSICS} and {@link #OBSERVER} flags
                      * combined with the AND operator.
                      */
                     // @ts-ignore
-                    readonly NEIGHBOR_PHYSICS_OBSERVER: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly NEIGHBOR_PHYSICS_OBSERVER: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * No flags are set, triggers nothing.
                      */
                     // @ts-ignore
-                    readonly NONE: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly NONE: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * A flag that defines whether to update observer blocks, different
                      * from notifying neighbors in that neighbor notifications
@@ -52,20 +52,20 @@ declare namespace org {
                      * being told of updates.
                      */
                     // @ts-ignore
-                    readonly OBSERVER: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly OBSERVER: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * A flag that defines whether a block change should
                      * perform block physics checks or not. If not, no checks
                      * are performed.
                      */
                     // @ts-ignore
-                    readonly PHYSICS: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly PHYSICS: org.spongepowered.api.world.BlockChangeFlag
                     /**
                      * The {@link #PHYSICS} and {@link #OBSERVER} flags combined with
                      * the AND operator.
                      */
                     // @ts-ignore
-                    readonly PHYSICS_OBSERVER: org.spongepowered.api.world.BlockChangeFlag
+                    public static readonly PHYSICS_OBSERVER: org.spongepowered.api.world.BlockChangeFlag
                 }
             }
         }

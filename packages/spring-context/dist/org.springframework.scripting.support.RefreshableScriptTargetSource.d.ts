@@ -22,7 +22,7 @@ declare namespace org {
                      * @param isFactoryBean whether the target script defines a FactoryBean
                      */
                     // @ts-ignore
-                    constructor(beanFactory: BeanFactory, beanName: string, scriptFactory: org.springframework.scripting.ScriptFactory, scriptSource: org.springframework.scripting.ScriptSource, isFactoryBean: boolean)
+                    constructor(beanFactory: BeanFactory, beanName: java.lang.String | string, scriptFactory: org.springframework.scripting.ScriptFactory, scriptSource: org.springframework.scripting.ScriptSource, isFactoryBean: boolean)
                     /**
                      * Determine whether a refresh is required through calling
                      * ScriptFactory's {@code requiresScriptedObjectRefresh} method.
@@ -34,7 +34,7 @@ declare namespace org {
                      * Obtain a fresh target object, retrieving a FactoryBean if necessary.
                      */
                     // @ts-ignore
-                    obtainFreshBean(beanFactory: BeanFactory, beanName: string): java.lang.Object
+                    obtainFreshBean(beanFactory: BeanFactory, beanName: java.lang.String | string): any
                 }
             }
         }

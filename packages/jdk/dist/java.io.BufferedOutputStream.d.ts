@@ -46,7 +46,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*int*/): void
+            public write(b: number /*int*/): void
             /**
              * Writes <code>len</code> bytes from the specified byte array
              * starting at offset <code>off</code> to this buffered output stream.
@@ -62,7 +62,7 @@ declare namespace java {
              * @exception IOException  if an I/O error occurs.
              */
             // @ts-ignore
-            write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
+            public write(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): void
             /**
              * Flushes this buffered output stream. This forces any buffered
              * output bytes to be written out to the underlying output stream.
@@ -70,7 +70,7 @@ declare namespace java {
              * @see java.io.FilterOutputStream#out
              */
             // @ts-ignore
-            flush(): void
+            public flush(): void
         }
     }
 }

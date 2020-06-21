@@ -35,7 +35,7 @@ declare namespace java {
                  * @return a copy of this {#code CRLSelector}
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                clone(): any
             }
         }
     }

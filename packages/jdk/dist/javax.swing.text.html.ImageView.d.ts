@@ -28,28 +28,28 @@ declare namespace javax {
                      * <code>HTML.Attribute.ALT</code>.
                      */
                     // @ts-ignore
-                    getAltText(): java.lang.String
+                    public getAltText(): string
                     /**
                      * Return a URL for the image source,
                      * or null if it could not be determined.
                      */
                     // @ts-ignore
-                    getImageURL(): java.net.URL
+                    public getImageURL(): java.net.URL
                     /**
                      * Returns the icon to use if the image couldn't be found.
                      */
                     // @ts-ignore
-                    getNoImageIcon(): javax.swing.Icon
+                    public getNoImageIcon(): javax.swing.Icon
                     /**
                      * Returns the icon to use while in the process of loading the image.
                      */
                     // @ts-ignore
-                    getLoadingImageIcon(): javax.swing.Icon
+                    public getLoadingImageIcon(): javax.swing.Icon
                     /**
                      * Returns the image to render.
                      */
                     // @ts-ignore
-                    getImage(): java.awt.Image
+                    public getImage(): java.awt.Image
                     /**
                      * Sets how the image is loaded. If <code>newValue</code> is true,
                      * the image we be loaded when first asked for, otherwise it will
@@ -57,12 +57,12 @@ declare namespace javax {
                      * that is to load the image asynchronously.
                      */
                     // @ts-ignore
-                    setLoadsSynchronously(newValue: boolean): void
+                    public setLoadsSynchronously(newValue: boolean): void
                     /**
                      * Returns true if the image should be loaded when first asked for.
                      */
                     // @ts-ignore
-                    getLoadsSynchronously(): boolean
+                    public getLoadsSynchronously(): boolean
                     /**
                      * Convenience method to get the StyleSheet.
                      */
@@ -74,7 +74,7 @@ declare namespace javax {
                      * model with a StyleSheet.
                      */
                     // @ts-ignore
-                    getAttributes(): javax.swing.text.AttributeSet
+                    public getAttributes(): javax.swing.text.AttributeSet
                     /**
                      * For images the tooltip text comes from text specified with the
                      * <code>ALT</code> attribute. This is overriden to return
@@ -82,7 +82,7 @@ declare namespace javax {
                      * @see JTextComponent#getToolTipText
                      */
                     // @ts-ignore
-                    getToolTipText(x: number /*float*/, y: number /*float*/, allocation: java.awt.Shape): java.lang.String
+                    public getToolTipText(x: number /*float*/, y: number /*float*/, allocation: java.awt.Shape): string
                     /**
                      * Update any cached values that come from attributes.
                      */
@@ -93,12 +93,12 @@ declare namespace javax {
                      * Seize this moment to cache the AWT Container I'm in.
                      */
                     // @ts-ignore
-                    setParent(parent: javax.swing.text.View): void
+                    public setParent(parent: javax.swing.text.View): void
                     /**
                      * Invoked when the Elements attributes have changed. Recreates the image.
                      */
                     // @ts-ignore
-                    changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                    public changedUpdate(e: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                     /**
                      * Paints the View.
                      * @param g the rendering surface to use
@@ -106,7 +106,7 @@ declare namespace javax {
                      * @see View#paint
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, a: java.awt.Shape): void
+                    public paint(g: java.awt.Graphics, a: java.awt.Shape): void
                     /**
                      * Determines the preferred span for this view along an
                      * axis.
@@ -117,7 +117,7 @@ declare namespace javax {
                      *            the parent may choose to resize or break the view
                      */
                     // @ts-ignore
-                    getPreferredSpan(axis: number /*int*/): float
+                    public getPreferredSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Determines the desired alignment for this view along an
                      * axis.  This is implemented to give the alignment to the
@@ -131,7 +131,7 @@ declare namespace javax {
                      *    center of the view
                      */
                     // @ts-ignore
-                    getAlignment(axis: number /*int*/): float
+                    public getAlignment(axis: number /*int*/): number /*float*/
                     /**
                      * Provides a mapping from the document model coordinate space
                      * to the coordinate space of the view mapped to it.
@@ -143,7 +143,7 @@ declare namespace javax {
                      * @see View#modelToView
                      */
                     // @ts-ignore
-                    modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
+                    public modelToView(pos: number /*int*/, a: java.awt.Shape, b: javax.swing.text.Position.Bias): java.awt.Shape
                     /**
                      * Provides a mapping from the view coordinate space to the logical
                      * coordinate space of the model.
@@ -155,7 +155,7 @@ declare namespace javax {
                      * @see View#viewToModel
                      */
                     // @ts-ignore
-                    viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): int
+                    public viewToModel(x: number /*float*/, y: number /*float*/, a: java.awt.Shape, bias: javax.swing.text.Position.Bias[]): number /*int*/
                     /**
                      * Sets the size of the view.  This should cause
                      * layout of the view if it has any layout duties.
@@ -163,7 +163,7 @@ declare namespace javax {
                      * @param height the height &gt;= 0
                      */
                     // @ts-ignore
-                    setSize(width: number /*float*/, height: number /*float*/): void
+                    public setSize(width: number /*float*/, height: number /*float*/): void
                 }
             }
         }

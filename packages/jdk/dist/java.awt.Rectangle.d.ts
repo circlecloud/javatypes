@@ -163,7 +163,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            x: number /*int*/
+            public x: number /*int*/
             /**
              * The Y coordinate of the upper-left corner of the <code>Rectangle</code>.
              * @serial 
@@ -172,7 +172,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            y: number /*int*/
+            public y: number /*int*/
             /**
              * The width of the <code>Rectangle</code>.
              * @serial 
@@ -181,7 +181,7 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            width: number /*int*/
+            public width: number /*int*/
             /**
              * The height of the <code>Rectangle</code>.
              * @serial 
@@ -190,35 +190,35 @@ declare namespace java {
              * @since 1.0
              */
             // @ts-ignore
-            height: number /*int*/
+            public height: number /*int*/
             /**
              * Returns the X coordinate of the bounding <code>Rectangle</code> in
              * <code>double</code> precision.
              * @return the X coordinate of the bounding <code>Rectangle</code>.
              */
             // @ts-ignore
-            getX(): double
+            public getX(): number /*double*/
             /**
              * Returns the Y coordinate of the bounding <code>Rectangle</code> in
              * <code>double</code> precision.
              * @return the Y coordinate of the bounding <code>Rectangle</code>.
              */
             // @ts-ignore
-            getY(): double
+            public getY(): number /*double*/
             /**
              * Returns the width of the bounding <code>Rectangle</code> in
              * <code>double</code> precision.
              * @return the width of the bounding <code>Rectangle</code>.
              */
             // @ts-ignore
-            getWidth(): double
+            public getWidth(): number /*double*/
             /**
              * Returns the height of the bounding <code>Rectangle</code> in
              * <code>double</code> precision.
              * @return the height of the bounding <code>Rectangle</code>.
              */
             // @ts-ignore
-            getHeight(): double
+            public getHeight(): number /*double*/
             /**
              * Gets the bounding <code>Rectangle</code> of this <code>Rectangle</code>.
              * <p>
@@ -233,13 +233,13 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getBounds(): java.awt.Rectangle
+            public getBounds(): java.awt.Rectangle
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            getBounds2D(): java.awt.geom.Rectangle2D
+            public getBounds2D(): java.awt.geom.Rectangle2D
             /**
              * Sets the bounding <code>Rectangle</code> of this <code>Rectangle</code>
              * to match the specified <code>Rectangle</code>.
@@ -252,7 +252,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setBounds(r: java.awt.Rectangle): void
+            public setBounds(r: java.awt.Rectangle): void
             /**
              * Sets the bounding <code>Rectangle</code> of this
              * <code>Rectangle</code> to the specified
@@ -272,7 +272,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setBounds(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public setBounds(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Sets the bounds of this {@code Rectangle} to the integer bounds
              * which encompass the specified {@code x}, {@code y}, {@code width},
@@ -289,7 +289,7 @@ declare namespace java {
              * @param height the new height of the specified rectangle
              */
             // @ts-ignore
-            setRect(x: number /*double*/, y: number /*double*/, width: number /*double*/, height: number /*double*/): void
+            public setRect(x: number /*double*/, y: number /*double*/, width: number /*double*/, height: number /*double*/): void
             /**
              * Sets the bounding <code>Rectangle</code> of this
              * <code>Rectangle</code> to the specified
@@ -306,7 +306,7 @@ declare namespace java {
              *  replaced by <code>setBounds(int, int, int, int)</code>.
              */
             // @ts-ignore
-            reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+            public reshape(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
             /**
              * Returns the location of this <code>Rectangle</code>.
              * <p>
@@ -320,7 +320,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getLocation(): java.awt.Point
+            public getLocation(): java.awt.Point
             /**
              * Moves this <code>Rectangle</code> to the specified location.
              * <p>
@@ -333,7 +333,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setLocation(p: java.awt.Point): void
+            public setLocation(p: java.awt.Point): void
             /**
              * Moves this <code>Rectangle</code> to the specified location.
              * <p>
@@ -346,7 +346,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setLocation(x: number /*int*/, y: number /*int*/): void
+            public setLocation(x: number /*int*/, y: number /*int*/): void
             /**
              * Moves this <code>Rectangle</code> to the specified location.
              * <p>
@@ -356,7 +356,7 @@ declare namespace java {
              *  replaced by <code>setLocation(int, int)</code>.
              */
             // @ts-ignore
-            move(x: number /*int*/, y: number /*int*/): void
+            public move(x: number /*int*/, y: number /*int*/): void
             /**
              * Translates this <code>Rectangle</code> the indicated distance,
              * to the right along the X coordinate axis, and
@@ -369,7 +369,7 @@ declare namespace java {
              * @see java.awt.Rectangle#setLocation(java.awt.Point)
              */
             // @ts-ignore
-            translate(dx: number /*int*/, dy: number /*int*/): void
+            public translate(dx: number /*int*/, dy: number /*int*/): void
             /**
              * Gets the size of this <code>Rectangle</code>, represented by
              * the returned <code>Dimension</code>.
@@ -384,7 +384,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            getSize(): java.awt.Dimension
+            public getSize(): java.awt.Dimension
             /**
              * Sets the size of this <code>Rectangle</code> to match the
              * specified <code>Dimension</code>.
@@ -397,7 +397,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setSize(d: java.awt.Dimension): void
+            public setSize(d: java.awt.Dimension): void
             /**
              * Sets the size of this <code>Rectangle</code> to the specified
              * width and height.
@@ -411,7 +411,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            setSize(width: number /*int*/, height: number /*int*/): void
+            public setSize(width: number /*int*/, height: number /*int*/): void
             /**
              * Sets the size of this <code>Rectangle</code> to the specified
              * width and height.
@@ -422,7 +422,7 @@ declare namespace java {
              *  replaced by <code>setSize(int, int)</code>.
              */
             // @ts-ignore
-            resize(width: number /*int*/, height: number /*int*/): void
+            public resize(width: number /*int*/, height: number /*int*/): void
             /**
              * Checks whether or not this <code>Rectangle</code> contains the
              * specified <code>Point</code>.
@@ -433,7 +433,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            contains(p: java.awt.Point): boolean
+            public contains(p: java.awt.Point): boolean
             /**
              * Checks whether or not this <code>Rectangle</code> contains the
              * point at the specified location {@code (x,y)}.
@@ -446,7 +446,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            contains(x: number /*int*/, y: number /*int*/): boolean
+            public contains(x: number /*int*/, y: number /*int*/): boolean
             /**
              * Checks whether or not this <code>Rectangle</code> entirely contains
              * the specified <code>Rectangle</code>.
@@ -457,7 +457,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            contains(r: java.awt.Rectangle): boolean
+            public contains(r: java.awt.Rectangle): boolean
             /**
              * Checks whether this <code>Rectangle</code> entirely contains
              * the <code>Rectangle</code>
@@ -474,7 +474,7 @@ declare namespace java {
              * @since 1.1
              */
             // @ts-ignore
-            contains(X: number /*int*/, Y: number /*int*/, W: number /*int*/, H: number /*int*/): boolean
+            public contains(X: number /*int*/, Y: number /*int*/, W: number /*int*/, H: number /*int*/): boolean
             /**
              * Checks whether or not this <code>Rectangle</code> contains the
              * point at the specified location {@code (X,Y)}.
@@ -488,7 +488,7 @@ declare namespace java {
              *  replaced by <code>contains(int, int)</code>.
              */
             // @ts-ignore
-            inside(X: number /*int*/, Y: number /*int*/): boolean
+            public inside(X: number /*int*/, Y: number /*int*/): boolean
             /**
              * Determines whether or not this <code>Rectangle</code> and the specified
              * <code>Rectangle</code> intersect. Two rectangles intersect if
@@ -499,7 +499,7 @@ declare namespace java {
              *             <code>false</code> otherwise.
              */
             // @ts-ignore
-            intersects(r: java.awt.Rectangle): boolean
+            public intersects(r: java.awt.Rectangle): boolean
             /**
              * Computes the intersection of this <code>Rectangle</code> with the
              * specified <code>Rectangle</code>. Returns a new <code>Rectangle</code>
@@ -513,7 +513,7 @@ declare namespace java {
              *             do not intersect, an empty rectangle.
              */
             // @ts-ignore
-            intersection(r: java.awt.Rectangle): java.awt.Rectangle
+            public intersection(r: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Computes the union of this <code>Rectangle</code> with the
              * specified <code>Rectangle</code>. Returns a new
@@ -538,7 +538,7 @@ declare namespace java {
              *             <code>Rectangle</code>.
              */
             // @ts-ignore
-            union(r: java.awt.Rectangle): java.awt.Rectangle
+            public union(r: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Adds a point, specified by the integer arguments {@code newx,newy}
              * to the bounds of this {@code Rectangle}.
@@ -567,7 +567,7 @@ declare namespace java {
              * @param newy the Y coordinate of the new point
              */
             // @ts-ignore
-            add(newx: number /*int*/, newy: number /*int*/): void
+            public add(newx: number /*int*/, newy: number /*int*/): void
             /**
              * Adds the specified {@code Point} to the bounds of this
              * {@code Rectangle}.
@@ -596,7 +596,7 @@ declare namespace java {
              *            <code>Rectangle</code>
              */
             // @ts-ignore
-            add(pt: java.awt.Point): void
+            public add(pt: java.awt.Point): void
             /**
              * Adds a <code>Rectangle</code> to this <code>Rectangle</code>.
              * The resulting <code>Rectangle</code> is the union of the two
@@ -621,7 +621,7 @@ declare namespace java {
              * @param r the specified <code>Rectangle</code>
              */
             // @ts-ignore
-            add(r: java.awt.Rectangle): void
+            public add(r: java.awt.Rectangle): void
             /**
              * Resizes the <code>Rectangle</code> both horizontally and vertically.
              * <p>
@@ -646,31 +646,31 @@ declare namespace java {
              * @param v the vertical expansion
              */
             // @ts-ignore
-            grow(h: number /*int*/, v: number /*int*/): void
+            public grow(h: number /*int*/, v: number /*int*/): void
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            outcode(x: number /*double*/, y: number /*double*/): int
+            public outcode(x: number /*double*/, y: number /*double*/): number /*int*/
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            createIntersection(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
+            public createIntersection(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
             /**
              * {@inheritDoc}
              * @since 1.2
              */
             // @ts-ignore
-            createUnion(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
+            public createUnion(r: java.awt.geom.Rectangle2D): java.awt.geom.Rectangle2D
             /**
              * Checks whether two rectangles are equal.
              * <p>
@@ -684,7 +684,7 @@ declare namespace java {
              *             <code>false</code> otherwise.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Returns a <code>String</code> representing this
              * <code>Rectangle</code> and its values.
@@ -692,7 +692,7 @@ declare namespace java {
              *                <code>Rectangle</code> object's coordinate and size values.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

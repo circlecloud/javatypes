@@ -25,7 +25,7 @@ declare namespace org {
                      * @throws IllegalArgumentException if the given {#code task} is {@code null}
                      */
                     // @ts-ignore
-                    execute(task: java.lang.Runnable): void
+                    public execute(task: java.lang.Runnable): void
                 }
             }
         }

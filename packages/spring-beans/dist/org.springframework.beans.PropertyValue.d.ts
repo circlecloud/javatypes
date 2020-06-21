@@ -24,7 +24,7 @@ declare namespace org {
                  * @param value the value of the property (possibly before type conversion)
                  */
                 // @ts-ignore
-                constructor(name: string, value: any)
+                constructor(name: java.lang.String | string, value: java.lang.Object | any)
                 /**
                  * Copy constructor.
                  * @param original the PropertyValue to copy (never {#code null})
@@ -38,12 +38,12 @@ declare namespace org {
                  * @param newValue the new value to apply
                  */
                 // @ts-ignore
-                constructor(original: org.springframework.beans.PropertyValue, newValue: any)
+                constructor(original: org.springframework.beans.PropertyValue, newValue: java.lang.Object | any)
                 /**
                  * Return the name of the property.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 /**
                  * Return the value of the property.
                  * <p>Note that type conversion will <i>not</i> have occurred here.
@@ -51,52 +51,52 @@ declare namespace org {
                  * perform type conversion.
                  */
                 // @ts-ignore
-                getValue(): java.lang.Object
+                public getValue(): any
                 /**
                  * Return the original PropertyValue instance for this value holder.
                  * @return the original PropertyValue (either a source of this
                  *  value holder or this value holder itself).
                  */
                 // @ts-ignore
-                getOriginalPropertyValue(): org.springframework.beans.PropertyValue
+                public getOriginalPropertyValue(): org.springframework.beans.PropertyValue
                 /**
                  * Set whether this is an optional value, that is, to be ignored
                  * when no corresponding property exists on the target class.
                  * @since 3.0
                  */
                 // @ts-ignore
-                setOptional(optional: boolean): void
+                public setOptional(optional: boolean): void
                 /**
                  * Return whether this is an optional value, that is, to be ignored
                  * when no corresponding property exists on the target class.
                  * @since 3.0
                  */
                 // @ts-ignore
-                isOptional(): boolean
+                public isOptional(): boolean
                 /**
                  * Return whether this holder contains a converted value already ({@code true}),
                  * or whether the value still needs to be converted ({@code false}).
                  */
                 // @ts-ignore
-                isConverted(): boolean
+                public isConverted(): boolean
                 /**
                  * Set the converted value of this property value,
                  * after processed type conversion.
                  */
                 // @ts-ignore
-                setConvertedValue(value: any): void
+                public setConvertedValue(value: java.lang.Object | any): void
                 /**
                  * Return the converted value of this property value,
                  * after processed type conversion.
                  */
                 // @ts-ignore
-                getConvertedValue(): java.lang.Object
+                public getConvertedValue(): any
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

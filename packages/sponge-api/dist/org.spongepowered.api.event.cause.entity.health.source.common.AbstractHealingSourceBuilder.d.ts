@@ -8,7 +8,7 @@ declare namespace org {
                             namespace source {
                                 namespace common {
                                     // @ts-ignore
-                                    class AbstractHealingSourceBuilder<T extends org.spongepowered.api.event.cause.entity.health.source.HealingSource, B extends org.spongepowered.api.event.cause.entity.health.source.HealingSource.HealingSourceBuilder<T, B>> extends java.lang.Object implements org.spongepowered.api.event.cause.entity.health.source.HealingSource.HealingSourceBuilder<T, B> {
+                                    abstract class AbstractHealingSourceBuilder<T extends org.spongepowered.api.event.cause.entity.health.source.HealingSource, B extends org.spongepowered.api.event.cause.entity.health.source.HealingSource.HealingSourceBuilder<T, B>> extends java.lang.Object implements org.spongepowered.api.event.cause.entity.health.source.HealingSource.HealingSourceBuilder<T, B> {
                                         // @ts-ignore
                                         constructor()
                                         // @ts-ignore
@@ -16,15 +16,15 @@ declare namespace org {
                                         // @ts-ignore
                                         healingType: org.spongepowered.api.event.cause.entity.health.HealingType
                                         // @ts-ignore
-                                        scalesWithDifficulty(): B
+                                        public scalesWithDifficulty(): B
                                         // @ts-ignore
-                                        magical(): B
+                                        public magical(): B
                                         // @ts-ignore
-                                        type(healingType: org.spongepowered.api.event.cause.entity.health.HealingType): B
+                                        public type(healingType: org.spongepowered.api.event.cause.entity.health.HealingType): B
                                         // @ts-ignore
-                                        from(value: T extends org.spongepowered.api.event.cause.entity.health.source.HealingSource): B
+                                        public from(value: T): B
                                         // @ts-ignore
-                                        reset(): B
+                                        public reset(): B
                                     }
                                 }
                             }

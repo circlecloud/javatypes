@@ -46,11 +46,11 @@ declare namespace org {
                         // @ts-ignore
                         getEntityArchetype(x: number /*double*/, y: number /*double*/, z: number /*double*/): java.util.Optional<org.spongepowered.api.entity.EntityArchetype>
                         // @ts-ignore
-                        getEntitiesByPosition(): <any>
+                        getEntitiesByPosition(): object
                         // @ts-ignore
-                        getEntityArchetypes(): java.util.Collection<org.spongepowered.api.entity.EntityArchetype>
+                        getEntityArchetypes(): Array<org.spongepowered.api.entity.EntityArchetype>
                         // @ts-ignore
-                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<? extends org.spongepowered.api.world.extent.ArchetypeVolume>
+                        getBlockWorker(): org.spongepowered.api.world.extent.worker.MutableBlockVolumeWorker<any>
                     }
                 }
             }

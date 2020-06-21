@@ -42,7 +42,7 @@ declare namespace java {
              * @param value the input value
              */
             // @ts-ignore
-            accept(value: number /*double*/): void
+            public accept(value: number /*double*/): void
             /**
              * Combines the state of another {@code DoubleSummaryStatistics} into this
              * one.
@@ -50,13 +50,13 @@ declare namespace java {
              * @throws NullPointerException if {#code other} is null
              */
             // @ts-ignore
-            combine(other: java.util.DoubleSummaryStatistics): void
+            public combine(other: java.util.DoubleSummaryStatistics): void
             /**
              * Return the count of values recorded.
              * @return the count of values
              */
             // @ts-ignore
-            getCount(): long
+            public getCount(): number /*long*/
             /**
              * Returns the sum of values recorded, or zero if no values have been
              * recorded.
@@ -76,7 +76,7 @@ declare namespace java {
              * @return the sum of values, or zero if none
              */
             // @ts-ignore
-            getSum(): double
+            public getSum(): number /*double*/
             /**
              * Returns the minimum recorded value, {@code Double.NaN} if any recorded
              * value was NaN or {@code Double.POSITIVE_INFINITY} if no values were
@@ -87,7 +87,7 @@ declare namespace java {
              *  recorded
              */
             // @ts-ignore
-            getMin(): double
+            public getMin(): number /*double*/
             /**
              * Returns the maximum recorded value, {@code Double.NaN} if any recorded
              * value was NaN or {@code Double.NEGATIVE_INFINITY} if no values were
@@ -98,7 +98,7 @@ declare namespace java {
              *  recorded
              */
             // @ts-ignore
-            getMax(): double
+            public getMax(): number /*double*/
             /**
              * Returns the arithmetic mean of values recorded, or zero if no
              * values have been recorded.
@@ -114,7 +114,7 @@ declare namespace java {
              * @return the arithmetic mean of values, or zero if none
              */
             // @ts-ignore
-            getAverage(): double
+            public getAverage(): number /*double*/
             /**
              * {@inheritDoc}
              * Returns a non-empty string representation of this object suitable for
@@ -122,7 +122,7 @@ declare namespace java {
              * between implementations and versions.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

@@ -16,20 +16,20 @@ declare namespace org {
                              * @return Newly created Arg
                              */
                             // @ts-ignore
-                            build(): org.spongepowered.api.text.TextTemplate.Arg
+                            public build(): org.spongepowered.api.text.TextTemplate.Arg
                             /**
                              * Sets whether the Arg should be optional (false by default).
                              * @param optional True if should be optional
                              * @return This builder
                              */
                             // @ts-ignore
-                            optional(optional: boolean): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                            public optional(optional: boolean): org.spongepowered.api.text.TextTemplate.Arg.Builder
                             /**
                              * Makes the Arg optional.
                              * @return This builder
                              */
                             // @ts-ignore
-                            optional(): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                            public optional(): org.spongepowered.api.text.TextTemplate.Arg.Builder
                             /**
                              * Sets the default value for the Argument. The argument must by
                              * optional in order for this value to be used.
@@ -37,7 +37,7 @@ declare namespace org {
                              * @return This builder
                              */
                             // @ts-ignore
-                            defaultValue(defaultValue: org.spongepowered.api.text.Text): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                            public defaultValue(defaultValue: org.spongepowered.api.text.Text): org.spongepowered.api.text.TextTemplate.Arg.Builder
                             /**
                              * Sets the "base" format of the Arg. This acts as a default format
                              * when no formatting data is provided by the parameter.
@@ -45,7 +45,7 @@ declare namespace org {
                              * @return This builder
                              */
                             // @ts-ignore
-                            format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                            public format(format: org.spongepowered.api.text.format.TextFormat): org.spongepowered.api.text.TextTemplate.Arg.Builder
                             /**
                              * Sets the "base" color of the Arg. This acts as a default color
                              * when no color data is provided by the parameter.
@@ -53,7 +53,7 @@ declare namespace org {
                              * @return This builder
                              */
                             // @ts-ignore
-                            color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                            public color(color: org.spongepowered.api.text.format.TextColor): org.spongepowered.api.text.TextTemplate.Arg.Builder
                             /**
                              * Sets the "base" style of the Arg. This acts as a default style
                              * when no style data is provided by the parameter.
@@ -61,9 +61,9 @@ declare namespace org {
                              * @return This builder
                              */
                             // @ts-ignore
-                            style(style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.TextTemplate.Arg.Builder
+                            public style(style: org.spongepowered.api.text.format.TextStyle): org.spongepowered.api.text.TextTemplate.Arg.Builder
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

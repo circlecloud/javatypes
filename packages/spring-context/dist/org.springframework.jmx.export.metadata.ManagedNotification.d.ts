@@ -17,37 +17,37 @@ declare namespace org {
                          * as comma-delimited String.
                          */
                         // @ts-ignore
-                        setNotificationType(notificationType: string): void
+                        public setNotificationType(notificationType: java.lang.String | string): void
                         /**
                          * Set a list of notification types.
                          */
                         // @ts-ignore
-                        setNotificationTypes(...notificationTypes: string[]): void
+                        public setNotificationTypes(...notificationTypes: java.lang.String[] | string[]): void
                         /**
                          * Return the list of notification types.
                          */
                         // @ts-ignore
-                        getNotificationTypes(): java.lang.String[]
+                        public getNotificationTypes(): string[]
                         /**
                          * Set the name of this notification.
                          */
                         // @ts-ignore
-                        setName(name: string): void
+                        public setName(name: java.lang.String | string): void
                         /**
                          * Return the name of this notification.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Set a description for this notification.
                          */
                         // @ts-ignore
-                        setDescription(description: string): void
+                        public setDescription(description: java.lang.String | string): void
                         /**
                          * Return a description for this notification.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                     }
                 }
             }

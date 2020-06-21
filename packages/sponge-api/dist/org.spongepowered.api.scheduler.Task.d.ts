@@ -18,7 +18,7 @@ declare namespace org {
                      * @return The name of the task
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    getName(): string
                     /**
                      * Returns the plugin that scheduled this task.
                      * @return The plugin that scheduled the task
@@ -32,7 +32,7 @@ declare namespace org {
                      *          exclusive to synchronous tasks)
                      */
                     // @ts-ignore
-                    getDelay(): long
+                    getDelay(): number /*long*/
                     /**
                      * Gets the interval for repeating tasks. An interval of 0 represents that
                      * the task does not repeat.
@@ -40,7 +40,7 @@ declare namespace org {
                      *          exclusive to synchronous tasks)
                      */
                     // @ts-ignore
-                    getInterval(): long
+                    getInterval(): number /*long*/
                     /**
                      * Cancels the task. Cancelling a repeating task will prevent any further
                      * repetitions of the task.
@@ -53,7 +53,7 @@ declare namespace org {
                      * @return The consumer
                      */
                     // @ts-ignore
-                    getConsumer(): java.util.function.Consumer<org.spongepowered.api.scheduler.Task>
+                    getConsumer(): java.util.function$.Consumer<org.spongepowered.api.scheduler.Task>
                     /**
                      * Gets whether this task is asynchronous.
                      * @return True if asynchronous, false if synchronous

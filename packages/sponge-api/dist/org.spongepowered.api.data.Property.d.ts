@@ -8,7 +8,7 @@ declare namespace org {
                  * @param <V> The type of the value of the property
                  */
                 // @ts-ignore
-                interface Property<K, V> extends java.lang.Comparable<org.spongepowered.api.data.Property<?, ?>> {
+                interface Property<K, V> extends java.lang.Comparable<org.spongepowered.api.data.Property<any, any>> {
                     /**
                      * Gets the key for this property. Key is only used if an item stack can
                      * have more than one property of a particular type. If the property has no
@@ -49,7 +49,7 @@ declare namespace org {
                      *       rules defined by this property's {#link #getOperator()}
                      */
                     // @ts-ignore
-                    matches(other: org.spongepowered.api.data.Property<any, ?>): boolean
+                    matches(other: org.spongepowered.api.data.Property<any, any>): boolean
                 }
             }
         }

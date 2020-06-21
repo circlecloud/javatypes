@@ -16,7 +16,7 @@ declare namespace org {
                      * @param beanName the name of the bean requested
                      */
                     // @ts-ignore
-                    constructor(beanName: string)
+                    constructor(beanName: java.lang.String | string)
                 }
             }
         }

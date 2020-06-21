@@ -17,27 +17,27 @@ declare namespace org {
                      * @since 2.0
                      */
                     // @ts-ignore
-                    class InstantiationAwareBeanPostProcessorAdapter extends java.lang.Object implements org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor {
+                    abstract class InstantiationAwareBeanPostProcessorAdapter extends java.lang.Object implements org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        predictBeanType(beanClass: java.lang.Class<any>, beanName: string): java.lang.Class<?>
+                        public predictBeanType(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.Class<any>
                         // @ts-ignore
-                        determineCandidateConstructors(beanClass: java.lang.Class<any>, beanName: string): java.lang.reflect.Constructor[]
+                        public determineCandidateConstructors(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): java.lang.reflect.Constructor<any>[]
                         // @ts-ignore
-                        getEarlyBeanReference(bean: any, beanName: string): java.lang.Object
+                        public getEarlyBeanReference(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: string): java.lang.Object
+                        public postProcessBeforeInstantiation(beanClass: java.lang.Class<any>, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        postProcessAfterInstantiation(bean: any, beanName: string): boolean
+                        public postProcessAfterInstantiation(bean: java.lang.Object | any, beanName: java.lang.String | string): boolean
                         // @ts-ignore
-                        postProcessProperties(pvs: org.springframework.beans.PropertyValues, bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        public postProcessProperties(pvs: org.springframework.beans.PropertyValues, bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                         // @ts-ignore
-                        postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: any, beanName: string): org.springframework.beans.PropertyValues
+                        public postProcessPropertyValues(pvs: org.springframework.beans.PropertyValues, pds: java.beans.PropertyDescriptor[], bean: java.lang.Object | any, beanName: java.lang.String | string): org.springframework.beans.PropertyValues
                         // @ts-ignore
-                        postProcessBeforeInitialization(bean: any, beanName: string): java.lang.Object
+                        public postProcessBeforeInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                         // @ts-ignore
-                        postProcessAfterInitialization(bean: any, beanName: string): java.lang.Object
+                        public postProcessAfterInitialization(bean: java.lang.Object | any, beanName: java.lang.String | string): any
                     }
                 }
             }

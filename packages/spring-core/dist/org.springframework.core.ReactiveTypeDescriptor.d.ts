@@ -13,7 +13,7 @@ declare namespace org {
                  * Return the reactive type for this descriptor.
                  */
                 // @ts-ignore
-                getReactiveType(): java.lang.Class<?>
+                public getReactiveType(): java.lang.Class<any>
                 /**
                  * Return {@code true} if the reactive type can produce more than 1 value
                  * can be produced and is therefore a good fit to adapt to {@code Flux}.
@@ -21,55 +21,55 @@ declare namespace org {
                  * value at most and is therefore a good fit to adapt to {@code Mono}.
                  */
                 // @ts-ignore
-                isMultiValue(): boolean
+                public isMultiValue(): boolean
                 /**
                  * Return {@code true} if the reactive type does not produce any values and
                  * only provides completion and error signals.
                  */
                 // @ts-ignore
-                isNoValue(): boolean
+                public isNoValue(): boolean
                 /**
                  * Return {@code true} if the reactive type can complete with no values.
                  */
                 // @ts-ignore
-                supportsEmpty(): boolean
+                public supportsEmpty(): boolean
                 /**
                  * Return an empty-value instance for the underlying reactive or async type.
                  * Use of this type implies {@link #supportsEmpty()} is true.
                  */
                 // @ts-ignore
-                getEmptyValue(): java.lang.Object
+                public getEmptyValue(): any
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Descriptor for a reactive type that can produce 0..N values.
                  * @param type the reactive type
                  * @param emptySupplier a supplier of an empty-value instance of the reactive type
                  */
                 // @ts-ignore
-                multiValue(type: java.lang.Class<any>, emptySupplier: java.util.function.Supplier<any> | java.util.function$.Supplier<?>): org.springframework.core.ReactiveTypeDescriptor
+                public static multiValue(type: java.lang.Class<any>, emptySupplier: java.util.function$.Supplier<any>): org.springframework.core.ReactiveTypeDescriptor
                 /**
                  * Descriptor for a reactive type that can produce 0..1 values.
                  * @param type the reactive type
                  * @param emptySupplier a supplier of an empty-value instance of the reactive type
                  */
                 // @ts-ignore
-                singleOptionalValue(type: java.lang.Class<any>, emptySupplier: java.util.function.Supplier<any> | java.util.function$.Supplier<?>): org.springframework.core.ReactiveTypeDescriptor
+                public static singleOptionalValue(type: java.lang.Class<any>, emptySupplier: java.util.function$.Supplier<any>): org.springframework.core.ReactiveTypeDescriptor
                 /**
                  * Descriptor for a reactive type that must produce 1 value to complete.
                  * @param type the reactive type
                  */
                 // @ts-ignore
-                singleRequiredValue(type: java.lang.Class<any>): org.springframework.core.ReactiveTypeDescriptor
+                public static singleRequiredValue(type: java.lang.Class<any>): org.springframework.core.ReactiveTypeDescriptor
                 /**
                  * Descriptor for a reactive type that does not produce any values.
                  * @param type the reactive type
                  * @param emptySupplier a supplier of an empty-value instance of the reactive type
                  */
                 // @ts-ignore
-                noValue(type: java.lang.Class<any>, emptySupplier: java.util.function.Supplier<any> | java.util.function$.Supplier<?>): org.springframework.core.ReactiveTypeDescriptor
+                public static noValue(type: java.lang.Class<any>, emptySupplier: java.util.function$.Supplier<any>): org.springframework.core.ReactiveTypeDescriptor
             }
         }
     }

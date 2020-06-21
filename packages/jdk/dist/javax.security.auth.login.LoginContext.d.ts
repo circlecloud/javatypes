@@ -158,7 +158,7 @@ declare namespace javax {
                      *           AuthPermission("createLoginContext.other")
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                     /**
                      * Instantiate a new {@code LoginContext} object with a name
                      * and a {@code Subject} object.
@@ -183,7 +183,7 @@ declare namespace javax {
                      *           AuthPermission("createLoginContext.other")
                      */
                     // @ts-ignore
-                    constructor(name: string, subject: javax.security.auth.Subject)
+                    constructor(name: java.lang.String | string, subject: javax.security.auth.Subject)
                     /**
                      * Instantiate a new {@code LoginContext} object with a name
                      * and a {@code CallbackHandler} object.
@@ -206,7 +206,7 @@ declare namespace javax {
                      *           AuthPermission("createLoginContext.other")
                      */
                     // @ts-ignore
-                    constructor(name: string, callbackHandler: javax.security.auth.callback.CallbackHandler)
+                    constructor(name: java.lang.String | string, callbackHandler: javax.security.auth.callback.CallbackHandler)
                     /**
                      * Instantiate a new {@code LoginContext} object with a name,
                      * a {@code Subject} to be authenticated, and a
@@ -233,7 +233,7 @@ declare namespace javax {
                      *           AuthPermission("createLoginContext.other")
                      */
                     // @ts-ignore
-                    constructor(name: string, subject: javax.security.auth.Subject, callbackHandler: javax.security.auth.callback.CallbackHandler)
+                    constructor(name: java.lang.String | string, subject: javax.security.auth.Subject, callbackHandler: javax.security.auth.callback.CallbackHandler)
                     /**
                      * Instantiate a new {@code LoginContext} object with a name,
                      * a {@code Subject} to be authenticated,
@@ -265,7 +265,7 @@ declare namespace javax {
                      * @since 1.5
                      */
                     // @ts-ignore
-                    constructor(name: string, subject: javax.security.auth.Subject, callbackHandler: javax.security.auth.callback.CallbackHandler, config: javax.security.auth.login.Configuration)
+                    constructor(name: java.lang.String | string, subject: javax.security.auth.Subject, callbackHandler: javax.security.auth.callback.CallbackHandler, config: javax.security.auth.login.Configuration)
                     /**
                      * Perform the authentication.
                      * <p> This method invokes the {@code login} method for each
@@ -308,7 +308,7 @@ declare namespace javax {
                      * @exception LoginException if the authentication fails.
                      */
                     // @ts-ignore
-                    login(): void
+                    public login(): void
                     /**
                      * Logout the {@code Subject}.
                      * <p> This method invokes the {@code logout} method for each
@@ -327,7 +327,7 @@ declare namespace javax {
                      * @exception LoginException if the logout fails.
                      */
                     // @ts-ignore
-                    logout(): void
+                    public logout(): void
                     /**
                      * Return the authenticated Subject.
                      * <p>
@@ -341,7 +341,7 @@ declare namespace javax {
                      *           has not been attempted, this method returns null.
                      */
                     // @ts-ignore
-                    getSubject(): javax.security.auth.Subject
+                    public getSubject(): javax.security.auth.Subject
                 }
             }
         }

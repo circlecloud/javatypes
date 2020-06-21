@@ -50,7 +50,7 @@ declare namespace org {
                      * @since 5.2
                      */
                     // @ts-ignore
-                    
+                    readonly OBJECT_TYPE_ATTRIBUTE: java.lang.String | string
                     /**
                      * Return an instance (possibly shared or independent) of the object
                      * managed by this factory.
@@ -90,7 +90,7 @@ declare namespace org {
                      * @see ListableBeanFactory#getBeansOfType
                      */
                     // @ts-ignore
-                    getObjectType(): java.lang.Class<?>
+                    getObjectType(): java.lang.Class<any>
                     /**
                      * Is the object managed by this factory a singleton? That is,
                      * will {@link #getObject()} always return the same object

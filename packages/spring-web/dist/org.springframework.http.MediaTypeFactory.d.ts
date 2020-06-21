@@ -16,14 +16,14 @@ declare namespace org {
                  * @return the corresponding media type, or {#code null} if none found
                  */
                 // @ts-ignore
-                getMediaType(resource: Resource): java.util.Optional<org.springframework.http.MediaType>
+                public static getMediaType(resource: Resource): java.util.Optional<org.springframework.http.MediaType>
                 /**
                  * Determine the media types for the given file name, if possible.
                  * @param filename the file name plus extension
                  * @return the corresponding media types, or an empty list if none found
                  */
                 // @ts-ignore
-                getMediaTypes(filename: string): java.util.List<org.springframework.http.MediaType>
+                public static getMediaTypes(filename: java.lang.String | string): Array<org.springframework.http.MediaType>
             }
         }
     }

@@ -29,7 +29,7 @@ declare namespace java {
                  * @return the current date using the system clock and default time-zone, not null
                  */
                 // @ts-ignore
-                now(): java.time.chrono.MinguoDate
+                public static now(): java.time.chrono.MinguoDate
                 /**
                  * Obtains the current {@code MinguoDate} from the system clock in the specified time-zone.
                  * <p>
@@ -42,7 +42,7 @@ declare namespace java {
                  * @return the current date using the system clock, not null
                  */
                 // @ts-ignore
-                now(zone: java.time.ZoneId): java.time.chrono.MinguoDate
+                public static now(zone: java.time.ZoneId): java.time.chrono.MinguoDate
                 /**
                  * Obtains the current {@code MinguoDate} from the specified clock.
                  * <p>
@@ -54,7 +54,7 @@ declare namespace java {
                  * @throws DateTimeException if the current date cannot be obtained
                  */
                 // @ts-ignore
-                now(clock: java.time.Clock): java.time.chrono.MinguoDate
+                public static now(clock: java.time.Clock): java.time.chrono.MinguoDate
                 /**
                  * Obtains a {@code MinguoDate} representing a date in the Minguo calendar
                  * system from the proleptic-year, month-of-year and day-of-month fields.
@@ -69,7 +69,7 @@ declare namespace java {
                  *   or if the day-of-month is invalid for the month-year
                  */
                 // @ts-ignore
-                of(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.MinguoDate
+                public static of(prolepticYear: number /*int*/, month: number /*int*/, dayOfMonth: number /*int*/): java.time.chrono.MinguoDate
                 /**
                  * Obtains a {@code MinguoDate} from a temporal object.
                  * <p>
@@ -87,7 +87,7 @@ declare namespace java {
                  * @throws DateTimeException if unable to convert to a {#code MinguoDate}
                  */
                 // @ts-ignore
-                from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.MinguoDate
+                public static from(temporal: java.time.temporal.TemporalAccessor): java.time.chrono.MinguoDate
                 /**
                  * Gets the chronology of this date, which is the Minguo calendar system.
                  * <p>
@@ -96,7 +96,7 @@ declare namespace java {
                  * @return the Minguo chronology, not null
                  */
                 // @ts-ignore
-                getChronology(): java.time.chrono.MinguoChronology
+                public getChronology(): java.time.chrono.MinguoChronology
                 /**
                  * Gets the era applicable at this date.
                  * <p>
@@ -105,7 +105,7 @@ declare namespace java {
                  * @return the era applicable at this date, not null
                  */
                 // @ts-ignore
-                getEra(): java.time.chrono.MinguoEra
+                public getEra(): java.time.chrono.MinguoEra
                 /**
                  * Returns the length of the month represented by this date.
                  * <p>
@@ -114,44 +114,44 @@ declare namespace java {
                  * @return the length of the month in days
                  */
                 // @ts-ignore
-                lengthOfMonth(): int
+                public lengthOfMonth(): number /*int*/
                 // @ts-ignore
-                range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
+                public range(field: java.time.temporal.TemporalField): java.time.temporal.ValueRange
                 // @ts-ignore
-                getLong(field: java.time.temporal.TemporalField): long
+                public getLong(field: java.time.temporal.TemporalField): number /*long*/
                 // @ts-ignore
-                with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.chrono.MinguoDate
+                public with(field: java.time.temporal.TemporalField, newValue: number /*long*/): java.time.chrono.MinguoDate
                 /**
                  * {@inheritDoc}
                  * @throws DateTimeException {#inheritDoc}
                  * @throws ArithmeticException {#inheritDoc}
                  */
                 // @ts-ignore
-                with(adjuster: java.time.temporal.TemporalAdjuster): java.time.chrono.MinguoDate
+                public with(adjuster: java.time.temporal.TemporalAdjuster): java.time.chrono.MinguoDate
                 /**
                  * {@inheritDoc}
                  * @throws DateTimeException {#inheritDoc}
                  * @throws ArithmeticException {#inheritDoc}
                  */
                 // @ts-ignore
-                plus(amount: java.time.temporal.TemporalAmount): java.time.chrono.MinguoDate
+                public plus(amount: java.time.temporal.TemporalAmount): java.time.chrono.MinguoDate
                 /**
                  * {@inheritDoc}
                  * @throws DateTimeException {#inheritDoc}
                  * @throws ArithmeticException {#inheritDoc}
                  */
                 // @ts-ignore
-                minus(amount: java.time.temporal.TemporalAmount): java.time.chrono.MinguoDate
+                public minus(amount: java.time.temporal.TemporalAmount): java.time.chrono.MinguoDate
                 // @ts-ignore
-                plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.MinguoDate
+                public plus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.MinguoDate
                 // @ts-ignore
-                minus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.MinguoDate
+                public minus(amountToAdd: number /*long*/, unit: java.time.temporal.TemporalUnit): java.time.chrono.MinguoDate
                 // @ts-ignore
-                atTime(localTime: java.time.LocalTime): java.time.chrono.ChronoLocalDateTime<java.time.chrono.MinguoDate>
+                public atTime(localTime: java.time.LocalTime): java.time.chrono.ChronoLocalDateTime<java.time.chrono.MinguoDate>
                 // @ts-ignore
-                until(endDate: java.time.chrono.ChronoLocalDate): java.time.chrono.ChronoPeriod
+                public until(endDate: java.time.chrono.ChronoLocalDate): java.time.chrono.ChronoPeriod
                 // @ts-ignore
-                toEpochDay(): long
+                public toEpochDay(): number /*long*/
                 /**
                  * Compares this date to another date, including the chronology.
                  * <p>
@@ -164,13 +164,13 @@ declare namespace java {
                  * @return true if this is equal to the other date
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
                 /**
                  * A hash code for this date.
                  * @return a suitable hash code based only on the Chronology and the date
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
             }
         }
     }

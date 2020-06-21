@@ -39,7 +39,7 @@ declare namespace javax {
                      *  package
                      */
                     // @ts-ignore
-                    getEnclosedElements(): java.util.List<? extends javax.lang.model.element.Element>
+                    getEnclosedElements(): Array<any>
                     /**
                      * Returns {@code true} is this is an unnamed package and {@code
                      * false} otherwise.

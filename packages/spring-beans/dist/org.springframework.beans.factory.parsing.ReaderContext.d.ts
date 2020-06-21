@@ -22,97 +22,97 @@ declare namespace org {
                         // @ts-ignore
                         constructor(resource: Resource, problemReporter: org.springframework.beans.factory.parsing.ProblemReporter, eventListener: org.springframework.beans.factory.parsing.ReaderEventListener, sourceExtractor: org.springframework.beans.factory.parsing.SourceExtractor)
                         // @ts-ignore
-                        getResource(): Resource
+                        public getResource(): Resource
                         /**
                          * Raise a fatal error.
                          */
                         // @ts-ignore
-                        fatal(message: string, source: any): void
+                        public fatal(message: java.lang.String | string, source: java.lang.Object | any): void
                         /**
                          * Raise a fatal error.
                          */
                         // @ts-ignore
-                        fatal(message: string, source: any, cause: Error): void
+                        public fatal(message: java.lang.String | string, source: java.lang.Object | any, cause: java.lang.Throwable | Error): void
                         /**
                          * Raise a fatal error.
                          */
                         // @ts-ignore
-                        fatal(message: string, source: any, parseState: org.springframework.beans.factory.parsing.ParseState): void
+                        public fatal(message: java.lang.String | string, source: java.lang.Object | any, parseState: org.springframework.beans.factory.parsing.ParseState): void
                         /**
                          * Raise a fatal error.
                          */
                         // @ts-ignore
-                        fatal(message: string, source: any, parseState: org.springframework.beans.factory.parsing.ParseState, cause: Error): void
+                        public fatal(message: java.lang.String | string, source: java.lang.Object | any, parseState: org.springframework.beans.factory.parsing.ParseState, cause: java.lang.Throwable | Error): void
                         /**
                          * Raise a regular error.
                          */
                         // @ts-ignore
-                        error(message: string, source: any): void
+                        public error(message: java.lang.String | string, source: java.lang.Object | any): void
                         /**
                          * Raise a regular error.
                          */
                         // @ts-ignore
-                        error(message: string, source: any, cause: Error): void
+                        public error(message: java.lang.String | string, source: java.lang.Object | any, cause: java.lang.Throwable | Error): void
                         /**
                          * Raise a regular error.
                          */
                         // @ts-ignore
-                        error(message: string, source: any, parseState: org.springframework.beans.factory.parsing.ParseState): void
+                        public error(message: java.lang.String | string, source: java.lang.Object | any, parseState: org.springframework.beans.factory.parsing.ParseState): void
                         /**
                          * Raise a regular error.
                          */
                         // @ts-ignore
-                        error(message: string, source: any, parseState: org.springframework.beans.factory.parsing.ParseState, cause: Error): void
+                        public error(message: java.lang.String | string, source: java.lang.Object | any, parseState: org.springframework.beans.factory.parsing.ParseState, cause: java.lang.Throwable | Error): void
                         /**
                          * Raise a non-critical warning.
                          */
                         // @ts-ignore
-                        warning(message: string, source: any): void
+                        public warning(message: java.lang.String | string, source: java.lang.Object | any): void
                         /**
                          * Raise a non-critical warning.
                          */
                         // @ts-ignore
-                        warning(message: string, source: any, cause: Error): void
+                        public warning(message: java.lang.String | string, source: java.lang.Object | any, cause: java.lang.Throwable | Error): void
                         /**
                          * Raise a non-critical warning.
                          */
                         // @ts-ignore
-                        warning(message: string, source: any, parseState: org.springframework.beans.factory.parsing.ParseState): void
+                        public warning(message: java.lang.String | string, source: java.lang.Object | any, parseState: org.springframework.beans.factory.parsing.ParseState): void
                         /**
                          * Raise a non-critical warning.
                          */
                         // @ts-ignore
-                        warning(message: string, source: any, parseState: org.springframework.beans.factory.parsing.ParseState, cause: Error): void
+                        public warning(message: java.lang.String | string, source: java.lang.Object | any, parseState: org.springframework.beans.factory.parsing.ParseState, cause: java.lang.Throwable | Error): void
                         /**
                          * Fire a defaults-registered event.
                          */
                         // @ts-ignore
-                        fireDefaultsRegistered(defaultsDefinition: org.springframework.beans.factory.parsing.DefaultsDefinition): void
+                        public fireDefaultsRegistered(defaultsDefinition: org.springframework.beans.factory.parsing.DefaultsDefinition): void
                         /**
                          * Fire a component-registered event.
                          */
                         // @ts-ignore
-                        fireComponentRegistered(componentDefinition: org.springframework.beans.factory.parsing.ComponentDefinition): void
+                        public fireComponentRegistered(componentDefinition: org.springframework.beans.factory.parsing.ComponentDefinition): void
                         /**
                          * Fire an alias-registered event.
                          */
                         // @ts-ignore
-                        fireAliasRegistered(beanName: string, alias: string, source: any): void
+                        public fireAliasRegistered(beanName: java.lang.String | string, alias: java.lang.String | string, source: java.lang.Object | any): void
                         /**
                          * Fire an import-processed event.
                          */
                         // @ts-ignore
-                        fireImportProcessed(importedResource: string, source: any): void
+                        public fireImportProcessed(importedResource: java.lang.String | string, source: java.lang.Object | any): void
                         /**
                          * Fire an import-processed event.
                          */
                         // @ts-ignore
-                        fireImportProcessed(importedResource: string, actualResources: Resource[], source: any): void
+                        public fireImportProcessed(importedResource: java.lang.String | string, actualResources: Resource[], source: java.lang.Object | any): void
                         /**
                          * Return the source extractor in use.
                          */
                         // @ts-ignore
-                        getSourceExtractor(): org.springframework.beans.factory.parsing.SourceExtractor
+                        public getSourceExtractor(): org.springframework.beans.factory.parsing.SourceExtractor
                         /**
                          * Call the source extractor for the given source object.
                          * @param sourceCandidate the original source object
@@ -121,7 +121,7 @@ declare namespace org {
                          * @see SourceExtractor#extractSource
                          */
                         // @ts-ignore
-                        extractSource(sourceCandidate: any): java.lang.Object
+                        public extractSource(sourceCandidate: java.lang.Object | any): any
                     }
                 }
             }

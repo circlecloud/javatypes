@@ -19,7 +19,7 @@ declare namespace org {
                         // @ts-ignore
                         constructor(mapper: ObjectMapper, ...mimeTypes: MimeType[])
                         // @ts-ignore
-                        customizeWriter(writer: ObjectWriter, mimeType: MimeType, elementType: ResolvableType, hints: java.util.Map<java.lang.String, java.lang.Object>): ObjectWriter
+                        customizeWriter(writer: ObjectWriter, mimeType: MimeType, elementType: ResolvableType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): ObjectWriter
                     }
                 }
             }

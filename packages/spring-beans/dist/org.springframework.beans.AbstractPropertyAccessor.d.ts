@@ -12,29 +12,29 @@ declare namespace org {
              * @see #setPropertyValue
              */
             // @ts-ignore
-            class AbstractPropertyAccessor extends org.springframework.beans.TypeConverterSupport implements org.springframework.beans.ConfigurablePropertyAccessor {
+            abstract class AbstractPropertyAccessor extends org.springframework.beans.TypeConverterSupport implements org.springframework.beans.ConfigurablePropertyAccessor {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                setExtractOldValueForEditor(extractOldValueForEditor: boolean): void
+                public setExtractOldValueForEditor(extractOldValueForEditor: boolean): void
                 // @ts-ignore
-                isExtractOldValueForEditor(): boolean
+                public isExtractOldValueForEditor(): boolean
                 // @ts-ignore
-                setAutoGrowNestedPaths(autoGrowNestedPaths: boolean): void
+                public setAutoGrowNestedPaths(autoGrowNestedPaths: boolean): void
                 // @ts-ignore
-                isAutoGrowNestedPaths(): boolean
+                public isAutoGrowNestedPaths(): boolean
                 // @ts-ignore
-                setPropertyValue(pv: org.springframework.beans.PropertyValue): void
+                public setPropertyValue(pv: org.springframework.beans.PropertyValue): void
                 // @ts-ignore
-                setPropertyValues(map: java.util.Map<any, ?>): void
+                public setPropertyValues(map: java.util.Map<any, any>): void
                 // @ts-ignore
-                setPropertyValues(pvs: org.springframework.beans.PropertyValues): void
+                public setPropertyValues(pvs: org.springframework.beans.PropertyValues): void
                 // @ts-ignore
-                setPropertyValues(pvs: org.springframework.beans.PropertyValues, ignoreUnknown: boolean): void
+                public setPropertyValues(pvs: org.springframework.beans.PropertyValues, ignoreUnknown: boolean): void
                 // @ts-ignore
-                setPropertyValues(pvs: org.springframework.beans.PropertyValues, ignoreUnknown: boolean, ignoreInvalid: boolean): void
+                public setPropertyValues(pvs: org.springframework.beans.PropertyValues, ignoreUnknown: boolean, ignoreInvalid: boolean): void
                 // @ts-ignore
-                getPropertyType(propertyPath: string): java.lang.Class<?>
+                public getPropertyType(propertyPath: java.lang.String | string): java.lang.Class<any>
                 /**
                  * Actually get the value of a property.
                  * @param propertyName name of the property to get the value of
@@ -45,7 +45,7 @@ declare namespace org {
                  *  accessor method failed
                  */
                 // @ts-ignore
-                abstract getPropertyValue(propertyName: string): java.lang.Object
+                public abstract getPropertyValue(propertyName: java.lang.String | string): any
                 /**
                  * Actually set a property value.
                  * @param propertyName name of the property to set value of
@@ -56,7 +56,7 @@ declare namespace org {
                  *  accessor method failed or a type mismatch occurred
                  */
                 // @ts-ignore
-                abstract setPropertyValue(propertyName: string, value: any): void
+                public abstract setPropertyValue(propertyName: java.lang.String | string, value: java.lang.Object | any): void
             }
         }
     }

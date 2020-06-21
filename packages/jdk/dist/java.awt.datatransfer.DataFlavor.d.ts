@@ -94,7 +94,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>representationClass</code> is null
                  */
                 // @ts-ignore
-                constructor(representationClass: java.lang.Class<any>, humanPresentableName: string)
+                constructor(representationClass: java.lang.Class<any>, humanPresentableName: java.lang.String | string)
                 /**
                  * Constructs a <code>DataFlavor</code> that represents a
                  * <code>MimeType</code>.
@@ -125,7 +125,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>mimeType</code> is null
                  */
                 // @ts-ignore
-                constructor(mimeType: string, humanPresentableName: string)
+                constructor(mimeType: java.lang.String | string, humanPresentableName: java.lang.String | string)
                 /**
                  * Constructs a <code>DataFlavor</code> that represents a
                  * <code>MimeType</code>.
@@ -153,7 +153,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>mimeType</code> is null
                  */
                 // @ts-ignore
-                constructor(mimeType: string, humanPresentableName: string, classLoader: java.lang.ClassLoader)
+                constructor(mimeType: java.lang.String | string, humanPresentableName: java.lang.String | string, classLoader: java.lang.ClassLoader)
                 /**
                  * Constructs a <code>DataFlavor</code> from a <code>mimeType</code> string.
                  * The string can specify a "class=&lt;fully specified Java class name&gt;"
@@ -170,7 +170,7 @@ declare namespace java {
                  * @exception NullPointerException if <code>mimeType</code> is null
                  */
                 // @ts-ignore
-                constructor(mimeType: string)
+                constructor(mimeType: java.lang.String | string)
                 /**
                  * The <code>DataFlavor</code> representing a Java Unicode String class,
                  * where:
@@ -180,7 +180,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                readonly stringFlavor: java.awt.datatransfer.DataFlavor
+                public static readonly stringFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * The <code>DataFlavor</code> representing a Java Image class,
                  * where:
@@ -190,7 +190,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                readonly imageFlavor: java.awt.datatransfer.DataFlavor
+                public static readonly imageFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * The <code>DataFlavor</code> representing plain text with Unicode
                  * encoding, where:
@@ -207,7 +207,7 @@ declare namespace java {
                  *              instead of <code>Transferable.getTransferData(DataFlavor.plainTextFlavor)</code>.
                  */
                 // @ts-ignore
-                readonly plainTextFlavor: java.awt.datatransfer.DataFlavor
+                public static readonly plainTextFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * A MIME Content-Type of application/x-java-serialized-object represents
                  * a graph of Java object(s) that have been made persistent.
@@ -216,7 +216,7 @@ declare namespace java {
                  * from an invocation <code>java.awt.datatransfer.getTransferData</code>.
                  */
                 // @ts-ignore
-                readonly javaSerializedObjectMimeType: string
+                public static readonly javaSerializedObjectMimeType: java.lang.String | string
                 /**
                  * To transfer a list of files to/from Java (and the underlying
                  * platform) a <code>DataFlavor</code> of this type/subtype and
@@ -225,7 +225,7 @@ declare namespace java {
                  * <code>java.io.File</code>.
                  */
                 // @ts-ignore
-                readonly javaFileListFlavor: java.awt.datatransfer.DataFlavor
+                public static readonly javaFileListFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * To transfer a reference to an arbitrary Java object reference that
                  * has no associated MIME Content-type, across a <code>Transferable</code>
@@ -240,7 +240,7 @@ declare namespace java {
                  * an instance of the representation Class of the <code>DataFlavor</code>.
                  */
                 // @ts-ignore
-                readonly javaJVMLocalObjectMimeType: string
+                public static readonly javaJVMLocalObjectMimeType: java.lang.String | string
                 /**
                  * In order to pass a live link to a Remote object via a Drag and Drop
                  * <code>ACTION_LINK</code> operation a Mime Content Type of
@@ -250,7 +250,7 @@ declare namespace java {
                  * transferred.
                  */
                 // @ts-ignore
-                readonly javaRemoteObjectMimeType: string
+                public static readonly javaRemoteObjectMimeType: java.lang.String | string
                 /**
                  * Represents a piece of an HTML markup. The markup consists of the part
                  * selected on the source side. Therefore some tags in the markup may be
@@ -265,7 +265,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                selectionHtmlFlavor: java.awt.datatransfer.DataFlavor
+                public static selectionHtmlFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * Represents a piece of an HTML markup. If possible, the markup received
                  * from a native system is supplemented with pair tags to be
@@ -277,7 +277,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                fragmentHtmlFlavor: java.awt.datatransfer.DataFlavor
+                public static fragmentHtmlFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * Represents a piece of an HTML markup. If possible, the markup
                  * received from a native system is supplemented with additional
@@ -290,7 +290,7 @@ declare namespace java {
                  * </pre>
                  */
                 // @ts-ignore
-                allHtmlFlavor: java.awt.datatransfer.DataFlavor
+                public static allHtmlFlavor: java.awt.datatransfer.DataFlavor
                 /**
                  * Tries to load a class from: the bootstrap loader, the system loader,
                  * the context loader (if one is present) and finally the loader specified.
@@ -300,7 +300,7 @@ declare namespace java {
                  * @exception ClassNotFoundException if class is not found
                  */
                 // @ts-ignore
-                tryToLoadClass(className: string, fallback: java.lang.ClassLoader): java.lang.Class<?>
+                static tryToLoadClass(className: java.lang.String | string, fallback: java.lang.ClassLoader): java.lang.Class<any>
                 /**
                  * String representation of this <code>DataFlavor</code> and its
                  * parameters. The resulting <code>String</code> contains the name of
@@ -313,7 +313,7 @@ declare namespace java {
                  * @see #selectBestTextFlavor
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 /**
                  * Returns a <code>DataFlavor</code> representing plain text with Unicode
                  * encoding, where:
@@ -330,7 +330,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getTextPlainUnicodeFlavor(): java.awt.datatransfer.DataFlavor
+                public static getTextPlainUnicodeFlavor(): java.awt.datatransfer.DataFlavor
                 /**
                  * Selects the best text <code>DataFlavor</code> from an array of <code>
                  * DataFlavor</code>s. Only <code>DataFlavor.stringFlavor</code>, and
@@ -447,7 +447,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                selectBestTextFlavor(availableFlavors: java.awt.datatransfer.DataFlavor[]): java.awt.datatransfer.DataFlavor
+                public static selectBestTextFlavor(availableFlavors: java.awt.datatransfer.DataFlavor[]): java.awt.datatransfer.DataFlavor
                 /**
                  * Gets a Reader for a text flavor, decoded, if necessary, for the expected
                  * charset (encoding). The supported representation classes are
@@ -486,13 +486,13 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                getReaderForText(transferable: java.awt.datatransfer.Transferable): java.io.Reader
+                public getReaderForText(transferable: java.awt.datatransfer.Transferable): java.io.Reader
                 /**
                  * Returns the MIME type string for this <code>DataFlavor</code>.
                  * @return the MIME type string for this flavor
                  */
                 // @ts-ignore
-                getMimeType(): java.lang.String
+                public getMimeType(): string
                 /**
                  * Returns the <code>Class</code> which objects supporting this
                  * <code>DataFlavor</code> will return when this <code>DataFlavor</code>
@@ -502,7 +502,7 @@ declare namespace java {
                  *  is requested
                  */
                 // @ts-ignore
-                getRepresentationClass(): java.lang.Class<?>
+                public getRepresentationClass(): java.lang.Class<any>
                 /**
                  * Returns the human presentable name for the data format that this
                  * <code>DataFlavor</code> represents.  This name would be localized
@@ -511,19 +511,19 @@ declare namespace java {
                  *     <code>DataFlavor</code> represents
                  */
                 // @ts-ignore
-                getHumanPresentableName(): java.lang.String
+                public getHumanPresentableName(): string
                 /**
                  * Returns the primary MIME type for this <code>DataFlavor</code>.
                  * @return the primary MIME type of this <code>DataFlavor</code>
                  */
                 // @ts-ignore
-                getPrimaryType(): java.lang.String
+                public getPrimaryType(): string
                 /**
                  * Returns the sub MIME type of this <code>DataFlavor</code>.
                  * @return the Sub MIME type of this <code>DataFlavor</code>
                  */
                 // @ts-ignore
-                getSubType(): java.lang.String
+                public getSubType(): string
                 /**
                  * Returns the human presentable name for this <code>DataFlavor</code>
                  * if <code>paramName</code> equals "humanPresentableName".  Otherwise
@@ -533,7 +533,7 @@ declare namespace java {
                  *   if there is no associated value
                  */
                 // @ts-ignore
-                getParameter(paramName: string): java.lang.String
+                public getParameter(paramName: java.lang.String | string): string
                 /**
                  * Sets the human presentable name for the data format that this
                  * <code>DataFlavor</code> represents. This name would be localized
@@ -541,7 +541,7 @@ declare namespace java {
                  * @param humanPresentableName the new human presentable name
                  */
                 // @ts-ignore
-                setHumanPresentableName(humanPresentableName: string): void
+                public setHumanPresentableName(humanPresentableName: java.lang.String | string): void
                 /**
                  * {@inheritDoc}
                  * <p>
@@ -563,7 +563,7 @@ declare namespace java {
                  * @see #selectBestTextFlavor
                  */
                 // @ts-ignore
-                equals(o: any): boolean
+                public equals(o: java.lang.Object | any): boolean
                 /**
                  * This method has the same behavior as {@link #equals(Object)}.
                  * The only difference being that it takes a {@code DataFlavor} instance
@@ -575,7 +575,7 @@ declare namespace java {
                  * @see #selectBestTextFlavor
                  */
                 // @ts-ignore
-                equals(that: java.awt.datatransfer.DataFlavor): boolean
+                public equals(that: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * Compares only the <code>mimeType</code> against the passed in
                  * <code>String</code> and <code>representationClass</code> is
@@ -589,7 +589,7 @@ declare namespace java {
                  *          {#code s} is {@code null}
                  */
                 // @ts-ignore
-                equals(s: string): boolean
+                public equals(s: java.lang.String | string): boolean
                 /**
                  * Returns hash code for this <code>DataFlavor</code>.
                  * For two equal <code>DataFlavor</code>s, hash codes are equal.
@@ -600,7 +600,7 @@ declare namespace java {
                  * @return a hash code for this <code>DataFlavor</code>
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Identical to {@link #equals(DataFlavor)}.
                  * @param that the <code>DataFlavor</code> to compare with
@@ -611,7 +611,7 @@ declare namespace java {
                  * @since 1.3
                  */
                 // @ts-ignore
-                match(that: java.awt.datatransfer.DataFlavor): boolean
+                public match(that: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * Returns whether the string representation of the MIME type passed in
                  * is equivalent to the MIME type of this <code>DataFlavor</code>.
@@ -623,7 +623,7 @@ declare namespace java {
                  * @throws NullPointerException if mimeType is <code>null</code>
                  */
                 // @ts-ignore
-                isMimeTypeEqual(mimeType: string): boolean
+                public isMimeTypeEqual(mimeType: java.lang.String | string): boolean
                 /**
                  * Compares the <code>mimeType</code> of two <code>DataFlavor</code>
                  * objects. No parameters are considered.
@@ -632,22 +632,22 @@ declare namespace java {
                  *   otherwise false
                  */
                 // @ts-ignore
-                isMimeTypeEqual(dataFlavor: java.awt.datatransfer.DataFlavor): boolean
+                public isMimeTypeEqual(dataFlavor: java.awt.datatransfer.DataFlavor): boolean
                 /**
                  * Does the <code>DataFlavor</code> represent a serialized object?
                  */
                 // @ts-ignore
-                isMimeTypeSerializedObject(): boolean
+                public isMimeTypeSerializedObject(): boolean
                 // @ts-ignore
-                getDefaultRepresentationClass(): java.lang.Class<?>
+                public getDefaultRepresentationClass(): java.lang.Class<any>
                 // @ts-ignore
-                getDefaultRepresentationClassAsString(): java.lang.String
+                public getDefaultRepresentationClassAsString(): string
                 /**
                  * Does the <code>DataFlavor</code> represent a
                  * <code>java.io.InputStream</code>?
                  */
                 // @ts-ignore
-                isRepresentationClassInputStream(): boolean
+                public isRepresentationClassInputStream(): boolean
                 /**
                  * Returns whether the representation class for this
                  * <code>DataFlavor</code> is <code>java.io.Reader</code> or a subclass
@@ -655,7 +655,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                isRepresentationClassReader(): boolean
+                public isRepresentationClassReader(): boolean
                 /**
                  * Returns whether the representation class for this
                  * <code>DataFlavor</code> is <code>java.nio.CharBuffer</code> or a
@@ -663,7 +663,7 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                isRepresentationClassCharBuffer(): boolean
+                public isRepresentationClassCharBuffer(): boolean
                 /**
                  * Returns whether the representation class for this
                  * <code>DataFlavor</code> is <code>java.nio.ByteBuffer</code> or a
@@ -671,19 +671,19 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                isRepresentationClassByteBuffer(): boolean
+                public isRepresentationClassByteBuffer(): boolean
                 /**
                  * Returns true if the representation class can be serialized.
                  * @return true if the representation class can be serialized
                  */
                 // @ts-ignore
-                isRepresentationClassSerializable(): boolean
+                public isRepresentationClassSerializable(): boolean
                 /**
                  * Returns true if the representation class is <code>Remote</code>.
                  * @return true if the representation class is <code>Remote</code>
                  */
                 // @ts-ignore
-                isRepresentationClassRemote(): boolean
+                public isRepresentationClassRemote(): boolean
                 /**
                  * Returns true if the <code>DataFlavor</code> specified represents
                  * a serialized object.
@@ -691,7 +691,7 @@ declare namespace java {
                  *    a Serialized Object
                  */
                 // @ts-ignore
-                isFlavorSerializedObjectType(): boolean
+                public isFlavorSerializedObjectType(): boolean
                 /**
                  * Returns true if the <code>DataFlavor</code> specified represents
                  * a remote object.
@@ -699,7 +699,7 @@ declare namespace java {
                  *   a Remote Object
                  */
                 // @ts-ignore
-                isFlavorRemoteObjectType(): boolean
+                public isFlavorRemoteObjectType(): boolean
                 /**
                  * Returns true if the <code>DataFlavor</code> specified represents
                  * a list of file objects.
@@ -707,7 +707,7 @@ declare namespace java {
                  *    a List of File objects
                  */
                 // @ts-ignore
-                isFlavorJavaFileListType(): boolean
+                public isFlavorJavaFileListType(): boolean
                 /**
                  * Returns whether this <code>DataFlavor</code> is a valid text flavor for
                  * this implementation of the Java platform. Only flavors equivalent to
@@ -738,23 +738,23 @@ declare namespace java {
                  * @since 1.4
                  */
                 // @ts-ignore
-                isFlavorTextType(): boolean
+                public isFlavorTextType(): boolean
                 /**
                  * Serializes this <code>DataFlavor</code>.
                  */
                 // @ts-ignore
-                writeExternal(os: java.io.ObjectOutput): void
+                public writeExternal(os: java.io.ObjectOutput): void
                 /**
                  * Restores this <code>DataFlavor</code> from a Serialized state.
                  */
                 // @ts-ignore
-                readExternal(jis: java.io.ObjectInput): void
+                public readExternal(jis: java.io.ObjectInput): void
                 /**
                  * Returns a clone of this <code>DataFlavor</code>.
                  * @return a clone of this <code>DataFlavor</code>
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Called on <code>DataFlavor</code> for every MIME Type parameter
                  * to allow <code>DataFlavor</code> subclasses to handle special
@@ -768,7 +768,7 @@ declare namespace java {
                  * @deprecated 
                  */
                 // @ts-ignore
-                normalizeMimeTypeParameter(parameterName: string, parameterValue: string): java.lang.String
+                normalizeMimeTypeParameter(parameterName: java.lang.String | string, parameterValue: java.lang.String | string): string
                 /**
                  * Called for each MIME type string to give <code>DataFlavor</code> subtypes
                  * the opportunity to change how the normalization of MIME types is
@@ -779,7 +779,7 @@ declare namespace java {
                  * @deprecated 
                  */
                 // @ts-ignore
-                normalizeMimeType(mimeType: string): java.lang.String
+                normalizeMimeType(mimeType: java.lang.String | string): string
             }
         }
     }

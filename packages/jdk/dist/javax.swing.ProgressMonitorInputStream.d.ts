@@ -34,7 +34,7 @@ declare namespace javax {
              * @param in The input stream to be monitored.
              */
             // @ts-ignore
-            constructor(parentComponent: java.awt.Component, message: any, input: java.io.InputStream)
+            constructor(parentComponent: java.awt.Component, message: java.lang.Object | any, input: java.io.InputStream)
             /**
              * Get the ProgressMonitor object being used by this stream. Normally
              * this isn't needed unless you want to do something like change the
@@ -42,43 +42,43 @@ declare namespace javax {
              * @return the ProgressMonitor object used by this object
              */
             // @ts-ignore
-            getProgressMonitor(): javax.swing.ProgressMonitor
+            public getProgressMonitor(): javax.swing.ProgressMonitor
             /**
              * Overrides <code>FilterInputStream.read</code>
              * to update the progress monitor after the read.
              */
             // @ts-ignore
-            read(): int
+            public read(): number /*int*/
             /**
              * Overrides <code>FilterInputStream.read</code>
              * to update the progress monitor after the read.
              */
             // @ts-ignore
-            read(b: number /*byte*/[]): int
+            public read(b: number /*byte*/[]): number /*int*/
             /**
              * Overrides <code>FilterInputStream.read</code>
              * to update the progress monitor after the read.
              */
             // @ts-ignore
-            read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): int
+            public read(b: number /*byte*/[], off: number /*int*/, len: number /*int*/): number /*int*/
             /**
              * Overrides <code>FilterInputStream.skip</code>
              * to update the progress monitor after the skip.
              */
             // @ts-ignore
-            skip(n: number /*long*/): long
+            public skip(n: number /*long*/): number /*long*/
             /**
              * Overrides <code>FilterInputStream.close</code>
              * to close the progress monitor as well as the stream.
              */
             // @ts-ignore
-            close(): void
+            public close(): void
             /**
              * Overrides <code>FilterInputStream.reset</code>
              * to reset the progress monitor as well as the stream.
              */
             // @ts-ignore
-            reset(): void
+            public reset(): void
         }
     }
 }

@@ -37,7 +37,7 @@ declare namespace javax {
              * </UL>
              */
             // @ts-ignore
-            class MessageFactory extends java.lang.Object {
+            abstract class MessageFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -60,7 +60,7 @@ declare namespace javax {
                  * @see SAAJMetaFactory
                  */
                 // @ts-ignore
-                newInstance(): javax.xml.soap.MessageFactory
+                public static newInstance(): javax.xml.soap.MessageFactory
                 /**
                  * Creates a new <code>MessageFactory</code> object that is an instance
                  * of the specified implementation.  May be a dynamic message factory,
@@ -82,7 +82,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                newInstance(protocol: string): javax.xml.soap.MessageFactory
+                public static newInstance(protocol: java.lang.String | string): javax.xml.soap.MessageFactory
                 /**
                  * Creates a new <code>SOAPMessage</code> object with the default
                  * <code>SOAPPart</code>, <code>SOAPEnvelope</code>, <code>SOAPBody</code>,
@@ -102,7 +102,7 @@ declare namespace javax {
                  *       <code>MessageFactory</code> instance is <code>DYNAMIC_SOAP_PROTOCOL</code>
                  */
                 // @ts-ignore
-                abstract createMessage(): javax.xml.soap.SOAPMessage
+                public abstract createMessage(): javax.xml.soap.SOAPMessage
                 /**
                  * Internalizes the contents of the given <code>InputStream</code> object into a
                  * new <code>SOAPMessage</code> object and returns the <code>SOAPMessage</code>
@@ -126,7 +126,7 @@ declare namespace javax {
                  *       <code>IllegalArgumentException</code> for this reason.
                  */
                 // @ts-ignore
-                abstract createMessage(headers: javax.xml.soap.MimeHeaders, input: java.io.InputStream): javax.xml.soap.SOAPMessage
+                public abstract createMessage(headers: javax.xml.soap.MimeHeaders, input: java.io.InputStream): javax.xml.soap.SOAPMessage
             }
         }
     }

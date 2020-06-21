@@ -74,7 +74,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                activate(id: java.rmi.activation.ActivationID, force: boolean): java.rmi.MarshalledObject<? extends java.rmi.Remote>
+                activate(id: java.rmi.activation.ActivationID, force: boolean): java.rmi.MarshalledObject<any>
             }
         }
     }

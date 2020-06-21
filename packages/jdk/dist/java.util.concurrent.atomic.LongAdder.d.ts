@@ -41,17 +41,17 @@ declare namespace java {
                      * @param x the value to add
                      */
                     // @ts-ignore
-                    add(x: number /*long*/): void
+                    public add(x: number /*long*/): void
                     /**
                      * Equivalent to {@code add(1)}.
                      */
                     // @ts-ignore
-                    increment(): void
+                    public increment(): void
                     /**
                      * Equivalent to {@code add(-1)}.
                      */
                     // @ts-ignore
-                    decrement(): void
+                    public decrement(): void
                     /**
                      * Returns the current sum.  The returned value is <em>NOT</em> an
                      * atomic snapshot; invocation in the absence of concurrent
@@ -61,7 +61,7 @@ declare namespace java {
                      * @return the sum
                      */
                     // @ts-ignore
-                    sum(): long
+                    public sum(): number /*long*/
                     /**
                      * Resets variables maintaining the sum to zero.  This method may
                      * be a useful alternative to creating a new adder, but is only
@@ -70,7 +70,7 @@ declare namespace java {
                      * known that no threads are concurrently updating.
                      */
                     // @ts-ignore
-                    reset(): void
+                    public reset(): void
                     /**
                      * Equivalent in effect to {@link #sum} followed by {@link
                      * #reset}. This method may apply for example during quiescent
@@ -81,37 +81,37 @@ declare namespace java {
                      * @return the sum
                      */
                     // @ts-ignore
-                    sumThenReset(): long
+                    public sumThenReset(): number /*long*/
                     /**
                      * Returns the String representation of the {@link #sum}.
                      * @return the String representation of the {#link #sum}
                      */
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     /**
                      * Equivalent to {@link #sum}.
                      * @return the sum
                      */
                     // @ts-ignore
-                    longValue(): long
+                    public longValue(): number /*long*/
                     /**
                      * Returns the {@link #sum} as an {@code int} after a narrowing
                      * primitive conversion.
                      */
                     // @ts-ignore
-                    intValue(): int
+                    public intValue(): number /*int*/
                     /**
                      * Returns the {@link #sum} as a {@code float}
                      * after a widening primitive conversion.
                      */
                     // @ts-ignore
-                    floatValue(): float
+                    public floatValue(): number /*float*/
                     /**
                      * Returns the {@link #sum} as a {@code double} after a widening
                      * primitive conversion.
                      */
                     // @ts-ignore
-                    doubleValue(): double
+                    public doubleValue(): number /*double*/
                 }
             }
         }

@@ -17,19 +17,19 @@ declare namespace org {
                                  * @return The immutable value for the base
                                  */
                                 // @ts-ignore
-                                base(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Float>
+                                base(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Float | number>
                                 /**
                                  * Gets the {@link ImmutableValue} for the "height" size.
                                  * @return The immutable value for the height
                                  */
                                 // @ts-ignore
-                                height(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Float>
+                                height(): org.spongepowered.api.data.value.immutable.ImmutableValue<java.lang.Float | number>
                                 /**
                                  * Gets the {@link ImmutableValue} for the "scale" size.
                                  * @return The immutable value for the scale
                                  */
                                 // @ts-ignore
-                                scale(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Float>
+                                scale(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Float | number>
                             }
                         }
                     }

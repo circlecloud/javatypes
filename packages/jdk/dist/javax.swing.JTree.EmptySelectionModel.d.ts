@@ -24,28 +24,28 @@ declare namespace javax {
                  * @return single instance of {#code EmptySelectionModel}
                  */
                 // @ts-ignore
-                sharedInstance(): javax.swing.JTree.EmptySelectionModel
+                public static sharedInstance(): javax.swing.JTree.EmptySelectionModel
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
                  * @param paths the paths to select; this is ignored
                  */
                 // @ts-ignore
-                setSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+                public setSelectionPaths(paths: javax.swing.tree.TreePath[]): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
                  * @param paths the paths to add to the selection; this is ignored
                  */
                 // @ts-ignore
-                addSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+                public addSelectionPaths(paths: javax.swing.tree.TreePath[]): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
                  * @param paths the paths to remove; this is ignored
                  */
                 // @ts-ignore
-                removeSelectionPaths(paths: javax.swing.tree.TreePath[]): void
+                public removeSelectionPaths(paths: javax.swing.tree.TreePath[]): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
@@ -53,7 +53,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                setSelectionMode(mode: number /*int*/): void
+                public setSelectionMode(mode: number /*int*/): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
@@ -61,7 +61,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                setRowMapper(mapper: javax.swing.tree.RowMapper): void
+                public setRowMapper(mapper: javax.swing.tree.RowMapper): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
@@ -69,7 +69,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                addTreeSelectionListener(listener: javax.swing.event.TreeSelectionListener): void
+                public addTreeSelectionListener(listener: javax.swing.event.TreeSelectionListener): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
@@ -77,7 +77,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                removeTreeSelectionListener(listener: javax.swing.event.TreeSelectionListener): void
+                public removeTreeSelectionListener(listener: javax.swing.event.TreeSelectionListener): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
@@ -85,7 +85,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public addPropertyChangeListener(listener: java.beans.PropertyChangeListener): void
                 /**
                  * This is overriden to do nothing; {@code EmptySelectionModel}
                  * does not allow a selection.
@@ -93,7 +93,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
+                public removePropertyChangeListener(listener: java.beans.PropertyChangeListener): void
             }
         }
     }

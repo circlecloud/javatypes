@@ -38,7 +38,7 @@ declare namespace org {
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                constructor(x: number /*byte*/, y: number /*byte*/, direction: number /*byte*/, type: number /*byte*/, visible: boolean, caption: string)
+                constructor(x: number /*byte*/, y: number /*byte*/, direction: number /*byte*/, type: number /*byte*/, visible: boolean, caption: java.lang.String | string)
                 /**
                  * Initialize the map cursor.
                  * @param x The x coordinate, from -128 to 127.
@@ -49,93 +49,93 @@ declare namespace org {
                  * @param caption cursor caption
                  */
                 // @ts-ignore
-                constructor(x: number /*byte*/, y: number /*byte*/, direction: number /*byte*/, type: org.bukkit.map.MapCursor.Type, visible: boolean, caption: string)
+                constructor(x: number /*byte*/, y: number /*byte*/, direction: number /*byte*/, type: org.bukkit.map.MapCursor.Type, visible: boolean, caption: java.lang.String | string)
                 /**
                  * Get the X position of this cursor.
                  * @return The X coordinate.
                  */
                 // @ts-ignore
-                getX(): byte
+                public getX(): number /*byte*/
                 /**
                  * Get the Y position of this cursor.
                  * @return The Y coordinate.
                  */
                 // @ts-ignore
-                getY(): byte
+                public getY(): number /*byte*/
                 /**
                  * Get the direction of this cursor.
                  * @return The facing of the cursor, from 0 to 15.
                  */
                 // @ts-ignore
-                getDirection(): byte
+                public getDirection(): number /*byte*/
                 /**
                  * Get the type of this cursor.
                  * @return The type (color/style) of the map cursor.
                  */
                 // @ts-ignore
-                getType(): org.bukkit.map.MapCursor.Type
+                public getType(): org.bukkit.map.MapCursor.Type
                 /**
                  * Get the type of this cursor.
                  * @return The type (color/style) of the map cursor.
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getRawType(): byte
+                public getRawType(): number /*byte*/
                 /**
                  * Get the visibility status of this cursor.
                  * @return True if visible, false otherwise.
                  */
                 // @ts-ignore
-                isVisible(): boolean
+                public isVisible(): boolean
                 /**
                  * Set the X position of this cursor.
                  * @param x The X coordinate.
                  */
                 // @ts-ignore
-                setX(x: number /*byte*/): void
+                public setX(x: number /*byte*/): void
                 /**
                  * Set the Y position of this cursor.
                  * @param y The Y coordinate.
                  */
                 // @ts-ignore
-                setY(y: number /*byte*/): void
+                public setY(y: number /*byte*/): void
                 /**
                  * Set the direction of this cursor.
                  * @param direction The facing of the cursor, from 0 to 15.
                  */
                 // @ts-ignore
-                setDirection(direction: number /*byte*/): void
+                public setDirection(direction: number /*byte*/): void
                 /**
                  * Set the type of this cursor.
                  * @param type The type (color/style) of the map cursor.
                  */
                 // @ts-ignore
-                setType(type: org.bukkit.map.MapCursor.Type): void
+                public setType(type: org.bukkit.map.MapCursor.Type): void
                 /**
                  * Set the type of this cursor.
                  * @param type The type (color/style) of the map cursor.
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                setRawType(type: number /*byte*/): void
+                public setRawType(type: number /*byte*/): void
                 /**
                  * Set the visibility status of this cursor.
                  * @param visible True if visible.
                  */
                 // @ts-ignore
-                setVisible(visible: boolean): void
+                public setVisible(visible: boolean): void
                 /**
                  * Gets the caption on this cursor.
                  * @return caption
                  */
                 // @ts-ignore
-                getCaption(): java.lang.String
+                public getCaption(): string
                 /**
                  * Sets the caption on this cursor.
                  * @param caption new caption
                  */
                 // @ts-ignore
-                setCaption(caption: string): void
+                public setCaption(caption: java.lang.String | string): void
             }
         }
     }

@@ -24,13 +24,13 @@ declare namespace org {
                          * @return The retrieved entries
                          */
                         // @ts-ignore
-                        get(rand: java.util.Random): java.util.List<T>
+                        public get(rand: java.util.Random): Array<T>
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

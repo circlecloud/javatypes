@@ -18,7 +18,7 @@ declare namespace org {
                  * @param commands a list of commands to register
                  */
                 // @ts-ignore
-                registerAll(fallbackPrefix: string, commands: Array<org.bukkit.command.Command>): void
+                registerAll(fallbackPrefix: java.lang.String | string, commands: java.util.List<org.bukkit.command.Command> | Array<org.bukkit.command.Command>): void
                 /**
                  * Registers a command. Returns true on success; false if name is already
                  * taken and fallback had to be used.
@@ -39,7 +39,7 @@ declare namespace org {
                  *      times
                  */
                 // @ts-ignore
-                register(label: string, fallbackPrefix: string, command: org.bukkit.command.Command): boolean
+                register(label: java.lang.String | string, fallbackPrefix: java.lang.String | string, command: org.bukkit.command.Command): boolean
                 /**
                  * Registers a command. Returns true on success; false if name is already
                  * taken and fallback had to be used.
@@ -60,7 +60,7 @@ declare namespace org {
                  *      times
                  */
                 // @ts-ignore
-                register(fallbackPrefix: string, command: org.bukkit.command.Command): boolean
+                register(fallbackPrefix: java.lang.String | string, command: org.bukkit.command.Command): boolean
                 /**
                  * Looks for the requested command and executes it if found.
                  * @param sender The command's sender
@@ -70,7 +70,7 @@ declare namespace org {
                  *      fails with an unhandled exception
                  */
                 // @ts-ignore
-                dispatch(sender: org.bukkit.command.CommandSender, cmdLine: string): boolean
+                dispatch(sender: org.bukkit.command.CommandSender, cmdLine: java.lang.String | string): boolean
                 /**
                  * Clears all registered commands.
                  */
@@ -83,7 +83,7 @@ declare namespace org {
                  *      label doesn't exist
                  */
                 // @ts-ignore
-                getCommand(name: string): org.bukkit.command.Command
+                getCommand(name: java.lang.String | string): org.bukkit.command.Command
                 /**
                  * Looks for the requested command and executes an appropriate
                  * tab-completer if found. This method will also tab-complete partial
@@ -98,7 +98,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if either sender or cmdLine are null
                  */
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: string): java.util.List<java.lang.String>
+                tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Looks for the requested command and executes an appropriate
                  * tab-completer if found. This method will also tab-complete partial
@@ -114,7 +114,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if either sender or cmdLine are null
                  */
                 // @ts-ignore
-                tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: string, location: org.bukkit.Location): java.util.List<java.lang.String>
+                tabComplete(sender: org.bukkit.command.CommandSender, cmdLine: java.lang.String | string, location: org.bukkit.Location): Array<java.lang.String | string>
             }
         }
     }

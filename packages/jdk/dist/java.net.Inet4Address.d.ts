@@ -55,7 +55,7 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            isMulticastAddress(): boolean
+            public isMulticastAddress(): boolean
             /**
              * Utility routine to check if the InetAddress in a wildcard address.
              * @return a {#code boolean} indicating if the Inetaddress is
@@ -63,7 +63,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isAnyLocalAddress(): boolean
+            public isAnyLocalAddress(): boolean
             /**
              * Utility routine to check if the InetAddress is a loopback address.
              * @return a {#code boolean} indicating if the InetAddress is
@@ -71,7 +71,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isLoopbackAddress(): boolean
+            public isLoopbackAddress(): boolean
             /**
              * Utility routine to check if the InetAddress is an link local address.
              * @return a {#code boolean} indicating if the InetAddress is
@@ -79,7 +79,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isLinkLocalAddress(): boolean
+            public isLinkLocalAddress(): boolean
             /**
              * Utility routine to check if the InetAddress is a site local address.
              * @return a {#code boolean} indicating if the InetAddress is
@@ -87,7 +87,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isSiteLocalAddress(): boolean
+            public isSiteLocalAddress(): boolean
             /**
              * Utility routine to check if the multicast address has global scope.
              * @return a {#code boolean} indicating if the address has
@@ -96,7 +96,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCGlobal(): boolean
+            public isMCGlobal(): boolean
             /**
              * Utility routine to check if the multicast address has node scope.
              * @return a {#code boolean} indicating if the address has
@@ -105,7 +105,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCNodeLocal(): boolean
+            public isMCNodeLocal(): boolean
             /**
              * Utility routine to check if the multicast address has link scope.
              * @return a {#code boolean} indicating if the address has
@@ -114,7 +114,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCLinkLocal(): boolean
+            public isMCLinkLocal(): boolean
             /**
              * Utility routine to check if the multicast address has site scope.
              * @return a {#code boolean} indicating if the address has
@@ -123,7 +123,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCSiteLocal(): boolean
+            public isMCSiteLocal(): boolean
             /**
              * Utility routine to check if the multicast address has organization scope.
              * @return a {#code boolean} indicating if the address has
@@ -133,7 +133,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            isMCOrgLocal(): boolean
+            public isMCOrgLocal(): boolean
             /**
              * Returns the raw IP address of this {@code InetAddress}
              * object. The result is in network byte order: the highest order
@@ -141,20 +141,20 @@ declare namespace java {
              * @return the raw IP address of this object.
              */
             // @ts-ignore
-            getAddress(): byte[]
+            public getAddress(): number /*byte*/[]
             /**
              * Returns the IP address string in textual presentation form.
              * @return the raw IP address in a string format.
              * @since JDK1.0.2
              */
             // @ts-ignore
-            getHostAddress(): java.lang.String
+            public getHostAddress(): string
             /**
              * Returns a hashcode for this IP address.
              * @return a hash code value for this IP address.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Compares this object against the specified object.
              * The result is {@code true} if and only if the argument is
@@ -171,7 +171,7 @@ declare namespace java {
              * @see java.net.InetAddress#getAddress()
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
         }
     }
 }

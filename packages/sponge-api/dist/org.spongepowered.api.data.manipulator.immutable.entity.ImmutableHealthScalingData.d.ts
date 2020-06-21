@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The value for the health scale
                                  */
                                 // @ts-ignore
-                                healthScale(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                healthScale(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                             }
                         }
                     }

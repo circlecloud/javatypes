@@ -15,11 +15,11 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getLazyResolutionProxyIfNecessary(descriptor: DependencyDescriptor, beanName: string): java.lang.Object
+                    public getLazyResolutionProxyIfNecessary(descriptor: DependencyDescriptor, beanName: java.lang.String | string): any
                     // @ts-ignore
                     isLazy(descriptor: DependencyDescriptor): boolean
                     // @ts-ignore
-                    buildLazyResolutionProxy(descriptor: DependencyDescriptor, beanName: string): java.lang.Object
+                    buildLazyResolutionProxy(descriptor: DependencyDescriptor, beanName: java.lang.String | string): any
                 }
             }
         }

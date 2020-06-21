@@ -139,18 +139,18 @@ declare namespace javax {
                      * copies are printed.
                      */
                     // @ts-ignore
-                    readonly UNCOLLATED: javax.print.attribute.standard.SheetCollate
+                    public static readonly UNCOLLATED: javax.print.attribute.standard.SheetCollate
                     /**
                      * Sheets within a document appear in collated order when multiple copies
                      * are printed.
                      */
                     // @ts-ignore
-                    readonly COLLATED: javax.print.attribute.standard.SheetCollate
+                    public static readonly COLLATED: javax.print.attribute.standard.SheetCollate
                     /**
                      * Returns the string table for class SheetCollate.
                      */
                     // @ts-ignore
-                    getStringTable(): java.lang.String[]
+                    getStringTable(): string[]
                     /**
                      * Returns the enumeration value table for class SheetCollate.
                      */
@@ -165,7 +165,7 @@ declare namespace javax {
                      *           {#link java.lang.Class java.lang.Class}.
                      */
                     // @ts-ignore
-                    getCategory(): java.lang.Class<? extends javax.print.attribute.Attribute>
+                    public getCategory(): java.lang.Class<any>
                     /**
                      * Get the name of the category of which this attribute value is an
                      * instance.
@@ -174,7 +174,7 @@ declare namespace javax {
                      * @return Attribute category name.
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                 }
             }
         }

@@ -27,7 +27,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if any of the parameters contains illegal characters
                  */
                 // @ts-ignore
-                constructor(type: string)
+                constructor(type: java.lang.String | string)
                 /**
                  * Create a new {@code MimeType} for the given primary type and subtype.
                  * <p>The parameters are empty.
@@ -36,7 +36,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if any of the parameters contains illegal characters
                  */
                 // @ts-ignore
-                constructor(type: string, subtype: string)
+                constructor(type: java.lang.String | string, subtype: java.lang.String | string)
                 /**
                  * Create a new {@code MimeType} for the given type, subtype, and character set.
                  * @param type the primary type
@@ -45,7 +45,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if any of the parameters contains illegal characters
                  */
                 // @ts-ignore
-                constructor(type: string, subtype: string, charset: java.nio.charset.Charset)
+                constructor(type: java.lang.String | string, subtype: java.lang.String | string, charset: java.nio.charset.Charset)
                 /**
                  * Copy-constructor that copies the type, subtype, parameters of the given {@code MimeType},
                  * and allows to set the specified character set.
@@ -64,7 +64,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if any of the parameters contains illegal characters
                  */
                 // @ts-ignore
-                constructor(other: org.springframework.util.MimeType, parameters: java.util.Map<java.lang.String, java.lang.String>)
+                constructor(other: org.springframework.util.MimeType, parameters: java.util.Map<java.lang.String | string, java.lang.String | string>)
                 /**
                  * Create a new {@code MimeType} for the given type, subtype, and parameters.
                  * @param type the primary type
@@ -73,19 +73,19 @@ declare namespace org {
                  * @throws IllegalArgumentException if any of the parameters contains illegal characters
                  */
                 // @ts-ignore
-                constructor(type: string, subtype: string, parameters: java.util.Map<java.lang.String, java.lang.String>)
+                constructor(type: java.lang.String | string, subtype: java.lang.String | string, parameters: java.util.Map<java.lang.String | string, java.lang.String | string>)
                 // @ts-ignore
-                readonly WILDCARD_TYPE: string
+                static readonly WILDCARD_TYPE: java.lang.String | string
                 // @ts-ignore
-                checkParameters(attribute: string, value: string): void
+                checkParameters(attribute: java.lang.String | string, value: java.lang.String | string): void
                 // @ts-ignore
-                unquote(s: string): java.lang.String
+                unquote(s: java.lang.String | string): string
                 /**
                  * Indicates whether the {@linkplain #getType() type} is the wildcard character
                  * <code>&#42;</code> or not.
                  */
                 // @ts-ignore
-                isWildcardType(): boolean
+                public isWildcardType(): boolean
                 /**
                  * Indicates whether the {@linkplain #getSubtype() subtype} is the wildcard
                  * character <code>&#42;</code> or the wildcard character followed by a suffix
@@ -93,44 +93,44 @@ declare namespace org {
                  * @return whether the subtype is a wildcard
                  */
                 // @ts-ignore
-                isWildcardSubtype(): boolean
+                public isWildcardSubtype(): boolean
                 /**
                  * Indicates whether this MIME Type is concrete, i.e. whether neither the type
                  * nor the subtype is a wildcard character <code>&#42;</code>.
                  * @return whether this MIME Type is concrete
                  */
                 // @ts-ignore
-                isConcrete(): boolean
+                public isConcrete(): boolean
                 /**
                  * Return the primary type.
                  */
                 // @ts-ignore
-                getType(): java.lang.String
+                public getType(): string
                 /**
                  * Return the subtype.
                  */
                 // @ts-ignore
-                getSubtype(): java.lang.String
+                public getSubtype(): string
                 /**
                  * Return the character set, as indicated by a {@code charset} parameter, if any.
                  * @return the character set, or {#code null} if not available
                  * @since 4.3
                  */
                 // @ts-ignore
-                getCharset(): java.nio.charset.Charset
+                public getCharset(): java.nio.charset.Charset
                 /**
                  * Return a generic parameter value, given a parameter name.
                  * @param name the parameter name
                  * @return the parameter value, or {#code null} if not present
                  */
                 // @ts-ignore
-                getParameter(name: string): java.lang.String
+                public getParameter(name: java.lang.String | string): string
                 /**
                  * Return all generic parameter values.
                  * @return a read-only map (possibly empty, never {#code null})
                  */
                 // @ts-ignore
-                getParameters(): java.util.Map<java.lang.String, java.lang.String>
+                public getParameters(): java.util.Map<java.lang.String | string, java.lang.String | string>
                 /**
                  * Indicate whether this MIME Type includes the given MIME Type.
                  * <p>For instance, {@code text/*} includes {@code text/plain} and {@code text/html},
@@ -141,7 +141,7 @@ declare namespace org {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                includes(other: org.springframework.util.MimeType): boolean
+                public includes(other: org.springframework.util.MimeType): boolean
                 /**
                  * Indicate whether this MIME Type is compatible with the given MIME Type.
                  * <p>For instance, {@code text/*} is compatible with {@code text/plain},
@@ -152,7 +152,7 @@ declare namespace org {
                  *  {@code false} otherwise
                  */
                 // @ts-ignore
-                isCompatibleWith(other: org.springframework.util.MimeType): boolean
+                public isCompatibleWith(other: org.springframework.util.MimeType): boolean
                 /**
                  * Similar to {@link #equals(Object)} but based on the type and subtype
                  * only, i.e. ignoring parameters.
@@ -161,7 +161,7 @@ declare namespace org {
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                equalsTypeAndSubtype(other: org.springframework.util.MimeType): boolean
+                public equalsTypeAndSubtype(other: org.springframework.util.MimeType): boolean
                 /**
                  * Unlike {@link Collection#contains(Object)} which relies on
                  * {@link MimeType#equals(Object)}, this method only checks the type and the
@@ -171,13 +171,13 @@ declare namespace org {
                  * @since 5.1.4
                  */
                 // @ts-ignore
-                isPresentIn(mimeTypes: Array<org.springframework.util.MimeType>): boolean
+                public isPresentIn(mimeTypes: java.util.Collection<any> | Array<any>): boolean
                 // @ts-ignore
-                equals(other: any): boolean
+                public equals(other: java.lang.Object | any): boolean
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
                 appendTo(builder: java.lang.StringBuilder): void
                 /**
@@ -186,7 +186,7 @@ declare namespace org {
                  * @see MimeTypeUtils#sortBySpecificity(List)
                  */
                 // @ts-ignore
-                compareTo(other: org.springframework.util.MimeType): int
+                public compareTo(other: org.springframework.util.MimeType): number /*int*/
                 /**
                  * Parse the given String value into a {@code MimeType} object,
                  * with this method name following the 'valueOf' naming convention
@@ -194,7 +194,7 @@ declare namespace org {
                  * @see MimeTypeUtils#parseMimeType(String)
                  */
                 // @ts-ignore
-                valueOf(value: string): org.springframework.util.MimeType
+                public static valueOf(value: java.lang.String | string): org.springframework.util.MimeType
             }
         }
     }

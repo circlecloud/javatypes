@@ -38,7 +38,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if {#code principals} is empty.
                      */
                     // @ts-ignore
-                    constructor(principals: string)
+                    constructor(principals: java.lang.String | string)
                     /**
                      * Create a new {@code DelegationPermission}
                      * with the specified subordinate and target principals.
@@ -50,7 +50,7 @@ declare namespace javax {
                      * @throws IllegalArgumentException if {#code principals} is empty.
                      */
                     // @ts-ignore
-                    constructor(principals: string, actions: string)
+                    constructor(principals: java.lang.String | string, actions: java.lang.String | string)
                     /**
                      * Checks if this Kerberos delegation permission object "implies" the
                      * specified permission.
@@ -61,7 +61,7 @@ declare namespace javax {
                      *  false if not.
                      */
                     // @ts-ignore
-                    implies(p: java.security.Permission): boolean
+                    public implies(p: java.security.Permission): boolean
                     /**
                      * Checks two DelegationPermission objects for equality.
                      * <P>
@@ -71,13 +71,13 @@ declare namespace javax {
                      *   DelegationPermission object.
                      */
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     /**
                      * Returns the hash code value for this object.
                      * @return a hash code value for this object.
                      */
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     /**
                      * Returns a PermissionCollection object for storing
                      * DelegationPermission objects.
@@ -90,7 +90,7 @@ declare namespace javax {
                      *  DelegationPermissions.
                      */
                     // @ts-ignore
-                    newPermissionCollection(): java.security.PermissionCollection
+                    public newPermissionCollection(): java.security.PermissionCollection
                 }
             }
         }

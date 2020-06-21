@@ -64,7 +64,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                class TransformService extends java.lang.Object implements javax.xml.crypto.dsig.Transform {
+                abstract class TransformService extends java.lang.Object implements javax.xml.crypto.dsig.Transform {
                     /**
                      * Default constructor, for invocation by subclasses.
                      */
@@ -96,7 +96,7 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(algorithm: string, mechanismType: string): javax.xml.crypto.dsig.TransformService
+                    public static getInstance(algorithm: java.lang.String | string, mechanismType: java.lang.String | string): javax.xml.crypto.dsig.TransformService
                     /**
                      * Returns a <code>TransformService</code> that supports the specified
                      * algorithm URI (ex: {@link Transform#XPATH2}) and mechanism type
@@ -117,7 +117,7 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(algorithm: string, mechanismType: string, provider: java.security.Provider): javax.xml.crypto.dsig.TransformService
+                    public static getInstance(algorithm: java.lang.String | string, mechanismType: java.lang.String | string, provider: java.security.Provider): javax.xml.crypto.dsig.TransformService
                     /**
                      * Returns a <code>TransformService</code> that supports the specified
                      * algorithm URI (ex: {@link Transform#XPATH2}) and mechanism type
@@ -141,26 +141,26 @@ declare namespace javax {
                      * @see Provider
                      */
                     // @ts-ignore
-                    getInstance(algorithm: string, mechanismType: string, provider: string): javax.xml.crypto.dsig.TransformService
+                    public static getInstance(algorithm: java.lang.String | string, mechanismType: java.lang.String | string, provider: java.lang.String | string): javax.xml.crypto.dsig.TransformService
                     /**
                      * Returns the mechanism type supported by this <code>TransformService</code>.
                      * @return the mechanism type
                      */
                     // @ts-ignore
-                    getMechanismType(): java.lang.String
+                    public getMechanismType(): string
                     /**
                      * Returns the URI of the algorithm supported by this
                      * <code>TransformService</code>.
                      * @return the algorithm URI
                      */
                     // @ts-ignore
-                    getAlgorithm(): java.lang.String
+                    public getAlgorithm(): string
                     /**
                      * Returns the provider of this <code>TransformService</code>.
                      * @return the provider
                      */
                     // @ts-ignore
-                    getProvider(): java.security.Provider
+                    public getProvider(): java.security.Provider
                     /**
                      * Initializes this <code>TransformService</code> with the specified
                      * parameters.
@@ -173,7 +173,7 @@ declare namespace javax {
                      *    are invalid for this algorithm
                      */
                     // @ts-ignore
-                    abstract init(params: javax.xml.crypto.dsig.spec.TransformParameterSpec): void
+                    public abstract init(params: javax.xml.crypto.dsig.spec.TransformParameterSpec): void
                     /**
                      * Marshals the algorithm-specific parameters. If there are no parameters
                      * to be marshalled, this method returns without throwing an exception.
@@ -188,7 +188,7 @@ declare namespace javax {
                      * @throws MarshalException if the parameters cannot be marshalled
                      */
                     // @ts-ignore
-                    abstract marshalParams(parent: javax.xml.crypto.XMLStructure, context: javax.xml.crypto.XMLCryptoContext): void
+                    public abstract marshalParams(parent: javax.xml.crypto.XMLStructure, context: javax.xml.crypto.XMLCryptoContext): void
                     /**
                      * Initializes this <code>TransformService</code> with the specified
                      * parameters and document context.
@@ -204,7 +204,7 @@ declare namespace javax {
                      *    are invalid for this algorithm
                      */
                     // @ts-ignore
-                    abstract init(parent: javax.xml.crypto.XMLStructure, context: javax.xml.crypto.XMLCryptoContext): void
+                    public abstract init(parent: javax.xml.crypto.XMLStructure, context: javax.xml.crypto.XMLCryptoContext): void
                 }
             }
         }

@@ -19,7 +19,7 @@ declare namespace org {
                                  * @return The current food level
                                  */
                                 // @ts-ignore
-                                foodLevel(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                foodLevel(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the "exhaustion" level.
                                  * <p>When the exhaustion level reaches 0, saturation is usually diminished
@@ -29,7 +29,7 @@ declare namespace org {
                                  * @return The immutable bounded value of exhaustion
                                  */
                                 // @ts-ignore
-                                exhaustion(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                exhaustion(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the "exhaustion" level.
                                  * <p>When the saturation level reaches 0, the food level is usually
@@ -40,7 +40,7 @@ declare namespace org {
                                  * @return The immutable bounded value of saturation
                                  */
                                 // @ts-ignore
-                                saturation(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double>
+                                saturation(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Double | number>
                             }
                         }
                     }

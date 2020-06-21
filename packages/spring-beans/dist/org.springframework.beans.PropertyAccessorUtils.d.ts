@@ -8,7 +8,7 @@ declare namespace org {
              * @since 1.2.6
              */
             // @ts-ignore
-            class PropertyAccessorUtils extends java.lang.Object {
+            abstract class PropertyAccessorUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -18,14 +18,14 @@ declare namespace org {
                  * @return the actual property name, without any key elements
                  */
                 // @ts-ignore
-                getPropertyName(propertyPath: string): java.lang.String
+                public static getPropertyName(propertyPath: java.lang.String | string): string
                 /**
                  * Check whether the given property path indicates an indexed or nested property.
                  * @param propertyPath the property path to check
                  * @return whether the path indicates an indexed or nested property
                  */
                 // @ts-ignore
-                isNestedOrIndexedProperty(propertyPath: string): boolean
+                public static isNestedOrIndexedProperty(propertyPath: java.lang.String | string): boolean
                 /**
                  * Determine the first nested property separator in the
                  * given property path, ignoring dots in keys (like "map[my.key]").
@@ -33,7 +33,7 @@ declare namespace org {
                  * @return the index of the nested property separator, or -1 if none
                  */
                 // @ts-ignore
-                getFirstNestedPropertySeparatorIndex(propertyPath: string): int
+                public static getFirstNestedPropertySeparatorIndex(propertyPath: java.lang.String | string): number /*int*/
                 /**
                  * Determine the first nested property separator in the
                  * given property path, ignoring dots in keys (like "map[my.key]").
@@ -41,7 +41,7 @@ declare namespace org {
                  * @return the index of the nested property separator, or -1 if none
                  */
                 // @ts-ignore
-                getLastNestedPropertySeparatorIndex(propertyPath: string): int
+                public static getLastNestedPropertySeparatorIndex(propertyPath: java.lang.String | string): number /*int*/
                 /**
                  * Determine whether the given registered path matches the given property path,
                  * either indicating the property itself or an indexed element of the property.
@@ -50,7 +50,7 @@ declare namespace org {
                  * @return whether the paths match
                  */
                 // @ts-ignore
-                matchesProperty(registeredPath: string, propertyPath: string): boolean
+                public static matchesProperty(registeredPath: java.lang.String | string, propertyPath: java.lang.String | string): boolean
                 /**
                  * Determine the canonical name for the given property path.
                  * Removes surrounding quotes from map keys:<br>
@@ -60,7 +60,7 @@ declare namespace org {
                  * @return the canonical representation of the property path
                  */
                 // @ts-ignore
-                canonicalPropertyName(propertyName: string): java.lang.String
+                public static canonicalPropertyName(propertyName: java.lang.String | string): string
                 /**
                  * Determine the canonical names for the given property paths.
                  * @param propertyNames the bean property paths (as array)
@@ -69,7 +69,7 @@ declare namespace org {
                  * @see #canonicalPropertyName(String)
                  */
                 // @ts-ignore
-                canonicalPropertyNames(propertyNames: string[]): java.lang.String[]
+                public static canonicalPropertyNames(propertyNames: java.lang.String[] | string[]): string[]
             }
         }
     }

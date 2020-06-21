@@ -21,7 +21,7 @@ declare namespace org {
                      * @throws java.io.IOException in case of I/O errors
                      */
                     // @ts-ignore
-                    executeAsync(): <any>
+                    executeAsync(): object
                 }
             }
         }

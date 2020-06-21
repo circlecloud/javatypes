@@ -13,13 +13,13 @@ declare namespace org {
                          * @return The temperature
                          */
                         // @ts-ignore
-                        getTemperature(): double
+                        getTemperature(): number /*double*/
                         /**
                          * Gets the humidity of this biome.
                          * @return The humidity
                          */
                         // @ts-ignore
-                        getHumidity(): double
+                        getHumidity(): number /*double*/
                         /**
                          * Gets the default generation settings of this biome for the given world.
                          * @param world The world the settings are being made for

@@ -21,26 +21,26 @@ declare namespace java {
              * column does not allow <code>NULL</code> values.
              */
             // @ts-ignore
-            
+            readonly columnNoNulls: number /*int*/
             /**
              * The constant indicating that a
              * column allows <code>NULL</code> values.
              */
             // @ts-ignore
-            
+            readonly columnNullable: number /*int*/
             /**
              * The constant indicating that the
              * nullability of a column's values is unknown.
              */
             // @ts-ignore
-            
+            readonly columnNullableUnknown: number /*int*/
             /**
              * Returns the number of columns in this <code>ResultSet</code> object.
              * @return the number of columns
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getColumnCount(): int
+            getColumnCount(): number /*int*/
             /**
              * Indicates whether the designated column is automatically numbered.
              * @param column the first column is 1, the second is 2, ...
@@ -81,7 +81,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            isNullable(column: number /*int*/): int
+            isNullable(column: number /*int*/): number /*int*/
             /**
              * Indicates whether values in the designated column are signed numbers.
              * @param column the first column is 1, the second is 2, ...
@@ -98,7 +98,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getColumnDisplaySize(column: number /*int*/): int
+            getColumnDisplaySize(column: number /*int*/): number /*int*/
             /**
              * Gets the designated column's suggested title for use in printouts and
              * displays. The suggested title is usually specified by the SQL <code>AS</code>
@@ -110,7 +110,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getColumnLabel(column: number /*int*/): java.lang.String
+            getColumnLabel(column: number /*int*/): string
             /**
              * Get the designated column's name.
              * @param column the first column is 1, the second is 2, ...
@@ -118,7 +118,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getColumnName(column: number /*int*/): java.lang.String
+            getColumnName(column: number /*int*/): string
             /**
              * Get the designated column's table's schema.
              * @param column the first column is 1, the second is 2, ...
@@ -126,7 +126,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getSchemaName(column: number /*int*/): java.lang.String
+            getSchemaName(column: number /*int*/): string
             /**
              * Get the designated column's specified column size.
              * For numeric data, this is the maximum precision.  For character data, this is the length in characters.
@@ -139,7 +139,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getPrecision(column: number /*int*/): int
+            getPrecision(column: number /*int*/): number /*int*/
             /**
              * Gets the designated column's number of digits to right of the decimal point.
              * 0 is returned for data types where the scale is not applicable.
@@ -148,7 +148,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getScale(column: number /*int*/): int
+            getScale(column: number /*int*/): number /*int*/
             /**
              * Gets the designated column's table name.
              * @param column the first column is 1, the second is 2, ...
@@ -156,7 +156,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getTableName(column: number /*int*/): java.lang.String
+            getTableName(column: number /*int*/): string
             /**
              * Gets the designated column's table's catalog name.
              * @param column the first column is 1, the second is 2, ...
@@ -165,7 +165,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getCatalogName(column: number /*int*/): java.lang.String
+            getCatalogName(column: number /*int*/): string
             /**
              * Retrieves the designated column's SQL type.
              * @param column the first column is 1, the second is 2, ...
@@ -174,7 +174,7 @@ declare namespace java {
              * @see Types
              */
             // @ts-ignore
-            getColumnType(column: number /*int*/): int
+            getColumnType(column: number /*int*/): number /*int*/
             /**
              * Retrieves the designated column's database-specific type name.
              * @param column the first column is 1, the second is 2, ...
@@ -183,7 +183,7 @@ declare namespace java {
              * @exception SQLException if a database access error occurs
              */
             // @ts-ignore
-            getColumnTypeName(column: number /*int*/): java.lang.String
+            getColumnTypeName(column: number /*int*/): string
             /**
              * Indicates whether the designated column is definitely not writable.
              * @param column the first column is 1, the second is 2, ...
@@ -223,7 +223,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getColumnClassName(column: number /*int*/): java.lang.String
+            getColumnClassName(column: number /*int*/): string
         }
     }
 }

@@ -108,7 +108,7 @@ declare namespace javax {
                  * of {@link ClassLoader}.</p>
                  */
                 // @ts-ignore
-                readonly DEFAULT_CLASS_LOADER: string
+                public static readonly DEFAULT_CLASS_LOADER: java.lang.String | string
                 /**
                  * <p>Name of the attribute that specifies the provider packages
                  * that are consulted when looking for the handler for a protocol.
@@ -116,7 +116,7 @@ declare namespace javax {
                  * package names separated by vertical bars (<code>|</code>).</p>
                  */
                 // @ts-ignore
-                readonly PROTOCOL_PROVIDER_PACKAGES: string
+                public static readonly PROTOCOL_PROVIDER_PACKAGES: java.lang.String | string
                 /**
                  * <p>Name of the attribute that specifies the class
                  * loader for loading protocol providers.
@@ -124,7 +124,7 @@ declare namespace javax {
                  * of {@link ClassLoader}.</p>
                  */
                 // @ts-ignore
-                readonly PROTOCOL_PROVIDER_CLASS_LOADER: string
+                public static readonly PROTOCOL_PROVIDER_CLASS_LOADER: java.lang.String | string
                 /**
                  * <p>Creates a connection to the connector server at the given
                  * address.</p>
@@ -141,7 +141,7 @@ declare namespace javax {
                  *  for security reasons.
                  */
                 // @ts-ignore
-                connect(serviceURL: javax.management.remote.JMXServiceURL): javax.management.remote.JMXConnector
+                public static connect(serviceURL: javax.management.remote.JMXServiceURL): javax.management.remote.JMXConnector
                 /**
                  * <p>Creates a connection to the connector server at the given
                  * address.</p>
@@ -167,7 +167,7 @@ declare namespace javax {
                  *  for security reasons.
                  */
                 // @ts-ignore
-                connect(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>): javax.management.remote.JMXConnector
+                public static connect(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>): javax.management.remote.JMXConnector
                 /**
                  * <p>Creates a connector client for the connector server at the
                  * given address.  The resultant client is not connected until its
@@ -191,7 +191,7 @@ declare namespace javax {
                  *  some reason.
                  */
                 // @ts-ignore
-                newJMXConnector(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String, any>): javax.management.remote.JMXConnector
+                public static newJMXConnector(serviceURL: javax.management.remote.JMXServiceURL, environment: java.util.Map<java.lang.String | string, any>): javax.management.remote.JMXConnector
             }
         }
     }

@@ -44,7 +44,7 @@ declare namespace java {
              * A constant for a period of zero.
              */
             // @ts-ignore
-            readonly ZERO: java.time.Period
+            public static readonly ZERO: java.time.Period
             /**
              * Obtains a {@code Period} representing a number of years.
              * <p>
@@ -54,7 +54,7 @@ declare namespace java {
              * @return the period of years, not null
              */
             // @ts-ignore
-            ofYears(years: number /*int*/): java.time.Period
+            public static ofYears(years: number /*int*/): java.time.Period
             /**
              * Obtains a {@code Period} representing a number of months.
              * <p>
@@ -64,7 +64,7 @@ declare namespace java {
              * @return the period of months, not null
              */
             // @ts-ignore
-            ofMonths(months: number /*int*/): java.time.Period
+            public static ofMonths(months: number /*int*/): java.time.Period
             /**
              * Obtains a {@code Period} representing a number of weeks.
              * <p>
@@ -75,7 +75,7 @@ declare namespace java {
              * @return the period, with the input weeks converted to days, not null
              */
             // @ts-ignore
-            ofWeeks(weeks: number /*int*/): java.time.Period
+            public static ofWeeks(weeks: number /*int*/): java.time.Period
             /**
              * Obtains a {@code Period} representing a number of days.
              * <p>
@@ -85,7 +85,7 @@ declare namespace java {
              * @return the period of days, not null
              */
             // @ts-ignore
-            ofDays(days: number /*int*/): java.time.Period
+            public static ofDays(days: number /*int*/): java.time.Period
             /**
              * Obtains a {@code Period} representing a number of years, months and days.
              * <p>
@@ -96,7 +96,7 @@ declare namespace java {
              * @return the period of years, months and days, not null
              */
             // @ts-ignore
-            of(years: number /*int*/, months: number /*int*/, days: number /*int*/): java.time.Period
+            public static of(years: number /*int*/, months: number /*int*/, days: number /*int*/): java.time.Period
             /**
              * Obtains an instance of {@code Period} from a temporal amount.
              * <p>
@@ -116,7 +116,7 @@ declare namespace java {
              * @throws ArithmeticException if the amount of years, months or days exceeds an int
              */
             // @ts-ignore
-            from(amount: java.time.temporal.TemporalAmount): java.time.Period
+            public static from(amount: java.time.temporal.TemporalAmount): java.time.Period
             /**
              * Obtains a {@code Period} from a text string such as {@code PnYnMnD}.
              * <p>
@@ -156,7 +156,7 @@ declare namespace java {
              * @throws DateTimeParseException if the text cannot be parsed to a period
              */
             // @ts-ignore
-            parse(text: java.lang.CharSequence): java.time.Period
+            public static parse(text: java.lang.CharSequence): java.time.Period
             /**
              * Obtains a {@code Period} consisting of the number of years, months,
              * and days between two dates.
@@ -176,7 +176,7 @@ declare namespace java {
              * @see ChronoLocalDate#until(ChronoLocalDate)
              */
             // @ts-ignore
-            between(startDateInclusive: java.time.LocalDate, endDateExclusive: java.time.LocalDate): java.time.Period
+            public static between(startDateInclusive: java.time.LocalDate, endDateExclusive: java.time.LocalDate): java.time.Period
             /**
              * Gets the value of the requested unit.
              * <p>
@@ -190,7 +190,7 @@ declare namespace java {
              * @throws UnsupportedTemporalTypeException if the unit is not supported
              */
             // @ts-ignore
-            get(unit: java.time.temporal.TemporalUnit): long
+            public get(unit: java.time.temporal.TemporalUnit): number /*long*/
             /**
              * Gets the set of units supported by this period.
              * <p>
@@ -203,7 +203,7 @@ declare namespace java {
              * @return a list containing the years, months and days units, not null
              */
             // @ts-ignore
-            getUnits(): java.util.List<java.time.temporal.TemporalUnit>
+            public getUnits(): Array<java.time.temporal.TemporalUnit>
             /**
              * Gets the chronology of this period, which is the ISO calendar system.
              * <p>
@@ -214,7 +214,7 @@ declare namespace java {
              * @return the ISO chronology, not null
              */
             // @ts-ignore
-            getChronology(): java.time.chrono.IsoChronology
+            public getChronology(): java.time.chrono.IsoChronology
             /**
              * Checks if all three units of this period are zero.
              * <p>
@@ -222,7 +222,7 @@ declare namespace java {
              * @return true if this period is zero-length
              */
             // @ts-ignore
-            isZero(): boolean
+            public isZero(): boolean
             /**
              * Checks if any of the three units of this period are negative.
              * <p>
@@ -230,7 +230,7 @@ declare namespace java {
              * @return true if any unit of this period is negative
              */
             // @ts-ignore
-            isNegative(): boolean
+            public isNegative(): boolean
             /**
              * Gets the amount of years of this period.
              * <p>
@@ -242,7 +242,7 @@ declare namespace java {
              * @return the amount of years of this period, may be negative
              */
             // @ts-ignore
-            getYears(): int
+            public getYears(): number /*int*/
             /**
              * Gets the amount of months of this period.
              * <p>
@@ -254,7 +254,7 @@ declare namespace java {
              * @return the amount of months of this period, may be negative
              */
             // @ts-ignore
-            getMonths(): int
+            public getMonths(): number /*int*/
             /**
              * Gets the amount of days of this period.
              * <p>
@@ -262,7 +262,7 @@ declare namespace java {
              * @return the amount of days of this period, may be negative
              */
             // @ts-ignore
-            getDays(): int
+            public getDays(): number /*int*/
             /**
              * Returns a copy of this period with the specified amount of years.
              * <p>
@@ -278,7 +278,7 @@ declare namespace java {
              * @return a {#code Period} based on this period with the requested years, not null
              */
             // @ts-ignore
-            withYears(years: number /*int*/): java.time.Period
+            public withYears(years: number /*int*/): java.time.Period
             /**
              * Returns a copy of this period with the specified amount of months.
              * <p>
@@ -294,7 +294,7 @@ declare namespace java {
              * @return a {#code Period} based on this period with the requested months, not null
              */
             // @ts-ignore
-            withMonths(months: number /*int*/): java.time.Period
+            public withMonths(months: number /*int*/): java.time.Period
             /**
              * Returns a copy of this period with the specified amount of days.
              * <p>
@@ -306,7 +306,7 @@ declare namespace java {
              * @return a {#code Period} based on this period with the requested days, not null
              */
             // @ts-ignore
-            withDays(days: number /*int*/): java.time.Period
+            public withDays(days: number /*int*/): java.time.Period
             /**
              * Returns a copy of this period with the specified period added.
              * <p>
@@ -327,7 +327,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.Period
+            public plus(amountToAdd: java.time.temporal.TemporalAmount): java.time.Period
             /**
              * Returns a copy of this period with the specified years added.
              * <p>
@@ -341,7 +341,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusYears(yearsToAdd: number /*long*/): java.time.Period
+            public plusYears(yearsToAdd: number /*long*/): java.time.Period
             /**
              * Returns a copy of this period with the specified months added.
              * <p>
@@ -355,7 +355,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusMonths(monthsToAdd: number /*long*/): java.time.Period
+            public plusMonths(monthsToAdd: number /*long*/): java.time.Period
             /**
              * Returns a copy of this period with the specified days added.
              * <p>
@@ -369,7 +369,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            plusDays(daysToAdd: number /*long*/): java.time.Period
+            public plusDays(daysToAdd: number /*long*/): java.time.Period
             /**
              * Returns a copy of this period with the specified period subtracted.
              * <p>
@@ -390,7 +390,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.Period
+            public minus(amountToSubtract: java.time.temporal.TemporalAmount): java.time.Period
             /**
              * Returns a copy of this period with the specified years subtracted.
              * <p>
@@ -404,7 +404,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusYears(yearsToSubtract: number /*long*/): java.time.Period
+            public minusYears(yearsToSubtract: number /*long*/): java.time.Period
             /**
              * Returns a copy of this period with the specified months subtracted.
              * <p>
@@ -418,7 +418,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusMonths(monthsToSubtract: number /*long*/): java.time.Period
+            public minusMonths(monthsToSubtract: number /*long*/): java.time.Period
             /**
              * Returns a copy of this period with the specified days subtracted.
              * <p>
@@ -432,7 +432,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            minusDays(daysToSubtract: number /*long*/): java.time.Period
+            public minusDays(daysToSubtract: number /*long*/): java.time.Period
             /**
              * Returns a new instance with each element in this period multiplied
              * by the specified scalar.
@@ -447,7 +447,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            multipliedBy(scalar: number /*int*/): java.time.Period
+            public multipliedBy(scalar: number /*int*/): java.time.Period
             /**
              * Returns a new instance with each amount in this period negated.
              * <p>
@@ -461,7 +461,7 @@ declare namespace java {
              *   one of the units has the value {#code Long.MIN_VALUE}
              */
             // @ts-ignore
-            negated(): java.time.Period
+            public negated(): java.time.Period
             /**
              * Returns a copy of this period with the years and months normalized.
              * <p>
@@ -479,7 +479,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            normalized(): java.time.Period
+            public normalized(): java.time.Period
             /**
              * Gets the total number of months in this period.
              * <p>
@@ -490,7 +490,7 @@ declare namespace java {
              * @return the total number of months in the period, may be negative
              */
             // @ts-ignore
-            toTotalMonths(): long
+            public toTotalMonths(): number /*long*/
             /**
              * Adds this period to the specified temporal object.
              * <p>
@@ -525,7 +525,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            addTo(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public addTo(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Subtracts this period from the specified temporal object.
              * <p>
@@ -560,7 +560,7 @@ declare namespace java {
              * @throws ArithmeticException if numeric overflow occurs
              */
             // @ts-ignore
-            subtractFrom(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
+            public subtractFrom(temporal: java.time.temporal.Temporal): java.time.temporal.Temporal
             /**
              * Checks if this period is equal to another period.
              * <p>
@@ -572,13 +572,13 @@ declare namespace java {
              * @return true if this is equal to the other period
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * A hash code for this period.
              * @return a suitable hash code
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
             /**
              * Outputs this period as a {@code String}, such as {@code P6Y3M1D}.
              * <p>
@@ -587,7 +587,7 @@ declare namespace java {
              * @return a string representation of this period, not null
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

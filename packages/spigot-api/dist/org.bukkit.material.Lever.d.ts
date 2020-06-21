@@ -25,28 +25,28 @@ declare namespace org {
                  * @return true if powered, otherwise false
                  */
                 // @ts-ignore
-                isPowered(): boolean
+                public isPowered(): boolean
                 /**
                  * Set this lever to be powered or not.
                  * @param isPowered whether the lever should be powered or not
                  */
                 // @ts-ignore
-                setPowered(isPowered: boolean): void
+                public setPowered(isPowered: boolean): void
                 /**
                  * Gets the face that this block is attached on
                  * @return BlockFace attached to
                  */
                 // @ts-ignore
-                getAttachedFace(): org.bukkit.block.BlockFace
+                public getAttachedFace(): org.bukkit.block.BlockFace
                 /**
                  * Sets the direction this lever is pointing in
                  */
                 // @ts-ignore
-                setFacingDirection(face: org.bukkit.block.BlockFace): void
+                public setFacingDirection(face: org.bukkit.block.BlockFace): void
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
                 // @ts-ignore
-                clone(): org.bukkit.material.Lever
+                public clone(): org.bukkit.material.Lever
             }
         }
     }

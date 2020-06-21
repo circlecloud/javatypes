@@ -14,21 +14,21 @@ declare namespace org {
                      * @return Previous slot index
                      */
                     // @ts-ignore
-                    getPreviousSlot(): int
+                    public getPreviousSlot(): number /*int*/
                     /**
                      * Gets the new held slot index
                      * @return New slot index
                      */
                     // @ts-ignore
-                    getNewSlot(): int
+                    public getNewSlot(): number /*int*/
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

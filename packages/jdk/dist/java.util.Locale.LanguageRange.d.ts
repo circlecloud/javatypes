@@ -44,7 +44,7 @@ declare namespace java {
                  *      {@code null}
                  */
                 // @ts-ignore
-                constructor(range: string)
+                constructor(range: java.lang.String | string)
                 /**
                  * Constructs a {@code LanguageRange} using the given {@code range} and
                  * {@code weight}. Note that no validation is done against the IANA
@@ -58,31 +58,31 @@ declare namespace java {
                  *      than {@code MIN_WEIGHT} or greater than {@code MAX_WEIGHT}
                  */
                 // @ts-ignore
-                constructor(range: string, weight: number /*double*/)
+                constructor(range: java.lang.String | string, weight: number /*double*/)
                 /**
                  * A constant holding the maximum value of weight, 1.0, which indicates
                  * that the language range is a good fit for the user.
                  */
                 // @ts-ignore
-                readonly MAX_WEIGHT: number /*double*/
+                public static readonly MAX_WEIGHT: number /*double*/
                 /**
                  * A constant holding the minimum value of weight, 0.0, which indicates
                  * that the language range is not a good fit for the user.
                  */
                 // @ts-ignore
-                readonly MIN_WEIGHT: number /*double*/
+                public static readonly MIN_WEIGHT: number /*double*/
                 /**
                  * Returns the language range of this {@code LanguageRange}.
                  * @return the language range.
                  */
                 // @ts-ignore
-                getRange(): java.lang.String
+                public getRange(): string
                 /**
                  * Returns the weight of this {@code LanguageRange}.
                  * @return the weight value.
                  */
                 // @ts-ignore
-                getWeight(): double
+                public getWeight(): number /*double*/
                 /**
                  * Parses the given {@code ranges} to generate a Language Priority List.
                  * <p>This method performs a syntactic check for each language range in
@@ -139,7 +139,7 @@ declare namespace java {
                  *      found in the given {#code ranges} is ill-formed
                  */
                 // @ts-ignore
-                parse(ranges: string): java.util.List<java.util.Locale.LanguageRange>
+                public static parse(ranges: java.lang.String | string): Array<java.util.Locale.LanguageRange>
                 /**
                  * Parses the given {@code ranges} to generate a Language Priority
                  * List, and then customizes the list using the given {@code map}.
@@ -159,7 +159,7 @@ declare namespace java {
                  * @see #mapEquivalents
                  */
                 // @ts-ignore
-                parse(ranges: string, map: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): java.util.List<java.util.Locale.LanguageRange>
+                public static parse(ranges: java.lang.String | string, map: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): Array<java.util.Locale.LanguageRange>
                 /**
                  * Generates a new customized Language Priority List using the given
                  * {@code priorityList} and {@code map}. If the given {@code map} is
@@ -201,13 +201,13 @@ declare namespace java {
                  * @see #parse(String, Map)
                  */
                 // @ts-ignore
-                mapEquivalents(priorityList: Array<java.util.Locale.LanguageRange>, map: java.util.Map<java.lang.String, java.util.List<java.lang.String>>): java.util.List<java.util.Locale.LanguageRange>
+                public static mapEquivalents(priorityList: java.util.List<java.util.Locale.LanguageRange> | Array<java.util.Locale.LanguageRange>, map: java.util.Map<java.lang.String | string, java.util.List<java.lang.String | string> | Array<java.lang.String | string>>): Array<java.util.Locale.LanguageRange>
                 /**
                  * Returns a hash code value for the object.
                  * @return a hash code value for this object.
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares this object to the specified object. The result is true if
                  * and only if the argument is not {@code null} and is a
@@ -219,7 +219,7 @@ declare namespace java {
                  *      otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

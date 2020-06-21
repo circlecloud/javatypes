@@ -43,7 +43,7 @@ declare namespace org {
                          *  or {@code -1} if none match
                          */
                         // @ts-ignore
-                        indexOf(predicate: java.util.function.IntPredicate | java.util.function$.IntPredicate, fromIndex: number /*int*/): int
+                        indexOf(predicate: java.util.function$.IntPredicate, fromIndex: number /*int*/): number /*int*/
                         /**
                          * Return the index of the last byte in this buffer that matches
                          * the given predicate.
@@ -53,27 +53,27 @@ declare namespace org {
                          *  or {@code -1} if none match
                          */
                         // @ts-ignore
-                        lastIndexOf(predicate: java.util.function.IntPredicate | java.util.function$.IntPredicate, fromIndex: number /*int*/): int
+                        lastIndexOf(predicate: java.util.function$.IntPredicate, fromIndex: number /*int*/): number /*int*/
                         /**
                          * Return the number of bytes that can be read from this data buffer.
                          * @return the readable byte count
                          */
                         // @ts-ignore
-                        readableByteCount(): int
+                        readableByteCount(): number /*int*/
                         /**
                          * Return the number of bytes that can be written to this data buffer.
                          * @return the writable byte count
                          * @since 5.0.1
                          */
                         // @ts-ignore
-                        writableByteCount(): int
+                        writableByteCount(): number /*int*/
                         /**
                          * Return the number of bytes that this buffer can contain.
                          * @return the capacity
                          * @since 5.0.1
                          */
                         // @ts-ignore
-                        capacity(): int
+                        capacity(): number /*int*/
                         /**
                          * Set the number of bytes that this buffer can contain.
                          * <p>If the new capacity is lower than the current capacity, the contents
@@ -100,7 +100,7 @@ declare namespace org {
                          * @since 5.0.1
                          */
                         // @ts-ignore
-                        readPosition(): int
+                        readPosition(): number /*int*/
                         /**
                          * Set the position from which this buffer will read.
                          * @param readPosition the new read position
@@ -117,7 +117,7 @@ declare namespace org {
                          * @since 5.0.1
                          */
                         // @ts-ignore
-                        writePosition(): int
+                        writePosition(): number /*int*/
                         /**
                          * Set the position to which this buffer will write.
                          * @param writePosition the new write position
@@ -136,13 +136,13 @@ declare namespace org {
                          * @since 5.0.4
                          */
                         // @ts-ignore
-                        getByte(index: number /*int*/): byte
+                        getByte(index: number /*int*/): number /*byte*/
                         /**
                          * Read a single byte from the current reading position from this data buffer.
                          * @return the byte at this buffer's current reading position
                          */
                         // @ts-ignore
-                        read(): byte
+                        read(): number /*byte*/
                         /**
                          * Read this buffer's data into the specified destination, starting at the current
                          * reading position of this buffer.
@@ -299,7 +299,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        toString(charset: java.nio.charset.Charset): java.lang.String
+                        toString(charset: java.nio.charset.Charset): string
                         /**
                          * Return a part of this buffer's data as a String using the specified charset.
                          * @param index the index at which to start the string
@@ -309,7 +309,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        toString(index: number /*int*/, length: number /*int*/, charset: java.nio.charset.Charset): java.lang.String
+                        toString(index: number /*int*/, length: number /*int*/, charset: java.nio.charset.Charset): string
                     }
                 }
             }

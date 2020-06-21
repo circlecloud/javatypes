@@ -25,7 +25,7 @@ declare namespace java {
                  *          <code>String</code> natives
                  */
                 // @ts-ignore
-                getNativesForFlavors(flavors: java.awt.datatransfer.DataFlavor[]): java.util.Map<java.awt.datatransfer.DataFlavor, java.lang.String>
+                getNativesForFlavors(flavors: java.awt.datatransfer.DataFlavor[]): java.util.Map<java.awt.datatransfer.DataFlavor, java.lang.String | string>
                 /**
                  * Returns a <code>Map</code> of the specified <code>String</code> natives
                  * to their corresponding <code>DataFlavor</code>. The returned
@@ -41,7 +41,7 @@ declare namespace java {
                  *          <code>DataFlavor</code>s
                  */
                 // @ts-ignore
-                getFlavorsForNatives(natives: string[]): java.util.Map<java.lang.String, java.awt.datatransfer.DataFlavor>
+                getFlavorsForNatives(natives: java.lang.String[] | string[]): java.util.Map<java.lang.String | string, java.awt.datatransfer.DataFlavor>
             }
         }
     }

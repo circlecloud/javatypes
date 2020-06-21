@@ -9,7 +9,7 @@ declare namespace java {
          * @since 1.6
          */
         // @ts-ignore
-        class MultipleGradientPaint extends java.lang.Object implements java.awt.Paint {
+        abstract class MultipleGradientPaint extends java.lang.Object implements java.awt.Paint {
             /**
              * Returns a copy of the array of floats used by this gradient
              * to calculate color distribution.
@@ -19,7 +19,7 @@ declare namespace java {
              *  calculate color distribution
              */
             // @ts-ignore
-            getFractions(): float[]
+            public getFractions(): number /*float*/[]
             /**
              * Returns a copy of the array of colors used by this gradient.
              * The first color maps to the first value in the fractions array,
@@ -27,13 +27,13 @@ declare namespace java {
              * @return a copy of the array of colors used by this gradient
              */
             // @ts-ignore
-            getColors(): java.awt.Color[]
+            public getColors(): java.awt.Color[]
             /**
              * Returns the enumerated type which specifies cycling behavior.
              * @return the enumerated type which specifies cycling behavior
              */
             // @ts-ignore
-            getCycleMethod(): java.awt.MultipleGradientPaint.CycleMethod
+            public getCycleMethod(): java.awt.MultipleGradientPaint.CycleMethod
             /**
              * Returns the enumerated type which specifies color space for
              * interpolation.
@@ -41,7 +41,7 @@ declare namespace java {
              *  interpolation
              */
             // @ts-ignore
-            getColorSpace(): java.awt.MultipleGradientPaint.ColorSpaceType
+            public getColorSpace(): java.awt.MultipleGradientPaint.ColorSpaceType
             /**
              * Returns a copy of the transform applied to the gradient.
              * <p>
@@ -50,7 +50,7 @@ declare namespace java {
              * @return a copy of the transform applied to the gradient
              */
             // @ts-ignore
-            getTransform(): java.awt.geom.AffineTransform
+            public getTransform(): java.awt.geom.AffineTransform
             /**
              * Returns the transparency mode for this {@code Paint} object.
              * @return {#code OPAQUE} if all colors used by this
@@ -60,7 +60,7 @@ declare namespace java {
              * @see java.awt.Transparency
              */
             // @ts-ignore
-            getTransparency(): int
+            public getTransparency(): number /*int*/
         }
     }
 }

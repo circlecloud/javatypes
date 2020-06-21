@@ -74,14 +74,14 @@ declare namespace java {
                  * to signify that the requested page was rendered.
                  */
                 // @ts-ignore
-                
+                readonly PAGE_EXISTS: number /*int*/
                 /**
                  * Returned from <code>print</code> to signify that the
                  * <code>pageIndex</code> is too large and that the requested page
                  * does not exist.
                  */
                 // @ts-ignore
-                
+                readonly NO_SUCH_PAGE: number /*int*/
                 /**
                  * Prints the page at the specified index into the specified
                  * {@link Graphics} context in the specified
@@ -107,7 +107,7 @@ declare namespace java {
                  *          thrown when the print job is terminated.
                  */
                 // @ts-ignore
-                print(graphics: java.awt.Graphics, pageFormat: java.awt.print.PageFormat, pageIndex: number /*int*/): int
+                print(graphics: java.awt.Graphics, pageFormat: java.awt.print.PageFormat, pageIndex: number /*int*/): number /*int*/
             }
         }
     }

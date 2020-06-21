@@ -17,23 +17,23 @@ declare namespace org {
                      * Indicates that the validation should be disabled.
                      */
                     // @ts-ignore
-                    readonly VALIDATION_NONE: number /*int*/
+                    public static readonly VALIDATION_NONE: number /*int*/
                     /**
                      * Indicates that the validation mode should be auto-guessed, since we cannot find
                      * a clear indication (probably choked on some special characters, or the like).
                      */
                     // @ts-ignore
-                    readonly VALIDATION_AUTO: number /*int*/
+                    public static readonly VALIDATION_AUTO: number /*int*/
                     /**
                      * Indicates that DTD validation should be used (we found a "DOCTYPE" declaration).
                      */
                     // @ts-ignore
-                    readonly VALIDATION_DTD: number /*int*/
+                    public static readonly VALIDATION_DTD: number /*int*/
                     /**
                      * Indicates that XSD validation should be used (found no "DOCTYPE" declaration).
                      */
                     // @ts-ignore
-                    readonly VALIDATION_XSD: number /*int*/
+                    public static readonly VALIDATION_XSD: number /*int*/
                     /**
                      * Detect the validation mode for the XML document in the supplied {@link InputStream}.
                      * Note that the supplied {@link InputStream} is closed by this method before returning.
@@ -43,7 +43,7 @@ declare namespace org {
                      * @see #VALIDATION_XSD
                      */
                     // @ts-ignore
-                    detectValidationMode(inputStream: java.io.InputStream): int
+                    public detectValidationMode(inputStream: java.io.InputStream): number /*int*/
                 }
             }
         }

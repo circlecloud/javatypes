@@ -23,7 +23,7 @@ declare namespace javax {
                  * @since JAX-WS 2.1
                  */
                 // @ts-ignore
-                class Addressing implements java.lang.annotation.Annotation {
+                abstract class Addressing implements java.lang.annotation.Annotation {
                 }
             }
         }

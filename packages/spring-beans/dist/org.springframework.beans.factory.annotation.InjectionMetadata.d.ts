@@ -23,13 +23,13 @@ declare namespace org {
                          * @see #forElements
                          */
                         // @ts-ignore
-                        constructor(targetClass: java.lang.Class<any>, elements: Array<org.springframework.beans.factory.annotation.InjectionMetadata.InjectedElement>)
+                        constructor(targetClass: java.lang.Class<any>, elements: java.util.Collection<org.springframework.beans.factory.annotation.InjectionMetadata.InjectedElement> | Array<org.springframework.beans.factory.annotation.InjectionMetadata.InjectedElement>)
                         /**
                          * An empty {@code InjectionMetadata} instance with no-op callbacks.
                          * @since 5.2
                          */
                         // @ts-ignore
-                        readonly EMPTY: org.springframework.beans.factory.annotation.InjectionMetadata
+                        public static readonly EMPTY: org.springframework.beans.factory.annotation.InjectionMetadata
                         /**
                          * Determine whether this metadata instance needs to be refreshed.
                          * @param clazz the current target class
@@ -39,15 +39,15 @@ declare namespace org {
                         // @ts-ignore
                         needsRefresh(clazz: java.lang.Class<any>): boolean
                         // @ts-ignore
-                        checkConfigMembers(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition): void
+                        public checkConfigMembers(beanDefinition: org.springframework.beans.factory.support.RootBeanDefinition): void
                         // @ts-ignore
-                        inject(target: any, beanName: string, pvs: org.springframework.beans.PropertyValues): void
+                        public inject(target: java.lang.Object | any, beanName: java.lang.String | string, pvs: org.springframework.beans.PropertyValues): void
                         /**
                          * Clear property skipping for the contained elements.
                          * @since 3.2.13
                          */
                         // @ts-ignore
-                        clear(pvs: org.springframework.beans.PropertyValues): void
+                        public clear(pvs: org.springframework.beans.PropertyValues): void
                         /**
                          * Return an {@code InjectionMetadata} instance, possibly for empty elements.
                          * @param elements the elements to inject (possibly empty)
@@ -57,7 +57,7 @@ declare namespace org {
                          * @since 5.2
                          */
                         // @ts-ignore
-                        forElements(elements: Array<org.springframework.beans.factory.annotation.InjectionMetadata.InjectedElement>, clazz: java.lang.Class<any>): org.springframework.beans.factory.annotation.InjectionMetadata
+                        public static forElements(elements: java.util.Collection<org.springframework.beans.factory.annotation.InjectionMetadata.InjectedElement> | Array<org.springframework.beans.factory.annotation.InjectionMetadata.InjectedElement>, clazz: java.lang.Class<any>): org.springframework.beans.factory.annotation.InjectionMetadata
                         /**
                          * Check whether the given injection metadata needs to be refreshed.
                          * @param metadata the existing metadata instance
@@ -66,7 +66,7 @@ declare namespace org {
                          * @see #needsRefresh(Class)
                          */
                         // @ts-ignore
-                        needsRefresh(metadata: org.springframework.beans.factory.annotation.InjectionMetadata, clazz: java.lang.Class<any>): boolean
+                        public static needsRefresh(metadata: org.springframework.beans.factory.annotation.InjectionMetadata, clazz: java.lang.Class<any>): boolean
                     }
                 }
             }

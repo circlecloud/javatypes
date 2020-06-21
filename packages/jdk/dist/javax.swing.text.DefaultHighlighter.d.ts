@@ -21,13 +21,13 @@ declare namespace javax {
                  * As of 1.4 this field is final.
                  */
                 // @ts-ignore
-                readonly DefaultPainter: javax.swing.text.LayeredHighlighter.LayerPainter
+                public static readonly DefaultPainter: javax.swing.text.LayeredHighlighter.LayerPainter
                 /**
                  * Renders the highlights.
                  * @param g the graphics context
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics): void
+                public paint(g: java.awt.Graphics): void
                 /**
                  * Called when the UI is being installed into the
                  * interface of a JTextComponent.  Installs the editor, and
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see Highlighter#install
                  */
                 // @ts-ignore
-                install(c: javax.swing.text.JTextComponent): void
+                public install(c: javax.swing.text.JTextComponent): void
                 /**
                  * Called when the UI is being removed from the interface of
                  * a JTextComponent.
@@ -44,7 +44,7 @@ declare namespace javax {
                  * @see Highlighter#deinstall
                  */
                 // @ts-ignore
-                deinstall(c: javax.swing.text.JTextComponent): void
+                public deinstall(c: javax.swing.text.JTextComponent): void
                 /**
                  * Adds a highlight to the view.  Returns a tag that can be used
                  * to refer to the highlight.
@@ -56,18 +56,18 @@ declare namespace javax {
                  * @exception BadLocationException if the specified location is invalid
                  */
                 // @ts-ignore
-                addHighlight(p0: number /*int*/, p1: number /*int*/, p: javax.swing.text.Highlighter.HighlightPainter): java.lang.Object
+                public addHighlight(p0: number /*int*/, p1: number /*int*/, p: javax.swing.text.Highlighter.HighlightPainter): any
                 /**
                  * Removes a highlight from the view.
                  * @param tag the reference to the highlight
                  */
                 // @ts-ignore
-                removeHighlight(tag: any): void
+                public removeHighlight(tag: java.lang.Object | any): void
                 /**
                  * Removes all highlights.
                  */
                 // @ts-ignore
-                removeAllHighlights(): void
+                public removeAllHighlights(): void
                 /**
                  * Changes a highlight.
                  * @param tag the highlight tag
@@ -76,7 +76,7 @@ declare namespace javax {
                  * @exception BadLocationException if the specified location is invalid
                  */
                 // @ts-ignore
-                changeHighlight(tag: any, p0: number /*int*/, p1: number /*int*/): void
+                public changeHighlight(tag: java.lang.Object | any, p0: number /*int*/, p1: number /*int*/): void
                 /**
                  * Makes a copy of the highlights.  Does not actually clone each highlight,
                  * but only makes references to them.
@@ -84,7 +84,7 @@ declare namespace javax {
                  * @see Highlighter#getHighlights
                  */
                 // @ts-ignore
-                getHighlights(): javax.swing.text.Highlighter.Highlight[]
+                public getHighlights(): javax.swing.text.Highlighter.Highlight[]
                 /**
                  * When leaf Views (such as LabelView) are rendering they should
                  * call into this method. If a highlight is in the given region it will
@@ -97,7 +97,7 @@ declare namespace javax {
                  * @param view View instance being rendered
                  */
                 // @ts-ignore
-                paintLayeredHighlights(g: java.awt.Graphics, p0: number /*int*/, p1: number /*int*/, viewBounds: java.awt.Shape, editor: javax.swing.text.JTextComponent, view: javax.swing.text.View): void
+                public paintLayeredHighlights(g: java.awt.Graphics, p0: number /*int*/, p1: number /*int*/, viewBounds: java.awt.Shape, editor: javax.swing.text.JTextComponent, view: javax.swing.text.View): void
                 /**
                  * If true, highlights are drawn as the Views draw the text. That is
                  * the Views will call into <code>paintLayeredHighlight</code> which
@@ -107,9 +107,9 @@ declare namespace javax {
                  * LayeredHighlightPainter.
                  */
                 // @ts-ignore
-                setDrawsLayeredHighlights(newValue: boolean): void
+                public setDrawsLayeredHighlights(newValue: boolean): void
                 // @ts-ignore
-                getDrawsLayeredHighlights(): boolean
+                public getDrawsLayeredHighlights(): boolean
             }
         }
     }

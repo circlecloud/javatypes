@@ -116,7 +116,7 @@ declare namespace java {
                  * @return the number of parties required to trip this barrier
                  */
                 // @ts-ignore
-                getParties(): int
+                public getParties(): number /*int*/
                 /**
                  * Waits until all {@linkplain #getParties parties} have invoked
                  * {@code await} on this barrier.
@@ -166,7 +166,7 @@ declare namespace java {
                  *          action (if present) failed due to an exception
                  */
                 // @ts-ignore
-                await(): int
+                public await(): number /*int*/
                 /**
                  * Waits until all {@linkplain #getParties parties} have invoked
                  * {@code await} on this barrier, or the specified waiting time elapses.
@@ -224,7 +224,7 @@ declare namespace java {
                  *          present) failed due to an exception
                  */
                 // @ts-ignore
-                await(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): int
+                public await(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): number /*int*/
                 /**
                  * Queries if this barrier is in a broken state.
                  * @return {#code true} if one or more parties broke out of this
@@ -233,7 +233,7 @@ declare namespace java {
                  *          failed due to an exception; {@code false} otherwise.
                  */
                 // @ts-ignore
-                isBroken(): boolean
+                public isBroken(): boolean
                 /**
                  * Resets the barrier to its initial state.  If any parties are
                  * currently waiting at the barrier, they will return with a
@@ -244,14 +244,14 @@ declare namespace java {
                  * instead create a new barrier for subsequent use.
                  */
                 // @ts-ignore
-                reset(): void
+                public reset(): void
                 /**
                  * Returns the number of parties currently waiting at the barrier.
                  * This method is primarily useful for debugging and assertions.
                  * @return the number of parties currently blocked in {#link #await}
                  */
                 // @ts-ignore
-                getNumberWaiting(): int
+                public getNumberWaiting(): number /*int*/
             }
         }
     }

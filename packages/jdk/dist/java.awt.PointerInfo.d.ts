@@ -23,7 +23,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getDevice(): java.awt.GraphicsDevice
+            public getDevice(): java.awt.GraphicsDevice
             /**
              * Returns the {@code Point} that represents the coordinates of the pointer
              * on the screen. See {@link MouseInfo#getPointerInfo} for more information
@@ -34,7 +34,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            getLocation(): java.awt.Point
+            public getLocation(): java.awt.Point
         }
     }
 }

@@ -21,9 +21,9 @@ declare namespace org {
                          * @return True if the state sufficiently matches
                          */
                         // @ts-ignore
-                        matches(state: org.spongepowered.api.block.BlockState): boolean
+                        public matches(state: org.spongepowered.api.block.BlockState): boolean
                         // @ts-ignore
-                        test(blockState: org.spongepowered.api.block.BlockState): boolean
+                        public test(blockState: org.spongepowered.api.block.BlockState): boolean
                         /**
                          * Gets a {@link List} of compatible {@link BlockState}s.
                          * Since all {@link BlockState}s are known in the initialization
@@ -32,13 +32,13 @@ declare namespace org {
                          * @return The list of compatible block states
                          */
                         // @ts-ignore
-                        getCompatibleStates(): java.util.List<org.spongepowered.api.block.BlockState>
+                        public getCompatibleStates(): Array<org.spongepowered.api.block.BlockState>
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                     }
                 }
             }

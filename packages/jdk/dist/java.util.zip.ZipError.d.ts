@@ -13,7 +13,7 @@ declare namespace java {
                  * @param s the {#code String} containing a detail message
                  */
                 // @ts-ignore
-                constructor(s: string)
+                constructor(s: java.lang.String | string)
             }
         }
     }

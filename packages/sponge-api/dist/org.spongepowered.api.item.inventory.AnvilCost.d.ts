@@ -13,13 +13,13 @@ declare namespace org {
                          * @return The level cost
                          */
                         // @ts-ignore
-                        getLevelCost(): int
+                        getLevelCost(): number /*int*/
                         /**
                          * Returns the material cost.
                          * @return The material cost
                          */
                         // @ts-ignore
-                        getMaterialCost(): int
+                        getMaterialCost(): number /*int*/
                         /**
                          * Returns a modified copy of the Costs
                          * @param levelCost The new level cost

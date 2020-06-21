@@ -17,32 +17,32 @@ declare namespace org {
                          * Set the index of this parameter in the operation signature.
                          */
                         // @ts-ignore
-                        setIndex(index: number /*int*/): void
+                        public setIndex(index: number /*int*/): void
                         /**
                          * Return the index of this parameter in the operation signature.
                          */
                         // @ts-ignore
-                        getIndex(): int
+                        public getIndex(): number /*int*/
                         /**
                          * Set the name of this parameter in the operation signature.
                          */
                         // @ts-ignore
-                        setName(name: string): void
+                        public setName(name: java.lang.String | string): void
                         /**
                          * Return the name of this parameter in the operation signature.
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         /**
                          * Set a description for this parameter.
                          */
                         // @ts-ignore
-                        setDescription(description: string): void
+                        public setDescription(description: java.lang.String | string): void
                         /**
                          * Return a description for this parameter.
                          */
                         // @ts-ignore
-                        getDescription(): java.lang.String
+                        public getDescription(): string
                     }
                 }
             }

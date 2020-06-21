@@ -18,19 +18,19 @@ declare namespace org {
                     // @ts-ignore
                     readonly logger: Log
                     // @ts-ignore
-                    setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                    public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                     // @ts-ignore
-                    resolveClassName(className: string): java.lang.Class<?>
+                    resolveClassName(className: java.lang.String | string): java.lang.Class<any>
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     // @ts-ignore
-                    run(): void
+                    public run(): void
                     /**
                      * Build a message for an invocation failure exception.
                      * @return the error message, including the target method name etc
                      */
                     // @ts-ignore
-                    getInvocationFailureMessage(): java.lang.String
+                    getInvocationFailureMessage(): string
                 }
             }
         }

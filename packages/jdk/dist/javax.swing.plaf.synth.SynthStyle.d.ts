@@ -16,7 +16,7 @@ declare namespace javax {
                  * @author Scott Violet
                  */
                 // @ts-ignore
-                class SynthStyle extends java.lang.Object {
+                abstract class SynthStyle extends java.lang.Object {
                     /**
                      * Constructs a SynthStyle.
                      */
@@ -28,7 +28,7 @@ declare namespace javax {
                      * @return SynthGraphicsUtils
                      */
                     // @ts-ignore
-                    getGraphicsUtils(context: javax.swing.plaf.synth.SynthContext): javax.swing.plaf.synth.SynthGraphicsUtils
+                    public getGraphicsUtils(context: javax.swing.plaf.synth.SynthContext): javax.swing.plaf.synth.SynthGraphicsUtils
                     /**
                      * Returns the color for the specified state. This gives precedence to
                      * foreground and background of the <code>JComponent</code>. If the
@@ -41,7 +41,7 @@ declare namespace javax {
                      * @return Color
                      */
                     // @ts-ignore
-                    getColor(context: javax.swing.plaf.synth.SynthContext, type: javax.swing.plaf.synth.ColorType): java.awt.Color
+                    public getColor(context: javax.swing.plaf.synth.SynthContext, type: javax.swing.plaf.synth.ColorType): java.awt.Color
                     /**
                      * Returns the color for the specified state. This should NOT call any
                      * methods on the <code>JComponent</code>.
@@ -60,7 +60,7 @@ declare namespace javax {
                      * @return Font to render with
                      */
                     // @ts-ignore
-                    getFont(context: javax.swing.plaf.synth.SynthContext): java.awt.Font
+                    public getFont(context: javax.swing.plaf.synth.SynthContext): java.awt.Font
                     /**
                      * Returns the font for the specified state. This should NOT call any
                      * method on the <code>JComponent</code>.
@@ -76,7 +76,7 @@ declare namespace javax {
                      * @return Sizing Insets.
                      */
                     // @ts-ignore
-                    getInsets(context: javax.swing.plaf.synth.SynthContext, insets: java.awt.Insets): java.awt.Insets
+                    public getInsets(context: javax.swing.plaf.synth.SynthContext, insets: java.awt.Insets): java.awt.Insets
                     /**
                      * Returns the <code>SynthPainter</code> that will be used for painting.
                      * This may return null.
@@ -84,14 +84,14 @@ declare namespace javax {
                      * @return SynthPainter to use
                      */
                     // @ts-ignore
-                    getPainter(context: javax.swing.plaf.synth.SynthContext): javax.swing.plaf.synth.SynthPainter
+                    public getPainter(context: javax.swing.plaf.synth.SynthContext): javax.swing.plaf.synth.SynthPainter
                     /**
                      * Returns true if the region is opaque.
                      * @param context SynthContext identifying requester
                      * @return true if region is opaque.
                      */
                     // @ts-ignore
-                    isOpaque(context: javax.swing.plaf.synth.SynthContext): boolean
+                    public isOpaque(context: javax.swing.plaf.synth.SynthContext): boolean
                     /**
                      * Getter for a region specific style property.
                      * @param context SynthContext identifying requester
@@ -99,7 +99,7 @@ declare namespace javax {
                      * @return Value of the named property
                      */
                     // @ts-ignore
-                    get(context: javax.swing.plaf.synth.SynthContext, key: any): java.lang.Object
+                    public get(context: javax.swing.plaf.synth.SynthContext, key: java.lang.Object | any): any
                     /**
                      * Installs the necessary state from this Style on the
                      * <code>JComponent</code> from <code>context</code>.
@@ -107,7 +107,7 @@ declare namespace javax {
                      *         to.
                      */
                     // @ts-ignore
-                    installDefaults(context: javax.swing.plaf.synth.SynthContext): void
+                    public installDefaults(context: javax.swing.plaf.synth.SynthContext): void
                     /**
                      * Uninstalls any state that this style installed on
                      * the <code>JComponent</code> from <code>context</code>.
@@ -118,7 +118,7 @@ declare namespace javax {
                      *         to.
                      */
                     // @ts-ignore
-                    uninstallDefaults(context: javax.swing.plaf.synth.SynthContext): void
+                    public uninstallDefaults(context: javax.swing.plaf.synth.SynthContext): void
                     /**
                      * Convenience method to get a specific style property whose value is
                      * a <code>Number</code>. If the value is a <code>Number</code>,
@@ -131,7 +131,7 @@ declare namespace javax {
                      * @return Value of the named property
                      */
                     // @ts-ignore
-                    getInt(context: javax.swing.plaf.synth.SynthContext, key: any, defaultValue: number /*int*/): int
+                    public getInt(context: javax.swing.plaf.synth.SynthContext, key: java.lang.Object | any, defaultValue: number /*int*/): number /*int*/
                     /**
                      * Convenience method to get a specific style property whose value is
                      * an Boolean.
@@ -142,7 +142,7 @@ declare namespace javax {
                      * @return Value of the named property
                      */
                     // @ts-ignore
-                    getBoolean(context: javax.swing.plaf.synth.SynthContext, key: any, defaultValue: boolean): boolean
+                    public getBoolean(context: javax.swing.plaf.synth.SynthContext, key: java.lang.Object | any, defaultValue: boolean): boolean
                     /**
                      * Convenience method to get a specific style property whose value is
                      * an Icon.
@@ -151,7 +151,7 @@ declare namespace javax {
                      * @return Value of the named property, or null if not specified
                      */
                     // @ts-ignore
-                    getIcon(context: javax.swing.plaf.synth.SynthContext, key: any): javax.swing.Icon
+                    public getIcon(context: javax.swing.plaf.synth.SynthContext, key: java.lang.Object | any): javax.swing.Icon
                     /**
                      * Convenience method to get a specific style property whose value is
                      * a String.
@@ -162,7 +162,7 @@ declare namespace javax {
                      * @return Value of the named property
                      */
                     // @ts-ignore
-                    getString(context: javax.swing.plaf.synth.SynthContext, key: any, defaultValue: string): java.lang.String
+                    public getString(context: javax.swing.plaf.synth.SynthContext, key: java.lang.Object | any, defaultValue: java.lang.String | string): string
                 }
             }
         }

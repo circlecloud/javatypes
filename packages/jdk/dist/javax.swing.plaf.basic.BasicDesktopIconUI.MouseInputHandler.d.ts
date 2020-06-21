@@ -13,15 +13,15 @@ declare namespace javax {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        mouseReleased(e: java.awt.event.MouseEvent): void
+                        public mouseReleased(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mousePressed(e: java.awt.event.MouseEvent): void
+                        public mousePressed(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseMoved(e: java.awt.event.MouseEvent): void
+                        public mouseMoved(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        mouseDragged(e: java.awt.event.MouseEvent): void
+                        public mouseDragged(e: java.awt.event.MouseEvent): void
                         // @ts-ignore
-                        moveAndRepaint(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/, newWidth: number /*int*/, newHeight: number /*int*/): void
+                        public moveAndRepaint(f: javax.swing.JComponent, newX: number /*int*/, newY: number /*int*/, newWidth: number /*int*/, newHeight: number /*int*/): void
                     }
                 }
             }

@@ -7,7 +7,7 @@ declare namespace org {
              * @since 3.0.5
              */
             // @ts-ignore
-            class SerializationUtils extends java.lang.Object {
+            abstract class SerializationUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -16,14 +16,14 @@ declare namespace org {
                  * @return an array of bytes representing the object in a portable fashion
                  */
                 // @ts-ignore
-                serialize(object: any): byte[]
+                public static serialize(object: java.lang.Object | any): number /*byte*/[]
                 /**
                  * Deserialize the byte array into an object.
                  * @param bytes a serialized object
                  * @return the result of deserializing the bytes
                  */
                 // @ts-ignore
-                deserialize(bytes: number /*byte*/[]): java.lang.Object
+                public static deserialize(bytes: number /*byte*/[]): any
             }
         }
     }

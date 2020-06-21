@@ -12,15 +12,15 @@ declare namespace javax {
                         // @ts-ignore
                         constructor(m: javax.swing.JMenu, ui: javax.swing.plaf.basic.BasicMenuUI)
                         // @ts-ignore
-                        menu: javax.swing.JMenu
+                        public menu: javax.swing.JMenu
                         // @ts-ignore
-                        ui: javax.swing.plaf.basic.BasicMenuUI
+                        public ui: javax.swing.plaf.basic.BasicMenuUI
                         // @ts-ignore
-                        isSelected: boolean
+                        public isSelected: boolean
                         // @ts-ignore
-                        wasFocused: java.awt.Component
+                        public wasFocused: java.awt.Component
                         // @ts-ignore
-                        stateChanged(e: javax.swing.event.ChangeEvent): void
+                        public stateChanged(e: javax.swing.event.ChangeEvent): void
                     }
                 }
             }

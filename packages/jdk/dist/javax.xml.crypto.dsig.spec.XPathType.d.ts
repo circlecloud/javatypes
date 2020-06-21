@@ -47,7 +47,7 @@ declare namespace javax {
                          *     <code>filter</code> is <code>null</code>
                          */
                         // @ts-ignore
-                        constructor(expression: string, filter: javax.xml.crypto.dsig.spec.XPathType.Filter)
+                        constructor(expression: java.lang.String | string, filter: javax.xml.crypto.dsig.spec.XPathType.Filter)
                         /**
                          * Creates an <code>XPathType</code> instance with the specified XPath
                          * expression, filter, and namespace map. The map is copied to protect
@@ -65,19 +65,19 @@ declare namespace javax {
                          *     not of type <code>String</code>
                          */
                         // @ts-ignore
-                        constructor(expression: string, filter: javax.xml.crypto.dsig.spec.XPathType.Filter, namespaceMap: java.util.Map)
+                        constructor(expression: java.lang.String | string, filter: javax.xml.crypto.dsig.spec.XPathType.Filter, namespaceMap: java.util.Map<any>)
                         /**
                          * Returns the XPath expression to be evaluated.
                          * @return the XPath expression to be evaluated
                          */
                         // @ts-ignore
-                        getExpression(): java.lang.String
+                        public getExpression(): string
                         /**
                          * Returns the filter operation.
                          * @return the filter operation
                          */
                         // @ts-ignore
-                        getFilter(): javax.xml.crypto.dsig.spec.XPathType.Filter
+                        public getFilter(): javax.xml.crypto.dsig.spec.XPathType.Filter
                         /**
                          * Returns a map of namespace prefixes. Each key is a namespace prefix
                          * <code>String</code> that maps to a corresponding namespace URI
@@ -89,7 +89,7 @@ declare namespace javax {
                          *     (may be empty, but never <code>null</code>)
                          */
                         // @ts-ignore
-                        getNamespaceMap(): java.util.Map
+                        public getNamespaceMap(): java.util.Map<any>
                     }
                 }
             }

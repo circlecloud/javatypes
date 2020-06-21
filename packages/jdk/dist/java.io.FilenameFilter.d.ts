@@ -23,7 +23,7 @@ declare namespace java {
              *  included in the file list; <code>false</code> otherwise.
              */
             // @ts-ignore
-            accept(dir: java.io.File, name: string): boolean
+            accept(dir: java.io.File, name: java.lang.String | string): boolean
         }
     }
 }

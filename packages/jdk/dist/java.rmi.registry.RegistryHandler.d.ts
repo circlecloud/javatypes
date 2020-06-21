@@ -24,7 +24,7 @@ declare namespace java {
                  * @throws UnknownHostException if unable to resolve given hostname
                  */
                 // @ts-ignore
-                registryStub(host: string, port: number /*int*/): java.rmi.registry.Registry
+                registryStub(host: java.lang.String | string, port: number /*int*/): java.rmi.registry.Registry
                 /**
                  * Constructs and exports a Registry on the specified port.
                  * The port must be non-zero.

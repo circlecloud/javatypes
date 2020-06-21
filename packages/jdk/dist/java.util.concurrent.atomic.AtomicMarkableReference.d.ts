@@ -27,13 +27,13 @@ declare namespace java {
                      * @return the current value of the reference
                      */
                     // @ts-ignore
-                    getReference(): V
+                    public getReference(): V
                     /**
                      * Returns the current value of the mark.
                      * @return the current value of the mark
                      */
                     // @ts-ignore
-                    isMarked(): boolean
+                    public isMarked(): boolean
                     /**
                      * Returns the current values of both the reference and the mark.
                      * Typical usage is {@code boolean[1] holder; ref = v.get(holder); }.
@@ -42,7 +42,7 @@ declare namespace java {
                      * @return the current value of the reference
                      */
                     // @ts-ignore
-                    get(markHolder: boolean[]): V
+                    public get(markHolder: boolean[]): V
                     /**
                      * Atomically sets the value of both the reference and mark
                      * to the given update values if the
@@ -58,7 +58,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    weakCompareAndSet(expectedReference: V, newReference: V, expectedMark: boolean, newMark: boolean): boolean
+                    public weakCompareAndSet(expectedReference: V, newReference: V, expectedMark: boolean, newMark: boolean): boolean
                     /**
                      * Atomically sets the value of both the reference and mark
                      * to the given update values if the
@@ -71,14 +71,14 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    compareAndSet(expectedReference: V, newReference: V, expectedMark: boolean, newMark: boolean): boolean
+                    public compareAndSet(expectedReference: V, newReference: V, expectedMark: boolean, newMark: boolean): boolean
                     /**
                      * Unconditionally sets the value of both the reference and mark.
                      * @param newReference the new value for the reference
                      * @param newMark the new value for the mark
                      */
                     // @ts-ignore
-                    set(newReference: V, newMark: boolean): void
+                    public set(newReference: V, newMark: boolean): void
                     /**
                      * Atomically sets the value of the mark to the given update value
                      * if the current reference is {@code ==} to the expected
@@ -92,7 +92,7 @@ declare namespace java {
                      * @return {#code true} if successful
                      */
                     // @ts-ignore
-                    attemptMark(expectedReference: V, newMark: boolean): boolean
+                    public attemptMark(expectedReference: V, newMark: boolean): boolean
                 }
             }
         }

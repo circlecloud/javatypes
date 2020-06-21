@@ -17,7 +17,7 @@ declare namespace javax {
              * @author David Kloba
              */
             // @ts-ignore
-            class AbstractBorder extends java.lang.Object implements javax.swing.border.Border, java.io.Serializable {
+            abstract class AbstractBorder extends java.lang.Object implements javax.swing.border.Border, java.io.Serializable {
                 // @ts-ignore
                 constructor()
                 /**
@@ -30,7 +30,7 @@ declare namespace javax {
                  * @param height the height of the painted border
                  */
                 // @ts-ignore
-                paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
+                public paintBorder(c: java.awt.Component, g: java.awt.Graphics, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): void
                 /**
                  * This default implementation returns a new {@link Insets} object
                  * that is initialized by the {@link #getBorderInsets(Component,Insets)}
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @return a new {#link Insets} object
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component): java.awt.Insets
                 /**
                  * Reinitializes the insets parameter with this Border's current Insets.
                  * @param c the component for which this border insets value applies
@@ -49,13 +49,13 @@ declare namespace javax {
                  * @return the <code>insets</code> object
                  */
                 // @ts-ignore
-                getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
+                public getBorderInsets(c: java.awt.Component, insets: java.awt.Insets): java.awt.Insets
                 /**
                  * This default implementation returns false.
                  * @return false
                  */
                 // @ts-ignore
-                isBorderOpaque(): boolean
+                public isBorderOpaque(): boolean
                 /**
                  * This convenience method calls the static method.
                  * @param c the component for which this border is being computed
@@ -66,7 +66,7 @@ declare namespace javax {
                  * @return a <code>Rectangle</code> containing the interior coordinates
                  */
                 // @ts-ignore
-                getInteriorRectangle(c: java.awt.Component, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Rectangle
+                public getInteriorRectangle(c: java.awt.Component, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Rectangle
                 /**
                  * Returns a rectangle using the arguments minus the
                  * insets of the border. This is useful for determining the area
@@ -80,7 +80,7 @@ declare namespace javax {
                  * @return a <code>Rectangle</code> containing the interior coordinates
                  */
                 // @ts-ignore
-                getInteriorRectangle(c: java.awt.Component, b: javax.swing.border.Border, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Rectangle
+                public static getInteriorRectangle(c: java.awt.Component, b: javax.swing.border.Border, x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/): java.awt.Rectangle
                 /**
                  * Returns the baseline.  A return value less than 0 indicates the border
                  * does not have a reasonable baseline.
@@ -101,7 +101,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaseline(c: java.awt.Component, width: number /*int*/, height: number /*int*/): int
+                public getBaseline(c: java.awt.Component, width: number /*int*/, height: number /*int*/): number /*int*/
                 /**
                  * Returns an enum indicating how the baseline of a component
                  * changes as the size changes.  This method is primarily meant for
@@ -125,7 +125,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaselineResizeBehavior(c: java.awt.Component): java.awt.Component.BaselineResizeBehavior
+                public getBaselineResizeBehavior(c: java.awt.Component): java.awt.Component.BaselineResizeBehavior
             }
         }
     }

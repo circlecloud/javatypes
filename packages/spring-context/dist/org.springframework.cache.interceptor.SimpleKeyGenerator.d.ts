@@ -21,12 +21,12 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    generate(target: any, method: java.lang.reflect.Method, ...params: any[]): java.lang.Object
+                    public generate(target: java.lang.Object | any, method: java.lang.reflect.Method, ...params: java.lang.Object[] | any[]): any
                     /**
                      * Generate a key based on the specified parameters.
                      */
                     // @ts-ignore
-                    generateKey(...params: any[]): java.lang.Object
+                    public static generateKey(...params: java.lang.Object[] | any[]): any
                 }
             }
         }

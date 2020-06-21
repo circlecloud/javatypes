@@ -24,7 +24,7 @@ declare namespace org {
                  * @see org.springframework.core.io.ResourceLoader
                  */
                 // @ts-ignore
-                getScriptSourceLocator(): java.lang.String
+                getScriptSourceLocator(): string
                 /**
                  * Return the business interfaces that the script is supposed to implement.
                  * <p>Can return {@code null} if the script itself determines
@@ -32,7 +32,7 @@ declare namespace org {
                  * @return the interfaces for the script
                  */
                 // @ts-ignore
-                getScriptInterfaces(): java.lang.Class[]
+                getScriptInterfaces(): java.lang.Class<any>[]
                 /**
                  * Return whether the script requires a config interface to be
                  * generated for it. This is typically the case for scripts that
@@ -58,7 +58,7 @@ declare namespace org {
                  * @throws ScriptCompilationException if script compilation failed
                  */
                 // @ts-ignore
-                getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class[]): java.lang.Object
+                getScriptedObject(scriptSource: org.springframework.scripting.ScriptSource, ...actualInterfaces: java.lang.Class<any>[]): any
                 /**
                  * Determine the type of the scripted Java object.
                  * <p>Implementations are encouraged to cache script metadata such as
@@ -73,7 +73,7 @@ declare namespace org {
                  * @since 2.0.3
                  */
                 // @ts-ignore
-                getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<?>
+                getScriptedObjectType(scriptSource: org.springframework.scripting.ScriptSource): java.lang.Class<any>
                 /**
                  * Determine whether a refresh is required (e.g. through
                  * ScriptSource's {@code isModified()} method).

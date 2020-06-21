@@ -49,7 +49,7 @@ declare namespace java {
                  * @return ShortLookupTable data array.
                  */
                 // @ts-ignore
-                getTable(): short[][]
+                public getTable(): number /*short*/[][]
                 /**
                  * Returns an array of samples of a pixel, translated with the lookup
                  * table. The source and destination array can be the same array.
@@ -69,7 +69,7 @@ declare namespace java {
                  *             lookup table for any band.
                  */
                 // @ts-ignore
-                lookupPixel(src: number /*int*/[], dst: number /*int*/[]): int[]
+                public lookupPixel(src: number /*int*/[], dst: number /*int*/[]): number /*int*/[]
                 /**
                  * Returns an array of samples of a pixel, translated with the lookup
                  * table. The source and destination array can be the same array.
@@ -89,7 +89,7 @@ declare namespace java {
                  *             lookup table for any band.
                  */
                 // @ts-ignore
-                lookupPixel(src: number /*short*/[], dst: number /*short*/[]): short[]
+                public lookupPixel(src: number /*short*/[], dst: number /*short*/[]): number /*short*/[]
             }
         }
     }

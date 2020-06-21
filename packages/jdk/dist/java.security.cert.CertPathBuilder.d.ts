@@ -65,7 +65,7 @@ declare namespace java {
                  * @param algorithm the algorithm name
                  */
                 // @ts-ignore
-                constructor(builderSpi: java.security.cert.CertPathBuilderSpi, provider: java.security.Provider, algorithm: string)
+                constructor(builderSpi: java.security.cert.CertPathBuilderSpi, provider: java.security.Provider, algorithm: java.lang.String | string)
                 /**
                  * Returns a {@code CertPathBuilder} object that implements the
                  * specified algorithm.
@@ -89,7 +89,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string): java.security.cert.CertPathBuilder
+                public static getInstance(algorithm: java.lang.String | string): java.security.cert.CertPathBuilder
                 /**
                  * Returns a {@code CertPathBuilder} object that implements the
                  * specified algorithm.
@@ -117,7 +117,7 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: string): java.security.cert.CertPathBuilder
+                public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): java.security.cert.CertPathBuilder
                 /**
                  * Returns a {@code CertPathBuilder} object that implements the
                  * specified algorithm.
@@ -141,19 +141,19 @@ declare namespace java {
                  * @see java.security.Provider
                  */
                 // @ts-ignore
-                getInstance(algorithm: string, provider: java.security.Provider): java.security.cert.CertPathBuilder
+                public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): java.security.cert.CertPathBuilder
                 /**
                  * Returns the provider of this {@code CertPathBuilder}.
                  * @return the provider of this {#code CertPathBuilder}
                  */
                 // @ts-ignore
-                getProvider(): java.security.Provider
+                public getProvider(): java.security.Provider
                 /**
                  * Returns the name of the algorithm of this {@code CertPathBuilder}.
                  * @return the name of the algorithm of this {#code CertPathBuilder}
                  */
                 // @ts-ignore
-                getAlgorithm(): java.lang.String
+                public getAlgorithm(): string
                 /**
                  * Attempts to build a certification path using the specified algorithm
                  * parameter set.
@@ -165,7 +165,7 @@ declare namespace java {
                  *  are inappropriate for this {#code CertPathBuilder}
                  */
                 // @ts-ignore
-                build(params: java.security.cert.CertPathParameters): java.security.cert.CertPathBuilderResult
+                public build(params: java.security.cert.CertPathParameters): java.security.cert.CertPathBuilderResult
                 /**
                  * Returns the default {@code CertPathBuilder} type as specified by
                  * the {@code certpathbuilder.type} security property, or the string
@@ -183,7 +183,7 @@ declare namespace java {
                  *  {@literal "PKIX"} if no such property exists.
                  */
                 // @ts-ignore
-                getDefaultType(): java.lang.String
+                public static getDefaultType(): string
                 /**
                  * Returns a {@code CertPathChecker} that the encapsulated
                  * {@code CertPathBuilderSpi} implementation uses to check the revocation
@@ -199,7 +199,7 @@ declare namespace java {
                  * @since 1.8
                  */
                 // @ts-ignore
-                getRevocationChecker(): java.security.cert.CertPathChecker
+                public getRevocationChecker(): java.security.cert.CertPathChecker
             }
         }
     }

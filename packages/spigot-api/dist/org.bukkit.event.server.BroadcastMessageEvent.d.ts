@@ -12,21 +12,21 @@ declare namespace org {
                 // @ts-ignore
                 class BroadcastMessageEvent extends org.bukkit.event.server.ServerEvent implements org.bukkit.event.Cancellable {
                     // @ts-ignore
-                    constructor(message: string, recipients: Array<org.bukkit.command.CommandSender>)
+                    constructor(message: java.lang.String | string, recipients: java.util.Set<org.bukkit.command.CommandSender> | Array<org.bukkit.command.CommandSender>)
                     // @ts-ignore
-                    constructor(isAsync: boolean, message: string, recipients: Array<org.bukkit.command.CommandSender>)
+                    constructor(isAsync: boolean, message: java.lang.String | string, recipients: java.util.Set<org.bukkit.command.CommandSender> | Array<org.bukkit.command.CommandSender>)
                     /**
                      * Get the message to broadcast.
                      * @return Message to broadcast
                      */
                     // @ts-ignore
-                    getMessage(): java.lang.String
+                    public getMessage(): string
                     /**
                      * Set the message to broadcast.
                      * @param message New message to broadcast
                      */
                     // @ts-ignore
-                    setMessage(message: string): void
+                    public setMessage(message: java.lang.String | string): void
                     /**
                      * Gets a set of recipients that this chat message will be displayed to.
                      * <p>
@@ -40,15 +40,15 @@ declare namespace org {
                      * @return All CommandSenders who will see this chat message
                      */
                     // @ts-ignore
-                    getRecipients(): java.util.Set<org.bukkit.command.CommandSender>
+                    public getRecipients(): Array<org.bukkit.command.CommandSender>
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancelled: boolean): void
+                    public setCancelled(cancelled: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -71,7 +71,7 @@ declare namespace java {
              * @since 1.5
              */
             // @ts-ignore
-            class Pack200 extends java.lang.Object {
+            abstract class Pack200 extends java.lang.Object {
                 /**
                  * Obtain new instance of a class that implements Packer.
                  * <ul>
@@ -91,7 +91,7 @@ declare namespace java {
                  * @return A newly allocated Packer engine.
                  */
                 // @ts-ignore
-                newPacker(): java.util.jar.Pack200.Packer
+                public static newPacker(): java.util.jar.Pack200.Packer
                 /**
                  * Obtain new instance of a class that implements Unpacker.
                  * <ul>
@@ -111,7 +111,7 @@ declare namespace java {
                  * @return A newly allocated Unpacker engine.
                  */
                 // @ts-ignore
-                newUnpacker(): java.util.jar.Pack200.Unpacker
+                public static newUnpacker(): java.util.jar.Pack200.Unpacker
             }
         }
     }

@@ -29,7 +29,7 @@ declare namespace org {
                          * @return The value, if available
                          */
                         // @ts-ignore
-                        get<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): java.util.Optional<E>
+                        get<E>(key: org.spongepowered.api.data.key.Key<any>): java.util.Optional<E>
                         /**
                          * Attempts to get the underlying value backed by a {@link BaseValue}
                          * linked to the provided {@link Key}.
@@ -41,7 +41,7 @@ declare namespace org {
                          * @throws NoSuchElementException If the value is not supported or present
                          */
                         // @ts-ignore
-                        require<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): E
+                        require<E>(key: org.spongepowered.api.data.key.Key<any>): E
                         /**
                          * Attempts to get the underlying value if available and supported. If the
                          * {@link BaseValue} is not supported whatsoever by this
@@ -51,7 +51,7 @@ declare namespace org {
                          * @return The value, or null if not set
                          */
                         // @ts-ignore
-                        getOrNull<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>): E
+                        getOrNull<E>(key: org.spongepowered.api.data.key.Key<any>): E
                         /**
                          * Attempts to get the underlying value if available. If the value is not
                          * set, the given {@code defaultValue} is returned, if the
@@ -62,7 +62,7 @@ declare namespace org {
                          * @return The value, or default if not set
                          */
                         // @ts-ignore
-                        getOrElse<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, defaultValue: E): E
+                        getOrElse<E>(key: org.spongepowered.api.data.key.Key<any>, defaultValue: E): E
                         /**
                          * Gets the {@link BaseValue} for the given {@link Key}.
                          * @param key The key linked to the {#link BaseValue}
@@ -103,7 +103,7 @@ declare namespace org {
                          * @return An immutable set of known {#link Key}s
                          */
                         // @ts-ignore
-                        getKeys(): java.util.Set<org.spongepowered.api.data.key.Key<?>>
+                        getKeys(): Array<org.spongepowered.api.data.key.Key<any>>
                         /**
                          * Gets all applicable {@link BaseValue}s associated with this
                          * {@link ValueContainer}. As the data backed by the values are copied,
@@ -112,7 +112,7 @@ declare namespace org {
                          * @return An immutable set of copied values
                          */
                         // @ts-ignore
-                        getValues(): java.util.Set<org.spongepowered.api.data.value.immutable.ImmutableValue<?>>
+                        getValues(): Array<org.spongepowered.api.data.value.immutable.ImmutableValue<any>>
                     }
                 }
             }

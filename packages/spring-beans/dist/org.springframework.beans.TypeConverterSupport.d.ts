@@ -9,15 +9,15 @@ declare namespace org {
              * @see SimpleTypeConverter
              */
             // @ts-ignore
-            class TypeConverterSupport extends org.springframework.beans.PropertyEditorRegistrySupport implements org.springframework.beans.TypeConverter {
+            abstract class TypeConverterSupport extends org.springframework.beans.PropertyEditorRegistrySupport implements org.springframework.beans.TypeConverter {
                 // @ts-ignore
                 constructor()
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>): T
+                public convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>): T
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>, methodParam: MethodParameter): T
+                public convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>, methodParam: MethodParameter): T
                 // @ts-ignore
-                convertIfNecessary<T>(value: any, requiredType: java.lang.Class<T>, typeDescriptor: TypeDescriptor): T
+                public convertIfNecessary<T>(value: java.lang.Object | any, requiredType: java.lang.Class<T>, typeDescriptor: TypeDescriptor): T
             }
         }
     }

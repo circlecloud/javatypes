@@ -16,14 +16,14 @@ declare namespace org {
                      * @param beanName the name of the bean requested
                      */
                     // @ts-ignore
-                    constructor(beanName: string)
+                    constructor(beanName: java.lang.String | string)
                     /**
                      * Create a new BeanCurrentlyInCreationException.
                      * @param beanName the name of the bean requested
                      * @param msg the detail message
                      */
                     // @ts-ignore
-                    constructor(beanName: string, msg: string)
+                    constructor(beanName: java.lang.String | string, msg: java.lang.String | string)
                 }
             }
         }

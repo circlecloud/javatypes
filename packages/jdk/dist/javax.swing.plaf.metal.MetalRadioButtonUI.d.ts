@@ -27,9 +27,9 @@ declare namespace javax {
                     // @ts-ignore
                     disabledTextColor: java.awt.Color
                     // @ts-ignore
-                    createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     // @ts-ignore
-                    installDefaults(b: javax.swing.AbstractButton): void
+                    public installDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
                     uninstallDefaults(b: javax.swing.AbstractButton): void
                     // @ts-ignore
@@ -39,7 +39,7 @@ declare namespace javax {
                     // @ts-ignore
                     getFocusColor(): java.awt.Color
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                    public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                     // @ts-ignore
                     paintFocus(g: java.awt.Graphics, t: java.awt.Rectangle, d: java.awt.Dimension): void
                 }

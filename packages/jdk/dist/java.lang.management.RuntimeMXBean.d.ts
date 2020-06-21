@@ -41,7 +41,7 @@ declare namespace java {
                  *              not have {#link ManagementPermission} of &quot;monitor&quot;.
                  */
                 // @ts-ignore
-                getBootClassPath(): java.lang.String
+                getBootClassPath(): string
                 /**
                  * Returns the class path string used by the system class loader to locate
                  * and load class files. The value is identical to that which would be
@@ -56,7 +56,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getClassPath(): java.lang.String
+                getClassPath(): string
                 /**
                  * Returns a list of all of the input arguments passed to the virtual
                  * machine on start-up. This will <i>not </i> include any input arguments
@@ -67,7 +67,7 @@ declare namespace java {
                  *          start-up time then this will be an empty list.
                  */
                 // @ts-ignore
-                getInputArguments(): java.util.List<java.lang.String>
+                getInputArguments(): Array<java.lang.String | string>
                 /**
                  * Returns the Java library path that will be used by the virtual machine to
                  * locate and load libraries. The value is identical to that which would be
@@ -82,7 +82,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getLibraryPath(): java.lang.String
+                getLibraryPath(): string
                 /**
                  * Returns a string containing the management interface specification
                  * version that the virtual machine meets.
@@ -90,14 +90,14 @@ declare namespace java {
                  *          by the virtual machine.
                  */
                 // @ts-ignore
-                getManagementSpecVersion(): java.lang.String
+                getManagementSpecVersion(): string
                 /**
                  * Returns the string name of this virtual machine. This value may be
                  * different for each particular running virtual machine.
                  * @return the name of this running virtual machine.
                  */
                 // @ts-ignore
-                getName(): java.lang.String
+                getName(): string
                 /**
                  * Returns the name of the Java virtual machine specification followed by
                  * this virtual machine. The value is identical to that which would be
@@ -110,7 +110,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getSpecName(): java.lang.String
+                getSpecName(): string
                 /**
                  * Returns the name of the Java virtual machine specification vendor. The
                  * value is identical to that which would be obtained from a call to
@@ -123,7 +123,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getSpecVendor(): java.lang.String
+                getSpecVendor(): string
                 /**
                  * Returns the name of the Java virtual machine specification version. The
                  * value is identical to that which would be obtained from a call to
@@ -136,13 +136,13 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getSpecVersion(): java.lang.String
+                getSpecVersion(): string
                 /**
                  * Returns the time, in milliseconds, when the virtual machine was started.
                  * @return the virtual machine start time in milliseconds.
                  */
                 // @ts-ignore
-                getStartTime(): long
+                getStartTime(): number /*long*/
                 /**
                  * Returns a map of the names and values of every system property known to
                  * the virtual machine.
@@ -152,13 +152,13 @@ declare namespace java {
                  *              does not have permission to check system properties.
                  */
                 // @ts-ignore
-                getSystemProperties(): java.util.Map<java.lang.String, java.lang.String>
+                getSystemProperties(): java.util.Map<java.lang.String | string, java.lang.String | string>
                 /**
                  * Returns the lifetime of the virtual machine in milliseconds.
                  * @return the number of milliseconds the virtual machine has been running.
                  */
                 // @ts-ignore
-                getUptime(): long
+                getUptime(): number /*long*/
                 /**
                  * Returns the name of the Java virtual machine implementation. The value is
                  * identical to that which would be obtained from a call to
@@ -171,7 +171,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getVmName(): java.lang.String
+                getVmName(): string
                 /**
                  * Returns the name of the Java virtual machine implementation vendor. The
                  * value is identical to that which would be obtained from a call to
@@ -184,7 +184,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getVmVendor(): java.lang.String
+                getVmVendor(): string
                 /**
                  * Returns the version of the Java virtual machine implementation. The value
                  * is identical to that which would be obtained from a call to
@@ -197,7 +197,7 @@ declare namespace java {
                  * @see System#getProperty(java.lang.String)
                  */
                 // @ts-ignore
-                getVmVersion(): java.lang.String
+                getVmVersion(): string
                 /**
                  * Returns a boolean indication of whether or not the virtual machine
                  * supports a bootstrap class loading mechanism.

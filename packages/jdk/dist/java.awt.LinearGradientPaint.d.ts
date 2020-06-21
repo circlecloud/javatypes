@@ -224,21 +224,21 @@ declare namespace java {
              * @see RenderingHints
              */
             // @ts-ignore
-            createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, transform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
+            public createContext(cm: java.awt.image.ColorModel, deviceBounds: java.awt.Rectangle, userBounds: java.awt.geom.Rectangle2D, transform: java.awt.geom.AffineTransform, hints: java.awt.RenderingHints): java.awt.PaintContext
             /**
              * Returns a copy of the start point of the gradient axis.
              * @return a {#code Point2D} object that is a copy of the point
              *  that anchors the first color of this {@code LinearGradientPaint}
              */
             // @ts-ignore
-            getStartPoint(): java.awt.geom.Point2D
+            public getStartPoint(): java.awt.geom.Point2D
             /**
              * Returns a copy of the end point of the gradient axis.
              * @return a {#code Point2D} object that is a copy of the point
              *  that anchors the last color of this {@code LinearGradientPaint}
              */
             // @ts-ignore
-            getEndPoint(): java.awt.geom.Point2D
+            public getEndPoint(): java.awt.geom.Point2D
         }
     }
 }

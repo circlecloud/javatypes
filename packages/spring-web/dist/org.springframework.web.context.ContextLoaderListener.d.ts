@@ -76,12 +76,12 @@ declare namespace org {
                      * Initialize the root web application context.
                      */
                     // @ts-ignore
-                    contextInitialized(event: ServletContextEvent): void
+                    public contextInitialized(event: ServletContextEvent): void
                     /**
                      * Close the root web application context.
                      */
                     // @ts-ignore
-                    contextDestroyed(event: ServletContextEvent): void
+                    public contextDestroyed(event: ServletContextEvent): void
                 }
             }
         }

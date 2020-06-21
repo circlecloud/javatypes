@@ -17,7 +17,7 @@ declare namespace javax {
          * @author David Mendenhall
          */
         // @ts-ignore
-        class FocusManager extends java.awt.DefaultKeyboardFocusManager {
+        abstract class FocusManager extends java.awt.DefaultKeyboardFocusManager {
             // @ts-ignore
             constructor()
             /**
@@ -31,7 +31,7 @@ declare namespace javax {
              * @see <a href="../../java/awt/doc-files/FocusSpec.html">Focus Specification</a>
              */
             // @ts-ignore
-            readonly FOCUS_MANAGER_CLASS_PROPERTY: string
+            public static readonly FOCUS_MANAGER_CLASS_PROPERTY: java.lang.String | string
             /**
              * Returns the current <code>KeyboardFocusManager</code> instance
              * for the calling thread's context.
@@ -39,7 +39,7 @@ declare namespace javax {
              * @see #setCurrentManager
              */
             // @ts-ignore
-            getCurrentManager(): javax.swing.FocusManager
+            public static getCurrentManager(): javax.swing.FocusManager
             /**
              * Sets the current <code>KeyboardFocusManager</code> instance
              * for the calling thread's context. If <code>null</code> is
@@ -62,7 +62,7 @@ declare namespace javax {
              *          to replace the current <code>KeyboardFocusManager</code>
              */
             // @ts-ignore
-            setCurrentManager(aFocusManager: javax.swing.FocusManager): void
+            public static setCurrentManager(aFocusManager: javax.swing.FocusManager): void
             /**
              * Changes the current <code>KeyboardFocusManager</code>'s default
              * <code>FocusTraversalPolicy</code> to
@@ -73,7 +73,7 @@ declare namespace javax {
              *  <code>KeyboardFocusManager.setDefaultFocusTraversalPolicy(FocusTraversalPolicy)</code>
              */
             // @ts-ignore
-            disableSwingFocusManager(): void
+            public static disableSwingFocusManager(): void
             /**
              * Returns whether the application has invoked
              * <code>disableSwingFocusManager()</code>.
@@ -82,7 +82,7 @@ declare namespace javax {
              *    <code>KeyboardFocusManager.getDefaultFocusTraversalPolicy()</code>
              */
             // @ts-ignore
-            isFocusManagerEnabled(): boolean
+            public static isFocusManagerEnabled(): boolean
         }
     }
 }

@@ -59,7 +59,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                addFault(faultCode: javax.xml.soap.Name, faultString: string, locale: java.util.Locale): javax.xml.soap.SOAPFault
+                addFault(faultCode: javax.xml.soap.Name, faultString: java.lang.String | string, locale: java.util.Locale): javax.xml.soap.SOAPFault
                 /**
                  * Creates a new <code>SOAPFault</code> object and adds it to this
                  * <code>SOAPBody</code> object. The type of the <code>SOAPFault</code>
@@ -94,7 +94,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addFault(faultCode: javax.xml.namespace.QName, faultString: string, locale: java.util.Locale): javax.xml.soap.SOAPFault
+                addFault(faultCode: javax.xml.namespace.QName, faultString: java.lang.String | string, locale: java.util.Locale): javax.xml.soap.SOAPFault
                 /**
                  * Creates a new  <code>SOAPFault</code> object and adds it to this
                  * <code>SOAPBody</code> object. The type of the <code>SOAPFault</code>
@@ -129,7 +129,7 @@ declare namespace javax {
                  * @since SAAJ 1.2
                  */
                 // @ts-ignore
-                addFault(faultCode: javax.xml.soap.Name, faultString: string): javax.xml.soap.SOAPFault
+                addFault(faultCode: javax.xml.soap.Name, faultString: java.lang.String | string): javax.xml.soap.SOAPFault
                 /**
                  * Creates a new <code>SOAPFault</code> object and adds it to this <code>SOAPBody</code>
                  * object. The type of the <code>SOAPFault</code>
@@ -165,7 +165,7 @@ declare namespace javax {
                  * @since SAAJ 1.3
                  */
                 // @ts-ignore
-                addFault(faultCode: javax.xml.namespace.QName, faultString: string): javax.xml.soap.SOAPFault
+                addFault(faultCode: javax.xml.namespace.QName, faultString: java.lang.String | string): javax.xml.soap.SOAPFault
                 /**
                  * Indicates whether a <code>SOAPFault</code> object exists in this
                  * <code>SOAPBody</code> object.

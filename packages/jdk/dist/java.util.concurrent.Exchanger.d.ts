@@ -96,7 +96,7 @@ declare namespace java {
                  *          interrupted while waiting
                  */
                 // @ts-ignore
-                exchange(x: V): V
+                public exchange(x: V): V
                 /**
                  * Waits for another thread to arrive at this exchange point (unless
                  * the current thread is {@linkplain Thread#interrupt interrupted} or
@@ -136,7 +136,7 @@ declare namespace java {
                  *          before another thread enters the exchange
                  */
                 // @ts-ignore
-                exchange(x: V, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
+                public exchange(x: V, timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): V
             }
         }
     }

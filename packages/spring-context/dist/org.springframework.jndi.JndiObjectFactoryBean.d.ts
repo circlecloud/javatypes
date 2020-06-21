@@ -42,7 +42,7 @@ declare namespace org {
                  * @see #setCache
                  */
                 // @ts-ignore
-                setProxyInterface(proxyInterface: java.lang.Class<any>): void
+                public setProxyInterface(proxyInterface: java.lang.Class<any>): void
                 /**
                  * Specify multiple proxy interfaces to use for the JNDI object.
                  * <p>Typically used in conjunction with "lookupOnStartup"=false and/or "cache"=false.
@@ -53,7 +53,7 @@ declare namespace org {
                  * @see #setCache
                  */
                 // @ts-ignore
-                setProxyInterfaces(...proxyInterfaces: java.lang.Class[]): void
+                public setProxyInterfaces(...proxyInterfaces: java.lang.Class<any>[]): void
                 /**
                  * Set whether to look up the JNDI object on startup. Default is "true".
                  * <p>Can be turned off to allow for late availability of the JNDI object.
@@ -63,7 +63,7 @@ declare namespace org {
                  * @see #setCache
                  */
                 // @ts-ignore
-                setLookupOnStartup(lookupOnStartup: boolean): void
+                public setLookupOnStartup(lookupOnStartup: boolean): void
                 /**
                  * Set whether to cache the JNDI object once it has been located.
                  * Default is "true".
@@ -74,7 +74,7 @@ declare namespace org {
                  * @see #setLookupOnStartup
                  */
                 // @ts-ignore
-                setCache(cache: boolean): void
+                public setCache(cache: boolean): void
                 /**
                  * Set whether to expose the JNDI environment context for all access to the target
                  * object, i.e. for all method invocations on the exposed object reference.
@@ -85,7 +85,7 @@ declare namespace org {
                  * with authorization requirements.
                  */
                 // @ts-ignore
-                setExposeAccessContext(exposeAccessContext: boolean): void
+                public setExposeAccessContext(exposeAccessContext: boolean): void
                 /**
                  * Specify a default object to fall back to if the JNDI lookup fails.
                  * Default is none.
@@ -100,16 +100,16 @@ declare namespace org {
                  * @see SimpleTypeConverter
                  */
                 // @ts-ignore
-                setDefaultObject(defaultObject: any): void
+                public setDefaultObject(defaultObject: java.lang.Object | any): void
                 // @ts-ignore
-                setBeanFactory(beanFactory: BeanFactory): void
+                public setBeanFactory(beanFactory: BeanFactory): void
                 // @ts-ignore
-                setBeanClassLoader(classLoader: java.lang.ClassLoader): void
+                public setBeanClassLoader(classLoader: java.lang.ClassLoader): void
                 /**
                  * Look up the JNDI object and store it.
                  */
                 // @ts-ignore
-                afterPropertiesSet(): void
+                public afterPropertiesSet(): void
                 /**
                  * Lookup variant that returns the specified "defaultObject"
                  * (if any) in case of lookup failure.
@@ -118,16 +118,16 @@ declare namespace org {
                  * @see #setDefaultObject
                  */
                 // @ts-ignore
-                lookupWithFallback(): java.lang.Object
+                lookupWithFallback(): any
                 /**
                  * Return the singleton JNDI object.
                  */
                 // @ts-ignore
-                getObject(): java.lang.Object
+                public getObject(): any
                 // @ts-ignore
-                getObjectType(): java.lang.Class<?>
+                public getObjectType(): java.lang.Class<any>
                 // @ts-ignore
-                isSingleton(): boolean
+                public isSingleton(): boolean
                 /**
                  * Create a composite interface Class for the given interfaces,
                  * implementing the given interfaces in one single Class.
@@ -138,7 +138,7 @@ declare namespace org {
                  * @see java.lang.reflect.Proxy#getProxyClass
                  */
                 // @ts-ignore
-                createCompositeInterface(interfaces: java.lang.Class[]): java.lang.Class<?>
+                createCompositeInterface(interfaces: java.lang.Class<any>[]): java.lang.Class<any>
             }
         }
     }

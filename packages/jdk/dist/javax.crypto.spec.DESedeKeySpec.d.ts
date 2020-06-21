@@ -43,14 +43,14 @@ declare namespace javax {
                  * The constant which defines the length of a DESede key in bytes.
                  */
                 // @ts-ignore
-                readonly DES_EDE_KEY_LEN: number /*int*/
+                public static readonly DES_EDE_KEY_LEN: number /*int*/
                 /**
                  * Returns the DES-EDE key.
                  * @return the DES-EDE key. Returns a new array
                  *  each time this method is called.
                  */
                 // @ts-ignore
-                getKey(): byte[]
+                public getKey(): number /*byte*/[]
                 /**
                  * Checks if the given DES-EDE key, starting at <code>offset</code>
                  * inclusive, is parity-adjusted.
@@ -63,7 +63,7 @@ declare namespace javax {
                  *  <code>offset</code> inclusive, is shorter than 24 bytes
                  */
                 // @ts-ignore
-                isParityAdjusted(key: number /*byte*/[], offset: number /*int*/): boolean
+                public static isParityAdjusted(key: number /*byte*/[], offset: number /*int*/): boolean
             }
         }
     }

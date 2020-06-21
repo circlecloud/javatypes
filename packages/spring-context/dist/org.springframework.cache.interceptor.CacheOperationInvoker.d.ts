@@ -20,7 +20,7 @@ declare namespace org {
                      * @throws ThrowableWrapper if an error occurred while invoking the operation
                      */
                     // @ts-ignore
-                    invoke(): java.lang.Object
+                    invoke(): any
                 }
             }
         }

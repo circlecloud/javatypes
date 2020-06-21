@@ -104,7 +104,7 @@ declare namespace java {
                  * @return the buffering capabilities of this strategy
                  */
                 // @ts-ignore
-                getCapabilities(): java.awt.BufferCapabilities
+                public getCapabilities(): java.awt.BufferCapabilities
                 /**
                  * @return the graphics on the drawing buffer.  This method may not
                  *  be synchronized for performance reasons; use of this method by multiple
@@ -112,7 +112,7 @@ declare namespace java {
                  *  graphics object must be handled by the application.
                  */
                 // @ts-ignore
-                getDrawGraphics(): java.awt.Graphics
+                public getDrawGraphics(): java.awt.Graphics
                 /**
                  * Restore the drawing buffer if it has been lost
                  */
@@ -123,25 +123,25 @@ declare namespace java {
                  *  <code>getDrawGraphics</code>
                  */
                 // @ts-ignore
-                contentsLost(): boolean
+                public contentsLost(): boolean
                 /**
                  * @return whether the drawing buffer was recently restored from a lost
                  *  state and reinitialized to the default background color (white)
                  */
                 // @ts-ignore
-                contentsRestored(): boolean
+                public contentsRestored(): boolean
                 /**
                  * Makes the next available buffer visible by either blitting or
                  * flipping.
                  */
                 // @ts-ignore
-                show(): void
+                public show(): void
                 /**
                  * {@inheritDoc}
                  * @since 1.6
                  */
                 // @ts-ignore
-                dispose(): void
+                public dispose(): void
             }
         }
     }

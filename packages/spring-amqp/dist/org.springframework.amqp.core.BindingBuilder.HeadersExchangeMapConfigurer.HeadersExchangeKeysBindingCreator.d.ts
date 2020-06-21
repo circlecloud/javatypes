@@ -10,7 +10,7 @@ declare namespace org {
                         // @ts-ignore
                         class HeadersExchangeKeysBindingCreator extends java.lang.Object {
                             // @ts-ignore
-                            exist(): org.springframework.amqp.core.Binding
+                            public exist(): org.springframework.amqp.core.Binding
                         }
                     }
                 }

@@ -85,7 +85,7 @@ declare namespace java {
              *         ordering} of the elements will be used.
              */
             // @ts-ignore
-            constructor(comparator: java.util.Comparator<any super E>)
+            constructor(comparator: java.util.Comparator<any>)
             /**
              * Constructs a new tree set containing the elements in the specified
              * collection, sorted according to the <i>natural ordering</i> of its
@@ -100,7 +100,7 @@ declare namespace java {
              * @throws NullPointerException if the specified collection is null
              */
             // @ts-ignore
-            constructor(c: Array<E>)
+            constructor(c: java.util.Collection<any> | Array<any>)
             /**
              * Constructs a new tree set containing the same elements and
              * using the same ordering as the specified sorted set.
@@ -114,31 +114,31 @@ declare namespace java {
              * @return an iterator over the elements in this set in ascending order
              */
             // @ts-ignore
-            iterator(): java.util.Iterator<E>
+            public iterator(): java.util.Iterator<E>
             /**
              * Returns an iterator over the elements in this set in descending order.
              * @return an iterator over the elements in this set in descending order
              * @since 1.6
              */
             // @ts-ignore
-            descendingIterator(): java.util.Iterator<E>
+            public descendingIterator(): java.util.Iterator<E>
             /**
              * @since 1.6
              */
             // @ts-ignore
-            descendingSet(): java.util.NavigableSet<E>
+            public descendingSet(): java.util.NavigableSet<E>
             /**
              * Returns the number of elements in this set (its cardinality).
              * @return the number of elements in this set (its cardinality)
              */
             // @ts-ignore
-            size(): int
+            public size(): number /*int*/
             /**
              * Returns {@code true} if this set contains no elements.
              * @return {#code true} if this set contains no elements
              */
             // @ts-ignore
-            isEmpty(): boolean
+            public isEmpty(): boolean
             /**
              * Returns {@code true} if this set contains the specified element.
              * More formally, returns {@code true} if and only if this set
@@ -153,7 +153,7 @@ declare namespace java {
              *          does not permit null elements
              */
             // @ts-ignore
-            contains(o: any): boolean
+            public contains(o: java.lang.Object | any): boolean
             /**
              * Adds the specified element to this set if it is not already present.
              * More formally, adds the specified element {@code e} to this set if
@@ -171,7 +171,7 @@ declare namespace java {
              *          does not permit null elements
              */
             // @ts-ignore
-            add(e: E): boolean
+            public add(e: E): boolean
             /**
              * Removes the specified element from this set if it is present.
              * More formally, removes an element {@code e} such that
@@ -189,13 +189,13 @@ declare namespace java {
              *          does not permit null elements
              */
             // @ts-ignore
-            remove(o: any): boolean
+            public remove(o: java.lang.Object | any): boolean
             /**
              * Removes all of the elements from this set.
              * The set will be empty after this call returns.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Adds all of the elements in the specified collection to this set.
              * @param c collection containing elements to be added to this set
@@ -207,7 +207,7 @@ declare namespace java {
              *          its comparator does not permit null elements
              */
             // @ts-ignore
-            addAll(c: Array<E>): boolean
+            public addAll(c: java.util.Collection<any> | Array<any>): boolean
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if {#code fromElement} or {@code toElement}
@@ -217,7 +217,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            subSet(fromElement: E, fromInclusive: boolean, toElement: E, toInclusive: boolean): java.util.NavigableSet<E>
+            public subSet(fromElement: E, fromInclusive: boolean, toElement: E, toInclusive: boolean): java.util.NavigableSet<E>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if {#code toElement} is null and
@@ -227,7 +227,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            headSet(toElement: E, inclusive: boolean): java.util.NavigableSet<E>
+            public headSet(toElement: E, inclusive: boolean): java.util.NavigableSet<E>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if {#code fromElement} is null and
@@ -237,7 +237,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            tailSet(fromElement: E, inclusive: boolean): java.util.NavigableSet<E>
+            public tailSet(fromElement: E, inclusive: boolean): java.util.NavigableSet<E>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if {#code fromElement} or
@@ -246,7 +246,7 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            subSet(fromElement: E, toElement: E): java.util.SortedSet<E>
+            public subSet(fromElement: E, toElement: E): java.util.SortedSet<E>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if {#code toElement} is null
@@ -255,7 +255,7 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            headSet(toElement: E): java.util.SortedSet<E>
+            public headSet(toElement: E): java.util.SortedSet<E>
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if {#code fromElement} is null
@@ -264,19 +264,19 @@ declare namespace java {
              * @throws IllegalArgumentException {#inheritDoc}
              */
             // @ts-ignore
-            tailSet(fromElement: E): java.util.SortedSet<E>
+            public tailSet(fromElement: E): java.util.SortedSet<E>
             // @ts-ignore
-            comparator(): java.util.Comparator<? super E>
+            public comparator(): java.util.Comparator<any>
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            first(): E
+            public first(): E
             /**
              * @throws NoSuchElementException {#inheritDoc}
              */
             // @ts-ignore
-            last(): E
+            public last(): E
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified element is null
@@ -285,7 +285,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            lower(e: E): E
+            public lower(e: E): E
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified element is null
@@ -294,7 +294,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            floor(e: E): E
+            public floor(e: E): E
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified element is null
@@ -303,7 +303,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            ceiling(e: E): E
+            public ceiling(e: E): E
             /**
              * @throws ClassCastException {#inheritDoc}
              * @throws NullPointerException if the specified element is null
@@ -312,24 +312,24 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            higher(e: E): E
+            public higher(e: E): E
             /**
              * @since 1.6
              */
             // @ts-ignore
-            pollFirst(): E
+            public pollFirst(): E
             /**
              * @since 1.6
              */
             // @ts-ignore
-            pollLast(): E
+            public pollLast(): E
             /**
              * Returns a shallow copy of this {@code TreeSet} instance. (The elements
              * themselves are not cloned.)
              * @return a shallow copy of this set
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Creates a <em><a href="Spliterator.html#binding">late-binding</a></em>
              * and <em>fail-fast</em> {@link Spliterator} over the elements in this
@@ -347,7 +347,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            spliterator(): java.util.Spliterator<E>
+            public spliterator(): java.util.Spliterator<E>
         }
     }
 }

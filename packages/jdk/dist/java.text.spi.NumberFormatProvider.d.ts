@@ -8,7 +8,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            class NumberFormatProvider extends java.util.spi.LocaleServiceProvider {
+            abstract class NumberFormatProvider extends java.util.spi.LocaleServiceProvider {
                 /**
                  * Sole constructor.  (For invocation by subclass constructors, typically
                  * implicit.)
@@ -28,7 +28,7 @@ declare namespace java {
                  * @see java.text.NumberFormat#getCurrencyInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getCurrencyInstance(locale: java.util.Locale): java.text.NumberFormat
+                public abstract getCurrencyInstance(locale: java.util.Locale): java.text.NumberFormat
                 /**
                  * Returns a new <code>NumberFormat</code> instance which formats
                  * integer values for the specified locale.
@@ -48,7 +48,7 @@ declare namespace java {
                  * @see java.text.NumberFormat#getIntegerInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getIntegerInstance(locale: java.util.Locale): java.text.NumberFormat
+                public abstract getIntegerInstance(locale: java.util.Locale): java.text.NumberFormat
                 /**
                  * Returns a new general-purpose <code>NumberFormat</code> instance for
                  * the specified locale.
@@ -62,7 +62,7 @@ declare namespace java {
                  * @see java.text.NumberFormat#getNumberInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getNumberInstance(locale: java.util.Locale): java.text.NumberFormat
+                public abstract getNumberInstance(locale: java.util.Locale): java.text.NumberFormat
                 /**
                  * Returns a new <code>NumberFormat</code> instance which formats
                  * percentage values for the specified locale.
@@ -76,7 +76,7 @@ declare namespace java {
                  * @see java.text.NumberFormat#getPercentInstance(java.util.Locale)
                  */
                 // @ts-ignore
-                abstract getPercentInstance(locale: java.util.Locale): java.text.NumberFormat
+                public abstract getPercentInstance(locale: java.util.Locale): java.text.NumberFormat
             }
         }
     }

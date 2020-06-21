@@ -35,7 +35,7 @@ declare namespace javax {
                      *   to
                      */
                     // @ts-ignore
-                    setParent(parent: javax.swing.text.View): void
+                    public setParent(parent: javax.swing.text.View): void
                     /**
                      * Calculate the requirements of the block along the major
                      * axis (i.e. the axis along with it tiles).  This is implemented
@@ -82,14 +82,14 @@ declare namespace javax {
                      * @see View#paint
                      */
                     // @ts-ignore
-                    paint(g: java.awt.Graphics, allocation: java.awt.Shape): void
+                    public paint(g: java.awt.Graphics, allocation: java.awt.Shape): void
                     /**
                      * Fetches the attributes to use when rendering.  This is
                      * implemented to multiplex the attributes specified in the
                      * model with a StyleSheet.
                      */
                     // @ts-ignore
-                    getAttributes(): javax.swing.text.AttributeSet
+                    public getAttributes(): javax.swing.text.AttributeSet
                     /**
                      * Gets the resize weight.
                      * @param axis may be either X_AXIS or Y_AXIS
@@ -97,16 +97,16 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid axis
                      */
                     // @ts-ignore
-                    getResizeWeight(axis: number /*int*/): int
+                    public getResizeWeight(axis: number /*int*/): number /*int*/
                     /**
                      * Gets the alignment.
                      * @param axis may be either X_AXIS or Y_AXIS
                      * @return the alignment
                      */
                     // @ts-ignore
-                    getAlignment(axis: number /*int*/): float
+                    public getAlignment(axis: number /*int*/): number /*float*/
                     // @ts-ignore
-                    changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
+                    public changedUpdate(changes: javax.swing.event.DocumentEvent, a: java.awt.Shape, f: javax.swing.text.ViewFactory): void
                     /**
                      * Determines the preferred span for this view along an
                      * axis.
@@ -119,7 +119,7 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid axis type
                      */
                     // @ts-ignore
-                    getPreferredSpan(axis: number /*int*/): float
+                    public getPreferredSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Determines the minimum span for this view along an
                      * axis.
@@ -132,7 +132,7 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid axis type
                      */
                     // @ts-ignore
-                    getMinimumSpan(axis: number /*int*/): float
+                    public getMinimumSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Determines the maximum span for this view along an
                      * axis.
@@ -145,7 +145,7 @@ declare namespace javax {
                      * @exception IllegalArgumentException for an invalid axis type
                      */
                     // @ts-ignore
-                    getMaximumSpan(axis: number /*int*/): float
+                    public getMaximumSpan(axis: number /*int*/): number /*float*/
                     /**
                      * Update any cached values that come from attributes.
                      */

@@ -28,7 +28,7 @@ declare namespace javax {
              *  does not represent a scripting object.
              */
             // @ts-ignore
-            invokeMethod(thiz: any, name: string, ...args: any[]): java.lang.Object
+            invokeMethod(thiz: java.lang.Object | any, name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
             /**
              * Used to call top-level procedures and functions defined in scripts.
              * @param name of the procedure or function to call
@@ -39,7 +39,7 @@ declare namespace javax {
              * @throws NullPointerException if method name is null.
              */
             // @ts-ignore
-            invokeFunction(name: string, ...args: any[]): java.lang.Object
+            invokeFunction(name: java.lang.String | string, ...args: java.lang.Object[] | any[]): any
             /**
              * Returns an implementation of an interface using functions compiled in
              * the interpreter. The methods of the interface
@@ -69,7 +69,7 @@ declare namespace javax {
              *  null or does not represent a scripting object.
              */
             // @ts-ignore
-            getInterface<T>(thiz: any, clasz: java.lang.Class<T>): T
+            getInterface<T>(thiz: java.lang.Object | any, clasz: java.lang.Class<T>): T
         }
     }
 }

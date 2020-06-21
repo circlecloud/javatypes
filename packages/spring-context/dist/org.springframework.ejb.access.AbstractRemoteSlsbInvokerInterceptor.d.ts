@@ -11,7 +11,7 @@ declare namespace org {
                  * @author Juergen Hoeller
                  */
                 // @ts-ignore
-                class AbstractRemoteSlsbInvokerInterceptor extends org.springframework.ejb.access.AbstractSlsbInvokerInterceptor {
+                abstract class AbstractRemoteSlsbInvokerInterceptor extends org.springframework.ejb.access.AbstractSlsbInvokerInterceptor {
                     // @ts-ignore
                     constructor()
                     /**
@@ -26,14 +26,14 @@ declare namespace org {
                      * @see java.rmi.NoSuchObjectException
                      */
                     // @ts-ignore
-                    setRefreshHomeOnConnectFailure(refreshHomeOnConnectFailure: boolean): void
+                    public setRefreshHomeOnConnectFailure(refreshHomeOnConnectFailure: boolean): void
                     // @ts-ignore
                     isHomeRefreshable(): boolean
                     /**
                      * Check for EJB3-style home object that serves as EJB component directly.
                      */
                     // @ts-ignore
-                    getCreateMethod(home: any): java.lang.reflect.Method
+                    getCreateMethod(home: java.lang.Object | any): java.lang.reflect.Method
                     /**
                      * Fetches an EJB home object and delegates to {@code doInvoke}.
                      * <p>If configured to refresh on connect failure, it will call
@@ -43,7 +43,7 @@ declare namespace org {
                      * @see #refreshAndRetry
                      */
                     // @ts-ignore
-                    invokeInContext(invocation: MethodInvocation): java.lang.Object
+                    public invokeInContext(invocation: MethodInvocation): any
                     /**
                      * Determine whether the given RMI exception indicates a connect failure.
                      * <p>The default implementation delegates to RmiClientInterceptorUtils.
@@ -62,7 +62,7 @@ declare namespace org {
                      * @see #invoke
                      */
                     // @ts-ignore
-                    refreshAndRetry(invocation: MethodInvocation): java.lang.Object
+                    refreshAndRetry(invocation: MethodInvocation): any
                     /**
                      * Perform the given invocation on the current EJB home.
                      * Template method to be implemented by subclasses.
@@ -73,7 +73,7 @@ declare namespace org {
                      * @see #newSessionBeanInstance
                      */
                     // @ts-ignore
-                    abstract doInvoke(invocation: MethodInvocation): java.lang.Object
+                    abstract doInvoke(invocation: MethodInvocation): any
                     /**
                      * Return a new instance of the stateless session bean.
                      * To be invoked by concrete remote SLSB invoker subclasses.
@@ -83,7 +83,7 @@ declare namespace org {
                      * @see #create
                      */
                     // @ts-ignore
-                    newSessionBeanInstance(): java.lang.Object
+                    newSessionBeanInstance(): any
                     /**
                      * Remove the given EJB instance.
                      * To be invoked by concrete remote SLSB invoker subclasses.

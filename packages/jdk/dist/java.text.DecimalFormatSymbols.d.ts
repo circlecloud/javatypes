@@ -66,7 +66,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getAvailableLocales(): java.util.Locale[]
+            public static getAvailableLocales(): java.util.Locale[]
             /**
              * Gets the <code>DecimalFormatSymbols</code> instance for the default
              * locale.  This method provides access to <code>DecimalFormatSymbols</code>
@@ -83,7 +83,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(): java.text.DecimalFormatSymbols
+            public static getInstance(): java.text.DecimalFormatSymbols
             /**
              * Gets the <code>DecimalFormatSymbols</code> instance for the specified
              * locale.  This method provides access to <code>DecimalFormatSymbols</code>
@@ -105,121 +105,121 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getInstance(locale: java.util.Locale): java.text.DecimalFormatSymbols
+            public static getInstance(locale: java.util.Locale): java.text.DecimalFormatSymbols
             /**
              * Gets the character used for zero. Different for Arabic, etc.
              * @return the character used for zero
              */
             // @ts-ignore
-            getZeroDigit(): char
+            public getZeroDigit(): string
             /**
              * Sets the character used for zero. Different for Arabic, etc.
              * @param zeroDigit the character used for zero
              */
             // @ts-ignore
-            setZeroDigit(zeroDigit: string): void
+            public setZeroDigit(zeroDigit: string): void
             /**
              * Gets the character used for thousands separator. Different for French, etc.
              * @return the grouping separator
              */
             // @ts-ignore
-            getGroupingSeparator(): char
+            public getGroupingSeparator(): string
             /**
              * Sets the character used for thousands separator. Different for French, etc.
              * @param groupingSeparator the grouping separator
              */
             // @ts-ignore
-            setGroupingSeparator(groupingSeparator: string): void
+            public setGroupingSeparator(groupingSeparator: string): void
             /**
              * Gets the character used for decimal sign. Different for French, etc.
              * @return the character used for decimal sign
              */
             // @ts-ignore
-            getDecimalSeparator(): char
+            public getDecimalSeparator(): string
             /**
              * Sets the character used for decimal sign. Different for French, etc.
              * @param decimalSeparator the character used for decimal sign
              */
             // @ts-ignore
-            setDecimalSeparator(decimalSeparator: string): void
+            public setDecimalSeparator(decimalSeparator: string): void
             /**
              * Gets the character used for per mille sign. Different for Arabic, etc.
              * @return the character used for per mille sign
              */
             // @ts-ignore
-            getPerMill(): char
+            public getPerMill(): string
             /**
              * Sets the character used for per mille sign. Different for Arabic, etc.
              * @param perMill the character used for per mille sign
              */
             // @ts-ignore
-            setPerMill(perMill: string): void
+            public setPerMill(perMill: string): void
             /**
              * Gets the character used for percent sign. Different for Arabic, etc.
              * @return the character used for percent sign
              */
             // @ts-ignore
-            getPercent(): char
+            public getPercent(): string
             /**
              * Sets the character used for percent sign. Different for Arabic, etc.
              * @param percent the character used for percent sign
              */
             // @ts-ignore
-            setPercent(percent: string): void
+            public setPercent(percent: string): void
             /**
              * Gets the character used for a digit in a pattern.
              * @return the character used for a digit in a pattern
              */
             // @ts-ignore
-            getDigit(): char
+            public getDigit(): string
             /**
              * Sets the character used for a digit in a pattern.
              * @param digit the character used for a digit in a pattern
              */
             // @ts-ignore
-            setDigit(digit: string): void
+            public setDigit(digit: string): void
             /**
              * Gets the character used to separate positive and negative subpatterns
              * in a pattern.
              * @return the pattern separator
              */
             // @ts-ignore
-            getPatternSeparator(): char
+            public getPatternSeparator(): string
             /**
              * Sets the character used to separate positive and negative subpatterns
              * in a pattern.
              * @param patternSeparator the pattern separator
              */
             // @ts-ignore
-            setPatternSeparator(patternSeparator: string): void
+            public setPatternSeparator(patternSeparator: string): void
             /**
              * Gets the string used to represent infinity. Almost always left
              * unchanged.
              * @return the string representing infinity
              */
             // @ts-ignore
-            getInfinity(): java.lang.String
+            public getInfinity(): string
             /**
              * Sets the string used to represent infinity. Almost always left
              * unchanged.
              * @param infinity the string representing infinity
              */
             // @ts-ignore
-            setInfinity(infinity: string): void
+            public setInfinity(infinity: java.lang.String | string): void
             /**
              * Gets the string used to represent "not a number". Almost always left
              * unchanged.
              * @return the string representing "not a number"
              */
             // @ts-ignore
-            getNaN(): java.lang.String
+            public getNaN(): string
             /**
              * Sets the string used to represent "not a number". Almost always left
              * unchanged.
              * @param NaN the string representing "not a number"
              */
             // @ts-ignore
-            setNaN(NaN: string): void
+            public setNaN(NaN: java.lang.String | string): void
             /**
              * Gets the character used to represent minus sign. If no explicit
              * negative format is specified, one is formed by prefixing
@@ -227,7 +227,7 @@ declare namespace java {
              * @return the character representing minus sign
              */
             // @ts-ignore
-            getMinusSign(): char
+            public getMinusSign(): string
             /**
              * Sets the character used to represent minus sign. If no explicit
              * negative format is specified, one is formed by prefixing
@@ -235,7 +235,7 @@ declare namespace java {
              * @param minusSign the character representing minus sign
              */
             // @ts-ignore
-            setMinusSign(minusSign: string): void
+            public setMinusSign(minusSign: string): void
             /**
              * Returns the currency symbol for the currency of these
              * DecimalFormatSymbols in their locale.
@@ -243,7 +243,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getCurrencySymbol(): java.lang.String
+            public getCurrencySymbol(): string
             /**
              * Sets the currency symbol for the currency of these
              * DecimalFormatSymbols in their locale.
@@ -251,7 +251,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setCurrencySymbol(currency: string): void
+            public setCurrencySymbol(currency: java.lang.String | string): void
             /**
              * Returns the ISO 4217 currency code of the currency of these
              * DecimalFormatSymbols.
@@ -259,7 +259,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            getInternationalCurrencySymbol(): java.lang.String
+            public getInternationalCurrencySymbol(): string
             /**
              * Sets the ISO 4217 currency code of the currency of these
              * DecimalFormatSymbols.
@@ -276,7 +276,7 @@ declare namespace java {
              * @since 1.2
              */
             // @ts-ignore
-            setInternationalCurrencySymbol(currencyCode: string): void
+            public setInternationalCurrencySymbol(currencyCode: java.lang.String | string): void
             /**
              * Gets the currency of these DecimalFormatSymbols. May be null if the
              * currency symbol attribute was previously set to a value that's not
@@ -285,7 +285,7 @@ declare namespace java {
              * @since 1.4
              */
             // @ts-ignore
-            getCurrency(): java.util.Currency
+            public getCurrency(): java.util.Currency
             /**
              * Sets the currency of these DecimalFormatSymbols.
              * This also sets the currency symbol attribute to the currency's symbol
@@ -298,21 +298,21 @@ declare namespace java {
              * @see #setInternationalCurrencySymbol
              */
             // @ts-ignore
-            setCurrency(currency: java.util.Currency): void
+            public setCurrency(currency: java.util.Currency): void
             /**
              * Returns the monetary decimal separator.
              * @return the monetary decimal separator
              * @since 1.2
              */
             // @ts-ignore
-            getMonetaryDecimalSeparator(): char
+            public getMonetaryDecimalSeparator(): string
             /**
              * Sets the monetary decimal separator.
              * @param sep the monetary decimal separator
              * @since 1.2
              */
             // @ts-ignore
-            setMonetaryDecimalSeparator(sep: string): void
+            public setMonetaryDecimalSeparator(sep: string): void
             /**
              * Returns the string used to separate the mantissa from the exponent.
              * Examples: "x10^" for 1.23x10^4, "E" for 1.23E4.
@@ -321,7 +321,7 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            getExponentSeparator(): java.lang.String
+            public getExponentSeparator(): string
             /**
              * Sets the string used to separate the mantissa from the exponent.
              * Examples: "x10^" for 1.23x10^4, "E" for 1.23E4.
@@ -331,22 +331,22 @@ declare namespace java {
              * @since 1.6
              */
             // @ts-ignore
-            setExponentSeparator(exp: string): void
+            public setExponentSeparator(exp: java.lang.String | string): void
             /**
              * Standard override.
              */
             // @ts-ignore
-            clone(): java.lang.Object
+            public clone(): any
             /**
              * Override equals.
              */
             // @ts-ignore
-            equals(obj: any): boolean
+            public equals(obj: java.lang.Object | any): boolean
             /**
              * Override hashCode.
              */
             // @ts-ignore
-            hashCode(): int
+            public hashCode(): number /*int*/
         }
     }
 }

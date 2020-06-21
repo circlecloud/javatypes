@@ -17,11 +17,11 @@ declare namespace org {
                      * The default buffer size used by the encoder.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_BUFFER_SIZE: number /*int*/
+                    public static readonly DEFAULT_BUFFER_SIZE: number /*int*/
                     // @ts-ignore
-                    canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canEncode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                     // @ts-ignore
-                    encode(resource: org.springframework.core.io.Resource, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, type: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    encode(resource: org.springframework.core.io.Resource, bufferFactory: org.springframework.core.io.buffer.DataBufferFactory, type: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

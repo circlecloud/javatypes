@@ -40,14 +40,14 @@ declare namespace javax {
                      *     <code>null</code>)
                      */
                     // @ts-ignore
-                    getTarget(): java.lang.String
+                    getTarget(): string
                     /**
                      * Returns the Id of this <code>SignatureProperty</code>.
                      * @return the Id of this <code>SignatureProperty</code> (or
                      *     <code>null</code> if not specified)
                      */
                     // @ts-ignore
-                    getId(): java.lang.String
+                    getId(): string
                     /**
                      * Returns an {@link java.util.Collections#unmodifiableList unmodifiable
                      * list} of one or more {@link XMLStructure}s that are contained in
@@ -58,7 +58,7 @@ declare namespace javax {
                      * @return an unmodifiable list of one or more <code>XMLStructure</code>s
                      */
                     // @ts-ignore
-                    getContent(): java.util.List
+                    getContent(): Array<any>
                 }
             }
         }

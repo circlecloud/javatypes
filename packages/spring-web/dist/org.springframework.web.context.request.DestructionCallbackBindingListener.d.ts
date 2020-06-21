@@ -21,9 +21,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor(destructionCallback: java.lang.Runnable)
                         // @ts-ignore
-                        valueBound(event: HttpSessionBindingEvent): void
+                        public valueBound(event: HttpSessionBindingEvent): void
                         // @ts-ignore
-                        valueUnbound(event: HttpSessionBindingEvent): void
+                        public valueUnbound(event: HttpSessionBindingEvent): void
                     }
                 }
             }

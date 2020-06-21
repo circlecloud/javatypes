@@ -19,13 +19,13 @@ declare namespace org {
                         // @ts-ignore
                         constructor(fileItem: FileItem)
                         // @ts-ignore
-                        readonly logger: Log
+                        static readonly logger: Log
                         /**
                          * Return the underlying {@code org.apache.commons.fileupload.FileItem}
                          * instance. There is hardly any need to access this.
                          */
                         // @ts-ignore
-                        getFileItem(): FileItem
+                        public getFileItem(): FileItem
                         /**
                          * Set whether to preserve the filename as sent by the client, not stripping off
                          * path information in {@link CommonsMultipartFile#getOriginalFilename()}.
@@ -37,25 +37,25 @@ declare namespace org {
                          * @see CommonsMultipartResolver#setPreserveFilename(boolean)
                          */
                         // @ts-ignore
-                        setPreserveFilename(preserveFilename: boolean): void
+                        public setPreserveFilename(preserveFilename: boolean): void
                         // @ts-ignore
-                        getName(): java.lang.String
+                        public getName(): string
                         // @ts-ignore
-                        getOriginalFilename(): java.lang.String
+                        public getOriginalFilename(): string
                         // @ts-ignore
-                        getContentType(): java.lang.String
+                        public getContentType(): string
                         // @ts-ignore
-                        isEmpty(): boolean
+                        public isEmpty(): boolean
                         // @ts-ignore
-                        getSize(): long
+                        public getSize(): number /*long*/
                         // @ts-ignore
-                        getBytes(): byte[]
+                        public getBytes(): number /*byte*/[]
                         // @ts-ignore
-                        getInputStream(): java.io.InputStream
+                        public getInputStream(): java.io.InputStream
                         // @ts-ignore
-                        transferTo(dest: java.io.File): void
+                        public transferTo(dest: java.io.File): void
                         // @ts-ignore
-                        transferTo(dest: java.nio.file.Path): void
+                        public transferTo(dest: java.nio.file.Path): void
                         /**
                          * Determine whether the multipart content is still available.
                          * If a temporary file has been moved, the content is no longer available.
@@ -68,7 +68,7 @@ declare namespace org {
                          * of a temporary file.
                          */
                         // @ts-ignore
-                        getStorageDescription(): java.lang.String
+                        public getStorageDescription(): string
                     }
                 }
             }

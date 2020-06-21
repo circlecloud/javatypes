@@ -7,15 +7,15 @@ declare namespace org {
                  * channel.
                  */
                 // @ts-ignore
-                class PlayerChannelEvent extends org.bukkit.event.player.PlayerEvent {
+                abstract class PlayerChannelEvent extends org.bukkit.event.player.PlayerEvent {
                     // @ts-ignore
-                    constructor(player: org.bukkit.entity.Player, channel: string)
+                    constructor(player: org.bukkit.entity.Player, channel: java.lang.String | string)
                     // @ts-ignore
-                    getChannel(): java.lang.String
+                    public getChannel(): string
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

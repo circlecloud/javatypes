@@ -17,12 +17,12 @@ declare namespace javax {
                      * namespace declaration.
                      */
                     // @ts-ignore
-                    getPrefix(): java.lang.String
+                    getPrefix(): string
                     /**
                      * Gets the uri bound to the prefix of this namespace
                      */
                     // @ts-ignore
-                    getNamespaceURI(): java.lang.String
+                    getNamespaceURI(): string
                     /**
                      * returns true if this attribute declares the default namespace
                      */

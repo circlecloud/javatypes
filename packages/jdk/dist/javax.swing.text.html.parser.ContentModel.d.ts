@@ -29,50 +29,50 @@ declare namespace javax {
                          * Create a content model of a particular type.
                          */
                         // @ts-ignore
-                        constructor(type: number /*int*/, content: any, next: javax.swing.text.html.parser.ContentModel)
+                        constructor(type: number /*int*/, content: java.lang.Object | any, next: javax.swing.text.html.parser.ContentModel)
                         /**
                          * Type. Either '*', '?', '+', ',', '|', '&amp;'.
                          */
                         // @ts-ignore
-                        type: number /*int*/
+                        public type: number /*int*/
                         /**
                          * The content. Either an Element or a ContentModel.
                          */
                         // @ts-ignore
-                        content: any
+                        public content: java.lang.Object | any
                         /**
                          * The next content model (in a ',', '|' or '&amp;' expression).
                          */
                         // @ts-ignore
-                        next: javax.swing.text.html.parser.ContentModel
+                        public next: javax.swing.text.html.parser.ContentModel
                         /**
                          * Return true if the content model could
                          * match an empty input stream.
                          */
                         // @ts-ignore
-                        empty(): boolean
+                        public empty(): boolean
                         /**
                          * Update elemVec with the list of elements that are
                          * part of the this contentModel.
                          */
                         // @ts-ignore
-                        getElements(elemVec: java.util.Vector<javax.swing.text.html.parser.Element>): void
+                        public getElements(elemVec: java.util.Vector<javax.swing.text.html.parser.Element>): void
                         /**
                          * Return true if the token could potentially be the
                          * first token in the input stream.
                          */
                         // @ts-ignore
-                        first(token: any): boolean
+                        public first(token: java.lang.Object | any): boolean
                         /**
                          * Return the element that must be next.
                          */
                         // @ts-ignore
-                        first(): javax.swing.text.html.parser.Element
+                        public first(): javax.swing.text.html.parser.Element
                         /**
                          * Convert to a string.
                          */
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }

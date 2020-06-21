@@ -16,7 +16,7 @@ declare namespace org {
                  * @param propertyName the offending property name
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string)
                 /**
                  * Create a new NotWritablePropertyException.
                  * @param beanClass the offending bean class
@@ -24,7 +24,7 @@ declare namespace org {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string)
                 /**
                  * Create a new NotWritablePropertyException.
                  * @param beanClass the offending bean class
@@ -33,7 +33,7 @@ declare namespace org {
                  * @param cause the root cause
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string, cause: Error)
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string, cause: java.lang.Throwable | Error)
                 /**
                  * Create a new NotWritablePropertyException.
                  * @param beanClass the offending bean class
@@ -43,13 +43,13 @@ declare namespace org {
                  *  that closely match the invalid property name
                  */
                 // @ts-ignore
-                constructor(beanClass: java.lang.Class<any>, propertyName: string, msg: string, possibleMatches: string[])
+                constructor(beanClass: java.lang.Class<any>, propertyName: java.lang.String | string, msg: java.lang.String | string, possibleMatches: java.lang.String[] | string[])
                 /**
                  * Return suggestions for actual bean property names that closely match
                  * the invalid property name, if any.
                  */
                 // @ts-ignore
-                getPossibleMatches(): java.lang.String[]
+                public getPossibleMatches(): string[]
             }
         }
     }

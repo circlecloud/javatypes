@@ -29,7 +29,7 @@ declare namespace javax {
                  * @see #setHeader
                  */
                 // @ts-ignore
-                getHeader(name: string): java.lang.String[]
+                public getHeader(name: java.lang.String | string): string[]
                 /**
                  * Replaces the current value of the first header entry whose name matches
                  * the given name with the given value, adding a new header if no existing header
@@ -45,7 +45,7 @@ declare namespace javax {
                  * @see #getHeader
                  */
                 // @ts-ignore
-                setHeader(name: string, value: string): void
+                public setHeader(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Adds a <code>MimeHeader</code> object with the specified name and value
                  * to this <code>MimeHeaders</code> object's list of headers.
@@ -59,7 +59,7 @@ declare namespace javax {
                  *  mime header name or value being added
                  */
                 // @ts-ignore
-                addHeader(name: string, value: string): void
+                public addHeader(name: java.lang.String | string, value: java.lang.String | string): void
                 /**
                  * Remove all <code>MimeHeader</code> objects whose name matches the
                  * given name.
@@ -67,19 +67,19 @@ declare namespace javax {
                  *           which to search
                  */
                 // @ts-ignore
-                removeHeader(name: string): void
+                public removeHeader(name: java.lang.String | string): void
                 /**
                  * Removes all the header entries from this <code>MimeHeaders</code> object.
                  */
                 // @ts-ignore
-                removeAllHeaders(): void
+                public removeAllHeaders(): void
                 /**
                  * Returns all the <code>MimeHeader</code>s in this <code>MimeHeaders</code> object.
                  * @return an <code>Iterator</code> object over this <code>MimeHeaders</code>
                  *           object's list of <code>MimeHeader</code> objects
                  */
                 // @ts-ignore
-                getAllHeaders(): java.util.Iterator
+                public getAllHeaders(): java.util.Iterator<any>
                 /**
                  * Returns all the <code>MimeHeader</code> objects whose name matches
                  * a name in the given array of names.
@@ -89,7 +89,7 @@ declare namespace javax {
                  *           objects whose name matches one of the names in the given list
                  */
                 // @ts-ignore
-                getMatchingHeaders(names: string[]): java.util.Iterator
+                public getMatchingHeaders(names: java.lang.String[] | string[]): java.util.Iterator<any>
                 /**
                  * Returns all of the <code>MimeHeader</code> objects whose name does not
                  * match a name in the given array of names.
@@ -99,7 +99,7 @@ declare namespace javax {
                  *           objects whose name does not match one of the names in the given list
                  */
                 // @ts-ignore
-                getNonMatchingHeaders(names: string[]): java.util.Iterator
+                public getNonMatchingHeaders(names: java.lang.String[] | string[]): java.util.Iterator<any>
             }
         }
     }

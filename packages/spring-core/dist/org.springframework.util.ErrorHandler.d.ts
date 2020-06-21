@@ -15,7 +15,7 @@ declare namespace org {
                  * Handle the given error, possibly rethrowing it as a fatal exception.
                  */
                 // @ts-ignore
-                handleError(t: Error): void
+                handleError(t: java.lang.Throwable | Error): void
             }
         }
     }

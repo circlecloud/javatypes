@@ -109,7 +109,7 @@ declare namespace org {
                          * @return True if permission is granted
                          */
                         // @ts-ignore
-                        hasPermission(contexts: Array<org.spongepowered.api.service.context.Context>, permission: string): boolean
+                        hasPermission(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, permission: java.lang.String | string): boolean
                         /**
                          * Test whether the subject is permitted to perform an action given as the
                          * given permission string.
@@ -119,7 +119,7 @@ declare namespace org {
                          * @return True if permission is granted
                          */
                         // @ts-ignore
-                        hasPermission(permission: string): boolean
+                        hasPermission(permission: java.lang.String | string): boolean
                         /**
                          * Returns the calculated value set for a given permission.
                          * <p>It is expected that this method will also account for values
@@ -136,7 +136,7 @@ declare namespace org {
                          * @return The tristate result of the check
                          */
                         // @ts-ignore
-                        getPermissionValue(contexts: Array<org.spongepowered.api.service.context.Context>, permission: string): org.spongepowered.api.util.Tristate
+                        getPermissionValue(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, permission: java.lang.String | string): org.spongepowered.api.util.Tristate
                         /**
                          * Check if this subject is a child of the given parent in the subject's
                          * current context, traversing inheritance.
@@ -162,7 +162,7 @@ declare namespace org {
                          * @return Whether this is a child of the given parent
                          */
                         // @ts-ignore
-                        isChildOf(contexts: Array<org.spongepowered.api.service.context.Context>, parent: org.spongepowered.api.service.permission.SubjectReference): boolean
+                        isChildOf(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, parent: org.spongepowered.api.service.permission.SubjectReference): boolean
                         /**
                          * Return all parents that this group has in its current context
                          * combination.
@@ -173,7 +173,7 @@ declare namespace org {
                          * @return An immutable list of parents
                          */
                         // @ts-ignore
-                        getParents(): java.util.List<org.spongepowered.api.service.permission.SubjectReference>
+                        getParents(): Array<org.spongepowered.api.service.permission.SubjectReference>
                         /**
                          * Return all parents that this group has in the given context combination.
                          * <p>This must include inherited values if the permissions
@@ -182,7 +182,7 @@ declare namespace org {
                          * @return An immutable list of parents
                          */
                         // @ts-ignore
-                        getParents(contexts: Array<org.spongepowered.api.service.context.Context>): java.util.List<org.spongepowered.api.service.permission.SubjectReference>
+                        getParents(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>): Array<org.spongepowered.api.service.permission.SubjectReference>
                         /**
                          * Gets the value of a given option in the given context.
                          * <p>It is expected that this method will account for options
@@ -196,7 +196,7 @@ declare namespace org {
                          * @return The value of the option, if any is present
                          */
                         // @ts-ignore
-                        getOption(contexts: Array<org.spongepowered.api.service.context.Context>, key: string): java.util.Optional<java.lang.String>
+                        getOption(contexts: java.util.Set<org.spongepowered.api.service.context.Context> | Array<org.spongepowered.api.service.context.Context>, key: java.lang.String | string): java.util.Optional<java.lang.String | string>
                         /**
                          * Gets the value of a given option in the subject's current context.
                          * <p>This must return the same value as {@link #getOption(Set, String)}
@@ -205,7 +205,7 @@ declare namespace org {
                          * @return The value of the option, if any is present
                          */
                         // @ts-ignore
-                        getOption(key: string): java.util.Optional<java.lang.String>
+                        getOption(key: java.lang.String | string): java.util.Optional<java.lang.String | string>
                     }
                 }
             }

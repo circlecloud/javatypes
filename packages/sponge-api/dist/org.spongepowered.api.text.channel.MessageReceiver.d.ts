@@ -34,7 +34,7 @@ declare namespace org {
                          * @param parameters The parameters to apply to the template
                          */
                         // @ts-ignore
-                        sendMessage(template: org.spongepowered.api.text.TextTemplate, parameters: java.util.Map<java.lang.String, org.spongepowered.api.text.TextElement>): void
+                        sendMessage(template: org.spongepowered.api.text.TextTemplate, parameters: java.util.Map<java.lang.String | string, org.spongepowered.api.text.TextElement>): void
                         /**
                          * Sends the message(s) to this receiver.
                          * <p>If text formatting is not supported in the implementation

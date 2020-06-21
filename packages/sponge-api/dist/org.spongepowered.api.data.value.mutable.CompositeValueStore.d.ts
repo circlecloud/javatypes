@@ -108,7 +108,7 @@ declare namespace org {
                              * @return True if the class is supported
                              */
                             // @ts-ignore
-                            supports(holderClass: java.lang.Class<H>): boolean
+                            supports(holderClass: java.lang.Class<any>): boolean
                             /**
                              * Applies a transformation on the provided {@link BaseValue} such that
                              * the return value of {@link Function#apply(Object)} will become the end
@@ -123,7 +123,7 @@ declare namespace org {
                              * @return The end resulting value
                              */
                             // @ts-ignore
-                            transform<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, func: java.util.function.Function<E, E> | java.util.function$.Function<E, E>): org.spongepowered.api.data.DataTransactionResult
+                            transform<E>(key: org.spongepowered.api.data.key.Key<any>, func: java.util.function$.Function<E, E>): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Offers the given {@code value} as defined by the provided {@link Key}
                              * such that a {@link DataTransactionResult} is returned for any
@@ -135,7 +135,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            offer<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataTransactionResult
+                            offer<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Offers the given {@link BaseValue} as defined by the provided
                              * {@link Key} such that a {@link DataTransactionResult} is returned for
@@ -157,7 +157,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            offer(valueContainer: H extends org.spongepowered.api.data.value.ValueContainer<any>): org.spongepowered.api.data.DataTransactionResult
+                            offer(valueContainer: H): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Offers the given {@link ValueContainer} such that all of the available
                              * {@link BaseValue}s from the given {@link ValueContainer} are offered
@@ -170,7 +170,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            offer(valueContainer: H extends org.spongepowered.api.data.value.ValueContainer<any>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
+                            offer(valueContainer: H, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Offers all provided {@link ValueContainer}s to this
                              * {@link CompositeValueStore} much like {@link #offer(ValueContainer)}
@@ -209,7 +209,7 @@ declare namespace org {
                              *      incompatibility
                              */
                             // @ts-ignore
-                            tryOffer<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.data.DataTransactionResult
+                            tryOffer<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Offers the given {@code value} as defined by the provided {@link Key}
                              * such that a {@link DataTransactionResult} is returned for any
@@ -236,7 +236,7 @@ declare namespace org {
                              *      incompatibility
                              */
                             // @ts-ignore
-                            tryOffer(valueContainer: H extends org.spongepowered.api.data.value.ValueContainer<any>): org.spongepowered.api.data.DataTransactionResult
+                            tryOffer(valueContainer: H): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Offers the given {@link ValueContainer} such that all of the available
                              * {@link BaseValue}s from the given {@link ValueContainer} are offered
@@ -251,7 +251,7 @@ declare namespace org {
                              *      incompatibility
                              */
                             // @ts-ignore
-                            tryOffer(valueContainer: H extends org.spongepowered.api.data.value.ValueContainer<any>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
+                            tryOffer(valueContainer: H, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Attempts to remove all {@link Value}s associated with the class of the
                              * provided {@link ValueContainer} class. All values that were successfully
@@ -263,7 +263,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            remove(containerClass: java.lang.Class<H>): org.spongepowered.api.data.DataTransactionResult
+                            remove(containerClass: java.lang.Class<any>): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Attempts to remove the provided {@link BaseValue}. All values that were
                              * successfully removed will be provided in
@@ -306,7 +306,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            copyFrom(that: S extends org.spongepowered.api.data.value.mutable.CompositeValueStore<S, H>): org.spongepowered.api.data.DataTransactionResult
+                            copyFrom(that: S): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Performs an absolute copy of all {@link Value}s and
                              * {@link ValueContainer}s to this {@link CompositeValueStore} such that
@@ -317,7 +317,7 @@ declare namespace org {
                              * @return The transaction result
                              */
                             // @ts-ignore
-                            copyFrom(that: S extends org.spongepowered.api.data.value.mutable.CompositeValueStore<S, H>, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
+                            copyFrom(that: S, func: org.spongepowered.api.data.merge.MergeFunction): org.spongepowered.api.data.DataTransactionResult
                             /**
                              * Gets an copied collection of all known {@link ValueContainer}s
                              * belonging to this {@link CompositeValueStore}. An individual
@@ -327,7 +327,7 @@ declare namespace org {
                              *      from this value store
                              */
                             // @ts-ignore
-                            getContainers(): java.util.Collection<H>
+                            getContainers(): Array<H>
                         }
                     }
                 }

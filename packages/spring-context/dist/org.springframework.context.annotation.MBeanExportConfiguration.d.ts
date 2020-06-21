@@ -16,13 +16,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setImportMetadata(importMetadata: AnnotationMetadata): void
+                    public setImportMetadata(importMetadata: AnnotationMetadata): void
                     // @ts-ignore
-                    setEnvironment(environment: Environment): void
+                    public setEnvironment(environment: Environment): void
                     // @ts-ignore
-                    setBeanFactory(beanFactory: BeanFactory): void
+                    public setBeanFactory(beanFactory: BeanFactory): void
                     // @ts-ignore
-                    mbeanExporter(): org.springframework.jmx.export.annotation.AnnotationMBeanExporter
+                    public mbeanExporter(): org.springframework.jmx.export.annotation.AnnotationMBeanExporter
                 }
             }
         }

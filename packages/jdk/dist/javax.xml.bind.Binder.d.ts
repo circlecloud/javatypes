@@ -43,7 +43,7 @@ declare namespace javax {
              * @since JAXB 2.0
              */
             // @ts-ignore
-            class Binder<XmlNode> extends java.lang.Object {
+            abstract class Binder<XmlNode> extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -77,7 +77,7 @@ declare namespace javax {
                  *       If the node parameter is null
                  */
                 // @ts-ignore
-                abstract unmarshal(xmlNode: XmlNode): java.lang.Object
+                public abstract unmarshal(xmlNode: XmlNode): any
                 /**
                  * Unmarshal XML root element by provided <tt>declaredType</tt>
                  * to a JAXB object tree.
@@ -109,7 +109,7 @@ declare namespace javax {
                  * @since JAXB2.0
                  */
                 // @ts-ignore
-                abstract unmarshal<T>(xmlNode: XmlNode, declaredType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
+                public abstract unmarshal<T>(xmlNode: XmlNode, declaredType: java.lang.Class<T>): javax.xml.bind.JAXBElement<T>
                 /**
                  * Marshal a JAXB object tree to a new XML document.
                  * <p>
@@ -136,7 +136,7 @@ declare namespace javax {
                  *       If any of the method parameters are null
                  */
                 // @ts-ignore
-                abstract marshal(jaxbObject: any, xmlNode: XmlNode): void
+                public abstract marshal(jaxbObject: java.lang.Object | any, xmlNode: XmlNode): void
                 /**
                  * Gets the XML element associated with the given JAXB object.
                  * <p>
@@ -158,7 +158,7 @@ declare namespace javax {
                  *       If the jaxbObject parameter is null
                  */
                 // @ts-ignore
-                abstract getXMLNode(jaxbObject: any): XmlNode
+                public abstract getXMLNode(jaxbObject: java.lang.Object | any): XmlNode
                 /**
                  * Gets the JAXB object associated with the given XML element.
                  * <p>
@@ -177,7 +177,7 @@ declare namespace javax {
                  *       If the node parameter is null
                  */
                 // @ts-ignore
-                abstract getJAXBNode(xmlNode: XmlNode): java.lang.Object
+                public abstract getJAXBNode(xmlNode: XmlNode): any
                 /**
                  * Takes an JAXB object and updates
                  * its associated XML node and its descendants.
@@ -192,7 +192,7 @@ declare namespace javax {
                  *       If the jaxbObject parameter is null
                  */
                 // @ts-ignore
-                abstract updateXML(jaxbObject: any): XmlNode
+                public abstract updateXML(jaxbObject: java.lang.Object | any): XmlNode
                 /**
                  * Changes in JAXB object tree are updated in its associated XML parse tree.
                  * <p>
@@ -219,7 +219,7 @@ declare namespace javax {
                  *       If any of the input parameters are null
                  */
                 // @ts-ignore
-                abstract updateXML(jaxbObject: any, xmlNode: XmlNode): XmlNode
+                public abstract updateXML(jaxbObject: java.lang.Object | any, xmlNode: XmlNode): XmlNode
                 /**
                  * Takes an XML node and updates its associated JAXB object and its descendants.
                  * <p>
@@ -243,7 +243,7 @@ declare namespace javax {
                  *       If node parameter is null
                  */
                 // @ts-ignore
-                abstract updateJAXB(xmlNode: XmlNode): java.lang.Object
+                public abstract updateJAXB(xmlNode: XmlNode): any
                 /**
                  * Specifies whether marshal, unmarshal and update methods
                  * performs validation on their XML content.
@@ -251,14 +251,14 @@ declare namespace javax {
                  * @see Unmarshaller#setSchema(Schema)
                  */
                 // @ts-ignore
-                abstract setSchema(schema: javax.xml.validation.Schema): void
+                public abstract setSchema(schema: javax.xml.validation.Schema): void
                 /**
                  * Gets the last {@link Schema} object (including null) set by the
                  * {@link #setSchema(Schema)} method.
                  * @return the Schema object for validation or null if not present
                  */
                 // @ts-ignore
-                abstract getSchema(): javax.xml.validation.Schema
+                public abstract getSchema(): javax.xml.validation.Schema
                 /**
                  * Allow an application to register a <tt>ValidationEventHandler</tt>.
                  * <p>
@@ -273,7 +273,7 @@ declare namespace javax {
                  *          event handler
                  */
                 // @ts-ignore
-                abstract setEventHandler(handler: javax.xml.bind.ValidationEventHandler): void
+                public abstract setEventHandler(handler: javax.xml.bind.ValidationEventHandler): void
                 /**
                  * Return the current event handler or the default event handler if one
                  * hasn't been set.
@@ -283,7 +283,7 @@ declare namespace javax {
                  *          current event handler
                  */
                 // @ts-ignore
-                abstract getEventHandler(): javax.xml.bind.ValidationEventHandler
+                public abstract getEventHandler(): javax.xml.bind.ValidationEventHandler
                 /**
                  * Set the particular property in the underlying implementation of
                  * <tt>Binder</tt>.  This method can only be used to set one of
@@ -304,7 +304,7 @@ declare namespace javax {
                  *       If the name parameter is null
                  */
                 // @ts-ignore
-                abstract setProperty(name: string, value: any): void
+                public abstract setProperty(name: java.lang.String | string, value: java.lang.Object | any): void
                 /**
                  * Get the particular property in the underlying implementation of
                  * <tt>Binder</tt>.  This method can only
@@ -325,7 +325,7 @@ declare namespace javax {
                  *       If the name parameter is null
                  */
                 // @ts-ignore
-                abstract getProperty(name: string): java.lang.Object
+                public abstract getProperty(name: java.lang.String | string): any
             }
         }
     }

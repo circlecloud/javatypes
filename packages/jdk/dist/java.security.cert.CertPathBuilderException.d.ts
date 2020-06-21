@@ -35,7 +35,7 @@ declare namespace java {
                  * @param msg the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
                 /**
                  * Creates a {@code CertPathBuilderException} that wraps the specified
                  * throwable. This allows any exception to be converted into a
@@ -49,7 +49,7 @@ declare namespace java {
                  *  permitted, and indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(cause: Error)
+                constructor(cause: java.lang.Throwable | Error)
                 /**
                  * Creates a {@code CertPathBuilderException} with the specified
                  * detail message and cause.
@@ -59,7 +59,7 @@ declare namespace java {
                  *  permitted, and indicates that the cause is nonexistent or unknown.)
                  */
                 // @ts-ignore
-                constructor(msg: string, cause: Error)
+                constructor(msg: java.lang.String | string, cause: java.lang.Throwable | Error)
             }
         }
     }

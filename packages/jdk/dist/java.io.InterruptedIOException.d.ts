@@ -30,7 +30,7 @@ declare namespace java {
              * @param s   the detail message.
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
             /**
              * Reports how many bytes had been transferred as part of the I/O
              * operation before it was interrupted.

@@ -26,7 +26,7 @@ declare namespace org {
                      * @return The event source
                      */
                     // @ts-ignore
-                    getSource(): java.lang.Object
+                    getSource(): any
                     /**
                      * Gets the context of the event.
                      * @return The event context

@@ -66,7 +66,7 @@ declare namespace javax {
                      * the Transformer supports Source input of this type.
                      */
                     // @ts-ignore
-                    readonly FEATURE: string
+                    public static readonly FEATURE: java.lang.String | string
                     /**
                      * <p>Get the <code>XMLEventReader</code> used by this
                      * <code>StAXSource</code>.</p>
@@ -77,7 +77,7 @@ declare namespace javax {
                      *    <code>StAXSource</code>.
                      */
                     // @ts-ignore
-                    getXMLEventReader(): javax.xml.stream.XMLEventReader
+                    public getXMLEventReader(): javax.xml.stream.XMLEventReader
                     /**
                      * <p>Get the <code>XMLStreamReader</code> used by this
                      * <code>StAXSource</code>.</p>
@@ -88,7 +88,7 @@ declare namespace javax {
                      *    <code>StAXSource</code>.
                      */
                     // @ts-ignore
-                    getXMLStreamReader(): javax.xml.stream.XMLStreamReader
+                    public getXMLStreamReader(): javax.xml.stream.XMLStreamReader
                     /**
                      * <p>In the context of a <code>StAXSource</code>, it is not appropriate
                      * to explicitly set the system identifier.
@@ -102,7 +102,7 @@ declare namespace javax {
                      *    thrown by this method.
                      */
                     // @ts-ignore
-                    setSystemId(systemId: string): void
+                    public setSystemId(systemId: java.lang.String | string): void
                     /**
                      * <p>Get the system identifier used by this
                      * <code>StAXSource</code>.</p>
@@ -114,7 +114,7 @@ declare namespace javax {
                      * @return System identifier used by this <code>StAXSource</code>.
                      */
                     // @ts-ignore
-                    getSystemId(): java.lang.String
+                    public getSystemId(): string
                 }
             }
         }

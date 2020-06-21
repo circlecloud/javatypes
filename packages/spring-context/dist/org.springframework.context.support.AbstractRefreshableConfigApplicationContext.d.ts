@@ -15,7 +15,7 @@ declare namespace org {
                  * @see #getDefaultConfigLocations
                  */
                 // @ts-ignore
-                class AbstractRefreshableConfigApplicationContext extends org.springframework.context.support.AbstractRefreshableApplicationContext {
+                abstract class AbstractRefreshableConfigApplicationContext extends org.springframework.context.support.AbstractRefreshableApplicationContext {
                     /**
                      * Create a new AbstractRefreshableConfigApplicationContext with no parent.
                      */
@@ -33,13 +33,13 @@ declare namespace org {
                      * <p>If not set, the implementation may use a default as appropriate.
                      */
                     // @ts-ignore
-                    setConfigLocation(location: string): void
+                    public setConfigLocation(location: java.lang.String | string): void
                     /**
                      * Set the config locations for this application context.
                      * <p>If not set, the implementation may use a default as appropriate.
                      */
                     // @ts-ignore
-                    setConfigLocations(...locations: string[]): void
+                    public setConfigLocations(...locations: java.lang.String[] | string[]): void
                     /**
                      * Return an array of resource locations, referring to the XML bean definition
                      * files that this context should be built with. Can also include location
@@ -51,7 +51,7 @@ declare namespace org {
                      * @see #getResourcePatternResolver
                      */
                     // @ts-ignore
-                    getConfigLocations(): java.lang.String[]
+                    getConfigLocations(): string[]
                     /**
                      * Return the default config locations to use, for the case where no
                      * explicit config locations have been specified.
@@ -61,7 +61,7 @@ declare namespace org {
                      * @see #setConfigLocations
                      */
                     // @ts-ignore
-                    getDefaultConfigLocations(): java.lang.String[]
+                    getDefaultConfigLocations(): string[]
                     /**
                      * Resolve the given path, replacing placeholders with corresponding
                      * environment property values if necessary. Applied to config locations.
@@ -70,21 +70,21 @@ declare namespace org {
                      * @see org.springframework.core.env.Environment#resolveRequiredPlaceholders(String)
                      */
                     // @ts-ignore
-                    resolvePath(path: string): java.lang.String
+                    resolvePath(path: java.lang.String | string): string
                     // @ts-ignore
-                    setId(id: string): void
+                    public setId(id: java.lang.String | string): void
                     /**
                      * Sets the id of this context to the bean name by default,
                      * for cases where the context instance is itself defined as a bean.
                      */
                     // @ts-ignore
-                    setBeanName(name: string): void
+                    public setBeanName(name: java.lang.String | string): void
                     /**
                      * Triggers {@link #refresh()} if not refreshed in the concrete context's
                      * constructor already.
                      */
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                 }
             }
         }

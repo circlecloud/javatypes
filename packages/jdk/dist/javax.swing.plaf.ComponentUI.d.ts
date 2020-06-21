@@ -15,7 +15,7 @@ declare namespace javax {
              * @see javax.swing.UIManager
              */
             // @ts-ignore
-            class ComponentUI extends java.lang.Object {
+            abstract class ComponentUI extends java.lang.Object {
                 /**
                  * Sole constructor. (For invocation by subclass constructors,
                  * typically implicit.)
@@ -47,7 +47,7 @@ declare namespace javax {
                  * @see javax.swing.JComponent#updateUI
                  */
                 // @ts-ignore
-                installUI(c: javax.swing.JComponent): void
+                public installUI(c: javax.swing.JComponent): void
                 /**
                  * Reverses configuration which was done on the specified component during
                  * <code>installUI</code>.  This method is invoked when this
@@ -73,7 +73,7 @@ declare namespace javax {
                  * @see javax.swing.JComponent#updateUI
                  */
                 // @ts-ignore
-                uninstallUI(c: javax.swing.JComponent): void
+                public uninstallUI(c: javax.swing.JComponent): void
                 /**
                  * Paints the specified component appropriately for the look and feel.
                  * This method is invoked from the <code>ComponentUI.update</code> method when
@@ -88,7 +88,7 @@ declare namespace javax {
                  * @see #update
                  */
                 // @ts-ignore
-                paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                public paint(g: java.awt.Graphics, c: javax.swing.JComponent): void
                 /**
                  * Notifies this UI delegate that it is time to paint the specified
                  * component.  This method is invoked by <code>JComponent</code>
@@ -107,7 +107,7 @@ declare namespace javax {
                  * @see javax.swing.JComponent#paintComponent
                  */
                 // @ts-ignore
-                update(g: java.awt.Graphics, c: javax.swing.JComponent): void
+                public update(g: java.awt.Graphics, c: javax.swing.JComponent): void
                 /**
                  * Returns the specified component's preferred size appropriate for
                  * the look and feel.  If <code>null</code> is returned, the preferred
@@ -123,7 +123,7 @@ declare namespace javax {
                  * @see java.awt.LayoutManager#preferredLayoutSize
                  */
                 // @ts-ignore
-                getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
+                public getPreferredSize(c: javax.swing.JComponent): java.awt.Dimension
                 /**
                  * Returns the specified component's minimum size appropriate for
                  * the look and feel.  If <code>null</code> is returned, the minimum
@@ -141,7 +141,7 @@ declare namespace javax {
                  * @see #getPreferredSize
                  */
                 // @ts-ignore
-                getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
+                public getMinimumSize(c: javax.swing.JComponent): java.awt.Dimension
                 /**
                  * Returns the specified component's maximum size appropriate for
                  * the look and feel.  If <code>null</code> is returned, the maximum
@@ -158,7 +158,7 @@ declare namespace javax {
                  * @see java.awt.LayoutManager2#maximumLayoutSize
                  */
                 // @ts-ignore
-                getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
+                public getMaximumSize(c: javax.swing.JComponent): java.awt.Dimension
                 /**
                  * Returns <code>true</code> if the specified <i>x,y</i> location is
                  * contained within the look and feel's defined shape of the specified
@@ -177,7 +177,7 @@ declare namespace javax {
                  * @see java.awt.Component#contains
                  */
                 // @ts-ignore
-                contains(c: javax.swing.JComponent, x: number /*int*/, y: number /*int*/): boolean
+                public contains(c: javax.swing.JComponent, x: number /*int*/, y: number /*int*/): boolean
                 /**
                  * Returns an instance of the UI delegate for the specified component.
                  * Each subclass must provide its own static <code>createUI</code>
@@ -189,7 +189,7 @@ declare namespace javax {
                  * should never be invoked.
                  */
                 // @ts-ignore
-                createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                public static createUI(c: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                 /**
                  * Returns the baseline.  The baseline is measured from the top of
                  * the component.  This method is primarily meant for
@@ -212,7 +212,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): int
+                public getBaseline(c: javax.swing.JComponent, width: number /*int*/, height: number /*int*/): number /*int*/
                 /**
                  * Returns an enum indicating how the baseline of he component
                  * changes as the size changes.  This method is primarily meant for
@@ -228,7 +228,7 @@ declare namespace javax {
                  * @since 1.6
                  */
                 // @ts-ignore
-                getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
+                public getBaselineResizeBehavior(c: javax.swing.JComponent): java.awt.Component.BaselineResizeBehavior
                 /**
                  * Returns the number of accessible children in the object.  If all
                  * of the children of this object implement <code>Accessible</code>,
@@ -244,7 +244,7 @@ declare namespace javax {
                  * @return the number of accessible children in the object
                  */
                 // @ts-ignore
-                getAccessibleChildrenCount(c: javax.swing.JComponent): int
+                public getAccessibleChildrenCount(c: javax.swing.JComponent): number /*int*/
                 /**
                  * Returns the <code>i</code>th <code>Accessible</code> child of the object.
                  * UIs might need to override this if they present areas on the
@@ -259,7 +259,7 @@ declare namespace javax {
                  * @return the <code>i</code>th <code>Accessible</code> child of the object
                  */
                 // @ts-ignore
-                getAccessibleChild(c: javax.swing.JComponent, i: number /*int*/): javax.accessibility.Accessible
+                public getAccessibleChild(c: javax.swing.JComponent, i: number /*int*/): javax.accessibility.Accessible
             }
         }
     }

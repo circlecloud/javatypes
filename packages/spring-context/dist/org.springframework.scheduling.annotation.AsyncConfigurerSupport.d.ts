@@ -14,9 +14,9 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    getAsyncExecutor(): java.util.concurrent.Executor
+                    public getAsyncExecutor(): java.util.concurrent.Executor
                     // @ts-ignore
-                    getAsyncUncaughtExceptionHandler(): AsyncUncaughtExceptionHandler
+                    public getAsyncUncaughtExceptionHandler(): AsyncUncaughtExceptionHandler
                 }
             }
         }

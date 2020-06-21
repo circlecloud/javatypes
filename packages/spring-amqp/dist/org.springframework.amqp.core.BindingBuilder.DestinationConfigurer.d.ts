@@ -9,19 +9,19 @@ declare namespace org {
                     // @ts-ignore
                     class DestinationConfigurer extends java.lang.Object {
                         // @ts-ignore
-                        readonly name: string
+                        readonly name: java.lang.String | string
                         // @ts-ignore
                         readonly type: org.springframework.amqp.core.Binding.DestinationType
                         // @ts-ignore
-                        to(exchange: org.springframework.amqp.core.FanoutExchange): org.springframework.amqp.core.Binding
+                        public to(exchange: org.springframework.amqp.core.FanoutExchange): org.springframework.amqp.core.Binding
                         // @ts-ignore
-                        to(exchange: org.springframework.amqp.core.HeadersExchange): org.springframework.amqp.core.BindingBuilder.HeadersExchangeMapConfigurer
+                        public to(exchange: org.springframework.amqp.core.HeadersExchange): org.springframework.amqp.core.BindingBuilder.HeadersExchangeMapConfigurer
                         // @ts-ignore
-                        to(exchange: org.springframework.amqp.core.DirectExchange): org.springframework.amqp.core.BindingBuilder.DirectExchangeRoutingKeyConfigurer
+                        public to(exchange: org.springframework.amqp.core.DirectExchange): org.springframework.amqp.core.BindingBuilder.DirectExchangeRoutingKeyConfigurer
                         // @ts-ignore
-                        to(exchange: org.springframework.amqp.core.TopicExchange): org.springframework.amqp.core.BindingBuilder.TopicExchangeRoutingKeyConfigurer
+                        public to(exchange: org.springframework.amqp.core.TopicExchange): org.springframework.amqp.core.BindingBuilder.TopicExchangeRoutingKeyConfigurer
                         // @ts-ignore
-                        to(exchange: org.springframework.amqp.core.Exchange): org.springframework.amqp.core.BindingBuilder.GenericExchangeRoutingKeyConfigurer
+                        public to(exchange: org.springframework.amqp.core.Exchange): org.springframework.amqp.core.BindingBuilder.GenericExchangeRoutingKeyConfigurer
                     }
                 }
             }

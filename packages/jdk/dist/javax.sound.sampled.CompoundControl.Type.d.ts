@@ -16,7 +16,7 @@ declare namespace javax {
                      * @param name  the name of the new compound control type
                      */
                     // @ts-ignore
-                    constructor(name: string)
+                    constructor(name: java.lang.String | string)
                 }
             }
         }

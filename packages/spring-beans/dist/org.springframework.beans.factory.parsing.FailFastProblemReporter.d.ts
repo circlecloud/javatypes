@@ -26,27 +26,27 @@ declare namespace org {
                          * @param logger the {#link Log logger} that is to be used to report warnings
                          */
                         // @ts-ignore
-                        setLogger(logger: Log): void
+                        public setLogger(logger: Log): void
                         /**
                          * Throws a {@link BeanDefinitionParsingException} detailing the error
                          * that has occurred.
                          * @param problem the source of the error
                          */
                         // @ts-ignore
-                        fatal(problem: org.springframework.beans.factory.parsing.Problem): void
+                        public fatal(problem: org.springframework.beans.factory.parsing.Problem): void
                         /**
                          * Throws a {@link BeanDefinitionParsingException} detailing the error
                          * that has occurred.
                          * @param problem the source of the error
                          */
                         // @ts-ignore
-                        error(problem: org.springframework.beans.factory.parsing.Problem): void
+                        public error(problem: org.springframework.beans.factory.parsing.Problem): void
                         /**
                          * Writes the supplied {@link Problem} to the {@link Log} at {@code WARN} level.
                          * @param problem the source of the warning
                          */
                         // @ts-ignore
-                        warning(problem: org.springframework.beans.factory.parsing.Problem): void
+                        public warning(problem: org.springframework.beans.factory.parsing.Problem): void
                     }
                 }
             }

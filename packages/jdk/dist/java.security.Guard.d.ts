@@ -21,7 +21,7 @@ declare namespace java {
              * @exception SecurityException if access is denied.
              */
             // @ts-ignore
-            checkGuard(object: any): void
+            checkGuard(object: java.lang.Object | any): void
         }
     }
 }

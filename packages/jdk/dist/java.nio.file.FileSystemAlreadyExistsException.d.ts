@@ -18,7 +18,7 @@ declare namespace java {
                  *           the detail message
                  */
                 // @ts-ignore
-                constructor(msg: string)
+                constructor(msg: java.lang.String | string)
             }
         }
     }

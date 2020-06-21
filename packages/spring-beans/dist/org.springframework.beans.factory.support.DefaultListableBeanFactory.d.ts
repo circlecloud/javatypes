@@ -50,14 +50,14 @@ declare namespace org {
                          * deserialized from this id back into the BeanFactory object, if needed.
                          */
                         // @ts-ignore
-                        setSerializationId(serializationId: string): void
+                        public setSerializationId(serializationId: java.lang.String | string): void
                         /**
                          * Return an id for serialization purposes, if specified, allowing this BeanFactory
                          * to be deserialized from this id back into the BeanFactory object, if needed.
                          * @since 4.1.2
                          */
                         // @ts-ignore
-                        getSerializationId(): java.lang.String
+                        public getSerializationId(): string
                         /**
                          * Set whether it should be allowed to override bean definitions by registering
                          * a different definition with the same name, automatically replacing the former.
@@ -66,14 +66,14 @@ declare namespace org {
                          * @see #registerBeanDefinition
                          */
                         // @ts-ignore
-                        setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding: boolean): void
+                        public setAllowBeanDefinitionOverriding(allowBeanDefinitionOverriding: boolean): void
                         /**
                          * Return whether it should be allowed to override bean definitions by registering
                          * a different definition with the same name, automatically replacing the former.
                          * @since 4.1.2
                          */
                         // @ts-ignore
-                        isAllowBeanDefinitionOverriding(): boolean
+                        public isAllowBeanDefinitionOverriding(): boolean
                         /**
                          * Set whether the factory is allowed to eagerly load bean classes
                          * even for bean definitions that are marked as "lazy-init".
@@ -85,14 +85,14 @@ declare namespace org {
                          * @see AbstractBeanDefinition#setLazyInit
                          */
                         // @ts-ignore
-                        setAllowEagerClassLoading(allowEagerClassLoading: boolean): void
+                        public setAllowEagerClassLoading(allowEagerClassLoading: boolean): void
                         /**
                          * Return whether the factory is allowed to eagerly load bean classes
                          * even for bean definitions that are marked as "lazy-init".
                          * @since 4.1.2
                          */
                         // @ts-ignore
-                        isAllowEagerClassLoading(): boolean
+                        public isAllowEagerClassLoading(): boolean
                         /**
                          * Set a {@link java.util.Comparator} for dependency Lists and arrays.
                          * @since 4.0
@@ -100,59 +100,59 @@ declare namespace org {
                          * @see org.springframework.core.annotation.AnnotationAwareOrderComparator
                          */
                         // @ts-ignore
-                        setDependencyComparator(dependencyComparator: java.util.Comparator<java.lang.Object>): void
+                        public setDependencyComparator(dependencyComparator: java.util.Comparator<java.lang.Object | any>): void
                         /**
                          * Return the dependency comparator for this BeanFactory (may be {@code null}.
                          * @since 4.0
                          */
                         // @ts-ignore
-                        getDependencyComparator(): java.util.Comparator<java.lang.Object>
+                        public getDependencyComparator(): java.util.Comparator<java.lang.Object | any>
                         /**
                          * Set a custom autowire candidate resolver for this BeanFactory to use
                          * when deciding whether a bean definition should be considered as a
                          * candidate for autowiring.
                          */
                         // @ts-ignore
-                        setAutowireCandidateResolver(autowireCandidateResolver: org.springframework.beans.factory.support.AutowireCandidateResolver): void
+                        public setAutowireCandidateResolver(autowireCandidateResolver: org.springframework.beans.factory.support.AutowireCandidateResolver): void
                         /**
                          * Return the autowire candidate resolver for this BeanFactory (never {@code null}).
                          */
                         // @ts-ignore
-                        getAutowireCandidateResolver(): org.springframework.beans.factory.support.AutowireCandidateResolver
+                        public getAutowireCandidateResolver(): org.springframework.beans.factory.support.AutowireCandidateResolver
                         // @ts-ignore
-                        copyConfigurationFrom(otherFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory): void
+                        public copyConfigurationFrom(otherFactory: org.springframework.beans.factory.config.ConfigurableBeanFactory): void
                         // @ts-ignore
-                        getBean<T>(requiredType: java.lang.Class<T>): T
+                        public getBean<T>(requiredType: java.lang.Class<T>): T
                         // @ts-ignore
-                        getBean<T>(requiredType: java.lang.Class<T>, ...args: any[]): T
+                        public getBean<T>(requiredType: java.lang.Class<T>, ...args: java.lang.Object[] | any[]): T
                         // @ts-ignore
-                        getBeanProvider<T>(requiredType: java.lang.Class<T>): org.springframework.beans.factory.ObjectProvider<T>
+                        public getBeanProvider<T>(requiredType: java.lang.Class<T>): org.springframework.beans.factory.ObjectProvider<T>
                         // @ts-ignore
-                        getBeanProvider<T>(requiredType: ResolvableType): org.springframework.beans.factory.ObjectProvider<T>
+                        public getBeanProvider<T>(requiredType: ResolvableType): org.springframework.beans.factory.ObjectProvider<T>
                         // @ts-ignore
-                        containsBeanDefinition(beanName: string): boolean
+                        public containsBeanDefinition(beanName: java.lang.String | string): boolean
                         // @ts-ignore
-                        getBeanDefinitionCount(): int
+                        public getBeanDefinitionCount(): number /*int*/
                         // @ts-ignore
-                        getBeanDefinitionNames(): java.lang.String[]
+                        public getBeanDefinitionNames(): string[]
                         // @ts-ignore
-                        getBeanNamesForType(type: ResolvableType): java.lang.String[]
+                        public getBeanNamesForType(type: ResolvableType): string[]
                         // @ts-ignore
-                        getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): java.lang.String[]
+                        public getBeanNamesForType(type: ResolvableType, includeNonSingletons: boolean, allowEagerInit: boolean): string[]
                         // @ts-ignore
-                        getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String, T>
+                        public getBeansOfType<T>(type: java.lang.Class<T>): java.util.Map<java.lang.String | string, T>
                         // @ts-ignore
-                        getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String, T>
+                        public getBeansOfType<T>(type: java.lang.Class<T>, includeNonSingletons: boolean, allowEagerInit: boolean): java.util.Map<java.lang.String | string, T>
                         // @ts-ignore
-                        getBeanNamesForAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.lang.String[]
+                        public getBeanNamesForAnnotation(annotationType: java.lang.Class<any>): string[]
                         // @ts-ignore
-                        getBeansWithAnnotation(annotationType: java.lang.Class<java.lang.annotation.Annotation>): java.util.Map<java.lang.String, java.lang.Object>
+                        public getBeansWithAnnotation(annotationType: java.lang.Class<any>): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         // @ts-ignore
-                        findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: string, annotationType: java.lang.Class<A>): A
+                        public findAnnotationOnBean<A extends java.lang.annotation.Annotation>(beanName: java.lang.String | string, annotationType: java.lang.Class<A>): A
                         // @ts-ignore
-                        registerResolvableDependency(dependencyType: java.lang.Class<any>, autowiredValue: any): void
+                        public registerResolvableDependency(dependencyType: java.lang.Class<any>, autowiredValue: java.lang.Object | any): void
                         // @ts-ignore
-                        isAutowireCandidate(beanName: string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
+                        public isAutowireCandidate(beanName: java.lang.String | string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): boolean
                         /**
                          * Determine whether the specified bean definition qualifies as an autowire candidate,
                          * to be injected into other beans which declare a dependency of matching type.
@@ -162,7 +162,7 @@ declare namespace org {
                          * @return whether the bean should be considered as autowire candidate
                          */
                         // @ts-ignore
-                        isAutowireCandidate(beanName: string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor, resolver: org.springframework.beans.factory.support.AutowireCandidateResolver): boolean
+                        isAutowireCandidate(beanName: java.lang.String | string, descriptor: org.springframework.beans.factory.config.DependencyDescriptor, resolver: org.springframework.beans.factory.support.AutowireCandidateResolver): boolean
                         /**
                          * Determine whether the specified bean definition qualifies as an autowire candidate,
                          * to be injected into other beans which declare a dependency of matching type.
@@ -173,32 +173,32 @@ declare namespace org {
                          * @return whether the bean should be considered as autowire candidate
                          */
                         // @ts-ignore
-                        isAutowireCandidate(beanName: string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, descriptor: org.springframework.beans.factory.config.DependencyDescriptor, resolver: org.springframework.beans.factory.support.AutowireCandidateResolver): boolean
+                        isAutowireCandidate(beanName: java.lang.String | string, mbd: org.springframework.beans.factory.support.RootBeanDefinition, descriptor: org.springframework.beans.factory.config.DependencyDescriptor, resolver: org.springframework.beans.factory.support.AutowireCandidateResolver): boolean
                         // @ts-ignore
-                        getBeanDefinition(beanName: string): org.springframework.beans.factory.config.BeanDefinition
+                        public getBeanDefinition(beanName: java.lang.String | string): org.springframework.beans.factory.config.BeanDefinition
                         // @ts-ignore
-                        getBeanNamesIterator(): java.util.Iterator<java.lang.String>
+                        public getBeanNamesIterator(): java.util.Iterator<java.lang.String | string>
                         // @ts-ignore
-                        clearMergedBeanDefinition(beanName: string): void
+                        clearMergedBeanDefinition(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        clearMetadataCache(): void
+                        public clearMetadataCache(): void
                         // @ts-ignore
-                        freezeConfiguration(): void
+                        public freezeConfiguration(): void
                         // @ts-ignore
-                        isConfigurationFrozen(): boolean
+                        public isConfigurationFrozen(): boolean
                         /**
                          * Considers all beans as eligible for metadata caching
                          * if the factory's configuration has been marked as frozen.
                          * @see #freezeConfiguration()
                          */
                         // @ts-ignore
-                        isBeanEligibleForMetadataCaching(beanName: string): boolean
+                        isBeanEligibleForMetadataCaching(beanName: java.lang.String | string): boolean
                         // @ts-ignore
-                        preInstantiateSingletons(): void
+                        public preInstantiateSingletons(): void
                         // @ts-ignore
-                        registerBeanDefinition(beanName: string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
+                        public registerBeanDefinition(beanName: java.lang.String | string, beanDefinition: org.springframework.beans.factory.config.BeanDefinition): void
                         // @ts-ignore
-                        removeBeanDefinition(beanName: string): void
+                        public removeBeanDefinition(beanName: java.lang.String | string): void
                         /**
                          * Reset all bean definition caches for the given bean,
                          * including the caches of beans that are derived from it.
@@ -211,24 +211,24 @@ declare namespace org {
                          * @see #removeBeanDefinition
                          */
                         // @ts-ignore
-                        resetBeanDefinition(beanName: string): void
+                        resetBeanDefinition(beanName: java.lang.String | string): void
                         /**
                          * Only allows alias overriding if bean definition overriding is allowed.
                          */
                         // @ts-ignore
                         allowAliasOverriding(): boolean
                         // @ts-ignore
-                        registerSingleton(beanName: string, singletonObject: any): void
+                        public registerSingleton(beanName: java.lang.String | string, singletonObject: java.lang.Object | any): void
                         // @ts-ignore
-                        destroySingletons(): void
+                        public destroySingletons(): void
                         // @ts-ignore
-                        destroySingleton(beanName: string): void
+                        public destroySingleton(beanName: java.lang.String | string): void
                         // @ts-ignore
-                        resolveNamedBean<T>(requiredType: java.lang.Class<T>): org.springframework.beans.factory.config.NamedBeanHolder<T>
+                        public resolveNamedBean<T>(requiredType: java.lang.Class<T>): org.springframework.beans.factory.config.NamedBeanHolder<T>
                         // @ts-ignore
-                        resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: string, autowiredBeanNames: Array<java.lang.String>, typeConverter: org.springframework.beans.TypeConverter): java.lang.Object
+                        public resolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, requestingBeanName: java.lang.String | string, autowiredBeanNames: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>, typeConverter: org.springframework.beans.TypeConverter): any
                         // @ts-ignore
-                        doResolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, beanName: string, autowiredBeanNames: Array<java.lang.String>, typeConverter: org.springframework.beans.TypeConverter): java.lang.Object
+                        public doResolveDependency(descriptor: org.springframework.beans.factory.config.DependencyDescriptor, beanName: java.lang.String | string, autowiredBeanNames: java.util.Set<java.lang.String | string> | Array<java.lang.String | string>, typeConverter: org.springframework.beans.TypeConverter): any
                         /**
                          * Find bean instances that match the required type.
                          * Called during autowiring for the specified bean.
@@ -243,7 +243,7 @@ declare namespace org {
                          * @see #autowireConstructor
                          */
                         // @ts-ignore
-                        findAutowireCandidates(beanName: string, requiredType: java.lang.Class<any>, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.util.Map<java.lang.String, java.lang.Object>
+                        findAutowireCandidates(beanName: java.lang.String | string, requiredType: java.lang.Class<any>, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.util.Map<java.lang.String | string, java.lang.Object | any>
                         /**
                          * Determine the autowire candidate in the given set of beans.
                          * <p>Looks for {@code @Primary} and {@code @Priority} (in that order).
@@ -253,7 +253,7 @@ declare namespace org {
                          * @return the name of the autowire candidate, or {#code null} if none found
                          */
                         // @ts-ignore
-                        determineAutowireCandidate(candidates: java.util.Map<java.lang.String, java.lang.Object>, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): java.lang.String
+                        determineAutowireCandidate(candidates: java.util.Map<java.lang.String | string, java.lang.Object | any>, descriptor: org.springframework.beans.factory.config.DependencyDescriptor): string
                         /**
                          * Determine the primary candidate in the given set of beans.
                          * @param candidates a Map of candidate names and candidate instances
@@ -263,7 +263,7 @@ declare namespace org {
                          * @see #isPrimary(String, Object)
                          */
                         // @ts-ignore
-                        determinePrimaryCandidate(candidates: java.util.Map<java.lang.String, java.lang.Object>, requiredType: java.lang.Class<any>): java.lang.String
+                        determinePrimaryCandidate(candidates: java.util.Map<java.lang.String | string, java.lang.Object | any>, requiredType: java.lang.Class<any>): string
                         /**
                          * Determine the candidate with the highest priority in the given set of beans.
                          * <p>Based on {@code @javax.annotation.Priority}. As defined by the related
@@ -277,7 +277,7 @@ declare namespace org {
                          * @see #getPriority(Object)
                          */
                         // @ts-ignore
-                        determineHighestPriorityCandidate(candidates: java.util.Map<java.lang.String, java.lang.Object>, requiredType: java.lang.Class<any>): java.lang.String
+                        determineHighestPriorityCandidate(candidates: java.util.Map<java.lang.String | string, java.lang.Object | any>, requiredType: java.lang.Class<any>): string
                         /**
                          * Return whether the bean definition for the given bean name has been
                          * marked as a primary bean.
@@ -286,7 +286,7 @@ declare namespace org {
                          * @return whether the given bean qualifies as primary
                          */
                         // @ts-ignore
-                        isPrimary(beanName: string, beanInstance: any): boolean
+                        isPrimary(beanName: java.lang.String | string, beanInstance: java.lang.Object | any): boolean
                         /**
                          * Return the priority assigned for the given bean instance by
                          * the {@code javax.annotation.Priority} annotation.
@@ -300,17 +300,17 @@ declare namespace org {
                          * @return the priority assigned to that bean or {#code null} if none is set
                          */
                         // @ts-ignore
-                        getPriority(beanInstance: any): java.lang.Integer
+                        getPriority(beanInstance: java.lang.Object | any): number
                         /**
                          * Determine whether the given candidate name matches the bean name or the aliases
                          * stored in this bean definition.
                          */
                         // @ts-ignore
-                        matchesBeanName(beanName: string, candidateName: string): boolean
+                        matchesBeanName(beanName: java.lang.String | string, candidateName: java.lang.String | string): boolean
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         // @ts-ignore
-                        writeReplace(): java.lang.Object
+                        writeReplace(): any
                     }
                 }
             }

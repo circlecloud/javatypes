@@ -13,12 +13,12 @@ declare namespace org {
                          * blocks.
                          */
                         // @ts-ignore
-                        readonly MAIN_HAND: org.spongepowered.api.data.type.HandType
+                        public static readonly MAIN_HAND: org.spongepowered.api.data.type.HandType
                         /**
                          * The hand used for secondary actions, such as a shield.
                          */
                         // @ts-ignore
-                        readonly OFF_HAND: org.spongepowered.api.data.type.HandType
+                        public static readonly OFF_HAND: org.spongepowered.api.data.type.HandType
                     }
                 }
             }

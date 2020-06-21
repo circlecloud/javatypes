@@ -20,28 +20,28 @@ declare namespace java {
                  * is the Window's and PostScript landscape.
                  */
                 // @ts-ignore
-                readonly LANDSCAPE: number /*int*/
+                public static readonly LANDSCAPE: number /*int*/
                 /**
                  * The origin is at the top left of the paper with
                  * x running to the right and y running down the
                  * paper.
                  */
                 // @ts-ignore
-                readonly PORTRAIT: number /*int*/
+                public static readonly PORTRAIT: number /*int*/
                 /**
                  * The origin is at the top right of the paper with x
                  * running top to bottom and y running right to left.
                  * Note that this is the Macintosh landscape.
                  */
                 // @ts-ignore
-                readonly REVERSE_LANDSCAPE: number /*int*/
+                public static readonly REVERSE_LANDSCAPE: number /*int*/
                 /**
                  * Makes a copy of this <code>PageFormat</code> with the same
                  * contents as this <code>PageFormat</code>.
                  * @return a copy of this <code>PageFormat</code>.
                  */
                 // @ts-ignore
-                clone(): java.lang.Object
+                public clone(): any
                 /**
                  * Returns the width, in 1/72nds of an inch, of the page.
                  * This method takes into account the orientation of the
@@ -49,7 +49,7 @@ declare namespace java {
                  * @return the width of the page.
                  */
                 // @ts-ignore
-                getWidth(): double
+                public getWidth(): number /*double*/
                 /**
                  * Returns the height, in 1/72nds of an inch, of the page.
                  * This method takes into account the orientation of the
@@ -57,7 +57,7 @@ declare namespace java {
                  * @return the height of the page.
                  */
                 // @ts-ignore
-                getHeight(): double
+                public getHeight(): number /*double*/
                 /**
                  * Returns the x coordinate of the upper left point of the
                  * imageable area of the <code>Paper</code> object
@@ -69,7 +69,7 @@ declare namespace java {
                  *  associated with this <code>PageFormat</code>.
                  */
                 // @ts-ignore
-                getImageableX(): double
+                public getImageableX(): number /*double*/
                 /**
                  * Returns the y coordinate of the upper left point of the
                  * imageable area of the <code>Paper</code> object
@@ -81,7 +81,7 @@ declare namespace java {
                  *  associated with this <code>PageFormat</code>.
                  */
                 // @ts-ignore
-                getImageableY(): double
+                public getImageableY(): number /*double*/
                 /**
                  * Returns the width, in 1/72nds of an inch, of the imageable
                  * area of the page. This method takes into account the orientation
@@ -89,7 +89,7 @@ declare namespace java {
                  * @return the width of the page.
                  */
                 // @ts-ignore
-                getImageableWidth(): double
+                public getImageableWidth(): number /*double*/
                 /**
                  * Return the height, in 1/72nds of an inch, of the imageable
                  * area of the page. This method takes into account the orientation
@@ -97,7 +97,7 @@ declare namespace java {
                  * @return the height of the page.
                  */
                 // @ts-ignore
-                getImageableHeight(): double
+                public getImageableHeight(): number /*double*/
                 /**
                  * Returns a copy of the {@link Paper} object associated
                  * with this <code>PageFormat</code>.  Changes made to the
@@ -113,7 +113,7 @@ declare namespace java {
                  * @see #setPaper
                  */
                 // @ts-ignore
-                getPaper(): java.awt.print.Paper
+                public getPaper(): java.awt.print.Paper
                 /**
                  * Sets the <code>Paper</code> object for this
                  * <code>PageFormat</code>.
@@ -124,7 +124,7 @@ declare namespace java {
                  * @see #getPaper
                  */
                 // @ts-ignore
-                setPaper(paper: java.awt.print.Paper): void
+                public setPaper(paper: java.awt.print.Paper): void
                 /**
                  * Sets the page orientation. <code>orientation</code> must be
                  * one of the constants: PORTRAIT, LANDSCAPE,
@@ -135,14 +135,14 @@ declare namespace java {
                  * @see #getOrientation
                  */
                 // @ts-ignore
-                setOrientation(orientation: number /*int*/): void
+                public setOrientation(orientation: number /*int*/): void
                 /**
                  * Returns the orientation of this <code>PageFormat</code>.
                  * @return this <code>PageFormat</code> object's orientation.
                  * @see #setOrientation
                  */
                 // @ts-ignore
-                getOrientation(): int
+                public getOrientation(): number /*int*/
                 /**
                  * Returns a transformation matrix that translates user
                  * space rendering to the requested orientation
@@ -156,7 +156,7 @@ declare namespace java {
                  * @see java.awt.geom.AffineTransform
                  */
                 // @ts-ignore
-                getMatrix(): double[]
+                public getMatrix(): number /*double*/[]
             }
         }
     }

@@ -15,7 +15,7 @@ declare namespace javax {
              * @since SAAJ 1.3
              */
             // @ts-ignore
-            class SAAJMetaFactory extends java.lang.Object {
+            abstract class SAAJMetaFactory extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -29,7 +29,7 @@ declare namespace javax {
                  * @see SOAPConstants#DYNAMIC_SOAP_PROTOCOL
                  */
                 // @ts-ignore
-                abstract newMessageFactory(protocol: string): javax.xml.soap.MessageFactory
+                abstract newMessageFactory(protocol: java.lang.String | string): javax.xml.soap.MessageFactory
                 /**
                  * Creates a <code>SOAPFactory</code> object for
                  * the given <code>String</code> protocol.
@@ -41,7 +41,7 @@ declare namespace javax {
                  * @see SOAPConstants#DYNAMIC_SOAP_PROTOCOL
                  */
                 // @ts-ignore
-                abstract newSOAPFactory(protocol: string): javax.xml.soap.SOAPFactory
+                abstract newSOAPFactory(protocol: java.lang.String | string): javax.xml.soap.SOAPFactory
             }
         }
     }

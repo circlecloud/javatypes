@@ -10,7 +10,7 @@ declare namespace javax {
                  * @since 1.3
                  */
                 // @ts-ignore
-                class MidiFileWriter extends java.lang.Object {
+                abstract class MidiFileWriter extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -20,7 +20,7 @@ declare namespace javax {
                      *          length 0 is returned.
                      */
                     // @ts-ignore
-                    abstract getMidiFileTypes(): int[]
+                    public abstract getMidiFileTypes(): number /*int*/[]
                     /**
                      * Obtains the file types that this file writer can write from the sequence
                      * specified.
@@ -30,7 +30,7 @@ declare namespace javax {
                      *          array of length 0.
                      */
                     // @ts-ignore
-                    abstract getMidiFileTypes(sequence: javax.sound.midi.Sequence): int[]
+                    public abstract getMidiFileTypes(sequence: javax.sound.midi.Sequence): number /*int*/[]
                     /**
                      * Indicates whether file writing support for the specified MIDI file type
                      * is provided by this file writer.
@@ -39,7 +39,7 @@ declare namespace javax {
                      *          {@code false}
                      */
                     // @ts-ignore
-                    isFileTypeSupported(fileType: number /*int*/): boolean
+                    public isFileTypeSupported(fileType: number /*int*/): boolean
                     /**
                      * Indicates whether a MIDI file of the file type specified can be written
                      * from the sequence indicated.
@@ -49,7 +49,7 @@ declare namespace javax {
                      *          otherwise {@code false}
                      */
                     // @ts-ignore
-                    isFileTypeSupported(fileType: number /*int*/, sequence: javax.sound.midi.Sequence): boolean
+                    public isFileTypeSupported(fileType: number /*int*/, sequence: javax.sound.midi.Sequence): boolean
                     /**
                      * Writes a stream of bytes representing a MIDI file of the file type
                      * indicated to the output stream provided.
@@ -64,7 +64,7 @@ declare namespace javax {
                      * @see #getMidiFileTypes(Sequence)
                      */
                     // @ts-ignore
-                    abstract write(input: javax.sound.midi.Sequence, fileType: number /*int*/, out: java.io.OutputStream): int
+                    public abstract write(input: javax.sound.midi.Sequence, fileType: number /*int*/, out: java.io.OutputStream): number /*int*/
                     /**
                      * Writes a stream of bytes representing a MIDI file of the file type
                      * indicated to the external file provided.
@@ -80,7 +80,7 @@ declare namespace javax {
                      * @see #getMidiFileTypes(Sequence)
                      */
                     // @ts-ignore
-                    abstract write(input: javax.sound.midi.Sequence, fileType: number /*int*/, out: java.io.File): int
+                    public abstract write(input: javax.sound.midi.Sequence, fileType: number /*int*/, out: java.io.File): number /*int*/
                 }
             }
         }

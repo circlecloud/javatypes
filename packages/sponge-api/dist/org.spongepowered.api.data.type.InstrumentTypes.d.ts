@@ -6,25 +6,25 @@ declare namespace org {
                     // @ts-ignore
                     class InstrumentTypes extends java.lang.Object {
                         // @ts-ignore
-                        readonly BASS_ATTACK: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly BASS_ATTACK: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly BASS_DRUM: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly BASS_DRUM: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly BELL: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly BELL: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly CHIME: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly CHIME: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly FLUTE: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly FLUTE: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly GUITAR: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly GUITAR: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly HARP: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly HARP: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly HIGH_HAT: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly HIGH_HAT: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly SNARE: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly SNARE: org.spongepowered.api.data.type.InstrumentType
                         // @ts-ignore
-                        readonly XYLOPHONE: org.spongepowered.api.data.type.InstrumentType
+                        public static readonly XYLOPHONE: org.spongepowered.api.data.type.InstrumentType
                     }
                 }
             }

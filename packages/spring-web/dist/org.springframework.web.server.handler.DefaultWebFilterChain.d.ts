@@ -22,7 +22,7 @@ declare namespace org {
                          * @since 5.1
                          */
                         // @ts-ignore
-                        constructor(handler: org.springframework.web.server.WebHandler, filters: Array<org.springframework.web.server.WebFilter>)
+                        constructor(handler: org.springframework.web.server.WebHandler, filters: java.util.List<org.springframework.web.server.WebFilter> | Array<org.springframework.web.server.WebFilter>)
                         /**
                          * Public constructor with the list of filters and the target handler to use.
                          * @param handler the target handler
@@ -33,11 +33,11 @@ declare namespace org {
                         // @ts-ignore
                         constructor(handler: org.springframework.web.server.WebHandler, ...filters: org.springframework.web.server.WebFilter[])
                         // @ts-ignore
-                        getFilters(): java.util.List<org.springframework.web.server.WebFilter>
+                        public getFilters(): Array<org.springframework.web.server.WebFilter>
                         // @ts-ignore
-                        getHandler(): org.springframework.web.server.WebHandler
+                        public getHandler(): org.springframework.web.server.WebHandler
                         // @ts-ignore
-                        filter(exchange: org.springframework.web.server.ServerWebExchange): <any>
+                        public filter(exchange: org.springframework.web.server.ServerWebExchange): object
                     }
                 }
             }

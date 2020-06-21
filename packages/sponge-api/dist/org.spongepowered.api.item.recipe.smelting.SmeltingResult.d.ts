@@ -30,20 +30,20 @@ declare namespace org {
                              *          {#link SmeltingRecipe}
                              */
                             // @ts-ignore
-                            getResult(): org.spongepowered.api.item.inventory.ItemStackSnapshot
+                            public getResult(): org.spongepowered.api.item.inventory.ItemStackSnapshot
                             /**
                              * Returns the amount of experience released after completing a recipe.
                              * @return The amount of experience released after fulfilling the
                              *          requirements of a {#link SmeltingRecipe}
                              */
                             // @ts-ignore
-                            getExperience(): double
+                            public getExperience(): number /*double*/
                             // @ts-ignore
-                            equals(o: any): boolean
+                            public equals(o: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                             // @ts-ignore
-                            toString(): java.lang.String
+                            public toString(): string
                         }
                     }
                 }

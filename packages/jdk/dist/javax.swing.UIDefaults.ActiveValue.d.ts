@@ -26,7 +26,7 @@ declare namespace javax {
                  * @return the created <code>Object</code>
                  */
                 // @ts-ignore
-                createValue(table: javax.swing.UIDefaults): java.lang.Object
+                createValue(table: javax.swing.UIDefaults): any
             }
         }
     }

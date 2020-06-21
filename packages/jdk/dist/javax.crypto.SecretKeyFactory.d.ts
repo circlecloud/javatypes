@@ -48,7 +48,7 @@ declare namespace javax {
              * @param algorithm the secret-key algorithm
              */
             // @ts-ignore
-            constructor(keyFacSpi: javax.crypto.SecretKeyFactorySpi, provider: java.security.Provider, algorithm: string)
+            constructor(keyFacSpi: javax.crypto.SecretKeyFactorySpi, provider: java.security.Provider, algorithm: java.lang.String | string)
             /**
              * Returns a <code>SecretKeyFactory</code> object that converts
              * secret keys of the specified algorithm.
@@ -74,7 +74,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string): javax.crypto.SecretKeyFactory
+            public static getInstance(algorithm: java.lang.String | string): javax.crypto.SecretKeyFactory
             /**
              * Returns a <code>SecretKeyFactory</code> object that converts
              * secret keys of the specified algorithm.
@@ -104,7 +104,7 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: string): javax.crypto.SecretKeyFactory
+            public static getInstance(algorithm: java.lang.String | string, provider: java.lang.String | string): javax.crypto.SecretKeyFactory
             /**
              * Returns a <code>SecretKeyFactory</code> object that converts
              * secret keys of the specified algorithm.
@@ -130,13 +130,13 @@ declare namespace javax {
              * @see java.security.Provider
              */
             // @ts-ignore
-            getInstance(algorithm: string, provider: java.security.Provider): javax.crypto.SecretKeyFactory
+            public static getInstance(algorithm: java.lang.String | string, provider: java.security.Provider): javax.crypto.SecretKeyFactory
             /**
              * Returns the provider of this <code>SecretKeyFactory</code> object.
              * @return the provider of this <code>SecretKeyFactory</code> object
              */
             // @ts-ignore
-            getProvider(): java.security.Provider
+            public getProvider(): java.security.Provider
             /**
              * Returns the algorithm name of this <code>SecretKeyFactory</code> object.
              * <p>This is the same name that was specified in one of the
@@ -146,7 +146,7 @@ declare namespace javax {
              *  object.
              */
             // @ts-ignore
-            getAlgorithm(): java.lang.String
+            public getAlgorithm(): string
             /**
              * Generates a <code>SecretKey</code> object from the provided key
              * specification (key material).
@@ -156,7 +156,7 @@ declare namespace javax {
              *  is inappropriate for this secret-key factory to produce a secret key.
              */
             // @ts-ignore
-            generateSecret(keySpec: java.security.spec.KeySpec): javax.crypto.SecretKey
+            public generateSecret(keySpec: java.security.spec.KeySpec): javax.crypto.SecretKey
             /**
              * Returns a specification (key material) of the given key object
              * in the requested format.
@@ -175,7 +175,7 @@ declare namespace javax {
              *  secret-key factory).
              */
             // @ts-ignore
-            getKeySpec(key: javax.crypto.SecretKey, keySpec: java.lang.Class<any>): java.security.spec.KeySpec
+            public getKeySpec(key: javax.crypto.SecretKey, keySpec: java.lang.Class<any>): java.security.spec.KeySpec
             /**
              * Translates a key object, whose provider may be unknown or potentially
              * untrusted, into a corresponding key object of this secret-key factory.
@@ -185,7 +185,7 @@ declare namespace javax {
              *  by this secret-key factory.
              */
             // @ts-ignore
-            translateKey(key: javax.crypto.SecretKey): javax.crypto.SecretKey
+            public translateKey(key: javax.crypto.SecretKey): javax.crypto.SecretKey
         }
     }
 }

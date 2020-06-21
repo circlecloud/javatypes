@@ -11,114 +11,114 @@ declare namespace org {
              * @since 4.0
              */
             // @ts-ignore
-            class MimeTypeUtils extends java.lang.Object {
+            abstract class MimeTypeUtils extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
                  * Comparator used by {@link #sortBySpecificity(List)}.
                  */
                 // @ts-ignore
-                readonly SPECIFICITY_COMPARATOR: java.util.Comparator<org.springframework.util.MimeType>
+                public static readonly SPECIFICITY_COMPARATOR: java.util.Comparator<org.springframework.util.MimeType>
                 /**
                  * Public constant mime type that includes all media ranges (i.e. "&#42;/&#42;").
                  */
                 // @ts-ignore
-                readonly ALL: org.springframework.util.MimeType
+                public static readonly ALL: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#ALL}.
                  */
                 // @ts-ignore
-                readonly ALL_VALUE: string
+                public static readonly ALL_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code application/json}.
                  */
                 // @ts-ignore
-                readonly APPLICATION_JSON: org.springframework.util.MimeType
+                public static readonly APPLICATION_JSON: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#APPLICATION_JSON}.
                  */
                 // @ts-ignore
-                readonly APPLICATION_JSON_VALUE: string
+                public static readonly APPLICATION_JSON_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code application/octet-stream}.
                  */
                 // @ts-ignore
-                readonly APPLICATION_OCTET_STREAM: org.springframework.util.MimeType
+                public static readonly APPLICATION_OCTET_STREAM: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#APPLICATION_OCTET_STREAM}.
                  */
                 // @ts-ignore
-                readonly APPLICATION_OCTET_STREAM_VALUE: string
+                public static readonly APPLICATION_OCTET_STREAM_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code application/xml}.
                  */
                 // @ts-ignore
-                readonly APPLICATION_XML: org.springframework.util.MimeType
+                public static readonly APPLICATION_XML: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#APPLICATION_XML}.
                  */
                 // @ts-ignore
-                readonly APPLICATION_XML_VALUE: string
+                public static readonly APPLICATION_XML_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code image/gif}.
                  */
                 // @ts-ignore
-                readonly IMAGE_GIF: org.springframework.util.MimeType
+                public static readonly IMAGE_GIF: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#IMAGE_GIF}.
                  */
                 // @ts-ignore
-                readonly IMAGE_GIF_VALUE: string
+                public static readonly IMAGE_GIF_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code image/jpeg}.
                  */
                 // @ts-ignore
-                readonly IMAGE_JPEG: org.springframework.util.MimeType
+                public static readonly IMAGE_JPEG: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#IMAGE_JPEG}.
                  */
                 // @ts-ignore
-                readonly IMAGE_JPEG_VALUE: string
+                public static readonly IMAGE_JPEG_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code image/png}.
                  */
                 // @ts-ignore
-                readonly IMAGE_PNG: org.springframework.util.MimeType
+                public static readonly IMAGE_PNG: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#IMAGE_PNG}.
                  */
                 // @ts-ignore
-                readonly IMAGE_PNG_VALUE: string
+                public static readonly IMAGE_PNG_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code text/html}.
                  */
                 // @ts-ignore
-                readonly TEXT_HTML: org.springframework.util.MimeType
+                public static readonly TEXT_HTML: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#TEXT_HTML}.
                  */
                 // @ts-ignore
-                readonly TEXT_HTML_VALUE: string
+                public static readonly TEXT_HTML_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code text/plain}.
                  */
                 // @ts-ignore
-                readonly TEXT_PLAIN: org.springframework.util.MimeType
+                public static readonly TEXT_PLAIN: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#TEXT_PLAIN}.
                  */
                 // @ts-ignore
-                readonly TEXT_PLAIN_VALUE: string
+                public static readonly TEXT_PLAIN_VALUE: java.lang.String | string
                 /**
                  * Public constant mime type for {@code text/xml}.
                  */
                 // @ts-ignore
-                readonly TEXT_XML: org.springframework.util.MimeType
+                public static readonly TEXT_XML: org.springframework.util.MimeType
                 /**
                  * A String equivalent of {@link MimeTypeUtils#TEXT_XML}.
                  */
                 // @ts-ignore
-                readonly TEXT_XML_VALUE: string
+                public static readonly TEXT_XML_VALUE: java.lang.String | string
                 /**
                  * Parse the given String into a single {@code MimeType}.
                  * Recently parsed {@code MimeType} are cached for further retrieval.
@@ -127,7 +127,7 @@ declare namespace org {
                  * @throws InvalidMimeTypeException if the string cannot be parsed
                  */
                 // @ts-ignore
-                parseMimeType(mimeType: string): org.springframework.util.MimeType
+                public static parseMimeType(mimeType: java.lang.String | string): org.springframework.util.MimeType
                 /**
                  * Parse the comma-separated string into a list of {@code MimeType} objects.
                  * @param mimeTypes the string to parse
@@ -135,7 +135,7 @@ declare namespace org {
                  * @throws InvalidMimeTypeException if the string cannot be parsed
                  */
                 // @ts-ignore
-                parseMimeTypes(mimeTypes: string): java.util.List<org.springframework.util.MimeType>
+                public static parseMimeTypes(mimeTypes: java.lang.String | string): Array<org.springframework.util.MimeType>
                 /**
                  * Tokenize the given comma-separated string of {@code MimeType} objects
                  * into a {@code List<String>}. Unlike simple tokenization by ",", this
@@ -145,7 +145,7 @@ declare namespace org {
                  * @since 5.1.3
                  */
                 // @ts-ignore
-                tokenize(mimeTypes: string): java.util.List<java.lang.String>
+                public static tokenize(mimeTypes: java.lang.String | string): Array<java.lang.String | string>
                 /**
                  * Return a string representation of the given list of {@code MimeType} objects.
                  * @param mimeTypes the string to parse
@@ -153,7 +153,7 @@ declare namespace org {
                  * @throws IllegalArgumentException if the String cannot be parsed
                  */
                 // @ts-ignore
-                toString(mimeTypes: Array<org.springframework.util.MimeType>): java.lang.String
+                public static toString(mimeTypes: java.util.Collection<any> | Array<any>): string
                 /**
                  * Sorts the given list of {@code MimeType} objects by specificity.
                  * <p>Given two mime types:
@@ -179,17 +179,17 @@ declare namespace org {
                  *  and Content, section 5.3.2</a>
                  */
                 // @ts-ignore
-                sortBySpecificity(mimeTypes: Array<org.springframework.util.MimeType>): void
+                public static sortBySpecificity(mimeTypes: java.util.List<org.springframework.util.MimeType> | Array<org.springframework.util.MimeType>): void
                 /**
                  * Generate a random MIME boundary as bytes, often used in multipart mime types.
                  */
                 // @ts-ignore
-                generateMultipartBoundary(): byte[]
+                public static generateMultipartBoundary(): number /*byte*/[]
                 /**
                  * Generate a random MIME boundary as String, often used in multipart mime types.
                  */
                 // @ts-ignore
-                generateMultipartBoundaryString(): java.lang.String
+                public static generateMultipartBoundaryString(): string
             }
         }
     }

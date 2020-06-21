@@ -20,26 +20,26 @@ declare namespace org {
                 // @ts-ignore
                 constructor(type: org.bukkit.Material, data: number /*byte*/)
                 // @ts-ignore
-                getTextures(): java.util.List<org.bukkit.Material>
+                public getTextures(): Array<org.bukkit.Material>
                 /**
                  * Test if step is inverted
                  * @return true if inverted (top half), false if normal (bottom half)
                  */
                 // @ts-ignore
-                isInverted(): boolean
+                public isInverted(): boolean
                 /**
                  * Set step inverted state
                  * @param inv - true if step is inverted (top half), false if step is
                  *      normal (bottom half)
                  */
                 // @ts-ignore
-                setInverted(inv: boolean): void
+                public setInverted(inv: boolean): void
                 /**
                  * {@inheritDoc}
                  * @deprecated Magic value
                  */
                 // @ts-ignore
-                getTextureIndex(): int
+                getTextureIndex(): number /*int*/
                 /**
                  * {@inheritDoc}
                  * @deprecated Magic value
@@ -47,9 +47,9 @@ declare namespace org {
                 // @ts-ignore
                 setTextureIndex(idx: number /*int*/): void
                 // @ts-ignore
-                clone(): org.bukkit.material.Step
+                public clone(): org.bukkit.material.Step
                 // @ts-ignore
-                toString(): java.lang.String
+                public toString(): string
             }
         }
     }

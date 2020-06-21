@@ -26,7 +26,7 @@ declare namespace org {
                  * @see CatalogType
                  */
                 // @ts-ignore
-                getType<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>, id: string): java.util.Optional<T>
+                getType<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>, id: java.lang.String | string): java.util.Optional<T>
                 /**
                  * Gets a collection of all available found specific types of
                  * {@link CatalogType} requested.
@@ -38,7 +38,7 @@ declare namespace org {
                  * @return A collection of all known types of the requested catalog type
                  */
                 // @ts-ignore
-                getAllOf<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>): java.util.Collection<T>
+                getAllOf<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>): Array<T>
                 /**
                  * Gets a collection of all available found specific types of
                  * {@link CatalogType} requested.
@@ -48,7 +48,7 @@ declare namespace org {
                  * @return A collection of all known types of the requested catalog type
                  */
                 // @ts-ignore
-                getAllFor<T extends org.spongepowered.api.CatalogType>(pluginId: string, typeClass: java.lang.Class<T>): java.util.Collection<T>
+                getAllFor<T extends org.spongepowered.api.CatalogType>(pluginId: java.lang.String | string, typeClass: java.lang.Class<T>): Array<T>
                 /**
                  * Gets all {@link CatalogType} for Minecraft as a base mod. Note that
                  * some {@link CatalogType}s are not originally from the game itself, and
@@ -58,7 +58,7 @@ declare namespace org {
                  * @return The collection of all known types of the requested catalog type
                  */
                 // @ts-ignore
-                getAllForMinecraft<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>): java.util.Collection<T>
+                getAllForMinecraft<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>): Array<T>
                 /**
                  * Gets all {@link CatalogType} for Sponge as a base mod. Note that
                  * some {@link CatalogType}s are not originally from the game itself, and
@@ -68,7 +68,7 @@ declare namespace org {
                  * @return The collection of all known types of the requested catalog type
                  */
                 // @ts-ignore
-                getAllForSponge<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>): java.util.Collection<T>
+                getAllForSponge<T extends org.spongepowered.api.CatalogType>(typeClass: java.lang.Class<T>): Array<T>
                 /**
                  * Registers the {@link CatalogRegistryModule} for dummy registration and
                  * handling.
@@ -104,7 +104,7 @@ declare namespace org {
                  * @return This registry, for chaining
                  */
                 // @ts-ignore
-                registerBuilderSupplier<T>(builderClass: java.lang.Class<T>, supplier: java.util.function.Supplier<T> | java.util.function$.Supplier<T>): org.spongepowered.api.GameRegistry
+                registerBuilderSupplier<T>(builderClass: java.lang.Class<T>, supplier: java.util.function$.Supplier<any>): org.spongepowered.api.GameRegistry
                 /**
                  * Gets a builder of the desired class type, examples may include:
                  * {@link org.spongepowered.api.item.inventory.ItemStack.Builder}, etc.
@@ -115,7 +115,7 @@ declare namespace org {
                  *       builder class
                  */
                 // @ts-ignore
-                createBuilder<T extends org.spongepowered.api.util.ResettableBuilder<?, ? super T>>(builderClass: java.lang.Class<T>): T
+                createBuilder<T extends org.spongepowered.api.util.ResettableBuilder>(builderClass: java.lang.Class<T>): T
                 /**
                  * Registers a new {@link CatalogType} instance if registration for that
                  * type is supported.
@@ -137,13 +137,13 @@ declare namespace org {
                  *       should be used instead
                  */
                 // @ts-ignore
-                register<T extends org.spongepowered.api.CatalogType>(type: java.lang.Class<T>, obj: T extends org.spongepowered.api.CatalogType): T
+                register<T extends org.spongepowered.api.CatalogType>(type: java.lang.Class<T>, obj: T): T
                 /**
                  * Gets a {@link Collection} of the default GameRules.
                  * @return The default GameRules.
                  */
                 // @ts-ignore
-                getDefaultGameRules(): java.util.Collection<java.lang.String>
+                getDefaultGameRules(): Array<java.lang.String | string>
                 /**
                  * Gets the {@link Statistic} for the given {@link StatisticType} and
                  * {@link EntityType}. If the statistic group is not a valid
@@ -193,7 +193,7 @@ declare namespace org {
                  * @throws IOException If the favicon couldn't be loaded
                  */
                 // @ts-ignore
-                loadFavicon(raw: string): org.spongepowered.api.network.status.Favicon
+                loadFavicon(raw: java.lang.String | string): org.spongepowered.api.network.status.Favicon
                 /**
                  * Loads a favicon from a specified {@link Path}.
                  * @param path The path to the favicon
@@ -246,7 +246,7 @@ declare namespace org {
                  *          none could be found
                  */
                 // @ts-ignore
-                getResourcePackById(id: string): java.util.Optional<org.spongepowered.api.resourcepack.ResourcePack>
+                getResourcePackById(id: java.lang.String | string): java.util.Optional<org.spongepowered.api.resourcepack.ResourcePack>
                 /**
                  * Gets a {@link DisplaySlot} which displays only for teams with the
                  * provided color.
@@ -267,7 +267,7 @@ declare namespace org {
                  * @return The type
                  */
                 // @ts-ignore
-                registerAITaskType(plugin: any, id: string, name: string, aiClass: java.lang.Class<org.spongepowered.api.entity.ai.task.AbstractAITask<org.spongepowered.api.entity.living.Agent>>): org.spongepowered.api.entity.ai.task.AITaskType
+                registerAITaskType(plugin: java.lang.Object | any, id: java.lang.String | string, name: java.lang.String | string, aiClass: java.lang.Class<any>): org.spongepowered.api.entity.ai.task.AITaskType
                 /**
                  * Gets the {@link ExtentBufferFactory} for creating buffers
                  * to store extent data.
@@ -308,7 +308,7 @@ declare namespace org {
                  * @return The locale
                  */
                 // @ts-ignore
-                getLocale(locale: string): java.util.Locale
+                getLocale(locale: java.lang.String | string): java.util.Locale
                 /**
                  * Gets the {@link Translation} with the provided ID.
                  * @param id The ID of the translation
@@ -316,7 +316,7 @@ declare namespace org {
                  *       not found
                  */
                 // @ts-ignore
-                getTranslationById(id: string): java.util.Optional<org.spongepowered.api.text.translation.Translation>
+                getTranslationById(id: java.lang.String | string): java.util.Optional<org.spongepowered.api.text.translation.Translation>
             }
         }
     }

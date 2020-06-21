@@ -45,7 +45,7 @@ declare namespace javax {
                      *         is a <code>null</code> value
                      */
                     // @ts-ignore
-                    constructor(attributes: java.util.Vector<any>, map: java.util.Map<java.lang.String, any>)
+                    constructor(attributes: java.util.Vector<any>, map: java.util.Map<java.lang.String | string, any>)
                     /**
                      * Writes a <code>String</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -57,7 +57,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeString(x: string): void
+                    public writeString(x: java.lang.String | string): void
                     /**
                      * Writes a <code>boolean</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -68,7 +68,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeBoolean(x: boolean): void
+                    public writeBoolean(x: boolean): void
                     /**
                      * Writes a <code>byte</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -79,7 +79,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeByte(x: number /*byte*/): void
+                    public writeByte(x: number /*byte*/): void
                     /**
                      * Writes a <code>short</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -90,7 +90,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeShort(x: number /*short*/): void
+                    public writeShort(x: number /*short*/): void
                     /**
                      * Writes an <code>int</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -101,7 +101,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeInt(x: number /*int*/): void
+                    public writeInt(x: number /*int*/): void
                     /**
                      * Writes a <code>long</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -112,7 +112,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeLong(x: number /*long*/): void
+                    public writeLong(x: number /*long*/): void
                     /**
                      * Writes a <code>float</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -123,7 +123,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeFloat(x: number /*float*/): void
+                    public writeFloat(x: number /*float*/): void
                     /**
                      * Writes a <code>double</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -134,7 +134,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeDouble(x: number /*double*/): void
+                    public writeDouble(x: number /*double*/): void
                     /**
                      * Writes a <code>java.math.BigDecimal</code> object in the Java programming
                      * language to this <code>SQLOutputImpl</code> object. The driver converts
@@ -145,7 +145,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeBigDecimal(x: java.math.BigDecimal): void
+                    public writeBigDecimal(x: java.math.BigDecimal): void
                     /**
                      * Writes an array of <code>bytes</code> in the Java programming language
                      * to this <code>SQLOutputImpl</code> object. The driver converts
@@ -157,7 +157,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeBytes(x: number /*byte*/[]): void
+                    public writeBytes(x: number /*byte*/[]): void
                     /**
                      * Writes a <code>java.sql.Date</code> object in the Java programming
                      * language to this <code>SQLOutputImpl</code> object. The driver converts
@@ -168,7 +168,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeDate(x: java.sql.Date): void
+                    public writeDate(x: java.sql.Date): void
                     /**
                      * Writes a <code>java.sql.Time</code> object in the Java programming
                      * language to this <code>SQLOutputImpl</code> object. The driver converts
@@ -179,7 +179,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeTime(x: java.sql.Time): void
+                    public writeTime(x: java.sql.Time): void
                     /**
                      * Writes a <code>java.sql.Timestamp</code> object in the Java programming
                      * language to this <code>SQLOutputImpl</code> object. The driver converts
@@ -190,7 +190,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeTimestamp(x: java.sql.Timestamp): void
+                    public writeTimestamp(x: java.sql.Timestamp): void
                     /**
                      * Writes a stream of Unicode characters to this
                      * <code>SQLOutputImpl</code> object. The driver will do any necessary
@@ -201,7 +201,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeCharacterStream(x: java.io.Reader): void
+                    public writeCharacterStream(x: java.io.Reader): void
                     /**
                      * Writes a stream of ASCII characters to this
                      * <code>SQLOutputImpl</code> object. The driver will do any necessary
@@ -212,7 +212,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeAsciiStream(x: java.io.InputStream): void
+                    public writeAsciiStream(x: java.io.InputStream): void
                     /**
                      * Writes a stream of uninterpreted bytes to this <code>SQLOutputImpl</code>
                      * object.
@@ -222,7 +222,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeBinaryStream(x: java.io.InputStream): void
+                    public writeBinaryStream(x: java.io.InputStream): void
                     /**
                      * Writes to the stream the data contained in the given
                      * <code>SQLData</code> object.
@@ -246,7 +246,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeObject(x: java.sql.SQLData): void
+                    public writeObject(x: java.sql.SQLData): void
                     /**
                      * Writes a <code>Ref</code> object in the Java programming language
                      * to this <code>SQLOutputImpl</code> object.  The driver converts
@@ -258,7 +258,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeRef(x: java.sql.Ref): void
+                    public writeRef(x: java.sql.Ref): void
                     /**
                      * Writes a <code>Blob</code> object in the Java programming language
                      * to this <code>SQLOutputImpl</code> object.  The driver converts
@@ -270,7 +270,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeBlob(x: java.sql.Blob): void
+                    public writeBlob(x: java.sql.Blob): void
                     /**
                      * Writes a <code>Clob</code> object in the Java programming language
                      * to this <code>SQLOutputImpl</code> object.  The driver converts
@@ -282,7 +282,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeClob(x: java.sql.Clob): void
+                    public writeClob(x: java.sql.Clob): void
                     /**
                      * Writes a <code>Struct</code> object in the Java
                      * programming language to this <code>SQLOutputImpl</code>
@@ -300,7 +300,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeStruct(x: java.sql.Struct): void
+                    public writeStruct(x: java.sql.Struct): void
                     /**
                      * Writes an <code>Array</code> object in the Java
                      * programming language to this <code>SQLOutputImpl</code>
@@ -313,7 +313,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeArray(x: java.sql.Array): void
+                    public writeArray(x: java.sql.Array): void
                     /**
                      * Writes an <code>java.sql.Type.DATALINK</code> object in the Java
                      * programming language to this <code>SQLOutputImpl</code> object. The
@@ -325,7 +325,7 @@ declare namespace javax {
                      *         values of a UDT to the database.
                      */
                     // @ts-ignore
-                    writeURL(url: java.net.URL): void
+                    public writeURL(url: java.net.URL): void
                     /**
                      * Writes the next attribute to the stream as a <code>String</code>
                      * in the Java programming language. The driver converts this to a
@@ -339,7 +339,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    writeNString(x: string): void
+                    public writeNString(x: java.lang.String | string): void
                     /**
                      * Writes an SQL <code>NCLOB</code> value to the stream.
                      * @param x a <code>NClob</code> object representing data of an SQL
@@ -348,7 +348,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    writeNClob(x: java.sql.NClob): void
+                    public writeNClob(x: java.sql.NClob): void
                     /**
                      * Writes an SQL <code>ROWID</code> value to the stream.
                      * @param x a <code>RowId</code> object representing data of an SQL
@@ -357,7 +357,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    writeRowId(x: java.sql.RowId): void
+                    public writeRowId(x: java.sql.RowId): void
                     /**
                      * Writes an SQL <code>XML</code> value to the stream.
                      * @param x a <code>SQLXML</code> object representing data of an SQL
@@ -366,7 +366,7 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    writeSQLXML(x: java.sql.SQLXML): void
+                    public writeSQLXML(x: java.sql.SQLXML): void
                 }
             }
         }

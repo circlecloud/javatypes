@@ -17,7 +17,7 @@ declare namespace org {
                                  * @return The immutable value for the already passed burn time
                                  */
                                 // @ts-ignore
-                                passedBurnTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                passedBurnTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the maximum amount of fuel
                                  * that can be supplied with the used fuel item.
@@ -28,7 +28,7 @@ declare namespace org {
                                  *       supplied with the used fuel item
                                  */
                                 // @ts-ignore
-                                maxBurnTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                maxBurnTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the already passed cook time
                                  * of the {@link ItemStack} in the {@link Furnace}. When this is equal
@@ -36,14 +36,14 @@ declare namespace org {
                                  * @return The immutable value for the already passed cook time
                                  */
                                 // @ts-ignore
-                                passedCookTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                passedCookTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link ImmutableBoundedValue} for the total time the
                                  * {@link ItemStack} has to cook until it is cooked.
                                  * @return The immutable value for the time the item has to cook
                                  */
                                 // @ts-ignore
-                                maxCookTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                maxCookTime(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

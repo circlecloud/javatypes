@@ -6,7 +6,7 @@ declare namespace javax {
              * @author Rich Schiavi
              */
             // @ts-ignore
-            class ViewportUI extends javax.swing.plaf.ComponentUI {
+            abstract class ViewportUI extends javax.swing.plaf.ComponentUI {
                 // @ts-ignore
                 constructor()
             }

@@ -94,7 +94,7 @@ declare namespace java {
              * @return the number of key-value mappings in this map
              */
             // @ts-ignore
-            size(): int
+            size(): number /*int*/
             /**
              * Returns <tt>true</tt> if this map contains no key-value mappings.
              * @return <tt>true</tt> if this map contains no key-value mappings
@@ -118,7 +118,7 @@ declare namespace java {
              *  (<a href="{#docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            containsKey(key: any): boolean
+            containsKey(key: java.lang.Object | any): boolean
             /**
              * Returns <tt>true</tt> if this map maps one or more keys to the
              * specified value.  More formally, returns <tt>true</tt> if and only if
@@ -137,7 +137,7 @@ declare namespace java {
              *  (<a href="{#docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            containsValue(value: any): boolean
+            containsValue(value: java.lang.Object | any): boolean
             /**
              * Returns the value to which the specified key is mapped,
              * or {@code null} if this map contains no mapping for the key.
@@ -161,7 +161,7 @@ declare namespace java {
              *  (<a href="{#docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            get(key: any): V
+            get(key: java.lang.Object | any): V
             /**
              * Associates the specified value with the specified key in this map
              * (optional operation).  If the map previously contained a mapping for
@@ -214,7 +214,7 @@ declare namespace java {
              *  (<a href="{#docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
              */
             // @ts-ignore
-            remove(key: any): V
+            remove(key: java.lang.Object | any): V
             /**
              * Copies all of the mappings from the specified map to this map
              * (optional operation).  The effect of this call is equivalent to that
@@ -234,7 +234,7 @@ declare namespace java {
              *          the specified map prevents it from being stored in this map
              */
             // @ts-ignore
-            putAll(m: java.util.Map<K, V>): void
+            putAll(m: java.util.Map<any, any>): void
             /**
              * Removes all of the mappings from this map (optional operation).
              * The map will be empty after this call returns.
@@ -258,7 +258,7 @@ declare namespace java {
              * @return a set view of the keys contained in this map
              */
             // @ts-ignore
-            keySet(): java.util.Set<K>
+            keySet(): Array<K>
             /**
              * Returns a {@link Collection} view of the values contained in this map.
              * The collection is backed by the map, so changes to the map are
@@ -274,7 +274,7 @@ declare namespace java {
              * @return a collection view of the values contained in this map
              */
             // @ts-ignore
-            values(): java.util.Collection<V>
+            values(): Array<V>
             /**
              * Returns a {@link Set} view of the mappings contained in this map.
              * The set is backed by the map, so changes to the map are
@@ -291,7 +291,7 @@ declare namespace java {
              * @return a set view of the mappings contained in this map
              */
             // @ts-ignore
-            entrySet(): java.util.Set<java.util.Map.Entry<K, V>>
+            entrySet(): Array<java.util.Map.Entry<K, V>>
             /**
              * Compares the specified object with this map for equality.  Returns
              * <tt>true</tt> if the given object is also a map and the two maps
@@ -304,7 +304,7 @@ declare namespace java {
              * @return <tt>true</tt> if the specified object is equal to this map
              */
             // @ts-ignore
-            equals(o: any): boolean
+            equals(o: java.lang.Object | any): boolean
             /**
              * Returns the hash code value for this map.  The hash code of a map is
              * defined to be the sum of the hash codes of each entry in the map's
@@ -318,7 +318,7 @@ declare namespace java {
              * @see #equals(Object)
              */
             // @ts-ignore
-            hashCode(): int
+            hashCode(): number /*int*/
             /**
              * Returns the value to which the specified key is mapped, or
              * {@code defaultValue} if this map contains no mapping for the key.
@@ -339,7 +339,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            getOrDefault(key: any, defaultValue: V): V
+            getOrDefault(key: java.lang.Object | any, defaultValue: V): V
             /**
              * Performs the given action for each entry in this map until all entries
              * have been processed or the action throws an exception.   Unless
@@ -363,7 +363,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            forEach(action: java.util.function.BiConsumer<any super K, ? super V> | java.util.function$.BiConsumer<? super K, ? super V>): void
+            forEach(action: java.util.function$.BiConsumer<any, any>): void
             /**
              * Replaces each entry's value with the result of invoking the given
              * function on that entry until all entries have been processed or the
@@ -401,7 +401,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            replaceAll(func: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): void
+            replaceAll(func: java.util.function$.BiFunction<any, any, any>): void
             /**
              * If the specified key is not already associated with a value (or is mapped
              * to {@code null}) associates it with the given value and returns
@@ -476,7 +476,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            remove(key: any, value: any): boolean
+            remove(key: java.lang.Object | any, value: java.lang.Object | any): boolean
             /**
              * Replaces the entry for the specified key only if currently
              * mapped to the specified value.
@@ -607,7 +607,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            computeIfAbsent(key: K, mappingFunction: java.util.function.Function<any super K, V> | java.util.function$.Function<? super K, V>): V
+            computeIfAbsent(key: K, mappingFunction: java.util.function$.Function<any, any>): V
             /**
              * If the value for the specified key is present and non-null, attempts to
              * compute a new mapping given the key and its current mapped value.
@@ -651,7 +651,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            computeIfPresent(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+            computeIfPresent(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
             /**
              * Attempts to compute a mapping for the specified key and its current
              * mapped value (or {@code null} if there is no current mapping). For
@@ -706,7 +706,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            compute(key: K, remappingFunction: java.util.function.BiFunction<any super K, ? super V, V> | java.util.function$.BiFunction<? super K, ? super V, V>): V
+            compute(key: K, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
             /**
              * If the specified key is not already associated with a value or is
              * associated with null, associates it with the given non-null value.
@@ -761,7 +761,7 @@ declare namespace java {
              * @since 1.8
              */
             // @ts-ignore
-            merge(key: K, value: V, remappingFunction: java.util.function.BiFunction<any super V, ? super V, V> | java.util.function$.BiFunction<? super V, ? super V, V>): V
+            merge(key: K, value: V, remappingFunction: java.util.function$.BiFunction<any, any, any>): V
         }
     }
 }

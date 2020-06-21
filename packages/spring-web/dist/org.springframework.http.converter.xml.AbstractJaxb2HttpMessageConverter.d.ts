@@ -12,7 +12,7 @@ declare namespace org {
                      * @param <T> the converted object type
                      */
                     // @ts-ignore
-                    class AbstractJaxb2HttpMessageConverter<T> extends org.springframework.http.converter.xml.AbstractXmlHttpMessageConverter<T> {
+                    abstract class AbstractJaxb2HttpMessageConverter<T> extends org.springframework.http.converter.xml.AbstractXmlHttpMessageConverter<T> {
                         // @ts-ignore
                         constructor()
                         /**

@@ -19,7 +19,7 @@ declare namespace javax {
                  * @throws NullPointerException if <code>feature</code> is <code>null</code>
                  */
                 // @ts-ignore
-                isFeatureSupported(feature: string): boolean
+                isFeatureSupported(feature: java.lang.String | string): boolean
             }
         }
     }

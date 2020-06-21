@@ -42,7 +42,7 @@ declare namespace org {
                      * @see org.springframework.core.task.SimpleAsyncTaskExecutor
                      */
                     // @ts-ignore
-                    setTaskExecutor(taskExecutor: java.util.concurrent.Executor): void
+                    public setTaskExecutor(taskExecutor: java.util.concurrent.Executor): void
                     /**
                      * Return the current task executor for this multicaster.
                      */
@@ -64,7 +64,7 @@ declare namespace org {
                      * @since 4.1
                      */
                     // @ts-ignore
-                    setErrorHandler(errorHandler: ErrorHandler): void
+                    public setErrorHandler(errorHandler: ErrorHandler): void
                     /**
                      * Return the current error handler for this multicaster.
                      * @since 4.1
@@ -72,9 +72,9 @@ declare namespace org {
                     // @ts-ignore
                     getErrorHandler(): ErrorHandler
                     // @ts-ignore
-                    multicastEvent(event: org.springframework.context.ApplicationEvent): void
+                    public multicastEvent(event: org.springframework.context.ApplicationEvent): void
                     // @ts-ignore
-                    multicastEvent(event: org.springframework.context.ApplicationEvent, eventType: ResolvableType): void
+                    public multicastEvent(event: org.springframework.context.ApplicationEvent, eventType: ResolvableType): void
                     /**
                      * Invoke the given listener with the given event.
                      * @param listener the ApplicationListener to invoke

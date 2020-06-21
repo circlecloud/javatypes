@@ -65,7 +65,7 @@ declare namespace javax {
                      *                   {@code options}.
                      */
                     // @ts-ignore
-                    constructor(messageType: number /*int*/, options: string[], defaultOption: number /*int*/)
+                    constructor(messageType: number /*int*/, options: java.lang.String[] | string[], defaultOption: number /*int*/)
                     /**
                      * Construct a {@code ConfirmationCallback} with a prompt,
                      * message type, an option type and a default option.
@@ -96,7 +96,7 @@ declare namespace javax {
                      *                   {@code optionType}.
                      */
                     // @ts-ignore
-                    constructor(prompt: string, messageType: number /*int*/, optionType: number /*int*/, defaultOption: number /*int*/)
+                    constructor(prompt: java.lang.String | string, messageType: number /*int*/, optionType: number /*int*/, defaultOption: number /*int*/)
                     /**
                      * Construct a {@code ConfirmationCallback} with a prompt,
                      * message type, a list of options and a default option.
@@ -126,7 +126,7 @@ declare namespace javax {
                      *                   {@code options}.
                      */
                     // @ts-ignore
-                    constructor(prompt: string, messageType: number /*int*/, options: string[], defaultOption: number /*int*/)
+                    constructor(prompt: java.lang.String | string, messageType: number /*int*/, options: java.lang.String[] | string[], defaultOption: number /*int*/)
                     /**
                      * Unspecified option type.
                      * <p> The {@code getOptionType} method returns this
@@ -134,7 +134,7 @@ declare namespace javax {
                      * with {@code options} instead of an {@code optionType}.
                      */
                     // @ts-ignore
-                    readonly UNSPECIFIED_OPTION: number /*int*/
+                    public static readonly UNSPECIFIED_OPTION: number /*int*/
                     /**
                      * YES/NO confirmation option.
                      * <p> An underlying security service specifies this as the
@@ -143,7 +143,7 @@ declare namespace javax {
                      * with either {@code YES} or {@code NO}.
                      */
                     // @ts-ignore
-                    readonly YES_NO_OPTION: number /*int*/
+                    public static readonly YES_NO_OPTION: number /*int*/
                     /**
                      * YES/NO/CANCEL confirmation confirmation option.
                      * <p> An underlying security service specifies this as the
@@ -152,7 +152,7 @@ declare namespace javax {
                      * with either {@code YES}, {@code NO} or {@code CANCEL}.
                      */
                     // @ts-ignore
-                    readonly YES_NO_CANCEL_OPTION: number /*int*/
+                    public static readonly YES_NO_CANCEL_OPTION: number /*int*/
                     /**
                      * OK/CANCEL confirmation confirmation option.
                      * <p> An underlying security service specifies this as the
@@ -161,7 +161,7 @@ declare namespace javax {
                      * with either {@code OK} or {@code CANCEL}.
                      */
                     // @ts-ignore
-                    readonly OK_CANCEL_OPTION: number /*int*/
+                    public static readonly OK_CANCEL_OPTION: number /*int*/
                     /**
                      * YES option.
                      * <p> If an {@code optionType} was specified to this
@@ -169,7 +169,7 @@ declare namespace javax {
                      * {@code defaultOption} or returned as the selected index.
                      */
                     // @ts-ignore
-                    readonly YES: number /*int*/
+                    public static readonly YES: number /*int*/
                     /**
                      * NO option.
                      * <p> If an {@code optionType} was specified to this
@@ -177,7 +177,7 @@ declare namespace javax {
                      * {@code defaultOption} or returned as the selected index.
                      */
                     // @ts-ignore
-                    readonly NO: number /*int*/
+                    public static readonly NO: number /*int*/
                     /**
                      * CANCEL option.
                      * <p> If an {@code optionType} was specified to this
@@ -185,7 +185,7 @@ declare namespace javax {
                      * {@code defaultOption} or returned as the selected index.
                      */
                     // @ts-ignore
-                    readonly CANCEL: number /*int*/
+                    public static readonly CANCEL: number /*int*/
                     /**
                      * OK option.
                      * <p> If an {@code optionType} was specified to this
@@ -193,22 +193,22 @@ declare namespace javax {
                      * {@code defaultOption} or returned as the selected index.
                      */
                     // @ts-ignore
-                    readonly OK: number /*int*/
+                    public static readonly OK: number /*int*/
                     /**
                      * INFORMATION message type.
                      */
                     // @ts-ignore
-                    readonly INFORMATION: number /*int*/
+                    public static readonly INFORMATION: number /*int*/
                     /**
                      * WARNING message type.
                      */
                     // @ts-ignore
-                    readonly WARNING: number /*int*/
+                    public static readonly WARNING: number /*int*/
                     /**
                      * ERROR message type.
                      */
                     // @ts-ignore
-                    readonly ERROR: number /*int*/
+                    public static readonly ERROR: number /*int*/
                     /**
                      * Get the prompt.
                      * <p>
@@ -216,7 +216,7 @@ declare namespace javax {
                      *           was instantiated without a {@code prompt}.
                      */
                     // @ts-ignore
-                    getPrompt(): java.lang.String
+                    public getPrompt(): string
                     /**
                      * Get the message type.
                      * <p>
@@ -224,7 +224,7 @@ declare namespace javax {
                      *           {@code WARNING} or {@code ERROR}).
                      */
                     // @ts-ignore
-                    getMessageType(): int
+                    public getMessageType(): number /*int*/
                     /**
                      * Get the option type.
                      * <p> If this method returns {@code UNSPECIFIED_OPTION}, then this
@@ -241,7 +241,7 @@ declare namespace javax {
                      *           {@code options} instead of an {@code optionType}.
                      */
                     // @ts-ignore
-                    getOptionType(): int
+                    public getOptionType(): number /*int*/
                     /**
                      * Get the confirmation options.
                      * <p>
@@ -250,7 +250,7 @@ declare namespace javax {
                      *           an {@code optionType} instead of {@code options}.
                      */
                     // @ts-ignore
-                    getOptions(): java.lang.String[]
+                    public getOptions(): string[]
                     /**
                      * Get the default option.
                      * <p>
@@ -265,7 +265,7 @@ declare namespace javax {
                      *           of this {@code ConfirmationCallback}.
                      */
                     // @ts-ignore
-                    getDefaultOption(): int
+                    public getDefaultOption(): number /*int*/
                     /**
                      * Set the selected confirmation option.
                      * <p>
@@ -279,7 +279,7 @@ declare namespace javax {
                      * @see #getSelectedIndex
                      */
                     // @ts-ignore
-                    setSelectedIndex(selection: number /*int*/): void
+                    public setSelectedIndex(selection: number /*int*/): void
                     /**
                      * Get the selected confirmation option.
                      * <p>
@@ -295,7 +295,7 @@ declare namespace javax {
                      * @see #setSelectedIndex
                      */
                     // @ts-ignore
-                    getSelectedIndex(): int
+                    public getSelectedIndex(): number /*int*/
                 }
             }
         }

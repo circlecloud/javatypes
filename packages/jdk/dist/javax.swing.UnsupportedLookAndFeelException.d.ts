@@ -21,7 +21,7 @@ declare namespace javax {
              * @param s a message String
              */
             // @ts-ignore
-            constructor(s: string)
+            constructor(s: java.lang.String | string)
         }
     }
 }

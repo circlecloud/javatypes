@@ -25,15 +25,15 @@ declare namespace java {
              * @return The inapplicable conversion
              */
             // @ts-ignore
-            getConversion(): char
+            getConversion(): string
             /**
              * Returns the class of the mismatched argument.
              * @return The class of the mismatched argument
              */
             // @ts-ignore
-            getArgumentClass(): java.lang.Class<?>
+            getArgumentClass(): java.lang.Class<any>
             // @ts-ignore
-            getMessage(): java.lang.String
+            getMessage(): string
         }
     }
 }

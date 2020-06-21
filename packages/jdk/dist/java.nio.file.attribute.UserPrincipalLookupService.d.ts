@@ -23,7 +23,7 @@ declare namespace java {
                  * @see java.nio.file.FileSystem#getUserPrincipalLookupService
                  */
                 // @ts-ignore
-                class UserPrincipalLookupService extends java.lang.Object {
+                abstract class UserPrincipalLookupService extends java.lang.Object {
                     /**
                      * Initializes a new instance of this class.
                      */
@@ -43,7 +43,7 @@ declare namespace java {
                      *           installed, it checks {#link RuntimePermission}<tt>("lookupUserInformation")</tt>
                      */
                     // @ts-ignore
-                    abstract lookupPrincipalByName(name: string): java.nio.file.attribute.UserPrincipal
+                    public abstract lookupPrincipalByName(name: java.lang.String | string): java.nio.file.attribute.UserPrincipal
                     /**
                      * Lookup a group principal by group name.
                      * <p> Where an implementation does not support any notion of group then
@@ -63,7 +63,7 @@ declare namespace java {
                      *           installed, it checks {#link RuntimePermission}<tt>("lookupUserInformation")</tt>
                      */
                     // @ts-ignore
-                    abstract lookupPrincipalByGroupName(group: string): java.nio.file.attribute.GroupPrincipal
+                    public abstract lookupPrincipalByGroupName(group: java.lang.String | string): java.nio.file.attribute.GroupPrincipal
                 }
             }
         }

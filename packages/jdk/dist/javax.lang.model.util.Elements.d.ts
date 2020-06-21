@@ -35,7 +35,7 @@ declare namespace javax {
                      * @return the values of the annotation's elements, including defaults
                      */
                     // @ts-ignore
-                    getElementValuesWithDefaults(a: javax.lang.model.element.AnnotationMirror): java.util.Map<? extends javax.lang.model.element.ExecutableElement, ? extends javax.lang.model.element.AnnotationValue>
+                    getElementValuesWithDefaults(a: javax.lang.model.element.AnnotationMirror): java.util.Map<any, any>
                     /**
                      * Returns the text of the documentation (&quot;Javadoc&quot;)
                      * comment of an element.
@@ -59,7 +59,7 @@ declare namespace javax {
                      * @jls 3.6 White Space
                      */
                     // @ts-ignore
-                    getDocComment(e: javax.lang.model.element.Element): java.lang.String
+                    getDocComment(e: javax.lang.model.element.Element): string
                     /**
                      * Returns {@code true} if the element is deprecated, {@code false} otherwise.
                      * @param e  the element being examined
@@ -95,7 +95,7 @@ declare namespace javax {
                      * @see Element#getEnclosedElements
                      */
                     // @ts-ignore
-                    getAllMembers(type: javax.lang.model.element.TypeElement): java.util.List<? extends javax.lang.model.element.Element>
+                    getAllMembers(type: javax.lang.model.element.TypeElement): Array<any>
                     /**
                      * Returns all annotations <i>present</i> on an element, whether
                      * directly present or present via inheritance.
@@ -105,7 +105,7 @@ declare namespace javax {
                      * @see javax.lang.model.AnnotatedConstruct
                      */
                     // @ts-ignore
-                    getAllAnnotationMirrors(e: javax.lang.model.element.Element): java.util.List<? extends javax.lang.model.element.AnnotationMirror>
+                    getAllAnnotationMirrors(e: javax.lang.model.element.Element): Array<any>
                     /**
                      * Tests whether one type, method, or field hides another.
                      * @param hider   the first element
@@ -173,7 +173,7 @@ declare namespace javax {
                      * @see VariableElement#getConstantValue()
                      */
                     // @ts-ignore
-                    getConstantExpression(value: any): java.lang.String
+                    getConstantExpression(value: java.lang.Object | any): string
                     /**
                      * Prints a representation of the elements to the given writer in
                      * the specified order.  The main purpose of this method is for

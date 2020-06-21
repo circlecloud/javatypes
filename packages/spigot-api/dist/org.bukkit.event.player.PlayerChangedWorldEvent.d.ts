@@ -14,11 +14,11 @@ declare namespace org {
                      * @return player's previous world
                      */
                     // @ts-ignore
-                    getFrom(): org.bukkit.World
+                    public getFrom(): org.bukkit.World
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

@@ -18,13 +18,13 @@ declare namespace org {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    setFilters(filters: Array<Filter>): void
+                    public setFilters(filters: java.util.List<any> | Array<any>): void
                     /**
                      * Initialize all the filters, calling each one's init method in turn in the order supplied.
                      * @see Filter#init(FilterConfig)
                      */
                     // @ts-ignore
-                    init(config: FilterConfig): void
+                    public init(config: FilterConfig): void
                     /**
                      * Forms a temporary chain from the list of delegate filters supplied ({@link #setFilters})
                      * and executes them in order. Each filter delegates to the next one in the list, achieving
@@ -32,13 +32,13 @@ declare namespace org {
                      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
                      */
                     // @ts-ignore
-                    doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain): void
+                    public doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain): void
                     /**
                      * Clean up all the filters supplied, calling each one's destroy method in turn, but in reverse order.
                      * @see Filter#init(FilterConfig)
                      */
                     // @ts-ignore
-                    destroy(): void
+                    public destroy(): void
                 }
             }
         }

@@ -25,47 +25,47 @@ declare namespace javax {
                      * @throws NullPointerException {#inheritDoc}
                      */
                     // @ts-ignore
-                    getNamespacePrefix(namespaceURI: string, defaultPrefix: string): java.lang.String
+                    public getNamespacePrefix(namespaceURI: java.lang.String | string, defaultPrefix: java.lang.String | string): string
                     /**
                      * This implementation uses an internal {@link HashMap} to map the URI
                      * to the specified prefix.
                      * @throws NullPointerException {#inheritDoc}
                      */
                     // @ts-ignore
-                    putNamespacePrefix(namespaceURI: string, prefix: string): java.lang.String
+                    public putNamespacePrefix(namespaceURI: java.lang.String | string, prefix: java.lang.String | string): string
                     // @ts-ignore
-                    getDefaultNamespacePrefix(): java.lang.String
+                    public getDefaultNamespacePrefix(): string
                     // @ts-ignore
-                    setDefaultNamespacePrefix(defaultPrefix: string): void
+                    public setDefaultNamespacePrefix(defaultPrefix: java.lang.String | string): void
                     // @ts-ignore
-                    getBaseURI(): java.lang.String
+                    public getBaseURI(): string
                     /**
                      * @throws IllegalArgumentException {#inheritDoc}
                      */
                     // @ts-ignore
-                    setBaseURI(baseURI: string): void
+                    public setBaseURI(baseURI: java.lang.String | string): void
                     // @ts-ignore
-                    getURIDereferencer(): javax.xml.crypto.URIDereferencer
+                    public getURIDereferencer(): javax.xml.crypto.URIDereferencer
                     // @ts-ignore
-                    setURIDereferencer(dereferencer: javax.xml.crypto.URIDereferencer): void
+                    public setURIDereferencer(dereferencer: javax.xml.crypto.URIDereferencer): void
                     /**
                      * This implementation uses an internal {@link HashMap} to get the object
                      * that the specified name maps to.
                      * @throws NullPointerException {#inheritDoc}
                      */
                     // @ts-ignore
-                    getProperty(name: string): java.lang.Object
+                    public getProperty(name: java.lang.String | string): any
                     /**
                      * This implementation uses an internal {@link HashMap} to map the name
                      * to the specified object.
                      * @throws NullPointerException {#inheritDoc}
                      */
                     // @ts-ignore
-                    setProperty(name: string, value: any): java.lang.Object
+                    public setProperty(name: java.lang.String | string, value: java.lang.Object | any): any
                     // @ts-ignore
-                    getKeySelector(): javax.xml.crypto.KeySelector
+                    public getKeySelector(): javax.xml.crypto.KeySelector
                     // @ts-ignore
-                    setKeySelector(ks: javax.xml.crypto.KeySelector): void
+                    public setKeySelector(ks: javax.xml.crypto.KeySelector): void
                     /**
                      * Returns the <code>Element</code> with the specified ID attribute value.
                      * <p>This implementation uses an internal {@link HashMap} to get the
@@ -77,7 +77,7 @@ declare namespace javax {
                      * @see #setIdAttributeNS
                      */
                     // @ts-ignore
-                    getElementById(idValue: string): org.w3c.dom.Element
+                    public getElementById(idValue: java.lang.String | string): org.w3c.dom.Element
                     /**
                      * Registers the element's attribute specified by the namespace URI and
                      * local name to be of type ID. The attribute must have a non-empty value.
@@ -95,7 +95,7 @@ declare namespace javax {
                      * @see #getElementById
                      */
                     // @ts-ignore
-                    setIdAttributeNS(element: org.w3c.dom.Element, namespaceURI: string, localName: string): void
+                    public setIdAttributeNS(element: org.w3c.dom.Element, namespaceURI: java.lang.String | string, localName: java.lang.String | string): void
                     /**
                      * Returns a read-only iterator over the set of Id/Element mappings of
                      * this <code>DOMCryptoContext</code>. Attempts to modify the set via the
@@ -108,20 +108,20 @@ declare namespace javax {
                      * @return a read-only iterator over the set of mappings
                      */
                     // @ts-ignore
-                    iterator(): java.util.Iterator
+                    public iterator(): java.util.Iterator<any>
                     /**
                      * This implementation uses an internal {@link HashMap} to get the object
                      * that the specified key maps to.
                      */
                     // @ts-ignore
-                    get(key: any): java.lang.Object
+                    public get(key: java.lang.Object | any): any
                     /**
                      * This implementation uses an internal {@link HashMap} to map the key
                      * to the specified object.
                      * @throws IllegalArgumentException {#inheritDoc}
                      */
                     // @ts-ignore
-                    put(key: any, value: any): java.lang.Object
+                    public put(key: java.lang.Object | any, value: java.lang.Object | any): any
                 }
             }
         }

@@ -16,11 +16,11 @@ declare namespace org {
                      * Name of hint with a filename for the resource(e.g. from "Content-Disposition" HTTP header).
                      */
                     // @ts-ignore
-                    FILENAME_HINT: string
+                    public static FILENAME_HINT: java.lang.String | string
                     // @ts-ignore
-                    canDecode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
+                    public canDecode(elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType): boolean
                     // @ts-ignore
-                    decode(inputStream: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String, java.lang.Object>): <any>
+                    public decode(inputStream: object, elementType: org.springframework.core.ResolvableType, mimeType: org.springframework.util.MimeType, hints: java.util.Map<java.lang.String | string, java.lang.Object | any>): object
                 }
             }
         }

@@ -35,13 +35,13 @@ declare namespace javax {
                      * @param fg the foreground color
                      */
                     // @ts-ignore
-                    constructor(nm: string, fg: java.awt.Color)
+                    constructor(nm: java.lang.String | string, fg: java.awt.Color)
                     /**
                      * Sets the foreground color.
                      * @param e the action event
                      */
                     // @ts-ignore
-                    actionPerformed(e: java.awt.event.ActionEvent): void
+                    public actionPerformed(e: java.awt.event.ActionEvent): void
                 }
             }
         }

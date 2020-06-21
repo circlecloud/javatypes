@@ -16,9 +16,9 @@ declare namespace org {
                      * Specify the collection of Cache instances to use for this CacheManager.
                      */
                     // @ts-ignore
-                    setCaches(caches: Array<org.springframework.cache.Cache>): void
+                    public setCaches(caches: java.util.Collection<any> | Array<any>): void
                     // @ts-ignore
-                    loadCaches(): java.util.Collection<? extends org.springframework.cache.Cache>
+                    loadCaches(): Array<any>
                 }
             }
         }

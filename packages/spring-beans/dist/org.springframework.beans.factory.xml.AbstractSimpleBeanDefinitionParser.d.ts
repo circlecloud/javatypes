@@ -68,7 +68,7 @@ declare namespace org {
                      * @see Conventions#attributeNameToPropertyName(String)
                      */
                     // @ts-ignore
-                    class AbstractSimpleBeanDefinitionParser extends org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser {
+                    abstract class AbstractSimpleBeanDefinitionParser extends org.springframework.beans.factory.xml.AbstractSingleBeanDefinitionParser {
                         // @ts-ignore
                         constructor()
                         /**
@@ -109,7 +109,7 @@ declare namespace org {
                          *  XML element being parsed (never {#code null})
                          */
                         // @ts-ignore
-                        isEligibleAttribute(attributeName: string): boolean
+                        isEligibleAttribute(attributeName: java.lang.String | string): boolean
                         /**
                          * Extract a JavaBean property name from the supplied attribute name.
                          * <p>The default implementation uses the
@@ -124,7 +124,7 @@ declare namespace org {
                          * @return the extracted JavaBean property name (must never be {#code null})
                          */
                         // @ts-ignore
-                        extractPropertyName(attributeName: string): java.lang.String
+                        extractPropertyName(attributeName: java.lang.String | string): string
                         /**
                          * Hook method that derived classes can implement to inspect/change a
                          * bean definition after parsing is complete.

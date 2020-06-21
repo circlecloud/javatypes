@@ -21,7 +21,7 @@ declare namespace java {
              * @jls 9.6.3.3 #Inherited
              */
             // @ts-ignore
-            class Inherited implements java.lang.annotation.Annotation {
+            abstract class Inherited implements java.lang.annotation.Annotation {
             }
         }
     }

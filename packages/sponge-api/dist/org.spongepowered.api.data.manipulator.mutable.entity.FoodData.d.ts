@@ -20,7 +20,7 @@ declare namespace org {
                                  * @see Keys#FOOD_LEVEL
                                  */
                                 // @ts-ignore
-                                foodLevel(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                                foodLevel(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the "exhaustion" level.
                                  * <p>When the exhaustion level reaches 0, saturation is usually diminished
@@ -31,7 +31,7 @@ declare namespace org {
                                  * @see Keys#EXHAUSTION
                                  */
                                 // @ts-ignore
-                                exhaustion(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                exhaustion(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                                 /**
                                  * Gets the {@link MutableBoundedValue} for the "saturation" level.
                                  * <p>When the saturation level reaches 0, the food level is usually
@@ -43,7 +43,7 @@ declare namespace org {
                                  * @see Keys#SATURATION
                                  */
                                 // @ts-ignore
-                                saturation(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double>
+                                saturation(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Double | number>
                             }
                         }
                     }

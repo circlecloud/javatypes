@@ -73,7 +73,7 @@ declare namespace javax {
              *            <code>TRAILING</code>.
              */
             // @ts-ignore
-            constructor(text: string, icon: javax.swing.Icon, horizontalAlignment: number /*int*/)
+            constructor(text: java.lang.String | string, icon: javax.swing.Icon, horizontalAlignment: number /*int*/)
             /**
              * Creates a <code>JLabel</code> instance with the specified
              * text and horizontal alignment.
@@ -88,7 +88,7 @@ declare namespace javax {
              *            <code>TRAILING</code>.
              */
             // @ts-ignore
-            constructor(text: string, horizontalAlignment: number /*int*/)
+            constructor(text: java.lang.String | string, horizontalAlignment: number /*int*/)
             /**
              * Creates a <code>JLabel</code> instance with the specified text.
              * The label is aligned against the leading edge of its display area,
@@ -96,7 +96,7 @@ declare namespace javax {
              * @param text  The text to be displayed by the label.
              */
             // @ts-ignore
-            constructor(text: string)
+            constructor(text: java.lang.String | string)
             /**
              * Creates a <code>JLabel</code> instance with the specified
              * image and horizontal alignment.
@@ -137,7 +137,7 @@ declare namespace javax {
              * @return LabelUI object
              */
             // @ts-ignore
-            getUI(): javax.swing.plaf.LabelUI
+            public getUI(): javax.swing.plaf.LabelUI
             /**
              * Sets the L&amp;F object that renders this component.
              * @param ui  the LabelUI L&amp;F object
@@ -148,13 +148,13 @@ declare namespace javax {
              *   description: The UI object that implements the Component's LookAndFeel.
              */
             // @ts-ignore
-            setUI(ui: javax.swing.plaf.LabelUI): void
+            public setUI(ui: javax.swing.plaf.LabelUI): void
             /**
              * Resets the UI property to a value from the current look and feel.
              * @see JComponent#updateUI
              */
             // @ts-ignore
-            updateUI(): void
+            public updateUI(): void
             /**
              * Returns a string that specifies the name of the l&amp;f class
              * that renders this component.
@@ -163,14 +163,14 @@ declare namespace javax {
              * @see UIDefaults#getUI
              */
             // @ts-ignore
-            getUIClassID(): java.lang.String
+            public getUIClassID(): string
             /**
              * Returns the text string that the label displays.
              * @return a String
              * @see #setText
              */
             // @ts-ignore
-            getText(): java.lang.String
+            public getText(): string
             /**
              * Defines the single line of text this component will display.  If
              * the value of text is null or empty string, nothing is displayed.
@@ -187,14 +187,14 @@ declare namespace javax {
              *   description: Defines the single line of text this component will display.
              */
             // @ts-ignore
-            setText(text: string): void
+            public setText(text: java.lang.String | string): void
             /**
              * Returns the graphic image (glyph, icon) that the label displays.
              * @return an Icon
              * @see #setIcon
              */
             // @ts-ignore
-            getIcon(): javax.swing.Icon
+            public getIcon(): javax.swing.Icon
             /**
              * Defines the icon this component will display.  If
              * the value of icon is null, nothing is displayed.
@@ -211,7 +211,7 @@ declare namespace javax {
              *   description: The icon this component will display.
              */
             // @ts-ignore
-            setIcon(icon: javax.swing.Icon): void
+            public setIcon(icon: javax.swing.Icon): void
             /**
              * Returns the icon used by the label when it's disabled.
              * If no disabled icon has been set this will forward the call to
@@ -225,7 +225,7 @@ declare namespace javax {
              * @see ImageIcon
              */
             // @ts-ignore
-            getDisabledIcon(): javax.swing.Icon
+            public getDisabledIcon(): javax.swing.Icon
             /**
              * Set the icon to be displayed if this JLabel is "disabled"
              * (JLabel.setEnabled(false)).
@@ -239,7 +239,7 @@ declare namespace javax {
              *   description: The icon to display if the label is disabled.
              */
             // @ts-ignore
-            setDisabledIcon(disabledIcon: javax.swing.Icon): void
+            public setDisabledIcon(disabledIcon: javax.swing.Icon): void
             /**
              * Specify a keycode that indicates a mnemonic key.
              * This property is used when the label is part of a larger component.
@@ -253,14 +253,14 @@ declare namespace javax {
              *   description: The mnemonic keycode.
              */
             // @ts-ignore
-            setDisplayedMnemonic(key: number /*int*/): void
+            public setDisplayedMnemonic(key: number /*int*/): void
             /**
              * Specifies the displayedMnemonic as a char value.
              * @param aChar  a char specifying the mnemonic to display
              * @see #setDisplayedMnemonic(int)
              */
             // @ts-ignore
-            setDisplayedMnemonic(aChar: string): void
+            public setDisplayedMnemonic(aChar: string): void
             /**
              * Return the keycode that indicates a mnemonic key.
              * This property is used when the label is part of a larger component.
@@ -272,7 +272,7 @@ declare namespace javax {
              * @see #setLabelFor
              */
             // @ts-ignore
-            getDisplayedMnemonic(): int
+            public getDisplayedMnemonic(): number /*int*/
             /**
              * Provides a hint to the look and feel as to which character in the
              * text should be decorated to represent the mnemonic. Not all look and
@@ -298,7 +298,7 @@ declare namespace javax {
              *                mnemonic at
              */
             // @ts-ignore
-            setDisplayedMnemonicIndex(index: number /*int*/): void
+            public setDisplayedMnemonicIndex(index: number /*int*/): void
             /**
              * Returns the character, as an index, that the look and feel should
              * provide decoration for as representing the mnemonic character.
@@ -307,7 +307,7 @@ declare namespace javax {
              * @see #setDisplayedMnemonicIndex
              */
             // @ts-ignore
-            getDisplayedMnemonicIndex(): int
+            public getDisplayedMnemonicIndex(): number /*int*/
             /**
              * Verify that key is a legal value for the horizontalAlignment properties.
              * @param key the property value to check
@@ -318,7 +318,7 @@ declare namespace javax {
              * @see #setHorizontalAlignment
              */
             // @ts-ignore
-            checkHorizontalKey(key: number /*int*/, message: string): int
+            checkHorizontalKey(key: number /*int*/, message: java.lang.String | string): number /*int*/
             /**
              * Verify that key is a legal value for the
              * verticalAlignment or verticalTextPosition properties.
@@ -329,7 +329,7 @@ declare namespace javax {
              * @see #setVerticalTextPosition
              */
             // @ts-ignore
-            checkVerticalKey(key: number /*int*/, message: string): int
+            checkVerticalKey(key: number /*int*/, message: java.lang.String | string): number /*int*/
             /**
              * Returns the amount of space between the text and the icon
              * displayed in this label.
@@ -338,7 +338,7 @@ declare namespace javax {
              * @see #setIconTextGap
              */
             // @ts-ignore
-            getIconTextGap(): int
+            public getIconTextGap(): number /*int*/
             /**
              * If both the icon and text properties are set, this property
              * defines the space between them.
@@ -353,7 +353,7 @@ declare namespace javax {
              *                property defines the space between them.
              */
             // @ts-ignore
-            setIconTextGap(iconTextGap: number /*int*/): void
+            public setIconTextGap(iconTextGap: number /*int*/): void
             /**
              * Returns the alignment of the label's contents along the Y axis.
              * @return The value of the verticalAlignment property, one of the
@@ -365,7 +365,7 @@ declare namespace javax {
              * @see #setVerticalAlignment
              */
             // @ts-ignore
-            getVerticalAlignment(): int
+            public getVerticalAlignment(): number /*int*/
             /**
              * Sets the alignment of the label's contents along the Y axis.
              * <p>
@@ -385,7 +385,7 @@ declare namespace javax {
              *   description: The alignment of the label's contents along the Y axis.
              */
             // @ts-ignore
-            setVerticalAlignment(alignment: number /*int*/): void
+            public setVerticalAlignment(alignment: number /*int*/): void
             /**
              * Returns the alignment of the label's contents along the X axis.
              * @return The value of the horizontalAlignment property, one of the
@@ -399,7 +399,7 @@ declare namespace javax {
              * @see SwingConstants
              */
             // @ts-ignore
-            getHorizontalAlignment(): int
+            public getHorizontalAlignment(): number /*int*/
             /**
              * Sets the alignment of the label's contents along the X axis.
              * <p>
@@ -423,7 +423,7 @@ declare namespace javax {
              *   description: The alignment of the label's content along the X axis.
              */
             // @ts-ignore
-            setHorizontalAlignment(alignment: number /*int*/): void
+            public setHorizontalAlignment(alignment: number /*int*/): void
             /**
              * Returns the vertical position of the label's text,
              * relative to its image.
@@ -436,7 +436,7 @@ declare namespace javax {
              * @see SwingConstants
              */
             // @ts-ignore
-            getVerticalTextPosition(): int
+            public getVerticalTextPosition(): number /*int*/
             /**
              * Sets the vertical position of the label's text,
              * relative to its image.
@@ -460,7 +460,7 @@ declare namespace javax {
              *   description: The vertical position of the text relative to it's image.
              */
             // @ts-ignore
-            setVerticalTextPosition(textPosition: number /*int*/): void
+            public setVerticalTextPosition(textPosition: number /*int*/): void
             /**
              * Returns the horizontal position of the label's text,
              * relative to its image.
@@ -474,7 +474,7 @@ declare namespace javax {
              * @see SwingConstants
              */
             // @ts-ignore
-            getHorizontalTextPosition(): int
+            public getHorizontalTextPosition(): number /*int*/
             /**
              * Sets the horizontal position of the label's text,
              * relative to its image.
@@ -499,7 +499,7 @@ declare namespace javax {
              *                relative to its image.
              */
             // @ts-ignore
-            setHorizontalTextPosition(textPosition: number /*int*/): void
+            public setHorizontalTextPosition(textPosition: number /*int*/): void
             /**
              * This is overridden to return false if the current Icon's Image is
              * not equal to the passed in Image <code>img</code>.
@@ -507,7 +507,7 @@ declare namespace javax {
              * @see java.awt.Component#imageUpdate(java.awt.Image, int, int, int, int, int)
              */
             // @ts-ignore
-            imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
+            public imageUpdate(img: java.awt.Image, infoflags: number /*int*/, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): boolean
             /**
              * Returns a string representation of this JLabel. This method
              * is intended to be used only for debugging purposes, and the
@@ -517,7 +517,7 @@ declare namespace javax {
              * @return a string representation of this JLabel.
              */
             // @ts-ignore
-            paramString(): java.lang.String
+            paramString(): string
             /**
              * Get the component this is labelling.
              * @return the Component this is labelling.  Can be null if this
@@ -529,7 +529,7 @@ declare namespace javax {
              * @see #setDisplayedMnemonic
              */
             // @ts-ignore
-            getLabelFor(): java.awt.Component
+            public getLabelFor(): java.awt.Component
             /**
              * Set the component this is labelling.  Can be null if this does not
              * label a Component.  If the displayedMnemonic property is set
@@ -544,7 +544,7 @@ declare namespace javax {
              *   description: The component this is labelling.
              */
             // @ts-ignore
-            setLabelFor(c: java.awt.Component): void
+            public setLabelFor(c: java.awt.Component): void
             /**
              * Get the AccessibleContext of this object
              * @return the AccessibleContext of this object
@@ -552,7 +552,7 @@ declare namespace javax {
              *   description: The AccessibleContext associated with this Label.
              */
             // @ts-ignore
-            getAccessibleContext(): javax.accessibility.AccessibleContext
+            public getAccessibleContext(): javax.accessibility.AccessibleContext
         }
     }
 }

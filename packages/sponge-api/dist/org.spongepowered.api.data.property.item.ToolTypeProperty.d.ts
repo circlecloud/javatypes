@@ -5,7 +5,7 @@ declare namespace org {
                 namespace property {
                     namespace item {
                         // @ts-ignore
-                        class ToolTypeProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, org.spongepowered.api.data.type.ToolType> {
+                        class ToolTypeProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String | string, org.spongepowered.api.data.type.ToolType> {
                             /**
                              * Creates a new {@link ToolTypeProperty} with the provided
                              * {@link ToolType} value.
@@ -24,7 +24,7 @@ declare namespace org {
                             // @ts-ignore
                             constructor(value: org.spongepowered.api.data.type.ToolType, op: org.spongepowered.api.data.Property.Operator)
                             // @ts-ignore
-                            compareTo(o: org.spongepowered.api.data.Property<any, ?>): int
+                            public compareTo(o: org.spongepowered.api.data.Property<any, any>): number /*int*/
                         }
                     }
                 }

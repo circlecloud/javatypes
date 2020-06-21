@@ -15,7 +15,7 @@ declare namespace org {
                      *  (or a custom {#link org.springframework.beans.factory.InitializingBean} implementation)
                      */
                     // @ts-ignore
-                    class Required implements java.lang.annotation.Annotation {
+                    abstract class Required implements java.lang.annotation.Annotation {
                     }
                 }
             }

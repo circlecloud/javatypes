@@ -23,7 +23,7 @@ declare namespace java {
                      * @param e the executor attempting to execute this task
                      */
                     // @ts-ignore
-                    rejectedExecution(r: java.lang.Runnable, e: java.util.concurrent.ThreadPoolExecutor): void
+                    public rejectedExecution(r: java.lang.Runnable, e: java.util.concurrent.ThreadPoolExecutor): void
                 }
             }
         }

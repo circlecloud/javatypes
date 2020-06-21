@@ -14,7 +14,7 @@ declare namespace java {
          *  {@code java.security.Principal}.
          */
         // @ts-ignore
-        class Signer extends java.security.Identity {
+        abstract class Signer extends java.security.Identity {
             /**
              * Creates a signer. This constructor should only be used for
              * serialization.
@@ -26,7 +26,7 @@ declare namespace java {
              * @param name the identity name.
              */
             // @ts-ignore
-            constructor(name: string)
+            constructor(name: java.lang.String | string)
             /**
              * Creates a signer with the specified identity name and scope.
              * @param name the identity name.
@@ -35,7 +35,7 @@ declare namespace java {
              *  with the same name in the scope.
              */
             // @ts-ignore
-            constructor(name: string, scope: java.security.IdentityScope)
+            constructor(name: java.lang.String | string, scope: java.security.IdentityScope)
             /**
              * Returns this signer's private key.
              * <p>First, if there is a security manager, its {@code checkSecurityAccess}
@@ -49,7 +49,7 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            getPrivateKey(): java.security.PrivateKey
+            public getPrivateKey(): java.security.PrivateKey
             /**
              * Sets the key pair (public key and private key) for this signer.
              * <p>First, if there is a security manager, its {@code checkSecurityAccess}
@@ -66,13 +66,13 @@ declare namespace java {
              * @see SecurityManager#checkSecurityAccess
              */
             // @ts-ignore
-            setKeyPair(pair: java.security.KeyPair): void
+            public setKeyPair(pair: java.security.KeyPair): void
             /**
              * Returns a string of information about the signer.
              * @return a string of information about the signer.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

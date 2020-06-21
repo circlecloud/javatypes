@@ -43,7 +43,7 @@ declare namespace org {
                              *      Use {@link #add(Key, Object)} instead
                              */
                             // @ts-ignore
-                            keyValue<E>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<E>>, value: E): org.spongepowered.api.item.inventory.ItemStack.Builder
+                            keyValue<E>(key: org.spongepowered.api.data.key.Key<any>, value: E): org.spongepowered.api.item.inventory.ItemStack.Builder
                             /**
                              * Sets the {@link DataManipulator} to add to the {@link ItemStack}.
                              * @param itemData The item data to set
@@ -52,7 +52,7 @@ declare namespace org {
                              *       with the item
                              */
                             // @ts-ignore
-                            itemData(itemData: org.spongepowered.api.data.manipulator.DataManipulator<any, ?>): org.spongepowered.api.item.inventory.ItemStack.Builder
+                            itemData(itemData: org.spongepowered.api.data.manipulator.DataManipulator<any, any>): org.spongepowered.api.item.inventory.ItemStack.Builder
                             /**
                              * Sets the {@link ImmutableDataManipulator} to add to the
                              * {@link ItemStack}.
@@ -61,7 +61,7 @@ declare namespace org {
                              * @throws IllegalArgumentException If the item data is incompatible
                              */
                             // @ts-ignore
-                            itemData(itemData: org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, ?>): org.spongepowered.api.item.inventory.ItemStack.Builder
+                            itemData(itemData: org.spongepowered.api.data.manipulator.ImmutableDataManipulator<any, any>): org.spongepowered.api.item.inventory.ItemStack.Builder
                             /**
                              * Adds a {@link Key} and related {@link Object} value to apply to the
                              * resulting {@link ItemStack}. Note that the resulting
@@ -76,7 +76,7 @@ declare namespace org {
                              * @throws IllegalArgumentException If the item data is incompatible
                              */
                             // @ts-ignore
-                            add<V>(key: org.spongepowered.api.data.key.Key<org.spongepowered.api.data.value.BaseValue<V>>, value: V): org.spongepowered.api.item.inventory.ItemStack.Builder
+                            add<V>(key: org.spongepowered.api.data.key.Key<any>, value: V): org.spongepowered.api.item.inventory.ItemStack.Builder
                             /**
                              * Sets all the settings in this builder from the item stack blueprint.
                              * @param itemStack The item stack to copy
@@ -118,9 +118,9 @@ declare namespace org {
                             // @ts-ignore
                             fromBlockSnapshot(blockSnapshot: org.spongepowered.api.block.BlockSnapshot): org.spongepowered.api.item.inventory.ItemStack.Builder
                             // @ts-ignore
-                            remove(manipulatorClass: java.lang.Class<org.spongepowered.api.data.manipulator.DataManipulator<any, ?>>): org.spongepowered.api.item.inventory.ItemStack.Builder
+                            remove(manipulatorClass: java.lang.Class<any>): org.spongepowered.api.item.inventory.ItemStack.Builder
                             // @ts-ignore
-                            apply(predicate: java.util.function.Predicate<org.spongepowered.api.item.inventory.ItemStack.Builder> | java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStack.Builder>, consumer: java.util.function.Consumer<org.spongepowered.api.item.inventory.ItemStack.Builder> | java.util.function$.Consumer<org.spongepowered.api.item.inventory.ItemStack.Builder>): org.spongepowered.api.item.inventory.ItemStack.Builder
+                            apply(predicate: java.util.function$.Predicate<org.spongepowered.api.item.inventory.ItemStack.Builder>, consumer: java.util.function$.Consumer<org.spongepowered.api.item.inventory.ItemStack.Builder>): org.spongepowered.api.item.inventory.ItemStack.Builder
                             /**
                              * Builds an instance of an ItemStack.
                              * @return A new instance of an ItemStack

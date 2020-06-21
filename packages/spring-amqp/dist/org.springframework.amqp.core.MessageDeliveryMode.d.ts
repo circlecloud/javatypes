@@ -12,12 +12,22 @@ declare namespace org {
                  */
                 // @ts-ignore
                 class MessageDeliveryMode extends java.lang.Enum<org.springframework.amqp.core.MessageDeliveryMode> {
+                    /**
+                     * Non persistent.
+                     */
+                    // @ts-ignore
+                    readonly NON_PERSISTENT: org.springframework.amqp.core.MessageDeliveryMode
+                    /**
+                     * Persistent.
+                     */
+                    // @ts-ignore
+                    readonly PERSISTENT: org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
                     values(): org.springframework.amqp.core.MessageDeliveryMode[]
                     // @ts-ignore
-                    valueOf(name: string): org.springframework.amqp.core.MessageDeliveryMode
+                    valueOf(name: java.lang.String | string): org.springframework.amqp.core.MessageDeliveryMode
                     // @ts-ignore
-                    toInt(mode: org.springframework.amqp.core.MessageDeliveryMode): int
+                    toInt(mode: org.springframework.amqp.core.MessageDeliveryMode): number /*int*/
                     // @ts-ignore
                     fromInt(modeAsNumber: number /*int*/): org.springframework.amqp.core.MessageDeliveryMode
                 }

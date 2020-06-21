@@ -9,7 +9,7 @@ declare namespace java {
          * @since 1.5
          */
         // @ts-ignore
-        class AuthProvider extends java.security.Provider {
+        abstract class AuthProvider extends java.security.Provider {
             /**
              * Constructs a provider with the specified name, version number,
              * and information.
@@ -18,7 +18,7 @@ declare namespace java {
              * @param info a description of the provider and its services.
              */
             // @ts-ignore
-            constructor(name: string, version: number /*double*/, info: string)
+            constructor(name: java.lang.String | string, version: number /*double*/, info: java.lang.String | string)
             /**
              * Log in to this provider.
              * <p> The provider relies on a {@code CallbackHandler}
@@ -48,7 +48,7 @@ declare namespace java {
              *   this provider's {@code getName} method
              */
             // @ts-ignore
-            abstract login(subject: javax.security.auth.Subject, handler: javax.security.auth.callback.CallbackHandler): void
+            public abstract login(subject: javax.security.auth.Subject, handler: javax.security.auth.callback.CallbackHandler): void
             /**
              * Log out from this provider.
              * @exception LoginException if the logout operation fails
@@ -59,7 +59,7 @@ declare namespace java {
              *   this provider's {@code getName} method
              */
             // @ts-ignore
-            abstract logout(): void
+            public abstract logout(): void
             /**
              * Set a {@code CallbackHandler}.
              * <p> The provider uses this handler if one is not passed to the
@@ -81,7 +81,7 @@ declare namespace java {
              *   this provider's {@code getName} method
              */
             // @ts-ignore
-            abstract setCallbackHandler(handler: javax.security.auth.callback.CallbackHandler): void
+            public abstract setCallbackHandler(handler: javax.security.auth.callback.CallbackHandler): void
         }
     }
 }

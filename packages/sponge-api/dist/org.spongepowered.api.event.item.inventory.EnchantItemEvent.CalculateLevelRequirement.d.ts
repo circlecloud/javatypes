@@ -15,7 +15,7 @@ declare namespace org {
                                  * @return the enchantment power
                                  */
                                 // @ts-ignore
-                                getPower(): int
+                                getPower(): number /*int*/
                                 /**
                                  * The itemstack to enchant.
                                  * @return the itemstack to enchant.
@@ -27,13 +27,13 @@ declare namespace org {
                                  * @return the original level requirement
                                  */
                                 // @ts-ignore
-                                getOriginalLevelRequirement(): int
+                                getOriginalLevelRequirement(): number /*int*/
                                 /**
                                  * Returns the level requirement
                                  * @return the level requirement
                                  */
                                 // @ts-ignore
-                                getLevelRequirement(): int
+                                getLevelRequirement(): number /*int*/
                                 /**
                                  * Sets the new level requirement
                                  * <p>In vanilla the maximum value is 30.</p>

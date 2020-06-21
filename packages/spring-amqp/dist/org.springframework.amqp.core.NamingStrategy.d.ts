@@ -10,7 +10,7 @@ declare namespace org {
                 // @ts-ignore
                 interface NamingStrategy {
                     // @ts-ignore
-                    generateName(): java.lang.String
+                    generateName(): string
                 }
             }
         }

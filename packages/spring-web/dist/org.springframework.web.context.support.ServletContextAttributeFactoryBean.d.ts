@@ -28,15 +28,15 @@ declare namespace org {
                          * Set the name of the ServletContext attribute to expose.
                          */
                         // @ts-ignore
-                        setAttributeName(attributeName: string): void
+                        public setAttributeName(attributeName: java.lang.String | string): void
                         // @ts-ignore
-                        setServletContext(servletContext: ServletContext): void
+                        public setServletContext(servletContext: ServletContext): void
                         // @ts-ignore
-                        getObject(): java.lang.Object
+                        public getObject(): any
                         // @ts-ignore
-                        getObjectType(): java.lang.Class<?>
+                        public getObjectType(): java.lang.Class<any>
                         // @ts-ignore
-                        isSingleton(): boolean
+                        public isSingleton(): boolean
                     }
                 }
             }

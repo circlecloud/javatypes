@@ -54,14 +54,14 @@ declare namespace javax {
                      * @param topDown whether the data are written in top-down order.
                      */
                     // @ts-ignore
-                    setTopDown(topDown: boolean): void
+                    public setTopDown(topDown: boolean): void
                     /**
                      * Returns the value of the <code>topDown</code> parameter.
                      * The default is <code>false</code>.
                      * @return whether the data are written in top-down order.
                      */
                     // @ts-ignore
-                    isTopDown(): boolean
+                    public isTopDown(): boolean
                 }
             }
         }

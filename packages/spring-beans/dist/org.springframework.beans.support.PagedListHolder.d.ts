@@ -39,144 +39,144 @@ declare namespace org {
                      * @see MutableSortDefinition#setToggleAscendingOnProperty
                      */
                     // @ts-ignore
-                    constructor(source: Array<E>)
+                    constructor(source: java.util.List<E> | Array<E>)
                     /**
                      * Create a new holder instance with the given source list.
                      * @param source the source List
                      * @param sort the SortDefinition to start with
                      */
                     // @ts-ignore
-                    constructor(source: Array<E>, sort: org.springframework.beans.support.SortDefinition)
+                    constructor(source: java.util.List<E> | Array<E>, sort: org.springframework.beans.support.SortDefinition)
                     /**
                      * The default page size.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_PAGE_SIZE: number /*int*/
+                    public static readonly DEFAULT_PAGE_SIZE: number /*int*/
                     /**
                      * The default maximum number of page links.
                      */
                     // @ts-ignore
-                    readonly DEFAULT_MAX_LINKED_PAGES: number /*int*/
+                    public static readonly DEFAULT_MAX_LINKED_PAGES: number /*int*/
                     /**
                      * Set the source list for this holder.
                      */
                     // @ts-ignore
-                    setSource(source: Array<E>): void
+                    public setSource(source: java.util.List<E> | Array<E>): void
                     /**
                      * Return the source list for this holder.
                      */
                     // @ts-ignore
-                    getSource(): java.util.List<E>
+                    public getSource(): Array<E>
                     /**
                      * Return the last time the list has been fetched from the source provider.
                      */
                     // @ts-ignore
-                    getRefreshDate(): java.util.Date
+                    public getRefreshDate(): java.util.Date
                     /**
                      * Set the sort definition for this holder.
                      * Typically an instance of MutableSortDefinition.
                      * @see org.springframework.beans.support.MutableSortDefinition
                      */
                     // @ts-ignore
-                    setSort(sort: org.springframework.beans.support.SortDefinition): void
+                    public setSort(sort: org.springframework.beans.support.SortDefinition): void
                     /**
                      * Return the sort definition for this holder.
                      */
                     // @ts-ignore
-                    getSort(): org.springframework.beans.support.SortDefinition
+                    public getSort(): org.springframework.beans.support.SortDefinition
                     /**
                      * Set the current page size.
                      * Resets the current page number if changed.
                      * <p>Default value is 10.
                      */
                     // @ts-ignore
-                    setPageSize(pageSize: number /*int*/): void
+                    public setPageSize(pageSize: number /*int*/): void
                     /**
                      * Return the current page size.
                      */
                     // @ts-ignore
-                    getPageSize(): int
+                    public getPageSize(): number /*int*/
                     /**
                      * Set the current page number.
                      * Page numbering starts with 0.
                      */
                     // @ts-ignore
-                    setPage(page: number /*int*/): void
+                    public setPage(page: number /*int*/): void
                     /**
                      * Return the current page number.
                      * Page numbering starts with 0.
                      */
                     // @ts-ignore
-                    getPage(): int
+                    public getPage(): number /*int*/
                     /**
                      * Set the maximum number of page links to a few pages around the current one.
                      */
                     // @ts-ignore
-                    setMaxLinkedPages(maxLinkedPages: number /*int*/): void
+                    public setMaxLinkedPages(maxLinkedPages: number /*int*/): void
                     /**
                      * Return the maximum number of page links to a few pages around the current one.
                      */
                     // @ts-ignore
-                    getMaxLinkedPages(): int
+                    public getMaxLinkedPages(): number /*int*/
                     /**
                      * Return the number of pages for the current source list.
                      */
                     // @ts-ignore
-                    getPageCount(): int
+                    public getPageCount(): number /*int*/
                     /**
                      * Return if the current page is the first one.
                      */
                     // @ts-ignore
-                    isFirstPage(): boolean
+                    public isFirstPage(): boolean
                     /**
                      * Return if the current page is the last one.
                      */
                     // @ts-ignore
-                    isLastPage(): boolean
+                    public isLastPage(): boolean
                     /**
                      * Switch to previous page.
                      * Will stay on first page if already on first page.
                      */
                     // @ts-ignore
-                    previousPage(): void
+                    public previousPage(): void
                     /**
                      * Switch to next page.
                      * Will stay on last page if already on last page.
                      */
                     // @ts-ignore
-                    nextPage(): void
+                    public nextPage(): void
                     /**
                      * Return the total number of elements in the source list.
                      */
                     // @ts-ignore
-                    getNrOfElements(): int
+                    public getNrOfElements(): number /*int*/
                     /**
                      * Return the element index of the first element on the current page.
                      * Element numbering starts with 0.
                      */
                     // @ts-ignore
-                    getFirstElementOnPage(): int
+                    public getFirstElementOnPage(): number /*int*/
                     /**
                      * Return the element index of the last element on the current page.
                      * Element numbering starts with 0.
                      */
                     // @ts-ignore
-                    getLastElementOnPage(): int
+                    public getLastElementOnPage(): number /*int*/
                     /**
                      * Return a sub-list representing the current page.
                      */
                     // @ts-ignore
-                    getPageList(): java.util.List<E>
+                    public getPageList(): Array<E>
                     /**
                      * Return the first page to which create a link around the current page.
                      */
                     // @ts-ignore
-                    getFirstLinkedPage(): int
+                    public getFirstLinkedPage(): number /*int*/
                     /**
                      * Return the last page to which create a link around the current page.
                      */
                     // @ts-ignore
-                    getLastLinkedPage(): int
+                    public getLastLinkedPage(): number /*int*/
                     /**
                      * Resort the list if necessary, i.e. if the current {@code sort} instance
                      * isn't equal to the backed-up {@code sortUsed} instance.
@@ -184,7 +184,7 @@ declare namespace org {
                      * @see #doSort
                      */
                     // @ts-ignore
-                    resort(): void
+                    public resort(): void
                     /**
                      * Create a deep copy of the given sort definition,
                      * for use as state holder to compare a modified sort definition against.
@@ -207,7 +207,7 @@ declare namespace org {
                      * @see PropertyComparator#sort(java.util.List, SortDefinition)
                      */
                     // @ts-ignore
-                    doSort(source: Array<E>, sort: org.springframework.beans.support.SortDefinition): void
+                    doSort(source: java.util.List<E> | Array<E>, sort: org.springframework.beans.support.SortDefinition): void
                 }
             }
         }

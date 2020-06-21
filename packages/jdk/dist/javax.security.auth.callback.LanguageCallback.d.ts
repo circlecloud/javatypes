@@ -23,7 +23,7 @@ declare namespace javax {
                      * @see #getLocale
                      */
                     // @ts-ignore
-                    setLocale(locale: java.util.Locale): void
+                    public setLocale(locale: java.util.Locale): void
                     /**
                      * Get the retrieved {@code Locale}.
                      * <p>
@@ -32,7 +32,7 @@ declare namespace javax {
                      * @see #setLocale
                      */
                     // @ts-ignore
-                    getLocale(): java.util.Locale
+                    public getLocale(): java.util.Locale
                 }
             }
         }

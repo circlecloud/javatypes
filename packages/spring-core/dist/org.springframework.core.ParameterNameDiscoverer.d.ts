@@ -23,7 +23,7 @@ declare namespace org {
                  *  or {#code null} if they cannot
                  */
                 // @ts-ignore
-                getParameterNames(method: java.lang.reflect.Method): java.lang.String[]
+                getParameterNames(method: java.lang.reflect.Method): string[]
                 /**
                  * Return parameter names for a constructor, or {@code null} if they cannot be determined.
                  * <p>Individual entries in the array may be {@code null} if parameter names are only
@@ -34,7 +34,7 @@ declare namespace org {
                  *  or {#code null} if they cannot
                  */
                 // @ts-ignore
-                getParameterNames(ctor: java.lang.reflect.Constructor<any>): java.lang.String[]
+                getParameterNames(ctor: java.lang.reflect.Constructor<any>): string[]
             }
         }
     }

@@ -23,13 +23,13 @@ declare namespace javax {
                  * @param offs      offset within the document that was requested &gt;= 0
                  */
                 // @ts-ignore
-                constructor(s: string, offs: number /*int*/)
+                constructor(s: java.lang.String | string, offs: number /*int*/)
                 /**
                  * Returns the offset into the document that was not legal.
                  * @return the offset &gt;= 0
                  */
                 // @ts-ignore
-                offsetRequested(): int
+                offsetRequested(): number /*int*/
             }
         }
     }

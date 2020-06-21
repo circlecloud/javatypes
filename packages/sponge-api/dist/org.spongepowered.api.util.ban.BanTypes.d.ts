@@ -9,12 +9,12 @@ declare namespace org {
                          * Represents a {@link Ban.Ip}.
                          */
                         // @ts-ignore
-                        readonly IP: org.spongepowered.api.util.ban.BanType
+                        public static readonly IP: org.spongepowered.api.util.ban.BanType
                         /**
                          * Represents a {@link Ban.Profile}.
                          */
                         // @ts-ignore
-                        readonly PROFILE: org.spongepowered.api.util.ban.BanType
+                        public static readonly PROFILE: org.spongepowered.api.util.ban.BanType
                     }
                 }
             }

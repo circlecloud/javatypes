@@ -29,7 +29,7 @@ declare namespace org {
                      * @return the entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    getForEntity<T>(url: string, responseType: java.lang.Class<T>, ...uriVariables: any[]): <any>
+                    getForEntity<T>(url: java.lang.String | string, responseType: java.lang.Class<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously retrieve a representation by doing a GET on the URI template.
                      * The response is converted and stored in an {@link ResponseEntity}.
@@ -40,7 +40,7 @@ declare namespace org {
                      * @return the entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    getForEntity<T>(url: string, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    getForEntity<T>(url: java.lang.String | string, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously retrieve a representation by doing a GET on the URL.
                      * The response is converted and stored in an {@link ResponseEntity}.
@@ -49,7 +49,7 @@ declare namespace org {
                      * @return the entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    getForEntity<T>(url: java.net.URI, responseType: java.lang.Class<T>): <any>
+                    getForEntity<T>(url: java.net.URI, responseType: java.lang.Class<T>): object
                     /**
                      * Asynchronously retrieve all headers of the resource specified by the URI template.
                      * <p>URI Template variables are expanded using the given URI variables, if any.
@@ -58,7 +58,7 @@ declare namespace org {
                      * @return all HTTP headers of that resource wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    headForHeaders(url: string, ...uriVariables: any[]): <any>
+                    headForHeaders(url: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously retrieve all headers of the resource specified by the URI template.
                      * <p>URI Template variables are expanded using the given map.
@@ -67,14 +67,14 @@ declare namespace org {
                      * @return all HTTP headers of that resource wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    headForHeaders(url: string, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    headForHeaders(url: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously retrieve all headers of the resource specified by the URL.
                      * @param url the URL
                      * @return all HTTP headers of that resource wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    headForHeaders(url: java.net.URI): <any>
+                    headForHeaders(url: java.net.URI): object
                     /**
                      * Create a new resource by POSTing the given object to the URI template, and
                      * asynchronously returns the value of the {@code Location} header. This header
@@ -87,7 +87,7 @@ declare namespace org {
                      * @see org.springframework.http.HttpEntity
                      */
                     // @ts-ignore
-                    postForLocation(url: string, request: org.springframework.http.HttpEntity<any>, ...uriVariables: any[]): <any>
+                    postForLocation(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Create a new resource by POSTing the given object to the URI template, and
                      * asynchronously returns the value of the {@code Location} header. This header
@@ -100,7 +100,7 @@ declare namespace org {
                      * @see org.springframework.http.HttpEntity
                      */
                     // @ts-ignore
-                    postForLocation(url: string, request: org.springframework.http.HttpEntity<any>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    postForLocation(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Create a new resource by POSTing the given object to the URL, and asynchronously
                      * returns the value of the {@code Location} header. This header typically indicates
@@ -111,7 +111,7 @@ declare namespace org {
                      * @see org.springframework.http.HttpEntity
                      */
                     // @ts-ignore
-                    postForLocation(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): <any>
+                    postForLocation(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): object
                     /**
                      * Create a new resource by POSTing the given object to the URI template,
                      * and asynchronously returns the response as {@link ResponseEntity}.
@@ -123,7 +123,7 @@ declare namespace org {
                      * @see org.springframework.http.HttpEntity
                      */
                     // @ts-ignore
-                    postForEntity<T>(url: string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: any[]): <any>
+                    postForEntity<T>(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Create a new resource by POSTing the given object to the URI template,
                      * and asynchronously returns the response as {@link ResponseEntity}.
@@ -135,7 +135,7 @@ declare namespace org {
                      * @see org.springframework.http.HttpEntity
                      */
                     // @ts-ignore
-                    postForEntity<T>(url: string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    postForEntity<T>(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Create a new resource by POSTing the given object to the URL,
                      * and asynchronously returns the response as {@link ResponseEntity}.
@@ -145,7 +145,7 @@ declare namespace org {
                      * @see org.springframework.http.HttpEntity
                      */
                     // @ts-ignore
-                    postForEntity<T>(url: java.net.URI, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): <any>
+                    postForEntity<T>(url: java.net.URI, request: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): object
                     /**
                      * Create or update a resource by PUTting the given object to the URI.
                      * <p>URI Template variables are expanded using the given URI variables, if any.
@@ -156,7 +156,7 @@ declare namespace org {
                      * @see HttpEntity
                      */
                     // @ts-ignore
-                    put(url: string, request: org.springframework.http.HttpEntity<any>, ...uriVariables: any[]): <any>
+                    put(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Creates a new resource by PUTting the given object to URI template.
                      * <p>URI Template variables are expanded using the given map.
@@ -167,7 +167,7 @@ declare namespace org {
                      * @see HttpEntity
                      */
                     // @ts-ignore
-                    put(url: string, request: org.springframework.http.HttpEntity<any>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    put(url: java.lang.String | string, request: org.springframework.http.HttpEntity<any>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Creates a new resource by PUTting the given object to URL.
                      * <p>The Future will return a {@code null} result upon completion.
@@ -176,7 +176,7 @@ declare namespace org {
                      * @see HttpEntity
                      */
                     // @ts-ignore
-                    put(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): <any>
+                    put(url: java.net.URI, request: org.springframework.http.HttpEntity<any>): object
                     /**
                      * Asynchronously delete the resources at the specified URI.
                      * <p>URI Template variables are expanded using the given URI variables, if any.
@@ -185,7 +185,7 @@ declare namespace org {
                      * @param uriVariables the variables to expand in the template
                      */
                     // @ts-ignore
-                    delete(url: string, ...uriVariables: any[]): <any>
+                    delete(url: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously delete the resources at the specified URI.
                      * <p>URI Template variables are expanded using the given URI variables, if any.
@@ -194,7 +194,7 @@ declare namespace org {
                      * @param uriVariables the variables to expand in the template
                      */
                     // @ts-ignore
-                    delete(url: string, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    delete(url: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously delete the resources at the specified URI.
                      * <p>URI Template variables are expanded using the given URI variables, if any.
@@ -202,7 +202,7 @@ declare namespace org {
                      * @param url the URL
                      */
                     // @ts-ignore
-                    delete(url: java.net.URI): <any>
+                    delete(url: java.net.URI): object
                     /**
                      * Asynchronously return the value of the Allow header for the given URI.
                      * <p>URI Template variables are expanded using the given URI variables, if any.
@@ -211,7 +211,7 @@ declare namespace org {
                      * @return the value of the allow header wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    optionsForAllow(url: string, ...uriVariables: any[]): <any>
+                    optionsForAllow(url: java.lang.String | string, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously return the value of the Allow header for the given URI.
                      * <p>URI Template variables are expanded using the given map.
@@ -220,14 +220,14 @@ declare namespace org {
                      * @return the value of the allow header wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    optionsForAllow(url: string, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    optionsForAllow(url: java.lang.String | string, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously return the value of the Allow header for the given URL.
                      * @param url the URL
                      * @return the value of the allow header wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    optionsForAllow(url: java.net.URI): <any>
+                    optionsForAllow(url: java.net.URI): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, writing the
                      * given request entity to the request, and returns the response as
@@ -242,7 +242,7 @@ declare namespace org {
                      * @return the response as entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: any[]): <any>
+                    exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, writing the
                      * given request entity to the request, and returns the response as
@@ -257,7 +257,7 @@ declare namespace org {
                      * @return the response as entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, writing the
                      * given request entity to the request, and returns the response as
@@ -270,7 +270,7 @@ declare namespace org {
                      * @return the response as entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): <any>
+                    exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: java.lang.Class<T>): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, writing the given
                      * request entity to the request, and returns the response as {@link ResponseEntity}.
@@ -291,7 +291,7 @@ declare namespace org {
                      * @return the response as entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, ...uriVariables: any[]): <any>
+                    exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, writing the given
                      * request entity to the request, and returns the response as {@link ResponseEntity}.
@@ -312,7 +312,7 @@ declare namespace org {
                      * @return the response as entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    exchange<T>(url: string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    exchange<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, writing the given
                      * request entity to the request, and returns the response as {@link ResponseEntity}.
@@ -332,7 +332,7 @@ declare namespace org {
                      * @return the response as entity wrapped in a {#link Future}
                      */
                     // @ts-ignore
-                    exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object): <any>
+                    exchange<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestEntity: org.springframework.http.HttpEntity<any>, responseType: object): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, preparing the
                      * request with the {@link AsyncRequestCallback}, and reading the response with a
@@ -346,7 +346,7 @@ declare namespace org {
                      * @return an arbitrary object, as returned by the {#link ResponseExtractor}
                      */
                     // @ts-ignore
-                    execute<T>(url: string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, ...uriVariables: any[]): <any>
+                    execute<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, ...uriVariables: java.lang.Object[] | any[]): object
                     /**
                      * Asynchronously execute the HTTP method to the given URI template, preparing the
                      * request with the {@link AsyncRequestCallback}, and reading the response with a
@@ -360,7 +360,7 @@ declare namespace org {
                      * @return an arbitrary object, as returned by the {#link ResponseExtractor}
                      */
                     // @ts-ignore
-                    execute<T>(url: string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, uriVariables: java.util.Map<java.lang.String, any>): <any>
+                    execute<T>(url: java.lang.String | string, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>, uriVariables: java.util.Map<java.lang.String | string, any>): object
                     /**
                      * Asynchronously execute the HTTP method to the given URL, preparing the request
                      * with the {@link AsyncRequestCallback}, and reading the response with a
@@ -372,7 +372,7 @@ declare namespace org {
                      * @return an arbitrary object, as returned by the {#link ResponseExtractor}
                      */
                     // @ts-ignore
-                    execute<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>): <any>
+                    execute<T>(url: java.net.URI, method: org.springframework.http.HttpMethod, requestCallback: org.springframework.web.client.AsyncRequestCallback, responseExtractor: org.springframework.web.client.ResponseExtractor<T>): object
                 }
             }
         }

@@ -11,13 +11,13 @@ declare namespace org {
                              * @return the seed
                              */
                             // @ts-ignore
-                            getSeed(): int
+                            getSeed(): number /*int*/
                             /**
                              * The enchantment option. 1, 2 or 3
                              * @return The enchantment option
                              */
                             // @ts-ignore
-                            getOption(): int
+                            getOption(): number /*int*/
                         }
                     }
                 }

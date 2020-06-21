@@ -16,7 +16,7 @@ declare namespace org {
                      * @return the bed enter result representing the default outcome of this event
                      */
                     // @ts-ignore
-                    getBedEnterResult(): org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
+                    public getBedEnterResult(): org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult
                     /**
                      * This controls the action to take with the bed that was clicked on.
                      * <p>
@@ -26,7 +26,7 @@ declare namespace org {
                      * @see #setUseBed(org.bukkit.event.Event.Result)
                      */
                     // @ts-ignore
-                    useBed(): org.bukkit.event.Event.Result
+                    public useBed(): org.bukkit.event.Event.Result
                     /**
                      * Sets the action to take with the interacted bed.
                      * <p>
@@ -42,7 +42,7 @@ declare namespace org {
                      * @see #useBed()
                      */
                     // @ts-ignore
-                    setUseBed(useBed: org.bukkit.event.Event.Result): void
+                    public setUseBed(useBed: org.bukkit.event.Event.Result): void
                     /**
                      * Gets the cancellation state of this event. Set to true if you want to
                      * prevent the player from sleeping.
@@ -56,7 +56,7 @@ declare namespace org {
                      * @return boolean cancellation state
                      */
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     /**
                      * Sets the cancellation state of this event. A canceled event will not be
                      * executed in the server, but will still pass to other plugins.
@@ -65,17 +65,17 @@ declare namespace org {
                      * @param cancel true if you wish to cancel this event
                      */
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     /**
                      * Returns the bed block involved in this event.
                      * @return the bed block involved in this event
                      */
                     // @ts-ignore
-                    getBed(): org.bukkit.block.Block
+                    public getBed(): org.bukkit.block.Block
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

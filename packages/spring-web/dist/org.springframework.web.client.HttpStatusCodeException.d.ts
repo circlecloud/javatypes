@@ -10,7 +10,7 @@ declare namespace org {
                  * @since 3.0
                  */
                 // @ts-ignore
-                class HttpStatusCodeException extends org.springframework.web.client.RestClientResponseException {
+                abstract class HttpStatusCodeException extends org.springframework.web.client.RestClientResponseException {
                     /**
                      * Construct a new instance with an {@link HttpStatus}.
                      * @param statusCode the status code
@@ -23,7 +23,7 @@ declare namespace org {
                      * @param statusText the status text
                      */
                     // @ts-ignore
-                    constructor(statusCode: org.springframework.http.HttpStatus, statusText: string)
+                    constructor(statusCode: org.springframework.http.HttpStatus, statusText: java.lang.String | string)
                     /**
                      * Construct instance with an {@link HttpStatus}, status text, and content.
                      * @param statusCode the status code
@@ -33,7 +33,7 @@ declare namespace org {
                      * @since 3.0.5
                      */
                     // @ts-ignore
-                    constructor(statusCode: org.springframework.http.HttpStatus, statusText: string, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
+                    constructor(statusCode: org.springframework.http.HttpStatus, statusText: java.lang.String | string, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
                     /**
                      * Construct instance with an {@link HttpStatus}, status text, content, and
                      * a response charset.
@@ -45,7 +45,7 @@ declare namespace org {
                      * @since 3.1.2
                      */
                     // @ts-ignore
-                    constructor(statusCode: org.springframework.http.HttpStatus, statusText: string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
+                    constructor(statusCode: org.springframework.http.HttpStatus, statusText: java.lang.String | string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
                     /**
                      * Construct instance with an {@link HttpStatus}, status text, content, and
                      * a response charset.
@@ -58,12 +58,12 @@ declare namespace org {
                      * @since 5.2.2
                      */
                     // @ts-ignore
-                    constructor(message: string, statusCode: org.springframework.http.HttpStatus, statusText: string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
+                    constructor(message: java.lang.String | string, statusCode: org.springframework.http.HttpStatus, statusText: java.lang.String | string, responseHeaders: org.springframework.http.HttpHeaders, responseBody: number /*byte*/[], responseCharset: java.nio.charset.Charset)
                     /**
                      * Return the HTTP status code.
                      */
                     // @ts-ignore
-                    getStatusCode(): org.springframework.http.HttpStatus
+                    public getStatusCode(): org.springframework.http.HttpStatus
                 }
             }
         }

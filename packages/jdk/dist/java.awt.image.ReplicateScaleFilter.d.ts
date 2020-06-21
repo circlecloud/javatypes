@@ -67,7 +67,7 @@ declare namespace java {
                  * data to the {@link ImageConsumer}.
                  */
                 // @ts-ignore
-                outpixbuf: any
+                outpixbuf: java.lang.Object | any
                 /**
                  * Passes along the properties from the source object after adding a
                  * property indicating the scale applied.
@@ -82,7 +82,7 @@ declare namespace java {
                  * with the filtering operation.
                  */
                 // @ts-ignore
-                setProperties(props: java.util.Hashtable<any, ?>): void
+                public setProperties(props: java.util.Hashtable<any, any>): void
                 /**
                  * Override the dimensions of the source image and pass the dimensions
                  * of the new scaled size to the ImageConsumer.
@@ -96,7 +96,7 @@ declare namespace java {
                  * @see ImageConsumer
                  */
                 // @ts-ignore
-                setDimensions(w: number /*int*/, h: number /*int*/): void
+                public setDimensions(w: number /*int*/, h: number /*int*/): void
                 /**
                  * Choose which rows and columns of the delivered byte pixels are
                  * needed for the destination scaled image and pass through just
@@ -110,7 +110,7 @@ declare namespace java {
                  * with the filtering operation.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*byte*/[], off: number /*int*/, scansize: number /*int*/): void
                 /**
                  * Choose which rows and columns of the delivered int pixels are
                  * needed for the destination scaled image and pass through just
@@ -124,7 +124,7 @@ declare namespace java {
                  * with the filtering operation.
                  */
                 // @ts-ignore
-                setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
+                public setPixels(x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/, model: java.awt.image.ColorModel, pixels: number /*int*/[], off: number /*int*/, scansize: number /*int*/): void
             }
         }
     }

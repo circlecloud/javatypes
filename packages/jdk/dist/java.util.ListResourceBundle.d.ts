@@ -68,7 +68,7 @@ declare namespace java {
          * @since JDK1.1
          */
         // @ts-ignore
-        class ListResourceBundle extends java.util.ResourceBundle {
+        abstract class ListResourceBundle extends java.util.ResourceBundle {
             /**
              * Sole constructor.  (For invocation by subclass constructors, typically
              * implicit.)
@@ -76,7 +76,7 @@ declare namespace java {
             // @ts-ignore
             constructor()
             // @ts-ignore
-            handleGetObject(key: string): java.lang.Object
+            public handleGetObject(key: java.lang.String | string): any
             /**
              * Returns an <code>Enumeration</code> of the keys contained in
              * this <code>ResourceBundle</code> and its parent bundles.
@@ -85,7 +85,7 @@ declare namespace java {
              * @see #keySet()
              */
             // @ts-ignore
-            getKeys(): java.util.Enumeration<java.lang.String>
+            public getKeys(): java.util.Enumeration<java.lang.String | string>
             /**
              * Returns a <code>Set</code> of the keys contained
              * <em>only</em> in this <code>ResourceBundle</code>.
@@ -95,7 +95,7 @@ declare namespace java {
              * @see #keySet()
              */
             // @ts-ignore
-            handleKeySet(): java.util.Set<java.lang.String>
+            handleKeySet(): Array<java.lang.String | string>
             /**
              * Returns an array in which each item is a pair of objects in an
              * <code>Object</code> array. The first element of each pair is
@@ -106,7 +106,7 @@ declare namespace java {
              *  key-value pair.
              */
             // @ts-ignore
-            abstract getContents(): java.lang.Object[][]
+            abstract getContents(): any[][]
         }
     }
 }

@@ -38,19 +38,19 @@ declare namespace java {
                  * @return the prime.
                  */
                 // @ts-ignore
-                getPrime(): java.math.BigInteger
+                public getPrime(): java.math.BigInteger
                 /**
                  * Returns the prime's exponent.
                  * @return the primeExponent.
                  */
                 // @ts-ignore
-                getExponent(): java.math.BigInteger
+                public getExponent(): java.math.BigInteger
                 /**
                  * Returns the prime's crtCoefficient.
                  * @return the crtCoefficient.
                  */
                 // @ts-ignore
-                getCrtCoefficient(): java.math.BigInteger
+                public getCrtCoefficient(): java.math.BigInteger
             }
         }
     }

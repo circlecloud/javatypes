@@ -32,7 +32,7 @@ declare namespace org {
                      * @since 4.3.9
                      */
                     // @ts-ignore
-                    setRemoveOnly(removeOnly: boolean): void
+                    public setRemoveOnly(removeOnly: boolean): void
                     /**
                      * Use this property to enable relative redirects as explained in
                      * {@link RelativeRedirectFilter}, and also using the same response wrapper
@@ -45,7 +45,7 @@ declare namespace org {
                      * @since 4.3.10
                      */
                     // @ts-ignore
-                    setRelativeRedirects(relativeRedirects: boolean): void
+                    public setRelativeRedirects(relativeRedirects: boolean): void
                     // @ts-ignore
                     shouldNotFilter(request: HttpServletRequest): boolean
                     // @ts-ignore

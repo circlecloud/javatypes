@@ -11,7 +11,7 @@ declare namespace org {
                  * @return Age
                  */
                 // @ts-ignore
-                getAge(): int
+                getAge(): number /*int*/
                 /**
                  * Sets the age of this animal.
                  * @param age New age

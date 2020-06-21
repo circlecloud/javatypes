@@ -45,7 +45,7 @@ declare namespace org {
                          * @return The trait name
                          */
                         // @ts-ignore
-                        getName(): java.lang.String
+                        getName(): string
                         /**
                          * Gets all possible values for a specific {@link BlockTrait}. The
                          * included values may not be in any particular order. The returned
@@ -53,7 +53,7 @@ declare namespace org {
                          * @return All possible values
                          */
                         // @ts-ignore
-                        getPossibleValues(): java.util.Collection<T>
+                        getPossibleValues(): Array<T>
                         /**
                          * Gets the class type of the {@link BlockTrait}'s values.
                          * @return The value class
@@ -68,14 +68,14 @@ declare namespace org {
                          * @return The predicate
                          */
                         // @ts-ignore
-                        getPredicate(): java.util.function.Predicate<T>
+                        getPredicate(): java.util.function$.Predicate<T>
                         /**
                          * Attempts to parse the provided value as a value dictated possible by this trait or {@link Optional#empty()} otherwise.
                          * @param value The value to parse
                          * @return The actual value
                          */
                         // @ts-ignore
-                        parseValue(value: string): java.util.Optional<T>
+                        parseValue(value: java.lang.String | string): java.util.Optional<T>
                     }
                 }
             }

@@ -29,7 +29,7 @@ declare namespace org {
                          *  is empty, or consists wholly of whitespace
                          */
                         // @ts-ignore
-                        constructor(beanName: string)
+                        constructor(beanName: java.lang.String | string)
                         /**
                          * Create a new BeanWiringInfo that points to the given bean name.
                          * @param beanName the name of the bean definition to take the property values from
@@ -39,7 +39,7 @@ declare namespace org {
                          *  is empty, or consists wholly of whitespace
                          */
                         // @ts-ignore
-                        constructor(beanName: string, isDefaultBeanName: boolean)
+                        constructor(beanName: java.lang.String | string, isDefaultBeanName: boolean)
                         /**
                          * Create a new BeanWiringInfo that indicates autowiring.
                          * @param autowireMode one of the constants {#link #AUTOWIRE_BY_NAME} /
@@ -59,42 +59,42 @@ declare namespace org {
                          * @see org.springframework.beans.factory.config.AutowireCapableBeanFactory#AUTOWIRE_BY_NAME
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_BY_NAME: number /*int*/
+                        public static readonly AUTOWIRE_BY_NAME: number /*int*/
                         /**
                          * Constant that indicates autowiring bean properties by type.
                          * @see #BeanWiringInfo(int, boolean)
                          * @see org.springframework.beans.factory.config.AutowireCapableBeanFactory#AUTOWIRE_BY_TYPE
                          */
                         // @ts-ignore
-                        readonly AUTOWIRE_BY_TYPE: number /*int*/
+                        public static readonly AUTOWIRE_BY_TYPE: number /*int*/
                         /**
                          * Return whether this BeanWiringInfo indicates autowiring.
                          */
                         // @ts-ignore
-                        indicatesAutowiring(): boolean
+                        public indicatesAutowiring(): boolean
                         /**
                          * Return the specific bean name that this BeanWiringInfo points to, if any.
                          */
                         // @ts-ignore
-                        getBeanName(): java.lang.String
+                        public getBeanName(): string
                         /**
                          * Return whether the specific bean name is a suggested default bean name,
                          * not necessarily matching an actual bean definition in the factory.
                          */
                         // @ts-ignore
-                        isDefaultBeanName(): boolean
+                        public isDefaultBeanName(): boolean
                         /**
                          * Return one of the constants {@link #AUTOWIRE_BY_NAME} /
                          * {@link #AUTOWIRE_BY_TYPE}, if autowiring is indicated.
                          */
                         // @ts-ignore
-                        getAutowireMode(): int
+                        public getAutowireMode(): number /*int*/
                         /**
                          * Return whether to perform a dependency check for object references
                          * in the bean instance (after autowiring).
                          */
                         // @ts-ignore
-                        getDependencyCheck(): boolean
+                        public getDependencyCheck(): boolean
                     }
                 }
             }

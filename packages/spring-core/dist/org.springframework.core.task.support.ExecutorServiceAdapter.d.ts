@@ -28,17 +28,17 @@ declare namespace org {
                         // @ts-ignore
                         constructor(taskExecutor: org.springframework.core.task.TaskExecutor)
                         // @ts-ignore
-                        execute(task: java.lang.Runnable): void
+                        public execute(task: java.lang.Runnable): void
                         // @ts-ignore
-                        shutdown(): void
+                        public shutdown(): void
                         // @ts-ignore
-                        shutdownNow(): java.util.List<java.lang.Runnable>
+                        public shutdownNow(): Array<java.lang.Runnable>
                         // @ts-ignore
-                        awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
+                        public awaitTermination(timeout: number /*long*/, unit: java.util.concurrent.TimeUnit): boolean
                         // @ts-ignore
-                        isShutdown(): boolean
+                        public isShutdown(): boolean
                         // @ts-ignore
-                        isTerminated(): boolean
+                        public isTerminated(): boolean
                     }
                 }
             }

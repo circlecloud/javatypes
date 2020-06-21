@@ -55,44 +55,44 @@ declare namespace java {
                  * @see #getStateChange()
                  */
                 // @ts-ignore
-                constructor(source: java.awt.ItemSelectable, id: number /*int*/, item: any, stateChange: number /*int*/)
+                constructor(source: java.awt.ItemSelectable, id: number /*int*/, item: java.lang.Object | any, stateChange: number /*int*/)
                 /**
                  * The first number in the range of ids used for item events.
                  */
                 // @ts-ignore
-                readonly ITEM_FIRST: number /*int*/
+                public static readonly ITEM_FIRST: number /*int*/
                 /**
                  * The last number in the range of ids used for item events.
                  */
                 // @ts-ignore
-                readonly ITEM_LAST: number /*int*/
+                public static readonly ITEM_LAST: number /*int*/
                 /**
                  * This event id indicates that an item's state changed.
                  */
                 // @ts-ignore
-                readonly ITEM_STATE_CHANGED: number /*int*/
+                public static readonly ITEM_STATE_CHANGED: number /*int*/
                 /**
                  * This state-change value indicates that an item was selected.
                  */
                 // @ts-ignore
-                readonly SELECTED: number /*int*/
+                public static readonly SELECTED: number /*int*/
                 /**
                  * This state-change-value indicates that a selected item was deselected.
                  */
                 // @ts-ignore
-                readonly DESELECTED: number /*int*/
+                public static readonly DESELECTED: number /*int*/
                 /**
                  * Returns the originator of the event.
                  * @return the ItemSelectable object that originated the event.
                  */
                 // @ts-ignore
-                getItemSelectable(): java.awt.ItemSelectable
+                public getItemSelectable(): java.awt.ItemSelectable
                 /**
                  * Returns the item affected by the event.
                  * @return the item (object) that was affected by the event
                  */
                 // @ts-ignore
-                getItem(): java.lang.Object
+                public getItem(): any
                 /**
                  * Returns the type of state change (selected or deselected).
                  * @return an integer that indicates whether the item was selected
@@ -101,14 +101,14 @@ declare namespace java {
                  * @see #DESELECTED
                  */
                 // @ts-ignore
-                getStateChange(): int
+                public getStateChange(): number /*int*/
                 /**
                  * Returns a parameter string identifying this item event.
                  * This method is useful for event-logging and for debugging.
                  * @return a string identifying the event and its attributes
                  */
                 // @ts-ignore
-                paramString(): java.lang.String
+                public paramString(): string
             }
         }
     }

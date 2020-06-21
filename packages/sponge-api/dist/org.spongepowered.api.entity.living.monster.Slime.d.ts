@@ -21,7 +21,7 @@ declare namespace org {
                              * @return The mutable bounded value for the current slime size
                              */
                             // @ts-ignore
-                            slimeSize(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer>
+                            slimeSize(): org.spongepowered.api.data.value.mutable.MutableBoundedValue<java.lang.Integer | number>
                         }
                     }
                 }

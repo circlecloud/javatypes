@@ -14,7 +14,7 @@ declare namespace org {
                      * @see RestController
                      */
                     // @ts-ignore
-                    class ResponseBody implements java.lang.annotation.Annotation {
+                    abstract class ResponseBody implements java.lang.annotation.Annotation {
                     }
                 }
             }

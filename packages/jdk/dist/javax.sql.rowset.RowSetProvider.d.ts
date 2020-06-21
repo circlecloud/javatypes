@@ -68,7 +68,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                newFactory(): javax.sql.rowset.RowSetFactory
+                public static newFactory(): javax.sql.rowset.RowSetFactory
                 /**
                  * <p>Creates  a new instance of a <code>RowSetFactory</code> from the
                  * specified factory class name.
@@ -89,7 +89,7 @@ declare namespace javax {
                  * @since 1.7
                  */
                 // @ts-ignore
-                newFactory(factoryClassName: string, cl: java.lang.ClassLoader): javax.sql.rowset.RowSetFactory
+                public static newFactory(factoryClassName: java.lang.String | string, cl: java.lang.ClassLoader): javax.sql.rowset.RowSetFactory
             }
         }
     }

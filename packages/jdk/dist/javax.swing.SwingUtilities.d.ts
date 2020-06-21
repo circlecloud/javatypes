@@ -10,12 +10,12 @@ declare namespace javax {
              * Return true if <code>a</code> contains <code>b</code>
              */
             // @ts-ignore
-            isRectangleContainingRectangle(a: java.awt.Rectangle, b: java.awt.Rectangle): boolean
+            public static isRectangleContainingRectangle(a: java.awt.Rectangle, b: java.awt.Rectangle): boolean
             /**
              * Return the rectangle (0,0,bounds.width,bounds.height) for the component <code>aComponent</code>
              */
             // @ts-ignore
-            getLocalBounds(aComponent: java.awt.Component): java.awt.Rectangle
+            public static getLocalBounds(aComponent: java.awt.Component): java.awt.Rectangle
             /**
              * Returns the first <code>Window </code> ancestor of <code>c</code>, or
              * {@code null} if <code>c</code> is not contained inside a <code>Window</code>.
@@ -27,7 +27,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getWindowAncestor(c: java.awt.Component): java.awt.Window
+            public static getWindowAncestor(c: java.awt.Component): java.awt.Window
             /**
              * Convert a <code>aPoint</code> in <code>source</code> coordinate system to
              * <code>destination</code> coordinate system.
@@ -39,7 +39,7 @@ declare namespace javax {
              * without any conversion.
              */
             // @ts-ignore
-            convertPoint(source: java.awt.Component, aPoint: java.awt.Point, destination: java.awt.Component): java.awt.Point
+            public static convertPoint(source: java.awt.Component, aPoint: java.awt.Point, destination: java.awt.Component): java.awt.Point
             /**
              * Convert the point <code>(x,y)</code> in <code>source</code> coordinate system to
              * <code>destination</code> coordinate system.
@@ -51,7 +51,7 @@ declare namespace javax {
              * without any conversion.
              */
             // @ts-ignore
-            convertPoint(source: java.awt.Component, x: number /*int*/, y: number /*int*/, destination: java.awt.Component): java.awt.Point
+            public static convertPoint(source: java.awt.Component, x: number /*int*/, y: number /*int*/, destination: java.awt.Component): java.awt.Point
             /**
              * Convert the rectangle <code>aRectangle</code> in <code>source</code> coordinate system to
              * <code>destination</code> coordinate system.
@@ -63,21 +63,21 @@ declare namespace javax {
              * without any conversion.
              */
             // @ts-ignore
-            convertRectangle(source: java.awt.Component, aRectangle: java.awt.Rectangle, destination: java.awt.Component): java.awt.Rectangle
+            public static convertRectangle(source: java.awt.Component, aRectangle: java.awt.Rectangle, destination: java.awt.Component): java.awt.Rectangle
             /**
              * Convenience method for searching above <code>comp</code> in the
              * component hierarchy and returns the first object of class <code>c</code> it
              * finds. Can return {@code null}, if a class <code>c</code> cannot be found.
              */
             // @ts-ignore
-            getAncestorOfClass(c: java.lang.Class<any>, comp: java.awt.Component): java.awt.Container
+            public static getAncestorOfClass(c: java.lang.Class<any>, comp: java.awt.Component): java.awt.Container
             /**
              * Convenience method for searching above <code>comp</code> in the
              * component hierarchy and returns the first object of <code>name</code> it
              * finds. Can return {@code null}, if <code>name</code> cannot be found.
              */
             // @ts-ignore
-            getAncestorNamed(name: string, comp: java.awt.Component): java.awt.Container
+            public static getAncestorNamed(name: java.lang.String | string, comp: java.awt.Component): java.awt.Container
             /**
              * Returns the deepest visible descendent Component of <code>parent</code>
              * that contains the location <code>x</code>, <code>y</code>.
@@ -90,7 +90,7 @@ declare namespace javax {
              * @param y the y target location
              */
             // @ts-ignore
-            getDeepestComponentAt(parent: java.awt.Component, x: number /*int*/, y: number /*int*/): java.awt.Component
+            public static getDeepestComponentAt(parent: java.awt.Component, x: number /*int*/, y: number /*int*/): java.awt.Component
             /**
              * Returns a MouseEvent similar to <code>sourceEvent</code> except that its x
              * and y members have been converted to <code>destination</code>'s coordinate
@@ -105,7 +105,7 @@ declare namespace javax {
              * one component to another without changing the source.
              */
             // @ts-ignore
-            convertMouseEvent(source: java.awt.Component, sourceEvent: java.awt.event.MouseEvent, destination: java.awt.Component): java.awt.event.MouseEvent
+            public static convertMouseEvent(source: java.awt.Component, sourceEvent: java.awt.event.MouseEvent, destination: java.awt.Component): java.awt.event.MouseEvent
             /**
              * Convert a point from a component's coordinate system to
              * screen coordinates.
@@ -113,7 +113,7 @@ declare namespace javax {
              * @param c  a Component object
              */
             // @ts-ignore
-            convertPointToScreen(p: java.awt.Point, c: java.awt.Component): void
+            public static convertPointToScreen(p: java.awt.Point, c: java.awt.Component): void
             /**
              * Convert a point from a screen coordinates to a component's
              * coordinate system
@@ -121,7 +121,7 @@ declare namespace javax {
              * @param c  a Component object
              */
             // @ts-ignore
-            convertPointFromScreen(p: java.awt.Point, c: java.awt.Component): void
+            public static convertPointFromScreen(p: java.awt.Point, c: java.awt.Component): void
             /**
              * Returns the first <code>Window </code> ancestor of <code>c</code>, or
              * {@code null} if <code>c</code> is not contained inside a <code>Window</code>.
@@ -135,12 +135,12 @@ declare namespace javax {
              *          <code>Window</code>.
              */
             // @ts-ignore
-            windowForComponent(c: java.awt.Component): java.awt.Window
+            public static windowForComponent(c: java.awt.Component): java.awt.Window
             /**
              * Return <code>true</code> if a component <code>a</code> descends from a component <code>b</code>
              */
             // @ts-ignore
-            isDescendingFrom(a: java.awt.Component, b: java.awt.Component): boolean
+            public static isDescendingFrom(a: java.awt.Component, b: java.awt.Component): boolean
             /**
              * Convenience to calculate the intersection of two rectangles
              * without allocating a new rectangle.
@@ -155,7 +155,7 @@ declare namespace javax {
              * @return <code>dest</code>, modified to specify the intersection
              */
             // @ts-ignore
-            computeIntersection(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, dest: java.awt.Rectangle): java.awt.Rectangle
+            public static computeIntersection(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, dest: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Convenience method that calculates the union of two rectangles
              * without allocating a new rectangle.
@@ -168,35 +168,35 @@ declare namespace javax {
              * @return the <code>dest</code> <code>Rectangle</code>
              */
             // @ts-ignore
-            computeUnion(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, dest: java.awt.Rectangle): java.awt.Rectangle
+            public static computeUnion(x: number /*int*/, y: number /*int*/, width: number /*int*/, height: number /*int*/, dest: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Convenience returning an array of rect representing the regions within
              * <code>rectA</code> that do not overlap with <code>rectB</code>. If the
              * two Rects do not overlap, returns an empty array
              */
             // @ts-ignore
-            computeDifference(rectA: java.awt.Rectangle, rectB: java.awt.Rectangle): java.awt.Rectangle[]
+            public static computeDifference(rectA: java.awt.Rectangle, rectB: java.awt.Rectangle): java.awt.Rectangle[]
             /**
              * Returns true if the mouse event specifies the left mouse button.
              * @param anEvent  a MouseEvent object
              * @return true if the left mouse button was active
              */
             // @ts-ignore
-            isLeftMouseButton(anEvent: java.awt.event.MouseEvent): boolean
+            public static isLeftMouseButton(anEvent: java.awt.event.MouseEvent): boolean
             /**
              * Returns true if the mouse event specifies the middle mouse button.
              * @param anEvent  a MouseEvent object
              * @return true if the middle mouse button was active
              */
             // @ts-ignore
-            isMiddleMouseButton(anEvent: java.awt.event.MouseEvent): boolean
+            public static isMiddleMouseButton(anEvent: java.awt.event.MouseEvent): boolean
             /**
              * Returns true if the mouse event specifies the right mouse button.
              * @param anEvent  a MouseEvent object
              * @return true if the right mouse button was active
              */
             // @ts-ignore
-            isRightMouseButton(anEvent: java.awt.event.MouseEvent): boolean
+            public static isRightMouseButton(anEvent: java.awt.event.MouseEvent): boolean
             /**
              * Compute the width of the string using a font with the specified
              * "metrics" (sizes).
@@ -205,7 +205,7 @@ declare namespace javax {
              * @return an int containing the string width
              */
             // @ts-ignore
-            computeStringWidth(fm: java.awt.FontMetrics, str: string): int
+            public static computeStringWidth(fm: java.awt.FontMetrics, str: java.lang.String | string): number /*int*/
             /**
              * Compute and return the location of the icons origin, the
              * location of origin of the text baseline, and a possibly clipped
@@ -215,7 +215,7 @@ declare namespace javax {
              * into account and translated into LEFT/RIGHT values accordingly.
              */
             // @ts-ignore
-            layoutCompoundLabel(c: javax.swing.JComponent, fm: java.awt.FontMetrics, text: string, icon: javax.swing.Icon, verticalAlignment: number /*int*/, horizontalAlignment: number /*int*/, verticalTextPosition: number /*int*/, horizontalTextPosition: number /*int*/, viewR: java.awt.Rectangle, iconR: java.awt.Rectangle, textR: java.awt.Rectangle, textIconGap: number /*int*/): java.lang.String
+            public static layoutCompoundLabel(c: javax.swing.JComponent, fm: java.awt.FontMetrics, text: java.lang.String | string, icon: javax.swing.Icon, verticalAlignment: number /*int*/, horizontalAlignment: number /*int*/, verticalTextPosition: number /*int*/, horizontalTextPosition: number /*int*/, viewR: java.awt.Rectangle, iconR: java.awt.Rectangle, textR: java.awt.Rectangle, textIconGap: number /*int*/): string
             /**
              * Compute and return the location of the icons origin, the
              * location of origin of the text baseline, and a possibly clipped
@@ -227,7 +227,7 @@ declare namespace javax {
              * Use the other version of layoutCompoundLabel() instead.
              */
             // @ts-ignore
-            layoutCompoundLabel(fm: java.awt.FontMetrics, text: string, icon: javax.swing.Icon, verticalAlignment: number /*int*/, horizontalAlignment: number /*int*/, verticalTextPosition: number /*int*/, horizontalTextPosition: number /*int*/, viewR: java.awt.Rectangle, iconR: java.awt.Rectangle, textR: java.awt.Rectangle, textIconGap: number /*int*/): java.lang.String
+            public static layoutCompoundLabel(fm: java.awt.FontMetrics, text: java.lang.String | string, icon: javax.swing.Icon, verticalAlignment: number /*int*/, horizontalAlignment: number /*int*/, verticalTextPosition: number /*int*/, horizontalTextPosition: number /*int*/, viewR: java.awt.Rectangle, iconR: java.awt.Rectangle, textR: java.awt.Rectangle, textIconGap: number /*int*/): string
             /**
              * Paints a component to the specified <code>Graphics</code>.
              * This method is primarily useful to render
@@ -274,7 +274,7 @@ declare namespace javax {
              * @see java.awt.Component#isLightweight
              */
             // @ts-ignore
-            paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
+            public static paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, x: number /*int*/, y: number /*int*/, w: number /*int*/, h: number /*int*/): void
             /**
              * Paints a component to the specified <code>Graphics</code>.  This
              * is a cover method for
@@ -288,14 +288,14 @@ declare namespace javax {
              * @see CellRendererPane
              */
             // @ts-ignore
-            paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, r: java.awt.Rectangle): void
+            public static paintComponent(g: java.awt.Graphics, c: java.awt.Component, p: java.awt.Container, r: java.awt.Rectangle): void
             /**
              * A simple minded look and feel change: ask each node in the tree
              * to <code>updateUI()</code> -- that is, to initialize its UI property
              * with the current look and feel.
              */
             // @ts-ignore
-            updateComponentTreeUI(c: java.awt.Component): void
+            public static updateComponentTreeUI(c: java.awt.Component): void
             /**
              * Causes <i>doRun.run()</i> to be executed asynchronously on the
              * AWT event dispatching thread.  This will happen after all
@@ -330,7 +330,7 @@ declare namespace javax {
              * @see #invokeAndWait
              */
             // @ts-ignore
-            invokeLater(doRun: java.lang.Runnable): void
+            public static invokeLater(doRun: java.lang.Runnable): void
             /**
              * Causes <code>doRun.run()</code> to be executed synchronously on the
              * AWT event dispatching thread.  This call blocks until
@@ -380,7 +380,7 @@ declare namespace javax {
              * @see #invokeLater
              */
             // @ts-ignore
-            invokeAndWait(doRun: java.lang.Runnable): void
+            public static invokeAndWait(doRun: java.lang.Runnable): void
             /**
              * Returns true if the current thread is an AWT event dispatching thread.
              * <p>
@@ -389,7 +389,7 @@ declare namespace javax {
              * @return true if the current thread is an AWT event dispatching thread
              */
             // @ts-ignore
-            isEventDispatchThread(): boolean
+            public static isEventDispatchThread(): boolean
             /**
              * Get the index of this object in its accessible parent.<p>
              * Note: as of the Java 2 platform v1.3, it is recommended that developers call
@@ -399,7 +399,7 @@ declare namespace javax {
              *  Otherwise, the index of the child in its accessible parent.
              */
             // @ts-ignore
-            getAccessibleIndexInParent(c: java.awt.Component): int
+            public static getAccessibleIndexInParent(c: java.awt.Component): number /*int*/
             /**
              * Returns the <code>Accessible</code> child contained at the
              * local coordinate <code>Point</code>, if one exists.
@@ -408,7 +408,7 @@ declare namespace javax {
              *     if it exists; otherwise <code>null</code>
              */
             // @ts-ignore
-            getAccessibleAt(c: java.awt.Component, p: java.awt.Point): javax.accessibility.Accessible
+            public static getAccessibleAt(c: java.awt.Component, p: java.awt.Point): javax.accessibility.Accessible
             /**
              * Get the state of this object. <p>
              * Note: as of the Java 2 platform v1.3, it is recommended that developers call
@@ -419,7 +419,7 @@ declare namespace javax {
              * @see AccessibleState
              */
             // @ts-ignore
-            getAccessibleStateSet(c: java.awt.Component): javax.accessibility.AccessibleStateSet
+            public static getAccessibleStateSet(c: java.awt.Component): javax.accessibility.AccessibleStateSet
             /**
              * Returns the number of accessible children in the object.  If all
              * of the children of this object implement Accessible, than this
@@ -430,7 +430,7 @@ declare namespace javax {
              * @return the number of accessible children in the object.
              */
             // @ts-ignore
-            getAccessibleChildrenCount(c: java.awt.Component): int
+            public static getAccessibleChildrenCount(c: java.awt.Component): number /*int*/
             /**
              * Return the nth Accessible child of the object. <p>
              * Note: as of the Java 2 platform v1.3, it is recommended that developers call
@@ -440,7 +440,7 @@ declare namespace javax {
              * @return the nth Accessible child of the object
              */
             // @ts-ignore
-            getAccessibleChild(c: java.awt.Component, i: number /*int*/): javax.accessibility.Accessible
+            public static getAccessibleChild(c: java.awt.Component, i: number /*int*/): javax.accessibility.Accessible
             /**
              * Return the child <code>Component</code> of the specified
              * <code>Component</code> that is the focus owner, if any.
@@ -454,20 +454,20 @@ declare namespace javax {
              *    <code>KeyboardFocusManager.getFocusOwner()</code>.
              */
             // @ts-ignore
-            findFocusOwner(c: java.awt.Component): java.awt.Component
+            public static findFocusOwner(c: java.awt.Component): java.awt.Component
             /**
              * If c is a JRootPane descendant return its JRootPane ancestor.
              * If c is a RootPaneContainer then return its JRootPane.
              * @return the JRootPane for Component c or {#code null}.
              */
             // @ts-ignore
-            getRootPane(c: java.awt.Component): javax.swing.JRootPane
+            public static getRootPane(c: java.awt.Component): javax.swing.JRootPane
             /**
              * Returns the root component for the current component tree.
              * @return the first ancestor of c that's a Window or the last Applet ancestor
              */
             // @ts-ignore
-            getRoot(c: java.awt.Component): java.awt.Component
+            public static getRoot(c: java.awt.Component): java.awt.Component
             /**
              * Process the key bindings for the <code>Component</code> associated with
              * <code>event</code>. This method is only useful if
@@ -484,7 +484,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            processKeyBindings(event: java.awt.event.KeyEvent): boolean
+            public static processKeyBindings(event: java.awt.event.KeyEvent): boolean
             /**
              * Invokes <code>actionPerformed</code> on <code>action</code> if
              * <code>action</code> is enabled (and non-{@code null}). The command for the
@@ -502,7 +502,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            notifyAction(action: javax.swing.Action, ks: javax.swing.KeyStroke, event: java.awt.event.KeyEvent, sender: any, modifiers: number /*int*/): boolean
+            public static notifyAction(action: javax.swing.Action, ks: javax.swing.KeyStroke, event: java.awt.event.KeyEvent, sender: java.lang.Object | any, modifiers: number /*int*/): boolean
             /**
              * Convenience method to change the UI InputMap for <code>component</code>
              * to <code>uiInputMap</code>. If <code>uiInputMap</code> is {@code null},
@@ -510,7 +510,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            replaceUIInputMap(component: javax.swing.JComponent, type: number /*int*/, uiInputMap: javax.swing.InputMap): void
+            public static replaceUIInputMap(component: javax.swing.JComponent, type: number /*int*/, uiInputMap: javax.swing.InputMap): void
             /**
              * Convenience method to change the UI ActionMap for <code>component</code>
              * to <code>uiActionMap</code>. If <code>uiActionMap</code> is {@code null},
@@ -518,7 +518,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            replaceUIActionMap(component: javax.swing.JComponent, uiActionMap: javax.swing.ActionMap): void
+            public static replaceUIActionMap(component: javax.swing.JComponent, uiActionMap: javax.swing.ActionMap): void
             /**
              * Returns the InputMap provided by the UI for condition
              * <code>condition</code> in component <code>component</code>.
@@ -527,7 +527,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getUIInputMap(component: javax.swing.JComponent, condition: number /*int*/): javax.swing.InputMap
+            public static getUIInputMap(component: javax.swing.JComponent, condition: number /*int*/): javax.swing.InputMap
             /**
              * Returns the ActionMap provided by the UI
              * in component <code>component</code>.
@@ -535,7 +535,7 @@ declare namespace javax {
              * @since 1.3
              */
             // @ts-ignore
-            getUIActionMap(component: javax.swing.JComponent): javax.swing.ActionMap
+            public static getUIActionMap(component: javax.swing.JComponent): javax.swing.ActionMap
             /**
              * Stores the position and size of
              * the inner painting area of the specified component
@@ -553,7 +553,7 @@ declare namespace javax {
              * @since 1.4
              */
             // @ts-ignore
-            calculateInnerArea(c: javax.swing.JComponent, r: java.awt.Rectangle): java.awt.Rectangle
+            public static calculateInnerArea(c: javax.swing.JComponent, r: java.awt.Rectangle): java.awt.Rectangle
             /**
              * Returns the first ancestor of the {@code component}
              * which is not an instance of {@link JLayer}.
@@ -567,7 +567,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            getUnwrappedParent(component: java.awt.Component): java.awt.Container
+            public static getUnwrappedParent(component: java.awt.Component): java.awt.Container
             /**
              * Returns the first {@code JViewport}'s descendant
              * which is not an instance of {@code JLayer}.
@@ -587,7 +587,7 @@ declare namespace javax {
              * @since 1.7
              */
             // @ts-ignore
-            getUnwrappedView(viewport: javax.swing.JViewport): java.awt.Component
+            public static getUnwrappedView(viewport: javax.swing.JViewport): java.awt.Component
         }
     }
 }

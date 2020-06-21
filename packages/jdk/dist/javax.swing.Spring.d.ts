@@ -89,7 +89,7 @@ declare namespace javax {
          * @since 1.4
          */
         // @ts-ignore
-        class Spring extends java.lang.Object {
+        abstract class Spring extends java.lang.Object {
             /**
              * Used by factory methods to create a <code>Spring</code>.
              * @see #constant(int)
@@ -105,39 +105,39 @@ declare namespace javax {
              * An integer value signifying that a property value has not yet been calculated.
              */
             // @ts-ignore
-            readonly UNSET: number /*int*/
+            public static readonly UNSET: number /*int*/
             /**
              * Returns the <em>minimum</em> value of this <code>Spring</code>.
              * @return the <code>minimumValue</code> property of this <code>Spring</code>
              */
             // @ts-ignore
-            abstract getMinimumValue(): int
+            public abstract getMinimumValue(): number /*int*/
             /**
              * Returns the <em>preferred</em> value of this <code>Spring</code>.
              * @return the <code>preferredValue</code> of this <code>Spring</code>
              */
             // @ts-ignore
-            abstract getPreferredValue(): int
+            public abstract getPreferredValue(): number /*int*/
             /**
              * Returns the <em>maximum</em> value of this <code>Spring</code>.
              * @return the <code>maximumValue</code> property of this <code>Spring</code>
              */
             // @ts-ignore
-            abstract getMaximumValue(): int
+            public abstract getMaximumValue(): number /*int*/
             /**
              * Returns the current <em>value</em> of this <code>Spring</code>.
              * @return the <code>value</code> property of this <code>Spring</code>
              * @see #setValue
              */
             // @ts-ignore
-            abstract getValue(): int
+            public abstract getValue(): number /*int*/
             /**
              * Sets the current <em>value</em> of this <code>Spring</code> to <code>value</code>.
              * @param value the new setting of the <code>value</code> property
              * @see #getValue
              */
             // @ts-ignore
-            abstract setValue(value: number /*int*/): void
+            public abstract setValue(value: number /*int*/): void
             /**
              * Returns a strut -- a spring whose <em>minimum</em>, <em>preferred</em>, and
              * <em>maximum</em> values each have the value <code>pref</code>.
@@ -148,7 +148,7 @@ declare namespace javax {
              * @see Spring
              */
             // @ts-ignore
-            constant(pref: number /*int*/): javax.swing.Spring
+            public static constant(pref: number /*int*/): javax.swing.Spring
             /**
              * Returns a spring whose <em>minimum</em>, <em>preferred</em>, and
              * <em>maximum</em> values have the values: <code>min</code>, <code>pref</code>,
@@ -162,14 +162,14 @@ declare namespace javax {
              * @see Spring
              */
             // @ts-ignore
-            constant(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.Spring
+            public static constant(min: number /*int*/, pref: number /*int*/, max: number /*int*/): javax.swing.Spring
             /**
              * Returns <code>-s</code>: a spring running in the opposite direction to <code>s</code>.
              * @return <code>-s</code>: a spring running in the opposite direction to <code>s</code>
              * @see Spring
              */
             // @ts-ignore
-            minus(s: javax.swing.Spring): javax.swing.Spring
+            public static minus(s: javax.swing.Spring): javax.swing.Spring
             /**
              * Returns <code>s1+s2</code>: a spring representing <code>s1</code> and <code>s2</code>
              * in series. In a sum, <code>s3</code>, of two springs, <code>s1</code> and <code>s2</code>,
@@ -198,7 +198,7 @@ declare namespace javax {
              * @see Spring
              */
             // @ts-ignore
-            sum(s1: javax.swing.Spring, s2: javax.swing.Spring): javax.swing.Spring
+            public static sum(s1: javax.swing.Spring, s2: javax.swing.Spring): javax.swing.Spring
             /**
              * Returns <code>max(s1, s2)</code>: a spring whose value is always greater than (or equal to)
              * the values of both <code>s1</code> and <code>s2</code>.
@@ -207,7 +207,7 @@ declare namespace javax {
              * @see Spring
              */
             // @ts-ignore
-            max(s1: javax.swing.Spring, s2: javax.swing.Spring): javax.swing.Spring
+            public static max(s1: javax.swing.Spring, s2: javax.swing.Spring): javax.swing.Spring
             /**
              * Returns a spring whose <em>minimum</em>, <em>preferred</em>, <em>maximum</em>
              * and <em>value</em> properties are each multiples of the properties of the
@@ -226,7 +226,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            scale(s: javax.swing.Spring, factor: number /*float*/): javax.swing.Spring
+            public static scale(s: javax.swing.Spring, factor: number /*float*/): javax.swing.Spring
             /**
              * Returns a spring whose <em>minimum</em>, <em>preferred</em>, <em>maximum</em>
              * and <em>value</em> properties are defined by the widths of the <em>minimumSize</em>,
@@ -243,7 +243,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            width(c: java.awt.Component): javax.swing.Spring
+            public static width(c: java.awt.Component): javax.swing.Spring
             /**
              * Returns a spring whose <em>minimum</em>, <em>preferred</em>, <em>maximum</em>
              * and <em>value</em> properties are defined by the heights of the <em>minimumSize</em>,
@@ -260,7 +260,7 @@ declare namespace javax {
              * @since 1.5
              */
             // @ts-ignore
-            height(c: java.awt.Component): javax.swing.Spring
+            public static height(c: java.awt.Component): javax.swing.Spring
         }
     }
 }

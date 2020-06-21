@@ -34,7 +34,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                getSystem(): java.rmi.activation.ActivationSystem
+                public getSystem(): java.rmi.activation.ActivationSystem
                 /**
                  * Returns a hashcode for the group's identifier.  Two group
                  * identifiers that refer to the same remote group will have the
@@ -43,7 +43,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                hashCode(): int
+                public hashCode(): number /*int*/
                 /**
                  * Compares two group identifiers for content equality.
                  * Returns true if both of the following conditions are true:
@@ -56,7 +56,7 @@ declare namespace java {
                  * @since 1.2
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

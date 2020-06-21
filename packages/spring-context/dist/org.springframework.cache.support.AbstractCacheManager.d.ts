@@ -11,11 +11,11 @@ declare namespace org {
                  * @since 3.1
                  */
                 // @ts-ignore
-                class AbstractCacheManager extends java.lang.Object implements org.springframework.cache.CacheManager {
+                abstract class AbstractCacheManager extends java.lang.Object implements org.springframework.cache.CacheManager {
                     // @ts-ignore
                     constructor()
                     // @ts-ignore
-                    afterPropertiesSet(): void
+                    public afterPropertiesSet(): void
                     /**
                      * Initialize the static configuration of caches.
                      * <p>Triggered on startup through {@link #afterPropertiesSet()};
@@ -24,18 +24,18 @@ declare namespace org {
                      * @see #loadCaches()
                      */
                     // @ts-ignore
-                    initializeCaches(): void
+                    public initializeCaches(): void
                     /**
                      * Load the initial caches for this cache manager.
                      * <p>Called by {@link #afterPropertiesSet()} on startup.
                      * The returned collection may be empty but must not be {@code null}.
                      */
                     // @ts-ignore
-                    abstract loadCaches(): java.util.Collection<? extends org.springframework.cache.Cache>
+                    abstract loadCaches(): Array<any>
                     // @ts-ignore
-                    getCache(name: string): org.springframework.cache.Cache
+                    public getCache(name: java.lang.String | string): org.springframework.cache.Cache
                     // @ts-ignore
-                    getCacheNames(): java.util.Collection<java.lang.String>
+                    public getCacheNames(): Array<java.lang.String | string>
                     /**
                      * Check for a registered cache of the given name.
                      * In contrast to {@link #getCache(String)}, this method does not trigger
@@ -47,7 +47,7 @@ declare namespace org {
                      * @see #getMissingCache(String)
                      */
                     // @ts-ignore
-                    lookupCache(name: string): org.springframework.cache.Cache
+                    lookupCache(name: java.lang.String | string): org.springframework.cache.Cache
                     /**
                      * Dynamically register an additional Cache with this manager.
                      * @param cache the Cache to register
@@ -77,7 +77,7 @@ declare namespace org {
                      * @see #getCache(String)
                      */
                     // @ts-ignore
-                    getMissingCache(name: string): org.springframework.cache.Cache
+                    getMissingCache(name: java.lang.String | string): org.springframework.cache.Cache
                 }
             }
         }

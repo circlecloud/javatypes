@@ -48,9 +48,9 @@ declare namespace org {
                         // @ts-ignore
                         constructor(metadata: AnnotationMetadata, factoryMethodMetadata: MethodMetadata)
                         // @ts-ignore
-                        getMetadata(): AnnotationMetadata
+                        public getMetadata(): AnnotationMetadata
                         // @ts-ignore
-                        getFactoryMethodMetadata(): MethodMetadata
+                        public getFactoryMethodMetadata(): MethodMetadata
                     }
                 }
             }

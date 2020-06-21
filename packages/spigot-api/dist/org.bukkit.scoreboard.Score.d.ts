@@ -21,7 +21,7 @@ declare namespace org {
                  * @return this Score's tracked entry
                  */
                 // @ts-ignore
-                getEntry(): java.lang.String
+                getEntry(): string
                 /**
                  * Gets the Objective being tracked by this Score
                  * @return this Score's tracked objective
@@ -35,7 +35,7 @@ declare namespace org {
                  *      unregistered
                  */
                 // @ts-ignore
-                getScore(): int
+                getScore(): number /*int*/
                 /**
                  * Sets the current score.
                  * @param score New score

@@ -22,13 +22,13 @@ declare namespace org {
                          * @return The previous provider registration, if available
                          */
                         // @ts-ignore
-                        getPreviousProviderRegistration(): java.util.Optional<org.spongepowered.api.service.ProviderRegistration<?>>
+                        getPreviousProviderRegistration(): java.util.Optional<org.spongepowered.api.service.ProviderRegistration<any>>
                         /**
                          * Gets the new provider registration for the service.
                          * @return The new provider registration
                          */
                         // @ts-ignore
-                        getNewProviderRegistration(): org.spongepowered.api.service.ProviderRegistration<?>
+                        getNewProviderRegistration(): org.spongepowered.api.service.ProviderRegistration<any>
                         /**
                          * Gets whether a previous provider existed, which was replaced by the new
                          * provider.
@@ -41,13 +41,13 @@ declare namespace org {
                          * @return The service
                          */
                         // @ts-ignore
-                        getService(): java.lang.Class<?>
+                        getService(): java.lang.Class<any>
                         /**
                          * Gets the new provider being registered.
                          * @return The provider
                          */
                         // @ts-ignore
-                        getNewProvider(): java.lang.Object
+                        getNewProvider(): any
                     }
                 }
             }

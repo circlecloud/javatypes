@@ -36,20 +36,20 @@ declare namespace java {
                  *             threshold was passed.
                  */
                 // @ts-ignore
-                constructor(poolName: string, usage: java.lang.management.MemoryUsage, count: number /*long*/)
+                constructor(poolName: java.lang.String | string, usage: java.lang.management.MemoryUsage, count: number /*long*/)
                 /**
                  * Notification type that signifies a memory pool has grown such that it now
                  * reaches or exceeds the usage threshold value set for it.
                  */
                 // @ts-ignore
-                readonly MEMORY_THRESHOLD_EXCEEDED: string
+                public static readonly MEMORY_THRESHOLD_EXCEEDED: java.lang.String | string
                 /**
                  * Notification type that signifies a memory pool's memory usage has grown
                  * to reach or exceed the collection usage threshold value set for it after
                  * a run of the garbage collector.
                  */
                 // @ts-ignore
-                readonly MEMORY_COLLECTION_THRESHOLD_EXCEEDED: string
+                public static readonly MEMORY_COLLECTION_THRESHOLD_EXCEEDED: java.lang.String | string
                 /**
                  * Returns the number of times that the memory usage has crossed the
                  * threshold relevant to the type of notification when the notification was
@@ -62,13 +62,13 @@ declare namespace java {
                  *          time of the notification construction.
                  */
                 // @ts-ignore
-                getCount(): long
+                public getCount(): number /*long*/
                 /**
                  * Returns the name of the memory pool that the notification relates to.
                  * @return the name of the associated memory pool.
                  */
                 // @ts-ignore
-                getPoolName(): java.lang.String
+                public getPoolName(): string
                 /**
                  * Returns an instance of {@link MemoryUsage} that encapsulates the memory
                  * usage of the memory pool that gave rise to this notification at the time
@@ -78,7 +78,7 @@ declare namespace java {
                  *          this notification was created.
                  */
                 // @ts-ignore
-                getUsage(): java.lang.management.MemoryUsage
+                public getUsage(): java.lang.management.MemoryUsage
                 /**
                  * Receives a {@link CompositeData} representing a
                  * <code>MemoryNotificationInfo</code> object and attempts to return
@@ -106,7 +106,7 @@ declare namespace java {
                  *  </p>
                  */
                 // @ts-ignore
-                from(cd: javax.management.openmbean.CompositeData): java.lang.management.MemoryNotificationInfo
+                public static from(cd: javax.management.openmbean.CompositeData): java.lang.management.MemoryNotificationInfo
             }
         }
     }

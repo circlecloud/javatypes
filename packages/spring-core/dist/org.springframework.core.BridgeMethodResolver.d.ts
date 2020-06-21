@@ -29,7 +29,7 @@ declare namespace org {
                  *  if no more specific one could be found)
                  */
                 // @ts-ignore
-                findBridgedMethod(bridgeMethod: java.lang.reflect.Method): java.lang.reflect.Method
+                public static findBridgedMethod(bridgeMethod: java.lang.reflect.Method): java.lang.reflect.Method
                 /**
                  * Compare the signatures of the bridge method and the method which it bridges. If
                  * the parameter and return types are the same, it is a 'visibility' bridge method
@@ -38,7 +38,7 @@ declare namespace org {
                  * @return whether signatures match as described
                  */
                 // @ts-ignore
-                isVisibilityBridgeMethodPair(bridgeMethod: java.lang.reflect.Method, bridgedMethod: java.lang.reflect.Method): boolean
+                public static isVisibilityBridgeMethodPair(bridgeMethod: java.lang.reflect.Method, bridgedMethod: java.lang.reflect.Method): boolean
             }
         }
     }

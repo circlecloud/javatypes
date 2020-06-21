@@ -15,14 +15,14 @@ declare namespace org {
                          * @return A list of registrations
                          */
                         // @ts-ignore
-                        getCommands(): java.util.Set<? extends org.spongepowered.api.command.CommandMapping>
+                        getCommands(): Array<any>
                         /**
                          * Gets a list of primary aliases.
                          * <p>The returned collection cannot be modified.</p>
                          * @return A list of aliases
                          */
                         // @ts-ignore
-                        getPrimaryAliases(): java.util.Set<java.lang.String>
+                        getPrimaryAliases(): Array<java.lang.String | string>
                         /**
                          * Gets a list of all the command aliases, which includes the primary alias.
                          * <p>A command may have more than one alias assigned to it. The returned
@@ -30,7 +30,7 @@ declare namespace org {
                          * @return A list of aliases
                          */
                         // @ts-ignore
-                        getAliases(): java.util.Set<java.lang.String>
+                        getAliases(): Array<java.lang.String | string>
                         /**
                          * Gets the {@link CommandMapping} associated with an alias. Returns null if
                          * no command is named by the given alias.
@@ -38,7 +38,7 @@ declare namespace org {
                          * @return The command mapping, if available
                          */
                         // @ts-ignore
-                        get(alias: string): java.util.Optional<? extends org.spongepowered.api.command.CommandMapping>
+                        get(alias: java.lang.String | string): java.util.Optional<any>
                         /**
                          * Gets the {@link CommandMapping} associated with an alias in the context
                          * of a given {@link CommandSource}. Returns null if no command is named by
@@ -48,21 +48,21 @@ declare namespace org {
                          * @return The command mapping, if available
                          */
                         // @ts-ignore
-                        get(alias: string, source: org.spongepowered.api.command.CommandSource): java.util.Optional<? extends org.spongepowered.api.command.CommandMapping>
+                        get(alias: java.lang.String | string, source: org.spongepowered.api.command.CommandSource): java.util.Optional<any>
                         /**
                          * Gets all the {@link CommandMapping}s associated with an alias.
                          * @param alias The alias
                          * @return The command mappings associated with the alias
                          */
                         // @ts-ignore
-                        getAll(alias: string): java.util.Set<? extends org.spongepowered.api.command.CommandMapping>
+                        getAll(alias: java.lang.String | string): Array<any>
                         /**
                          * Gets all commands currently registered with this dispatcher. The returned
                          * value is immutable.
                          * @return a multimap from alias to mapping of every registered command
                          */
                         // @ts-ignore
-                        getAll(): <any>
+                        getAll(): object
                         /**
                          * Returns whether the dispatcher contains a registered command for the
                          * given alias.
@@ -70,7 +70,7 @@ declare namespace org {
                          * @return True if a registered command exists
                          */
                         // @ts-ignore
-                        containsAlias(alias: string): boolean
+                        containsAlias(alias: java.lang.String | string): boolean
                         /**
                          * Returns whether the dispatcher contains the given mapping.
                          * @param mapping The mapping

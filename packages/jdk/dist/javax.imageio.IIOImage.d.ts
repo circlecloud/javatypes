@@ -41,7 +41,7 @@ declare namespace javax {
              *  <code>null</code>.
              */
             // @ts-ignore
-            constructor(image: java.awt.image.RenderedImage, thumbnails: Array<java.awt.image.BufferedImage>, metadata: javax.imageio.metadata.IIOMetadata)
+            constructor(image: java.awt.image.RenderedImage, thumbnails: java.util.List<any> | Array<any>, metadata: javax.imageio.metadata.IIOMetadata)
             /**
              * Constructs an <code>IIOImage</code> containing a
              * <code>Raster</code>, and thumbnails and metadata
@@ -56,7 +56,7 @@ declare namespace javax {
              *  <code>null</code>.
              */
             // @ts-ignore
-            constructor(raster: java.awt.image.Raster, thumbnails: Array<java.awt.image.BufferedImage>, metadata: javax.imageio.metadata.IIOMetadata)
+            constructor(raster: java.awt.image.Raster, thumbnails: java.util.List<any> | Array<any>, metadata: javax.imageio.metadata.IIOMetadata)
             /**
              * The <code>RenderedImage</code> being referenced.
              */
@@ -73,7 +73,7 @@ declare namespace javax {
              * must not be stored in this <code>List</code>.
              */
             // @ts-ignore
-            thumbnails: Array<java.awt.image.BufferedImage>
+            thumbnails: java.util.List<any> | Array<any>
             /**
              * An <code>IIOMetadata</code> object containing metadata
              * associated with the image.
@@ -87,7 +87,7 @@ declare namespace javax {
              * @see #setRenderedImage
              */
             // @ts-ignore
-            getRenderedImage(): java.awt.image.RenderedImage
+            public getRenderedImage(): java.awt.image.RenderedImage
             /**
              * Sets the current <code>RenderedImage</code>.  The value is
              * stored by reference.  Any existing <code>Raster</code> is
@@ -98,7 +98,7 @@ declare namespace javax {
              * @see #getRenderedImage
              */
             // @ts-ignore
-            setRenderedImage(image: java.awt.image.RenderedImage): void
+            public setRenderedImage(image: java.awt.image.RenderedImage): void
             /**
              * Returns <code>true</code> if this <code>IIOImage</code> stores
              * a <code>Raster</code> rather than a <code>RenderedImage</code>.
@@ -106,7 +106,7 @@ declare namespace javax {
              *  available.
              */
             // @ts-ignore
-            hasRaster(): boolean
+            public hasRaster(): boolean
             /**
              * Returns the currently set <code>Raster</code>, or
              * <code>null</code> if only a <code>RenderedImage</code> is
@@ -115,7 +115,7 @@ declare namespace javax {
              * @see #setRaster
              */
             // @ts-ignore
-            getRaster(): java.awt.image.Raster
+            public getRaster(): java.awt.image.Raster
             /**
              * Sets the current <code>Raster</code>.  The value is
              * stored by reference.  Any existing <code>RenderedImage</code> is
@@ -126,14 +126,14 @@ declare namespace javax {
              * @see #getRaster
              */
             // @ts-ignore
-            setRaster(raster: java.awt.image.Raster): void
+            public setRaster(raster: java.awt.image.Raster): void
             /**
              * Returns the number of thumbnails stored in this
              * <code>IIOImage</code>.
              * @return the number of thumbnails, as an <code>int</code>.
              */
             // @ts-ignore
-            getNumThumbnails(): int
+            public getNumThumbnails(): number /*int*/
             /**
              * Returns a thumbnail associated with the main image.
              * @param index the index of the desired thumbnail image.
@@ -147,7 +147,7 @@ declare namespace javax {
              * @see #setThumbnails
              */
             // @ts-ignore
-            getThumbnail(index: number /*int*/): java.awt.image.BufferedImage
+            public getThumbnail(index: number /*int*/): java.awt.image.BufferedImage
             /**
              * Returns the current <code>List</code> of thumbnail
              * <code>BufferedImage</code>s, or <code>null</code> if none is
@@ -158,7 +158,7 @@ declare namespace javax {
              * @see #setThumbnails
              */
             // @ts-ignore
-            getThumbnails(): java.util.List<? extends java.awt.image.BufferedImage>
+            public getThumbnails(): Array<any>
             /**
              * Sets the list of thumbnails to a new <code>List</code> of
              * <code>BufferedImage</code>s, or to <code>null</code>.  The
@@ -172,7 +172,7 @@ declare namespace javax {
              * @see #getThumbnails
              */
             // @ts-ignore
-            setThumbnails(thumbnails: Array<java.awt.image.BufferedImage>): void
+            public setThumbnails(thumbnails: java.util.List<any> | Array<any>): void
             /**
              * Returns a reference to the current <code>IIOMetadata</code>
              * object, or <code>null</code> is none is set.
@@ -180,7 +180,7 @@ declare namespace javax {
              * @see #setMetadata
              */
             // @ts-ignore
-            getMetadata(): javax.imageio.metadata.IIOMetadata
+            public getMetadata(): javax.imageio.metadata.IIOMetadata
             /**
              * Sets the <code>IIOMetadata</code> to a new object, or
              * <code>null</code>.
@@ -189,7 +189,7 @@ declare namespace javax {
              * @see #getMetadata
              */
             // @ts-ignore
-            setMetadata(metadata: javax.imageio.metadata.IIOMetadata): void
+            public setMetadata(metadata: javax.imageio.metadata.IIOMetadata): void
         }
     }
 }

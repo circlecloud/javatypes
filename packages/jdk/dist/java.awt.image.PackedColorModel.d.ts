@@ -56,7 +56,7 @@ declare namespace java {
              * @see BufferedImage
              */
             // @ts-ignore
-            class PackedColorModel extends java.awt.image.ColorModel {
+            abstract class PackedColorModel extends java.awt.image.ColorModel {
                 /**
                  * Constructs a <code>PackedColorModel</code> from a color mask array,
                  * which specifies which bits in an <code>int</code> pixel representation
@@ -155,7 +155,7 @@ declare namespace java {
                  *          less than zero
                  */
                 // @ts-ignore
-                getMask(index: number /*int*/): int
+                public getMask(index: number /*int*/): number /*int*/
                 /**
                  * Returns a mask array indicating which bits in a pixel
                  * contain the color and alpha samples.
@@ -164,7 +164,7 @@ declare namespace java {
                  *          representation contain the color or alpha samples.
                  */
                 // @ts-ignore
-                getMasks(): int[]
+                public getMasks(): number /*int*/[]
                 /**
                  * Creates a <code>SampleModel</code> with the specified width and
                  * height that has a data layout compatible with this
@@ -179,7 +179,7 @@ declare namespace java {
                  * @see SampleModel
                  */
                 // @ts-ignore
-                createCompatibleSampleModel(w: number /*int*/, h: number /*int*/): java.awt.image.SampleModel
+                public createCompatibleSampleModel(w: number /*int*/, h: number /*int*/): java.awt.image.SampleModel
                 /**
                  * Checks if the specified <code>SampleModel</code> is compatible
                  * with this <code>ColorModel</code>.  If <code>sm</code> is
@@ -192,7 +192,7 @@ declare namespace java {
                  * @see SampleModel
                  */
                 // @ts-ignore
-                isCompatibleSampleModel(sm: java.awt.image.SampleModel): boolean
+                public isCompatibleSampleModel(sm: java.awt.image.SampleModel): boolean
                 /**
                  * Returns a {@link WritableRaster} representing the alpha channel of
                  * an image, extracted from the input <code>WritableRaster</code>.
@@ -207,7 +207,7 @@ declare namespace java {
                  *          channel of the image contained in <code>raster</code>.
                  */
                 // @ts-ignore
-                getAlphaRaster(raster: java.awt.image.WritableRaster): java.awt.image.WritableRaster
+                public getAlphaRaster(raster: java.awt.image.WritableRaster): java.awt.image.WritableRaster
                 /**
                  * Tests if the specified <code>Object</code> is an instance
                  * of <code>PackedColorModel</code> and equals this
@@ -218,7 +218,7 @@ declare namespace java {
                  *  <code>PackedColorModel</code>; <code>false</code> otherwise.
                  */
                 // @ts-ignore
-                equals(obj: any): boolean
+                public equals(obj: java.lang.Object | any): boolean
             }
         }
     }

@@ -14,39 +14,39 @@ declare namespace org {
                      * @return the fuel ItemStack
                      */
                     // @ts-ignore
-                    getFuel(): org.bukkit.inventory.ItemStack
+                    public getFuel(): org.bukkit.inventory.ItemStack
                     /**
                      * Gets the burn time for this fuel
                      * @return the burn time for this fuel
                      */
                     // @ts-ignore
-                    getBurnTime(): int
+                    public getBurnTime(): number /*int*/
                     /**
                      * Sets the burn time for this fuel
                      * @param burnTime the burn time for this fuel
                      */
                     // @ts-ignore
-                    setBurnTime(burnTime: number /*int*/): void
+                    public setBurnTime(burnTime: number /*int*/): void
                     /**
                      * Gets whether the furnace's fuel is burning or not.
                      * @return whether the furnace's fuel is burning or not.
                      */
                     // @ts-ignore
-                    isBurning(): boolean
+                    public isBurning(): boolean
                     /**
                      * Sets whether the furnace's fuel is burning or not.
                      * @param burning true if the furnace's fuel is burning
                      */
                     // @ts-ignore
-                    setBurning(burning: boolean): void
+                    public setBurning(burning: boolean): void
                     // @ts-ignore
-                    isCancelled(): boolean
+                    public isCancelled(): boolean
                     // @ts-ignore
-                    setCancelled(cancel: boolean): void
+                    public setCancelled(cancel: boolean): void
                     // @ts-ignore
-                    getHandlers(): org.bukkit.event.HandlerList
+                    public getHandlers(): org.bukkit.event.HandlerList
                     // @ts-ignore
-                    getHandlerList(): org.bukkit.event.HandlerList
+                    public static getHandlerList(): org.bukkit.event.HandlerList
                 }
             }
         }

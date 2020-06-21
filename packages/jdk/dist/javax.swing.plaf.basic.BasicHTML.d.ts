@@ -19,7 +19,7 @@ declare namespace javax {
                      * client property of a JComponent.
                      */
                     // @ts-ignore
-                    readonly propertyKey: string
+                    public static readonly propertyKey: java.lang.String | string
                     /**
                      * Key stored as a client property to indicate the base that relative
                      * references are resolved against. For example, lets say you keep
@@ -31,13 +31,13 @@ declare namespace javax {
                      * </pre>
                      */
                     // @ts-ignore
-                    readonly documentBaseKey: string
+                    public static readonly documentBaseKey: java.lang.String | string
                     /**
                      * Create an html renderer for the given component and
                      * string of html.
                      */
                     // @ts-ignore
-                    createHTMLView(c: javax.swing.JComponent, html: string): javax.swing.text.View
+                    public static createHTMLView(c: javax.swing.JComponent, html: java.lang.String | string): javax.swing.text.View
                     /**
                      * Returns the baseline for the html renderer.
                      * @param view the View to get the baseline for
@@ -51,14 +51,14 @@ declare namespace javax {
                      * @since 1.6
                      */
                     // @ts-ignore
-                    getHTMLBaseline(view: javax.swing.text.View, w: number /*int*/, h: number /*int*/): int
+                    public static getHTMLBaseline(view: javax.swing.text.View, w: number /*int*/, h: number /*int*/): number /*int*/
                     /**
                      * Check the given string to see if it should trigger the
                      * html rendering logic in a non-text component that supports
                      * html rendering.
                      */
                     // @ts-ignore
-                    isHTMLString(s: string): boolean
+                    public static isHTMLString(s: java.lang.String | string): boolean
                     /**
                      * Stash the HTML render for the given text into the client
                      * properties of the given JComponent. If the given text is
@@ -70,7 +70,7 @@ declare namespace javax {
                      * entirely from the JComponent.
                      */
                     // @ts-ignore
-                    updateRenderer(c: javax.swing.JComponent, text: string): void
+                    public static updateRenderer(c: javax.swing.JComponent, text: java.lang.String | string): void
                 }
             }
         }

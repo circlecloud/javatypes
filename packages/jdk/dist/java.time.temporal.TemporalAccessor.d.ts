@@ -131,7 +131,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                get(field: java.time.temporal.TemporalField): int
+                get(field: java.time.temporal.TemporalField): number /*int*/
                 /**
                  * Gets the value of the specified field as a {@code long}.
                  * <p>
@@ -156,7 +156,7 @@ declare namespace java {
                  * @throws ArithmeticException if numeric overflow occurs
                  */
                 // @ts-ignore
-                getLong(field: java.time.temporal.TemporalField): long
+                getLong(field: java.time.temporal.TemporalField): number /*long*/
                 /**
                  * Queries this date-time.
                  * <p>

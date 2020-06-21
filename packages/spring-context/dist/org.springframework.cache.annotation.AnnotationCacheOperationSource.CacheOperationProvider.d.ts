@@ -15,7 +15,7 @@ declare namespace org {
                          * @return the cache operations, or {#code null} if none found
                          */
                         // @ts-ignore
-                        getCacheOperations(parser: org.springframework.cache.annotation.CacheAnnotationParser): java.util.Collection<org.springframework.cache.interceptor.CacheOperation>
+                        getCacheOperations(parser: org.springframework.cache.annotation.CacheAnnotationParser): Array<org.springframework.cache.interceptor.CacheOperation>
                     }
                 }
             }

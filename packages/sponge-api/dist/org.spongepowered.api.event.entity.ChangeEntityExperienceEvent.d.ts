@@ -15,7 +15,7 @@ declare namespace org {
                          *  information about the experience.
                          */
                         // @ts-ignore
-                        getOriginalExperience(): int
+                        getOriginalExperience(): number /*int*/
                         /**
                          * Gets the original values for the experience unmodified by event changes.
                          * @return The experience data
@@ -29,7 +29,7 @@ declare namespace org {
                          *  information about the experience.
                          */
                         // @ts-ignore
-                        getExperience(): int
+                        getExperience(): number /*int*/
                         /**
                          * Sets the final total experience after event changes.
                          * @param experience The experience

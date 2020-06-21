@@ -21,13 +21,13 @@ declare namespace java {
                      *  if not supported
                      */
                     // @ts-ignore
-                    getMappedValue(): V
+                    public getMappedValue(): V
                     /**
                      * {@inheritDoc}
                      * @throws NullPointerException if the specified key is null
                      */
                     // @ts-ignore
-                    contains(o: any): boolean
+                    public contains(o: java.lang.Object | any): boolean
                     /**
                      * Removes the key from this map view, by removing the key (and its
                      * corresponding value) from the backing map.  This method does
@@ -37,12 +37,12 @@ declare namespace java {
                      * @throws NullPointerException if the specified key is null
                      */
                     // @ts-ignore
-                    remove(o: any): boolean
+                    public remove(o: java.lang.Object | any): boolean
                     /**
                      * @return an iterator over the keys of the backing map
                      */
                     // @ts-ignore
-                    iterator(): java.util.Iterator<K>
+                    public iterator(): java.util.Iterator<K>
                     /**
                      * Adds the specified key to this set view by mapping the key to
                      * the default mapped value in the backing map, if defined.
@@ -53,7 +53,7 @@ declare namespace java {
                      *  for additions was provided
                      */
                     // @ts-ignore
-                    add(e: K): boolean
+                    public add(e: K): boolean
                     /**
                      * Adds all of the elements in the specified collection to this set,
                      * as if by calling {@link #add} on each one.
@@ -65,15 +65,15 @@ declare namespace java {
                      *  for additions was provided
                      */
                     // @ts-ignore
-                    addAll(c: Array<K>): boolean
+                    public addAll(c: java.util.Collection<any> | Array<any>): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                     // @ts-ignore
-                    equals(o: any): boolean
+                    public equals(o: java.lang.Object | any): boolean
                     // @ts-ignore
-                    spliterator(): java.util.Spliterator<K>
+                    public spliterator(): java.util.Spliterator<K>
                     // @ts-ignore
-                    forEach(action: java.util.function.Consumer<any super K> | java.util.function$.Consumer<? super K>): void
+                    public forEach(action: java.util.function$.Consumer<any>): void
                 }
             }
         }

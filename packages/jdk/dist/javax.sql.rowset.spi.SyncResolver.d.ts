@@ -196,7 +196,7 @@ declare namespace javax {
                      * synchronization.
                      */
                     // @ts-ignore
-                    
+                    readonly UPDATE_ROW_CONFLICT: number /*int*/
                     /**
                      * Indicates that a conflict occurred while the <code>RowSet</code> object was
                      * attempting to delete a row in the data source.
@@ -206,7 +206,7 @@ declare namespace javax {
                      * synchronization.
                      */
                     // @ts-ignore
-                    
+                    readonly DELETE_ROW_CONFLICT: number /*int*/
                     /**
                      * Indicates that a conflict occurred while the <code>RowSet</code> object was
                      * attempting to insert a row into the data source.  This means that a
@@ -214,7 +214,7 @@ declare namespace javax {
                      * into the data source since the last synchronization.
                      */
                     // @ts-ignore
-                    
+                    readonly INSERT_ROW_CONFLICT: number /*int*/
                     /**
                      * Indicates that <b>no</b> conflict occurred while the <code>RowSet</code> object
                      * was attempting to update, delete or insert a row in the data source. The values in
@@ -222,7 +222,7 @@ declare namespace javax {
                      * that no information in pertinent to the conflict resolution in this row.
                      */
                     // @ts-ignore
-                    
+                    readonly NO_ROW_CONFLICT: number /*int*/
                     /**
                      * Retrieves the conflict status of the current row of this <code>SyncResolver</code>,
                      * which indicates the operation
@@ -234,7 +234,7 @@ declare namespace javax {
                      *          <code>SyncResolver.NO_ROW_CONFLICT</code>
                      */
                     // @ts-ignore
-                    getStatus(): int
+                    getStatus(): number /*int*/
                     /**
                      * Retrieves the value in the designated column in the current row of this
                      * <code>SyncResolver</code> object, which is the value in the data source
@@ -247,7 +247,7 @@ declare namespace javax {
                      * @throws SQLException if a database access error occurs
                      */
                     // @ts-ignore
-                    getConflictValue(index: number /*int*/): java.lang.Object
+                    getConflictValue(index: number /*int*/): any
                     /**
                      * Retrieves the value in the designated column in the current row of this
                      * <code>SyncResolver</code> object, which is the value in the data source
@@ -260,7 +260,7 @@ declare namespace javax {
                      * @throws SQLException if a database access error occurs
                      */
                     // @ts-ignore
-                    getConflictValue(columnName: string): java.lang.Object
+                    getConflictValue(columnName: java.lang.String | string): any
                     /**
                      * Sets <i>obj</i> as the value in column <i>index</i> in the current row of the
                      * <code>RowSet</code> object that is being synchronized. <i>obj</i>
@@ -272,7 +272,7 @@ declare namespace javax {
                      * @throws SQLException if a database access error occurs
                      */
                     // @ts-ignore
-                    setResolvedValue(index: number /*int*/, obj: any): void
+                    setResolvedValue(index: number /*int*/, obj: java.lang.Object | any): void
                     /**
                      * Sets <i>obj</i> as the value in column <i>columnName</i> in the current row of the
                      * <code>RowSet</code> object that is being synchronized. <i>obj</i>
@@ -284,7 +284,7 @@ declare namespace javax {
                      * @throws SQLException if a database access error occurs
                      */
                     // @ts-ignore
-                    setResolvedValue(columnName: string, obj: any): void
+                    setResolvedValue(columnName: java.lang.String | string, obj: java.lang.Object | any): void
                     /**
                      * Moves the cursor down from its current position to the next row that contains
                      * a conflict value. A <code>SyncResolver</code> object's

@@ -21,15 +21,15 @@ declare namespace org {
                     // @ts-ignore
                     constructor(propertySources: org.springframework.core.env.PropertySources)
                     // @ts-ignore
-                    containsProperty(key: string): boolean
+                    public containsProperty(key: java.lang.String | string): boolean
                     // @ts-ignore
-                    getProperty(key: string): java.lang.String
+                    public getProperty(key: java.lang.String | string): string
                     // @ts-ignore
-                    getProperty<T>(key: string, targetValueType: java.lang.Class<T>): T
+                    public getProperty<T>(key: java.lang.String | string, targetValueType: java.lang.Class<T>): T
                     // @ts-ignore
-                    getPropertyAsRawString(key: string): java.lang.String
+                    getPropertyAsRawString(key: java.lang.String | string): string
                     // @ts-ignore
-                    getProperty<T>(key: string, targetValueType: java.lang.Class<T>, resolveNestedPlaceholders: boolean): T
+                    getProperty<T>(key: java.lang.String | string, targetValueType: java.lang.Class<T>, resolveNestedPlaceholders: boolean): T
                     /**
                      * Log the given key as found in the given {@link PropertySource}, resulting in
                      * the given value.
@@ -43,7 +43,7 @@ declare namespace org {
                      * @since 4.3.1
                      */
                     // @ts-ignore
-                    logKeyFound(key: string, propertySource: org.springframework.core.env.PropertySource<any>, value: any): void
+                    logKeyFound(key: java.lang.String | string, propertySource: org.springframework.core.env.PropertySource<any>, value: java.lang.Object | any): void
                 }
             }
         }

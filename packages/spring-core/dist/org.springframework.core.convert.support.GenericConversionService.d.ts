@@ -19,19 +19,19 @@ declare namespace org {
                         // @ts-ignore
                         constructor()
                         // @ts-ignore
-                        addConverter(converter: org.springframework.core.convert.converter.Converter<any, ?>): void
+                        public addConverter(converter: org.springframework.core.convert.converter.Converter<any, any>): void
                         // @ts-ignore
-                        addConverter<S, T>(sourceType: java.lang.Class<S>, targetType: java.lang.Class<T>, converter: org.springframework.core.convert.converter.Converter<any super S, T>): void
+                        public addConverter<S, T>(sourceType: java.lang.Class<S>, targetType: java.lang.Class<T>, converter: org.springframework.core.convert.converter.Converter<any, any>): void
                         // @ts-ignore
-                        addConverter(converter: org.springframework.core.convert.converter.GenericConverter): void
+                        public addConverter(converter: org.springframework.core.convert.converter.GenericConverter): void
                         // @ts-ignore
-                        addConverterFactory(factory: org.springframework.core.convert.converter.ConverterFactory<any, ?>): void
+                        public addConverterFactory(factory: org.springframework.core.convert.converter.ConverterFactory<any, any>): void
                         // @ts-ignore
-                        removeConvertible(sourceType: java.lang.Class<any>, targetType: java.lang.Class<any>): void
+                        public removeConvertible(sourceType: java.lang.Class<any>, targetType: java.lang.Class<any>): void
                         // @ts-ignore
-                        canConvert(sourceType: java.lang.Class<any>, targetType: java.lang.Class<any>): boolean
+                        public canConvert(sourceType: java.lang.Class<any>, targetType: java.lang.Class<any>): boolean
                         // @ts-ignore
-                        canConvert(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): boolean
+                        public canConvert(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): boolean
                         /**
                          * Return whether conversion between the source type and the target type can be bypassed.
                          * <p>More precisely, this method will return true if objects of sourceType can be
@@ -44,11 +44,11 @@ declare namespace org {
                          * @since 3.2
                          */
                         // @ts-ignore
-                        canBypassConvert(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): boolean
+                        public canBypassConvert(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): boolean
                         // @ts-ignore
-                        convert<T>(source: any, targetType: java.lang.Class<T>): T
+                        public convert<T>(source: java.lang.Object | any, targetType: java.lang.Class<T>): T
                         // @ts-ignore
-                        convert(source: any, sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): java.lang.Object
+                        public convert(source: java.lang.Object | any, sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): any
                         /**
                          * Convenience operation for converting a source object to the specified targetType,
                          * where the target type is a descriptor that provides additional conversion context.
@@ -63,9 +63,9 @@ declare namespace org {
                          *  or sourceType is {@code null} but source is not {@code null}
                          */
                         // @ts-ignore
-                        convert(source: any, targetType: org.springframework.core.convert.TypeDescriptor): java.lang.Object
+                        public convert(source: java.lang.Object | any, targetType: org.springframework.core.convert.TypeDescriptor): any
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                         /**
                          * Template method to convert a {@code null} source.
                          * <p>The default implementation returns {@code null} or the Java 8
@@ -77,7 +77,7 @@ declare namespace org {
                          * @return the converted null object
                          */
                         // @ts-ignore
-                        convertNullSource(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): java.lang.Object
+                        convertNullSource(sourceType: org.springframework.core.convert.TypeDescriptor, targetType: org.springframework.core.convert.TypeDescriptor): any
                         /**
                          * Hook method to lookup the converter for a given sourceType/targetType pair.
                          * First queries this ConversionService's converter cache.

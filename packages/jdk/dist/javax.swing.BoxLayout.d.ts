@@ -116,33 +116,33 @@ declare namespace javax {
              * Specifies that components should be laid out left to right.
              */
             // @ts-ignore
-            readonly X_AXIS: number /*int*/
+            public static readonly X_AXIS: number /*int*/
             /**
              * Specifies that components should be laid out top to bottom.
              */
             // @ts-ignore
-            readonly Y_AXIS: number /*int*/
+            public static readonly Y_AXIS: number /*int*/
             /**
              * Specifies that components should be laid out in the direction of
              * a line of text as determined by the target container's
              * <code>ComponentOrientation</code> property.
              */
             // @ts-ignore
-            readonly LINE_AXIS: number /*int*/
+            public static readonly LINE_AXIS: number /*int*/
             /**
              * Specifies that components should be laid out in the direction that
              * lines flow across a page as determined by the target container's
              * <code>ComponentOrientation</code> property.
              */
             // @ts-ignore
-            readonly PAGE_AXIS: number /*int*/
+            public static readonly PAGE_AXIS: number /*int*/
             /**
              * Returns the container that uses this layout manager.
              * @return the container that uses this layout manager
              * @since 1.6
              */
             // @ts-ignore
-            getTarget(): java.awt.Container
+            public getTarget(): java.awt.Container
             /**
              * Returns the axis that was used to lay out components.
              * Returns one of:
@@ -154,7 +154,7 @@ declare namespace javax {
              * @since 1.6
              */
             // @ts-ignore
-            getAxis(): int
+            public getAxis(): number /*int*/
             /**
              * Indicates that a child has changed its layout related information,
              * and thus any cached calculations should be flushed.
@@ -168,27 +168,27 @@ declare namespace javax {
              *                       BoxLayout constructor
              */
             // @ts-ignore
-            invalidateLayout(target: java.awt.Container): void
+            public invalidateLayout(target: java.awt.Container): void
             /**
              * Not used by this class.
              * @param name the name of the component
              * @param comp the component
              */
             // @ts-ignore
-            addLayoutComponent(name: string, comp: java.awt.Component): void
+            public addLayoutComponent(name: java.lang.String | string, comp: java.awt.Component): void
             /**
              * Not used by this class.
              * @param comp the component
              */
             // @ts-ignore
-            removeLayoutComponent(comp: java.awt.Component): void
+            public removeLayoutComponent(comp: java.awt.Component): void
             /**
              * Not used by this class.
              * @param comp the component
              * @param constraints constraints
              */
             // @ts-ignore
-            addLayoutComponent(comp: java.awt.Component, constraints: any): void
+            public addLayoutComponent(comp: java.awt.Component, constraints: java.lang.Object | any): void
             /**
              * Returns the preferred dimensions for this layout, given the components
              * in the specified target container.
@@ -201,7 +201,7 @@ declare namespace javax {
              * @see #maximumLayoutSize
              */
             // @ts-ignore
-            preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public preferredLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the minimum dimensions needed to lay out the components
              * contained in the specified target container.
@@ -213,7 +213,7 @@ declare namespace javax {
              * @see #maximumLayoutSize
              */
             // @ts-ignore
-            minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public minimumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the maximum dimensions the target container can use
              * to lay out the components it contains.
@@ -225,7 +225,7 @@ declare namespace javax {
              * @see #minimumLayoutSize
              */
             // @ts-ignore
-            maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
+            public maximumLayoutSize(target: java.awt.Container): java.awt.Dimension
             /**
              * Returns the alignment along the X axis for the container.
              * If the box is horizontal, the default
@@ -237,7 +237,7 @@ declare namespace javax {
              *                       BoxLayout constructor
              */
             // @ts-ignore
-            getLayoutAlignmentX(target: java.awt.Container): float
+            public getLayoutAlignmentX(target: java.awt.Container): number /*float*/
             /**
              * Returns the alignment along the Y axis for the container.
              * If the box is vertical, the default
@@ -249,7 +249,7 @@ declare namespace javax {
              *                       BoxLayout constructor
              */
             // @ts-ignore
-            getLayoutAlignmentY(target: java.awt.Container): float
+            public getLayoutAlignmentY(target: java.awt.Container): number /*float*/
             /**
              * Called by the AWT <!-- XXX CHECK! --> when the specified container
              * needs to be laid out.
@@ -258,7 +258,7 @@ declare namespace javax {
              *                       BoxLayout constructor
              */
             // @ts-ignore
-            layoutContainer(target: java.awt.Container): void
+            public layoutContainer(target: java.awt.Container): void
         }
     }
 }

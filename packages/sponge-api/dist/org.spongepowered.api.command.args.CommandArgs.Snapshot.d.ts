@@ -11,9 +11,9 @@ declare namespace org {
                         // @ts-ignore
                         class Snapshot extends java.lang.Object {
                             // @ts-ignore
-                            equals(o: any): boolean
+                            public equals(o: java.lang.Object | any): boolean
                             // @ts-ignore
-                            hashCode(): int
+                            public hashCode(): number /*int*/
                         }
                     }
                 }

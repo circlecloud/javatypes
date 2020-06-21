@@ -15,35 +15,35 @@ declare namespace org {
                      * @return Title of book
                      */
                     // @ts-ignore
-                    getTitle(): org.spongepowered.api.text.Text
+                    public getTitle(): org.spongepowered.api.text.Text
                     /**
                      * Returns the author of the book to be displayed.
                      * @return Author of book
                      */
                     // @ts-ignore
-                    getAuthor(): org.spongepowered.api.text.Text
+                    public getAuthor(): org.spongepowered.api.text.Text
                     /**
                      * Returns a list of pages that will be displayed to the client.
                      * @return List of pages in book
                      */
                     // @ts-ignore
-                    getPages(): <any>
+                    public getPages(): object
                     /**
                      * Returns a new {@link Builder} for chaining.
                      * @return Builder for chaining
                      */
                     // @ts-ignore
-                    builder(): org.spongepowered.api.text.BookView.Builder
+                    public static builder(): org.spongepowered.api.text.BookView.Builder
                     // @ts-ignore
-                    getContentVersion(): int
+                    public getContentVersion(): number /*int*/
                     // @ts-ignore
-                    toContainer(): org.spongepowered.api.data.DataContainer
+                    public toContainer(): org.spongepowered.api.data.DataContainer
                     // @ts-ignore
-                    toString(): java.lang.String
+                    public toString(): string
                     // @ts-ignore
-                    equals(obj: any): boolean
+                    public equals(obj: java.lang.Object | any): boolean
                     // @ts-ignore
-                    hashCode(): int
+                    public hashCode(): number /*int*/
                 }
             }
         }

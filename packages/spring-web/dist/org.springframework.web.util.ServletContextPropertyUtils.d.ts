@@ -14,7 +14,7 @@ declare namespace org {
                  * @see ServletContext#getInitParameter(String)
                  */
                 // @ts-ignore
-                class ServletContextPropertyUtils extends java.lang.Object {
+                abstract class ServletContextPropertyUtils extends java.lang.Object {
                     // @ts-ignore
                     constructor()
                     /**
@@ -29,7 +29,7 @@ declare namespace org {
                      * @see SystemPropertyUtils#resolvePlaceholders(String, boolean)
                      */
                     // @ts-ignore
-                    resolvePlaceholders(text: string, servletContext: ServletContext): java.lang.String
+                    public static resolvePlaceholders(text: java.lang.String | string, servletContext: ServletContext): string
                     /**
                      * Resolve ${...} placeholders in the given text, replacing them with corresponding
                      * servlet context init parameter or system property values. Unresolvable placeholders
@@ -44,7 +44,7 @@ declare namespace org {
                      * @see SystemPropertyUtils#resolvePlaceholders(String, boolean)
                      */
                     // @ts-ignore
-                    resolvePlaceholders(text: string, servletContext: ServletContext, ignoreUnresolvablePlaceholders: boolean): java.lang.String
+                    public static resolvePlaceholders(text: java.lang.String | string, servletContext: ServletContext, ignoreUnresolvablePlaceholders: boolean): string
                 }
             }
         }

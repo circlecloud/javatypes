@@ -118,7 +118,7 @@ declare namespace java {
                  *           only represents a root component
                  */
                 // @ts-ignore
-                getNameCount(): int
+                getNameCount(): number /*int*/
                 /**
                  * Returns a name element of this path as a {@code Path} object.
                  * <p> The {@code index} parameter is the index of the name element to return.
@@ -192,7 +192,7 @@ declare namespace java {
                  *           If the path string cannot be converted to a Path.
                  */
                 // @ts-ignore
-                startsWith(other: string): boolean
+                startsWith(other: java.lang.String | string): boolean
                 /**
                  * Tests if this path ends with the given path.
                  * <p> If the given path has <em>N</em> elements, and no root component,
@@ -232,7 +232,7 @@ declare namespace java {
                  *           If the path string cannot be converted to a Path.
                  */
                 // @ts-ignore
-                endsWith(other: string): boolean
+                endsWith(other: java.lang.String | string): boolean
                 /**
                  * Returns a path that is this path with redundant name elements eliminated.
                  * <p> The precise definition of this method is implementation dependent but
@@ -290,7 +290,7 @@ declare namespace java {
                  * @see FileSystem#getPath
                  */
                 // @ts-ignore
-                resolve(other: string): java.nio.file.Path
+                resolve(other: java.lang.String | string): java.nio.file.Path
                 /**
                  * Resolves the given path against this path's {@link #getParent parent}
                  * path. This is useful where a file name needs to be <i>replaced</i> with
@@ -321,7 +321,7 @@ declare namespace java {
                  * @see FileSystem#getPath
                  */
                 // @ts-ignore
-                resolveSibling(other: string): java.nio.file.Path
+                resolveSibling(other: java.lang.String | string): java.nio.file.Path
                 /**
                  * Constructs a relative path between this path and a given path.
                  * <p> Relativization is the inverse of {@link #resolve(Path) resolution}.
@@ -529,7 +529,7 @@ declare namespace java {
                  *           method is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                register(watcher: java.nio.file.WatchService, events: java.nio.file.WatchEvent.Kind[], ...modifiers: java.nio.file.WatchEvent.Modifier[]): java.nio.file.WatchKey
+                register(watcher: java.nio.file.WatchService, events: java.nio.file.WatchEvent.Kind<any>[], ...modifiers: java.nio.file.WatchEvent.Modifier[]): java.nio.file.WatchKey
                 /**
                  * Registers the file located by this path with a watch service.
                  * <p> An invocation of this method behaves in exactly the same way as the
@@ -568,7 +568,7 @@ declare namespace java {
                  *           method is invoked to check read access to the file.
                  */
                 // @ts-ignore
-                register(watcher: java.nio.file.WatchService, ...events: java.nio.file.WatchEvent.Kind[]): java.nio.file.WatchKey
+                register(watcher: java.nio.file.WatchService, ...events: java.nio.file.WatchEvent.Kind<any>[]): java.nio.file.WatchKey
                 /**
                  * Returns an iterator over the name elements of this path.
                  * <p> The first element returned by the iterator represents the name
@@ -596,7 +596,7 @@ declare namespace java {
                  *           if the paths are associated with different providers
                  */
                 // @ts-ignore
-                compareTo(other: java.nio.file.Path): int
+                compareTo(other: java.nio.file.Path): number /*int*/
                 /**
                  * Tests this path for equality with the given object.
                  * <p> If the given object is not a Path, or is a Path associated with a
@@ -615,7 +615,7 @@ declare namespace java {
                  *           that is identical to this {@code Path}
                  */
                 // @ts-ignore
-                equals(other: any): boolean
+                equals(other: java.lang.Object | any): boolean
                 /**
                  * Computes a hash code for this path.
                  * <p> The hash code is based upon the components of the path, and
@@ -624,7 +624,7 @@ declare namespace java {
                  * @return the hash-code value for this path
                  */
                 // @ts-ignore
-                hashCode(): int
+                hashCode(): number /*int*/
                 /**
                  * Returns the string representation of this path.
                  * <p> If this path was created by converting a path string using the
@@ -635,7 +635,7 @@ declare namespace java {
                  * @return the string representation of this path
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

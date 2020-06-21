@@ -33,7 +33,7 @@ declare namespace org {
                      * @return A shared configuration root
                      */
                     // @ts-ignore
-                    getSharedConfig(instance: any): org.spongepowered.api.config.ConfigRoot
+                    getSharedConfig(instance: java.lang.Object | any): org.spongepowered.api.config.ConfigRoot
                     /**
                      * Gets the configuration root for a plugin that utilizes a configuration
                      * folder specific to the plugin, which <em>may</em> also be a
@@ -43,7 +43,7 @@ declare namespace org {
                      * @return A plugin-specific configuration root
                      */
                     // @ts-ignore
-                    getPluginConfig(instance: any): org.spongepowered.api.config.ConfigRoot
+                    getPluginConfig(instance: java.lang.Object | any): org.spongepowered.api.config.ConfigRoot
                 }
             }
         }

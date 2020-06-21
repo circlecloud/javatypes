@@ -37,13 +37,13 @@ declare namespace javax {
              * @return the number of rows in the table
              */
             // @ts-ignore
-            getAccessibleRowCount(): int
+            getAccessibleRowCount(): number /*int*/
             /**
              * Returns the number of columns in the table.
              * @return the number of columns in the table
              */
             // @ts-ignore
-            getAccessibleColumnCount(): int
+            getAccessibleColumnCount(): number /*int*/
             /**
              * Returns the Accessible at a specified row and column
              * in the table.
@@ -62,7 +62,7 @@ declare namespace javax {
              *  given specified (row, column)
              */
             // @ts-ignore
-            getAccessibleRowExtentAt(r: number /*int*/, c: number /*int*/): int
+            getAccessibleRowExtentAt(r: number /*int*/, c: number /*int*/): number /*int*/
             /**
              * Returns the number of columns occupied by the Accessible at
              * a specified row and column in the table.
@@ -72,7 +72,7 @@ declare namespace javax {
              *  given specified row and column
              */
             // @ts-ignore
-            getAccessibleColumnExtentAt(r: number /*int*/, c: number /*int*/): int
+            getAccessibleColumnExtentAt(r: number /*int*/, c: number /*int*/): number /*int*/
             /**
              * Returns the row headers as an AccessibleTable.
              * @return an AccessibleTable representing the row
@@ -164,14 +164,14 @@ declare namespace javax {
              *  zero-based row of the table
              */
             // @ts-ignore
-            getSelectedAccessibleRows(): int[]
+            getSelectedAccessibleRows(): number /*int*/[]
             /**
              * Returns the selected columns in a table.
              * @return an array of selected columns where each element is a
              *  zero-based column of the table
              */
             // @ts-ignore
-            getSelectedAccessibleColumns(): int[]
+            getSelectedAccessibleColumns(): number /*int*/[]
         }
     }
 }

@@ -25,7 +25,7 @@ declare namespace org {
                          * @return The volume
                          */
                         // @ts-ignore
-                        getVolume(): int
+                        getVolume(): number /*int*/
                         /**
                          * Creates a new {@link FluidStack} based on this snapshot.
                          * @return The newly created stack

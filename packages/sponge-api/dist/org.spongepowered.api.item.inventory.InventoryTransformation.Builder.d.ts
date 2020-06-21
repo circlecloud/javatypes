@@ -12,7 +12,7 @@ declare namespace org {
                              * @return Fluent pattern
                              */
                             // @ts-ignore
-                            append(...operation: org.spongepowered.api.item.inventory.query.QueryOperation[]): org.spongepowered.api.item.inventory.InventoryTransformation.Builder
+                            append(...operation: org.spongepowered.api.item.inventory.query.QueryOperation<any>[]): org.spongepowered.api.item.inventory.InventoryTransformation.Builder
                             /**
                              * Builds the transformation
                              * @return The built transformation

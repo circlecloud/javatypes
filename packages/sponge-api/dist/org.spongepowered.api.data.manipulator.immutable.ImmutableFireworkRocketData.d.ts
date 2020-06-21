@@ -20,7 +20,7 @@ declare namespace org {
                              * @return The flight modifier
                              */
                             // @ts-ignore
-                            flightModifier(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                            flightModifier(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                         }
                     }
                 }

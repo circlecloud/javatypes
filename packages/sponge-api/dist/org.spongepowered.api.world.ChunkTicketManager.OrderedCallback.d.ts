@@ -20,7 +20,7 @@ declare namespace org {
                          * @return A list of all tickets you wish to keep
                          */
                         // @ts-ignore
-                        onLoaded(tickets: object, world: org.spongepowered.api.world.World, maxTickets: number /*int*/): java.util.List<org.spongepowered.api.world.ChunkTicketManager.LoadingTicket>
+                        onLoaded(tickets: object, world: org.spongepowered.api.world.World, maxTickets: number /*int*/): Array<org.spongepowered.api.world.ChunkTicketManager.LoadingTicket>
                     }
                 }
             }

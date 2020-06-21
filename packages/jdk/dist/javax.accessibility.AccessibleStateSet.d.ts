@@ -44,14 +44,14 @@ declare namespace javax {
              *  is unchanged
              */
             // @ts-ignore
-            add(state: javax.accessibility.AccessibleState): boolean
+            public add(state: javax.accessibility.AccessibleState): boolean
             /**
              * Adds all of the states to the existing state set.  Duplicate entries
              * are ignored.
              * @param states  AccessibleState array describing the state set.
              */
             // @ts-ignore
-            addAll(states: javax.accessibility.AccessibleState[]): void
+            public addAll(states: javax.accessibility.AccessibleState[]): void
             /**
              * Removes a state from the current state set.  If the state is not
              * in the set, the state set will be unchanged and the return value
@@ -62,25 +62,25 @@ declare namespace javax {
              *  will be unchanged
              */
             // @ts-ignore
-            remove(state: javax.accessibility.AccessibleState): boolean
+            public remove(state: javax.accessibility.AccessibleState): boolean
             /**
              * Removes all the states from the current state set.
              */
             // @ts-ignore
-            clear(): void
+            public clear(): void
             /**
              * Checks if the current state is in the state set.
              * @param state the state
              * @return true if the state is in the state set; otherwise false
              */
             // @ts-ignore
-            contains(state: javax.accessibility.AccessibleState): boolean
+            public contains(state: javax.accessibility.AccessibleState): boolean
             /**
              * Returns the current state set as an array of AccessibleState
              * @return AccessibleState array containing the current state.
              */
             // @ts-ignore
-            toArray(): javax.accessibility.AccessibleState[]
+            public toArray(): javax.accessibility.AccessibleState[]
             /**
              * Creates a localized String representing all the states in the set
              * using the default locale.
@@ -88,7 +88,7 @@ declare namespace javax {
              * @see AccessibleBundle#toDisplayString
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

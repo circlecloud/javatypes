@@ -13,13 +13,13 @@ declare namespace org {
                  * @param message the exception message
                  */
                 // @ts-ignore
-                constructor(message: string)
+                constructor(message: java.lang.String | string)
                 /**
                  * Create a new HttpMediaTypeNotSupportedException.
                  * @param supportedMediaTypes the list of supported media types
                  */
                 // @ts-ignore
-                constructor(supportedMediaTypes: Array<org.springframework.http.MediaType>)
+                constructor(supportedMediaTypes: java.util.List<org.springframework.http.MediaType> | Array<org.springframework.http.MediaType>)
             }
         }
     }

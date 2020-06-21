@@ -28,7 +28,7 @@ declare namespace javax {
                      * @param p an additional parameter, may be {#code null}
                      */
                     // @ts-ignore
-                    constructor(av: javax.lang.model.element.AnnotationValue, p: any)
+                    constructor(av: javax.lang.model.element.AnnotationValue, p: java.lang.Object | any)
                     /**
                      * Returns the unknown annotation value.
                      * The value may be unavailable if this exception has been
@@ -42,7 +42,7 @@ declare namespace javax {
                      * @return the additional argument
                      */
                     // @ts-ignore
-                    getArgument(): java.lang.Object
+                    getArgument(): any
                 }
             }
         }

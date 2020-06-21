@@ -15,7 +15,7 @@ declare namespace org {
                                  * @return The Immutable bounded value delay.
                                  */
                                 // @ts-ignore
-                                delay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer>
+                                delay(): org.spongepowered.api.data.value.immutable.ImmutableBoundedValue<java.lang.Integer | number>
                             }
                         }
                     }

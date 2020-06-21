@@ -35,34 +35,34 @@ declare namespace javax {
                      * @return a string such as "Multiplexing Look and Feel"
                      */
                     // @ts-ignore
-                    getName(): java.lang.String
+                    public getName(): string
                     /**
                      * Returns a string, suitable for use by applications/services,
                      * that identifies this look and feel.
                      * @return "Multiplex"
                      */
                     // @ts-ignore
-                    getID(): java.lang.String
+                    public getID(): string
                     /**
                      * Returns a one-line description of this look and feel.
                      * @return a descriptive string such as "Allows multiple UI instances per component instance"
                      */
                     // @ts-ignore
-                    getDescription(): java.lang.String
+                    public getDescription(): string
                     /**
                      * Returns <code>false</code>;
                      * this look and feel is not native to any platform.
                      * @return <code>false</code>
                      */
                     // @ts-ignore
-                    isNativeLookAndFeel(): boolean
+                    public isNativeLookAndFeel(): boolean
                     /**
                      * Returns <code>true</code>;
                      * every platform permits this look and feel.
                      * @return <code>true</code>
                      */
                     // @ts-ignore
-                    isSupportedLookAndFeel(): boolean
+                    public isSupportedLookAndFeel(): boolean
                     /**
                      * Creates, initializes, and returns
                      * the look and feel specific defaults.
@@ -76,7 +76,7 @@ declare namespace javax {
                      * @see javax.swing.JComponent#getUIClassID
                      */
                     // @ts-ignore
-                    getDefaults(): javax.swing.UIDefaults
+                    public getDefaults(): javax.swing.UIDefaults
                     /**
                      * Creates the <code>ComponentUI</code> objects
                      * required to present
@@ -113,7 +113,7 @@ declare namespace javax {
                      * @see MultiButtonUI#createUI
                      */
                     // @ts-ignore
-                    createUIs(mui: javax.swing.plaf.ComponentUI, uis: java.util.Vector, target: javax.swing.JComponent): javax.swing.plaf.ComponentUI
+                    public static createUIs(mui: javax.swing.plaf.ComponentUI, uis: java.util.Vector<any>, target: javax.swing.JComponent): javax.swing.plaf.ComponentUI
                     /**
                      * Creates an array,
                      * populates it with UI objects from the passed-in vector,
@@ -128,7 +128,7 @@ declare namespace javax {
                      * @return an array equivalent to the passed-in vector
                      */
                     // @ts-ignore
-                    uisToArray(uis: java.util.Vector): javax.swing.plaf.ComponentUI[]
+                    static uisToArray(uis: java.util.Vector<any>): javax.swing.plaf.ComponentUI[]
                 }
             }
         }

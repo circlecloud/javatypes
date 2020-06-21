@@ -8,9 +8,19 @@ declare namespace org {
                 // @ts-ignore
                 class Scale extends java.lang.Enum<org.bukkit.map.MapView.Scale> {
                     // @ts-ignore
+                    readonly CLOSEST: org.bukkit.map.MapView.Scale
+                    // @ts-ignore
+                    readonly CLOSE: org.bukkit.map.MapView.Scale
+                    // @ts-ignore
+                    readonly NORMAL: org.bukkit.map.MapView.Scale
+                    // @ts-ignore
+                    readonly FAR: org.bukkit.map.MapView.Scale
+                    // @ts-ignore
+                    readonly FARTHEST: org.bukkit.map.MapView.Scale
+                    // @ts-ignore
                     values(): org.bukkit.map.MapView.Scale[]
                     // @ts-ignore
-                    valueOf(name: string): org.bukkit.map.MapView.Scale
+                    valueOf(name: java.lang.String | string): org.bukkit.map.MapView.Scale
                     /**
                      * Get the scale given the raw value.
                      * @param value The raw scale
@@ -25,7 +35,7 @@ declare namespace org {
                      * @deprecated Magic value
                      */
                     // @ts-ignore
-                    getValue(): byte
+                    getValue(): number /*byte*/
                 }
             }
         }

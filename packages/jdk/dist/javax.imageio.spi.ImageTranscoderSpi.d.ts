@@ -9,7 +9,7 @@ declare namespace javax {
              * @see javax.imageio.ImageTranscoder
              */
             // @ts-ignore
-            class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider {
+            abstract class ImageTranscoderSpi extends javax.imageio.spi.IIOServiceProvider {
                 /**
                  * Constructs a blank <code>ImageTranscoderSpi</code>.  It is up
                  * to the subclass to initialize instance variables and/or
@@ -25,7 +25,7 @@ declare namespace javax {
                  * @param version a version identifier.
                  */
                 // @ts-ignore
-                constructor(vendorName: string, version: string)
+                constructor(vendorName: java.lang.String | string, version: java.lang.String | string)
                 /**
                  * Returns the fully qualified class name of an
                  * <code>ImageReaderSpi</code> class that generates
@@ -36,7 +36,7 @@ declare namespace javax {
                  * @see ImageReaderSpi
                  */
                 // @ts-ignore
-                abstract getReaderServiceProviderName(): java.lang.String
+                public abstract getReaderServiceProviderName(): string
                 /**
                  * Returns the fully qualified class name of an
                  * <code>ImageWriterSpi</code> class that generates
@@ -47,14 +47,14 @@ declare namespace javax {
                  * @see ImageWriterSpi
                  */
                 // @ts-ignore
-                abstract getWriterServiceProviderName(): java.lang.String
+                public abstract getWriterServiceProviderName(): string
                 /**
                  * Returns an instance of the <code>ImageTranscoder</code>
                  * implementation associated with this service provider.
                  * @return an <code>ImageTranscoder</code> instance.
                  */
                 // @ts-ignore
-                abstract createTranscoderInstance(): javax.imageio.ImageTranscoder
+                public abstract createTranscoderInstance(): javax.imageio.ImageTranscoder
             }
         }
     }

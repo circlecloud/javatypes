@@ -30,7 +30,7 @@ declare namespace org {
                          * @return the 'distance' value
                          */
                         // @ts-ignore
-                        getDistance(): int
+                        getDistance(): number /*int*/
                         /**
                          * Sets the value of the 'distance' property.
                          * @param distance the new 'distance' value
@@ -42,7 +42,7 @@ declare namespace org {
                          * @return the maximum 'distance' value
                          */
                         // @ts-ignore
-                        getMaximumDistance(): int
+                        getMaximumDistance(): number /*int*/
                     }
                 }
             }

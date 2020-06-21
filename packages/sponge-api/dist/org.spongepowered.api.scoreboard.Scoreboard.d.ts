@@ -22,7 +22,7 @@ declare namespace org {
                      * @return The {#link Objective}, if it exists
                      */
                     // @ts-ignore
-                    getObjective(name: string): java.util.Optional<org.spongepowered.api.scoreboard.objective.Objective>
+                    getObjective(name: java.lang.String | string): java.util.Optional<org.spongepowered.api.scoreboard.objective.Objective>
                     /**
                      * Gets the {@link Objective} currently displayed in a {@link DisplaySlot} on this
                      * scoreboard, if one is present.
@@ -63,13 +63,13 @@ declare namespace org {
                      * @return A set of {#link Objective}s using the specified Criteria
                      */
                     // @ts-ignore
-                    getObjectivesByCriteria(criteria: org.spongepowered.api.scoreboard.critieria.Criterion): java.util.Set<org.spongepowered.api.scoreboard.objective.Objective>
+                    getObjectivesByCriteria(criteria: org.spongepowered.api.scoreboard.critieria.Criterion): Array<org.spongepowered.api.scoreboard.objective.Objective>
                     /**
                      * Gets all {@link Objective}s on this scoreboard.
                      * @return A set of all {#link Objective}s on this scoreboard
                      */
                     // @ts-ignore
-                    getObjectives(): java.util.Set<org.spongepowered.api.scoreboard.objective.Objective>
+                    getObjectives(): Array<org.spongepowered.api.scoreboard.objective.Objective>
                     /**
                      * Removes the specified {@link Objective} from this scoreboard.
                      * @param objective The {#link Objective} to remove
@@ -83,7 +83,7 @@ declare namespace org {
                      * @return A set of all scores
                      */
                     // @ts-ignore
-                    getScores(): java.util.Set<org.spongepowered.api.scoreboard.Score>
+                    getScores(): Array<org.spongepowered.api.scoreboard.Score>
                     /**
                      * Gets all scores with the specified name on this scoreboard,
                      * across all objectives.
@@ -93,7 +93,7 @@ declare namespace org {
                      * @return A set of all scores for the name
                      */
                     // @ts-ignore
-                    getScores(name: org.spongepowered.api.text.Text): java.util.Set<org.spongepowered.api.scoreboard.Score>
+                    getScores(name: org.spongepowered.api.text.Text): Array<org.spongepowered.api.scoreboard.Score>
                     /**
                      * Removes all scores with the specified name on this scoreboard,
                      * across all objectives.
@@ -107,7 +107,7 @@ declare namespace org {
                      * @return The matching {#link Team}, if it exists
                      */
                     // @ts-ignore
-                    getTeam(teamName: string): java.util.Optional<org.spongepowered.api.scoreboard.Team>
+                    getTeam(teamName: java.lang.String | string): java.util.Optional<org.spongepowered.api.scoreboard.Team>
                     /**
                      * Registers the specified {@link Team} to this scoreboard.
                      * @param team The {#link Team} to register
@@ -123,7 +123,7 @@ declare namespace org {
                      * @return The set of {#link Team}s
                      */
                     // @ts-ignore
-                    getTeams(): java.util.Set<org.spongepowered.api.scoreboard.Team>
+                    getTeams(): Array<org.spongepowered.api.scoreboard.Team>
                     /**
                      * Gets a {@link Text} member's {@link Team} on this scoreboard.
                      * @param member The {#link Text} to search for

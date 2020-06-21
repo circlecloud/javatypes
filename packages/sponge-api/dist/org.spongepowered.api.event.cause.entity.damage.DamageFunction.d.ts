@@ -23,9 +23,9 @@ declare namespace org {
                                  * @param function The function
                                  */
                                 // @ts-ignore
-                                constructor(modifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator)
+                                constructor(modifier: org.spongepowered.api.event.cause.entity.damage.DamageModifier, func: java.util.function$.DoubleUnaryOperator)
                                 // @ts-ignore
-                                readonly ZERO_DAMAGE: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator
+                                public static readonly ZERO_DAMAGE: java.util.function$.DoubleUnaryOperator
                                 /**
                                  * Constructs a new damage function.
                                  * @param first The damage modifier to use
@@ -33,25 +33,25 @@ declare namespace org {
                                  * @return The resulting damage function
                                  */
                                 // @ts-ignore
-                                of(first: org.spongepowered.api.event.cause.entity.damage.DamageModifier, second: java.util.function.DoubleUnaryOperator | java.util.function$.DoubleUnaryOperator): org.spongepowered.api.event.cause.entity.damage.DamageFunction
+                                public static of(first: org.spongepowered.api.event.cause.entity.damage.DamageModifier, second: java.util.function$.DoubleUnaryOperator): org.spongepowered.api.event.cause.entity.damage.DamageFunction
                                 /**
                                  * Gets the {@link DamageModifier} for this function.
                                  * @return The damage modifier
                                  */
                                 // @ts-ignore
-                                getModifier(): org.spongepowered.api.event.cause.entity.damage.DamageModifier
+                                public getModifier(): org.spongepowered.api.event.cause.entity.damage.DamageModifier
                                 /**
                                  * Gets the {@link DoubleUnaryOperator} for this function.
                                  * @return The damage function
                                  */
                                 // @ts-ignore
-                                getFunction(): java.util.function.DoubleUnaryOperator
+                                public getFunction(): java.util.function$.DoubleUnaryOperator
                                 // @ts-ignore
-                                toString(): java.lang.String
+                                public toString(): string
                                 // @ts-ignore
-                                equals(o: any): boolean
+                                public equals(o: java.lang.Object | any): boolean
                                 // @ts-ignore
-                                hashCode(): int
+                                public hashCode(): number /*int*/
                             }
                         }
                     }

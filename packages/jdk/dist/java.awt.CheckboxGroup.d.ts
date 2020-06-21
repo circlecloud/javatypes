@@ -49,13 +49,13 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            getSelectedCheckbox(): java.awt.Checkbox
+            public getSelectedCheckbox(): java.awt.Checkbox
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>getSelectedCheckbox()</code>.
              */
             // @ts-ignore
-            getCurrent(): java.awt.Checkbox
+            public getCurrent(): java.awt.Checkbox
             /**
              * Sets the currently selected check box in this group
              * to be the specified check box.
@@ -73,20 +73,20 @@ declare namespace java {
              * @since JDK1.1
              */
             // @ts-ignore
-            setSelectedCheckbox(box: java.awt.Checkbox): void
+            public setSelectedCheckbox(box: java.awt.Checkbox): void
             /**
              * @deprecated As of JDK version 1.1,
              *  replaced by <code>setSelectedCheckbox(Checkbox)</code>.
              */
             // @ts-ignore
-            setCurrent(box: java.awt.Checkbox): void
+            public setCurrent(box: java.awt.Checkbox): void
             /**
              * Returns a string representation of this check box group,
              * including the value of its current selection.
              * @return a string representation of this check box group.
              */
             // @ts-ignore
-            toString(): java.lang.String
+            public toString(): string
         }
     }
 }

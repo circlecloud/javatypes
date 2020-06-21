@@ -12,7 +12,7 @@ declare namespace org {
                      * @deprecated as of Spring 5.0, with no direct replacement
                      */
                     // @ts-ignore
-                    class InterceptingAsyncHttpAccessor extends org.springframework.http.client.support.AsyncHttpAccessor {
+                    abstract class InterceptingAsyncHttpAccessor extends org.springframework.http.client.support.AsyncHttpAccessor {
                         // @ts-ignore
                         constructor()
                         /**
@@ -20,14 +20,14 @@ declare namespace org {
                          * @param interceptors the list of interceptors
                          */
                         // @ts-ignore
-                        setInterceptors(interceptors: Array<org.springframework.http.client.AsyncClientHttpRequestInterceptor>): void
+                        public setInterceptors(interceptors: java.util.List<org.springframework.http.client.AsyncClientHttpRequestInterceptor> | Array<org.springframework.http.client.AsyncClientHttpRequestInterceptor>): void
                         /**
                          * Return the request interceptor that this accessor uses.
                          */
                         // @ts-ignore
-                        getInterceptors(): java.util.List<org.springframework.http.client.AsyncClientHttpRequestInterceptor>
+                        public getInterceptors(): Array<org.springframework.http.client.AsyncClientHttpRequestInterceptor>
                         // @ts-ignore
-                        getAsyncRequestFactory(): org.springframework.http.client.AsyncClientHttpRequestFactory
+                        public getAsyncRequestFactory(): org.springframework.http.client.AsyncClientHttpRequestFactory
                     }
                 }
             }

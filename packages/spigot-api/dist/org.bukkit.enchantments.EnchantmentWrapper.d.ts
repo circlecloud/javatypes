@@ -7,29 +7,29 @@ declare namespace org {
             // @ts-ignore
             class EnchantmentWrapper extends org.bukkit.enchantments.Enchantment {
                 // @ts-ignore
-                constructor(name: string)
+                constructor(name: java.lang.String | string)
                 /**
                  * Gets the enchantment bound to this wrapper
                  * @return Enchantment
                  */
                 // @ts-ignore
-                getEnchantment(): org.bukkit.enchantments.Enchantment
+                public getEnchantment(): org.bukkit.enchantments.Enchantment
                 // @ts-ignore
-                getMaxLevel(): int
+                public getMaxLevel(): number /*int*/
                 // @ts-ignore
-                getStartLevel(): int
+                public getStartLevel(): number /*int*/
                 // @ts-ignore
-                getItemTarget(): org.bukkit.enchantments.EnchantmentTarget
+                public getItemTarget(): org.bukkit.enchantments.EnchantmentTarget
                 // @ts-ignore
-                canEnchantItem(item: org.bukkit.inventory.ItemStack): boolean
+                public canEnchantItem(item: org.bukkit.inventory.ItemStack): boolean
                 // @ts-ignore
-                getName(): java.lang.String
+                public getName(): string
                 // @ts-ignore
-                isTreasure(): boolean
+                public isTreasure(): boolean
                 // @ts-ignore
-                isCursed(): boolean
+                public isCursed(): boolean
                 // @ts-ignore
-                conflictsWith(other: org.bukkit.enchantments.Enchantment): boolean
+                public conflictsWith(other: org.bukkit.enchantments.Enchantment): boolean
             }
         }
     }

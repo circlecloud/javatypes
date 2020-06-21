@@ -23,7 +23,7 @@ declare namespace javax {
                      * @return the bounds of this intersection types.
                      */
                     // @ts-ignore
-                    getBounds(): java.util.List<? extends javax.lang.model.type.TypeMirror>
+                    getBounds(): Array<any>
                 }
             }
         }

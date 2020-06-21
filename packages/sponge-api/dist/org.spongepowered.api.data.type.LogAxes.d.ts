@@ -6,13 +6,13 @@ declare namespace org {
                     // @ts-ignore
                     class LogAxes extends java.lang.Object {
                         // @ts-ignore
-                        readonly NONE: org.spongepowered.api.data.type.LogAxis
+                        public static readonly NONE: org.spongepowered.api.data.type.LogAxis
                         // @ts-ignore
-                        readonly X: org.spongepowered.api.data.type.LogAxis
+                        public static readonly X: org.spongepowered.api.data.type.LogAxis
                         // @ts-ignore
-                        readonly Y: org.spongepowered.api.data.type.LogAxis
+                        public static readonly Y: org.spongepowered.api.data.type.LogAxis
                         // @ts-ignore
-                        readonly Z: org.spongepowered.api.data.type.LogAxis
+                        public static readonly Z: org.spongepowered.api.data.type.LogAxis
                     }
                 }
             }

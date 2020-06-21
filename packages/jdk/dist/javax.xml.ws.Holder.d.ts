@@ -22,7 +22,7 @@ declare namespace javax {
                  * The value contained in the holder.
                  */
                 // @ts-ignore
-                value: T
+                public value: T
             }
         }
     }

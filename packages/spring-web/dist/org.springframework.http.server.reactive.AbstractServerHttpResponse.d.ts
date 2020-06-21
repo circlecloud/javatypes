@@ -12,7 +12,7 @@ declare namespace org {
                      * @since 5.0
                      */
                     // @ts-ignore
-                    class AbstractServerHttpResponse extends java.lang.Object implements org.springframework.http.server.reactive.ServerHttpResponse {
+                    abstract class AbstractServerHttpResponse extends java.lang.Object implements org.springframework.http.server.reactive.ServerHttpResponse {
                         // @ts-ignore
                         constructor(dataBufferFactory: DataBufferFactory)
                         // @ts-ignore
@@ -20,15 +20,15 @@ declare namespace org {
                         // @ts-ignore
                         readonly logger: Log
                         // @ts-ignore
-                        bufferFactory(): DataBufferFactory
+                        public bufferFactory(): DataBufferFactory
                         // @ts-ignore
-                        setStatusCode(status: org.springframework.http.HttpStatus): boolean
+                        public setStatusCode(status: org.springframework.http.HttpStatus): boolean
                         // @ts-ignore
-                        getStatusCode(): org.springframework.http.HttpStatus
+                        public getStatusCode(): org.springframework.http.HttpStatus
                         // @ts-ignore
-                        setRawStatusCode(statusCode: number): boolean
+                        public setRawStatusCode(statusCode: java.lang.Integer | number): boolean
                         // @ts-ignore
-                        getRawStatusCode(): java.lang.Integer
+                        public getRawStatusCode(): number
                         /**
                          * Set the HTTP status code of the response.
                          * @param statusCode the HTTP status as an integer value
@@ -36,7 +36,7 @@ declare namespace org {
                          * @deprecated as of 5.2.4 in favor of {#link ServerHttpResponse#setRawStatusCode(Integer)}.
                          */
                         // @ts-ignore
-                        setStatusCodeValue(statusCode: number): void
+                        public setStatusCodeValue(statusCode: java.lang.Integer | number): void
                         /**
                          * Return the HTTP status code of the response.
                          * @return the HTTP status as an integer value
@@ -44,36 +44,36 @@ declare namespace org {
                          * @deprecated as of 5.2.4 in favor of {#link ServerHttpResponse#getRawStatusCode()}.
                          */
                         // @ts-ignore
-                        getStatusCodeValue(): java.lang.Integer
+                        public getStatusCodeValue(): number
                         // @ts-ignore
-                        getHeaders(): org.springframework.http.HttpHeaders
+                        public getHeaders(): org.springframework.http.HttpHeaders
                         // @ts-ignore
-                        getCookies(): <any>
+                        public getCookies(): object
                         // @ts-ignore
-                        addCookie(cookie: org.springframework.http.ResponseCookie): void
+                        public addCookie(cookie: org.springframework.http.ResponseCookie): void
                         /**
                          * Return the underlying server response.
                          * <p><strong>Note:</strong> This is exposed mainly for internal framework
                          * use such as WebSocket upgrades in the spring-webflux module.
                          */
                         // @ts-ignore
-                        abstract getNativeResponse<T>(): T
+                        public abstract getNativeResponse<T>(): T
                         // @ts-ignore
-                        beforeCommit(action: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): void
+                        public beforeCommit(action: java.util.function$.Supplier<any>): void
                         // @ts-ignore
-                        isCommitted(): boolean
+                        public isCommitted(): boolean
                         // @ts-ignore
-                        writeWith(body: object): <any>
+                        public writeWith(body: object): object
                         // @ts-ignore
-                        writeAndFlushWith(body: object): <any>
+                        public writeAndFlushWith(body: object): object
                         // @ts-ignore
-                        setComplete(): <any>
+                        public setComplete(): object
                         /**
                          * A variant of {@link #doCommit(Supplier)} for a response without no body.
                          * @return a completion publisher
                          */
                         // @ts-ignore
-                        doCommit(): <any>
+                        doCommit(): object
                         /**
                          * Apply {@link #beforeCommit(Supplier) beforeCommit} actions, apply the
                          * response status and headers/cookies, and write the response body.
@@ -81,19 +81,19 @@ declare namespace org {
                          * @return a completion publisher
                          */
                         // @ts-ignore
-                        doCommit(writeAction: java.util.function.Supplier<<any>> | java.util.function$.Supplier<<any>>): <any>
+                        doCommit(writeAction: java.util.function$.Supplier<any>): object
                         /**
                          * Write to the underlying the response.
                          * @param body the publisher to write with
                          */
                         // @ts-ignore
-                        abstract writeWithInternal(body: object): <any>
+                        abstract writeWithInternal(body: object): object
                         /**
                          * Write to the underlying the response, and flush after each {@code Publisher<DataBuffer>}.
                          * @param body the publisher to write and flush with
                          */
                         // @ts-ignore
-                        abstract writeAndFlushWithInternal(body: object): <any>
+                        abstract writeAndFlushWithInternal(body: object): object
                         /**
                          * Write the status code to the underlying response.
                          * This method is called once only.

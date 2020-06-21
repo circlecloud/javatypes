@@ -6,31 +6,31 @@ declare namespace org {
                  * A handler for a specific property.
                  */
                 // @ts-ignore
-                class PropertyHandler extends java.lang.Object {
+                abstract class PropertyHandler extends java.lang.Object {
                     // @ts-ignore
                     constructor(propertyType: java.lang.Class<any>, readable: boolean, writable: boolean)
                     // @ts-ignore
-                    getPropertyType(): java.lang.Class<?>
+                    public getPropertyType(): java.lang.Class<any>
                     // @ts-ignore
-                    isReadable(): boolean
+                    public isReadable(): boolean
                     // @ts-ignore
-                    isWritable(): boolean
+                    public isWritable(): boolean
                     // @ts-ignore
-                    abstract toTypeDescriptor(): TypeDescriptor
+                    public abstract toTypeDescriptor(): TypeDescriptor
                     // @ts-ignore
-                    abstract getResolvableType(): ResolvableType
+                    public abstract getResolvableType(): ResolvableType
                     // @ts-ignore
-                    getMapKeyType(nestingLevel: number /*int*/): java.lang.Class<?>
+                    public getMapKeyType(nestingLevel: number /*int*/): java.lang.Class<any>
                     // @ts-ignore
-                    getMapValueType(nestingLevel: number /*int*/): java.lang.Class<?>
+                    public getMapValueType(nestingLevel: number /*int*/): java.lang.Class<any>
                     // @ts-ignore
-                    getCollectionType(nestingLevel: number /*int*/): java.lang.Class<?>
+                    public getCollectionType(nestingLevel: number /*int*/): java.lang.Class<any>
                     // @ts-ignore
-                    abstract nested(level: number /*int*/): TypeDescriptor
+                    public abstract nested(level: number /*int*/): TypeDescriptor
                     // @ts-ignore
-                    abstract getValue(): java.lang.Object
+                    public abstract getValue(): any
                     // @ts-ignore
-                    abstract setValue(value: any): void
+                    public abstract setValue(value: java.lang.Object | any): void
                 }
             }
         }

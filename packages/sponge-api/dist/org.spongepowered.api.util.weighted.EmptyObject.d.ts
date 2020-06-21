@@ -17,15 +17,15 @@ declare namespace org {
                         // @ts-ignore
                         constructor(weight: number /*double*/)
                         // @ts-ignore
-                        getContentVersion(): int
+                        public getContentVersion(): number /*int*/
                         // @ts-ignore
-                        toContainer(): org.spongepowered.api.data.DataContainer
+                        public toContainer(): org.spongepowered.api.data.DataContainer
                         // @ts-ignore
-                        equals(o: any): boolean
+                        public equals(o: java.lang.Object | any): boolean
                         // @ts-ignore
-                        hashCode(): int
+                        public hashCode(): number /*int*/
                         // @ts-ignore
-                        toString(): java.lang.String
+                        public toString(): string
                     }
                 }
             }
